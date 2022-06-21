@@ -83,7 +83,7 @@
 
     move-result-object v0
 
-    invoke-static {p1}, Lcom/vk/libvideo/t;->d(I)I
+    invoke-static {p1}, Lcom/vk/libvideo/VideoUtils;->d(I)I
 
     move-result p1
 
@@ -93,7 +93,7 @@
 
     const/4 v0, 0x1
 
-    invoke-static {p1, v0}, Lcom/vk/core/util/k1;->a(Ljava/lang/CharSequence;Z)V
+    invoke-static {p1, v0}, Lcom/vk/core/util/ToastUtils;->a(Ljava/lang/CharSequence;Z)V
 
     :cond_1
     return-void

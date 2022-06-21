@@ -29,12 +29,12 @@
 
 
 # instance fields
-.field private final a:Lcom/vk/music/n/g;
+.field private final a:Lcom/vk/music/n/ThrowableUtils;
 
-.field private final b:Lc/a/m;
+.field private final b:Lio/reactivex/Observable;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Lc/a/m<",
+            "Lio/reactivex/Observable<",
             "Ljava/util/List<",
             "Lcom/vk/dto/music/MusicTrack;",
             ">;>;"
@@ -44,12 +44,12 @@
 
 
 # direct methods
-.method public constructor <init>(Lc/a/m;)V
+.method public constructor <init>(Lio/reactivex/Observable;)V
     .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lc/a/m<",
+            "Lio/reactivex/Observable<",
             "Ljava/util/List<",
             "Lcom/vk/dto/music/MusicTrack;",
             ">;>;)V"
@@ -59,14 +59,14 @@
     .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lcom/vk/audioipc/core/network/NetworkMusicTracksCache$a;->b:Lc/a/m;
+    iput-object p1, p0, Lcom/vk/audioipc/core/network/NetworkMusicTracksCache$a;->b:Lio/reactivex/Observable;
 
     .line 2
-    invoke-static {}, Lcom/vk/music/common/c$f;->a()Lcom/vk/music/n/g;
+    invoke-static {}, Lcom/vk/music/common/Music$f;->a()Lcom/vk/music/n/ThrowableUtils;
 
     move-result-object p1
 
-    iput-object p1, p0, Lcom/vk/audioipc/core/network/NetworkMusicTracksCache$a;->a:Lcom/vk/music/n/g;
+    iput-object p1, p0, Lcom/vk/audioipc/core/network/NetworkMusicTracksCache$a;->a:Lcom/vk/music/n/ThrowableUtils;
 
     return-void
 .end method
@@ -102,15 +102,15 @@
 
     .line 3
     :try_start_0
-    iget-object v1, p0, Lcom/vk/audioipc/core/network/NetworkMusicTracksCache$a;->b:Lc/a/m;
+    iget-object v1, p0, Lcom/vk/audioipc/core/network/NetworkMusicTracksCache$a;->b:Lio/reactivex/Observable;
 
-    invoke-virtual {v1}, Lc/a/m;->c()Ljava/lang/Iterable;
+    invoke-virtual {v1}, Lio/reactivex/Observable;->c()Ljava/lang/Iterable;
 
     move-result-object v1
 
     const-string v2, "observable.blockingIterable()"
 
-    invoke-static {v1, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-static {v1}, Lkotlin/collections/l;->a(Ljava/lang/Iterable;)Ljava/util/List;
 
@@ -160,9 +160,9 @@
 
     invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget-object v3, p0, Lcom/vk/audioipc/core/network/NetworkMusicTracksCache$a;->a:Lcom/vk/music/n/g;
+    iget-object v3, p0, Lcom/vk/audioipc/core/network/NetworkMusicTracksCache$a;->a:Lcom/vk/music/n/ThrowableUtils;
 
-    invoke-virtual {v3, v0}, Lcom/vk/music/n/g;->a(Ljava/lang/Throwable;)Ljava/lang/String;
+    invoke-virtual {v3, v0}, Lcom/vk/music/n/ThrowableUtils;->a(Ljava/lang/Throwable;)Ljava/lang/String;
 
     move-result-object v0
 

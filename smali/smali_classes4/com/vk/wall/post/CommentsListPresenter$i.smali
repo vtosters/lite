@@ -3,12 +3,12 @@
 .source "CommentsListPresenter.kt"
 
 # interfaces
-.implements Lc/a/z/g;
+.implements Lio/reactivex/functions/Consumer;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/wall/post/CommentsListPresenter;->a(Lc/a/m;ZZ)V
+    value = Lcom/vk/wall/post/CommentsListPresenter;->a(Lio/reactivex/Observable;ZZ)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -22,7 +22,7 @@
         "Ljava/lang/Object;",
         ">",
         "Ljava/lang/Object;",
-        "Lc/a/z/g<",
+        "Lio/reactivex/functions/Consumer<",
         "Ljava/lang/Throwable;",
         ">;"
     }
@@ -89,21 +89,21 @@
     if-eqz v0, :cond_1
 
     .line 5
-    sget-object v0, Lcom/vk/core/util/i;->a:Landroid/content/Context;
+    sget-object v0, Lcom/vk/core/util/AppContextHolder;->a:Landroid/content/Context;
 
     check-cast p1, Lcom/vk/api/sdk/exceptions/VKApiExecutionException;
 
-    invoke-static {v0, p1}, Lcom/vk/api/base/f;->b(Landroid/content/Context;Lcom/vk/api/sdk/exceptions/VKApiExecutionException;)V
+    invoke-static {v0, p1}, Lcom/vk/api/base/ApiUtils;->b(Landroid/content/Context;Lcom/vk/api/sdk/exceptions/VKApiExecutionException;)V
 
     .line 6
     :cond_1
     iget-object p1, p0, Lcom/vk/wall/post/CommentsListPresenter$i;->a:Lcom/vk/wall/post/CommentsListPresenter;
 
-    invoke-static {p1}, Lcom/vk/wall/post/CommentsListPresenter;->d(Lcom/vk/wall/post/CommentsListPresenter;)Lcom/vk/wall/post/b;
+    invoke-static {p1}, Lcom/vk/wall/post/CommentsListPresenter;->d(Lcom/vk/wall/post/CommentsListPresenter;)Lcom/vk/wall/post/PostViewContract1;
 
     move-result-object p1
 
-    invoke-interface {p1}, Lcom/vk/wall/post/b;->r()V
+    invoke-interface {p1}, Lcom/vk/wall/post/PostViewContract1;->r()V
 
     return-void
 .end method

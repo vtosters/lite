@@ -4,8 +4,8 @@
 
 # interfaces
 .implements Lcom/vk/cameraui/CameraUI$b;
-.implements Lpub/devrel/easypermissions/b$a;
-.implements Lcom/vk/navigation/u;
+.implements Lpub/devrel/easypermissions/EasyPermissions$a;
+.implements Lcom/vk/navigation/ResulterProvider;
 
 
 # instance fields
@@ -30,26 +30,26 @@
 
     move-result-object v0
 
-    invoke-static {v0}, Lcom/vk/core/util/j0;->b(Landroid/content/Intent;)Z
+    invoke-static {v0}, Lcom/vk/core/util/IntentUtils;->b(Landroid/content/Intent;)Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
     .line 2
-    sget-object v0, Lcom/vk/core/ui/v/a;->g:Lcom/vk/core/ui/v/a;
+    sget-object v0, Lcom/vk/core/ui/v/UiTracker;->g:Lcom/vk/core/ui/v/UiTracker;
 
-    invoke-virtual {v0}, Lcom/vk/core/ui/v/a;->h()Lcom/vk/core/ui/v/f;
+    invoke-virtual {v0}, Lcom/vk/core/ui/v/UiTracker;->h()Lcom/vk/core/ui/v/UiTrackingListeners4;
 
     move-result-object v0
 
-    new-instance v1, Lcom/vk/core/ui/v/g;
+    new-instance v1, Lcom/vk/core/ui/v/UiTrackingScreen;
 
     sget-object v2, Lcom/vk/stat/scheme/SchemeStat$EventScreen;->STORY_CAMERA_STORY:Lcom/vk/stat/scheme/SchemeStat$EventScreen;
 
-    invoke-direct {v1, v2}, Lcom/vk/core/ui/v/g;-><init>(Lcom/vk/stat/scheme/SchemeStat$EventScreen;)V
+    invoke-direct {v1, v2}, Lcom/vk/core/ui/v/UiTrackingScreen;-><init>(Lcom/vk/stat/scheme/SchemeStat$EventScreen;)V
 
-    invoke-interface {v0, v1}, Lcom/vk/core/ui/v/f;->a(Lcom/vk/core/ui/v/g;)V
+    invoke-interface {v0, v1}, Lcom/vk/core/ui/v/UiTrackingListeners4;->a(Lcom/vk/core/ui/v/UiTrackingScreen;)V
 
     :cond_0
     return-void
@@ -211,7 +211,7 @@
     return-void
 .end method
 
-.method public a(Lcom/vk/navigation/c;)V
+.method public a(Lcom/vk/navigation/ActivityResulter;)V
     .locals 0
 
     return-void
@@ -253,7 +253,7 @@
     return-void
 .end method
 
-.method public b(Lcom/vk/navigation/c;)V
+.method public b(Lcom/vk/navigation/ActivityResulter;)V
     .locals 0
 
     return-void
@@ -372,9 +372,9 @@
     move-result-object p1
 
     .line 8
-    new-instance v1, Lcom/vk/cameraui/builder/a;
+    new-instance v1, Lcom/vk/cameraui/builder/CameraBuilder;
 
-    invoke-direct {v1, v0, p1}, Lcom/vk/cameraui/builder/a;-><init>(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-direct {v1, v0, p1}, Lcom/vk/cameraui/builder/CameraBuilder;-><init>(Ljava/lang/String;Ljava/lang/String;)V
 
     invoke-virtual {v1}, Lcom/vk/cameraui/builder/CameraParams$b;->a()Lcom/vk/cameraui/builder/CameraParams;
 
@@ -396,7 +396,7 @@
 
     move-object v6, p0
 
-    invoke-virtual/range {v1 .. v7}, Lcom/vk/cameraui/CameraUI$a;->a(Landroid/content/Context;Lcom/vk/cameraui/builder/CameraParams;ZZLcom/vk/cameraui/CameraUI$b;Lkotlin/jvm/b/b;)Lcom/vk/cameraui/BaseCameraUIView;
+    invoke-virtual/range {v1 .. v7}, Lcom/vk/cameraui/CameraUI$a;->a(Landroid/content/Context;Lcom/vk/cameraui/builder/CameraParams;ZZLcom/vk/cameraui/CameraUI$b;Lkotlin/jvm/b/Functions2;)Lcom/vk/cameraui/BaseCameraUIView;
 
     move-result-object p1
 
@@ -410,7 +410,7 @@
     .line 11
     iget-object p1, p0, Lcom/vk/stories/CreateStoryActivity;->G:Lcom/vk/cameraui/BaseCameraUIView;
 
-    invoke-interface {p1}, Lcom/vk/cameraui/i/b;->getPresenter()Lcom/vk/cameraui/i/a;
+    invoke-interface {p1}, Lcom/vk/cameraui/i/BaseView;->getPresenter()Lcom/vk/cameraui/i/BasePresenter;
 
     move-result-object p1
 
@@ -435,7 +435,7 @@
 
     move-result-object p1
 
-    invoke-static {p1}, Lcom/vk/core/util/l0;->a(Landroid/view/Window;)V
+    invoke-static {p1}, Lcom/vk/core/util/KeyboardUtils;->a(Landroid/view/Window;)V
 
     return-void
 .end method

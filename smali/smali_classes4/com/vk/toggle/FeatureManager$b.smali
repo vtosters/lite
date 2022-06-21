@@ -40,7 +40,7 @@
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, v1}, Lcom/vk/toggle/FeatureManager$b$a;-><init>(Lkotlin/jvm/internal/i;)V
+    invoke-direct {v0, v1}, Lcom/vk/toggle/FeatureManager$b$a;-><init>(Lkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     sput-object v0, Lcom/vk/toggle/FeatureManager$b;->d:Lcom/vk/toggle/FeatureManager$b$a;
 
@@ -62,7 +62,7 @@
     return-void
 .end method
 
-.method public synthetic constructor <init>(Ljava/lang/String;ZLjava/lang/String;ILkotlin/jvm/internal/i;)V
+.method public synthetic constructor <init>(Ljava/lang/String;ZLjava/lang/String;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
     .locals 0
 
     and-int/lit8 p5, p4, 0x2
@@ -149,13 +149,13 @@
     .line 5
     sget-object v0, Lcom/vk/toggle/FeatureManager;->g:Lcom/vk/toggle/FeatureManager;
 
-    invoke-static {v0}, Lcom/vk/toggle/FeatureManager;->a(Lcom/vk/toggle/FeatureManager;)Lcom/vk/toggle/b;
+    invoke-static {v0}, Lcom/vk/toggle/FeatureManager;->a(Lcom/vk/toggle/FeatureManager;)Lcom/vk/toggle/FeatureStorage;
 
     move-result-object v0
 
     iget-object v1, p0, Lcom/vk/toggle/FeatureManager$b;->a:Ljava/lang/String;
 
-    invoke-virtual {v0, v1, p1}, Lcom/vk/toggle/b;->b(Ljava/lang/String;Z)Ljava/lang/String;
+    invoke-virtual {v0, v1, p1}, Lcom/vk/toggle/FeatureStorage;->b(Ljava/lang/String;Z)Ljava/lang/String;
 
     move-result-object p1
 
@@ -279,18 +279,18 @@
 
     const-string v1, "toJSONObject(this).toString()"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 5
     sget-object v1, Lcom/vk/toggle/FeatureManager;->g:Lcom/vk/toggle/FeatureManager;
 
-    invoke-static {v1}, Lcom/vk/toggle/FeatureManager;->a(Lcom/vk/toggle/FeatureManager;)Lcom/vk/toggle/b;
+    invoke-static {v1}, Lcom/vk/toggle/FeatureManager;->a(Lcom/vk/toggle/FeatureManager;)Lcom/vk/toggle/FeatureStorage;
 
     move-result-object v1
 
     iget-object v2, p0, Lcom/vk/toggle/FeatureManager$b;->a:Ljava/lang/String;
 
-    invoke-virtual {v1, v2, v0, p1}, Lcom/vk/toggle/b;->a(Ljava/lang/String;Ljava/lang/String;Z)V
+    invoke-virtual {v1, v2, v0, p1}, Lcom/vk/toggle/FeatureStorage;->a(Ljava/lang/String;Ljava/lang/String;Z)V
 
     const/4 p1, 0x1
 
@@ -539,7 +539,7 @@
 
     .line 14
     :cond_4
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 

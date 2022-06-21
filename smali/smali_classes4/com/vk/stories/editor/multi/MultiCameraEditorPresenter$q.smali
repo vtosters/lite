@@ -31,16 +31,16 @@
 # instance fields
 .field final synthetic a:Lcom/vk/stories/editor/multi/MultiCameraEditorPresenter;
 
-.field final synthetic b:Lcom/vk/cameraui/entities/e;
+.field final synthetic b:Lcom/vk/cameraui/entities/StoryRawData2;
 
 
 # direct methods
-.method constructor <init>(Lcom/vk/stories/editor/multi/MultiCameraEditorPresenter;Lcom/vk/cameraui/entities/e;)V
+.method constructor <init>(Lcom/vk/stories/editor/multi/MultiCameraEditorPresenter;Lcom/vk/cameraui/entities/StoryRawData2;)V
     .locals 0
 
     iput-object p1, p0, Lcom/vk/stories/editor/multi/MultiCameraEditorPresenter$q;->a:Lcom/vk/stories/editor/multi/MultiCameraEditorPresenter;
 
-    iput-object p2, p0, Lcom/vk/stories/editor/multi/MultiCameraEditorPresenter$q;->b:Lcom/vk/cameraui/entities/e;
+    iput-object p2, p0, Lcom/vk/stories/editor/multi/MultiCameraEditorPresenter$q;->b:Lcom/vk/cameraui/entities/StoryRawData2;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -55,13 +55,13 @@
     .line 2
     iget-object v0, p0, Lcom/vk/stories/editor/multi/MultiCameraEditorPresenter$q;->a:Lcom/vk/stories/editor/multi/MultiCameraEditorPresenter;
 
-    invoke-static {v0}, Lcom/vk/stories/editor/multi/MultiCameraEditorPresenter;->o(Lcom/vk/stories/editor/multi/MultiCameraEditorPresenter;)Lcom/vk/stories/editor/multi/d;
+    invoke-static {v0}, Lcom/vk/stories/editor/multi/MultiCameraEditorPresenter;->o(Lcom/vk/stories/editor/multi/MultiCameraEditorPresenter;)Lcom/vk/stories/editor/multi/CameraVideoDelegate;
 
     move-result-object v0
 
-    iget-object v1, p0, Lcom/vk/stories/editor/multi/MultiCameraEditorPresenter$q;->b:Lcom/vk/cameraui/entities/e;
+    iget-object v1, p0, Lcom/vk/stories/editor/multi/MultiCameraEditorPresenter$q;->b:Lcom/vk/cameraui/entities/StoryRawData2;
 
-    invoke-virtual {v0, v1}, Lcom/vk/stories/editor/multi/d;->a(Lcom/vk/cameraui/entities/e;)Landroid/graphics/Bitmap;
+    invoke-virtual {v0, v1}, Lcom/vk/stories/editor/multi/CameraVideoDelegate;->a(Lcom/vk/cameraui/entities/StoryRawData2;)Landroid/graphics/Bitmap;
 
     move-result-object v0
 

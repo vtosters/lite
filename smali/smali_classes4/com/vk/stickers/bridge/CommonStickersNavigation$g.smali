@@ -3,7 +3,7 @@
 .source "CommonStickersNavigation.kt"
 
 # interfaces
-.implements Lc/a/z/g;
+.implements Lio/reactivex/functions/Consumer;
 
 
 # annotations
@@ -22,7 +22,7 @@
         "Ljava/lang/Object;",
         ">",
         "Ljava/lang/Object;",
-        "Lc/a/z/g<",
+        "Lio/reactivex/functions/Consumer<",
         "Ljava/lang/Boolean;",
         ">;"
     }
@@ -52,7 +52,7 @@
     const-string v0, "it"
 
     .line 1
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {p1}, Ljava/lang/Boolean;->booleanValue()Z
 
@@ -60,7 +60,7 @@
 
     if-eqz p1, :cond_0
 
-    new-instance p1, Lcom/vk/stickers/d0/e;
+    new-instance p1, Lcom/vk/stickers/d0/StickerEvent4;
 
     iget v0, p0, Lcom/vk/stickers/bridge/CommonStickersNavigation$g;->a:I
 
@@ -68,9 +68,9 @@
 
     move-result-object v0
 
-    invoke-direct {p1, v0}, Lcom/vk/stickers/d0/e;-><init>(Ljava/lang/String;)V
+    invoke-direct {p1, v0}, Lcom/vk/stickers/d0/StickerEvent4;-><init>(Ljava/lang/String;)V
 
-    invoke-static {p1}, Lcom/vk/stickers/d0/h;->a(Lcom/vk/stickers/d0/f;)V
+    invoke-static {p1}, Lcom/vk/stickers/d0/StickersEventBus;->a(Lcom/vk/stickers/d0/StickerEvent6;)V
 
     :cond_0
     return-void

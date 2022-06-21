@@ -1,5 +1,5 @@
 .class public Lcom/vk/profile/NewsSearchFragment;
-.super Lcom/vtosters/lite/fragments/y0;
+.super Lcom/vtosters/lite/general/fragments/BaseNewsSearchFragment;
 .source "NewsSearchFragment.kt"
 
 
@@ -13,8 +13,8 @@
 
 .annotation system Ldalvik/annotation/Signature;
     value = {
-        "Lcom/vtosters/lite/fragments/y0<",
-        "Lcom/vk/newsfeed/contracts/l;",
+        "Lcom/vtosters/lite/general/fragments/BaseNewsSearchFragment<",
+        "Lcom/vk/newsfeed/contracts/NewsSearchContract1;",
         ">;"
     }
 .end annotation
@@ -27,7 +27,7 @@
 # instance fields
 .field private r0:Lcom/vk/core/view/search/MilkshakeSearchView;
 
-.field private s0:Lio/reactivex/disposables/b;
+.field private s0:Lio/reactivex/disposables/Disposable;
 
 .field private final t0:Lcom/vk/profile/NewsSearchFragment$d;
 
@@ -40,7 +40,7 @@
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, v1}, Lcom/vk/profile/NewsSearchFragment$b;-><init>(Lkotlin/jvm/internal/i;)V
+    invoke-direct {v0, v1}, Lcom/vk/profile/NewsSearchFragment$b;-><init>(Lkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     sput-object v0, Lcom/vk/profile/NewsSearchFragment;->u0:Lcom/vk/profile/NewsSearchFragment$b;
 
@@ -51,7 +51,7 @@
     .locals 1
 
     .line 1
-    invoke-direct {p0}, Lcom/vtosters/lite/fragments/y0;-><init>()V
+    invoke-direct {p0}, Lcom/vtosters/lite/general/fragments/BaseNewsSearchFragment;-><init>()V
 
     .line 2
     new-instance v0, Lcom/vk/profile/NewsSearchFragment$d;
@@ -63,15 +63,15 @@
     return-void
 .end method
 
-.method public static final synthetic a(Lcom/vk/profile/NewsSearchFragment;)Lcom/vk/newsfeed/contracts/l;
+.method public static final synthetic a(Lcom/vk/profile/NewsSearchFragment;)Lcom/vk/newsfeed/contracts/NewsSearchContract1;
     .locals 0
 
     .line 1
-    invoke-virtual {p0}, Lcom/vk/newsfeed/EntriesListFragment;->getPresenter()Lcom/vk/newsfeed/contracts/e;
+    invoke-virtual {p0}, Lcom/vk/newsfeed/EntriesListFragment;->getPresenter()Lcom/vk/newsfeed/contracts/EntriesListContract;
 
     move-result-object p0
 
-    check-cast p0, Lcom/vk/newsfeed/contracts/l;
+    check-cast p0, Lcom/vk/newsfeed/contracts/NewsSearchContract1;
 
     return-object p0
 .end method
@@ -98,7 +98,7 @@
     :cond_0
     const-string p0, "searchView"
 
-    invoke-static {p0}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {p0}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     const/4 p0, 0x0
 
@@ -140,7 +140,7 @@
     :cond_0
     const-string v0, "searchView"
 
-    invoke-static {v0}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v0}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     const/4 v0, 0x0
 
@@ -161,29 +161,29 @@
 
     const-string p2, "inflater.inflate(R.layou\u2026kshake, container, false)"
 
-    invoke-static {p1, p2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, p2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     return-object p1
 .end method
 
-.method public bridge synthetic c5()Lcom/vk/newsfeed/contracts/e;
+.method public bridge synthetic c5()Lcom/vk/newsfeed/contracts/EntriesListContract;
     .locals 1
 
     .line 1
-    invoke-virtual {p0}, Lcom/vk/profile/NewsSearchFragment;->c5()Lcom/vk/newsfeed/contracts/l;
+    invoke-virtual {p0}, Lcom/vk/profile/NewsSearchFragment;->c5()Lcom/vk/newsfeed/contracts/NewsSearchContract1;
 
     move-result-object v0
 
     return-object v0
 .end method
 
-.method protected c5()Lcom/vk/newsfeed/contracts/l;
+.method protected c5()Lcom/vk/newsfeed/contracts/NewsSearchContract1;
     .locals 1
 
     .line 2
-    new-instance v0, Lcom/vk/newsfeed/presenters/j;
+    new-instance v0, Lcom/vk/newsfeed/presenters/NewsSearchPresenter;
 
-    invoke-direct {v0, p0}, Lcom/vk/newsfeed/presenters/j;-><init>(Lcom/vk/newsfeed/contracts/m;)V
+    invoke-direct {v0, p0}, Lcom/vk/newsfeed/presenters/NewsSearchPresenter;-><init>(Lcom/vk/newsfeed/contracts/NewsSearchContract;)V
 
     return-object v0
 .end method
@@ -195,11 +195,11 @@
     invoke-super {p0}, Lcom/vk/newsfeed/EntriesListFragment;->onDestroyView()V
 
     .line 2
-    iget-object v0, p0, Lcom/vk/profile/NewsSearchFragment;->s0:Lio/reactivex/disposables/b;
+    iget-object v0, p0, Lcom/vk/profile/NewsSearchFragment;->s0:Lio/reactivex/disposables/Disposable;
 
     if-eqz v0, :cond_0
 
-    invoke-interface {v0}, Lio/reactivex/disposables/b;->o()V
+    invoke-interface {v0}, Lio/reactivex/disposables/Disposable;->o()V
 
     :cond_0
     return-void
@@ -220,7 +220,7 @@
 
     const-string p2, "view.findViewById(R.id.search_view)"
 
-    invoke-static {p1, p2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, p2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     check-cast p1, Lcom/vk/core/view/search/MilkshakeSearchView;
 
@@ -246,7 +246,7 @@
     move-object v0, p1
 
     .line 4
-    invoke-static/range {v0 .. v5}, Lcom/vk/core/view/search/MilkshakeSearchView;->a(Lcom/vk/core/view/search/MilkshakeSearchView;JZILjava/lang/Object;)Lc/a/m;
+    invoke-static/range {v0 .. v5}, Lcom/vk/core/view/search/MilkshakeSearchView;->a(Lcom/vk/core/view/search/MilkshakeSearchView;JZILjava/lang/Object;)Lio/reactivex/Observable;
 
     move-result-object v0
 
@@ -255,11 +255,11 @@
 
     invoke-direct {v1, p0}, Lcom/vk/profile/NewsSearchFragment$c;-><init>(Lcom/vk/profile/NewsSearchFragment;)V
 
-    invoke-virtual {v0, v1}, Lc/a/m;->f(Lc/a/z/g;)Lio/reactivex/disposables/b;
+    invoke-virtual {v0, v1}, Lio/reactivex/Observable;->f(Lio/reactivex/functions/Consumer;)Lio/reactivex/disposables/Disposable;
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/vk/profile/NewsSearchFragment;->s0:Lio/reactivex/disposables/b;
+    iput-object v0, p0, Lcom/vk/profile/NewsSearchFragment;->s0:Lio/reactivex/disposables/Disposable;
 
     .line 6
     invoke-virtual {p1}, Landroid/view/ViewGroup;->getContext()Landroid/content/Context;
@@ -285,7 +285,7 @@
 
     invoke-direct {v0, p0}, Lcom/vk/profile/NewsSearchFragment$onViewCreated$$inlined$with$lambda$2;-><init>(Lcom/vk/profile/NewsSearchFragment;)V
 
-    invoke-virtual {p1, v0}, Lcom/vk/core/view/search/MilkshakeSearchView;->setOnBackClickListener(Lkotlin/jvm/b/a;)V
+    invoke-virtual {p1, v0}, Lcom/vk/core/view/search/MilkshakeSearchView;->setOnBackClickListener(Lkotlin/jvm/b/Functions;)V
 
     :goto_0
     const p1, 0x7f120cc1
@@ -297,7 +297,7 @@
 
     const-string v2, "getString(R.string.search)"
 
-    invoke-static {v0, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 10
     invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getArguments()Landroid/os/Bundle;
@@ -344,12 +344,12 @@
 
     const-string v0, "getString(R.string.searc\u2026etString(KEY_OWNER_NAME))"
 
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     goto :goto_1
 
     :cond_1
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     throw v6
 
@@ -372,7 +372,7 @@
 
     const-string v0, "getString(R.string.search_on_community_wall)"
 
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     :goto_1
     move-object v0, p1
@@ -409,7 +409,7 @@
 
     move-result-object p1
 
-    invoke-static {p1, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     goto :goto_1
 
@@ -436,7 +436,7 @@
     :goto_3
     const-string v2, "args.getString(KEY_QUERY) ?: \"\""
 
-    invoke-static {p1, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 20
     iget-object v2, p0, Lcom/vk/profile/NewsSearchFragment;->r0:Lcom/vk/core/view/search/MilkshakeSearchView;
@@ -460,13 +460,13 @@
     goto :goto_4
 
     :cond_7
-    invoke-static {p2}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {p2}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v6
 
     .line 23
     :cond_8
-    invoke-static {p2}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {p2}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v6
 
@@ -638,20 +638,20 @@
 
     const-wide/16 v0, 0xc8
 
-    invoke-virtual {p0, p1, v0, v1}, Lcom/vk/core/fragments/b;->b(Lkotlin/jvm/b/a;J)V
+    invoke-virtual {p0, p1, v0, v1}, Lcom/vk/core/fragments/BaseFragment1;->b(Lkotlin/jvm/b/Functions;J)V
 
     :cond_12
     return-void
 
     .line 41
     :cond_13
-    invoke-static {p2}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {p2}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v6
 
     .line 42
     :cond_14
-    invoke-static {p2}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {p2}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v6
 .end method

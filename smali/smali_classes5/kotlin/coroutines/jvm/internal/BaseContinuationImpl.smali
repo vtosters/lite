@@ -3,8 +3,8 @@
 .source "ContinuationImpl.kt"
 
 # interfaces
-.implements Lkotlin/coroutines/a;
-.implements Lkotlin/coroutines/jvm/internal/b;
+.implements Lkotlin/coroutines/Continuation;
+.implements Lkotlin/coroutines/jvm/internal/CoroutineStackFrame;
 .implements Ljava/io/Serializable;
 
 
@@ -12,20 +12,20 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Ljava/lang/Object;",
-        "Lkotlin/coroutines/a<",
+        "Lkotlin/coroutines/Continuation<",
         "Ljava/lang/Object;",
         ">;",
-        "Lkotlin/coroutines/jvm/internal/b;",
+        "Lkotlin/coroutines/jvm/internal/CoroutineStackFrame;",
         "Ljava/io/Serializable;"
     }
 .end annotation
 
 
 # instance fields
-.field private final completion:Lkotlin/coroutines/a;
+.field private final completion:Lkotlin/coroutines/Continuation;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Lkotlin/coroutines/a<",
+            "Lkotlin/coroutines/Continuation<",
             "Ljava/lang/Object;",
             ">;"
         }
@@ -34,12 +34,12 @@
 
 
 # direct methods
-.method public constructor <init>(Lkotlin/coroutines/a;)V
+.method public constructor <init>(Lkotlin/coroutines/Continuation;)V
     .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lkotlin/coroutines/a<",
+            "Lkotlin/coroutines/Continuation<",
             "Ljava/lang/Object;",
             ">;)V"
         }
@@ -48,7 +48,7 @@
     .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lkotlin/coroutines/jvm/internal/BaseContinuationImpl;->completion:Lkotlin/coroutines/a;
+    iput-object p1, p0, Lkotlin/coroutines/jvm/internal/BaseContinuationImpl;->completion:Lkotlin/coroutines/Continuation;
 
     return-void
 .end method
@@ -58,33 +58,33 @@
 .method protected abstract a(Ljava/lang/Object;)Ljava/lang/Object;
 .end method
 
-.method public final a()Lkotlin/coroutines/a;
+.method public final a()Lkotlin/coroutines/Continuation;
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "()",
-            "Lkotlin/coroutines/a<",
+            "Lkotlin/coroutines/Continuation<",
             "Ljava/lang/Object;",
             ">;"
         }
     .end annotation
 
     .line 1
-    iget-object v0, p0, Lkotlin/coroutines/jvm/internal/BaseContinuationImpl;->completion:Lkotlin/coroutines/a;
+    iget-object v0, p0, Lkotlin/coroutines/jvm/internal/BaseContinuationImpl;->completion:Lkotlin/coroutines/Continuation;
 
     return-object v0
 .end method
 
-.method public a(Ljava/lang/Object;Lkotlin/coroutines/a;)Lkotlin/coroutines/a;
+.method public a(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
     .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
             "Ljava/lang/Object;",
-            "Lkotlin/coroutines/a<",
+            "Lkotlin/coroutines/Continuation<",
             "*>;)",
-            "Lkotlin/coroutines/a<",
-            "Lkotlin/m;",
+            "Lkotlin/coroutines/Continuation<",
+            "Lkotlin/Unit;",
             ">;"
         }
     .end annotation
@@ -103,7 +103,7 @@
     .locals 1
 
     .line 12
-    invoke-static {p0}, Lkotlin/coroutines/jvm/internal/d;->c(Lkotlin/coroutines/jvm/internal/BaseContinuationImpl;)Ljava/lang/StackTraceElement;
+    invoke-static {p0}, Lkotlin/coroutines/jvm/internal/DebugMetadata1;->c(Lkotlin/coroutines/jvm/internal/BaseContinuationImpl;)Ljava/lang/StackTraceElement;
 
     move-result-object v0
 
@@ -119,10 +119,10 @@
 
     .line 1
     :goto_0
-    invoke-static {p1}, Lkotlin/coroutines/jvm/internal/e;->b(Lkotlin/coroutines/a;)V
+    invoke-static {p1}, Lkotlin/coroutines/jvm/internal/DebugProbes;->b(Lkotlin/coroutines/Continuation;)V
 
     .line 2
-    iget-object v1, p1, Lkotlin/coroutines/jvm/internal/BaseContinuationImpl;->completion:Lkotlin/coroutines/a;
+    iget-object v1, p1, Lkotlin/coroutines/jvm/internal/BaseContinuationImpl;->completion:Lkotlin/coroutines/Continuation;
 
     if-eqz v1, :cond_2
 
@@ -157,7 +157,7 @@
     .line 6
     sget-object v2, Lkotlin/Result;->a:Lkotlin/Result$a;
 
-    invoke-static {v0}, Lkotlin/j;->a(Ljava/lang/Throwable;)Ljava/lang/Object;
+    invoke-static {v0}, Lkotlin/Result1;->a(Ljava/lang/Throwable;)Ljava/lang/Object;
 
     move-result-object v0
 
@@ -181,13 +181,13 @@
 
     .line 10
     :cond_1
-    invoke-interface {v1, v0}, Lkotlin/coroutines/a;->b(Ljava/lang/Object;)V
+    invoke-interface {v1, v0}, Lkotlin/coroutines/Continuation;->b(Ljava/lang/Object;)V
 
     return-void
 
     .line 11
     :cond_2
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     const/4 p1, 0x0
 

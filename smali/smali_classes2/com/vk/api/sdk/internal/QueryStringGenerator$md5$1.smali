@@ -3,7 +3,7 @@
 .source "QueryStringGenerator.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/b;
+.implements Lkotlin/jvm/b/Functions2;
 
 
 # annotations
@@ -19,7 +19,7 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/b<",
+        "Lkotlin/jvm/b/Functions2<",
         "Ljava/lang/Byte;",
         "Ljava/lang/String;",
         ">;"
@@ -60,7 +60,7 @@
     .locals 2
 
     .line 1
-    sget-object v0, Lkotlin/jvm/internal/r;->a:Lkotlin/jvm/internal/r;
+    sget-object v0, Lkotlin/jvm/internal/PrimitiveCompanionObjects1;->a:Lkotlin/jvm/internal/PrimitiveCompanionObjects1;
 
     const/4 v0, 0x1
 
@@ -88,7 +88,7 @@
 
     const-string v0, "java.lang.String.format(format, *args)"
 
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     return-object p1
 .end method

@@ -3,12 +3,12 @@
 .source "BaseAuthPresenter.kt"
 
 # interfaces
-.implements Lc/a/z/g;
+.implements Lio/reactivex/functions/Consumer;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/auth/base/BaseAuthPresenter$PresenterAuthObserver;->a(Lcom/vk/auth/main/VkAuthState;Ljava/lang/String;Ljava/lang/String;Lkotlin/jvm/b/a;Z)Lc/a/z/g;
+    value = Lcom/vk/auth/base/BaseAuthPresenter$PresenterAuthObserver;->a(Lcom/vk/auth/main/VkAuthState;Ljava/lang/String;Ljava/lang/String;Lkotlin/jvm/b/Functions;Z)Lio/reactivex/functions/Consumer;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -22,7 +22,7 @@
         "Ljava/lang/Object;",
         ">",
         "Ljava/lang/Object;",
-        "Lc/a/z/g<",
+        "Lio/reactivex/functions/Consumer<",
         "Ljava/lang/Throwable;",
         ">;"
     }
@@ -38,13 +38,13 @@
 
 .field final synthetic d:Ljava/lang/String;
 
-.field final synthetic e:Lkotlin/jvm/b/a;
+.field final synthetic e:Lkotlin/jvm/b/Functions;
 
 .field final synthetic f:Z
 
 
 # direct methods
-.method constructor <init>(Lcom/vk/auth/base/BaseAuthPresenter$PresenterAuthObserver;Lcom/vk/auth/main/VkAuthState;Ljava/lang/String;Ljava/lang/String;Lkotlin/jvm/b/a;Z)V
+.method constructor <init>(Lcom/vk/auth/base/BaseAuthPresenter$PresenterAuthObserver;Lcom/vk/auth/main/VkAuthState;Ljava/lang/String;Ljava/lang/String;Lkotlin/jvm/b/Functions;Z)V
     .locals 0
 
     iput-object p1, p0, Lcom/vk/auth/base/BaseAuthPresenter$PresenterAuthObserver$a;->a:Lcom/vk/auth/base/BaseAuthPresenter$PresenterAuthObserver;
@@ -55,7 +55,7 @@
 
     iput-object p4, p0, Lcom/vk/auth/base/BaseAuthPresenter$PresenterAuthObserver$a;->d:Ljava/lang/String;
 
-    iput-object p5, p0, Lcom/vk/auth/base/BaseAuthPresenter$PresenterAuthObserver$a;->e:Lkotlin/jvm/b/a;
+    iput-object p5, p0, Lcom/vk/auth/base/BaseAuthPresenter$PresenterAuthObserver$a;->e:Lkotlin/jvm/b/Functions;
 
     iput-boolean p6, p0, Lcom/vk/auth/base/BaseAuthPresenter$PresenterAuthObserver$a;->f:Z
 
@@ -91,7 +91,7 @@
 
     iget-object p1, p1, Lcom/vk/auth/base/BaseAuthPresenter$PresenterAuthObserver;->g:Lcom/vk/auth/base/BaseAuthPresenter;
 
-    invoke-virtual {p1}, Lcom/vk/auth/base/BaseAuthPresenter;->v()Lcom/vk/auth/base/b;
+    invoke-virtual {p1}, Lcom/vk/auth/base/BaseAuthPresenter;->v()Lcom/vk/auth/base/AuthView;
 
     move-result-object p1
 
@@ -107,7 +107,7 @@
 
     move-result-object v0
 
-    invoke-interface {p1, v0}, Lcom/vk/auth/base/b;->f(Ljava/lang/String;)V
+    invoke-interface {p1, v0}, Lcom/vk/auth/base/AuthView;->f(Ljava/lang/String;)V
 
     goto :goto_0
 
@@ -130,7 +130,7 @@
 
     iget-object p1, p1, Lcom/vk/auth/base/BaseAuthPresenter$PresenterAuthObserver;->g:Lcom/vk/auth/base/BaseAuthPresenter;
 
-    invoke-virtual {p1}, Lcom/vk/auth/base/BaseAuthPresenter;->g()Lcom/vk/auth/main/g;
+    invoke-virtual {p1}, Lcom/vk/auth/base/BaseAuthPresenter;->g()Lcom/vk/auth/main/AuthRouter;
 
     move-result-object v0
 
@@ -140,9 +140,9 @@
 
     iget-object v3, p0, Lcom/vk/auth/base/BaseAuthPresenter$PresenterAuthObserver$a;->d:Ljava/lang/String;
 
-    iget-object p1, p0, Lcom/vk/auth/base/BaseAuthPresenter$PresenterAuthObserver$a;->e:Lkotlin/jvm/b/a;
+    iget-object p1, p0, Lcom/vk/auth/base/BaseAuthPresenter$PresenterAuthObserver$a;->e:Lkotlin/jvm/b/Functions;
 
-    invoke-interface {p1}, Lkotlin/jvm/b/a;->invoke()Ljava/lang/Object;
+    invoke-interface {p1}, Lkotlin/jvm/b/Functions;->invoke()Ljava/lang/Object;
 
     move-result-object p1
 
@@ -152,7 +152,7 @@
 
     iget-boolean v5, p0, Lcom/vk/auth/base/BaseAuthPresenter$PresenterAuthObserver$a;->f:Z
 
-    invoke-interface/range {v0 .. v5}, Lcom/vk/auth/main/g;->a(Lcom/vk/auth/main/VkAuthState;Ljava/lang/String;Ljava/lang/String;Lcom/vk/auth/verification/base/CodeState;Z)V
+    invoke-interface/range {v0 .. v5}, Lcom/vk/auth/main/AuthRouter;->a(Lcom/vk/auth/main/VkAuthState;Ljava/lang/String;Ljava/lang/String;Lcom/vk/auth/verification/base/CodeState;Z)V
 
     :cond_1
     :goto_0

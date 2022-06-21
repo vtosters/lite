@@ -507,7 +507,7 @@
 
     .line 11
     :try_start_2
-    invoke-static {p4}, Le/c/a/a;->a(Ljava/lang/String;)V
+    invoke-static {p4}, Le/c/a/Log;->a(Ljava/lang/String;)V
 
     .line 12
     sget-object v2, Lru/mail/voip2/VoipImpl2;->_self:Lru/mail/voip2/VoipImpl2;
@@ -1594,7 +1594,7 @@
     if-eqz v0, :cond_0
 
     .line 2
-    invoke-static {}, Le/c/a/a;->a()V
+    invoke-static {}, Le/c/a/Log;->a()V
 
     .line 3
     invoke-static {}, Lru/mail/voip2/VoipImpl2;->NativeStartSignaling()V
@@ -1605,7 +1605,7 @@
     :cond_0
     new-instance v0, Lru/mail/voip2/VoipException2$InitError;
 
-    invoke-static {}, Le/c/a/a;->c()Ljava/lang/String;
+    invoke-static {}, Le/c/a/Log;->c()Ljava/lang/String;
 
     move-result-object v1
 

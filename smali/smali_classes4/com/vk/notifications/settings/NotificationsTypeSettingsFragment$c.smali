@@ -3,12 +3,12 @@
 .source "NotificationsTypeSettingsFragment.kt"
 
 # interfaces
-.implements Lc/a/z/g;
+.implements Lio/reactivex/functions/Consumer;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/notifications/settings/NotificationsTypeSettingsFragment;->a(Lc/a/m;ZLcom/vk/lists/t;)V
+    value = Lcom/vk/notifications/settings/NotificationsTypeSettingsFragment;->a(Lio/reactivex/Observable;ZLcom/vk/lists/PaginationHelper;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -22,7 +22,7 @@
         "Ljava/lang/Object;",
         ">",
         "Ljava/lang/Object;",
-        "Lc/a/z/g<",
+        "Lio/reactivex/functions/Consumer<",
         "Lcom/vk/dto/notifications/settings/NotificationSettingsCategory;",
         ">;"
     }
@@ -32,16 +32,16 @@
 # instance fields
 .field final synthetic a:Lcom/vk/notifications/settings/NotificationsTypeSettingsFragment;
 
-.field final synthetic b:Lcom/vk/lists/t;
+.field final synthetic b:Lcom/vk/lists/PaginationHelper;
 
 
 # direct methods
-.method constructor <init>(Lcom/vk/notifications/settings/NotificationsTypeSettingsFragment;Lcom/vk/lists/t;)V
+.method constructor <init>(Lcom/vk/notifications/settings/NotificationsTypeSettingsFragment;Lcom/vk/lists/PaginationHelper;)V
     .locals 0
 
     iput-object p1, p0, Lcom/vk/notifications/settings/NotificationsTypeSettingsFragment$c;->a:Lcom/vk/notifications/settings/NotificationsTypeSettingsFragment;
 
-    iput-object p2, p0, Lcom/vk/notifications/settings/NotificationsTypeSettingsFragment$c;->b:Lcom/vk/lists/t;
+    iput-object p2, p0, Lcom/vk/notifications/settings/NotificationsTypeSettingsFragment$c;->b:Lcom/vk/lists/PaginationHelper;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -72,21 +72,21 @@
     :cond_0
     iget-object v0, p0, Lcom/vk/notifications/settings/NotificationsTypeSettingsFragment$c;->a:Lcom/vk/notifications/settings/NotificationsTypeSettingsFragment;
 
-    invoke-static {v0}, Lcom/vk/notifications/settings/NotificationsTypeSettingsFragment;->a(Lcom/vk/notifications/settings/NotificationsTypeSettingsFragment;)Lcom/vk/notifications/settings/a;
+    invoke-static {v0}, Lcom/vk/notifications/settings/NotificationsTypeSettingsFragment;->a(Lcom/vk/notifications/settings/NotificationsTypeSettingsFragment;)Lcom/vk/notifications/settings/CategorySettingsAdapter;
 
     move-result-object v0
 
     if-eqz v0, :cond_1
 
-    invoke-virtual {v0, p1}, Lcom/vk/notifications/settings/a;->a(Lcom/vk/dto/notifications/settings/NotificationSettingsCategory;)V
+    invoke-virtual {v0, p1}, Lcom/vk/notifications/settings/CategorySettingsAdapter;->a(Lcom/vk/dto/notifications/settings/NotificationSettingsCategory;)V
 
     .line 3
     :cond_1
-    iget-object p1, p0, Lcom/vk/notifications/settings/NotificationsTypeSettingsFragment$c;->b:Lcom/vk/lists/t;
+    iget-object p1, p0, Lcom/vk/notifications/settings/NotificationsTypeSettingsFragment$c;->b:Lcom/vk/lists/PaginationHelper;
 
     const/4 v0, 0x0
 
-    invoke-virtual {p1, v0}, Lcom/vk/lists/t;->a(Ljava/lang/String;)V
+    invoke-virtual {p1, v0}, Lcom/vk/lists/PaginationHelper;->a(Ljava/lang/String;)V
 
     return-void
 .end method

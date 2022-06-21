@@ -3,12 +3,12 @@
 .source "ViewController.kt"
 
 # interfaces
-.implements Lc/a/z/g;
+.implements Lio/reactivex/functions/Consumer;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/photogallery/view/ViewController;->a(Lcom/vk/photogallery/dto/a;I)V
+    value = Lcom/vk/photogallery/view/ViewController;->a(Lcom/vk/photogallery/dto/GalleryState;I)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -22,8 +22,8 @@
         "Ljava/lang/Object;",
         ">",
         "Ljava/lang/Object;",
-        "Lc/a/z/g<",
-        "Lio/reactivex/disposables/b;",
+        "Lio/reactivex/functions/Consumer<",
+        "Lio/reactivex/disposables/Disposable;",
         ">;"
     }
 .end annotation
@@ -50,7 +50,7 @@
 
 
 # virtual methods
-.method public final a(Lio/reactivex/disposables/b;)V
+.method public final a(Lio/reactivex/disposables/Disposable;)V
     .locals 4
 
     .line 1
@@ -81,9 +81,9 @@
 
     invoke-direct {v0, v1}, Lcom/vk/photogallery/view/ViewController$loadImpl$1$1;-><init>(Lcom/vk/photogallery/view/PhotoGalleryPageVH;)V
 
-    new-instance v1, Lcom/vk/photogallery/view/c;
+    new-instance v1, Lcom/vk/photogallery/view/ViewController1;
 
-    invoke-direct {v1, v0}, Lcom/vk/photogallery/view/c;-><init>(Lkotlin/jvm/b/a;)V
+    invoke-direct {v1, v0}, Lcom/vk/photogallery/view/ViewController1;-><init>(Lkotlin/jvm/b/Functions;)V
 
     const-wide/16 v2, 0x1f4
 
@@ -97,9 +97,9 @@
     .locals 0
 
     .line 1
-    check-cast p1, Lio/reactivex/disposables/b;
+    check-cast p1, Lio/reactivex/disposables/Disposable;
 
-    invoke-virtual {p0, p1}, Lcom/vk/photogallery/view/ViewController$loadImpl$1;->a(Lio/reactivex/disposables/b;)V
+    invoke-virtual {p0, p1}, Lcom/vk/photogallery/view/ViewController$loadImpl$1;->a(Lio/reactivex/disposables/Disposable;)V
 
     return-void
 .end method

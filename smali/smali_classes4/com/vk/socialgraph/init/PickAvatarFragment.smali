@@ -1,5 +1,5 @@
 .class public final Lcom/vk/socialgraph/init/PickAvatarFragment;
-.super Lcom/vk/socialgraph/init/a;
+.super Lcom/vk/socialgraph/init/BaseSocialGraphInitFragment;
 .source "PickAvatarFragment.kt"
 
 
@@ -23,7 +23,7 @@
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, v1}, Lcom/vk/socialgraph/init/PickAvatarFragment$a;-><init>(Lkotlin/jvm/internal/i;)V
+    invoke-direct {v0, v1}, Lcom/vk/socialgraph/init/PickAvatarFragment$a;-><init>(Lkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     return-void
 .end method
@@ -32,7 +32,7 @@
     .locals 0
 
     .line 1
-    invoke-direct {p0}, Lcom/vk/socialgraph/init/a;-><init>()V
+    invoke-direct {p0}, Lcom/vk/socialgraph/init/BaseSocialGraphInitFragment;-><init>()V
 
     return-void
 .end method
@@ -73,26 +73,26 @@
     invoke-virtual {p2, p3}, Lcom/vk/imageloader/view/VKImageView;->a(Ljava/lang/String;)V
 
     .line 3
-    invoke-static {}, Lcom/vk/bridges/h0;->a()Lcom/vk/bridges/g0;
+    invoke-static {}, Lcom/vk/bridges/UploadBridge;->a()Lcom/vk/bridges/UploadBridge1;
 
     move-result-object p2
 
-    invoke-static {}, Lcom/vk/bridges/g;->a()Lcom/vk/bridges/f;
+    invoke-static {}, Lcom/vk/bridges/AuthBridge;->a()Lcom/vk/bridges/AuthBridge3;
 
     move-result-object p3
 
-    invoke-interface {p3}, Lcom/vk/bridges/f;->b()I
+    invoke-interface {p3}, Lcom/vk/bridges/AuthBridge3;->b()I
 
     move-result p3
 
     const-string v0, "uri"
 
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    invoke-interface {p2, p3, p1}, Lcom/vk/bridges/g0;->a(ILandroid/net/Uri;)V
+    invoke-interface {p2, p3, p1}, Lcom/vk/bridges/UploadBridge1;->a(ILandroid/net/Uri;)V
 
     .line 4
-    invoke-virtual {p0}, Lcom/vk/socialgraph/init/a;->C4()Lcom/vk/socialgraph/SocialStatSender;
+    invoke-virtual {p0}, Lcom/vk/socialgraph/init/BaseSocialGraphInitFragment;->C4()Lcom/vk/socialgraph/SocialStatSender;
 
     move-result-object p1
 
@@ -106,7 +106,7 @@
 
     .line 5
     :cond_0
-    invoke-virtual {p0}, Lcom/vk/socialgraph/init/a;->D4()Lcom/vk/socialgraph/SocialGraphStrategy;
+    invoke-virtual {p0}, Lcom/vk/socialgraph/init/BaseSocialGraphInitFragment;->D4()Lcom/vk/socialgraph/SocialGraphStrategy;
 
     move-result-object p1
 
@@ -122,7 +122,7 @@
     const-string p1, "avatarView"
 
     .line 6
-    invoke-static {p1}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {p1}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     const/4 p1, 0x0
 
@@ -156,7 +156,7 @@
     .locals 1
 
     .line 1
-    invoke-super {p0, p1, p2}, Lcom/vk/socialgraph/init/a;->onViewCreated(Landroid/view/View;Landroid/os/Bundle;)V
+    invoke-super {p0, p1, p2}, Lcom/vk/socialgraph/init/BaseSocialGraphInitFragment;->onViewCreated(Landroid/view/View;Landroid/os/Bundle;)V
 
     .line 2
     sget p2, Lcom/vk/socialgraph/c;->avatar_image_view:I
@@ -167,7 +167,7 @@
 
     const-string v0, "view.findViewById(R.id.avatar_image_view)"
 
-    invoke-static {p2, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p2, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     check-cast p2, Lcom/vk/imageloader/view/VKImageView;
 
@@ -208,13 +208,13 @@
 
     const-string p2, "view.findViewById<View>(R.id.skip)"
 
-    invoke-static {p1, p2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, p2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     new-instance p2, Lcom/vk/socialgraph/init/PickAvatarFragment$onViewCreated$3;
 
     invoke-direct {p2, p0}, Lcom/vk/socialgraph/init/PickAvatarFragment$onViewCreated$3;-><init>(Lcom/vk/socialgraph/init/PickAvatarFragment;)V
 
-    invoke-static {p1, p2}, Lcom/vk/extensions/ViewExtKt;->e(Landroid/view/View;Lkotlin/jvm/b/b;)V
+    invoke-static {p1, p2}, Lcom/vk/extensions/ViewExtKt;->e(Landroid/view/View;Lkotlin/jvm/b/Functions2;)V
 
     return-void
 .end method

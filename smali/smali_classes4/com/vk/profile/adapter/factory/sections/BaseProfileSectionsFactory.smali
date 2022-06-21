@@ -58,7 +58,7 @@
     return-object p0
 .end method
 
-.method public static synthetic a(Lcom/vk/profile/adapter/factory/sections/BaseProfileSectionsFactory;Lcom/vtosters/lite/api/ExtendedUserProfile;ZLkotlin/jvm/b/b;ILjava/lang/Object;)V
+.method public static synthetic a(Lcom/vk/profile/adapter/factory/sections/BaseProfileSectionsFactory;Lcom/vtosters/lite/api/ExtendedUserProfile;ZLkotlin/jvm/b/Functions2;ILjava/lang/Object;)V
     .locals 0
 
     if-nez p5, :cond_2
@@ -78,7 +78,7 @@
 
     .line 86
     :cond_1
-    invoke-virtual {p0, p1, p2, p3}, Lcom/vk/profile/adapter/factory/sections/BaseProfileSectionsFactory;->a(Lcom/vtosters/lite/api/ExtendedUserProfile;ZLkotlin/jvm/b/b;)V
+    invoke-virtual {p0, p1, p2, p3}, Lcom/vk/profile/adapter/factory/sections/BaseProfileSectionsFactory;->a(Lcom/vtosters/lite/api/ExtendedUserProfile;ZLkotlin/jvm/b/Functions2;)V
 
     return-void
 
@@ -93,7 +93,7 @@
     throw p0
 .end method
 
-.method public static synthetic a(Lcom/vk/profile/adapter/factory/sections/BaseProfileSectionsFactory;Lcom/vtosters/lite/api/ExtendedUserProfile;Lcom/vk/profile/data/d/b;ILjava/lang/Object;)Z
+.method public static synthetic a(Lcom/vk/profile/adapter/factory/sections/BaseProfileSectionsFactory;Lcom/vtosters/lite/api/ExtendedUserProfile;Lcom/vk/profile/data/d/MainSectionStrategy;ILjava/lang/Object;)Z
     .locals 0
 
     if-nez p4, :cond_1
@@ -106,7 +106,7 @@
 
     .line 72
     :cond_0
-    invoke-virtual {p0, p1, p2}, Lcom/vk/profile/adapter/factory/sections/BaseProfileSectionsFactory;->a(Lcom/vtosters/lite/api/ExtendedUserProfile;Lcom/vk/profile/data/d/b;)Z
+    invoke-virtual {p0, p1, p2}, Lcom/vk/profile/adapter/factory/sections/BaseProfileSectionsFactory;->a(Lcom/vtosters/lite/api/ExtendedUserProfile;Lcom/vk/profile/data/d/MainSectionStrategy;)Z
 
     move-result p0
 
@@ -224,7 +224,7 @@
 
     .line 4
     :cond_3
-    sget-object p2, Lcom/vk/profile/ui/d/a;->a:Lcom/vk/profile/ui/d/a$a;
+    sget-object p2, Lcom/vk/profile/ui/d/SectionViews;->a:Lcom/vk/profile/ui/d/SectionViews$a;
 
     invoke-static {}, Lcom/vk/profile/data/ProfileCountersKt;->l()Lcom/vk/profile/data/CountersWrapper;
 
@@ -234,7 +234,7 @@
 
     move-result-object v6
 
-    invoke-virtual {p2, v2, p1, v6}, Lcom/vk/profile/ui/d/a$a;->a(Lcom/vk/profile/data/CountersWrapper;Lcom/vtosters/lite/api/ExtendedUserProfile;Lcom/vk/profile/presenter/BaseProfilePresenter;)Lcom/vk/profile/adapter/items/h;
+    invoke-virtual {p2, v2, p1, v6}, Lcom/vk/profile/ui/d/SectionViews$a;->a(Lcom/vk/profile/data/CountersWrapper;Lcom/vtosters/lite/api/ExtendedUserProfile;Lcom/vk/profile/presenter/BaseProfilePresenter;)Lcom/vk/profile/adapter/items/ContentTitleInfoItem;
 
     move-result-object p2
 
@@ -249,14 +249,14 @@
 
     const-string v8, "profile.narratives"
 
-    invoke-static {v7, v8}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v7, v8}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-direct {v2, v6, v7}, Lcom/vk/profile/adapter/inner/NarrativesProfileAdapter;-><init>(ILjava/util/List;)V
 
     .line 6
     iget-object p1, p1, Lcom/vtosters/lite/api/ExtendedUserProfile;->n1:Lcom/vk/dto/common/data/VKList;
 
-    invoke-static {p1, v8}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v8}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 7
     new-instance v6, Ljava/util/ArrayList;
@@ -287,18 +287,18 @@
     check-cast v5, Lcom/vk/dto/narratives/Narrative;
 
     .line 10
-    new-instance v7, Lcom/vk/profile/adapter/items/v;
+    new-instance v7, Lcom/vk/profile/adapter/items/NarrativeProfileItem;
 
-    invoke-static {v5, v4}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v5, v4}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    invoke-direct {v7, v5}, Lcom/vk/profile/adapter/items/v;-><init>(Lcom/vk/dto/narratives/Narrative;)V
+    invoke-direct {v7, v5}, Lcom/vk/profile/adapter/items/NarrativeProfileItem;-><init>(Lcom/vk/dto/narratives/Narrative;)V
 
     invoke-interface {v6, v7}, Ljava/util/Collection;->add(Ljava/lang/Object;)Z
 
     goto :goto_2
 
     :cond_4
-    invoke-virtual {v2, v6}, Lcom/vk/lists/i0;->setItems(Ljava/util/List;)V
+    invoke-virtual {v2, v6}, Lcom/vk/lists/SimpleAdapter;->setItems(Ljava/util/List;)V
 
     .line 11
     new-instance p1, Lcom/vk/profile/adapter/HorizontalRecyclerItem;
@@ -309,7 +309,7 @@
     sget-object v5, Lcom/vk/profile/adapter/factory/sections/BaseProfileSectionsFactory$createMainSection$recyclerItem$5;->a:Lcom/vk/profile/adapter/factory/sections/BaseProfileSectionsFactory$createMainSection$recyclerItem$5;
 
     .line 13
-    invoke-direct {p1, v4, v2, v5}, Lcom/vk/profile/adapter/HorizontalRecyclerItem;-><init>(ILandroidx/recyclerview/widget/RecyclerView$Adapter;Lkotlin/jvm/b/b;)V
+    invoke-direct {p1, v4, v2, v5}, Lcom/vk/profile/adapter/HorizontalRecyclerItem;-><init>(ILandroidx/recyclerview/widget/RecyclerView$Adapter;Lkotlin/jvm/b/Functions2;)V
 
     new-array v1, v1, [Lcom/vk/profile/adapter/BaseInfoItem;
 
@@ -358,7 +358,7 @@
 
     .line 16
     :cond_8
-    sget-object p2, Lcom/vk/profile/ui/d/a;->a:Lcom/vk/profile/ui/d/a$a;
+    sget-object p2, Lcom/vk/profile/ui/d/SectionViews;->a:Lcom/vk/profile/ui/d/SectionViews$a;
 
     invoke-static {}, Lcom/vk/profile/data/ProfileCountersKt;->c()Lcom/vk/profile/data/CountersWrapper;
 
@@ -368,21 +368,21 @@
 
     move-result-object v6
 
-    invoke-virtual {p2, v2, p1, v6}, Lcom/vk/profile/ui/d/a$a;->a(Lcom/vk/profile/data/CountersWrapper;Lcom/vtosters/lite/api/ExtendedUserProfile;Lcom/vk/profile/presenter/BaseProfilePresenter;)Lcom/vk/profile/adapter/items/h;
+    invoke-virtual {p2, v2, p1, v6}, Lcom/vk/profile/ui/d/SectionViews$a;->a(Lcom/vk/profile/data/CountersWrapper;Lcom/vtosters/lite/api/ExtendedUserProfile;Lcom/vk/profile/presenter/BaseProfilePresenter;)Lcom/vk/profile/adapter/items/ContentTitleInfoItem;
 
     move-result-object p2
 
     .line 17
-    new-instance v2, Lcom/vk/profile/adapter/inner/a;
+    new-instance v2, Lcom/vk/profile/adapter/inner/ArticleProfileAdapter;
 
-    invoke-direct {v2, p1}, Lcom/vk/profile/adapter/inner/a;-><init>(Lcom/vtosters/lite/api/ExtendedUserProfile;)V
+    invoke-direct {v2, p1}, Lcom/vk/profile/adapter/inner/ArticleProfileAdapter;-><init>(Lcom/vtosters/lite/api/ExtendedUserProfile;)V
 
     .line 18
     iget-object p1, p1, Lcom/vtosters/lite/api/ExtendedUserProfile;->m1:Ljava/util/ArrayList;
 
     const-string v6, "profile.articles"
 
-    invoke-static {p1, v6}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v6}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 19
     new-instance v6, Ljava/util/ArrayList;
@@ -413,18 +413,18 @@
     check-cast v5, Lcom/vk/dto/articles/Article;
 
     .line 22
-    new-instance v7, Lcom/vk/profile/adapter/items/a;
+    new-instance v7, Lcom/vk/profile/adapter/items/ArticleProfileItem;
 
-    invoke-static {v5, v4}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v5, v4}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    invoke-direct {v7, v5}, Lcom/vk/profile/adapter/items/a;-><init>(Lcom/vk/dto/articles/Article;)V
+    invoke-direct {v7, v5}, Lcom/vk/profile/adapter/items/ArticleProfileItem;-><init>(Lcom/vk/dto/articles/Article;)V
 
     invoke-interface {v6, v7}, Ljava/util/Collection;->add(Ljava/lang/Object;)Z
 
     goto :goto_5
 
     :cond_9
-    invoke-virtual {v2, v6}, Lcom/vk/lists/i0;->setItems(Ljava/util/List;)V
+    invoke-virtual {v2, v6}, Lcom/vk/lists/SimpleAdapter;->setItems(Ljava/util/List;)V
 
     .line 23
     new-instance p1, Lcom/vk/profile/adapter/HorizontalRecyclerItem;
@@ -435,7 +435,7 @@
     sget-object v5, Lcom/vk/profile/adapter/factory/sections/BaseProfileSectionsFactory$createMainSection$recyclerItem$4;->a:Lcom/vk/profile/adapter/factory/sections/BaseProfileSectionsFactory$createMainSection$recyclerItem$4;
 
     .line 25
-    invoke-direct {p1, v4, v2, v5}, Lcom/vk/profile/adapter/HorizontalRecyclerItem;-><init>(ILandroidx/recyclerview/widget/RecyclerView$Adapter;Lkotlin/jvm/b/b;)V
+    invoke-direct {p1, v4, v2, v5}, Lcom/vk/profile/adapter/HorizontalRecyclerItem;-><init>(ILandroidx/recyclerview/widget/RecyclerView$Adapter;Lkotlin/jvm/b/Functions2;)V
 
     new-array v1, v1, [Lcom/vk/profile/adapter/BaseInfoItem;
 
@@ -479,13 +479,13 @@
     const/16 v2, -0x2a
 
     .line 29
-    new-instance v4, Lcom/vk/profile/adapter/inner/b;
+    new-instance v4, Lcom/vk/profile/adapter/inner/GoodsAdapter;
 
     invoke-virtual {p0}, Lcom/vk/profile/adapter/factory/sections/BaseProfileSectionsFactory;->a()Lcom/vk/profile/presenter/BaseProfilePresenter;
 
     move-result-object v5
 
-    invoke-virtual {v5}, Lcom/vk/newsfeed/presenters/i;->L()I
+    invoke-virtual {v5}, Lcom/vk/newsfeed/presenters/NewsFeedProfilePresenter;->L()I
 
     move-result v5
 
@@ -493,22 +493,22 @@
 
     const-string v7, "profile.goods"
 
-    invoke-static {v6, v7}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v6, v7}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     iget v7, p1, Lcom/vtosters/lite/api/ExtendedUserProfile;->a1:I
 
-    invoke-direct {v4, v5, v6, v7}, Lcom/vk/profile/adapter/inner/b;-><init>(ILjava/util/List;I)V
+    invoke-direct {v4, v5, v6, v7}, Lcom/vk/profile/adapter/inner/GoodsAdapter;-><init>(ILjava/util/List;I)V
 
     .line 30
     sget-object v5, Lcom/vk/profile/adapter/factory/sections/BaseProfileSectionsFactory$createMainSection$recyclerItem$1;->a:Lcom/vk/profile/adapter/factory/sections/BaseProfileSectionsFactory$createMainSection$recyclerItem$1;
 
     .line 31
-    invoke-direct {p2, v2, v4, v5}, Lcom/vk/profile/adapter/HorizontalRecyclerItem;-><init>(ILandroidx/recyclerview/widget/RecyclerView$Adapter;Lkotlin/jvm/b/b;)V
+    invoke-direct {p2, v2, v4, v5}, Lcom/vk/profile/adapter/HorizontalRecyclerItem;-><init>(ILandroidx/recyclerview/widget/RecyclerView$Adapter;Lkotlin/jvm/b/Functions2;)V
 
     new-array v1, v1, [Lcom/vk/profile/adapter/BaseInfoItem;
 
     .line 32
-    sget-object v2, Lcom/vk/profile/ui/d/a;->a:Lcom/vk/profile/ui/d/a$a;
+    sget-object v2, Lcom/vk/profile/ui/d/SectionViews;->a:Lcom/vk/profile/ui/d/SectionViews$a;
 
     invoke-static {}, Lcom/vk/profile/data/ProfileCountersKt;->k()Lcom/vk/profile/data/CountersWrapper;
 
@@ -518,7 +518,7 @@
 
     move-result-object v5
 
-    invoke-virtual {v2, v4, p1, v5}, Lcom/vk/profile/ui/d/a$a;->a(Lcom/vk/profile/data/CountersWrapper;Lcom/vtosters/lite/api/ExtendedUserProfile;Lcom/vk/profile/presenter/BaseProfilePresenter;)Lcom/vk/profile/adapter/items/h;
+    invoke-virtual {v2, v4, p1, v5}, Lcom/vk/profile/ui/d/SectionViews$a;->a(Lcom/vk/profile/data/CountersWrapper;Lcom/vtosters/lite/api/ExtendedUserProfile;Lcom/vk/profile/presenter/BaseProfilePresenter;)Lcom/vk/profile/adapter/items/ContentTitleInfoItem;
 
     move-result-object p1
 
@@ -572,7 +572,7 @@
 
     const-string v7, "profile.videos"
 
-    invoke-static {v6, v7}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v6, v7}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-direct {v4, v5, v6}, Lcom/vk/profile/adapter/inner/VideoFeedAdapter;-><init>(Lcom/vk/profile/presenter/BaseProfilePresenter;Ljava/util/List;)V
 
@@ -580,12 +580,12 @@
     sget-object v5, Lcom/vk/profile/adapter/factory/sections/BaseProfileSectionsFactory$createMainSection$recyclerItem$2;->a:Lcom/vk/profile/adapter/factory/sections/BaseProfileSectionsFactory$createMainSection$recyclerItem$2;
 
     .line 38
-    invoke-direct {p2, v2, v4, v5}, Lcom/vk/profile/adapter/HorizontalRecyclerItem;-><init>(ILandroidx/recyclerview/widget/RecyclerView$Adapter;Lkotlin/jvm/b/b;)V
+    invoke-direct {p2, v2, v4, v5}, Lcom/vk/profile/adapter/HorizontalRecyclerItem;-><init>(ILandroidx/recyclerview/widget/RecyclerView$Adapter;Lkotlin/jvm/b/Functions2;)V
 
     new-array v1, v1, [Lcom/vk/profile/adapter/BaseInfoItem;
 
     .line 39
-    sget-object v2, Lcom/vk/profile/ui/d/a;->a:Lcom/vk/profile/ui/d/a$a;
+    sget-object v2, Lcom/vk/profile/ui/d/SectionViews;->a:Lcom/vk/profile/ui/d/SectionViews$a;
 
     invoke-static {}, Lcom/vk/profile/data/ProfileCountersKt;->r()Lcom/vk/profile/data/CountersWrapper;
 
@@ -595,7 +595,7 @@
 
     move-result-object v5
 
-    invoke-virtual {v2, v4, p1, v5}, Lcom/vk/profile/ui/d/a$a;->a(Lcom/vk/profile/data/CountersWrapper;Lcom/vtosters/lite/api/ExtendedUserProfile;Lcom/vk/profile/presenter/BaseProfilePresenter;)Lcom/vk/profile/adapter/items/h;
+    invoke-virtual {v2, v4, p1, v5}, Lcom/vk/profile/ui/d/SectionViews$a;->a(Lcom/vk/profile/data/CountersWrapper;Lcom/vtosters/lite/api/ExtendedUserProfile;Lcom/vk/profile/presenter/BaseProfilePresenter;)Lcom/vk/profile/adapter/items/ContentTitleInfoItem;
 
     move-result-object p1
 
@@ -648,7 +648,7 @@
 
     .line 43
     :cond_10
-    new-instance p2, Lcom/vk/profile/adapter/items/h;
+    new-instance p2, Lcom/vk/profile/adapter/items/ContentTitleInfoItem;
 
     .line 44
     iget-object v5, p0, Lcom/vk/profile/adapter/factory/sections/BaseProfileSectionsFactory;->a:Landroid/content/Context;
@@ -660,13 +660,13 @@
 
     move-result-object v2
 
-    invoke-static {v2}, Lcom/vtosters/lite/d0;->b(Ljava/lang/String;)Ljava/lang/CharSequence;
+    invoke-static {v2}, Lcom/vtosters/lite/TextFormatter;->b(Ljava/lang/String;)Ljava/lang/CharSequence;
 
     move-result-object v6
 
     const-string v2, "TextFormatter.processStr\u2026etString(R.string.music))"
 
-    invoke-static {v6, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v6, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 46
     new-instance v7, Lcom/vk/profile/adapter/factory/sections/BaseProfileSectionsFactory$c;
@@ -684,10 +684,10 @@
     move-object v4, p2
 
     .line 47
-    invoke-direct/range {v4 .. v11}, Lcom/vk/profile/adapter/items/h;-><init>(Landroid/content/Context;Ljava/lang/CharSequence;Ljava/lang/Runnable;ZLjava/lang/CharSequence;ILkotlin/jvm/internal/i;)V
+    invoke-direct/range {v4 .. v11}, Lcom/vk/profile/adapter/items/ContentTitleInfoItem;-><init>(Landroid/content/Context;Ljava/lang/CharSequence;Ljava/lang/Runnable;ZLjava/lang/CharSequence;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     .line 48
-    new-instance v2, Lcom/vk/music/view/v/c$a;
+    new-instance v2, Lcom/vk/music/view/v/ItemAdapter$a;
 
     iget-object v4, p0, Lcom/vk/profile/adapter/factory/sections/BaseProfileSectionsFactory;->a:Landroid/content/Context;
 
@@ -695,34 +695,34 @@
 
     move-result-object v4
 
-    invoke-direct {v2, v4}, Lcom/vk/music/view/v/c$a;-><init>(Landroid/view/LayoutInflater;)V
+    invoke-direct {v2, v4}, Lcom/vk/music/view/v/ItemAdapter$a;-><init>(Landroid/view/LayoutInflater;)V
 
     const v4, 0x7f0d0384
 
     .line 49
-    invoke-virtual {v2, v4}, Lcom/vk/music/view/v/c$a;->a(I)Lcom/vk/music/view/v/c$a;
+    invoke-virtual {v2, v4}, Lcom/vk/music/view/v/ItemAdapter$a;->a(I)Lcom/vk/music/view/v/ItemAdapter$a;
 
     .line 50
-    new-instance v4, Lcom/vk/music/view/v/e;
+    new-instance v4, Lcom/vk/music/view/v/PlaylistBinder;
 
-    invoke-direct {v4}, Lcom/vk/music/view/v/e;-><init>()V
+    invoke-direct {v4}, Lcom/vk/music/view/v/PlaylistBinder;-><init>()V
 
-    invoke-virtual {v2, v4}, Lcom/vk/music/view/v/c$a;->a(Lcom/vk/music/view/v/d$a;)Lcom/vk/music/view/v/c$a;
+    invoke-virtual {v2, v4}, Lcom/vk/music/view/v/ItemAdapter$a;->a(Lcom/vk/music/view/v/ItemViewHolder$a;)Lcom/vk/music/view/v/ItemAdapter$a;
 
     .line 51
     new-instance v4, Lcom/vk/profile/adapter/factory/sections/BaseProfileSectionsFactory$a;
 
     invoke-direct {v4, p1}, Lcom/vk/profile/adapter/factory/sections/BaseProfileSectionsFactory$a;-><init>(Lcom/vtosters/lite/api/ExtendedUserProfile;)V
 
-    invoke-virtual {v2, v4}, Lcom/vk/music/view/v/c$a;->a(Lcom/vk/music/view/v/d$c;)Lcom/vk/music/view/v/c$a;
+    invoke-virtual {v2, v4}, Lcom/vk/music/view/v/ItemAdapter$a;->a(Lcom/vk/music/view/v/ItemViewHolder$c;)Lcom/vk/music/view/v/ItemAdapter$a;
 
     .line 52
     sget-object v4, Lcom/vk/profile/adapter/factory/sections/BaseProfileSectionsFactory$b;->a:Lcom/vk/profile/adapter/factory/sections/BaseProfileSectionsFactory$b;
 
-    invoke-virtual {v2, v4}, Lcom/vk/music/view/v/c$a;->a(Lcom/vk/music/view/v/b;)Lcom/vk/music/view/v/c$a;
+    invoke-virtual {v2, v4}, Lcom/vk/music/view/v/ItemAdapter$a;->a(Lcom/vk/music/view/v/IdResolver;)Lcom/vk/music/view/v/ItemAdapter$a;
 
     .line 53
-    invoke-virtual {v2}, Lcom/vk/music/view/v/c$a;->a()Lcom/vk/music/view/v/c;
+    invoke-virtual {v2}, Lcom/vk/music/view/v/ItemAdapter$a;->a()Lcom/vk/music/view/v/ItemAdapter;
 
     move-result-object v2
 
@@ -732,7 +732,7 @@
     .line 55
     iget-object p1, p1, Lcom/vtosters/lite/api/ExtendedUserProfile;->e1:Ljava/util/ArrayList;
 
-    invoke-virtual {v2, p1}, Lcom/vk/music/view/v/c;->a(Ljava/util/Collection;)V
+    invoke-virtual {v2, p1}, Lcom/vk/music/view/v/ItemAdapter;->a(Ljava/util/Collection;)V
 
     .line 56
     new-instance p1, Lcom/vk/profile/adapter/HorizontalRecyclerItem;
@@ -742,13 +742,13 @@
     const-string v5, "playlistsAdapter"
 
     .line 57
-    invoke-static {v2, v5}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v2, v5}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 58
     sget-object v5, Lcom/vk/profile/adapter/factory/sections/BaseProfileSectionsFactory$createMainSection$recyclerItem$3;->a:Lcom/vk/profile/adapter/factory/sections/BaseProfileSectionsFactory$createMainSection$recyclerItem$3;
 
     .line 59
-    invoke-direct {p1, v4, v2, v5}, Lcom/vk/profile/adapter/HorizontalRecyclerItem;-><init>(ILandroidx/recyclerview/widget/RecyclerView$Adapter;Lkotlin/jvm/b/b;)V
+    invoke-direct {p1, v4, v2, v5}, Lcom/vk/profile/adapter/HorizontalRecyclerItem;-><init>(ILandroidx/recyclerview/widget/RecyclerView$Adapter;Lkotlin/jvm/b/Functions2;)V
 
     new-array v1, v1, [Lcom/vk/profile/adapter/BaseInfoItem;
 
@@ -771,7 +771,7 @@
     invoke-direct {p2}, Ljava/util/ArrayList;-><init>()V
 
     .line 62
-    sget-object v0, Lcom/vk/profile/ui/d/a;->a:Lcom/vk/profile/ui/d/a$a;
+    sget-object v0, Lcom/vk/profile/ui/d/SectionViews;->a:Lcom/vk/profile/ui/d/SectionViews$a;
 
     invoke-static {}, Lcom/vk/profile/data/ProfileCountersKt;->d()Lcom/vk/profile/data/CountersWrapper;
 
@@ -781,7 +781,7 @@
 
     move-result-object v2
 
-    invoke-virtual {v0, v1, p1, v2}, Lcom/vk/profile/ui/d/a$a;->a(Lcom/vk/profile/data/CountersWrapper;Lcom/vtosters/lite/api/ExtendedUserProfile;Lcom/vk/profile/presenter/BaseProfilePresenter;)Lcom/vk/profile/adapter/items/h;
+    invoke-virtual {v0, v1, p1, v2}, Lcom/vk/profile/ui/d/SectionViews$a;->a(Lcom/vk/profile/data/CountersWrapper;Lcom/vtosters/lite/api/ExtendedUserProfile;Lcom/vk/profile/presenter/BaseProfilePresenter;)Lcom/vk/profile/adapter/items/ContentTitleInfoItem;
 
     move-result-object v0
 
@@ -808,17 +808,17 @@
     check-cast v1, Lcom/vk/dto/music/MusicTrack;
 
     .line 64
-    new-instance v2, Lcom/vk/profile/adapter/items/b;
+    new-instance v2, Lcom/vk/profile/adapter/items/AudioInfoItem;
 
     const-string v3, "audio"
 
-    invoke-static {v1, v3}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v1, v3}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     new-instance v3, Lcom/vk/profile/adapter/factory/sections/BaseProfileSectionsFactory$createMainSection$1;
 
     invoke-direct {v3, p0, p1}, Lcom/vk/profile/adapter/factory/sections/BaseProfileSectionsFactory$createMainSection$1;-><init>(Lcom/vk/profile/adapter/factory/sections/BaseProfileSectionsFactory;Lcom/vtosters/lite/api/ExtendedUserProfile;)V
 
-    invoke-direct {v2, v1, v3}, Lcom/vk/profile/adapter/items/b;-><init>(Lcom/vk/dto/music/MusicTrack;Lkotlin/jvm/b/b;)V
+    invoke-direct {v2, v1, v3}, Lcom/vk/profile/adapter/items/AudioInfoItem;-><init>(Lcom/vk/dto/music/MusicTrack;Lkotlin/jvm/b/Functions2;)V
 
     invoke-virtual {p2, v2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
@@ -856,7 +856,7 @@
     invoke-direct {p2}, Ljava/util/ArrayList;-><init>()V
 
     .line 67
-    sget-object v0, Lcom/vk/profile/ui/d/a;->a:Lcom/vk/profile/ui/d/a$a;
+    sget-object v0, Lcom/vk/profile/ui/d/SectionViews;->a:Lcom/vk/profile/ui/d/SectionViews$a;
 
     invoke-static {}, Lcom/vk/profile/data/ProfileCountersKt;->p()Lcom/vk/profile/data/CountersWrapper;
 
@@ -866,7 +866,7 @@
 
     move-result-object v2
 
-    invoke-virtual {v0, v1, p1, v2}, Lcom/vk/profile/ui/d/a$a;->a(Lcom/vk/profile/data/CountersWrapper;Lcom/vtosters/lite/api/ExtendedUserProfile;Lcom/vk/profile/presenter/BaseProfilePresenter;)Lcom/vk/profile/adapter/items/h;
+    invoke-virtual {v0, v1, p1, v2}, Lcom/vk/profile/ui/d/SectionViews$a;->a(Lcom/vk/profile/data/CountersWrapper;Lcom/vtosters/lite/api/ExtendedUserProfile;Lcom/vk/profile/presenter/BaseProfilePresenter;)Lcom/vk/profile/adapter/items/ContentTitleInfoItem;
 
     move-result-object v0
 
@@ -890,24 +890,24 @@
 
     move-result-object v1
 
-    check-cast v1, Lcom/vtosters/lite/api/c;
+    check-cast v1, Lcom/vtosters/lite/api/BoardTopic;
 
     .line 69
-    new-instance v2, Lcom/vk/profile/adapter/items/c;
+    new-instance v2, Lcom/vk/profile/adapter/items/BoardTopicInfoItem;
 
     invoke-virtual {p0}, Lcom/vk/profile/adapter/factory/sections/BaseProfileSectionsFactory;->a()Lcom/vk/profile/presenter/BaseProfilePresenter;
 
     move-result-object v3
 
-    invoke-virtual {v3}, Lcom/vk/newsfeed/presenters/i;->L()I
+    invoke-virtual {v3}, Lcom/vk/newsfeed/presenters/NewsFeedProfilePresenter;->L()I
 
     move-result v3
 
     const-string v4, "topic"
 
-    invoke-static {v1, v4}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v1, v4}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    invoke-direct {v2, p1, v3, v1}, Lcom/vk/profile/adapter/items/c;-><init>(Lcom/vtosters/lite/api/ExtendedUserProfile;ILcom/vtosters/lite/api/c;)V
+    invoke-direct {v2, p1, v3, v1}, Lcom/vk/profile/adapter/items/BoardTopicInfoItem;-><init>(Lcom/vtosters/lite/api/ExtendedUserProfile;ILcom/vtosters/lite/api/BoardTopic;)V
 
     invoke-virtual {p2, v2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
@@ -955,12 +955,12 @@
     return-object p1
 .end method
 
-.method public final a(Lcom/vtosters/lite/api/ExtendedUserProfile;ZLkotlin/jvm/b/b;)V
+.method public final a(Lcom/vtosters/lite/api/ExtendedUserProfile;ZLkotlin/jvm/b/Functions2;)V
     .locals 6
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(TT;Z",
-            "Lkotlin/jvm/b/b<",
+            "Lkotlin/jvm/b/Functions2<",
             "-",
             "Lcom/vk/profile/data/CountersWrapper;",
             "Ljava/lang/Boolean;",
@@ -973,13 +973,13 @@
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/vk/newsfeed/presenters/i;->L()I
+    invoke-virtual {v0}, Lcom/vk/newsfeed/presenters/NewsFeedProfilePresenter;->L()I
 
     move-result v0
 
     if-eqz v0, :cond_2
 
-    invoke-static {p1}, Lcom/vk/profile/utils/d;->d(Lcom/vtosters/lite/api/ExtendedUserProfile;)Z
+    invoke-static {p1}, Lcom/vk/profile/utils/ProfileExt;->d(Lcom/vtosters/lite/api/ExtendedUserProfile;)Z
 
     move-result v0
 
@@ -989,7 +989,7 @@
 
     .line 89
     :cond_0
-    invoke-static {p1}, Lcom/vk/profile/utils/d;->f(Lcom/vtosters/lite/api/ExtendedUserProfile;)Z
+    invoke-static {p1}, Lcom/vk/profile/utils/ProfileExt;->f(Lcom/vtosters/lite/api/ExtendedUserProfile;)Z
 
     move-result v0
 
@@ -1053,7 +1053,7 @@
 
     move-result-object v4
 
-    invoke-virtual {v4}, Lcom/vk/profile/presenter/BaseProfilePresenter;->W()Lcom/vk/profile/data/d/b;
+    invoke-virtual {v4}, Lcom/vk/profile/presenter/BaseProfilePresenter;->W()Lcom/vk/profile/data/d/MainSectionStrategy;
 
     move-result-object v4
 
@@ -1063,7 +1063,7 @@
 
     move-result v5
 
-    invoke-virtual {v4, v5}, Lcom/vk/profile/data/d/b;->a(I)Z
+    invoke-virtual {v4, v5}, Lcom/vk/profile/data/d/MainSectionStrategy;->a(I)Z
 
     move-result v4
 
@@ -1085,7 +1085,7 @@
 
     if-gtz v4, :cond_4
 
-    invoke-static {p1}, Lcom/vk/profile/utils/d;->f(Lcom/vtosters/lite/api/ExtendedUserProfile;)Z
+    invoke-static {p1}, Lcom/vk/profile/utils/ProfileExt;->f(Lcom/vtosters/lite/api/ExtendedUserProfile;)Z
 
     move-result v4
 
@@ -1139,7 +1139,7 @@
     .line 99
     aget-object v4, v0, v2
 
-    invoke-interface {p3, v4}, Lkotlin/jvm/b/b;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {p3, v4}, Lkotlin/jvm/b/Functions2;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v4
 
@@ -1164,12 +1164,12 @@
     return-void
 .end method
 
-.method public final a(Lcom/vtosters/lite/api/ExtendedUserProfile;Lcom/vk/profile/data/d/b;)Z
+.method public final a(Lcom/vtosters/lite/api/ExtendedUserProfile;Lcom/vk/profile/data/d/MainSectionStrategy;)Z
     .locals 4
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(TT;",
-            "Lcom/vk/profile/data/d/b<",
+            "Lcom/vk/profile/data/d/MainSectionStrategy<",
             "*>;)Z"
         }
     .end annotation
@@ -1192,13 +1192,13 @@
     invoke-direct {v0}, Ljava/util/HashSet;-><init>()V
 
     .line 76
-    invoke-virtual {p2}, Lcom/vk/profile/data/d/b;->a()I
+    invoke-virtual {p2}, Lcom/vk/profile/data/d/MainSectionStrategy;->a()I
 
     move-result v2
 
     if-lez v2, :cond_1
 
-    invoke-virtual {p2}, Lcom/vk/profile/data/d/b;->a()I
+    invoke-virtual {p2}, Lcom/vk/profile/data/d/MainSectionStrategy;->a()I
 
     move-result v2
 
@@ -1217,13 +1217,13 @@
 
     .line 78
     :cond_1
-    invoke-virtual {p2}, Lcom/vk/profile/data/d/b;->b()I
+    invoke-virtual {p2}, Lcom/vk/profile/data/d/MainSectionStrategy;->b()I
 
     move-result v2
 
     if-lez v2, :cond_2
 
-    invoke-virtual {p2}, Lcom/vk/profile/data/d/b;->b()I
+    invoke-virtual {p2}, Lcom/vk/profile/data/d/MainSectionStrategy;->b()I
 
     move-result p2
 
@@ -1251,7 +1251,7 @@
     iput-boolean v2, p2, Lkotlin/jvm/internal/Ref$BooleanRef;->element:Z
 
     .line 81
-    invoke-static {p1}, Lcom/vk/profile/utils/d;->f(Lcom/vtosters/lite/api/ExtendedUserProfile;)Z
+    invoke-static {p1}, Lcom/vk/profile/utils/ProfileExt;->f(Lcom/vtosters/lite/api/ExtendedUserProfile;)Z
 
     move-result v2
 
@@ -1259,7 +1259,7 @@
 
     invoke-direct {v3, v0, p2}, Lcom/vk/profile/adapter/factory/sections/BaseProfileSectionsFactory$hasCountersView$3;-><init>(Ljava/util/HashSet;Lkotlin/jvm/internal/Ref$BooleanRef;)V
 
-    invoke-virtual {p0, p1, v2, v3}, Lcom/vk/profile/adapter/factory/sections/BaseProfileSectionsFactory;->a(Lcom/vtosters/lite/api/ExtendedUserProfile;ZLkotlin/jvm/b/b;)V
+    invoke-virtual {p0, p1, v2, v3}, Lcom/vk/profile/adapter/factory/sections/BaseProfileSectionsFactory;->a(Lcom/vtosters/lite/api/ExtendedUserProfile;ZLkotlin/jvm/b/Functions2;)V
 
     .line 82
     iget-boolean p2, p2, Lkotlin/jvm/internal/Ref$BooleanRef;->element:Z
@@ -1283,7 +1283,7 @@
     iput-boolean v1, p2, Lkotlin/jvm/internal/Ref$BooleanRef;->element:Z
 
     .line 84
-    invoke-static {p1}, Lcom/vk/profile/utils/d;->f(Lcom/vtosters/lite/api/ExtendedUserProfile;)Z
+    invoke-static {p1}, Lcom/vk/profile/utils/ProfileExt;->f(Lcom/vtosters/lite/api/ExtendedUserProfile;)Z
 
     move-result v0
 
@@ -1291,7 +1291,7 @@
 
     invoke-direct {v1, p2}, Lcom/vk/profile/adapter/factory/sections/BaseProfileSectionsFactory$hasCountersView$4;-><init>(Lkotlin/jvm/internal/Ref$BooleanRef;)V
 
-    invoke-virtual {p0, p1, v0, v1}, Lcom/vk/profile/adapter/factory/sections/BaseProfileSectionsFactory;->a(Lcom/vtosters/lite/api/ExtendedUserProfile;ZLkotlin/jvm/b/b;)V
+    invoke-virtual {p0, p1, v0, v1}, Lcom/vk/profile/adapter/factory/sections/BaseProfileSectionsFactory;->a(Lcom/vtosters/lite/api/ExtendedUserProfile;ZLkotlin/jvm/b/Functions2;)V
 
     .line 85
     iget-boolean p1, p2, Lkotlin/jvm/internal/Ref$BooleanRef;->element:Z

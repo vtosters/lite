@@ -3,7 +3,7 @@
 .source "VkAppCallback.kt"
 
 # interfaces
-.implements Lcom/vk/ui/photoviewer/i;
+.implements Lcom/vk/ui/photoviewer/TagsShower;
 
 
 # annotations
@@ -85,7 +85,7 @@
             "(",
             "Ljava/util/List<",
             "+",
-            "Lcom/vk/dto/photo/a;",
+            "Lcom/vk/dto/photo/PhotoTag;",
             ">;)V"
         }
     .end annotation

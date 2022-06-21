@@ -43,13 +43,13 @@
 
 
 # virtual methods
-.method public final a(Lcom/vk/mentions/h;)Ljava/lang/String;
+.method public final a(Lcom/vk/mentions/MentionModels2;)Ljava/lang/String;
     .locals 2
 
     .line 2
     sget-object v0, Lcom/vk/mentions/MentionUtils;->a:Ljava/util/regex/Pattern;
 
-    invoke-virtual {p1}, Lcom/vk/mentions/h;->b()Ljava/lang/String;
+    invoke-virtual {p1}, Lcom/vk/mentions/MentionModels2;->b()Ljava/lang/String;
 
     move-result-object v1
 
@@ -65,7 +65,7 @@
     if-eqz v0, :cond_0
 
     .line 4
-    invoke-virtual {p1}, Lcom/vk/mentions/h;->c()Ljava/lang/String;
+    invoke-virtual {p1}, Lcom/vk/mentions/MentionModels2;->c()Ljava/lang/String;
 
     move-result-object p1
 
@@ -73,7 +73,7 @@
 
     .line 5
     :cond_0
-    invoke-virtual {p1}, Lcom/vk/mentions/h;->b()Ljava/lang/String;
+    invoke-virtual {p1}, Lcom/vk/mentions/MentionModels2;->b()Ljava/lang/String;
 
     move-result-object p1
 
@@ -117,15 +117,15 @@
             "Ljava/lang/CharSequence;",
             ")",
             "Ljava/util/List<",
-            "Lcom/vk/mentions/a;",
+            "Lcom/vk/mentions/MentionModels;",
             ">;"
         }
     .end annotation
 
     .line 1
-    sget-object v0, Lcom/vk/mentions/w/b;->k:Lcom/vk/mentions/w/b;
+    sget-object v0, Lcom/vk/mentions/w/TextMentionsHelper;->k:Lcom/vk/mentions/w/TextMentionsHelper;
 
-    invoke-virtual {v0, p1}, Lcom/vk/mentions/w/b;->a(Ljava/lang/CharSequence;)Ljava/util/List;
+    invoke-virtual {v0, p1}, Lcom/vk/mentions/w/TextMentionsHelper;->a(Ljava/lang/CharSequence;)Ljava/util/List;
 
     move-result-object p1
 
@@ -162,7 +162,7 @@
 
     move-result v0
 
-    const-class v1, Lcom/vk/mentions/k;
+    const-class v1, Lcom/vk/mentions/Spans;
 
     const/4 v2, 0x0
 
@@ -170,12 +170,12 @@
 
     move-result-object v0
 
-    check-cast v0, [Lcom/vk/mentions/k;
+    check-cast v0, [Lcom/vk/mentions/Spans;
 
     const-string v1, "spans"
 
     .line 9
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 10
     array-length v1, v0
@@ -205,16 +205,16 @@
     move-result-object v4
 
     .line 14
-    instance-of v5, v3, Lcom/vk/mentions/t;
+    instance-of v5, v3, Lcom/vk/mentions/Spans1;
 
     if-eqz v5, :cond_1
 
     .line 15
     move-object v5, v3
 
-    check-cast v5, Lcom/vk/mentions/t;
+    check-cast v5, Lcom/vk/mentions/Spans1;
 
-    invoke-virtual {v5}, Lcom/vk/mentions/t;->a()I
+    invoke-virtual {v5}, Lcom/vk/mentions/Spans1;->a()I
 
     move-result v5
 
@@ -229,7 +229,7 @@
     check-cast v5, Ljava/lang/String;
 
     .line 16
-    invoke-static {v4, v5}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v4, v5}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v4
 
@@ -257,7 +257,7 @@
             "Ljava/lang/CharSequence;",
             ")",
             "Ljava/util/List<",
-            "Lcom/vk/mentions/a;",
+            "Lcom/vk/mentions/MentionModels;",
             ">;"
         }
     .end annotation
@@ -283,20 +283,20 @@
 
     move-result v1
 
-    const-class v2, Lcom/vk/mentions/k;
+    const-class v2, Lcom/vk/mentions/Spans;
 
     invoke-interface {p1, v0, v1, v2}, Landroid/text/Spannable;->getSpans(IILjava/lang/Class;)[Ljava/lang/Object;
 
     move-result-object v0
 
-    check-cast v0, [Lcom/vk/mentions/k;
+    check-cast v0, [Lcom/vk/mentions/Spans;
 
     const-string v1, "spans"
 
     .line 3
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    invoke-static {v0}, Lkotlin/collections/f;->c([Ljava/lang/Object;)Lkotlin/sequences/j;
+    invoke-static {v0}, Lkotlin/collections/f;->c([Ljava/lang/Object;)Lkotlin/sequences/Sequence;
 
     move-result-object v0
 
@@ -304,12 +304,12 @@
 
     invoke-direct {v1, p1}, Lcom/vk/mentions/MentionUtils$getMentionsBySpan$1$1;-><init>(Landroid/text/Spannable;)V
 
-    invoke-static {v0, v1}, Lkotlin/sequences/m;->f(Lkotlin/sequences/j;Lkotlin/jvm/b/b;)Lkotlin/sequences/j;
+    invoke-static {v0, v1}, Lkotlin/sequences/m;->f(Lkotlin/sequences/Sequence;Lkotlin/jvm/b/Functions2;)Lkotlin/sequences/Sequence;
 
     move-result-object p1
 
     .line 4
-    invoke-static {p1}, Lkotlin/sequences/m;->l(Lkotlin/sequences/j;)Ljava/util/List;
+    invoke-static {p1}, Lkotlin/sequences/m;->l(Lkotlin/sequences/Sequence;)Ljava/util/List;
 
     move-result-object v1
 

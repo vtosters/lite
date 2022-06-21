@@ -3,7 +3,7 @@
 .source "AudioPlayerFilterWrapper.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/b;
+.implements Lkotlin/jvm/b/Functions2;
 
 
 # annotations
@@ -19,7 +19,7 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/b<",
+        "Lkotlin/jvm/b/Functions2<",
         "Lkotlin/Pair<",
         "+",
         "Ljava/lang/Integer;",
@@ -72,7 +72,7 @@
 
     iget-object v0, p0, Lcom/vk/audioipc/player/AudioPlayerFilterWrapper$findNewPositionInFilteredTracks$2;->$track:Lcom/vk/dto/music/MusicTrack;
 
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result p1
 

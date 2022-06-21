@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/newsfeed/posting/viewpresenter/attachments/adapter/PostingAttachmentsAdapter;-><init>(Lcom/vk/newsfeed/posting/viewpresenter/attachments/a;Lcom/vk/newsfeed/posting/viewpresenter/attachments/e;)V
+    value = Lcom/vk/newsfeed/posting/viewpresenter/attachments/adapter/PostingAttachmentsAdapter;-><init>(Lcom/vk/newsfeed/posting/viewpresenter/attachments/AttachmentsPreviewInterfaces;Lcom/vk/newsfeed/posting/viewpresenter/attachments/AttachmentsPreviewInterfaces1;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -76,7 +76,7 @@
     if-eqz p2, :cond_0
 
     .line 3
-    invoke-static {p1, p2}, Lcom/vtosters/lite/attachments/a;->a(Lcom/vk/dto/common/Attachment;Lcom/vk/dto/common/Attachment;)Z
+    invoke-static {p1, p2}, Lcom/vtosters/lite/attachments/AttachmentUtils;->a(Lcom/vk/dto/common/Attachment;Lcom/vk/dto/common/Attachment;)Z
 
     move-result p1
 

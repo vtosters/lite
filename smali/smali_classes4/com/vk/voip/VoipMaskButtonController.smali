@@ -59,7 +59,7 @@
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, v1}, Lcom/vk/voip/VoipMaskButtonController$b;-><init>(Lkotlin/jvm/internal/i;)V
+    invoke-direct {v0, v1}, Lcom/vk/voip/VoipMaskButtonController$b;-><init>(Lkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     const-string v0, ""
 
@@ -113,7 +113,7 @@
 
     const-string v0, "voipCallView.findViewByI\u2026.id.masks_wrap_container)"
 
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     check-cast p1, Landroid/widget/FrameLayout;
 
@@ -130,7 +130,7 @@
 
     const-string v0, "masksWrapContainer.context"
 
-    invoke-static {v1, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v1, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     const/4 v2, 0x0
 
@@ -142,7 +142,7 @@
 
     move-object v0, p1
 
-    invoke-direct/range {v0 .. v5}, Lcom/vk/cameraui/widgets/masks/MasksWrap;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;IILkotlin/jvm/internal/i;)V
+    invoke-direct/range {v0 .. v5}, Lcom/vk/cameraui/widgets/masks/MasksWrap;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;IILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     iput-object p1, p0, Lcom/vk/voip/VoipMaskButtonController;->e:Lcom/vk/cameraui/widgets/masks/MasksWrap;
 
@@ -159,7 +159,7 @@
 
     const-string v1, "masksWrapContainer.findV\u2026id.masks_wrap_masks_view)"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     check-cast v0, Lcom/vk/stories/masks/MasksView;
 
@@ -179,7 +179,7 @@
 
     invoke-direct {v0, p0}, Lcom/vk/voip/VoipMaskButtonController$a;-><init>(Lcom/vk/voip/VoipMaskButtonController;)V
 
-    invoke-virtual {p1, v0}, Lcom/vk/cameraui/widgets/masks/a;->setCamera1View(Lcom/vk/cameraui/widgets/masks/a$c;)V
+    invoke-virtual {p1, v0}, Lcom/vk/cameraui/widgets/masks/BaseMasksWrap;->setCamera1View(Lcom/vk/cameraui/widgets/masks/BaseMasksWrap$c;)V
 
     .line 11
     iget-object p1, p0, Lcom/vk/voip/VoipMaskButtonController;->e:Lcom/vk/cameraui/widgets/masks/MasksWrap;
@@ -188,7 +188,7 @@
 
     invoke-direct {v0, p0}, Lcom/vk/voip/VoipMaskButtonController$2;-><init>(Lcom/vk/voip/VoipMaskButtonController;)V
 
-    invoke-virtual {p1, v0}, Lcom/vk/cameraui/widgets/masks/MasksWrap;->setOnMasksUpdatedCallback(Lkotlin/jvm/b/b;)V
+    invoke-virtual {p1, v0}, Lcom/vk/cameraui/widgets/masks/MasksWrap;->setOnMasksUpdatedCallback(Lkotlin/jvm/b/Functions2;)V
 
     .line 12
     iget-object p1, p0, Lcom/vk/voip/VoipMaskButtonController;->e:Lcom/vk/cameraui/widgets/masks/MasksWrap;
@@ -227,7 +227,7 @@
 
     sget-object v0, Lcom/vk/masks/MasksController$MasksCatalogType;->VOIP:Lcom/vk/masks/MasksController$MasksCatalogType;
 
-    invoke-virtual {p1, v0}, Lcom/vk/cameraui/widgets/masks/a;->c(Lcom/vk/masks/MasksController$MasksCatalogType;)V
+    invoke-virtual {p1, v0}, Lcom/vk/cameraui/widgets/masks/BaseMasksWrap;->c(Lcom/vk/masks/MasksController$MasksCatalogType;)V
 
     .line 15
     iget-object p1, p0, Lcom/vk/voip/VoipMaskButtonController;->o:Lcom/vk/voip/VoipCallView;
@@ -240,7 +240,7 @@
 
     const-string v0, "voipCallView.findViewById(R.id.fl_mask_container)"
 
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     iput-object p1, p0, Lcom/vk/voip/VoipMaskButtonController;->h:Landroid/view/View;
 
@@ -255,7 +255,7 @@
 
     const-string v0, "masksBtnContainer.findVi\u2026.id.view_new_masks_badge)"
 
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     iput-object p1, p0, Lcom/vk/voip/VoipMaskButtonController;->i:Landroid/view/View;
 
@@ -270,7 +270,7 @@
 
     const-string v0, "masksBtnContainer.findViewById(R.id.btn_masks)"
 
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     check-cast p1, Landroid/widget/ImageView;
 
@@ -283,7 +283,7 @@
 
     invoke-direct {v0, p0}, Lcom/vk/voip/VoipMaskButtonController$3;-><init>(Lcom/vk/voip/VoipMaskButtonController;)V
 
-    invoke-static {p1, v0}, Lcom/vk/extensions/ViewExtKt;->e(Landroid/view/View;Lkotlin/jvm/b/b;)V
+    invoke-static {p1, v0}, Lcom/vk/extensions/ViewExtKt;->e(Landroid/view/View;Lkotlin/jvm/b/Functions2;)V
 
     .line 19
     invoke-virtual {p0}, Lcom/vk/voip/VoipMaskButtonController;->h()V
@@ -341,7 +341,7 @@
     const/16 v0, 0x8
 
     :goto_0
-    invoke-static {p1, v0}, Lcom/vtosters/lite/f0;->b(Landroid/view/View;I)V
+    invoke-static {p1, v0}, Lcom/vtosters/lite/ViewUtils;->b(Landroid/view/View;I)V
 
     .line 7
     iget-boolean p1, p0, Lcom/vk/voip/VoipMaskButtonController;->k:Z
@@ -502,7 +502,7 @@
     const/16 v1, 0x8
 
     :goto_0
-    invoke-static {v0, v1}, Lcom/vtosters/lite/f0;->b(Landroid/view/View;I)V
+    invoke-static {v0, v1}, Lcom/vtosters/lite/ViewUtils;->b(Landroid/view/View;I)V
 
     return-void
 .end method
@@ -592,7 +592,7 @@
     .line 1
     iget-object v0, p0, Lcom/vk/voip/VoipMaskButtonController;->e:Lcom/vk/cameraui/widgets/masks/MasksWrap;
 
-    invoke-virtual {v0}, Lcom/vk/cameraui/widgets/masks/a;->e()V
+    invoke-virtual {v0}, Lcom/vk/cameraui/widgets/masks/BaseMasksWrap;->e()V
 
     return-void
 .end method
@@ -680,7 +680,7 @@
 
     sget-object v3, Lcom/vk/voip/VoipMaskButtonController;->p:Ljava/lang/String;
 
-    invoke-static {v1, v3}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v1, v3}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v1
 
@@ -734,7 +734,7 @@
 
     move-result-object v3
 
-    invoke-static {v1, v3}, Lcom/vk/voip/u$a;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, v3}, Lcom/vk/voip/VoipUtils$a;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 8
     sget-object v1, Lcom/vk/voip/VoipViewModel;->Z:Lcom/vk/voip/VoipViewModel;
@@ -771,7 +771,7 @@
     iput-object v1, v0, Lcom/vk/voip/VoipMaskButtonController;->d:Lcom/vk/voip/VoipMaskButtonController$ButtonState;
 
     .line 13
-    sget-object v5, Lcom/vk/voip/j;->b:Lcom/vk/voip/j;
+    sget-object v5, Lcom/vk/voip/VoipAnimatorHelper;->b:Lcom/vk/voip/VoipAnimatorHelper;
 
     iget-object v6, v0, Lcom/vk/voip/VoipMaskButtonController;->h:Landroid/view/View;
 
@@ -797,7 +797,7 @@
 
     const/4 v11, 0x0
 
-    invoke-static/range {v5 .. v11}, Lcom/vk/voip/j;->a(Lcom/vk/voip/j;Landroid/view/View;ZZZILjava/lang/Object;)V
+    invoke-static/range {v5 .. v11}, Lcom/vk/voip/VoipAnimatorHelper;->a(Lcom/vk/voip/VoipAnimatorHelper;Landroid/view/View;ZZZILjava/lang/Object;)V
 
     .line 14
     iget-object v1, v0, Lcom/vk/voip/VoipMaskButtonController;->o:Lcom/vk/voip/VoipCallView;
@@ -938,7 +938,7 @@
 
     .line 24
     :goto_5
-    sget-object v6, Lcom/vk/voip/j;->b:Lcom/vk/voip/j;
+    sget-object v6, Lcom/vk/voip/VoipAnimatorHelper;->b:Lcom/vk/voip/VoipAnimatorHelper;
 
     iget-object v7, v0, Lcom/vk/voip/VoipMaskButtonController;->h:Landroid/view/View;
 
@@ -970,7 +970,7 @@
 
     const/16 v16, 0x0
 
-    invoke-static/range {v6 .. v16}, Lcom/vk/voip/j;->a(Lcom/vk/voip/j;Landroid/view/View;Ljava/lang/Float;Ljava/lang/Float;Ljava/lang/Float;Ljava/lang/Float;Ljava/lang/Float;Lkotlin/jvm/b/a;ZILjava/lang/Object;)V
+    invoke-static/range {v6 .. v16}, Lcom/vk/voip/VoipAnimatorHelper;->a(Lcom/vk/voip/VoipAnimatorHelper;Landroid/view/View;Ljava/lang/Float;Ljava/lang/Float;Ljava/lang/Float;Ljava/lang/Float;Ljava/lang/Float;Lkotlin/jvm/b/Functions;ZILjava/lang/Object;)V
 
     .line 25
     invoke-direct/range {p0 .. p0}, Lcom/vk/voip/VoipMaskButtonController;->j()V
@@ -983,11 +983,11 @@
     if-ne v1, v2, :cond_10
 
     .line 27
-    invoke-static {}, Lcom/vtosters/lite/i0/c;->d()Lb/h/h/d/c;
+    invoke-static {}, Lcom/vtosters/lite/auth/VKAccountManager;->d()Lcom/vk/auth/api/VKAccount;
 
     move-result-object v1
 
-    invoke-virtual {v1}, Lb/h/h/d/c;->G()Lcom/vk/dto/hints/a;
+    invoke-virtual {v1}, Lcom/vk/auth/api/VKAccount;->G()Lcom/vk/dto/hints/Hints;
 
     move-result-object v1
 
@@ -995,7 +995,7 @@
 
     const-string v2, "voip:masks_tip"
 
-    invoke-virtual {v1, v2}, Lcom/vk/dto/hints/a;->a(Ljava/lang/String;)Lcom/vk/dto/hints/Hint;
+    invoke-virtual {v1, v2}, Lcom/vk/dto/hints/Hints;->a(Ljava/lang/String;)Lcom/vk/dto/hints/Hint;
 
     move-result-object v1
 

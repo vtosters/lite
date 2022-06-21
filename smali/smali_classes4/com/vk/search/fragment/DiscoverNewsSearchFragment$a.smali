@@ -24,7 +24,7 @@
     return-void
 .end method
 
-.method public synthetic constructor <init>(Lkotlin/jvm/internal/i;)V
+.method public synthetic constructor <init>(Lkotlin/jvm/internal/DefaultConstructorMarker;)V
     .locals 0
 
     .line 2
@@ -74,7 +74,7 @@
     invoke-virtual {v0, v1, v2}, Landroid/os/Bundle;->putBoolean(Ljava/lang/String;Z)V
 
     .line 4
-    invoke-virtual {p1, v0}, Lcom/vtosters/lite/fragments/y0;->setArguments(Landroid/os/Bundle;)V
+    invoke-virtual {p1, v0}, Lcom/vtosters/lite/general/fragments/BaseNewsSearchFragment;->setArguments(Landroid/os/Bundle;)V
 
     return-object p1
 .end method

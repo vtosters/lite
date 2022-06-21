@@ -1,5 +1,5 @@
 .class public final Lcom/vk/newsfeed/holders/attachments/AnimationHolder$b;
-.super Lcom/vk/bridges/p$b;
+.super Lcom/vk/bridges/ImageViewer$b;
 .source "AnimationHolder.kt"
 
 
@@ -30,7 +30,7 @@
     .line 1
     iput-object p1, p0, Lcom/vk/newsfeed/holders/attachments/AnimationHolder$b;->a:Lcom/vk/newsfeed/holders/attachments/AnimationHolder;
 
-    invoke-direct {p0}, Lcom/vk/bridges/p$b;-><init>()V
+    invoke-direct {p0}, Lcom/vk/bridges/ImageViewer$b;-><init>()V
 
     return-void
 .end method
@@ -47,7 +47,7 @@
 
     const-string v0, "itemView"
 
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     return-object p1
 .end method
@@ -58,7 +58,7 @@
     .line 1
     iget-object v0, p0, Lcom/vk/newsfeed/holders/attachments/AnimationHolder$b;->a:Lcom/vk/newsfeed/holders/attachments/AnimationHolder;
 
-    invoke-virtual {v0}, Lcom/vtosters/lite/ui/b0/i;->d0()Landroid/view/ViewGroup;
+    invoke-virtual {v0}, Lcom/vtosters/lite/ui/holder/RecyclerHolder;->d0()Landroid/view/ViewGroup;
 
     move-result-object v0
 
@@ -87,7 +87,7 @@
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/vk/libvideo/autoplay/delegate/a;->d()Lcom/vk/libvideo/q;
+    invoke-virtual {v0}, Lcom/vk/libvideo/autoplay/delegate/AbstractAutoPlayDelegate;->d()Lcom/vk/libvideo/VideoUI2;
 
     move-result-object v0
 
@@ -99,7 +99,7 @@
 
     move-result-object v1
 
-    invoke-interface {v0, v1}, Lcom/vk/libvideo/q;->a(Lcom/vk/libvideo/r;)V
+    invoke-interface {v0, v1}, Lcom/vk/libvideo/VideoUI2;->a(Lcom/vk/libvideo/VideoUI;)V
 
     .line 2
     :cond_0
@@ -109,7 +109,7 @@
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/vk/libvideo/autoplay/delegate/a;->b()Lcom/vk/libvideo/autoplay/VideoAutoPlay;
+    invoke-virtual {v0}, Lcom/vk/libvideo/autoplay/delegate/AbstractAutoPlayDelegate;->b()Lcom/vk/libvideo/autoplay/VideoAutoPlay;
 
     move-result-object v0
 
@@ -136,7 +136,7 @@
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/vk/libvideo/autoplay/delegate/a;->d()Lcom/vk/libvideo/q;
+    invoke-virtual {v0}, Lcom/vk/libvideo/autoplay/delegate/AbstractAutoPlayDelegate;->d()Lcom/vk/libvideo/VideoUI2;
 
     move-result-object v0
 
@@ -148,7 +148,7 @@
 
     move-result-object v1
 
-    invoke-interface {v0, v1}, Lcom/vk/libvideo/q;->a(Lcom/vk/libvideo/r;)V
+    invoke-interface {v0, v1}, Lcom/vk/libvideo/VideoUI2;->a(Lcom/vk/libvideo/VideoUI;)V
 
     .line 2
     :cond_0

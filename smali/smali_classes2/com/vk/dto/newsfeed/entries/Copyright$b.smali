@@ -24,7 +24,7 @@
     return-void
 .end method
 
-.method public synthetic constructor <init>(Lkotlin/jvm/internal/i;)V
+.method public synthetic constructor <init>(Lkotlin/jvm/internal/DefaultConstructorMarker;)V
     .locals 0
 
     .line 2
@@ -101,7 +101,7 @@
     const-string v0, "typeString"
 
     .line 6
-    invoke-static {p2, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p2, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     if-eqz p2, :cond_1
 
@@ -111,7 +111,7 @@
 
     const-string v0, "(this as java.lang.String).toUpperCase()"
 
-    invoke-static {p2, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p2, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-static {p2}, Lcom/vk/dto/newsfeed/entries/Copyright$Type;->valueOf(Ljava/lang/String;)Lcom/vk/dto/newsfeed/entries/Copyright$Type;
 
@@ -145,7 +145,7 @@
     .line 9
     new-instance p1, Lcom/vk/dto/newsfeed/entries/Copyright;
 
-    invoke-static {v7, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v7, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     move-object v1, p1
 

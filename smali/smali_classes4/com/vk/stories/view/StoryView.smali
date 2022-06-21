@@ -1,10 +1,10 @@
 .class public Lcom/vk/stories/view/StoryView;
-.super Lcom/vk/stories/view/e1;
+.super Lcom/vk/stories/view/BaseStoryView;
 .source "StoryView.java"
 
 # interfaces
 .implements Landroid/content/DialogInterface$OnDismissListener;
-.implements Lcom/vk/stories/view/t1;
+.implements Lcom/vk/stories/view/BaseStoryViewContract1;
 
 
 # annotations
@@ -25,15 +25,15 @@
 # instance fields
 .field private A0:Landroid/view/View;
 
-.field private final A1:Lcom/vk/stories/view/j1;
+.field private final A1:Lcom/vk/stories/view/OnStorySelectedNavigationListener;
 
 .field private B0:Landroid/view/View;
 
-.field B1:Lio/reactivex/disposables/b;
+.field B1:Lio/reactivex/disposables/Disposable;
 
 .field private C0:Landroid/view/View;
 
-.field C1:Lcom/vk/stories/view/y1;
+.field C1:Lcom/vk/stories/view/VideoThumbProgress;
 
 .field protected D0:Landroid/view/View;
 
@@ -85,11 +85,11 @@
 
 .field private Z0:Lcom/vk/stories/view/StoryUploadProgressView;
 
-.field protected final a0:Lcom/facebook/imagepipeline/request/a;
+.field protected final a0:Lcom/facebook/imagepipeline/request/BasePostprocessor;
 
 .field private a1:Landroid/widget/TextView;
 
-.field private final b0:Lcom/vk/stories/y0;
+.field private final b0:Lcom/vk/stories/StoryViewHelper;
 
 .field protected b1:Lcom/vk/stories/StoryParentView;
 
@@ -125,14 +125,14 @@
     .end annotation
 .end field
 
-.field private i1:Lcom/vk/stories/util/q;
+.field private i1:Lcom/vk/stories/util/StoryViewTooltipDelegate;
     .annotation build Landroidx/annotation/Nullable;
     .end annotation
 .end field
 
 .field private j0:Landroid/animation/AnimatorSet;
 
-.field private j1:Lcom/vk/stories/view/question/b;
+.field private j1:Lcom/vk/stories/view/question/StoryViewAskQuestionContract2;
     .annotation build Landroidx/annotation/Nullable;
     .end annotation
 .end field
@@ -144,16 +144,16 @@
     .end annotation
 .end field
 
-.field protected final l0:Lcom/vk/stories/view/p1;
+.field protected final l0:Lcom/vk/stories/view/StorySettings;
 
-.field private l1:Lcom/vk/stories/view/u1;
+.field private l1:Lcom/vk/stories/view/StoryViewPollDelegate;
     .annotation build Landroidx/annotation/Nullable;
     .end annotation
 .end field
 
 .field private m0:J
 
-.field private m1:Lcom/vk/stories/view/v1;
+.field private m1:Lcom/vk/stories/view/StoryViewRepliesAndViewersDelegate;
     .annotation build Landroidx/annotation/NonNull;
     .end annotation
 .end field
@@ -167,7 +167,7 @@
 
 .field private o0:Landroid/widget/ProgressBar;
 
-.field private o1:Lcom/vk/libvideo/live/views/liveswipe/f;
+.field private o1:Lcom/vk/libvideo/live/views/liveswipe/SwipeToolTip;
 
 .field private p0:Lcom/vk/libvideo/ui/VideoFastSeekView;
 
@@ -191,11 +191,11 @@
 
 .field protected u0:Lcom/vk/imageloader/view/VKImageView;
 
-.field private u1:Lcom/vk/music/l/a;
+.field private u1:Lcom/vk/music/l/ModernMusicTrackModel;
 
 .field protected v0:Lcom/vk/imageloader/view/VKImageView;
 
-.field private v1:Lcom/vk/music/player/d;
+.field private v1:Lcom/vk/music/player/PlayerModel;
 
 .field private w0:Landroid/view/View;
 
@@ -203,9 +203,9 @@
 
 .field private x0:Landroid/view/View;
 
-.field private x1:Lcom/vk/music/restriction/h;
+.field private x1:Lcom/vk/music/restriction/MusicRestrictionManager;
 
-.field private y0:Lcom/vk/core/widget/h;
+.field private y0:Lcom/vk/core/widget/ViewDisplayer;
 
 .field private final y1:Landroid/graphics/drawable/ColorDrawable;
 
@@ -231,7 +231,7 @@
     return-void
 .end method
 
-.method public constructor <init>(Landroid/content/Context;ZLcom/vk/stories/StoriesController$SourceType;ILandroid/view/View$OnTouchListener;Lcom/vk/dto/stories/model/StoriesContainer;Lcom/vk/stories/view/StoryView$u0;Lcom/vk/stories/view/p1;Lcom/vk/stories/view/j1;)V
+.method public constructor <init>(Landroid/content/Context;ZLcom/vk/stories/StoriesController$SourceType;ILandroid/view/View$OnTouchListener;Lcom/vk/dto/stories/model/StoriesContainer;Lcom/vk/stories/view/StoryView$u0;Lcom/vk/stories/view/StorySettings;Lcom/vk/stories/view/OnStorySelectedNavigationListener;)V
     .locals 10
     .param p1    # Landroid/content/Context;
         .annotation build Landroidx/annotation/NonNull;
@@ -245,7 +245,7 @@
         .annotation build Landroidx/annotation/NonNull;
         .end annotation
     .end param
-    .param p8    # Lcom/vk/stories/view/p1;
+    .param p8    # Lcom/vk/stories/view/StorySettings;
         .annotation build Landroidx/annotation/NonNull;
         .end annotation
     .end param
@@ -271,10 +271,10 @@
     move v7, p4
 
     .line 1
-    invoke-direct/range {v0 .. v7}, Lcom/vk/stories/view/e1;-><init>(Landroid/content/Context;Lcom/vk/dto/stories/model/StoriesContainer;Lcom/vk/stories/view/StoryView$u0;Landroid/view/View$OnTouchListener;ZLcom/vk/stories/StoriesController$SourceType;I)V
+    invoke-direct/range {v0 .. v7}, Lcom/vk/stories/view/BaseStoryView;-><init>(Landroid/content/Context;Lcom/vk/dto/stories/model/StoriesContainer;Lcom/vk/stories/view/StoryView$u0;Landroid/view/View$OnTouchListener;ZLcom/vk/stories/StoriesController$SourceType;I)V
 
     .line 2
-    new-instance v0, Lcom/facebook/x/i/a;
+    new-instance v0, Lcom/facebook/x/i/IterativeBoxBlurPostProcessor;
 
     invoke-static {}, Lcom/vk/core/util/Screen;->h()I
 
@@ -284,14 +284,14 @@
 
     const/4 v2, 0x1
 
-    invoke-direct {v0, v2, v1}, Lcom/facebook/x/i/a;-><init>(II)V
+    invoke-direct {v0, v2, v1}, Lcom/facebook/x/i/IterativeBoxBlurPostProcessor;-><init>(II)V
 
-    iput-object v0, v8, Lcom/vk/stories/view/StoryView;->a0:Lcom/facebook/imagepipeline/request/a;
+    iput-object v0, v8, Lcom/vk/stories/view/StoryView;->a0:Lcom/facebook/imagepipeline/request/BasePostprocessor;
 
     .line 3
-    sget-object v0, Lcom/vk/stories/y0;->a:Lcom/vk/stories/y0;
+    sget-object v0, Lcom/vk/stories/StoryViewHelper;->a:Lcom/vk/stories/StoryViewHelper;
 
-    iput-object v0, v8, Lcom/vk/stories/view/StoryView;->b0:Lcom/vk/stories/y0;
+    iput-object v0, v8, Lcom/vk/stories/view/StoryView;->b0:Lcom/vk/stories/StoryViewHelper;
 
     .line 4
     new-instance v0, Lcom/vk/stories/view/StoryView$k;
@@ -344,7 +344,7 @@
     const v2, 0x7f0702ea
 
     .line 14
-    invoke-static {v2}, Lcom/vk/core/util/y0;->c(I)I
+    invoke-static {v2}, Lcom/vk/core/util/ResUtils;->c(I)I
 
     move-result v2
 
@@ -355,7 +355,7 @@
     const v2, 0x7f07029d
 
     .line 15
-    invoke-static {v2}, Lcom/vk/core/util/y0;->c(I)I
+    invoke-static {v2}, Lcom/vk/core/util/ResUtils;->c(I)I
 
     move-result v2
 
@@ -364,30 +364,30 @@
     iput v2, v8, Lcom/vk/stories/view/StoryView;->t1:F
 
     .line 16
-    invoke-static {}, Lcom/vk/music/common/c$e;->a()Lcom/vk/music/l/a;
+    invoke-static {}, Lcom/vk/music/common/Music$e;->a()Lcom/vk/music/l/ModernMusicTrackModel;
 
     move-result-object v2
 
-    iput-object v2, v8, Lcom/vk/stories/view/StoryView;->u1:Lcom/vk/music/l/a;
+    iput-object v2, v8, Lcom/vk/stories/view/StoryView;->u1:Lcom/vk/music/l/ModernMusicTrackModel;
 
     .line 17
-    sget-object v2, Lcom/vk/music/common/c$a;->a:Lcom/vk/music/common/c$c;
+    sget-object v2, Lcom/vk/music/common/Music$a;->a:Lcom/vk/music/common/Music$c;
 
-    invoke-interface {v2}, Lcom/vk/music/common/c$c;->a()Lcom/vk/music/player/d;
+    invoke-interface {v2}, Lcom/vk/music/common/Music$c;->a()Lcom/vk/music/player/PlayerModel;
 
     move-result-object v2
 
-    iput-object v2, v8, Lcom/vk/stories/view/StoryView;->v1:Lcom/vk/music/player/d;
+    iput-object v2, v8, Lcom/vk/stories/view/StoryView;->v1:Lcom/vk/music/player/PlayerModel;
 
     .line 18
-    sget-object v2, Lcom/vk/music/common/c$a;->d:Lcom/vk/music/common/BoomModel;
+    sget-object v2, Lcom/vk/music/common/Music$a;->d:Lcom/vk/music/common/BoomModel;
 
     iput-object v2, v8, Lcom/vk/stories/view/StoryView;->w1:Lcom/vk/music/common/BoomModel;
 
     .line 19
-    sget-object v2, Lcom/vk/music/common/c$a;->e:Lcom/vk/music/restriction/h;
+    sget-object v2, Lcom/vk/music/common/Music$a;->e:Lcom/vk/music/restriction/MusicRestrictionManager;
 
-    iput-object v2, v8, Lcom/vk/stories/view/StoryView;->x1:Lcom/vk/music/restriction/h;
+    iput-object v2, v8, Lcom/vk/stories/view/StoryView;->x1:Lcom/vk/music/restriction/MusicRestrictionManager;
 
     .line 20
     new-instance v2, Landroid/graphics/drawable/ColorDrawable;
@@ -399,17 +399,17 @@
     iput-object v2, v8, Lcom/vk/stories/view/StoryView;->y1:Landroid/graphics/drawable/ColorDrawable;
 
     .line 21
-    invoke-static {}, Lcom/vk/camera/j/c;->a()Z
+    invoke-static {}, Lcom/vk/camera/j/CadreUtils1;->a()Z
 
     move-result v2
 
     iput-boolean v2, v8, Lcom/vk/stories/view/StoryView;->z1:Z
 
     .line 22
-    iput-object v1, v8, Lcom/vk/stories/view/StoryView;->B1:Lio/reactivex/disposables/b;
+    iput-object v1, v8, Lcom/vk/stories/view/StoryView;->B1:Lio/reactivex/disposables/Disposable;
 
     .line 23
-    iput-object v1, v8, Lcom/vk/stories/view/StoryView;->C1:Lcom/vk/stories/view/y1;
+    iput-object v1, v8, Lcom/vk/stories/view/StoryView;->C1:Lcom/vk/stories/view/VideoThumbProgress;
 
     const-wide/16 v1, 0x0
 
@@ -420,17 +420,17 @@
     iput v0, v8, Lcom/vk/stories/view/StoryView;->E1:F
 
     .line 26
-    iput-object v9, v8, Lcom/vk/stories/view/StoryView;->l0:Lcom/vk/stories/view/p1;
+    iput-object v9, v8, Lcom/vk/stories/view/StoryView;->l0:Lcom/vk/stories/view/StorySettings;
 
     .line 27
-    iget-boolean v0, v9, Lcom/vk/stories/view/p1;->c:Z
+    iget-boolean v0, v9, Lcom/vk/stories/view/StorySettings;->c:Z
 
-    iput-boolean v0, v8, Lcom/vk/stories/view/e1;->Q:Z
+    iput-boolean v0, v8, Lcom/vk/stories/view/BaseStoryView;->Q:Z
 
     move-object/from16 v0, p9
 
     .line 28
-    iput-object v0, v8, Lcom/vk/stories/view/StoryView;->A1:Lcom/vk/stories/view/j1;
+    iput-object v0, v8, Lcom/vk/stories/view/StoryView;->A1:Lcom/vk/stories/view/OnStorySelectedNavigationListener;
 
     .line 29
     invoke-virtual {p0}, Lcom/vk/stories/view/StoryView;->P()V
@@ -442,7 +442,7 @@
     .locals 2
 
     .line 1
-    iget-object v0, p0, Lcom/vk/stories/view/e1;->D:Lcom/vk/dto/stories/model/StoryEntry;
+    iget-object v0, p0, Lcom/vk/stories/view/BaseStoryView;->D:Lcom/vk/dto/stories/model/StoryEntry;
 
     if-eqz v0, :cond_2
 
@@ -465,7 +465,7 @@
     if-nez v0, :cond_1
 
     .line 3
-    iget-object v0, p0, Lcom/vk/stories/view/e1;->D:Lcom/vk/dto/stories/model/StoryEntry;
+    iget-object v0, p0, Lcom/vk/stories/view/BaseStoryView;->D:Lcom/vk/dto/stories/model/StoryEntry;
 
     iget-object v0, v0, Lcom/vk/dto/stories/model/StoryEntry;->r0:Lcom/vk/dto/stories/model/clickable/ClickableStickers;
 
@@ -488,7 +488,7 @@
     .line 5
     sget-object v0, Lcom/vk/dto/stories/model/StoryViewAction;->CLICK_TO_APP:Lcom/vk/dto/stories/model/StoryViewAction;
 
-    invoke-virtual {p0, v0}, Lcom/vk/stories/view/e1;->a(Lcom/vk/dto/stories/model/StoryViewAction;)V
+    invoke-virtual {p0, v0}, Lcom/vk/stories/view/BaseStoryView;->a(Lcom/vk/dto/stories/model/StoryViewAction;)V
 
     :cond_2
     :goto_0
@@ -499,7 +499,7 @@
     .locals 3
 
     .line 1
-    iget-object v0, p0, Lcom/vk/stories/view/e1;->D:Lcom/vk/dto/stories/model/StoryEntry;
+    iget-object v0, p0, Lcom/vk/stories/view/BaseStoryView;->D:Lcom/vk/dto/stories/model/StoryEntry;
 
     if-eqz v0, :cond_1
 
@@ -527,9 +527,9 @@
     .line 3
     iget-object v0, p0, Lcom/vk/stories/view/StoryView;->Y0:Lcom/vk/narratives/views/StoryNarrativeStubDelegate;
 
-    iget-object v1, p0, Lcom/vk/stories/view/e1;->f:Lcom/vk/dto/stories/model/StoriesContainer;
+    iget-object v1, p0, Lcom/vk/stories/view/BaseStoryView;->f:Lcom/vk/dto/stories/model/StoriesContainer;
 
-    iget-object v2, p0, Lcom/vk/stories/view/e1;->D:Lcom/vk/dto/stories/model/StoryEntry;
+    iget-object v2, p0, Lcom/vk/stories/view/BaseStoryView;->D:Lcom/vk/dto/stories/model/StoryEntry;
 
     invoke-virtual {v0, v1, v2}, Lcom/vk/narratives/views/StoryNarrativeStubDelegate;->a(Lcom/vk/dto/stories/model/StoriesContainer;Lcom/vk/dto/stories/model/StoryEntry;)V
 
@@ -551,7 +551,7 @@
 
     .line 2
     :cond_0
-    iget-object v0, p0, Lcom/vk/stories/view/e1;->b:Lcom/vk/stories/StoriesController$SourceType;
+    iget-object v0, p0, Lcom/vk/stories/view/BaseStoryView;->b:Lcom/vk/stories/StoriesController$SourceType;
 
     if-eqz v0, :cond_1
 
@@ -583,13 +583,13 @@
     move-result-object v0
 
     .line 2
-    iget-boolean v1, p0, Lcom/vk/stories/view/e1;->e:Z
+    iget-boolean v1, p0, Lcom/vk/stories/view/BaseStoryView;->e:Z
 
     if-nez v1, :cond_0
 
     if-eqz v0, :cond_0
 
-    invoke-static {}, Lcom/vk/core/util/r0;->f()Z
+    invoke-static {}, Lcom/vk/core/util/Prefs;->f()Z
 
     move-result v1
 
@@ -636,7 +636,7 @@
     invoke-virtual {v1}, Lcom/vk/core/dialogs/alert/VkAlertDialog$Builder;->show()Landroidx/appcompat/app/AlertDialog;
 
     .line 9
-    invoke-static {}, Lcom/vk/core/util/r0;->g()V
+    invoke-static {}, Lcom/vk/core/util/Prefs;->g()V
 
     .line 10
     invoke-virtual {p0}, Lcom/vk/stories/view/StoryView;->onPause()V
@@ -764,31 +764,31 @@
     return-object p0
 .end method
 
-.method private a(Landroid/app/Activity;Lcom/vk/stories/view/w1;Landroid/view/View$OnClickListener;)Landroidx/appcompat/app/AlertDialog;
+.method private a(Landroid/app/Activity;Lcom/vk/stories/view/StoryViewTooltipParams;Landroid/view/View$OnClickListener;)Landroidx/appcompat/app/AlertDialog;
     .locals 21
 
     .line 185
-    invoke-virtual/range {p2 .. p2}, Lcom/vk/stories/view/w1;->e()Ljava/lang/String;
+    invoke-virtual/range {p2 .. p2}, Lcom/vk/stories/view/StoryViewTooltipParams;->e()Ljava/lang/String;
 
     move-result-object v0
 
     .line 186
-    invoke-virtual/range {p2 .. p2}, Lcom/vk/stories/view/w1;->h()F
+    invoke-virtual/range {p2 .. p2}, Lcom/vk/stories/view/StoryViewTooltipParams;->h()F
 
     move-result v1
 
     .line 187
-    invoke-virtual/range {p2 .. p2}, Lcom/vk/stories/view/w1;->i()F
+    invoke-virtual/range {p2 .. p2}, Lcom/vk/stories/view/StoryViewTooltipParams;->i()F
 
     move-result v2
 
     .line 188
-    invoke-virtual/range {p2 .. p2}, Lcom/vk/stories/view/w1;->f()I
+    invoke-virtual/range {p2 .. p2}, Lcom/vk/stories/view/StoryViewTooltipParams;->f()I
 
     move-result v3
 
     .line 189
-    invoke-virtual/range {p2 .. p2}, Lcom/vk/stories/view/w1;->c()Lcom/vk/dto/common/ImageSize;
+    invoke-virtual/range {p2 .. p2}, Lcom/vk/stories/view/StoryViewTooltipParams;->c()Lcom/vk/dto/common/ImageSize;
 
     move-result-object v4
 
@@ -798,7 +798,7 @@
     invoke-direct {v8, v1, v2, v1, v2}, Landroid/graphics/RectF;-><init>(FFFF)V
 
     .line 191
-    invoke-virtual/range {p2 .. p2}, Lcom/vk/stories/view/w1;->g()Z
+    invoke-virtual/range {p2 .. p2}, Lcom/vk/stories/view/StoryViewTooltipParams;->g()Z
 
     move-result v1
 
@@ -814,7 +814,7 @@
 
     const v6, 0x7f0600ee
 
-    invoke-static {v1, v5, v6}, Lcom/vk/core/util/z;->a(Landroid/content/Context;II)Landroid/graphics/drawable/Drawable;
+    invoke-static {v1, v5, v6}, Lcom/vk/core/util/DrawableUtils;->a(Landroid/content/Context;II)Landroid/graphics/drawable/Drawable;
 
     move-result-object v1
 
@@ -836,7 +836,7 @@
     move-result-object v3
 
     .line 193
-    invoke-virtual/range {p2 .. p2}, Lcom/vk/stories/view/w1;->a()Z
+    invoke-virtual/range {p2 .. p2}, Lcom/vk/stories/view/StoryViewTooltipParams;->a()Z
 
     move-result v4
 
@@ -851,7 +851,7 @@
 
     .line 194
     :goto_1
-    invoke-virtual/range {p2 .. p2}, Lcom/vk/stories/view/w1;->a()Z
+    invoke-virtual/range {p2 .. p2}, Lcom/vk/stories/view/StoryViewTooltipParams;->a()Z
 
     move-result v4
 
@@ -887,7 +887,7 @@
     const/16 v18, 0x0
 
     .line 196
-    invoke-virtual/range {p2 .. p2}, Lcom/vk/stories/view/w1;->b()I
+    invoke-virtual/range {p2 .. p2}, Lcom/vk/stories/view/StoryViewTooltipParams;->b()I
 
     move-result v19
 
@@ -910,14 +910,14 @@
     move-object/from16 v10, p3
 
     .line 197
-    invoke-static/range {v5 .. v20}, Lcom/vk/core/tips/TipTextWindow;->a(Landroid/content/Context;Ljava/lang/CharSequence;Ljava/lang/CharSequence;Landroid/graphics/RectF;ZLandroid/view/View$OnClickListener;IILandroid/graphics/drawable/Drawable;FZZZZILkotlin/jvm/b/a;)Landroidx/appcompat/app/AlertDialog;
+    invoke-static/range {v5 .. v20}, Lcom/vk/core/tips/TipTextWindow;->a(Landroid/content/Context;Ljava/lang/CharSequence;Ljava/lang/CharSequence;Landroid/graphics/RectF;ZLandroid/view/View$OnClickListener;IILandroid/graphics/drawable/Drawable;FZZZZILkotlin/jvm/b/Functions;)Landroidx/appcompat/app/AlertDialog;
 
     move-result-object v0
 
     return-object v0
 .end method
 
-.method static synthetic a(ILjava/lang/String;Ljava/lang/Boolean;)Lc/a/p;
+.method static synthetic a(ILjava/lang/String;Ljava/lang/Boolean;)Lio/reactivex/ObservableSource;
     .locals 1
     .annotation system Ldalvik/annotation/Throws;
         value = {
@@ -926,28 +926,28 @@
     .end annotation
 
     .line 254
-    new-instance p2, Lcom/vk/api/groups/s;
+    new-instance p2, Lcom/vk/api/groups/GroupsJoin;
 
     const/4 v0, 0x0
 
-    invoke-direct {p2, p0, v0}, Lcom/vk/api/groups/s;-><init>(IZ)V
+    invoke-direct {p2, p0, v0}, Lcom/vk/api/groups/GroupsJoin;-><init>(IZ)V
 
     .line 255
-    invoke-virtual {p2, p1}, Lcom/vk/api/groups/s;->e(Ljava/lang/String;)Lcom/vk/api/groups/s;
+    invoke-virtual {p2, p1}, Lcom/vk/api/groups/GroupsJoin;->e(Ljava/lang/String;)Lcom/vk/api/groups/GroupsJoin;
 
     .line 256
-    invoke-virtual {p2}, Lcom/vk/api/base/d;->m()Lc/a/m;
+    invoke-virtual {p2}, Lcom/vk/api/base/ApiRequest;->m()Lio/reactivex/Observable;
 
     move-result-object p0
 
     return-object p0
 .end method
 
-.method static synthetic a(Lcom/vk/stories/view/StoryView;Lcom/vk/libvideo/live/views/liveswipe/f;)Lcom/vk/libvideo/live/views/liveswipe/f;
+.method static synthetic a(Lcom/vk/stories/view/StoryView;Lcom/vk/libvideo/live/views/liveswipe/SwipeToolTip;)Lcom/vk/libvideo/live/views/liveswipe/SwipeToolTip;
     .locals 0
 
     .line 3
-    iput-object p1, p0, Lcom/vk/stories/view/StoryView;->o1:Lcom/vk/libvideo/live/views/liveswipe/f;
+    iput-object p1, p0, Lcom/vk/stories/view/StoryView;->o1:Lcom/vk/libvideo/live/views/liveswipe/SwipeToolTip;
 
     return-object p1
 .end method
@@ -961,11 +961,11 @@
     return-object p1
 .end method
 
-.method static synthetic a(Lcom/vk/stories/view/StoryView;Lcom/vk/stories/util/q;)Lcom/vk/stories/util/q;
+.method static synthetic a(Lcom/vk/stories/view/StoryView;Lcom/vk/stories/util/StoryViewTooltipDelegate;)Lcom/vk/stories/util/StoryViewTooltipDelegate;
     .locals 0
 
     .line 2
-    iput-object p1, p0, Lcom/vk/stories/view/StoryView;->i1:Lcom/vk/stories/util/q;
+    iput-object p1, p0, Lcom/vk/stories/view/StoryView;->i1:Lcom/vk/stories/util/StoryViewTooltipDelegate;
 
     return-object p1
 .end method
@@ -986,7 +986,7 @@
     if-eqz p0, :cond_0
 
     .line 265
-    invoke-static {p2}, Lcom/vk/api/base/j;->c(Ljava/lang/Throwable;)V
+    invoke-static {p2}, Lcom/vk/api/base/ThrowableExt;->c(Ljava/lang/Throwable;)V
 
     :cond_0
     const/4 p0, 0x1
@@ -1010,14 +1010,14 @@
     .locals 5
 
     .line 1
-    iget-object v0, p0, Lcom/vk/stories/view/e1;->f:Lcom/vk/dto/stories/model/StoriesContainer;
+    iget-object v0, p0, Lcom/vk/stories/view/BaseStoryView;->f:Lcom/vk/dto/stories/model/StoriesContainer;
 
     invoke-virtual {v0}, Lcom/vk/dto/stories/model/StoriesContainer;->H1()Lcom/vk/dto/stories/model/StoryOwner;
 
     move-result-object v0
 
     .line 2
-    iget-object v1, p0, Lcom/vk/stories/view/e1;->D:Lcom/vk/dto/stories/model/StoryEntry;
+    iget-object v1, p0, Lcom/vk/stories/view/BaseStoryView;->D:Lcom/vk/dto/stories/model/StoryEntry;
 
     if-eqz v0, :cond_3
 
@@ -1027,9 +1027,9 @@
 
     .line 3
     :cond_0
-    iget-object v2, p0, Lcom/vk/stories/view/StoryView;->b0:Lcom/vk/stories/y0;
+    iget-object v2, p0, Lcom/vk/stories/view/StoryView;->b0:Lcom/vk/stories/StoryViewHelper;
 
-    invoke-virtual {v2, v0}, Lcom/vk/stories/y0;->b(Lcom/vk/dto/stories/model/StoryOwner;)Z
+    invoke-virtual {v2, v0}, Lcom/vk/stories/StoryViewHelper;->b(Lcom/vk/dto/stories/model/StoryOwner;)Z
 
     move-result v2
 
@@ -1040,12 +1040,12 @@
 
     move-result-object v2
 
-    invoke-static {v2}, Lcom/vk/core/util/c;->a(Landroid/content/Context;)Lcom/vk/core/util/c$b;
+    invoke-static {v2}, Lcom/vk/core/util/AlertDialogs;->a(Landroid/content/Context;)Lcom/vk/core/util/AlertDialogs$b;
 
     move-result-object v2
 
     .line 5
-    iget-object v3, p0, Lcom/vk/stories/view/e1;->f:Lcom/vk/dto/stories/model/StoriesContainer;
+    iget-object v3, p0, Lcom/vk/stories/view/BaseStoryView;->f:Lcom/vk/dto/stories/model/StoriesContainer;
 
     invoke-virtual {v3}, Lcom/vk/dto/stories/model/StoriesContainer;->H1()Lcom/vk/dto/stories/model/StoryOwner;
 
@@ -1084,10 +1084,10 @@
 
     invoke-direct {v4, p0, v0, v1}, Lcom/vk/stories/view/StoryView$a0;-><init>(Lcom/vk/stories/view/StoryView;Lcom/vk/dto/stories/model/StoryOwner;Lcom/vk/dto/stories/model/StoryEntry;)V
 
-    invoke-virtual {v2, v3, v4}, Lcom/vk/core/util/c$b;->a(Ljava/lang/String;Ljava/lang/Runnable;)Lcom/vk/core/util/c$b;
+    invoke-virtual {v2, v3, v4}, Lcom/vk/core/util/AlertDialogs$b;->a(Ljava/lang/String;Ljava/lang/Runnable;)Lcom/vk/core/util/AlertDialogs$b;
 
     .line 7
-    invoke-virtual {v2}, Lcom/vk/core/util/c$b;->b()Landroidx/appcompat/app/AlertDialog;
+    invoke-virtual {v2}, Lcom/vk/core/util/AlertDialogs$b;->b()Landroidx/appcompat/app/AlertDialog;
 
     move-result-object v0
 
@@ -1097,15 +1097,15 @@
 
     .line 8
     :cond_2
-    iget-object v0, p0, Lcom/vk/stories/view/StoryView;->b0:Lcom/vk/stories/y0;
+    iget-object v0, p0, Lcom/vk/stories/view/StoryView;->b0:Lcom/vk/stories/StoryViewHelper;
 
-    iget-object v1, p0, Lcom/vk/stories/view/e1;->f:Lcom/vk/dto/stories/model/StoriesContainer;
+    iget-object v1, p0, Lcom/vk/stories/view/BaseStoryView;->f:Lcom/vk/dto/stories/model/StoriesContainer;
 
     invoke-virtual {v1}, Lcom/vk/dto/stories/model/StoriesContainer;->H1()Lcom/vk/dto/stories/model/StoryOwner;
 
     move-result-object v1
 
-    invoke-virtual {v0, v1}, Lcom/vk/stories/y0;->a(Lcom/vk/dto/stories/model/StoryOwner;)Z
+    invoke-virtual {v0, v1}, Lcom/vk/stories/StoryViewHelper;->a(Lcom/vk/dto/stories/model/StoryOwner;)Z
 
     move-result v0
 
@@ -1115,7 +1115,7 @@
     invoke-virtual {p0}, Lcom/vk/stories/view/StoryView;->e()V
 
     .line 10
-    iget-object v0, p0, Lcom/vk/stories/view/e1;->f:Lcom/vk/dto/stories/model/StoriesContainer;
+    iget-object v0, p0, Lcom/vk/stories/view/BaseStoryView;->f:Lcom/vk/dto/stories/model/StoriesContainer;
 
     invoke-virtual {v0}, Lcom/vk/dto/stories/model/StoriesContainer;->H1()Lcom/vk/dto/stories/model/StoryOwner;
 
@@ -1125,7 +1125,7 @@
 
     move-result-object v1
 
-    iget-object v2, p0, Lcom/vk/stories/view/e1;->D:Lcom/vk/dto/stories/model/StoryEntry;
+    iget-object v2, p0, Lcom/vk/stories/view/BaseStoryView;->D:Lcom/vk/dto/stories/model/StoryEntry;
 
     iget-object v2, v2, Lcom/vk/dto/stories/model/StoryEntry;->O:Ljava/lang/String;
 
@@ -1133,7 +1133,7 @@
 
     invoke-direct {v3, p0}, Lcom/vk/stories/view/StoryView$b0;-><init>(Lcom/vk/stories/view/StoryView;)V
 
-    invoke-virtual {p0, v0, v1, v2, v3}, Lcom/vk/stories/view/StoryView;->a(Lcom/vk/dto/stories/model/StoryOwner;Landroid/content/Context;Ljava/lang/String;Lcom/vk/common/g/a;)V
+    invoke-virtual {p0, v0, v1, v2, v3}, Lcom/vk/stories/view/StoryView;->a(Lcom/vk/dto/stories/model/StoryOwner;Landroid/content/Context;Ljava/lang/String;Lcom/vk/common/g/F0;)V
 
     :cond_3
     :goto_1
@@ -1171,17 +1171,17 @@
     .locals 2
 
     .line 1
-    iget-boolean v0, p0, Lcom/vk/stories/view/e1;->e:Z
+    iget-boolean v0, p0, Lcom/vk/stories/view/BaseStoryView;->e:Z
 
     if-nez v0, :cond_2
 
-    iget-object v0, p0, Lcom/vk/stories/view/e1;->D:Lcom/vk/dto/stories/model/StoryEntry;
+    iget-object v0, p0, Lcom/vk/stories/view/BaseStoryView;->D:Lcom/vk/dto/stories/model/StoryEntry;
 
     if-eqz v0, :cond_2
 
-    iget v0, p0, Lcom/vk/stories/view/e1;->I:I
+    iget v0, p0, Lcom/vk/stories/view/BaseStoryView;->I:I
 
-    iget-object v1, p0, Lcom/vk/stories/view/e1;->f:Lcom/vk/dto/stories/model/StoriesContainer;
+    iget-object v1, p0, Lcom/vk/stories/view/BaseStoryView;->f:Lcom/vk/dto/stories/model/StoriesContainer;
 
     invoke-virtual {v1}, Lcom/vk/dto/stories/model/StoriesContainer;->G1()Ljava/util/ArrayList;
 
@@ -1197,7 +1197,7 @@
 
     .line 2
     :cond_0
-    iget-object v0, p0, Lcom/vk/stories/view/e1;->f:Lcom/vk/dto/stories/model/StoriesContainer;
+    iget-object v0, p0, Lcom/vk/stories/view/BaseStoryView;->f:Lcom/vk/dto/stories/model/StoriesContainer;
 
     invoke-virtual {v0}, Lcom/vk/dto/stories/model/StoriesContainer;->Q1()Z
 
@@ -1205,7 +1205,7 @@
 
     if-eqz v0, :cond_1
 
-    iget-object v0, p0, Lcom/vk/stories/view/e1;->f:Lcom/vk/dto/stories/model/StoriesContainer;
+    iget-object v0, p0, Lcom/vk/stories/view/BaseStoryView;->f:Lcom/vk/dto/stories/model/StoriesContainer;
 
     invoke-virtual {v0}, Lcom/vk/dto/stories/model/StoriesContainer;->N1()Z
 
@@ -1214,9 +1214,9 @@
     if-nez v0, :cond_1
 
     .line 3
-    iget-object v0, p0, Lcom/vk/stories/view/StoryView;->m1:Lcom/vk/stories/view/v1;
+    iget-object v0, p0, Lcom/vk/stories/view/StoryView;->m1:Lcom/vk/stories/view/StoryViewRepliesAndViewersDelegate;
 
-    invoke-virtual {v0}, Lcom/vk/stories/view/v1;->a()V
+    invoke-virtual {v0}, Lcom/vk/stories/view/StoryViewRepliesAndViewersDelegate;->a()V
 
     goto :goto_0
 
@@ -1231,11 +1231,11 @@
     return-void
 .end method
 
-.method static synthetic c(Lcom/vk/stories/view/StoryView;)Lcom/vk/stories/view/question/b;
+.method static synthetic c(Lcom/vk/stories/view/StoryView;)Lcom/vk/stories/view/question/StoryViewAskQuestionContract2;
     .locals 0
 
     .line 1
-    iget-object p0, p0, Lcom/vk/stories/view/StoryView;->j1:Lcom/vk/stories/view/question/b;
+    iget-object p0, p0, Lcom/vk/stories/view/StoryView;->j1:Lcom/vk/stories/view/question/StoryViewAskQuestionContract2;
 
     return-object p0
 .end method
@@ -1249,7 +1249,7 @@
     const p1, 0x7f120eb8
 
     .line 4
-    invoke-static {p1}, Lcom/vk/core/util/k1;->a(I)V
+    invoke-static {p1}, Lcom/vk/core/util/ToastUtils;->a(I)V
 
     return-void
 .end method
@@ -1441,7 +1441,7 @@
     iget-wide v8, p0, Lcom/vk/stories/view/StoryView;->m0:J
 
     .line 30
-    invoke-static/range {v3 .. v9}, Lcom/vk/stories/view/x1;->a(Lcom/vk/media/player/video/view/SimpleVideoView;Ljava/lang/String;Ljava/lang/String;ZZJ)V
+    invoke-static/range {v3 .. v9}, Lcom/vk/stories/view/StoryViewUtils;->a(Lcom/vk/media/player/video/view/SimpleVideoView;Ljava/lang/String;Ljava/lang/String;ZZJ)V
 
     return v2
 .end method
@@ -1450,7 +1450,7 @@
     .locals 3
 
     .line 1
-    iget-object v0, p0, Lcom/vk/stories/view/e1;->D:Lcom/vk/dto/stories/model/StoryEntry;
+    iget-object v0, p0, Lcom/vk/stories/view/BaseStoryView;->D:Lcom/vk/dto/stories/model/StoryEntry;
 
     if-eqz v0, :cond_1
 
@@ -1461,12 +1461,12 @@
     if-eqz v0, :cond_1
 
     .line 2
-    iget-object v0, p0, Lcom/vk/stories/view/StoryView;->B1:Lio/reactivex/disposables/b;
+    iget-object v0, p0, Lcom/vk/stories/view/StoryView;->B1:Lio/reactivex/disposables/Disposable;
 
     if-eqz v0, :cond_0
 
     .line 3
-    invoke-interface {v0}, Lio/reactivex/disposables/b;->o()V
+    invoke-interface {v0}, Lio/reactivex/disposables/Disposable;->o()V
 
     :cond_0
     const-wide/16 v0, 0x7d0
@@ -1474,25 +1474,25 @@
     .line 4
     sget-object v2, Ljava/util/concurrent/TimeUnit;->MILLISECONDS:Ljava/util/concurrent/TimeUnit;
 
-    invoke-static {v0, v1, v2}, Lc/a/m;->j(JLjava/util/concurrent/TimeUnit;)Lc/a/m;
+    invoke-static {v0, v1, v2}, Lio/reactivex/Observable;->j(JLjava/util/concurrent/TimeUnit;)Lio/reactivex/Observable;
 
     move-result-object v0
 
     .line 5
-    invoke-static {}, Lc/a/f0/b;->b()Lc/a/s;
+    invoke-static {}, Lio/reactivex/schedulers/Schedulers;->b()Lio/reactivex/Scheduler;
 
     move-result-object v1
 
-    invoke-virtual {v0, v1}, Lc/a/m;->b(Lc/a/s;)Lc/a/m;
+    invoke-virtual {v0, v1}, Lio/reactivex/Observable;->b(Lio/reactivex/Scheduler;)Lio/reactivex/Observable;
 
     move-result-object v0
 
     .line 6
-    invoke-static {}, Lc/a/y/c/a;->a()Lc/a/s;
+    invoke-static {}, Lio/reactivex/schedulers/AndroidSchedulers;->a()Lio/reactivex/Scheduler;
 
     move-result-object v1
 
-    invoke-virtual {v0, v1}, Lc/a/m;->a(Lc/a/s;)Lc/a/m;
+    invoke-virtual {v0, v1}, Lio/reactivex/Observable;->a(Lio/reactivex/Scheduler;)Lio/reactivex/Observable;
 
     move-result-object v0
 
@@ -1501,21 +1501,21 @@
     invoke-direct {v1, p0}, Lcom/vk/stories/view/StoryView$s;-><init>(Lcom/vk/stories/view/StoryView;)V
 
     .line 7
-    invoke-virtual {v0, v1}, Lc/a/m;->f(Lc/a/z/g;)Lio/reactivex/disposables/b;
+    invoke-virtual {v0, v1}, Lio/reactivex/Observable;->f(Lio/reactivex/functions/Consumer;)Lio/reactivex/disposables/Disposable;
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/vk/stories/view/StoryView;->B1:Lio/reactivex/disposables/b;
+    iput-object v0, p0, Lcom/vk/stories/view/StoryView;->B1:Lio/reactivex/disposables/Disposable;
 
     :cond_1
     return-void
 .end method
 
-.method static synthetic d(Lcom/vk/stories/view/StoryView;)Lcom/vk/stories/view/u1;
+.method static synthetic d(Lcom/vk/stories/view/StoryView;)Lcom/vk/stories/view/StoryViewPollDelegate;
     .locals 0
 
     .line 1
-    iget-object p0, p0, Lcom/vk/stories/view/StoryView;->l1:Lcom/vk/stories/view/u1;
+    iget-object p0, p0, Lcom/vk/stories/view/StoryView;->l1:Lcom/vk/stories/view/StoryViewPollDelegate;
 
     return-object p0
 .end method
@@ -1524,7 +1524,7 @@
     .locals 3
 
     .line 1
-    iget-object v0, p0, Lcom/vk/stories/view/StoryView;->C1:Lcom/vk/stories/view/y1;
+    iget-object v0, p0, Lcom/vk/stories/view/StoryView;->C1:Lcom/vk/stories/view/VideoThumbProgress;
 
     if-eqz v0, :cond_0
 
@@ -1576,21 +1576,21 @@
     invoke-virtual {p0}, Lcom/vk/stories/view/StoryView;->e()V
 
     .line 15
-    new-instance v0, Lcom/vk/common/links/c$b;
+    new-instance v0, Lcom/vk/common/links/LinkProcessor$b;
 
     sget-object v1, Lcom/vk/stat/scheme/SchemeStat$EventScreen;->STORY_VIEWER:Lcom/vk/stat/scheme/SchemeStat$EventScreen;
 
     .line 16
-    invoke-static {v1}, Lcom/vk/stat/scheme/f;->a(Lcom/vk/stat/scheme/SchemeStat$EventScreen;)Ljava/lang/String;
+    invoke-static {v1}, Lcom/vk/stat/scheme/SchemeStatEx;->a(Lcom/vk/stat/scheme/SchemeStat$EventScreen;)Ljava/lang/String;
 
     move-result-object v1
 
     const/4 v2, 0x0
 
-    invoke-direct {v0, v2, v2, v2, v1}, Lcom/vk/common/links/c$b;-><init>(ZZZLjava/lang/String;)V
+    invoke-direct {v0, v2, v2, v2, v1}, Lcom/vk/common/links/LinkProcessor$b;-><init>(ZZZLjava/lang/String;)V
 
     .line 17
-    iget-object v1, p0, Lcom/vk/stories/view/e1;->D:Lcom/vk/dto/stories/model/StoryEntry;
+    iget-object v1, p0, Lcom/vk/stories/view/BaseStoryView;->D:Lcom/vk/dto/stories/model/StoryEntry;
 
     iget-object v1, v1, Lcom/vk/dto/stories/model/StoryEntry;->l0:Ljava/lang/String;
 
@@ -1601,9 +1601,9 @@
 
     new-instance v3, Lcom/vk/stories/view/StoryView$o;
 
-    invoke-direct {v3, p0, p1, v0}, Lcom/vk/stories/view/StoryView$o;-><init>(Lcom/vk/stories/view/StoryView;ZLcom/vk/common/links/c$b;)V
+    invoke-direct {v3, p0, p1, v0}, Lcom/vk/stories/view/StoryView$o;-><init>(Lcom/vk/stories/view/StoryView;ZLcom/vk/common/links/LinkProcessor$b;)V
 
-    invoke-static {v2, v1, v0, v3}, Lcom/vk/common/links/c;->a(Landroid/content/Context;Ljava/lang/String;Lcom/vk/common/links/c$b;Lcom/vk/common/links/f;)Z
+    invoke-static {v2, v1, v0, v3}, Lcom/vk/common/links/LinkProcessor;->a(Landroid/content/Context;Ljava/lang/String;Lcom/vk/common/links/LinkProcessor$b;Lcom/vk/common/links/OpenCallback;)Z
 
     return-void
 .end method
@@ -1663,11 +1663,11 @@
     .locals 10
 
     .line 10
-    iget-boolean v0, p0, Lcom/vk/stories/view/e1;->e:Z
+    iget-boolean v0, p0, Lcom/vk/stories/view/BaseStoryView;->e:Z
 
     if-nez v0, :cond_a
 
-    iget-object v0, p0, Lcom/vk/stories/view/e1;->D:Lcom/vk/dto/stories/model/StoryEntry;
+    iget-object v0, p0, Lcom/vk/stories/view/BaseStoryView;->D:Lcom/vk/dto/stories/model/StoryEntry;
 
     if-nez v0, :cond_0
 
@@ -1683,7 +1683,7 @@
 
     if-eqz v0, :cond_3
 
-    iget-object v0, p0, Lcom/vk/stories/view/e1;->D:Lcom/vk/dto/stories/model/StoryEntry;
+    iget-object v0, p0, Lcom/vk/stories/view/BaseStoryView;->D:Lcom/vk/dto/stories/model/StoryEntry;
 
     iget v0, v0, Lcom/vk/dto/stories/model/StoryEntry;->n0:I
 
@@ -1693,7 +1693,7 @@
     invoke-virtual {p0}, Lcom/vk/stories/view/StoryView;->e()V
 
     .line 13
-    iget-object p1, p0, Lcom/vk/stories/view/e1;->f:Lcom/vk/dto/stories/model/StoriesContainer;
+    iget-object p1, p0, Lcom/vk/stories/view/BaseStoryView;->f:Lcom/vk/dto/stories/model/StoriesContainer;
 
     invoke-virtual {p1}, Lcom/vk/dto/stories/model/StoriesContainer;->G1()Ljava/util/ArrayList;
 
@@ -1705,7 +1705,7 @@
 
     if-ne p1, v1, :cond_2
 
-    iget-object p1, p0, Lcom/vk/stories/view/e1;->a:Lcom/vk/stories/view/StoryView$u0;
+    iget-object p1, p0, Lcom/vk/stories/view/BaseStoryView;->a:Lcom/vk/stories/view/StoryView$u0;
 
     if-eqz p1, :cond_1
 
@@ -1727,7 +1727,7 @@
 
     move-result-object p1
 
-    iget-object v0, p0, Lcom/vk/stories/view/e1;->D:Lcom/vk/dto/stories/model/StoryEntry;
+    iget-object v0, p0, Lcom/vk/stories/view/BaseStoryView;->D:Lcom/vk/dto/stories/model/StoryEntry;
 
     iget v2, v0, Lcom/vk/dto/stories/model/StoryEntry;->n0:I
 
@@ -1743,11 +1743,11 @@
     const-string p1, "narrative_open_stories"
 
     .line 16
-    invoke-static {p1}, Lcom/vtosters/lite/data/n;->c(Ljava/lang/String;)Lcom/vtosters/lite/data/n$l;
+    invoke-static {p1}, Lcom/vtosters/lite/data/Analytics;->c(Ljava/lang/String;)Lcom/vtosters/lite/data/Analytics$l;
 
     move-result-object p1
 
-    iget-object v0, p0, Lcom/vk/stories/view/e1;->D:Lcom/vk/dto/stories/model/StoryEntry;
+    iget-object v0, p0, Lcom/vk/stories/view/BaseStoryView;->D:Lcom/vk/dto/stories/model/StoryEntry;
 
     iget v0, v0, Lcom/vk/dto/stories/model/StoryEntry;->c:I
 
@@ -1758,9 +1758,9 @@
 
     const-string v1, "owner_id"
 
-    invoke-virtual {p1, v1, v0}, Lcom/vtosters/lite/data/n$l;->a(Ljava/lang/String;Ljava/lang/Object;)Lcom/vtosters/lite/data/n$l;
+    invoke-virtual {p1, v1, v0}, Lcom/vtosters/lite/data/Analytics$l;->a(Ljava/lang/String;Ljava/lang/Object;)Lcom/vtosters/lite/data/Analytics$l;
 
-    iget-object v0, p0, Lcom/vk/stories/view/e1;->D:Lcom/vk/dto/stories/model/StoryEntry;
+    iget-object v0, p0, Lcom/vk/stories/view/BaseStoryView;->D:Lcom/vk/dto/stories/model/StoryEntry;
 
     iget v0, v0, Lcom/vk/dto/stories/model/StoryEntry;->m0:I
 
@@ -1771,16 +1771,16 @@
 
     const-string v1, "narrative_id"
 
-    invoke-virtual {p1, v1, v0}, Lcom/vtosters/lite/data/n$l;->a(Ljava/lang/String;Ljava/lang/Object;)Lcom/vtosters/lite/data/n$l;
+    invoke-virtual {p1, v1, v0}, Lcom/vtosters/lite/data/Analytics$l;->a(Ljava/lang/String;Ljava/lang/Object;)Lcom/vtosters/lite/data/Analytics$l;
 
     .line 19
-    invoke-virtual {p1}, Lcom/vtosters/lite/data/n$l;->b()Lcom/vtosters/lite/data/n$l;
+    invoke-virtual {p1}, Lcom/vtosters/lite/data/Analytics$l;->b()Lcom/vtosters/lite/data/Analytics$l;
 
     goto/16 :goto_2
 
     .line 20
     :cond_3
-    iget-object v0, p0, Lcom/vk/stories/view/e1;->f:Lcom/vk/dto/stories/model/StoriesContainer;
+    iget-object v0, p0, Lcom/vk/stories/view/BaseStoryView;->f:Lcom/vk/dto/stories/model/StoriesContainer;
 
     invoke-virtual {v0}, Lcom/vk/dto/stories/model/StoriesContainer;->N1()Z
 
@@ -1795,19 +1795,19 @@
     if-eqz v0, :cond_4
 
     .line 21
-    new-instance p1, Lcom/vk/cameraui/builder/a;
+    new-instance p1, Lcom/vk/cameraui/builder/CameraBuilder;
 
     sget-object v0, Lcom/vk/stat/scheme/SchemeStat$EventScreen;->STORY_VIEWER:Lcom/vk/stat/scheme/SchemeStat$EventScreen;
 
     const-string v2, "archive_sharing"
 
-    invoke-direct {p1, v0, v2}, Lcom/vk/cameraui/builder/a;-><init>(Lcom/vk/stat/scheme/SchemeStat$EventScreen;Ljava/lang/String;)V
+    invoke-direct {p1, v0, v2}, Lcom/vk/cameraui/builder/CameraBuilder;-><init>(Lcom/vk/stat/scheme/SchemeStat$EventScreen;Ljava/lang/String;)V
 
     new-instance v0, Lcom/vk/dto/stories/model/StoryEntryExtended;
 
-    iget-object v2, p0, Lcom/vk/stories/view/e1;->D:Lcom/vk/dto/stories/model/StoryEntry;
+    iget-object v2, p0, Lcom/vk/stories/view/BaseStoryView;->D:Lcom/vk/dto/stories/model/StoryEntry;
 
-    iget-object v3, p0, Lcom/vk/stories/view/e1;->f:Lcom/vk/dto/stories/model/StoriesContainer;
+    iget-object v3, p0, Lcom/vk/stories/view/BaseStoryView;->f:Lcom/vk/dto/stories/model/StoriesContainer;
 
     .line 22
     invoke-virtual {v3}, Lcom/vk/dto/stories/model/StoriesContainer;->H1()Lcom/vk/dto/stories/model/StoryOwner;
@@ -1845,7 +1845,7 @@
 
     .line 27
     :cond_5
-    iget-object p1, p0, Lcom/vk/stories/view/e1;->D:Lcom/vk/dto/stories/model/StoryEntry;
+    iget-object p1, p0, Lcom/vk/stories/view/BaseStoryView;->D:Lcom/vk/dto/stories/model/StoryEntry;
 
     iget-boolean p1, p1, Lcom/vk/dto/stories/model/StoryEntry;->J:Z
 
@@ -1854,10 +1854,10 @@
     .line 28
     sget-object p1, Lcom/vk/dto/stories/model/StoryViewAction;->COMMENT_TAP:Lcom/vk/dto/stories/model/StoryViewAction;
 
-    invoke-virtual {p0, p1}, Lcom/vk/stories/view/e1;->a(Lcom/vk/dto/stories/model/StoryViewAction;)V
+    invoke-virtual {p0, p1}, Lcom/vk/stories/view/BaseStoryView;->a(Lcom/vk/dto/stories/model/StoryViewAction;)V
 
     .line 29
-    iget-object p1, p0, Lcom/vk/stories/view/e1;->D:Lcom/vk/dto/stories/model/StoryEntry;
+    iget-object p1, p0, Lcom/vk/stories/view/BaseStoryView;->D:Lcom/vk/dto/stories/model/StoryEntry;
 
     if-nez p1, :cond_6
 
@@ -1879,7 +1879,7 @@
 
     .line 31
     :cond_7
-    iget-object v0, p0, Lcom/vk/stories/view/e1;->a:Lcom/vk/stories/view/StoryView$u0;
+    iget-object v0, p0, Lcom/vk/stories/view/BaseStoryView;->a:Lcom/vk/stories/view/StoryView$u0;
 
     if-nez v0, :cond_8
 
@@ -1888,7 +1888,7 @@
     goto :goto_1
 
     :cond_8
-    iget-object v1, p0, Lcom/vk/stories/view/e1;->D:Lcom/vk/dto/stories/model/StoryEntry;
+    iget-object v1, p0, Lcom/vk/stories/view/BaseStoryView;->D:Lcom/vk/dto/stories/model/StoryEntry;
 
     iget v1, v1, Lcom/vk/dto/stories/model/StoryEntry;->b:I
 
@@ -1900,18 +1900,18 @@
     move-object v6, v0
 
     .line 32
-    new-instance v9, Lcom/vk/stories/message/b;
+    new-instance v9, Lcom/vk/stories/message/StorySendMessagePresenter;
 
-    iget-object v0, p0, Lcom/vk/stories/view/e1;->f:Lcom/vk/dto/stories/model/StoriesContainer;
+    iget-object v0, p0, Lcom/vk/stories/view/BaseStoryView;->f:Lcom/vk/dto/stories/model/StoriesContainer;
 
     .line 33
     invoke-virtual {v0}, Lcom/vk/dto/stories/model/StoriesContainer;->x1()I
 
     move-result v1
 
-    iget-object v2, p0, Lcom/vk/stories/view/e1;->b:Lcom/vk/stories/StoriesController$SourceType;
+    iget-object v2, p0, Lcom/vk/stories/view/BaseStoryView;->b:Lcom/vk/stories/StoriesController$SourceType;
 
-    iget-object v0, p0, Lcom/vk/stories/view/e1;->f:Lcom/vk/dto/stories/model/StoriesContainer;
+    iget-object v0, p0, Lcom/vk/stories/view/BaseStoryView;->f:Lcom/vk/dto/stories/model/StoriesContainer;
 
     .line 34
     invoke-virtual {v0}, Lcom/vk/dto/stories/model/StoriesContainer;->B1()Lcom/vk/dto/narratives/Narrative;
@@ -1919,7 +1919,7 @@
     move-result-object v4
 
     .line 35
-    invoke-virtual {p0}, Lcom/vk/stories/view/e1;->s()Lcom/vk/stories/analytics/b;
+    invoke-virtual {p0}, Lcom/vk/stories/view/BaseStoryView;->s()Lcom/vk/stories/analytics/StoryPositionInfo;
 
     move-result-object v5
 
@@ -1934,7 +1934,7 @@
 
     move-object v3, p1
 
-    invoke-direct/range {v0 .. v7}, Lcom/vk/stories/message/b;-><init>(ILcom/vk/stories/StoriesController$SourceType;Lcom/vk/dto/stories/model/StoryEntry;Lcom/vk/dto/narratives/Narrative;Lcom/vk/stories/analytics/b;Ljava/lang/String;Z)V
+    invoke-direct/range {v0 .. v7}, Lcom/vk/stories/message/StorySendMessagePresenter;-><init>(ILcom/vk/stories/StoriesController$SourceType;Lcom/vk/dto/stories/model/StoryEntry;Lcom/vk/dto/narratives/Narrative;Lcom/vk/stories/analytics/StoryPositionInfo;Ljava/lang/String;Z)V
 
     .line 37
     new-instance v0, Lcom/vk/stories/message/StorySendMessageDelegate;
@@ -1942,9 +1942,9 @@
     invoke-direct {v0}, Lcom/vk/stories/message/StorySendMessageDelegate;-><init>()V
 
     .line 38
-    new-instance v1, Lcom/vk/stories/message/j;
+    new-instance v1, Lcom/vk/stories/message/StorySendMessagePresenter2;
 
-    invoke-direct {v1, v0}, Lcom/vk/stories/message/j;-><init>(Lcom/vk/stories/message/e;)V
+    invoke-direct {v1, v0}, Lcom/vk/stories/message/StorySendMessagePresenter2;-><init>(Lcom/vk/stories/message/StorySendMessageContract2;)V
 
     .line 39
     new-instance v0, Lcom/vk/stories/message/StorySendMessageDialog;
@@ -1953,19 +1953,19 @@
 
     move-result-object v2
 
-    invoke-direct {v0, v2, v1, p0}, Lcom/vk/stories/message/StorySendMessageDialog;-><init>(Landroid/content/Context;Lcom/vk/stories/message/f;Lcom/vk/stories/view/StoryView;)V
+    invoke-direct {v0, v2, v1, p0}, Lcom/vk/stories/message/StorySendMessageDialog;-><init>(Landroid/content/Context;Lcom/vk/stories/message/StorySendMessageContract5;Lcom/vk/stories/view/StoryView;)V
 
     iput-object v0, p0, Lcom/vk/stories/view/StoryView;->n1:Lcom/vk/stories/message/StorySendMessageDialog;
 
     .line 40
     iget-object v0, p0, Lcom/vk/stories/view/StoryView;->n1:Lcom/vk/stories/message/StorySendMessageDialog;
 
-    invoke-virtual {v1, v0}, Lcom/vk/stories/message/j;->a(Lcom/vk/stories/message/h;)V
+    invoke-virtual {v1, v0}, Lcom/vk/stories/message/StorySendMessagePresenter2;->a(Lcom/vk/stories/message/StorySendMessageContract4;)V
 
     .line 41
     new-instance v0, Lcom/vk/im/ui/components/msg_send/recording/AudioRecordComponent;
 
-    invoke-static {}, Lcom/vk/im/ui/p/c;->a()Lcom/vk/im/ui/p/b;
+    invoke-static {}, Lcom/vk/im/ui/p/ImBridge7;->a()Lcom/vk/im/ui/p/ImBridge8;
 
     move-result-object v2
 
@@ -1977,7 +1977,7 @@
 
     move-result-object v3
 
-    invoke-direct {v0, v8, v2, p1, v3}, Lcom/vk/im/ui/components/msg_send/recording/AudioRecordComponent;-><init>(Landroid/app/Activity;Lcom/vk/im/ui/p/b;ILandroid/view/Window;)V
+    invoke-direct {v0, v8, v2, p1, v3}, Lcom/vk/im/ui/components/msg_send/recording/AudioRecordComponent;-><init>(Landroid/app/Activity;Lcom/vk/im/ui/p/ImBridge8;ILandroid/view/Window;)V
 
     .line 42
     new-instance p1, Landroid/view/ContextThemeWrapper;
@@ -1989,10 +1989,10 @@
     invoke-virtual {v0, p1}, Lcom/vk/im/ui/components/msg_send/recording/AudioRecordComponent;->a(Landroid/content/ContextWrapper;)V
 
     .line 43
-    invoke-virtual {v1, v0}, Lcom/vk/stories/message/j;->a(Lcom/vk/im/ui/components/msg_send/recording/AudioRecordComponent;)V
+    invoke-virtual {v1, v0}, Lcom/vk/stories/message/StorySendMessagePresenter2;->a(Lcom/vk/im/ui/components/msg_send/recording/AudioRecordComponent;)V
 
     .line 44
-    invoke-virtual {v1, v9}, Lcom/vk/stories/message/j;->a(Lcom/vk/stories/message/b;)V
+    invoke-virtual {v1, v9}, Lcom/vk/stories/message/StorySendMessagePresenter2;->a(Lcom/vk/stories/message/StorySendMessagePresenter;)V
 
     .line 45
     new-instance p1, Lcom/vk/stories/message/StorySendMessageAnalyticsTracker;
@@ -2000,21 +2000,21 @@
     invoke-direct {p1}, Lcom/vk/stories/message/StorySendMessageAnalyticsTracker;-><init>()V
 
     .line 46
-    invoke-virtual {p0}, Lcom/vk/stories/view/StoryView;->getAnalyticsParams()Lcom/vk/stories/analytics/c;
+    invoke-virtual {p0}, Lcom/vk/stories/view/StoryView;->getAnalyticsParams()Lcom/vk/stories/analytics/StoryViewAnalyticsParams;
 
     move-result-object v0
 
-    invoke-virtual {p1, v0}, Lcom/vk/stories/message/StorySendMessageAnalyticsTracker;->a(Lcom/vk/stories/analytics/c;)V
+    invoke-virtual {p1, v0}, Lcom/vk/stories/message/StorySendMessageAnalyticsTracker;->a(Lcom/vk/stories/analytics/StoryViewAnalyticsParams;)V
 
     .line 47
-    invoke-virtual {v1, p1}, Lcom/vk/stories/message/j;->a(Lcom/vk/stories/message/c;)V
+    invoke-virtual {v1, p1}, Lcom/vk/stories/message/StorySendMessagePresenter2;->a(Lcom/vk/stories/message/StorySendMessageContract1;)V
 
     .line 48
-    new-instance p1, Lcom/vk/stories/message/l;
+    new-instance p1, Lcom/vk/stories/message/StorySendMessagePresenter1;
 
-    invoke-direct {p1}, Lcom/vk/stories/message/l;-><init>()V
+    invoke-direct {p1}, Lcom/vk/stories/message/StorySendMessagePresenter1;-><init>()V
 
-    invoke-virtual {v1, p1}, Lcom/vk/stories/message/j;->a(Lcom/vk/stories/message/g;)V
+    invoke-virtual {v1, p1}, Lcom/vk/stories/message/StorySendMessagePresenter2;->a(Lcom/vk/stories/message/StorySendMessageContract;)V
 
     .line 49
     invoke-static {}, Lcom/vk/stories/StoriesController;->h()Z
@@ -2024,7 +2024,7 @@
     if-eqz p1, :cond_9
 
     .line 50
-    invoke-virtual {v1}, Lcom/vk/stories/message/j;->g()V
+    invoke-virtual {v1}, Lcom/vk/stories/message/StorySendMessagePresenter2;->g()V
 
     .line 51
     :cond_9
@@ -2041,19 +2041,19 @@
     .locals 2
 
     .line 1
-    iget-object v0, p0, Lcom/vk/stories/view/e1;->D:Lcom/vk/dto/stories/model/StoryEntry;
+    iget-object v0, p0, Lcom/vk/stories/view/BaseStoryView;->D:Lcom/vk/dto/stories/model/StoryEntry;
 
     if-eqz v0, :cond_0
 
-    invoke-static {}, Lcom/vk/bridges/g;->a()Lcom/vk/bridges/f;
+    invoke-static {}, Lcom/vk/bridges/AuthBridge;->a()Lcom/vk/bridges/AuthBridge3;
 
     move-result-object v0
 
-    iget-object v1, p0, Lcom/vk/stories/view/e1;->D:Lcom/vk/dto/stories/model/StoryEntry;
+    iget-object v1, p0, Lcom/vk/stories/view/BaseStoryView;->D:Lcom/vk/dto/stories/model/StoryEntry;
 
     iget v1, v1, Lcom/vk/dto/stories/model/StoryEntry;->c:I
 
-    invoke-interface {v0, v1}, Lcom/vk/bridges/f;->b(I)Z
+    invoke-interface {v0, v1}, Lcom/vk/bridges/AuthBridge3;->b(I)Z
 
     move-result v0
 
@@ -2083,7 +2083,7 @@
     .locals 3
 
     .line 4
-    iget-object v0, p0, Lcom/vk/stories/view/e1;->D:Lcom/vk/dto/stories/model/StoryEntry;
+    iget-object v0, p0, Lcom/vk/stories/view/BaseStoryView;->D:Lcom/vk/dto/stories/model/StoryEntry;
 
     if-eqz v0, :cond_1
 
@@ -2130,7 +2130,7 @@
     .locals 3
 
     .line 1
-    iget-object v0, p0, Lcom/vk/stories/view/e1;->D:Lcom/vk/dto/stories/model/StoryEntry;
+    iget-object v0, p0, Lcom/vk/stories/view/BaseStoryView;->D:Lcom/vk/dto/stories/model/StoryEntry;
 
     if-eqz v0, :cond_1
 
@@ -2148,12 +2148,12 @@
 
     xor-int/2addr v1, v2
 
-    invoke-static {v1, v0, p0}, Lcom/vk/stories/StoriesLikeController;->a(ZLcom/vk/dto/stories/model/StoryEntry;Lcom/vk/utils/f/d/a;)V
+    invoke-static {v1, v0, p0}, Lcom/vk/stories/StoriesLikeController;->a(ZLcom/vk/dto/stories/model/StoryEntry;Lcom/vk/utils/f/d/Disposer;)V
 
     .line 3
     sget-object v0, Lcom/vk/dto/stories/model/StoryViewAction;->CLICK_TO_LIKE:Lcom/vk/dto/stories/model/StoryViewAction;
 
-    invoke-virtual {p0, v0}, Lcom/vk/stories/view/e1;->a(Lcom/vk/dto/stories/model/StoryViewAction;)V
+    invoke-virtual {p0, v0}, Lcom/vk/stories/view/BaseStoryView;->a(Lcom/vk/dto/stories/model/StoryViewAction;)V
 
     .line 4
     invoke-direct {p0, v2}, Lcom/vk/stories/view/StoryView;->h(Z)V
@@ -2183,12 +2183,12 @@
 
     .line 2
     :goto_0
-    iget v2, p0, Lcom/vk/stories/view/e1;->I:I
+    iget v2, p0, Lcom/vk/stories/view/BaseStoryView;->I:I
 
     if-ge v1, v2, :cond_1
 
     .line 3
-    iget-object v2, p0, Lcom/vk/stories/view/e1;->f:Lcom/vk/dto/stories/model/StoriesContainer;
+    iget-object v2, p0, Lcom/vk/stories/view/BaseStoryView;->f:Lcom/vk/dto/stories/model/StoriesContainer;
 
     invoke-virtual {v2}, Lcom/vk/dto/stories/model/StoriesContainer;->G1()Ljava/util/ArrayList;
 
@@ -2244,7 +2244,7 @@
     .locals 8
 
     .line 6
-    iget-object v0, p0, Lcom/vk/stories/view/e1;->D:Lcom/vk/dto/stories/model/StoryEntry;
+    iget-object v0, p0, Lcom/vk/stories/view/BaseStoryView;->D:Lcom/vk/dto/stories/model/StoryEntry;
 
     if-nez v0, :cond_0
 
@@ -2291,11 +2291,11 @@
     if-eqz p1, :cond_2
 
     .line 12
-    sget-object v2, Lcom/vk/core/widget/b;->b:Lcom/vk/core/widget/b;
+    sget-object v2, Lcom/vk/core/widget/LikeAnimator;->b:Lcom/vk/core/widget/LikeAnimator;
 
     iget-object v4, p0, Lcom/vk/stories/view/StoryView;->U0:Landroid/widget/ImageView;
 
-    iget-object p1, p0, Lcom/vk/stories/view/e1;->D:Lcom/vk/dto/stories/model/StoryEntry;
+    iget-object p1, p0, Lcom/vk/stories/view/BaseStoryView;->D:Lcom/vk/dto/stories/model/StoryEntry;
 
     iget-boolean v5, p1, Lcom/vk/dto/stories/model/StoryEntry;->w0:Z
 
@@ -2305,7 +2305,7 @@
 
     move-object v3, v4
 
-    invoke-virtual/range {v2 .. v7}, Lcom/vk/core/widget/b;->a(Landroid/view/View;Landroid/view/View;ZZF)V
+    invoke-virtual/range {v2 .. v7}, Lcom/vk/core/widget/LikeAnimator;->a(Landroid/view/View;Landroid/view/View;ZZF)V
 
     :cond_2
     return-void
@@ -2315,7 +2315,7 @@
     .locals 1
 
     .line 1
-    iget-boolean v0, p0, Lcom/vk/stories/view/e1;->H:Z
+    iget-boolean v0, p0, Lcom/vk/stories/view/BaseStoryView;->H:Z
 
     if-nez v0, :cond_0
 
@@ -2326,13 +2326,13 @@
     const/4 v0, 0x1
 
     .line 3
-    iput-boolean v0, p0, Lcom/vk/stories/view/e1;->H:Z
+    iput-boolean v0, p0, Lcom/vk/stories/view/BaseStoryView;->H:Z
 
     .line 4
-    invoke-virtual {p0, v0}, Lcom/vk/stories/view/e1;->c(Z)V
+    invoke-virtual {p0, v0}, Lcom/vk/stories/view/BaseStoryView;->c(Z)V
 
     .line 5
-    invoke-virtual {p0}, Lcom/vk/stories/view/e1;->t()V
+    invoke-virtual {p0}, Lcom/vk/stories/view/BaseStoryView;->t()V
 
     .line 6
     invoke-virtual {p0}, Lcom/vk/stories/view/StoryView;->O()V
@@ -2340,11 +2340,11 @@
     return-void
 .end method
 
-.method static synthetic i(Lcom/vk/stories/view/StoryView;)Lcom/vk/libvideo/live/views/liveswipe/f;
+.method static synthetic i(Lcom/vk/stories/view/StoryView;)Lcom/vk/libvideo/live/views/liveswipe/SwipeToolTip;
     .locals 0
 
     .line 1
-    iget-object p0, p0, Lcom/vk/stories/view/StoryView;->o1:Lcom/vk/libvideo/live/views/liveswipe/f;
+    iget-object p0, p0, Lcom/vk/stories/view/StoryView;->o1:Lcom/vk/libvideo/live/views/liveswipe/SwipeToolTip;
 
     return-object p0
 .end method
@@ -2387,7 +2387,7 @@
     .locals 3
 
     .line 1
-    invoke-virtual {p0}, Lcom/vk/stories/view/e1;->v()Z
+    invoke-virtual {p0}, Lcom/vk/stories/view/BaseStoryView;->v()Z
 
     move-result v0
 
@@ -2404,14 +2404,14 @@
     if-gt v0, v1, :cond_2
 
     .line 2
-    iget v1, p0, Lcom/vk/stories/view/e1;->I:I
+    iget v1, p0, Lcom/vk/stories/view/BaseStoryView;->I:I
 
     add-int/2addr v1, v0
 
     if-ltz v1, :cond_1
 
     .line 3
-    iget-object v2, p0, Lcom/vk/stories/view/e1;->f:Lcom/vk/dto/stories/model/StoriesContainer;
+    iget-object v2, p0, Lcom/vk/stories/view/BaseStoryView;->f:Lcom/vk/dto/stories/model/StoriesContainer;
 
     invoke-virtual {v2}, Lcom/vk/dto/stories/model/StoriesContainer;->G1()Ljava/util/ArrayList;
 
@@ -2424,7 +2424,7 @@
     if-ge v1, v2, :cond_1
 
     .line 4
-    iget-object v2, p0, Lcom/vk/stories/view/e1;->f:Lcom/vk/dto/stories/model/StoriesContainer;
+    iget-object v2, p0, Lcom/vk/stories/view/BaseStoryView;->f:Lcom/vk/dto/stories/model/StoriesContainer;
 
     invoke-virtual {v2}, Lcom/vk/dto/stories/model/StoriesContainer;->G1()Ljava/util/ArrayList;
 
@@ -2441,7 +2441,7 @@
 
     invoke-direct {v2, p0}, Lcom/vk/stories/view/r;-><init>(Lcom/vk/stories/view/StoryView;)V
 
-    invoke-static {v1, v2}, Lcom/vk/stories/StoriesBackgroundLoader;->a(Lcom/vk/dto/stories/model/StoryEntry;Lkotlin/jvm/b/a;)V
+    invoke-static {v1, v2}, Lcom/vk/stories/StoriesBackgroundLoader;->a(Lcom/vk/dto/stories/model/StoryEntry;Lkotlin/jvm/b/Functions;)V
 
     :cond_1
     add-int/lit8 v0, v0, 0x1
@@ -2465,7 +2465,7 @@
     .locals 4
 
     .line 1
-    iget-object v0, p0, Lcom/vk/stories/view/e1;->D:Lcom/vk/dto/stories/model/StoryEntry;
+    iget-object v0, p0, Lcom/vk/stories/view/BaseStoryView;->D:Lcom/vk/dto/stories/model/StoryEntry;
 
     if-nez v0, :cond_0
 
@@ -2497,7 +2497,7 @@
     .locals 4
 
     .line 1
-    iget-boolean v0, p0, Lcom/vk/stories/view/e1;->e:Z
+    iget-boolean v0, p0, Lcom/vk/stories/view/BaseStoryView;->e:Z
 
     if-eqz v0, :cond_0
 
@@ -2505,7 +2505,7 @@
 
     .line 2
     :cond_0
-    iget-boolean v0, p0, Lcom/vk/stories/view/e1;->E:Z
+    iget-boolean v0, p0, Lcom/vk/stories/view/BaseStoryView;->E:Z
 
     if-eqz v0, :cond_1
 
@@ -2515,17 +2515,17 @@
     const/4 v0, 0x1
 
     .line 3
-    iput-boolean v0, p0, Lcom/vk/stories/view/e1;->F:Z
+    iput-boolean v0, p0, Lcom/vk/stories/view/BaseStoryView;->F:Z
 
     .line 4
-    iget-object v0, p0, Lcom/vk/stories/view/e1;->S:Landroid/os/Handler;
+    iget-object v0, p0, Lcom/vk/stories/view/BaseStoryView;->S:Landroid/os/Handler;
 
     const/4 v1, 0x0
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->removeCallbacksAndMessages(Ljava/lang/Object;)V
 
     .line 5
-    iget-object v0, p0, Lcom/vk/stories/view/e1;->S:Landroid/os/Handler;
+    iget-object v0, p0, Lcom/vk/stories/view/BaseStoryView;->S:Landroid/os/Handler;
 
     iget-object v1, p0, Lcom/vk/stories/view/StoryView;->c0:Ljava/lang/Runnable;
 
@@ -2536,11 +2536,11 @@
     return-void
 .end method
 
-.method static synthetic m(Lcom/vk/stories/view/StoryView;)Lcom/vk/stories/y0;
+.method static synthetic m(Lcom/vk/stories/view/StoryView;)Lcom/vk/stories/StoryViewHelper;
     .locals 0
 
     .line 1
-    iget-object p0, p0, Lcom/vk/stories/view/StoryView;->b0:Lcom/vk/stories/y0;
+    iget-object p0, p0, Lcom/vk/stories/view/StoryView;->b0:Lcom/vk/stories/StoryViewHelper;
 
     return-object p0
 .end method
@@ -2558,13 +2558,13 @@
     if-eqz v0, :cond_0
 
     .line 2
-    invoke-virtual {p0}, Lcom/vk/stories/view/e1;->v()Z
+    invoke-virtual {p0}, Lcom/vk/stories/view/BaseStoryView;->v()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    iget-object v0, p0, Lcom/vk/stories/view/e1;->D:Lcom/vk/dto/stories/model/StoryEntry;
+    iget-object v0, p0, Lcom/vk/stories/view/BaseStoryView;->D:Lcom/vk/dto/stories/model/StoryEntry;
 
     if-eqz v0, :cond_0
 
@@ -2579,25 +2579,25 @@
     .line 3
     sget-object v2, Ljava/util/concurrent/TimeUnit;->MILLISECONDS:Ljava/util/concurrent/TimeUnit;
 
-    invoke-static {v0, v1, v2}, Lc/a/m;->j(JLjava/util/concurrent/TimeUnit;)Lc/a/m;
+    invoke-static {v0, v1, v2}, Lio/reactivex/Observable;->j(JLjava/util/concurrent/TimeUnit;)Lio/reactivex/Observable;
 
     move-result-object v0
 
     .line 4
-    invoke-static {}, Lc/a/f0/b;->b()Lc/a/s;
+    invoke-static {}, Lio/reactivex/schedulers/Schedulers;->b()Lio/reactivex/Scheduler;
 
     move-result-object v1
 
-    invoke-virtual {v0, v1}, Lc/a/m;->b(Lc/a/s;)Lc/a/m;
+    invoke-virtual {v0, v1}, Lio/reactivex/Observable;->b(Lio/reactivex/Scheduler;)Lio/reactivex/Observable;
 
     move-result-object v0
 
     .line 5
-    invoke-static {}, Lc/a/y/c/a;->a()Lc/a/s;
+    invoke-static {}, Lio/reactivex/schedulers/AndroidSchedulers;->a()Lio/reactivex/Scheduler;
 
     move-result-object v1
 
-    invoke-virtual {v0, v1}, Lc/a/m;->a(Lc/a/s;)Lc/a/m;
+    invoke-virtual {v0, v1}, Lio/reactivex/Observable;->a(Lio/reactivex/Scheduler;)Lio/reactivex/Observable;
 
     move-result-object v0
 
@@ -2606,7 +2606,7 @@
     invoke-direct {v1, p0}, Lcom/vk/stories/view/g;-><init>(Lcom/vk/stories/view/StoryView;)V
 
     .line 6
-    invoke-virtual {v0, v1}, Lc/a/m;->f(Lc/a/z/g;)Lio/reactivex/disposables/b;
+    invoke-virtual {v0, v1}, Lio/reactivex/Observable;->f(Lio/reactivex/functions/Consumer;)Lio/reactivex/disposables/Disposable;
 
     :cond_0
     return-void
@@ -2628,11 +2628,11 @@
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
     .line 2
-    iget-object v0, p0, Lcom/vk/stories/view/StoryView;->C1:Lcom/vk/stories/view/y1;
+    iget-object v0, p0, Lcom/vk/stories/view/StoryView;->C1:Lcom/vk/stories/view/VideoThumbProgress;
 
     if-nez v0, :cond_0
 
-    iget-object v0, p0, Lcom/vk/stories/view/e1;->D:Lcom/vk/dto/stories/model/StoryEntry;
+    iget-object v0, p0, Lcom/vk/stories/view/BaseStoryView;->D:Lcom/vk/dto/stories/model/StoryEntry;
 
     if-eqz v0, :cond_0
 
@@ -2677,7 +2677,7 @@
     if-ne v0, v1, :cond_0
 
     .line 3
-    new-instance v0, Lcom/vk/stories/view/y1;
+    new-instance v0, Lcom/vk/stories/view/VideoThumbProgress;
 
     invoke-virtual {p0}, Landroid/widget/FrameLayout;->getContext()Landroid/content/Context;
 
@@ -2687,35 +2687,35 @@
 
     const/4 v3, 0x0
 
-    invoke-direct {v0, v1, v2, v3}, Lcom/vk/stories/view/y1;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
+    invoke-direct {v0, v1, v2, v3}, Lcom/vk/stories/view/VideoThumbProgress;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
 
-    iput-object v0, p0, Lcom/vk/stories/view/StoryView;->C1:Lcom/vk/stories/view/y1;
+    iput-object v0, p0, Lcom/vk/stories/view/StoryView;->C1:Lcom/vk/stories/view/VideoThumbProgress;
 
     .line 4
-    iget-object v0, p0, Lcom/vk/stories/view/StoryView;->C1:Lcom/vk/stories/view/y1;
+    iget-object v0, p0, Lcom/vk/stories/view/StoryView;->C1:Lcom/vk/stories/view/VideoThumbProgress;
 
-    iget-object v1, p0, Lcom/vk/stories/view/e1;->D:Lcom/vk/dto/stories/model/StoryEntry;
+    iget-object v1, p0, Lcom/vk/stories/view/BaseStoryView;->D:Lcom/vk/dto/stories/model/StoryEntry;
 
     iget-object v1, v1, Lcom/vk/dto/stories/model/StoryEntry;->F:Lcom/vk/dto/common/VideoFile;
 
     iget-object v1, v1, Lcom/vk/dto/common/VideoFile;->M0:Lcom/vk/dto/common/TimelineThumbs;
 
-    invoke-virtual {v0, v1}, Lcom/vk/stories/view/y1;->setTimelineThumbs(Lcom/vk/dto/common/TimelineThumbs;)V
+    invoke-virtual {v0, v1}, Lcom/vk/stories/view/VideoThumbProgress;->setTimelineThumbs(Lcom/vk/dto/common/TimelineThumbs;)V
 
     .line 5
-    iget-object v0, p0, Lcom/vk/stories/view/StoryView;->C1:Lcom/vk/stories/view/y1;
+    iget-object v0, p0, Lcom/vk/stories/view/StoryView;->C1:Lcom/vk/stories/view/VideoThumbProgress;
 
     invoke-virtual {p0, v0}, Landroid/widget/FrameLayout;->addView(Landroid/view/View;)V
 
     .line 6
-    iget-object v0, p0, Lcom/vk/stories/view/StoryView;->C1:Lcom/vk/stories/view/y1;
+    iget-object v0, p0, Lcom/vk/stories/view/StoryView;->C1:Lcom/vk/stories/view/VideoThumbProgress;
 
     const v1, 0x3c23d70a    # 0.01f
 
     invoke-virtual {v0, v1}, Landroid/widget/FrameLayout;->setAlpha(F)V
 
     .line 7
-    iget-object v0, p0, Lcom/vk/stories/view/StoryView;->C1:Lcom/vk/stories/view/y1;
+    iget-object v0, p0, Lcom/vk/stories/view/StoryView;->C1:Lcom/vk/stories/view/VideoThumbProgress;
 
     invoke-virtual {v0}, Landroid/widget/FrameLayout;->animate()Landroid/view/ViewPropertyAnimator;
 
@@ -2736,7 +2736,7 @@
     invoke-virtual {v0}, Landroid/view/ViewPropertyAnimator;->start()V
 
     .line 8
-    iget-object v1, p0, Lcom/vk/stories/view/StoryView;->C1:Lcom/vk/stories/view/y1;
+    iget-object v1, p0, Lcom/vk/stories/view/StoryView;->C1:Lcom/vk/stories/view/VideoThumbProgress;
 
     iget-object v0, p0, Lcom/vk/stories/view/StoryView;->t0:Lcom/vk/media/player/video/view/SimpleVideoView;
 
@@ -2756,7 +2756,7 @@
 
     move-result-wide v6
 
-    invoke-virtual/range {v1 .. v7}, Lcom/vk/stories/view/y1;->a(JJJ)V
+    invoke-virtual/range {v1 .. v7}, Lcom/vk/stories/view/VideoThumbProgress;->a(JJJ)V
 
     .line 9
     invoke-virtual {p0}, Lcom/vk/stories/view/StoryView;->e()V
@@ -2783,7 +2783,7 @@
     .locals 1
 
     .line 1
-    iget-object v0, p0, Lcom/vk/stories/view/e1;->D:Lcom/vk/dto/stories/model/StoryEntry;
+    iget-object v0, p0, Lcom/vk/stories/view/BaseStoryView;->D:Lcom/vk/dto/stories/model/StoryEntry;
 
     if-eqz v0, :cond_0
 
@@ -2819,7 +2819,7 @@
     .locals 4
 
     .line 1
-    iget-object v0, p0, Lcom/vk/stories/view/e1;->f:Lcom/vk/dto/stories/model/StoriesContainer;
+    iget-object v0, p0, Lcom/vk/stories/view/BaseStoryView;->f:Lcom/vk/dto/stories/model/StoriesContainer;
 
     invoke-virtual {v0}, Lcom/vk/dto/stories/model/StoriesContainer;->H1()Lcom/vk/dto/stories/model/StoryOwner;
 
@@ -2859,18 +2859,18 @@
 
     .line 4
     :cond_1
-    iget-object v2, p0, Lcom/vk/stories/view/StoryView;->b0:Lcom/vk/stories/y0;
+    iget-object v2, p0, Lcom/vk/stories/view/StoryView;->b0:Lcom/vk/stories/StoryViewHelper;
 
-    iget-object v3, p0, Lcom/vk/stories/view/e1;->f:Lcom/vk/dto/stories/model/StoriesContainer;
+    iget-object v3, p0, Lcom/vk/stories/view/BaseStoryView;->f:Lcom/vk/dto/stories/model/StoriesContainer;
 
-    invoke-virtual {v2, v3}, Lcom/vk/stories/y0;->a(Lcom/vk/dto/stories/model/StoriesContainer;)Z
+    invoke-virtual {v2, v3}, Lcom/vk/stories/StoryViewHelper;->a(Lcom/vk/dto/stories/model/StoriesContainer;)Z
 
     move-result v2
 
     xor-int/2addr v1, v2
 
     .line 5
-    iget-object v2, p0, Lcom/vk/stories/view/e1;->f:Lcom/vk/dto/stories/model/StoriesContainer;
+    iget-object v2, p0, Lcom/vk/stories/view/BaseStoryView;->f:Lcom/vk/dto/stories/model/StoriesContainer;
 
     invoke-static {v2, v1}, Lcom/vk/stories/StoriesController;->a(Lcom/vk/dto/stories/model/StoriesContainer;Z)V
 
@@ -2878,24 +2878,24 @@
     invoke-direct {p0}, Lcom/vk/stories/view/StoryView;->x0()V
 
     .line 7
-    new-instance v2, Lcom/vk/api/stories/f0;
+    new-instance v2, Lcom/vk/api/stories/StoriesTogglePinOwner;
 
     invoke-virtual {v0}, Lcom/vk/dto/stories/model/StoryOwner;->w1()I
 
     move-result v0
 
-    invoke-direct {v2, v0, v1}, Lcom/vk/api/stories/f0;-><init>(IZ)V
+    invoke-direct {v2, v0, v1}, Lcom/vk/api/stories/StoriesTogglePinOwner;-><init>(IZ)V
 
     .line 8
-    invoke-virtual {v2}, Lcom/vk/api/base/d;->h()Lcom/vk/api/base/d;
+    invoke-virtual {v2}, Lcom/vk/api/base/ApiRequest;->h()Lcom/vk/api/base/ApiRequest;
 
     .line 9
-    invoke-virtual {v2}, Lcom/vk/api/base/d;->m()Lc/a/m;
+    invoke-virtual {v2}, Lcom/vk/api/base/ApiRequest;->m()Lio/reactivex/Observable;
 
     move-result-object v0
 
     .line 10
-    invoke-static {v0}, Lcom/vk/core/extensions/RxExtKt;->b(Lc/a/m;)Lio/reactivex/disposables/b;
+    invoke-static {v0}, Lcom/vk/core/extensions/RxExtKt;->b(Lio/reactivex/Observable;)Lio/reactivex/disposables/Disposable;
 
     if-eqz v1, :cond_2
 
@@ -2909,7 +2909,7 @@
 
     .line 12
     :goto_1
-    invoke-virtual {p0, v0}, Lcom/vk/stories/view/e1;->a(Lcom/vk/dto/stories/model/StoryViewAction;)V
+    invoke-virtual {p0, v0}, Lcom/vk/stories/view/BaseStoryView;->a(Lcom/vk/dto/stories/model/StoryViewAction;)V
 
     :cond_3
     :goto_2
@@ -2938,23 +2938,23 @@
 
     move-result-object v0
 
-    invoke-static {v0}, Lcom/vk/camera/j/c;->b(Landroid/content/Context;)Z
+    invoke-static {v0}, Lcom/vk/camera/j/CadreUtils1;->b(Landroid/content/Context;)Z
 
     move-result v0
 
-    invoke-static {p0, v0}, Lcom/vk/camera/j/c;->a(Landroid/view/View;Z)Lcom/vk/camera/j/b;
+    invoke-static {p0, v0}, Lcom/vk/camera/j/CadreUtils1;->a(Landroid/view/View;Z)Lcom/vk/camera/j/CadreUtils2;
 
     move-result-object v0
 
     .line 3
-    invoke-virtual {v0}, Lcom/vk/camera/j/b;->e()F
+    invoke-virtual {v0}, Lcom/vk/camera/j/CadreUtils2;->e()F
 
     move-result v1
 
     iput v1, p0, Lcom/vk/stories/view/StoryView;->r1:F
 
     .line 4
-    invoke-virtual {v0}, Lcom/vk/camera/j/b;->a()F
+    invoke-virtual {v0}, Lcom/vk/camera/j/CadreUtils2;->a()F
 
     move-result v1
 
@@ -2965,7 +2965,7 @@
 
     move-result-object v2
 
-    invoke-virtual {v0}, Lcom/vk/camera/j/b;->f()I
+    invoke-virtual {v0}, Lcom/vk/camera/j/CadreUtils2;->f()I
 
     move-result v3
 
@@ -2978,7 +2978,7 @@
 
     move-result-object v2
 
-    invoke-virtual {v0}, Lcom/vk/camera/j/b;->b()I
+    invoke-virtual {v0}, Lcom/vk/camera/j/CadreUtils2;->b()I
 
     move-result v3
 
@@ -2991,7 +2991,7 @@
 
     move-result-object v2
 
-    invoke-virtual {v0}, Lcom/vk/camera/j/b;->f()I
+    invoke-virtual {v0}, Lcom/vk/camera/j/CadreUtils2;->f()I
 
     move-result v3
 
@@ -3004,7 +3004,7 @@
 
     move-result-object v2
 
-    invoke-virtual {v0}, Lcom/vk/camera/j/b;->b()I
+    invoke-virtual {v0}, Lcom/vk/camera/j/CadreUtils2;->b()I
 
     move-result v3
 
@@ -3032,7 +3032,7 @@
     invoke-virtual {v2, v3}, Landroid/view/View;->setTranslationY(F)V
 
     .line 12
-    iget-object v2, p0, Lcom/vk/stories/view/e1;->C:Lcom/vk/stories/view/StoryProgressView;
+    iget-object v2, p0, Lcom/vk/stories/view/BaseStoryView;->C:Lcom/vk/stories/view/StoryProgressView;
 
     if-eqz v2, :cond_0
 
@@ -3102,11 +3102,11 @@
     if-eqz v1, :cond_4
 
     .line 21
-    invoke-virtual {v1, v0}, Lcom/vk/stories/view/StoryViewMusicDelegate;->a(Lcom/vk/camera/j/b;)V
+    invoke-virtual {v1, v0}, Lcom/vk/stories/view/StoryViewMusicDelegate;->a(Lcom/vk/camera/j/CadreUtils2;)V
 
     .line 22
     :cond_4
-    invoke-static {v0}, Lcom/vk/camera/j/c;->a(Lcom/vk/camera/j/b;)Lcom/vk/camera/j/a;
+    invoke-static {v0}, Lcom/vk/camera/j/CadreUtils1;->a(Lcom/vk/camera/j/CadreUtils2;)Lcom/vk/camera/j/CadreUtils;
 
     move-result-object v0
 
@@ -3149,7 +3149,7 @@
     .locals 2
 
     .line 1
-    iget-object v0, p0, Lcom/vk/stories/view/e1;->D:Lcom/vk/dto/stories/model/StoryEntry;
+    iget-object v0, p0, Lcom/vk/stories/view/BaseStoryView;->D:Lcom/vk/dto/stories/model/StoryEntry;
 
     if-eqz v0, :cond_2
 
@@ -3198,7 +3198,7 @@
     .locals 5
 
     .line 1
-    iget-object v0, p0, Lcom/vk/stories/view/e1;->D:Lcom/vk/dto/stories/model/StoryEntry;
+    iget-object v0, p0, Lcom/vk/stories/view/BaseStoryView;->D:Lcom/vk/dto/stories/model/StoryEntry;
 
     const/16 v1, 0x8
 
@@ -3222,7 +3222,7 @@
 
     .line 3
     :cond_1
-    iget-object v0, p0, Lcom/vk/stories/view/e1;->f:Lcom/vk/dto/stories/model/StoriesContainer;
+    iget-object v0, p0, Lcom/vk/stories/view/BaseStoryView;->f:Lcom/vk/dto/stories/model/StoriesContainer;
 
     invoke-virtual {v0}, Lcom/vk/dto/stories/model/StoriesContainer;->H1()Lcom/vk/dto/stories/model/StoryOwner;
 
@@ -3243,9 +3243,9 @@
     if-eqz v0, :cond_8
 
     .line 6
-    iget-object v4, p0, Lcom/vk/stories/view/StoryView;->b0:Lcom/vk/stories/y0;
+    iget-object v4, p0, Lcom/vk/stories/view/StoryView;->b0:Lcom/vk/stories/StoryViewHelper;
 
-    invoke-virtual {v4, v0}, Lcom/vk/stories/y0;->a(Lcom/vk/dto/stories/model/StoryOwner;)Z
+    invoke-virtual {v4, v0}, Lcom/vk/stories/StoryViewHelper;->a(Lcom/vk/dto/stories/model/StoryOwner;)Z
 
     move-result v4
 
@@ -3317,9 +3317,9 @@
 
     .line 13
     :cond_4
-    iget-object v4, p0, Lcom/vk/stories/view/StoryView;->b0:Lcom/vk/stories/y0;
+    iget-object v4, p0, Lcom/vk/stories/view/StoryView;->b0:Lcom/vk/stories/StoryViewHelper;
 
-    invoke-virtual {v4, v0}, Lcom/vk/stories/y0;->b(Lcom/vk/dto/stories/model/StoryOwner;)Z
+    invoke-virtual {v4, v0}, Lcom/vk/stories/StoryViewHelper;->b(Lcom/vk/dto/stories/model/StoryOwner;)Z
 
     move-result v4
 
@@ -3451,7 +3451,7 @@
     .locals 3
 
     .line 1
-    iget-object v0, p0, Lcom/vk/stories/view/e1;->D:Lcom/vk/dto/stories/model/StoryEntry;
+    iget-object v0, p0, Lcom/vk/stories/view/BaseStoryView;->D:Lcom/vk/dto/stories/model/StoryEntry;
 
     if-eqz v0, :cond_1
 
@@ -3476,7 +3476,7 @@
     invoke-virtual {v0, v1}, Landroid/view/ViewGroup;->setVisibility(I)V
 
     .line 4
-    iget-object v0, p0, Lcom/vk/stories/view/e1;->D:Lcom/vk/dto/stories/model/StoryEntry;
+    iget-object v0, p0, Lcom/vk/stories/view/BaseStoryView;->D:Lcom/vk/dto/stories/model/StoryEntry;
 
     iget-object v0, v0, Lcom/vk/dto/stories/model/StoryEntry;->F:Lcom/vk/dto/common/VideoFile;
 
@@ -3521,7 +3521,7 @@
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget-object v2, p0, Lcom/vk/stories/view/e1;->D:Lcom/vk/dto/stories/model/StoryEntry;
+    iget-object v2, p0, Lcom/vk/stories/view/BaseStoryView;->D:Lcom/vk/dto/stories/model/StoryEntry;
 
     iget-object v2, v2, Lcom/vk/dto/stories/model/StoryEntry;->F:Lcom/vk/dto/common/VideoFile;
 
@@ -3555,13 +3555,13 @@
     :goto_0
     iget-object v0, p0, Lcom/vk/stories/view/StoryView;->J0:Landroid/widget/TextView;
 
-    iget-object v1, p0, Lcom/vk/stories/view/e1;->D:Lcom/vk/dto/stories/model/StoryEntry;
+    iget-object v1, p0, Lcom/vk/stories/view/BaseStoryView;->D:Lcom/vk/dto/stories/model/StoryEntry;
 
     iget-object v1, v1, Lcom/vk/dto/stories/model/StoryEntry;->F:Lcom/vk/dto/common/VideoFile;
 
     iget v1, v1, Lcom/vk/dto/common/VideoFile;->d:I
 
-    invoke-static {v1}, Lcom/vk/libvideo/t;->c(I)Ljava/lang/String;
+    invoke-static {v1}, Lcom/vk/libvideo/VideoUtils;->c(I)Ljava/lang/String;
 
     move-result-object v1
 
@@ -3601,17 +3601,17 @@
     .locals 2
 
     .line 1
-    iget-object v0, p0, Lcom/vk/stories/view/e1;->D:Lcom/vk/dto/stories/model/StoryEntry;
+    iget-object v0, p0, Lcom/vk/stories/view/BaseStoryView;->D:Lcom/vk/dto/stories/model/StoryEntry;
 
     .line 2
-    iget-object v1, p0, Lcom/vk/stories/view/StoryView;->j1:Lcom/vk/stories/view/question/b;
+    iget-object v1, p0, Lcom/vk/stories/view/StoryView;->j1:Lcom/vk/stories/view/question/StoryViewAskQuestionContract2;
 
     if-eqz v1, :cond_0
 
     if-eqz v0, :cond_0
 
     .line 3
-    invoke-interface {v1, v0}, Lcom/vk/stories/view/question/b;->a(Lcom/vk/dto/stories/model/StoryEntry;)V
+    invoke-interface {v1, v0}, Lcom/vk/stories/view/question/StoryViewAskQuestionContract2;->a(Lcom/vk/dto/stories/model/StoryEntry;)V
 
     :cond_0
     return-void
@@ -3621,7 +3621,7 @@
     .locals 10
 
     .line 1
-    iget-object v0, p0, Lcom/vk/stories/view/e1;->D:Lcom/vk/dto/stories/model/StoryEntry;
+    iget-object v0, p0, Lcom/vk/stories/view/BaseStoryView;->D:Lcom/vk/dto/stories/model/StoryEntry;
 
     if-nez v0, :cond_0
 
@@ -3672,7 +3672,7 @@
 
     if-nez v3, :cond_1
 
-    iget-object v3, p0, Lcom/vk/stories/view/e1;->f:Lcom/vk/dto/stories/model/StoriesContainer;
+    iget-object v3, p0, Lcom/vk/stories/view/BaseStoryView;->f:Lcom/vk/dto/stories/model/StoriesContainer;
 
     invoke-virtual {v3}, Lcom/vk/dto/stories/model/StoriesContainer;->M1()Z
 
@@ -3687,7 +3687,7 @@
     if-nez v3, :cond_2
 
     :cond_1
-    iget-object v3, p0, Lcom/vk/stories/view/e1;->f:Lcom/vk/dto/stories/model/StoriesContainer;
+    iget-object v3, p0, Lcom/vk/stories/view/BaseStoryView;->f:Lcom/vk/dto/stories/model/StoriesContainer;
 
     invoke-virtual {v3}, Lcom/vk/dto/stories/model/StoriesContainer;->N1()Z
 
@@ -3716,7 +3716,7 @@
     invoke-virtual {v3, v6}, Landroid/view/ViewGroup;->setBackground(Landroid/graphics/drawable/Drawable;)V
 
     .line 7
-    iget-object v3, p0, Lcom/vk/stories/view/e1;->f:Lcom/vk/dto/stories/model/StoriesContainer;
+    iget-object v3, p0, Lcom/vk/stories/view/BaseStoryView;->f:Lcom/vk/dto/stories/model/StoriesContainer;
 
     invoke-virtual {v3}, Lcom/vk/dto/stories/model/StoriesContainer;->N1()Z
 
@@ -3751,7 +3751,7 @@
     :cond_3
     iget-object v3, p0, Lcom/vk/stories/view/StoryView;->O0:Landroid/widget/TextView;
 
-    iget-object v6, p0, Lcom/vk/stories/view/e1;->D:Lcom/vk/dto/stories/model/StoryEntry;
+    iget-object v6, p0, Lcom/vk/stories/view/BaseStoryView;->D:Lcom/vk/dto/stories/model/StoryEntry;
 
     iget-object v6, v6, Lcom/vk/dto/stories/model/StoryEntry;->k0:Ljava/lang/String;
 
@@ -3823,7 +3823,7 @@
 
     if-nez v3, :cond_5
 
-    iget-object v3, p0, Lcom/vk/stories/view/e1;->f:Lcom/vk/dto/stories/model/StoriesContainer;
+    iget-object v3, p0, Lcom/vk/stories/view/BaseStoryView;->f:Lcom/vk/dto/stories/model/StoriesContainer;
 
     invoke-virtual {v3}, Lcom/vk/dto/stories/model/StoriesContainer;->M1()Z
 
@@ -3831,7 +3831,7 @@
 
     if-nez v3, :cond_5
 
-    iget-object v3, p0, Lcom/vk/stories/view/e1;->D:Lcom/vk/dto/stories/model/StoryEntry;
+    iget-object v3, p0, Lcom/vk/stories/view/BaseStoryView;->D:Lcom/vk/dto/stories/model/StoryEntry;
 
     iget-boolean v3, v3, Lcom/vk/dto/stories/model/StoryEntry;->J:Z
 
@@ -3990,7 +3990,7 @@
 
     .line 38
     :cond_6
-    iget-object v3, p0, Lcom/vk/stories/view/e1;->D:Lcom/vk/dto/stories/model/StoryEntry;
+    iget-object v3, p0, Lcom/vk/stories/view/BaseStoryView;->D:Lcom/vk/dto/stories/model/StoryEntry;
 
     if-eqz v3, :cond_7
 
@@ -3998,7 +3998,7 @@
 
     if-eqz v3, :cond_7
 
-    iget-object v3, p0, Lcom/vk/stories/view/e1;->f:Lcom/vk/dto/stories/model/StoriesContainer;
+    iget-object v3, p0, Lcom/vk/stories/view/BaseStoryView;->f:Lcom/vk/dto/stories/model/StoriesContainer;
 
     invoke-virtual {v3}, Lcom/vk/dto/stories/model/StoriesContainer;->M1()Z
 
@@ -4077,10 +4077,10 @@
     .locals 6
 
     .line 1
-    iget-object v0, p0, Lcom/vk/stories/view/e1;->D:Lcom/vk/dto/stories/model/StoryEntry;
+    iget-object v0, p0, Lcom/vk/stories/view/BaseStoryView;->D:Lcom/vk/dto/stories/model/StoryEntry;
 
     .line 2
-    iget-object v1, p0, Lcom/vk/stories/view/e1;->f:Lcom/vk/dto/stories/model/StoriesContainer;
+    iget-object v1, p0, Lcom/vk/stories/view/BaseStoryView;->f:Lcom/vk/dto/stories/model/StoriesContainer;
 
     invoke-virtual {v1}, Lcom/vk/dto/stories/model/StoriesContainer;->H1()Lcom/vk/dto/stories/model/StoryOwner;
 
@@ -4143,16 +4143,16 @@
 
     if-nez v0, :cond_3
 
-    iget-object v0, p0, Lcom/vk/stories/view/StoryView;->b0:Lcom/vk/stories/y0;
+    iget-object v0, p0, Lcom/vk/stories/view/StoryView;->b0:Lcom/vk/stories/StoryViewHelper;
 
     .line 6
-    invoke-virtual {v0, v1}, Lcom/vk/stories/y0;->a(Lcom/vk/dto/stories/model/StoryOwner;)Z
+    invoke-virtual {v0, v1}, Lcom/vk/stories/StoryViewHelper;->a(Lcom/vk/dto/stories/model/StoryOwner;)Z
 
     move-result v0
 
     if-nez v0, :cond_3
 
-    iget-object v0, p0, Lcom/vk/stories/view/e1;->f:Lcom/vk/dto/stories/model/StoriesContainer;
+    iget-object v0, p0, Lcom/vk/stories/view/BaseStoryView;->f:Lcom/vk/dto/stories/model/StoriesContainer;
 
     .line 7
     invoke-virtual {v0}, Lcom/vk/dto/stories/model/StoriesContainer;->B1()Lcom/vk/dto/narratives/Narrative;
@@ -4186,11 +4186,11 @@
 
     .line 9
     :cond_4
-    iget-object v0, p0, Lcom/vk/stories/view/StoryView;->b0:Lcom/vk/stories/y0;
+    iget-object v0, p0, Lcom/vk/stories/view/StoryView;->b0:Lcom/vk/stories/StoryViewHelper;
 
-    iget-object v1, p0, Lcom/vk/stories/view/e1;->f:Lcom/vk/dto/stories/model/StoriesContainer;
+    iget-object v1, p0, Lcom/vk/stories/view/BaseStoryView;->f:Lcom/vk/dto/stories/model/StoriesContainer;
 
-    invoke-virtual {v0, v1}, Lcom/vk/stories/y0;->a(Lcom/vk/dto/stories/model/StoriesContainer;)Z
+    invoke-virtual {v0, v1}, Lcom/vk/stories/StoryViewHelper;->a(Lcom/vk/dto/stories/model/StoriesContainer;)Z
 
     move-result v0
 
@@ -4236,23 +4236,23 @@
     .locals 3
 
     .line 1
-    invoke-super {p0}, Lcom/vk/stories/view/e1;->C()V
+    invoke-super {p0}, Lcom/vk/stories/view/BaseStoryView;->C()V
 
     .line 2
     iget-object v0, p0, Lcom/vk/stories/view/StoryView;->t0:Lcom/vk/media/player/video/view/SimpleVideoView;
 
     if-eqz v0, :cond_0
 
-    iget-object v1, p0, Lcom/vk/stories/view/e1;->D:Lcom/vk/dto/stories/model/StoryEntry;
+    iget-object v1, p0, Lcom/vk/stories/view/BaseStoryView;->D:Lcom/vk/dto/stories/model/StoryEntry;
 
     if-eqz v1, :cond_0
 
     .line 3
-    invoke-virtual {p0}, Lcom/vk/stories/view/e1;->v()Z
+    invoke-virtual {p0}, Lcom/vk/stories/view/BaseStoryView;->v()Z
 
     move-result v1
 
-    iget-object v2, p0, Lcom/vk/stories/view/e1;->D:Lcom/vk/dto/stories/model/StoryEntry;
+    iget-object v2, p0, Lcom/vk/stories/view/BaseStoryView;->D:Lcom/vk/dto/stories/model/StoryEntry;
 
     invoke-virtual {v2}, Lcom/vk/dto/stories/model/StoryEntry;->Y1()Z
 
@@ -4262,7 +4262,7 @@
 
     .line 4
     :cond_0
-    iget-object v0, p0, Lcom/vk/stories/view/e1;->C:Lcom/vk/stories/view/StoryProgressView;
+    iget-object v0, p0, Lcom/vk/stories/view/BaseStoryView;->C:Lcom/vk/stories/view/StoryProgressView;
 
     const/4 v1, 0x1
 
@@ -4275,10 +4275,10 @@
     .locals 5
 
     .line 1
-    invoke-super {p0}, Lcom/vk/stories/view/e1;->D()V
+    invoke-super {p0}, Lcom/vk/stories/view/BaseStoryView;->D()V
 
     .line 2
-    iget-object v0, p0, Lcom/vk/stories/view/StoryView;->C1:Lcom/vk/stories/view/y1;
+    iget-object v0, p0, Lcom/vk/stories/view/StoryView;->C1:Lcom/vk/stories/view/VideoThumbProgress;
 
     if-eqz v0, :cond_0
 
@@ -4318,7 +4318,7 @@
     .locals 2
 
     .line 1
-    iget-object v0, p0, Lcom/vk/stories/view/e1;->D:Lcom/vk/dto/stories/model/StoryEntry;
+    iget-object v0, p0, Lcom/vk/stories/view/BaseStoryView;->D:Lcom/vk/dto/stories/model/StoryEntry;
 
     if-eqz v0, :cond_0
 
@@ -4351,7 +4351,7 @@
     .locals 4
 
     .line 1
-    iget-object v0, p0, Lcom/vk/stories/view/e1;->D:Lcom/vk/dto/stories/model/StoryEntry;
+    iget-object v0, p0, Lcom/vk/stories/view/BaseStoryView;->D:Lcom/vk/dto/stories/model/StoryEntry;
 
     if-eqz v0, :cond_0
 
@@ -4360,7 +4360,7 @@
 
     move-result-wide v0
 
-    iget-wide v2, p0, Lcom/vk/stories/view/e1;->J:J
+    iget-wide v2, p0, Lcom/vk/stories/view/BaseStoryView;->J:J
 
     sub-long/2addr v0, v2
 
@@ -4368,7 +4368,7 @@
 
     .line 3
     :cond_0
-    iget-object v0, p0, Lcom/vk/stories/view/e1;->D:Lcom/vk/dto/stories/model/StoryEntry;
+    iget-object v0, p0, Lcom/vk/stories/view/BaseStoryView;->D:Lcom/vk/dto/stories/model/StoryEntry;
 
     if-eqz v0, :cond_1
 
@@ -4392,7 +4392,7 @@
 
     move-result-object v0
 
-    iget-object v1, p0, Lcom/vk/stories/view/e1;->D:Lcom/vk/dto/stories/model/StoryEntry;
+    iget-object v1, p0, Lcom/vk/stories/view/BaseStoryView;->D:Lcom/vk/dto/stories/model/StoryEntry;
 
     iget-wide v2, p0, Lcom/vk/stories/view/StoryView;->f0:J
 
@@ -4437,14 +4437,14 @@
 
     move-result-object v1
 
-    new-instance v2, Lcom/vtosters/lite/ui/h0/a;
+    new-instance v2, Lcom/vtosters/lite/ui/h0/ChangeText;
 
-    invoke-direct {v2}, Lcom/vtosters/lite/ui/h0/a;-><init>()V
+    invoke-direct {v2}, Lcom/vtosters/lite/ui/h0/ChangeText;-><init>()V
 
     const/4 v3, 0x2
 
     .line 5
-    invoke-virtual {v2, v3}, Lcom/vtosters/lite/ui/h0/a;->a(I)Lcom/vtosters/lite/ui/h0/a;
+    invoke-virtual {v2, v3}, Lcom/vtosters/lite/ui/h0/ChangeText;->a(I)Lcom/vtosters/lite/ui/h0/ChangeText;
 
     invoke-virtual {v1, v2}, Landroid/transition/TransitionSet;->addTransition(Landroid/transition/Transition;)Landroid/transition/TransitionSet;
 
@@ -4456,9 +4456,9 @@
     invoke-virtual {v1, v2, v3}, Landroid/transition/TransitionSet;->setDuration(J)Landroid/transition/TransitionSet;
 
     .line 7
-    new-instance v1, Lcom/vtosters/lite/ui/h0/b;
+    new-instance v1, Lcom/vtosters/lite/ui/h0/Recolor;
 
-    invoke-direct {v1}, Lcom/vtosters/lite/ui/h0/b;-><init>()V
+    invoke-direct {v1}, Lcom/vtosters/lite/ui/h0/Recolor;-><init>()V
 
     invoke-virtual {v0, v1}, Landroid/transition/TransitionSet;->addTransition(Landroid/transition/Transition;)Landroid/transition/TransitionSet;
 
@@ -4474,10 +4474,10 @@
     .locals 3
 
     .line 1
-    iget v0, p0, Lcom/vk/stories/view/e1;->I:I
+    iget v0, p0, Lcom/vk/stories/view/BaseStoryView;->I:I
 
     .line 2
-    iget-object v1, p0, Lcom/vk/stories/view/e1;->D:Lcom/vk/dto/stories/model/StoryEntry;
+    iget-object v1, p0, Lcom/vk/stories/view/BaseStoryView;->D:Lcom/vk/dto/stories/model/StoryEntry;
 
     if-eqz v1, :cond_1
 
@@ -4547,7 +4547,7 @@
     invoke-virtual {v0, v1}, Landroid/view/View;->setVisibility(I)V
 
     .line 7
-    iget-object v0, p0, Lcom/vk/stories/view/e1;->C:Lcom/vk/stories/view/StoryProgressView;
+    iget-object v0, p0, Lcom/vk/stories/view/BaseStoryView;->C:Lcom/vk/stories/view/StoryProgressView;
 
     if-eqz v0, :cond_0
 
@@ -4587,7 +4587,7 @@
     .locals 2
 
     .line 1
-    iget-boolean v0, p0, Lcom/vk/stories/view/e1;->e:Z
+    iget-boolean v0, p0, Lcom/vk/stories/view/BaseStoryView;->e:Z
 
     if-eqz v0, :cond_0
 
@@ -4595,7 +4595,7 @@
 
     .line 2
     :cond_0
-    iget-boolean v0, p0, Lcom/vk/stories/view/e1;->E:Z
+    iget-boolean v0, p0, Lcom/vk/stories/view/BaseStoryView;->E:Z
 
     if-eqz v0, :cond_1
 
@@ -4605,10 +4605,10 @@
     const/4 v0, 0x0
 
     .line 3
-    iput-boolean v0, p0, Lcom/vk/stories/view/e1;->F:Z
+    iput-boolean v0, p0, Lcom/vk/stories/view/BaseStoryView;->F:Z
 
     .line 4
-    iget-object v0, p0, Lcom/vk/stories/view/e1;->S:Landroid/os/Handler;
+    iget-object v0, p0, Lcom/vk/stories/view/BaseStoryView;->S:Landroid/os/Handler;
 
     const/4 v1, 0x0
 
@@ -4685,7 +4685,7 @@
 
     check-cast v0, Lcom/vk/stories/view/StoryProgressView;
 
-    iput-object v0, p0, Lcom/vk/stories/view/e1;->C:Lcom/vk/stories/view/StoryProgressView;
+    iput-object v0, p0, Lcom/vk/stories/view/BaseStoryView;->C:Lcom/vk/stories/view/StoryProgressView;
 
     const v0, 0x7f0a075b
 
@@ -4858,7 +4858,7 @@
     .line 24
     iget-object v0, p0, Lcom/vk/stories/view/StoryView;->w0:Landroid/view/View;
 
-    iget-object v1, p0, Lcom/vk/stories/view/e1;->d:Landroid/view/View$OnTouchListener;
+    iget-object v1, p0, Lcom/vk/stories/view/BaseStoryView;->d:Landroid/view/View$OnTouchListener;
 
     invoke-virtual {v0, v1}, Landroid/view/View;->setOnTouchListener(Landroid/view/View$OnTouchListener;)V
 
@@ -4872,13 +4872,13 @@
     iput-object v0, p0, Lcom/vk/stories/view/StoryView;->x0:Landroid/view/View;
 
     .line 26
-    new-instance v0, Lcom/vk/core/widget/h;
+    new-instance v0, Lcom/vk/core/widget/ViewDisplayer;
 
     iget-object v1, p0, Lcom/vk/stories/view/StoryView;->x0:Landroid/view/View;
 
-    invoke-direct {v0, v1}, Lcom/vk/core/widget/h;-><init>(Landroid/view/View;)V
+    invoke-direct {v0, v1}, Lcom/vk/core/widget/ViewDisplayer;-><init>(Landroid/view/View;)V
 
-    iput-object v0, p0, Lcom/vk/stories/view/StoryView;->y0:Lcom/vk/core/widget/h;
+    iput-object v0, p0, Lcom/vk/stories/view/StoryView;->y0:Lcom/vk/core/widget/ViewDisplayer;
 
     const v0, 0x7f0a097d
 
@@ -4975,11 +4975,11 @@
     iput-object v0, p0, Lcom/vk/stories/view/StoryView;->G0:Landroid/view/View;
 
     .line 37
-    new-instance v0, Lcom/vk/stories/view/v1;
+    new-instance v0, Lcom/vk/stories/view/StoryViewRepliesAndViewersDelegate;
 
-    invoke-direct {v0, p0}, Lcom/vk/stories/view/v1;-><init>(Lcom/vk/stories/view/StoryView;)V
+    invoke-direct {v0, p0}, Lcom/vk/stories/view/StoryViewRepliesAndViewersDelegate;-><init>(Lcom/vk/stories/view/StoryView;)V
 
-    iput-object v0, p0, Lcom/vk/stories/view/StoryView;->m1:Lcom/vk/stories/view/v1;
+    iput-object v0, p0, Lcom/vk/stories/view/StoryView;->m1:Lcom/vk/stories/view/StoryViewRepliesAndViewersDelegate;
 
     const v0, 0x7f0a0461
 
@@ -5053,7 +5053,7 @@
 
     .line 46
     :cond_1
-    iget-boolean v0, p0, Lcom/vk/stories/view/e1;->e:Z
+    iget-boolean v0, p0, Lcom/vk/stories/view/BaseStoryView;->e:Z
 
     if-eqz v0, :cond_2
 
@@ -5437,21 +5437,21 @@
     invoke-virtual {v0, v1}, Landroid/view/View;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
     .line 88
-    iget-object v0, p0, Lcom/vk/stories/view/e1;->C:Lcom/vk/stories/view/StoryProgressView;
+    iget-object v0, p0, Lcom/vk/stories/view/BaseStoryView;->C:Lcom/vk/stories/view/StoryProgressView;
 
     if-eqz v0, :cond_3
 
     .line 89
-    invoke-virtual {p0}, Lcom/vk/stories/view/e1;->getSectionsCount()I
+    invoke-virtual {p0}, Lcom/vk/stories/view/BaseStoryView;->getSectionsCount()I
 
     move-result v1
 
     invoke-virtual {v0, v1}, Lcom/vk/stories/view/StoryProgressView;->setSectionCount(I)V
 
     .line 90
-    iget-object v0, p0, Lcom/vk/stories/view/e1;->C:Lcom/vk/stories/view/StoryProgressView;
+    iget-object v0, p0, Lcom/vk/stories/view/BaseStoryView;->C:Lcom/vk/stories/view/StoryProgressView;
 
-    iget-object v1, p0, Lcom/vk/stories/view/e1;->f:Lcom/vk/dto/stories/model/StoriesContainer;
+    iget-object v1, p0, Lcom/vk/stories/view/BaseStoryView;->f:Lcom/vk/dto/stories/model/StoriesContainer;
 
     invoke-virtual {v1}, Lcom/vk/dto/stories/model/StoriesContainer;->E1()I
 
@@ -5463,7 +5463,7 @@
     :cond_3
     iget-object v0, p0, Lcom/vk/stories/view/StoryView;->q0:Lcom/vk/imageloader/view/VKImageView;
 
-    iget-object v1, p0, Lcom/vk/stories/view/e1;->f:Lcom/vk/dto/stories/model/StoriesContainer;
+    iget-object v1, p0, Lcom/vk/stories/view/BaseStoryView;->f:Lcom/vk/dto/stories/model/StoriesContainer;
 
     invoke-virtual {v1}, Lcom/vk/dto/stories/model/StoriesContainer;->u1()Ljava/lang/String;
 
@@ -5474,7 +5474,7 @@
     .line 92
     iget-object v0, p0, Lcom/vk/stories/view/StoryView;->r0:Landroid/widget/TextView;
 
-    iget-object v1, p0, Lcom/vk/stories/view/e1;->f:Lcom/vk/dto/stories/model/StoriesContainer;
+    iget-object v1, p0, Lcom/vk/stories/view/BaseStoryView;->f:Lcom/vk/dto/stories/model/StoriesContainer;
 
     invoke-virtual {v1}, Lcom/vk/dto/stories/model/StoriesContainer;->w1()Ljava/lang/String;
 
@@ -5483,14 +5483,14 @@
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
     .line 93
-    iget-object v0, p0, Lcom/vk/stories/view/e1;->f:Lcom/vk/dto/stories/model/StoriesContainer;
+    iget-object v0, p0, Lcom/vk/stories/view/BaseStoryView;->f:Lcom/vk/dto/stories/model/StoriesContainer;
 
     invoke-virtual {v0}, Lcom/vk/dto/stories/model/StoriesContainer;->P1()Z
 
     move-result v0
 
     .line 94
-    iget-object v1, p0, Lcom/vk/stories/view/e1;->f:Lcom/vk/dto/stories/model/StoriesContainer;
+    iget-object v1, p0, Lcom/vk/stories/view/BaseStoryView;->f:Lcom/vk/dto/stories/model/StoriesContainer;
 
     invoke-virtual {v1}, Lcom/vk/dto/stories/model/StoriesContainer;->O1()Z
 
@@ -5557,66 +5557,66 @@
 
     invoke-direct {v2, p0}, Lcom/vk/stories/view/StoryView$m;-><init>(Lcom/vk/stories/view/StoryView;)V
 
-    invoke-direct {v1, v0, v2}, Lcom/vk/narratives/views/StoryNarrativeStubDelegate;-><init>(Landroid/view/ViewStub;Lkotlin/jvm/b/d;)V
+    invoke-direct {v1, v0, v2}, Lcom/vk/narratives/views/StoryNarrativeStubDelegate;-><init>(Landroid/view/ViewStub;Lkotlin/jvm/b/Functions4;)V
 
     iput-object v1, p0, Lcom/vk/stories/view/StoryView;->Y0:Lcom/vk/narratives/views/StoryNarrativeStubDelegate;
 
     .line 100
     iget-object v0, p0, Lcom/vk/stories/view/StoryView;->Y0:Lcom/vk/narratives/views/StoryNarrativeStubDelegate;
 
-    iget-object v1, p0, Lcom/vk/stories/view/e1;->f:Lcom/vk/dto/stories/model/StoriesContainer;
+    iget-object v1, p0, Lcom/vk/stories/view/BaseStoryView;->f:Lcom/vk/dto/stories/model/StoriesContainer;
 
     invoke-virtual {v0, v1}, Lcom/vk/narratives/views/StoryNarrativeStubDelegate;->a(Lcom/vk/dto/stories/model/StoriesContainer;)V
 
     .line 101
-    new-instance v0, Lcom/vk/stories/view/question/d;
+    new-instance v0, Lcom/vk/stories/view/question/StoryViewAskQuestionDataProvider;
 
-    invoke-direct {v0, p0}, Lcom/vk/stories/view/question/d;-><init>(Lcom/vk/stories/view/StoryView;)V
+    invoke-direct {v0, p0}, Lcom/vk/stories/view/question/StoryViewAskQuestionDataProvider;-><init>(Lcom/vk/stories/view/StoryView;)V
 
     .line 102
     new-instance v1, Lcom/vk/stories/view/question/StoryViewAskQuestionPresenter;
 
-    invoke-direct {v1, p0, v0}, Lcom/vk/stories/view/question/StoryViewAskQuestionPresenter;-><init>(Lcom/vk/stories/view/t1;Lcom/vk/stories/view/question/a;)V
+    invoke-direct {v1, p0, v0}, Lcom/vk/stories/view/question/StoryViewAskQuestionPresenter;-><init>(Lcom/vk/stories/view/BaseStoryViewContract1;Lcom/vk/stories/view/question/StoryViewAskQuestionContract;)V
 
-    iput-object v1, p0, Lcom/vk/stories/view/StoryView;->j1:Lcom/vk/stories/view/question/b;
+    iput-object v1, p0, Lcom/vk/stories/view/StoryView;->j1:Lcom/vk/stories/view/question/StoryViewAskQuestionContract2;
 
     .line 103
     new-instance v0, Lcom/vk/stories/view/question/StoryViewAskQuestionView;
 
-    iget-object v1, p0, Lcom/vk/stories/view/StoryView;->j1:Lcom/vk/stories/view/question/b;
+    iget-object v1, p0, Lcom/vk/stories/view/StoryView;->j1:Lcom/vk/stories/view/question/StoryViewAskQuestionContract2;
 
-    invoke-direct {v0, v1, p0}, Lcom/vk/stories/view/question/StoryViewAskQuestionView;-><init>(Lcom/vk/stories/view/question/b;Lcom/vk/stories/view/t1;)V
+    invoke-direct {v0, v1, p0}, Lcom/vk/stories/view/question/StoryViewAskQuestionView;-><init>(Lcom/vk/stories/view/question/StoryViewAskQuestionContract2;Lcom/vk/stories/view/BaseStoryViewContract1;)V
 
     .line 104
-    iget-object v1, p0, Lcom/vk/stories/view/StoryView;->j1:Lcom/vk/stories/view/question/b;
+    iget-object v1, p0, Lcom/vk/stories/view/StoryView;->j1:Lcom/vk/stories/view/question/StoryViewAskQuestionContract2;
 
-    invoke-interface {v1, v0}, Lcom/vk/stories/view/question/b;->a(Lcom/vk/stories/view/question/c;)V
+    invoke-interface {v1, v0}, Lcom/vk/stories/view/question/StoryViewAskQuestionContract2;->a(Lcom/vk/stories/view/question/StoryViewAskQuestionContract1;)V
 
     .line 105
     new-instance v0, Lcom/vk/stories/view/StoryViewMusicDelegate;
 
-    iget-object v4, p0, Lcom/vk/stories/view/StoryView;->u1:Lcom/vk/music/l/a;
+    iget-object v4, p0, Lcom/vk/stories/view/StoryView;->u1:Lcom/vk/music/l/ModernMusicTrackModel;
 
     iget-object v5, p0, Lcom/vk/stories/view/StoryView;->w1:Lcom/vk/music/common/BoomModel;
 
-    iget-object v6, p0, Lcom/vk/stories/view/StoryView;->v1:Lcom/vk/music/player/d;
+    iget-object v6, p0, Lcom/vk/stories/view/StoryView;->v1:Lcom/vk/music/player/PlayerModel;
 
-    iget-object v7, p0, Lcom/vk/stories/view/StoryView;->x1:Lcom/vk/music/restriction/h;
+    iget-object v7, p0, Lcom/vk/stories/view/StoryView;->x1:Lcom/vk/music/restriction/MusicRestrictionManager;
 
     move-object v2, v0
 
     move-object v3, p0
 
-    invoke-direct/range {v2 .. v7}, Lcom/vk/stories/view/StoryViewMusicDelegate;-><init>(Lcom/vk/stories/view/StoryView;Lcom/vk/music/l/a;Lcom/vk/music/common/BoomModel;Lcom/vk/music/player/d;Lcom/vk/music/restriction/h;)V
+    invoke-direct/range {v2 .. v7}, Lcom/vk/stories/view/StoryViewMusicDelegate;-><init>(Lcom/vk/stories/view/StoryView;Lcom/vk/music/l/ModernMusicTrackModel;Lcom/vk/music/common/BoomModel;Lcom/vk/music/player/PlayerModel;Lcom/vk/music/restriction/MusicRestrictionManager;)V
 
     iput-object v0, p0, Lcom/vk/stories/view/StoryView;->k1:Lcom/vk/stories/view/StoryViewMusicDelegate;
 
     .line 106
-    new-instance v0, Lcom/vk/stories/view/u1;
+    new-instance v0, Lcom/vk/stories/view/StoryViewPollDelegate;
 
-    invoke-direct {v0, p0}, Lcom/vk/stories/view/u1;-><init>(Lcom/vk/stories/view/StoryView;)V
+    invoke-direct {v0, p0}, Lcom/vk/stories/view/StoryViewPollDelegate;-><init>(Lcom/vk/stories/view/StoryView;)V
 
-    iput-object v0, p0, Lcom/vk/stories/view/StoryView;->l1:Lcom/vk/stories/view/u1;
+    iput-object v0, p0, Lcom/vk/stories/view/StoryView;->l1:Lcom/vk/stories/view/StoryViewPollDelegate;
 
     .line 107
     invoke-virtual {p0}, Landroid/widget/FrameLayout;->getViewTreeObserver()Landroid/view/ViewTreeObserver;
@@ -5630,12 +5630,12 @@
     invoke-virtual {v0, v1}, Landroid/view/ViewTreeObserver;->addOnPreDrawListener(Landroid/view/ViewTreeObserver$OnPreDrawListener;)V
 
     .line 108
-    iget-object v0, p0, Lcom/vk/stories/view/e1;->a:Lcom/vk/stories/view/StoryView$u0;
+    iget-object v0, p0, Lcom/vk/stories/view/BaseStoryView;->a:Lcom/vk/stories/view/StoryView$u0;
 
     if-eqz v0, :cond_6
 
     .line 109
-    iget-object v1, p0, Lcom/vk/stories/view/e1;->f:Lcom/vk/dto/stories/model/StoriesContainer;
+    iget-object v1, p0, Lcom/vk/stories/view/BaseStoryView;->f:Lcom/vk/dto/stories/model/StoriesContainer;
 
     invoke-interface {v0, v1}, Lcom/vk/stories/view/StoryView$u0;->b(Lcom/vk/dto/stories/model/StoriesContainer;)I
 
@@ -5645,7 +5645,7 @@
 
     .line 110
     :cond_6
-    iget-object v0, p0, Lcom/vk/stories/view/e1;->f:Lcom/vk/dto/stories/model/StoriesContainer;
+    iget-object v0, p0, Lcom/vk/stories/view/BaseStoryView;->f:Lcom/vk/dto/stories/model/StoriesContainer;
 
     invoke-virtual {v0}, Lcom/vk/dto/stories/model/StoriesContainer;->E1()I
 
@@ -5675,7 +5675,7 @@
     return-void
 .end method
 
-.method public synthetic R()Lkotlin/m;
+.method public synthetic R()Lkotlin/Unit;
     .locals 2
 
     .line 1
@@ -5821,7 +5821,7 @@
     invoke-virtual {v1, v0}, Landroid/widget/TextView;->setMaxWidth(I)V
 
     .line 14
-    sget-object v0, Lkotlin/m;->a:Lkotlin/m;
+    sget-object v0, Lkotlin/Unit;->a:Lkotlin/Unit;
 
     return-object v0
 .end method
@@ -5830,7 +5830,7 @@
     .locals 6
 
     .line 1
-    iget-object v0, p0, Lcom/vk/stories/view/e1;->D:Lcom/vk/dto/stories/model/StoryEntry;
+    iget-object v0, p0, Lcom/vk/stories/view/BaseStoryView;->D:Lcom/vk/dto/stories/model/StoryEntry;
 
     if-nez v0, :cond_0
 
@@ -5842,7 +5842,7 @@
 
     move-result-object v1
 
-    invoke-static {v1}, Lcom/vk/core/util/c;->a(Landroid/content/Context;)Lcom/vk/core/util/c$b;
+    invoke-static {v1}, Lcom/vk/core/util/AlertDialogs;->a(Landroid/content/Context;)Lcom/vk/core/util/AlertDialogs$b;
 
     move-result-object v1
 
@@ -5859,7 +5859,7 @@
 
     if-eqz v4, :cond_1
 
-    iget-object v4, p0, Lcom/vk/stories/view/e1;->f:Lcom/vk/dto/stories/model/StoriesContainer;
+    iget-object v4, p0, Lcom/vk/stories/view/BaseStoryView;->f:Lcom/vk/dto/stories/model/StoriesContainer;
 
     invoke-virtual {v4}, Lcom/vk/dto/stories/model/StoriesContainer;->N1()Z
 
@@ -5880,7 +5880,7 @@
 
     invoke-direct {v5, p0}, Lcom/vk/stories/view/l;-><init>(Lcom/vk/stories/view/StoryView;)V
 
-    invoke-virtual {v1, v4, v5}, Lcom/vk/core/util/c$b;->a(Ljava/lang/String;Ljava/lang/Runnable;)Lcom/vk/core/util/c$b;
+    invoke-virtual {v1, v4, v5}, Lcom/vk/core/util/AlertDialogs$b;->a(Ljava/lang/String;Ljava/lang/Runnable;)Lcom/vk/core/util/AlertDialogs$b;
 
     .line 7
     :cond_1
@@ -5897,11 +5897,11 @@
 
     invoke-direct {v5, p0}, Lcom/vk/stories/view/StoryView$c0;-><init>(Lcom/vk/stories/view/StoryView;)V
 
-    invoke-virtual {v1, v4, v5}, Lcom/vk/core/util/c$b;->a(ILjava/lang/Runnable;)Lcom/vk/core/util/c$b;
+    invoke-virtual {v1, v4, v5}, Lcom/vk/core/util/AlertDialogs$b;->a(ILjava/lang/Runnable;)Lcom/vk/core/util/AlertDialogs$b;
 
     .line 9
     :cond_2
-    iget-object v4, p0, Lcom/vk/stories/view/e1;->f:Lcom/vk/dto/stories/model/StoriesContainer;
+    iget-object v4, p0, Lcom/vk/stories/view/BaseStoryView;->f:Lcom/vk/dto/stories/model/StoriesContainer;
 
     invoke-virtual {v4}, Lcom/vk/dto/stories/model/StoriesContainer;->Q1()Z
 
@@ -5953,7 +5953,7 @@
 
     invoke-direct {v4, p0}, Lcom/vk/stories/view/StoryView$d0;-><init>(Lcom/vk/stories/view/StoryView;)V
 
-    invoke-virtual {v1, v3, v4}, Lcom/vk/core/util/c$b;->a(ILjava/lang/Runnable;)Lcom/vk/core/util/c$b;
+    invoke-virtual {v1, v3, v4}, Lcom/vk/core/util/AlertDialogs$b;->a(ILjava/lang/Runnable;)Lcom/vk/core/util/AlertDialogs$b;
 
     .line 15
     :cond_4
@@ -5996,7 +5996,7 @@
 
     invoke-direct {v4, p0, v0}, Lcom/vk/stories/view/StoryView$e0;-><init>(Lcom/vk/stories/view/StoryView;Lcom/vk/dto/stories/model/StoryEntry;)V
 
-    invoke-virtual {v1, v3, v4}, Lcom/vk/core/util/c$b;->a(ILjava/lang/Runnable;)Lcom/vk/core/util/c$b;
+    invoke-virtual {v1, v3, v4}, Lcom/vk/core/util/AlertDialogs$b;->a(ILjava/lang/Runnable;)Lcom/vk/core/util/AlertDialogs$b;
 
     goto :goto_1
 
@@ -6008,7 +6008,7 @@
 
     invoke-direct {v5, p0, v3, v2}, Lcom/vk/stories/view/StoryView$f0;-><init>(Lcom/vk/stories/view/StoryView;II)V
 
-    invoke-virtual {v1, v4, v5}, Lcom/vk/core/util/c$b;->a(ILjava/lang/Runnable;)Lcom/vk/core/util/c$b;
+    invoke-virtual {v1, v4, v5}, Lcom/vk/core/util/AlertDialogs$b;->a(ILjava/lang/Runnable;)Lcom/vk/core/util/AlertDialogs$b;
 
     .line 19
     invoke-static {}, Lcom/vk/stories/StoriesController;->m()Z
@@ -6018,20 +6018,20 @@
     if-eqz v3, :cond_8
 
     .line 20
-    invoke-static {}, Lcom/vk/bridges/g;->a()Lcom/vk/bridges/f;
+    invoke-static {}, Lcom/vk/bridges/AuthBridge;->a()Lcom/vk/bridges/AuthBridge3;
 
     move-result-object v3
 
     iget v4, v0, Lcom/vk/dto/stories/model/StoryEntry;->h0:I
 
-    invoke-interface {v3, v4}, Lcom/vk/bridges/f;->b(I)Z
+    invoke-interface {v3, v4}, Lcom/vk/bridges/AuthBridge3;->b(I)Z
 
     move-result v3
 
     if-eqz v3, :cond_8
 
     .line 21
-    iget v3, p0, Lcom/vk/stories/view/e1;->I:I
+    iget v3, p0, Lcom/vk/stories/view/BaseStoryView;->I:I
 
     const v4, 0x7f120ede
 
@@ -6040,7 +6040,7 @@
 
     invoke-direct {v5, p0, v0, v3}, Lcom/vk/stories/view/StoryView$h0;-><init>(Lcom/vk/stories/view/StoryView;Lcom/vk/dto/stories/model/StoryEntry;I)V
 
-    invoke-virtual {v1, v4, v5}, Lcom/vk/core/util/c$b;->a(ILjava/lang/Runnable;)Lcom/vk/core/util/c$b;
+    invoke-virtual {v1, v4, v5}, Lcom/vk/core/util/AlertDialogs$b;->a(ILjava/lang/Runnable;)Lcom/vk/core/util/AlertDialogs$b;
 
     .line 23
     :cond_8
@@ -6051,7 +6051,7 @@
 
     if-nez v3, :cond_a
 
-    iget-object v3, p0, Lcom/vk/stories/view/e1;->b:Lcom/vk/stories/StoriesController$SourceType;
+    iget-object v3, p0, Lcom/vk/stories/view/BaseStoryView;->b:Lcom/vk/stories/StoriesController$SourceType;
 
     sget-object v4, Lcom/vk/stories/StoriesController$SourceType;->LIST:Lcom/vk/stories/StoriesController$SourceType;
 
@@ -6096,11 +6096,11 @@
 
     invoke-direct {v4, p0, v2, v0}, Lcom/vk/stories/view/StoryView$i0;-><init>(Lcom/vk/stories/view/StoryView;ILcom/vk/dto/stories/model/StoryEntry;)V
 
-    invoke-virtual {v1, v3, v4}, Lcom/vk/core/util/c$b;->a(ILjava/lang/Runnable;)Lcom/vk/core/util/c$b;
+    invoke-virtual {v1, v3, v4}, Lcom/vk/core/util/AlertDialogs$b;->a(ILjava/lang/Runnable;)Lcom/vk/core/util/AlertDialogs$b;
 
     .line 26
     :cond_b
-    invoke-virtual {v1}, Lcom/vk/core/util/c$b;->b()Landroidx/appcompat/app/AlertDialog;
+    invoke-virtual {v1}, Lcom/vk/core/util/AlertDialogs$b;->b()Landroidx/appcompat/app/AlertDialog;
 
     move-result-object v0
 
@@ -6113,23 +6113,23 @@
     .locals 9
 
     .line 1
-    iget-object v0, p0, Lcom/vk/stories/view/StoryView;->o1:Lcom/vk/libvideo/live/views/liveswipe/f;
+    iget-object v0, p0, Lcom/vk/stories/view/StoryView;->o1:Lcom/vk/libvideo/live/views/liveswipe/SwipeToolTip;
 
     if-nez v0, :cond_0
 
     .line 2
-    new-instance v0, Lcom/vk/libvideo/live/views/liveswipe/f;
+    new-instance v0, Lcom/vk/libvideo/live/views/liveswipe/SwipeToolTip;
 
     invoke-virtual {p0}, Landroid/widget/FrameLayout;->getContext()Landroid/content/Context;
 
     move-result-object v1
 
-    invoke-direct {v0, v1}, Lcom/vk/libvideo/live/views/liveswipe/f;-><init>(Landroid/content/Context;)V
+    invoke-direct {v0, v1}, Lcom/vk/libvideo/live/views/liveswipe/SwipeToolTip;-><init>(Landroid/content/Context;)V
 
-    iput-object v0, p0, Lcom/vk/stories/view/StoryView;->o1:Lcom/vk/libvideo/live/views/liveswipe/f;
+    iput-object v0, p0, Lcom/vk/stories/view/StoryView;->o1:Lcom/vk/libvideo/live/views/liveswipe/SwipeToolTip;
 
     .line 3
-    iget-object v2, p0, Lcom/vk/stories/view/StoryView;->o1:Lcom/vk/libvideo/live/views/liveswipe/f;
+    iget-object v2, p0, Lcom/vk/stories/view/StoryView;->o1:Lcom/vk/libvideo/live/views/liveswipe/SwipeToolTip;
 
     const v4, 0x7f12068a
 
@@ -6157,15 +6157,15 @@
     const-string v3, "hand_tap_animation.json"
 
     .line 5
-    invoke-virtual/range {v2 .. v8}, Lcom/vk/libvideo/live/views/liveswipe/f;->a(Ljava/lang/String;IIIII)V
+    invoke-virtual/range {v2 .. v8}, Lcom/vk/libvideo/live/views/liveswipe/SwipeToolTip;->a(Ljava/lang/String;IIIII)V
 
     .line 6
-    iget-object v0, p0, Lcom/vk/stories/view/StoryView;->o1:Lcom/vk/libvideo/live/views/liveswipe/f;
+    iget-object v0, p0, Lcom/vk/stories/view/StoryView;->o1:Lcom/vk/libvideo/live/views/liveswipe/SwipeToolTip;
 
     invoke-virtual {p0, v0}, Landroid/widget/FrameLayout;->addView(Landroid/view/View;)V
 
     .line 7
-    iget-object v0, p0, Lcom/vk/stories/view/StoryView;->o1:Lcom/vk/libvideo/live/views/liveswipe/f;
+    iget-object v0, p0, Lcom/vk/stories/view/StoryView;->o1:Lcom/vk/libvideo/live/views/liveswipe/SwipeToolTip;
 
     const/4 v1, 0x0
 
@@ -6176,7 +6176,7 @@
 
     invoke-direct {v0, p0}, Lcom/vk/stories/view/StoryView$z;-><init>(Lcom/vk/stories/view/StoryView;)V
 
-    invoke-static {v0}, Lcom/vtosters/lite/f0;->a(Ljava/lang/Runnable;)V
+    invoke-static {v0}, Lcom/vtosters/lite/ViewUtils;->a(Ljava/lang/Runnable;)V
 
     :cond_0
     return-void
@@ -6186,24 +6186,24 @@
     .locals 4
 
     .line 1
-    iget-object v0, p0, Lcom/vk/stories/view/e1;->D:Lcom/vk/dto/stories/model/StoryEntry;
+    iget-object v0, p0, Lcom/vk/stories/view/BaseStoryView;->D:Lcom/vk/dto/stories/model/StoryEntry;
 
     if-eqz v0, :cond_0
 
     .line 2
-    iget-object v1, p0, Lcom/vk/stories/view/StoryView;->b0:Lcom/vk/stories/y0;
+    iget-object v1, p0, Lcom/vk/stories/view/StoryView;->b0:Lcom/vk/stories/StoryViewHelper;
 
     iget-object v2, p0, Lcom/vk/stories/view/StoryView;->s0:Landroid/widget/TextView;
 
-    iget-object v3, p0, Lcom/vk/stories/view/e1;->f:Lcom/vk/dto/stories/model/StoriesContainer;
+    iget-object v3, p0, Lcom/vk/stories/view/BaseStoryView;->f:Lcom/vk/dto/stories/model/StoriesContainer;
 
-    invoke-virtual {v1, v2, v0, v3}, Lcom/vk/stories/y0;->a(Landroid/widget/TextView;Lcom/vk/dto/stories/model/StoryEntry;Lcom/vk/dto/stories/model/StoriesContainer;)V
+    invoke-virtual {v1, v2, v0, v3}, Lcom/vk/stories/StoryViewHelper;->a(Landroid/widget/TextView;Lcom/vk/dto/stories/model/StoryEntry;Lcom/vk/dto/stories/model/StoriesContainer;)V
 
     :cond_0
     return-void
 .end method
 
-.method public a(Lcom/vk/stories/view/w1;Landroid/view/View$OnClickListener;)Landroid/app/Dialog;
+.method public a(Lcom/vk/stories/view/StoryViewTooltipParams;Landroid/view/View$OnClickListener;)Landroid/app/Dialog;
     .locals 2
 
     .line 175
@@ -6218,7 +6218,7 @@
     if-eqz v0, :cond_3
 
     .line 176
-    iget-boolean v1, p0, Lcom/vk/stories/view/e1;->e:Z
+    iget-boolean v1, p0, Lcom/vk/stories/view/BaseStoryView;->e:Z
 
     if-eqz v1, :cond_0
 
@@ -6226,7 +6226,7 @@
 
     .line 177
     :cond_0
-    iget-object v1, p0, Lcom/vk/stories/view/e1;->g:Landroid/app/Dialog;
+    iget-object v1, p0, Lcom/vk/stories/view/BaseStoryView;->g:Landroid/app/Dialog;
 
     if-eqz v1, :cond_1
 
@@ -6235,19 +6235,19 @@
 
     .line 179
     :cond_1
-    invoke-direct {p0, v0, p1, p2}, Lcom/vk/stories/view/StoryView;->a(Landroid/app/Activity;Lcom/vk/stories/view/w1;Landroid/view/View$OnClickListener;)Landroidx/appcompat/app/AlertDialog;
+    invoke-direct {p0, v0, p1, p2}, Lcom/vk/stories/view/StoryView;->a(Landroid/app/Activity;Lcom/vk/stories/view/StoryViewTooltipParams;Landroid/view/View$OnClickListener;)Landroidx/appcompat/app/AlertDialog;
 
     move-result-object p2
 
-    iput-object p2, p0, Lcom/vk/stories/view/e1;->g:Landroid/app/Dialog;
+    iput-object p2, p0, Lcom/vk/stories/view/BaseStoryView;->g:Landroid/app/Dialog;
 
     .line 180
-    iget-object p2, p0, Lcom/vk/stories/view/e1;->g:Landroid/app/Dialog;
+    iget-object p2, p0, Lcom/vk/stories/view/BaseStoryView;->g:Landroid/app/Dialog;
 
     invoke-virtual {p2, p0}, Landroid/app/Dialog;->setOnDismissListener(Landroid/content/DialogInterface$OnDismissListener;)V
 
     .line 181
-    invoke-virtual {p1}, Lcom/vk/stories/view/w1;->d()Z
+    invoke-virtual {p1}, Lcom/vk/stories/view/StoryViewTooltipParams;->d()Z
 
     move-result p1
 
@@ -6258,14 +6258,14 @@
 
     .line 183
     :cond_2
-    iget-object p1, p0, Lcom/vk/stories/view/e1;->D:Lcom/vk/dto/stories/model/StoryEntry;
+    iget-object p1, p0, Lcom/vk/stories/view/BaseStoryView;->D:Lcom/vk/dto/stories/model/StoryEntry;
 
-    iget-object p2, p0, Lcom/vk/stories/view/e1;->b:Lcom/vk/stories/StoriesController$SourceType;
+    iget-object p2, p0, Lcom/vk/stories/view/BaseStoryView;->b:Lcom/vk/stories/StoriesController$SourceType;
 
     invoke-static {p1, p2}, Lcom/vk/stories/StoriesController;->a(Lcom/vk/dto/stories/model/StoryEntry;Lcom/vk/stories/StoriesController$SourceType;)V
 
     .line 184
-    iget-object p1, p0, Lcom/vk/stories/view/e1;->g:Landroid/app/Dialog;
+    iget-object p1, p0, Lcom/vk/stories/view/BaseStoryView;->g:Landroid/app/Dialog;
 
     return-object p1
 
@@ -6293,7 +6293,7 @@
 
     if-eqz v0, :cond_0
 
-    invoke-virtual {p0}, Lcom/vk/stories/view/e1;->v()Z
+    invoke-virtual {p0}, Lcom/vk/stories/view/BaseStoryView;->v()Z
 
     move-result v0
 
@@ -6349,16 +6349,16 @@
     .locals 12
 
     .line 8
-    invoke-super {p0, p1}, Lcom/vk/stories/view/e1;->a(I)V
+    invoke-super {p0, p1}, Lcom/vk/stories/view/BaseStoryView;->a(I)V
 
     .line 9
-    iget-boolean v0, p0, Lcom/vk/stories/view/e1;->E:Z
+    iget-boolean v0, p0, Lcom/vk/stories/view/BaseStoryView;->E:Z
 
     if-nez v0, :cond_3a
 
     if-ltz p1, :cond_3a
 
-    iget-object v0, p0, Lcom/vk/stories/view/e1;->f:Lcom/vk/dto/stories/model/StoriesContainer;
+    iget-object v0, p0, Lcom/vk/stories/view/BaseStoryView;->f:Lcom/vk/dto/stories/model/StoriesContainer;
 
     invoke-virtual {v0}, Lcom/vk/dto/stories/model/StoriesContainer;->G1()Ljava/util/ArrayList;
 
@@ -6374,7 +6374,7 @@
 
     .line 10
     :cond_0
-    iget-object v0, p0, Lcom/vk/stories/view/e1;->f:Lcom/vk/dto/stories/model/StoriesContainer;
+    iget-object v0, p0, Lcom/vk/stories/view/BaseStoryView;->f:Lcom/vk/dto/stories/model/StoriesContainer;
 
     invoke-virtual {v0}, Lcom/vk/dto/stories/model/StoriesContainer;->H1()Lcom/vk/dto/stories/model/StoryOwner;
 
@@ -6389,24 +6389,24 @@
     invoke-direct {p0}, Lcom/vk/stories/view/StoryView;->l0()V
 
     .line 13
-    invoke-virtual {p0}, Lcom/vk/stories/view/e1;->F()V
+    invoke-virtual {p0}, Lcom/vk/stories/view/BaseStoryView;->F()V
 
     return-void
 
     .line 14
     :cond_1
-    iget-object v0, p0, Lcom/vk/stories/view/e1;->D:Lcom/vk/dto/stories/model/StoryEntry;
+    iget-object v0, p0, Lcom/vk/stories/view/BaseStoryView;->D:Lcom/vk/dto/stories/model/StoryEntry;
 
     if-eqz v0, :cond_2
 
     .line 15
-    iget-object v1, p0, Lcom/vk/stories/view/e1;->b:Lcom/vk/stories/StoriesController$SourceType;
+    iget-object v1, p0, Lcom/vk/stories/view/BaseStoryView;->b:Lcom/vk/stories/StoriesController$SourceType;
 
     invoke-static {v0, v1}, Lcom/vk/stories/StoriesController;->a(Lcom/vk/dto/stories/model/StoryEntry;Lcom/vk/stories/StoriesController$SourceType;)V
 
     .line 16
     :cond_2
-    iget-boolean v0, p0, Lcom/vk/stories/view/e1;->e:Z
+    iget-boolean v0, p0, Lcom/vk/stories/view/BaseStoryView;->e:Z
 
     if-nez v0, :cond_3
 
@@ -6415,7 +6415,7 @@
 
     .line 18
     :cond_3
-    iget-object v0, p0, Lcom/vk/stories/view/e1;->f:Lcom/vk/dto/stories/model/StoriesContainer;
+    iget-object v0, p0, Lcom/vk/stories/view/BaseStoryView;->f:Lcom/vk/dto/stories/model/StoriesContainer;
 
     invoke-virtual {v0}, Lcom/vk/dto/stories/model/StoriesContainer;->G1()Ljava/util/ArrayList;
 
@@ -6428,59 +6428,59 @@
     check-cast v0, Lcom/vk/dto/stories/model/StoryEntry;
 
     .line 19
-    iget-object v1, p0, Lcom/vk/stories/view/StoryView;->A1:Lcom/vk/stories/view/j1;
+    iget-object v1, p0, Lcom/vk/stories/view/StoryView;->A1:Lcom/vk/stories/view/OnStorySelectedNavigationListener;
 
     if-eqz v1, :cond_4
 
-    invoke-virtual {p0}, Lcom/vk/stories/view/e1;->v()Z
+    invoke-virtual {p0}, Lcom/vk/stories/view/BaseStoryView;->v()Z
 
     move-result v1
 
     if-eqz v1, :cond_4
 
     .line 20
-    iget-object v1, p0, Lcom/vk/stories/view/StoryView;->A1:Lcom/vk/stories/view/j1;
+    iget-object v1, p0, Lcom/vk/stories/view/StoryView;->A1:Lcom/vk/stories/view/OnStorySelectedNavigationListener;
 
     invoke-virtual {v0}, Lcom/vk/dto/stories/model/StoryEntry;->O1()Z
 
     move-result v2
 
-    invoke-interface {v1, v0, v2}, Lcom/vk/stories/view/j1;->a(Lcom/vk/dto/stories/model/StoryEntry;Z)V
+    invoke-interface {v1, v0, v2}, Lcom/vk/stories/view/OnStorySelectedNavigationListener;->a(Lcom/vk/dto/stories/model/StoryEntry;Z)V
 
     .line 21
     :cond_4
-    iput-object v0, p0, Lcom/vk/stories/view/e1;->D:Lcom/vk/dto/stories/model/StoryEntry;
+    iput-object v0, p0, Lcom/vk/stories/view/BaseStoryView;->D:Lcom/vk/dto/stories/model/StoryEntry;
 
     .line 22
-    iput p1, p0, Lcom/vk/stories/view/e1;->I:I
+    iput p1, p0, Lcom/vk/stories/view/BaseStoryView;->I:I
 
     .line 23
     invoke-virtual {v0}, Lcom/vk/dto/stories/model/StoryEntry;->T1()Z
 
     move-result v1
 
-    iput-boolean v1, p0, Lcom/vk/stories/view/e1;->G:Z
+    iput-boolean v1, p0, Lcom/vk/stories/view/BaseStoryView;->G:Z
 
     .line 24
     invoke-direct {p0}, Lcom/vk/stories/view/StoryView;->v0()V
 
     .line 25
-    iget-boolean v1, p0, Lcom/vk/stories/view/e1;->e:Z
+    iget-boolean v1, p0, Lcom/vk/stories/view/BaseStoryView;->e:Z
 
     if-nez v1, :cond_5
 
-    invoke-virtual {p0}, Lcom/vk/stories/view/e1;->v()Z
+    invoke-virtual {p0}, Lcom/vk/stories/view/BaseStoryView;->v()Z
 
     move-result v1
 
     if-eqz v1, :cond_5
 
     .line 26
-    iget-object v1, p0, Lcom/vk/stories/view/e1;->D:Lcom/vk/dto/stories/model/StoryEntry;
+    iget-object v1, p0, Lcom/vk/stories/view/BaseStoryView;->D:Lcom/vk/dto/stories/model/StoryEntry;
 
-    iget-object v2, p0, Lcom/vk/stories/view/e1;->b:Lcom/vk/stories/StoriesController$SourceType;
+    iget-object v2, p0, Lcom/vk/stories/view/BaseStoryView;->b:Lcom/vk/stories/StoriesController$SourceType;
 
-    invoke-static {p0, v1, v2}, Lcom/vk/stories/StoriesController;->a(Lcom/vk/stories/view/e1;Lcom/vk/dto/stories/model/StoryEntry;Lcom/vk/stories/StoriesController$SourceType;)V
+    invoke-static {p0, v1, v2}, Lcom/vk/stories/StoriesController;->a(Lcom/vk/stories/view/BaseStoryView;Lcom/vk/dto/stories/model/StoryEntry;Lcom/vk/stories/StoriesController$SourceType;)V
 
     .line 27
     :cond_5
@@ -6511,15 +6511,15 @@
 
     if-eqz v1, :cond_7
 
-    sget-object v5, Lcom/facebook/drawee/drawable/r$b;->k:Lcom/facebook/drawee/drawable/r$b;
+    sget-object v5, Lcom/facebook/drawee/drawable/ScalingUtils$b;->k:Lcom/facebook/drawee/drawable/ScalingUtils$b;
 
     goto :goto_1
 
     :cond_7
-    sget-object v5, Lcom/facebook/drawee/drawable/r$b;->o:Lcom/facebook/drawee/drawable/r$b;
+    sget-object v5, Lcom/facebook/drawee/drawable/ScalingUtils$b;->o:Lcom/facebook/drawee/drawable/ScalingUtils$b;
 
     :goto_1
-    invoke-virtual {v4, v5}, Lcom/vk/imageloader/view/a;->setActualScaleType(Lcom/facebook/drawee/drawable/r$b;)V
+    invoke-virtual {v4, v5}, Lcom/vk/imageloader/view/GenericVKImageView;->setActualScaleType(Lcom/facebook/drawee/drawable/ScalingUtils$b;)V
 
     .line 29
     iget-object v4, p0, Lcom/vk/stories/view/StoryView;->v0:Lcom/vk/imageloader/view/VKImageView;
@@ -6543,15 +6543,15 @@
     .line 30
     iget-object v4, p0, Lcom/vk/stories/view/StoryView;->v0:Lcom/vk/imageloader/view/VKImageView;
 
-    iget-object v6, p0, Lcom/vk/stories/view/StoryView;->a0:Lcom/facebook/imagepipeline/request/a;
+    iget-object v6, p0, Lcom/vk/stories/view/StoryView;->a0:Lcom/facebook/imagepipeline/request/BasePostprocessor;
 
-    invoke-virtual {v4, v6}, Lcom/vk/imageloader/view/VKImageView;->setPostprocessor(Lcom/facebook/imagepipeline/request/a;)V
+    invoke-virtual {v4, v6}, Lcom/vk/imageloader/view/VKImageView;->setPostprocessor(Lcom/facebook/imagepipeline/request/BasePostprocessor;)V
 
     .line 31
     :cond_9
     iget-object v4, p0, Lcom/vk/stories/view/StoryView;->c1:Landroid/view/View;
 
-    iget-object v6, p0, Lcom/vk/stories/view/e1;->D:Lcom/vk/dto/stories/model/StoryEntry;
+    iget-object v6, p0, Lcom/vk/stories/view/BaseStoryView;->D:Lcom/vk/dto/stories/model/StoryEntry;
 
     iget-boolean v6, v6, Lcom/vk/dto/stories/model/StoryEntry;->U:Z
 
@@ -6570,7 +6570,7 @@
     .line 32
     iget-object v4, p0, Lcom/vk/stories/view/StoryView;->d1:Landroid/view/View;
 
-    iget-object v6, p0, Lcom/vk/stories/view/e1;->D:Lcom/vk/dto/stories/model/StoryEntry;
+    iget-object v6, p0, Lcom/vk/stories/view/BaseStoryView;->D:Lcom/vk/dto/stories/model/StoryEntry;
 
     iget-boolean v7, v6, Lcom/vk/dto/stories/model/StoryEntry;->V:Z
 
@@ -6591,7 +6591,7 @@
     invoke-virtual {v4, v6}, Landroid/view/View;->setVisibility(I)V
 
     .line 33
-    iget-object v4, p0, Lcom/vk/stories/view/e1;->C:Lcom/vk/stories/view/StoryProgressView;
+    iget-object v4, p0, Lcom/vk/stories/view/BaseStoryView;->C:Lcom/vk/stories/view/StoryProgressView;
 
     if-eqz v4, :cond_c
 
@@ -6606,7 +6606,7 @@
     invoke-direct {p0}, Lcom/vk/stories/view/StoryView;->s0()V
 
     .line 37
-    iget-object v4, p0, Lcom/vk/stories/view/e1;->D:Lcom/vk/dto/stories/model/StoryEntry;
+    iget-object v4, p0, Lcom/vk/stories/view/BaseStoryView;->D:Lcom/vk/dto/stories/model/StoryEntry;
 
     iget-object v6, v4, Lcom/vk/dto/stories/model/StoryEntry;->r0:Lcom/vk/dto/stories/model/clickable/ClickableStickers;
 
@@ -6659,19 +6659,19 @@
     .line 43
     iget-object p1, p0, Lcom/vk/stories/view/StoryView;->b1:Lcom/vk/stories/StoryParentView;
 
-    iget-object v1, p0, Lcom/vk/stories/view/e1;->D:Lcom/vk/dto/stories/model/StoryEntry;
+    iget-object v1, p0, Lcom/vk/stories/view/BaseStoryView;->D:Lcom/vk/dto/stories/model/StoryEntry;
 
     invoke-virtual {p1, v1}, Lcom/vk/stories/StoryParentView;->a(Lcom/vk/dto/stories/model/StoryEntry;)V
 
     .line 44
     :cond_f
-    iput-boolean v2, p0, Lcom/vk/stories/view/e1;->G:Z
+    iput-boolean v2, p0, Lcom/vk/stories/view/BaseStoryView;->G:Z
 
     .line 45
-    iput-boolean v2, p0, Lcom/vk/stories/view/e1;->H:Z
+    iput-boolean v2, p0, Lcom/vk/stories/view/BaseStoryView;->H:Z
 
     .line 46
-    iget-boolean p1, p0, Lcom/vk/stories/view/e1;->e:Z
+    iget-boolean p1, p0, Lcom/vk/stories/view/BaseStoryView;->e:Z
 
     if-nez p1, :cond_2b
 
@@ -6679,7 +6679,7 @@
     invoke-virtual {p0}, Lcom/vk/stories/view/StoryView;->h()V
 
     .line 48
-    invoke-virtual {p0, v2}, Lcom/vk/stories/view/e1;->c(Z)V
+    invoke-virtual {p0, v2}, Lcom/vk/stories/view/BaseStoryView;->c(Z)V
 
     goto/16 :goto_13
 
@@ -6701,12 +6701,12 @@
     invoke-direct {p0}, Lcom/vk/stories/view/StoryView;->w0()V
 
     .line 53
-    iget-object v7, p0, Lcom/vk/stories/view/e1;->C:Lcom/vk/stories/view/StoryProgressView;
+    iget-object v7, p0, Lcom/vk/stories/view/BaseStoryView;->C:Lcom/vk/stories/view/StoryProgressView;
 
     invoke-virtual {v7, p1}, Lcom/vk/stories/view/StoryProgressView;->setCurrentSection(I)V
 
     .line 54
-    iget-object p1, p0, Lcom/vk/stories/view/e1;->D:Lcom/vk/dto/stories/model/StoryEntry;
+    iget-object p1, p0, Lcom/vk/stories/view/BaseStoryView;->D:Lcom/vk/dto/stories/model/StoryEntry;
 
     invoke-virtual {p1}, Lcom/vk/dto/stories/model/StoryEntry;->Q1()Z
 
@@ -6714,7 +6714,7 @@
 
     if-eqz p1, :cond_12
 
-    iget-object p1, p0, Lcom/vk/stories/view/e1;->D:Lcom/vk/dto/stories/model/StoryEntry;
+    iget-object p1, p0, Lcom/vk/stories/view/BaseStoryView;->D:Lcom/vk/dto/stories/model/StoryEntry;
 
     iget v7, p1, Lcom/vk/dto/stories/model/StoryEntry;->h:I
 
@@ -6768,7 +6768,7 @@
 
     .line 59
     :cond_13
-    iget-object v8, p0, Lcom/vk/stories/view/e1;->D:Lcom/vk/dto/stories/model/StoryEntry;
+    iget-object v8, p0, Lcom/vk/stories/view/BaseStoryView;->D:Lcom/vk/dto/stories/model/StoryEntry;
 
     invoke-virtual {v8}, Lcom/vk/dto/stories/model/StoryEntry;->G1()Z
 
@@ -6777,14 +6777,14 @@
     if-eqz v8, :cond_14
 
     .line 60
-    invoke-static {}, Lcom/vk/narratives/NarrativeController;->d()Lcom/vk/imageloader/o/f;
+    invoke-static {}, Lcom/vk/narratives/NarrativeController;->d()Lcom/vk/imageloader/o/StoryPreviewPostProcessor;
 
     move-result-object v8
 
     goto :goto_8
 
     :cond_14
-    sget-object v8, Lcom/vk/imageloader/o/f;->d:Lcom/vk/imageloader/o/f;
+    sget-object v8, Lcom/vk/imageloader/o/StoryPreviewPostProcessor;->d:Lcom/vk/imageloader/o/StoryPreviewPostProcessor;
 
     .line 61
     :goto_8
@@ -6807,12 +6807,12 @@
 
     invoke-direct {v7, p0, p1}, Lcom/vk/stories/view/StoryView$u;-><init>(Lcom/vk/stories/view/StoryView;Ljava/lang/String;)V
 
-    invoke-virtual {v1, v7}, Lcom/vk/imageloader/view/VKImageView;->setOnLoadCallback(Lcom/vk/imageloader/g;)V
+    invoke-virtual {v1, v7}, Lcom/vk/imageloader/view/VKImageView;->setOnLoadCallback(Lcom/vk/imageloader/OnLoadCallback;)V
 
     .line 63
     iget-object v1, p0, Lcom/vk/stories/view/StoryView;->u0:Lcom/vk/imageloader/view/VKImageView;
 
-    invoke-virtual {v1, v8}, Lcom/vk/imageloader/view/VKImageView;->setPostprocessor(Lcom/facebook/imagepipeline/request/a;)V
+    invoke-virtual {v1, v8}, Lcom/vk/imageloader/view/VKImageView;->setPostprocessor(Lcom/facebook/imagepipeline/request/BasePostprocessor;)V
 
     .line 64
     iget-object v1, p0, Lcom/vk/stories/view/StoryView;->u0:Lcom/vk/imageloader/view/VKImageView;
@@ -6839,7 +6839,7 @@
     if-eqz v10, :cond_16
 
     .line 67
-    iput-boolean v3, p0, Lcom/vk/stories/view/e1;->H:Z
+    iput-boolean v3, p0, Lcom/vk/stories/view/BaseStoryView;->H:Z
 
     .line 68
     iget-object v10, p0, Lcom/vk/stories/view/StoryView;->u0:Lcom/vk/imageloader/view/VKImageView;
@@ -6848,7 +6848,7 @@
 
     invoke-direct {v11, p0, v7}, Lcom/vk/stories/view/StoryView$w;-><init>(Lcom/vk/stories/view/StoryView;Ljava/lang/String;)V
 
-    invoke-virtual {v10, v11}, Lcom/vk/imageloader/view/VKImageView;->setOnLoadCallback(Lcom/vk/imageloader/g;)V
+    invoke-virtual {v10, v11}, Lcom/vk/imageloader/view/VKImageView;->setOnLoadCallback(Lcom/vk/imageloader/OnLoadCallback;)V
 
     goto :goto_9
 
@@ -6856,7 +6856,7 @@
     :cond_16
     iget-object v10, p0, Lcom/vk/stories/view/StoryView;->u0:Lcom/vk/imageloader/view/VKImageView;
 
-    invoke-virtual {v10, v9}, Lcom/vk/imageloader/view/VKImageView;->setOnLoadCallback(Lcom/vk/imageloader/g;)V
+    invoke-virtual {v10, v9}, Lcom/vk/imageloader/view/VKImageView;->setOnLoadCallback(Lcom/vk/imageloader/OnLoadCallback;)V
 
     .line 70
     :goto_9
@@ -6879,7 +6879,7 @@
     :cond_17
     iget-object v1, p0, Lcom/vk/stories/view/StoryView;->u0:Lcom/vk/imageloader/view/VKImageView;
 
-    invoke-virtual {v1, v8, v9}, Lcom/vk/imageloader/view/VKImageView;->a(Lcom/facebook/imagepipeline/request/a;Lcom/facebook/imagepipeline/request/a;)V
+    invoke-virtual {v1, v8, v9}, Lcom/vk/imageloader/view/VKImageView;->a(Lcom/facebook/imagepipeline/request/BasePostprocessor;Lcom/facebook/imagepipeline/request/BasePostprocessor;)V
 
     .line 73
     iget-object v1, p0, Lcom/vk/stories/view/StoryView;->u0:Lcom/vk/imageloader/view/VKImageView;
@@ -6914,7 +6914,7 @@
     :cond_19
     iget-object p1, p0, Lcom/vk/stories/view/StoryView;->u0:Lcom/vk/imageloader/view/VKImageView;
 
-    invoke-virtual {p1, v9}, Lcom/vk/imageloader/view/VKImageView;->setPostprocessor(Lcom/facebook/imagepipeline/request/a;)V
+    invoke-virtual {p1, v9}, Lcom/vk/imageloader/view/VKImageView;->setPostprocessor(Lcom/facebook/imagepipeline/request/BasePostprocessor;)V
 
     .line 76
     iget-object p1, p0, Lcom/vk/stories/view/StoryView;->u0:Lcom/vk/imageloader/view/VKImageView;
@@ -6934,7 +6934,7 @@
     .line 78
     :cond_1b
     :goto_a
-    iget-boolean p1, p0, Lcom/vk/stories/view/e1;->e:Z
+    iget-boolean p1, p0, Lcom/vk/stories/view/BaseStoryView;->e:Z
 
     if-nez p1, :cond_1c
 
@@ -6952,7 +6952,7 @@
 
     .line 80
     :goto_b
-    iget-object v1, p0, Lcom/vk/stories/view/e1;->f:Lcom/vk/dto/stories/model/StoriesContainer;
+    iget-object v1, p0, Lcom/vk/stories/view/BaseStoryView;->f:Lcom/vk/dto/stories/model/StoriesContainer;
 
     invoke-virtual {v1}, Lcom/vk/dto/stories/model/StoriesContainer;->Q1()Z
 
@@ -6961,7 +6961,7 @@
     if-eqz v1, :cond_21
 
     .line 81
-    iget-object v1, p0, Lcom/vk/stories/view/e1;->D:Lcom/vk/dto/stories/model/StoryEntry;
+    iget-object v1, p0, Lcom/vk/stories/view/BaseStoryView;->D:Lcom/vk/dto/stories/model/StoryEntry;
 
     invoke-static {v1}, Lcom/vk/stories/StoriesController;->b(Lcom/vk/dto/stories/model/StoryEntry;)Lcom/vk/stories/StoriesController$j;
 
@@ -7038,7 +7038,7 @@
     invoke-virtual {v8, v1}, Lcom/vk/stories/view/StoryUploadProgressView;->setProgress(F)V
 
     .line 91
-    iget-object v1, p0, Lcom/vk/stories/view/e1;->D:Lcom/vk/dto/stories/model/StoryEntry;
+    iget-object v1, p0, Lcom/vk/stories/view/BaseStoryView;->D:Lcom/vk/dto/stories/model/StoryEntry;
 
     invoke-virtual {v1}, Lcom/vk/dto/stories/model/StoryEntry;->T1()Z
 
@@ -7099,9 +7099,9 @@
 
     .line 99
     :goto_d
-    iget-object v1, p0, Lcom/vk/stories/view/StoryView;->m1:Lcom/vk/stories/view/v1;
+    iget-object v1, p0, Lcom/vk/stories/view/StoryView;->m1:Lcom/vk/stories/view/StoryViewRepliesAndViewersDelegate;
 
-    invoke-virtual {v1, v5}, Lcom/vk/stories/view/v1;->a(I)V
+    invoke-virtual {v1, v5}, Lcom/vk/stories/view/StoryViewRepliesAndViewersDelegate;->a(I)V
 
     goto :goto_10
 
@@ -7122,9 +7122,9 @@
     invoke-virtual {v1, v5}, Landroid/view/View;->setVisibility(I)V
 
     .line 103
-    iget-object v1, p0, Lcom/vk/stories/view/StoryView;->m1:Lcom/vk/stories/view/v1;
+    iget-object v1, p0, Lcom/vk/stories/view/StoryView;->m1:Lcom/vk/stories/view/StoryViewRepliesAndViewersDelegate;
 
-    invoke-virtual {v1}, Lcom/vk/stories/view/v1;->b()V
+    invoke-virtual {v1}, Lcom/vk/stories/view/StoryViewRepliesAndViewersDelegate;->b()V
 
     .line 104
     iget-object v1, p0, Lcom/vk/stories/view/StoryView;->R0:Landroid/view/View;
@@ -7142,7 +7142,7 @@
     .line 105
     iget-object v1, p0, Lcom/vk/stories/view/StoryView;->Q0:Landroid/view/View;
 
-    iget-object v7, p0, Lcom/vk/stories/view/e1;->D:Lcom/vk/dto/stories/model/StoryEntry;
+    iget-object v7, p0, Lcom/vk/stories/view/BaseStoryView;->D:Lcom/vk/dto/stories/model/StoryEntry;
 
     if-eqz v7, :cond_20
 
@@ -7164,14 +7164,14 @@
 
     .line 106
     :cond_21
-    iget-object v1, p0, Lcom/vk/stories/view/StoryView;->m1:Lcom/vk/stories/view/v1;
+    iget-object v1, p0, Lcom/vk/stories/view/StoryView;->m1:Lcom/vk/stories/view/StoryViewRepliesAndViewersDelegate;
 
-    invoke-virtual {v1}, Lcom/vk/stories/view/v1;->b()V
+    invoke-virtual {v1}, Lcom/vk/stories/view/StoryViewRepliesAndViewersDelegate;->b()V
 
     .line 107
     iget-object v1, p0, Lcom/vk/stories/view/StoryView;->Q0:Landroid/view/View;
 
-    iget-object v7, p0, Lcom/vk/stories/view/e1;->D:Lcom/vk/dto/stories/model/StoryEntry;
+    iget-object v7, p0, Lcom/vk/stories/view/BaseStoryView;->D:Lcom/vk/dto/stories/model/StoryEntry;
 
     if-eqz v7, :cond_22
 
@@ -7197,7 +7197,7 @@
     invoke-direct {p0, v3}, Lcom/vk/stories/view/StoryView;->g(Z)V
 
     .line 110
-    invoke-virtual {p0}, Lcom/vk/stories/view/e1;->v()Z
+    invoke-virtual {p0}, Lcom/vk/stories/view/BaseStoryView;->v()Z
 
     move-result v1
 
@@ -7212,7 +7212,7 @@
     .line 112
     iget-object v1, p0, Lcom/vk/stories/view/StoryView;->b1:Lcom/vk/stories/StoryParentView;
 
-    iget-object v4, p0, Lcom/vk/stories/view/e1;->D:Lcom/vk/dto/stories/model/StoryEntry;
+    iget-object v4, p0, Lcom/vk/stories/view/BaseStoryView;->D:Lcom/vk/dto/stories/model/StoryEntry;
 
     invoke-virtual {v1, v4}, Lcom/vk/stories/StoryParentView;->a(Lcom/vk/dto/stories/model/StoryEntry;)V
 
@@ -7223,7 +7223,7 @@
     invoke-virtual {v1, v3}, Landroid/view/View;->setVisibility(I)V
 
     .line 114
-    iget-boolean v1, p0, Lcom/vk/stories/view/e1;->e:Z
+    iget-boolean v1, p0, Lcom/vk/stories/view/BaseStoryView;->e:Z
 
     if-nez v1, :cond_27
 
@@ -7231,13 +7231,13 @@
     invoke-virtual {p0}, Lcom/vk/stories/view/StoryView;->h()V
 
     .line 116
-    invoke-virtual {p0, v2}, Lcom/vk/stories/view/e1;->c(Z)V
+    invoke-virtual {p0, v2}, Lcom/vk/stories/view/BaseStoryView;->c(Z)V
 
     .line 117
     invoke-direct {p0}, Lcom/vk/stories/view/StoryView;->j0()V
 
     .line 118
-    iget-object v1, p0, Lcom/vk/stories/view/e1;->D:Lcom/vk/dto/stories/model/StoryEntry;
+    iget-object v1, p0, Lcom/vk/stories/view/BaseStoryView;->D:Lcom/vk/dto/stories/model/StoryEntry;
 
     invoke-virtual {v1, v2}, Lcom/vk/dto/stories/model/StoryEntry;->j(Z)Ljava/lang/String;
 
@@ -7251,13 +7251,13 @@
     invoke-direct {p0}, Lcom/vk/stories/view/StoryView;->l0()V
 
     .line 120
-    invoke-virtual {p0}, Lcom/vk/stories/view/e1;->F()V
+    invoke-virtual {p0}, Lcom/vk/stories/view/BaseStoryView;->F()V
 
     goto :goto_11
 
     .line 121
     :cond_25
-    iget-object p1, p0, Lcom/vk/stories/view/e1;->D:Lcom/vk/dto/stories/model/StoryEntry;
+    iget-object p1, p0, Lcom/vk/stories/view/BaseStoryView;->D:Lcom/vk/dto/stories/model/StoryEntry;
 
     iget-boolean p1, p1, Lcom/vk/dto/stories/model/StoryEntry;->a:Z
 
@@ -7267,7 +7267,7 @@
     invoke-virtual {p0}, Lcom/vk/stories/view/StoryView;->O()V
 
     .line 123
-    invoke-virtual {p0}, Lcom/vk/stories/view/e1;->I()V
+    invoke-virtual {p0}, Lcom/vk/stories/view/BaseStoryView;->I()V
 
     goto :goto_11
 
@@ -7290,7 +7290,7 @@
     if-lez p1, :cond_29
 
     .line 127
-    iget-boolean p1, p0, Lcom/vk/stories/view/e1;->G:Z
+    iget-boolean p1, p0, Lcom/vk/stories/view/BaseStoryView;->G:Z
 
     if-eqz p1, :cond_28
 
@@ -7303,7 +7303,7 @@
     invoke-virtual {p0, p1}, Lcom/vk/stories/view/StoryView;->setCurrentProgress(F)V
 
     .line 130
-    iget-object v1, p0, Lcom/vk/stories/view/e1;->C:Lcom/vk/stories/view/StoryProgressView;
+    iget-object v1, p0, Lcom/vk/stories/view/BaseStoryView;->C:Lcom/vk/stories/view/StoryProgressView;
 
     invoke-virtual {v1, p1}, Lcom/vk/stories/view/StoryProgressView;->setProgress(F)V
 
@@ -7311,7 +7311,7 @@
 
     .line 131
     :cond_28
-    invoke-virtual {p0}, Lcom/vk/stories/view/e1;->getCurrentStorySeekMs()J
+    invoke-virtual {p0}, Lcom/vk/stories/view/BaseStoryView;->getCurrentStorySeekMs()J
 
     move-result-wide v7
 
@@ -7320,14 +7320,14 @@
     .line 132
     :cond_29
     :goto_12
-    iget-object p1, p0, Lcom/vk/stories/view/e1;->C:Lcom/vk/stories/view/StoryProgressView;
+    iget-object p1, p0, Lcom/vk/stories/view/BaseStoryView;->C:Lcom/vk/stories/view/StoryProgressView;
 
-    iget-boolean v1, p0, Lcom/vk/stories/view/e1;->G:Z
+    iget-boolean v1, p0, Lcom/vk/stories/view/BaseStoryView;->G:Z
 
     invoke-static {p1, v1}, Lcom/vk/extensions/ViewExtKt;->b(Landroid/view/View;Z)V
 
     .line 133
-    iget-object p1, p0, Lcom/vk/stories/view/e1;->C:Lcom/vk/stories/view/StoryProgressView;
+    iget-object p1, p0, Lcom/vk/stories/view/BaseStoryView;->C:Lcom/vk/stories/view/StoryProgressView;
 
     invoke-virtual {p1}, Lcom/vk/stories/view/StoryProgressView;->a()V
 
@@ -7344,7 +7344,7 @@
     if-eqz p1, :cond_2b
 
     .line 135
-    iget-object p1, p0, Lcom/vk/stories/view/e1;->C:Lcom/vk/stories/view/StoryProgressView;
+    iget-object p1, p0, Lcom/vk/stories/view/BaseStoryView;->C:Lcom/vk/stories/view/StoryProgressView;
 
     const/4 v1, 0x0
 
@@ -7353,7 +7353,7 @@
     .line 136
     :cond_2b
     :goto_13
-    iget-object p1, p0, Lcom/vk/stories/view/e1;->D:Lcom/vk/dto/stories/model/StoryEntry;
+    iget-object p1, p0, Lcom/vk/stories/view/BaseStoryView;->D:Lcom/vk/dto/stories/model/StoryEntry;
 
     invoke-virtual {p1}, Lcom/vk/dto/stories/model/StoryEntry;->F1()Z
 
@@ -7361,16 +7361,16 @@
 
     if-eqz p1, :cond_2d
 
-    iget-object p1, p0, Lcom/vk/stories/view/StoryView;->b0:Lcom/vk/stories/y0;
+    iget-object p1, p0, Lcom/vk/stories/view/StoryView;->b0:Lcom/vk/stories/StoryViewHelper;
 
-    invoke-virtual {p1}, Lcom/vk/stories/y0;->a()Z
+    invoke-virtual {p1}, Lcom/vk/stories/StoryViewHelper;->a()Z
 
     move-result p1
 
     if-eqz p1, :cond_2d
 
     .line 137
-    iget-object p1, p0, Lcom/vk/stories/view/e1;->f:Lcom/vk/dto/stories/model/StoriesContainer;
+    iget-object p1, p0, Lcom/vk/stories/view/BaseStoryView;->f:Lcom/vk/dto/stories/model/StoriesContainer;
 
     invoke-virtual {p1}, Lcom/vk/dto/stories/model/StoriesContainer;->Q1()Z
 
@@ -7415,7 +7415,7 @@
 
     if-eqz v1, :cond_2e
 
-    iget-object v1, p0, Lcom/vk/stories/view/e1;->f:Lcom/vk/dto/stories/model/StoriesContainer;
+    iget-object v1, p0, Lcom/vk/stories/view/BaseStoryView;->f:Lcom/vk/dto/stories/model/StoriesContainer;
 
     invoke-virtual {v1}, Lcom/vk/dto/stories/model/StoriesContainer;->Q1()Z
 
@@ -7436,7 +7436,7 @@
     .line 142
     iget-object p1, p0, Lcom/vk/stories/view/StoryView;->G0:Landroid/view/View;
 
-    iget-object v1, p0, Lcom/vk/stories/view/e1;->D:Lcom/vk/dto/stories/model/StoryEntry;
+    iget-object v1, p0, Lcom/vk/stories/view/BaseStoryView;->D:Lcom/vk/dto/stories/model/StoryEntry;
 
     invoke-virtual {v1}, Lcom/vk/dto/stories/model/StoryEntry;->J1()Z
 
@@ -7459,7 +7459,7 @@
     .line 143
     iget-object p1, p0, Lcom/vk/stories/view/StoryView;->E0:Landroid/view/View;
 
-    iget-object v1, p0, Lcom/vk/stories/view/e1;->D:Lcom/vk/dto/stories/model/StoryEntry;
+    iget-object v1, p0, Lcom/vk/stories/view/BaseStoryView;->D:Lcom/vk/dto/stories/model/StoryEntry;
 
     invoke-virtual {v1}, Lcom/vk/dto/stories/model/StoryEntry;->J1()Z
 
@@ -7467,7 +7467,7 @@
 
     if-eqz v1, :cond_30
 
-    iget-object v1, p0, Lcom/vk/stories/view/e1;->D:Lcom/vk/dto/stories/model/StoryEntry;
+    iget-object v1, p0, Lcom/vk/stories/view/BaseStoryView;->D:Lcom/vk/dto/stories/model/StoryEntry;
 
     invoke-virtual {v1}, Lcom/vk/dto/stories/model/StoryEntry;->F1()Z
 
@@ -7488,7 +7488,7 @@
     .line 144
     iget-object p1, p0, Lcom/vk/stories/view/StoryView;->F0:Landroid/view/View;
 
-    iget-object v1, p0, Lcom/vk/stories/view/e1;->D:Lcom/vk/dto/stories/model/StoryEntry;
+    iget-object v1, p0, Lcom/vk/stories/view/BaseStoryView;->D:Lcom/vk/dto/stories/model/StoryEntry;
 
     invoke-virtual {v1}, Lcom/vk/dto/stories/model/StoryEntry;->K1()Z
 
@@ -7496,7 +7496,7 @@
 
     if-eqz v1, :cond_31
 
-    iget-object v1, p0, Lcom/vk/stories/view/e1;->D:Lcom/vk/dto/stories/model/StoryEntry;
+    iget-object v1, p0, Lcom/vk/stories/view/BaseStoryView;->D:Lcom/vk/dto/stories/model/StoryEntry;
 
     iget-boolean v7, v1, Lcom/vk/dto/stories/model/StoryEntry;->W:Z
 
@@ -7570,21 +7570,21 @@
 
     .line 149
     :cond_34
-    iget-object p1, p0, Lcom/vk/stories/view/StoryView;->l0:Lcom/vk/stories/view/p1;
+    iget-object p1, p0, Lcom/vk/stories/view/StoryView;->l0:Lcom/vk/stories/view/StorySettings;
 
-    iget-boolean p1, p1, Lcom/vk/stories/view/p1;->a:Z
+    iget-boolean p1, p1, Lcom/vk/stories/view/StorySettings;->a:Z
 
     if-eqz p1, :cond_35
 
     .line 150
-    iget-object p1, p0, Lcom/vk/stories/view/StoryView;->m1:Lcom/vk/stories/view/v1;
+    iget-object p1, p0, Lcom/vk/stories/view/StoryView;->m1:Lcom/vk/stories/view/StoryViewRepliesAndViewersDelegate;
 
-    invoke-virtual {p1}, Lcom/vk/stories/view/v1;->a()V
+    invoke-virtual {p1}, Lcom/vk/stories/view/StoryViewRepliesAndViewersDelegate;->a()V
 
     .line 151
-    iget-object p1, p0, Lcom/vk/stories/view/StoryView;->l0:Lcom/vk/stories/view/p1;
+    iget-object p1, p0, Lcom/vk/stories/view/StoryView;->l0:Lcom/vk/stories/view/StorySettings;
 
-    iput-boolean v3, p1, Lcom/vk/stories/view/p1;->a:Z
+    iput-boolean v3, p1, Lcom/vk/stories/view/StorySettings;->a:Z
 
     .line 152
     :cond_35
@@ -7594,7 +7594,7 @@
 
     invoke-direct {v1, p0}, Lcom/vk/stories/view/t;-><init>(Lcom/vk/stories/view/StoryView;)V
 
-    invoke-static {p1, v1}, Lcom/vk/extensions/ViewExtKt;->e(Landroid/view/View;Lkotlin/jvm/b/a;)V
+    invoke-static {p1, v1}, Lcom/vk/extensions/ViewExtKt;->e(Landroid/view/View;Lkotlin/jvm/b/Functions;)V
 
     .line 153
     iget-object p1, p0, Lcom/vk/stories/view/StoryView;->Y0:Lcom/vk/narratives/views/StoryNarrativeStubDelegate;
@@ -7627,7 +7627,7 @@
 
     .line 159
     :cond_37
-    iget-object p1, p0, Lcom/vk/stories/view/e1;->D:Lcom/vk/dto/stories/model/StoryEntry;
+    iget-object p1, p0, Lcom/vk/stories/view/BaseStoryView;->D:Lcom/vk/dto/stories/model/StoryEntry;
 
     iget-boolean p1, p1, Lcom/vk/dto/stories/model/StoryEntry;->x0:Z
 
@@ -7653,13 +7653,13 @@
     :goto_1b
     sget-object p1, Lcom/vk/dto/stories/model/StickerType;->APP:Lcom/vk/dto/stories/model/StickerType;
 
-    invoke-static {p1}, Lcom/vk/stories/clickable/e;->b(Lcom/vk/dto/stories/model/StickerType;)Z
+    invoke-static {p1}, Lcom/vk/stories/clickable/StoryClickableController;->b(Lcom/vk/dto/stories/model/StickerType;)Z
 
     move-result p1
 
     if-eqz p1, :cond_39
 
-    iget-object p1, p0, Lcom/vk/stories/view/e1;->D:Lcom/vk/dto/stories/model/StoryEntry;
+    iget-object p1, p0, Lcom/vk/stories/view/BaseStoryView;->D:Lcom/vk/dto/stories/model/StoryEntry;
 
     iget-object p1, p1, Lcom/vk/dto/stories/model/StoryEntry;->r0:Lcom/vk/dto/stories/model/clickable/ClickableStickers;
 
@@ -7690,7 +7690,7 @@
 
     .line 168
     :goto_1c
-    iget-boolean p1, p0, Lcom/vk/stories/view/e1;->e:Z
+    iget-boolean p1, p0, Lcom/vk/stories/view/BaseStoryView;->e:Z
 
     if-nez p1, :cond_3a
 
@@ -7711,7 +7711,7 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget-object v1, p0, Lcom/vk/stories/view/e1;->D:Lcom/vk/dto/stories/model/StoryEntry;
+    iget-object v1, p0, Lcom/vk/stories/view/BaseStoryView;->D:Lcom/vk/dto/stories/model/StoryEntry;
 
     invoke-virtual {v1}, Lcom/vk/dto/stories/model/StoryEntry;->Z1()Ljava/lang/String;
 
@@ -7746,7 +7746,7 @@
     .locals 2
 
     .line 234
-    iget-object v0, p0, Lcom/vk/stories/view/e1;->f:Lcom/vk/dto/stories/model/StoriesContainer;
+    iget-object v0, p0, Lcom/vk/stories/view/BaseStoryView;->f:Lcom/vk/dto/stories/model/StoriesContainer;
 
     invoke-virtual {v0}, Lcom/vk/dto/stories/model/StoriesContainer;->H1()Lcom/vk/dto/stories/model/StoryOwner;
 
@@ -7800,7 +7800,7 @@
     .locals 0
 
     .line 7
-    iget p1, p0, Lcom/vk/stories/view/e1;->I:I
+    iget p1, p0, Lcom/vk/stories/view/BaseStoryView;->I:I
 
     invoke-virtual {p0, p1}, Lcom/vk/stories/view/StoryView;->a(I)V
 
@@ -7815,7 +7815,7 @@
     .end param
 
     .line 211
-    iget-object v0, p0, Lcom/vk/stories/view/e1;->D:Lcom/vk/dto/stories/model/StoryEntry;
+    iget-object v0, p0, Lcom/vk/stories/view/BaseStoryView;->D:Lcom/vk/dto/stories/model/StoryEntry;
 
     if-eqz v0, :cond_0
 
@@ -7826,7 +7826,7 @@
     if-eqz v0, :cond_0
 
     .line 212
-    iget-object v0, p0, Lcom/vk/stories/view/e1;->D:Lcom/vk/dto/stories/model/StoryEntry;
+    iget-object v0, p0, Lcom/vk/stories/view/BaseStoryView;->D:Lcom/vk/dto/stories/model/StoryEntry;
 
     iget-boolean p1, p1, Lcom/vk/dto/stories/model/StoryEntry;->w0:Z
 
@@ -7945,7 +7945,7 @@
     return-void
 .end method
 
-.method public synthetic a(Lcom/vk/dto/stories/model/StoryOwner;ILcom/vk/common/g/a;Ljava/lang/Boolean;)V
+.method public synthetic a(Lcom/vk/dto/stories/model/StoryOwner;ILcom/vk/common/g/F0;Ljava/lang/Boolean;)V
     .locals 2
     .annotation system Ldalvik/annotation/Throws;
         value = {
@@ -7999,12 +7999,12 @@
     invoke-static {p1, p4}, Lcom/vtosters/lite/data/Groups;->a(II)V
 
     .line 263
-    invoke-interface {p3}, Lcom/vk/common/g/a;->f()Ljava/lang/Object;
+    invoke-interface {p3}, Lcom/vk/common/g/F0;->f()Ljava/lang/Object;
 
     return-void
 .end method
 
-.method public a(Lcom/vk/dto/stories/model/StoryOwner;Landroid/content/Context;Ljava/lang/String;Lcom/vk/common/g/a;)V
+.method public a(Lcom/vk/dto/stories/model/StoryOwner;Landroid/content/Context;Ljava/lang/String;Lcom/vk/common/g/F0;)V
     .locals 10
     .annotation build Landroid/annotation/SuppressLint;
         value = {
@@ -8018,7 +8018,7 @@
             "Lcom/vk/dto/stories/model/StoryOwner;",
             "Landroid/content/Context;",
             "Ljava/lang/String;",
-            "Lcom/vk/common/g/a<",
+            "Lcom/vk/common/g/F0<",
             "Ljava/lang/Void;",
             ">;)V"
         }
@@ -8093,9 +8093,9 @@
     move-result v0
 
     .line 242
-    iget-object v3, p0, Lcom/vk/stories/view/StoryView;->b0:Lcom/vk/stories/y0;
+    iget-object v3, p0, Lcom/vk/stories/view/StoryView;->b0:Lcom/vk/stories/StoryViewHelper;
 
-    invoke-virtual {v3, p1}, Lcom/vk/stories/y0;->a(Lcom/vk/dto/stories/model/StoryOwner;)Z
+    invoke-virtual {v3, p1}, Lcom/vk/stories/StoryViewHelper;->a(Lcom/vk/dto/stories/model/StoryOwner;)Z
 
     move-result v3
 
@@ -8108,11 +8108,11 @@
 
     const/4 v3, 0x0
 
-    invoke-virtual {v1, v0, v3}, Lcom/vk/common/subscribe/SubscribeHelper;->a(ILjava/lang/String;)Lcom/vk/api/friends/a;
+    invoke-virtual {v1, v0, v3}, Lcom/vk/common/subscribe/SubscribeHelper;->a(ILjava/lang/String;)Lcom/vk/api/friends/FriendsAdd;
 
     move-result-object v1
 
-    invoke-virtual {v1, p3}, Lcom/vk/api/friends/a;->e(Ljava/lang/String;)Lcom/vk/api/friends/a;
+    invoke-virtual {v1, p3}, Lcom/vk/api/friends/FriendsAdd;->e(Ljava/lang/String;)Lcom/vk/api/friends/FriendsAdd;
 
     new-instance v9, Lcom/vk/stories/view/StoryView$j0;
 
@@ -8128,22 +8128,22 @@
 
     move-object v8, p2
 
-    invoke-direct/range {v3 .. v8}, Lcom/vk/stories/view/StoryView$j0;-><init>(Lcom/vk/stories/view/StoryView;ILcom/vk/dto/stories/model/StoryOwner;Lcom/vk/common/g/a;Landroid/content/Context;)V
+    invoke-direct/range {v3 .. v8}, Lcom/vk/stories/view/StoryView$j0;-><init>(Lcom/vk/stories/view/StoryView;ILcom/vk/dto/stories/model/StoryOwner;Lcom/vk/common/g/F0;Landroid/content/Context;)V
 
-    invoke-virtual {v1, v9}, Lcom/vk/api/base/d;->a(Lcom/vk/api/base/a;)Lcom/vk/api/base/b;
+    invoke-virtual {v1, v9}, Lcom/vk/api/base/ApiRequest;->a(Lcom/vk/api/base/ApiCallback;)Lcom/vk/api/base/ApiCallbackDisposable;
 
     move-result-object v1
 
     .line 244
-    invoke-virtual {v1, p2}, Lcom/vk/api/base/b;->a(Landroid/content/Context;)Lcom/vk/api/base/b;
+    invoke-virtual {v1, p2}, Lcom/vk/api/base/ApiCallbackDisposable;->a(Landroid/content/Context;)Lcom/vk/api/base/ApiCallbackDisposable;
 
-    invoke-virtual {v1}, Lcom/vk/api/base/b;->a()Lio/reactivex/disposables/b;
+    invoke-virtual {v1}, Lcom/vk/api/base/ApiCallbackDisposable;->a()Lio/reactivex/disposables/Disposable;
 
     :cond_4
     if-eqz v2, :cond_7
 
     .line 245
-    invoke-static {}, Lcom/vtosters/lite/data/n;->f()Lc/a/m;
+    invoke-static {}, Lcom/vtosters/lite/data/Analytics;->f()Lio/reactivex/Observable;
 
     move-result-object v1
 
@@ -8152,33 +8152,33 @@
     invoke-direct {v2, v0, p3}, Lcom/vk/stories/view/n;-><init>(ILjava/lang/String;)V
 
     .line 246
-    invoke-virtual {v1, v2}, Lc/a/m;->c(Lc/a/z/j;)Lc/a/m;
+    invoke-virtual {v1, v2}, Lio/reactivex/Observable;->c(Lio/reactivex/functions/Function;)Lio/reactivex/Observable;
 
     move-result-object p3
 
     .line 247
-    invoke-static {p3, p2}, Lcom/vk/core/extensions/RxExtKt;->a(Lc/a/m;Landroid/content/Context;)Lc/a/m;
+    invoke-static {p3, p2}, Lcom/vk/core/extensions/RxExtKt;->a(Lio/reactivex/Observable;Landroid/content/Context;)Lio/reactivex/Observable;
 
     move-result-object p3
 
     new-instance v1, Lcom/vk/stories/view/h;
 
-    invoke-direct {v1, p0, p1, v0, p4}, Lcom/vk/stories/view/h;-><init>(Lcom/vk/stories/view/StoryView;Lcom/vk/dto/stories/model/StoryOwner;ILcom/vk/common/g/a;)V
+    invoke-direct {v1, p0, p1, v0, p4}, Lcom/vk/stories/view/h;-><init>(Lcom/vk/stories/view/StoryView;Lcom/vk/dto/stories/model/StoryOwner;ILcom/vk/common/g/F0;)V
 
     new-instance p4, Lcom/vk/stories/view/u;
 
     invoke-direct {p4, p2, p1}, Lcom/vk/stories/view/u;-><init>(Landroid/content/Context;Lcom/vk/dto/stories/model/StoryOwner;)V
 
     .line 248
-    invoke-virtual {p3, v1, p4}, Lc/a/m;->a(Lc/a/z/g;Lc/a/z/g;)Lio/reactivex/disposables/b;
+    invoke-virtual {p3, v1, p4}, Lio/reactivex/Observable;->a(Lio/reactivex/functions/Consumer;Lio/reactivex/functions/Consumer;)Lio/reactivex/disposables/Disposable;
 
     goto :goto_2
 
     .line 249
     :cond_5
-    iget-object v3, p0, Lcom/vk/stories/view/StoryView;->b0:Lcom/vk/stories/y0;
+    iget-object v3, p0, Lcom/vk/stories/view/StoryView;->b0:Lcom/vk/stories/StoryViewHelper;
 
-    invoke-virtual {v3, p1}, Lcom/vk/stories/y0;->b(Lcom/vk/dto/stories/model/StoryOwner;)Z
+    invoke-virtual {v3, p1}, Lcom/vk/stories/StoryViewHelper;->b(Lcom/vk/dto/stories/model/StoryOwner;)Z
 
     move-result v3
 
@@ -8187,11 +8187,11 @@
     if-eqz v1, :cond_6
 
     .line 250
-    new-instance v1, Lcom/vk/api/friends/c;
+    new-instance v1, Lcom/vk/api/friends/FriendsDelete;
 
-    invoke-direct {v1, v0}, Lcom/vk/api/friends/c;-><init>(I)V
+    invoke-direct {v1, v0}, Lcom/vk/api/friends/FriendsDelete;-><init>(I)V
 
-    invoke-virtual {v1, p3}, Lcom/vk/api/friends/c;->d(Ljava/lang/String;)Lcom/vk/api/friends/c;
+    invoke-virtual {v1, p3}, Lcom/vk/api/friends/FriendsDelete;->d(Ljava/lang/String;)Lcom/vk/api/friends/FriendsDelete;
 
     new-instance p3, Lcom/vk/stories/view/StoryView$k0;
 
@@ -8207,16 +8207,16 @@
 
     move-object v8, p2
 
-    invoke-direct/range {v3 .. v8}, Lcom/vk/stories/view/StoryView$k0;-><init>(Lcom/vk/stories/view/StoryView;ILcom/vk/dto/stories/model/StoryOwner;Lcom/vk/common/g/a;Landroid/content/Context;)V
+    invoke-direct/range {v3 .. v8}, Lcom/vk/stories/view/StoryView$k0;-><init>(Lcom/vk/stories/view/StoryView;ILcom/vk/dto/stories/model/StoryOwner;Lcom/vk/common/g/F0;Landroid/content/Context;)V
 
-    invoke-virtual {v1, p3}, Lcom/vk/api/base/d;->a(Lcom/vk/api/base/a;)Lcom/vk/api/base/b;
+    invoke-virtual {v1, p3}, Lcom/vk/api/base/ApiRequest;->a(Lcom/vk/api/base/ApiCallback;)Lcom/vk/api/base/ApiCallbackDisposable;
 
     move-result-object p1
 
     .line 251
-    invoke-virtual {p1, p2}, Lcom/vk/api/base/b;->a(Landroid/content/Context;)Lcom/vk/api/base/b;
+    invoke-virtual {p1, p2}, Lcom/vk/api/base/ApiCallbackDisposable;->a(Landroid/content/Context;)Lcom/vk/api/base/ApiCallbackDisposable;
 
-    invoke-virtual {p1}, Lcom/vk/api/base/b;->a()Lio/reactivex/disposables/b;
+    invoke-virtual {p1}, Lcom/vk/api/base/ApiCallbackDisposable;->a()Lio/reactivex/disposables/Disposable;
 
     goto :goto_2
 
@@ -8224,11 +8224,11 @@
     if-eqz v2, :cond_7
 
     .line 252
-    new-instance v1, Lcom/vk/api/groups/t;
+    new-instance v1, Lcom/vk/api/groups/GroupsLeave;
 
-    invoke-direct {v1, v0}, Lcom/vk/api/groups/t;-><init>(I)V
+    invoke-direct {v1, v0}, Lcom/vk/api/groups/GroupsLeave;-><init>(I)V
 
-    invoke-virtual {v1, p3}, Lcom/vk/api/groups/t;->d(Ljava/lang/String;)Lcom/vk/api/groups/t;
+    invoke-virtual {v1, p3}, Lcom/vk/api/groups/GroupsLeave;->d(Ljava/lang/String;)Lcom/vk/api/groups/GroupsLeave;
 
     new-instance p3, Lcom/vk/stories/view/StoryView$l0;
 
@@ -8246,16 +8246,16 @@
 
     move-object v9, p2
 
-    invoke-direct/range {v3 .. v9}, Lcom/vk/stories/view/StoryView$l0;-><init>(Lcom/vk/stories/view/StoryView;Landroid/content/Context;Lcom/vk/dto/stories/model/StoryOwner;ILcom/vk/common/g/a;Landroid/content/Context;)V
+    invoke-direct/range {v3 .. v9}, Lcom/vk/stories/view/StoryView$l0;-><init>(Lcom/vk/stories/view/StoryView;Landroid/content/Context;Lcom/vk/dto/stories/model/StoryOwner;ILcom/vk/common/g/F0;Landroid/content/Context;)V
 
-    invoke-virtual {v1, p3}, Lcom/vk/api/base/d;->a(Lcom/vk/api/base/a;)Lcom/vk/api/base/b;
+    invoke-virtual {v1, p3}, Lcom/vk/api/base/ApiRequest;->a(Lcom/vk/api/base/ApiCallback;)Lcom/vk/api/base/ApiCallbackDisposable;
 
     move-result-object p1
 
     .line 253
-    invoke-virtual {p1, p2}, Lcom/vk/api/base/b;->a(Landroid/content/Context;)Lcom/vk/api/base/b;
+    invoke-virtual {p1, p2}, Lcom/vk/api/base/ApiCallbackDisposable;->a(Landroid/content/Context;)Lcom/vk/api/base/ApiCallbackDisposable;
 
-    invoke-virtual {p1}, Lcom/vk/api/base/b;->a()Lio/reactivex/disposables/b;
+    invoke-virtual {p1}, Lcom/vk/api/base/ApiCallbackDisposable;->a()Lio/reactivex/disposables/Disposable;
 
     :cond_7
     :goto_2
@@ -8270,7 +8270,7 @@
     .end param
 
     .line 225
-    iget-object v0, p0, Lcom/vk/stories/view/e1;->D:Lcom/vk/dto/stories/model/StoryEntry;
+    iget-object v0, p0, Lcom/vk/stories/view/BaseStoryView;->D:Lcom/vk/dto/stories/model/StoryEntry;
 
     if-eqz v0, :cond_1
 
@@ -8280,19 +8280,19 @@
 
     if-ne v0, v1, :cond_1
 
-    invoke-static {}, Lcom/vk/bridges/g;->a()Lcom/vk/bridges/f;
+    invoke-static {}, Lcom/vk/bridges/AuthBridge;->a()Lcom/vk/bridges/AuthBridge3;
 
     move-result-object v0
 
     iget v1, p1, Lcom/vk/stories/StoriesController$g;->a:I
 
-    invoke-interface {v0, v1}, Lcom/vk/bridges/f;->b(I)Z
+    invoke-interface {v0, v1}, Lcom/vk/bridges/AuthBridge3;->b(I)Z
 
     move-result v0
 
     if-eqz v0, :cond_1
 
-    iget-object v0, p0, Lcom/vk/stories/view/e1;->D:Lcom/vk/dto/stories/model/StoryEntry;
+    iget-object v0, p0, Lcom/vk/stories/view/BaseStoryView;->D:Lcom/vk/dto/stories/model/StoryEntry;
 
     iget v1, v0, Lcom/vk/dto/stories/model/StoryEntry;->S:I
 
@@ -8317,9 +8317,9 @@
 
     .line 229
     :cond_0
-    iget-object p1, p0, Lcom/vk/stories/view/StoryView;->m1:Lcom/vk/stories/view/v1;
+    iget-object p1, p0, Lcom/vk/stories/view/StoryView;->m1:Lcom/vk/stories/view/StoryViewRepliesAndViewersDelegate;
 
-    invoke-virtual {p1}, Lcom/vk/stories/view/v1;->b()V
+    invoke-virtual {p1}, Lcom/vk/stories/view/StoryViewRepliesAndViewersDelegate;->b()V
 
     :cond_1
     return-void
@@ -8333,18 +8333,18 @@
     .end param
 
     .line 230
-    iget-object v0, p0, Lcom/vk/stories/view/e1;->D:Lcom/vk/dto/stories/model/StoryEntry;
+    iget-object v0, p0, Lcom/vk/stories/view/BaseStoryView;->D:Lcom/vk/dto/stories/model/StoryEntry;
 
     if-eqz v0, :cond_0
 
     .line 231
-    invoke-virtual {p0}, Lcom/vk/stories/view/e1;->v()Z
+    invoke-virtual {p0}, Lcom/vk/stories/view/BaseStoryView;->v()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    iget-object v0, p0, Lcom/vk/stories/view/e1;->D:Lcom/vk/dto/stories/model/StoryEntry;
+    iget-object v0, p0, Lcom/vk/stories/view/BaseStoryView;->D:Lcom/vk/dto/stories/model/StoryEntry;
 
     iget v1, v0, Lcom/vk/dto/stories/model/StoryEntry;->c:I
 
@@ -8357,41 +8357,41 @@
 
     if-eqz p1, :cond_0
 
-    iget-object p1, p0, Lcom/vk/stories/view/e1;->g:Landroid/app/Dialog;
+    iget-object p1, p0, Lcom/vk/stories/view/BaseStoryView;->g:Landroid/app/Dialog;
 
     if-nez p1, :cond_0
 
     .line 233
-    iget-object p1, p0, Lcom/vk/stories/view/StoryView;->m1:Lcom/vk/stories/view/v1;
+    iget-object p1, p0, Lcom/vk/stories/view/StoryView;->m1:Lcom/vk/stories/view/StoryViewRepliesAndViewersDelegate;
 
-    invoke-virtual {p1}, Lcom/vk/stories/view/v1;->a()V
+    invoke-virtual {p1}, Lcom/vk/stories/view/StoryViewRepliesAndViewersDelegate;->a()V
 
     :cond_0
     return-void
 .end method
 
-.method public a(Lcom/vk/stories/b1/a;)V
+.method public a(Lcom/vk/stories/b1/StoryAppUpdateEvent;)V
     .locals 5
-    .param p1    # Lcom/vk/stories/b1/a;
+    .param p1    # Lcom/vk/stories/b1/StoryAppUpdateEvent;
         .annotation build Landroidx/annotation/NonNull;
         .end annotation
     .end param
 
     .line 214
-    iget-object v0, p0, Lcom/vk/stories/view/e1;->D:Lcom/vk/dto/stories/model/StoryEntry;
+    iget-object v0, p0, Lcom/vk/stories/view/BaseStoryView;->D:Lcom/vk/dto/stories/model/StoryEntry;
 
     if-eqz v0, :cond_1
 
     iget v0, v0, Lcom/vk/dto/stories/model/StoryEntry;->b:I
 
     .line 215
-    invoke-virtual {p1}, Lcom/vk/stories/b1/a;->c()I
+    invoke-virtual {p1}, Lcom/vk/stories/b1/StoryAppUpdateEvent;->c()I
 
     move-result v1
 
     if-ne v0, v1, :cond_1
 
-    iget-object v0, p0, Lcom/vk/stories/view/e1;->D:Lcom/vk/dto/stories/model/StoryEntry;
+    iget-object v0, p0, Lcom/vk/stories/view/BaseStoryView;->D:Lcom/vk/dto/stories/model/StoryEntry;
 
     iget-object v0, v0, Lcom/vk/dto/stories/model/StoryEntry;->r0:Lcom/vk/dto/stories/model/clickable/ClickableStickers;
 
@@ -8431,14 +8431,14 @@
 
     move-result v3
 
-    invoke-virtual {p1}, Lcom/vk/stories/b1/a;->a()I
+    invoke-virtual {p1}, Lcom/vk/stories/b1/StoryAppUpdateEvent;->a()I
 
     move-result v4
 
     if-ne v3, v4, :cond_0
 
     .line 221
-    invoke-virtual {p1}, Lcom/vk/stories/b1/a;->b()Z
+    invoke-virtual {p1}, Lcom/vk/stories/b1/StoryAppUpdateEvent;->b()Z
 
     move-result p1
 
@@ -8446,7 +8446,7 @@
     invoke-virtual {v2, p1}, Lcom/vk/dto/stories/model/clickable/ClickableApp;->j(Z)V
 
     .line 223
-    iget-object p1, p0, Lcom/vk/stories/view/e1;->D:Lcom/vk/dto/stories/model/StoryEntry;
+    iget-object p1, p0, Lcom/vk/stories/view/BaseStoryView;->D:Lcom/vk/dto/stories/model/StoryEntry;
 
     invoke-virtual {p1}, Lcom/vk/dto/stories/model/StoryEntry;->X1()V
 
@@ -8474,7 +8474,7 @@
     iput-wide v0, p0, Lcom/vk/stories/view/StoryView;->m0:J
 
     .line 204
-    iget-object v0, p0, Lcom/vk/stories/view/StoryView;->C1:Lcom/vk/stories/view/y1;
+    iget-object v0, p0, Lcom/vk/stories/view/StoryView;->C1:Lcom/vk/stories/view/VideoThumbProgress;
 
     if-eqz v0, :cond_0
 
@@ -8484,11 +8484,11 @@
     const/4 v0, 0x0
 
     .line 206
-    iput-object v0, p0, Lcom/vk/stories/view/StoryView;->C1:Lcom/vk/stories/view/y1;
+    iput-object v0, p0, Lcom/vk/stories/view/StoryView;->C1:Lcom/vk/stories/view/VideoThumbProgress;
 
     .line 207
     :cond_0
-    invoke-super {p0, p1}, Lcom/vk/stories/view/e1;->a(Lcom/vk/stories/view/StoryView$SourceTransitionStory;)V
+    invoke-super {p0, p1}, Lcom/vk/stories/view/BaseStoryView;->a(Lcom/vk/stories/view/StoryView$SourceTransitionStory;)V
 
     return-void
 .end method
@@ -8502,11 +8502,11 @@
     .end annotation
 
     .line 170
-    iget-boolean p1, p0, Lcom/vk/stories/view/e1;->F:Z
+    iget-boolean p1, p0, Lcom/vk/stories/view/BaseStoryView;->F:Z
 
     if-nez p1, :cond_0
 
-    iget-object p1, p0, Lcom/vk/stories/view/StoryView;->C1:Lcom/vk/stories/view/y1;
+    iget-object p1, p0, Lcom/vk/stories/view/StoryView;->C1:Lcom/vk/stories/view/VideoThumbProgress;
 
     if-nez p1, :cond_0
 
@@ -8554,7 +8554,7 @@
     .locals 5
 
     .line 276
-    invoke-virtual {p0}, Lcom/vk/stories/view/e1;->v()Z
+    invoke-virtual {p0}, Lcom/vk/stories/view/BaseStoryView;->v()Z
 
     move-result v0
 
@@ -8588,7 +8588,7 @@
     .line 280
     sget-object v0, Lcom/vk/dto/stories/model/StoryViewAction;->RESUME_RELEASE:Lcom/vk/dto/stories/model/StoryViewAction;
 
-    invoke-virtual {p0, v0}, Lcom/vk/stories/view/e1;->a(Lcom/vk/dto/stories/model/StoryViewAction;)V
+    invoke-virtual {p0, v0}, Lcom/vk/stories/view/BaseStoryView;->a(Lcom/vk/dto/stories/model/StoryViewAction;)V
 
     :cond_2
     const/4 v0, 0x0
@@ -8628,7 +8628,7 @@
 
     const/4 v0, 0x3
 
-    iget-object v4, p0, Lcom/vk/stories/view/e1;->C:Lcom/vk/stories/view/StoryProgressView;
+    iget-object v4, p0, Lcom/vk/stories/view/BaseStoryView;->C:Lcom/vk/stories/view/StoryProgressView;
 
     aput-object v4, v3, v0
 
@@ -8644,7 +8644,7 @@
 
     aput-object v4, v3, v0
 
-    invoke-static {p1, v1, v2, v3}, Lcom/vtosters/lite/f0;->a(ZII[Landroid/view/View;)Landroid/animation/AnimatorSet;
+    invoke-static {p1, v1, v2, v3}, Lcom/vtosters/lite/ViewUtils;->a(ZII[Landroid/view/View;)Landroid/animation/AnimatorSet;
 
     move-result-object p1
 
@@ -8657,7 +8657,7 @@
     .locals 4
 
     .line 16
-    iget-object v0, p0, Lcom/vk/stories/view/e1;->f:Lcom/vk/dto/stories/model/StoriesContainer;
+    iget-object v0, p0, Lcom/vk/stories/view/BaseStoryView;->f:Lcom/vk/dto/stories/model/StoriesContainer;
 
     invoke-virtual {v0}, Lcom/vk/dto/stories/model/StoriesContainer;->L1()Z
 
@@ -8669,7 +8669,7 @@
 
     if-eqz v0, :cond_2
 
-    iget-object v0, p0, Lcom/vk/stories/view/e1;->f:Lcom/vk/dto/stories/model/StoriesContainer;
+    iget-object v0, p0, Lcom/vk/stories/view/BaseStoryView;->f:Lcom/vk/dto/stories/model/StoriesContainer;
 
     invoke-virtual {v0}, Lcom/vk/dto/stories/model/StoriesContainer;->G1()Ljava/util/ArrayList;
 
@@ -8689,7 +8689,7 @@
 
     .line 17
     :cond_0
-    iget-object v0, p0, Lcom/vk/stories/view/e1;->f:Lcom/vk/dto/stories/model/StoriesContainer;
+    iget-object v0, p0, Lcom/vk/stories/view/BaseStoryView;->f:Lcom/vk/dto/stories/model/StoriesContainer;
 
     invoke-virtual {v0}, Lcom/vk/dto/stories/model/StoriesContainer;->G1()Ljava/util/ArrayList;
 
@@ -8709,7 +8709,7 @@
     invoke-virtual {p0, v0}, Lcom/vk/stories/view/StoryView;->a(Lcom/vk/stories/view/StoryView$SourceTransitionStory;)V
 
     .line 19
-    iget-object v0, p0, Lcom/vk/stories/view/e1;->f:Lcom/vk/dto/stories/model/StoriesContainer;
+    iget-object v0, p0, Lcom/vk/stories/view/BaseStoryView;->f:Lcom/vk/dto/stories/model/StoriesContainer;
 
     invoke-virtual {v0}, Lcom/vk/dto/stories/model/StoriesContainer;->G1()Ljava/util/ArrayList;
 
@@ -8728,7 +8728,7 @@
     invoke-virtual {p0, v0}, Lcom/vk/stories/view/StoryView;->b(Lcom/vk/stories/view/StoryView$SourceTransitionStory;)V
 
     .line 21
-    iget-object v0, p0, Lcom/vk/stories/view/e1;->f:Lcom/vk/dto/stories/model/StoriesContainer;
+    iget-object v0, p0, Lcom/vk/stories/view/BaseStoryView;->f:Lcom/vk/dto/stories/model/StoriesContainer;
 
     invoke-virtual {v0}, Lcom/vk/dto/stories/model/StoriesContainer;->G1()Ljava/util/ArrayList;
 
@@ -8743,7 +8743,7 @@
     if-nez p1, :cond_3
 
     .line 22
-    iget-object p1, p0, Lcom/vk/stories/view/e1;->f:Lcom/vk/dto/stories/model/StoriesContainer;
+    iget-object p1, p0, Lcom/vk/stories/view/BaseStoryView;->f:Lcom/vk/dto/stories/model/StoriesContainer;
 
     invoke-virtual {p1}, Lcom/vk/dto/stories/model/StoriesContainer;->G1()Ljava/util/ArrayList;
 
@@ -8756,7 +8756,7 @@
     if-lez p1, :cond_3
 
     .line 23
-    iget-object p1, p0, Lcom/vk/stories/view/e1;->f:Lcom/vk/dto/stories/model/StoriesContainer;
+    iget-object p1, p0, Lcom/vk/stories/view/BaseStoryView;->f:Lcom/vk/dto/stories/model/StoriesContainer;
 
     invoke-virtual {p1}, Lcom/vk/dto/stories/model/StoriesContainer;->G1()Ljava/util/ArrayList;
 
@@ -8766,39 +8766,39 @@
 
     .line 24
     :cond_3
-    iget-object p1, p0, Lcom/vk/stories/view/e1;->a:Lcom/vk/stories/view/StoryView$u0;
+    iget-object p1, p0, Lcom/vk/stories/view/BaseStoryView;->a:Lcom/vk/stories/view/StoryView$u0;
 
     if-eqz p1, :cond_4
 
     .line 25
-    invoke-virtual {p0, v1}, Lcom/vk/stories/view/e1;->setPosition(I)V
+    invoke-virtual {p0, v1}, Lcom/vk/stories/view/BaseStoryView;->setPosition(I)V
 
     .line 26
     invoke-virtual {p0}, Lcom/vk/stories/view/StoryView;->e()V
 
     .line 27
-    iget-object p1, p0, Lcom/vk/stories/view/e1;->a:Lcom/vk/stories/view/StoryView$u0;
+    iget-object p1, p0, Lcom/vk/stories/view/BaseStoryView;->a:Lcom/vk/stories/view/StoryView$u0;
 
-    iget-object v0, p0, Lcom/vk/stories/view/e1;->f:Lcom/vk/dto/stories/model/StoriesContainer;
+    iget-object v0, p0, Lcom/vk/stories/view/BaseStoryView;->f:Lcom/vk/dto/stories/model/StoriesContainer;
 
     invoke-interface {p1, v0}, Lcom/vk/stories/view/StoryView$u0;->a(Lcom/vk/dto/stories/model/StoriesContainer;)V
 
     .line 28
     :cond_4
     :goto_1
-    iget p1, p0, Lcom/vk/stories/view/e1;->I:I
+    iget p1, p0, Lcom/vk/stories/view/BaseStoryView;->I:I
 
     add-int/2addr p1, v2
 
-    iput p1, p0, Lcom/vk/stories/view/e1;->I:I
+    iput p1, p0, Lcom/vk/stories/view/BaseStoryView;->I:I
 
     .line 29
-    iget-object p1, p0, Lcom/vk/stories/view/e1;->C:Lcom/vk/stories/view/StoryProgressView;
+    iget-object p1, p0, Lcom/vk/stories/view/BaseStoryView;->C:Lcom/vk/stories/view/StoryProgressView;
 
     if-eqz p1, :cond_5
 
     .line 30
-    iget-object v0, p0, Lcom/vk/stories/view/e1;->f:Lcom/vk/dto/stories/model/StoriesContainer;
+    iget-object v0, p0, Lcom/vk/stories/view/BaseStoryView;->f:Lcom/vk/dto/stories/model/StoriesContainer;
 
     invoke-virtual {v0}, Lcom/vk/dto/stories/model/StoriesContainer;->G1()Ljava/util/ArrayList;
 
@@ -8811,9 +8811,9 @@
     invoke-virtual {p1, v0}, Lcom/vk/stories/view/StoryProgressView;->setSectionCount(I)V
 
     .line 31
-    iget-object p1, p0, Lcom/vk/stories/view/e1;->C:Lcom/vk/stories/view/StoryProgressView;
+    iget-object p1, p0, Lcom/vk/stories/view/BaseStoryView;->C:Lcom/vk/stories/view/StoryProgressView;
 
-    iget v0, p0, Lcom/vk/stories/view/e1;->I:I
+    iget v0, p0, Lcom/vk/stories/view/BaseStoryView;->I:I
 
     invoke-virtual {p1, v0}, Lcom/vk/stories/view/StoryProgressView;->setCurrentSection(I)V
 
@@ -8825,7 +8825,7 @@
     .locals 3
 
     .line 4
-    iget-boolean v0, p0, Lcom/vk/stories/view/e1;->e:Z
+    iget-boolean v0, p0, Lcom/vk/stories/view/BaseStoryView;->e:Z
 
     if-eqz v0, :cond_0
 
@@ -8833,7 +8833,7 @@
 
     .line 5
     :cond_0
-    iget-boolean v0, p0, Lcom/vk/stories/view/e1;->E:Z
+    iget-boolean v0, p0, Lcom/vk/stories/view/BaseStoryView;->E:Z
 
     if-eqz v0, :cond_1
 
@@ -8841,7 +8841,7 @@
 
     .line 6
     :cond_1
-    iget-object v0, p0, Lcom/vk/stories/view/e1;->D:Lcom/vk/dto/stories/model/StoryEntry;
+    iget-object v0, p0, Lcom/vk/stories/view/BaseStoryView;->D:Lcom/vk/dto/stories/model/StoryEntry;
 
     if-nez v0, :cond_2
 
@@ -8852,32 +8852,32 @@
     invoke-virtual {p0}, Lcom/vk/stories/view/StoryView;->h()V
 
     .line 8
-    invoke-virtual {p0}, Lcom/vk/stories/view/e1;->getPosition()I
+    invoke-virtual {p0}, Lcom/vk/stories/view/BaseStoryView;->getPosition()I
 
     move-result v0
 
     if-ne v0, p1, :cond_3
 
     .line 9
-    iget-object v1, p0, Lcom/vk/stories/view/e1;->D:Lcom/vk/dto/stories/model/StoryEntry;
+    iget-object v1, p0, Lcom/vk/stories/view/BaseStoryView;->D:Lcom/vk/dto/stories/model/StoryEntry;
 
-    iget-object v2, p0, Lcom/vk/stories/view/e1;->b:Lcom/vk/stories/StoriesController$SourceType;
+    iget-object v2, p0, Lcom/vk/stories/view/BaseStoryView;->b:Lcom/vk/stories/StoriesController$SourceType;
 
-    invoke-static {p0, v1, v2}, Lcom/vk/stories/StoriesController;->a(Lcom/vk/stories/view/e1;Lcom/vk/dto/stories/model/StoryEntry;Lcom/vk/stories/StoriesController$SourceType;)V
+    invoke-static {p0, v1, v2}, Lcom/vk/stories/StoriesController;->a(Lcom/vk/stories/view/BaseStoryView;Lcom/vk/dto/stories/model/StoryEntry;Lcom/vk/stories/StoriesController$SourceType;)V
 
     :cond_3
     if-ne v0, p2, :cond_4
 
     .line 10
-    iget-object p2, p0, Lcom/vk/stories/view/e1;->D:Lcom/vk/dto/stories/model/StoryEntry;
+    iget-object p2, p0, Lcom/vk/stories/view/BaseStoryView;->D:Lcom/vk/dto/stories/model/StoryEntry;
 
-    iget-object v0, p0, Lcom/vk/stories/view/e1;->b:Lcom/vk/stories/StoriesController$SourceType;
+    iget-object v0, p0, Lcom/vk/stories/view/BaseStoryView;->b:Lcom/vk/stories/StoriesController$SourceType;
 
     invoke-static {p2, v0}, Lcom/vk/stories/StoriesController;->a(Lcom/vk/dto/stories/model/StoryEntry;Lcom/vk/stories/StoriesController$SourceType;)V
 
     .line 11
     :cond_4
-    invoke-virtual {p0}, Lcom/vk/stories/view/e1;->getPosition()I
+    invoke-virtual {p0}, Lcom/vk/stories/view/BaseStoryView;->getPosition()I
 
     move-result p2
 
@@ -8898,13 +8898,13 @@
 
     .line 13
     :cond_5
-    invoke-virtual {p0}, Lcom/vk/stories/view/e1;->getPosition()I
+    invoke-virtual {p0}, Lcom/vk/stories/view/BaseStoryView;->getPosition()I
 
     move-result p2
 
     if-ne p1, p2, :cond_6
 
-    iget-object p1, p0, Lcom/vk/stories/view/e1;->D:Lcom/vk/dto/stories/model/StoryEntry;
+    iget-object p1, p0, Lcom/vk/stories/view/BaseStoryView;->D:Lcom/vk/dto/stories/model/StoryEntry;
 
     invoke-virtual {p1}, Lcom/vk/dto/stories/model/StoryEntry;->Y1()Z
 
@@ -8928,7 +8928,7 @@
     .locals 1
 
     .line 37
-    iget-object v0, p0, Lcom/vk/stories/view/e1;->g:Landroid/app/Dialog;
+    iget-object v0, p0, Lcom/vk/stories/view/BaseStoryView;->g:Landroid/app/Dialog;
 
     if-eqz v0, :cond_0
 
@@ -8937,14 +8937,14 @@
 
     .line 39
     :cond_0
-    iput-object p1, p0, Lcom/vk/stories/view/e1;->g:Landroid/app/Dialog;
+    iput-object p1, p0, Lcom/vk/stories/view/BaseStoryView;->g:Landroid/app/Dialog;
 
     .line 40
     invoke-virtual {p0}, Lcom/vk/stories/view/StoryView;->e()V
 
     .line 41
     :try_start_0
-    iget-object p1, p0, Lcom/vk/stories/view/e1;->g:Landroid/app/Dialog;
+    iget-object p1, p0, Lcom/vk/stories/view/BaseStoryView;->g:Landroid/app/Dialog;
 
     invoke-virtual {p1}, Landroid/app/Dialog;->show()V
     :try_end_0
@@ -8957,9 +8957,9 @@
 
     .line 42
     :goto_0
-    iget-object p1, p0, Lcom/vk/stories/view/e1;->g:Landroid/app/Dialog;
+    iget-object p1, p0, Lcom/vk/stories/view/BaseStoryView;->g:Landroid/app/Dialog;
 
-    instance-of p1, p1, Lcom/vk/navigation/g;
+    instance-of p1, p1, Lcom/vk/navigation/Dismissed;
 
     if-eqz p1, :cond_1
 
@@ -8968,40 +8968,40 @@
 
     move-result-object p1
 
-    invoke-static {p1}, Lcom/vk/extensions/c;->a(Landroid/content/Context;)Lcom/vk/navigation/NavigationDelegate;
+    invoke-static {p1}, Lcom/vk/extensions/ContextExt;->a(Landroid/content/Context;)Lcom/vk/navigation/NavigationDelegate;
 
     move-result-object p1
 
     if-eqz p1, :cond_1
 
     .line 44
-    iget-object v0, p0, Lcom/vk/stories/view/e1;->g:Landroid/app/Dialog;
+    iget-object v0, p0, Lcom/vk/stories/view/BaseStoryView;->g:Landroid/app/Dialog;
 
-    check-cast v0, Lcom/vk/navigation/g;
+    check-cast v0, Lcom/vk/navigation/Dismissed;
 
-    invoke-virtual {p1, v0}, Lcom/vk/navigation/NavigationDelegate;->b(Lcom/vk/navigation/g;)V
+    invoke-virtual {p1, v0}, Lcom/vk/navigation/NavigationDelegate;->b(Lcom/vk/navigation/Dismissed;)V
 
     .line 45
     :cond_1
-    invoke-virtual {p0}, Lcom/vk/stories/view/e1;->t()V
+    invoke-virtual {p0}, Lcom/vk/stories/view/BaseStoryView;->t()V
 
     .line 46
-    iget-boolean p1, p0, Lcom/vk/stories/view/e1;->e:Z
+    iget-boolean p1, p0, Lcom/vk/stories/view/BaseStoryView;->e:Z
 
     if-nez p1, :cond_2
 
-    invoke-virtual {p0}, Lcom/vk/stories/view/e1;->v()Z
+    invoke-virtual {p0}, Lcom/vk/stories/view/BaseStoryView;->v()Z
 
     move-result p1
 
     if-eqz p1, :cond_2
 
-    iget-object p1, p0, Lcom/vk/stories/view/e1;->D:Lcom/vk/dto/stories/model/StoryEntry;
+    iget-object p1, p0, Lcom/vk/stories/view/BaseStoryView;->D:Lcom/vk/dto/stories/model/StoryEntry;
 
     if-eqz p1, :cond_2
 
     .line 47
-    iget-object v0, p0, Lcom/vk/stories/view/e1;->b:Lcom/vk/stories/StoriesController$SourceType;
+    iget-object v0, p0, Lcom/vk/stories/view/BaseStoryView;->b:Lcom/vk/stories/StoriesController$SourceType;
 
     invoke-static {p1, v0}, Lcom/vk/stories/StoriesController;->a(Lcom/vk/dto/stories/model/StoryEntry;Lcom/vk/stories/StoriesController$SourceType;)V
 
@@ -9026,7 +9026,7 @@
     .end param
 
     .line 48
-    iget-object v0, p0, Lcom/vk/stories/view/e1;->D:Lcom/vk/dto/stories/model/StoryEntry;
+    iget-object v0, p0, Lcom/vk/stories/view/BaseStoryView;->D:Lcom/vk/dto/stories/model/StoryEntry;
 
     if-eqz v0, :cond_0
 
@@ -9052,15 +9052,15 @@
     iput v1, v0, Lcom/vk/dto/stories/model/StoryEntry;->S:I
 
     .line 50
-    iget-object p1, p0, Lcom/vk/stories/view/StoryView;->m1:Lcom/vk/stories/view/v1;
+    iget-object p1, p0, Lcom/vk/stories/view/StoryView;->m1:Lcom/vk/stories/view/StoryViewRepliesAndViewersDelegate;
 
-    invoke-virtual {p1}, Lcom/vk/stories/view/v1;->b()V
+    invoke-virtual {p1}, Lcom/vk/stories/view/StoryViewRepliesAndViewersDelegate;->b()V
 
     goto :goto_0
 
     .line 51
     :cond_0
-    iget-object v0, p0, Lcom/vk/stories/view/e1;->D:Lcom/vk/dto/stories/model/StoryEntry;
+    iget-object v0, p0, Lcom/vk/stories/view/BaseStoryView;->D:Lcom/vk/dto/stories/model/StoryEntry;
 
     if-eqz v0, :cond_1
 
@@ -9077,7 +9077,7 @@
     if-ne v0, p1, :cond_1
 
     .line 52
-    iget p1, p0, Lcom/vk/stories/view/e1;->I:I
+    iget p1, p0, Lcom/vk/stories/view/BaseStoryView;->I:I
 
     invoke-virtual {p0, p1}, Lcom/vk/stories/view/StoryView;->b(I)V
 
@@ -9095,7 +9095,7 @@
     iput-wide v0, p0, Lcom/vk/stories/view/StoryView;->m0:J
 
     .line 33
-    iget-object v0, p0, Lcom/vk/stories/view/StoryView;->C1:Lcom/vk/stories/view/y1;
+    iget-object v0, p0, Lcom/vk/stories/view/StoryView;->C1:Lcom/vk/stories/view/VideoThumbProgress;
 
     if-eqz v0, :cond_0
 
@@ -9105,11 +9105,11 @@
     const/4 v0, 0x0
 
     .line 35
-    iput-object v0, p0, Lcom/vk/stories/view/StoryView;->C1:Lcom/vk/stories/view/y1;
+    iput-object v0, p0, Lcom/vk/stories/view/StoryView;->C1:Lcom/vk/stories/view/VideoThumbProgress;
 
     .line 36
     :cond_0
-    invoke-super {p0, p1}, Lcom/vk/stories/view/e1;->b(Lcom/vk/stories/view/StoryView$SourceTransitionStory;)V
+    invoke-super {p0, p1}, Lcom/vk/stories/view/BaseStoryView;->b(Lcom/vk/stories/view/StoryView$SourceTransitionStory;)V
 
     return-void
 .end method
@@ -9122,7 +9122,7 @@
 
     if-eqz v0, :cond_3
 
-    invoke-virtual {p0}, Lcom/vk/stories/view/e1;->v()Z
+    invoke-virtual {p0}, Lcom/vk/stories/view/BaseStoryView;->v()Z
 
     move-result v0
 
@@ -9192,7 +9192,7 @@
     .locals 3
 
     .line 31
-    iget-object v0, p0, Lcom/vk/stories/view/e1;->f:Lcom/vk/dto/stories/model/StoriesContainer;
+    iget-object v0, p0, Lcom/vk/stories/view/BaseStoryView;->f:Lcom/vk/dto/stories/model/StoriesContainer;
 
     invoke-virtual {v0}, Lcom/vk/dto/stories/model/StoriesContainer;->H1()Lcom/vk/dto/stories/model/StoryOwner;
 
@@ -9262,20 +9262,20 @@
     .locals 2
 
     .line 14
-    iget-object v0, p0, Lcom/vk/stories/view/StoryView;->i1:Lcom/vk/stories/util/q;
+    iget-object v0, p0, Lcom/vk/stories/view/StoryView;->i1:Lcom/vk/stories/util/StoryViewTooltipDelegate;
 
     if-eqz v0, :cond_0
 
-    iget-boolean v1, p0, Lcom/vk/stories/view/e1;->e:Z
+    iget-boolean v1, p0, Lcom/vk/stories/view/BaseStoryView;->e:Z
 
     if-nez v1, :cond_0
 
-    iget-object v1, p0, Lcom/vk/stories/view/e1;->D:Lcom/vk/dto/stories/model/StoryEntry;
+    iget-object v1, p0, Lcom/vk/stories/view/BaseStoryView;->D:Lcom/vk/dto/stories/model/StoryEntry;
 
     if-eqz v1, :cond_0
 
     .line 15
-    invoke-virtual {v0, v1}, Lcom/vk/stories/util/q;->a(Lcom/vk/dto/stories/model/StoryEntry;)V
+    invoke-virtual {v0, v1}, Lcom/vk/stories/util/StoryViewTooltipDelegate;->a(Lcom/vk/dto/stories/model/StoryEntry;)V
 
     :cond_0
     return-void
@@ -9304,7 +9304,7 @@
     .locals 2
 
     .line 4
-    iget-object v0, p0, Lcom/vk/stories/view/StoryView;->o1:Lcom/vk/libvideo/live/views/liveswipe/f;
+    iget-object v0, p0, Lcom/vk/stories/view/StoryView;->o1:Lcom/vk/libvideo/live/views/liveswipe/SwipeToolTip;
 
     if-eqz v0, :cond_1
 
@@ -9333,7 +9333,7 @@
     if-eqz p1, :cond_0
 
     .line 7
-    iget-object p1, p0, Lcom/vk/stories/view/StoryView;->o1:Lcom/vk/libvideo/live/views/liveswipe/f;
+    iget-object p1, p0, Lcom/vk/stories/view/StoryView;->o1:Lcom/vk/libvideo/live/views/liveswipe/SwipeToolTip;
 
     invoke-virtual {p1}, Landroid/widget/FrameLayout;->animate()Landroid/view/ViewPropertyAnimator;
 
@@ -9366,12 +9366,12 @@
 
     .line 9
     :cond_0
-    iget-object p1, p0, Lcom/vk/stories/view/StoryView;->o1:Lcom/vk/libvideo/live/views/liveswipe/f;
+    iget-object p1, p0, Lcom/vk/stories/view/StoryView;->o1:Lcom/vk/libvideo/live/views/liveswipe/SwipeToolTip;
 
     invoke-virtual {p0, p1}, Landroid/widget/FrameLayout;->removeView(Landroid/view/View;)V
 
     .line 10
-    iput-object v1, p0, Lcom/vk/stories/view/StoryView;->o1:Lcom/vk/libvideo/live/views/liveswipe/f;
+    iput-object v1, p0, Lcom/vk/stories/view/StoryView;->o1:Lcom/vk/libvideo/live/views/liveswipe/SwipeToolTip;
 
     :cond_1
     :goto_0
@@ -9398,7 +9398,7 @@
 
     if-eqz v0, :cond_1
 
-    iget-object v2, p0, Lcom/vk/stories/view/e1;->D:Lcom/vk/dto/stories/model/StoryEntry;
+    iget-object v2, p0, Lcom/vk/stories/view/BaseStoryView;->D:Lcom/vk/dto/stories/model/StoryEntry;
 
     if-eqz v2, :cond_1
 
@@ -9422,7 +9422,7 @@
     invoke-super {p0, p1}, Landroid/widget/FrameLayout;->dispatchDraw(Landroid/graphics/Canvas;)V
 
     .line 2
-    iget-object v0, p0, Lcom/vk/stories/view/e1;->D:Lcom/vk/dto/stories/model/StoryEntry;
+    iget-object v0, p0, Lcom/vk/stories/view/BaseStoryView;->D:Lcom/vk/dto/stories/model/StoryEntry;
 
     if-eqz v0, :cond_0
 
@@ -9430,7 +9430,7 @@
 
     if-eqz v0, :cond_0
 
-    invoke-static {}, Lcom/vk/stories/clickable/e;->p()Z
+    invoke-static {}, Lcom/vk/stories/clickable/StoryClickableController;->p()Z
 
     move-result v0
 
@@ -9439,7 +9439,7 @@
     .line 3
     iget-object v0, p0, Lcom/vk/stories/view/StoryView;->h1:Lcom/vk/stories/util/ClickableStickerDelegate;
 
-    iget-object v1, p0, Lcom/vk/stories/view/e1;->D:Lcom/vk/dto/stories/model/StoryEntry;
+    iget-object v1, p0, Lcom/vk/stories/view/BaseStoryView;->D:Lcom/vk/dto/stories/model/StoryEntry;
 
     iget-object v1, v1, Lcom/vk/dto/stories/model/StoryEntry;->r0:Lcom/vk/dto/stories/model/clickable/ClickableStickers;
 
@@ -9453,7 +9453,7 @@
     .locals 2
 
     .line 2
-    iget-object v0, p0, Lcom/vk/stories/view/e1;->D:Lcom/vk/dto/stories/model/StoryEntry;
+    iget-object v0, p0, Lcom/vk/stories/view/BaseStoryView;->D:Lcom/vk/dto/stories/model/StoryEntry;
 
     if-eqz v0, :cond_0
 
@@ -9468,7 +9468,7 @@
 
     .line 4
     :cond_0
-    invoke-super {p0}, Lcom/vk/stories/view/e1;->e()V
+    invoke-super {p0}, Lcom/vk/stories/view/BaseStoryView;->e()V
 
     .line 5
     iget-object v0, p0, Lcom/vk/stories/view/StoryView;->t0:Lcom/vk/media/player/video/view/SimpleVideoView;
@@ -9482,12 +9482,12 @@
 
     .line 7
     :cond_1
-    iget-object v0, p0, Lcom/vk/stories/view/StoryView;->j1:Lcom/vk/stories/view/question/b;
+    iget-object v0, p0, Lcom/vk/stories/view/StoryView;->j1:Lcom/vk/stories/view/question/StoryViewAskQuestionContract2;
 
     if-eqz v0, :cond_2
 
     .line 8
-    invoke-interface {v0}, Lcom/vk/stories/view/question/b;->e()V
+    invoke-interface {v0}, Lcom/vk/stories/view/question/StoryViewAskQuestionContract2;->e()V
 
     :cond_2
     return-void
@@ -9497,7 +9497,7 @@
     .locals 4
 
     .line 9
-    iget-object p1, p0, Lcom/vk/stories/view/e1;->D:Lcom/vk/dto/stories/model/StoryEntry;
+    iget-object p1, p0, Lcom/vk/stories/view/BaseStoryView;->D:Lcom/vk/dto/stories/model/StoryEntry;
 
     if-eqz p1, :cond_0
 
@@ -9512,7 +9512,7 @@
 
     move-result-object p1
 
-    iget-object v0, p0, Lcom/vk/stories/view/e1;->D:Lcom/vk/dto/stories/model/StoryEntry;
+    iget-object v0, p0, Lcom/vk/stories/view/BaseStoryView;->D:Lcom/vk/dto/stories/model/StoryEntry;
 
     iget-object v0, v0, Lcom/vk/dto/stories/model/StoryEntry;->P:Ljava/lang/String;
 
@@ -9521,7 +9521,7 @@
     sget-object v2, Lcom/vk/stat/scheme/SchemeStat$EventScreen;->STORY_VIEWER:Lcom/vk/stat/scheme/SchemeStat$EventScreen;
 
     .line 11
-    invoke-static {v2}, Lcom/vk/stat/scheme/f;->a(Lcom/vk/stat/scheme/SchemeStat$EventScreen;)Ljava/lang/String;
+    invoke-static {v2}, Lcom/vk/stat/scheme/SchemeStatEx;->a(Lcom/vk/stat/scheme/SchemeStat$EventScreen;)Ljava/lang/String;
 
     move-result-object v2
 
@@ -9533,7 +9533,7 @@
     .line 13
     sget-object p1, Lcom/vk/dto/stories/model/StoryViewAction;->CLICK_TO_MASK:Lcom/vk/dto/stories/model/StoryViewAction;
 
-    invoke-virtual {p0, p1}, Lcom/vk/stories/view/e1;->a(Lcom/vk/dto/stories/model/StoryViewAction;)V
+    invoke-virtual {p0, p1}, Lcom/vk/stories/view/BaseStoryView;->a(Lcom/vk/dto/stories/model/StoryViewAction;)V
 
     :cond_0
     return-void
@@ -9543,16 +9543,16 @@
     .locals 1
 
     .line 2
-    invoke-super {p0}, Lcom/vk/stories/view/e1;->f()V
+    invoke-super {p0}, Lcom/vk/stories/view/BaseStoryView;->f()V
 
     .line 3
-    invoke-virtual {p0}, Lcom/vk/stories/view/e1;->v()Z
+    invoke-virtual {p0}, Lcom/vk/stories/view/BaseStoryView;->v()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    iget-boolean v0, p0, Lcom/vk/stories/view/e1;->F:Z
+    iget-boolean v0, p0, Lcom/vk/stories/view/BaseStoryView;->F:Z
 
     if-nez v0, :cond_0
 
@@ -9567,11 +9567,11 @@
     .locals 2
 
     .line 5
-    iget-object p1, p0, Lcom/vk/stories/view/e1;->D:Lcom/vk/dto/stories/model/StoryEntry;
+    iget-object p1, p0, Lcom/vk/stories/view/BaseStoryView;->D:Lcom/vk/dto/stories/model/StoryEntry;
 
     if-eqz p1, :cond_0
 
-    iget-object p1, p0, Lcom/vk/stories/view/e1;->f:Lcom/vk/dto/stories/model/StoriesContainer;
+    iget-object p1, p0, Lcom/vk/stories/view/BaseStoryView;->f:Lcom/vk/dto/stories/model/StoriesContainer;
 
     invoke-virtual {p1}, Lcom/vk/dto/stories/model/StoriesContainer;->Q1()Z
 
@@ -9580,13 +9580,13 @@
     if-eqz p1, :cond_0
 
     .line 6
-    new-instance p1, Lcom/vk/cameraui/builder/a;
+    new-instance p1, Lcom/vk/cameraui/builder/CameraBuilder;
 
     sget-object v0, Lcom/vk/stat/scheme/SchemeStat$EventScreen;->STORY_VIEWER:Lcom/vk/stat/scheme/SchemeStat$EventScreen;
 
     const-string v1, "story_viewer_camera_button"
 
-    invoke-direct {p1, v0, v1}, Lcom/vk/cameraui/builder/a;-><init>(Lcom/vk/stat/scheme/SchemeStat$EventScreen;Ljava/lang/String;)V
+    invoke-direct {p1, v0, v1}, Lcom/vk/cameraui/builder/CameraBuilder;-><init>(Lcom/vk/stat/scheme/SchemeStat$EventScreen;Ljava/lang/String;)V
 
     sget-object v0, Lcom/vk/cameraui/CameraUI;->d:Lcom/vk/cameraui/CameraUI$a;
 
@@ -9617,7 +9617,7 @@
     .locals 9
 
     .line 6
-    iget-object v0, p0, Lcom/vk/stories/view/e1;->D:Lcom/vk/dto/stories/model/StoryEntry;
+    iget-object v0, p0, Lcom/vk/stories/view/BaseStoryView;->D:Lcom/vk/dto/stories/model/StoryEntry;
 
     if-eqz v0, :cond_0
 
@@ -9714,15 +9714,15 @@
     return-void
 .end method
 
-.method public getAnalyticsParams()Lcom/vk/stories/analytics/c;
+.method public getAnalyticsParams()Lcom/vk/stories/analytics/StoryViewAnalyticsParams;
     .locals 9
     .annotation build Landroidx/annotation/NonNull;
     .end annotation
 
     .line 1
-    new-instance v6, Lcom/vk/stories/analytics/c;
+    new-instance v6, Lcom/vk/stories/analytics/StoryViewAnalyticsParams;
 
-    iget-object v0, p0, Lcom/vk/stories/view/e1;->a:Lcom/vk/stories/view/StoryView$u0;
+    iget-object v0, p0, Lcom/vk/stories/view/BaseStoryView;->a:Lcom/vk/stories/view/StoryView$u0;
 
     if-eqz v0, :cond_0
 
@@ -9739,14 +9739,14 @@
     :goto_0
     move-object v1, v0
 
-    iget-object v2, p0, Lcom/vk/stories/view/e1;->b:Lcom/vk/stories/StoriesController$SourceType;
+    iget-object v2, p0, Lcom/vk/stories/view/BaseStoryView;->b:Lcom/vk/stories/StoriesController$SourceType;
 
     .line 3
-    invoke-virtual {p0}, Lcom/vk/stories/view/e1;->s()Lcom/vk/stories/analytics/b;
+    invoke-virtual {p0}, Lcom/vk/stories/view/BaseStoryView;->s()Lcom/vk/stories/analytics/StoryPositionInfo;
 
     move-result-object v3
 
-    iget-object v4, p0, Lcom/vk/stories/view/e1;->D:Lcom/vk/dto/stories/model/StoryEntry;
+    iget-object v4, p0, Lcom/vk/stories/view/BaseStoryView;->D:Lcom/vk/dto/stories/model/StoryEntry;
 
     iget-wide v7, p0, Lcom/vk/stories/view/StoryView;->g0:J
 
@@ -9757,7 +9757,7 @@
 
     move-object v0, v6
 
-    invoke-direct/range {v0 .. v5}, Lcom/vk/stories/analytics/c;-><init>(Ljava/lang/String;Lcom/vk/stories/StoriesController$SourceType;Lcom/vk/stories/analytics/b;Lcom/vk/dto/stories/model/StoryEntry;Ljava/lang/Long;)V
+    invoke-direct/range {v0 .. v5}, Lcom/vk/stories/analytics/StoryViewAnalyticsParams;-><init>(Ljava/lang/String;Lcom/vk/stories/StoriesController$SourceType;Lcom/vk/stories/analytics/StoryPositionInfo;Lcom/vk/dto/stories/model/StoryEntry;Ljava/lang/Long;)V
 
     return-object v6
 .end method
@@ -9766,14 +9766,14 @@
     .locals 4
 
     .line 1
-    invoke-virtual {p0}, Lcom/vk/stories/view/e1;->H()Z
+    invoke-virtual {p0}, Lcom/vk/stories/view/BaseStoryView;->H()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
     .line 2
-    invoke-virtual {p0}, Lcom/vk/stories/view/e1;->getDefaultTimerProgress()F
+    invoke-virtual {p0}, Lcom/vk/stories/view/BaseStoryView;->getDefaultTimerProgress()F
 
     move-result v0
 
@@ -9822,7 +9822,7 @@
     .end annotation
 
     .line 1
-    iget-object v0, p0, Lcom/vk/stories/view/e1;->D:Lcom/vk/dto/stories/model/StoryEntry;
+    iget-object v0, p0, Lcom/vk/stories/view/BaseStoryView;->D:Lcom/vk/dto/stories/model/StoryEntry;
 
     return-object v0
 .end method
@@ -9831,16 +9831,16 @@
     .locals 2
 
     .line 1
-    invoke-virtual {p0}, Lcom/vk/stories/view/e1;->H()Z
+    invoke-virtual {p0}, Lcom/vk/stories/view/BaseStoryView;->H()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
     .line 2
-    iget-object v0, p0, Lcom/vk/stories/view/e1;->c:Lcom/vk/core/util/b0;
+    iget-object v0, p0, Lcom/vk/stories/view/BaseStoryView;->c:Lcom/vk/core/util/ElapsedTimeCounter;
 
-    invoke-virtual {v0}, Lcom/vk/core/util/b0;->a()J
+    invoke-virtual {v0}, Lcom/vk/core/util/ElapsedTimeCounter;->a()J
 
     move-result-wide v0
 
@@ -9883,7 +9883,7 @@
     .locals 3
 
     .line 1
-    iget-object v0, p0, Lcom/vk/stories/view/e1;->D:Lcom/vk/dto/stories/model/StoryEntry;
+    iget-object v0, p0, Lcom/vk/stories/view/BaseStoryView;->D:Lcom/vk/dto/stories/model/StoryEntry;
 
     const/4 v1, 0x0
 
@@ -9900,7 +9900,7 @@
     if-eqz v2, :cond_1
 
     .line 3
-    invoke-super {p0}, Lcom/vk/stories/view/e1;->getStoryDurationMilliseconds()I
+    invoke-super {p0}, Lcom/vk/stories/view/BaseStoryView;->getStoryDurationMilliseconds()I
 
     move-result v0
 
@@ -9928,10 +9928,10 @@
     .locals 3
 
     .line 2
-    invoke-super {p0}, Lcom/vk/stories/view/e1;->h()V
+    invoke-super {p0}, Lcom/vk/stories/view/BaseStoryView;->h()V
 
     .line 3
-    invoke-virtual {p0}, Lcom/vk/stories/view/e1;->x()Z
+    invoke-virtual {p0}, Lcom/vk/stories/view/BaseStoryView;->x()Z
 
     move-result v0
 
@@ -9958,17 +9958,17 @@
     .locals 1
 
     .line 2
-    iget-boolean v0, p0, Lcom/vk/stories/view/e1;->e:Z
+    iget-boolean v0, p0, Lcom/vk/stories/view/BaseStoryView;->e:Z
 
     if-nez v0, :cond_0
 
-    invoke-virtual {p0}, Lcom/vk/stories/view/e1;->v()Z
+    invoke-virtual {p0}, Lcom/vk/stories/view/BaseStoryView;->v()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    iget-object v0, p0, Lcom/vk/stories/view/e1;->D:Lcom/vk/dto/stories/model/StoryEntry;
+    iget-object v0, p0, Lcom/vk/stories/view/BaseStoryView;->D:Lcom/vk/dto/stories/model/StoryEntry;
 
     if-eqz v0, :cond_0
 
@@ -9994,12 +9994,12 @@
     .locals 7
 
     .line 2
-    iget-object v0, p0, Lcom/vk/stories/view/e1;->D:Lcom/vk/dto/stories/model/StoryEntry;
+    iget-object v0, p0, Lcom/vk/stories/view/BaseStoryView;->D:Lcom/vk/dto/stories/model/StoryEntry;
 
     if-eqz v0, :cond_1
 
     .line 3
-    iget-object v0, p0, Lcom/vk/stories/view/e1;->a:Lcom/vk/stories/view/StoryView$u0;
+    iget-object v0, p0, Lcom/vk/stories/view/BaseStoryView;->a:Lcom/vk/stories/view/StoryView$u0;
 
     if-eqz v0, :cond_0
 
@@ -10016,17 +10016,17 @@
     move-object v4, v0
 
     .line 4
-    iget-object v1, p0, Lcom/vk/stories/view/e1;->b:Lcom/vk/stories/StoriesController$SourceType;
+    iget-object v1, p0, Lcom/vk/stories/view/BaseStoryView;->b:Lcom/vk/stories/StoriesController$SourceType;
 
-    iget-object v2, p0, Lcom/vk/stories/view/e1;->D:Lcom/vk/dto/stories/model/StoryEntry;
+    iget-object v2, p0, Lcom/vk/stories/view/BaseStoryView;->D:Lcom/vk/dto/stories/model/StoryEntry;
 
-    invoke-virtual {p0}, Lcom/vk/stories/view/e1;->s()Lcom/vk/stories/analytics/b;
+    invoke-virtual {p0}, Lcom/vk/stories/view/BaseStoryView;->s()Lcom/vk/stories/analytics/StoryPositionInfo;
 
     move-result-object v3
 
     iget-wide v5, p0, Lcom/vk/stories/view/StoryView;->g0:J
 
-    invoke-static/range {v1 .. v6}, Lcom/vk/attachpicker/fragment/StoryReporter;->a(Lcom/vk/stories/StoriesController$SourceType;Lcom/vk/dto/stories/model/StoryEntry;Lcom/vk/stories/analytics/b;Ljava/lang/String;J)V
+    invoke-static/range {v1 .. v6}, Lcom/vk/attachpicker/fragment/StoryReporter;->a(Lcom/vk/stories/StoriesController$SourceType;Lcom/vk/dto/stories/model/StoryEntry;Lcom/vk/stories/analytics/StoryPositionInfo;Ljava/lang/String;J)V
 
     :cond_1
     return-void
@@ -10036,16 +10036,16 @@
     .locals 1
 
     .line 2
-    invoke-virtual {p0}, Lcom/vk/stories/view/e1;->v()Z
+    invoke-virtual {p0}, Lcom/vk/stories/view/BaseStoryView;->v()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
     .line 3
-    iget-object v0, p0, Lcom/vk/stories/view/StoryView;->y0:Lcom/vk/core/widget/h;
+    iget-object v0, p0, Lcom/vk/stories/view/StoryView;->y0:Lcom/vk/core/widget/ViewDisplayer;
 
-    invoke-virtual {v0}, Lcom/vk/core/widget/h;->a()V
+    invoke-virtual {v0}, Lcom/vk/core/widget/ViewDisplayer;->a()V
 
     :cond_0
     return-void
@@ -10055,7 +10055,7 @@
     .locals 5
 
     .line 2
-    iget-object v0, p0, Lcom/vk/stories/view/e1;->D:Lcom/vk/dto/stories/model/StoryEntry;
+    iget-object v0, p0, Lcom/vk/stories/view/BaseStoryView;->D:Lcom/vk/dto/stories/model/StoryEntry;
 
     if-eqz v0, :cond_1
 
@@ -10131,9 +10131,9 @@
     .locals 1
 
     .line 2
-    iget-object v0, p0, Lcom/vk/stories/view/StoryView;->m1:Lcom/vk/stories/view/v1;
+    iget-object v0, p0, Lcom/vk/stories/view/StoryView;->m1:Lcom/vk/stories/view/StoryViewRepliesAndViewersDelegate;
 
-    invoke-virtual {v0}, Lcom/vk/stories/view/v1;->b()V
+    invoke-virtual {v0}, Lcom/vk/stories/view/StoryViewRepliesAndViewersDelegate;->b()V
 
     return-void
 .end method
@@ -10145,7 +10145,7 @@
     invoke-super {p0}, Landroid/widget/FrameLayout;->onAttachedToWindow()V
 
     .line 2
-    iget-boolean v0, p0, Lcom/vk/stories/view/e1;->e:Z
+    iget-boolean v0, p0, Lcom/vk/stories/view/BaseStoryView;->e:Z
 
     if-eqz v0, :cond_0
 
@@ -10153,7 +10153,7 @@
 
     .line 3
     :cond_0
-    iget-object v0, p0, Lcom/vk/stories/view/e1;->R:Landroid/os/Handler;
+    iget-object v0, p0, Lcom/vk/stories/view/BaseStoryView;->R:Landroid/os/Handler;
 
     new-instance v1, Lcom/vk/stories/view/StoryView$g0;
 
@@ -10193,11 +10193,11 @@
 
     if-eqz v0, :cond_0
 
-    iget-object v0, p0, Lcom/vk/stories/view/e1;->a:Lcom/vk/stories/view/StoryView$u0;
+    iget-object v0, p0, Lcom/vk/stories/view/BaseStoryView;->a:Lcom/vk/stories/view/StoryView$u0;
 
     if-eqz v0, :cond_0
 
-    iget-object v1, p0, Lcom/vk/stories/view/e1;->D:Lcom/vk/dto/stories/model/StoryEntry;
+    iget-object v1, p0, Lcom/vk/stories/view/BaseStoryView;->D:Lcom/vk/dto/stories/model/StoryEntry;
 
     if-eqz v1, :cond_0
 
@@ -10220,7 +10220,7 @@
 
     .line 4
     :cond_0
-    instance-of v0, p1, Lcom/vk/navigation/g;
+    instance-of v0, p1, Lcom/vk/navigation/Dismissed;
 
     if-eqz v0, :cond_1
 
@@ -10229,7 +10229,7 @@
 
     move-result-object v0
 
-    invoke-static {v0}, Lcom/vk/extensions/c;->a(Landroid/content/Context;)Lcom/vk/navigation/NavigationDelegate;
+    invoke-static {v0}, Lcom/vk/extensions/ContextExt;->a(Landroid/content/Context;)Lcom/vk/navigation/NavigationDelegate;
 
     move-result-object v0
 
@@ -10238,25 +10238,25 @@
     .line 6
     move-object v1, p1
 
-    check-cast v1, Lcom/vk/navigation/g;
+    check-cast v1, Lcom/vk/navigation/Dismissed;
 
-    invoke-virtual {v0, v1}, Lcom/vk/navigation/NavigationDelegate;->a(Lcom/vk/navigation/g;)V
+    invoke-virtual {v0, v1}, Lcom/vk/navigation/NavigationDelegate;->a(Lcom/vk/navigation/Dismissed;)V
 
     .line 7
     :cond_1
-    iget-object v0, p0, Lcom/vk/stories/view/e1;->g:Landroid/app/Dialog;
+    iget-object v0, p0, Lcom/vk/stories/view/BaseStoryView;->g:Landroid/app/Dialog;
 
     const/4 v1, 0x0
 
     if-ne v0, p1, :cond_4
 
     .line 8
-    iget-object p1, p0, Lcom/vk/stories/view/StoryView;->j1:Lcom/vk/stories/view/question/b;
+    iget-object p1, p0, Lcom/vk/stories/view/StoryView;->j1:Lcom/vk/stories/view/question/StoryViewAskQuestionContract2;
 
     if-eqz p1, :cond_2
 
     .line 9
-    invoke-interface {p1}, Lcom/vk/stories/view/question/b;->A0()V
+    invoke-interface {p1}, Lcom/vk/stories/view/question/StoryViewAskQuestionContract2;->A0()V
 
     .line 10
     :cond_2
@@ -10265,47 +10265,47 @@
     if-eqz p1, :cond_3
 
     .line 11
-    iget-object v0, p0, Lcom/vk/stories/view/e1;->g:Landroid/app/Dialog;
+    iget-object v0, p0, Lcom/vk/stories/view/BaseStoryView;->g:Landroid/app/Dialog;
 
     invoke-virtual {p1, v0}, Lcom/vk/stories/view/StoryViewMusicDelegate;->onDismiss(Landroid/content/DialogInterface;)V
 
     .line 12
     :cond_3
-    iput-object v1, p0, Lcom/vk/stories/view/e1;->g:Landroid/app/Dialog;
+    iput-object v1, p0, Lcom/vk/stories/view/BaseStoryView;->g:Landroid/app/Dialog;
 
     .line 13
     invoke-virtual {p0}, Lcom/vk/stories/view/StoryView;->f()V
 
     .line 14
-    iget-boolean p1, p0, Lcom/vk/stories/view/e1;->e:Z
+    iget-boolean p1, p0, Lcom/vk/stories/view/BaseStoryView;->e:Z
 
     if-nez p1, :cond_5
 
-    invoke-virtual {p0}, Lcom/vk/stories/view/e1;->v()Z
+    invoke-virtual {p0}, Lcom/vk/stories/view/BaseStoryView;->v()Z
 
     move-result p1
 
     if-eqz p1, :cond_5
 
-    iget-object p1, p0, Lcom/vk/stories/view/e1;->D:Lcom/vk/dto/stories/model/StoryEntry;
+    iget-object p1, p0, Lcom/vk/stories/view/BaseStoryView;->D:Lcom/vk/dto/stories/model/StoryEntry;
 
     if-eqz p1, :cond_5
 
     .line 15
-    iget-object v0, p0, Lcom/vk/stories/view/e1;->b:Lcom/vk/stories/StoriesController$SourceType;
+    iget-object v0, p0, Lcom/vk/stories/view/BaseStoryView;->b:Lcom/vk/stories/StoriesController$SourceType;
 
-    invoke-static {p0, p1, v0}, Lcom/vk/stories/StoriesController;->a(Lcom/vk/stories/view/e1;Lcom/vk/dto/stories/model/StoryEntry;Lcom/vk/stories/StoriesController$SourceType;)V
+    invoke-static {p0, p1, v0}, Lcom/vk/stories/StoriesController;->a(Lcom/vk/stories/view/BaseStoryView;Lcom/vk/dto/stories/model/StoryEntry;Lcom/vk/stories/StoriesController$SourceType;)V
 
     goto :goto_0
 
     .line 16
     :cond_4
-    iget-object v0, p0, Lcom/vk/stories/view/e1;->h:Landroid/app/Dialog;
+    iget-object v0, p0, Lcom/vk/stories/view/BaseStoryView;->h:Landroid/app/Dialog;
 
     if-ne v0, p1, :cond_5
 
     .line 17
-    iput-object v1, p0, Lcom/vk/stories/view/e1;->h:Landroid/app/Dialog;
+    iput-object v1, p0, Lcom/vk/stories/view/BaseStoryView;->h:Landroid/app/Dialog;
 
     :cond_5
     :goto_0
@@ -10316,7 +10316,7 @@
     .locals 4
 
     .line 1
-    invoke-super {p0}, Lcom/vk/stories/view/e1;->onPause()V
+    invoke-super {p0}, Lcom/vk/stories/view/BaseStoryView;->onPause()V
 
     const/4 v0, 0x2
 
@@ -10337,7 +10337,7 @@
 
     invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget-boolean v3, p0, Lcom/vk/stories/view/e1;->e:Z
+    iget-boolean v3, p0, Lcom/vk/stories/view/BaseStoryView;->e:Z
 
     invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
 
@@ -10345,7 +10345,7 @@
 
     invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget-boolean v3, p0, Lcom/vk/stories/view/e1;->E:Z
+    iget-boolean v3, p0, Lcom/vk/stories/view/BaseStoryView;->E:Z
 
     invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
 
@@ -10363,7 +10363,7 @@
 
     invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget-object v3, p0, Lcom/vk/stories/view/e1;->D:Lcom/vk/dto/stories/model/StoryEntry;
+    iget-object v3, p0, Lcom/vk/stories/view/BaseStoryView;->D:Lcom/vk/dto/stories/model/StoryEntry;
 
     if-nez v3, :cond_0
 
@@ -10390,7 +10390,7 @@
     invoke-static {v0}, Lcom/vk/log/L;->d([Ljava/lang/Object;)V
 
     .line 3
-    iget-boolean v0, p0, Lcom/vk/stories/view/e1;->e:Z
+    iget-boolean v0, p0, Lcom/vk/stories/view/BaseStoryView;->e:Z
 
     if-eqz v0, :cond_1
 
@@ -10398,7 +10398,7 @@
 
     .line 4
     :cond_1
-    iget-boolean v0, p0, Lcom/vk/stories/view/e1;->E:Z
+    iget-boolean v0, p0, Lcom/vk/stories/view/BaseStoryView;->E:Z
 
     if-eqz v0, :cond_2
 
@@ -10415,32 +10415,32 @@
 
     .line 7
     :cond_3
-    invoke-virtual {p0}, Lcom/vk/stories/view/e1;->J()V
+    invoke-virtual {p0}, Lcom/vk/stories/view/BaseStoryView;->J()V
 
     .line 8
-    invoke-virtual {p0}, Lcom/vk/stories/view/e1;->v()Z
+    invoke-virtual {p0}, Lcom/vk/stories/view/BaseStoryView;->v()Z
 
     move-result v0
 
     if-eqz v0, :cond_4
 
-    iget-object v0, p0, Lcom/vk/stories/view/e1;->D:Lcom/vk/dto/stories/model/StoryEntry;
+    iget-object v0, p0, Lcom/vk/stories/view/BaseStoryView;->D:Lcom/vk/dto/stories/model/StoryEntry;
 
     if-eqz v0, :cond_4
 
     .line 9
-    iget-object v1, p0, Lcom/vk/stories/view/e1;->b:Lcom/vk/stories/StoriesController$SourceType;
+    iget-object v1, p0, Lcom/vk/stories/view/BaseStoryView;->b:Lcom/vk/stories/StoriesController$SourceType;
 
     invoke-static {v0, v1}, Lcom/vk/stories/StoriesController;->a(Lcom/vk/dto/stories/model/StoryEntry;Lcom/vk/stories/StoriesController$SourceType;)V
 
     .line 10
     :cond_4
-    iget-object v0, p0, Lcom/vk/stories/view/StoryView;->j1:Lcom/vk/stories/view/question/b;
+    iget-object v0, p0, Lcom/vk/stories/view/StoryView;->j1:Lcom/vk/stories/view/question/StoryViewAskQuestionContract2;
 
     if-eqz v0, :cond_5
 
     .line 11
-    invoke-interface {v0}, Lb/h/r/a;->onPause()V
+    invoke-interface {v0}, Lb/h/r/BaseContract;->onPause()V
 
     .line 12
     :cond_5
@@ -10459,10 +10459,10 @@
     .locals 2
 
     .line 1
-    invoke-super {p0}, Lcom/vk/stories/view/e1;->onResume()V
+    invoke-super {p0}, Lcom/vk/stories/view/BaseStoryView;->onResume()V
 
     .line 2
-    iget-boolean v0, p0, Lcom/vk/stories/view/e1;->e:Z
+    iget-boolean v0, p0, Lcom/vk/stories/view/BaseStoryView;->e:Z
 
     if-eqz v0, :cond_0
 
@@ -10470,7 +10470,7 @@
 
     .line 3
     :cond_0
-    iget-boolean v0, p0, Lcom/vk/stories/view/e1;->E:Z
+    iget-boolean v0, p0, Lcom/vk/stories/view/BaseStoryView;->E:Z
 
     if-eqz v0, :cond_1
 
@@ -10478,13 +10478,13 @@
 
     .line 4
     :cond_1
-    invoke-virtual {p0}, Lcom/vk/stories/view/e1;->v()Z
+    invoke-virtual {p0}, Lcom/vk/stories/view/BaseStoryView;->v()Z
 
     move-result v0
 
     if-eqz v0, :cond_3
 
-    iget-object v0, p0, Lcom/vk/stories/view/e1;->g:Landroid/app/Dialog;
+    iget-object v0, p0, Lcom/vk/stories/view/BaseStoryView;->g:Landroid/app/Dialog;
 
     if-nez v0, :cond_3
 
@@ -10507,11 +10507,11 @@
     invoke-virtual {v0, v1}, Lcom/vk/media/player/video/view/SimpleVideoView;->setPlayWhenReady(Z)V
 
     .line 6
-    invoke-virtual {p0, v1}, Lcom/vk/stories/view/e1;->c(Z)V
+    invoke-virtual {p0, v1}, Lcom/vk/stories/view/BaseStoryView;->c(Z)V
 
     .line 7
     :cond_3
-    iget-object v0, p0, Lcom/vk/stories/view/e1;->g:Landroid/app/Dialog;
+    iget-object v0, p0, Lcom/vk/stories/view/BaseStoryView;->g:Landroid/app/Dialog;
 
     instance-of v1, v0, Lcom/vk/stories/message/StorySendMessageDialog;
 
@@ -10524,20 +10524,20 @@
 
     .line 9
     :cond_4
-    invoke-virtual {p0}, Lcom/vk/stories/view/e1;->v()Z
+    invoke-virtual {p0}, Lcom/vk/stories/view/BaseStoryView;->v()Z
 
     move-result v0
 
     if-eqz v0, :cond_5
 
-    iget-object v0, p0, Lcom/vk/stories/view/e1;->D:Lcom/vk/dto/stories/model/StoryEntry;
+    iget-object v0, p0, Lcom/vk/stories/view/BaseStoryView;->D:Lcom/vk/dto/stories/model/StoryEntry;
 
     if-eqz v0, :cond_5
 
     .line 10
-    iget-object v1, p0, Lcom/vk/stories/view/e1;->b:Lcom/vk/stories/StoriesController$SourceType;
+    iget-object v1, p0, Lcom/vk/stories/view/BaseStoryView;->b:Lcom/vk/stories/StoriesController$SourceType;
 
-    invoke-static {p0, v0, v1}, Lcom/vk/stories/StoriesController;->a(Lcom/vk/stories/view/e1;Lcom/vk/dto/stories/model/StoryEntry;Lcom/vk/stories/StoriesController$SourceType;)V
+    invoke-static {p0, v0, v1}, Lcom/vk/stories/StoriesController;->a(Lcom/vk/stories/view/BaseStoryView;Lcom/vk/dto/stories/model/StoryEntry;Lcom/vk/stories/StoriesController$SourceType;)V
 
     :cond_5
     return-void
@@ -10560,13 +10560,13 @@
     invoke-virtual {p0, p1}, Lcom/vk/stories/view/StoryView;->d(Z)V
 
     .line 2
-    iget-object p1, p0, Lcom/vk/stories/view/StoryView;->C1:Lcom/vk/stories/view/y1;
+    iget-object p1, p0, Lcom/vk/stories/view/StoryView;->C1:Lcom/vk/stories/view/VideoThumbProgress;
 
     const/4 v0, 0x0
 
     if-eqz p1, :cond_3
 
-    iget-object v1, p0, Lcom/vk/stories/view/e1;->D:Lcom/vk/dto/stories/model/StoryEntry;
+    iget-object v1, p0, Lcom/vk/stories/view/BaseStoryView;->D:Lcom/vk/dto/stories/model/StoryEntry;
 
     if-eqz v1, :cond_3
 
@@ -10574,7 +10574,7 @@
 
     if-eqz v1, :cond_3
 
-    invoke-virtual {p1}, Lcom/vk/stories/view/y1;->getProgressView()Lcom/vk/stories/view/LineProgress;
+    invoke-virtual {p1}, Lcom/vk/stories/view/VideoThumbProgress;->getProgressView()Lcom/vk/stories/view/LineProgress;
 
     move-result-object p1
 
@@ -10600,9 +10600,9 @@
 
     .line 5
     :cond_0
-    iget-object p1, p0, Lcom/vk/stories/view/StoryView;->C1:Lcom/vk/stories/view/y1;
+    iget-object p1, p0, Lcom/vk/stories/view/StoryView;->C1:Lcom/vk/stories/view/VideoThumbProgress;
 
-    invoke-virtual {p1}, Lcom/vk/stories/view/y1;->getProgressView()Lcom/vk/stories/view/LineProgress;
+    invoke-virtual {p1}, Lcom/vk/stories/view/VideoThumbProgress;->getProgressView()Lcom/vk/stories/view/LineProgress;
 
     move-result-object p1
 
@@ -10685,7 +10685,7 @@
 
     .line 11
     :goto_0
-    iget-object v0, p0, Lcom/vk/stories/view/StoryView;->C1:Lcom/vk/stories/view/y1;
+    iget-object v0, p0, Lcom/vk/stories/view/StoryView;->C1:Lcom/vk/stories/view/VideoThumbProgress;
 
     iget-object p1, p0, Lcom/vk/stories/view/StoryView;->t0:Lcom/vk/media/player/video/view/SimpleVideoView;
 
@@ -10699,7 +10699,7 @@
 
     move-result-wide v5
 
-    invoke-virtual/range {v0 .. v6}, Lcom/vk/stories/view/y1;->a(JJJ)V
+    invoke-virtual/range {v0 .. v6}, Lcom/vk/stories/view/VideoThumbProgress;->a(JJJ)V
 
     goto :goto_1
 
@@ -10715,11 +10715,11 @@
     .locals 2
 
     .line 2
-    iget-object v0, p0, Lcom/vk/stories/view/StoryView;->y0:Lcom/vk/core/widget/h;
+    iget-object v0, p0, Lcom/vk/stories/view/StoryView;->y0:Lcom/vk/core/widget/ViewDisplayer;
 
     const/4 v1, 0x0
 
-    invoke-virtual {v0, v1}, Lcom/vk/core/widget/h;->a(Z)V
+    invoke-virtual {v0, v1}, Lcom/vk/core/widget/ViewDisplayer;->a(Z)V
 
     return-void
 .end method
@@ -10728,7 +10728,7 @@
     .locals 1
 
     .line 2
-    invoke-virtual {p0}, Lcom/vk/stories/view/e1;->x()Z
+    invoke-virtual {p0}, Lcom/vk/stories/view/BaseStoryView;->x()Z
 
     move-result v0
 
@@ -10738,7 +10738,7 @@
 
     .line 3
     :cond_0
-    invoke-virtual {p0}, Lcom/vk/stories/view/e1;->v()Z
+    invoke-virtual {p0}, Lcom/vk/stories/view/BaseStoryView;->v()Z
 
     move-result v0
 
@@ -10788,14 +10788,14 @@
     .end param
 
     .line 1
-    invoke-virtual {p0}, Lcom/vk/stories/view/e1;->H()Z
+    invoke-virtual {p0}, Lcom/vk/stories/view/BaseStoryView;->H()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
     .line 2
-    invoke-super {p0, p1}, Lcom/vk/stories/view/e1;->setCurrentProgress(F)V
+    invoke-super {p0, p1}, Lcom/vk/stories/view/BaseStoryView;->setCurrentProgress(F)V
 
     goto :goto_0
 
@@ -10814,7 +10814,7 @@
     if-nez v4, :cond_1
 
     .line 4
-    iget-object v0, p0, Lcom/vk/stories/view/e1;->D:Lcom/vk/dto/stories/model/StoryEntry;
+    iget-object v0, p0, Lcom/vk/stories/view/BaseStoryView;->D:Lcom/vk/dto/stories/model/StoryEntry;
 
     iget-object v0, v0, Lcom/vk/dto/stories/model/StoryEntry;->F:Lcom/vk/dto/common/VideoFile;
 
@@ -10915,7 +10915,7 @@
     .end param
 
     .line 1
-    iget-object v0, p0, Lcom/vk/stories/view/e1;->D:Lcom/vk/dto/stories/model/StoryEntry;
+    iget-object v0, p0, Lcom/vk/stories/view/BaseStoryView;->D:Lcom/vk/dto/stories/model/StoryEntry;
 
     if-eqz v0, :cond_0
 
@@ -10938,7 +10938,7 @@
     if-eqz v0, :cond_0
 
     .line 2
-    iget-object v0, p0, Lcom/vk/stories/view/e1;->D:Lcom/vk/dto/stories/model/StoryEntry;
+    iget-object v0, p0, Lcom/vk/stories/view/BaseStoryView;->D:Lcom/vk/dto/stories/model/StoryEntry;
 
     invoke-virtual {p1}, Lcom/vk/stories/StoriesController$j;->b()Ljava/io/File;
 
@@ -10947,7 +10947,7 @@
     invoke-virtual {v0, v1}, Lcom/vk/dto/stories/model/StoryEntry;->a(Ljava/io/File;)V
 
     .line 3
-    iget-object v0, p0, Lcom/vk/stories/view/e1;->D:Lcom/vk/dto/stories/model/StoryEntry;
+    iget-object v0, p0, Lcom/vk/stories/view/BaseStoryView;->D:Lcom/vk/dto/stories/model/StoryEntry;
 
     invoke-virtual {p1}, Lcom/vk/stories/StoriesController$j;->i()Lcom/vk/dto/stories/model/StoryEntry;
 
@@ -10956,7 +10956,7 @@
     invoke-virtual {v0, v1}, Lcom/vk/dto/stories/model/StoryEntry;->a(Lcom/vk/dto/stories/model/StoryEntry;)V
 
     .line 4
-    iget v0, p0, Lcom/vk/stories/view/e1;->I:I
+    iget v0, p0, Lcom/vk/stories/view/BaseStoryView;->I:I
 
     invoke-virtual {p0, v0}, Lcom/vk/stories/view/StoryView;->a(I)V
 
@@ -10965,7 +10965,7 @@
 
     .line 6
     :cond_0
-    iget-object v0, p0, Lcom/vk/stories/view/e1;->D:Lcom/vk/dto/stories/model/StoryEntry;
+    iget-object v0, p0, Lcom/vk/stories/view/BaseStoryView;->D:Lcom/vk/dto/stories/model/StoryEntry;
 
     if-eqz v0, :cond_1
 
@@ -10980,7 +10980,7 @@
     if-eqz p1, :cond_1
 
     .line 7
-    iget-object p1, p0, Lcom/vk/stories/view/e1;->D:Lcom/vk/dto/stories/model/StoryEntry;
+    iget-object p1, p0, Lcom/vk/stories/view/BaseStoryView;->D:Lcom/vk/dto/stories/model/StoryEntry;
 
     iget v0, p1, Lcom/vk/dto/stories/model/StoryEntry;->S:I
 
@@ -10989,9 +10989,9 @@
     iput v0, p1, Lcom/vk/dto/stories/model/StoryEntry;->S:I
 
     .line 8
-    iget-object p1, p0, Lcom/vk/stories/view/StoryView;->m1:Lcom/vk/stories/view/v1;
+    iget-object p1, p0, Lcom/vk/stories/view/StoryView;->m1:Lcom/vk/stories/view/StoryViewRepliesAndViewersDelegate;
 
-    invoke-virtual {p1}, Lcom/vk/stories/view/v1;->b()V
+    invoke-virtual {p1}, Lcom/vk/stories/view/StoryViewRepliesAndViewersDelegate;->b()V
 
     :cond_1
     return-void
@@ -11005,7 +11005,7 @@
     .end param
 
     .line 1
-    iget-object v0, p0, Lcom/vk/stories/view/e1;->D:Lcom/vk/dto/stories/model/StoryEntry;
+    iget-object v0, p0, Lcom/vk/stories/view/BaseStoryView;->D:Lcom/vk/dto/stories/model/StoryEntry;
 
     if-eqz v0, :cond_0
 
@@ -11022,7 +11022,7 @@
     if-ne v0, p1, :cond_0
 
     .line 2
-    iget p1, p0, Lcom/vk/stories/view/e1;->I:I
+    iget p1, p0, Lcom/vk/stories/view/BaseStoryView;->I:I
 
     invoke-virtual {p0, p1}, Lcom/vk/stories/view/StoryView;->a(I)V
 
@@ -11038,7 +11038,7 @@
     .end param
 
     .line 1
-    iget-object v0, p0, Lcom/vk/stories/view/e1;->D:Lcom/vk/dto/stories/model/StoryEntry;
+    iget-object v0, p0, Lcom/vk/stories/view/BaseStoryView;->D:Lcom/vk/dto/stories/model/StoryEntry;
 
     if-eqz v0, :cond_0
 
@@ -11071,7 +11071,7 @@
     .locals 2
 
     .line 2
-    invoke-virtual {p0}, Lcom/vk/stories/view/e1;->x()Z
+    invoke-virtual {p0}, Lcom/vk/stories/view/BaseStoryView;->x()Z
 
     move-result v0
 
@@ -11106,7 +11106,7 @@
 
     .line 8
     :cond_2
-    invoke-super {p0}, Lcom/vk/stories/view/e1;->u()V
+    invoke-super {p0}, Lcom/vk/stories/view/BaseStoryView;->u()V
 
     return-void
 .end method

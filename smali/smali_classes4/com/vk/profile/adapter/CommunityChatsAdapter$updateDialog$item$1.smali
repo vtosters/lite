@@ -3,7 +3,7 @@
 .source "CommunityChatsAdapter.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/b;
+.implements Lkotlin/jvm/b/Functions2;
 
 
 # annotations
@@ -19,8 +19,8 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/b<",
-        "Lcom/vk/profile/adapter/items/chats/a;",
+        "Lkotlin/jvm/b/Functions2<",
+        "Lcom/vk/profile/adapter/items/chats/ChatBaseItem;",
         "Ljava/lang/Boolean;",
         ">;"
     }
@@ -46,7 +46,7 @@
 
 
 # virtual methods
-.method public final a(Lcom/vk/profile/adapter/items/chats/a;)Z
+.method public final a(Lcom/vk/profile/adapter/items/chats/ChatBaseItem;)Z
     .locals 2
 
     .line 1
@@ -87,9 +87,9 @@
     .locals 0
 
     .line 1
-    check-cast p1, Lcom/vk/profile/adapter/items/chats/a;
+    check-cast p1, Lcom/vk/profile/adapter/items/chats/ChatBaseItem;
 
-    invoke-virtual {p0, p1}, Lcom/vk/profile/adapter/CommunityChatsAdapter$updateDialog$item$1;->a(Lcom/vk/profile/adapter/items/chats/a;)Z
+    invoke-virtual {p0, p1}, Lcom/vk/profile/adapter/CommunityChatsAdapter$updateDialog$item$1;->a(Lcom/vk/profile/adapter/items/chats/ChatBaseItem;)Z
 
     move-result p1
 

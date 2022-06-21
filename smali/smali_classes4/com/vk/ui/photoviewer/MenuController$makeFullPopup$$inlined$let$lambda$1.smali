@@ -3,12 +3,12 @@
 .source "MenuController.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/a;
+.implements Lkotlin/jvm/b/Functions;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/ui/photoviewer/MenuController;->a(Lcom/vk/dto/common/AttachmentWithMedia;Lcom/vk/core/dialogs/actionspopup/a$b;IZ)Lcom/vk/core/dialogs/actionspopup/a;
+    value = Lcom/vk/ui/photoviewer/MenuController;->a(Lcom/vk/dto/common/AttachmentWithMedia;Lcom/vk/core/dialogs/actionspopup/ActionsPopup$b;IZ)Lcom/vk/core/dialogs/actionspopup/ActionsPopup;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -19,15 +19,15 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/a<",
-        "Lkotlin/m;",
+        "Lkotlin/jvm/b/Functions<",
+        "Lkotlin/Unit;",
         ">;"
     }
 .end annotation
 
 
 # instance fields
-.field final synthetic $builder$inlined:Lcom/vk/core/dialogs/actionspopup/a$b;
+.field final synthetic $builder$inlined:Lcom/vk/core/dialogs/actionspopup/ActionsPopup$b;
 
 .field final synthetic $isAdmin$inlined:Z
 
@@ -39,7 +39,7 @@
 
 
 # direct methods
-.method constructor <init>(Lcom/vk/ui/photoviewer/MenuController;ZILcom/vk/core/dialogs/actionspopup/a$b;Lcom/vk/dto/photo/Photo;)V
+.method constructor <init>(Lcom/vk/ui/photoviewer/MenuController;ZILcom/vk/core/dialogs/actionspopup/ActionsPopup$b;Lcom/vk/dto/photo/Photo;)V
     .locals 0
 
     iput-object p1, p0, Lcom/vk/ui/photoviewer/MenuController$makeFullPopup$$inlined$let$lambda$1;->this$0:Lcom/vk/ui/photoviewer/MenuController;
@@ -48,7 +48,7 @@
 
     iput p3, p0, Lcom/vk/ui/photoviewer/MenuController$makeFullPopup$$inlined$let$lambda$1;->$uid$inlined:I
 
-    iput-object p4, p0, Lcom/vk/ui/photoviewer/MenuController$makeFullPopup$$inlined$let$lambda$1;->$builder$inlined:Lcom/vk/core/dialogs/actionspopup/a$b;
+    iput-object p4, p0, Lcom/vk/ui/photoviewer/MenuController$makeFullPopup$$inlined$let$lambda$1;->$builder$inlined:Lcom/vk/core/dialogs/actionspopup/ActionsPopup$b;
 
     iput-object p5, p0, Lcom/vk/ui/photoviewer/MenuController$makeFullPopup$$inlined$let$lambda$1;->$photo$inlined:Lcom/vk/dto/photo/Photo;
 
@@ -67,7 +67,7 @@
     .line 1
     invoke-virtual {p0}, Lcom/vk/ui/photoviewer/MenuController$makeFullPopup$$inlined$let$lambda$1;->invoke()V
 
-    sget-object v0, Lkotlin/m;->a:Lkotlin/m;
+    sget-object v0, Lkotlin/Unit;->a:Lkotlin/Unit;
 
     return-object v0
 .end method

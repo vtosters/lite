@@ -3,7 +3,7 @@
 .source "ReplyImageViewSticker.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/a;
+.implements Lkotlin/jvm/b/Functions;
 
 
 # annotations
@@ -19,7 +19,7 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/a<",
+        "Lkotlin/jvm/b/Functions<",
         "Landroid/graphics/Bitmap;",
         ">;"
     }
@@ -57,13 +57,13 @@
 
     if-eqz v0, :cond_0
 
-    sget-object v1, Lcom/vk/attachpicker/stickers/reply/b;->v:Lcom/vk/attachpicker/stickers/reply/b$a;
+    sget-object v1, Lcom/vk/attachpicker/stickers/reply/ReplyStickerDelegate;->v:Lcom/vk/attachpicker/stickers/reply/ReplyStickerDelegate$a;
 
-    invoke-virtual {v1}, Lcom/vk/attachpicker/stickers/reply/b$a;->b()F
+    invoke-virtual {v1}, Lcom/vk/attachpicker/stickers/reply/ReplyStickerDelegate$a;->b()F
 
     move-result v1
 
-    invoke-static {v0, v1}, Lcom/vk/core/util/m;->a(Landroid/graphics/Bitmap;F)Landroid/graphics/Bitmap;
+    invoke-static {v0, v1}, Lcom/vk/core/util/BitmapUtils;->a(Landroid/graphics/Bitmap;F)Landroid/graphics/Bitmap;
 
     move-result-object v0
 

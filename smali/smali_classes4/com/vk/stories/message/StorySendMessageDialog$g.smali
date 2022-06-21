@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/stories/message/StorySendMessageDialog;-><init>(Landroid/content/Context;Lcom/vk/stories/message/f;Lcom/vk/stories/view/StoryView;)V
+    value = Lcom/vk/stories/message/StorySendMessageDialog;-><init>(Landroid/content/Context;Lcom/vk/stories/message/StorySendMessageContract5;Lcom/vk/stories/view/StoryView;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -41,7 +41,7 @@
     .line 1
     iget-object p1, p0, Lcom/vk/stories/message/StorySendMessageDialog$g;->a:Lcom/vk/stories/message/StorySendMessageDialog;
 
-    invoke-virtual {p1}, Lcom/vk/stories/message/StorySendMessageDialog;->getPresenter()Lcom/vk/stories/message/f;
+    invoke-virtual {p1}, Lcom/vk/stories/message/StorySendMessageDialog;->getPresenter()Lcom/vk/stories/message/StorySendMessageContract5;
 
     move-result-object p1
 
@@ -51,7 +51,7 @@
 
     if-eqz p2, :cond_0
 
-    invoke-interface {p1, p2}, Lcom/vk/stories/message/f;->a(Landroid/view/MotionEvent;)Z
+    invoke-interface {p1, p2}, Lcom/vk/stories/message/StorySendMessageContract5;->a(Landroid/view/MotionEvent;)Z
 
     move-result v0
 

@@ -1,5 +1,5 @@
 .class public final Lcom/vk/newsfeed/holders/attachments/DocumentThumbnailHolder$a;
-.super Lcom/vk/im/ui/utils/k/a;
+.super Lcom/vk/im/ui/utils/k/ObjectFactory;
 .source "DocumentThumbnailHolder.kt"
 
 
@@ -15,7 +15,7 @@
 
 .annotation system Ldalvik/annotation/Signature;
     value = {
-        "Lcom/vk/im/ui/utils/k/a<",
+        "Lcom/vk/im/ui/utils/k/ObjectFactory<",
         "Lcom/vk/newsfeed/holders/attachments/DocumentThumbnailHolder;",
         ">;"
     }
@@ -39,7 +39,7 @@
     .locals 1
 
     .line 1
-    invoke-direct {p0}, Lcom/vk/im/ui/utils/k/a;-><init>()V
+    invoke-direct {p0}, Lcom/vk/im/ui/utils/k/ObjectFactory;-><init>()V
 
     .line 2
     new-instance v0, Ljava/lang/ref/WeakReference;
@@ -73,13 +73,13 @@
 
     const-string v3, "it"
 
-    invoke-static {v0, v3}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v3}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     const/4 v3, 0x0
 
     const/4 v4, 0x2
 
-    invoke-direct {v2, v0, v3, v4, v1}, Lcom/vk/newsfeed/holders/attachments/DocumentThumbnailHolder;-><init>(Landroid/view/ViewGroup;ZILkotlin/jvm/internal/i;)V
+    invoke-direct {v2, v0, v3, v4, v1}, Lcom/vk/newsfeed/holders/attachments/DocumentThumbnailHolder;-><init>(Landroid/view/ViewGroup;ZILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     move-object v1, v2
 

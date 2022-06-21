@@ -12,7 +12,7 @@
 
 
 # static fields
-.field static final synthetic k:[Lkotlin/u/j;
+.field static final synthetic k:[Lkotlin/u/KProperty5;
 
 .field private static final l:I
 
@@ -50,7 +50,7 @@
 
 .field private final i:Landroid/widget/TextView;
 
-.field private final j:Lkotlin/e;
+.field private final j:Lkotlin/Lazy2;
 
 
 # direct methods
@@ -59,13 +59,13 @@
 
     const/4 v0, 0x1
 
-    new-array v1, v0, [Lkotlin/u/j;
+    new-array v1, v0, [Lkotlin/u/KProperty5;
 
     new-instance v2, Lkotlin/jvm/internal/PropertyReference1Impl;
 
     const-class v3, Lcom/vk/newsfeed/holders/poster/PosterButtonsHelper;
 
-    invoke-static {v3}, Lkotlin/jvm/internal/o;->a(Ljava/lang/Class;)Lkotlin/u/c;
+    invoke-static {v3}, Lkotlin/jvm/internal/Reflection;->a(Ljava/lang/Class;)Lkotlin/u/KClass;
 
     move-result-object v3
 
@@ -73,21 +73,21 @@
 
     const-string v5, "getButtonShowAnimatorListener()Lcom/vk/newsfeed/holders/poster/PosterButtonsHelper$buttonShowAnimatorListener$2$1;"
 
-    invoke-direct {v2, v3, v4, v5}, Lkotlin/jvm/internal/PropertyReference1Impl;-><init>(Lkotlin/u/e;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-direct {v2, v3, v4, v5}, Lkotlin/jvm/internal/PropertyReference1Impl;-><init>(Lkotlin/u/KDeclarationContainer;Ljava/lang/String;Ljava/lang/String;)V
 
-    invoke-static {v2}, Lkotlin/jvm/internal/o;->a(Lkotlin/jvm/internal/PropertyReference1;)Lkotlin/u/l;
+    invoke-static {v2}, Lkotlin/jvm/internal/Reflection;->a(Lkotlin/jvm/internal/PropertyReference1;)Lkotlin/u/KProperty2;
 
     const/4 v3, 0x0
 
     aput-object v2, v1, v3
 
-    sput-object v1, Lcom/vk/newsfeed/holders/poster/PosterButtonsHelper;->k:[Lkotlin/u/j;
+    sput-object v1, Lcom/vk/newsfeed/holders/poster/PosterButtonsHelper;->k:[Lkotlin/u/KProperty5;
 
     new-instance v1, Lcom/vk/newsfeed/holders/poster/PosterButtonsHelper$a;
 
     const/4 v2, 0x0
 
-    invoke-direct {v1, v2}, Lcom/vk/newsfeed/holders/poster/PosterButtonsHelper$a;-><init>(Lkotlin/jvm/internal/i;)V
+    invoke-direct {v1, v2}, Lcom/vk/newsfeed/holders/poster/PosterButtonsHelper$a;-><init>(Lkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     sput-object v1, Lcom/vk/newsfeed/holders/poster/PosterButtonsHelper;->s:Lcom/vk/newsfeed/holders/poster/PosterButtonsHelper$a;
 
@@ -135,11 +135,11 @@
     new-array v1, v1, [I
 
     .line 6
-    sget-object v2, Lcom/vk/core/util/i;->a:Landroid/content/Context;
+    sget-object v2, Lcom/vk/core/util/AppContextHolder;->a:Landroid/content/Context;
 
     const-string v4, "AppContextHolder.context"
 
-    invoke-static {v2, v4}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v2, v4}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     const v5, 0x7f06003c
 
@@ -150,9 +150,9 @@
     aput v2, v1, v3
 
     .line 7
-    sget-object v2, Lcom/vk/core/util/i;->a:Landroid/content/Context;
+    sget-object v2, Lcom/vk/core/util/AppContextHolder;->a:Landroid/content/Context;
 
-    invoke-static {v2, v4}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v2, v4}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-static {v2, v5}, Lcom/vk/core/util/ContextExtKt;->a(Landroid/content/Context;I)I
 
@@ -166,7 +166,7 @@
     return-void
 .end method
 
-.method public constructor <init>(Lcom/vk/newsfeed/holders/poster/a;)V
+.method public constructor <init>(Lcom/vk/newsfeed/holders/poster/PosterHolder;)V
     .locals 17
 
     move-object/from16 v0, p0
@@ -197,7 +197,7 @@
 
     const-string v4, "holder.itemView"
 
-    invoke-static {v3, v4}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v3, v4}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {v3}, Landroid/view/View;->getContext()Landroid/content/Context;
 
@@ -217,7 +217,7 @@
 
     const-string v5, "tv.context"
 
-    invoke-static {v3, v5}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v3, v5}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     const v6, 0x7f08023c
 
@@ -245,7 +245,7 @@
 
     move-result-object v6
 
-    invoke-static {v6, v5}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v6, v5}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     const v7, 0x7f07024f
 
@@ -258,7 +258,7 @@
 
     move-result-object v7
 
-    invoke-static {v7, v5}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v7, v5}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     const v8, 0x7f070250
 
@@ -279,7 +279,7 @@
 
     move-result-object v6
 
-    invoke-static {v6, v5}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v6, v5}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     const v7, 0x7f060035
 
@@ -334,7 +334,7 @@
 
     iget-object v9, v1, Landroidx/recyclerview/widget/RecyclerView$ViewHolder;->itemView:Landroid/view/View;
 
-    invoke-static {v9, v4}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v9, v4}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {v9}, Landroid/view/View;->getContext()Landroid/content/Context;
 
@@ -343,14 +343,14 @@
     invoke-direct {v2, v9}, Landroidx/appcompat/widget/AppCompatTextView;-><init>(Landroid/content/Context;)V
 
     .line 24
-    new-instance v9, Lcom/vk/core/drawable/j;
+    new-instance v9, Lcom/vk/core/drawable/SectionBackground;
 
     .line 25
     invoke-virtual {v2}, Landroid/widget/TextView;->getContext()Landroid/content/Context;
 
     move-result-object v12
 
-    invoke-static {v12, v5}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v12, v5}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     const v13, 0x7f0801ec
 
@@ -363,13 +363,13 @@
     move-object v11, v9
 
     .line 26
-    invoke-direct/range {v11 .. v16}, Lcom/vk/core/drawable/j;-><init>(Landroid/content/Context;IIII)V
+    invoke-direct/range {v11 .. v16}, Lcom/vk/core/drawable/SectionBackground;-><init>(Landroid/content/Context;IIII)V
 
     .line 27
-    invoke-virtual {v9}, Lcom/vk/core/drawable/j;->c()V
+    invoke-virtual {v9}, Lcom/vk/core/drawable/SectionBackground;->c()V
 
     .line 28
-    invoke-virtual {v9, v8}, Lcom/vk/core/drawable/j;->a(Z)V
+    invoke-virtual {v9, v8}, Lcom/vk/core/drawable/SectionBackground;->a(Z)V
 
     .line 29
     invoke-virtual {v2, v9}, Landroid/widget/TextView;->setBackground(Landroid/graphics/drawable/Drawable;)V
@@ -444,7 +444,7 @@
 
     move-result-object v3
 
-    invoke-static {v3, v5}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v3, v5}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     const v5, 0x7f0600ec
 
@@ -463,7 +463,7 @@
     .line 42
     iget-object v2, v1, Landroidx/recyclerview/widget/RecyclerView$ViewHolder;->itemView:Landroid/view/View;
 
-    invoke-static {v2, v4}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v2, v4}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {v2}, Landroid/view/View;->getContext()Landroid/content/Context;
 
@@ -520,7 +520,7 @@
 
     const-string v5, "authorText"
 
-    invoke-static {v4, v5}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v4, v5}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     iget-object v5, v0, Lcom/vk/newsfeed/holders/poster/PosterButtonsHelper;->h:Landroid/widget/LinearLayout;
 
@@ -595,11 +595,11 @@
 
     invoke-direct {v1, v0}, Lcom/vk/newsfeed/holders/poster/PosterButtonsHelper$buttonShowAnimatorListener$2;-><init>(Lcom/vk/newsfeed/holders/poster/PosterButtonsHelper;)V
 
-    invoke-static {v1}, Lkotlin/g;->a(Lkotlin/jvm/b/a;)Lkotlin/e;
+    invoke-static {v1}, Lkotlin/g;->a(Lkotlin/jvm/b/Functions;)Lkotlin/Lazy2;
 
     move-result-object v1
 
-    iput-object v1, v0, Lcom/vk/newsfeed/holders/poster/PosterButtonsHelper;->j:Lkotlin/e;
+    iput-object v1, v0, Lcom/vk/newsfeed/holders/poster/PosterButtonsHelper;->j:Lkotlin/Lazy2;
 
     return-void
 
@@ -773,7 +773,7 @@
 
     const-string v6, "authorText"
 
-    invoke-static {v4, v6}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v4, v6}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {v4}, Landroid/widget/TextView;->getText()Ljava/lang/CharSequence;
 
@@ -781,7 +781,7 @@
 
     const-string v6, "authorText.text"
 
-    invoke-static {v4, v6}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v4, v6}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-interface {v4}, Ljava/lang/CharSequence;->length()I
 
@@ -893,15 +893,15 @@
 .method private final k()Lcom/vk/newsfeed/holders/poster/PosterButtonsHelper$buttonShowAnimatorListener$2$a;
     .locals 3
 
-    iget-object v0, p0, Lcom/vk/newsfeed/holders/poster/PosterButtonsHelper;->j:Lkotlin/e;
+    iget-object v0, p0, Lcom/vk/newsfeed/holders/poster/PosterButtonsHelper;->j:Lkotlin/Lazy2;
 
-    sget-object v1, Lcom/vk/newsfeed/holders/poster/PosterButtonsHelper;->k:[Lkotlin/u/j;
+    sget-object v1, Lcom/vk/newsfeed/holders/poster/PosterButtonsHelper;->k:[Lkotlin/u/KProperty5;
 
     const/4 v2, 0x0
 
     aget-object v1, v1, v2
 
-    invoke-interface {v0}, Lkotlin/e;->getValue()Ljava/lang/Object;
+    invoke-interface {v0}, Lkotlin/Lazy2;->getValue()Ljava/lang/Object;
 
     move-result-object v0
 
@@ -1030,11 +1030,11 @@
 
     move-result p1
 
-    invoke-static {}, Lcom/vtosters/lite/i0/c;->d()Lb/h/h/d/c;
+    invoke-static {}, Lcom/vtosters/lite/auth/VKAccountManager;->d()Lcom/vk/auth/api/VKAccount;
 
     move-result-object v2
 
-    invoke-virtual {v2}, Lb/h/h/d/c;->D0()I
+    invoke-virtual {v2}, Lcom/vk/auth/api/VKAccount;->D0()I
 
     move-result v2
 
@@ -1101,7 +1101,7 @@
 
     const-string v2, "authorText"
 
-    invoke-static {p1, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {p1}, Landroid/widget/TextView;->getText()Ljava/lang/CharSequence;
 
@@ -1109,7 +1109,7 @@
 
     const-string v2, "authorText.text"
 
-    invoke-static {p1, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-interface {p1}, Ljava/lang/CharSequence;->length()I
 

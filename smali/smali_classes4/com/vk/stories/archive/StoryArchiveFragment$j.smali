@@ -135,13 +135,13 @@
     .line 4
     iget-object p2, p0, Lcom/vk/stories/archive/StoryArchiveFragment$j;->b:Lcom/vk/stories/archive/StoryArchiveFragment;
 
-    invoke-static {p2}, Lcom/vk/stories/archive/StoryArchiveFragment;->a(Lcom/vk/stories/archive/StoryArchiveFragment;)Lcom/vk/stories/archive/list/a;
+    invoke-static {p2}, Lcom/vk/stories/archive/StoryArchiveFragment;->a(Lcom/vk/stories/archive/StoryArchiveFragment;)Lcom/vk/stories/archive/list/StoryArchiveAdapter;
 
     move-result-object p2
 
     if-eqz p2, :cond_0
 
-    invoke-virtual {p2}, Lcom/vk/lists/i0;->getItemCount()I
+    invoke-virtual {p2}, Lcom/vk/lists/SimpleAdapter;->getItemCount()I
 
     move-result p2
 
@@ -161,17 +161,17 @@
     :cond_1
     iget-object p2, p0, Lcom/vk/stories/archive/StoryArchiveFragment$j;->b:Lcom/vk/stories/archive/StoryArchiveFragment;
 
-    invoke-static {p2}, Lcom/vk/stories/archive/StoryArchiveFragment;->a(Lcom/vk/stories/archive/StoryArchiveFragment;)Lcom/vk/stories/archive/list/a;
+    invoke-static {p2}, Lcom/vk/stories/archive/StoryArchiveFragment;->a(Lcom/vk/stories/archive/StoryArchiveFragment;)Lcom/vk/stories/archive/list/StoryArchiveAdapter;
 
     move-result-object p2
 
     if-eqz p2, :cond_2
 
-    invoke-virtual {p2, p1}, Lcom/vk/lists/i0;->k(I)Ljava/lang/Object;
+    invoke-virtual {p2, p1}, Lcom/vk/lists/SimpleAdapter;->k(I)Ljava/lang/Object;
 
     move-result-object p1
 
-    check-cast p1, Lcom/vk/common/i/b;
+    check-cast p1, Lcom/vk/common/i/RecyclerItem;
 
     goto :goto_1
 
@@ -179,14 +179,14 @@
     move-object p1, v0
 
     :goto_1
-    instance-of p2, p1, Lcom/vk/stories/archive/e/b;
+    instance-of p2, p1, Lcom/vk/stories/archive/e/StoryArchiveItem;
 
     if-nez p2, :cond_3
 
     move-object p1, v0
 
     :cond_3
-    check-cast p1, Lcom/vk/stories/archive/e/b;
+    check-cast p1, Lcom/vk/stories/archive/e/StoryArchiveItem;
 
     if-eqz p1, :cond_4
 
@@ -199,7 +199,7 @@
 
     if-eqz p2, :cond_4
 
-    invoke-virtual {p1}, Lcom/vk/stories/archive/e/b;->e()Ljava/lang/String;
+    invoke-virtual {p1}, Lcom/vk/stories/archive/e/StoryArchiveItem;->e()Ljava/lang/String;
 
     move-result-object p1
 

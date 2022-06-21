@@ -3,7 +3,7 @@
 .source "SourcesNotificationsSettingsFragment.kt"
 
 # interfaces
-.implements Lcom/vk/common/g/g;
+.implements Lcom/vk/common/g/VoidF1;
 
 
 # annotations
@@ -22,7 +22,7 @@
         "Ljava/lang/Object;",
         ">",
         "Ljava/lang/Object;",
-        "Lcom/vk/common/g/g<",
+        "Lcom/vk/common/g/VoidF1<",
         "Lcom/vk/dto/user/UserProfile;",
         ">;"
     }
@@ -50,11 +50,11 @@
     .locals 1
 
     .line 2
-    new-instance v0, Lcom/vk/profile/ui/c$z;
+    new-instance v0, Lcom/vk/profile/ui/BaseProfileFragment$z;
 
     iget p1, p1, Lcom/vk/dto/user/UserProfile;->b:I
 
-    invoke-direct {v0, p1}, Lcom/vk/profile/ui/c$z;-><init>(I)V
+    invoke-direct {v0, p1}, Lcom/vk/profile/ui/BaseProfileFragment$z;-><init>(I)V
 
     iget-object p1, p0, Lcom/vk/notifications/SourcesNotificationsSettingsFragment$Adapter$a;->a:Lcom/vk/notifications/SourcesNotificationsSettingsFragment$Adapter;
 
@@ -62,7 +62,7 @@
 
     move-result-object p1
 
-    invoke-virtual {v0, p1}, Lcom/vk/navigation/o;->a(Landroid/content/Context;)V
+    invoke-virtual {v0, p1}, Lcom/vk/navigation/Navigator;->a(Landroid/content/Context;)V
 
     return-void
 .end method

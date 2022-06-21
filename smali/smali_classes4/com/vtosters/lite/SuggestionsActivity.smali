@@ -15,7 +15,7 @@
 
 .field private e:Landroid/view/View;
 
-.field private f:Lcom/vtosters/lite/ui/o;
+.field private f:Lcom/vtosters/lite/ui/ActionBarProgressDrawable;
 
 
 # direct methods
@@ -64,11 +64,11 @@
     .locals 1
 
     .line 1
-    invoke-static {}, Lcom/vtosters/lite/i0/c;->d()Lb/h/h/d/c;
+    invoke-static {}, Lcom/vtosters/lite/auth/VKAccountManager;->d()Lcom/vk/auth/api/VKAccount;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lb/h/h/d/c;->K()I
+    invoke-virtual {v0}, Lcom/vk/auth/api/VKAccount;->K()I
 
     move-result v0
 
@@ -77,20 +77,20 @@
     and-int/2addr p1, v0
 
     .line 2
-    invoke-static {}, Lcom/vtosters/lite/i0/c;->c()Lcom/vk/auth/l;
+    invoke-static {}, Lcom/vtosters/lite/auth/VKAccountManager;->c()Lcom/vk/auth/VKAccountEditor;
 
     move-result-object v0
 
-    invoke-virtual {v0, p1}, Lcom/vk/auth/l;->a(I)Lcom/vk/auth/l;
+    invoke-virtual {v0, p1}, Lcom/vk/auth/VKAccountEditor;->a(I)Lcom/vk/auth/VKAccountEditor;
 
-    invoke-virtual {v0}, Lcom/vk/auth/l;->a()Z
+    invoke-virtual {v0}, Lcom/vk/auth/VKAccountEditor;->a()Z
 
     .line 3
-    invoke-static {p1}, Lcom/vk/api/account/u;->b(I)Lcom/vk/api/account/u;
+    invoke-static {p1}, Lcom/vk/api/account/AccountSetInfo;->b(I)Lcom/vk/api/account/AccountSetInfo;
 
     move-result-object p1
 
-    invoke-virtual {p1}, Lcom/vk/api/base/d;->c()Lio/reactivex/disposables/b;
+    invoke-virtual {p1}, Lcom/vk/api/base/ApiRequest;->c()Lio/reactivex/disposables/Disposable;
 
     return-void
 .end method
@@ -117,15 +117,15 @@
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/vk/core/fragments/FragmentManagerImpl;->i()Lcom/vk/core/fragments/f;
+    invoke-virtual {v0}, Lcom/vk/core/fragments/FragmentManagerImpl;->i()Lcom/vk/core/fragments/FragmentManagerImplSimple;
 
     move-result-object v0
 
-    new-instance v4, Lcom/vtosters/lite/fragments/d2;
+    new-instance v4, Lcom/vtosters/lite/general/fragments/SuggestionsRecommendationsFragment;
 
-    invoke-direct {v4}, Lcom/vtosters/lite/fragments/d2;-><init>()V
+    invoke-direct {v4}, Lcom/vtosters/lite/general/fragments/SuggestionsRecommendationsFragment;-><init>()V
 
-    invoke-virtual {v0, v1, v4}, Lcom/vk/core/fragments/f;->b(ILcom/vk/core/fragments/FragmentImpl;)V
+    invoke-virtual {v0, v1, v4}, Lcom/vk/core/fragments/FragmentManagerImplSimple;->b(ILcom/vk/core/fragments/FragmentImpl;)V
 
     const v0, 0x7f120c55
 
@@ -203,7 +203,7 @@
 
     invoke-virtual {v0}, Lcom/vk/friends/recommendations/FriendsRecommendationsFragment$a;->h()Lcom/vk/friends/recommendations/FriendsRecommendationsFragment$a;
 
-    invoke-virtual {v0}, Lcom/vk/navigation/o;->a()Lcom/vk/core/fragments/FragmentImpl;
+    invoke-virtual {v0}, Lcom/vk/navigation/Navigator;->a()Lcom/vk/core/fragments/FragmentImpl;
 
     move-result-object v0
 
@@ -217,13 +217,13 @@
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/vk/core/fragments/FragmentManagerImpl;->i()Lcom/vk/core/fragments/f;
+    invoke-virtual {v0}, Lcom/vk/core/fragments/FragmentManagerImpl;->i()Lcom/vk/core/fragments/FragmentManagerImplSimple;
 
     move-result-object v0
 
     iget-object v2, p0, Lcom/vtosters/lite/SuggestionsActivity;->c:Lcom/vk/friends/recommendations/FriendsRecommendationsFragment;
 
-    invoke-virtual {v0, v1, v2}, Lcom/vk/core/fragments/f;->b(ILcom/vk/core/fragments/FragmentImpl;)V
+    invoke-virtual {v0, v1, v2}, Lcom/vk/core/fragments/FragmentManagerImplSimple;->b(ILcom/vk/core/fragments/FragmentImpl;)V
 
     const v0, 0x7f120407
 
@@ -254,11 +254,11 @@
     .line 19
     :cond_3
     :goto_0
-    iget-object v0, p0, Lcom/vtosters/lite/SuggestionsActivity;->f:Lcom/vtosters/lite/ui/o;
+    iget-object v0, p0, Lcom/vtosters/lite/SuggestionsActivity;->f:Lcom/vtosters/lite/ui/ActionBarProgressDrawable;
 
     iget v1, p0, Lcom/vtosters/lite/SuggestionsActivity;->d:I
 
-    invoke-virtual {v0, v1}, Lcom/vtosters/lite/ui/o;->b(I)V
+    invoke-virtual {v0, v1}, Lcom/vtosters/lite/ui/ActionBarProgressDrawable;->b(I)V
 
     return-void
 .end method
@@ -362,7 +362,7 @@
 
     invoke-direct {v0, p0, v1}, Lcom/vtosters/lite/SuggestionsActivity$a;-><init>(Lcom/vtosters/lite/SuggestionsActivity;Landroid/graphics/drawable/Drawable;)V
 
-    iput-object v0, p0, Lcom/vtosters/lite/SuggestionsActivity;->f:Lcom/vtosters/lite/ui/o;
+    iput-object v0, p0, Lcom/vtosters/lite/SuggestionsActivity;->f:Lcom/vtosters/lite/ui/ActionBarProgressDrawable;
 
     .line 6
     invoke-virtual {p0, p1}, Landroidx/appcompat/app/AppCompatActivity;->setSupportActionBar(Landroidx/appcompat/widget/Toolbar;)V
@@ -403,18 +403,18 @@
     invoke-virtual {p1, v0}, Landroid/view/View;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
     .line 10
-    iget-object p1, p0, Lcom/vtosters/lite/SuggestionsActivity;->f:Lcom/vtosters/lite/ui/o;
+    iget-object p1, p0, Lcom/vtosters/lite/SuggestionsActivity;->f:Lcom/vtosters/lite/ui/ActionBarProgressDrawable;
 
     const/4 v0, 0x2
 
-    invoke-virtual {p1, v0}, Lcom/vtosters/lite/ui/o;->c(I)V
+    invoke-virtual {p1, v0}, Lcom/vtosters/lite/ui/ActionBarProgressDrawable;->c(I)V
 
     .line 11
-    iget-object p1, p0, Lcom/vtosters/lite/SuggestionsActivity;->f:Lcom/vtosters/lite/ui/o;
+    iget-object p1, p0, Lcom/vtosters/lite/SuggestionsActivity;->f:Lcom/vtosters/lite/ui/ActionBarProgressDrawable;
 
     const/4 v0, 0x0
 
-    invoke-virtual {p1, v0}, Lcom/vtosters/lite/ui/o;->a(I)V
+    invoke-virtual {p1, v0}, Lcom/vtosters/lite/ui/ActionBarProgressDrawable;->a(I)V
 
     .line 12
     invoke-virtual {p0}, Landroidx/appcompat/app/AppCompatActivity;->getSupportActionBar()Landroidx/appcompat/app/ActionBar;
@@ -428,7 +428,7 @@
 
     move-result-object p1
 
-    iget-object v1, p0, Lcom/vtosters/lite/SuggestionsActivity;->f:Lcom/vtosters/lite/ui/o;
+    iget-object v1, p0, Lcom/vtosters/lite/SuggestionsActivity;->f:Lcom/vtosters/lite/ui/ActionBarProgressDrawable;
 
     invoke-virtual {p1, v1}, Landroidx/appcompat/app/ActionBar;->setBackgroundDrawable(Landroid/graphics/drawable/Drawable;)V
 

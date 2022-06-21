@@ -3,7 +3,7 @@
 .source "ChatFragment.kt"
 
 # interfaces
-.implements Lcom/vk/im/ui/components/msg_list/c;
+.implements Lcom/vk/im/ui/components/msg_list/MsgListComponentCallback;
 
 
 # annotations
@@ -50,7 +50,7 @@
 
     move-result-object v0
 
-    invoke-static {v0}, Lcom/vk/core/util/l0;->a(Landroid/view/View;)V
+    invoke-static {v0}, Lcom/vk/core/util/KeyboardUtils;->a(Landroid/view/View;)V
 
     .line 2
     iget-object v0, p0, Lcom/vk/im/ui/fragments/ChatFragment$i;->a:Lcom/vk/im/ui/fragments/ChatFragment;
@@ -71,7 +71,7 @@
     .line 13
     iget-object p1, p0, Lcom/vk/im/ui/fragments/ChatFragment$i;->a:Lcom/vk/im/ui/fragments/ChatFragment;
 
-    invoke-static {p1}, Lcom/vk/im/ui/fragments/ChatFragment;->c(Lcom/vk/im/ui/fragments/ChatFragment;)Lcom/vk/im/engine/reporters/c;
+    invoke-static {p1}, Lcom/vk/im/ui/fragments/ChatFragment;->c(Lcom/vk/im/ui/fragments/ChatFragment;)Lcom/vk/im/engine/reporters/BotKeyboardReporter;
 
     move-result-object p1
 
@@ -83,7 +83,7 @@
 
     const-string v0, "card_open_photo"
 
-    invoke-virtual {p1, p2, v0, p3}, Lcom/vk/im/engine/reporters/c;->a(ILjava/lang/String;I)V
+    invoke-virtual {p1, p2, v0, p3}, Lcom/vk/im/engine/reporters/BotKeyboardReporter;->a(ILjava/lang/String;I)V
 
     return-void
 .end method
@@ -105,11 +105,11 @@
     .line 1
     iget-object v0, p0, Lcom/vk/im/ui/fragments/ChatFragment$i;->a:Lcom/vk/im/ui/fragments/ChatFragment;
 
-    invoke-static {v0}, Lcom/vk/im/ui/fragments/ChatFragment;->l(Lcom/vk/im/ui/fragments/ChatFragment;)Lcom/vk/im/ui/q/h/f/a;
+    invoke-static {v0}, Lcom/vk/im/ui/fragments/ChatFragment;->l(Lcom/vk/im/ui/fragments/ChatFragment;)Lcom/vk/im/ui/q/h/f/IMsgSendVc;
 
     move-result-object v0
 
-    invoke-interface {v0, p1}, Lcom/vk/im/ui/q/h/f/a;->a(Lcom/vk/im/engine/models/messages/Msg;)V
+    invoke-interface {v0, p1}, Lcom/vk/im/ui/q/h/f/IMsgSendVc;->a(Lcom/vk/im/engine/models/messages/Msg;)V
 
     return-void
 .end method
@@ -136,17 +136,17 @@
     return-void
 .end method
 
-.method public a(Lcom/vk/im/engine/models/messages/e$b;)V
+.method public a(Lcom/vk/im/engine/models/messages/MsgSendSource$b;)V
     .locals 1
 
     .line 9
     iget-object v0, p0, Lcom/vk/im/ui/fragments/ChatFragment$i;->a:Lcom/vk/im/ui/fragments/ChatFragment;
 
-    invoke-static {v0}, Lcom/vk/im/ui/fragments/ChatFragment;->l(Lcom/vk/im/ui/fragments/ChatFragment;)Lcom/vk/im/ui/q/h/f/a;
+    invoke-static {v0}, Lcom/vk/im/ui/fragments/ChatFragment;->l(Lcom/vk/im/ui/fragments/ChatFragment;)Lcom/vk/im/ui/q/h/f/IMsgSendVc;
 
     move-result-object v0
 
-    invoke-interface {v0, p1}, Lcom/vk/im/ui/q/h/f/a;->a(Lcom/vk/im/engine/models/messages/e$b;)V
+    invoke-interface {v0, p1}, Lcom/vk/im/ui/q/h/f/IMsgSendVc;->a(Lcom/vk/im/engine/models/messages/MsgSendSource$b;)V
 
     return-void
 .end method
@@ -157,11 +157,11 @@
     .line 10
     iget-object v0, p0, Lcom/vk/im/ui/fragments/ChatFragment$i;->a:Lcom/vk/im/ui/fragments/ChatFragment;
 
-    invoke-static {v0}, Lcom/vk/im/ui/fragments/ChatFragment;->d(Lcom/vk/im/ui/fragments/ChatFragment;)Lcom/vk/im/ui/p/b;
+    invoke-static {v0}, Lcom/vk/im/ui/fragments/ChatFragment;->d(Lcom/vk/im/ui/fragments/ChatFragment;)Lcom/vk/im/ui/p/ImBridge8;
 
     move-result-object v0
 
-    invoke-interface {v0}, Lcom/vk/im/ui/p/b;->o()Lcom/vk/im/ui/p/a;
+    invoke-interface {v0}, Lcom/vk/im/ui/p/ImBridge8;->o()Lcom/vk/im/ui/p/ImBridge1;
 
     move-result-object v0
 
@@ -173,14 +173,14 @@
 
     const-string v2, "requireActivity()"
 
-    invoke-static {v1, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    invoke-interface {v0, v1, p1}, Lcom/vk/im/ui/p/a;->a(Landroid/content/Context;Ljava/lang/String;)V
+    invoke-interface {v0, v1, p1}, Lcom/vk/im/ui/p/ImBridge1;->a(Landroid/content/Context;Ljava/lang/String;)V
 
     .line 11
     iget-object p1, p0, Lcom/vk/im/ui/fragments/ChatFragment$i;->a:Lcom/vk/im/ui/fragments/ChatFragment;
 
-    invoke-static {p1}, Lcom/vk/im/ui/fragments/ChatFragment;->c(Lcom/vk/im/ui/fragments/ChatFragment;)Lcom/vk/im/engine/reporters/c;
+    invoke-static {p1}, Lcom/vk/im/ui/fragments/ChatFragment;->c(Lcom/vk/im/ui/fragments/ChatFragment;)Lcom/vk/im/engine/reporters/BotKeyboardReporter;
 
     move-result-object p1
 
@@ -192,7 +192,7 @@
 
     const-string v1, "card_open_link"
 
-    invoke-virtual {p1, v0, v1, p2}, Lcom/vk/im/engine/reporters/c;->a(ILjava/lang/String;I)V
+    invoke-virtual {p1, v0, v1, p2}, Lcom/vk/im/engine/reporters/BotKeyboardReporter;->a(ILjava/lang/String;I)V
 
     return-void
 .end method

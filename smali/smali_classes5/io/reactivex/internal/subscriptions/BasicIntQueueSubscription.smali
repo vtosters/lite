@@ -3,7 +3,7 @@
 .source "BasicIntQueueSubscription.java"
 
 # interfaces
-.implements Lc/a/a0/b/h;
+.implements Lc/a/a0/b/QueueSubscription;
 
 
 # annotations
@@ -13,7 +13,7 @@
         "Ljava/lang/Object;",
         ">",
         "Ljava/util/concurrent/atomic/AtomicInteger;",
-        "Lc/a/a0/b/h<",
+        "Lc/a/a0/b/QueueSubscription<",
         "TT;>;"
     }
 .end annotation

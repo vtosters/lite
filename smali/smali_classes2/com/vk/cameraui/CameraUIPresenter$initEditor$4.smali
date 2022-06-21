@@ -48,11 +48,11 @@
 
     move-result-object v0
 
-    invoke-interface {v0}, Lcom/vk/cameraui/CameraUI$e;->getPositions()Lcom/vk/cameraui/e;
+    invoke-interface {v0}, Lcom/vk/cameraui/CameraUI$e;->getPositions()Lcom/vk/cameraui/CameraUIPositions;
 
     move-result-object v0
 
-    invoke-interface {v0}, Lcom/vk/cameraui/e;->a()Lcom/vk/stories/editor/base/d0;
+    invoke-interface {v0}, Lcom/vk/cameraui/CameraUIPositions;->a()Lcom/vk/stories/editor/base/BaseCameraEditorView;
 
     move-result-object v0
 
@@ -81,10 +81,10 @@
     .line 6
     new-instance v5, Lcom/vk/cameraui/CameraUIPresenter$initEditor$4$1;
 
-    invoke-direct {v5, p0, v0}, Lcom/vk/cameraui/CameraUIPresenter$initEditor$4$1;-><init>(Lcom/vk/cameraui/CameraUIPresenter$initEditor$4;Lcom/vk/stories/editor/base/d0;)V
+    invoke-direct {v5, p0, v0}, Lcom/vk/cameraui/CameraUIPresenter$initEditor$4$1;-><init>(Lcom/vk/cameraui/CameraUIPresenter$initEditor$4;Lcom/vk/stories/editor/base/BaseCameraEditorView;)V
 
     .line 7
-    invoke-static {v1, v2, v3, v4, v5}, Lcom/vk/cameraui/CameraUIPresenter;->a(Lcom/vk/cameraui/CameraUIPresenter;Lcom/vk/dto/stories/model/web/StoryBox;FFLkotlin/jvm/b/b;)V
+    invoke-static {v1, v2, v3, v4, v5}, Lcom/vk/cameraui/CameraUIPresenter;->a(Lcom/vk/cameraui/CameraUIPresenter;Lcom/vk/dto/stories/model/web/StoryBox;FFLkotlin/jvm/b/Functions2;)V
 
     :cond_0
     return-void

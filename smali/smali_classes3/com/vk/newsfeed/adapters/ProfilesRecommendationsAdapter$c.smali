@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/newsfeed/adapters/ProfilesRecommendationsAdapter;->a(Lcom/vk/newsfeed/holders/k;)Lcom/vtosters/lite/ui/b0/i;
+    value = Lcom/vk/newsfeed/adapters/ProfilesRecommendationsAdapter;->a(Lcom/vk/newsfeed/holders/BaseRecommendedProfileHolder;)Lcom/vtosters/lite/ui/holder/RecyclerHolder;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,16 +18,16 @@
 
 
 # instance fields
-.field final synthetic a:Lcom/vk/newsfeed/holders/k;
+.field final synthetic a:Lcom/vk/newsfeed/holders/BaseRecommendedProfileHolder;
 
 .field final synthetic b:Lcom/vk/newsfeed/adapters/ProfilesRecommendationsAdapter;
 
 
 # direct methods
-.method constructor <init>(Lcom/vk/newsfeed/holders/k;Lcom/vk/newsfeed/adapters/ProfilesRecommendationsAdapter;)V
+.method constructor <init>(Lcom/vk/newsfeed/holders/BaseRecommendedProfileHolder;Lcom/vk/newsfeed/adapters/ProfilesRecommendationsAdapter;)V
     .locals 0
 
-    iput-object p1, p0, Lcom/vk/newsfeed/adapters/ProfilesRecommendationsAdapter$c;->a:Lcom/vk/newsfeed/holders/k;
+    iput-object p1, p0, Lcom/vk/newsfeed/adapters/ProfilesRecommendationsAdapter$c;->a:Lcom/vk/newsfeed/holders/BaseRecommendedProfileHolder;
 
     iput-object p2, p0, Lcom/vk/newsfeed/adapters/ProfilesRecommendationsAdapter$c;->b:Lcom/vk/newsfeed/adapters/ProfilesRecommendationsAdapter;
 
@@ -42,9 +42,9 @@
     .locals 3
 
     .line 1
-    iget-object p1, p0, Lcom/vk/newsfeed/adapters/ProfilesRecommendationsAdapter$c;->a:Lcom/vk/newsfeed/holders/k;
+    iget-object p1, p0, Lcom/vk/newsfeed/adapters/ProfilesRecommendationsAdapter$c;->a:Lcom/vk/newsfeed/holders/BaseRecommendedProfileHolder;
 
-    invoke-virtual {p1}, Lcom/vtosters/lite/ui/b0/i;->c0()Ljava/lang/Object;
+    invoke-virtual {p1}, Lcom/vtosters/lite/ui/holder/RecyclerHolder;->c0()Ljava/lang/Object;
 
     move-result-object p1
 
@@ -61,13 +61,13 @@
     .line 2
     iget-object v0, p0, Lcom/vk/newsfeed/adapters/ProfilesRecommendationsAdapter$c;->b:Lcom/vk/newsfeed/adapters/ProfilesRecommendationsAdapter;
 
-    invoke-virtual {v0}, Lcom/vk/lists/i0;->f()Ljava/util/List;
+    invoke-virtual {v0}, Lcom/vk/lists/SimpleAdapter;->f()Ljava/util/List;
 
     move-result-object v0
 
-    iget-object v1, p0, Lcom/vk/newsfeed/adapters/ProfilesRecommendationsAdapter$c;->a:Lcom/vk/newsfeed/holders/k;
+    iget-object v1, p0, Lcom/vk/newsfeed/adapters/ProfilesRecommendationsAdapter$c;->a:Lcom/vk/newsfeed/holders/BaseRecommendedProfileHolder;
 
-    invoke-virtual {v1}, Lcom/vtosters/lite/ui/b0/i;->c0()Ljava/lang/Object;
+    invoke-virtual {v1}, Lcom/vtosters/lite/ui/holder/RecyclerHolder;->c0()Ljava/lang/Object;
 
     move-result-object v1
 
@@ -81,7 +81,7 @@
     .line 4
     iget-object v0, p0, Lcom/vk/newsfeed/adapters/ProfilesRecommendationsAdapter$c;->b:Lcom/vk/newsfeed/adapters/ProfilesRecommendationsAdapter;
 
-    invoke-virtual {v0}, Lcom/vk/lists/i0;->f()Ljava/util/List;
+    invoke-virtual {v0}, Lcom/vk/lists/SimpleAdapter;->f()Ljava/util/List;
 
     move-result-object v0
 
@@ -114,9 +114,9 @@
 
     if-eqz v0, :cond_1
 
-    iget-object v1, p0, Lcom/vk/newsfeed/adapters/ProfilesRecommendationsAdapter$c;->a:Lcom/vk/newsfeed/holders/k;
+    iget-object v1, p0, Lcom/vk/newsfeed/adapters/ProfilesRecommendationsAdapter$c;->a:Lcom/vk/newsfeed/holders/BaseRecommendedProfileHolder;
 
-    invoke-virtual {v1}, Lcom/vtosters/lite/ui/b0/i;->c0()Ljava/lang/Object;
+    invoke-virtual {v1}, Lcom/vtosters/lite/ui/holder/RecyclerHolder;->c0()Ljava/lang/Object;
 
     move-result-object v1
 
@@ -124,18 +124,18 @@
 
     const-string v2, "item"
 
-    invoke-static {v1, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-interface {v0, v1}, Lcom/vk/newsfeed/adapters/ProfilesRecommendationsAdapter$b;->a(Lcom/vk/dto/common/RecommendedProfile;)V
 
     .line 7
     :cond_1
     :goto_0
-    new-instance v0, Lcom/vk/api/friends/m;
+    new-instance v0, Lcom/vk/api/friends/FriendsHideSuggestion;
 
     iget v1, p1, Lcom/vk/dto/user/UserProfile;->b:I
 
-    invoke-direct {v0, v1}, Lcom/vk/api/friends/m;-><init>(I)V
+    invoke-direct {v0, v1}, Lcom/vk/api/friends/FriendsHideSuggestion;-><init>(I)V
 
     .line 8
     iget-object v1, p0, Lcom/vk/newsfeed/adapters/ProfilesRecommendationsAdapter$c;->b:Lcom/vk/newsfeed/adapters/ProfilesRecommendationsAdapter;
@@ -144,17 +144,17 @@
 
     move-result-object v1
 
-    invoke-virtual {v0, v1}, Lcom/vk/api/friends/m;->d(Ljava/lang/String;)Lcom/vk/api/friends/m;
+    invoke-virtual {v0, v1}, Lcom/vk/api/friends/FriendsHideSuggestion;->d(Ljava/lang/String;)Lcom/vk/api/friends/FriendsHideSuggestion;
 
     .line 9
     iget-object p1, p1, Lcom/vk/dto/user/UserProfile;->X:Ljava/lang/String;
 
-    invoke-virtual {v0, p1}, Lcom/vk/api/friends/m;->e(Ljava/lang/String;)Lcom/vk/api/friends/m;
+    invoke-virtual {v0, p1}, Lcom/vk/api/friends/FriendsHideSuggestion;->e(Ljava/lang/String;)Lcom/vk/api/friends/FriendsHideSuggestion;
 
     .line 10
-    invoke-virtual {v0}, Lcom/vk/api/base/d;->h()Lcom/vk/api/base/d;
+    invoke-virtual {v0}, Lcom/vk/api/base/ApiRequest;->h()Lcom/vk/api/base/ApiRequest;
 
-    invoke-virtual {v0}, Lcom/vk/api/base/d;->c()Lio/reactivex/disposables/b;
+    invoke-virtual {v0}, Lcom/vk/api/base/ApiRequest;->c()Lio/reactivex/disposables/Disposable;
 
     :cond_2
     return-void

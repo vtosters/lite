@@ -16,12 +16,12 @@
 
     const-string p1, "this.rawQuery(sql, null)"
 
-    invoke-static {p0, p1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p0, p1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     return-object p0
 .end method
 
-.method public static final a(Lio/requery/android/database/sqlite/SQLiteDatabase;Lkotlin/jvm/b/b;)Ljava/lang/Object;
+.method public static final a(Lio/requery/android/database/sqlite/SQLiteDatabase;Lkotlin/jvm/b/Functions2;)Ljava/lang/Object;
     .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -29,7 +29,7 @@
             "Ljava/lang/Object;",
             ">(",
             "Lio/requery/android/database/sqlite/SQLiteDatabase;",
-            "Lkotlin/jvm/b/b<",
+            "Lkotlin/jvm/b/Functions2<",
             "-",
             "Lio/requery/android/database/sqlite/SQLiteDatabase;",
             "+TR;>;)TR;"
@@ -37,7 +37,7 @@
     .end annotation
 
     .line 1
-    invoke-static {p0, p1}, Lcom/vk/libsqliteext/CustomSqliteExtensionsKt;->b(Lio/requery/android/database/sqlite/SQLiteDatabase;Lkotlin/jvm/b/b;)Ljava/lang/Object;
+    invoke-static {p0, p1}, Lcom/vk/libsqliteext/CustomSqliteExtensionsKt;->b(Lio/requery/android/database/sqlite/SQLiteDatabase;Lkotlin/jvm/b/Functions2;)Ljava/lang/Object;
 
     move-result-object p0
 
@@ -52,7 +52,7 @@
 
     invoke-direct {v0, p0}, Lcom/vk/libsqliteext/CustomSqliteExtensionsKt$dropAll$1;-><init>(Lio/requery/android/database/sqlite/SQLiteDatabase;)V
 
-    invoke-static {p0, v0}, Lcom/vk/libsqliteext/CustomSqliteExtensionsKt;->a(Lio/requery/android/database/sqlite/SQLiteDatabase;Lkotlin/jvm/b/b;)Ljava/lang/Object;
+    invoke-static {p0, v0}, Lcom/vk/libsqliteext/CustomSqliteExtensionsKt;->a(Lio/requery/android/database/sqlite/SQLiteDatabase;Lkotlin/jvm/b/Functions2;)Ljava/lang/Object;
 
     return-void
 .end method
@@ -174,7 +174,7 @@
     return-void
 .end method
 
-.method public static final b(Lio/requery/android/database/sqlite/SQLiteDatabase;Lkotlin/jvm/b/b;)Ljava/lang/Object;
+.method public static final b(Lio/requery/android/database/sqlite/SQLiteDatabase;Lkotlin/jvm/b/Functions2;)Ljava/lang/Object;
     .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -182,7 +182,7 @@
             "Ljava/lang/Object;",
             ">(",
             "Lio/requery/android/database/sqlite/SQLiteDatabase;",
-            "Lkotlin/jvm/b/b<",
+            "Lkotlin/jvm/b/Functions2<",
             "-",
             "Lio/requery/android/database/sqlite/SQLiteDatabase;",
             "+TR;>;)TR;"
@@ -194,7 +194,7 @@
 
     .line 2
     :try_start_0
-    invoke-interface {p1, p0}, Lkotlin/jvm/b/b;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {p1, p0}, Lkotlin/jvm/b/Functions2;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p1
 
@@ -224,7 +224,7 @@
 
     invoke-direct {v0, p0}, Lcom/vk/libsqliteext/CustomSqliteExtensionsKt$dropAllTables$1;-><init>(Lio/requery/android/database/sqlite/SQLiteDatabase;)V
 
-    invoke-static {p0, v0}, Lcom/vk/libsqliteext/CustomSqliteExtensionsKt;->a(Lio/requery/android/database/sqlite/SQLiteDatabase;Lkotlin/jvm/b/b;)Ljava/lang/Object;
+    invoke-static {p0, v0}, Lcom/vk/libsqliteext/CustomSqliteExtensionsKt;->a(Lio/requery/android/database/sqlite/SQLiteDatabase;Lkotlin/jvm/b/Functions2;)Ljava/lang/Object;
 
     return-void
 .end method

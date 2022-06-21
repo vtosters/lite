@@ -57,7 +57,7 @@
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, v1}, Lcom/vk/dto/common/MusicVideoFile$a;-><init>(Lkotlin/jvm/internal/i;)V
+    invoke-direct {v0, v1}, Lcom/vk/dto/common/MusicVideoFile$a;-><init>(Lkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     return-void
 .end method
@@ -174,39 +174,39 @@
     iput-wide v0, p0, Lcom/vk/dto/common/MusicVideoFile;->W0:J
 
     .line 6
-    sget-object v0, Lcom/vk/dto/common/data/c;->a:Lcom/vk/dto/common/data/c$a;
+    sget-object v0, Lcom/vk/dto/common/data/JsonParser;->a:Lcom/vk/dto/common/data/JsonParser$a;
 
-    sget-object v1, Lcom/vk/dto/music/Artist;->B:Lcom/vk/dto/common/data/c;
+    sget-object v1, Lcom/vk/dto/music/Artist;->B:Lcom/vk/dto/common/data/JsonParser;
 
     const-string v2, "main_artists"
 
-    invoke-virtual {v0, p1, v2, v1}, Lcom/vk/dto/common/data/c$a;->a(Lorg/json/JSONObject;Ljava/lang/String;Lcom/vk/dto/common/data/c;)Ljava/util/ArrayList;
+    invoke-virtual {v0, p1, v2, v1}, Lcom/vk/dto/common/data/JsonParser$a;->a(Lorg/json/JSONObject;Ljava/lang/String;Lcom/vk/dto/common/data/JsonParser;)Ljava/util/ArrayList;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/vk/dto/common/MusicVideoFile;->S0:Ljava/util/List;
 
     .line 7
-    sget-object v0, Lcom/vk/dto/common/data/c;->a:Lcom/vk/dto/common/data/c$a;
+    sget-object v0, Lcom/vk/dto/common/data/JsonParser;->a:Lcom/vk/dto/common/data/JsonParser$a;
 
-    sget-object v1, Lcom/vk/dto/music/Artist;->B:Lcom/vk/dto/common/data/c;
+    sget-object v1, Lcom/vk/dto/music/Artist;->B:Lcom/vk/dto/common/data/JsonParser;
 
     const-string v2, "featured_artists"
 
-    invoke-virtual {v0, p1, v2, v1}, Lcom/vk/dto/common/data/c$a;->a(Lorg/json/JSONObject;Ljava/lang/String;Lcom/vk/dto/common/data/c;)Ljava/util/ArrayList;
+    invoke-virtual {v0, p1, v2, v1}, Lcom/vk/dto/common/data/JsonParser$a;->a(Lorg/json/JSONObject;Ljava/lang/String;Lcom/vk/dto/common/data/JsonParser;)Ljava/util/ArrayList;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/vk/dto/common/MusicVideoFile;->T0:Ljava/util/List;
 
     .line 8
-    sget-object v0, Lcom/vk/dto/common/data/c;->a:Lcom/vk/dto/common/data/c$a;
+    sget-object v0, Lcom/vk/dto/common/data/JsonParser;->a:Lcom/vk/dto/common/data/JsonParser$a;
 
-    sget-object v1, Lcom/vk/dto/music/Genre;->c:Lcom/vk/dto/common/data/c;
+    sget-object v1, Lcom/vk/dto/music/Genre;->c:Lcom/vk/dto/common/data/JsonParser;
 
     const-string v2, "genres"
 
-    invoke-virtual {v0, p1, v2, v1}, Lcom/vk/dto/common/data/c$a;->a(Lorg/json/JSONObject;Ljava/lang/String;Lcom/vk/dto/common/data/c;)Ljava/util/ArrayList;
+    invoke-virtual {v0, p1, v2, v1}, Lcom/vk/dto/common/data/JsonParser$a;->a(Lorg/json/JSONObject;Ljava/lang/String;Lcom/vk/dto/common/data/JsonParser;)Ljava/util/ArrayList;
 
     move-result-object p1
 
@@ -224,7 +224,7 @@
             "Ljava/lang/String;",
             "Ljava/util/List<",
             "+",
-            "Lcom/vk/core/serialize/a;",
+            "Lcom/vk/core/serialize/JSONSerialize;",
             ">;)V"
         }
     .end annotation
@@ -268,10 +268,10 @@
 
     move-result-object v1
 
-    check-cast v1, Lcom/vk/core/serialize/a;
+    check-cast v1, Lcom/vk/core/serialize/JSONSerialize;
 
     .line 11
-    invoke-interface {v1}, Lcom/vk/core/serialize/a;->J()Lorg/json/JSONObject;
+    invoke-interface {v1}, Lcom/vk/core/serialize/JSONSerialize;->J()Lorg/json/JSONObject;
 
     move-result-object v1
 
@@ -322,7 +322,7 @@
     const-string v1, "this"
 
     .line 5
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     iget-object v1, p0, Lcom/vk/dto/common/MusicVideoFile;->S0:Ljava/util/List;
 
@@ -347,7 +347,7 @@
     const-string v1, "super.toJSONObject().app\u2026 KEY_GENRE, genres)\n    }"
 
     .line 8
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     return-object v0
 .end method

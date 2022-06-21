@@ -3,7 +3,7 @@
 .source "CreateChatTransferPresenter.kt"
 
 # interfaces
-.implements Lc/a/z/g;
+.implements Lio/reactivex/functions/Consumer;
 
 
 # annotations
@@ -22,7 +22,7 @@
         "Ljava/lang/Object;",
         ">",
         "Ljava/lang/Object;",
-        "Lc/a/z/g<",
+        "Lio/reactivex/functions/Consumer<",
         "Lcom/vk/dto/money/MoneyReceiverInfo;",
         ">;"
     }
@@ -52,7 +52,7 @@
     .line 1
     iget-object p1, p0, Lcom/vtosters/lite/fragments/money/createtransfer/chat/CreateChatTransferPresenter$a;->a:Lcom/vtosters/lite/fragments/money/createtransfer/chat/CreateChatTransferPresenter;
 
-    invoke-static {p1}, Lcom/vtosters/lite/fragments/money/createtransfer/chat/CreateChatTransferPresenter;->c(Lcom/vtosters/lite/fragments/money/createtransfer/chat/CreateChatTransferPresenter;)Lcom/vtosters/lite/fragments/money/createtransfer/chat/b;
+    invoke-static {p1}, Lcom/vtosters/lite/fragments/money/createtransfer/chat/CreateChatTransferPresenter;->c(Lcom/vtosters/lite/fragments/money/createtransfer/chat/CreateChatTransferPresenter;)Lcom/vtosters/lite/fragments/money/createtransfer/chat/CreateChatTransferContract1;
 
     move-result-object p1
 
@@ -68,9 +68,9 @@
 
     const-string v1, "MoneyTransfer.getYourCurrencySymbol(currency)"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    invoke-interface {p1, v0}, Lcom/vtosters/lite/fragments/money/q/d;->z(Ljava/lang/String;)V
+    invoke-interface {p1, v0}, Lcom/vtosters/lite/fragments/money/q/CreateTransferContract1;->z(Ljava/lang/String;)V
 
     return-void
 .end method

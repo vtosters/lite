@@ -45,13 +45,13 @@
 
     iget-object p1, p1, Lcom/vk/stories/view/question/StoryViewAskQuestionView$bottomSheetAnimatorListener$2;->this$0:Lcom/vk/stories/view/question/StoryViewAskQuestionView;
 
-    invoke-virtual {p1}, Lcom/vk/stories/view/question/StoryViewAskQuestionView;->getPresenter()Lcom/vk/stories/view/question/b;
+    invoke-virtual {p1}, Lcom/vk/stories/view/question/StoryViewAskQuestionView;->getPresenter()Lcom/vk/stories/view/question/StoryViewAskQuestionContract2;
 
     move-result-object p1
 
     if-eqz p1, :cond_0
 
-    invoke-interface {p1}, Lcom/vk/stories/view/question/b;->z0()V
+    invoke-interface {p1}, Lcom/vk/stories/view/question/StoryViewAskQuestionContract2;->z0()V
 
     :cond_0
     return-void

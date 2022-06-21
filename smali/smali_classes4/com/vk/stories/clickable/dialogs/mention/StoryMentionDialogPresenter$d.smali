@@ -3,7 +3,7 @@
 .source "StoryMentionDialogPresenter.kt"
 
 # interfaces
-.implements Lc/a/z/g;
+.implements Lio/reactivex/functions/Consumer;
 
 
 # annotations
@@ -22,7 +22,7 @@
         "Ljava/lang/Object;",
         ">",
         "Ljava/lang/Object;",
-        "Lc/a/z/g<",
+        "Lio/reactivex/functions/Consumer<",
         "Ljava/lang/String;",
         ">;"
     }
@@ -52,11 +52,11 @@
     .line 1
     iget-object v0, p0, Lcom/vk/stories/clickable/dialogs/mention/StoryMentionDialogPresenter$d;->a:Lcom/vk/stories/clickable/dialogs/mention/StoryMentionDialogPresenter;
 
-    invoke-static {v0}, Lcom/vk/stories/clickable/dialogs/mention/StoryMentionDialogPresenter;->b(Lcom/vk/stories/clickable/dialogs/mention/StoryMentionDialogPresenter;)Lcom/vk/stories/clickable/dialogs/mention/d;
+    invoke-static {v0}, Lcom/vk/stories/clickable/dialogs/mention/StoryMentionDialogPresenter;->b(Lcom/vk/stories/clickable/dialogs/mention/StoryMentionDialogPresenter;)Lcom/vk/stories/clickable/dialogs/mention/StoryMentionDialogContract1;
 
     move-result-object v0
 
-    invoke-interface {v0}, Lcom/vk/stories/clickable/dialogs/mention/d;->U()Lcom/vk/mentions/MentionSelectViewControllerImpl;
+    invoke-interface {v0}, Lcom/vk/stories/clickable/dialogs/mention/StoryMentionDialogContract1;->U()Lcom/vk/mentions/MentionSelectViewControllerImpl;
 
     move-result-object v0
 
@@ -64,7 +64,7 @@
 
     const-string v2, "text"
 
-    invoke-static {p1, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {v1, p1}, Lcom/vk/mentions/MentionUtils;->a(Ljava/lang/String;)Ljava/lang/String;
 

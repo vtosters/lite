@@ -3,7 +3,7 @@
 .source "ReefProtocol.java"
 
 # interfaces
-.implements Lcom/vk/reef/protocol/k;
+.implements Lcom/vk/reef/protocol/ReefProtocol2;
 
 
 # annotations
@@ -22,7 +22,7 @@
         "Lcom/vk/reef/protocol/ReefProtocol$Event;",
         "Lcom/vk/reef/protocol/ReefProtocol$Event$a;",
         ">;",
-        "Lcom/vk/reef/protocol/k;"
+        "Lcom/vk/reef/protocol/ReefProtocol2;"
     }
 .end annotation
 
@@ -41,7 +41,7 @@
     return-void
 .end method
 
-.method synthetic constructor <init>(Lcom/vk/reef/protocol/a;)V
+.method synthetic constructor <init>(Lcom/vk/reef/protocol/ReefProtocol1;)V
     .locals 0
 
     .line 1
@@ -180,7 +180,7 @@
     return-object p0
 .end method
 
-.method public a(Lcom/vk/reef/protocol/e;)Lcom/vk/reef/protocol/ReefProtocol$Event$a;
+.method public a(Lcom/vk/reef/protocol/ReefProtocol23;)Lcom/vk/reef/protocol/ReefProtocol$Event$a;
     .locals 1
 
     .line 15
@@ -191,12 +191,12 @@
 
     check-cast v0, Lcom/vk/reef/protocol/ReefProtocol$Event;
 
-    invoke-static {v0, p1}, Lcom/vk/reef/protocol/ReefProtocol$Event;->a(Lcom/vk/reef/protocol/ReefProtocol$Event;Lcom/vk/reef/protocol/e;)V
+    invoke-static {v0, p1}, Lcom/vk/reef/protocol/ReefProtocol$Event;->a(Lcom/vk/reef/protocol/ReefProtocol$Event;Lcom/vk/reef/protocol/ReefProtocol23;)V
 
     return-object p0
 .end method
 
-.method public a(Lcom/vk/reef/protocol/i;)Lcom/vk/reef/protocol/ReefProtocol$Event$a;
+.method public a(Lcom/vk/reef/protocol/ReefProtocol22;)Lcom/vk/reef/protocol/ReefProtocol$Event$a;
     .locals 1
 
     .line 17
@@ -207,12 +207,12 @@
 
     check-cast v0, Lcom/vk/reef/protocol/ReefProtocol$Event;
 
-    invoke-static {v0, p1}, Lcom/vk/reef/protocol/ReefProtocol$Event;->a(Lcom/vk/reef/protocol/ReefProtocol$Event;Lcom/vk/reef/protocol/i;)V
+    invoke-static {v0, p1}, Lcom/vk/reef/protocol/ReefProtocol$Event;->a(Lcom/vk/reef/protocol/ReefProtocol$Event;Lcom/vk/reef/protocol/ReefProtocol22;)V
 
     return-object p0
 .end method
 
-.method public a(Lcom/vk/reef/protocol/x;)Lcom/vk/reef/protocol/ReefProtocol$Event$a;
+.method public a(Lcom/vk/reef/protocol/ReefProtocol7;)Lcom/vk/reef/protocol/ReefProtocol$Event$a;
     .locals 1
 
     .line 25
@@ -223,12 +223,12 @@
 
     check-cast v0, Lcom/vk/reef/protocol/ReefProtocol$Event;
 
-    invoke-static {v0, p1}, Lcom/vk/reef/protocol/ReefProtocol$Event;->a(Lcom/vk/reef/protocol/ReefProtocol$Event;Lcom/vk/reef/protocol/x;)V
+    invoke-static {v0, p1}, Lcom/vk/reef/protocol/ReefProtocol$Event;->a(Lcom/vk/reef/protocol/ReefProtocol$Event;Lcom/vk/reef/protocol/ReefProtocol7;)V
 
     return-object p0
 .end method
 
-.method public a(Lcom/vk/reef/protocol/z;)Lcom/vk/reef/protocol/ReefProtocol$Event$a;
+.method public a(Lcom/vk/reef/protocol/ReefProtocol17;)Lcom/vk/reef/protocol/ReefProtocol$Event$a;
     .locals 1
 
     .line 5
@@ -239,7 +239,7 @@
 
     check-cast v0, Lcom/vk/reef/protocol/ReefProtocol$Event;
 
-    invoke-static {v0, p1}, Lcom/vk/reef/protocol/ReefProtocol$Event;->a(Lcom/vk/reef/protocol/ReefProtocol$Event;Lcom/vk/reef/protocol/z;)V
+    invoke-static {v0, p1}, Lcom/vk/reef/protocol/ReefProtocol$Event;->a(Lcom/vk/reef/protocol/ReefProtocol$Event;Lcom/vk/reef/protocol/ReefProtocol17;)V
 
     return-object p0
 .end method
@@ -251,7 +251,7 @@
             "(",
             "Ljava/lang/Iterable<",
             "+",
-            "Lcom/vk/reef/protocol/g0;",
+            "Lcom/vk/reef/protocol/ReefProtocol32;",
             ">;)",
             "Lcom/vk/reef/protocol/ReefProtocol$Event$a;"
         }

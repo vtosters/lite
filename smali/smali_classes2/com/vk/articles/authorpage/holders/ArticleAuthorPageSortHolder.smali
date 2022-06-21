@@ -1,13 +1,13 @@
 .class public final Lcom/vk/articles/authorpage/holders/ArticleAuthorPageSortHolder;
-.super Lcom/vk/common/e/b;
+.super Lcom/vk/common/e/BaseItemHolder;
 .source "ArticleAuthorPageSortHolder.kt"
 
 
 # annotations
 .annotation system Ldalvik/annotation/Signature;
     value = {
-        "Lcom/vk/common/e/b<",
-        "Lcom/vk/articles/authorpage/g/b;",
+        "Lcom/vk/common/e/BaseItemHolder<",
+        "Lcom/vk/articles/authorpage/g/ArticleAuthorPageSortItem;",
         ">;"
     }
 .end annotation
@@ -16,7 +16,7 @@
 # instance fields
 .field private final c:Landroid/widget/TextView;
 
-.field private d:Lcom/vk/core/dialogs/actionspopup/a;
+.field private d:Lcom/vk/core/dialogs/actionspopup/ActionsPopup;
 
 .field private final e:Lcom/vk/core/dialogs/adapter/ModalAdapter;
     .annotation system Ldalvik/annotation/Signature;
@@ -28,12 +28,12 @@
     .end annotation
 .end field
 
-.field private final f:Lkotlin/jvm/b/b;
+.field private final f:Lkotlin/jvm/b/Functions2;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Lkotlin/jvm/b/b<",
+            "Lkotlin/jvm/b/Functions2<",
             "Lcom/vk/articles/authorpage/ArticleAuthorPageSortType;",
-            "Lkotlin/m;",
+            "Lkotlin/Unit;",
             ">;"
         }
     .end annotation
@@ -41,29 +41,29 @@
 
 
 # direct methods
-.method public constructor <init>(Landroid/view/View;Lkotlin/jvm/b/b;)V
+.method public constructor <init>(Landroid/view/View;Lkotlin/jvm/b/Functions2;)V
     .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
             "Landroid/view/View;",
-            "Lkotlin/jvm/b/b<",
+            "Lkotlin/jvm/b/Functions2<",
             "-",
             "Lcom/vk/articles/authorpage/ArticleAuthorPageSortType;",
-            "Lkotlin/m;",
+            "Lkotlin/Unit;",
             ">;)V"
         }
     .end annotation
 
     .line 1
-    invoke-direct {p0, p1}, Lcom/vk/common/e/b;-><init>(Landroid/view/View;)V
+    invoke-direct {p0, p1}, Lcom/vk/common/e/BaseItemHolder;-><init>(Landroid/view/View;)V
 
-    iput-object p2, p0, Lcom/vk/articles/authorpage/holders/ArticleAuthorPageSortHolder;->f:Lkotlin/jvm/b/b;
+    iput-object p2, p0, Lcom/vk/articles/authorpage/holders/ArticleAuthorPageSortHolder;->f:Lkotlin/jvm/b/Functions2;
 
     const p1, 0x7f0a0c52
 
     .line 2
-    invoke-virtual {p0, p1}, Lcom/vk/common/e/b;->i(I)Landroid/view/View;
+    invoke-virtual {p0, p1}, Lcom/vk/common/e/BaseItemHolder;->i(I)Landroid/view/View;
 
     move-result-object p1
 
@@ -98,25 +98,25 @@
 
     invoke-direct {p2, p0}, Lcom/vk/articles/authorpage/holders/ArticleAuthorPageSortHolder$1;-><init>(Lcom/vk/articles/authorpage/holders/ArticleAuthorPageSortHolder;)V
 
-    invoke-static {p1, p2}, Lcom/vk/extensions/ViewExtKt;->e(Landroid/view/View;Lkotlin/jvm/b/b;)V
+    invoke-static {p1, p2}, Lcom/vk/extensions/ViewExtKt;->e(Landroid/view/View;Lkotlin/jvm/b/Functions2;)V
 
     return-void
 .end method
 
-.method public static final synthetic a(Lcom/vk/articles/authorpage/holders/ArticleAuthorPageSortHolder;)Lcom/vk/core/dialogs/actionspopup/a;
+.method public static final synthetic a(Lcom/vk/articles/authorpage/holders/ArticleAuthorPageSortHolder;)Lcom/vk/core/dialogs/actionspopup/ActionsPopup;
     .locals 0
 
     .line 1
-    iget-object p0, p0, Lcom/vk/articles/authorpage/holders/ArticleAuthorPageSortHolder;->d:Lcom/vk/core/dialogs/actionspopup/a;
+    iget-object p0, p0, Lcom/vk/articles/authorpage/holders/ArticleAuthorPageSortHolder;->d:Lcom/vk/core/dialogs/actionspopup/ActionsPopup;
 
     return-object p0
 .end method
 
-.method public static final synthetic a(Lcom/vk/articles/authorpage/holders/ArticleAuthorPageSortHolder;Lcom/vk/core/dialogs/actionspopup/a;)V
+.method public static final synthetic a(Lcom/vk/articles/authorpage/holders/ArticleAuthorPageSortHolder;Lcom/vk/core/dialogs/actionspopup/ActionsPopup;)V
     .locals 0
 
     .line 2
-    iput-object p1, p0, Lcom/vk/articles/authorpage/holders/ArticleAuthorPageSortHolder;->d:Lcom/vk/core/dialogs/actionspopup/a;
+    iput-object p1, p0, Lcom/vk/articles/authorpage/holders/ArticleAuthorPageSortHolder;->d:Lcom/vk/core/dialogs/actionspopup/ActionsPopup;
 
     return-void
 .end method
@@ -132,24 +132,24 @@
     return-object p0
 .end method
 
-.method public static final synthetic c(Lcom/vk/articles/authorpage/holders/ArticleAuthorPageSortHolder;)Lcom/vk/articles/authorpage/g/b;
+.method public static final synthetic c(Lcom/vk/articles/authorpage/holders/ArticleAuthorPageSortHolder;)Lcom/vk/articles/authorpage/g/ArticleAuthorPageSortItem;
     .locals 0
 
     .line 1
-    invoke-virtual {p0}, Lcom/vk/common/e/b;->d0()Lcom/vk/common/i/b;
+    invoke-virtual {p0}, Lcom/vk/common/e/BaseItemHolder;->d0()Lcom/vk/common/i/RecyclerItem;
 
     move-result-object p0
 
-    check-cast p0, Lcom/vk/articles/authorpage/g/b;
+    check-cast p0, Lcom/vk/articles/authorpage/g/ArticleAuthorPageSortItem;
 
     return-object p0
 .end method
 
-.method public static final synthetic d(Lcom/vk/articles/authorpage/holders/ArticleAuthorPageSortHolder;)Lkotlin/jvm/b/b;
+.method public static final synthetic d(Lcom/vk/articles/authorpage/holders/ArticleAuthorPageSortHolder;)Lkotlin/jvm/b/Functions2;
     .locals 0
 
     .line 1
-    iget-object p0, p0, Lcom/vk/articles/authorpage/holders/ArticleAuthorPageSortHolder;->f:Lkotlin/jvm/b/b;
+    iget-object p0, p0, Lcom/vk/articles/authorpage/holders/ArticleAuthorPageSortHolder;->f:Lkotlin/jvm/b/Functions2;
 
     return-object p0
 .end method
@@ -189,7 +189,7 @@
     invoke-direct {v0}, Lcom/vk/core/dialogs/adapter/ModalAdapter$a;-><init>()V
 
     .line 2
-    invoke-virtual {p0}, Lcom/vk/common/e/b;->getContext()Landroid/content/Context;
+    invoke-virtual {p0}, Lcom/vk/common/e/BaseItemHolder;->getContext()Landroid/content/Context;
 
     move-result-object v1
 
@@ -199,7 +199,7 @@
 
     const-string v2, "LayoutInflater.from(context)"
 
-    invoke-static {v1, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     const v2, 0x7f0d0023
 
@@ -210,7 +210,7 @@
 
     invoke-direct {v1, p0}, Lcom/vk/articles/authorpage/holders/ArticleAuthorPageSortHolder$a;-><init>(Lcom/vk/articles/authorpage/holders/ArticleAuthorPageSortHolder;)V
 
-    invoke-virtual {v0, v1}, Lcom/vk/core/dialogs/adapter/ModalAdapter$a;->a(Lcom/vk/core/dialogs/adapter/a;)Lcom/vk/core/dialogs/adapter/ModalAdapter$a;
+    invoke-virtual {v0, v1}, Lcom/vk/core/dialogs/adapter/ModalAdapter$a;->a(Lcom/vk/core/dialogs/adapter/ModalAdapter1;)Lcom/vk/core/dialogs/adapter/ModalAdapter$a;
 
     .line 4
     new-instance v1, Lcom/vk/articles/authorpage/holders/ArticleAuthorPageSortHolder$b;
@@ -231,13 +231,13 @@
     .locals 1
 
     .line 1
-    invoke-virtual {p0}, Lcom/vk/common/e/b;->d0()Lcom/vk/common/i/b;
+    invoke-virtual {p0}, Lcom/vk/common/e/BaseItemHolder;->d0()Lcom/vk/common/i/RecyclerItem;
 
     move-result-object v0
 
-    check-cast v0, Lcom/vk/articles/authorpage/g/b;
+    check-cast v0, Lcom/vk/articles/authorpage/g/ArticleAuthorPageSortItem;
 
-    invoke-virtual {v0}, Lcom/vk/articles/authorpage/g/b;->c()Lcom/vk/articles/authorpage/ArticleAuthorPageSortType;
+    invoke-virtual {v0}, Lcom/vk/articles/authorpage/g/ArticleAuthorPageSortItem;->c()Lcom/vk/articles/authorpage/ArticleAuthorPageSortType;
 
     move-result-object v0
 
@@ -246,13 +246,13 @@
 
 
 # virtual methods
-.method protected a(Lcom/vk/articles/authorpage/g/b;)V
+.method protected a(Lcom/vk/articles/authorpage/g/ArticleAuthorPageSortItem;)V
     .locals 1
 
     .line 3
     iget-object v0, p0, Lcom/vk/articles/authorpage/holders/ArticleAuthorPageSortHolder;->c:Landroid/widget/TextView;
 
-    invoke-virtual {p1}, Lcom/vk/articles/authorpage/g/b;->c()Lcom/vk/articles/authorpage/ArticleAuthorPageSortType;
+    invoke-virtual {p1}, Lcom/vk/articles/authorpage/g/ArticleAuthorPageSortItem;->c()Lcom/vk/articles/authorpage/ArticleAuthorPageSortType;
 
     move-result-object p1
 
@@ -265,13 +265,13 @@
     return-void
 .end method
 
-.method public bridge synthetic b(Lcom/vk/common/i/b;)V
+.method public bridge synthetic b(Lcom/vk/common/i/RecyclerItem;)V
     .locals 0
 
     .line 2
-    check-cast p1, Lcom/vk/articles/authorpage/g/b;
+    check-cast p1, Lcom/vk/articles/authorpage/g/ArticleAuthorPageSortItem;
 
-    invoke-virtual {p0, p1}, Lcom/vk/articles/authorpage/holders/ArticleAuthorPageSortHolder;->a(Lcom/vk/articles/authorpage/g/b;)V
+    invoke-virtual {p0, p1}, Lcom/vk/articles/authorpage/holders/ArticleAuthorPageSortHolder;->a(Lcom/vk/articles/authorpage/g/ArticleAuthorPageSortItem;)V
 
     return-void
 .end method

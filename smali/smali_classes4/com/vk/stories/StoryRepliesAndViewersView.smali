@@ -3,7 +3,7 @@
 .source "StoryRepliesAndViewersView.kt"
 
 # interfaces
-.implements Lcom/vk/lists/t$o;
+.implements Lcom/vk/lists/PaginationHelper$o;
 
 
 # annotations
@@ -28,7 +28,7 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Landroidx/coordinatorlayout/widget/CoordinatorLayout;",
-        "Lcom/vk/lists/t$o<",
+        "Lcom/vk/lists/PaginationHelper$o<",
         "Ljava/lang/Object;",
         ">;"
     }
@@ -48,7 +48,7 @@
 
 .field private final E:Lcom/vk/stories/StoryRepliesAndViewersView$c;
 
-.field private F:Lio/reactivex/disposables/b;
+.field private F:Lio/reactivex/disposables/Disposable;
 
 .field private G:Ljava/util/ArrayList;
     .annotation system Ldalvik/annotation/Signature;
@@ -60,50 +60,50 @@
     .end annotation
 .end field
 
-.field private final H:Lb/h/g/l/e;
+.field private final H:Lb/h/g/l/NotificationListener;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Lb/h/g/l/e<",
+            "Lb/h/g/l/NotificationListener<",
             "Lcom/vk/stories/StoriesController$j;",
             ">;"
         }
     .end annotation
 .end field
 
-.field private final I:Lb/h/g/l/e;
+.field private final I:Lb/h/g/l/NotificationListener;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Lb/h/g/l/e<",
+            "Lb/h/g/l/NotificationListener<",
             "Lcom/vk/stories/StoriesController$j;",
             ">;"
         }
     .end annotation
 .end field
 
-.field private final J:Lb/h/g/l/e;
+.field private final J:Lb/h/g/l/NotificationListener;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Lb/h/g/l/e<",
+            "Lb/h/g/l/NotificationListener<",
             "Lcom/vk/stories/StoriesController$j;",
             ">;"
         }
     .end annotation
 .end field
 
-.field private final K:Lb/h/g/l/e;
+.field private final K:Lb/h/g/l/NotificationListener;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Lb/h/g/l/e<",
+            "Lb/h/g/l/NotificationListener<",
             "Lcom/vk/dto/stories/model/StoryEntry;",
             ">;"
         }
     .end annotation
 .end field
 
-.field private final L:Lb/h/g/l/e;
+.field private final L:Lb/h/g/l/NotificationListener;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Lb/h/g/l/e<",
+            "Lb/h/g/l/NotificationListener<",
             "Lcom/vk/stories/StoriesController$g;",
             ">;"
         }
@@ -112,21 +112,21 @@
 
 .field private final M:Lcom/vk/dto/stories/model/StoryEntryExtended;
 
-.field private final a:Lcom/vk/lists/t;
+.field private final a:Lcom/vk/lists/PaginationHelper;
 
 .field private final b:Lcom/vk/lists/RecyclerPaginatedView;
 
 .field private final c:Lcom/vk/newsfeed/StoriesBlocksEventController;
 
-.field private final d:Lcom/vk/common/h/a;
+.field private final d:Lcom/vk/common/h/HeaderAdapter;
 
 .field private final e:Lcom/vk/stories/StoryRepliesAndViewersView$g;
 
-.field private final f:Lcom/vk/common/h/a;
+.field private final f:Lcom/vk/common/h/HeaderAdapter;
 
 .field private final g:Lcom/vk/stories/StoryRepliesAndViewersView$f;
 
-.field private final h:Lcom/vk/common/h/a;
+.field private final h:Lcom/vk/common/h/HeaderAdapter;
 
 
 # direct methods
@@ -137,7 +137,7 @@
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, v1}, Lcom/vk/stories/StoryRepliesAndViewersView$b;-><init>(Lkotlin/jvm/internal/i;)V
+    invoke-direct {v0, v1}, Lcom/vk/stories/StoryRepliesAndViewersView$b;-><init>(Lkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     sput-object v0, Lcom/vk/stories/StoryRepliesAndViewersView;->N:Lcom/vk/stories/StoryRepliesAndViewersView$b;
 
@@ -164,11 +164,11 @@
     iput-object p2, p0, Lcom/vk/stories/StoryRepliesAndViewersView;->c:Lcom/vk/newsfeed/StoriesBlocksEventController;
 
     .line 3
-    new-instance p2, Lcom/vk/common/h/a;
+    new-instance p2, Lcom/vk/common/h/HeaderAdapter;
 
-    invoke-direct {p2}, Lcom/vk/common/h/a;-><init>()V
+    invoke-direct {p2}, Lcom/vk/common/h/HeaderAdapter;-><init>()V
 
-    iput-object p2, p0, Lcom/vk/stories/StoryRepliesAndViewersView;->d:Lcom/vk/common/h/a;
+    iput-object p2, p0, Lcom/vk/stories/StoryRepliesAndViewersView;->d:Lcom/vk/common/h/HeaderAdapter;
 
     .line 4
     new-instance p2, Lcom/vk/stories/StoryRepliesAndViewersView$g;
@@ -178,11 +178,11 @@
     iput-object p2, p0, Lcom/vk/stories/StoryRepliesAndViewersView;->e:Lcom/vk/stories/StoryRepliesAndViewersView$g;
 
     .line 5
-    new-instance p2, Lcom/vk/common/h/a;
+    new-instance p2, Lcom/vk/common/h/HeaderAdapter;
 
-    invoke-direct {p2}, Lcom/vk/common/h/a;-><init>()V
+    invoke-direct {p2}, Lcom/vk/common/h/HeaderAdapter;-><init>()V
 
-    iput-object p2, p0, Lcom/vk/stories/StoryRepliesAndViewersView;->f:Lcom/vk/common/h/a;
+    iput-object p2, p0, Lcom/vk/stories/StoryRepliesAndViewersView;->f:Lcom/vk/common/h/HeaderAdapter;
 
     .line 6
     new-instance p2, Lcom/vk/stories/StoryRepliesAndViewersView$f;
@@ -194,11 +194,11 @@
     iput-object p2, p0, Lcom/vk/stories/StoryRepliesAndViewersView;->g:Lcom/vk/stories/StoryRepliesAndViewersView$f;
 
     .line 7
-    new-instance p2, Lcom/vk/common/h/a;
+    new-instance p2, Lcom/vk/common/h/HeaderAdapter;
 
-    invoke-direct {p2}, Lcom/vk/common/h/a;-><init>()V
+    invoke-direct {p2}, Lcom/vk/common/h/HeaderAdapter;-><init>()V
 
-    iput-object p2, p0, Lcom/vk/stories/StoryRepliesAndViewersView;->h:Lcom/vk/common/h/a;
+    iput-object p2, p0, Lcom/vk/stories/StoryRepliesAndViewersView;->h:Lcom/vk/common/h/HeaderAdapter;
 
     .line 8
     new-instance p2, Lcom/vk/stories/StoryRepliesAndViewersView$h;
@@ -207,7 +207,7 @@
 
     invoke-direct {p3, p0}, Lcom/vk/stories/StoryRepliesAndViewersView$usersAdapter$1;-><init>(Lcom/vk/stories/StoryRepliesAndViewersView;)V
 
-    invoke-direct {p2, p3}, Lcom/vk/stories/StoryRepliesAndViewersView$h;-><init>(Lkotlin/jvm/b/b;)V
+    invoke-direct {p2, p3}, Lcom/vk/stories/StoryRepliesAndViewersView$h;-><init>(Lkotlin/jvm/b/Functions2;)V
 
     iput-object p2, p0, Lcom/vk/stories/StoryRepliesAndViewersView;->B:Lcom/vk/stories/StoryRepliesAndViewersView$h;
 
@@ -222,7 +222,7 @@
 
     const-string v0, "story.storyEntry"
 
-    invoke-static {p3, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p3, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-direct {p2, p1, p3}, Lcom/vk/stories/StoryRepliesAndViewersView$e;-><init>(Lcom/vk/stories/view/StoryView;Lcom/vk/dto/stories/model/StoryEntry;)V
 
@@ -247,35 +247,35 @@
 
     invoke-direct {p1, p0}, Lcom/vk/stories/StoryRepliesAndViewersView$m;-><init>(Lcom/vk/stories/StoryRepliesAndViewersView;)V
 
-    iput-object p1, p0, Lcom/vk/stories/StoryRepliesAndViewersView;->H:Lb/h/g/l/e;
+    iput-object p1, p0, Lcom/vk/stories/StoryRepliesAndViewersView;->H:Lb/h/g/l/NotificationListener;
 
     .line 13
     new-instance p1, Lcom/vk/stories/StoryRepliesAndViewersView$q;
 
     invoke-direct {p1, p0}, Lcom/vk/stories/StoryRepliesAndViewersView$q;-><init>(Lcom/vk/stories/StoryRepliesAndViewersView;)V
 
-    iput-object p1, p0, Lcom/vk/stories/StoryRepliesAndViewersView;->I:Lb/h/g/l/e;
+    iput-object p1, p0, Lcom/vk/stories/StoryRepliesAndViewersView;->I:Lb/h/g/l/NotificationListener;
 
     .line 14
     new-instance p1, Lcom/vk/stories/StoryRepliesAndViewersView$p;
 
     invoke-direct {p1, p0}, Lcom/vk/stories/StoryRepliesAndViewersView$p;-><init>(Lcom/vk/stories/StoryRepliesAndViewersView;)V
 
-    iput-object p1, p0, Lcom/vk/stories/StoryRepliesAndViewersView;->J:Lb/h/g/l/e;
+    iput-object p1, p0, Lcom/vk/stories/StoryRepliesAndViewersView;->J:Lb/h/g/l/NotificationListener;
 
     .line 15
     new-instance p1, Lcom/vk/stories/StoryRepliesAndViewersView$o;
 
     invoke-direct {p1, p0}, Lcom/vk/stories/StoryRepliesAndViewersView$o;-><init>(Lcom/vk/stories/StoryRepliesAndViewersView;)V
 
-    iput-object p1, p0, Lcom/vk/stories/StoryRepliesAndViewersView;->K:Lb/h/g/l/e;
+    iput-object p1, p0, Lcom/vk/stories/StoryRepliesAndViewersView;->K:Lb/h/g/l/NotificationListener;
 
     .line 16
     new-instance p1, Lcom/vk/stories/StoryRepliesAndViewersView$n;
 
     invoke-direct {p1, p0}, Lcom/vk/stories/StoryRepliesAndViewersView$n;-><init>(Lcom/vk/stories/StoryRepliesAndViewersView;)V
 
-    iput-object p1, p0, Lcom/vk/stories/StoryRepliesAndViewersView;->L:Lb/h/g/l/e;
+    iput-object p1, p0, Lcom/vk/stories/StoryRepliesAndViewersView;->L:Lb/h/g/l/NotificationListener;
 
     .line 17
     invoke-virtual {p0}, Landroid/view/ViewGroup;->getContext()Landroid/content/Context;
@@ -304,7 +304,7 @@
 
     const-string p2, "findViewById(R.id.list)"
 
-    invoke-static {p1, p2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, p2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     check-cast p1, Lcom/vk/lists/RecyclerPaginatedView;
 
@@ -355,20 +355,20 @@
 
     const-string p3, "recyclerPaginatedView.recyclerView"
 
-    invoke-static {p1, p3}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, p3}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {p1, p2}, Landroidx/recyclerview/widget/RecyclerView;->setClipToPadding(Z)V
 
     .line 24
     iget-object p1, p0, Lcom/vk/stories/StoryRepliesAndViewersView;->E:Lcom/vk/stories/StoryRepliesAndViewersView$c;
 
-    sget-object p3, Lkotlin/m;->a:Lkotlin/m;
+    sget-object p3, Lkotlin/Unit;->a:Lkotlin/Unit;
 
     invoke-static {p3}, Lkotlin/collections/l;->a(Ljava/lang/Object;)Ljava/util/List;
 
     move-result-object p3
 
-    invoke-virtual {p1, p3}, Lcom/vk/lists/i0;->setItems(Ljava/util/List;)V
+    invoke-virtual {p1, p3}, Lcom/vk/lists/SimpleAdapter;->setItems(Ljava/util/List;)V
 
     .line 25
     iget-object p1, p0, Lcom/vk/stories/StoryRepliesAndViewersView;->B:Lcom/vk/stories/StoryRepliesAndViewersView$h;
@@ -466,7 +466,7 @@
 
     move-result-object v2
 
-    invoke-virtual {v1, v2}, Lcom/vk/lists/i0;->setItems(Ljava/util/List;)V
+    invoke-virtual {v1, v2}, Lcom/vk/lists/SimpleAdapter;->setItems(Ljava/util/List;)V
 
     .line 31
     invoke-virtual {p3}, Lcom/vk/dto/polls/Poll;->M1()Z
@@ -501,13 +501,13 @@
 
     aput-object v1, v2, p2
 
-    invoke-static {p3, v2}, Lcom/vk/core/util/y0;->a(I[Ljava/lang/Object;)Ljava/lang/String;
+    invoke-static {p3, v2}, Lcom/vk/core/util/ResUtils;->a(I[Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object p3
 
     const-string v1, "ResUtils.str(R.string.st\u2026y_poll_viewers_count, 10)"
 
-    invoke-static {p3, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p3, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {p1, p3}, Lcom/vk/stories/StoryRepliesAndViewersView$c;->b(Ljava/lang/String;)V
 
@@ -520,7 +520,7 @@
     new-array v1, v1, [Landroidx/recyclerview/widget/RecyclerView$Adapter;
 
     .line 35
-    iget-object v2, p0, Lcom/vk/stories/StoryRepliesAndViewersView;->d:Lcom/vk/common/h/a;
+    iget-object v2, p0, Lcom/vk/stories/StoryRepliesAndViewersView;->d:Lcom/vk/common/h/HeaderAdapter;
 
     aput-object v2, v1, p2
 
@@ -532,7 +532,7 @@
     const/4 p2, 0x2
 
     .line 37
-    iget-object v0, p0, Lcom/vk/stories/StoryRepliesAndViewersView;->f:Lcom/vk/common/h/a;
+    iget-object v0, p0, Lcom/vk/stories/StoryRepliesAndViewersView;->f:Lcom/vk/common/h/HeaderAdapter;
 
     aput-object v0, v1, p2
 
@@ -560,7 +560,7 @@
     const/4 p2, 0x6
 
     .line 41
-    iget-object v0, p0, Lcom/vk/stories/StoryRepliesAndViewersView;->h:Lcom/vk/common/h/a;
+    iget-object v0, p0, Lcom/vk/stories/StoryRepliesAndViewersView;->h:Lcom/vk/common/h/HeaderAdapter;
 
     aput-object v0, v1, p2
 
@@ -569,7 +569,7 @@
     aput-object p1, v1, p2
 
     .line 42
-    invoke-static {v1}, Lcom/vk/lists/p;->a([Landroidx/recyclerview/widget/RecyclerView$Adapter;)Lcom/vk/lists/p;
+    invoke-static {v1}, Lcom/vk/lists/MergedAdapter;->a([Landroidx/recyclerview/widget/RecyclerView$Adapter;)Lcom/vk/lists/MergedAdapter;
 
     move-result-object p1
 
@@ -577,22 +577,22 @@
     invoke-virtual {p3, p1}, Lcom/vk/lists/RecyclerPaginatedView;->setAdapter(Landroidx/recyclerview/widget/RecyclerView$Adapter;)V
 
     .line 44
-    invoke-static {p0}, Lcom/vk/lists/t;->a(Lcom/vk/lists/t$o;)Lcom/vk/lists/t$k;
+    invoke-static {p0}, Lcom/vk/lists/PaginationHelper;->a(Lcom/vk/lists/PaginationHelper$o;)Lcom/vk/lists/PaginationHelper$k;
 
     move-result-object p1
 
     const-string p2, "PaginationHelper.createWithOffset(this)"
 
-    invoke-static {p1, p2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, p2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 45
     iget-object p2, p0, Lcom/vk/stories/StoryRepliesAndViewersView;->b:Lcom/vk/lists/RecyclerPaginatedView;
 
-    invoke-static {p1, p2}, Lcom/vk/lists/u;->b(Lcom/vk/lists/t$k;Lcom/vk/lists/RecyclerPaginatedView;)Lcom/vk/lists/t;
+    invoke-static {p1, p2}, Lcom/vk/lists/PaginationHelperExt;->b(Lcom/vk/lists/PaginationHelper$k;Lcom/vk/lists/RecyclerPaginatedView;)Lcom/vk/lists/PaginationHelper;
 
     move-result-object p1
 
-    iput-object p1, p0, Lcom/vk/stories/StoryRepliesAndViewersView;->a:Lcom/vk/lists/t;
+    iput-object p1, p0, Lcom/vk/stories/StoryRepliesAndViewersView;->a:Lcom/vk/lists/PaginationHelper;
 
     .line 46
     new-instance p1, Lcom/vk/stories/StoryRepliesAndViewersView$a;
@@ -604,12 +604,12 @@
     return-void
 .end method
 
-.method private final a(II)Lc/a/m;
+.method private final a(II)Lio/reactivex/Observable;
     .locals 3
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(II)",
-            "Lc/a/m<",
+            "Lio/reactivex/Observable<",
             "Lcom/vk/dto/common/data/VKList<",
             "Lcom/vk/dto/stories/entities/StoryUserProfile;",
             ">;>;"
@@ -617,7 +617,7 @@
     .end annotation
 
     .line 19
-    new-instance v0, Lcom/vk/api/stories/u;
+    new-instance v0, Lcom/vk/api/stories/StoriesGetViewers;
 
     invoke-virtual {p0}, Lcom/vk/stories/StoryRepliesAndViewersView;->getOwnerId()I
 
@@ -627,13 +627,13 @@
 
     move-result v2
 
-    invoke-direct {v0, v1, v2, p1, p2}, Lcom/vk/api/stories/u;-><init>(IIII)V
+    invoke-direct {v0, v1, v2, p1, p2}, Lcom/vk/api/stories/StoriesGetViewers;-><init>(IIII)V
 
     const/4 p1, 0x0
 
     const/4 p2, 0x1
 
-    invoke-static {v0, p1, p2, p1}, Lcom/vk/api/base/d;->d(Lcom/vk/api/base/d;Lcom/vk/api/base/e;ILjava/lang/Object;)Lc/a/m;
+    invoke-static {v0, p1, p2, p1}, Lcom/vk/api/base/ApiRequest;->d(Lcom/vk/api/base/ApiRequest;Lcom/vk/api/base/ApiThreadHolder;ILjava/lang/Object;)Lio/reactivex/Observable;
 
     move-result-object p1
 
@@ -670,9 +670,9 @@
     if-ne p1, v0, :cond_0
 
     .line 23
-    iget-object p1, p0, Lcom/vk/stories/StoryRepliesAndViewersView;->a:Lcom/vk/lists/t;
+    iget-object p1, p0, Lcom/vk/stories/StoryRepliesAndViewersView;->a:Lcom/vk/lists/PaginationHelper;
 
-    invoke-virtual {p1}, Lcom/vk/lists/t;->h()V
+    invoke-virtual {p1}, Lcom/vk/lists/PaginationHelper;->h()V
 
     :cond_0
     return-void
@@ -697,19 +697,19 @@
     if-eqz p1, :cond_0
 
     .line 21
-    iget-object p1, p0, Lcom/vk/stories/StoryRepliesAndViewersView;->a:Lcom/vk/lists/t;
+    iget-object p1, p0, Lcom/vk/stories/StoryRepliesAndViewersView;->a:Lcom/vk/lists/PaginationHelper;
 
-    invoke-virtual {p1}, Lcom/vk/lists/t;->h()V
+    invoke-virtual {p1}, Lcom/vk/lists/PaginationHelper;->h()V
 
     :cond_0
     return-void
 .end method
 
-.method public static final synthetic a(Lcom/vk/stories/StoryRepliesAndViewersView;Lcom/vk/common/h/b;)V
+.method public static final synthetic a(Lcom/vk/stories/StoryRepliesAndViewersView;Lcom/vk/common/h/HeaderAdapter1;)V
     .locals 0
 
     .line 6
-    invoke-direct {p0, p1}, Lcom/vk/stories/StoryRepliesAndViewersView;->setUsersHeader(Lcom/vk/common/h/b;)V
+    invoke-direct {p0, p1}, Lcom/vk/stories/StoryRepliesAndViewersView;->setUsersHeader(Lcom/vk/common/h/HeaderAdapter1;)V
 
     return-void
 .end method
@@ -864,9 +864,9 @@
     if-ne v3, v2, :cond_5
 
     .line 14
-    iget-object p1, p0, Lcom/vk/stories/StoryRepliesAndViewersView;->a:Lcom/vk/lists/t;
+    iget-object p1, p0, Lcom/vk/stories/StoryRepliesAndViewersView;->a:Lcom/vk/lists/PaginationHelper;
 
-    invoke-virtual {p1}, Lcom/vk/lists/t;->h()V
+    invoke-virtual {p1}, Lcom/vk/lists/PaginationHelper;->h()V
 
     :cond_5
     return-void
@@ -906,11 +906,11 @@
     return-void
 .end method
 
-.method public static final synthetic c(Lcom/vk/stories/StoryRepliesAndViewersView;)Lcom/vk/common/h/a;
+.method public static final synthetic c(Lcom/vk/stories/StoryRepliesAndViewersView;)Lcom/vk/common/h/HeaderAdapter;
     .locals 0
 
     .line 1
-    iget-object p0, p0, Lcom/vk/stories/StoryRepliesAndViewersView;->d:Lcom/vk/common/h/a;
+    iget-object p0, p0, Lcom/vk/stories/StoryRepliesAndViewersView;->d:Lcom/vk/common/h/HeaderAdapter;
 
     return-object p0
 .end method
@@ -951,17 +951,17 @@
     return-void
 .end method
 
-.method private final getRepliesHeader()Lcom/vk/common/h/b;
+.method private final getRepliesHeader()Lcom/vk/common/h/HeaderAdapter1;
     .locals 1
 
     .line 1
-    iget-object v0, p0, Lcom/vk/stories/StoryRepliesAndViewersView;->f:Lcom/vk/common/h/a;
+    iget-object v0, p0, Lcom/vk/stories/StoryRepliesAndViewersView;->f:Lcom/vk/common/h/HeaderAdapter;
 
-    invoke-virtual {v0}, Lcom/vk/lists/j0;->j()Ljava/lang/Object;
+    invoke-virtual {v0}, Lcom/vk/lists/SingleAdapter;->j()Ljava/lang/Object;
 
     move-result-object v0
 
-    check-cast v0, Lcom/vk/common/h/b;
+    check-cast v0, Lcom/vk/common/h/HeaderAdapter1;
 
     return-object v0
 .end method
@@ -981,17 +981,17 @@
     return v0
 .end method
 
-.method private final getUsersHeader()Lcom/vk/common/h/b;
+.method private final getUsersHeader()Lcom/vk/common/h/HeaderAdapter1;
     .locals 1
 
     .line 1
-    iget-object v0, p0, Lcom/vk/stories/StoryRepliesAndViewersView;->h:Lcom/vk/common/h/a;
+    iget-object v0, p0, Lcom/vk/stories/StoryRepliesAndViewersView;->h:Lcom/vk/common/h/HeaderAdapter;
 
-    invoke-virtual {v0}, Lcom/vk/lists/j0;->j()Ljava/lang/Object;
+    invoke-virtual {v0}, Lcom/vk/lists/SingleAdapter;->j()Ljava/lang/Object;
 
     move-result-object v0
 
-    check-cast v0, Lcom/vk/common/h/b;
+    check-cast v0, Lcom/vk/common/h/HeaderAdapter1;
 
     return-object v0
 .end method
@@ -1008,7 +1008,7 @@
 
     const-string v1, "story.storyOwner"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {v0}, Lcom/vk/dto/stories/model/StoryOwner;->B1()Z
 
@@ -1058,10 +1058,10 @@
     .line 2
     iget-object v0, p0, Lcom/vk/stories/StoryRepliesAndViewersView;->g:Lcom/vk/stories/StoryRepliesAndViewersView$f;
 
-    invoke-virtual {v0, v1}, Lcom/vk/lists/j0;->d(Ljava/lang/Object;)V
+    invoke-virtual {v0, v1}, Lcom/vk/lists/SingleAdapter;->d(Ljava/lang/Object;)V
 
     .line 3
-    invoke-direct {p0, v1}, Lcom/vk/stories/StoryRepliesAndViewersView;->setRepliesHeader(Lcom/vk/common/h/b;)V
+    invoke-direct {p0, v1}, Lcom/vk/stories/StoryRepliesAndViewersView;->setRepliesHeader(Lcom/vk/common/h/HeaderAdapter1;)V
 
     return-void
 
@@ -1090,12 +1090,12 @@
     .line 7
     iget-object v1, p0, Lcom/vk/stories/StoryRepliesAndViewersView;->g:Lcom/vk/stories/StoryRepliesAndViewersView$f;
 
-    invoke-virtual {v1, v0}, Lcom/vk/lists/j0;->d(Ljava/lang/Object;)V
+    invoke-virtual {v1, v0}, Lcom/vk/lists/SingleAdapter;->d(Ljava/lang/Object;)V
 
     const-string v1, "resultList"
 
     .line 8
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 9
     invoke-interface {v0}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
@@ -1121,7 +1121,7 @@
     check-cast v4, Lcom/vk/dto/stories/model/StoriesContainer;
 
     .line 11
-    invoke-static {v4, v5}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v4, v5}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {v4}, Lcom/vk/dto/stories/model/StoriesContainer;->G1()Ljava/util/ArrayList;
 
@@ -1165,7 +1165,7 @@
     check-cast v7, Lcom/vk/dto/stories/model/StoriesContainer;
 
     .line 14
-    invoke-static {v7, v5}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v7, v5}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {v7}, Lcom/vk/dto/stories/model/StoriesContainer;->G1()Ljava/util/ArrayList;
 
@@ -1228,7 +1228,7 @@
 
     const-string v5, "resources.getQuantityStr\u2026       totalStoriesCount)"
 
-    invoke-static {v1, v5}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v1, v5}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     if-eq v2, v0, :cond_6
 
@@ -1262,14 +1262,14 @@
     const-string v2, "if (totalStoriesCount !=\u2026     \"\"\n                }"
 
     .line 20
-    invoke-static {v0, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 21
-    new-instance v2, Lcom/vk/common/h/b;
+    new-instance v2, Lcom/vk/common/h/HeaderAdapter1;
 
-    invoke-direct {v2, v1, v0, v6}, Lcom/vk/common/h/b;-><init>(Ljava/lang/String;Ljava/lang/String;Z)V
+    invoke-direct {v2, v1, v0, v6}, Lcom/vk/common/h/HeaderAdapter1;-><init>(Ljava/lang/String;Ljava/lang/String;Z)V
 
-    invoke-direct {p0, v2}, Lcom/vk/stories/StoryRepliesAndViewersView;->setRepliesHeader(Lcom/vk/common/h/b;)V
+    invoke-direct {p0, v2}, Lcom/vk/stories/StoryRepliesAndViewersView;->setRepliesHeader(Lcom/vk/common/h/HeaderAdapter1;)V
 
     goto :goto_6
 
@@ -1277,10 +1277,10 @@
     :cond_7
     iget-object v0, p0, Lcom/vk/stories/StoryRepliesAndViewersView;->g:Lcom/vk/stories/StoryRepliesAndViewersView$f;
 
-    invoke-virtual {v0}, Lcom/vk/lists/j0;->clear()V
+    invoke-virtual {v0}, Lcom/vk/lists/SingleAdapter;->clear()V
 
     .line 23
-    invoke-direct {p0, v1}, Lcom/vk/stories/StoryRepliesAndViewersView;->setRepliesHeader(Lcom/vk/common/h/b;)V
+    invoke-direct {p0, v1}, Lcom/vk/stories/StoryRepliesAndViewersView;->setRepliesHeader(Lcom/vk/common/h/HeaderAdapter1;)V
 
     .line 24
     invoke-virtual {p0}, Landroid/view/ViewGroup;->getParent()Landroid/view/ViewParent;
@@ -1316,80 +1316,80 @@
     return-void
 .end method
 
-.method private final setRepliesHeader(Lcom/vk/common/h/b;)V
+.method private final setRepliesHeader(Lcom/vk/common/h/HeaderAdapter1;)V
     .locals 1
 
     .line 1
-    iget-object v0, p0, Lcom/vk/stories/StoryRepliesAndViewersView;->f:Lcom/vk/common/h/a;
+    iget-object v0, p0, Lcom/vk/stories/StoryRepliesAndViewersView;->f:Lcom/vk/common/h/HeaderAdapter;
 
-    invoke-virtual {v0, p1}, Lcom/vk/lists/j0;->d(Ljava/lang/Object;)V
+    invoke-virtual {v0, p1}, Lcom/vk/lists/SingleAdapter;->d(Ljava/lang/Object;)V
 
     return-void
 .end method
 
-.method private final setUsersHeader(Lcom/vk/common/h/b;)V
+.method private final setUsersHeader(Lcom/vk/common/h/HeaderAdapter1;)V
     .locals 1
 
     .line 1
-    iget-object v0, p0, Lcom/vk/stories/StoryRepliesAndViewersView;->h:Lcom/vk/common/h/a;
+    iget-object v0, p0, Lcom/vk/stories/StoryRepliesAndViewersView;->h:Lcom/vk/common/h/HeaderAdapter;
 
-    invoke-virtual {v0, p1}, Lcom/vk/lists/j0;->d(Ljava/lang/Object;)V
+    invoke-virtual {v0, p1}, Lcom/vk/lists/SingleAdapter;->d(Ljava/lang/Object;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public a(ILcom/vk/lists/t;)Lc/a/m;
+.method public a(ILcom/vk/lists/PaginationHelper;)Lio/reactivex/Observable;
     .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(I",
-            "Lcom/vk/lists/t;",
+            "Lcom/vk/lists/PaginationHelper;",
             ")",
-            "Lc/a/m<",
+            "Lio/reactivex/Observable<",
             "Ljava/lang/Object;",
             ">;"
         }
     .end annotation
 
     .line 13
-    invoke-virtual {p2}, Lcom/vk/lists/t;->c()I
+    invoke-virtual {p2}, Lcom/vk/lists/PaginationHelper;->c()I
 
     move-result p2
 
-    invoke-direct {p0, p1, p2}, Lcom/vk/stories/StoryRepliesAndViewersView;->a(II)Lc/a/m;
+    invoke-direct {p0, p1, p2}, Lcom/vk/stories/StoryRepliesAndViewersView;->a(II)Lio/reactivex/Observable;
 
     move-result-object p1
 
     sget-object p2, Lcom/vk/stories/StoryRepliesAndViewersView$i;->a:Lcom/vk/stories/StoryRepliesAndViewersView$i;
 
-    invoke-virtual {p1, p2}, Lc/a/m;->e(Lc/a/z/j;)Lc/a/m;
+    invoke-virtual {p1, p2}, Lio/reactivex/Observable;->e(Lio/reactivex/functions/Function;)Lio/reactivex/Observable;
 
     move-result-object p1
 
     const-string p2, "createGetViewersObservab\u2026geSize).map { it as Any }"
 
-    invoke-static {p1, p2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, p2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     return-object p1
 .end method
 
-.method public a(Lcom/vk/lists/t;Z)Lc/a/m;
+.method public a(Lcom/vk/lists/PaginationHelper;Z)Lio/reactivex/Observable;
     .locals 8
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lcom/vk/lists/t;",
+            "Lcom/vk/lists/PaginationHelper;",
             "Z)",
-            "Lc/a/m<",
+            "Lio/reactivex/Observable<",
             "Ljava/lang/Object;",
             ">;"
         }
     .end annotation
 
     .line 7
-    new-instance p2, Lcom/vk/api/stories/s;
+    new-instance p2, Lcom/vk/api/stories/StoriesGetRepliesFull;
 
     invoke-virtual {p0}, Lcom/vk/stories/StoryRepliesAndViewersView;->getOwnerId()I
 
@@ -1403,7 +1403,7 @@
 
     move-result-object v3
 
-    invoke-virtual {p1}, Lcom/vk/lists/t;->c()I
+    invoke-virtual {p1}, Lcom/vk/lists/PaginationHelper;->c()I
 
     move-result v4
 
@@ -1416,7 +1416,7 @@
 
     const-string v0, "story.storyOwner"
 
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {p1}, Lcom/vk/dto/stories/model/StoryOwner;->B1()Z
 
@@ -1429,7 +1429,7 @@
 
     move-result-object p1
 
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {p1}, Lcom/vk/dto/stories/model/StoryOwner;->z1()Z
 
@@ -1443,72 +1443,72 @@
     move-object v0, p2
 
     .line 11
-    invoke-direct/range {v0 .. v7}, Lcom/vk/api/stories/s;-><init>(IILjava/lang/String;IZZZ)V
+    invoke-direct/range {v0 .. v7}, Lcom/vk/api/stories/StoriesGetRepliesFull;-><init>(IILjava/lang/String;IZZZ)V
 
     const/4 p1, 0x0
 
     const/4 v0, 0x1
 
     .line 12
-    invoke-static {p2, p1, v0, p1}, Lcom/vk/api/base/d;->d(Lcom/vk/api/base/d;Lcom/vk/api/base/e;ILjava/lang/Object;)Lc/a/m;
+    invoke-static {p2, p1, v0, p1}, Lcom/vk/api/base/ApiRequest;->d(Lcom/vk/api/base/ApiRequest;Lcom/vk/api/base/ApiThreadHolder;ILjava/lang/Object;)Lio/reactivex/Observable;
 
     move-result-object p1
 
     sget-object p2, Lcom/vk/stories/StoryRepliesAndViewersView$l;->a:Lcom/vk/stories/StoryRepliesAndViewersView$l;
 
-    invoke-virtual {p1, p2}, Lc/a/m;->e(Lc/a/z/j;)Lc/a/m;
+    invoke-virtual {p1, p2}, Lio/reactivex/Observable;->e(Lio/reactivex/functions/Function;)Lio/reactivex/Observable;
 
     move-result-object p1
 
     const-string p2, "StoriesGetRepliesFull(ow\u2026  it as Any\n            }"
 
-    invoke-static {p1, p2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, p2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     return-object p1
 .end method
 
-.method public a(Lc/a/m;ZLcom/vk/lists/t;)V
+.method public a(Lio/reactivex/Observable;ZLcom/vk/lists/PaginationHelper;)V
     .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lc/a/m<",
+            "Lio/reactivex/Observable<",
             "Ljava/lang/Object;",
             ">;Z",
-            "Lcom/vk/lists/t;",
+            "Lcom/vk/lists/PaginationHelper;",
             ")V"
         }
     .end annotation
 
     .line 14
-    iget-object p2, p0, Lcom/vk/stories/StoryRepliesAndViewersView;->F:Lio/reactivex/disposables/b;
+    iget-object p2, p0, Lcom/vk/stories/StoryRepliesAndViewersView;->F:Lio/reactivex/disposables/Disposable;
 
-    invoke-static {p2}, Lcom/vk/core/extensions/RxExtKt;->a(Lio/reactivex/disposables/b;)Z
+    invoke-static {p2}, Lcom/vk/core/extensions/RxExtKt;->a(Lio/reactivex/disposables/Disposable;)Z
 
     move-result p2
 
     if-eqz p2, :cond_0
 
     .line 15
-    iget-object p2, p0, Lcom/vk/stories/StoryRepliesAndViewersView;->F:Lio/reactivex/disposables/b;
+    iget-object p2, p0, Lcom/vk/stories/StoryRepliesAndViewersView;->F:Lio/reactivex/disposables/Disposable;
 
-    invoke-static {p2}, Lcom/vk/core/extensions/RxExtKt;->b(Lio/reactivex/disposables/b;)V
+    invoke-static {p2}, Lcom/vk/core/extensions/RxExtKt;->b(Lio/reactivex/disposables/Disposable;)V
 
     .line 16
     :cond_0
     new-instance p2, Lcom/vk/stories/StoryRepliesAndViewersView$j;
 
-    invoke-direct {p2, p0, p3}, Lcom/vk/stories/StoryRepliesAndViewersView$j;-><init>(Lcom/vk/stories/StoryRepliesAndViewersView;Lcom/vk/lists/t;)V
+    invoke-direct {p2, p0, p3}, Lcom/vk/stories/StoryRepliesAndViewersView$j;-><init>(Lcom/vk/stories/StoryRepliesAndViewersView;Lcom/vk/lists/PaginationHelper;)V
 
     .line 17
     sget-object p3, Lcom/vk/stories/StoryRepliesAndViewersView$k;->a:Lcom/vk/stories/StoryRepliesAndViewersView$k;
 
     .line 18
-    invoke-virtual {p1, p2, p3}, Lc/a/m;->a(Lc/a/z/g;Lc/a/z/g;)Lio/reactivex/disposables/b;
+    invoke-virtual {p1, p2, p3}, Lio/reactivex/Observable;->a(Lio/reactivex/functions/Consumer;Lio/reactivex/functions/Consumer;)Lio/reactivex/disposables/Disposable;
 
     move-result-object p1
 
-    iput-object p1, p0, Lcom/vk/stories/StoryRepliesAndViewersView;->F:Lio/reactivex/disposables/b;
+    iput-object p1, p0, Lcom/vk/stories/StoryRepliesAndViewersView;->F:Lio/reactivex/disposables/Disposable;
 
     return-void
 .end method
@@ -1543,87 +1543,87 @@
     return v0
 .end method
 
-.method public final getStoryAddedToUploadQueueListener()Lb/h/g/l/e;
+.method public final getStoryAddedToUploadQueueListener()Lb/h/g/l/NotificationListener;
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "()",
-            "Lb/h/g/l/e<",
+            "Lb/h/g/l/NotificationListener<",
             "Lcom/vk/stories/StoriesController$j;",
             ">;"
         }
     .end annotation
 
     .line 1
-    iget-object v0, p0, Lcom/vk/stories/StoryRepliesAndViewersView;->H:Lb/h/g/l/e;
+    iget-object v0, p0, Lcom/vk/stories/StoryRepliesAndViewersView;->H:Lb/h/g/l/NotificationListener;
 
     return-object v0
 .end method
 
-.method public final getStoryAllRepliesAreHiddenListener()Lb/h/g/l/e;
+.method public final getStoryAllRepliesAreHiddenListener()Lb/h/g/l/NotificationListener;
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "()",
-            "Lb/h/g/l/e<",
+            "Lb/h/g/l/NotificationListener<",
             "Lcom/vk/stories/StoriesController$g;",
             ">;"
         }
     .end annotation
 
     .line 1
-    iget-object v0, p0, Lcom/vk/stories/StoryRepliesAndViewersView;->L:Lb/h/g/l/e;
+    iget-object v0, p0, Lcom/vk/stories/StoryRepliesAndViewersView;->L:Lb/h/g/l/NotificationListener;
 
     return-object v0
 .end method
 
-.method public final getStoryDeletedListener()Lb/h/g/l/e;
+.method public final getStoryDeletedListener()Lb/h/g/l/NotificationListener;
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "()",
-            "Lb/h/g/l/e<",
+            "Lb/h/g/l/NotificationListener<",
             "Lcom/vk/dto/stories/model/StoryEntry;",
             ">;"
         }
     .end annotation
 
     .line 1
-    iget-object v0, p0, Lcom/vk/stories/StoryRepliesAndViewersView;->K:Lb/h/g/l/e;
+    iget-object v0, p0, Lcom/vk/stories/StoryRepliesAndViewersView;->K:Lb/h/g/l/NotificationListener;
 
     return-object v0
 .end method
 
-.method public final getStoryUploadCancelledListener()Lb/h/g/l/e;
+.method public final getStoryUploadCancelledListener()Lb/h/g/l/NotificationListener;
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "()",
-            "Lb/h/g/l/e<",
+            "Lb/h/g/l/NotificationListener<",
             "Lcom/vk/stories/StoriesController$j;",
             ">;"
         }
     .end annotation
 
     .line 1
-    iget-object v0, p0, Lcom/vk/stories/StoryRepliesAndViewersView;->J:Lb/h/g/l/e;
+    iget-object v0, p0, Lcom/vk/stories/StoryRepliesAndViewersView;->J:Lb/h/g/l/NotificationListener;
 
     return-object v0
 .end method
 
-.method public final getStoryUploadDoneListener()Lb/h/g/l/e;
+.method public final getStoryUploadDoneListener()Lb/h/g/l/NotificationListener;
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "()",
-            "Lb/h/g/l/e<",
+            "Lb/h/g/l/NotificationListener<",
             "Lcom/vk/stories/StoriesController$j;",
             ">;"
         }
     .end annotation
 
     .line 1
-    iget-object v0, p0, Lcom/vk/stories/StoryRepliesAndViewersView;->I:Lb/h/g/l/e;
+    iget-object v0, p0, Lcom/vk/stories/StoryRepliesAndViewersView;->I:Lb/h/g/l/NotificationListener;
 
     return-object v0
 .end method

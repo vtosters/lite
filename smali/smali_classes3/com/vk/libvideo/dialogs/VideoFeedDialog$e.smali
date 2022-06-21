@@ -50,7 +50,7 @@
 
     const-string v1, "next_video"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v0
 
@@ -60,11 +60,11 @@
 
     iget-object p1, p0, Lcom/vk/libvideo/dialogs/VideoFeedDialog$e;->a:Lcom/vk/libvideo/dialogs/VideoFeedDialog;
 
-    invoke-static {p1}, Lcom/vk/libvideo/dialogs/VideoFeedDialog;->m(Lcom/vk/libvideo/dialogs/VideoFeedDialog;)Lcom/vk/libvideo/c0/a;
+    invoke-static {p1}, Lcom/vk/libvideo/dialogs/VideoFeedDialog;->m(Lcom/vk/libvideo/dialogs/VideoFeedDialog;)Lcom/vk/libvideo/c0/VideoSnapHelper;
 
     move-result-object p1
 
-    invoke-virtual {p1, v1}, Lcom/vk/libvideo/c0/a;->a(I)V
+    invoke-virtual {p1, v1}, Lcom/vk/libvideo/c0/VideoSnapHelper;->a(I)V
 
     goto :goto_0
 
@@ -76,7 +76,7 @@
 
     const-string v2, "next_play"
 
-    invoke-static {v0, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v0, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v0
 
@@ -85,7 +85,7 @@
     .line 3
     iget-object p1, p0, Lcom/vk/libvideo/dialogs/VideoFeedDialog$e;->a:Lcom/vk/libvideo/dialogs/VideoFeedDialog;
 
-    invoke-static {p1}, Lcom/vk/libvideo/dialogs/VideoFeedDialog;->q(Lcom/vk/libvideo/dialogs/VideoFeedDialog;)Lcom/vk/libvideo/ui/e;
+    invoke-static {p1}, Lcom/vk/libvideo/dialogs/VideoFeedDialog;->q(Lcom/vk/libvideo/dialogs/VideoFeedDialog;)Lcom/vk/libvideo/ui/VideoListItemView;
 
     move-result-object p1
 
@@ -93,17 +93,17 @@
 
     iget-object v0, p0, Lcom/vk/libvideo/dialogs/VideoFeedDialog$e;->a:Lcom/vk/libvideo/dialogs/VideoFeedDialog;
 
-    invoke-static {v0}, Lcom/vk/libvideo/dialogs/VideoFeedDialog;->m(Lcom/vk/libvideo/dialogs/VideoFeedDialog;)Lcom/vk/libvideo/c0/a;
+    invoke-static {v0}, Lcom/vk/libvideo/dialogs/VideoFeedDialog;->m(Lcom/vk/libvideo/dialogs/VideoFeedDialog;)Lcom/vk/libvideo/c0/VideoSnapHelper;
 
     move-result-object v0
 
-    invoke-virtual {p1}, Lcom/vk/libvideo/ui/e;->getListPosition()I
+    invoke-virtual {p1}, Lcom/vk/libvideo/ui/VideoListItemView;->getListPosition()I
 
     move-result p1
 
     add-int/2addr p1, v1
 
-    invoke-virtual {v0, p1}, Lcom/vk/libvideo/c0/a;->a(I)V
+    invoke-virtual {v0, p1}, Lcom/vk/libvideo/c0/VideoSnapHelper;->a(I)V
 
     goto :goto_0
 
@@ -115,7 +115,7 @@
 
     const-string v0, "next_stop"
 
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result p1
 

@@ -1,9 +1,9 @@
 .class public final Lcom/vtosters/lite/fragments/messages/msg_view/MsgViewFragment;
-.super Lcom/vk/core/fragments/b;
+.super Lcom/vk/core/fragments/BaseFragment1;
 .source "MsgViewFragment.kt"
 
 # interfaces
-.implements Lcom/vk/navigation/b0/k;
+.implements Lcom/vk/navigation/b0/FragmentWithoutBottomMenuBar;
 
 
 # annotations
@@ -18,13 +18,13 @@
 
 
 # instance fields
-.field private final F:Lcom/vk/im/ui/p/b;
+.field private final F:Lcom/vk/im/ui/p/ImBridge8;
 
-.field private final G:Lcom/vk/im/engine/a;
+.field private final G:Lcom/vk/im/engine/ImEngine;
 
 .field private final H:Lcom/vk/im/ui/ImUiModule;
 
-.field private final I:Lcom/vk/im/ui/media/audio/a;
+.field private final I:Lcom/vk/im/ui/media/audio/AudioPlayer;
 
 .field private J:Lcom/vk/im/ui/components/msg_view/header/MsgViewHeaderComponent;
 
@@ -42,37 +42,37 @@
     .locals 1
 
     .line 1
-    invoke-direct {p0}, Lcom/vk/core/fragments/b;-><init>()V
+    invoke-direct {p0}, Lcom/vk/core/fragments/BaseFragment1;-><init>()V
 
     .line 2
-    invoke-static {}, Lcom/vk/im/ui/p/c;->a()Lcom/vk/im/ui/p/b;
+    invoke-static {}, Lcom/vk/im/ui/p/ImBridge7;->a()Lcom/vk/im/ui/p/ImBridge8;
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/vtosters/lite/fragments/messages/msg_view/MsgViewFragment;->F:Lcom/vk/im/ui/p/b;
+    iput-object v0, p0, Lcom/vtosters/lite/fragments/messages/msg_view/MsgViewFragment;->F:Lcom/vk/im/ui/p/ImBridge8;
 
     .line 3
-    invoke-static {}, Lcom/vk/im/engine/c;->a()Lcom/vk/im/engine/a;
+    invoke-static {}, Lcom/vk/im/engine/ImEngine1;->a()Lcom/vk/im/engine/ImEngine;
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/vtosters/lite/fragments/messages/msg_view/MsgViewFragment;->G:Lcom/vk/im/engine/a;
+    iput-object v0, p0, Lcom/vtosters/lite/fragments/messages/msg_view/MsgViewFragment;->G:Lcom/vk/im/engine/ImEngine;
 
     .line 4
-    invoke-static {}, Lcom/vk/im/ui/a;->a()Lcom/vk/im/ui/ImUiModule;
+    invoke-static {}, Lcom/vk/im/ui/ImUiModule1;->a()Lcom/vk/im/ui/ImUiModule;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/vtosters/lite/fragments/messages/msg_view/MsgViewFragment;->H:Lcom/vk/im/ui/ImUiModule;
 
     .line 5
-    iget-object v0, p0, Lcom/vtosters/lite/fragments/messages/msg_view/MsgViewFragment;->F:Lcom/vk/im/ui/p/b;
+    iget-object v0, p0, Lcom/vtosters/lite/fragments/messages/msg_view/MsgViewFragment;->F:Lcom/vk/im/ui/p/ImBridge8;
 
-    invoke-interface {v0}, Lcom/vk/im/ui/p/b;->n()Lcom/vk/im/ui/media/audio/a;
+    invoke-interface {v0}, Lcom/vk/im/ui/p/ImBridge8;->n()Lcom/vk/im/ui/media/audio/AudioPlayer;
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/vtosters/lite/fragments/messages/msg_view/MsgViewFragment;->I:Lcom/vk/im/ui/media/audio/a;
+    iput-object v0, p0, Lcom/vtosters/lite/fragments/messages/msg_view/MsgViewFragment;->I:Lcom/vk/im/ui/media/audio/AudioPlayer;
 
     return-void
 .end method
@@ -90,7 +90,7 @@
     :cond_0
     const-string p0, "contentComponent"
 
-    invoke-static {p0}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {p0}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     const/4 p0, 0x0
 
@@ -103,7 +103,7 @@
     .locals 1
 
     .line 1
-    invoke-virtual {p0}, Lcom/vk/core/fragments/b;->o()Z
+    invoke-virtual {p0}, Lcom/vk/core/fragments/BaseFragment1;->o()Z
 
     move-result v0
 
@@ -131,9 +131,9 @@
 
     .line 1
     :cond_0
-    sget-object v1, Lcom/vk/im/ui/p/e;->a:Lcom/vk/im/ui/p/e$a;
+    sget-object v1, Lcom/vk/im/ui/p/ImBridge11;->a:Lcom/vk/im/ui/p/ImBridge$a4;
 
-    invoke-virtual {v1}, Lcom/vk/im/ui/p/e$a;->a()I
+    invoke-virtual {v1}, Lcom/vk/im/ui/p/ImBridge$a4;->a()I
 
     move-result v1
 
@@ -146,7 +146,7 @@
     if-eqz v0, :cond_1
 
     .line 2
-    sget-object v2, Lcom/vk/navigation/q;->Q:Ljava/lang/String;
+    sget-object v2, Lcom/vk/navigation/NavigatorKeys;->Q:Ljava/lang/String;
 
     invoke-virtual {v0, v2, v1}, Landroid/content/Intent;->getIntExtra(Ljava/lang/String;I)I
 
@@ -156,7 +156,7 @@
     if-eqz v0, :cond_2
 
     .line 3
-    sget-object v2, Lcom/vk/navigation/q;->i0:Ljava/lang/String;
+    sget-object v2, Lcom/vk/navigation/NavigatorKeys;->i0:Ljava/lang/String;
 
     invoke-virtual {v0, v2}, Landroid/content/Intent;->getBundleExtra(Ljava/lang/String;)Landroid/os/Bundle;
 
@@ -164,7 +164,7 @@
 
     if-eqz v2, :cond_2
 
-    sget-object v3, Lcom/vk/navigation/q;->h0:Ljava/lang/String;
+    sget-object v3, Lcom/vk/navigation/NavigatorKeys;->h0:Ljava/lang/String;
 
     invoke-virtual {v2, v3}, Landroid/os/Bundle;->getIntegerArrayList(Ljava/lang/String;)Ljava/util/ArrayList;
 
@@ -184,12 +184,12 @@
 
     const-string v2, "data?.getBundleExtra(Nav\u2026s.FWD_IDS) ?: ArrayList()"
 
-    invoke-static {v12, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v12, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     if-eqz v0, :cond_3
 
     .line 4
-    sget-object v2, Lcom/vk/navigation/q;->f0:Ljava/lang/String;
+    sget-object v2, Lcom/vk/navigation/NavigatorKeys;->f0:Ljava/lang/String;
 
     invoke-virtual {v0, v2}, Landroid/content/Intent;->getParcelableExtra(Ljava/lang/String;)Landroid/os/Parcelable;
 
@@ -208,17 +208,17 @@
 
     const/4 v3, 0x0
 
-    invoke-direct {v0, v1, v3, v2, v3}, Lcom/vk/im/engine/models/dialogs/DialogExt;-><init>(ILcom/vk/im/engine/models/ProfilesInfo;ILkotlin/jvm/internal/i;)V
+    invoke-direct {v0, v1, v3, v2, v3}, Lcom/vk/im/engine/models/dialogs/DialogExt;-><init>(ILcom/vk/im/engine/models/ProfilesInfo;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     :goto_1
     move-object v6, v0
 
     .line 5
-    invoke-static {}, Lcom/vk/im/ui/p/c;->a()Lcom/vk/im/ui/p/b;
+    invoke-static {}, Lcom/vk/im/ui/p/ImBridge7;->a()Lcom/vk/im/ui/p/ImBridge8;
 
     move-result-object v0
 
-    invoke-interface {v0}, Lcom/vk/im/ui/p/b;->b()Lcom/vk/im/ui/p/e;
+    invoke-interface {v0}, Lcom/vk/im/ui/p/ImBridge8;->b()Lcom/vk/im/ui/p/ImBridge11;
 
     move-result-object v3
 
@@ -231,7 +231,7 @@
 
     const-string v1, "requireActivity()"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 7
     invoke-virtual {v6}, Lcom/vk/im/engine/models/dialogs/DialogExt;->getId()I
@@ -281,7 +281,7 @@
     const/16 v28, 0x0
 
     .line 8
-    invoke-static/range {v3 .. v28}, Lcom/vk/im/ui/p/e$b;->a(Lcom/vk/im/ui/p/e;Landroid/content/Context;ILcom/vk/im/engine/models/dialogs/DialogExt;Ljava/lang/String;Lcom/vk/im/ui/components/msg_list/MsgListOpenMode;ZLjava/util/List;Ljava/util/List;Ljava/util/List;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Lcom/vk/im/engine/models/conversations/BotButton;Ljava/lang/String;Ljava/lang/Boolean;Ljava/lang/Boolean;Ljava/lang/Boolean;Ljava/lang/Boolean;Ljava/lang/Class;Lkotlin/jvm/b/a;Lkotlin/jvm/b/b;ILjava/lang/Object;)V
+    invoke-static/range {v3 .. v28}, Lcom/vk/im/ui/p/ImBridge$b1;->a(Lcom/vk/im/ui/p/ImBridge11;Landroid/content/Context;ILcom/vk/im/engine/models/dialogs/DialogExt;Ljava/lang/String;Lcom/vk/im/ui/components/msg_list/MsgListOpenMode;ZLjava/util/List;Ljava/util/List;Ljava/util/List;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Lcom/vk/im/engine/models/conversations/BotButton;Ljava/lang/String;Ljava/lang/Boolean;Ljava/lang/Boolean;Ljava/lang/Boolean;Ljava/lang/Boolean;Ljava/lang/Class;Lkotlin/jvm/b/Functions;Lkotlin/jvm/b/Functions2;ILjava/lang/Object;)V
 
     :cond_4
     return-void
@@ -293,7 +293,7 @@
     move-object/from16 v0, p0
 
     .line 1
-    invoke-super/range {p0 .. p1}, Lcom/vk/core/fragments/b;->onCreate(Landroid/os/Bundle;)V
+    invoke-super/range {p0 .. p1}, Lcom/vk/core/fragments/BaseFragment1;->onCreate(Landroid/os/Bundle;)V
 
     .line 2
     invoke-virtual/range {p0 .. p0}, Landroidx/fragment/app/Fragment;->getArguments()Landroid/os/Bundle;
@@ -351,7 +351,7 @@
     throw v1
 
     :cond_1
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     throw v2
 
@@ -405,7 +405,7 @@
 
     if-eqz v3, :cond_8
 
-    sget-object v4, Lcom/vk/navigation/q;->f0:Ljava/lang/String;
+    sget-object v4, Lcom/vk/navigation/NavigatorKeys;->f0:Ljava/lang/String;
 
     invoke-virtual {v3, v4}, Landroid/os/Bundle;->getParcelable(Ljava/lang/String;)Landroid/os/Parcelable;
 
@@ -416,9 +416,9 @@
     if-eqz v3, :cond_7
 
     .line 7
-    iget-object v4, v0, Lcom/vtosters/lite/fragments/messages/msg_view/MsgViewFragment;->I:Lcom/vk/im/ui/media/audio/a;
+    iget-object v4, v0, Lcom/vtosters/lite/fragments/messages/msg_view/MsgViewFragment;->I:Lcom/vk/im/ui/media/audio/AudioPlayer;
 
-    invoke-interface {v4}, Lcom/vk/im/ui/media/audio/a;->acquire()V
+    invoke-interface {v4}, Lcom/vk/im/ui/media/audio/AudioPlayer;->acquire()V
 
     .line 8
     new-instance v4, Lcom/vk/im/ui/components/msg_view/header/MsgViewHeaderComponent;
@@ -429,18 +429,18 @@
 
     const-string v8, "requireActivity()"
 
-    invoke-static {v7, v8}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v7, v8}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    iget-object v9, v0, Lcom/vtosters/lite/fragments/messages/msg_view/MsgViewFragment;->G:Lcom/vk/im/engine/a;
+    iget-object v9, v0, Lcom/vtosters/lite/fragments/messages/msg_view/MsgViewFragment;->G:Lcom/vk/im/engine/ImEngine;
 
-    invoke-direct {v4, v7, v9, v3}, Lcom/vk/im/ui/components/msg_view/header/MsgViewHeaderComponent;-><init>(Landroid/content/Context;Lcom/vk/im/engine/a;Lcom/vk/im/engine/models/dialogs/DialogExt;)V
+    invoke-direct {v4, v7, v9, v3}, Lcom/vk/im/ui/components/msg_view/header/MsgViewHeaderComponent;-><init>(Landroid/content/Context;Lcom/vk/im/engine/ImEngine;Lcom/vk/im/engine/models/dialogs/DialogExt;)V
 
     .line 9
-    new-instance v7, Lcom/vtosters/lite/fragments/messages/msg_view/b;
+    new-instance v7, Lcom/vtosters/lite/fragments/messages/msg_view/HeaderCallbackImpl;
 
-    invoke-direct {v7, v0}, Lcom/vtosters/lite/fragments/messages/msg_view/b;-><init>(Lcom/vtosters/lite/fragments/messages/msg_view/MsgViewFragment;)V
+    invoke-direct {v7, v0}, Lcom/vtosters/lite/fragments/messages/msg_view/HeaderCallbackImpl;-><init>(Lcom/vtosters/lite/fragments/messages/msg_view/MsgViewFragment;)V
 
-    invoke-virtual {v4, v7}, Lcom/vk/im/ui/components/msg_view/header/MsgViewHeaderComponent;->a(Lcom/vk/im/ui/components/msg_view/header/c;)V
+    invoke-virtual {v4, v7}, Lcom/vk/im/ui/components/msg_view/header/MsgViewHeaderComponent;->a(Lcom/vk/im/ui/components/msg_view/header/MsgViewHeaderComponentCallback;)V
 
     .line 10
     iput-object v4, v0, Lcom/vtosters/lite/fragments/messages/msg_view/MsgViewFragment;->J:Lcom/vk/im/ui/components/msg_view/header/MsgViewHeaderComponent;
@@ -453,49 +453,49 @@
 
     move-result-object v9
 
-    invoke-static {v9, v8}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v9, v8}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 13
-    iget-object v10, v0, Lcom/vtosters/lite/fragments/messages/msg_view/MsgViewFragment;->G:Lcom/vk/im/engine/a;
+    iget-object v10, v0, Lcom/vtosters/lite/fragments/messages/msg_view/MsgViewFragment;->G:Lcom/vk/im/engine/ImEngine;
 
     .line 14
-    iget-object v11, v0, Lcom/vtosters/lite/fragments/messages/msg_view/MsgViewFragment;->F:Lcom/vk/im/ui/p/b;
+    iget-object v11, v0, Lcom/vtosters/lite/fragments/messages/msg_view/MsgViewFragment;->F:Lcom/vk/im/ui/p/ImBridge8;
 
     .line 15
     iget-object v12, v0, Lcom/vtosters/lite/fragments/messages/msg_view/MsgViewFragment;->H:Lcom/vk/im/ui/ImUiModule;
 
     .line 16
-    invoke-static/range {p0 .. p0}, Lcom/vk/navigation/b;->a(Lcom/vk/core/fragments/FragmentImpl;)Lcom/vk/navigation/a;
+    invoke-static/range {p0 .. p0}, Lcom/vk/navigation/ActivityLauncher1;->a(Lcom/vk/core/fragments/FragmentImpl;)Lcom/vk/navigation/ActivityLauncher;
 
     move-result-object v13
 
     .line 17
-    iget-object v14, v0, Lcom/vtosters/lite/fragments/messages/msg_view/MsgViewFragment;->I:Lcom/vk/im/ui/media/audio/a;
+    iget-object v14, v0, Lcom/vtosters/lite/fragments/messages/msg_view/MsgViewFragment;->I:Lcom/vk/im/ui/media/audio/AudioPlayer;
 
     .line 18
-    iget-object v7, v0, Lcom/vtosters/lite/fragments/messages/msg_view/MsgViewFragment;->F:Lcom/vk/im/ui/p/b;
+    iget-object v7, v0, Lcom/vtosters/lite/fragments/messages/msg_view/MsgViewFragment;->F:Lcom/vk/im/ui/p/ImBridge8;
 
-    invoke-interface {v7}, Lcom/vk/im/ui/p/b;->s()Lcom/vk/audiomsg/player/a;
+    invoke-interface {v7}, Lcom/vk/im/ui/p/ImBridge8;->s()Lcom/vk/audiomsg/player/AudioMsgPlayer;
 
     move-result-object v15
 
     .line 19
-    new-instance v7, Lcom/vk/im/ui/views/span/a;
+    new-instance v7, Lcom/vk/im/ui/views/span/ImBridgeOnSpanClickListener;
 
-    iget-object v2, v0, Lcom/vtosters/lite/fragments/messages/msg_view/MsgViewFragment;->F:Lcom/vk/im/ui/p/b;
+    iget-object v2, v0, Lcom/vtosters/lite/fragments/messages/msg_view/MsgViewFragment;->F:Lcom/vk/im/ui/p/ImBridge8;
 
     invoke-virtual/range {p0 .. p0}, Landroidx/fragment/app/Fragment;->requireActivity()Landroidx/fragment/app/FragmentActivity;
 
     move-result-object v5
 
-    invoke-static {v5, v8}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v5, v8}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    invoke-direct {v7, v3, v2, v5}, Lcom/vk/im/ui/views/span/a;-><init>(Lcom/vk/im/engine/models/dialogs/DialogExt;Lcom/vk/im/ui/p/b;Landroid/content/Context;)V
+    invoke-direct {v7, v3, v2, v5}, Lcom/vk/im/ui/views/span/ImBridgeOnSpanClickListener;-><init>(Lcom/vk/im/engine/models/dialogs/DialogExt;Lcom/vk/im/ui/p/ImBridge8;Landroid/content/Context;)V
 
     .line 20
     new-instance v2, Lcom/vk/im/ui/views/span/ImBridgeOnSpanLongPressListener;
 
-    iget-object v5, v0, Lcom/vtosters/lite/fragments/messages/msg_view/MsgViewFragment;->F:Lcom/vk/im/ui/p/b;
+    iget-object v5, v0, Lcom/vtosters/lite/fragments/messages/msg_view/MsgViewFragment;->F:Lcom/vk/im/ui/p/ImBridge8;
 
     move-object/from16 v16, v7
 
@@ -503,14 +503,14 @@
 
     move-result-object v7
 
-    invoke-static {v7, v8}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v7, v8}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    invoke-direct {v2, v3, v5, v7}, Lcom/vk/im/ui/views/span/ImBridgeOnSpanLongPressListener;-><init>(Lcom/vk/im/engine/models/dialogs/DialogExt;Lcom/vk/im/ui/p/b;Landroid/app/Activity;)V
+    invoke-direct {v2, v3, v5, v7}, Lcom/vk/im/ui/views/span/ImBridgeOnSpanLongPressListener;-><init>(Lcom/vk/im/engine/models/dialogs/DialogExt;Lcom/vk/im/ui/p/ImBridge8;Landroid/app/Activity;)V
 
     .line 21
-    sget-object v5, Lcom/vk/stickers/t;->l:Lcom/vk/stickers/t;
+    sget-object v5, Lcom/vk/stickers/Stickers;->l:Lcom/vk/stickers/Stickers;
 
-    invoke-virtual {v5}, Lcom/vk/stickers/t;->p()Z
+    invoke-virtual {v5}, Lcom/vk/stickers/Stickers;->p()Z
 
     move-result v18
 
@@ -525,7 +525,7 @@
     move-object/from16 v17, v2
 
     .line 22
-    invoke-direct/range {v7 .. v18}, Lcom/vk/im/ui/components/msg_view/content/MsgViewContentComponent;-><init>(Landroid/content/Context;Lcom/vk/im/engine/models/dialogs/DialogExt;Lcom/vk/im/engine/a;Lcom/vk/im/ui/p/b;Lcom/vk/im/ui/ImUiModule;Lcom/vk/navigation/a;Lcom/vk/im/ui/media/audio/a;Lcom/vk/audiomsg/player/a;Lcom/vk/im/ui/views/span/b;Lcom/vk/im/ui/views/span/c;Z)V
+    invoke-direct/range {v7 .. v18}, Lcom/vk/im/ui/components/msg_view/content/MsgViewContentComponent;-><init>(Landroid/content/Context;Lcom/vk/im/engine/models/dialogs/DialogExt;Lcom/vk/im/engine/ImEngine;Lcom/vk/im/ui/p/ImBridge8;Lcom/vk/im/ui/ImUiModule;Lcom/vk/navigation/ActivityLauncher;Lcom/vk/im/ui/media/audio/AudioPlayer;Lcom/vk/audiomsg/player/AudioMsgPlayer;Lcom/vk/im/ui/views/span/OnSpanClickListener;Lcom/vk/im/ui/views/span/OnSpanLongPressListener;Z)V
 
     iput-object v4, v0, Lcom/vtosters/lite/fragments/messages/msg_view/MsgViewFragment;->K:Lcom/vk/im/ui/components/msg_view/content/MsgViewContentComponent;
 
@@ -565,10 +565,10 @@
 
     const-string v4, "requireContext()"
 
-    invoke-static {v2, v4}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v2, v4}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 27
-    iget-object v4, v0, Lcom/vtosters/lite/fragments/messages/msg_view/MsgViewFragment;->G:Lcom/vk/im/engine/a;
+    iget-object v4, v0, Lcom/vtosters/lite/fragments/messages/msg_view/MsgViewFragment;->G:Lcom/vk/im/engine/ImEngine;
 
     .line 28
     new-instance v5, Lcom/vtosters/lite/fragments/messages/msg_view/MsgViewFragment$onCreate$2;
@@ -581,7 +581,7 @@
     invoke-direct {v3, v0}, Lcom/vtosters/lite/fragments/messages/msg_view/MsgViewFragment$onCreate$3;-><init>(Lcom/vtosters/lite/fragments/messages/msg_view/MsgViewFragment;)V
 
     .line 30
-    invoke-direct {v1, v2, v4, v5, v3}, Lcom/vk/im/ui/utils/DialogScreenshotTracker;-><init>(Landroid/content/Context;Lcom/vk/im/engine/a;Lkotlin/jvm/b/a;Lkotlin/jvm/b/a;)V
+    invoke-direct {v1, v2, v4, v5, v3}, Lcom/vk/im/ui/utils/DialogScreenshotTracker;-><init>(Landroid/content/Context;Lcom/vk/im/engine/ImEngine;Lkotlin/jvm/b/Functions;Lkotlin/jvm/b/Functions;)V
 
     iput-object v1, v0, Lcom/vtosters/lite/fragments/messages/msg_view/MsgViewFragment;->N:Lcom/vk/im/ui/utils/DialogScreenshotTracker;
 
@@ -591,7 +591,7 @@
     const-string v1, "contentComponent"
 
     .line 31
-    invoke-static {v1}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v1}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     const/4 v1, 0x0
 
@@ -603,7 +603,7 @@
     const-string v2, "headerComponent"
 
     .line 32
-    invoke-static {v2}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v2}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v1
 
@@ -620,7 +620,7 @@
     :cond_8
     move-object v1, v2
 
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     throw v1
 
@@ -635,7 +635,7 @@
     :cond_a
     move-object v1, v2
 
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     throw v1
 
@@ -643,7 +643,7 @@
     move-object v1, v2
 
     .line 35
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     throw v1
 .end method
@@ -691,11 +691,11 @@
 
     if-eqz p2, :cond_8
 
-    new-instance v2, Lcom/vtosters/lite/fragments/messages/msg_view/b;
+    new-instance v2, Lcom/vtosters/lite/fragments/messages/msg_view/HeaderCallbackImpl;
 
-    invoke-direct {v2, p0}, Lcom/vtosters/lite/fragments/messages/msg_view/b;-><init>(Lcom/vtosters/lite/fragments/messages/msg_view/MsgViewFragment;)V
+    invoke-direct {v2, p0}, Lcom/vtosters/lite/fragments/messages/msg_view/HeaderCallbackImpl;-><init>(Lcom/vtosters/lite/fragments/messages/msg_view/MsgViewFragment;)V
 
-    invoke-virtual {p2, v2}, Lcom/vk/im/ui/components/msg_view/header/MsgViewHeaderComponent;->a(Lcom/vk/im/ui/components/msg_view/header/c;)V
+    invoke-virtual {p2, v2}, Lcom/vk/im/ui/components/msg_view/header/MsgViewHeaderComponent;->a(Lcom/vk/im/ui/components/msg_view/header/MsgViewHeaderComponentCallback;)V
 
     .line 5
     iget-object p2, p0, Lcom/vtosters/lite/fragments/messages/msg_view/MsgViewFragment;->J:Lcom/vk/im/ui/components/msg_view/header/MsgViewHeaderComponent;
@@ -706,7 +706,7 @@
 
     if-eqz v0, :cond_6
 
-    invoke-virtual {p2, v0, p3}, Lcom/vk/im/ui/q/c;->a(Landroid/view/ViewGroup;Landroid/os/Bundle;)Landroid/view/View;
+    invoke-virtual {p2, v0, p3}, Lcom/vk/im/ui/q/Component;->a(Landroid/view/ViewGroup;Landroid/os/Bundle;)Landroid/view/View;
 
     move-result-object p2
 
@@ -724,13 +724,13 @@
 
     if-eqz p2, :cond_4
 
-    new-instance v2, Lcom/vtosters/lite/fragments/messages/msg_view/a;
+    new-instance v2, Lcom/vtosters/lite/fragments/messages/msg_view/ContentCallbackImpl;
 
-    invoke-static {}, Lcom/vk/im/ui/p/c;->a()Lcom/vk/im/ui/p/b;
+    invoke-static {}, Lcom/vk/im/ui/p/ImBridge7;->a()Lcom/vk/im/ui/p/ImBridge8;
 
     move-result-object v3
 
-    invoke-static {}, Lcom/vk/bridges/q;->a()Lcom/vk/bridges/p;
+    invoke-static {}, Lcom/vk/bridges/ImageViewer1;->a()Lcom/vk/bridges/ImageViewer;
 
     move-result-object v4
 
@@ -738,9 +738,9 @@
 
     if-eqz v5, :cond_3
 
-    invoke-direct {v2, p0, v3, v4, v5}, Lcom/vtosters/lite/fragments/messages/msg_view/a;-><init>(Lcom/vtosters/lite/fragments/messages/msg_view/MsgViewFragment;Lcom/vk/im/ui/p/b;Lcom/vk/bridges/p;Lcom/vk/im/ui/components/msg_view/content/MsgViewContentComponent;)V
+    invoke-direct {v2, p0, v3, v4, v5}, Lcom/vtosters/lite/fragments/messages/msg_view/ContentCallbackImpl;-><init>(Lcom/vtosters/lite/fragments/messages/msg_view/MsgViewFragment;Lcom/vk/im/ui/p/ImBridge8;Lcom/vk/bridges/ImageViewer;Lcom/vk/im/ui/components/msg_view/content/MsgViewContentComponent;)V
 
-    invoke-virtual {p2, v2}, Lcom/vk/im/ui/components/msg_view/content/MsgViewContentComponent;->a(Lcom/vk/im/ui/components/msg_view/content/g;)V
+    invoke-virtual {p2, v2}, Lcom/vk/im/ui/components/msg_view/content/MsgViewContentComponent;->a(Lcom/vk/im/ui/components/msg_view/content/MsgViewContentComponentCallback;)V
 
     .line 8
     iget-object p2, p0, Lcom/vtosters/lite/fragments/messages/msg_view/MsgViewFragment;->K:Lcom/vk/im/ui/components/msg_view/content/MsgViewContentComponent;
@@ -751,7 +751,7 @@
 
     if-eqz v0, :cond_1
 
-    invoke-virtual {p2, v0, p3}, Lcom/vk/im/ui/q/c;->a(Landroid/view/ViewGroup;Landroid/os/Bundle;)Landroid/view/View;
+    invoke-virtual {p2, v0, p3}, Lcom/vk/im/ui/q/Component;->a(Landroid/view/ViewGroup;Landroid/os/Bundle;)Landroid/view/View;
 
     move-result-object p2
 
@@ -765,52 +765,52 @@
     return-object p1
 
     :cond_0
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     throw v1
 
     .line 10
     :cond_1
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     throw v1
 
     :cond_2
-    invoke-static {v0}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v0}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v1
 
     .line 11
     :cond_3
-    invoke-static {v0}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v0}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v1
 
     :cond_4
-    invoke-static {v0}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v0}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v1
 
     .line 12
     :cond_5
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     throw v1
 
     .line 13
     :cond_6
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     throw v1
 
     :cond_7
-    invoke-static {v0}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v0}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v1
 
     .line 14
     :cond_8
-    invoke-static {v0}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v0}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v1
 .end method
@@ -819,7 +819,7 @@
     .locals 2
 
     .line 1
-    invoke-super {p0}, Lcom/vk/core/fragments/b;->onDestroy()V
+    invoke-super {p0}, Lcom/vk/core/fragments/BaseFragment1;->onDestroy()V
 
     .line 2
     iget-object v0, p0, Lcom/vtosters/lite/fragments/messages/msg_view/MsgViewFragment;->J:Lcom/vk/im/ui/components/msg_view/header/MsgViewHeaderComponent;
@@ -828,19 +828,19 @@
 
     if-eqz v0, :cond_1
 
-    invoke-virtual {v0}, Lcom/vk/im/ui/q/c;->g()V
+    invoke-virtual {v0}, Lcom/vk/im/ui/q/Component;->g()V
 
     .line 3
     iget-object v0, p0, Lcom/vtosters/lite/fragments/messages/msg_view/MsgViewFragment;->K:Lcom/vk/im/ui/components/msg_view/content/MsgViewContentComponent;
 
     if-eqz v0, :cond_0
 
-    invoke-virtual {v0}, Lcom/vk/im/ui/q/c;->g()V
+    invoke-virtual {v0}, Lcom/vk/im/ui/q/Component;->g()V
 
     .line 4
-    iget-object v0, p0, Lcom/vtosters/lite/fragments/messages/msg_view/MsgViewFragment;->I:Lcom/vk/im/ui/media/audio/a;
+    iget-object v0, p0, Lcom/vtosters/lite/fragments/messages/msg_view/MsgViewFragment;->I:Lcom/vk/im/ui/media/audio/AudioPlayer;
 
-    invoke-interface {v0}, Lcom/vk/im/ui/media/audio/a;->a()V
+    invoke-interface {v0}, Lcom/vk/im/ui/media/audio/AudioPlayer;->a()V
 
     return-void
 
@@ -848,7 +848,7 @@
     const-string v0, "contentComponent"
 
     .line 5
-    invoke-static {v0}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v0}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v1
 
@@ -856,7 +856,7 @@
     const-string v0, "headerComponent"
 
     .line 6
-    invoke-static {v0}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v0}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v1
 .end method
@@ -876,14 +876,14 @@
 
     if-eqz v0, :cond_5
 
-    invoke-virtual {v0, v2}, Lcom/vk/im/ui/components/msg_view/header/MsgViewHeaderComponent;->a(Lcom/vk/im/ui/components/msg_view/header/c;)V
+    invoke-virtual {v0, v2}, Lcom/vk/im/ui/components/msg_view/header/MsgViewHeaderComponent;->a(Lcom/vk/im/ui/components/msg_view/header/MsgViewHeaderComponentCallback;)V
 
     .line 3
     iget-object v0, p0, Lcom/vtosters/lite/fragments/messages/msg_view/MsgViewFragment;->J:Lcom/vk/im/ui/components/msg_view/header/MsgViewHeaderComponent;
 
     if-eqz v0, :cond_4
 
-    invoke-virtual {v0}, Lcom/vk/im/ui/q/c;->h()V
+    invoke-virtual {v0}, Lcom/vk/im/ui/q/Component;->h()V
 
     .line 4
     iget-object v0, p0, Lcom/vtosters/lite/fragments/messages/msg_view/MsgViewFragment;->K:Lcom/vk/im/ui/components/msg_view/content/MsgViewContentComponent;
@@ -892,14 +892,14 @@
 
     if-eqz v0, :cond_3
 
-    invoke-virtual {v0, v2}, Lcom/vk/im/ui/components/msg_view/content/MsgViewContentComponent;->a(Lcom/vk/im/ui/components/msg_view/content/g;)V
+    invoke-virtual {v0, v2}, Lcom/vk/im/ui/components/msg_view/content/MsgViewContentComponent;->a(Lcom/vk/im/ui/components/msg_view/content/MsgViewContentComponentCallback;)V
 
     .line 5
     iget-object v0, p0, Lcom/vtosters/lite/fragments/messages/msg_view/MsgViewFragment;->K:Lcom/vk/im/ui/components/msg_view/content/MsgViewContentComponent;
 
     if-eqz v0, :cond_2
 
-    invoke-virtual {v0}, Lcom/vk/im/ui/q/c;->h()V
+    invoke-virtual {v0}, Lcom/vk/im/ui/q/Component;->h()V
 
     .line 6
     iget-object v0, p0, Lcom/vtosters/lite/fragments/messages/msg_view/MsgViewFragment;->L:Landroid/view/ViewGroup;
@@ -925,37 +925,37 @@
 
     .line 10
     :cond_0
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     throw v2
 
     .line 11
     :cond_1
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     throw v2
 
     .line 12
     :cond_2
-    invoke-static {v1}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v1}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v2
 
     .line 13
     :cond_3
-    invoke-static {v1}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v1}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v2
 
     .line 14
     :cond_4
-    invoke-static {v1}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v1}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v2
 
     .line 15
     :cond_5
-    invoke-static {v1}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v1}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v2
 .end method
@@ -964,21 +964,21 @@
     .locals 1
 
     .line 1
-    invoke-super {p0}, Lcom/vk/core/fragments/b;->onPause()V
+    invoke-super {p0}, Lcom/vk/core/fragments/BaseFragment1;->onPause()V
 
     .line 2
     iget-object v0, p0, Lcom/vtosters/lite/fragments/messages/msg_view/MsgViewFragment;->K:Lcom/vk/im/ui/components/msg_view/content/MsgViewContentComponent;
 
     if-eqz v0, :cond_0
 
-    invoke-virtual {v0}, Lcom/vk/im/ui/q/c;->r()V
+    invoke-virtual {v0}, Lcom/vk/im/ui/q/Component;->r()V
 
     return-void
 
     :cond_0
     const-string v0, "contentComponent"
 
-    invoke-static {v0}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v0}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     const/4 v0, 0x0
 
@@ -989,21 +989,21 @@
     .locals 1
 
     .line 1
-    invoke-super {p0}, Lcom/vk/core/fragments/b;->onResume()V
+    invoke-super {p0}, Lcom/vk/core/fragments/BaseFragment1;->onResume()V
 
     .line 2
     iget-object v0, p0, Lcom/vtosters/lite/fragments/messages/msg_view/MsgViewFragment;->K:Lcom/vk/im/ui/components/msg_view/content/MsgViewContentComponent;
 
     if-eqz v0, :cond_0
 
-    invoke-virtual {v0}, Lcom/vk/im/ui/q/c;->q()V
+    invoke-virtual {v0}, Lcom/vk/im/ui/q/Component;->q()V
 
     return-void
 
     :cond_0
     const-string v0, "contentComponent"
 
-    invoke-static {v0}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v0}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     const/4 v0, 0x0
 

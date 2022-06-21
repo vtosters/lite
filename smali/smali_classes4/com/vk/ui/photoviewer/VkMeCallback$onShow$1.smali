@@ -3,7 +3,7 @@
 .source "VkMeCallback.kt"
 
 # interfaces
-.implements Lcom/vk/navigation/g;
+.implements Lcom/vk/navigation/Dismissed;
 
 
 # annotations
@@ -43,7 +43,7 @@
 
     sget-object v0, Lcom/vk/ui/photoviewer/VkMeCallback$onShow$1$dismiss$1;->a:Lcom/vk/ui/photoviewer/VkMeCallback$onShow$1$dismiss$1;
 
-    invoke-virtual {p1, v0}, Lcom/vk/photoviewer/PhotoViewer;->a(Lkotlin/jvm/b/b;)V
+    invoke-virtual {p1, v0}, Lcom/vk/photoviewer/PhotoViewer;->a(Lkotlin/jvm/b/Functions2;)V
 
     return-void
 .end method
@@ -52,7 +52,7 @@
     .locals 0
 
     .line 1
-    invoke-static {p0}, Lcom/vk/navigation/g$a;->a(Lcom/vk/navigation/g;)V
+    invoke-static {p0}, Lcom/vk/navigation/Dismissed$a;->a(Lcom/vk/navigation/Dismissed;)V
 
     return-void
 .end method

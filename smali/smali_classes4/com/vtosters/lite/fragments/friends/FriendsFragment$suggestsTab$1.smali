@@ -3,7 +3,7 @@
 .source "FriendsFragment.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/a;
+.implements Lkotlin/jvm/b/Functions;
 
 
 # annotations
@@ -19,8 +19,8 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/a<",
-        "Lcom/vtosters/lite/fragments/friends/e;",
+        "Lkotlin/jvm/b/Functions<",
+        "Lcom/vtosters/lite/fragments/friends/FriendsTab;",
         ">;"
     }
 .end annotation
@@ -45,24 +45,24 @@
 
 
 # virtual methods
-.method public final invoke()Lcom/vtosters/lite/fragments/friends/e;
+.method public final invoke()Lcom/vtosters/lite/fragments/friends/FriendsTab;
     .locals 9
 
     .line 2
-    new-instance v1, Lcom/vtosters/lite/fragments/friends/c;
+    new-instance v1, Lcom/vtosters/lite/fragments/friends/FriendRequestsTabFragment;
 
-    invoke-direct {v1}, Lcom/vtosters/lite/fragments/friends/c;-><init>()V
+    invoke-direct {v1}, Lcom/vtosters/lite/fragments/friends/FriendRequestsTabFragment;-><init>()V
 
     .line 3
     iget-object v0, p0, Lcom/vtosters/lite/fragments/friends/FriendsFragment$suggestsTab$1;->this$0:Lcom/vtosters/lite/fragments/friends/FriendsFragment;
 
-    invoke-virtual {v0}, Lcom/vtosters/lite/fragments/friends/FriendsFragment;->getPresenter()Lcom/vtosters/lite/fragments/friends/presenter/a;
+    invoke-virtual {v0}, Lcom/vtosters/lite/fragments/friends/FriendsFragment;->getPresenter()Lcom/vtosters/lite/fragments/friends/presenter/BaseFriendsFragmentPresenter;
 
     move-result-object v0
 
     if-eqz v0, :cond_0
 
-    invoke-virtual {v1, v0}, Lcom/vtosters/lite/fragments/friends/c;->a(Lcom/vtosters/lite/fragments/friends/c$k;)V
+    invoke-virtual {v1, v0}, Lcom/vtosters/lite/fragments/friends/FriendRequestsTabFragment;->a(Lcom/vtosters/lite/fragments/friends/FriendRequestsTabFragment$k;)V
 
     .line 4
     new-instance v0, Landroid/os/Bundle;
@@ -82,10 +82,10 @@
     .line 7
     new-instance v4, Lcom/vtosters/lite/fragments/friends/FriendsFragment$suggestsTab$1$onUpdate$1;
 
-    invoke-direct {v4, v1}, Lcom/vtosters/lite/fragments/friends/FriendsFragment$suggestsTab$1$onUpdate$1;-><init>(Lcom/vtosters/lite/fragments/friends/c;)V
+    invoke-direct {v4, v1}, Lcom/vtosters/lite/fragments/friends/FriendsFragment$suggestsTab$1$onUpdate$1;-><init>(Lcom/vtosters/lite/fragments/friends/FriendRequestsTabFragment;)V
 
     .line 8
-    new-instance v8, Lcom/vtosters/lite/fragments/friends/e;
+    new-instance v8, Lcom/vtosters/lite/fragments/friends/FriendsTab;
 
     const v2, 0x7f12047b
 
@@ -99,13 +99,13 @@
 
     move-object v0, v8
 
-    invoke-direct/range {v0 .. v7}, Lcom/vtosters/lite/fragments/friends/e;-><init>(Lcom/vk/core/fragments/FragmentImpl;IILkotlin/jvm/b/b;IILkotlin/jvm/internal/i;)V
+    invoke-direct/range {v0 .. v7}, Lcom/vtosters/lite/fragments/friends/FriendsTab;-><init>(Lcom/vk/core/fragments/FragmentImpl;IILkotlin/jvm/b/Functions2;IILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     return-object v8
 
     .line 9
     :cond_0
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     const/4 v0, 0x0
 
@@ -116,7 +116,7 @@
     .locals 1
 
     .line 1
-    invoke-virtual {p0}, Lcom/vtosters/lite/fragments/friends/FriendsFragment$suggestsTab$1;->invoke()Lcom/vtosters/lite/fragments/friends/e;
+    invoke-virtual {p0}, Lcom/vtosters/lite/fragments/friends/FriendsFragment$suggestsTab$1;->invoke()Lcom/vtosters/lite/fragments/friends/FriendsTab;
 
     move-result-object v0
 

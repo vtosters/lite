@@ -3,7 +3,7 @@
 .source "CreateChatComponent.kt"
 
 # interfaces
-.implements Lc/a/z/g;
+.implements Lio/reactivex/functions/Consumer;
 
 
 # annotations
@@ -22,8 +22,8 @@
         "Ljava/lang/Object;",
         ">",
         "Ljava/lang/Object;",
-        "Lc/a/z/g<",
-        "Lcom/vk/im/ui/components/new_chat/d$a;",
+        "Lio/reactivex/functions/Consumer<",
+        "Lcom/vk/im/ui/components/new_chat/LoadNewChatModelCmd$a;",
         ">;"
     }
 .end annotation
@@ -46,34 +46,34 @@
 
 
 # virtual methods
-.method public final a(Lcom/vk/im/ui/components/new_chat/d$a;)V
+.method public final a(Lcom/vk/im/ui/components/new_chat/LoadNewChatModelCmd$a;)V
     .locals 2
 
     .line 1
     iget-object v0, p0, Lcom/vk/im/ui/components/new_chat/CreateChatComponent$e;->a:Lcom/vk/im/ui/components/new_chat/CreateChatComponent;
 
-    invoke-static {v0}, Lcom/vk/im/ui/components/new_chat/CreateChatComponent;->a(Lcom/vk/im/ui/components/new_chat/CreateChatComponent;)Lcom/vk/im/ui/components/new_chat/e;
+    invoke-static {v0}, Lcom/vk/im/ui/components/new_chat/CreateChatComponent;->a(Lcom/vk/im/ui/components/new_chat/CreateChatComponent;)Lcom/vk/im/ui/components/new_chat/Model;
 
     move-result-object v0
 
-    invoke-virtual {p1}, Lcom/vk/im/ui/components/new_chat/d$a;->b()Ljava/util/List;
+    invoke-virtual {p1}, Lcom/vk/im/ui/components/new_chat/LoadNewChatModelCmd$a;->b()Ljava/util/List;
 
     move-result-object v1
 
-    invoke-virtual {v0, v1}, Lcom/vk/im/ui/components/new_chat/e;->a(Ljava/util/List;)V
+    invoke-virtual {v0, v1}, Lcom/vk/im/ui/components/new_chat/Model;->a(Ljava/util/List;)V
 
     .line 2
     iget-object v0, p0, Lcom/vk/im/ui/components/new_chat/CreateChatComponent$e;->a:Lcom/vk/im/ui/components/new_chat/CreateChatComponent;
 
-    invoke-static {v0}, Lcom/vk/im/ui/components/new_chat/CreateChatComponent;->a(Lcom/vk/im/ui/components/new_chat/CreateChatComponent;)Lcom/vk/im/ui/components/new_chat/e;
+    invoke-static {v0}, Lcom/vk/im/ui/components/new_chat/CreateChatComponent;->a(Lcom/vk/im/ui/components/new_chat/CreateChatComponent;)Lcom/vk/im/ui/components/new_chat/Model;
 
     move-result-object v0
 
-    invoke-virtual {p1}, Lcom/vk/im/ui/components/new_chat/d$a;->a()Lcom/vk/im/engine/models/j;
+    invoke-virtual {p1}, Lcom/vk/im/ui/components/new_chat/LoadNewChatModelCmd$a;->a()Lcom/vk/im/engine/models/Profile;
 
     move-result-object p1
 
-    invoke-virtual {v0, p1}, Lcom/vk/im/ui/components/new_chat/e;->a(Lcom/vk/im/engine/models/j;)V
+    invoke-virtual {v0, p1}, Lcom/vk/im/ui/components/new_chat/Model;->a(Lcom/vk/im/engine/models/Profile;)V
 
     .line 3
     iget-object p1, p0, Lcom/vk/im/ui/components/new_chat/CreateChatComponent$e;->a:Lcom/vk/im/ui/components/new_chat/CreateChatComponent;
@@ -84,11 +84,11 @@
 
     iget-object v0, p0, Lcom/vk/im/ui/components/new_chat/CreateChatComponent$e;->a:Lcom/vk/im/ui/components/new_chat/CreateChatComponent;
 
-    invoke-static {v0}, Lcom/vk/im/ui/components/new_chat/CreateChatComponent;->a(Lcom/vk/im/ui/components/new_chat/CreateChatComponent;)Lcom/vk/im/ui/components/new_chat/e;
+    invoke-static {v0}, Lcom/vk/im/ui/components/new_chat/CreateChatComponent;->a(Lcom/vk/im/ui/components/new_chat/CreateChatComponent;)Lcom/vk/im/ui/components/new_chat/Model;
 
     move-result-object v0
 
-    invoke-virtual {p1, v0}, Lcom/vk/im/ui/components/new_chat/CreateChatVC;->a(Lcom/vk/im/ui/components/new_chat/e;)V
+    invoke-virtual {p1, v0}, Lcom/vk/im/ui/components/new_chat/CreateChatVC;->a(Lcom/vk/im/ui/components/new_chat/Model;)V
 
     return-void
 .end method
@@ -97,9 +97,9 @@
     .locals 0
 
     .line 1
-    check-cast p1, Lcom/vk/im/ui/components/new_chat/d$a;
+    check-cast p1, Lcom/vk/im/ui/components/new_chat/LoadNewChatModelCmd$a;
 
-    invoke-virtual {p0, p1}, Lcom/vk/im/ui/components/new_chat/CreateChatComponent$e;->a(Lcom/vk/im/ui/components/new_chat/d$a;)V
+    invoke-virtual {p0, p1}, Lcom/vk/im/ui/components/new_chat/CreateChatComponent$e;->a(Lcom/vk/im/ui/components/new_chat/LoadNewChatModelCmd$a;)V
 
     return-void
 .end method

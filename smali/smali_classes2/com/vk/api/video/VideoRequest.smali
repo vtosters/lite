@@ -1,5 +1,5 @@
 .class public final Lcom/vk/api/video/VideoRequest;
-.super Lcom/vk/api/base/d;
+.super Lcom/vk/api/base/ApiRequest;
 .source "VideoRequest.kt"
 
 
@@ -12,7 +12,7 @@
 
 .annotation system Ldalvik/annotation/Signature;
     value = {
-        "Lcom/vk/api/base/d<",
+        "Lcom/vk/api/base/ApiRequest<",
         "Lcom/vk/api/base/VkPaginationList<",
         "Lcom/vk/dto/common/VideoFile;",
         ">;>;"
@@ -32,7 +32,7 @@
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, v1}, Lcom/vk/api/video/VideoRequest$Companion;-><init>(Lkotlin/jvm/internal/i;)V
+    invoke-direct {v0, v1}, Lcom/vk/api/video/VideoRequest$Companion;-><init>(Lkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     sput-object v0, Lcom/vk/api/video/VideoRequest;->F:Lcom/vk/api/video/VideoRequest$Companion;
 
@@ -45,7 +45,7 @@
     const-string v0, "execute.getVideosWithProfiles"
 
     .line 3
-    invoke-direct {p0, v0}, Lcom/vk/api/base/d;-><init>(Ljava/lang/String;)V
+    invoke-direct {p0, v0}, Lcom/vk/api/base/ApiRequest;-><init>(Ljava/lang/String;)V
 
     const/4 v0, 0x1
 
@@ -61,7 +61,7 @@
     const-string v0, "video.get"
 
     .line 1
-    invoke-direct {p0, v0}, Lcom/vk/api/base/d;-><init>(Ljava/lang/String;)V
+    invoke-direct {p0, v0}, Lcom/vk/api/base/ApiRequest;-><init>(Ljava/lang/String;)V
 
     .line 2
     invoke-direct {p0, p1, p2, p3}, Lcom/vk/api/video/VideoRequest;->a(IIZ)V
@@ -75,12 +75,12 @@
     const-string v0, "execute.searchVideosWithProfiles"
 
     .line 5
-    invoke-direct {p0, v0}, Lcom/vk/api/base/d;-><init>(Ljava/lang/String;)V
+    invoke-direct {p0, v0}, Lcom/vk/api/base/ApiRequest;-><init>(Ljava/lang/String;)V
 
     const-string v0, "q"
 
     .line 6
-    invoke-virtual {p0, v0, p1}, Lcom/vk/api/base/d;->c(Ljava/lang/String;Ljava/lang/String;)Lcom/vk/api/base/d;
+    invoke-virtual {p0, v0, p1}, Lcom/vk/api/base/ApiRequest;->c(Ljava/lang/String;Ljava/lang/String;)Lcom/vk/api/base/ApiRequest;
 
     if-eqz p4, :cond_0
 
@@ -95,14 +95,14 @@
     const-string p4, "search_own"
 
     .line 7
-    invoke-virtual {p0, p4, p1}, Lcom/vk/api/base/d;->c(Ljava/lang/String;Ljava/lang/String;)Lcom/vk/api/base/d;
+    invoke-virtual {p0, p4, p1}, Lcom/vk/api/base/ApiRequest;->c(Ljava/lang/String;Ljava/lang/String;)Lcom/vk/api/base/ApiRequest;
 
     const/4 p1, 0x2
 
     const-string p4, "func_v"
 
     .line 8
-    invoke-virtual {p0, p4, p1}, Lcom/vk/api/base/d;->b(Ljava/lang/String;I)Lcom/vk/api/base/d;
+    invoke-virtual {p0, p4, p1}, Lcom/vk/api/base/ApiRequest;->b(Ljava/lang/String;I)Lcom/vk/api/base/ApiRequest;
 
     .line 9
     invoke-direct {p0, p2, p3, p5}, Lcom/vk/api/video/VideoRequest;->a(IIZ)V
@@ -116,12 +116,12 @@
     const-string v0, "offset"
 
     .line 2
-    invoke-virtual {p0, v0, p1}, Lcom/vk/api/base/d;->b(Ljava/lang/String;I)Lcom/vk/api/base/d;
+    invoke-virtual {p0, v0, p1}, Lcom/vk/api/base/ApiRequest;->b(Ljava/lang/String;I)Lcom/vk/api/base/ApiRequest;
 
     const-string p1, "count"
 
     .line 3
-    invoke-virtual {p0, p1, p2}, Lcom/vk/api/base/d;->b(Ljava/lang/String;I)Lcom/vk/api/base/d;
+    invoke-virtual {p0, p1, p2}, Lcom/vk/api/base/ApiRequest;->b(Ljava/lang/String;I)Lcom/vk/api/base/ApiRequest;
 
     if-eqz p3, :cond_0
 
@@ -136,7 +136,7 @@
     const-string p2, "extended"
 
     .line 4
-    invoke-virtual {p0, p2, p1}, Lcom/vk/api/base/d;->c(Ljava/lang/String;Ljava/lang/String;)Lcom/vk/api/base/d;
+    invoke-virtual {p0, p2, p1}, Lcom/vk/api/base/ApiRequest;->c(Ljava/lang/String;Ljava/lang/String;)Lcom/vk/api/base/ApiRequest;
 
     return-void
 .end method
@@ -189,7 +189,7 @@
     const-string v0, "owner_id"
 
     .line 1
-    invoke-virtual {p0, v0, p1}, Lcom/vk/api/base/d;->b(Ljava/lang/String;I)Lcom/vk/api/base/d;
+    invoke-virtual {p0, v0, p1}, Lcom/vk/api/base/ApiRequest;->b(Ljava/lang/String;I)Lcom/vk/api/base/ApiRequest;
 
     return-object p0
 .end method

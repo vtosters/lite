@@ -3,12 +3,12 @@
 .source "AppGroupedStoryView.kt"
 
 # interfaces
-.implements Lb/h/g/l/e;
+.implements Lb/h/g/l/NotificationListener;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/stories/view/AppGroupedStoryView;-><init>(Landroid/content/Context;ZLcom/vk/stories/StoriesController$SourceType;ILandroid/view/View$OnTouchListener;Lcom/vk/dto/stories/model/StoriesContainer;Lcom/vk/stories/view/StoryView$u0;Lcom/vk/stories/view/p1;)V
+    value = Lcom/vk/stories/view/AppGroupedStoryView;-><init>(Landroid/content/Context;ZLcom/vk/stories/StoriesController$SourceType;ILandroid/view/View$OnTouchListener;Lcom/vk/dto/stories/model/StoriesContainer;Lcom/vk/stories/view/StoryView$u0;Lcom/vk/stories/view/StorySettings;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -22,7 +22,7 @@
         "Ljava/lang/Object;",
         ">",
         "Ljava/lang/Object;",
-        "Lb/h/g/l/e<",
+        "Lb/h/g/l/NotificationListener<",
         "Ljava/util/List<",
         "+",
         "Lcom/vk/dto/stories/model/StoryEntry;",
@@ -80,7 +80,7 @@
 
     if-eqz p1, :cond_3
 
-    invoke-static {p1}, Lcom/vk/dto/stories/d/a;->h(Lcom/vk/dto/stories/model/StoriesContainer;)Ljava/util/List;
+    invoke-static {p1}, Lcom/vk/dto/stories/d/StoriesContainerExt;->h(Lcom/vk/dto/stories/model/StoriesContainer;)Ljava/util/List;
 
     move-result-object p1
 
@@ -164,7 +164,7 @@
     :cond_3
     iget-object p1, p0, Lcom/vk/stories/view/AppGroupedStoryView$g;->a:Lcom/vk/stories/view/AppGroupedStoryView;
 
-    invoke-static {p1}, Lcom/vk/stories/view/AppGroupedStoryView;->b(Lcom/vk/stories/view/AppGroupedStoryView;)Lcom/vk/stories/view/z1/a;
+    invoke-static {p1}, Lcom/vk/stories/view/AppGroupedStoryView;->b(Lcom/vk/stories/view/AppGroupedStoryView;)Lcom/vk/stories/view/z1/GroupedStoriesAdapter;
 
     move-result-object p1
 

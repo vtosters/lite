@@ -40,7 +40,7 @@
     .line 1
     iget-object p1, p0, Lcom/vk/stories/editor/background/StoryBackgroundEditorView$b;->a:Lcom/vk/stories/editor/background/StoryBackgroundEditorView;
 
-    invoke-virtual {p1}, Lcom/vk/stories/editor/background/StoryBackgroundEditorView;->getPresenter()Lcom/vk/stories/editor/background/b;
+    invoke-virtual {p1}, Lcom/vk/stories/editor/background/StoryBackgroundEditorView;->getPresenter()Lcom/vk/stories/editor/background/StoryBackgroundEditorContract2;
 
     move-result-object p1
 
@@ -48,19 +48,19 @@
 
     const-string v0, "gradients"
 
-    invoke-interface {p1, v0}, Lcom/vk/stories/editor/background/b;->m(Ljava/lang/String;)V
+    invoke-interface {p1, v0}, Lcom/vk/stories/editor/background/StoryBackgroundEditorContract2;->m(Ljava/lang/String;)V
 
     .line 2
     :cond_0
     iget-object p1, p0, Lcom/vk/stories/editor/background/StoryBackgroundEditorView$b;->a:Lcom/vk/stories/editor/background/StoryBackgroundEditorView;
 
-    invoke-virtual {p1}, Lcom/vk/stories/editor/background/StoryBackgroundEditorView;->getPresenter()Lcom/vk/stories/editor/background/b;
+    invoke-virtual {p1}, Lcom/vk/stories/editor/background/StoryBackgroundEditorView;->getPresenter()Lcom/vk/stories/editor/background/StoryBackgroundEditorContract2;
 
     move-result-object p1
 
     if-eqz p1, :cond_1
 
-    invoke-interface {p1}, Lcom/vk/stories/editor/background/b;->W3()V
+    invoke-interface {p1}, Lcom/vk/stories/editor/background/StoryBackgroundEditorContract2;->W3()V
 
     :cond_1
     return-void

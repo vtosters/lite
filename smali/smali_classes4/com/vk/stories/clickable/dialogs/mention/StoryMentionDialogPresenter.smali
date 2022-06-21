@@ -3,24 +3,24 @@
 .source "StoryMentionDialogPresenter.kt"
 
 # interfaces
-.implements Lcom/vk/stories/clickable/dialogs/mention/c;
+.implements Lcom/vk/stories/clickable/dialogs/mention/StoryMentionDialogContract;
 
 
 # instance fields
-.field private final a:Lio/reactivex/disposables/d;
+.field private final a:Lio/reactivex/disposables/SerialDisposable;
 
-.field private b:Lcom/vk/stories/util/h;
+.field private b:Lcom/vk/stories/util/CycleDataSwitcher;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Lcom/vk/stories/util/h<",
-            "Lcom/vk/stories/clickable/models/h;",
-            "Lkotlin/m;",
+            "Lcom/vk/stories/util/CycleDataSwitcher<",
+            "Lcom/vk/stories/clickable/models/StoryHashtagTypeParams6;",
+            "Lkotlin/Unit;",
             ">;"
         }
     .end annotation
 .end field
 
-.field private c:Lcom/vk/mentions/h;
+.field private c:Lcom/vk/mentions/MentionModels2;
 
 .field private d:Ljava/util/HashMap;
     .annotation system Ldalvik/annotation/Signature;
@@ -33,32 +33,32 @@
     .end annotation
 .end field
 
-.field private e:Lcom/vk/stories/clickable/models/c;
+.field private e:Lcom/vk/stories/clickable/models/StoryHashtagTypeParams2;
 
-.field private f:Lcom/vk/stories/clickable/b;
+.field private f:Lcom/vk/stories/clickable/SingleLineTextMeasureHelper;
 
-.field private g:Lcom/vk/stories/clickable/dialogs/mention/d;
+.field private g:Lcom/vk/stories/clickable/dialogs/mention/StoryMentionDialogContract1;
 
 .field private final h:I
 
 
 # direct methods
-.method public constructor <init>(Lcom/vk/stories/clickable/dialogs/mention/d;I)V
+.method public constructor <init>(Lcom/vk/stories/clickable/dialogs/mention/StoryMentionDialogContract1;I)V
     .locals 0
 
     .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lcom/vk/stories/clickable/dialogs/mention/StoryMentionDialogPresenter;->g:Lcom/vk/stories/clickable/dialogs/mention/d;
+    iput-object p1, p0, Lcom/vk/stories/clickable/dialogs/mention/StoryMentionDialogPresenter;->g:Lcom/vk/stories/clickable/dialogs/mention/StoryMentionDialogContract1;
 
     iput p2, p0, Lcom/vk/stories/clickable/dialogs/mention/StoryMentionDialogPresenter;->h:I
 
     .line 2
-    new-instance p1, Lio/reactivex/disposables/d;
+    new-instance p1, Lio/reactivex/disposables/SerialDisposable;
 
-    invoke-direct {p1}, Lio/reactivex/disposables/d;-><init>()V
+    invoke-direct {p1}, Lio/reactivex/disposables/SerialDisposable;-><init>()V
 
-    iput-object p1, p0, Lcom/vk/stories/clickable/dialogs/mention/StoryMentionDialogPresenter;->a:Lio/reactivex/disposables/d;
+    iput-object p1, p0, Lcom/vk/stories/clickable/dialogs/mention/StoryMentionDialogPresenter;->a:Lio/reactivex/disposables/SerialDisposable;
 
     .line 3
     new-instance p1, Ljava/util/HashMap;
@@ -70,70 +70,70 @@
     return-void
 .end method
 
-.method public static final synthetic a(Lcom/vk/stories/clickable/dialogs/mention/StoryMentionDialogPresenter;)Lcom/vk/stories/util/h;
+.method public static final synthetic a(Lcom/vk/stories/clickable/dialogs/mention/StoryMentionDialogPresenter;)Lcom/vk/stories/util/CycleDataSwitcher;
     .locals 0
 
     .line 2
-    iget-object p0, p0, Lcom/vk/stories/clickable/dialogs/mention/StoryMentionDialogPresenter;->b:Lcom/vk/stories/util/h;
+    iget-object p0, p0, Lcom/vk/stories/clickable/dialogs/mention/StoryMentionDialogPresenter;->b:Lcom/vk/stories/util/CycleDataSwitcher;
 
     return-object p0
 .end method
 
-.method public static final synthetic a(Lcom/vk/stories/clickable/dialogs/mention/StoryMentionDialogPresenter;Lcom/vk/stories/clickable/models/h;Lkotlin/m;)V
+.method public static final synthetic a(Lcom/vk/stories/clickable/dialogs/mention/StoryMentionDialogPresenter;Lcom/vk/stories/clickable/models/StoryHashtagTypeParams6;Lkotlin/Unit;)V
     .locals 0
 
     .line 1
-    invoke-direct {p0, p1, p2}, Lcom/vk/stories/clickable/dialogs/mention/StoryMentionDialogPresenter;->a(Lcom/vk/stories/clickable/models/h;Lkotlin/m;)V
+    invoke-direct {p0, p1, p2}, Lcom/vk/stories/clickable/dialogs/mention/StoryMentionDialogPresenter;->a(Lcom/vk/stories/clickable/models/StoryHashtagTypeParams6;Lkotlin/Unit;)V
 
     return-void
 .end method
 
-.method private final a(Lcom/vk/stories/clickable/models/c;)V
+.method private final a(Lcom/vk/stories/clickable/models/StoryHashtagTypeParams2;)V
     .locals 1
 
     .line 5
-    iput-object p1, p0, Lcom/vk/stories/clickable/dialogs/mention/StoryMentionDialogPresenter;->e:Lcom/vk/stories/clickable/models/c;
+    iput-object p1, p0, Lcom/vk/stories/clickable/dialogs/mention/StoryMentionDialogPresenter;->e:Lcom/vk/stories/clickable/models/StoryHashtagTypeParams2;
 
     .line 6
-    iget-object p1, p0, Lcom/vk/stories/clickable/dialogs/mention/StoryMentionDialogPresenter;->e:Lcom/vk/stories/clickable/models/c;
+    iget-object p1, p0, Lcom/vk/stories/clickable/dialogs/mention/StoryMentionDialogPresenter;->e:Lcom/vk/stories/clickable/models/StoryHashtagTypeParams2;
 
     if-eqz p1, :cond_0
 
-    iget-object v0, p0, Lcom/vk/stories/clickable/dialogs/mention/StoryMentionDialogPresenter;->g:Lcom/vk/stories/clickable/dialogs/mention/d;
+    iget-object v0, p0, Lcom/vk/stories/clickable/dialogs/mention/StoryMentionDialogPresenter;->g:Lcom/vk/stories/clickable/dialogs/mention/StoryMentionDialogContract1;
 
-    invoke-interface {v0, p1}, Lcom/vk/stories/clickable/dialogs/mention/d;->a(Lcom/vk/stories/clickable/models/c;)V
+    invoke-interface {v0, p1}, Lcom/vk/stories/clickable/dialogs/mention/StoryMentionDialogContract1;->a(Lcom/vk/stories/clickable/models/StoryHashtagTypeParams2;)V
 
     :cond_0
     return-void
 .end method
 
-.method private final a(Lcom/vk/stories/clickable/models/h;Lkotlin/m;)V
+.method private final a(Lcom/vk/stories/clickable/models/StoryHashtagTypeParams6;Lkotlin/Unit;)V
     .locals 1
 
     .line 25
-    iget-object p2, p0, Lcom/vk/stories/clickable/dialogs/mention/StoryMentionDialogPresenter;->g:Lcom/vk/stories/clickable/dialogs/mention/d;
+    iget-object p2, p0, Lcom/vk/stories/clickable/dialogs/mention/StoryMentionDialogPresenter;->g:Lcom/vk/stories/clickable/dialogs/mention/StoryMentionDialogContract1;
 
-    invoke-interface {p2}, Lcom/vk/stories/clickable/dialogs/mention/d;->z0()Landroid/widget/TextView;
+    invoke-interface {p2}, Lcom/vk/stories/clickable/dialogs/mention/StoryMentionDialogContract1;->z0()Landroid/widget/TextView;
 
     move-result-object p2
 
-    invoke-virtual {p1}, Lcom/vk/stories/clickable/models/h;->h()I
+    invoke-virtual {p1}, Lcom/vk/stories/clickable/models/StoryHashtagTypeParams6;->h()I
 
     move-result v0
 
     invoke-virtual {p2, v0}, Landroid/widget/TextView;->setText(I)V
 
     .line 26
-    invoke-direct {p0, p1}, Lcom/vk/stories/clickable/dialogs/mention/StoryMentionDialogPresenter;->a(Lcom/vk/stories/clickable/models/c;)V
+    invoke-direct {p0, p1}, Lcom/vk/stories/clickable/dialogs/mention/StoryMentionDialogPresenter;->a(Lcom/vk/stories/clickable/models/StoryHashtagTypeParams2;)V
 
     return-void
 .end method
 
-.method public static final synthetic b(Lcom/vk/stories/clickable/dialogs/mention/StoryMentionDialogPresenter;)Lcom/vk/stories/clickable/dialogs/mention/d;
+.method public static final synthetic b(Lcom/vk/stories/clickable/dialogs/mention/StoryMentionDialogPresenter;)Lcom/vk/stories/clickable/dialogs/mention/StoryMentionDialogContract1;
     .locals 0
 
     .line 1
-    iget-object p0, p0, Lcom/vk/stories/clickable/dialogs/mention/StoryMentionDialogPresenter;->g:Lcom/vk/stories/clickable/dialogs/mention/d;
+    iget-object p0, p0, Lcom/vk/stories/clickable/dialogs/mention/StoryMentionDialogPresenter;->g:Lcom/vk/stories/clickable/dialogs/mention/StoryMentionDialogContract1;
 
     return-object p0
 .end method
@@ -142,16 +142,16 @@
     .locals 5
 
     .line 2
-    iget-object v0, p0, Lcom/vk/stories/clickable/dialogs/mention/StoryMentionDialogPresenter;->g:Lcom/vk/stories/clickable/dialogs/mention/d;
+    iget-object v0, p0, Lcom/vk/stories/clickable/dialogs/mention/StoryMentionDialogPresenter;->g:Lcom/vk/stories/clickable/dialogs/mention/StoryMentionDialogContract1;
 
-    invoke-interface {v0}, Lcom/vk/stories/clickable/dialogs/mention/d;->x0()Lcom/vk/stories/clickable/models/g;
+    invoke-interface {v0}, Lcom/vk/stories/clickable/dialogs/mention/StoryMentionDialogContract1;->x0()Lcom/vk/stories/clickable/models/StoryHashtagTypeParams;
 
     move-result-object v0
 
     .line 3
-    iget-object v1, p0, Lcom/vk/stories/clickable/dialogs/mention/StoryMentionDialogPresenter;->g:Lcom/vk/stories/clickable/dialogs/mention/d;
+    iget-object v1, p0, Lcom/vk/stories/clickable/dialogs/mention/StoryMentionDialogPresenter;->g:Lcom/vk/stories/clickable/dialogs/mention/StoryMentionDialogContract1;
 
-    invoke-interface {v1}, Lcom/vk/stories/clickable/dialogs/mention/d;->z0()Landroid/widget/TextView;
+    invoke-interface {v1}, Lcom/vk/stories/clickable/dialogs/mention/StoryMentionDialogContract1;->z0()Landroid/widget/TextView;
 
     move-result-object v1
 
@@ -162,11 +162,11 @@
     invoke-virtual {v1, v2}, Landroid/widget/TextView;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
     .line 4
-    new-instance v1, Lcom/vk/stories/util/h;
+    new-instance v1, Lcom/vk/stories/util/CycleDataSwitcher;
 
-    sget-object v2, Lcom/vk/stories/clickable/e;->i:Lcom/vk/stories/clickable/e;
+    sget-object v2, Lcom/vk/stories/clickable/StoryClickableController;->i:Lcom/vk/stories/clickable/StoryClickableController;
 
-    invoke-virtual {v2}, Lcom/vk/stories/clickable/e;->h()[Lcom/vk/stories/clickable/models/h;
+    invoke-virtual {v2}, Lcom/vk/stories/clickable/StoryClickableController;->h()[Lcom/vk/stories/clickable/models/StoryHashtagTypeParams6;
 
     move-result-object v2
 
@@ -176,46 +176,46 @@
 
     const/4 v4, 0x0
 
-    invoke-direct {v1, v2, v4, v3}, Lcom/vk/stories/util/h;-><init>([Ljava/lang/Object;[Ljava/lang/Object;Lkotlin/jvm/b/c;)V
+    invoke-direct {v1, v2, v4, v3}, Lcom/vk/stories/util/CycleDataSwitcher;-><init>([Ljava/lang/Object;[Ljava/lang/Object;Lkotlin/jvm/b/Functions1;)V
 
-    iput-object v1, p0, Lcom/vk/stories/clickable/dialogs/mention/StoryMentionDialogPresenter;->b:Lcom/vk/stories/util/h;
+    iput-object v1, p0, Lcom/vk/stories/clickable/dialogs/mention/StoryMentionDialogPresenter;->b:Lcom/vk/stories/util/CycleDataSwitcher;
 
     if-nez v0, :cond_0
 
     .line 5
-    iget-object v0, p0, Lcom/vk/stories/clickable/dialogs/mention/StoryMentionDialogPresenter;->b:Lcom/vk/stories/util/h;
+    iget-object v0, p0, Lcom/vk/stories/clickable/dialogs/mention/StoryMentionDialogPresenter;->b:Lcom/vk/stories/util/CycleDataSwitcher;
 
     if-eqz v0, :cond_2
 
-    invoke-virtual {v0}, Lcom/vk/stories/util/h;->f()V
+    invoke-virtual {v0}, Lcom/vk/stories/util/CycleDataSwitcher;->f()V
 
     goto :goto_0
 
     .line 6
     :cond_0
-    iget-object v1, p0, Lcom/vk/stories/clickable/dialogs/mention/StoryMentionDialogPresenter;->b:Lcom/vk/stories/util/h;
+    iget-object v1, p0, Lcom/vk/stories/clickable/dialogs/mention/StoryMentionDialogPresenter;->b:Lcom/vk/stories/util/CycleDataSwitcher;
 
     if-eqz v1, :cond_1
 
-    invoke-virtual {v0}, Lcom/vk/stories/clickable/models/g;->c()Lcom/vk/stories/clickable/models/h;
+    invoke-virtual {v0}, Lcom/vk/stories/clickable/models/StoryHashtagTypeParams;->c()Lcom/vk/stories/clickable/models/StoryHashtagTypeParams6;
 
     move-result-object v2
 
-    invoke-virtual {v1, v2}, Lcom/vk/stories/util/h;->a(Ljava/lang/Object;)V
+    invoke-virtual {v1, v2}, Lcom/vk/stories/util/CycleDataSwitcher;->a(Ljava/lang/Object;)V
 
     .line 7
     :cond_1
-    iget-object v1, p0, Lcom/vk/stories/clickable/dialogs/mention/StoryMentionDialogPresenter;->g:Lcom/vk/stories/clickable/dialogs/mention/d;
+    iget-object v1, p0, Lcom/vk/stories/clickable/dialogs/mention/StoryMentionDialogPresenter;->g:Lcom/vk/stories/clickable/dialogs/mention/StoryMentionDialogContract1;
 
-    invoke-interface {v1}, Lcom/vk/stories/clickable/dialogs/mention/d;->h()Lcom/vk/stories/clickable/views/StoryGradientEditText;
+    invoke-interface {v1}, Lcom/vk/stories/clickable/dialogs/mention/StoryMentionDialogContract1;->h()Lcom/vk/stories/clickable/views/StoryGradientEditText;
 
     move-result-object v1
 
-    invoke-virtual {v0}, Lcom/vk/stories/clickable/models/g;->b()Lcom/vk/stories/clickable/models/b;
+    invoke-virtual {v0}, Lcom/vk/stories/clickable/models/StoryHashtagTypeParams;->b()Lcom/vk/stories/clickable/models/StoryHashtagTypeParams3;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/vk/stories/clickable/models/b;->f()Ljava/lang/String;
+    invoke-virtual {v0}, Lcom/vk/stories/clickable/models/StoryHashtagTypeParams3;->f()Ljava/lang/String;
 
     move-result-object v0
 
@@ -230,9 +230,9 @@
     .locals 12
 
     .line 1
-    iget-object v0, p0, Lcom/vk/stories/clickable/dialogs/mention/StoryMentionDialogPresenter;->g:Lcom/vk/stories/clickable/dialogs/mention/d;
+    iget-object v0, p0, Lcom/vk/stories/clickable/dialogs/mention/StoryMentionDialogPresenter;->g:Lcom/vk/stories/clickable/dialogs/mention/StoryMentionDialogContract1;
 
-    invoke-interface {v0}, Lcom/vk/stories/clickable/dialogs/mention/d;->h()Lcom/vk/stories/clickable/views/StoryGradientEditText;
+    invoke-interface {v0}, Lcom/vk/stories/clickable/dialogs/mention/StoryMentionDialogContract1;->h()Lcom/vk/stories/clickable/views/StoryGradientEditText;
 
     move-result-object v0
 
@@ -241,9 +241,9 @@
     invoke-virtual {v0, v1}, Landroid/widget/EditText;->setBackground(Landroid/graphics/drawable/Drawable;)V
 
     .line 2
-    iget-object v0, p0, Lcom/vk/stories/clickable/dialogs/mention/StoryMentionDialogPresenter;->g:Lcom/vk/stories/clickable/dialogs/mention/d;
+    iget-object v0, p0, Lcom/vk/stories/clickable/dialogs/mention/StoryMentionDialogPresenter;->g:Lcom/vk/stories/clickable/dialogs/mention/StoryMentionDialogContract1;
 
-    invoke-interface {v0}, Lcom/vk/stories/clickable/dialogs/mention/d;->h()Lcom/vk/stories/clickable/views/StoryGradientEditText;
+    invoke-interface {v0}, Lcom/vk/stories/clickable/dialogs/mention/StoryMentionDialogContract1;->h()Lcom/vk/stories/clickable/views/StoryGradientEditText;
 
     move-result-object v0
 
@@ -272,12 +272,12 @@
     aput-object v3, v2, v4
 
     .line 5
-    new-instance v3, Lcom/vk/stories/clickable/h;
+    new-instance v3, Lcom/vk/stories/clickable/StoryPrefixFilter;
 
     .line 6
-    iget-object v4, p0, Lcom/vk/stories/clickable/dialogs/mention/StoryMentionDialogPresenter;->g:Lcom/vk/stories/clickable/dialogs/mention/d;
+    iget-object v4, p0, Lcom/vk/stories/clickable/dialogs/mention/StoryMentionDialogPresenter;->g:Lcom/vk/stories/clickable/dialogs/mention/StoryMentionDialogContract1;
 
-    invoke-interface {v4}, Lcom/vk/stories/clickable/dialogs/mention/d;->h()Lcom/vk/stories/clickable/views/StoryGradientEditText;
+    invoke-interface {v4}, Lcom/vk/stories/clickable/dialogs/mention/StoryMentionDialogContract1;->h()Lcom/vk/stories/clickable/views/StoryGradientEditText;
 
     move-result-object v4
 
@@ -286,7 +286,7 @@
     const-string v6, "[^\\@]*"
 
     .line 7
-    invoke-direct {v3, v5, v4, v6}, Lcom/vk/stories/clickable/h;-><init>(Ljava/lang/String;Landroid/widget/EditText;Ljava/lang/String;)V
+    invoke-direct {v3, v5, v4, v6}, Lcom/vk/stories/clickable/StoryPrefixFilter;-><init>(Ljava/lang/String;Landroid/widget/EditText;Ljava/lang/String;)V
 
     const/4 v4, 0x2
 
@@ -296,9 +296,9 @@
     invoke-virtual {v0, v2}, Landroid/widget/EditText;->setFilters([Landroid/text/InputFilter;)V
 
     .line 9
-    iget-object v0, p0, Lcom/vk/stories/clickable/dialogs/mention/StoryMentionDialogPresenter;->g:Lcom/vk/stories/clickable/dialogs/mention/d;
+    iget-object v0, p0, Lcom/vk/stories/clickable/dialogs/mention/StoryMentionDialogPresenter;->g:Lcom/vk/stories/clickable/dialogs/mention/StoryMentionDialogContract1;
 
-    invoke-interface {v0}, Lcom/vk/stories/clickable/dialogs/mention/d;->h()Lcom/vk/stories/clickable/views/StoryGradientEditText;
+    invoke-interface {v0}, Lcom/vk/stories/clickable/dialogs/mention/StoryMentionDialogContract1;->h()Lcom/vk/stories/clickable/views/StoryGradientEditText;
 
     move-result-object v0
 
@@ -309,38 +309,38 @@
     invoke-virtual {v0, v2}, Lcom/vk/stories/clickable/views/StoryGradientEditText;->setSelectionChangeListener(Lcom/vk/common/view/SelectionChangeEditText$a;)V
 
     .line 10
-    sget-object v0, Lcom/vk/stories/clickable/e;->i:Lcom/vk/stories/clickable/e;
+    sget-object v0, Lcom/vk/stories/clickable/StoryClickableController;->i:Lcom/vk/stories/clickable/StoryClickableController;
 
-    invoke-virtual {v0}, Lcom/vk/stories/clickable/e;->b()I
+    invoke-virtual {v0}, Lcom/vk/stories/clickable/StoryClickableController;->b()I
 
     move-result v9
 
     .line 11
-    iget-object v0, p0, Lcom/vk/stories/clickable/dialogs/mention/StoryMentionDialogPresenter;->g:Lcom/vk/stories/clickable/dialogs/mention/d;
+    iget-object v0, p0, Lcom/vk/stories/clickable/dialogs/mention/StoryMentionDialogPresenter;->g:Lcom/vk/stories/clickable/dialogs/mention/StoryMentionDialogContract1;
 
-    invoke-interface {v0}, Lcom/vk/stories/clickable/dialogs/mention/d;->h()Lcom/vk/stories/clickable/views/StoryGradientEditText;
+    invoke-interface {v0}, Lcom/vk/stories/clickable/dialogs/mention/StoryMentionDialogContract1;->h()Lcom/vk/stories/clickable/views/StoryGradientEditText;
 
     move-result-object v0
 
     int-to-float v2, v9
 
-    invoke-static {v0, v2}, Lcom/vk/core/extensions/a0;->a(Landroid/widget/TextView;F)V
+    invoke-static {v0, v2}, Lcom/vk/core/extensions/TextViewExt;->a(Landroid/widget/TextView;F)V
 
     .line 12
-    iget-object v0, p0, Lcom/vk/stories/clickable/dialogs/mention/StoryMentionDialogPresenter;->g:Lcom/vk/stories/clickable/dialogs/mention/d;
+    iget-object v0, p0, Lcom/vk/stories/clickable/dialogs/mention/StoryMentionDialogPresenter;->g:Lcom/vk/stories/clickable/dialogs/mention/StoryMentionDialogContract1;
 
-    invoke-interface {v0}, Lcom/vk/stories/clickable/dialogs/mention/d;->f()Lcom/vk/stories/clickable/views/StoryGradientTextView;
+    invoke-interface {v0}, Lcom/vk/stories/clickable/dialogs/mention/StoryMentionDialogContract1;->f()Lcom/vk/stories/clickable/views/StoryGradientTextView;
 
     move-result-object v0
 
-    invoke-static {v0, v2}, Lcom/vk/core/extensions/a0;->a(Landroid/widget/TextView;F)V
+    invoke-static {v0, v2}, Lcom/vk/core/extensions/TextViewExt;->a(Landroid/widget/TextView;F)V
 
     .line 13
-    new-instance v0, Lcom/vk/stories/clickable/b;
+    new-instance v0, Lcom/vk/stories/clickable/SingleLineTextMeasureHelper;
 
-    iget-object v2, p0, Lcom/vk/stories/clickable/dialogs/mention/StoryMentionDialogPresenter;->g:Lcom/vk/stories/clickable/dialogs/mention/d;
+    iget-object v2, p0, Lcom/vk/stories/clickable/dialogs/mention/StoryMentionDialogPresenter;->g:Lcom/vk/stories/clickable/dialogs/mention/StoryMentionDialogContract1;
 
-    invoke-interface {v2}, Lcom/vk/stories/clickable/dialogs/mention/d;->h()Lcom/vk/stories/clickable/views/StoryGradientEditText;
+    invoke-interface {v2}, Lcom/vk/stories/clickable/dialogs/mention/StoryMentionDialogContract1;->h()Lcom/vk/stories/clickable/views/StoryGradientEditText;
 
     move-result-object v2
 
@@ -350,101 +350,101 @@
 
     const-string v3, "view.editText.paint"
 
-    invoke-static {v2, v3}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v2, v3}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    invoke-direct {v0, v2}, Lcom/vk/stories/clickable/b;-><init>(Landroid/graphics/Paint;)V
+    invoke-direct {v0, v2}, Lcom/vk/stories/clickable/SingleLineTextMeasureHelper;-><init>(Landroid/graphics/Paint;)V
 
-    iput-object v0, p0, Lcom/vk/stories/clickable/dialogs/mention/StoryMentionDialogPresenter;->f:Lcom/vk/stories/clickable/b;
+    iput-object v0, p0, Lcom/vk/stories/clickable/dialogs/mention/StoryMentionDialogPresenter;->f:Lcom/vk/stories/clickable/SingleLineTextMeasureHelper;
 
     .line 14
-    iget-object v0, p0, Lcom/vk/stories/clickable/dialogs/mention/StoryMentionDialogPresenter;->g:Lcom/vk/stories/clickable/dialogs/mention/d;
+    iget-object v0, p0, Lcom/vk/stories/clickable/dialogs/mention/StoryMentionDialogPresenter;->g:Lcom/vk/stories/clickable/dialogs/mention/StoryMentionDialogContract1;
 
-    invoke-interface {v0}, Lcom/vk/stories/clickable/dialogs/mention/d;->h()Lcom/vk/stories/clickable/views/StoryGradientEditText;
+    invoke-interface {v0}, Lcom/vk/stories/clickable/dialogs/mention/StoryMentionDialogContract1;->h()Lcom/vk/stories/clickable/views/StoryGradientEditText;
 
     move-result-object v0
 
     new-instance v2, Lcom/vk/stories/clickable/watchers/AutoMeasureWatcher;
 
     .line 15
-    iget-object v3, p0, Lcom/vk/stories/clickable/dialogs/mention/StoryMentionDialogPresenter;->g:Lcom/vk/stories/clickable/dialogs/mention/d;
+    iget-object v3, p0, Lcom/vk/stories/clickable/dialogs/mention/StoryMentionDialogPresenter;->g:Lcom/vk/stories/clickable/dialogs/mention/StoryMentionDialogContract1;
 
-    invoke-interface {v3}, Lcom/vk/stories/clickable/dialogs/mention/d;->h()Lcom/vk/stories/clickable/views/StoryGradientEditText;
+    invoke-interface {v3}, Lcom/vk/stories/clickable/dialogs/mention/StoryMentionDialogContract1;->h()Lcom/vk/stories/clickable/views/StoryGradientEditText;
 
     move-result-object v7
 
     .line 16
-    sget-object v3, Lcom/vk/stories/clickable/e;->i:Lcom/vk/stories/clickable/e;
+    sget-object v3, Lcom/vk/stories/clickable/StoryClickableController;->i:Lcom/vk/stories/clickable/StoryClickableController;
 
-    invoke-virtual {v3}, Lcom/vk/stories/clickable/e;->c()I
+    invoke-virtual {v3}, Lcom/vk/stories/clickable/StoryClickableController;->c()I
 
     move-result v8
 
     .line 17
-    sget-object v3, Lcom/vk/stories/clickable/e;->i:Lcom/vk/stories/clickable/e;
+    sget-object v3, Lcom/vk/stories/clickable/StoryClickableController;->i:Lcom/vk/stories/clickable/StoryClickableController;
 
-    invoke-virtual {v3}, Lcom/vk/stories/clickable/e;->a()I
+    invoke-virtual {v3}, Lcom/vk/stories/clickable/StoryClickableController;->a()I
 
     move-result v10
 
     .line 18
-    iget-object v11, p0, Lcom/vk/stories/clickable/dialogs/mention/StoryMentionDialogPresenter;->f:Lcom/vk/stories/clickable/b;
+    iget-object v11, p0, Lcom/vk/stories/clickable/dialogs/mention/StoryMentionDialogPresenter;->f:Lcom/vk/stories/clickable/SingleLineTextMeasureHelper;
 
     if-eqz v11, :cond_0
 
     move-object v6, v2
 
     .line 19
-    invoke-direct/range {v6 .. v11}, Lcom/vk/stories/clickable/watchers/AutoMeasureWatcher;-><init>(Landroid/widget/EditText;IIILcom/vk/stories/clickable/b;)V
+    invoke-direct/range {v6 .. v11}, Lcom/vk/stories/clickable/watchers/AutoMeasureWatcher;-><init>(Landroid/widget/EditText;IIILcom/vk/stories/clickable/SingleLineTextMeasureHelper;)V
 
     invoke-virtual {v0, v2}, Landroid/widget/EditText;->addTextChangedListener(Landroid/text/TextWatcher;)V
 
     .line 20
-    iget-object v0, p0, Lcom/vk/stories/clickable/dialogs/mention/StoryMentionDialogPresenter;->g:Lcom/vk/stories/clickable/dialogs/mention/d;
+    iget-object v0, p0, Lcom/vk/stories/clickable/dialogs/mention/StoryMentionDialogPresenter;->g:Lcom/vk/stories/clickable/dialogs/mention/StoryMentionDialogContract1;
 
-    invoke-interface {v0}, Lcom/vk/stories/clickable/dialogs/mention/d;->h()Lcom/vk/stories/clickable/views/StoryGradientEditText;
+    invoke-interface {v0}, Lcom/vk/stories/clickable/dialogs/mention/StoryMentionDialogContract1;->h()Lcom/vk/stories/clickable/views/StoryGradientEditText;
 
     move-result-object v0
 
-    new-instance v1, Lcom/vk/stories/clickable/watchers/a;
+    new-instance v1, Lcom/vk/stories/clickable/watchers/PrefixWatcher;
 
     .line 21
-    iget-object v2, p0, Lcom/vk/stories/clickable/dialogs/mention/StoryMentionDialogPresenter;->g:Lcom/vk/stories/clickable/dialogs/mention/d;
+    iget-object v2, p0, Lcom/vk/stories/clickable/dialogs/mention/StoryMentionDialogPresenter;->g:Lcom/vk/stories/clickable/dialogs/mention/StoryMentionDialogContract1;
 
-    invoke-interface {v2}, Lcom/vk/stories/clickable/dialogs/mention/d;->h()Lcom/vk/stories/clickable/views/StoryGradientEditText;
+    invoke-interface {v2}, Lcom/vk/stories/clickable/dialogs/mention/StoryMentionDialogContract1;->h()Lcom/vk/stories/clickable/views/StoryGradientEditText;
 
     move-result-object v2
 
     const v3, 0x7f120eed
 
     .line 22
-    invoke-static {v3}, Lcom/vk/core/util/y0;->f(I)Ljava/lang/String;
+    invoke-static {v3}, Lcom/vk/core/util/ResUtils;->f(I)Ljava/lang/String;
 
     move-result-object v3
 
     const-string v4, "ResUtils.str(R.string.st\u2026on_default_wiouht_prefix)"
 
-    invoke-static {v3, v4}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v3, v4}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 23
-    iget-object v4, p0, Lcom/vk/stories/clickable/dialogs/mention/StoryMentionDialogPresenter;->g:Lcom/vk/stories/clickable/dialogs/mention/d;
+    iget-object v4, p0, Lcom/vk/stories/clickable/dialogs/mention/StoryMentionDialogPresenter;->g:Lcom/vk/stories/clickable/dialogs/mention/StoryMentionDialogContract1;
 
-    invoke-interface {v4}, Lcom/vk/stories/clickable/dialogs/mention/d;->f()Lcom/vk/stories/clickable/views/StoryGradientTextView;
+    invoke-interface {v4}, Lcom/vk/stories/clickable/dialogs/mention/StoryMentionDialogContract1;->f()Lcom/vk/stories/clickable/views/StoryGradientTextView;
 
     move-result-object v4
 
     .line 24
-    invoke-direct {v1, v2, v5, v3, v4}, Lcom/vk/stories/clickable/watchers/a;-><init>(Landroid/widget/EditText;Ljava/lang/String;Ljava/lang/String;Landroid/view/View;)V
+    invoke-direct {v1, v2, v5, v3, v4}, Lcom/vk/stories/clickable/watchers/PrefixWatcher;-><init>(Landroid/widget/EditText;Ljava/lang/String;Ljava/lang/String;Landroid/view/View;)V
 
     invoke-virtual {v0, v1}, Landroid/widget/EditText;->addTextChangedListener(Landroid/text/TextWatcher;)V
 
     .line 25
-    iget-object v0, p0, Lcom/vk/stories/clickable/dialogs/mention/StoryMentionDialogPresenter;->g:Lcom/vk/stories/clickable/dialogs/mention/d;
+    iget-object v0, p0, Lcom/vk/stories/clickable/dialogs/mention/StoryMentionDialogPresenter;->g:Lcom/vk/stories/clickable/dialogs/mention/StoryMentionDialogContract1;
 
-    invoke-interface {v0}, Lcom/vk/stories/clickable/dialogs/mention/d;->h()Lcom/vk/stories/clickable/views/StoryGradientEditText;
+    invoke-interface {v0}, Lcom/vk/stories/clickable/dialogs/mention/StoryMentionDialogContract1;->h()Lcom/vk/stories/clickable/views/StoryGradientEditText;
 
     move-result-object v0
 
-    invoke-static {v0}, Lcom/vk/extensions/ViewExtKt;->a(Landroid/widget/EditText;)Lc/a/m;
+    invoke-static {v0}, Lcom/vk/extensions/ViewExtKt;->a(Landroid/widget/EditText;)Lio/reactivex/Observable;
 
     move-result-object v0
 
@@ -453,16 +453,16 @@
     .line 26
     sget-object v3, Ljava/util/concurrent/TimeUnit;->MILLISECONDS:Ljava/util/concurrent/TimeUnit;
 
-    invoke-virtual {v0, v1, v2, v3}, Lc/a/m;->g(JLjava/util/concurrent/TimeUnit;)Lc/a/m;
+    invoke-virtual {v0, v1, v2, v3}, Lio/reactivex/Observable;->g(JLjava/util/concurrent/TimeUnit;)Lio/reactivex/Observable;
 
     move-result-object v0
 
     .line 27
-    invoke-static {}, Lc/a/y/c/a;->a()Lc/a/s;
+    invoke-static {}, Lio/reactivex/schedulers/AndroidSchedulers;->a()Lio/reactivex/Scheduler;
 
     move-result-object v1
 
-    invoke-virtual {v0, v1}, Lc/a/m;->a(Lc/a/s;)Lc/a/m;
+    invoke-virtual {v0, v1}, Lio/reactivex/Observable;->a(Lio/reactivex/Scheduler;)Lio/reactivex/Observable;
 
     move-result-object v0
 
@@ -475,14 +475,14 @@
     sget-object v2, Lcom/vk/stories/clickable/dialogs/mention/StoryMentionDialogPresenter$e;->a:Lcom/vk/stories/clickable/dialogs/mention/StoryMentionDialogPresenter$e;
 
     .line 30
-    invoke-virtual {v0, v1, v2}, Lc/a/m;->a(Lc/a/z/g;Lc/a/z/g;)Lio/reactivex/disposables/b;
+    invoke-virtual {v0, v1, v2}, Lio/reactivex/Observable;->a(Lio/reactivex/functions/Consumer;Lio/reactivex/functions/Consumer;)Lio/reactivex/disposables/Disposable;
 
     move-result-object v0
 
     .line 31
-    iget-object v1, p0, Lcom/vk/stories/clickable/dialogs/mention/StoryMentionDialogPresenter;->a:Lio/reactivex/disposables/d;
+    iget-object v1, p0, Lcom/vk/stories/clickable/dialogs/mention/StoryMentionDialogPresenter;->a:Lio/reactivex/disposables/SerialDisposable;
 
-    invoke-virtual {v1, v0}, Lio/reactivex/disposables/d;->a(Lio/reactivex/disposables/b;)Z
+    invoke-virtual {v1, v0}, Lio/reactivex/disposables/SerialDisposable;->a(Lio/reactivex/disposables/Disposable;)Z
 
     return-void
 
@@ -490,7 +490,7 @@
     const-string v0, "measureHelper"
 
     .line 32
-    invoke-static {v0}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v0}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v1
 .end method
@@ -501,7 +501,7 @@
     .locals 0
 
     .line 4
-    invoke-static {p0}, Lcom/vk/stories/clickable/dialogs/mention/c$a;->b(Lcom/vk/stories/clickable/dialogs/mention/c;)V
+    invoke-static {p0}, Lcom/vk/stories/clickable/dialogs/mention/StoryMentionDialogContract$a;->b(Lcom/vk/stories/clickable/dialogs/mention/StoryMentionDialogContract;)V
 
     return-void
 .end method
@@ -510,37 +510,37 @@
     .locals 0
 
     .line 3
-    invoke-static {p0, p1}, Lcom/vk/stories/clickable/dialogs/mention/c$a;->a(Lcom/vk/stories/clickable/dialogs/mention/c;Lcom/vk/dto/common/Attachment;)V
+    invoke-static {p0, p1}, Lcom/vk/stories/clickable/dialogs/mention/StoryMentionDialogContract$a;->a(Lcom/vk/stories/clickable/dialogs/mention/StoryMentionDialogContract;Lcom/vk/dto/common/Attachment;)V
 
     return-void
 .end method
 
-.method public a(Lcom/vk/mentions/h;)V
+.method public a(Lcom/vk/mentions/MentionModels2;)V
     .locals 9
 
     .line 7
     sget-object v0, Lcom/vk/mentions/MentionUtils;->b:Lcom/vk/mentions/MentionUtils;
 
-    invoke-virtual {v0, p1}, Lcom/vk/mentions/MentionUtils;->a(Lcom/vk/mentions/h;)Ljava/lang/String;
+    invoke-virtual {v0, p1}, Lcom/vk/mentions/MentionUtils;->a(Lcom/vk/mentions/MentionModels2;)Ljava/lang/String;
 
     move-result-object v0
 
     .line 8
-    sget-object v1, Lcom/vk/stories/clickable/e;->i:Lcom/vk/stories/clickable/e;
+    sget-object v1, Lcom/vk/stories/clickable/StoryClickableController;->i:Lcom/vk/stories/clickable/StoryClickableController;
 
-    invoke-virtual {v1}, Lcom/vk/stories/clickable/e;->b()I
+    invoke-virtual {v1}, Lcom/vk/stories/clickable/StoryClickableController;->b()I
 
     move-result v1
 
     .line 9
-    sget-object v2, Lcom/vk/stories/clickable/e;->i:Lcom/vk/stories/clickable/e;
+    sget-object v2, Lcom/vk/stories/clickable/StoryClickableController;->i:Lcom/vk/stories/clickable/StoryClickableController;
 
-    invoke-virtual {v2}, Lcom/vk/stories/clickable/e;->c()I
+    invoke-virtual {v2}, Lcom/vk/stories/clickable/StoryClickableController;->c()I
 
     move-result v2
 
     .line 10
-    iget-object v3, p0, Lcom/vk/stories/clickable/dialogs/mention/StoryMentionDialogPresenter;->f:Lcom/vk/stories/clickable/b;
+    iget-object v3, p0, Lcom/vk/stories/clickable/dialogs/mention/StoryMentionDialogPresenter;->f:Lcom/vk/stories/clickable/SingleLineTextMeasureHelper;
 
     const/4 v4, 0x0
 
@@ -554,25 +554,25 @@
     invoke-direct {v6, v0}, Lcom/vk/stories/clickable/dialogs/mention/StoryMentionDialogPresenter$onMentionSelected$textSize$1;-><init>(Ljava/lang/String;)V
 
     .line 12
-    sget-object v7, Lcom/vk/stories/clickable/e;->i:Lcom/vk/stories/clickable/e;
+    sget-object v7, Lcom/vk/stories/clickable/StoryClickableController;->i:Lcom/vk/stories/clickable/StoryClickableController;
 
-    invoke-virtual {v7}, Lcom/vk/stories/clickable/e;->a()I
+    invoke-virtual {v7}, Lcom/vk/stories/clickable/StoryClickableController;->a()I
 
     move-result v7
 
     const/4 v8, 0x0
 
     .line 13
-    invoke-virtual {v3, v8, v1, v6, v7}, Lcom/vk/stories/clickable/b;->a(IILkotlin/jvm/b/a;I)I
+    invoke-virtual {v3, v8, v1, v6, v7}, Lcom/vk/stories/clickable/SingleLineTextMeasureHelper;->a(IILkotlin/jvm/b/Functions;I)I
 
     move-result v1
 
     .line 14
-    iget-object v3, p0, Lcom/vk/stories/clickable/dialogs/mention/StoryMentionDialogPresenter;->f:Lcom/vk/stories/clickable/b;
+    iget-object v3, p0, Lcom/vk/stories/clickable/dialogs/mention/StoryMentionDialogPresenter;->f:Lcom/vk/stories/clickable/SingleLineTextMeasureHelper;
 
     if-eqz v3, :cond_1
 
-    invoke-virtual {v3, v2, v1}, Lcom/vk/stories/clickable/b;->a(II)Z
+    invoke-virtual {v3, v2, v1}, Lcom/vk/stories/clickable/SingleLineTextMeasureHelper;->a(II)Z
 
     move-result v1
 
@@ -617,7 +617,7 @@
     :goto_0
     iget-object v2, p0, Lcom/vk/stories/clickable/dialogs/mention/StoryMentionDialogPresenter;->d:Ljava/util/HashMap;
 
-    invoke-virtual {p1}, Lcom/vk/mentions/h;->d()I
+    invoke-virtual {p1}, Lcom/vk/mentions/MentionModels2;->d()I
 
     move-result v3
 
@@ -628,9 +628,9 @@
     invoke-virtual {v2, v3, v0}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     .line 18
-    iget-object v0, p0, Lcom/vk/stories/clickable/dialogs/mention/StoryMentionDialogPresenter;->g:Lcom/vk/stories/clickable/dialogs/mention/d;
+    iget-object v0, p0, Lcom/vk/stories/clickable/dialogs/mention/StoryMentionDialogPresenter;->g:Lcom/vk/stories/clickable/dialogs/mention/StoryMentionDialogContract1;
 
-    invoke-interface {v0}, Lcom/vk/stories/clickable/dialogs/mention/d;->h()Lcom/vk/stories/clickable/views/StoryGradientEditText;
+    invoke-interface {v0}, Lcom/vk/stories/clickable/dialogs/mention/StoryMentionDialogContract1;->h()Lcom/vk/stories/clickable/views/StoryGradientEditText;
 
     move-result-object v0
 
@@ -638,9 +638,9 @@
 
     .line 19
     :try_start_0
-    iget-object v0, p0, Lcom/vk/stories/clickable/dialogs/mention/StoryMentionDialogPresenter;->g:Lcom/vk/stories/clickable/dialogs/mention/d;
+    iget-object v0, p0, Lcom/vk/stories/clickable/dialogs/mention/StoryMentionDialogPresenter;->g:Lcom/vk/stories/clickable/dialogs/mention/StoryMentionDialogContract1;
 
-    invoke-interface {v0}, Lcom/vk/stories/clickable/dialogs/mention/d;->h()Lcom/vk/stories/clickable/views/StoryGradientEditText;
+    invoke-interface {v0}, Lcom/vk/stories/clickable/dialogs/mention/StoryMentionDialogContract1;->h()Lcom/vk/stories/clickable/views/StoryGradientEditText;
 
     move-result-object v0
 
@@ -674,12 +674,12 @@
 
     .line 21
     :goto_1
-    iput-object p1, p0, Lcom/vk/stories/clickable/dialogs/mention/StoryMentionDialogPresenter;->c:Lcom/vk/mentions/h;
+    iput-object p1, p0, Lcom/vk/stories/clickable/dialogs/mention/StoryMentionDialogPresenter;->c:Lcom/vk/mentions/MentionModels2;
 
     .line 22
-    iget-object p1, p0, Lcom/vk/stories/clickable/dialogs/mention/StoryMentionDialogPresenter;->g:Lcom/vk/stories/clickable/dialogs/mention/d;
+    iget-object p1, p0, Lcom/vk/stories/clickable/dialogs/mention/StoryMentionDialogPresenter;->g:Lcom/vk/stories/clickable/dialogs/mention/StoryMentionDialogContract1;
 
-    invoke-interface {p1}, Lcom/vk/stories/clickable/dialogs/mention/d;->i()Landroid/view/ViewGroup;
+    invoke-interface {p1}, Lcom/vk/stories/clickable/dialogs/mention/StoryMentionDialogContract1;->i()Landroid/view/ViewGroup;
 
     move-result-object p1
 
@@ -693,13 +693,13 @@
 
     .line 23
     :cond_1
-    invoke-static {v5}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v5}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v4
 
     .line 24
     :cond_2
-    invoke-static {v5}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v5}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v4
 .end method
@@ -708,9 +708,9 @@
     .locals 1
 
     .line 3
-    iget-object v0, p0, Lcom/vk/stories/clickable/dialogs/mention/StoryMentionDialogPresenter;->g:Lcom/vk/stories/clickable/dialogs/mention/d;
+    iget-object v0, p0, Lcom/vk/stories/clickable/dialogs/mention/StoryMentionDialogPresenter;->g:Lcom/vk/stories/clickable/dialogs/mention/StoryMentionDialogContract1;
 
-    invoke-interface {v0}, Lcom/vk/stories/clickable/j;->d()V
+    invoke-interface {v0}, Lcom/vk/stories/clickable/StoryPrivacyHint1;->d()V
 
     return-void
 .end method
@@ -719,7 +719,7 @@
     .locals 0
 
     .line 2
-    invoke-static {p0, p1}, Lcom/vk/stories/clickable/dialogs/mention/c$a;->a(Lcom/vk/stories/clickable/dialogs/mention/c;Ljava/lang/Throwable;)V
+    invoke-static {p0, p1}, Lcom/vk/stories/clickable/dialogs/mention/StoryMentionDialogContract$a;->a(Lcom/vk/stories/clickable/dialogs/mention/StoryMentionDialogContract;Ljava/lang/Throwable;)V
 
     return-void
 .end method
@@ -728,7 +728,7 @@
     .locals 0
 
     .line 1
-    invoke-static {p0}, Lcom/vk/stories/clickable/dialogs/mention/c$a;->a(Lcom/vk/stories/clickable/dialogs/mention/c;)V
+    invoke-static {p0}, Lcom/vk/stories/clickable/dialogs/mention/StoryMentionDialogContract$a;->a(Lcom/vk/stories/clickable/dialogs/mention/StoryMentionDialogContract;)V
 
     return-void
 .end method
@@ -742,9 +742,9 @@
     invoke-virtual {v0}, Lcom/vk/stories/analytics/CameraAnalytics;->a()V
 
     .line 2
-    iget-object v0, p0, Lcom/vk/stories/clickable/dialogs/mention/StoryMentionDialogPresenter;->g:Lcom/vk/stories/clickable/dialogs/mention/d;
+    iget-object v0, p0, Lcom/vk/stories/clickable/dialogs/mention/StoryMentionDialogPresenter;->g:Lcom/vk/stories/clickable/dialogs/mention/StoryMentionDialogContract1;
 
-    invoke-interface {v0}, Lcom/vk/stories/clickable/j;->e()V
+    invoke-interface {v0}, Lcom/vk/stories/clickable/StoryPrivacyHint1;->e()V
 
     .line 3
     invoke-virtual {p0}, Lcom/vk/stories/clickable/dialogs/mention/StoryMentionDialogPresenter;->g()V
@@ -756,20 +756,20 @@
     .locals 1
 
     .line 1
-    iget-object v0, p0, Lcom/vk/stories/clickable/dialogs/mention/StoryMentionDialogPresenter;->g:Lcom/vk/stories/clickable/dialogs/mention/d;
+    iget-object v0, p0, Lcom/vk/stories/clickable/dialogs/mention/StoryMentionDialogPresenter;->g:Lcom/vk/stories/clickable/dialogs/mention/StoryMentionDialogContract1;
 
-    invoke-interface {v0}, Lcom/vk/stories/clickable/dialogs/mention/d;->h()Lcom/vk/stories/clickable/views/StoryGradientEditText;
+    invoke-interface {v0}, Lcom/vk/stories/clickable/dialogs/mention/StoryMentionDialogContract1;->h()Lcom/vk/stories/clickable/views/StoryGradientEditText;
 
     move-result-object v0
 
     return-object v0
 .end method
 
-.method public f()Lcom/vk/stories/clickable/j;
+.method public f()Lcom/vk/stories/clickable/StoryPrivacyHint1;
     .locals 1
 
     .line 1
-    iget-object v0, p0, Lcom/vk/stories/clickable/dialogs/mention/StoryMentionDialogPresenter;->g:Lcom/vk/stories/clickable/dialogs/mention/d;
+    iget-object v0, p0, Lcom/vk/stories/clickable/dialogs/mention/StoryMentionDialogPresenter;->g:Lcom/vk/stories/clickable/dialogs/mention/StoryMentionDialogContract1;
 
     return-object v0
 .end method
@@ -778,7 +778,7 @@
     .locals 0
 
     .line 1
-    invoke-static {p0}, Lcom/vk/stories/clickable/dialogs/mention/c$a;->e(Lcom/vk/stories/clickable/dialogs/mention/c;)V
+    invoke-static {p0}, Lcom/vk/stories/clickable/dialogs/mention/StoryMentionDialogContract$a;->e(Lcom/vk/stories/clickable/dialogs/mention/StoryMentionDialogContract;)V
 
     return-void
 .end method
@@ -787,7 +787,7 @@
     .locals 0
 
     .line 1
-    invoke-static {p0, p1}, Lcom/vk/stories/clickable/dialogs/mention/c$a;->a(Lcom/vk/stories/clickable/dialogs/mention/c;Z)V
+    invoke-static {p0, p1}, Lcom/vk/stories/clickable/dialogs/mention/StoryMentionDialogContract$a;->a(Lcom/vk/stories/clickable/dialogs/mention/StoryMentionDialogContract;Z)V
 
     return-void
 .end method
@@ -811,9 +811,9 @@
     invoke-direct {p0}, Lcom/vk/stories/clickable/dialogs/mention/StoryMentionDialogPresenter;->h()V
 
     .line 3
-    iget-object v0, p0, Lcom/vk/stories/clickable/dialogs/mention/StoryMentionDialogPresenter;->g:Lcom/vk/stories/clickable/dialogs/mention/d;
+    iget-object v0, p0, Lcom/vk/stories/clickable/dialogs/mention/StoryMentionDialogPresenter;->g:Lcom/vk/stories/clickable/dialogs/mention/StoryMentionDialogContract1;
 
-    invoke-interface {v0}, Lcom/vk/stories/clickable/dialogs/mention/d;->U()Lcom/vk/mentions/MentionSelectViewControllerImpl;
+    invoke-interface {v0}, Lcom/vk/stories/clickable/dialogs/mention/StoryMentionDialogContract1;->U()Lcom/vk/mentions/MentionSelectViewControllerImpl;
 
     move-result-object v0
 
@@ -822,15 +822,15 @@
     invoke-virtual {v0, v1}, Lcom/vk/mentions/MentionSelectViewControllerImpl;->a(Ljava/lang/String;)V
 
     .line 4
-    iget-object v0, p0, Lcom/vk/stories/clickable/dialogs/mention/StoryMentionDialogPresenter;->g:Lcom/vk/stories/clickable/dialogs/mention/d;
+    iget-object v0, p0, Lcom/vk/stories/clickable/dialogs/mention/StoryMentionDialogPresenter;->g:Lcom/vk/stories/clickable/dialogs/mention/StoryMentionDialogContract1;
 
-    invoke-interface {v0}, Lcom/vk/stories/clickable/dialogs/mention/d;->x0()Lcom/vk/stories/clickable/models/g;
+    invoke-interface {v0}, Lcom/vk/stories/clickable/dialogs/mention/StoryMentionDialogContract1;->x0()Lcom/vk/stories/clickable/models/StoryHashtagTypeParams;
 
     move-result-object v0
 
     if-eqz v0, :cond_1
 
-    invoke-virtual {v0}, Lcom/vk/stories/clickable/models/g;->a()Lcom/vk/mentions/h;
+    invoke-virtual {v0}, Lcom/vk/stories/clickable/models/StoryHashtagTypeParams;->a()Lcom/vk/mentions/MentionModels2;
 
     move-result-object v0
 
@@ -839,7 +839,7 @@
     .line 5
     iget-object v1, p0, Lcom/vk/stories/clickable/dialogs/mention/StoryMentionDialogPresenter;->d:Ljava/util/HashMap;
 
-    invoke-virtual {v0}, Lcom/vk/mentions/h;->d()I
+    invoke-virtual {v0}, Lcom/vk/mentions/MentionModels2;->d()I
 
     move-result v0
 
@@ -847,19 +847,19 @@
 
     move-result-object v0
 
-    iget-object v2, p0, Lcom/vk/stories/clickable/dialogs/mention/StoryMentionDialogPresenter;->g:Lcom/vk/stories/clickable/dialogs/mention/d;
+    iget-object v2, p0, Lcom/vk/stories/clickable/dialogs/mention/StoryMentionDialogPresenter;->g:Lcom/vk/stories/clickable/dialogs/mention/StoryMentionDialogContract1;
 
-    invoke-interface {v2}, Lcom/vk/stories/clickable/dialogs/mention/d;->x0()Lcom/vk/stories/clickable/models/g;
+    invoke-interface {v2}, Lcom/vk/stories/clickable/dialogs/mention/StoryMentionDialogContract1;->x0()Lcom/vk/stories/clickable/models/StoryHashtagTypeParams;
 
     move-result-object v2
 
     if-eqz v2, :cond_0
 
-    invoke-virtual {v2}, Lcom/vk/stories/clickable/models/g;->b()Lcom/vk/stories/clickable/models/b;
+    invoke-virtual {v2}, Lcom/vk/stories/clickable/models/StoryHashtagTypeParams;->b()Lcom/vk/stories/clickable/models/StoryHashtagTypeParams3;
 
     move-result-object v2
 
-    invoke-virtual {v2}, Lcom/vk/stories/clickable/models/b;->f()Ljava/lang/String;
+    invoke-virtual {v2}, Lcom/vk/stories/clickable/models/StoryHashtagTypeParams3;->f()Ljava/lang/String;
 
     move-result-object v2
 
@@ -872,7 +872,7 @@
     goto :goto_0
 
     :cond_0
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     const/4 v0, 0x0
 
@@ -893,7 +893,7 @@
     .locals 0
 
     .line 1
-    invoke-static {p0}, Lcom/vk/stories/clickable/dialogs/mention/c$a;->c(Lcom/vk/stories/clickable/dialogs/mention/c;)V
+    invoke-static {p0}, Lcom/vk/stories/clickable/dialogs/mention/StoryMentionDialogContract$a;->c(Lcom/vk/stories/clickable/dialogs/mention/StoryMentionDialogContract;)V
 
     return-void
 .end method
@@ -902,7 +902,7 @@
     .locals 0
 
     .line 1
-    invoke-static {p0}, Lcom/vk/stories/clickable/dialogs/mention/c$a;->d(Lcom/vk/stories/clickable/dialogs/mention/c;)V
+    invoke-static {p0}, Lcom/vk/stories/clickable/dialogs/mention/StoryMentionDialogContract$a;->d(Lcom/vk/stories/clickable/dialogs/mention/StoryMentionDialogContract;)V
 
     return-void
 .end method
@@ -911,9 +911,9 @@
     .locals 14
 
     .line 1
-    iget-object v0, p0, Lcom/vk/stories/clickable/dialogs/mention/StoryMentionDialogPresenter;->g:Lcom/vk/stories/clickable/dialogs/mention/d;
+    iget-object v0, p0, Lcom/vk/stories/clickable/dialogs/mention/StoryMentionDialogPresenter;->g:Lcom/vk/stories/clickable/dialogs/mention/StoryMentionDialogContract1;
 
-    invoke-interface {v0}, Lcom/vk/stories/clickable/dialogs/mention/d;->x0()Lcom/vk/stories/clickable/models/g;
+    invoke-interface {v0}, Lcom/vk/stories/clickable/dialogs/mention/StoryMentionDialogContract1;->x0()Lcom/vk/stories/clickable/models/StoryHashtagTypeParams;
 
     move-result-object v0
 
@@ -922,7 +922,7 @@
     if-eqz v0, :cond_0
 
     .line 2
-    invoke-virtual {v0}, Lcom/vk/stories/clickable/models/g;->a()Lcom/vk/mentions/h;
+    invoke-virtual {v0}, Lcom/vk/stories/clickable/models/StoryHashtagTypeParams;->a()Lcom/vk/mentions/MentionModels2;
 
     move-result-object v2
 
@@ -933,24 +933,24 @@
 
     .line 3
     :goto_0
-    iget-object v3, p0, Lcom/vk/stories/clickable/dialogs/mention/StoryMentionDialogPresenter;->g:Lcom/vk/stories/clickable/dialogs/mention/d;
+    iget-object v3, p0, Lcom/vk/stories/clickable/dialogs/mention/StoryMentionDialogPresenter;->g:Lcom/vk/stories/clickable/dialogs/mention/StoryMentionDialogContract1;
 
-    invoke-interface {v3}, Lcom/vk/stories/clickable/dialogs/mention/d;->P()Lcom/vk/stories/clickable/dialogs/mention/a;
+    invoke-interface {v3}, Lcom/vk/stories/clickable/dialogs/mention/StoryMentionDialogContract1;->P()Lcom/vk/stories/clickable/dialogs/mention/StoryMentionDialog;
 
     move-result-object v3
 
     .line 4
-    iget-object v4, p0, Lcom/vk/stories/clickable/dialogs/mention/StoryMentionDialogPresenter;->g:Lcom/vk/stories/clickable/dialogs/mention/d;
+    iget-object v4, p0, Lcom/vk/stories/clickable/dialogs/mention/StoryMentionDialogPresenter;->g:Lcom/vk/stories/clickable/dialogs/mention/StoryMentionDialogContract1;
 
-    invoke-interface {v4}, Lcom/vk/stories/clickable/dialogs/mention/d;->j()Lcom/vk/stories/clickable/models/b;
+    invoke-interface {v4}, Lcom/vk/stories/clickable/dialogs/mention/StoryMentionDialogContract1;->j()Lcom/vk/stories/clickable/models/StoryHashtagTypeParams3;
 
     move-result-object v4
 
     .line 5
-    iget-object v5, p0, Lcom/vk/stories/clickable/dialogs/mention/StoryMentionDialogPresenter;->e:Lcom/vk/stories/clickable/models/c;
+    iget-object v5, p0, Lcom/vk/stories/clickable/dialogs/mention/StoryMentionDialogPresenter;->e:Lcom/vk/stories/clickable/models/StoryHashtagTypeParams2;
 
     .line 6
-    iget-object v6, p0, Lcom/vk/stories/clickable/dialogs/mention/StoryMentionDialogPresenter;->c:Lcom/vk/mentions/h;
+    iget-object v6, p0, Lcom/vk/stories/clickable/dialogs/mention/StoryMentionDialogPresenter;->c:Lcom/vk/mentions/MentionModels2;
 
     const/4 v7, 0x1
 
@@ -959,7 +959,7 @@
     if-eqz v2, :cond_3
 
     .line 7
-    invoke-virtual {v4}, Lcom/vk/stories/clickable/models/b;->f()Ljava/lang/String;
+    invoke-virtual {v4}, Lcom/vk/stories/clickable/models/StoryHashtagTypeParams3;->f()Ljava/lang/String;
 
     move-result-object v8
 
@@ -985,12 +985,12 @@
 
     const-string v8, "(this as java.lang.String).toLowerCase()"
 
-    invoke-static {v6, v8}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v6, v8}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 8
     iget-object v8, p0, Lcom/vk/stories/clickable/dialogs/mention/StoryMentionDialogPresenter;->d:Ljava/util/HashMap;
 
-    invoke-virtual {v2}, Lcom/vk/mentions/h;->d()I
+    invoke-virtual {v2}, Lcom/vk/mentions/MentionModels2;->d()I
 
     move-result v9
 
@@ -1004,7 +1004,7 @@
 
     check-cast v8, Ljava/lang/String;
 
-    invoke-static {v6, v8}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v6, v8}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v6
 
@@ -1031,26 +1031,26 @@
 
     .line 10
     :cond_3
-    iget-object v1, p0, Lcom/vk/stories/clickable/dialogs/mention/StoryMentionDialogPresenter;->c:Lcom/vk/mentions/h;
+    iget-object v1, p0, Lcom/vk/stories/clickable/dialogs/mention/StoryMentionDialogPresenter;->c:Lcom/vk/mentions/MentionModels2;
 
     .line 11
     :goto_1
-    new-instance v2, Lcom/vk/stories/clickable/models/g;
+    new-instance v2, Lcom/vk/stories/clickable/models/StoryHashtagTypeParams;
 
     if-eqz v5, :cond_a
 
     .line 12
-    check-cast v5, Lcom/vk/stories/clickable/models/h;
+    check-cast v5, Lcom/vk/stories/clickable/models/StoryHashtagTypeParams6;
 
     .line 13
-    invoke-direct {v2, v5, v1, v4}, Lcom/vk/stories/clickable/models/g;-><init>(Lcom/vk/stories/clickable/models/h;Lcom/vk/mentions/h;Lcom/vk/stories/clickable/models/b;)V
+    invoke-direct {v2, v5, v1, v4}, Lcom/vk/stories/clickable/models/StoryHashtagTypeParams;-><init>(Lcom/vk/stories/clickable/models/StoryHashtagTypeParams6;Lcom/vk/mentions/MentionModels2;Lcom/vk/stories/clickable/models/StoryHashtagTypeParams3;)V
 
     .line 14
-    invoke-virtual {v2}, Lcom/vk/stories/clickable/models/g;->b()Lcom/vk/stories/clickable/models/b;
+    invoke-virtual {v2}, Lcom/vk/stories/clickable/models/StoryHashtagTypeParams;->b()Lcom/vk/stories/clickable/models/StoryHashtagTypeParams3;
 
     move-result-object v1
 
-    invoke-virtual {v1}, Lcom/vk/stories/clickable/models/b;->f()Ljava/lang/String;
+    invoke-virtual {v1}, Lcom/vk/stories/clickable/models/StoryHashtagTypeParams3;->f()Ljava/lang/String;
 
     move-result-object v1
 
@@ -1094,9 +1094,9 @@
     .line 15
     new-instance v0, Lcom/vk/stories/clickable/stickers/StoryMentionSticker;
 
-    invoke-direct {v0, v2}, Lcom/vk/stories/clickable/stickers/StoryMentionSticker;-><init>(Lcom/vk/stories/clickable/models/g;)V
+    invoke-direct {v0, v2}, Lcom/vk/stories/clickable/stickers/StoryMentionSticker;-><init>(Lcom/vk/stories/clickable/models/StoryHashtagTypeParams;)V
 
-    invoke-interface {v3, v0}, Lcom/vk/stories/clickable/dialogs/mention/a;->a(Lcom/vk/stories/clickable/stickers/StoryMentionSticker;)V
+    invoke-interface {v3, v0}, Lcom/vk/stories/clickable/dialogs/mention/StoryMentionDialog;->a(Lcom/vk/stories/clickable/stickers/StoryMentionSticker;)V
 
     goto :goto_3
 
@@ -1108,7 +1108,7 @@
     if-eqz v3, :cond_8
 
     .line 16
-    invoke-interface {v3, v2}, Lcom/vk/stories/clickable/dialogs/mention/a;->a(Lcom/vk/stories/clickable/models/g;)V
+    invoke-interface {v3, v2}, Lcom/vk/stories/clickable/dialogs/mention/StoryMentionDialog;->a(Lcom/vk/stories/clickable/models/StoryHashtagTypeParams;)V
 
     goto :goto_3
 
@@ -1120,14 +1120,14 @@
     if-eqz v3, :cond_8
 
     .line 17
-    invoke-interface {v3}, Lcom/vk/stories/clickable/dialogs/mention/a;->a()V
+    invoke-interface {v3}, Lcom/vk/stories/clickable/dialogs/mention/StoryMentionDialog;->a()V
 
     .line 18
     :cond_8
     :goto_3
-    iget-object v0, p0, Lcom/vk/stories/clickable/dialogs/mention/StoryMentionDialogPresenter;->g:Lcom/vk/stories/clickable/dialogs/mention/d;
+    iget-object v0, p0, Lcom/vk/stories/clickable/dialogs/mention/StoryMentionDialogPresenter;->g:Lcom/vk/stories/clickable/dialogs/mention/StoryMentionDialogContract1;
 
-    invoke-interface {v0}, Lcom/vk/stories/clickable/dialogs/mention/d;->b()V
+    invoke-interface {v0}, Lcom/vk/stories/clickable/dialogs/mention/StoryMentionDialogContract1;->b()V
 
     return-void
 

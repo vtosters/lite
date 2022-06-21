@@ -3,7 +3,7 @@
 .source "EnterNameFragment.kt"
 
 # interfaces
-.implements Lc/a/z/g;
+.implements Lio/reactivex/functions/Consumer;
 
 
 # annotations
@@ -22,8 +22,8 @@
         "Ljava/lang/Object;",
         ">",
         "Ljava/lang/Object;",
-        "Lc/a/z/g<",
-        "Lcom/vk/auth/utils/a;",
+        "Lio/reactivex/functions/Consumer<",
+        "Lcom/vk/auth/utils/AuthExtensions;",
         ">;"
     }
 .end annotation
@@ -46,7 +46,7 @@
 
 
 # virtual methods
-.method public final a(Lcom/vk/auth/utils/a;)V
+.method public final a(Lcom/vk/auth/utils/AuthExtensions;)V
     .locals 2
 
     .line 1
@@ -93,9 +93,9 @@
     .locals 0
 
     .line 1
-    check-cast p1, Lcom/vk/auth/utils/a;
+    check-cast p1, Lcom/vk/auth/utils/AuthExtensions;
 
-    invoke-virtual {p0, p1}, Lcom/vk/auth/entername/EnterNameFragment$h;->a(Lcom/vk/auth/utils/a;)V
+    invoke-virtual {p0, p1}, Lcom/vk/auth/entername/EnterNameFragment$h;->a(Lcom/vk/auth/utils/AuthExtensions;)V
 
     return-void
 .end method

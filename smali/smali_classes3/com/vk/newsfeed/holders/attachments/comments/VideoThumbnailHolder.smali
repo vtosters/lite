@@ -1,5 +1,5 @@
 .class public final Lcom/vk/newsfeed/holders/attachments/comments/VideoThumbnailHolder;
-.super Lcom/vk/newsfeed/holders/attachments/comments/b;
+.super Lcom/vk/newsfeed/holders/attachments/comments/ThumbnailHolder;
 .source "VideoThumbnailHolder.kt"
 
 # interfaces
@@ -15,7 +15,7 @@
 
 .field private final L:Ljava/lang/StringBuilder;
 
-.field private M:Lio/reactivex/disposables/b;
+.field private M:Lio/reactivex/disposables/Disposable;
 
 
 # direct methods
@@ -25,14 +25,14 @@
     const v0, 0x7f0d0076
 
     .line 1
-    invoke-direct {p0, v0, p1}, Lcom/vk/newsfeed/holders/attachments/comments/b;-><init>(ILandroid/view/ViewGroup;)V
+    invoke-direct {p0, v0, p1}, Lcom/vk/newsfeed/holders/attachments/comments/ThumbnailHolder;-><init>(ILandroid/view/ViewGroup;)V
 
     .line 2
     iget-object p1, p0, Landroidx/recyclerview/widget/RecyclerView$ViewHolder;->itemView:Landroid/view/View;
 
     const-string v0, "itemView"
 
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     const/4 v1, 0x2
 
@@ -40,7 +40,7 @@
 
     const v3, 0x7f0a0385
 
-    invoke-static {p1, v3, v2, v1, v2}, Lcom/vk/extensions/ViewExtKt;->a(Landroid/view/View;ILkotlin/jvm/b/b;ILjava/lang/Object;)Landroid/view/View;
+    invoke-static {p1, v3, v2, v1, v2}, Lcom/vk/extensions/ViewExtKt;->a(Landroid/view/View;ILkotlin/jvm/b/Functions2;ILjava/lang/Object;)Landroid/view/View;
 
     move-result-object p1
 
@@ -51,11 +51,11 @@
     .line 3
     iget-object p1, p0, Landroidx/recyclerview/widget/RecyclerView$ViewHolder;->itemView:Landroid/view/View;
 
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     const v3, 0x7f0a07b4
 
-    invoke-static {p1, v3, v2, v1, v2}, Lcom/vk/extensions/ViewExtKt;->a(Landroid/view/View;ILkotlin/jvm/b/b;ILjava/lang/Object;)Landroid/view/View;
+    invoke-static {p1, v3, v2, v1, v2}, Lcom/vk/extensions/ViewExtKt;->a(Landroid/view/View;ILkotlin/jvm/b/Functions2;ILjava/lang/Object;)Landroid/view/View;
 
     move-result-object p1
 
@@ -66,11 +66,11 @@
     .line 4
     iget-object p1, p0, Landroidx/recyclerview/widget/RecyclerView$ViewHolder;->itemView:Landroid/view/View;
 
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     const v0, 0x7f0a07b3
 
-    invoke-static {p1, v0, v2, v1, v2}, Lcom/vk/extensions/ViewExtKt;->a(Landroid/view/View;ILkotlin/jvm/b/b;ILjava/lang/Object;)Landroid/view/View;
+    invoke-static {p1, v0, v2, v1, v2}, Lcom/vk/extensions/ViewExtKt;->a(Landroid/view/View;ILkotlin/jvm/b/Functions2;ILjava/lang/Object;)Landroid/view/View;
 
     move-result-object p1
 
@@ -91,13 +91,13 @@
     invoke-virtual {p1, p0}, Landroid/view/View;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
     .line 7
-    invoke-virtual {p0}, Lcom/vk/newsfeed/holders/attachments/comments/b;->q0()Lcom/vk/imageloader/view/VKImageView;
+    invoke-virtual {p0}, Lcom/vk/newsfeed/holders/attachments/comments/ThumbnailHolder;->q0()Lcom/vk/imageloader/view/VKImageView;
 
     move-result-object p1
 
     const v0, 0x7f08099e
 
-    invoke-virtual {p1, v0}, Lcom/vk/imageloader/view/a;->setPlaceholderImage(I)V
+    invoke-virtual {p1, v0}, Lcom/vk/imageloader/view/GenericVKImageView;->setPlaceholderImage(I)V
 
     return-void
 .end method
@@ -111,11 +111,11 @@
     return-object p0
 .end method
 
-.method public static final synthetic a(Lcom/vk/newsfeed/holders/attachments/comments/VideoThumbnailHolder;Lio/reactivex/disposables/b;)V
+.method public static final synthetic a(Lcom/vk/newsfeed/holders/attachments/comments/VideoThumbnailHolder;Lio/reactivex/disposables/Disposable;)V
     .locals 0
 
     .line 2
-    iput-object p1, p0, Lcom/vk/newsfeed/holders/attachments/comments/VideoThumbnailHolder;->M:Lio/reactivex/disposables/b;
+    iput-object p1, p0, Lcom/vk/newsfeed/holders/attachments/comments/VideoThumbnailHolder;->M:Lio/reactivex/disposables/Disposable;
 
     return-void
 .end method
@@ -134,7 +134,7 @@
     sget-object v0, Lcom/vk/libvideo/ui/VideoRestrictionView;->F:Lcom/vk/libvideo/ui/VideoRestrictionView$Companion;
 
     .line 5
-    invoke-virtual {p0}, Lcom/vk/newsfeed/holders/attachments/comments/b;->q0()Lcom/vk/imageloader/view/VKImageView;
+    invoke-virtual {p0}, Lcom/vk/newsfeed/holders/attachments/comments/ThumbnailHolder;->q0()Lcom/vk/imageloader/view/VKImageView;
 
     move-result-object v2
 
@@ -166,17 +166,17 @@
     const/4 v10, 0x0
 
     .line 11
-    invoke-static/range {v0 .. v10}, Lcom/vk/libvideo/ui/VideoRestrictionView$Companion;->a(Lcom/vk/libvideo/ui/VideoRestrictionView$Companion;Lcom/vk/dto/common/VideoFile;Landroid/view/View;Lcom/vk/libvideo/ui/VideoRestrictionView;Lkotlin/jvm/b/b;Lkotlin/jvm/b/a;Lkotlin/jvm/b/b;Landroid/view/View;ZILjava/lang/Object;)V
+    invoke-static/range {v0 .. v10}, Lcom/vk/libvideo/ui/VideoRestrictionView$Companion;->a(Lcom/vk/libvideo/ui/VideoRestrictionView$Companion;Lcom/vk/dto/common/VideoFile;Landroid/view/View;Lcom/vk/libvideo/ui/VideoRestrictionView;Lkotlin/jvm/b/Functions2;Lkotlin/jvm/b/Functions;Lkotlin/jvm/b/Functions2;Landroid/view/View;ZILjava/lang/Object;)V
 
     :cond_0
     return-void
 .end method
 
-.method public static final synthetic b(Lcom/vk/newsfeed/holders/attachments/comments/VideoThumbnailHolder;)Lio/reactivex/disposables/b;
+.method public static final synthetic b(Lcom/vk/newsfeed/holders/attachments/comments/VideoThumbnailHolder;)Lio/reactivex/disposables/Disposable;
     .locals 0
 
     .line 1
-    iget-object p0, p0, Lcom/vk/newsfeed/holders/attachments/comments/VideoThumbnailHolder;->M:Lio/reactivex/disposables/b;
+    iget-object p0, p0, Lcom/vk/newsfeed/holders/attachments/comments/VideoThumbnailHolder;->M:Lio/reactivex/disposables/Disposable;
 
     return-object p0
 .end method
@@ -205,7 +205,7 @@
     .locals 5
 
     .line 3
-    invoke-virtual {p0}, Lcom/vk/newsfeed/holders/attachments/k;->o0()Lcom/vk/dto/common/Attachment;
+    invoke-virtual {p0}, Lcom/vk/newsfeed/holders/attachments/BaseAttachmentHolder;->o0()Lcom/vk/dto/common/Attachment;
 
     move-result-object p1
 
@@ -229,7 +229,7 @@
 
     iget v1, v1, Lcom/vk/dto/common/VideoFile;->d:I
 
-    invoke-static {v1}, Lcom/vk/libvideo/t;->c(I)Ljava/lang/String;
+    invoke-static {v1}, Lcom/vk/libvideo/VideoUtils;->c(I)Ljava/lang/String;
 
     move-result-object v1
 
@@ -240,7 +240,7 @@
 
     const-string v1, "itemView"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     iget-object v1, p0, Lcom/vk/newsfeed/holders/attachments/comments/VideoThumbnailHolder;->L:Ljava/lang/StringBuilder;
 
@@ -252,7 +252,7 @@
     const v2, 0x7f121033
 
     .line 7
-    invoke-virtual {p0, v2}, Lcom/vtosters/lite/ui/b0/i;->m(I)Ljava/lang/String;
+    invoke-virtual {p0, v2}, Lcom/vtosters/lite/ui/holder/RecyclerHolder;->m(I)Ljava/lang/String;
 
     move-result-object v2
 
@@ -278,13 +278,13 @@
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     .line 11
-    invoke-virtual {p0}, Lcom/vtosters/lite/ui/b0/i;->d0()Landroid/view/ViewGroup;
+    invoke-virtual {p0}, Lcom/vtosters/lite/ui/holder/RecyclerHolder;->d0()Landroid/view/ViewGroup;
 
     move-result-object v2
 
     const-string v3, "parent"
 
-    invoke-static {v2, v3}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v2, v3}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {v2}, Landroid/view/ViewGroup;->getContext()Landroid/content/Context;
 
@@ -298,7 +298,7 @@
 
     int-to-long v3, v3
 
-    invoke-static {v2, v3, v4}, Lcom/vk/music/ui/common/formatting/a;->b(Landroid/content/Context;J)Ljava/lang/CharSequence;
+    invoke-static {v2, v3, v4}, Lcom/vk/music/ui/common/formatting/DurationFormatter;->b(Landroid/content/Context;J)Ljava/lang/CharSequence;
 
     move-result-object v2
 
@@ -336,13 +336,13 @@
     if-nez p1, :cond_1
 
     .line 2
-    invoke-virtual {p0}, Lcom/vtosters/lite/ui/b0/i;->d0()Landroid/view/ViewGroup;
+    invoke-virtual {p0}, Lcom/vtosters/lite/ui/holder/RecyclerHolder;->d0()Landroid/view/ViewGroup;
 
     move-result-object p1
 
     const-string v0, "parent"
 
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {p1}, Landroid/view/ViewGroup;->getContext()Landroid/content/Context;
 
@@ -357,7 +357,7 @@
     if-eqz v0, :cond_1
 
     .line 3
-    invoke-virtual {p0}, Lcom/vk/newsfeed/holders/attachments/k;->o0()Lcom/vk/dto/common/Attachment;
+    invoke-virtual {p0}, Lcom/vk/newsfeed/holders/attachments/BaseAttachmentHolder;->o0()Lcom/vk/dto/common/Attachment;
 
     move-result-object p1
 
@@ -380,9 +380,9 @@
     const-string v2, "video"
 
     .line 5
-    invoke-static {v1, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    invoke-virtual {p0}, Lcom/vk/newsfeed/holders/h;->j0()Ljava/lang/String;
+    invoke-virtual {p0}, Lcom/vk/newsfeed/holders/BaseNewsEntryHolder;->j0()Ljava/lang/String;
 
     move-result-object v2
 
@@ -404,7 +404,7 @@
 
     const/4 v10, 0x0
 
-    invoke-static/range {v0 .. v10}, Lcom/vk/common/links/OpenFunctionsKt;->a(Landroid/content/Context;Lcom/vk/dto/common/VideoFile;Ljava/lang/String;Lcom/vk/libvideo/ad/AdsDataProvider;Ljava/lang/String;Lcom/vk/statistic/Statistic;ZLcom/vk/common/links/f;Ljava/lang/Integer;ILjava/lang/Object;)V
+    invoke-static/range {v0 .. v10}, Lcom/vk/common/links/OpenFunctionsKt;->a(Landroid/content/Context;Lcom/vk/dto/common/VideoFile;Ljava/lang/String;Lcom/vk/libvideo/ad/AdsDataProvider;Ljava/lang/String;Lcom/vk/statistic/Statistic;ZLcom/vk/common/links/OpenCallback;Ljava/lang/Integer;ILjava/lang/Object;)V
 
     nop
 

@@ -13,11 +13,11 @@
 
 
 # static fields
-.field static final synthetic d:[Lkotlin/u/j;
+.field static final synthetic d:[Lkotlin/u/KProperty5;
 
 
 # instance fields
-.field private final a:Lkotlin/e;
+.field private final a:Lkotlin/Lazy2;
 
 .field private b:Ljava/util/List;
     .annotation build Landroidx/annotation/GuardedBy;
@@ -42,13 +42,13 @@
 
     const/4 v0, 0x1
 
-    new-array v0, v0, [Lkotlin/u/j;
+    new-array v0, v0, [Lkotlin/u/KProperty5;
 
     new-instance v1, Lkotlin/jvm/internal/PropertyReference1Impl;
 
     const-class v2, Lcom/vk/httpexecutor/core/CompatHttpRequestExecutorPrefs;
 
-    invoke-static {v2}, Lkotlin/jvm/internal/o;->a(Ljava/lang/Class;)Lkotlin/u/c;
+    invoke-static {v2}, Lkotlin/jvm/internal/Reflection;->a(Ljava/lang/Class;)Lkotlin/u/KClass;
 
     move-result-object v2
 
@@ -56,21 +56,21 @@
 
     const-string v4, "getPrefs()Landroid/content/SharedPreferences;"
 
-    invoke-direct {v1, v2, v3, v4}, Lkotlin/jvm/internal/PropertyReference1Impl;-><init>(Lkotlin/u/e;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-direct {v1, v2, v3, v4}, Lkotlin/jvm/internal/PropertyReference1Impl;-><init>(Lkotlin/u/KDeclarationContainer;Ljava/lang/String;Ljava/lang/String;)V
 
-    invoke-static {v1}, Lkotlin/jvm/internal/o;->a(Lkotlin/jvm/internal/PropertyReference1;)Lkotlin/u/l;
+    invoke-static {v1}, Lkotlin/jvm/internal/Reflection;->a(Lkotlin/jvm/internal/PropertyReference1;)Lkotlin/u/KProperty2;
 
     const/4 v2, 0x0
 
     aput-object v1, v0, v2
 
-    sput-object v0, Lcom/vk/httpexecutor/core/CompatHttpRequestExecutorPrefs;->d:[Lkotlin/u/j;
+    sput-object v0, Lcom/vk/httpexecutor/core/CompatHttpRequestExecutorPrefs;->d:[Lkotlin/u/KProperty5;
 
     new-instance v0, Lcom/vk/httpexecutor/core/CompatHttpRequestExecutorPrefs$a;
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, v1}, Lcom/vk/httpexecutor/core/CompatHttpRequestExecutorPrefs$a;-><init>(Lkotlin/jvm/internal/i;)V
+    invoke-direct {v0, v1}, Lcom/vk/httpexecutor/core/CompatHttpRequestExecutorPrefs$a;-><init>(Lkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     return-void
 .end method
@@ -88,11 +88,11 @@
 
     invoke-direct {p1, p0}, Lcom/vk/httpexecutor/core/CompatHttpRequestExecutorPrefs$prefs$2;-><init>(Lcom/vk/httpexecutor/core/CompatHttpRequestExecutorPrefs;)V
 
-    invoke-static {p1}, Lkotlin/g;->a(Lkotlin/jvm/b/a;)Lkotlin/e;
+    invoke-static {p1}, Lkotlin/g;->a(Lkotlin/jvm/b/Functions;)Lkotlin/Lazy2;
 
     move-result-object p1
 
-    iput-object p1, p0, Lcom/vk/httpexecutor/core/CompatHttpRequestExecutorPrefs;->a:Lkotlin/e;
+    iput-object p1, p0, Lcom/vk/httpexecutor/core/CompatHttpRequestExecutorPrefs;->a:Lkotlin/Lazy2;
 
     return-void
 .end method
@@ -225,7 +225,7 @@
 
     :cond_4
     :try_start_1
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
@@ -355,15 +355,15 @@
 .method private final b()Landroid/content/SharedPreferences;
     .locals 3
 
-    iget-object v0, p0, Lcom/vk/httpexecutor/core/CompatHttpRequestExecutorPrefs;->a:Lkotlin/e;
+    iget-object v0, p0, Lcom/vk/httpexecutor/core/CompatHttpRequestExecutorPrefs;->a:Lkotlin/Lazy2;
 
-    sget-object v1, Lcom/vk/httpexecutor/core/CompatHttpRequestExecutorPrefs;->d:[Lkotlin/u/j;
+    sget-object v1, Lcom/vk/httpexecutor/core/CompatHttpRequestExecutorPrefs;->d:[Lkotlin/u/KProperty5;
 
     const/4 v2, 0x0
 
     aget-object v1, v1, v2
 
-    invoke-interface {v0}, Lkotlin/e;->getValue()Ljava/lang/Object;
+    invoke-interface {v0}, Lkotlin/Lazy2;->getValue()Ljava/lang/Object;
 
     move-result-object v0
 
@@ -419,7 +419,7 @@
     const-string v1, "prefs"
 
     .line 7
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     return-object v0
 .end method
@@ -490,7 +490,7 @@
 
     const-string v7, "jo.getString(\"origin_host\")"
 
-    invoke-static {v6, v7}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v6, v7}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     const-string v7, "redirect_host"
 
@@ -501,7 +501,7 @@
 
     const-string v8, "jo.getString(\"redirect_host\")"
 
-    invoke-static {v7, v8}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v7, v8}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     const-string v8, "expires_at_ms"
 
@@ -572,7 +572,7 @@
 
     move-result-object v3
 
-    invoke-static {v3, p1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v3, p1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v3
 
@@ -623,7 +623,7 @@
 
     invoke-direct {v1, p1, p2, p3, p4}, Lcom/vk/httpexecutor/core/CompatHttpRequestExecutorPrefs$addHostRedirectRule$$inlined$apply$lambda$1;-><init>(Ljava/lang/String;Ljava/lang/String;J)V
 
-    invoke-static {v0, v1}, Lkotlin/collections/l;->a(Ljava/util/List;Lkotlin/jvm/b/b;)Z
+    invoke-static {v0, v1}, Lkotlin/collections/l;->a(Ljava/util/List;Lkotlin/jvm/b/Functions2;)Z
 
     .line 5
     new-instance v1, Lcom/vk/httpexecutor/core/CompatHttpRequestExecutorPrefs$b;

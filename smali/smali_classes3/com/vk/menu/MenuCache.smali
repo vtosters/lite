@@ -4,11 +4,11 @@
 
 
 # static fields
-.field static final synthetic a:[Lkotlin/u/j;
+.field static final synthetic a:[Lkotlin/u/KProperty5;
 
-.field private static final b:Lkotlin/e;
+.field private static final b:Lkotlin/Lazy2;
 
-.field private static final c:Lkotlin/e;
+.field private static final c:Lkotlin/Lazy2;
 
 .field private static d:I
 
@@ -27,24 +27,24 @@
 
 .field private static final g:Ljava/lang/Runnable;
 
-.field private static h:Lio/reactivex/disposables/b;
+.field private static h:Lio/reactivex/disposables/Disposable;
 
-.field private static i:Lio/reactivex/subjects/a;
+.field private static i:Lio/reactivex/subjects/BehaviorSubject;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Lio/reactivex/subjects/a<",
-            "Lcom/vk/core/util/q0<",
+            "Lio/reactivex/subjects/BehaviorSubject<",
+            "Lcom/vk/core/util/Optional<",
             "Lcom/vk/dto/menu/MenuResponse;",
             ">;>;"
         }
     .end annotation
 .end field
 
-.field private static final j:Lc/a/m;
+.field private static final j:Lio/reactivex/Observable;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Lc/a/m<",
-            "Lcom/vk/core/util/q0<",
+            "Lio/reactivex/Observable<",
+            "Lcom/vk/core/util/Optional<",
             "Lcom/vk/dto/menu/MenuResponse;",
             ">;>;"
         }
@@ -55,24 +55,24 @@
 
 .field private static final l:Ljava/lang/Runnable;
 
-.field private static m:Lio/reactivex/disposables/b;
+.field private static m:Lio/reactivex/disposables/Disposable;
 
-.field private static n:Lio/reactivex/subjects/a;
+.field private static n:Lio/reactivex/subjects/BehaviorSubject;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Lio/reactivex/subjects/a<",
-            "Lcom/vk/core/util/q0<",
+            "Lio/reactivex/subjects/BehaviorSubject<",
+            "Lcom/vk/core/util/Optional<",
             "Lcom/vk/dto/menu/SuperAppMenuResponse;",
             ">;>;"
         }
     .end annotation
 .end field
 
-.field private static final o:Lc/a/m;
+.field private static final o:Lio/reactivex/Observable;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Lc/a/m<",
-            "Lcom/vk/core/util/q0<",
+            "Lio/reactivex/Observable<",
+            "Lcom/vk/core/util/Optional<",
             "Lcom/vk/dto/menu/SuperAppMenuResponse;",
             ">;>;"
         }
@@ -92,11 +92,11 @@
 
     const/4 v1, 0x2
 
-    new-array v1, v1, [Lkotlin/u/j;
+    new-array v1, v1, [Lkotlin/u/KProperty5;
 
     new-instance v2, Lkotlin/jvm/internal/PropertyReference1Impl;
 
-    invoke-static {v0}, Lkotlin/jvm/internal/o;->a(Ljava/lang/Class;)Lkotlin/u/c;
+    invoke-static {v0}, Lkotlin/jvm/internal/Reflection;->a(Ljava/lang/Class;)Lkotlin/u/KClass;
 
     move-result-object v3
 
@@ -104,9 +104,9 @@
 
     const-string v5, "getPREF_LAST_LOADED_GAMES_TIMESTAMP()Ljava/lang/String;"
 
-    invoke-direct {v2, v3, v4, v5}, Lkotlin/jvm/internal/PropertyReference1Impl;-><init>(Lkotlin/u/e;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-direct {v2, v3, v4, v5}, Lkotlin/jvm/internal/PropertyReference1Impl;-><init>(Lkotlin/u/KDeclarationContainer;Ljava/lang/String;Ljava/lang/String;)V
 
-    invoke-static {v2}, Lkotlin/jvm/internal/o;->a(Lkotlin/jvm/internal/PropertyReference1;)Lkotlin/u/l;
+    invoke-static {v2}, Lkotlin/jvm/internal/Reflection;->a(Lkotlin/jvm/internal/PropertyReference1;)Lkotlin/u/KProperty2;
 
     const/4 v3, 0x0
 
@@ -114,7 +114,7 @@
 
     new-instance v2, Lkotlin/jvm/internal/PropertyReference1Impl;
 
-    invoke-static {v0}, Lkotlin/jvm/internal/o;->a(Ljava/lang/Class;)Lkotlin/u/c;
+    invoke-static {v0}, Lkotlin/jvm/internal/Reflection;->a(Ljava/lang/Class;)Lkotlin/u/KClass;
 
     move-result-object v0
 
@@ -122,15 +122,15 @@
 
     const-string v4, "getPREF_LAST_LOADED_SUPERAPP_TIMESTAMP()Ljava/lang/String;"
 
-    invoke-direct {v2, v0, v3, v4}, Lkotlin/jvm/internal/PropertyReference1Impl;-><init>(Lkotlin/u/e;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-direct {v2, v0, v3, v4}, Lkotlin/jvm/internal/PropertyReference1Impl;-><init>(Lkotlin/u/KDeclarationContainer;Ljava/lang/String;Ljava/lang/String;)V
 
-    invoke-static {v2}, Lkotlin/jvm/internal/o;->a(Lkotlin/jvm/internal/PropertyReference1;)Lkotlin/u/l;
+    invoke-static {v2}, Lkotlin/jvm/internal/Reflection;->a(Lkotlin/jvm/internal/PropertyReference1;)Lkotlin/u/KProperty2;
 
     const/4 v0, 0x1
 
     aput-object v2, v1, v0
 
-    sput-object v1, Lcom/vk/menu/MenuCache;->a:[Lkotlin/u/j;
+    sput-object v1, Lcom/vk/menu/MenuCache;->a:[Lkotlin/u/KProperty5;
 
     .line 1
     new-instance v0, Lcom/vk/menu/MenuCache;
@@ -142,20 +142,20 @@
     .line 2
     sget-object v1, Lcom/vk/menu/MenuCache$PREF_LAST_LOADED_GAMES_TIMESTAMP$2;->a:Lcom/vk/menu/MenuCache$PREF_LAST_LOADED_GAMES_TIMESTAMP$2;
 
-    invoke-static {v1}, Lkotlin/g;->a(Lkotlin/jvm/b/a;)Lkotlin/e;
+    invoke-static {v1}, Lkotlin/g;->a(Lkotlin/jvm/b/Functions;)Lkotlin/Lazy2;
 
     move-result-object v1
 
-    sput-object v1, Lcom/vk/menu/MenuCache;->b:Lkotlin/e;
+    sput-object v1, Lcom/vk/menu/MenuCache;->b:Lkotlin/Lazy2;
 
     .line 3
     sget-object v1, Lcom/vk/menu/MenuCache$PREF_LAST_LOADED_SUPERAPP_TIMESTAMP$2;->a:Lcom/vk/menu/MenuCache$PREF_LAST_LOADED_SUPERAPP_TIMESTAMP$2;
 
-    invoke-static {v1}, Lkotlin/g;->a(Lkotlin/jvm/b/a;)Lkotlin/e;
+    invoke-static {v1}, Lkotlin/g;->a(Lkotlin/jvm/b/Functions;)Lkotlin/Lazy2;
 
     move-result-object v1
 
-    sput-object v1, Lcom/vk/menu/MenuCache;->c:Lkotlin/e;
+    sput-object v1, Lcom/vk/menu/MenuCache;->c:Lkotlin/Lazy2;
 
     const/4 v1, -0x1
 
@@ -172,7 +172,7 @@
 
     const-string v2, "PublishSubject.create()"
 
-    invoke-static {v1, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     sput-object v1, Lcom/vk/menu/MenuCache;->f:Lio/reactivex/subjects/PublishSubject;
 
@@ -181,52 +181,52 @@
 
     invoke-direct {v1, v0}, Lcom/vk/menu/MenuCache$menuLoader$1;-><init>(Lcom/vk/menu/MenuCache;)V
 
-    new-instance v2, Lcom/vk/menu/b;
+    new-instance v2, Lcom/vk/menu/MenuCache1;
 
-    invoke-direct {v2, v1}, Lcom/vk/menu/b;-><init>(Lkotlin/jvm/b/a;)V
+    invoke-direct {v2, v1}, Lcom/vk/menu/MenuCache1;-><init>(Lkotlin/jvm/b/Functions;)V
 
     sput-object v2, Lcom/vk/menu/MenuCache;->g:Ljava/lang/Runnable;
 
     .line 8
-    invoke-static {}, Lio/reactivex/subjects/a;->r()Lio/reactivex/subjects/a;
+    invoke-static {}, Lio/reactivex/subjects/BehaviorSubject;->r()Lio/reactivex/subjects/BehaviorSubject;
 
     move-result-object v1
 
     const-string v2, "BehaviorSubject.create()"
 
-    invoke-static {v1, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    sput-object v1, Lcom/vk/menu/MenuCache;->i:Lio/reactivex/subjects/a;
+    sput-object v1, Lcom/vk/menu/MenuCache;->i:Lio/reactivex/subjects/BehaviorSubject;
 
     .line 9
-    sget-object v1, Lcom/vk/menu/MenuCache;->i:Lio/reactivex/subjects/a;
+    sget-object v1, Lcom/vk/menu/MenuCache;->i:Lio/reactivex/subjects/BehaviorSubject;
 
-    sput-object v1, Lcom/vk/menu/MenuCache;->j:Lc/a/m;
+    sput-object v1, Lcom/vk/menu/MenuCache;->j:Lio/reactivex/Observable;
 
     .line 10
     new-instance v1, Lcom/vk/menu/MenuCache$supperAppMenuLoader$1;
 
     invoke-direct {v1, v0}, Lcom/vk/menu/MenuCache$supperAppMenuLoader$1;-><init>(Lcom/vk/menu/MenuCache;)V
 
-    new-instance v0, Lcom/vk/menu/b;
+    new-instance v0, Lcom/vk/menu/MenuCache1;
 
-    invoke-direct {v0, v1}, Lcom/vk/menu/b;-><init>(Lkotlin/jvm/b/a;)V
+    invoke-direct {v0, v1}, Lcom/vk/menu/MenuCache1;-><init>(Lkotlin/jvm/b/Functions;)V
 
     sput-object v0, Lcom/vk/menu/MenuCache;->l:Ljava/lang/Runnable;
 
     .line 11
-    invoke-static {}, Lio/reactivex/subjects/a;->r()Lio/reactivex/subjects/a;
+    invoke-static {}, Lio/reactivex/subjects/BehaviorSubject;->r()Lio/reactivex/subjects/BehaviorSubject;
 
     move-result-object v0
 
-    invoke-static {v0, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    sput-object v0, Lcom/vk/menu/MenuCache;->n:Lio/reactivex/subjects/a;
+    sput-object v0, Lcom/vk/menu/MenuCache;->n:Lio/reactivex/subjects/BehaviorSubject;
 
     .line 12
-    sget-object v0, Lcom/vk/menu/MenuCache;->n:Lio/reactivex/subjects/a;
+    sget-object v0, Lcom/vk/menu/MenuCache;->n:Lio/reactivex/subjects/BehaviorSubject;
 
-    sput-object v0, Lcom/vk/menu/MenuCache;->o:Lc/a/m;
+    sput-object v0, Lcom/vk/menu/MenuCache;->o:Lio/reactivex/Observable;
 
     return-void
 .end method
@@ -326,7 +326,7 @@
     move-result-object v0
 
     .line 11
-    invoke-static {v0, p1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v0, p1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v2
 
@@ -372,11 +372,11 @@
     return-void
 .end method
 
-.method public static final synthetic a(Lcom/vk/menu/MenuCache;Lio/reactivex/disposables/b;)V
+.method public static final synthetic a(Lcom/vk/menu/MenuCache;Lio/reactivex/disposables/Disposable;)V
     .locals 0
 
     .line 4
-    sput-object p1, Lcom/vk/menu/MenuCache;->h:Lio/reactivex/disposables/b;
+    sput-object p1, Lcom/vk/menu/MenuCache;->h:Lio/reactivex/disposables/Disposable;
 
     return-void
 .end method
@@ -421,11 +421,11 @@
     return-void
 .end method
 
-.method public static final synthetic b(Lcom/vk/menu/MenuCache;Lio/reactivex/disposables/b;)V
+.method public static final synthetic b(Lcom/vk/menu/MenuCache;Lio/reactivex/disposables/Disposable;)V
     .locals 0
 
     .line 3
-    sput-object p1, Lcom/vk/menu/MenuCache;->m:Lio/reactivex/disposables/b;
+    sput-object p1, Lcom/vk/menu/MenuCache;->m:Lio/reactivex/disposables/Disposable;
 
     return-void
 .end method
@@ -449,7 +449,7 @@
 
     .line 20
     :cond_0
-    sget-object v0, Lcom/vk/common/j/a;->c:Lcom/vk/common/j/a;
+    sget-object v0, Lcom/vk/common/cache/SerializerCache;->c:Lcom/vk/common/cache/SerializerCache;
 
     const/4 v1, 0x0
 
@@ -459,7 +459,7 @@
 
     const-string v4, "key_menu_cache_serialization"
 
-    invoke-static {v0, v4, v1, v2, v3}, Lcom/vk/common/j/a;->b(Lcom/vk/common/j/a;Ljava/lang/String;ZILjava/lang/Object;)Lc/a/m;
+    invoke-static {v0, v4, v1, v2, v3}, Lcom/vk/common/cache/SerializerCache;->b(Lcom/vk/common/cache/SerializerCache;Ljava/lang/String;ZILjava/lang/Object;)Lio/reactivex/Observable;
 
     move-result-object v0
 
@@ -468,7 +468,7 @@
 
     invoke-direct {v1, p1}, Lcom/vk/menu/MenuCache$g;-><init>(Z)V
 
-    invoke-virtual {v0, v1}, Lc/a/m;->f(Lc/a/z/g;)Lio/reactivex/disposables/b;
+    invoke-virtual {v0, v1}, Lio/reactivex/Observable;->f(Lio/reactivex/functions/Consumer;)Lio/reactivex/disposables/Disposable;
 
     return-void
 .end method
@@ -518,7 +518,7 @@
 
     .line 8
     :cond_1
-    sget-object v0, Lcom/vk/common/j/a;->c:Lcom/vk/common/j/a;
+    sget-object v0, Lcom/vk/common/cache/SerializerCache;->c:Lcom/vk/common/cache/SerializerCache;
 
     const/4 v1, 0x0
 
@@ -528,7 +528,7 @@
 
     const-string v4, "key_supper_app_menu_cache_serialization"
 
-    invoke-static {v0, v4, v1, v2, v3}, Lcom/vk/common/j/a;->b(Lcom/vk/common/j/a;Ljava/lang/String;ZILjava/lang/Object;)Lc/a/m;
+    invoke-static {v0, v4, v1, v2, v3}, Lcom/vk/common/cache/SerializerCache;->b(Lcom/vk/common/cache/SerializerCache;Ljava/lang/String;ZILjava/lang/Object;)Lio/reactivex/Observable;
 
     move-result-object v0
 
@@ -537,7 +537,7 @@
 
     invoke-direct {v1, p1}, Lcom/vk/menu/MenuCache$k;-><init>(Z)V
 
-    invoke-virtual {v0, v1}, Lc/a/m;->f(Lc/a/z/g;)Lio/reactivex/disposables/b;
+    invoke-virtual {v0, v1}, Lio/reactivex/Observable;->f(Lio/reactivex/functions/Consumer;)Lio/reactivex/disposables/Disposable;
 
     return-void
 .end method
@@ -594,15 +594,15 @@
 .method private final l()Ljava/lang/String;
     .locals 3
 
-    sget-object v0, Lcom/vk/menu/MenuCache;->b:Lkotlin/e;
+    sget-object v0, Lcom/vk/menu/MenuCache;->b:Lkotlin/Lazy2;
 
-    sget-object v1, Lcom/vk/menu/MenuCache;->a:[Lkotlin/u/j;
+    sget-object v1, Lcom/vk/menu/MenuCache;->a:[Lkotlin/u/KProperty5;
 
     const/4 v2, 0x0
 
     aget-object v1, v1, v2
 
-    invoke-interface {v0}, Lkotlin/e;->getValue()Ljava/lang/Object;
+    invoke-interface {v0}, Lkotlin/Lazy2;->getValue()Ljava/lang/Object;
 
     move-result-object v0
 
@@ -614,15 +614,15 @@
 .method private final m()Ljava/lang/String;
     .locals 3
 
-    sget-object v0, Lcom/vk/menu/MenuCache;->c:Lkotlin/e;
+    sget-object v0, Lcom/vk/menu/MenuCache;->c:Lkotlin/Lazy2;
 
-    sget-object v1, Lcom/vk/menu/MenuCache;->a:[Lkotlin/u/j;
+    sget-object v1, Lcom/vk/menu/MenuCache;->a:[Lkotlin/u/KProperty5;
 
     const/4 v2, 0x1
 
     aget-object v1, v1, v2
 
-    invoke-interface {v0}, Lkotlin/e;->getValue()Ljava/lang/Object;
+    invoke-interface {v0}, Lkotlin/Lazy2;->getValue()Ljava/lang/Object;
 
     move-result-object v0
 
@@ -635,7 +635,7 @@
     .locals 1
 
     .line 1
-    invoke-static {}, Lcom/vk/core/ui/themes/d;->e()Z
+    invoke-static {}, Lcom/vk/core/ui/themes/MilkshakeHelper;->e()Z
 
     move-result v0
 
@@ -666,12 +666,12 @@
     return v0
 .end method
 
-.method private final o()Lc/a/m;
+.method private final o()Lio/reactivex/Observable;
     .locals 2
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "()",
-            "Lc/a/m<",
+            "Lio/reactivex/Observable<",
             "Ljava/util/List<",
             "Lcom/vk/dto/common/data/ApiApplication;",
             ">;>;"
@@ -679,36 +679,36 @@
     .end annotation
 
     .line 1
-    sget-object v0, Lcom/vk/common/j/a;->c:Lcom/vk/common/j/a;
+    sget-object v0, Lcom/vk/common/cache/SerializerCache;->c:Lcom/vk/common/cache/SerializerCache;
 
     const-string v1, "key_menu_games_list"
 
-    invoke-virtual {v0, v1}, Lcom/vk/common/j/a;->a(Ljava/lang/String;)Lc/a/m;
+    invoke-virtual {v0, v1}, Lcom/vk/common/cache/SerializerCache;->a(Ljava/lang/String;)Lio/reactivex/Observable;
 
     move-result-object v0
 
     .line 2
-    invoke-direct {p0}, Lcom/vk/menu/MenuCache;->p()Lc/a/m;
+    invoke-direct {p0}, Lcom/vk/menu/MenuCache;->p()Lio/reactivex/Observable;
 
     move-result-object v1
 
-    invoke-virtual {v0, v1}, Lc/a/m;->d(Lc/a/p;)Lc/a/m;
+    invoke-virtual {v0, v1}, Lio/reactivex/Observable;->d(Lio/reactivex/ObservableSource;)Lio/reactivex/Observable;
 
     move-result-object v0
 
     const-string v1, "dbObservable.onErrorResumeNext(loadGamesFromWeb())"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     return-object v0
 .end method
 
-.method private final p()Lc/a/m;
+.method private final p()Lio/reactivex/Observable;
     .locals 3
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "()",
-            "Lc/a/m<",
+            "Lio/reactivex/Observable<",
             "Ljava/util/List<",
             "Lcom/vk/dto/common/data/ApiApplication;",
             ">;>;"
@@ -716,39 +716,39 @@
     .end annotation
 
     .line 1
-    new-instance v0, Lb/h/c/n/g;
+    new-instance v0, Lcom/vk/api/apps/GamesGetFromMenu;
 
-    invoke-direct {v0}, Lb/h/c/n/g;-><init>()V
+    invoke-direct {v0}, Lcom/vk/api/apps/GamesGetFromMenu;-><init>()V
 
     .line 2
-    invoke-virtual {v0}, Lcom/vk/api/base/d;->h()Lcom/vk/api/base/d;
+    invoke-virtual {v0}, Lcom/vk/api/base/ApiRequest;->h()Lcom/vk/api/base/ApiRequest;
 
     const/4 v1, 0x0
 
     const/4 v2, 0x1
 
     .line 3
-    invoke-static {v0, v1, v2, v1}, Lcom/vk/api/base/d;->d(Lcom/vk/api/base/d;Lcom/vk/api/base/e;ILjava/lang/Object;)Lc/a/m;
+    invoke-static {v0, v1, v2, v1}, Lcom/vk/api/base/ApiRequest;->d(Lcom/vk/api/base/ApiRequest;Lcom/vk/api/base/ApiThreadHolder;ILjava/lang/Object;)Lio/reactivex/Observable;
 
     move-result-object v0
 
     .line 4
     sget-object v1, Lcom/vk/menu/MenuCache$e;->a:Lcom/vk/menu/MenuCache$e;
 
-    invoke-virtual {v0, v1}, Lc/a/m;->e(Lc/a/z/j;)Lc/a/m;
+    invoke-virtual {v0, v1}, Lio/reactivex/Observable;->e(Lio/reactivex/functions/Function;)Lio/reactivex/Observable;
 
     move-result-object v0
 
     .line 5
     sget-object v1, Lcom/vk/menu/MenuCache$f;->a:Lcom/vk/menu/MenuCache$f;
 
-    invoke-virtual {v0, v1}, Lc/a/m;->d(Lc/a/z/g;)Lc/a/m;
+    invoke-virtual {v0, v1}, Lio/reactivex/Observable;->d(Lio/reactivex/functions/Consumer;)Lio/reactivex/Observable;
 
     move-result-object v0
 
     const-string v1, "GamesGetFromMenu()\n     \u2026toInt()\n                }"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     return-object v0
 .end method
@@ -765,7 +765,7 @@
     .end annotation
 
     .line 1
-    sget-object v0, Lcom/vk/menu/MenuCache;->h:Lio/reactivex/disposables/b;
+    sget-object v0, Lcom/vk/menu/MenuCache;->h:Lio/reactivex/disposables/Disposable;
 
     if-eqz v0, :cond_0
 
@@ -775,7 +775,7 @@
     :cond_0
     sget-object v0, Lcom/vk/menu/MenuCache$h;->a:Lcom/vk/menu/MenuCache$h;
 
-    invoke-static {v0}, Lc/a/m;->a(Ljava/util/concurrent/Callable;)Lc/a/m;
+    invoke-static {v0}, Lio/reactivex/Observable;->a(Ljava/util/concurrent/Callable;)Lio/reactivex/Observable;
 
     move-result-object v0
 
@@ -786,11 +786,11 @@
     sget-object v2, Lcom/vk/menu/MenuCache$j;->a:Lcom/vk/menu/MenuCache$j;
 
     .line 5
-    invoke-virtual {v0, v1, v2}, Lc/a/m;->a(Lc/a/z/g;Lc/a/z/g;)Lio/reactivex/disposables/b;
+    invoke-virtual {v0, v1, v2}, Lio/reactivex/Observable;->a(Lio/reactivex/functions/Consumer;Lio/reactivex/functions/Consumer;)Lio/reactivex/disposables/Disposable;
 
     move-result-object v0
 
-    sput-object v0, Lcom/vk/menu/MenuCache;->h:Lio/reactivex/disposables/b;
+    sput-object v0, Lcom/vk/menu/MenuCache;->h:Lio/reactivex/disposables/Disposable;
 
     return-void
 .end method
@@ -807,7 +807,7 @@
     .end annotation
 
     .line 1
-    sget-object v0, Lcom/vk/menu/MenuCache;->m:Lio/reactivex/disposables/b;
+    sget-object v0, Lcom/vk/menu/MenuCache;->m:Lio/reactivex/disposables/Disposable;
 
     if-eqz v0, :cond_0
 
@@ -815,24 +815,24 @@
 
     .line 2
     :cond_0
-    sget-object v0, Lcom/vk/core/util/i;->a:Landroid/content/Context;
+    sget-object v0, Lcom/vk/core/util/AppContextHolder;->a:Landroid/content/Context;
 
     const-string v1, "AppContextHolder.context"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    invoke-static {v0}, Lcom/vk/profile/utils/a;->a(Landroid/content/Context;)Lc/a/m;
+    invoke-static {v0}, Lcom/vk/profile/utils/AddressesUtils;->a(Landroid/content/Context;)Lio/reactivex/Observable;
 
     move-result-object v0
 
     .line 3
     sget-object v1, Lcom/vk/menu/MenuCache$l;->a:Lcom/vk/menu/MenuCache$l;
 
-    invoke-virtual {v0, v1}, Lc/a/m;->f(Lc/a/z/g;)Lio/reactivex/disposables/b;
+    invoke-virtual {v0, v1}, Lio/reactivex/Observable;->f(Lio/reactivex/functions/Consumer;)Lio/reactivex/disposables/Disposable;
 
     move-result-object v0
 
-    sput-object v0, Lcom/vk/menu/MenuCache;->m:Lio/reactivex/disposables/b;
+    sput-object v0, Lcom/vk/menu/MenuCache;->m:Lio/reactivex/disposables/Disposable;
 
     return-void
 .end method
@@ -988,35 +988,35 @@
     if-eqz v0, :cond_0
 
     .line 21
-    sget-object v0, Lcom/vk/common/j/a;->c:Lcom/vk/common/j/a;
+    sget-object v0, Lcom/vk/common/cache/SerializerCache;->c:Lcom/vk/common/cache/SerializerCache;
 
     const-string v4, "key_supper_app_menu_cache_serialization"
 
-    invoke-static {v0, v4, v3, v2, v1}, Lcom/vk/common/j/a;->b(Lcom/vk/common/j/a;Ljava/lang/String;ZILjava/lang/Object;)Lc/a/m;
+    invoke-static {v0, v4, v3, v2, v1}, Lcom/vk/common/cache/SerializerCache;->b(Lcom/vk/common/cache/SerializerCache;Ljava/lang/String;ZILjava/lang/Object;)Lio/reactivex/Observable;
 
     move-result-object v0
 
     .line 22
     sget-object v1, Lcom/vk/menu/MenuCache$a;->a:Lcom/vk/menu/MenuCache$a;
 
-    invoke-virtual {v0, v1}, Lc/a/m;->f(Lc/a/z/g;)Lio/reactivex/disposables/b;
+    invoke-virtual {v0, v1}, Lio/reactivex/Observable;->f(Lio/reactivex/functions/Consumer;)Lio/reactivex/disposables/Disposable;
 
     goto :goto_0
 
     .line 23
     :cond_0
-    sget-object v0, Lcom/vk/common/j/a;->c:Lcom/vk/common/j/a;
+    sget-object v0, Lcom/vk/common/cache/SerializerCache;->c:Lcom/vk/common/cache/SerializerCache;
 
     const-string v4, "key_menu_cache_serialization"
 
-    invoke-static {v0, v4, v3, v2, v1}, Lcom/vk/common/j/a;->b(Lcom/vk/common/j/a;Ljava/lang/String;ZILjava/lang/Object;)Lc/a/m;
+    invoke-static {v0, v4, v3, v2, v1}, Lcom/vk/common/cache/SerializerCache;->b(Lcom/vk/common/cache/SerializerCache;Ljava/lang/String;ZILjava/lang/Object;)Lio/reactivex/Observable;
 
     move-result-object v0
 
     .line 24
     sget-object v1, Lcom/vk/menu/MenuCache$b;->a:Lcom/vk/menu/MenuCache$b;
 
-    invoke-virtual {v0, v1}, Lc/a/m;->f(Lc/a/z/g;)Lio/reactivex/disposables/b;
+    invoke-virtual {v0, v1}, Lio/reactivex/Observable;->f(Lio/reactivex/functions/Consumer;)Lio/reactivex/disposables/Disposable;
 
     :goto_0
     return-void
@@ -1030,7 +1030,7 @@
     .line 17
     sget-object v0, Lcom/vk/menu/MenuCache;->k:Lcom/vk/dto/menu/MenuResponse;
 
-    invoke-static {v0, p1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v0, p1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v0
 
@@ -1043,15 +1043,15 @@
     sput-object p1, Lcom/vk/menu/MenuCache;->k:Lcom/vk/dto/menu/MenuResponse;
 
     .line 19
-    sget-object v0, Lcom/vk/menu/MenuCache;->i:Lio/reactivex/subjects/a;
+    sget-object v0, Lcom/vk/menu/MenuCache;->i:Lio/reactivex/subjects/BehaviorSubject;
 
-    sget-object v1, Lcom/vk/core/util/q0;->b:Lcom/vk/core/util/q0$a;
+    sget-object v1, Lcom/vk/core/util/Optional;->b:Lcom/vk/core/util/Optional$a;
 
-    invoke-virtual {v1, p1}, Lcom/vk/core/util/q0$a;->a(Ljava/lang/Object;)Lcom/vk/core/util/q0;
+    invoke-virtual {v1, p1}, Lcom/vk/core/util/Optional$a;->a(Ljava/lang/Object;)Lcom/vk/core/util/Optional;
 
     move-result-object p1
 
-    invoke-virtual {v0, p1}, Lio/reactivex/subjects/a;->b(Ljava/lang/Object;)V
+    invoke-virtual {v0, p1}, Lio/reactivex/subjects/BehaviorSubject;->b(Ljava/lang/Object;)V
 
     :cond_1
     return-void
@@ -1061,11 +1061,11 @@
     .locals 2
 
     .line 38
-    sget-object v0, Lcom/vk/common/j/a;->c:Lcom/vk/common/j/a;
+    sget-object v0, Lcom/vk/common/cache/SerializerCache;->c:Lcom/vk/common/cache/SerializerCache;
 
     const-string v1, "key_supper_app_menu_cache_serialization"
 
-    invoke-virtual {v0, v1, p1}, Lcom/vk/common/j/a;->a(Ljava/lang/String;Lcom/vk/core/serialize/Serializer$StreamParcelable;)V
+    invoke-virtual {v0, v1, p1}, Lcom/vk/common/cache/SerializerCache;->a(Ljava/lang/String;Lcom/vk/core/serialize/Serializer$StreamParcelable;)V
 
     return-void
 .end method
@@ -1074,7 +1074,7 @@
     .locals 2
 
     .line 27
-    sget-object v0, Lcom/vk/menu/MenuCache;->m:Lio/reactivex/disposables/b;
+    sget-object v0, Lcom/vk/menu/MenuCache;->m:Lio/reactivex/disposables/Disposable;
 
     if-eqz v0, :cond_0
 
@@ -1082,13 +1082,13 @@
 
     .line 28
     :cond_0
-    sget-object v0, Lcom/vk/core/util/i;->a:Landroid/content/Context;
+    sget-object v0, Lcom/vk/core/util/AppContextHolder;->a:Landroid/content/Context;
 
     const-string v1, "AppContextHolder.context"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    invoke-static {v0}, Lcom/vk/profile/utils/a;->a(Landroid/content/Context;)Lc/a/m;
+    invoke-static {v0}, Lcom/vk/profile/utils/AddressesUtils;->a(Landroid/content/Context;)Lio/reactivex/Observable;
 
     move-result-object v0
 
@@ -1097,11 +1097,11 @@
 
     invoke-direct {v1, p1}, Lcom/vk/menu/MenuCache$m;-><init>(Ljava/lang/String;)V
 
-    invoke-virtual {v0, v1}, Lc/a/m;->f(Lc/a/z/g;)Lio/reactivex/disposables/b;
+    invoke-virtual {v0, v1}, Lio/reactivex/Observable;->f(Lio/reactivex/functions/Consumer;)Lio/reactivex/disposables/Disposable;
 
     move-result-object p1
 
-    sput-object p1, Lcom/vk/menu/MenuCache;->m:Lio/reactivex/disposables/b;
+    sput-object p1, Lcom/vk/menu/MenuCache;->m:Lio/reactivex/disposables/Disposable;
 
     return-void
 .end method
@@ -1165,7 +1165,7 @@
 
     move-result-object v2
 
-    invoke-static {v2}, Lcom/vk/menu/c;->a(Ljava/lang/String;)I
+    invoke-static {v2}, Lcom/vk/menu/MenuUtils;->a(Ljava/lang/String;)I
 
     move-result v2
 
@@ -1213,7 +1213,7 @@
 
     move-result-object v2
 
-    invoke-static {v2}, Lcom/vk/menu/c;->a(Ljava/lang/String;)I
+    invoke-static {v2}, Lcom/vk/menu/MenuUtils;->a(Ljava/lang/String;)I
 
     move-result v2
 
@@ -1236,28 +1236,28 @@
     .locals 3
 
     .line 4
-    sget-object v0, Lcom/vk/menu/MenuCache;->h:Lio/reactivex/disposables/b;
+    sget-object v0, Lcom/vk/menu/MenuCache;->h:Lio/reactivex/disposables/Disposable;
 
     if-eqz v0, :cond_0
 
-    invoke-interface {v0}, Lio/reactivex/disposables/b;->o()V
+    invoke-interface {v0}, Lio/reactivex/disposables/Disposable;->o()V
 
     :cond_0
     const/4 v0, 0x0
 
     .line 5
-    sput-object v0, Lcom/vk/menu/MenuCache;->h:Lio/reactivex/disposables/b;
+    sput-object v0, Lcom/vk/menu/MenuCache;->h:Lio/reactivex/disposables/Disposable;
 
     .line 6
-    sget-object v1, Lcom/vk/menu/MenuCache;->m:Lio/reactivex/disposables/b;
+    sget-object v1, Lcom/vk/menu/MenuCache;->m:Lio/reactivex/disposables/Disposable;
 
     if-eqz v1, :cond_1
 
-    invoke-interface {v1}, Lio/reactivex/disposables/b;->o()V
+    invoke-interface {v1}, Lio/reactivex/disposables/Disposable;->o()V
 
     .line 7
     :cond_1
-    sput-object v0, Lcom/vk/menu/MenuCache;->m:Lio/reactivex/disposables/b;
+    sput-object v0, Lcom/vk/menu/MenuCache;->m:Lio/reactivex/disposables/Disposable;
 
     .line 8
     invoke-direct {p0}, Lcom/vk/menu/MenuCache;->l()Ljava/lang/String;
@@ -1269,7 +1269,7 @@
     invoke-static {v2, v1}, Lcom/vk/core/preference/Preference;->e(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 9
-    sget-object v1, Lcom/vk/common/j/a;->c:Lcom/vk/common/j/a;
+    sget-object v1, Lcom/vk/common/cache/SerializerCache;->c:Lcom/vk/common/cache/SerializerCache;
 
     const-string v2, "key_menu_games_list"
 
@@ -1277,10 +1277,10 @@
 
     move-result-object v2
 
-    invoke-virtual {v1, v2}, Lcom/vk/common/j/a;->a([Ljava/lang/String;)V
+    invoke-virtual {v1, v2}, Lcom/vk/common/cache/SerializerCache;->a([Ljava/lang/String;)V
 
     .line 10
-    sget-object v1, Lcom/vk/common/j/a;->c:Lcom/vk/common/j/a;
+    sget-object v1, Lcom/vk/common/cache/SerializerCache;->c:Lcom/vk/common/cache/SerializerCache;
 
     const-string v2, "key_menu_cache_serialization"
 
@@ -1288,10 +1288,10 @@
 
     move-result-object v2
 
-    invoke-virtual {v1, v2}, Lcom/vk/common/j/a;->a([Ljava/lang/String;)V
+    invoke-virtual {v1, v2}, Lcom/vk/common/cache/SerializerCache;->a([Ljava/lang/String;)V
 
     .line 11
-    sget-object v1, Lcom/vk/common/j/a;->c:Lcom/vk/common/j/a;
+    sget-object v1, Lcom/vk/common/cache/SerializerCache;->c:Lcom/vk/common/cache/SerializerCache;
 
     const-string v2, "key_supper_app_menu_cache_serialization"
 
@@ -1299,7 +1299,7 @@
 
     move-result-object v2
 
-    invoke-virtual {v1, v2}, Lcom/vk/common/j/a;->a([Ljava/lang/String;)V
+    invoke-virtual {v1, v2}, Lcom/vk/common/cache/SerializerCache;->a([Ljava/lang/String;)V
 
     .line 12
     invoke-virtual {p0, v0}, Lcom/vk/menu/MenuCache;->a(Lcom/vk/dto/menu/MenuResponse;)V
@@ -1318,7 +1318,7 @@
     .line 16
     sget-object v0, Lcom/vk/menu/MenuCache;->p:Lcom/vk/dto/menu/SuperAppMenuResponse;
 
-    invoke-static {v0, p1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v0, p1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v0
 
@@ -1331,15 +1331,15 @@
     sput-object p1, Lcom/vk/menu/MenuCache;->p:Lcom/vk/dto/menu/SuperAppMenuResponse;
 
     .line 18
-    sget-object v0, Lcom/vk/menu/MenuCache;->n:Lio/reactivex/subjects/a;
+    sget-object v0, Lcom/vk/menu/MenuCache;->n:Lio/reactivex/subjects/BehaviorSubject;
 
-    sget-object v1, Lcom/vk/core/util/q0;->b:Lcom/vk/core/util/q0$a;
+    sget-object v1, Lcom/vk/core/util/Optional;->b:Lcom/vk/core/util/Optional$a;
 
-    invoke-virtual {v1, p1}, Lcom/vk/core/util/q0$a;->a(Ljava/lang/Object;)Lcom/vk/core/util/q0;
+    invoke-virtual {v1, p1}, Lcom/vk/core/util/Optional$a;->a(Ljava/lang/Object;)Lcom/vk/core/util/Optional;
 
     move-result-object p1
 
-    invoke-virtual {v0, p1}, Lio/reactivex/subjects/a;->b(Ljava/lang/Object;)V
+    invoke-virtual {v0, p1}, Lio/reactivex/subjects/BehaviorSubject;->b(Ljava/lang/Object;)V
 
     :cond_1
     return-void
@@ -1354,7 +1354,7 @@
     .end annotation
 
     .line 2
-    invoke-direct {p0}, Lcom/vk/menu/MenuCache;->p()Lc/a/m;
+    invoke-direct {p0}, Lcom/vk/menu/MenuCache;->p()Lio/reactivex/Observable;
 
     move-result-object v0
 
@@ -1365,12 +1365,12 @@
     const/4 v3, 0x1
 
     .line 3
-    invoke-static {v2, v3, v2}, Lcom/vk/core/util/z0;->a(Ljava/lang/String;ILjava/lang/Object;)Lc/a/z/g;
+    invoke-static {v2, v3, v2}, Lcom/vk/core/util/RxUtil;->a(Ljava/lang/String;ILjava/lang/Object;)Lio/reactivex/functions/Consumer;
 
     move-result-object v2
 
     .line 4
-    invoke-virtual {v0, v1, v2}, Lc/a/m;->a(Lc/a/z/g;Lc/a/z/g;)Lio/reactivex/disposables/b;
+    invoke-virtual {v0, v1, v2}, Lio/reactivex/Observable;->a(Lio/reactivex/functions/Consumer;Lio/reactivex/functions/Consumer;)Lio/reactivex/disposables/Disposable;
 
     return-void
 .end method
@@ -1384,30 +1384,30 @@
     return-object v0
 .end method
 
-.method public final e()Lc/a/m;
+.method public final e()Lio/reactivex/Observable;
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "()",
-            "Lc/a/m<",
-            "Lcom/vk/core/util/q0<",
+            "Lio/reactivex/Observable<",
+            "Lcom/vk/core/util/Optional<",
             "Lcom/vk/dto/menu/MenuResponse;",
             ">;>;"
         }
     .end annotation
 
     .line 2
-    sget-object v0, Lcom/vk/menu/MenuCache;->j:Lc/a/m;
+    sget-object v0, Lcom/vk/menu/MenuCache;->j:Lio/reactivex/Observable;
 
     return-object v0
 .end method
 
-.method public final f()Lc/a/m;
+.method public final f()Lio/reactivex/Observable;
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "()",
-            "Lc/a/m<",
+            "Lio/reactivex/Observable<",
             "Ljava/util/List<",
             "Lcom/vk/dto/common/data/ApiApplication;",
             ">;>;"
@@ -1429,20 +1429,20 @@
     return-object v0
 .end method
 
-.method public final h()Lc/a/m;
+.method public final h()Lio/reactivex/Observable;
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "()",
-            "Lc/a/m<",
-            "Lcom/vk/core/util/q0<",
+            "Lio/reactivex/Observable<",
+            "Lcom/vk/core/util/Optional<",
             "Lcom/vk/dto/menu/SuperAppMenuResponse;",
             ">;>;"
         }
     .end annotation
 
     .line 2
-    sget-object v0, Lcom/vk/menu/MenuCache;->o:Lc/a/m;
+    sget-object v0, Lcom/vk/menu/MenuCache;->o:Lio/reactivex/Observable;
 
     return-object v0
 .end method
@@ -1485,7 +1485,7 @@
     return v0
 .end method
 
-.method public final k()Lio/reactivex/disposables/b;
+.method public final k()Lio/reactivex/disposables/Disposable;
     .locals 4
 
     .line 1
@@ -1495,14 +1495,14 @@
 
     if-eqz v0, :cond_0
 
-    invoke-direct {p0}, Lcom/vk/menu/MenuCache;->p()Lc/a/m;
+    invoke-direct {p0}, Lcom/vk/menu/MenuCache;->p()Lio/reactivex/Observable;
 
     move-result-object v0
 
     goto :goto_0
 
     :cond_0
-    invoke-direct {p0}, Lcom/vk/menu/MenuCache;->o()Lc/a/m;
+    invoke-direct {p0}, Lcom/vk/menu/MenuCache;->o()Lio/reactivex/Observable;
 
     move-result-object v0
 
@@ -1515,18 +1515,18 @@
     const/4 v3, 0x0
 
     .line 3
-    invoke-static {v3, v2, v3}, Lcom/vk/core/util/z0;->a(Ljava/lang/String;ILjava/lang/Object;)Lc/a/z/g;
+    invoke-static {v3, v2, v3}, Lcom/vk/core/util/RxUtil;->a(Ljava/lang/String;ILjava/lang/Object;)Lio/reactivex/functions/Consumer;
 
     move-result-object v2
 
     .line 4
-    invoke-virtual {v0, v1, v2}, Lc/a/m;->a(Lc/a/z/g;Lc/a/z/g;)Lio/reactivex/disposables/b;
+    invoke-virtual {v0, v1, v2}, Lio/reactivex/Observable;->a(Lio/reactivex/functions/Consumer;Lio/reactivex/functions/Consumer;)Lio/reactivex/disposables/Disposable;
 
     move-result-object v0
 
     const-string v1, "observable.subscribe(Con\u2026    }, RxUtil.logError())"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     return-object v0
 .end method

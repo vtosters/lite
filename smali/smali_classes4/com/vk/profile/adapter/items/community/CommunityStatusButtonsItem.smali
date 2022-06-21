@@ -14,7 +14,7 @@
 # instance fields
 .field private final B:I
 
-.field private final C:Lcom/vtosters/lite/api/i;
+.field private final C:Lcom/vtosters/lite/api/ExtendedCommunityProfile;
 
 .field private final D:Lcom/vk/profile/presenter/CommunityPresenter;
 
@@ -27,18 +27,18 @@
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, v1}, Lcom/vk/profile/adapter/items/community/CommunityStatusButtonsItem$a;-><init>(Lkotlin/jvm/internal/i;)V
+    invoke-direct {v0, v1}, Lcom/vk/profile/adapter/items/community/CommunityStatusButtonsItem$a;-><init>(Lkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     return-void
 .end method
 
-.method public constructor <init>(Lcom/vtosters/lite/api/i;Lcom/vk/profile/presenter/CommunityPresenter;)V
+.method public constructor <init>(Lcom/vtosters/lite/api/ExtendedCommunityProfile;Lcom/vk/profile/presenter/CommunityPresenter;)V
     .locals 0
 
     .line 1
     invoke-direct {p0}, Lcom/vk/profile/adapter/BaseInfoItem;-><init>()V
 
-    iput-object p1, p0, Lcom/vk/profile/adapter/items/community/CommunityStatusButtonsItem;->C:Lcom/vtosters/lite/api/i;
+    iput-object p1, p0, Lcom/vk/profile/adapter/items/community/CommunityStatusButtonsItem;->C:Lcom/vtosters/lite/api/ExtendedCommunityProfile;
 
     iput-object p2, p0, Lcom/vk/profile/adapter/items/community/CommunityStatusButtonsItem;->D:Lcom/vk/profile/presenter/CommunityPresenter;
 
@@ -69,27 +69,27 @@
     return-object p0
 .end method
 
-.method public static final synthetic a(Lcom/vk/profile/adapter/items/community/CommunityStatusButtonsItem;)Lcom/vtosters/lite/api/i;
+.method public static final synthetic a(Lcom/vk/profile/adapter/items/community/CommunityStatusButtonsItem;)Lcom/vtosters/lite/api/ExtendedCommunityProfile;
     .locals 0
 
     .line 3
-    iget-object p0, p0, Lcom/vk/profile/adapter/items/community/CommunityStatusButtonsItem;->C:Lcom/vtosters/lite/api/i;
+    iget-object p0, p0, Lcom/vk/profile/adapter/items/community/CommunityStatusButtonsItem;->C:Lcom/vtosters/lite/api/ExtendedCommunityProfile;
 
     return-object p0
 .end method
 
-.method public static final synthetic a(Lcom/vk/profile/adapter/items/community/CommunityStatusButtonsItem;Lcom/vtosters/lite/api/i;)Ljava/lang/String;
+.method public static final synthetic a(Lcom/vk/profile/adapter/items/community/CommunityStatusButtonsItem;Lcom/vtosters/lite/api/ExtendedCommunityProfile;)Ljava/lang/String;
     .locals 0
 
     .line 2
-    invoke-direct {p0, p1}, Lcom/vk/profile/adapter/items/community/CommunityStatusButtonsItem;->a(Lcom/vtosters/lite/api/i;)Ljava/lang/String;
+    invoke-direct {p0, p1}, Lcom/vk/profile/adapter/items/community/CommunityStatusButtonsItem;->a(Lcom/vtosters/lite/api/ExtendedCommunityProfile;)Ljava/lang/String;
 
     move-result-object p0
 
     return-object p0
 .end method
 
-.method private final a(Lcom/vtosters/lite/api/i;)Ljava/lang/String;
+.method private final a(Lcom/vtosters/lite/api/ExtendedCommunityProfile;)Ljava/lang/String;
     .locals 4
 
     .line 7
@@ -135,7 +135,7 @@
     if-ne v0, v2, :cond_4
 
     .line 9
-    invoke-static {p1}, Lcom/vk/profile/utils/b;->b(Lcom/vtosters/lite/api/i;)Z
+    invoke-static {p1}, Lcom/vk/profile/utils/CommunityExt;->b(Lcom/vtosters/lite/api/ExtendedCommunityProfile;)Z
 
     move-result p1
 
@@ -181,7 +181,7 @@
 
     const-string v0, "parent.context"
 
-    invoke-static {v1, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v1, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     const/4 v2, 0x0
 
@@ -193,7 +193,7 @@
 
     move-object v0, v6
 
-    invoke-direct/range {v0 .. v5}, Lcom/vk/profile/ui/community/StatusButtonView;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;IILkotlin/jvm/internal/i;)V
+    invoke-direct/range {v0 .. v5}, Lcom/vk/profile/ui/community/StatusButtonView;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;IILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     .line 2
     invoke-virtual {p1, v6}, Landroid/view/ViewGroup;->addView(Landroid/view/View;)V
@@ -250,14 +250,14 @@
     return-object v0
 .end method
 
-.method public a(Landroid/view/ViewGroup;)Lcom/vtosters/lite/ui/b0/i;
+.method public a(Landroid/view/ViewGroup;)Lcom/vtosters/lite/ui/holder/RecyclerHolder;
     .locals 4
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
             "Landroid/view/ViewGroup;",
             ")",
-            "Lcom/vtosters/lite/ui/b0/i<",
+            "Lcom/vtosters/lite/ui/holder/RecyclerHolder<",
             "Lcom/vk/profile/adapter/items/community/CommunityStatusButtonsItem;",
             ">;"
         }

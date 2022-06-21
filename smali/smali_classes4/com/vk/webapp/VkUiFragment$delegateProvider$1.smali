@@ -3,7 +3,7 @@
 .source "VkUiFragment.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/a;
+.implements Lkotlin/jvm/b/Functions;
 
 
 # annotations
@@ -19,8 +19,8 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/FunctionReference;",
-        "Lkotlin/jvm/b/a<",
-        "Lcom/vk/webapp/o/c;",
+        "Lkotlin/jvm/b/Functions<",
+        "Lcom/vk/webapp/o/VkUiFragmentDelegate;",
         ">;"
     }
 .end annotation
@@ -47,12 +47,12 @@
     return-object v0
 .end method
 
-.method public final f()Lkotlin/u/e;
+.method public final f()Lkotlin/u/KDeclarationContainer;
     .locals 1
 
     const-class v0, Lcom/vk/webapp/VkUiFragment;
 
-    invoke-static {v0}, Lkotlin/jvm/internal/o;->a(Ljava/lang/Class;)Lkotlin/u/c;
+    invoke-static {v0}, Lkotlin/jvm/internal/Reflection;->a(Ljava/lang/Class;)Lkotlin/u/KClass;
 
     move-result-object v0
 
@@ -67,7 +67,7 @@
     return-object v0
 .end method
 
-.method public final invoke()Lcom/vk/webapp/o/c;
+.method public final invoke()Lcom/vk/webapp/o/VkUiFragmentDelegate;
     .locals 1
 
     iget-object v0, p0, Lkotlin/jvm/internal/CallableReference;->receiver:Ljava/lang/Object;
@@ -75,7 +75,7 @@
     check-cast v0, Lcom/vk/webapp/VkUiFragment;
 
     .line 2
-    invoke-virtual {v0}, Lcom/vk/webapp/VkUiFragment;->r5()Lcom/vk/webapp/o/c;
+    invoke-virtual {v0}, Lcom/vk/webapp/VkUiFragment;->r5()Lcom/vk/webapp/o/VkUiFragmentDelegate;
 
     move-result-object v0
 
@@ -86,7 +86,7 @@
     .locals 1
 
     .line 1
-    invoke-virtual {p0}, Lcom/vk/webapp/VkUiFragment$delegateProvider$1;->invoke()Lcom/vk/webapp/o/c;
+    invoke-virtual {p0}, Lcom/vk/webapp/VkUiFragment$delegateProvider$1;->invoke()Lcom/vk/webapp/o/VkUiFragmentDelegate;
 
     move-result-object v0
 

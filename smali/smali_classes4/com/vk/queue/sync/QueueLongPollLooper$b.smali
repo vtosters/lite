@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/queue/sync/QueueLongPollLooper;->b(Ljava/util/Collection;Lkotlin/jvm/b/b;Lkotlin/jvm/b/b;)V
+    value = Lcom/vk/queue/sync/QueueLongPollLooper;->b(Ljava/util/Collection;Lkotlin/jvm/b/Functions2;Lkotlin/jvm/b/Functions2;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -20,36 +20,36 @@
 # instance fields
 .field final synthetic a:I
 
-.field final synthetic b:Lcom/vk/queue/sync/e/a;
+.field final synthetic b:Lcom/vk/queue/sync/e/Chunk;
 
 .field final synthetic c:Lcom/vk/queue/sync/QueueLongPollLooper;
 
-.field final synthetic d:Lkotlin/jvm/b/b;
+.field final synthetic d:Lkotlin/jvm/b/Functions2;
 
-.field final synthetic e:Lkotlin/jvm/b/b;
+.field final synthetic e:Lkotlin/jvm/b/Functions2;
 
 .field final synthetic f:Ljava/util/concurrent/CountDownLatch;
 
-.field final synthetic g:Lkotlin/jvm/b/b;
+.field final synthetic g:Lkotlin/jvm/b/Functions2;
 
 
 # direct methods
-.method constructor <init>(ILcom/vk/queue/sync/e/a;Lcom/vk/queue/sync/QueueLongPollLooper;Lkotlin/jvm/b/b;Lkotlin/jvm/b/b;Ljava/util/concurrent/CountDownLatch;Lkotlin/jvm/b/b;)V
+.method constructor <init>(ILcom/vk/queue/sync/e/Chunk;Lcom/vk/queue/sync/QueueLongPollLooper;Lkotlin/jvm/b/Functions2;Lkotlin/jvm/b/Functions2;Ljava/util/concurrent/CountDownLatch;Lkotlin/jvm/b/Functions2;)V
     .locals 0
 
     iput p1, p0, Lcom/vk/queue/sync/QueueLongPollLooper$b;->a:I
 
-    iput-object p2, p0, Lcom/vk/queue/sync/QueueLongPollLooper$b;->b:Lcom/vk/queue/sync/e/a;
+    iput-object p2, p0, Lcom/vk/queue/sync/QueueLongPollLooper$b;->b:Lcom/vk/queue/sync/e/Chunk;
 
     iput-object p3, p0, Lcom/vk/queue/sync/QueueLongPollLooper$b;->c:Lcom/vk/queue/sync/QueueLongPollLooper;
 
-    iput-object p4, p0, Lcom/vk/queue/sync/QueueLongPollLooper$b;->d:Lkotlin/jvm/b/b;
+    iput-object p4, p0, Lcom/vk/queue/sync/QueueLongPollLooper$b;->d:Lkotlin/jvm/b/Functions2;
 
-    iput-object p5, p0, Lcom/vk/queue/sync/QueueLongPollLooper$b;->e:Lkotlin/jvm/b/b;
+    iput-object p5, p0, Lcom/vk/queue/sync/QueueLongPollLooper$b;->e:Lkotlin/jvm/b/Functions2;
 
     iput-object p6, p0, Lcom/vk/queue/sync/QueueLongPollLooper$b;->f:Ljava/util/concurrent/CountDownLatch;
 
-    iput-object p7, p0, Lcom/vk/queue/sync/QueueLongPollLooper$b;->g:Lkotlin/jvm/b/b;
+    iput-object p7, p0, Lcom/vk/queue/sync/QueueLongPollLooper$b;->g:Lkotlin/jvm/b/Functions2;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -77,7 +77,7 @@
 
     const-string v2, "Thread.currentThread()"
 
-    invoke-static {v1, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {v1}, Ljava/lang/Thread;->getName()Ljava/lang/String;
 
@@ -89,7 +89,7 @@
 
     move-result-object v3
 
-    invoke-static {v3, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v3, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {v3, v0}, Ljava/lang/Thread;->setName(Ljava/lang/String;)V
 
@@ -97,16 +97,16 @@
     iget-object v3, p0, Lcom/vk/queue/sync/QueueLongPollLooper$b;->c:Lcom/vk/queue/sync/QueueLongPollLooper;
 
     .line 5
-    iget-object v4, p0, Lcom/vk/queue/sync/QueueLongPollLooper$b;->b:Lcom/vk/queue/sync/e/a;
+    iget-object v4, p0, Lcom/vk/queue/sync/QueueLongPollLooper$b;->b:Lcom/vk/queue/sync/e/Chunk;
 
     .line 6
-    iget-object v5, p0, Lcom/vk/queue/sync/QueueLongPollLooper$b;->d:Lkotlin/jvm/b/b;
+    iget-object v5, p0, Lcom/vk/queue/sync/QueueLongPollLooper$b;->d:Lkotlin/jvm/b/Functions2;
 
     .line 7
-    iget-object v6, p0, Lcom/vk/queue/sync/QueueLongPollLooper$b;->e:Lkotlin/jvm/b/b;
+    iget-object v6, p0, Lcom/vk/queue/sync/QueueLongPollLooper$b;->e:Lkotlin/jvm/b/Functions2;
 
     .line 8
-    invoke-static {v3, v0, v4, v5, v6}, Lcom/vk/queue/sync/QueueLongPollLooper;->a(Lcom/vk/queue/sync/QueueLongPollLooper;Ljava/lang/String;Lcom/vk/queue/sync/e/a;Lkotlin/jvm/b/b;Lkotlin/jvm/b/b;)V
+    invoke-static {v3, v0, v4, v5, v6}, Lcom/vk/queue/sync/QueueLongPollLooper;->a(Lcom/vk/queue/sync/QueueLongPollLooper;Ljava/lang/String;Lcom/vk/queue/sync/e/Chunk;Lkotlin/jvm/b/Functions2;Lkotlin/jvm/b/Functions2;)V
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
@@ -125,9 +125,9 @@
 
     .line 9
     :try_start_1
-    iget-object v3, p0, Lcom/vk/queue/sync/QueueLongPollLooper$b;->g:Lkotlin/jvm/b/b;
+    iget-object v3, p0, Lcom/vk/queue/sync/QueueLongPollLooper$b;->g:Lkotlin/jvm/b/Functions2;
 
-    invoke-interface {v3, v0}, Lkotlin/jvm/b/b;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v3, v0}, Lkotlin/jvm/b/Functions2;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
@@ -136,7 +136,7 @@
 
     move-result-object v0
 
-    invoke-static {v0, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {v0, v1}, Ljava/lang/Thread;->setName(Ljava/lang/String;)V
 
@@ -153,7 +153,7 @@
 
     move-result-object v3
 
-    invoke-static {v3, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v3, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {v3, v1}, Ljava/lang/Thread;->setName(Ljava/lang/String;)V
 

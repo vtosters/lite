@@ -3,7 +3,7 @@
 .source "StaticMapFragment.kt"
 
 # interfaces
-.implements Lc/a/z/g;
+.implements Lio/reactivex/functions/Consumer;
 
 
 # annotations
@@ -22,8 +22,8 @@
         "Ljava/lang/Object;",
         ">",
         "Ljava/lang/Object;",
-        "Lc/a/z/g<",
-        "Lcom/vk/core/util/q0<",
+        "Lio/reactivex/functions/Consumer<",
+        "Lcom/vk/core/util/Optional<",
         "Landroid/graphics/Bitmap;",
         ">;>;"
     }
@@ -47,19 +47,19 @@
 
 
 # virtual methods
-.method public final a(Lcom/vk/core/util/q0;)V
+.method public final a(Lcom/vk/core/util/Optional;)V
     .locals 2
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lcom/vk/core/util/q0<",
+            "Lcom/vk/core/util/Optional<",
             "Landroid/graphics/Bitmap;",
             ">;)V"
         }
     .end annotation
 
     .line 1
-    invoke-virtual {p1}, Lcom/vk/core/util/q0;->a()Ljava/lang/Object;
+    invoke-virtual {p1}, Lcom/vk/core/util/Optional;->a()Ljava/lang/Object;
 
     move-result-object p1
 
@@ -103,9 +103,9 @@
     .locals 0
 
     .line 1
-    check-cast p1, Lcom/vk/core/util/q0;
+    check-cast p1, Lcom/vk/core/util/Optional;
 
-    invoke-virtual {p0, p1}, Lcom/vk/profile/ui/StaticMapWrapper$showBlurInternal$1$a$b;->a(Lcom/vk/core/util/q0;)V
+    invoke-virtual {p0, p1}, Lcom/vk/profile/ui/StaticMapWrapper$showBlurInternal$1$a$b;->a(Lcom/vk/core/util/Optional;)V
 
     return-void
 .end method

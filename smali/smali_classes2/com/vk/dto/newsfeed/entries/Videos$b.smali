@@ -24,7 +24,7 @@
     return-void
 .end method
 
-.method public synthetic constructor <init>(Lkotlin/jvm/internal/i;)V
+.method public synthetic constructor <init>(Lkotlin/jvm/internal/DefaultConstructorMarker;)V
     .locals 0
 
     .line 2
@@ -62,7 +62,7 @@
 
     move-object v2, v11
 
-    invoke-direct/range {v2 .. v10}, Lcom/vk/dto/newsfeed/Owner;-><init>(ILjava/lang/String;Ljava/lang/String;Lcom/vk/dto/common/VerifyInfo;Lcom/vk/dto/common/Image;Ljava/lang/String;ILkotlin/jvm/internal/i;)V
+    invoke-direct/range {v2 .. v10}, Lcom/vk/dto/newsfeed/Owner;-><init>(ILjava/lang/String;Ljava/lang/String;Lcom/vk/dto/common/VerifyInfo;Lcom/vk/dto/common/Image;Ljava/lang/String;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     .line 23
     iget-object v0, p1, Lcom/vk/dto/common/VideoFile;->u0:Ljava/lang/String;
@@ -116,7 +116,7 @@
 
     move-object v2, v11
 
-    invoke-direct/range {v0 .. v7}, Lcom/vk/dto/newsfeed/entries/Videos;-><init>(ILcom/vk/dto/newsfeed/Owner;ILjava/util/ArrayList;Lcom/vk/dto/newsfeed/CommentPreview;ILkotlin/jvm/internal/i;)V
+    invoke-direct/range {v0 .. v7}, Lcom/vk/dto/newsfeed/entries/Videos;-><init>(ILcom/vk/dto/newsfeed/Owner;ILjava/util/ArrayList;Lcom/vk/dto/newsfeed/CommentPreview;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     return-object p1
 .end method
@@ -267,7 +267,7 @@
     if-eqz v3, :cond_4
 
     .line 10
-    invoke-static {v3}, Lcom/vk/dto/common/i;->a(Lorg/json/JSONObject;)Lcom/vk/dto/common/VideoFile;
+    invoke-static {v3}, Lcom/vk/dto/common/VideoFileFactory;->a(Lorg/json/JSONObject;)Lcom/vk/dto/common/VideoFile;
 
     move-result-object v3
 
@@ -329,13 +329,13 @@
 
     move-object v4, p1
 
-    invoke-direct/range {v4 .. v11}, Lcom/vk/dto/newsfeed/entries/Videos;-><init>(ILcom/vk/dto/newsfeed/Owner;ILjava/util/ArrayList;Lcom/vk/dto/newsfeed/CommentPreview;ILkotlin/jvm/internal/i;)V
+    invoke-direct/range {v4 .. v11}, Lcom/vk/dto/newsfeed/entries/Videos;-><init>(ILcom/vk/dto/newsfeed/Owner;ILjava/util/ArrayList;Lcom/vk/dto/newsfeed/CommentPreview;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     return-object p1
 
     .line 17
     :cond_7
-    invoke-static {p1}, Lcom/vk/dto/common/i;->a(Lorg/json/JSONObject;)Lcom/vk/dto/common/VideoFile;
+    invoke-static {p1}, Lcom/vk/dto/common/VideoFileFactory;->a(Lorg/json/JSONObject;)Lcom/vk/dto/common/VideoFile;
 
     move-result-object v4
 

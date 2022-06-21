@@ -24,7 +24,7 @@
     return-void
 .end method
 
-.method public synthetic constructor <init>(Lkotlin/jvm/internal/i;)V
+.method public synthetic constructor <init>(Lkotlin/jvm/internal/DefaultConstructorMarker;)V
     .locals 0
 
     .line 2
@@ -99,7 +99,7 @@
 
     move-object v3, p1
 
-    invoke-direct/range {v2 .. v7}, Lcom/vk/toggle/FeatureManager$b;-><init>(Ljava/lang/String;ZLjava/lang/String;ILkotlin/jvm/internal/i;)V
+    invoke-direct/range {v2 .. v7}, Lcom/vk/toggle/FeatureManager$b;-><init>(Ljava/lang/String;ZLjava/lang/String;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     move-object p1, p2
 
@@ -183,7 +183,7 @@
 
     move-object v3, p1
 
-    invoke-direct/range {v2 .. v7}, Lcom/vk/toggle/FeatureManager$b;-><init>(Ljava/lang/String;ZLjava/lang/String;ILkotlin/jvm/internal/i;)V
+    invoke-direct/range {v2 .. v7}, Lcom/vk/toggle/FeatureManager$b;-><init>(Ljava/lang/String;ZLjava/lang/String;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     return-object p2
 .end method

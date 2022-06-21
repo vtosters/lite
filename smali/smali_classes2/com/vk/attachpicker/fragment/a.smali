@@ -3,20 +3,20 @@
 .source "lambda"
 
 # interfaces
-.implements Lkotlin/jvm/b/a;
+.implements Lkotlin/jvm/b/Functions;
 
 
 # instance fields
-.field private final synthetic a:Lcom/vk/attachpicker/fragment/s;
+.field private final synthetic a:Lcom/vk/attachpicker/fragment/GalleryFragment;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lcom/vk/attachpicker/fragment/s;)V
+.method public synthetic constructor <init>(Lcom/vk/attachpicker/fragment/GalleryFragment;)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lcom/vk/attachpicker/fragment/a;->a:Lcom/vk/attachpicker/fragment/s;
+    iput-object p1, p0, Lcom/vk/attachpicker/fragment/a;->a:Lcom/vk/attachpicker/fragment/GalleryFragment;
 
     return-void
 .end method
@@ -26,9 +26,9 @@
 .method public final invoke()Ljava/lang/Object;
     .locals 1
 
-    iget-object v0, p0, Lcom/vk/attachpicker/fragment/a;->a:Lcom/vk/attachpicker/fragment/s;
+    iget-object v0, p0, Lcom/vk/attachpicker/fragment/a;->a:Lcom/vk/attachpicker/fragment/GalleryFragment;
 
-    invoke-virtual {v0}, Lcom/vk/attachpicker/fragment/s;->P4()Lkotlin/m;
+    invoke-virtual {v0}, Lcom/vk/attachpicker/fragment/GalleryFragment;->P4()Lkotlin/Unit;
 
     move-result-object v0
 

@@ -3,11 +3,11 @@
 .source "StoryBackgroundEditorView.kt"
 
 # interfaces
-.implements Lcom/vk/stories/editor/background/c;
+.implements Lcom/vk/stories/editor/background/StoryBackgroundEditorContract1;
 
 
 # instance fields
-.field private a:Lcom/vk/stories/editor/background/b;
+.field private a:Lcom/vk/stories/editor/background/StoryBackgroundEditorContract2;
 
 .field private final b:Lcom/vk/lists/RecyclerPaginatedView;
 
@@ -21,7 +21,7 @@
 
 .field private final g:Landroid/view/View;
 
-.field private h:Lcom/vk/stories/editor/background/g/a;
+.field private h:Lcom/vk/stories/editor/background/g/StoryBackgroundAdapter;
 
 
 # direct methods
@@ -40,7 +40,7 @@
 
     move-object v1, p1
 
-    invoke-direct/range {v0 .. v5}, Lcom/vk/stories/editor/background/StoryBackgroundEditorView;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;IILkotlin/jvm/internal/i;)V
+    invoke-direct/range {v0 .. v5}, Lcom/vk/stories/editor/background/StoryBackgroundEditorView;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;IILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     return-void
 .end method
@@ -69,7 +69,7 @@
 
     const-string p2, "findViewById(R.id.list)"
 
-    invoke-static {p1, p2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, p2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     check-cast p1, Lcom/vk/lists/RecyclerPaginatedView;
 
@@ -84,7 +84,7 @@
 
     const-string p2, "findViewById(R.id.default_background)"
 
-    invoke-static {p1, p2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, p2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     iput-object p1, p0, Lcom/vk/stories/editor/background/StoryBackgroundEditorView;->c:Landroid/view/View;
 
@@ -97,7 +97,7 @@
 
     const-string p2, "findViewById(R.id.gradient)"
 
-    invoke-static {p1, p2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, p2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     iput-object p1, p0, Lcom/vk/stories/editor/background/StoryBackgroundEditorView;->d:Landroid/view/View;
 
@@ -110,7 +110,7 @@
 
     const-string p2, "findViewById(R.id.emoji)"
 
-    invoke-static {p1, p2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, p2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     iput-object p1, p0, Lcom/vk/stories/editor/background/StoryBackgroundEditorView;->e:Landroid/view/View;
 
@@ -123,7 +123,7 @@
 
     const-string p2, "findViewById(R.id.cancel)"
 
-    invoke-static {p1, p2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, p2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     iput-object p1, p0, Lcom/vk/stories/editor/background/StoryBackgroundEditorView;->f:Landroid/view/View;
 
@@ -136,34 +136,34 @@
 
     const-string p2, "findViewById(R.id.done)"
 
-    invoke-static {p1, p2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, p2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     iput-object p1, p0, Lcom/vk/stories/editor/background/StoryBackgroundEditorView;->g:Landroid/view/View;
 
     .line 9
     iget-object p1, p0, Lcom/vk/stories/editor/background/StoryBackgroundEditorView;->c:Landroid/view/View;
 
-    new-instance p2, Lcom/vk/stories/editor/background/f/a;
+    new-instance p2, Lcom/vk/stories/editor/background/f/StoryBackgroundDrawable;
 
-    invoke-direct {p2}, Lcom/vk/stories/editor/background/f/a;-><init>()V
+    invoke-direct {p2}, Lcom/vk/stories/editor/background/f/StoryBackgroundDrawable;-><init>()V
 
     invoke-virtual {p1, p2}, Landroid/view/View;->setBackground(Landroid/graphics/drawable/Drawable;)V
 
     .line 10
     iget-object p1, p0, Lcom/vk/stories/editor/background/StoryBackgroundEditorView;->d:Landroid/view/View;
 
-    new-instance p2, Lcom/vk/stories/editor/background/f/a;
+    new-instance p2, Lcom/vk/stories/editor/background/f/StoryBackgroundDrawable;
 
-    invoke-direct {p2}, Lcom/vk/stories/editor/background/f/a;-><init>()V
+    invoke-direct {p2}, Lcom/vk/stories/editor/background/f/StoryBackgroundDrawable;-><init>()V
 
     invoke-virtual {p1, p2}, Landroid/view/View;->setBackground(Landroid/graphics/drawable/Drawable;)V
 
     .line 11
     iget-object p1, p0, Lcom/vk/stories/editor/background/StoryBackgroundEditorView;->e:Landroid/view/View;
 
-    new-instance p2, Lcom/vk/stories/editor/background/f/a;
+    new-instance p2, Lcom/vk/stories/editor/background/f/StoryBackgroundDrawable;
 
-    invoke-direct {p2}, Lcom/vk/stories/editor/background/f/a;-><init>()V
+    invoke-direct {p2}, Lcom/vk/stories/editor/background/f/StoryBackgroundDrawable;-><init>()V
 
     invoke-virtual {p1, p2}, Landroid/view/View;->setBackground(Landroid/graphics/drawable/Drawable;)V
 
@@ -201,7 +201,7 @@
 
     invoke-direct {p2, p0}, Lcom/vk/stories/editor/background/StoryBackgroundEditorView$4;-><init>(Lcom/vk/stories/editor/background/StoryBackgroundEditorView;)V
 
-    invoke-static {p1, p2}, Lcom/vk/extensions/ViewExtKt;->e(Landroid/view/View;Lkotlin/jvm/b/b;)V
+    invoke-static {p1, p2}, Lcom/vk/extensions/ViewExtKt;->e(Landroid/view/View;Lkotlin/jvm/b/Functions2;)V
 
     .line 16
     iget-object p1, p0, Lcom/vk/stories/editor/background/StoryBackgroundEditorView;->g:Landroid/view/View;
@@ -210,7 +210,7 @@
 
     invoke-direct {p2, p0}, Lcom/vk/stories/editor/background/StoryBackgroundEditorView$5;-><init>(Lcom/vk/stories/editor/background/StoryBackgroundEditorView;)V
 
-    invoke-static {p1, p2}, Lcom/vk/extensions/ViewExtKt;->e(Landroid/view/View;Lkotlin/jvm/b/b;)V
+    invoke-static {p1, p2}, Lcom/vk/extensions/ViewExtKt;->e(Landroid/view/View;Lkotlin/jvm/b/Functions2;)V
 
     .line 17
     iget-object p1, p0, Lcom/vk/stories/editor/background/StoryBackgroundEditorView;->b:Lcom/vk/lists/RecyclerPaginatedView;
@@ -261,7 +261,7 @@
 
     const-string p2, "list.recyclerView"
 
-    invoke-static {p1, p2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, p2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {p1, p3}, Landroidx/recyclerview/widget/RecyclerView;->setClipToPadding(Z)V
 
@@ -269,14 +269,14 @@
     :cond_0
     new-instance p1, Lcom/vk/stories/editor/background/StoryBackgroundEditorPresenter;
 
-    invoke-direct {p1, p0}, Lcom/vk/stories/editor/background/StoryBackgroundEditorPresenter;-><init>(Lcom/vk/stories/editor/background/c;)V
+    invoke-direct {p1, p0}, Lcom/vk/stories/editor/background/StoryBackgroundEditorPresenter;-><init>(Lcom/vk/stories/editor/background/StoryBackgroundEditorContract1;)V
 
-    invoke-virtual {p0, p1}, Lcom/vk/stories/editor/background/StoryBackgroundEditorView;->setPresenter(Lcom/vk/stories/editor/background/b;)V
+    invoke-virtual {p0, p1}, Lcom/vk/stories/editor/background/StoryBackgroundEditorView;->setPresenter(Lcom/vk/stories/editor/background/StoryBackgroundEditorContract2;)V
 
     return-void
 .end method
 
-.method public synthetic constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;IILkotlin/jvm/internal/i;)V
+.method public synthetic constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;IILkotlin/jvm/internal/DefaultConstructorMarker;)V
     .locals 0
 
     and-int/lit8 p5, p4, 0x2
@@ -372,7 +372,7 @@
     return-object p1
 .end method
 
-.method private final a(Landroid/view/View;)Lcom/vk/stories/editor/background/f/a;
+.method private final a(Landroid/view/View;)Lcom/vk/stories/editor/background/f/StoryBackgroundDrawable;
     .locals 1
 
     .line 5
@@ -380,49 +380,49 @@
 
     move-result-object p1
 
-    instance-of v0, p1, Lcom/vk/stories/editor/background/f/a;
+    instance-of v0, p1, Lcom/vk/stories/editor/background/f/StoryBackgroundDrawable;
 
     if-nez v0, :cond_0
 
     const/4 p1, 0x0
 
     :cond_0
-    check-cast p1, Lcom/vk/stories/editor/background/f/a;
+    check-cast p1, Lcom/vk/stories/editor/background/f/StoryBackgroundDrawable;
 
     return-object p1
 .end method
 
 
 # virtual methods
-.method public a(Lcom/vk/lists/o;Lcom/vk/lists/t$k;)Lcom/vk/lists/t;
+.method public a(Lcom/vk/lists/ListDataSet;Lcom/vk/lists/PaginationHelper$k;)Lcom/vk/lists/PaginationHelper;
     .locals 2
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lcom/vk/lists/o<",
-            "Lcom/vk/common/i/b;",
+            "Lcom/vk/lists/ListDataSet<",
+            "Lcom/vk/common/i/RecyclerItem;",
             ">;",
-            "Lcom/vk/lists/t$k;",
+            "Lcom/vk/lists/PaginationHelper$k;",
             ")",
-            "Lcom/vk/lists/t;"
+            "Lcom/vk/lists/PaginationHelper;"
         }
     .end annotation
 
     .line 1
-    new-instance v0, Lcom/vk/stories/editor/background/g/a;
+    new-instance v0, Lcom/vk/stories/editor/background/g/StoryBackgroundAdapter;
 
     new-instance v1, Lcom/vk/stories/editor/background/StoryBackgroundEditorView$bindPagination$1;
 
     invoke-direct {v1, p0}, Lcom/vk/stories/editor/background/StoryBackgroundEditorView$bindPagination$1;-><init>(Lcom/vk/stories/editor/background/StoryBackgroundEditorView;)V
 
-    invoke-direct {v0, p1, v1}, Lcom/vk/stories/editor/background/g/a;-><init>(Lcom/vk/lists/o;Lkotlin/jvm/b/b;)V
+    invoke-direct {v0, p1, v1}, Lcom/vk/stories/editor/background/g/StoryBackgroundAdapter;-><init>(Lcom/vk/lists/ListDataSet;Lkotlin/jvm/b/Functions2;)V
 
-    iput-object v0, p0, Lcom/vk/stories/editor/background/StoryBackgroundEditorView;->h:Lcom/vk/stories/editor/background/g/a;
+    iput-object v0, p0, Lcom/vk/stories/editor/background/StoryBackgroundEditorView;->h:Lcom/vk/stories/editor/background/g/StoryBackgroundAdapter;
 
     .line 2
     iget-object p1, p0, Lcom/vk/stories/editor/background/StoryBackgroundEditorView;->b:Lcom/vk/lists/RecyclerPaginatedView;
 
-    iget-object v0, p0, Lcom/vk/stories/editor/background/StoryBackgroundEditorView;->h:Lcom/vk/stories/editor/background/g/a;
+    iget-object v0, p0, Lcom/vk/stories/editor/background/StoryBackgroundEditorView;->h:Lcom/vk/stories/editor/background/g/StoryBackgroundAdapter;
 
     if-eqz v0, :cond_0
 
@@ -431,7 +431,7 @@
     .line 3
     iget-object p1, p0, Lcom/vk/stories/editor/background/StoryBackgroundEditorView;->b:Lcom/vk/lists/RecyclerPaginatedView;
 
-    invoke-static {p2, p1}, Lcom/vk/lists/u;->b(Lcom/vk/lists/t$k;Lcom/vk/lists/RecyclerPaginatedView;)Lcom/vk/lists/t;
+    invoke-static {p2, p1}, Lcom/vk/lists/PaginationHelperExt;->b(Lcom/vk/lists/PaginationHelper$k;Lcom/vk/lists/RecyclerPaginatedView;)Lcom/vk/lists/PaginationHelper;
 
     move-result-object p1
 
@@ -441,29 +441,29 @@
     const-string p1, "adapter"
 
     .line 4
-    invoke-static {p1}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {p1}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     const/4 p1, 0x0
 
     throw p1
 .end method
 
-.method public bridge synthetic getPresenter()Lb/h/r/a;
+.method public bridge synthetic getPresenter()Lb/h/r/BaseContract;
     .locals 1
 
     .line 1
-    invoke-virtual {p0}, Lcom/vk/stories/editor/background/StoryBackgroundEditorView;->getPresenter()Lcom/vk/stories/editor/background/b;
+    invoke-virtual {p0}, Lcom/vk/stories/editor/background/StoryBackgroundEditorView;->getPresenter()Lcom/vk/stories/editor/background/StoryBackgroundEditorContract2;
 
     move-result-object v0
 
     return-object v0
 .end method
 
-.method public getPresenter()Lcom/vk/stories/editor/background/b;
+.method public getPresenter()Lcom/vk/stories/editor/background/StoryBackgroundEditorContract2;
     .locals 1
 
     .line 2
-    iget-object v0, p0, Lcom/vk/stories/editor/background/StoryBackgroundEditorView;->a:Lcom/vk/stories/editor/background/b;
+    iget-object v0, p0, Lcom/vk/stories/editor/background/StoryBackgroundEditorView;->a:Lcom/vk/stories/editor/background/StoryBackgroundEditorContract2;
 
     return-object v0
 .end method
@@ -474,7 +474,7 @@
     .line 1
     iget-object v0, p0, Lcom/vk/stories/editor/background/StoryBackgroundEditorView;->c:Landroid/view/View;
 
-    invoke-direct {p0, v0}, Lcom/vk/stories/editor/background/StoryBackgroundEditorView;->a(Landroid/view/View;)Lcom/vk/stories/editor/background/f/a;
+    invoke-direct {p0, v0}, Lcom/vk/stories/editor/background/StoryBackgroundEditorView;->a(Landroid/view/View;)Lcom/vk/stories/editor/background/f/StoryBackgroundDrawable;
 
     move-result-object v0
 
@@ -486,31 +486,31 @@
 
     if-eqz v0, :cond_0
 
-    invoke-static {v0, v3, v3, v2, v1}, Lcom/vk/stories/editor/background/f/a;->a(Lcom/vk/stories/editor/background/f/a;ZZILjava/lang/Object;)V
+    invoke-static {v0, v3, v3, v2, v1}, Lcom/vk/stories/editor/background/f/StoryBackgroundDrawable;->a(Lcom/vk/stories/editor/background/f/StoryBackgroundDrawable;ZZILjava/lang/Object;)V
 
     .line 2
     :cond_0
     iget-object v0, p0, Lcom/vk/stories/editor/background/StoryBackgroundEditorView;->d:Landroid/view/View;
 
-    invoke-direct {p0, v0}, Lcom/vk/stories/editor/background/StoryBackgroundEditorView;->a(Landroid/view/View;)Lcom/vk/stories/editor/background/f/a;
+    invoke-direct {p0, v0}, Lcom/vk/stories/editor/background/StoryBackgroundEditorView;->a(Landroid/view/View;)Lcom/vk/stories/editor/background/f/StoryBackgroundDrawable;
 
     move-result-object v0
 
     if-eqz v0, :cond_1
 
-    invoke-static {v0, v3, v3, v2, v1}, Lcom/vk/stories/editor/background/f/a;->a(Lcom/vk/stories/editor/background/f/a;ZZILjava/lang/Object;)V
+    invoke-static {v0, v3, v3, v2, v1}, Lcom/vk/stories/editor/background/f/StoryBackgroundDrawable;->a(Lcom/vk/stories/editor/background/f/StoryBackgroundDrawable;ZZILjava/lang/Object;)V
 
     .line 3
     :cond_1
     iget-object v0, p0, Lcom/vk/stories/editor/background/StoryBackgroundEditorView;->e:Landroid/view/View;
 
-    invoke-direct {p0, v0}, Lcom/vk/stories/editor/background/StoryBackgroundEditorView;->a(Landroid/view/View;)Lcom/vk/stories/editor/background/f/a;
+    invoke-direct {p0, v0}, Lcom/vk/stories/editor/background/StoryBackgroundEditorView;->a(Landroid/view/View;)Lcom/vk/stories/editor/background/f/StoryBackgroundDrawable;
 
     move-result-object v0
 
     if-eqz v0, :cond_2
 
-    invoke-static {v0, v3, v3, v2, v1}, Lcom/vk/stories/editor/background/f/a;->a(Lcom/vk/stories/editor/background/f/a;ZZILjava/lang/Object;)V
+    invoke-static {v0, v3, v3, v2, v1}, Lcom/vk/stories/editor/background/f/StoryBackgroundDrawable;->a(Lcom/vk/stories/editor/background/f/StoryBackgroundDrawable;ZZILjava/lang/Object;)V
 
     .line 4
     :cond_2
@@ -518,7 +518,7 @@
 
     move-result-object p1
 
-    invoke-direct {p0, p1}, Lcom/vk/stories/editor/background/StoryBackgroundEditorView;->a(Landroid/view/View;)Lcom/vk/stories/editor/background/f/a;
+    invoke-direct {p0, p1}, Lcom/vk/stories/editor/background/StoryBackgroundEditorView;->a(Landroid/view/View;)Lcom/vk/stories/editor/background/f/StoryBackgroundDrawable;
 
     move-result-object p1
 
@@ -526,7 +526,7 @@
 
     const/4 v0, 0x1
 
-    invoke-static {p1, v0, v3, v2, v1}, Lcom/vk/stories/editor/background/f/a;->a(Lcom/vk/stories/editor/background/f/a;ZZILjava/lang/Object;)V
+    invoke-static {p1, v0, v3, v2, v1}, Lcom/vk/stories/editor/background/f/StoryBackgroundDrawable;->a(Lcom/vk/stories/editor/background/f/StoryBackgroundDrawable;ZZILjava/lang/Object;)V
 
     :cond_3
     return-void
@@ -553,22 +553,22 @@
     return-void
 .end method
 
-.method public bridge synthetic setPresenter(Lb/h/r/a;)V
+.method public bridge synthetic setPresenter(Lb/h/r/BaseContract;)V
     .locals 0
 
     .line 1
-    check-cast p1, Lcom/vk/stories/editor/background/b;
+    check-cast p1, Lcom/vk/stories/editor/background/StoryBackgroundEditorContract2;
 
-    invoke-virtual {p0, p1}, Lcom/vk/stories/editor/background/StoryBackgroundEditorView;->setPresenter(Lcom/vk/stories/editor/background/b;)V
+    invoke-virtual {p0, p1}, Lcom/vk/stories/editor/background/StoryBackgroundEditorView;->setPresenter(Lcom/vk/stories/editor/background/StoryBackgroundEditorContract2;)V
 
     return-void
 .end method
 
-.method public setPresenter(Lcom/vk/stories/editor/background/b;)V
+.method public setPresenter(Lcom/vk/stories/editor/background/StoryBackgroundEditorContract2;)V
     .locals 0
 
     .line 2
-    iput-object p1, p0, Lcom/vk/stories/editor/background/StoryBackgroundEditorView;->a:Lcom/vk/stories/editor/background/b;
+    iput-object p1, p0, Lcom/vk/stories/editor/background/StoryBackgroundEditorView;->a:Lcom/vk/stories/editor/background/StoryBackgroundEditorContract2;
 
     return-void
 .end method

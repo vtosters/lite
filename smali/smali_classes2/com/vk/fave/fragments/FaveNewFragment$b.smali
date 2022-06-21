@@ -69,7 +69,7 @@
     .line 3
     iget-object v3, p0, Lcom/vk/fave/fragments/FaveNewFragment$b;->a:Lcom/vk/fave/fragments/FaveNewFragment;
 
-    invoke-static {v3}, Lcom/vk/fave/fragments/FaveNewFragment;->b(Lcom/vk/fave/fragments/FaveNewFragment;)Lcom/vk/fave/fragments/contracts/c;
+    invoke-static {v3}, Lcom/vk/fave/fragments/FaveNewFragment;->b(Lcom/vk/fave/fragments/FaveNewFragment;)Lcom/vk/fave/fragments/contracts/FaveNewPresenter;
 
     move-result-object v3
 
@@ -80,7 +80,7 @@
     .line 4
     iget-object v4, p0, Lcom/vk/fave/fragments/FaveNewFragment$b;->a:Lcom/vk/fave/fragments/FaveNewFragment;
 
-    invoke-static {v4}, Lcom/vk/fave/fragments/FaveNewFragment;->b(Lcom/vk/fave/fragments/FaveNewFragment;)Lcom/vk/fave/fragments/contracts/c;
+    invoke-static {v4}, Lcom/vk/fave/fragments/FaveNewFragment;->b(Lcom/vk/fave/fragments/FaveNewFragment;)Lcom/vk/fave/fragments/contracts/FaveNewPresenter;
 
     move-result-object v4
 
@@ -91,19 +91,19 @@
     .line 5
     iget-object v5, p0, Lcom/vk/fave/fragments/FaveNewFragment$b;->a:Lcom/vk/fave/fragments/FaveNewFragment;
 
-    invoke-static {v5}, Lcom/vk/fave/fragments/FaveNewFragment;->b(Lcom/vk/fave/fragments/FaveNewFragment;)Lcom/vk/fave/fragments/contracts/c;
+    invoke-static {v5}, Lcom/vk/fave/fragments/FaveNewFragment;->b(Lcom/vk/fave/fragments/FaveNewFragment;)Lcom/vk/fave/fragments/contracts/FaveNewPresenter;
 
     move-result-object v5
 
-    invoke-virtual {v5}, Lcom/vk/fave/fragments/contracts/FaveBasePresenter;->D()Lcom/vk/fave/entities/f;
+    invoke-virtual {v5}, Lcom/vk/fave/fragments/contracts/FaveBasePresenter;->D()Lcom/vk/fave/entities/FaveResponseEntries3;
 
     move-result-object v5
 
-    check-cast v5, Lcom/vk/fave/entities/c;
+    check-cast v5, Lcom/vk/fave/entities/FaveResponseEntries1;
 
     if-eqz v5, :cond_1
 
-    invoke-virtual {v5}, Lcom/vk/fave/entities/c;->a()Ljava/lang/Integer;
+    invoke-virtual {v5}, Lcom/vk/fave/entities/FaveResponseEntries1;->a()Ljava/lang/Integer;
 
     move-result-object v1
 

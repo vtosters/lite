@@ -3,7 +3,7 @@
 .source "CommentThreadFragment.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/b;
+.implements Lkotlin/jvm/b/Functions2;
 
 
 # annotations
@@ -19,9 +19,9 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/b<",
+        "Lkotlin/jvm/b/Functions2<",
         "Landroid/view/View;",
-        "Lkotlin/m;",
+        "Lkotlin/Unit;",
         ">;"
     }
 .end annotation
@@ -52,13 +52,13 @@
     .line 1
     iget-object p1, p0, Lcom/vk/wall/thread/CommentThreadFragment$onCreateView$$inlined$also$lambda$2;->this$0:Lcom/vk/wall/thread/CommentThreadFragment;
 
-    invoke-virtual {p1}, Lcom/vk/wall/thread/CommentThreadFragment;->getPresenter()Lcom/vk/wall/e;
+    invoke-virtual {p1}, Lcom/vk/wall/thread/CommentThreadFragment;->getPresenter()Lcom/vk/wall/CommentsListContract;
 
     move-result-object p1
 
     if-eqz p1, :cond_0
 
-    invoke-interface {p1}, Lcom/vk/wall/e;->l()V
+    invoke-interface {p1}, Lcom/vk/wall/CommentsListContract;->l()V
 
     :cond_0
     return-void
@@ -72,7 +72,7 @@
 
     invoke-virtual {p0, p1}, Lcom/vk/wall/thread/CommentThreadFragment$onCreateView$$inlined$also$lambda$2;->a(Landroid/view/View;)V
 
-    sget-object p1, Lkotlin/m;->a:Lkotlin/m;
+    sget-object p1, Lkotlin/Unit;->a:Lkotlin/Unit;
 
     return-object p1
 .end method

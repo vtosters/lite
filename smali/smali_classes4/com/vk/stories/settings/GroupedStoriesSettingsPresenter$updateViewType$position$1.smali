@@ -3,7 +3,7 @@
 .source "GroupedStoriesSettingsPresenter.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/b;
+.implements Lkotlin/jvm/b/Functions2;
 
 
 # annotations
@@ -19,8 +19,8 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/b<",
-        "Lcom/vk/common/i/b;",
+        "Lkotlin/jvm/b/Functions2<",
+        "Lcom/vk/common/i/RecyclerItem;",
         "Ljava/lang/Boolean;",
         ">;"
     }
@@ -56,13 +56,13 @@
 
 
 # virtual methods
-.method public final a(Lcom/vk/common/i/b;)Z
+.method public final a(Lcom/vk/common/i/RecyclerItem;)Z
     .locals 1
 
     if-eqz p1, :cond_0
 
     .line 1
-    invoke-virtual {p1}, Lcom/vk/common/i/b;->b()I
+    invoke-virtual {p1}, Lcom/vk/common/i/RecyclerItem;->b()I
 
     move-result p1
 
@@ -85,9 +85,9 @@
     .locals 0
 
     .line 1
-    check-cast p1, Lcom/vk/common/i/b;
+    check-cast p1, Lcom/vk/common/i/RecyclerItem;
 
-    invoke-virtual {p0, p1}, Lcom/vk/stories/settings/GroupedStoriesSettingsPresenter$updateViewType$position$1;->a(Lcom/vk/common/i/b;)Z
+    invoke-virtual {p0, p1}, Lcom/vk/stories/settings/GroupedStoriesSettingsPresenter$updateViewType$position$1;->a(Lcom/vk/common/i/RecyclerItem;)Z
 
     move-result p1
 

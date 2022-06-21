@@ -3,7 +3,7 @@
 .source "MasksController.java"
 
 # interfaces
-.implements Lc/a/z/j;
+.implements Lio/reactivex/functions/Function;
 
 
 # annotations
@@ -19,7 +19,7 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Ljava/lang/Object;",
-        "Lc/a/z/j<",
+        "Lio/reactivex/functions/Function<",
         "Ljava/util/List<",
         "Lcom/vk/dto/masks/MasksCatalogItem;",
         ">;",
@@ -77,11 +77,11 @@
 
     iget-object v0, p0, Lcom/vk/masks/MasksController$i;->a:Lcom/vk/masks/MasksController;
 
-    invoke-static {v0}, Lcom/vk/masks/MasksController;->a(Lcom/vk/masks/MasksController;)Lcom/vk/masks/d;
+    invoke-static {v0}, Lcom/vk/masks/MasksController;->a(Lcom/vk/masks/MasksController;)Lcom/vk/masks/MasksStorage;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/vk/masks/d;->d()Z
+    invoke-virtual {v0}, Lcom/vk/masks/MasksStorage;->d()Z
 
     move-result v0
 
@@ -95,11 +95,11 @@
     :cond_0
     iget-object v0, p0, Lcom/vk/masks/MasksController$i;->a:Lcom/vk/masks/MasksController;
 
-    invoke-static {v0}, Lcom/vk/masks/MasksController;->a(Lcom/vk/masks/MasksController;)Lcom/vk/masks/d;
+    invoke-static {v0}, Lcom/vk/masks/MasksController;->a(Lcom/vk/masks/MasksController;)Lcom/vk/masks/MasksStorage;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/vk/masks/d;->d()Z
+    invoke-virtual {v0}, Lcom/vk/masks/MasksStorage;->d()Z
 
     move-result v0
 
@@ -194,11 +194,11 @@
     .line 13
     iget-object v0, p0, Lcom/vk/masks/MasksController$i;->a:Lcom/vk/masks/MasksController;
 
-    invoke-static {v0}, Lcom/vk/masks/MasksController;->a(Lcom/vk/masks/MasksController;)Lcom/vk/masks/d;
+    invoke-static {v0}, Lcom/vk/masks/MasksController;->a(Lcom/vk/masks/MasksController;)Lcom/vk/masks/MasksStorage;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/vk/masks/d;->e()Lcom/vk/dto/common/data/VKList;
+    invoke-virtual {v0}, Lcom/vk/masks/MasksStorage;->e()Lcom/vk/dto/common/data/VKList;
 
     move-result-object v0
 

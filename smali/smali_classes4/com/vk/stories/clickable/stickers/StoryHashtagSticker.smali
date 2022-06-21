@@ -1,9 +1,9 @@
 .class public final Lcom/vk/stories/clickable/stickers/StoryHashtagSticker;
-.super Lcom/vk/attachpicker/stickers/y;
+.super Lcom/vk/attachpicker/stickers/CanvasSticker;
 .source "StoryHashtagSticker.kt"
 
 # interfaces
-.implements Lcom/vk/attachpicker/stickers/text/c;
+.implements Lcom/vk/attachpicker/stickers/text/MakerOfClickableStickers;
 
 
 # annotations
@@ -27,7 +27,7 @@
 
 .field private E:I
 
-.field private F:Lcom/vk/stories/clickable/models/d;
+.field private F:Lcom/vk/stories/clickable/models/StoryHashtagTypeParams5;
 
 .field private f:Landroid/text/StaticLayout;
 
@@ -44,12 +44,12 @@
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, v1}, Lcom/vk/stories/clickable/stickers/StoryHashtagSticker$a;-><init>(Lkotlin/jvm/internal/i;)V
+    invoke-direct {v0, v1}, Lcom/vk/stories/clickable/stickers/StoryHashtagSticker$a;-><init>(Lkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     const v0, 0x7f0702ba
 
     .line 1
-    invoke-static {v0}, Lcom/vk/core/util/y0;->c(I)I
+    invoke-static {v0}, Lcom/vk/core/util/ResUtils;->c(I)I
 
     move-result v0
 
@@ -58,13 +58,13 @@
     return-void
 .end method
 
-.method public constructor <init>(Lcom/vk/stories/clickable/models/d;)V
+.method public constructor <init>(Lcom/vk/stories/clickable/models/StoryHashtagTypeParams5;)V
     .locals 0
 
     .line 1
-    invoke-direct {p0}, Lcom/vk/attachpicker/stickers/y;-><init>()V
+    invoke-direct {p0}, Lcom/vk/attachpicker/stickers/CanvasSticker;-><init>()V
 
-    iput-object p1, p0, Lcom/vk/stories/clickable/stickers/StoryHashtagSticker;->F:Lcom/vk/stories/clickable/models/d;
+    iput-object p1, p0, Lcom/vk/stories/clickable/stickers/StoryHashtagSticker;->F:Lcom/vk/stories/clickable/models/StoryHashtagTypeParams5;
 
     .line 2
     new-instance p1, Landroid/graphics/Rect;
@@ -74,9 +74,9 @@
     iput-object p1, p0, Lcom/vk/stories/clickable/stickers/StoryHashtagSticker;->C:Landroid/graphics/Rect;
 
     .line 3
-    iget-object p1, p0, Lcom/vk/stories/clickable/stickers/StoryHashtagSticker;->F:Lcom/vk/stories/clickable/models/d;
+    iget-object p1, p0, Lcom/vk/stories/clickable/stickers/StoryHashtagSticker;->F:Lcom/vk/stories/clickable/models/StoryHashtagTypeParams5;
 
-    invoke-direct {p0, p1}, Lcom/vk/stories/clickable/stickers/StoryHashtagSticker;->b(Lcom/vk/stories/clickable/models/d;)V
+    invoke-direct {p0, p1}, Lcom/vk/stories/clickable/stickers/StoryHashtagSticker;->b(Lcom/vk/stories/clickable/models/StoryHashtagTypeParams5;)V
 
     return-void
 .end method
@@ -85,9 +85,9 @@
     .locals 0
 
     .line 4
-    iget-object p1, p1, Lcom/vk/stories/clickable/stickers/StoryHashtagSticker;->F:Lcom/vk/stories/clickable/models/d;
+    iget-object p1, p1, Lcom/vk/stories/clickable/stickers/StoryHashtagSticker;->F:Lcom/vk/stories/clickable/models/StoryHashtagTypeParams5;
 
-    invoke-direct {p0, p1}, Lcom/vk/stories/clickable/stickers/StoryHashtagSticker;-><init>(Lcom/vk/stories/clickable/models/d;)V
+    invoke-direct {p0, p1}, Lcom/vk/stories/clickable/stickers/StoryHashtagSticker;-><init>(Lcom/vk/stories/clickable/models/StoryHashtagTypeParams5;)V
 
     return-void
 .end method
@@ -103,7 +103,7 @@
     const v0, 0x7f0702b9
 
     .line 42
-    invoke-static {v0}, Lcom/vk/core/util/y0;->c(I)I
+    invoke-static {v0}, Lcom/vk/core/util/ResUtils;->c(I)I
 
     move-result v0
 
@@ -114,7 +114,7 @@
     return p1
 .end method
 
-.method private final a(Lcom/vk/stories/clickable/models/b;I)Landroid/text/StaticLayout;
+.method private final a(Lcom/vk/stories/clickable/models/StoryHashtagTypeParams3;I)Landroid/text/StaticLayout;
     .locals 9
     .annotation build Landroid/annotation/SuppressLint;
         value = {
@@ -123,7 +123,7 @@
     .end annotation
 
     .line 33
-    invoke-virtual {p1}, Lcom/vk/stories/clickable/models/b;->f()Ljava/lang/String;
+    invoke-virtual {p1}, Lcom/vk/stories/clickable/models/StoryHashtagTypeParams3;->f()Ljava/lang/String;
 
     move-result-object v0
 
@@ -135,7 +135,7 @@
 
     const-string v0, "(this as java.lang.String).toUpperCase()"
 
-    invoke-static {v2, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v2, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 34
     iget-object v3, p0, Lcom/vk/stories/clickable/stickers/StoryHashtagSticker;->g:Landroid/text/TextPaint;
@@ -143,17 +143,17 @@
     if-eqz v3, :cond_0
 
     .line 35
-    invoke-virtual {p1}, Lcom/vk/stories/clickable/models/b;->a()Landroid/text/Layout$Alignment;
+    invoke-virtual {p1}, Lcom/vk/stories/clickable/models/StoryHashtagTypeParams3;->a()Landroid/text/Layout$Alignment;
 
     move-result-object v5
 
     .line 36
-    invoke-virtual {p1}, Lcom/vk/stories/clickable/models/b;->e()F
+    invoke-virtual {p1}, Lcom/vk/stories/clickable/models/StoryHashtagTypeParams3;->e()F
 
     move-result v6
 
     .line 37
-    invoke-virtual {p1}, Lcom/vk/stories/clickable/models/b;->d()F
+    invoke-virtual {p1}, Lcom/vk/stories/clickable/models/StoryHashtagTypeParams3;->d()F
 
     move-result v7
 
@@ -172,7 +172,7 @@
 
     .line 39
     :cond_0
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     const/4 p1, 0x0
 
@@ -189,7 +189,7 @@
     throw p1
 .end method
 
-.method private final a(FFLcom/vk/stories/clickable/models/b;)V
+.method private final a(FFLcom/vk/stories/clickable/models/StoryHashtagTypeParams3;)V
     .locals 4
 
     const/4 v0, 0x0
@@ -214,7 +214,7 @@
     div-float/2addr p2, v1
 
     .line 25
-    invoke-virtual {p3}, Lcom/vk/stories/clickable/models/b;->a()Landroid/text/Layout$Alignment;
+    invoke-virtual {p3}, Lcom/vk/stories/clickable/models/StoryHashtagTypeParams3;->a()Landroid/text/Layout$Alignment;
 
     move-result-object v2
 
@@ -235,7 +235,7 @@
 
     .line 27
     :cond_0
-    invoke-virtual {p3}, Lcom/vk/stories/clickable/models/b;->a()Landroid/text/Layout$Alignment;
+    invoke-virtual {p3}, Lcom/vk/stories/clickable/models/StoryHashtagTypeParams3;->a()Landroid/text/Layout$Alignment;
 
     move-result-object p3
 
@@ -253,7 +253,7 @@
     .line 29
     :cond_1
     :goto_0
-    invoke-virtual {p0}, Lcom/vk/attachpicker/stickers/y;->m()F
+    invoke-virtual {p0}, Lcom/vk/attachpicker/stickers/CanvasSticker;->m()F
 
     move-result p1
 
@@ -270,10 +270,10 @@
 
     div-float/2addr v2, v1
 
-    invoke-virtual {p0, p1, p3, v2}, Lcom/vk/attachpicker/stickers/y;->a(FFF)V
+    invoke-virtual {p0, p1, p3, v2}, Lcom/vk/attachpicker/stickers/CanvasSticker;->a(FFF)V
 
     .line 31
-    invoke-virtual {p0, v0, p2}, Lcom/vk/attachpicker/stickers/y;->c(FF)V
+    invoke-virtual {p0, v0, p2}, Lcom/vk/attachpicker/stickers/CanvasSticker;->c(FF)V
 
     neg-float p1, p1
 
@@ -290,7 +290,7 @@
 
     div-float/2addr p3, v1
 
-    invoke-virtual {p0, p1, p2, p3}, Lcom/vk/attachpicker/stickers/y;->a(FFF)V
+    invoke-virtual {p0, p1, p2, p3}, Lcom/vk/attachpicker/stickers/CanvasSticker;->a(FFF)V
 
     :cond_2
     return-void
@@ -322,7 +322,7 @@
     const v1, 0x7f0702b2
 
     .line 45
-    invoke-static {v1}, Lcom/vk/core/util/y0;->c(I)I
+    invoke-static {v1}, Lcom/vk/core/util/ResUtils;->c(I)I
 
     move-result v1
 
@@ -342,16 +342,16 @@
     return p1
 .end method
 
-.method private final b(Lcom/vk/stories/clickable/models/d;)V
+.method private final b(Lcom/vk/stories/clickable/models/StoryHashtagTypeParams5;)V
     .locals 11
 
     .line 1
-    invoke-virtual {p1}, Lcom/vk/stories/clickable/models/d;->a()Lcom/vk/stories/clickable/models/b;
+    invoke-virtual {p1}, Lcom/vk/stories/clickable/models/StoryHashtagTypeParams5;->a()Lcom/vk/stories/clickable/models/StoryHashtagTypeParams3;
 
     move-result-object v0
 
     .line 2
-    invoke-virtual {p1}, Lcom/vk/stories/clickable/models/d;->b()Lcom/vk/stories/clickable/models/f;
+    invoke-virtual {p1}, Lcom/vk/stories/clickable/models/StoryHashtagTypeParams5;->b()Lcom/vk/stories/clickable/models/StoryHashtagTypeParams7;
 
     move-result-object v1
 
@@ -374,7 +374,7 @@
 
     if-eqz v3, :cond_8
 
-    invoke-virtual {v1}, Lcom/vk/stories/clickable/models/f;->a()Landroid/graphics/Typeface;
+    invoke-virtual {v1}, Lcom/vk/stories/clickable/models/StoryHashtagTypeParams7;->a()Landroid/graphics/Typeface;
 
     move-result-object v5
 
@@ -385,7 +385,7 @@
 
     if-eqz v3, :cond_7
 
-    invoke-virtual {v1}, Lcom/vk/stories/clickable/models/f;->c()I
+    invoke-virtual {v1}, Lcom/vk/stories/clickable/models/StoryHashtagTypeParams7;->c()I
 
     move-result v1
 
@@ -396,18 +396,18 @@
 
     if-eqz v1, :cond_6
 
-    invoke-virtual {v0}, Lcom/vk/stories/clickable/models/b;->b()F
+    invoke-virtual {v0}, Lcom/vk/stories/clickable/models/StoryHashtagTypeParams3;->b()F
 
     move-result v3
 
     invoke-virtual {v1, v3}, Landroid/text/TextPaint;->setTextSize(F)V
 
     .line 8
-    invoke-virtual {p1}, Lcom/vk/stories/clickable/models/d;->a()Lcom/vk/stories/clickable/models/b;
+    invoke-virtual {p1}, Lcom/vk/stories/clickable/models/StoryHashtagTypeParams5;->a()Lcom/vk/stories/clickable/models/StoryHashtagTypeParams3;
 
     move-result-object v1
 
-    invoke-virtual {v1}, Lcom/vk/stories/clickable/models/b;->g()Ljava/lang/Integer;
+    invoke-virtual {v1}, Lcom/vk/stories/clickable/models/StoryHashtagTypeParams3;->g()Ljava/lang/Integer;
 
     move-result-object v1
 
@@ -415,11 +415,11 @@
 
     if-eqz v1, :cond_1
 
-    invoke-virtual {p1}, Lcom/vk/stories/clickable/models/d;->a()Lcom/vk/stories/clickable/models/b;
+    invoke-virtual {p1}, Lcom/vk/stories/clickable/models/StoryHashtagTypeParams5;->a()Lcom/vk/stories/clickable/models/StoryHashtagTypeParams3;
 
     move-result-object v1
 
-    invoke-virtual {v1}, Lcom/vk/stories/clickable/models/b;->c()Ljava/lang/Integer;
+    invoke-virtual {v1}, Lcom/vk/stories/clickable/models/StoryHashtagTypeParams3;->c()Ljava/lang/Integer;
 
     move-result-object v1
 
@@ -429,11 +429,11 @@
 
     .line 9
     :cond_0
-    invoke-virtual {p1}, Lcom/vk/stories/clickable/models/d;->a()Lcom/vk/stories/clickable/models/b;
+    invoke-virtual {p1}, Lcom/vk/stories/clickable/models/StoryHashtagTypeParams5;->a()Lcom/vk/stories/clickable/models/StoryHashtagTypeParams3;
 
     move-result-object v1
 
-    invoke-virtual {v1}, Lcom/vk/stories/clickable/models/b;->g()Ljava/lang/Integer;
+    invoke-virtual {v1}, Lcom/vk/stories/clickable/models/StoryHashtagTypeParams3;->g()Ljava/lang/Integer;
 
     move-result-object v1
 
@@ -444,11 +444,11 @@
     iput v1, p0, Lcom/vk/stories/clickable/stickers/StoryHashtagSticker;->D:I
 
     .line 10
-    invoke-virtual {p1}, Lcom/vk/stories/clickable/models/d;->a()Lcom/vk/stories/clickable/models/b;
+    invoke-virtual {p1}, Lcom/vk/stories/clickable/models/StoryHashtagTypeParams5;->a()Lcom/vk/stories/clickable/models/StoryHashtagTypeParams3;
 
     move-result-object v1
 
-    invoke-virtual {v1}, Lcom/vk/stories/clickable/models/b;->c()Ljava/lang/Integer;
+    invoke-virtual {v1}, Lcom/vk/stories/clickable/models/StoryHashtagTypeParams3;->c()Ljava/lang/Integer;
 
     move-result-object v1
 
@@ -463,23 +463,23 @@
     .line 11
     :cond_1
     :goto_0
-    sget-object v1, Lcom/vk/stories/clickable/e;->i:Lcom/vk/stories/clickable/e;
+    sget-object v1, Lcom/vk/stories/clickable/StoryClickableController;->i:Lcom/vk/stories/clickable/StoryClickableController;
 
-    invoke-virtual {v1}, Lcom/vk/stories/clickable/e;->a()I
+    invoke-virtual {v1}, Lcom/vk/stories/clickable/StoryClickableController;->a()I
 
     move-result v1
 
     .line 12
-    new-instance v5, Lcom/vk/stories/clickable/b;
+    new-instance v5, Lcom/vk/stories/clickable/SingleLineTextMeasureHelper;
 
     iget-object v6, p0, Lcom/vk/stories/clickable/stickers/StoryHashtagSticker;->g:Landroid/text/TextPaint;
 
     if-eqz v6, :cond_5
 
-    invoke-direct {v5, v6}, Lcom/vk/stories/clickable/b;-><init>(Landroid/graphics/Paint;)V
+    invoke-direct {v5, v6}, Lcom/vk/stories/clickable/SingleLineTextMeasureHelper;-><init>(Landroid/graphics/Paint;)V
 
     .line 13
-    invoke-virtual {v0}, Lcom/vk/stories/clickable/models/b;->b()F
+    invoke-virtual {v0}, Lcom/vk/stories/clickable/models/StoryHashtagTypeParams3;->b()F
 
     move-result v6
 
@@ -488,10 +488,10 @@
     .line 14
     new-instance v7, Lcom/vk/stories/clickable/stickers/StoryHashtagSticker$applyInfo$newFontSize$1;
 
-    invoke-direct {v7, v0}, Lcom/vk/stories/clickable/stickers/StoryHashtagSticker$applyInfo$newFontSize$1;-><init>(Lcom/vk/stories/clickable/models/b;)V
+    invoke-direct {v7, v0}, Lcom/vk/stories/clickable/stickers/StoryHashtagSticker$applyInfo$newFontSize$1;-><init>(Lcom/vk/stories/clickable/models/StoryHashtagTypeParams3;)V
 
     .line 15
-    invoke-virtual {v5, v3, v6, v7, v1}, Lcom/vk/stories/clickable/b;->a(IILkotlin/jvm/b/a;I)I
+    invoke-virtual {v5, v3, v6, v7, v1}, Lcom/vk/stories/clickable/SingleLineTextMeasureHelper;->a(IILkotlin/jvm/b/Functions;I)I
 
     move-result v1
 
@@ -509,7 +509,7 @@
 
     move-result v1
 
-    invoke-direct {p0, v0, v1}, Lcom/vk/stories/clickable/stickers/StoryHashtagSticker;->a(Lcom/vk/stories/clickable/models/b;I)Landroid/text/StaticLayout;
+    invoke-direct {p0, v0, v1}, Lcom/vk/stories/clickable/stickers/StoryHashtagSticker;->a(Lcom/vk/stories/clickable/models/StoryHashtagTypeParams3;I)Landroid/text/StaticLayout;
 
     move-result-object v1
 
@@ -535,7 +535,7 @@
 
     float-to-int v1, v1
 
-    invoke-direct {p0, v0, v1}, Lcom/vk/stories/clickable/stickers/StoryHashtagSticker;->a(Lcom/vk/stories/clickable/models/b;I)Landroid/text/StaticLayout;
+    invoke-direct {p0, v0, v1}, Lcom/vk/stories/clickable/stickers/StoryHashtagSticker;->a(Lcom/vk/stories/clickable/models/StoryHashtagTypeParams3;I)Landroid/text/StaticLayout;
 
     move-result-object v0
 
@@ -550,13 +550,13 @@
 
     .line 22
     :cond_2
-    sget-object v0, Lcom/vk/core/util/i;->a:Landroid/content/Context;
+    sget-object v0, Lcom/vk/core/util/AppContextHolder;->a:Landroid/content/Context;
 
-    invoke-virtual {p1}, Lcom/vk/stories/clickable/models/d;->b()Lcom/vk/stories/clickable/models/f;
+    invoke-virtual {p1}, Lcom/vk/stories/clickable/models/StoryHashtagTypeParams5;->b()Lcom/vk/stories/clickable/models/StoryHashtagTypeParams7;
 
     move-result-object v1
 
-    invoke-virtual {v1}, Lcom/vk/stories/clickable/models/f;->f()I
+    invoke-virtual {v1}, Lcom/vk/stories/clickable/models/StoryHashtagTypeParams7;->f()I
 
     move-result v1
 
@@ -595,11 +595,11 @@
     iput v1, v4, Landroid/graphics/Rect;->bottom:I
 
     .line 29
-    invoke-virtual {p1}, Lcom/vk/stories/clickable/models/d;->b()Lcom/vk/stories/clickable/models/f;
+    invoke-virtual {p1}, Lcom/vk/stories/clickable/models/StoryHashtagTypeParams5;->b()Lcom/vk/stories/clickable/models/StoryHashtagTypeParams7;
 
     move-result-object p1
 
-    invoke-virtual {p1}, Lcom/vk/stories/clickable/models/f;->d()Lcom/vk/stories/clickable/models/a;
+    invoke-virtual {p1}, Lcom/vk/stories/clickable/models/StoryHashtagTypeParams7;->d()Lcom/vk/stories/clickable/models/StoryHashtagTypeParams1;
 
     move-result-object p1
 
@@ -625,12 +625,12 @@
     const/4 v7, 0x0
 
     .line 33
-    invoke-virtual {p1}, Lcom/vk/stories/clickable/models/a;->b()I
+    invoke-virtual {p1}, Lcom/vk/stories/clickable/models/StoryHashtagTypeParams1;->b()I
 
     move-result v8
 
     .line 34
-    invoke-virtual {p1}, Lcom/vk/stories/clickable/models/a;->a()I
+    invoke-virtual {p1}, Lcom/vk/stories/clickable/models/StoryHashtagTypeParams1;->a()I
 
     move-result v9
 
@@ -655,31 +655,31 @@
 
     .line 38
     :cond_4
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     throw v2
 
     .line 39
     :cond_5
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     throw v2
 
     .line 40
     :cond_6
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     throw v2
 
     .line 41
     :cond_7
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     throw v2
 
     .line 42
     :cond_8
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     throw v2
 .end method
@@ -705,7 +705,7 @@
     check-cast p1, Lcom/vk/stories/clickable/stickers/StoryHashtagSticker;
 
     .line 2
-    invoke-super {p0, p1}, Lcom/vk/attachpicker/stickers/y;->a(Lcom/vk/attachpicker/stickers/ISticker;)Lcom/vk/attachpicker/stickers/ISticker;
+    invoke-super {p0, p1}, Lcom/vk/attachpicker/stickers/CanvasSticker;->a(Lcom/vk/attachpicker/stickers/ISticker;)Lcom/vk/attachpicker/stickers/ISticker;
 
     return-object p1
 
@@ -724,7 +724,7 @@
     .locals 7
 
     .line 4
-    invoke-virtual {p0}, Lcom/vk/attachpicker/stickers/y;->getStickerAlpha()I
+    invoke-virtual {p0}, Lcom/vk/attachpicker/stickers/CanvasSticker;->getStickerAlpha()I
 
     move-result v0
 
@@ -792,7 +792,7 @@
 
     const-string v4, "layout.paint"
 
-    invoke-static {v3, v4}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v3, v4}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {v3, v0}, Landroid/text/TextPaint;->setAlpha(I)V
 
@@ -801,7 +801,7 @@
 
     move-result-object v0
 
-    invoke-static {v0, v4}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v4}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     iget-object v3, p0, Lcom/vk/stories/clickable/stickers/StoryHashtagSticker;->h:Landroid/graphics/LinearGradient;
 
@@ -817,7 +817,7 @@
 
     .line 16
     :cond_0
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     const/4 p1, 0x0
 
@@ -827,14 +827,14 @@
     return-void
 .end method
 
-.method public final a(Lcom/vk/stories/clickable/models/d;)V
+.method public final a(Lcom/vk/stories/clickable/models/StoryHashtagTypeParams5;)V
     .locals 3
 
     .line 17
-    iput-object p1, p0, Lcom/vk/stories/clickable/stickers/StoryHashtagSticker;->F:Lcom/vk/stories/clickable/models/d;
+    iput-object p1, p0, Lcom/vk/stories/clickable/stickers/StoryHashtagSticker;->F:Lcom/vk/stories/clickable/models/StoryHashtagTypeParams5;
 
     .line 18
-    invoke-virtual {p1}, Lcom/vk/stories/clickable/models/d;->a()Lcom/vk/stories/clickable/models/b;
+    invoke-virtual {p1}, Lcom/vk/stories/clickable/models/StoryHashtagTypeParams5;->a()Lcom/vk/stories/clickable/models/StoryHashtagTypeParams3;
 
     move-result-object p1
 
@@ -862,12 +862,12 @@
 
     .line 22
     :goto_0
-    iget-object v2, p0, Lcom/vk/stories/clickable/stickers/StoryHashtagSticker;->F:Lcom/vk/stories/clickable/models/d;
+    iget-object v2, p0, Lcom/vk/stories/clickable/stickers/StoryHashtagSticker;->F:Lcom/vk/stories/clickable/models/StoryHashtagTypeParams5;
 
-    invoke-direct {p0, v2}, Lcom/vk/stories/clickable/stickers/StoryHashtagSticker;->b(Lcom/vk/stories/clickable/models/d;)V
+    invoke-direct {p0, v2}, Lcom/vk/stories/clickable/stickers/StoryHashtagSticker;->b(Lcom/vk/stories/clickable/models/StoryHashtagTypeParams5;)V
 
     .line 23
-    invoke-direct {p0, v1, v0, p1}, Lcom/vk/stories/clickable/stickers/StoryHashtagSticker;->a(FFLcom/vk/stories/clickable/models/b;)V
+    invoke-direct {p0, v1, v0, p1}, Lcom/vk/stories/clickable/stickers/StoryHashtagSticker;->a(FFLcom/vk/stories/clickable/models/StoryHashtagTypeParams3;)V
 
     return-void
 .end method
@@ -884,7 +884,7 @@
     .end annotation
 
     .line 1
-    invoke-virtual {p0}, Lcom/vk/attachpicker/stickers/y;->getFillPoints()[Landroid/graphics/PointF;
+    invoke-virtual {p0}, Lcom/vk/attachpicker/stickers/CanvasSticker;->getFillPoints()[Landroid/graphics/PointF;
 
     move-result-object v0
 
@@ -932,23 +932,23 @@
     :cond_0
     new-instance v0, Lcom/vk/dto/stories/model/clickable/ClickableHashtag;
 
-    iget-object v2, p0, Lcom/vk/stories/clickable/stickers/StoryHashtagSticker;->F:Lcom/vk/stories/clickable/models/d;
+    iget-object v2, p0, Lcom/vk/stories/clickable/stickers/StoryHashtagSticker;->F:Lcom/vk/stories/clickable/models/StoryHashtagTypeParams5;
 
-    invoke-virtual {v2}, Lcom/vk/stories/clickable/models/d;->a()Lcom/vk/stories/clickable/models/b;
-
-    move-result-object v2
-
-    invoke-virtual {v2}, Lcom/vk/stories/clickable/models/b;->f()Ljava/lang/String;
+    invoke-virtual {v2}, Lcom/vk/stories/clickable/models/StoryHashtagTypeParams5;->a()Lcom/vk/stories/clickable/models/StoryHashtagTypeParams3;
 
     move-result-object v2
 
-    iget-object v3, p0, Lcom/vk/stories/clickable/stickers/StoryHashtagSticker;->F:Lcom/vk/stories/clickable/models/d;
+    invoke-virtual {v2}, Lcom/vk/stories/clickable/models/StoryHashtagTypeParams3;->f()Ljava/lang/String;
 
-    invoke-virtual {v3}, Lcom/vk/stories/clickable/models/d;->b()Lcom/vk/stories/clickable/models/f;
+    move-result-object v2
+
+    iget-object v3, p0, Lcom/vk/stories/clickable/stickers/StoryHashtagSticker;->F:Lcom/vk/stories/clickable/models/StoryHashtagTypeParams5;
+
+    invoke-virtual {v3}, Lcom/vk/stories/clickable/models/StoryHashtagTypeParams5;->b()Lcom/vk/stories/clickable/models/StoryHashtagTypeParams7;
 
     move-result-object v3
 
-    invoke-virtual {v3}, Lcom/vk/stories/clickable/models/f;->g()Lcom/vk/dto/stories/model/clickable/HashtagStyle;
+    invoke-virtual {v3}, Lcom/vk/stories/clickable/models/StoryHashtagTypeParams7;->g()Lcom/vk/dto/stories/model/clickable/HashtagStyle;
 
     move-result-object v3
 
@@ -987,11 +987,11 @@
     return v0
 .end method
 
-.method public final o()Lcom/vk/stories/clickable/models/d;
+.method public final o()Lcom/vk/stories/clickable/models/StoryHashtagTypeParams5;
     .locals 1
 
     .line 1
-    iget-object v0, p0, Lcom/vk/stories/clickable/stickers/StoryHashtagSticker;->F:Lcom/vk/stories/clickable/models/d;
+    iget-object v0, p0, Lcom/vk/stories/clickable/stickers/StoryHashtagSticker;->F:Lcom/vk/stories/clickable/models/StoryHashtagTypeParams5;
 
     return-object v0
 .end method

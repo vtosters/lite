@@ -4,11 +4,11 @@
 
 
 # instance fields
-.field private a:Lcom/vk/stickers/e0/f;
+.field private a:Lcom/vk/stickers/e0/StickerRecyclerItem;
 
 
 # direct methods
-.method public constructor <init>(Landroid/content/Context;Lcom/vk/stickers/g0/a;)V
+.method public constructor <init>(Landroid/content/Context;Lcom/vk/stickers/g0/StickerKeyboardListener;)V
     .locals 3
 
     .line 1
@@ -40,20 +40,20 @@
 
     const/high16 v1, 0x3f800000    # 1.0f
 
-    invoke-virtual {v0, v1}, Lcom/vk/imageloader/view/a;->setAspectRatio(F)V
+    invoke-virtual {v0, v1}, Lcom/vk/imageloader/view/GenericVKImageView;->setAspectRatio(F)V
 
     .line 6
     iget-object v0, p0, Landroidx/recyclerview/widget/RecyclerView$ViewHolder;->itemView:Landroid/view/View;
 
     const-string v1, "itemView"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     new-instance v2, Lcom/vk/stickers/holders/StickerHolder$2;
 
-    invoke-direct {v2, p0, p2}, Lcom/vk/stickers/holders/StickerHolder$2;-><init>(Lcom/vk/stickers/holders/StickerHolder;Lcom/vk/stickers/g0/a;)V
+    invoke-direct {v2, p0, p2}, Lcom/vk/stickers/holders/StickerHolder$2;-><init>(Lcom/vk/stickers/holders/StickerHolder;Lcom/vk/stickers/g0/StickerKeyboardListener;)V
 
-    invoke-static {v0, v2}, Lcom/vk/extensions/ViewExtKt;->e(Landroid/view/View;Lkotlin/jvm/b/b;)V
+    invoke-static {v0, v2}, Lcom/vk/extensions/ViewExtKt;->e(Landroid/view/View;Lkotlin/jvm/b/Functions2;)V
 
     .line 7
     iget-object p2, p0, Landroidx/recyclerview/widget/RecyclerView$ViewHolder;->itemView:Landroid/view/View;
@@ -65,7 +65,7 @@
     .line 8
     iget-object p2, p0, Landroidx/recyclerview/widget/RecyclerView$ViewHolder;->itemView:Landroid/view/View;
 
-    invoke-static {p2, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p2, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     check-cast p2, Lcom/vk/stickers/views/VKStickerImageView;
 
@@ -98,11 +98,11 @@
     throw p1
 .end method
 
-.method public static final synthetic a(Lcom/vk/stickers/holders/StickerHolder;)Lcom/vk/stickers/e0/f;
+.method public static final synthetic a(Lcom/vk/stickers/holders/StickerHolder;)Lcom/vk/stickers/e0/StickerRecyclerItem;
     .locals 0
 
     .line 1
-    iget-object p0, p0, Lcom/vk/stickers/holders/StickerHolder;->a:Lcom/vk/stickers/e0/f;
+    iget-object p0, p0, Lcom/vk/stickers/holders/StickerHolder;->a:Lcom/vk/stickers/e0/StickerRecyclerItem;
 
     if-eqz p0, :cond_0
 
@@ -111,7 +111,7 @@
     :cond_0
     const-string p0, "item"
 
-    invoke-static {p0}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {p0}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     const/4 p0, 0x0
 
@@ -120,25 +120,25 @@
 
 
 # virtual methods
-.method public final a(Lcom/vk/stickers/e0/f;)V
+.method public final a(Lcom/vk/stickers/e0/StickerRecyclerItem;)V
     .locals 0
 
     .line 2
-    iput-object p1, p0, Lcom/vk/stickers/holders/StickerHolder;->a:Lcom/vk/stickers/e0/f;
+    iput-object p1, p0, Lcom/vk/stickers/holders/StickerHolder;->a:Lcom/vk/stickers/e0/StickerRecyclerItem;
 
     .line 3
-    invoke-virtual {p0, p1}, Lcom/vk/stickers/holders/StickerHolder;->b(Lcom/vk/stickers/e0/f;)V
+    invoke-virtual {p0, p1}, Lcom/vk/stickers/holders/StickerHolder;->b(Lcom/vk/stickers/e0/StickerRecyclerItem;)V
 
     return-void
 .end method
 
-.method public final b(Lcom/vk/stickers/e0/f;)V
+.method public final b(Lcom/vk/stickers/e0/StickerRecyclerItem;)V
     .locals 3
 
     if-eqz p1, :cond_2
 
     .line 1
-    invoke-virtual {p1}, Lcom/vk/stickers/e0/f;->f()Lcom/vk/dto/stickers/StickerItem;
+    invoke-virtual {p1}, Lcom/vk/stickers/e0/StickerRecyclerItem;->f()Lcom/vk/dto/stickers/StickerItem;
 
     move-result-object v0
 
@@ -153,7 +153,7 @@
     .line 2
     iget-object v0, p0, Landroidx/recyclerview/widget/RecyclerView$ViewHolder;->itemView:Landroid/view/View;
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     const/high16 v1, 0x3f800000    # 1.0f
 
@@ -165,7 +165,7 @@
     :cond_0
     iget-object v0, p0, Landroidx/recyclerview/widget/RecyclerView$ViewHolder;->itemView:Landroid/view/View;
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     const v1, 0x3e99999a    # 0.3f
 
@@ -177,7 +177,7 @@
 
     sget v1, Lcom/vk/stickers/j;->id:I
 
-    invoke-virtual {p1}, Lcom/vk/stickers/e0/f;->f()Lcom/vk/dto/stickers/StickerItem;
+    invoke-virtual {p1}, Lcom/vk/stickers/e0/StickerRecyclerItem;->f()Lcom/vk/dto/stickers/StickerItem;
 
     move-result-object v2
 
@@ -198,11 +198,11 @@
 
     check-cast v0, Lcom/vk/stickers/views/VKStickerImageView;
 
-    invoke-virtual {p1}, Lcom/vk/stickers/e0/f;->f()Lcom/vk/dto/stickers/StickerItem;
+    invoke-virtual {p1}, Lcom/vk/stickers/e0/StickerRecyclerItem;->f()Lcom/vk/dto/stickers/StickerItem;
 
     move-result-object p1
 
-    sget v1, Lcom/vk/stickers/v;->f:I
+    sget v1, Lcom/vk/stickers/StickersConfig;->f:I
 
     invoke-virtual {p1, v1}, Lcom/vk/dto/stickers/StickerItem;->h(I)Ljava/lang/String;
 

@@ -80,7 +80,7 @@
     move-result-object v0
 
     .line 3
-    new-instance v1, Lcom/crashlytics/android/core/a0;
+    new-instance v1, Lcom/crashlytics/android/core/MetaDataStore;
 
     iget-object v2, p0, Lcom/crashlytics/android/core/CrashlyticsController$b;->b:Lcom/crashlytics/android/core/CrashlyticsController;
 
@@ -88,11 +88,11 @@
 
     move-result-object v2
 
-    invoke-direct {v1, v2}, Lcom/crashlytics/android/core/a0;-><init>(Ljava/io/File;)V
+    invoke-direct {v1, v2}, Lcom/crashlytics/android/core/MetaDataStore;-><init>(Ljava/io/File;)V
 
     iget-object v2, p0, Lcom/crashlytics/android/core/CrashlyticsController$b;->a:Ljava/util/Map;
 
-    invoke-virtual {v1, v0, v2}, Lcom/crashlytics/android/core/a0;->a(Ljava/lang/String;Ljava/util/Map;)V
+    invoke-virtual {v1, v0, v2}, Lcom/crashlytics/android/core/MetaDataStore;->a(Ljava/lang/String;Ljava/util/Map;)V
 
     const/4 v0, 0x0
 

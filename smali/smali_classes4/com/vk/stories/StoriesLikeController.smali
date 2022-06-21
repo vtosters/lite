@@ -4,9 +4,9 @@
 
 
 # static fields
-.field static final synthetic a:[Lkotlin/u/j;
+.field static final synthetic a:[Lkotlin/u/KProperty5;
 
-.field private static final b:Lkotlin/e;
+.field private static final b:Lkotlin/Lazy2;
 
 .field public static final c:Lcom/vk/stories/StoriesLikeController;
 
@@ -17,13 +17,13 @@
 
     const/4 v0, 0x1
 
-    new-array v0, v0, [Lkotlin/u/j;
+    new-array v0, v0, [Lkotlin/u/KProperty5;
 
     new-instance v1, Lkotlin/jvm/internal/PropertyReference1Impl;
 
     const-class v2, Lcom/vk/stories/StoriesLikeController;
 
-    invoke-static {v2}, Lkotlin/jvm/internal/o;->a(Ljava/lang/Class;)Lkotlin/u/c;
+    invoke-static {v2}, Lkotlin/jvm/internal/Reflection;->a(Ljava/lang/Class;)Lkotlin/u/KClass;
 
     move-result-object v2
 
@@ -31,15 +31,15 @@
 
     const-string v4, "getStoriesNotificationsCenter()Lcom/vk/core/events/NotificationCenter;"
 
-    invoke-direct {v1, v2, v3, v4}, Lkotlin/jvm/internal/PropertyReference1Impl;-><init>(Lkotlin/u/e;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-direct {v1, v2, v3, v4}, Lkotlin/jvm/internal/PropertyReference1Impl;-><init>(Lkotlin/u/KDeclarationContainer;Ljava/lang/String;Ljava/lang/String;)V
 
-    invoke-static {v1}, Lkotlin/jvm/internal/o;->a(Lkotlin/jvm/internal/PropertyReference1;)Lkotlin/u/l;
+    invoke-static {v1}, Lkotlin/jvm/internal/Reflection;->a(Lkotlin/jvm/internal/PropertyReference1;)Lkotlin/u/KProperty2;
 
     const/4 v2, 0x0
 
     aput-object v1, v0, v2
 
-    sput-object v0, Lcom/vk/stories/StoriesLikeController;->a:[Lkotlin/u/j;
+    sput-object v0, Lcom/vk/stories/StoriesLikeController;->a:[Lkotlin/u/KProperty5;
 
     .line 1
     new-instance v0, Lcom/vk/stories/StoriesLikeController;
@@ -51,11 +51,11 @@
     .line 2
     sget-object v0, Lcom/vk/stories/StoriesLikeController$storiesNotificationsCenter$2;->a:Lcom/vk/stories/StoriesLikeController$storiesNotificationsCenter$2;
 
-    invoke-static {v0}, Lkotlin/g;->a(Lkotlin/jvm/b/a;)Lkotlin/e;
+    invoke-static {v0}, Lkotlin/g;->a(Lkotlin/jvm/b/Functions;)Lkotlin/Lazy2;
 
     move-result-object v0
 
-    sput-object v0, Lcom/vk/stories/StoriesLikeController;->b:Lkotlin/e;
+    sput-object v0, Lcom/vk/stories/StoriesLikeController;->b:Lkotlin/Lazy2;
 
     return-void
 .end method
@@ -69,31 +69,31 @@
     return-void
 .end method
 
-.method private final a()Lb/h/g/l/d;
+.method private final a()Lb/h/g/l/NotificationCenter;
     .locals 3
 
-    sget-object v0, Lcom/vk/stories/StoriesLikeController;->b:Lkotlin/e;
+    sget-object v0, Lcom/vk/stories/StoriesLikeController;->b:Lkotlin/Lazy2;
 
-    sget-object v1, Lcom/vk/stories/StoriesLikeController;->a:[Lkotlin/u/j;
+    sget-object v1, Lcom/vk/stories/StoriesLikeController;->a:[Lkotlin/u/KProperty5;
 
     const/4 v2, 0x0
 
     aget-object v1, v1, v2
 
-    invoke-interface {v0}, Lkotlin/e;->getValue()Ljava/lang/Object;
+    invoke-interface {v0}, Lkotlin/Lazy2;->getValue()Ljava/lang/Object;
 
     move-result-object v0
 
-    check-cast v0, Lb/h/g/l/d;
+    check-cast v0, Lb/h/g/l/NotificationCenter;
 
     return-object v0
 .end method
 
-.method public static final synthetic a(Lcom/vk/stories/StoriesLikeController;)Lb/h/g/l/d;
+.method public static final synthetic a(Lcom/vk/stories/StoriesLikeController;)Lb/h/g/l/NotificationCenter;
     .locals 0
 
     .line 1
-    invoke-direct {p0}, Lcom/vk/stories/StoriesLikeController;->a()Lb/h/g/l/d;
+    invoke-direct {p0}, Lcom/vk/stories/StoriesLikeController;->a()Lb/h/g/l/NotificationCenter;
 
     move-result-object p0
 
@@ -112,7 +112,7 @@
 
     const-string v1, "StoriesController.getCachedStories() ?: return"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     const/4 v1, 0x1
 
@@ -140,7 +140,7 @@
     const-string v4, "allStories"
 
     .line 16
-    invoke-static {v0, v4}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v4}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 17
     invoke-interface {v0}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
@@ -166,7 +166,7 @@
     const-string v6, "storyContainer"
 
     .line 18
-    invoke-static {v5, v6}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v5, v6}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {v5}, Lcom/vk/dto/stories/model/StoriesContainer;->G1()Ljava/util/ArrayList;
 
@@ -174,7 +174,7 @@
 
     const-string v6, "storyContainer.storyEntries"
 
-    invoke-static {v5, v6}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v5, v6}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 19
     invoke-interface {v5}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
@@ -195,7 +195,7 @@
     check-cast v6, Lcom/vk/dto/stories/model/StoryEntry;
 
     .line 20
-    invoke-static {v6, p1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v6, p1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v7
 
@@ -248,7 +248,7 @@
     return-void
 .end method
 
-.method public static final a(ZLcom/vk/dto/stories/model/StoryEntry;Lcom/vk/utils/f/d/a;)V
+.method public static final a(ZLcom/vk/dto/stories/model/StoryEntry;Lcom/vk/utils/f/d/Disposer;)V
     .locals 4
     .annotation build Landroid/annotation/SuppressLint;
         value = {
@@ -264,7 +264,7 @@
     if-eqz p0, :cond_0
 
     .line 4
-    new-instance v0, Lcom/vk/api/stories/d;
+    new-instance v0, Lcom/vk/api/stories/StoriesAddLike;
 
     iget v1, p1, Lcom/vk/dto/stories/model/StoryEntry;->c:I
 
@@ -272,13 +272,13 @@
 
     iget-object v3, p1, Lcom/vk/dto/stories/model/StoryEntry;->G:Ljava/lang/String;
 
-    invoke-direct {v0, v1, v2, v3}, Lcom/vk/api/stories/d;-><init>(IILjava/lang/String;)V
+    invoke-direct {v0, v1, v2, v3}, Lcom/vk/api/stories/StoriesAddLike;-><init>(IILjava/lang/String;)V
 
     goto :goto_0
 
     .line 5
     :cond_0
-    new-instance v0, Lcom/vk/api/stories/j;
+    new-instance v0, Lcom/vk/api/stories/StoriesDeleteLike;
 
     iget v1, p1, Lcom/vk/dto/stories/model/StoryEntry;->c:I
 
@@ -286,7 +286,7 @@
 
     iget-object v3, p1, Lcom/vk/dto/stories/model/StoryEntry;->G:Ljava/lang/String;
 
-    invoke-direct {v0, v1, v2, v3}, Lcom/vk/api/stories/j;-><init>(IILjava/lang/String;)V
+    invoke-direct {v0, v1, v2, v3}, Lcom/vk/api/stories/StoriesDeleteLike;-><init>(IILjava/lang/String;)V
 
     :goto_0
     const/4 v1, 0x1
@@ -294,7 +294,7 @@
     const/4 v2, 0x0
 
     .line 6
-    invoke-static {v0, v2, v1, v2}, Lcom/vk/api/base/d;->d(Lcom/vk/api/base/d;Lcom/vk/api/base/e;ILjava/lang/Object;)Lc/a/m;
+    invoke-static {v0, v2, v1, v2}, Lcom/vk/api/base/ApiRequest;->d(Lcom/vk/api/base/ApiRequest;Lcom/vk/api/base/ApiThreadHolder;ILjava/lang/Object;)Lio/reactivex/Observable;
 
     move-result-object v0
 
@@ -303,7 +303,7 @@
 
     invoke-direct {v1, p1, p0}, Lcom/vk/stories/StoriesLikeController$a;-><init>(Lcom/vk/dto/stories/model/StoryEntry;Z)V
 
-    invoke-virtual {v0, v1}, Lc/a/m;->d(Lc/a/z/g;)Lc/a/m;
+    invoke-virtual {v0, v1}, Lio/reactivex/Observable;->d(Lio/reactivex/functions/Consumer;)Lio/reactivex/Observable;
 
     move-result-object v0
 
@@ -318,16 +318,16 @@
     invoke-direct {v2, p1, p0}, Lcom/vk/stories/StoriesLikeController$c;-><init>(Lcom/vk/dto/stories/model/StoryEntry;Z)V
 
     .line 10
-    invoke-virtual {v0, v1, v2}, Lc/a/m;->a(Lc/a/z/g;Lc/a/z/g;)Lio/reactivex/disposables/b;
+    invoke-virtual {v0, v1, v2}, Lio/reactivex/Observable;->a(Lio/reactivex/functions/Consumer;Lio/reactivex/functions/Consumer;)Lio/reactivex/disposables/Disposable;
 
     move-result-object p0
 
     const-string p1, "disposable"
 
     .line 11
-    invoke-static {p0, p1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p0, p1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    invoke-interface {p2, p0}, Lcom/vk/utils/f/d/a;->a(Lio/reactivex/disposables/b;)V
+    invoke-interface {p2, p0}, Lcom/vk/utils/f/d/Disposer;->a(Lio/reactivex/disposables/Disposable;)V
 
     :cond_1
     return-void

@@ -55,7 +55,7 @@
 
     iget-object v0, v0, Lcom/vk/libvideo/dialogs/VideoFeedDialog$l;->c:Lcom/vk/libvideo/dialogs/VideoFeedDialog;
 
-    invoke-static {v0}, Lcom/vk/libvideo/dialogs/VideoFeedDialog;->q(Lcom/vk/libvideo/dialogs/VideoFeedDialog;)Lcom/vk/libvideo/ui/e;
+    invoke-static {v0}, Lcom/vk/libvideo/dialogs/VideoFeedDialog;->q(Lcom/vk/libvideo/dialogs/VideoFeedDialog;)Lcom/vk/libvideo/ui/VideoListItemView;
 
     move-result-object v0
 
@@ -66,15 +66,15 @@
 
     iget-object v1, v1, Lcom/vk/libvideo/dialogs/VideoFeedDialog$l;->c:Lcom/vk/libvideo/dialogs/VideoFeedDialog;
 
-    invoke-static {v1}, Lcom/vk/libvideo/dialogs/VideoFeedDialog;->m(Lcom/vk/libvideo/dialogs/VideoFeedDialog;)Lcom/vk/libvideo/c0/a;
+    invoke-static {v1}, Lcom/vk/libvideo/dialogs/VideoFeedDialog;->m(Lcom/vk/libvideo/dialogs/VideoFeedDialog;)Lcom/vk/libvideo/c0/VideoSnapHelper;
 
     move-result-object v1
 
-    invoke-virtual {v0}, Lcom/vk/libvideo/ui/e;->getListPosition()I
+    invoke-virtual {v0}, Lcom/vk/libvideo/ui/VideoListItemView;->getListPosition()I
 
     move-result v0
 
-    invoke-virtual {v1, v0}, Lcom/vk/libvideo/c0/a;->b(I)V
+    invoke-virtual {v1, v0}, Lcom/vk/libvideo/c0/VideoSnapHelper;->b(I)V
 
     :cond_0
     return-void

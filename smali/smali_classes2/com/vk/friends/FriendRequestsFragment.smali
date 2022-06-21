@@ -1,10 +1,10 @@
 .class public final Lcom/vk/friends/FriendRequestsFragment;
-.super Lcom/vk/core/fragments/b;
+.super Lcom/vk/core/fragments/BaseFragment1;
 .source "FriendRequestsFragment.kt"
 
 # interfaces
-.implements Lcom/vk/lists/t$p;
-.implements Lcom/vk/navigation/v;
+.implements Lcom/vk/lists/PaginationHelper$p;
+.implements Lcom/vk/navigation/ScrolledToTop;
 
 
 # annotations
@@ -18,11 +18,11 @@
 
 .annotation system Ldalvik/annotation/Signature;
     value = {
-        "Lcom/vk/core/fragments/b;",
-        "Lcom/vk/lists/t$p<",
+        "Lcom/vk/core/fragments/BaseFragment1;",
+        "Lcom/vk/lists/PaginationHelper$p<",
         "Lcom/vk/friends/FriendRequestsFragment$c;",
         ">;",
-        "Lcom/vk/navigation/v;"
+        "Lcom/vk/navigation/ScrolledToTop;"
     }
 .end annotation
 
@@ -34,24 +34,24 @@
 
 .field private H:Lcom/vk/lists/RecyclerPaginatedView;
 
-.field private I:Lcom/vk/friends/a;
+.field private I:Lcom/vk/friends/FriendRequestsAdapter;
 
 .field private final J:Lcom/vk/friends/FriendRequestsFragment$receiver$1;
 
-.field private final K:Lcom/vk/common/g/g;
+.field private final K:Lcom/vk/common/g/VoidF1;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Lcom/vk/common/g/g<",
+            "Lcom/vk/common/g/VoidF1<",
             "Lcom/vk/dto/user/UserProfile;",
             ">;"
         }
     .end annotation
 .end field
 
-.field private final L:Lcom/vk/common/g/j;
+.field private final L:Lcom/vk/common/g/VoidF2Int;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Lcom/vk/common/g/j<",
+            "Lcom/vk/common/g/VoidF2Int<",
             "Lcom/vk/dto/user/RequestUserProfile;",
             "Ljava/lang/Boolean;",
             ">;"
@@ -67,7 +67,7 @@
     .locals 1
 
     .line 1
-    invoke-direct {p0}, Lcom/vk/core/fragments/b;-><init>()V
+    invoke-direct {p0}, Lcom/vk/core/fragments/BaseFragment1;-><init>()V
 
     .line 2
     new-instance v0, Lcom/vk/friends/FriendRequestsFragment$receiver$1;
@@ -81,14 +81,14 @@
 
     invoke-direct {v0, p0}, Lcom/vk/friends/FriendRequestsFragment$p;-><init>(Lcom/vk/friends/FriendRequestsFragment;)V
 
-    iput-object v0, p0, Lcom/vk/friends/FriendRequestsFragment;->K:Lcom/vk/common/g/g;
+    iput-object v0, p0, Lcom/vk/friends/FriendRequestsFragment;->K:Lcom/vk/common/g/VoidF1;
 
     .line 4
     new-instance v0, Lcom/vk/friends/FriendRequestsFragment$d;
 
     invoke-direct {v0, p0}, Lcom/vk/friends/FriendRequestsFragment$d;-><init>(Lcom/vk/friends/FriendRequestsFragment;)V
 
-    iput-object v0, p0, Lcom/vk/friends/FriendRequestsFragment;->L:Lcom/vk/common/g/j;
+    iput-object v0, p0, Lcom/vk/friends/FriendRequestsFragment;->L:Lcom/vk/common/g/VoidF2Int;
 
     .line 5
     new-instance v0, Lcom/vk/friends/FriendRequestsFragment$b;
@@ -123,7 +123,7 @@
 
     const-string v1, "resources"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {v0}, Landroid/content/res/Resources;->getConfiguration()Landroid/content/res/Configuration;
 
@@ -171,15 +171,15 @@
     .locals 3
 
     .line 1
-    new-instance v0, Lcom/vk/api/friends/n;
+    new-instance v0, Lcom/vk/api/friends/FriendsMarkAsRead;
 
-    invoke-direct {v0}, Lcom/vk/api/friends/n;-><init>()V
+    invoke-direct {v0}, Lcom/vk/api/friends/FriendsMarkAsRead;-><init>()V
 
     const/4 v1, 0x0
 
     const/4 v2, 0x1
 
-    invoke-static {v0, v1, v2, v1}, Lcom/vk/api/base/d;->d(Lcom/vk/api/base/d;Lcom/vk/api/base/e;ILjava/lang/Object;)Lc/a/m;
+    invoke-static {v0, v1, v2, v1}, Lcom/vk/api/base/ApiRequest;->d(Lcom/vk/api/base/ApiRequest;Lcom/vk/api/base/ApiThreadHolder;ILjava/lang/Object;)Lio/reactivex/Observable;
 
     move-result-object v0
 
@@ -189,16 +189,16 @@
     sget-object v2, Lcom/vk/friends/FriendRequestsFragment$h;->a:Lcom/vk/friends/FriendRequestsFragment$h;
 
     .line 3
-    invoke-virtual {v0, v1, v2}, Lc/a/m;->a(Lc/a/z/g;Lc/a/z/g;)Lio/reactivex/disposables/b;
+    invoke-virtual {v0, v1, v2}, Lio/reactivex/Observable;->a(Lio/reactivex/functions/Consumer;Lio/reactivex/functions/Consumer;)Lio/reactivex/disposables/Disposable;
 
     return-void
 .end method
 
-.method public static final synthetic a(Lcom/vk/friends/FriendRequestsFragment;)Lcom/vk/friends/a;
+.method public static final synthetic a(Lcom/vk/friends/FriendRequestsFragment;)Lcom/vk/friends/FriendRequestsAdapter;
     .locals 0
 
     .line 1
-    iget-object p0, p0, Lcom/vk/friends/FriendRequestsFragment;->I:Lcom/vk/friends/a;
+    iget-object p0, p0, Lcom/vk/friends/FriendRequestsFragment;->I:Lcom/vk/friends/FriendRequestsAdapter;
 
     return-object p0
 .end method
@@ -224,7 +224,7 @@
     .line 26
     iget v2, v0, Lcom/vk/dto/user/UserProfile;->b:I
 
-    invoke-static {v2, v3}, Lcom/vk/api/execute/f;->a(IZ)Lcom/vk/api/execute/f;
+    invoke-static {v2, v3}, Lcom/vk/api/execute/ExecuteSetSubscriptionStatus;->a(IZ)Lcom/vk/api/execute/ExecuteSetSubscriptionStatus;
 
     move-result-object v2
 
@@ -234,25 +234,25 @@
 
     move-result-object v5
 
-    invoke-virtual {v2, v5}, Lcom/vk/api/execute/f;->d(Ljava/lang/String;)Lcom/vk/api/execute/f;
+    invoke-virtual {v2, v5}, Lcom/vk/api/execute/ExecuteSetSubscriptionStatus;->d(Ljava/lang/String;)Lcom/vk/api/execute/ExecuteSetSubscriptionStatus;
 
     goto :goto_0
 
     .line 27
     :cond_0
-    new-instance v2, Lcom/vk/api/friends/m;
+    new-instance v2, Lcom/vk/api/friends/FriendsHideSuggestion;
 
     iget v5, v0, Lcom/vk/dto/user/UserProfile;->b:I
 
-    invoke-direct {v2, v5}, Lcom/vk/api/friends/m;-><init>(I)V
+    invoke-direct {v2, v5}, Lcom/vk/api/friends/FriendsHideSuggestion;-><init>(I)V
 
     sget-object v5, Lcom/vk/stat/scheme/SchemeStat$EventScreen;->FRIENDS_REQUESTS:Lcom/vk/stat/scheme/SchemeStat$EventScreen;
 
-    invoke-static {v5}, Lcom/vk/stat/scheme/f;->a(Lcom/vk/stat/scheme/SchemeStat$EventScreen;)Ljava/lang/String;
+    invoke-static {v5}, Lcom/vk/stat/scheme/SchemeStatEx;->a(Lcom/vk/stat/scheme/SchemeStat$EventScreen;)Ljava/lang/String;
 
     move-result-object v5
 
-    invoke-virtual {v2, v5}, Lcom/vk/api/friends/m;->d(Ljava/lang/String;)Lcom/vk/api/friends/m;
+    invoke-virtual {v2, v5}, Lcom/vk/api/friends/FriendsHideSuggestion;->d(Ljava/lang/String;)Lcom/vk/api/friends/FriendsHideSuggestion;
 
     goto :goto_0
 
@@ -260,29 +260,29 @@
     if-eqz v1, :cond_2
 
     .line 28
-    new-instance v2, Lcom/vk/api/friends/a;
+    new-instance v2, Lcom/vk/api/friends/FriendsAdd;
 
     iget v5, v0, Lcom/vk/dto/user/UserProfile;->b:I
 
-    invoke-direct {v2, v5, v4}, Lcom/vk/api/friends/a;-><init>(ILjava/lang/String;)V
+    invoke-direct {v2, v5, v4}, Lcom/vk/api/friends/FriendsAdd;-><init>(ILjava/lang/String;)V
 
     sget-object v5, Lcom/vk/stat/scheme/SchemeStat$EventScreen;->FRIENDS_REQUESTS:Lcom/vk/stat/scheme/SchemeStat$EventScreen;
 
-    invoke-static {v5}, Lcom/vk/stat/scheme/f;->a(Lcom/vk/stat/scheme/SchemeStat$EventScreen;)Ljava/lang/String;
+    invoke-static {v5}, Lcom/vk/stat/scheme/SchemeStatEx;->a(Lcom/vk/stat/scheme/SchemeStat$EventScreen;)Ljava/lang/String;
 
     move-result-object v5
 
-    invoke-virtual {v2, v5}, Lcom/vk/api/friends/a;->d(Ljava/lang/String;)Lcom/vk/api/friends/a;
+    invoke-virtual {v2, v5}, Lcom/vk/api/friends/FriendsAdd;->d(Ljava/lang/String;)Lcom/vk/api/friends/FriendsAdd;
 
     goto :goto_0
 
     .line 29
     :cond_2
-    new-instance v2, Lcom/vk/api/friends/c;
+    new-instance v2, Lcom/vk/api/friends/FriendsDelete;
 
     iget v5, v0, Lcom/vk/dto/user/UserProfile;->b:I
 
-    invoke-direct {v2, v5}, Lcom/vk/api/friends/c;-><init>(I)V
+    invoke-direct {v2, v5}, Lcom/vk/api/friends/FriendsDelete;-><init>(I)V
 
     .line 30
     :goto_0
@@ -315,11 +315,11 @@
 
     const-string v6, "track_code"
 
-    invoke-virtual {v2, v6, v5}, Lcom/vk/api/base/d;->c(Ljava/lang/String;Ljava/lang/String;)Lcom/vk/api/base/d;
+    invoke-virtual {v2, v6, v5}, Lcom/vk/api/base/ApiRequest;->c(Ljava/lang/String;Ljava/lang/String;)Lcom/vk/api/base/ApiRequest;
 
     .line 32
     :cond_5
-    invoke-static {v2, v4, v3, v4}, Lcom/vk/api/base/d;->d(Lcom/vk/api/base/d;Lcom/vk/api/base/e;ILjava/lang/Object;)Lc/a/m;
+    invoke-static {v2, v4, v3, v4}, Lcom/vk/api/base/ApiRequest;->d(Lcom/vk/api/base/ApiRequest;Lcom/vk/api/base/ApiThreadHolder;ILjava/lang/Object;)Lio/reactivex/Observable;
 
     move-result-object v7
 
@@ -340,7 +340,7 @@
 
     const/4 v15, 0x0
 
-    invoke-static/range {v7 .. v15}, Lcom/vk/core/extensions/RxExtKt;->a(Lc/a/m;Landroid/content/Context;JIZZILjava/lang/Object;)Lc/a/m;
+    invoke-static/range {v7 .. v15}, Lcom/vk/core/extensions/RxExtKt;->a(Lio/reactivex/Observable;Landroid/content/Context;JIZZILjava/lang/Object;)Lio/reactivex/Observable;
 
     move-result-object v2
 
@@ -355,7 +355,7 @@
     sget-object v0, Lcom/vk/friends/FriendRequestsFragment$s;->a:Lcom/vk/friends/FriendRequestsFragment$s;
 
     .line 36
-    invoke-virtual {v2, v3, v0}, Lc/a/m;->a(Lc/a/z/g;Lc/a/z/g;)Lio/reactivex/disposables/b;
+    invoke-virtual {v2, v3, v0}, Lio/reactivex/Observable;->a(Lio/reactivex/functions/Consumer;Lio/reactivex/functions/Consumer;)Lio/reactivex/disposables/Disposable;
 
     return-void
 .end method
@@ -444,84 +444,84 @@
     return v0
 .end method
 
-.method public a(Lcom/vk/lists/t;Z)Lc/a/m;
+.method public a(Lcom/vk/lists/PaginationHelper;Z)Lio/reactivex/Observable;
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lcom/vk/lists/t;",
+            "Lcom/vk/lists/PaginationHelper;",
             "Z)",
-            "Lc/a/m<",
+            "Lio/reactivex/Observable<",
             "Lcom/vk/friends/FriendRequestsFragment$c;",
             ">;"
         }
     .end annotation
 
     .line 4
-    new-instance p2, Lcom/vk/api/friends/j;
+    new-instance p2, Lcom/vk/api/friends/FriendsGetRequestsAndRecommendations;
 
     iget-object v0, p0, Lcom/vk/friends/FriendRequestsFragment;->M:Lcom/vk/friends/FriendRequestsFragment$b;
 
-    invoke-virtual {p1}, Lcom/vk/lists/t;->c()I
+    invoke-virtual {p1}, Lcom/vk/lists/PaginationHelper;->c()I
 
     move-result p1
 
-    invoke-direct {p2, v0, p1}, Lcom/vk/api/friends/j;-><init>(Lcom/vk/api/friends/l$a;I)V
+    invoke-direct {p2, v0, p1}, Lcom/vk/api/friends/FriendsGetRequestsAndRecommendations;-><init>(Lcom/vk/api/friends/FriendsGetRequestsNotificationsResponse$a;I)V
 
     .line 5
     sget-object p1, Lcom/vk/stat/scheme/SchemeStat$EventScreen;->FRIENDS_REQUESTS:Lcom/vk/stat/scheme/SchemeStat$EventScreen;
 
-    invoke-static {p1}, Lcom/vk/stat/scheme/f;->a(Lcom/vk/stat/scheme/SchemeStat$EventScreen;)Ljava/lang/String;
+    invoke-static {p1}, Lcom/vk/stat/scheme/SchemeStatEx;->a(Lcom/vk/stat/scheme/SchemeStat$EventScreen;)Ljava/lang/String;
 
     move-result-object p1
 
-    invoke-virtual {p2, p1}, Lcom/vk/api/friends/j;->d(Ljava/lang/String;)Lcom/vk/api/friends/j;
+    invoke-virtual {p2, p1}, Lcom/vk/api/friends/FriendsGetRequestsAndRecommendations;->d(Ljava/lang/String;)Lcom/vk/api/friends/FriendsGetRequestsAndRecommendations;
 
     const/4 p1, 0x0
 
     const/4 v0, 0x1
 
     .line 6
-    invoke-static {p2, p1, v0, p1}, Lcom/vk/api/base/d;->d(Lcom/vk/api/base/d;Lcom/vk/api/base/e;ILjava/lang/Object;)Lc/a/m;
+    invoke-static {p2, p1, v0, p1}, Lcom/vk/api/base/ApiRequest;->d(Lcom/vk/api/base/ApiRequest;Lcom/vk/api/base/ApiThreadHolder;ILjava/lang/Object;)Lio/reactivex/Observable;
 
     move-result-object p1
 
     .line 7
     sget-object p2, Lcom/vk/friends/FriendRequestsFragment$q;->a:Lcom/vk/friends/FriendRequestsFragment$q;
 
-    invoke-virtual {p1, p2}, Lc/a/m;->e(Lc/a/z/j;)Lc/a/m;
+    invoke-virtual {p1, p2}, Lio/reactivex/Observable;->e(Lio/reactivex/functions/Function;)Lio/reactivex/Observable;
 
     move-result-object p1
 
     const-string p2, "FriendsGetRequestsAndRec\u2026ommendations.trackCode) }"
 
-    invoke-static {p1, p2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, p2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     return-object p1
 .end method
 
-.method public a(Ljava/lang/String;Lcom/vk/lists/t;)Lc/a/m;
+.method public a(Ljava/lang/String;Lcom/vk/lists/PaginationHelper;)Lio/reactivex/Observable;
     .locals 5
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
             "Ljava/lang/String;",
-            "Lcom/vk/lists/t;",
+            "Lcom/vk/lists/PaginationHelper;",
             ")",
-            "Lc/a/m<",
+            "Lio/reactivex/Observable<",
             "Lcom/vk/friends/FriendRequestsFragment$c;",
             ">;"
         }
     .end annotation
 
     .line 8
-    iget-object v0, p0, Lcom/vk/friends/FriendRequestsFragment;->I:Lcom/vk/friends/a;
+    iget-object v0, p0, Lcom/vk/friends/FriendRequestsFragment;->I:Lcom/vk/friends/FriendRequestsAdapter;
 
     const/4 v1, 0x0
 
     if-eqz v0, :cond_0
 
-    invoke-virtual {v0}, Lcom/vk/friends/a;->m()I
+    invoke-virtual {v0}, Lcom/vk/friends/FriendRequestsAdapter;->m()I
 
     move-result v0
 
@@ -532,19 +532,19 @@
 
     .line 9
     :goto_0
-    iget-object v2, p0, Lcom/vk/friends/FriendRequestsFragment;->I:Lcom/vk/friends/a;
+    iget-object v2, p0, Lcom/vk/friends/FriendRequestsFragment;->I:Lcom/vk/friends/FriendRequestsAdapter;
 
     const/4 v3, 0x0
 
     if-eqz v2, :cond_1
 
-    invoke-virtual {v2}, Lcom/vk/friends/a;->n()Lcom/vk/lists/q;
+    invoke-virtual {v2}, Lcom/vk/friends/FriendRequestsAdapter;->n()Lcom/vk/lists/NextFromHolder;
 
     move-result-object v2
 
     if-eqz v2, :cond_1
 
-    invoke-virtual {v2}, Lcom/vk/lists/q;->b()Ljava/lang/String;
+    invoke-virtual {v2}, Lcom/vk/lists/NextFromHolder;->b()Ljava/lang/String;
 
     move-result-object v2
 
@@ -555,17 +555,17 @@
 
     .line 10
     :goto_1
-    iget-object v4, p0, Lcom/vk/friends/FriendRequestsFragment;->I:Lcom/vk/friends/a;
+    iget-object v4, p0, Lcom/vk/friends/FriendRequestsFragment;->I:Lcom/vk/friends/FriendRequestsAdapter;
 
     if-eqz v4, :cond_2
 
-    invoke-virtual {v4}, Lcom/vk/friends/a;->n()Lcom/vk/lists/q;
+    invoke-virtual {v4}, Lcom/vk/friends/FriendRequestsAdapter;->n()Lcom/vk/lists/NextFromHolder;
 
     move-result-object v4
 
     if-eqz v4, :cond_2
 
-    invoke-virtual {v4}, Lcom/vk/lists/q;->a()I
+    invoke-virtual {v4}, Lcom/vk/lists/NextFromHolder;->a()I
 
     move-result v1
 
@@ -579,7 +579,7 @@
     sub-int/2addr v0, v1
 
     .line 11
-    invoke-virtual {p2}, Lcom/vk/lists/t;->c()I
+    invoke-virtual {p2}, Lcom/vk/lists/PaginationHelper;->c()I
 
     move-result p1
 
@@ -588,57 +588,57 @@
     move-result p1
 
     .line 12
-    new-instance p2, Lcom/vk/api/friends/k;
+    new-instance p2, Lcom/vk/api/friends/FriendsGetRequestsNotifications;
 
     iget-object v0, p0, Lcom/vk/friends/FriendRequestsFragment;->M:Lcom/vk/friends/FriendRequestsFragment$b;
 
-    invoke-direct {p2, v0, p1, v1}, Lcom/vk/api/friends/k;-><init>(Lcom/vk/api/friends/l$a;II)V
+    invoke-direct {p2, v0, p1, v1}, Lcom/vk/api/friends/FriendsGetRequestsNotifications;-><init>(Lcom/vk/api/friends/FriendsGetRequestsNotificationsResponse$a;II)V
 
     .line 13
     sget-object p1, Lcom/vk/stat/scheme/SchemeStat$EventScreen;->FRIENDS_REQUESTS:Lcom/vk/stat/scheme/SchemeStat$EventScreen;
 
-    invoke-static {p1}, Lcom/vk/stat/scheme/f;->a(Lcom/vk/stat/scheme/SchemeStat$EventScreen;)Ljava/lang/String;
+    invoke-static {p1}, Lcom/vk/stat/scheme/SchemeStatEx;->a(Lcom/vk/stat/scheme/SchemeStat$EventScreen;)Ljava/lang/String;
 
     move-result-object p1
 
-    invoke-virtual {p2, p1}, Lcom/vk/api/friends/k;->d(Ljava/lang/String;)Lcom/vk/api/friends/k;
+    invoke-virtual {p2, p1}, Lcom/vk/api/friends/FriendsGetRequestsNotifications;->d(Ljava/lang/String;)Lcom/vk/api/friends/FriendsGetRequestsNotifications;
 
     .line 14
-    invoke-static {p2, v3, v4, v3}, Lcom/vk/api/base/d;->d(Lcom/vk/api/base/d;Lcom/vk/api/base/e;ILjava/lang/Object;)Lc/a/m;
+    invoke-static {p2, v3, v4, v3}, Lcom/vk/api/base/ApiRequest;->d(Lcom/vk/api/base/ApiRequest;Lcom/vk/api/base/ApiThreadHolder;ILjava/lang/Object;)Lio/reactivex/Observable;
 
     move-result-object p1
 
     .line 15
     sget-object p2, Lcom/vk/friends/FriendRequestsFragment$e;->a:Lcom/vk/friends/FriendRequestsFragment$e;
 
-    invoke-virtual {p1, p2}, Lc/a/m;->e(Lc/a/z/j;)Lc/a/m;
+    invoke-virtual {p1, p2}, Lio/reactivex/Observable;->e(Lio/reactivex/functions/Function;)Lio/reactivex/Observable;
 
     move-result-object p1
 
     const-string p2, "FriendsGetRequestsNotifi\u2026t(newRequestsPage = it) }"
 
-    invoke-static {p1, p2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, p2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     goto :goto_3
 
     .line 16
     :cond_3
-    new-instance v0, Lcom/vk/api/friends/h;
+    new-instance v0, Lcom/vk/api/friends/FriendsGetRecommendationsWithMutual;
 
     iget-object v1, p0, Lcom/vk/friends/FriendRequestsFragment;->M:Lcom/vk/friends/FriendRequestsFragment$b;
 
-    invoke-virtual {p2}, Lcom/vk/lists/t;->c()I
+    invoke-virtual {p2}, Lcom/vk/lists/PaginationHelper;->c()I
 
     move-result p2
 
-    invoke-direct {v0, v1, p1, p2}, Lcom/vk/api/friends/h;-><init>(Lcom/vk/api/friends/l$a;Ljava/lang/String;I)V
+    invoke-direct {v0, v1, p1, p2}, Lcom/vk/api/friends/FriendsGetRecommendationsWithMutual;-><init>(Lcom/vk/api/friends/FriendsGetRequestsNotificationsResponse$a;Ljava/lang/String;I)V
 
     .line 17
-    iget-object p1, p0, Lcom/vk/friends/FriendRequestsFragment;->I:Lcom/vk/friends/a;
+    iget-object p1, p0, Lcom/vk/friends/FriendRequestsFragment;->I:Lcom/vk/friends/FriendRequestsAdapter;
 
     if-eqz p1, :cond_4
 
-    invoke-virtual {p1}, Lcom/vk/friends/a;->x()Ljava/lang/String;
+    invoke-virtual {p1}, Lcom/vk/friends/FriendRequestsAdapter;->x()Ljava/lang/String;
 
     move-result-object p1
 
@@ -648,46 +648,46 @@
     move-object p1, v3
 
     :goto_2
-    invoke-virtual {v0, p1}, Lcom/vk/api/friends/h;->f(Ljava/lang/String;)Lcom/vk/api/friends/h;
+    invoke-virtual {v0, p1}, Lcom/vk/api/friends/FriendsGetRecommendationsWithMutual;->f(Ljava/lang/String;)Lcom/vk/api/friends/FriendsGetRecommendationsWithMutual;
 
     .line 18
     sget-object p1, Lcom/vk/stat/scheme/SchemeStat$EventScreen;->FRIENDS_REQUESTS:Lcom/vk/stat/scheme/SchemeStat$EventScreen;
 
-    invoke-static {p1}, Lcom/vk/stat/scheme/f;->a(Lcom/vk/stat/scheme/SchemeStat$EventScreen;)Ljava/lang/String;
+    invoke-static {p1}, Lcom/vk/stat/scheme/SchemeStatEx;->a(Lcom/vk/stat/scheme/SchemeStat$EventScreen;)Ljava/lang/String;
 
     move-result-object p1
 
-    invoke-virtual {v0, p1}, Lcom/vk/api/friends/h;->e(Ljava/lang/String;)Lcom/vk/api/friends/h;
+    invoke-virtual {v0, p1}, Lcom/vk/api/friends/FriendsGetRecommendationsWithMutual;->e(Ljava/lang/String;)Lcom/vk/api/friends/FriendsGetRecommendationsWithMutual;
 
     .line 19
-    invoke-static {v0, v3, v4, v3}, Lcom/vk/api/base/d;->d(Lcom/vk/api/base/d;Lcom/vk/api/base/e;ILjava/lang/Object;)Lc/a/m;
+    invoke-static {v0, v3, v4, v3}, Lcom/vk/api/base/ApiRequest;->d(Lcom/vk/api/base/ApiRequest;Lcom/vk/api/base/ApiThreadHolder;ILjava/lang/Object;)Lio/reactivex/Observable;
 
     move-result-object p1
 
     .line 20
     sget-object p2, Lcom/vk/friends/FriendRequestsFragment$f;->a:Lcom/vk/friends/FriendRequestsFragment$f;
 
-    invoke-virtual {p1, p2}, Lc/a/m;->e(Lc/a/z/j;)Lc/a/m;
+    invoke-virtual {p1, p2}, Lio/reactivex/Observable;->e(Lio/reactivex/functions/Function;)Lio/reactivex/Observable;
 
     move-result-object p1
 
     const-string p2, "FriendsGetRecommendation\u2026ackCode = it.trackCode) }"
 
-    invoke-static {p1, p2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, p2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     :goto_3
     return-object p1
 .end method
 
-.method public a(Lc/a/m;ZLcom/vk/lists/t;)V
+.method public a(Lio/reactivex/Observable;ZLcom/vk/lists/PaginationHelper;)V
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lc/a/m<",
+            "Lio/reactivex/Observable<",
             "Lcom/vk/friends/FriendRequestsFragment$c;",
             ">;Z",
-            "Lcom/vk/lists/t;",
+            "Lcom/vk/lists/PaginationHelper;",
             ")V"
         }
     .end annotation
@@ -695,22 +695,22 @@
     .line 21
     new-instance v0, Lcom/vk/friends/FriendRequestsFragment$n;
 
-    invoke-direct {v0, p0, p2, p3}, Lcom/vk/friends/FriendRequestsFragment$n;-><init>(Lcom/vk/friends/FriendRequestsFragment;ZLcom/vk/lists/t;)V
+    invoke-direct {v0, p0, p2, p3}, Lcom/vk/friends/FriendRequestsFragment$n;-><init>(Lcom/vk/friends/FriendRequestsFragment;ZLcom/vk/lists/PaginationHelper;)V
 
     .line 22
     sget-object p2, Lcom/vk/friends/FriendRequestsFragment$o;->a:Lcom/vk/friends/FriendRequestsFragment$o;
 
     .line 23
-    invoke-virtual {p1, v0, p2}, Lc/a/m;->a(Lc/a/z/g;Lc/a/z/g;)Lio/reactivex/disposables/b;
+    invoke-virtual {p1, v0, p2}, Lio/reactivex/Observable;->a(Lio/reactivex/functions/Consumer;Lio/reactivex/functions/Consumer;)Lio/reactivex/disposables/Disposable;
 
     move-result-object p1
 
     const-string p2, "observable.subscribe(\n  \u2026         { e -> L.e(e) })"
 
-    invoke-static {p1, p2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, p2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 24
-    invoke-static {p1, p0}, Lcom/vk/extensions/p;->a(Lio/reactivex/disposables/b;Lcom/vk/core/fragments/b;)Lio/reactivex/disposables/b;
+    invoke-static {p1, p0}, Lcom/vk/extensions/VKRxExt;->a(Lio/reactivex/disposables/Disposable;Lcom/vk/core/fragments/BaseFragment1;)Lio/reactivex/disposables/Disposable;
 
     return-void
 .end method
@@ -730,7 +730,7 @@
 
     const/4 v1, 0x0
 
-    invoke-static {p1, v1, v0, v1}, Lcom/vk/extensions/h;->a(Lcom/vk/lists/RecyclerPaginatedView;Lkotlin/jvm/b/c;ILjava/lang/Object;)Lcom/vk/core/ui/d;
+    invoke-static {p1, v1, v0, v1}, Lcom/vk/extensions/RecyclerPaginatedViewExt;->a(Lcom/vk/lists/RecyclerPaginatedView;Lkotlin/jvm/b/Functions1;ILjava/lang/Object;)Lcom/vk/core/ui/CardItemDecorator;
 
     :cond_0
     return-void
@@ -740,7 +740,7 @@
     .locals 4
 
     .line 1
-    invoke-super {p0, p1}, Lcom/vk/core/fragments/b;->onCreate(Landroid/os/Bundle;)V
+    invoke-super {p0, p1}, Lcom/vk/core/fragments/BaseFragment1;->onCreate(Landroid/os/Bundle;)V
 
     .line 2
     invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getActivity()Landroidx/fragment/app/FragmentActivity;
@@ -782,7 +782,7 @@
     const-string p2, "view"
 
     .line 2
-    invoke-static {p1, p2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, p2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     const/4 p2, 0x2
 
@@ -790,7 +790,7 @@
 
     const v0, 0x7f0a0d9d
 
-    invoke-static {p1, v0, p3, p2, p3}, Lcom/vk/extensions/ViewExtKt;->a(Landroid/view/View;ILkotlin/jvm/b/b;ILjava/lang/Object;)Landroid/view/View;
+    invoke-static {p1, v0, p3, p2, p3}, Lcom/vk/extensions/ViewExtKt;->a(Landroid/view/View;ILkotlin/jvm/b/Functions2;ILjava/lang/Object;)Landroid/view/View;
 
     move-result-object v0
 
@@ -817,7 +817,7 @@
 
     invoke-direct {v1, p0}, Lcom/vk/friends/FriendRequestsFragment$onCreateView$1;-><init>(Lcom/vk/friends/FriendRequestsFragment;)V
 
-    invoke-static {v0, p0, v1}, Lcom/vk/extensions/m;->a(Landroidx/appcompat/widget/Toolbar;Lcom/vk/core/fragments/FragmentImpl;Lkotlin/jvm/b/b;)V
+    invoke-static {v0, p0, v1}, Lcom/vk/extensions/ToolbarExt1;->a(Landroidx/appcompat/widget/Toolbar;Lcom/vk/core/fragments/FragmentImpl;Lkotlin/jvm/b/Functions2;)V
 
     .line 5
     :cond_1
@@ -835,7 +835,7 @@
     const v0, 0x7f0a0b7a
 
     .line 6
-    invoke-static {p1, v0, p3, p2, p3}, Lcom/vk/extensions/ViewExtKt;->a(Landroid/view/View;ILkotlin/jvm/b/b;ILjava/lang/Object;)Landroid/view/View;
+    invoke-static {p1, v0, p3, p2, p3}, Lcom/vk/extensions/ViewExtKt;->a(Landroid/view/View;ILkotlin/jvm/b/Functions2;ILjava/lang/Object;)Landroid/view/View;
 
     move-result-object p2
 
@@ -880,7 +880,7 @@
 
     .line 12
     :cond_3
-    new-instance p2, Lcom/vk/friends/a;
+    new-instance p2, Lcom/vk/friends/FriendRequestsAdapter;
 
     invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getActivity()Landroidx/fragment/app/FragmentActivity;
 
@@ -890,22 +890,22 @@
 
     const-string v1, "activity!!"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    iget-object v1, p0, Lcom/vk/friends/FriendRequestsFragment;->K:Lcom/vk/common/g/g;
+    iget-object v1, p0, Lcom/vk/friends/FriendRequestsFragment;->K:Lcom/vk/common/g/VoidF1;
 
-    iget-object v2, p0, Lcom/vk/friends/FriendRequestsFragment;->L:Lcom/vk/common/g/j;
+    iget-object v2, p0, Lcom/vk/friends/FriendRequestsFragment;->L:Lcom/vk/common/g/VoidF2Int;
 
-    invoke-direct {p2, v0, v1, v2}, Lcom/vk/friends/a;-><init>(Landroid/content/Context;Lcom/vk/common/g/g;Lcom/vk/common/g/j;)V
+    invoke-direct {p2, v0, v1, v2}, Lcom/vk/friends/FriendRequestsAdapter;-><init>(Landroid/content/Context;Lcom/vk/common/g/VoidF1;Lcom/vk/common/g/VoidF2Int;)V
 
-    iput-object p2, p0, Lcom/vk/friends/FriendRequestsFragment;->I:Lcom/vk/friends/a;
+    iput-object p2, p0, Lcom/vk/friends/FriendRequestsFragment;->I:Lcom/vk/friends/FriendRequestsAdapter;
 
     .line 13
     iget-object p2, p0, Lcom/vk/friends/FriendRequestsFragment;->H:Lcom/vk/lists/RecyclerPaginatedView;
 
     if-eqz p2, :cond_4
 
-    iget-object v0, p0, Lcom/vk/friends/FriendRequestsFragment;->I:Lcom/vk/friends/a;
+    iget-object v0, p0, Lcom/vk/friends/FriendRequestsFragment;->I:Lcom/vk/friends/FriendRequestsAdapter;
 
     invoke-virtual {p2, v0}, Lcom/vk/lists/RecyclerPaginatedView;->setAdapter(Landroidx/recyclerview/widget/RecyclerView$Adapter;)V
 
@@ -917,7 +917,7 @@
 
     const/4 v0, 0x1
 
-    invoke-static {p2, p3, v0, p3}, Lcom/vk/extensions/h;->a(Lcom/vk/lists/RecyclerPaginatedView;Lkotlin/jvm/b/c;ILjava/lang/Object;)Lcom/vk/core/ui/d;
+    invoke-static {p2, p3, v0, p3}, Lcom/vk/extensions/RecyclerPaginatedViewExt;->a(Lcom/vk/lists/RecyclerPaginatedView;Lkotlin/jvm/b/Functions1;ILjava/lang/Object;)Lcom/vk/core/ui/CardItemDecorator;
 
     .line 15
     :cond_5
@@ -938,7 +938,7 @@
 
     if-eqz v0, :cond_6
 
-    invoke-static {v0}, Lme/grishka/appkit/views/a;->a(Landroid/app/Activity;)Lme/grishka/appkit/views/a;
+    invoke-static {v0}, Lme/grishka/appkit/views/DividerItemDecoration;->a(Landroid/app/Activity;)Lme/grishka/appkit/views/DividerItemDecoration;
 
     move-result-object v0
 
@@ -946,7 +946,7 @@
 
     invoke-direct {v1, p0}, Lcom/vk/friends/FriendRequestsFragment$l;-><init>(Lcom/vk/friends/FriendRequestsFragment;)V
 
-    invoke-virtual {v0, v1}, Lme/grishka/appkit/views/a;->a(Lme/grishka/appkit/views/a$a;)Lme/grishka/appkit/views/a;
+    invoke-virtual {v0, v1}, Lme/grishka/appkit/views/DividerItemDecoration;->a(Lme/grishka/appkit/views/DividerItemDecoration$a;)Lme/grishka/appkit/views/DividerItemDecoration;
 
     .line 17
     invoke-virtual {p2, v0}, Landroidx/recyclerview/widget/RecyclerView;->addItemDecoration(Landroidx/recyclerview/widget/RecyclerView$ItemDecoration;)V
@@ -955,14 +955,14 @@
 
     .line 18
     :cond_6
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     throw p3
 
     .line 19
     :cond_7
     :goto_0
-    invoke-static {p0}, Lcom/vk/lists/t;->a(Lcom/vk/lists/t$p;)Lcom/vk/lists/t$k;
+    invoke-static {p0}, Lcom/vk/lists/PaginationHelper;->a(Lcom/vk/lists/PaginationHelper$p;)Lcom/vk/lists/PaginationHelper$k;
 
     move-result-object p2
 
@@ -971,29 +971,29 @@
 
     invoke-direct {v0, p0}, Lcom/vk/friends/FriendRequestsFragment$m;-><init>(Lcom/vk/friends/FriendRequestsFragment;)V
 
-    invoke-virtual {p2, v0}, Lcom/vk/lists/t$k;->a(Lcom/vk/lists/y;)Lcom/vk/lists/t$k;
+    invoke-virtual {p2, v0}, Lcom/vk/lists/PaginationHelper$k;->a(Lcom/vk/lists/PreloadCallback;)Lcom/vk/lists/PaginationHelper$k;
 
     const-string v0, "PaginationHelper\n       \u2026      }\n                }"
 
-    invoke-static {p2, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p2, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 21
     iget-object v0, p0, Lcom/vk/friends/FriendRequestsFragment;->H:Lcom/vk/lists/RecyclerPaginatedView;
 
     if-eqz v0, :cond_8
 
-    invoke-static {p2, v0}, Lcom/vk/lists/u;->b(Lcom/vk/lists/t$k;Lcom/vk/lists/RecyclerPaginatedView;)Lcom/vk/lists/t;
+    invoke-static {p2, v0}, Lcom/vk/lists/PaginationHelperExt;->b(Lcom/vk/lists/PaginationHelper$k;Lcom/vk/lists/RecyclerPaginatedView;)Lcom/vk/lists/PaginationHelper;
 
     return-object p1
 
     :cond_8
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     throw p3
 
     .line 22
     :cond_9
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     throw p3
 .end method
@@ -1002,7 +1002,7 @@
     .locals 2
 
     .line 1
-    invoke-super {p0}, Lcom/vk/core/fragments/b;->onDestroy()V
+    invoke-super {p0}, Lcom/vk/core/fragments/BaseFragment1;->onDestroy()V
 
     .line 2
     invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getActivity()Landroidx/fragment/app/FragmentActivity;

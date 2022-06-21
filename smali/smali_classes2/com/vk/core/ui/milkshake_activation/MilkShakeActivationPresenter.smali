@@ -3,13 +3,13 @@
 .source "MilkShakeActivationPresenter.kt"
 
 # interfaces
-.implements Lcom/vk/core/ui/milkshake_activation/d;
+.implements Lcom/vk/core/ui/milkshake_activation/MilkshakeActivationContract1;
 
 
 # instance fields
-.field private a:Lcom/vk/core/ui/milkshake_activation/e;
+.field private a:Lcom/vk/core/ui/milkshake_activation/MilkshakeActivationContract;
 
-.field private b:Lio/reactivex/disposables/a;
+.field private b:Lio/reactivex/disposables/CompositeDisposable;
 
 .field private final c:Ljava/lang/String;
 
@@ -24,20 +24,20 @@
     iput-object p1, p0, Lcom/vk/core/ui/milkshake_activation/MilkShakeActivationPresenter;->c:Ljava/lang/String;
 
     .line 2
-    new-instance p1, Lio/reactivex/disposables/a;
+    new-instance p1, Lio/reactivex/disposables/CompositeDisposable;
 
-    invoke-direct {p1}, Lio/reactivex/disposables/a;-><init>()V
+    invoke-direct {p1}, Lio/reactivex/disposables/CompositeDisposable;-><init>()V
 
-    iput-object p1, p0, Lcom/vk/core/ui/milkshake_activation/MilkShakeActivationPresenter;->b:Lio/reactivex/disposables/a;
+    iput-object p1, p0, Lcom/vk/core/ui/milkshake_activation/MilkShakeActivationPresenter;->b:Lio/reactivex/disposables/CompositeDisposable;
 
     return-void
 .end method
 
-.method public static final synthetic a(Lcom/vk/core/ui/milkshake_activation/MilkShakeActivationPresenter;)Lio/reactivex/disposables/a;
+.method public static final synthetic a(Lcom/vk/core/ui/milkshake_activation/MilkShakeActivationPresenter;)Lio/reactivex/disposables/CompositeDisposable;
     .locals 0
 
     .line 1
-    iget-object p0, p0, Lcom/vk/core/ui/milkshake_activation/MilkShakeActivationPresenter;->b:Lio/reactivex/disposables/a;
+    iget-object p0, p0, Lcom/vk/core/ui/milkshake_activation/MilkShakeActivationPresenter;->b:Lio/reactivex/disposables/CompositeDisposable;
 
     return-object p0
 .end method
@@ -51,11 +51,11 @@
     return-object p0
 .end method
 
-.method public static final synthetic c(Lcom/vk/core/ui/milkshake_activation/MilkShakeActivationPresenter;)Lcom/vk/core/ui/milkshake_activation/e;
+.method public static final synthetic c(Lcom/vk/core/ui/milkshake_activation/MilkShakeActivationPresenter;)Lcom/vk/core/ui/milkshake_activation/MilkshakeActivationContract;
     .locals 0
 
     .line 1
-    iget-object p0, p0, Lcom/vk/core/ui/milkshake_activation/MilkShakeActivationPresenter;->a:Lcom/vk/core/ui/milkshake_activation/e;
+    iget-object p0, p0, Lcom/vk/core/ui/milkshake_activation/MilkShakeActivationPresenter;->a:Lcom/vk/core/ui/milkshake_activation/MilkshakeActivationContract;
 
     return-object p0
 .end method
@@ -66,7 +66,7 @@
     .locals 4
 
     .line 1
-    iget-object v0, p0, Lcom/vk/core/ui/milkshake_activation/MilkShakeActivationPresenter;->a:Lcom/vk/core/ui/milkshake_activation/e;
+    iget-object v0, p0, Lcom/vk/core/ui/milkshake_activation/MilkShakeActivationPresenter;->a:Lcom/vk/core/ui/milkshake_activation/MilkshakeActivationContract;
 
     if-eqz v0, :cond_0
 
@@ -76,24 +76,24 @@
 
     invoke-direct {v3, p0}, Lcom/vk/core/ui/milkshake_activation/MilkShakeActivationPresenter$runActivation$1;-><init>(Lcom/vk/core/ui/milkshake_activation/MilkShakeActivationPresenter;)V
 
-    invoke-interface {v0, v1, v2, v3}, Lcom/vk/core/ui/milkshake_activation/e;->a(JLkotlin/jvm/b/a;)V
+    invoke-interface {v0, v1, v2, v3}, Lcom/vk/core/ui/milkshake_activation/MilkshakeActivationContract;->a(JLkotlin/jvm/b/Functions;)V
 
     :cond_0
     return-void
 .end method
 
-.method public a(Lcom/vk/core/ui/milkshake_activation/e;)V
+.method public a(Lcom/vk/core/ui/milkshake_activation/MilkshakeActivationContract;)V
     .locals 0
 
     .line 2
-    iput-object p1, p0, Lcom/vk/core/ui/milkshake_activation/MilkShakeActivationPresenter;->a:Lcom/vk/core/ui/milkshake_activation/e;
+    iput-object p1, p0, Lcom/vk/core/ui/milkshake_activation/MilkShakeActivationPresenter;->a:Lcom/vk/core/ui/milkshake_activation/MilkshakeActivationContract;
 
     .line 3
-    new-instance p1, Lio/reactivex/disposables/a;
+    new-instance p1, Lio/reactivex/disposables/CompositeDisposable;
 
-    invoke-direct {p1}, Lio/reactivex/disposables/a;-><init>()V
+    invoke-direct {p1}, Lio/reactivex/disposables/CompositeDisposable;-><init>()V
 
-    iput-object p1, p0, Lcom/vk/core/ui/milkshake_activation/MilkShakeActivationPresenter;->b:Lio/reactivex/disposables/a;
+    iput-object p1, p0, Lcom/vk/core/ui/milkshake_activation/MilkShakeActivationPresenter;->b:Lio/reactivex/disposables/CompositeDisposable;
 
     return-void
 .end method
@@ -102,14 +102,14 @@
     .locals 1
 
     .line 1
-    iget-object v0, p0, Lcom/vk/core/ui/milkshake_activation/MilkShakeActivationPresenter;->b:Lio/reactivex/disposables/a;
+    iget-object v0, p0, Lcom/vk/core/ui/milkshake_activation/MilkShakeActivationPresenter;->b:Lio/reactivex/disposables/CompositeDisposable;
 
-    invoke-virtual {v0}, Lio/reactivex/disposables/a;->o()V
+    invoke-virtual {v0}, Lio/reactivex/disposables/CompositeDisposable;->o()V
 
     const/4 v0, 0x0
 
     .line 2
-    iput-object v0, p0, Lcom/vk/core/ui/milkshake_activation/MilkShakeActivationPresenter;->a:Lcom/vk/core/ui/milkshake_activation/e;
+    iput-object v0, p0, Lcom/vk/core/ui/milkshake_activation/MilkShakeActivationPresenter;->a:Lcom/vk/core/ui/milkshake_activation/MilkshakeActivationContract;
 
     return-void
 .end method

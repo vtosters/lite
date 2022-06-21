@@ -33,7 +33,7 @@
 
     move-object v1, p1
 
-    invoke-direct/range {v0 .. v5}, Lcom/vk/profile/ui/photos/album_list/AlbumImageView;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;IILkotlin/jvm/internal/i;)V
+    invoke-direct/range {v0 .. v5}, Lcom/vk/profile/ui/photos/album_list/AlbumImageView;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;IILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     return-void
 .end method
@@ -53,7 +53,7 @@
 
     move-object v2, p2
 
-    invoke-direct/range {v0 .. v5}, Lcom/vk/profile/ui/photos/album_list/AlbumImageView;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;IILkotlin/jvm/internal/i;)V
+    invoke-direct/range {v0 .. v5}, Lcom/vk/profile/ui/photos/album_list/AlbumImageView;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;IILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     return-void
 .end method
@@ -80,12 +80,12 @@
     .line 4
     iget-object p1, p0, Lcom/vk/profile/ui/photos/album_list/AlbumImageView;->S:Lcom/vk/profile/ui/photos/album_list/AlbumImageView$a;
 
-    invoke-virtual {p0, p1}, Lcom/vk/imageloader/view/a;->setOverlayImage(Landroid/graphics/drawable/Drawable;)V
+    invoke-virtual {p0, p1}, Lcom/vk/imageloader/view/GenericVKImageView;->setOverlayImage(Landroid/graphics/drawable/Drawable;)V
 
     return-void
 .end method
 
-.method public synthetic constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;IILkotlin/jvm/internal/i;)V
+.method public synthetic constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;IILkotlin/jvm/internal/DefaultConstructorMarker;)V
     .locals 0
 
     and-int/lit8 p5, p4, 0x2
@@ -110,11 +110,11 @@
 
 
 # virtual methods
-.method protected a(Lcom/facebook/drawee/generic/b;)V
+.method protected a(Lcom/facebook/drawee/generic/GenericDraweeHierarchyBuilder;)V
     .locals 2
 
     .line 1
-    invoke-super {p0, p1}, Lcom/vk/imageloader/view/VKImageView;->a(Lcom/facebook/drawee/generic/b;)V
+    invoke-super {p0, p1}, Lcom/vk/imageloader/view/VKImageView;->a(Lcom/facebook/drawee/generic/GenericDraweeHierarchyBuilder;)V
 
     .line 2
     new-instance v0, Lcom/facebook/drawee/generic/RoundingParams;
@@ -129,12 +129,12 @@
 
     invoke-virtual {v0, v1}, Lcom/facebook/drawee/generic/RoundingParams;->b(F)Lcom/facebook/drawee/generic/RoundingParams;
 
-    invoke-virtual {p1, v0}, Lcom/facebook/drawee/generic/b;->a(Lcom/facebook/drawee/generic/RoundingParams;)Lcom/facebook/drawee/generic/b;
+    invoke-virtual {p1, v0}, Lcom/facebook/drawee/generic/GenericDraweeHierarchyBuilder;->a(Lcom/facebook/drawee/generic/RoundingParams;)Lcom/facebook/drawee/generic/GenericDraweeHierarchyBuilder;
 
     .line 3
-    sget-object v0, Lcom/facebook/drawee/drawable/r$b;->o:Lcom/facebook/drawee/drawable/r$b;
+    sget-object v0, Lcom/facebook/drawee/drawable/ScalingUtils$b;->o:Lcom/facebook/drawee/drawable/ScalingUtils$b;
 
-    invoke-virtual {p1, v0}, Lcom/facebook/drawee/generic/b;->a(Lcom/facebook/drawee/drawable/r$b;)Lcom/facebook/drawee/generic/b;
+    invoke-virtual {p1, v0}, Lcom/facebook/drawee/generic/GenericDraweeHierarchyBuilder;->a(Lcom/facebook/drawee/drawable/ScalingUtils$b;)Lcom/facebook/drawee/generic/GenericDraweeHierarchyBuilder;
 
     return-void
 .end method
@@ -178,13 +178,13 @@
     move-result p2
 
     .line 4
-    invoke-super {p0, p1, p2}, Lcom/vk/imageloader/view/a;->onMeasure(II)V
+    invoke-super {p0, p1, p2}, Lcom/vk/imageloader/view/GenericVKImageView;->onMeasure(II)V
 
     goto :goto_0
 
     .line 5
     :cond_0
-    invoke-super {p0, p1, p2}, Lcom/vk/imageloader/view/a;->onMeasure(II)V
+    invoke-super {p0, p1, p2}, Lcom/vk/imageloader/view/GenericVKImageView;->onMeasure(II)V
 
     .line 6
     :goto_0

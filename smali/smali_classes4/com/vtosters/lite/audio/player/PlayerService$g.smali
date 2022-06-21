@@ -1,5 +1,5 @@
 .class Lcom/vtosters/lite/audio/player/PlayerService$g;
-.super Lcom/vk/music/player/c$a;
+.super Lcom/vk/music/player/PlayerListener$a;
 .source "PlayerService.java"
 
 
@@ -25,7 +25,7 @@
     .line 1
     iput-object p1, p0, Lcom/vtosters/lite/audio/player/PlayerService$g;->a:Lcom/vtosters/lite/audio/player/PlayerService;
 
-    invoke-direct {p0}, Lcom/vk/music/player/c$a;-><init>()V
+    invoke-direct {p0}, Lcom/vk/music/player/PlayerListener$a;-><init>()V
 
     return-void
 .end method
@@ -47,11 +47,11 @@
     .line 1
     iget-object v0, p0, Lcom/vtosters/lite/audio/player/PlayerService$g;->a:Lcom/vtosters/lite/audio/player/PlayerService;
 
-    invoke-static {v0}, Lcom/vtosters/lite/audio/player/PlayerService;->i(Lcom/vtosters/lite/audio/player/PlayerService;)Lcom/vk/music/player/d;
+    invoke-static {v0}, Lcom/vtosters/lite/audio/player/PlayerService;->i(Lcom/vtosters/lite/audio/player/PlayerService;)Lcom/vk/music/player/PlayerModel;
 
     move-result-object v0
 
-    invoke-interface {v0}, Lcom/vk/music/player/d;->S()Lcom/vk/dto/music/MusicTrack;
+    invoke-interface {v0}, Lcom/vk/music/player/PlayerModel;->S()Lcom/vk/dto/music/MusicTrack;
 
     move-result-object v0
 
@@ -61,9 +61,9 @@
     invoke-static {v1, v0}, Lcom/vtosters/lite/audio/player/PlayerService;->a(Lcom/vtosters/lite/audio/player/PlayerService;Lcom/vk/dto/music/MusicTrack;)V
 
     .line 3
-    sget-object v0, Lcom/vtosters/lite/audio/d;->J:Lcom/vtosters/lite/audio/d;
+    sget-object v0, Lcom/vtosters/lite/audio/AudioStateListener;->J:Lcom/vtosters/lite/audio/AudioStateListener;
 
-    invoke-virtual {v0}, Lcom/vtosters/lite/audio/d;->D()V
+    invoke-virtual {v0}, Lcom/vtosters/lite/audio/AudioStateListener;->D()V
 
     .line 4
     iget-object v0, p0, Lcom/vtosters/lite/audio/player/PlayerService$g;->a:Lcom/vtosters/lite/audio/player/PlayerService;
@@ -83,14 +83,14 @@
     .locals 1
 
     .line 14
-    sget-object v0, Lcom/vtosters/lite/audio/d;->J:Lcom/vtosters/lite/audio/d;
+    sget-object v0, Lcom/vtosters/lite/audio/AudioStateListener;->J:Lcom/vtosters/lite/audio/AudioStateListener;
 
-    invoke-virtual {v0, p1, p2, p3}, Lcom/vtosters/lite/audio/d;->a(IJ)V
+    invoke-virtual {v0, p1, p2, p3}, Lcom/vtosters/lite/audio/AudioStateListener;->a(IJ)V
 
     return-void
 .end method
 
-.method public a(Lcom/vk/music/player/PlayState;Lcom/vk/music/player/e;)V
+.method public a(Lcom/vk/music/player/PlayState;Lcom/vk/music/player/TrackInfo;)V
     .locals 5
 
     const/4 v0, 0x5
@@ -157,7 +157,7 @@
 
     .line 6
     :cond_1
-    invoke-virtual {p2}, Lcom/vk/music/player/e;->e()Lcom/vk/dto/music/MusicTrack;
+    invoke-virtual {p2}, Lcom/vk/music/player/TrackInfo;->e()Lcom/vk/dto/music/MusicTrack;
 
     move-result-object v0
 
@@ -170,11 +170,11 @@
     .line 8
     iget-object v1, p0, Lcom/vtosters/lite/audio/player/PlayerService$g;->a:Lcom/vtosters/lite/audio/player/PlayerService;
 
-    invoke-static {v1}, Lcom/vtosters/lite/audio/player/PlayerService;->g(Lcom/vtosters/lite/audio/player/PlayerService;)Lcom/vk/music/broadcast/a;
+    invoke-static {v1}, Lcom/vtosters/lite/audio/player/PlayerService;->g(Lcom/vtosters/lite/audio/player/PlayerService;)Lcom/vk/music/broadcast/MusicBroadcastManager;
 
     move-result-object v1
 
-    invoke-virtual {v1, v0}, Lcom/vk/music/broadcast/a;->a(Lcom/vk/dto/music/MusicTrack;)V
+    invoke-virtual {v1, v0}, Lcom/vk/music/broadcast/MusicBroadcastManager;->a(Lcom/vk/dto/music/MusicTrack;)V
 
     .line 9
     :goto_1
@@ -203,9 +203,9 @@
 
     .line 11
     :cond_2
-    sget-object v0, Lcom/vtosters/lite/audio/d;->J:Lcom/vtosters/lite/audio/d;
+    sget-object v0, Lcom/vtosters/lite/audio/AudioStateListener;->J:Lcom/vtosters/lite/audio/AudioStateListener;
 
-    invoke-virtual {v0, p1, p2}, Lcom/vtosters/lite/audio/d;->a(Lcom/vk/music/player/PlayState;Lcom/vk/music/player/e;)V
+    invoke-virtual {v0, p1, p2}, Lcom/vtosters/lite/audio/AudioStateListener;->a(Lcom/vk/music/player/PlayState;Lcom/vk/music/player/TrackInfo;)V
 
     .line 12
     iget-object p1, p0, Lcom/vtosters/lite/audio/player/PlayerService$g;->a:Lcom/vtosters/lite/audio/player/PlayerService;
@@ -221,24 +221,24 @@
     return-void
 .end method
 
-.method public a(Lcom/vk/music/player/e;)V
+.method public a(Lcom/vk/music/player/TrackInfo;)V
     .locals 1
 
     .line 13
-    sget-object v0, Lcom/vtosters/lite/audio/d;->J:Lcom/vtosters/lite/audio/d;
+    sget-object v0, Lcom/vtosters/lite/audio/AudioStateListener;->J:Lcom/vtosters/lite/audio/AudioStateListener;
 
-    invoke-virtual {v0, p1}, Lcom/vtosters/lite/audio/d;->a(Lcom/vk/music/player/e;)V
+    invoke-virtual {v0, p1}, Lcom/vtosters/lite/audio/AudioStateListener;->a(Lcom/vk/music/player/TrackInfo;)V
 
     return-void
 .end method
 
-.method public b(Lcom/vk/music/player/e;)V
+.method public b(Lcom/vk/music/player/TrackInfo;)V
     .locals 1
 
     .line 1
-    sget-object v0, Lcom/vtosters/lite/audio/d;->J:Lcom/vtosters/lite/audio/d;
+    sget-object v0, Lcom/vtosters/lite/audio/AudioStateListener;->J:Lcom/vtosters/lite/audio/AudioStateListener;
 
-    invoke-virtual {v0, p1}, Lcom/vtosters/lite/audio/d;->b(Lcom/vk/music/player/e;)V
+    invoke-virtual {v0, p1}, Lcom/vtosters/lite/audio/AudioStateListener;->b(Lcom/vk/music/player/TrackInfo;)V
 
     return-void
 .end method
@@ -255,9 +255,9 @@
     .end annotation
 
     .line 1
-    sget-object v0, Lcom/vtosters/lite/audio/d;->J:Lcom/vtosters/lite/audio/d;
+    sget-object v0, Lcom/vtosters/lite/audio/AudioStateListener;->J:Lcom/vtosters/lite/audio/AudioStateListener;
 
-    invoke-virtual {v0, p1}, Lcom/vtosters/lite/audio/d;->c(Ljava/util/List;)V
+    invoke-virtual {v0, p1}, Lcom/vtosters/lite/audio/AudioStateListener;->c(Ljava/util/List;)V
 
     return-void
 .end method

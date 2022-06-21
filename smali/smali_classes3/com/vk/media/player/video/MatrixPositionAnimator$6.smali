@@ -3,12 +3,12 @@
 .source "MatrixPositionAnimator.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/b;
+.implements Lkotlin/jvm/b/Functions2;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/media/player/video/MatrixPositionAnimator;-><init>(Landroid/graphics/Rect;Landroid/graphics/Rect;Lcom/vk/media/player/video/VideoResizer$VideoFitType;ILandroid/graphics/Rect;Lcom/vk/media/player/video/VideoResizer$VideoFitType;IZLcom/vk/media/player/video/f;)V
+    value = Lcom/vk/media/player/video/MatrixPositionAnimator;-><init>(Landroid/graphics/Rect;Landroid/graphics/Rect;Lcom/vk/media/player/video/VideoResizer$VideoFitType;ILandroid/graphics/Rect;Lcom/vk/media/player/video/VideoResizer$VideoFitType;IZLcom/vk/media/player/video/MatrixProvider;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -19,9 +19,9 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/b<",
+        "Lkotlin/jvm/b/Functions2<",
         "Ljava/lang/Float;",
-        "Lkotlin/m;",
+        "Lkotlin/Unit;",
         ">;"
     }
 .end annotation
@@ -30,7 +30,7 @@
 # instance fields
 .field final synthetic $fromVisibleRect:Landroid/graphics/Rect;
 
-.field final synthetic $matrixView:Lcom/vk/media/player/video/f;
+.field final synthetic $matrixView:Lcom/vk/media/player/video/MatrixProvider;
 
 .field final synthetic $realScaleFitX:F
 
@@ -68,7 +68,7 @@
 
 
 # direct methods
-.method constructor <init>(Lcom/vk/media/player/video/MatrixPositionAnimator;FFFFFFFFFFLandroid/graphics/Rect;IIIILcom/vk/media/player/video/f;II)V
+.method constructor <init>(Lcom/vk/media/player/video/MatrixPositionAnimator;FFFFFFFFFFLandroid/graphics/Rect;IIIILcom/vk/media/player/video/MatrixProvider;II)V
     .locals 2
 
     move-object v0, p0
@@ -139,7 +139,7 @@
 
     move-object/from16 v1, p17
 
-    iput-object v1, v0, Lcom/vk/media/player/video/MatrixPositionAnimator$6;->$matrixView:Lcom/vk/media/player/video/f;
+    iput-object v1, v0, Lcom/vk/media/player/video/MatrixPositionAnimator$6;->$matrixView:Lcom/vk/media/player/video/MatrixProvider;
 
     move/from16 v1, p18
 
@@ -390,7 +390,7 @@
     .line 14
     :cond_6
     :goto_5
-    iget-object p1, p0, Lcom/vk/media/player/video/MatrixPositionAnimator$6;->$matrixView:Lcom/vk/media/player/video/f;
+    iget-object p1, p0, Lcom/vk/media/player/video/MatrixPositionAnimator$6;->$matrixView:Lcom/vk/media/player/video/MatrixProvider;
 
     check-cast p1, Landroid/view/View;
 
@@ -458,7 +458,7 @@
 
     invoke-virtual {p0, p1}, Lcom/vk/media/player/video/MatrixPositionAnimator$6;->a(F)V
 
-    sget-object p1, Lkotlin/m;->a:Lkotlin/m;
+    sget-object p1, Lkotlin/Unit;->a:Lkotlin/Unit;
 
     return-object p1
 .end method

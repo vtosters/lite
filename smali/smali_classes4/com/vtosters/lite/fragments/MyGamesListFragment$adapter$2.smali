@@ -3,7 +3,7 @@
 .source "MyGamesListFragment.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/a;
+.implements Lkotlin/jvm/b/Functions;
 
 
 # annotations
@@ -19,7 +19,7 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/a<",
+        "Lkotlin/jvm/b/Functions<",
         "Lcom/vtosters/lite/fragments/MyGamesListFragment$c;",
         ">;"
     }
@@ -53,13 +53,13 @@
 
     iget-object v1, p0, Lcom/vtosters/lite/fragments/MyGamesListFragment$adapter$2;->this$0:Lcom/vtosters/lite/fragments/MyGamesListFragment;
 
-    invoke-virtual {v1}, Lcom/vtosters/lite/fragments/i1;->c5()Ljava/lang/String;
+    invoke-virtual {v1}, Lcom/vtosters/lite/general/fragments/GamesListFragment;->c5()Ljava/lang/String;
 
     move-result-object v2
 
     const-string v3, "visitSource"
 
-    invoke-static {v2, v3}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v2, v3}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-direct {v0, v1, v2}, Lcom/vtosters/lite/fragments/MyGamesListFragment$c;-><init>(Lcom/vtosters/lite/fragments/MyGamesListFragment;Ljava/lang/String;)V
 

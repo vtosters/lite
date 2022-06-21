@@ -1,12 +1,12 @@
 .class public final Lcom/vk/api/articles/ArticlesGetByLink;
-.super Lcom/vk/api/base/d;
+.super Lcom/vk/api/base/ApiRequest;
 .source "ArticlesGetByLink.kt"
 
 
 # annotations
 .annotation system Ldalvik/annotation/Signature;
     value = {
-        "Lcom/vk/api/base/d<",
+        "Lcom/vk/api/base/ApiRequest<",
         "Lcom/vk/dto/common/data/VKList<",
         "Lcom/vk/dto/articles/Article;",
         ">;>;"
@@ -21,26 +21,26 @@
     const-string v0, "articles.getByLink"
 
     .line 1
-    invoke-direct {p0, v0}, Lcom/vk/api/base/d;-><init>(Ljava/lang/String;)V
+    invoke-direct {p0, v0}, Lcom/vk/api/base/ApiRequest;-><init>(Ljava/lang/String;)V
 
     const-string v0, "links"
 
     .line 2
-    invoke-virtual {p0, v0, p1}, Lcom/vk/api/base/d;->c(Ljava/lang/String;Ljava/lang/String;)Lcom/vk/api/base/d;
+    invoke-virtual {p0, v0, p1}, Lcom/vk/api/base/ApiRequest;->c(Ljava/lang/String;Ljava/lang/String;)Lcom/vk/api/base/ApiRequest;
 
     const-string p1, "fields"
 
     const-string v0, "photo_50,photo_100,photo_200,photo_400,is_favorite"
 
     .line 3
-    invoke-virtual {p0, p1, v0}, Lcom/vk/api/base/d;->c(Ljava/lang/String;Ljava/lang/String;)Lcom/vk/api/base/d;
+    invoke-virtual {p0, p1, v0}, Lcom/vk/api/base/ApiRequest;->c(Ljava/lang/String;Ljava/lang/String;)Lcom/vk/api/base/ApiRequest;
 
     const-string p1, "extended"
 
     const/4 v0, 0x1
 
     .line 4
-    invoke-virtual {p0, p1, v0}, Lcom/vk/api/base/d;->b(Ljava/lang/String;I)Lcom/vk/api/base/d;
+    invoke-virtual {p0, p1, v0}, Lcom/vk/api/base/ApiRequest;->b(Ljava/lang/String;I)Lcom/vk/api/base/ApiRequest;
 
     return-void
 .end method
@@ -173,7 +173,7 @@
 
     invoke-direct {v2, v0}, Lcom/vk/api/articles/ArticlesGetByLink$parse$5;-><init>(Landroid/util/SparseArray;)V
 
-    invoke-direct {v1, p1, v2}, Lcom/vk/dto/common/data/VKList;-><init>(Lorg/json/JSONObject;Lkotlin/jvm/b/b;)V
+    invoke-direct {v1, p1, v2}, Lcom/vk/dto/common/data/VKList;-><init>(Lorg/json/JSONObject;Lkotlin/jvm/b/Functions2;)V
 
     return-object v1
 .end method

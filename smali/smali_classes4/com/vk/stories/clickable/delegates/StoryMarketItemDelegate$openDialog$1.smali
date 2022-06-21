@@ -3,12 +3,12 @@
 .source "StoryMarketItemDelegate.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/b;
+.implements Lkotlin/jvm/b/Functions2;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/stories/clickable/delegates/StoryMarketItemDelegate;->a(Lcom/vk/stories/clickable/stickers/b;)V
+    value = Lcom/vk/stories/clickable/delegates/StoryMarketItemDelegate;->a(Lcom/vk/stories/clickable/stickers/StoryMarketItemSticker;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -19,27 +19,27 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/b<",
+        "Lkotlin/jvm/b/Functions2<",
         "Ljava/lang/Object;",
-        "Lkotlin/m;",
+        "Lkotlin/Unit;",
         ">;"
     }
 .end annotation
 
 
 # instance fields
-.field final synthetic $sticker:Lcom/vk/stories/clickable/stickers/b;
+.field final synthetic $sticker:Lcom/vk/stories/clickable/stickers/StoryMarketItemSticker;
 
 .field final synthetic this$0:Lcom/vk/stories/clickable/delegates/StoryMarketItemDelegate;
 
 
 # direct methods
-.method constructor <init>(Lcom/vk/stories/clickable/delegates/StoryMarketItemDelegate;Lcom/vk/stories/clickable/stickers/b;)V
+.method constructor <init>(Lcom/vk/stories/clickable/delegates/StoryMarketItemDelegate;Lcom/vk/stories/clickable/stickers/StoryMarketItemSticker;)V
     .locals 0
 
     iput-object p1, p0, Lcom/vk/stories/clickable/delegates/StoryMarketItemDelegate$openDialog$1;->this$0:Lcom/vk/stories/clickable/delegates/StoryMarketItemDelegate;
 
-    iput-object p2, p0, Lcom/vk/stories/clickable/delegates/StoryMarketItemDelegate$openDialog$1;->$sticker:Lcom/vk/stories/clickable/stickers/b;
+    iput-object p2, p0, Lcom/vk/stories/clickable/delegates/StoryMarketItemDelegate$openDialog$1;->$sticker:Lcom/vk/stories/clickable/stickers/StoryMarketItemSticker;
 
     const/4 p1, 0x1
 
@@ -56,7 +56,7 @@
     .line 1
     invoke-virtual {p0, p1}, Lcom/vk/stories/clickable/delegates/StoryMarketItemDelegate$openDialog$1;->invoke(Ljava/lang/Object;)V
 
-    sget-object p1, Lkotlin/m;->a:Lkotlin/m;
+    sget-object p1, Lkotlin/Unit;->a:Lkotlin/Unit;
 
     return-object p1
 .end method
@@ -67,7 +67,7 @@
     if-nez p1, :cond_0
 
     .line 2
-    iget-object v0, p0, Lcom/vk/stories/clickable/delegates/StoryMarketItemDelegate$openDialog$1;->$sticker:Lcom/vk/stories/clickable/stickers/b;
+    iget-object v0, p0, Lcom/vk/stories/clickable/delegates/StoryMarketItemDelegate$openDialog$1;->$sticker:Lcom/vk/stories/clickable/stickers/StoryMarketItemSticker;
 
     if-nez v0, :cond_0
 
@@ -88,9 +88,9 @@
     .line 4
     iget-object v0, p0, Lcom/vk/stories/clickable/delegates/StoryMarketItemDelegate$openDialog$1;->this$0:Lcom/vk/stories/clickable/delegates/StoryMarketItemDelegate;
 
-    iget-object v1, p0, Lcom/vk/stories/clickable/delegates/StoryMarketItemDelegate$openDialog$1;->$sticker:Lcom/vk/stories/clickable/stickers/b;
+    iget-object v1, p0, Lcom/vk/stories/clickable/delegates/StoryMarketItemDelegate$openDialog$1;->$sticker:Lcom/vk/stories/clickable/stickers/StoryMarketItemSticker;
 
-    invoke-static {v0, v1, p1}, Lcom/vk/stories/clickable/delegates/StoryMarketItemDelegate;->a(Lcom/vk/stories/clickable/delegates/StoryMarketItemDelegate;Lcom/vk/stories/clickable/stickers/b;Ljava/lang/Object;)V
+    invoke-static {v0, v1, p1}, Lcom/vk/stories/clickable/delegates/StoryMarketItemDelegate;->a(Lcom/vk/stories/clickable/delegates/StoryMarketItemDelegate;Lcom/vk/stories/clickable/stickers/StoryMarketItemSticker;Ljava/lang/Object;)V
 
     :cond_1
     return-void

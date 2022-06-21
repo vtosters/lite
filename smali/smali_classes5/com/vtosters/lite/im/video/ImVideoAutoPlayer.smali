@@ -3,7 +3,7 @@
 .source "ImVideoAutoPlayer.kt"
 
 # interfaces
-.implements Lcom/vk/im/ui/q/h/b;
+.implements Lcom/vk/im/ui/q/h/VideoAutoPlayer;
 
 
 # annotations
@@ -15,21 +15,21 @@
 
 
 # instance fields
-.field private final a:Lcom/vtosters/lite/im/video/b;
+.field private final a:Lcom/vtosters/lite/im/video/ImAutoplayFactory;
 
-.field private b:Lcom/vk/libvideo/autoplay/b;
+.field private b:Lcom/vk/libvideo/autoplay/AutoPlayProvider;
 
-.field private c:Lcom/vk/libvideo/autoplay/g;
+.field private c:Lcom/vk/libvideo/autoplay/VideoRecyclerViewHelper;
 
 .field private d:Landroid/app/Activity;
 
 .field private final e:Z
 
-.field private final f:Lcom/vk/im/engine/models/e;
+.field private final f:Lcom/vk/im/engine/models/ImExperiments;
 
 
 # direct methods
-.method public constructor <init>(ZLcom/vk/im/engine/models/e;)V
+.method public constructor <init>(ZLcom/vk/im/engine/models/ImExperiments;)V
     .locals 0
 
     .line 1
@@ -37,25 +37,25 @@
 
     iput-boolean p1, p0, Lcom/vtosters/lite/im/video/ImVideoAutoPlayer;->e:Z
 
-    iput-object p2, p0, Lcom/vtosters/lite/im/video/ImVideoAutoPlayer;->f:Lcom/vk/im/engine/models/e;
+    iput-object p2, p0, Lcom/vtosters/lite/im/video/ImVideoAutoPlayer;->f:Lcom/vk/im/engine/models/ImExperiments;
 
     .line 2
-    new-instance p1, Lcom/vtosters/lite/im/video/b;
+    new-instance p1, Lcom/vtosters/lite/im/video/ImAutoplayFactory;
 
-    iget-object p2, p0, Lcom/vtosters/lite/im/video/ImVideoAutoPlayer;->f:Lcom/vk/im/engine/models/e;
+    iget-object p2, p0, Lcom/vtosters/lite/im/video/ImVideoAutoPlayer;->f:Lcom/vk/im/engine/models/ImExperiments;
 
-    invoke-direct {p1, p2}, Lcom/vtosters/lite/im/video/b;-><init>(Lcom/vk/im/engine/models/e;)V
+    invoke-direct {p1, p2}, Lcom/vtosters/lite/im/video/ImAutoplayFactory;-><init>(Lcom/vk/im/engine/models/ImExperiments;)V
 
-    iput-object p1, p0, Lcom/vtosters/lite/im/video/ImVideoAutoPlayer;->a:Lcom/vtosters/lite/im/video/b;
+    iput-object p1, p0, Lcom/vtosters/lite/im/video/ImVideoAutoPlayer;->a:Lcom/vtosters/lite/im/video/ImAutoplayFactory;
 
     return-void
 .end method
 
-.method public static final synthetic a(Lcom/vtosters/lite/im/video/ImVideoAutoPlayer;)Lcom/vk/libvideo/autoplay/g;
+.method public static final synthetic a(Lcom/vtosters/lite/im/video/ImVideoAutoPlayer;)Lcom/vk/libvideo/autoplay/VideoRecyclerViewHelper;
     .locals 0
 
     .line 1
-    iget-object p0, p0, Lcom/vtosters/lite/im/video/ImVideoAutoPlayer;->c:Lcom/vk/libvideo/autoplay/g;
+    iget-object p0, p0, Lcom/vtosters/lite/im/video/ImVideoAutoPlayer;->c:Lcom/vk/libvideo/autoplay/VideoRecyclerViewHelper;
 
     if-eqz p0, :cond_0
 
@@ -64,7 +64,7 @@
     :cond_0
     const-string p0, "delegate"
 
-    invoke-static {p0}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {p0}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     const/4 p0, 0x0
 
@@ -73,15 +73,15 @@
 
 
 # virtual methods
-.method public a(Lcom/vk/media/player/video/view/VideoTextureView;Landroid/view/View;Landroid/view/View;Landroid/view/View;Landroid/view/View;Landroid/view/ViewGroup;F)Lcom/vk/im/ui/q/h/b$c;
+.method public a(Lcom/vk/media/player/video/view/VideoTextureView;Landroid/view/View;Landroid/view/View;Landroid/view/View;Landroid/view/View;Landroid/view/ViewGroup;F)Lcom/vk/im/ui/q/h/VideoAutoPlayer$c;
     .locals 13
 
     move-object v0, p0
 
     .line 16
-    iget-object v1, v0, Lcom/vtosters/lite/im/video/ImVideoAutoPlayer;->f:Lcom/vk/im/engine/models/e;
+    iget-object v1, v0, Lcom/vtosters/lite/im/video/ImVideoAutoPlayer;->f:Lcom/vk/im/engine/models/ImExperiments;
 
-    invoke-interface {v1}, Lcom/vk/im/engine/models/e;->h()Z
+    invoke-interface {v1}, Lcom/vk/im/engine/models/ImExperiments;->h()Z
 
     move-result v1
 
@@ -92,7 +92,7 @@
     .line 17
     new-instance v1, Lcom/vtosters/lite/im/video/ImGifController;
 
-    iget-object v4, v0, Lcom/vtosters/lite/im/video/ImVideoAutoPlayer;->a:Lcom/vtosters/lite/im/video/b;
+    iget-object v4, v0, Lcom/vtosters/lite/im/video/ImVideoAutoPlayer;->a:Lcom/vtosters/lite/im/video/ImAutoplayFactory;
 
     iget-object v5, v0, Lcom/vtosters/lite/im/video/ImVideoAutoPlayer;->d:Landroid/app/Activity;
 
@@ -132,14 +132,14 @@
     move/from16 v12, p7
 
     .line 19
-    invoke-direct/range {v3 .. v12}, Lcom/vtosters/lite/im/video/ImGifController;-><init>(Lcom/vtosters/lite/im/video/b;Landroid/app/Activity;Landroid/view/ViewGroup;Lcom/vk/media/player/video/view/VideoTextureView;Landroid/view/View;Lcom/vk/libvideo/ui/VideoErrorView;Lcom/vk/libvideo/ui/DurationView;Landroid/view/View;F)V
+    invoke-direct/range {v3 .. v12}, Lcom/vtosters/lite/im/video/ImGifController;-><init>(Lcom/vtosters/lite/im/video/ImAutoplayFactory;Landroid/app/Activity;Landroid/view/ViewGroup;Lcom/vk/media/player/video/view/VideoTextureView;Landroid/view/View;Lcom/vk/libvideo/ui/VideoErrorView;Lcom/vk/libvideo/ui/DurationView;Landroid/view/View;F)V
 
     goto :goto_1
 
     :cond_1
     const-string v1, "activity"
 
-    invoke-static {v1}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v1}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v2
 
@@ -150,7 +150,7 @@
     return-object v1
 .end method
 
-.method public a(Lcom/vk/media/player/video/view/VideoTextureView;Landroid/view/View;Landroid/view/ViewGroup;Landroid/view/View;Landroid/view/View;Landroid/view/View;Landroid/view/View;Landroid/view/View;Landroid/view/View;Lcom/vk/libvideo/ui/ActionLinkView;Landroid/view/ViewGroup;Lcom/vk/libvideo/ui/VideoRestrictionView;F)Lcom/vk/im/ui/q/h/b$c;
+.method public a(Lcom/vk/media/player/video/view/VideoTextureView;Landroid/view/View;Landroid/view/ViewGroup;Landroid/view/View;Landroid/view/View;Landroid/view/View;Landroid/view/View;Landroid/view/View;Landroid/view/View;Lcom/vk/libvideo/ui/ActionLinkView;Landroid/view/ViewGroup;Lcom/vk/libvideo/ui/VideoRestrictionView;F)Lcom/vk/im/ui/q/h/VideoAutoPlayer$c;
     .locals 18
 
     move-object/from16 v0, p0
@@ -158,7 +158,7 @@
     .line 15
     new-instance v17, Lcom/vtosters/lite/im/video/ImVideoController;
 
-    iget-object v2, v0, Lcom/vtosters/lite/im/video/ImVideoAutoPlayer;->a:Lcom/vtosters/lite/im/video/b;
+    iget-object v2, v0, Lcom/vtosters/lite/im/video/ImVideoAutoPlayer;->a:Lcom/vtosters/lite/im/video/ImAutoplayFactory;
 
     iget-object v3, v0, Lcom/vtosters/lite/im/video/ImVideoAutoPlayer;->d:Landroid/app/Activity;
 
@@ -192,14 +192,14 @@
 
     move-object/from16 v16, p12
 
-    invoke-direct/range {v1 .. v16}, Lcom/vtosters/lite/im/video/ImVideoController;-><init>(Lcom/vtosters/lite/im/video/b;Landroid/app/Activity;Landroid/view/ViewGroup;Lcom/vk/media/player/video/view/VideoTextureView;Landroid/view/View;Landroid/view/ViewGroup;Landroid/view/View;Landroid/view/View;Landroid/view/View;Landroid/view/View;Landroid/view/View;Lcom/vk/libvideo/ui/ActionLinkView;Landroid/view/View;FLcom/vk/libvideo/ui/VideoRestrictionView;)V
+    invoke-direct/range {v1 .. v16}, Lcom/vtosters/lite/im/video/ImVideoController;-><init>(Lcom/vtosters/lite/im/video/ImAutoplayFactory;Landroid/app/Activity;Landroid/view/ViewGroup;Lcom/vk/media/player/video/view/VideoTextureView;Landroid/view/View;Landroid/view/ViewGroup;Landroid/view/View;Landroid/view/View;Landroid/view/View;Landroid/view/View;Landroid/view/View;Lcom/vk/libvideo/ui/ActionLinkView;Landroid/view/View;FLcom/vk/libvideo/ui/VideoRestrictionView;)V
 
     return-object v17
 
     :cond_0
     const-string v1, "activity"
 
-    invoke-static {v1}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v1}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     const/4 v1, 0x0
 
@@ -210,18 +210,18 @@
     .locals 1
 
     .line 13
-    iget-object v0, p0, Lcom/vtosters/lite/im/video/ImVideoAutoPlayer;->c:Lcom/vk/libvideo/autoplay/g;
+    iget-object v0, p0, Lcom/vtosters/lite/im/video/ImVideoAutoPlayer;->c:Lcom/vk/libvideo/autoplay/VideoRecyclerViewHelper;
 
     if-eqz v0, :cond_0
 
-    invoke-virtual {v0}, Lcom/vk/libvideo/autoplay/g;->j()V
+    invoke-virtual {v0}, Lcom/vk/libvideo/autoplay/VideoRecyclerViewHelper;->j()V
 
     return-void
 
     :cond_0
     const-string v0, "delegate"
 
-    invoke-static {v0}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v0}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     const/4 v0, 0x0
 
@@ -232,11 +232,11 @@
     .locals 13
 
     .line 2
-    sget-object v0, Lcom/vk/libvideo/autoplay/c;->c:Lcom/vk/libvideo/autoplay/c;
+    sget-object v0, Lcom/vk/libvideo/autoplay/PlaySettings;->c:Lcom/vk/libvideo/autoplay/PlaySettings;
 
     const/4 v1, 0x1
 
-    invoke-virtual {v0, v1}, Lcom/vk/libvideo/autoplay/c;->a(Z)V
+    invoke-virtual {v0, v1}, Lcom/vk/libvideo/autoplay/PlaySettings;->a(Z)V
 
     .line 3
     invoke-static {p1}, Lcom/vk/core/util/ContextExtKt;->f(Landroid/content/Context;)Landroid/app/Activity;
@@ -246,16 +246,16 @@
     iput-object p1, p0, Lcom/vtosters/lite/im/video/ImVideoAutoPlayer;->d:Landroid/app/Activity;
 
     .line 4
-    new-instance p1, Lcom/vtosters/lite/im/video/a;
+    new-instance p1, Lcom/vtosters/lite/im/video/ImAutoPlayProvider;
 
-    iget-object v0, p0, Lcom/vtosters/lite/im/video/ImVideoAutoPlayer;->a:Lcom/vtosters/lite/im/video/b;
+    iget-object v0, p0, Lcom/vtosters/lite/im/video/ImVideoAutoPlayer;->a:Lcom/vtosters/lite/im/video/ImAutoplayFactory;
 
-    invoke-direct {p1, p2, v0}, Lcom/vtosters/lite/im/video/a;-><init>(Landroidx/recyclerview/widget/RecyclerView;Lcom/vtosters/lite/im/video/b;)V
+    invoke-direct {p1, p2, v0}, Lcom/vtosters/lite/im/video/ImAutoPlayProvider;-><init>(Landroidx/recyclerview/widget/RecyclerView;Lcom/vtosters/lite/im/video/ImAutoplayFactory;)V
 
-    iput-object p1, p0, Lcom/vtosters/lite/im/video/ImVideoAutoPlayer;->b:Lcom/vk/libvideo/autoplay/b;
+    iput-object p1, p0, Lcom/vtosters/lite/im/video/ImVideoAutoPlayer;->b:Lcom/vk/libvideo/autoplay/AutoPlayProvider;
 
     .line 5
-    new-instance p1, Lcom/vk/libvideo/autoplay/g;
+    new-instance p1, Lcom/vk/libvideo/autoplay/VideoRecyclerViewHelper;
 
     iget-object v2, p0, Lcom/vtosters/lite/im/video/ImVideoAutoPlayer;->d:Landroid/app/Activity;
 
@@ -263,11 +263,11 @@
 
     if-eqz v2, :cond_2
 
-    iget-object v3, p0, Lcom/vtosters/lite/im/video/ImVideoAutoPlayer;->b:Lcom/vk/libvideo/autoplay/b;
+    iget-object v3, p0, Lcom/vtosters/lite/im/video/ImVideoAutoPlayer;->b:Lcom/vk/libvideo/autoplay/AutoPlayProvider;
 
     if-eqz v3, :cond_1
 
-    sget-object v4, Lcom/vtosters/lite/im/video/d;->b:Lcom/vtosters/lite/im/video/d;
+    sget-object v4, Lcom/vtosters/lite/im/video/ImScreenPlayStrategy;->b:Lcom/vtosters/lite/im/video/ImScreenPlayStrategy;
 
     const/4 v5, 0x0
 
@@ -287,12 +287,12 @@
 
     move-object v1, p1
 
-    invoke-direct/range {v1 .. v12}, Lcom/vk/libvideo/autoplay/g;-><init>(Landroid/content/Context;Lcom/vk/libvideo/autoplay/b;Lcom/vk/libvideo/autoplay/j/a;Lcom/vk/bridges/f;Landroid/os/Handler;Lcom/vk/libvideo/autoplay/j/d;Lcom/vk/libvideo/autoplay/g$c;ZZILkotlin/jvm/internal/i;)V
+    invoke-direct/range {v1 .. v12}, Lcom/vk/libvideo/autoplay/VideoRecyclerViewHelper;-><init>(Landroid/content/Context;Lcom/vk/libvideo/autoplay/AutoPlayProvider;Lcom/vk/libvideo/autoplay/j/OnScreenPlayStrategy;Lcom/vk/bridges/AuthBridge3;Landroid/os/Handler;Lcom/vk/libvideo/autoplay/j/VisibilityCalculator;Lcom/vk/libvideo/autoplay/VideoRecyclerViewHelper$c;ZZILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
-    iput-object p1, p0, Lcom/vtosters/lite/im/video/ImVideoAutoPlayer;->c:Lcom/vk/libvideo/autoplay/g;
+    iput-object p1, p0, Lcom/vtosters/lite/im/video/ImVideoAutoPlayer;->c:Lcom/vk/libvideo/autoplay/VideoRecyclerViewHelper;
 
     .line 6
-    iget-object p1, p0, Lcom/vtosters/lite/im/video/ImVideoAutoPlayer;->c:Lcom/vk/libvideo/autoplay/g;
+    iget-object p1, p0, Lcom/vtosters/lite/im/video/ImVideoAutoPlayer;->c:Lcom/vk/libvideo/autoplay/VideoRecyclerViewHelper;
 
     if-eqz p1, :cond_0
 
@@ -303,7 +303,7 @@
 
     invoke-direct {p1, p0}, Lcom/vtosters/lite/im/video/ImVideoAutoPlayer$attach$2;-><init>(Lcom/vtosters/lite/im/video/ImVideoAutoPlayer;)V
 
-    invoke-static {p2, p1}, Lcom/vk/extensions/i;->a(Landroidx/recyclerview/widget/RecyclerView;Lkotlin/jvm/b/a;)V
+    invoke-static {p2, p1}, Lcom/vk/extensions/RecyclerViewExt;->a(Landroidx/recyclerview/widget/RecyclerView;Lkotlin/jvm/b/Functions;)V
 
     return-void
 
@@ -311,7 +311,7 @@
     const-string p1, "delegate"
 
     .line 8
-    invoke-static {p1}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {p1}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v0
 
@@ -319,14 +319,14 @@
     const-string p1, "provider"
 
     .line 9
-    invoke-static {p1}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {p1}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v0
 
     :cond_2
     const-string p1, "activity"
 
-    invoke-static {p1}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {p1}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v0
 .end method
@@ -335,7 +335,7 @@
     .locals 2
 
     .line 10
-    iget-object v0, p0, Lcom/vtosters/lite/im/video/ImVideoAutoPlayer;->c:Lcom/vk/libvideo/autoplay/g;
+    iget-object v0, p0, Lcom/vtosters/lite/im/video/ImVideoAutoPlayer;->c:Lcom/vk/libvideo/autoplay/VideoRecyclerViewHelper;
 
     const/4 v1, 0x0
 
@@ -344,9 +344,9 @@
     invoke-virtual {p1, v0}, Landroidx/recyclerview/widget/RecyclerView;->removeOnScrollListener(Landroidx/recyclerview/widget/RecyclerView$OnScrollListener;)V
 
     .line 11
-    iget-object p1, p0, Lcom/vtosters/lite/im/video/ImVideoAutoPlayer;->a:Lcom/vtosters/lite/im/video/b;
+    iget-object p1, p0, Lcom/vtosters/lite/im/video/ImVideoAutoPlayer;->a:Lcom/vtosters/lite/im/video/ImAutoplayFactory;
 
-    invoke-virtual {p1, v1}, Lcom/vtosters/lite/im/video/b;->a(Ljava/lang/String;)V
+    invoke-virtual {p1, v1}, Lcom/vtosters/lite/im/video/ImAutoplayFactory;->a(Ljava/lang/String;)V
 
     return-void
 
@@ -354,7 +354,7 @@
     const-string p1, "delegate"
 
     .line 12
-    invoke-static {p1}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {p1}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v1
 .end method
@@ -363,9 +363,9 @@
     .locals 1
 
     .line 14
-    iget-object v0, p0, Lcom/vtosters/lite/im/video/ImVideoAutoPlayer;->a:Lcom/vtosters/lite/im/video/b;
+    iget-object v0, p0, Lcom/vtosters/lite/im/video/ImVideoAutoPlayer;->a:Lcom/vtosters/lite/im/video/ImAutoplayFactory;
 
-    invoke-virtual {v0, p1}, Lcom/vtosters/lite/im/video/b;->a(Ljava/lang/String;)V
+    invoke-virtual {v0, p1}, Lcom/vtosters/lite/im/video/ImAutoplayFactory;->a(Ljava/lang/String;)V
 
     return-void
 .end method
@@ -374,18 +374,18 @@
     .locals 2
 
     .line 1
-    iget-object v0, p0, Lcom/vtosters/lite/im/video/ImVideoAutoPlayer;->c:Lcom/vk/libvideo/autoplay/g;
+    iget-object v0, p0, Lcom/vtosters/lite/im/video/ImVideoAutoPlayer;->c:Lcom/vk/libvideo/autoplay/VideoRecyclerViewHelper;
 
     if-eqz v0, :cond_0
 
-    invoke-virtual {v0}, Lcom/vk/libvideo/autoplay/g;->h()V
+    invoke-virtual {v0}, Lcom/vk/libvideo/autoplay/VideoRecyclerViewHelper;->h()V
 
     .line 2
-    sget-object v0, Lcom/vk/libvideo/autoplay/c;->c:Lcom/vk/libvideo/autoplay/c;
+    sget-object v0, Lcom/vk/libvideo/autoplay/PlaySettings;->c:Lcom/vk/libvideo/autoplay/PlaySettings;
 
     const/4 v1, 0x1
 
-    invoke-virtual {v0, v1}, Lcom/vk/libvideo/autoplay/c;->a(Z)V
+    invoke-virtual {v0, v1}, Lcom/vk/libvideo/autoplay/PlaySettings;->a(Z)V
 
     return-void
 
@@ -393,7 +393,7 @@
     const-string v0, "delegate"
 
     .line 3
-    invoke-static {v0}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v0}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     const/4 v0, 0x0
 
@@ -404,18 +404,18 @@
     .locals 1
 
     .line 1
-    iget-object v0, p0, Lcom/vtosters/lite/im/video/ImVideoAutoPlayer;->c:Lcom/vk/libvideo/autoplay/g;
+    iget-object v0, p0, Lcom/vtosters/lite/im/video/ImVideoAutoPlayer;->c:Lcom/vk/libvideo/autoplay/VideoRecyclerViewHelper;
 
     if-eqz v0, :cond_0
 
-    invoke-virtual {v0}, Lcom/vk/libvideo/autoplay/g;->f()V
+    invoke-virtual {v0}, Lcom/vk/libvideo/autoplay/VideoRecyclerViewHelper;->f()V
 
     return-void
 
     :cond_0
     const-string v0, "delegate"
 
-    invoke-static {v0}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v0}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     const/4 v0, 0x0
 
@@ -426,18 +426,18 @@
     .locals 1
 
     .line 1
-    iget-object v0, p0, Lcom/vtosters/lite/im/video/ImVideoAutoPlayer;->c:Lcom/vk/libvideo/autoplay/g;
+    iget-object v0, p0, Lcom/vtosters/lite/im/video/ImVideoAutoPlayer;->c:Lcom/vk/libvideo/autoplay/VideoRecyclerViewHelper;
 
     if-eqz v0, :cond_0
 
-    invoke-virtual {v0}, Lcom/vk/libvideo/autoplay/g;->g()V
+    invoke-virtual {v0}, Lcom/vk/libvideo/autoplay/VideoRecyclerViewHelper;->g()V
 
     return-void
 
     :cond_0
     const-string v0, "delegate"
 
-    invoke-static {v0}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v0}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     const/4 v0, 0x0
 

@@ -20,9 +20,9 @@
 # instance fields
 .field private a:Z
 
-.field private final b:Lb/h/g/t/c;
+.field private final b:Lb/h/g/t/ValidatorSet;
 
-.field private final c:Lio/reactivex/disposables/a;
+.field private final c:Lio/reactivex/disposables/CompositeDisposable;
 
 .field private d:Landroid/animation/Animator;
 
@@ -32,9 +32,9 @@
 
 .field private g:Landroid/media/AudioFocusRequest;
 
-.field private final h:Lcom/vk/profile/data/cover/model/a;
+.field private final h:Lcom/vk/profile/data/cover/model/LiveCoverPreloaderManager;
 
-.field private final i:Lb/h/g/t/c;
+.field private final i:Lb/h/g/t/ValidatorSet;
 
 .field private j:Lcom/vk/profile/ui/cover/CoverViewPager;
 
@@ -73,7 +73,7 @@
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, v1}, Lcom/vk/profile/data/cover/model/CommunityCoverModel$c;-><init>(Lkotlin/jvm/internal/i;)V
+    invoke-direct {v0, v1}, Lcom/vk/profile/data/cover/model/CommunityCoverModel$c;-><init>(Lkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     sput-object v0, Lcom/vk/profile/data/cover/model/CommunityCoverModel;->t:Lcom/vk/profile/data/cover/model/CommunityCoverModel$c;
 
@@ -89,33 +89,33 @@
     iput-object p1, p0, Lcom/vk/profile/data/cover/model/CommunityCoverModel;->s:Lcom/vk/profile/presenter/CommunityPresenter;
 
     .line 2
-    new-instance p1, Lb/h/g/t/c;
+    new-instance p1, Lb/h/g/t/ValidatorSet;
 
-    invoke-direct {p1}, Lb/h/g/t/c;-><init>()V
+    invoke-direct {p1}, Lb/h/g/t/ValidatorSet;-><init>()V
 
-    iput-object p1, p0, Lcom/vk/profile/data/cover/model/CommunityCoverModel;->b:Lb/h/g/t/c;
+    iput-object p1, p0, Lcom/vk/profile/data/cover/model/CommunityCoverModel;->b:Lb/h/g/t/ValidatorSet;
 
     .line 3
-    new-instance p1, Lio/reactivex/disposables/a;
+    new-instance p1, Lio/reactivex/disposables/CompositeDisposable;
 
-    invoke-direct {p1}, Lio/reactivex/disposables/a;-><init>()V
+    invoke-direct {p1}, Lio/reactivex/disposables/CompositeDisposable;-><init>()V
 
-    iput-object p1, p0, Lcom/vk/profile/data/cover/model/CommunityCoverModel;->c:Lio/reactivex/disposables/a;
+    iput-object p1, p0, Lcom/vk/profile/data/cover/model/CommunityCoverModel;->c:Lio/reactivex/disposables/CompositeDisposable;
 
     .line 4
     iget-object p1, p0, Lcom/vk/profile/data/cover/model/CommunityCoverModel;->s:Lcom/vk/profile/presenter/CommunityPresenter;
 
-    invoke-virtual {p1}, Lcom/vk/newsfeed/presenters/i;->I()Lcom/vtosters/lite/api/ExtendedUserProfile;
+    invoke-virtual {p1}, Lcom/vk/newsfeed/presenters/NewsFeedProfilePresenter;->I()Lcom/vtosters/lite/api/ExtendedUserProfile;
 
     move-result-object p1
 
-    check-cast p1, Lcom/vtosters/lite/api/i;
+    check-cast p1, Lcom/vtosters/lite/api/ExtendedCommunityProfile;
 
     const/4 v0, 0x1
 
     if-eqz p1, :cond_0
 
-    invoke-virtual {p1}, Lcom/vtosters/lite/api/i;->u()Z
+    invoke-virtual {p1}, Lcom/vtosters/lite/api/ExtendedCommunityProfile;->u()Z
 
     move-result p1
 
@@ -128,59 +128,59 @@
     iput-boolean p1, p0, Lcom/vk/profile/data/cover/model/CommunityCoverModel;->f:Z
 
     .line 5
-    new-instance p1, Lcom/vk/profile/data/cover/model/a;
+    new-instance p1, Lcom/vk/profile/data/cover/model/LiveCoverPreloaderManager;
 
-    invoke-direct {p1}, Lcom/vk/profile/data/cover/model/a;-><init>()V
+    invoke-direct {p1}, Lcom/vk/profile/data/cover/model/LiveCoverPreloaderManager;-><init>()V
 
-    iput-object p1, p0, Lcom/vk/profile/data/cover/model/CommunityCoverModel;->h:Lcom/vk/profile/data/cover/model/a;
+    iput-object p1, p0, Lcom/vk/profile/data/cover/model/CommunityCoverModel;->h:Lcom/vk/profile/data/cover/model/LiveCoverPreloaderManager;
 
     .line 6
-    new-instance p1, Lb/h/g/t/c;
+    new-instance p1, Lb/h/g/t/ValidatorSet;
 
-    invoke-direct {p1}, Lb/h/g/t/c;-><init>()V
+    invoke-direct {p1}, Lb/h/g/t/ValidatorSet;-><init>()V
 
     .line 7
     new-instance v1, Lcom/vk/profile/data/cover/model/CommunityCoverModel$$special$$inlined$apply$lambda$1;
 
     invoke-direct {v1, p0}, Lcom/vk/profile/data/cover/model/CommunityCoverModel$$special$$inlined$apply$lambda$1;-><init>(Lcom/vk/profile/data/cover/model/CommunityCoverModel;)V
 
-    invoke-virtual {p1, v1}, Lb/h/g/t/c;->a(Lkotlin/jvm/b/b;)V
+    invoke-virtual {p1, v1}, Lb/h/g/t/ValidatorSet;->a(Lkotlin/jvm/b/Functions2;)V
 
     const-string v1, "kek"
 
     .line 8
-    invoke-virtual {p1, v1}, Lb/h/g/t/c;->a(Ljava/lang/String;)V
+    invoke-virtual {p1, v1}, Lb/h/g/t/ValidatorSet;->a(Ljava/lang/String;)V
 
     const/4 v1, 0x0
 
     .line 9
-    invoke-virtual {p1, v1, v0}, Lb/h/g/t/c;->a(IZ)V
+    invoke-virtual {p1, v1, v0}, Lb/h/g/t/ValidatorSet;->a(IZ)V
 
     .line 10
-    invoke-virtual {p1, v0, v0}, Lb/h/g/t/c;->a(IZ)V
+    invoke-virtual {p1, v0, v0}, Lb/h/g/t/ValidatorSet;->a(IZ)V
 
     const/4 v2, 0x2
 
     .line 11
-    invoke-virtual {p1, v2, v1}, Lb/h/g/t/c;->a(IZ)V
+    invoke-virtual {p1, v2, v1}, Lb/h/g/t/ValidatorSet;->a(IZ)V
 
     const/4 v1, 0x3
 
     .line 12
-    invoke-virtual {p1, v1, v0}, Lb/h/g/t/c;->a(IZ)V
+    invoke-virtual {p1, v1, v0}, Lb/h/g/t/ValidatorSet;->a(IZ)V
 
     const/4 v1, 0x5
 
     .line 13
-    invoke-virtual {p1, v1, v0}, Lb/h/g/t/c;->a(IZ)V
+    invoke-virtual {p1, v1, v0}, Lb/h/g/t/ValidatorSet;->a(IZ)V
 
     const/4 v1, 0x6
 
     .line 14
-    invoke-virtual {p1, v1, v0}, Lb/h/g/t/c;->a(IZ)V
+    invoke-virtual {p1, v1, v0}, Lb/h/g/t/ValidatorSet;->a(IZ)V
 
     .line 15
-    iput-object p1, p0, Lcom/vk/profile/data/cover/model/CommunityCoverModel;->i:Lb/h/g/t/c;
+    iput-object p1, p0, Lcom/vk/profile/data/cover/model/CommunityCoverModel;->i:Lb/h/g/t/ValidatorSet;
 
     .line 16
     new-instance p1, Ljava/util/ArrayList;
@@ -263,7 +263,7 @@
     .line 5
     iget-object v0, p0, Lcom/vk/profile/data/cover/model/CommunityCoverModel;->j:Lcom/vk/profile/ui/cover/CoverViewPager;
 
-    invoke-static {v0, p1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v0, p1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result p1
 
@@ -458,7 +458,7 @@
 
     invoke-direct {v1, p0}, Lcom/vk/profile/data/cover/model/CommunityCoverModel$play$$inlined$forEachIndexed$lambda$1;-><init>(Lcom/vk/profile/data/cover/model/CommunityCoverModel;)V
 
-    invoke-virtual {v2, v1}, Lcom/vk/profile/data/cover/model/CommunityCoverModel$b;->a(Lkotlin/jvm/b/a;)V
+    invoke-virtual {v2, v1}, Lcom/vk/profile/data/cover/model/CommunityCoverModel$b;->a(Lkotlin/jvm/b/Functions;)V
 
     .line 7
     invoke-virtual {v2}, Lcom/vk/profile/data/cover/model/CommunityCoverModel$b;->n()V
@@ -522,9 +522,9 @@
 
     if-nez v1, :cond_2
 
-    sget-object v1, Lcom/vk/core/util/p0;->b:Lcom/vk/core/util/p0;
+    sget-object v1, Lcom/vk/core/util/MediaLoadingInfo;->b:Lcom/vk/core/util/MediaLoadingInfo;
 
-    invoke-virtual {v1}, Lcom/vk/core/util/p0;->d()Z
+    invoke-virtual {v1}, Lcom/vk/core/util/MediaLoadingInfo;->d()Z
 
     move-result v1
 
@@ -550,7 +550,7 @@
 
     if-eqz v0, :cond_2
 
-    invoke-virtual {v0}, Lcom/vk/profile/ui/cover/CoverViewPager;->getCurrentViewItem()Lcom/vk/profile/ui/cover/c;
+    invoke-virtual {v0}, Lcom/vk/profile/ui/cover/CoverViewPager;->getCurrentViewItem()Lcom/vk/profile/ui/cover/CoverViewItem;
 
     move-result-object v0
 
@@ -567,7 +567,7 @@
 
     check-cast v1, Lcom/vk/profile/data/cover/model/CommunityCoverModel$b;
 
-    invoke-virtual {v1, v0}, Lcom/vk/profile/data/cover/model/CommunityCoverModel$b;->a(Lcom/vk/profile/ui/cover/c;)V
+    invoke-virtual {v1, v0}, Lcom/vk/profile/data/cover/model/CommunityCoverModel$b;->a(Lcom/vk/profile/ui/cover/CoverViewItem;)V
 
     :cond_2
     :goto_0
@@ -722,7 +722,7 @@
 
     if-eqz v0, :cond_0
 
-    invoke-static {p1}, Lcom/vtosters/lite/audio/utils/e;->a(Landroid/content/Context;)Landroid/media/AudioManager;
+    invoke-static {p1}, Lcom/vtosters/lite/audio/utils/Utils;->a(Landroid/content/Context;)Landroid/media/AudioManager;
 
     move-result-object v2
 
@@ -738,7 +738,7 @@
 
     if-eqz v0, :cond_2
 
-    invoke-static {p1}, Lcom/vtosters/lite/audio/utils/e;->a(Landroid/content/Context;)Landroid/media/AudioManager;
+    invoke-static {p1}, Lcom/vtosters/lite/audio/utils/Utils;->a(Landroid/content/Context;)Landroid/media/AudioManager;
 
     move-result-object p1
 
@@ -759,7 +759,7 @@
 
     invoke-direct {v0, p0, p1}, Lcom/vk/profile/data/cover/model/CommunityCoverModel$setView$1;-><init>(Lcom/vk/profile/data/cover/model/CommunityCoverModel;Lcom/vk/profile/ui/cover/CoverViewPager;)V
 
-    invoke-static {p1, v0}, Lcom/vk/extensions/ViewExtKt;->g(Landroid/view/View;Lkotlin/jvm/b/a;)Ljava/lang/Object;
+    invoke-static {p1, v0}, Lcom/vk/extensions/ViewExtKt;->g(Landroid/view/View;Lkotlin/jvm/b/Functions;)Ljava/lang/Object;
 
     .line 17
     iget-object v0, p0, Lcom/vk/profile/data/cover/model/CommunityCoverModel;->j:Lcom/vk/profile/ui/cover/CoverViewPager;
@@ -770,9 +770,9 @@
     iput-object p1, p0, Lcom/vk/profile/data/cover/model/CommunityCoverModel;->j:Lcom/vk/profile/ui/cover/CoverViewPager;
 
     .line 19
-    iget-object v0, p0, Lcom/vk/profile/data/cover/model/CommunityCoverModel;->i:Lb/h/g/t/c;
+    iget-object v0, p0, Lcom/vk/profile/data/cover/model/CommunityCoverModel;->i:Lb/h/g/t/ValidatorSet;
 
-    invoke-virtual {v0}, Lb/h/g/t/c;->a()V
+    invoke-virtual {v0}, Lb/h/g/t/ValidatorSet;->a()V
 
     .line 20
     :cond_0
@@ -781,7 +781,7 @@
     return-void
 .end method
 
-.method public final a(Lcom/vk/profile/ui/cover/CoverViewPager;Lcom/vk/profile/ui/cover/c;)V
+.method public final a(Lcom/vk/profile/ui/cover/CoverViewPager;Lcom/vk/profile/ui/cover/CoverViewItem;)V
     .locals 1
 
     .line 27
@@ -795,7 +795,7 @@
     :cond_0
     iget-object v0, p0, Lcom/vk/profile/data/cover/model/CommunityCoverModel;->j:Lcom/vk/profile/ui/cover/CoverViewPager;
 
-    invoke-static {v0, p1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v0, p1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result p1
 
@@ -812,7 +812,7 @@
 
     check-cast p1, Lcom/vk/profile/data/cover/model/CommunityCoverModel$b;
 
-    invoke-virtual {p1, p2}, Lcom/vk/profile/data/cover/model/CommunityCoverModel$b;->c(Lcom/vk/profile/ui/cover/c;)V
+    invoke-virtual {p1, p2}, Lcom/vk/profile/data/cover/model/CommunityCoverModel$b;->c(Lcom/vk/profile/ui/cover/CoverViewItem;)V
 
     :cond_1
     return-void
@@ -830,7 +830,7 @@
 
     .line 24
     :cond_0
-    invoke-virtual {p1}, Lcom/vk/profile/ui/cover/CoverViewPager;->getCurrentViewItem()Lcom/vk/profile/ui/cover/c;
+    invoke-virtual {p1}, Lcom/vk/profile/ui/cover/CoverViewPager;->getCurrentViewItem()Lcom/vk/profile/ui/cover/CoverViewItem;
 
     move-result-object v2
 
@@ -857,7 +857,7 @@
 
     move-object v6, p5
 
-    invoke-virtual/range {v1 .. v6}, Lcom/vk/profile/data/cover/model/CommunityCoverModel$b;->a(Lcom/vk/profile/ui/cover/c;IIZLjava/lang/Runnable;)V
+    invoke-virtual/range {v1 .. v6}, Lcom/vk/profile/data/cover/model/CommunityCoverModel$b;->a(Lcom/vk/profile/ui/cover/CoverViewItem;IIZLjava/lang/Runnable;)V
 
     if-eqz p2, :cond_1
 
@@ -1089,7 +1089,7 @@
     iput-object v0, p0, Lcom/vk/profile/data/cover/model/CommunityCoverModel;->g:Landroid/media/AudioFocusRequest;
 
     .line 20
-    invoke-static {p1}, Lcom/vtosters/lite/audio/utils/e;->a(Landroid/content/Context;)Landroid/media/AudioManager;
+    invoke-static {p1}, Lcom/vtosters/lite/audio/utils/Utils;->a(Landroid/content/Context;)Landroid/media/AudioManager;
 
     move-result-object p1
 
@@ -1104,19 +1104,19 @@
     goto :goto_0
 
     :cond_1
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     throw v2
 
     .line 21
     :cond_2
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     throw v2
 
     .line 22
     :cond_3
-    invoke-static {p1}, Lcom/vtosters/lite/audio/utils/e;->a(Landroid/content/Context;)Landroid/media/AudioManager;
+    invoke-static {p1}, Lcom/vtosters/lite/audio/utils/Utils;->a(Landroid/content/Context;)Landroid/media/AudioManager;
 
     move-result-object p1
 
@@ -1227,7 +1227,7 @@
     return-object v0
 .end method
 
-.method public final h()Lcom/vk/profile/ui/cover/c;
+.method public final h()Lcom/vk/profile/ui/cover/CoverViewItem;
     .locals 1
 
     .line 1
@@ -1235,7 +1235,7 @@
 
     if-eqz v0, :cond_0
 
-    invoke-virtual {v0}, Lcom/vk/profile/ui/cover/CoverViewPager;->getCurrentViewItem()Lcom/vk/profile/ui/cover/c;
+    invoke-virtual {v0}, Lcom/vk/profile/ui/cover/CoverViewPager;->getCurrentViewItem()Lcom/vk/profile/ui/cover/CoverViewItem;
 
     move-result-object v0
 
@@ -1257,20 +1257,20 @@
     return v0
 .end method
 
-.method public final j()Lb/h/g/t/c;
+.method public final j()Lb/h/g/t/ValidatorSet;
     .locals 1
 
     .line 1
-    iget-object v0, p0, Lcom/vk/profile/data/cover/model/CommunityCoverModel;->i:Lb/h/g/t/c;
+    iget-object v0, p0, Lcom/vk/profile/data/cover/model/CommunityCoverModel;->i:Lb/h/g/t/ValidatorSet;
 
     return-object v0
 .end method
 
-.method public final k()Lcom/vk/profile/data/cover/model/a;
+.method public final k()Lcom/vk/profile/data/cover/model/LiveCoverPreloaderManager;
     .locals 1
 
     .line 1
-    iget-object v0, p0, Lcom/vk/profile/data/cover/model/CommunityCoverModel;->h:Lcom/vk/profile/data/cover/model/a;
+    iget-object v0, p0, Lcom/vk/profile/data/cover/model/CommunityCoverModel;->h:Lcom/vk/profile/data/cover/model/LiveCoverPreloaderManager;
 
     return-object v0
 .end method
@@ -1311,11 +1311,11 @@
     return v0
 .end method
 
-.method public final p()Lb/h/g/t/c;
+.method public final p()Lb/h/g/t/ValidatorSet;
     .locals 1
 
     .line 1
-    iget-object v0, p0, Lcom/vk/profile/data/cover/model/CommunityCoverModel;->b:Lb/h/g/t/c;
+    iget-object v0, p0, Lcom/vk/profile/data/cover/model/CommunityCoverModel;->b:Lb/h/g/t/ValidatorSet;
 
     return-object v0
 .end method
@@ -1324,16 +1324,16 @@
     .locals 3
 
     .line 1
-    iget-object v0, p0, Lcom/vk/profile/data/cover/model/CommunityCoverModel;->b:Lb/h/g/t/c;
+    iget-object v0, p0, Lcom/vk/profile/data/cover/model/CommunityCoverModel;->b:Lb/h/g/t/ValidatorSet;
 
     new-instance v1, Lcom/vk/profile/data/cover/model/CommunityCoverModel$initialize$1;
 
     invoke-direct {v1, p0}, Lcom/vk/profile/data/cover/model/CommunityCoverModel$initialize$1;-><init>(Lcom/vk/profile/data/cover/model/CommunityCoverModel;)V
 
-    invoke-virtual {v0, v1}, Lb/h/g/t/c;->a(Lkotlin/jvm/b/b;)V
+    invoke-virtual {v0, v1}, Lb/h/g/t/ValidatorSet;->a(Lkotlin/jvm/b/Functions2;)V
 
     .line 2
-    iget-object v0, p0, Lcom/vk/profile/data/cover/model/CommunityCoverModel;->b:Lb/h/g/t/c;
+    iget-object v0, p0, Lcom/vk/profile/data/cover/model/CommunityCoverModel;->b:Lb/h/g/t/ValidatorSet;
 
     sget-object v1, Lcom/vk/voip/VoipViewModel;->Z:Lcom/vk/voip/VoipViewModel;
 
@@ -1343,49 +1343,49 @@
 
     const/4 v2, 0x0
 
-    invoke-virtual {v0, v2, v1}, Lb/h/g/t/c;->a(IZ)V
+    invoke-virtual {v0, v2, v1}, Lb/h/g/t/ValidatorSet;->a(IZ)V
 
     .line 3
-    iget-object v0, p0, Lcom/vk/profile/data/cover/model/CommunityCoverModel;->b:Lb/h/g/t/c;
+    iget-object v0, p0, Lcom/vk/profile/data/cover/model/CommunityCoverModel;->b:Lb/h/g/t/ValidatorSet;
 
     const/4 v1, 0x1
 
-    invoke-virtual {v0, v1, v2}, Lb/h/g/t/c;->a(IZ)V
+    invoke-virtual {v0, v1, v2}, Lb/h/g/t/ValidatorSet;->a(IZ)V
 
     .line 4
-    iget-object v0, p0, Lcom/vk/profile/data/cover/model/CommunityCoverModel;->b:Lb/h/g/t/c;
+    iget-object v0, p0, Lcom/vk/profile/data/cover/model/CommunityCoverModel;->b:Lb/h/g/t/ValidatorSet;
 
     const/4 v1, 0x2
 
-    invoke-virtual {v0, v1, v2}, Lb/h/g/t/c;->a(IZ)V
+    invoke-virtual {v0, v1, v2}, Lb/h/g/t/ValidatorSet;->a(IZ)V
 
     .line 5
-    iget-object v0, p0, Lcom/vk/profile/data/cover/model/CommunityCoverModel;->c:Lio/reactivex/disposables/a;
+    iget-object v0, p0, Lcom/vk/profile/data/cover/model/CommunityCoverModel;->c:Lio/reactivex/disposables/CompositeDisposable;
 
-    invoke-virtual {v0}, Lio/reactivex/disposables/a;->o()V
+    invoke-virtual {v0}, Lio/reactivex/disposables/CompositeDisposable;->o()V
 
     .line 6
-    sget-object v0, Lb/h/v/d;->c:Lb/h/v/d$a;
+    sget-object v0, Lb/h/v/RxBus;->c:Lb/h/v/RxBus$a;
 
-    invoke-virtual {v0}, Lb/h/v/d$a;->a()Lb/h/v/d;
+    invoke-virtual {v0}, Lb/h/v/RxBus$a;->a()Lb/h/v/RxBus;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lb/h/v/d;->a()Lc/a/m;
+    invoke-virtual {v0}, Lb/h/v/RxBus;->a()Lio/reactivex/Observable;
 
     move-result-object v0
 
     .line 7
     sget-object v1, Lcom/vk/profile/data/cover/model/CommunityCoverModel$d;->a:Lcom/vk/profile/data/cover/model/CommunityCoverModel$d;
 
-    invoke-virtual {v0, v1}, Lc/a/m;->a(Lc/a/z/l;)Lc/a/m;
+    invoke-virtual {v0, v1}, Lio/reactivex/Observable;->a(Lio/reactivex/functions/Predicate;)Lio/reactivex/Observable;
 
     move-result-object v0
 
     .line 8
     sget-object v1, Lcom/vk/profile/data/cover/model/CommunityCoverModel$e;->a:Lcom/vk/profile/data/cover/model/CommunityCoverModel$e;
 
-    invoke-virtual {v0, v1}, Lc/a/m;->e(Lc/a/z/j;)Lc/a/m;
+    invoke-virtual {v0, v1}, Lio/reactivex/Observable;->e(Lio/reactivex/functions/Function;)Lio/reactivex/Observable;
 
     move-result-object v0
 
@@ -1394,18 +1394,18 @@
 
     invoke-direct {v1, p0}, Lcom/vk/profile/data/cover/model/CommunityCoverModel$f;-><init>(Lcom/vk/profile/data/cover/model/CommunityCoverModel;)V
 
-    invoke-virtual {v0, v1}, Lc/a/m;->f(Lc/a/z/g;)Lio/reactivex/disposables/b;
+    invoke-virtual {v0, v1}, Lio/reactivex/Observable;->f(Lio/reactivex/functions/Consumer;)Lio/reactivex/disposables/Disposable;
 
     move-result-object v0
 
     const-string v1, "RxBus.instance.events\n  \u2026e.Idle)\n                }"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 10
-    iget-object v1, p0, Lcom/vk/profile/data/cover/model/CommunityCoverModel;->c:Lio/reactivex/disposables/a;
+    iget-object v1, p0, Lcom/vk/profile/data/cover/model/CommunityCoverModel;->c:Lio/reactivex/disposables/CompositeDisposable;
 
-    invoke-static {v0, v1}, Lcom/vk/core/extensions/RxExtKt;->a(Lio/reactivex/disposables/b;Lio/reactivex/disposables/a;)Lio/reactivex/disposables/b;
+    invoke-static {v0, v1}, Lcom/vk/core/extensions/RxExtKt;->a(Lio/reactivex/disposables/Disposable;Lio/reactivex/disposables/CompositeDisposable;)Lio/reactivex/disposables/Disposable;
 
     return-void
 .end method
@@ -1441,9 +1441,9 @@
     iput-boolean v0, p0, Lcom/vk/profile/data/cover/model/CommunityCoverModel;->e:Z
 
     .line 2
-    iget-object v0, p0, Lcom/vk/profile/data/cover/model/CommunityCoverModel;->c:Lio/reactivex/disposables/a;
+    iget-object v0, p0, Lcom/vk/profile/data/cover/model/CommunityCoverModel;->c:Lio/reactivex/disposables/CompositeDisposable;
 
-    invoke-virtual {v0}, Lio/reactivex/disposables/a;->o()V
+    invoke-virtual {v0}, Lio/reactivex/disposables/CompositeDisposable;->o()V
 
     .line 3
     iget-object v0, p0, Lcom/vk/profile/data/cover/model/CommunityCoverModel;->k:Ljava/util/ArrayList;

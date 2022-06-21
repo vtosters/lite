@@ -3,7 +3,7 @@
 .source "lambda"
 
 # interfaces
-.implements Lcom/vk/stories/view/s1$z;
+.implements Lcom/vk/stories/view/StoryViewContainer$z;
 
 
 # instance fields
@@ -27,14 +27,14 @@
 
 
 # virtual methods
-.method public final a(Lcom/vk/stories/view/f1;)V
+.method public final a(Lcom/vk/stories/view/BaseStoryViewContract;)V
     .locals 2
 
     iget v0, p0, Lcom/vk/stories/view/d0;->a:I
 
     iget v1, p0, Lcom/vk/stories/view/d0;->b:I
 
-    invoke-static {v0, v1, p1}, Lcom/vk/stories/view/s1$m;->b(IILcom/vk/stories/view/f1;)V
+    invoke-static {v0, v1, p1}, Lcom/vk/stories/view/StoryViewContainer$m;->b(IILcom/vk/stories/view/BaseStoryViewContract;)V
 
     return-void
 .end method

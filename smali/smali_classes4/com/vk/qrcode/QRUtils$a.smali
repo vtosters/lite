@@ -17,7 +17,7 @@
 # instance fields
 .field private a:Ljava/lang/String;
 
-.field private b:Lcom/vk/media/camera/qrcode/b$b;
+.field private b:Lcom/vk/media/camera/qrcode/CameraQRUtils$b;
 
 .field private c:Ljava/lang/String;
 
@@ -47,11 +47,11 @@
     iput-object p1, p0, Lcom/vk/qrcode/QRUtils$a;->a:Ljava/lang/String;
 
     .line 3
-    new-instance p1, Lcom/vk/media/camera/qrcode/b$b;
+    new-instance p1, Lcom/vk/media/camera/qrcode/CameraQRUtils$b;
 
-    invoke-direct {p1}, Lcom/vk/media/camera/qrcode/b$b;-><init>()V
+    invoke-direct {p1}, Lcom/vk/media/camera/qrcode/CameraQRUtils$b;-><init>()V
 
-    iput-object p1, p0, Lcom/vk/qrcode/QRUtils$a;->b:Lcom/vk/media/camera/qrcode/b$b;
+    iput-object p1, p0, Lcom/vk/qrcode/QRUtils$a;->b:Lcom/vk/media/camera/qrcode/CameraQRUtils$b;
 
     const/4 p1, -0x1
 
@@ -63,12 +63,12 @@
 
 
 # virtual methods
-.method public final a()Lc/a/m;
+.method public final a()Lio/reactivex/Observable;
     .locals 10
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "()",
-            "Lc/a/m<",
+            "Lio/reactivex/Observable<",
             "Landroid/graphics/Bitmap;",
             ">;"
         }
@@ -87,7 +87,7 @@
 
     iget v5, p0, Lcom/vk/qrcode/QRUtils$a;->d:I
 
-    iget-object v6, p0, Lcom/vk/qrcode/QRUtils$a;->b:Lcom/vk/media/camera/qrcode/b$b;
+    iget-object v6, p0, Lcom/vk/qrcode/QRUtils$a;->b:Lcom/vk/media/camera/qrcode/CameraQRUtils$b;
 
     iget-boolean v7, p0, Lcom/vk/qrcode/QRUtils$a;->e:Z
 
@@ -95,9 +95,9 @@
 
     move-object v2, v9
 
-    invoke-direct/range {v2 .. v8}, Lcom/vk/qrcode/QRUtils$b;-><init>(Ljava/lang/String;Ljava/lang/String;ILcom/vk/media/camera/qrcode/b$b;ZI)V
+    invoke-direct/range {v2 .. v8}, Lcom/vk/qrcode/QRUtils$b;-><init>(Ljava/lang/String;Ljava/lang/String;ILcom/vk/media/camera/qrcode/CameraQRUtils$b;ZI)V
 
-    invoke-static {v0, v1, v9}, Lcom/vk/qrcode/QRUtils;->b(Lcom/vk/qrcode/QRUtils;Landroid/content/Context;Lcom/vk/qrcode/QRUtils$b;)Lc/a/m;
+    invoke-static {v0, v1, v9}, Lcom/vk/qrcode/QRUtils;->b(Lcom/vk/qrcode/QRUtils;Landroid/content/Context;Lcom/vk/qrcode/QRUtils$b;)Lio/reactivex/Observable;
 
     move-result-object v0
 

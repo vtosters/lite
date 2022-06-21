@@ -3,12 +3,12 @@
 .source "StorySendMessageDialog.kt"
 
 # interfaces
-.implements Lcom/vk/core/widget/e$c;
+.implements Lcom/vk/core/widget/OnSwipeTouchListener$c;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/stories/message/StorySendMessageDialog;-><init>(Landroid/content/Context;Lcom/vk/stories/message/f;Lcom/vk/stories/view/StoryView;)V
+    value = Lcom/vk/stories/message/StorySendMessageDialog;-><init>(Landroid/content/Context;Lcom/vk/stories/message/StorySendMessageContract5;Lcom/vk/stories/view/StoryView;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -41,13 +41,13 @@
     .line 1
     iget-object v0, p0, Lcom/vk/stories/message/StorySendMessageDialog$b;->a:Lcom/vk/stories/message/StorySendMessageDialog;
 
-    invoke-virtual {v0}, Lcom/vk/stories/message/StorySendMessageDialog;->getPresenter()Lcom/vk/stories/message/f;
+    invoke-virtual {v0}, Lcom/vk/stories/message/StorySendMessageDialog;->getPresenter()Lcom/vk/stories/message/StorySendMessageContract5;
 
     move-result-object v0
 
     if-eqz v0, :cond_0
 
-    invoke-interface {v0}, Lcom/vk/stories/message/f;->M0()V
+    invoke-interface {v0}, Lcom/vk/stories/message/StorySendMessageContract5;->M0()V
 
     :cond_0
     const/4 v0, 0x1

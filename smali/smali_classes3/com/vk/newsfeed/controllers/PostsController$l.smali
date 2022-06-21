@@ -3,7 +3,7 @@
 .source "PostsController.kt"
 
 # interfaces
-.implements Lc/a/z/g;
+.implements Lio/reactivex/functions/Consumer;
 
 
 # annotations
@@ -22,7 +22,7 @@
         "Ljava/lang/Object;",
         ">",
         "Ljava/lang/Object;",
-        "Lc/a/z/g<",
+        "Lio/reactivex/functions/Consumer<",
         "Ljava/lang/Boolean;",
         ">;"
     }
@@ -67,9 +67,9 @@
     if-eqz p1, :cond_0
 
     .line 2
-    sget-object p1, Lcom/vk/newsfeed/controllers/a;->e:Lcom/vk/newsfeed/controllers/a;
+    sget-object p1, Lcom/vk/newsfeed/controllers/NewsfeedController;->e:Lcom/vk/newsfeed/controllers/NewsfeedController;
 
-    invoke-virtual {p1}, Lcom/vk/newsfeed/controllers/a;->n()Lb/h/g/l/d;
+    invoke-virtual {p1}, Lcom/vk/newsfeed/controllers/NewsfeedController;->n()Lb/h/g/l/NotificationCenter;
 
     move-result-object p1
 
@@ -77,10 +77,10 @@
 
     iget-object v2, p0, Lcom/vk/newsfeed/controllers/PostsController$l;->b:Lcom/vk/dto/newsfeed/entries/Post;
 
-    invoke-virtual {p1, v1, v2}, Lb/h/g/l/d;->a(ILjava/lang/Object;)V
+    invoke-virtual {p1, v1, v2}, Lb/h/g/l/NotificationCenter;->a(ILjava/lang/Object;)V
 
     .line 3
-    new-instance p1, Lcom/vtosters/lite/api/newsfeed/d;
+    new-instance p1, Lcom/vtosters/lite/api/newsfeed/NewsfeedIgnoreItem;
 
     iget-object v1, p0, Lcom/vk/newsfeed/controllers/PostsController$l;->b:Lcom/vk/dto/newsfeed/entries/Post;
 
@@ -102,25 +102,25 @@
 
     const-string v4, "category"
 
-    invoke-direct {p1, v4, v1, v2, v3}, Lcom/vtosters/lite/api/newsfeed/d;-><init>(Ljava/lang/String;IILjava/lang/String;)V
+    invoke-direct {p1, v4, v1, v2, v3}, Lcom/vtosters/lite/api/newsfeed/NewsfeedIgnoreItem;-><init>(Ljava/lang/String;IILjava/lang/String;)V
 
     const/4 v1, 0x1
 
     .line 4
-    invoke-static {p1, v0, v1, v0}, Lcom/vk/api/base/d;->d(Lcom/vk/api/base/d;Lcom/vk/api/base/e;ILjava/lang/Object;)Lc/a/m;
+    invoke-static {p1, v0, v1, v0}, Lcom/vk/api/base/ApiRequest;->d(Lcom/vk/api/base/ApiRequest;Lcom/vk/api/base/ApiThreadHolder;ILjava/lang/Object;)Lio/reactivex/Observable;
 
     move-result-object p1
 
     .line 5
-    invoke-static {}, Lcom/vk/core/util/z0;->b()Lc/a/z/g;
+    invoke-static {}, Lcom/vk/core/util/RxUtil;->b()Lio/reactivex/functions/Consumer;
 
     move-result-object v0
 
-    invoke-static {}, Lcom/vk/core/util/z0;->c()Lc/a/z/g;
+    invoke-static {}, Lcom/vk/core/util/RxUtil;->c()Lio/reactivex/functions/Consumer;
 
     move-result-object v1
 
-    invoke-virtual {p1, v0, v1}, Lc/a/m;->a(Lc/a/z/g;Lc/a/z/g;)Lio/reactivex/disposables/b;
+    invoke-virtual {p1, v0, v1}, Lio/reactivex/Observable;->a(Lio/reactivex/functions/Consumer;Lio/reactivex/functions/Consumer;)Lio/reactivex/disposables/Disposable;
 
     goto :goto_0
 
@@ -132,7 +132,7 @@
     const/4 v2, 0x2
 
     .line 6
-    invoke-static {p1, v1, v2, v0}, Lcom/vk/core/util/k1;->a(IZILjava/lang/Object;)V
+    invoke-static {p1, v1, v2, v0}, Lcom/vk/core/util/ToastUtils;->a(IZILjava/lang/Object;)V
 
     :goto_0
     return-void

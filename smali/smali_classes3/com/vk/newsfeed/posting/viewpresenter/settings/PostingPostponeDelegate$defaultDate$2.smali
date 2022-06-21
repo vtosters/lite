@@ -3,7 +3,7 @@
 .source "PostingPostponeDelegate.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/a;
+.implements Lkotlin/jvm/b/Functions;
 
 
 # annotations
@@ -19,7 +19,7 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/a<",
+        "Lkotlin/jvm/b/Functions<",
         "Ljava/util/Date;",
         ">;"
     }
@@ -70,7 +70,7 @@
     .locals 3
 
     .line 2
-    invoke-static {}, Lcom/vk/core/util/i1;->c()Ljava/util/Calendar;
+    invoke-static {}, Lcom/vk/core/util/TimeUtils;->c()Ljava/util/Calendar;
 
     move-result-object v0
 
@@ -91,7 +91,7 @@
     const-string v1, "calendar"
 
     .line 5
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {v0}, Ljava/util/Calendar;->getTime()Ljava/util/Date;
 

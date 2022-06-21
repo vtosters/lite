@@ -15,7 +15,7 @@
 
 
 # static fields
-.field static final synthetic a:[Lkotlin/u/j;
+.field static final synthetic a:[Lkotlin/u/KProperty5;
 
 
 # direct methods
@@ -24,13 +24,13 @@
 
     const/4 v0, 0x1
 
-    new-array v0, v0, [Lkotlin/u/j;
+    new-array v0, v0, [Lkotlin/u/KProperty5;
 
     new-instance v1, Lkotlin/jvm/internal/PropertyReference1Impl;
 
     const-class v2, Lcom/vk/cameraui/CameraUI$a;
 
-    invoke-static {v2}, Lkotlin/jvm/internal/o;->a(Ljava/lang/Class;)Lkotlin/u/c;
+    invoke-static {v2}, Lkotlin/jvm/internal/Reflection;->a(Ljava/lang/Class;)Lkotlin/u/KClass;
 
     move-result-object v2
 
@@ -38,15 +38,15 @@
 
     const-string v4, "isNewFrameAvaialblee()Z"
 
-    invoke-direct {v1, v2, v3, v4}, Lkotlin/jvm/internal/PropertyReference1Impl;-><init>(Lkotlin/u/e;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-direct {v1, v2, v3, v4}, Lkotlin/jvm/internal/PropertyReference1Impl;-><init>(Lkotlin/u/KDeclarationContainer;Ljava/lang/String;Ljava/lang/String;)V
 
-    invoke-static {v1}, Lkotlin/jvm/internal/o;->a(Lkotlin/jvm/internal/PropertyReference1;)Lkotlin/u/l;
+    invoke-static {v1}, Lkotlin/jvm/internal/Reflection;->a(Lkotlin/jvm/internal/PropertyReference1;)Lkotlin/u/KProperty2;
 
     const/4 v2, 0x0
 
     aput-object v1, v0, v2
 
-    sput-object v0, Lcom/vk/cameraui/CameraUI$a;->a:[Lkotlin/u/j;
+    sput-object v0, Lcom/vk/cameraui/CameraUI$a;->a:[Lkotlin/u/KProperty5;
 
     return-void
 .end method
@@ -60,7 +60,7 @@
     return-void
 .end method
 
-.method public synthetic constructor <init>(Lkotlin/jvm/internal/i;)V
+.method public synthetic constructor <init>(Lkotlin/jvm/internal/DefaultConstructorMarker;)V
     .locals 0
 
     .line 2
@@ -69,7 +69,7 @@
     return-void
 .end method
 
-.method public static synthetic a(Lcom/vk/cameraui/CameraUI$a;Landroid/content/Context;Lcom/vk/cameraui/builder/CameraParams;ZZLcom/vk/cameraui/CameraUI$b;Lkotlin/jvm/b/b;ILjava/lang/Object;)Lcom/vk/cameraui/BaseCameraUIView;
+.method public static synthetic a(Lcom/vk/cameraui/CameraUI$a;Landroid/content/Context;Lcom/vk/cameraui/builder/CameraParams;ZZLcom/vk/cameraui/CameraUI$b;Lkotlin/jvm/b/Functions2;ILjava/lang/Object;)Lcom/vk/cameraui/BaseCameraUIView;
     .locals 7
 
     and-int/lit8 p8, p7, 0x4
@@ -118,7 +118,7 @@
     move-object v5, p5
 
     .line 8
-    invoke-virtual/range {v0 .. v6}, Lcom/vk/cameraui/CameraUI$a;->a(Landroid/content/Context;Lcom/vk/cameraui/builder/CameraParams;ZZLcom/vk/cameraui/CameraUI$b;Lkotlin/jvm/b/b;)Lcom/vk/cameraui/BaseCameraUIView;
+    invoke-virtual/range {v0 .. v6}, Lcom/vk/cameraui/CameraUI$a;->a(Landroid/content/Context;Lcom/vk/cameraui/builder/CameraParams;ZZLcom/vk/cameraui/CameraUI$b;Lkotlin/jvm/b/Functions2;)Lcom/vk/cameraui/BaseCameraUIView;
 
     move-result-object p0
 
@@ -227,7 +227,7 @@
     return-object v0
 .end method
 
-.method private final a(Ljava/util/List;Lcom/vk/bridges/a;)V
+.method private final a(Ljava/util/List;Lcom/vk/bridges/AuthBridge1;)V
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -235,7 +235,7 @@
             "Ljava/util/List<",
             "Lcom/vk/cameraui/CameraUI$States;",
             ">;",
-            "Lcom/vk/bridges/a;",
+            "Lcom/vk/bridges/AuthBridge1;",
             ")V"
         }
     .end annotation
@@ -251,7 +251,7 @@
     invoke-interface {p1, v0}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
     .line 6
-    invoke-virtual {p2}, Lcom/vk/bridges/a;->e()Z
+    invoke-virtual {p2}, Lcom/vk/bridges/AuthBridge1;->e()Z
 
     move-result p2
 
@@ -289,7 +289,7 @@
 
     const-string v3, "BitmapFactory.decodeReso\u2026rawable.ic_arrow_send_24)"
 
-    invoke-static {v2, v3}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v2, v3}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     const v3, 0x7f060035
 
@@ -421,7 +421,7 @@
 
     const-string v3, "BitmapFactory.decodeReso\u2026awable.ic_arrow_right_24)"
 
-    invoke-static {v2, v3}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v2, v3}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     const v3, 0x7f060035
 
@@ -495,7 +495,7 @@
 
     const-string v3, "BitmapFactory.decodeReso\u2026s, R.drawable.ic_send_24)"
 
-    invoke-static {v2, v3}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v2, v3}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     const v3, 0x7f060023
 
@@ -595,7 +595,7 @@
 
     const-string v3, "BitmapFactory.decodeReso\u2026r_next_outline_shadow_48)"
 
-    invoke-static {v2, v3}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v2, v3}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     const v3, 0x7f060035
 
@@ -662,14 +662,14 @@
 
     const v1, 0x7f0702e2
 
-    invoke-static {v1}, Lcom/vk/core/util/y0;->c(I)I
+    invoke-static {v1}, Lcom/vk/core/util/ResUtils;->c(I)I
 
     move-result v1
 
     const v2, 0x7f0702e1
 
     .line 15
-    invoke-static {v2}, Lcom/vk/core/util/y0;->c(I)I
+    invoke-static {v2}, Lcom/vk/core/util/ResUtils;->c(I)I
 
     move-result v2
 
@@ -724,7 +724,7 @@
     const v3, 0x7f0803a4
 
     .line 6
-    invoke-static {p1, v3, v2, v1}, Lcom/vk/core/util/z;->a(Landroid/content/Context;III)Landroid/graphics/Bitmap;
+    invoke-static {p1, v3, v2, v1}, Lcom/vk/core/util/DrawableUtils;->a(Landroid/content/Context;III)Landroid/graphics/Bitmap;
 
     move-result-object v1
 
@@ -781,7 +781,7 @@
     const v3, 0x7f080719
 
     .line 6
-    invoke-static {p1, v3, v2, v1}, Lcom/vk/core/util/z;->a(Landroid/content/Context;III)Landroid/graphics/Bitmap;
+    invoke-static {p1, v3, v2, v1}, Lcom/vk/core/util/DrawableUtils;->a(Landroid/content/Context;III)Landroid/graphics/Bitmap;
 
     move-result-object p1
 
@@ -842,12 +842,12 @@
     const-string p1, "bitmapResult"
 
     .line 158
-    invoke-static {p2, p1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p2, p1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     return-object p2
 .end method
 
-.method public final a(Landroid/content/Context;Lcom/vk/cameraui/builder/CameraParams;ZZLcom/vk/cameraui/CameraUI$b;Lkotlin/jvm/b/b;)Lcom/vk/cameraui/BaseCameraUIView;
+.method public final a(Landroid/content/Context;Lcom/vk/cameraui/builder/CameraParams;ZZLcom/vk/cameraui/CameraUI$b;Lkotlin/jvm/b/Functions2;)Lcom/vk/cameraui/BaseCameraUIView;
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -856,10 +856,10 @@
             "Lcom/vk/cameraui/builder/CameraParams;",
             "ZZ",
             "Lcom/vk/cameraui/CameraUI$b;",
-            "Lkotlin/jvm/b/b<",
+            "Lkotlin/jvm/b/Functions2<",
             "-",
             "Lcom/google/zxing/client/result/ParsedResult;",
-            "Lkotlin/m;",
+            "Lkotlin/Unit;",
             ">;)",
             "Lcom/vk/cameraui/BaseCameraUIView;"
         }
@@ -871,7 +871,7 @@
     invoke-direct {v0, p1, p3, p4, p5}, Lcom/vk/cameraui/CameraUIView;-><init>(Landroid/content/Context;ZZLcom/vk/cameraui/CameraUI$b;)V
 
     .line 10
-    invoke-interface {v0, p6}, Lcom/vk/cameraui/CameraUI$e;->setCustomQrListener(Lkotlin/jvm/b/b;)V
+    invoke-interface {v0, p6}, Lcom/vk/cameraui/CameraUI$e;->setCustomQrListener(Lkotlin/jvm/b/Functions2;)V
 
     .line 11
     new-instance p1, Lcom/vk/cameraui/CameraUIPresenter;
@@ -879,7 +879,7 @@
     invoke-direct {p1, v0, p2}, Lcom/vk/cameraui/CameraUIPresenter;-><init>(Lcom/vk/cameraui/CameraUI$e;Lcom/vk/cameraui/builder/CameraParams;)V
 
     .line 12
-    invoke-interface {v0, p1}, Lcom/vk/cameraui/i/b;->setPresenter(Lcom/vk/cameraui/i/a;)V
+    invoke-interface {v0, p1}, Lcom/vk/cameraui/i/BaseView;->setPresenter(Lcom/vk/cameraui/i/BasePresenter;)V
 
     .line 13
     invoke-virtual {p1}, Lcom/vk/cameraui/CameraUIPresenter;->q()V
@@ -1325,7 +1325,7 @@
 
     move-result v6
 
-    invoke-static {p3, v5, v7, v6}, Lcom/vk/core/util/z;->a(Landroid/content/Context;III)Landroid/graphics/Bitmap;
+    invoke-static {p3, v5, v7, v6}, Lcom/vk/core/util/DrawableUtils;->a(Landroid/content/Context;III)Landroid/graphics/Bitmap;
 
     move-result-object v5
 
@@ -1394,7 +1394,7 @@
     const v7, 0x7f080719
 
     .line 92
-    invoke-static {p3, v7, v6, v5}, Lcom/vk/core/util/z;->a(Landroid/content/Context;III)Landroid/graphics/Bitmap;
+    invoke-static {p3, v7, v6, v5}, Lcom/vk/core/util/DrawableUtils;->a(Landroid/content/Context;III)Landroid/graphics/Bitmap;
 
     move-result-object v5
 
@@ -1772,11 +1772,11 @@
     .end annotation
 
     .line 1
-    invoke-static {}, Lcom/vk/bridges/g;->a()Lcom/vk/bridges/f;
+    invoke-static {}, Lcom/vk/bridges/AuthBridge;->a()Lcom/vk/bridges/AuthBridge3;
 
     move-result-object v0
 
-    invoke-interface {v0}, Lcom/vk/bridges/f;->c()Lcom/vk/bridges/a;
+    invoke-interface {v0}, Lcom/vk/bridges/AuthBridge3;->c()Lcom/vk/bridges/AuthBridge1;
 
     move-result-object v0
 
@@ -1791,7 +1791,7 @@
     invoke-virtual {v1, v2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
     .line 4
-    invoke-virtual {v0}, Lcom/vk/bridges/a;->k()Z
+    invoke-virtual {v0}, Lcom/vk/bridges/AuthBridge1;->k()Z
 
     move-result v2
 
@@ -1804,7 +1804,7 @@
 
     .line 6
     :cond_0
-    invoke-direct {p0, v1, v0}, Lcom/vk/cameraui/CameraUI$a;->a(Ljava/util/List;Lcom/vk/bridges/a;)V
+    invoke-direct {p0, v1, v0}, Lcom/vk/cameraui/CameraUI$a;->a(Ljava/util/List;Lcom/vk/bridges/AuthBridge1;)V
 
     return-object v1
 .end method
@@ -1879,11 +1879,11 @@
     .end annotation
 
     .line 1
-    invoke-static {}, Lcom/vk/bridges/g;->a()Lcom/vk/bridges/f;
+    invoke-static {}, Lcom/vk/bridges/AuthBridge;->a()Lcom/vk/bridges/AuthBridge3;
 
     move-result-object v0
 
-    invoke-interface {v0}, Lcom/vk/bridges/f;->c()Lcom/vk/bridges/a;
+    invoke-interface {v0}, Lcom/vk/bridges/AuthBridge3;->c()Lcom/vk/bridges/AuthBridge1;
 
     move-result-object v0
 
@@ -1893,7 +1893,7 @@
     invoke-direct {v1}, Ljava/util/ArrayList;-><init>()V
 
     .line 3
-    invoke-direct {p0, v1, v0}, Lcom/vk/cameraui/CameraUI$a;->a(Ljava/util/List;Lcom/vk/bridges/a;)V
+    invoke-direct {p0, v1, v0}, Lcom/vk/cameraui/CameraUI$a;->a(Ljava/util/List;Lcom/vk/bridges/AuthBridge1;)V
 
     return-object v1
 .end method
@@ -1901,19 +1901,19 @@
 .method public final f()Z
     .locals 3
 
-    invoke-static {}, Lcom/vk/cameraui/CameraUI;->c()Lkotlin/e;
+    invoke-static {}, Lcom/vk/cameraui/CameraUI;->c()Lkotlin/Lazy2;
 
     move-result-object v0
 
     sget-object v1, Lcom/vk/cameraui/CameraUI;->d:Lcom/vk/cameraui/CameraUI$a;
 
-    sget-object v1, Lcom/vk/cameraui/CameraUI$a;->a:[Lkotlin/u/j;
+    sget-object v1, Lcom/vk/cameraui/CameraUI$a;->a:[Lkotlin/u/KProperty5;
 
     const/4 v2, 0x0
 
     aget-object v1, v1, v2
 
-    invoke-interface {v0}, Lkotlin/e;->getValue()Ljava/lang/Object;
+    invoke-interface {v0}, Lkotlin/Lazy2;->getValue()Ljava/lang/Object;
 
     move-result-object v0
 

@@ -3,12 +3,12 @@
 .source "ViewController.kt"
 
 # interfaces
-.implements Lc/a/z/g;
+.implements Lio/reactivex/functions/Consumer;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/photogallery/view/ViewController;->a(Lcom/vk/photogallery/dto/a;I)V
+    value = Lcom/vk/photogallery/view/ViewController;->a(Lcom/vk/photogallery/dto/GalleryState;I)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -22,8 +22,8 @@
         "Ljava/lang/Object;",
         ">",
         "Ljava/lang/Object;",
-        "Lc/a/z/g<",
-        "Lcom/vk/photogallery/dto/m;",
+        "Lio/reactivex/functions/Consumer<",
+        "Lcom/vk/photogallery/dto/GalleryState1;",
         ">;"
     }
 .end annotation
@@ -46,7 +46,7 @@
 
 
 # virtual methods
-.method public final a(Lcom/vk/photogallery/dto/m;)V
+.method public final a(Lcom/vk/photogallery/dto/GalleryState1;)V
     .locals 3
 
     .line 1
@@ -70,11 +70,11 @@
     .line 3
     iget-object v0, p0, Lcom/vk/photogallery/view/ViewController$d;->a:Lcom/vk/photogallery/view/ViewController;
 
-    invoke-static {v0}, Lcom/vk/photogallery/view/ViewController;->a(Lcom/vk/photogallery/view/ViewController;)Lcom/vk/photogallery/dto/d;
+    invoke-static {v0}, Lcom/vk/photogallery/view/ViewController;->a(Lcom/vk/photogallery/view/ViewController;)Lcom/vk/photogallery/dto/GalleryState4;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/vk/photogallery/dto/d;->b()Lcom/vk/photogallery/dto/a;
+    invoke-virtual {v0}, Lcom/vk/photogallery/dto/GalleryState4;->b()Lcom/vk/photogallery/dto/GalleryState;
 
     move-result-object v0
 
@@ -83,15 +83,15 @@
     .line 4
     iget-object v1, p0, Lcom/vk/photogallery/view/ViewController$d;->a:Lcom/vk/photogallery/view/ViewController;
 
-    invoke-static {v1}, Lcom/vk/photogallery/view/ViewController;->a(Lcom/vk/photogallery/view/ViewController;)Lcom/vk/photogallery/dto/d;
+    invoke-static {v1}, Lcom/vk/photogallery/view/ViewController;->a(Lcom/vk/photogallery/view/ViewController;)Lcom/vk/photogallery/dto/GalleryState4;
 
     move-result-object v1
 
     const-string v2, "mediaList"
 
-    invoke-static {p1, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    invoke-virtual {v1, v0, p1}, Lcom/vk/photogallery/dto/d;->a(Lcom/vk/photogallery/dto/a;Lcom/vk/photogallery/dto/m;)V
+    invoke-virtual {v1, v0, p1}, Lcom/vk/photogallery/dto/GalleryState4;->a(Lcom/vk/photogallery/dto/GalleryState;Lcom/vk/photogallery/dto/GalleryState1;)V
 
     .line 5
     iget-object p1, p0, Lcom/vk/photogallery/view/ViewController$d;->a:Lcom/vk/photogallery/view/ViewController;
@@ -102,11 +102,11 @@
 
     iget-object v0, p0, Lcom/vk/photogallery/view/ViewController$d;->a:Lcom/vk/photogallery/view/ViewController;
 
-    invoke-static {v0}, Lcom/vk/photogallery/view/ViewController;->a(Lcom/vk/photogallery/view/ViewController;)Lcom/vk/photogallery/dto/d;
+    invoke-static {v0}, Lcom/vk/photogallery/view/ViewController;->a(Lcom/vk/photogallery/view/ViewController;)Lcom/vk/photogallery/dto/GalleryState4;
 
     move-result-object v0
 
-    invoke-virtual {p1, v0}, Lcom/vk/photogallery/view/PhotoGalleryPageVH;->a(Lcom/vk/photogallery/dto/d;)V
+    invoke-virtual {p1, v0}, Lcom/vk/photogallery/view/PhotoGalleryPageVH;->a(Lcom/vk/photogallery/dto/GalleryState4;)V
 
     .line 6
     iget-object p1, p0, Lcom/vk/photogallery/view/ViewController$d;->a:Lcom/vk/photogallery/view/ViewController;
@@ -123,15 +123,15 @@
 
     iget-object v1, p0, Lcom/vk/photogallery/view/ViewController$d;->a:Lcom/vk/photogallery/view/ViewController;
 
-    invoke-static {v1}, Lcom/vk/photogallery/view/ViewController;->a(Lcom/vk/photogallery/view/ViewController;)Lcom/vk/photogallery/dto/d;
+    invoke-static {v1}, Lcom/vk/photogallery/view/ViewController;->a(Lcom/vk/photogallery/view/ViewController;)Lcom/vk/photogallery/dto/GalleryState4;
 
     move-result-object v1
 
-    invoke-virtual {v1}, Lcom/vk/photogallery/dto/d;->a()Lcom/vk/photogallery/dto/d;
+    invoke-virtual {v1}, Lcom/vk/photogallery/dto/GalleryState4;->a()Lcom/vk/photogallery/dto/GalleryState4;
 
     move-result-object v1
 
-    invoke-interface {p1, v0, v1}, Lcom/vk/photogallery/PhotoGalleryView$Callback;->a(ILcom/vk/photogallery/dto/d;)V
+    invoke-interface {p1, v0, v1}, Lcom/vk/photogallery/PhotoGalleryView$Callback;->a(ILcom/vk/photogallery/dto/GalleryState4;)V
 
     :cond_0
     return-void
@@ -141,9 +141,9 @@
     .locals 0
 
     .line 1
-    check-cast p1, Lcom/vk/photogallery/dto/m;
+    check-cast p1, Lcom/vk/photogallery/dto/GalleryState1;
 
-    invoke-virtual {p0, p1}, Lcom/vk/photogallery/view/ViewController$d;->a(Lcom/vk/photogallery/dto/m;)V
+    invoke-virtual {p0, p1}, Lcom/vk/photogallery/view/ViewController$d;->a(Lcom/vk/photogallery/dto/GalleryState1;)V
 
     return-void
 .end method

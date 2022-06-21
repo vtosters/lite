@@ -34,11 +34,11 @@
 
 .field private F0:Landroid/widget/FrameLayout;
 
-.field private G:Lkotlin/jvm/b/a;
+.field private G:Lkotlin/jvm/b/Functions;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Lkotlin/jvm/b/a<",
-            "Lkotlin/m;",
+            "Lkotlin/jvm/b/Functions<",
+            "Lkotlin/Unit;",
             ">;"
         }
     .end annotation
@@ -46,11 +46,11 @@
 
 .field private G0:Landroid/view/View;
 
-.field private H:Lkotlin/jvm/b/a;
+.field private H:Lkotlin/jvm/b/Functions;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Lkotlin/jvm/b/a<",
-            "Lkotlin/m;",
+            "Lkotlin/jvm/b/Functions<",
+            "Lkotlin/Unit;",
             ">;"
         }
     .end annotation
@@ -58,13 +58,13 @@
 
 .field private H0:Landroid/view/View;
 
-.field private I:Lkotlin/jvm/b/b;
+.field private I:Lkotlin/jvm/b/Functions2;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Lkotlin/jvm/b/b<",
+            "Lkotlin/jvm/b/Functions2<",
             "-",
             "Ljava/lang/String;",
-            "Lkotlin/m;",
+            "Lkotlin/Unit;",
             ">;"
         }
     .end annotation
@@ -72,17 +72,17 @@
 
 .field private I0:Landroid/view/View;
 
-.field private J:Lkotlin/jvm/b/b;
+.field private J:Lkotlin/jvm/b/Functions2;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Lkotlin/jvm/b/b<",
+            "Lkotlin/jvm/b/Functions2<",
             "-",
-            "Lkotlin/jvm/b/b<",
+            "Lkotlin/jvm/b/Functions2<",
             "-",
             "Ljava/lang/Boolean;",
-            "Lkotlin/m;",
+            "Lkotlin/Unit;",
             ">;",
-            "Lkotlin/m;",
+            "Lkotlin/Unit;",
             ">;"
         }
     .end annotation
@@ -230,7 +230,7 @@
 
 .field private t0:Lcom/vk/imageloader/view/VKImageView;
 
-.field private u0:Lio/reactivex/disposables/b;
+.field private u0:Lio/reactivex/disposables/Disposable;
 
 .field private v0:Z
 
@@ -392,7 +392,7 @@
 
     const-string v1, "findViewById(R.id.fl_answer)"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     check-cast v0, Landroid/widget/FrameLayout;
 
@@ -407,7 +407,7 @@
 
     const-string v1, "findViewById(R.id.ll_own_mic_cam)"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     check-cast v0, Landroid/view/ViewGroup;
 
@@ -422,7 +422,7 @@
 
     const-string v1, "findViewById(R.id.iv_own_mic_off)"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     check-cast v0, Landroid/widget/ImageView;
 
@@ -437,7 +437,7 @@
 
     const-string v1, "findViewById(R.id.iv_own_cam_off)"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     check-cast v0, Landroid/widget/ImageView;
 
@@ -452,7 +452,7 @@
 
     const-string v1, "findViewById(R.id.ll_remote_mic_cam)"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     check-cast v0, Landroid/view/ViewGroup;
 
@@ -467,7 +467,7 @@
 
     const-string v1, "findViewById(R.id.iv_remote_mic_off)"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     check-cast v0, Landroid/widget/ImageView;
 
@@ -482,7 +482,7 @@
 
     const-string v1, "findViewById(R.id.iv_remote_cam_off)"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     check-cast v0, Landroid/widget/ImageView;
 
@@ -499,7 +499,7 @@
 
     const-string v1, "frameLayoutAnswer.findVi\u2026Id(R.id.btn_accept_audio)"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     check-cast v0, Lcom/vk/voip/VoipTextButton;
 
@@ -510,7 +510,7 @@
 
     sget-object v1, Lcom/vk/voip/VoipCallView$1;->a:Lcom/vk/voip/VoipCallView$1;
 
-    invoke-virtual {v0, v1}, Lcom/vk/voip/VoipTextButton;->setOnButtonClickCallback(Lkotlin/jvm/b/a;)V
+    invoke-virtual {v0, v1}, Lcom/vk/voip/VoipTextButton;->setOnButtonClickCallback(Lkotlin/jvm/b/Functions;)V
 
     .line 30
     iget-object v0, p0, Lcom/vk/voip/VoipCallView;->O0:Landroid/widget/FrameLayout;
@@ -523,7 +523,7 @@
 
     const-string v1, "frameLayoutAnswer.findVi\u2026Id(R.id.btn_decline_call)"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     check-cast v0, Lcom/vk/voip/VoipTextButton;
 
@@ -534,7 +534,7 @@
 
     sget-object v1, Lcom/vk/voip/VoipCallView$2;->a:Lcom/vk/voip/VoipCallView$2;
 
-    invoke-virtual {v0, v1}, Lcom/vk/voip/VoipTextButton;->setOnButtonClickCallback(Lkotlin/jvm/b/a;)V
+    invoke-virtual {v0, v1}, Lcom/vk/voip/VoipTextButton;->setOnButtonClickCallback(Lkotlin/jvm/b/Functions;)V
 
     .line 32
     iget-object v0, p0, Lcom/vk/voip/VoipCallView;->O0:Landroid/widget/FrameLayout;
@@ -547,7 +547,7 @@
 
     const-string v1, "frameLayoutAnswer.findVi\u2026id.btn_accept_video_call)"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     check-cast v0, Lcom/vk/voip/VoipTextButton;
 
@@ -558,7 +558,7 @@
 
     sget-object v1, Lcom/vk/voip/VoipCallView$3;->a:Lcom/vk/voip/VoipCallView$3;
 
-    invoke-virtual {v0, v1}, Lcom/vk/voip/VoipTextButton;->setOnButtonClickCallback(Lkotlin/jvm/b/a;)V
+    invoke-virtual {v0, v1}, Lcom/vk/voip/VoipTextButton;->setOnButtonClickCallback(Lkotlin/jvm/b/Functions;)V
 
     .line 34
     iget-object v0, p0, Lcom/vk/voip/VoipCallView;->O0:Landroid/widget/FrameLayout;
@@ -571,7 +571,7 @@
 
     const-string v1, "frameLayoutAnswer.findVi\u2026id.btn_accept_audio_call)"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     check-cast v0, Lcom/vk/voip/VoipTextButton;
 
@@ -582,7 +582,7 @@
 
     sget-object v1, Lcom/vk/voip/VoipCallView$4;->a:Lcom/vk/voip/VoipCallView$4;
 
-    invoke-virtual {v0, v1}, Lcom/vk/voip/VoipTextButton;->setOnButtonClickCallback(Lkotlin/jvm/b/a;)V
+    invoke-virtual {v0, v1}, Lcom/vk/voip/VoipTextButton;->setOnButtonClickCallback(Lkotlin/jvm/b/Functions;)V
 
     .line 36
     iget-object v0, p0, Lcom/vk/voip/VoipCallView;->O0:Landroid/widget/FrameLayout;
@@ -595,7 +595,7 @@
 
     const-string v1, "frameLayoutAnswer.findVi\u2026d.btn_decline_video_call)"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     check-cast v0, Lcom/vk/voip/VoipTextButton;
 
@@ -606,7 +606,7 @@
 
     sget-object v1, Lcom/vk/voip/VoipCallView$5;->a:Lcom/vk/voip/VoipCallView$5;
 
-    invoke-virtual {v0, v1}, Lcom/vk/voip/VoipTextButton;->setOnButtonClickCallback(Lkotlin/jvm/b/a;)V
+    invoke-virtual {v0, v1}, Lcom/vk/voip/VoipTextButton;->setOnButtonClickCallback(Lkotlin/jvm/b/Functions;)V
 
     .line 38
     iget-object v0, p0, Lcom/vk/voip/VoipCallView;->O0:Landroid/widget/FrameLayout;
@@ -619,7 +619,7 @@
 
     const-string v1, "frameLayoutAnswer.findVi\u2026yId(R.id.fl_answer_audio)"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     check-cast v0, Landroid/widget/FrameLayout;
 
@@ -636,7 +636,7 @@
 
     const-string v1, "frameLayoutAnswer.findVi\u2026yId(R.id.fl_answer_video)"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     check-cast v0, Landroid/widget/FrameLayout;
 
@@ -651,7 +651,7 @@
 
     const-string v1, "findViewById(R.id.iv_vk_logo)"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     check-cast v0, Landroid/widget/ImageView;
 
@@ -666,7 +666,7 @@
 
     const-string v1, "findViewById(R.id.tv_peer_name)"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     check-cast v0, Landroid/widget/TextView;
 
@@ -692,7 +692,7 @@
 
     const-string v1, "findViewById(R.id.tv_subtitle)"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     check-cast v0, Landroid/widget/TextView;
 
@@ -707,7 +707,7 @@
 
     const-string v1, "findViewById(R.id.iv_peer_photo)"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     check-cast v0, Lcom/vk/imageloader/view/VKImageView;
 
@@ -722,7 +722,7 @@
 
     const-string v1, "findViewById(R.id.iv_peer_big_blurred_photo)"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     check-cast v0, Lcom/vk/imageloader/view/VKImageView;
 
@@ -731,7 +731,7 @@
     .line 46
     iget-object v0, p0, Lcom/vk/voip/VoipCallView;->M:Lcom/vk/imageloader/view/VKImageView;
 
-    new-instance v1, Lb/h/g/n/b/a;
+    new-instance v1, Lb/h/g/n/b/BlurTransform;
 
     const/16 v2, 0xa
 
@@ -741,9 +741,9 @@
 
     iget v3, p0, Lcom/vk/voip/VoipCallView;->c:I
 
-    invoke-direct {v1, v2, v3}, Lb/h/g/n/b/a;-><init>(II)V
+    invoke-direct {v1, v2, v3}, Lb/h/g/n/b/BlurTransform;-><init>(II)V
 
-    invoke-virtual {v0, v1}, Lcom/vk/imageloader/view/VKImageView;->setPostprocessor(Lcom/facebook/imagepipeline/request/a;)V
+    invoke-virtual {v0, v1}, Lcom/vk/imageloader/view/VKImageView;->setPostprocessor(Lcom/facebook/imagepipeline/request/BasePostprocessor;)V
 
     .line 47
     iget-object v0, p0, Lcom/vk/voip/VoipCallView;->M:Lcom/vk/imageloader/view/VKImageView;
@@ -763,7 +763,7 @@
 
     const-string v1, "findViewById(R.id.btn_disable_mic)"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     check-cast v0, Landroid/widget/ImageView;
 
@@ -785,7 +785,7 @@
 
     const-string v1, "findViewById(R.id.btn_cam)"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     check-cast v0, Landroid/widget/ImageView;
 
@@ -807,7 +807,7 @@
 
     const-string v1, "findViewById(R.id.btn_loudspeaker)"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     check-cast v0, Landroid/widget/ImageView;
 
@@ -829,7 +829,7 @@
 
     const-string v1, "findViewById(R.id.btn_switch_cam)"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     check-cast v0, Landroid/widget/ImageView;
 
@@ -860,7 +860,7 @@
 
     const-string v2, "findViewById(R.id.fl_render_container_big)"
 
-    invoke-static {v0, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     check-cast v0, Landroid/widget/FrameLayout;
 
@@ -898,7 +898,7 @@
 
     const-string v4, "findViewById(R.id.fl_render_container_thumb)"
 
-    invoke-static {v2, v4}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v2, v4}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     check-cast v2, Landroid/widget/FrameLayout;
 
@@ -944,7 +944,7 @@
 
     const-string v1, "findViewById(R.id.iv_shield)"
 
-    invoke-static {p1, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     check-cast p1, Landroid/widget/ImageView;
 
@@ -968,7 +968,7 @@
 
     const-string v1, "findViewById(R.id.iv_thumb_preview)"
 
-    invoke-static {p1, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     check-cast p1, Lcom/vk/imageloader/view/VKImageView;
 
@@ -977,7 +977,7 @@
     .line 70
     iget-object p1, p0, Lcom/vk/voip/VoipCallView;->s0:Lcom/vk/imageloader/view/VKImageView;
 
-    new-instance v1, Lb/h/g/n/b/a;
+    new-instance v1, Lb/h/g/n/b/BlurTransform;
 
     const/4 v3, 0x2
 
@@ -987,18 +987,18 @@
 
     iget v5, p0, Lcom/vk/voip/VoipCallView;->c:I
 
-    invoke-direct {v1, v4, v5}, Lb/h/g/n/b/a;-><init>(II)V
+    invoke-direct {v1, v4, v5}, Lb/h/g/n/b/BlurTransform;-><init>(II)V
 
-    invoke-virtual {p1, v1}, Lcom/vk/imageloader/view/VKImageView;->setPostprocessor(Lcom/facebook/imagepipeline/request/a;)V
+    invoke-virtual {p1, v1}, Lcom/vk/imageloader/view/VKImageView;->setPostprocessor(Lcom/facebook/imagepipeline/request/BasePostprocessor;)V
 
     .line 71
     iget-object p1, p0, Lcom/vk/voip/VoipCallView;->s0:Lcom/vk/imageloader/view/VKImageView;
 
-    invoke-static {}, Lcom/vk/bridges/g;->a()Lcom/vk/bridges/f;
+    invoke-static {}, Lcom/vk/bridges/AuthBridge;->a()Lcom/vk/bridges/AuthBridge3;
 
     move-result-object v1
 
-    invoke-interface {v1}, Lcom/vk/bridges/f;->h()Lcom/vk/bridges/Account;
+    invoke-interface {v1}, Lcom/vk/bridges/AuthBridge3;->h()Lcom/vk/bridges/Account;
 
     move-result-object v1
 
@@ -1017,7 +1017,7 @@
 
     const-string v1, "findViewById(R.id.iv_remote_stub)"
 
-    invoke-static {p1, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     check-cast p1, Lcom/vk/imageloader/view/VKImageView;
 
@@ -1026,7 +1026,7 @@
     .line 73
     iget-object p1, p0, Lcom/vk/voip/VoipCallView;->t0:Lcom/vk/imageloader/view/VKImageView;
 
-    new-instance v1, Lb/h/g/n/b/a;
+    new-instance v1, Lb/h/g/n/b/BlurTransform;
 
     invoke-static {v3}, Lcom/vk/core/util/Screen;->a(I)I
 
@@ -1034,9 +1034,9 @@
 
     iget v4, p0, Lcom/vk/voip/VoipCallView;->c:I
 
-    invoke-direct {v1, v3, v4}, Lb/h/g/n/b/a;-><init>(II)V
+    invoke-direct {v1, v3, v4}, Lb/h/g/n/b/BlurTransform;-><init>(II)V
 
-    invoke-virtual {p1, v1}, Lcom/vk/imageloader/view/VKImageView;->setPostprocessor(Lcom/facebook/imagepipeline/request/a;)V
+    invoke-virtual {p1, v1}, Lcom/vk/imageloader/view/VKImageView;->setPostprocessor(Lcom/facebook/imagepipeline/request/BasePostprocessor;)V
 
     .line 74
     new-instance p1, Lcom/vk/voip/VoipViewBehaviour;
@@ -1045,7 +1045,7 @@
 
     const-string v3, "thumbTouchOverlay"
 
-    invoke-static {v2, v3}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v2, v3}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     iget-boolean v3, p0, Lcom/vk/voip/VoipCallView;->m1:Z
 
@@ -1076,7 +1076,7 @@
 
     const-string v2, "bigTouchOverlay"
 
-    invoke-static {v0, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     iget-boolean v2, p0, Lcom/vk/voip/VoipCallView;->m1:Z
 
@@ -1107,7 +1107,7 @@
 
     invoke-direct {v0, p0}, Lcom/vk/voip/VoipCallView$12;-><init>(Lcom/vk/voip/VoipCallView;)V
 
-    invoke-virtual {p1, v0}, Lcom/vk/voip/VoipViewBehaviour;->b(Lkotlin/jvm/b/a;)V
+    invoke-virtual {p1, v0}, Lcom/vk/voip/VoipViewBehaviour;->b(Lkotlin/jvm/b/Functions;)V
 
     .line 77
     iget-object p1, p0, Lcom/vk/voip/VoipCallView;->U:Lcom/vk/voip/VoipViewBehaviour;
@@ -1116,7 +1116,7 @@
 
     invoke-direct {v0, p0}, Lcom/vk/voip/VoipCallView$13;-><init>(Lcom/vk/voip/VoipCallView;)V
 
-    invoke-virtual {p1, v0}, Lcom/vk/voip/VoipViewBehaviour;->c(Lkotlin/jvm/b/a;)V
+    invoke-virtual {p1, v0}, Lcom/vk/voip/VoipViewBehaviour;->c(Lkotlin/jvm/b/Functions;)V
 
     .line 78
     iget-object p1, p0, Lcom/vk/voip/VoipCallView;->U:Lcom/vk/voip/VoipViewBehaviour;
@@ -1125,7 +1125,7 @@
 
     invoke-direct {v0, p0}, Lcom/vk/voip/VoipCallView$14;-><init>(Lcom/vk/voip/VoipCallView;)V
 
-    invoke-virtual {p1, v0}, Lcom/vk/voip/VoipViewBehaviour;->a(Lkotlin/jvm/b/a;)V
+    invoke-virtual {p1, v0}, Lcom/vk/voip/VoipViewBehaviour;->a(Lkotlin/jvm/b/Functions;)V
 
     .line 79
     iget-object p1, p0, Lcom/vk/voip/VoipCallView;->V:Lcom/vk/voip/VoipViewBehaviour;
@@ -1134,7 +1134,7 @@
 
     invoke-direct {v0, p0}, Lcom/vk/voip/VoipCallView$15;-><init>(Lcom/vk/voip/VoipCallView;)V
 
-    invoke-virtual {p1, v0}, Lcom/vk/voip/VoipViewBehaviour;->b(Lkotlin/jvm/b/a;)V
+    invoke-virtual {p1, v0}, Lcom/vk/voip/VoipViewBehaviour;->b(Lkotlin/jvm/b/Functions;)V
 
     .line 80
     iget-object p1, p0, Lcom/vk/voip/VoipCallView;->V:Lcom/vk/voip/VoipViewBehaviour;
@@ -1143,7 +1143,7 @@
 
     invoke-direct {v0, p0}, Lcom/vk/voip/VoipCallView$16;-><init>(Lcom/vk/voip/VoipCallView;)V
 
-    invoke-virtual {p1, v0}, Lcom/vk/voip/VoipViewBehaviour;->c(Lkotlin/jvm/b/a;)V
+    invoke-virtual {p1, v0}, Lcom/vk/voip/VoipViewBehaviour;->c(Lkotlin/jvm/b/Functions;)V
 
     .line 81
     iget-object p1, p0, Lcom/vk/voip/VoipCallView;->V:Lcom/vk/voip/VoipViewBehaviour;
@@ -1152,7 +1152,7 @@
 
     invoke-direct {v0, p0}, Lcom/vk/voip/VoipCallView$17;-><init>(Lcom/vk/voip/VoipCallView;)V
 
-    invoke-virtual {p1, v0}, Lcom/vk/voip/VoipViewBehaviour;->a(Lkotlin/jvm/b/a;)V
+    invoke-virtual {p1, v0}, Lcom/vk/voip/VoipViewBehaviour;->a(Lkotlin/jvm/b/Functions;)V
 
     const p1, 0x7f0a0fa0
 
@@ -1163,7 +1163,7 @@
 
     const-string v0, "findViewById(R.id.voip_camera_surface)"
 
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     check-cast p1, Landroid/view/SurfaceView;
 
@@ -1178,7 +1178,7 @@
 
     const-string v0, "findViewById(R.id.ll_scrims)"
 
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     check-cast p1, Landroid/view/ViewGroup;
 
@@ -1195,7 +1195,7 @@
 
     const-string v0, "layoutScrims.findViewById(R.id.scrim_top)"
 
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     iput-object p1, p0, Lcom/vk/voip/VoipCallView;->e0:Landroid/view/View;
 
@@ -1210,7 +1210,7 @@
 
     const-string v0, "layoutScrims.findViewById(R.id.scrim_bottom)"
 
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     const p1, 0x7f0a0e0b
 
@@ -1221,7 +1221,7 @@
 
     const-string v0, "findViewById(R.id.tv_peer_name_minimized)"
 
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     check-cast p1, Landroid/widget/TextView;
 
@@ -1236,7 +1236,7 @@
 
     const-string v0, "findViewById(R.id.tv_subtitle_minimized)"
 
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     check-cast p1, Landroid/widget/TextView;
 
@@ -1251,7 +1251,7 @@
 
     const-string v0, "findViewById(R.id.iv_progress_minimized)"
 
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     check-cast p1, Landroid/widget/ImageView;
 
@@ -1260,9 +1260,9 @@
     .line 89
     iget-object p1, p0, Lcom/vk/voip/VoipCallView;->i0:Landroid/widget/ImageView;
 
-    new-instance v0, Lcom/vk/voip/h;
+    new-instance v0, Lcom/vk/voip/TypingDrawable;
 
-    invoke-direct {v0, p2}, Lcom/vk/voip/h;-><init>(I)V
+    invoke-direct {v0, p2}, Lcom/vk/voip/TypingDrawable;-><init>(I)V
 
     invoke-virtual {p1, v0}, Landroid/widget/ImageView;->setImageDrawable(Landroid/graphics/drawable/Drawable;)V
 
@@ -1275,7 +1275,7 @@
 
     const-string p2, "findViewById(R.id.iv_peer_photo_minimized)"
 
-    invoke-static {p1, p2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, p2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     check-cast p1, Lcom/vk/imageloader/view/VKImageView;
 
@@ -1290,7 +1290,7 @@
 
     const-string p2, "findViewById(R.id.fl_peer_photo_min)"
 
-    invoke-static {p1, p2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, p2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     check-cast p1, Landroid/view/ViewGroup;
 
@@ -1305,7 +1305,7 @@
 
     const-string p2, "findViewById(R.id.iv_fullscreen_minimized)"
 
-    invoke-static {p1, p2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, p2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     check-cast p1, Landroid/widget/ImageView;
 
@@ -1320,7 +1320,7 @@
 
     const-string p2, "findViewById(R.id.iv_drop_call_minimized)"
 
-    invoke-static {p1, p2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, p2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     check-cast p1, Landroid/widget/ImageView;
 
@@ -1351,7 +1351,7 @@
 
     const-string p2, "findViewById(R.id.btn_decline_ongoing)"
 
-    invoke-static {p1, p2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, p2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     check-cast p1, Landroid/widget/ImageView;
 
@@ -1373,7 +1373,7 @@
 
     const-string p2, "findViewById(R.id.ll_bottom_buttons)"
 
-    invoke-static {p1, p2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, p2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     iput-object p1, p0, Lcom/vk/voip/VoipCallView;->o0:Landroid/view/View;
 
@@ -1386,7 +1386,7 @@
 
     const-string p2, "findViewById(R.id.fl_controls)"
 
-    invoke-static {p1, p2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, p2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     check-cast p1, Landroid/widget/FrameLayout;
 
@@ -1401,7 +1401,7 @@
 
     const-string p2, "findViewById(R.id.btn_back)"
 
-    invoke-static {p1, p2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, p2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     iput-object p1, p0, Lcom/vk/voip/VoipCallView;->p0:Landroid/view/View;
 
@@ -1423,7 +1423,7 @@
 
     const-string p2, "findViewById(R.id.fl_callback_actions)"
 
-    invoke-static {p1, p2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, p2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     check-cast p1, Landroid/widget/FrameLayout;
 
@@ -1438,7 +1438,7 @@
 
     const-string p2, "findViewById(R.id.fl_video_request_actions)"
 
-    invoke-static {p1, p2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, p2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     check-cast p1, Landroid/widget/FrameLayout;
 
@@ -1457,7 +1457,7 @@
 
     invoke-direct {p2, p0}, Lcom/vk/voip/VoipCallView$22;-><init>(Lcom/vk/voip/VoipCallView;)V
 
-    invoke-virtual {p1, p2}, Lcom/vk/voip/VoipTextButton;->setOnButtonClickCallback(Lkotlin/jvm/b/a;)V
+    invoke-virtual {p1, p2}, Lcom/vk/voip/VoipTextButton;->setOnButtonClickCallback(Lkotlin/jvm/b/Functions;)V
 
     const p1, 0x7f0a01c5
 
@@ -1470,7 +1470,7 @@
 
     sget-object p2, Lcom/vk/voip/VoipCallView$23;->a:Lcom/vk/voip/VoipCallView$23;
 
-    invoke-virtual {p1, p2}, Lcom/vk/voip/VoipTextButton;->setOnButtonClickCallback(Lkotlin/jvm/b/a;)V
+    invoke-virtual {p1, p2}, Lcom/vk/voip/VoipTextButton;->setOnButtonClickCallback(Lkotlin/jvm/b/Functions;)V
 
     const p1, 0x7f0a01cb
 
@@ -1483,7 +1483,7 @@
 
     sget-object p2, Lcom/vk/voip/VoipCallView$24;->a:Lcom/vk/voip/VoipCallView$24;
 
-    invoke-virtual {p1, p2}, Lcom/vk/voip/VoipTextButton;->setOnButtonClickCallback(Lkotlin/jvm/b/a;)V
+    invoke-virtual {p1, p2}, Lcom/vk/voip/VoipTextButton;->setOnButtonClickCallback(Lkotlin/jvm/b/Functions;)V
 
     const p1, 0x7f0a01c8
 
@@ -1494,7 +1494,7 @@
 
     const-string p2, "findViewById(R.id.btn_callback)"
 
-    invoke-static {p1, p2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, p2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     iput-object p1, p0, Lcom/vk/voip/VoipCallView;->I0:Landroid/view/View;
 
@@ -1509,7 +1509,7 @@
 
     sget-object v0, Lcom/vk/voip/VoipCallView$25;->a:Lcom/vk/voip/VoipCallView$25;
 
-    invoke-virtual {p1, v0}, Lcom/vk/voip/VoipTextButton;->setOnButtonClickCallback(Lkotlin/jvm/b/a;)V
+    invoke-virtual {p1, v0}, Lcom/vk/voip/VoipTextButton;->setOnButtonClickCallback(Lkotlin/jvm/b/Functions;)V
 
     const p1, 0x7f0a01c9
 
@@ -1520,7 +1520,7 @@
 
     const-string v0, "findViewById(R.id.btn_callback_video)"
 
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     iput-object p1, p0, Lcom/vk/voip/VoipCallView;->J0:Landroid/view/View;
 
@@ -1533,7 +1533,7 @@
 
     sget-object p2, Lcom/vk/voip/VoipCallView$26;->a:Lcom/vk/voip/VoipCallView$26;
 
-    invoke-virtual {p1, p2}, Lcom/vk/voip/VoipTextButton;->setOnButtonClickCallback(Lkotlin/jvm/b/a;)V
+    invoke-virtual {p1, p2}, Lcom/vk/voip/VoipTextButton;->setOnButtonClickCallback(Lkotlin/jvm/b/Functions;)V
 
     const p1, 0x7f0a0775
 
@@ -1544,7 +1544,7 @@
 
     const-string p2, "findViewById(R.id.ll_top)"
 
-    invoke-static {p1, p2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, p2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     check-cast p1, Landroid/view/ViewGroup;
 
@@ -1559,7 +1559,7 @@
 
     const-string p2, "findViewById(R.id.fl_peer_photo)"
 
-    invoke-static {p1, p2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, p2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     check-cast p1, Landroid/widget/FrameLayout;
 
@@ -1574,7 +1574,7 @@
 
     const-string p2, "findViewById(R.id.peer_photo_bg_circle_one)"
 
-    invoke-static {p1, p2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, p2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     iput-object p1, p0, Lcom/vk/voip/VoipCallView;->G0:Landroid/view/View;
 
@@ -1587,7 +1587,7 @@
 
     const-string p2, "findViewById(R.id.peer_photo_bg_circle_two)"
 
-    invoke-static {p1, p2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, p2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     iput-object p1, p0, Lcom/vk/voip/VoipCallView;->H0:Landroid/view/View;
 
@@ -1600,7 +1600,7 @@
 
     const-string p2, "findViewById(R.id.tv_notification)"
 
-    invoke-static {p1, p2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, p2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     check-cast p1, Landroid/widget/TextView;
 
@@ -1615,7 +1615,7 @@
 
     const-string p2, "findViewById(R.id.screen_overlay)"
 
-    invoke-static {p1, p2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, p2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     iput-object p1, p0, Lcom/vk/voip/VoipCallView;->L0:Landroid/view/View;
 
@@ -1725,7 +1725,7 @@
 
     sget-object v0, Lcom/vk/voip/VoipCallView$28;->a:Lcom/vk/voip/VoipCallView$28;
 
-    invoke-virtual {p1, v0}, Lcom/vk/voip/VoipTextButton;->setOnButtonClickCallback(Lkotlin/jvm/b/a;)V
+    invoke-virtual {p1, v0}, Lcom/vk/voip/VoipTextButton;->setOnButtonClickCallback(Lkotlin/jvm/b/Functions;)V
 
     .line 130
     iget-object p1, p0, Lcom/vk/voip/VoipCallView;->b1:Lcom/vk/voip/VoipTextButton;
@@ -1734,19 +1734,19 @@
 
     sget-object p2, Lcom/vk/voip/VoipCallView$29;->a:Lcom/vk/voip/VoipCallView$29;
 
-    invoke-virtual {p1, p2}, Lcom/vk/voip/VoipTextButton;->setOnButtonClickCallback(Lkotlin/jvm/b/a;)V
+    invoke-virtual {p1, p2}, Lcom/vk/voip/VoipTextButton;->setOnButtonClickCallback(Lkotlin/jvm/b/Functions;)V
 
     :goto_4
     return-void
 
     :cond_5
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     throw p2
 
     .line 131
     :cond_6
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     throw p2
 
@@ -1812,9 +1812,9 @@
     if-eqz p1, :cond_0
 
     .line 10
-    sget-object v0, Lcom/vk/voip/j;->b:Lcom/vk/voip/j;
+    sget-object v0, Lcom/vk/voip/VoipAnimatorHelper;->b:Lcom/vk/voip/VoipAnimatorHelper;
 
-    invoke-virtual {v0, p1, p2, p3, p4}, Lcom/vk/voip/j;->a(Landroid/view/View;ZZZ)V
+    invoke-virtual {v0, p1, p2, p3, p4}, Lcom/vk/voip/VoipAnimatorHelper;->a(Landroid/view/View;ZZZ)V
 
     :cond_0
     return-void
@@ -2057,9 +2057,9 @@
     goto :goto_0
 
     :cond_1
-    sget-object v0, Lcom/vk/voip/p;->l:Lcom/vk/voip/p;
+    sget-object v0, Lcom/vk/voip/VoipOrientationListener;->l:Lcom/vk/voip/VoipOrientationListener;
 
-    invoke-virtual {v0}, Lcom/vk/voip/p;->b()I
+    invoke-virtual {v0}, Lcom/vk/voip/VoipOrientationListener;->b()I
 
     move-result v0
 
@@ -2087,7 +2087,7 @@
     if-eqz v7, :cond_4
 
     .line 6
-    sget-object v2, Lcom/vk/voip/j;->b:Lcom/vk/voip/j;
+    sget-object v2, Lcom/vk/voip/VoipAnimatorHelper;->b:Lcom/vk/voip/VoipAnimatorHelper;
 
     iget v4, p0, Lcom/vk/voip/VoipCallView;->N0:I
 
@@ -2161,7 +2161,7 @@
 
     aput-object v9, v8, v3
 
-    invoke-virtual {v2, v4, v5, v6, v8}, Lcom/vk/voip/j;->a(FJ[Landroid/view/View;)V
+    invoke-virtual {v2, v4, v5, v6, v8}, Lcom/vk/voip/VoipAnimatorHelper;->a(FJ[Landroid/view/View;)V
 
     .line 7
     iget-object v2, p0, Lcom/vk/voip/VoipCallView;->z0:Landroid/view/ViewGroup;
@@ -2206,7 +2206,7 @@
 
     .line 10
     :cond_3
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     throw v3
 
@@ -2216,7 +2216,7 @@
 
     .line 11
     :cond_5
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     throw v3
 .end method
@@ -2244,7 +2244,7 @@
 
     .line 3
     :cond_0
-    sget-object v1, Lcom/vk/voip/j;->b:Lcom/vk/voip/j;
+    sget-object v1, Lcom/vk/voip/VoipAnimatorHelper;->b:Lcom/vk/voip/VoipAnimatorHelper;
 
     const/4 v2, 0x3
 
@@ -2272,10 +2272,10 @@
 
     const/4 v6, 0x0
 
-    invoke-virtual {v1, v6, v3, v2}, Lcom/vk/voip/j;->a(FF[Landroid/view/View;)V
+    invoke-virtual {v1, v6, v3, v2}, Lcom/vk/voip/VoipAnimatorHelper;->a(FF[Landroid/view/View;)V
 
     .line 4
-    sget-object v7, Lcom/vk/voip/j;->b:Lcom/vk/voip/j;
+    sget-object v7, Lcom/vk/voip/VoipAnimatorHelper;->b:Lcom/vk/voip/VoipAnimatorHelper;
 
     iget-object v8, v0, Lcom/vk/voip/VoipCallView;->z0:Landroid/view/ViewGroup;
 
@@ -2315,7 +2315,7 @@
 
     const/16 v17, 0x0
 
-    invoke-static/range {v7 .. v17}, Lcom/vk/voip/j;->a(Lcom/vk/voip/j;Landroid/view/View;Ljava/lang/Float;Ljava/lang/Float;Ljava/lang/Float;Ljava/lang/Float;Ljava/lang/Float;Lkotlin/jvm/b/a;ZILjava/lang/Object;)V
+    invoke-static/range {v7 .. v17}, Lcom/vk/voip/VoipAnimatorHelper;->a(Lcom/vk/voip/VoipAnimatorHelper;Landroid/view/View;Ljava/lang/Float;Ljava/lang/Float;Ljava/lang/Float;Ljava/lang/Float;Ljava/lang/Float;Lkotlin/jvm/b/Functions;ZILjava/lang/Object;)V
 
     .line 5
     iget-object v1, v0, Lcom/vk/voip/VoipCallView;->f0:Landroid/widget/ImageView;
@@ -2369,9 +2369,9 @@
 
     move-result v0
 
-    sget-object v1, Lcom/vk/voip/p;->l:Lcom/vk/voip/p;
+    sget-object v1, Lcom/vk/voip/VoipOrientationListener;->l:Lcom/vk/voip/VoipOrientationListener;
 
-    invoke-virtual {v1}, Lcom/vk/voip/p;->b()I
+    invoke-virtual {v1}, Lcom/vk/voip/VoipOrientationListener;->b()I
 
     move-result v1
 
@@ -2384,7 +2384,7 @@
     invoke-virtual {v1, v0}, Lcom/vk/voip/VoipViewBehaviour;->a(I)V
 
     .line 5
-    sget-object v1, Lcom/vk/voip/j;->b:Lcom/vk/voip/j;
+    sget-object v1, Lcom/vk/voip/VoipAnimatorHelper;->b:Lcom/vk/voip/VoipAnimatorHelper;
 
     int-to-float v0, v0
 
@@ -2414,7 +2414,7 @@
 
     aput-object v6, v4, v5
 
-    invoke-virtual {v1, v0, v2, v3, v4}, Lcom/vk/voip/j;->a(FJ[Landroid/view/View;)V
+    invoke-virtual {v1, v0, v2, v3, v4}, Lcom/vk/voip/VoipAnimatorHelper;->a(FJ[Landroid/view/View;)V
 
     :cond_1
     return-void
@@ -2453,7 +2453,7 @@
 
     const-string v2, "findViewById<View>(R.id.fl_top_panel)"
 
-    invoke-static {v0, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {v0, v1}, Landroid/view/View;->setVisibility(I)V
 
@@ -2733,7 +2733,7 @@
 
     move-result-object v0
 
-    invoke-static {v0, v6}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v6}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 6
     :cond_1
@@ -2754,7 +2754,7 @@
 
     move-result-object v0
 
-    invoke-static {v0, v4}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v4}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 8
     :cond_2
@@ -2783,7 +2783,7 @@
 
     move-result-object v0
 
-    invoke-static {v0, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     goto :goto_0
 
@@ -2806,7 +2806,7 @@
 
     move-result-object v0
 
-    invoke-static {v0, v6}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v6}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 12
     :cond_4
@@ -2827,7 +2827,7 @@
 
     move-result-object v0
 
-    invoke-static {v0, v4}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v4}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 14
     :cond_5
@@ -2856,7 +2856,7 @@
 
     move-result-object v0
 
-    invoke-static {v0, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 16
     :cond_6
@@ -2874,7 +2874,7 @@
 
     const-string v1, "textViewNotification.text"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-static {v0}, Lkotlin/text/l;->a(Ljava/lang/CharSequence;)Z
 
@@ -2906,7 +2906,7 @@
 
     move-result-object v5
 
-    invoke-static {v5, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v5, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-static {v5}, Lkotlin/text/l;->a(Ljava/lang/CharSequence;)Z
 
@@ -3172,7 +3172,7 @@
     if-lez v1, :cond_0
 
     .line 4
-    sget-object v2, Lcom/vk/voip/j;->b:Lcom/vk/voip/j;
+    sget-object v2, Lcom/vk/voip/VoipAnimatorHelper;->b:Lcom/vk/voip/VoipAnimatorHelper;
 
     iget-object v3, p0, Lcom/vk/voip/VoipCallView;->F0:Landroid/widget/FrameLayout;
 
@@ -3208,7 +3208,7 @@
 
     const/4 v12, 0x0
 
-    invoke-static/range {v2 .. v12}, Lcom/vk/voip/j;->a(Lcom/vk/voip/j;Landroid/view/View;Ljava/lang/Float;Ljava/lang/Float;Ljava/lang/Float;Ljava/lang/Float;Ljava/lang/Float;Lkotlin/jvm/b/a;ZILjava/lang/Object;)V
+    invoke-static/range {v2 .. v12}, Lcom/vk/voip/VoipAnimatorHelper;->a(Lcom/vk/voip/VoipAnimatorHelper;Landroid/view/View;Ljava/lang/Float;Ljava/lang/Float;Ljava/lang/Float;Ljava/lang/Float;Ljava/lang/Float;Lkotlin/jvm/b/Functions;ZILjava/lang/Object;)V
 
     :cond_0
     return-void
@@ -3272,7 +3272,7 @@
     const-string v2, "animator1ScX"
 
     .line 4
-    invoke-static {v0, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     const-wide/16 v6, 0x44c
 
@@ -3294,7 +3294,7 @@
     const-string v8, "animator1ScY"
 
     .line 6
-    invoke-static {v2, v8}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v2, v8}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {v2, v6, v7}, Landroid/animation/ObjectAnimator;->setDuration(J)Landroid/animation/ObjectAnimator;
 
@@ -3316,7 +3316,7 @@
     const-string v9, "animator1Alpha"
 
     .line 8
-    invoke-static {v8, v9}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v8, v9}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {v8, v6, v7}, Landroid/animation/ObjectAnimator;->setDuration(J)Landroid/animation/ObjectAnimator;
 
@@ -3336,7 +3336,7 @@
     const-string v6, "animator2ScX"
 
     .line 10
-    invoke-static {v5, v6}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v5, v6}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     const-wide/16 v6, 0x578
 
@@ -3356,7 +3356,7 @@
     const-string v9, "animator2ScY"
 
     .line 12
-    invoke-static {v3, v9}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v3, v9}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {v3, v6, v7}, Landroid/animation/ObjectAnimator;->setDuration(J)Landroid/animation/ObjectAnimator;
 
@@ -3374,7 +3374,7 @@
     const-string v10, "animator2Alpha"
 
     .line 14
-    invoke-static {v9, v10}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v9, v10}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {v9, v6, v7}, Landroid/animation/ObjectAnimator;->setDuration(J)Landroid/animation/ObjectAnimator;
 
@@ -3456,15 +3456,15 @@
     if-eqz v1, :cond_1
 
     .line 4
-    iget-object v1, p0, Lcom/vk/voip/VoipCallView;->I:Lkotlin/jvm/b/b;
+    iget-object v1, p0, Lcom/vk/voip/VoipCallView;->I:Lkotlin/jvm/b/Functions2;
 
     if-eqz v1, :cond_1
 
-    invoke-interface {v1, v0}, Lkotlin/jvm/b/b;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v1, v0}, Lkotlin/jvm/b/Functions2;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v0
 
-    check-cast v0, Lkotlin/m;
+    check-cast v0, Lkotlin/Unit;
 
     :cond_1
     return-void
@@ -3545,7 +3545,7 @@
     const-string v3, "BG circles animator: start"
 
     .line 6
-    invoke-static {v2, v3}, Lcom/vk/voip/u$a;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v2, v3}, Lcom/vk/voip/VoipUtils$a;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     :cond_3
     if-nez v0, :cond_4
@@ -3573,7 +3573,7 @@
 
     move-result-object v0
 
-    invoke-static {v2, v0}, Lcom/vk/voip/u$a;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v2, v0}, Lcom/vk/voip/VoipUtils$a;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 8
     iget-object v0, p0, Lcom/vk/voip/VoipCallView;->M0:Landroid/animation/AnimatorSet;
@@ -3695,7 +3695,7 @@
 
     const/high16 v2, 0x43820000    # 260.0f
 
-    invoke-static {v2}, Ld/a/a/c/e;->a(F)I
+    invoke-static {v2}, Lme/grishka/appkit/utils/V;->a(F)I
 
     move-result v2
 
@@ -3719,7 +3719,7 @@
 
     const-string v1, "bigPhotoInfo.photo.getIm\u2026ropRect.width()).toInt())"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 3
     invoke-virtual {v0}, Lcom/vk/dto/common/ImageSize;->v1()Ljava/lang/String;
@@ -3728,7 +3728,7 @@
 
     const-string v1, "bigIm.url"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     return-object v0
 
@@ -3738,19 +3738,19 @@
     return-object v0
 .end method
 
-.method public final getCloseCallback()Lkotlin/jvm/b/a;
+.method public final getCloseCallback()Lkotlin/jvm/b/Functions;
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "()",
-            "Lkotlin/jvm/b/a<",
-            "Lkotlin/m;",
+            "Lkotlin/jvm/b/Functions<",
+            "Lkotlin/Unit;",
             ">;"
         }
     .end annotation
 
     .line 1
-    iget-object v0, p0, Lcom/vk/voip/VoipCallView;->G:Lkotlin/jvm/b/a;
+    iget-object v0, p0, Lcom/vk/voip/VoipCallView;->G:Lkotlin/jvm/b/Functions;
 
     return-object v0
 .end method
@@ -3764,24 +3764,24 @@
     return v0
 .end method
 
-.method public final getEnsureMasksPermissionsCallback()Lkotlin/jvm/b/b;
+.method public final getEnsureMasksPermissionsCallback()Lkotlin/jvm/b/Functions2;
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "()",
-            "Lkotlin/jvm/b/b<",
-            "Lkotlin/jvm/b/b<",
+            "Lkotlin/jvm/b/Functions2<",
+            "Lkotlin/jvm/b/Functions2<",
             "-",
             "Ljava/lang/Boolean;",
-            "Lkotlin/m;",
+            "Lkotlin/Unit;",
             ">;",
-            "Lkotlin/m;",
+            "Lkotlin/Unit;",
             ">;"
         }
     .end annotation
 
     .line 1
-    iget-object v0, p0, Lcom/vk/voip/VoipCallView;->J:Lkotlin/jvm/b/b;
+    iget-object v0, p0, Lcom/vk/voip/VoipCallView;->J:Lkotlin/jvm/b/Functions2;
 
     return-object v0
 .end method
@@ -3825,7 +3825,7 @@
 
     const-string v1, "findViewById(R.id.fl_main)"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     return-object v0
 .end method
@@ -3964,37 +3964,37 @@
     return v0
 .end method
 
-.method public final getPipCallback()Lkotlin/jvm/b/a;
+.method public final getPipCallback()Lkotlin/jvm/b/Functions;
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "()",
-            "Lkotlin/jvm/b/a<",
-            "Lkotlin/m;",
+            "Lkotlin/jvm/b/Functions<",
+            "Lkotlin/Unit;",
             ">;"
         }
     .end annotation
 
     .line 1
-    iget-object v0, p0, Lcom/vk/voip/VoipCallView;->H:Lkotlin/jvm/b/a;
+    iget-object v0, p0, Lcom/vk/voip/VoipCallView;->H:Lkotlin/jvm/b/Functions;
 
     return-object v0
 .end method
 
-.method public final getShowShieldCallback()Lkotlin/jvm/b/b;
+.method public final getShowShieldCallback()Lkotlin/jvm/b/Functions2;
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "()",
-            "Lkotlin/jvm/b/b<",
+            "Lkotlin/jvm/b/Functions2<",
             "Ljava/lang/String;",
-            "Lkotlin/m;",
+            "Lkotlin/Unit;",
             ">;"
         }
     .end annotation
 
     .line 1
-    iget-object v0, p0, Lcom/vk/voip/VoipCallView;->I:Lkotlin/jvm/b/b;
+    iget-object v0, p0, Lcom/vk/voip/VoipCallView;->I:Lkotlin/jvm/b/Functions2;
 
     return-object v0
 .end method
@@ -4031,15 +4031,15 @@
     if-ne v0, v1, :cond_2
 
     .line 5
-    iget-object v0, p0, Lcom/vk/voip/VoipCallView;->G:Lkotlin/jvm/b/a;
+    iget-object v0, p0, Lcom/vk/voip/VoipCallView;->G:Lkotlin/jvm/b/Functions;
 
     if-eqz v0, :cond_1
 
-    invoke-interface {v0}, Lkotlin/jvm/b/a;->invoke()Ljava/lang/Object;
+    invoke-interface {v0}, Lkotlin/jvm/b/Functions;->invoke()Ljava/lang/Object;
 
     move-result-object v0
 
-    check-cast v0, Lkotlin/m;
+    check-cast v0, Lkotlin/Unit;
 
     :cond_1
     return-void
@@ -4420,7 +4420,7 @@
 
     const-string v2, "context"
 
-    invoke-static {v1, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     sget-object v2, Lcom/vk/core/utils/VerifyInfoHelper$ColorTheme;->white:Lcom/vk/core/utils/VerifyInfoHelper$ColorTheme;
 
@@ -4618,7 +4618,7 @@
 
     iget-object v1, p0, Lcom/vk/voip/VoipCallView;->a0:Ljava/lang/String;
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v0
 
@@ -4653,7 +4653,7 @@
     .line 34
     iget-object v0, p0, Lcom/vk/voip/VoipCallView;->L:Lcom/vk/imageloader/view/VKImageView;
 
-    invoke-virtual {v0, v9}, Lcom/vk/imageloader/view/VKImageView;->setPostprocessor(Lcom/facebook/imagepipeline/request/a;)V
+    invoke-virtual {v0, v9}, Lcom/vk/imageloader/view/VKImageView;->setPostprocessor(Lcom/facebook/imagepipeline/request/BasePostprocessor;)V
 
     .line 35
     iget-object v0, p0, Lcom/vk/voip/VoipCallView;->L:Lcom/vk/imageloader/view/VKImageView;
@@ -4728,7 +4728,7 @@
 
     iget-object v2, p0, Lcom/vk/voip/VoipCallView;->b0:Ljava/lang/String;
 
-    invoke-static {v0, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v0, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v2
 
@@ -4741,15 +4741,15 @@
     .line 43
     iget-object v2, p0, Lcom/vk/voip/VoipCallView;->L:Lcom/vk/imageloader/view/VKImageView;
 
-    new-instance v3, Lcom/vk/voip/c;
+    new-instance v3, Lcom/vk/voip/AvatarPostprocessor;
 
     invoke-virtual {v1}, Lcom/vk/voip/VoipViewModel$a;->a()Landroid/graphics/RectF;
 
     move-result-object v1
 
-    invoke-direct {v3, v1}, Lcom/vk/voip/c;-><init>(Landroid/graphics/RectF;)V
+    invoke-direct {v3, v1}, Lcom/vk/voip/AvatarPostprocessor;-><init>(Landroid/graphics/RectF;)V
 
-    invoke-virtual {v2, v9, v3}, Lcom/vk/imageloader/view/VKImageView;->a(Lcom/facebook/imagepipeline/request/a;Lcom/facebook/imagepipeline/request/a;)V
+    invoke-virtual {v2, v9, v3}, Lcom/vk/imageloader/view/VKImageView;->a(Lcom/facebook/imagepipeline/request/BasePostprocessor;Lcom/facebook/imagepipeline/request/BasePostprocessor;)V
 
     .line 44
     iget-object v1, p0, Lcom/vk/voip/VoipCallView;->L:Lcom/vk/imageloader/view/VKImageView;
@@ -5611,35 +5611,35 @@
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Lcom/vk/voip/u$a;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/vk/voip/VoipUtils$a;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 2
     invoke-super {p0}, Landroid/widget/FrameLayout;->onAttachedToWindow()V
 
     .line 3
-    sget-object v0, Lb/h/v/d;->c:Lb/h/v/d$a;
+    sget-object v0, Lb/h/v/RxBus;->c:Lb/h/v/RxBus$a;
 
-    invoke-virtual {v0}, Lb/h/v/d$a;->a()Lb/h/v/d;
+    invoke-virtual {v0}, Lb/h/v/RxBus$a;->a()Lb/h/v/RxBus;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lb/h/v/d;->a()Lc/a/m;
+    invoke-virtual {v0}, Lb/h/v/RxBus;->a()Lio/reactivex/Observable;
 
     move-result-object v0
 
     .line 4
     sget-object v1, Lcom/vk/voip/VoipCallView$o;->a:Lcom/vk/voip/VoipCallView$o;
 
-    invoke-virtual {v0, v1}, Lc/a/m;->a(Lc/a/z/l;)Lc/a/m;
+    invoke-virtual {v0, v1}, Lio/reactivex/Observable;->a(Lio/reactivex/functions/Predicate;)Lio/reactivex/Observable;
 
     move-result-object v0
 
     .line 5
-    invoke-static {}, Lc/a/y/c/a;->a()Lc/a/s;
+    invoke-static {}, Lio/reactivex/schedulers/AndroidSchedulers;->a()Lio/reactivex/Scheduler;
 
     move-result-object v1
 
-    invoke-virtual {v0, v1}, Lc/a/m;->a(Lc/a/s;)Lc/a/m;
+    invoke-virtual {v0, v1}, Lio/reactivex/Observable;->a(Lio/reactivex/Scheduler;)Lio/reactivex/Observable;
 
     move-result-object v0
 
@@ -5648,11 +5648,11 @@
 
     invoke-direct {v1, p0}, Lcom/vk/voip/VoipCallView$p;-><init>(Lcom/vk/voip/VoipCallView;)V
 
-    invoke-virtual {v0, v1}, Lc/a/m;->f(Lc/a/z/g;)Lio/reactivex/disposables/b;
+    invoke-virtual {v0, v1}, Lio/reactivex/Observable;->f(Lio/reactivex/functions/Consumer;)Lio/reactivex/disposables/Disposable;
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/vk/voip/VoipCallView;->u0:Lio/reactivex/disposables/b;
+    iput-object v0, p0, Lcom/vk/voip/VoipCallView;->u0:Lio/reactivex/disposables/Disposable;
 
     .line 7
     sget-object v0, Lcom/vk/voip/VoipViewModel;->Z:Lcom/vk/voip/VoipViewModel;
@@ -5715,17 +5715,17 @@
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Lcom/vk/voip/u$a;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/vk/voip/VoipUtils$a;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 2
     invoke-super {p0}, Landroid/widget/FrameLayout;->onDetachedFromWindow()V
 
     .line 3
-    iget-object v0, p0, Lcom/vk/voip/VoipCallView;->u0:Lio/reactivex/disposables/b;
+    iget-object v0, p0, Lcom/vk/voip/VoipCallView;->u0:Lio/reactivex/disposables/Disposable;
 
     if-eqz v0, :cond_0
 
-    invoke-interface {v0}, Lio/reactivex/disposables/b;->o()V
+    invoke-interface {v0}, Lio/reactivex/disposables/Disposable;->o()V
 
     .line 4
     :cond_0
@@ -5798,19 +5798,19 @@
     return p1
 .end method
 
-.method public final setCloseCallback(Lkotlin/jvm/b/a;)V
+.method public final setCloseCallback(Lkotlin/jvm/b/Functions;)V
     .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lkotlin/jvm/b/a<",
-            "Lkotlin/m;",
+            "Lkotlin/jvm/b/Functions<",
+            "Lkotlin/Unit;",
             ">;)V"
         }
     .end annotation
 
     .line 1
-    iput-object p1, p0, Lcom/vk/voip/VoipCallView;->G:Lkotlin/jvm/b/a;
+    iput-object p1, p0, Lcom/vk/voip/VoipCallView;->G:Lkotlin/jvm/b/Functions;
 
     return-void
 .end method
@@ -5890,25 +5890,25 @@
     return-void
 .end method
 
-.method public final setEnsureMasksPermissionsCallback(Lkotlin/jvm/b/b;)V
+.method public final setEnsureMasksPermissionsCallback(Lkotlin/jvm/b/Functions2;)V
     .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lkotlin/jvm/b/b<",
+            "Lkotlin/jvm/b/Functions2<",
             "-",
-            "Lkotlin/jvm/b/b<",
+            "Lkotlin/jvm/b/Functions2<",
             "-",
             "Ljava/lang/Boolean;",
-            "Lkotlin/m;",
+            "Lkotlin/Unit;",
             ">;",
-            "Lkotlin/m;",
+            "Lkotlin/Unit;",
             ">;)V"
         }
     .end annotation
 
     .line 1
-    iput-object p1, p0, Lcom/vk/voip/VoipCallView;->J:Lkotlin/jvm/b/b;
+    iput-object p1, p0, Lcom/vk/voip/VoipCallView;->J:Lkotlin/jvm/b/Functions2;
 
     return-void
 .end method
@@ -5940,38 +5940,38 @@
     return-void
 .end method
 
-.method public final setPipCallback(Lkotlin/jvm/b/a;)V
+.method public final setPipCallback(Lkotlin/jvm/b/Functions;)V
     .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lkotlin/jvm/b/a<",
-            "Lkotlin/m;",
+            "Lkotlin/jvm/b/Functions<",
+            "Lkotlin/Unit;",
             ">;)V"
         }
     .end annotation
 
     .line 1
-    iput-object p1, p0, Lcom/vk/voip/VoipCallView;->H:Lkotlin/jvm/b/a;
+    iput-object p1, p0, Lcom/vk/voip/VoipCallView;->H:Lkotlin/jvm/b/Functions;
 
     return-void
 .end method
 
-.method public final setShowShieldCallback(Lkotlin/jvm/b/b;)V
+.method public final setShowShieldCallback(Lkotlin/jvm/b/Functions2;)V
     .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lkotlin/jvm/b/b<",
+            "Lkotlin/jvm/b/Functions2<",
             "-",
             "Ljava/lang/String;",
-            "Lkotlin/m;",
+            "Lkotlin/Unit;",
             ">;)V"
         }
     .end annotation
 
     .line 1
-    iput-object p1, p0, Lcom/vk/voip/VoipCallView;->I:Lkotlin/jvm/b/b;
+    iput-object p1, p0, Lcom/vk/voip/VoipCallView;->I:Lkotlin/jvm/b/Functions2;
 
     return-void
 .end method

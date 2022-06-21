@@ -15,23 +15,23 @@
 
 
 # static fields
-.field static final synthetic n:[Lkotlin/u/j;
+.field static final synthetic n:[Lkotlin/u/KProperty5;
 
 .field public static final o:Lcom/vk/pullfromtopofrecycler/PullFromTopOfRecyclerController$b;
 
 
 # instance fields
-.field private final a:Lkotlin/e;
+.field private final a:Lkotlin/Lazy2;
 
-.field private final b:Lkotlin/e;
+.field private final b:Lkotlin/Lazy2;
 
-.field private final c:Lkotlin/e;
+.field private final c:Lkotlin/Lazy2;
 
-.field private final d:Lkotlin/e;
+.field private final d:Lkotlin/Lazy2;
 
 .field private e:Lcom/vk/pullfromtopofrecycler/PullFromTopMode;
 
-.field private f:Lcom/vk/pullfromtopofrecycler/a;
+.field private f:Lcom/vk/pullfromtopofrecycler/OnPullEntryVisibilityChangedListener;
 
 .field private g:Landroidx/recyclerview/widget/RecyclerView;
 
@@ -56,11 +56,11 @@
 
     const/4 v1, 0x4
 
-    new-array v1, v1, [Lkotlin/u/j;
+    new-array v1, v1, [Lkotlin/u/KProperty5;
 
     new-instance v2, Lkotlin/jvm/internal/PropertyReference1Impl;
 
-    invoke-static {v0}, Lkotlin/jvm/internal/o;->a(Ljava/lang/Class;)Lkotlin/u/c;
+    invoke-static {v0}, Lkotlin/jvm/internal/Reflection;->a(Ljava/lang/Class;)Lkotlin/u/KClass;
 
     move-result-object v3
 
@@ -68,9 +68,9 @@
 
     const-string v5, "getTouchListener()Lcom/vk/pullfromtopofrecycler/PullFromTopOfRecyclerController$RecyclerTouchListenerImpl;"
 
-    invoke-direct {v2, v3, v4, v5}, Lkotlin/jvm/internal/PropertyReference1Impl;-><init>(Lkotlin/u/e;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-direct {v2, v3, v4, v5}, Lkotlin/jvm/internal/PropertyReference1Impl;-><init>(Lkotlin/u/KDeclarationContainer;Ljava/lang/String;Ljava/lang/String;)V
 
-    invoke-static {v2}, Lkotlin/jvm/internal/o;->a(Lkotlin/jvm/internal/PropertyReference1;)Lkotlin/u/l;
+    invoke-static {v2}, Lkotlin/jvm/internal/Reflection;->a(Lkotlin/jvm/internal/PropertyReference1;)Lkotlin/u/KProperty2;
 
     const/4 v3, 0x0
 
@@ -78,7 +78,7 @@
 
     new-instance v2, Lkotlin/jvm/internal/PropertyReference1Impl;
 
-    invoke-static {v0}, Lkotlin/jvm/internal/o;->a(Ljava/lang/Class;)Lkotlin/u/c;
+    invoke-static {v0}, Lkotlin/jvm/internal/Reflection;->a(Ljava/lang/Class;)Lkotlin/u/KClass;
 
     move-result-object v3
 
@@ -86,9 +86,9 @@
 
     const-string v5, "getChildAttachListener()Lcom/vk/pullfromtopofrecycler/PullFromTopOfRecyclerController$ChildAttachStateChangeListenerImpl;"
 
-    invoke-direct {v2, v3, v4, v5}, Lkotlin/jvm/internal/PropertyReference1Impl;-><init>(Lkotlin/u/e;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-direct {v2, v3, v4, v5}, Lkotlin/jvm/internal/PropertyReference1Impl;-><init>(Lkotlin/u/KDeclarationContainer;Ljava/lang/String;Ljava/lang/String;)V
 
-    invoke-static {v2}, Lkotlin/jvm/internal/o;->a(Lkotlin/jvm/internal/PropertyReference1;)Lkotlin/u/l;
+    invoke-static {v2}, Lkotlin/jvm/internal/Reflection;->a(Lkotlin/jvm/internal/PropertyReference1;)Lkotlin/u/KProperty2;
 
     const/4 v3, 0x1
 
@@ -96,7 +96,7 @@
 
     new-instance v2, Lkotlin/jvm/internal/PropertyReference1Impl;
 
-    invoke-static {v0}, Lkotlin/jvm/internal/o;->a(Ljava/lang/Class;)Lkotlin/u/c;
+    invoke-static {v0}, Lkotlin/jvm/internal/Reflection;->a(Ljava/lang/Class;)Lkotlin/u/KClass;
 
     move-result-object v3
 
@@ -104,9 +104,9 @@
 
     const-string v5, "getScrollListener()Lcom/vk/pullfromtopofrecycler/PullFromTopOfRecyclerController$ScrollListenerImpl;"
 
-    invoke-direct {v2, v3, v4, v5}, Lkotlin/jvm/internal/PropertyReference1Impl;-><init>(Lkotlin/u/e;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-direct {v2, v3, v4, v5}, Lkotlin/jvm/internal/PropertyReference1Impl;-><init>(Lkotlin/u/KDeclarationContainer;Ljava/lang/String;Ljava/lang/String;)V
 
-    invoke-static {v2}, Lkotlin/jvm/internal/o;->a(Lkotlin/jvm/internal/PropertyReference1;)Lkotlin/u/l;
+    invoke-static {v2}, Lkotlin/jvm/internal/Reflection;->a(Lkotlin/jvm/internal/PropertyReference1;)Lkotlin/u/KProperty2;
 
     const/4 v3, 0x2
 
@@ -114,7 +114,7 @@
 
     new-instance v2, Lkotlin/jvm/internal/PropertyReference1Impl;
 
-    invoke-static {v0}, Lkotlin/jvm/internal/o;->a(Ljava/lang/Class;)Lkotlin/u/c;
+    invoke-static {v0}, Lkotlin/jvm/internal/Reflection;->a(Ljava/lang/Class;)Lkotlin/u/KClass;
 
     move-result-object v0
 
@@ -122,21 +122,21 @@
 
     const-string v4, "getHandler()Landroid/os/Handler;"
 
-    invoke-direct {v2, v0, v3, v4}, Lkotlin/jvm/internal/PropertyReference1Impl;-><init>(Lkotlin/u/e;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-direct {v2, v0, v3, v4}, Lkotlin/jvm/internal/PropertyReference1Impl;-><init>(Lkotlin/u/KDeclarationContainer;Ljava/lang/String;Ljava/lang/String;)V
 
-    invoke-static {v2}, Lkotlin/jvm/internal/o;->a(Lkotlin/jvm/internal/PropertyReference1;)Lkotlin/u/l;
+    invoke-static {v2}, Lkotlin/jvm/internal/Reflection;->a(Lkotlin/jvm/internal/PropertyReference1;)Lkotlin/u/KProperty2;
 
     const/4 v0, 0x3
 
     aput-object v2, v1, v0
 
-    sput-object v1, Lcom/vk/pullfromtopofrecycler/PullFromTopOfRecyclerController;->n:[Lkotlin/u/j;
+    sput-object v1, Lcom/vk/pullfromtopofrecycler/PullFromTopOfRecyclerController;->n:[Lkotlin/u/KProperty5;
 
     new-instance v0, Lcom/vk/pullfromtopofrecycler/PullFromTopOfRecyclerController$b;
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, v1}, Lcom/vk/pullfromtopofrecycler/PullFromTopOfRecyclerController$b;-><init>(Lkotlin/jvm/internal/i;)V
+    invoke-direct {v0, v1}, Lcom/vk/pullfromtopofrecycler/PullFromTopOfRecyclerController$b;-><init>(Lkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     sput-object v0, Lcom/vk/pullfromtopofrecycler/PullFromTopOfRecyclerController;->o:Lcom/vk/pullfromtopofrecycler/PullFromTopOfRecyclerController$b;
 
@@ -152,7 +152,7 @@
 
     const/4 v2, 0x0
 
-    invoke-direct {p0, v0, v1, v2}, Lcom/vk/pullfromtopofrecycler/PullFromTopOfRecyclerController;-><init>(IILkotlin/jvm/internal/i;)V
+    invoke-direct {p0, v0, v1, v2}, Lcom/vk/pullfromtopofrecycler/PullFromTopOfRecyclerController;-><init>(IILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     return-void
 .end method
@@ -170,42 +170,42 @@
 
     invoke-direct {p1, p0}, Lcom/vk/pullfromtopofrecycler/PullFromTopOfRecyclerController$touchListener$2;-><init>(Lcom/vk/pullfromtopofrecycler/PullFromTopOfRecyclerController;)V
 
-    invoke-static {p1}, Lkotlin/g;->a(Lkotlin/jvm/b/a;)Lkotlin/e;
+    invoke-static {p1}, Lkotlin/g;->a(Lkotlin/jvm/b/Functions;)Lkotlin/Lazy2;
 
     move-result-object p1
 
-    iput-object p1, p0, Lcom/vk/pullfromtopofrecycler/PullFromTopOfRecyclerController;->a:Lkotlin/e;
+    iput-object p1, p0, Lcom/vk/pullfromtopofrecycler/PullFromTopOfRecyclerController;->a:Lkotlin/Lazy2;
 
     .line 3
     new-instance p1, Lcom/vk/pullfromtopofrecycler/PullFromTopOfRecyclerController$childAttachListener$2;
 
     invoke-direct {p1, p0}, Lcom/vk/pullfromtopofrecycler/PullFromTopOfRecyclerController$childAttachListener$2;-><init>(Lcom/vk/pullfromtopofrecycler/PullFromTopOfRecyclerController;)V
 
-    invoke-static {p1}, Lkotlin/g;->a(Lkotlin/jvm/b/a;)Lkotlin/e;
+    invoke-static {p1}, Lkotlin/g;->a(Lkotlin/jvm/b/Functions;)Lkotlin/Lazy2;
 
     move-result-object p1
 
-    iput-object p1, p0, Lcom/vk/pullfromtopofrecycler/PullFromTopOfRecyclerController;->b:Lkotlin/e;
+    iput-object p1, p0, Lcom/vk/pullfromtopofrecycler/PullFromTopOfRecyclerController;->b:Lkotlin/Lazy2;
 
     .line 4
     new-instance p1, Lcom/vk/pullfromtopofrecycler/PullFromTopOfRecyclerController$scrollListener$2;
 
     invoke-direct {p1, p0}, Lcom/vk/pullfromtopofrecycler/PullFromTopOfRecyclerController$scrollListener$2;-><init>(Lcom/vk/pullfromtopofrecycler/PullFromTopOfRecyclerController;)V
 
-    invoke-static {p1}, Lkotlin/g;->a(Lkotlin/jvm/b/a;)Lkotlin/e;
+    invoke-static {p1}, Lkotlin/g;->a(Lkotlin/jvm/b/Functions;)Lkotlin/Lazy2;
 
     move-result-object p1
 
-    iput-object p1, p0, Lcom/vk/pullfromtopofrecycler/PullFromTopOfRecyclerController;->c:Lkotlin/e;
+    iput-object p1, p0, Lcom/vk/pullfromtopofrecycler/PullFromTopOfRecyclerController;->c:Lkotlin/Lazy2;
 
     .line 5
     sget-object p1, Lcom/vk/pullfromtopofrecycler/PullFromTopOfRecyclerController$handler$2;->a:Lcom/vk/pullfromtopofrecycler/PullFromTopOfRecyclerController$handler$2;
 
-    invoke-static {p1}, Lkotlin/g;->a(Lkotlin/jvm/b/a;)Lkotlin/e;
+    invoke-static {p1}, Lkotlin/g;->a(Lkotlin/jvm/b/Functions;)Lkotlin/Lazy2;
 
     move-result-object p1
 
-    iput-object p1, p0, Lcom/vk/pullfromtopofrecycler/PullFromTopOfRecyclerController;->d:Lkotlin/e;
+    iput-object p1, p0, Lcom/vk/pullfromtopofrecycler/PullFromTopOfRecyclerController;->d:Lkotlin/Lazy2;
 
     .line 6
     sget-object p1, Lcom/vk/pullfromtopofrecycler/PullFromTopMode;->DEFAULT:Lcom/vk/pullfromtopofrecycler/PullFromTopMode;
@@ -243,7 +243,7 @@
     throw p1
 .end method
 
-.method public synthetic constructor <init>(IILkotlin/jvm/internal/i;)V
+.method public synthetic constructor <init>(IILkotlin/jvm/internal/DefaultConstructorMarker;)V
     .locals 0
 
     and-int/lit8 p2, p2, 0x1
@@ -283,7 +283,7 @@
 
     const-string v2, "linearLayoutManager?.fin\u2026osition(0) ?: return null"
 
-    invoke-static {v0, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 32
     iget-object v2, p0, Lcom/vk/pullfromtopofrecycler/PullFromTopOfRecyclerController;->g:Landroidx/recyclerview/widget/RecyclerView;
@@ -298,10 +298,10 @@
 
     const-string v3, "recyclerView?.findContai\u2026lder(view) ?: return null"
 
-    invoke-static {v2, v3}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v2, v3}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 33
-    instance-of v2, v2, Lcom/vk/pullfromtopofrecycler/c;
+    instance-of v2, v2, Lcom/vk/pullfromtopofrecycler/PullFromTopViewHolder;
 
     if-eqz v2, :cond_0
 
@@ -491,7 +491,7 @@
 
     invoke-direct {p1, p0, p2, v0}, Lcom/vk/pullfromtopofrecycler/PullFromTopOfRecyclerController$scrollToPosition$1;-><init>(Lcom/vk/pullfromtopofrecycler/PullFromTopOfRecyclerController;ZI)V
 
-    invoke-direct {p0, p1}, Lcom/vk/pullfromtopofrecycler/PullFromTopOfRecyclerController;->a(Lkotlin/jvm/b/a;)V
+    invoke-direct {p0, p1}, Lcom/vk/pullfromtopofrecycler/PullFromTopOfRecyclerController;->a(Lkotlin/jvm/b/Functions;)V
 
     goto :goto_4
 
@@ -502,7 +502,7 @@
 
     invoke-direct {v0, p0, p2, p1}, Lcom/vk/pullfromtopofrecycler/PullFromTopOfRecyclerController$scrollToPosition$2;-><init>(Lcom/vk/pullfromtopofrecycler/PullFromTopOfRecyclerController;ZI)V
 
-    invoke-direct {p0, v0}, Lcom/vk/pullfromtopofrecycler/PullFromTopOfRecyclerController;->a(Lkotlin/jvm/b/a;)V
+    invoke-direct {p0, v0}, Lcom/vk/pullfromtopofrecycler/PullFromTopOfRecyclerController;->a(Lkotlin/jvm/b/Functions;)V
 
     :cond_8
     :goto_4
@@ -551,7 +551,7 @@
 
     const-string v3, "it.getChildAt(i)"
 
-    invoke-static {v2, v3}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v2, v3}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {v2, p2}, Landroid/view/View;->setVisibility(I)V
 
@@ -572,13 +572,13 @@
     return-void
 .end method
 
-.method private final a(Lkotlin/jvm/b/a;)V
+.method private final a(Lkotlin/jvm/b/Functions;)V
     .locals 2
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lkotlin/jvm/b/a<",
-            "Lkotlin/m;",
+            "Lkotlin/jvm/b/Functions<",
+            "Lkotlin/Unit;",
             ">;)V"
         }
     .end annotation
@@ -590,9 +590,9 @@
 
     if-eqz p1, :cond_0
 
-    new-instance v1, Lcom/vk/pullfromtopofrecycler/b;
+    new-instance v1, Lcom/vk/pullfromtopofrecycler/PullFromTopOfRecyclerController1;
 
-    invoke-direct {v1, p1}, Lcom/vk/pullfromtopofrecycler/b;-><init>(Lkotlin/jvm/b/a;)V
+    invoke-direct {v1, p1}, Lcom/vk/pullfromtopofrecycler/PullFromTopOfRecyclerController1;-><init>(Lkotlin/jvm/b/Functions;)V
 
     move-object p1, v1
 
@@ -661,7 +661,7 @@
 
     const-string v4, "it.getChildAt(i)"
 
-    invoke-static {v3, v4}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v3, v4}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {v3}, Landroid/view/View;->getVisibility()I
 
@@ -820,7 +820,7 @@
 
     move-result-object v0
 
-    invoke-static {v0, p1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v0, p1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result p1
 
@@ -830,15 +830,15 @@
 .method private final c()Lcom/vk/pullfromtopofrecycler/PullFromTopOfRecyclerController$a;
     .locals 3
 
-    iget-object v0, p0, Lcom/vk/pullfromtopofrecycler/PullFromTopOfRecyclerController;->b:Lkotlin/e;
+    iget-object v0, p0, Lcom/vk/pullfromtopofrecycler/PullFromTopOfRecyclerController;->b:Lkotlin/Lazy2;
 
-    sget-object v1, Lcom/vk/pullfromtopofrecycler/PullFromTopOfRecyclerController;->n:[Lkotlin/u/j;
+    sget-object v1, Lcom/vk/pullfromtopofrecycler/PullFromTopOfRecyclerController;->n:[Lkotlin/u/KProperty5;
 
     const/4 v2, 0x1
 
     aget-object v1, v1, v2
 
-    invoke-interface {v0}, Lkotlin/e;->getValue()Ljava/lang/Object;
+    invoke-interface {v0}, Lkotlin/Lazy2;->getValue()Ljava/lang/Object;
 
     move-result-object v0
 
@@ -859,15 +859,15 @@
 .method private final d()Landroid/os/Handler;
     .locals 3
 
-    iget-object v0, p0, Lcom/vk/pullfromtopofrecycler/PullFromTopOfRecyclerController;->d:Lkotlin/e;
+    iget-object v0, p0, Lcom/vk/pullfromtopofrecycler/PullFromTopOfRecyclerController;->d:Lkotlin/Lazy2;
 
-    sget-object v1, Lcom/vk/pullfromtopofrecycler/PullFromTopOfRecyclerController;->n:[Lkotlin/u/j;
+    sget-object v1, Lcom/vk/pullfromtopofrecycler/PullFromTopOfRecyclerController;->n:[Lkotlin/u/KProperty5;
 
     const/4 v2, 0x3
 
     aget-object v1, v1, v2
 
-    invoke-interface {v0}, Lkotlin/e;->getValue()Ljava/lang/Object;
+    invoke-interface {v0}, Lkotlin/Lazy2;->getValue()Ljava/lang/Object;
 
     move-result-object v0
 
@@ -888,15 +888,15 @@
 .method private final e()Lcom/vk/pullfromtopofrecycler/PullFromTopOfRecyclerController$d;
     .locals 3
 
-    iget-object v0, p0, Lcom/vk/pullfromtopofrecycler/PullFromTopOfRecyclerController;->c:Lkotlin/e;
+    iget-object v0, p0, Lcom/vk/pullfromtopofrecycler/PullFromTopOfRecyclerController;->c:Lkotlin/Lazy2;
 
-    sget-object v1, Lcom/vk/pullfromtopofrecycler/PullFromTopOfRecyclerController;->n:[Lkotlin/u/j;
+    sget-object v1, Lcom/vk/pullfromtopofrecycler/PullFromTopOfRecyclerController;->n:[Lkotlin/u/KProperty5;
 
     const/4 v2, 0x2
 
     aget-object v1, v1, v2
 
-    invoke-interface {v0}, Lkotlin/e;->getValue()Ljava/lang/Object;
+    invoke-interface {v0}, Lkotlin/Lazy2;->getValue()Ljava/lang/Object;
 
     move-result-object v0
 
@@ -917,15 +917,15 @@
 .method private final f()Lcom/vk/pullfromtopofrecycler/PullFromTopOfRecyclerController$c;
     .locals 3
 
-    iget-object v0, p0, Lcom/vk/pullfromtopofrecycler/PullFromTopOfRecyclerController;->a:Lkotlin/e;
+    iget-object v0, p0, Lcom/vk/pullfromtopofrecycler/PullFromTopOfRecyclerController;->a:Lkotlin/Lazy2;
 
-    sget-object v1, Lcom/vk/pullfromtopofrecycler/PullFromTopOfRecyclerController;->n:[Lkotlin/u/j;
+    sget-object v1, Lcom/vk/pullfromtopofrecycler/PullFromTopOfRecyclerController;->n:[Lkotlin/u/KProperty5;
 
     const/4 v2, 0x0
 
     aget-object v1, v1, v2
 
-    invoke-interface {v0}, Lkotlin/e;->getValue()Ljava/lang/Object;
+    invoke-interface {v0}, Lkotlin/Lazy2;->getValue()Ljava/lang/Object;
 
     move-result-object v0
 
@@ -1016,11 +1016,11 @@
     iput-boolean v0, p0, Lcom/vk/pullfromtopofrecycler/PullFromTopOfRecyclerController;->l:Z
 
     .line 6
-    iget-object v1, p0, Lcom/vk/pullfromtopofrecycler/PullFromTopOfRecyclerController;->f:Lcom/vk/pullfromtopofrecycler/a;
+    iget-object v1, p0, Lcom/vk/pullfromtopofrecycler/PullFromTopOfRecyclerController;->f:Lcom/vk/pullfromtopofrecycler/OnPullEntryVisibilityChangedListener;
 
     if-eqz v1, :cond_3
 
-    invoke-interface {v1, v0}, Lcom/vk/pullfromtopofrecycler/a;->a(Z)V
+    invoke-interface {v1, v0}, Lcom/vk/pullfromtopofrecycler/OnPullEntryVisibilityChangedListener;->a(Z)V
 
     :cond_3
     return-void
@@ -1428,11 +1428,11 @@
     return-void
 .end method
 
-.method public final a(Lcom/vk/pullfromtopofrecycler/a;)V
+.method public final a(Lcom/vk/pullfromtopofrecycler/OnPullEntryVisibilityChangedListener;)V
     .locals 0
 
     .line 20
-    iput-object p1, p0, Lcom/vk/pullfromtopofrecycler/PullFromTopOfRecyclerController;->f:Lcom/vk/pullfromtopofrecycler/a;
+    iput-object p1, p0, Lcom/vk/pullfromtopofrecycler/PullFromTopOfRecyclerController;->f:Lcom/vk/pullfromtopofrecycler/OnPullEntryVisibilityChangedListener;
 
     return-void
 .end method

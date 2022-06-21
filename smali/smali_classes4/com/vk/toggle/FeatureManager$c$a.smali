@@ -24,7 +24,7 @@
     return-void
 .end method
 
-.method public synthetic constructor <init>(Lkotlin/jvm/internal/i;)V
+.method public synthetic constructor <init>(Lkotlin/jvm/internal/DefaultConstructorMarker;)V
     .locals 0
 
     .line 2
@@ -173,7 +173,7 @@
     :try_start_0
     sget-object v1, Lcom/vk/toggle/FeatureManager;->g:Lcom/vk/toggle/FeatureManager;
 
-    invoke-static {v1}, Lcom/vk/toggle/FeatureManager;->a(Lcom/vk/toggle/FeatureManager;)Lcom/vk/toggle/b;
+    invoke-static {v1}, Lcom/vk/toggle/FeatureManager;->a(Lcom/vk/toggle/FeatureManager;)Lcom/vk/toggle/FeatureStorage;
 
     move-result-object v1
 
@@ -181,7 +181,7 @@
 
     const/4 v3, 0x0
 
-    invoke-static {v1, p1, v0, v2, v3}, Lcom/vk/toggle/b;->b(Lcom/vk/toggle/b;Ljava/lang/String;ZILjava/lang/Object;)Ljava/lang/String;
+    invoke-static {v1, p1, v0, v2, v3}, Lcom/vk/toggle/FeatureStorage;->b(Lcom/vk/toggle/FeatureStorage;Ljava/lang/String;ZILjava/lang/Object;)Ljava/lang/String;
 
     move-result-object v1
 
@@ -210,11 +210,11 @@
     :cond_1
     sget-object v2, Lcom/vk/toggle/FeatureManager;->g:Lcom/vk/toggle/FeatureManager;
 
-    invoke-static {v2}, Lcom/vk/toggle/FeatureManager;->a(Lcom/vk/toggle/FeatureManager;)Lcom/vk/toggle/b;
+    invoke-static {v2}, Lcom/vk/toggle/FeatureManager;->a(Lcom/vk/toggle/FeatureManager;)Lcom/vk/toggle/FeatureStorage;
 
     move-result-object v2
 
-    invoke-virtual {v2, p1, v3}, Lcom/vk/toggle/b;->b(Ljava/lang/String;Z)Ljava/lang/String;
+    invoke-virtual {v2, p1, v3}, Lcom/vk/toggle/FeatureStorage;->b(Ljava/lang/String;Z)Ljava/lang/String;
 
     move-result-object v2
 

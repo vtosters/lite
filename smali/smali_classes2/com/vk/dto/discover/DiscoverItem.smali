@@ -125,7 +125,7 @@
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, v1}, Lcom/vk/dto/discover/DiscoverItem$b;-><init>(Lkotlin/jvm/internal/i;)V
+    invoke-direct {v0, v1}, Lcom/vk/dto/discover/DiscoverItem$b;-><init>(Lkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     sput-object v0, Lcom/vk/dto/discover/DiscoverItem;->Z:Lcom/vk/dto/discover/DiscoverItem$b;
 
@@ -262,7 +262,7 @@
     .line 5
     iget-object v1, v0, Lcom/vk/dto/discover/DiscoverItem;->J:Lcom/vk/dto/newsfeed/entries/NewsEntry;
 
-    instance-of v2, v1, Lcom/vk/dto/newsfeed/h;
+    instance-of v2, v1, Lcom/vk/dto/newsfeed/WithAttachments;
 
     const/4 v3, 0x0
 
@@ -281,9 +281,9 @@
 
     .line 7
     :cond_0
-    check-cast v1, Lcom/vk/dto/newsfeed/h;
+    check-cast v1, Lcom/vk/dto/newsfeed/WithAttachments;
 
-    invoke-interface {v1}, Lcom/vk/dto/newsfeed/h;->k1()Ljava/util/List;
+    invoke-interface {v1}, Lcom/vk/dto/newsfeed/WithAttachments;->k1()Ljava/util/List;
 
     move-result-object v1
 
@@ -345,9 +345,9 @@
 
     iget-object v2, v0, Lcom/vk/dto/discover/DiscoverItem;->J:Lcom/vk/dto/newsfeed/entries/NewsEntry;
 
-    check-cast v2, Lcom/vk/dto/newsfeed/h;
+    check-cast v2, Lcom/vk/dto/newsfeed/WithAttachments;
 
-    invoke-interface {v2}, Lcom/vk/dto/newsfeed/h;->k1()Ljava/util/List;
+    invoke-interface {v2}, Lcom/vk/dto/newsfeed/WithAttachments;->k1()Ljava/util/List;
 
     move-result-object v2
 
@@ -559,13 +559,13 @@
     if-eqz v1, :cond_12
 
     .line 32
-    sget-object v5, Lcom/vk/core/util/i;->a:Landroid/content/Context;
+    sget-object v5, Lcom/vk/core/util/AppContextHolder;->a:Landroid/content/Context;
 
     const-string v6, "AppContextHolder.context"
 
-    invoke-static {v5, v6}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v5, v6}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    invoke-static {v5, v1, v4}, Lcom/vk/libvideo/t;->a(Landroid/content/Context;Lcom/vk/dto/common/VideoFile;I)Ljava/lang/String;
+    invoke-static {v5, v1, v4}, Lcom/vk/libvideo/VideoUtils;->a(Landroid/content/Context;Lcom/vk/dto/common/VideoFile;I)Ljava/lang/String;
 
     move-result-object v5
 
@@ -594,7 +594,7 @@
     iput-object v2, v0, Lcom/vk/dto/discover/DiscoverItem;->g:Ljava/lang/CharSequence;
 
     .line 35
-    invoke-static {}, Lcom/vk/emoji/b;->g()Lcom/vk/emoji/b;
+    invoke-static {}, Lcom/vk/emoji/Emoji;->g()Lcom/vk/emoji/Emoji;
 
     move-result-object v2
 
@@ -605,7 +605,7 @@
     move-object v5, v6
 
     :cond_13
-    invoke-virtual {v2, v5}, Lcom/vk/emoji/b;->a(Ljava/lang/CharSequence;)Ljava/lang/CharSequence;
+    invoke-virtual {v2, v5}, Lcom/vk/emoji/Emoji;->a(Ljava/lang/CharSequence;)Ljava/lang/CharSequence;
 
     move-result-object v2
 
@@ -625,19 +625,19 @@
     :cond_14
     iget-object v1, v0, Lcom/vk/dto/discover/DiscoverItem;->J:Lcom/vk/dto/newsfeed/entries/NewsEntry;
 
-    instance-of v1, v1, Lcom/vk/dto/newsfeed/d;
+    instance-of v1, v1, Lcom/vk/dto/newsfeed/Ownable;
 
     if-eqz v1, :cond_16
 
-    invoke-static {}, Lcom/vk/emoji/b;->g()Lcom/vk/emoji/b;
+    invoke-static {}, Lcom/vk/emoji/Emoji;->g()Lcom/vk/emoji/Emoji;
 
     move-result-object v1
 
     iget-object v5, v0, Lcom/vk/dto/discover/DiscoverItem;->J:Lcom/vk/dto/newsfeed/entries/NewsEntry;
 
-    check-cast v5, Lcom/vk/dto/newsfeed/d;
+    check-cast v5, Lcom/vk/dto/newsfeed/Ownable;
 
-    invoke-interface {v5}, Lcom/vk/dto/newsfeed/d;->L0()Lcom/vk/dto/newsfeed/Owner;
+    invoke-interface {v5}, Lcom/vk/dto/newsfeed/Ownable;->L0()Lcom/vk/dto/newsfeed/Owner;
 
     move-result-object v5
 
@@ -653,7 +653,7 @@
     move-object v5, v3
 
     :goto_b
-    invoke-virtual {v1, v5}, Lcom/vk/emoji/b;->a(Ljava/lang/CharSequence;)Ljava/lang/CharSequence;
+    invoke-virtual {v1, v5}, Lcom/vk/emoji/Emoji;->a(Ljava/lang/CharSequence;)Ljava/lang/CharSequence;
 
     move-result-object v5
 
@@ -663,13 +663,13 @@
     .line 39
     iget-object v1, v0, Lcom/vk/dto/discover/DiscoverItem;->J:Lcom/vk/dto/newsfeed/entries/NewsEntry;
 
-    instance-of v5, v1, Lcom/vk/dto/newsfeed/d;
+    instance-of v5, v1, Lcom/vk/dto/newsfeed/Ownable;
 
     if-eqz v5, :cond_17
 
-    check-cast v1, Lcom/vk/dto/newsfeed/d;
+    check-cast v1, Lcom/vk/dto/newsfeed/Ownable;
 
-    invoke-interface {v1}, Lcom/vk/dto/newsfeed/d;->L0()Lcom/vk/dto/newsfeed/Owner;
+    invoke-interface {v1}, Lcom/vk/dto/newsfeed/Ownable;->L0()Lcom/vk/dto/newsfeed/Owner;
 
     move-result-object v1
 
@@ -714,21 +714,21 @@
     move-result-object v1
 
     .line 42
-    invoke-static {}, Lcom/vk/emoji/b;->g()Lcom/vk/emoji/b;
+    invoke-static {}, Lcom/vk/emoji/Emoji;->g()Lcom/vk/emoji/Emoji;
 
     move-result-object v5
 
     const/16 v6, 0x30b
 
-    invoke-static {v1, v6}, Lcom/vk/common/links/b;->a(Ljava/lang/CharSequence;I)Ljava/lang/CharSequence;
+    invoke-static {v1, v6}, Lcom/vk/common/links/LinkParser;->a(Ljava/lang/CharSequence;I)Ljava/lang/CharSequence;
 
     move-result-object v6
 
-    invoke-static {v6, v4}, Lcom/vk/common/links/b;->a(Ljava/lang/CharSequence;Z)Ljava/lang/CharSequence;
+    invoke-static {v6, v4}, Lcom/vk/common/links/LinkParser;->a(Ljava/lang/CharSequence;Z)Ljava/lang/CharSequence;
 
     move-result-object v6
 
-    invoke-virtual {v5, v6}, Lcom/vk/emoji/b;->a(Ljava/lang/CharSequence;)Ljava/lang/CharSequence;
+    invoke-virtual {v5, v6}, Lcom/vk/emoji/Emoji;->a(Ljava/lang/CharSequence;)Ljava/lang/CharSequence;
 
     move-result-object v5
 
@@ -760,13 +760,13 @@
 
     move-result v1
 
-    const-class v5, Lcom/vtosters/lite/v;
+    const-class v5, Lcom/vtosters/lite/LinkSpan;
 
     invoke-interface {v2, v4, v1, v5}, Landroid/text/Spannable;->getSpans(IILjava/lang/Class;)[Ljava/lang/Object;
 
     move-result-object v1
 
-    check-cast v1, [Lcom/vtosters/lite/v;
+    check-cast v1, [Lcom/vtosters/lite/LinkSpan;
 
     if-eqz v1, :cond_1a
 
@@ -781,13 +781,13 @@
     aget-object v6, v1, v5
 
     .line 46
-    instance-of v7, v6, Lcom/vtosters/lite/t;
+    instance-of v7, v6, Lcom/vtosters/lite/ExpandTextSpan;
 
     if-nez v7, :cond_18
 
     const v7, 0x7f04059a
 
-    invoke-virtual {v6, v7}, Lcom/vk/core/view/links/a;->a(I)V
+    invoke-virtual {v6, v7}, Lcom/vk/core/view/links/ClickableLinkSpan;->a(I)V
 
     :cond_18
     add-int/lit8 v5, v5, 0x1
@@ -806,14 +806,14 @@
     :goto_e
     iget-object v1, v0, Lcom/vk/dto/discover/DiscoverItem;->J:Lcom/vk/dto/newsfeed/entries/NewsEntry;
 
-    instance-of v2, v1, Lcom/vk/dto/newsfeed/c;
+    instance-of v2, v1, Lcom/vk/dto/newsfeed/Likable;
 
     if-eqz v2, :cond_1b
 
     .line 50
-    check-cast v1, Lcom/vk/dto/newsfeed/c;
+    check-cast v1, Lcom/vk/dto/newsfeed/Likable;
 
-    invoke-interface {v1}, Lcom/vk/dto/newsfeed/c;->W0()I
+    invoke-interface {v1}, Lcom/vk/dto/newsfeed/Likable;->W0()I
 
     move-result v1
 
@@ -831,7 +831,7 @@
     if-lez v6, :cond_1c
 
     .line 52
-    invoke-static {v1, v2}, Lcom/vk/core/util/b1;->a(J)Ljava/lang/CharSequence;
+    invoke-static {v1, v2}, Lcom/vk/core/util/StringUtils;->a(J)Ljava/lang/CharSequence;
 
     move-result-object v3
 
@@ -849,7 +849,7 @@
     return-void
 .end method
 
-.method public synthetic constructor <init>(Lcom/vk/dto/discover/DiscoverItem$Template;Lcom/vk/dto/common/Action;Ljava/util/ArrayList;Ljava/util/ArrayList;Lcom/vk/dto/newsfeed/entries/NewsEntry;Lcom/vk/dto/common/VerifyInfo;Ljava/lang/String;Lcom/vtosters/lite/attachments/VideoAttachment;Lcom/vk/dto/discover/Info;Landroid/graphics/RectF;Ljava/lang/String;Ljava/util/ArrayList;Lcom/vk/dto/discover/carousel/Carousel;Lcom/vk/dto/discover/carousel/Carousel;Lcom/vk/discover/Experts;Lcom/vk/dto/discover/ads/AdsCompact;Lcom/vk/discover/DiscoverLayoutParams;ZJLjava/lang/String;ILkotlin/jvm/internal/i;)V
+.method public synthetic constructor <init>(Lcom/vk/dto/discover/DiscoverItem$Template;Lcom/vk/dto/common/Action;Ljava/util/ArrayList;Ljava/util/ArrayList;Lcom/vk/dto/newsfeed/entries/NewsEntry;Lcom/vk/dto/common/VerifyInfo;Ljava/lang/String;Lcom/vtosters/lite/attachments/VideoAttachment;Lcom/vk/dto/discover/Info;Landroid/graphics/RectF;Ljava/lang/String;Ljava/util/ArrayList;Lcom/vk/dto/discover/carousel/Carousel;Lcom/vk/dto/discover/carousel/Carousel;Lcom/vk/discover/Experts;Lcom/vk/dto/discover/ads/AdsCompact;Lcom/vk/discover/DiscoverLayoutParams;ZJLjava/lang/String;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
     .locals 24
 
     move/from16 v0, p22
@@ -915,7 +915,7 @@
 
     const/4 v8, 0x3
 
-    invoke-direct {v6, v7, v7, v8, v2}, Lcom/vk/dto/common/VerifyInfo;-><init>(ZZILkotlin/jvm/internal/i;)V
+    invoke-direct {v6, v7, v7, v8, v2}, Lcom/vk/dto/common/VerifyInfo;-><init>(ZZILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     goto :goto_4
 
@@ -1080,7 +1080,7 @@
 
     move-object/from16 p8, v23
 
-    invoke-direct/range {p2 .. p8}, Lcom/vk/discover/DiscoverLayoutParams;-><init>(IFIZILkotlin/jvm/internal/i;)V
+    invoke-direct/range {p2 .. p8}, Lcom/vk/discover/DiscoverLayoutParams;-><init>(IFIZILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     goto :goto_f
 
@@ -2019,7 +2019,7 @@
 
     iget-object v1, p1, Lcom/vk/dto/discover/DiscoverItem;->F:Lcom/vk/dto/discover/DiscoverItem$Template;
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v0
 
@@ -2029,7 +2029,7 @@
 
     iget-object v1, p1, Lcom/vk/dto/discover/DiscoverItem;->G:Lcom/vk/dto/common/Action;
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v0
 
@@ -2039,7 +2039,7 @@
 
     iget-object v1, p1, Lcom/vk/dto/discover/DiscoverItem;->H:Ljava/util/ArrayList;
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v0
 
@@ -2049,7 +2049,7 @@
 
     iget-object v1, p1, Lcom/vk/dto/discover/DiscoverItem;->I:Ljava/util/ArrayList;
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v0
 
@@ -2059,7 +2059,7 @@
 
     iget-object v1, p1, Lcom/vk/dto/discover/DiscoverItem;->J:Lcom/vk/dto/newsfeed/entries/NewsEntry;
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v0
 
@@ -2069,7 +2069,7 @@
 
     iget-object v1, p1, Lcom/vk/dto/discover/DiscoverItem;->K:Lcom/vk/dto/common/VerifyInfo;
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v0
 
@@ -2079,7 +2079,7 @@
 
     iget-object v1, p1, Lcom/vk/dto/discover/DiscoverItem;->L:Ljava/lang/String;
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v0
 
@@ -2089,7 +2089,7 @@
 
     iget-object v1, p1, Lcom/vk/dto/discover/DiscoverItem;->M:Lcom/vtosters/lite/attachments/VideoAttachment;
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v0
 
@@ -2099,7 +2099,7 @@
 
     iget-object v1, p1, Lcom/vk/dto/discover/DiscoverItem;->N:Lcom/vk/dto/discover/Info;
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v0
 
@@ -2109,7 +2109,7 @@
 
     iget-object v1, p1, Lcom/vk/dto/discover/DiscoverItem;->O:Landroid/graphics/RectF;
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v0
 
@@ -2119,7 +2119,7 @@
 
     iget-object v1, p1, Lcom/vk/dto/discover/DiscoverItem;->P:Ljava/lang/String;
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v0
 
@@ -2129,7 +2129,7 @@
 
     iget-object v1, p1, Lcom/vk/dto/discover/DiscoverItem;->Q:Ljava/util/ArrayList;
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v0
 
@@ -2139,7 +2139,7 @@
 
     iget-object v1, p1, Lcom/vk/dto/discover/DiscoverItem;->R:Lcom/vk/dto/discover/carousel/Carousel;
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v0
 
@@ -2149,7 +2149,7 @@
 
     iget-object v1, p1, Lcom/vk/dto/discover/DiscoverItem;->S:Lcom/vk/dto/discover/carousel/Carousel;
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v0
 
@@ -2159,7 +2159,7 @@
 
     iget-object v1, p1, Lcom/vk/dto/discover/DiscoverItem;->T:Lcom/vk/discover/Experts;
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v0
 
@@ -2169,7 +2169,7 @@
 
     iget-object v1, p1, Lcom/vk/dto/discover/DiscoverItem;->U:Lcom/vk/dto/discover/ads/AdsCompact;
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v0
 
@@ -2179,7 +2179,7 @@
 
     iget-object v1, p1, Lcom/vk/dto/discover/DiscoverItem;->V:Lcom/vk/discover/DiscoverLayoutParams;
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v0
 
@@ -2203,7 +2203,7 @@
 
     iget-object p1, p1, Lcom/vk/dto/discover/DiscoverItem;->Y:Ljava/lang/String;
 
-    invoke-static {v0, p1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v0, p1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result p1
 

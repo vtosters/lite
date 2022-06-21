@@ -1,5 +1,5 @@
 .class final Lcom/vk/stories/StoryRepliesAndViewersView$c;
-.super Lcom/vk/lists/i0;
+.super Lcom/vk/lists/SimpleAdapter;
 .source "StoryRepliesAndViewersView.kt"
 
 
@@ -21,8 +21,8 @@
 
 .annotation system Ldalvik/annotation/Signature;
     value = {
-        "Lcom/vk/lists/i0<",
-        "Lkotlin/m;",
+        "Lcom/vk/lists/SimpleAdapter<",
+        "Lkotlin/Unit;",
         "Lcom/vk/stories/StoryRepliesAndViewersView$c$a;",
         ">;"
     }
@@ -40,7 +40,7 @@
     .locals 1
 
     .line 1
-    invoke-direct {p0}, Lcom/vk/lists/i0;-><init>()V
+    invoke-direct {p0}, Lcom/vk/lists/SimpleAdapter;-><init>()V
 
     const-string v0, ""
 
@@ -56,11 +56,11 @@
     .locals 0
 
     .line 1
-    invoke-virtual {p0, p2}, Lcom/vk/lists/i0;->k(I)Ljava/lang/Object;
+    invoke-virtual {p0, p2}, Lcom/vk/lists/SimpleAdapter;->k(I)Ljava/lang/Object;
 
     move-result-object p2
 
-    invoke-virtual {p1, p2}, Lcom/vtosters/lite/ui/b0/i;->a(Ljava/lang/Object;)V
+    invoke-virtual {p1, p2}, Lcom/vtosters/lite/ui/holder/RecyclerHolder;->a(Ljava/lang/Object;)V
 
     return-void
 .end method
@@ -132,7 +132,7 @@
     return-object p1
 
     :cond_1
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     const/4 p1, 0x0
 

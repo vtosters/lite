@@ -50,7 +50,7 @@
 
     const-string v0, "accounts[which]"
 
-    invoke-static {p2, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p2, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-static {p1, p2}, Lcom/vk/socialgraph/init/SocialGraphLoginFragment;->b(Lcom/vk/socialgraph/init/SocialGraphLoginFragment;Landroid/accounts/Account;)V
 

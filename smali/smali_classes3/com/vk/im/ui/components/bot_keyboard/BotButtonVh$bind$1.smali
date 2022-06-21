@@ -3,12 +3,12 @@
 .source "BotKeyboardAdapter.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/b;
+.implements Lkotlin/jvm/b/Functions2;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/im/ui/components/bot_keyboard/BotButtonVh;->a(Lcom/vk/im/engine/models/conversations/BotButton;ZILcom/vk/im/ui/components/bot_keyboard/c;)V
+    value = Lcom/vk/im/ui/components/bot_keyboard/BotButtonVh;->a(Lcom/vk/im/engine/models/conversations/BotButton;ZILcom/vk/im/ui/components/bot_keyboard/BotKeyboardCallback;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -19,9 +19,9 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/b<",
+        "Lkotlin/jvm/b/Functions2<",
         "Landroid/view/View;",
-        "Lkotlin/m;",
+        "Lkotlin/Unit;",
         ">;"
     }
 .end annotation
@@ -30,16 +30,16 @@
 # instance fields
 .field final synthetic $button:Lcom/vk/im/engine/models/conversations/BotButton;
 
-.field final synthetic $callback:Lcom/vk/im/ui/components/bot_keyboard/c;
+.field final synthetic $callback:Lcom/vk/im/ui/components/bot_keyboard/BotKeyboardCallback;
 
 .field final synthetic $position:I
 
 
 # direct methods
-.method constructor <init>(Lcom/vk/im/ui/components/bot_keyboard/c;Lcom/vk/im/engine/models/conversations/BotButton;I)V
+.method constructor <init>(Lcom/vk/im/ui/components/bot_keyboard/BotKeyboardCallback;Lcom/vk/im/engine/models/conversations/BotButton;I)V
     .locals 0
 
-    iput-object p1, p0, Lcom/vk/im/ui/components/bot_keyboard/BotButtonVh$bind$1;->$callback:Lcom/vk/im/ui/components/bot_keyboard/c;
+    iput-object p1, p0, Lcom/vk/im/ui/components/bot_keyboard/BotButtonVh$bind$1;->$callback:Lcom/vk/im/ui/components/bot_keyboard/BotKeyboardCallback;
 
     iput-object p2, p0, Lcom/vk/im/ui/components/bot_keyboard/BotButtonVh$bind$1;->$button:Lcom/vk/im/engine/models/conversations/BotButton;
 
@@ -58,13 +58,13 @@
     .locals 2
 
     .line 1
-    iget-object p1, p0, Lcom/vk/im/ui/components/bot_keyboard/BotButtonVh$bind$1;->$callback:Lcom/vk/im/ui/components/bot_keyboard/c;
+    iget-object p1, p0, Lcom/vk/im/ui/components/bot_keyboard/BotButtonVh$bind$1;->$callback:Lcom/vk/im/ui/components/bot_keyboard/BotKeyboardCallback;
 
     iget-object v0, p0, Lcom/vk/im/ui/components/bot_keyboard/BotButtonVh$bind$1;->$button:Lcom/vk/im/engine/models/conversations/BotButton;
 
     iget v1, p0, Lcom/vk/im/ui/components/bot_keyboard/BotButtonVh$bind$1;->$position:I
 
-    invoke-interface {p1, v0, v1}, Lcom/vk/im/ui/components/bot_keyboard/c;->a(Lcom/vk/im/engine/models/conversations/BotButton;I)V
+    invoke-interface {p1, v0, v1}, Lcom/vk/im/ui/components/bot_keyboard/BotKeyboardCallback;->a(Lcom/vk/im/engine/models/conversations/BotButton;I)V
 
     return-void
 .end method
@@ -77,7 +77,7 @@
 
     invoke-virtual {p0, p1}, Lcom/vk/im/ui/components/bot_keyboard/BotButtonVh$bind$1;->a(Landroid/view/View;)V
 
-    sget-object p1, Lkotlin/m;->a:Lkotlin/m;
+    sget-object p1, Lkotlin/Unit;->a:Lkotlin/Unit;
 
     return-object p1
 .end method

@@ -1,5 +1,5 @@
 .class final Lcom/vk/im/ui/providers/audiomsg/ImAudioMsgPlayerProvider$c;
-.super Lcom/vk/audiomsg/player/utils/e;
+.super Lcom/vk/audiomsg/player/utils/BaseAudioMsgPlayerListener;
 .source "ImAudioMsgPlayerProvider.kt"
 
 
@@ -19,14 +19,14 @@
     .locals 0
 
     .line 1
-    invoke-direct {p0}, Lcom/vk/audiomsg/player/utils/e;-><init>()V
+    invoke-direct {p0}, Lcom/vk/audiomsg/player/utils/BaseAudioMsgPlayerListener;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public a(Lcom/vk/audiomsg/player/a;Lcom/vk/audiomsg/player/f;)V
+.method public a(Lcom/vk/audiomsg/player/AudioMsgPlayer;Lcom/vk/audiomsg/player/Source;)V
     .locals 0
 
     .line 3
@@ -37,15 +37,15 @@
     return-void
 .end method
 
-.method public a(Lcom/vk/audiomsg/player/a;Lcom/vk/audiomsg/player/f;Ljava/util/List;)V
+.method public a(Lcom/vk/audiomsg/player/AudioMsgPlayer;Lcom/vk/audiomsg/player/Source;Ljava/util/List;)V
     .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lcom/vk/audiomsg/player/a;",
-            "Lcom/vk/audiomsg/player/f;",
+            "Lcom/vk/audiomsg/player/AudioMsgPlayer;",
+            "Lcom/vk/audiomsg/player/Source;",
             "Ljava/util/List<",
-            "Lcom/vk/audiomsg/player/d;",
+            "Lcom/vk/audiomsg/player/AudioMsgTrack;",
             ">;)V"
         }
     .end annotation

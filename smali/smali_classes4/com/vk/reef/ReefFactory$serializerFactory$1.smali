@@ -3,12 +3,12 @@
 .source "ReefFactory.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/a;
+.implements Lkotlin/jvm/b/Functions;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/reef/ReefFactory;-><init>(Landroid/app/Application;Lcom/vk/reef/utils/a;)V
+    value = Lcom/vk/reef/ReefFactory;-><init>(Landroid/app/Application;Lcom/vk/reef/utils/ReefApplicationSettings;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -19,8 +19,8 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/a<",
-        "Lcom/vk/reef/k/c;",
+        "Lkotlin/jvm/b/Functions<",
+        "Lcom/vk/reef/k/ReefProtobufSerializer;",
         ">;"
     }
 .end annotation
@@ -55,13 +55,13 @@
 
 
 # virtual methods
-.method public final invoke()Lcom/vk/reef/k/c;
+.method public final invoke()Lcom/vk/reef/k/ReefProtobufSerializer;
     .locals 1
 
     .line 2
-    new-instance v0, Lcom/vk/reef/k/c;
+    new-instance v0, Lcom/vk/reef/k/ReefProtobufSerializer;
 
-    invoke-direct {v0}, Lcom/vk/reef/k/c;-><init>()V
+    invoke-direct {v0}, Lcom/vk/reef/k/ReefProtobufSerializer;-><init>()V
 
     return-object v0
 .end method
@@ -70,7 +70,7 @@
     .locals 1
 
     .line 1
-    invoke-virtual {p0}, Lcom/vk/reef/ReefFactory$serializerFactory$1;->invoke()Lcom/vk/reef/k/c;
+    invoke-virtual {p0}, Lcom/vk/reef/ReefFactory$serializerFactory$1;->invoke()Lcom/vk/reef/k/ReefProtobufSerializer;
 
     move-result-object v0
 

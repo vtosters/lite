@@ -52,7 +52,7 @@
 
     const-string v1, "context.optString(CONFIRM_HASH)"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     iput-object v0, p0, Lcom/vk/pushes/notifications/ValidateActionNotification$b;->D:Ljava/lang/String;
 

@@ -24,7 +24,7 @@
     return-void
 .end method
 
-.method public synthetic constructor <init>(Lkotlin/jvm/internal/i;)V
+.method public synthetic constructor <init>(Lkotlin/jvm/internal/DefaultConstructorMarker;)V
     .locals 0
 
     .line 2
@@ -108,11 +108,11 @@
     if-eqz v8, :cond_1
 
     .line 8
-    sget-object v8, Lcom/vk/dto/common/data/c;->a:Lcom/vk/dto/common/data/c$a;
+    sget-object v8, Lcom/vk/dto/common/data/JsonParser;->a:Lcom/vk/dto/common/data/JsonParser$a;
 
-    sget-object v9, Lcom/vk/catalog2/core/api/dto/buttons/CatalogButton;->a:Lcom/vk/dto/common/data/c;
+    sget-object v9, Lcom/vk/catalog2/core/api/dto/buttons/CatalogButton;->a:Lcom/vk/dto/common/data/JsonParser;
 
-    invoke-virtual {v8, p1, v7, v9}, Lcom/vk/dto/common/data/c$a;->b(Lorg/json/JSONObject;Ljava/lang/String;Lcom/vk/dto/common/data/c;)Ljava/util/ArrayList;
+    invoke-virtual {v8, p1, v7, v9}, Lcom/vk/dto/common/data/JsonParser$a;->b(Lorg/json/JSONObject;Ljava/lang/String;Lcom/vk/dto/common/data/JsonParser;)Ljava/util/ArrayList;
 
     move-result-object p1
 
@@ -136,9 +136,9 @@
     if-eqz p1, :cond_2
 
     .line 10
-    sget-object v7, Lcom/vk/catalog2/core/api/dto/buttons/CatalogButton;->a:Lcom/vk/dto/common/data/c;
+    sget-object v7, Lcom/vk/catalog2/core/api/dto/buttons/CatalogButton;->a:Lcom/vk/dto/common/data/JsonParser;
 
-    invoke-virtual {v7, p1}, Lcom/vk/dto/common/data/c;->a(Lorg/json/JSONObject;)Ljava/lang/Object;
+    invoke-virtual {v7, p1}, Lcom/vk/dto/common/data/JsonParser;->a(Lorg/json/JSONObject;)Ljava/lang/Object;
 
     move-result-object p1
 
@@ -167,13 +167,13 @@
     :goto_2
     new-instance p1, Lcom/vk/catalog2/core/api/dto/CatalogStateInfo;
 
-    invoke-static {v2, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v2, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    invoke-static {v3, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v3, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     const-string v0, "image"
 
-    invoke-static {v4, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v4, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     move-object v1, p1
 

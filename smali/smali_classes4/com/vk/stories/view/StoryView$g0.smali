@@ -43,7 +43,7 @@
 
     const/4 v1, 0x1
 
-    invoke-virtual {v0, v1}, Lcom/vk/stories/view/e1;->c(Z)V
+    invoke-virtual {v0, v1}, Lcom/vk/stories/view/BaseStoryView;->c(Z)V
 
     return-void
 .end method

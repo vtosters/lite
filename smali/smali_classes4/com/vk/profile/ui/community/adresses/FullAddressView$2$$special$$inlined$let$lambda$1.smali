@@ -3,7 +3,7 @@
 .source "FullAddressView.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/b;
+.implements Lkotlin/jvm/b/Functions2;
 
 
 # annotations
@@ -19,9 +19,9 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/b<",
-        "Lcom/vk/profile/ui/f/a$c;",
-        "Lkotlin/m;",
+        "Lkotlin/jvm/b/Functions2<",
+        "Lcom/vk/profile/ui/f/AppPickerDialog$c;",
+        "Lkotlin/Unit;",
         ">;"
     }
 .end annotation
@@ -50,11 +50,11 @@
 
 
 # virtual methods
-.method public final a(Lcom/vk/profile/ui/f/a$c;)V
+.method public final a(Lcom/vk/profile/ui/f/AppPickerDialog$c;)V
     .locals 1
 
     .line 1
-    invoke-virtual {p1}, Lcom/vk/profile/ui/f/a$c;->c()Ljava/lang/String;
+    invoke-virtual {p1}, Lcom/vk/profile/ui/f/AppPickerDialog$c;->c()Ljava/lang/String;
 
     move-result-object p1
 
@@ -66,7 +66,7 @@
 
     move-result v0
 
-    invoke-static {p1, v0}, Lcom/vk/profile/e/f;->a(Ljava/lang/String;I)V
+    invoke-static {p1, v0}, Lcom/vk/profile/e/ProfileTracker1;->a(Ljava/lang/String;I)V
 
     return-void
 .end method
@@ -75,11 +75,11 @@
     .locals 0
 
     .line 1
-    check-cast p1, Lcom/vk/profile/ui/f/a$c;
+    check-cast p1, Lcom/vk/profile/ui/f/AppPickerDialog$c;
 
-    invoke-virtual {p0, p1}, Lcom/vk/profile/ui/community/adresses/FullAddressView$2$$special$$inlined$let$lambda$1;->a(Lcom/vk/profile/ui/f/a$c;)V
+    invoke-virtual {p0, p1}, Lcom/vk/profile/ui/community/adresses/FullAddressView$2$$special$$inlined$let$lambda$1;->a(Lcom/vk/profile/ui/f/AppPickerDialog$c;)V
 
-    sget-object p1, Lkotlin/m;->a:Lkotlin/m;
+    sget-object p1, Lkotlin/Unit;->a:Lkotlin/Unit;
 
     return-object p1
 .end method

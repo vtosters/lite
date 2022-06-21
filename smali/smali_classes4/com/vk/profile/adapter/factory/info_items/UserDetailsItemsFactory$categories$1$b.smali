@@ -62,7 +62,7 @@
 
     iget-object v1, v1, Lcom/vk/profile/adapter/factory/info_items/UserDetailsItemsFactory$categories$1;->this$0:Lcom/vk/profile/adapter/factory/info_items/UserDetailsItemsFactory;
 
-    invoke-virtual {v1}, Lcom/vk/profile/adapter/b/a;->b()Landroid/content/res/Resources;
+    invoke-virtual {v1}, Lcom/vk/profile/adapter/b/BaseItemsFactory;->b()Landroid/content/res/Resources;
 
     move-result-object v1
 
@@ -77,17 +77,17 @@
     invoke-virtual {v0, v2, v1}, Landroid/os/Bundle;->putCharSequence(Ljava/lang/String;Ljava/lang/CharSequence;)V
 
     .line 4
-    new-instance v1, Lcom/vk/navigation/o;
+    new-instance v1, Lcom/vk/navigation/Navigator;
 
-    const-class v2, Lcom/vtosters/lite/fragments/w2/i;
+    const-class v2, Lcom/vtosters/lite/fragments/w2/SubscriptionsUserListFragment;
 
-    invoke-direct {v1, v2, v0}, Lcom/vk/navigation/o;-><init>(Ljava/lang/Class;Landroid/os/Bundle;)V
+    invoke-direct {v1, v2, v0}, Lcom/vk/navigation/Navigator;-><init>(Ljava/lang/Class;Landroid/os/Bundle;)V
 
     iget-object v0, p0, Lcom/vk/profile/adapter/factory/info_items/UserDetailsItemsFactory$categories$1$b;->a:Lcom/vk/profile/adapter/factory/info_items/UserDetailsItemsFactory$categories$1;
 
     iget-object v0, v0, Lcom/vk/profile/adapter/factory/info_items/UserDetailsItemsFactory$categories$1;->$context:Landroid/content/Context;
 
-    invoke-virtual {v1, v0}, Lcom/vk/navigation/o;->a(Landroid/content/Context;)V
+    invoke-virtual {v1, v0}, Lcom/vk/navigation/Navigator;->a(Landroid/content/Context;)V
 
     return-void
 .end method

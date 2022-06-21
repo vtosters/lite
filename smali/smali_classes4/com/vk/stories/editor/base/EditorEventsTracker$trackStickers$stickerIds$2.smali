@@ -3,7 +3,7 @@
 .source "EditorEventsTracker.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/b;
+.implements Lkotlin/jvm/b/Functions2;
 
 
 # annotations
@@ -19,7 +19,7 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/b<",
+        "Lkotlin/jvm/b/Functions2<",
         "Lcom/vk/attachpicker/stickers/ISticker;",
         "Ljava/lang/String;",
         ">;"
@@ -62,9 +62,9 @@
     if-eqz p1, :cond_0
 
     .line 1
-    check-cast p1, Lcom/vk/attachpicker/stickers/u;
+    check-cast p1, Lcom/vk/attachpicker/stickers/BitmapSticker;
 
-    invoke-virtual {p1}, Lcom/vk/attachpicker/stickers/u;->r()Ljava/lang/String;
+    invoke-virtual {p1}, Lcom/vk/attachpicker/stickers/BitmapSticker;->r()Ljava/lang/String;
 
     move-result-object p1
 

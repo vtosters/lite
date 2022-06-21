@@ -3,7 +3,7 @@
 .source "SingleToObservable.java"
 
 # interfaces
-.implements Lc/a/v;
+.implements Lio/reactivex/SingleObserver;
 
 
 # annotations
@@ -23,7 +23,7 @@
         ">",
         "Lio/reactivex/internal/observers/DeferredScalarDisposable<",
         "TT;>;",
-        "Lc/a/v<",
+        "Lio/reactivex/SingleObserver<",
         "TT;>;"
     }
 .end annotation
@@ -34,47 +34,47 @@
 
 
 # instance fields
-.field upstream:Lio/reactivex/disposables/b;
+.field upstream:Lio/reactivex/disposables/Disposable;
 
 
 # direct methods
-.method constructor <init>(Lc/a/r;)V
+.method constructor <init>(Lio/reactivex/Observer;)V
     .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lc/a/r<",
+            "Lio/reactivex/Observer<",
             "-TT;>;)V"
         }
     .end annotation
 
     .line 1
-    invoke-direct {p0, p1}, Lio/reactivex/internal/observers/DeferredScalarDisposable;-><init>(Lc/a/r;)V
+    invoke-direct {p0, p1}, Lio/reactivex/internal/observers/DeferredScalarDisposable;-><init>(Lio/reactivex/Observer;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public a(Lio/reactivex/disposables/b;)V
+.method public a(Lio/reactivex/disposables/Disposable;)V
     .locals 1
 
     .line 1
-    iget-object v0, p0, Lio/reactivex/internal/operators/single/SingleToObservable$SingleToObservableObserver;->upstream:Lio/reactivex/disposables/b;
+    iget-object v0, p0, Lio/reactivex/internal/operators/single/SingleToObservable$SingleToObservableObserver;->upstream:Lio/reactivex/disposables/Disposable;
 
-    invoke-static {v0, p1}, Lio/reactivex/internal/disposables/DisposableHelper;->a(Lio/reactivex/disposables/b;Lio/reactivex/disposables/b;)Z
+    invoke-static {v0, p1}, Lio/reactivex/internal/disposables/DisposableHelper;->a(Lio/reactivex/disposables/Disposable;Lio/reactivex/disposables/Disposable;)Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
     .line 2
-    iput-object p1, p0, Lio/reactivex/internal/operators/single/SingleToObservable$SingleToObservableObserver;->upstream:Lio/reactivex/disposables/b;
+    iput-object p1, p0, Lio/reactivex/internal/operators/single/SingleToObservable$SingleToObservableObserver;->upstream:Lio/reactivex/disposables/Disposable;
 
     .line 3
-    iget-object p1, p0, Lio/reactivex/internal/observers/DeferredScalarDisposable;->downstream:Lc/a/r;
+    iget-object p1, p0, Lio/reactivex/internal/observers/DeferredScalarDisposable;->downstream:Lio/reactivex/Observer;
 
-    invoke-interface {p1, p0}, Lc/a/r;->a(Lio/reactivex/disposables/b;)V
+    invoke-interface {p1, p0}, Lio/reactivex/Observer;->a(Lio/reactivex/disposables/Disposable;)V
 
     :cond_0
     return-void
@@ -110,9 +110,9 @@
     invoke-super {p0}, Lio/reactivex/internal/observers/DeferredScalarDisposable;->o()V
 
     .line 2
-    iget-object v0, p0, Lio/reactivex/internal/operators/single/SingleToObservable$SingleToObservableObserver;->upstream:Lio/reactivex/disposables/b;
+    iget-object v0, p0, Lio/reactivex/internal/operators/single/SingleToObservable$SingleToObservableObserver;->upstream:Lio/reactivex/disposables/Disposable;
 
-    invoke-interface {v0}, Lio/reactivex/disposables/b;->o()V
+    invoke-interface {v0}, Lio/reactivex/disposables/Disposable;->o()V
 
     return-void
 .end method

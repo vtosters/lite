@@ -1,9 +1,9 @@
 .class public final Lcom/vtosters/lite/fragments/money/createtransfer/people/CreatePeopleTransferPresenter;
-.super Lcom/vtosters/lite/fragments/money/q/b;
+.super Lcom/vtosters/lite/fragments/money/q/AbsCreateTransferPresenter;
 .source "CreatePeopleTransferPresenter.kt"
 
 # interfaces
-.implements Lcom/vtosters/lite/fragments/money/createtransfer/people/a;
+.implements Lcom/vtosters/lite/fragments/money/createtransfer/people/CreatePeopleTransferContract;
 
 
 # annotations
@@ -17,17 +17,17 @@
 # instance fields
 .field private n:Lcom/vtosters/lite/fragments/money/createtransfer/people/CreatePeopleTransferPresenter$TransferMode;
 
-.field private final o:Lcom/vtosters/lite/fragments/money/createtransfer/people/b;
+.field private final o:Lcom/vtosters/lite/fragments/money/createtransfer/people/CreatePeopleTransferContract1;
 
 
 # direct methods
-.method public constructor <init>(Lcom/vtosters/lite/fragments/money/createtransfer/people/b;Landroid/os/Bundle;)V
+.method public constructor <init>(Lcom/vtosters/lite/fragments/money/createtransfer/people/CreatePeopleTransferContract1;Landroid/os/Bundle;)V
     .locals 0
 
     .line 1
-    invoke-direct {p0, p1, p2}, Lcom/vtosters/lite/fragments/money/q/b;-><init>(Lcom/vtosters/lite/fragments/money/q/d;Landroid/os/Bundle;)V
+    invoke-direct {p0, p1, p2}, Lcom/vtosters/lite/fragments/money/q/AbsCreateTransferPresenter;-><init>(Lcom/vtosters/lite/fragments/money/q/CreateTransferContract1;Landroid/os/Bundle;)V
 
-    iput-object p1, p0, Lcom/vtosters/lite/fragments/money/createtransfer/people/CreatePeopleTransferPresenter;->o:Lcom/vtosters/lite/fragments/money/createtransfer/people/b;
+    iput-object p1, p0, Lcom/vtosters/lite/fragments/money/createtransfer/people/CreatePeopleTransferPresenter;->o:Lcom/vtosters/lite/fragments/money/createtransfer/people/CreatePeopleTransferContract1;
 
     .line 2
     sget-object p1, Lcom/vtosters/lite/fragments/money/createtransfer/people/CreatePeopleTransferPresenter$TransferMode;->TRANSFER:Lcom/vtosters/lite/fragments/money/createtransfer/people/CreatePeopleTransferPresenter$TransferMode;
@@ -41,7 +41,7 @@
     .locals 0
 
     .line 1
-    invoke-virtual {p0}, Lcom/vtosters/lite/fragments/money/q/b;->j()Ljava/lang/String;
+    invoke-virtual {p0}, Lcom/vtosters/lite/fragments/money/q/AbsCreateTransferPresenter;->j()Ljava/lang/String;
 
     move-result-object p0
 
@@ -72,19 +72,19 @@
 
     .line 18
     :cond_0
-    iget-object v1, p0, Lcom/vtosters/lite/fragments/money/createtransfer/people/CreatePeopleTransferPresenter;->o:Lcom/vtosters/lite/fragments/money/createtransfer/people/b;
+    iget-object v1, p0, Lcom/vtosters/lite/fragments/money/createtransfer/people/CreatePeopleTransferPresenter;->o:Lcom/vtosters/lite/fragments/money/createtransfer/people/CreatePeopleTransferContract1;
 
     const-string v2, "name"
 
-    invoke-static {v0, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     iget-object p1, p1, Lcom/vk/dto/user/UserProfile;->f:Ljava/lang/String;
 
     const-string v2, "userProfile.photo"
 
-    invoke-static {p1, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    invoke-interface {v1, v0, p1}, Lcom/vtosters/lite/fragments/money/q/d;->c(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-interface {v1, v0, p1}, Lcom/vtosters/lite/fragments/money/q/CreateTransferContract1;->c(Ljava/lang/String;Ljava/lang/String;)V
 
     return-void
 .end method
@@ -102,7 +102,7 @@
     .locals 0
 
     .line 4
-    invoke-virtual {p0, p1}, Lcom/vtosters/lite/fragments/money/q/b;->a(Lcom/vk/dto/money/MoneyReceiverInfo;)V
+    invoke-virtual {p0, p1}, Lcom/vtosters/lite/fragments/money/q/AbsCreateTransferPresenter;->a(Lcom/vk/dto/money/MoneyReceiverInfo;)V
 
     return-void
 .end method
@@ -120,7 +120,7 @@
     .locals 0
 
     .line 3
-    invoke-virtual {p0, p1}, Lcom/vtosters/lite/fragments/money/q/b;->f(Ljava/lang/String;)V
+    invoke-virtual {p0, p1}, Lcom/vtosters/lite/fragments/money/q/AbsCreateTransferPresenter;->f(Ljava/lang/String;)V
 
     return-void
 .end method
@@ -129,17 +129,17 @@
     .locals 0
 
     .line 5
-    invoke-virtual {p0, p1}, Lcom/vtosters/lite/fragments/money/q/b;->c(Z)V
+    invoke-virtual {p0, p1}, Lcom/vtosters/lite/fragments/money/q/AbsCreateTransferPresenter;->c(Z)V
 
     return-void
 .end method
 
-.method private final b(I)Lcom/vk/api/base/d;
+.method private final b(I)Lcom/vk/api/base/ApiRequest;
     .locals 3
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(I)",
-            "Lcom/vk/api/base/d<",
+            "Lcom/vk/api/base/ApiRequest<",
             "+",
             "Ljava/lang/Object;",
             ">;"
@@ -149,7 +149,7 @@
     if-lez p1, :cond_0
 
     .line 4
-    new-instance v0, Lcom/vk/api/users/b;
+    new-instance v0, Lcom/vk/api/users/UsersGet;
 
     const/4 v1, 0x1
 
@@ -167,27 +167,27 @@
 
     const-string v2, "dat"
 
-    invoke-direct {v0, v1, p1, v2}, Lcom/vk/api/users/b;-><init>([I[Ljava/lang/String;Ljava/lang/String;)V
+    invoke-direct {v0, v1, p1, v2}, Lcom/vk/api/users/UsersGet;-><init>([I[Ljava/lang/String;Ljava/lang/String;)V
 
     goto :goto_0
 
     .line 5
     :cond_0
-    new-instance v0, Lcom/vk/api/groups/i;
+    new-instance v0, Lcom/vk/api/groups/GroupsGetById;
 
     neg-int p1, p1
 
-    invoke-direct {v0, p1}, Lcom/vk/api/groups/i;-><init>(I)V
+    invoke-direct {v0, p1}, Lcom/vk/api/groups/GroupsGetById;-><init>(I)V
 
     :goto_0
     return-object v0
 .end method
 
-.method public static final synthetic b(Lcom/vtosters/lite/fragments/money/createtransfer/people/CreatePeopleTransferPresenter;)Lcom/vtosters/lite/fragments/money/createtransfer/people/b;
+.method public static final synthetic b(Lcom/vtosters/lite/fragments/money/createtransfer/people/CreatePeopleTransferPresenter;)Lcom/vtosters/lite/fragments/money/createtransfer/people/CreatePeopleTransferContract1;
     .locals 0
 
     .line 1
-    iget-object p0, p0, Lcom/vtosters/lite/fragments/money/createtransfer/people/CreatePeopleTransferPresenter;->o:Lcom/vtosters/lite/fragments/money/createtransfer/people/b;
+    iget-object p0, p0, Lcom/vtosters/lite/fragments/money/createtransfer/people/CreatePeopleTransferPresenter;->o:Lcom/vtosters/lite/fragments/money/createtransfer/people/CreatePeopleTransferContract1;
 
     return-object p0
 .end method
@@ -198,9 +198,9 @@
     move-object/from16 v0, p0
 
     .line 18
-    new-instance v7, Lb/h/c/p/j;
+    new-instance v7, Lcom/vk/api/money/MoneySendTransfer;
 
-    invoke-virtual/range {p0 .. p0}, Lcom/vtosters/lite/fragments/money/q/b;->o()Ljava/lang/String;
+    invoke-virtual/range {p0 .. p0}, Lcom/vtosters/lite/fragments/money/q/AbsCreateTransferPresenter;->o()Ljava/lang/String;
 
     move-result-object v6
 
@@ -214,19 +214,19 @@
 
     move-object/from16 v5, p5
 
-    invoke-direct/range {v1 .. v6}, Lb/h/c/p/j;-><init>(IILjava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-direct/range {v1 .. v6}, Lcom/vk/api/money/MoneySendTransfer;-><init>(IILjava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
 
     const/4 v1, 0x0
 
     const/4 v2, 0x1
 
     .line 19
-    invoke-static {v7, v1, v2, v1}, Lcom/vk/api/base/d;->d(Lcom/vk/api/base/d;Lcom/vk/api/base/e;ILjava/lang/Object;)Lc/a/m;
+    invoke-static {v7, v1, v2, v1}, Lcom/vk/api/base/ApiRequest;->d(Lcom/vk/api/base/ApiRequest;Lcom/vk/api/base/ApiThreadHolder;ILjava/lang/Object;)Lio/reactivex/Observable;
 
     move-result-object v8
 
     .line 20
-    invoke-virtual/range {p0 .. p0}, Lcom/vtosters/lite/fragments/money/q/b;->m()Lio/reactivex/disposables/a;
+    invoke-virtual/range {p0 .. p0}, Lcom/vtosters/lite/fragments/money/q/AbsCreateTransferPresenter;->m()Lio/reactivex/disposables/CompositeDisposable;
 
     move-result-object v1
 
@@ -245,7 +245,7 @@
     move-object/from16 v9, p1
 
     .line 21
-    invoke-static/range {v8 .. v16}, Lcom/vk/core/extensions/RxExtKt;->a(Lc/a/m;Landroid/content/Context;JIZZILjava/lang/Object;)Lc/a/m;
+    invoke-static/range {v8 .. v16}, Lcom/vk/core/extensions/RxExtKt;->a(Lio/reactivex/Observable;Landroid/content/Context;JIZZILjava/lang/Object;)Lio/reactivex/Observable;
 
     move-result-object v2
 
@@ -260,12 +260,12 @@
     invoke-direct {v4, v0}, Lcom/vtosters/lite/fragments/money/createtransfer/people/CreatePeopleTransferPresenter$i;-><init>(Lcom/vtosters/lite/fragments/money/createtransfer/people/CreatePeopleTransferPresenter;)V
 
     .line 24
-    invoke-virtual {v2, v3, v4}, Lc/a/m;->a(Lc/a/z/g;Lc/a/z/g;)Lio/reactivex/disposables/b;
+    invoke-virtual {v2, v3, v4}, Lio/reactivex/Observable;->a(Lio/reactivex/functions/Consumer;Lio/reactivex/functions/Consumer;)Lio/reactivex/disposables/Disposable;
 
     move-result-object v2
 
     .line 25
-    invoke-virtual {v1, v2}, Lio/reactivex/disposables/a;->b(Lio/reactivex/disposables/b;)Z
+    invoke-virtual {v1, v2}, Lio/reactivex/disposables/CompositeDisposable;->b(Lio/reactivex/disposables/Disposable;)Z
 
     return-void
 .end method
@@ -277,17 +277,17 @@
     invoke-direct {p0, p1}, Lcom/vtosters/lite/fragments/money/createtransfer/people/CreatePeopleTransferPresenter;->a(Lcom/vk/dto/user/UserProfile;)V
 
     .line 10
-    iget-object p1, p0, Lcom/vtosters/lite/fragments/money/createtransfer/people/CreatePeopleTransferPresenter;->o:Lcom/vtosters/lite/fragments/money/createtransfer/people/b;
+    iget-object p1, p0, Lcom/vtosters/lite/fragments/money/createtransfer/people/CreatePeopleTransferPresenter;->o:Lcom/vtosters/lite/fragments/money/createtransfer/people/CreatePeopleTransferContract1;
 
-    invoke-interface {p1}, Lcom/vtosters/lite/fragments/money/createtransfer/people/b;->z3()V
+    invoke-interface {p1}, Lcom/vtosters/lite/fragments/money/createtransfer/people/CreatePeopleTransferContract1;->z3()V
 
     .line 11
-    iget-object p1, p0, Lcom/vtosters/lite/fragments/money/createtransfer/people/CreatePeopleTransferPresenter;->o:Lcom/vtosters/lite/fragments/money/createtransfer/people/b;
+    iget-object p1, p0, Lcom/vtosters/lite/fragments/money/createtransfer/people/CreatePeopleTransferPresenter;->o:Lcom/vtosters/lite/fragments/money/createtransfer/people/CreatePeopleTransferContract1;
 
-    invoke-interface {p1}, Lcom/vtosters/lite/fragments/money/q/d;->p3()V
+    invoke-interface {p1}, Lcom/vtosters/lite/fragments/money/q/CreateTransferContract1;->p3()V
 
     .line 12
-    invoke-virtual {p0}, Lcom/vtosters/lite/fragments/money/q/b;->n()Lcom/vk/dto/money/MoneyReceiverInfo;
+    invoke-virtual {p0}, Lcom/vtosters/lite/fragments/money/q/AbsCreateTransferPresenter;->n()Lcom/vk/dto/money/MoneyReceiverInfo;
 
     move-result-object p1
 
@@ -307,11 +307,11 @@
     if-eqz v0, :cond_0
 
     .line 14
-    iget-object p1, p0, Lcom/vtosters/lite/fragments/money/createtransfer/people/CreatePeopleTransferPresenter;->o:Lcom/vtosters/lite/fragments/money/createtransfer/people/b;
+    iget-object p1, p0, Lcom/vtosters/lite/fragments/money/createtransfer/people/CreatePeopleTransferPresenter;->o:Lcom/vtosters/lite/fragments/money/createtransfer/people/CreatePeopleTransferContract1;
 
     iget-object v0, p0, Lcom/vtosters/lite/fragments/money/createtransfer/people/CreatePeopleTransferPresenter;->n:Lcom/vtosters/lite/fragments/money/createtransfer/people/CreatePeopleTransferPresenter$TransferMode;
 
-    invoke-interface {p1, v0}, Lcom/vtosters/lite/fragments/money/createtransfer/people/b;->a(Lcom/vtosters/lite/fragments/money/createtransfer/people/CreatePeopleTransferPresenter$TransferMode;)V
+    invoke-interface {p1, v0}, Lcom/vtosters/lite/fragments/money/createtransfer/people/CreatePeopleTransferContract1;->a(Lcom/vtosters/lite/fragments/money/createtransfer/people/CreatePeopleTransferPresenter$TransferMode;)V
 
     goto :goto_0
 
@@ -330,9 +330,9 @@
     if-eqz p1, :cond_1
 
     .line 16
-    iget-object p1, p0, Lcom/vtosters/lite/fragments/money/createtransfer/people/CreatePeopleTransferPresenter;->o:Lcom/vtosters/lite/fragments/money/createtransfer/people/b;
+    iget-object p1, p0, Lcom/vtosters/lite/fragments/money/createtransfer/people/CreatePeopleTransferPresenter;->o:Lcom/vtosters/lite/fragments/money/createtransfer/people/CreatePeopleTransferContract1;
 
-    sget-object v0, Lcom/vk/core/util/i;->a:Landroid/content/Context;
+    sget-object v0, Lcom/vk/core/util/AppContextHolder;->a:Landroid/content/Context;
 
     const v1, 0x7f120747
 
@@ -342,17 +342,17 @@
 
     const-string v1, "AppContextHolder.context\u2026g.money_transfer_request)"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    invoke-interface {p1, v0}, Lcom/vtosters/lite/fragments/money/createtransfer/people/b;->setTitle(Ljava/lang/String;)V
+    invoke-interface {p1, v0}, Lcom/vtosters/lite/fragments/money/createtransfer/people/CreatePeopleTransferContract1;->setTitle(Ljava/lang/String;)V
 
     goto :goto_0
 
     .line 17
     :cond_1
-    iget-object p1, p0, Lcom/vtosters/lite/fragments/money/createtransfer/people/CreatePeopleTransferPresenter;->o:Lcom/vtosters/lite/fragments/money/createtransfer/people/b;
+    iget-object p1, p0, Lcom/vtosters/lite/fragments/money/createtransfer/people/CreatePeopleTransferPresenter;->o:Lcom/vtosters/lite/fragments/money/createtransfer/people/CreatePeopleTransferContract1;
 
-    sget-object v0, Lcom/vk/core/util/i;->a:Landroid/content/Context;
+    sget-object v0, Lcom/vk/core/util/AppContextHolder;->a:Landroid/content/Context;
 
     const v1, 0x7f120734
 
@@ -362,9 +362,9 @@
 
     const-string v1, "AppContextHolder.context\u2026g.money_transfer_payment)"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    invoke-interface {p1, v0}, Lcom/vtosters/lite/fragments/money/createtransfer/people/b;->setTitle(Ljava/lang/String;)V
+    invoke-interface {p1, v0}, Lcom/vtosters/lite/fragments/money/createtransfer/people/CreatePeopleTransferContract1;->setTitle(Ljava/lang/String;)V
 
     :cond_2
     :goto_0
@@ -389,31 +389,31 @@
     return-void
 .end method
 
-.method private final c(I)Lc/a/m;
+.method private final c(I)Lio/reactivex/Observable;
     .locals 3
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(I)",
-            "Lc/a/m<",
+            "Lio/reactivex/Observable<",
             "Lcom/vk/dto/user/UserProfile;",
             ">;"
         }
     .end annotation
 
     .line 4
-    invoke-direct {p0, p1}, Lcom/vtosters/lite/fragments/money/createtransfer/people/CreatePeopleTransferPresenter;->b(I)Lcom/vk/api/base/d;
+    invoke-direct {p0, p1}, Lcom/vtosters/lite/fragments/money/createtransfer/people/CreatePeopleTransferPresenter;->b(I)Lcom/vk/api/base/ApiRequest;
 
     move-result-object v0
 
     const/4 v1, 0x1
 
     .line 5
-    invoke-virtual {v0, v1}, Lcom/vk/api/base/d;->a(Z)Lcom/vk/api/base/d;
+    invoke-virtual {v0, v1}, Lcom/vk/api/base/ApiRequest;->a(Z)Lcom/vk/api/base/ApiRequest;
 
     const/4 v2, 0x0
 
     .line 6
-    invoke-static {v0, v2, v1, v2}, Lcom/vk/api/base/d;->d(Lcom/vk/api/base/d;Lcom/vk/api/base/e;ILjava/lang/Object;)Lc/a/m;
+    invoke-static {v0, v2, v1, v2}, Lcom/vk/api/base/ApiRequest;->d(Lcom/vk/api/base/ApiRequest;Lcom/vk/api/base/ApiThreadHolder;ILjava/lang/Object;)Lio/reactivex/Observable;
 
     move-result-object v0
 
@@ -422,7 +422,7 @@
 
     invoke-direct {v1, p1}, Lcom/vtosters/lite/fragments/money/createtransfer/people/CreatePeopleTransferPresenter$b;-><init>(I)V
 
-    invoke-virtual {v0, v1}, Lc/a/m;->e(Lc/a/z/j;)Lc/a/m;
+    invoke-virtual {v0, v1}, Lio/reactivex/Observable;->e(Lio/reactivex/functions/Function;)Lio/reactivex/Observable;
 
     move-result-object p1
 
@@ -433,34 +433,34 @@
     .locals 4
 
     .line 8
-    invoke-virtual {p0}, Lcom/vtosters/lite/fragments/money/q/b;->m()Lio/reactivex/disposables/a;
+    invoke-virtual {p0}, Lcom/vtosters/lite/fragments/money/q/AbsCreateTransferPresenter;->m()Lio/reactivex/disposables/CompositeDisposable;
 
     move-result-object v0
 
     .line 9
-    new-instance v1, Lb/h/c/p/d;
+    new-instance v1, Lcom/vk/api/money/MoneyGetParams;
 
-    invoke-virtual {p0}, Lcom/vtosters/lite/fragments/money/q/b;->p()I
+    invoke-virtual {p0}, Lcom/vtosters/lite/fragments/money/q/AbsCreateTransferPresenter;->p()I
 
     move-result v2
 
-    invoke-direct {v1, v2}, Lb/h/c/p/d;-><init>(I)V
+    invoke-direct {v1, v2}, Lcom/vk/api/money/MoneyGetParams;-><init>(I)V
 
     const/4 v2, 0x0
 
     const/4 v3, 0x1
 
     .line 10
-    invoke-static {v1, v2, v3, v2}, Lcom/vk/api/base/d;->d(Lcom/vk/api/base/d;Lcom/vk/api/base/e;ILjava/lang/Object;)Lc/a/m;
+    invoke-static {v1, v2, v3, v2}, Lcom/vk/api/base/ApiRequest;->d(Lcom/vk/api/base/ApiRequest;Lcom/vk/api/base/ApiThreadHolder;ILjava/lang/Object;)Lio/reactivex/Observable;
 
     move-result-object v1
 
     .line 11
-    invoke-static {}, Lc/a/y/c/a;->a()Lc/a/s;
+    invoke-static {}, Lio/reactivex/schedulers/AndroidSchedulers;->a()Lio/reactivex/Scheduler;
 
     move-result-object v2
 
-    invoke-virtual {v1, v2}, Lc/a/m;->a(Lc/a/s;)Lc/a/m;
+    invoke-virtual {v1, v2}, Lio/reactivex/Observable;->a(Lio/reactivex/Scheduler;)Lio/reactivex/Observable;
 
     move-result-object v1
 
@@ -469,7 +469,7 @@
 
     invoke-direct {v2, p0}, Lcom/vtosters/lite/fragments/money/createtransfer/people/CreatePeopleTransferPresenter$c;-><init>(Lcom/vtosters/lite/fragments/money/createtransfer/people/CreatePeopleTransferPresenter;)V
 
-    invoke-virtual {v1, v2}, Lc/a/m;->a(Lc/a/z/g;)Lc/a/m;
+    invoke-virtual {v1, v2}, Lio/reactivex/Observable;->a(Lio/reactivex/functions/Consumer;)Lio/reactivex/Observable;
 
     move-result-object v1
 
@@ -478,7 +478,7 @@
 
     invoke-direct {v2, p0}, Lcom/vtosters/lite/fragments/money/createtransfer/people/CreatePeopleTransferPresenter$d;-><init>(Lcom/vtosters/lite/fragments/money/createtransfer/people/CreatePeopleTransferPresenter;)V
 
-    invoke-virtual {v1, v2}, Lc/a/m;->a(Lc/a/z/g;)Lc/a/m;
+    invoke-virtual {v1, v2}, Lio/reactivex/Observable;->a(Lio/reactivex/functions/Consumer;)Lio/reactivex/Observable;
 
     move-result-object v1
 
@@ -487,7 +487,7 @@
 
     invoke-direct {v2, p0, p1}, Lcom/vtosters/lite/fragments/money/createtransfer/people/CreatePeopleTransferPresenter$e;-><init>(Lcom/vtosters/lite/fragments/money/createtransfer/people/CreatePeopleTransferPresenter;Lcom/vk/dto/user/UserProfile;)V
 
-    invoke-virtual {v1, v2}, Lc/a/m;->a(Lc/a/z/g;)Lc/a/m;
+    invoke-virtual {v1, v2}, Lio/reactivex/Observable;->a(Lio/reactivex/functions/Consumer;)Lio/reactivex/Observable;
 
     move-result-object v1
 
@@ -502,12 +502,12 @@
     invoke-direct {v3, p0, p1}, Lcom/vtosters/lite/fragments/money/createtransfer/people/CreatePeopleTransferPresenter$g;-><init>(Lcom/vtosters/lite/fragments/money/createtransfer/people/CreatePeopleTransferPresenter;Lcom/vk/dto/user/UserProfile;)V
 
     .line 17
-    invoke-virtual {v1, v2, v3}, Lc/a/m;->a(Lc/a/z/g;Lc/a/z/g;)Lio/reactivex/disposables/b;
+    invoke-virtual {v1, v2, v3}, Lio/reactivex/Observable;->a(Lio/reactivex/functions/Consumer;Lio/reactivex/functions/Consumer;)Lio/reactivex/disposables/Disposable;
 
     move-result-object p1
 
     .line 18
-    invoke-virtual {v0, p1}, Lio/reactivex/disposables/a;->b(Lio/reactivex/disposables/b;)Z
+    invoke-virtual {v0, p1}, Lio/reactivex/disposables/CompositeDisposable;->b(Lio/reactivex/disposables/Disposable;)Z
 
     return-void
 .end method
@@ -516,7 +516,7 @@
     .locals 2
 
     .line 1
-    iget-object v0, p0, Lcom/vtosters/lite/fragments/money/createtransfer/people/CreatePeopleTransferPresenter;->o:Lcom/vtosters/lite/fragments/money/createtransfer/people/b;
+    iget-object v0, p0, Lcom/vtosters/lite/fragments/money/createtransfer/people/CreatePeopleTransferPresenter;->o:Lcom/vtosters/lite/fragments/money/createtransfer/people/CreatePeopleTransferContract1;
 
     invoke-static {p1}, Lcom/vk/dto/money/MoneyTransfer;->e(Ljava/lang/String;)Ljava/lang/String;
 
@@ -524,9 +524,9 @@
 
     const-string v1, "MoneyTransfer.getYourCurrencySymbol(currency)"
 
-    invoke-static {p1, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    invoke-interface {v0, p1}, Lcom/vtosters/lite/fragments/money/q/d;->z(Ljava/lang/String;)V
+    invoke-interface {v0, p1}, Lcom/vtosters/lite/fragments/money/q/CreateTransferContract1;->z(Ljava/lang/String;)V
 
     return-void
 .end method
@@ -535,7 +535,7 @@
     .locals 3
 
     .line 1
-    invoke-virtual {p0}, Lcom/vtosters/lite/fragments/money/q/b;->g()Landroid/os/Bundle;
+    invoke-virtual {p0}, Lcom/vtosters/lite/fragments/money/q/AbsCreateTransferPresenter;->g()Landroid/os/Bundle;
 
     move-result-object v0
 
@@ -560,13 +560,13 @@
 
 
 # virtual methods
-.method public a(IILjava/lang/String;Ljava/lang/String;)Lb/h/c/p/i;
+.method public a(IILjava/lang/String;Ljava/lang/String;)Lcom/vk/api/money/MoneySendRequest;
     .locals 1
 
     .line 6
-    new-instance v0, Lb/h/c/p/i;
+    new-instance v0, Lcom/vk/api/money/MoneySendRequest;
 
-    invoke-direct {v0, p1, p2, p3, p4}, Lb/h/c/p/i;-><init>(IILjava/lang/String;Ljava/lang/String;)V
+    invoke-direct {v0, p1, p2, p3, p4}, Lcom/vk/api/money/MoneySendRequest;-><init>(IILjava/lang/String;Ljava/lang/String;)V
 
     return-object v0
 .end method
@@ -590,12 +590,12 @@
     iput-object v0, p0, Lcom/vtosters/lite/fragments/money/createtransfer/people/CreatePeopleTransferPresenter;->n:Lcom/vtosters/lite/fragments/money/createtransfer/people/CreatePeopleTransferPresenter$TransferMode;
 
     .line 10
-    invoke-super {p0, p1}, Lcom/vtosters/lite/fragments/money/q/b;->a(I)V
+    invoke-super {p0, p1}, Lcom/vtosters/lite/fragments/money/q/AbsCreateTransferPresenter;->a(I)V
 
     return-void
 .end method
 
-.method public a(Lcom/vk/core/ui/v/g;)V
+.method public a(Lcom/vk/core/ui/v/UiTrackingScreen;)V
     .locals 2
 
     .line 11
@@ -624,7 +624,7 @@
 
     .line 14
     :goto_0
-    invoke-virtual {p1, v0}, Lcom/vk/core/ui/v/g;->b(Lcom/vk/stat/scheme/SchemeStat$EventScreen;)V
+    invoke-virtual {p1, v0}, Lcom/vk/core/ui/v/UiTrackingScreen;->b(Lcom/vk/stat/scheme/SchemeStat$EventScreen;)V
 
     return-void
 .end method
@@ -640,19 +640,19 @@
     if-ne v0, v1, :cond_0
 
     .line 7
-    invoke-virtual {p0}, Lcom/vtosters/lite/fragments/money/q/b;->p()I
+    invoke-virtual {p0}, Lcom/vtosters/lite/fragments/money/q/AbsCreateTransferPresenter;->p()I
 
     move-result v4
 
-    invoke-virtual {p0}, Lcom/vtosters/lite/fragments/money/q/b;->f()I
+    invoke-virtual {p0}, Lcom/vtosters/lite/fragments/money/q/AbsCreateTransferPresenter;->f()I
 
     move-result v5
 
-    invoke-virtual {p0}, Lcom/vtosters/lite/fragments/money/q/b;->i()Ljava/lang/String;
+    invoke-virtual {p0}, Lcom/vtosters/lite/fragments/money/q/AbsCreateTransferPresenter;->i()Ljava/lang/String;
 
     move-result-object v6
 
-    invoke-virtual {p0}, Lcom/vtosters/lite/fragments/money/q/b;->j()Ljava/lang/String;
+    invoke-virtual {p0}, Lcom/vtosters/lite/fragments/money/q/AbsCreateTransferPresenter;->j()Ljava/lang/String;
 
     move-result-object v7
 
@@ -660,25 +660,25 @@
 
     move-object v3, p1
 
-    invoke-virtual/range {v2 .. v7}, Lcom/vtosters/lite/fragments/money/q/b;->a(Landroid/content/Context;IILjava/lang/String;Ljava/lang/String;)V
+    invoke-virtual/range {v2 .. v7}, Lcom/vtosters/lite/fragments/money/q/AbsCreateTransferPresenter;->a(Landroid/content/Context;IILjava/lang/String;Ljava/lang/String;)V
 
     goto :goto_0
 
     .line 8
     :cond_0
-    invoke-virtual {p0}, Lcom/vtosters/lite/fragments/money/q/b;->p()I
+    invoke-virtual {p0}, Lcom/vtosters/lite/fragments/money/q/AbsCreateTransferPresenter;->p()I
 
     move-result v10
 
-    invoke-virtual {p0}, Lcom/vtosters/lite/fragments/money/q/b;->f()I
+    invoke-virtual {p0}, Lcom/vtosters/lite/fragments/money/q/AbsCreateTransferPresenter;->f()I
 
     move-result v11
 
-    invoke-virtual {p0}, Lcom/vtosters/lite/fragments/money/q/b;->i()Ljava/lang/String;
+    invoke-virtual {p0}, Lcom/vtosters/lite/fragments/money/q/AbsCreateTransferPresenter;->i()Ljava/lang/String;
 
     move-result-object v12
 
-    invoke-virtual {p0}, Lcom/vtosters/lite/fragments/money/q/b;->j()Ljava/lang/String;
+    invoke-virtual {p0}, Lcom/vtosters/lite/fragments/money/q/AbsCreateTransferPresenter;->j()Ljava/lang/String;
 
     move-result-object v13
 
@@ -696,11 +696,11 @@
     .locals 2
 
     .line 1
-    invoke-virtual {p0}, Lcom/vtosters/lite/fragments/money/q/b;->p()I
+    invoke-virtual {p0}, Lcom/vtosters/lite/fragments/money/q/AbsCreateTransferPresenter;->p()I
 
     move-result v0
 
-    invoke-direct {p0, v0}, Lcom/vtosters/lite/fragments/money/createtransfer/people/CreatePeopleTransferPresenter;->c(I)Lc/a/m;
+    invoke-direct {p0, v0}, Lcom/vtosters/lite/fragments/money/createtransfer/people/CreatePeopleTransferPresenter;->c(I)Lio/reactivex/Observable;
 
     move-result-object v0
 
@@ -709,16 +709,16 @@
 
     invoke-direct {v1, p0}, Lcom/vtosters/lite/fragments/money/createtransfer/people/CreatePeopleTransferPresenter$a;-><init>(Lcom/vtosters/lite/fragments/money/createtransfer/people/CreatePeopleTransferPresenter;)V
 
-    invoke-virtual {v0, v1}, Lc/a/m;->f(Lc/a/z/g;)Lio/reactivex/disposables/b;
+    invoke-virtual {v0, v1}, Lio/reactivex/Observable;->f(Lio/reactivex/functions/Consumer;)Lio/reactivex/disposables/Disposable;
 
     move-result-object v0
 
     .line 3
-    invoke-virtual {p0}, Lcom/vtosters/lite/fragments/money/q/b;->m()Lio/reactivex/disposables/a;
+    invoke-virtual {p0}, Lcom/vtosters/lite/fragments/money/q/AbsCreateTransferPresenter;->m()Lio/reactivex/disposables/CompositeDisposable;
 
     move-result-object v1
 
-    invoke-virtual {v1, v0}, Lio/reactivex/disposables/a;->b(Lio/reactivex/disposables/b;)Z
+    invoke-virtual {v1, v0}, Lio/reactivex/disposables/CompositeDisposable;->b(Lio/reactivex/disposables/Disposable;)Z
 
     return-void
 .end method
@@ -742,7 +742,7 @@
     if-ne v0, v1, :cond_0
 
     .line 2
-    sget-object v0, Lcom/vk/core/util/i;->a:Landroid/content/Context;
+    sget-object v0, Lcom/vk/core/util/AppContextHolder;->a:Landroid/content/Context;
 
     const v1, 0x7f12076d
 
@@ -753,7 +753,7 @@
 
     invoke-direct {v6}, Ljava/lang/StringBuilder;-><init>()V
 
-    invoke-virtual {p0}, Lcom/vtosters/lite/fragments/money/q/b;->f()I
+    invoke-virtual {p0}, Lcom/vtosters/lite/fragments/money/q/AbsCreateTransferPresenter;->f()I
 
     move-result v7
 
@@ -774,13 +774,13 @@
 
     move-result-object p1
 
-    invoke-static {p1, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     goto :goto_0
 
     .line 5
     :cond_0
-    sget-object v0, Lcom/vk/core/util/i;->a:Landroid/content/Context;
+    sget-object v0, Lcom/vk/core/util/AppContextHolder;->a:Landroid/content/Context;
 
     const v1, 0x7f12076e
 
@@ -791,7 +791,7 @@
 
     invoke-direct {v6}, Ljava/lang/StringBuilder;-><init>()V
 
-    invoke-virtual {p0}, Lcom/vtosters/lite/fragments/money/q/b;->f()I
+    invoke-virtual {p0}, Lcom/vtosters/lite/fragments/money/q/AbsCreateTransferPresenter;->f()I
 
     move-result v7
 
@@ -812,7 +812,7 @@
 
     move-result-object p1
 
-    invoke-static {p1, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     :goto_0
     return-object p1
@@ -822,21 +822,21 @@
     .locals 2
 
     .line 1
-    invoke-virtual {p0}, Lcom/vtosters/lite/fragments/money/q/b;->f()I
+    invoke-virtual {p0}, Lcom/vtosters/lite/fragments/money/q/AbsCreateTransferPresenter;->f()I
 
     move-result v0
 
-    invoke-virtual {p0}, Lcom/vtosters/lite/fragments/money/q/b;->l()I
+    invoke-virtual {p0}, Lcom/vtosters/lite/fragments/money/q/AbsCreateTransferPresenter;->l()I
 
     move-result v1
 
     if-ge v0, v1, :cond_0
 
-    invoke-virtual {p0}, Lcom/vtosters/lite/fragments/money/q/b;->f()I
+    invoke-virtual {p0}, Lcom/vtosters/lite/fragments/money/q/AbsCreateTransferPresenter;->f()I
 
     move-result v0
 
-    invoke-virtual {p0}, Lcom/vtosters/lite/fragments/money/q/b;->k()I
+    invoke-virtual {p0}, Lcom/vtosters/lite/fragments/money/q/AbsCreateTransferPresenter;->k()I
 
     move-result v1
 
@@ -857,7 +857,7 @@
     .locals 0
 
     .line 1
-    invoke-super {p0}, Lcom/vtosters/lite/fragments/money/q/b;->v()V
+    invoke-super {p0}, Lcom/vtosters/lite/fragments/money/q/AbsCreateTransferPresenter;->v()V
 
     .line 2
     invoke-direct {p0}, Lcom/vtosters/lite/fragments/money/createtransfer/people/CreatePeopleTransferPresenter;->t()V

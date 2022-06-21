@@ -3,12 +3,12 @@
 .source "MusicPromoAdapterBuySubscription.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/c;
+.implements Lkotlin/jvm/b/Functions1;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/promo/music/MusicPromoAdapterBuySubscription$Holder;-><init>(Landroid/view/ViewGroup;Lcom/vk/music/subscription/a;Lkotlin/jvm/b/b;)V
+    value = Lcom/vk/promo/music/MusicPromoAdapterBuySubscription$Holder;-><init>(Landroid/view/ViewGroup;Lcom/vk/music/subscription/BuyMusicSubscriptionButtonModel;Lkotlin/jvm/b/Functions2;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -19,28 +19,28 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/c<",
+        "Lkotlin/jvm/b/Functions1<",
         "Landroid/widget/TextView;",
         "Ljava/lang/Integer;",
-        "Lkotlin/m;",
+        "Lkotlin/Unit;",
         ">;"
     }
 .end annotation
 
 
 # instance fields
-.field final synthetic $originalFailListener:Lkotlin/jvm/b/c;
+.field final synthetic $originalFailListener:Lkotlin/jvm/b/Functions1;
 
 .field final synthetic $this_apply:Lcom/vk/music/ui/subscription/BuyMusicSubscriptionButton;
 
 
 # direct methods
-.method constructor <init>(Lcom/vk/music/ui/subscription/BuyMusicSubscriptionButton;Lkotlin/jvm/b/c;)V
+.method constructor <init>(Lcom/vk/music/ui/subscription/BuyMusicSubscriptionButton;Lkotlin/jvm/b/Functions1;)V
     .locals 0
 
     iput-object p1, p0, Lcom/vk/promo/music/MusicPromoAdapterBuySubscription$Holder$buyMusicSubscriptionBtn$1$2;->$this_apply:Lcom/vk/music/ui/subscription/BuyMusicSubscriptionButton;
 
-    iput-object p2, p0, Lcom/vk/promo/music/MusicPromoAdapterBuySubscription$Holder$buyMusicSubscriptionBtn$1$2;->$originalFailListener:Lkotlin/jvm/b/c;
+    iput-object p2, p0, Lcom/vk/promo/music/MusicPromoAdapterBuySubscription$Holder$buyMusicSubscriptionBtn$1$2;->$originalFailListener:Lkotlin/jvm/b/Functions1;
 
     const/4 p1, 0x2
 
@@ -65,7 +65,7 @@
 
     invoke-virtual {p0, p1, p2}, Lcom/vk/promo/music/MusicPromoAdapterBuySubscription$Holder$buyMusicSubscriptionBtn$1$2;->a(Landroid/widget/TextView;I)V
 
-    sget-object p1, Lkotlin/m;->a:Lkotlin/m;
+    sget-object p1, Lkotlin/Unit;->a:Lkotlin/Unit;
 
     return-object p1
 .end method
@@ -74,13 +74,13 @@
     .locals 2
 
     .line 2
-    iget-object v0, p0, Lcom/vk/promo/music/MusicPromoAdapterBuySubscription$Holder$buyMusicSubscriptionBtn$1$2;->$originalFailListener:Lkotlin/jvm/b/c;
+    iget-object v0, p0, Lcom/vk/promo/music/MusicPromoAdapterBuySubscription$Holder$buyMusicSubscriptionBtn$1$2;->$originalFailListener:Lkotlin/jvm/b/Functions1;
 
     invoke-static {p2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object p2
 
-    invoke-interface {v0, p1, p2}, Lkotlin/jvm/b/c;->a(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v0, p1, p2}, Lkotlin/jvm/b/Functions1;->a(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     .line 3
     iget-object p2, p0, Lcom/vk/promo/music/MusicPromoAdapterBuySubscription$Holder$buyMusicSubscriptionBtn$1$2;->$this_apply:Lcom/vk/music/ui/subscription/BuyMusicSubscriptionButton;
@@ -91,7 +91,7 @@
 
     const-string v0, "context"
 
-    invoke-static {p2, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p2, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     const v1, 0x7f04059b
 
@@ -128,7 +128,7 @@
 
     move-result-object p2
 
-    invoke-static {p2, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p2, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     const v0, 0x7f0400e1
 
@@ -136,7 +136,7 @@
 
     move-result p2
 
-    invoke-static {p1, p2}, Lcom/vk/core/util/z;->a(Landroid/graphics/drawable/Drawable;I)Landroid/graphics/drawable/Drawable;
+    invoke-static {p1, p2}, Lcom/vk/core/util/DrawableUtils;->a(Landroid/graphics/drawable/Drawable;I)Landroid/graphics/drawable/Drawable;
 
     return-void
 .end method

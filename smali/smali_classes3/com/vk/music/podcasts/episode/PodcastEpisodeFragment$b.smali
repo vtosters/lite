@@ -3,12 +3,12 @@
 .source "PodcastEpisodeFragment.kt"
 
 # interfaces
-.implements Lcom/vk/lists/t$l;
+.implements Lcom/vk/lists/PaginationHelper$l;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/music/podcasts/episode/PodcastEpisodeFragment;->a(Lcom/vk/lists/t$k;)Lcom/vk/lists/t;
+    value = Lcom/vk/music/podcasts/episode/PodcastEpisodeFragment;->a(Lcom/vk/lists/PaginationHelper$k;)Lcom/vk/lists/PaginationHelper;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -46,15 +46,15 @@
     .line 1
     iget-object v0, p0, Lcom/vk/music/podcasts/episode/PodcastEpisodeFragment$b;->a:Lcom/vk/music/podcasts/episode/PodcastEpisodeFragment;
 
-    invoke-virtual {v0}, Lcom/vk/core/fragments/c;->getPresenter()Lb/h/r/c;
+    invoke-virtual {v0}, Lcom/vk/core/fragments/BaseMvpFragment;->getPresenter()Lb/h/r/BaseScreenContract;
 
     move-result-object v0
 
-    check-cast v0, Lcom/vk/music/podcasts/episode/b;
+    check-cast v0, Lcom/vk/music/podcasts/episode/PodcastEpisodeScreenContract1;
 
     if-eqz v0, :cond_0
 
-    invoke-virtual {v0}, Lcom/vk/music/podcasts/episode/b;->q()Lcom/vk/dto/podcast/PodcastPage;
+    invoke-virtual {v0}, Lcom/vk/music/podcasts/episode/PodcastEpisodeScreenContract1;->q()Lcom/vk/dto/podcast/PodcastPage;
 
     move-result-object v0
 
@@ -83,11 +83,11 @@
     .line 1
     iget-object v0, p0, Lcom/vk/music/podcasts/episode/PodcastEpisodeFragment$b;->a:Lcom/vk/music/podcasts/episode/PodcastEpisodeFragment;
 
-    invoke-static {v0}, Lcom/vk/music/podcasts/episode/PodcastEpisodeFragment;->a(Lcom/vk/music/podcasts/episode/PodcastEpisodeFragment;)Lcom/vk/lists/p;
+    invoke-static {v0}, Lcom/vk/music/podcasts/episode/PodcastEpisodeFragment;->a(Lcom/vk/music/podcasts/episode/PodcastEpisodeFragment;)Lcom/vk/lists/MergedAdapter;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/vk/lists/p;->clear()V
+    invoke-virtual {v0}, Lcom/vk/lists/MergedAdapter;->clear()V
 
     return-void
 .end method

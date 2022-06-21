@@ -3,8 +3,8 @@
 .source "HidingToolbarVh.kt"
 
 # interfaces
-.implements Lcom/vk/catalog2/core/holders/common/n;
-.implements Lcom/vk/catalog2/core/holders/common/s;
+.implements Lcom/vk/catalog2/core/holders/common/CatalogViewHolder;
+.implements Lcom/vk/catalog2/core/holders/common/OnConfigurationChangeListener;
 
 
 # instance fields
@@ -16,26 +16,26 @@
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/util/List<",
-            "Lcom/vk/catalog2/core/holders/common/n;",
+            "Lcom/vk/catalog2/core/holders/common/CatalogViewHolder;",
             ">;"
         }
     .end annotation
 .end field
 
-.field private final d:Lcom/vk/catalog2/core/holders/common/n;
+.field private final d:Lcom/vk/catalog2/core/holders/common/CatalogViewHolder;
 
 
 # direct methods
-.method public constructor <init>(Ljava/util/List;Lcom/vk/catalog2/core/holders/common/n;)V
+.method public constructor <init>(Ljava/util/List;Lcom/vk/catalog2/core/holders/common/CatalogViewHolder;)V
     .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
             "Ljava/util/List<",
             "+",
-            "Lcom/vk/catalog2/core/holders/common/n;",
+            "Lcom/vk/catalog2/core/holders/common/CatalogViewHolder;",
             ">;",
-            "Lcom/vk/catalog2/core/holders/common/n;",
+            "Lcom/vk/catalog2/core/holders/common/CatalogViewHolder;",
             ")V"
         }
     .end annotation
@@ -45,7 +45,7 @@
 
     iput-object p1, p0, Lcom/vk/catalog2/core/holders/common/HidingToolbarVh;->c:Ljava/util/List;
 
-    iput-object p2, p0, Lcom/vk/catalog2/core/holders/common/HidingToolbarVh;->d:Lcom/vk/catalog2/core/holders/common/n;
+    iput-object p2, p0, Lcom/vk/catalog2/core/holders/common/HidingToolbarVh;->d:Lcom/vk/catalog2/core/holders/common/CatalogViewHolder;
 
     return-void
 .end method
@@ -85,9 +85,9 @@
     check-cast v1, Landroid/view/ViewGroup;
 
     .line 7
-    iget-object v0, p0, Lcom/vk/catalog2/core/holders/common/HidingToolbarVh;->d:Lcom/vk/catalog2/core/holders/common/n;
+    iget-object v0, p0, Lcom/vk/catalog2/core/holders/common/HidingToolbarVh;->d:Lcom/vk/catalog2/core/holders/common/CatalogViewHolder;
 
-    invoke-interface {v0, p1, v1, p3}, Lcom/vk/catalog2/core/holders/common/n;->a(Landroid/view/LayoutInflater;Landroid/view/ViewGroup;Landroid/os/Bundle;)Landroid/view/View;
+    invoke-interface {v0, p1, v1, p3}, Lcom/vk/catalog2/core/holders/common/CatalogViewHolder;->a(Landroid/view/LayoutInflater;Landroid/view/ViewGroup;Landroid/os/Bundle;)Landroid/view/View;
 
     move-result-object v0
 
@@ -138,14 +138,14 @@
 
     move-result-object v1
 
-    check-cast v1, Lcom/vk/catalog2/core/holders/common/n;
+    check-cast v1, Lcom/vk/catalog2/core/holders/common/CatalogViewHolder;
 
     .line 13
     iget-object v2, p0, Lcom/vk/catalog2/core/holders/common/HidingToolbarVh;->a:Lcom/google/android/material/appbar/AppBarLayout;
 
     if-eqz v2, :cond_0
 
-    invoke-interface {v1, p1, v2, p3}, Lcom/vk/catalog2/core/holders/common/n;->a(Landroid/view/LayoutInflater;Landroid/view/ViewGroup;Landroid/os/Bundle;)Landroid/view/View;
+    invoke-interface {v1, p1, v2, p3}, Lcom/vk/catalog2/core/holders/common/CatalogViewHolder;->a(Landroid/view/LayoutInflater;Landroid/view/ViewGroup;Landroid/os/Bundle;)Landroid/view/View;
 
     move-result-object v1
 
@@ -157,7 +157,7 @@
     const-string p1, "inflater.inflate(R.layou\u2026stanceState)) }\n        }"
 
     .line 14
-    invoke-static {p2, p1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p2, p1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     return-object p2
 
@@ -200,23 +200,23 @@
 
     move-result-object v1
 
-    check-cast v1, Lcom/vk/catalog2/core/holders/common/n;
+    check-cast v1, Lcom/vk/catalog2/core/holders/common/CatalogViewHolder;
 
     .line 23
-    invoke-interface {v1}, Lcom/vk/catalog2/core/holders/common/n;->a()V
+    invoke-interface {v1}, Lcom/vk/catalog2/core/holders/common/CatalogViewHolder;->a()V
 
     goto :goto_0
 
     .line 24
     :cond_0
-    iget-object v0, p0, Lcom/vk/catalog2/core/holders/common/HidingToolbarVh;->d:Lcom/vk/catalog2/core/holders/common/n;
+    iget-object v0, p0, Lcom/vk/catalog2/core/holders/common/HidingToolbarVh;->d:Lcom/vk/catalog2/core/holders/common/CatalogViewHolder;
 
-    invoke-interface {v0}, Lcom/vk/catalog2/core/holders/common/n;->a()V
+    invoke-interface {v0}, Lcom/vk/catalog2/core/holders/common/CatalogViewHolder;->a()V
 
     return-void
 .end method
 
-.method public a(Landroid/view/View;Ljava/lang/String;Lkotlin/jvm/b/b;)V
+.method public a(Landroid/view/View;Ljava/lang/String;Lkotlin/jvm/b/Functions2;)V
     .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -224,15 +224,15 @@
             "Landroid/view/View;",
             ">(TT;",
             "Ljava/lang/String;",
-            "Lkotlin/jvm/b/b<",
+            "Lkotlin/jvm/b/Functions2<",
             "-TT;",
-            "Lkotlin/m;",
+            "Lkotlin/Unit;",
             ">;)V"
         }
     .end annotation
 
     .line 3
-    invoke-static {p0, p1, p2, p3}, Lcom/vk/catalog2/core/holders/common/n$a;->a(Lcom/vk/catalog2/core/holders/common/n;Landroid/view/View;Ljava/lang/String;Lkotlin/jvm/b/b;)V
+    invoke-static {p0, p1, p2, p3}, Lcom/vk/catalog2/core/holders/common/CatalogViewHolder$a;->a(Lcom/vk/catalog2/core/holders/common/CatalogViewHolder;Landroid/view/View;Ljava/lang/String;Lkotlin/jvm/b/Functions2;)V
 
     return-void
 .end method
@@ -259,18 +259,18 @@
 
     move-result-object v1
 
-    check-cast v1, Lcom/vk/catalog2/core/holders/common/n;
+    check-cast v1, Lcom/vk/catalog2/core/holders/common/CatalogViewHolder;
 
     .line 19
-    invoke-interface {v1, p1}, Lcom/vk/catalog2/core/holders/common/n;->a(Lcom/vk/catalog2/core/blocks/UIBlock;)V
+    invoke-interface {v1, p1}, Lcom/vk/catalog2/core/holders/common/CatalogViewHolder;->a(Lcom/vk/catalog2/core/blocks/UIBlock;)V
 
     goto :goto_0
 
     .line 20
     :cond_0
-    iget-object v0, p0, Lcom/vk/catalog2/core/holders/common/HidingToolbarVh;->d:Lcom/vk/catalog2/core/holders/common/n;
+    iget-object v0, p0, Lcom/vk/catalog2/core/holders/common/HidingToolbarVh;->d:Lcom/vk/catalog2/core/holders/common/CatalogViewHolder;
 
-    invoke-interface {v0, p1}, Lcom/vk/catalog2/core/holders/common/n;->a(Lcom/vk/catalog2/core/blocks/UIBlock;)V
+    invoke-interface {v0, p1}, Lcom/vk/catalog2/core/holders/common/CatalogViewHolder;->a(Lcom/vk/catalog2/core/blocks/UIBlock;)V
 
     return-void
 .end method
@@ -279,7 +279,7 @@
     .locals 0
 
     .line 1
-    invoke-static {p0, p1, p2}, Lcom/vk/catalog2/core/holders/common/n$a;->a(Lcom/vk/catalog2/core/holders/common/n;Lcom/vk/catalog2/core/blocks/UIBlock;I)V
+    invoke-static {p0, p1, p2}, Lcom/vk/catalog2/core/holders/common/CatalogViewHolder$a;->a(Lcom/vk/catalog2/core/holders/common/CatalogViewHolder;Lcom/vk/catalog2/core/blocks/UIBlock;I)V
 
     return-void
 .end method
@@ -288,7 +288,7 @@
     .locals 0
 
     .line 2
-    invoke-static {p0, p1, p2, p3}, Lcom/vk/catalog2/core/holders/common/n$a;->a(Lcom/vk/catalog2/core/holders/common/n;Lcom/vk/catalog2/core/blocks/UIBlock;II)V
+    invoke-static {p0, p1, p2, p3}, Lcom/vk/catalog2/core/holders/common/CatalogViewHolder$a;->a(Lcom/vk/catalog2/core/holders/common/CatalogViewHolder;Lcom/vk/catalog2/core/blocks/UIBlock;II)V
 
     return-void
 .end method
@@ -305,7 +305,7 @@
 
     const-string p1, "Call method \"hideSeparator(..)\" only after \"createView(..)\""
 
-    invoke-virtual {p0, v0, p1, v1}, Lcom/vk/catalog2/core/holders/common/HidingToolbarVh;->a(Landroid/view/View;Ljava/lang/String;Lkotlin/jvm/b/b;)V
+    invoke-virtual {p0, v0, p1, v1}, Lcom/vk/catalog2/core/holders/common/HidingToolbarVh;->a(Landroid/view/View;Ljava/lang/String;Lkotlin/jvm/b/Functions2;)V
 
     return-void
 .end method
@@ -322,7 +322,7 @@
 
     const-string p1, "Call method \"setExpanded(..)\" only after \"createView(..)\""
 
-    invoke-virtual {p0, v0, p1, v1}, Lcom/vk/catalog2/core/holders/common/HidingToolbarVh;->a(Landroid/view/View;Ljava/lang/String;Lkotlin/jvm/b/b;)V
+    invoke-virtual {p0, v0, p1, v1}, Lcom/vk/catalog2/core/holders/common/HidingToolbarVh;->a(Landroid/view/View;Ljava/lang/String;Lkotlin/jvm/b/Functions2;)V
 
     return-void
 .end method
@@ -352,40 +352,40 @@
 
     move-result-object v1
 
-    check-cast v1, Lcom/vk/catalog2/core/holders/common/n;
+    check-cast v1, Lcom/vk/catalog2/core/holders/common/CatalogViewHolder;
 
     .line 3
-    instance-of v3, v1, Lcom/vk/catalog2/core/holders/common/s;
+    instance-of v3, v1, Lcom/vk/catalog2/core/holders/common/OnConfigurationChangeListener;
 
     if-nez v3, :cond_1
 
     move-object v1, v2
 
     :cond_1
-    check-cast v1, Lcom/vk/catalog2/core/holders/common/s;
+    check-cast v1, Lcom/vk/catalog2/core/holders/common/OnConfigurationChangeListener;
 
     if-eqz v1, :cond_0
 
-    invoke-interface {v1}, Lcom/vk/catalog2/core/holders/common/s;->p()V
+    invoke-interface {v1}, Lcom/vk/catalog2/core/holders/common/OnConfigurationChangeListener;->p()V
 
     goto :goto_0
 
     .line 4
     :cond_2
-    iget-object v0, p0, Lcom/vk/catalog2/core/holders/common/HidingToolbarVh;->d:Lcom/vk/catalog2/core/holders/common/n;
+    iget-object v0, p0, Lcom/vk/catalog2/core/holders/common/HidingToolbarVh;->d:Lcom/vk/catalog2/core/holders/common/CatalogViewHolder;
 
-    instance-of v1, v0, Lcom/vk/catalog2/core/holders/common/s;
+    instance-of v1, v0, Lcom/vk/catalog2/core/holders/common/OnConfigurationChangeListener;
 
     if-nez v1, :cond_3
 
     move-object v0, v2
 
     :cond_3
-    check-cast v0, Lcom/vk/catalog2/core/holders/common/s;
+    check-cast v0, Lcom/vk/catalog2/core/holders/common/OnConfigurationChangeListener;
 
     if-eqz v0, :cond_4
 
-    invoke-interface {v0}, Lcom/vk/catalog2/core/holders/common/s;->p()V
+    invoke-interface {v0}, Lcom/vk/catalog2/core/holders/common/OnConfigurationChangeListener;->p()V
 
     :cond_4
     return-void

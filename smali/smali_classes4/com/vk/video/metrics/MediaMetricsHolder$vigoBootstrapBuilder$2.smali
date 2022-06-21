@@ -3,7 +3,7 @@
 .source "MediaMetricsHolder.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/a;
+.implements Lkotlin/jvm/b/Functions;
 
 
 # annotations
@@ -19,8 +19,8 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/a<",
-        "Lcom/vigo/metrics/l;",
+        "Lkotlin/jvm/b/Functions<",
+        "Lcom/vigo/metrics/VigoBootstrapBuilder;",
         ">;"
     }
 .end annotation
@@ -55,7 +55,7 @@
 
 
 # virtual methods
-.method public final invoke()Lcom/vigo/metrics/l;
+.method public final invoke()Lcom/vigo/metrics/VigoBootstrapBuilder;
     .locals 3
 
     const/4 v0, 0x1
@@ -92,27 +92,27 @@
     .line 3
     sget-object v0, Lcom/vk/core/network/Network$ClientType;->CLIENT_STAT_MEDIA:Lcom/vk/core/network/Network$ClientType;
 
-    invoke-static {v0}, Lcom/vk/core/network/Network;->a(Lcom/vk/core/network/Network$ClientType;)Lokhttp3/x$b;
+    invoke-static {v0}, Lcom/vk/core/network/Network;->a(Lcom/vk/core/network/Network$ClientType;)Lokhttp3/OkHttpClient$b;
 
     move-result-object v0
 
     .line 4
     sget-object v1, Lcom/vk/core/network/Network$ClientType;->CLIENT_STAT_MEDIA:Lcom/vk/core/network/Network$ClientType;
 
-    invoke-static {v1, v0}, Lcom/vk/core/network/Network;->a(Lcom/vk/core/network/Network$ClientType;Lokhttp3/x$b;)Lokhttp3/x;
+    invoke-static {v1, v0}, Lcom/vk/core/network/Network;->a(Lcom/vk/core/network/Network$ClientType;Lokhttp3/OkHttpClient$b;)Lokhttp3/OkHttpClient;
 
     .line 5
-    new-instance v0, Lcom/vigo/metrics/l;
+    new-instance v0, Lcom/vigo/metrics/VigoBootstrapBuilder;
 
     .line 6
-    sget-object v1, Lcom/vk/core/util/i;->a:Landroid/content/Context;
+    sget-object v1, Lcom/vk/core/util/AppContextHolder;->a:Landroid/content/Context;
 
     .line 7
-    invoke-static {}, Lcom/vk/bridges/g;->a()Lcom/vk/bridges/f;
+    invoke-static {}, Lcom/vk/bridges/AuthBridge;->a()Lcom/vk/bridges/AuthBridge3;
 
     move-result-object v2
 
-    invoke-interface {v2}, Lcom/vk/bridges/f;->b()I
+    invoke-interface {v2}, Lcom/vk/bridges/AuthBridge3;->b()I
 
     move-result v2
 
@@ -125,14 +125,14 @@
     move-result-object v2
 
     .line 8
-    invoke-direct {v0, v1, v2}, Lcom/vigo/metrics/l;-><init>(Landroid/content/Context;Ljava/lang/String;)V
+    invoke-direct {v0, v1, v2}, Lcom/vigo/metrics/VigoBootstrapBuilder;-><init>(Landroid/content/Context;Ljava/lang/String;)V
 
     .line 9
-    invoke-static {}, Lcom/vk/bridges/l0;->a()Lcom/vk/bridges/k0;
+    invoke-static {}, Lcom/vk/bridges/VideoBridge;->a()Lcom/vk/bridges/VideoBridge1;
 
     move-result-object v1
 
-    invoke-interface {v1}, Lcom/vk/bridges/k0;->b()Z
+    invoke-interface {v1}, Lcom/vk/bridges/VideoBridge1;->b()Z
 
     move-result v1
 
@@ -145,7 +145,7 @@
 
     move-result-object v1
 
-    invoke-virtual {v0, v1}, Lcom/vigo/metrics/l;->c(Ljava/lang/String;)Lcom/vigo/metrics/l;
+    invoke-virtual {v0, v1}, Lcom/vigo/metrics/VigoBootstrapBuilder;->c(Ljava/lang/String;)Lcom/vigo/metrics/VigoBootstrapBuilder;
 
     .line 11
     sget-object v1, Lcom/vk/video/metrics/MediaMetricsHolder$SVCID;->S_5D61:Lcom/vk/video/metrics/MediaMetricsHolder$SVCID;
@@ -154,7 +154,7 @@
 
     move-result-object v1
 
-    invoke-virtual {v0, v1}, Lcom/vigo/metrics/l;->c(Ljava/lang/String;)Lcom/vigo/metrics/l;
+    invoke-virtual {v0, v1}, Lcom/vigo/metrics/VigoBootstrapBuilder;->c(Ljava/lang/String;)Lcom/vigo/metrics/VigoBootstrapBuilder;
 
     .line 12
     sget-object v1, Lcom/vk/video/metrics/MediaMetricsHolder$SVCID;->S_5D62:Lcom/vk/video/metrics/MediaMetricsHolder$SVCID;
@@ -163,7 +163,7 @@
 
     move-result-object v1
 
-    invoke-virtual {v0, v1}, Lcom/vigo/metrics/l;->c(Ljava/lang/String;)Lcom/vigo/metrics/l;
+    invoke-virtual {v0, v1}, Lcom/vigo/metrics/VigoBootstrapBuilder;->c(Ljava/lang/String;)Lcom/vigo/metrics/VigoBootstrapBuilder;
 
     .line 13
     sget-object v1, Lcom/vk/video/metrics/MediaMetricsHolder$SVCID;->S_5D60_API:Lcom/vk/video/metrics/MediaMetricsHolder$SVCID;
@@ -172,7 +172,7 @@
 
     move-result-object v1
 
-    invoke-virtual {v0, v1}, Lcom/vigo/metrics/l;->b(Ljava/lang/String;)Lcom/vigo/metrics/l;
+    invoke-virtual {v0, v1}, Lcom/vigo/metrics/VigoBootstrapBuilder;->b(Ljava/lang/String;)Lcom/vigo/metrics/VigoBootstrapBuilder;
 
     .line 14
     sget-object v1, Lcom/vk/video/metrics/MediaMetricsHolder$SVCID;->S_5D60_VOIP:Lcom/vk/video/metrics/MediaMetricsHolder$SVCID;
@@ -181,7 +181,7 @@
 
     move-result-object v1
 
-    invoke-virtual {v0, v1}, Lcom/vigo/metrics/l;->d(Ljava/lang/String;)Lcom/vigo/metrics/l;
+    invoke-virtual {v0, v1}, Lcom/vigo/metrics/VigoBootstrapBuilder;->d(Ljava/lang/String;)Lcom/vigo/metrics/VigoBootstrapBuilder;
 
     goto :goto_0
 
@@ -193,7 +193,7 @@
 
     move-result-object v1
 
-    invoke-virtual {v0, v1}, Lcom/vigo/metrics/l;->c(Ljava/lang/String;)Lcom/vigo/metrics/l;
+    invoke-virtual {v0, v1}, Lcom/vigo/metrics/VigoBootstrapBuilder;->c(Ljava/lang/String;)Lcom/vigo/metrics/VigoBootstrapBuilder;
 
     .line 16
     sget-object v1, Lcom/vk/video/metrics/MediaMetricsHolder$SVCID;->S_5D19:Lcom/vk/video/metrics/MediaMetricsHolder$SVCID;
@@ -202,7 +202,7 @@
 
     move-result-object v1
 
-    invoke-virtual {v0, v1}, Lcom/vigo/metrics/l;->c(Ljava/lang/String;)Lcom/vigo/metrics/l;
+    invoke-virtual {v0, v1}, Lcom/vigo/metrics/VigoBootstrapBuilder;->c(Ljava/lang/String;)Lcom/vigo/metrics/VigoBootstrapBuilder;
 
     .line 17
     sget-object v1, Lcom/vk/video/metrics/MediaMetricsHolder$SVCID;->S_5D20:Lcom/vk/video/metrics/MediaMetricsHolder$SVCID;
@@ -211,7 +211,7 @@
 
     move-result-object v1
 
-    invoke-virtual {v0, v1}, Lcom/vigo/metrics/l;->c(Ljava/lang/String;)Lcom/vigo/metrics/l;
+    invoke-virtual {v0, v1}, Lcom/vigo/metrics/VigoBootstrapBuilder;->c(Ljava/lang/String;)Lcom/vigo/metrics/VigoBootstrapBuilder;
 
     .line 18
     sget-object v1, Lcom/vk/video/metrics/MediaMetricsHolder$SVCID;->S_5D21:Lcom/vk/video/metrics/MediaMetricsHolder$SVCID;
@@ -220,7 +220,7 @@
 
     move-result-object v1
 
-    invoke-virtual {v0, v1}, Lcom/vigo/metrics/l;->c(Ljava/lang/String;)Lcom/vigo/metrics/l;
+    invoke-virtual {v0, v1}, Lcom/vigo/metrics/VigoBootstrapBuilder;->c(Ljava/lang/String;)Lcom/vigo/metrics/VigoBootstrapBuilder;
 
     .line 19
     sget-object v1, Lcom/vk/video/metrics/MediaMetricsHolder$SVCID;->S_5D22:Lcom/vk/video/metrics/MediaMetricsHolder$SVCID;
@@ -229,7 +229,7 @@
 
     move-result-object v1
 
-    invoke-virtual {v0, v1}, Lcom/vigo/metrics/l;->c(Ljava/lang/String;)Lcom/vigo/metrics/l;
+    invoke-virtual {v0, v1}, Lcom/vigo/metrics/VigoBootstrapBuilder;->c(Ljava/lang/String;)Lcom/vigo/metrics/VigoBootstrapBuilder;
 
     .line 20
     sget-object v1, Lcom/vk/video/metrics/MediaMetricsHolder$SVCID;->S_5D18_API:Lcom/vk/video/metrics/MediaMetricsHolder$SVCID;
@@ -238,7 +238,7 @@
 
     move-result-object v1
 
-    invoke-virtual {v0, v1}, Lcom/vigo/metrics/l;->b(Ljava/lang/String;)Lcom/vigo/metrics/l;
+    invoke-virtual {v0, v1}, Lcom/vigo/metrics/VigoBootstrapBuilder;->b(Ljava/lang/String;)Lcom/vigo/metrics/VigoBootstrapBuilder;
 
     .line 21
     sget-object v1, Lcom/vk/video/metrics/MediaMetricsHolder$SVCID;->S_5D18_VOIP:Lcom/vk/video/metrics/MediaMetricsHolder$SVCID;
@@ -247,17 +247,17 @@
 
     move-result-object v1
 
-    invoke-virtual {v0, v1}, Lcom/vigo/metrics/l;->d(Ljava/lang/String;)Lcom/vigo/metrics/l;
+    invoke-virtual {v0, v1}, Lcom/vigo/metrics/VigoBootstrapBuilder;->d(Ljava/lang/String;)Lcom/vigo/metrics/VigoBootstrapBuilder;
 
     .line 22
     :goto_0
     sget-object v1, Lcom/vk/core/network/Network$ClientType;->CLIENT_STAT_MEDIA:Lcom/vk/core/network/Network$ClientType;
 
-    invoke-static {v1}, Lcom/vk/core/network/Network;->b(Lcom/vk/core/network/Network$ClientType;)Lokhttp3/x;
+    invoke-static {v1}, Lcom/vk/core/network/Network;->b(Lcom/vk/core/network/Network$ClientType;)Lokhttp3/OkHttpClient;
 
     move-result-object v1
 
-    invoke-virtual {v0, v1}, Lcom/vigo/metrics/l;->a(Lokhttp3/x;)Lcom/vigo/metrics/l;
+    invoke-virtual {v0, v1}, Lcom/vigo/metrics/VigoBootstrapBuilder;->a(Lokhttp3/OkHttpClient;)Lcom/vigo/metrics/VigoBootstrapBuilder;
 
     return-object v0
 .end method
@@ -266,7 +266,7 @@
     .locals 1
 
     .line 1
-    invoke-virtual {p0}, Lcom/vk/video/metrics/MediaMetricsHolder$vigoBootstrapBuilder$2;->invoke()Lcom/vigo/metrics/l;
+    invoke-virtual {p0}, Lcom/vk/video/metrics/MediaMetricsHolder$vigoBootstrapBuilder$2;->invoke()Lcom/vigo/metrics/VigoBootstrapBuilder;
 
     move-result-object v0
 

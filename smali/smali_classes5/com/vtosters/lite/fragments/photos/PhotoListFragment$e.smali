@@ -57,7 +57,7 @@
     .line 3
     iget-object p1, p0, Lcom/vtosters/lite/fragments/photos/PhotoListFragment$e;->a:Lcom/vtosters/lite/fragments/photos/PhotoListFragment;
 
-    iget-object p1, p1, Lcom/vtosters/lite/fragments/photos/PhotoListFragment;->u0:Ld/a/a/c/b;
+    iget-object p1, p1, Lcom/vtosters/lite/fragments/photos/PhotoListFragment;->u0:Lme/grishka/appkit/utils/MergeRecyclerAdapter;
 
     invoke-virtual {p1}, Landroidx/recyclerview/widget/RecyclerView$Adapter;->notifyDataSetChanged()V
 

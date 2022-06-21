@@ -3,7 +3,7 @@
 .source "StoryView.java"
 
 # interfaces
-.implements Lcom/vk/common/links/f;
+.implements Lcom/vk/common/links/OpenCallback;
 
 
 # annotations
@@ -20,13 +20,13 @@
 # instance fields
 .field final synthetic a:Z
 
-.field final synthetic b:Lcom/vk/common/links/c$b;
+.field final synthetic b:Lcom/vk/common/links/LinkProcessor$b;
 
 .field final synthetic c:Lcom/vk/stories/view/StoryView;
 
 
 # direct methods
-.method constructor <init>(Lcom/vk/stories/view/StoryView;ZLcom/vk/common/links/c$b;)V
+.method constructor <init>(Lcom/vk/stories/view/StoryView;ZLcom/vk/common/links/LinkProcessor$b;)V
     .locals 0
 
     .line 1
@@ -34,7 +34,7 @@
 
     iput-boolean p2, p0, Lcom/vk/stories/view/StoryView$o;->a:Z
 
-    iput-object p3, p0, Lcom/vk/stories/view/StoryView$o;->b:Lcom/vk/common/links/c$b;
+    iput-object p3, p0, Lcom/vk/stories/view/StoryView$o;->b:Lcom/vk/common/links/LinkProcessor$b;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -56,7 +56,7 @@
 
     iget-object v1, p0, Lcom/vk/stories/view/StoryView$o;->c:Lcom/vk/stories/view/StoryView;
 
-    iget-object v1, v1, Lcom/vk/stories/view/e1;->D:Lcom/vk/dto/stories/model/StoryEntry;
+    iget-object v1, v1, Lcom/vk/stories/view/BaseStoryView;->D:Lcom/vk/dto/stories/model/StoryEntry;
 
     invoke-virtual {v0, v1}, Lcom/vk/attachpicker/fragment/StoryReporter;->a(Lcom/vk/dto/stories/model/StoryEntry;)V
 
@@ -70,9 +70,9 @@
 
     iget-object v1, p0, Lcom/vk/stories/view/StoryView$o;->c:Lcom/vk/stories/view/StoryView;
 
-    iget-object v2, v1, Lcom/vk/stories/view/e1;->D:Lcom/vk/dto/stories/model/StoryEntry;
+    iget-object v2, v1, Lcom/vk/stories/view/BaseStoryView;->D:Lcom/vk/dto/stories/model/StoryEntry;
 
-    iget-object v1, v1, Lcom/vk/stories/view/e1;->b:Lcom/vk/stories/StoriesController$SourceType;
+    iget-object v1, v1, Lcom/vk/stories/view/BaseStoryView;->b:Lcom/vk/stories/StoriesController$SourceType;
 
     invoke-virtual {v0, v2, v1}, Lcom/vk/attachpicker/fragment/StoryReporter;->a(Lcom/vk/dto/stories/model/StoryEntry;Lcom/vk/stories/StoriesController$SourceType;)V
 
@@ -84,9 +84,9 @@
 
     iget-object v1, p0, Lcom/vk/stories/view/StoryView$o;->c:Lcom/vk/stories/view/StoryView;
 
-    iget-object v2, v1, Lcom/vk/stories/view/e1;->D:Lcom/vk/dto/stories/model/StoryEntry;
+    iget-object v2, v1, Lcom/vk/stories/view/BaseStoryView;->D:Lcom/vk/dto/stories/model/StoryEntry;
 
-    iget-object v1, v1, Lcom/vk/stories/view/e1;->b:Lcom/vk/stories/StoriesController$SourceType;
+    iget-object v1, v1, Lcom/vk/stories/view/BaseStoryView;->b:Lcom/vk/stories/StoriesController$SourceType;
 
     invoke-virtual {v0, v2, v1}, Lcom/vk/attachpicker/fragment/StoryReporter;->b(Lcom/vk/dto/stories/model/StoryEntry;Lcom/vk/stories/StoriesController$SourceType;)V
 
@@ -109,7 +109,7 @@
     const p1, 0x7f120369
 
     .line 7
-    invoke-static {p1}, Lcom/vk/core/util/k1;->a(I)V
+    invoke-static {p1}, Lcom/vk/core/util/ToastUtils;->a(I)V
 
     .line 8
     :cond_0
@@ -138,13 +138,13 @@
 
     iget-object v1, p0, Lcom/vk/stories/view/StoryView$o;->c:Lcom/vk/stories/view/StoryView;
 
-    iget-object v1, v1, Lcom/vk/stories/view/e1;->D:Lcom/vk/dto/stories/model/StoryEntry;
+    iget-object v1, v1, Lcom/vk/stories/view/BaseStoryView;->D:Lcom/vk/dto/stories/model/StoryEntry;
 
     iget-object v1, v1, Lcom/vk/dto/stories/model/StoryEntry;->l0:Ljava/lang/String;
 
-    iget-object v2, p0, Lcom/vk/stories/view/StoryView$o;->b:Lcom/vk/common/links/c$b;
+    iget-object v2, p0, Lcom/vk/stories/view/StoryView$o;->b:Lcom/vk/common/links/LinkProcessor$b;
 
-    invoke-static {v0, v1, v2}, Lcom/vk/common/links/BrowserUtils;->a(Landroid/content/Context;Ljava/lang/String;Lcom/vk/common/links/c$b;)V
+    invoke-static {v0, v1, v2}, Lcom/vk/common/links/BrowserUtils;->a(Landroid/content/Context;Ljava/lang/String;Lcom/vk/common/links/LinkProcessor$b;)V
 
     .line 2
     iget-object v0, p0, Lcom/vk/stories/view/StoryView$o;->c:Lcom/vk/stories/view/StoryView;

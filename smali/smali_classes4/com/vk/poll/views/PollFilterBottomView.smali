@@ -40,7 +40,7 @@
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, v1}, Lcom/vk/poll/views/PollFilterBottomView$a;-><init>(Lkotlin/jvm/internal/i;)V
+    invoke-direct {v0, v1}, Lcom/vk/poll/views/PollFilterBottomView$a;-><init>(Lkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     sput-object v0, Lcom/vk/poll/views/PollFilterBottomView;->h:Lcom/vk/poll/views/PollFilterBottomView$a;
 
@@ -98,7 +98,7 @@
 
     const-string v0, "findViewById(R.id.cancelBtn)"
 
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     iput-object p1, p0, Lcom/vk/poll/views/PollFilterBottomView;->a:Landroid/view/View;
 
@@ -111,7 +111,7 @@
 
     const-string v0, "findViewById(R.id.replayBtn)"
 
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     iput-object p1, p0, Lcom/vk/poll/views/PollFilterBottomView;->b:Landroid/view/View;
 
@@ -124,7 +124,7 @@
 
     const-string v0, "findViewById(R.id.statusImageView)"
 
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     check-cast p1, Landroidx/appcompat/widget/AppCompatImageView;
 
@@ -139,7 +139,7 @@
 
     const-string v0, "findViewById(R.id.progress)"
 
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     iput-object p1, p0, Lcom/vk/poll/views/PollFilterBottomView;->d:Landroid/view/View;
 
@@ -152,7 +152,7 @@
 
     const-string v0, "findViewById(R.id.paramsDescription)"
 
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     check-cast p1, Landroid/widget/TextView;
 
@@ -194,7 +194,7 @@
 
     const-string p2, "findViewById(R.id.cancelBtn)"
 
-    invoke-static {p1, p2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, p2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     iput-object p1, p0, Lcom/vk/poll/views/PollFilterBottomView;->a:Landroid/view/View;
 
@@ -207,7 +207,7 @@
 
     const-string p2, "findViewById(R.id.replayBtn)"
 
-    invoke-static {p1, p2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, p2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     iput-object p1, p0, Lcom/vk/poll/views/PollFilterBottomView;->b:Landroid/view/View;
 
@@ -220,7 +220,7 @@
 
     const-string p2, "findViewById(R.id.statusImageView)"
 
-    invoke-static {p1, p2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, p2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     check-cast p1, Landroidx/appcompat/widget/AppCompatImageView;
 
@@ -235,7 +235,7 @@
 
     const-string p2, "findViewById(R.id.progress)"
 
-    invoke-static {p1, p2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, p2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     iput-object p1, p0, Lcom/vk/poll/views/PollFilterBottomView;->d:Landroid/view/View;
 
@@ -248,7 +248,7 @@
 
     const-string p2, "findViewById(R.id.paramsDescription)"
 
-    invoke-static {p1, p2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, p2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     check-cast p1, Landroid/widget/TextView;
 
@@ -290,7 +290,7 @@
 
     const-string p2, "findViewById(R.id.cancelBtn)"
 
-    invoke-static {p1, p2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, p2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     iput-object p1, p0, Lcom/vk/poll/views/PollFilterBottomView;->a:Landroid/view/View;
 
@@ -303,7 +303,7 @@
 
     const-string p2, "findViewById(R.id.replayBtn)"
 
-    invoke-static {p1, p2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, p2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     iput-object p1, p0, Lcom/vk/poll/views/PollFilterBottomView;->b:Landroid/view/View;
 
@@ -316,7 +316,7 @@
 
     const-string p2, "findViewById(R.id.statusImageView)"
 
-    invoke-static {p1, p2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, p2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     check-cast p1, Landroidx/appcompat/widget/AppCompatImageView;
 
@@ -331,7 +331,7 @@
 
     const-string p2, "findViewById(R.id.progress)"
 
-    invoke-static {p1, p2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, p2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     iput-object p1, p0, Lcom/vk/poll/views/PollFilterBottomView;->d:Landroid/view/View;
 
@@ -344,7 +344,7 @@
 
     const-string p2, "findViewById(R.id.paramsDescription)"
 
-    invoke-static {p1, p2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, p2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     check-cast p1, Landroid/widget/TextView;
 
@@ -474,7 +474,7 @@
 
     move-result-object v0
 
-    sget-object v3, Lcom/vk/core/util/i;->a:Landroid/content/Context;
+    sget-object v3, Lcom/vk/core/util/AppContextHolder;->a:Landroid/content/Context;
 
     invoke-static {v3, v1}, Landroidx/core/content/ContextCompat;->getColor(Landroid/content/Context;I)I
 
@@ -498,7 +498,7 @@
 
     move-result-object v0
 
-    sget-object v1, Lcom/vk/core/util/i;->a:Landroid/content/Context;
+    sget-object v1, Lcom/vk/core/util/AppContextHolder;->a:Landroid/content/Context;
 
     const v3, 0x7f060018
 
@@ -522,7 +522,7 @@
 
     move-result-object v0
 
-    sget-object v3, Lcom/vk/core/util/i;->a:Landroid/content/Context;
+    sget-object v3, Lcom/vk/core/util/AppContextHolder;->a:Landroid/content/Context;
 
     invoke-static {v3, v1}, Landroidx/core/content/ContextCompat;->getColor(Landroid/content/Context;I)I
 
@@ -603,13 +603,13 @@
     return-void
 .end method
 
-.method public final setCancelClickListener(Lkotlin/jvm/b/a;)V
+.method public final setCancelClickListener(Lkotlin/jvm/b/Functions;)V
     .locals 2
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lkotlin/jvm/b/a<",
-            "Lkotlin/m;",
+            "Lkotlin/jvm/b/Functions<",
+            "Lkotlin/Unit;",
             ">;)V"
         }
     .end annotation
@@ -619,20 +619,20 @@
 
     new-instance v1, Lcom/vk/poll/views/PollFilterBottomView$setCancelClickListener$1;
 
-    invoke-direct {v1, p1}, Lcom/vk/poll/views/PollFilterBottomView$setCancelClickListener$1;-><init>(Lkotlin/jvm/b/a;)V
+    invoke-direct {v1, p1}, Lcom/vk/poll/views/PollFilterBottomView$setCancelClickListener$1;-><init>(Lkotlin/jvm/b/Functions;)V
 
-    invoke-static {v0, v1}, Lcom/vk/extensions/ViewExtKt;->e(Landroid/view/View;Lkotlin/jvm/b/b;)V
+    invoke-static {v0, v1}, Lcom/vk/extensions/ViewExtKt;->e(Landroid/view/View;Lkotlin/jvm/b/Functions2;)V
 
     return-void
 .end method
 
-.method public final setReplayClickListener(Lkotlin/jvm/b/a;)V
+.method public final setReplayClickListener(Lkotlin/jvm/b/Functions;)V
     .locals 2
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lkotlin/jvm/b/a<",
-            "Lkotlin/m;",
+            "Lkotlin/jvm/b/Functions<",
+            "Lkotlin/Unit;",
             ">;)V"
         }
     .end annotation
@@ -642,9 +642,9 @@
 
     new-instance v1, Lcom/vk/poll/views/PollFilterBottomView$setReplayClickListener$1;
 
-    invoke-direct {v1, p1}, Lcom/vk/poll/views/PollFilterBottomView$setReplayClickListener$1;-><init>(Lkotlin/jvm/b/a;)V
+    invoke-direct {v1, p1}, Lcom/vk/poll/views/PollFilterBottomView$setReplayClickListener$1;-><init>(Lkotlin/jvm/b/Functions;)V
 
-    invoke-static {v0, v1}, Lcom/vk/extensions/ViewExtKt;->e(Landroid/view/View;Lkotlin/jvm/b/b;)V
+    invoke-static {v0, v1}, Lcom/vk/extensions/ViewExtKt;->e(Landroid/view/View;Lkotlin/jvm/b/Functions2;)V
 
     return-void
 .end method

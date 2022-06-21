@@ -46,7 +46,7 @@
     .line 1
     iget-object v0, p0, Lcom/vk/profile/adapter/inner/PhotoFeedAdapter$e;->d:Lcom/vk/profile/adapter/inner/PhotoFeedAdapter;
 
-    invoke-static {v0}, Lcom/vk/profile/adapter/inner/PhotoFeedAdapter;->d(Lcom/vk/profile/adapter/inner/PhotoFeedAdapter;)Lcom/vk/bridges/p$d;
+    invoke-static {v0}, Lcom/vk/profile/adapter/inner/PhotoFeedAdapter;->d(Lcom/vk/profile/adapter/inner/PhotoFeedAdapter;)Lcom/vk/bridges/ImageViewer$d;
 
     move-result-object v0
 
@@ -60,7 +60,7 @@
 
     const-string v1, "itemView"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {v0}, Landroid/view/View;->getContext()Landroid/content/Context;
 
@@ -68,7 +68,7 @@
 
     const-string v1, "itemView.context"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-static {v0}, Lcom/vk/core/util/ContextExtKt;->a(Landroid/content/Context;)Landroid/app/Activity;
 
@@ -77,19 +77,19 @@
     .line 3
     iget-object v1, p0, Lcom/vk/profile/adapter/inner/PhotoFeedAdapter$e;->d:Lcom/vk/profile/adapter/inner/PhotoFeedAdapter;
 
-    invoke-static {v1}, Lcom/vk/profile/adapter/inner/PhotoFeedAdapter;->a(Lcom/vk/profile/adapter/inner/PhotoFeedAdapter;)Ld/a/a/c/c;
+    invoke-static {v1}, Lcom/vk/profile/adapter/inner/PhotoFeedAdapter;->a(Lcom/vk/profile/adapter/inner/PhotoFeedAdapter;)Lme/grishka/appkit/utils/Preloader;
 
     move-result-object v1
 
     const-string v2, "preloader"
 
-    invoke-static {v1, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    invoke-virtual {v1}, Ld/a/a/c/c;->a()Ljava/util/ArrayList;
+    invoke-virtual {v1}, Lme/grishka/appkit/utils/Preloader;->a()Ljava/util/ArrayList;
 
     move-result-object v1
 
-    iget-object v3, p0, Lcom/vtosters/lite/ui/b0/i;->b:Ljava/lang/Object;
+    iget-object v3, p0, Lcom/vtosters/lite/ui/holder/RecyclerHolder;->b:Ljava/lang/Object;
 
     invoke-virtual {v1, v3}, Ljava/util/ArrayList;->indexOf(Ljava/lang/Object;)I
 
@@ -114,13 +114,13 @@
 
     iget-object v6, p0, Lcom/vk/profile/adapter/inner/PhotoFeedAdapter$e;->d:Lcom/vk/profile/adapter/inner/PhotoFeedAdapter;
 
-    invoke-static {v6}, Lcom/vk/profile/adapter/inner/PhotoFeedAdapter;->a(Lcom/vk/profile/adapter/inner/PhotoFeedAdapter;)Ld/a/a/c/c;
+    invoke-static {v6}, Lcom/vk/profile/adapter/inner/PhotoFeedAdapter;->a(Lcom/vk/profile/adapter/inner/PhotoFeedAdapter;)Lme/grishka/appkit/utils/Preloader;
 
     move-result-object v6
 
-    invoke-static {v6, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v6, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    invoke-virtual {v6}, Ld/a/a/c/c;->a()Ljava/util/ArrayList;
+    invoke-virtual {v6}, Lme/grishka/appkit/utils/Preloader;->a()Ljava/util/ArrayList;
 
     move-result-object v6
 
@@ -158,32 +158,32 @@
 
     const-string v5, "a.getString(R.string.all_photos)"
 
-    invoke-static {v4, v5}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v4, v5}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {v3, v4}, Lcom/vk/profile/adapter/inner/PhotoFeedAdapter$b;->a(Ljava/lang/String;)V
 
     .line 6
     iget-object v3, p0, Lcom/vk/profile/adapter/inner/PhotoFeedAdapter$e;->d:Lcom/vk/profile/adapter/inner/PhotoFeedAdapter;
 
-    invoke-static {}, Lcom/vk/bridges/q;->a()Lcom/vk/bridges/p;
+    invoke-static {}, Lcom/vk/bridges/ImageViewer1;->a()Lcom/vk/bridges/ImageViewer;
 
     move-result-object v4
 
     iget-object v5, p0, Lcom/vk/profile/adapter/inner/PhotoFeedAdapter$e;->d:Lcom/vk/profile/adapter/inner/PhotoFeedAdapter;
 
-    invoke-static {v5}, Lcom/vk/profile/adapter/inner/PhotoFeedAdapter;->a(Lcom/vk/profile/adapter/inner/PhotoFeedAdapter;)Ld/a/a/c/c;
+    invoke-static {v5}, Lcom/vk/profile/adapter/inner/PhotoFeedAdapter;->a(Lcom/vk/profile/adapter/inner/PhotoFeedAdapter;)Lme/grishka/appkit/utils/Preloader;
 
     move-result-object v5
 
-    invoke-static {v5, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v5, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    invoke-virtual {v5}, Ld/a/a/c/c;->a()Ljava/util/ArrayList;
+    invoke-virtual {v5}, Lme/grishka/appkit/utils/Preloader;->a()Ljava/util/ArrayList;
 
     move-result-object v2
 
     const-string v5, "preloader.data"
 
-    invoke-static {v2, v5}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v2, v5}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     iget-object v5, p0, Lcom/vk/profile/adapter/inner/PhotoFeedAdapter$e;->d:Lcom/vk/profile/adapter/inner/PhotoFeedAdapter;
 
@@ -191,15 +191,15 @@
 
     move-result-object v5
 
-    invoke-interface {v4, v1, v2, v0, v5}, Lcom/vk/bridges/p;->a(ILjava/util/List;Landroid/content/Context;Lcom/vk/bridges/p$a;)Lcom/vk/bridges/p$d;
+    invoke-interface {v4, v1, v2, v0, v5}, Lcom/vk/bridges/ImageViewer;->a(ILjava/util/List;Landroid/content/Context;Lcom/vk/bridges/ImageViewer$a;)Lcom/vk/bridges/ImageViewer$d;
 
     move-result-object v0
 
-    invoke-static {v3, v0}, Lcom/vk/profile/adapter/inner/PhotoFeedAdapter;->a(Lcom/vk/profile/adapter/inner/PhotoFeedAdapter;Lcom/vk/bridges/p$d;)V
+    invoke-static {v3, v0}, Lcom/vk/profile/adapter/inner/PhotoFeedAdapter;->a(Lcom/vk/profile/adapter/inner/PhotoFeedAdapter;Lcom/vk/bridges/ImageViewer$d;)V
 
     .line 7
     :cond_2
-    new-instance v0, Lcom/vk/profile/e/b;
+    new-instance v0, Lcom/vk/profile/e/CommunityScreenTracker1;
 
     iget-object v1, p0, Lcom/vk/profile/adapter/inner/PhotoFeedAdapter$e;->d:Lcom/vk/profile/adapter/inner/PhotoFeedAdapter;
 
@@ -211,7 +211,7 @@
 
     iget v1, v1, Lcom/vk/dto/user/UserProfile;->b:I
 
-    invoke-direct {v0, v1}, Lcom/vk/profile/e/b;-><init>(I)V
+    invoke-direct {v0, v1}, Lcom/vk/profile/e/CommunityScreenTracker1;-><init>(I)V
 
     .line 8
     invoke-static {}, Lcom/vk/profile/data/ProfileCountersKt;->m()Lcom/vk/profile/data/CountersWrapper;
@@ -222,19 +222,19 @@
 
     move-result v1
 
-    invoke-static {v1}, Lcom/vk/profile/e/c;->a(I)Ljava/lang/String;
+    invoke-static {v1}, Lcom/vk/profile/e/CommunityScreenTracker;->a(I)Ljava/lang/String;
 
     move-result-object v1
 
-    invoke-virtual {v0, v1}, Lcom/vk/profile/e/b;->a(Ljava/lang/String;)Lcom/vk/profile/e/b;
+    invoke-virtual {v0, v1}, Lcom/vk/profile/e/CommunityScreenTracker1;->a(Ljava/lang/String;)Lcom/vk/profile/e/CommunityScreenTracker1;
 
     const-string v1, "element"
 
     .line 9
-    invoke-virtual {v0, v1}, Lcom/vk/profile/e/b;->d(Ljava/lang/String;)Lcom/vk/profile/e/b;
+    invoke-virtual {v0, v1}, Lcom/vk/profile/e/CommunityScreenTracker1;->d(Ljava/lang/String;)Lcom/vk/profile/e/CommunityScreenTracker1;
 
     .line 10
-    iget-object v1, p0, Lcom/vtosters/lite/ui/b0/i;->b:Ljava/lang/Object;
+    iget-object v1, p0, Lcom/vtosters/lite/ui/holder/RecyclerHolder;->b:Ljava/lang/Object;
 
     check-cast v1, Lcom/vk/dto/photo/Photo;
 
@@ -244,10 +244,10 @@
 
     move-result-object v1
 
-    invoke-virtual {v0, v1}, Lcom/vk/profile/e/b;->b(Ljava/lang/String;)Lcom/vk/profile/e/b;
+    invoke-virtual {v0, v1}, Lcom/vk/profile/e/CommunityScreenTracker1;->b(Ljava/lang/String;)Lcom/vk/profile/e/CommunityScreenTracker1;
 
     .line 11
-    invoke-virtual {v0}, Lcom/vk/profile/e/b;->a()V
+    invoke-virtual {v0}, Lcom/vk/profile/e/CommunityScreenTracker1;->a()V
 
     return-void
 .end method

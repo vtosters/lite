@@ -40,11 +40,11 @@
     .line 1
     iget-object p1, p0, Lcom/vk/search/fragment/DiscoverNewsSearchFragment$b;->a:Lcom/vk/search/fragment/DiscoverNewsSearchFragment;
 
-    invoke-static {p1}, Lcom/vk/search/fragment/DiscoverNewsSearchFragment;->a(Lcom/vk/search/fragment/DiscoverNewsSearchFragment;)Lcom/vk/newsfeed/presenters/e;
+    invoke-static {p1}, Lcom/vk/search/fragment/DiscoverNewsSearchFragment;->a(Lcom/vk/search/fragment/DiscoverNewsSearchFragment;)Lcom/vk/newsfeed/presenters/GlobalSearchPresenter;
 
     move-result-object p1
 
-    invoke-virtual {p1}, Lcom/vk/newsfeed/presenters/j;->E()V
+    invoke-virtual {p1}, Lcom/vk/newsfeed/presenters/NewsSearchPresenter;->E()V
 
     const/4 p1, 0x0
 

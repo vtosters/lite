@@ -3,12 +3,12 @@
 .source "SelectionStickerSearchDelegate.kt"
 
 # interfaces
-.implements Lc/a/z/j;
+.implements Lio/reactivex/functions/Function;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/attachpicker/stickers/selection/SelectionStickerSearchDelegate$v;->a(Ljava/lang/String;)Lc/a/m;
+    value = Lcom/vk/attachpicker/stickers/selection/SelectionStickerSearchDelegate$v;->a(Ljava/lang/String;)Lio/reactivex/Observable;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -24,7 +24,7 @@
         "Ljava/lang/Object;",
         ">",
         "Ljava/lang/Object;",
-        "Lc/a/z/j<",
+        "Lio/reactivex/functions/Function<",
         "TT;TR;>;"
     }
 .end annotation
@@ -47,7 +47,7 @@
 
 
 # virtual methods
-.method public final a(Lcom/vk/attachpicker/stickers/selection/gfycat/a;)Lcom/vk/dto/stories/model/GifWithQueryData;
+.method public final a(Lcom/vk/attachpicker/stickers/selection/gfycat/GfycatUtils;)Lcom/vk/dto/stories/model/GifWithQueryData;
     .locals 3
 
     .line 1
@@ -57,9 +57,9 @@
 
     const-string v2, "query"
 
-    invoke-static {v1, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    invoke-virtual {p1}, Lcom/vk/attachpicker/stickers/selection/gfycat/a;->a()Ljava/util/List;
+    invoke-virtual {p1}, Lcom/vk/attachpicker/stickers/selection/gfycat/GfycatUtils;->a()Ljava/util/List;
 
     move-result-object p1
 
@@ -72,9 +72,9 @@
     .locals 0
 
     .line 1
-    check-cast p1, Lcom/vk/attachpicker/stickers/selection/gfycat/a;
+    check-cast p1, Lcom/vk/attachpicker/stickers/selection/gfycat/GfycatUtils;
 
-    invoke-virtual {p0, p1}, Lcom/vk/attachpicker/stickers/selection/SelectionStickerSearchDelegate$v$a;->a(Lcom/vk/attachpicker/stickers/selection/gfycat/a;)Lcom/vk/dto/stories/model/GifWithQueryData;
+    invoke-virtual {p0, p1}, Lcom/vk/attachpicker/stickers/selection/SelectionStickerSearchDelegate$v$a;->a(Lcom/vk/attachpicker/stickers/selection/gfycat/GfycatUtils;)Lcom/vk/dto/stories/model/GifWithQueryData;
 
     move-result-object p1
 

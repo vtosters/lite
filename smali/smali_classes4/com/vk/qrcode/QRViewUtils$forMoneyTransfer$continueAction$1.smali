@@ -3,12 +3,12 @@
 .source "QRViewUtils.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/a;
+.implements Lkotlin/jvm/b/Functions;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/qrcode/QRViewUtils;->a(Landroid/app/Activity;Lcom/vk/qrcode/QRParser;Lcom/vk/qrcode/i;Lcom/vk/dto/user/UserProfile;)V
+    value = Lcom/vk/qrcode/QRViewUtils;->a(Landroid/app/Activity;Lcom/vk/qrcode/QRParser;Lcom/vk/qrcode/QRTypes7;Lcom/vk/dto/user/UserProfile;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -19,26 +19,26 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/a<",
-        "Lkotlin/m;",
+        "Lkotlin/jvm/b/Functions<",
+        "Lkotlin/Unit;",
         ">;"
     }
 .end annotation
 
 
 # instance fields
-.field final synthetic $action:Lcom/vk/qrcode/i;
+.field final synthetic $action:Lcom/vk/qrcode/QRTypes7;
 
 .field final synthetic $context:Landroid/app/Activity;
 
 
 # direct methods
-.method constructor <init>(Landroid/app/Activity;Lcom/vk/qrcode/i;)V
+.method constructor <init>(Landroid/app/Activity;Lcom/vk/qrcode/QRTypes7;)V
     .locals 0
 
     iput-object p1, p0, Lcom/vk/qrcode/QRViewUtils$forMoneyTransfer$continueAction$1;->$context:Landroid/app/Activity;
 
-    iput-object p2, p0, Lcom/vk/qrcode/QRViewUtils$forMoneyTransfer$continueAction$1;->$action:Lcom/vk/qrcode/i;
+    iput-object p2, p0, Lcom/vk/qrcode/QRViewUtils$forMoneyTransfer$continueAction$1;->$action:Lcom/vk/qrcode/QRTypes7;
 
     const/4 p1, 0x0
 
@@ -55,7 +55,7 @@
     .line 1
     invoke-virtual {p0}, Lcom/vk/qrcode/QRViewUtils$forMoneyTransfer$continueAction$1;->invoke()V
 
-    sget-object v0, Lkotlin/m;->a:Lkotlin/m;
+    sget-object v0, Lkotlin/Unit;->a:Lkotlin/Unit;
 
     return-object v0
 .end method
@@ -64,13 +64,13 @@
     .locals 6
 
     .line 2
-    sget-object v0, Lcom/vk/common/links/c;->p:Lcom/vk/common/links/c$a;
+    sget-object v0, Lcom/vk/common/links/LinkProcessor;->p:Lcom/vk/common/links/LinkProcessor$a;
 
     iget-object v1, p0, Lcom/vk/qrcode/QRViewUtils$forMoneyTransfer$continueAction$1;->$context:Landroid/app/Activity;
 
-    iget-object v2, p0, Lcom/vk/qrcode/QRViewUtils$forMoneyTransfer$continueAction$1;->$action:Lcom/vk/qrcode/i;
+    iget-object v2, p0, Lcom/vk/qrcode/QRViewUtils$forMoneyTransfer$continueAction$1;->$action:Lcom/vk/qrcode/QRTypes7;
 
-    invoke-virtual {v2}, Lcom/vk/qrcode/i;->j()Ljava/lang/String;
+    invoke-virtual {v2}, Lcom/vk/qrcode/QRTypes7;->j()Ljava/lang/String;
 
     move-result-object v2
 
@@ -80,7 +80,7 @@
 
     const/4 v5, 0x0
 
-    invoke-static/range {v0 .. v5}, Lcom/vk/common/links/c$a;->a(Lcom/vk/common/links/c$a;Landroid/content/Context;Ljava/lang/String;Landroid/os/Bundle;ILjava/lang/Object;)V
+    invoke-static/range {v0 .. v5}, Lcom/vk/common/links/LinkProcessor$a;->a(Lcom/vk/common/links/LinkProcessor$a;Landroid/content/Context;Ljava/lang/String;Landroid/os/Bundle;ILjava/lang/Object;)V
 
     .line 3
     sget-object v0, Lcom/vk/qrcode/QRStatsTracker;->b:Lcom/vk/qrcode/QRStatsTracker;

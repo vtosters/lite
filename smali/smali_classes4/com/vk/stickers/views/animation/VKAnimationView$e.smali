@@ -3,7 +3,7 @@
 .source "VKAnimationView.kt"
 
 # interfaces
-.implements Lc/a/z/g;
+.implements Lio/reactivex/functions/Consumer;
 
 
 # annotations
@@ -22,7 +22,7 @@
         "Ljava/lang/Object;",
         ">",
         "Ljava/lang/Object;",
-        "Lc/a/z/g<",
+        "Lio/reactivex/functions/Consumer<",
         "Lcom/vk/dto/stickers/StickerStockItem;",
         ">;"
     }
@@ -93,9 +93,9 @@
 
     .line 5
     :cond_0
-    sget-object v0, Lcom/vk/stickers/t;->l:Lcom/vk/stickers/t;
+    sget-object v0, Lcom/vk/stickers/Stickers;->l:Lcom/vk/stickers/Stickers;
 
-    invoke-virtual {v0, p1}, Lcom/vk/stickers/t;->c(Lcom/vk/dto/stickers/StickerStockItem;)V
+    invoke-virtual {v0, p1}, Lcom/vk/stickers/Stickers;->c(Lcom/vk/dto/stickers/StickerStockItem;)V
 
     goto :goto_0
 
@@ -103,13 +103,13 @@
     :cond_1
     iget-object p1, p0, Lcom/vk/stickers/views/animation/VKAnimationView$e;->a:Lcom/vk/stickers/views/animation/VKAnimationView;
 
-    invoke-static {p1}, Lcom/vk/stickers/views/animation/VKAnimationView;->a(Lcom/vk/stickers/views/animation/VKAnimationView;)Lcom/vk/stickers/views/animation/a;
+    invoke-static {p1}, Lcom/vk/stickers/views/animation/VKAnimationView;->a(Lcom/vk/stickers/views/animation/VKAnimationView;)Lcom/vk/stickers/views/animation/OnLoadAnimationCallback;
 
     move-result-object p1
 
     if-eqz p1, :cond_2
 
-    invoke-interface {p1}, Lcom/vk/stickers/views/animation/a;->b()V
+    invoke-interface {p1}, Lcom/vk/stickers/views/animation/OnLoadAnimationCallback;->b()V
 
     :cond_2
     :goto_0

@@ -38,7 +38,7 @@
     .locals 4
 
     .line 1
-    invoke-static {}, Lcom/vk/bridges/a0;->a()Lcom/vk/bridges/z;
+    invoke-static {}, Lcom/vk/bridges/SharingBridge;->a()Lcom/vk/bridges/SharingBridge1;
 
     move-result-object v0
 
@@ -46,13 +46,13 @@
 
     iget-object v1, v1, Lcom/vk/profile/adapter/items/details/DetailsInfoItem$ViewHolder$b;->a:Lcom/vk/profile/adapter/items/details/DetailsInfoItem$ViewHolder;
 
-    invoke-virtual {v1}, Lcom/vtosters/lite/ui/b0/i;->getContext()Landroid/content/Context;
+    invoke-virtual {v1}, Lcom/vtosters/lite/ui/holder/RecyclerHolder;->getContext()Landroid/content/Context;
 
     move-result-object v1
 
     const-string v2, "getContext()"
 
-    invoke-static {v1, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     new-instance v2, Lcom/vtosters/lite/attachments/LinkAttachment;
 
@@ -66,7 +66,7 @@
 
     invoke-direct {v2, v3}, Lcom/vtosters/lite/attachments/LinkAttachment;-><init>(Ljava/lang/String;)V
 
-    invoke-interface {v0, v1, v2}, Lcom/vk/bridges/z;->a(Landroid/content/Context;Ljava/lang/Object;)V
+    invoke-interface {v0, v1, v2}, Lcom/vk/bridges/SharingBridge1;->a(Landroid/content/Context;Ljava/lang/Object;)V
 
     .line 2
     iget-object v0, p0, Lcom/vk/profile/adapter/items/details/DetailsInfoItem$ViewHolder$b$c;->a:Lcom/vk/profile/adapter/items/details/DetailsInfoItem$ViewHolder$b;
@@ -86,7 +86,7 @@
     return-void
 
     :cond_0
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     const/4 v0, 0x0
 

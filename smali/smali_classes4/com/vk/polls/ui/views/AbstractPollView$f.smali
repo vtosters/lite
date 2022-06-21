@@ -15,7 +15,7 @@
 
 
 # virtual methods
-.method public abstract G()Lb/h/t/k/c;
+.method public abstract G()Lb/h/t/k/PollVoteController;
 .end method
 
 .method public abstract N()Z

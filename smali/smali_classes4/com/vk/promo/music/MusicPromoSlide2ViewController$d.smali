@@ -3,7 +3,7 @@
 .source "MusicPromoSlide2ViewController.kt"
 
 # interfaces
-.implements Lc/a/z/g;
+.implements Lio/reactivex/functions/Consumer;
 
 
 # annotations
@@ -22,7 +22,7 @@
         "Ljava/lang/Object;",
         ">",
         "Ljava/lang/Object;",
-        "Lc/a/z/g<",
+        "Lio/reactivex/functions/Consumer<",
         "Ljava/lang/Object;",
         ">;"
     }
@@ -56,13 +56,13 @@
     .line 1
     iget-object v0, p0, Lcom/vk/promo/music/MusicPromoSlide2ViewController$d;->a:Lcom/vk/promo/music/MusicPromoSlide2ViewController;
 
-    invoke-static {v0}, Lcom/vk/promo/music/MusicPromoSlide2ViewController;->c(Lcom/vk/promo/music/MusicPromoSlide2ViewController;)Lcom/vk/promo/f;
+    invoke-static {v0}, Lcom/vk/promo/music/MusicPromoSlide2ViewController;->c(Lcom/vk/promo/music/MusicPromoSlide2ViewController;)Lcom/vk/promo/PromoNavigator;
 
     move-result-object v0
 
     if-eqz v0, :cond_0
 
-    invoke-interface {v0}, Lcom/vk/promo/f;->close()V
+    invoke-interface {v0}, Lcom/vk/promo/PromoNavigator;->close()V
 
     .line 2
     :cond_0
@@ -83,7 +83,7 @@
     const-string v2, "it"
 
     .line 3
-    invoke-static {p1, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     aput-object p1, v0, v1
 

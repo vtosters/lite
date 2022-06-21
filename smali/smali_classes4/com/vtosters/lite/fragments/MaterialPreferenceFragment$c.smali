@@ -1,10 +1,10 @@
 .class Lcom/vtosters/lite/fragments/MaterialPreferenceFragment$c;
-.super Lcom/vtosters/lite/ui/adapters/k;
+.super Lcom/vtosters/lite/ui/adapters/RecyclerWrapperAdapter;
 .source "MaterialPreferenceFragment.java"
 
 # interfaces
-.implements Lcom/vk/core/ui/o;
-.implements Lcom/vk/core/ui/n;
+.implements Lcom/vk/core/ui/Provider;
+.implements Lcom/vk/core/ui/MilkshakeProvider;
 
 
 # annotations
@@ -30,7 +30,7 @@
     iput-object p1, p0, Lcom/vtosters/lite/fragments/MaterialPreferenceFragment$c;->b:Lcom/vtosters/lite/fragments/MaterialPreferenceFragment;
 
     .line 2
-    invoke-direct {p0, p2}, Lcom/vtosters/lite/ui/adapters/k;-><init>(Landroidx/recyclerview/widget/RecyclerView$Adapter;)V
+    invoke-direct {p0, p2}, Lcom/vtosters/lite/ui/adapters/RecyclerWrapperAdapter;-><init>(Landroidx/recyclerview/widget/RecyclerView$Adapter;)V
 
     .line 3
     invoke-direct {p0}, Lcom/vtosters/lite/fragments/MaterialPreferenceFragment$c;->j()V
@@ -69,7 +69,7 @@
 
     .line 2
     :goto_0
-    iget-object v1, p0, Lcom/vtosters/lite/ui/adapters/k;->a:Landroidx/recyclerview/widget/RecyclerView$Adapter;
+    iget-object v1, p0, Lcom/vtosters/lite/ui/adapters/RecyclerWrapperAdapter;->a:Landroidx/recyclerview/widget/RecyclerView$Adapter;
 
     invoke-virtual {v1}, Landroidx/recyclerview/widget/RecyclerView$Adapter;->getItemCount()I
 
@@ -78,7 +78,7 @@
     if-ge v0, v1, :cond_2
 
     .line 3
-    iget-object v1, p0, Lcom/vtosters/lite/ui/adapters/k;->a:Landroidx/recyclerview/widget/RecyclerView$Adapter;
+    iget-object v1, p0, Lcom/vtosters/lite/ui/adapters/RecyclerWrapperAdapter;->a:Landroidx/recyclerview/widget/RecyclerView$Adapter;
 
     check-cast v1, Landroidx/preference/PreferenceGroupAdapter;
 
@@ -167,7 +167,7 @@
     .locals 1
 
     .line 1
-    invoke-virtual {p0}, Lcom/vtosters/lite/ui/adapters/k;->getItemCount()I
+    invoke-virtual {p0}, Lcom/vtosters/lite/ui/adapters/RecyclerWrapperAdapter;->getItemCount()I
 
     move-result v0
 
@@ -175,7 +175,7 @@
 
     if-ltz p1, :cond_0
 
-    iget-object v0, p0, Lcom/vtosters/lite/ui/adapters/k;->a:Landroidx/recyclerview/widget/RecyclerView$Adapter;
+    iget-object v0, p0, Lcom/vtosters/lite/ui/adapters/RecyclerWrapperAdapter;->a:Landroidx/recyclerview/widget/RecyclerView$Adapter;
 
     check-cast v0, Landroidx/preference/PreferenceGroupAdapter;
 
@@ -259,7 +259,7 @@
     .locals 1
 
     .line 1
-    invoke-super {p0, p1, p2}, Lcom/vtosters/lite/ui/adapters/k;->onBindViewHolder(Landroidx/recyclerview/widget/RecyclerView$ViewHolder;I)V
+    invoke-super {p0, p1, p2}, Lcom/vtosters/lite/ui/adapters/RecyclerWrapperAdapter;->onBindViewHolder(Landroidx/recyclerview/widget/RecyclerView$ViewHolder;I)V
 
     .line 2
     iget-object p1, p1, Landroidx/recyclerview/widget/RecyclerView$ViewHolder;->itemView:Landroid/view/View;
@@ -282,7 +282,7 @@
     if-nez p2, :cond_0
 
     .line 4
-    invoke-static {p1}, Lcom/vtosters/lite/ui/util/b;->b(Landroid/view/View;)V
+    invoke-static {p1}, Lcom/vtosters/lite/ui/util/HighlightHelper;->b(Landroid/view/View;)V
 
     .line 5
     iget-object p2, p0, Lcom/vtosters/lite/fragments/MaterialPreferenceFragment$c;->b:Lcom/vtosters/lite/fragments/MaterialPreferenceFragment;

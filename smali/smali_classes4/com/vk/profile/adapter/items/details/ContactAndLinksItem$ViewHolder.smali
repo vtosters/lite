@@ -1,5 +1,5 @@
 .class public final Lcom/vk/profile/adapter/items/details/ContactAndLinksItem$ViewHolder;
-.super Lcom/vtosters/lite/ui/b0/i;
+.super Lcom/vtosters/lite/ui/holder/RecyclerHolder;
 .source "ContactAndLinksItem.kt"
 
 
@@ -15,7 +15,7 @@
 
 .annotation system Ldalvik/annotation/Signature;
     value = {
-        "Lcom/vtosters/lite/ui/b0/i<",
+        "Lcom/vtosters/lite/ui/holder/RecyclerHolder<",
         "Lcom/vk/profile/adapter/items/details/ContactAndLinksItem;",
         ">;"
     }
@@ -43,7 +43,7 @@
     const v0, 0x7f0d028d
 
     .line 1
-    invoke-direct {p0, v0, p1}, Lcom/vtosters/lite/ui/b0/i;-><init>(ILandroid/view/ViewGroup;)V
+    invoke-direct {p0, v0, p1}, Lcom/vtosters/lite/ui/holder/RecyclerHolder;-><init>(ILandroid/view/ViewGroup;)V
 
     .line 2
     iget-object p1, p0, Landroidx/recyclerview/widget/RecyclerView$ViewHolder;->itemView:Landroid/view/View;
@@ -138,37 +138,37 @@
     return-void
 
     :cond_0
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     throw v0
 
     .line 8
     :cond_1
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     throw v0
 
     .line 9
     :cond_2
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     throw v0
 
     .line 10
     :cond_3
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     throw v0
 
     .line 11
     :cond_4
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     throw v0
 
     .line 12
     :cond_5
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     throw v0
 .end method
@@ -177,7 +177,7 @@
     .locals 1
 
     .line 64
-    invoke-static {p2}, Lcom/vk/core/extensions/z;->a(Ljava/lang/CharSequence;)Z
+    invoke-static {p2}, Lcom/vk/core/extensions/StringExt;->a(Ljava/lang/CharSequence;)Z
 
     move-result v0
 
@@ -248,34 +248,34 @@
     if-eqz v0, :cond_0
 
     .line 51
-    new-instance v1, Lcom/vk/profile/e/b;
+    new-instance v1, Lcom/vk/profile/e/CommunityScreenTracker1;
 
     invoke-virtual {p1}, Lcom/vk/profile/adapter/items/details/ContactAndLinksItem;->S()I
 
     move-result v2
 
-    invoke-direct {v1, v2}, Lcom/vk/profile/e/b;-><init>(I)V
+    invoke-direct {v1, v2}, Lcom/vk/profile/e/CommunityScreenTracker1;-><init>(I)V
 
     .line 52
     invoke-virtual {p1}, Lcom/vk/profile/adapter/items/details/ContactAndLinksItem;->X()Ljava/lang/String;
 
     move-result-object p1
 
-    invoke-virtual {v1, p1}, Lcom/vk/profile/e/b;->c(Ljava/lang/String;)Lcom/vk/profile/e/b;
+    invoke-virtual {v1, p1}, Lcom/vk/profile/e/CommunityScreenTracker1;->c(Ljava/lang/String;)Lcom/vk/profile/e/CommunityScreenTracker1;
 
     .line 53
-    invoke-virtual {v1, v0}, Lcom/vk/profile/e/b;->a(Ljava/lang/String;)Lcom/vk/profile/e/b;
+    invoke-virtual {v1, v0}, Lcom/vk/profile/e/CommunityScreenTracker1;->a(Ljava/lang/String;)Lcom/vk/profile/e/CommunityScreenTracker1;
 
     const-string p1, "copy"
 
     .line 54
-    invoke-virtual {v1, p1}, Lcom/vk/profile/e/b;->e(Ljava/lang/String;)Lcom/vk/profile/e/b;
+    invoke-virtual {v1, p1}, Lcom/vk/profile/e/CommunityScreenTracker1;->e(Ljava/lang/String;)Lcom/vk/profile/e/CommunityScreenTracker1;
 
     .line 55
-    invoke-virtual {v1, p2}, Lcom/vk/profile/e/b;->b(Ljava/lang/String;)Lcom/vk/profile/e/b;
+    invoke-virtual {v1, p2}, Lcom/vk/profile/e/CommunityScreenTracker1;->b(Ljava/lang/String;)Lcom/vk/profile/e/CommunityScreenTracker1;
 
     .line 56
-    invoke-virtual {v1}, Lcom/vk/profile/e/b;->a()V
+    invoke-virtual {v1}, Lcom/vk/profile/e/CommunityScreenTracker1;->a()V
 
     :cond_0
     return-void
@@ -292,23 +292,23 @@
     if-eqz v0, :cond_1
 
     .line 59
-    new-instance v1, Lcom/vk/profile/e/b;
+    new-instance v1, Lcom/vk/profile/e/CommunityScreenTracker1;
 
     invoke-virtual {p1}, Lcom/vk/profile/adapter/items/details/ContactAndLinksItem;->S()I
 
     move-result v2
 
-    invoke-direct {v1, v2}, Lcom/vk/profile/e/b;-><init>(I)V
+    invoke-direct {v1, v2}, Lcom/vk/profile/e/CommunityScreenTracker1;-><init>(I)V
 
     .line 60
     invoke-virtual {p1}, Lcom/vk/profile/adapter/items/details/ContactAndLinksItem;->X()Ljava/lang/String;
 
     move-result-object p1
 
-    invoke-virtual {v1, p1}, Lcom/vk/profile/e/b;->c(Ljava/lang/String;)Lcom/vk/profile/e/b;
+    invoke-virtual {v1, p1}, Lcom/vk/profile/e/CommunityScreenTracker1;->c(Ljava/lang/String;)Lcom/vk/profile/e/CommunityScreenTracker1;
 
     .line 61
-    invoke-virtual {v1, v0}, Lcom/vk/profile/e/b;->a(Ljava/lang/String;)Lcom/vk/profile/e/b;
+    invoke-virtual {v1, v0}, Lcom/vk/profile/e/CommunityScreenTracker1;->a(Ljava/lang/String;)Lcom/vk/profile/e/CommunityScreenTracker1;
 
     if-eqz p2, :cond_0
 
@@ -321,10 +321,10 @@
 
     .line 62
     :goto_0
-    invoke-virtual {v1, p1}, Lcom/vk/profile/e/b;->e(Ljava/lang/String;)Lcom/vk/profile/e/b;
+    invoke-virtual {v1, p1}, Lcom/vk/profile/e/CommunityScreenTracker1;->e(Ljava/lang/String;)Lcom/vk/profile/e/CommunityScreenTracker1;
 
     .line 63
-    invoke-virtual {v1}, Lcom/vk/profile/e/b;->a()V
+    invoke-virtual {v1}, Lcom/vk/profile/e/CommunityScreenTracker1;->a()V
 
     :cond_1
     return-void
@@ -358,7 +358,7 @@
 
     move-result-object v0
 
-    invoke-static {v0}, Lcom/vk/core/extensions/z;->a(Ljava/lang/CharSequence;)Z
+    invoke-static {v0}, Lcom/vk/core/extensions/StringExt;->a(Ljava/lang/CharSequence;)Z
 
     move-result v0
 
@@ -380,7 +380,7 @@
     invoke-direct {v0, p1, v4}, Lcom/vk/profile/adapter/items/details/ContactAndLinksItem$ViewHolder$b;-><init>(Lcom/vk/profile/adapter/items/details/ContactAndLinksItem;Ljava/lang/String;)V
 
     .line 7
-    invoke-virtual {v0, v1}, Lcom/vk/core/view/links/a;->a(I)V
+    invoke-virtual {v0, v1}, Lcom/vk/core/view/links/ClickableLinkSpan;->a(I)V
 
     .line 8
     new-instance v4, Landroid/text/SpannableString;
@@ -417,7 +417,7 @@
 
     move-result-object v0
 
-    invoke-static {v0}, Lcom/vk/core/extensions/z;->a(Ljava/lang/CharSequence;)Z
+    invoke-static {v0}, Lcom/vk/core/extensions/StringExt;->a(Ljava/lang/CharSequence;)Z
 
     move-result v0
 
@@ -433,7 +433,7 @@
     invoke-direct {v0, p1, v4}, Lcom/vk/profile/adapter/items/details/ContactAndLinksItem$ViewHolder$c;-><init>(Lcom/vk/profile/adapter/items/details/ContactAndLinksItem;Ljava/lang/String;)V
 
     .line 14
-    invoke-virtual {v0, v1}, Lcom/vk/core/view/links/a;->a(I)V
+    invoke-virtual {v0, v1}, Lcom/vk/core/view/links/ClickableLinkSpan;->a(I)V
 
     .line 15
     new-instance v1, Landroid/text/SpannableString;
@@ -586,7 +586,7 @@
     if-eqz v0, :cond_6
 
     .line 33
-    new-instance v0, Lcom/vtosters/lite/ui/r;
+    new-instance v0, Lcom/vtosters/lite/ui/CircleColorDrawable;
 
     const v4, 0x7f04044d
 
@@ -594,10 +594,10 @@
 
     move-result v4
 
-    invoke-direct {v0, v4}, Lcom/vtosters/lite/ui/r;-><init>(I)V
+    invoke-direct {v0, v4}, Lcom/vtosters/lite/ui/CircleColorDrawable;-><init>(I)V
 
     .line 34
-    invoke-virtual {v0, v3}, Lcom/vtosters/lite/ui/r;->a(Z)V
+    invoke-virtual {v0, v3}, Lcom/vtosters/lite/ui/CircleColorDrawable;->a(Z)V
 
     const/16 v4, 0x30
 
@@ -615,7 +615,7 @@
     .line 36
     iget-object v4, p0, Landroidx/recyclerview/widget/RecyclerView$ViewHolder;->itemView:Landroid/view/View;
 
-    invoke-static {v4, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v4, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {v4}, Landroid/view/View;->getContext()Landroid/content/Context;
 
@@ -623,7 +623,7 @@
 
     const-string v5, "itemView.context"
 
-    invoke-static {v4, v5}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v4, v5}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {p1}, Lcom/vk/profile/adapter/items/details/ContactAndLinksItem;->Y()I
 
@@ -637,12 +637,12 @@
 
     if-eqz v4, :cond_5
 
-    invoke-virtual {v0, v4}, Lcom/vtosters/lite/ui/r;->a(Landroid/graphics/drawable/Drawable;)Lcom/vtosters/lite/ui/r;
+    invoke-virtual {v0, v4}, Lcom/vtosters/lite/ui/CircleColorDrawable;->a(Landroid/graphics/drawable/Drawable;)Lcom/vtosters/lite/ui/CircleColorDrawable;
 
     goto :goto_3
 
     :cond_5
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     throw v2
 
@@ -662,7 +662,7 @@
     .line 38
     iget-object v4, p0, Lcom/vk/profile/adapter/items/details/ContactAndLinksItem$ViewHolder;->g:Lcom/vk/imageloader/view/VKImageView;
 
-    invoke-virtual {v4, v0}, Lcom/vk/imageloader/view/a;->setPlaceholderImage(Landroid/graphics/drawable/Drawable;)V
+    invoke-virtual {v4, v0}, Lcom/vk/imageloader/view/GenericVKImageView;->setPlaceholderImage(Landroid/graphics/drawable/Drawable;)V
 
     .line 39
     :cond_7
@@ -696,13 +696,13 @@
     .line 42
     iget-object v0, p0, Landroidx/recyclerview/widget/RecyclerView$ViewHolder;->itemView:Landroid/view/View;
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     new-instance v2, Lcom/vk/profile/adapter/items/details/ContactAndLinksItem$ViewHolder$onBind$8;
 
     invoke-direct {v2, p0, p1}, Lcom/vk/profile/adapter/items/details/ContactAndLinksItem$ViewHolder$onBind$8;-><init>(Lcom/vk/profile/adapter/items/details/ContactAndLinksItem$ViewHolder;Lcom/vk/profile/adapter/items/details/ContactAndLinksItem;)V
 
-    invoke-static {v0, v2}, Lcom/vk/extensions/ViewExtKt;->e(Landroid/view/View;Lkotlin/jvm/b/b;)V
+    invoke-static {v0, v2}, Lcom/vk/extensions/ViewExtKt;->e(Landroid/view/View;Lkotlin/jvm/b/Functions2;)V
 
     goto :goto_5
 
@@ -733,7 +733,7 @@
     :cond_b
     iget-object v0, p0, Landroidx/recyclerview/widget/RecyclerView$ViewHolder;->itemView:Landroid/view/View;
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {p1}, Lcom/vk/profile/adapter/items/details/ContactAndLinksItem;->V()Landroid/view/View$OnClickListener;
 
@@ -754,7 +754,7 @@
     .line 47
     iget-object v0, p0, Landroidx/recyclerview/widget/RecyclerView$ViewHolder;->itemView:Landroid/view/View;
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {p1}, Lcom/vk/profile/adapter/items/details/ContactAndLinksItem;->T()Ljava/lang/String;
 

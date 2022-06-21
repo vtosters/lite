@@ -1,5 +1,5 @@
 .class public final Lcom/vk/webapp/VkUiFragment$e;
-.super Lcom/vk/webapp/helpers/g;
+.super Lcom/vk/webapp/helpers/WebClients;
 .source "VkUiFragment.kt"
 
 
@@ -30,7 +30,7 @@
     .line 1
     iput-object p1, p0, Lcom/vk/webapp/VkUiFragment$e;->c:Lcom/vk/webapp/VkUiFragment;
 
-    invoke-direct {p0}, Lcom/vk/webapp/helpers/g;-><init>()V
+    invoke-direct {p0}, Lcom/vk/webapp/helpers/WebClients;-><init>()V
 
     return-void
 .end method
@@ -54,7 +54,7 @@
     .locals 0
 
     .line 1
-    invoke-super {p0, p1, p2}, Lcom/vk/webapp/helpers/g;->onPageFinished(Landroid/webkit/WebView;Ljava/lang/String;)V
+    invoke-super {p0, p1, p2}, Lcom/vk/webapp/helpers/WebClients;->onPageFinished(Landroid/webkit/WebView;Ljava/lang/String;)V
 
     .line 2
     iget-object p1, p0, Lcom/vk/webapp/VkUiFragment$e;->c:Lcom/vk/webapp/VkUiFragment;
@@ -68,12 +68,12 @@
     .locals 0
 
     .line 1
-    invoke-super {p0, p1, p2, p3, p4}, Lcom/vk/webapp/helpers/g;->onReceivedError(Landroid/webkit/WebView;ILjava/lang/String;Ljava/lang/String;)V
+    invoke-super {p0, p1, p2, p3, p4}, Lcom/vk/webapp/helpers/WebClients;->onReceivedError(Landroid/webkit/WebView;ILjava/lang/String;Ljava/lang/String;)V
 
     .line 2
     iget-object p1, p0, Lcom/vk/webapp/VkUiFragment$e;->c:Lcom/vk/webapp/VkUiFragment;
 
-    iget-boolean p2, p1, Ld/a/a/a/j;->Q:Z
+    iget-boolean p2, p1, Lme/grishka/appkit/fragments/LoaderFragment;->Q:Z
 
     if-nez p2, :cond_0
 
@@ -88,7 +88,7 @@
     .locals 0
 
     .line 1
-    invoke-super {p0, p1, p2}, Lcom/vk/webapp/helpers/g;->shouldOverrideUrlLoading(Landroid/webkit/WebView;Ljava/lang/String;)Z
+    invoke-super {p0, p1, p2}, Lcom/vk/webapp/helpers/WebClients;->shouldOverrideUrlLoading(Landroid/webkit/WebView;Ljava/lang/String;)Z
 
     .line 2
     invoke-static {p2}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
@@ -112,7 +112,7 @@
     goto :goto_0
 
     :cond_0
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     const/4 p1, 0x0
 

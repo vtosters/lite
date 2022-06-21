@@ -16,7 +16,7 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lcom/vk/profile/adapter/counters/CountersAdapter$c<",
-        "Lcom/vk/profile/adapter/counters/e$c;",
+        "Lcom/vk/profile/adapter/counters/CountersCacheManager$c;",
         ">;"
     }
 .end annotation
@@ -90,7 +90,7 @@
 
 
 # virtual methods
-.method public a(Lcom/vk/profile/adapter/counters/e$c;)V
+.method public a(Lcom/vk/profile/adapter/counters/CountersCacheManager$c;)V
     .locals 4
 
     .line 1
@@ -101,9 +101,9 @@
 
     const-string v1, "title"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    invoke-virtual {p1}, Lcom/vk/profile/adapter/counters/e$c;->b()Ljava/lang/String;
+    invoke-virtual {p1}, Lcom/vk/profile/adapter/counters/CountersCacheManager$c;->b()Ljava/lang/String;
 
     move-result-object v2
 
@@ -114,16 +114,16 @@
 
     const-string v2, "subtitle"
 
-    invoke-static {v0, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    invoke-virtual {p1}, Lcom/vk/profile/adapter/counters/e$c;->a()Ljava/lang/String;
+    invoke-virtual {p1}, Lcom/vk/profile/adapter/counters/CountersCacheManager$c;->a()Ljava/lang/String;
 
     move-result-object v3
 
     invoke-virtual {v0, v3}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
     .line 4
-    invoke-virtual {p1}, Lcom/vk/profile/adapter/counters/e$c;->a()Ljava/lang/String;
+    invoke-virtual {p1}, Lcom/vk/profile/adapter/counters/CountersCacheManager$c;->a()Ljava/lang/String;
 
     move-result-object p1
 
@@ -156,7 +156,7 @@
     .line 5
     iget-object p1, p0, Lcom/vk/profile/adapter/counters/CountersAdapter$h;->h:Landroid/widget/TextView;
 
-    invoke-static {p1, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     const/4 v0, 0x2
 
@@ -165,7 +165,7 @@
     .line 6
     iget-object p1, p0, Lcom/vk/profile/adapter/counters/CountersAdapter$h;->B:Landroid/widget/TextView;
 
-    invoke-static {p1, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     const/16 v0, 0x8
 
@@ -177,14 +177,14 @@
     :cond_2
     iget-object p1, p0, Lcom/vk/profile/adapter/counters/CountersAdapter$h;->h:Landroid/widget/TextView;
 
-    invoke-static {p1, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {p1, v3}, Landroid/widget/TextView;->setMaxLines(I)V
 
     .line 8
     iget-object p1, p0, Lcom/vk/profile/adapter/counters/CountersAdapter$h;->B:Landroid/widget/TextView;
 
-    invoke-static {p1, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {p1, v0}, Landroid/widget/TextView;->setVisibility(I)V
 
@@ -232,9 +232,9 @@
     .locals 0
 
     .line 1
-    check-cast p1, Lcom/vk/profile/adapter/counters/e$c;
+    check-cast p1, Lcom/vk/profile/adapter/counters/CountersCacheManager$c;
 
-    invoke-virtual {p0, p1}, Lcom/vk/profile/adapter/counters/CountersAdapter$h;->a(Lcom/vk/profile/adapter/counters/e$c;)V
+    invoke-virtual {p0, p1}, Lcom/vk/profile/adapter/counters/CountersAdapter$h;->a(Lcom/vk/profile/adapter/counters/CountersCacheManager$c;)V
 
     return-void
 .end method

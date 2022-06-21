@@ -3,12 +3,12 @@
 .source "DeliveryInfo.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/b;
+.implements Lkotlin/jvm/b/Functions2;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/market/orders/checkout/DeliveryInfo;->a(Ljava/lang/String;Lcom/vk/market/orders/checkout/c;)V
+    value = Lcom/vk/market/orders/checkout/DeliveryInfo;->a(Ljava/lang/String;Lcom/vk/market/orders/checkout/DeliveryInfo6;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -19,23 +19,23 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/b<",
-        "Lcom/vk/market/orders/checkout/l;",
-        "Lcom/vk/market/orders/checkout/l;",
+        "Lkotlin/jvm/b/Functions2<",
+        "Lcom/vk/market/orders/checkout/DeliveryInfo8;",
+        "Lcom/vk/market/orders/checkout/DeliveryInfo8;",
         ">;"
     }
 .end annotation
 
 
 # instance fields
-.field final synthetic $value:Lcom/vk/market/orders/checkout/c;
+.field final synthetic $value:Lcom/vk/market/orders/checkout/DeliveryInfo6;
 
 
 # direct methods
-.method constructor <init>(Lcom/vk/market/orders/checkout/c;)V
+.method constructor <init>(Lcom/vk/market/orders/checkout/DeliveryInfo6;)V
     .locals 0
 
-    iput-object p1, p0, Lcom/vk/market/orders/checkout/DeliveryInfo$setCountryField$2;->$value:Lcom/vk/market/orders/checkout/c;
+    iput-object p1, p0, Lcom/vk/market/orders/checkout/DeliveryInfo$setCountryField$2;->$value:Lcom/vk/market/orders/checkout/DeliveryInfo6;
 
     const/4 p1, 0x1
 
@@ -46,17 +46,17 @@
 
 
 # virtual methods
-.method public final a(Lcom/vk/market/orders/checkout/l;)Lcom/vk/market/orders/checkout/l;
+.method public final a(Lcom/vk/market/orders/checkout/DeliveryInfo8;)Lcom/vk/market/orders/checkout/DeliveryInfo8;
     .locals 6
 
     .line 1
     sget-object v0, Lcom/vk/market/orders/checkout/DeliveryInfo;->g:Lcom/vk/market/orders/checkout/DeliveryInfo$Companion;
 
-    iget-object v1, p0, Lcom/vk/market/orders/checkout/DeliveryInfo$setCountryField$2;->$value:Lcom/vk/market/orders/checkout/c;
+    iget-object v1, p0, Lcom/vk/market/orders/checkout/DeliveryInfo$setCountryField$2;->$value:Lcom/vk/market/orders/checkout/DeliveryInfo6;
 
     if-eqz v1, :cond_0
 
-    invoke-virtual {v1}, Lcom/vk/market/orders/checkout/c;->a()I
+    invoke-virtual {v1}, Lcom/vk/market/orders/checkout/DeliveryInfo6;->a()I
 
     move-result v1
 
@@ -80,7 +80,7 @@
 
     move-object v1, p1
 
-    invoke-static/range {v0 .. v5}, Lcom/vk/market/orders/checkout/DeliveryInfo$Companion;->a(Lcom/vk/market/orders/checkout/DeliveryInfo$Companion;Lcom/vk/market/orders/checkout/l;Ljava/lang/Integer;ZILjava/lang/Object;)Lcom/vk/market/orders/checkout/l;
+    invoke-static/range {v0 .. v5}, Lcom/vk/market/orders/checkout/DeliveryInfo$Companion;->a(Lcom/vk/market/orders/checkout/DeliveryInfo$Companion;Lcom/vk/market/orders/checkout/DeliveryInfo8;Ljava/lang/Integer;ZILjava/lang/Object;)Lcom/vk/market/orders/checkout/DeliveryInfo8;
 
     move-result-object p1
 
@@ -91,9 +91,9 @@
     .locals 0
 
     .line 1
-    check-cast p1, Lcom/vk/market/orders/checkout/l;
+    check-cast p1, Lcom/vk/market/orders/checkout/DeliveryInfo8;
 
-    invoke-virtual {p0, p1}, Lcom/vk/market/orders/checkout/DeliveryInfo$setCountryField$2;->a(Lcom/vk/market/orders/checkout/l;)Lcom/vk/market/orders/checkout/l;
+    invoke-virtual {p0, p1}, Lcom/vk/market/orders/checkout/DeliveryInfo$setCountryField$2;->a(Lcom/vk/market/orders/checkout/DeliveryInfo8;)Lcom/vk/market/orders/checkout/DeliveryInfo8;
 
     move-result-object p1
 

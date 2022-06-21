@@ -41,7 +41,7 @@
     .line 1
     iget-object p1, p0, Lcom/vk/libvideo/live/views/live/LiveView$a;->a:Lcom/vk/libvideo/live/views/live/LiveView;
 
-    invoke-static {p1}, Lcom/vk/libvideo/live/views/live/LiveView;->a(Lcom/vk/libvideo/live/views/live/LiveView;)Lcom/vk/libvideo/live/views/live/a;
+    invoke-static {p1}, Lcom/vk/libvideo/live/views/live/LiveView;->a(Lcom/vk/libvideo/live/views/live/LiveView;)Lcom/vk/libvideo/live/views/live/LiveContract;
 
     move-result-object p1
 
@@ -50,11 +50,11 @@
     .line 2
     iget-object p1, p0, Lcom/vk/libvideo/live/views/live/LiveView$a;->a:Lcom/vk/libvideo/live/views/live/LiveView;
 
-    invoke-static {p1}, Lcom/vk/libvideo/live/views/live/LiveView;->a(Lcom/vk/libvideo/live/views/live/LiveView;)Lcom/vk/libvideo/live/views/live/a;
+    invoke-static {p1}, Lcom/vk/libvideo/live/views/live/LiveView;->a(Lcom/vk/libvideo/live/views/live/LiveView;)Lcom/vk/libvideo/live/views/live/LiveContract;
 
     move-result-object p1
 
-    invoke-interface {p1}, Lcom/vk/libvideo/live/views/live/a;->close()V
+    invoke-interface {p1}, Lcom/vk/libvideo/live/views/live/LiveContract;->close()V
 
     :cond_0
     return-void

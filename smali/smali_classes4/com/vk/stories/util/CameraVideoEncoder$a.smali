@@ -3,7 +3,7 @@
 .source "CameraVideoEncoder.java"
 
 # interfaces
-.implements Lb/h/p/a$e;
+.implements Lb/h/p/MediaEncoder$e;
 
 
 # annotations
@@ -45,7 +45,7 @@
 
     move-result-object v0
 
-    invoke-interface {v0, p1}, Lb/h/p/a$e;->onBytes(I)V
+    invoke-interface {v0, p1}, Lb/h/p/MediaEncoder$e;->onBytes(I)V
 
     return-void
 .end method
@@ -60,7 +60,7 @@
 
     move-result-object v0
 
-    invoke-interface {v0, p1}, Lb/h/p/a$e;->onProgress(I)V
+    invoke-interface {v0, p1}, Lb/h/p/MediaEncoder$e;->onProgress(I)V
 
     return-void
 .end method

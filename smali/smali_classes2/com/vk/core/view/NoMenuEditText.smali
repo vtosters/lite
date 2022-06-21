@@ -24,7 +24,7 @@
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, v1}, Lcom/vk/core/view/NoMenuEditText$b;-><init>(Lkotlin/jvm/internal/i;)V
+    invoke-direct {v0, v1}, Lcom/vk/core/view/NoMenuEditText$b;-><init>(Lkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     .line 1
     invoke-static {}, Lcom/vk/core/util/OsUtil;->b()Z
@@ -52,7 +52,7 @@
     move-object v1, p1
 
     .line 1
-    invoke-direct/range {v0 .. v5}, Lcom/vk/core/ui/edittext/PlainEditText;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;IILkotlin/jvm/internal/i;)V
+    invoke-direct/range {v0 .. v5}, Lcom/vk/core/ui/edittext/PlainEditText;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;IILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     .line 2
     sget-boolean p1, Lcom/vk/core/view/NoMenuEditText;->a:Z
@@ -86,7 +86,7 @@
     move-object v2, p2
 
     .line 4
-    invoke-direct/range {v0 .. v5}, Lcom/vk/core/ui/edittext/PlainEditText;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;IILkotlin/jvm/internal/i;)V
+    invoke-direct/range {v0 .. v5}, Lcom/vk/core/ui/edittext/PlainEditText;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;IILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     .line 5
     sget-boolean p1, Lcom/vk/core/view/NoMenuEditText;->a:Z

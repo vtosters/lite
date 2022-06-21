@@ -27,25 +27,25 @@
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/util/List<",
-            "Lcom/vk/dto/profile/a$b;",
+            "Lcom/vk/dto/profile/CommunityInternalMenu$b;",
             ">;"
         }
     .end annotation
 .end field
 
-.field private final b:Lcom/vk/profile/adapter/di/a;
+.field private final b:Lcom/vk/profile/adapter/di/CommunityDataScope;
 
 
 # direct methods
-.method public constructor <init>(Ljava/util/List;Lcom/vk/profile/adapter/di/a;)V
+.method public constructor <init>(Ljava/util/List;Lcom/vk/profile/adapter/di/CommunityDataScope;)V
     .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
             "Ljava/util/List<",
-            "Lcom/vk/dto/profile/a$b;",
+            "Lcom/vk/dto/profile/CommunityInternalMenu$b;",
             ">;",
-            "Lcom/vk/profile/adapter/di/a;",
+            "Lcom/vk/profile/adapter/di/CommunityDataScope;",
             ")V"
         }
     .end annotation
@@ -55,7 +55,7 @@
 
     iput-object p1, p0, Lcom/vk/profile/adapter/items/community/CommunityInternalMenuItem$a;->a:Ljava/util/List;
 
-    iput-object p2, p0, Lcom/vk/profile/adapter/items/community/CommunityInternalMenuItem$a;->b:Lcom/vk/profile/adapter/di/a;
+    iput-object p2, p0, Lcom/vk/profile/adapter/items/community/CommunityInternalMenuItem$a;->b:Lcom/vk/profile/adapter/di/CommunityDataScope;
 
     return-void
 .end method
@@ -72,7 +72,7 @@
 
     move-result-object v0
 
-    invoke-virtual {p1, v0}, Lcom/vtosters/lite/ui/b0/i;->a(Ljava/lang/Object;)V
+    invoke-virtual {p1, v0}, Lcom/vtosters/lite/ui/holder/RecyclerHolder;->a(Ljava/lang/Object;)V
 
     .line 2
     invoke-virtual {p1, p2}, Lcom/vk/profile/adapter/items/community/CommunityInternalMenuItem$ViewHolder;->p(I)V
@@ -121,9 +121,9 @@
     .line 2
     new-instance p2, Lcom/vk/profile/adapter/items/community/CommunityInternalMenuItem$ViewHolder;
 
-    iget-object v0, p0, Lcom/vk/profile/adapter/items/community/CommunityInternalMenuItem$a;->b:Lcom/vk/profile/adapter/di/a;
+    iget-object v0, p0, Lcom/vk/profile/adapter/items/community/CommunityInternalMenuItem$a;->b:Lcom/vk/profile/adapter/di/CommunityDataScope;
 
-    invoke-direct {p2, p1, v0}, Lcom/vk/profile/adapter/items/community/CommunityInternalMenuItem$ViewHolder;-><init>(Landroid/view/ViewGroup;Lcom/vk/profile/adapter/di/a;)V
+    invoke-direct {p2, p1, v0}, Lcom/vk/profile/adapter/items/community/CommunityInternalMenuItem$ViewHolder;-><init>(Landroid/view/ViewGroup;Lcom/vk/profile/adapter/di/CommunityDataScope;)V
 
     return-object p2
 .end method

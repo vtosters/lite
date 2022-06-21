@@ -70,29 +70,29 @@
 
 .field private final v:I
 
-.field private volatile w:Lkotlin/jvm/b/c;
+.field private volatile w:Lkotlin/jvm/b/Functions1;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Lkotlin/jvm/b/c<",
+            "Lkotlin/jvm/b/Functions1<",
             "-",
             "Ljava/lang/Long;",
             "-",
             "Ljava/lang/Integer;",
-            "Lkotlin/m;",
+            "Lkotlin/Unit;",
             ">;"
         }
     .end annotation
 .end field
 
-.field private x:Lkotlin/jvm/b/c;
+.field private x:Lkotlin/jvm/b/Functions1;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Lkotlin/jvm/b/c<",
+            "Lkotlin/jvm/b/Functions1<",
             "-",
             "Ljava/lang/Long;",
             "-",
             "Ljava/lang/Integer;",
-            "Lkotlin/m;",
+            "Lkotlin/Unit;",
             ">;"
         }
     .end annotation
@@ -107,7 +107,7 @@
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, v1}, Lcom/vk/rlottie/RLottieDrawable$a;-><init>(Lkotlin/jvm/internal/i;)V
+    invoke-direct {v0, v1}, Lcom/vk/rlottie/RLottieDrawable$a;-><init>(Lkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     sput-object v0, Lcom/vk/rlottie/RLottieDrawable;->D:Lcom/vk/rlottie/RLottieDrawable$a;
 
@@ -181,7 +181,7 @@
     return-void
 .end method
 
-.method public constructor <init>(Ljava/lang/String;ILjava/lang/String;IILkotlin/jvm/b/c;Lkotlin/jvm/b/c;)V
+.method public constructor <init>(Ljava/lang/String;ILjava/lang/String;IILkotlin/jvm/b/Functions1;Lkotlin/jvm/b/Functions1;)V
     .locals 7
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -190,19 +190,19 @@
             "I",
             "Ljava/lang/String;",
             "II",
-            "Lkotlin/jvm/b/c<",
+            "Lkotlin/jvm/b/Functions1<",
             "-",
             "Ljava/lang/Long;",
             "-",
             "Ljava/lang/Integer;",
-            "Lkotlin/m;",
+            "Lkotlin/Unit;",
             ">;",
-            "Lkotlin/jvm/b/c<",
+            "Lkotlin/jvm/b/Functions1<",
             "-",
             "Ljava/lang/Long;",
             "-",
             "Ljava/lang/Integer;",
-            "Lkotlin/m;",
+            "Lkotlin/Unit;",
             ">;)V"
         }
     .end annotation
@@ -214,9 +214,9 @@
 
     iput p5, p0, Lcom/vk/rlottie/RLottieDrawable;->v:I
 
-    iput-object p6, p0, Lcom/vk/rlottie/RLottieDrawable;->w:Lkotlin/jvm/b/c;
+    iput-object p6, p0, Lcom/vk/rlottie/RLottieDrawable;->w:Lkotlin/jvm/b/Functions1;
 
-    iput-object p7, p0, Lcom/vk/rlottie/RLottieDrawable;->x:Lkotlin/jvm/b/c;
+    iput-object p7, p0, Lcom/vk/rlottie/RLottieDrawable;->x:Lkotlin/jvm/b/Functions1;
 
     const/4 p4, 0x3
 
@@ -317,7 +317,7 @@
     return-void
 .end method
 
-.method public synthetic constructor <init>(Ljava/lang/String;ILjava/lang/String;IILkotlin/jvm/b/c;Lkotlin/jvm/b/c;ILkotlin/jvm/internal/i;)V
+.method public synthetic constructor <init>(Ljava/lang/String;ILjava/lang/String;IILkotlin/jvm/b/Functions1;Lkotlin/jvm/b/Functions1;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
     .locals 10
 
     and-int/lit8 v0, p8, 0x20
@@ -359,7 +359,7 @@
     move v7, p5
 
     .line 1
-    invoke-direct/range {v2 .. v9}, Lcom/vk/rlottie/RLottieDrawable;-><init>(Ljava/lang/String;ILjava/lang/String;IILkotlin/jvm/b/c;Lkotlin/jvm/b/c;)V
+    invoke-direct/range {v2 .. v9}, Lcom/vk/rlottie/RLottieDrawable;-><init>(Ljava/lang/String;ILjava/lang/String;IILkotlin/jvm/b/Functions1;Lkotlin/jvm/b/Functions1;)V
 
     return-void
 .end method
@@ -494,11 +494,11 @@
     return-object p0
 .end method
 
-.method public static final synthetic f(Lcom/vk/rlottie/RLottieDrawable;)Lkotlin/jvm/b/c;
+.method public static final synthetic f(Lcom/vk/rlottie/RLottieDrawable;)Lkotlin/jvm/b/Functions1;
     .locals 0
 
     .line 1
-    iget-object p0, p0, Lcom/vk/rlottie/RLottieDrawable;->w:Lkotlin/jvm/b/c;
+    iget-object p0, p0, Lcom/vk/rlottie/RLottieDrawable;->w:Lkotlin/jvm/b/Functions1;
 
     return-object p0
 .end method
@@ -741,7 +741,7 @@
     sub-long/2addr v5, v3
 
     .line 9
-    iget-object p1, p0, Lcom/vk/rlottie/RLottieDrawable;->w:Lkotlin/jvm/b/c;
+    iget-object p1, p0, Lcom/vk/rlottie/RLottieDrawable;->w:Lkotlin/jvm/b/Functions1;
 
     if-eqz p1, :cond_5
 
@@ -759,11 +759,11 @@
 
     move-result-object v1
 
-    invoke-interface {p1, v0, v1}, Lkotlin/jvm/b/c;->a(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {p1, v0, v1}, Lkotlin/jvm/b/Functions1;->a(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p1
 
-    check-cast p1, Lkotlin/m;
+    check-cast p1, Lkotlin/Unit;
 
     goto :goto_1
 
@@ -864,7 +864,7 @@
     sub-long/2addr v5, v3
 
     .line 25
-    iget-object p1, p0, Lcom/vk/rlottie/RLottieDrawable;->x:Lkotlin/jvm/b/c;
+    iget-object p1, p0, Lcom/vk/rlottie/RLottieDrawable;->x:Lkotlin/jvm/b/Functions1;
 
     if-eqz p1, :cond_5
 
@@ -882,11 +882,11 @@
 
     move-result-object v1
 
-    invoke-interface {p1, v0, v1}, Lkotlin/jvm/b/c;->a(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {p1, v0, v1}, Lkotlin/jvm/b/Functions1;->a(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p1
 
-    check-cast p1, Lkotlin/m;
+    check-cast p1, Lkotlin/Unit;
 
     :cond_5
     :goto_1

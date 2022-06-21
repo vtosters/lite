@@ -3,12 +3,12 @@
 .source "ImEngineProvider.kt"
 
 # interfaces
-.implements Lcom/vk/im/engine/j/c;
+.implements Lcom/vk/im/engine/j/ImJobManagerFactory;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vtosters/lite/im/ImEngineProvider;->c(Landroid/content/Context;)Lcom/vk/im/engine/j/c;
+    value = Lcom/vtosters/lite/im/ImEngineProvider;->c(Landroid/content/Context;)Lcom/vk/im/engine/j/ImJobManagerFactory;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -35,22 +35,22 @@
 
 
 # virtual methods
-.method public a()Lcom/vk/instantjobs/b;
+.method public a()Lcom/vk/instantjobs/InstantJobManager;
     .locals 7
 
     .line 1
-    sget-object v0, Lcom/vk/instantjobs/b;->h:Lcom/vk/instantjobs/b$a;
+    sget-object v0, Lcom/vk/instantjobs/InstantJobManager;->h:Lcom/vk/instantjobs/InstantJobManager$a;
 
     .line 2
     iget-object v1, p0, Lcom/vtosters/lite/im/ImEngineProvider$a;->a:Landroid/content/Context;
 
     .line 3
-    sget-object v4, Lcom/vtosters/lite/l0/d;->a:Lcom/vtosters/lite/l0/d;
+    sget-object v4, Lcom/vtosters/lite/l0/JobsTimeProvider;->a:Lcom/vtosters/lite/l0/JobsTimeProvider;
 
     .line 4
-    new-instance v5, Lcom/vtosters/lite/l0/b;
+    new-instance v5, Lcom/vtosters/lite/l0/JobsLogger;
 
-    invoke-direct {v5}, Lcom/vtosters/lite/l0/b;-><init>()V
+    invoke-direct {v5}, Lcom/vtosters/lite/l0/JobsLogger;-><init>()V
 
     .line 5
     sget-object v6, Lcom/vk/instantjobs/InstantJobLogLevel;->VERBOSE:Lcom/vk/instantjobs/InstantJobLogLevel;
@@ -60,7 +60,7 @@
     const-string v3, "im"
 
     .line 6
-    invoke-virtual/range {v0 .. v6}, Lcom/vk/instantjobs/b$a;->a(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;Lcom/vk/instantjobs/g/d/b;Lcom/vk/instantjobs/a;Lcom/vk/instantjobs/InstantJobLogLevel;)Lcom/vk/instantjobs/b;
+    invoke-virtual/range {v0 .. v6}, Lcom/vk/instantjobs/InstantJobManager$a;->a(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;Lcom/vk/instantjobs/g/d/TimeProvider;Lcom/vk/instantjobs/InstantJobLogger;Lcom/vk/instantjobs/InstantJobLogLevel;)Lcom/vk/instantjobs/InstantJobManager;
 
     move-result-object v0
 

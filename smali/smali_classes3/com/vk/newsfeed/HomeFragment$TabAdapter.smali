@@ -1,5 +1,5 @@
 .class final Lcom/vk/newsfeed/HomeFragment$TabAdapter;
-.super Lcom/vk/core/fragments/h;
+.super Lcom/vk/core/fragments/FragmentStatePagerAdapterImpl;
 .source "HomeFragment.kt"
 
 
@@ -49,7 +49,7 @@
     const/4 v0, 0x1
 
     .line 1
-    invoke-direct {p0, p1, v0}, Lcom/vk/core/fragments/h;-><init>(Lcom/vk/core/fragments/FragmentManagerImpl;Z)V
+    invoke-direct {p0, p1, v0}, Lcom/vk/core/fragments/FragmentStatePagerAdapterImpl;-><init>(Lcom/vk/core/fragments/FragmentManagerImpl;Z)V
 
     iput-object p2, p0, Lcom/vk/newsfeed/HomeFragment$TabAdapter;->m:Lcom/vk/newsfeed/HomeFragment$TabAdapter$a;
 
@@ -64,7 +64,7 @@
     .line 4
     new-instance p1, Landroid/view/GestureDetector;
 
-    sget-object p2, Lcom/vk/core/util/i;->a:Landroid/content/Context;
+    sget-object p2, Lcom/vk/core/util/AppContextHolder;->a:Landroid/content/Context;
 
     new-instance v0, Lcom/vk/newsfeed/HomeFragment$c;
 
@@ -157,7 +157,7 @@
 
     .line 9
     :goto_0
-    invoke-static {}, Lcom/vtosters/lite/w;->b()I
+    invoke-static {}, Lcom/vtosters/lite/MenuCountersState;->b()I
 
     move-result v3
 
@@ -255,7 +255,7 @@
 
     const-string v0, "items[position]"
 
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     check-cast p1, Lcom/vk/core/fragments/FragmentImpl;
 
@@ -279,7 +279,7 @@
     .locals 1
 
     .line 1
-    invoke-super {p0, p1, p2}, Lcom/vk/core/fragments/h;->restoreState(Landroid/os/Parcelable;Ljava/lang/ClassLoader;)V
+    invoke-super {p0, p1, p2}, Lcom/vk/core/fragments/FragmentStatePagerAdapterImpl;->restoreState(Landroid/os/Parcelable;Ljava/lang/ClassLoader;)V
 
     .line 2
     iget-object p1, p0, Lcom/vk/newsfeed/HomeFragment$TabAdapter;->l:Ljava/util/ArrayList;
@@ -289,7 +289,7 @@
     const/4 p1, 0x0
 
     .line 3
-    invoke-virtual {p0, p1}, Lcom/vk/core/fragments/h;->a(I)Lcom/vk/core/fragments/FragmentImpl;
+    invoke-virtual {p0, p1}, Lcom/vk/core/fragments/FragmentStatePagerAdapterImpl;->a(I)Lcom/vk/core/fragments/FragmentImpl;
 
     move-result-object p2
 
@@ -304,7 +304,7 @@
     add-int/lit8 p1, p1, 0x1
 
     .line 5
-    invoke-virtual {p0, p1}, Lcom/vk/core/fragments/h;->a(I)Lcom/vk/core/fragments/FragmentImpl;
+    invoke-virtual {p0, p1}, Lcom/vk/core/fragments/FragmentStatePagerAdapterImpl;->a(I)Lcom/vk/core/fragments/FragmentImpl;
 
     move-result-object p2
 
@@ -350,35 +350,35 @@
     if-eq v0, p2, :cond_2
 
     .line 6
-    instance-of v3, v1, Lcom/vk/navigation/b0/c;
+    instance-of v3, v1, Lcom/vk/navigation/b0/FragmentWithAutoPlay;
 
     if-eqz v3, :cond_1
 
     .line 7
-    check-cast v1, Lcom/vk/navigation/b0/c;
+    check-cast v1, Lcom/vk/navigation/b0/FragmentWithAutoPlay;
 
-    invoke-interface {v1}, Lcom/vk/navigation/b0/c;->q()V
+    invoke-interface {v1}, Lcom/vk/navigation/b0/FragmentWithAutoPlay;->q()V
 
     .line 8
     :cond_1
-    instance-of v1, v2, Lcom/vk/navigation/b0/c;
+    instance-of v1, v2, Lcom/vk/navigation/b0/FragmentWithAutoPlay;
 
     if-eqz v1, :cond_2
 
     .line 9
     move-object v1, v2
 
-    check-cast v1, Lcom/vk/navigation/b0/c;
+    check-cast v1, Lcom/vk/navigation/b0/FragmentWithAutoPlay;
 
     new-instance v3, Lcom/vk/newsfeed/HomeFragment$TabAdapter$setPrimaryItem$1;
 
     invoke-direct {v3, v2}, Lcom/vk/newsfeed/HomeFragment$TabAdapter$setPrimaryItem$1;-><init>(Lcom/vk/core/fragments/FragmentImpl;)V
 
-    invoke-interface {v1, v3}, Lcom/vk/navigation/b0/c;->d(Lkotlin/jvm/b/a;)V
+    invoke-interface {v1, v3}, Lcom/vk/navigation/b0/FragmentWithAutoPlay;->d(Lkotlin/jvm/b/Functions;)V
 
     .line 10
     :cond_2
-    invoke-super {p0, p1, p2, p3}, Lcom/vk/core/fragments/h;->setPrimaryItem(Landroid/view/ViewGroup;ILjava/lang/Object;)V
+    invoke-super {p0, p1, p2, p3}, Lcom/vk/core/fragments/FragmentStatePagerAdapterImpl;->setPrimaryItem(Landroid/view/ViewGroup;ILjava/lang/Object;)V
 
     if-eq v0, p2, :cond_6
 
@@ -406,7 +406,7 @@
     if-le p1, p2, :cond_6
 
     .line 12
-    invoke-static {}, Lcom/vtosters/lite/w;->b()I
+    invoke-static {}, Lcom/vtosters/lite/MenuCountersState;->b()I
 
     move-result p1
 
@@ -423,14 +423,14 @@
 
     .line 13
     :goto_1
-    invoke-static {p2}, Lcom/vk/newsfeed/b0;->b(I)Z
+    invoke-static {p2}, Lcom/vk/newsfeed/PostsAnalytics;->b(I)Z
 
     move-result v0
 
     if-nez v0, :cond_6
 
     .line 14
-    invoke-static {p2}, Lcom/vk/newsfeed/b0;->a(I)V
+    invoke-static {p2}, Lcom/vk/newsfeed/PostsAnalytics;->a(I)V
 
     if-ne p2, p3, :cond_6
 
@@ -441,7 +441,7 @@
     const-string v0, "discover"
 
     .line 15
-    invoke-static {p2, p1, p3, v0}, Lcom/vk/newsfeed/b0;->a(Ljava/lang/String;ZLjava/lang/String;Ljava/lang/String;)V
+    invoke-static {p2, p1, p3, v0}, Lcom/vk/newsfeed/PostsAnalytics;->a(Ljava/lang/String;ZLjava/lang/String;Ljava/lang/String;)V
 
     .line 16
     sget-object p1, Lcom/vk/discover/DiscoverFragment;->h0:Lcom/vk/discover/DiscoverFragment$b;

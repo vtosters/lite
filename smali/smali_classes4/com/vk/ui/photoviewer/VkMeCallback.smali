@@ -1,5 +1,5 @@
 .class public final Lcom/vk/ui/photoviewer/VkMeCallback;
-.super Lcom/vk/photoviewer/c;
+.super Lcom/vk/photoviewer/CallbackAdapter;
 .source "VkMeCallback.kt"
 
 # interfaces
@@ -9,7 +9,7 @@
 # annotations
 .annotation system Ldalvik/annotation/Signature;
     value = {
-        "Lcom/vk/photoviewer/c<",
+        "Lcom/vk/photoviewer/CallbackAdapter<",
         "Lcom/vk/im/engine/models/attaches/AttachWithImage;",
         ">;",
         "Lcom/vtosters/lite/media/vc/MediaViewerControlsVc$b;"
@@ -22,9 +22,9 @@
 
 .field private final C:Landroid/app/Activity;
 
-.field private final D:Lcom/vk/im/engine/a;
+.field private final D:Lcom/vk/im/engine/ImEngine;
 
-.field private final E:Lcom/vk/bridges/p$a;
+.field private final E:Lcom/vk/bridges/ImageViewer$a;
 
 .field private F:Ljava/util/List;
     .annotation system Ldalvik/annotation/Signature;
@@ -50,17 +50,17 @@
 
 .field private f:Lcom/vtosters/lite/media/vc/MediaViewerControlsVc;
 
-.field private g:Lcom/vk/navigation/g;
+.field private g:Lcom/vk/navigation/Dismissed;
 
-.field private h:Lio/reactivex/disposables/a;
+.field private h:Lio/reactivex/disposables/CompositeDisposable;
 
 
 # direct methods
-.method public static final synthetic a(Lcom/vk/ui/photoviewer/VkMeCallback;)Lcom/vk/navigation/g;
+.method public static final synthetic a(Lcom/vk/ui/photoviewer/VkMeCallback;)Lcom/vk/navigation/Dismissed;
     .locals 0
 
     .line 1
-    iget-object p0, p0, Lcom/vk/ui/photoviewer/VkMeCallback;->g:Lcom/vk/navigation/g;
+    iget-object p0, p0, Lcom/vk/ui/photoviewer/VkMeCallback;->g:Lcom/vk/navigation/Dismissed;
 
     if-eqz p0, :cond_0
 
@@ -69,7 +69,7 @@
     :cond_0
     const-string p0, "dismissed"
 
-    invoke-static {p0}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {p0}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     const/4 p0, 0x0
 
@@ -80,9 +80,9 @@
     .locals 3
 
     .line 24
-    sget-object v0, Lb/h/n/c;->h:Lb/h/n/c;
+    sget-object v0, Lb/h/n/AppLifecycleDispatcher;->h:Lb/h/n/AppLifecycleDispatcher;
 
-    invoke-virtual {v0}, Lb/h/n/c;->b()Ljava/lang/ref/WeakReference;
+    invoke-virtual {v0}, Lb/h/n/AppLifecycleDispatcher;->b()Ljava/lang/ref/WeakReference;
 
     move-result-object v0
 
@@ -96,20 +96,20 @@
 
     const-string v1, "AppLifecycleDispatcher.l\u2026tActivity.get() ?: return"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 25
-    invoke-static {}, Lcom/vk/bridges/a0;->a()Lcom/vk/bridges/z;
+    invoke-static {}, Lcom/vk/bridges/SharingBridge;->a()Lcom/vk/bridges/SharingBridge1;
 
     move-result-object v1
 
-    sget-object v2, Lcom/vtosters/lite/im/b;->a:Lcom/vtosters/lite/im/b;
+    sget-object v2, Lcom/vtosters/lite/im/ImAttachToAppAttachConverter;->a:Lcom/vtosters/lite/im/ImAttachToAppAttachConverter;
 
-    invoke-virtual {v2, p1}, Lcom/vtosters/lite/im/b;->a(Lcom/vk/im/engine/models/attaches/Attach;)Lcom/vk/dto/common/Attachment;
+    invoke-virtual {v2, p1}, Lcom/vtosters/lite/im/ImAttachToAppAttachConverter;->a(Lcom/vk/im/engine/models/attaches/Attach;)Lcom/vk/dto/common/Attachment;
 
     move-result-object p1
 
-    invoke-interface {v1, v0, p1}, Lcom/vk/bridges/z;->a(Landroid/content/Context;Ljava/lang/Object;)V
+    invoke-interface {v1, v0, p1}, Lcom/vk/bridges/SharingBridge1;->a(Landroid/content/Context;Ljava/lang/Object;)V
 
     :cond_0
     return-void
@@ -127,7 +127,7 @@
 
     move-result-object p1
 
-    invoke-static {v0, p1}, Lcom/vk/im/ui/utils/b;->a(Landroid/content/Context;Ljava/lang/CharSequence;)V
+    invoke-static {v0, p1}, Lcom/vk/im/ui/utils/ClipboardUtils;->a(Landroid/content/Context;Ljava/lang/CharSequence;)V
 
     .line 27
     iget-object p1, p0, Lcom/vk/ui/photoviewer/VkMeCallback;->C:Landroid/app/Activity;
@@ -140,17 +140,17 @@
 
     const/4 v3, 0x0
 
-    invoke-static {p1, v0, v1, v2, v3}, Lcom/vk/core/util/ContextExtKt;->a(Landroid/content/Context;IIILjava/lang/Object;)Lkotlin/m;
+    invoke-static {p1, v0, v1, v2, v3}, Lcom/vk/core/util/ContextExtKt;->a(Landroid/content/Context;IIILjava/lang/Object;)Lkotlin/Unit;
 
     :cond_0
     return-void
 .end method
 
-.method public static final synthetic b(Lcom/vk/ui/photoviewer/VkMeCallback;)Lcom/vk/im/engine/a;
+.method public static final synthetic b(Lcom/vk/ui/photoviewer/VkMeCallback;)Lcom/vk/im/engine/ImEngine;
     .locals 0
 
     .line 1
-    iget-object p0, p0, Lcom/vk/ui/photoviewer/VkMeCallback;->D:Lcom/vk/im/engine/a;
+    iget-object p0, p0, Lcom/vk/ui/photoviewer/VkMeCallback;->D:Lcom/vk/im/engine/ImEngine;
 
     return-object p0
 .end method
@@ -159,15 +159,15 @@
     .locals 4
 
     .line 11
-    instance-of v0, p1, Lcom/vk/im/engine/models/attaches/g;
+    instance-of v0, p1, Lcom/vk/im/engine/models/attaches/WithPreview;
 
     const/4 v1, 0x0
 
     if-eqz v0, :cond_0
 
-    check-cast p1, Lcom/vk/im/engine/models/attaches/g;
+    check-cast p1, Lcom/vk/im/engine/models/attaches/WithPreview;
 
-    invoke-interface {p1}, Lcom/vk/im/engine/models/attaches/g;->h()Lcom/vk/im/engine/models/ImageList;
+    invoke-interface {p1}, Lcom/vk/im/engine/models/attaches/WithPreview;->h()Lcom/vk/im/engine/models/ImageList;
 
     move-result-object p1
 
@@ -190,19 +190,19 @@
     if-eqz p1, :cond_1
 
     .line 12
-    invoke-static {}, Lcom/vk/bridges/a0;->a()Lcom/vk/bridges/z;
+    invoke-static {}, Lcom/vk/bridges/SharingBridge;->a()Lcom/vk/bridges/SharingBridge1;
 
     move-result-object v0
 
     iget-object v1, p0, Lcom/vk/ui/photoviewer/VkMeCallback;->C:Landroid/app/Activity;
 
-    invoke-interface {v0, v1, p1}, Lcom/vk/bridges/z;->b(Landroid/content/Context;Ljava/lang/String;)V
+    invoke-interface {v0, v1, p1}, Lcom/vk/bridges/SharingBridge1;->b(Landroid/content/Context;Ljava/lang/String;)V
 
     return-void
 
     .line 13
     :cond_1
-    sget-object p1, Lkotlin/m;->a:Lkotlin/m;
+    sget-object p1, Lkotlin/Unit;->a:Lkotlin/Unit;
 
     .line 14
     iget-object p1, p0, Lcom/vk/ui/photoviewer/VkMeCallback;->e:Landroid/content/Context;
@@ -213,7 +213,7 @@
 
     const/4 v3, 0x2
 
-    invoke-static {p1, v0, v2, v3, v1}, Lcom/vk/core/util/ContextExtKt;->a(Landroid/content/Context;IIILjava/lang/Object;)Lkotlin/m;
+    invoke-static {p1, v0, v2, v3, v1}, Lcom/vk/core/util/ContextExtKt;->a(Landroid/content/Context;IIILjava/lang/Object;)Lkotlin/Unit;
 
     return-void
 .end method
@@ -239,7 +239,7 @@
 
     invoke-direct {v2, p0, p1, v0}, Lcom/vk/ui/photoviewer/VkMeCallback$delete$1;-><init>(Lcom/vk/ui/photoviewer/VkMeCallback;Lcom/vk/im/engine/models/attaches/AttachImage;Lcom/vk/im/ui/components/viewcontrollers/popup/PopupVc;)V
 
-    invoke-virtual {v1, v2}, Lcom/vk/im/ui/components/viewcontrollers/popup/DelegateAttaches;->a(Lkotlin/jvm/b/a;)V
+    invoke-virtual {v1, v2}, Lcom/vk/im/ui/components/viewcontrollers/popup/DelegateAttaches;->a(Lkotlin/jvm/b/Functions;)V
 
     :cond_0
     return-void
@@ -266,54 +266,54 @@
     return-void
 .end method
 
-.method public Z(I)Lc/a/t;
+.method public Z(I)Lio/reactivex/Single;
     .locals 4
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(I)",
-            "Lc/a/t<",
+            "Lio/reactivex/Single<",
             "Lcom/vtosters/lite/media/vc/MediaViewerControlsVc$c;",
             ">;"
         }
     .end annotation
 
     .line 1
-    invoke-static {}, Lcom/vk/im/engine/c;->a()Lcom/vk/im/engine/a;
+    invoke-static {}, Lcom/vk/im/engine/ImEngine1;->a()Lcom/vk/im/engine/ImEngine;
 
     move-result-object v0
 
-    new-instance v1, Lcom/vk/im/engine/commands/etc/e;
+    new-instance v1, Lcom/vk/im/engine/commands/etc/ProfilesGetCmd;
 
-    new-instance v2, Lcom/vk/im/engine/commands/etc/g$a;
+    new-instance v2, Lcom/vk/im/engine/commands/etc/ProfilesInfoGetArgs$a;
 
-    invoke-direct {v2}, Lcom/vk/im/engine/commands/etc/g$a;-><init>()V
+    invoke-direct {v2}, Lcom/vk/im/engine/commands/etc/ProfilesInfoGetArgs$a;-><init>()V
 
     .line 2
     sget-object v3, Lcom/vk/im/engine/models/Source;->ACTUAL:Lcom/vk/im/engine/models/Source;
 
-    invoke-virtual {v2, v3}, Lcom/vk/im/engine/commands/etc/g$a;->a(Lcom/vk/im/engine/models/Source;)Lcom/vk/im/engine/commands/etc/g$a;
+    invoke-virtual {v2, v3}, Lcom/vk/im/engine/commands/etc/ProfilesInfoGetArgs$a;->a(Lcom/vk/im/engine/models/Source;)Lcom/vk/im/engine/commands/etc/ProfilesInfoGetArgs$a;
 
     .line 3
     new-instance v3, Lcom/vk/im/engine/models/Member;
 
     invoke-direct {v3, p1}, Lcom/vk/im/engine/models/Member;-><init>(I)V
 
-    invoke-virtual {v2, v3}, Lcom/vk/im/engine/commands/etc/g$a;->a(Lcom/vk/im/engine/models/Member;)Lcom/vk/im/engine/commands/etc/g$a;
+    invoke-virtual {v2, v3}, Lcom/vk/im/engine/commands/etc/ProfilesInfoGetArgs$a;->a(Lcom/vk/im/engine/models/Member;)Lcom/vk/im/engine/commands/etc/ProfilesInfoGetArgs$a;
 
     const/4 v3, 0x1
 
     .line 4
-    invoke-virtual {v2, v3}, Lcom/vk/im/engine/commands/etc/g$a;->a(Z)Lcom/vk/im/engine/commands/etc/g$a;
+    invoke-virtual {v2, v3}, Lcom/vk/im/engine/commands/etc/ProfilesInfoGetArgs$a;->a(Z)Lcom/vk/im/engine/commands/etc/ProfilesInfoGetArgs$a;
 
     .line 5
-    invoke-virtual {v2}, Lcom/vk/im/engine/commands/etc/g$a;->a()Lcom/vk/im/engine/commands/etc/g;
+    invoke-virtual {v2}, Lcom/vk/im/engine/commands/etc/ProfilesInfoGetArgs$a;->a()Lcom/vk/im/engine/commands/etc/ProfilesInfoGetArgs;
 
     move-result-object v2
 
     .line 6
-    invoke-direct {v1, v2}, Lcom/vk/im/engine/commands/etc/e;-><init>(Lcom/vk/im/engine/commands/etc/g;)V
+    invoke-direct {v1, v2}, Lcom/vk/im/engine/commands/etc/ProfilesGetCmd;-><init>(Lcom/vk/im/engine/commands/etc/ProfilesInfoGetArgs;)V
 
-    invoke-virtual {v0, p0, v1}, Lcom/vk/im/engine/a;->c(Ljava/lang/Object;Lcom/vk/im/engine/i/c;)Lc/a/t;
+    invoke-virtual {v0, p0, v1}, Lcom/vk/im/engine/ImEngine;->c(Ljava/lang/Object;Lcom/vk/im/engine/i/ImEngineCmd;)Lio/reactivex/Single;
 
     move-result-object v0
 
@@ -322,13 +322,13 @@
 
     invoke-direct {v1, p1}, Lcom/vk/ui/photoviewer/VkMeCallback$a;-><init>(I)V
 
-    invoke-virtual {v0, v1}, Lc/a/t;->b(Lc/a/z/j;)Lc/a/t;
+    invoke-virtual {v0, v1}, Lio/reactivex/Single;->b(Lio/reactivex/functions/Function;)Lio/reactivex/Single;
 
     move-result-object p1
 
     const-string v0, "imEngine.submitSingle(th\u2026)?.url)\n                }"
 
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     return-object p1
 .end method
@@ -440,7 +440,7 @@
     move-object v2, v0
 
     :goto_1
-    invoke-static {v2, p2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v2, p2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v2
 
@@ -458,7 +458,7 @@
     goto :goto_2
 
     :cond_4
-    invoke-static {v1}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v1}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v0
 
@@ -485,24 +485,24 @@
 
     move-object v3, v9
 
-    invoke-direct/range {v3 .. v8}, Lcom/vtosters/lite/media/vc/MediaViewerControlsVc$c;-><init>(ILjava/lang/String;Ljava/lang/String;ILkotlin/jvm/internal/i;)V
+    invoke-direct/range {v3 .. v8}, Lcom/vtosters/lite/media/vc/MediaViewerControlsVc$c;-><init>(ILjava/lang/String;Ljava/lang/String;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     iget-object p2, p0, Lcom/vk/ui/photoviewer/VkMeCallback;->f:Lcom/vtosters/lite/media/vc/MediaViewerControlsVc;
 
     if-eqz p2, :cond_8
 
-    instance-of v1, p1, Lcom/vk/im/engine/models/attaches/d;
+    instance-of v1, p1, Lcom/vk/im/engine/models/attaches/WithDate;
 
     if-nez v1, :cond_6
 
     move-object p1, v0
 
     :cond_6
-    check-cast p1, Lcom/vk/im/engine/models/attaches/d;
+    check-cast p1, Lcom/vk/im/engine/models/attaches/WithDate;
 
     if-eqz p1, :cond_7
 
-    invoke-interface {p1}, Lcom/vk/im/engine/models/attaches/d;->K()J
+    invoke-interface {p1}, Lcom/vk/im/engine/models/attaches/WithDate;->K()J
 
     move-result-wide v0
 
@@ -520,18 +520,18 @@
     return-void
 
     :cond_8
-    invoke-static {v1}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v1}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v0
 
     :cond_9
-    invoke-static {v1}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v1}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v0
 
     .line 22
     :cond_a
-    invoke-static {v1}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v1}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v0
 
@@ -547,7 +547,7 @@
     return-void
 
     :cond_c
-    invoke-static {v1}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v1}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v0
 .end method
@@ -556,7 +556,7 @@
     .locals 2
 
     .line 2
-    invoke-super {p0, p1, p2, p3}, Lcom/vk/photoviewer/c;->a(Lcom/vk/photoviewer/PhotoViewer$j;ILandroid/view/Menu;)V
+    invoke-super {p0, p1, p2, p3}, Lcom/vk/photoviewer/CallbackAdapter;->a(Lcom/vk/photoviewer/PhotoViewer$j;ILandroid/view/Menu;)V
 
     const p1, 0x7f0a09a3
 
@@ -672,7 +672,7 @@
     .locals 4
 
     .line 6
-    invoke-super {p0, p1, p2, p3, p4}, Lcom/vk/photoviewer/c;->a(Lcom/vk/photoviewer/PhotoViewer$j;ILandroid/view/MenuItem;Landroid/view/View;)Z
+    invoke-super {p0, p1, p2, p3, p4}, Lcom/vk/photoviewer/CallbackAdapter;->a(Lcom/vk/photoviewer/PhotoViewer$j;ILandroid/view/MenuItem;Landroid/view/View;)Z
 
     move-result v0
 
@@ -684,9 +684,9 @@
 
     .line 7
     :cond_0
-    sget-object v0, Lb/h/n/c;->h:Lb/h/n/c;
+    sget-object v0, Lb/h/n/AppLifecycleDispatcher;->h:Lb/h/n/AppLifecycleDispatcher;
 
-    invoke-virtual {v0}, Lb/h/n/c;->b()Ljava/lang/ref/WeakReference;
+    invoke-virtual {v0}, Lb/h/n/AppLifecycleDispatcher;->b()Ljava/lang/ref/WeakReference;
 
     move-result-object v0
 
@@ -700,7 +700,7 @@
 
     const-string v2, "AppLifecycleDispatcher.l\u2026ity.get() ?: return false"
 
-    invoke-static {v0, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 8
     invoke-interface {p3}, Landroid/view/MenuItem;->getItemId()I
@@ -802,7 +802,7 @@
     .line 13
     :cond_3
     :goto_0
-    invoke-super {p0, p1, p2, p3, p4}, Lcom/vk/photoviewer/c;->a(Lcom/vk/photoviewer/PhotoViewer$j;ILandroid/view/MenuItem;Landroid/view/View;)Z
+    invoke-super {p0, p1, p2, p3, p4}, Lcom/vk/photoviewer/CallbackAdapter;->a(Lcom/vk/photoviewer/PhotoViewer$j;ILandroid/view/MenuItem;Landroid/view/View;)Z
 
     move-result p1
 
@@ -841,13 +841,13 @@
 
     if-eqz p1, :cond_3
 
-    iget-object v2, p0, Lcom/vk/ui/photoviewer/VkMeCallback;->E:Lcom/vk/bridges/p$a;
+    iget-object v2, p0, Lcom/vk/ui/photoviewer/VkMeCallback;->E:Lcom/vk/bridges/ImageViewer$a;
 
-    invoke-interface {v2}, Lcom/vk/bridges/p$a;->g()Lcom/vk/bridges/p$c;
+    invoke-interface {v2}, Lcom/vk/bridges/ImageViewer$a;->g()Lcom/vk/bridges/ImageViewer$c;
 
     move-result-object v2
 
-    invoke-virtual {v2}, Lcom/vk/bridges/p$c;->b()Z
+    invoke-virtual {v2}, Lcom/vk/bridges/ImageViewer$c;->b()Z
 
     move-result v2
 
@@ -872,7 +872,7 @@
     goto :goto_0
 
     :cond_0
-    invoke-static {v1}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v1}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v0
 
@@ -890,13 +890,13 @@
     return-object p1
 
     :cond_2
-    invoke-static {v1}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v1}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v0
 
     .line 7
     :cond_3
-    invoke-static {v1}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v1}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v0
 .end method
@@ -905,32 +905,32 @@
     .locals 1
 
     .line 8
-    invoke-super {p0, p1}, Lcom/vk/photoviewer/c;->b(Lcom/vk/photoviewer/PhotoViewer;)V
+    invoke-super {p0, p1}, Lcom/vk/photoviewer/CallbackAdapter;->b(Lcom/vk/photoviewer/PhotoViewer;)V
 
     .line 9
     new-instance v0, Lcom/vk/ui/photoviewer/VkMeCallback$onShow$1;
 
     invoke-direct {v0, p1}, Lcom/vk/ui/photoviewer/VkMeCallback$onShow$1;-><init>(Lcom/vk/photoviewer/PhotoViewer;)V
 
-    iput-object v0, p0, Lcom/vk/ui/photoviewer/VkMeCallback;->g:Lcom/vk/navigation/g;
+    iput-object v0, p0, Lcom/vk/ui/photoviewer/VkMeCallback;->g:Lcom/vk/navigation/Dismissed;
 
     .line 10
     iget-object p1, p0, Lcom/vk/ui/photoviewer/VkMeCallback;->d:Lcom/vk/navigation/NavigationDelegate;
 
     if-eqz p1, :cond_1
 
-    iget-object v0, p0, Lcom/vk/ui/photoviewer/VkMeCallback;->g:Lcom/vk/navigation/g;
+    iget-object v0, p0, Lcom/vk/ui/photoviewer/VkMeCallback;->g:Lcom/vk/navigation/Dismissed;
 
     if-eqz v0, :cond_0
 
-    invoke-virtual {p1, v0}, Lcom/vk/navigation/NavigationDelegate;->b(Lcom/vk/navigation/g;)V
+    invoke-virtual {p1, v0}, Lcom/vk/navigation/NavigationDelegate;->b(Lcom/vk/navigation/Dismissed;)V
 
     goto :goto_0
 
     :cond_0
     const-string p1, "dismissed"
 
-    invoke-static {p1}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {p1}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     const/4 p1, 0x0
 
@@ -945,13 +945,13 @@
     .locals 0
 
     .line 1
-    iget-object p1, p0, Lcom/vk/ui/photoviewer/VkMeCallback;->E:Lcom/vk/bridges/p$a;
+    iget-object p1, p0, Lcom/vk/ui/photoviewer/VkMeCallback;->E:Lcom/vk/bridges/ImageViewer$a;
 
-    invoke-interface {p1}, Lcom/vk/bridges/p$a;->g()Lcom/vk/bridges/p$c;
+    invoke-interface {p1}, Lcom/vk/bridges/ImageViewer$a;->g()Lcom/vk/bridges/ImageViewer$c;
 
     move-result-object p1
 
-    invoke-virtual {p1}, Lcom/vk/bridges/p$c;->c()Z
+    invoke-virtual {p1}, Lcom/vk/bridges/ImageViewer$c;->c()Z
 
     move-result p1
 
@@ -972,30 +972,30 @@
     .locals 2
 
     .line 1
-    invoke-super {p0}, Lcom/vk/photoviewer/c;->onDismiss()V
+    invoke-super {p0}, Lcom/vk/photoviewer/CallbackAdapter;->onDismiss()V
 
     .line 2
-    iget-object v0, p0, Lcom/vk/ui/photoviewer/VkMeCallback;->h:Lio/reactivex/disposables/a;
+    iget-object v0, p0, Lcom/vk/ui/photoviewer/VkMeCallback;->h:Lio/reactivex/disposables/CompositeDisposable;
 
-    invoke-virtual {v0}, Lio/reactivex/disposables/a;->a()V
+    invoke-virtual {v0}, Lio/reactivex/disposables/CompositeDisposable;->a()V
 
     .line 3
     iget-object v0, p0, Lcom/vk/ui/photoviewer/VkMeCallback;->d:Lcom/vk/navigation/NavigationDelegate;
 
     if-eqz v0, :cond_1
 
-    iget-object v1, p0, Lcom/vk/ui/photoviewer/VkMeCallback;->g:Lcom/vk/navigation/g;
+    iget-object v1, p0, Lcom/vk/ui/photoviewer/VkMeCallback;->g:Lcom/vk/navigation/Dismissed;
 
     if-eqz v1, :cond_0
 
-    invoke-virtual {v0, v1}, Lcom/vk/navigation/NavigationDelegate;->a(Lcom/vk/navigation/g;)V
+    invoke-virtual {v0, v1}, Lcom/vk/navigation/NavigationDelegate;->a(Lcom/vk/navigation/Dismissed;)V
 
     goto :goto_0
 
     :cond_0
     const-string v0, "dismissed"
 
-    invoke-static {v0}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v0}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     const/4 v0, 0x0
 

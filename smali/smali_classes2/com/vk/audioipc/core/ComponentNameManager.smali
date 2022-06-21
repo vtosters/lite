@@ -30,7 +30,7 @@
 
 .field private e:Landroid/content/ComponentName;
 
-.field private f:Lio/reactivex/disposables/b;
+.field private f:Lio/reactivex/disposables/Disposable;
 
 .field private final g:Ljava/lang/String;
 
@@ -45,7 +45,7 @@
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, v1}, Lcom/vk/audioipc/core/ComponentNameManager$a;-><init>(Lkotlin/jvm/internal/i;)V
+    invoke-direct {v0, v1}, Lcom/vk/audioipc/core/ComponentNameManager$a;-><init>(Lkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     return-void
 .end method
@@ -100,11 +100,11 @@
     return-object p0
 .end method
 
-.method public static final synthetic a(Lcom/vk/audioipc/core/ComponentNameManager;Lio/reactivex/disposables/b;)V
+.method public static final synthetic a(Lcom/vk/audioipc/core/ComponentNameManager;Lio/reactivex/disposables/Disposable;)V
     .locals 0
 
     .line 2
-    iput-object p1, p0, Lcom/vk/audioipc/core/ComponentNameManager;->f:Lio/reactivex/disposables/b;
+    iput-object p1, p0, Lcom/vk/audioipc/core/ComponentNameManager;->f:Lio/reactivex/disposables/Disposable;
 
     return-void
 .end method
@@ -118,47 +118,47 @@
     return-void
 .end method
 
-.method private final b(Lkotlin/jvm/b/a;)V
+.method private final b(Lkotlin/jvm/b/Functions;)V
     .locals 3
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lkotlin/jvm/b/a<",
-            "Lkotlin/m;",
+            "Lkotlin/jvm/b/Functions<",
+            "Lkotlin/Unit;",
             ">;)V"
         }
     .end annotation
 
     .line 1
-    iget-object v0, p0, Lcom/vk/audioipc/core/ComponentNameManager;->f:Lio/reactivex/disposables/b;
+    iget-object v0, p0, Lcom/vk/audioipc/core/ComponentNameManager;->f:Lio/reactivex/disposables/Disposable;
 
     if-eqz v0, :cond_0
 
-    invoke-interface {v0}, Lio/reactivex/disposables/b;->o()V
+    invoke-interface {v0}, Lio/reactivex/disposables/Disposable;->o()V
 
     .line 2
     :cond_0
-    new-instance v0, Lb/h/c/c/f0;
+    new-instance v0, Lcom/vk/api/audio/AudioServicePackageGet;
 
     iget-object v1, p0, Lcom/vk/audioipc/core/ComponentNameManager;->h:Ljava/lang/String;
 
-    invoke-direct {v0, v1}, Lb/h/c/c/f0;-><init>(Ljava/lang/String;)V
+    invoke-direct {v0, v1}, Lcom/vk/api/audio/AudioServicePackageGet;-><init>(Ljava/lang/String;)V
 
     const/4 v1, 0x1
 
     const/4 v2, 0x0
 
     .line 3
-    invoke-static {v0, v2, v1, v2}, Lcom/vk/api/base/d;->d(Lcom/vk/api/base/d;Lcom/vk/api/base/e;ILjava/lang/Object;)Lc/a/m;
+    invoke-static {v0, v2, v1, v2}, Lcom/vk/api/base/ApiRequest;->d(Lcom/vk/api/base/ApiRequest;Lcom/vk/api/base/ApiThreadHolder;ILjava/lang/Object;)Lio/reactivex/Observable;
 
     move-result-object v0
 
     .line 4
     new-instance v1, Lcom/vk/audioipc/core/ComponentNameManager$b;
 
-    invoke-direct {v1, p0, p1}, Lcom/vk/audioipc/core/ComponentNameManager$b;-><init>(Lcom/vk/audioipc/core/ComponentNameManager;Lkotlin/jvm/b/a;)V
+    invoke-direct {v1, p0, p1}, Lcom/vk/audioipc/core/ComponentNameManager$b;-><init>(Lcom/vk/audioipc/core/ComponentNameManager;Lkotlin/jvm/b/Functions;)V
 
-    invoke-virtual {v0, v1}, Lc/a/m;->b(Lc/a/z/a;)Lc/a/m;
+    invoke-virtual {v0, v1}, Lio/reactivex/Observable;->b(Lio/reactivex/functions/Action;)Lio/reactivex/Observable;
 
     move-result-object p1
 
@@ -173,11 +173,11 @@
     invoke-direct {v1, p0}, Lcom/vk/audioipc/core/ComponentNameManager$d;-><init>(Lcom/vk/audioipc/core/ComponentNameManager;)V
 
     .line 7
-    invoke-virtual {p1, v0, v1}, Lc/a/m;->a(Lc/a/z/g;Lc/a/z/g;)Lio/reactivex/disposables/b;
+    invoke-virtual {p1, v0, v1}, Lio/reactivex/Observable;->a(Lio/reactivex/functions/Consumer;Lio/reactivex/functions/Consumer;)Lio/reactivex/disposables/Disposable;
 
     move-result-object p1
 
-    iput-object p1, p0, Lcom/vk/audioipc/core/ComponentNameManager;->f:Lio/reactivex/disposables/b;
+    iput-object p1, p0, Lcom/vk/audioipc/core/ComponentNameManager;->f:Lio/reactivex/disposables/Disposable;
 
     return-void
 .end method
@@ -219,7 +219,7 @@
     const/4 v3, 0x0
 
     .line 3
-    invoke-static {v0, v1, v2, v3}, Lb/h/g/g/c;->b(Ljava/lang/String;IILjava/lang/Object;)Z
+    invoke-static {v0, v1, v2, v3}, Lb/h/g/g/PackageManagerHelper;->b(Ljava/lang/String;IILjava/lang/Object;)Z
 
     move-result v1
 
@@ -239,13 +239,13 @@
     return-object v0
 .end method
 
-.method public final a(Lkotlin/jvm/b/a;)V
+.method public final a(Lkotlin/jvm/b/Functions;)V
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lkotlin/jvm/b/a<",
-            "Lkotlin/m;",
+            "Lkotlin/jvm/b/Functions<",
+            "Lkotlin/Unit;",
             ">;)V"
         }
     .end annotation
@@ -256,7 +256,7 @@
     if-eqz v0, :cond_0
 
     .line 6
-    invoke-interface {p1}, Lkotlin/jvm/b/a;->invoke()Ljava/lang/Object;
+    invoke-interface {p1}, Lkotlin/jvm/b/Functions;->invoke()Ljava/lang/Object;
 
     return-void
 
@@ -269,9 +269,9 @@
     .line 8
     new-instance v0, Lcom/vk/audioipc/core/ComponentNameManager$prepare$1;
 
-    invoke-direct {v0, p1}, Lcom/vk/audioipc/core/ComponentNameManager$prepare$1;-><init>(Lkotlin/jvm/b/a;)V
+    invoke-direct {v0, p1}, Lcom/vk/audioipc/core/ComponentNameManager$prepare$1;-><init>(Lkotlin/jvm/b/Functions;)V
 
-    invoke-direct {p0, v0}, Lcom/vk/audioipc/core/ComponentNameManager;->b(Lkotlin/jvm/b/a;)V
+    invoke-direct {p0, v0}, Lcom/vk/audioipc/core/ComponentNameManager;->b(Lkotlin/jvm/b/Functions;)V
 
     return-void
 .end method

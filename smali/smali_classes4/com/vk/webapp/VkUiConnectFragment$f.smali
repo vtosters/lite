@@ -3,7 +3,7 @@
 .source "VkUiConnectFragment.kt"
 
 # interfaces
-.implements Lcom/vk/core/dialogs/bottomsheet/h$e;
+.implements Lcom/vk/core/dialogs/bottomsheet/ModalDialogInterface$e;
 
 
 # annotations
@@ -83,7 +83,7 @@
 
     const-string v2, "VKWebAppAddToCommunityFailed"
 
-    invoke-virtual {p1, v0, v2, v1}, Lcom/vk/webapp/bridges/a;->a(Lcom/vk/webapp/internal/data/JsApiMethodType;Ljava/lang/String;Lorg/json/JSONObject;)V
+    invoke-virtual {p1, v0, v2, v1}, Lcom/vk/webapp/bridges/AndroidBridge;->a(Lcom/vk/webapp/internal/data/JsApiMethodType;Ljava/lang/String;Lorg/json/JSONObject;)V
 
     :goto_0
     return-void

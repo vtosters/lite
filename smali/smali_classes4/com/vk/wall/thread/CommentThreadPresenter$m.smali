@@ -3,12 +3,12 @@
 .source "CommentThreadPresenter.kt"
 
 # interfaces
-.implements Lc/a/z/j;
+.implements Lio/reactivex/functions/Function;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/wall/thread/CommentThreadPresenter;->a(Lc/a/m;)Lc/a/m;
+    value = Lcom/vk/wall/thread/CommentThreadPresenter;->a(Lio/reactivex/Observable;)Lio/reactivex/Observable;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -24,9 +24,9 @@
         "Ljava/lang/Object;",
         ">",
         "Ljava/lang/Object;",
-        "Lc/a/z/j<",
+        "Lio/reactivex/functions/Function<",
         "TT;",
-        "Lc/a/p<",
+        "Lio/reactivex/ObservableSource<",
         "+TR;>;>;"
     }
 .end annotation
@@ -35,16 +35,16 @@
 # instance fields
 .field final synthetic a:Lcom/vk/wall/thread/CommentThreadPresenter;
 
-.field final synthetic b:Lc/a/m;
+.field final synthetic b:Lio/reactivex/Observable;
 
 
 # direct methods
-.method constructor <init>(Lcom/vk/wall/thread/CommentThreadPresenter;Lc/a/m;)V
+.method constructor <init>(Lcom/vk/wall/thread/CommentThreadPresenter;Lio/reactivex/Observable;)V
     .locals 0
 
     iput-object p1, p0, Lcom/vk/wall/thread/CommentThreadPresenter$m;->a:Lcom/vk/wall/thread/CommentThreadPresenter;
 
-    iput-object p2, p0, Lcom/vk/wall/thread/CommentThreadPresenter$m;->b:Lc/a/m;
+    iput-object p2, p0, Lcom/vk/wall/thread/CommentThreadPresenter$m;->b:Lio/reactivex/Observable;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -53,15 +53,15 @@
 
 
 # virtual methods
-.method public final a(Lcom/vtosters/lite/NewsComment;)Lc/a/m;
+.method public final a(Lcom/vtosters/lite/NewsComment;)Lio/reactivex/Observable;
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
             "Lcom/vtosters/lite/NewsComment;",
             ")",
-            "Lc/a/m<",
-            "Lcom/vtosters/lite/api/wall/a;",
+            "Lio/reactivex/Observable<",
+            "Lcom/vtosters/lite/api/wall/GetCommentsResult;",
             ">;"
         }
     .end annotation
@@ -72,7 +72,7 @@
     invoke-static {v0, p1}, Lcom/vk/wall/thread/CommentThreadPresenter;->a(Lcom/vk/wall/thread/CommentThreadPresenter;Lcom/vtosters/lite/NewsComment;)V
 
     .line 2
-    iget-object p1, p0, Lcom/vk/wall/thread/CommentThreadPresenter$m;->b:Lc/a/m;
+    iget-object p1, p0, Lcom/vk/wall/thread/CommentThreadPresenter$m;->b:Lio/reactivex/Observable;
 
     return-object p1
 .end method
@@ -83,7 +83,7 @@
     .line 1
     check-cast p1, Lcom/vtosters/lite/NewsComment;
 
-    invoke-virtual {p0, p1}, Lcom/vk/wall/thread/CommentThreadPresenter$m;->a(Lcom/vtosters/lite/NewsComment;)Lc/a/m;
+    invoke-virtual {p0, p1}, Lcom/vk/wall/thread/CommentThreadPresenter$m;->a(Lcom/vtosters/lite/NewsComment;)Lio/reactivex/Observable;
 
     move-result-object p1
 

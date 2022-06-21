@@ -3,7 +3,7 @@
 .source "StaticMapFragment.kt"
 
 # interfaces
-.implements Lc/a/z/j;
+.implements Lio/reactivex/functions/Function;
 
 
 # annotations
@@ -24,7 +24,7 @@
         "Ljava/lang/Object;",
         ">",
         "Ljava/lang/Object;",
-        "Lc/a/z/j<",
+        "Lio/reactivex/functions/Function<",
         "TT;TR;>;"
     }
 .end annotation
@@ -47,58 +47,58 @@
 
 
 # virtual methods
-.method public final a(Landroid/graphics/Bitmap;)Lcom/vk/core/util/q0;
+.method public final a(Landroid/graphics/Bitmap;)Lcom/vk/core/util/Optional;
     .locals 3
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
             "Landroid/graphics/Bitmap;",
             ")",
-            "Lcom/vk/core/util/q0<",
+            "Lcom/vk/core/util/Optional<",
             "Landroid/graphics/Bitmap;",
             ">;"
         }
     .end annotation
 
     .line 1
-    sget-object p1, Lcom/vk/imageloader/o/f;->e:Lcom/vk/imageloader/o/f;
+    sget-object p1, Lcom/vk/imageloader/o/StoryPreviewPostProcessor;->e:Lcom/vk/imageloader/o/StoryPreviewPostProcessor;
 
     .line 2
     iget-object v0, p0, Lcom/vk/profile/ui/StaticMapWrapper$showBlurInternal$1$a$a;->a:Landroid/graphics/Bitmap;
 
     .line 3
-    invoke-static {}, Lcom/facebook/x/d/j;->n()Lcom/facebook/x/d/j;
+    invoke-static {}, Lcom/facebook/x/d/ImagePipelineFactory;->n()Lcom/facebook/x/d/ImagePipelineFactory;
 
     move-result-object v1
 
     const-string v2, "ImagePipelineFactory.getInstance()"
 
-    invoke-static {v1, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    invoke-virtual {v1}, Lcom/facebook/x/d/j;->h()Lcom/facebook/x/b/f;
+    invoke-virtual {v1}, Lcom/facebook/x/d/ImagePipelineFactory;->h()Lcom/facebook/x/b/PlatformBitmapFactory;
 
     move-result-object v1
 
     .line 4
-    invoke-virtual {p1, v0, v1}, Lcom/vk/imageloader/o/f;->a(Landroid/graphics/Bitmap;Lcom/facebook/x/b/f;)Lcom/facebook/common/references/a;
+    invoke-virtual {p1, v0, v1}, Lcom/vk/imageloader/o/StoryPreviewPostProcessor;->a(Landroid/graphics/Bitmap;Lcom/facebook/x/b/PlatformBitmapFactory;)Lcom/facebook/common/references/CloseableReference;
 
     move-result-object p1
 
     const-string v0, "i"
 
     .line 5
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    invoke-virtual {p1}, Lcom/facebook/common/references/a;->d()Z
+    invoke-virtual {p1}, Lcom/facebook/common/references/CloseableReference;->d()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
     .line 6
-    sget-object v0, Lcom/vk/core/util/q0;->b:Lcom/vk/core/util/q0$a;
+    sget-object v0, Lcom/vk/core/util/Optional;->b:Lcom/vk/core/util/Optional$a;
 
-    invoke-virtual {p1}, Lcom/facebook/common/references/a;->b()Ljava/lang/Object;
+    invoke-virtual {p1}, Lcom/facebook/common/references/CloseableReference;->b()Ljava/lang/Object;
 
     move-result-object p1
 
@@ -108,7 +108,7 @@
 
     move-result-object p1
 
-    invoke-virtual {v0, p1}, Lcom/vk/core/util/q0$a;->a(Ljava/lang/Object;)Lcom/vk/core/util/q0;
+    invoke-virtual {v0, p1}, Lcom/vk/core/util/Optional$a;->a(Ljava/lang/Object;)Lcom/vk/core/util/Optional;
 
     move-result-object p1
 
@@ -116,9 +116,9 @@
 
     .line 7
     :cond_0
-    sget-object p1, Lcom/vk/core/util/q0;->b:Lcom/vk/core/util/q0$a;
+    sget-object p1, Lcom/vk/core/util/Optional;->b:Lcom/vk/core/util/Optional$a;
 
-    invoke-virtual {p1}, Lcom/vk/core/util/q0$a;->a()Lcom/vk/core/util/q0;
+    invoke-virtual {p1}, Lcom/vk/core/util/Optional$a;->a()Lcom/vk/core/util/Optional;
 
     move-result-object p1
 
@@ -132,7 +132,7 @@
     .line 1
     check-cast p1, Landroid/graphics/Bitmap;
 
-    invoke-virtual {p0, p1}, Lcom/vk/profile/ui/StaticMapWrapper$showBlurInternal$1$a$a;->a(Landroid/graphics/Bitmap;)Lcom/vk/core/util/q0;
+    invoke-virtual {p0, p1}, Lcom/vk/profile/ui/StaticMapWrapper$showBlurInternal$1$a$a;->a(Landroid/graphics/Bitmap;)Lcom/vk/core/util/Optional;
 
     move-result-object p1
 

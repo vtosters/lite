@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/socialgraph/list/dataprovider/TwitterContactsProvider;->a()Lc/a/m;
+    value = Lcom/vk/socialgraph/list/dataprovider/TwitterContactsProvider;->a()Lio/reactivex/Observable;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -45,7 +45,7 @@
 
 
 # virtual methods
-.method public final call()Lcom/vk/socialgraph/list/dataprovider/b;
+.method public final call()Lcom/vk/socialgraph/list/dataprovider/Contacts;
     .locals 8
 
     .line 2
@@ -58,11 +58,11 @@
 
     iget-object v2, p0, Lcom/vk/socialgraph/list/dataprovider/TwitterContactsProvider$a;->a:Lcom/vk/socialgraph/list/dataprovider/TwitterContactsProvider;
 
-    invoke-static {v2}, Lcom/vk/socialgraph/list/dataprovider/TwitterContactsProvider;->a(Lcom/vk/socialgraph/list/dataprovider/TwitterContactsProvider;)Lcom/twitter/sdk/android/core/t;
+    invoke-static {v2}, Lcom/vk/socialgraph/list/dataprovider/TwitterContactsProvider;->a(Lcom/vk/socialgraph/list/dataprovider/TwitterContactsProvider;)Lcom/twitter/sdk/android/core/TwitterSession;
 
     move-result-object v2
 
-    invoke-direct {v1, v2}, Lcom/vk/socialgraph/list/dataprovider/TwitterContactsProvider$TwitterApiClientImpl;-><init>(Lcom/twitter/sdk/android/core/t;)V
+    invoke-direct {v1, v2}, Lcom/vk/socialgraph/list/dataprovider/TwitterContactsProvider$TwitterApiClientImpl;-><init>(Lcom/twitter/sdk/android/core/TwitterSession;)V
 
     .line 4
     invoke-virtual {v1}, Lcom/vk/socialgraph/list/dataprovider/TwitterContactsProvider$TwitterApiClientImpl;->b()Lcom/vk/socialgraph/list/dataprovider/TwitterContactsProvider$TwitterService;
@@ -71,25 +71,25 @@
 
     iget-object v3, p0, Lcom/vk/socialgraph/list/dataprovider/TwitterContactsProvider$a;->a:Lcom/vk/socialgraph/list/dataprovider/TwitterContactsProvider;
 
-    invoke-static {v3}, Lcom/vk/socialgraph/list/dataprovider/TwitterContactsProvider;->a(Lcom/vk/socialgraph/list/dataprovider/TwitterContactsProvider;)Lcom/twitter/sdk/android/core/t;
+    invoke-static {v3}, Lcom/vk/socialgraph/list/dataprovider/TwitterContactsProvider;->a(Lcom/vk/socialgraph/list/dataprovider/TwitterContactsProvider;)Lcom/twitter/sdk/android/core/TwitterSession;
 
     move-result-object v3
 
-    invoke-virtual {v3}, Lcom/twitter/sdk/android/core/t;->c()J
+    invoke-virtual {v3}, Lcom/twitter/sdk/android/core/TwitterSession;->c()J
 
     move-result-wide v3
 
     const/16 v5, 0x1388
 
-    invoke-interface {v2, v3, v4, v5}, Lcom/vk/socialgraph/list/dataprovider/TwitterContactsProvider$TwitterService;->friendsList(JI)Lf/b;
+    invoke-interface {v2, v3, v4, v5}, Lcom/vk/socialgraph/list/dataprovider/TwitterContactsProvider$TwitterService;->friendsList(JI)Lretrofit2/Call;
 
     move-result-object v2
 
-    invoke-interface {v2}, Lf/b;->execute()Lf/l;
+    invoke-interface {v2}, Lretrofit2/Call;->execute()Lretrofit2/Response;
 
     move-result-object v2
 
-    invoke-virtual {v2}, Lf/l;->a()Ljava/lang/Object;
+    invoke-virtual {v2}, Lretrofit2/Response;->a()Ljava/lang/Object;
 
     move-result-object v2
 
@@ -102,11 +102,11 @@
 
     iget-object v3, p0, Lcom/vk/socialgraph/list/dataprovider/TwitterContactsProvider$a;->a:Lcom/vk/socialgraph/list/dataprovider/TwitterContactsProvider;
 
-    invoke-static {v3}, Lcom/vk/socialgraph/list/dataprovider/TwitterContactsProvider;->a(Lcom/vk/socialgraph/list/dataprovider/TwitterContactsProvider;)Lcom/twitter/sdk/android/core/t;
+    invoke-static {v3}, Lcom/vk/socialgraph/list/dataprovider/TwitterContactsProvider;->a(Lcom/vk/socialgraph/list/dataprovider/TwitterContactsProvider;)Lcom/twitter/sdk/android/core/TwitterSession;
 
     move-result-object v3
 
-    invoke-virtual {v3}, Lcom/twitter/sdk/android/core/t;->c()J
+    invoke-virtual {v3}, Lcom/twitter/sdk/android/core/TwitterSession;->c()J
 
     move-result-wide v3
 
@@ -132,15 +132,15 @@
     :goto_0
     sub-int/2addr v5, v7
 
-    invoke-interface {v1, v3, v4, v5}, Lcom/vk/socialgraph/list/dataprovider/TwitterContactsProvider$TwitterService;->followersList(JI)Lf/b;
+    invoke-interface {v1, v3, v4, v5}, Lcom/vk/socialgraph/list/dataprovider/TwitterContactsProvider$TwitterService;->followersList(JI)Lretrofit2/Call;
 
     move-result-object v1
 
-    invoke-interface {v1}, Lf/b;->execute()Lf/l;
+    invoke-interface {v1}, Lretrofit2/Call;->execute()Lretrofit2/Response;
 
     move-result-object v1
 
-    invoke-virtual {v1}, Lf/l;->a()Ljava/lang/Object;
+    invoke-virtual {v1}, Lretrofit2/Response;->a()Ljava/lang/Object;
 
     move-result-object v1
 
@@ -184,7 +184,7 @@
 
     move-result-object v4
 
-    new-instance v5, Lcom/vk/dto/common/b;
+    new-instance v5, Lcom/vk/dto/common/Contact;
 
     new-array v7, v3, [Ljava/lang/String;
 
@@ -194,7 +194,7 @@
 
     move-result-object v7
 
-    invoke-direct {v5, v4, v7}, Lcom/vk/dto/common/b;-><init>(Ljava/lang/String;Ljava/util/List;)V
+    invoke-direct {v5, v4, v7}, Lcom/vk/dto/common/Contact;-><init>(Ljava/lang/String;Ljava/util/List;)V
 
     invoke-virtual {v0, v5}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
@@ -237,7 +237,7 @@
 
     move-result-object v2
 
-    new-instance v4, Lcom/vk/dto/common/b;
+    new-instance v4, Lcom/vk/dto/common/Contact;
 
     new-array v5, v3, [Ljava/lang/String;
 
@@ -247,7 +247,7 @@
 
     move-result-object v5
 
-    invoke-direct {v4, v2, v5}, Lcom/vk/dto/common/b;-><init>(Ljava/lang/String;Ljava/util/List;)V
+    invoke-direct {v4, v2, v5}, Lcom/vk/dto/common/Contact;-><init>(Ljava/lang/String;Ljava/util/List;)V
 
     invoke-virtual {v0, v4}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
@@ -255,17 +255,17 @@
 
     .line 12
     :cond_2
-    new-instance v1, Lcom/vk/socialgraph/list/dataprovider/b;
+    new-instance v1, Lcom/vk/socialgraph/list/dataprovider/Contacts;
 
     sget-object v2, Lcom/vk/socialgraph/SocialGraphUtils$ServiceType;->TWITTER:Lcom/vk/socialgraph/SocialGraphUtils$ServiceType;
 
     iget-object v3, p0, Lcom/vk/socialgraph/list/dataprovider/TwitterContactsProvider$a;->a:Lcom/vk/socialgraph/list/dataprovider/TwitterContactsProvider;
 
-    invoke-static {v3}, Lcom/vk/socialgraph/list/dataprovider/TwitterContactsProvider;->a(Lcom/vk/socialgraph/list/dataprovider/TwitterContactsProvider;)Lcom/twitter/sdk/android/core/t;
+    invoke-static {v3}, Lcom/vk/socialgraph/list/dataprovider/TwitterContactsProvider;->a(Lcom/vk/socialgraph/list/dataprovider/TwitterContactsProvider;)Lcom/twitter/sdk/android/core/TwitterSession;
 
     move-result-object v3
 
-    invoke-virtual {v3}, Lcom/twitter/sdk/android/core/t;->c()J
+    invoke-virtual {v3}, Lcom/twitter/sdk/android/core/TwitterSession;->c()J
 
     move-result-wide v3
 
@@ -273,7 +273,7 @@
 
     move-result-object v3
 
-    invoke-direct {v1, v2, v3, v0}, Lcom/vk/socialgraph/list/dataprovider/b;-><init>(Lcom/vk/socialgraph/SocialGraphUtils$ServiceType;Ljava/lang/String;Ljava/util/List;)V
+    invoke-direct {v1, v2, v3, v0}, Lcom/vk/socialgraph/list/dataprovider/Contacts;-><init>(Lcom/vk/socialgraph/SocialGraphUtils$ServiceType;Ljava/lang/String;Ljava/util/List;)V
 
     return-object v1
 .end method
@@ -282,7 +282,7 @@
     .locals 1
 
     .line 1
-    invoke-virtual {p0}, Lcom/vk/socialgraph/list/dataprovider/TwitterContactsProvider$a;->call()Lcom/vk/socialgraph/list/dataprovider/b;
+    invoke-virtual {p0}, Lcom/vk/socialgraph/list/dataprovider/TwitterContactsProvider$a;->call()Lcom/vk/socialgraph/list/dataprovider/Contacts;
 
     move-result-object v0
 

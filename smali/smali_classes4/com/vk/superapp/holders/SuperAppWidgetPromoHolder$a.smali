@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/superapp/holders/SuperAppWidgetPromoHolder;-><init>(Landroid/view/View;Lcom/vk/superapp/holders/b;)V
+    value = Lcom/vk/superapp/holders/SuperAppWidgetPromoHolder;-><init>(Landroid/view/View;Lcom/vk/superapp/holders/SuperAppClickListener;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -40,11 +40,11 @@
     .line 1
     iget-object p1, p0, Lcom/vk/superapp/holders/SuperAppWidgetPromoHolder$a;->a:Lcom/vk/superapp/holders/SuperAppWidgetPromoHolder;
 
-    invoke-static {p1}, Lcom/vk/superapp/holders/SuperAppWidgetPromoHolder;->c(Lcom/vk/superapp/holders/SuperAppWidgetPromoHolder;)Lcom/vk/superapp/g/l;
+    invoke-static {p1}, Lcom/vk/superapp/holders/SuperAppWidgetPromoHolder;->c(Lcom/vk/superapp/holders/SuperAppWidgetPromoHolder;)Lcom/vk/superapp/g/SuperAppWidgetPromoItem;
 
     move-result-object p1
 
-    invoke-virtual {p1}, Lcom/vk/superapp/g/l;->f()Lcom/vk/dto/menu/widgets/SuperAppWidgetPromo;
+    invoke-virtual {p1}, Lcom/vk/superapp/g/SuperAppWidgetPromoItem;->f()Lcom/vk/dto/menu/widgets/SuperAppWidgetPromo;
 
     move-result-object p1
 
@@ -78,7 +78,7 @@
     .line 2
     iget-object v0, p0, Lcom/vk/superapp/holders/SuperAppWidgetPromoHolder$a;->a:Lcom/vk/superapp/holders/SuperAppWidgetPromoHolder;
 
-    invoke-static {v0}, Lcom/vk/superapp/holders/SuperAppWidgetPromoHolder;->a(Lcom/vk/superapp/holders/SuperAppWidgetPromoHolder;)Lcom/vk/superapp/holders/b;
+    invoke-static {v0}, Lcom/vk/superapp/holders/SuperAppWidgetPromoHolder;->a(Lcom/vk/superapp/holders/SuperAppWidgetPromoHolder;)Lcom/vk/superapp/holders/SuperAppClickListener;
 
     move-result-object v0
 
@@ -90,11 +90,11 @@
 
     iget-object v3, p0, Lcom/vk/superapp/holders/SuperAppWidgetPromoHolder$a;->a:Lcom/vk/superapp/holders/SuperAppWidgetPromoHolder;
 
-    invoke-static {v3}, Lcom/vk/superapp/holders/SuperAppWidgetPromoHolder;->c(Lcom/vk/superapp/holders/SuperAppWidgetPromoHolder;)Lcom/vk/superapp/g/l;
+    invoke-static {v3}, Lcom/vk/superapp/holders/SuperAppWidgetPromoHolder;->c(Lcom/vk/superapp/holders/SuperAppWidgetPromoHolder;)Lcom/vk/superapp/g/SuperAppWidgetPromoItem;
 
     move-result-object v3
 
-    invoke-interface {v0, v2, v3, p1, v1}, Lcom/vk/superapp/holders/b;->a(Landroid/content/Context;Lcom/vk/superapp/g/a;Ljava/lang/String;Ljava/lang/Integer;)V
+    invoke-interface {v0, v2, v3, p1, v1}, Lcom/vk/superapp/holders/SuperAppClickListener;->a(Landroid/content/Context;Lcom/vk/superapp/g/SuperAppItems;Ljava/lang/String;Ljava/lang/Integer;)V
 
     :cond_1
     return-void

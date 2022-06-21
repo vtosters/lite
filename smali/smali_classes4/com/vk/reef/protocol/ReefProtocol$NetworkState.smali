@@ -3,7 +3,7 @@
 .source "ReefProtocol.java"
 
 # interfaces
-.implements Lcom/vk/reef/protocol/q;
+.implements Lcom/vk/reef/protocol/ReefProtocol29;
 
 
 # annotations
@@ -20,7 +20,7 @@
         "Lcom/vk/reef/protocol/ReefProtocol$NetworkState;",
         "Lcom/vk/reef/protocol/ReefProtocol$NetworkState$a;",
         ">;",
-        "Lcom/vk/reef/protocol/q;"
+        "Lcom/vk/reef/protocol/ReefProtocol29;"
     }
 .end annotation
 
@@ -52,7 +52,7 @@
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Lcom/google/protobuf/o$c<",
-            "Lcom/vk/reef/protocol/c;",
+            "Lcom/vk/reef/protocol/ReefProtocol12;",
             ">;"
         }
     .end annotation
@@ -62,7 +62,7 @@
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Lcom/google/protobuf/o$c<",
-            "Lcom/vk/reef/protocol/c;",
+            "Lcom/vk/reef/protocol/ReefProtocol12;",
             ">;"
         }
     .end annotation
@@ -72,7 +72,7 @@
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Lcom/google/protobuf/o$c<",
-            "Lcom/vk/reef/protocol/c;",
+            "Lcom/vk/reef/protocol/ReefProtocol12;",
             ">;"
         }
     .end annotation
@@ -84,7 +84,7 @@
 
 .field private K:I
 
-.field private L:Lcom/vk/reef/protocol/t;
+.field private L:Lcom/vk/reef/protocol/ReefProtocol4;
 
 .field private d:I
 
@@ -94,7 +94,7 @@
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Lcom/google/protobuf/o$c<",
-            "Lcom/vk/reef/protocol/o;",
+            "Lcom/vk/reef/protocol/ReefProtocol5;",
             ">;"
         }
     .end annotation
@@ -246,11 +246,11 @@
     return-void
 .end method
 
-.method static synthetic a(Lcom/vk/reef/protocol/ReefProtocol$NetworkState;Lcom/vk/reef/protocol/t;)V
+.method static synthetic a(Lcom/vk/reef/protocol/ReefProtocol$NetworkState;Lcom/vk/reef/protocol/ReefProtocol4;)V
     .locals 0
 
     .line 8
-    invoke-direct {p0, p1}, Lcom/vk/reef/protocol/ReefProtocol$NetworkState;->a(Lcom/vk/reef/protocol/t;)V
+    invoke-direct {p0, p1}, Lcom/vk/reef/protocol/ReefProtocol$NetworkState;->a(Lcom/vk/reef/protocol/ReefProtocol4;)V
 
     return-void
 .end method
@@ -305,13 +305,13 @@
     throw p1
 .end method
 
-.method private a(Lcom/vk/reef/protocol/t;)V
+.method private a(Lcom/vk/reef/protocol/ReefProtocol4;)V
     .locals 0
 
     if-eqz p1, :cond_0
 
     .line 20
-    iput-object p1, p0, Lcom/vk/reef/protocol/ReefProtocol$NetworkState;->L:Lcom/vk/reef/protocol/t;
+    iput-object p1, p0, Lcom/vk/reef/protocol/ReefProtocol$NetworkState;->L:Lcom/vk/reef/protocol/ReefProtocol4;
 
     return-void
 
@@ -331,7 +331,7 @@
             "(",
             "Ljava/lang/Iterable<",
             "+",
-            "Lcom/vk/reef/protocol/c;",
+            "Lcom/vk/reef/protocol/ReefProtocol12;",
             ">;)V"
         }
     .end annotation
@@ -436,7 +436,7 @@
             "(",
             "Ljava/lang/Iterable<",
             "+",
-            "Lcom/vk/reef/protocol/c;",
+            "Lcom/vk/reef/protocol/ReefProtocol12;",
             ">;)V"
         }
     .end annotation
@@ -505,7 +505,7 @@
             "(",
             "Ljava/lang/Iterable<",
             "+",
-            "Lcom/vk/reef/protocol/c;",
+            "Lcom/vk/reef/protocol/ReefProtocol12;",
             ">;)V"
         }
     .end annotation
@@ -537,7 +537,7 @@
             "(",
             "Ljava/lang/Iterable<",
             "+",
-            "Lcom/vk/reef/protocol/o;",
+            "Lcom/vk/reef/protocol/ReefProtocol5;",
             ">;)V"
         }
     .end annotation
@@ -717,7 +717,7 @@
     .locals 12
 
     .line 52
-    sget-object v0, Lcom/vk/reef/protocol/a;->a:[I
+    sget-object v0, Lcom/vk/reef/protocol/ReefProtocol1;->a:[I
 
     invoke-virtual {p1}, Ljava/lang/Enum;->ordinal()I
 
@@ -815,18 +815,18 @@
 
     .line 63
     :sswitch_0
-    iget-object p1, p0, Lcom/vk/reef/protocol/ReefProtocol$NetworkState;->L:Lcom/vk/reef/protocol/t;
+    iget-object p1, p0, Lcom/vk/reef/protocol/ReefProtocol$NetworkState;->L:Lcom/vk/reef/protocol/ReefProtocol4;
 
     if-eqz p1, :cond_3
 
     .line 64
-    iget-object p1, p0, Lcom/vk/reef/protocol/ReefProtocol$NetworkState;->L:Lcom/vk/reef/protocol/t;
+    iget-object p1, p0, Lcom/vk/reef/protocol/ReefProtocol$NetworkState;->L:Lcom/vk/reef/protocol/ReefProtocol4;
 
     invoke-virtual {p1}, Lcom/google/protobuf/GeneratedMessageLite;->b()Lcom/google/protobuf/GeneratedMessageLite$b;
 
     move-result-object p1
 
-    check-cast p1, Lcom/vk/reef/protocol/t$a;
+    check-cast p1, Lcom/vk/reef/protocol/ReefProtocol$a8;
 
     goto :goto_2
 
@@ -835,7 +835,7 @@
 
     .line 65
     :goto_2
-    invoke-static {}, Lcom/vk/reef/protocol/t;->t()Lcom/google/protobuf/v;
+    invoke-static {}, Lcom/vk/reef/protocol/ReefProtocol4;->t()Lcom/google/protobuf/v;
 
     move-result-object v3
 
@@ -843,14 +843,14 @@
 
     move-result-object v3
 
-    check-cast v3, Lcom/vk/reef/protocol/t;
+    check-cast v3, Lcom/vk/reef/protocol/ReefProtocol4;
 
-    iput-object v3, p0, Lcom/vk/reef/protocol/ReefProtocol$NetworkState;->L:Lcom/vk/reef/protocol/t;
+    iput-object v3, p0, Lcom/vk/reef/protocol/ReefProtocol$NetworkState;->L:Lcom/vk/reef/protocol/ReefProtocol4;
 
     if-eqz p1, :cond_2
 
     .line 66
-    iget-object v3, p0, Lcom/vk/reef/protocol/ReefProtocol$NetworkState;->L:Lcom/vk/reef/protocol/t;
+    iget-object v3, p0, Lcom/vk/reef/protocol/ReefProtocol$NetworkState;->L:Lcom/vk/reef/protocol/ReefProtocol4;
 
     invoke-virtual {p1, v3}, Lcom/google/protobuf/GeneratedMessageLite$b;->b(Lcom/google/protobuf/GeneratedMessageLite;)Lcom/google/protobuf/GeneratedMessageLite$b;
 
@@ -859,9 +859,9 @@
 
     move-result-object p1
 
-    check-cast p1, Lcom/vk/reef/protocol/t;
+    check-cast p1, Lcom/vk/reef/protocol/ReefProtocol4;
 
-    iput-object p1, p0, Lcom/vk/reef/protocol/ReefProtocol$NetworkState;->L:Lcom/vk/reef/protocol/t;
+    iput-object p1, p0, Lcom/vk/reef/protocol/ReefProtocol$NetworkState;->L:Lcom/vk/reef/protocol/ReefProtocol4;
 
     goto :goto_1
 
@@ -920,7 +920,7 @@
     iget-object p1, p0, Lcom/vk/reef/protocol/ReefProtocol$NetworkState;->H:Lcom/google/protobuf/o$c;
 
     .line 75
-    invoke-static {}, Lcom/vk/reef/protocol/c;->u()Lcom/google/protobuf/v;
+    invoke-static {}, Lcom/vk/reef/protocol/ReefProtocol12;->u()Lcom/google/protobuf/v;
 
     move-result-object v3
 
@@ -958,7 +958,7 @@
     iget-object p1, p0, Lcom/vk/reef/protocol/ReefProtocol$NetworkState;->G:Lcom/google/protobuf/o$c;
 
     .line 81
-    invoke-static {}, Lcom/vk/reef/protocol/c;->u()Lcom/google/protobuf/v;
+    invoke-static {}, Lcom/vk/reef/protocol/ReefProtocol12;->u()Lcom/google/protobuf/v;
 
     move-result-object v3
 
@@ -996,7 +996,7 @@
     iget-object p1, p0, Lcom/vk/reef/protocol/ReefProtocol$NetworkState;->F:Lcom/google/protobuf/o$c;
 
     .line 87
-    invoke-static {}, Lcom/vk/reef/protocol/c;->u()Lcom/google/protobuf/v;
+    invoke-static {}, Lcom/vk/reef/protocol/ReefProtocol12;->u()Lcom/google/protobuf/v;
 
     move-result-object v3
 
@@ -1097,7 +1097,7 @@
     iget-object p1, p0, Lcom/vk/reef/protocol/ReefProtocol$NetworkState;->f:Lcom/google/protobuf/o$c;
 
     .line 102
-    invoke-static {}, Lcom/vk/reef/protocol/o;->n()Lcom/google/protobuf/v;
+    invoke-static {}, Lcom/vk/reef/protocol/ReefProtocol5;->n()Lcom/google/protobuf/v;
 
     move-result-object v3
 
@@ -1569,17 +1569,17 @@
     iput p2, p0, Lcom/vk/reef/protocol/ReefProtocol$NetworkState;->K:I
 
     .line 131
-    iget-object p2, p0, Lcom/vk/reef/protocol/ReefProtocol$NetworkState;->L:Lcom/vk/reef/protocol/t;
+    iget-object p2, p0, Lcom/vk/reef/protocol/ReefProtocol$NetworkState;->L:Lcom/vk/reef/protocol/ReefProtocol4;
 
-    iget-object v0, p3, Lcom/vk/reef/protocol/ReefProtocol$NetworkState;->L:Lcom/vk/reef/protocol/t;
+    iget-object v0, p3, Lcom/vk/reef/protocol/ReefProtocol$NetworkState;->L:Lcom/vk/reef/protocol/ReefProtocol4;
 
     invoke-interface {p1, p2, v0}, Lcom/google/protobuf/GeneratedMessageLite$i;->a(Lcom/google/protobuf/s;Lcom/google/protobuf/s;)Lcom/google/protobuf/s;
 
     move-result-object p2
 
-    check-cast p2, Lcom/vk/reef/protocol/t;
+    check-cast p2, Lcom/vk/reef/protocol/ReefProtocol4;
 
-    iput-object p2, p0, Lcom/vk/reef/protocol/ReefProtocol$NetworkState;->L:Lcom/vk/reef/protocol/t;
+    iput-object p2, p0, Lcom/vk/reef/protocol/ReefProtocol$NetworkState;->L:Lcom/vk/reef/protocol/ReefProtocol4;
 
     .line 132
     sget-object p2, Lcom/google/protobuf/GeneratedMessageLite$h;->a:Lcom/google/protobuf/GeneratedMessageLite$h;
@@ -1602,7 +1602,7 @@
     :pswitch_4
     new-instance p1, Lcom/vk/reef/protocol/ReefProtocol$NetworkState$a;
 
-    invoke-direct {p1, v0}, Lcom/vk/reef/protocol/ReefProtocol$NetworkState$a;-><init>(Lcom/vk/reef/protocol/a;)V
+    invoke-direct {p1, v0}, Lcom/vk/reef/protocol/ReefProtocol$NetworkState$a;-><init>(Lcom/vk/reef/protocol/ReefProtocol1;)V
 
     return-object p1
 
@@ -1955,14 +1955,14 @@
 
     .line 50
     :cond_d
-    iget-object v0, p0, Lcom/vk/reef/protocol/ReefProtocol$NetworkState;->L:Lcom/vk/reef/protocol/t;
+    iget-object v0, p0, Lcom/vk/reef/protocol/ReefProtocol$NetworkState;->L:Lcom/vk/reef/protocol/ReefProtocol4;
 
     if-eqz v0, :cond_e
 
     const/16 v0, 0x10
 
     .line 51
-    invoke-virtual {p0}, Lcom/vk/reef/protocol/ReefProtocol$NetworkState;->k()Lcom/vk/reef/protocol/t;
+    invoke-virtual {p0}, Lcom/vk/reef/protocol/ReefProtocol$NetworkState;->k()Lcom/vk/reef/protocol/ReefProtocol4;
 
     move-result-object v1
 
@@ -2323,14 +2323,14 @@
 
     .line 41
     :cond_e
-    iget-object v0, p0, Lcom/vk/reef/protocol/ReefProtocol$NetworkState;->L:Lcom/vk/reef/protocol/t;
+    iget-object v0, p0, Lcom/vk/reef/protocol/ReefProtocol$NetworkState;->L:Lcom/vk/reef/protocol/ReefProtocol4;
 
     if-eqz v0, :cond_f
 
     const/16 v0, 0x10
 
     .line 42
-    invoke-virtual {p0}, Lcom/vk/reef/protocol/ReefProtocol$NetworkState;->k()Lcom/vk/reef/protocol/t;
+    invoke-virtual {p0}, Lcom/vk/reef/protocol/ReefProtocol$NetworkState;->k()Lcom/vk/reef/protocol/ReefProtocol4;
 
     move-result-object v2
 
@@ -2356,15 +2356,15 @@
     return-object v0
 .end method
 
-.method public k()Lcom/vk/reef/protocol/t;
+.method public k()Lcom/vk/reef/protocol/ReefProtocol4;
     .locals 1
 
     .line 1
-    iget-object v0, p0, Lcom/vk/reef/protocol/ReefProtocol$NetworkState;->L:Lcom/vk/reef/protocol/t;
+    iget-object v0, p0, Lcom/vk/reef/protocol/ReefProtocol$NetworkState;->L:Lcom/vk/reef/protocol/ReefProtocol4;
 
     if-nez v0, :cond_0
 
-    invoke-static {}, Lcom/vk/reef/protocol/t;->r()Lcom/vk/reef/protocol/t;
+    invoke-static {}, Lcom/vk/reef/protocol/ReefProtocol4;->r()Lcom/vk/reef/protocol/ReefProtocol4;
 
     move-result-object v0
 

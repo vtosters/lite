@@ -4,9 +4,9 @@
 
 
 # static fields
-.field static final synthetic a:[Lkotlin/u/j;
+.field static final synthetic a:[Lkotlin/u/KProperty5;
 
-.field private static final b:Lkotlin/e;
+.field private static final b:Lkotlin/Lazy2;
 
 .field private static final c:J
 
@@ -23,13 +23,13 @@
 
     const/4 v0, 0x1
 
-    new-array v0, v0, [Lkotlin/u/j;
+    new-array v0, v0, [Lkotlin/u/KProperty5;
 
     new-instance v1, Lkotlin/jvm/internal/PropertyReference1Impl;
 
     const-class v2, Lcom/vk/polls/utils/PollUtils;
 
-    invoke-static {v2}, Lkotlin/jvm/internal/o;->a(Ljava/lang/Class;)Lkotlin/u/c;
+    invoke-static {v2}, Lkotlin/jvm/internal/Reflection;->a(Ljava/lang/Class;)Lkotlin/u/KClass;
 
     move-result-object v2
 
@@ -37,15 +37,15 @@
 
     const-string v4, "getCalendar()Ljava/util/Calendar;"
 
-    invoke-direct {v1, v2, v3, v4}, Lkotlin/jvm/internal/PropertyReference1Impl;-><init>(Lkotlin/u/e;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-direct {v1, v2, v3, v4}, Lkotlin/jvm/internal/PropertyReference1Impl;-><init>(Lkotlin/u/KDeclarationContainer;Ljava/lang/String;Ljava/lang/String;)V
 
-    invoke-static {v1}, Lkotlin/jvm/internal/o;->a(Lkotlin/jvm/internal/PropertyReference1;)Lkotlin/u/l;
+    invoke-static {v1}, Lkotlin/jvm/internal/Reflection;->a(Lkotlin/jvm/internal/PropertyReference1;)Lkotlin/u/KProperty2;
 
     const/4 v2, 0x0
 
     aput-object v1, v0, v2
 
-    sput-object v0, Lcom/vk/polls/utils/PollUtils;->a:[Lkotlin/u/j;
+    sput-object v0, Lcom/vk/polls/utils/PollUtils;->a:[Lkotlin/u/KProperty5;
 
     .line 1
     new-instance v0, Lcom/vk/polls/utils/PollUtils;
@@ -57,11 +57,11 @@
     .line 2
     sget-object v0, Lcom/vk/polls/utils/PollUtils$calendar$2;->a:Lcom/vk/polls/utils/PollUtils$calendar$2;
 
-    invoke-static {v0}, Lkotlin/g;->a(Lkotlin/jvm/b/a;)Lkotlin/e;
+    invoke-static {v0}, Lkotlin/g;->a(Lkotlin/jvm/b/Functions;)Lkotlin/Lazy2;
 
     move-result-object v0
 
-    sput-object v0, Lcom/vk/polls/utils/PollUtils;->b:Lkotlin/e;
+    sput-object v0, Lcom/vk/polls/utils/PollUtils;->b:Lkotlin/Lazy2;
 
     .line 3
     sget-object v0, Ljava/util/concurrent/TimeUnit;->MINUTES:Ljava/util/concurrent/TimeUnit;
@@ -108,11 +108,11 @@
     .locals 20
 
     .line 8
-    sget-object v0, Lcom/vk/core/util/i;->a:Landroid/content/Context;
+    sget-object v0, Lcom/vk/core/util/AppContextHolder;->a:Landroid/content/Context;
 
     const-string v1, "AppContextHolder.context"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {v0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
@@ -125,7 +125,7 @@
 
     const-string v2, "calendar"
 
-    invoke-static {v1, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     sget-object v3, Lcom/vk/core/network/TimeProvider;->f:Lcom/vk/core/network/TimeProvider;
 
@@ -159,7 +159,7 @@
 
     move-result-object v6
 
-    invoke-static {v6, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v6, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {v6}, Ljava/util/Calendar;->getTimeInMillis()J
 
@@ -208,7 +208,7 @@
 
     move-result-object v8
 
-    invoke-static {v8, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v8, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {v8}, Ljava/util/Calendar;->getTimeInMillis()J
 
@@ -245,7 +245,7 @@
 
     const-string v1, "res.getString(R.string.poll_expired)"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     return-object v0
 
@@ -255,7 +255,7 @@
 
     move-result-object v8
 
-    invoke-static {v8, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v8, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {v8, v3, v4}, Ljava/util/Calendar;->setTimeInMillis(J)V
 
@@ -282,7 +282,7 @@
 
     const-string v1, "res.getString(if (shortD\u2026.poll_less_then_a_minute)"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     goto/16 :goto_5
 
@@ -326,7 +326,7 @@
 
     const-string v1, "res.getQuantityString(if\u2026aining, minutesRemaining)"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     goto/16 :goto_5
 
@@ -377,7 +377,7 @@
 
     const-string v1, "res.getQuantityString(if\u2026emaining, hoursRemaining)"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     goto/16 :goto_5
 
@@ -450,7 +450,7 @@
 
     const-string v1, "res.getString(if (shortD\u2026dar.get(Calendar.MINUTE))"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     goto/16 :goto_5
 
@@ -522,7 +522,7 @@
 
     aget-object v2, v2, v10
 
-    invoke-static {v2, v12}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v2, v12}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     if-eqz v2, :cond_a
 
@@ -530,7 +530,7 @@
 
     move-result-object v2
 
-    invoke-static {v2, v11}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v2, v11}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     aput-object v2, v3, v5
 
@@ -569,7 +569,7 @@
 
     move-result-object v0
 
-    invoke-static {v0, v7}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v7}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     goto/16 :goto_5
 
@@ -636,7 +636,7 @@
 
     aget-object v2, v2, v10
 
-    invoke-static {v2, v12}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v2, v12}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     if-eqz v2, :cond_c
 
@@ -644,7 +644,7 @@
 
     move-result-object v2
 
-    invoke-static {v2, v11}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v2, v11}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     aput-object v2, v3, v5
 
@@ -700,7 +700,7 @@
 
     move-result-object v0
 
-    invoke-static {v0, v7}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v7}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     goto :goto_5
 
@@ -722,15 +722,15 @@
 .method private final a()Ljava/util/Calendar;
     .locals 3
 
-    sget-object v0, Lcom/vk/polls/utils/PollUtils;->b:Lkotlin/e;
+    sget-object v0, Lcom/vk/polls/utils/PollUtils;->b:Lkotlin/Lazy2;
 
-    sget-object v1, Lcom/vk/polls/utils/PollUtils;->a:[Lkotlin/u/j;
+    sget-object v1, Lcom/vk/polls/utils/PollUtils;->a:[Lkotlin/u/KProperty5;
 
     const/4 v2, 0x0
 
     aget-object v1, v1, v2
 
-    invoke-interface {v0}, Lkotlin/e;->getValue()Ljava/lang/Object;
+    invoke-interface {v0}, Lkotlin/Lazy2;->getValue()Ljava/lang/Object;
 
     move-result-object v0
 
@@ -755,13 +755,13 @@
 
     .line 7
     :goto_0
-    sget-object v0, Lkotlin/jvm/internal/r;->a:Lkotlin/jvm/internal/r;
+    sget-object v0, Lkotlin/jvm/internal/PrimitiveCompanionObjects1;->a:Lkotlin/jvm/internal/PrimitiveCompanionObjects1;
 
     sget-object v0, Ljava/util/Locale;->ENGLISH:Ljava/util/Locale;
 
     const-string v1, "Locale.ENGLISH"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     const/4 v1, 0x2
 
@@ -795,7 +795,7 @@
 
     const-string p2, "java.lang.String.format(locale, format, *args)"
 
-    invoke-static {p1, p2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, p2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     return-object p1
 .end method
@@ -827,7 +827,7 @@
     .locals 10
 
     .line 1
-    sget-object v0, Lcom/vk/core/util/i;->a:Landroid/content/Context;
+    sget-object v0, Lcom/vk/core/util/AppContextHolder;->a:Landroid/content/Context;
 
     .line 2
     invoke-virtual {p1}, Lcom/vk/dto/polls/Poll;->M1()Z
@@ -850,7 +850,7 @@
 
     const-string v2, "context.getString(if (po\u2026lse R.string.poll_public)"
 
-    invoke-static {v1, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 3
     invoke-virtual {p1}, Lcom/vk/dto/polls/Poll;->O1()Z
@@ -897,7 +897,7 @@
 
     const-string p1, "context.getString(R.stri\u2026se R.string.poll_closed))"
 
-    invoke-static {v1, p1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v1, p1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     goto :goto_2
 
@@ -937,7 +937,7 @@
 
     const-string p1, "context.getString(R.stri\u2026oInt(), shortDateFormat))"
 
-    invoke-static {v1, p1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v1, p1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     goto :goto_2
 

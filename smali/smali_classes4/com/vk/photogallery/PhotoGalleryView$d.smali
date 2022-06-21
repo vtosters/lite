@@ -36,7 +36,7 @@
         value = {
             "Ljava/util/List<",
             "+",
-            "Lcom/vk/photogallery/a;",
+            "Lcom/vk/photogallery/GalleryProvider;",
             ">;"
         }
     .end annotation
@@ -53,7 +53,7 @@
             "(",
             "Ljava/util/List<",
             "+",
-            "Lcom/vk/photogallery/a;",
+            "Lcom/vk/photogallery/GalleryProvider;",
             ">;)V"
         }
     .end annotation
@@ -168,7 +168,7 @@
 
     if-eqz p1, :cond_3
 
-    invoke-virtual {p1}, Lcom/vk/photogallery/view/PhotoGalleryPageVH;->c()Lcom/vk/photogallery/dto/d;
+    invoke-virtual {p1}, Lcom/vk/photogallery/view/PhotoGalleryPageVH;->c()Lcom/vk/photogallery/dto/GalleryState4;
 
     move-result-object p1
 
@@ -181,7 +181,7 @@
 
     iget v1, p0, Lcom/vk/photogallery/PhotoGalleryView$d;->b:I
 
-    invoke-interface {v0, v1, p1}, Lcom/vk/photogallery/PhotoGalleryView$Callback;->a(ILcom/vk/photogallery/dto/d;)V
+    invoke-interface {v0, v1, p1}, Lcom/vk/photogallery/PhotoGalleryView$Callback;->a(ILcom/vk/photogallery/dto/GalleryState4;)V
 
     :cond_3
     return-void
@@ -208,7 +208,7 @@
             "(",
             "Ljava/util/List<",
             "+",
-            "Lcom/vk/photogallery/a;",
+            "Lcom/vk/photogallery/GalleryProvider;",
             ">;)V"
         }
     .end annotation
@@ -276,7 +276,7 @@
 
     move-result-object p1
 
-    check-cast p1, Lcom/vk/photogallery/a;
+    check-cast p1, Lcom/vk/photogallery/GalleryProvider;
 
     iget-object v0, p0, Lcom/vk/photogallery/PhotoGalleryView$d;->f:Lcom/vk/photogallery/PhotoGalleryView;
 
@@ -286,9 +286,9 @@
 
     const-string v1, "context"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    invoke-interface {p1, v0}, Lcom/vk/photogallery/a;->getDefaultAlbumName(Landroid/content/Context;)Ljava/lang/String;
+    invoke-interface {p1, v0}, Lcom/vk/photogallery/GalleryProvider;->getDefaultAlbumName(Landroid/content/Context;)Ljava/lang/String;
 
     move-result-object p1
 
@@ -307,7 +307,7 @@
 
     const-string v0, "container.context"
 
-    invoke-static {v1, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v1, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 2
     iget-object v0, p0, Lcom/vk/photogallery/PhotoGalleryView$d;->e:Ljava/util/List;
@@ -318,7 +318,7 @@
 
     move-object v2, v0
 
-    check-cast v2, Lcom/vk/photogallery/a;
+    check-cast v2, Lcom/vk/photogallery/GalleryProvider;
 
     .line 3
     iget-object v0, p0, Lcom/vk/photogallery/PhotoGalleryView$d;->f:Lcom/vk/photogallery/PhotoGalleryView;
@@ -352,12 +352,12 @@
     move v6, p2
 
     .line 6
-    invoke-direct/range {v0 .. v7}, Lcom/vk/photogallery/view/PhotoGalleryPageVH;-><init>(Landroid/content/Context;Lcom/vk/photogallery/a;IILcom/vk/photogallery/dto/SelectionState;IZ)V
+    invoke-direct/range {v0 .. v7}, Lcom/vk/photogallery/view/PhotoGalleryPageVH;-><init>(Landroid/content/Context;Lcom/vk/photogallery/GalleryProvider;IILcom/vk/photogallery/dto/SelectionState;IZ)V
 
     .line 7
     iget-object v0, p0, Lcom/vk/photogallery/PhotoGalleryView$d;->a:Landroid/util/SparseArray;
 
-    invoke-static {v0, p2, v8}, Lcom/vk/core/extensions/x;->a(Landroid/util/SparseArray;ILjava/lang/Object;)V
+    invoke-static {v0, p2, v8}, Lcom/vk/core/extensions/SparseArrayExt1;->a(Landroid/util/SparseArray;ILjava/lang/Object;)V
 
     .line 8
     invoke-virtual {v8, p1}, Lcom/vk/photogallery/view/PhotoGalleryPageVH;->a(Landroid/view/ViewGroup;)Landroid/view/View;
@@ -371,7 +371,7 @@
     .locals 0
 
     .line 1
-    invoke-static {p2, p1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {p2, p1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result p1
 

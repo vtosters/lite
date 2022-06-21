@@ -3,14 +3,14 @@
 .source "ActionSortVh.kt"
 
 # interfaces
-.implements Lcom/vk/catalog2/core/holders/common/n;
+.implements Lcom/vk/catalog2/core/holders/common/CatalogViewHolder;
 .implements Landroid/view/View$OnClickListener;
 
 
 # instance fields
 .field private a:Landroid/widget/TextView;
 
-.field private b:Lio/reactivex/disposables/b;
+.field private b:Lio/reactivex/disposables/Disposable;
 
 .field private c:Lcom/vk/catalog2/core/blocks/actions/UIBlockActionShowFilters;
 
@@ -59,11 +59,11 @@
     return-object p0
 .end method
 
-.method public static final synthetic a(Lcom/vk/catalog2/core/holders/common/ActionSortVh;Lio/reactivex/disposables/b;)V
+.method public static final synthetic a(Lcom/vk/catalog2/core/holders/common/ActionSortVh;Lio/reactivex/disposables/Disposable;)V
     .locals 0
 
     .line 2
-    iput-object p1, p0, Lcom/vk/catalog2/core/holders/common/ActionSortVh;->b:Lio/reactivex/disposables/b;
+    iput-object p1, p0, Lcom/vk/catalog2/core/holders/common/ActionSortVh;->b:Lio/reactivex/disposables/Disposable;
 
     return-void
 .end method
@@ -150,7 +150,7 @@
     :cond_3
     const-string v0, "label"
 
-    invoke-static {v0}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v0}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v1
 
@@ -164,7 +164,7 @@
     .locals 0
 
     .line 5
-    invoke-static {p0, p1}, Lcom/vk/catalog2/core/holders/common/n$a;->a(Lcom/vk/catalog2/core/holders/common/n;Landroid/view/View$OnClickListener;)Landroid/view/View$OnClickListener;
+    invoke-static {p0, p1}, Lcom/vk/catalog2/core/holders/common/CatalogViewHolder$a;->a(Lcom/vk/catalog2/core/holders/common/CatalogViewHolder;Landroid/view/View$OnClickListener;)Landroid/view/View$OnClickListener;
 
     move-result-object p1
 
@@ -192,7 +192,7 @@
 
     const-string p3, "findViewById(R.id.label)"
 
-    invoke-static {p2, p3}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p2, p3}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     check-cast p2, Landroid/widget/TextView;
 
@@ -208,7 +208,7 @@
     const-string p2, "inflater.inflate(R.layou\u2026@ActionSortVh))\n        }"
 
     .line 9
-    invoke-static {p1, p2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, p2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     return-object p1
 .end method
@@ -217,17 +217,17 @@
     .locals 1
 
     .line 15
-    iget-object v0, p0, Lcom/vk/catalog2/core/holders/common/ActionSortVh;->b:Lio/reactivex/disposables/b;
+    iget-object v0, p0, Lcom/vk/catalog2/core/holders/common/ActionSortVh;->b:Lio/reactivex/disposables/Disposable;
 
     if-eqz v0, :cond_0
 
-    invoke-interface {v0}, Lio/reactivex/disposables/b;->o()V
+    invoke-interface {v0}, Lio/reactivex/disposables/Disposable;->o()V
 
     :cond_0
     const/4 v0, 0x0
 
     .line 16
-    iput-object v0, p0, Lcom/vk/catalog2/core/holders/common/ActionSortVh;->b:Lio/reactivex/disposables/b;
+    iput-object v0, p0, Lcom/vk/catalog2/core/holders/common/ActionSortVh;->b:Lio/reactivex/disposables/Disposable;
 
     return-void
 .end method
@@ -275,7 +275,7 @@
     .locals 0
 
     .line 3
-    invoke-static {p0, p1, p2}, Lcom/vk/catalog2/core/holders/common/n$a;->a(Lcom/vk/catalog2/core/holders/common/n;Lcom/vk/catalog2/core/blocks/UIBlock;I)V
+    invoke-static {p0, p1, p2}, Lcom/vk/catalog2/core/holders/common/CatalogViewHolder$a;->a(Lcom/vk/catalog2/core/holders/common/CatalogViewHolder;Lcom/vk/catalog2/core/blocks/UIBlock;I)V
 
     return-void
 .end method
@@ -284,7 +284,7 @@
     .locals 0
 
     .line 4
-    invoke-static {p0, p1, p2, p3}, Lcom/vk/catalog2/core/holders/common/n$a;->a(Lcom/vk/catalog2/core/holders/common/n;Lcom/vk/catalog2/core/blocks/UIBlock;II)V
+    invoke-static {p0, p1, p2, p3}, Lcom/vk/catalog2/core/holders/common/CatalogViewHolder$a;->a(Lcom/vk/catalog2/core/holders/common/CatalogViewHolder;Lcom/vk/catalog2/core/blocks/UIBlock;II)V
 
     return-void
 .end method
@@ -310,7 +310,7 @@
 
     invoke-direct {v2, p0, p1}, Lcom/vk/catalog2/core/holders/common/ActionSortVh$onClick$1;-><init>(Lcom/vk/catalog2/core/holders/common/ActionSortVh;Landroid/content/Context;)V
 
-    invoke-virtual {v0, p1, v1, v2}, Lcom/vk/catalog2/core/CatalogRouter;->a(Landroid/content/Context;Ljava/util/List;Lkotlin/jvm/b/b;)V
+    invoke-virtual {v0, p1, v1, v2}, Lcom/vk/catalog2/core/CatalogRouter;->a(Landroid/content/Context;Ljava/util/List;Lkotlin/jvm/b/Functions2;)V
 
     :cond_0
     return-void

@@ -1,5 +1,5 @@
 .class public final Lcom/vk/stories/clickable/dialogs/music/SelectRangeWaveFormView$g;
-.super Lcom/vk/core/ui/h;
+.super Lcom/vk/core/ui/GestureListenerAdapter;
 .source "SelectRangeWaveFormView.kt"
 
 
@@ -30,7 +30,7 @@
     .line 1
     iput-object p1, p0, Lcom/vk/stories/clickable/dialogs/music/SelectRangeWaveFormView$g;->a:Lcom/vk/stories/clickable/dialogs/music/SelectRangeWaveFormView;
 
-    invoke-direct {p0}, Lcom/vk/core/ui/h;-><init>()V
+    invoke-direct {p0}, Lcom/vk/core/ui/GestureListenerAdapter;-><init>()V
 
     return-void
 .end method

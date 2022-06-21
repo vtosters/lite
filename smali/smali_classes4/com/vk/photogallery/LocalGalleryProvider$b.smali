@@ -3,12 +3,12 @@
 .source "LocalGalleryProvider.kt"
 
 # interfaces
-.implements Lc/a/z/j;
+.implements Lio/reactivex/functions/Function;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/photogallery/LocalGalleryProvider;->loadAlbums()Lc/a/m;
+    value = Lcom/vk/photogallery/LocalGalleryProvider;->loadAlbums()Lio/reactivex/Observable;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -24,7 +24,7 @@
         "Ljava/lang/Object;",
         ">",
         "Ljava/lang/Object;",
-        "Lc/a/z/j<",
+        "Lio/reactivex/functions/Function<",
         "TT;TR;>;"
     }
 .end annotation
@@ -66,7 +66,7 @@
             "Lcom/vk/photogallery/LocalGalleryProvider$a;",
             ">;)",
             "Ljava/util/List<",
-            "Lcom/vk/photogallery/dto/a;",
+            "Lcom/vk/photogallery/dto/GalleryState;",
             ">;"
         }
     .end annotation

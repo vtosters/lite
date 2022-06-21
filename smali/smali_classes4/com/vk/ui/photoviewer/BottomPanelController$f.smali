@@ -3,7 +3,7 @@
 .source "BottomPanelController.kt"
 
 # interfaces
-.implements Lc/a/z/g;
+.implements Lio/reactivex/functions/Consumer;
 
 
 # annotations
@@ -22,9 +22,9 @@
         "Ljava/lang/Object;",
         ">",
         "Ljava/lang/Object;",
-        "Lc/a/z/g<",
+        "Lio/reactivex/functions/Consumer<",
         "Ljava/util/ArrayList<",
-        "Lcom/vk/dto/photo/a;",
+        "Lcom/vk/dto/photo/PhotoTag;",
         ">;>;"
     }
 .end annotation
@@ -53,7 +53,7 @@
         value = {
             "(",
             "Ljava/util/ArrayList<",
-            "Lcom/vk/dto/photo/a;",
+            "Lcom/vk/dto/photo/PhotoTag;",
             ">;)V"
         }
     .end annotation

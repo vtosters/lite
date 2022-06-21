@@ -41,11 +41,11 @@
     .line 1
     iget-object v0, p0, Lcom/vtosters/lite/ui/holder/video/BaseAutoPlayHolder$b;->a:Lcom/vtosters/lite/ui/holder/video/BaseAutoPlayHolder;
 
-    iget-object v0, v0, Lcom/vtosters/lite/ui/holder/video/BaseAutoPlayHolder;->h0:Lcom/vk/libvideo/autoplay/a;
+    iget-object v0, v0, Lcom/vtosters/lite/ui/holder/video/BaseAutoPlayHolder;->h0:Lcom/vk/libvideo/autoplay/AutoPlay;
 
     if-eqz v0, :cond_0
 
-    invoke-interface {v0}, Lcom/vk/libvideo/autoplay/a;->b()Z
+    invoke-interface {v0}, Lcom/vk/libvideo/autoplay/AutoPlay;->b()Z
 
     move-result v0
 

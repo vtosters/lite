@@ -3,7 +3,7 @@
 .source "NewsComment.java"
 
 # interfaces
-.implements Lcom/vtosters/lite/q;
+.implements Lcom/vtosters/lite/Comment;
 
 
 # static fields
@@ -490,7 +490,7 @@
     if-gez v0, :cond_3
 
     .line 47
-    sget-object v0, Lcom/vk/core/util/i;->a:Landroid/content/Context;
+    sget-object v0, Lcom/vk/core/util/AppContextHolder;->a:Landroid/content/Context;
 
     const v1, 0x7f120201
 
@@ -655,7 +655,7 @@
 
     move-result-object v5
 
-    invoke-static {v5, p2}, Lcom/vtosters/lite/attachments/a;->a(Lorg/json/JSONObject;Landroid/util/SparseArray;)Lcom/vk/dto/common/Attachment;
+    invoke-static {v5, p2}, Lcom/vtosters/lite/attachments/AttachmentUtils;->a(Lorg/json/JSONObject;Landroid/util/SparseArray;)Lcom/vk/dto/common/Attachment;
 
     move-result-object v5
 
@@ -701,7 +701,7 @@
     :cond_b
     iget-object v0, p0, Lcom/vtosters/lite/NewsComment;->Q:Ljava/util/ArrayList;
 
-    invoke-static {v0}, Lcom/vtosters/lite/attachments/a;->d(Ljava/util/List;)V
+    invoke-static {v0}, Lcom/vtosters/lite/attachments/AttachmentUtils;->d(Ljava/util/List;)V
 
     :cond_c
     const-string v0, "thread"
@@ -1149,25 +1149,25 @@
     if-eqz p2, :cond_0
 
     .line 23
-    invoke-static {}, Lcom/vk/emoji/b;->g()Lcom/vk/emoji/b;
+    invoke-static {}, Lcom/vk/emoji/Emoji;->g()Lcom/vk/emoji/Emoji;
 
     move-result-object p1
 
     iget-object p2, p0, Lcom/vtosters/lite/NewsComment;->a:Ljava/lang/String;
 
     .line 24
-    invoke-static {p2}, Lcom/vk/common/links/b;->a(Ljava/lang/CharSequence;)Ljava/lang/CharSequence;
+    invoke-static {p2}, Lcom/vk/common/links/LinkParser;->a(Ljava/lang/CharSequence;)Ljava/lang/CharSequence;
 
     move-result-object p2
 
     const/4 v0, 0x1
 
-    invoke-static {p2, v0}, Lcom/vk/common/links/b;->a(Ljava/lang/CharSequence;Z)Ljava/lang/CharSequence;
+    invoke-static {p2, v0}, Lcom/vk/common/links/LinkParser;->a(Ljava/lang/CharSequence;Z)Ljava/lang/CharSequence;
 
     move-result-object p2
 
     .line 25
-    invoke-virtual {p1, p2}, Lcom/vk/emoji/b;->a(Ljava/lang/CharSequence;)Ljava/lang/CharSequence;
+    invoke-virtual {p1, p2}, Lcom/vk/emoji/Emoji;->a(Ljava/lang/CharSequence;)Ljava/lang/CharSequence;
 
     move-result-object p1
 
@@ -1177,17 +1177,17 @@
 
     .line 26
     :cond_0
-    invoke-static {}, Lcom/vk/emoji/b;->g()Lcom/vk/emoji/b;
+    invoke-static {}, Lcom/vk/emoji/Emoji;->g()Lcom/vk/emoji/Emoji;
 
     move-result-object p1
 
     iget-object p2, p0, Lcom/vtosters/lite/NewsComment;->a:Ljava/lang/String;
 
-    invoke-static {p2}, Lcom/vk/common/links/b;->a(Ljava/lang/CharSequence;)Ljava/lang/CharSequence;
+    invoke-static {p2}, Lcom/vk/common/links/LinkParser;->a(Ljava/lang/CharSequence;)Ljava/lang/CharSequence;
 
     move-result-object p2
 
-    invoke-virtual {p1, p2}, Lcom/vk/emoji/b;->a(Ljava/lang/CharSequence;)Ljava/lang/CharSequence;
+    invoke-virtual {p1, p2}, Lcom/vk/emoji/Emoji;->a(Ljava/lang/CharSequence;)Ljava/lang/CharSequence;
 
     move-result-object p1
 

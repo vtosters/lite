@@ -84,7 +84,7 @@
 
     iget-object p1, p1, Lcom/vk/webapp/ScopesController$b;->b:Ljava/lang/String;
 
-    invoke-static {v0, p1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v0, p1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result p1
 

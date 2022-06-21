@@ -3,7 +3,7 @@
 .source "BaseAutoPlayHolder.java"
 
 # interfaces
-.implements Lcom/vk/core/util/b;
+.implements Lcom/vk/core/util/AdapterPosition;
 
 
 # annotations

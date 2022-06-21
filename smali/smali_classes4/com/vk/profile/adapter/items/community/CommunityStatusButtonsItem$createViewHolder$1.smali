@@ -1,11 +1,11 @@
 .class public final Lcom/vk/profile/adapter/items/community/CommunityStatusButtonsItem$createViewHolder$1;
-.super Lcom/vtosters/lite/ui/b0/i;
+.super Lcom/vtosters/lite/ui/holder/RecyclerHolder;
 .source "CommunityStatusButtonsItem.kt"
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/profile/adapter/items/community/CommunityStatusButtonsItem;->a(Landroid/view/ViewGroup;)Lcom/vtosters/lite/ui/b0/i;
+    value = Lcom/vk/profile/adapter/items/community/CommunityStatusButtonsItem;->a(Landroid/view/ViewGroup;)Lcom/vtosters/lite/ui/holder/RecyclerHolder;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -15,7 +15,7 @@
 
 .annotation system Ldalvik/annotation/Signature;
     value = {
-        "Lcom/vtosters/lite/ui/b0/i<",
+        "Lcom/vtosters/lite/ui/holder/RecyclerHolder<",
         "Lcom/vk/profile/adapter/items/community/CommunityStatusButtonsItem;",
         ">;"
     }
@@ -47,7 +47,7 @@
     .line 1
     iput-object p1, p0, Lcom/vk/profile/adapter/items/community/CommunityStatusButtonsItem$createViewHolder$1;->f:Lcom/vk/profile/adapter/items/community/CommunityStatusButtonsItem;
 
-    invoke-direct {p0, p3}, Lcom/vtosters/lite/ui/b0/i;-><init>(Landroid/view/View;)V
+    invoke-direct {p0, p3}, Lcom/vtosters/lite/ui/holder/RecyclerHolder;-><init>(Landroid/view/View;)V
 
     .line 2
     iget-object p2, p0, Landroidx/recyclerview/widget/RecyclerView$ViewHolder;->itemView:Landroid/view/View;
@@ -118,7 +118,7 @@
 
     invoke-direct {p2, p0}, Lcom/vk/profile/adapter/items/community/CommunityStatusButtonsItem$createViewHolder$1$1;-><init>(Lcom/vk/profile/adapter/items/community/CommunityStatusButtonsItem$createViewHolder$1;)V
 
-    invoke-static {p1, p2}, Lcom/vk/extensions/ViewExtKt;->e(Landroid/view/View;Lkotlin/jvm/b/b;)V
+    invoke-static {p1, p2}, Lcom/vk/extensions/ViewExtKt;->e(Landroid/view/View;Lkotlin/jvm/b/Functions2;)V
 
     .line 7
     iget-object p1, p0, Lcom/vk/profile/adapter/items/community/CommunityStatusButtonsItem$createViewHolder$1;->d:Lcom/vk/profile/ui/community/StatusButtonView;
@@ -127,7 +127,7 @@
 
     invoke-direct {p2, p0}, Lcom/vk/profile/adapter/items/community/CommunityStatusButtonsItem$createViewHolder$1$2;-><init>(Lcom/vk/profile/adapter/items/community/CommunityStatusButtonsItem$createViewHolder$1;)V
 
-    invoke-static {p1, p2}, Lcom/vk/extensions/ViewExtKt;->e(Landroid/view/View;Lkotlin/jvm/b/b;)V
+    invoke-static {p1, p2}, Lcom/vk/extensions/ViewExtKt;->e(Landroid/view/View;Lkotlin/jvm/b/Functions2;)V
 
     .line 8
     iget-object p1, p0, Lcom/vk/profile/adapter/items/community/CommunityStatusButtonsItem$createViewHolder$1;->e:Lcom/vk/profile/ui/community/StatusButtonView;
@@ -136,7 +136,7 @@
 
     invoke-direct {p2, p0}, Lcom/vk/profile/adapter/items/community/CommunityStatusButtonsItem$createViewHolder$1$3;-><init>(Lcom/vk/profile/adapter/items/community/CommunityStatusButtonsItem$createViewHolder$1;)V
 
-    invoke-static {p1, p2}, Lcom/vk/extensions/ViewExtKt;->e(Landroid/view/View;Lkotlin/jvm/b/b;)V
+    invoke-static {p1, p2}, Lcom/vk/extensions/ViewExtKt;->e(Landroid/view/View;Lkotlin/jvm/b/Functions2;)V
 
     return-void
 
@@ -169,7 +169,7 @@
     .locals 0
 
     .line 1
-    iget-object p0, p0, Lcom/vtosters/lite/ui/b0/i;->b:Ljava/lang/Object;
+    iget-object p0, p0, Lcom/vtosters/lite/ui/holder/RecyclerHolder;->b:Ljava/lang/Object;
 
     check-cast p0, Lcom/vk/profile/adapter/items/community/CommunityStatusButtonsItem;
 
@@ -178,7 +178,7 @@
 
 
 # virtual methods
-.method public final a(Lcom/vtosters/lite/api/i;I)Lcom/vk/profile/ui/community/StatusButtonView$a;
+.method public final a(Lcom/vtosters/lite/api/ExtendedCommunityProfile;I)Lcom/vk/profile/ui/community/StatusButtonView$a;
     .locals 9
 
     const/4 v0, 0x2
@@ -209,7 +209,7 @@
     iget-boolean v0, p1, Lcom/vtosters/lite/api/ExtendedUserProfile;->X0:Z
 
     .line 6
-    invoke-static {p1}, Lcom/vk/profile/utils/d;->b(Lcom/vtosters/lite/api/ExtendedUserProfile;)Z
+    invoke-static {p1}, Lcom/vk/profile/utils/ProfileExt;->b(Lcom/vtosters/lite/api/ExtendedUserProfile;)Z
 
     move-result v3
 
@@ -262,7 +262,7 @@
     const v0, 0x7f080768
 
     .line 7
-    invoke-static {p1}, Lcom/vk/profile/utils/b;->a(Lcom/vtosters/lite/api/i;)Z
+    invoke-static {p1}, Lcom/vk/profile/utils/CommunityExt;->a(Lcom/vtosters/lite/api/ExtendedCommunityProfile;)Z
 
     move-result p1
 
@@ -311,13 +311,13 @@
     const v0, 0x7f0804a7
 
     .line 9
-    invoke-static {p1}, Lcom/vk/profile/utils/b;->h(Lcom/vtosters/lite/api/i;)Z
+    invoke-static {p1}, Lcom/vk/profile/utils/CommunityExt;->h(Lcom/vtosters/lite/api/ExtendedCommunityProfile;)Z
 
     move-result v3
 
     if-nez v3, :cond_c
 
-    invoke-static {p1}, Lcom/vk/profile/utils/b;->g(Lcom/vtosters/lite/api/i;)Z
+    invoke-static {p1}, Lcom/vk/profile/utils/CommunityExt;->g(Lcom/vtosters/lite/api/ExtendedCommunityProfile;)Z
 
     move-result v3
 
@@ -327,7 +327,7 @@
 
     .line 10
     :cond_9
-    invoke-static {p1}, Lcom/vk/profile/utils/b;->i(Lcom/vtosters/lite/api/i;)Z
+    invoke-static {p1}, Lcom/vk/profile/utils/CommunityExt;->i(Lcom/vtosters/lite/api/ExtendedCommunityProfile;)Z
 
     move-result v3
 
@@ -339,7 +339,7 @@
 
     .line 11
     :cond_a
-    invoke-static {p1}, Lcom/vk/profile/utils/b;->n(Lcom/vtosters/lite/api/i;)Z
+    invoke-static {p1}, Lcom/vk/profile/utils/CommunityExt;->n(Lcom/vtosters/lite/api/ExtendedCommunityProfile;)Z
 
     move-result p1
 
@@ -372,7 +372,7 @@
     const v0, 0x7f0804ad
 
     .line 12
-    invoke-static {p1}, Lcom/vk/profile/utils/b;->n(Lcom/vtosters/lite/api/i;)Z
+    invoke-static {p1}, Lcom/vk/profile/utils/CommunityExt;->n(Lcom/vtosters/lite/api/ExtendedCommunityProfile;)Z
 
     move-result v3
 
@@ -384,7 +384,7 @@
 
     .line 13
     :cond_e
-    invoke-static {p1}, Lcom/vk/profile/utils/b;->i(Lcom/vtosters/lite/api/i;)Z
+    invoke-static {p1}, Lcom/vk/profile/utils/CommunityExt;->i(Lcom/vtosters/lite/api/ExtendedCommunityProfile;)Z
 
     move-result v3
 
@@ -400,7 +400,7 @@
 
     .line 14
     :cond_f
-    invoke-static {p1}, Lcom/vk/profile/utils/b;->i(Lcom/vtosters/lite/api/i;)Z
+    invoke-static {p1}, Lcom/vk/profile/utils/CommunityExt;->i(Lcom/vtosters/lite/api/ExtendedCommunityProfile;)Z
 
     move-result v3
 
@@ -457,13 +457,13 @@
     .line 2
     iget-object v0, p0, Lcom/vk/profile/adapter/items/community/CommunityStatusButtonsItem$createViewHolder$1;->c:Lcom/vk/profile/ui/community/StatusButtonView;
 
-    invoke-static {p1}, Lcom/vk/profile/adapter/items/community/CommunityStatusButtonsItem;->a(Lcom/vk/profile/adapter/items/community/CommunityStatusButtonsItem;)Lcom/vtosters/lite/api/i;
+    invoke-static {p1}, Lcom/vk/profile/adapter/items/community/CommunityStatusButtonsItem;->a(Lcom/vk/profile/adapter/items/community/CommunityStatusButtonsItem;)Lcom/vtosters/lite/api/ExtendedCommunityProfile;
 
     move-result-object v1
 
     const/4 v2, 0x0
 
-    invoke-virtual {p0, v1, v2}, Lcom/vk/profile/adapter/items/community/CommunityStatusButtonsItem$createViewHolder$1;->a(Lcom/vtosters/lite/api/i;I)Lcom/vk/profile/ui/community/StatusButtonView$a;
+    invoke-virtual {p0, v1, v2}, Lcom/vk/profile/adapter/items/community/CommunityStatusButtonsItem$createViewHolder$1;->a(Lcom/vtosters/lite/api/ExtendedCommunityProfile;I)Lcom/vk/profile/ui/community/StatusButtonView$a;
 
     move-result-object v1
 
@@ -472,13 +472,13 @@
     .line 3
     iget-object v0, p0, Lcom/vk/profile/adapter/items/community/CommunityStatusButtonsItem$createViewHolder$1;->d:Lcom/vk/profile/ui/community/StatusButtonView;
 
-    invoke-static {p1}, Lcom/vk/profile/adapter/items/community/CommunityStatusButtonsItem;->a(Lcom/vk/profile/adapter/items/community/CommunityStatusButtonsItem;)Lcom/vtosters/lite/api/i;
+    invoke-static {p1}, Lcom/vk/profile/adapter/items/community/CommunityStatusButtonsItem;->a(Lcom/vk/profile/adapter/items/community/CommunityStatusButtonsItem;)Lcom/vtosters/lite/api/ExtendedCommunityProfile;
 
     move-result-object v1
 
     const/4 v2, 0x1
 
-    invoke-virtual {p0, v1, v2}, Lcom/vk/profile/adapter/items/community/CommunityStatusButtonsItem$createViewHolder$1;->a(Lcom/vtosters/lite/api/i;I)Lcom/vk/profile/ui/community/StatusButtonView$a;
+    invoke-virtual {p0, v1, v2}, Lcom/vk/profile/adapter/items/community/CommunityStatusButtonsItem$createViewHolder$1;->a(Lcom/vtosters/lite/api/ExtendedCommunityProfile;I)Lcom/vk/profile/ui/community/StatusButtonView$a;
 
     move-result-object v1
 
@@ -487,13 +487,13 @@
     .line 4
     iget-object v0, p0, Lcom/vk/profile/adapter/items/community/CommunityStatusButtonsItem$createViewHolder$1;->e:Lcom/vk/profile/ui/community/StatusButtonView;
 
-    invoke-static {p1}, Lcom/vk/profile/adapter/items/community/CommunityStatusButtonsItem;->a(Lcom/vk/profile/adapter/items/community/CommunityStatusButtonsItem;)Lcom/vtosters/lite/api/i;
+    invoke-static {p1}, Lcom/vk/profile/adapter/items/community/CommunityStatusButtonsItem;->a(Lcom/vk/profile/adapter/items/community/CommunityStatusButtonsItem;)Lcom/vtosters/lite/api/ExtendedCommunityProfile;
 
     move-result-object p1
 
     const/4 v1, 0x2
 
-    invoke-virtual {p0, p1, v1}, Lcom/vk/profile/adapter/items/community/CommunityStatusButtonsItem$createViewHolder$1;->a(Lcom/vtosters/lite/api/i;I)Lcom/vk/profile/ui/community/StatusButtonView$a;
+    invoke-virtual {p0, p1, v1}, Lcom/vk/profile/adapter/items/community/CommunityStatusButtonsItem$createViewHolder$1;->a(Lcom/vtosters/lite/api/ExtendedCommunityProfile;I)Lcom/vk/profile/ui/community/StatusButtonView$a;
 
     move-result-object p1
 

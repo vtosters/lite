@@ -3,12 +3,12 @@
 .source "QRViewUtils.kt"
 
 # interfaces
-.implements Lc/a/z/g;
+.implements Lio/reactivex/functions/Consumer;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/qrcode/QRViewUtils;->e(Landroid/app/Activity;Lcom/vk/qrcode/QRParser;Lcom/vk/qrcode/i;)V
+    value = Lcom/vk/qrcode/QRViewUtils;->e(Landroid/app/Activity;Lcom/vk/qrcode/QRParser;Lcom/vk/qrcode/QRTypes7;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -22,7 +22,7 @@
         "Ljava/lang/Object;",
         ">",
         "Ljava/lang/Object;",
-        "Lc/a/z/g<",
+        "Lio/reactivex/functions/Consumer<",
         "Lcom/vk/dto/user/UserProfile;",
         ">;"
     }
@@ -30,7 +30,7 @@
 
 
 # instance fields
-.field final synthetic a:Lcom/vk/qrcode/i;
+.field final synthetic a:Lcom/vk/qrcode/QRTypes7;
 
 .field final synthetic b:Landroid/app/Activity;
 
@@ -38,10 +38,10 @@
 
 
 # direct methods
-.method constructor <init>(Lcom/vk/qrcode/i;Landroid/app/Activity;Lcom/vk/qrcode/QRParser;)V
+.method constructor <init>(Lcom/vk/qrcode/QRTypes7;Landroid/app/Activity;Lcom/vk/qrcode/QRParser;)V
     .locals 0
 
-    iput-object p1, p0, Lcom/vk/qrcode/QRViewUtils$k;->a:Lcom/vk/qrcode/i;
+    iput-object p1, p0, Lcom/vk/qrcode/QRViewUtils$k;->a:Lcom/vk/qrcode/QRTypes7;
 
     iput-object p2, p0, Lcom/vk/qrcode/QRViewUtils$k;->b:Landroid/app/Activity;
 
@@ -60,7 +60,7 @@
     .line 1
     sget-object v0, Lcom/vk/dto/user/UserProfile;->f0:Lcom/vk/dto/user/UserProfile;
 
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v0
 
@@ -70,9 +70,9 @@
 
     .line 2
     :cond_0
-    iget-object v0, p0, Lcom/vk/qrcode/QRViewUtils$k;->a:Lcom/vk/qrcode/i;
+    iget-object v0, p0, Lcom/vk/qrcode/QRViewUtils$k;->a:Lcom/vk/qrcode/QRTypes7;
 
-    invoke-virtual {v0}, Lcom/vk/qrcode/i;->g()Lcom/vk/qrcode/QRTypes$SubType;
+    invoke-virtual {v0}, Lcom/vk/qrcode/QRTypes7;->g()Lcom/vk/qrcode/QRTypes$SubType;
 
     move-result-object v0
 
@@ -87,17 +87,17 @@
 
     iget-object v2, p0, Lcom/vk/qrcode/QRViewUtils$k;->c:Lcom/vk/qrcode/QRParser;
 
-    iget-object v3, p0, Lcom/vk/qrcode/QRViewUtils$k;->a:Lcom/vk/qrcode/i;
+    iget-object v3, p0, Lcom/vk/qrcode/QRViewUtils$k;->a:Lcom/vk/qrcode/QRTypes7;
 
-    invoke-static {v0, v1, v2, v3, p1}, Lcom/vk/qrcode/QRViewUtils;->a(Lcom/vk/qrcode/QRViewUtils;Landroid/app/Activity;Lcom/vk/qrcode/QRParser;Lcom/vk/qrcode/i;Lcom/vk/dto/user/UserProfile;)V
+    invoke-static {v0, v1, v2, v3, p1}, Lcom/vk/qrcode/QRViewUtils;->a(Lcom/vk/qrcode/QRViewUtils;Landroid/app/Activity;Lcom/vk/qrcode/QRParser;Lcom/vk/qrcode/QRTypes7;Lcom/vk/dto/user/UserProfile;)V
 
     goto :goto_0
 
     .line 4
     :cond_1
-    iget-object v0, p0, Lcom/vk/qrcode/QRViewUtils$k;->a:Lcom/vk/qrcode/i;
+    iget-object v0, p0, Lcom/vk/qrcode/QRViewUtils$k;->a:Lcom/vk/qrcode/QRTypes7;
 
-    invoke-virtual {v0}, Lcom/vk/qrcode/i;->g()Lcom/vk/qrcode/QRTypes$SubType;
+    invoke-virtual {v0}, Lcom/vk/qrcode/QRTypes7;->g()Lcom/vk/qrcode/QRTypes$SubType;
 
     move-result-object v0
 
@@ -112,9 +112,9 @@
 
     iget-object v2, p0, Lcom/vk/qrcode/QRViewUtils$k;->c:Lcom/vk/qrcode/QRParser;
 
-    iget-object v3, p0, Lcom/vk/qrcode/QRViewUtils$k;->a:Lcom/vk/qrcode/i;
+    iget-object v3, p0, Lcom/vk/qrcode/QRViewUtils$k;->a:Lcom/vk/qrcode/QRTypes7;
 
-    invoke-static {v0, v1, v2, v3, p1}, Lcom/vk/qrcode/QRViewUtils;->c(Lcom/vk/qrcode/QRViewUtils;Landroid/app/Activity;Lcom/vk/qrcode/QRParser;Lcom/vk/qrcode/i;Lcom/vk/dto/user/UserProfile;)V
+    invoke-static {v0, v1, v2, v3, p1}, Lcom/vk/qrcode/QRViewUtils;->c(Lcom/vk/qrcode/QRViewUtils;Landroid/app/Activity;Lcom/vk/qrcode/QRParser;Lcom/vk/qrcode/QRTypes7;Lcom/vk/dto/user/UserProfile;)V
 
     :cond_2
     :goto_0

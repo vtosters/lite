@@ -8,7 +8,7 @@
 
 .field private b:Z
 
-.field private c:Lcom/vk/core/drawable/j;
+.field private c:Lcom/vk/core/drawable/SectionBackground;
 
 .field private d:F
 
@@ -60,7 +60,7 @@
 
 
 # virtual methods
-.method public final a(Landroid/graphics/RectF;ZLcom/vk/core/drawable/j;FI)V
+.method public final a(Landroid/graphics/RectF;ZLcom/vk/core/drawable/SectionBackground;FI)V
     .locals 0
 
     .line 1
@@ -70,7 +70,7 @@
     iput-boolean p2, p0, Lcom/vk/core/tips/TipAnchorView;->b:Z
 
     .line 3
-    iput-object p3, p0, Lcom/vk/core/tips/TipAnchorView;->c:Lcom/vk/core/drawable/j;
+    iput-object p3, p0, Lcom/vk/core/tips/TipAnchorView;->c:Lcom/vk/core/drawable/SectionBackground;
 
     .line 4
     iput p4, p0, Lcom/vk/core/tips/TipAnchorView;->d:F
@@ -184,7 +184,7 @@
     goto :goto_1
 
     :cond_2
-    invoke-static {v3}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v3}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v2
 
@@ -210,13 +210,13 @@
 
     .line 11
     :cond_4
-    invoke-static {v3}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v3}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v2
 
     .line 12
     :cond_5
-    invoke-static {v3}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v3}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v2
 
@@ -272,7 +272,7 @@
     goto :goto_0
 
     :cond_0
-    invoke-static {v2}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v2}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v3
 
@@ -329,7 +329,7 @@
     invoke-virtual {p0, p1, p2}, Landroid/widget/FrameLayout;->setMeasuredDimension(II)V
 
     .line 12
-    iget-object p1, p0, Lcom/vk/core/tips/TipAnchorView;->c:Lcom/vk/core/drawable/j;
+    iget-object p1, p0, Lcom/vk/core/tips/TipAnchorView;->c:Lcom/vk/core/drawable/SectionBackground;
 
     if-eqz p1, :cond_8
 
@@ -346,7 +346,7 @@
 
     const-string v0, "it"
 
-    invoke-static {v5, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v5, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {v5}, Landroid/view/View;->getMeasuredWidth()I
 
@@ -390,7 +390,7 @@
     goto :goto_1
 
     :cond_2
-    invoke-static {v2}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v2}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v3
 
@@ -440,7 +440,7 @@
     goto :goto_1
 
     :cond_4
-    invoke-static {v2}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v2}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v3
 
@@ -449,19 +449,19 @@
     neg-int p2, v4
 
     .line 17
-    invoke-virtual {p1, p2}, Lcom/vk/core/drawable/j;->a(I)V
+    invoke-virtual {p1, p2}, Lcom/vk/core/drawable/SectionBackground;->a(I)V
 
     return-void
 
     .line 18
     :cond_6
-    invoke-static {v2}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v2}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v3
 
     .line 19
     :cond_7
-    invoke-static {v2}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v2}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v3
 
@@ -469,13 +469,13 @@
     const-string p1, "sectionBackground"
 
     .line 20
-    invoke-static {p1}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {p1}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v3
 
     .line 21
     :cond_9
-    invoke-static {v2}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v2}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v3
 .end method
@@ -581,13 +581,13 @@
 
     .line 11
     :cond_0
-    invoke-static {v3}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v3}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v2
 
     .line 12
     :cond_1
-    invoke-static {v3}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v3}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v2
 

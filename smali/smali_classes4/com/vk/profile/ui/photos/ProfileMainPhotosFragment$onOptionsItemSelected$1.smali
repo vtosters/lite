@@ -3,7 +3,7 @@
 .source "ProfileMainPhotosFragment.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/a;
+.implements Lkotlin/jvm/b/Functions;
 
 
 # annotations
@@ -19,8 +19,8 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/a<",
-        "Lkotlin/m;",
+        "Lkotlin/jvm/b/Functions<",
+        "Lkotlin/Unit;",
         ">;"
     }
 .end annotation
@@ -51,7 +51,7 @@
     .line 1
     invoke-virtual {p0}, Lcom/vk/profile/ui/photos/ProfileMainPhotosFragment$onOptionsItemSelected$1;->invoke()V
 
-    sget-object v0, Lkotlin/m;->a:Lkotlin/m;
+    sget-object v0, Lkotlin/Unit;->a:Lkotlin/Unit;
 
     return-object v0
 .end method
@@ -83,11 +83,11 @@
     invoke-virtual {v0, v2, v1}, Landroid/os/Bundle;->putInt(Ljava/lang/String;I)V
 
     .line 5
-    new-instance v1, Lcom/vk/navigation/o;
+    new-instance v1, Lcom/vk/navigation/Navigator;
 
-    const-class v2, Lcom/vtosters/lite/fragments/photos/c;
+    const-class v2, Lcom/vtosters/lite/fragments/photos/EditAlbumFragment;
 
-    invoke-direct {v1, v2, v0}, Lcom/vk/navigation/o;-><init>(Ljava/lang/Class;Landroid/os/Bundle;)V
+    invoke-direct {v1, v2, v0}, Lcom/vk/navigation/Navigator;-><init>(Ljava/lang/Class;Landroid/os/Bundle;)V
 
     .line 6
     new-instance v0, Lcom/vtosters/lite/TabletDialogActivity$b;
@@ -100,28 +100,28 @@
 
     const-string v2, "TabletDialogActivity.Bui\u2026etGravity(Gravity.CENTER)"
 
-    invoke-static {v0, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 7
-    invoke-static {v1, v0}, Lcom/vk/extensions/g;->a(Lcom/vk/navigation/o;Lcom/vk/navigation/o$a;)Lcom/vk/navigation/o;
+    invoke-static {v1, v0}, Lcom/vk/extensions/NavigatorExt;->a(Lcom/vk/navigation/Navigator;Lcom/vk/navigation/Navigator$a;)Lcom/vk/navigation/Navigator;
 
     const/4 v0, 0x1
 
     .line 8
-    invoke-virtual {v1, v0}, Lcom/vk/navigation/o;->b(Z)Lcom/vk/navigation/o;
+    invoke-virtual {v1, v0}, Lcom/vk/navigation/Navigator;->b(Z)Lcom/vk/navigation/Navigator;
 
     .line 9
     iget-object v0, p0, Lcom/vk/profile/ui/photos/ProfileMainPhotosFragment$onOptionsItemSelected$1;->this$0:Lcom/vk/profile/ui/photos/ProfileMainPhotosFragment;
 
     const/16 v2, 0x2067
 
-    invoke-virtual {v1, v0, v2}, Lcom/vk/navigation/o;->a(Lcom/vk/core/fragments/FragmentImpl;I)V
+    invoke-virtual {v1, v0, v2}, Lcom/vk/navigation/Navigator;->a(Lcom/vk/core/fragments/FragmentImpl;I)V
 
     return-void
 
     .line 10
     :cond_0
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     const/4 v0, 0x0
 

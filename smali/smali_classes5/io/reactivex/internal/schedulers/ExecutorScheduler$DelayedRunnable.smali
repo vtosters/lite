@@ -4,8 +4,8 @@
 
 # interfaces
 .implements Ljava/lang/Runnable;
-.implements Lio/reactivex/disposables/b;
-.implements Lc/a/f0/a;
+.implements Lio/reactivex/disposables/Disposable;
+.implements Lio/reactivex/schedulers/SchedulerRunnableIntrospection;
 
 
 # annotations
@@ -24,8 +24,8 @@
         "Ljava/lang/Runnable;",
         ">;",
         "Ljava/lang/Runnable;",
-        "Lio/reactivex/disposables/b;",
-        "Lc/a/f0/a;"
+        "Lio/reactivex/disposables/Disposable;",
+        "Lio/reactivex/schedulers/SchedulerRunnableIntrospection;"
     }
 .end annotation
 

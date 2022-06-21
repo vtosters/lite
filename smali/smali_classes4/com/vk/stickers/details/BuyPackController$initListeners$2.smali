@@ -3,7 +3,7 @@
 .source "BuyPackController.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/b;
+.implements Lkotlin/jvm/b/Functions2;
 
 
 # annotations
@@ -19,9 +19,9 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/b<",
+        "Lkotlin/jvm/b/Functions2<",
         "Landroid/view/View;",
-        "Lkotlin/m;",
+        "Lkotlin/Unit;",
         ">;"
     }
 .end annotation
@@ -58,7 +58,7 @@
     .locals 12
 
     .line 1
-    new-instance v0, Lb/h/c/k/a;
+    new-instance v0, Lcom/vk/api/gifts/GiftGetByStickerId;
 
     invoke-virtual {p1}, Landroid/view/View;->getContext()Landroid/content/Context;
 
@@ -70,14 +70,14 @@
 
     move-result v2
 
-    invoke-direct {v0, v1, v2}, Lb/h/c/k/a;-><init>(Landroid/content/Context;I)V
+    invoke-direct {v0, v1, v2}, Lcom/vk/api/gifts/GiftGetByStickerId;-><init>(Landroid/content/Context;I)V
 
     const/4 v1, 0x0
 
     const/4 v2, 0x1
 
     .line 2
-    invoke-static {v0, v1, v2, v1}, Lcom/vk/api/base/d;->d(Lcom/vk/api/base/d;Lcom/vk/api/base/e;ILjava/lang/Object;)Lc/a/m;
+    invoke-static {v0, v1, v2, v1}, Lcom/vk/api/base/ApiRequest;->d(Lcom/vk/api/base/ApiRequest;Lcom/vk/api/base/ApiThreadHolder;ILjava/lang/Object;)Lio/reactivex/Observable;
 
     move-result-object v3
 
@@ -98,7 +98,7 @@
 
     const/4 v11, 0x0
 
-    invoke-static/range {v3 .. v11}, Lcom/vk/core/extensions/RxExtKt;->a(Lc/a/m;Landroid/content/Context;JIZZILjava/lang/Object;)Lc/a/m;
+    invoke-static/range {v3 .. v11}, Lcom/vk/core/extensions/RxExtKt;->a(Lio/reactivex/Observable;Landroid/content/Context;JIZZILjava/lang/Object;)Lio/reactivex/Observable;
 
     move-result-object v0
 
@@ -111,22 +111,22 @@
     sget-object p1, Lcom/vk/stickers/details/BuyPackController$initListeners$2$b;->a:Lcom/vk/stickers/details/BuyPackController$initListeners$2$b;
 
     .line 6
-    invoke-virtual {v0, v1, p1}, Lc/a/m;->a(Lc/a/z/g;Lc/a/z/g;)Lio/reactivex/disposables/b;
+    invoke-virtual {v0, v1, p1}, Lio/reactivex/Observable;->a(Lio/reactivex/functions/Consumer;Lio/reactivex/functions/Consumer;)Lio/reactivex/disposables/Disposable;
 
     move-result-object p1
 
     const-string v0, "GiftGetByStickerId(v.con\u2026                       })"
 
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 7
     iget-object v0, p0, Lcom/vk/stickers/details/BuyPackController$initListeners$2;->this$0:Lcom/vk/stickers/details/BuyPackController;
 
-    invoke-static {v0}, Lcom/vk/stickers/details/BuyPackController;->a(Lcom/vk/stickers/details/BuyPackController;)Lio/reactivex/disposables/a;
+    invoke-static {v0}, Lcom/vk/stickers/details/BuyPackController;->a(Lcom/vk/stickers/details/BuyPackController;)Lio/reactivex/disposables/CompositeDisposable;
 
     move-result-object v0
 
-    invoke-static {p1, v0}, Lcom/vk/core/extensions/RxExtKt;->a(Lio/reactivex/disposables/b;Lio/reactivex/disposables/a;)Lio/reactivex/disposables/b;
+    invoke-static {p1, v0}, Lcom/vk/core/extensions/RxExtKt;->a(Lio/reactivex/disposables/Disposable;Lio/reactivex/disposables/CompositeDisposable;)Lio/reactivex/disposables/Disposable;
 
     return-void
 .end method
@@ -139,7 +139,7 @@
 
     invoke-virtual {p0, p1}, Lcom/vk/stickers/details/BuyPackController$initListeners$2;->a(Landroid/view/View;)V
 
-    sget-object p1, Lkotlin/m;->a:Lkotlin/m;
+    sget-object p1, Lkotlin/Unit;->a:Lkotlin/Unit;
 
     return-object p1
 .end method

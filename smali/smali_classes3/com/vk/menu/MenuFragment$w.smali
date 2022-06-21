@@ -46,9 +46,9 @@
 
     if-eqz v0, :cond_0
 
-    sget-object v0, Lcom/vk/menu/c;->c:Lcom/vk/menu/c;
+    sget-object v0, Lcom/vk/menu/MenuUtils;->c:Lcom/vk/menu/MenuUtils;
 
-    invoke-virtual {v0}, Lcom/vk/menu/c;->b()V
+    invoke-virtual {v0}, Lcom/vk/menu/MenuUtils;->b()V
 
     :cond_0
     return-void

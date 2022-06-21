@@ -3,7 +3,7 @@
 .source "CatalogReplacementPresenter.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/b;
+.implements Lkotlin/jvm/b/Functions2;
 
 
 # annotations
@@ -19,7 +19,7 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/b<",
+        "Lkotlin/jvm/b/Functions2<",
         "Lcom/vk/catalog2/core/blocks/UIBlockList;",
         "Ljava/lang/Boolean;",
         ">;"
@@ -56,7 +56,7 @@
 
     iget-object v0, p0, Lcom/vk/catalog2/core/presenters/CatalogReplacementPresenter$handleSectionReplacement$event$1;->$originalSectionId:Ljava/lang/String;
 
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result p1
 

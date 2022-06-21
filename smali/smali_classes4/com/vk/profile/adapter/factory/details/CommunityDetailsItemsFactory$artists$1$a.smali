@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/profile/adapter/factory/details/CommunityDetailsItemsFactory$artists$1;->a(Lcom/vtosters/lite/api/i;)Ljava/util/List;
+    value = Lcom/vk/profile/adapter/factory/details/CommunityDetailsItemsFactory$artists$1;->a(Lcom/vtosters/lite/api/ExtendedCommunityProfile;)Ljava/util/List;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -24,7 +24,7 @@
 
 
 # direct methods
-.method constructor <init>(Lcom/vk/dto/music/Artist;Lcom/vk/profile/adapter/factory/details/CommunityDetailsItemsFactory$artists$1;Lcom/vtosters/lite/api/i;)V
+.method constructor <init>(Lcom/vk/dto/music/Artist;Lcom/vk/profile/adapter/factory/details/CommunityDetailsItemsFactory$artists$1;Lcom/vtosters/lite/api/ExtendedCommunityProfile;)V
     .locals 0
 
     iput-object p1, p0, Lcom/vk/profile/adapter/factory/details/CommunityDetailsItemsFactory$artists$1$a;->a:Lcom/vk/dto/music/Artist;
@@ -42,9 +42,9 @@
     .locals 1
 
     .line 1
-    new-instance p1, Lcom/vk/music/fragment/k$g;
+    new-instance p1, Lcom/vk/music/fragment/MusicFragment$g;
 
-    invoke-direct {p1}, Lcom/vk/music/fragment/k$g;-><init>()V
+    invoke-direct {p1}, Lcom/vk/music/fragment/MusicFragment$g;-><init>()V
 
     .line 2
     iget-object v0, p0, Lcom/vk/profile/adapter/factory/details/CommunityDetailsItemsFactory$artists$1$a;->a:Lcom/vk/dto/music/Artist;
@@ -53,14 +53,14 @@
 
     move-result-object v0
 
-    invoke-virtual {p1, v0}, Lcom/vk/music/fragment/k$g;->a(Ljava/lang/String;)Lcom/vk/music/fragment/k$g;
+    invoke-virtual {p1, v0}, Lcom/vk/music/fragment/MusicFragment$g;->a(Ljava/lang/String;)Lcom/vk/music/fragment/MusicFragment$g;
 
     .line 3
     iget-object v0, p0, Lcom/vk/profile/adapter/factory/details/CommunityDetailsItemsFactory$artists$1$a;->b:Lcom/vk/profile/adapter/factory/details/CommunityDetailsItemsFactory$artists$1;
 
     iget-object v0, v0, Lcom/vk/profile/adapter/factory/details/CommunityDetailsItemsFactory$artists$1;->$context:Landroid/content/Context;
 
-    invoke-virtual {p1, v0}, Lcom/vk/navigation/o;->a(Landroid/content/Context;)V
+    invoke-virtual {p1, v0}, Lcom/vk/navigation/Navigator;->a(Landroid/content/Context;)V
 
     return-void
 .end method

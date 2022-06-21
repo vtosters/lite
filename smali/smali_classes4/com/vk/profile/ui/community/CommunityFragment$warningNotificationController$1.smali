@@ -3,7 +3,7 @@
 .source "CommunityFragment.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/a;
+.implements Lkotlin/jvm/b/Functions;
 
 
 # annotations
@@ -19,8 +19,8 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/a<",
-        "Lcom/vk/profile/ui/community/d;",
+        "Lkotlin/jvm/b/Functions<",
+        "Lcom/vk/profile/ui/community/WarningNotificationController;",
         ">;"
     }
 .end annotation
@@ -45,11 +45,11 @@
 
 
 # virtual methods
-.method public final invoke()Lcom/vk/profile/ui/community/d;
+.method public final invoke()Lcom/vk/profile/ui/community/WarningNotificationController;
     .locals 2
 
     .line 2
-    new-instance v0, Lcom/vk/profile/ui/community/d;
+    new-instance v0, Lcom/vk/profile/ui/community/WarningNotificationController;
 
     iget-object v1, p0, Lcom/vk/profile/ui/community/CommunityFragment$warningNotificationController$1;->this$0:Lcom/vk/profile/ui/community/CommunityFragment;
 
@@ -57,7 +57,7 @@
 
     move-result-object v1
 
-    invoke-direct {v0, v1}, Lcom/vk/profile/ui/community/d;-><init>(Lcom/vk/profile/adapter/di/CommunityFragmentUiScope;)V
+    invoke-direct {v0, v1}, Lcom/vk/profile/ui/community/WarningNotificationController;-><init>(Lcom/vk/profile/adapter/di/CommunityFragmentUiScope;)V
 
     return-object v0
 .end method
@@ -66,7 +66,7 @@
     .locals 1
 
     .line 1
-    invoke-virtual {p0}, Lcom/vk/profile/ui/community/CommunityFragment$warningNotificationController$1;->invoke()Lcom/vk/profile/ui/community/d;
+    invoke-virtual {p0}, Lcom/vk/profile/ui/community/CommunityFragment$warningNotificationController$1;->invoke()Lcom/vk/profile/ui/community/WarningNotificationController;
 
     move-result-object v0
 

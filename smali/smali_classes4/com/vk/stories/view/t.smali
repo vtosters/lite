@@ -3,7 +3,7 @@
 .source "lambda"
 
 # interfaces
-.implements Lkotlin/jvm/b/a;
+.implements Lkotlin/jvm/b/Functions;
 
 
 # instance fields
@@ -28,7 +28,7 @@
 
     iget-object v0, p0, Lcom/vk/stories/view/t;->a:Lcom/vk/stories/view/StoryView;
 
-    invoke-virtual {v0}, Lcom/vk/stories/view/StoryView;->R()Lkotlin/m;
+    invoke-virtual {v0}, Lcom/vk/stories/view/StoryView;->R()Lkotlin/Unit;
 
     move-result-object v0
 

@@ -3,7 +3,7 @@
 .source "StoryHashtagDialogPresenter.kt"
 
 # interfaces
-.implements Lc/a/z/j;
+.implements Lio/reactivex/functions/Function;
 
 
 # annotations
@@ -24,9 +24,9 @@
         "Ljava/lang/Object;",
         ">",
         "Ljava/lang/Object;",
-        "Lc/a/z/j<",
+        "Lio/reactivex/functions/Function<",
         "TT;",
-        "Lc/a/p<",
+        "Lio/reactivex/ObservableSource<",
         "+TR;>;>;"
     }
 .end annotation
@@ -49,14 +49,14 @@
 
 
 # virtual methods
-.method public final a(Ljava/lang/String;)Lc/a/m;
+.method public final a(Ljava/lang/String;)Lio/reactivex/Observable;
     .locals 2
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
             "Ljava/lang/String;",
             ")",
-            "Lc/a/m<",
+            "Lio/reactivex/Observable<",
             "Lcom/vk/stories/clickable/models/StoryHashtagSearchResult;",
             ">;"
         }
@@ -81,7 +81,7 @@
     if-eqz v0, :cond_0
 
     .line 3
-    invoke-static {v0}, Lc/a/m;->e(Ljava/lang/Object;)Lc/a/m;
+    invoke-static {v0}, Lio/reactivex/Observable;->e(Ljava/lang/Object;)Lio/reactivex/Observable;
 
     move-result-object p1
 
@@ -89,9 +89,9 @@
 
     .line 4
     :cond_0
-    sget-object v0, Lcom/vk/stories/clickable/e;->i:Lcom/vk/stories/clickable/e;
+    sget-object v0, Lcom/vk/stories/clickable/StoryClickableController;->i:Lcom/vk/stories/clickable/StoryClickableController;
 
-    invoke-virtual {v0, p1}, Lcom/vk/stories/clickable/e;->a(Ljava/lang/String;)Lc/a/m;
+    invoke-virtual {v0, p1}, Lcom/vk/stories/clickable/StoryClickableController;->a(Ljava/lang/String;)Lio/reactivex/Observable;
 
     move-result-object p1
 
@@ -105,7 +105,7 @@
     .line 1
     check-cast p1, Ljava/lang/String;
 
-    invoke-virtual {p0, p1}, Lcom/vk/stories/clickable/dialogs/hashtag/StoryHashtagDialogPresenter$d;->a(Ljava/lang/String;)Lc/a/m;
+    invoke-virtual {p0, p1}, Lcom/vk/stories/clickable/dialogs/hashtag/StoryHashtagDialogPresenter$d;->a(Ljava/lang/String;)Lio/reactivex/Observable;
 
     move-result-object p1
 

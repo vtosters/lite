@@ -1,5 +1,5 @@
 .class public final Lcom/vk/ui/photoviewer/VkAppCallback;
-.super Lcom/vk/photoviewer/c;
+.super Lcom/vk/photoviewer/CallbackAdapter;
 .source "VkAppCallback.kt"
 
 
@@ -14,7 +14,7 @@
 
 .annotation system Ldalvik/annotation/Signature;
     value = {
-        "Lcom/vk/photoviewer/c<",
+        "Lcom/vk/photoviewer/CallbackAdapter<",
         "Lcom/vk/dto/common/AttachmentWithMedia;",
         ">;"
     }
@@ -32,7 +32,7 @@
 
 .field private F:Lcom/vk/ui/photoviewer/VkAppCallback$c;
 
-.field private G:Lcom/vk/navigation/g;
+.field private G:Lcom/vk/navigation/Dismissed;
 
 .field private H:Lcom/vk/photoviewer/PhotoViewer;
 
@@ -48,11 +48,11 @@
     .end annotation
 .end field
 
-.field private final K:Lcom/vk/core/ui/tracking/internal/b;
+.field private final K:Lcom/vk/core/ui/tracking/internal/UiTrackingListener1;
 
 .field private final L:Lcom/vk/ui/photoviewer/VkAppCallback$d;
 
-.field private final M:Lcom/vk/bridges/p$a;
+.field private final M:Lcom/vk/bridges/ImageViewer$a;
 
 .field private final N:Landroid/app/Activity;
 
@@ -66,7 +66,7 @@
     .end annotation
 .end field
 
-.field private final e:Lio/reactivex/disposables/a;
+.field private final e:Lio/reactivex/disposables/CompositeDisposable;
 
 .field private final f:Lcom/vk/navigation/NavigationDelegate;
     .annotation system Ldalvik/annotation/Signature;
@@ -77,13 +77,13 @@
     .end annotation
 .end field
 
-.field private g:Lkotlin/jvm/b/b;
+.field private g:Lkotlin/jvm/b/Functions2;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Lkotlin/jvm/b/b<",
+            "Lkotlin/jvm/b/Functions2<",
             "-",
             "Lcom/vk/dto/photo/Photo;",
-            "Lkotlin/m;",
+            "Lkotlin/Unit;",
             ">;"
         }
     .end annotation
@@ -93,7 +93,7 @@
 
 
 # direct methods
-.method public constructor <init>(Ljava/util/List;Lcom/vk/photoviewer/PhotoViewer$d;Lcom/vk/bridges/p$a;Landroid/app/Activity;)V
+.method public constructor <init>(Ljava/util/List;Lcom/vk/photoviewer/PhotoViewer$d;Lcom/vk/bridges/ImageViewer$a;Landroid/app/Activity;)V
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -103,16 +103,16 @@
             "Lcom/vk/dto/common/AttachmentWithMedia;",
             ">;",
             "Lcom/vk/photoviewer/PhotoViewer$d;",
-            "Lcom/vk/bridges/p$a;",
+            "Lcom/vk/bridges/ImageViewer$a;",
             "Landroid/app/Activity;",
             ")V"
         }
     .end annotation
 
     .line 1
-    invoke-direct {p0, p2}, Lcom/vk/photoviewer/c;-><init>(Lcom/vk/photoviewer/PhotoViewer$d;)V
+    invoke-direct {p0, p2}, Lcom/vk/photoviewer/CallbackAdapter;-><init>(Lcom/vk/photoviewer/PhotoViewer$d;)V
 
-    iput-object p3, p0, Lcom/vk/ui/photoviewer/VkAppCallback;->M:Lcom/vk/bridges/p$a;
+    iput-object p3, p0, Lcom/vk/ui/photoviewer/VkAppCallback;->M:Lcom/vk/bridges/ImageViewer$a;
 
     iput-object p4, p0, Lcom/vk/ui/photoviewer/VkAppCallback;->N:Landroid/app/Activity;
 
@@ -124,16 +124,16 @@
     iput-object p2, p0, Lcom/vk/ui/photoviewer/VkAppCallback;->d:Ljava/util/List;
 
     .line 3
-    new-instance p2, Lio/reactivex/disposables/a;
+    new-instance p2, Lio/reactivex/disposables/CompositeDisposable;
 
-    invoke-direct {p2}, Lio/reactivex/disposables/a;-><init>()V
+    invoke-direct {p2}, Lio/reactivex/disposables/CompositeDisposable;-><init>()V
 
-    iput-object p2, p0, Lcom/vk/ui/photoviewer/VkAppCallback;->e:Lio/reactivex/disposables/a;
+    iput-object p2, p0, Lcom/vk/ui/photoviewer/VkAppCallback;->e:Lio/reactivex/disposables/CompositeDisposable;
 
     .line 4
     iget-object p2, p0, Lcom/vk/ui/photoviewer/VkAppCallback;->N:Landroid/app/Activity;
 
-    instance-of p3, p2, Lcom/vk/navigation/n;
+    instance-of p3, p2, Lcom/vk/navigation/NavigationDelegateProvider;
 
     const/4 p4, 0x0
 
@@ -142,11 +142,11 @@
     move-object p2, p4
 
     :cond_0
-    check-cast p2, Lcom/vk/navigation/n;
+    check-cast p2, Lcom/vk/navigation/NavigationDelegateProvider;
 
     if-eqz p2, :cond_1
 
-    invoke-interface {p2}, Lcom/vk/navigation/n;->E0()Lcom/vk/navigation/NavigationDelegate;
+    invoke-interface {p2}, Lcom/vk/navigation/NavigationDelegateProvider;->E0()Lcom/vk/navigation/NavigationDelegate;
 
     move-result-object p4
 
@@ -158,18 +158,18 @@
 
     invoke-direct {p2, p0}, Lcom/vk/ui/photoviewer/VkAppCallback$onAttachGoodListener$1;-><init>(Lcom/vk/ui/photoviewer/VkAppCallback;)V
 
-    iput-object p2, p0, Lcom/vk/ui/photoviewer/VkAppCallback;->g:Lkotlin/jvm/b/b;
+    iput-object p2, p0, Lcom/vk/ui/photoviewer/VkAppCallback;->g:Lkotlin/jvm/b/Functions2;
 
     .line 6
     new-instance p2, Lcom/vk/ui/photoviewer/MenuController;
 
-    iget-object p3, p0, Lcom/vk/ui/photoviewer/VkAppCallback;->M:Lcom/vk/bridges/p$a;
+    iget-object p3, p0, Lcom/vk/ui/photoviewer/VkAppCallback;->M:Lcom/vk/bridges/ImageViewer$a;
 
     iget-object p4, p0, Lcom/vk/ui/photoviewer/VkAppCallback;->N:Landroid/app/Activity;
 
-    iget-object v0, p0, Lcom/vk/ui/photoviewer/VkAppCallback;->g:Lkotlin/jvm/b/b;
+    iget-object v0, p0, Lcom/vk/ui/photoviewer/VkAppCallback;->g:Lkotlin/jvm/b/Functions2;
 
-    invoke-direct {p2, p3, p4, v0}, Lcom/vk/ui/photoviewer/MenuController;-><init>(Lcom/vk/bridges/p$a;Landroid/app/Activity;Lkotlin/jvm/b/b;)V
+    invoke-direct {p2, p3, p4, v0}, Lcom/vk/ui/photoviewer/MenuController;-><init>(Lcom/vk/bridges/ImageViewer$a;Landroid/app/Activity;Lkotlin/jvm/b/Functions2;)V
 
     iput-object p2, p0, Lcom/vk/ui/photoviewer/VkAppCallback;->h:Lcom/vk/ui/photoviewer/MenuController;
 
@@ -182,7 +182,7 @@
 
     invoke-direct {p4, p0}, Lcom/vk/ui/photoviewer/VkAppCallback$taggedGoodsController$1;-><init>(Lcom/vk/ui/photoviewer/VkAppCallback;)V
 
-    invoke-direct {p2, p3, p4}, Lcom/vk/ui/photoviewer/TaggedGoodsController;-><init>(Landroid/content/Context;Lkotlin/jvm/b/b;)V
+    invoke-direct {p2, p3, p4}, Lcom/vk/ui/photoviewer/TaggedGoodsController;-><init>(Landroid/content/Context;Lkotlin/jvm/b/Functions2;)V
 
     iput-object p2, p0, Lcom/vk/ui/photoviewer/VkAppCallback;->D:Lcom/vk/ui/photoviewer/TaggedGoodsController;
 
@@ -194,21 +194,21 @@
     iput-object p2, p0, Lcom/vk/ui/photoviewer/VkAppCallback;->J:Ljava/util/Set;
 
     .line 9
-    new-instance p2, Lcom/vk/core/ui/tracking/internal/b;
+    new-instance p2, Lcom/vk/core/ui/tracking/internal/UiTrackingListener1;
 
-    new-instance p3, Lcom/vk/core/ui/tracking/internal/a;
+    new-instance p3, Lcom/vk/core/ui/tracking/internal/UiTrackingListener;
 
-    sget-object p4, Lcom/vk/core/ui/v/a;->g:Lcom/vk/core/ui/v/a;
+    sget-object p4, Lcom/vk/core/ui/v/UiTracker;->g:Lcom/vk/core/ui/v/UiTracker;
 
-    invoke-virtual {p4}, Lcom/vk/core/ui/v/a;->e()Lcom/vk/core/ui/tracking/internal/f;
+    invoke-virtual {p4}, Lcom/vk/core/ui/v/UiTracker;->e()Lcom/vk/core/ui/tracking/internal/UiTrackingListener2;
 
     move-result-object p4
 
-    invoke-direct {p3, p4}, Lcom/vk/core/ui/tracking/internal/a;-><init>(Lcom/vk/core/ui/v/b;)V
+    invoke-direct {p3, p4}, Lcom/vk/core/ui/tracking/internal/UiTrackingListener;-><init>(Lcom/vk/core/ui/v/UiTrackingListeners1;)V
 
-    invoke-direct {p2, p3}, Lcom/vk/core/ui/tracking/internal/b;-><init>(Lcom/vk/core/ui/v/b;)V
+    invoke-direct {p2, p3}, Lcom/vk/core/ui/tracking/internal/UiTrackingListener1;-><init>(Lcom/vk/core/ui/v/UiTrackingListeners1;)V
 
-    iput-object p2, p0, Lcom/vk/ui/photoviewer/VkAppCallback;->K:Lcom/vk/core/ui/tracking/internal/b;
+    iput-object p2, p0, Lcom/vk/ui/photoviewer/VkAppCallback;->K:Lcom/vk/core/ui/tracking/internal/UiTrackingListener1;
 
     .line 10
     new-instance p2, Lcom/vk/ui/photoviewer/VkAppCallback$d;
@@ -221,18 +221,18 @@
     invoke-virtual {p0, p1}, Lcom/vk/ui/photoviewer/VkAppCallback;->a(Ljava/util/List;)V
 
     .line 12
-    iget-object p1, p0, Lcom/vk/ui/photoviewer/VkAppCallback;->M:Lcom/vk/bridges/p$a;
+    iget-object p1, p0, Lcom/vk/ui/photoviewer/VkAppCallback;->M:Lcom/vk/bridges/ImageViewer$a;
 
-    invoke-interface {p1}, Lcom/vk/bridges/p$a;->g()Lcom/vk/bridges/p$c;
+    invoke-interface {p1}, Lcom/vk/bridges/ImageViewer$a;->g()Lcom/vk/bridges/ImageViewer$c;
 
     move-result-object p1
 
-    invoke-virtual {p1}, Lcom/vk/bridges/p$c;->b()Z
+    invoke-virtual {p1}, Lcom/vk/bridges/ImageViewer$c;->b()Z
 
     .line 13
-    iget-object p1, p0, Lcom/vk/ui/photoviewer/VkAppCallback;->K:Lcom/vk/core/ui/tracking/internal/b;
+    iget-object p1, p0, Lcom/vk/ui/photoviewer/VkAppCallback;->K:Lcom/vk/core/ui/tracking/internal/UiTrackingListener1;
 
-    invoke-virtual {p1}, Lcom/vk/core/ui/tracking/internal/b;->a()V
+    invoke-virtual {p1}, Lcom/vk/core/ui/tracking/internal/UiTrackingListener1;->a()V
 
     return-void
 .end method
@@ -269,11 +269,11 @@
 
     .line 30
     :cond_0
-    new-instance v0, Lcom/vk/core/ui/v/g;
+    new-instance v0, Lcom/vk/core/ui/v/UiTrackingScreen;
 
     sget-object v1, Lcom/vk/stat/scheme/SchemeStat$EventScreen;->PHOTO_BROWSER:Lcom/vk/stat/scheme/SchemeStat$EventScreen;
 
-    invoke-direct {v0, v1}, Lcom/vk/core/ui/v/g;-><init>(Lcom/vk/stat/scheme/SchemeStat$EventScreen;)V
+    invoke-direct {v0, v1}, Lcom/vk/core/ui/v/UiTrackingScreen;-><init>(Lcom/vk/stat/scheme/SchemeStat$EventScreen;)V
 
     .line 31
     new-instance v1, Lcom/vk/stat/scheme/SchemeStat$EventItem;
@@ -282,7 +282,7 @@
     sget-object v3, Lcom/vk/stat/scheme/SchemeStat$EventItem$Type;->PHOTO:Lcom/vk/stat/scheme/SchemeStat$EventItem$Type;
 
     .line 33
-    invoke-interface {p1}, Lcom/vk/dto/common/j;->getId()I
+    invoke-interface {p1}, Lcom/vk/dto/common/WithId;->getId()I
 
     move-result v2
 
@@ -291,7 +291,7 @@
     move-result-object v4
 
     .line 34
-    invoke-interface {p1}, Lcom/vk/dto/common/k;->b()I
+    invoke-interface {p1}, Lcom/vk/dto/common/WithOwner;->b()I
 
     move-result p1
 
@@ -308,19 +308,19 @@
     move-object v2, v1
 
     .line 35
-    invoke-direct/range {v2 .. v8}, Lcom/vk/stat/scheme/SchemeStat$EventItem;-><init>(Lcom/vk/stat/scheme/SchemeStat$EventItem$Type;Ljava/lang/Integer;Ljava/lang/Integer;Ljava/lang/String;ILkotlin/jvm/internal/i;)V
+    invoke-direct/range {v2 .. v8}, Lcom/vk/stat/scheme/SchemeStat$EventItem;-><init>(Lcom/vk/stat/scheme/SchemeStat$EventItem$Type;Ljava/lang/Integer;Ljava/lang/Integer;Ljava/lang/String;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     .line 36
-    invoke-virtual {v0, v1}, Lcom/vk/core/ui/v/g;->a(Lcom/vk/stat/scheme/SchemeStat$EventItem;)V
+    invoke-virtual {v0, v1}, Lcom/vk/core/ui/v/UiTrackingScreen;->a(Lcom/vk/stat/scheme/SchemeStat$EventItem;)V
 
     .line 37
-    iget-object p1, p0, Lcom/vk/ui/photoviewer/VkAppCallback;->K:Lcom/vk/core/ui/tracking/internal/b;
+    iget-object p1, p0, Lcom/vk/ui/photoviewer/VkAppCallback;->K:Lcom/vk/core/ui/tracking/internal/UiTrackingListener1;
 
     const/4 v1, 0x0
 
     const/4 v2, 0x1
 
-    invoke-virtual {p1, v1, v0, v2}, Lcom/vk/core/ui/tracking/internal/b;->a(Lcom/vk/core/ui/v/g;Lcom/vk/core/ui/v/g;Z)V
+    invoke-virtual {p1, v1, v0, v2}, Lcom/vk/core/ui/tracking/internal/UiTrackingListener1;->a(Lcom/vk/core/ui/v/UiTrackingScreen;Lcom/vk/core/ui/v/UiTrackingScreen;Z)V
 
     return-void
 .end method
@@ -329,23 +329,23 @@
     .locals 5
 
     .line 62
-    sget-object v0, Lcom/vk/newsfeed/controllers/a;->e:Lcom/vk/newsfeed/controllers/a;
+    sget-object v0, Lcom/vk/newsfeed/controllers/NewsfeedController;->e:Lcom/vk/newsfeed/controllers/NewsfeedController;
 
-    invoke-virtual {v0}, Lcom/vk/newsfeed/controllers/a;->n()Lb/h/g/l/d;
+    invoke-virtual {v0}, Lcom/vk/newsfeed/controllers/NewsfeedController;->n()Lb/h/g/l/NotificationCenter;
 
     move-result-object v0
 
     .line 63
     iget-object v1, p0, Lcom/vk/ui/photoviewer/VkAppCallback;->d:Ljava/util/List;
 
-    invoke-static {v1}, Lkotlin/collections/l;->d(Ljava/lang/Iterable;)Lkotlin/sequences/j;
+    invoke-static {v1}, Lkotlin/collections/l;->d(Ljava/lang/Iterable;)Lkotlin/sequences/Sequence;
 
     move-result-object v1
 
     .line 64
     sget-object v2, Lcom/vk/ui/photoviewer/VkAppCallback$onPhotoTagsUpdated$1;->a:Lcom/vk/ui/photoviewer/VkAppCallback$onPhotoTagsUpdated$1;
 
-    invoke-static {v1, v2}, Lkotlin/sequences/m;->f(Lkotlin/sequences/j;Lkotlin/jvm/b/b;)Lkotlin/sequences/j;
+    invoke-static {v1, v2}, Lkotlin/sequences/m;->f(Lkotlin/sequences/Sequence;Lkotlin/jvm/b/Functions2;)Lkotlin/sequences/Sequence;
 
     move-result-object v1
 
@@ -354,12 +354,12 @@
 
     invoke-direct {v2, p1}, Lcom/vk/ui/photoviewer/VkAppCallback$onPhotoTagsUpdated$2;-><init>(Lcom/vk/dto/photo/Photo;)V
 
-    invoke-static {v1, v2}, Lkotlin/sequences/m;->b(Lkotlin/sequences/j;Lkotlin/jvm/b/b;)Lkotlin/sequences/j;
+    invoke-static {v1, v2}, Lkotlin/sequences/m;->b(Lkotlin/sequences/Sequence;Lkotlin/jvm/b/Functions2;)Lkotlin/sequences/Sequence;
 
     move-result-object v1
 
     .line 66
-    invoke-interface {v1}, Lkotlin/sequences/j;->iterator()Ljava/util/Iterator;
+    invoke-interface {v1}, Lkotlin/sequences/Sequence;->iterator()Ljava/util/Iterator;
 
     move-result-object v1
 
@@ -391,7 +391,7 @@
     const/16 v3, 0x78
 
     .line 69
-    invoke-virtual {v0, v3, v2}, Lb/h/g/l/d;->a(ILjava/lang/Object;)V
+    invoke-virtual {v0, v3, v2}, Lb/h/g/l/NotificationCenter;->a(ILjava/lang/Object;)V
 
     goto :goto_0
 
@@ -399,22 +399,22 @@
     const/16 v1, 0x71
 
     .line 70
-    invoke-virtual {v0, v1, p1}, Lb/h/g/l/d;->a(ILjava/lang/Object;)V
+    invoke-virtual {v0, v1, p1}, Lb/h/g/l/NotificationCenter;->a(ILjava/lang/Object;)V
 
     return-void
 .end method
 
-.method private final a(Lcom/vk/dto/photo/Photo;ZLkotlin/jvm/b/b;)V
+.method private final a(Lcom/vk/dto/photo/Photo;ZLkotlin/jvm/b/Functions2;)V
     .locals 6
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
             "Lcom/vk/dto/photo/Photo;",
             "Z",
-            "Lkotlin/jvm/b/b<",
+            "Lkotlin/jvm/b/Functions2<",
             "-",
             "Lcom/vk/dto/photo/Photo;",
-            "Lkotlin/m;",
+            "Lkotlin/Unit;",
             ">;)V"
         }
     .end annotation
@@ -479,7 +479,7 @@
 
     .line 40
     :cond_2
-    new-instance v1, Lcom/vk/api/photos/n;
+    new-instance v1, Lcom/vk/api/photos/PhotosGetInfo;
 
     iget v3, p1, Lcom/vk/dto/photo/Photo;->c:I
 
@@ -487,10 +487,10 @@
 
     iget-object v5, p1, Lcom/vk/dto/photo/Photo;->M:Ljava/lang/String;
 
-    invoke-direct {v1, v3, v4, v5}, Lcom/vk/api/photos/n;-><init>(IILjava/lang/String;)V
+    invoke-direct {v1, v3, v4, v5}, Lcom/vk/api/photos/PhotosGetInfo;-><init>(IILjava/lang/String;)V
 
     .line 41
-    invoke-static {v1, v2, v0, v2}, Lcom/vk/api/base/d;->d(Lcom/vk/api/base/d;Lcom/vk/api/base/e;ILjava/lang/Object;)Lc/a/m;
+    invoke-static {v1, v2, v0, v2}, Lcom/vk/api/base/ApiRequest;->d(Lcom/vk/api/base/ApiRequest;Lcom/vk/api/base/ApiThreadHolder;ILjava/lang/Object;)Lio/reactivex/Observable;
 
     move-result-object v0
 
@@ -499,7 +499,7 @@
 
     invoke-direct {v1, p0, p1}, Lcom/vk/ui/photoviewer/VkAppCallback$h;-><init>(Lcom/vk/ui/photoviewer/VkAppCallback;Lcom/vk/dto/photo/Photo;)V
 
-    invoke-virtual {v0, v1}, Lc/a/m;->e(Lc/a/z/g;)Lc/a/m;
+    invoke-virtual {v0, v1}, Lio/reactivex/Observable;->e(Lio/reactivex/functions/Consumer;)Lio/reactivex/Observable;
 
     move-result-object v0
 
@@ -508,14 +508,14 @@
 
     invoke-direct {v1, p0, p1}, Lcom/vk/ui/photoviewer/VkAppCallback$i;-><init>(Lcom/vk/ui/photoviewer/VkAppCallback;Lcom/vk/dto/photo/Photo;)V
 
-    invoke-virtual {v0, v1}, Lc/a/m;->e(Lc/a/z/a;)Lc/a/m;
+    invoke-virtual {v0, v1}, Lio/reactivex/Observable;->e(Lio/reactivex/functions/Action;)Lio/reactivex/Observable;
 
     move-result-object v0
 
     .line 44
     new-instance v1, Lcom/vk/ui/photoviewer/VkAppCallback$j;
 
-    invoke-direct {v1, p1, p3}, Lcom/vk/ui/photoviewer/VkAppCallback$j;-><init>(Lcom/vk/dto/photo/Photo;Lkotlin/jvm/b/b;)V
+    invoke-direct {v1, p1, p3}, Lcom/vk/ui/photoviewer/VkAppCallback$j;-><init>(Lcom/vk/dto/photo/Photo;Lkotlin/jvm/b/Functions2;)V
 
     .line 45
     new-instance p1, Lcom/vk/ui/photoviewer/VkAppCallback$k;
@@ -523,24 +523,24 @@
     invoke-direct {p1, p2}, Lcom/vk/ui/photoviewer/VkAppCallback$k;-><init>(Z)V
 
     .line 46
-    invoke-virtual {v0, v1, p1}, Lc/a/m;->a(Lc/a/z/g;Lc/a/z/g;)Lio/reactivex/disposables/b;
+    invoke-virtual {v0, v1, p1}, Lio/reactivex/Observable;->a(Lio/reactivex/functions/Consumer;Lio/reactivex/functions/Consumer;)Lio/reactivex/disposables/Disposable;
 
     move-result-object p1
 
     const-string p2, "PhotosGetInfo(photo.owne\u2026rror()\n                })"
 
-    invoke-static {p1, p2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, p2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 47
-    iget-object p2, p0, Lcom/vk/ui/photoviewer/VkAppCallback;->e:Lio/reactivex/disposables/a;
+    iget-object p2, p0, Lcom/vk/ui/photoviewer/VkAppCallback;->e:Lio/reactivex/disposables/CompositeDisposable;
 
-    invoke-static {p1, p2}, Lcom/vk/core/extensions/RxExtKt;->a(Lio/reactivex/disposables/b;Lio/reactivex/disposables/a;)Lio/reactivex/disposables/b;
+    invoke-static {p1, p2}, Lcom/vk/core/extensions/RxExtKt;->a(Lio/reactivex/disposables/Disposable;Lio/reactivex/disposables/CompositeDisposable;)Lio/reactivex/disposables/Disposable;
 
     return-void
 
     .line 48
     :cond_3
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     throw v2
 
@@ -558,16 +558,16 @@
     return-void
 .end method
 
-.method public static final synthetic a(Lcom/vk/ui/photoviewer/VkAppCallback;Lcom/vk/dto/photo/Photo;ZLkotlin/jvm/b/b;)V
+.method public static final synthetic a(Lcom/vk/ui/photoviewer/VkAppCallback;Lcom/vk/dto/photo/Photo;ZLkotlin/jvm/b/Functions2;)V
     .locals 0
 
     .line 3
-    invoke-direct {p0, p1, p2, p3}, Lcom/vk/ui/photoviewer/VkAppCallback;->a(Lcom/vk/dto/photo/Photo;ZLkotlin/jvm/b/b;)V
+    invoke-direct {p0, p1, p2, p3}, Lcom/vk/ui/photoviewer/VkAppCallback;->a(Lcom/vk/dto/photo/Photo;ZLkotlin/jvm/b/Functions2;)V
 
     return-void
 .end method
 
-.method private final a(Lcom/vk/bridges/p$c;)Z
+.method private final a(Lcom/vk/bridges/ImageViewer$c;)Z
     .locals 1
 
     .line 71
@@ -670,14 +670,14 @@
     .locals 3
 
     .line 8
-    iget-object v0, p0, Lcom/vk/ui/photoviewer/VkAppCallback;->M:Lcom/vk/bridges/p$a;
+    iget-object v0, p0, Lcom/vk/ui/photoviewer/VkAppCallback;->M:Lcom/vk/bridges/ImageViewer$a;
 
-    invoke-interface {v0}, Lcom/vk/bridges/p$a;->g()Lcom/vk/bridges/p$c;
+    invoke-interface {v0}, Lcom/vk/bridges/ImageViewer$a;->g()Lcom/vk/bridges/ImageViewer$c;
 
     move-result-object v0
 
     .line 9
-    invoke-virtual {v0}, Lcom/vk/bridges/p$c;->b()Z
+    invoke-virtual {v0}, Lcom/vk/bridges/ImageViewer$c;->b()Z
 
     move-result v1
 
@@ -685,7 +685,7 @@
 
     if-nez v1, :cond_1
 
-    invoke-direct {p0, v0}, Lcom/vk/ui/photoviewer/VkAppCallback;->a(Lcom/vk/bridges/p$c;)Z
+    invoke-direct {p0, v0}, Lcom/vk/ui/photoviewer/VkAppCallback;->a(Lcom/vk/bridges/ImageViewer$c;)Z
 
     move-result v0
 
@@ -707,7 +707,7 @@
 
     const-string v1, "parent.context"
 
-    invoke-static {p1, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-direct {v0, p1}, Lcom/vk/ui/photoviewer/OverlayViewController;-><init>(Landroid/content/Context;)V
 
@@ -720,7 +720,7 @@
 
     if-eqz v0, :cond_3
 
-    invoke-virtual {v0}, Lcom/vk/ui/photoviewer/OverlayViewController;->c()Lcom/vk/ui/photoviewer/h;
+    invoke-virtual {v0}, Lcom/vk/ui/photoviewer/OverlayViewController;->c()Lcom/vk/ui/photoviewer/TagsOverlayView;
 
     move-result-object v0
 
@@ -752,13 +752,13 @@
 
     .line 16
     :cond_2
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     throw v2
 
     .line 17
     :cond_3
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     throw v2
 .end method
@@ -782,9 +782,9 @@
 
     .line 51
     :cond_0
-    iget-object v0, p0, Lcom/vk/ui/photoviewer/VkAppCallback;->M:Lcom/vk/bridges/p$a;
+    iget-object v0, p0, Lcom/vk/ui/photoviewer/VkAppCallback;->M:Lcom/vk/bridges/ImageViewer$a;
 
-    invoke-interface {v0, p1}, Lcom/vk/bridges/p$a;->a(I)V
+    invoke-interface {v0, p1}, Lcom/vk/bridges/ImageViewer$a;->a(I)V
 
     return-void
 .end method
@@ -820,13 +820,13 @@
 
     if-eqz v0, :cond_2
 
-    invoke-virtual {v0}, Lcom/vk/ui/photoviewer/OverlayViewController;->c()Lcom/vk/ui/photoviewer/h;
+    invoke-virtual {v0}, Lcom/vk/ui/photoviewer/OverlayViewController;->c()Lcom/vk/ui/photoviewer/TagsOverlayView;
 
     move-result-object v0
 
     if-eqz v0, :cond_2
 
-    invoke-virtual {v0, p2}, Lcom/vk/ui/photoviewer/h;->setDisplayRectProvider(Lcom/vk/photoviewer/PhotoViewer$g;)V
+    invoke-virtual {v0, p2}, Lcom/vk/ui/photoviewer/TagsOverlayView;->setDisplayRectProvider(Lcom/vk/photoviewer/PhotoViewer$g;)V
 
     .line 22
     :cond_2
@@ -853,7 +853,7 @@
 
     if-eqz v1, :cond_4
 
-    invoke-virtual {v1, v0}, Lcom/vk/ui/photoviewer/BottomPanelController;->a(Lcom/vk/ui/photoviewer/i;)V
+    invoke-virtual {v1, v0}, Lcom/vk/ui/photoviewer/BottomPanelController;->a(Lcom/vk/ui/photoviewer/TagsShower;)V
 
     .line 25
     :cond_4
@@ -909,7 +909,7 @@
 
     invoke-direct {v1, p0, p1}, Lcom/vk/ui/photoviewer/VkAppCallback$bindControlsView$2;-><init>(Lcom/vk/ui/photoviewer/VkAppCallback;I)V
 
-    invoke-virtual {v0, v1}, Lcom/vk/ui/photoviewer/GoodsOverlayView;->setOnBubbleClickListener(Lkotlin/jvm/b/b;)V
+    invoke-virtual {v0, v1}, Lcom/vk/ui/photoviewer/GoodsOverlayView;->setOnBubbleClickListener(Lkotlin/jvm/b/Functions2;)V
 
     .line 28
     :cond_8
@@ -935,7 +935,7 @@
 
     invoke-direct {v1, p0, p1, p2}, Lcom/vk/ui/photoviewer/VkAppCallback$bindControlsView$3;-><init>(Lcom/vk/ui/photoviewer/VkAppCallback;ILcom/vk/photoviewer/PhotoViewer$g;)V
 
-    invoke-direct {p0, v3, v0, v1}, Lcom/vk/ui/photoviewer/VkAppCallback;->a(Lcom/vk/dto/photo/Photo;ZLkotlin/jvm/b/b;)V
+    invoke-direct {p0, v3, v0, v1}, Lcom/vk/ui/photoviewer/VkAppCallback;->a(Lcom/vk/dto/photo/Photo;ZLkotlin/jvm/b/Functions2;)V
 
     return-void
 .end method
@@ -999,14 +999,14 @@
     check-cast v1, Lcom/vk/dto/common/AttachmentWithMedia;
 
     .line 57
-    invoke-interface {v1}, Lcom/vk/dto/common/k;->L0()Lcom/vk/dto/newsfeed/Owner;
+    invoke-interface {v1}, Lcom/vk/dto/common/WithOwner;->L0()Lcom/vk/dto/newsfeed/Owner;
 
     move-result-object v2
 
     if-nez v2, :cond_1
 
     .line 58
-    invoke-interface {v1}, Lcom/vk/dto/common/k;->b()I
+    invoke-interface {v1}, Lcom/vk/dto/common/WithOwner;->b()I
 
     move-result v2
 
@@ -1070,9 +1070,9 @@
     .locals 1
 
     .line 53
-    iget-object v0, p0, Lcom/vk/ui/photoviewer/VkAppCallback;->M:Lcom/vk/bridges/p$a;
+    iget-object v0, p0, Lcom/vk/ui/photoviewer/VkAppCallback;->M:Lcom/vk/bridges/ImageViewer$a;
 
-    invoke-interface {v0}, Lcom/vk/bridges/p$a;->a()Z
+    invoke-interface {v0}, Lcom/vk/bridges/ImageViewer$a;->a()Z
 
     move-result v0
 
@@ -1083,7 +1083,7 @@
     .locals 0
 
     .line 6
-    invoke-super {p0, p1, p2, p3, p4}, Lcom/vk/photoviewer/c;->a(Lcom/vk/photoviewer/PhotoViewer$j;ILandroid/view/MenuItem;Landroid/view/View;)Z
+    invoke-super {p0, p1, p2, p3, p4}, Lcom/vk/photoviewer/CallbackAdapter;->a(Lcom/vk/photoviewer/PhotoViewer$j;ILandroid/view/MenuItem;Landroid/view/View;)Z
 
     move-result p1
 
@@ -1112,14 +1112,14 @@
     .locals 3
 
     .line 15
-    iget-object v0, p0, Lcom/vk/ui/photoviewer/VkAppCallback;->M:Lcom/vk/bridges/p$a;
+    iget-object v0, p0, Lcom/vk/ui/photoviewer/VkAppCallback;->M:Lcom/vk/bridges/ImageViewer$a;
 
-    invoke-interface {v0}, Lcom/vk/bridges/p$a;->g()Lcom/vk/bridges/p$c;
+    invoke-interface {v0}, Lcom/vk/bridges/ImageViewer$a;->g()Lcom/vk/bridges/ImageViewer$c;
 
     move-result-object v0
 
     .line 16
-    invoke-virtual {v0}, Lcom/vk/bridges/p$c;->b()Z
+    invoke-virtual {v0}, Lcom/vk/bridges/ImageViewer$c;->b()Z
 
     move-result v0
 
@@ -1136,7 +1136,7 @@
 
     const-string v2, "parent.context"
 
-    invoke-static {p1, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-direct {v0, p1}, Lcom/vk/ui/photoviewer/BottomPanelController;-><init>(Landroid/content/Context;)V
 
@@ -1151,7 +1151,7 @@
 
     invoke-direct {v0, p0}, Lcom/vk/ui/photoviewer/VkAppCallback$g;-><init>(Lcom/vk/ui/photoviewer/VkAppCallback;)V
 
-    invoke-virtual {p1, v0}, Lcom/vk/ui/photoviewer/BottomPanelController;->a(Lcom/vk/ui/photoviewer/e;)V
+    invoke-virtual {p1, v0}, Lcom/vk/ui/photoviewer/BottomPanelController;->a(Lcom/vk/ui/photoviewer/PhotoUpdater;)V
 
     .line 19
     :cond_0
@@ -1183,7 +1183,7 @@
 
     .line 22
     :cond_1
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     throw v1
 
@@ -1195,7 +1195,7 @@
     .locals 2
 
     .line 2
-    invoke-super {p0, p1}, Lcom/vk/photoviewer/c;->b(Lcom/vk/photoviewer/PhotoViewer;)V
+    invoke-super {p0, p1}, Lcom/vk/photoviewer/CallbackAdapter;->b(Lcom/vk/photoviewer/PhotoViewer;)V
 
     .line 3
     iput-object p1, p0, Lcom/vk/ui/photoviewer/VkAppCallback;->H:Lcom/vk/photoviewer/PhotoViewer;
@@ -1210,7 +1210,7 @@
 
     invoke-direct {v0, p1}, Lcom/vk/ui/photoviewer/VkAppCallback$l;-><init>(Lcom/vk/photoviewer/PhotoViewer;)V
 
-    iput-object v0, p0, Lcom/vk/ui/photoviewer/VkAppCallback;->G:Lcom/vk/navigation/g;
+    iput-object v0, p0, Lcom/vk/ui/photoviewer/VkAppCallback;->G:Lcom/vk/navigation/Dismissed;
 
     .line 6
     iget-object v0, p0, Lcom/vk/ui/photoviewer/VkAppCallback;->N:Landroid/app/Activity;
@@ -1228,18 +1228,18 @@
 
     if-eqz v0, :cond_1
 
-    iget-object v1, p0, Lcom/vk/ui/photoviewer/VkAppCallback;->G:Lcom/vk/navigation/g;
+    iget-object v1, p0, Lcom/vk/ui/photoviewer/VkAppCallback;->G:Lcom/vk/navigation/Dismissed;
 
     if-eqz v1, :cond_0
 
-    invoke-virtual {v0, v1}, Lcom/vk/navigation/NavigationDelegate;->b(Lcom/vk/navigation/g;)V
+    invoke-virtual {v0, v1}, Lcom/vk/navigation/NavigationDelegate;->b(Lcom/vk/navigation/Dismissed;)V
 
     goto :goto_0
 
     :cond_0
     const-string p1, "dismissed"
 
-    invoke-static {p1}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {p1}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     const/4 p1, 0x0
 
@@ -1307,12 +1307,12 @@
     .locals 3
 
     .line 1
-    invoke-super {p0}, Lcom/vk/photoviewer/c;->onDismiss()V
+    invoke-super {p0}, Lcom/vk/photoviewer/CallbackAdapter;->onDismiss()V
 
     .line 2
-    iget-object v0, p0, Lcom/vk/ui/photoviewer/VkAppCallback;->K:Lcom/vk/core/ui/tracking/internal/b;
+    iget-object v0, p0, Lcom/vk/ui/photoviewer/VkAppCallback;->K:Lcom/vk/core/ui/tracking/internal/UiTrackingListener1;
 
-    invoke-virtual {v0}, Lcom/vk/core/ui/tracking/internal/b;->b()V
+    invoke-virtual {v0}, Lcom/vk/core/ui/tracking/internal/UiTrackingListener1;->b()V
 
     const/4 v0, 0x0
 
@@ -1320,9 +1320,9 @@
     iput-object v0, p0, Lcom/vk/ui/photoviewer/VkAppCallback;->H:Lcom/vk/photoviewer/PhotoViewer;
 
     .line 4
-    iget-object v1, p0, Lcom/vk/ui/photoviewer/VkAppCallback;->e:Lio/reactivex/disposables/a;
+    iget-object v1, p0, Lcom/vk/ui/photoviewer/VkAppCallback;->e:Lio/reactivex/disposables/CompositeDisposable;
 
-    invoke-virtual {v1}, Lio/reactivex/disposables/a;->o()V
+    invoke-virtual {v1}, Lio/reactivex/disposables/CompositeDisposable;->o()V
 
     .line 5
     iget-object v1, p0, Lcom/vk/ui/photoviewer/VkAppCallback;->N:Landroid/app/Activity;
@@ -1340,18 +1340,18 @@
 
     if-eqz v1, :cond_1
 
-    iget-object v2, p0, Lcom/vk/ui/photoviewer/VkAppCallback;->G:Lcom/vk/navigation/g;
+    iget-object v2, p0, Lcom/vk/ui/photoviewer/VkAppCallback;->G:Lcom/vk/navigation/Dismissed;
 
     if-eqz v2, :cond_0
 
-    invoke-virtual {v1, v2}, Lcom/vk/navigation/NavigationDelegate;->a(Lcom/vk/navigation/g;)V
+    invoke-virtual {v1, v2}, Lcom/vk/navigation/NavigationDelegate;->a(Lcom/vk/navigation/Dismissed;)V
 
     goto :goto_0
 
     :cond_0
     const-string v1, "dismissed"
 
-    invoke-static {v1}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v1}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v0
 

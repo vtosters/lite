@@ -24,7 +24,7 @@
     return-void
 .end method
 
-.method public synthetic constructor <init>(Lkotlin/jvm/internal/i;)V
+.method public synthetic constructor <init>(Lkotlin/jvm/internal/DefaultConstructorMarker;)V
     .locals 0
 
     .line 2
@@ -39,9 +39,9 @@
     .locals 2
 
     .line 1
-    sget-object v0, Lb/h/v/d;->c:Lb/h/v/d$a;
+    sget-object v0, Lb/h/v/RxBus;->c:Lb/h/v/RxBus$a;
 
-    invoke-virtual {v0}, Lb/h/v/d$a;->a()Lb/h/v/d;
+    invoke-virtual {v0}, Lb/h/v/RxBus$a;->a()Lb/h/v/RxBus;
 
     move-result-object v0
 
@@ -49,7 +49,7 @@
 
     invoke-direct {v1, p1}, Lcom/vk/notifications/CommunityGroupedNotificationsFragment$c;-><init>(I)V
 
-    invoke-virtual {v0, v1}, Lb/h/v/d;->a(Ljava/lang/Object;)V
+    invoke-virtual {v0, v1}, Lb/h/v/RxBus;->a(Ljava/lang/Object;)V
 
     return-void
 .end method

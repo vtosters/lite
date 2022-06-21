@@ -1,5 +1,5 @@
 .class public final Lcom/vk/promo/music/MusicPromoAdapterBuySubscription;
-.super Lcom/vk/lists/j0;
+.super Lcom/vk/lists/SingleAdapter;
 .source "MusicPromoAdapterBuySubscription.kt"
 
 
@@ -12,9 +12,9 @@
 
 .annotation system Ldalvik/annotation/Signature;
     value = {
-        "Lcom/vk/lists/j0<",
+        "Lcom/vk/lists/SingleAdapter<",
         "Ljava/lang/Object;",
-        "Lcom/vk/music/ui/common/o<",
+        "Lcom/vk/music/ui/common/MusicViewHolder<",
         "Ljava/lang/Object;",
         ">;>;"
     }
@@ -22,14 +22,14 @@
 
 
 # instance fields
-.field private final b:Lcom/vk/music/subscription/a;
+.field private final b:Lcom/vk/music/subscription/BuyMusicSubscriptionButtonModel;
 
-.field private final c:Lkotlin/jvm/b/b;
+.field private final c:Lkotlin/jvm/b/Functions2;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Lkotlin/jvm/b/b<",
+            "Lkotlin/jvm/b/Functions2<",
             "Lcom/vk/dto/common/data/Subscription;",
-            "Lkotlin/m;",
+            "Lkotlin/Unit;",
             ">;"
         }
     .end annotation
@@ -37,60 +37,60 @@
 
 
 # direct methods
-.method public constructor <init>(Lcom/vk/music/subscription/a;Lkotlin/jvm/b/b;)V
+.method public constructor <init>(Lcom/vk/music/subscription/BuyMusicSubscriptionButtonModel;Lkotlin/jvm/b/Functions2;)V
     .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lcom/vk/music/subscription/a;",
-            "Lkotlin/jvm/b/b<",
+            "Lcom/vk/music/subscription/BuyMusicSubscriptionButtonModel;",
+            "Lkotlin/jvm/b/Functions2<",
             "-",
             "Lcom/vk/dto/common/data/Subscription;",
-            "Lkotlin/m;",
+            "Lkotlin/Unit;",
             ">;)V"
         }
     .end annotation
 
     .line 1
-    invoke-direct {p0}, Lcom/vk/lists/j0;-><init>()V
+    invoke-direct {p0}, Lcom/vk/lists/SingleAdapter;-><init>()V
 
-    iput-object p1, p0, Lcom/vk/promo/music/MusicPromoAdapterBuySubscription;->b:Lcom/vk/music/subscription/a;
+    iput-object p1, p0, Lcom/vk/promo/music/MusicPromoAdapterBuySubscription;->b:Lcom/vk/music/subscription/BuyMusicSubscriptionButtonModel;
 
-    iput-object p2, p0, Lcom/vk/promo/music/MusicPromoAdapterBuySubscription;->c:Lkotlin/jvm/b/b;
+    iput-object p2, p0, Lcom/vk/promo/music/MusicPromoAdapterBuySubscription;->c:Lkotlin/jvm/b/Functions2;
 
     .line 2
     new-instance p1, Ljava/lang/Object;
 
     invoke-direct {p1}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lcom/vk/lists/j0;->a:Ljava/lang/Object;
+    iput-object p1, p0, Lcom/vk/lists/SingleAdapter;->a:Ljava/lang/Object;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public a(Lcom/vk/music/ui/common/o;I)V
+.method public a(Lcom/vk/music/ui/common/MusicViewHolder;I)V
     .locals 2
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lcom/vk/music/ui/common/o<",
+            "Lcom/vk/music/ui/common/MusicViewHolder<",
             "Ljava/lang/Object;",
             ">;I)V"
         }
     .end annotation
 
     .line 1
-    invoke-virtual {p0}, Lcom/vk/lists/j0;->j()Ljava/lang/Object;
+    invoke-virtual {p0}, Lcom/vk/lists/SingleAdapter;->j()Ljava/lang/Object;
 
     move-result-object v0
 
     const-string v1, "getData()"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    invoke-virtual {p1, v0, p2}, Lcom/vk/music/ui/common/o;->a(Ljava/lang/Object;I)V
+    invoke-virtual {p1, v0, p2}, Lcom/vk/music/ui/common/MusicViewHolder;->a(Ljava/lang/Object;I)V
 
     return-void
 .end method
@@ -99,9 +99,9 @@
     .locals 0
 
     .line 1
-    check-cast p1, Lcom/vk/music/ui/common/o;
+    check-cast p1, Lcom/vk/music/ui/common/MusicViewHolder;
 
-    invoke-virtual {p0, p1, p2}, Lcom/vk/promo/music/MusicPromoAdapterBuySubscription;->a(Lcom/vk/music/ui/common/o;I)V
+    invoke-virtual {p0, p1, p2}, Lcom/vk/promo/music/MusicPromoAdapterBuySubscription;->a(Lcom/vk/music/ui/common/MusicViewHolder;I)V
 
     return-void
 .end method
@@ -110,21 +110,21 @@
     .locals 0
 
     .line 1
-    invoke-virtual {p0, p1, p2}, Lcom/vk/promo/music/MusicPromoAdapterBuySubscription;->onCreateViewHolder(Landroid/view/ViewGroup;I)Lcom/vk/music/ui/common/o;
+    invoke-virtual {p0, p1, p2}, Lcom/vk/promo/music/MusicPromoAdapterBuySubscription;->onCreateViewHolder(Landroid/view/ViewGroup;I)Lcom/vk/music/ui/common/MusicViewHolder;
 
     move-result-object p1
 
     return-object p1
 .end method
 
-.method public onCreateViewHolder(Landroid/view/ViewGroup;I)Lcom/vk/music/ui/common/o;
+.method public onCreateViewHolder(Landroid/view/ViewGroup;I)Lcom/vk/music/ui/common/MusicViewHolder;
     .locals 2
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
             "Landroid/view/ViewGroup;",
             "I)",
-            "Lcom/vk/music/ui/common/o<",
+            "Lcom/vk/music/ui/common/MusicViewHolder<",
             "Ljava/lang/Object;",
             ">;"
         }
@@ -133,11 +133,11 @@
     .line 2
     new-instance p2, Lcom/vk/promo/music/MusicPromoAdapterBuySubscription$Holder;
 
-    iget-object v0, p0, Lcom/vk/promo/music/MusicPromoAdapterBuySubscription;->b:Lcom/vk/music/subscription/a;
+    iget-object v0, p0, Lcom/vk/promo/music/MusicPromoAdapterBuySubscription;->b:Lcom/vk/music/subscription/BuyMusicSubscriptionButtonModel;
 
-    iget-object v1, p0, Lcom/vk/promo/music/MusicPromoAdapterBuySubscription;->c:Lkotlin/jvm/b/b;
+    iget-object v1, p0, Lcom/vk/promo/music/MusicPromoAdapterBuySubscription;->c:Lkotlin/jvm/b/Functions2;
 
-    invoke-direct {p2, p1, v0, v1}, Lcom/vk/promo/music/MusicPromoAdapterBuySubscription$Holder;-><init>(Landroid/view/ViewGroup;Lcom/vk/music/subscription/a;Lkotlin/jvm/b/b;)V
+    invoke-direct {p2, p1, v0, v1}, Lcom/vk/promo/music/MusicPromoAdapterBuySubscription$Holder;-><init>(Landroid/view/ViewGroup;Lcom/vk/music/subscription/BuyMusicSubscriptionButtonModel;Lkotlin/jvm/b/Functions2;)V
 
     return-object p2
 .end method

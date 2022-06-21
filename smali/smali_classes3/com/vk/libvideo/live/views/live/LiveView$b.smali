@@ -3,7 +3,7 @@
 .source "LiveView.java"
 
 # interfaces
-.implements Lkotlin/jvm/b/a;
+.implements Lkotlin/jvm/b/Functions;
 
 
 # annotations
@@ -19,8 +19,8 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Ljava/lang/Object;",
-        "Lkotlin/jvm/b/a<",
-        "Lkotlin/m;",
+        "Lkotlin/jvm/b/Functions<",
+        "Lkotlin/Unit;",
         ">;"
     }
 .end annotation
@@ -48,14 +48,14 @@
     .locals 1
 
     .line 1
-    invoke-virtual {p0}, Lcom/vk/libvideo/live/views/live/LiveView$b;->invoke()Lkotlin/m;
+    invoke-virtual {p0}, Lcom/vk/libvideo/live/views/live/LiveView$b;->invoke()Lkotlin/Unit;
 
     move-result-object v0
 
     return-object v0
 .end method
 
-.method public invoke()Lkotlin/m;
+.method public invoke()Lkotlin/Unit;
     .locals 1
 
     .line 2
@@ -70,14 +70,14 @@
     .line 3
     iget-object v0, p0, Lcom/vk/libvideo/live/views/live/LiveView$b;->a:Lcom/vk/libvideo/live/views/live/LiveView;
 
-    invoke-static {v0}, Lcom/vk/libvideo/live/views/live/LiveView;->a(Lcom/vk/libvideo/live/views/live/LiveView;)Lcom/vk/libvideo/live/views/live/a;
+    invoke-static {v0}, Lcom/vk/libvideo/live/views/live/LiveView;->a(Lcom/vk/libvideo/live/views/live/LiveView;)Lcom/vk/libvideo/live/views/live/LiveContract;
 
     move-result-object v0
 
-    invoke-interface {v0}, Lcom/vk/libvideo/live/views/live/a;->T()V
+    invoke-interface {v0}, Lcom/vk/libvideo/live/views/live/LiveContract;->T()V
 
     .line 4
-    sget-object v0, Lkotlin/m;->a:Lkotlin/m;
+    sget-object v0, Lkotlin/Unit;->a:Lkotlin/Unit;
 
     return-object v0
 .end method

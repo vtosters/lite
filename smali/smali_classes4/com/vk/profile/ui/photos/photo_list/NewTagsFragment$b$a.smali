@@ -3,12 +3,12 @@
 .source "NewTagsFragment.kt"
 
 # interfaces
-.implements Lc/a/z/j;
+.implements Lio/reactivex/functions/Function;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/profile/ui/photos/photo_list/NewTagsFragment$b;->a(Lcom/vk/core/util/a0;I)Lc/a/m;
+    value = Lcom/vk/profile/ui/photos/photo_list/NewTagsFragment$b;->a(Lcom/vk/core/util/Either;I)Lio/reactivex/Observable;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -24,7 +24,7 @@
         "Ljava/lang/Object;",
         ">",
         "Ljava/lang/Object;",
-        "Lc/a/z/j<",
+        "Lio/reactivex/functions/Function<",
         "TT;TR;>;"
     }
 .end annotation
@@ -47,12 +47,12 @@
 
 
 # virtual methods
-.method public final a(Lcom/vk/api/photos/p$a;)Lcom/vk/dto/common/data/VKList;
+.method public final a(Lcom/vk/api/photos/PhotosGetNewTags$a;)Lcom/vk/dto/common/data/VKList;
     .locals 3
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lcom/vk/api/photos/p$a;",
+            "Lcom/vk/api/photos/PhotosGetNewTags$a;",
             ")",
             "Lcom/vk/dto/common/data/VKList<",
             "Lcom/vk/dto/photo/Photo;",
@@ -69,16 +69,16 @@
 
     move-result-object v0
 
-    iget-object v1, p1, Lcom/vk/api/photos/p$a;->b:Landroid/util/SparseArray;
+    iget-object v1, p1, Lcom/vk/api/photos/PhotosGetNewTags$a;->b:Landroid/util/SparseArray;
 
     const-string v2, "it.profiles"
 
-    invoke-static {v1, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    invoke-static {v0, v1}, Lcom/vk/core/extensions/x;->a(Landroid/util/SparseArray;Landroid/util/SparseArray;)Landroid/util/SparseArray;
+    invoke-static {v0, v1}, Lcom/vk/core/extensions/SparseArrayExt1;->a(Landroid/util/SparseArray;Landroid/util/SparseArray;)Landroid/util/SparseArray;
 
     .line 2
-    iget-object p1, p1, Lcom/vk/api/photos/p$a;->a:Lcom/vk/dto/common/data/VKList;
+    iget-object p1, p1, Lcom/vk/api/photos/PhotosGetNewTags$a;->a:Lcom/vk/dto/common/data/VKList;
 
     return-object p1
 .end method
@@ -87,9 +87,9 @@
     .locals 0
 
     .line 1
-    check-cast p1, Lcom/vk/api/photos/p$a;
+    check-cast p1, Lcom/vk/api/photos/PhotosGetNewTags$a;
 
-    invoke-virtual {p0, p1}, Lcom/vk/profile/ui/photos/photo_list/NewTagsFragment$b$a;->a(Lcom/vk/api/photos/p$a;)Lcom/vk/dto/common/data/VKList;
+    invoke-virtual {p0, p1}, Lcom/vk/profile/ui/photos/photo_list/NewTagsFragment$b$a;->a(Lcom/vk/api/photos/PhotosGetNewTags$a;)Lcom/vk/dto/common/data/VKList;
 
     move-result-object p1
 

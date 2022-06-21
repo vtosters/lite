@@ -1,5 +1,5 @@
 .class public final Lcom/vk/debug/TogglesFragment$b;
-.super Lcom/vtosters/lite/ui/b0/i;
+.super Lcom/vtosters/lite/ui/holder/RecyclerHolder;
 .source "TogglesFragment.kt"
 
 
@@ -15,7 +15,7 @@
 
 .annotation system Ldalvik/annotation/Signature;
     value = {
-        "Lcom/vtosters/lite/ui/b0/i<",
+        "Lcom/vtosters/lite/ui/holder/RecyclerHolder<",
         "Lcom/vk/toggle/FeatureManager$b;",
         ">;"
     }
@@ -41,7 +41,7 @@
 
     const-string p1, "parent.context"
 
-    invoke-static {v1, p1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v1, p1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     const/4 v2, 0x0
 
@@ -53,9 +53,9 @@
 
     move-object v0, v6
 
-    invoke-direct/range {v0 .. v5}, Lcom/vk/common/view/settings/SettingsSwitchView;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;IILkotlin/jvm/internal/i;)V
+    invoke-direct/range {v0 .. v5}, Lcom/vk/common/view/settings/SettingsSwitchView;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;IILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
-    invoke-direct {p0, v6}, Lcom/vtosters/lite/ui/b0/i;-><init>(Landroid/view/View;)V
+    invoke-direct {p0, v6}, Lcom/vtosters/lite/ui/holder/RecyclerHolder;-><init>(Landroid/view/View;)V
 
     .line 2
     iget-object p1, p0, Landroidx/recyclerview/widget/RecyclerView$ViewHolder;->itemView:Landroid/view/View;
@@ -75,7 +75,7 @@
     invoke-direct {v0, p0}, Lcom/vk/debug/TogglesFragment$b$a;-><init>(Lcom/vk/debug/TogglesFragment$b;)V
 
     .line 5
-    invoke-virtual {p1, v0}, Lcom/vk/common/view/settings/b;->setOnCheckedChangesListener(Landroid/widget/CompoundButton$OnCheckedChangeListener;)V
+    invoke-virtual {p1, v0}, Lcom/vk/common/view/settings/SettingsView;->setOnCheckedChangesListener(Landroid/widget/CompoundButton$OnCheckedChangeListener;)V
 
     .line 6
     iget-object p1, p0, Lcom/vk/debug/TogglesFragment$b;->c:Lcom/vk/common/view/settings/SettingsSwitchView;
@@ -89,7 +89,7 @@
     .line 7
     iget-object p1, p0, Lcom/vk/debug/TogglesFragment$b;->c:Lcom/vk/common/view/settings/SettingsSwitchView;
 
-    invoke-virtual {p1}, Lcom/vk/common/view/settings/b;->getTextSize()F
+    invoke-virtual {p1}, Lcom/vk/common/view/settings/SettingsView;->getTextSize()F
 
     move-result p1
 
@@ -112,7 +112,7 @@
     .locals 0
 
     .line 1
-    iget-object p0, p0, Lcom/vtosters/lite/ui/b0/i;->b:Ljava/lang/Object;
+    iget-object p0, p0, Lcom/vtosters/lite/ui/holder/RecyclerHolder;->b:Ljava/lang/Object;
 
     check-cast p0, Lcom/vk/toggle/FeatureManager$b;
 
@@ -175,7 +175,7 @@
 
     move-object v1, p1
 
-    invoke-static/range {v1 .. v6}, Lcom/vk/core/dialogs/alert/VkAlertDialog$Builder$InputBuilder;->a(Lcom/vk/core/dialogs/alert/VkAlertDialog$Builder$InputBuilder;ILkotlin/jvm/b/c;ZILjava/lang/Object;)Lcom/vk/core/dialogs/alert/VkAlertDialog$Builder$InputBuilder;
+    invoke-static/range {v1 .. v6}, Lcom/vk/core/dialogs/alert/VkAlertDialog$Builder$InputBuilder;->a(Lcom/vk/core/dialogs/alert/VkAlertDialog$Builder$InputBuilder;ILkotlin/jvm/b/Functions1;ZILjava/lang/Object;)Lcom/vk/core/dialogs/alert/VkAlertDialog$Builder$InputBuilder;
 
     .line 11
     invoke-virtual {p1}, Lcom/vk/core/dialogs/alert/VkAlertDialog$Builder$InputBuilder;->f()Landroidx/appcompat/app/AlertDialog;
@@ -184,7 +184,7 @@
 
     .line 12
     :cond_1
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     const/4 p1, 0x0
 
@@ -270,7 +270,7 @@
     :cond_0
     iget-object v1, p0, Lcom/vk/debug/TogglesFragment$b;->c:Lcom/vk/common/view/settings/SettingsSwitchView;
 
-    invoke-virtual {v1, v0}, Lcom/vk/common/view/settings/b;->setTitle(Ljava/lang/String;)V
+    invoke-virtual {v1, v0}, Lcom/vk/common/view/settings/SettingsView;->setTitle(Ljava/lang/String;)V
 
     .line 7
     iget-object v0, p0, Lcom/vk/debug/TogglesFragment$b;->c:Lcom/vk/common/view/settings/SettingsSwitchView;
@@ -279,7 +279,7 @@
 
     move-result v1
 
-    invoke-virtual {v0, v1}, Lcom/vk/common/view/settings/b;->setChecked(Z)V
+    invoke-virtual {v0, v1}, Lcom/vk/common/view/settings/SettingsView;->setChecked(Z)V
 
     .line 8
     iget v0, p0, Lcom/vk/debug/TogglesFragment$b;->d:F
@@ -312,7 +312,7 @@
     :cond_1
     iget-object p1, p0, Lcom/vk/debug/TogglesFragment$b;->c:Lcom/vk/common/view/settings/SettingsSwitchView;
 
-    invoke-virtual {p1, v0}, Lcom/vk/common/view/settings/b;->setTextSize(F)V
+    invoke-virtual {p1, v0}, Lcom/vk/common/view/settings/SettingsView;->setTextSize(F)V
 
     return-void
 .end method

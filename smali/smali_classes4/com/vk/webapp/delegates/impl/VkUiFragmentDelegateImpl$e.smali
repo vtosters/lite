@@ -59,13 +59,13 @@
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/vk/webapp/VkUiFragment;->Z4()Lcom/vk/webapp/bridges/a;
+    invoke-virtual {v0}, Lcom/vk/webapp/VkUiFragment;->Z4()Lcom/vk/webapp/bridges/AndroidBridge;
 
     move-result-object v0
 
     sget-object v1, Lcom/vk/webapp/internal/data/JsApiMethodType;->APP_ALERT:Lcom/vk/webapp/internal/data/JsApiMethodType;
 
-    invoke-virtual {v0, v1, p2}, Lcom/vk/webapp/bridges/a;->a(Lcom/vk/webapp/internal/data/JsApiMethodType;Lorg/json/JSONObject;)V
+    invoke-virtual {v0, v1, p2}, Lcom/vk/webapp/bridges/AndroidBridge;->a(Lcom/vk/webapp/internal/data/JsApiMethodType;Lorg/json/JSONObject;)V
 
     .line 3
     :cond_0

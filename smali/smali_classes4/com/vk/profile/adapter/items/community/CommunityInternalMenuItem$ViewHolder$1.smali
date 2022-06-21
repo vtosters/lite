@@ -3,12 +3,12 @@
 .source "CommunityInternalMenuItem.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/b;
+.implements Lkotlin/jvm/b/Functions2;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/profile/adapter/items/community/CommunityInternalMenuItem$ViewHolder;-><init>(Landroid/view/ViewGroup;Lcom/vk/profile/adapter/di/a;)V
+    value = Lcom/vk/profile/adapter/items/community/CommunityInternalMenuItem$ViewHolder;-><init>(Landroid/view/ViewGroup;Lcom/vk/profile/adapter/di/CommunityDataScope;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -19,9 +19,9 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/b<",
+        "Lkotlin/jvm/b/Functions2<",
         "Landroid/view/View;",
-        "Lkotlin/m;",
+        "Lkotlin/Unit;",
         ">;"
     }
 .end annotation
@@ -52,17 +52,17 @@
     .line 1
     iget-object v0, p0, Lcom/vk/profile/adapter/items/community/CommunityInternalMenuItem$ViewHolder$1;->this$0:Lcom/vk/profile/adapter/items/community/CommunityInternalMenuItem$ViewHolder;
 
-    invoke-static {v0}, Lcom/vk/profile/adapter/items/community/CommunityInternalMenuItem$ViewHolder;->b(Lcom/vk/profile/adapter/items/community/CommunityInternalMenuItem$ViewHolder;)Lcom/vk/dto/profile/a$b;
+    invoke-static {v0}, Lcom/vk/profile/adapter/items/community/CommunityInternalMenuItem$ViewHolder;->b(Lcom/vk/profile/adapter/items/community/CommunityInternalMenuItem$ViewHolder;)Lcom/vk/dto/profile/CommunityInternalMenu$b;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/vk/dto/profile/a$b;->c()Ljava/lang/String;
+    invoke-virtual {v0}, Lcom/vk/dto/profile/CommunityInternalMenu$b;->c()Ljava/lang/String;
 
     move-result-object v3
 
     if-eqz v3, :cond_0
 
-    sget-object v1, Lcom/vk/common/links/c;->p:Lcom/vk/common/links/c$a;
+    sget-object v1, Lcom/vk/common/links/LinkProcessor;->p:Lcom/vk/common/links/LinkProcessor$a;
 
     invoke-virtual {p1}, Landroid/view/View;->getContext()Landroid/content/Context;
 
@@ -70,7 +70,7 @@
 
     const-string p1, "view.context"
 
-    invoke-static {v2, p1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v2, p1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     const/4 v4, 0x0
 
@@ -78,28 +78,28 @@
 
     const/4 v6, 0x0
 
-    invoke-static/range {v1 .. v6}, Lcom/vk/common/links/c$a;->a(Lcom/vk/common/links/c$a;Landroid/content/Context;Ljava/lang/String;Landroid/os/Bundle;ILjava/lang/Object;)V
+    invoke-static/range {v1 .. v6}, Lcom/vk/common/links/LinkProcessor$a;->a(Lcom/vk/common/links/LinkProcessor$a;Landroid/content/Context;Ljava/lang/String;Landroid/os/Bundle;ILjava/lang/Object;)V
 
     .line 2
     :cond_0
-    new-instance p1, Lcom/vk/profile/e/b;
+    new-instance p1, Lcom/vk/profile/e/CommunityScreenTracker1;
 
     iget-object v0, p0, Lcom/vk/profile/adapter/items/community/CommunityInternalMenuItem$ViewHolder$1;->this$0:Lcom/vk/profile/adapter/items/community/CommunityInternalMenuItem$ViewHolder;
 
-    invoke-virtual {v0}, Lcom/vk/profile/adapter/items/community/CommunityInternalMenuItem$ViewHolder;->g0()Lcom/vk/profile/adapter/di/a;
+    invoke-virtual {v0}, Lcom/vk/profile/adapter/items/community/CommunityInternalMenuItem$ViewHolder;->g0()Lcom/vk/profile/adapter/di/CommunityDataScope;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/vk/profile/adapter/di/a;->a()I
+    invoke-virtual {v0}, Lcom/vk/profile/adapter/di/CommunityDataScope;->a()I
 
     move-result v0
 
-    invoke-direct {p1, v0}, Lcom/vk/profile/e/b;-><init>(I)V
+    invoke-direct {p1, v0}, Lcom/vk/profile/e/CommunityScreenTracker1;-><init>(I)V
 
     const-string v0, "menu"
 
     .line 3
-    invoke-virtual {p1, v0}, Lcom/vk/profile/e/b;->a(Ljava/lang/String;)Lcom/vk/profile/e/b;
+    invoke-virtual {p1, v0}, Lcom/vk/profile/e/CommunityScreenTracker1;->a(Ljava/lang/String;)Lcom/vk/profile/e/CommunityScreenTracker1;
 
     .line 4
     iget-object v0, p0, Lcom/vk/profile/adapter/items/community/CommunityInternalMenuItem$ViewHolder$1;->this$0:Lcom/vk/profile/adapter/items/community/CommunityInternalMenuItem$ViewHolder;
@@ -108,10 +108,10 @@
 
     move-result-object v0
 
-    invoke-virtual {p1, v0}, Lcom/vk/profile/e/b;->a(Lorg/json/JSONObject;)Lcom/vk/profile/e/b;
+    invoke-virtual {p1, v0}, Lcom/vk/profile/e/CommunityScreenTracker1;->a(Lorg/json/JSONObject;)Lcom/vk/profile/e/CommunityScreenTracker1;
 
     .line 5
-    invoke-virtual {p1}, Lcom/vk/profile/e/b;->a()V
+    invoke-virtual {p1}, Lcom/vk/profile/e/CommunityScreenTracker1;->a()V
 
     return-void
 .end method
@@ -124,7 +124,7 @@
 
     invoke-virtual {p0, p1}, Lcom/vk/profile/adapter/items/community/CommunityInternalMenuItem$ViewHolder$1;->a(Landroid/view/View;)V
 
-    sget-object p1, Lkotlin/m;->a:Lkotlin/m;
+    sget-object p1, Lkotlin/Unit;->a:Lkotlin/Unit;
 
     return-object p1
 .end method

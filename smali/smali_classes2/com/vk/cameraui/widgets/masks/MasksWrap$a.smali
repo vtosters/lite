@@ -52,7 +52,7 @@
     .line 2
     iget-object v0, p0, Lcom/vk/cameraui/widgets/masks/MasksWrap$a;->a:Lcom/vk/cameraui/widgets/masks/MasksWrap;
 
-    invoke-virtual {v0}, Lcom/vk/cameraui/widgets/masks/MasksWrap;->getOnMasksUpdatedCallback()Lkotlin/jvm/b/b;
+    invoke-virtual {v0}, Lcom/vk/cameraui/widgets/masks/MasksWrap;->getOnMasksUpdatedCallback()Lkotlin/jvm/b/Functions2;
 
     move-result-object v0
 
@@ -60,23 +60,23 @@
 
     iget-object v1, p0, Lcom/vk/cameraui/widgets/masks/MasksWrap$a;->a:Lcom/vk/cameraui/widgets/masks/MasksWrap;
 
-    invoke-static {v1}, Lcom/vk/cameraui/widgets/masks/MasksWrap;->a(Lcom/vk/cameraui/widgets/masks/MasksWrap;)Lcom/vk/stories/masks/a;
+    invoke-static {v1}, Lcom/vk/cameraui/widgets/masks/MasksWrap;->a(Lcom/vk/cameraui/widgets/masks/MasksWrap;)Lcom/vk/stories/masks/MasksAdapter;
 
     move-result-object v1
 
-    invoke-virtual {v1}, Lcom/vk/lists/i0;->f()Ljava/util/List;
+    invoke-virtual {v1}, Lcom/vk/lists/SimpleAdapter;->f()Ljava/util/List;
 
     move-result-object v1
 
     const-string v2, "masksAdapter.list"
 
-    invoke-static {v1, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    invoke-interface {v0, v1}, Lkotlin/jvm/b/b;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v0, v1}, Lkotlin/jvm/b/Functions2;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v0
 
-    check-cast v0, Lkotlin/m;
+    check-cast v0, Lkotlin/Unit;
 
     :cond_0
     return-void
@@ -97,7 +97,7 @@
     .line 2
     iget-object p1, p0, Lcom/vk/cameraui/widgets/masks/MasksWrap$a;->a:Lcom/vk/cameraui/widgets/masks/MasksWrap;
 
-    invoke-virtual {p1}, Lcom/vk/cameraui/widgets/masks/MasksWrap;->getOnMasksUpdatedCallback()Lkotlin/jvm/b/b;
+    invoke-virtual {p1}, Lcom/vk/cameraui/widgets/masks/MasksWrap;->getOnMasksUpdatedCallback()Lkotlin/jvm/b/Functions2;
 
     move-result-object p1
 
@@ -105,23 +105,23 @@
 
     iget-object p2, p0, Lcom/vk/cameraui/widgets/masks/MasksWrap$a;->a:Lcom/vk/cameraui/widgets/masks/MasksWrap;
 
-    invoke-static {p2}, Lcom/vk/cameraui/widgets/masks/MasksWrap;->a(Lcom/vk/cameraui/widgets/masks/MasksWrap;)Lcom/vk/stories/masks/a;
+    invoke-static {p2}, Lcom/vk/cameraui/widgets/masks/MasksWrap;->a(Lcom/vk/cameraui/widgets/masks/MasksWrap;)Lcom/vk/stories/masks/MasksAdapter;
 
     move-result-object p2
 
-    invoke-virtual {p2}, Lcom/vk/lists/i0;->f()Ljava/util/List;
+    invoke-virtual {p2}, Lcom/vk/lists/SimpleAdapter;->f()Ljava/util/List;
 
     move-result-object p2
 
     const-string v0, "masksAdapter.list"
 
-    invoke-static {p2, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p2, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    invoke-interface {p1, p2}, Lkotlin/jvm/b/b;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {p1, p2}, Lkotlin/jvm/b/Functions2;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p1
 
-    check-cast p1, Lkotlin/m;
+    check-cast p1, Lkotlin/Unit;
 
     :cond_0
     return-void
@@ -142,7 +142,7 @@
     .line 4
     iget-object p1, p0, Lcom/vk/cameraui/widgets/masks/MasksWrap$a;->a:Lcom/vk/cameraui/widgets/masks/MasksWrap;
 
-    invoke-virtual {p1}, Lcom/vk/cameraui/widgets/masks/MasksWrap;->getOnMasksUpdatedCallback()Lkotlin/jvm/b/b;
+    invoke-virtual {p1}, Lcom/vk/cameraui/widgets/masks/MasksWrap;->getOnMasksUpdatedCallback()Lkotlin/jvm/b/Functions2;
 
     move-result-object p1
 
@@ -150,23 +150,23 @@
 
     iget-object p2, p0, Lcom/vk/cameraui/widgets/masks/MasksWrap$a;->a:Lcom/vk/cameraui/widgets/masks/MasksWrap;
 
-    invoke-static {p2}, Lcom/vk/cameraui/widgets/masks/MasksWrap;->a(Lcom/vk/cameraui/widgets/masks/MasksWrap;)Lcom/vk/stories/masks/a;
+    invoke-static {p2}, Lcom/vk/cameraui/widgets/masks/MasksWrap;->a(Lcom/vk/cameraui/widgets/masks/MasksWrap;)Lcom/vk/stories/masks/MasksAdapter;
 
     move-result-object p2
 
-    invoke-virtual {p2}, Lcom/vk/lists/i0;->f()Ljava/util/List;
+    invoke-virtual {p2}, Lcom/vk/lists/SimpleAdapter;->f()Ljava/util/List;
 
     move-result-object p2
 
     const-string p3, "masksAdapter.list"
 
-    invoke-static {p2, p3}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p2, p3}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    invoke-interface {p1, p2}, Lkotlin/jvm/b/b;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {p1, p2}, Lkotlin/jvm/b/Functions2;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p1
 
-    check-cast p1, Lkotlin/m;
+    check-cast p1, Lkotlin/Unit;
 
     :cond_0
     return-void
@@ -187,7 +187,7 @@
     .line 2
     iget-object p1, p0, Lcom/vk/cameraui/widgets/masks/MasksWrap$a;->a:Lcom/vk/cameraui/widgets/masks/MasksWrap;
 
-    invoke-virtual {p1}, Lcom/vk/cameraui/widgets/masks/MasksWrap;->getOnMasksUpdatedCallback()Lkotlin/jvm/b/b;
+    invoke-virtual {p1}, Lcom/vk/cameraui/widgets/masks/MasksWrap;->getOnMasksUpdatedCallback()Lkotlin/jvm/b/Functions2;
 
     move-result-object p1
 
@@ -195,23 +195,23 @@
 
     iget-object p2, p0, Lcom/vk/cameraui/widgets/masks/MasksWrap$a;->a:Lcom/vk/cameraui/widgets/masks/MasksWrap;
 
-    invoke-static {p2}, Lcom/vk/cameraui/widgets/masks/MasksWrap;->a(Lcom/vk/cameraui/widgets/masks/MasksWrap;)Lcom/vk/stories/masks/a;
+    invoke-static {p2}, Lcom/vk/cameraui/widgets/masks/MasksWrap;->a(Lcom/vk/cameraui/widgets/masks/MasksWrap;)Lcom/vk/stories/masks/MasksAdapter;
 
     move-result-object p2
 
-    invoke-virtual {p2}, Lcom/vk/lists/i0;->f()Ljava/util/List;
+    invoke-virtual {p2}, Lcom/vk/lists/SimpleAdapter;->f()Ljava/util/List;
 
     move-result-object p2
 
     const-string v0, "masksAdapter.list"
 
-    invoke-static {p2, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p2, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    invoke-interface {p1, p2}, Lkotlin/jvm/b/b;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {p1, p2}, Lkotlin/jvm/b/Functions2;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p1
 
-    check-cast p1, Lkotlin/m;
+    check-cast p1, Lkotlin/Unit;
 
     :cond_0
     return-void
@@ -232,7 +232,7 @@
     .line 2
     iget-object p1, p0, Lcom/vk/cameraui/widgets/masks/MasksWrap$a;->a:Lcom/vk/cameraui/widgets/masks/MasksWrap;
 
-    invoke-virtual {p1}, Lcom/vk/cameraui/widgets/masks/MasksWrap;->getOnMasksUpdatedCallback()Lkotlin/jvm/b/b;
+    invoke-virtual {p1}, Lcom/vk/cameraui/widgets/masks/MasksWrap;->getOnMasksUpdatedCallback()Lkotlin/jvm/b/Functions2;
 
     move-result-object p1
 
@@ -240,23 +240,23 @@
 
     iget-object p2, p0, Lcom/vk/cameraui/widgets/masks/MasksWrap$a;->a:Lcom/vk/cameraui/widgets/masks/MasksWrap;
 
-    invoke-static {p2}, Lcom/vk/cameraui/widgets/masks/MasksWrap;->a(Lcom/vk/cameraui/widgets/masks/MasksWrap;)Lcom/vk/stories/masks/a;
+    invoke-static {p2}, Lcom/vk/cameraui/widgets/masks/MasksWrap;->a(Lcom/vk/cameraui/widgets/masks/MasksWrap;)Lcom/vk/stories/masks/MasksAdapter;
 
     move-result-object p2
 
-    invoke-virtual {p2}, Lcom/vk/lists/i0;->f()Ljava/util/List;
+    invoke-virtual {p2}, Lcom/vk/lists/SimpleAdapter;->f()Ljava/util/List;
 
     move-result-object p2
 
     const-string p3, "masksAdapter.list"
 
-    invoke-static {p2, p3}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p2, p3}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    invoke-interface {p1, p2}, Lkotlin/jvm/b/b;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {p1, p2}, Lkotlin/jvm/b/Functions2;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p1
 
-    check-cast p1, Lkotlin/m;
+    check-cast p1, Lkotlin/Unit;
 
     :cond_0
     return-void
@@ -277,7 +277,7 @@
     .line 2
     iget-object p1, p0, Lcom/vk/cameraui/widgets/masks/MasksWrap$a;->a:Lcom/vk/cameraui/widgets/masks/MasksWrap;
 
-    invoke-virtual {p1}, Lcom/vk/cameraui/widgets/masks/MasksWrap;->getOnMasksUpdatedCallback()Lkotlin/jvm/b/b;
+    invoke-virtual {p1}, Lcom/vk/cameraui/widgets/masks/MasksWrap;->getOnMasksUpdatedCallback()Lkotlin/jvm/b/Functions2;
 
     move-result-object p1
 
@@ -285,23 +285,23 @@
 
     iget-object p2, p0, Lcom/vk/cameraui/widgets/masks/MasksWrap$a;->a:Lcom/vk/cameraui/widgets/masks/MasksWrap;
 
-    invoke-static {p2}, Lcom/vk/cameraui/widgets/masks/MasksWrap;->a(Lcom/vk/cameraui/widgets/masks/MasksWrap;)Lcom/vk/stories/masks/a;
+    invoke-static {p2}, Lcom/vk/cameraui/widgets/masks/MasksWrap;->a(Lcom/vk/cameraui/widgets/masks/MasksWrap;)Lcom/vk/stories/masks/MasksAdapter;
 
     move-result-object p2
 
-    invoke-virtual {p2}, Lcom/vk/lists/i0;->f()Ljava/util/List;
+    invoke-virtual {p2}, Lcom/vk/lists/SimpleAdapter;->f()Ljava/util/List;
 
     move-result-object p2
 
     const-string v0, "masksAdapter.list"
 
-    invoke-static {p2, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p2, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    invoke-interface {p1, p2}, Lkotlin/jvm/b/b;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {p1, p2}, Lkotlin/jvm/b/Functions2;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p1
 
-    check-cast p1, Lkotlin/m;
+    check-cast p1, Lkotlin/Unit;
 
     :cond_0
     return-void

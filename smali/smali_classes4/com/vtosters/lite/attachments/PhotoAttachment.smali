@@ -3,10 +3,10 @@
 .source "PhotoAttachment.java"
 
 # interfaces
-.implements Lcom/vtosters/lite/attachments/c;
-.implements Lcom/vk/dto/attachments/b;
+.implements Lcom/vtosters/lite/attachments/ThumbAttachment;
+.implements Lcom/vk/dto/attachments/ImageAttachment;
 .implements Lcom/vk/dto/common/Image$ConvertToImage;
-.implements Lcom/vk/newsfeed/i0/b;
+.implements Lcom/vk/newsfeed/i0/PostingDraftJsonItem;
 
 
 # static fields
@@ -229,9 +229,9 @@
     :try_start_0
     new-instance v0, Lcom/vtosters/lite/attachments/PhotoAttachment;
 
-    sget-object v1, Lcom/vk/dto/photo/Photo;->d0:Lcom/vk/dto/common/data/c;
+    sget-object v1, Lcom/vk/dto/photo/Photo;->d0:Lcom/vk/dto/common/data/JsonParser;
 
-    invoke-virtual {v1, p0}, Lcom/vk/dto/common/data/c;->a(Lorg/json/JSONObject;)Ljava/lang/Object;
+    invoke-virtual {v1, p0}, Lcom/vk/dto/common/data/JsonParser;->a(Lorg/json/JSONObject;)Ljava/lang/Object;
 
     move-result-object p0
 
@@ -341,9 +341,9 @@
     .end annotation
 
     .line 1
-    sget-object v0, Lcom/vk/newsfeed/i0/b;->w:Lcom/vk/newsfeed/i0/b$a;
+    sget-object v0, Lcom/vk/newsfeed/i0/PostingDraftJsonItem;->w:Lcom/vk/newsfeed/i0/PostingDraftJsonItem$a;
 
-    invoke-virtual {v0, p0}, Lcom/vk/newsfeed/i0/b$a;->a(Lcom/vk/newsfeed/i0/b;)Lorg/json/JSONObject;
+    invoke-virtual {v0, p0}, Lcom/vk/newsfeed/i0/PostingDraftJsonItem$a;->a(Lcom/vk/newsfeed/i0/PostingDraftJsonItem;)Lorg/json/JSONObject;
 
     move-result-object v0
 
@@ -542,7 +542,7 @@
 
     move-result-object v0
 
-    invoke-static {v0, p1}, Lb/h/g/i/a;->a(Ljava/lang/Iterable;I)Lcom/vk/dto/common/ImageSize;
+    invoke-static {v0, p1}, Lb/h/g/i/ImageSizeExt;->a(Ljava/lang/Iterable;I)Lcom/vk/dto/common/ImageSize;
 
     move-result-object p1
 
@@ -590,7 +590,7 @@
 
     move-result-object v0
 
-    invoke-static {v0}, Lb/h/g/i/a;->b(Ljava/lang/Iterable;)Lcom/vk/dto/common/ImageSize;
+    invoke-static {v0}, Lb/h/g/i/ImageSizeExt;->b(Ljava/lang/Iterable;)Lcom/vk/dto/common/ImageSize;
 
     move-result-object v0
 
@@ -693,7 +693,7 @@
     .end annotation
 
     .line 1
-    sget-object v0, Lcom/vk/core/util/i;->a:Landroid/content/Context;
+    sget-object v0, Lcom/vk/core/util/AppContextHolder;->a:Landroid/content/Context;
 
     const v1, 0x7f120a57
 
@@ -708,7 +708,7 @@
     .locals 1
 
     .line 1
-    sget v0, Lcom/vk/dto/attachments/a;->b:I
+    sget v0, Lcom/vk/dto/attachments/AttachmentWeights;->b:I
 
     return v0
 .end method

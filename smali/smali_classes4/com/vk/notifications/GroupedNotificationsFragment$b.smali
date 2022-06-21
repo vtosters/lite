@@ -24,7 +24,7 @@
     return-void
 .end method
 
-.method public synthetic constructor <init>(Lkotlin/jvm/internal/i;)V
+.method public synthetic constructor <init>(Lkotlin/jvm/internal/DefaultConstructorMarker;)V
     .locals 0
 
     .line 2
@@ -35,7 +35,7 @@
 
 
 # virtual methods
-.method public final a(Lorg/json/JSONObject;)Lcom/vk/navigation/o;
+.method public final a(Lorg/json/JSONObject;)Lcom/vk/navigation/Navigator;
     .locals 2
 
     const-string v0, "group_id"

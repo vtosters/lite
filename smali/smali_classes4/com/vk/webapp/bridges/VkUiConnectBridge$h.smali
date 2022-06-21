@@ -3,7 +3,7 @@
 .source "VkUiConnectBridge.kt"
 
 # interfaces
-.implements Lc/a/z/g;
+.implements Lio/reactivex/functions/Consumer;
 
 
 # annotations
@@ -22,7 +22,7 @@
         "Ljava/lang/Object;",
         ">",
         "Ljava/lang/Object;",
-        "Lc/a/z/g<",
+        "Lio/reactivex/functions/Consumer<",
         "Lcom/vk/dto/identity/IdentityCardData;",
         ">;"
     }
@@ -56,11 +56,11 @@
     .line 1
     iget-object v0, p0, Lcom/vk/webapp/bridges/VkUiConnectBridge$h;->a:Lcom/vk/webapp/bridges/VkUiConnectBridge;
 
-    invoke-static {v0}, Lcom/vk/webapp/bridges/VkUiConnectBridge;->a(Lcom/vk/webapp/bridges/VkUiConnectBridge;)Lcom/vk/webapp/o/b;
+    invoke-static {v0}, Lcom/vk/webapp/bridges/VkUiConnectBridge;->a(Lcom/vk/webapp/bridges/VkUiConnectBridge;)Lcom/vk/webapp/o/VkUiConnectFragmentDelegate;
 
     move-result-object v0
 
-    invoke-interface {v0, p1}, Lcom/vk/webapp/o/b;->a(Lcom/vk/dto/identity/IdentityCardData;)V
+    invoke-interface {v0, p1}, Lcom/vk/webapp/o/VkUiConnectFragmentDelegate;->a(Lcom/vk/dto/identity/IdentityCardData;)V
 
     .line 2
     new-instance v0, Lcom/vk/identity/IdentityContext;
@@ -69,15 +69,15 @@
 
     const-string v2, "it"
 
-    invoke-static {p1, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     iget-object v2, p0, Lcom/vk/webapp/bridges/VkUiConnectBridge$h;->a:Lcom/vk/webapp/bridges/VkUiConnectBridge;
 
-    invoke-static {v2}, Lcom/vk/webapp/bridges/VkUiConnectBridge;->a(Lcom/vk/webapp/bridges/VkUiConnectBridge;)Lcom/vk/webapp/o/b;
+    invoke-static {v2}, Lcom/vk/webapp/bridges/VkUiConnectBridge;->a(Lcom/vk/webapp/bridges/VkUiConnectBridge;)Lcom/vk/webapp/o/VkUiConnectFragmentDelegate;
 
     move-result-object v2
 
-    invoke-interface {v2}, Lcom/vk/webapp/o/b;->l()Lcom/vk/dto/common/data/ApiApplication;
+    invoke-interface {v2}, Lcom/vk/webapp/o/VkUiConnectFragmentDelegate;->l()Lcom/vk/dto/common/data/ApiApplication;
 
     move-result-object v2
 
@@ -88,11 +88,11 @@
     .line 3
     iget-object p1, p0, Lcom/vk/webapp/bridges/VkUiConnectBridge$h;->a:Lcom/vk/webapp/bridges/VkUiConnectBridge;
 
-    invoke-static {p1}, Lcom/vk/webapp/bridges/VkUiConnectBridge;->a(Lcom/vk/webapp/bridges/VkUiConnectBridge;)Lcom/vk/webapp/o/b;
+    invoke-static {p1}, Lcom/vk/webapp/bridges/VkUiConnectBridge;->a(Lcom/vk/webapp/bridges/VkUiConnectBridge;)Lcom/vk/webapp/o/VkUiConnectFragmentDelegate;
 
     move-result-object p1
 
-    invoke-interface {p1}, Lcom/vk/webapp/o/b;->q()Lcom/vk/identity/IdentityController;
+    invoke-interface {p1}, Lcom/vk/webapp/o/VkUiConnectFragmentDelegate;->q()Lcom/vk/identity/IdentityController;
 
     move-result-object p1
 

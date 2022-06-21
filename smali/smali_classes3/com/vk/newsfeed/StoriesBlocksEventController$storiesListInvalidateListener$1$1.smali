@@ -3,7 +3,7 @@
 .source "StoriesBlocksEventController.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/b;
+.implements Lkotlin/jvm/b/Functions2;
 
 
 # annotations
@@ -19,9 +19,9 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/b<",
+        "Lkotlin/jvm/b/Functions2<",
         "Lcom/vk/newsfeed/StoriesBlocksEventController$a;",
-        "Lkotlin/m;",
+        "Lkotlin/Unit;",
         ">;"
     }
 .end annotation
@@ -54,7 +54,7 @@
 
     const-string v1, "containers"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-interface {p1, v0}, Lcom/vk/newsfeed/StoriesBlocksEventController$a;->b(Ljava/util/ArrayList;)V
 
@@ -69,7 +69,7 @@
 
     invoke-virtual {p0, p1}, Lcom/vk/newsfeed/StoriesBlocksEventController$storiesListInvalidateListener$1$1;->a(Lcom/vk/newsfeed/StoriesBlocksEventController$a;)V
 
-    sget-object p1, Lkotlin/m;->a:Lkotlin/m;
+    sget-object p1, Lkotlin/Unit;->a:Lkotlin/Unit;
 
     return-object p1
 .end method

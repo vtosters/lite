@@ -3,7 +3,7 @@
 .source "CameraFragment.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/b;
+.implements Lkotlin/jvm/b/Functions2;
 
 
 # annotations
@@ -19,9 +19,9 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/b<",
+        "Lkotlin/jvm/b/Functions2<",
         "Lcom/google/zxing/client/result/ParsedResult;",
-        "Lkotlin/m;",
+        "Lkotlin/Unit;",
         ">;"
     }
 .end annotation
@@ -56,7 +56,7 @@
 
     const-string v0, "qr.toString()"
 
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 2
     invoke-static {p1}, Lkotlin/text/l;->a(Ljava/lang/CharSequence;)Z
@@ -99,7 +99,7 @@
 
     invoke-virtual {p0, p1}, Lcom/vk/stories/CameraFragment$onCreate$customQrListener$1;->a(Lcom/google/zxing/client/result/ParsedResult;)V
 
-    sget-object p1, Lkotlin/m;->a:Lkotlin/m;
+    sget-object p1, Lkotlin/Unit;->a:Lkotlin/Unit;
 
     return-object p1
 .end method

@@ -3,11 +3,11 @@
 .source "CommunityPickerFragment.kt"
 
 # interfaces
-.implements Lcom/vtosters/lite/ui/g0/c;
-.implements Lcom/vk/core/util/p1/d;
+.implements Lcom/vtosters/lite/ui/g0/CardWrapProvider;
+.implements Lcom/vk/core/util/p1/PaginatedListDataObserver;
 .implements Lcom/vk/notifications/settings/CommunitiesManageNotificationsFragment$d;
-.implements Lcom/vk/lists/c;
-.implements Lcom/vk/lists/t$l;
+.implements Lcom/vk/lists/Clearable;
+.implements Lcom/vk/lists/PaginationHelper$l;
 
 
 # annotations
@@ -29,15 +29,15 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Landroidx/recyclerview/widget/RecyclerView$Adapter<",
-        "Lcom/vtosters/lite/ui/b0/i<",
+        "Lcom/vtosters/lite/ui/holder/RecyclerHolder<",
         "*>;>;",
-        "Lcom/vtosters/lite/ui/g0/c;",
-        "Lcom/vk/core/util/p1/d<",
+        "Lcom/vtosters/lite/ui/g0/CardWrapProvider;",
+        "Lcom/vk/core/util/p1/PaginatedListDataObserver<",
         "Lcom/vk/dto/group/Group;",
         ">;",
         "Lcom/vk/notifications/settings/CommunitiesManageNotificationsFragment$d;",
-        "Lcom/vk/lists/c;",
-        "Lcom/vk/lists/t$l;"
+        "Lcom/vk/lists/Clearable;",
+        "Lcom/vk/lists/PaginationHelper$l;"
     }
 .end annotation
 
@@ -163,12 +163,12 @@
     return v0
 .end method
 
-.method public a(Lcom/vtosters/lite/ui/b0/i;I)V
+.method public a(Lcom/vtosters/lite/ui/holder/RecyclerHolder;I)V
     .locals 2
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lcom/vtosters/lite/ui/b0/i<",
+            "Lcom/vtosters/lite/ui/holder/RecyclerHolder<",
             "*>;I)V"
         }
     .end annotation
@@ -187,7 +187,7 @@
 
     const-string v1, "holder.itemView"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-static {p2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
@@ -196,7 +196,7 @@
     invoke-virtual {v0, v1}, Landroid/view/View;->setTag(Ljava/lang/Object;)V
 
     .line 3
-    check-cast p1, Lcom/vtosters/lite/ui/b0/g;
+    check-cast p1, Lcom/vtosters/lite/ui/holder/GroupHolder;
 
     iget-object v0, p0, Lcom/vk/profile/ui/community/CommunityPickerFragment$b;->b:Ljava/util/ArrayList;
 
@@ -206,7 +206,7 @@
 
     check-cast p2, Lcom/vk/dto/group/Group;
 
-    invoke-virtual {p1, p2}, Lcom/vtosters/lite/ui/b0/g;->a(Lcom/vk/dto/group/Group;)V
+    invoke-virtual {p1, p2}, Lcom/vtosters/lite/ui/holder/GroupHolder;->a(Lcom/vk/dto/group/Group;)V
 
     :cond_0
     return-void
@@ -265,7 +265,7 @@
     goto :goto_0
 
     :cond_0
-    invoke-static {p0, p1}, Lcom/vtosters/lite/ui/g0/c$a;->a(Lcom/vtosters/lite/ui/g0/c;I)I
+    invoke-static {p0, p1}, Lcom/vtosters/lite/ui/g0/CardWrapProvider$a;->a(Lcom/vtosters/lite/ui/g0/CardWrapProvider;I)I
 
     move-result p1
 
@@ -324,9 +324,9 @@
     .locals 0
 
     .line 1
-    check-cast p1, Lcom/vtosters/lite/ui/b0/i;
+    check-cast p1, Lcom/vtosters/lite/ui/holder/RecyclerHolder;
 
-    invoke-virtual {p0, p1, p2}, Lcom/vk/profile/ui/community/CommunityPickerFragment$b;->a(Lcom/vtosters/lite/ui/b0/i;I)V
+    invoke-virtual {p0, p1, p2}, Lcom/vk/profile/ui/community/CommunityPickerFragment$b;->a(Lcom/vtosters/lite/ui/holder/RecyclerHolder;I)V
 
     return-void
 .end method
@@ -335,21 +335,21 @@
     .locals 0
 
     .line 1
-    invoke-virtual {p0, p1, p2}, Lcom/vk/profile/ui/community/CommunityPickerFragment$b;->onCreateViewHolder(Landroid/view/ViewGroup;I)Lcom/vtosters/lite/ui/b0/i;
+    invoke-virtual {p0, p1, p2}, Lcom/vk/profile/ui/community/CommunityPickerFragment$b;->onCreateViewHolder(Landroid/view/ViewGroup;I)Lcom/vtosters/lite/ui/holder/RecyclerHolder;
 
     move-result-object p1
 
     return-object p1
 .end method
 
-.method public onCreateViewHolder(Landroid/view/ViewGroup;I)Lcom/vtosters/lite/ui/b0/i;
+.method public onCreateViewHolder(Landroid/view/ViewGroup;I)Lcom/vtosters/lite/ui/holder/RecyclerHolder;
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
             "Landroid/view/ViewGroup;",
             "I)",
-            "Lcom/vtosters/lite/ui/b0/i<",
+            "Lcom/vtosters/lite/ui/holder/RecyclerHolder<",
             "+",
             "Ljava/lang/Object;",
             ">;"
@@ -374,11 +374,11 @@
 
     .line 4
     :cond_0
-    new-instance p2, Lcom/vtosters/lite/ui/b0/g;
+    new-instance p2, Lcom/vtosters/lite/ui/holder/GroupHolder;
 
     const v0, 0x7f0d021f
 
-    invoke-direct {p2, p1, v0}, Lcom/vtosters/lite/ui/b0/g;-><init>(Landroid/view/ViewGroup;I)V
+    invoke-direct {p2, p1, v0}, Lcom/vtosters/lite/ui/holder/GroupHolder;-><init>(Landroid/view/ViewGroup;I)V
 
     .line 5
     iget-object p1, p2, Landroidx/recyclerview/widget/RecyclerView$ViewHolder;->itemView:Landroid/view/View;

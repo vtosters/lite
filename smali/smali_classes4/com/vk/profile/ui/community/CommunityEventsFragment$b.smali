@@ -1,9 +1,9 @@
 .class public final Lcom/vk/profile/ui/community/CommunityEventsFragment$b;
-.super Lcom/vk/lists/i0;
+.super Lcom/vk/lists/SimpleAdapter;
 .source "CommunityEventsFragment.kt"
 
 # interfaces
-.implements Lcom/vk/lists/t$l;
+.implements Lcom/vk/lists/PaginationHelper$l;
 
 
 # annotations
@@ -24,11 +24,11 @@
 
 .annotation system Ldalvik/annotation/Signature;
     value = {
-        "Lcom/vk/lists/i0<",
+        "Lcom/vk/lists/SimpleAdapter<",
         "Lcom/vk/dto/group/Group;",
         "Landroidx/recyclerview/widget/RecyclerView$ViewHolder;",
         ">;",
-        "Lcom/vk/lists/t$l;"
+        "Lcom/vk/lists/PaginationHelper$l;"
     }
 .end annotation
 
@@ -38,7 +38,7 @@
     .locals 0
 
     .line 1
-    invoke-direct {p0}, Lcom/vk/lists/i0;-><init>()V
+    invoke-direct {p0}, Lcom/vk/lists/SimpleAdapter;-><init>()V
 
     return-void
 .end method
@@ -49,9 +49,9 @@
     .locals 1
 
     .line 1
-    iget-object v0, p0, Lcom/vk/lists/i0;->a:Lcom/vk/lists/b;
+    iget-object v0, p0, Lcom/vk/lists/SimpleAdapter;->a:Lcom/vk/lists/BaseListDataSet;
 
-    invoke-interface {v0}, Lcom/vk/lists/d;->size()I
+    invoke-interface {v0}, Lcom/vk/lists/DataSet;->size()I
 
     move-result v0
 
@@ -91,15 +91,15 @@
 
     move-result-object p1
 
-    iget-object v0, p0, Lcom/vk/lists/i0;->a:Lcom/vk/lists/b;
+    iget-object v0, p0, Lcom/vk/lists/SimpleAdapter;->a:Lcom/vk/lists/BaseListDataSet;
 
-    invoke-interface {v0, p2}, Lcom/vk/lists/d;->k(I)Ljava/lang/Object;
+    invoke-interface {v0, p2}, Lcom/vk/lists/DataSet;->k(I)Ljava/lang/Object;
 
     move-result-object p2
 
     const-string v0, "dataSet.getItemAt(position)"
 
-    invoke-static {p2, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p2, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     check-cast p2, Lcom/vk/dto/group/Group;
 
@@ -129,7 +129,7 @@
 
     move-object v0, p2
 
-    invoke-direct/range {v0 .. v6}, Lcom/vk/catalog2/core/holders/group/GroupVh;-><init>(IILcom/vk/catalog2/core/analytics/CatalogAnalyticsHelper;ZILkotlin/jvm/internal/i;)V
+    invoke-direct/range {v0 .. v6}, Lcom/vk/catalog2/core/holders/group/GroupVh;-><init>(IILcom/vk/catalog2/core/analytics/CatalogAnalyticsHelper;ZILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     .line 2
     invoke-virtual {p1}, Landroid/view/ViewGroup;->getContext()Landroid/content/Context;
@@ -142,7 +142,7 @@
 
     const-string v1, "LayoutInflater.from(parent.context)"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     const/4 v1, 0x0
 

@@ -1,5 +1,5 @@
 .class public final Lcom/vk/profile/ui/photos/album_list/AlbumsListFragment$a;
-.super Lcom/vk/navigation/o;
+.super Lcom/vk/navigation/Navigator;
 .source "AlbumsListFragment.kt"
 
 
@@ -21,10 +21,10 @@
     .line 1
     const-class v0, Lcom/vk/profile/ui/photos/album_list/AlbumsListFragment;
 
-    invoke-direct {p0, v0}, Lcom/vk/navigation/o;-><init>(Ljava/lang/Class;)V
+    invoke-direct {p0, v0}, Lcom/vk/navigation/Navigator;-><init>(Ljava/lang/Class;)V
 
     .line 2
-    iget-object v0, p0, Lcom/vk/navigation/o;->O0:Landroid/os/Bundle;
+    iget-object v0, p0, Lcom/vk/navigation/Navigator;->O0:Landroid/os/Bundle;
 
     const-string v1, "uid"
 
@@ -41,7 +41,7 @@
     if-eqz p1, :cond_0
 
     .line 1
-    iget-object v0, p0, Lcom/vk/navigation/o;->O0:Landroid/os/Bundle;
+    iget-object v0, p0, Lcom/vk/navigation/Navigator;->O0:Landroid/os/Bundle;
 
     const-string v1, "source"
 

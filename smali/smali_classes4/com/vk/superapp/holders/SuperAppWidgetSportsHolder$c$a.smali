@@ -48,7 +48,7 @@
     .line 1
     iget-object p1, p0, Lcom/vk/superapp/holders/SuperAppWidgetSportsHolder$c$a;->b:Lcom/vk/superapp/holders/SuperAppWidgetSportsHolder$c;
 
-    invoke-static {p1}, Lcom/vk/superapp/holders/SuperAppWidgetSportsHolder$c;->a(Lcom/vk/superapp/holders/SuperAppWidgetSportsHolder$c;)Lkotlin/jvm/b/d;
+    invoke-static {p1}, Lcom/vk/superapp/holders/SuperAppWidgetSportsHolder$c;->a(Lcom/vk/superapp/holders/SuperAppWidgetSportsHolder$c;)Lkotlin/jvm/b/Functions4;
 
     move-result-object p1
 
@@ -64,7 +64,7 @@
 
     move-result-object v2
 
-    invoke-interface {p1, v0, v1, v2}, Lkotlin/jvm/b/d;->a(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {p1, v0, v1, v2}, Lkotlin/jvm/b/Functions4;->a(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     return-void
 .end method

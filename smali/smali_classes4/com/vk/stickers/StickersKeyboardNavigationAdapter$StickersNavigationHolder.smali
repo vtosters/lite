@@ -17,7 +17,7 @@
 # instance fields
 .field private a:Ljava/lang/String;
 
-.field private b:Lcom/vk/stickers/e0/d;
+.field private b:Lcom/vk/stickers/e0/StickerNavigationRecyclerItem;
 
 
 # direct methods
@@ -75,19 +75,19 @@
 
     move-result v0
 
-    invoke-virtual {p1, p2, v0}, Lcom/vk/imageloader/view/a;->a(II)V
+    invoke-virtual {p1, p2, v0}, Lcom/vk/imageloader/view/GenericVKImageView;->a(II)V
 
     .line 6
-    sget-object p2, Lcom/facebook/drawee/drawable/r$b;->n:Lcom/facebook/drawee/drawable/r$b;
+    sget-object p2, Lcom/facebook/drawee/drawable/ScalingUtils$b;->n:Lcom/facebook/drawee/drawable/ScalingUtils$b;
 
-    invoke-virtual {p1, p2}, Lcom/vk/imageloader/view/a;->setActualScaleType(Lcom/facebook/drawee/drawable/r$b;)V
+    invoke-virtual {p1, p2}, Lcom/vk/imageloader/view/GenericVKImageView;->setActualScaleType(Lcom/facebook/drawee/drawable/ScalingUtils$b;)V
 
     .line 7
     new-instance p2, Lcom/vk/stickers/StickersKeyboardNavigationAdapter$StickersNavigationHolder$1;
 
     invoke-direct {p2, p0, p3}, Lcom/vk/stickers/StickersKeyboardNavigationAdapter$StickersNavigationHolder$1;-><init>(Lcom/vk/stickers/StickersKeyboardNavigationAdapter$StickersNavigationHolder;Lcom/vk/stickers/StickersKeyboardNavigationAdapter$a;)V
 
-    invoke-static {p1, p2}, Lcom/vk/extensions/ViewExtKt;->e(Landroid/view/View;Lkotlin/jvm/b/b;)V
+    invoke-static {p1, p2}, Lcom/vk/extensions/ViewExtKt;->e(Landroid/view/View;Lkotlin/jvm/b/Functions2;)V
 
     return-void
 
@@ -102,11 +102,11 @@
     throw p1
 .end method
 
-.method public static final synthetic a(Lcom/vk/stickers/StickersKeyboardNavigationAdapter$StickersNavigationHolder;)Lcom/vk/stickers/e0/d;
+.method public static final synthetic a(Lcom/vk/stickers/StickersKeyboardNavigationAdapter$StickersNavigationHolder;)Lcom/vk/stickers/e0/StickerNavigationRecyclerItem;
     .locals 0
 
     .line 1
-    iget-object p0, p0, Lcom/vk/stickers/StickersKeyboardNavigationAdapter$StickersNavigationHolder;->b:Lcom/vk/stickers/e0/d;
+    iget-object p0, p0, Lcom/vk/stickers/StickersKeyboardNavigationAdapter$StickersNavigationHolder;->b:Lcom/vk/stickers/e0/StickerNavigationRecyclerItem;
 
     if-eqz p0, :cond_0
 
@@ -115,7 +115,7 @@
     :cond_0
     const-string p0, "item"
 
-    invoke-static {p0}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {p0}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     const/4 p0, 0x0
 
@@ -171,13 +171,13 @@
     invoke-direct {v0, v2, v1}, Landroid/content/res/ColorStateList;-><init>([[I[I)V
 
     .line 4
-    new-instance v1, Lcom/vk/core/drawable/i;
+    new-instance v1, Lcom/vk/core/drawable/RecoloredDrawable;
 
     iget-object v2, p0, Landroidx/recyclerview/widget/RecyclerView$ViewHolder;->itemView:Landroid/view/View;
 
     const-string v3, "itemView"
 
-    invoke-static {v2, v3}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v2, v3}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {v2}, Landroid/view/View;->getContext()Landroid/content/Context;
 
@@ -189,7 +189,7 @@
 
     move-result-object v2
 
-    invoke-direct {v1, v2, v0}, Lcom/vk/core/drawable/i;-><init>(Landroid/graphics/drawable/Drawable;Landroid/content/res/ColorStateList;)V
+    invoke-direct {v1, v2, v0}, Lcom/vk/core/drawable/RecoloredDrawable;-><init>(Landroid/graphics/drawable/Drawable;Landroid/content/res/ColorStateList;)V
 
     return-object v1
 .end method
@@ -243,13 +243,13 @@
     invoke-direct {v0, v2, v1}, Landroid/content/res/ColorStateList;-><init>([[I[I)V
 
     .line 4
-    new-instance v1, Lcom/vk/core/drawable/i;
+    new-instance v1, Lcom/vk/core/drawable/RecoloredDrawable;
 
     iget-object v2, p0, Landroidx/recyclerview/widget/RecyclerView$ViewHolder;->itemView:Landroid/view/View;
 
     const-string v3, "itemView"
 
-    invoke-static {v2, v3}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v2, v3}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {v2}, Landroid/view/View;->getContext()Landroid/content/Context;
 
@@ -261,7 +261,7 @@
 
     move-result-object v2
 
-    invoke-direct {v1, v2, v0}, Lcom/vk/core/drawable/i;-><init>(Landroid/graphics/drawable/Drawable;Landroid/content/res/ColorStateList;)V
+    invoke-direct {v1, v2, v0}, Lcom/vk/core/drawable/RecoloredDrawable;-><init>(Landroid/graphics/drawable/Drawable;Landroid/content/res/ColorStateList;)V
 
     return-object v1
 .end method
@@ -279,7 +279,7 @@
 
     const-string v2, "itemView"
 
-    invoke-static {v1, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {v1}, Landroid/view/View;->getContext()Landroid/content/Context;
 
@@ -287,7 +287,7 @@
 
     const-string v2, "itemView.context"
 
-    invoke-static {v1, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {v1}, Landroid/content/Context;->getTheme()Landroid/content/res/Resources$Theme;
 
@@ -309,7 +309,7 @@
     .locals 3
 
     .line 1
-    new-instance v0, Lcom/vk/core/drawable/i;
+    new-instance v0, Lcom/vk/core/drawable/RecoloredDrawable;
 
     invoke-direct {p0}, Lcom/vk/stickers/StickersKeyboardNavigationAdapter$StickersNavigationHolder;->getContext()Landroid/content/Context;
 
@@ -329,7 +329,7 @@
     move-result v2
 
     .line 3
-    invoke-direct {v0, v1, v2}, Lcom/vk/core/drawable/i;-><init>(Landroid/graphics/drawable/Drawable;I)V
+    invoke-direct {v0, v1, v2}, Lcom/vk/core/drawable/RecoloredDrawable;-><init>(Landroid/graphics/drawable/Drawable;I)V
 
     return-object v0
 .end method
@@ -342,7 +342,7 @@
 
     const-string v1, "itemView"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {v0}, Landroid/view/View;->getContext()Landroid/content/Context;
 
@@ -353,14 +353,14 @@
 
 
 # virtual methods
-.method public final a(Lcom/vk/stickers/e0/d;)V
+.method public final a(Lcom/vk/stickers/e0/StickerNavigationRecyclerItem;)V
     .locals 6
 
     .line 2
-    iput-object p1, p0, Lcom/vk/stickers/StickersKeyboardNavigationAdapter$StickersNavigationHolder;->b:Lcom/vk/stickers/e0/d;
+    iput-object p1, p0, Lcom/vk/stickers/StickersKeyboardNavigationAdapter$StickersNavigationHolder;->b:Lcom/vk/stickers/e0/StickerNavigationRecyclerItem;
 
     .line 3
-    invoke-virtual {p1}, Lcom/vk/stickers/e0/d;->e()I
+    invoke-virtual {p1}, Lcom/vk/stickers/e0/StickerNavigationRecyclerItem;->e()I
 
     move-result v0
 
@@ -392,7 +392,7 @@
     .line 5
     iget-object v0, p0, Landroidx/recyclerview/widget/RecyclerView$ViewHolder;->itemView:Landroid/view/View;
 
-    invoke-static {v0, v4}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v4}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     check-cast v0, Lcom/vk/imageloader/view/VKImageView;
 
@@ -423,7 +423,7 @@
 
     .line 8
     :cond_1
-    invoke-virtual {p1}, Lcom/vk/stickers/e0/d;->e()I
+    invoke-virtual {p1}, Lcom/vk/stickers/e0/StickerNavigationRecyclerItem;->e()I
 
     move-result v0
 
@@ -447,7 +447,7 @@
     .line 10
     iget-object v0, p0, Landroidx/recyclerview/widget/RecyclerView$ViewHolder;->itemView:Landroid/view/View;
 
-    invoke-static {v0, v4}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v4}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     check-cast v0, Lcom/vk/imageloader/view/VKImageView;
 
@@ -478,7 +478,7 @@
 
     .line 13
     :cond_3
-    invoke-virtual {p1}, Lcom/vk/stickers/e0/d;->e()I
+    invoke-virtual {p1}, Lcom/vk/stickers/e0/StickerNavigationRecyclerItem;->e()I
 
     move-result v0
 
@@ -500,7 +500,7 @@
     .line 15
     iget-object v0, p0, Landroidx/recyclerview/widget/RecyclerView$ViewHolder;->itemView:Landroid/view/View;
 
-    invoke-static {v0, v4}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v4}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     check-cast v0, Lcom/vk/imageloader/view/VKImageView;
 
@@ -533,11 +533,11 @@
     :cond_5
     iget-object v0, p0, Lcom/vk/stickers/StickersKeyboardNavigationAdapter$StickersNavigationHolder;->a:Ljava/lang/String;
 
-    invoke-virtual {p1}, Lcom/vk/stickers/e0/d;->c()Ljava/lang/String;
+    invoke-virtual {p1}, Lcom/vk/stickers/e0/StickerNavigationRecyclerItem;->c()Ljava/lang/String;
 
     move-result-object v2
 
-    invoke-static {v0, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v0, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v0
 
@@ -552,7 +552,7 @@
 
     check-cast v0, Lcom/vk/imageloader/view/VKImageView;
 
-    invoke-virtual {p1}, Lcom/vk/stickers/e0/d;->c()Ljava/lang/String;
+    invoke-virtual {p1}, Lcom/vk/stickers/e0/StickerNavigationRecyclerItem;->c()Ljava/lang/String;
 
     move-result-object v2
 
@@ -561,18 +561,18 @@
     .line 20
     iget-object v0, p0, Landroidx/recyclerview/widget/RecyclerView$ViewHolder;->itemView:Landroid/view/View;
 
-    invoke-static {v0, v4}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v4}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     check-cast v0, Lcom/vk/imageloader/view/VKImageView;
 
-    invoke-virtual {p1}, Lcom/vk/stickers/e0/d;->f()Ljava/lang/String;
+    invoke-virtual {p1}, Lcom/vk/stickers/e0/StickerNavigationRecyclerItem;->f()Ljava/lang/String;
 
     move-result-object v2
 
     invoke-virtual {v0, v2}, Landroid/widget/ImageView;->setContentDescription(Ljava/lang/CharSequence;)V
 
     .line 21
-    invoke-virtual {p1}, Lcom/vk/stickers/e0/d;->c()Ljava/lang/String;
+    invoke-virtual {p1}, Lcom/vk/stickers/e0/StickerNavigationRecyclerItem;->c()Ljava/lang/String;
 
     move-result-object v0
 
@@ -591,7 +591,7 @@
     .line 23
     :cond_7
     :goto_0
-    invoke-virtual {p1}, Lcom/vk/stickers/e0/d;->e()I
+    invoke-virtual {p1}, Lcom/vk/stickers/e0/StickerNavigationRecyclerItem;->e()I
 
     move-result v0
 
@@ -620,9 +620,9 @@
     :goto_1
     iget-object v0, p0, Landroidx/recyclerview/widget/RecyclerView$ViewHolder;->itemView:Landroid/view/View;
 
-    invoke-static {v0, v4}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v4}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    invoke-virtual {p1}, Lcom/vk/stickers/e0/d;->d()Z
+    invoke-virtual {p1}, Lcom/vk/stickers/e0/StickerNavigationRecyclerItem;->d()Z
 
     move-result p1
 

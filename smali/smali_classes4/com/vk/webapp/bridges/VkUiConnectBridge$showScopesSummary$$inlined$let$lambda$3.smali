@@ -3,12 +3,12 @@
 .source "VkUiConnectBridge.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/b;
+.implements Lkotlin/jvm/b/Functions2;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/webapp/bridges/VkUiConnectBridge;->a(Lcom/vk/webapp/ScopesController;ILjava/util/List;Lcom/vk/webapp/internal/data/c;Ljava/lang/Integer;)V
+    value = Lcom/vk/webapp/bridges/VkUiConnectBridge;->a(Lcom/vk/webapp/ScopesController;ILjava/util/List;Lcom/vk/webapp/internal/data/JsApiMethodType1;Ljava/lang/Integer;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -19,9 +19,9 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/b<",
+        "Lkotlin/jvm/b/Functions2<",
         "Ljava/lang/Throwable;",
-        "Lkotlin/m;",
+        "Lkotlin/Unit;",
         ">;"
     }
 .end annotation
@@ -36,7 +36,7 @@
 
 .field final synthetic $method$inlined:Lcom/vk/webapp/internal/data/JsApiMethodType;
 
-.field final synthetic $methodInfo$inlined:Lcom/vk/webapp/internal/data/c;
+.field final synthetic $methodInfo$inlined:Lcom/vk/webapp/internal/data/JsApiMethodType1;
 
 .field final synthetic $scopesController$inlined:Lcom/vk/webapp/ScopesController;
 
@@ -46,7 +46,7 @@
 
 
 # direct methods
-.method constructor <init>(Lcom/vk/webapp/bridges/VkUiConnectBridge;Lcom/vk/webapp/ScopesController;Ljava/util/List;ILcom/vk/webapp/internal/data/c;Ljava/lang/Integer;Lcom/vk/webapp/internal/data/JsApiMethodType;Ljava/lang/String;)V
+.method constructor <init>(Lcom/vk/webapp/bridges/VkUiConnectBridge;Lcom/vk/webapp/ScopesController;Ljava/util/List;ILcom/vk/webapp/internal/data/JsApiMethodType1;Ljava/lang/Integer;Lcom/vk/webapp/internal/data/JsApiMethodType;Ljava/lang/String;)V
     .locals 0
 
     iput-object p1, p0, Lcom/vk/webapp/bridges/VkUiConnectBridge$showScopesSummary$$inlined$let$lambda$3;->this$0:Lcom/vk/webapp/bridges/VkUiConnectBridge;
@@ -57,7 +57,7 @@
 
     iput p4, p0, Lcom/vk/webapp/bridges/VkUiConnectBridge$showScopesSummary$$inlined$let$lambda$3;->$appId$inlined:I
 
-    iput-object p5, p0, Lcom/vk/webapp/bridges/VkUiConnectBridge$showScopesSummary$$inlined$let$lambda$3;->$methodInfo$inlined:Lcom/vk/webapp/internal/data/c;
+    iput-object p5, p0, Lcom/vk/webapp/bridges/VkUiConnectBridge$showScopesSummary$$inlined$let$lambda$3;->$methodInfo$inlined:Lcom/vk/webapp/internal/data/JsApiMethodType1;
 
     iput-object p6, p0, Lcom/vk/webapp/bridges/VkUiConnectBridge$showScopesSummary$$inlined$let$lambda$3;->$groupId$inlined:Ljava/lang/Integer;
 
@@ -94,7 +94,7 @@
 
     move-result-object p1
 
-    invoke-virtual {v0, v1, v2, p1}, Lcom/vk/webapp/bridges/a;->a(Lcom/vk/webapp/internal/data/JsApiMethodType;Ljava/lang/String;Lorg/json/JSONObject;)V
+    invoke-virtual {v0, v1, v2, p1}, Lcom/vk/webapp/bridges/AndroidBridge;->a(Lcom/vk/webapp/internal/data/JsApiMethodType;Ljava/lang/String;Lorg/json/JSONObject;)V
 
     return-void
 .end method
@@ -107,7 +107,7 @@
 
     invoke-virtual {p0, p1}, Lcom/vk/webapp/bridges/VkUiConnectBridge$showScopesSummary$$inlined$let$lambda$3;->a(Ljava/lang/Throwable;)V
 
-    sget-object p1, Lkotlin/m;->a:Lkotlin/m;
+    sget-object p1, Lkotlin/Unit;->a:Lkotlin/Unit;
 
     return-object p1
 .end method

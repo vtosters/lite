@@ -41,7 +41,7 @@
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/util/ArrayList<",
-            "Lcom/vk/stat/scheme/b;",
+            "Lcom/vk/stat/scheme/SchemeStat2;",
             ">;"
         }
     .end annotation
@@ -91,7 +91,7 @@
             ">;",
             "Lcom/vk/stat/scheme/SchemeStat$TypeSuperappScreenItem$VkPay;",
             "Ljava/util/ArrayList<",
-            "Lcom/vk/stat/scheme/b;",
+            "Lcom/vk/stat/scheme/SchemeStat2;",
             ">;",
             "Ljava/util/ArrayList<",
             "Lcom/vk/stat/scheme/SchemeStat$TypeSuperappWidgetItem;",
@@ -140,7 +140,7 @@
 
     iget-object v1, p1, Lcom/vk/stat/scheme/SchemeStat$TypeSuperappScreenItem;->a:Ljava/util/ArrayList;
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v0
 
@@ -150,7 +150,7 @@
 
     iget-object v1, p1, Lcom/vk/stat/scheme/SchemeStat$TypeSuperappScreenItem;->b:Lcom/vk/stat/scheme/SchemeStat$TypeSuperappScreenItem$VkPay;
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v0
 
@@ -160,7 +160,7 @@
 
     iget-object v1, p1, Lcom/vk/stat/scheme/SchemeStat$TypeSuperappScreenItem;->c:Ljava/util/ArrayList;
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v0
 
@@ -170,7 +170,7 @@
 
     iget-object v1, p1, Lcom/vk/stat/scheme/SchemeStat$TypeSuperappScreenItem;->d:Ljava/util/ArrayList;
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v0
 
@@ -180,7 +180,7 @@
 
     iget-object v1, p1, Lcom/vk/stat/scheme/SchemeStat$TypeSuperappScreenItem;->e:Lcom/vk/stat/scheme/SchemeStat$TypeSuperappScreenItem$Action;
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v0
 
@@ -190,7 +190,7 @@
 
     iget-object v1, p1, Lcom/vk/stat/scheme/SchemeStat$TypeSuperappScreenItem;->f:Ljava/lang/Integer;
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v0
 
@@ -200,7 +200,7 @@
 
     iget-object p1, p1, Lcom/vk/stat/scheme/SchemeStat$TypeSuperappScreenItem;->g:Ljava/lang/Integer;
 
-    invoke-static {v0, p1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v0, p1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result p1
 

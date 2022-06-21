@@ -3,7 +3,7 @@
 .source "NotificationsPresenter.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/b;
+.implements Lkotlin/jvm/b/Functions2;
 
 
 # annotations
@@ -19,9 +19,9 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/b<",
+        "Lkotlin/jvm/b/Functions2<",
         "Ljava/lang/Object;",
-        "Lkotlin/m;",
+        "Lkotlin/Unit;",
         ">;"
     }
 .end annotation
@@ -52,7 +52,7 @@
     .line 1
     invoke-virtual {p0, p1}, Lcom/vk/notifications/NotificationsPresenter$initEventBusListeners$2;->invoke(Ljava/lang/Object;)V
 
-    sget-object p1, Lkotlin/m;->a:Lkotlin/m;
+    sget-object p1, Lkotlin/Unit;->a:Lkotlin/Unit;
 
     return-object p1
 .end method
@@ -80,7 +80,7 @@
 
     invoke-direct {v2, v0}, Lcom/vk/notifications/NotificationsPresenter$initEventBusListeners$2$notItem$1;-><init>(I)V
 
-    invoke-virtual {v1, v2}, Lcom/vk/lists/o;->c(Lkotlin/jvm/b/b;)Ljava/lang/Object;
+    invoke-virtual {v1, v2}, Lcom/vk/lists/ListDataSet;->c(Lkotlin/jvm/b/Functions2;)Ljava/lang/Object;
 
     move-result-object v0
 
@@ -104,7 +104,7 @@
 
     iget-object v2, p0, Lcom/vk/notifications/NotificationsPresenter$initEventBusListeners$2;->this$0:Lcom/vk/notifications/NotificationsPresenter;
 
-    invoke-virtual {v2}, Lcom/vk/notifications/NotificationsPresenter;->a()Lcom/vk/notifications/l;
+    invoke-virtual {v2}, Lcom/vk/notifications/NotificationsPresenter;->a()Lcom/vk/notifications/NotificationsContract1;
 
     move-result-object v2
 
@@ -112,7 +112,7 @@
 
     move-result p1
 
-    invoke-interface {v2, v0, p1}, Lcom/vk/notifications/l;->a(Lcom/vk/dto/notifications/NotificationItem;Z)Lcom/vk/dto/notifications/NotificationItem;
+    invoke-interface {v2, v0, p1}, Lcom/vk/notifications/NotificationsContract1;->a(Lcom/vk/dto/notifications/NotificationItem;Z)Lcom/vk/dto/notifications/NotificationItem;
 
     invoke-virtual {v1, v0}, Lcom/vk/notifications/NotificationsDataSet;->a(Lcom/vk/dto/notifications/NotificationItem;)V
 

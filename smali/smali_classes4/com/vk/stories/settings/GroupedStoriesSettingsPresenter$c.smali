@@ -3,7 +3,7 @@
 .source "GroupedStoriesSettingsPresenter.kt"
 
 # interfaces
-.implements Lcom/vk/lists/y;
+.implements Lcom/vk/lists/PreloadCallback;
 
 
 # annotations
@@ -40,15 +40,15 @@
     .line 1
     iget-object v0, p0, Lcom/vk/stories/settings/GroupedStoriesSettingsPresenter$c;->a:Lcom/vk/stories/settings/GroupedStoriesSettingsPresenter;
 
-    invoke-virtual {v0}, Lcom/vk/stories/settings/GroupedStoriesSettingsPresenter;->a()Lcom/vk/lists/o;
+    invoke-virtual {v0}, Lcom/vk/stories/settings/GroupedStoriesSettingsPresenter;->a()Lcom/vk/lists/ListDataSet;
 
     move-result-object v0
 
-    invoke-virtual {v0, p1}, Lcom/vk/lists/o;->k(I)Ljava/lang/Object;
+    invoke-virtual {v0, p1}, Lcom/vk/lists/ListDataSet;->k(I)Ljava/lang/Object;
 
     move-result-object p1
 
-    instance-of v0, p1, Lcom/vk/stories/settings/g;
+    instance-of v0, p1, Lcom/vk/stories/settings/StoriesGroupedSettingsRecyclerItem;
 
     const/4 v1, 0x0
 
@@ -57,12 +57,12 @@
     move-object p1, v1
 
     :cond_0
-    check-cast p1, Lcom/vk/stories/settings/g;
+    check-cast p1, Lcom/vk/stories/settings/StoriesGroupedSettingsRecyclerItem;
 
     if-eqz p1, :cond_2
 
     .line 2
-    invoke-virtual {p1}, Lcom/vk/stories/settings/g;->c()Ljava/lang/Object;
+    invoke-virtual {p1}, Lcom/vk/stories/settings/StoriesGroupedSettingsRecyclerItem;->c()Ljava/lang/Object;
 
     move-result-object p1
 

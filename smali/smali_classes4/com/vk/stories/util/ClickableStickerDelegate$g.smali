@@ -53,11 +53,11 @@
     invoke-static {p1, v0}, Lcom/vk/stories/util/ClickableStickerDelegate;->b(Lcom/vk/stories/util/ClickableStickerDelegate;Lcom/vk/dto/stories/model/clickable/ClickableSticker;)V
 
     .line 2
-    invoke-static {}, Lcom/vk/im/ui/p/c;->a()Lcom/vk/im/ui/p/b;
+    invoke-static {}, Lcom/vk/im/ui/p/ImBridge7;->a()Lcom/vk/im/ui/p/ImBridge8;
 
     move-result-object p1
 
-    invoke-interface {p1}, Lcom/vk/im/ui/p/b;->o()Lcom/vk/im/ui/p/a;
+    invoke-interface {p1}, Lcom/vk/im/ui/p/ImBridge8;->o()Lcom/vk/im/ui/p/ImBridge1;
 
     move-result-object p1
 
@@ -65,7 +65,7 @@
 
     const-string v1, "context"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     iget-object v1, p0, Lcom/vk/stories/util/ClickableStickerDelegate$g;->b:Lcom/vk/dto/stories/model/clickable/ClickableLink;
 
@@ -73,7 +73,7 @@
 
     move-result-object v1
 
-    invoke-interface {p1, v0, v1}, Lcom/vk/im/ui/p/a;->a(Landroid/content/Context;Ljava/lang/String;)V
+    invoke-interface {p1, v0, v1}, Lcom/vk/im/ui/p/ImBridge1;->a(Landroid/content/Context;Ljava/lang/String;)V
 
     return-void
 .end method

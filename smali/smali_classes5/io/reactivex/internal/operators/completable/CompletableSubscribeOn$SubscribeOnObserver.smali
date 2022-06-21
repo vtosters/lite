@@ -3,8 +3,8 @@
 .source "CompletableSubscribeOn.java"
 
 # interfaces
-.implements Lc/a/c;
-.implements Lio/reactivex/disposables/b;
+.implements Lio/reactivex/CompletableObserver;
+.implements Lio/reactivex/disposables/Disposable;
 .implements Ljava/lang/Runnable;
 
 
@@ -21,10 +21,10 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Ljava/util/concurrent/atomic/AtomicReference<",
-        "Lio/reactivex/disposables/b;",
+        "Lio/reactivex/disposables/Disposable;",
         ">;",
-        "Lc/a/c;",
-        "Lio/reactivex/disposables/b;",
+        "Lio/reactivex/CompletableObserver;",
+        "Lio/reactivex/disposables/Disposable;",
         "Ljava/lang/Runnable;"
     }
 .end annotation
@@ -35,25 +35,25 @@
 
 
 # instance fields
-.field final downstream:Lc/a/c;
+.field final downstream:Lio/reactivex/CompletableObserver;
 
-.field final source:Lc/a/e;
+.field final source:Lio/reactivex/CompletableSource;
 
 .field final task:Lio/reactivex/internal/disposables/SequentialDisposable;
 
 
 # direct methods
-.method constructor <init>(Lc/a/c;Lc/a/e;)V
+.method constructor <init>(Lio/reactivex/CompletableObserver;Lio/reactivex/CompletableSource;)V
     .locals 0
 
     .line 1
     invoke-direct {p0}, Ljava/util/concurrent/atomic/AtomicReference;-><init>()V
 
     .line 2
-    iput-object p1, p0, Lio/reactivex/internal/operators/completable/CompletableSubscribeOn$SubscribeOnObserver;->downstream:Lc/a/c;
+    iput-object p1, p0, Lio/reactivex/internal/operators/completable/CompletableSubscribeOn$SubscribeOnObserver;->downstream:Lio/reactivex/CompletableObserver;
 
     .line 3
-    iput-object p2, p0, Lio/reactivex/internal/operators/completable/CompletableSubscribeOn$SubscribeOnObserver;->source:Lc/a/e;
+    iput-object p2, p0, Lio/reactivex/internal/operators/completable/CompletableSubscribeOn$SubscribeOnObserver;->source:Lio/reactivex/CompletableSource;
 
     .line 4
     new-instance p1, Lio/reactivex/internal/disposables/SequentialDisposable;
@@ -67,11 +67,11 @@
 
 
 # virtual methods
-.method public a(Lio/reactivex/disposables/b;)V
+.method public a(Lio/reactivex/disposables/Disposable;)V
     .locals 0
 
     .line 1
-    invoke-static {p0, p1}, Lio/reactivex/internal/disposables/DisposableHelper;->c(Ljava/util/concurrent/atomic/AtomicReference;Lio/reactivex/disposables/b;)Z
+    invoke-static {p0, p1}, Lio/reactivex/internal/disposables/DisposableHelper;->c(Ljava/util/concurrent/atomic/AtomicReference;Lio/reactivex/disposables/Disposable;)Z
 
     return-void
 .end method
@@ -80,9 +80,9 @@
     .locals 1
 
     .line 2
-    iget-object v0, p0, Lio/reactivex/internal/operators/completable/CompletableSubscribeOn$SubscribeOnObserver;->downstream:Lc/a/c;
+    iget-object v0, p0, Lio/reactivex/internal/operators/completable/CompletableSubscribeOn$SubscribeOnObserver;->downstream:Lio/reactivex/CompletableObserver;
 
-    invoke-interface {v0, p1}, Lc/a/c;->a(Ljava/lang/Throwable;)V
+    invoke-interface {v0, p1}, Lio/reactivex/CompletableObserver;->a(Ljava/lang/Throwable;)V
 
     return-void
 .end method
@@ -91,9 +91,9 @@
     .locals 1
 
     .line 1
-    iget-object v0, p0, Lio/reactivex/internal/operators/completable/CompletableSubscribeOn$SubscribeOnObserver;->downstream:Lc/a/c;
+    iget-object v0, p0, Lio/reactivex/internal/operators/completable/CompletableSubscribeOn$SubscribeOnObserver;->downstream:Lio/reactivex/CompletableObserver;
 
-    invoke-interface {v0}, Lc/a/c;->b()V
+    invoke-interface {v0}, Lio/reactivex/CompletableObserver;->b()V
 
     return-void
 .end method
@@ -106,9 +106,9 @@
 
     move-result-object v0
 
-    check-cast v0, Lio/reactivex/disposables/b;
+    check-cast v0, Lio/reactivex/disposables/Disposable;
 
-    invoke-static {v0}, Lio/reactivex/internal/disposables/DisposableHelper;->a(Lio/reactivex/disposables/b;)Z
+    invoke-static {v0}, Lio/reactivex/internal/disposables/DisposableHelper;->a(Lio/reactivex/disposables/Disposable;)Z
 
     move-result v0
 
@@ -133,9 +133,9 @@
     .locals 1
 
     .line 1
-    iget-object v0, p0, Lio/reactivex/internal/operators/completable/CompletableSubscribeOn$SubscribeOnObserver;->source:Lc/a/e;
+    iget-object v0, p0, Lio/reactivex/internal/operators/completable/CompletableSubscribeOn$SubscribeOnObserver;->source:Lio/reactivex/CompletableSource;
 
-    invoke-interface {v0, p0}, Lc/a/e;->a(Lc/a/c;)V
+    invoke-interface {v0, p0}, Lio/reactivex/CompletableSource;->a(Lio/reactivex/CompletableObserver;)V
 
     return-void
 .end method

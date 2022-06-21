@@ -6,7 +6,7 @@
 # instance fields
 .field private final R:Landroid/graphics/drawable/ColorDrawable;
 
-.field private final S:Lcom/vk/attachpicker/widget/d;
+.field private final S:Lcom/vk/attachpicker/widget/CorruptedFileDrawable;
 
 .field private T:Lcom/vk/mediastore/system/MediaStoreEntry;
 
@@ -28,11 +28,11 @@
     iput-object p1, p0, Lcom/vk/attachpicker/widget/LocalImageView;->R:Landroid/graphics/drawable/ColorDrawable;
 
     .line 3
-    new-instance p1, Lcom/vk/attachpicker/widget/d;
+    new-instance p1, Lcom/vk/attachpicker/widget/CorruptedFileDrawable;
 
-    invoke-direct {p1}, Lcom/vk/attachpicker/widget/d;-><init>()V
+    invoke-direct {p1}, Lcom/vk/attachpicker/widget/CorruptedFileDrawable;-><init>()V
 
-    iput-object p1, p0, Lcom/vk/attachpicker/widget/LocalImageView;->S:Lcom/vk/attachpicker/widget/d;
+    iput-object p1, p0, Lcom/vk/attachpicker/widget/LocalImageView;->S:Lcom/vk/attachpicker/widget/CorruptedFileDrawable;
 
     return-void
 .end method
@@ -53,11 +53,11 @@
     iput-object p1, p0, Lcom/vk/attachpicker/widget/LocalImageView;->R:Landroid/graphics/drawable/ColorDrawable;
 
     .line 6
-    new-instance p1, Lcom/vk/attachpicker/widget/d;
+    new-instance p1, Lcom/vk/attachpicker/widget/CorruptedFileDrawable;
 
-    invoke-direct {p1}, Lcom/vk/attachpicker/widget/d;-><init>()V
+    invoke-direct {p1}, Lcom/vk/attachpicker/widget/CorruptedFileDrawable;-><init>()V
 
-    iput-object p1, p0, Lcom/vk/attachpicker/widget/LocalImageView;->S:Lcom/vk/attachpicker/widget/d;
+    iput-object p1, p0, Lcom/vk/attachpicker/widget/LocalImageView;->S:Lcom/vk/attachpicker/widget/CorruptedFileDrawable;
 
     return-void
 .end method
@@ -78,11 +78,11 @@
     iput-object p1, p0, Lcom/vk/attachpicker/widget/LocalImageView;->R:Landroid/graphics/drawable/ColorDrawable;
 
     .line 9
-    new-instance p1, Lcom/vk/attachpicker/widget/d;
+    new-instance p1, Lcom/vk/attachpicker/widget/CorruptedFileDrawable;
 
-    invoke-direct {p1}, Lcom/vk/attachpicker/widget/d;-><init>()V
+    invoke-direct {p1}, Lcom/vk/attachpicker/widget/CorruptedFileDrawable;-><init>()V
 
-    iput-object p1, p0, Lcom/vk/attachpicker/widget/LocalImageView;->S:Lcom/vk/attachpicker/widget/d;
+    iput-object p1, p0, Lcom/vk/attachpicker/widget/LocalImageView;->S:Lcom/vk/attachpicker/widget/CorruptedFileDrawable;
 
     return-void
 .end method
@@ -228,23 +228,23 @@
 
 
 # virtual methods
-.method protected a(Lcom/facebook/drawee/generic/b;)V
+.method protected a(Lcom/facebook/drawee/generic/GenericDraweeHierarchyBuilder;)V
     .locals 1
 
     .line 1
     iget-object v0, p0, Lcom/vk/attachpicker/widget/LocalImageView;->R:Landroid/graphics/drawable/ColorDrawable;
 
-    invoke-virtual {p1, v0}, Lcom/facebook/drawee/generic/b;->d(Landroid/graphics/drawable/Drawable;)Lcom/facebook/drawee/generic/b;
+    invoke-virtual {p1, v0}, Lcom/facebook/drawee/generic/GenericDraweeHierarchyBuilder;->d(Landroid/graphics/drawable/Drawable;)Lcom/facebook/drawee/generic/GenericDraweeHierarchyBuilder;
 
     .line 2
-    sget-object v0, Lcom/facebook/drawee/drawable/r$b;->k:Lcom/facebook/drawee/drawable/r$b;
+    sget-object v0, Lcom/facebook/drawee/drawable/ScalingUtils$b;->k:Lcom/facebook/drawee/drawable/ScalingUtils$b;
 
-    invoke-virtual {p1, v0}, Lcom/facebook/drawee/generic/b;->a(Lcom/facebook/drawee/drawable/r$b;)Lcom/facebook/drawee/generic/b;
+    invoke-virtual {p1, v0}, Lcom/facebook/drawee/generic/GenericDraweeHierarchyBuilder;->a(Lcom/facebook/drawee/drawable/ScalingUtils$b;)Lcom/facebook/drawee/generic/GenericDraweeHierarchyBuilder;
 
     .line 3
-    iget-object v0, p0, Lcom/vk/attachpicker/widget/LocalImageView;->S:Lcom/vk/attachpicker/widget/d;
+    iget-object v0, p0, Lcom/vk/attachpicker/widget/LocalImageView;->S:Lcom/vk/attachpicker/widget/CorruptedFileDrawable;
 
-    invoke-virtual {p1, v0}, Lcom/facebook/drawee/generic/b;->b(Landroid/graphics/drawable/Drawable;)Lcom/facebook/drawee/generic/b;
+    invoke-virtual {p1, v0}, Lcom/facebook/drawee/generic/GenericDraweeHierarchyBuilder;->b(Landroid/graphics/drawable/Drawable;)Lcom/facebook/drawee/generic/GenericDraweeHierarchyBuilder;
 
     return-void
 .end method

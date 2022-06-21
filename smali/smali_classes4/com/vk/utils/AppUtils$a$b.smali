@@ -3,7 +3,7 @@
 .source "AppUtils.kt"
 
 # interfaces
-.implements Lc/a/z/j;
+.implements Lio/reactivex/functions/Function;
 
 
 # annotations
@@ -24,7 +24,7 @@
         "Ljava/lang/Object;",
         ">",
         "Ljava/lang/Object;",
-        "Lc/a/z/j<",
+        "Lio/reactivex/functions/Function<",
         "TT;TR;>;"
     }
 .end annotation
@@ -53,7 +53,7 @@
     .line 1
     iget-object v0, p0, Lcom/vk/utils/AppUtils$a$b;->a:Lcom/vk/utils/AppUtils$a;
 
-    invoke-virtual {v0}, Lcom/vk/utils/AppUtils$a;->a()Lcom/vk/core/util/g1;
+    invoke-virtual {v0}, Lcom/vk/utils/AppUtils$a;->a()Lcom/vk/core/util/TimeLogger;
 
     move-result-object v1
 
@@ -73,11 +73,11 @@
 
     const-string v2, "parallel[i]"
 
-    invoke-static {p1, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     check-cast p1, Lcom/vk/utils/AppUtils$a$a;
 
-    invoke-static {v0, v1, p1}, Lcom/vk/utils/AppUtils$a;->a(Lcom/vk/utils/AppUtils$a;Lcom/vk/core/util/g1;Lcom/vk/utils/AppUtils$a$a;)V
+    invoke-static {v0, v1, p1}, Lcom/vk/utils/AppUtils$a;->a(Lcom/vk/utils/AppUtils$a;Lcom/vk/core/util/TimeLogger;Lcom/vk/utils/AppUtils$a$a;)V
 
     return-void
 .end method
@@ -90,7 +90,7 @@
 
     invoke-virtual {p0, p1}, Lcom/vk/utils/AppUtils$a$b;->a(Ljava/lang/Integer;)V
 
-    sget-object p1, Lkotlin/m;->a:Lkotlin/m;
+    sget-object p1, Lkotlin/Unit;->a:Lkotlin/Unit;
 
     return-object p1
 .end method

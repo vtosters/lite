@@ -3,7 +3,7 @@
 .source "SharingService.java"
 
 # interfaces
-.implements Lcom/vk/api/base/a;
+.implements Lcom/vk/api/base/ApiCallback;
 
 
 # annotations
@@ -19,8 +19,8 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Ljava/lang/Object;",
-        "Lcom/vk/api/base/a<",
-        "Lb/h/c/e0/g$c;",
+        "Lcom/vk/api/base/ApiCallback<",
+        "Lcom/vk/api/wall/WallRepost$c;",
         ">;"
     }
 .end annotation
@@ -48,17 +48,17 @@
 
 
 # virtual methods
-.method public a(Lb/h/c/e0/g$c;)V
+.method public a(Lcom/vk/api/wall/WallRepost$c;)V
     .locals 9
 
     .line 2
-    sget-object v0, Lcom/vk/newsfeed/controllers/a;->e:Lcom/vk/newsfeed/controllers/a;
+    sget-object v0, Lcom/vk/newsfeed/controllers/NewsfeedController;->e:Lcom/vk/newsfeed/controllers/NewsfeedController;
 
-    invoke-virtual {v0}, Lcom/vk/newsfeed/controllers/a;->n()Lb/h/g/l/d;
+    invoke-virtual {v0}, Lcom/vk/newsfeed/controllers/NewsfeedController;->n()Lb/h/g/l/NotificationCenter;
 
     move-result-object v0
 
-    new-instance v8, Lb/h/g/l/b;
+    new-instance v8, Lb/h/g/l/EventWallPostReposted;
 
     iget-object v1, p0, Lcom/vk/sharing/SharingService$e$b;->a:Lcom/vk/sharing/attachment/AttachmentInfo;
 
@@ -73,9 +73,9 @@
 
     move-result v3
 
-    iget v4, p1, Lb/h/c/e0/g$c;->a:I
+    iget v4, p1, Lcom/vk/api/wall/WallRepost$c;->a:I
 
-    iget v5, p1, Lb/h/c/e0/g$c;->b:I
+    iget v5, p1, Lcom/vk/api/wall/WallRepost$c;->b:I
 
     iget-object p1, p0, Lcom/vk/sharing/SharingService$e$b;->b:Lcom/vk/sharing/SharingService$e;
 
@@ -92,12 +92,12 @@
 
     move-object v1, v8
 
-    invoke-direct/range {v1 .. v7}, Lb/h/g/l/b;-><init>(IIIIZZ)V
+    invoke-direct/range {v1 .. v7}, Lb/h/g/l/EventWallPostReposted;-><init>(IIIIZZ)V
 
     const/16 p1, 0x6b
 
     .line 5
-    invoke-virtual {v0, p1, v8}, Lb/h/g/l/d;->a(ILjava/lang/Object;)V
+    invoke-virtual {v0, p1, v8}, Lb/h/g/l/NotificationCenter;->a(ILjava/lang/Object;)V
 
     return-void
 .end method
@@ -133,9 +133,9 @@
     .locals 0
 
     .line 1
-    check-cast p1, Lb/h/c/e0/g$c;
+    check-cast p1, Lcom/vk/api/wall/WallRepost$c;
 
-    invoke-virtual {p0, p1}, Lcom/vk/sharing/SharingService$e$b;->a(Lb/h/c/e0/g$c;)V
+    invoke-virtual {p0, p1}, Lcom/vk/sharing/SharingService$e$b;->a(Lcom/vk/api/wall/WallRepost$c;)V
 
     return-void
 .end method

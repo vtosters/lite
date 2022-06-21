@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/common/links/OpenFunctionsKt;->a(Landroid/content/Context;ILcom/vk/common/links/f;Ljava/lang/String;Ljava/lang/String;ZZ)Z
+    value = Lcom/vk/common/links/OpenFunctionsKt;->a(Landroid/content/Context;ILcom/vk/common/links/OpenCallback;Ljava/lang/String;Ljava/lang/String;ZZ)Z
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -24,11 +24,11 @@
 
 .field final synthetic c:Z
 
-.field final synthetic d:Lcom/vk/common/links/f;
+.field final synthetic d:Lcom/vk/common/links/OpenCallback;
 
 
 # direct methods
-.method constructor <init>(Landroid/content/Context;Lkotlin/jvm/internal/Ref$ObjectRef;ZLcom/vk/common/links/f;)V
+.method constructor <init>(Landroid/content/Context;Lkotlin/jvm/internal/Ref$ObjectRef;ZLcom/vk/common/links/OpenCallback;)V
     .locals 0
 
     iput-object p1, p0, Lcom/vk/common/links/OpenFunctionsKt$v;->a:Landroid/content/Context;
@@ -37,7 +37,7 @@
 
     iput-boolean p3, p0, Lcom/vk/common/links/OpenFunctionsKt$v;->c:Z
 
-    iput-object p4, p0, Lcom/vk/common/links/OpenFunctionsKt$v;->d:Lcom/vk/common/links/f;
+    iput-object p4, p0, Lcom/vk/common/links/OpenFunctionsKt$v;->d:Lcom/vk/common/links/OpenCallback;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -62,7 +62,7 @@
 
     invoke-direct {v0, p0, p1}, Lcom/vk/common/links/OpenFunctionsKt$v$a;-><init>(Lcom/vk/common/links/OpenFunctionsKt$v;Ljava/util/ArrayList;)V
 
-    invoke-static {v0}, Lcom/vtosters/lite/f0;->c(Ljava/lang/Runnable;)V
+    invoke-static {v0}, Lcom/vtosters/lite/ViewUtils;->c(Ljava/lang/Runnable;)V
 
     return-void
 .end method

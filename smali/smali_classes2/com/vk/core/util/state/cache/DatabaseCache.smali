@@ -3,7 +3,7 @@
 .source "DatabaseCache.kt"
 
 # interfaces
-.implements Lcom/vk/core/util/state/cache/c;
+.implements Lcom/vk/core/util/state/cache/StateCache;
 
 
 # annotations
@@ -30,7 +30,7 @@
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, v1}, Lcom/vk/core/util/state/cache/DatabaseCache$a;-><init>(Lkotlin/jvm/internal/i;)V
+    invoke-direct {v0, v1}, Lcom/vk/core/util/state/cache/DatabaseCache$a;-><init>(Lkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     sput-object v0, Lcom/vk/core/util/state/cache/DatabaseCache;->b:Lcom/vk/core/util/state/cache/DatabaseCache$a;
 
@@ -52,7 +52,7 @@
     return-void
 .end method
 
-.method public synthetic constructor <init>(Landroid/content/Context;Ljava/lang/String;IILkotlin/jvm/internal/i;)V
+.method public synthetic constructor <init>(Landroid/content/Context;Ljava/lang/String;IILkotlin/jvm/internal/DefaultConstructorMarker;)V
     .locals 0
 
     and-int/lit8 p5, p4, 0x1
@@ -60,11 +60,11 @@
     if-eqz p5, :cond_0
 
     .line 1
-    sget-object p1, Lcom/vk/core/util/i;->a:Landroid/content/Context;
+    sget-object p1, Lcom/vk/core/util/AppContextHolder;->a:Landroid/content/Context;
 
     const-string p5, "AppContextHolder.context"
 
-    invoke-static {p1, p5}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, p5}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     :cond_0
     and-int/lit8 p5, p4, 0x2
@@ -86,53 +86,53 @@
     return-void
 .end method
 
-.method public static final synthetic a(Lcom/vk/core/util/state/cache/DatabaseCache;Ljava/lang/String;Ljava/lang/Class;)Lcom/vk/core/util/state/b;
+.method public static final synthetic a(Lcom/vk/core/util/state/cache/DatabaseCache;Ljava/lang/String;Ljava/lang/Class;)Lcom/vk/core/util/state/AppStateCacheEntry;
     .locals 0
 
     .line 3
-    invoke-direct {p0, p1, p2}, Lcom/vk/core/util/state/cache/DatabaseCache;->b(Ljava/lang/String;Ljava/lang/Class;)Lcom/vk/core/util/state/b;
+    invoke-direct {p0, p1, p2}, Lcom/vk/core/util/state/cache/DatabaseCache;->b(Ljava/lang/String;Ljava/lang/Class;)Lcom/vk/core/util/state/AppStateCacheEntry;
 
     move-result-object p0
 
     return-object p0
 .end method
 
-.method private final a(Ljava/util/concurrent/Callable;)Lio/reactivex/disposables/b;
+.method private final a(Ljava/util/concurrent/Callable;)Lio/reactivex/disposables/Disposable;
     .locals 2
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
             "Ljava/util/concurrent/Callable<",
-            "Lkotlin/m;",
+            "Lkotlin/Unit;",
             ">;)",
-            "Lio/reactivex/disposables/b;"
+            "Lio/reactivex/disposables/Disposable;"
         }
     .end annotation
 
     .line 37
-    invoke-direct {p0, p1}, Lcom/vk/core/util/state/cache/DatabaseCache;->b(Ljava/util/concurrent/Callable;)Lc/a/m;
+    invoke-direct {p0, p1}, Lcom/vk/core/util/state/cache/DatabaseCache;->b(Ljava/util/concurrent/Callable;)Lio/reactivex/Observable;
 
     move-result-object p1
 
     .line 38
-    invoke-static {}, Lc/a/y/c/a;->a()Lc/a/s;
+    invoke-static {}, Lio/reactivex/schedulers/AndroidSchedulers;->a()Lio/reactivex/Scheduler;
 
     move-result-object v0
 
-    invoke-virtual {p1, v0}, Lc/a/m;->a(Lc/a/s;)Lc/a/m;
+    invoke-virtual {p1, v0}, Lio/reactivex/Observable;->a(Lio/reactivex/Scheduler;)Lio/reactivex/Observable;
 
     move-result-object p1
 
     .line 39
-    invoke-static {}, Lcom/vk/core/util/z0;->b()Lc/a/z/g;
+    invoke-static {}, Lcom/vk/core/util/RxUtil;->b()Lio/reactivex/functions/Consumer;
 
     move-result-object v0
 
-    invoke-static {}, Lcom/vk/core/util/z0;->c()Lc/a/z/g;
+    invoke-static {}, Lcom/vk/core/util/RxUtil;->c()Lio/reactivex/functions/Consumer;
 
     move-result-object v1
 
-    invoke-virtual {p1, v0, v1}, Lc/a/m;->a(Lc/a/z/g;Lc/a/z/g;)Lio/reactivex/disposables/b;
+    invoke-virtual {p1, v0, v1}, Lio/reactivex/Observable;->a(Lio/reactivex/functions/Consumer;Lio/reactivex/functions/Consumer;)Lio/reactivex/disposables/Disposable;
 
     move-result-object p1
 
@@ -391,7 +391,7 @@
     .locals 2
 
     .line 28
-    invoke-static {}, Lcom/vk/utils/g/a;->c()J
+    invoke-static {}, Lcom/vk/utils/g/ServerClock;->c()J
 
     move-result-wide v0
 
@@ -448,7 +448,7 @@
     const/4 v0, 0x0
 
     .line 36
-    invoke-static {p3, v0}, Lkotlin/io/b;->a(Ljava/io/Closeable;Ljava/lang/Throwable;)V
+    invoke-static {p3, v0}, Lkotlin/io/Closeable;->a(Ljava/io/Closeable;Ljava/lang/Throwable;)V
 
     const-wide/16 v0, 0x0
 
@@ -475,7 +475,7 @@
     :catchall_1
     move-exception p2
 
-    invoke-static {p3, p1}, Lkotlin/io/b;->a(Ljava/io/Closeable;Ljava/lang/Throwable;)V
+    invoke-static {p3, p1}, Lkotlin/io/Closeable;->a(Ljava/io/Closeable;Ljava/lang/Throwable;)V
 
     throw p2
 .end method
@@ -528,7 +528,7 @@
     return v0
 .end method
 
-.method private final b(Ljava/util/concurrent/Callable;)Lc/a/m;
+.method private final b(Ljava/util/concurrent/Callable;)Lio/reactivex/Observable;
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -537,33 +537,33 @@
             ">(",
             "Ljava/util/concurrent/Callable<",
             "TT;>;)",
-            "Lc/a/m<",
+            "Lio/reactivex/Observable<",
             "TT;>;"
         }
     .end annotation
 
     .line 22
-    invoke-static {p1}, Lc/a/m;->c(Ljava/util/concurrent/Callable;)Lc/a/m;
+    invoke-static {p1}, Lio/reactivex/Observable;->c(Ljava/util/concurrent/Callable;)Lio/reactivex/Observable;
 
     move-result-object p1
 
     .line 23
-    invoke-static {}, Lc/a/f0/b;->b()Lc/a/s;
+    invoke-static {}, Lio/reactivex/schedulers/Schedulers;->b()Lio/reactivex/Scheduler;
 
     move-result-object v0
 
-    invoke-virtual {p1, v0}, Lc/a/m;->b(Lc/a/s;)Lc/a/m;
+    invoke-virtual {p1, v0}, Lio/reactivex/Observable;->b(Lio/reactivex/Scheduler;)Lio/reactivex/Observable;
 
     move-result-object p1
 
     const-string v0, "Observable.fromCallable(\u2026scribeOn(Schedulers.io())"
 
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     return-object p1
 .end method
 
-.method private final b(Ljava/lang/String;Ljava/lang/Class;)Lcom/vk/core/util/state/b;
+.method private final b(Ljava/lang/String;Ljava/lang/Class;)Lcom/vk/core/util/state/AppStateCacheEntry;
     .locals 12
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -573,7 +573,7 @@
             "Ljava/lang/String;",
             "Ljava/lang/Class<",
             "TT;>;)",
-            "Lcom/vk/core/util/state/b;"
+            "Lcom/vk/core/util/state/AppStateCacheEntry;"
         }
     .end annotation
 
@@ -704,7 +704,7 @@
     .line 9
     :goto_1
     :try_start_2
-    sget-object v1, Lcom/vk/core/util/state/a;->d:Lcom/vk/core/util/state/a;
+    sget-object v1, Lcom/vk/core/util/state/AppStateCache;->d:Lcom/vk/core/util/state/AppStateCache;
 
     new-instance v2, Ljava/lang/StringBuilder;
 
@@ -726,7 +726,7 @@
 
     move-result-object p2
 
-    invoke-virtual {v1, p2}, Lcom/vk/core/util/state/a;->a(Ljava/lang/String;)V
+    invoke-virtual {v1, p2}, Lcom/vk/core/util/state/AppStateCache;->a(Ljava/lang/String;)V
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_1
 
@@ -740,7 +740,7 @@
 
     .line 11
     :goto_2
-    new-instance p2, Lcom/vk/core/util/state/b;
+    new-instance p2, Lcom/vk/core/util/state/AppStateCacheEntry;
 
     const-wide/16 v7, 0x0
 
@@ -754,7 +754,7 @@
 
     move-object v5, p1
 
-    invoke-direct/range {v4 .. v11}, Lcom/vk/core/util/state/b;-><init>(Ljava/lang/String;Landroid/os/Parcelable;JZILkotlin/jvm/internal/i;)V
+    invoke-direct/range {v4 .. v11}, Lcom/vk/core/util/state/AppStateCacheEntry;-><init>(Ljava/lang/String;Landroid/os/Parcelable;JZILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     return-object p2
 
@@ -783,7 +783,7 @@
 
     invoke-direct {v1, p0}, Lcom/vk/core/util/state/cache/DatabaseCache$clearStorage$1;-><init>(Lcom/vk/core/util/state/cache/DatabaseCache;)V
 
-    invoke-static {v0, v1}, Lcom/vk/core/sqlite/SqliteExtensionsKt;->a(Landroid/database/sqlite/SQLiteDatabase;Lkotlin/jvm/b/b;)Ljava/lang/Object;
+    invoke-static {v0, v1}, Lcom/vk/core/sqlite/SqliteExtensionsKt;->a(Landroid/database/sqlite/SQLiteDatabase;Lkotlin/jvm/b/Functions2;)Ljava/lang/Object;
 
     return-void
 .end method
@@ -837,7 +837,7 @@
     const/4 v2, 0x0
 
     .line 21
-    invoke-static {v0, v2}, Lkotlin/io/b;->a(Ljava/io/Closeable;Ljava/lang/Throwable;)V
+    invoke-static {v0, v2}, Lkotlin/io/Closeable;->a(Ljava/io/Closeable;Ljava/lang/Throwable;)V
 
     const-wide/16 v2, 0x0
 
@@ -864,7 +864,7 @@
     :catchall_1
     move-exception p2
 
-    invoke-static {v0, p1}, Lkotlin/io/b;->a(Ljava/io/Closeable;Ljava/lang/Throwable;)V
+    invoke-static {v0, p1}, Lkotlin/io/Closeable;->a(Ljava/io/Closeable;Ljava/lang/Throwable;)V
 
     throw p2
 .end method
@@ -879,7 +879,7 @@
 
     const-string v1, "writableDatabase"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     return-object v0
 .end method
@@ -888,7 +888,7 @@
     .locals 4
 
     .line 1
-    invoke-static {}, Lcom/vk/utils/g/a;->c()J
+    invoke-static {}, Lcom/vk/utils/g/ServerClock;->c()J
 
     move-result-wide v0
 
@@ -1010,7 +1010,7 @@
 
 
 # virtual methods
-.method public a(Ljava/lang/String;Ljava/lang/Class;)Lcom/vk/core/util/state/b;
+.method public a(Ljava/lang/String;Ljava/lang/Class;)Lcom/vk/core/util/state/AppStateCacheEntry;
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -1020,7 +1020,7 @@
             "Ljava/lang/String;",
             "Ljava/lang/Class<",
             "TT;>;)",
-            "Lcom/vk/core/util/state/b;"
+            "Lcom/vk/core/util/state/AppStateCacheEntry;"
         }
     .end annotation
 
@@ -1030,15 +1030,15 @@
 
     invoke-direct {v0, p0, p1, p2}, Lcom/vk/core/util/state/cache/DatabaseCache$c;-><init>(Lcom/vk/core/util/state/cache/DatabaseCache;Ljava/lang/String;Ljava/lang/Class;)V
 
-    invoke-direct {p0, v0}, Lcom/vk/core/util/state/cache/DatabaseCache;->b(Ljava/util/concurrent/Callable;)Lc/a/m;
+    invoke-direct {p0, v0}, Lcom/vk/core/util/state/cache/DatabaseCache;->b(Ljava/util/concurrent/Callable;)Lio/reactivex/Observable;
 
     move-result-object p1
 
-    invoke-virtual {p1}, Lc/a/m;->a()Ljava/lang/Object;
+    invoke-virtual {p1}, Lio/reactivex/Observable;->a()Ljava/lang/Object;
 
     move-result-object p1
 
-    check-cast p1, Lcom/vk/core/util/state/b;
+    check-cast p1, Lcom/vk/core/util/state/AppStateCacheEntry;
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
@@ -1048,9 +1048,9 @@
     move-exception p1
 
     .line 6
-    sget-object p2, Lcom/vk/core/util/state/a;->d:Lcom/vk/core/util/state/a;
+    sget-object p2, Lcom/vk/core/util/state/AppStateCache;->d:Lcom/vk/core/util/state/AppStateCache;
 
-    invoke-virtual {p2, p1}, Lcom/vk/core/util/state/a;->a(Ljava/lang/Throwable;)V
+    invoke-virtual {p2, p1}, Lcom/vk/core/util/state/AppStateCache;->a(Ljava/lang/Throwable;)V
 
     const/4 p1, 0x0
 
@@ -1064,7 +1064,7 @@
         value = {
             "()",
             "Ljava/util/List<",
-            "Lcom/vk/core/util/state/b;",
+            "Lcom/vk/core/util/state/AppStateCacheEntry;",
             ">;"
         }
     .end annotation
@@ -1077,7 +1077,7 @@
     return-object v0
 .end method
 
-.method public a(Lcom/vk/core/util/state/b;)Z
+.method public a(Lcom/vk/core/util/state/AppStateCacheEntry;)Z
     .locals 9
 
     const/4 v0, 0x0
@@ -1091,7 +1091,7 @@
     move-result-object v1
 
     .line 19
-    invoke-virtual {p1}, Lcom/vk/core/util/state/b;->b()Landroid/os/Parcelable;
+    invoke-virtual {p1}, Lcom/vk/core/util/state/AppStateCacheEntry;->b()Landroid/os/Parcelable;
 
     move-result-object v2
 
@@ -1116,7 +1116,7 @@
 
     invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {p1}, Lcom/vk/core/util/state/b;->c()Ljava/lang/String;
+    invoke-virtual {p1}, Lcom/vk/core/util/state/AppStateCacheEntry;->c()Ljava/lang/String;
 
     move-result-object v5
 
@@ -1154,7 +1154,7 @@
     move-result-object v2
 
     .line 22
-    invoke-virtual {p1}, Lcom/vk/core/util/state/b;->a()J
+    invoke-virtual {p1}, Lcom/vk/core/util/state/AppStateCacheEntry;->a()J
 
     move-result-wide v3
     :try_end_0
@@ -1171,11 +1171,11 @@
 
     .line 23
     :try_start_1
-    invoke-virtual {p1}, Lcom/vk/core/util/state/b;->c()Ljava/lang/String;
+    invoke-virtual {p1}, Lcom/vk/core/util/state/AppStateCacheEntry;->c()Ljava/lang/String;
 
     move-result-object v3
 
-    invoke-static {v2, v7}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v2, v7}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-direct {p0, v3, v2}, Lcom/vk/core/util/state/cache/DatabaseCache;->b(Ljava/lang/String;Ljava/lang/String;)Z
 
@@ -1185,13 +1185,13 @@
 
     .line 24
     :cond_0
-    invoke-virtual {p1}, Lcom/vk/core/util/state/b;->c()Ljava/lang/String;
+    invoke-virtual {p1}, Lcom/vk/core/util/state/AppStateCacheEntry;->c()Ljava/lang/String;
 
     move-result-object v3
 
-    invoke-static {v2, v7}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v2, v7}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    invoke-virtual {p1}, Lcom/vk/core/util/state/b;->a()J
+    invoke-virtual {p1}, Lcom/vk/core/util/state/AppStateCacheEntry;->a()J
 
     move-result-wide v4
 
@@ -1221,7 +1221,7 @@
 
     .line 26
     :try_start_2
-    sget-object v3, Lcom/vk/core/util/state/a;->d:Lcom/vk/core/util/state/a;
+    sget-object v3, Lcom/vk/core/util/state/AppStateCache;->d:Lcom/vk/core/util/state/AppStateCache;
 
     new-instance v4, Ljava/lang/StringBuilder;
 
@@ -1231,7 +1231,7 @@
 
     invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {p1}, Lcom/vk/core/util/state/b;->c()Ljava/lang/String;
+    invoke-virtual {p1}, Lcom/vk/core/util/state/AppStateCacheEntry;->c()Ljava/lang/String;
 
     move-result-object p1
 
@@ -1247,7 +1247,7 @@
 
     move-result-object p1
 
-    invoke-virtual {v3, p1}, Lcom/vk/core/util/state/a;->a(Ljava/lang/String;)V
+    invoke-virtual {v3, p1}, Lcom/vk/core/util/state/AppStateCache;->a(Ljava/lang/String;)V
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_0
 
@@ -1276,7 +1276,7 @@
 
     invoke-direct {v0, p0}, Lcom/vk/core/util/state/cache/DatabaseCache$b;-><init>(Lcom/vk/core/util/state/cache/DatabaseCache;)V
 
-    invoke-direct {p0, v0}, Lcom/vk/core/util/state/cache/DatabaseCache;->a(Ljava/util/concurrent/Callable;)Lio/reactivex/disposables/b;
+    invoke-direct {p0, v0}, Lcom/vk/core/util/state/cache/DatabaseCache;->a(Ljava/util/concurrent/Callable;)Lio/reactivex/disposables/Disposable;
 
     return-void
 .end method

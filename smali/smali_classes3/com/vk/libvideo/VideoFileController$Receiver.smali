@@ -59,7 +59,7 @@
     const-string v0, "com.vkontakte.android.VIDEO_MOVED"
 
     .line 2
-    invoke-static {v0, p2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v0, p2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result p2
 

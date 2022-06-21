@@ -51,11 +51,11 @@
     .line 1
     iget-object v0, p0, Lcom/vk/newsfeed/NewsfeedFragment$c;->a:Lcom/vk/newsfeed/NewsfeedFragment;
 
-    invoke-virtual {v0}, Lcom/vk/newsfeed/EntriesListFragment;->getPresenter()Lcom/vk/newsfeed/contracts/e;
+    invoke-virtual {v0}, Lcom/vk/newsfeed/EntriesListFragment;->getPresenter()Lcom/vk/newsfeed/contracts/EntriesListContract;
 
     move-result-object v0
 
-    check-cast v0, Lcom/vk/newsfeed/presenters/l;
+    check-cast v0, Lcom/vk/newsfeed/presenters/NewsfeedPresenter;
 
     const/4 v1, 0x0
 
@@ -63,7 +63,7 @@
 
     const/4 v3, 0x0
 
-    invoke-static {v0, v1, v2, v3}, Lcom/vk/newsfeed/contracts/e$a;->a(Lcom/vk/newsfeed/contracts/e;ZILjava/lang/Object;)V
+    invoke-static {v0, v1, v2, v3}, Lcom/vk/newsfeed/contracts/EntriesListContract$a1;->a(Lcom/vk/newsfeed/contracts/EntriesListContract;ZILjava/lang/Object;)V
 
     return-void
 .end method

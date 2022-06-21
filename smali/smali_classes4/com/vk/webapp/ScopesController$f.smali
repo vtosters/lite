@@ -3,12 +3,12 @@
 .source "ScopesController.kt"
 
 # interfaces
-.implements Lc/a/z/g;
+.implements Lio/reactivex/functions/Consumer;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/webapp/ScopesController;->a(Landroid/app/Activity;Ljava/util/List;Lkotlin/jvm/b/b;Lkotlin/jvm/b/a;Lkotlin/jvm/b/b;)V
+    value = Lcom/vk/webapp/ScopesController;->a(Landroid/app/Activity;Ljava/util/List;Lkotlin/jvm/b/Functions2;Lkotlin/jvm/b/Functions;Lkotlin/jvm/b/Functions2;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -22,7 +22,7 @@
         "Ljava/lang/Object;",
         ">",
         "Ljava/lang/Object;",
-        "Lc/a/z/g<",
+        "Lio/reactivex/functions/Consumer<",
         "Ljava/lang/Throwable;",
         ">;"
     }
@@ -30,14 +30,14 @@
 
 
 # instance fields
-.field final synthetic a:Lkotlin/jvm/b/b;
+.field final synthetic a:Lkotlin/jvm/b/Functions2;
 
 
 # direct methods
-.method constructor <init>(Lkotlin/jvm/b/b;)V
+.method constructor <init>(Lkotlin/jvm/b/Functions2;)V
     .locals 0
 
-    iput-object p1, p0, Lcom/vk/webapp/ScopesController$f;->a:Lkotlin/jvm/b/b;
+    iput-object p1, p0, Lcom/vk/webapp/ScopesController$f;->a:Lkotlin/jvm/b/Functions2;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -50,13 +50,13 @@
     .locals 2
 
     .line 1
-    iget-object v0, p0, Lcom/vk/webapp/ScopesController$f;->a:Lkotlin/jvm/b/b;
+    iget-object v0, p0, Lcom/vk/webapp/ScopesController$f;->a:Lkotlin/jvm/b/Functions2;
 
     const-string v1, "error"
 
-    invoke-static {p1, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    invoke-interface {v0, p1}, Lkotlin/jvm/b/b;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v0, p1}, Lkotlin/jvm/b/Functions2;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
 
     return-void
 .end method

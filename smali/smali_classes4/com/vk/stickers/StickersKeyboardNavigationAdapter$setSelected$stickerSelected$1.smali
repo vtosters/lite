@@ -3,7 +3,7 @@
 .source "StickersKeyboardNavigationAdapter.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/b;
+.implements Lkotlin/jvm/b/Functions2;
 
 
 # annotations
@@ -19,8 +19,8 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/b<",
-        "Lcom/vk/stickers/e0/d;",
+        "Lkotlin/jvm/b/Functions2<",
+        "Lcom/vk/stickers/e0/StickerNavigationRecyclerItem;",
         "Ljava/lang/Boolean;",
         ">;"
     }
@@ -46,11 +46,11 @@
 
 
 # virtual methods
-.method public final a(Lcom/vk/stickers/e0/d;)Z
+.method public final a(Lcom/vk/stickers/e0/StickerNavigationRecyclerItem;)Z
     .locals 1
 
     .line 1
-    invoke-virtual {p1}, Lcom/vk/stickers/e0/d;->e()I
+    invoke-virtual {p1}, Lcom/vk/stickers/e0/StickerNavigationRecyclerItem;->e()I
 
     move-result p1
 
@@ -73,9 +73,9 @@
     .locals 0
 
     .line 1
-    check-cast p1, Lcom/vk/stickers/e0/d;
+    check-cast p1, Lcom/vk/stickers/e0/StickerNavigationRecyclerItem;
 
-    invoke-virtual {p0, p1}, Lcom/vk/stickers/StickersKeyboardNavigationAdapter$setSelected$stickerSelected$1;->a(Lcom/vk/stickers/e0/d;)Z
+    invoke-virtual {p0, p1}, Lcom/vk/stickers/StickersKeyboardNavigationAdapter$setSelected$stickerSelected$1;->a(Lcom/vk/stickers/e0/StickerNavigationRecyclerItem;)Z
 
     move-result p1
 

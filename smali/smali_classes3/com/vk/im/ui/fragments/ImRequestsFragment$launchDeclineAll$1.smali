@@ -3,7 +3,7 @@
 .source "ImRequestsFragment.kt"
 
 # interfaces
-.implements Lc/a/z/g;
+.implements Lio/reactivex/functions/Consumer;
 
 
 # annotations
@@ -22,8 +22,8 @@
         "Ljava/lang/Object;",
         ">",
         "Ljava/lang/Object;",
-        "Lc/a/z/g<",
-        "Lio/reactivex/disposables/b;",
+        "Lio/reactivex/functions/Consumer<",
+        "Lio/reactivex/disposables/Disposable;",
         ">;"
     }
 .end annotation
@@ -46,7 +46,7 @@
 
 
 # virtual methods
-.method public final a(Lio/reactivex/disposables/b;)V
+.method public final a(Lio/reactivex/disposables/Disposable;)V
     .locals 2
 
     .line 1
@@ -63,12 +63,12 @@
     .line 2
     new-instance v1, Lcom/vk/im/ui/fragments/ImRequestsFragment$launchDeclineAll$1$1;
 
-    invoke-direct {v1, p1}, Lcom/vk/im/ui/fragments/ImRequestsFragment$launchDeclineAll$1$1;-><init>(Lio/reactivex/disposables/b;)V
+    invoke-direct {v1, p1}, Lcom/vk/im/ui/fragments/ImRequestsFragment$launchDeclineAll$1$1;-><init>(Lio/reactivex/disposables/Disposable;)V
 
     const/4 p1, 0x1
 
     .line 3
-    invoke-virtual {v0, v1, p1}, Lcom/vk/im/ui/components/viewcontrollers/popup/DelegateMsgRequests;->a(Lkotlin/jvm/b/a;Z)V
+    invoke-virtual {v0, v1, p1}, Lcom/vk/im/ui/components/viewcontrollers/popup/DelegateMsgRequests;->a(Lkotlin/jvm/b/Functions;Z)V
 
     return-void
 .end method
@@ -77,9 +77,9 @@
     .locals 0
 
     .line 1
-    check-cast p1, Lio/reactivex/disposables/b;
+    check-cast p1, Lio/reactivex/disposables/Disposable;
 
-    invoke-virtual {p0, p1}, Lcom/vk/im/ui/fragments/ImRequestsFragment$launchDeclineAll$1;->a(Lio/reactivex/disposables/b;)V
+    invoke-virtual {p0, p1}, Lcom/vk/im/ui/fragments/ImRequestsFragment$launchDeclineAll$1;->a(Lio/reactivex/disposables/Disposable;)V
 
     return-void
 .end method

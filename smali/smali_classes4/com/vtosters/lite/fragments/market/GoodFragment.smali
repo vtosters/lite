@@ -1,12 +1,12 @@
 .class public Lcom/vtosters/lite/fragments/market/GoodFragment;
-.super Lcom/vtosters/lite/fragments/z0;
+.super Lcom/vtosters/lite/general/fragments/CardRecyclerFragment;
 .source "GoodFragment.java"
 
 # interfaces
-.implements Lcom/vtosters/lite/ui/b0/m/e;
-.implements Lcom/vk/navigation/b0/k;
-.implements Lcom/vk/mentions/m;
-.implements Lcom/vtosters/lite/ui/holder/market/properties/a;
+.implements Lcom/vtosters/lite/ui/holder/comment/CommentViewHolderListener;
+.implements Lcom/vk/navigation/b0/FragmentWithoutBottomMenuBar;
+.implements Lcom/vk/mentions/MentionSuggestViewer;
+.implements Lcom/vtosters/lite/ui/holder/market/properties/OnProductPropertyVariantSelectionListener;
 
 
 # annotations
@@ -20,13 +20,13 @@
 
 .annotation system Ldalvik/annotation/Signature;
     value = {
-        "Lcom/vtosters/lite/fragments/z0<",
-        "Lcom/vtosters/lite/ui/b0/j$a;",
+        "Lcom/vtosters/lite/general/fragments/CardRecyclerFragment<",
+        "Lcom/vtosters/lite/ui/holder/RecyclerSectionAdapter$a;",
         ">;",
-        "Lcom/vtosters/lite/ui/b0/m/e;",
-        "Lcom/vk/navigation/b0/k;",
-        "Lcom/vk/mentions/m;",
-        "Lcom/vtosters/lite/ui/holder/market/properties/a;"
+        "Lcom/vtosters/lite/ui/holder/comment/CommentViewHolderListener;",
+        "Lcom/vk/navigation/b0/FragmentWithoutBottomMenuBar;",
+        "Lcom/vk/mentions/MentionSuggestViewer;",
+        "Lcom/vtosters/lite/ui/holder/market/properties/OnProductPropertyVariantSelectionListener;"
     }
 .end annotation
 
@@ -34,19 +34,19 @@
 # instance fields
 .field private A0:I
 
-.field private final B0:Lcom/vtosters/lite/fragments/market/r;
+.field private final B0:Lcom/vtosters/lite/fragments/market/GoodFragmentClickStatHelper;
 
 .field private C0:Ljava/util/List;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/util/List<",
-            "Lcom/vtosters/lite/ui/b0/j$a;",
+            "Lcom/vtosters/lite/ui/holder/RecyclerSectionAdapter$a;",
             ">;"
         }
     .end annotation
 .end field
 
-.field private D0:Lcom/vtosters/lite/ui/b0/j$a;
+.field private D0:Lcom/vtosters/lite/ui/holder/RecyclerSectionAdapter$a;
 
 .field private final E0:Ljava/util/ArrayList;
     .annotation system Ldalvik/annotation/Signature;
@@ -72,9 +72,9 @@
 
 .field private L0:Landroid/view/View;
 
-.field private M0:Lcom/vk/stickers/f0/a;
+.field private M0:Lcom/vk/stickers/f0/KeyboardPopup;
 
-.field private N0:Lcom/vk/stickers/b0;
+.field private N0:Lcom/vk/stickers/StickersView;
 
 .field private O0:I
 
@@ -96,9 +96,9 @@
 
 .field private X0:Z
 
-.field private Y0:Lcom/vk/stickers/e;
+.field private Y0:Lcom/vk/stickers/PauseAnimationScrollListener;
 
-.field private Z0:Lcom/vk/market/common/ui/c/b;
+.field private Z0:Lcom/vk/market/common/ui/c/BadgeMenuItem;
 
 .field private a1:Z
 
@@ -114,21 +114,21 @@
 
 .field private g1:Lcom/vtosters/lite/fragments/market/ProductButtonsBinder$b;
 
-.field private h1:Lio/reactivex/disposables/a;
+.field private h1:Lio/reactivex/disposables/CompositeDisposable;
 
-.field private i1:Lcom/vtosters/lite/fragments/market/v;
+.field private i1:Lcom/vtosters/lite/fragments/market/ProductAdapter;
 
 .field private j1:Landroid/content/BroadcastReceiver;
 
-.field private k1:Lb/h/g/l/e;
+.field private k1:Lb/h/g/l/NotificationListener;
 
-.field private final u0:Lcom/vk/stickers/b0$k;
+.field private final u0:Lcom/vk/stickers/StickersView$k;
 
-.field private v0:Lcom/vtosters/lite/ui/z/a;
+.field private v0:Lcom/vtosters/lite/ui/z/ReplyBarController;
 
 .field private w0:I
 
-.field private x0:Lcom/vk/mentions/n;
+.field private x0:Lcom/vk/mentions/MentionsEditTextHelper;
 
 .field private y0:Ljava/lang/String;
 
@@ -142,14 +142,14 @@
     const/16 v0, 0x14
 
     .line 1
-    invoke-direct {p0, v0}, Lcom/vtosters/lite/fragments/z0;-><init>(I)V
+    invoke-direct {p0, v0}, Lcom/vtosters/lite/general/fragments/CardRecyclerFragment;-><init>(I)V
 
     .line 2
     new-instance v0, Lcom/vtosters/lite/fragments/market/GoodFragment$g;
 
     invoke-direct {v0, p0}, Lcom/vtosters/lite/fragments/market/GoodFragment$g;-><init>(Lcom/vtosters/lite/fragments/market/GoodFragment;)V
 
-    iput-object v0, p0, Lcom/vtosters/lite/fragments/market/GoodFragment;->u0:Lcom/vk/stickers/b0$k;
+    iput-object v0, p0, Lcom/vtosters/lite/fragments/market/GoodFragment;->u0:Lcom/vk/stickers/StickersView$k;
 
     const/4 v0, 0x0
 
@@ -157,11 +157,11 @@
     iput v0, p0, Lcom/vtosters/lite/fragments/market/GoodFragment;->w0:I
 
     .line 4
-    new-instance v1, Lcom/vtosters/lite/fragments/market/r;
+    new-instance v1, Lcom/vtosters/lite/fragments/market/GoodFragmentClickStatHelper;
 
-    invoke-direct {v1}, Lcom/vtosters/lite/fragments/market/r;-><init>()V
+    invoke-direct {v1}, Lcom/vtosters/lite/fragments/market/GoodFragmentClickStatHelper;-><init>()V
 
-    iput-object v1, p0, Lcom/vtosters/lite/fragments/market/GoodFragment;->B0:Lcom/vtosters/lite/fragments/market/r;
+    iput-object v1, p0, Lcom/vtosters/lite/fragments/market/GoodFragment;->B0:Lcom/vtosters/lite/fragments/market/GoodFragmentClickStatHelper;
 
     const/4 v1, 0x0
 
@@ -169,7 +169,7 @@
     iput-object v1, p0, Lcom/vtosters/lite/fragments/market/GoodFragment;->C0:Ljava/util/List;
 
     .line 6
-    iput-object v1, p0, Lcom/vtosters/lite/fragments/market/GoodFragment;->D0:Lcom/vtosters/lite/ui/b0/j$a;
+    iput-object v1, p0, Lcom/vtosters/lite/fragments/market/GoodFragment;->D0:Lcom/vtosters/lite/ui/holder/RecyclerSectionAdapter$a;
 
     .line 7
     new-instance v2, Ljava/util/ArrayList;
@@ -234,22 +234,22 @@
     iput-object v0, p0, Lcom/vtosters/lite/fragments/market/GoodFragment;->g1:Lcom/vtosters/lite/fragments/market/ProductButtonsBinder$b;
 
     .line 23
-    new-instance v0, Lio/reactivex/disposables/a;
+    new-instance v0, Lio/reactivex/disposables/CompositeDisposable;
 
-    invoke-direct {v0}, Lio/reactivex/disposables/a;-><init>()V
+    invoke-direct {v0}, Lio/reactivex/disposables/CompositeDisposable;-><init>()V
 
-    iput-object v0, p0, Lcom/vtosters/lite/fragments/market/GoodFragment;->h1:Lio/reactivex/disposables/a;
+    iput-object v0, p0, Lcom/vtosters/lite/fragments/market/GoodFragment;->h1:Lio/reactivex/disposables/CompositeDisposable;
 
     .line 24
-    new-instance v0, Lcom/vtosters/lite/fragments/market/v;
+    new-instance v0, Lcom/vtosters/lite/fragments/market/ProductAdapter;
 
     iget v1, p0, Lcom/vtosters/lite/fragments/market/GoodFragment;->W0:I
 
     iget-object v2, p0, Lcom/vtosters/lite/fragments/market/GoodFragment;->f1:Lcom/vtosters/lite/fragments/market/GoodFragment$q;
 
-    invoke-direct {v0, v1, p0, p0, v2}, Lcom/vtosters/lite/fragments/market/v;-><init>(ILcom/vtosters/lite/ui/b0/m/e;Lcom/vtosters/lite/ui/holder/market/properties/a;Lcom/vtosters/lite/ui/b0/p/j;)V
+    invoke-direct {v0, v1, p0, p0, v2}, Lcom/vtosters/lite/fragments/market/ProductAdapter;-><init>(ILcom/vtosters/lite/ui/holder/comment/CommentViewHolderListener;Lcom/vtosters/lite/ui/holder/market/properties/OnProductPropertyVariantSelectionListener;Lcom/vtosters/lite/ui/b0/p/OnProductButtonsClickListener;)V
 
-    iput-object v0, p0, Lcom/vtosters/lite/fragments/market/GoodFragment;->i1:Lcom/vtosters/lite/fragments/market/v;
+    iput-object v0, p0, Lcom/vtosters/lite/fragments/market/GoodFragment;->i1:Lcom/vtosters/lite/fragments/market/ProductAdapter;
 
     .line 25
     new-instance v0, Lcom/vtosters/lite/fragments/market/GoodFragment$h;
@@ -263,7 +263,7 @@
 
     invoke-direct {v0, p0}, Lcom/vtosters/lite/fragments/market/GoodFragment$i;-><init>(Lcom/vtosters/lite/fragments/market/GoodFragment;)V
 
-    iput-object v0, p0, Lcom/vtosters/lite/fragments/market/GoodFragment;->k1:Lb/h/g/l/e;
+    iput-object v0, p0, Lcom/vtosters/lite/fragments/market/GoodFragment;->k1:Lb/h/g/l/NotificationListener;
 
     return-void
 .end method
@@ -272,7 +272,7 @@
     .locals 0
 
     .line 1
-    iget-object p0, p0, Ld/a/a/a/i;->Z:Lme/grishka/appkit/views/UsableRecyclerView;
+    iget-object p0, p0, Lme/grishka/appkit/fragments/BaseRecyclerFragment;->Z:Lme/grishka/appkit/views/UsableRecyclerView;
 
     return-object p0
 .end method
@@ -281,7 +281,7 @@
     .locals 0
 
     .line 1
-    iget-object p0, p0, Ld/a/a/a/i;->Z:Lme/grishka/appkit/views/UsableRecyclerView;
+    iget-object p0, p0, Lme/grishka/appkit/fragments/BaseRecyclerFragment;->Z:Lme/grishka/appkit/views/UsableRecyclerView;
 
     return-object p0
 .end method
@@ -299,7 +299,7 @@
     .locals 0
 
     .line 1
-    iget-object p0, p0, Ld/a/a/a/i;->Z:Lme/grishka/appkit/views/UsableRecyclerView;
+    iget-object p0, p0, Lme/grishka/appkit/fragments/BaseRecyclerFragment;->Z:Lme/grishka/appkit/views/UsableRecyclerView;
 
     return-object p0
 .end method
@@ -308,7 +308,7 @@
     .locals 0
 
     .line 1
-    iget-object p0, p0, Ld/a/a/a/i;->Z:Lme/grishka/appkit/views/UsableRecyclerView;
+    iget-object p0, p0, Lme/grishka/appkit/fragments/BaseRecyclerFragment;->Z:Lme/grishka/appkit/views/UsableRecyclerView;
 
     return-object p0
 .end method
@@ -317,7 +317,7 @@
     .locals 0
 
     .line 1
-    iget-object p0, p0, Ld/a/a/a/i;->Z:Lme/grishka/appkit/views/UsableRecyclerView;
+    iget-object p0, p0, Lme/grishka/appkit/fragments/BaseRecyclerFragment;->Z:Lme/grishka/appkit/views/UsableRecyclerView;
 
     return-object p0
 .end method
@@ -326,7 +326,7 @@
     .locals 0
 
     .line 1
-    iget-object p0, p0, Ld/a/a/a/i;->Z:Lme/grishka/appkit/views/UsableRecyclerView;
+    iget-object p0, p0, Lme/grishka/appkit/fragments/BaseRecyclerFragment;->Z:Lme/grishka/appkit/views/UsableRecyclerView;
 
     return-object p0
 .end method
@@ -385,11 +385,11 @@
     return-object p0
 .end method
 
-.method static synthetic a(Lcom/vtosters/lite/fragments/market/GoodFragment;Lio/reactivex/disposables/b;)Lio/reactivex/disposables/b;
+.method static synthetic a(Lcom/vtosters/lite/fragments/market/GoodFragment;Lio/reactivex/disposables/Disposable;)Lio/reactivex/disposables/Disposable;
     .locals 0
 
     .line 9
-    iput-object p1, p0, Ld/a/a/a/j;->T:Lio/reactivex/disposables/b;
+    iput-object p1, p0, Lme/grishka/appkit/fragments/LoaderFragment;->T:Lio/reactivex/disposables/Disposable;
 
     return-object p1
 .end method
@@ -435,7 +435,7 @@
             "Ljava/lang/String;",
             "I)",
             "Ljava/util/List<",
-            "Lcom/vtosters/lite/ui/b0/j$a;",
+            "Lcom/vtosters/lite/ui/holder/RecyclerSectionAdapter$a;",
             ">;"
         }
     .end annotation
@@ -467,7 +467,7 @@
 
     const/4 v3, 0x0
 
-    invoke-static {v3, v2}, Lcom/vtosters/lite/ui/b0/j$a;->b(ILjava/lang/Object;)Lcom/vtosters/lite/ui/b0/j$a;
+    invoke-static {v3, v2}, Lcom/vtosters/lite/ui/holder/RecyclerSectionAdapter$a;->b(ILjava/lang/Object;)Lcom/vtosters/lite/ui/holder/RecyclerSectionAdapter$a;
 
     move-result-object v2
 
@@ -476,7 +476,7 @@
     const/4 v2, 0x1
 
     .line 257
-    invoke-static {v2, p1}, Lcom/vtosters/lite/ui/b0/j$a;->b(ILjava/lang/Object;)Lcom/vtosters/lite/ui/b0/j$a;
+    invoke-static {v2, p1}, Lcom/vtosters/lite/ui/holder/RecyclerSectionAdapter$a;->b(ILjava/lang/Object;)Lcom/vtosters/lite/ui/holder/RecyclerSectionAdapter$a;
 
     move-result-object v4
 
@@ -494,7 +494,7 @@
     invoke-interface {p4, v4}, Ljava/util/List;->addAll(Ljava/util/Collection;)Z
 
     .line 259
-    new-instance v4, Lcom/vtosters/lite/ui/c0/b;
+    new-instance v4, Lcom/vtosters/lite/ui/c0/ProductActionButtonsItem;
 
     iget-boolean v5, p0, Lcom/vtosters/lite/fragments/market/GoodFragment;->b1:Z
 
@@ -522,17 +522,17 @@
 
     iget-object v8, p0, Lcom/vtosters/lite/fragments/market/GoodFragment;->g1:Lcom/vtosters/lite/fragments/market/ProductButtonsBinder$b;
 
-    invoke-direct {v4, v5, v6, v7, v8}, Lcom/vtosters/lite/ui/c0/b;-><init>(ZLjava/lang/String;ILcom/vtosters/lite/fragments/market/ProductButtonsBinder$b;)V
+    invoke-direct {v4, v5, v6, v7, v8}, Lcom/vtosters/lite/ui/c0/ProductActionButtonsItem;-><init>(ZLjava/lang/String;ILcom/vtosters/lite/fragments/market/ProductButtonsBinder$b;)V
 
     .line 260
-    iget-boolean v5, p0, Ld/a/a/a/h;->I:Z
+    iget-boolean v5, p0, Lme/grishka/appkit/fragments/AppKitFragment;->I:Z
 
     const/4 v6, 0x5
 
     if-eqz v5, :cond_3
 
     .line 261
-    invoke-static {v6, v4}, Lcom/vtosters/lite/ui/b0/j$a;->b(ILjava/lang/Object;)Lcom/vtosters/lite/ui/b0/j$a;
+    invoke-static {v6, v4}, Lcom/vtosters/lite/ui/holder/RecyclerSectionAdapter$a;->b(ILjava/lang/Object;)Lcom/vtosters/lite/ui/holder/RecyclerSectionAdapter$a;
 
     move-result-object v5
 
@@ -542,13 +542,13 @@
     const/4 v5, 0x3
 
     .line 262
-    new-instance v7, Lcom/vtosters/lite/ui/b0/p/e;
+    new-instance v7, Lcom/vtosters/lite/ui/b0/p/GoodGroupCategoryHolder;
 
     iget v8, p1, Lcom/vk/dto/common/Good;->b:I
 
-    invoke-direct {v7, p1, p2, p3, v8}, Lcom/vtosters/lite/ui/b0/p/e;-><init>(Lcom/vk/dto/common/Good;Ljava/lang/String;Ljava/lang/String;I)V
+    invoke-direct {v7, p1, p2, p3, v8}, Lcom/vtosters/lite/ui/b0/p/GoodGroupCategoryHolder;-><init>(Lcom/vk/dto/common/Good;Ljava/lang/String;Ljava/lang/String;I)V
 
-    invoke-static {v5, v7}, Lcom/vtosters/lite/ui/b0/j$a;->b(ILjava/lang/Object;)Lcom/vtosters/lite/ui/b0/j$a;
+    invoke-static {v5, v7}, Lcom/vtosters/lite/ui/holder/RecyclerSectionAdapter$a;->b(ILjava/lang/Object;)Lcom/vtosters/lite/ui/holder/RecyclerSectionAdapter$a;
 
     move-result-object p2
 
@@ -574,7 +574,7 @@
     if-nez p3, :cond_4
 
     .line 266
-    new-instance p3, Lcom/vtosters/lite/ui/b0/p/h;
+    new-instance p3, Lcom/vtosters/lite/ui/b0/p/GoodTextDescriptionItemHolder1;
 
     const v5, 0x7f1204e6
 
@@ -582,12 +582,12 @@
 
     move-result-object v5
 
-    invoke-direct {p3, v5, v0, p2}, Lcom/vtosters/lite/ui/b0/p/h;-><init>(Ljava/lang/Integer;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-direct {p3, v5, v0, p2}, Lcom/vtosters/lite/ui/b0/p/GoodTextDescriptionItemHolder1;-><init>(Ljava/lang/Integer;Ljava/lang/String;Ljava/lang/String;)V
 
     const/16 p2, 0xd
 
     .line 267
-    invoke-static {p2, p3}, Lcom/vtosters/lite/ui/b0/j$a;->b(ILjava/lang/Object;)Lcom/vtosters/lite/ui/b0/j$a;
+    invoke-static {p2, p3}, Lcom/vtosters/lite/ui/holder/RecyclerSectionAdapter$a;->b(ILjava/lang/Object;)Lcom/vtosters/lite/ui/holder/RecyclerSectionAdapter$a;
 
     move-result-object p2
 
@@ -599,9 +599,9 @@
     if-eqz v1, :cond_5
 
     .line 268
-    new-instance p3, Lcom/vtosters/lite/ui/b0/n/b;
+    new-instance p3, Lcom/vtosters/lite/ui/b0/n/ArrowItemHolder1;
 
-    sget-object v0, Lcom/vk/core/util/i;->a:Landroid/content/Context;
+    sget-object v0, Lcom/vk/core/util/AppContextHolder;->a:Landroid/content/Context;
 
     const v5, 0x7f1204e7
 
@@ -610,10 +610,10 @@
 
     move-result-object v0
 
-    invoke-direct {p3, v1, v0, p5}, Lcom/vtosters/lite/ui/b0/n/b;-><init>(Landroid/view/View$OnClickListener;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-direct {p3, v1, v0, p5}, Lcom/vtosters/lite/ui/b0/n/ArrowItemHolder1;-><init>(Landroid/view/View$OnClickListener;Ljava/lang/String;Ljava/lang/String;)V
 
     .line 270
-    invoke-static {p2, p3}, Lcom/vtosters/lite/ui/b0/j$a;->b(ILjava/lang/Object;)Lcom/vtosters/lite/ui/b0/j$a;
+    invoke-static {p2, p3}, Lcom/vtosters/lite/ui/holder/RecyclerSectionAdapter$a;->b(ILjava/lang/Object;)Lcom/vtosters/lite/ui/holder/RecyclerSectionAdapter$a;
 
     move-result-object p3
 
@@ -626,13 +626,13 @@
     if-eqz p3, :cond_6
 
     .line 272
-    new-instance p3, Lcom/vtosters/lite/ui/b0/n/b;
+    new-instance p3, Lcom/vtosters/lite/ui/b0/n/ArrowItemHolder1;
 
     new-instance p5, Lcom/vtosters/lite/fragments/market/a;
 
     invoke-direct {p5, p0}, Lcom/vtosters/lite/fragments/market/a;-><init>(Lcom/vtosters/lite/fragments/market/GoodFragment;)V
 
-    sget-object v0, Lcom/vk/core/util/i;->a:Landroid/content/Context;
+    sget-object v0, Lcom/vk/core/util/AppContextHolder;->a:Landroid/content/Context;
 
     const v1, 0x7f1214ee
 
@@ -641,7 +641,7 @@
 
     move-result-object v0
 
-    sget-object v1, Lcom/vk/core/util/i;->a:Landroid/content/Context;
+    sget-object v1, Lcom/vk/core/util/AppContextHolder;->a:Landroid/content/Context;
 
     const v5, 0x7f1214ef
 
@@ -650,10 +650,10 @@
 
     move-result-object v1
 
-    invoke-direct {p3, p5, v0, v1}, Lcom/vtosters/lite/ui/b0/n/b;-><init>(Landroid/view/View$OnClickListener;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-direct {p3, p5, v0, v1}, Lcom/vtosters/lite/ui/b0/n/ArrowItemHolder1;-><init>(Landroid/view/View$OnClickListener;Ljava/lang/String;Ljava/lang/String;)V
 
     .line 275
-    invoke-static {p2, p3}, Lcom/vtosters/lite/ui/b0/j$a;->b(ILjava/lang/Object;)Lcom/vtosters/lite/ui/b0/j$a;
+    invoke-static {p2, p3}, Lcom/vtosters/lite/ui/holder/RecyclerSectionAdapter$a;->b(ILjava/lang/Object;)Lcom/vtosters/lite/ui/holder/RecyclerSectionAdapter$a;
 
     move-result-object p2
 
@@ -675,11 +675,11 @@
     const/4 p5, 0x2
 
     .line 278
-    new-instance v0, Lcom/vtosters/lite/ui/c0/c;
+    new-instance v0, Lcom/vtosters/lite/ui/c0/DesriptionItem;
 
-    invoke-direct {v0, p2, p1}, Lcom/vtosters/lite/ui/c0/c;-><init>(Ljava/lang/CharSequence;Lcom/vk/dto/common/Good;)V
+    invoke-direct {v0, p2, p1}, Lcom/vtosters/lite/ui/c0/DesriptionItem;-><init>(Ljava/lang/CharSequence;Lcom/vk/dto/common/Good;)V
 
-    invoke-static {p5, v0}, Lcom/vtosters/lite/ui/b0/j$a;->b(ILjava/lang/Object;)Lcom/vtosters/lite/ui/b0/j$a;
+    invoke-static {p5, v0}, Lcom/vtosters/lite/ui/holder/RecyclerSectionAdapter$a;->b(ILjava/lang/Object;)Lcom/vtosters/lite/ui/holder/RecyclerSectionAdapter$a;
 
     move-result-object p5
 
@@ -697,13 +697,13 @@
 
     move-result p2
 
-    const-class v1, Lcom/vtosters/lite/t;
+    const-class v1, Lcom/vtosters/lite/ExpandTextSpan;
 
     invoke-interface {v0, v3, p2, v1}, Landroid/text/Spannable;->getSpans(IILjava/lang/Class;)[Ljava/lang/Object;
 
     move-result-object p2
 
-    check-cast p2, [Lcom/vtosters/lite/t;
+    check-cast p2, [Lcom/vtosters/lite/ExpandTextSpan;
 
     .line 281
     array-length v0, p2
@@ -715,9 +715,9 @@
 
     new-instance v0, Lcom/vtosters/lite/fragments/market/b;
 
-    invoke-direct {v0, p0, p1, p5, p3}, Lcom/vtosters/lite/fragments/market/b;-><init>(Lcom/vtosters/lite/fragments/market/GoodFragment;Lcom/vk/dto/common/Good;Lcom/vtosters/lite/ui/b0/j$a;Ljava/lang/CharSequence;)V
+    invoke-direct {v0, p0, p1, p5, p3}, Lcom/vtosters/lite/fragments/market/b;-><init>(Lcom/vtosters/lite/fragments/market/GoodFragment;Lcom/vk/dto/common/Good;Lcom/vtosters/lite/ui/holder/RecyclerSectionAdapter$a;Ljava/lang/CharSequence;)V
 
-    invoke-virtual {p2, v0}, Lcom/vtosters/lite/t;->a(Landroid/view/View$OnClickListener;)V
+    invoke-virtual {p2, v0}, Lcom/vtosters/lite/ExpandTextSpan;->a(Landroid/view/View$OnClickListener;)V
 
     .line 283
     :cond_7
@@ -732,7 +732,7 @@
     iput p2, p0, Lcom/vtosters/lite/fragments/market/GoodFragment;->F0:I
 
     .line 285
-    iget-object p2, p0, Ld/a/a/a/i;->Z:Lme/grishka/appkit/views/UsableRecyclerView;
+    iget-object p2, p0, Lme/grishka/appkit/fragments/BaseRecyclerFragment;->Z:Lme/grishka/appkit/views/UsableRecyclerView;
 
     invoke-direct {p0, p2}, Lcom/vtosters/lite/fragments/market/GoodFragment;->a(Landroidx/recyclerview/widget/RecyclerView;)V
 
@@ -746,12 +746,12 @@
     iput-boolean v2, p0, Lcom/vtosters/lite/fragments/market/GoodFragment;->d1:Z
 
     .line 289
-    iget-boolean p2, p0, Ld/a/a/a/h;->I:Z
+    iget-boolean p2, p0, Lme/grishka/appkit/fragments/AppKitFragment;->I:Z
 
     if-nez p2, :cond_9
 
     .line 290
-    invoke-static {v6, v4}, Lcom/vtosters/lite/ui/b0/j$a;->b(ILjava/lang/Object;)Lcom/vtosters/lite/ui/b0/j$a;
+    invoke-static {v6, v4}, Lcom/vtosters/lite/ui/holder/RecyclerSectionAdapter$a;->b(ILjava/lang/Object;)Lcom/vtosters/lite/ui/holder/RecyclerSectionAdapter$a;
 
     move-result-object p2
 
@@ -761,11 +761,11 @@
     const/4 p2, 0x6
 
     .line 291
-    invoke-static {p2, p1}, Lcom/vtosters/lite/ui/b0/j$a;->a(ILjava/lang/Object;)Lcom/vtosters/lite/ui/b0/j$a;
+    invoke-static {p2, p1}, Lcom/vtosters/lite/ui/holder/RecyclerSectionAdapter$a;->a(ILjava/lang/Object;)Lcom/vtosters/lite/ui/holder/RecyclerSectionAdapter$a;
 
     move-result-object p1
 
-    iput-object p1, p0, Lcom/vtosters/lite/fragments/market/GoodFragment;->D0:Lcom/vtosters/lite/ui/b0/j$a;
+    iput-object p1, p0, Lcom/vtosters/lite/fragments/market/GoodFragment;->D0:Lcom/vtosters/lite/ui/holder/RecyclerSectionAdapter$a;
 
     invoke-interface {p4, p1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
@@ -792,7 +792,7 @@
             "Lcom/vk/api/board/BoardComment;",
             ">;I)",
             "Ljava/util/List<",
-            "Lcom/vtosters/lite/ui/b0/j$a;",
+            "Lcom/vtosters/lite/ui/holder/RecyclerSectionAdapter$a;",
             ">;"
         }
     .end annotation
@@ -817,7 +817,7 @@
     const/4 v1, 0x7
 
     .line 298
-    sget-object v2, Lcom/vk/core/util/i;->a:Landroid/content/Context;
+    sget-object v2, Lcom/vk/core/util/AppContextHolder;->a:Landroid/content/Context;
 
     invoke-virtual {v2}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
@@ -843,7 +843,7 @@
     move-result-object p2
 
     .line 300
-    invoke-static {v1, p2}, Lcom/vtosters/lite/ui/b0/j$a;->d(ILjava/lang/Object;)Lcom/vtosters/lite/ui/b0/j$a;
+    invoke-static {v1, p2}, Lcom/vtosters/lite/ui/holder/RecyclerSectionAdapter$a;->d(ILjava/lang/Object;)Lcom/vtosters/lite/ui/holder/RecyclerSectionAdapter$a;
 
     move-result-object p2
 
@@ -864,7 +864,7 @@
 
     move-result-object v1
 
-    invoke-static {p2, v1}, Lcom/vtosters/lite/ui/b0/j$a;->b(ILjava/lang/Object;)Lcom/vtosters/lite/ui/b0/j$a;
+    invoke-static {p2, v1}, Lcom/vtosters/lite/ui/holder/RecyclerSectionAdapter$a;->b(ILjava/lang/Object;)Lcom/vtosters/lite/ui/holder/RecyclerSectionAdapter$a;
 
     move-result-object p2
 
@@ -884,7 +884,7 @@
 
     move-result-object p2
 
-    invoke-static {p1, p2}, Lcom/vtosters/lite/ui/b0/j$a;->b(ILjava/lang/Object;)Lcom/vtosters/lite/ui/b0/j$a;
+    invoke-static {p1, p2}, Lcom/vtosters/lite/ui/holder/RecyclerSectionAdapter$a;->b(ILjava/lang/Object;)Lcom/vtosters/lite/ui/holder/RecyclerSectionAdapter$a;
 
     move-result-object p1
 
@@ -925,7 +925,7 @@
     .locals 7
 
     .line 156
-    iget-boolean v0, p0, Ld/a/a/a/h;->I:Z
+    iget-boolean v0, p0, Lme/grishka/appkit/fragments/AppKitFragment;->I:Z
 
     if-eqz v0, :cond_0
 
@@ -1231,7 +1231,7 @@
 
     move-result p1
 
-    iget-object v0, p0, Ld/a/a/a/i;->Z:Lme/grishka/appkit/views/UsableRecyclerView;
+    iget-object v0, p0, Lme/grishka/appkit/fragments/BaseRecyclerFragment;->Z:Lme/grishka/appkit/views/UsableRecyclerView;
 
     invoke-virtual {v0}, Landroid/view/ViewGroup;->getBottom()I
 
@@ -1383,12 +1383,12 @@
     iput p1, p0, Lcom/vtosters/lite/fragments/market/GoodFragment;->w0:I
 
     .line 144
-    iget-object p1, p0, Lcom/vtosters/lite/fragments/market/GoodFragment;->v0:Lcom/vtosters/lite/ui/z/a;
+    iget-object p1, p0, Lcom/vtosters/lite/fragments/market/GoodFragment;->v0:Lcom/vtosters/lite/ui/z/ReplyBarController;
 
     if-eqz p1, :cond_1
 
     .line 145
-    invoke-virtual {p1}, Lcom/vtosters/lite/ui/z/a;->c()V
+    invoke-virtual {p1}, Lcom/vtosters/lite/ui/z/ReplyBarController;->c()V
 
     goto :goto_0
 
@@ -1399,14 +1399,14 @@
     iput v0, p0, Lcom/vtosters/lite/fragments/market/GoodFragment;->w0:I
 
     .line 147
-    iget-object v0, p0, Lcom/vtosters/lite/fragments/market/GoodFragment;->v0:Lcom/vtosters/lite/ui/z/a;
+    iget-object v0, p0, Lcom/vtosters/lite/fragments/market/GoodFragment;->v0:Lcom/vtosters/lite/ui/z/ReplyBarController;
 
     if-eqz v0, :cond_1
 
     .line 148
     iget-object p1, p1, Lcom/vk/sharing/target/Target;->b:Ljava/lang/String;
 
-    invoke-virtual {v0, p1}, Lcom/vtosters/lite/ui/z/a;->a(Ljava/lang/String;)V
+    invoke-virtual {v0, p1}, Lcom/vtosters/lite/ui/z/ReplyBarController;->a(Ljava/lang/String;)V
 
     :cond_1
     :goto_0
@@ -1469,7 +1469,7 @@
 
     move-result-object p1
 
-    invoke-static {p1, p0}, Lcom/vk/common/links/c;->a(Landroid/content/Context;Ljava/lang/String;)V
+    invoke-static {p1, p0}, Lcom/vk/common/links/LinkProcessor;->a(Landroid/content/Context;Ljava/lang/String;)V
 
     return-void
 .end method
@@ -1510,7 +1510,7 @@
 
     .line 152
     :cond_1
-    new-instance v9, Lcom/vk/api/market/a;
+    new-instance v9, Lcom/vk/api/market/MarketAddComment;
 
     invoke-virtual {p0}, Lcom/vtosters/lite/fragments/market/GoodFragment;->b()I
 
@@ -1530,7 +1530,7 @@
 
     move v7, v1
 
-    invoke-direct/range {v2 .. v8}, Lcom/vk/api/market/a;-><init>(IILjava/lang/String;Ljava/util/List;ZI)V
+    invoke-direct/range {v2 .. v8}, Lcom/vk/api/market/MarketAddComment;-><init>(IILjava/lang/String;Ljava/util/List;ZI)V
 
     new-instance v10, Lcom/vtosters/lite/fragments/market/GoodFragment$b;
 
@@ -1549,14 +1549,14 @@
     invoke-direct/range {v2 .. v8}, Lcom/vtosters/lite/fragments/market/GoodFragment$b;-><init>(Lcom/vtosters/lite/fragments/market/GoodFragment;Lcom/vk/core/fragments/FragmentImpl;ZLjava/util/List;Ljava/lang/String;Z)V
 
     .line 153
-    invoke-virtual {v9, v10}, Lcom/vk/api/base/d;->a(Lcom/vk/api/base/a;)Lcom/vk/api/base/b;
+    invoke-virtual {v9, v10}, Lcom/vk/api/base/ApiRequest;->a(Lcom/vk/api/base/ApiCallback;)Lcom/vk/api/base/ApiCallbackDisposable;
 
     move-result-object p1
 
     .line 154
-    invoke-virtual {p1, v0}, Lcom/vk/api/base/b;->a(Landroid/content/Context;)Lcom/vk/api/base/b;
+    invoke-virtual {p1, v0}, Lcom/vk/api/base/ApiCallbackDisposable;->a(Landroid/content/Context;)Lcom/vk/api/base/ApiCallbackDisposable;
 
-    invoke-virtual {p1}, Lcom/vk/api/base/b;->a()Lio/reactivex/disposables/b;
+    invoke-virtual {p1}, Lcom/vk/api/base/ApiCallbackDisposable;->a()Lio/reactivex/disposables/Disposable;
 
     return-void
 .end method
@@ -1618,7 +1618,7 @@
             "Lcom/vk/dto/common/Good;",
             ")",
             "Ljava/util/List<",
-            "Lcom/vtosters/lite/ui/holder/market/properties/d;",
+            "Lcom/vtosters/lite/ui/holder/market/properties/ProductPropertyItem1;",
             ">;"
         }
     .end annotation
@@ -1690,9 +1690,9 @@
     check-cast v5, Lcom/vk/dto/market/Variant;
 
     .line 13
-    sget-object v6, Lcom/vtosters/lite/ui/holder/market/properties/e;->f:Lcom/vtosters/lite/ui/holder/market/properties/e$a;
+    sget-object v6, Lcom/vtosters/lite/ui/holder/market/properties/ProductPropertyItem;->f:Lcom/vtosters/lite/ui/holder/market/properties/ProductPropertyItem$a;
 
-    invoke-virtual {v6, v5}, Lcom/vtosters/lite/ui/holder/market/properties/e$a;->a(Lcom/vk/dto/market/Variant;)Lcom/vtosters/lite/ui/holder/market/properties/e;
+    invoke-virtual {v6, v5}, Lcom/vtosters/lite/ui/holder/market/properties/ProductPropertyItem$a;->a(Lcom/vk/dto/market/Variant;)Lcom/vtosters/lite/ui/holder/market/properties/ProductPropertyItem;
 
     move-result-object v6
 
@@ -1729,7 +1729,7 @@
 
     move-result-object v2
 
-    check-cast v2, Lcom/vtosters/lite/ui/holder/market/properties/e;
+    check-cast v2, Lcom/vtosters/lite/ui/holder/market/properties/ProductPropertyItem;
 
     .line 18
     :cond_4
@@ -1770,14 +1770,14 @@
 
     .line 22
     :goto_2
-    new-instance v5, Lcom/vtosters/lite/ui/holder/market/properties/d;
+    new-instance v5, Lcom/vtosters/lite/ui/holder/market/properties/ProductPropertyItem1;
 
     .line 23
     invoke-virtual {v1}, Lcom/vk/dto/market/VariantGroup;->s()Ljava/lang/String;
 
     move-result-object v1
 
-    invoke-direct {v5, v1, v4, v3, v2}, Lcom/vtosters/lite/ui/holder/market/properties/d;-><init>(Ljava/lang/String;Lcom/vtosters/lite/ui/holder/market/properties/ProductPropertyType;Ljava/util/List;Lcom/vtosters/lite/ui/holder/market/properties/e;)V
+    invoke-direct {v5, v1, v4, v3, v2}, Lcom/vtosters/lite/ui/holder/market/properties/ProductPropertyItem1;-><init>(Ljava/lang/String;Lcom/vtosters/lite/ui/holder/market/properties/ProductPropertyType;Ljava/util/List;Lcom/vtosters/lite/ui/holder/market/properties/ProductPropertyItem;)V
 
     .line 24
     invoke-interface {v0, v5}, Ljava/util/List;->add(Ljava/lang/Object;)Z
@@ -1792,23 +1792,23 @@
     .locals 2
 
     .line 3
-    invoke-static {}, Lcom/vk/emoji/b;->g()Lcom/vk/emoji/b;
+    invoke-static {}, Lcom/vk/emoji/Emoji;->g()Lcom/vk/emoji/Emoji;
 
     move-result-object v0
 
     iget-object p1, p1, Lcom/vk/dto/common/Good;->d:Ljava/lang/String;
 
-    invoke-static {p1}, Lcom/vk/common/links/b;->a(Ljava/lang/CharSequence;)Ljava/lang/CharSequence;
+    invoke-static {p1}, Lcom/vk/common/links/LinkParser;->a(Ljava/lang/CharSequence;)Ljava/lang/CharSequence;
 
     move-result-object p1
 
     const v1, 0x3ecccccd    # 0.4f
 
-    invoke-static {p1, v1}, Lcom/vk/common/links/b;->a(Ljava/lang/CharSequence;F)Ljava/lang/CharSequence;
+    invoke-static {p1, v1}, Lcom/vk/common/links/LinkParser;->a(Ljava/lang/CharSequence;F)Ljava/lang/CharSequence;
 
     move-result-object p1
 
-    invoke-virtual {v0, p1}, Lcom/vk/emoji/b;->a(Ljava/lang/CharSequence;)Ljava/lang/CharSequence;
+    invoke-virtual {v0, p1}, Lcom/vk/emoji/Emoji;->a(Ljava/lang/CharSequence;)Ljava/lang/CharSequence;
 
     move-result-object p1
 
@@ -1875,17 +1875,17 @@
     .locals 1
 
     .line 3
-    invoke-static {}, Lcom/vk/emoji/b;->g()Lcom/vk/emoji/b;
+    invoke-static {}, Lcom/vk/emoji/Emoji;->g()Lcom/vk/emoji/Emoji;
 
     move-result-object v0
 
     iget-object p1, p1, Lcom/vk/dto/common/Good;->d:Ljava/lang/String;
 
-    invoke-static {p1}, Lcom/vk/common/links/b;->a(Ljava/lang/CharSequence;)Ljava/lang/CharSequence;
+    invoke-static {p1}, Lcom/vk/common/links/LinkParser;->a(Ljava/lang/CharSequence;)Ljava/lang/CharSequence;
 
     move-result-object p1
 
-    invoke-virtual {v0, p1}, Lcom/vk/emoji/b;->a(Ljava/lang/CharSequence;)Ljava/lang/CharSequence;
+    invoke-virtual {v0, p1}, Lcom/vk/emoji/Emoji;->a(Ljava/lang/CharSequence;)Ljava/lang/CharSequence;
 
     move-result-object p1
 
@@ -1905,7 +1905,7 @@
     .locals 0
 
     .line 1
-    iget-object p0, p0, Ld/a/a/a/i;->Z:Lme/grishka/appkit/views/UsableRecyclerView;
+    iget-object p0, p0, Lme/grishka/appkit/fragments/BaseRecyclerFragment;->Z:Lme/grishka/appkit/views/UsableRecyclerView;
 
     return-object p0
 .end method
@@ -1914,9 +1914,9 @@
     .locals 1
 
     .line 2
-    iget-object v0, p0, Lcom/vtosters/lite/fragments/market/GoodFragment;->B0:Lcom/vtosters/lite/fragments/market/r;
+    iget-object v0, p0, Lcom/vtosters/lite/fragments/market/GoodFragment;->B0:Lcom/vtosters/lite/fragments/market/GoodFragmentClickStatHelper;
 
-    invoke-virtual {v0, p1}, Lcom/vtosters/lite/fragments/market/r;->a(Lcom/vk/dto/common/Good;)V
+    invoke-virtual {v0, p1}, Lcom/vtosters/lite/fragments/market/GoodFragmentClickStatHelper;->a(Lcom/vk/dto/common/Good;)V
 
     return-void
 .end method
@@ -1944,7 +1944,7 @@
     .locals 0
 
     .line 1
-    iget-object p0, p0, Ld/a/a/a/i;->Z:Lme/grishka/appkit/views/UsableRecyclerView;
+    iget-object p0, p0, Lme/grishka/appkit/fragments/BaseRecyclerFragment;->Z:Lme/grishka/appkit/views/UsableRecyclerView;
 
     return-object p0
 .end method
@@ -1984,7 +1984,7 @@
     .locals 0
 
     .line 1
-    iget-object p0, p0, Ld/a/a/a/i;->Z:Lme/grishka/appkit/views/UsableRecyclerView;
+    iget-object p0, p0, Lme/grishka/appkit/fragments/BaseRecyclerFragment;->Z:Lme/grishka/appkit/views/UsableRecyclerView;
 
     return-object p0
 .end method
@@ -2017,11 +2017,11 @@
     return v0
 .end method
 
-.method static synthetic i(Lcom/vtosters/lite/fragments/market/GoodFragment;)Lcom/vk/stickers/e;
+.method static synthetic i(Lcom/vtosters/lite/fragments/market/GoodFragment;)Lcom/vk/stickers/PauseAnimationScrollListener;
     .locals 0
 
     .line 1
-    iget-object p0, p0, Lcom/vtosters/lite/fragments/market/GoodFragment;->Y0:Lcom/vk/stickers/e;
+    iget-object p0, p0, Lcom/vtosters/lite/fragments/market/GoodFragment;->Y0:Lcom/vk/stickers/PauseAnimationScrollListener;
 
     return-object p0
 .end method
@@ -2082,14 +2082,14 @@
 
     .line 2
     :cond_0
-    new-instance v1, Lcom/vk/sharing/l;
+    new-instance v1, Lcom/vk/sharing/Picking;
 
-    invoke-direct {v1, v0}, Lcom/vk/sharing/l;-><init>(Landroid/content/Context;)V
+    invoke-direct {v1, v0}, Lcom/vk/sharing/Picking;-><init>(Landroid/content/Context;)V
 
     const/4 v0, 0x1
 
     .line 3
-    invoke-virtual {v1, v0}, Lcom/vk/sharing/l;->e(I)Lcom/vk/sharing/l;
+    invoke-virtual {v1, v0}, Lcom/vk/sharing/Picking;->e(I)Lcom/vk/sharing/Picking;
 
     .line 4
     invoke-virtual {p0}, Lcom/vtosters/lite/fragments/market/GoodFragment;->b()I
@@ -2100,20 +2100,20 @@
 
     move-result v0
 
-    invoke-virtual {v1, v0}, Lcom/vk/sharing/l;->a(I)Lcom/vk/sharing/l;
+    invoke-virtual {v1, v0}, Lcom/vk/sharing/Picking;->a(I)Lcom/vk/sharing/Picking;
 
     iget v0, p0, Lcom/vtosters/lite/fragments/market/GoodFragment;->w0:I
 
     .line 5
-    invoke-virtual {v1, v0}, Lcom/vk/sharing/l;->b(I)Lcom/vk/sharing/l;
+    invoke-virtual {v1, v0}, Lcom/vk/sharing/Picking;->b(I)Lcom/vk/sharing/Picking;
 
     .line 6
-    invoke-virtual {v1}, Lcom/vk/sharing/l;->b()Lcom/vk/sharing/l;
+    invoke-virtual {v1}, Lcom/vk/sharing/Picking;->b()Lcom/vk/sharing/Picking;
 
     const/16 v0, 0x10eb
 
     .line 7
-    invoke-virtual {v1, p0, v0}, Lcom/vk/sharing/l;->a(Lcom/vk/core/fragments/FragmentImpl;I)V
+    invoke-virtual {v1, p0, v0}, Lcom/vk/sharing/Picking;->a(Lcom/vk/core/fragments/FragmentImpl;I)V
 
     return-void
 .end method
@@ -2144,9 +2144,9 @@
     iput-boolean v0, p0, Lcom/vtosters/lite/fragments/market/GoodFragment;->S0:Z
 
     .line 3
-    iget-object v1, p0, Lcom/vtosters/lite/fragments/market/GoodFragment;->x0:Lcom/vk/mentions/n;
+    iget-object v1, p0, Lcom/vtosters/lite/fragments/market/GoodFragment;->x0:Lcom/vk/mentions/MentionsEditTextHelper;
 
-    invoke-virtual {v1}, Lcom/vk/mentions/n;->a()Ljava/lang/String;
+    invoke-virtual {v1}, Lcom/vk/mentions/MentionsEditTextHelper;->a()Ljava/lang/String;
 
     move-result-object v1
 
@@ -2216,20 +2216,20 @@
 
     invoke-direct {v0, v1}, Lcom/vk/market/orders/MarketCartFragment$a;-><init>(I)V
 
-    invoke-virtual {p0}, Ld/a/a/a/h;->getContext()Landroid/content/Context;
+    invoke-virtual {p0}, Lme/grishka/appkit/fragments/AppKitFragment;->getContext()Landroid/content/Context;
 
     move-result-object v1
 
-    invoke-virtual {v0, v1}, Lcom/vk/navigation/o;->a(Landroid/content/Context;)V
+    invoke-virtual {v0, v1}, Lcom/vk/navigation/Navigator;->a(Landroid/content/Context;)V
 
     return-void
 .end method
 
-.method static synthetic m(Lcom/vtosters/lite/fragments/market/GoodFragment;)Lcom/vk/stickers/f0/a;
+.method static synthetic m(Lcom/vtosters/lite/fragments/market/GoodFragment;)Lcom/vk/stickers/f0/KeyboardPopup;
     .locals 0
 
     .line 1
-    iget-object p0, p0, Lcom/vtosters/lite/fragments/market/GoodFragment;->M0:Lcom/vk/stickers/f0/a;
+    iget-object p0, p0, Lcom/vtosters/lite/fragments/market/GoodFragment;->M0:Lcom/vk/stickers/f0/KeyboardPopup;
 
     return-object p0
 .end method
@@ -2278,11 +2278,11 @@
     move-result-object v0
 
     .line 3
-    invoke-virtual {p0}, Ld/a/a/a/h;->getContext()Landroid/content/Context;
+    invoke-virtual {p0}, Lme/grishka/appkit/fragments/AppKitFragment;->getContext()Landroid/content/Context;
 
     move-result-object v1
 
-    invoke-static {v1, v0}, Lcom/vk/common/links/c;->a(Landroid/content/Context;Ljava/lang/String;)V
+    invoke-static {v1, v0}, Lcom/vk/common/links/LinkProcessor;->a(Landroid/content/Context;Ljava/lang/String;)V
 
     return-void
 .end method
@@ -2300,9 +2300,9 @@
     .locals 2
 
     .line 1
-    iget-object v0, p0, Lcom/vtosters/lite/fragments/market/GoodFragment;->i1:Lcom/vtosters/lite/fragments/market/v;
+    iget-object v0, p0, Lcom/vtosters/lite/fragments/market/GoodFragment;->i1:Lcom/vtosters/lite/fragments/market/ProductAdapter;
 
-    invoke-virtual {v0}, Lcom/vtosters/lite/ui/b0/j;->clear()V
+    invoke-virtual {v0}, Lcom/vtosters/lite/ui/holder/RecyclerSectionAdapter;->clear()V
 
     .line 2
     invoke-static {}, Ljava/util/Collections;->emptyList()Ljava/util/List;
@@ -2311,27 +2311,27 @@
 
     const/4 v1, 0x0
 
-    invoke-virtual {p0, v0, v1}, Ld/a/a/a/i;->e(Ljava/util/List;Z)V
+    invoke-virtual {p0, v0, v1}, Lme/grishka/appkit/fragments/BaseRecyclerFragment;->e(Ljava/util/List;Z)V
 
     const v0, 0x7f1204e8
 
     .line 3
-    invoke-virtual {p0, v0}, Ld/a/a/a/i;->G(I)V
+    invoke-virtual {p0, v0}, Lme/grishka/appkit/fragments/BaseRecyclerFragment;->G(I)V
 
     .line 4
     invoke-direct {p0}, Lcom/vtosters/lite/fragments/market/GoodFragment;->i5()V
 
     .line 5
-    invoke-virtual {p0, v1}, Ld/a/a/a/i;->x0(Z)V
+    invoke-virtual {p0, v1}, Lme/grishka/appkit/fragments/BaseRecyclerFragment;->x0(Z)V
 
     return-void
 .end method
 
-.method static synthetic o(Lcom/vtosters/lite/fragments/market/GoodFragment;)Lcom/vtosters/lite/ui/z/a;
+.method static synthetic o(Lcom/vtosters/lite/fragments/market/GoodFragment;)Lcom/vtosters/lite/ui/z/ReplyBarController;
     .locals 0
 
     .line 1
-    iget-object p0, p0, Lcom/vtosters/lite/fragments/market/GoodFragment;->v0:Lcom/vtosters/lite/ui/z/a;
+    iget-object p0, p0, Lcom/vtosters/lite/fragments/market/GoodFragment;->v0:Lcom/vtosters/lite/ui/z/ReplyBarController;
 
     return-object p0
 .end method
@@ -2345,13 +2345,13 @@
     iget-boolean v0, v0, Lcom/vk/dto/common/Good;->Y:Z
 
     .line 2
-    invoke-virtual {p0}, Ld/a/a/a/h;->getContext()Landroid/content/Context;
+    invoke-virtual {p0}, Lme/grishka/appkit/fragments/AppKitFragment;->getContext()Landroid/content/Context;
 
     move-result-object v1
 
     iget-object v2, p0, Lcom/vtosters/lite/fragments/market/GoodFragment;->U0:Lcom/vk/dto/common/Good;
 
-    new-instance v3, Lcom/vk/fave/entities/e;
+    new-instance v3, Lcom/vk/fave/entities/FaveMetaInfo;
 
     invoke-direct {p0}, Lcom/vtosters/lite/fragments/market/GoodFragment;->g5()Ljava/lang/String;
 
@@ -2359,7 +2359,7 @@
 
     const/4 v5, 0x0
 
-    invoke-direct {v3, v4, v5, v5, v5}, Lcom/vk/fave/entities/e;-><init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Lcom/vk/fave/entities/FaveSource;)V
+    invoke-direct {v3, v4, v5, v5, v5}, Lcom/vk/fave/entities/FaveMetaInfo;-><init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Lcom/vk/fave/entities/FaveSource;)V
 
     new-instance v4, Lcom/vtosters/lite/fragments/market/h;
 
@@ -2371,7 +2371,7 @@
 
     const/4 v6, 0x1
 
-    invoke-static/range {v1 .. v6}, Lcom/vk/fave/FaveController;->a(Landroid/content/Context;Lb/h/h/f/a;Lcom/vk/fave/entities/e;Lkotlin/jvm/b/c;Lkotlin/jvm/b/b;Z)V
+    invoke-static/range {v1 .. v6}, Lcom/vk/fave/FaveController;->a(Landroid/content/Context;Lb/h/h/f/Favable;Lcom/vk/fave/entities/FaveMetaInfo;Lkotlin/jvm/b/Functions1;Lkotlin/jvm/b/Functions2;Z)V
 
     return-void
 .end method
@@ -2389,14 +2389,14 @@
     .locals 2
 
     .line 1
-    iget-object v0, p0, Lcom/vtosters/lite/fragments/market/GoodFragment;->Z0:Lcom/vk/market/common/ui/c/b;
+    iget-object v0, p0, Lcom/vtosters/lite/fragments/market/GoodFragment;->Z0:Lcom/vk/market/common/ui/c/BadgeMenuItem;
 
     if-eqz v0, :cond_0
 
     .line 2
     iget v1, p0, Lcom/vtosters/lite/fragments/market/GoodFragment;->c1:I
 
-    invoke-virtual {v0, v1}, Lcom/vk/market/common/ui/c/b;->a(I)V
+    invoke-virtual {v0, v1}, Lcom/vk/market/common/ui/c/BadgeMenuItem;->a(I)V
 
     :cond_0
     return-void
@@ -2415,7 +2415,7 @@
     .locals 5
 
     .line 1
-    new-instance v0, Lcom/vtosters/lite/ui/c0/b;
+    new-instance v0, Lcom/vtosters/lite/ui/c0/ProductActionButtonsItem;
 
     iget-boolean v1, p0, Lcom/vtosters/lite/fragments/market/GoodFragment;->b1:Z
 
@@ -2445,23 +2445,23 @@
 
     iget-object v4, p0, Lcom/vtosters/lite/fragments/market/GoodFragment;->g1:Lcom/vtosters/lite/fragments/market/ProductButtonsBinder$b;
 
-    invoke-direct {v0, v1, v3, v2, v4}, Lcom/vtosters/lite/ui/c0/b;-><init>(ZLjava/lang/String;ILcom/vtosters/lite/fragments/market/ProductButtonsBinder$b;)V
+    invoke-direct {v0, v1, v3, v2, v4}, Lcom/vtosters/lite/ui/c0/ProductActionButtonsItem;-><init>(ZLjava/lang/String;ILcom/vtosters/lite/fragments/market/ProductButtonsBinder$b;)V
 
     .line 2
-    iget-object v1, p0, Lcom/vtosters/lite/fragments/market/GoodFragment;->i1:Lcom/vtosters/lite/fragments/market/v;
+    iget-object v1, p0, Lcom/vtosters/lite/fragments/market/GoodFragment;->i1:Lcom/vtosters/lite/fragments/market/ProductAdapter;
 
     const/4 v2, 0x5
 
-    invoke-static {v2, v0}, Lcom/vtosters/lite/ui/b0/j$a;->b(ILjava/lang/Object;)Lcom/vtosters/lite/ui/b0/j$a;
+    invoke-static {v2, v0}, Lcom/vtosters/lite/ui/holder/RecyclerSectionAdapter$a;->b(ILjava/lang/Object;)Lcom/vtosters/lite/ui/holder/RecyclerSectionAdapter$a;
 
     move-result-object v2
 
-    invoke-virtual {v1, v2}, Lcom/vtosters/lite/fragments/market/v;->a(Lcom/vtosters/lite/ui/b0/j$a;)V
+    invoke-virtual {v1, v2}, Lcom/vtosters/lite/fragments/market/ProductAdapter;->a(Lcom/vtosters/lite/ui/holder/RecyclerSectionAdapter$a;)V
 
     .line 3
     iget-object v1, p0, Lcom/vtosters/lite/fragments/market/GoodFragment;->e1:Lcom/vtosters/lite/fragments/market/ProductButtonsBinder;
 
-    invoke-virtual {v1, v0}, Lcom/vtosters/lite/fragments/market/ProductButtonsBinder;->a(Lcom/vtosters/lite/ui/c0/b;)V
+    invoke-virtual {v1, v0}, Lcom/vtosters/lite/fragments/market/ProductButtonsBinder;->a(Lcom/vtosters/lite/ui/c0/ProductActionButtonsItem;)V
 
     return-void
 .end method
@@ -2479,13 +2479,13 @@
     .locals 3
 
     .line 1
-    new-instance v0, Lb/h/g/k/a;
+    new-instance v0, Lb/h/g/k/VKProgressDialog;
 
     invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getActivity()Landroidx/fragment/app/FragmentActivity;
 
     move-result-object v1
 
-    invoke-direct {v0, v1}, Lb/h/g/k/a;-><init>(Landroid/content/Context;)V
+    invoke-direct {v0, v1}, Lb/h/g/k/VKProgressDialog;-><init>(Landroid/content/Context;)V
 
     const v1, 0x7f1206b4
 
@@ -2512,12 +2512,12 @@
     .line 6
     new-instance v1, Lcom/vtosters/lite/fragments/market/GoodFragment$m;
 
-    invoke-direct {v1, p0, v0}, Lcom/vtosters/lite/fragments/market/GoodFragment$m;-><init>(Lcom/vtosters/lite/fragments/market/GoodFragment;Lb/h/g/k/a;)V
+    invoke-direct {v1, p0, v0}, Lcom/vtosters/lite/fragments/market/GoodFragment$m;-><init>(Lcom/vtosters/lite/fragments/market/GoodFragment;Lb/h/g/k/VKProgressDialog;)V
 
     .line 7
     new-instance v2, Lcom/vtosters/lite/fragments/market/GoodFragment$n;
 
-    invoke-direct {v2, p0, v0}, Lcom/vtosters/lite/fragments/market/GoodFragment$n;-><init>(Lcom/vtosters/lite/fragments/market/GoodFragment;Lb/h/g/k/a;)V
+    invoke-direct {v2, p0, v0}, Lcom/vtosters/lite/fragments/market/GoodFragment$n;-><init>(Lcom/vtosters/lite/fragments/market/GoodFragment;Lb/h/g/k/VKProgressDialog;)V
 
     .line 8
     iget-object v0, p0, Lcom/vtosters/lite/fragments/market/GoodFragment;->G0:Lcom/vtosters/lite/ui/WriteBar;
@@ -2544,7 +2544,7 @@
     const-string v1, "market_contact"
 
     .line 1
-    invoke-static {v1}, Lcom/vtosters/lite/data/n;->c(Ljava/lang/String;)Lcom/vtosters/lite/data/n$l;
+    invoke-static {v1}, Lcom/vtosters/lite/data/Analytics;->c(Ljava/lang/String;)Lcom/vtosters/lite/data/Analytics$l;
 
     move-result-object v1
 
@@ -2575,23 +2575,23 @@
     const-string v3, "item_id"
 
     .line 2
-    invoke-virtual {v1, v3, v2}, Lcom/vtosters/lite/data/n$l;->a(Ljava/lang/String;Ljava/lang/Object;)Lcom/vtosters/lite/data/n$l;
+    invoke-virtual {v1, v3, v2}, Lcom/vtosters/lite/data/Analytics$l;->a(Ljava/lang/String;Ljava/lang/Object;)Lcom/vtosters/lite/data/Analytics$l;
 
     const-string v2, "action"
 
     const-string v3, "start"
 
     .line 3
-    invoke-virtual {v1, v2, v3}, Lcom/vtosters/lite/data/n$l;->a(Ljava/lang/String;Ljava/lang/Object;)Lcom/vtosters/lite/data/n$l;
+    invoke-virtual {v1, v2, v3}, Lcom/vtosters/lite/data/Analytics$l;->a(Ljava/lang/String;Ljava/lang/Object;)Lcom/vtosters/lite/data/Analytics$l;
 
-    invoke-virtual {v1}, Lcom/vtosters/lite/data/n$l;->b()Lcom/vtosters/lite/data/n$l;
+    invoke-virtual {v1}, Lcom/vtosters/lite/data/Analytics$l;->b()Lcom/vtosters/lite/data/Analytics$l;
 
     .line 4
-    invoke-static {}, Lcom/vk/im/ui/p/c;->a()Lcom/vk/im/ui/p/b;
+    invoke-static {}, Lcom/vk/im/ui/p/ImBridge7;->a()Lcom/vk/im/ui/p/ImBridge8;
 
     move-result-object v1
 
-    invoke-interface {v1}, Lcom/vk/im/ui/p/b;->b()Lcom/vk/im/ui/p/e;
+    invoke-interface {v1}, Lcom/vk/im/ui/p/ImBridge8;->b()Lcom/vk/im/ui/p/ImBridge11;
 
     move-result-object v2
 
@@ -2625,7 +2625,7 @@
 
     move-result-object v11
 
-    sget-object v1, Lcom/vtosters/lite/ui/b0/p/i;->a:Lcom/vtosters/lite/ui/b0/p/i;
+    sget-object v1, Lcom/vtosters/lite/ui/b0/p/MarketRef;->a:Lcom/vtosters/lite/ui/b0/p/MarketRef;
 
     iget-object v5, v0, Lcom/vtosters/lite/fragments/market/GoodFragment;->U0:Lcom/vk/dto/common/Good;
 
@@ -2634,7 +2634,7 @@
     iget v5, v5, Lcom/vk/dto/common/Good;->a:I
 
     .line 9
-    invoke-virtual {v1, v6, v5}, Lcom/vtosters/lite/ui/b0/p/i;->a(II)Ljava/lang/String;
+    invoke-virtual {v1, v6, v5}, Lcom/vtosters/lite/ui/b0/p/MarketRef;->a(II)Ljava/lang/String;
 
     move-result-object v13
 
@@ -2671,7 +2671,7 @@
     const/16 v25, 0x0
 
     .line 10
-    invoke-interface/range {v2 .. v25}, Lcom/vk/im/ui/p/e;->a(Landroid/content/Context;ILcom/vk/im/engine/models/dialogs/DialogExt;Ljava/lang/String;Lcom/vk/im/ui/components/msg_list/MsgListOpenMode;ZLjava/util/List;Ljava/util/List;Ljava/util/List;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Lcom/vk/im/engine/models/conversations/BotButton;Ljava/lang/String;Ljava/lang/Boolean;Ljava/lang/Boolean;Ljava/lang/Boolean;Ljava/lang/Boolean;Ljava/lang/Class;Lkotlin/jvm/b/a;Lkotlin/jvm/b/b;)V
+    invoke-interface/range {v2 .. v25}, Lcom/vk/im/ui/p/ImBridge11;->a(Landroid/content/Context;ILcom/vk/im/engine/models/dialogs/DialogExt;Ljava/lang/String;Lcom/vk/im/ui/components/msg_list/MsgListOpenMode;ZLjava/util/List;Ljava/util/List;Ljava/util/List;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Lcom/vk/im/engine/models/conversations/BotButton;Ljava/lang/String;Ljava/lang/Boolean;Ljava/lang/Boolean;Ljava/lang/Boolean;Ljava/lang/Boolean;Ljava/lang/Class;Lkotlin/jvm/b/Functions;Lkotlin/jvm/b/Functions2;)V
 
     return-void
 .end method
@@ -2680,7 +2680,7 @@
     .locals 0
 
     .line 1
-    iget-object p0, p0, Ld/a/a/a/i;->Z:Lme/grishka/appkit/views/UsableRecyclerView;
+    iget-object p0, p0, Lme/grishka/appkit/fragments/BaseRecyclerFragment;->Z:Lme/grishka/appkit/views/UsableRecyclerView;
 
     return-object p0
 .end method
@@ -2689,7 +2689,7 @@
     .locals 0
 
     .line 1
-    iget-object p0, p0, Ld/a/a/a/i;->a0:Landroid/view/View;
+    iget-object p0, p0, Lme/grishka/appkit/fragments/BaseRecyclerFragment;->a0:Landroid/view/View;
 
     return-object p0
 .end method
@@ -2701,7 +2701,7 @@
     iput p1, p0, Lcom/vtosters/lite/fragments/market/GoodFragment;->z0:I
 
     .line 2
-    invoke-virtual {p0}, Ld/a/a/a/i;->V4()V
+    invoke-virtual {p0}, Lme/grishka/appkit/fragments/BaseRecyclerFragment;->V4()V
 
     return-void
 .end method
@@ -2715,11 +2715,11 @@
     return-object p0
 .end method
 
-.method static synthetic w(Lcom/vtosters/lite/fragments/market/GoodFragment;)Lcom/vtosters/lite/fragments/market/v;
+.method static synthetic w(Lcom/vtosters/lite/fragments/market/GoodFragment;)Lcom/vtosters/lite/fragments/market/ProductAdapter;
     .locals 0
 
     .line 1
-    iget-object p0, p0, Lcom/vtosters/lite/fragments/market/GoodFragment;->i1:Lcom/vtosters/lite/fragments/market/v;
+    iget-object p0, p0, Lcom/vtosters/lite/fragments/market/GoodFragment;->i1:Lcom/vtosters/lite/fragments/market/ProductAdapter;
 
     return-object p0
 .end method
@@ -2748,10 +2748,10 @@
         value = {
             "(",
             "Ljava/util/List<",
-            "Lcom/vtosters/lite/ui/holder/market/properties/d;",
+            "Lcom/vtosters/lite/ui/holder/market/properties/ProductPropertyItem1;",
             ">;)",
             "Ljava/util/List<",
-            "Lcom/vtosters/lite/ui/b0/j$a;",
+            "Lcom/vtosters/lite/ui/holder/RecyclerSectionAdapter$a;",
             ">;"
         }
     .end annotation
@@ -2762,7 +2762,7 @@
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
     .line 3
-    iget-boolean v1, p0, Ld/a/a/a/h;->I:Z
+    iget-boolean v1, p0, Lme/grishka/appkit/fragments/AppKitFragment;->I:Z
 
     const/16 v2, 0xb
 
@@ -2777,7 +2777,7 @@
 
     .line 4
     :goto_0
-    iget-boolean v3, p0, Ld/a/a/a/h;->I:Z
+    iget-boolean v3, p0, Lme/grishka/appkit/fragments/AppKitFragment;->I:Z
 
     const/16 v4, 0xa
 
@@ -2811,10 +2811,10 @@
 
     move-result-object v8
 
-    check-cast v8, Lcom/vtosters/lite/ui/holder/market/properties/d;
+    check-cast v8, Lcom/vtosters/lite/ui/holder/market/properties/ProductPropertyItem1;
 
     .line 6
-    invoke-virtual {v8}, Lcom/vtosters/lite/ui/holder/market/properties/d;->d()Ljava/util/List;
+    invoke-virtual {v8}, Lcom/vtosters/lite/ui/holder/market/properties/ProductPropertyItem1;->d()Ljava/util/List;
 
     move-result-object v9
 
@@ -2835,10 +2835,10 @@
 
     move-result-object v11
 
-    check-cast v11, Lcom/vtosters/lite/ui/holder/market/properties/e;
+    check-cast v11, Lcom/vtosters/lite/ui/holder/market/properties/ProductPropertyItem;
 
     .line 7
-    invoke-virtual {v11}, Lcom/vtosters/lite/ui/holder/market/properties/e;->c()Ljava/lang/String;
+    invoke-virtual {v11}, Lcom/vtosters/lite/ui/holder/market/properties/ProductPropertyItem;->c()Ljava/lang/String;
 
     move-result-object v11
 
@@ -2856,13 +2856,13 @@
     :cond_2
     sget-object v9, Lcom/vtosters/lite/ui/holder/market/properties/ProductPropertyType;->TYPE_COLOR:Lcom/vtosters/lite/ui/holder/market/properties/ProductPropertyType;
 
-    invoke-virtual {v8}, Lcom/vtosters/lite/ui/holder/market/properties/d;->c()Lcom/vtosters/lite/ui/holder/market/properties/ProductPropertyType;
+    invoke-virtual {v8}, Lcom/vtosters/lite/ui/holder/market/properties/ProductPropertyItem1;->c()Lcom/vtosters/lite/ui/holder/market/properties/ProductPropertyType;
 
     move-result-object v11
 
     if-ne v9, v11, :cond_3
 
-    invoke-virtual {v8}, Lcom/vtosters/lite/ui/holder/market/properties/d;->d()Ljava/util/List;
+    invoke-virtual {v8}, Lcom/vtosters/lite/ui/holder/market/properties/ProductPropertyItem1;->d()Ljava/util/List;
 
     move-result-object v9
 
@@ -2874,7 +2874,7 @@
 
     .line 9
     :cond_3
-    invoke-virtual {v8}, Lcom/vtosters/lite/ui/holder/market/properties/d;->d()Ljava/util/List;
+    invoke-virtual {v8}, Lcom/vtosters/lite/ui/holder/market/properties/ProductPropertyItem1;->d()Ljava/util/List;
 
     move-result-object v9
 
@@ -2892,7 +2892,7 @@
 
     .line 10
     :cond_4
-    invoke-static {v2, v8}, Lcom/vtosters/lite/ui/b0/j$a;->b(ILjava/lang/Object;)Lcom/vtosters/lite/ui/b0/j$a;
+    invoke-static {v2, v8}, Lcom/vtosters/lite/ui/holder/RecyclerSectionAdapter$a;->b(ILjava/lang/Object;)Lcom/vtosters/lite/ui/holder/RecyclerSectionAdapter$a;
 
     move-result-object v7
 
@@ -2905,7 +2905,7 @@
     .line 11
     :cond_5
     :goto_4
-    invoke-static {v4, v8}, Lcom/vtosters/lite/ui/b0/j$a;->b(ILjava/lang/Object;)Lcom/vtosters/lite/ui/b0/j$a;
+    invoke-static {v4, v8}, Lcom/vtosters/lite/ui/holder/RecyclerSectionAdapter$a;->b(ILjava/lang/Object;)Lcom/vtosters/lite/ui/holder/RecyclerSectionAdapter$a;
 
     move-result-object v8
 
@@ -2931,7 +2931,7 @@
     const/16 v1, 0xc
 
     .line 14
-    invoke-static {v1, p1}, Lcom/vtosters/lite/ui/b0/j$a;->b(ILjava/lang/Object;)Lcom/vtosters/lite/ui/b0/j$a;
+    invoke-static {v1, p1}, Lcom/vtosters/lite/ui/holder/RecyclerSectionAdapter$a;->b(ILjava/lang/Object;)Lcom/vtosters/lite/ui/holder/RecyclerSectionAdapter$a;
 
     move-result-object p1
 
@@ -2941,11 +2941,11 @@
     return-object v0
 .end method
 
-.method static synthetic z(Lcom/vtosters/lite/fragments/market/GoodFragment;)Ld/a/a/c/c;
+.method static synthetic z(Lcom/vtosters/lite/fragments/market/GoodFragment;)Lme/grishka/appkit/utils/Preloader;
     .locals 0
 
     .line 1
-    iget-object p0, p0, Ld/a/a/a/i;->f0:Ld/a/a/c/c;
+    iget-object p0, p0, Lme/grishka/appkit/fragments/BaseRecyclerFragment;->f0:Lme/grishka/appkit/utils/Preloader;
 
     return-object p0
 .end method
@@ -2956,20 +2956,20 @@
     .locals 1
 
     .line 1
-    iget-object v0, p0, Lcom/vtosters/lite/fragments/market/GoodFragment;->M0:Lcom/vk/stickers/f0/a;
+    iget-object v0, p0, Lcom/vtosters/lite/fragments/market/GoodFragment;->M0:Lcom/vk/stickers/f0/KeyboardPopup;
 
     if-eqz v0, :cond_0
 
-    invoke-virtual {v0}, Lcom/vk/stickers/f0/a;->b()Z
+    invoke-virtual {v0}, Lcom/vk/stickers/f0/KeyboardPopup;->b()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
     .line 2
-    iget-object v0, p0, Lcom/vtosters/lite/fragments/market/GoodFragment;->M0:Lcom/vk/stickers/f0/a;
+    iget-object v0, p0, Lcom/vtosters/lite/fragments/market/GoodFragment;->M0:Lcom/vk/stickers/f0/KeyboardPopup;
 
-    invoke-virtual {v0}, Lcom/vk/stickers/f0/a;->a()V
+    invoke-virtual {v0}, Lcom/vk/stickers/f0/KeyboardPopup;->a()V
 
     :cond_0
     return-void
@@ -3006,7 +3006,7 @@
     .locals 1
 
     .line 1
-    iget-object v0, p0, Lcom/vtosters/lite/fragments/market/GoodFragment;->i1:Lcom/vtosters/lite/fragments/market/v;
+    iget-object v0, p0, Lcom/vtosters/lite/fragments/market/GoodFragment;->i1:Lcom/vtosters/lite/fragments/market/ProductAdapter;
 
     return-object v0
 .end method
@@ -3020,7 +3020,7 @@
     move-result-object v0
 
     .line 56
-    invoke-super {p0, p1, p2, p3}, Lcom/vtosters/lite/fragments/f2;->a(Landroid/view/LayoutInflater;Landroid/view/ViewGroup;Landroid/os/Bundle;)Landroid/view/View;
+    invoke-super {p0, p1, p2, p3}, Lcom/vtosters/lite/general/fragments/VKRecyclerFragment;->a(Landroid/view/LayoutInflater;Landroid/view/ViewGroup;Landroid/os/Bundle;)Landroid/view/View;
 
     move-result-object p3
 
@@ -3106,7 +3106,7 @@
     const/4 v1, 0x0
 
     :goto_0
-    invoke-static {v4, v1}, Lcom/vtosters/lite/f0;->a(Landroid/view/View;Z)V
+    invoke-static {v4, v1}, Lcom/vtosters/lite/ViewUtils;->a(Landroid/view/View;Z)V
 
     :cond_1
     const v1, 0x7f0a0fe2
@@ -3119,7 +3119,7 @@
     iput-object v1, p0, Lcom/vtosters/lite/fragments/market/GoodFragment;->L0:Landroid/view/View;
 
     .line 66
-    iget-boolean v1, p0, Ld/a/a/a/h;->I:Z
+    iget-boolean v1, p0, Lme/grishka/appkit/fragments/AppKitFragment;->I:Z
 
     if-eqz v1, :cond_2
 
@@ -3156,29 +3156,29 @@
     .line 72
     iget-object v1, p0, Lcom/vtosters/lite/fragments/market/GoodFragment;->G0:Lcom/vtosters/lite/ui/WriteBar;
 
-    invoke-static {v1, v3}, Lcom/vtosters/lite/f0;->a(Landroid/view/View;Z)V
+    invoke-static {v1, v3}, Lcom/vtosters/lite/ViewUtils;->a(Landroid/view/View;Z)V
 
     .line 73
     :cond_3
-    new-instance v1, Lcom/vk/stickers/b0;
+    new-instance v1, Lcom/vk/stickers/StickersView;
 
-    iget-object v4, p0, Lcom/vtosters/lite/fragments/market/GoodFragment;->u0:Lcom/vk/stickers/b0$k;
+    iget-object v4, p0, Lcom/vtosters/lite/fragments/market/GoodFragment;->u0:Lcom/vk/stickers/StickersView$k;
 
-    invoke-direct {v1, v0, v4}, Lcom/vk/stickers/b0;-><init>(Landroid/content/Context;Lcom/vk/stickers/b0$k;)V
+    invoke-direct {v1, v0, v4}, Lcom/vk/stickers/StickersView;-><init>(Landroid/content/Context;Lcom/vk/stickers/StickersView$k;)V
 
-    iput-object v1, p0, Lcom/vtosters/lite/fragments/market/GoodFragment;->N0:Lcom/vk/stickers/b0;
+    iput-object v1, p0, Lcom/vtosters/lite/fragments/market/GoodFragment;->N0:Lcom/vk/stickers/StickersView;
 
     .line 74
-    new-instance v1, Lcom/vk/stickers/f0/a;
+    new-instance v1, Lcom/vk/stickers/f0/KeyboardPopup;
 
-    iget-object v4, p0, Lcom/vtosters/lite/fragments/market/GoodFragment;->N0:Lcom/vk/stickers/b0;
+    iget-object v4, p0, Lcom/vtosters/lite/fragments/market/GoodFragment;->N0:Lcom/vk/stickers/StickersView;
 
-    invoke-direct {v1, v0, p2, v4}, Lcom/vk/stickers/f0/a;-><init>(Landroid/app/Activity;Landroid/view/View;Landroid/view/View;)V
+    invoke-direct {v1, v0, p2, v4}, Lcom/vk/stickers/f0/KeyboardPopup;-><init>(Landroid/app/Activity;Landroid/view/View;Landroid/view/View;)V
 
-    iput-object v1, p0, Lcom/vtosters/lite/fragments/market/GoodFragment;->M0:Lcom/vk/stickers/f0/a;
+    iput-object v1, p0, Lcom/vtosters/lite/fragments/market/GoodFragment;->M0:Lcom/vk/stickers/f0/KeyboardPopup;
 
     .line 75
-    iget-object p2, p0, Lcom/vtosters/lite/fragments/market/GoodFragment;->M0:Lcom/vk/stickers/f0/a;
+    iget-object p2, p0, Lcom/vtosters/lite/fragments/market/GoodFragment;->M0:Lcom/vk/stickers/f0/KeyboardPopup;
 
     iget-object v1, p0, Lcom/vtosters/lite/fragments/market/GoodFragment;->G0:Lcom/vtosters/lite/ui/WriteBar;
 
@@ -3186,21 +3186,21 @@
 
     move-result-object v1
 
-    invoke-virtual {p2, v1}, Lcom/vk/stickers/f0/a;->a(Landroid/view/View;)V
+    invoke-virtual {p2, v1}, Lcom/vk/stickers/f0/KeyboardPopup;->a(Landroid/view/View;)V
 
     .line 76
-    iget-object p2, p0, Lcom/vtosters/lite/fragments/market/GoodFragment;->M0:Lcom/vk/stickers/f0/a;
+    iget-object p2, p0, Lcom/vtosters/lite/fragments/market/GoodFragment;->M0:Lcom/vk/stickers/f0/KeyboardPopup;
 
     iget-object v1, p0, Lcom/vtosters/lite/fragments/market/GoodFragment;->G0:Lcom/vtosters/lite/ui/WriteBar;
 
-    invoke-virtual {p2, v1}, Lcom/vk/stickers/f0/a;->a(Lcom/vk/stickers/f0/a$l;)V
+    invoke-virtual {p2, v1}, Lcom/vk/stickers/f0/KeyboardPopup;->a(Lcom/vk/stickers/f0/KeyboardPopup$l;)V
 
     .line 77
     iget-object p2, p0, Lcom/vtosters/lite/fragments/market/GoodFragment;->G0:Lcom/vtosters/lite/ui/WriteBar;
 
-    iget-object v1, p0, Lcom/vtosters/lite/fragments/market/GoodFragment;->u0:Lcom/vk/stickers/b0$k;
+    iget-object v1, p0, Lcom/vtosters/lite/fragments/market/GoodFragment;->u0:Lcom/vk/stickers/StickersView$k;
 
-    invoke-virtual {p2, v1}, Lcom/vtosters/lite/ui/WriteBar;->setAutoSuggestPopupListener(Lcom/vk/stickers/b0$k;)V
+    invoke-virtual {p2, v1}, Lcom/vtosters/lite/ui/WriteBar;->setAutoSuggestPopupListener(Lcom/vk/stickers/StickersView$k;)V
 
     .line 78
     iget-object p2, p0, Lcom/vtosters/lite/fragments/market/GoodFragment;->G0:Lcom/vtosters/lite/ui/WriteBar;
@@ -3236,36 +3236,36 @@
     invoke-virtual {p2, v1}, Landroid/view/View;->setOnLongClickListener(Landroid/view/View$OnLongClickListener;)V
 
     .line 81
-    new-instance p2, Lcom/vk/mentions/n;
+    new-instance p2, Lcom/vk/mentions/MentionsEditTextHelper;
 
     iget-object v1, p0, Lcom/vtosters/lite/fragments/market/GoodFragment;->H0:Landroid/widget/EditText;
 
-    new-instance v4, Lcom/vk/mentions/w/a;
+    new-instance v4, Lcom/vk/mentions/w/DefaultMentionSpanProvider;
 
-    invoke-direct {v4, v0}, Lcom/vk/mentions/w/a;-><init>(Landroid/content/Context;)V
+    invoke-direct {v4, v0}, Lcom/vk/mentions/w/DefaultMentionSpanProvider;-><init>(Landroid/content/Context;)V
 
-    invoke-direct {p2, v1, p0, v4}, Lcom/vk/mentions/n;-><init>(Landroid/widget/EditText;Lcom/vk/mentions/m;Lcom/vk/mentions/l;)V
+    invoke-direct {p2, v1, p0, v4}, Lcom/vk/mentions/MentionsEditTextHelper;-><init>(Landroid/widget/EditText;Lcom/vk/mentions/MentionSuggestViewer;Lcom/vk/mentions/MentionUtils1;)V
 
-    iput-object p2, p0, Lcom/vtosters/lite/fragments/market/GoodFragment;->x0:Lcom/vk/mentions/n;
+    iput-object p2, p0, Lcom/vtosters/lite/fragments/market/GoodFragment;->x0:Lcom/vk/mentions/MentionsEditTextHelper;
 
     .line 82
-    iget-object p2, p0, Lcom/vtosters/lite/fragments/market/GoodFragment;->x0:Lcom/vk/mentions/n;
+    iget-object p2, p0, Lcom/vtosters/lite/fragments/market/GoodFragment;->x0:Lcom/vk/mentions/MentionsEditTextHelper;
 
-    invoke-virtual {p2, v2}, Lcom/vk/mentions/n;->a(Z)V
+    invoke-virtual {p2, v2}, Lcom/vk/mentions/MentionsEditTextHelper;->a(Z)V
 
     .line 83
-    iget-object p2, p0, Lcom/vtosters/lite/fragments/market/GoodFragment;->x0:Lcom/vk/mentions/n;
+    iget-object p2, p0, Lcom/vtosters/lite/fragments/market/GoodFragment;->x0:Lcom/vk/mentions/MentionsEditTextHelper;
 
-    new-instance v1, Lcom/vk/mentions/s;
+    new-instance v1, Lcom/vk/mentions/MentionFormatter3;
 
-    invoke-direct {v1}, Lcom/vk/mentions/s;-><init>()V
+    invoke-direct {v1}, Lcom/vk/mentions/MentionFormatter3;-><init>()V
 
-    invoke-virtual {p2, v1}, Lcom/vk/mentions/n;->a(Lcom/vk/mentions/g;)V
+    invoke-virtual {p2, v1}, Lcom/vk/mentions/MentionsEditTextHelper;->a(Lcom/vk/mentions/MentionFormatter;)V
 
     .line 84
     iget-object p2, p0, Lcom/vtosters/lite/fragments/market/GoodFragment;->H0:Landroid/widget/EditText;
 
-    iget-object v1, p0, Lcom/vtosters/lite/fragments/market/GoodFragment;->x0:Lcom/vk/mentions/n;
+    iget-object v1, p0, Lcom/vtosters/lite/fragments/market/GoodFragment;->x0:Lcom/vk/mentions/MentionsEditTextHelper;
 
     invoke-virtual {p2, v1}, Landroid/widget/EditText;->addTextChangedListener(Landroid/text/TextWatcher;)V
 
@@ -3277,11 +3277,11 @@
     .line 86
     iget-object p2, p0, Lcom/vtosters/lite/fragments/market/GoodFragment;->G0:Lcom/vtosters/lite/ui/WriteBar;
 
-    invoke-static {p0}, Lcom/vk/navigation/b;->a(Lcom/vk/core/fragments/FragmentImpl;)Lcom/vk/navigation/a;
+    invoke-static {p0}, Lcom/vk/navigation/ActivityLauncher1;->a(Lcom/vk/core/fragments/FragmentImpl;)Lcom/vk/navigation/ActivityLauncher;
 
     move-result-object v1
 
-    invoke-virtual {p2, v1}, Lcom/vtosters/lite/ui/WriteBar;->setFragment(Lcom/vk/navigation/a;)V
+    invoke-virtual {p2, v1}, Lcom/vtosters/lite/ui/WriteBar;->setFragment(Lcom/vk/navigation/ActivityLauncher;)V
 
     .line 87
     iget-object p2, p0, Lcom/vtosters/lite/fragments/market/GoodFragment;->G0:Lcom/vtosters/lite/ui/WriteBar;
@@ -3319,7 +3319,7 @@
     invoke-virtual {p1, p2}, Lcom/vtosters/lite/ui/WriteBar;->a(Landroid/view/View;)V
 
     .line 92
-    new-instance p1, Lcom/vtosters/lite/ui/z/a;
+    new-instance p1, Lcom/vtosters/lite/ui/z/ReplyBarController;
 
     iget-object v5, p0, Lcom/vtosters/lite/fragments/market/GoodFragment;->J0:Landroid/view/View;
 
@@ -3333,59 +3333,59 @@
 
     move-object v4, p1
 
-    invoke-direct/range {v4 .. v9}, Lcom/vtosters/lite/ui/z/a;-><init>(Landroid/view/View;IZZLcom/vtosters/lite/ui/z/a$h;)V
+    invoke-direct/range {v4 .. v9}, Lcom/vtosters/lite/ui/z/ReplyBarController;-><init>(Landroid/view/View;IZZLcom/vtosters/lite/ui/z/ReplyBarController$h;)V
 
-    iput-object p1, p0, Lcom/vtosters/lite/fragments/market/GoodFragment;->v0:Lcom/vtosters/lite/ui/z/a;
+    iput-object p1, p0, Lcom/vtosters/lite/fragments/market/GoodFragment;->v0:Lcom/vtosters/lite/ui/z/ReplyBarController;
 
     .line 93
-    new-instance p1, Lcom/vk/stickers/e;
+    new-instance p1, Lcom/vk/stickers/PauseAnimationScrollListener;
 
-    invoke-direct {p1}, Lcom/vk/stickers/e;-><init>()V
+    invoke-direct {p1}, Lcom/vk/stickers/PauseAnimationScrollListener;-><init>()V
 
-    iput-object p1, p0, Lcom/vtosters/lite/fragments/market/GoodFragment;->Y0:Lcom/vk/stickers/e;
+    iput-object p1, p0, Lcom/vtosters/lite/fragments/market/GoodFragment;->Y0:Lcom/vk/stickers/PauseAnimationScrollListener;
 
     .line 94
-    iget-object p1, p0, Ld/a/a/a/i;->Z:Lme/grishka/appkit/views/UsableRecyclerView;
+    iget-object p1, p0, Lme/grishka/appkit/fragments/BaseRecyclerFragment;->Z:Lme/grishka/appkit/views/UsableRecyclerView;
 
-    iget-object p2, p0, Lcom/vtosters/lite/fragments/market/GoodFragment;->Y0:Lcom/vk/stickers/e;
+    iget-object p2, p0, Lcom/vtosters/lite/fragments/market/GoodFragment;->Y0:Lcom/vk/stickers/PauseAnimationScrollListener;
 
     invoke-virtual {p1, p2}, Lme/grishka/appkit/views/UsableRecyclerView;->a(Landroid/widget/AbsListView$OnScrollListener;)V
 
     return-object p3
 .end method
 
-.method protected a(Lcom/vk/core/ui/n;)Landroidx/recyclerview/widget/RecyclerView$ItemDecoration;
+.method protected a(Lcom/vk/core/ui/MilkshakeProvider;)Landroidx/recyclerview/widget/RecyclerView$ItemDecoration;
     .locals 2
 
     .line 51
-    invoke-super {p0, p1}, Lcom/vtosters/lite/fragments/z0;->a(Lcom/vk/core/ui/n;)Landroidx/recyclerview/widget/RecyclerView$ItemDecoration;
+    invoke-super {p0, p1}, Lcom/vtosters/lite/general/fragments/CardRecyclerFragment;->a(Lcom/vk/core/ui/MilkshakeProvider;)Landroidx/recyclerview/widget/RecyclerView$ItemDecoration;
 
     move-result-object p1
 
     .line 52
-    instance-of v0, p1, Lcom/vk/core/ui/m;
+    instance-of v0, p1, Lcom/vk/core/ui/MilkshakeDecoration;
 
     if-eqz v0, :cond_0
 
     .line 53
     move-object v0, p1
 
-    check-cast v0, Lcom/vk/core/ui/m;
+    check-cast v0, Lcom/vk/core/ui/MilkshakeDecoration;
 
     .line 54
-    iget-object v1, p0, Lcom/vtosters/lite/fragments/market/GoodFragment;->i1:Lcom/vtosters/lite/fragments/market/v;
+    iget-object v1, p0, Lcom/vtosters/lite/fragments/market/GoodFragment;->i1:Lcom/vtosters/lite/fragments/market/ProductAdapter;
 
-    invoke-virtual {v0, v1}, Lcom/vk/core/ui/m;->a(Lcom/vk/core/ui/n;)Lcom/vk/core/ui/m;
+    invoke-virtual {v0, v1}, Lcom/vk/core/ui/MilkshakeDecoration;->a(Lcom/vk/core/ui/MilkshakeProvider;)Lcom/vk/core/ui/MilkshakeDecoration;
 
     :cond_0
     return-object p1
 .end method
 
-.method public synthetic a(Ljava/lang/Boolean;Lb/h/h/f/a;)Lkotlin/m;
+.method public synthetic a(Ljava/lang/Boolean;Lb/h/h/f/Favable;)Lkotlin/Unit;
     .locals 1
 
     .line 304
-    iget-object v0, p0, Lcom/vtosters/lite/fragments/market/GoodFragment;->i1:Lcom/vtosters/lite/fragments/market/v;
+    iget-object v0, p0, Lcom/vtosters/lite/fragments/market/GoodFragment;->i1:Lcom/vtosters/lite/fragments/market/ProductAdapter;
 
     if-eqz v0, :cond_0
 
@@ -3394,18 +3394,18 @@
 
     move-result p1
 
-    invoke-interface {p2, p1}, Lb/h/h/f/a;->h(Z)V
+    invoke-interface {p2, p1}, Lb/h/h/f/Favable;->h(Z)V
 
     .line 306
-    iget-object p1, p0, Lcom/vtosters/lite/fragments/market/GoodFragment;->i1:Lcom/vtosters/lite/fragments/market/v;
+    iget-object p1, p0, Lcom/vtosters/lite/fragments/market/GoodFragment;->i1:Lcom/vtosters/lite/fragments/market/ProductAdapter;
 
     const/4 v0, 0x1
 
-    invoke-static {v0, p2}, Lcom/vtosters/lite/ui/b0/j$a;->b(ILjava/lang/Object;)Lcom/vtosters/lite/ui/b0/j$a;
+    invoke-static {v0, p2}, Lcom/vtosters/lite/ui/holder/RecyclerSectionAdapter$a;->b(ILjava/lang/Object;)Lcom/vtosters/lite/ui/holder/RecyclerSectionAdapter$a;
 
     move-result-object p2
 
-    invoke-virtual {p1, p2}, Lcom/vtosters/lite/fragments/market/v;->a(Lcom/vtosters/lite/ui/b0/j$a;)V
+    invoke-virtual {p1, p2}, Lcom/vtosters/lite/fragments/market/ProductAdapter;->a(Lcom/vtosters/lite/ui/holder/RecyclerSectionAdapter$a;)V
 
     :cond_0
     const/4 p1, 0x0
@@ -3413,22 +3413,22 @@
     return-object p1
 .end method
 
-.method public synthetic a(ZLb/h/h/f/a;)Lkotlin/m;
+.method public synthetic a(ZLb/h/h/f/Favable;)Lkotlin/Unit;
     .locals 1
 
     .line 307
-    invoke-interface {p2, p1}, Lb/h/h/f/a;->h(Z)V
+    invoke-interface {p2, p1}, Lb/h/h/f/Favable;->h(Z)V
 
     .line 308
-    iget-object p1, p0, Lcom/vtosters/lite/fragments/market/GoodFragment;->i1:Lcom/vtosters/lite/fragments/market/v;
+    iget-object p1, p0, Lcom/vtosters/lite/fragments/market/GoodFragment;->i1:Lcom/vtosters/lite/fragments/market/ProductAdapter;
 
     const/4 v0, 0x1
 
-    invoke-static {v0, p2}, Lcom/vtosters/lite/ui/b0/j$a;->b(ILjava/lang/Object;)Lcom/vtosters/lite/ui/b0/j$a;
+    invoke-static {v0, p2}, Lcom/vtosters/lite/ui/holder/RecyclerSectionAdapter$a;->b(ILjava/lang/Object;)Lcom/vtosters/lite/ui/holder/RecyclerSectionAdapter$a;
 
     move-result-object p2
 
-    invoke-virtual {p1, p2}, Lcom/vtosters/lite/fragments/market/v;->a(Lcom/vtosters/lite/ui/b0/j$a;)V
+    invoke-virtual {p1, p2}, Lcom/vtosters/lite/fragments/market/ProductAdapter;->a(Lcom/vtosters/lite/ui/holder/RecyclerSectionAdapter$a;)V
 
     const/4 p1, 0x0
 
@@ -3439,7 +3439,7 @@
     .locals 0
 
     .line 155
-    iget-object p1, p0, Ld/a/a/a/i;->Z:Lme/grishka/appkit/views/UsableRecyclerView;
+    iget-object p1, p0, Lme/grishka/appkit/fragments/BaseRecyclerFragment;->Z:Lme/grishka/appkit/views/UsableRecyclerView;
 
     sub-int/2addr p5, p3
 
@@ -3456,7 +3456,7 @@
     return-void
 .end method
 
-.method public synthetic a(Lb/h/o/a/a;)V
+.method public synthetic a(Lb/h/o/a/MarketEvents;)V
     .locals 4
     .annotation system Ldalvik/annotation/Throws;
         value = {
@@ -3465,7 +3465,7 @@
     .end annotation
 
     .line 14
-    invoke-virtual {p1}, Lb/h/o/a/a;->a()I
+    invoke-virtual {p1}, Lb/h/o/a/MarketEvents;->a()I
 
     move-result v0
 
@@ -3479,14 +3479,14 @@
 
     .line 15
     :cond_0
-    instance-of v0, p1, Lb/h/o/a/b;
+    instance-of v0, p1, Lb/h/o/a/MarketEvents2;
 
     if-eqz v0, :cond_2
 
     .line 16
-    check-cast p1, Lb/h/o/a/b;
+    check-cast p1, Lb/h/o/a/MarketEvents2;
 
-    invoke-virtual {p1}, Lb/h/o/a/b;->b()Lcom/vk/dto/common/Good;
+    invoke-virtual {p1}, Lb/h/o/a/MarketEvents2;->b()Lcom/vk/dto/common/Good;
 
     move-result-object p1
 
@@ -3532,16 +3532,16 @@
 
     .line 22
     :cond_2
-    instance-of v0, p1, Lb/h/o/a/d;
+    instance-of v0, p1, Lb/h/o/a/MarketEvents4;
 
     const/4 v1, 0x0
 
     if-eqz v0, :cond_3
 
     .line 23
-    check-cast p1, Lb/h/o/a/d;
+    check-cast p1, Lb/h/o/a/MarketEvents4;
 
-    invoke-virtual {p1}, Lb/h/o/a/d;->b()Lcom/vk/dto/common/Good;
+    invoke-virtual {p1}, Lb/h/o/a/MarketEvents4;->b()Lcom/vk/dto/common/Good;
 
     move-result-object p1
 
@@ -3575,19 +3575,19 @@
 
     .line 28
     :cond_3
-    instance-of v0, p1, Lb/h/o/a/e;
+    instance-of v0, p1, Lb/h/o/a/MarketEvents3;
 
     if-eqz v0, :cond_6
 
     .line 29
-    check-cast p1, Lb/h/o/a/e;
+    check-cast p1, Lb/h/o/a/MarketEvents3;
 
-    invoke-virtual {p1}, Lb/h/o/a/e;->c()Lcom/vk/dto/common/Good;
+    invoke-virtual {p1}, Lb/h/o/a/MarketEvents3;->c()Lcom/vk/dto/common/Good;
 
     move-result-object v0
 
     .line 30
-    invoke-virtual {p1}, Lb/h/o/a/e;->b()Lcom/vk/dto/common/Good;
+    invoke-virtual {p1}, Lb/h/o/a/MarketEvents3;->b()Lcom/vk/dto/common/Good;
 
     move-result-object p1
 
@@ -3636,19 +3636,19 @@
 
     .line 36
     :cond_6
-    instance-of v0, p1, Lb/h/o/a/c;
+    instance-of v0, p1, Lb/h/o/a/MarketEvents1;
 
     if-eqz v0, :cond_9
 
     .line 37
-    check-cast p1, Lb/h/o/a/c;
+    check-cast p1, Lb/h/o/a/MarketEvents1;
 
-    invoke-virtual {p1}, Lb/h/o/a/c;->c()Lcom/vk/dto/common/Good;
+    invoke-virtual {p1}, Lb/h/o/a/MarketEvents1;->c()Lcom/vk/dto/common/Good;
 
     move-result-object v0
 
     .line 38
-    invoke-virtual {p1}, Lb/h/o/a/c;->b()Lcom/vk/dto/common/Good;
+    invoke-virtual {p1}, Lb/h/o/a/MarketEvents1;->b()Lcom/vk/dto/common/Good;
 
     move-result-object p1
 
@@ -3713,7 +3713,7 @@
 
     .line 46
     :cond_9
-    instance-of p1, p1, Lb/h/o/a/f;
+    instance-of p1, p1, Lb/h/o/a/MarketEvents5;
 
     if-eqz p1, :cond_a
 
@@ -3849,14 +3849,14 @@
     if-nez v2, :cond_5
 
     .line 132
-    iget-object p1, p0, Lcom/vtosters/lite/fragments/market/GoodFragment;->v0:Lcom/vtosters/lite/ui/z/a;
+    iget-object p1, p0, Lcom/vtosters/lite/fragments/market/GoodFragment;->v0:Lcom/vtosters/lite/ui/z/ReplyBarController;
 
     if-eqz p1, :cond_3
 
     .line 133
     iget-object v0, p0, Lcom/vtosters/lite/fragments/market/GoodFragment;->R0:Ljava/lang/String;
 
-    invoke-virtual {p1, v0}, Lcom/vtosters/lite/ui/z/a;->b(Ljava/lang/String;)V
+    invoke-virtual {p1, v0}, Lcom/vtosters/lite/ui/z/ReplyBarController;->b(Ljava/lang/String;)V
 
     if-eqz p2, :cond_3
 
@@ -3881,11 +3881,11 @@
     iput p2, p0, Lcom/vtosters/lite/fragments/market/GoodFragment;->w0:I
 
     .line 136
-    iget-object p2, p0, Lcom/vtosters/lite/fragments/market/GoodFragment;->v0:Lcom/vtosters/lite/ui/z/a;
+    iget-object p2, p0, Lcom/vtosters/lite/fragments/market/GoodFragment;->v0:Lcom/vtosters/lite/ui/z/ReplyBarController;
 
     iget-object p1, p1, Lcom/vk/dto/group/Group;->c:Ljava/lang/String;
 
-    invoke-virtual {p2, p1}, Lcom/vtosters/lite/ui/z/a;->a(Ljava/lang/String;)V
+    invoke-virtual {p2, p1}, Lcom/vtosters/lite/ui/z/ReplyBarController;->a(Ljava/lang/String;)V
 
     .line 137
     :cond_3
@@ -3931,21 +3931,21 @@
     .line 140
     iget-object p1, p0, Lcom/vtosters/lite/fragments/market/GoodFragment;->H0:Landroid/widget/EditText;
 
-    invoke-static {p1}, Lcom/vk/core/util/l0;->b(Landroid/view/View;)V
+    invoke-static {p1}, Lcom/vk/core/util/KeyboardUtils;->b(Landroid/view/View;)V
 
     :cond_5
     return-void
 .end method
 
-.method public a(Lcom/vk/core/ui/v/g;)V
+.method public a(Lcom/vk/core/ui/v/UiTrackingScreen;)V
     .locals 5
-    .param p1    # Lcom/vk/core/ui/v/g;
+    .param p1    # Lcom/vk/core/ui/v/UiTrackingScreen;
         .annotation build Landroidx/annotation/NonNull;
         .end annotation
     .end param
 
     .line 204
-    invoke-super {p0, p1}, Lcom/vk/core/fragments/FragmentImpl;->a(Lcom/vk/core/ui/v/g;)V
+    invoke-super {p0, p1}, Lcom/vk/core/fragments/FragmentImpl;->a(Lcom/vk/core/ui/v/UiTrackingScreen;)V
 
     .line 205
     new-instance v0, Lcom/vk/stat/scheme/SchemeStat$EventItem;
@@ -3968,12 +3968,12 @@
 
     invoke-direct {v0, v1, v2, v3, v4}, Lcom/vk/stat/scheme/SchemeStat$EventItem;-><init>(Lcom/vk/stat/scheme/SchemeStat$EventItem$Type;Ljava/lang/Integer;Ljava/lang/Integer;Ljava/lang/String;)V
 
-    invoke-virtual {p1, v0}, Lcom/vk/core/ui/v/g;->a(Lcom/vk/stat/scheme/SchemeStat$EventItem;)V
+    invoke-virtual {p1, v0}, Lcom/vk/core/ui/v/UiTrackingScreen;->a(Lcom/vk/stat/scheme/SchemeStat$EventItem;)V
 
     return-void
 .end method
 
-.method public synthetic a(Lcom/vk/dto/common/Good;Lcom/vtosters/lite/ui/b0/j$a;Ljava/lang/CharSequence;Landroid/view/View;)V
+.method public synthetic a(Lcom/vk/dto/common/Good;Lcom/vtosters/lite/ui/holder/RecyclerSectionAdapter$a;Ljava/lang/CharSequence;Landroid/view/View;)V
     .locals 1
     .param p1    # Lcom/vk/dto/common/Good;
         .annotation build Landroidx/annotation/NonNull;
@@ -3984,24 +3984,24 @@
     invoke-direct {p0, p1}, Lcom/vtosters/lite/fragments/market/GoodFragment;->f(Lcom/vk/dto/common/Good;)V
 
     .line 294
-    iget-object p4, p0, Lcom/vtosters/lite/fragments/market/GoodFragment;->i1:Lcom/vtosters/lite/fragments/market/v;
+    iget-object p4, p0, Lcom/vtosters/lite/fragments/market/GoodFragment;->i1:Lcom/vtosters/lite/fragments/market/ProductAdapter;
 
-    new-instance v0, Lcom/vtosters/lite/ui/c0/c;
+    new-instance v0, Lcom/vtosters/lite/ui/c0/DesriptionItem;
 
-    invoke-direct {v0, p3, p1}, Lcom/vtosters/lite/ui/c0/c;-><init>(Ljava/lang/CharSequence;Lcom/vk/dto/common/Good;)V
+    invoke-direct {v0, p3, p1}, Lcom/vtosters/lite/ui/c0/DesriptionItem;-><init>(Ljava/lang/CharSequence;Lcom/vk/dto/common/Good;)V
 
     const/4 p1, 0x2
 
-    invoke-static {p1, v0}, Lcom/vtosters/lite/ui/b0/j$a;->b(ILjava/lang/Object;)Lcom/vtosters/lite/ui/b0/j$a;
+    invoke-static {p1, v0}, Lcom/vtosters/lite/ui/holder/RecyclerSectionAdapter$a;->b(ILjava/lang/Object;)Lcom/vtosters/lite/ui/holder/RecyclerSectionAdapter$a;
 
     move-result-object p1
 
-    invoke-virtual {p4, p2, p1}, Lcom/vtosters/lite/ui/b0/j;->a(Lcom/vtosters/lite/ui/b0/j$a;Lcom/vtosters/lite/ui/b0/j$a;)V
+    invoke-virtual {p4, p2, p1}, Lcom/vtosters/lite/ui/holder/RecyclerSectionAdapter;->a(Lcom/vtosters/lite/ui/holder/RecyclerSectionAdapter$a;Lcom/vtosters/lite/ui/holder/RecyclerSectionAdapter$a;)V
 
     return-void
 .end method
 
-.method public a(Lcom/vtosters/lite/q;Lcom/vtosters/lite/ui/b0/m/c;)V
+.method public a(Lcom/vtosters/lite/Comment;Lcom/vtosters/lite/ui/holder/comment/BaseCommentViewHolder;)V
     .locals 1
 
     .line 113
@@ -4009,48 +4009,48 @@
 
     move-result p2
 
-    invoke-static {p1, p2}, Lcom/vtosters/lite/api/wall/h;->a(Lcom/vtosters/lite/q;I)Lcom/vtosters/lite/api/wall/h;
+    invoke-static {p1, p2}, Lcom/vtosters/lite/api/wall/WallLike;->a(Lcom/vtosters/lite/Comment;I)Lcom/vtosters/lite/api/wall/WallLike;
 
     move-result-object p2
 
     new-instance v0, Lcom/vtosters/lite/fragments/market/GoodFragment$o;
 
-    invoke-direct {v0, p0, p1}, Lcom/vtosters/lite/fragments/market/GoodFragment$o;-><init>(Lcom/vtosters/lite/fragments/market/GoodFragment;Lcom/vtosters/lite/q;)V
+    invoke-direct {v0, p0, p1}, Lcom/vtosters/lite/fragments/market/GoodFragment$o;-><init>(Lcom/vtosters/lite/fragments/market/GoodFragment;Lcom/vtosters/lite/Comment;)V
 
-    invoke-virtual {p2, v0}, Lcom/vk/api/base/d;->a(Lcom/vk/api/base/a;)Lcom/vk/api/base/b;
+    invoke-virtual {p2, v0}, Lcom/vk/api/base/ApiRequest;->a(Lcom/vk/api/base/ApiCallback;)Lcom/vk/api/base/ApiCallbackDisposable;
 
     move-result-object p1
 
     .line 114
-    invoke-virtual {p1}, Lcom/vk/api/base/b;->a()Lio/reactivex/disposables/b;
+    invoke-virtual {p1}, Lcom/vk/api/base/ApiCallbackDisposable;->a()Lio/reactivex/disposables/Disposable;
 
     return-void
 .end method
 
-.method public a(Lcom/vtosters/lite/ui/holder/market/properties/e;Lcom/vtosters/lite/ui/holder/market/properties/e;)V
+.method public a(Lcom/vtosters/lite/ui/holder/market/properties/ProductPropertyItem;Lcom/vtosters/lite/ui/holder/market/properties/ProductPropertyItem;)V
     .locals 3
-    .param p1    # Lcom/vtosters/lite/ui/holder/market/properties/e;
+    .param p1    # Lcom/vtosters/lite/ui/holder/market/properties/ProductPropertyItem;
         .annotation build Landroidx/annotation/NonNull;
         .end annotation
     .end param
-    .param p2    # Lcom/vtosters/lite/ui/holder/market/properties/e;
+    .param p2    # Lcom/vtosters/lite/ui/holder/market/properties/ProductPropertyItem;
         .annotation build Landroidx/annotation/Nullable;
         .end annotation
     .end param
 
     .line 10
-    iget-object v0, p0, Lcom/vtosters/lite/fragments/market/GoodFragment;->B0:Lcom/vtosters/lite/fragments/market/r;
+    iget-object v0, p0, Lcom/vtosters/lite/fragments/market/GoodFragment;->B0:Lcom/vtosters/lite/fragments/market/GoodFragmentClickStatHelper;
 
     iget-object v1, p0, Lcom/vtosters/lite/fragments/market/GoodFragment;->U0:Lcom/vk/dto/common/Good;
 
-    invoke-virtual {p1}, Lcom/vtosters/lite/ui/holder/market/properties/e;->a()I
+    invoke-virtual {p1}, Lcom/vtosters/lite/ui/holder/market/properties/ProductPropertyItem;->a()I
 
     move-result v2
 
-    invoke-virtual {v0, v1, v2}, Lcom/vtosters/lite/fragments/market/r;->a(Lcom/vk/dto/common/Good;I)V
+    invoke-virtual {v0, v1, v2}, Lcom/vtosters/lite/fragments/market/GoodFragmentClickStatHelper;->a(Lcom/vk/dto/common/Good;I)V
 
     .line 11
-    invoke-virtual {p1}, Lcom/vtosters/lite/ui/holder/market/properties/e;->b()Ljava/lang/Integer;
+    invoke-virtual {p1}, Lcom/vtosters/lite/ui/holder/market/properties/ProductPropertyItem;->b()Ljava/lang/Integer;
 
     move-result-object p1
 
@@ -4062,7 +4062,7 @@
     if-eqz p2, :cond_1
 
     .line 12
-    invoke-virtual {p2}, Lcom/vtosters/lite/ui/holder/market/properties/e;->b()Ljava/lang/Integer;
+    invoke-virtual {p2}, Lcom/vtosters/lite/ui/holder/market/properties/ProductPropertyItem;->b()Ljava/lang/Integer;
 
     move-result-object p2
 
@@ -4098,14 +4098,14 @@
     .locals 1
 
     .line 141
-    iget-object v0, p0, Lcom/vtosters/lite/fragments/market/GoodFragment;->Y0:Lcom/vk/stickers/e;
+    iget-object v0, p0, Lcom/vtosters/lite/fragments/market/GoodFragment;->Y0:Lcom/vk/stickers/PauseAnimationScrollListener;
 
-    invoke-virtual {v0, p1, p2}, Lcom/vk/stickers/e;->a(Ljava/lang/String;Lcom/vk/stickers/views/animation/VKAnimationView;)V
+    invoke-virtual {v0, p1, p2}, Lcom/vk/stickers/PauseAnimationScrollListener;->a(Ljava/lang/String;Lcom/vk/stickers/views/animation/VKAnimationView;)V
 
     return-void
 .end method
 
-.method public synthetic a(Ljava/util/List;Lcom/vtosters/lite/q;Landroid/content/Context;Landroid/content/DialogInterface;I)V
+.method public synthetic a(Ljava/util/List;Lcom/vtosters/lite/Comment;Landroid/content/Context;Landroid/content/DialogInterface;I)V
     .locals 0
 
     .line 115
@@ -4141,19 +4141,19 @@
 
     .line 116
     :cond_0
-    invoke-virtual {p0, p2}, Lcom/vtosters/lite/fragments/market/GoodFragment;->g(Lcom/vtosters/lite/q;)V
+    invoke-virtual {p0, p2}, Lcom/vtosters/lite/fragments/market/GoodFragment;->g(Lcom/vtosters/lite/Comment;)V
 
     goto :goto_0
 
     .line 117
     :cond_1
-    invoke-virtual {p0, p2}, Lcom/vtosters/lite/fragments/market/GoodFragment;->f(Lcom/vtosters/lite/q;)V
+    invoke-virtual {p0, p2}, Lcom/vtosters/lite/fragments/market/GoodFragment;->f(Lcom/vtosters/lite/Comment;)V
 
     goto :goto_0
 
     .line 118
     :cond_2
-    invoke-virtual {p0, p2}, Lcom/vtosters/lite/fragments/market/GoodFragment;->c(Lcom/vtosters/lite/q;)V
+    invoke-virtual {p0, p2}, Lcom/vtosters/lite/fragments/market/GoodFragment;->c(Lcom/vtosters/lite/Comment;)V
 
     goto :goto_0
 
@@ -4167,22 +4167,22 @@
 
     .line 120
     :cond_4
-    invoke-interface {p2}, Lcom/vtosters/lite/q;->getText()Ljava/lang/String;
+    invoke-interface {p2}, Lcom/vtosters/lite/Comment;->getText()Ljava/lang/String;
 
     move-result-object p1
 
-    invoke-static {p3, p1}, Lcom/vk/im/ui/utils/b;->a(Landroid/content/Context;Ljava/lang/CharSequence;)V
+    invoke-static {p3, p1}, Lcom/vk/im/ui/utils/ClipboardUtils;->a(Landroid/content/Context;Ljava/lang/CharSequence;)V
 
     const p1, 0x7f120fce
 
     .line 121
-    invoke-static {p1}, Lcom/vk/core/util/k1;->a(I)V
+    invoke-static {p1}, Lcom/vk/core/util/ToastUtils;->a(I)V
 
     :goto_0
     return-void
 .end method
 
-.method public synthetic a(ZILcom/vk/api/market/k$b;)V
+.method public synthetic a(ZILcom/vk/api/market/MarketGoodGetFullPage$b;)V
     .locals 10
     .annotation system Ldalvik/annotation/Throws;
         value = {
@@ -4191,7 +4191,7 @@
     .end annotation
 
     .line 206
-    iget-object v0, p3, Lcom/vk/api/market/k$b;->a:Lcom/vk/dto/common/Good;
+    iget-object v0, p3, Lcom/vk/api/market/MarketGoodGetFullPage$b;->a:Lcom/vk/dto/common/Good;
 
     if-nez v0, :cond_0
 
@@ -4225,7 +4225,7 @@
 
     .line 211
     :cond_2
-    iget-object p1, p3, Lcom/vk/api/market/k$b;->j:Lcom/vk/dto/common/data/VKList;
+    iget-object p1, p3, Lcom/vk/api/market/MarketGoodGetFullPage$b;->j:Lcom/vk/dto/common/data/VKList;
 
     if-eqz p1, :cond_3
 
@@ -4236,22 +4236,22 @@
 
     .line 213
     :cond_3
-    iget-boolean p1, p3, Lcom/vk/api/market/k$b;->l:Z
+    iget-boolean p1, p3, Lcom/vk/api/market/MarketGoodGetFullPage$b;->l:Z
 
     iput-boolean p1, p0, Lcom/vtosters/lite/fragments/market/GoodFragment;->a1:Z
 
     .line 214
-    iget-boolean p1, p3, Lcom/vk/api/market/k$b;->m:Z
+    iget-boolean p1, p3, Lcom/vk/api/market/MarketGoodGetFullPage$b;->m:Z
 
     iput-boolean p1, p0, Lcom/vtosters/lite/fragments/market/GoodFragment;->b1:Z
 
     .line 215
-    iget p1, p3, Lcom/vk/api/market/k$b;->n:I
+    iget p1, p3, Lcom/vk/api/market/MarketGoodGetFullPage$b;->n:I
 
     iput p1, p0, Lcom/vtosters/lite/fragments/market/GoodFragment;->c1:I
 
     .line 216
-    iget-object p1, p3, Lcom/vk/api/market/k$b;->a:Lcom/vk/dto/common/Good;
+    iget-object p1, p3, Lcom/vk/api/market/MarketGoodGetFullPage$b;->a:Lcom/vk/dto/common/Good;
 
     const/4 v0, 0x1
 
@@ -4271,7 +4271,7 @@
 
     move-result-object p1
 
-    iget-object v2, p3, Lcom/vk/api/market/k$b;->a:Lcom/vk/dto/common/Good;
+    iget-object v2, p3, Lcom/vk/api/market/MarketGoodGetFullPage$b;->a:Lcom/vk/dto/common/Good;
 
     iget-boolean v2, v2, Lcom/vk/dto/common/Good;->S:Z
 
@@ -4283,16 +4283,16 @@
     :cond_4
     iget-object p1, p0, Lcom/vtosters/lite/fragments/market/GoodFragment;->G0:Lcom/vtosters/lite/ui/WriteBar;
 
-    iget-object v2, p3, Lcom/vk/api/market/k$b;->a:Lcom/vk/dto/common/Good;
+    iget-object v2, p3, Lcom/vk/api/market/MarketGoodGetFullPage$b;->a:Lcom/vk/dto/common/Good;
 
     iget-boolean v2, v2, Lcom/vk/dto/common/Good;->S:Z
 
-    invoke-static {p1, v2}, Lcom/vtosters/lite/f0;->a(Landroid/view/View;Z)V
+    invoke-static {p1, v2}, Lcom/vtosters/lite/ViewUtils;->a(Landroid/view/View;Z)V
 
     .line 220
     iget-object p1, p0, Lcom/vtosters/lite/fragments/market/GoodFragment;->K0:Landroid/view/View;
 
-    iget-object v2, p3, Lcom/vk/api/market/k$b;->a:Lcom/vk/dto/common/Good;
+    iget-object v2, p3, Lcom/vk/api/market/MarketGoodGetFullPage$b;->a:Lcom/vk/dto/common/Good;
 
     iget v2, v2, Lcom/vk/dto/common/Good;->K:I
 
@@ -4306,20 +4306,20 @@
     const/4 v2, 0x0
 
     :goto_0
-    invoke-static {p1, v2}, Lcom/vtosters/lite/f0;->a(Landroid/view/View;Z)V
+    invoke-static {p1, v2}, Lcom/vtosters/lite/ViewUtils;->a(Landroid/view/View;Z)V
 
     .line 221
-    iget-object v4, p3, Lcom/vk/api/market/k$b;->a:Lcom/vk/dto/common/Good;
+    iget-object v4, p3, Lcom/vk/api/market/MarketGoodGetFullPage$b;->a:Lcom/vk/dto/common/Good;
 
-    iget-object v5, p3, Lcom/vk/api/market/k$b;->e:Ljava/lang/String;
+    iget-object v5, p3, Lcom/vk/api/market/MarketGoodGetFullPage$b;->e:Ljava/lang/String;
 
-    iget-object v6, p3, Lcom/vk/api/market/k$b;->f:Ljava/lang/String;
+    iget-object v6, p3, Lcom/vk/api/market/MarketGoodGetFullPage$b;->f:Ljava/lang/String;
 
-    iget-object v7, p3, Lcom/vk/api/market/k$b;->i:Ljava/lang/String;
+    iget-object v7, p3, Lcom/vk/api/market/MarketGoodGetFullPage$b;->i:Ljava/lang/String;
 
-    iget-object v8, p3, Lcom/vk/api/market/k$b;->h:Ljava/lang/String;
+    iget-object v8, p3, Lcom/vk/api/market/MarketGoodGetFullPage$b;->h:Ljava/lang/String;
 
-    iget v9, p3, Lcom/vk/api/market/k$b;->d:I
+    iget v9, p3, Lcom/vk/api/market/MarketGoodGetFullPage$b;->d:I
 
     move-object v3, p0
 
@@ -4331,12 +4331,12 @@
 
     .line 222
     :cond_6
-    invoke-virtual {p0}, Ld/a/a/a/h;->q1()V
+    invoke-virtual {p0}, Lme/grishka/appkit/fragments/AppKitFragment;->q1()V
 
     .line 223
     iget-object p1, p0, Lcom/vtosters/lite/fragments/market/GoodFragment;->E0:Ljava/util/ArrayList;
 
-    iget-object v2, p3, Lcom/vk/api/market/k$b;->j:Lcom/vk/dto/common/data/VKList;
+    iget-object v2, p3, Lcom/vk/api/market/MarketGoodGetFullPage$b;->j:Lcom/vk/dto/common/data/VKList;
 
     if-nez v2, :cond_7
 
@@ -4371,7 +4371,7 @@
 
     .line 229
     :cond_8
-    iget-object v3, p3, Lcom/vk/api/market/k$b;->j:Lcom/vk/dto/common/data/VKList;
+    iget-object v3, p3, Lcom/vk/api/market/MarketGoodGetFullPage$b;->j:Lcom/vk/dto/common/data/VKList;
 
     if-eqz v3, :cond_9
 
@@ -4381,7 +4381,7 @@
 
     move-result v3
 
-    iget-object v4, p3, Lcom/vk/api/market/k$b;->j:Lcom/vk/dto/common/data/VKList;
+    iget-object v4, p3, Lcom/vk/api/market/MarketGoodGetFullPage$b;->j:Lcom/vk/dto/common/data/VKList;
 
     invoke-virtual {v4}, Lcom/vk/dto/common/data/VKList;->a()I
 
@@ -4395,7 +4395,7 @@
     const/4 v0, 0x0
 
     :goto_2
-    invoke-virtual {p0, p1, v0}, Ld/a/a/a/i;->e(Ljava/util/List;Z)V
+    invoke-virtual {p0, p1, v0}, Lme/grishka/appkit/fragments/BaseRecyclerFragment;->e(Ljava/util/List;Z)V
 
     .line 230
     iget-object v0, p0, Lcom/vtosters/lite/fragments/market/GoodFragment;->C0:Ljava/util/List;
@@ -4403,21 +4403,21 @@
     if-eqz v0, :cond_a
 
     .line 231
-    iget-object v3, p0, Lcom/vtosters/lite/fragments/market/GoodFragment;->i1:Lcom/vtosters/lite/fragments/market/v;
+    iget-object v3, p0, Lcom/vtosters/lite/fragments/market/GoodFragment;->i1:Lcom/vtosters/lite/fragments/market/ProductAdapter;
 
     invoke-interface {v0}, Ljava/util/List;->size()I
 
     move-result v0
 
-    invoke-virtual {v3, p1, v0, v2}, Lcom/vtosters/lite/ui/b0/j;->a(Ljava/util/List;II)V
+    invoke-virtual {v3, p1, v0, v2}, Lcom/vtosters/lite/ui/holder/RecyclerSectionAdapter;->a(Ljava/util/List;II)V
 
     goto :goto_3
 
     .line 232
     :cond_a
-    iget-object v0, p0, Lcom/vtosters/lite/fragments/market/GoodFragment;->i1:Lcom/vtosters/lite/fragments/market/v;
+    iget-object v0, p0, Lcom/vtosters/lite/fragments/market/GoodFragment;->i1:Lcom/vtosters/lite/fragments/market/ProductAdapter;
 
-    invoke-virtual {v0, p1}, Lcom/vtosters/lite/ui/b0/j;->m(Ljava/util/List;)V
+    invoke-virtual {v0, p1}, Lcom/vtosters/lite/ui/holder/RecyclerSectionAdapter;->m(Ljava/util/List;)V
 
     :goto_3
     if-nez p2, :cond_b
@@ -4434,21 +4434,21 @@
 
     .line 235
     :cond_b
-    iget-object p2, p0, Lcom/vtosters/lite/fragments/market/GoodFragment;->D0:Lcom/vtosters/lite/ui/b0/j$a;
+    iget-object p2, p0, Lcom/vtosters/lite/fragments/market/GoodFragment;->D0:Lcom/vtosters/lite/ui/holder/RecyclerSectionAdapter$a;
 
     if-eqz p2, :cond_c
 
     .line 236
-    iget-object v0, p2, Lcom/vtosters/lite/ui/b0/j$a;->b:Ljava/lang/Object;
+    iget-object v0, p2, Lcom/vtosters/lite/ui/holder/RecyclerSectionAdapter$a;->b:Ljava/lang/Object;
 
     check-cast v0, Lcom/vk/dto/common/Good;
 
-    iget-object p3, p3, Lcom/vk/api/market/k$b;->k:Ljava/util/List;
+    iget-object p3, p3, Lcom/vk/api/market/MarketGoodGetFullPage$b;->k:Ljava/util/List;
 
     iput-object p3, v0, Lcom/vk/dto/common/Good;->W:Ljava/util/List;
 
     .line 237
-    iget-object p3, p0, Ld/a/a/a/i;->g0:Ljava/util/ArrayList;
+    iget-object p3, p0, Lme/grishka/appkit/fragments/BaseRecyclerFragment;->g0:Ljava/util/ArrayList;
 
     invoke-virtual {p3, p2}, Ljava/util/ArrayList;->indexOf(Ljava/lang/Object;)I
 
@@ -4457,16 +4457,16 @@
     if-ltz p2, :cond_c
 
     .line 238
-    iget-object p3, p0, Lcom/vtosters/lite/fragments/market/GoodFragment;->i1:Lcom/vtosters/lite/fragments/market/v;
+    iget-object p3, p0, Lcom/vtosters/lite/fragments/market/GoodFragment;->i1:Lcom/vtosters/lite/fragments/market/ProductAdapter;
 
-    invoke-virtual {p3}, Lcom/vtosters/lite/ui/b0/j;->getItemCount()I
+    invoke-virtual {p3}, Lcom/vtosters/lite/ui/holder/RecyclerSectionAdapter;->getItemCount()I
 
     move-result p3
 
     if-ge p2, p3, :cond_c
 
     .line 239
-    iget-object p3, p0, Lcom/vtosters/lite/fragments/market/GoodFragment;->i1:Lcom/vtosters/lite/fragments/market/v;
+    iget-object p3, p0, Lcom/vtosters/lite/fragments/market/GoodFragment;->i1:Lcom/vtosters/lite/fragments/market/ProductAdapter;
 
     invoke-virtual {p3, p2}, Landroidx/recyclerview/widget/RecyclerView$Adapter;->notifyItemChanged(I)V
 
@@ -4496,10 +4496,10 @@
 
     move-result-object p2
 
-    check-cast p2, Lcom/vtosters/lite/ui/b0/j$a;
+    check-cast p2, Lcom/vtosters/lite/ui/holder/RecyclerSectionAdapter$a;
 
     .line 244
-    iget-object p2, p2, Lcom/vtosters/lite/ui/b0/j$a;->b:Ljava/lang/Object;
+    iget-object p2, p2, Lcom/vtosters/lite/ui/holder/RecyclerSectionAdapter$a;->b:Ljava/lang/Object;
 
     instance-of v2, p2, Lcom/vk/api/board/BoardComment;
 
@@ -4531,7 +4531,7 @@
     if-eq v1, v0, :cond_11
 
     .line 247
-    iget-object p1, p0, Ld/a/a/a/i;->Z:Lme/grishka/appkit/views/UsableRecyclerView;
+    iget-object p1, p0, Lme/grishka/appkit/fragments/BaseRecyclerFragment;->Z:Lme/grishka/appkit/views/UsableRecyclerView;
 
     invoke-virtual {p1}, Landroidx/recyclerview/widget/RecyclerView;->getLayoutManager()Landroidx/recyclerview/widget/RecyclerView$LayoutManager;
 
@@ -4568,17 +4568,17 @@
 
     move-result-object v0
 
-    check-cast v0, Lcom/vtosters/lite/ui/b0/j$a;
+    check-cast v0, Lcom/vtosters/lite/ui/holder/RecyclerSectionAdapter$a;
 
     .line 251
-    iget-object v0, v0, Lcom/vtosters/lite/ui/b0/j$a;->b:Ljava/lang/Object;
+    iget-object v0, v0, Lcom/vtosters/lite/ui/holder/RecyclerSectionAdapter$a;->b:Ljava/lang/Object;
 
     instance-of v0, v0, Lcom/vk/api/board/BoardComment;
 
     if-eqz v0, :cond_10
 
     .line 252
-    iget-object p1, p0, Ld/a/a/a/i;->Z:Lme/grishka/appkit/views/UsableRecyclerView;
+    iget-object p1, p0, Lme/grishka/appkit/fragments/BaseRecyclerFragment;->Z:Lme/grishka/appkit/views/UsableRecyclerView;
 
     invoke-virtual {p1}, Landroidx/recyclerview/widget/RecyclerView;->getLayoutManager()Landroidx/recyclerview/widget/RecyclerView$LayoutManager;
 
@@ -4716,11 +4716,11 @@
     if-ne p2, p1, :cond_1
 
     .line 95
-    iget-object p1, p0, Lcom/vtosters/lite/fragments/market/GoodFragment;->M0:Lcom/vk/stickers/f0/a;
+    iget-object p1, p0, Lcom/vtosters/lite/fragments/market/GoodFragment;->M0:Lcom/vk/stickers/f0/KeyboardPopup;
 
     if-eqz p1, :cond_1
 
-    invoke-virtual {p1}, Lcom/vk/stickers/f0/a;->b()Z
+    invoke-virtual {p1}, Lcom/vk/stickers/f0/KeyboardPopup;->b()Z
 
     move-result p1
 
@@ -4736,9 +4736,9 @@
     if-ne p1, p2, :cond_0
 
     .line 97
-    iget-object p1, p0, Lcom/vtosters/lite/fragments/market/GoodFragment;->M0:Lcom/vk/stickers/f0/a;
+    iget-object p1, p0, Lcom/vtosters/lite/fragments/market/GoodFragment;->M0:Lcom/vk/stickers/f0/KeyboardPopup;
 
-    invoke-virtual {p1}, Lcom/vk/stickers/f0/a;->a()V
+    invoke-virtual {p1}, Lcom/vk/stickers/f0/KeyboardPopup;->a()V
 
     :cond_0
     return p2
@@ -4749,9 +4749,9 @@
     return p1
 .end method
 
-.method public a(Lcom/vk/wall/b;)Z
+.method public a(Lcom/vk/wall/CommentDisplayItem;)Z
     .locals 0
-    .param p1    # Lcom/vk/wall/b;
+    .param p1    # Lcom/vk/wall/CommentDisplayItem;
         .annotation build Landroidx/annotation/Nullable;
         .end annotation
     .end param
@@ -4795,7 +4795,7 @@
     return-void
 .end method
 
-.method public b(Lcom/vtosters/lite/q;Lcom/vtosters/lite/ui/b0/m/c;)V
+.method public b(Lcom/vtosters/lite/Comment;Lcom/vtosters/lite/ui/holder/comment/BaseCommentViewHolder;)V
     .locals 9
 
     .line 5
@@ -4858,17 +4858,17 @@
 
     .line 11
     :cond_1
-    invoke-interface {p1}, Lcom/vtosters/lite/q;->R0()Z
+    invoke-interface {p1}, Lcom/vtosters/lite/Comment;->R0()Z
 
     move-result v5
 
     .line 12
-    invoke-interface {p1}, Lcom/vtosters/lite/q;->e1()Z
+    invoke-interface {p1}, Lcom/vtosters/lite/Comment;->e1()Z
 
     move-result v6
 
     .line 13
-    invoke-interface {p1}, Lcom/vtosters/lite/q;->getText()Ljava/lang/String;
+    invoke-interface {p1}, Lcom/vtosters/lite/Comment;->getText()Ljava/lang/String;
 
     move-result-object v7
 
@@ -4900,16 +4900,16 @@
 
     .line 16
     :cond_2
-    invoke-interface {p1}, Lcom/vtosters/lite/q;->getUid()I
+    invoke-interface {p1}, Lcom/vtosters/lite/Comment;->getUid()I
 
     move-result v7
 
-    invoke-static {v7}, Lcom/vtosters/lite/i0/c;->a(I)Z
+    invoke-static {v7}, Lcom/vtosters/lite/auth/VKAccountManager;->a(I)Z
 
     move-result v7
 
     .line 17
-    invoke-interface {p1}, Lcom/vtosters/lite/q;->getUid()I
+    invoke-interface {p1}, Lcom/vtosters/lite/Comment;->getUid()I
 
     move-result v8
 
@@ -5044,7 +5044,7 @@
 
     new-instance v3, Lcom/vtosters/lite/fragments/market/g;
 
-    invoke-direct {v3, p0, v1, p1, p2}, Lcom/vtosters/lite/fragments/market/g;-><init>(Lcom/vtosters/lite/fragments/market/GoodFragment;Ljava/util/List;Lcom/vtosters/lite/q;Landroid/content/Context;)V
+    invoke-direct {v3, p0, v1, p1, p2}, Lcom/vtosters/lite/fragments/market/g;-><init>(Lcom/vtosters/lite/fragments/market/GoodFragment;Ljava/util/List;Lcom/vtosters/lite/Comment;Landroid/content/Context;)V
 
     invoke-virtual {v2, v0, v3}, Lcom/vk/core/dialogs/alert/VkAlertDialog$Builder;->setItems([Ljava/lang/CharSequence;Landroid/content/DialogInterface$OnClickListener;)Lcom/vk/core/dialogs/alert/VkAlertDialog$Builder;
 
@@ -5054,43 +5054,43 @@
     return-void
 .end method
 
-.method public c(Lcom/vtosters/lite/q;)V
+.method public c(Lcom/vtosters/lite/Comment;)V
     .locals 2
 
     .line 2
-    new-instance v0, Lcom/vk/webapp/fragments/j$a;
+    new-instance v0, Lcom/vk/webapp/fragments/ReportFragment$a;
 
-    invoke-direct {v0}, Lcom/vk/webapp/fragments/j$a;-><init>()V
+    invoke-direct {v0}, Lcom/vk/webapp/fragments/ReportFragment$a;-><init>()V
 
     const-string v1, "market_comment"
 
     .line 3
-    invoke-virtual {v0, v1}, Lcom/vk/webapp/fragments/j$a;->b(Ljava/lang/String;)Lcom/vk/webapp/fragments/j$a;
+    invoke-virtual {v0, v1}, Lcom/vk/webapp/fragments/ReportFragment$a;->b(Ljava/lang/String;)Lcom/vk/webapp/fragments/ReportFragment$a;
 
     .line 4
-    invoke-virtual {v0, v1}, Lcom/vk/webapp/fragments/j$a;->a(Ljava/lang/String;)Lcom/vk/webapp/fragments/j$a;
+    invoke-virtual {v0, v1}, Lcom/vk/webapp/fragments/ReportFragment$a;->a(Ljava/lang/String;)Lcom/vk/webapp/fragments/ReportFragment$a;
 
     .line 5
-    invoke-interface {p1}, Lcom/vtosters/lite/q;->getId()I
+    invoke-interface {p1}, Lcom/vtosters/lite/Comment;->getId()I
 
     move-result p1
 
-    invoke-virtual {v0, p1}, Lcom/vk/webapp/fragments/j$a;->d(I)Lcom/vk/webapp/fragments/j$a;
+    invoke-virtual {v0, p1}, Lcom/vk/webapp/fragments/ReportFragment$a;->d(I)Lcom/vk/webapp/fragments/ReportFragment$a;
 
     .line 6
     invoke-virtual {p0}, Lcom/vtosters/lite/fragments/market/GoodFragment;->b()I
 
     move-result p1
 
-    invoke-virtual {v0, p1}, Lcom/vk/webapp/fragments/j$a;->e(I)Lcom/vk/webapp/fragments/j$a;
+    invoke-virtual {v0, p1}, Lcom/vk/webapp/fragments/ReportFragment$a;->e(I)Lcom/vk/webapp/fragments/ReportFragment$a;
 
     .line 7
-    invoke-virtual {v0, p0}, Lcom/vk/navigation/o;->a(Lcom/vk/core/fragments/FragmentImpl;)V
+    invoke-virtual {v0, p0}, Lcom/vk/navigation/Navigator;->a(Lcom/vk/core/fragments/FragmentImpl;)V
 
     return-void
 .end method
 
-.method public e(Lcom/vtosters/lite/q;)V
+.method public e(Lcom/vtosters/lite/Comment;)V
     .locals 1
 
     .line 2
@@ -5132,7 +5132,7 @@
     return-object p1
 .end method
 
-.method public f(Lcom/vtosters/lite/q;)V
+.method public f(Lcom/vtosters/lite/Comment;)V
     .locals 4
 
     .line 3
@@ -5143,40 +5143,40 @@
     if-eqz v0, :cond_0
 
     .line 4
-    new-instance v1, Lcom/vk/api/market/e;
+    new-instance v1, Lcom/vk/api/market/MarketDeleteComment;
 
     invoke-virtual {p0}, Lcom/vtosters/lite/fragments/market/GoodFragment;->b()I
 
     move-result v2
 
-    invoke-interface {p1}, Lcom/vtosters/lite/q;->getId()I
+    invoke-interface {p1}, Lcom/vtosters/lite/Comment;->getId()I
 
     move-result v3
 
-    invoke-direct {v1, v2, v3}, Lcom/vk/api/market/e;-><init>(II)V
+    invoke-direct {v1, v2, v3}, Lcom/vk/api/market/MarketDeleteComment;-><init>(II)V
 
     new-instance v2, Lcom/vtosters/lite/fragments/market/GoodFragment$a;
 
-    invoke-direct {v2, p0, p0, p1}, Lcom/vtosters/lite/fragments/market/GoodFragment$a;-><init>(Lcom/vtosters/lite/fragments/market/GoodFragment;Lcom/vk/core/fragments/FragmentImpl;Lcom/vtosters/lite/q;)V
+    invoke-direct {v2, p0, p0, p1}, Lcom/vtosters/lite/fragments/market/GoodFragment$a;-><init>(Lcom/vtosters/lite/fragments/market/GoodFragment;Lcom/vk/core/fragments/FragmentImpl;Lcom/vtosters/lite/Comment;)V
 
-    invoke-virtual {v1, v2}, Lcom/vk/api/base/d;->a(Lcom/vk/api/base/a;)Lcom/vk/api/base/b;
+    invoke-virtual {v1, v2}, Lcom/vk/api/base/ApiRequest;->a(Lcom/vk/api/base/ApiCallback;)Lcom/vk/api/base/ApiCallbackDisposable;
 
     move-result-object p1
 
     .line 5
-    invoke-virtual {p1, v0}, Lcom/vk/api/base/b;->a(Landroid/content/Context;)Lcom/vk/api/base/b;
+    invoke-virtual {p1, v0}, Lcom/vk/api/base/ApiCallbackDisposable;->a(Landroid/content/Context;)Lcom/vk/api/base/ApiCallbackDisposable;
 
-    invoke-virtual {p1}, Lcom/vk/api/base/b;->a()Lio/reactivex/disposables/b;
+    invoke-virtual {p1}, Lcom/vk/api/base/ApiCallbackDisposable;->a()Lio/reactivex/disposables/Disposable;
 
     :cond_0
     return-void
 .end method
 
-.method public g(Lcom/vtosters/lite/q;)V
+.method public g(Lcom/vtosters/lite/Comment;)V
     .locals 2
 
     .line 2
-    invoke-static {}, Lcom/vk/newsfeed/posting/l;->k()Lcom/vk/newsfeed/posting/l;
+    invoke-static {}, Lcom/vk/newsfeed/posting/PostingFragmentBuilder;->k()Lcom/vk/newsfeed/posting/PostingFragmentBuilder;
 
     move-result-object v0
 
@@ -5187,12 +5187,12 @@
 
     move-result v1
 
-    invoke-virtual {v0, p1, v1}, Lcom/vk/newsfeed/posting/l;->a(Lcom/vk/api/board/BoardComment;I)Lcom/vk/newsfeed/posting/l;
+    invoke-virtual {v0, p1, v1}, Lcom/vk/newsfeed/posting/PostingFragmentBuilder;->a(Lcom/vk/api/board/BoardComment;I)Lcom/vk/newsfeed/posting/PostingFragmentBuilder;
 
     const p1, 0x1e5a9
 
     .line 4
-    invoke-virtual {v0, p0, p1}, Lcom/vk/navigation/o;->a(Lcom/vk/core/fragments/FragmentImpl;I)V
+    invoke-virtual {v0, p0, p1}, Lcom/vk/navigation/Navigator;->a(Lcom/vk/core/fragments/FragmentImpl;I)V
 
     return-void
 .end method
@@ -5219,18 +5219,18 @@
     invoke-static {p1, v0}, Lcom/vk/log/L;->b(Ljava/lang/Throwable;[Ljava/lang/Object;)V
 
     .line 6
-    iget-object p1, p0, Lcom/vtosters/lite/fragments/market/GoodFragment;->i1:Lcom/vtosters/lite/fragments/market/v;
+    iget-object p1, p0, Lcom/vtosters/lite/fragments/market/GoodFragment;->i1:Lcom/vtosters/lite/fragments/market/ProductAdapter;
 
     if-eqz p1, :cond_0
 
     .line 7
-    invoke-virtual {p1}, Lcom/vtosters/lite/fragments/market/v;->k()V
+    invoke-virtual {p1}, Lcom/vtosters/lite/fragments/market/ProductAdapter;->k()V
 
     :cond_0
     const p1, 0x7f120224
 
     .line 8
-    invoke-static {p1}, Lcom/vk/core/util/k1;->a(I)V
+    invoke-static {p1}, Lcom/vk/core/util/ToastUtils;->a(I)V
 
     return-void
 .end method
@@ -5256,7 +5256,7 @@
     move-result v6
 
     .line 3
-    new-instance v8, Lcom/vk/api/market/k;
+    new-instance v8, Lcom/vk/api/market/MarketGoodGetFullPage;
 
     iget v2, p0, Lcom/vtosters/lite/fragments/market/GoodFragment;->A0:I
 
@@ -5270,10 +5270,10 @@
 
     move v7, p2
 
-    invoke-direct/range {v1 .. v7}, Lcom/vk/api/market/k;-><init>(IILjava/lang/String;ZII)V
+    invoke-direct/range {v1 .. v7}, Lcom/vk/api/market/MarketGoodGetFullPage;-><init>(IILjava/lang/String;ZII)V
 
     .line 4
-    invoke-virtual {v8}, Lcom/vk/api/base/d;->m()Lc/a/m;
+    invoke-virtual {v8}, Lcom/vk/api/base/ApiRequest;->m()Lio/reactivex/Observable;
 
     move-result-object p2
 
@@ -5287,7 +5287,7 @@
 
     move-result-object v1
 
-    invoke-static {p2, v1}, Lcom/vk/core/extensions/RxExtKt;->a(Lc/a/m;Landroid/content/Context;)Lc/a/m;
+    invoke-static {p2, v1}, Lcom/vk/core/extensions/RxExtKt;->a(Lio/reactivex/Observable;Landroid/content/Context;)Lio/reactivex/Observable;
 
     move-result-object p2
 
@@ -5301,11 +5301,11 @@
 
     invoke-direct {p1, p0}, Lcom/vtosters/lite/fragments/market/k;-><init>(Lcom/vtosters/lite/fragments/market/GoodFragment;)V
 
-    invoke-virtual {p2, v1, p1}, Lc/a/m;->a(Lc/a/z/g;Lc/a/z/g;)Lio/reactivex/disposables/b;
+    invoke-virtual {p2, v1, p1}, Lio/reactivex/Observable;->a(Lio/reactivex/functions/Consumer;Lio/reactivex/functions/Consumer;)Lio/reactivex/disposables/Disposable;
 
     move-result-object p1
 
-    iput-object p1, p0, Ld/a/a/a/j;->T:Lio/reactivex/disposables/b;
+    iput-object p1, p0, Lme/grishka/appkit/fragments/LoaderFragment;->T:Lio/reactivex/disposables/Disposable;
 
     return-void
 .end method
@@ -5314,9 +5314,9 @@
     .locals 1
 
     .line 2
-    iget-object v0, p0, Lcom/vtosters/lite/fragments/market/GoodFragment;->Y0:Lcom/vk/stickers/e;
+    iget-object v0, p0, Lcom/vtosters/lite/fragments/market/GoodFragment;->Y0:Lcom/vk/stickers/PauseAnimationScrollListener;
 
-    invoke-virtual {v0, p1}, Lcom/vk/stickers/e;->a(Ljava/lang/String;)V
+    invoke-virtual {v0, p1}, Lcom/vk/stickers/PauseAnimationScrollListener;->a(Ljava/lang/String;)V
 
     return-void
 .end method
@@ -5345,14 +5345,14 @@
 
     .line 3
     :cond_0
-    iget-object v0, p0, Lcom/vtosters/lite/fragments/market/GoodFragment;->M0:Lcom/vk/stickers/f0/a;
+    iget-object v0, p0, Lcom/vtosters/lite/fragments/market/GoodFragment;->M0:Lcom/vk/stickers/f0/KeyboardPopup;
 
-    invoke-virtual {v0}, Lcom/vk/stickers/f0/a;->d()V
+    invoke-virtual {v0}, Lcom/vk/stickers/f0/KeyboardPopup;->d()V
 
     .line 4
-    iget-object v0, p0, Lcom/vtosters/lite/fragments/market/GoodFragment;->N0:Lcom/vk/stickers/b0;
+    iget-object v0, p0, Lcom/vtosters/lite/fragments/market/GoodFragment;->N0:Lcom/vk/stickers/StickersView;
 
-    invoke-virtual {v0, p1}, Lcom/vk/stickers/b0;->a(I)V
+    invoke-virtual {v0, p1}, Lcom/vk/stickers/StickersView;->a(I)V
 
     return-void
 .end method
@@ -5361,11 +5361,11 @@
     .locals 1
 
     .line 2
-    iget-object v0, p0, Lcom/vtosters/lite/fragments/market/GoodFragment;->M0:Lcom/vk/stickers/f0/a;
+    iget-object v0, p0, Lcom/vtosters/lite/fragments/market/GoodFragment;->M0:Lcom/vk/stickers/f0/KeyboardPopup;
 
     if-eqz v0, :cond_0
 
-    invoke-virtual {v0}, Lcom/vk/stickers/f0/a;->b()Z
+    invoke-virtual {v0}, Lcom/vk/stickers/f0/KeyboardPopup;->b()Z
 
     move-result v0
 
@@ -5451,9 +5451,9 @@
     .line 6
     :cond_1
     :goto_1
-    iget-object p3, p0, Lcom/vtosters/lite/fragments/market/GoodFragment;->i1:Lcom/vtosters/lite/fragments/market/v;
+    iget-object p3, p0, Lcom/vtosters/lite/fragments/market/GoodFragment;->i1:Lcom/vtosters/lite/fragments/market/ProductAdapter;
 
-    iget-object p3, p3, Lcom/vtosters/lite/ui/b0/j;->a:Ljava/util/List;
+    iget-object p3, p3, Lcom/vtosters/lite/ui/holder/RecyclerSectionAdapter;->a:Ljava/util/List;
 
     invoke-interface {p3}, Ljava/util/List;->size()I
 
@@ -5462,25 +5462,25 @@
     if-ge p2, p3, :cond_6
 
     .line 7
-    iget-object p3, p0, Lcom/vtosters/lite/fragments/market/GoodFragment;->i1:Lcom/vtosters/lite/fragments/market/v;
+    iget-object p3, p0, Lcom/vtosters/lite/fragments/market/GoodFragment;->i1:Lcom/vtosters/lite/fragments/market/ProductAdapter;
 
-    iget-object p3, p3, Lcom/vtosters/lite/ui/b0/j;->a:Ljava/util/List;
+    iget-object p3, p3, Lcom/vtosters/lite/ui/holder/RecyclerSectionAdapter;->a:Ljava/util/List;
 
     invoke-interface {p3, p2}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object p3
 
-    check-cast p3, Lcom/vtosters/lite/ui/b0/j$a;
+    check-cast p3, Lcom/vtosters/lite/ui/holder/RecyclerSectionAdapter$a;
 
     .line 8
-    iget v0, p3, Lcom/vtosters/lite/ui/b0/j$a;->a:I
+    iget v0, p3, Lcom/vtosters/lite/ui/holder/RecyclerSectionAdapter$a;->a:I
 
     const/16 v1, 0x8
 
     if-ne v0, v1, :cond_2
 
     .line 9
-    iget-object v0, p3, Lcom/vtosters/lite/ui/b0/j$a;->b:Ljava/lang/Object;
+    iget-object v0, p3, Lcom/vtosters/lite/ui/holder/RecyclerSectionAdapter$a;->b:Ljava/lang/Object;
 
     check-cast v0, Lcom/vk/api/board/BoardComment;
 
@@ -5492,38 +5492,38 @@
     if-ne v0, v1, :cond_2
 
     .line 11
-    invoke-static {}, Lcom/vk/emoji/b;->g()Lcom/vk/emoji/b;
+    invoke-static {}, Lcom/vk/emoji/Emoji;->g()Lcom/vk/emoji/Emoji;
 
     move-result-object v0
 
     iget-object v1, p1, Lcom/vk/api/board/BoardComment;->b:Ljava/lang/String;
 
-    invoke-static {v1}, Lcom/vk/common/links/b;->a(Ljava/lang/CharSequence;)Ljava/lang/CharSequence;
+    invoke-static {v1}, Lcom/vk/common/links/LinkParser;->a(Ljava/lang/CharSequence;)Ljava/lang/CharSequence;
 
     move-result-object v1
 
-    invoke-virtual {v0, v1}, Lcom/vk/emoji/b;->a(Ljava/lang/CharSequence;)Ljava/lang/CharSequence;
+    invoke-virtual {v0, v1}, Lcom/vk/emoji/Emoji;->a(Ljava/lang/CharSequence;)Ljava/lang/CharSequence;
 
     move-result-object v0
 
     iput-object v0, p1, Lcom/vk/api/board/BoardComment;->c:Ljava/lang/CharSequence;
 
     .line 12
-    iget v0, p3, Lcom/vtosters/lite/ui/b0/j$a;->a:I
+    iget v0, p3, Lcom/vtosters/lite/ui/holder/RecyclerSectionAdapter$a;->a:I
 
-    invoke-static {v0, p1}, Lcom/vtosters/lite/ui/b0/j$a;->c(ILjava/lang/Object;)Lcom/vtosters/lite/ui/b0/j$a;
+    invoke-static {v0, p1}, Lcom/vtosters/lite/ui/holder/RecyclerSectionAdapter$a;->c(ILjava/lang/Object;)Lcom/vtosters/lite/ui/holder/RecyclerSectionAdapter$a;
 
     move-result-object p1
 
     .line 13
-    iget p3, p3, Lcom/vtosters/lite/ui/b0/j$a;->c:I
+    iget p3, p3, Lcom/vtosters/lite/ui/holder/RecyclerSectionAdapter$a;->c:I
 
-    iput p3, p1, Lcom/vtosters/lite/ui/b0/j$a;->c:I
+    iput p3, p1, Lcom/vtosters/lite/ui/holder/RecyclerSectionAdapter$a;->c:I
 
     .line 14
-    iget-object p3, p0, Lcom/vtosters/lite/fragments/market/GoodFragment;->i1:Lcom/vtosters/lite/fragments/market/v;
+    iget-object p3, p0, Lcom/vtosters/lite/fragments/market/GoodFragment;->i1:Lcom/vtosters/lite/fragments/market/ProductAdapter;
 
-    invoke-virtual {p3, p2, p1}, Lcom/vtosters/lite/ui/b0/j;->a(ILcom/vtosters/lite/ui/b0/j$a;)V
+    invoke-virtual {p3, p2, p1}, Lcom/vtosters/lite/ui/holder/RecyclerSectionAdapter;->a(ILcom/vtosters/lite/ui/holder/RecyclerSectionAdapter$a;)V
 
     goto :goto_2
 
@@ -5579,27 +5579,27 @@
     .locals 2
 
     .line 1
-    invoke-super {p0, p1}, Lcom/vtosters/lite/fragments/z0;->onAttach(Landroid/content/Context;)V
+    invoke-super {p0, p1}, Lcom/vtosters/lite/general/fragments/CardRecyclerFragment;->onAttach(Landroid/content/Context;)V
 
     const p1, 0x7f0d01cd
 
     .line 2
-    invoke-virtual {p0, p1}, Ld/a/a/a/i;->t0(I)V
+    invoke-virtual {p0, p1}, Lme/grishka/appkit/fragments/BaseRecyclerFragment;->t0(I)V
 
     const/4 p1, 0x1
 
     .line 3
-    invoke-virtual {p0, p1}, Ld/a/a/a/h;->setHasOptionsMenu(Z)V
+    invoke-virtual {p0, p1}, Lme/grishka/appkit/fragments/AppKitFragment;->setHasOptionsMenu(Z)V
 
     const p1, 0x7f1204e3
 
     .line 4
-    invoke-virtual {p0, p1}, Ld/a/a/a/h;->setTitle(I)V
+    invoke-virtual {p0, p1}, Lme/grishka/appkit/fragments/AppKitFragment;->setTitle(I)V
 
     const-string p1, "open_market_item"
 
     .line 5
-    invoke-static {p1}, Lcom/vtosters/lite/data/n;->c(Ljava/lang/String;)Lcom/vtosters/lite/data/n$l;
+    invoke-static {p1}, Lcom/vtosters/lite/data/Analytics;->c(Ljava/lang/String;)Lcom/vtosters/lite/data/Analytics$l;
 
     move-result-object p1
 
@@ -5629,7 +5629,7 @@
 
     const-string v1, "item_ids"
 
-    invoke-virtual {p1, v1, v0}, Lcom/vtosters/lite/data/n$l;->a(Ljava/lang/String;Ljava/lang/Object;)Lcom/vtosters/lite/data/n$l;
+    invoke-virtual {p1, v1, v0}, Lcom/vtosters/lite/data/Analytics$l;->a(Ljava/lang/String;Ljava/lang/Object;)Lcom/vtosters/lite/data/Analytics$l;
 
     invoke-virtual {p0}, Lcom/vtosters/lite/fragments/market/GoodFragment;->e5()Ljava/lang/String;
 
@@ -5637,9 +5637,9 @@
 
     const-string v1, "source"
 
-    invoke-virtual {p1, v1, v0}, Lcom/vtosters/lite/data/n$l;->a(Ljava/lang/String;Ljava/lang/Object;)Lcom/vtosters/lite/data/n$l;
+    invoke-virtual {p1, v1, v0}, Lcom/vtosters/lite/data/Analytics$l;->a(Ljava/lang/String;Ljava/lang/Object;)Lcom/vtosters/lite/data/Analytics$l;
 
-    invoke-virtual {p1}, Lcom/vtosters/lite/data/n$l;->b()Lcom/vtosters/lite/data/n$l;
+    invoke-virtual {p1}, Lcom/vtosters/lite/data/Analytics$l;->b()Lcom/vtosters/lite/data/Analytics$l;
 
     return-void
 .end method
@@ -5657,7 +5657,7 @@
 
     const-string v0, "product_group"
 
-    invoke-static {p1, v0}, Lcom/vk/profile/e/f;->b(ILjava/lang/String;)V
+    invoke-static {p1, v0}, Lcom/vk/profile/e/ProfileTracker1;->b(ILjava/lang/String;)V
 
     .line 3
     invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getArguments()Landroid/os/Bundle;
@@ -5675,11 +5675,11 @@
     iput p1, p0, Lcom/vtosters/lite/fragments/market/GoodFragment;->W0:I
 
     .line 4
-    iget-object p1, p0, Lcom/vtosters/lite/fragments/market/GoodFragment;->i1:Lcom/vtosters/lite/fragments/market/v;
+    iget-object p1, p0, Lcom/vtosters/lite/fragments/market/GoodFragment;->i1:Lcom/vtosters/lite/fragments/market/ProductAdapter;
 
     iget v1, p0, Lcom/vtosters/lite/fragments/market/GoodFragment;->W0:I
 
-    invoke-virtual {p1, v1}, Lcom/vtosters/lite/fragments/market/v;->H(I)V
+    invoke-virtual {p1, v1}, Lcom/vtosters/lite/fragments/market/ProductAdapter;->H(I)V
 
     .line 5
     invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getArguments()Landroid/os/Bundle;
@@ -5744,7 +5744,7 @@
     invoke-virtual {p1, v0}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
     .line 11
-    sget-object v0, Lcom/vk/core/util/i;->a:Landroid/content/Context;
+    sget-object v0, Lcom/vk/core/util/AppContextHolder;->a:Landroid/content/Context;
 
     iget-object v1, p0, Lcom/vtosters/lite/fragments/market/GoodFragment;->j1:Landroid/content/BroadcastReceiver;
 
@@ -5755,16 +5755,16 @@
     invoke-virtual {v0, v1, p1, v2, v3}, Landroid/content/Context;->registerReceiver(Landroid/content/BroadcastReceiver;Landroid/content/IntentFilter;Ljava/lang/String;Landroid/os/Handler;)Landroid/content/Intent;
 
     .line 12
-    sget-object p1, Lcom/vk/stickers/t;->l:Lcom/vk/stickers/t;
+    sget-object p1, Lcom/vk/stickers/Stickers;->l:Lcom/vk/stickers/Stickers;
 
-    invoke-virtual {p1}, Lcom/vk/stickers/t;->a()V
+    invoke-virtual {p1}, Lcom/vk/stickers/Stickers;->a()V
 
     .line 13
-    iget-object p1, p0, Lcom/vtosters/lite/fragments/market/GoodFragment;->h1:Lio/reactivex/disposables/a;
+    iget-object p1, p0, Lcom/vtosters/lite/fragments/market/GoodFragment;->h1:Lio/reactivex/disposables/CompositeDisposable;
 
-    sget-object v0, Lb/h/o/a/g;->b:Lb/h/o/a/g;
+    sget-object v0, Lb/h/o/a/MarketEventBus;->b:Lb/h/o/a/MarketEventBus;
 
-    invoke-virtual {v0}, Lb/h/o/a/g;->a()Lc/a/m;
+    invoke-virtual {v0}, Lb/h/o/a/MarketEventBus;->a()Lio/reactivex/Observable;
 
     move-result-object v0
 
@@ -5772,11 +5772,11 @@
 
     invoke-direct {v1, p0}, Lcom/vtosters/lite/fragments/market/m;-><init>(Lcom/vtosters/lite/fragments/market/GoodFragment;)V
 
-    invoke-virtual {v0, v1}, Lc/a/m;->f(Lc/a/z/g;)Lio/reactivex/disposables/b;
+    invoke-virtual {v0, v1}, Lio/reactivex/Observable;->f(Lio/reactivex/functions/Consumer;)Lio/reactivex/disposables/Disposable;
 
     move-result-object v0
 
-    invoke-virtual {p1, v0}, Lio/reactivex/disposables/a;->b(Lio/reactivex/disposables/b;)Z
+    invoke-virtual {p1, v0}, Lio/reactivex/disposables/CompositeDisposable;->b(Lio/reactivex/disposables/Disposable;)Z
 
     return-void
 .end method
@@ -5849,15 +5849,15 @@
     invoke-interface {v0, v1}, Landroid/view/MenuItem;->setVisible(Z)Landroid/view/MenuItem;
 
     .line 8
-    new-instance v1, Lcom/vk/market/common/ui/c/b;
+    new-instance v1, Lcom/vk/market/common/ui/c/BadgeMenuItem;
 
-    invoke-virtual {p0}, Ld/a/a/a/h;->getContext()Landroid/content/Context;
+    invoke-virtual {p0}, Lme/grishka/appkit/fragments/AppKitFragment;->getContext()Landroid/content/Context;
 
     move-result-object v2
 
-    invoke-direct {v1, v2, v0}, Lcom/vk/market/common/ui/c/b;-><init>(Landroid/content/Context;Landroid/view/MenuItem;)V
+    invoke-direct {v1, v2, v0}, Lcom/vk/market/common/ui/c/BadgeMenuItem;-><init>(Landroid/content/Context;Landroid/view/MenuItem;)V
 
-    iput-object v1, p0, Lcom/vtosters/lite/fragments/market/GoodFragment;->Z0:Lcom/vk/market/common/ui/c/b;
+    iput-object v1, p0, Lcom/vtosters/lite/fragments/market/GoodFragment;->Z0:Lcom/vk/market/common/ui/c/BadgeMenuItem;
 
     .line 9
     invoke-direct {p0}, Lcom/vtosters/lite/fragments/market/GoodFragment;->p5()V
@@ -5873,23 +5873,23 @@
     .locals 2
 
     .line 1
-    sget-object v0, Lcom/vk/newsfeed/controllers/a;->e:Lcom/vk/newsfeed/controllers/a;
+    sget-object v0, Lcom/vk/newsfeed/controllers/NewsfeedController;->e:Lcom/vk/newsfeed/controllers/NewsfeedController;
 
-    invoke-virtual {v0}, Lcom/vk/newsfeed/controllers/a;->n()Lb/h/g/l/d;
+    invoke-virtual {v0}, Lcom/vk/newsfeed/controllers/NewsfeedController;->n()Lb/h/g/l/NotificationCenter;
 
     move-result-object v0
 
-    iget-object v1, p0, Lcom/vtosters/lite/fragments/market/GoodFragment;->k1:Lb/h/g/l/e;
+    iget-object v1, p0, Lcom/vtosters/lite/fragments/market/GoodFragment;->k1:Lb/h/g/l/NotificationListener;
 
-    invoke-virtual {v0, v1}, Lb/h/g/l/d;->a(Lb/h/g/l/e;)V
+    invoke-virtual {v0, v1}, Lb/h/g/l/NotificationCenter;->a(Lb/h/g/l/NotificationListener;)V
 
     .line 2
-    iget-object v0, p0, Lcom/vtosters/lite/fragments/market/GoodFragment;->h1:Lio/reactivex/disposables/a;
+    iget-object v0, p0, Lcom/vtosters/lite/fragments/market/GoodFragment;->h1:Lio/reactivex/disposables/CompositeDisposable;
 
-    invoke-virtual {v0}, Lio/reactivex/disposables/a;->o()V
+    invoke-virtual {v0}, Lio/reactivex/disposables/CompositeDisposable;->o()V
 
     .line 3
-    invoke-super {p0}, Ld/a/a/a/j;->onDestroy()V
+    invoke-super {p0}, Lme/grishka/appkit/fragments/LoaderFragment;->onDestroy()V
 
     return-void
 .end method
@@ -5898,15 +5898,15 @@
     .locals 2
 
     .line 1
-    invoke-super {p0}, Lcom/vtosters/lite/fragments/z0;->onDestroyView()V
+    invoke-super {p0}, Lcom/vtosters/lite/general/fragments/CardRecyclerFragment;->onDestroyView()V
 
     .line 2
-    iget-object v0, p0, Lcom/vtosters/lite/fragments/market/GoodFragment;->Y0:Lcom/vk/stickers/e;
+    iget-object v0, p0, Lcom/vtosters/lite/fragments/market/GoodFragment;->Y0:Lcom/vk/stickers/PauseAnimationScrollListener;
 
     if-eqz v0, :cond_0
 
     .line 3
-    invoke-virtual {v0}, Lcom/vk/stickers/e;->c()V
+    invoke-virtual {v0}, Lcom/vk/stickers/PauseAnimationScrollListener;->c()V
 
     :cond_0
     const/4 v0, 0x0
@@ -5918,10 +5918,10 @@
     iput-object v0, p0, Lcom/vtosters/lite/fragments/market/GoodFragment;->H0:Landroid/widget/EditText;
 
     .line 6
-    iput-object v0, p0, Lcom/vtosters/lite/fragments/market/GoodFragment;->M0:Lcom/vk/stickers/f0/a;
+    iput-object v0, p0, Lcom/vtosters/lite/fragments/market/GoodFragment;->M0:Lcom/vk/stickers/f0/KeyboardPopup;
 
     .line 7
-    iput-object v0, p0, Lcom/vtosters/lite/fragments/market/GoodFragment;->N0:Lcom/vk/stickers/b0;
+    iput-object v0, p0, Lcom/vtosters/lite/fragments/market/GoodFragment;->N0:Lcom/vk/stickers/StickersView;
 
     .line 8
     iput-object v0, p0, Lcom/vtosters/lite/fragments/market/GoodFragment;->I0:Landroid/view/View;
@@ -5937,7 +5937,7 @@
 
     .line 12
     :try_start_0
-    sget-object v0, Lcom/vk/core/util/i;->a:Landroid/content/Context;
+    sget-object v0, Lcom/vk/core/util/AppContextHolder;->a:Landroid/content/Context;
 
     iget-object v1, p0, Lcom/vtosters/lite/fragments/market/GoodFragment;->j1:Landroid/content/BroadcastReceiver;
 
@@ -5970,31 +5970,31 @@
 
     .line 3
     :sswitch_0
-    new-instance p1, Lcom/vk/webapp/fragments/j$a;
+    new-instance p1, Lcom/vk/webapp/fragments/ReportFragment$a;
 
-    invoke-direct {p1}, Lcom/vk/webapp/fragments/j$a;-><init>()V
+    invoke-direct {p1}, Lcom/vk/webapp/fragments/ReportFragment$a;-><init>()V
 
     const-string v0, "market"
 
     .line 4
-    invoke-virtual {p1, v0}, Lcom/vk/webapp/fragments/j$a;->b(Ljava/lang/String;)Lcom/vk/webapp/fragments/j$a;
+    invoke-virtual {p1, v0}, Lcom/vk/webapp/fragments/ReportFragment$a;->b(Ljava/lang/String;)Lcom/vk/webapp/fragments/ReportFragment$a;
 
     .line 5
     invoke-virtual {p0}, Lcom/vtosters/lite/fragments/market/GoodFragment;->b()I
 
     move-result v0
 
-    invoke-virtual {p1, v0}, Lcom/vk/webapp/fragments/j$a;->e(I)Lcom/vk/webapp/fragments/j$a;
+    invoke-virtual {p1, v0}, Lcom/vk/webapp/fragments/ReportFragment$a;->e(I)Lcom/vk/webapp/fragments/ReportFragment$a;
 
     .line 6
     invoke-direct {p0}, Lcom/vtosters/lite/fragments/market/GoodFragment;->h5()I
 
     move-result v0
 
-    invoke-virtual {p1, v0}, Lcom/vk/webapp/fragments/j$a;->d(I)Lcom/vk/webapp/fragments/j$a;
+    invoke-virtual {p1, v0}, Lcom/vk/webapp/fragments/ReportFragment$a;->d(I)Lcom/vk/webapp/fragments/ReportFragment$a;
 
     .line 7
-    invoke-virtual {p1, p0}, Lcom/vk/navigation/o;->a(Lcom/vk/core/fragments/FragmentImpl;)V
+    invoke-virtual {p1, p0}, Lcom/vk/navigation/Navigator;->a(Lcom/vk/core/fragments/FragmentImpl;)V
 
     return v1
 
@@ -6068,7 +6068,7 @@
     const p1, 0x7f1205e1
 
     .line 12
-    invoke-static {p1}, Lcom/vk/core/util/k1;->a(I)V
+    invoke-static {p1}, Lcom/vk/core/util/ToastUtils;->a(I)V
 
     return v1
 
@@ -6085,15 +6085,15 @@
     .locals 1
 
     .line 1
-    invoke-super {p0}, Ld/a/a/a/h;->onPause()V
+    invoke-super {p0}, Lme/grishka/appkit/fragments/AppKitFragment;->onPause()V
 
     .line 2
-    iget-object v0, p0, Lcom/vtosters/lite/fragments/market/GoodFragment;->Y0:Lcom/vk/stickers/e;
+    iget-object v0, p0, Lcom/vtosters/lite/fragments/market/GoodFragment;->Y0:Lcom/vk/stickers/PauseAnimationScrollListener;
 
     if-eqz v0, :cond_0
 
     .line 3
-    invoke-virtual {v0}, Lcom/vk/stickers/e;->b()V
+    invoke-virtual {v0}, Lcom/vk/stickers/PauseAnimationScrollListener;->b()V
 
     :cond_0
     return-void
@@ -6103,15 +6103,15 @@
     .locals 1
 
     .line 1
-    invoke-super {p0}, Ld/a/a/a/h;->onResume()V
+    invoke-super {p0}, Lme/grishka/appkit/fragments/AppKitFragment;->onResume()V
 
     .line 2
-    iget-object v0, p0, Lcom/vtosters/lite/fragments/market/GoodFragment;->Y0:Lcom/vk/stickers/e;
+    iget-object v0, p0, Lcom/vtosters/lite/fragments/market/GoodFragment;->Y0:Lcom/vk/stickers/PauseAnimationScrollListener;
 
     if-eqz v0, :cond_0
 
     .line 3
-    invoke-virtual {v0}, Lcom/vk/stickers/e;->d()V
+    invoke-virtual {v0}, Lcom/vk/stickers/PauseAnimationScrollListener;->d()V
 
     :cond_0
     return-void
@@ -6124,17 +6124,17 @@
     invoke-super {p0}, Landroidx/fragment/app/DialogFragment;->onStart()V
 
     .line 2
-    sget-object v0, Lcom/vk/newsfeed/controllers/a;->e:Lcom/vk/newsfeed/controllers/a;
+    sget-object v0, Lcom/vk/newsfeed/controllers/NewsfeedController;->e:Lcom/vk/newsfeed/controllers/NewsfeedController;
 
-    invoke-virtual {v0}, Lcom/vk/newsfeed/controllers/a;->n()Lb/h/g/l/d;
+    invoke-virtual {v0}, Lcom/vk/newsfeed/controllers/NewsfeedController;->n()Lb/h/g/l/NotificationCenter;
 
     move-result-object v0
 
-    iget-object v1, p0, Lcom/vtosters/lite/fragments/market/GoodFragment;->k1:Lb/h/g/l/e;
+    iget-object v1, p0, Lcom/vtosters/lite/fragments/market/GoodFragment;->k1:Lb/h/g/l/NotificationListener;
 
     const/16 v2, 0x66
 
-    invoke-virtual {v0, v2, v1}, Lb/h/g/l/d;->a(ILb/h/g/l/e;)V
+    invoke-virtual {v0, v2, v1}, Lb/h/g/l/NotificationCenter;->a(ILb/h/g/l/NotificationListener;)V
 
     return-void
 .end method
@@ -6143,10 +6143,10 @@
     .locals 1
 
     .line 1
-    invoke-super {p0, p1, p2}, Lcom/vtosters/lite/fragments/z0;->onViewCreated(Landroid/view/View;Landroid/os/Bundle;)V
+    invoke-super {p0, p1, p2}, Lcom/vtosters/lite/general/fragments/CardRecyclerFragment;->onViewCreated(Landroid/view/View;Landroid/os/Bundle;)V
 
     .line 2
-    invoke-virtual {p0}, Ld/a/a/a/h;->Q4()Landroidx/appcompat/widget/Toolbar;
+    invoke-virtual {p0}, Lme/grishka/appkit/fragments/AppKitFragment;->Q4()Landroidx/appcompat/widget/Toolbar;
 
     move-result-object p1
 
@@ -6178,7 +6178,7 @@
 
     .line 7
     :cond_0
-    iget-object p1, p0, Ld/a/a/a/i;->Z:Lme/grishka/appkit/views/UsableRecyclerView;
+    iget-object p1, p0, Lme/grishka/appkit/fragments/BaseRecyclerFragment;->Z:Lme/grishka/appkit/views/UsableRecyclerView;
 
     new-instance v0, Lcom/vtosters/lite/fragments/market/GoodFragment$d;
 
@@ -6187,12 +6187,12 @@
     invoke-virtual {p1, v0}, Landroidx/recyclerview/widget/RecyclerView;->addOnScrollListener(Landroidx/recyclerview/widget/RecyclerView$OnScrollListener;)V
 
     .line 8
-    iget-object p1, p0, Ld/a/a/a/i;->Z:Lme/grishka/appkit/views/UsableRecyclerView;
+    iget-object p1, p0, Lme/grishka/appkit/fragments/BaseRecyclerFragment;->Z:Lme/grishka/appkit/views/UsableRecyclerView;
 
     invoke-virtual {p1, p2}, Landroidx/recyclerview/widget/RecyclerView;->setClipToPadding(Z)V
 
     .line 9
-    iget-object p1, p0, Ld/a/a/a/i;->Z:Lme/grishka/appkit/views/UsableRecyclerView;
+    iget-object p1, p0, Lme/grishka/appkit/fragments/BaseRecyclerFragment;->Z:Lme/grishka/appkit/views/UsableRecyclerView;
 
     invoke-virtual {p1}, Landroid/view/ViewGroup;->getViewTreeObserver()Landroid/view/ViewTreeObserver;
 
@@ -6214,14 +6214,14 @@
     invoke-virtual {p1, p2}, Landroid/widget/LinearLayout;->addOnLayoutChangeListener(Landroid/view/View$OnLayoutChangeListener;)V
 
     .line 11
-    iget-object p1, p0, Lcom/vtosters/lite/fragments/market/GoodFragment;->i1:Lcom/vtosters/lite/fragments/market/v;
+    iget-object p1, p0, Lcom/vtosters/lite/fragments/market/GoodFragment;->i1:Lcom/vtosters/lite/fragments/market/ProductAdapter;
 
-    iget-boolean p2, p0, Ld/a/a/a/h;->I:Z
+    iget-boolean p2, p0, Lme/grishka/appkit/fragments/AppKitFragment;->I:Z
 
-    invoke-virtual {p1, p2}, Lcom/vtosters/lite/fragments/market/v;->c(Z)V
+    invoke-virtual {p1, p2}, Lcom/vtosters/lite/fragments/market/ProductAdapter;->c(Z)V
 
     .line 12
-    invoke-virtual {p0}, Ld/a/a/a/j;->W4()V
+    invoke-virtual {p0}, Lme/grishka/appkit/fragments/LoaderFragment;->W4()V
 
     return-void
 .end method

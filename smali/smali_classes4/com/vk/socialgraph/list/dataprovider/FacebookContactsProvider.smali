@@ -1,5 +1,5 @@
 .class public final Lcom/vk/socialgraph/list/dataprovider/FacebookContactsProvider;
-.super Lcom/vk/socialgraph/list/dataprovider/a;
+.super Lcom/vk/socialgraph/list/dataprovider/BaseContactsProvider;
 .source "FacebookContactsProvider.kt"
 
 
@@ -16,23 +16,23 @@
 
 
 # direct methods
-.method public constructor <init>(Lcom/vk/socialgraph/list/FriendsAdapter;Lcom/facebook/AccessToken;Lkotlin/jvm/b/b;)V
+.method public constructor <init>(Lcom/vk/socialgraph/list/FriendsAdapter;Lcom/facebook/AccessToken;Lkotlin/jvm/b/Functions2;)V
     .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
             "Lcom/vk/socialgraph/list/FriendsAdapter;",
             "Lcom/facebook/AccessToken;",
-            "Lkotlin/jvm/b/b<",
+            "Lkotlin/jvm/b/Functions2<",
             "-",
-            "Lio/reactivex/disposables/b;",
-            "Lkotlin/m;",
+            "Lio/reactivex/disposables/Disposable;",
+            "Lkotlin/Unit;",
             ">;)V"
         }
     .end annotation
 
     .line 1
-    invoke-direct {p0, p1, p3}, Lcom/vk/socialgraph/list/dataprovider/a;-><init>(Lcom/vk/socialgraph/list/FriendsAdapter;Lkotlin/jvm/b/b;)V
+    invoke-direct {p0, p1, p3}, Lcom/vk/socialgraph/list/dataprovider/BaseContactsProvider;-><init>(Lcom/vk/socialgraph/list/FriendsAdapter;Lkotlin/jvm/b/Functions2;)V
 
     iput-object p2, p0, Lcom/vk/socialgraph/list/dataprovider/FacebookContactsProvider;->d:Lcom/facebook/AccessToken;
 
@@ -50,13 +50,13 @@
 
 
 # virtual methods
-.method public a()Lc/a/m;
+.method public a()Lio/reactivex/Observable;
     .locals 2
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "()",
-            "Lc/a/m<",
-            "Lcom/vk/socialgraph/list/dataprovider/b;",
+            "Lio/reactivex/Observable<",
+            "Lcom/vk/socialgraph/list/dataprovider/Contacts;",
             ">;"
         }
     .end annotation
@@ -66,26 +66,26 @@
 
     invoke-direct {v0, p0}, Lcom/vk/socialgraph/list/dataprovider/FacebookContactsProvider$a;-><init>(Lcom/vk/socialgraph/list/dataprovider/FacebookContactsProvider;)V
 
-    invoke-static {v0}, Lc/a/m;->c(Ljava/util/concurrent/Callable;)Lc/a/m;
+    invoke-static {v0}, Lio/reactivex/Observable;->c(Ljava/util/concurrent/Callable;)Lio/reactivex/Observable;
 
     move-result-object v0
 
     const-string v1, "Observable.fromCallable \u2026n.userId, contacts)\n    }"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     return-object v0
 .end method
 
-.method public b()Lcom/vk/socialgraph/list/a$b;
+.method public b()Lcom/vk/socialgraph/list/Item$b;
     .locals 2
 
     .line 1
-    new-instance v0, Lcom/vk/socialgraph/list/a$b;
+    new-instance v0, Lcom/vk/socialgraph/list/Item$b;
 
     sget-object v1, Lcom/vk/socialgraph/SocialGraphUtils$ServiceType;->FACEBOOK:Lcom/vk/socialgraph/SocialGraphUtils$ServiceType;
 
-    invoke-direct {v0, v1}, Lcom/vk/socialgraph/list/a$b;-><init>(Lcom/vk/socialgraph/SocialGraphUtils$ServiceType;)V
+    invoke-direct {v0, v1}, Lcom/vk/socialgraph/list/Item$b;-><init>(Lcom/vk/socialgraph/SocialGraphUtils$ServiceType;)V
 
     return-object v0
 .end method

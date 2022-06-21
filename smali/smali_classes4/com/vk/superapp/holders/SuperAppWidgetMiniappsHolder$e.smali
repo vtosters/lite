@@ -1,5 +1,5 @@
 .class final Lcom/vk/superapp/holders/SuperAppWidgetMiniappsHolder$e;
-.super Lcom/vk/common/i/b;
+.super Lcom/vk/common/i/RecyclerItem;
 .source "SuperAppWidgetMiniappsHolder.kt"
 
 
@@ -34,7 +34,7 @@
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, v1}, Lcom/vk/superapp/holders/SuperAppWidgetMiniappsHolder$e$a;-><init>(Lkotlin/jvm/internal/i;)V
+    invoke-direct {v0, v1}, Lcom/vk/superapp/holders/SuperAppWidgetMiniappsHolder$e$a;-><init>(Lkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     return-void
 .end method
@@ -43,7 +43,7 @@
     .locals 0
 
     .line 1
-    invoke-direct {p0}, Lcom/vk/common/i/b;-><init>()V
+    invoke-direct {p0}, Lcom/vk/common/i/RecyclerItem;-><init>()V
 
     iput-object p1, p0, Lcom/vk/superapp/holders/SuperAppWidgetMiniappsHolder$e;->a:Lcom/vk/dto/menu/widgets/WidgetAppItem;
 
@@ -86,7 +86,7 @@
 
     iget-object v1, p1, Lcom/vk/superapp/holders/SuperAppWidgetMiniappsHolder$e;->a:Lcom/vk/dto/menu/widgets/WidgetAppItem;
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v0
 
@@ -96,7 +96,7 @@
 
     iget-object p1, p1, Lcom/vk/superapp/holders/SuperAppWidgetMiniappsHolder$e;->b:Lcom/vk/dto/common/data/ApiApplication;
 
-    invoke-static {v0, p1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v0, p1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result p1
 

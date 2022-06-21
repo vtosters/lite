@@ -3,7 +3,7 @@
 .source "AppsFragment.kt"
 
 # interfaces
-.implements Lcom/vk/lists/t$o;
+.implements Lcom/vk/lists/PaginationHelper$o;
 
 
 # annotations
@@ -19,8 +19,8 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Ljava/lang/Object;",
-        "Lcom/vk/lists/t$o<",
-        "Lb/h/c/n/f$b;",
+        "Lcom/vk/lists/PaginationHelper$o<",
+        "Lcom/vk/api/apps/AppsSearch$b;",
         ">;"
     }
 .end annotation
@@ -49,21 +49,21 @@
 
 
 # virtual methods
-.method public a(ILcom/vk/lists/t;)Lc/a/m;
+.method public a(ILcom/vk/lists/PaginationHelper;)Lio/reactivex/Observable;
     .locals 7
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(I",
-            "Lcom/vk/lists/t;",
+            "Lcom/vk/lists/PaginationHelper;",
             ")",
-            "Lc/a/m<",
-            "Lb/h/c/n/f$b;",
+            "Lio/reactivex/Observable<",
+            "Lcom/vk/api/apps/AppsSearch$b;",
             ">;"
         }
     .end annotation
 
     .line 2
-    new-instance p2, Lb/h/c/n/f;
+    new-instance p2, Lcom/vk/api/apps/AppsSearch;
 
     iget-object v0, p0, Lcom/vk/apps/AppsFragment$searchDataProvider$1;->a:Lcom/vk/apps/AppsFragment;
 
@@ -85,34 +85,34 @@
 
     move v3, p1
 
-    invoke-direct/range {v0 .. v6}, Lb/h/c/n/f;-><init>(Ljava/lang/String;Ljava/util/Collection;IIILkotlin/jvm/internal/i;)V
+    invoke-direct/range {v0 .. v6}, Lcom/vk/api/apps/AppsSearch;-><init>(Ljava/lang/String;Ljava/util/Collection;IIILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     const/4 p1, 0x0
 
     const/4 v0, 0x1
 
-    invoke-static {p2, p1, v0, p1}, Lcom/vk/api/base/d;->d(Lcom/vk/api/base/d;Lcom/vk/api/base/e;ILjava/lang/Object;)Lc/a/m;
+    invoke-static {p2, p1, v0, p1}, Lcom/vk/api/base/ApiRequest;->d(Lcom/vk/api/base/ApiRequest;Lcom/vk/api/base/ApiThreadHolder;ILjava/lang/Object;)Lio/reactivex/Observable;
 
     move-result-object p1
 
     return-object p1
 .end method
 
-.method public a(Lcom/vk/lists/t;Z)Lc/a/m;
+.method public a(Lcom/vk/lists/PaginationHelper;Z)Lio/reactivex/Observable;
     .locals 7
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lcom/vk/lists/t;",
+            "Lcom/vk/lists/PaginationHelper;",
             "Z)",
-            "Lc/a/m<",
-            "Lb/h/c/n/f$b;",
+            "Lio/reactivex/Observable<",
+            "Lcom/vk/api/apps/AppsSearch$b;",
             ">;"
         }
     .end annotation
 
     .line 1
-    new-instance p1, Lb/h/c/n/f;
+    new-instance p1, Lcom/vk/api/apps/AppsSearch;
 
     iget-object p2, p0, Lcom/vk/apps/AppsFragment$searchDataProvider$1;->a:Lcom/vk/apps/AppsFragment;
 
@@ -134,28 +134,28 @@
 
     move-object v0, p1
 
-    invoke-direct/range {v0 .. v6}, Lb/h/c/n/f;-><init>(Ljava/lang/String;Ljava/util/Collection;IIILkotlin/jvm/internal/i;)V
+    invoke-direct/range {v0 .. v6}, Lcom/vk/api/apps/AppsSearch;-><init>(Ljava/lang/String;Ljava/util/Collection;IIILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     const/4 p2, 0x0
 
     const/4 v0, 0x1
 
-    invoke-static {p1, p2, v0, p2}, Lcom/vk/api/base/d;->d(Lcom/vk/api/base/d;Lcom/vk/api/base/e;ILjava/lang/Object;)Lc/a/m;
+    invoke-static {p1, p2, v0, p2}, Lcom/vk/api/base/ApiRequest;->d(Lcom/vk/api/base/ApiRequest;Lcom/vk/api/base/ApiThreadHolder;ILjava/lang/Object;)Lio/reactivex/Observable;
 
     move-result-object p1
 
     return-object p1
 .end method
 
-.method public a(Lc/a/m;ZLcom/vk/lists/t;)V
+.method public a(Lio/reactivex/Observable;ZLcom/vk/lists/PaginationHelper;)V
     .locals 6
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lc/a/m<",
-            "Lb/h/c/n/f$b;",
+            "Lio/reactivex/Observable<",
+            "Lcom/vk/api/apps/AppsSearch$b;",
             ">;Z",
-            "Lcom/vk/lists/t;",
+            "Lcom/vk/lists/PaginationHelper;",
             ")V"
         }
     .end annotation
@@ -163,7 +163,7 @@
     .line 3
     iget-object p3, p0, Lcom/vk/apps/AppsFragment$searchDataProvider$1;->a:Lcom/vk/apps/AppsFragment;
 
-    invoke-static {p3}, Lcom/vk/apps/AppsFragment;->d(Lcom/vk/apps/AppsFragment;)Lio/reactivex/disposables/a;
+    invoke-static {p3}, Lcom/vk/apps/AppsFragment;->d(Lcom/vk/apps/AppsFragment;)Lio/reactivex/disposables/CompositeDisposable;
 
     move-result-object p3
 
@@ -183,11 +183,11 @@
     move-object v0, p1
 
     .line 5
-    invoke-static/range {v0 .. v5}, Lio/reactivex/rxkotlin/SubscribersKt;->a(Lc/a/m;Lkotlin/jvm/b/b;Lkotlin/jvm/b/a;Lkotlin/jvm/b/b;ILjava/lang/Object;)Lio/reactivex/disposables/b;
+    invoke-static/range {v0 .. v5}, Lio/reactivex/rxkotlin/SubscribersKt;->a(Lio/reactivex/Observable;Lkotlin/jvm/b/Functions2;Lkotlin/jvm/b/Functions;Lkotlin/jvm/b/Functions2;ILjava/lang/Object;)Lio/reactivex/disposables/Disposable;
 
     move-result-object p1
 
-    invoke-static {p3, p1}, Lcom/vk/core/extensions/RxExtKt;->a(Lio/reactivex/disposables/a;Lio/reactivex/disposables/b;)V
+    invoke-static {p3, p1}, Lcom/vk/core/extensions/RxExtKt;->a(Lio/reactivex/disposables/CompositeDisposable;Lio/reactivex/disposables/Disposable;)V
 
     return-void
 .end method

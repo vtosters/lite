@@ -3,7 +3,7 @@
 .source "HeaderPhotosItem.kt"
 
 # interfaces
-.implements Lc/a/z/g;
+.implements Lio/reactivex/functions/Consumer;
 
 
 # annotations
@@ -22,7 +22,7 @@
         "Ljava/lang/Object;",
         ">",
         "Ljava/lang/Object;",
-        "Lc/a/z/g<",
+        "Lio/reactivex/functions/Consumer<",
         "Lcom/vk/dto/common/data/VKList<",
         "Lcom/vk/dto/photo/Photo;",
         ">;>;"
@@ -78,20 +78,20 @@
 
     const-string v2, "photos"
 
-    invoke-static {p1, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-interface {v1, p1}, Ljava/util/List;->addAll(Ljava/util/Collection;)Z
 
     .line 3
     iget-object v1, p0, Lcom/vk/profile/adapter/items/HeaderPhotosItem$HeaderPhotosHolder$d;->a:Lcom/vk/profile/adapter/items/HeaderPhotosItem$HeaderPhotosHolder;
 
-    invoke-static {v1}, Lcom/vk/profile/adapter/items/HeaderPhotosItem$HeaderPhotosHolder;->e(Lcom/vk/profile/adapter/items/HeaderPhotosItem$HeaderPhotosHolder;)Lcom/vk/bridges/p$d;
+    invoke-static {v1}, Lcom/vk/profile/adapter/items/HeaderPhotosItem$HeaderPhotosHolder;->e(Lcom/vk/profile/adapter/items/HeaderPhotosItem$HeaderPhotosHolder;)Lcom/vk/bridges/ImageViewer$d;
 
     move-result-object v1
 
     if-eqz v1, :cond_0
 
-    invoke-interface {v1, p1}, Lcom/vk/bridges/p$d;->a(Ljava/util/List;)V
+    invoke-interface {v1, p1}, Lcom/vk/bridges/ImageViewer$d;->a(Ljava/util/List;)V
 
     .line 4
     :cond_0
@@ -163,7 +163,7 @@
 
     const-string v5, "it.getImageByWidth(imageSize)"
 
-    invoke-static {v4, v5}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v4, v5}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {v4}, Lcom/vk/dto/common/ImageSize;->v1()Ljava/lang/String;
 

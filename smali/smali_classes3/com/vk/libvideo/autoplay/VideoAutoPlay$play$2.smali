@@ -3,7 +3,7 @@
 .source "VideoAutoPlay.kt"
 
 # interfaces
-.implements Lc/a/z/g;
+.implements Lio/reactivex/functions/Consumer;
 
 
 # annotations
@@ -22,7 +22,7 @@
         "Ljava/lang/Object;",
         ">",
         "Ljava/lang/Object;",
-        "Lc/a/z/g<",
+        "Lio/reactivex/functions/Consumer<",
         "Lcom/vk/libvideo/autoplay/VideoAutoPlay$b;",
         ">;"
     }
@@ -53,7 +53,7 @@
 
     move-result-object v0
 
-    invoke-virtual {p1}, Lcom/vk/libvideo/autoplay/VideoAutoPlay$b;->b()Lcom/vk/media/player/video/e;
+    invoke-virtual {p1}, Lcom/vk/libvideo/autoplay/VideoAutoPlay$b;->b()Lcom/vk/media/player/video/ExoVideoSource2;
 
     move-result-object v7
 
@@ -64,7 +64,7 @@
     .line 1
     iget-object v1, p0, Lcom/vk/libvideo/autoplay/VideoAutoPlay$play$2;->a:Lcom/vk/libvideo/autoplay/VideoAutoPlay;
 
-    invoke-virtual {v7}, Lcom/vk/media/player/video/e;->i()I
+    invoke-virtual {v7}, Lcom/vk/media/player/video/ExoVideoSource2;->i()I
 
     move-result v2
 
@@ -78,7 +78,7 @@
     .line 3
     iget-object v1, p0, Lcom/vk/libvideo/autoplay/VideoAutoPlay$play$2;->a:Lcom/vk/libvideo/autoplay/VideoAutoPlay;
 
-    invoke-static {v1, v7}, Lcom/vk/libvideo/autoplay/VideoAutoPlay;->b(Lcom/vk/libvideo/autoplay/VideoAutoPlay;Lcom/vk/media/player/video/e;)V
+    invoke-static {v1, v7}, Lcom/vk/libvideo/autoplay/VideoAutoPlay;->b(Lcom/vk/libvideo/autoplay/VideoAutoPlay;Lcom/vk/media/player/video/ExoVideoSource2;)V
 
     .line 4
     sget-object v1, Lcom/vk/libvideo/ad/AdState;->NO_AD:Lcom/vk/libvideo/ad/AdState;
@@ -117,7 +117,7 @@
 
     if-eqz p1, :cond_1
 
-    invoke-virtual {p1}, Lcom/vk/libvideo/ad/AdDelegate;->b()Lcom/vk/libvideo/ad/b;
+    invoke-virtual {p1}, Lcom/vk/libvideo/ad/AdDelegate;->b()Lcom/vk/libvideo/ad/AdBannerData;
 
     move-result-object p1
 
@@ -168,7 +168,7 @@
 
     if-eqz v0, :cond_4
 
-    invoke-virtual {v0}, Lcom/vk/libvideo/ad/AdDelegate;->b()Lcom/vk/libvideo/ad/b;
+    invoke-virtual {v0}, Lcom/vk/libvideo/ad/AdDelegate;->b()Lcom/vk/libvideo/ad/AdBannerData;
 
     move-result-object v2
 
@@ -184,7 +184,7 @@
 
     move-result-object v0
 
-    invoke-virtual {v0, v2}, Lcom/vk/libvideo/autoplay/VideoUIEventDispatcher;->a(Lcom/vk/libvideo/ad/b;)V
+    invoke-virtual {v0, v2}, Lcom/vk/libvideo/autoplay/VideoUIEventDispatcher;->a(Lcom/vk/libvideo/ad/AdBannerData;)V
 
     .line 12
     iget-object v0, p0, Lcom/vk/libvideo/autoplay/VideoAutoPlay$play$2;->a:Lcom/vk/libvideo/autoplay/VideoAutoPlay;
@@ -249,7 +249,7 @@
 
     .line 18
     :cond_8
-    sget-object v1, Lcom/vk/media/player/c;->e:Lcom/vk/media/player/c;
+    sget-object v1, Lcom/vk/media/player/PlayerFactory;->e:Lcom/vk/media/player/PlayerFactory;
 
     .line 19
     invoke-virtual {v0}, Lcom/vk/dto/common/VideoFile;->J1()Ljava/lang/String;
@@ -258,7 +258,7 @@
 
     const-string p1, "videoFile.uniqueKey()"
 
-    invoke-static {v2, p1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v2, p1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 20
     iget-object v4, p0, Lcom/vk/libvideo/autoplay/VideoAutoPlay$play$2;->a:Lcom/vk/libvideo/autoplay/VideoAutoPlay;
@@ -273,7 +273,7 @@
     move-object v3, v7
 
     .line 22
-    invoke-virtual/range {v1 .. v6}, Lcom/vk/media/player/c;->a(Ljava/lang/String;Lcom/vk/media/player/video/b;Lcom/vk/media/player/i;ZLkotlin/jvm/b/b;)Lcom/vk/media/player/ExoPlayerBase;
+    invoke-virtual/range {v1 .. v6}, Lcom/vk/media/player/PlayerFactory;->a(Ljava/lang/String;Lcom/vk/media/player/video/ExoVideoSource1;Lcom/vk/media/player/StateListener;ZLkotlin/jvm/b/Functions2;)Lcom/vk/media/player/ExoPlayerBase;
 
     move-result-object p1
 
@@ -282,7 +282,7 @@
     .line 23
     iget-object v0, p0, Lcom/vk/libvideo/autoplay/VideoAutoPlay$play$2;->a:Lcom/vk/libvideo/autoplay/VideoAutoPlay;
 
-    invoke-static {v0, v7}, Lcom/vk/libvideo/autoplay/VideoAutoPlay;->a(Lcom/vk/libvideo/autoplay/VideoAutoPlay;Lcom/vk/media/player/video/e;)V
+    invoke-static {v0, v7}, Lcom/vk/libvideo/autoplay/VideoAutoPlay;->a(Lcom/vk/libvideo/autoplay/VideoAutoPlay;Lcom/vk/media/player/video/ExoVideoSource2;)V
 
     .line 24
     iget-object v0, p0, Lcom/vk/libvideo/autoplay/VideoAutoPlay$play$2;->a:Lcom/vk/libvideo/autoplay/VideoAutoPlay;
@@ -340,7 +340,7 @@
 
     iget-object v0, p0, Lcom/vk/libvideo/autoplay/VideoAutoPlay$play$2;->a:Lcom/vk/libvideo/autoplay/VideoAutoPlay;
 
-    invoke-virtual {p1, v0}, Lcom/vk/libvideo/autoplay/VideoUIEventDispatcher;->a(Lcom/vk/libvideo/autoplay/a;)V
+    invoke-virtual {p1, v0}, Lcom/vk/libvideo/autoplay/VideoUIEventDispatcher;->a(Lcom/vk/libvideo/autoplay/AutoPlay;)V
 
     .line 29
     :cond_b

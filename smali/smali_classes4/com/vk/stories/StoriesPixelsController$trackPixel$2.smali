@@ -3,7 +3,7 @@
 .source "StoriesPixelsController.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/b;
+.implements Lkotlin/jvm/b/Functions2;
 
 
 # annotations
@@ -19,8 +19,8 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/b<",
-        "Lcom/vk/dto/stories/model/d;",
+        "Lkotlin/jvm/b/Functions2<",
+        "Lcom/vk/dto/stories/model/StoryAdsStatAction;",
         "Ljava/lang/String;",
         ">;"
     }
@@ -56,11 +56,11 @@
 
 
 # virtual methods
-.method public final a(Lcom/vk/dto/stories/model/d;)Ljava/lang/String;
+.method public final a(Lcom/vk/dto/stories/model/StoryAdsStatAction;)Ljava/lang/String;
     .locals 0
 
     .line 1
-    invoke-virtual {p1}, Lcom/vk/dto/stories/model/d;->b()Ljava/lang/String;
+    invoke-virtual {p1}, Lcom/vk/dto/stories/model/StoryAdsStatAction;->b()Ljava/lang/String;
 
     move-result-object p1
 
@@ -71,9 +71,9 @@
     .locals 0
 
     .line 1
-    check-cast p1, Lcom/vk/dto/stories/model/d;
+    check-cast p1, Lcom/vk/dto/stories/model/StoryAdsStatAction;
 
-    invoke-virtual {p0, p1}, Lcom/vk/stories/StoriesPixelsController$trackPixel$2;->a(Lcom/vk/dto/stories/model/d;)Ljava/lang/String;
+    invoke-virtual {p0, p1}, Lcom/vk/stories/StoriesPixelsController$trackPixel$2;->a(Lcom/vk/dto/stories/model/StoryAdsStatAction;)Ljava/lang/String;
 
     move-result-object p1
 

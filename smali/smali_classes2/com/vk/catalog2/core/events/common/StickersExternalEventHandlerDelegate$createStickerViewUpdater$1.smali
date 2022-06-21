@@ -3,12 +3,12 @@
 .source "StickersExternalEventHandlerDelegate.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/c;
+.implements Lkotlin/jvm/b/Functions1;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/catalog2/core/events/common/StickersExternalEventHandlerDelegate;->c(Ljava/lang/String;)Lkotlin/jvm/b/c;
+    value = Lcom/vk/catalog2/core/events/common/StickersExternalEventHandlerDelegate;->c(Ljava/lang/String;)Lkotlin/jvm/b/Functions1;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -19,9 +19,9 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/c<",
+        "Lkotlin/jvm/b/Functions1<",
         "Lcom/vk/catalog2/core/blocks/UIBlock;",
-        "Lcom/vk/lists/t;",
+        "Lcom/vk/lists/PaginationHelper;",
         "Lcom/vk/catalog2/core/blocks/UIBlockList;",
         ">;"
     }
@@ -51,7 +51,7 @@
 
 
 # virtual methods
-.method public final a(Lcom/vk/catalog2/core/blocks/UIBlock;Lcom/vk/lists/t;)Lcom/vk/catalog2/core/blocks/UIBlockList;
+.method public final a(Lcom/vk/catalog2/core/blocks/UIBlock;Lcom/vk/lists/PaginationHelper;)Lcom/vk/catalog2/core/blocks/UIBlockList;
     .locals 8
 
     .line 2
@@ -71,7 +71,7 @@
     move-result-object v0
 
     .line 4
-    invoke-static {v0}, Lkotlin/collections/l;->a(Ljava/util/Collection;)Lkotlin/t/d;
+    invoke-static {v0}, Lkotlin/collections/l;->a(Ljava/util/Collection;)Lkotlin/t/Ranges1;
 
     move-result-object v1
 
@@ -282,7 +282,7 @@
 
     sget-object v1, Lcom/vk/catalog2/core/events/common/StickersExternalEventHandlerDelegate$createStickerViewUpdater$1$2;->a:Lcom/vk/catalog2/core/events/common/StickersExternalEventHandlerDelegate$createStickerViewUpdater$1$2;
 
-    invoke-static {p2, p1, v0, v1}, Lcom/vk/catalog2/core/events/common/StickersExternalEventHandlerDelegate;->a(Lcom/vk/catalog2/core/events/common/StickersExternalEventHandlerDelegate;Lcom/vk/catalog2/core/blocks/UIBlockList;Ljava/lang/String;Lkotlin/jvm/b/b;)V
+    invoke-static {p2, p1, v0, v1}, Lcom/vk/catalog2/core/events/common/StickersExternalEventHandlerDelegate;->a(Lcom/vk/catalog2/core/events/common/StickersExternalEventHandlerDelegate;Lcom/vk/catalog2/core/blocks/UIBlockList;Ljava/lang/String;Lkotlin/jvm/b/Functions2;)V
 
     .line 16
     invoke-virtual {p1}, Lcom/vk/catalog2/core/blocks/UIBlockList;->B1()Ljava/util/ArrayList;
@@ -345,7 +345,7 @@
 
     sget-object v3, Lcom/vk/catalog2/core/events/common/StickersExternalEventHandlerDelegate$createStickerViewUpdater$1$3$1;->a:Lcom/vk/catalog2/core/events/common/StickersExternalEventHandlerDelegate$createStickerViewUpdater$1$3$1;
 
-    invoke-static {v1, v0, v2, v3}, Lcom/vk/catalog2/core/events/common/StickersExternalEventHandlerDelegate;->a(Lcom/vk/catalog2/core/events/common/StickersExternalEventHandlerDelegate;Lcom/vk/catalog2/core/blocks/UIBlockList;Ljava/lang/String;Lkotlin/jvm/b/b;)V
+    invoke-static {v1, v0, v2, v3}, Lcom/vk/catalog2/core/events/common/StickersExternalEventHandlerDelegate;->a(Lcom/vk/catalog2/core/events/common/StickersExternalEventHandlerDelegate;Lcom/vk/catalog2/core/blocks/UIBlockList;Ljava/lang/String;Lkotlin/jvm/b/Functions2;)V
 
     goto :goto_5
 
@@ -367,9 +367,9 @@
     .line 1
     check-cast p1, Lcom/vk/catalog2/core/blocks/UIBlock;
 
-    check-cast p2, Lcom/vk/lists/t;
+    check-cast p2, Lcom/vk/lists/PaginationHelper;
 
-    invoke-virtual {p0, p1, p2}, Lcom/vk/catalog2/core/events/common/StickersExternalEventHandlerDelegate$createStickerViewUpdater$1;->a(Lcom/vk/catalog2/core/blocks/UIBlock;Lcom/vk/lists/t;)Lcom/vk/catalog2/core/blocks/UIBlockList;
+    invoke-virtual {p0, p1, p2}, Lcom/vk/catalog2/core/events/common/StickersExternalEventHandlerDelegate$createStickerViewUpdater$1;->a(Lcom/vk/catalog2/core/blocks/UIBlock;Lcom/vk/lists/PaginationHelper;)Lcom/vk/catalog2/core/blocks/UIBlockList;
 
     move-result-object p1
 

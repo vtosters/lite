@@ -12,7 +12,7 @@
 
 
 # static fields
-.field private static final a:Lcom/vtosters/lite/im/notifications/c;
+.field private static final a:Lcom/vtosters/lite/im/notifications/InfoLoader;
 
 .field public static final b:Lcom/vk/pushes/FirebasePushService$a;
 
@@ -25,18 +25,18 @@
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, v1}, Lcom/vk/pushes/FirebasePushService$a;-><init>(Lkotlin/jvm/internal/i;)V
+    invoke-direct {v0, v1}, Lcom/vk/pushes/FirebasePushService$a;-><init>(Lkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     sput-object v0, Lcom/vk/pushes/FirebasePushService;->b:Lcom/vk/pushes/FirebasePushService$a;
 
     .line 1
-    new-instance v0, Lcom/vtosters/lite/im/notifications/c;
+    new-instance v0, Lcom/vtosters/lite/im/notifications/InfoLoader;
 
     sget-object v1, Lcom/vk/im/engine/models/Source;->CACHE:Lcom/vk/im/engine/models/Source;
 
-    invoke-direct {v0, v1}, Lcom/vtosters/lite/im/notifications/c;-><init>(Lcom/vk/im/engine/models/Source;)V
+    invoke-direct {v0, v1}, Lcom/vtosters/lite/im/notifications/InfoLoader;-><init>(Lcom/vk/im/engine/models/Source;)V
 
-    sput-object v0, Lcom/vk/pushes/FirebasePushService;->a:Lcom/vtosters/lite/im/notifications/c;
+    sput-object v0, Lcom/vk/pushes/FirebasePushService;->a:Lcom/vtosters/lite/im/notifications/InfoLoader;
 
     return-void
 .end method
@@ -192,7 +192,7 @@
     const-string p2, "erase_messages"
 
     .line 32
-    invoke-static {p2, p1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {p2, p1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result p1
 
@@ -203,7 +203,7 @@
 
     const-string v1, "items.keys()"
 
-    invoke-static {p2, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p2, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     :goto_0
     invoke-interface {p2}, Ljava/util/Iterator;->hasNext()Z
@@ -219,7 +219,7 @@
     check-cast v1, Ljava/lang/String;
 
     .line 34
-    invoke-static {v1}, Lcom/vk/core/extensions/z;->i(Ljava/lang/String;)I
+    invoke-static {v1}, Lcom/vk/core/extensions/StringExt;->i(Ljava/lang/String;)I
 
     move-result v3
 
@@ -229,14 +229,14 @@
     move-result v1
 
     .line 36
-    sget-object v4, Lcom/vk/pushes/j/c;->b:Lcom/vk/pushes/j/c;
+    sget-object v4, Lcom/vk/pushes/j/MessageNotificationHelper;->b:Lcom/vk/pushes/j/MessageNotificationHelper;
 
-    invoke-virtual {v4, p0, v3, v1, p1}, Lcom/vk/pushes/j/c;->a(Landroid/content/Context;IIZ)V
+    invoke-virtual {v4, p0, v3, v1, p1}, Lcom/vk/pushes/j/MessageNotificationHelper;->a(Landroid/content/Context;IIZ)V
 
     .line 37
-    sget-object v4, Lcom/vk/pushes/j/a;->b:Lcom/vk/pushes/j/a;
+    sget-object v4, Lcom/vk/pushes/j/BusinessNotifyNotificationHelper;->b:Lcom/vk/pushes/j/BusinessNotifyNotificationHelper;
 
-    invoke-virtual {v4, p0, v3, v1}, Lcom/vk/pushes/j/a;->a(Landroid/content/Context;II)V
+    invoke-virtual {v4, p0, v3, v1}, Lcom/vk/pushes/j/BusinessNotifyNotificationHelper;->a(Landroid/content/Context;II)V
 
     goto :goto_0
 
@@ -358,7 +358,7 @@
     if-eqz v4, :cond_1
 
     .line 15
-    invoke-static {}, Lcom/vk/pushes/f;->a()Lcom/vk/pushes/e;
+    invoke-static {}, Lcom/vk/pushes/PushBridge1;->a()Lcom/vk/pushes/PushBridge;
 
     move-result-object v1
 
@@ -386,7 +386,7 @@
 
     move-object v5, p2
 
-    invoke-interface/range {v1 .. v6}, Lcom/vk/pushes/e;->a(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-interface/range {v1 .. v6}, Lcom/vk/pushes/PushBridge;->a(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
 
     :cond_1
     return-void
@@ -414,9 +414,9 @@
     move-result v3
 
     .line 4
-    sget-object v0, Lcom/vk/pushes/j/b;->d:Lcom/vk/pushes/j/b;
+    sget-object v0, Lcom/vk/pushes/j/DndHelper;->d:Lcom/vk/pushes/j/DndHelper;
 
-    invoke-virtual {v0, p0, v3}, Lcom/vk/pushes/j/b;->b(Landroid/content/Context;I)Z
+    invoke-virtual {v0, p0, v3}, Lcom/vk/pushes/j/DndHelper;->b(Landroid/content/Context;I)Z
 
     move-result v0
 
@@ -505,11 +505,11 @@
 
     .line 10
     :goto_2
-    sget-object v1, Lcom/vk/pushes/j/c;->b:Lcom/vk/pushes/j/c;
+    sget-object v1, Lcom/vk/pushes/j/MessageNotificationHelper;->b:Lcom/vk/pushes/j/MessageNotificationHelper;
 
     move-object v2, p0
 
-    invoke-virtual/range {v1 .. v6}, Lcom/vk/pushes/j/c;->a(Landroid/content/Context;IILjava/lang/String;Ljava/lang/String;)V
+    invoke-virtual/range {v1 .. v6}, Lcom/vk/pushes/j/MessageNotificationHelper;->a(Landroid/content/Context;IILjava/lang/String;Ljava/lang/String;)V
 
     return-void
 .end method
@@ -528,7 +528,7 @@
 
     const/4 v1, 0x0
 
-    invoke-static {v1, v0}, Lkotlin/t/e;->d(II)Lkotlin/t/d;
+    invoke-static {v1, v0}, Lkotlin/t/e;->d(II)Lkotlin/t/Ranges1;
 
     move-result-object v0
 
@@ -557,9 +557,9 @@
 
     move-object v3, v0
 
-    check-cast v3, Lkotlin/collections/a0;
+    check-cast v3, Lkotlin/collections/Iterators1;
 
-    invoke-virtual {v3}, Lkotlin/collections/a0;->a()I
+    invoke-virtual {v3}, Lkotlin/collections/Iterators1;->a()I
 
     move-result v3
 
@@ -574,9 +574,9 @@
 
     .line 23
     :cond_0
-    sget-object p1, Lcom/vk/pushes/j/e;->a:Lcom/vk/pushes/j/e;
+    sget-object p1, Lcom/vk/pushes/j/NotificationHelper;->a:Lcom/vk/pushes/j/NotificationHelper;
 
-    invoke-virtual {p1, p0}, Lcom/vk/pushes/j/e;->d(Landroid/content/Context;)Landroid/app/NotificationManager;
+    invoke-virtual {p1, p0}, Lcom/vk/pushes/j/NotificationHelper;->d(Landroid/content/Context;)Landroid/app/NotificationManager;
 
     move-result-object p1
 
@@ -586,7 +586,7 @@
 
     const-string v0, "NotificationHelper.getNo\u2026this).activeNotifications"
 
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 24
     array-length v0, p1
@@ -599,7 +599,7 @@
     const-string v4, "it"
 
     .line 25
-    invoke-static {v3, v4}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v3, v4}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {v3}, Landroid/service/notification/StatusBarNotification;->getNotification()Landroid/app/Notification;
 
@@ -621,7 +621,7 @@
     if-eqz v4, :cond_1
 
     .line 27
-    sget-object v5, Lcom/vk/pushes/j/e;->a:Lcom/vk/pushes/j/e;
+    sget-object v5, Lcom/vk/pushes/j/NotificationHelper;->a:Lcom/vk/pushes/j/NotificationHelper;
 
     invoke-virtual {v3}, Landroid/service/notification/StatusBarNotification;->getTag()Ljava/lang/String;
 
@@ -629,7 +629,7 @@
 
     const-string v3, "it.tag"
 
-    invoke-static {v7, v3}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v7, v3}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     const/4 v8, 0x0
 
@@ -639,7 +639,7 @@
 
     move-object v6, p0
 
-    invoke-static/range {v5 .. v10}, Lcom/vk/pushes/j/e;->a(Lcom/vk/pushes/j/e;Landroid/content/Context;Ljava/lang/String;IILjava/lang/Object;)V
+    invoke-static/range {v5 .. v10}, Lcom/vk/pushes/j/NotificationHelper;->a(Lcom/vk/pushes/j/NotificationHelper;Landroid/content/Context;Ljava/lang/String;IILjava/lang/Object;)V
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
@@ -703,9 +703,9 @@
     check-cast v0, Ljava/lang/String;
 
     .line 2
-    sget-object v1, Lcom/vk/pushes/j/f;->i:Lcom/vk/pushes/j/f;
+    sget-object v1, Lcom/vk/pushes/j/PushTypes;->i:Lcom/vk/pushes/j/PushTypes;
 
-    invoke-virtual {v1, v0}, Lcom/vk/pushes/j/f;->a(Ljava/lang/String;)Z
+    invoke-virtual {v1, v0}, Lcom/vk/pushes/j/PushTypes;->a(Ljava/lang/String;)Z
 
     move-result v0
 
@@ -715,9 +715,9 @@
 
     if-eqz v0, :cond_0
 
-    sget-object v0, Lcom/vk/pushes/j/b;->d:Lcom/vk/pushes/j/b;
+    sget-object v0, Lcom/vk/pushes/j/DndHelper;->d:Lcom/vk/pushes/j/DndHelper;
 
-    invoke-virtual {v0}, Lcom/vk/pushes/j/b;->d()Z
+    invoke-virtual {v0}, Lcom/vk/pushes/j/DndHelper;->d()Z
 
     move-result v0
 
@@ -806,9 +806,9 @@
     invoke-static {v0}, Lcom/vk/log/L;->a([Ljava/lang/Object;)V
 
     .line 9
-    sget-object v0, Lcom/vk/pushes/j/d;->a:Lcom/vk/pushes/j/d;
+    sget-object v0, Lcom/vk/pushes/j/NotificationBuilder;->a:Lcom/vk/pushes/j/NotificationBuilder;
 
-    invoke-virtual {v0, p0, p1}, Lcom/vk/pushes/j/d;->a(Landroid/content/Context;Ljava/util/Map;)Lcom/vk/pushes/notifications/base/BaseNotification;
+    invoke-virtual {v0, p0, p1}, Lcom/vk/pushes/j/NotificationBuilder;->a(Landroid/content/Context;Ljava/util/Map;)Lcom/vk/pushes/notifications/base/BaseNotification;
 
     move-result-object p1
 
@@ -834,9 +834,9 @@
     invoke-static {v0}, Lcom/vk/log/L;->a([Ljava/lang/Object;)V
 
     .line 11
-    sget-object v0, Lcom/vk/pushes/j/e;->a:Lcom/vk/pushes/j/e;
+    sget-object v0, Lcom/vk/pushes/j/NotificationHelper;->a:Lcom/vk/pushes/j/NotificationHelper;
 
-    invoke-virtual {v0, p0}, Lcom/vk/pushes/j/e;->d(Landroid/content/Context;)Landroid/app/NotificationManager;
+    invoke-virtual {v0, p0}, Lcom/vk/pushes/j/NotificationHelper;->d(Landroid/content/Context;)Landroid/app/NotificationManager;
 
     move-result-object v0
 
@@ -859,7 +859,7 @@
 
     const/4 v1, 0x0
 
-    invoke-static {v1, v0}, Lkotlin/t/e;->d(II)Lkotlin/t/d;
+    invoke-static {v1, v0}, Lkotlin/t/e;->d(II)Lkotlin/t/Ranges1;
 
     move-result-object v0
 
@@ -888,9 +888,9 @@
 
     move-object v2, v0
 
-    check-cast v2, Lkotlin/collections/a0;
+    check-cast v2, Lkotlin/collections/Iterators1;
 
-    invoke-virtual {v2}, Lkotlin/collections/a0;->a()I
+    invoke-virtual {v2}, Lkotlin/collections/Iterators1;->a()I
 
     move-result v2
 
@@ -925,11 +925,11 @@
     check-cast v3, Ljava/lang/String;
 
     .line 18
-    sget-object v1, Lcom/vk/pushes/j/e;->a:Lcom/vk/pushes/j/e;
+    sget-object v1, Lcom/vk/pushes/j/NotificationHelper;->a:Lcom/vk/pushes/j/NotificationHelper;
 
     const-string v0, "it"
 
-    invoke-static {v3, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v3, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     const/4 v4, 0x0
 
@@ -939,7 +939,7 @@
 
     move-object v2, p0
 
-    invoke-static/range {v1 .. v6}, Lcom/vk/pushes/j/e;->a(Lcom/vk/pushes/j/e;Landroid/content/Context;Ljava/lang/String;IILjava/lang/Object;)V
+    invoke-static/range {v1 .. v6}, Lcom/vk/pushes/j/NotificationHelper;->a(Lcom/vk/pushes/j/NotificationHelper;Landroid/content/Context;Ljava/lang/String;IILjava/lang/Object;)V
 
     goto :goto_1
 
@@ -1015,13 +1015,13 @@
     move-result v1
 
     .line 6
-    sget-object v4, Lcom/vk/pushes/i/a;->a:Lcom/vk/pushes/i/a;
+    sget-object v4, Lcom/vk/pushes/i/BusinessNotifyNotificationCache;->a:Lcom/vk/pushes/i/BusinessNotifyNotificationCache;
 
     invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v5
 
-    invoke-virtual {v4, v5}, Lcom/vk/pushes/i/a;->a(Ljava/lang/Integer;)Ljava/util/List;
+    invoke-virtual {v4, v5}, Lcom/vk/pushes/i/BusinessNotifyNotificationCache;->a(Ljava/lang/Integer;)Ljava/util/List;
 
     move-result-object v4
 
@@ -1121,13 +1121,13 @@
 
     .line 11
     :cond_5
-    sget-object v4, Lcom/vk/pushes/FirebasePushService;->a:Lcom/vtosters/lite/im/notifications/c;
+    sget-object v4, Lcom/vk/pushes/FirebasePushService;->a:Lcom/vtosters/lite/im/notifications/InfoLoader;
 
-    invoke-static {}, Lcom/vk/im/engine/c;->a()Lcom/vk/im/engine/a;
+    invoke-static {}, Lcom/vk/im/engine/ImEngine1;->a()Lcom/vk/im/engine/ImEngine;
 
     move-result-object v6
 
-    invoke-virtual {v4, v6, v2, v1}, Lcom/vtosters/lite/im/notifications/c;->a(Lcom/vk/im/engine/a;II)Z
+    invoke-virtual {v4, v6, v2, v1}, Lcom/vtosters/lite/im/notifications/InfoLoader;->a(Lcom/vk/im/engine/ImEngine;II)Z
 
     move-result v1
 
@@ -1183,9 +1183,9 @@
     invoke-static {v1}, Lcom/vk/log/L;->a([Ljava/lang/Object;)V
 
     .line 14
-    sget-object v1, Lcom/vk/pushes/i/a;->a:Lcom/vk/pushes/i/a;
+    sget-object v1, Lcom/vk/pushes/i/BusinessNotifyNotificationCache;->a:Lcom/vk/pushes/i/BusinessNotifyNotificationCache;
 
-    invoke-virtual {v1, p1}, Lcom/vk/pushes/i/a;->a(Ljava/util/Map;)V
+    invoke-virtual {v1, p1}, Lcom/vk/pushes/i/BusinessNotifyNotificationCache;->a(Ljava/util/Map;)V
 
     new-array v0, v0, [Ljava/lang/Object;
 
@@ -1292,9 +1292,9 @@
     invoke-static {v1}, Lcom/vk/log/L;->a([Ljava/lang/Object;)V
 
     .line 2
-    sget-object v1, Lcom/vk/core/network/interceptors/d;->f:Lcom/vk/core/network/interceptors/d;
+    sget-object v1, Lcom/vk/core/network/interceptors/UndesirableBackgroundTrafficInterceptor;->f:Lcom/vk/core/network/interceptors/UndesirableBackgroundTrafficInterceptor;
 
-    invoke-virtual {v1}, Lcom/vk/core/network/interceptors/d;->a()V
+    invoke-virtual {v1}, Lcom/vk/core/network/interceptors/UndesirableBackgroundTrafficInterceptor;->a()V
 
     const/4 v1, 0x0
 
@@ -1312,18 +1312,18 @@
 
     check-cast v2, Ljava/lang/String;
 
-    invoke-static {v2}, Lcom/vk/core/extensions/z;->i(Ljava/lang/String;)I
+    invoke-static {v2}, Lcom/vk/core/extensions/StringExt;->i(Ljava/lang/String;)I
 
     move-result v2
 
     if-eqz v2, :cond_b
 
     .line 5
-    invoke-static {}, Lcom/vk/bridges/g;->a()Lcom/vk/bridges/f;
+    invoke-static {}, Lcom/vk/bridges/AuthBridge;->a()Lcom/vk/bridges/AuthBridge3;
 
     move-result-object v3
 
-    invoke-interface {v3, v2}, Lcom/vk/bridges/f;->b(I)Z
+    invoke-interface {v3, v2}, Lcom/vk/bridges/AuthBridge3;->b(I)Z
 
     move-result v2
 
@@ -1339,9 +1339,9 @@
     invoke-direct {p0, p1}, Lcom/vk/pushes/FirebasePushService;->j(Ljava/util/Map;)V
 
     .line 8
-    sget-object v2, Lcom/vk/pushes/j/e;->a:Lcom/vk/pushes/j/e;
+    sget-object v2, Lcom/vk/pushes/j/NotificationHelper;->a:Lcom/vk/pushes/j/NotificationHelper;
 
-    invoke-virtual {v2, p0}, Lcom/vk/pushes/j/e;->a(Landroid/content/Context;)Z
+    invoke-virtual {v2, p0}, Lcom/vk/pushes/j/NotificationHelper;->a(Landroid/content/Context;)Z
 
     move-result v2
 
@@ -1365,9 +1365,9 @@
     check-cast v2, Ljava/lang/String;
 
     .line 11
-    sget-object v3, Lcom/vk/pushes/j/f;->i:Lcom/vk/pushes/j/f;
+    sget-object v3, Lcom/vk/pushes/j/PushTypes;->i:Lcom/vk/pushes/j/PushTypes;
 
-    invoke-virtual {v3, v2}, Lcom/vk/pushes/j/f;->b(Ljava/lang/String;)Z
+    invoke-virtual {v3, v2}, Lcom/vk/pushes/j/PushTypes;->b(Ljava/lang/String;)Z
 
     move-result v3
 
@@ -1385,7 +1385,7 @@
     const-string v0, "erase"
 
     .line 14
-    invoke-static {v2, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v2, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v0
 
@@ -1399,7 +1399,7 @@
     const-string v0, "call"
 
     .line 15
-    invoke-static {v2, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v2, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v0
 
@@ -1413,7 +1413,7 @@
     const-string v0, "business_notify"
 
     .line 16
-    invoke-static {v2, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v2, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v0
 
@@ -1425,9 +1425,9 @@
 
     .line 17
     :cond_5
-    sget-object v0, Lcom/vk/pushes/j/f;->i:Lcom/vk/pushes/j/f;
+    sget-object v0, Lcom/vk/pushes/j/PushTypes;->i:Lcom/vk/pushes/j/PushTypes;
 
-    invoke-virtual {v0}, Lcom/vk/pushes/j/f;->c()Ljava/util/Set;
+    invoke-virtual {v0}, Lcom/vk/pushes/j/PushTypes;->c()Ljava/util/Set;
 
     move-result-object v0
 
@@ -1444,15 +1444,15 @@
     goto :goto_0
 
     :cond_6
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     throw v1
 
     .line 18
     :cond_7
-    sget-object v0, Lcom/vk/pushes/j/f;->i:Lcom/vk/pushes/j/f;
+    sget-object v0, Lcom/vk/pushes/j/PushTypes;->i:Lcom/vk/pushes/j/PushTypes;
 
-    invoke-virtual {v0}, Lcom/vk/pushes/j/f;->f()Ljava/util/Set;
+    invoke-virtual {v0}, Lcom/vk/pushes/j/PushTypes;->f()Ljava/util/Set;
 
     move-result-object v0
 
@@ -1468,9 +1468,9 @@
 
     .line 19
     :cond_8
-    sget-object v0, Lcom/vk/pushes/j/f;->i:Lcom/vk/pushes/j/f;
+    sget-object v0, Lcom/vk/pushes/j/PushTypes;->i:Lcom/vk/pushes/j/PushTypes;
 
-    invoke-virtual {v0}, Lcom/vk/pushes/j/f;->e()Ljava/util/Set;
+    invoke-virtual {v0}, Lcom/vk/pushes/j/PushTypes;->e()Ljava/util/Set;
 
     move-result-object v0
 
@@ -1483,11 +1483,11 @@
     .line 20
     sget-object v0, Lcom/vtosters/lite/im/bridge/contentprovider/ImPushHelper;->b:Lcom/vtosters/lite/im/bridge/contentprovider/ImPushHelper;
 
-    invoke-static {}, Lcom/vk/bridges/g;->a()Lcom/vk/bridges/f;
+    invoke-static {}, Lcom/vk/bridges/AuthBridge;->a()Lcom/vk/bridges/AuthBridge3;
 
     move-result-object v1
 
-    invoke-interface {v1}, Lcom/vk/bridges/f;->b()I
+    invoke-interface {v1}, Lcom/vk/bridges/AuthBridge3;->b()I
 
     move-result v1
 
@@ -1638,7 +1638,7 @@
 
     const-string v6, "true"
 
-    invoke-static {v5, v6}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v5, v6}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v5
 
@@ -1660,13 +1660,13 @@
 
     .line 11
     :cond_1
-    sget-object v1, Lcom/vk/pushes/i/b;->a:Lcom/vk/pushes/i/b;
+    sget-object v1, Lcom/vk/pushes/i/MessageNotificationCache;->a:Lcom/vk/pushes/i/MessageNotificationCache;
 
     invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v5
 
-    invoke-virtual {v1, v5}, Lcom/vk/pushes/i/b;->a(Ljava/lang/Integer;)Ljava/util/List;
+    invoke-virtual {v1, v5}, Lcom/vk/pushes/i/MessageNotificationCache;->a(Ljava/lang/Integer;)Ljava/util/List;
 
     move-result-object v1
 
@@ -1766,13 +1766,13 @@
 
     .line 16
     :cond_7
-    sget-object v1, Lcom/vk/pushes/FirebasePushService;->a:Lcom/vtosters/lite/im/notifications/c;
+    sget-object v1, Lcom/vk/pushes/FirebasePushService;->a:Lcom/vtosters/lite/im/notifications/InfoLoader;
 
-    invoke-static {}, Lcom/vk/im/engine/c;->a()Lcom/vk/im/engine/a;
+    invoke-static {}, Lcom/vk/im/engine/ImEngine1;->a()Lcom/vk/im/engine/ImEngine;
 
     move-result-object v6
 
-    invoke-virtual {v1, v6, v2, v4}, Lcom/vtosters/lite/im/notifications/c;->a(Lcom/vk/im/engine/a;II)Z
+    invoke-virtual {v1, v6, v2, v4}, Lcom/vtosters/lite/im/notifications/InfoLoader;->a(Lcom/vk/im/engine/ImEngine;II)Z
 
     move-result v1
 
@@ -1828,14 +1828,14 @@
     invoke-static {v1}, Lcom/vk/log/L;->a([Ljava/lang/Object;)V
 
     .line 19
-    sget-object v1, Lcom/vk/pushes/i/b;->a:Lcom/vk/pushes/i/b;
+    sget-object v1, Lcom/vk/pushes/i/MessageNotificationCache;->a:Lcom/vk/pushes/i/MessageNotificationCache;
 
-    invoke-virtual {v1, p1}, Lcom/vk/pushes/i/b;->a(Ljava/util/Map;)V
+    invoke-virtual {v1, p1}, Lcom/vk/pushes/i/MessageNotificationCache;->a(Ljava/util/Map;)V
 
     .line 20
-    sget-object v1, Lcom/vk/pushes/j/b;->d:Lcom/vk/pushes/j/b;
+    sget-object v1, Lcom/vk/pushes/j/DndHelper;->d:Lcom/vk/pushes/j/DndHelper;
 
-    invoke-virtual {v1, p0, v2}, Lcom/vk/pushes/j/b;->b(Landroid/content/Context;I)Z
+    invoke-virtual {v1, p0, v2}, Lcom/vk/pushes/j/DndHelper;->b(Landroid/content/Context;I)Z
 
     move-result v1
 
@@ -1955,7 +1955,7 @@
 
     check-cast p1, Ljava/lang/CharSequence;
 
-    invoke-static {p1}, Lcom/vk/core/extensions/z;->a(Ljava/lang/CharSequence;)Z
+    invoke-static {p1}, Lcom/vk/core/extensions/StringExt;->a(Ljava/lang/CharSequence;)Z
 
     move-result p1
 
@@ -1984,7 +1984,7 @@
     if-eqz v0, :cond_1
 
     .line 2
-    new-instance v0, Lcom/vk/api/internal/i;
+    new-instance v0, Lcom/vk/api/internal/InternalShouldNotifyPush;
 
     const-string v2, "visibility_hash"
 
@@ -2024,15 +2024,15 @@
     check-cast p1, Ljava/lang/String;
 
     .line 4
-    invoke-direct {v0, v2, v4, v5, p1}, Lcom/vk/api/internal/i;-><init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-direct {v0, v2, v4, v5, p1}, Lcom/vk/api/internal/InternalShouldNotifyPush;-><init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
 
     .line 5
-    invoke-static {v0, v3, v1, v3}, Lcom/vk/api/base/d;->d(Lcom/vk/api/base/d;Lcom/vk/api/base/e;ILjava/lang/Object;)Lc/a/m;
+    invoke-static {v0, v3, v1, v3}, Lcom/vk/api/base/ApiRequest;->d(Lcom/vk/api/base/ApiRequest;Lcom/vk/api/base/ApiThreadHolder;ILjava/lang/Object;)Lio/reactivex/Observable;
 
     move-result-object p1
 
     .line 6
-    invoke-static {p1}, Lcom/vk/core/extensions/RxExtKt;->a(Lc/a/m;)Ljava/lang/Object;
+    invoke-static {p1}, Lcom/vk/core/extensions/RxExtKt;->a(Lio/reactivex/Observable;)Ljava/lang/Object;
 
     move-result-object p1
 
@@ -2044,7 +2044,7 @@
 
     move-result-object v0
 
-    invoke-static {v0, p1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v0, p1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v1
 
@@ -2052,7 +2052,7 @@
 
     .line 9
     :cond_0
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     throw v3
 
@@ -2123,13 +2123,13 @@
 
     .line 5
     :cond_3
-    sget-object v0, Lcom/vk/pushes/j/e;->a:Lcom/vk/pushes/j/e;
+    sget-object v0, Lcom/vk/pushes/j/NotificationHelper;->a:Lcom/vk/pushes/j/NotificationHelper;
 
-    invoke-static {p1}, Lcom/vk/core/extensions/z;->i(Ljava/lang/String;)I
+    invoke-static {p1}, Lcom/vk/core/extensions/StringExt;->i(Ljava/lang/String;)I
 
     move-result p1
 
-    invoke-virtual {v0, p0, p1}, Lcom/vk/pushes/j/e;->b(Landroid/content/Context;I)V
+    invoke-virtual {v0, p0, p1}, Lcom/vk/pushes/j/NotificationHelper;->b(Landroid/content/Context;I)V
 
     return-void
 .end method
@@ -2180,13 +2180,13 @@
     .locals 2
 
     .line 1
-    sget-object v0, Lcom/vk/metrics/reporters/a;->j:Lcom/vk/metrics/reporters/a;
+    sget-object v0, Lcom/vk/metrics/reporters/PerformanceReporter;->j:Lcom/vk/metrics/reporters/PerformanceReporter;
 
-    invoke-virtual {v0}, Lcom/vk/metrics/reporters/a;->a()Lb/h/q/c/a/a;
+    invoke-virtual {v0}, Lcom/vk/metrics/reporters/PerformanceReporter;->a()Lb/h/q/c/a/AppStartDurationChecker;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lb/h/q/c/a/a;->d()V
+    invoke-virtual {v0}, Lb/h/q/c/a/AppStartDurationChecker;->d()V
 
     .line 2
     invoke-direct {p0, p1}, Lcom/vk/pushes/FirebasePushService;->a(Lcom/google/firebase/messaging/RemoteMessage;)V
@@ -2214,11 +2214,11 @@
     invoke-super {p0, p1}, Lcom/google/firebase/messaging/FirebaseMessagingService;->onNewToken(Ljava/lang/String;)V
 
     .line 2
-    sget-object p1, Lcom/vk/pushes/g;->e:Lcom/vk/pushes/g;
+    sget-object p1, Lcom/vk/pushes/PushSubscriber;->e:Lcom/vk/pushes/PushSubscriber;
 
     const/4 v0, 0x1
 
-    invoke-virtual {p1, v0}, Lcom/vk/pushes/g;->a(Z)V
+    invoke-virtual {p1, v0}, Lcom/vk/pushes/PushSubscriber;->a(Z)V
 
     .line 3
     :try_start_0

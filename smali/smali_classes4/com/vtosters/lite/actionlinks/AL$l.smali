@@ -3,7 +3,7 @@
 .source "AL.kt"
 
 # interfaces
-.implements Lb/h/r/b;
+.implements Lb/h/r/BaseContract1;
 
 
 # annotations
@@ -22,7 +22,7 @@
         "Lcom/vtosters/lite/actionlinks/AL$i;",
         ">",
         "Ljava/lang/Object;",
-        "Lb/h/r/b<",
+        "Lb/h/r/BaseContract1<",
         "TP;>;"
     }
 .end annotation

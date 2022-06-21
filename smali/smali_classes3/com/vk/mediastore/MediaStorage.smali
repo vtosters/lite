@@ -4,15 +4,15 @@
 
 
 # static fields
-.field static final synthetic a:[Lkotlin/u/j;
+.field static final synthetic a:[Lkotlin/u/KProperty5;
 
-.field private static final b:Lkotlin/e;
+.field private static final b:Lkotlin/Lazy2;
 
-.field private static final c:Lkotlin/e;
+.field private static final c:Lkotlin/Lazy2;
 
-.field private static final d:Lkotlin/e;
+.field private static final d:Lkotlin/Lazy2;
 
-.field private static final e:Lkotlin/e;
+.field private static final e:Lkotlin/Lazy2;
 
 .field public static final f:Lcom/vk/mediastore/MediaStorage;
 
@@ -25,11 +25,11 @@
 
     const/4 v1, 0x4
 
-    new-array v1, v1, [Lkotlin/u/j;
+    new-array v1, v1, [Lkotlin/u/KProperty5;
 
     new-instance v2, Lkotlin/jvm/internal/PropertyReference1Impl;
 
-    invoke-static {v0}, Lkotlin/jvm/internal/o;->a(Ljava/lang/Class;)Lkotlin/u/c;
+    invoke-static {v0}, Lkotlin/jvm/internal/Reflection;->a(Ljava/lang/Class;)Lkotlin/u/KClass;
 
     move-result-object v3
 
@@ -37,9 +37,9 @@
 
     const-string v5, "getGif()Lcom/vk/mediastore/media/GifCache;"
 
-    invoke-direct {v2, v3, v4, v5}, Lkotlin/jvm/internal/PropertyReference1Impl;-><init>(Lkotlin/u/e;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-direct {v2, v3, v4, v5}, Lkotlin/jvm/internal/PropertyReference1Impl;-><init>(Lkotlin/u/KDeclarationContainer;Ljava/lang/String;Ljava/lang/String;)V
 
-    invoke-static {v2}, Lkotlin/jvm/internal/o;->a(Lkotlin/jvm/internal/PropertyReference1;)Lkotlin/u/l;
+    invoke-static {v2}, Lkotlin/jvm/internal/Reflection;->a(Lkotlin/jvm/internal/PropertyReference1;)Lkotlin/u/KProperty2;
 
     const/4 v3, 0x0
 
@@ -47,7 +47,7 @@
 
     new-instance v2, Lkotlin/jvm/internal/PropertyReference1Impl;
 
-    invoke-static {v0}, Lkotlin/jvm/internal/o;->a(Ljava/lang/Class;)Lkotlin/u/c;
+    invoke-static {v0}, Lkotlin/jvm/internal/Reflection;->a(Ljava/lang/Class;)Lkotlin/u/KClass;
 
     move-result-object v3
 
@@ -55,9 +55,9 @@
 
     const-string v5, "getSmallFileCache()Lcom/vk/mediastore/media/SmallFileCache;"
 
-    invoke-direct {v2, v3, v4, v5}, Lkotlin/jvm/internal/PropertyReference1Impl;-><init>(Lkotlin/u/e;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-direct {v2, v3, v4, v5}, Lkotlin/jvm/internal/PropertyReference1Impl;-><init>(Lkotlin/u/KDeclarationContainer;Ljava/lang/String;Ljava/lang/String;)V
 
-    invoke-static {v2}, Lkotlin/jvm/internal/o;->a(Lkotlin/jvm/internal/PropertyReference1;)Lkotlin/u/l;
+    invoke-static {v2}, Lkotlin/jvm/internal/Reflection;->a(Lkotlin/jvm/internal/PropertyReference1;)Lkotlin/u/KProperty2;
 
     const/4 v3, 0x1
 
@@ -65,7 +65,7 @@
 
     new-instance v2, Lkotlin/jvm/internal/PropertyReference1Impl;
 
-    invoke-static {v0}, Lkotlin/jvm/internal/o;->a(Ljava/lang/Class;)Lkotlin/u/c;
+    invoke-static {v0}, Lkotlin/jvm/internal/Reflection;->a(Ljava/lang/Class;)Lkotlin/u/KClass;
 
     move-result-object v3
 
@@ -73,9 +73,9 @@
 
     const-string v5, "getVideo()Lcom/vk/mediastore/media/exo/ExoVideoCache;"
 
-    invoke-direct {v2, v3, v4, v5}, Lkotlin/jvm/internal/PropertyReference1Impl;-><init>(Lkotlin/u/e;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-direct {v2, v3, v4, v5}, Lkotlin/jvm/internal/PropertyReference1Impl;-><init>(Lkotlin/u/KDeclarationContainer;Ljava/lang/String;Ljava/lang/String;)V
 
-    invoke-static {v2}, Lkotlin/jvm/internal/o;->a(Lkotlin/jvm/internal/PropertyReference1;)Lkotlin/u/l;
+    invoke-static {v2}, Lkotlin/jvm/internal/Reflection;->a(Lkotlin/jvm/internal/PropertyReference1;)Lkotlin/u/KProperty2;
 
     const/4 v3, 0x2
 
@@ -83,7 +83,7 @@
 
     new-instance v2, Lkotlin/jvm/internal/PropertyReference1Impl;
 
-    invoke-static {v0}, Lkotlin/jvm/internal/o;->a(Ljava/lang/Class;)Lkotlin/u/c;
+    invoke-static {v0}, Lkotlin/jvm/internal/Reflection;->a(Ljava/lang/Class;)Lkotlin/u/KClass;
 
     move-result-object v0
 
@@ -91,15 +91,15 @@
 
     const-string v4, "getVideoCovers()Lcom/vk/mediastore/legacy/ProxyVideoCache;"
 
-    invoke-direct {v2, v0, v3, v4}, Lkotlin/jvm/internal/PropertyReference1Impl;-><init>(Lkotlin/u/e;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-direct {v2, v0, v3, v4}, Lkotlin/jvm/internal/PropertyReference1Impl;-><init>(Lkotlin/u/KDeclarationContainer;Ljava/lang/String;Ljava/lang/String;)V
 
-    invoke-static {v2}, Lkotlin/jvm/internal/o;->a(Lkotlin/jvm/internal/PropertyReference1;)Lkotlin/u/l;
+    invoke-static {v2}, Lkotlin/jvm/internal/Reflection;->a(Lkotlin/jvm/internal/PropertyReference1;)Lkotlin/u/KProperty2;
 
     const/4 v0, 0x3
 
     aput-object v2, v1, v0
 
-    sput-object v1, Lcom/vk/mediastore/MediaStorage;->a:[Lkotlin/u/j;
+    sput-object v1, Lcom/vk/mediastore/MediaStorage;->a:[Lkotlin/u/KProperty5;
 
     .line 1
     new-instance v0, Lcom/vk/mediastore/MediaStorage;
@@ -111,38 +111,38 @@
     .line 2
     sget-object v0, Lcom/vk/mediastore/MediaStorage$gif$2;->a:Lcom/vk/mediastore/MediaStorage$gif$2;
 
-    invoke-static {v0}, Lkotlin/g;->a(Lkotlin/jvm/b/a;)Lkotlin/e;
+    invoke-static {v0}, Lkotlin/g;->a(Lkotlin/jvm/b/Functions;)Lkotlin/Lazy2;
 
     move-result-object v0
 
-    sput-object v0, Lcom/vk/mediastore/MediaStorage;->b:Lkotlin/e;
+    sput-object v0, Lcom/vk/mediastore/MediaStorage;->b:Lkotlin/Lazy2;
 
     .line 3
     sget-object v0, Lcom/vk/mediastore/MediaStorage$smallFileCache$2;->a:Lcom/vk/mediastore/MediaStorage$smallFileCache$2;
 
-    invoke-static {v0}, Lkotlin/g;->a(Lkotlin/jvm/b/a;)Lkotlin/e;
+    invoke-static {v0}, Lkotlin/g;->a(Lkotlin/jvm/b/Functions;)Lkotlin/Lazy2;
 
     move-result-object v0
 
-    sput-object v0, Lcom/vk/mediastore/MediaStorage;->c:Lkotlin/e;
+    sput-object v0, Lcom/vk/mediastore/MediaStorage;->c:Lkotlin/Lazy2;
 
     .line 4
     sget-object v0, Lcom/vk/mediastore/MediaStorage$video$2;->a:Lcom/vk/mediastore/MediaStorage$video$2;
 
-    invoke-static {v0}, Lkotlin/g;->a(Lkotlin/jvm/b/a;)Lkotlin/e;
+    invoke-static {v0}, Lkotlin/g;->a(Lkotlin/jvm/b/Functions;)Lkotlin/Lazy2;
 
     move-result-object v0
 
-    sput-object v0, Lcom/vk/mediastore/MediaStorage;->d:Lkotlin/e;
+    sput-object v0, Lcom/vk/mediastore/MediaStorage;->d:Lkotlin/Lazy2;
 
     .line 5
     sget-object v0, Lcom/vk/mediastore/MediaStorage$videoCovers$2;->a:Lcom/vk/mediastore/MediaStorage$videoCovers$2;
 
-    invoke-static {v0}, Lkotlin/g;->a(Lkotlin/jvm/b/a;)Lkotlin/e;
+    invoke-static {v0}, Lkotlin/g;->a(Lkotlin/jvm/b/Functions;)Lkotlin/Lazy2;
 
     move-result-object v0
 
-    sput-object v0, Lcom/vk/mediastore/MediaStorage;->e:Lkotlin/e;
+    sput-object v0, Lcom/vk/mediastore/MediaStorage;->e:Lkotlin/Lazy2;
 
     return-void
 .end method
@@ -156,7 +156,7 @@
     return-void
 .end method
 
-.method static synthetic a(Lcom/vk/mediastore/MediaStorage;Ljava/io/File;ILjava/lang/Object;)Lcom/vk/mediastore/a/e/i;
+.method static synthetic a(Lcom/vk/mediastore/MediaStorage;Ljava/io/File;ILjava/lang/Object;)Lcom/vk/mediastore/a/e/ExoVideoCache;
     .locals 0
 
     and-int/lit8 p2, p2, 0x1
@@ -167,14 +167,14 @@
 
     .line 7
     :cond_0
-    invoke-direct {p0, p1}, Lcom/vk/mediastore/MediaStorage;->a(Ljava/io/File;)Lcom/vk/mediastore/a/e/i;
+    invoke-direct {p0, p1}, Lcom/vk/mediastore/MediaStorage;->a(Ljava/io/File;)Lcom/vk/mediastore/a/e/ExoVideoCache;
 
     move-result-object p0
 
     return-object p0
 .end method
 
-.method private final a(Ljava/io/File;)Lcom/vk/mediastore/a/e/i;
+.method private final a(Ljava/io/File;)Lcom/vk/mediastore/a/e/ExoVideoCache;
     .locals 3
 
     if-eqz p1, :cond_0
@@ -187,23 +187,23 @@
 
     move-result p1
 
-    invoke-static {p1}, Lb/h/g/m/d;->c(I)Ljava/io/File;
+    invoke-static {p1}, Lb/h/g/m/FileUtils;->c(I)Ljava/io/File;
 
     move-result-object p1
 
     .line 9
     :goto_0
-    new-instance v0, Lcom/vk/mediastore/a/e/i;
+    new-instance v0, Lcom/vk/mediastore/a/e/ExoVideoCache;
 
     const-string v1, "dir"
 
-    invoke-static {p1, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-direct {p0}, Lcom/vk/mediastore/MediaStorage;->b()J
 
     move-result-wide v1
 
-    invoke-direct {v0, p1, v1, v2}, Lcom/vk/mediastore/a/e/i;-><init>(Ljava/io/File;J)V
+    invoke-direct {v0, p1, v1, v2}, Lcom/vk/mediastore/a/e/ExoVideoCache;-><init>(Ljava/io/File;J)V
 
     return-object v0
 .end method
@@ -212,11 +212,11 @@
     .locals 1
 
     .line 1
-    invoke-static {}, Lcom/vk/mediastore/MediaStorage;->k()Lcom/vk/mediastore/a/e/i;
+    invoke-static {}, Lcom/vk/mediastore/MediaStorage;->k()Lcom/vk/mediastore/a/e/ExoVideoCache;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/vk/mediastore/a/e/i;->a()V
+    invoke-virtual {v0}, Lcom/vk/mediastore/a/e/ExoVideoCache;->a()V
 
     .line 2
     invoke-static {}, Lcom/vk/mediastore/MediaStorage;->l()Lcom/vk/mediastore/legacy/ProxyVideoCache;
@@ -226,36 +226,36 @@
     invoke-virtual {v0}, Lcom/vk/mediastore/legacy/ProxyVideoCache;->a()V
 
     .line 3
-    invoke-static {}, Lcom/vk/mediastore/MediaStorage;->h()Lcom/vk/mediastore/a/a;
+    invoke-static {}, Lcom/vk/mediastore/MediaStorage;->h()Lcom/vk/mediastore/a/GifCache;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/vk/mediastore/b/b;->a()V
+    invoke-virtual {v0}, Lcom/vk/mediastore/b/FileLruCache;->a()V
 
     const/4 v0, 0x0
 
     .line 4
-    invoke-static {v0}, Lb/h/g/m/d;->c(I)Ljava/io/File;
+    invoke-static {v0}, Lb/h/g/m/FileUtils;->c(I)Ljava/io/File;
 
     move-result-object v0
 
-    invoke-static {v0}, Lb/h/g/m/d;->d(Ljava/io/File;)Z
+    invoke-static {v0}, Lb/h/g/m/FileUtils;->d(Ljava/io/File;)Z
 
     const/4 v0, 0x1
 
     .line 5
-    invoke-static {v0}, Lb/h/g/m/d;->c(I)Ljava/io/File;
+    invoke-static {v0}, Lb/h/g/m/FileUtils;->c(I)Ljava/io/File;
 
     move-result-object v0
 
-    invoke-static {v0}, Lb/h/g/m/d;->d(Ljava/io/File;)Z
+    invoke-static {v0}, Lb/h/g/m/FileUtils;->d(Ljava/io/File;)Z
 
     .line 6
-    invoke-static {}, Lb/h/g/m/d;->m()Ljava/io/File;
+    invoke-static {}, Lb/h/g/m/FileUtils;->m()Ljava/io/File;
 
     move-result-object v0
 
-    invoke-static {v0}, Lb/h/g/m/d;->d(Ljava/io/File;)Z
+    invoke-static {v0}, Lb/h/g/m/FileUtils;->d(Ljava/io/File;)Z
 
     return-void
 .end method
@@ -287,69 +287,69 @@
     .locals 1
 
     .line 1
-    invoke-static {}, Lb/h/g/m/d;->D()Z
+    invoke-static {}, Lb/h/g/m/FileUtils;->D()Z
 
     move-result v0
 
     return v0
 .end method
 
-.method private final d()Lcom/vk/mediastore/a/a;
+.method private final d()Lcom/vk/mediastore/a/GifCache;
     .locals 3
 
-    sget-object v0, Lcom/vk/mediastore/MediaStorage;->b:Lkotlin/e;
+    sget-object v0, Lcom/vk/mediastore/MediaStorage;->b:Lkotlin/Lazy2;
 
-    sget-object v1, Lcom/vk/mediastore/MediaStorage;->a:[Lkotlin/u/j;
+    sget-object v1, Lcom/vk/mediastore/MediaStorage;->a:[Lkotlin/u/KProperty5;
 
     const/4 v2, 0x0
 
     aget-object v1, v1, v2
 
-    invoke-interface {v0}, Lkotlin/e;->getValue()Ljava/lang/Object;
+    invoke-interface {v0}, Lkotlin/Lazy2;->getValue()Ljava/lang/Object;
 
     move-result-object v0
 
-    check-cast v0, Lcom/vk/mediastore/a/a;
+    check-cast v0, Lcom/vk/mediastore/a/GifCache;
 
     return-object v0
 .end method
 
-.method private final e()Lcom/vk/mediastore/a/b;
+.method private final e()Lcom/vk/mediastore/a/SmallFileCache;
     .locals 3
 
-    sget-object v0, Lcom/vk/mediastore/MediaStorage;->c:Lkotlin/e;
+    sget-object v0, Lcom/vk/mediastore/MediaStorage;->c:Lkotlin/Lazy2;
 
-    sget-object v1, Lcom/vk/mediastore/MediaStorage;->a:[Lkotlin/u/j;
+    sget-object v1, Lcom/vk/mediastore/MediaStorage;->a:[Lkotlin/u/KProperty5;
 
     const/4 v2, 0x1
 
     aget-object v1, v1, v2
 
-    invoke-interface {v0}, Lkotlin/e;->getValue()Ljava/lang/Object;
+    invoke-interface {v0}, Lkotlin/Lazy2;->getValue()Ljava/lang/Object;
 
     move-result-object v0
 
-    check-cast v0, Lcom/vk/mediastore/a/b;
+    check-cast v0, Lcom/vk/mediastore/a/SmallFileCache;
 
     return-object v0
 .end method
 
-.method private final f()Lcom/vk/mediastore/a/e/i;
+.method private final f()Lcom/vk/mediastore/a/e/ExoVideoCache;
     .locals 3
 
-    sget-object v0, Lcom/vk/mediastore/MediaStorage;->d:Lkotlin/e;
+    sget-object v0, Lcom/vk/mediastore/MediaStorage;->d:Lkotlin/Lazy2;
 
-    sget-object v1, Lcom/vk/mediastore/MediaStorage;->a:[Lkotlin/u/j;
+    sget-object v1, Lcom/vk/mediastore/MediaStorage;->a:[Lkotlin/u/KProperty5;
 
     const/4 v2, 0x2
 
     aget-object v1, v1, v2
 
-    invoke-interface {v0}, Lkotlin/e;->getValue()Ljava/lang/Object;
+    invoke-interface {v0}, Lkotlin/Lazy2;->getValue()Ljava/lang/Object;
 
     move-result-object v0
 
-    check-cast v0, Lcom/vk/mediastore/a/e/i;
+    check-cast v0, Lcom/vk/mediastore/a/e/ExoVideoCache;
 
     return-object v0
 .end method
@@ -357,15 +357,15 @@
 .method private final g()Lcom/vk/mediastore/legacy/ProxyVideoCache;
     .locals 3
 
-    sget-object v0, Lcom/vk/mediastore/MediaStorage;->e:Lkotlin/e;
+    sget-object v0, Lcom/vk/mediastore/MediaStorage;->e:Lkotlin/Lazy2;
 
-    sget-object v1, Lcom/vk/mediastore/MediaStorage;->a:[Lkotlin/u/j;
+    sget-object v1, Lcom/vk/mediastore/MediaStorage;->a:[Lkotlin/u/KProperty5;
 
     const/4 v2, 0x3
 
     aget-object v1, v1, v2
 
-    invoke-interface {v0}, Lkotlin/e;->getValue()Ljava/lang/Object;
+    invoke-interface {v0}, Lkotlin/Lazy2;->getValue()Ljava/lang/Object;
 
     move-result-object v0
 
@@ -374,54 +374,54 @@
     return-object v0
 .end method
 
-.method public static final h()Lcom/vk/mediastore/a/a;
+.method public static final h()Lcom/vk/mediastore/a/GifCache;
     .locals 1
 
     .line 1
     sget-object v0, Lcom/vk/mediastore/MediaStorage;->f:Lcom/vk/mediastore/MediaStorage;
 
-    invoke-direct {v0}, Lcom/vk/mediastore/MediaStorage;->d()Lcom/vk/mediastore/a/a;
+    invoke-direct {v0}, Lcom/vk/mediastore/MediaStorage;->d()Lcom/vk/mediastore/a/GifCache;
 
     move-result-object v0
 
     return-object v0
 .end method
 
-.method public static final i()Lcom/vk/mediastore/a/b;
+.method public static final i()Lcom/vk/mediastore/a/SmallFileCache;
     .locals 1
 
     .line 1
     sget-object v0, Lcom/vk/mediastore/MediaStorage;->f:Lcom/vk/mediastore/MediaStorage;
 
-    invoke-direct {v0}, Lcom/vk/mediastore/MediaStorage;->e()Lcom/vk/mediastore/a/b;
+    invoke-direct {v0}, Lcom/vk/mediastore/MediaStorage;->e()Lcom/vk/mediastore/a/SmallFileCache;
 
     move-result-object v0
 
     return-object v0
 .end method
 
-.method public static final j()Lcom/vk/mediastore/system/b;
+.method public static final j()Lcom/vk/mediastore/system/MediaStoreController;
     .locals 2
 
     .line 1
-    invoke-static {}, Lcom/vk/mediastore/system/b;->c()Lcom/vk/mediastore/system/b;
+    invoke-static {}, Lcom/vk/mediastore/system/MediaStoreController;->c()Lcom/vk/mediastore/system/MediaStoreController;
 
     move-result-object v0
 
     const-string v1, "MediaStoreController.getInstance()"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     return-object v0
 .end method
 
-.method public static final k()Lcom/vk/mediastore/a/e/i;
+.method public static final k()Lcom/vk/mediastore/a/e/ExoVideoCache;
     .locals 1
 
     .line 1
     sget-object v0, Lcom/vk/mediastore/MediaStorage;->f:Lcom/vk/mediastore/MediaStorage;
 
-    invoke-direct {v0}, Lcom/vk/mediastore/MediaStorage;->f()Lcom/vk/mediastore/a/e/i;
+    invoke-direct {v0}, Lcom/vk/mediastore/MediaStorage;->f()Lcom/vk/mediastore/a/e/ExoVideoCache;
 
     move-result-object v0
 

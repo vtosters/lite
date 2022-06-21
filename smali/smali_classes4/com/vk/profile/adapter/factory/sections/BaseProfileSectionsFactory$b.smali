@@ -3,7 +3,7 @@
 .source "BaseProfileSectionsFactory.kt"
 
 # interfaces
-.implements Lcom/vk/music/view/v/b;
+.implements Lcom/vk/music/view/v/IdResolver;
 
 
 # annotations
@@ -22,7 +22,7 @@
         "Ljava/lang/Object;",
         ">",
         "Ljava/lang/Object;",
-        "Lcom/vk/music/view/v/b<",
+        "Lcom/vk/music/view/v/IdResolver<",
         "Lcom/vk/dto/music/Playlist;",
         ">;"
     }

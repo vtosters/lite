@@ -40,11 +40,11 @@
     .line 1
     iget-object p1, p0, Lcom/vk/profile/ui/community/CommunityFragment$f;->a:Lcom/vk/profile/ui/community/CommunityFragment;
 
-    invoke-static {p1}, Lcom/vk/profile/ui/community/CommunityFragment;->b(Lcom/vk/profile/ui/community/CommunityFragment;)Lcom/vk/profile/ui/components/a;
+    invoke-static {p1}, Lcom/vk/profile/ui/community/CommunityFragment;->b(Lcom/vk/profile/ui/community/CommunityFragment;)Lcom/vk/profile/ui/components/BaseProfileFragmentActionsMenuBuilder;
 
     move-result-object p1
 
-    invoke-virtual {p1}, Lcom/vk/profile/ui/components/a;->i()Lcom/vk/core/dialogs/actionspopup/a;
+    invoke-virtual {p1}, Lcom/vk/profile/ui/components/BaseProfileFragmentActionsMenuBuilder;->i()Lcom/vk/core/dialogs/actionspopup/ActionsPopup;
 
     return-void
 .end method

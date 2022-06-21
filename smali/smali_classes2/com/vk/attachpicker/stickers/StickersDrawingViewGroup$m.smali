@@ -3,7 +3,7 @@
 .source "StickersDrawingViewGroup.java"
 
 # interfaces
-.implements Lcom/vk/common/l/a;
+.implements Lcom/vk/common/l/OnViewGesturesListener;
 
 
 # annotations

@@ -3,12 +3,12 @@
 .source "DocumentsUtils.kt"
 
 # interfaces
-.implements Lc/a/z/g;
+.implements Lio/reactivex/functions/Consumer;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/documents/list/DocumentsUtils;->a(IILjava/lang/String;Landroid/content/Context;Lcom/vk/common/links/f;)V
+    value = Lcom/vk/documents/list/DocumentsUtils;->a(IILjava/lang/String;Landroid/content/Context;Lcom/vk/common/links/OpenCallback;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -22,7 +22,7 @@
         "Ljava/lang/Object;",
         ">",
         "Ljava/lang/Object;",
-        "Lc/a/z/g<",
+        "Lio/reactivex/functions/Consumer<",
         "Ljava/lang/Throwable;",
         ">;"
     }
@@ -30,14 +30,14 @@
 
 
 # instance fields
-.field final synthetic a:Lcom/vk/common/links/f;
+.field final synthetic a:Lcom/vk/common/links/OpenCallback;
 
 
 # direct methods
-.method constructor <init>(Lcom/vk/common/links/f;)V
+.method constructor <init>(Lcom/vk/common/links/OpenCallback;)V
     .locals 0
 
-    iput-object p1, p0, Lcom/vk/documents/list/DocumentsUtils$a;->a:Lcom/vk/common/links/f;
+    iput-object p1, p0, Lcom/vk/documents/list/DocumentsUtils$a;->a:Lcom/vk/common/links/OpenCallback;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -50,11 +50,11 @@
     .locals 0
 
     .line 1
-    iget-object p1, p0, Lcom/vk/documents/list/DocumentsUtils$a;->a:Lcom/vk/common/links/f;
+    iget-object p1, p0, Lcom/vk/documents/list/DocumentsUtils$a;->a:Lcom/vk/common/links/OpenCallback;
 
     if-eqz p1, :cond_0
 
-    invoke-interface {p1}, Lcom/vk/common/links/f;->b()V
+    invoke-interface {p1}, Lcom/vk/common/links/OpenCallback;->b()V
 
     :cond_0
     return-void

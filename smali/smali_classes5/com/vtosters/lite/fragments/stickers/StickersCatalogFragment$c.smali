@@ -3,12 +3,12 @@
 .source "StickersCatalogFragment.kt"
 
 # interfaces
-.implements Lc/a/z/g;
+.implements Lio/reactivex/functions/Consumer;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vtosters/lite/fragments/stickers/StickersCatalogFragment;->a(Lcom/vk/catalog2/core/w/b;)Lio/reactivex/disposables/b;
+    value = Lcom/vtosters/lite/fragments/stickers/StickersCatalogFragment;->a(Lcom/vk/catalog2/core/w/CatalogEventsBus;)Lio/reactivex/disposables/Disposable;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -22,8 +22,8 @@
         "Ljava/lang/Object;",
         ">",
         "Ljava/lang/Object;",
-        "Lc/a/z/g<",
-        "Lcom/vk/catalog2/core/w/e/a;",
+        "Lio/reactivex/functions/Consumer<",
+        "Lcom/vk/catalog2/core/w/e/CatalogAnalyticsEvent1;",
         ">;"
     }
 .end annotation
@@ -46,36 +46,36 @@
 
 
 # virtual methods
-.method public final a(Lcom/vk/catalog2/core/w/e/a;)V
+.method public final a(Lcom/vk/catalog2/core/w/e/CatalogAnalyticsEvent1;)V
     .locals 11
 
     .line 1
-    instance-of v0, p1, Lcom/vk/catalog2/core/w/e/h;
+    instance-of v0, p1, Lcom/vk/catalog2/core/w/e/CatalogAnalyticsEvent3;
 
     if-eqz v0, :cond_0
 
-    new-instance v0, Lcom/vk/stickers/d0/d;
+    new-instance v0, Lcom/vk/stickers/d0/StickerEvent5;
 
-    check-cast p1, Lcom/vk/catalog2/core/w/e/h;
+    check-cast p1, Lcom/vk/catalog2/core/w/e/CatalogAnalyticsEvent3;
 
-    invoke-virtual {p1}, Lcom/vk/catalog2/core/w/e/h;->a()Ljava/lang/String;
+    invoke-virtual {p1}, Lcom/vk/catalog2/core/w/e/CatalogAnalyticsEvent3;->a()Ljava/lang/String;
 
     move-result-object p1
 
-    invoke-direct {v0, p1}, Lcom/vk/stickers/d0/d;-><init>(Ljava/lang/String;)V
+    invoke-direct {v0, p1}, Lcom/vk/stickers/d0/StickerEvent5;-><init>(Ljava/lang/String;)V
 
-    invoke-static {v0}, Lcom/vk/stickers/d0/h;->a(Lcom/vk/stickers/d0/f;)V
+    invoke-static {v0}, Lcom/vk/stickers/d0/StickersEventBus;->a(Lcom/vk/stickers/d0/StickerEvent6;)V
 
     goto :goto_0
 
     .line 2
     :cond_0
-    instance-of p1, p1, Lcom/vk/catalog2/core/w/e/i;
+    instance-of p1, p1, Lcom/vk/catalog2/core/w/e/CatalogAnalyticsEvent2;
 
     if-eqz p1, :cond_1
 
     .line 3
-    new-instance p1, Lcom/vk/api/store/o;
+    new-instance p1, Lcom/vk/api/store/StoreHideCatalogNotification;
 
     const/4 v0, 0x0
 
@@ -85,14 +85,14 @@
 
     move-result v1
 
-    invoke-direct {p1, v0, v1}, Lcom/vk/api/store/o;-><init>(ZI)V
+    invoke-direct {p1, v0, v1}, Lcom/vk/api/store/StoreHideCatalogNotification;-><init>(ZI)V
 
     const/4 v0, 0x1
 
     const/4 v1, 0x0
 
     .line 4
-    invoke-static {p1, v1, v0, v1}, Lcom/vk/api/base/d;->d(Lcom/vk/api/base/d;Lcom/vk/api/base/e;ILjava/lang/Object;)Lc/a/m;
+    invoke-static {p1, v1, v0, v1}, Lcom/vk/api/base/ApiRequest;->d(Lcom/vk/api/base/ApiRequest;Lcom/vk/api/base/ApiThreadHolder;ILjava/lang/Object;)Lio/reactivex/Observable;
 
     move-result-object v2
 
@@ -115,12 +115,12 @@
 
     const/4 v10, 0x0
 
-    invoke-static/range {v2 .. v10}, Lcom/vk/core/extensions/RxExtKt;->a(Lc/a/m;Landroid/content/Context;JIZZILjava/lang/Object;)Lc/a/m;
+    invoke-static/range {v2 .. v10}, Lcom/vk/core/extensions/RxExtKt;->a(Lio/reactivex/Observable;Landroid/content/Context;JIZZILjava/lang/Object;)Lio/reactivex/Observable;
 
     move-result-object p1
 
     .line 6
-    invoke-static {p1}, Lcom/vk/core/extensions/RxExtKt;->b(Lc/a/m;)Lio/reactivex/disposables/b;
+    invoke-static {p1}, Lcom/vk/core/extensions/RxExtKt;->b(Lio/reactivex/Observable;)Lio/reactivex/disposables/Disposable;
 
     :cond_1
     :goto_0
@@ -131,9 +131,9 @@
     .locals 0
 
     .line 1
-    check-cast p1, Lcom/vk/catalog2/core/w/e/a;
+    check-cast p1, Lcom/vk/catalog2/core/w/e/CatalogAnalyticsEvent1;
 
-    invoke-virtual {p0, p1}, Lcom/vtosters/lite/fragments/stickers/StickersCatalogFragment$c;->a(Lcom/vk/catalog2/core/w/e/a;)V
+    invoke-virtual {p0, p1}, Lcom/vtosters/lite/fragments/stickers/StickersCatalogFragment$c;->a(Lcom/vk/catalog2/core/w/e/CatalogAnalyticsEvent1;)V
 
     return-void
 .end method

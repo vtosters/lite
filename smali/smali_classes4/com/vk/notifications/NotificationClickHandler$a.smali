@@ -3,12 +3,12 @@
 .source "NotificationClickHandler.kt"
 
 # interfaces
-.implements Lc/a/z/g;
+.implements Lio/reactivex/functions/Consumer;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/notifications/NotificationClickHandler;->a(Landroid/content/Context;Lcom/vk/dto/notifications/NotificationItem;Lcom/vk/notifications/i;Lcom/vk/dto/group/Group;Lcom/vtosters/lite/data/Groups$JoinType;)V
+    value = Lcom/vk/notifications/NotificationClickHandler;->a(Landroid/content/Context;Lcom/vk/dto/notifications/NotificationItem;Lcom/vk/notifications/NotificationsContainer;Lcom/vk/dto/group/Group;Lcom/vtosters/lite/data/Groups$JoinType;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -22,7 +22,7 @@
         "Ljava/lang/Object;",
         ">",
         "Ljava/lang/Object;",
-        "Lc/a/z/g<",
+        "Lio/reactivex/functions/Consumer<",
         "Ljava/lang/Boolean;",
         ">;"
     }
@@ -36,11 +36,11 @@
 
 .field final synthetic c:Lcom/vk/dto/group/Group;
 
-.field final synthetic d:Lcom/vk/notifications/i;
+.field final synthetic d:Lcom/vk/notifications/NotificationsContainer;
 
 
 # direct methods
-.method constructor <init>(Lcom/vtosters/lite/data/Groups$JoinType;Lcom/vk/dto/notifications/NotificationItem;Lcom/vk/dto/group/Group;Lcom/vk/notifications/i;)V
+.method constructor <init>(Lcom/vtosters/lite/data/Groups$JoinType;Lcom/vk/dto/notifications/NotificationItem;Lcom/vk/dto/group/Group;Lcom/vk/notifications/NotificationsContainer;)V
     .locals 0
 
     iput-object p1, p0, Lcom/vk/notifications/NotificationClickHandler$a;->a:Lcom/vtosters/lite/data/Groups$JoinType;
@@ -49,7 +49,7 @@
 
     iput-object p3, p0, Lcom/vk/notifications/NotificationClickHandler$a;->c:Lcom/vk/dto/group/Group;
 
-    iput-object p4, p0, Lcom/vk/notifications/NotificationClickHandler$a;->d:Lcom/vk/notifications/i;
+    iput-object p4, p0, Lcom/vk/notifications/NotificationClickHandler$a;->d:Lcom/vk/notifications/NotificationsContainer;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -163,11 +163,11 @@
 
     .line 13
     :goto_1
-    iget-object p1, p0, Lcom/vk/notifications/NotificationClickHandler$a;->d:Lcom/vk/notifications/i;
+    iget-object p1, p0, Lcom/vk/notifications/NotificationClickHandler$a;->d:Lcom/vk/notifications/NotificationsContainer;
 
     iget-object v0, p0, Lcom/vk/notifications/NotificationClickHandler$a;->b:Lcom/vk/dto/notifications/NotificationItem;
 
-    invoke-interface {p1, v0}, Lcom/vk/notifications/i;->a(Lcom/vk/dto/notifications/NotificationItem;)V
+    invoke-interface {p1, v0}, Lcom/vk/notifications/NotificationsContainer;->a(Lcom/vk/dto/notifications/NotificationItem;)V
 
     return-void
 .end method

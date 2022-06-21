@@ -54,7 +54,7 @@
     move-result-object v1
 
     .line 4
-    invoke-static {p2}, Lcom/facebook/internal/n;->e(Landroid/content/Intent;)Z
+    invoke-static {p2}, Lcom/facebook/internal/NativeProtocol;->e(Landroid/content/Intent;)Z
 
     move-result p2
 

@@ -114,7 +114,7 @@
 
     const-string v0, "PathUtils"
 
-    invoke-static {v0, p0, p1}, Lorg/chromium/base/e;->a(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v0, p0, p1}, Lorg/chromium/base/Log;->a(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     :goto_0
     return-void
@@ -176,7 +176,7 @@
     if-eqz v1, :cond_2
 
     .line 2
-    invoke-static {}, Lorg/chromium/base/g;->c()Lorg/chromium/base/g;
+    invoke-static {}, Lorg/chromium/base/StrictModeContext;->c()Lorg/chromium/base/StrictModeContext;
 
     move-result-object v1
     :try_end_0
@@ -251,7 +251,7 @@
     new-array v0, v0, [Ljava/lang/String;
 
     .line 1
-    invoke-static {}, Lorg/chromium/base/d;->d()Landroid/content/Context;
+    invoke-static {}, Lorg/chromium/base/ContextUtils;->d()Landroid/content/Context;
 
     move-result-object v1
 
@@ -360,7 +360,7 @@
     if-lt v0, v2, :cond_1
 
     .line 2
-    invoke-static {}, Lorg/chromium/base/g;->c()Lorg/chromium/base/g;
+    invoke-static {}, Lorg/chromium/base/StrictModeContext;->c()Lorg/chromium/base/StrictModeContext;
 
     move-result-object v0
 
@@ -368,7 +368,7 @@
 
     .line 3
     :try_start_0
-    invoke-static {}, Lorg/chromium/base/d;->d()Landroid/content/Context;
+    invoke-static {}, Lorg/chromium/base/ContextUtils;->d()Landroid/content/Context;
 
     move-result-object v3
 
@@ -520,7 +520,7 @@
     .end annotation
 
     .line 1
-    invoke-static {}, Lorg/chromium/base/g;->b()Lorg/chromium/base/g;
+    invoke-static {}, Lorg/chromium/base/StrictModeContext;->b()Lorg/chromium/base/StrictModeContext;
 
     move-result-object v0
 
@@ -631,7 +631,7 @@
     .end annotation
 
     .line 1
-    invoke-static {}, Lorg/chromium/base/d;->d()Landroid/content/Context;
+    invoke-static {}, Lorg/chromium/base/ContextUtils;->d()Landroid/content/Context;
 
     move-result-object v0
 

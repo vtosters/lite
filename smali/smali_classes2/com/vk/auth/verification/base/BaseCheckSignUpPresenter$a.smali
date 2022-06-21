@@ -3,12 +3,12 @@
 .source "BaseCheckSignUpPresenter.kt"
 
 # interfaces
-.implements Lc/a/z/g;
+.implements Lio/reactivex/functions/Consumer;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/auth/verification/base/BaseCheckSignUpPresenter;->a(Lc/a/m;)V
+    value = Lcom/vk/auth/verification/base/BaseCheckSignUpPresenter;->a(Lio/reactivex/Observable;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -22,12 +22,12 @@
         "Ljava/lang/Object;",
         ">",
         "Ljava/lang/Object;",
-        "Lc/a/z/g<",
+        "Lio/reactivex/functions/Consumer<",
         "Lkotlin/Pair<",
         "+",
         "Lcom/vk/auth/api/models/ConfirmPhoneResponse;",
         "+",
-        "Lcom/vk/auth/main/s$d;",
+        "Lcom/vk/auth/main/SignUpModel$d;",
         ">;>;"
     }
 .end annotation
@@ -58,7 +58,7 @@
             "Lkotlin/Pair<",
             "Lcom/vk/auth/api/models/ConfirmPhoneResponse;",
             "+",
-            "Lcom/vk/auth/main/s$d;",
+            "Lcom/vk/auth/main/SignUpModel$d;",
             ">;)V"
         }
     .end annotation

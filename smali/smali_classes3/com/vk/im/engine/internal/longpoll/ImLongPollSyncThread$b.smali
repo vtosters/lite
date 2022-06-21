@@ -3,12 +3,12 @@
 .source "ImLongPollSyncThread.kt"
 
 # interfaces
-.implements Lcom/vk/im/engine/internal/longpoll/b;
+.implements Lcom/vk/im/engine/internal/longpoll/InterruptChecker;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/im/engine/internal/longpoll/ImLongPollSyncThread;-><init>(Lcom/vk/im/engine/d;Ljava/lang/String;Lkotlin/jvm/b/a;Lkotlin/jvm/b/a;)V
+    value = Lcom/vk/im/engine/internal/longpoll/ImLongPollSyncThread;-><init>(Lcom/vk/im/engine/ImEnvironment;Ljava/lang/String;Lkotlin/jvm/b/Functions;Lkotlin/jvm/b/Functions;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;

@@ -47,7 +47,7 @@
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/util/ArrayList<",
-            "Lcom/vk/attachpicker/stickers/selection/h/d;",
+            "Lcom/vk/attachpicker/stickers/selection/h/ClickableItem2;",
             ">;"
         }
     .end annotation
@@ -67,7 +67,7 @@
 
 .field private G:Landroidx/recyclerview/widget/RecyclerView;
 
-.field private H:Lcom/vk/attachpicker/stickers/n0;
+.field private H:Lcom/vk/attachpicker/stickers/StickersTabStrip;
 
 .field protected I:Landroidx/viewpager/widget/ViewPager;
 
@@ -77,7 +77,7 @@
 
 .field protected L:Landroid/view/View;
 
-.field protected M:Lcom/vk/attachpicker/stickers/selection/d;
+.field protected M:Lcom/vk/attachpicker/stickers/selection/SelectionStickerListener1;
 
 .field private N:Z
 
@@ -107,24 +107,24 @@
     .end annotation
 .end field
 
-.field private U:Lcom/vk/attachpicker/stickers/selection/f/d;
+.field private U:Lcom/vk/attachpicker/stickers/selection/f/MaskAdapter;
     .annotation build Landroidx/annotation/Nullable;
     .end annotation
 .end field
 
-.field private V:Lio/reactivex/disposables/b;
+.field private V:Lio/reactivex/disposables/Disposable;
     .annotation build Landroidx/annotation/Nullable;
     .end annotation
 .end field
 
-.field private W:Lio/reactivex/disposables/b;
+.field private W:Lio/reactivex/disposables/Disposable;
     .annotation build Landroidx/annotation/Nullable;
     .end annotation
 .end field
 
 .field private final a:Landroid/content/BroadcastReceiver;
 
-.field private a0:Lcom/vk/stories/clickable/models/time/b;
+.field private a0:Lcom/vk/stories/clickable/models/time/TimeStickerInfo;
     .annotation build Landroidx/annotation/Nullable;
     .end annotation
 .end field
@@ -160,7 +160,7 @@
 
 
 # direct methods
-.method public constructor <init>(Landroid/content/Context;Lcom/vk/attachpicker/stickers/selection/SelectionStickerView$OpenFrom;ZLcom/vk/attachpicker/stickers/selection/d;)V
+.method public constructor <init>(Landroid/content/Context;Lcom/vk/attachpicker/stickers/selection/SelectionStickerView$OpenFrom;ZLcom/vk/attachpicker/stickers/selection/SelectionStickerListener1;)V
     .locals 7
     .param p2    # Lcom/vk/attachpicker/stickers/selection/SelectionStickerView$OpenFrom;
         .annotation build Landroidx/annotation/NonNull;
@@ -192,7 +192,7 @@
     iput v1, p0, Lcom/vk/attachpicker/stickers/selection/SelectionStickerView;->c:I
 
     .line 5
-    sget-object v1, Lcom/vk/core/util/i;->a:Landroid/content/Context;
+    sget-object v1, Lcom/vk/core/util/AppContextHolder;->a:Landroid/content/Context;
 
     invoke-virtual {v1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
@@ -283,7 +283,7 @@
     const/4 v3, 0x0
 
     .line 16
-    iput-object v3, p0, Lcom/vk/attachpicker/stickers/selection/SelectionStickerView;->a0:Lcom/vk/stories/clickable/models/time/b;
+    iput-object v3, p0, Lcom/vk/attachpicker/stickers/selection/SelectionStickerView;->a0:Lcom/vk/stories/clickable/models/time/TimeStickerInfo;
 
     .line 17
     new-instance v4, Lcom/vk/attachpicker/stickers/selection/SelectionStickerSearchDelegate;
@@ -345,13 +345,13 @@
     const v5, 0x7f060035
 
     .line 24
-    invoke-static {v5}, Lcom/vk/core/util/y0;->b(I)I
+    invoke-static {v5}, Lcom/vk/core/util/ResUtils;->b(I)I
 
     move-result v5
 
     const v6, 0x3ecccccd    # 0.4f
 
-    invoke-static {v5, v6}, Lcom/vk/core/util/p;->b(IF)I
+    invoke-static {v5, v6}, Lcom/vk/core/util/ColorUtils;->b(IF)I
 
     move-result v5
 
@@ -419,7 +419,7 @@
     invoke-virtual {v4, v2, v2, v2, v5}, Landroid/view/ViewGroup;->setPadding(IIII)V
 
     .line 32
-    iput-object p4, p0, Lcom/vk/attachpicker/stickers/selection/SelectionStickerView;->M:Lcom/vk/attachpicker/stickers/selection/d;
+    iput-object p4, p0, Lcom/vk/attachpicker/stickers/selection/SelectionStickerView;->M:Lcom/vk/attachpicker/stickers/selection/SelectionStickerListener1;
 
     .line 33
     iput-object p2, p0, Lcom/vk/attachpicker/stickers/selection/SelectionStickerView;->R:Lcom/vk/attachpicker/stickers/selection/SelectionStickerView$OpenFrom;
@@ -439,9 +439,9 @@
     invoke-virtual {p2, v0}, Lcom/vk/core/ui/VkBottomSheetBehavior;->b(Z)V
 
     .line 36
-    new-instance p2, Lcom/vk/attachpicker/widget/f;
+    new-instance p2, Lcom/vk/attachpicker/widget/EmojiAutofitRecyclerView;
 
-    invoke-direct {p2, p1}, Lcom/vk/attachpicker/widget/f;-><init>(Landroid/content/Context;)V
+    invoke-direct {p2, p1}, Lcom/vk/attachpicker/widget/EmojiAutofitRecyclerView;-><init>(Landroid/content/Context;)V
 
     iput-object p2, p0, Lcom/vk/attachpicker/stickers/selection/SelectionStickerView;->G:Landroidx/recyclerview/widget/RecyclerView;
 
@@ -464,9 +464,9 @@
     .line 39
     iget-object p2, p0, Lcom/vk/attachpicker/stickers/selection/SelectionStickerView;->G:Landroidx/recyclerview/widget/RecyclerView;
 
-    new-instance v0, Lcom/vk/attachpicker/stickers/selection/f/b;
+    new-instance v0, Lcom/vk/attachpicker/stickers/selection/f/EmojiAdapter;
 
-    invoke-direct {v0, p4}, Lcom/vk/attachpicker/stickers/selection/f/b;-><init>(Lcom/vk/attachpicker/stickers/selection/d;)V
+    invoke-direct {v0, p4}, Lcom/vk/attachpicker/stickers/selection/f/EmojiAdapter;-><init>(Lcom/vk/attachpicker/stickers/selection/SelectionStickerListener1;)V
 
     invoke-virtual {p2, v0}, Landroidx/recyclerview/widget/RecyclerView;->setAdapter(Landroidx/recyclerview/widget/RecyclerView$Adapter;)V
 
@@ -488,25 +488,25 @@
     invoke-virtual {p2, v4, v5, v0, v2}, Landroid/view/ViewGroup;->setPadding(IIII)V
 
     .line 41
-    new-instance p2, Lcom/vk/attachpicker/stickers/n0;
+    new-instance p2, Lcom/vk/attachpicker/stickers/StickersTabStrip;
 
-    invoke-direct {p2, p1}, Lcom/vk/attachpicker/stickers/n0;-><init>(Landroid/content/Context;)V
+    invoke-direct {p2, p1}, Lcom/vk/attachpicker/stickers/StickersTabStrip;-><init>(Landroid/content/Context;)V
 
-    iput-object p2, p0, Lcom/vk/attachpicker/stickers/selection/SelectionStickerView;->H:Lcom/vk/attachpicker/stickers/n0;
+    iput-object p2, p0, Lcom/vk/attachpicker/stickers/selection/SelectionStickerView;->H:Lcom/vk/attachpicker/stickers/StickersTabStrip;
 
     .line 42
-    iget-object p1, p0, Lcom/vk/attachpicker/stickers/selection/SelectionStickerView;->H:Lcom/vk/attachpicker/stickers/n0;
+    iget-object p1, p0, Lcom/vk/attachpicker/stickers/selection/SelectionStickerView;->H:Lcom/vk/attachpicker/stickers/StickersTabStrip;
 
     invoke-virtual {p1, v2, v2, v2, v2}, Landroid/widget/HorizontalScrollView;->setPadding(IIII)V
 
     .line 43
-    iget-object p1, p0, Lcom/vk/attachpicker/stickers/selection/SelectionStickerView;->H:Lcom/vk/attachpicker/stickers/n0;
+    iget-object p1, p0, Lcom/vk/attachpicker/stickers/selection/SelectionStickerView;->H:Lcom/vk/attachpicker/stickers/StickersTabStrip;
 
     new-instance p2, Lcom/vk/attachpicker/stickers/selection/SelectionStickerView$b;
 
     invoke-direct {p2, p0}, Lcom/vk/attachpicker/stickers/selection/SelectionStickerView$b;-><init>(Lcom/vk/attachpicker/stickers/selection/SelectionStickerView;)V
 
-    invoke-virtual {p1, p2}, Lcom/vk/attachpicker/stickers/n0;->setDelegate(Lcom/vk/attachpicker/stickers/n0$c;)V
+    invoke-virtual {p1, p2}, Lcom/vk/attachpicker/stickers/StickersTabStrip;->setDelegate(Lcom/vk/attachpicker/stickers/StickersTabStrip$c;)V
 
     .line 44
     new-instance p1, Landroid/widget/FrameLayout$LayoutParams;
@@ -522,7 +522,7 @@
     .line 45
     iget-object p2, p0, Lcom/vk/attachpicker/stickers/selection/SelectionStickerView;->K:Landroid/widget/FrameLayout;
 
-    iget-object v0, p0, Lcom/vk/attachpicker/stickers/selection/SelectionStickerView;->H:Lcom/vk/attachpicker/stickers/n0;
+    iget-object v0, p0, Lcom/vk/attachpicker/stickers/selection/SelectionStickerView;->H:Lcom/vk/attachpicker/stickers/StickersTabStrip;
 
     invoke-virtual {p2, v0, p1}, Landroid/widget/FrameLayout;->addView(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
 
@@ -549,7 +549,7 @@
 
     new-instance p2, Lcom/vk/attachpicker/stickers/selection/b;
 
-    invoke-direct {p2, p4}, Lcom/vk/attachpicker/stickers/selection/b;-><init>(Lcom/vk/attachpicker/stickers/selection/d;)V
+    invoke-direct {p2, p4}, Lcom/vk/attachpicker/stickers/selection/b;-><init>(Lcom/vk/attachpicker/stickers/selection/SelectionStickerListener1;)V
 
     invoke-virtual {p1, p2}, Landroid/view/View;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
@@ -570,17 +570,17 @@
     .locals 1
 
     .line 1
-    iget-object v0, p0, Lcom/vk/attachpicker/stickers/selection/SelectionStickerView;->V:Lio/reactivex/disposables/b;
+    iget-object v0, p0, Lcom/vk/attachpicker/stickers/selection/SelectionStickerView;->V:Lio/reactivex/disposables/Disposable;
 
     if-eqz v0, :cond_0
 
     .line 2
-    invoke-interface {v0}, Lio/reactivex/disposables/b;->o()V
+    invoke-interface {v0}, Lio/reactivex/disposables/Disposable;->o()V
 
     const/4 v0, 0x0
 
     .line 3
-    iput-object v0, p0, Lcom/vk/attachpicker/stickers/selection/SelectionStickerView;->V:Lio/reactivex/disposables/b;
+    iput-object v0, p0, Lcom/vk/attachpicker/stickers/selection/SelectionStickerView;->V:Lio/reactivex/disposables/Disposable;
 
     :cond_0
     return-void
@@ -590,17 +590,17 @@
     .locals 1
 
     .line 1
-    iget-object v0, p0, Lcom/vk/attachpicker/stickers/selection/SelectionStickerView;->W:Lio/reactivex/disposables/b;
+    iget-object v0, p0, Lcom/vk/attachpicker/stickers/selection/SelectionStickerView;->W:Lio/reactivex/disposables/Disposable;
 
     if-eqz v0, :cond_0
 
     .line 2
-    invoke-interface {v0}, Lio/reactivex/disposables/b;->o()V
+    invoke-interface {v0}, Lio/reactivex/disposables/Disposable;->o()V
 
     const/4 v0, 0x0
 
     .line 3
-    iput-object v0, p0, Lcom/vk/attachpicker/stickers/selection/SelectionStickerView;->W:Lio/reactivex/disposables/b;
+    iput-object v0, p0, Lcom/vk/attachpicker/stickers/selection/SelectionStickerView;->W:Lio/reactivex/disposables/Disposable;
 
     :cond_0
     return-void
@@ -652,35 +652,35 @@
     invoke-virtual {v0}, Ljava/util/ArrayList;->clear()V
 
     .line 2
-    iget-object v0, p0, Lcom/vk/attachpicker/stickers/selection/SelectionStickerView;->H:Lcom/vk/attachpicker/stickers/n0;
+    iget-object v0, p0, Lcom/vk/attachpicker/stickers/selection/SelectionStickerView;->H:Lcom/vk/attachpicker/stickers/StickersTabStrip;
 
-    invoke-virtual {v0}, Lcom/vk/attachpicker/stickers/n0;->a()V
+    invoke-virtual {v0}, Lcom/vk/attachpicker/stickers/StickersTabStrip;->a()V
 
     .line 3
-    iget-object v0, p0, Lcom/vk/attachpicker/stickers/selection/SelectionStickerView;->H:Lcom/vk/attachpicker/stickers/n0;
+    iget-object v0, p0, Lcom/vk/attachpicker/stickers/selection/SelectionStickerView;->H:Lcom/vk/attachpicker/stickers/StickersTabStrip;
 
     const/4 v1, 0x0
 
     const v2, 0x7f080329
 
-    invoke-virtual {v0, v2, v1}, Lcom/vk/attachpicker/stickers/n0;->a(II)V
+    invoke-virtual {v0, v2, v1}, Lcom/vk/attachpicker/stickers/StickersTabStrip;->a(II)V
 
     .line 4
-    iget-object v0, p0, Lcom/vk/attachpicker/stickers/selection/SelectionStickerView;->H:Lcom/vk/attachpicker/stickers/n0;
+    iget-object v0, p0, Lcom/vk/attachpicker/stickers/selection/SelectionStickerView;->H:Lcom/vk/attachpicker/stickers/StickersTabStrip;
 
     const/4 v2, 0x1
 
-    invoke-virtual {v0, v2}, Lcom/vk/attachpicker/stickers/n0;->setHeaderTabsCount(I)V
+    invoke-virtual {v0, v2}, Lcom/vk/attachpicker/stickers/StickersTabStrip;->setHeaderTabsCount(I)V
 
     .line 5
-    iget-object v0, p0, Lcom/vk/attachpicker/stickers/selection/SelectionStickerView;->H:Lcom/vk/attachpicker/stickers/n0;
+    iget-object v0, p0, Lcom/vk/attachpicker/stickers/selection/SelectionStickerView;->H:Lcom/vk/attachpicker/stickers/StickersTabStrip;
 
     const v3, 0x7f08097f
 
-    invoke-virtual {v0, v3, v2}, Lcom/vk/attachpicker/stickers/n0;->a(II)V
+    invoke-virtual {v0, v3, v2}, Lcom/vk/attachpicker/stickers/StickersTabStrip;->a(II)V
 
     .line 6
-    invoke-static {}, Lcom/vk/attachpicker/util/d;->o()[Lcom/vk/dto/stickers/StickerItem;
+    invoke-static {}, Lcom/vk/attachpicker/util/PickerStickers;->o()[Lcom/vk/dto/stickers/StickerItem;
 
     move-result-object v0
 
@@ -711,7 +711,7 @@
     .line 10
     iget-object v6, p0, Lcom/vk/attachpicker/stickers/selection/SelectionStickerView;->D:Ljava/util/ArrayList;
 
-    new-instance v7, Lcom/vk/attachpicker/stickers/selection/h/d;
+    new-instance v7, Lcom/vk/attachpicker/stickers/selection/h/ClickableItem2;
 
     aget-object v8, v0, v5
 
@@ -733,7 +733,7 @@
 
     move-result v9
 
-    invoke-direct {v7, v8, v9}, Lcom/vk/attachpicker/stickers/selection/h/d;-><init>(Ljava/lang/String;I)V
+    invoke-direct {v7, v8, v9}, Lcom/vk/attachpicker/stickers/selection/h/ClickableItem2;-><init>(Ljava/lang/String;I)V
 
     .line 13
     invoke-virtual {v6, v7}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
@@ -744,11 +744,11 @@
 
     .line 14
     :cond_0
-    iget-object v0, p0, Lcom/vk/attachpicker/stickers/selection/SelectionStickerView;->H:Lcom/vk/attachpicker/stickers/n0;
+    iget-object v0, p0, Lcom/vk/attachpicker/stickers/selection/SelectionStickerView;->H:Lcom/vk/attachpicker/stickers/StickersTabStrip;
 
     const v5, 0x7f08097b
 
-    invoke-virtual {v0, v5, v3}, Lcom/vk/attachpicker/stickers/n0;->a(II)V
+    invoke-virtual {v0, v5, v3}, Lcom/vk/attachpicker/stickers/StickersTabStrip;->a(II)V
 
     goto :goto_1
 
@@ -757,9 +757,9 @@
 
     .line 15
     :goto_1
-    sget-object v0, Lcom/vk/stickers/t;->l:Lcom/vk/stickers/t;
+    sget-object v0, Lcom/vk/stickers/Stickers;->l:Lcom/vk/stickers/Stickers;
 
-    invoke-virtual {v0}, Lcom/vk/stickers/t;->f()Ljava/util/List;
+    invoke-virtual {v0}, Lcom/vk/stickers/Stickers;->f()Ljava/util/List;
 
     move-result-object v0
 
@@ -783,19 +783,19 @@
     if-nez v0, :cond_2
 
     .line 19
-    iget-object v0, p0, Lcom/vk/attachpicker/stickers/selection/SelectionStickerView;->H:Lcom/vk/attachpicker/stickers/n0;
+    iget-object v0, p0, Lcom/vk/attachpicker/stickers/selection/SelectionStickerView;->H:Lcom/vk/attachpicker/stickers/StickersTabStrip;
 
     const v5, 0x7f080486
 
-    invoke-virtual {v0, v5, v4}, Lcom/vk/attachpicker/stickers/n0;->a(II)V
+    invoke-virtual {v0, v5, v4}, Lcom/vk/attachpicker/stickers/StickersTabStrip;->a(II)V
 
     add-int/lit8 v3, v3, 0x1
 
     .line 20
     :cond_2
-    sget-object v0, Lcom/vk/stickers/t;->l:Lcom/vk/stickers/t;
+    sget-object v0, Lcom/vk/stickers/Stickers;->l:Lcom/vk/stickers/Stickers;
 
-    invoke-virtual {v0}, Lcom/vk/stickers/t;->k()Ljava/util/List;
+    invoke-virtual {v0}, Lcom/vk/stickers/Stickers;->k()Ljava/util/List;
 
     move-result-object v0
 
@@ -819,21 +819,21 @@
     if-lez v0, :cond_3
 
     .line 24
-    iget-object v0, p0, Lcom/vk/attachpicker/stickers/selection/SelectionStickerView;->H:Lcom/vk/attachpicker/stickers/n0;
+    iget-object v0, p0, Lcom/vk/attachpicker/stickers/selection/SelectionStickerView;->H:Lcom/vk/attachpicker/stickers/StickersTabStrip;
 
     const v4, 0x7f0807ab
 
     const/4 v5, 0x4
 
-    invoke-virtual {v0, v4, v5}, Lcom/vk/attachpicker/stickers/n0;->a(II)V
+    invoke-virtual {v0, v4, v5}, Lcom/vk/attachpicker/stickers/StickersTabStrip;->a(II)V
 
     add-int/lit8 v3, v3, 0x1
 
     .line 25
     :cond_3
-    sget-object v0, Lcom/vk/stickers/t;->l:Lcom/vk/stickers/t;
+    sget-object v0, Lcom/vk/stickers/Stickers;->l:Lcom/vk/stickers/Stickers;
 
-    invoke-virtual {v0}, Lcom/vk/stickers/t;->d()Ljava/util/List;
+    invoke-virtual {v0}, Lcom/vk/stickers/Stickers;->d()Ljava/util/List;
 
     move-result-object v0
 
@@ -868,9 +868,9 @@
     check-cast v4, Lcom/vk/dto/stickers/StickerStockItem;
 
     .line 29
-    iget-object v5, p0, Lcom/vk/attachpicker/stickers/selection/SelectionStickerView;->H:Lcom/vk/attachpicker/stickers/n0;
+    iget-object v5, p0, Lcom/vk/attachpicker/stickers/selection/SelectionStickerView;->H:Lcom/vk/attachpicker/stickers/StickersTabStrip;
 
-    invoke-virtual {v5, v4}, Lcom/vk/attachpicker/stickers/n0;->a(Lcom/vk/dto/stickers/StickerStockItem;)V
+    invoke-virtual {v5, v4}, Lcom/vk/attachpicker/stickers/StickersTabStrip;->a(Lcom/vk/dto/stickers/StickerStockItem;)V
 
     add-int/lit8 v3, v3, 0x1
 
@@ -881,24 +881,24 @@
     iput v3, p0, Lcom/vk/attachpicker/stickers/selection/SelectionStickerView;->f:I
 
     .line 31
-    invoke-static {}, Lcom/vk/bridges/g;->a()Lcom/vk/bridges/f;
+    invoke-static {}, Lcom/vk/bridges/AuthBridge;->a()Lcom/vk/bridges/AuthBridge3;
 
     move-result-object v0
 
-    invoke-interface {v0}, Lcom/vk/bridges/f;->a()Z
+    invoke-interface {v0}, Lcom/vk/bridges/AuthBridge3;->a()Z
 
     move-result v0
 
     if-eqz v0, :cond_5
 
     .line 32
-    iget-object v0, p0, Lcom/vk/attachpicker/stickers/selection/SelectionStickerView;->H:Lcom/vk/attachpicker/stickers/n0;
+    iget-object v0, p0, Lcom/vk/attachpicker/stickers/selection/SelectionStickerView;->H:Lcom/vk/attachpicker/stickers/StickersTabStrip;
 
     const v3, 0x7f08097e
 
     const/4 v4, 0x5
 
-    invoke-virtual {v0, v3, v4}, Lcom/vk/attachpicker/stickers/n0;->a(II)V
+    invoke-virtual {v0, v3, v4}, Lcom/vk/attachpicker/stickers/StickersTabStrip;->a(II)V
 
     .line 33
     :cond_5
@@ -930,11 +930,11 @@
     return-void
 .end method
 
-.method static synthetic a(Lcom/vk/attachpicker/stickers/selection/SelectionStickerView;Lcom/vk/attachpicker/stickers/selection/f/d;)Lcom/vk/attachpicker/stickers/selection/f/d;
+.method static synthetic a(Lcom/vk/attachpicker/stickers/selection/SelectionStickerView;Lcom/vk/attachpicker/stickers/selection/f/MaskAdapter;)Lcom/vk/attachpicker/stickers/selection/f/MaskAdapter;
     .locals 0
 
     .line 3
-    iput-object p1, p0, Lcom/vk/attachpicker/stickers/selection/SelectionStickerView;->U:Lcom/vk/attachpicker/stickers/selection/f/d;
+    iput-object p1, p0, Lcom/vk/attachpicker/stickers/selection/SelectionStickerView;->U:Lcom/vk/attachpicker/stickers/selection/f/MaskAdapter;
 
     return-object p1
 .end method
@@ -948,11 +948,11 @@
     return-void
 .end method
 
-.method static synthetic a(Lcom/vk/attachpicker/stickers/selection/d;Landroid/view/View;)V
+.method static synthetic a(Lcom/vk/attachpicker/stickers/selection/SelectionStickerListener1;Landroid/view/View;)V
     .locals 0
 
     .line 4
-    invoke-interface {p0}, Lcom/vk/attachpicker/stickers/selection/d;->close()V
+    invoke-interface {p0}, Lcom/vk/attachpicker/stickers/selection/SelectionStickerListener1;->close()V
 
     return-void
 .end method
@@ -1008,11 +1008,11 @@
     return p0
 .end method
 
-.method static synthetic d(Lcom/vk/attachpicker/stickers/selection/SelectionStickerView;)Lcom/vk/attachpicker/stickers/selection/f/d;
+.method static synthetic d(Lcom/vk/attachpicker/stickers/selection/SelectionStickerView;)Lcom/vk/attachpicker/stickers/selection/f/MaskAdapter;
     .locals 0
 
     .line 1
-    iget-object p0, p0, Lcom/vk/attachpicker/stickers/selection/SelectionStickerView;->U:Lcom/vk/attachpicker/stickers/selection/f/d;
+    iget-object p0, p0, Lcom/vk/attachpicker/stickers/selection/SelectionStickerView;->U:Lcom/vk/attachpicker/stickers/selection/f/MaskAdapter;
 
     return-object p0
 .end method
@@ -1251,9 +1251,9 @@
     .locals 2
 
     .line 1
-    sget-object v0, Lcom/vk/stickers/t;->l:Lcom/vk/stickers/t;
+    sget-object v0, Lcom/vk/stickers/Stickers;->l:Lcom/vk/stickers/Stickers;
 
-    invoke-virtual {v0}, Lcom/vk/stickers/t;->g()Lc/a/m;
+    invoke-virtual {v0}, Lcom/vk/stickers/Stickers;->g()Lio/reactivex/Observable;
 
     move-result-object v0
 
@@ -1261,11 +1261,11 @@
 
     invoke-direct {v1, p0}, Lcom/vk/attachpicker/stickers/selection/SelectionStickerView$h;-><init>(Lcom/vk/attachpicker/stickers/selection/SelectionStickerView;)V
 
-    invoke-virtual {v0, v1}, Lc/a/m;->f(Lc/a/z/g;)Lio/reactivex/disposables/b;
+    invoke-virtual {v0, v1}, Lio/reactivex/Observable;->f(Lio/reactivex/functions/Consumer;)Lio/reactivex/disposables/Disposable;
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/vk/attachpicker/stickers/selection/SelectionStickerView;->V:Lio/reactivex/disposables/b;
+    iput-object v0, p0, Lcom/vk/attachpicker/stickers/selection/SelectionStickerView;->V:Lio/reactivex/disposables/Disposable;
 
     return-void
 .end method
@@ -1274,9 +1274,9 @@
     .locals 2
 
     .line 1
-    sget-object v0, Lcom/vk/stickers/t;->l:Lcom/vk/stickers/t;
+    sget-object v0, Lcom/vk/stickers/Stickers;->l:Lcom/vk/stickers/Stickers;
 
-    invoke-virtual {v0}, Lcom/vk/stickers/t;->l()Lc/a/m;
+    invoke-virtual {v0}, Lcom/vk/stickers/Stickers;->l()Lio/reactivex/Observable;
 
     move-result-object v0
 
@@ -1284,11 +1284,11 @@
 
     invoke-direct {v1, p0}, Lcom/vk/attachpicker/stickers/selection/SelectionStickerView$i;-><init>(Lcom/vk/attachpicker/stickers/selection/SelectionStickerView;)V
 
-    invoke-virtual {v0, v1}, Lc/a/m;->f(Lc/a/z/g;)Lio/reactivex/disposables/b;
+    invoke-virtual {v0, v1}, Lio/reactivex/Observable;->f(Lio/reactivex/functions/Consumer;)Lio/reactivex/disposables/Disposable;
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/vk/attachpicker/stickers/selection/SelectionStickerView;->W:Lio/reactivex/disposables/b;
+    iput-object v0, p0, Lcom/vk/attachpicker/stickers/selection/SelectionStickerView;->W:Lio/reactivex/disposables/Disposable;
 
     return-void
 .end method
@@ -1340,14 +1340,14 @@
     move-result-object v0
 
     .line 7
-    instance-of v1, v0, Lcom/vk/attachpicker/stickers/selection/views/a;
+    instance-of v1, v0, Lcom/vk/attachpicker/stickers/selection/views/SelectionTabView;
 
     if-eqz v1, :cond_1
 
     .line 8
-    check-cast v0, Lcom/vk/attachpicker/stickers/selection/views/a;
+    check-cast v0, Lcom/vk/attachpicker/stickers/selection/views/SelectionTabView;
 
-    invoke-virtual {v0}, Lcom/vk/attachpicker/stickers/selection/views/a;->a()Z
+    invoke-virtual {v0}, Lcom/vk/attachpicker/stickers/selection/views/SelectionTabView;->a()Z
 
     move-result v0
 
@@ -1396,20 +1396,20 @@
     .locals 5
 
     .line 1
-    invoke-static {}, Lcom/vk/bridges/g;->a()Lcom/vk/bridges/f;
+    invoke-static {}, Lcom/vk/bridges/AuthBridge;->a()Lcom/vk/bridges/AuthBridge3;
 
     move-result-object v0
 
-    invoke-interface {v0}, Lcom/vk/bridges/f;->a()Z
+    invoke-interface {v0}, Lcom/vk/bridges/AuthBridge3;->a()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
     .line 2
-    sget-object v0, Lcom/vk/stickers/bridge/l;->a:Lcom/vk/stickers/bridge/k;
+    sget-object v0, Lcom/vk/stickers/bridge/StickersBridge4;->a:Lcom/vk/stickers/bridge/StickersBridge;
 
-    invoke-interface {v0}, Lcom/vk/stickers/bridge/k;->c()Lcom/vk/stickers/bridge/m;
+    invoke-interface {v0}, Lcom/vk/stickers/bridge/StickersBridge;->c()Lcom/vk/stickers/bridge/StickersBridge3;
 
     move-result-object v0
 
@@ -1425,15 +1425,15 @@
 
     const/4 v4, 0x0
 
-    invoke-interface {v0, v1, v2, v3, v4}, Lcom/vk/stickers/bridge/m;->a(Landroid/content/Context;ZLjava/util/List;Ljava/lang/String;)V
+    invoke-interface {v0, v1, v2, v3, v4}, Lcom/vk/stickers/bridge/StickersBridge3;->a(Landroid/content/Context;ZLjava/util/List;Ljava/lang/String;)V
 
     goto :goto_0
 
     .line 3
     :cond_0
-    iget-object v0, p0, Lcom/vk/attachpicker/stickers/selection/SelectionStickerView;->M:Lcom/vk/attachpicker/stickers/selection/d;
+    iget-object v0, p0, Lcom/vk/attachpicker/stickers/selection/SelectionStickerView;->M:Lcom/vk/attachpicker/stickers/selection/SelectionStickerListener1;
 
-    invoke-interface {v0}, Lcom/vk/attachpicker/stickers/selection/d;->close()V
+    invoke-interface {v0}, Lcom/vk/attachpicker/stickers/selection/SelectionStickerListener1;->close()V
 
     :goto_0
     return-void
@@ -1551,13 +1551,13 @@
     return-object v0
 .end method
 
-.method public getTimeStyle()Lcom/vk/stories/clickable/models/time/b;
+.method public getTimeStyle()Lcom/vk/stories/clickable/models/time/TimeStickerInfo;
     .locals 1
     .annotation build Landroidx/annotation/Nullable;
     .end annotation
 
     .line 1
-    iget-object v0, p0, Lcom/vk/attachpicker/stickers/selection/SelectionStickerView;->a0:Lcom/vk/stories/clickable/models/time/b;
+    iget-object v0, p0, Lcom/vk/attachpicker/stickers/selection/SelectionStickerView;->a0:Lcom/vk/stories/clickable/models/time/TimeStickerInfo;
 
     return-object v0
 .end method
@@ -1828,7 +1828,7 @@
     .locals 2
 
     .line 1
-    iget-object v0, p0, Lcom/vk/attachpicker/stickers/selection/SelectionStickerView;->H:Lcom/vk/attachpicker/stickers/n0;
+    iget-object v0, p0, Lcom/vk/attachpicker/stickers/selection/SelectionStickerView;->H:Lcom/vk/attachpicker/stickers/StickersTabStrip;
 
     iget-object v1, p0, Lcom/vk/attachpicker/stickers/selection/SelectionStickerView;->I:Landroidx/viewpager/widget/ViewPager;
 
@@ -1836,7 +1836,7 @@
 
     move-result v1
 
-    invoke-virtual {v0, v1}, Lcom/vk/attachpicker/stickers/n0;->a(I)V
+    invoke-virtual {v0, v1}, Lcom/vk/attachpicker/stickers/StickersTabStrip;->a(I)V
 
     return-void
 .end method
@@ -2013,30 +2013,30 @@
     iput-object p1, p0, Lcom/vk/attachpicker/stickers/selection/SelectionStickerView;->T:Ljava/lang/String;
 
     .line 2
-    iget-object v0, p0, Lcom/vk/attachpicker/stickers/selection/SelectionStickerView;->U:Lcom/vk/attachpicker/stickers/selection/f/d;
+    iget-object v0, p0, Lcom/vk/attachpicker/stickers/selection/SelectionStickerView;->U:Lcom/vk/attachpicker/stickers/selection/f/MaskAdapter;
 
     if-eqz v0, :cond_0
 
     .line 3
-    invoke-virtual {v0, p1}, Lcom/vk/attachpicker/stickers/selection/f/d;->f(Ljava/lang/String;)V
+    invoke-virtual {v0, p1}, Lcom/vk/attachpicker/stickers/selection/f/MaskAdapter;->f(Ljava/lang/String;)V
 
     :cond_0
     return-void
 .end method
 
-.method public setTimeInfo(Lcom/vk/stories/clickable/models/time/b;)V
+.method public setTimeInfo(Lcom/vk/stories/clickable/models/time/TimeStickerInfo;)V
     .locals 1
 
     .line 1
-    iput-object p1, p0, Lcom/vk/attachpicker/stickers/selection/SelectionStickerView;->a0:Lcom/vk/stories/clickable/models/time/b;
+    iput-object p1, p0, Lcom/vk/attachpicker/stickers/selection/SelectionStickerView;->a0:Lcom/vk/stories/clickable/models/time/TimeStickerInfo;
 
     .line 2
-    iget-object v0, p0, Lcom/vk/attachpicker/stickers/selection/SelectionStickerView;->U:Lcom/vk/attachpicker/stickers/selection/f/d;
+    iget-object v0, p0, Lcom/vk/attachpicker/stickers/selection/SelectionStickerView;->U:Lcom/vk/attachpicker/stickers/selection/f/MaskAdapter;
 
     if-eqz v0, :cond_0
 
     .line 3
-    invoke-virtual {v0, p1}, Lcom/vk/attachpicker/stickers/selection/f/d;->a(Lcom/vk/stories/clickable/models/time/b;)V
+    invoke-virtual {v0, p1}, Lcom/vk/attachpicker/stickers/selection/f/MaskAdapter;->a(Lcom/vk/stories/clickable/models/time/TimeStickerInfo;)V
 
     :cond_0
     return-void

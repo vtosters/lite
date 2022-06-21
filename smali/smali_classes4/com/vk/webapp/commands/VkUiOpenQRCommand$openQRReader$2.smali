@@ -3,7 +3,7 @@
 .source "VkUiOpenQRCommand.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/b;
+.implements Lkotlin/jvm/b/Functions2;
 
 
 # annotations
@@ -19,12 +19,12 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/b<",
+        "Lkotlin/jvm/b/Functions2<",
         "Ljava/util/List<",
         "+",
         "Ljava/lang/String;",
         ">;",
-        "Lkotlin/m;",
+        "Lkotlin/Unit;",
         ">;"
     }
 .end annotation
@@ -63,7 +63,7 @@
     .line 1
     iget-object p1, p0, Lcom/vk/webapp/commands/VkUiOpenQRCommand$openQRReader$2;->this$0:Lcom/vk/webapp/commands/VkUiOpenQRCommand;
 
-    invoke-virtual {p1}, Lcom/vk/webapp/commands/c;->b()Lcom/vk/webapp/bridges/UiFragmentAndroidBridge;
+    invoke-virtual {p1}, Lcom/vk/webapp/commands/VkUiBaseCommand;->b()Lcom/vk/webapp/bridges/UiFragmentAndroidBridge;
 
     move-result-object p1
 
@@ -81,7 +81,7 @@
 
     move-result-object v1
 
-    invoke-virtual {p1, v0, v1}, Lcom/vk/webapp/bridges/a;->a(Lcom/vk/webapp/internal/data/JsApiMethodType;Lorg/json/JSONObject;)V
+    invoke-virtual {p1, v0, v1}, Lcom/vk/webapp/bridges/AndroidBridge;->a(Lcom/vk/webapp/internal/data/JsApiMethodType;Lorg/json/JSONObject;)V
 
     :cond_0
     return-void
@@ -95,7 +95,7 @@
 
     invoke-virtual {p0, p1}, Lcom/vk/webapp/commands/VkUiOpenQRCommand$openQRReader$2;->a(Ljava/util/List;)V
 
-    sget-object p1, Lkotlin/m;->a:Lkotlin/m;
+    sget-object p1, Lkotlin/Unit;->a:Lkotlin/Unit;
 
     return-object p1
 .end method

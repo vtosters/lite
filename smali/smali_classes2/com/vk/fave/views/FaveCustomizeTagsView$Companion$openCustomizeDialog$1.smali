@@ -3,12 +3,12 @@
 .source "FaveCustomizeTagsView.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/b;
+.implements Lkotlin/jvm/b/Functions2;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/fave/views/FaveCustomizeTagsView$Companion;->a(Landroid/content/Context;Lcom/vk/fave/entities/l;Lcom/vk/fave/entities/e;)V
+    value = Lcom/vk/fave/views/FaveCustomizeTagsView$Companion;->a(Landroid/content/Context;Lcom/vk/fave/entities/WithTags;Lcom/vk/fave/entities/FaveMetaInfo;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -19,9 +19,9 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/b<",
+        "Lkotlin/jvm/b/Functions2<",
         "Landroid/view/View;",
-        "Lkotlin/m;",
+        "Lkotlin/Unit;",
         ">;"
     }
 .end annotation
@@ -52,7 +52,7 @@
     .line 1
     iget-object p1, p0, Lcom/vk/fave/views/FaveCustomizeTagsView$Companion$openCustomizeDialog$1;->$contentView:Lcom/vk/fave/views/FaveCustomizeTagsView;
 
-    invoke-virtual {p1}, Lcom/vk/fave/views/c;->b()V
+    invoke-virtual {p1}, Lcom/vk/fave/views/FaveBaseHalfScreenView;->b()V
 
     return-void
 .end method
@@ -65,7 +65,7 @@
 
     invoke-virtual {p0, p1}, Lcom/vk/fave/views/FaveCustomizeTagsView$Companion$openCustomizeDialog$1;->a(Landroid/view/View;)V
 
-    sget-object p1, Lkotlin/m;->a:Lkotlin/m;
+    sget-object p1, Lkotlin/Unit;->a:Lkotlin/Unit;
 
     return-object p1
 .end method

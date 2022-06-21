@@ -3,7 +3,7 @@
 .source "StoryParentView.java"
 
 # interfaces
-.implements Lcom/vk/imageloader/g;
+.implements Lcom/vk/imageloader/OnLoadCallback;
 
 
 # annotations

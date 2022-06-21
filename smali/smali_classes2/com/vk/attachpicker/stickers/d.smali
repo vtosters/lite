@@ -3,7 +3,7 @@
 .source "lambda"
 
 # interfaces
-.implements Lkotlin/jvm/b/a;
+.implements Lkotlin/jvm/b/Functions;
 
 
 # instance fields
@@ -28,7 +28,7 @@
 
     iget-object v0, p0, Lcom/vk/attachpicker/stickers/d;->a:Lcom/vk/attachpicker/stickers/StickersDrawingViewGroup;
 
-    invoke-virtual {v0}, Lcom/vk/attachpicker/stickers/StickersDrawingViewGroup;->d()Lkotlin/m;
+    invoke-virtual {v0}, Lcom/vk/attachpicker/stickers/StickersDrawingViewGroup;->d()Lkotlin/Unit;
 
     move-result-object v0
 

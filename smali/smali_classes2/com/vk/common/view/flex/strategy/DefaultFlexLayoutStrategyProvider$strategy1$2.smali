@@ -3,7 +3,7 @@
 .source "FlexLayoutStrategy.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/a;
+.implements Lkotlin/jvm/b/Functions;
 
 
 # annotations
@@ -19,8 +19,8 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/a<",
-        "Lcom/vk/common/view/flex/strategy/b;",
+        "Lkotlin/jvm/b/Functions<",
+        "Lcom/vk/common/view/flex/strategy/FlexLayoutStrategy11;",
         ">;"
     }
 .end annotation
@@ -55,13 +55,13 @@
 
 
 # virtual methods
-.method public final invoke()Lcom/vk/common/view/flex/strategy/b;
+.method public final invoke()Lcom/vk/common/view/flex/strategy/FlexLayoutStrategy11;
     .locals 1
 
     .line 2
-    new-instance v0, Lcom/vk/common/view/flex/strategy/b;
+    new-instance v0, Lcom/vk/common/view/flex/strategy/FlexLayoutStrategy11;
 
-    invoke-direct {v0}, Lcom/vk/common/view/flex/strategy/b;-><init>()V
+    invoke-direct {v0}, Lcom/vk/common/view/flex/strategy/FlexLayoutStrategy11;-><init>()V
 
     return-object v0
 .end method
@@ -70,7 +70,7 @@
     .locals 1
 
     .line 1
-    invoke-virtual {p0}, Lcom/vk/common/view/flex/strategy/DefaultFlexLayoutStrategyProvider$strategy1$2;->invoke()Lcom/vk/common/view/flex/strategy/b;
+    invoke-virtual {p0}, Lcom/vk/common/view/flex/strategy/DefaultFlexLayoutStrategyProvider$strategy1$2;->invoke()Lcom/vk/common/view/flex/strategy/FlexLayoutStrategy11;
 
     move-result-object v0
 

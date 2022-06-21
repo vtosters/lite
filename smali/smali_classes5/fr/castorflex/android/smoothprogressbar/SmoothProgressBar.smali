@@ -44,11 +44,11 @@
     if-eqz v2, :cond_0
 
     .line 5
-    new-instance v2, Lfr/castorflex/android/smoothprogressbar/c$b;
+    new-instance v2, Lfr/castorflex/android/smoothprogressbar/SmoothProgressDrawable$b;
 
-    invoke-direct {v2, v1}, Lfr/castorflex/android/smoothprogressbar/c$b;-><init>(Landroid/content/Context;)V
+    invoke-direct {v2, v1}, Lfr/castorflex/android/smoothprogressbar/SmoothProgressDrawable$b;-><init>(Landroid/content/Context;)V
 
-    invoke-virtual {v2}, Lfr/castorflex/android/smoothprogressbar/c$b;->a()Lfr/castorflex/android/smoothprogressbar/c;
+    invoke-virtual {v2}, Lfr/castorflex/android/smoothprogressbar/SmoothProgressDrawable$b;->a()Lfr/castorflex/android/smoothprogressbar/SmoothProgressDrawable;
 
     move-result-object v1
 
@@ -316,55 +316,55 @@
 
     .line 30
     :cond_6
-    new-instance v2, Lfr/castorflex/android/smoothprogressbar/c$b;
+    new-instance v2, Lfr/castorflex/android/smoothprogressbar/SmoothProgressDrawable$b;
 
-    invoke-direct {v2, v1}, Lfr/castorflex/android/smoothprogressbar/c$b;-><init>(Landroid/content/Context;)V
+    invoke-direct {v2, v1}, Lfr/castorflex/android/smoothprogressbar/SmoothProgressDrawable$b;-><init>(Landroid/content/Context;)V
 
     .line 31
-    invoke-virtual {v2, v9}, Lfr/castorflex/android/smoothprogressbar/c$b;->c(F)Lfr/castorflex/android/smoothprogressbar/c$b;
+    invoke-virtual {v2, v9}, Lfr/castorflex/android/smoothprogressbar/SmoothProgressDrawable$b;->c(F)Lfr/castorflex/android/smoothprogressbar/SmoothProgressDrawable$b;
 
     .line 32
-    invoke-virtual {v2, v10}, Lfr/castorflex/android/smoothprogressbar/c$b;->a(F)Lfr/castorflex/android/smoothprogressbar/c$b;
+    invoke-virtual {v2, v10}, Lfr/castorflex/android/smoothprogressbar/SmoothProgressDrawable$b;->a(F)Lfr/castorflex/android/smoothprogressbar/SmoothProgressDrawable$b;
 
     .line 33
-    invoke-virtual {v2, v11}, Lfr/castorflex/android/smoothprogressbar/c$b;->b(F)Lfr/castorflex/android/smoothprogressbar/c$b;
+    invoke-virtual {v2, v11}, Lfr/castorflex/android/smoothprogressbar/SmoothProgressDrawable$b;->b(F)Lfr/castorflex/android/smoothprogressbar/SmoothProgressDrawable$b;
 
     .line 34
-    invoke-virtual {v2, v5}, Lfr/castorflex/android/smoothprogressbar/c$b;->a(Landroid/view/animation/Interpolator;)Lfr/castorflex/android/smoothprogressbar/c$b;
+    invoke-virtual {v2, v5}, Lfr/castorflex/android/smoothprogressbar/SmoothProgressDrawable$b;->a(Landroid/view/animation/Interpolator;)Lfr/castorflex/android/smoothprogressbar/SmoothProgressDrawable$b;
 
     .line 35
-    invoke-virtual {v2, v6}, Lfr/castorflex/android/smoothprogressbar/c$b;->b(I)Lfr/castorflex/android/smoothprogressbar/c$b;
+    invoke-virtual {v2, v6}, Lfr/castorflex/android/smoothprogressbar/SmoothProgressDrawable$b;->b(I)Lfr/castorflex/android/smoothprogressbar/SmoothProgressDrawable$b;
 
     .line 36
-    invoke-virtual {v2, v7}, Lfr/castorflex/android/smoothprogressbar/c$b;->c(I)Lfr/castorflex/android/smoothprogressbar/c$b;
+    invoke-virtual {v2, v7}, Lfr/castorflex/android/smoothprogressbar/SmoothProgressDrawable$b;->c(I)Lfr/castorflex/android/smoothprogressbar/SmoothProgressDrawable$b;
 
     .line 37
-    invoke-virtual {v2, v8}, Lfr/castorflex/android/smoothprogressbar/c$b;->d(F)Lfr/castorflex/android/smoothprogressbar/c$b;
+    invoke-virtual {v2, v8}, Lfr/castorflex/android/smoothprogressbar/SmoothProgressDrawable$b;->d(F)Lfr/castorflex/android/smoothprogressbar/SmoothProgressDrawable$b;
 
     .line 38
-    invoke-virtual {v2, v14}, Lfr/castorflex/android/smoothprogressbar/c$b;->d(Z)Lfr/castorflex/android/smoothprogressbar/c$b;
+    invoke-virtual {v2, v14}, Lfr/castorflex/android/smoothprogressbar/SmoothProgressDrawable$b;->d(Z)Lfr/castorflex/android/smoothprogressbar/SmoothProgressDrawable$b;
 
     .line 39
-    invoke-virtual {v2, v13}, Lfr/castorflex/android/smoothprogressbar/c$b;->b(Z)Lfr/castorflex/android/smoothprogressbar/c$b;
+    invoke-virtual {v2, v13}, Lfr/castorflex/android/smoothprogressbar/SmoothProgressDrawable$b;->b(Z)Lfr/castorflex/android/smoothprogressbar/SmoothProgressDrawable$b;
 
     .line 40
-    invoke-virtual {v2, v0}, Lfr/castorflex/android/smoothprogressbar/c$b;->c(Z)Lfr/castorflex/android/smoothprogressbar/c$b;
+    invoke-virtual {v2, v0}, Lfr/castorflex/android/smoothprogressbar/SmoothProgressDrawable$b;->c(Z)Lfr/castorflex/android/smoothprogressbar/SmoothProgressDrawable$b;
 
     .line 41
-    invoke-virtual {v2, v4}, Lfr/castorflex/android/smoothprogressbar/c$b;->a(Z)Lfr/castorflex/android/smoothprogressbar/c$b;
+    invoke-virtual {v2, v4}, Lfr/castorflex/android/smoothprogressbar/SmoothProgressDrawable$b;->a(Z)Lfr/castorflex/android/smoothprogressbar/SmoothProgressDrawable$b;
 
     if-eqz v17, :cond_7
 
     move-object/from16 v0, v17
 
     .line 42
-    invoke-virtual {v2, v0}, Lfr/castorflex/android/smoothprogressbar/c$b;->a(Landroid/graphics/drawable/Drawable;)Lfr/castorflex/android/smoothprogressbar/c$b;
+    invoke-virtual {v2, v0}, Lfr/castorflex/android/smoothprogressbar/SmoothProgressDrawable$b;->a(Landroid/graphics/drawable/Drawable;)Lfr/castorflex/android/smoothprogressbar/SmoothProgressDrawable$b;
 
     :cond_7
     if-eqz v16, :cond_8
 
     .line 43
-    invoke-virtual {v2}, Lfr/castorflex/android/smoothprogressbar/c$b;->b()Lfr/castorflex/android/smoothprogressbar/c$b;
+    invoke-virtual {v2}, Lfr/castorflex/android/smoothprogressbar/SmoothProgressDrawable$b;->b()Lfr/castorflex/android/smoothprogressbar/SmoothProgressDrawable$b;
 
     :cond_8
     if-eqz v3, :cond_9
@@ -375,7 +375,7 @@
     if-lez v0, :cond_9
 
     .line 45
-    invoke-virtual {v2, v3}, Lfr/castorflex/android/smoothprogressbar/c$b;->a([I)Lfr/castorflex/android/smoothprogressbar/c$b;
+    invoke-virtual {v2, v3}, Lfr/castorflex/android/smoothprogressbar/SmoothProgressDrawable$b;->a([I)Lfr/castorflex/android/smoothprogressbar/SmoothProgressDrawable$b;
 
     goto :goto_2
 
@@ -383,11 +383,11 @@
     move/from16 v0, p3
 
     .line 46
-    invoke-virtual {v2, v0}, Lfr/castorflex/android/smoothprogressbar/c$b;->a(I)Lfr/castorflex/android/smoothprogressbar/c$b;
+    invoke-virtual {v2, v0}, Lfr/castorflex/android/smoothprogressbar/SmoothProgressDrawable$b;->a(I)Lfr/castorflex/android/smoothprogressbar/SmoothProgressDrawable$b;
 
     .line 47
     :goto_2
-    invoke-virtual {v2}, Lfr/castorflex/android/smoothprogressbar/c$b;->a()Lfr/castorflex/android/smoothprogressbar/c;
+    invoke-virtual {v2}, Lfr/castorflex/android/smoothprogressbar/SmoothProgressDrawable$b;->a()Lfr/castorflex/android/smoothprogressbar/SmoothProgressDrawable;
 
     move-result-object v0
 
@@ -399,7 +399,7 @@
     return-void
 .end method
 
-.method private a()Lfr/castorflex/android/smoothprogressbar/c;
+.method private a()Lfr/castorflex/android/smoothprogressbar/SmoothProgressDrawable;
     .locals 2
 
     .line 1
@@ -410,12 +410,12 @@
     if-eqz v0, :cond_0
 
     .line 2
-    instance-of v1, v0, Lfr/castorflex/android/smoothprogressbar/c;
+    instance-of v1, v0, Lfr/castorflex/android/smoothprogressbar/SmoothProgressDrawable;
 
     if-eqz v1, :cond_0
 
     .line 3
-    check-cast v0, Lfr/castorflex/android/smoothprogressbar/c;
+    check-cast v0, Lfr/castorflex/android/smoothprogressbar/SmoothProgressDrawable;
 
     return-object v0
 
@@ -452,7 +452,7 @@
 
     move-result-object v0
 
-    instance-of v0, v0, Lfr/castorflex/android/smoothprogressbar/c;
+    instance-of v0, v0, Lfr/castorflex/android/smoothprogressbar/SmoothProgressDrawable;
 
     if-eqz v0, :cond_0
 
@@ -461,9 +461,9 @@
 
     move-result-object v0
 
-    check-cast v0, Lfr/castorflex/android/smoothprogressbar/c;
+    check-cast v0, Lfr/castorflex/android/smoothprogressbar/SmoothProgressDrawable;
 
-    invoke-virtual {v0}, Lfr/castorflex/android/smoothprogressbar/c;->isRunning()Z
+    invoke-virtual {v0}, Lfr/castorflex/android/smoothprogressbar/SmoothProgressDrawable;->isRunning()Z
 
     move-result v0
 
@@ -506,14 +506,14 @@
     if-eqz v0, :cond_0
 
     .line 3
-    instance-of v1, v0, Lfr/castorflex/android/smoothprogressbar/c;
+    instance-of v1, v0, Lfr/castorflex/android/smoothprogressbar/SmoothProgressDrawable;
 
     if-eqz v1, :cond_0
 
     .line 4
-    check-cast v0, Lfr/castorflex/android/smoothprogressbar/c;
+    check-cast v0, Lfr/castorflex/android/smoothprogressbar/SmoothProgressDrawable;
 
-    invoke-virtual {v0, p1}, Lfr/castorflex/android/smoothprogressbar/c;->a(Landroid/view/animation/Interpolator;)V
+    invoke-virtual {v0, p1}, Lfr/castorflex/android/smoothprogressbar/SmoothProgressDrawable;->a(Landroid/view/animation/Interpolator;)V
 
     :cond_0
     return-void
@@ -523,11 +523,11 @@
     .locals 1
 
     .line 1
-    invoke-direct {p0}, Lfr/castorflex/android/smoothprogressbar/SmoothProgressBar;->a()Lfr/castorflex/android/smoothprogressbar/c;
+    invoke-direct {p0}, Lfr/castorflex/android/smoothprogressbar/SmoothProgressBar;->a()Lfr/castorflex/android/smoothprogressbar/SmoothProgressDrawable;
 
     move-result-object v0
 
-    invoke-virtual {v0, p1}, Lfr/castorflex/android/smoothprogressbar/c;->b(Z)V
+    invoke-virtual {v0, p1}, Lfr/castorflex/android/smoothprogressbar/SmoothProgressDrawable;->b(Z)V
 
     return-void
 .end method
@@ -536,24 +536,24 @@
     .locals 1
 
     .line 1
-    invoke-direct {p0}, Lfr/castorflex/android/smoothprogressbar/SmoothProgressBar;->a()Lfr/castorflex/android/smoothprogressbar/c;
+    invoke-direct {p0}, Lfr/castorflex/android/smoothprogressbar/SmoothProgressBar;->a()Lfr/castorflex/android/smoothprogressbar/SmoothProgressDrawable;
 
     move-result-object v0
 
-    invoke-virtual {v0, p1}, Lfr/castorflex/android/smoothprogressbar/c;->a(Landroid/graphics/drawable/Drawable;)V
+    invoke-virtual {v0, p1}, Lfr/castorflex/android/smoothprogressbar/SmoothProgressDrawable;->a(Landroid/graphics/drawable/Drawable;)V
 
     return-void
 .end method
 
-.method public setSmoothProgressDrawableCallbacks(Lfr/castorflex/android/smoothprogressbar/c$c;)V
+.method public setSmoothProgressDrawableCallbacks(Lfr/castorflex/android/smoothprogressbar/SmoothProgressDrawable$c;)V
     .locals 1
 
     .line 1
-    invoke-direct {p0}, Lfr/castorflex/android/smoothprogressbar/SmoothProgressBar;->a()Lfr/castorflex/android/smoothprogressbar/c;
+    invoke-direct {p0}, Lfr/castorflex/android/smoothprogressbar/SmoothProgressBar;->a()Lfr/castorflex/android/smoothprogressbar/SmoothProgressDrawable;
 
     move-result-object v0
 
-    invoke-virtual {v0, p1}, Lfr/castorflex/android/smoothprogressbar/c;->a(Lfr/castorflex/android/smoothprogressbar/c$c;)V
+    invoke-virtual {v0, p1}, Lfr/castorflex/android/smoothprogressbar/SmoothProgressDrawable;->a(Lfr/castorflex/android/smoothprogressbar/SmoothProgressDrawable$c;)V
 
     return-void
 .end method
@@ -562,11 +562,11 @@
     .locals 1
 
     .line 1
-    invoke-direct {p0}, Lfr/castorflex/android/smoothprogressbar/SmoothProgressBar;->a()Lfr/castorflex/android/smoothprogressbar/c;
+    invoke-direct {p0}, Lfr/castorflex/android/smoothprogressbar/SmoothProgressBar;->a()Lfr/castorflex/android/smoothprogressbar/SmoothProgressDrawable;
 
     move-result-object v0
 
-    invoke-virtual {v0, p1}, Lfr/castorflex/android/smoothprogressbar/c;->a(I)V
+    invoke-virtual {v0, p1}, Lfr/castorflex/android/smoothprogressbar/SmoothProgressDrawable;->a(I)V
 
     return-void
 .end method
@@ -575,11 +575,11 @@
     .locals 1
 
     .line 1
-    invoke-direct {p0}, Lfr/castorflex/android/smoothprogressbar/SmoothProgressBar;->a()Lfr/castorflex/android/smoothprogressbar/c;
+    invoke-direct {p0}, Lfr/castorflex/android/smoothprogressbar/SmoothProgressBar;->a()Lfr/castorflex/android/smoothprogressbar/SmoothProgressDrawable;
 
     move-result-object v0
 
-    invoke-virtual {v0, p1}, Lfr/castorflex/android/smoothprogressbar/c;->a([I)V
+    invoke-virtual {v0, p1}, Lfr/castorflex/android/smoothprogressbar/SmoothProgressDrawable;->a([I)V
 
     return-void
 .end method
@@ -588,11 +588,11 @@
     .locals 1
 
     .line 1
-    invoke-direct {p0}, Lfr/castorflex/android/smoothprogressbar/SmoothProgressBar;->a()Lfr/castorflex/android/smoothprogressbar/c;
+    invoke-direct {p0}, Lfr/castorflex/android/smoothprogressbar/SmoothProgressBar;->a()Lfr/castorflex/android/smoothprogressbar/SmoothProgressDrawable;
 
     move-result-object v0
 
-    invoke-virtual {v0, p1}, Lfr/castorflex/android/smoothprogressbar/c;->a(Landroid/view/animation/Interpolator;)V
+    invoke-virtual {v0, p1}, Lfr/castorflex/android/smoothprogressbar/SmoothProgressDrawable;->a(Landroid/view/animation/Interpolator;)V
 
     return-void
 .end method
@@ -601,11 +601,11 @@
     .locals 1
 
     .line 1
-    invoke-direct {p0}, Lfr/castorflex/android/smoothprogressbar/SmoothProgressBar;->a()Lfr/castorflex/android/smoothprogressbar/c;
+    invoke-direct {p0}, Lfr/castorflex/android/smoothprogressbar/SmoothProgressBar;->a()Lfr/castorflex/android/smoothprogressbar/SmoothProgressDrawable;
 
     move-result-object v0
 
-    invoke-virtual {v0, p1}, Lfr/castorflex/android/smoothprogressbar/c;->a(Z)V
+    invoke-virtual {v0, p1}, Lfr/castorflex/android/smoothprogressbar/SmoothProgressDrawable;->a(Z)V
 
     return-void
 .end method
@@ -614,11 +614,11 @@
     .locals 1
 
     .line 1
-    invoke-direct {p0}, Lfr/castorflex/android/smoothprogressbar/SmoothProgressBar;->a()Lfr/castorflex/android/smoothprogressbar/c;
+    invoke-direct {p0}, Lfr/castorflex/android/smoothprogressbar/SmoothProgressBar;->a()Lfr/castorflex/android/smoothprogressbar/SmoothProgressDrawable;
 
     move-result-object v0
 
-    invoke-virtual {v0, p1}, Lfr/castorflex/android/smoothprogressbar/c;->a(F)V
+    invoke-virtual {v0, p1}, Lfr/castorflex/android/smoothprogressbar/SmoothProgressDrawable;->a(F)V
 
     return-void
 .end method
@@ -627,11 +627,11 @@
     .locals 1
 
     .line 1
-    invoke-direct {p0}, Lfr/castorflex/android/smoothprogressbar/SmoothProgressBar;->a()Lfr/castorflex/android/smoothprogressbar/c;
+    invoke-direct {p0}, Lfr/castorflex/android/smoothprogressbar/SmoothProgressBar;->a()Lfr/castorflex/android/smoothprogressbar/SmoothProgressDrawable;
 
     move-result-object v0
 
-    invoke-virtual {v0, p1}, Lfr/castorflex/android/smoothprogressbar/c;->b(F)V
+    invoke-virtual {v0, p1}, Lfr/castorflex/android/smoothprogressbar/SmoothProgressDrawable;->b(F)V
 
     return-void
 .end method
@@ -640,11 +640,11 @@
     .locals 1
 
     .line 1
-    invoke-direct {p0}, Lfr/castorflex/android/smoothprogressbar/SmoothProgressBar;->a()Lfr/castorflex/android/smoothprogressbar/c;
+    invoke-direct {p0}, Lfr/castorflex/android/smoothprogressbar/SmoothProgressBar;->a()Lfr/castorflex/android/smoothprogressbar/SmoothProgressDrawable;
 
     move-result-object v0
 
-    invoke-virtual {v0, p1}, Lfr/castorflex/android/smoothprogressbar/c;->c(Z)V
+    invoke-virtual {v0, p1}, Lfr/castorflex/android/smoothprogressbar/SmoothProgressDrawable;->c(Z)V
 
     return-void
 .end method
@@ -653,11 +653,11 @@
     .locals 1
 
     .line 1
-    invoke-direct {p0}, Lfr/castorflex/android/smoothprogressbar/SmoothProgressBar;->a()Lfr/castorflex/android/smoothprogressbar/c;
+    invoke-direct {p0}, Lfr/castorflex/android/smoothprogressbar/SmoothProgressBar;->a()Lfr/castorflex/android/smoothprogressbar/SmoothProgressDrawable;
 
     move-result-object v0
 
-    invoke-virtual {v0, p1}, Lfr/castorflex/android/smoothprogressbar/c;->b(I)V
+    invoke-virtual {v0, p1}, Lfr/castorflex/android/smoothprogressbar/SmoothProgressDrawable;->b(I)V
 
     return-void
 .end method
@@ -666,11 +666,11 @@
     .locals 1
 
     .line 1
-    invoke-direct {p0}, Lfr/castorflex/android/smoothprogressbar/SmoothProgressBar;->a()Lfr/castorflex/android/smoothprogressbar/c;
+    invoke-direct {p0}, Lfr/castorflex/android/smoothprogressbar/SmoothProgressBar;->a()Lfr/castorflex/android/smoothprogressbar/SmoothProgressDrawable;
 
     move-result-object v0
 
-    invoke-virtual {v0, p1}, Lfr/castorflex/android/smoothprogressbar/c;->c(I)V
+    invoke-virtual {v0, p1}, Lfr/castorflex/android/smoothprogressbar/SmoothProgressDrawable;->c(I)V
 
     return-void
 .end method
@@ -679,11 +679,11 @@
     .locals 1
 
     .line 1
-    invoke-direct {p0}, Lfr/castorflex/android/smoothprogressbar/SmoothProgressBar;->a()Lfr/castorflex/android/smoothprogressbar/c;
+    invoke-direct {p0}, Lfr/castorflex/android/smoothprogressbar/SmoothProgressBar;->a()Lfr/castorflex/android/smoothprogressbar/SmoothProgressDrawable;
 
     move-result-object v0
 
-    invoke-virtual {v0, p1}, Lfr/castorflex/android/smoothprogressbar/c;->c(F)V
+    invoke-virtual {v0, p1}, Lfr/castorflex/android/smoothprogressbar/SmoothProgressDrawable;->c(F)V
 
     return-void
 .end method
@@ -692,11 +692,11 @@
     .locals 1
 
     .line 1
-    invoke-direct {p0}, Lfr/castorflex/android/smoothprogressbar/SmoothProgressBar;->a()Lfr/castorflex/android/smoothprogressbar/c;
+    invoke-direct {p0}, Lfr/castorflex/android/smoothprogressbar/SmoothProgressBar;->a()Lfr/castorflex/android/smoothprogressbar/SmoothProgressDrawable;
 
     move-result-object v0
 
-    invoke-virtual {v0, p1}, Lfr/castorflex/android/smoothprogressbar/c;->d(F)V
+    invoke-virtual {v0, p1}, Lfr/castorflex/android/smoothprogressbar/SmoothProgressDrawable;->d(F)V
 
     return-void
 .end method
@@ -705,11 +705,11 @@
     .locals 1
 
     .line 1
-    invoke-direct {p0}, Lfr/castorflex/android/smoothprogressbar/SmoothProgressBar;->a()Lfr/castorflex/android/smoothprogressbar/c;
+    invoke-direct {p0}, Lfr/castorflex/android/smoothprogressbar/SmoothProgressBar;->a()Lfr/castorflex/android/smoothprogressbar/SmoothProgressDrawable;
 
     move-result-object v0
 
-    invoke-virtual {v0, p1}, Lfr/castorflex/android/smoothprogressbar/c;->d(Z)V
+    invoke-virtual {v0, p1}, Lfr/castorflex/android/smoothprogressbar/SmoothProgressDrawable;->d(Z)V
 
     return-void
 .end method

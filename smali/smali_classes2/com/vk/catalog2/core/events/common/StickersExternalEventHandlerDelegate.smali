@@ -1,15 +1,15 @@
 .class public final Lcom/vk/catalog2/core/events/common/StickersExternalEventHandlerDelegate;
-.super Lcom/vk/catalog2/core/events/common/a;
+.super Lcom/vk/catalog2/core/events/common/CatalogExternalEventsAdapter;
 .source "StickersExternalEventHandlerDelegate.kt"
 
 
 # instance fields
-.field private final b:Lio/reactivex/disposables/a;
+.field private final b:Lio/reactivex/disposables/CompositeDisposable;
 
-.field private final c:Lkotlin/jvm/b/b;
+.field private final c:Lkotlin/jvm/b/Functions2;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Lkotlin/jvm/b/b<",
+            "Lkotlin/jvm/b/Functions2<",
             "Lcom/vk/catalog2/core/blocks/UIBlock;",
             "Ljava/lang/Boolean;",
             ">;"
@@ -19,57 +19,57 @@
 
 
 # direct methods
-.method public constructor <init>(Lcom/vk/catalog2/core/w/a;)V
+.method public constructor <init>(Lcom/vk/catalog2/core/w/CatalogCommandsBus;)V
     .locals 0
 
     .line 1
-    invoke-direct {p0, p1}, Lcom/vk/catalog2/core/events/common/a;-><init>(Lcom/vk/catalog2/core/w/a;)V
+    invoke-direct {p0, p1}, Lcom/vk/catalog2/core/events/common/CatalogExternalEventsAdapter;-><init>(Lcom/vk/catalog2/core/w/CatalogCommandsBus;)V
 
     .line 2
-    new-instance p1, Lio/reactivex/disposables/a;
+    new-instance p1, Lio/reactivex/disposables/CompositeDisposable;
 
-    invoke-direct {p1}, Lio/reactivex/disposables/a;-><init>()V
+    invoke-direct {p1}, Lio/reactivex/disposables/CompositeDisposable;-><init>()V
 
-    iput-object p1, p0, Lcom/vk/catalog2/core/events/common/StickersExternalEventHandlerDelegate;->b:Lio/reactivex/disposables/a;
+    iput-object p1, p0, Lcom/vk/catalog2/core/events/common/StickersExternalEventHandlerDelegate;->b:Lio/reactivex/disposables/CompositeDisposable;
 
     .line 3
     sget-object p1, Lcom/vk/catalog2/core/events/common/StickersExternalEventHandlerDelegate$shouldUpdate$1;->a:Lcom/vk/catalog2/core/events/common/StickersExternalEventHandlerDelegate$shouldUpdate$1;
 
-    iput-object p1, p0, Lcom/vk/catalog2/core/events/common/StickersExternalEventHandlerDelegate;->c:Lkotlin/jvm/b/b;
+    iput-object p1, p0, Lcom/vk/catalog2/core/events/common/StickersExternalEventHandlerDelegate;->c:Lkotlin/jvm/b/Functions2;
 
     return-void
 .end method
 
-.method public static final synthetic a(Lcom/vk/catalog2/core/events/common/StickersExternalEventHandlerDelegate;)Lkotlin/jvm/b/b;
+.method public static final synthetic a(Lcom/vk/catalog2/core/events/common/StickersExternalEventHandlerDelegate;)Lkotlin/jvm/b/Functions2;
     .locals 0
 
     .line 2
-    iget-object p0, p0, Lcom/vk/catalog2/core/events/common/StickersExternalEventHandlerDelegate;->c:Lkotlin/jvm/b/b;
+    iget-object p0, p0, Lcom/vk/catalog2/core/events/common/StickersExternalEventHandlerDelegate;->c:Lkotlin/jvm/b/Functions2;
 
     return-object p0
 .end method
 
-.method public static final synthetic a(Lcom/vk/catalog2/core/events/common/StickersExternalEventHandlerDelegate;Ljava/lang/String;)Lkotlin/jvm/b/c;
+.method public static final synthetic a(Lcom/vk/catalog2/core/events/common/StickersExternalEventHandlerDelegate;Ljava/lang/String;)Lkotlin/jvm/b/Functions1;
     .locals 0
 
     .line 1
-    invoke-direct {p0, p1}, Lcom/vk/catalog2/core/events/common/StickersExternalEventHandlerDelegate;->a(Ljava/lang/String;)Lkotlin/jvm/b/c;
+    invoke-direct {p0, p1}, Lcom/vk/catalog2/core/events/common/StickersExternalEventHandlerDelegate;->a(Ljava/lang/String;)Lkotlin/jvm/b/Functions1;
 
     move-result-object p0
 
     return-object p0
 .end method
 
-.method private final a(Ljava/lang/String;)Lkotlin/jvm/b/c;
+.method private final a(Ljava/lang/String;)Lkotlin/jvm/b/Functions1;
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
             "Ljava/lang/String;",
             ")",
-            "Lkotlin/jvm/b/c<",
+            "Lkotlin/jvm/b/Functions1<",
             "Lcom/vk/catalog2/core/blocks/UIBlockList;",
-            "Lcom/vk/lists/t;",
+            "Lcom/vk/lists/PaginationHelper;",
             "Lcom/vk/catalog2/core/blocks/UIBlockList;",
             ">;"
         }
@@ -83,14 +83,14 @@
     return-object v0
 .end method
 
-.method private final a(Lcom/vk/catalog2/core/blocks/UIBlockList;Ljava/lang/String;Lkotlin/jvm/b/b;)V
+.method private final a(Lcom/vk/catalog2/core/blocks/UIBlockList;Ljava/lang/String;Lkotlin/jvm/b/Functions2;)V
     .locals 16
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
             "Lcom/vk/catalog2/core/blocks/UIBlockList;",
             "Ljava/lang/String;",
-            "Lkotlin/jvm/b/b<",
+            "Lkotlin/jvm/b/Functions2<",
             "-",
             "Lcom/vk/dto/stickers/StickerStockItem;",
             "Lcom/vk/dto/stickers/StickerStockItem;",
@@ -123,7 +123,7 @@
 
     const-string v3, "uiBlockList.blocks[i]"
 
-    invoke-static {v2, v3}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v2, v3}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     check-cast v2, Lcom/vk/catalog2/core/blocks/UIBlock;
 
@@ -138,7 +138,7 @@
 
     move-object/from16 v4, p2
 
-    invoke-static {v3, v4}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v3, v4}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v3
 
@@ -195,7 +195,7 @@
 
     move-object/from16 v15, p3
 
-    invoke-interface {v15, v2}, Lkotlin/jvm/b/b;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v15, v2}, Lkotlin/jvm/b/Functions2;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v2
 
@@ -227,11 +227,11 @@
     return-void
 .end method
 
-.method public static final synthetic a(Lcom/vk/catalog2/core/events/common/StickersExternalEventHandlerDelegate;Lcom/vk/catalog2/core/blocks/UIBlockList;Ljava/lang/String;Lkotlin/jvm/b/b;)V
+.method public static final synthetic a(Lcom/vk/catalog2/core/events/common/StickersExternalEventHandlerDelegate;Lcom/vk/catalog2/core/blocks/UIBlockList;Ljava/lang/String;Lkotlin/jvm/b/Functions2;)V
     .locals 0
 
     .line 4
-    invoke-direct {p0, p1, p2, p3}, Lcom/vk/catalog2/core/events/common/StickersExternalEventHandlerDelegate;->a(Lcom/vk/catalog2/core/blocks/UIBlockList;Ljava/lang/String;Lkotlin/jvm/b/b;)V
+    invoke-direct {p0, p1, p2, p3}, Lcom/vk/catalog2/core/events/common/StickersExternalEventHandlerDelegate;->a(Lcom/vk/catalog2/core/blocks/UIBlockList;Ljava/lang/String;Lkotlin/jvm/b/Functions2;)V
 
     return-void
 .end method
@@ -290,7 +290,7 @@
 
     move-result-object v3
 
-    invoke-static {v3, p1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v3, p1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v3
 
@@ -377,27 +377,27 @@
     return p1
 .end method
 
-.method public static final synthetic b(Lcom/vk/catalog2/core/events/common/StickersExternalEventHandlerDelegate;Ljava/lang/String;)Lkotlin/jvm/b/c;
+.method public static final synthetic b(Lcom/vk/catalog2/core/events/common/StickersExternalEventHandlerDelegate;Ljava/lang/String;)Lkotlin/jvm/b/Functions1;
     .locals 0
 
     .line 1
-    invoke-direct {p0, p1}, Lcom/vk/catalog2/core/events/common/StickersExternalEventHandlerDelegate;->b(Ljava/lang/String;)Lkotlin/jvm/b/c;
+    invoke-direct {p0, p1}, Lcom/vk/catalog2/core/events/common/StickersExternalEventHandlerDelegate;->b(Ljava/lang/String;)Lkotlin/jvm/b/Functions1;
 
     move-result-object p0
 
     return-object p0
 .end method
 
-.method private final b(Ljava/lang/String;)Lkotlin/jvm/b/c;
+.method private final b(Ljava/lang/String;)Lkotlin/jvm/b/Functions1;
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
             "Ljava/lang/String;",
             ")",
-            "Lkotlin/jvm/b/c<",
+            "Lkotlin/jvm/b/Functions1<",
             "Lcom/vk/catalog2/core/blocks/UIBlockList;",
-            "Lcom/vk/lists/t;",
+            "Lcom/vk/lists/PaginationHelper;",
             "Lcom/vk/catalog2/core/blocks/UIBlockList;",
             ">;"
         }
@@ -411,13 +411,13 @@
     return-object v0
 .end method
 
-.method private final c()Lio/reactivex/disposables/b;
+.method private final c()Lio/reactivex/disposables/Disposable;
     .locals 4
 
     .line 2
-    sget-object v0, Lcom/vk/stickers/d0/h;->b:Lcom/vk/stickers/d0/h;
+    sget-object v0, Lcom/vk/stickers/d0/StickersEventBus;->b:Lcom/vk/stickers/d0/StickersEventBus;
 
-    invoke-virtual {v0}, Lcom/vk/stickers/d0/h;->a()Lc/a/m;
+    invoke-virtual {v0}, Lcom/vk/stickers/d0/StickersEventBus;->a()Lio/reactivex/Observable;
 
     move-result-object v0
 
@@ -426,16 +426,16 @@
 
     const-wide/16 v2, 0x12c
 
-    invoke-virtual {v0, v2, v3, v1}, Lc/a/m;->b(JLjava/util/concurrent/TimeUnit;)Lc/a/m;
+    invoke-virtual {v0, v2, v3, v1}, Lio/reactivex/Observable;->b(JLjava/util/concurrent/TimeUnit;)Lio/reactivex/Observable;
 
     move-result-object v0
 
     .line 4
-    invoke-static {}, Lc/a/y/c/a;->a()Lc/a/s;
+    invoke-static {}, Lio/reactivex/schedulers/AndroidSchedulers;->a()Lio/reactivex/Scheduler;
 
     move-result-object v1
 
-    invoke-virtual {v0, v1}, Lc/a/m;->a(Lc/a/s;)Lc/a/m;
+    invoke-virtual {v0, v1}, Lio/reactivex/Observable;->a(Lio/reactivex/Scheduler;)Lio/reactivex/Observable;
 
     move-result-object v0
 
@@ -444,38 +444,38 @@
 
     invoke-direct {v1, p0}, Lcom/vk/catalog2/core/events/common/StickersExternalEventHandlerDelegate$a;-><init>(Lcom/vk/catalog2/core/events/common/StickersExternalEventHandlerDelegate;)V
 
-    invoke-virtual {v0, v1}, Lc/a/m;->f(Lc/a/z/g;)Lio/reactivex/disposables/b;
+    invoke-virtual {v0, v1}, Lio/reactivex/Observable;->f(Lio/reactivex/functions/Consumer;)Lio/reactivex/disposables/Disposable;
 
     move-result-object v0
 
     const-string v1, "StickersEventBus.events(\u2026d(it) }\n                }"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     return-object v0
 .end method
 
-.method public static final synthetic c(Lcom/vk/catalog2/core/events/common/StickersExternalEventHandlerDelegate;Ljava/lang/String;)Lkotlin/jvm/b/c;
+.method public static final synthetic c(Lcom/vk/catalog2/core/events/common/StickersExternalEventHandlerDelegate;Ljava/lang/String;)Lkotlin/jvm/b/Functions1;
     .locals 0
 
     .line 1
-    invoke-direct {p0, p1}, Lcom/vk/catalog2/core/events/common/StickersExternalEventHandlerDelegate;->c(Ljava/lang/String;)Lkotlin/jvm/b/c;
+    invoke-direct {p0, p1}, Lcom/vk/catalog2/core/events/common/StickersExternalEventHandlerDelegate;->c(Ljava/lang/String;)Lkotlin/jvm/b/Functions1;
 
     move-result-object p0
 
     return-object p0
 .end method
 
-.method private final c(Ljava/lang/String;)Lkotlin/jvm/b/c;
+.method private final c(Ljava/lang/String;)Lkotlin/jvm/b/Functions1;
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
             "Ljava/lang/String;",
             ")",
-            "Lkotlin/jvm/b/c<",
+            "Lkotlin/jvm/b/Functions1<",
             "Lcom/vk/catalog2/core/blocks/UIBlockList;",
-            "Lcom/vk/lists/t;",
+            "Lcom/vk/lists/PaginationHelper;",
             "Lcom/vk/catalog2/core/blocks/UIBlockList;",
             ">;"
         }
@@ -495,13 +495,13 @@
     .locals 2
 
     .line 2
-    invoke-direct {p0}, Lcom/vk/catalog2/core/events/common/StickersExternalEventHandlerDelegate;->c()Lio/reactivex/disposables/b;
+    invoke-direct {p0}, Lcom/vk/catalog2/core/events/common/StickersExternalEventHandlerDelegate;->c()Lio/reactivex/disposables/Disposable;
 
     move-result-object v0
 
-    iget-object v1, p0, Lcom/vk/catalog2/core/events/common/StickersExternalEventHandlerDelegate;->b:Lio/reactivex/disposables/a;
+    iget-object v1, p0, Lcom/vk/catalog2/core/events/common/StickersExternalEventHandlerDelegate;->b:Lio/reactivex/disposables/CompositeDisposable;
 
-    invoke-static {v0, v1}, Lcom/vk/core/extensions/RxExtKt;->a(Lio/reactivex/disposables/b;Lio/reactivex/disposables/a;)Lio/reactivex/disposables/b;
+    invoke-static {v0, v1}, Lcom/vk/core/extensions/RxExtKt;->a(Lio/reactivex/disposables/Disposable;Lio/reactivex/disposables/CompositeDisposable;)Lio/reactivex/disposables/Disposable;
 
     return-void
 .end method

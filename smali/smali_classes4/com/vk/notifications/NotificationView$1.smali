@@ -3,12 +3,12 @@
 .source "NotificationView.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/b;
+.implements Lkotlin/jvm/b/Functions2;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/notifications/NotificationView;-><init>(Lcom/vk/notifications/i;Landroid/content/Context;)V
+    value = Lcom/vk/notifications/NotificationView;-><init>(Lcom/vk/notifications/NotificationsContainer;Landroid/content/Context;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -19,9 +19,9 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/b<",
+        "Lkotlin/jvm/b/Functions2<",
         "Landroid/view/View;",
-        "Lkotlin/m;",
+        "Lkotlin/Unit;",
         ">;"
     }
 .end annotation
@@ -87,14 +87,14 @@
 
     iget-object p1, p0, Lcom/vk/notifications/NotificationView$1;->this$0:Lcom/vk/notifications/NotificationView;
 
-    invoke-static {p1}, Lcom/vk/notifications/NotificationView;->a(Lcom/vk/notifications/NotificationView;)Lcom/vk/notifications/i;
+    invoke-static {p1}, Lcom/vk/notifications/NotificationView;->a(Lcom/vk/notifications/NotificationView;)Lcom/vk/notifications/NotificationsContainer;
 
     move-result-object v4
 
     iget-object v5, p0, Lcom/vk/notifications/NotificationView$1;->this$0:Lcom/vk/notifications/NotificationView;
 
     .line 3
-    invoke-virtual/range {v0 .. v5}, Lcom/vk/notifications/NotificationClickHandler;->a(Landroid/content/Context;Lcom/vk/dto/notifications/NotificationItem;Lcom/vk/dto/notifications/NotificationAction;Lcom/vk/notifications/i;Landroid/view/View;)V
+    invoke-virtual/range {v0 .. v5}, Lcom/vk/notifications/NotificationClickHandler;->a(Landroid/content/Context;Lcom/vk/dto/notifications/NotificationItem;Lcom/vk/dto/notifications/NotificationAction;Lcom/vk/notifications/NotificationsContainer;Landroid/view/View;)V
 
     .line 4
     iget-object p1, p0, Lcom/vk/notifications/NotificationView$1;->this$0:Lcom/vk/notifications/NotificationView;
@@ -114,7 +114,7 @@
 
     invoke-virtual {p0, p1}, Lcom/vk/notifications/NotificationView$1;->a(Landroid/view/View;)V
 
-    sget-object p1, Lkotlin/m;->a:Lkotlin/m;
+    sget-object p1, Lkotlin/Unit;->a:Lkotlin/Unit;
 
     return-object p1
 .end method

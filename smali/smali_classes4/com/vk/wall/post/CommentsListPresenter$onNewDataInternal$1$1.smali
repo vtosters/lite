@@ -3,12 +3,12 @@
 .source "CommentsListPresenter.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/b;
+.implements Lkotlin/jvm/b/Functions2;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/wall/post/CommentsListPresenter$onNewDataInternal$1;->a(Lcom/vtosters/lite/api/wall/a;)V
+    value = Lcom/vk/wall/post/CommentsListPresenter$onNewDataInternal$1;->a(Lcom/vtosters/lite/api/wall/GetCommentsResult;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -19,7 +19,7 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/b<",
+        "Lkotlin/jvm/b/Functions2<",
         "Lcom/vtosters/lite/NewsComment;",
         "Ljava/lang/Boolean;",
         ">;"

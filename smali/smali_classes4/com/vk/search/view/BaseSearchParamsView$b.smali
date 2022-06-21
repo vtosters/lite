@@ -24,7 +24,7 @@
     return-void
 .end method
 
-.method public synthetic constructor <init>(Lkotlin/jvm/internal/i;)V
+.method public synthetic constructor <init>(Lkotlin/jvm/internal/DefaultConstructorMarker;)V
     .locals 0
 
     .line 2
@@ -63,11 +63,11 @@
 
     .line 2
     :try_start_0
-    invoke-static {}, Lcom/vtosters/lite/i0/c;->d()Lb/h/h/d/c;
+    invoke-static {}, Lcom/vtosters/lite/auth/VKAccountManager;->d()Lcom/vk/auth/api/VKAccount;
 
     move-result-object v5
 
-    invoke-virtual {v5}, Lb/h/h/d/c;->o()I
+    invoke-virtual {v5}, Lcom/vk/auth/api/VKAccount;->o()I
 
     move-result v5
 
@@ -76,9 +76,9 @@
     if-nez v5, :cond_1
 
     .line 3
-    sget-object v6, Lcom/vk/core/util/v;->b:Lcom/vk/core/util/v;
+    sget-object v6, Lcom/vk/core/util/DeviceState;->b:Lcom/vk/core/util/DeviceState;
 
-    invoke-virtual {v6}, Lcom/vk/core/util/v;->o()Ljava/lang/String;
+    invoke-virtual {v6}, Lcom/vk/core/util/DeviceState;->o()Ljava/lang/String;
 
     move-result-object v6
 
@@ -101,7 +101,7 @@
 
     const-string v7, "Locale.getDefault()"
 
-    invoke-static {v6, v7}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v6, v7}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {v6}, Ljava/util/Locale;->getCountry()Ljava/lang/String;
 
@@ -132,9 +132,9 @@
 
     .line 8
     :cond_2
-    sget-object v9, Lcom/vk/core/util/i;->a:Landroid/content/Context;
+    sget-object v9, Lcom/vk/core/util/AppContextHolder;->a:Landroid/content/Context;
 
-    invoke-static {v9, v7}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v9, v7}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {v9}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
@@ -154,9 +154,9 @@
 
     .line 10
     :cond_3
-    sget-object v8, Lcom/vk/core/util/i;->a:Landroid/content/Context;
+    sget-object v8, Lcom/vk/core/util/AppContextHolder;->a:Landroid/content/Context;
 
-    invoke-static {v8, v7}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v8, v7}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {v8}, Landroid/content/Context;->getAssets()Landroid/content/res/AssetManager;
 
@@ -170,7 +170,7 @@
 
     invoke-virtual {v8, v9}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-static {}, Lcom/vk/core/util/m0;->a()Ljava/lang/String;
+    invoke-static {}, Lcom/vk/core/util/LangUtils;->a()Ljava/lang/String;
 
     move-result-object v9
 
@@ -190,7 +190,7 @@
 
     const-string v8, "AppContextHolder.context\u2026getDeviceLang() + \".txt\")"
 
-    invoke-static {v7, v8}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v7, v8}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 11
     invoke-virtual {v7}, Ljava/io/InputStream;->available()I
@@ -206,7 +206,7 @@
     invoke-virtual {v7}, Ljava/io/InputStream;->close()V
 
     .line 14
-    sget-object v7, Lkotlin/text/d;->a:Ljava/nio/charset/Charset;
+    sget-object v7, Lkotlin/text/Charsets;->a:Ljava/nio/charset/Charset;
 
     new-instance v9, Ljava/lang/String;
 
@@ -399,7 +399,7 @@
 
     iget-object v12, v13, Lcom/vk/dto/common/Country;->c:Ljava/lang/String;
 
-    invoke-static {v12, v6}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v12, v6}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v12
 

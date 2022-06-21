@@ -3,7 +3,7 @@
 .source "OnboardingFragment.kt"
 
 # interfaces
-.implements Lcom/vk/navigation/b0/k;
+.implements Lcom/vk/navigation/b0/FragmentWithoutBottomMenuBar;
 
 
 # annotations
@@ -31,7 +31,7 @@
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, v1}, Lcom/vk/shoppingcenter/fragment/OnboardingFragment$Companion;-><init>(Lkotlin/jvm/internal/i;)V
+    invoke-direct {v0, v1}, Lcom/vk/shoppingcenter/fragment/OnboardingFragment$Companion;-><init>(Lkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     sput-object v0, Lcom/vk/shoppingcenter/fragment/OnboardingFragment;->E:Lcom/vk/shoppingcenter/fragment/OnboardingFragment$Companion;
 
@@ -100,7 +100,7 @@
 
     invoke-direct {p2, p0}, Lcom/vk/shoppingcenter/fragment/OnboardingFragment$onCreateView$1;-><init>(Lcom/vk/shoppingcenter/fragment/OnboardingFragment;)V
 
-    invoke-virtual {p1, p2}, Lcom/vk/shoppingcenter/fragment/OnboardingView;->setOnFinishedListener(Lkotlin/jvm/b/a;)V
+    invoke-virtual {p1, p2}, Lcom/vk/shoppingcenter/fragment/OnboardingView;->setOnFinishedListener(Lkotlin/jvm/b/Functions;)V
 
     return-object p1
 .end method

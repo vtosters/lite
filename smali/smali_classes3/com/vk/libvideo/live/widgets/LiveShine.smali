@@ -35,7 +35,7 @@
 
     move-object v1, p1
 
-    invoke-direct/range {v0 .. v6}, Lcom/vk/libvideo/live/widgets/LiveShine;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;IIILkotlin/jvm/internal/i;)V
+    invoke-direct/range {v0 .. v6}, Lcom/vk/libvideo/live/widgets/LiveShine;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;IIILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     return-void
 .end method
@@ -57,7 +57,7 @@
 
     move-object v2, p2
 
-    invoke-direct/range {v0 .. v6}, Lcom/vk/libvideo/live/widgets/LiveShine;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;IIILkotlin/jvm/internal/i;)V
+    invoke-direct/range {v0 .. v6}, Lcom/vk/libvideo/live/widgets/LiveShine;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;IIILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     return-void
 .end method
@@ -79,7 +79,7 @@
 
     move v3, p3
 
-    invoke-direct/range {v0 .. v6}, Lcom/vk/libvideo/live/widgets/LiveShine;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;IIILkotlin/jvm/internal/i;)V
+    invoke-direct/range {v0 .. v6}, Lcom/vk/libvideo/live/widgets/LiveShine;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;IIILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     return-void
 .end method
@@ -170,7 +170,7 @@
 
     const-string p4, "ta"
 
-    invoke-static {p2, p4}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p2, p4}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     sget p4, Lcom/vk/libvideo/l;->LiveShine_android_src:I
 
@@ -178,7 +178,7 @@
 
     invoke-direct {v0, p1}, Lcom/vk/libvideo/live/widgets/LiveShine$1;-><init>(Landroid/content/Context;)V
 
-    invoke-static {p2, p4, v0}, Lcom/vk/core/extensions/b0;->a(Landroid/content/res/TypedArray;ILkotlin/jvm/b/a;)Landroid/graphics/drawable/Drawable;
+    invoke-static {p2, p4, v0}, Lcom/vk/core/extensions/TypedArrayExt;->a(Landroid/content/res/TypedArray;ILkotlin/jvm/b/Functions;)Landroid/graphics/drawable/Drawable;
 
     move-result-object p1
 
@@ -238,7 +238,7 @@
     return-void
 .end method
 
-.method public synthetic constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;IIILkotlin/jvm/internal/i;)V
+.method public synthetic constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;IIILkotlin/jvm/internal/DefaultConstructorMarker;)V
     .locals 1
 
     and-int/lit8 p6, p5, 0x2

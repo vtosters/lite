@@ -25,31 +25,31 @@
 
 .field private f:F
 
-.field private g:Lkotlin/jvm/b/a;
+.field private g:Lkotlin/jvm/b/Functions;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Lkotlin/jvm/b/a<",
-            "Lkotlin/m;",
+            "Lkotlin/jvm/b/Functions<",
+            "Lkotlin/Unit;",
             ">;"
         }
     .end annotation
 .end field
 
-.field private h:Lkotlin/jvm/b/a;
+.field private h:Lkotlin/jvm/b/Functions;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Lkotlin/jvm/b/a<",
-            "Lkotlin/m;",
+            "Lkotlin/jvm/b/Functions<",
+            "Lkotlin/Unit;",
             ">;"
         }
     .end annotation
 .end field
 
-.field private i:Lkotlin/jvm/b/a;
+.field private i:Lkotlin/jvm/b/Functions;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Lkotlin/jvm/b/a<",
-            "Lkotlin/m;",
+            "Lkotlin/jvm/b/Functions<",
+            "Lkotlin/Unit;",
             ">;"
         }
     .end annotation
@@ -526,7 +526,7 @@
 
     const-string v1, "spAnimationX.spring"
 
-    invoke-static {p2, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p2, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     const/high16 v2, 0x43480000    # 200.0f
 
@@ -537,7 +537,7 @@
 
     move-result-object p2
 
-    invoke-static {p2, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p2, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     const/high16 v1, 0x3f800000    # 1.0f
 
@@ -602,7 +602,7 @@
 
     const-string p3, "spAnimationY.spring"
 
-    invoke-static {p1, p3}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, p3}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {p1, v2}, Landroidx/dynamicanimation/animation/SpringForce;->setStiffness(F)Landroidx/dynamicanimation/animation/SpringForce;
 
@@ -611,7 +611,7 @@
 
     move-result-object p1
 
-    invoke-static {p1, p3}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, p3}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {p1, v1}, Landroidx/dynamicanimation/animation/SpringForce;->setDampingRatio(F)Landroidx/dynamicanimation/animation/SpringForce;
 
@@ -651,7 +651,7 @@
 
     const-string v3, "spAnimationX.spring"
 
-    invoke-static {p2, v3}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p2, v3}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {p2, v1}, Landroidx/dynamicanimation/animation/SpringForce;->setStiffness(F)Landroidx/dynamicanimation/animation/SpringForce;
 
@@ -660,7 +660,7 @@
 
     move-result-object p2
 
-    invoke-static {p2, v3}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p2, v3}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {p2, v0}, Landroidx/dynamicanimation/animation/SpringForce;->setDampingRatio(F)Landroidx/dynamicanimation/animation/SpringForce;
 
@@ -691,7 +691,7 @@
 
     const-string v2, "spAnimationY.spring"
 
-    invoke-static {p3, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p3, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {p3, v1}, Landroidx/dynamicanimation/animation/SpringForce;->setStiffness(F)Landroidx/dynamicanimation/animation/SpringForce;
 
@@ -700,7 +700,7 @@
 
     move-result-object p3
 
-    invoke-static {p3, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p3, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {p3, v0}, Landroidx/dynamicanimation/animation/SpringForce;->setDampingRatio(F)Landroidx/dynamicanimation/animation/SpringForce;
 
@@ -731,7 +731,7 @@
 
     const-string p4, "spAnimationRotation.spring"
 
-    invoke-static {p3, p4}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p3, p4}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {p3, v1}, Landroidx/dynamicanimation/animation/SpringForce;->setStiffness(F)Landroidx/dynamicanimation/animation/SpringForce;
 
@@ -740,7 +740,7 @@
 
     move-result-object p3
 
-    invoke-static {p3, p4}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p3, p4}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {p3, v0}, Landroidx/dynamicanimation/animation/SpringForce;->setDampingRatio(F)Landroidx/dynamicanimation/animation/SpringForce;
 
@@ -771,7 +771,7 @@
 
     const-string p4, "spAnimationScaleX.spring"
 
-    invoke-static {p3, p4}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p3, p4}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {p3, v1}, Landroidx/dynamicanimation/animation/SpringForce;->setStiffness(F)Landroidx/dynamicanimation/animation/SpringForce;
 
@@ -780,7 +780,7 @@
 
     move-result-object p3
 
-    invoke-static {p3, p4}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p3, p4}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {p3, v0}, Landroidx/dynamicanimation/animation/SpringForce;->setDampingRatio(F)Landroidx/dynamicanimation/animation/SpringForce;
 
@@ -808,7 +808,7 @@
 
     const-string p3, "spAnimationScaleY.spring"
 
-    invoke-static {p1, p3}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, p3}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {p1, v1}, Landroidx/dynamicanimation/animation/SpringForce;->setStiffness(F)Landroidx/dynamicanimation/animation/SpringForce;
 
@@ -817,7 +817,7 @@
 
     move-result-object p1
 
-    invoke-static {p1, p3}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, p3}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {p1, v0}, Landroidx/dynamicanimation/animation/SpringForce;->setDampingRatio(F)Landroidx/dynamicanimation/animation/SpringForce;
 
@@ -1158,24 +1158,24 @@
 
     invoke-direct {v1, p0, p1}, Lcom/vk/voip/VoipViewBehaviour$rotateToAngle$1;-><init>(Lcom/vk/voip/VoipViewBehaviour;I)V
 
-    invoke-static {v0, v1}, Lcom/vk/extensions/ViewExtKt;->b(Landroid/view/View;Lkotlin/jvm/b/b;)V
+    invoke-static {v0, v1}, Lcom/vk/extensions/ViewExtKt;->b(Landroid/view/View;Lkotlin/jvm/b/Functions2;)V
 
     return-void
 .end method
 
-.method public final a(Lkotlin/jvm/b/a;)V
+.method public final a(Lkotlin/jvm/b/Functions;)V
     .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lkotlin/jvm/b/a<",
-            "Lkotlin/m;",
+            "Lkotlin/jvm/b/Functions<",
+            "Lkotlin/Unit;",
             ">;)V"
         }
     .end annotation
 
     .line 9
-    iput-object p1, p0, Lcom/vk/voip/VoipViewBehaviour;->i:Lkotlin/jvm/b/a;
+    iput-object p1, p0, Lcom/vk/voip/VoipViewBehaviour;->i:Lkotlin/jvm/b/Functions;
 
     return-void
 .end method
@@ -1235,36 +1235,36 @@
     return-void
 .end method
 
-.method public final b(Lkotlin/jvm/b/a;)V
+.method public final b(Lkotlin/jvm/b/Functions;)V
     .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lkotlin/jvm/b/a<",
-            "Lkotlin/m;",
+            "Lkotlin/jvm/b/Functions<",
+            "Lkotlin/Unit;",
             ">;)V"
         }
     .end annotation
 
     .line 5
-    iput-object p1, p0, Lcom/vk/voip/VoipViewBehaviour;->h:Lkotlin/jvm/b/a;
+    iput-object p1, p0, Lcom/vk/voip/VoipViewBehaviour;->h:Lkotlin/jvm/b/Functions;
 
     return-void
 .end method
 
-.method public final c()Lkotlin/jvm/b/a;
+.method public final c()Lkotlin/jvm/b/Functions;
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "()",
-            "Lkotlin/jvm/b/a<",
-            "Lkotlin/m;",
+            "Lkotlin/jvm/b/Functions<",
+            "Lkotlin/Unit;",
             ">;"
         }
     .end annotation
 
     .line 4
-    iget-object v0, p0, Lcom/vk/voip/VoipViewBehaviour;->i:Lkotlin/jvm/b/a;
+    iget-object v0, p0, Lcom/vk/voip/VoipViewBehaviour;->i:Lkotlin/jvm/b/Functions;
 
     return-object v0
 .end method
@@ -1278,53 +1278,53 @@
     return-void
 .end method
 
-.method public final c(Lkotlin/jvm/b/a;)V
+.method public final c(Lkotlin/jvm/b/Functions;)V
     .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lkotlin/jvm/b/a<",
-            "Lkotlin/m;",
+            "Lkotlin/jvm/b/Functions<",
+            "Lkotlin/Unit;",
             ">;)V"
         }
     .end annotation
 
     .line 3
-    iput-object p1, p0, Lcom/vk/voip/VoipViewBehaviour;->g:Lkotlin/jvm/b/a;
+    iput-object p1, p0, Lcom/vk/voip/VoipViewBehaviour;->g:Lkotlin/jvm/b/Functions;
 
     return-void
 .end method
 
-.method public final d()Lkotlin/jvm/b/a;
+.method public final d()Lkotlin/jvm/b/Functions;
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "()",
-            "Lkotlin/jvm/b/a<",
-            "Lkotlin/m;",
+            "Lkotlin/jvm/b/Functions<",
+            "Lkotlin/Unit;",
             ">;"
         }
     .end annotation
 
     .line 1
-    iget-object v0, p0, Lcom/vk/voip/VoipViewBehaviour;->h:Lkotlin/jvm/b/a;
+    iget-object v0, p0, Lcom/vk/voip/VoipViewBehaviour;->h:Lkotlin/jvm/b/Functions;
 
     return-object v0
 .end method
 
-.method public final e()Lkotlin/jvm/b/a;
+.method public final e()Lkotlin/jvm/b/Functions;
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "()",
-            "Lkotlin/jvm/b/a<",
-            "Lkotlin/m;",
+            "Lkotlin/jvm/b/Functions<",
+            "Lkotlin/Unit;",
             ">;"
         }
     .end annotation
 
     .line 1
-    iget-object v0, p0, Lcom/vk/voip/VoipViewBehaviour;->g:Lkotlin/jvm/b/a;
+    iget-object v0, p0, Lcom/vk/voip/VoipViewBehaviour;->g:Lkotlin/jvm/b/Functions;
 
     return-object v0
 .end method
@@ -1391,7 +1391,7 @@
 
     invoke-direct {v1, p0}, Lcom/vk/voip/VoipViewBehaviour$maximizeView$1;-><init>(Lcom/vk/voip/VoipViewBehaviour;)V
 
-    invoke-static {v0, v1}, Lcom/vk/extensions/ViewExtKt;->b(Landroid/view/View;Lkotlin/jvm/b/b;)V
+    invoke-static {v0, v1}, Lcom/vk/extensions/ViewExtKt;->b(Landroid/view/View;Lkotlin/jvm/b/Functions2;)V
 
     return-void
 .end method
@@ -1442,7 +1442,7 @@
 
     const-string v1, "VoipViewBehaviour"
 
-    invoke-static {v1, v0}, Lcom/vk/voip/u$a;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, v0}, Lcom/vk/voip/VoipUtils$a;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 2
     iget-object v0, p0, Lcom/vk/voip/VoipViewBehaviour;->k:Landroid/view/View;
@@ -1451,7 +1451,7 @@
 
     invoke-direct {v1, p0}, Lcom/vk/voip/VoipViewBehaviour$minimizeView$1;-><init>(Lcom/vk/voip/VoipViewBehaviour;)V
 
-    invoke-static {v0, v1}, Lcom/vk/extensions/ViewExtKt;->b(Landroid/view/View;Lkotlin/jvm/b/b;)V
+    invoke-static {v0, v1}, Lcom/vk/extensions/ViewExtKt;->b(Landroid/view/View;Lkotlin/jvm/b/Functions2;)V
 
     return-void
 .end method

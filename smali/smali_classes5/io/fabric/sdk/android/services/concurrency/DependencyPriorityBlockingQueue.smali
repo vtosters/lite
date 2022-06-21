@@ -7,11 +7,11 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "<E::",
-        "Lio/fabric/sdk/android/services/concurrency/b;",
+        "Lio/fabric/sdk/android/services/concurrency/Dependency;",
         ":",
-        "Lio/fabric/sdk/android/services/concurrency/j;",
+        "Lio/fabric/sdk/android/services/concurrency/Task;",
         ":",
-        "Lio/fabric/sdk/android/services/concurrency/g;",
+        "Lio/fabric/sdk/android/services/concurrency/PriorityProvider;",
         ">",
         "Ljava/util/concurrent/PriorityBlockingQueue<",
         "TE;>;"
@@ -58,7 +58,7 @@
 
 
 # virtual methods
-.method a(ILjava/lang/Long;Ljava/util/concurrent/TimeUnit;)Lio/fabric/sdk/android/services/concurrency/b;
+.method a(ILjava/lang/Long;Ljava/util/concurrent/TimeUnit;)Lio/fabric/sdk/android/services/concurrency/Dependency;
     .locals 2
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -77,14 +77,14 @@
 
     .line 6
     :goto_0
-    invoke-virtual {p0, p1, p2, p3}, Lio/fabric/sdk/android/services/concurrency/DependencyPriorityBlockingQueue;->b(ILjava/lang/Long;Ljava/util/concurrent/TimeUnit;)Lio/fabric/sdk/android/services/concurrency/b;
+    invoke-virtual {p0, p1, p2, p3}, Lio/fabric/sdk/android/services/concurrency/DependencyPriorityBlockingQueue;->b(ILjava/lang/Long;Ljava/util/concurrent/TimeUnit;)Lio/fabric/sdk/android/services/concurrency/Dependency;
 
     move-result-object v0
 
     if-eqz v0, :cond_1
 
     .line 7
-    invoke-virtual {p0, v0}, Lio/fabric/sdk/android/services/concurrency/DependencyPriorityBlockingQueue;->a(Lio/fabric/sdk/android/services/concurrency/b;)Z
+    invoke-virtual {p0, v0}, Lio/fabric/sdk/android/services/concurrency/DependencyPriorityBlockingQueue;->a(Lio/fabric/sdk/android/services/concurrency/Dependency;)Z
 
     move-result v1
 
@@ -94,7 +94,7 @@
 
     .line 8
     :cond_0
-    invoke-virtual {p0, p1, v0}, Lio/fabric/sdk/android/services/concurrency/DependencyPriorityBlockingQueue;->a(ILio/fabric/sdk/android/services/concurrency/b;)Z
+    invoke-virtual {p0, p1, v0}, Lio/fabric/sdk/android/services/concurrency/DependencyPriorityBlockingQueue;->a(ILio/fabric/sdk/android/services/concurrency/Dependency;)Z
 
     goto :goto_0
 
@@ -133,10 +133,10 @@
 
     move-result-object v1
 
-    check-cast v1, Lio/fabric/sdk/android/services/concurrency/b;
+    check-cast v1, Lio/fabric/sdk/android/services/concurrency/Dependency;
 
     .line 14
-    invoke-virtual {p0, v1}, Lio/fabric/sdk/android/services/concurrency/DependencyPriorityBlockingQueue;->a(Lio/fabric/sdk/android/services/concurrency/b;)Z
+    invoke-virtual {p0, v1}, Lio/fabric/sdk/android/services/concurrency/DependencyPriorityBlockingQueue;->a(Lio/fabric/sdk/android/services/concurrency/Dependency;)Z
 
     move-result v2
 
@@ -171,7 +171,7 @@
     throw v0
 .end method
 
-.method a(ILio/fabric/sdk/android/services/concurrency/b;)Z
+.method a(ILio/fabric/sdk/android/services/concurrency/Dependency;)Z
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -220,7 +220,7 @@
     throw p1
 .end method
 
-.method a(Lio/fabric/sdk/android/services/concurrency/b;)Z
+.method a(Lio/fabric/sdk/android/services/concurrency/Dependency;)Z
     .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -229,7 +229,7 @@
     .end annotation
 
     .line 9
-    invoke-interface {p1}, Lio/fabric/sdk/android/services/concurrency/b;->a()Z
+    invoke-interface {p1}, Lio/fabric/sdk/android/services/concurrency/Dependency;->a()Z
 
     move-result p1
 
@@ -280,7 +280,7 @@
     return-object v2
 .end method
 
-.method b(ILjava/lang/Long;Ljava/util/concurrent/TimeUnit;)Lio/fabric/sdk/android/services/concurrency/b;
+.method b(ILjava/lang/Long;Ljava/util/concurrent/TimeUnit;)Lio/fabric/sdk/android/services/concurrency/Dependency;
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -325,7 +325,7 @@
 
     move-result-object p1
 
-    check-cast p1, Lio/fabric/sdk/android/services/concurrency/b;
+    check-cast p1, Lio/fabric/sdk/android/services/concurrency/Dependency;
 
     goto :goto_0
 
@@ -335,7 +335,7 @@
 
     move-result-object p1
 
-    check-cast p1, Lio/fabric/sdk/android/services/concurrency/b;
+    check-cast p1, Lio/fabric/sdk/android/services/concurrency/Dependency;
 
     goto :goto_0
 
@@ -345,7 +345,7 @@
 
     move-result-object p1
 
-    check-cast p1, Lio/fabric/sdk/android/services/concurrency/b;
+    check-cast p1, Lio/fabric/sdk/android/services/concurrency/Dependency;
 
     goto :goto_0
 
@@ -355,7 +355,7 @@
 
     move-result-object p1
 
-    check-cast p1, Lio/fabric/sdk/android/services/concurrency/b;
+    check-cast p1, Lio/fabric/sdk/android/services/concurrency/Dependency;
 
     :goto_0
     return-object p1
@@ -592,7 +592,7 @@
     throw p1
 .end method
 
-.method public peek()Lio/fabric/sdk/android/services/concurrency/b;
+.method public peek()Lio/fabric/sdk/android/services/concurrency/Dependency;
     .locals 2
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -606,7 +606,7 @@
 
     .line 2
     :try_start_0
-    invoke-virtual {p0, v0, v1, v1}, Lio/fabric/sdk/android/services/concurrency/DependencyPriorityBlockingQueue;->a(ILjava/lang/Long;Ljava/util/concurrent/TimeUnit;)Lio/fabric/sdk/android/services/concurrency/b;
+    invoke-virtual {p0, v0, v1, v1}, Lio/fabric/sdk/android/services/concurrency/DependencyPriorityBlockingQueue;->a(ILjava/lang/Long;Ljava/util/concurrent/TimeUnit;)Lio/fabric/sdk/android/services/concurrency/Dependency;
 
     move-result-object v0
     :try_end_0
@@ -622,14 +622,14 @@
     .locals 1
 
     .line 1
-    invoke-virtual {p0}, Lio/fabric/sdk/android/services/concurrency/DependencyPriorityBlockingQueue;->peek()Lio/fabric/sdk/android/services/concurrency/b;
+    invoke-virtual {p0}, Lio/fabric/sdk/android/services/concurrency/DependencyPriorityBlockingQueue;->peek()Lio/fabric/sdk/android/services/concurrency/Dependency;
 
     move-result-object v0
 
     return-object v0
 .end method
 
-.method public poll()Lio/fabric/sdk/android/services/concurrency/b;
+.method public poll()Lio/fabric/sdk/android/services/concurrency/Dependency;
     .locals 2
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -643,7 +643,7 @@
 
     .line 4
     :try_start_0
-    invoke-virtual {p0, v0, v1, v1}, Lio/fabric/sdk/android/services/concurrency/DependencyPriorityBlockingQueue;->a(ILjava/lang/Long;Ljava/util/concurrent/TimeUnit;)Lio/fabric/sdk/android/services/concurrency/b;
+    invoke-virtual {p0, v0, v1, v1}, Lio/fabric/sdk/android/services/concurrency/DependencyPriorityBlockingQueue;->a(ILjava/lang/Long;Ljava/util/concurrent/TimeUnit;)Lio/fabric/sdk/android/services/concurrency/Dependency;
 
     move-result-object v0
     :try_end_0
@@ -655,7 +655,7 @@
     return-object v1
 .end method
 
-.method public poll(JLjava/util/concurrent/TimeUnit;)Lio/fabric/sdk/android/services/concurrency/b;
+.method public poll(JLjava/util/concurrent/TimeUnit;)Lio/fabric/sdk/android/services/concurrency/Dependency;
     .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -678,7 +678,7 @@
 
     const/4 p2, 0x3
 
-    invoke-virtual {p0, p2, p1, p3}, Lio/fabric/sdk/android/services/concurrency/DependencyPriorityBlockingQueue;->a(ILjava/lang/Long;Ljava/util/concurrent/TimeUnit;)Lio/fabric/sdk/android/services/concurrency/b;
+    invoke-virtual {p0, p2, p1, p3}, Lio/fabric/sdk/android/services/concurrency/DependencyPriorityBlockingQueue;->a(ILjava/lang/Long;Ljava/util/concurrent/TimeUnit;)Lio/fabric/sdk/android/services/concurrency/Dependency;
 
     move-result-object p1
 
@@ -689,7 +689,7 @@
     .locals 1
 
     .line 1
-    invoke-virtual {p0}, Lio/fabric/sdk/android/services/concurrency/DependencyPriorityBlockingQueue;->poll()Lio/fabric/sdk/android/services/concurrency/b;
+    invoke-virtual {p0}, Lio/fabric/sdk/android/services/concurrency/DependencyPriorityBlockingQueue;->poll()Lio/fabric/sdk/android/services/concurrency/Dependency;
 
     move-result-object v0
 
@@ -705,7 +705,7 @@
     .end annotation
 
     .line 2
-    invoke-virtual {p0, p1, p2, p3}, Lio/fabric/sdk/android/services/concurrency/DependencyPriorityBlockingQueue;->poll(JLjava/util/concurrent/TimeUnit;)Lio/fabric/sdk/android/services/concurrency/b;
+    invoke-virtual {p0, p1, p2, p3}, Lio/fabric/sdk/android/services/concurrency/DependencyPriorityBlockingQueue;->poll(JLjava/util/concurrent/TimeUnit;)Lio/fabric/sdk/android/services/concurrency/Dependency;
 
     move-result-object p1
 
@@ -859,7 +859,7 @@
     throw v0
 .end method
 
-.method public take()Lio/fabric/sdk/android/services/concurrency/b;
+.method public take()Lio/fabric/sdk/android/services/concurrency/Dependency;
     .locals 2
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -878,7 +878,7 @@
     const/4 v1, 0x0
 
     .line 2
-    invoke-virtual {p0, v1, v0, v0}, Lio/fabric/sdk/android/services/concurrency/DependencyPriorityBlockingQueue;->a(ILjava/lang/Long;Ljava/util/concurrent/TimeUnit;)Lio/fabric/sdk/android/services/concurrency/b;
+    invoke-virtual {p0, v1, v0, v0}, Lio/fabric/sdk/android/services/concurrency/DependencyPriorityBlockingQueue;->a(ILjava/lang/Long;Ljava/util/concurrent/TimeUnit;)Lio/fabric/sdk/android/services/concurrency/Dependency;
 
     move-result-object v0
 
@@ -894,7 +894,7 @@
     .end annotation
 
     .line 1
-    invoke-virtual {p0}, Lio/fabric/sdk/android/services/concurrency/DependencyPriorityBlockingQueue;->take()Lio/fabric/sdk/android/services/concurrency/b;
+    invoke-virtual {p0}, Lio/fabric/sdk/android/services/concurrency/DependencyPriorityBlockingQueue;->take()Lio/fabric/sdk/android/services/concurrency/Dependency;
 
     move-result-object v0
 

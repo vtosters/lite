@@ -38,11 +38,11 @@
     return-void
 .end method
 
-.method public a(ZLcom/vk/photogallery/dto/c;I)V
+.method public a(ZLcom/vk/photogallery/dto/GalleryState2;I)V
     .locals 0
 
     .line 2
-    invoke-static {p0, p1, p2, p3}, Lcom/vk/photogallery/view/Adapter$b$a;->a(Lcom/vk/photogallery/view/Adapter$b;ZLcom/vk/photogallery/dto/c;I)V
+    invoke-static {p0, p1, p2, p3}, Lcom/vk/photogallery/view/Adapter$b$a;->a(Lcom/vk/photogallery/view/Adapter$b;ZLcom/vk/photogallery/dto/GalleryState2;I)V
 
     return-void
 .end method

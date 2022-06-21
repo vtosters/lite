@@ -18,8 +18,8 @@
 .method public abstract a()Lcom/vk/media/recorder/RecorderBase$RecordingType;
 .end method
 
-.method public abstract a(Lb/h/p/f/c;Lcom/vk/media/gles/EglBase;)V
+.method public abstract a(Lb/h/p/f/Frame;Lcom/vk/media/gles/EglBase;)V
 .end method
 
-.method public abstract a(Lb/h/p/c$c;Z)Z
+.method public abstract a(Lb/h/p/MediaUtils$c;Z)Z
 .end method

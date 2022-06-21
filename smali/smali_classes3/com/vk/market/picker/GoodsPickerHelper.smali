@@ -41,7 +41,7 @@
     return-void
 .end method
 
-.method public static synthetic a(Lcom/vk/market/picker/GoodsPickerHelper;Landroid/content/Context;Lkotlin/jvm/b/b;Lkotlin/jvm/b/a;ZILkotlin/jvm/b/a;Lkotlin/jvm/b/a;ILjava/lang/Object;)Lcom/vk/core/dialogs/bottomsheet/e;
+.method public static synthetic a(Lcom/vk/market/picker/GoodsPickerHelper;Landroid/content/Context;Lkotlin/jvm/b/Functions2;Lkotlin/jvm/b/Functions;ZILkotlin/jvm/b/Functions;Lkotlin/jvm/b/Functions;ILjava/lang/Object;)Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet;
     .locals 9
 
     and-int/lit8 v0, p8, 0x8
@@ -107,7 +107,7 @@
     move-object v4, p3
 
     .line 1
-    invoke-virtual/range {v1 .. v8}, Lcom/vk/market/picker/GoodsPickerHelper;->a(Landroid/content/Context;Lkotlin/jvm/b/b;Lkotlin/jvm/b/a;ZILkotlin/jvm/b/a;Lkotlin/jvm/b/a;)Lcom/vk/core/dialogs/bottomsheet/e;
+    invoke-virtual/range {v1 .. v8}, Lcom/vk/market/picker/GoodsPickerHelper;->a(Landroid/content/Context;Lkotlin/jvm/b/Functions2;Lkotlin/jvm/b/Functions;ZILkotlin/jvm/b/Functions;Lkotlin/jvm/b/Functions;)Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet;
 
     move-result-object v0
 
@@ -116,7 +116,7 @@
 
 
 # virtual methods
-.method public final a(Landroid/content/Context;Lkotlin/jvm/b/b;Lkotlin/jvm/b/a;ZILkotlin/jvm/b/a;Lkotlin/jvm/b/a;)Lcom/vk/core/dialogs/bottomsheet/e;
+.method public final a(Landroid/content/Context;Lkotlin/jvm/b/Functions2;Lkotlin/jvm/b/Functions;ZILkotlin/jvm/b/Functions;Lkotlin/jvm/b/Functions;)Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet;
     .locals 3
     .param p5    # I
         .annotation build Landroidx/annotation/StringRes;
@@ -126,20 +126,20 @@
         value = {
             "(",
             "Landroid/content/Context;",
-            "Lkotlin/jvm/b/b<",
+            "Lkotlin/jvm/b/Functions2<",
             "Ljava/lang/Object;",
-            "Lkotlin/m;",
+            "Lkotlin/Unit;",
             ">;",
-            "Lkotlin/jvm/b/a<",
-            "Lkotlin/m;",
+            "Lkotlin/jvm/b/Functions<",
+            "Lkotlin/Unit;",
             ">;ZI",
-            "Lkotlin/jvm/b/a<",
-            "Lkotlin/m;",
+            "Lkotlin/jvm/b/Functions<",
+            "Lkotlin/Unit;",
             ">;",
-            "Lkotlin/jvm/b/a<",
-            "Lkotlin/m;",
+            "Lkotlin/jvm/b/Functions<",
+            "Lkotlin/Unit;",
             ">;)",
-            "Lcom/vk/core/dialogs/bottomsheet/e;"
+            "Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet;"
         }
     .end annotation
 
@@ -165,75 +165,75 @@
     :cond_0
     new-instance p4, Lcom/vk/market/picker/GoodsPickerHelper$a;
 
-    invoke-direct {p4, p2}, Lcom/vk/market/picker/GoodsPickerHelper$a;-><init>(Lkotlin/jvm/b/b;)V
+    invoke-direct {p4, p2}, Lcom/vk/market/picker/GoodsPickerHelper$a;-><init>(Lkotlin/jvm/b/Functions2;)V
 
     .line 5
-    new-instance v1, Lcom/vk/core/dialogs/bottomsheet/e$a;
+    new-instance v1, Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet$a;
 
-    invoke-direct {v1, p1}, Lcom/vk/core/dialogs/bottomsheet/e$a;-><init>(Landroid/content/Context;)V
+    invoke-direct {v1, p1}, Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet$a;-><init>(Landroid/content/Context;)V
 
     .line 6
-    invoke-virtual {v1, p5}, Lcom/vk/core/dialogs/bottomsheet/e$a;->j(I)Lcom/vk/core/dialogs/bottomsheet/e$a;
+    invoke-virtual {v1, p5}, Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet$a;->j(I)Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet$a;
 
     .line 7
-    invoke-virtual {v1, v0}, Lcom/vk/core/dialogs/bottomsheet/e$a;->d(Landroid/view/View;)Lcom/vk/core/dialogs/bottomsheet/e$a;
+    invoke-virtual {v1, v0}, Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet$a;->d(Landroid/view/View;)Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet$a;
 
     .line 8
-    new-instance p1, Lcom/vk/core/dialogs/bottomsheet/i;
+    new-instance p1, Lcom/vk/core/dialogs/bottomsheet/ContentSnapStrategy3;
 
-    invoke-direct {p1}, Lcom/vk/core/dialogs/bottomsheet/i;-><init>()V
+    invoke-direct {p1}, Lcom/vk/core/dialogs/bottomsheet/ContentSnapStrategy3;-><init>()V
 
-    invoke-virtual {v1, p1}, Lcom/vk/core/dialogs/bottomsheet/e$a;->a(Lcom/vk/core/dialogs/bottomsheet/b;)Lcom/vk/core/dialogs/bottomsheet/e$a;
+    invoke-virtual {v1, p1}, Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet$a;->a(Lcom/vk/core/dialogs/bottomsheet/ContentSnapStrategy2;)Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet$a;
 
     const/4 p1, 0x1
 
     .line 9
-    invoke-virtual {v1, p1}, Lcom/vk/core/dialogs/bottomsheet/e$a;->d(Z)Lcom/vk/core/dialogs/bottomsheet/e$a;
+    invoke-virtual {v1, p1}, Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet$a;->d(Z)Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet$a;
 
     .line 10
     new-instance p5, Lcom/vk/market/picker/GoodsPickerHelper$b;
 
-    invoke-direct {p5, p6}, Lcom/vk/market/picker/GoodsPickerHelper$b;-><init>(Lkotlin/jvm/b/a;)V
+    invoke-direct {p5, p6}, Lcom/vk/market/picker/GoodsPickerHelper$b;-><init>(Lkotlin/jvm/b/Functions;)V
 
     .line 11
-    invoke-virtual {v1, p5}, Lcom/vk/core/dialogs/bottomsheet/e$a;->a(Lcom/vk/core/dialogs/bottomsheet/h$f;)Lcom/vk/core/dialogs/bottomsheet/e$a;
+    invoke-virtual {v1, p5}, Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet$a;->a(Lcom/vk/core/dialogs/bottomsheet/ModalDialogInterface$f;)Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet$a;
 
     .line 12
     new-instance p5, Lcom/vk/market/picker/GoodsPickerHelper$c;
 
-    invoke-direct {p5, p7}, Lcom/vk/market/picker/GoodsPickerHelper$c;-><init>(Lkotlin/jvm/b/a;)V
+    invoke-direct {p5, p7}, Lcom/vk/market/picker/GoodsPickerHelper$c;-><init>(Lkotlin/jvm/b/Functions;)V
 
     .line 13
-    invoke-virtual {v1, p5}, Lcom/vk/core/dialogs/bottomsheet/e$a;->a(Landroid/content/DialogInterface$OnDismissListener;)Lcom/vk/core/dialogs/bottomsheet/e$a;
+    invoke-virtual {v1, p5}, Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet$a;->a(Landroid/content/DialogInterface$OnDismissListener;)Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet$a;
 
     const/4 p5, 0x0
 
     .line 14
-    invoke-virtual {v1, p5}, Lcom/vk/core/dialogs/bottomsheet/e$a;->f(Z)Lcom/vk/core/dialogs/bottomsheet/e$a;
+    invoke-virtual {v1, p5}, Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet$a;->f(Z)Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet$a;
 
     .line 15
-    invoke-virtual {v1, p4}, Lcom/vk/core/dialogs/bottomsheet/e$a;->a(Lcom/vk/core/dialogs/bottomsheet/h$d;)Lcom/vk/core/dialogs/bottomsheet/e$a;
+    invoke-virtual {v1, p4}, Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet$a;->a(Lcom/vk/core/dialogs/bottomsheet/ModalDialogInterface$d;)Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet$a;
 
     const/4 p4, 0x0
 
     .line 16
-    invoke-static {v1, p4, p1, p4}, Lcom/vk/core/dialogs/bottomsheet/e$a;->a(Lcom/vk/core/dialogs/bottomsheet/e$a;Ljava/lang/String;ILjava/lang/Object;)Lcom/vk/core/dialogs/bottomsheet/e;
+    invoke-static {v1, p4, p1, p4}, Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet$a;->a(Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet$a;Ljava/lang/String;ILjava/lang/Object;)Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet;
 
     move-result-object p1
 
     .line 17
     new-instance p4, Lcom/vk/market/picker/GoodsPickerHelper$showPickerDialog$1;
 
-    invoke-direct {p4, p1, p2}, Lcom/vk/market/picker/GoodsPickerHelper$showPickerDialog$1;-><init>(Lcom/vk/core/dialogs/bottomsheet/e;Lkotlin/jvm/b/b;)V
+    invoke-direct {p4, p1, p2}, Lcom/vk/market/picker/GoodsPickerHelper$showPickerDialog$1;-><init>(Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet;Lkotlin/jvm/b/Functions2;)V
 
-    invoke-virtual {v0, p4}, Lcom/vk/market/picker/GoodsPickerView;->setPickListener(Lkotlin/jvm/b/b;)V
+    invoke-virtual {v0, p4}, Lcom/vk/market/picker/GoodsPickerView;->setPickListener(Lkotlin/jvm/b/Functions2;)V
 
     .line 18
     new-instance p2, Lcom/vk/market/picker/GoodsPickerHelper$showPickerDialog$2;
 
-    invoke-direct {p2, p1, p3}, Lcom/vk/market/picker/GoodsPickerHelper$showPickerDialog$2;-><init>(Lcom/vk/core/dialogs/bottomsheet/e;Lkotlin/jvm/b/a;)V
+    invoke-direct {p2, p1, p3}, Lcom/vk/market/picker/GoodsPickerHelper$showPickerDialog$2;-><init>(Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet;Lkotlin/jvm/b/Functions;)V
 
-    invoke-virtual {v0, p2}, Lcom/vk/market/picker/GoodsPickerView;->setOpenMarketAppListener(Lkotlin/jvm/b/a;)V
+    invoke-virtual {v0, p2}, Lcom/vk/market/picker/GoodsPickerView;->setOpenMarketAppListener(Lkotlin/jvm/b/Functions;)V
 
     return-object p1
 .end method
@@ -246,7 +246,7 @@
 
     const-string v0, "APP_URI"
 
-    invoke-static {v2, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v2, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     const-string v1, "ae_app"
 
@@ -262,7 +262,7 @@
 
     move v4, p2
 
-    invoke-static/range {v0 .. v7}, Lcom/vk/common/links/OpenFunctionsKt;->a(Landroid/app/Activity;Ljava/lang/String;Landroid/net/Uri;IILcom/vk/common/links/f;ILjava/lang/Object;)Lio/reactivex/disposables/b;
+    invoke-static/range {v0 .. v7}, Lcom/vk/common/links/OpenFunctionsKt;->a(Landroid/app/Activity;Ljava/lang/String;Landroid/net/Uri;IILcom/vk/common/links/OpenCallback;ILjava/lang/Object;)Lio/reactivex/disposables/Disposable;
 
     return-void
 .end method
@@ -275,7 +275,7 @@
 
     const-string v0, "APP_URI"
 
-    invoke-static {v2, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v2, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     const-string v1, "ae_app"
 
@@ -289,7 +289,7 @@
 
     move-object v0, p1
 
-    invoke-static/range {v0 .. v6}, Lcom/vk/common/links/OpenFunctionsKt;->a(Landroid/content/Context;Ljava/lang/String;Landroid/net/Uri;ILcom/vk/common/links/f;ILjava/lang/Object;)Lio/reactivex/disposables/b;
+    invoke-static/range {v0 .. v6}, Lcom/vk/common/links/OpenFunctionsKt;->a(Landroid/content/Context;Ljava/lang/String;Landroid/net/Uri;ILcom/vk/common/links/OpenCallback;ILjava/lang/Object;)Lio/reactivex/disposables/Disposable;
 
     return-void
 .end method

@@ -24,7 +24,7 @@
     return-void
 .end method
 
-.method public synthetic constructor <init>(Lkotlin/jvm/internal/i;)V
+.method public synthetic constructor <init>(Lkotlin/jvm/internal/DefaultConstructorMarker;)V
     .locals 0
 
     .line 2
@@ -46,7 +46,7 @@
     move-result v0
 
     .line 2
-    new-array v1, v0, [Lkotlin/m;
+    new-array v1, v0, [Lkotlin/Unit;
 
     const/4 v2, 0x0
 
@@ -139,7 +139,7 @@
     .line 7
     :cond_5
     :goto_1
-    sget-object v6, Lkotlin/m;->a:Lkotlin/m;
+    sget-object v6, Lkotlin/Unit;->a:Lkotlin/Unit;
 
     aput-object v6, v1, v2
 
@@ -165,7 +165,7 @@
 
     const/4 v1, 0x0
 
-    invoke-direct {p1, v1, v1, v0, v1}, Lcom/vk/dto/stickers/StickerAnimation;-><init>(Ljava/lang/String;Ljava/lang/String;ILkotlin/jvm/internal/i;)V
+    invoke-direct {p1, v1, v1, v0, v1}, Lcom/vk/dto/stickers/StickerAnimation;-><init>(Ljava/lang/String;Ljava/lang/String;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     return-object p1
 .end method

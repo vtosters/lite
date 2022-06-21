@@ -24,7 +24,7 @@
     return-void
 .end method
 
-.method public synthetic constructor <init>(Lkotlin/jvm/internal/i;)V
+.method public synthetic constructor <init>(Lkotlin/jvm/internal/DefaultConstructorMarker;)V
     .locals 0
 
     .line 2
@@ -39,9 +39,9 @@
     .locals 3
 
     .line 1
-    new-instance v0, Lcom/vk/core/serialize/c;
+    new-instance v0, Lcom/vk/core/serialize/StreamParcelableBuffer;
 
-    invoke-direct {v0}, Lcom/vk/core/serialize/c;-><init>()V
+    invoke-direct {v0}, Lcom/vk/core/serialize/StreamParcelableBuffer;-><init>()V
 
     const-class v1, Lcom/vk/stat/utils/EventState;
 
@@ -53,9 +53,9 @@
 
     const-string v2, "EventState::class.java.classLoader!!"
 
-    invoke-static {v1, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    invoke-virtual {v0, p1, v1}, Lcom/vk/core/serialize/c;->a(Lokio/ByteString;Ljava/lang/ClassLoader;)Lcom/vk/core/serialize/Serializer$StreamParcelable;
+    invoke-virtual {v0, p1, v1}, Lcom/vk/core/serialize/StreamParcelableBuffer;->a(Lokio/ByteString;Ljava/lang/ClassLoader;)Lcom/vk/core/serialize/Serializer$StreamParcelable;
 
     move-result-object p1
 
@@ -64,7 +64,7 @@
     return-object p1
 
     :cond_0
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     const/4 p1, 0x0
 
@@ -75,11 +75,11 @@
     .locals 1
 
     .line 2
-    new-instance v0, Lcom/vk/core/serialize/c;
+    new-instance v0, Lcom/vk/core/serialize/StreamParcelableBuffer;
 
-    invoke-direct {v0}, Lcom/vk/core/serialize/c;-><init>()V
+    invoke-direct {v0}, Lcom/vk/core/serialize/StreamParcelableBuffer;-><init>()V
 
-    invoke-virtual {v0, p1}, Lcom/vk/core/serialize/c;->b(Lcom/vk/core/serialize/Serializer$StreamParcelable;)Lokio/ByteString;
+    invoke-virtual {v0, p1}, Lcom/vk/core/serialize/StreamParcelableBuffer;->b(Lcom/vk/core/serialize/Serializer$StreamParcelable;)Lokio/ByteString;
 
     move-result-object p1
 
@@ -88,7 +88,7 @@
     return-object p1
 
     :cond_0
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     const/4 p1, 0x0
 

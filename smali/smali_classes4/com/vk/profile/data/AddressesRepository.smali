@@ -189,19 +189,19 @@
 
     const-string v1, "sb.toString()"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     return-object v0
 .end method
 
 
 # virtual methods
-.method public final a(I)Lc/a/m;
+.method public final a(I)Lio/reactivex/Observable;
     .locals 4
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(I)",
-            "Lc/a/m<",
+            "Lio/reactivex/Observable<",
             "Lcom/vk/dto/profile/Address;",
             ">;"
         }
@@ -234,38 +234,38 @@
 
     if-eqz p1, :cond_0
 
-    invoke-static {p1}, Lc/a/m;->e(Ljava/lang/Object;)Lc/a/m;
+    invoke-static {p1}, Lio/reactivex/Observable;->e(Ljava/lang/Object;)Lio/reactivex/Observable;
 
     move-result-object p1
 
     goto :goto_0
 
     :cond_0
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     throw v1
 
     .line 9
     :cond_1
-    new-instance v0, Lcom/vk/api/groups/g;
+    new-instance v0, Lcom/vk/api/groups/GroupsGetAddresses;
 
     iget v2, p0, Lcom/vk/profile/data/AddressesRepository;->f:I
 
     iget-boolean v3, p0, Lcom/vk/profile/data/AddressesRepository;->h:Z
 
-    invoke-direct {v0, v2, v3}, Lcom/vk/api/groups/g;-><init>(IZ)V
+    invoke-direct {v0, v2, v3}, Lcom/vk/api/groups/GroupsGetAddresses;-><init>(IZ)V
 
     .line 10
     invoke-static {p1}, Ljava/lang/String;->valueOf(I)Ljava/lang/String;
 
     move-result-object v2
 
-    invoke-virtual {v0, v2}, Lcom/vk/api/groups/g;->d(Ljava/lang/String;)Lcom/vk/api/groups/g;
+    invoke-virtual {v0, v2}, Lcom/vk/api/groups/GroupsGetAddresses;->d(Ljava/lang/String;)Lcom/vk/api/groups/GroupsGetAddresses;
 
     const/4 v2, 0x1
 
     .line 11
-    invoke-static {v0, v1, v2, v1}, Lcom/vk/api/base/d;->d(Lcom/vk/api/base/d;Lcom/vk/api/base/e;ILjava/lang/Object;)Lc/a/m;
+    invoke-static {v0, v1, v2, v1}, Lcom/vk/api/base/ApiRequest;->d(Lcom/vk/api/base/ApiRequest;Lcom/vk/api/base/ApiThreadHolder;ILjava/lang/Object;)Lio/reactivex/Observable;
 
     move-result-object v0
 
@@ -274,7 +274,7 @@
 
     invoke-direct {v1, p0, p1}, Lcom/vk/profile/data/AddressesRepository$b;-><init>(Lcom/vk/profile/data/AddressesRepository;I)V
 
-    invoke-virtual {v0, v1}, Lc/a/m;->e(Lc/a/z/j;)Lc/a/m;
+    invoke-virtual {v0, v1}, Lio/reactivex/Observable;->e(Lio/reactivex/functions/Function;)Lio/reactivex/Observable;
 
     move-result-object p1
 
@@ -282,14 +282,14 @@
     return-object p1
 .end method
 
-.method public final a(Landroid/location/Location;)Lc/a/m;
+.method public final a(Landroid/location/Location;)Lio/reactivex/Observable;
     .locals 3
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
             "Landroid/location/Location;",
             ")",
-            "Lc/a/m<",
+            "Lio/reactivex/Observable<",
             "Ljava/util/List<",
             "Lcom/vk/dto/profile/PlainAddress;",
             ">;>;"
@@ -297,21 +297,21 @@
     .end annotation
 
     .line 3
-    new-instance v0, Lcom/vk/api/groups/o;
+    new-instance v0, Lcom/vk/api/groups/GroupsGetPlainAddresses;
 
     iget v1, p0, Lcom/vk/profile/data/AddressesRepository;->f:I
 
-    invoke-direct {v0, v1}, Lcom/vk/api/groups/o;-><init>(I)V
+    invoke-direct {v0, v1}, Lcom/vk/api/groups/GroupsGetPlainAddresses;-><init>(I)V
 
     .line 4
-    invoke-virtual {v0, p1}, Lcom/vk/api/groups/o;->a(Landroid/location/Location;)Lcom/vk/api/groups/o;
+    invoke-virtual {v0, p1}, Lcom/vk/api/groups/GroupsGetPlainAddresses;->a(Landroid/location/Location;)Lcom/vk/api/groups/GroupsGetPlainAddresses;
 
     const/4 v1, 0x0
 
     const/4 v2, 0x1
 
     .line 5
-    invoke-static {v0, v1, v2, v1}, Lcom/vk/api/base/d;->a(Lcom/vk/api/base/d;Lcom/vk/api/base/e;ILjava/lang/Object;)Lc/a/m;
+    invoke-static {v0, v1, v2, v1}, Lcom/vk/api/base/ApiRequest;->a(Lcom/vk/api/base/ApiRequest;Lcom/vk/api/base/ApiThreadHolder;ILjava/lang/Object;)Lio/reactivex/Observable;
 
     move-result-object v0
 
@@ -320,7 +320,7 @@
 
     invoke-direct {v1, p0}, Lcom/vk/profile/data/AddressesRepository$c;-><init>(Lcom/vk/profile/data/AddressesRepository;)V
 
-    invoke-virtual {v0, v1}, Lc/a/m;->d(Lc/a/z/g;)Lc/a/m;
+    invoke-virtual {v0, v1}, Lio/reactivex/Observable;->d(Lio/reactivex/functions/Consumer;)Lio/reactivex/Observable;
 
     move-result-object v0
 
@@ -396,12 +396,12 @@
     return v0
 .end method
 
-.method public final f()Lc/a/m;
+.method public final f()Lio/reactivex/Observable;
     .locals 3
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "()",
-            "Lc/a/m<",
+            "Lio/reactivex/Observable<",
             "Ljava/util/List<",
             "Lcom/vk/dto/profile/Address;",
             ">;>;"
@@ -409,39 +409,39 @@
     .end annotation
 
     .line 1
-    new-instance v0, Lcom/vk/api/groups/g;
+    new-instance v0, Lcom/vk/api/groups/GroupsGetAddresses;
 
     iget v1, p0, Lcom/vk/profile/data/AddressesRepository;->f:I
 
     iget-boolean v2, p0, Lcom/vk/profile/data/AddressesRepository;->h:Z
 
-    invoke-direct {v0, v1, v2}, Lcom/vk/api/groups/g;-><init>(IZ)V
+    invoke-direct {v0, v1, v2}, Lcom/vk/api/groups/GroupsGetAddresses;-><init>(IZ)V
 
     .line 2
     iget-object v1, p0, Lcom/vk/profile/data/AddressesRepository;->e:Landroid/location/Location;
 
-    invoke-virtual {v0, v1}, Lcom/vk/api/groups/g;->a(Landroid/location/Location;)Lcom/vk/api/groups/g;
+    invoke-virtual {v0, v1}, Lcom/vk/api/groups/GroupsGetAddresses;->a(Landroid/location/Location;)Lcom/vk/api/groups/GroupsGetAddresses;
 
     .line 3
     invoke-direct {p0}, Lcom/vk/profile/data/AddressesRepository;->g()Ljava/lang/String;
 
     move-result-object v1
 
-    invoke-virtual {v0, v1}, Lcom/vk/api/groups/g;->d(Ljava/lang/String;)Lcom/vk/api/groups/g;
+    invoke-virtual {v0, v1}, Lcom/vk/api/groups/GroupsGetAddresses;->d(Ljava/lang/String;)Lcom/vk/api/groups/GroupsGetAddresses;
 
     const/4 v1, 0x0
 
     const/4 v2, 0x1
 
     .line 4
-    invoke-static {v0, v1, v2, v1}, Lcom/vk/api/base/d;->d(Lcom/vk/api/base/d;Lcom/vk/api/base/e;ILjava/lang/Object;)Lc/a/m;
+    invoke-static {v0, v1, v2, v1}, Lcom/vk/api/base/ApiRequest;->d(Lcom/vk/api/base/ApiRequest;Lcom/vk/api/base/ApiThreadHolder;ILjava/lang/Object;)Lio/reactivex/Observable;
 
     move-result-object v0
 
     .line 5
     sget-object v1, Lcom/vk/profile/data/AddressesRepository$d;->a:Lcom/vk/profile/data/AddressesRepository$d;
 
-    invoke-virtual {v0, v1}, Lc/a/m;->c(Lc/a/z/g;)Lc/a/m;
+    invoke-virtual {v0, v1}, Lio/reactivex/Observable;->c(Lio/reactivex/functions/Consumer;)Lio/reactivex/Observable;
 
     move-result-object v0
 
@@ -450,13 +450,13 @@
 
     invoke-direct {v1, p0}, Lcom/vk/profile/data/AddressesRepository$loadNext$2;-><init>(Lcom/vk/profile/data/AddressesRepository;)V
 
-    invoke-virtual {v0, v1}, Lc/a/m;->e(Lc/a/z/j;)Lc/a/m;
+    invoke-virtual {v0, v1}, Lio/reactivex/Observable;->e(Lio/reactivex/functions/Function;)Lio/reactivex/Observable;
 
     move-result-object v0
 
     const-string v1, "GroupsGetAddresses(gid, \u2026       list\n            }"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     return-object v0
 .end method

@@ -26,7 +26,7 @@
 
 
 # direct methods
-.method constructor <init>(Lcom/vk/music/notifications/MusicBuyMusicSubscriptionController;Lkotlin/jvm/b/b;Landroid/view/View$OnClickListener;IILcom/vk/core/widget/PageIndicator;)V
+.method constructor <init>(Lcom/vk/music/notifications/MusicBuyMusicSubscriptionController;Lkotlin/jvm/b/Functions2;Landroid/view/View$OnClickListener;IILcom/vk/core/widget/PageIndicator;)V
     .locals 0
 
     iput-object p1, p0, Lcom/vk/music/notifications/MusicBuyMusicSubscriptionController$d;->b:Lcom/vk/music/notifications/MusicBuyMusicSubscriptionController;

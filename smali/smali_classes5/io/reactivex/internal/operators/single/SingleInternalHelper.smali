@@ -12,17 +12,17 @@
 
 
 # direct methods
-.method public static a()Lc/a/z/j;
+.method public static a()Lio/reactivex/functions/Function;
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "<T:",
             "Ljava/lang/Object;",
             ">()",
-            "Lc/a/z/j<",
-            "Lc/a/x<",
+            "Lio/reactivex/functions/Function<",
+            "Lio/reactivex/SingleSource<",
             "+TT;>;",
-            "Le/b/b<",
+            "Le/b/Publisher<",
             "+TT;>;>;"
         }
     .end annotation

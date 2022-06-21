@@ -38,7 +38,7 @@
     .locals 4
 
     .line 1
-    invoke-static {}, Lcom/vk/bridges/a0;->a()Lcom/vk/bridges/z;
+    invoke-static {}, Lcom/vk/bridges/SharingBridge;->a()Lcom/vk/bridges/SharingBridge1;
 
     move-result-object v0
 
@@ -46,13 +46,13 @@
 
     iget-object v1, v1, Lcom/vk/profile/adapter/items/community/CommunityInternalMenuItem$ViewHolder$2;->this$0:Lcom/vk/profile/adapter/items/community/CommunityInternalMenuItem$ViewHolder;
 
-    invoke-virtual {v1}, Lcom/vtosters/lite/ui/b0/i;->getContext()Landroid/content/Context;
+    invoke-virtual {v1}, Lcom/vtosters/lite/ui/holder/RecyclerHolder;->getContext()Landroid/content/Context;
 
     move-result-object v1
 
     const-string v2, "getContext()"
 
-    invoke-static {v1, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     new-instance v2, Lcom/vtosters/lite/attachments/LinkAttachment;
 
@@ -60,39 +60,39 @@
 
     iget-object v3, v3, Lcom/vk/profile/adapter/items/community/CommunityInternalMenuItem$ViewHolder$2;->this$0:Lcom/vk/profile/adapter/items/community/CommunityInternalMenuItem$ViewHolder;
 
-    invoke-static {v3}, Lcom/vk/profile/adapter/items/community/CommunityInternalMenuItem$ViewHolder;->b(Lcom/vk/profile/adapter/items/community/CommunityInternalMenuItem$ViewHolder;)Lcom/vk/dto/profile/a$b;
+    invoke-static {v3}, Lcom/vk/profile/adapter/items/community/CommunityInternalMenuItem$ViewHolder;->b(Lcom/vk/profile/adapter/items/community/CommunityInternalMenuItem$ViewHolder;)Lcom/vk/dto/profile/CommunityInternalMenu$b;
 
     move-result-object v3
 
-    invoke-virtual {v3}, Lcom/vk/dto/profile/a$b;->c()Ljava/lang/String;
+    invoke-virtual {v3}, Lcom/vk/dto/profile/CommunityInternalMenu$b;->c()Ljava/lang/String;
 
     move-result-object v3
 
     invoke-direct {v2, v3}, Lcom/vtosters/lite/attachments/LinkAttachment;-><init>(Ljava/lang/String;)V
 
-    invoke-interface {v0, v1, v2}, Lcom/vk/bridges/z;->a(Landroid/content/Context;Ljava/lang/Object;)V
+    invoke-interface {v0, v1, v2}, Lcom/vk/bridges/SharingBridge1;->a(Landroid/content/Context;Ljava/lang/Object;)V
 
     .line 2
-    new-instance v0, Lcom/vk/profile/e/b;
+    new-instance v0, Lcom/vk/profile/e/CommunityScreenTracker1;
 
     iget-object v1, p0, Lcom/vk/profile/adapter/items/community/CommunityInternalMenuItem$ViewHolder$2$c;->a:Lcom/vk/profile/adapter/items/community/CommunityInternalMenuItem$ViewHolder$2;
 
     iget-object v1, v1, Lcom/vk/profile/adapter/items/community/CommunityInternalMenuItem$ViewHolder$2;->this$0:Lcom/vk/profile/adapter/items/community/CommunityInternalMenuItem$ViewHolder;
 
-    invoke-virtual {v1}, Lcom/vk/profile/adapter/items/community/CommunityInternalMenuItem$ViewHolder;->g0()Lcom/vk/profile/adapter/di/a;
+    invoke-virtual {v1}, Lcom/vk/profile/adapter/items/community/CommunityInternalMenuItem$ViewHolder;->g0()Lcom/vk/profile/adapter/di/CommunityDataScope;
 
     move-result-object v1
 
-    invoke-virtual {v1}, Lcom/vk/profile/adapter/di/a;->a()I
+    invoke-virtual {v1}, Lcom/vk/profile/adapter/di/CommunityDataScope;->a()I
 
     move-result v1
 
-    invoke-direct {v0, v1}, Lcom/vk/profile/e/b;-><init>(I)V
+    invoke-direct {v0, v1}, Lcom/vk/profile/e/CommunityScreenTracker1;-><init>(I)V
 
     const-string v1, "menu"
 
     .line 3
-    invoke-virtual {v0, v1}, Lcom/vk/profile/e/b;->a(Ljava/lang/String;)Lcom/vk/profile/e/b;
+    invoke-virtual {v0, v1}, Lcom/vk/profile/e/CommunityScreenTracker1;->a(Ljava/lang/String;)Lcom/vk/profile/e/CommunityScreenTracker1;
 
     .line 4
     iget-object v1, p0, Lcom/vk/profile/adapter/items/community/CommunityInternalMenuItem$ViewHolder$2$c;->a:Lcom/vk/profile/adapter/items/community/CommunityInternalMenuItem$ViewHolder$2;
@@ -103,15 +103,15 @@
 
     move-result-object v1
 
-    invoke-virtual {v0, v1}, Lcom/vk/profile/e/b;->a(Lorg/json/JSONObject;)Lcom/vk/profile/e/b;
+    invoke-virtual {v0, v1}, Lcom/vk/profile/e/CommunityScreenTracker1;->a(Lorg/json/JSONObject;)Lcom/vk/profile/e/CommunityScreenTracker1;
 
     const-string v1, "share"
 
     .line 5
-    invoke-virtual {v0, v1}, Lcom/vk/profile/e/b;->e(Ljava/lang/String;)Lcom/vk/profile/e/b;
+    invoke-virtual {v0, v1}, Lcom/vk/profile/e/CommunityScreenTracker1;->e(Ljava/lang/String;)Lcom/vk/profile/e/CommunityScreenTracker1;
 
     .line 6
-    invoke-virtual {v0}, Lcom/vk/profile/e/b;->a()V
+    invoke-virtual {v0}, Lcom/vk/profile/e/CommunityScreenTracker1;->a()V
 
     return-void
 .end method

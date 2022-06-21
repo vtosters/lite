@@ -1,5 +1,5 @@
 .class public abstract Lcom/vk/poll/adapters/RecyclerHolderSelection;
-.super Lcom/vtosters/lite/ui/b0/i;
+.super Lcom/vtosters/lite/ui/holder/RecyclerHolder;
 .source "RecyclerHolderSelection.kt"
 
 
@@ -9,7 +9,7 @@
         "<T:",
         "Ljava/lang/Object;",
         ">",
-        "Lcom/vtosters/lite/ui/b0/i<",
+        "Lcom/vtosters/lite/ui/holder/RecyclerHolder<",
         "TT;>;"
     }
 .end annotation
@@ -22,10 +22,10 @@
 
 .field private final e:Landroid/widget/CompoundButton$OnCheckedChangeListener;
 
-.field private final f:Lkotlin/u/g;
+.field private final f:Lkotlin/u/KProperty;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Lkotlin/u/g<",
+            "Lkotlin/u/KProperty<",
             "Ljava/lang/Object;",
             ">;"
         }
@@ -34,7 +34,7 @@
 
 
 # direct methods
-.method public constructor <init>(ILandroid/view/ViewGroup;Lkotlin/u/g;)V
+.method public constructor <init>(ILandroid/view/ViewGroup;Lkotlin/u/KProperty;)V
     .locals 0
     .param p1    # I
         .annotation build Landroidx/annotation/LayoutRes;
@@ -44,16 +44,16 @@
         value = {
             "(I",
             "Landroid/view/ViewGroup;",
-            "Lkotlin/u/g<",
+            "Lkotlin/u/KProperty<",
             "Ljava/lang/Object;",
             ">;)V"
         }
     .end annotation
 
     .line 1
-    invoke-direct {p0, p1, p2}, Lcom/vtosters/lite/ui/b0/i;-><init>(ILandroid/view/ViewGroup;)V
+    invoke-direct {p0, p1, p2}, Lcom/vtosters/lite/ui/holder/RecyclerHolder;-><init>(ILandroid/view/ViewGroup;)V
 
-    iput-object p3, p0, Lcom/vk/poll/adapters/RecyclerHolderSelection;->f:Lkotlin/u/g;
+    iput-object p3, p0, Lcom/vk/poll/adapters/RecyclerHolderSelection;->f:Lkotlin/u/KProperty;
 
     .line 2
     iget-object p1, p0, Landroidx/recyclerview/widget/RecyclerView$ViewHolder;->itemView:Landroid/view/View;
@@ -77,7 +77,7 @@
 
     const-string p2, "itemView.findViewById(R.id.poll_checkbox)"
 
-    invoke-static {p1, p2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, p2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     check-cast p1, Landroid/widget/CheckBox;
 
@@ -130,7 +130,7 @@
     .locals 0
 
     .line 1
-    iget-object p0, p0, Lcom/vtosters/lite/ui/b0/i;->b:Ljava/lang/Object;
+    iget-object p0, p0, Lcom/vtosters/lite/ui/holder/RecyclerHolder;->b:Ljava/lang/Object;
 
     return-object p0
 .end method
@@ -171,19 +171,19 @@
     return-object v0
 .end method
 
-.method public final h0()Lkotlin/u/g;
+.method public final h0()Lkotlin/u/KProperty;
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "()",
-            "Lkotlin/u/g<",
+            "Lkotlin/u/KProperty<",
             "Ljava/lang/Object;",
             ">;"
         }
     .end annotation
 
     .line 1
-    iget-object v0, p0, Lcom/vk/poll/adapters/RecyclerHolderSelection;->f:Lkotlin/u/g;
+    iget-object v0, p0, Lcom/vk/poll/adapters/RecyclerHolderSelection;->f:Lkotlin/u/KProperty;
 
     return-object v0
 .end method

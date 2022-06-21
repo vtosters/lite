@@ -3,7 +3,7 @@
 .source "EntriesListFragment.kt"
 
 # interfaces
-.implements Lcom/vk/newsfeed/holders/h$b;
+.implements Lcom/vk/newsfeed/holders/BaseNewsEntryHolder$b;
 
 
 # annotations

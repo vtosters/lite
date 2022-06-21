@@ -12,7 +12,7 @@
 
 
 # static fields
-.field static final synthetic j:[Lkotlin/u/j;
+.field static final synthetic j:[Lkotlin/u/KProperty5;
 
 
 # instance fields
@@ -24,11 +24,11 @@
 
 .field private final d:[C
 
-.field private final e:Lkotlin/e;
+.field private final e:Lkotlin/Lazy2;
 
-.field private final f:Lkotlin/e;
+.field private final f:Lkotlin/Lazy2;
 
-.field private final g:Lkotlin/e;
+.field private final g:Lkotlin/Lazy2;
 
 .field private h:F
 
@@ -41,13 +41,13 @@
 
     const/4 v0, 0x3
 
-    new-array v0, v0, [Lkotlin/u/j;
+    new-array v0, v0, [Lkotlin/u/KProperty5;
 
     new-instance v1, Lkotlin/jvm/internal/PropertyReference1Impl;
 
     const-class v2, Lcom/vk/im/ui/views/avatars/AbbreviationAvatarDrawable;
 
-    invoke-static {v2}, Lkotlin/jvm/internal/o;->a(Ljava/lang/Class;)Lkotlin/u/c;
+    invoke-static {v2}, Lkotlin/jvm/internal/Reflection;->a(Ljava/lang/Class;)Lkotlin/u/KClass;
 
     move-result-object v2
 
@@ -55,9 +55,9 @@
 
     const-string v4, "getUnknownProfileGradient()Lcom/vk/im/ui/views/avatars/AbbreviationAvatarDrawable$GradientConfig;"
 
-    invoke-direct {v1, v2, v3, v4}, Lkotlin/jvm/internal/PropertyReference1Impl;-><init>(Lkotlin/u/e;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-direct {v1, v2, v3, v4}, Lkotlin/jvm/internal/PropertyReference1Impl;-><init>(Lkotlin/u/KDeclarationContainer;Ljava/lang/String;Ljava/lang/String;)V
 
-    invoke-static {v1}, Lkotlin/jvm/internal/o;->a(Lkotlin/jvm/internal/PropertyReference1;)Lkotlin/u/l;
+    invoke-static {v1}, Lkotlin/jvm/internal/Reflection;->a(Lkotlin/jvm/internal/PropertyReference1;)Lkotlin/u/KProperty2;
 
     const/4 v2, 0x0
 
@@ -67,7 +67,7 @@
 
     const-class v2, Lcom/vk/im/ui/views/avatars/AbbreviationAvatarDrawable;
 
-    invoke-static {v2}, Lkotlin/jvm/internal/o;->a(Ljava/lang/Class;)Lkotlin/u/c;
+    invoke-static {v2}, Lkotlin/jvm/internal/Reflection;->a(Ljava/lang/Class;)Lkotlin/u/KClass;
 
     move-result-object v2
 
@@ -75,9 +75,9 @@
 
     const-string v4, "getContactProfileGradient()Lcom/vk/im/ui/views/avatars/AbbreviationAvatarDrawable$GradientConfig;"
 
-    invoke-direct {v1, v2, v3, v4}, Lkotlin/jvm/internal/PropertyReference1Impl;-><init>(Lkotlin/u/e;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-direct {v1, v2, v3, v4}, Lkotlin/jvm/internal/PropertyReference1Impl;-><init>(Lkotlin/u/KDeclarationContainer;Ljava/lang/String;Ljava/lang/String;)V
 
-    invoke-static {v1}, Lkotlin/jvm/internal/o;->a(Lkotlin/jvm/internal/PropertyReference1;)Lkotlin/u/l;
+    invoke-static {v1}, Lkotlin/jvm/internal/Reflection;->a(Lkotlin/jvm/internal/PropertyReference1;)Lkotlin/u/KProperty2;
 
     const/4 v2, 0x1
 
@@ -87,7 +87,7 @@
 
     const-class v2, Lcom/vk/im/ui/views/avatars/AbbreviationAvatarDrawable;
 
-    invoke-static {v2}, Lkotlin/jvm/internal/o;->a(Ljava/lang/Class;)Lkotlin/u/c;
+    invoke-static {v2}, Lkotlin/jvm/internal/Reflection;->a(Ljava/lang/Class;)Lkotlin/u/KClass;
 
     move-result-object v2
 
@@ -95,15 +95,15 @@
 
     const-string v4, "getDialogGradients()Ljava/util/List;"
 
-    invoke-direct {v1, v2, v3, v4}, Lkotlin/jvm/internal/PropertyReference1Impl;-><init>(Lkotlin/u/e;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-direct {v1, v2, v3, v4}, Lkotlin/jvm/internal/PropertyReference1Impl;-><init>(Lkotlin/u/KDeclarationContainer;Ljava/lang/String;Ljava/lang/String;)V
 
-    invoke-static {v1}, Lkotlin/jvm/internal/o;->a(Lkotlin/jvm/internal/PropertyReference1;)Lkotlin/u/l;
+    invoke-static {v1}, Lkotlin/jvm/internal/Reflection;->a(Lkotlin/jvm/internal/PropertyReference1;)Lkotlin/u/KProperty2;
 
     const/4 v2, 0x2
 
     aput-object v1, v0, v2
 
-    sput-object v0, Lcom/vk/im/ui/views/avatars/AbbreviationAvatarDrawable;->j:[Lkotlin/u/j;
+    sput-object v0, Lcom/vk/im/ui/views/avatars/AbbreviationAvatarDrawable;->j:[Lkotlin/u/KProperty5;
 
     return-void
 .end method
@@ -174,33 +174,33 @@
 
     invoke-direct {p2, p1}, Lcom/vk/im/ui/views/avatars/AbbreviationAvatarDrawable$unknownProfileGradient$2;-><init>(Landroid/content/Context;)V
 
-    invoke-static {p2}, Lkotlin/g;->a(Lkotlin/jvm/b/a;)Lkotlin/e;
+    invoke-static {p2}, Lkotlin/g;->a(Lkotlin/jvm/b/Functions;)Lkotlin/Lazy2;
 
     move-result-object p2
 
-    iput-object p2, p0, Lcom/vk/im/ui/views/avatars/AbbreviationAvatarDrawable;->e:Lkotlin/e;
+    iput-object p2, p0, Lcom/vk/im/ui/views/avatars/AbbreviationAvatarDrawable;->e:Lkotlin/Lazy2;
 
     .line 16
     new-instance p2, Lcom/vk/im/ui/views/avatars/AbbreviationAvatarDrawable$contactProfileGradient$2;
 
     invoke-direct {p2, p1}, Lcom/vk/im/ui/views/avatars/AbbreviationAvatarDrawable$contactProfileGradient$2;-><init>(Landroid/content/Context;)V
 
-    invoke-static {p2}, Lkotlin/g;->a(Lkotlin/jvm/b/a;)Lkotlin/e;
+    invoke-static {p2}, Lkotlin/g;->a(Lkotlin/jvm/b/Functions;)Lkotlin/Lazy2;
 
     move-result-object p2
 
-    iput-object p2, p0, Lcom/vk/im/ui/views/avatars/AbbreviationAvatarDrawable;->f:Lkotlin/e;
+    iput-object p2, p0, Lcom/vk/im/ui/views/avatars/AbbreviationAvatarDrawable;->f:Lkotlin/Lazy2;
 
     .line 17
     new-instance p2, Lcom/vk/im/ui/views/avatars/AbbreviationAvatarDrawable$dialogGradients$2;
 
     invoke-direct {p2, p1}, Lcom/vk/im/ui/views/avatars/AbbreviationAvatarDrawable$dialogGradients$2;-><init>(Landroid/content/Context;)V
 
-    invoke-static {p2}, Lkotlin/g;->a(Lkotlin/jvm/b/a;)Lkotlin/e;
+    invoke-static {p2}, Lkotlin/g;->a(Lkotlin/jvm/b/Functions;)Lkotlin/Lazy2;
 
     move-result-object p1
 
-    iput-object p1, p0, Lcom/vk/im/ui/views/avatars/AbbreviationAvatarDrawable;->g:Lkotlin/e;
+    iput-object p1, p0, Lcom/vk/im/ui/views/avatars/AbbreviationAvatarDrawable;->g:Lkotlin/Lazy2;
 
     .line 18
     invoke-direct {p0}, Lcom/vk/im/ui/views/avatars/AbbreviationAvatarDrawable;->b()Ljava/util/List;
@@ -218,7 +218,7 @@
     return-void
 .end method
 
-.method public synthetic constructor <init>(Landroid/content/Context;Landroid/graphics/Typeface;ILkotlin/jvm/internal/i;)V
+.method public synthetic constructor <init>(Landroid/content/Context;Landroid/graphics/Typeface;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
     .locals 0
 
     and-int/lit8 p3, p3, 0x2
@@ -241,15 +241,15 @@
 .method private final a()Lcom/vk/im/ui/views/avatars/AbbreviationAvatarDrawable$a;
     .locals 3
 
-    iget-object v0, p0, Lcom/vk/im/ui/views/avatars/AbbreviationAvatarDrawable;->f:Lkotlin/e;
+    iget-object v0, p0, Lcom/vk/im/ui/views/avatars/AbbreviationAvatarDrawable;->f:Lkotlin/Lazy2;
 
-    sget-object v1, Lcom/vk/im/ui/views/avatars/AbbreviationAvatarDrawable;->j:[Lkotlin/u/j;
+    sget-object v1, Lcom/vk/im/ui/views/avatars/AbbreviationAvatarDrawable;->j:[Lkotlin/u/KProperty5;
 
     const/4 v2, 0x1
 
     aget-object v1, v1, v2
 
-    invoke-interface {v0}, Lkotlin/e;->getValue()Ljava/lang/Object;
+    invoke-interface {v0}, Lkotlin/Lazy2;->getValue()Ljava/lang/Object;
 
     move-result-object v0
 
@@ -269,15 +269,15 @@
         }
     .end annotation
 
-    iget-object v0, p0, Lcom/vk/im/ui/views/avatars/AbbreviationAvatarDrawable;->g:Lkotlin/e;
+    iget-object v0, p0, Lcom/vk/im/ui/views/avatars/AbbreviationAvatarDrawable;->g:Lkotlin/Lazy2;
 
-    sget-object v1, Lcom/vk/im/ui/views/avatars/AbbreviationAvatarDrawable;->j:[Lkotlin/u/j;
+    sget-object v1, Lcom/vk/im/ui/views/avatars/AbbreviationAvatarDrawable;->j:[Lkotlin/u/KProperty5;
 
     const/4 v2, 0x2
 
     aget-object v1, v1, v2
 
-    invoke-interface {v0}, Lkotlin/e;->getValue()Ljava/lang/Object;
+    invoke-interface {v0}, Lkotlin/Lazy2;->getValue()Ljava/lang/Object;
 
     move-result-object v0
 
@@ -289,15 +289,15 @@
 .method private final c()Lcom/vk/im/ui/views/avatars/AbbreviationAvatarDrawable$a;
     .locals 3
 
-    iget-object v0, p0, Lcom/vk/im/ui/views/avatars/AbbreviationAvatarDrawable;->e:Lkotlin/e;
+    iget-object v0, p0, Lcom/vk/im/ui/views/avatars/AbbreviationAvatarDrawable;->e:Lkotlin/Lazy2;
 
-    sget-object v1, Lcom/vk/im/ui/views/avatars/AbbreviationAvatarDrawable;->j:[Lkotlin/u/j;
+    sget-object v1, Lcom/vk/im/ui/views/avatars/AbbreviationAvatarDrawable;->j:[Lkotlin/u/KProperty5;
 
     const/4 v2, 0x0
 
     aget-object v1, v1, v2
 
-    invoke-interface {v0}, Lkotlin/e;->getValue()Ljava/lang/Object;
+    invoke-interface {v0}, Lkotlin/Lazy2;->getValue()Ljava/lang/Object;
 
     move-result-object v0
 
@@ -382,7 +382,7 @@
     .line 10
     iget-object v0, p0, Lcom/vk/im/ui/views/avatars/AbbreviationAvatarDrawable;->d:[C
 
-    invoke-static {p2, v0}, Lcom/vk/im/engine/utils/extensions/a;->a(Ljava/lang/String;[C)V
+    invoke-static {p2, v0}, Lcom/vk/im/engine/utils/extensions/AbbreviationUtils;->a(Ljava/lang/String;[C)V
 
     .line 11
     invoke-direct {p0}, Lcom/vk/im/ui/views/avatars/AbbreviationAvatarDrawable;->b()Ljava/util/List;
@@ -416,7 +416,7 @@
     return-void
 .end method
 
-.method public final a(Lcom/vk/im/engine/models/j;)V
+.method public final a(Lcom/vk/im/engine/models/Profile;)V
     .locals 2
 
     if-nez p1, :cond_0
@@ -426,7 +426,7 @@
 
     const-string v0, ""
 
-    invoke-static {v0, p1}, Lcom/vk/im/engine/utils/extensions/a;->a(Ljava/lang/String;[C)V
+    invoke-static {v0, p1}, Lcom/vk/im/engine/utils/extensions/AbbreviationUtils;->a(Ljava/lang/String;[C)V
 
     .line 2
     invoke-direct {p0}, Lcom/vk/im/ui/views/avatars/AbbreviationAvatarDrawable;->c()Lcom/vk/im/ui/views/avatars/AbbreviationAvatarDrawable$a;
@@ -439,16 +439,16 @@
 
     .line 3
     :cond_0
-    invoke-interface {p1}, Lcom/vk/im/engine/models/j;->name()Ljava/lang/String;
+    invoke-interface {p1}, Lcom/vk/im/engine/models/Profile;->name()Ljava/lang/String;
 
     move-result-object v0
 
     iget-object v1, p0, Lcom/vk/im/ui/views/avatars/AbbreviationAvatarDrawable;->d:[C
 
-    invoke-static {v0, v1}, Lcom/vk/im/engine/utils/extensions/a;->a(Ljava/lang/String;[C)V
+    invoke-static {v0, v1}, Lcom/vk/im/engine/utils/extensions/AbbreviationUtils;->a(Ljava/lang/String;[C)V
 
     .line 4
-    invoke-interface {p1}, Lcom/vk/im/engine/models/j;->S()Lcom/vk/im/engine/models/MemberType;
+    invoke-interface {p1}, Lcom/vk/im/engine/models/Profile;->S()Lcom/vk/im/engine/models/MemberType;
 
     move-result-object p1
 

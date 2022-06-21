@@ -18,14 +18,14 @@
 
 
 # instance fields
-.field final synthetic a:Lcom/vk/stories/clickable/l/a/e/a;
+.field final synthetic a:Lcom/vk/stories/clickable/l/a/e/StoryGeoPickView;
 
 
 # direct methods
-.method constructor <init>(Lcom/vk/stories/clickable/l/a/e/a;)V
+.method constructor <init>(Lcom/vk/stories/clickable/l/a/e/StoryGeoPickView;)V
     .locals 0
 
-    iput-object p1, p0, Lcom/vk/stories/clickable/delegates/StoryGeoStickerDelegate$d;->a:Lcom/vk/stories/clickable/l/a/e/a;
+    iput-object p1, p0, Lcom/vk/stories/clickable/delegates/StoryGeoStickerDelegate$d;->a:Lcom/vk/stories/clickable/l/a/e/StoryGeoPickView;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -38,9 +38,9 @@
     .locals 0
 
     .line 1
-    iget-object p1, p0, Lcom/vk/stories/clickable/delegates/StoryGeoStickerDelegate$d;->a:Lcom/vk/stories/clickable/l/a/e/a;
+    iget-object p1, p0, Lcom/vk/stories/clickable/delegates/StoryGeoStickerDelegate$d;->a:Lcom/vk/stories/clickable/l/a/e/StoryGeoPickView;
 
-    invoke-virtual {p1}, Lcom/vk/stories/clickable/l/a/e/a;->a()V
+    invoke-virtual {p1}, Lcom/vk/stories/clickable/l/a/e/StoryGeoPickView;->a()V
 
     return-void
 .end method

@@ -1,5 +1,5 @@
 .class public abstract Lcom/vk/profile/presenter/BaseProfilePresenter;
-.super Lcom/vk/newsfeed/presenters/i;
+.super Lcom/vk/newsfeed/presenters/NewsFeedProfilePresenter;
 .source "BaseProfilePresenter.kt"
 
 
@@ -15,7 +15,7 @@
         "<T:",
         "Lcom/vtosters/lite/api/ExtendedUserProfile;",
         ">",
-        "Lcom/vk/newsfeed/presenters/i<",
+        "Lcom/vk/newsfeed/presenters/NewsFeedProfilePresenter<",
         "TT;>;"
     }
 .end annotation
@@ -34,7 +34,7 @@
 
 .field private d0:I
 
-.field private e0:Lio/reactivex/disposables/b;
+.field private e0:Lio/reactivex/disposables/Disposable;
 
 .field private f0:Lcom/vk/dto/common/data/VKList;
     .annotation system Ldalvik/annotation/Signature;
@@ -52,7 +52,7 @@
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/util/Stack<",
-            "Lcom/vk/navigation/g;",
+            "Lcom/vk/navigation/Dismissed;",
             ">;"
         }
     .end annotation
@@ -60,26 +60,26 @@
 
 .field private final i0:I
 
-.field private final j0:Lcom/vk/music/player/d;
+.field private final j0:Lcom/vk/music/player/PlayerModel;
 
 
 # direct methods
-.method public constructor <init>(Lcom/vk/newsfeed/contracts/u;Lcom/vk/music/player/d;)V
+.method public constructor <init>(Lcom/vk/newsfeed/contracts/ProfileContract;Lcom/vk/music/player/PlayerModel;)V
     .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lcom/vk/newsfeed/contracts/u<",
+            "Lcom/vk/newsfeed/contracts/ProfileContract<",
             "TT;>;",
-            "Lcom/vk/music/player/d;",
+            "Lcom/vk/music/player/PlayerModel;",
             ")V"
         }
     .end annotation
 
     .line 1
-    invoke-direct {p0, p1}, Lcom/vk/newsfeed/presenters/i;-><init>(Lcom/vk/newsfeed/contracts/u;)V
+    invoke-direct {p0, p1}, Lcom/vk/newsfeed/presenters/NewsFeedProfilePresenter;-><init>(Lcom/vk/newsfeed/contracts/ProfileContract;)V
 
-    iput-object p2, p0, Lcom/vk/profile/presenter/BaseProfilePresenter;->j0:Lcom/vk/music/player/d;
+    iput-object p2, p0, Lcom/vk/profile/presenter/BaseProfilePresenter;->j0:Lcom/vk/music/player/PlayerModel;
 
     const/4 p1, 0x3
 
@@ -128,11 +128,11 @@
     return-void
 .end method
 
-.method public static final synthetic a(Lcom/vk/profile/presenter/BaseProfilePresenter;Lio/reactivex/disposables/b;)V
+.method public static final synthetic a(Lcom/vk/profile/presenter/BaseProfilePresenter;Lio/reactivex/disposables/Disposable;)V
     .locals 0
 
     .line 3
-    iput-object p1, p0, Lcom/vk/profile/presenter/BaseProfilePresenter;->e0:Lio/reactivex/disposables/b;
+    iput-object p1, p0, Lcom/vk/profile/presenter/BaseProfilePresenter;->e0:Lio/reactivex/disposables/Disposable;
 
     return-void
 .end method
@@ -150,7 +150,7 @@
     .locals 3
 
     .line 1
-    invoke-virtual {p0}, Lcom/vk/newsfeed/presenters/i;->I()Lcom/vtosters/lite/api/ExtendedUserProfile;
+    invoke-virtual {p0}, Lcom/vk/newsfeed/presenters/NewsFeedProfilePresenter;->I()Lcom/vtosters/lite/api/ExtendedUserProfile;
 
     move-result-object v0
 
@@ -158,7 +158,7 @@
 
     if-eqz v0, :cond_0
 
-    invoke-static {v0}, Lcom/vk/profile/utils/d;->f(Lcom/vtosters/lite/api/ExtendedUserProfile;)Z
+    invoke-static {v0}, Lcom/vk/profile/utils/ProfileExt;->f(Lcom/vtosters/lite/api/ExtendedUserProfile;)Z
 
     move-result v2
 
@@ -217,7 +217,7 @@
     iput p1, p0, Lcom/vk/profile/presenter/BaseProfilePresenter;->d0:I
 
     .line 2
-    iget-object p1, p0, Lcom/vk/profile/presenter/BaseProfilePresenter;->e0:Lio/reactivex/disposables/b;
+    iget-object p1, p0, Lcom/vk/profile/presenter/BaseProfilePresenter;->e0:Lio/reactivex/disposables/Disposable;
 
     if-eqz p1, :cond_0
 
@@ -225,19 +225,19 @@
 
     .line 3
     :cond_0
-    new-instance p1, Lb/h/c/c/g;
+    new-instance p1, Lcom/vk/api/audio/AudioGet;
 
-    invoke-virtual {p0}, Lcom/vk/newsfeed/presenters/i;->L()I
+    invoke-virtual {p0}, Lcom/vk/newsfeed/presenters/NewsFeedProfilePresenter;->L()I
 
     move-result v0
 
-    invoke-direct {p1, v0}, Lb/h/c/c/g;-><init>(I)V
+    invoke-direct {p1, v0}, Lcom/vk/api/audio/AudioGet;-><init>(I)V
 
     const/4 v0, 0x1
 
     const/4 v1, 0x0
 
-    invoke-static {p1, v1, v0, v1}, Lcom/vk/api/base/d;->d(Lcom/vk/api/base/d;Lcom/vk/api/base/e;ILjava/lang/Object;)Lc/a/m;
+    invoke-static {p1, v1, v0, v1}, Lcom/vk/api/base/ApiRequest;->d(Lcom/vk/api/base/ApiRequest;Lcom/vk/api/base/ApiThreadHolder;ILjava/lang/Object;)Lio/reactivex/Observable;
 
     move-result-object p1
 
@@ -252,11 +252,11 @@
     invoke-direct {v1, p0}, Lcom/vk/profile/presenter/BaseProfilePresenter$c;-><init>(Lcom/vk/profile/presenter/BaseProfilePresenter;)V
 
     .line 6
-    invoke-virtual {p1, v0, v1}, Lc/a/m;->a(Lc/a/z/g;Lc/a/z/g;)Lio/reactivex/disposables/b;
+    invoke-virtual {p1, v0, v1}, Lio/reactivex/Observable;->a(Lio/reactivex/functions/Consumer;Lio/reactivex/functions/Consumer;)Lio/reactivex/disposables/Disposable;
 
     move-result-object p1
 
-    iput-object p1, p0, Lcom/vk/profile/presenter/BaseProfilePresenter;->e0:Lio/reactivex/disposables/b;
+    iput-object p1, p0, Lcom/vk/profile/presenter/BaseProfilePresenter;->e0:Lio/reactivex/disposables/Disposable;
 
     return-void
 .end method
@@ -309,11 +309,11 @@
 
     .line 4
     :cond_2
-    invoke-virtual {p0}, Lcom/vk/newsfeed/presenters/i;->L()I
+    invoke-virtual {p0}, Lcom/vk/newsfeed/presenters/NewsFeedProfilePresenter;->L()I
 
     move-result p1
 
-    invoke-static {p1}, Lcom/vtosters/lite/i0/c;->a(I)Z
+    invoke-static {p1}, Lcom/vtosters/lite/auth/VKAccountManager;->a(I)Z
 
     move-result p1
 
@@ -323,7 +323,7 @@
 
     const-string v2, "MusicPlaybackLaunchContext.MY_MUSIC"
 
-    invoke-static {p1, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     goto :goto_2
 
@@ -341,7 +341,7 @@
 
     sget-object p1, Lcom/vk/music/common/MusicPlaybackLaunchContext;->G:Lcom/vk/music/common/MusicPlaybackLaunchContext;
 
-    invoke-virtual {p0}, Lcom/vk/newsfeed/presenters/i;->L()I
+    invoke-virtual {p0}, Lcom/vk/newsfeed/presenters/NewsFeedProfilePresenter;->L()I
 
     move-result v4
 
@@ -349,7 +349,7 @@
 
     move-result-object p1
 
-    invoke-static {p1, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     goto :goto_2
 
@@ -357,7 +357,7 @@
     :cond_4
     sget-object p1, Lcom/vk/music/common/MusicPlaybackLaunchContext;->K:Lcom/vk/music/common/MusicPlaybackLaunchContext;
 
-    invoke-virtual {p0}, Lcom/vk/newsfeed/presenters/i;->L()I
+    invoke-virtual {p0}, Lcom/vk/newsfeed/presenters/NewsFeedProfilePresenter;->L()I
 
     move-result v4
 
@@ -365,7 +365,7 @@
 
     move-result-object p1
 
-    invoke-static {p1, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 7
     :goto_2
@@ -375,12 +375,12 @@
 
     const-string v2, "audioPlaylist[pos]"
 
-    invoke-static {v1, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     check-cast v1, Lcom/vk/dto/music/MusicTrack;
 
     .line 8
-    iget-object v2, p0, Lcom/vk/profile/presenter/BaseProfilePresenter;->j0:Lcom/vk/music/player/d;
+    iget-object v2, p0, Lcom/vk/profile/presenter/BaseProfilePresenter;->j0:Lcom/vk/music/player/PlayerModel;
 
     const/4 v3, 0x1
 
@@ -388,7 +388,7 @@
 
     move-result-object v3
 
-    invoke-interface {v2, v1, v0, v3, p1}, Lcom/vk/music/player/d;->a(Lcom/vk/dto/music/MusicTrack;Ljava/util/List;Ljava/lang/Boolean;Lcom/vk/music/common/MusicPlaybackLaunchContext;)V
+    invoke-interface {v2, v1, v0, v3, p1}, Lcom/vk/music/player/PlayerModel;->a(Lcom/vk/dto/music/MusicTrack;Ljava/util/List;Ljava/lang/Boolean;Lcom/vk/music/common/MusicPlaybackLaunchContext;)V
 
     :cond_5
     return-void
@@ -402,7 +402,7 @@
         value = {
             "()",
             "Ljava/util/Stack<",
-            "Lcom/vk/navigation/g;",
+            "Lcom/vk/navigation/Dismissed;",
             ">;"
         }
     .end annotation
@@ -422,21 +422,21 @@
     return v0
 .end method
 
-.method public abstract W()Lcom/vk/profile/data/d/b;
+.method public abstract W()Lcom/vk/profile/data/d/MainSectionStrategy;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "()",
-            "Lcom/vk/profile/data/d/b<",
+            "Lcom/vk/profile/data/d/MainSectionStrategy<",
             "TT;>;"
         }
     .end annotation
 .end method
 
-.method public final X()Lcom/vk/music/player/d;
+.method public final X()Lcom/vk/music/player/PlayerModel;
     .locals 1
 
     .line 1
-    iget-object v0, p0, Lcom/vk/profile/presenter/BaseProfilePresenter;->j0:Lcom/vk/music/player/d;
+    iget-object v0, p0, Lcom/vk/profile/presenter/BaseProfilePresenter;->j0:Lcom/vk/music/player/PlayerModel;
 
     return-object v0
 .end method
@@ -448,40 +448,40 @@
     .locals 1
 
     .line 1
-    invoke-virtual {p0}, Lcom/vk/newsfeed/presenters/i;->L()I
+    invoke-virtual {p0}, Lcom/vk/newsfeed/presenters/NewsFeedProfilePresenter;->L()I
 
     move-result v0
 
-    invoke-static {v0}, Lcom/vk/profile/e/f;->c(I)V
+    invoke-static {v0}, Lcom/vk/profile/e/ProfileTracker1;->c(I)V
 
     .line 2
-    invoke-virtual {p0}, Lcom/vk/newsfeed/presenters/i;->M()Lcom/vk/newsfeed/contracts/u;
+    invoke-virtual {p0}, Lcom/vk/newsfeed/presenters/NewsFeedProfilePresenter;->M()Lcom/vk/newsfeed/contracts/ProfileContract;
 
     move-result-object v0
 
-    invoke-interface {v0}, Lcom/vk/newsfeed/contracts/u;->e2()V
+    invoke-interface {v0}, Lcom/vk/newsfeed/contracts/ProfileContract;->e2()V
 
     return-void
 .end method
 
-.method protected final a(Lc/a/m;Lcom/vk/newsfeed/contracts/u;)Lc/a/m;
+.method protected final a(Lio/reactivex/Observable;Lcom/vk/newsfeed/contracts/ProfileContract;)Lio/reactivex/Observable;
     .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "<R:",
             "Ljava/lang/Object;",
             ">(",
-            "Lc/a/m<",
+            "Lio/reactivex/Observable<",
             "TR;>;",
-            "Lcom/vk/newsfeed/contracts/u<",
+            "Lcom/vk/newsfeed/contracts/ProfileContract<",
             "TT;>;)",
-            "Lc/a/m<",
+            "Lio/reactivex/Observable<",
             "TR;>;"
         }
     .end annotation
 
     .line 8
-    invoke-interface {p2, p1}, Lcom/vk/newsfeed/contracts/u;->a(Lc/a/m;)Lc/a/m;
+    invoke-interface {p2, p1}, Lcom/vk/newsfeed/contracts/ProfileContract;->a(Lio/reactivex/Observable;)Lio/reactivex/Observable;
 
     move-result-object p1
 
@@ -498,9 +498,9 @@
     .locals 2
 
     .line 7
-    sget-object v0, Lcom/vk/newsfeed/posting/l;->T0:Lcom/vk/newsfeed/posting/l$a;
+    sget-object v0, Lcom/vk/newsfeed/posting/PostingFragmentBuilder;->T0:Lcom/vk/newsfeed/posting/PostingFragmentBuilder$a;
 
-    invoke-virtual {v0}, Lcom/vk/newsfeed/posting/l$a;->a()Lcom/vk/newsfeed/posting/l;
+    invoke-virtual {v0}, Lcom/vk/newsfeed/posting/PostingFragmentBuilder$a;->a()Lcom/vk/newsfeed/posting/PostingFragmentBuilder;
 
     move-result-object v0
 
@@ -510,11 +510,11 @@
 
     const/4 v1, 0x1
 
-    invoke-virtual {v0, p2, v1}, Lcom/vk/newsfeed/posting/l;->a(IZ)Lcom/vk/newsfeed/posting/l;
+    invoke-virtual {v0, p2, v1}, Lcom/vk/newsfeed/posting/PostingFragmentBuilder;->a(IZ)Lcom/vk/newsfeed/posting/PostingFragmentBuilder;
 
-    invoke-virtual {v0}, Lcom/vk/newsfeed/posting/l;->i()Lcom/vk/newsfeed/posting/l;
+    invoke-virtual {v0}, Lcom/vk/newsfeed/posting/PostingFragmentBuilder;->i()Lcom/vk/newsfeed/posting/PostingFragmentBuilder;
 
-    invoke-virtual {v0, p1}, Lcom/vk/navigation/o;->a(Landroid/content/Context;)V
+    invoke-virtual {v0, p1}, Lcom/vk/navigation/Navigator;->a(Landroid/content/Context;)V
 
     return-void
 .end method
@@ -540,9 +540,9 @@
 
     move-result-object p1
 
-    check-cast p1, Lcom/vk/navigation/g;
+    check-cast p1, Lcom/vk/navigation/Dismissed;
 
-    invoke-interface {p1}, Lcom/vk/navigation/g;->dismiss()V
+    invoke-interface {p1}, Lcom/vk/navigation/Dismissed;->dismiss()V
 
     goto :goto_0
 
@@ -558,11 +558,11 @@
     .locals 1
 
     .line 6
-    invoke-virtual {p0}, Lcom/vk/newsfeed/presenters/i;->M()Lcom/vk/newsfeed/contracts/u;
+    invoke-virtual {p0}, Lcom/vk/newsfeed/presenters/NewsFeedProfilePresenter;->M()Lcom/vk/newsfeed/contracts/ProfileContract;
 
     move-result-object v0
 
-    invoke-interface {v0, p1}, Lcom/vk/newsfeed/contracts/u;->a(Lcom/vk/dto/music/MusicTrack;)V
+    invoke-interface {v0, p1}, Lcom/vk/newsfeed/contracts/ProfileContract;->a(Lcom/vk/dto/music/MusicTrack;)V
 
     return-void
 .end method
@@ -575,7 +575,7 @@
 
     invoke-direct {v0, p0, p1}, Lcom/vk/profile/presenter/BaseProfilePresenter$addCoverDialog$1;-><init>(Lcom/vk/profile/presenter/BaseProfilePresenter;Lcom/vk/profile/ui/cover/CoverDialog;)V
 
-    invoke-virtual {p1, v0}, Lcom/vk/profile/ui/cover/CoverDialog;->a(Lkotlin/jvm/b/a;)V
+    invoke-virtual {p1, v0}, Lcom/vk/profile/ui/cover/CoverDialog;->a(Lkotlin/jvm/b/Functions;)V
 
     .line 10
     iget-object v0, p0, Lcom/vk/profile/presenter/BaseProfilePresenter;->h0:Ljava/util/Stack;
@@ -583,11 +583,11 @@
     invoke-virtual {v0, p1}, Ljava/util/Stack;->add(Ljava/lang/Object;)Z
 
     .line 11
-    invoke-virtual {p0}, Lcom/vk/newsfeed/presenters/i;->M()Lcom/vk/newsfeed/contracts/u;
+    invoke-virtual {p0}, Lcom/vk/newsfeed/presenters/NewsFeedProfilePresenter;->M()Lcom/vk/newsfeed/contracts/ProfileContract;
 
     move-result-object v0
 
-    invoke-interface {v0, p1}, Lcom/vk/newsfeed/contracts/u;->a(Lcom/vk/navigation/g;)V
+    invoke-interface {v0, p1}, Lcom/vk/newsfeed/contracts/ProfileContract;->a(Lcom/vk/navigation/Dismissed;)V
 
     return-void
 .end method
@@ -606,7 +606,7 @@
     if-eqz v0, :cond_0
 
     .line 10
-    invoke-static {v0}, Lc/a/m;->e(Ljava/lang/Object;)Lc/a/m;
+    invoke-static {v0}, Lio/reactivex/Observable;->e(Ljava/lang/Object;)Lio/reactivex/Observable;
 
     move-result-object v0
 
@@ -617,9 +617,9 @@
 
     .line 11
     :cond_0
-    new-instance v0, Lcom/vk/api/photos/j;
+    new-instance v0, Lcom/vk/api/photos/PhotosGet;
 
-    invoke-virtual {p0}, Lcom/vk/newsfeed/presenters/i;->L()I
+    invoke-virtual {p0}, Lcom/vk/newsfeed/presenters/NewsFeedProfilePresenter;->L()I
 
     move-result v2
 
@@ -649,12 +649,12 @@
 
     move-object v1, v0
 
-    invoke-direct/range {v1 .. v6}, Lcom/vk/api/photos/j;-><init>(IIIIZ)V
+    invoke-direct/range {v1 .. v6}, Lcom/vk/api/photos/PhotosGet;-><init>(IIIIZ)V
 
     const/4 v1, 0x0
 
     .line 12
-    invoke-static {v0, v1, v7, v1}, Lcom/vk/api/base/d;->d(Lcom/vk/api/base/d;Lcom/vk/api/base/e;ILjava/lang/Object;)Lc/a/m;
+    invoke-static {v0, v1, v7, v1}, Lcom/vk/api/base/ApiRequest;->d(Lcom/vk/api/base/ApiRequest;Lcom/vk/api/base/ApiThreadHolder;ILjava/lang/Object;)Lio/reactivex/Observable;
 
     move-result-object v0
 
@@ -663,7 +663,7 @@
 
     invoke-direct {v1, p0}, Lcom/vk/profile/presenter/BaseProfilePresenter$e;-><init>(Lcom/vk/profile/presenter/BaseProfilePresenter;)V
 
-    invoke-virtual {v0, v1}, Lc/a/m;->d(Lc/a/z/g;)Lc/a/m;
+    invoke-virtual {v0, v1}, Lio/reactivex/Observable;->d(Lio/reactivex/functions/Consumer;)Lio/reactivex/Observable;
 
     move-result-object v0
 
@@ -673,7 +673,7 @@
     const-string v0, "if (avatarPhotosList != \u2026              }\n        }"
 
     .line 14
-    invoke-static {v1, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v1, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     const-wide/16 v3, 0x0
 
@@ -690,7 +690,7 @@
     move-object v2, p1
 
     .line 15
-    invoke-static/range {v1 .. v9}, Lcom/vk/core/extensions/RxExtKt;->a(Lc/a/m;Landroid/content/Context;JIZZILjava/lang/Object;)Lc/a/m;
+    invoke-static/range {v1 .. v9}, Lcom/vk/core/extensions/RxExtKt;->a(Lio/reactivex/Observable;Landroid/content/Context;JIZZILjava/lang/Object;)Lio/reactivex/Observable;
 
     move-result-object p1
 
@@ -699,7 +699,7 @@
 
     invoke-direct {v0, p0}, Lcom/vk/profile/presenter/BaseProfilePresenter$f;-><init>(Lcom/vk/profile/presenter/BaseProfilePresenter;)V
 
-    invoke-virtual {p1, v0}, Lc/a/m;->e(Lc/a/z/j;)Lc/a/m;
+    invoke-virtual {p1, v0}, Lio/reactivex/Observable;->e(Lio/reactivex/functions/Function;)Lio/reactivex/Observable;
 
     move-result-object p1
 
@@ -708,7 +708,7 @@
 
     invoke-direct {v0, p0}, Lcom/vk/profile/presenter/BaseProfilePresenter$g;-><init>(Lcom/vk/profile/presenter/BaseProfilePresenter;)V
 
-    invoke-virtual {p1, v0}, Lc/a/m;->f(Lc/a/z/g;)Lio/reactivex/disposables/b;
+    invoke-virtual {p1, v0}, Lio/reactivex/Observable;->f(Lio/reactivex/functions/Consumer;)Lio/reactivex/disposables/Disposable;
 
     return-void
 .end method
@@ -719,7 +719,7 @@
     .line 3
     new-instance v7, Lcom/vk/profile/ui/photos/ProfileMainPhotosFragment$a;
 
-    invoke-virtual {p0}, Lcom/vk/newsfeed/presenters/i;->L()I
+    invoke-virtual {p0}, Lcom/vk/newsfeed/presenters/NewsFeedProfilePresenter;->L()I
 
     move-result v1
 
@@ -727,7 +727,7 @@
     iget-object v3, p2, Lcom/vtosters/lite/api/ExtendedUserProfile;->c:Ljava/lang/String;
 
     .line 5
-    invoke-static {p2}, Lcom/vk/profile/utils/d;->f(Lcom/vtosters/lite/api/ExtendedUserProfile;)Z
+    invoke-static {p2}, Lcom/vk/profile/utils/ProfileExt;->f(Lcom/vtosters/lite/api/ExtendedUserProfile;)Z
 
     move-result v0
 
@@ -774,7 +774,7 @@
     invoke-direct/range {v0 .. v6}, Lcom/vk/profile/ui/photos/ProfileMainPhotosFragment$a;-><init>(IZLjava/lang/String;ZZLjava/lang/String;)V
 
     .line 8
-    invoke-virtual {v7, p1}, Lcom/vk/navigation/o;->a(Landroid/content/Context;)V
+    invoke-virtual {v7, p1}, Lcom/vk/navigation/Navigator;->a(Landroid/content/Context;)V
 
     return-void
 .end method
@@ -783,11 +783,11 @@
     .locals 1
 
     .line 19
-    invoke-virtual {p0}, Lcom/vk/newsfeed/presenters/i;->M()Lcom/vk/newsfeed/contracts/u;
+    invoke-virtual {p0}, Lcom/vk/newsfeed/presenters/NewsFeedProfilePresenter;->M()Lcom/vk/newsfeed/contracts/ProfileContract;
 
     move-result-object v0
 
-    invoke-interface {v0, p1}, Lcom/vk/newsfeed/contracts/u;->q(Ljava/lang/String;)V
+    invoke-interface {v0, p1}, Lcom/vk/newsfeed/contracts/ProfileContract;->q(Ljava/lang/String;)V
 
     return-void
 .end method
@@ -796,11 +796,11 @@
     .locals 1
 
     .line 18
-    invoke-virtual {p0}, Lcom/vk/newsfeed/presenters/i;->M()Lcom/vk/newsfeed/contracts/u;
+    invoke-virtual {p0}, Lcom/vk/newsfeed/presenters/NewsFeedProfilePresenter;->M()Lcom/vk/newsfeed/contracts/ProfileContract;
 
     move-result-object v0
 
-    invoke-interface {v0, p1}, Lcom/vk/newsfeed/contracts/u;->u(Z)V
+    invoke-interface {v0, p1}, Lcom/vk/newsfeed/contracts/ProfileContract;->u(Z)V
 
     return-void
 .end method
@@ -809,7 +809,7 @@
     .locals 3
 
     .line 2
-    invoke-virtual {p0}, Lcom/vk/newsfeed/presenters/i;->I()Lcom/vtosters/lite/api/ExtendedUserProfile;
+    invoke-virtual {p0}, Lcom/vk/newsfeed/presenters/NewsFeedProfilePresenter;->I()Lcom/vtosters/lite/api/ExtendedUserProfile;
 
     move-result-object v0
 
@@ -837,7 +837,7 @@
 
     .line 3
     :cond_1
-    new-instance v0, Lb/h/c/y/a;
+    new-instance v0, Lcom/vk/api/status/StatusSet;
 
     invoke-virtual {p0}, Lcom/vk/profile/presenter/BaseProfilePresenter;->Y()Z
 
@@ -845,7 +845,7 @@
 
     if-nez v2, :cond_2
 
-    invoke-virtual {p0}, Lcom/vk/newsfeed/presenters/i;->L()I
+    invoke-virtual {p0}, Lcom/vk/newsfeed/presenters/NewsFeedProfilePresenter;->L()I
 
     move-result v2
 
@@ -857,21 +857,21 @@
     const/4 v2, 0x0
 
     :goto_1
-    invoke-direct {v0, p1, v2}, Lb/h/c/y/a;-><init>(Ljava/lang/String;I)V
+    invoke-direct {v0, p1, v2}, Lcom/vk/api/status/StatusSet;-><init>(Ljava/lang/String;I)V
 
     const/4 v2, 0x1
 
     .line 4
-    invoke-static {v0, v1, v2, v1}, Lcom/vk/api/base/d;->d(Lcom/vk/api/base/d;Lcom/vk/api/base/e;ILjava/lang/Object;)Lc/a/m;
+    invoke-static {v0, v1, v2, v1}, Lcom/vk/api/base/ApiRequest;->d(Lcom/vk/api/base/ApiRequest;Lcom/vk/api/base/ApiThreadHolder;ILjava/lang/Object;)Lio/reactivex/Observable;
 
     move-result-object v0
 
     .line 5
-    invoke-virtual {p0}, Lcom/vk/newsfeed/presenters/i;->M()Lcom/vk/newsfeed/contracts/u;
+    invoke-virtual {p0}, Lcom/vk/newsfeed/presenters/NewsFeedProfilePresenter;->M()Lcom/vk/newsfeed/contracts/ProfileContract;
 
     move-result-object v1
 
-    invoke-virtual {p0, v0, v1}, Lcom/vk/profile/presenter/BaseProfilePresenter;->a(Lc/a/m;Lcom/vk/newsfeed/contracts/u;)Lc/a/m;
+    invoke-virtual {p0, v0, v1}, Lcom/vk/profile/presenter/BaseProfilePresenter;->a(Lio/reactivex/Observable;Lcom/vk/newsfeed/contracts/ProfileContract;)Lio/reactivex/Observable;
 
     move-result-object v0
 
@@ -884,13 +884,13 @@
     sget-object p1, Lcom/vk/profile/presenter/BaseProfilePresenter$i;->a:Lcom/vk/profile/presenter/BaseProfilePresenter$i;
 
     .line 8
-    invoke-virtual {v0, v1, p1}, Lc/a/m;->a(Lc/a/z/g;Lc/a/z/g;)Lio/reactivex/disposables/b;
+    invoke-virtual {v0, v1, p1}, Lio/reactivex/Observable;->a(Lio/reactivex/functions/Consumer;Lio/reactivex/functions/Consumer;)Lio/reactivex/disposables/Disposable;
 
     return-void
 
     .line 9
     :cond_3
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     throw v1
 .end method
@@ -904,7 +904,7 @@
     if-eqz v0, :cond_1
 
     .line 2
-    invoke-virtual {p0}, Lcom/vk/newsfeed/presenters/i;->N()Lcom/vk/newsfeed/contracts/ProfileContract$Presenter$WallMode;
+    invoke-virtual {p0}, Lcom/vk/newsfeed/presenters/NewsFeedProfilePresenter;->N()Lcom/vk/newsfeed/contracts/ProfileContract$Presenter$WallMode;
 
     move-result-object v0
 
@@ -913,10 +913,10 @@
     if-eq v0, v1, :cond_1
 
     .line 3
-    invoke-virtual {p0, p1}, Lcom/vk/newsfeed/presenters/i;->f(Lcom/vk/dto/newsfeed/entries/NewsEntry;)V
+    invoke-virtual {p0, p1}, Lcom/vk/newsfeed/presenters/NewsFeedProfilePresenter;->f(Lcom/vk/dto/newsfeed/entries/NewsEntry;)V
 
     .line 4
-    invoke-virtual {p0}, Lcom/vk/newsfeed/presenters/i;->I()Lcom/vtosters/lite/api/ExtendedUserProfile;
+    invoke-virtual {p0}, Lcom/vk/newsfeed/presenters/NewsFeedProfilePresenter;->I()Lcom/vtosters/lite/api/ExtendedUserProfile;
 
     move-result-object p1
 
@@ -928,11 +928,11 @@
     iput-boolean v0, p1, Lcom/vtosters/lite/api/ExtendedUserProfile;->f0:Z
 
     .line 6
-    invoke-virtual {p0}, Lcom/vk/newsfeed/presenters/i;->M()Lcom/vk/newsfeed/contracts/u;
+    invoke-virtual {p0}, Lcom/vk/newsfeed/presenters/NewsFeedProfilePresenter;->M()Lcom/vk/newsfeed/contracts/ProfileContract;
 
     move-result-object v0
 
-    invoke-interface {v0, p1}, Lcom/vk/newsfeed/contracts/u;->a(Lcom/vtosters/lite/api/ExtendedUserProfile;)V
+    invoke-interface {v0, p1}, Lcom/vk/newsfeed/contracts/ProfileContract;->a(Lcom/vtosters/lite/api/ExtendedUserProfile;)V
 
     .line 7
     :cond_0
@@ -942,7 +942,7 @@
 
     const-wide/16 v0, 0xc8
 
-    invoke-static {p1, v0, v1}, Lcom/vtosters/lite/f0;->a(Ljava/lang/Runnable;J)V
+    invoke-static {p1, v0, v1}, Lcom/vtosters/lite/ViewUtils;->a(Ljava/lang/Runnable;J)V
 
     :cond_1
     return-void
@@ -952,7 +952,7 @@
     .locals 1
 
     .line 1
-    invoke-super {p0}, Lcom/vk/newsfeed/presenters/i;->e1()V
+    invoke-super {p0}, Lcom/vk/newsfeed/presenters/NewsFeedProfilePresenter;->e1()V
 
     const/4 v0, 0x0
 
@@ -991,7 +991,7 @@
 
     if-eqz v0, :cond_0
 
-    invoke-virtual {p0}, Lcom/vk/newsfeed/presenters/i;->N()Lcom/vk/newsfeed/contracts/ProfileContract$Presenter$WallMode;
+    invoke-virtual {p0}, Lcom/vk/newsfeed/presenters/NewsFeedProfilePresenter;->N()Lcom/vk/newsfeed/contracts/ProfileContract$Presenter$WallMode;
 
     move-result-object v0
 
@@ -1000,7 +1000,7 @@
     if-ne v0, v1, :cond_0
 
     .line 2
-    invoke-virtual {p0, p1}, Lcom/vk/newsfeed/presenters/i;->f(Lcom/vk/dto/newsfeed/entries/NewsEntry;)V
+    invoke-virtual {p0, p1}, Lcom/vk/newsfeed/presenters/NewsFeedProfilePresenter;->f(Lcom/vk/dto/newsfeed/entries/NewsEntry;)V
 
     :cond_0
     return-void
@@ -1029,9 +1029,9 @@
 
     move-result-object v0
 
-    check-cast v0, Lcom/vk/navigation/g;
+    check-cast v0, Lcom/vk/navigation/Dismissed;
 
-    invoke-interface {v0}, Lcom/vk/navigation/g;->dismiss()V
+    invoke-interface {v0}, Lcom/vk/navigation/Dismissed;->dismiss()V
 
     return v1
 

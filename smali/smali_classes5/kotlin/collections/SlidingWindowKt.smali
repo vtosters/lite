@@ -26,7 +26,7 @@
 
     if-nez v0, :cond_0
 
-    sget-object p0, Lkotlin/collections/v;->a:Lkotlin/collections/v;
+    sget-object p0, Lkotlin/collections/Collections1;->a:Lkotlin/collections/Collections1;
 
     return-object p0
 
@@ -48,9 +48,9 @@
 
     move v5, p3
 
-    invoke-direct/range {v0 .. v6}, Lkotlin/collections/SlidingWindowKt$windowedIterator$1;-><init>(IILjava/util/Iterator;ZZLkotlin/coroutines/a;)V
+    invoke-direct/range {v0 .. v6}, Lkotlin/collections/SlidingWindowKt$windowedIterator$1;-><init>(IILjava/util/Iterator;ZZLkotlin/coroutines/Continuation;)V
 
-    invoke-static {v7}, Lkotlin/sequences/m;->a(Lkotlin/jvm/b/c;)Ljava/util/Iterator;
+    invoke-static {v7}, Lkotlin/sequences/m;->a(Lkotlin/jvm/b/Functions1;)Ljava/util/Iterator;
 
     move-result-object p0
 

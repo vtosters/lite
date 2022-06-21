@@ -44,7 +44,7 @@
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, v1}, Lcom/vk/im/engine/models/attaches/AttachMoneyRequest$b;-><init>(Lkotlin/jvm/internal/i;)V
+    invoke-direct {v0, v1}, Lcom/vk/im/engine/models/attaches/AttachMoneyRequest$b;-><init>(Lkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     .line 1
     new-instance v0, Lcom/vk/im/engine/models/attaches/AttachMoneyRequest$a;
@@ -74,7 +74,7 @@
 
     move-object v0, p0
 
-    invoke-direct/range {v0 .. v6}, Lcom/vk/im/engine/models/attaches/AttachMoneyRequest;-><init>(ILcom/vk/im/engine/models/attaches/AttachSyncState;ILcom/vk/im/engine/models/content/MoneyRequest;ILkotlin/jvm/internal/i;)V
+    invoke-direct/range {v0 .. v6}, Lcom/vk/im/engine/models/attaches/AttachMoneyRequest;-><init>(ILcom/vk/im/engine/models/attaches/AttachSyncState;ILcom/vk/im/engine/models/content/MoneyRequest;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     return-void
 .end method
@@ -96,7 +96,7 @@
     return-void
 .end method
 
-.method public synthetic constructor <init>(ILcom/vk/im/engine/models/attaches/AttachSyncState;ILcom/vk/im/engine/models/content/MoneyRequest;ILkotlin/jvm/internal/i;)V
+.method public synthetic constructor <init>(ILcom/vk/im/engine/models/attaches/AttachSyncState;ILcom/vk/im/engine/models/content/MoneyRequest;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
     .locals 14
 
     and-int/lit8 v0, p5, 0x1
@@ -163,7 +163,7 @@
 
     move-object v4, v3
 
-    invoke-direct/range {v4 .. v13}, Lcom/vk/im/engine/models/content/MoneyRequestPersonal;-><init>(IIIZLjava/lang/String;Lcom/vk/im/engine/models/content/MoneyRequest$Amount;IILkotlin/jvm/internal/i;)V
+    invoke-direct/range {v4 .. v13}, Lcom/vk/im/engine/models/content/MoneyRequestPersonal;-><init>(IIIZLjava/lang/String;Lcom/vk/im/engine/models/content/MoneyRequest$Amount;IILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     move-object v3, p0
 
@@ -199,7 +199,7 @@
 
     const-string v2, "AttachSyncState.fromInt(s.readInt())"
 
-    invoke-static {v1, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 12
     invoke-virtual {p1}, Lcom/vk/core/serialize/Serializer;->n()I
@@ -228,14 +228,14 @@
 
     .line 15
     :cond_0
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     const/4 p1, 0x0
 
     throw p1
 .end method
 
-.method public synthetic constructor <init>(Lcom/vk/core/serialize/Serializer;Lkotlin/jvm/internal/i;)V
+.method public synthetic constructor <init>(Lcom/vk/core/serialize/Serializer;Lkotlin/jvm/internal/DefaultConstructorMarker;)V
     .locals 0
 
     .line 2
@@ -500,7 +500,7 @@
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v0
 
@@ -520,7 +520,7 @@
 
     iget-object p1, p1, Lcom/vk/im/engine/models/attaches/AttachMoneyRequest;->d:Lcom/vk/im/engine/models/content/MoneyRequest;
 
-    invoke-static {v0, p1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v0, p1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result p1
 

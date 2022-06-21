@@ -3,12 +3,12 @@
 .source "CommunitiesCatalogVh.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/b;
+.implements Lkotlin/jvm/b/Functions2;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/profile/catalog/CommunitiesCatalogVh;-><init>(Lcom/vk/catalog2/core/a;Lcom/vk/core/fragments/FragmentImpl;Lcom/vk/catalog2/core/e;)V
+    value = Lcom/vk/profile/catalog/CommunitiesCatalogVh;-><init>(Lcom/vk/catalog2/core/CatalogConfiguration;Lcom/vk/core/fragments/FragmentImpl;Lcom/vk/catalog2/core/CatalogEntryPointParams;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -19,9 +19,9 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/b<",
+        "Lkotlin/jvm/b/Functions2<",
         "Ljava/lang/String;",
-        "Lkotlin/m;",
+        "Lkotlin/Unit;",
         ">;"
     }
 .end annotation
@@ -65,14 +65,14 @@
     .line 2
     iget-object v0, p0, Lcom/vk/profile/catalog/CommunitiesCatalogVh$searchQueryVh$5;->this$0:Lcom/vk/profile/catalog/CommunitiesCatalogVh;
 
-    sget-object v1, Lcom/vk/catalog2/core/holders/containers/i;->a:Lcom/vk/catalog2/core/holders/containers/i;
+    sget-object v1, Lcom/vk/catalog2/core/holders/containers/SwitchCatalogVhState2;->a:Lcom/vk/catalog2/core/holders/containers/SwitchCatalogVhState2;
 
-    invoke-virtual {v0, v1}, Lcom/vk/profile/catalog/CommunitiesCatalogVh;->a(Lcom/vk/catalog2/core/holders/containers/l;)V
+    invoke-virtual {v0, v1}, Lcom/vk/profile/catalog/CommunitiesCatalogVh;->a(Lcom/vk/catalog2/core/holders/containers/SwitchCatalogVhState1;)V
 
     .line 3
     iget-object v0, p0, Lcom/vk/profile/catalog/CommunitiesCatalogVh$searchQueryVh$5;->this$0:Lcom/vk/profile/catalog/CommunitiesCatalogVh;
 
-    invoke-static {v0}, Lcom/vk/profile/catalog/CommunitiesCatalogVh;->d(Lcom/vk/profile/catalog/CommunitiesCatalogVh;)Lcom/vk/catalog2/core/y/d/b;
+    invoke-static {v0}, Lcom/vk/profile/catalog/CommunitiesCatalogVh;->d(Lcom/vk/profile/catalog/CommunitiesCatalogVh;)Lcom/vk/catalog2/core/y/d/SearchResultsVh;
 
     move-result-object v0
 
@@ -80,7 +80,7 @@
 
     const/4 v2, 0x0
 
-    invoke-static {v0, p1, v2, v1, v2}, Lcom/vk/catalog2/core/y/d/b;->a(Lcom/vk/catalog2/core/y/d/b;Ljava/lang/String;Ljava/lang/String;ILjava/lang/Object;)V
+    invoke-static {v0, p1, v2, v1, v2}, Lcom/vk/catalog2/core/y/d/SearchResultsVh;->a(Lcom/vk/catalog2/core/y/d/SearchResultsVh;Ljava/lang/String;Ljava/lang/String;ILjava/lang/Object;)V
 
     :cond_0
     return-void
@@ -94,7 +94,7 @@
 
     invoke-virtual {p0, p1}, Lcom/vk/profile/catalog/CommunitiesCatalogVh$searchQueryVh$5;->a(Ljava/lang/String;)V
 
-    sget-object p1, Lkotlin/m;->a:Lkotlin/m;
+    sget-object p1, Lkotlin/Unit;->a:Lkotlin/Unit;
 
     return-object p1
 .end method

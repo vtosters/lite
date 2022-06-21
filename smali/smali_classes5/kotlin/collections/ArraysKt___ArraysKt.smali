@@ -1,5 +1,5 @@
 .class Lkotlin/collections/ArraysKt___ArraysKt;
-.super Lkotlin/collections/i;
+.super Lkotlin/collections/_ArraysJvm;
 .source "_Arrays.kt"
 
 
@@ -55,7 +55,7 @@
     return p0
 .end method
 
-.method public static final a([BLjava/lang/Appendable;Ljava/lang/CharSequence;Ljava/lang/CharSequence;Ljava/lang/CharSequence;ILjava/lang/CharSequence;Lkotlin/jvm/b/b;)Ljava/lang/Appendable;
+.method public static final a([BLjava/lang/Appendable;Ljava/lang/CharSequence;Ljava/lang/CharSequence;Ljava/lang/CharSequence;ILjava/lang/CharSequence;Lkotlin/jvm/b/Functions2;)Ljava/lang/Appendable;
     .locals 4
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -67,7 +67,7 @@
             "Ljava/lang/CharSequence;",
             "I",
             "Ljava/lang/CharSequence;",
-            "Lkotlin/jvm/b/b<",
+            "Lkotlin/jvm/b/Functions2<",
             "-",
             "Ljava/lang/Byte;",
             "+",
@@ -113,7 +113,7 @@
 
     move-result-object v2
 
-    invoke-interface {p7, v2}, Lkotlin/jvm/b/b;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {p7, v2}, Lkotlin/jvm/b/Functions2;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v2
 
@@ -151,7 +151,7 @@
     return-object p1
 .end method
 
-.method public static final a([ILjava/lang/Appendable;Ljava/lang/CharSequence;Ljava/lang/CharSequence;Ljava/lang/CharSequence;ILjava/lang/CharSequence;Lkotlin/jvm/b/b;)Ljava/lang/Appendable;
+.method public static final a([ILjava/lang/Appendable;Ljava/lang/CharSequence;Ljava/lang/CharSequence;Ljava/lang/CharSequence;ILjava/lang/CharSequence;Lkotlin/jvm/b/Functions2;)Ljava/lang/Appendable;
     .locals 4
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -163,7 +163,7 @@
             "Ljava/lang/CharSequence;",
             "I",
             "Ljava/lang/CharSequence;",
-            "Lkotlin/jvm/b/b<",
+            "Lkotlin/jvm/b/Functions2<",
             "-",
             "Ljava/lang/Integer;",
             "+",
@@ -209,7 +209,7 @@
 
     move-result-object v2
 
-    invoke-interface {p7, v2}, Lkotlin/jvm/b/b;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {p7, v2}, Lkotlin/jvm/b/Functions2;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v2
 
@@ -247,7 +247,7 @@
     return-object p1
 .end method
 
-.method public static final a([Ljava/lang/Object;Ljava/lang/Appendable;Ljava/lang/CharSequence;Ljava/lang/CharSequence;Ljava/lang/CharSequence;ILjava/lang/CharSequence;Lkotlin/jvm/b/b;)Ljava/lang/Appendable;
+.method public static final a([Ljava/lang/Object;Ljava/lang/Appendable;Ljava/lang/CharSequence;Ljava/lang/CharSequence;Ljava/lang/CharSequence;ILjava/lang/CharSequence;Lkotlin/jvm/b/Functions2;)Ljava/lang/Appendable;
     .locals 4
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -261,7 +261,7 @@
             "Ljava/lang/CharSequence;",
             "I",
             "Ljava/lang/CharSequence;",
-            "Lkotlin/jvm/b/b<",
+            "Lkotlin/jvm/b/Functions2<",
             "-TT;+",
             "Ljava/lang/CharSequence;",
             ">;)TA;"
@@ -299,7 +299,7 @@
 
     .line 22
     :cond_1
-    invoke-static {p1, v2, p7}, Lkotlin/text/l;->a(Ljava/lang/Appendable;Ljava/lang/Object;Lkotlin/jvm/b/b;)V
+    invoke-static {p1, v2, p7}, Lkotlin/text/l;->a(Ljava/lang/Appendable;Ljava/lang/Object;Lkotlin/jvm/b/Functions2;)V
 
     add-int/lit8 v0, v0, 0x1
 
@@ -421,20 +421,20 @@
         value = {
             "([Z)",
             "Ljava/lang/Iterable<",
-            "Lkotlin/collections/x<",
+            "Lkotlin/collections/IndexedValue<",
             "Ljava/lang/Boolean;",
             ">;>;"
         }
     .end annotation
 
     .line 13
-    new-instance v0, Lkotlin/collections/y;
+    new-instance v0, Lkotlin/collections/Iterables1;
 
     new-instance v1, Lkotlin/collections/ArraysKt___ArraysKt$withIndex$8;
 
     invoke-direct {v1, p0}, Lkotlin/collections/ArraysKt___ArraysKt$withIndex$8;-><init>([Z)V
 
-    invoke-direct {v0, v1}, Lkotlin/collections/y;-><init>(Lkotlin/jvm/b/a;)V
+    invoke-direct {v0, v1}, Lkotlin/collections/Iterables1;-><init>(Lkotlin/jvm/b/Functions;)V
 
     return-object v0
 .end method
@@ -469,7 +469,7 @@
     return-object p0
 .end method
 
-.method public static final a([BLjava/lang/CharSequence;Ljava/lang/CharSequence;Ljava/lang/CharSequence;ILjava/lang/CharSequence;Lkotlin/jvm/b/b;)Ljava/lang/String;
+.method public static final a([BLjava/lang/CharSequence;Ljava/lang/CharSequence;Ljava/lang/CharSequence;ILjava/lang/CharSequence;Lkotlin/jvm/b/Functions2;)Ljava/lang/String;
     .locals 9
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -479,7 +479,7 @@
             "Ljava/lang/CharSequence;",
             "I",
             "Ljava/lang/CharSequence;",
-            "Lkotlin/jvm/b/b<",
+            "Lkotlin/jvm/b/Functions2<",
             "-",
             "Ljava/lang/Byte;",
             "+",
@@ -510,7 +510,7 @@
 
     move-object v7, p6
 
-    invoke-static/range {v0 .. v7}, Lkotlin/collections/ArraysKt___ArraysKt;->a([BLjava/lang/Appendable;Ljava/lang/CharSequence;Ljava/lang/CharSequence;Ljava/lang/CharSequence;ILjava/lang/CharSequence;Lkotlin/jvm/b/b;)Ljava/lang/Appendable;
+    invoke-static/range {v0 .. v7}, Lkotlin/collections/ArraysKt___ArraysKt;->a([BLjava/lang/Appendable;Ljava/lang/CharSequence;Ljava/lang/CharSequence;Ljava/lang/CharSequence;ILjava/lang/CharSequence;Lkotlin/jvm/b/Functions2;)Ljava/lang/Appendable;
 
     check-cast v8, Ljava/lang/StringBuilder;
 
@@ -520,12 +520,12 @@
 
     const-string p1, "joinTo(StringBuilder(), \u2026ed, transform).toString()"
 
-    invoke-static {p0, p1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p0, p1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     return-object p0
 .end method
 
-.method public static synthetic a([BLjava/lang/CharSequence;Ljava/lang/CharSequence;Ljava/lang/CharSequence;ILjava/lang/CharSequence;Lkotlin/jvm/b/b;ILjava/lang/Object;)Ljava/lang/String;
+.method public static synthetic a([BLjava/lang/CharSequence;Ljava/lang/CharSequence;Ljava/lang/CharSequence;ILjava/lang/CharSequence;Lkotlin/jvm/b/Functions2;ILjava/lang/Object;)Ljava/lang/String;
     .locals 4
 
     and-int/lit8 p8, p7, 0x1
@@ -606,14 +606,14 @@
     move-object p8, v3
 
     .line 41
-    invoke-static/range {p2 .. p8}, Lkotlin/collections/ArraysKt___ArraysKt;->a([BLjava/lang/CharSequence;Ljava/lang/CharSequence;Ljava/lang/CharSequence;ILjava/lang/CharSequence;Lkotlin/jvm/b/b;)Ljava/lang/String;
+    invoke-static/range {p2 .. p8}, Lkotlin/collections/ArraysKt___ArraysKt;->a([BLjava/lang/CharSequence;Ljava/lang/CharSequence;Ljava/lang/CharSequence;ILjava/lang/CharSequence;Lkotlin/jvm/b/Functions2;)Ljava/lang/String;
 
     move-result-object p0
 
     return-object p0
 .end method
 
-.method public static final a([ILjava/lang/CharSequence;Ljava/lang/CharSequence;Ljava/lang/CharSequence;ILjava/lang/CharSequence;Lkotlin/jvm/b/b;)Ljava/lang/String;
+.method public static final a([ILjava/lang/CharSequence;Ljava/lang/CharSequence;Ljava/lang/CharSequence;ILjava/lang/CharSequence;Lkotlin/jvm/b/Functions2;)Ljava/lang/String;
     .locals 9
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -623,7 +623,7 @@
             "Ljava/lang/CharSequence;",
             "I",
             "Ljava/lang/CharSequence;",
-            "Lkotlin/jvm/b/b<",
+            "Lkotlin/jvm/b/Functions2<",
             "-",
             "Ljava/lang/Integer;",
             "+",
@@ -654,7 +654,7 @@
 
     move-object v7, p6
 
-    invoke-static/range {v0 .. v7}, Lkotlin/collections/ArraysKt___ArraysKt;->a([ILjava/lang/Appendable;Ljava/lang/CharSequence;Ljava/lang/CharSequence;Ljava/lang/CharSequence;ILjava/lang/CharSequence;Lkotlin/jvm/b/b;)Ljava/lang/Appendable;
+    invoke-static/range {v0 .. v7}, Lkotlin/collections/ArraysKt___ArraysKt;->a([ILjava/lang/Appendable;Ljava/lang/CharSequence;Ljava/lang/CharSequence;Ljava/lang/CharSequence;ILjava/lang/CharSequence;Lkotlin/jvm/b/Functions2;)Ljava/lang/Appendable;
 
     check-cast v8, Ljava/lang/StringBuilder;
 
@@ -664,12 +664,12 @@
 
     const-string p1, "joinTo(StringBuilder(), \u2026ed, transform).toString()"
 
-    invoke-static {p0, p1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p0, p1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     return-object p0
 .end method
 
-.method public static synthetic a([ILjava/lang/CharSequence;Ljava/lang/CharSequence;Ljava/lang/CharSequence;ILjava/lang/CharSequence;Lkotlin/jvm/b/b;ILjava/lang/Object;)Ljava/lang/String;
+.method public static synthetic a([ILjava/lang/CharSequence;Ljava/lang/CharSequence;Ljava/lang/CharSequence;ILjava/lang/CharSequence;Lkotlin/jvm/b/Functions2;ILjava/lang/Object;)Ljava/lang/String;
     .locals 4
 
     and-int/lit8 p8, p7, 0x1
@@ -750,14 +750,14 @@
     move-object p8, v3
 
     .line 43
-    invoke-static/range {p2 .. p8}, Lkotlin/collections/ArraysKt___ArraysKt;->a([ILjava/lang/CharSequence;Ljava/lang/CharSequence;Ljava/lang/CharSequence;ILjava/lang/CharSequence;Lkotlin/jvm/b/b;)Ljava/lang/String;
+    invoke-static/range {p2 .. p8}, Lkotlin/collections/ArraysKt___ArraysKt;->a([ILjava/lang/CharSequence;Ljava/lang/CharSequence;Ljava/lang/CharSequence;ILjava/lang/CharSequence;Lkotlin/jvm/b/Functions2;)Ljava/lang/String;
 
     move-result-object p0
 
     return-object p0
 .end method
 
-.method public static final a([Ljava/lang/Object;Ljava/lang/CharSequence;Ljava/lang/CharSequence;Ljava/lang/CharSequence;ILjava/lang/CharSequence;Lkotlin/jvm/b/b;)Ljava/lang/String;
+.method public static final a([Ljava/lang/Object;Ljava/lang/CharSequence;Ljava/lang/CharSequence;Ljava/lang/CharSequence;ILjava/lang/CharSequence;Lkotlin/jvm/b/Functions2;)Ljava/lang/String;
     .locals 9
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -769,7 +769,7 @@
             "Ljava/lang/CharSequence;",
             "I",
             "Ljava/lang/CharSequence;",
-            "Lkotlin/jvm/b/b<",
+            "Lkotlin/jvm/b/Functions2<",
             "-TT;+",
             "Ljava/lang/CharSequence;",
             ">;)",
@@ -798,7 +798,7 @@
 
     move-object v7, p6
 
-    invoke-static/range {v0 .. v7}, Lkotlin/collections/ArraysKt___ArraysKt;->a([Ljava/lang/Object;Ljava/lang/Appendable;Ljava/lang/CharSequence;Ljava/lang/CharSequence;Ljava/lang/CharSequence;ILjava/lang/CharSequence;Lkotlin/jvm/b/b;)Ljava/lang/Appendable;
+    invoke-static/range {v0 .. v7}, Lkotlin/collections/ArraysKt___ArraysKt;->a([Ljava/lang/Object;Ljava/lang/Appendable;Ljava/lang/CharSequence;Ljava/lang/CharSequence;Ljava/lang/CharSequence;ILjava/lang/CharSequence;Lkotlin/jvm/b/Functions2;)Ljava/lang/Appendable;
 
     check-cast v8, Ljava/lang/StringBuilder;
 
@@ -808,12 +808,12 @@
 
     const-string p1, "joinTo(StringBuilder(), \u2026ed, transform).toString()"
 
-    invoke-static {p0, p1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p0, p1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     return-object p0
 .end method
 
-.method public static synthetic a([Ljava/lang/Object;Ljava/lang/CharSequence;Ljava/lang/CharSequence;Ljava/lang/CharSequence;ILjava/lang/CharSequence;Lkotlin/jvm/b/b;ILjava/lang/Object;)Ljava/lang/String;
+.method public static synthetic a([Ljava/lang/Object;Ljava/lang/CharSequence;Ljava/lang/CharSequence;Ljava/lang/CharSequence;ILjava/lang/CharSequence;Lkotlin/jvm/b/Functions2;ILjava/lang/Object;)Ljava/lang/String;
     .locals 4
 
     and-int/lit8 p8, p7, 0x1
@@ -894,7 +894,7 @@
     move-object p8, v3
 
     .line 39
-    invoke-static/range {p2 .. p8}, Lkotlin/collections/ArraysKt___ArraysKt;->a([Ljava/lang/Object;Ljava/lang/CharSequence;Ljava/lang/CharSequence;Ljava/lang/CharSequence;ILjava/lang/CharSequence;Lkotlin/jvm/b/b;)Ljava/lang/String;
+    invoke-static/range {p2 .. p8}, Lkotlin/collections/ArraysKt___ArraysKt;->a([Ljava/lang/Object;Ljava/lang/CharSequence;Ljava/lang/CharSequence;Ljava/lang/CharSequence;ILjava/lang/CharSequence;Lkotlin/jvm/b/Functions2;)Ljava/lang/String;
 
     move-result-object p0
 
@@ -973,12 +973,12 @@
     return-object p1
 .end method
 
-.method public static a([F)Lkotlin/sequences/j;
+.method public static a([F)Lkotlin/sequences/Sequence;
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "([F)",
-            "Lkotlin/sequences/j<",
+            "Lkotlin/sequences/Sequence<",
             "Ljava/lang/Float;",
             ">;"
         }
@@ -999,7 +999,7 @@
     :goto_0
     if-eqz v0, :cond_1
 
-    invoke-static {}, Lkotlin/sequences/m;->a()Lkotlin/sequences/j;
+    invoke-static {}, Lkotlin/sequences/m;->a()Lkotlin/sequences/Sequence;
 
     move-result-object p0
 
@@ -1319,9 +1319,9 @@
 
     const-string v0, "java.util.Arrays.copyOf(this, size)"
 
-    invoke-static {p0, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p0, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    invoke-static {p0, p1}, Lkotlin/collections/i;->a([Ljava/lang/Object;Ljava/util/Comparator;)V
+    invoke-static {p0, p1}, Lkotlin/collections/_ArraysJvm;->a([Ljava/lang/Object;Ljava/util/Comparator;)V
 
     return-object p0
 .end method
@@ -1408,7 +1408,7 @@
     .line 4
     aget-object v2, p0, v0
 
-    invoke-static {p1, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {p1, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v2
 
@@ -1544,14 +1544,14 @@
     return-object p0
 .end method
 
-.method public static c([Ljava/lang/Object;)Lkotlin/sequences/j;
+.method public static c([Ljava/lang/Object;)Lkotlin/sequences/Sequence;
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "<T:",
             "Ljava/lang/Object;",
             ">([TT;)",
-            "Lkotlin/sequences/j<",
+            "Lkotlin/sequences/Sequence<",
             "TT;>;"
         }
     .end annotation
@@ -1571,7 +1571,7 @@
     :goto_0
     if-eqz v0, :cond_1
 
-    invoke-static {}, Lkotlin/sequences/m;->a()Lkotlin/sequences/j;
+    invoke-static {}, Lkotlin/sequences/m;->a()Lkotlin/sequences/Sequence;
 
     move-result-object p0
 
@@ -2057,19 +2057,19 @@
     return-object v0
 .end method
 
-.method public static g([Ljava/lang/Object;)Lkotlin/t/d;
+.method public static g([Ljava/lang/Object;)Lkotlin/t/Ranges1;
     .locals 2
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "<T:",
             "Ljava/lang/Object;",
             ">([TT;)",
-            "Lkotlin/t/d;"
+            "Lkotlin/t/Ranges1;"
         }
     .end annotation
 
     .line 1
-    new-instance v0, Lkotlin/t/d;
+    new-instance v0, Lkotlin/t/Ranges1;
 
     invoke-static {p0}, Lkotlin/collections/f;->h([Ljava/lang/Object;)I
 
@@ -2077,7 +2077,7 @@
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, v1, p0}, Lkotlin/t/d;-><init>(II)V
+    invoke-direct {v0, v1, p0}, Lkotlin/t/Ranges1;-><init>(II)V
 
     return-object v0
 .end method
@@ -2258,7 +2258,7 @@
     .line 1
     new-instance v0, Ljava/util/ArrayList;
 
-    invoke-static {p0}, Lkotlin/collections/n;->b([Ljava/lang/Object;)Ljava/util/Collection;
+    invoke-static {p0}, Lkotlin/collections/Collections;->b([Ljava/lang/Object;)Ljava/util/Collection;
 
     move-result-object p0
 

@@ -3,7 +3,7 @@
 .source "TaggedGoodsController.kt"
 
 # interfaces
-.implements Lc/a/z/a;
+.implements Lio/reactivex/functions/Action;
 
 
 # annotations

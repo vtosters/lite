@@ -3,9 +3,9 @@
 .source "CommunitiesManageNotificationsFragment.kt"
 
 # interfaces
-.implements Lcom/vk/core/ui/o;
+.implements Lcom/vk/core/ui/Provider;
 .implements Lcom/vk/notifications/settings/CommunitiesManageNotificationsFragment$d;
-.implements Lcom/vk/core/ui/n;
+.implements Lcom/vk/core/ui/MilkshakeProvider;
 
 
 # annotations
@@ -29,9 +29,9 @@
         "Landroidx/recyclerview/widget/RecyclerView$Adapter<",
         "Lcom/vk/notifications/settings/CommunitiesManageNotificationsFragment$a$a;",
         ">;",
-        "Lcom/vk/core/ui/o;",
+        "Lcom/vk/core/ui/Provider;",
         "Lcom/vk/notifications/settings/CommunitiesManageNotificationsFragment$d;",
-        "Lcom/vk/core/ui/n;"
+        "Lcom/vk/core/ui/MilkshakeProvider;"
     }
 .end annotation
 

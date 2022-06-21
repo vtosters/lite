@@ -1,5 +1,5 @@
 .class public Lcom/vk/stories/StoryPrivacySettingsActivity$b;
-.super Lcom/vtosters/lite/fragments/v2/a;
+.super Lcom/vtosters/lite/fragments/v2/PrivacyEditFragment;
 .source "StoryPrivacySettingsActivity.java"
 
 
@@ -19,7 +19,7 @@
     .locals 0
 
     .line 1
-    invoke-direct {p0}, Lcom/vtosters/lite/fragments/v2/a;-><init>()V
+    invoke-direct {p0}, Lcom/vtosters/lite/fragments/v2/PrivacyEditFragment;-><init>()V
 
     return-void
 .end method
@@ -30,7 +30,7 @@
     .locals 1
 
     .line 1
-    invoke-super {p0}, Lcom/vtosters/lite/fragments/v2/a;->U4()V
+    invoke-super {p0}, Lcom/vtosters/lite/fragments/v2/PrivacyEditFragment;->U4()V
 
     .line 2
     invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getActivity()Landroidx/fragment/app/FragmentActivity;
@@ -95,7 +95,7 @@
     const v1, 0x7f040597
 
     .line 4
-    invoke-static {v0, v1}, Lcom/vk/extensions/l;->a(Landroid/widget/TextView;I)V
+    invoke-static {v0, v1}, Lcom/vk/extensions/TextViewExt;->a(Landroid/widget/TextView;I)V
 
     const/4 v1, 0x1
 
@@ -105,7 +105,7 @@
     invoke-virtual {v0, v1, v2}, Landroid/widget/TextView;->setTextSize(IF)V
 
     .line 6
-    iget-object v2, p0, Lcom/vtosters/lite/fragments/v2/a;->u0:Lcom/vk/dto/common/data/PrivacySetting;
+    iget-object v2, p0, Lcom/vtosters/lite/fragments/v2/PrivacyEditFragment;->u0:Lcom/vk/dto/common/data/PrivacySetting;
 
     iget-object v2, v2, Lcom/vk/dto/common/data/PrivacySetting;->b:Ljava/lang/String;
 
@@ -131,7 +131,7 @@
     .locals 0
 
     .line 1
-    invoke-super {p0}, Lcom/vtosters/lite/fragments/v2/a;->i5()V
+    invoke-super {p0}, Lcom/vtosters/lite/fragments/v2/PrivacyEditFragment;->i5()V
 
     .line 2
     invoke-static {}, Lcom/vk/stories/analytics/CameraAnalytics;->b()V
@@ -148,7 +148,7 @@
     const p1, 0x7f0d003e
 
     .line 2
-    invoke-virtual {p0, p1}, Ld/a/a/a/j;->s0(I)V
+    invoke-virtual {p0, p1}, Lme/grishka/appkit/fragments/LoaderFragment;->s0(I)V
 
     return-void
 .end method
@@ -157,10 +157,10 @@
     .locals 3
 
     .line 1
-    invoke-super {p0, p1, p2}, Lcom/vtosters/lite/fragments/z0;->onViewCreated(Landroid/view/View;Landroid/os/Bundle;)V
+    invoke-super {p0, p1, p2}, Lcom/vtosters/lite/general/fragments/CardRecyclerFragment;->onViewCreated(Landroid/view/View;Landroid/os/Bundle;)V
 
     .line 2
-    invoke-virtual {p0}, Ld/a/a/a/h;->Q4()Landroidx/appcompat/widget/Toolbar;
+    invoke-virtual {p0}, Lme/grishka/appkit/fragments/AppKitFragment;->Q4()Landroidx/appcompat/widget/Toolbar;
 
     move-result-object p1
 
@@ -172,7 +172,7 @@
     invoke-static {p1, p2}, Lcom/vk/core/ui/themes/VKThemeHelper;->a(Landroid/view/View;I)V
 
     .line 4
-    invoke-static {p1}, Lcom/vk/extensions/t/a;->b(Landroidx/appcompat/widget/Toolbar;)V
+    invoke-static {p1}, Lcom/vk/extensions/t/ToolbarExt;->b(Landroidx/appcompat/widget/Toolbar;)V
 
     .line 5
     new-instance p2, Landroid/graphics/drawable/BitmapDrawable;

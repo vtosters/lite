@@ -3,7 +3,7 @@
 .source "SettingsListFragment.java"
 
 # interfaces
-.implements Lc/a/z/g;
+.implements Lio/reactivex/functions/Consumer;
 
 
 # annotations
@@ -19,8 +19,8 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Ljava/lang/Object;",
-        "Lc/a/z/g<",
-        "Lkotlin/m;",
+        "Lio/reactivex/functions/Consumer<",
+        "Lkotlin/Unit;",
         ">;"
     }
 .end annotation
@@ -74,7 +74,7 @@
 
 
 # virtual methods
-.method public a(Lkotlin/m;)V
+.method public a(Lkotlin/Unit;)V
     .locals 1
     .annotation system Ldalvik/annotation/Throws;
         value = {
@@ -92,7 +92,7 @@
     check-cast p1, Landroid/app/Dialog;
 
     .line 2
-    invoke-static {p1}, Lcom/vtosters/lite/f0;->a(Landroid/app/Dialog;)V
+    invoke-static {p1}, Lcom/vtosters/lite/ViewUtils;->a(Landroid/app/Dialog;)V
 
     .line 3
     iget-object p1, p0, Lcom/vtosters/lite/fragments/SettingsListFragment$e;->a:Ljava/lang/ref/WeakReference;
@@ -104,14 +104,14 @@
     check-cast p1, Landroid/app/Activity;
 
     .line 4
-    instance-of v0, p1, Lcom/vk/navigation/n;
+    instance-of v0, p1, Lcom/vk/navigation/NavigationDelegateProvider;
 
     if-eqz v0, :cond_0
 
     .line 5
-    check-cast p1, Lcom/vk/navigation/n;
+    check-cast p1, Lcom/vk/navigation/NavigationDelegateProvider;
 
-    invoke-interface {p1}, Lcom/vk/navigation/n;->E0()Lcom/vk/navigation/NavigationDelegate;
+    invoke-interface {p1}, Lcom/vk/navigation/NavigationDelegateProvider;->E0()Lcom/vk/navigation/NavigationDelegate;
 
     move-result-object p1
 
@@ -132,9 +132,9 @@
     .end annotation
 
     .line 1
-    check-cast p1, Lkotlin/m;
+    check-cast p1, Lkotlin/Unit;
 
-    invoke-virtual {p0, p1}, Lcom/vtosters/lite/fragments/SettingsListFragment$e;->a(Lkotlin/m;)V
+    invoke-virtual {p0, p1}, Lcom/vtosters/lite/fragments/SettingsListFragment$e;->a(Lkotlin/Unit;)V
 
     return-void
 .end method

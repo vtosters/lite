@@ -74,7 +74,7 @@
     const-string v0, "BG circles animator: onEnd"
 
     .line 4
-    invoke-static {p1, v0}, Lcom/vk/voip/u$a;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lcom/vk/voip/VoipUtils$a;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     return-void
 .end method

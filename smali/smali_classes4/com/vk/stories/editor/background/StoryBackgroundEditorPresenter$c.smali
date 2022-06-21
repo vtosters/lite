@@ -3,12 +3,12 @@
 .source "StoryBackgroundEditorPresenter.kt"
 
 # interfaces
-.implements Lc/a/z/g;
+.implements Lio/reactivex/functions/Consumer;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/stories/editor/background/StoryBackgroundEditorPresenter;->a(Lcom/vk/dto/stories/entities/a/a;Z)V
+    value = Lcom/vk/stories/editor/background/StoryBackgroundEditorPresenter;->a(Lcom/vk/dto/stories/entities/a/StoryBackground;Z)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -22,7 +22,7 @@
         "Ljava/lang/Object;",
         ">",
         "Ljava/lang/Object;",
-        "Lc/a/z/g<",
+        "Lio/reactivex/functions/Consumer<",
         "Landroid/graphics/Bitmap;",
         ">;"
     }
@@ -65,7 +65,7 @@
     .line 2
     iget-object v0, p0, Lcom/vk/stories/editor/background/StoryBackgroundEditorPresenter$c;->a:Lcom/vk/stories/editor/background/StoryBackgroundEditorPresenter;
 
-    invoke-virtual {v0}, Lcom/vk/stories/editor/background/StoryBackgroundEditorPresenter;->a()Lcom/vk/stories/editor/background/a;
+    invoke-virtual {v0}, Lcom/vk/stories/editor/background/StoryBackgroundEditorPresenter;->a()Lcom/vk/stories/editor/background/StoryBackgroundEditorContract;
 
     move-result-object v0
 
@@ -77,7 +77,7 @@
 
     iget-object v3, p0, Lcom/vk/stories/editor/background/StoryBackgroundEditorPresenter$c;->a:Lcom/vk/stories/editor/background/StoryBackgroundEditorPresenter;
 
-    invoke-static {v3}, Lcom/vk/stories/editor/background/StoryBackgroundEditorPresenter;->b(Lcom/vk/stories/editor/background/StoryBackgroundEditorPresenter;)Lcom/vk/stories/editor/background/g/c;
+    invoke-static {v3}, Lcom/vk/stories/editor/background/StoryBackgroundEditorPresenter;->b(Lcom/vk/stories/editor/background/StoryBackgroundEditorPresenter;)Lcom/vk/stories/editor/background/g/StoryBackgroundItem;
 
     move-result-object v3
 
@@ -87,11 +87,11 @@
 
     move-result-object v4
 
-    invoke-virtual {v2, v3, v4}, Lcom/vk/stories/editor/background/StoryBackgroundEditorPresenter$a;->a(Lcom/vk/stories/editor/background/g/c;Ljava/lang/String;)Lcom/vk/dto/stories/entities/stat/BackgroundInfo;
+    invoke-virtual {v2, v3, v4}, Lcom/vk/stories/editor/background/StoryBackgroundEditorPresenter$a;->a(Lcom/vk/stories/editor/background/g/StoryBackgroundItem;Ljava/lang/String;)Lcom/vk/dto/stories/entities/stat/BackgroundInfo;
 
     move-result-object v2
 
-    invoke-interface {v0, p1, v1, v2}, Lcom/vk/stories/editor/background/a;->a(Landroid/graphics/Bitmap;Landroid/graphics/Bitmap;Lcom/vk/dto/stories/entities/stat/BackgroundInfo;)V
+    invoke-interface {v0, p1, v1, v2}, Lcom/vk/stories/editor/background/StoryBackgroundEditorContract;->a(Landroid/graphics/Bitmap;Landroid/graphics/Bitmap;Lcom/vk/dto/stories/entities/stat/BackgroundInfo;)V
 
     .line 3
     :cond_0

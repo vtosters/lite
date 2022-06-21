@@ -1,11 +1,11 @@
 .class public final Lcom/vk/stories/view/question/StoryViewAskQuestionView$b;
-.super Lcom/vk/core/util/c1;
+.super Lcom/vk/core/util/TextWatcherAdapter;
 .source "StoryViewAskQuestionView.kt"
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/stories/view/question/StoryViewAskQuestionView;-><init>(Lcom/vk/stories/view/question/b;Lcom/vk/stories/view/t1;)V
+    value = Lcom/vk/stories/view/question/StoryViewAskQuestionView;-><init>(Lcom/vk/stories/view/question/StoryViewAskQuestionContract2;Lcom/vk/stories/view/BaseStoryViewContract1;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -30,7 +30,7 @@
     .line 1
     iput-object p1, p0, Lcom/vk/stories/view/question/StoryViewAskQuestionView$b;->a:Lcom/vk/stories/view/question/StoryViewAskQuestionView;
 
-    invoke-direct {p0}, Lcom/vk/core/util/c1;-><init>()V
+    invoke-direct {p0}, Lcom/vk/core/util/TextWatcherAdapter;-><init>()V
 
     return-void
 .end method
@@ -41,11 +41,11 @@
     .locals 1
 
     .line 1
-    invoke-static {}, Lcom/vk/emoji/b;->g()Lcom/vk/emoji/b;
+    invoke-static {}, Lcom/vk/emoji/Emoji;->g()Lcom/vk/emoji/Emoji;
 
     move-result-object v0
 
-    invoke-virtual {v0, p1}, Lcom/vk/emoji/b;->a(Ljava/lang/CharSequence;)Ljava/lang/CharSequence;
+    invoke-virtual {v0, p1}, Lcom/vk/emoji/Emoji;->a(Ljava/lang/CharSequence;)Ljava/lang/CharSequence;
 
     return-void
 .end method
@@ -56,13 +56,13 @@
     .line 1
     iget-object p2, p0, Lcom/vk/stories/view/question/StoryViewAskQuestionView$b;->a:Lcom/vk/stories/view/question/StoryViewAskQuestionView;
 
-    invoke-virtual {p2}, Lcom/vk/stories/view/question/StoryViewAskQuestionView;->getPresenter()Lcom/vk/stories/view/question/b;
+    invoke-virtual {p2}, Lcom/vk/stories/view/question/StoryViewAskQuestionView;->getPresenter()Lcom/vk/stories/view/question/StoryViewAskQuestionContract2;
 
     move-result-object p2
 
     if-eqz p2, :cond_0
 
-    invoke-interface {p2, p1}, Lcom/vk/stories/view/question/b;->c(Ljava/lang/CharSequence;)V
+    invoke-interface {p2, p1}, Lcom/vk/stories/view/question/StoryViewAskQuestionContract2;->c(Ljava/lang/CharSequence;)V
 
     :cond_0
     return-void

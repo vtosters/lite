@@ -3,12 +3,12 @@
 .source "VhSearchInMsgs.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/b;
+.implements Lkotlin/jvm/b/Functions2;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/im/ui/components/msg_search/vc/VhSearchInMsgs;->a(Lcom/vk/im/ui/components/msg_search/vc/k;)V
+    value = Lcom/vk/im/ui/components/msg_search/vc/VhSearchInMsgs;->a(Lcom/vk/im/ui/components/msg_search/vc/MsgSearchAdapterModels1;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -19,9 +19,9 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/b<",
+        "Lkotlin/jvm/b/Functions2<",
         "Landroid/view/View;",
-        "Lkotlin/m;",
+        "Lkotlin/Unit;",
         ">;"
     }
 .end annotation
@@ -52,11 +52,11 @@
     .line 1
     iget-object p1, p0, Lcom/vk/im/ui/components/msg_search/vc/VhSearchInMsgs$bind$1;->this$0:Lcom/vk/im/ui/components/msg_search/vc/VhSearchInMsgs;
 
-    invoke-static {p1}, Lcom/vk/im/ui/components/msg_search/vc/VhSearchInMsgs;->a(Lcom/vk/im/ui/components/msg_search/vc/VhSearchInMsgs;)Lcom/vk/im/ui/components/msg_search/vc/p;
+    invoke-static {p1}, Lcom/vk/im/ui/components/msg_search/vc/VhSearchInMsgs;->a(Lcom/vk/im/ui/components/msg_search/vc/VhSearchInMsgs;)Lcom/vk/im/ui/components/msg_search/vc/VcCallback;
 
     move-result-object p1
 
-    invoke-interface {p1}, Lcom/vk/im/ui/components/msg_search/vc/p;->c()V
+    invoke-interface {p1}, Lcom/vk/im/ui/components/msg_search/vc/VcCallback;->c()V
 
     return-void
 .end method
@@ -69,7 +69,7 @@
 
     invoke-virtual {p0, p1}, Lcom/vk/im/ui/components/msg_search/vc/VhSearchInMsgs$bind$1;->a(Landroid/view/View;)V
 
-    sget-object p1, Lkotlin/m;->a:Lkotlin/m;
+    sget-object p1, Lkotlin/Unit;->a:Lkotlin/Unit;
 
     return-object p1
 .end method

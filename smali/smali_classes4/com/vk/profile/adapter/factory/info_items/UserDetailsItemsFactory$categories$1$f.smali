@@ -68,7 +68,7 @@
 
     const-string v1, "context.getString(if (pr\u2026se R.string.group_videos)"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 2
     iget-object v1, p0, Lcom/vk/profile/adapter/factory/info_items/UserDetailsItemsFactory$categories$1$f;->b:Lcom/vtosters/lite/api/ExtendedUserProfile;

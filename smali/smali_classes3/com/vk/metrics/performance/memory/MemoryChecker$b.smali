@@ -78,15 +78,15 @@
     invoke-static {v1}, Lcom/vk/log/L;->a([Ljava/lang/Object;)V
 
     .line 3
-    sget-object v1, Lcom/vk/metrics/reporters/a;->j:Lcom/vk/metrics/reporters/a;
+    sget-object v1, Lcom/vk/metrics/reporters/PerformanceReporter;->j:Lcom/vk/metrics/reporters/PerformanceReporter;
 
-    invoke-virtual {v1}, Lcom/vk/metrics/reporters/a;->c()Lb/h/q/c/c/c;
+    invoke-virtual {v1}, Lcom/vk/metrics/reporters/PerformanceReporter;->c()Lb/h/q/c/c/PerformanceStorage;
 
     move-result-object v1
 
     int-to-long v2, v0
 
-    invoke-virtual {v1, v2, v3}, Lb/h/q/c/c/c;->c(J)V
+    invoke-virtual {v1, v2, v3}, Lb/h/q/c/c/PerformanceStorage;->c(J)V
 
     return-void
 .end method

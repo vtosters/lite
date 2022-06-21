@@ -3,12 +3,12 @@
 .source "PostsController.kt"
 
 # interfaces
-.implements Lc/a/z/g;
+.implements Lio/reactivex/functions/Consumer;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/newsfeed/controllers/PostsController;->a(Lcom/vk/dto/newsfeed/c;ZLandroid/content/Context;Ljava/lang/String;Lkotlin/jvm/b/a;Ljava/lang/String;)V
+    value = Lcom/vk/newsfeed/controllers/PostsController;->a(Lcom/vk/dto/newsfeed/Likable;ZLandroid/content/Context;Ljava/lang/String;Lkotlin/jvm/b/Functions;Ljava/lang/String;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -22,7 +22,7 @@
         "Ljava/lang/Object;",
         ">",
         "Ljava/lang/Object;",
-        "Lc/a/z/g<",
+        "Lio/reactivex/functions/Consumer<",
         "Ljava/lang/Throwable;",
         ">;"
     }
@@ -30,7 +30,7 @@
 
 
 # instance fields
-.field final synthetic a:Lcom/vk/dto/newsfeed/c;
+.field final synthetic a:Lcom/vk/dto/newsfeed/Likable;
 
 .field final synthetic b:I
 
@@ -42,10 +42,10 @@
 
 
 # direct methods
-.method constructor <init>(Lcom/vk/dto/newsfeed/c;IZJLandroid/content/Context;)V
+.method constructor <init>(Lcom/vk/dto/newsfeed/Likable;IZJLandroid/content/Context;)V
     .locals 0
 
-    iput-object p1, p0, Lcom/vk/newsfeed/controllers/PostsController$t;->a:Lcom/vk/dto/newsfeed/c;
+    iput-object p1, p0, Lcom/vk/newsfeed/controllers/PostsController$t;->a:Lcom/vk/dto/newsfeed/Likable;
 
     iput p2, p0, Lcom/vk/newsfeed/controllers/PostsController$t;->b:I
 
@@ -66,20 +66,20 @@
     .locals 3
 
     .line 1
-    iget-object v0, p0, Lcom/vk/newsfeed/controllers/PostsController$t;->a:Lcom/vk/dto/newsfeed/c;
+    iget-object v0, p0, Lcom/vk/newsfeed/controllers/PostsController$t;->a:Lcom/vk/dto/newsfeed/Likable;
 
     iget v1, p0, Lcom/vk/newsfeed/controllers/PostsController$t;->b:I
 
-    invoke-interface {v0, v1}, Lcom/vk/dto/newsfeed/c;->b(I)V
+    invoke-interface {v0, v1}, Lcom/vk/dto/newsfeed/Likable;->b(I)V
 
     .line 2
-    iget-object v0, p0, Lcom/vk/newsfeed/controllers/PostsController$t;->a:Lcom/vk/dto/newsfeed/c;
+    iget-object v0, p0, Lcom/vk/newsfeed/controllers/PostsController$t;->a:Lcom/vk/dto/newsfeed/Likable;
 
     iget-boolean v1, p0, Lcom/vk/newsfeed/controllers/PostsController$t;->c:Z
 
     xor-int/lit8 v1, v1, 0x1
 
-    invoke-interface {v0, v1}, Lcom/vk/dto/newsfeed/c;->e(Z)V
+    invoke-interface {v0, v1}, Lcom/vk/dto/newsfeed/Likable;->e(Z)V
 
     .line 3
     sget-object v0, Lcom/vk/newsfeed/controllers/PostsController;->c:Lcom/vk/newsfeed/controllers/PostsController;
@@ -112,7 +112,7 @@
 
     iget-object v0, p0, Lcom/vk/newsfeed/controllers/PostsController$t;->e:Landroid/content/Context;
 
-    invoke-static {v0, p1}, Lcom/vk/api/base/f;->b(Landroid/content/Context;Lcom/vk/api/sdk/exceptions/VKApiExecutionException;)V
+    invoke-static {v0, p1}, Lcom/vk/api/base/ApiUtils;->b(Landroid/content/Context;Lcom/vk/api/sdk/exceptions/VKApiExecutionException;)V
 
     goto :goto_0
 
@@ -123,28 +123,28 @@
 
     const/4 v2, 0x2
 
-    invoke-static {p1, v0, v2, v1}, Lcom/vk/core/util/k1;->a(IZILjava/lang/Object;)V
+    invoke-static {p1, v0, v2, v1}, Lcom/vk/core/util/ToastUtils;->a(IZILjava/lang/Object;)V
 
     .line 5
     :goto_0
-    sget-object p1, Lcom/vk/newsfeed/controllers/a;->e:Lcom/vk/newsfeed/controllers/a;
+    sget-object p1, Lcom/vk/newsfeed/controllers/NewsfeedController;->e:Lcom/vk/newsfeed/controllers/NewsfeedController;
 
-    invoke-virtual {p1}, Lcom/vk/newsfeed/controllers/a;->n()Lb/h/g/l/d;
+    invoke-virtual {p1}, Lcom/vk/newsfeed/controllers/NewsfeedController;->n()Lb/h/g/l/NotificationCenter;
 
     move-result-object p1
 
     const/16 v0, 0x66
 
-    iget-object v1, p0, Lcom/vk/newsfeed/controllers/PostsController$t;->a:Lcom/vk/dto/newsfeed/c;
+    iget-object v1, p0, Lcom/vk/newsfeed/controllers/PostsController$t;->a:Lcom/vk/dto/newsfeed/Likable;
 
     if-eqz v1, :cond_3
 
     check-cast v1, Lcom/vk/dto/newsfeed/entries/NewsEntry;
 
-    invoke-virtual {p1, v0, v1}, Lb/h/g/l/d;->a(ILjava/lang/Object;)V
+    invoke-virtual {p1, v0, v1}, Lb/h/g/l/NotificationCenter;->a(ILjava/lang/Object;)V
 
     .line 6
-    iget-object p1, p0, Lcom/vk/newsfeed/controllers/PostsController$t;->a:Lcom/vk/dto/newsfeed/c;
+    iget-object p1, p0, Lcom/vk/newsfeed/controllers/PostsController$t;->a:Lcom/vk/dto/newsfeed/Likable;
 
     instance-of v0, p1, Lcom/vk/dto/newsfeed/entries/Photos;
 

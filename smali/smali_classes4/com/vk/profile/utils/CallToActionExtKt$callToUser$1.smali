@@ -3,12 +3,12 @@
 .source "CallToActionExt.kt"
 
 # interfaces
-.implements Lc/a/z/g;
+.implements Lio/reactivex/functions/Consumer;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/profile/utils/CallToActionExtKt;->a(ILandroid/content/Context;Lkotlin/jvm/b/a;)V
+    value = Lcom/vk/profile/utils/CallToActionExtKt;->a(ILandroid/content/Context;Lkotlin/jvm/b/Functions;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -22,7 +22,7 @@
         "Ljava/lang/Object;",
         ">",
         "Ljava/lang/Object;",
-        "Lc/a/z/g<",
+        "Lio/reactivex/functions/Consumer<",
         "Lcom/vk/dto/user/UserProfile;",
         ">;"
     }
@@ -32,16 +32,16 @@
 # instance fields
 .field final synthetic a:Landroid/content/Context;
 
-.field final synthetic b:Lkotlin/jvm/b/a;
+.field final synthetic b:Lkotlin/jvm/b/Functions;
 
 
 # direct methods
-.method constructor <init>(Landroid/content/Context;Lkotlin/jvm/b/a;)V
+.method constructor <init>(Landroid/content/Context;Lkotlin/jvm/b/Functions;)V
     .locals 0
 
     iput-object p1, p0, Lcom/vk/profile/utils/CallToActionExtKt$callToUser$1;->a:Landroid/content/Context;
 
-    iput-object p2, p0, Lcom/vk/profile/utils/CallToActionExtKt$callToUser$1;->b:Lkotlin/jvm/b/a;
+    iput-object p2, p0, Lcom/vk/profile/utils/CallToActionExtKt$callToUser$1;->b:Lkotlin/jvm/b/Functions;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -58,13 +58,13 @@
 
     const-string v1, "it"
 
-    invoke-static {p1, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     new-instance v1, Lcom/vk/profile/utils/CallToActionExtKt$callToUser$1$1;
 
     invoke-direct {v1, p0, p1}, Lcom/vk/profile/utils/CallToActionExtKt$callToUser$1$1;-><init>(Lcom/vk/profile/utils/CallToActionExtKt$callToUser$1;Lcom/vk/dto/user/UserProfile;)V
 
-    invoke-static {v0, p1, v1}, Lcom/vk/common/view/j/b;->a(Landroid/content/Context;Lcom/vk/dto/user/UserProfile;Lkotlin/jvm/b/a;)V
+    invoke-static {v0, p1, v1}, Lcom/vk/common/view/j/CallToUserDialog;->a(Landroid/content/Context;Lcom/vk/dto/user/UserProfile;Lkotlin/jvm/b/Functions;)V
 
     return-void
 .end method

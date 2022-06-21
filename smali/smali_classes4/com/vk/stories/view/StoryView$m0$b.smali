@@ -3,7 +3,7 @@
 .source "StoryView.java"
 
 # interfaces
-.implements Lkotlin/jvm/b/b;
+.implements Lkotlin/jvm/b/Functions2;
 
 
 # annotations
@@ -19,11 +19,11 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Ljava/lang/Object;",
-        "Lkotlin/jvm/b/b<",
+        "Lkotlin/jvm/b/Functions2<",
         "Ljava/util/List<",
         "Ljava/lang/String;",
         ">;",
-        "Lkotlin/m;",
+        "Lkotlin/Unit;",
         ">;"
     }
 .end annotation
@@ -47,7 +47,7 @@
 
 
 # virtual methods
-.method public a(Ljava/util/List;)Lkotlin/m;
+.method public a(Ljava/util/List;)Lkotlin/Unit;
     .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -55,7 +55,7 @@
             "Ljava/util/List<",
             "Ljava/lang/String;",
             ">;)",
-            "Lkotlin/m;"
+            "Lkotlin/Unit;"
         }
     .end annotation
 
@@ -67,7 +67,7 @@
     invoke-virtual {p1}, Lcom/vk/stories/view/StoryView;->f()V
 
     .line 2
-    sget-object p1, Lkotlin/m;->a:Lkotlin/m;
+    sget-object p1, Lkotlin/Unit;->a:Lkotlin/Unit;
 
     return-object p1
 .end method
@@ -78,7 +78,7 @@
     .line 1
     check-cast p1, Ljava/util/List;
 
-    invoke-virtual {p0, p1}, Lcom/vk/stories/view/StoryView$m0$b;->a(Ljava/util/List;)Lkotlin/m;
+    invoke-virtual {p0, p1}, Lcom/vk/stories/view/StoryView$m0$b;->a(Ljava/util/List;)Lkotlin/Unit;
 
     move-result-object p1
 

@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/updates/core/InAppUpdates;-><init>(Landroid/app/Activity;Lcom/vk/updates/core/a;Lc/a/s;JZ)V
+    value = Lcom/vk/updates/core/InAppUpdates;-><init>(Landroid/app/Activity;Lcom/vk/updates/core/InAppUpdatesCallbacks;Lio/reactivex/Scheduler;JZ)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -102,11 +102,11 @@
     :cond_0
     iget-object v0, p0, Lcom/vk/updates/core/InAppUpdates$j;->a:Lcom/vk/updates/core/InAppUpdates;
 
-    invoke-virtual {v0}, Lcom/vk/updates/core/InAppUpdates;->d()Lcom/vk/updates/core/a;
+    invoke-virtual {v0}, Lcom/vk/updates/core/InAppUpdates;->d()Lcom/vk/updates/core/InAppUpdatesCallbacks;
 
     move-result-object v0
 
-    invoke-interface {v0, p1}, Lcom/vk/updates/core/a;->a(I)V
+    invoke-interface {v0, p1}, Lcom/vk/updates/core/InAppUpdatesCallbacks;->a(I)V
 
     :cond_1
     return-void

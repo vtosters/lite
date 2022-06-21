@@ -24,7 +24,7 @@
     return-void
 .end method
 
-.method public synthetic constructor <init>(Lkotlin/jvm/internal/i;)V
+.method public synthetic constructor <init>(Lkotlin/jvm/internal/DefaultConstructorMarker;)V
     .locals 0
 
     .line 2
@@ -39,7 +39,7 @@
     if-eqz p1, :cond_0
 
     .line 2
-    invoke-static {p1}, Lcom/vk/core/util/b1;->a(I)Ljava/lang/String;
+    invoke-static {p1}, Lcom/vk/core/util/StringUtils;->a(I)Ljava/lang/String;
 
     move-result-object p1
 

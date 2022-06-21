@@ -79,17 +79,17 @@
     .line 5
     iget-object p1, p0, Lcom/vk/voip/VoipViewBehaviour$a;->a:Lcom/vk/voip/VoipViewBehaviour;
 
-    invoke-virtual {p1}, Lcom/vk/voip/VoipViewBehaviour;->c()Lkotlin/jvm/b/a;
+    invoke-virtual {p1}, Lcom/vk/voip/VoipViewBehaviour;->c()Lkotlin/jvm/b/Functions;
 
     move-result-object p1
 
     if-eqz p1, :cond_1
 
-    invoke-interface {p1}, Lkotlin/jvm/b/a;->invoke()Ljava/lang/Object;
+    invoke-interface {p1}, Lkotlin/jvm/b/Functions;->invoke()Ljava/lang/Object;
 
     move-result-object p1
 
-    check-cast p1, Lkotlin/m;
+    check-cast p1, Lkotlin/Unit;
 
     :cond_1
     return-void

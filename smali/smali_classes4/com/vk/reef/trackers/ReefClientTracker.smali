@@ -3,7 +3,7 @@
 .source "ReefClientTracker.kt"
 
 # interfaces
-.implements Lcom/vk/reef/c;
+.implements Lcom/vk/reef/ReefStateSource;
 
 
 # annotations
@@ -17,7 +17,7 @@
 # static fields
 .field private static final a:[C
 
-.field private static final b:Lcom/vk/core/util/d1;
+.field private static final b:Lcom/vk/core/util/ThreadLocalDelegate;
 
 .field public static final c:Lcom/vk/reef/trackers/ReefClientTracker$a;
 
@@ -30,7 +30,7 @@
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, v1}, Lcom/vk/reef/trackers/ReefClientTracker$a;-><init>(Lkotlin/jvm/internal/i;)V
+    invoke-direct {v0, v1}, Lcom/vk/reef/trackers/ReefClientTracker$a;-><init>(Lkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     sput-object v0, Lcom/vk/reef/trackers/ReefClientTracker;->c:Lcom/vk/reef/trackers/ReefClientTracker$a;
 
@@ -46,11 +46,11 @@
     .line 2
     sget-object v0, Lcom/vk/reef/trackers/ReefClientTracker$Companion$tmpBuilder$2;->a:Lcom/vk/reef/trackers/ReefClientTracker$Companion$tmpBuilder$2;
 
-    invoke-static {v0}, Lcom/vk/core/util/f1;->a(Lkotlin/jvm/b/a;)Lcom/vk/core/util/d1;
+    invoke-static {v0}, Lcom/vk/core/util/ThreadLocalDelegate1;->a(Lkotlin/jvm/b/Functions;)Lcom/vk/core/util/ThreadLocalDelegate;
 
     move-result-object v0
 
-    sput-object v0, Lcom/vk/reef/trackers/ReefClientTracker;->b:Lcom/vk/core/util/d1;
+    sput-object v0, Lcom/vk/reef/trackers/ReefClientTracker;->b:Lcom/vk/core/util/ThreadLocalDelegate;
 
     return-void
 
@@ -93,11 +93,11 @@
     return-object v0
 .end method
 
-.method public static final synthetic d()Lcom/vk/core/util/d1;
+.method public static final synthetic d()Lcom/vk/core/util/ThreadLocalDelegate;
     .locals 1
 
     .line 1
-    sget-object v0, Lcom/vk/reef/trackers/ReefClientTracker;->b:Lcom/vk/core/util/d1;
+    sget-object v0, Lcom/vk/reef/trackers/ReefClientTracker;->b:Lcom/vk/core/util/ThreadLocalDelegate;
 
     return-object v0
 .end method
@@ -107,11 +107,11 @@
 .method public abstract a()Ljava/lang/String;
 .end method
 
-.method public final a(Lcom/vk/reef/dto/f;)V
+.method public final a(Lcom/vk/reef/dto/ReefSnapshot;)V
     .locals 5
 
     .line 1
-    new-instance v0, Lcom/vk/reef/dto/a;
+    new-instance v0, Lcom/vk/reef/dto/ReefState1;
 
     invoke-virtual {p0}, Lcom/vk/reef/trackers/ReefClientTracker;->a()Ljava/lang/String;
 
@@ -141,9 +141,9 @@
 
     move-result-object v2
 
-    invoke-direct {v0, v1, v2}, Lcom/vk/reef/dto/a;-><init>(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-direct {v0, v1, v2}, Lcom/vk/reef/dto/ReefState1;-><init>(Ljava/lang/String;Ljava/lang/String;)V
 
-    invoke-virtual {p1, v0}, Lcom/vk/reef/dto/f;->a(Lcom/vk/reef/dto/g;)V
+    invoke-virtual {p1, v0}, Lcom/vk/reef/dto/ReefSnapshot;->a(Lcom/vk/reef/dto/ReefState;)V
 
     return-void
 .end method

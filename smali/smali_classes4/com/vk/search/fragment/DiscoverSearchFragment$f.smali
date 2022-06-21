@@ -1,5 +1,5 @@
 .class final Lcom/vk/search/fragment/DiscoverSearchFragment$f;
-.super Lcom/vk/core/fragments/h;
+.super Lcom/vk/core/fragments/FragmentStatePagerAdapterImpl;
 .source "DiscoverSearchFragment.kt"
 
 
@@ -38,7 +38,7 @@
     iput-object p1, p0, Lcom/vk/search/fragment/DiscoverSearchFragment$f;->j:Lcom/vk/search/fragment/DiscoverSearchFragment;
 
     .line 2
-    invoke-direct {p0, p3}, Lcom/vk/core/fragments/h;-><init>(Lcom/vk/core/fragments/FragmentManagerImpl;)V
+    invoke-direct {p0, p3}, Lcom/vk/core/fragments/FragmentStatePagerAdapterImpl;-><init>(Lcom/vk/core/fragments/FragmentManagerImpl;)V
 
     iput-object p2, p0, Lcom/vk/search/fragment/DiscoverSearchFragment$f;->i:Landroid/content/Context;
 
@@ -77,14 +77,14 @@
     aget-object v3, v0, v2
 
     .line 3
-    instance-of v4, v3, Lcom/vk/search/a;
+    instance-of v4, v3, Lcom/vk/search/SearchPage;
 
     if-eqz v4, :cond_0
 
     .line 4
-    check-cast v3, Lcom/vk/search/a;
+    check-cast v3, Lcom/vk/search/SearchPage;
 
-    invoke-interface {v3, p1}, Lcom/vk/search/a;->setQuery(Ljava/lang/String;)V
+    invoke-interface {v3, p1}, Lcom/vk/search/SearchPage;->setQuery(Ljava/lang/String;)V
 
     :cond_0
     add-int/lit8 v2, v2, 0x1
@@ -105,19 +105,19 @@
 
     move-result-object p2
 
-    instance-of v0, p2, Lcom/vk/search/a;
+    instance-of v0, p2, Lcom/vk/search/SearchPage;
 
     if-nez v0, :cond_0
 
     const/4 p2, 0x0
 
     :cond_0
-    check-cast p2, Lcom/vk/search/a;
+    check-cast p2, Lcom/vk/search/SearchPage;
 
     if-eqz p2, :cond_1
 
     .line 6
-    invoke-interface {p2, p1}, Lcom/vk/search/a;->setQuery(Ljava/lang/String;)V
+    invoke-interface {p2, p1}, Lcom/vk/search/SearchPage;->setQuery(Ljava/lang/String;)V
 
     :cond_1
     return-void
@@ -132,14 +132,14 @@
     aget-object p1, v0, p1
 
     .line 2
-    instance-of v0, p1, Lcom/vk/search/a;
+    instance-of v0, p1, Lcom/vk/search/SearchPage;
 
     if-eqz v0, :cond_0
 
     .line 3
-    check-cast p1, Lcom/vk/search/a;
+    check-cast p1, Lcom/vk/search/SearchPage;
 
-    invoke-interface {p1}, Lcom/vk/search/a;->F()V
+    invoke-interface {p1}, Lcom/vk/search/SearchPage;->F()V
 
     :cond_0
     return-void
@@ -156,7 +156,7 @@
     aput-object v1, v0, p2
 
     .line 2
-    invoke-super {p0, p1, p2, p3}, Lcom/vk/core/fragments/h;->destroyItem(Landroid/view/ViewGroup;ILjava/lang/Object;)V
+    invoke-super {p0, p1, p2, p3}, Lcom/vk/core/fragments/FragmentStatePagerAdapterImpl;->destroyItem(Landroid/view/ViewGroup;ILjava/lang/Object;)V
 
     return-void
 .end method
@@ -192,11 +192,11 @@
 
     move-result-object p1
 
-    invoke-virtual {p1}, Lcom/vk/search/fragment/DiscoverSearchFragment$TabInfo;->a()Lkotlin/jvm/b/a;
+    invoke-virtual {p1}, Lcom/vk/search/fragment/DiscoverSearchFragment$TabInfo;->a()Lkotlin/jvm/b/Functions;
 
     move-result-object p1
 
-    invoke-interface {p1}, Lkotlin/jvm/b/a;->invoke()Ljava/lang/Object;
+    invoke-interface {p1}, Lkotlin/jvm/b/Functions;->invoke()Ljava/lang/Object;
 
     move-result-object p1
 
@@ -218,7 +218,7 @@
 
     .line 4
     :cond_0
-    invoke-static {}, Lcom/vk/core/ui/themes/d;->e()Z
+    invoke-static {}, Lcom/vk/core/ui/themes/MilkshakeHelper;->e()Z
 
     move-result v0
 
@@ -318,7 +318,7 @@
 
     const-string v0, "context.getString(tabs[position].tabTitle)"
 
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     return-object p1
 .end method
@@ -327,7 +327,7 @@
     .locals 1
 
     .line 1
-    invoke-super {p0, p1, p2}, Lcom/vk/core/fragments/h;->instantiateItem(Landroid/view/ViewGroup;I)Ljava/lang/Object;
+    invoke-super {p0, p1, p2}, Lcom/vk/core/fragments/FragmentStatePagerAdapterImpl;->instantiateItem(Landroid/view/ViewGroup;I)Ljava/lang/Object;
 
     move-result-object p1
 

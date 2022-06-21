@@ -3,12 +3,12 @@
 .source "StorySendMessageDialog.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/a;
+.implements Lkotlin/jvm/b/Functions;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/stories/message/StorySendMessageDialog;-><init>(Landroid/content/Context;Lcom/vk/stories/message/f;Lcom/vk/stories/view/StoryView;)V
+    value = Lcom/vk/stories/message/StorySendMessageDialog;-><init>(Landroid/content/Context;Lcom/vk/stories/message/StorySendMessageContract5;Lcom/vk/stories/view/StoryView;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -19,8 +19,8 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/a<",
-        "Lkotlin/m;",
+        "Lkotlin/jvm/b/Functions<",
+        "Lkotlin/Unit;",
         ">;"
     }
 .end annotation
@@ -55,7 +55,7 @@
     .line 1
     invoke-virtual {p0}, Lcom/vk/stories/message/StorySendMessageDialog$$special$$inlined$let$lambda$5;->invoke()V
 
-    sget-object v0, Lkotlin/m;->a:Lkotlin/m;
+    sget-object v0, Lkotlin/Unit;->a:Lkotlin/Unit;
 
     return-object v0
 .end method
@@ -66,7 +66,7 @@
     .line 2
     iget-object v0, p0, Lcom/vk/stories/message/StorySendMessageDialog$$special$$inlined$let$lambda$5;->$et:Lcom/vk/attachpicker/widget/BackPressEditText;
 
-    invoke-static {v0}, Lcom/vk/core/util/l0;->b(Landroid/view/View;)V
+    invoke-static {v0}, Lcom/vk/core/util/KeyboardUtils;->b(Landroid/view/View;)V
 
     .line 3
     iget-object v0, p0, Lcom/vk/stories/message/StorySendMessageDialog$$special$$inlined$let$lambda$5;->$et:Lcom/vk/attachpicker/widget/BackPressEditText;

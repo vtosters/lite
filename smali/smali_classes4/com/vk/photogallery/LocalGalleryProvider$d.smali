@@ -3,7 +3,7 @@
 .source "LocalGalleryProvider.kt"
 
 # interfaces
-.implements Lc/a/z/g;
+.implements Lio/reactivex/functions/Consumer;
 
 
 # annotations
@@ -22,7 +22,7 @@
         "Ljava/lang/Object;",
         ">",
         "Ljava/lang/Object;",
-        "Lc/a/z/g<",
+        "Lio/reactivex/functions/Consumer<",
         "Ljava/util/List<",
         "+",
         "Lcom/vk/photogallery/LocalGalleryProvider$a;",
@@ -62,11 +62,11 @@
     .line 1
     iget-object v0, p0, Lcom/vk/photogallery/LocalGalleryProvider$d;->a:Lcom/vk/photogallery/LocalGalleryProvider;
 
-    invoke-static {v0}, Lcom/vk/photogallery/LocalGalleryProvider;->access$getAlbums$p(Lcom/vk/photogallery/LocalGalleryProvider;)Lio/reactivex/subjects/a;
+    invoke-static {v0}, Lcom/vk/photogallery/LocalGalleryProvider;->access$getAlbums$p(Lcom/vk/photogallery/LocalGalleryProvider;)Lio/reactivex/subjects/BehaviorSubject;
 
     move-result-object v0
 
-    invoke-virtual {v0, p1}, Lio/reactivex/subjects/a;->b(Ljava/lang/Object;)V
+    invoke-virtual {v0, p1}, Lio/reactivex/subjects/BehaviorSubject;->b(Ljava/lang/Object;)V
 
     return-void
 .end method

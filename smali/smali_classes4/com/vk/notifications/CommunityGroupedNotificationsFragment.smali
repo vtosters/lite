@@ -31,7 +31,7 @@
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, v1}, Lcom/vk/notifications/CommunityGroupedNotificationsFragment$b;-><init>(Lkotlin/jvm/internal/i;)V
+    invoke-direct {v0, v1}, Lcom/vk/notifications/CommunityGroupedNotificationsFragment$b;-><init>(Lkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     sput-object v0, Lcom/vk/notifications/CommunityGroupedNotificationsFragment;->Q:Lcom/vk/notifications/CommunityGroupedNotificationsFragment$b;
 
@@ -62,13 +62,13 @@
 
     if-eqz v0, :cond_0
 
-    invoke-virtual {p0}, Lcom/vk/notifications/GroupedNotificationsFragment;->Q4()Lcom/vk/lists/t;
+    invoke-virtual {p0}, Lcom/vk/notifications/GroupedNotificationsFragment;->Q4()Lcom/vk/lists/PaginationHelper;
 
     move-result-object v0
 
     if-eqz v0, :cond_1
 
-    invoke-virtual {v0}, Lcom/vk/lists/t;->h()V
+    invoke-virtual {v0}, Lcom/vk/lists/PaginationHelper;->h()V
 
     goto :goto_0
 
@@ -143,7 +143,7 @@
 
     if-eqz v0, :cond_0
 
-    sget-object v1, Lcom/vk/navigation/q;->h:Ljava/lang/String;
+    sget-object v1, Lcom/vk/navigation/NavigatorKeys;->h:Ljava/lang/String;
 
     invoke-virtual {v0, v1}, Landroid/os/Bundle;->getInt(Ljava/lang/String;)I
 
@@ -160,7 +160,7 @@
     if-eqz p1, :cond_1
 
     .line 3
-    sget-object v0, Lcom/vk/navigation/q;->h:Ljava/lang/String;
+    sget-object v0, Lcom/vk/navigation/NavigatorKeys;->h:Ljava/lang/String;
 
     invoke-virtual {p1, v0}, Landroid/os/Bundle;->getInt(Ljava/lang/String;)I
 
@@ -170,13 +170,13 @@
 
     .line 4
     :cond_1
-    sget-object p1, Lb/h/v/d;->c:Lb/h/v/d$a;
+    sget-object p1, Lb/h/v/RxBus;->c:Lb/h/v/RxBus$a;
 
-    invoke-virtual {p1}, Lb/h/v/d$a;->a()Lb/h/v/d;
+    invoke-virtual {p1}, Lb/h/v/RxBus$a;->a()Lb/h/v/RxBus;
 
     move-result-object p1
 
-    invoke-virtual {p1}, Lb/h/v/d;->a()Lc/a/m;
+    invoke-virtual {p1}, Lb/h/v/RxBus;->a()Lio/reactivex/Observable;
 
     move-result-object p1
 
@@ -184,25 +184,25 @@
 
     invoke-direct {v0, p0}, Lcom/vk/notifications/CommunityGroupedNotificationsFragment$d;-><init>(Lcom/vk/notifications/CommunityGroupedNotificationsFragment;)V
 
-    invoke-virtual {p1, v0}, Lc/a/m;->a(Lc/a/z/l;)Lc/a/m;
+    invoke-virtual {p1, v0}, Lio/reactivex/Observable;->a(Lio/reactivex/functions/Predicate;)Lio/reactivex/Observable;
 
     move-result-object p1
 
     const-string v0, "RxBus.instance.events.fi\u2026vent.gid == gid\n        }"
 
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 5
     new-instance v0, Lcom/vk/notifications/CommunityGroupedNotificationsFragment$onCreate$3;
 
     invoke-direct {v0, p0}, Lcom/vk/notifications/CommunityGroupedNotificationsFragment$onCreate$3;-><init>(Lcom/vk/notifications/CommunityGroupedNotificationsFragment;)V
 
-    invoke-static {p1, v0}, Lcom/vk/core/extensions/RxExtKt;->a(Lc/a/m;Lkotlin/jvm/b/b;)Lio/reactivex/disposables/b;
+    invoke-static {p1, v0}, Lcom/vk/core/extensions/RxExtKt;->a(Lio/reactivex/Observable;Lkotlin/jvm/b/Functions2;)Lio/reactivex/disposables/Disposable;
 
     move-result-object p1
 
     .line 6
-    invoke-static {p1, p0}, Lcom/vk/extensions/p;->a(Lio/reactivex/disposables/b;Lcom/vk/core/fragments/b;)Lio/reactivex/disposables/b;
+    invoke-static {p1, p0}, Lcom/vk/extensions/VKRxExt;->a(Lio/reactivex/disposables/Disposable;Lcom/vk/core/fragments/BaseFragment1;)Lio/reactivex/disposables/Disposable;
 
     return-void
 .end method
@@ -220,7 +220,7 @@
 
     if-eqz p2, :cond_0
 
-    sget-object v0, Lcom/vk/navigation/q;->d:Ljava/lang/String;
+    sget-object v0, Lcom/vk/navigation/NavigatorKeys;->d:Ljava/lang/String;
 
     invoke-virtual {p2, v0}, Landroid/os/Bundle;->getString(Ljava/lang/String;)Ljava/lang/String;
 
@@ -237,7 +237,7 @@
 
     if-lez v0, :cond_1
 
-    invoke-static {p2}, Lcom/vk/core/extensions/z;->a(Ljava/lang/CharSequence;)Z
+    invoke-static {p2}, Lcom/vk/core/extensions/StringExt;->a(Ljava/lang/CharSequence;)Z
 
     move-result v0
 
@@ -283,7 +283,7 @@
     .locals 1
 
     .line 1
-    invoke-super {p0}, Lcom/vk/core/fragments/b;->onResume()V
+    invoke-super {p0}, Lcom/vk/core/fragments/BaseFragment1;->onResume()V
 
     .line 2
     iget-boolean v0, p0, Lcom/vk/notifications/CommunityGroupedNotificationsFragment;->P:Z
@@ -301,13 +301,13 @@
 
     .line 4
     :cond_0
-    invoke-virtual {p0}, Lcom/vk/notifications/GroupedNotificationsFragment;->Q4()Lcom/vk/lists/t;
+    invoke-virtual {p0}, Lcom/vk/notifications/GroupedNotificationsFragment;->Q4()Lcom/vk/lists/PaginationHelper;
 
     move-result-object v0
 
     if-eqz v0, :cond_1
 
-    invoke-virtual {v0}, Lcom/vk/lists/t;->h()V
+    invoke-virtual {v0}, Lcom/vk/lists/PaginationHelper;->h()V
 
     :cond_1
     const/4 v0, 0x1
@@ -326,7 +326,7 @@
     invoke-super {p0, p1}, Lcom/vk/core/fragments/FragmentImpl;->onSaveInstanceState(Landroid/os/Bundle;)V
 
     .line 2
-    sget-object v0, Lcom/vk/navigation/q;->h:Ljava/lang/String;
+    sget-object v0, Lcom/vk/navigation/NavigatorKeys;->h:Ljava/lang/String;
 
     iget v1, p0, Lcom/vk/notifications/CommunityGroupedNotificationsFragment;->O:I
 

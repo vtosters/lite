@@ -3,7 +3,7 @@
 .source "FaveBigSnippetHolder.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/a;
+.implements Lkotlin/jvm/b/Functions;
 
 
 # annotations
@@ -19,7 +19,7 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/FunctionReference;",
-        "Lkotlin/jvm/b/a<",
+        "Lkotlin/jvm/b/Functions<",
         "Ljava/lang/Boolean;",
         ">;"
     }
@@ -27,7 +27,7 @@
 
 
 # direct methods
-.method constructor <init>(Lkotlin/u/k;)V
+.method constructor <init>(Lkotlin/u/KProperty1;)V
     .locals 1
 
     const/4 v0, 0x0
@@ -47,12 +47,12 @@
     return-object v0
 .end method
 
-.method public final f()Lkotlin/u/e;
+.method public final f()Lkotlin/u/KDeclarationContainer;
     .locals 1
 
-    const-class v0, Lkotlin/u/k;
+    const-class v0, Lkotlin/u/KProperty1;
 
-    invoke-static {v0}, Lkotlin/jvm/internal/o;->a(Ljava/lang/Class;)Lkotlin/u/c;
+    invoke-static {v0}, Lkotlin/jvm/internal/Reflection;->a(Ljava/lang/Class;)Lkotlin/u/KClass;
 
     move-result-object v0
 
@@ -87,10 +87,10 @@
 
     iget-object v0, p0, Lkotlin/jvm/internal/CallableReference;->receiver:Ljava/lang/Object;
 
-    check-cast v0, Lkotlin/u/k;
+    check-cast v0, Lkotlin/u/KProperty1;
 
     .line 2
-    invoke-interface {v0}, Lkotlin/u/k;->get()Ljava/lang/Object;
+    invoke-interface {v0}, Lkotlin/u/KProperty1;->get()Ljava/lang/Object;
 
     move-result-object v0
 

@@ -3,7 +3,7 @@
 .source "PushOpenActivity.kt"
 
 # interfaces
-.implements Lcom/vk/common/links/f;
+.implements Lcom/vk/common/links/OpenCallback;
 
 
 # annotations
@@ -26,7 +26,7 @@
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, v1}, Lcom/vk/pushes/PushOpenActivity$a;-><init>(Lkotlin/jvm/internal/i;)V
+    invoke-direct {v0, v1}, Lcom/vk/pushes/PushOpenActivity$a;-><init>(Lkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     sput-object v0, Lcom/vk/pushes/PushOpenActivity;->a:Lcom/vk/pushes/PushOpenActivity$a;
 
@@ -55,7 +55,7 @@
     .locals 12
 
     .line 1
-    new-instance v11, Lcom/vk/common/links/c$b;
+    new-instance v11, Lcom/vk/common/links/LinkProcessor$b;
 
     const/4 v1, 0x1
 
@@ -79,7 +79,7 @@
 
     move-object v0, v11
 
-    invoke-direct/range {v0 .. v10}, Lcom/vk/common/links/c$b;-><init>(ZZZLjava/lang/String;Ljava/lang/String;Lcom/vk/api/base/Document;Ljava/lang/String;Ljava/lang/String;ILkotlin/jvm/internal/i;)V
+    invoke-direct/range {v0 .. v10}, Lcom/vk/common/links/LinkProcessor$b;-><init>(ZZZLjava/lang/String;Ljava/lang/String;Lcom/vk/api/base/Document;Ljava/lang/String;Ljava/lang/String;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     .line 2
     invoke-virtual {p0}, Landroid/app/Activity;->getIntent()Landroid/content/Intent;
@@ -110,7 +110,7 @@
     .line 4
     sget-object v0, Lcom/vk/common/links/BrowserUtils;->c:Lcom/vk/common/links/BrowserUtils$Companion;
 
-    invoke-static {v2, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v2, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     const/4 v4, 0x0
 
@@ -122,7 +122,7 @@
 
     move-object v3, v11
 
-    invoke-static/range {v0 .. v6}, Lcom/vk/common/links/BrowserUtils$Companion;->a(Lcom/vk/common/links/BrowserUtils$Companion;Landroid/content/Context;Ljava/lang/String;Lcom/vk/common/links/c$b;Landroid/os/Bundle;ILjava/lang/Object;)V
+    invoke-static/range {v0 .. v6}, Lcom/vk/common/links/BrowserUtils$Companion;->a(Lcom/vk/common/links/BrowserUtils$Companion;Landroid/content/Context;Ljava/lang/String;Lcom/vk/common/links/LinkProcessor$b;Landroid/os/Bundle;ILjava/lang/Object;)V
 
     .line 5
     invoke-direct {p0}, Lcom/vk/pushes/PushOpenActivity;->d()V
@@ -131,15 +131,15 @@
 
     .line 6
     :cond_0
-    sget-object v0, Lcom/vk/common/links/c;->p:Lcom/vk/common/links/c$a;
+    sget-object v0, Lcom/vk/common/links/LinkProcessor;->p:Lcom/vk/common/links/LinkProcessor$a;
 
-    invoke-static {v2, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v2, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     const/4 v4, 0x0
 
     new-instance v5, Lcom/vk/pushes/PushOpenActivity$b;
 
-    invoke-direct {v5, p0, v2, v11}, Lcom/vk/pushes/PushOpenActivity$b;-><init>(Lcom/vk/pushes/PushOpenActivity;Ljava/lang/String;Lcom/vk/common/links/c$b;)V
+    invoke-direct {v5, p0, v2, v11}, Lcom/vk/pushes/PushOpenActivity$b;-><init>(Lcom/vk/pushes/PushOpenActivity;Ljava/lang/String;Lcom/vk/common/links/LinkProcessor$b;)V
 
     const/16 v6, 0x8
 
@@ -149,7 +149,7 @@
 
     move-object v3, v11
 
-    invoke-static/range {v0 .. v7}, Lcom/vk/common/links/c$a;->a(Lcom/vk/common/links/c$a;Landroid/content/Context;Ljava/lang/String;Lcom/vk/common/links/c$b;Landroid/os/Bundle;Lcom/vk/common/links/f;ILjava/lang/Object;)Z
+    invoke-static/range {v0 .. v7}, Lcom/vk/common/links/LinkProcessor$a;->a(Lcom/vk/common/links/LinkProcessor$a;Landroid/content/Context;Ljava/lang/String;Lcom/vk/common/links/LinkProcessor$b;Landroid/os/Bundle;Lcom/vk/common/links/OpenCallback;ILjava/lang/Object;)Z
 
     :goto_0
     return-void
@@ -159,7 +159,7 @@
     .locals 6
 
     .line 1
-    sget-object v0, Lcom/vk/pushes/j/e;->a:Lcom/vk/pushes/j/e;
+    sget-object v0, Lcom/vk/pushes/j/NotificationHelper;->a:Lcom/vk/pushes/j/NotificationHelper;
 
     invoke-virtual {p0}, Landroid/app/Activity;->getIntent()Landroid/content/Intent;
 
@@ -189,7 +189,7 @@
 
     move-object v1, p0
 
-    invoke-static/range {v0 .. v5}, Lcom/vk/pushes/j/e;->a(Lcom/vk/pushes/j/e;Landroid/content/Context;Ljava/lang/String;IILjava/lang/Object;)V
+    invoke-static/range {v0 .. v5}, Lcom/vk/pushes/j/NotificationHelper;->a(Lcom/vk/pushes/j/NotificationHelper;Landroid/content/Context;Ljava/lang/String;IILjava/lang/Object;)V
 
     .line 2
     invoke-static {}, Lcom/vk/core/util/OsUtil;->c()Z
@@ -199,14 +199,14 @@
     if-eqz v0, :cond_1
 
     .line 3
-    sget-object v0, Lcom/vk/pushes/j/c;->b:Lcom/vk/pushes/j/c;
+    sget-object v0, Lcom/vk/pushes/j/MessageNotificationHelper;->b:Lcom/vk/pushes/j/MessageNotificationHelper;
 
-    invoke-virtual {v0, p0}, Lcom/vk/pushes/j/c;->a(Landroid/content/Context;)V
+    invoke-virtual {v0, p0}, Lcom/vk/pushes/j/MessageNotificationHelper;->a(Landroid/content/Context;)V
 
     .line 4
-    sget-object v0, Lcom/vk/pushes/j/a;->b:Lcom/vk/pushes/j/a;
+    sget-object v0, Lcom/vk/pushes/j/BusinessNotifyNotificationHelper;->b:Lcom/vk/pushes/j/BusinessNotifyNotificationHelper;
 
-    invoke-virtual {v0, p0}, Lcom/vk/pushes/j/a;->a(Landroid/content/Context;)V
+    invoke-virtual {v0, p0}, Lcom/vk/pushes/j/BusinessNotifyNotificationHelper;->a(Landroid/content/Context;)V
 
     .line 5
     :cond_1
@@ -225,7 +225,7 @@
 
     const-string v1, "intent"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {v0}, Landroid/content/Intent;->getExtras()Landroid/os/Bundle;
 
@@ -396,7 +396,7 @@
     .locals 0
 
     .line 4
-    invoke-static {p0}, Lcom/vk/common/links/f$a;->b(Lcom/vk/common/links/f;)V
+    invoke-static {p0}, Lcom/vk/common/links/OpenCallback$a;->b(Lcom/vk/common/links/OpenCallback;)V
 
     return-void
 .end method
@@ -405,7 +405,7 @@
     .locals 0
 
     .line 3
-    invoke-static {p0, p1}, Lcom/vk/common/links/f$a;->a(Lcom/vk/common/links/f;Ljava/lang/Throwable;)V
+    invoke-static {p0, p1}, Lcom/vk/common/links/OpenCallback$a;->a(Lcom/vk/common/links/OpenCallback;Ljava/lang/Throwable;)V
 
     return-void
 .end method
@@ -414,7 +414,7 @@
     .locals 0
 
     .line 2
-    invoke-static {p0, p1}, Lcom/vk/common/links/f$a;->a(Lcom/vk/common/links/f;Z)V
+    invoke-static {p0, p1}, Lcom/vk/common/links/OpenCallback$a;->a(Lcom/vk/common/links/OpenCallback;Z)V
 
     return-void
 .end method
@@ -423,7 +423,7 @@
     .locals 0
 
     .line 1
-    invoke-static {p0}, Lcom/vk/common/links/f$a;->a(Lcom/vk/common/links/f;)V
+    invoke-static {p0}, Lcom/vk/common/links/OpenCallback$a;->a(Lcom/vk/common/links/OpenCallback;)V
 
     return-void
 .end method
@@ -435,11 +435,11 @@
     invoke-super {p0, p1}, Landroid/app/Activity;->onCreate(Landroid/os/Bundle;)V
 
     .line 2
-    invoke-static {}, Lcom/vk/bridges/g;->a()Lcom/vk/bridges/f;
+    invoke-static {}, Lcom/vk/bridges/AuthBridge;->a()Lcom/vk/bridges/AuthBridge3;
 
     move-result-object p1
 
-    invoke-interface {p1}, Lcom/vk/bridges/f;->a()Z
+    invoke-interface {p1}, Lcom/vk/bridges/AuthBridge3;->a()Z
 
     move-result p1
 
@@ -452,9 +452,9 @@
 
     .line 4
     :cond_0
-    sget-object p1, Lcom/vk/core/network/interceptors/d;->f:Lcom/vk/core/network/interceptors/d;
+    sget-object p1, Lcom/vk/core/network/interceptors/UndesirableBackgroundTrafficInterceptor;->f:Lcom/vk/core/network/interceptors/UndesirableBackgroundTrafficInterceptor;
 
-    invoke-virtual {p1}, Lcom/vk/core/network/interceptors/d;->a()V
+    invoke-virtual {p1}, Lcom/vk/core/network/interceptors/UndesirableBackgroundTrafficInterceptor;->a()V
 
     .line 5
     sget-object p1, Lcom/vk/pushes/PushOpenReporter;->a:Lcom/vk/pushes/PushOpenReporter;
@@ -465,7 +465,7 @@
 
     const-string v1, "intent"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {p1, v0, p0}, Lcom/vk/pushes/PushOpenReporter;->a(Landroid/content/Intent;Landroid/app/Activity;)V
 

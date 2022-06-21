@@ -4,7 +4,7 @@
 
 
 # instance fields
-.field private final a:Lcom/vk/attachpicker/analytics/a;
+.field private final a:Lcom/vk/attachpicker/analytics/EditorAnalytics;
 
 .field private final b:Lcom/vk/stories/editor/base/BaseCameraEditorContract$a;
 
@@ -23,11 +23,11 @@
     iput-object p2, p0, Lcom/vk/stories/editor/base/EditorEventsTracker;->c:Lcom/vk/stories/editor/base/BaseCameraEditorContract$b;
 
     .line 2
-    invoke-static {}, Lcom/vk/attachpicker/analytics/a;->c()Lcom/vk/attachpicker/analytics/a;
+    invoke-static {}, Lcom/vk/attachpicker/analytics/EditorAnalytics;->c()Lcom/vk/attachpicker/analytics/EditorAnalytics;
 
     move-result-object p1
 
-    iput-object p1, p0, Lcom/vk/stories/editor/base/EditorEventsTracker;->a:Lcom/vk/attachpicker/analytics/a;
+    iput-object p1, p0, Lcom/vk/stories/editor/base/EditorEventsTracker;->a:Lcom/vk/attachpicker/analytics/EditorAnalytics;
 
     return-void
 .end method
@@ -62,9 +62,9 @@
 
     .line 17
     :cond_0
-    iget-object v0, p0, Lcom/vk/stories/editor/base/EditorEventsTracker;->a:Lcom/vk/attachpicker/analytics/a;
+    iget-object v0, p0, Lcom/vk/stories/editor/base/EditorEventsTracker;->a:Lcom/vk/attachpicker/analytics/EditorAnalytics;
 
-    invoke-virtual {v0}, Lcom/vk/attachpicker/analytics/a;->a()V
+    invoke-virtual {v0}, Lcom/vk/attachpicker/analytics/EditorAnalytics;->a()V
 
     return-void
 .end method
@@ -73,9 +73,9 @@
     .locals 1
 
     .line 2
-    iget-object v0, p0, Lcom/vk/stories/editor/base/EditorEventsTracker;->a:Lcom/vk/attachpicker/analytics/a;
+    iget-object v0, p0, Lcom/vk/stories/editor/base/EditorEventsTracker;->a:Lcom/vk/attachpicker/analytics/EditorAnalytics;
 
-    invoke-virtual {v0, p1}, Lcom/vk/attachpicker/analytics/a;->a(I)V
+    invoke-virtual {v0, p1}, Lcom/vk/attachpicker/analytics/EditorAnalytics;->a(I)V
 
     return-void
 .end method
@@ -84,7 +84,7 @@
     .locals 0
 
     .line 8
-    instance-of p1, p1, Lcom/vk/attachpicker/stickers/text/h;
+    instance-of p1, p1, Lcom/vk/attachpicker/stickers/text/TextSticker;
 
     if-eqz p1, :cond_0
 
@@ -105,27 +105,27 @@
     return-void
 .end method
 
-.method public final a(Lcom/vk/cameraui/entities/d;Lcom/vk/dto/stories/model/StoryUploadParams;)V
+.method public final a(Lcom/vk/cameraui/entities/StoryRawData3;Lcom/vk/dto/stories/model/StoryUploadParams;)V
     .locals 1
 
     .line 23
-    invoke-static {p1, p2}, Lcom/vk/stories/util/p;->a(Lcom/vk/cameraui/entities/d;Lcom/vk/dto/stories/model/StoryUploadParams;)V
+    invoke-static {p1, p2}, Lcom/vk/stories/util/StoryStatHelper;->a(Lcom/vk/cameraui/entities/StoryRawData3;Lcom/vk/dto/stories/model/StoryUploadParams;)V
 
     .line 24
-    invoke-virtual {p1}, Lcom/vk/cameraui/entities/d;->t()Z
+    invoke-virtual {p1}, Lcom/vk/cameraui/entities/StoryRawData3;->t()Z
 
     move-result v0
 
     if-eqz v0, :cond_1
 
     .line 25
-    invoke-virtual {p1}, Lcom/vk/cameraui/entities/d;->q()Lcom/vk/cameraui/entities/e;
+    invoke-virtual {p1}, Lcom/vk/cameraui/entities/StoryRawData3;->q()Lcom/vk/cameraui/entities/StoryRawData2;
 
     move-result-object p1
 
     if-eqz p1, :cond_0
 
-    invoke-virtual {p1}, Lcom/vk/cameraui/entities/e;->a()I
+    invoke-virtual {p1}, Lcom/vk/cameraui/entities/StoryRawData2;->a()I
 
     move-result p1
 
@@ -138,7 +138,7 @@
     goto :goto_0
 
     :cond_0
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     const/4 p1, 0x0
 
@@ -209,7 +209,7 @@
     .line 18
     iget-object v0, p0, Lcom/vk/stories/editor/base/EditorEventsTracker;->b:Lcom/vk/stories/editor/base/BaseCameraEditorContract$a;
 
-    invoke-interface {v0}, Lcom/vk/stories/editor/base/BaseCameraEditorContract$a;->O1()Lcom/vk/cameraui/entities/d;
+    invoke-interface {v0}, Lcom/vk/stories/editor/base/BaseCameraEditorContract$a;->O1()Lcom/vk/cameraui/entities/StoryRawData3;
 
     move-result-object v0
 
@@ -217,7 +217,7 @@
 
     const-string v1, "presenter.currentRawData ?: return"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 19
     iget-object v1, p0, Lcom/vk/stories/editor/base/EditorEventsTracker;->b:Lcom/vk/stories/editor/base/BaseCameraEditorContract$a;
@@ -228,7 +228,7 @@
 
     const-string v1, "presenter.baseStoryUploadParamsCopy"
 
-    invoke-static {v4, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v4, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 20
     iget-object v1, p0, Lcom/vk/stories/editor/base/EditorEventsTracker;->b:Lcom/vk/stories/editor/base/BaseCameraEditorContract$a;
@@ -239,10 +239,10 @@
 
     const-string v1, "presenter.commonUploadParams"
 
-    invoke-static {v5, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v5, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 21
-    invoke-virtual {p0, v0, v4}, Lcom/vk/stories/editor/base/EditorEventsTracker;->a(Lcom/vk/cameraui/entities/d;Lcom/vk/dto/stories/model/StoryUploadParams;)V
+    invoke-virtual {p0, v0, v4}, Lcom/vk/stories/editor/base/EditorEventsTracker;->a(Lcom/vk/cameraui/entities/StoryRawData3;Lcom/vk/dto/stories/model/StoryUploadParams;)V
 
     const/4 v3, 0x0
 
@@ -251,11 +251,11 @@
     .line 22
     new-instance v7, Lcom/vk/stories/editor/base/EditorEventsTracker$trackEvent$1;
 
-    invoke-direct {v7, v0}, Lcom/vk/stories/editor/base/EditorEventsTracker$trackEvent$1;-><init>(Lcom/vk/cameraui/entities/d;)V
+    invoke-direct {v7, v0}, Lcom/vk/stories/editor/base/EditorEventsTracker$trackEvent$1;-><init>(Lcom/vk/cameraui/entities/StoryRawData3;)V
 
     move-object v2, p1
 
-    invoke-static/range {v2 .. v7}, Lcom/vk/stories/analytics/CameraAnalytics;->b(Lcom/vk/stories/analytics/StoryPublishEvent;Lcom/vk/cameraui/utils/CameraTracker$a;Lcom/vk/dto/stories/model/StoryUploadParams;Lcom/vk/dto/stories/model/CommonUploadParams;ZLkotlin/jvm/b/b;)V
+    invoke-static/range {v2 .. v7}, Lcom/vk/stories/analytics/CameraAnalytics;->b(Lcom/vk/stories/analytics/StoryPublishEvent;Lcom/vk/cameraui/utils/CameraTracker$a;Lcom/vk/dto/stories/model/StoryUploadParams;Lcom/vk/dto/stories/model/CommonUploadParams;ZLkotlin/jvm/b/Functions2;)V
 
     :cond_0
     return-void
@@ -265,9 +265,9 @@
     .locals 1
 
     .line 1
-    iget-object v0, p0, Lcom/vk/stories/editor/base/EditorEventsTracker;->a:Lcom/vk/attachpicker/analytics/a;
+    iget-object v0, p0, Lcom/vk/stories/editor/base/EditorEventsTracker;->a:Lcom/vk/attachpicker/analytics/EditorAnalytics;
 
-    invoke-virtual {v0, p1}, Lcom/vk/attachpicker/analytics/a;->a(Ljava/lang/String;)V
+    invoke-virtual {v0, p1}, Lcom/vk/attachpicker/analytics/EditorAnalytics;->a(Ljava/lang/String;)V
 
     return-void
 .end method
@@ -276,9 +276,9 @@
     .locals 1
 
     .line 11
-    iget-object v0, p0, Lcom/vk/stories/editor/base/EditorEventsTracker;->a:Lcom/vk/attachpicker/analytics/a;
+    iget-object v0, p0, Lcom/vk/stories/editor/base/EditorEventsTracker;->a:Lcom/vk/attachpicker/analytics/EditorAnalytics;
 
-    invoke-virtual {v0, p1}, Lcom/vk/attachpicker/analytics/a;->b(Z)V
+    invoke-virtual {v0, p1}, Lcom/vk/attachpicker/analytics/EditorAnalytics;->b(Z)V
 
     return-void
 .end method
@@ -289,7 +289,7 @@
     const-string v0, "stories_editor_screen"
 
     .line 1
-    invoke-static {v0}, Lcom/vtosters/lite/data/n;->c(Ljava/lang/String;)Lcom/vtosters/lite/data/n$l;
+    invoke-static {v0}, Lcom/vtosters/lite/data/Analytics;->c(Ljava/lang/String;)Lcom/vtosters/lite/data/Analytics$l;
 
     move-result-object v0
 
@@ -302,7 +302,7 @@
 
     const-string v2, "type"
 
-    invoke-virtual {v0, v2, v1}, Lcom/vtosters/lite/data/n$l;->a(Ljava/lang/String;Ljava/lang/Object;)Lcom/vtosters/lite/data/n$l;
+    invoke-virtual {v0, v2, v1}, Lcom/vtosters/lite/data/Analytics$l;->a(Ljava/lang/String;Ljava/lang/Object;)Lcom/vtosters/lite/data/Analytics$l;
 
     if-eqz p1, :cond_0
 
@@ -317,7 +317,7 @@
     const-string v1, "action"
 
     .line 3
-    invoke-virtual {v0, v1, p1}, Lcom/vtosters/lite/data/n$l;->a(Ljava/lang/String;Ljava/lang/Object;)Lcom/vtosters/lite/data/n$l;
+    invoke-virtual {v0, v1, p1}, Lcom/vtosters/lite/data/Analytics$l;->a(Ljava/lang/String;Ljava/lang/Object;)Lcom/vtosters/lite/data/Analytics$l;
 
     .line 4
     new-instance p1, Lorg/json/JSONArray;
@@ -327,11 +327,11 @@
     .line 5
     iget-object v1, p0, Lcom/vk/stories/editor/base/EditorEventsTracker;->b:Lcom/vk/stories/editor/base/BaseCameraEditorContract$a;
 
-    invoke-interface {v1}, Lcom/vk/stories/editor/base/BaseCameraEditorContract$a;->T1()Lcom/vk/stories/editor/base/h0;
+    invoke-interface {v1}, Lcom/vk/stories/editor/base/BaseCameraEditorContract$a;->T1()Lcom/vk/stories/editor/base/CameraEditorUserActionsHolder;
 
     move-result-object v1
 
-    invoke-virtual {v1}, Lcom/vk/stories/editor/base/h0;->h()Z
+    invoke-virtual {v1}, Lcom/vk/stories/editor/base/CameraEditorUserActionsHolder;->h()Z
 
     move-result v1
 
@@ -346,11 +346,11 @@
     :cond_1
     iget-object v1, p0, Lcom/vk/stories/editor/base/EditorEventsTracker;->b:Lcom/vk/stories/editor/base/BaseCameraEditorContract$a;
 
-    invoke-interface {v1}, Lcom/vk/stories/editor/base/BaseCameraEditorContract$a;->T1()Lcom/vk/stories/editor/base/h0;
+    invoke-interface {v1}, Lcom/vk/stories/editor/base/BaseCameraEditorContract$a;->T1()Lcom/vk/stories/editor/base/CameraEditorUserActionsHolder;
 
     move-result-object v1
 
-    invoke-virtual {v1}, Lcom/vk/stories/editor/base/h0;->e()Z
+    invoke-virtual {v1}, Lcom/vk/stories/editor/base/CameraEditorUserActionsHolder;->e()Z
 
     move-result v1
 
@@ -365,11 +365,11 @@
     :cond_2
     iget-object v1, p0, Lcom/vk/stories/editor/base/EditorEventsTracker;->b:Lcom/vk/stories/editor/base/BaseCameraEditorContract$a;
 
-    invoke-interface {v1}, Lcom/vk/stories/editor/base/BaseCameraEditorContract$a;->T1()Lcom/vk/stories/editor/base/h0;
+    invoke-interface {v1}, Lcom/vk/stories/editor/base/BaseCameraEditorContract$a;->T1()Lcom/vk/stories/editor/base/CameraEditorUserActionsHolder;
 
     move-result-object v1
 
-    invoke-virtual {v1}, Lcom/vk/stories/editor/base/h0;->g()Z
+    invoke-virtual {v1}, Lcom/vk/stories/editor/base/CameraEditorUserActionsHolder;->g()Z
 
     move-result v1
 
@@ -384,11 +384,11 @@
     :cond_3
     iget-object v1, p0, Lcom/vk/stories/editor/base/EditorEventsTracker;->b:Lcom/vk/stories/editor/base/BaseCameraEditorContract$a;
 
-    invoke-interface {v1}, Lcom/vk/stories/editor/base/BaseCameraEditorContract$a;->T1()Lcom/vk/stories/editor/base/h0;
+    invoke-interface {v1}, Lcom/vk/stories/editor/base/BaseCameraEditorContract$a;->T1()Lcom/vk/stories/editor/base/CameraEditorUserActionsHolder;
 
     move-result-object v1
 
-    invoke-virtual {v1}, Lcom/vk/stories/editor/base/h0;->f()Z
+    invoke-virtual {v1}, Lcom/vk/stories/editor/base/CameraEditorUserActionsHolder;->f()Z
 
     move-result v1
 
@@ -403,10 +403,10 @@
     const-string v1, "action_facts"
 
     .line 13
-    invoke-virtual {v0, v1, p1}, Lcom/vtosters/lite/data/n$l;->a(Ljava/lang/String;Ljava/lang/Object;)Lcom/vtosters/lite/data/n$l;
+    invoke-virtual {v0, v1, p1}, Lcom/vtosters/lite/data/Analytics$l;->a(Ljava/lang/String;Ljava/lang/Object;)Lcom/vtosters/lite/data/Analytics$l;
 
     .line 14
-    invoke-virtual {v0}, Lcom/vtosters/lite/data/n$l;->e()Lcom/vtosters/lite/data/n$l;
+    invoke-virtual {v0}, Lcom/vtosters/lite/data/Analytics$l;->e()Lcom/vtosters/lite/data/Analytics$l;
 
     return-void
 .end method
@@ -423,21 +423,21 @@
 
     const-string v1, "view.stickers"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    invoke-static {v0}, Lkotlin/collections/l;->d(Ljava/lang/Iterable;)Lkotlin/sequences/j;
+    invoke-static {v0}, Lkotlin/collections/l;->d(Ljava/lang/Iterable;)Lkotlin/sequences/Sequence;
 
     move-result-object v0
 
     .line 2
     sget-object v1, Lcom/vk/stories/editor/base/EditorEventsTracker$trackEmoji$1;->a:Lcom/vk/stories/editor/base/EditorEventsTracker$trackEmoji$1;
 
-    invoke-static {v0, v1}, Lkotlin/sequences/m;->b(Lkotlin/sequences/j;Lkotlin/jvm/b/b;)Lkotlin/sequences/j;
+    invoke-static {v0, v1}, Lkotlin/sequences/m;->b(Lkotlin/sequences/Sequence;Lkotlin/jvm/b/Functions2;)Lkotlin/sequences/Sequence;
 
     move-result-object v0
 
     .line 3
-    invoke-interface {v0}, Lkotlin/sequences/j;->iterator()Ljava/util/Iterator;
+    invoke-interface {v0}, Lkotlin/sequences/Sequence;->iterator()Ljava/util/Iterator;
 
     move-result-object v0
 
@@ -455,9 +455,9 @@
     check-cast v1, Lcom/vk/attachpicker/stickers/ISticker;
 
     .line 4
-    iget-object v1, p0, Lcom/vk/stories/editor/base/EditorEventsTracker;->a:Lcom/vk/attachpicker/analytics/a;
+    iget-object v1, p0, Lcom/vk/stories/editor/base/EditorEventsTracker;->a:Lcom/vk/attachpicker/analytics/EditorAnalytics;
 
-    invoke-virtual {v1, p1}, Lcom/vk/attachpicker/analytics/a;->c(Z)V
+    invoke-virtual {v1, p1}, Lcom/vk/attachpicker/analytics/EditorAnalytics;->c(Z)V
 
     goto :goto_0
 
@@ -485,28 +485,28 @@
 
     const-string v1, "view.stickers"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    invoke-static {v0}, Lkotlin/collections/l;->d(Ljava/lang/Iterable;)Lkotlin/sequences/j;
+    invoke-static {v0}, Lkotlin/collections/l;->d(Ljava/lang/Iterable;)Lkotlin/sequences/Sequence;
 
     move-result-object v0
 
     .line 2
     sget-object v1, Lcom/vk/stories/editor/base/EditorEventsTracker$trackStickers$stickerIds$1;->a:Lcom/vk/stories/editor/base/EditorEventsTracker$trackStickers$stickerIds$1;
 
-    invoke-static {v0, v1}, Lkotlin/sequences/m;->b(Lkotlin/sequences/j;Lkotlin/jvm/b/b;)Lkotlin/sequences/j;
+    invoke-static {v0, v1}, Lkotlin/sequences/m;->b(Lkotlin/sequences/Sequence;Lkotlin/jvm/b/Functions2;)Lkotlin/sequences/Sequence;
 
     move-result-object v0
 
     .line 3
     sget-object v1, Lcom/vk/stories/editor/base/EditorEventsTracker$trackStickers$stickerIds$2;->a:Lcom/vk/stories/editor/base/EditorEventsTracker$trackStickers$stickerIds$2;
 
-    invoke-static {v0, v1}, Lkotlin/sequences/m;->e(Lkotlin/sequences/j;Lkotlin/jvm/b/b;)Lkotlin/sequences/j;
+    invoke-static {v0, v1}, Lkotlin/sequences/m;->e(Lkotlin/sequences/Sequence;Lkotlin/jvm/b/Functions2;)Lkotlin/sequences/Sequence;
 
     move-result-object v0
 
     .line 4
-    invoke-static {v0}, Lkotlin/sequences/m;->l(Lkotlin/sequences/j;)Ljava/util/List;
+    invoke-static {v0}, Lkotlin/sequences/m;->l(Lkotlin/sequences/Sequence;)Ljava/util/List;
 
     move-result-object v0
 
@@ -520,9 +520,9 @@
     if-eqz v1, :cond_0
 
     .line 6
-    iget-object v1, p0, Lcom/vk/stories/editor/base/EditorEventsTracker;->a:Lcom/vk/attachpicker/analytics/a;
+    iget-object v1, p0, Lcom/vk/stories/editor/base/EditorEventsTracker;->a:Lcom/vk/attachpicker/analytics/EditorAnalytics;
 
-    invoke-virtual {v1, v0, p1}, Lcom/vk/attachpicker/analytics/a;->a(Ljava/util/Collection;Z)V
+    invoke-virtual {v1, v0, p1}, Lcom/vk/attachpicker/analytics/EditorAnalytics;->a(Ljava/util/Collection;Z)V
 
     :cond_0
     if-nez p1, :cond_1
@@ -548,21 +548,21 @@
 
     const-string v1, "view.stickers"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    invoke-static {v0}, Lkotlin/collections/l;->d(Ljava/lang/Iterable;)Lkotlin/sequences/j;
+    invoke-static {v0}, Lkotlin/collections/l;->d(Ljava/lang/Iterable;)Lkotlin/sequences/Sequence;
 
     move-result-object v0
 
     .line 2
     sget-object v1, Lcom/vk/stories/editor/base/EditorEventsTracker$trackText$1;->a:Lcom/vk/stories/editor/base/EditorEventsTracker$trackText$1;
 
-    invoke-static {v0, v1}, Lkotlin/sequences/m;->b(Lkotlin/sequences/j;Lkotlin/jvm/b/b;)Lkotlin/sequences/j;
+    invoke-static {v0, v1}, Lkotlin/sequences/m;->b(Lkotlin/sequences/Sequence;Lkotlin/jvm/b/Functions2;)Lkotlin/sequences/Sequence;
 
     move-result-object v0
 
     .line 3
-    invoke-interface {v0}, Lkotlin/sequences/j;->iterator()Ljava/util/Iterator;
+    invoke-interface {v0}, Lkotlin/sequences/Sequence;->iterator()Ljava/util/Iterator;
 
     move-result-object v0
 
@@ -580,9 +580,9 @@
     check-cast v1, Lcom/vk/attachpicker/stickers/ISticker;
 
     .line 4
-    iget-object v1, p0, Lcom/vk/stories/editor/base/EditorEventsTracker;->a:Lcom/vk/attachpicker/analytics/a;
+    iget-object v1, p0, Lcom/vk/stories/editor/base/EditorEventsTracker;->a:Lcom/vk/attachpicker/analytics/EditorAnalytics;
 
-    invoke-virtual {v1, p1}, Lcom/vk/attachpicker/analytics/a;->f(Z)V
+    invoke-virtual {v1, p1}, Lcom/vk/attachpicker/analytics/EditorAnalytics;->f(Z)V
 
     goto :goto_0
 

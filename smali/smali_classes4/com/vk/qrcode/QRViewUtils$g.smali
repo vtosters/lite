@@ -3,12 +3,12 @@
 .source "QRViewUtils.kt"
 
 # interfaces
-.implements Lc/a/z/g;
+.implements Lio/reactivex/functions/Consumer;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/qrcode/QRViewUtils;->a(Landroid/app/Activity;Lcom/vk/qrcode/QRParser;Lcom/vk/qrcode/e;)V
+    value = Lcom/vk/qrcode/QRViewUtils;->a(Landroid/app/Activity;Lcom/vk/qrcode/QRParser;Lcom/vk/qrcode/QRTypes8;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -22,7 +22,7 @@
         "Ljava/lang/Object;",
         ">",
         "Ljava/lang/Object;",
-        "Lc/a/z/g<",
+        "Lio/reactivex/functions/Consumer<",
         "Lcom/vk/dto/common/data/ApiApplication;",
         ">;"
     }
@@ -34,18 +34,18 @@
 
 .field final synthetic b:Lcom/vk/qrcode/QRParser;
 
-.field final synthetic c:Lcom/vk/qrcode/e;
+.field final synthetic c:Lcom/vk/qrcode/QRTypes8;
 
 
 # direct methods
-.method constructor <init>(Landroid/app/Activity;Lcom/vk/qrcode/QRParser;Lcom/vk/qrcode/e;)V
+.method constructor <init>(Landroid/app/Activity;Lcom/vk/qrcode/QRParser;Lcom/vk/qrcode/QRTypes8;)V
     .locals 0
 
     iput-object p1, p0, Lcom/vk/qrcode/QRViewUtils$g;->a:Landroid/app/Activity;
 
     iput-object p2, p0, Lcom/vk/qrcode/QRViewUtils$g;->b:Lcom/vk/qrcode/QRParser;
 
-    iput-object p3, p0, Lcom/vk/qrcode/QRViewUtils$g;->c:Lcom/vk/qrcode/e;
+    iput-object p3, p0, Lcom/vk/qrcode/QRViewUtils$g;->c:Lcom/vk/qrcode/QRTypes8;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -66,9 +66,9 @@
 
     iget-object v2, p0, Lcom/vk/qrcode/QRViewUtils$g;->b:Lcom/vk/qrcode/QRParser;
 
-    iget-object v3, p0, Lcom/vk/qrcode/QRViewUtils$g;->c:Lcom/vk/qrcode/e;
+    iget-object v3, p0, Lcom/vk/qrcode/QRViewUtils$g;->c:Lcom/vk/qrcode/QRTypes8;
 
-    invoke-virtual {v3}, Lcom/vk/qrcode/e;->j()Ljava/lang/String;
+    invoke-virtual {v3}, Lcom/vk/qrcode/QRTypes8;->j()Ljava/lang/String;
 
     move-result-object v3
 

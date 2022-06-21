@@ -14,16 +14,16 @@
 # instance fields
 .field private a:I
 
-.field private b:Lcom/vk/core/ui/d;
+.field private b:Lcom/vk/core/ui/CardItemDecorator;
 
 .field private final c:Landroidx/recyclerview/widget/RecyclerView;
 
 .field private final d:Z
 
-.field private final e:Lkotlin/jvm/b/a;
+.field private final e:Lkotlin/jvm/b/Functions;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Lkotlin/jvm/b/a<",
+            "Lkotlin/jvm/b/Functions<",
             "Ljava/lang/Boolean;",
             ">;"
         }
@@ -39,7 +39,7 @@
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, v1}, Lcom/vk/core/ui/TabletUiHelper$a;-><init>(Lkotlin/jvm/internal/i;)V
+    invoke-direct {v0, v1}, Lcom/vk/core/ui/TabletUiHelper$a;-><init>(Lkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     return-void
 .end method
@@ -61,19 +61,19 @@
 
     move-object v1, p1
 
-    invoke-direct/range {v0 .. v6}, Lcom/vk/core/ui/TabletUiHelper;-><init>(Landroidx/recyclerview/widget/RecyclerView;ZZLkotlin/jvm/b/a;ILkotlin/jvm/internal/i;)V
+    invoke-direct/range {v0 .. v6}, Lcom/vk/core/ui/TabletUiHelper;-><init>(Landroidx/recyclerview/widget/RecyclerView;ZZLkotlin/jvm/b/Functions;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     return-void
 .end method
 
-.method public constructor <init>(Landroidx/recyclerview/widget/RecyclerView;ZZLkotlin/jvm/b/a;)V
+.method public constructor <init>(Landroidx/recyclerview/widget/RecyclerView;ZZLkotlin/jvm/b/Functions;)V
     .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
             "Landroidx/recyclerview/widget/RecyclerView;",
             "ZZ",
-            "Lkotlin/jvm/b/a<",
+            "Lkotlin/jvm/b/Functions<",
             "Ljava/lang/Boolean;",
             ">;)V"
         }
@@ -86,7 +86,7 @@
 
     iput-boolean p2, p0, Lcom/vk/core/ui/TabletUiHelper;->d:Z
 
-    iput-object p4, p0, Lcom/vk/core/ui/TabletUiHelper;->e:Lkotlin/jvm/b/a;
+    iput-object p4, p0, Lcom/vk/core/ui/TabletUiHelper;->e:Lkotlin/jvm/b/Functions;
 
     .line 2
     invoke-virtual {p0}, Lcom/vk/core/ui/TabletUiHelper;->a()V
@@ -104,7 +104,7 @@
     return-void
 .end method
 
-.method public synthetic constructor <init>(Landroidx/recyclerview/widget/RecyclerView;ZZLkotlin/jvm/b/a;ILkotlin/jvm/internal/i;)V
+.method public synthetic constructor <init>(Landroidx/recyclerview/widget/RecyclerView;ZZLkotlin/jvm/b/Functions;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
     .locals 1
 
     and-int/lit8 p6, p5, 0x2
@@ -133,12 +133,12 @@
     invoke-direct {p4, p1}, Lcom/vk/core/ui/TabletUiHelper$1;-><init>(Landroidx/recyclerview/widget/RecyclerView;)V
 
     :cond_2
-    invoke-direct {p0, p1, p2, p3, p4}, Lcom/vk/core/ui/TabletUiHelper;-><init>(Landroidx/recyclerview/widget/RecyclerView;ZZLkotlin/jvm/b/a;)V
+    invoke-direct {p0, p1, p2, p3, p4}, Lcom/vk/core/ui/TabletUiHelper;-><init>(Landroidx/recyclerview/widget/RecyclerView;ZZLkotlin/jvm/b/Functions;)V
 
     return-void
 .end method
 
-.method private final a(Landroid/view/View;)Lkotlin/m;
+.method private final a(Landroid/view/View;)Lkotlin/Unit;
     .locals 9
 
     if-eqz p1, :cond_1
@@ -193,7 +193,7 @@
     invoke-static/range {v2 .. v8}, Lcom/vk/extensions/ViewExtKt;->b(Landroid/view/View;IIIIILjava/lang/Object;)V
 
     .line 7
-    sget-object p1, Lkotlin/m;->a:Lkotlin/m;
+    sget-object p1, Lkotlin/Unit;->a:Lkotlin/Unit;
 
     goto :goto_1
 
@@ -233,9 +233,9 @@
 
     if-eqz v0, :cond_1
 
-    iget-object v0, p0, Lcom/vk/core/ui/TabletUiHelper;->e:Lkotlin/jvm/b/a;
+    iget-object v0, p0, Lcom/vk/core/ui/TabletUiHelper;->e:Lkotlin/jvm/b/Functions;
 
-    invoke-interface {v0}, Lkotlin/jvm/b/a;->invoke()Ljava/lang/Object;
+    invoke-interface {v0}, Lkotlin/jvm/b/Functions;->invoke()Ljava/lang/Object;
 
     move-result-object v0
 
@@ -248,7 +248,7 @@
     if-eqz v0, :cond_1
 
     .line 2
-    iget-object v0, p0, Lcom/vk/core/ui/TabletUiHelper;->b:Lcom/vk/core/ui/d;
+    iget-object v0, p0, Lcom/vk/core/ui/TabletUiHelper;->b:Lcom/vk/core/ui/CardItemDecorator;
 
     if-eqz v0, :cond_0
 
@@ -258,7 +258,7 @@
 
     .line 3
     :cond_0
-    new-instance v0, Lcom/vk/core/ui/d;
+    new-instance v0, Lcom/vk/core/ui/CardItemDecorator;
 
     iget-object v1, p0, Lcom/vk/core/ui/TabletUiHelper;->c:Landroidx/recyclerview/widget/RecyclerView;
 
@@ -270,7 +270,7 @@
 
     xor-int/lit8 v3, v3, 0x1
 
-    invoke-direct {v0, v1, v2, v3}, Lcom/vk/core/ui/d;-><init>(Landroidx/recyclerview/widget/RecyclerView;Lcom/vk/core/ui/o;Z)V
+    invoke-direct {v0, v1, v2, v3}, Lcom/vk/core/ui/CardItemDecorator;-><init>(Landroidx/recyclerview/widget/RecyclerView;Lcom/vk/core/ui/Provider;Z)V
 
     .line 4
     iget-object v1, p0, Lcom/vk/core/ui/TabletUiHelper;->c:Landroidx/recyclerview/widget/RecyclerView;
@@ -278,7 +278,7 @@
     invoke-virtual {v1, v0}, Landroidx/recyclerview/widget/RecyclerView;->addItemDecoration(Landroidx/recyclerview/widget/RecyclerView$ItemDecoration;)V
 
     .line 5
-    iput-object v0, p0, Lcom/vk/core/ui/TabletUiHelper;->b:Lcom/vk/core/ui/d;
+    iput-object v0, p0, Lcom/vk/core/ui/TabletUiHelper;->b:Lcom/vk/core/ui/CardItemDecorator;
 
     :cond_1
     return-void
@@ -298,7 +298,7 @@
 
     const-string v1, "view.context"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {v0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
@@ -306,7 +306,7 @@
 
     const-string v1, "view.context.resources"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {v0}, Landroid/content/res/Resources;->getConfiguration()Landroid/content/res/Configuration;
 
@@ -319,7 +319,7 @@
     .line 2
     iget-object v0, p0, Lcom/vk/core/ui/TabletUiHelper;->c:Landroidx/recyclerview/widget/RecyclerView;
 
-    invoke-direct {p0, v0}, Lcom/vk/core/ui/TabletUiHelper;->a(Landroid/view/View;)Lkotlin/m;
+    invoke-direct {p0, v0}, Lcom/vk/core/ui/TabletUiHelper;->a(Landroid/view/View;)Lkotlin/Unit;
 
     .line 3
     invoke-direct {p0}, Lcom/vk/core/ui/TabletUiHelper;->c()V

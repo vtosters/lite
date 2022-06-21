@@ -3,7 +3,7 @@
 .source "Thumb.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/b;
+.implements Lkotlin/jvm/b/Functions2;
 
 
 # annotations
@@ -19,9 +19,9 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/b<",
-        "Lcom/vk/dto/common/data/a;",
-        "Lkotlin/m;",
+        "Lkotlin/jvm/b/Functions2<",
+        "Lcom/vk/dto/common/data/JsonObj;",
+        "Lkotlin/Unit;",
         ">;"
     }
 .end annotation
@@ -50,7 +50,7 @@
 
 
 # virtual methods
-.method public final a(Lcom/vk/dto/common/data/a;)V
+.method public final a(Lcom/vk/dto/common/data/JsonObj;)V
     .locals 2
 
     .line 1
@@ -68,7 +68,7 @@
 
     const-string v1, "width"
 
-    invoke-virtual {p1, v1, v0}, Lcom/vk/dto/common/data/a;->a(Ljava/lang/String;Ljava/lang/Integer;)V
+    invoke-virtual {p1, v1, v0}, Lcom/vk/dto/common/data/JsonObj;->a(Ljava/lang/String;Ljava/lang/Integer;)V
 
     .line 2
     iget-object v0, p0, Lcom/vk/dto/music/Thumb$urlsToJsonArray$1$1;->$it:Landroid/util/SparseArray;
@@ -81,7 +81,7 @@
 
     const-string v1, "src"
 
-    invoke-virtual {p1, v1, v0}, Lcom/vk/dto/common/data/a;->a(Ljava/lang/String;Ljava/lang/Object;)V
+    invoke-virtual {p1, v1, v0}, Lcom/vk/dto/common/data/JsonObj;->a(Ljava/lang/String;Ljava/lang/Object;)V
 
     return-void
 .end method
@@ -90,11 +90,11 @@
     .locals 0
 
     .line 1
-    check-cast p1, Lcom/vk/dto/common/data/a;
+    check-cast p1, Lcom/vk/dto/common/data/JsonObj;
 
-    invoke-virtual {p0, p1}, Lcom/vk/dto/music/Thumb$urlsToJsonArray$1$1;->a(Lcom/vk/dto/common/data/a;)V
+    invoke-virtual {p0, p1}, Lcom/vk/dto/music/Thumb$urlsToJsonArray$1$1;->a(Lcom/vk/dto/common/data/JsonObj;)V
 
-    sget-object p1, Lkotlin/m;->a:Lkotlin/m;
+    sget-object p1, Lkotlin/Unit;->a:Lkotlin/Unit;
 
     return-object p1
 .end method

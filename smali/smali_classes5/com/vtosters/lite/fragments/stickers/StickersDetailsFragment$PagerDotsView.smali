@@ -130,9 +130,9 @@
 
     move-result-object v0
 
-    check-cast v0, Lcom/vk/core/ui/infiniteviewpager/a;
+    check-cast v0, Lcom/vk/core/ui/infiniteviewpager/InfinitePagerAdapter;
 
-    invoke-virtual {v0}, Lcom/vk/core/ui/infiniteviewpager/a;->a()I
+    invoke-virtual {v0}, Lcom/vk/core/ui/infiniteviewpager/InfinitePagerAdapter;->a()I
 
     move-result v0
 

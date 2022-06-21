@@ -40,7 +40,7 @@
     .line 1
     iget-object v0, p0, Lcom/vk/stories/view/AppGroupedStoryView$f;->a:Lcom/vk/stories/view/AppGroupedStoryView;
 
-    iget-object v0, v0, Lcom/vk/stories/view/e1;->d:Landroid/view/View$OnTouchListener;
+    iget-object v0, v0, Lcom/vk/stories/view/BaseStoryView;->d:Landroid/view/View$OnTouchListener;
 
     invoke-interface {v0, p1, p2}, Landroid/view/View$OnTouchListener;->onTouch(Landroid/view/View;Landroid/view/MotionEvent;)Z
 

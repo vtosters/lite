@@ -15,12 +15,12 @@
 # instance fields
 .field private final a:Lcom/vk/search/holder/SearchListHolder$a;
 
-.field private final b:Lkotlin/jvm/b/b;
+.field private final b:Lkotlin/jvm/b/Functions2;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Lkotlin/jvm/b/b<",
+            "Lkotlin/jvm/b/Functions2<",
             "Lcom/vk/dto/user/UserProfile;",
-            "Lkotlin/m;",
+            "Lkotlin/Unit;",
             ">;"
         }
     .end annotation
@@ -28,16 +28,16 @@
 
 
 # direct methods
-.method public constructor <init>(Landroid/view/ViewGroup;Lkotlin/jvm/b/b;)V
+.method public constructor <init>(Landroid/view/ViewGroup;Lkotlin/jvm/b/Functions2;)V
     .locals 2
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
             "Landroid/view/ViewGroup;",
-            "Lkotlin/jvm/b/b<",
+            "Lkotlin/jvm/b/Functions2<",
             "-",
             "Lcom/vk/dto/user/UserProfile;",
-            "Lkotlin/m;",
+            "Lkotlin/Unit;",
             ">;)V"
         }
     .end annotation
@@ -53,7 +53,7 @@
 
     invoke-direct {p0, v0}, Landroidx/recyclerview/widget/RecyclerView$ViewHolder;-><init>(Landroid/view/View;)V
 
-    iput-object p2, p0, Lcom/vk/search/holder/SearchListHolder;->b:Lkotlin/jvm/b/b;
+    iput-object p2, p0, Lcom/vk/search/holder/SearchListHolder;->b:Lkotlin/jvm/b/Functions2;
 
     .line 3
     new-instance p2, Lcom/vk/search/holder/SearchListHolder$a;
@@ -86,7 +86,7 @@
 
     const-string p2, "itemView"
 
-    invoke-static {p1, p2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, p2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     check-cast p1, Landroidx/recyclerview/widget/RecyclerView;
 
@@ -95,7 +95,7 @@
     .line 6
     iget-object p1, p0, Landroidx/recyclerview/widget/RecyclerView$ViewHolder;->itemView:Landroid/view/View;
 
-    invoke-static {p1, p2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, p2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     check-cast p1, Landroidx/recyclerview/widget/RecyclerView;
 
@@ -105,7 +105,7 @@
 
     const-string v0, "itemView.context"
 
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {p1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
@@ -140,7 +140,7 @@
     .line 9
     iget-object p1, p0, Landroidx/recyclerview/widget/RecyclerView$ViewHolder;->itemView:Landroid/view/View;
 
-    invoke-static {p1, p2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, p2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     check-cast p1, Landroidx/recyclerview/widget/RecyclerView;
 
@@ -161,7 +161,7 @@
     throw p1
 .end method
 
-.method public synthetic constructor <init>(Landroid/view/ViewGroup;Lkotlin/jvm/b/b;ILkotlin/jvm/internal/i;)V
+.method public synthetic constructor <init>(Landroid/view/ViewGroup;Lkotlin/jvm/b/Functions2;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
     .locals 0
 
     and-int/lit8 p3, p3, 0x2
@@ -172,33 +172,33 @@
 
     .line 1
     :cond_0
-    invoke-direct {p0, p1, p2}, Lcom/vk/search/holder/SearchListHolder;-><init>(Landroid/view/ViewGroup;Lkotlin/jvm/b/b;)V
+    invoke-direct {p0, p1, p2}, Lcom/vk/search/holder/SearchListHolder;-><init>(Landroid/view/ViewGroup;Lkotlin/jvm/b/Functions2;)V
 
     return-void
 .end method
 
-.method public static final synthetic a(Lcom/vk/search/holder/SearchListHolder;)Lkotlin/jvm/b/b;
+.method public static final synthetic a(Lcom/vk/search/holder/SearchListHolder;)Lkotlin/jvm/b/Functions2;
     .locals 0
 
     .line 1
-    iget-object p0, p0, Lcom/vk/search/holder/SearchListHolder;->b:Lkotlin/jvm/b/b;
+    iget-object p0, p0, Lcom/vk/search/holder/SearchListHolder;->b:Lkotlin/jvm/b/Functions2;
 
     return-object p0
 .end method
 
 
 # virtual methods
-.method public final a(Lcom/vk/dto/discover/b/e;)V
+.method public final a(Lcom/vk/dto/discover/b/SearchProfileListItem;)V
     .locals 2
 
     .line 2
     iget-object v0, p0, Lcom/vk/search/holder/SearchListHolder;->a:Lcom/vk/search/holder/SearchListHolder$a;
 
-    invoke-virtual {p1}, Lcom/vk/dto/discover/b/e;->d()Ljava/util/List;
+    invoke-virtual {p1}, Lcom/vk/dto/discover/b/SearchProfileListItem;->d()Ljava/util/List;
 
     move-result-object v1
 
-    invoke-virtual {p1}, Lcom/vk/dto/discover/b/e;->c()Ljava/lang/String;
+    invoke-virtual {p1}, Lcom/vk/dto/discover/b/SearchProfileListItem;->c()Ljava/lang/String;
 
     move-result-object p1
 

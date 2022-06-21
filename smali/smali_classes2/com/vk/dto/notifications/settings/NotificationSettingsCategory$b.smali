@@ -24,7 +24,7 @@
     return-void
 .end method
 
-.method public synthetic constructor <init>(Lkotlin/jvm/internal/i;)V
+.method public synthetic constructor <init>(Lkotlin/jvm/internal/DefaultConstructorMarker;)V
     .locals 0
 
     .line 2
@@ -35,7 +35,7 @@
 
 
 # virtual methods
-.method public final a(Lorg/json/JSONObject;Lcom/vk/dto/notifications/c;)Lcom/vk/dto/notifications/settings/NotificationSettingsCategory;
+.method public final a(Lorg/json/JSONObject;Lcom/vk/dto/notifications/NotificationsResponseData;)Lcom/vk/dto/notifications/settings/NotificationSettingsCategory;
     .locals 15
 
     move-object/from16 v0, p1
@@ -49,7 +49,7 @@
 
     const-string v1, "jo.optString(\"id\")"
 
-    invoke-static {v3, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v3, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     const-string v1, "label"
 
@@ -102,7 +102,7 @@
 
     sget-object v2, Lcom/vk/dto/notifications/settings/NotificationsSettingsConfig;->g:Lcom/vk/dto/notifications/settings/NotificationsSettingsConfig$b;
 
-    invoke-virtual {v2}, Lcom/vk/dto/notifications/settings/NotificationsSettingsConfig$b;->a()Lkotlin/jvm/b/b;
+    invoke-virtual {v2}, Lcom/vk/dto/notifications/settings/NotificationsSettingsConfig$b;->a()Lkotlin/jvm/b/Functions2;
 
     move-result-object v2
 
@@ -135,7 +135,7 @@
 
     if-eqz v14, :cond_0
 
-    invoke-interface {v2, v14}, Lkotlin/jvm/b/b;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v2, v14}, Lkotlin/jvm/b/Functions2;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v14
 
@@ -176,7 +176,7 @@
 
     move-object/from16 v14, p2
 
-    invoke-virtual {v13, v2, v14}, Lcom/vk/dto/notifications/NotificationItem$Companion;->a(Lorg/json/JSONObject;Lcom/vk/dto/notifications/c;)Lcom/vk/dto/notifications/NotificationItem;
+    invoke-virtual {v13, v2, v14}, Lcom/vk/dto/notifications/NotificationItem$Companion;->a(Lorg/json/JSONObject;Lcom/vk/dto/notifications/NotificationsResponseData;)Lcom/vk/dto/notifications/NotificationItem;
 
     move-result-object v2
 

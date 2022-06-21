@@ -40,7 +40,7 @@
     .line 1
     iget-object p1, p0, Lcom/vk/profile/presenter/UserPresenter$c;->a:Lcom/vk/profile/presenter/UserPresenter;
 
-    invoke-virtual {p1}, Lcom/vk/newsfeed/presenters/i;->C()V
+    invoke-virtual {p1}, Lcom/vk/newsfeed/presenters/NewsFeedProfilePresenter;->C()V
 
     return-void
 .end method

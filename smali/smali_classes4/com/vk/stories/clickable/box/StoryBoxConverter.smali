@@ -29,7 +29,7 @@
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, v1}, Lcom/vk/stories/clickable/box/StoryBoxConverter$a;-><init>(Lkotlin/jvm/internal/i;)V
+    invoke-direct {v0, v1}, Lcom/vk/stories/clickable/box/StoryBoxConverter$a;-><init>(Lkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     sput-object v0, Lcom/vk/stories/clickable/box/StoryBoxConverter;->c:Lcom/vk/stories/clickable/box/StoryBoxConverter$a;
 
@@ -239,7 +239,7 @@
     move-result-object p1
 
     .line 22
-    invoke-static {p1}, Lcom/vk/core/util/q;->a(Ljava/lang/String;)V
+    invoke-static {p1}, Lcom/vk/core/util/DebugUtils;->a(Ljava/lang/String;)V
 
     .line 23
     :goto_3
@@ -278,15 +278,15 @@
     return p0
 .end method
 
-.method private final a(Lcom/vk/dto/stories/model/actions/ActionEmoji;)Lc/a/m;
+.method private final a(Lcom/vk/dto/stories/model/actions/ActionEmoji;)Lio/reactivex/Observable;
     .locals 2
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
             "Lcom/vk/dto/stories/model/actions/ActionEmoji;",
             ")",
-            "Lc/a/m<",
-            "Lcom/vk/attachpicker/stickers/u;",
+            "Lio/reactivex/Observable<",
+            "Lcom/vk/attachpicker/stickers/BitmapSticker;",
             ">;"
         }
     .end annotation
@@ -315,9 +315,9 @@
 
     invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    sget-object v1, Lcom/vk/attachpicker/stickers/selection/i/a;->b:Lcom/vk/attachpicker/stickers/selection/i/a$b;
+    sget-object v1, Lcom/vk/attachpicker/stickers/selection/i/EmojiHolder;->b:Lcom/vk/attachpicker/stickers/selection/i/EmojiHolder$b;
 
-    invoke-virtual {v1}, Lcom/vk/attachpicker/stickers/selection/i/a$b;->a()Ljava/lang/String;
+    invoke-virtual {v1}, Lcom/vk/attachpicker/stickers/selection/i/EmojiHolder$b;->a()Ljava/lang/String;
 
     move-result-object v1
 
@@ -332,7 +332,7 @@
 
     move-result-object v0
 
-    invoke-static {v0}, Lcom/vk/imageloader/VKImageLoader;->a(Landroid/net/Uri;)Lc/a/m;
+    invoke-static {v0}, Lcom/vk/imageloader/VKImageLoader;->a(Landroid/net/Uri;)Lio/reactivex/Observable;
 
     move-result-object v0
 
@@ -341,7 +341,7 @@
 
     invoke-direct {v1, p0, p1}, Lcom/vk/stories/clickable/box/StoryBoxConverter$e;-><init>(Lcom/vk/stories/clickable/box/StoryBoxConverter;Ljava/lang/String;)V
 
-    invoke-virtual {v0, v1}, Lc/a/m;->e(Lc/a/z/j;)Lc/a/m;
+    invoke-virtual {v0, v1}, Lio/reactivex/Observable;->e(Lio/reactivex/functions/Function;)Lio/reactivex/Observable;
 
     move-result-object p1
 
@@ -353,14 +353,14 @@
     return-object p1
 .end method
 
-.method private final a(Lcom/vk/dto/stories/model/actions/ActionHashtag;)Lc/a/m;
+.method private final a(Lcom/vk/dto/stories/model/actions/ActionHashtag;)Lio/reactivex/Observable;
     .locals 8
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
             "Lcom/vk/dto/stories/model/actions/ActionHashtag;",
             ")",
-            "Lc/a/m<",
+            "Lio/reactivex/Observable<",
             "Lcom/vk/stories/clickable/stickers/StoryHashtagSticker;",
             ">;"
         }
@@ -385,9 +385,9 @@
     if-eqz v0, :cond_2
 
     .line 72
-    sget-object v2, Lcom/vk/stories/clickable/e;->i:Lcom/vk/stories/clickable/e;
+    sget-object v2, Lcom/vk/stories/clickable/StoryClickableController;->i:Lcom/vk/stories/clickable/StoryClickableController;
 
-    invoke-virtual {v2}, Lcom/vk/stories/clickable/e;->d()[Lcom/vk/stories/clickable/models/f;
+    invoke-virtual {v2}, Lcom/vk/stories/clickable/StoryClickableController;->d()[Lcom/vk/stories/clickable/models/StoryHashtagTypeParams7;
 
     move-result-object v2
 
@@ -402,7 +402,7 @@
 
     aget-object v6, v2, v5
 
-    invoke-virtual {v6}, Lcom/vk/stories/clickable/models/f;->g()Lcom/vk/dto/stories/model/clickable/HashtagStyle;
+    invoke-virtual {v6}, Lcom/vk/stories/clickable/models/StoryHashtagTypeParams7;->g()Lcom/vk/dto/stories/model/clickable/HashtagStyle;
 
     move-result-object v7
 
@@ -430,7 +430,7 @@
     .line 73
     :cond_2
     :goto_2
-    sget-object v0, Lcom/vk/stories/clickable/e;->i:Lcom/vk/stories/clickable/e;
+    sget-object v0, Lcom/vk/stories/clickable/StoryClickableController;->i:Lcom/vk/stories/clickable/StoryClickableController;
 
     .line 74
     invoke-virtual {p1}, Lcom/vk/dto/stories/model/actions/ActionHashtag;->t1()Ljava/lang/String;
@@ -438,36 +438,36 @@
     move-result-object p1
 
     .line 75
-    invoke-virtual {v0, p1, v1}, Lcom/vk/stories/clickable/e;->a(Ljava/lang/String;Lcom/vk/stories/clickable/models/f;)Lcom/vk/stories/clickable/stickers/StoryHashtagSticker;
+    invoke-virtual {v0, p1, v1}, Lcom/vk/stories/clickable/StoryClickableController;->a(Ljava/lang/String;Lcom/vk/stories/clickable/models/StoryHashtagTypeParams7;)Lcom/vk/stories/clickable/stickers/StoryHashtagSticker;
 
     move-result-object p1
 
     .line 76
-    invoke-direct {p0, p1}, Lcom/vk/stories/clickable/box/StoryBoxConverter;->a(Ljava/lang/Object;)Lc/a/m;
+    invoke-direct {p0, p1}, Lcom/vk/stories/clickable/box/StoryBoxConverter;->a(Ljava/lang/Object;)Lio/reactivex/Observable;
 
     move-result-object p1
 
     return-object p1
 .end method
 
-.method private final a(Lcom/vk/dto/stories/model/actions/ActionMarketItem;)Lc/a/m;
+.method private final a(Lcom/vk/dto/stories/model/actions/ActionMarketItem;)Lio/reactivex/Observable;
     .locals 5
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
             "Lcom/vk/dto/stories/model/actions/ActionMarketItem;",
             ")",
-            "Lc/a/m<",
-            "Lcom/vk/stories/clickable/stickers/b;",
+            "Lio/reactivex/Observable<",
+            "Lcom/vk/stories/clickable/stickers/StoryMarketItemSticker;",
             ">;"
         }
     .end annotation
 
     .line 128
-    new-instance v0, Lcom/vk/stories/clickable/stickers/b;
+    new-instance v0, Lcom/vk/stories/clickable/stickers/StoryMarketItemSticker;
 
     .line 129
-    new-instance v1, Lcom/vk/stories/clickable/models/good/a;
+    new-instance v1, Lcom/vk/stories/clickable/models/good/StoryMarketItemInfo;
 
     .line 130
     invoke-virtual {p1}, Lcom/vk/dto/stories/model/actions/ActionMarketItem;->getTitle()Ljava/lang/String;
@@ -490,27 +490,27 @@
     move-result-object p1
 
     .line 134
-    invoke-direct {v1, v2, v3, v4, p1}, Lcom/vk/stories/clickable/models/good/a;-><init>(Ljava/lang/String;Ljava/lang/Integer;Ljava/lang/Integer;Ljava/lang/String;)V
+    invoke-direct {v1, v2, v3, v4, p1}, Lcom/vk/stories/clickable/models/good/StoryMarketItemInfo;-><init>(Ljava/lang/String;Ljava/lang/Integer;Ljava/lang/Integer;Ljava/lang/String;)V
 
     .line 135
-    invoke-direct {v0, v1}, Lcom/vk/stories/clickable/stickers/b;-><init>(Lcom/vk/stories/clickable/models/good/a;)V
+    invoke-direct {v0, v1}, Lcom/vk/stories/clickable/stickers/StoryMarketItemSticker;-><init>(Lcom/vk/stories/clickable/models/good/StoryMarketItemInfo;)V
 
     .line 136
-    invoke-direct {p0, v0}, Lcom/vk/stories/clickable/box/StoryBoxConverter;->a(Ljava/lang/Object;)Lc/a/m;
+    invoke-direct {p0, v0}, Lcom/vk/stories/clickable/box/StoryBoxConverter;->a(Ljava/lang/Object;)Lio/reactivex/Observable;
 
     move-result-object p1
 
     return-object p1
 .end method
 
-.method private final a(Lcom/vk/dto/stories/model/actions/ActionMention;)Lc/a/m;
+.method private final a(Lcom/vk/dto/stories/model/actions/ActionMention;)Lio/reactivex/Observable;
     .locals 8
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
             "Lcom/vk/dto/stories/model/actions/ActionMention;",
             ")",
-            "Lc/a/m<",
+            "Lio/reactivex/Observable<",
             "Lcom/vk/stories/clickable/stickers/StoryMentionSticker;",
             ">;"
         }
@@ -535,9 +535,9 @@
     if-eqz v0, :cond_2
 
     .line 79
-    sget-object v2, Lcom/vk/stories/clickable/e;->i:Lcom/vk/stories/clickable/e;
+    sget-object v2, Lcom/vk/stories/clickable/StoryClickableController;->i:Lcom/vk/stories/clickable/StoryClickableController;
 
-    invoke-virtual {v2}, Lcom/vk/stories/clickable/e;->h()[Lcom/vk/stories/clickable/models/h;
+    invoke-virtual {v2}, Lcom/vk/stories/clickable/StoryClickableController;->h()[Lcom/vk/stories/clickable/models/StoryHashtagTypeParams6;
 
     move-result-object v2
 
@@ -552,7 +552,7 @@
 
     aget-object v6, v2, v5
 
-    invoke-virtual {v6}, Lcom/vk/stories/clickable/models/h;->g()Lcom/vk/dto/stories/model/clickable/MentionStyle;
+    invoke-virtual {v6}, Lcom/vk/stories/clickable/models/StoryHashtagTypeParams6;->g()Lcom/vk/dto/stories/model/clickable/MentionStyle;
 
     move-result-object v7
 
@@ -580,7 +580,7 @@
 
     .line 80
     :goto_2
-    sget-object v0, Lcom/vk/stories/clickable/e;->i:Lcom/vk/stories/clickable/e;
+    sget-object v0, Lcom/vk/stories/clickable/StoryClickableController;->i:Lcom/vk/stories/clickable/StoryClickableController;
 
     .line 81
     invoke-virtual {p1}, Lcom/vk/dto/stories/model/actions/ActionMention;->t1()Ljava/lang/String;
@@ -588,14 +588,14 @@
     move-result-object p1
 
     .line 82
-    invoke-virtual {v0, p1, v6}, Lcom/vk/stories/clickable/e;->a(Ljava/lang/String;Lcom/vk/stories/clickable/models/h;)Lcom/vk/stories/clickable/stickers/StoryMentionSticker;
+    invoke-virtual {v0, p1, v6}, Lcom/vk/stories/clickable/StoryClickableController;->a(Ljava/lang/String;Lcom/vk/stories/clickable/models/StoryHashtagTypeParams6;)Lcom/vk/stories/clickable/stickers/StoryMentionSticker;
 
     move-result-object p1
 
     if-eqz p1, :cond_3
 
     .line 83
-    invoke-direct {p0, p1}, Lcom/vk/stories/clickable/box/StoryBoxConverter;->a(Ljava/lang/Object;)Lc/a/m;
+    invoke-direct {p0, p1}, Lcom/vk/stories/clickable/box/StoryBoxConverter;->a(Ljava/lang/Object;)Lio/reactivex/Observable;
 
     move-result-object v1
 
@@ -603,15 +603,15 @@
     return-object v1
 .end method
 
-.method private final a(Lcom/vk/dto/stories/model/actions/ActionPlace;)Lc/a/m;
+.method private final a(Lcom/vk/dto/stories/model/actions/ActionPlace;)Lio/reactivex/Observable;
     .locals 6
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
             "Lcom/vk/dto/stories/model/actions/ActionPlace;",
             ")",
-            "Lc/a/m<",
-            "Lcom/vk/stories/clickable/stickers/a;",
+            "Lio/reactivex/Observable<",
+            "Lcom/vk/stories/clickable/stickers/StoryGeoSticker;",
             ">;"
         }
     .end annotation
@@ -641,7 +641,7 @@
 
     move-result-object v5
 
-    invoke-static {v5, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v5, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v5
 
@@ -668,7 +668,7 @@
 
     .line 62
     :goto_2
-    sget-object v0, Lcom/vk/stories/clickable/models/geo/d;->q:Lcom/vk/stories/clickable/models/geo/d$a;
+    sget-object v0, Lcom/vk/stories/clickable/models/geo/StoryGeoStickerInfo;->q:Lcom/vk/stories/clickable/models/geo/StoryGeoStickerInfo$a;
 
     .line 63
     invoke-virtual {p1}, Lcom/vk/dto/stories/model/actions/ActionPlace;->getTitle()Ljava/lang/String;
@@ -679,7 +679,7 @@
 
     const-string v3, "Locale.US"
 
-    invoke-static {v2, v3}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v2, v3}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     if-eqz v1, :cond_3
 
@@ -689,7 +689,7 @@
 
     const-string v2, "(this as java.lang.String).toUpperCase(locale)"
 
-    invoke-static {v1, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 64
     invoke-virtual {p1}, Lcom/vk/dto/stories/model/actions/ActionPlace;->u1()I
@@ -702,17 +702,17 @@
     move-result-object p1
 
     .line 66
-    invoke-virtual {v0, v1, v4, v2, p1}, Lcom/vk/stories/clickable/models/geo/d$a;->a(Ljava/lang/String;Lcom/vk/stories/clickable/models/geo/GeoStickerStyle;ILjava/lang/Integer;)Lcom/vk/stories/clickable/models/geo/d;
+    invoke-virtual {v0, v1, v4, v2, p1}, Lcom/vk/stories/clickable/models/geo/StoryGeoStickerInfo$a;->a(Ljava/lang/String;Lcom/vk/stories/clickable/models/geo/GeoStickerStyle;ILjava/lang/Integer;)Lcom/vk/stories/clickable/models/geo/StoryGeoStickerInfo;
 
     move-result-object p1
 
     .line 67
-    new-instance v0, Lcom/vk/stories/clickable/stickers/a;
+    new-instance v0, Lcom/vk/stories/clickable/stickers/StoryGeoSticker;
 
-    invoke-direct {v0, p1}, Lcom/vk/stories/clickable/stickers/a;-><init>(Lcom/vk/stories/clickable/models/geo/d;)V
+    invoke-direct {v0, p1}, Lcom/vk/stories/clickable/stickers/StoryGeoSticker;-><init>(Lcom/vk/stories/clickable/models/geo/StoryGeoStickerInfo;)V
 
     .line 68
-    invoke-direct {p0, v0}, Lcom/vk/stories/clickable/box/StoryBoxConverter;->a(Ljava/lang/Object;)Lc/a/m;
+    invoke-direct {p0, v0}, Lcom/vk/stories/clickable/box/StoryBoxConverter;->a(Ljava/lang/Object;)Lio/reactivex/Observable;
 
     move-result-object p1
 
@@ -729,21 +729,21 @@
     throw p1
 .end method
 
-.method private final a(Lcom/vk/dto/stories/model/actions/ActionQuestion;)Lc/a/m;
+.method private final a(Lcom/vk/dto/stories/model/actions/ActionQuestion;)Lio/reactivex/Observable;
     .locals 10
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
             "Lcom/vk/dto/stories/model/actions/ActionQuestion;",
             ")",
-            "Lc/a/m<",
-            "Lcom/vk/stories/clickable/stickers/h;",
+            "Lio/reactivex/Observable<",
+            "Lcom/vk/stories/clickable/stickers/StoryQuestionSticker;",
             ">;"
         }
     .end annotation
 
     .line 48
-    new-instance v0, Lcom/vk/stories/clickable/stickers/h;
+    new-instance v0, Lcom/vk/stories/clickable/stickers/StoryQuestionSticker;
 
     .line 49
     new-instance v9, Lcom/vk/stories/clickable/models/StoryQuestionInfo;
@@ -801,27 +801,27 @@
     move-object v1, v9
 
     .line 56
-    invoke-direct/range {v1 .. v8}, Lcom/vk/stories/clickable/models/StoryQuestionInfo;-><init>(Ljava/lang/String;Ljava/lang/String;ILcom/vk/stories/clickable/models/StoryQuestionInfo$b;Lcom/vk/stories/clickable/models/StoryQuestionInfo$Style;ILkotlin/jvm/internal/i;)V
+    invoke-direct/range {v1 .. v8}, Lcom/vk/stories/clickable/models/StoryQuestionInfo;-><init>(Ljava/lang/String;Ljava/lang/String;ILcom/vk/stories/clickable/models/StoryQuestionInfo$b;Lcom/vk/stories/clickable/models/StoryQuestionInfo$Style;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     .line 57
-    invoke-direct {v0, v9}, Lcom/vk/stories/clickable/stickers/h;-><init>(Lcom/vk/stories/clickable/models/StoryQuestionInfo;)V
+    invoke-direct {v0, v9}, Lcom/vk/stories/clickable/stickers/StoryQuestionSticker;-><init>(Lcom/vk/stories/clickable/models/StoryQuestionInfo;)V
 
     .line 58
-    invoke-direct {p0, v0}, Lcom/vk/stories/clickable/box/StoryBoxConverter;->a(Ljava/lang/Object;)Lc/a/m;
+    invoke-direct {p0, v0}, Lcom/vk/stories/clickable/box/StoryBoxConverter;->a(Ljava/lang/Object;)Lio/reactivex/Observable;
 
     move-result-object p1
 
     return-object p1
 .end method
 
-.method private final a(Lcom/vk/dto/stories/model/actions/ActionSticker;)Lc/a/m;
+.method private final a(Lcom/vk/dto/stories/model/actions/ActionSticker;)Lio/reactivex/Observable;
     .locals 5
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
             "Lcom/vk/dto/stories/model/actions/ActionSticker;",
             ")",
-            "Lc/a/m<",
+            "Lio/reactivex/Observable<",
             "+",
             "Lcom/vk/attachpicker/stickers/ISticker;",
             ">;"
@@ -829,7 +829,7 @@
     .end annotation
 
     .line 116
-    sget-object v0, Lcom/vk/stickers/t;->l:Lcom/vk/stickers/t;
+    sget-object v0, Lcom/vk/stickers/Stickers;->l:Lcom/vk/stickers/Stickers;
 
     invoke-virtual {p1}, Lcom/vk/dto/stories/model/actions/ActionSticker;->v1()I
 
@@ -839,7 +839,7 @@
 
     move-result v2
 
-    invoke-virtual {v0, v1, v2}, Lcom/vk/stickers/t;->a(II)Lcom/vk/dto/stickers/StickerItem;
+    invoke-virtual {v0, v1, v2}, Lcom/vk/stickers/Stickers;->a(II)Lcom/vk/dto/stickers/StickerItem;
 
     move-result-object v0
 
@@ -937,7 +937,7 @@
     .line 125
     sget-object v1, Lcom/vk/stickers/views/animation/VKAnimationLoader;->d:Lcom/vk/stickers/views/animation/VKAnimationLoader;
 
-    invoke-virtual {v1, v0}, Lcom/vk/stickers/views/animation/VKAnimationLoader;->a(Ljava/lang/String;)Lc/a/m;
+    invoke-virtual {v1, v0}, Lcom/vk/stickers/views/animation/VKAnimationLoader;->a(Ljava/lang/String;)Lio/reactivex/Observable;
 
     move-result-object v0
 
@@ -945,7 +945,7 @@
 
     invoke-direct {v1, p1, v3}, Lcom/vk/stories/clickable/box/StoryBoxConverter$f;-><init>(Lcom/vk/dto/stories/model/actions/ActionSticker;Ljava/lang/String;)V
 
-    invoke-virtual {v0, v1}, Lc/a/m;->e(Lc/a/z/j;)Lc/a/m;
+    invoke-virtual {v0, v1}, Lio/reactivex/Observable;->e(Lio/reactivex/functions/Function;)Lio/reactivex/Observable;
 
     move-result-object v1
 
@@ -955,7 +955,7 @@
     :cond_2
     sget-object v1, Lcom/vk/stickers/views/animation/VKAnimationLoader;->d:Lcom/vk/stickers/views/animation/VKAnimationLoader;
 
-    invoke-virtual {v1, v0, v3}, Lcom/vk/stickers/views/animation/VKAnimationLoader;->a(Ljava/lang/String;Ljava/lang/String;)Lc/a/m;
+    invoke-virtual {v1, v0, v3}, Lcom/vk/stickers/views/animation/VKAnimationLoader;->a(Ljava/lang/String;Ljava/lang/String;)Lio/reactivex/Observable;
 
     move-result-object v0
 
@@ -963,7 +963,7 @@
 
     invoke-direct {v1, p1, v3}, Lcom/vk/stories/clickable/box/StoryBoxConverter$g;-><init>(Lcom/vk/dto/stories/model/actions/ActionSticker;Ljava/lang/String;)V
 
-    invoke-virtual {v0, v1}, Lc/a/m;->e(Lc/a/z/j;)Lc/a/m;
+    invoke-virtual {v0, v1}, Lio/reactivex/Observable;->e(Lio/reactivex/functions/Function;)Lio/reactivex/Observable;
 
     move-result-object v1
 
@@ -977,7 +977,7 @@
 
     move-result-object v0
 
-    invoke-static {v0}, Lcom/vk/imageloader/VKImageLoader;->a(Landroid/net/Uri;)Lc/a/m;
+    invoke-static {v0}, Lcom/vk/imageloader/VKImageLoader;->a(Landroid/net/Uri;)Lio/reactivex/Observable;
 
     move-result-object v0
 
@@ -985,7 +985,7 @@
 
     invoke-direct {v1, p0, p1, v3}, Lcom/vk/stories/clickable/box/StoryBoxConverter$h;-><init>(Lcom/vk/stories/clickable/box/StoryBoxConverter;Lcom/vk/dto/stories/model/actions/ActionSticker;Ljava/lang/String;)V
 
-    invoke-virtual {v0, v1}, Lc/a/m;->e(Lc/a/z/j;)Lc/a/m;
+    invoke-virtual {v0, v1}, Lio/reactivex/Observable;->e(Lio/reactivex/functions/Function;)Lio/reactivex/Observable;
 
     move-result-object v1
 
@@ -994,15 +994,15 @@
     return-object v1
 .end method
 
-.method private final a(Lcom/vk/dto/stories/model/actions/ActionText;)Lc/a/m;
+.method private final a(Lcom/vk/dto/stories/model/actions/ActionText;)Lio/reactivex/Observable;
     .locals 13
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
             "Lcom/vk/dto/stories/model/actions/ActionText;",
             ")",
-            "Lc/a/m<",
-            "Lcom/vk/attachpicker/stickers/text/h;",
+            "Lio/reactivex/Observable<",
+            "Lcom/vk/attachpicker/stickers/text/TextSticker;",
             ">;"
         }
     .end annotation
@@ -1077,7 +1077,7 @@
     const v2, 0x7f060035
 
     .line 89
-    invoke-static {v2}, Lcom/vk/core/util/y0;->b(I)I
+    invoke-static {v2}, Lcom/vk/core/util/ResUtils;->b(I)I
 
     move-result v2
 
@@ -1096,7 +1096,7 @@
 
     .line 91
     :goto_3
-    invoke-static {v4}, Lcom/vk/attachpicker/stickers/text/g;->a(Ljava/lang/String;)Lcom/vk/attachpicker/stickers/text/b;
+    invoke-static {v4}, Lcom/vk/attachpicker/stickers/text/StoryFontStyles;->a(Ljava/lang/String;)Lcom/vk/attachpicker/stickers/text/FontStyle;
 
     move-result-object v4
 
@@ -1105,7 +1105,7 @@
     const-string v5, "StoryFontStyles.createBy\u2026\n        ) ?: return null"
 
     .line 92
-    invoke-static {v4, v5}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v4, v5}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 93
     invoke-virtual {p1}, Lcom/vk/dto/stories/model/actions/ActionText;->t1()Ljava/lang/String;
@@ -1121,7 +1121,7 @@
 
     .line 94
     :goto_4
-    invoke-static {v4, v2, v5}, Lcom/vk/attachpicker/stickers/text/j;->a(Lcom/vk/attachpicker/stickers/text/b;ILjava/lang/String;)Lcom/vk/attachpicker/stickers/text/j;
+    invoke-static {v4, v2, v5}, Lcom/vk/attachpicker/stickers/text/TextStickerInfo;->a(Lcom/vk/attachpicker/stickers/text/FontStyle;ILjava/lang/String;)Lcom/vk/attachpicker/stickers/text/TextStickerInfo;
 
     move-result-object v5
 
@@ -1130,30 +1130,30 @@
     const-string v6, "TextStickerInfo.createFr\u2026\n        ) ?: return null"
 
     .line 95
-    invoke-static {v5, v6}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v5, v6}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 96
     invoke-virtual {p1}, Lcom/vk/dto/stories/model/actions/ActionText;->u1()Ljava/lang/String;
 
     move-result-object v6
 
-    invoke-static {v6}, Lcom/vk/attachpicker/stickers/text/f;->a(Ljava/lang/String;)Lcom/vk/attachpicker/stickers/text/a;
+    invoke-static {v6}, Lcom/vk/attachpicker/stickers/text/StoryBackgroundStyles;->a(Ljava/lang/String;)Lcom/vk/attachpicker/stickers/text/BackgroundStyle;
 
     move-result-object v6
 
     .line 97
-    iput v2, v5, Lcom/vk/attachpicker/stickers/text/j;->f:I
+    iput v2, v5, Lcom/vk/attachpicker/stickers/text/TextStickerInfo;->f:I
 
     if-eqz v6, :cond_8
 
     .line 98
-    invoke-interface {v4}, Lcom/vk/attachpicker/stickers/text/b;->e()[Lcom/vk/attachpicker/stickers/text/a;
+    invoke-interface {v4}, Lcom/vk/attachpicker/stickers/text/FontStyle;->e()[Lcom/vk/attachpicker/stickers/text/BackgroundStyle;
 
     move-result-object v2
 
     const-string v7, "fontStyle.availableBackgroundStyles"
 
-    invoke-static {v2, v7}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v2, v7}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     array-length v7, v2
 
@@ -1169,13 +1169,13 @@
     const-string v11, "availableStyle"
 
     .line 99
-    invoke-static {v10, v11}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v10, v11}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    invoke-interface {v10}, Lcom/vk/attachpicker/stickers/text/a;->getId()I
+    invoke-interface {v10}, Lcom/vk/attachpicker/stickers/text/BackgroundStyle;->getId()I
 
     move-result v11
 
-    invoke-interface {v6}, Lcom/vk/attachpicker/stickers/text/a;->getId()I
+    invoke-interface {v6}, Lcom/vk/attachpicker/stickers/text/BackgroundStyle;->getId()I
 
     move-result v12
 
@@ -1210,19 +1210,19 @@
     if-eqz v1, :cond_8
 
     .line 100
-    invoke-interface {v6, v5}, Lcom/vk/attachpicker/stickers/text/e;->a(Lcom/vk/attachpicker/stickers/text/j;)V
+    invoke-interface {v6, v5}, Lcom/vk/attachpicker/stickers/text/StickerStyle;->a(Lcom/vk/attachpicker/stickers/text/TextStickerInfo;)V
 
     .line 101
     :cond_8
-    invoke-virtual {v5, v4}, Lcom/vk/attachpicker/stickers/text/j;->a(Lcom/vk/attachpicker/stickers/text/b;)F
+    invoke-virtual {v5, v4}, Lcom/vk/attachpicker/stickers/text/TextStickerInfo;->a(Lcom/vk/attachpicker/stickers/text/FontStyle;)F
 
     move-result v1
 
     .line 102
-    invoke-interface {v4, v1}, Lcom/vk/attachpicker/stickers/text/b;->a(F)V
+    invoke-interface {v4, v1}, Lcom/vk/attachpicker/stickers/text/FontStyle;->a(F)V
 
     .line 103
-    invoke-interface {v4, v5}, Lcom/vk/attachpicker/stickers/text/e;->a(Lcom/vk/attachpicker/stickers/text/j;)V
+    invoke-interface {v4, v5}, Lcom/vk/attachpicker/stickers/text/StickerStyle;->a(Lcom/vk/attachpicker/stickers/text/TextStickerInfo;)V
 
     .line 104
     sget-object v1, Lcom/vk/dto/stories/model/clickable/ClickableMention;->C:Lcom/vk/dto/stories/model/clickable/ClickableMention$b;
@@ -1247,7 +1247,7 @@
 
     const-string v4, "Pattern.compile(\"#$HASHTAG_REGEXP_WITHOUT_PREFIX\")"
 
-    invoke-static {v3, v4}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v3, v4}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     new-instance v4, Lkotlin/text/Regex;
 
@@ -1262,21 +1262,21 @@
     move-result-object p1
 
     .line 109
-    invoke-static {p1, v2, v1}, Lcom/vk/extensions/k;->a(Ljava/lang/CharSequence;Lkotlin/text/Regex;Lkotlin/jvm/b/b;)Ljava/lang/CharSequence;
+    invoke-static {p1, v2, v1}, Lcom/vk/extensions/SpannableExt;->a(Ljava/lang/CharSequence;Lkotlin/text/Regex;Lkotlin/jvm/b/Functions2;)Ljava/lang/CharSequence;
 
     move-result-object p1
 
     .line 110
-    invoke-static {p1, v4, v3}, Lcom/vk/extensions/k;->a(Ljava/lang/CharSequence;Lkotlin/text/Regex;Lkotlin/jvm/b/b;)Ljava/lang/CharSequence;
+    invoke-static {p1, v4, v3}, Lcom/vk/extensions/SpannableExt;->a(Ljava/lang/CharSequence;Lkotlin/text/Regex;Lkotlin/jvm/b/Functions2;)Ljava/lang/CharSequence;
 
     move-result-object p1
 
     .line 111
-    new-instance v1, Lcom/vk/attachpicker/stickers/text/h;
+    new-instance v1, Lcom/vk/attachpicker/stickers/text/TextSticker;
 
-    invoke-direct {v1, v0, p1, v5}, Lcom/vk/attachpicker/stickers/text/h;-><init>(ILjava/lang/CharSequence;Lcom/vk/attachpicker/stickers/text/j;)V
+    invoke-direct {v1, v0, p1, v5}, Lcom/vk/attachpicker/stickers/text/TextSticker;-><init>(ILjava/lang/CharSequence;Lcom/vk/attachpicker/stickers/text/TextStickerInfo;)V
 
-    invoke-direct {p0, v1}, Lcom/vk/stories/clickable/box/StoryBoxConverter;->a(Ljava/lang/Object;)Lc/a/m;
+    invoke-direct {p0, v1}, Lcom/vk/stories/clickable/box/StoryBoxConverter;->a(Ljava/lang/Object;)Lio/reactivex/Observable;
 
     move-result-object p1
 
@@ -1286,15 +1286,15 @@
     return-object v3
 .end method
 
-.method private final a(Lcom/vk/dto/stories/model/actions/ActionTime;)Lc/a/m;
+.method private final a(Lcom/vk/dto/stories/model/actions/ActionTime;)Lio/reactivex/Observable;
     .locals 5
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
             "Lcom/vk/dto/stories/model/actions/ActionTime;",
             ")",
-            "Lc/a/m<",
-            "Lcom/vk/stories/clickable/stickers/i;",
+            "Lio/reactivex/Observable<",
+            "Lcom/vk/stories/clickable/stickers/StoryTimerSticker;",
             ">;"
         }
     .end annotation
@@ -1354,10 +1354,10 @@
 
     .line 41
     :goto_0
-    new-instance v1, Lcom/vk/stories/clickable/stickers/i;
+    new-instance v1, Lcom/vk/stories/clickable/stickers/StoryTimerSticker;
 
     .line 42
-    new-instance v2, Lcom/vk/stories/clickable/models/time/b;
+    new-instance v2, Lcom/vk/stories/clickable/models/time/TimeStickerInfo;
 
     const/4 v3, 0x0
 
@@ -1372,27 +1372,27 @@
     move-result-object p1
 
     .line 45
-    invoke-direct {v2, v3, v0, v4, p1}, Lcom/vk/stories/clickable/models/time/b;-><init>(ZLcom/vk/stories/clickable/models/time/StoryTimeHolder;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-direct {v2, v3, v0, v4, p1}, Lcom/vk/stories/clickable/models/time/TimeStickerInfo;-><init>(ZLcom/vk/stories/clickable/models/time/StoryTimeHolder;Ljava/lang/String;Ljava/lang/String;)V
 
     .line 46
-    invoke-direct {v1, v2}, Lcom/vk/stories/clickable/stickers/i;-><init>(Lcom/vk/stories/clickable/models/time/b;)V
+    invoke-direct {v1, v2}, Lcom/vk/stories/clickable/stickers/StoryTimerSticker;-><init>(Lcom/vk/stories/clickable/models/time/TimeStickerInfo;)V
 
     .line 47
-    invoke-direct {p0, v1}, Lcom/vk/stories/clickable/box/StoryBoxConverter;->a(Ljava/lang/Object;)Lc/a/m;
+    invoke-direct {p0, v1}, Lcom/vk/stories/clickable/box/StoryBoxConverter;->a(Ljava/lang/Object;)Lio/reactivex/Observable;
 
     move-result-object p1
 
     return-object p1
 .end method
 
-.method private final a(Lcom/vk/dto/stories/model/web/NativeSticker;)Lc/a/m;
+.method private final a(Lcom/vk/dto/stories/model/web/NativeSticker;)Lio/reactivex/Observable;
     .locals 2
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
             "Lcom/vk/dto/stories/model/web/NativeSticker;",
             ")",
-            "Lc/a/m<",
+            "Lio/reactivex/Observable<",
             "+",
             "Lcom/vk/attachpicker/stickers/ISticker;",
             ">;"
@@ -1411,7 +1411,7 @@
 
     check-cast v0, Lcom/vk/dto/stories/model/actions/ActionHashtag;
 
-    invoke-direct {p0, v0}, Lcom/vk/stories/clickable/box/StoryBoxConverter;->a(Lcom/vk/dto/stories/model/actions/ActionHashtag;)Lc/a/m;
+    invoke-direct {p0, v0}, Lcom/vk/stories/clickable/box/StoryBoxConverter;->a(Lcom/vk/dto/stories/model/actions/ActionHashtag;)Lio/reactivex/Observable;
 
     move-result-object p1
 
@@ -1425,7 +1425,7 @@
 
     check-cast v0, Lcom/vk/dto/stories/model/actions/ActionMention;
 
-    invoke-direct {p0, v0}, Lcom/vk/stories/clickable/box/StoryBoxConverter;->a(Lcom/vk/dto/stories/model/actions/ActionMention;)Lc/a/m;
+    invoke-direct {p0, v0}, Lcom/vk/stories/clickable/box/StoryBoxConverter;->a(Lcom/vk/dto/stories/model/actions/ActionMention;)Lio/reactivex/Observable;
 
     move-result-object p1
 
@@ -1439,7 +1439,7 @@
 
     check-cast v0, Lcom/vk/dto/stories/model/actions/ActionTime;
 
-    invoke-direct {p0, v0}, Lcom/vk/stories/clickable/box/StoryBoxConverter;->a(Lcom/vk/dto/stories/model/actions/ActionTime;)Lc/a/m;
+    invoke-direct {p0, v0}, Lcom/vk/stories/clickable/box/StoryBoxConverter;->a(Lcom/vk/dto/stories/model/actions/ActionTime;)Lio/reactivex/Observable;
 
     move-result-object p1
 
@@ -1453,7 +1453,7 @@
 
     check-cast v0, Lcom/vk/dto/stories/model/actions/ActionPlace;
 
-    invoke-direct {p0, v0}, Lcom/vk/stories/clickable/box/StoryBoxConverter;->a(Lcom/vk/dto/stories/model/actions/ActionPlace;)Lc/a/m;
+    invoke-direct {p0, v0}, Lcom/vk/stories/clickable/box/StoryBoxConverter;->a(Lcom/vk/dto/stories/model/actions/ActionPlace;)Lio/reactivex/Observable;
 
     move-result-object p1
 
@@ -1467,7 +1467,7 @@
 
     check-cast v0, Lcom/vk/dto/stories/model/actions/ActionQuestion;
 
-    invoke-direct {p0, v0}, Lcom/vk/stories/clickable/box/StoryBoxConverter;->a(Lcom/vk/dto/stories/model/actions/ActionQuestion;)Lc/a/m;
+    invoke-direct {p0, v0}, Lcom/vk/stories/clickable/box/StoryBoxConverter;->a(Lcom/vk/dto/stories/model/actions/ActionQuestion;)Lio/reactivex/Observable;
 
     move-result-object p1
 
@@ -1481,7 +1481,7 @@
 
     check-cast v0, Lcom/vk/dto/stories/model/actions/ActionText;
 
-    invoke-direct {p0, v0}, Lcom/vk/stories/clickable/box/StoryBoxConverter;->a(Lcom/vk/dto/stories/model/actions/ActionText;)Lc/a/m;
+    invoke-direct {p0, v0}, Lcom/vk/stories/clickable/box/StoryBoxConverter;->a(Lcom/vk/dto/stories/model/actions/ActionText;)Lio/reactivex/Observable;
 
     move-result-object p1
 
@@ -1495,7 +1495,7 @@
 
     check-cast v0, Lcom/vk/dto/stories/model/actions/ActionEmoji;
 
-    invoke-direct {p0, v0}, Lcom/vk/stories/clickable/box/StoryBoxConverter;->a(Lcom/vk/dto/stories/model/actions/ActionEmoji;)Lc/a/m;
+    invoke-direct {p0, v0}, Lcom/vk/stories/clickable/box/StoryBoxConverter;->a(Lcom/vk/dto/stories/model/actions/ActionEmoji;)Lio/reactivex/Observable;
 
     move-result-object p1
 
@@ -1509,7 +1509,7 @@
 
     check-cast v0, Lcom/vk/dto/stories/model/actions/ActionSticker;
 
-    invoke-direct {p0, v0}, Lcom/vk/stories/clickable/box/StoryBoxConverter;->a(Lcom/vk/dto/stories/model/actions/ActionSticker;)Lc/a/m;
+    invoke-direct {p0, v0}, Lcom/vk/stories/clickable/box/StoryBoxConverter;->a(Lcom/vk/dto/stories/model/actions/ActionSticker;)Lio/reactivex/Observable;
 
     move-result-object p1
 
@@ -1523,7 +1523,7 @@
 
     check-cast v0, Lcom/vk/dto/stories/model/actions/ActionMarketItem;
 
-    invoke-direct {p0, v0}, Lcom/vk/stories/clickable/box/StoryBoxConverter;->a(Lcom/vk/dto/stories/model/actions/ActionMarketItem;)Lc/a/m;
+    invoke-direct {p0, v0}, Lcom/vk/stories/clickable/box/StoryBoxConverter;->a(Lcom/vk/dto/stories/model/actions/ActionMarketItem;)Lio/reactivex/Observable;
 
     move-result-object p1
 
@@ -1545,7 +1545,7 @@
 
     move-result-object p1
 
-    invoke-static {p1}, Lcom/vk/core/util/q;->a(Ljava/lang/String;)V
+    invoke-static {p1}, Lcom/vk/core/util/DebugUtils;->a(Ljava/lang/String;)V
 
     const/4 p1, 0x0
 
@@ -1553,14 +1553,14 @@
     return-object p1
 .end method
 
-.method private final a(Lcom/vk/dto/stories/model/web/RenderableSticker;)Lc/a/m;
+.method private final a(Lcom/vk/dto/stories/model/web/RenderableSticker;)Lio/reactivex/Observable;
     .locals 2
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
             "Lcom/vk/dto/stories/model/web/RenderableSticker;",
             ")",
-            "Lc/a/m<",
+            "Lio/reactivex/Observable<",
             "Lcom/vk/attachpicker/stickers/ISticker;",
             ">;"
         }
@@ -1579,7 +1579,7 @@
 
     move-result-object v0
 
-    invoke-static {v0}, Lcom/vk/imageloader/VKImageLoader;->b(Landroid/net/Uri;)Lc/a/m;
+    invoke-static {v0}, Lcom/vk/imageloader/VKImageLoader;->b(Landroid/net/Uri;)Lio/reactivex/Observable;
 
     move-result-object v0
 
@@ -1587,28 +1587,28 @@
 
     invoke-direct {v1, p1}, Lcom/vk/stories/clickable/box/StoryBoxConverter$b;-><init>(Lcom/vk/dto/stories/model/web/RenderableSticker;)V
 
-    invoke-virtual {v0, v1}, Lc/a/m;->e(Lc/a/z/j;)Lc/a/m;
+    invoke-virtual {v0, v1}, Lio/reactivex/Observable;->e(Lio/reactivex/functions/Function;)Lio/reactivex/Observable;
 
     move-result-object p1
 
     return-object p1
 
     :cond_0
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     const/4 p1, 0x0
 
     throw p1
 .end method
 
-.method private final a(Lcom/vk/dto/stories/model/web/WebSticker;)Lc/a/m;
+.method private final a(Lcom/vk/dto/stories/model/web/WebSticker;)Lio/reactivex/Observable;
     .locals 2
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
             "Lcom/vk/dto/stories/model/web/WebSticker;",
             ")",
-            "Lc/a/m<",
+            "Lio/reactivex/Observable<",
             "+",
             "Lcom/vk/attachpicker/stickers/ISticker;",
             ">;"
@@ -1626,7 +1626,7 @@
 
     check-cast v0, Lcom/vk/dto/stories/model/web/RenderableSticker;
 
-    invoke-direct {p0, v0}, Lcom/vk/stories/clickable/box/StoryBoxConverter;->c(Lcom/vk/dto/stories/model/web/RenderableSticker;)Lc/a/m;
+    invoke-direct {p0, v0}, Lcom/vk/stories/clickable/box/StoryBoxConverter;->c(Lcom/vk/dto/stories/model/web/RenderableSticker;)Lio/reactivex/Observable;
 
     move-result-object v0
 
@@ -1642,7 +1642,7 @@
 
     check-cast v0, Lcom/vk/dto/stories/model/web/NativeSticker;
 
-    invoke-direct {p0, v0}, Lcom/vk/stories/clickable/box/StoryBoxConverter;->a(Lcom/vk/dto/stories/model/web/NativeSticker;)Lc/a/m;
+    invoke-direct {p0, v0}, Lcom/vk/stories/clickable/box/StoryBoxConverter;->a(Lcom/vk/dto/stories/model/web/NativeSticker;)Lio/reactivex/Observable;
 
     move-result-object v0
 
@@ -1659,7 +1659,7 @@
 
     invoke-direct {v1, p0, p1}, Lcom/vk/stories/clickable/box/StoryBoxConverter$d;-><init>(Lcom/vk/stories/clickable/box/StoryBoxConverter;Lcom/vk/dto/stories/model/web/WebSticker;)V
 
-    invoke-virtual {v0, v1}, Lc/a/m;->d(Lc/a/z/g;)Lc/a/m;
+    invoke-virtual {v0, v1}, Lio/reactivex/Observable;->d(Lio/reactivex/functions/Consumer;)Lio/reactivex/Observable;
 
     move-result-object v1
 
@@ -1667,26 +1667,26 @@
     return-object v1
 .end method
 
-.method private final a(Ljava/lang/Object;)Lc/a/m;
+.method private final a(Ljava/lang/Object;)Lio/reactivex/Observable;
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "<T:",
             "Ljava/lang/Object;",
             ">(TT;)",
-            "Lc/a/m<",
+            "Lio/reactivex/Observable<",
             "TT;>;"
         }
     .end annotation
 
     .line 137
-    invoke-static {p1}, Lc/a/m;->e(Ljava/lang/Object;)Lc/a/m;
+    invoke-static {p1}, Lio/reactivex/Observable;->e(Ljava/lang/Object;)Lio/reactivex/Observable;
 
     move-result-object p1
 
     const-string v0, "Observable.just(this)"
 
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     return-object p1
 .end method
@@ -1892,7 +1892,7 @@
 
     move-result-object p1
 
-    invoke-static {p1}, Lcom/vk/core/util/q;->a(Ljava/lang/String;)V
+    invoke-static {p1}, Lcom/vk/core/util/DebugUtils;->a(Ljava/lang/String;)V
 
     .line 13
     :goto_3
@@ -1922,14 +1922,14 @@
     .end sparse-switch
 .end method
 
-.method private final b(Lcom/vk/dto/stories/model/web/RenderableSticker;)Lc/a/m;
+.method private final b(Lcom/vk/dto/stories/model/web/RenderableSticker;)Lio/reactivex/Observable;
     .locals 2
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
             "Lcom/vk/dto/stories/model/web/RenderableSticker;",
             ")",
-            "Lc/a/m<",
+            "Lio/reactivex/Observable<",
             "Lcom/vk/attachpicker/stickers/ISticker;",
             ">;"
         }
@@ -1948,7 +1948,7 @@
 
     move-result-object v0
 
-    invoke-static {v0}, Lcom/vk/imageloader/VKImageLoader;->a(Landroid/net/Uri;)Lc/a/m;
+    invoke-static {v0}, Lcom/vk/imageloader/VKImageLoader;->a(Landroid/net/Uri;)Lio/reactivex/Observable;
 
     move-result-object v0
 
@@ -1957,7 +1957,7 @@
 
     invoke-direct {v1, p1}, Lcom/vk/stories/clickable/box/StoryBoxConverter$c;-><init>(Lcom/vk/dto/stories/model/web/RenderableSticker;)V
 
-    invoke-virtual {v0, v1}, Lc/a/m;->e(Lc/a/z/j;)Lc/a/m;
+    invoke-virtual {v0, v1}, Lio/reactivex/Observable;->e(Lio/reactivex/functions/Function;)Lio/reactivex/Observable;
 
     move-result-object p1
 
@@ -1965,21 +1965,21 @@
 
     .line 16
     :cond_0
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     const/4 p1, 0x0
 
     throw p1
 .end method
 
-.method private final c(Lcom/vk/dto/stories/model/web/RenderableSticker;)Lc/a/m;
+.method private final c(Lcom/vk/dto/stories/model/web/RenderableSticker;)Lio/reactivex/Observable;
     .locals 3
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
             "Lcom/vk/dto/stories/model/web/RenderableSticker;",
             ")",
-            "Lc/a/m<",
+            "Lio/reactivex/Observable<",
             "Lcom/vk/attachpicker/stickers/ISticker;",
             ">;"
         }
@@ -2014,7 +2014,7 @@
 
     if-eqz v0, :cond_2
 
-    invoke-direct {p0, p1}, Lcom/vk/stories/clickable/box/StoryBoxConverter;->b(Lcom/vk/dto/stories/model/web/RenderableSticker;)Lc/a/m;
+    invoke-direct {p0, p1}, Lcom/vk/stories/clickable/box/StoryBoxConverter;->b(Lcom/vk/dto/stories/model/web/RenderableSticker;)Lio/reactivex/Observable;
 
     move-result-object p1
 
@@ -2030,7 +2030,7 @@
 
     if-eqz v0, :cond_2
 
-    invoke-direct {p0, p1}, Lcom/vk/stories/clickable/box/StoryBoxConverter;->a(Lcom/vk/dto/stories/model/web/RenderableSticker;)Lc/a/m;
+    invoke-direct {p0, p1}, Lcom/vk/stories/clickable/box/StoryBoxConverter;->a(Lcom/vk/dto/stories/model/web/RenderableSticker;)Lio/reactivex/Observable;
 
     move-result-object p1
 
@@ -2041,7 +2041,7 @@
     const-string p1, "Create video sticker not implementation yet"
 
     .line 12
-    invoke-static {p1}, Lcom/vk/core/util/q;->a(Ljava/lang/String;)V
+    invoke-static {p1}, Lcom/vk/core/util/DebugUtils;->a(Ljava/lang/String;)V
 
     const/4 p1, 0x0
 
@@ -2129,14 +2129,14 @@
 
 
 # virtual methods
-.method public final a(Lcom/vk/dto/stories/model/web/StoryBox;)Lc/a/m;
+.method public final a(Lcom/vk/dto/stories/model/web/StoryBox;)Lio/reactivex/Observable;
     .locals 2
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
             "Lcom/vk/dto/stories/model/web/StoryBox;",
             ")",
-            "Lc/a/m<",
+            "Lio/reactivex/Observable<",
             "+",
             "Ljava/util/List<",
             "Lcom/vk/attachpicker/stickers/ISticker;",
@@ -2177,7 +2177,7 @@
     check-cast v1, Lcom/vk/dto/stories/model/web/WebSticker;
 
     .line 7
-    invoke-direct {p0, v1}, Lcom/vk/stories/clickable/box/StoryBoxConverter;->a(Lcom/vk/dto/stories/model/web/WebSticker;)Lc/a/m;
+    invoke-direct {p0, v1}, Lcom/vk/stories/clickable/box/StoryBoxConverter;->a(Lcom/vk/dto/stories/model/web/WebSticker;)Lio/reactivex/Observable;
 
     move-result-object v1
 
@@ -2190,9 +2190,9 @@
 
     .line 9
     :cond_1
-    sget-object p1, Lcom/vk/core/util/z0;->a:Lcom/vk/core/util/z0;
+    sget-object p1, Lcom/vk/core/util/RxUtil;->a:Lcom/vk/core/util/RxUtil;
 
-    invoke-virtual {p1, v0}, Lcom/vk/core/util/z0;->a(Ljava/util/List;)Lc/a/m;
+    invoke-virtual {p1, v0}, Lcom/vk/core/util/RxUtil;->a(Ljava/util/List;)Lio/reactivex/Observable;
 
     move-result-object p1
 

@@ -20,16 +20,16 @@
 # instance fields
 .field final synthetic a:Lcom/vk/search/view/PeopleSearchParamsView;
 
-.field final synthetic b:Lcom/vtosters/lite/ui/adapters/l;
+.field final synthetic b:Lcom/vtosters/lite/ui/adapters/RelationAdapter;
 
 
 # direct methods
-.method constructor <init>(Lcom/vk/search/view/PeopleSearchParamsView;Lcom/vtosters/lite/ui/adapters/l;)V
+.method constructor <init>(Lcom/vk/search/view/PeopleSearchParamsView;Lcom/vtosters/lite/ui/adapters/RelationAdapter;)V
     .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lcom/vtosters/lite/ui/adapters/l;",
+            "Lcom/vtosters/lite/ui/adapters/RelationAdapter;",
             ")V"
         }
     .end annotation
@@ -37,7 +37,7 @@
     .line 1
     iput-object p1, p0, Lcom/vk/search/view/PeopleSearchParamsView$d;->a:Lcom/vk/search/view/PeopleSearchParamsView;
 
-    iput-object p2, p0, Lcom/vk/search/view/PeopleSearchParamsView$d;->b:Lcom/vtosters/lite/ui/adapters/l;
+    iput-object p2, p0, Lcom/vk/search/view/PeopleSearchParamsView$d;->b:Lcom/vtosters/lite/ui/adapters/RelationAdapter;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -61,7 +61,7 @@
     .line 1
     iget-object p1, p0, Lcom/vk/search/view/PeopleSearchParamsView$d;->a:Lcom/vk/search/view/PeopleSearchParamsView;
 
-    iget-object p2, p0, Lcom/vk/search/view/PeopleSearchParamsView$d;->b:Lcom/vtosters/lite/ui/adapters/l;
+    iget-object p2, p0, Lcom/vk/search/view/PeopleSearchParamsView$d;->b:Lcom/vtosters/lite/ui/adapters/RelationAdapter;
 
     invoke-virtual {p2, p3}, Landroid/widget/ArrayAdapter;->getItem(I)Ljava/lang/Object;
 

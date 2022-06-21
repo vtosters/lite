@@ -39,7 +39,7 @@
 
     move-object v1, p1
 
-    invoke-direct/range {v0 .. v5}, Lcom/vk/music/subscription/MusicSubscriptionDetailsContainer;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;IILkotlin/jvm/internal/i;)V
+    invoke-direct/range {v0 .. v5}, Lcom/vk/music/subscription/MusicSubscriptionDetailsContainer;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;IILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     return-void
 .end method
@@ -59,7 +59,7 @@
 
     move-object v2, p2
 
-    invoke-direct/range {v0 .. v5}, Lcom/vk/music/subscription/MusicSubscriptionDetailsContainer;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;IILkotlin/jvm/internal/i;)V
+    invoke-direct/range {v0 .. v5}, Lcom/vk/music/subscription/MusicSubscriptionDetailsContainer;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;IILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     return-void
 .end method
@@ -88,7 +88,7 @@
 
     const-string p2, "findViewById(R.id.music_subscription_title)"
 
-    invoke-static {p1, p2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, p2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     check-cast p1, Landroid/widget/TextView;
 
@@ -103,7 +103,7 @@
 
     const-string p2, "findViewById(R.id.active_indicator)"
 
-    invoke-static {p1, p2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, p2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     iput-object p1, p0, Lcom/vk/music/subscription/MusicSubscriptionDetailsContainer;->c:Landroid/view/View;
 
@@ -120,7 +120,7 @@
 
     const-string p3, "findViewById(R.id.music_subscription_option_1)"
 
-    invoke-static {p2, p3}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p2, p3}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     check-cast p2, Landroid/widget/TextView;
 
@@ -137,7 +137,7 @@
 
     const-string p3, "findViewById(R.id.music_subscription_option_2)"
 
-    invoke-static {p2, p3}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p2, p3}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     check-cast p2, Landroid/widget/TextView;
 
@@ -154,7 +154,7 @@
 
     const-string p3, "findViewById(R.id.music_subscription_option_3)"
 
-    invoke-static {p2, p3}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p2, p3}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     check-cast p2, Landroid/widget/TextView;
 
@@ -171,7 +171,7 @@
 
     const-string p3, "findViewById(R.id.music_subscription_option_4)"
 
-    invoke-static {p2, p3}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p2, p3}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     check-cast p2, Landroid/widget/TextView;
 
@@ -188,7 +188,7 @@
 
     const-string p3, "findViewById(R.id.music_subscription_option_5)"
 
-    invoke-static {p2, p3}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p2, p3}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     check-cast p2, Landroid/widget/TextView;
 
@@ -212,7 +212,7 @@
 
     const-string p2, "findViewById(R.id.music_cancel_dialog)"
 
-    invoke-static {p1, p2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, p2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     iput-object p1, p0, Lcom/vk/music/subscription/MusicSubscriptionDetailsContainer;->d:Landroid/view/View;
 
@@ -225,7 +225,7 @@
 
     const-string p2, "findViewById(R.id.buy_music_subscription_btn)"
 
-    invoke-static {p1, p2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, p2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     check-cast p1, Lcom/vk/music/ui/subscription/BuyMusicSubscriptionButton;
 
@@ -234,7 +234,7 @@
     return-void
 .end method
 
-.method public synthetic constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;IILkotlin/jvm/internal/i;)V
+.method public synthetic constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;IILkotlin/jvm/internal/DefaultConstructorMarker;)V
     .locals 0
 
     and-int/lit8 p5, p4, 0x2
@@ -355,7 +355,7 @@
         value = {
             "(",
             "Ljava/util/List<",
-            "Lcom/vk/music/subscription/c;",
+            "Lcom/vk/music/subscription/SubscriptionOption;",
             ">;I)V"
         }
     .end annotation
@@ -442,9 +442,9 @@
 
     move-result-object v4
 
-    check-cast v4, Lcom/vk/music/subscription/c;
+    check-cast v4, Lcom/vk/music/subscription/SubscriptionOption;
 
-    invoke-virtual {v4}, Lcom/vk/music/subscription/c;->b()I
+    invoke-virtual {v4}, Lcom/vk/music/subscription/SubscriptionOption;->b()I
 
     move-result v4
 
@@ -455,15 +455,15 @@
 
     move-result-object v2
 
-    check-cast v2, Lcom/vk/music/subscription/c;
+    check-cast v2, Lcom/vk/music/subscription/SubscriptionOption;
 
-    invoke-virtual {v2}, Lcom/vk/music/subscription/c;->a()I
+    invoke-virtual {v2}, Lcom/vk/music/subscription/SubscriptionOption;->a()I
 
     move-result v2
 
     sget v4, Lcom/vk/music/m/a;->accent:I
 
-    invoke-static {v1, v2, v4}, Lcom/vk/core/extensions/a0;->d(Landroid/widget/TextView;II)V
+    invoke-static {v1, v2, v4}, Lcom/vk/core/extensions/TextViewExt;->d(Landroid/widget/TextView;II)V
 
     goto :goto_3
 
@@ -557,15 +557,15 @@
     throw p1
 .end method
 
-.method public final a(Lkotlin/jvm/b/b;Landroid/view/View$OnClickListener;)V
+.method public final a(Lkotlin/jvm/b/Functions2;Landroid/view/View$OnClickListener;)V
     .locals 4
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lkotlin/jvm/b/b<",
+            "Lkotlin/jvm/b/Functions2<",
             "-",
             "Lcom/vk/dto/common/data/Subscription;",
-            "Lkotlin/m;",
+            "Lkotlin/Unit;",
             ">;",
             "Landroid/view/View$OnClickListener;",
             ")V"
@@ -600,12 +600,12 @@
 
     .line 16
     :cond_1
-    invoke-virtual {v0}, Lcom/vk/music/ui/subscription/BuyMusicSubscriptionButton;->getOnBuySubscriptionClickedListener()Lkotlin/jvm/b/b;
+    invoke-virtual {v0}, Lcom/vk/music/ui/subscription/BuyMusicSubscriptionButton;->getOnBuySubscriptionClickedListener()Lkotlin/jvm/b/Functions2;
 
     move-result-object p1
 
     :goto_1
-    invoke-virtual {v0, p1}, Lcom/vk/music/ui/subscription/BuyMusicSubscriptionButton;->setOnBuySubscriptionClickedListener(Lkotlin/jvm/b/b;)V
+    invoke-virtual {v0, p1}, Lcom/vk/music/ui/subscription/BuyMusicSubscriptionButton;->setOnBuySubscriptionClickedListener(Lkotlin/jvm/b/Functions2;)V
 
     .line 17
     iget-object p1, p0, Lcom/vk/music/subscription/MusicSubscriptionDetailsContainer;->d:Landroid/view/View;

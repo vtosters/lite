@@ -3,7 +3,7 @@
 .source "AddLinkPresenter.kt"
 
 # interfaces
-.implements Lc/a/z/j;
+.implements Lio/reactivex/functions/Function;
 
 
 # annotations
@@ -24,9 +24,9 @@
         "Ljava/lang/Object;",
         ">",
         "Ljava/lang/Object;",
-        "Lc/a/z/j<",
+        "Lio/reactivex/functions/Function<",
         "TT;",
-        "Lc/a/p<",
+        "Lio/reactivex/ObservableSource<",
         "+TR;>;>;"
     }
 .end annotation
@@ -49,21 +49,21 @@
 
 
 # virtual methods
-.method public final a(Ljava/lang/Long;)Lc/a/m;
+.method public final a(Ljava/lang/Long;)Lio/reactivex/Observable;
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
             "Ljava/lang/Long;",
             ")",
-            "Lc/a/m<",
+            "Lio/reactivex/Observable<",
             "Lcom/vk/dto/actionlinks/CheckLinkResponse;",
             ">;"
         }
     .end annotation
 
     .line 1
-    sget-object p1, Lcom/vtosters/lite/actionlinks/b/b;->a:Lcom/vtosters/lite/actionlinks/b/b;
+    sget-object p1, Lcom/vtosters/lite/actionlinks/b/ActionLinksController;->a:Lcom/vtosters/lite/actionlinks/b/ActionLinksController;
 
     iget-object v0, p0, Lcom/vtosters/lite/actionlinks/views/fragments/add/AddLinkPresenter$c;->a:Lcom/vtosters/lite/actionlinks/views/fragments/add/AddLinkPresenter;
 
@@ -71,7 +71,7 @@
 
     move-result-object v0
 
-    invoke-virtual {p1, v0}, Lcom/vtosters/lite/actionlinks/b/b;->a(Ljava/lang/String;)Lc/a/m;
+    invoke-virtual {p1, v0}, Lcom/vtosters/lite/actionlinks/b/ActionLinksController;->a(Ljava/lang/String;)Lio/reactivex/Observable;
 
     move-result-object p1
 
@@ -84,7 +84,7 @@
     .line 1
     check-cast p1, Ljava/lang/Long;
 
-    invoke-virtual {p0, p1}, Lcom/vtosters/lite/actionlinks/views/fragments/add/AddLinkPresenter$c;->a(Ljava/lang/Long;)Lc/a/m;
+    invoke-virtual {p0, p1}, Lcom/vtosters/lite/actionlinks/views/fragments/add/AddLinkPresenter$c;->a(Ljava/lang/Long;)Lio/reactivex/Observable;
 
     move-result-object p1
 

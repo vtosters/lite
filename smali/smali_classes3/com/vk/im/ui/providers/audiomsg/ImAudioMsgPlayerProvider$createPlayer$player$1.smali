@@ -3,7 +3,7 @@
 .source "ImAudioMsgPlayerProvider.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/b;
+.implements Lkotlin/jvm/b/Functions2;
 
 
 # annotations
@@ -19,9 +19,9 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/b<",
+        "Lkotlin/jvm/b/Functions2<",
         "Ljava/io/File;",
-        "Lb/h/j/b/a;",
+        "Lb/h/j/b/FileLruCacheManager;",
         ">;"
     }
 .end annotation
@@ -56,15 +56,15 @@
 
 
 # virtual methods
-.method public final a(Ljava/io/File;)Lb/h/j/b/a;
+.method public final a(Ljava/io/File;)Lb/h/j/b/FileLruCacheManager;
     .locals 3
 
     .line 1
-    new-instance v0, Lb/h/j/b/a;
+    new-instance v0, Lb/h/j/b/FileLruCacheManager;
 
     const-wide/32 v1, 0x1400000
 
-    invoke-direct {v0, p1, v1, v2}, Lb/h/j/b/a;-><init>(Ljava/io/File;J)V
+    invoke-direct {v0, p1, v1, v2}, Lb/h/j/b/FileLruCacheManager;-><init>(Ljava/io/File;J)V
 
     return-object v0
 .end method
@@ -75,7 +75,7 @@
     .line 1
     check-cast p1, Ljava/io/File;
 
-    invoke-virtual {p0, p1}, Lcom/vk/im/ui/providers/audiomsg/ImAudioMsgPlayerProvider$createPlayer$player$1;->a(Ljava/io/File;)Lb/h/j/b/a;
+    invoke-virtual {p0, p1}, Lcom/vk/im/ui/providers/audiomsg/ImAudioMsgPlayerProvider$createPlayer$player$1;->a(Ljava/io/File;)Lb/h/j/b/FileLruCacheManager;
 
     move-result-object p1
 

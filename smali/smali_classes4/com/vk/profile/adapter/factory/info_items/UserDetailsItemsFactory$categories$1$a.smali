@@ -44,13 +44,13 @@
     .line 1
     iget-object v0, p0, Lcom/vk/profile/adapter/factory/info_items/UserDetailsItemsFactory$categories$1$a;->b:Lcom/vtosters/lite/api/ExtendedUserProfile;
 
-    invoke-static {v0}, Lcom/vk/profile/utils/d;->d(Lcom/vtosters/lite/api/ExtendedUserProfile;)Z
+    invoke-static {v0}, Lcom/vk/profile/utils/ProfileExt;->d(Lcom/vtosters/lite/api/ExtendedUserProfile;)Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    invoke-static {}, Lcom/vk/core/ui/themes/d;->e()Z
+    invoke-static {}, Lcom/vk/core/ui/themes/MilkshakeHelper;->e()Z
 
     move-result v0
 
@@ -65,7 +65,7 @@
 
     iget-object v1, v1, Lcom/vk/profile/adapter/factory/info_items/UserDetailsItemsFactory$categories$1;->$context:Landroid/content/Context;
 
-    invoke-virtual {v0, v1}, Lcom/vk/navigation/o;->a(Landroid/content/Context;)V
+    invoke-virtual {v0, v1}, Lcom/vk/navigation/Navigator;->a(Landroid/content/Context;)V
 
     goto :goto_2
 
@@ -73,7 +73,7 @@
     :cond_0
     iget-object v0, p0, Lcom/vk/profile/adapter/factory/info_items/UserDetailsItemsFactory$categories$1$a;->b:Lcom/vtosters/lite/api/ExtendedUserProfile;
 
-    invoke-static {v0}, Lcom/vk/profile/utils/d;->b(Lcom/vtosters/lite/api/ExtendedUserProfile;)Z
+    invoke-static {v0}, Lcom/vk/profile/utils/ProfileExt;->b(Lcom/vtosters/lite/api/ExtendedUserProfile;)Z
 
     move-result v0
 
@@ -86,7 +86,7 @@
 
     iget-object v2, v2, Lcom/vk/profile/adapter/factory/info_items/UserDetailsItemsFactory$categories$1;->this$0:Lcom/vk/profile/adapter/factory/info_items/UserDetailsItemsFactory;
 
-    invoke-virtual {v2}, Lcom/vk/profile/adapter/b/a;->b()Landroid/content/res/Resources;
+    invoke-virtual {v2}, Lcom/vk/profile/adapter/b/BaseItemsFactory;->b()Landroid/content/res/Resources;
 
     move-result-object v2
 
@@ -114,7 +114,7 @@
 
     iget-object v2, v2, Lcom/vk/profile/adapter/factory/info_items/UserDetailsItemsFactory$categories$1;->this$0:Lcom/vk/profile/adapter/factory/info_items/UserDetailsItemsFactory;
 
-    invoke-virtual {v2}, Lcom/vk/profile/adapter/b/a;->b()Landroid/content/res/Resources;
+    invoke-virtual {v2}, Lcom/vk/profile/adapter/b/BaseItemsFactory;->b()Landroid/content/res/Resources;
 
     move-result-object v2
 
@@ -128,29 +128,29 @@
     const-string v3, "if (!onlyMutualFriends) \u2026                        }"
 
     .line 6
-    invoke-static {v2, v3}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v2, v3}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 7
     iget-object v3, p0, Lcom/vk/profile/adapter/factory/info_items/UserDetailsItemsFactory$categories$1$a;->b:Lcom/vtosters/lite/api/ExtendedUserProfile;
 
-    invoke-static {v3}, Lcom/vk/profile/utils/d;->d(Lcom/vtosters/lite/api/ExtendedUserProfile;)Z
+    invoke-static {v3}, Lcom/vk/profile/utils/ProfileExt;->d(Lcom/vtosters/lite/api/ExtendedUserProfile;)Z
 
     move-result v3
 
     if-eqz v3, :cond_2
 
     .line 8
-    new-instance v3, Lcom/vtosters/lite/fragments/friends/h/a$a;
+    new-instance v3, Lcom/vtosters/lite/fragments/friends/h/CurrentUserFriendsFragment$a;
 
-    invoke-direct {v3}, Lcom/vtosters/lite/fragments/friends/h/a$a;-><init>()V
+    invoke-direct {v3}, Lcom/vtosters/lite/fragments/friends/h/CurrentUserFriendsFragment$a;-><init>()V
 
     goto :goto_1
 
     .line 9
     :cond_2
-    new-instance v3, Lcom/vtosters/lite/fragments/friends/h/h$a;
+    new-instance v3, Lcom/vtosters/lite/fragments/friends/h/OtherUserFriendsFragment$a;
 
-    invoke-direct {v3}, Lcom/vtosters/lite/fragments/friends/h/h$a;-><init>()V
+    invoke-direct {v3}, Lcom/vtosters/lite/fragments/friends/h/OtherUserFriendsFragment$a;-><init>()V
 
     .line 10
     :goto_1
@@ -162,7 +162,7 @@
 
     move-result-object v4
 
-    invoke-virtual {v4}, Lcom/vk/newsfeed/presenters/i;->L()I
+    invoke-virtual {v4}, Lcom/vk/newsfeed/presenters/NewsFeedProfilePresenter;->L()I
 
     move-result v4
 
@@ -174,7 +174,7 @@
     .line 12
     iget-object v2, p0, Lcom/vk/profile/adapter/factory/info_items/UserDetailsItemsFactory$categories$1$a;->b:Lcom/vtosters/lite/api/ExtendedUserProfile;
 
-    invoke-static {v2}, Lcom/vk/profile/utils/d;->d(Lcom/vtosters/lite/api/ExtendedUserProfile;)Z
+    invoke-static {v2}, Lcom/vk/profile/utils/ProfileExt;->d(Lcom/vtosters/lite/api/ExtendedUserProfile;)Z
 
     move-result v2
 
@@ -190,7 +190,7 @@
 
     iget-object v0, v0, Lcom/vk/profile/adapter/factory/info_items/UserDetailsItemsFactory$categories$1;->$context:Landroid/content/Context;
 
-    invoke-virtual {v3, v0}, Lcom/vk/navigation/o;->a(Landroid/content/Context;)V
+    invoke-virtual {v3, v0}, Lcom/vk/navigation/Navigator;->a(Landroid/content/Context;)V
 
     :goto_2
     return-void

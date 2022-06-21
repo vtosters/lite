@@ -3,12 +3,12 @@
 .source "MenuApiApplicationsCache.kt"
 
 # interfaces
-.implements Lc/a/z/g;
+.implements Lio/reactivex/functions/Consumer;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/menu/MenuApiApplicationsCache;->l()Lc/a/m;
+    value = Lcom/vk/menu/MenuApiApplicationsCache;->l()Lio/reactivex/Observable;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -22,7 +22,7 @@
         "Ljava/lang/Object;",
         ">",
         "Ljava/lang/Object;",
-        "Lc/a/z/g<",
+        "Lio/reactivex/functions/Consumer<",
         "Lcom/vk/dto/common/data/VkAppsList;",
         ">;"
     }
@@ -60,7 +60,7 @@
     .locals 4
 
     .line 1
-    sget-object v0, Lcom/vk/common/j/a;->c:Lcom/vk/common/j/a;
+    sget-object v0, Lcom/vk/common/cache/SerializerCache;->c:Lcom/vk/common/cache/SerializerCache;
 
     invoke-virtual {p1}, Lcom/vk/dto/common/data/VkAppsList;->s()Ljava/util/List;
 
@@ -68,10 +68,10 @@
 
     const-string v2, "key_menu_fav_vk_games_list"
 
-    invoke-virtual {v0, v2, v1}, Lcom/vk/common/j/a;->a(Ljava/lang/String;Ljava/util/List;)V
+    invoke-virtual {v0, v2, v1}, Lcom/vk/common/cache/SerializerCache;->a(Ljava/lang/String;Ljava/util/List;)V
 
     .line 2
-    sget-object v0, Lcom/vk/common/j/a;->c:Lcom/vk/common/j/a;
+    sget-object v0, Lcom/vk/common/cache/SerializerCache;->c:Lcom/vk/common/cache/SerializerCache;
 
     invoke-virtual {p1}, Lcom/vk/dto/common/data/VkAppsList;->t()Lcom/vk/dto/common/data/VkAppsFeatured;
 
@@ -79,7 +79,7 @@
 
     const-string v1, "key_menu_fea_vk_games"
 
-    invoke-virtual {v0, v1, p1}, Lcom/vk/common/j/a;->a(Ljava/lang/String;Lcom/vk/core/serialize/Serializer$StreamParcelable;)V
+    invoke-virtual {v0, v1, p1}, Lcom/vk/common/cache/SerializerCache;->a(Ljava/lang/String;Lcom/vk/core/serialize/Serializer$StreamParcelable;)V
 
     .line 3
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J

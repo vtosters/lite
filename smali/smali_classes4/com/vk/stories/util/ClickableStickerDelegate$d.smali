@@ -3,7 +3,7 @@
 .source "ClickableStickerDelegate.kt"
 
 # interfaces
-.implements Lcom/vk/common/links/f;
+.implements Lcom/vk/common/links/OpenCallback;
 
 
 # annotations
@@ -69,13 +69,13 @@
 
     const-string v2, "storyView.context"
 
-    invoke-static {v1, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 6
     iget-object v2, p0, Lcom/vk/stories/util/ClickableStickerDelegate$d;->b:Lcom/vk/dto/stories/model/clickable/ClickableApp;
 
     .line 7
-    invoke-static {v1, v0, v2}, Lcom/vk/stories/u0;->a(Landroid/content/Context;Lcom/vk/dto/stories/model/StoryEntry;Lcom/vk/dto/stories/model/clickable/ClickableApp;)V
+    invoke-static {v1, v0, v2}, Lcom/vk/stories/StoryAppFunctions;->a(Landroid/content/Context;Lcom/vk/dto/stories/model/StoryEntry;Lcom/vk/dto/stories/model/clickable/ClickableApp;)V
 
     :cond_0
     return-void
@@ -85,7 +85,7 @@
     .locals 0
 
     .line 2
-    invoke-static {p0, p1}, Lcom/vk/common/links/f$a;->a(Lcom/vk/common/links/f;Ljava/lang/Throwable;)V
+    invoke-static {p0, p1}, Lcom/vk/common/links/OpenCallback$a;->a(Lcom/vk/common/links/OpenCallback;Ljava/lang/Throwable;)V
 
     return-void
 .end method
@@ -94,7 +94,7 @@
     .locals 0
 
     .line 1
-    invoke-static {p0, p1}, Lcom/vk/common/links/f$a;->a(Lcom/vk/common/links/f;Z)V
+    invoke-static {p0, p1}, Lcom/vk/common/links/OpenCallback$a;->a(Lcom/vk/common/links/OpenCallback;Z)V
 
     return-void
 .end method
@@ -103,7 +103,7 @@
     .locals 0
 
     .line 1
-    invoke-static {p0}, Lcom/vk/common/links/f$a;->a(Lcom/vk/common/links/f;)V
+    invoke-static {p0}, Lcom/vk/common/links/OpenCallback$a;->a(Lcom/vk/common/links/OpenCallback;)V
 
     return-void
 .end method

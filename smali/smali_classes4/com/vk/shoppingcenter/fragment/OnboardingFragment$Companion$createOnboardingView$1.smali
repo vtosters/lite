@@ -3,7 +3,7 @@
 .source "OnboardingFragment.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/b;
+.implements Lkotlin/jvm/b/Functions2;
 
 
 # annotations
@@ -19,7 +19,7 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/b<",
+        "Lkotlin/jvm/b/Functions2<",
         "Ljava/lang/Integer;",
         "Ljava/lang/Integer;",
         ">;"
@@ -56,9 +56,9 @@
 
     move-result-object p1
 
-    check-cast p1, Lcom/vk/shoppingcenter/fragment/b;
+    check-cast p1, Lcom/vk/shoppingcenter/fragment/OnboardingFragment2;
 
-    invoke-virtual {p1}, Lcom/vk/shoppingcenter/fragment/b;->a()I
+    invoke-virtual {p1}, Lcom/vk/shoppingcenter/fragment/OnboardingFragment2;->a()I
 
     move-result p1
 

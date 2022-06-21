@@ -30,15 +30,15 @@
     return-void
 .end method
 
-.method private final a(Lb/h/h/f/a;Lcom/vk/fave/entities/e;)Lcom/vk/api/base/d;
+.method private final a(Lb/h/h/f/Favable;Lcom/vk/fave/entities/FaveMetaInfo;)Lcom/vk/api/base/ApiRequest;
     .locals 9
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lb/h/h/f/a;",
-            "Lcom/vk/fave/entities/e;",
+            "Lb/h/h/f/Favable;",
+            "Lcom/vk/fave/entities/FaveMetaInfo;",
             ")",
-            "Lcom/vk/api/base/d<",
+            "Lcom/vk/api/base/ApiRequest<",
             "Ljava/lang/Boolean;",
             ">;"
         }
@@ -51,7 +51,7 @@
 
     if-eqz v0, :cond_0
 
-    new-instance v0, Lcom/vk/api/fave/f;
+    new-instance v0, Lcom/vk/api/fave/FaveAddPost;
 
     .line 6
     check-cast p1, Lcom/vk/dto/newsfeed/entries/Post;
@@ -66,7 +66,7 @@
     move-result v4
 
     .line 8
-    invoke-virtual {p2}, Lcom/vk/fave/entities/e;->a()Ljava/lang/String;
+    invoke-virtual {p2}, Lcom/vk/fave/entities/FaveMetaInfo;->a()Ljava/lang/String;
 
     move-result-object v5
 
@@ -80,14 +80,14 @@
     move-result-object v6
 
     .line 10
-    invoke-virtual {p2}, Lcom/vk/fave/entities/e;->b()Ljava/lang/String;
+    invoke-virtual {p2}, Lcom/vk/fave/entities/FaveMetaInfo;->b()Ljava/lang/String;
 
     move-result-object v7
 
     move-object v2, v0
 
     .line 11
-    invoke-direct/range {v2 .. v7}, Lcom/vk/api/fave/f;-><init>(IILjava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-direct/range {v2 .. v7}, Lcom/vk/api/fave/FaveAddPost;-><init>(IILjava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
 
     :goto_0
     move-object v1, v0
@@ -113,25 +113,25 @@
     if-eqz p1, :cond_7
 
     .line 13
-    new-instance v1, Lcom/vk/api/fave/a;
+    new-instance v1, Lcom/vk/api/fave/FaveAddArticle;
 
     .line 14
-    invoke-virtual {p2}, Lcom/vk/fave/entities/e;->a()Ljava/lang/String;
+    invoke-virtual {p2}, Lcom/vk/fave/entities/FaveMetaInfo;->a()Ljava/lang/String;
 
     move-result-object v0
 
     .line 15
-    invoke-virtual {p2}, Lcom/vk/fave/entities/e;->c()Ljava/lang/String;
+    invoke-virtual {p2}, Lcom/vk/fave/entities/FaveMetaInfo;->c()Ljava/lang/String;
 
     move-result-object v2
 
     .line 16
-    invoke-virtual {p2}, Lcom/vk/fave/entities/e;->b()Ljava/lang/String;
+    invoke-virtual {p2}, Lcom/vk/fave/entities/FaveMetaInfo;->b()Ljava/lang/String;
 
     move-result-object p2
 
     .line 17
-    invoke-direct {v1, p1, v0, v2, p2}, Lcom/vk/api/fave/a;-><init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-direct {v1, p1, v0, v2, p2}, Lcom/vk/api/fave/FaveAddArticle;-><init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
 
     goto/16 :goto_1
 
@@ -152,7 +152,7 @@
     if-eqz v3, :cond_7
 
     .line 19
-    new-instance v0, Lcom/vk/api/fave/o;
+    new-instance v0, Lcom/vk/api/fave/FaveNewAddLink;
 
     .line 20
     iget-object v4, p1, Lcom/vk/dto/attachments/SnippetAttachment;->F:Lcom/vk/dto/photo/Photo;
@@ -161,24 +161,24 @@
     iget-object v5, p1, Lcom/vk/dto/attachments/SnippetAttachment;->f:Ljava/lang/String;
 
     .line 22
-    invoke-virtual {p2}, Lcom/vk/fave/entities/e;->a()Ljava/lang/String;
+    invoke-virtual {p2}, Lcom/vk/fave/entities/FaveMetaInfo;->a()Ljava/lang/String;
 
     move-result-object v6
 
     .line 23
-    invoke-virtual {p2}, Lcom/vk/fave/entities/e;->c()Ljava/lang/String;
+    invoke-virtual {p2}, Lcom/vk/fave/entities/FaveMetaInfo;->c()Ljava/lang/String;
 
     move-result-object v7
 
     .line 24
-    invoke-virtual {p2}, Lcom/vk/fave/entities/e;->b()Ljava/lang/String;
+    invoke-virtual {p2}, Lcom/vk/fave/entities/FaveMetaInfo;->b()Ljava/lang/String;
 
     move-result-object v8
 
     move-object v2, v0
 
     .line 25
-    invoke-direct/range {v2 .. v8}, Lcom/vk/api/fave/o;-><init>(Ljava/lang/String;Lcom/vk/dto/photo/Photo;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-direct/range {v2 .. v8}, Lcom/vk/api/fave/FaveNewAddLink;-><init>(Ljava/lang/String;Lcom/vk/dto/photo/Photo;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
 
     goto :goto_0
 
@@ -188,7 +188,7 @@
 
     if-eqz v0, :cond_3
 
-    new-instance v1, Lcom/vk/api/fave/b;
+    new-instance v1, Lcom/vk/api/fave/FaveAddGood;
 
     .line 27
     check-cast p1, Lcom/vk/dto/common/Good;
@@ -199,17 +199,17 @@
     iget p1, p1, Lcom/vk/dto/common/Good;->b:I
 
     .line 29
-    invoke-virtual {p2}, Lcom/vk/fave/entities/e;->a()Ljava/lang/String;
+    invoke-virtual {p2}, Lcom/vk/fave/entities/FaveMetaInfo;->a()Ljava/lang/String;
 
     move-result-object v2
 
     .line 30
-    invoke-virtual {p2}, Lcom/vk/fave/entities/e;->b()Ljava/lang/String;
+    invoke-virtual {p2}, Lcom/vk/fave/entities/FaveMetaInfo;->b()Ljava/lang/String;
 
     move-result-object p2
 
     .line 31
-    invoke-direct {v1, v0, p1, v2, p2}, Lcom/vk/api/fave/b;-><init>(IILjava/lang/String;Ljava/lang/String;)V
+    invoke-direct {v1, v0, p1, v2, p2}, Lcom/vk/api/fave/FaveAddGood;-><init>(IILjava/lang/String;Ljava/lang/String;)V
 
     goto :goto_1
 
@@ -219,7 +219,7 @@
 
     if-eqz v0, :cond_4
 
-    new-instance v1, Lcom/vk/api/fave/h;
+    new-instance v1, Lcom/vk/api/fave/FaveAddVideo;
 
     .line 33
     check-cast p1, Lcom/vtosters/lite/attachments/VideoAttachment;
@@ -238,17 +238,17 @@
     iget p1, p1, Lcom/vk/dto/common/VideoFile;->a:I
 
     .line 35
-    invoke-virtual {p2}, Lcom/vk/fave/entities/e;->a()Ljava/lang/String;
+    invoke-virtual {p2}, Lcom/vk/fave/entities/FaveMetaInfo;->a()Ljava/lang/String;
 
     move-result-object v2
 
     .line 36
-    invoke-virtual {p2}, Lcom/vk/fave/entities/e;->b()Ljava/lang/String;
+    invoke-virtual {p2}, Lcom/vk/fave/entities/FaveMetaInfo;->b()Ljava/lang/String;
 
     move-result-object p2
 
     .line 37
-    invoke-direct {v1, v0, p1, v2, p2}, Lcom/vk/api/fave/h;-><init>(IILjava/lang/String;Ljava/lang/String;)V
+    invoke-direct {v1, v0, p1, v2, p2}, Lcom/vk/api/fave/FaveAddVideo;-><init>(IILjava/lang/String;Ljava/lang/String;)V
 
     goto :goto_1
 
@@ -258,7 +258,7 @@
 
     if-eqz v0, :cond_5
 
-    new-instance v1, Lcom/vk/api/fave/e;
+    new-instance v1, Lcom/vk/api/fave/FaveAddPodcast;
 
     .line 39
     check-cast p1, Lcom/vtosters/lite/attachments/PodcastAttachment;
@@ -277,12 +277,12 @@
     iget p1, p1, Lcom/vk/dto/music/MusicTrack;->d:I
 
     .line 41
-    invoke-virtual {p2}, Lcom/vk/fave/entities/e;->b()Ljava/lang/String;
+    invoke-virtual {p2}, Lcom/vk/fave/entities/FaveMetaInfo;->b()Ljava/lang/String;
 
     move-result-object p2
 
     .line 42
-    invoke-direct {v1, v0, p1, p2}, Lcom/vk/api/fave/e;-><init>(IILjava/lang/String;)V
+    invoke-direct {v1, v0, p1, p2}, Lcom/vk/api/fave/FaveAddPodcast;-><init>(IILjava/lang/String;)V
 
     goto :goto_1
 
@@ -292,18 +292,18 @@
 
     if-eqz v0, :cond_6
 
-    new-instance v1, Lcom/vk/api/fave/c;
+    new-instance v1, Lcom/vk/api/fave/FaveAddNarrative;
 
     .line 44
     check-cast p1, Lcom/vk/dto/narratives/Narrative;
 
     .line 45
-    invoke-virtual {p2}, Lcom/vk/fave/entities/e;->b()Ljava/lang/String;
+    invoke-virtual {p2}, Lcom/vk/fave/entities/FaveMetaInfo;->b()Ljava/lang/String;
 
     move-result-object p2
 
     .line 46
-    invoke-direct {v1, p1, p2}, Lcom/vk/api/fave/c;-><init>(Lcom/vk/dto/narratives/Narrative;Ljava/lang/String;)V
+    invoke-direct {v1, p1, p2}, Lcom/vk/api/fave/FaveAddNarrative;-><init>(Lcom/vk/dto/narratives/Narrative;Ljava/lang/String;)V
 
     goto :goto_1
 
@@ -313,7 +313,7 @@
 
     if-eqz v0, :cond_7
 
-    new-instance v1, Lcom/vk/api/fave/d;
+    new-instance v1, Lcom/vk/api/fave/FaveAddPage;
 
     .line 48
     check-cast p1, Lcom/vtosters/lite/attachments/EventAttachment;
@@ -327,30 +327,30 @@
     move-result p1
 
     .line 49
-    invoke-virtual {p2}, Lcom/vk/fave/entities/e;->b()Ljava/lang/String;
+    invoke-virtual {p2}, Lcom/vk/fave/entities/FaveMetaInfo;->b()Ljava/lang/String;
 
     move-result-object p2
 
     .line 50
-    invoke-direct {v1, p1, p2}, Lcom/vk/api/fave/d;-><init>(ILjava/lang/String;)V
+    invoke-direct {v1, p1, p2}, Lcom/vk/api/fave/FaveAddPage;-><init>(ILjava/lang/String;)V
 
     :cond_7
     :goto_1
     return-object v1
 .end method
 
-.method private final a(Lcom/vk/fave/entities/l;Ljava/util/List;Lcom/vk/fave/entities/e;)Lcom/vk/api/base/d;
+.method private final a(Lcom/vk/fave/entities/WithTags;Ljava/util/List;Lcom/vk/fave/entities/FaveMetaInfo;)Lcom/vk/api/base/ApiRequest;
     .locals 12
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lcom/vk/fave/entities/l;",
+            "Lcom/vk/fave/entities/WithTags;",
             "Ljava/util/List<",
             "Lcom/vk/fave/entities/FaveTag;",
             ">;",
-            "Lcom/vk/fave/entities/e;",
+            "Lcom/vk/fave/entities/FaveMetaInfo;",
             ")",
-            "Lcom/vk/api/base/d<",
+            "Lcom/vk/api/base/ApiRequest<",
             "Ljava/lang/Boolean;",
             ">;"
         }
@@ -372,28 +372,28 @@
 
     move-result-object p1
 
-    invoke-virtual {p1}, Lcom/vk/fave/entities/FaveItem;->t1()Lb/h/h/f/a;
+    invoke-virtual {p1}, Lcom/vk/fave/entities/FaveItem;->t1()Lb/h/h/f/Favable;
 
     move-result-object p1
 
     .line 145
-    sget-object v0, Lcom/vk/fave/d;->a:Lcom/vk/fave/d;
+    sget-object v0, Lcom/vk/fave/FaveConverter;->a:Lcom/vk/fave/FaveConverter;
 
-    invoke-virtual {v0, p1}, Lcom/vk/fave/d;->d(Lb/h/h/f/a;)Lcom/vk/fave/entities/FaveType;
+    invoke-virtual {v0, p1}, Lcom/vk/fave/FaveConverter;->d(Lb/h/h/f/Favable;)Lcom/vk/fave/entities/FaveType;
 
     move-result-object v4
 
     .line 146
-    sget-object v0, Lcom/vk/fave/d;->a:Lcom/vk/fave/d;
+    sget-object v0, Lcom/vk/fave/FaveConverter;->a:Lcom/vk/fave/FaveConverter;
 
-    invoke-virtual {v0, p1, v1}, Lcom/vk/fave/d;->a(Lb/h/h/f/a;Z)Ljava/lang/String;
+    invoke-virtual {v0, p1, v1}, Lcom/vk/fave/FaveConverter;->a(Lb/h/h/f/Favable;Z)Ljava/lang/String;
 
     move-result-object v0
 
     .line 147
-    sget-object v1, Lcom/vk/fave/d;->a:Lcom/vk/fave/d;
+    sget-object v1, Lcom/vk/fave/FaveConverter;->a:Lcom/vk/fave/FaveConverter;
 
-    invoke-virtual {v1, p1}, Lcom/vk/fave/d;->c(Lb/h/h/f/a;)Ljava/lang/Integer;
+    invoke-virtual {v1, p1}, Lcom/vk/fave/FaveConverter;->c(Lb/h/h/f/Favable;)Ljava/lang/Integer;
 
     move-result-object v6
 
@@ -458,12 +458,12 @@
     new-instance p1, Lcom/vk/api/fave/FaveSetTags;
 
     .line 152
-    invoke-virtual {p3}, Lcom/vk/fave/entities/e;->b()Ljava/lang/String;
+    invoke-virtual {p3}, Lcom/vk/fave/entities/FaveMetaInfo;->b()Ljava/lang/String;
 
     move-result-object v10
 
     .line 153
-    invoke-virtual {p3}, Lcom/vk/fave/entities/e;->d()Z
+    invoke-virtual {p3}, Lcom/vk/fave/entities/FaveMetaInfo;->d()Z
 
     move-result v11
 
@@ -505,11 +505,11 @@
 
     move-result v0
 
-    invoke-virtual {p3}, Lcom/vk/fave/entities/e;->b()Ljava/lang/String;
+    invoke-virtual {p3}, Lcom/vk/fave/entities/FaveMetaInfo;->b()Ljava/lang/String;
 
     move-result-object v1
 
-    invoke-virtual {p3}, Lcom/vk/fave/entities/e;->d()Z
+    invoke-virtual {p3}, Lcom/vk/fave/entities/FaveMetaInfo;->d()Z
 
     move-result p3
 
@@ -627,11 +627,11 @@
     throw p1
 .end method
 
-.method private final a(Landroid/content/Context;Lb/h/h/f/a;Lcom/vk/fave/entities/e;)V
+.method private final a(Landroid/content/Context;Lb/h/h/f/Favable;Lcom/vk/fave/entities/FaveMetaInfo;)V
     .locals 6
 
     .line 54
-    invoke-direct {p0, p2}, Lcom/vk/fave/FaveController;->b(Lb/h/h/f/a;)Ljava/lang/Integer;
+    invoke-direct {p0, p2}, Lcom/vk/fave/FaveController;->b(Lb/h/h/f/Favable;)Ljava/lang/Integer;
 
     move-result-object v0
 
@@ -644,7 +644,7 @@
     move-result v0
 
     .line 55
-    invoke-interface {p2}, Lb/h/h/f/a;->Y0()Z
+    invoke-interface {p2}, Lb/h/h/f/Favable;->Y0()Z
 
     move-result v2
 
@@ -655,7 +655,7 @@
 
     const/4 v5, 0x0
 
-    invoke-direct {v3, p1, v1, v4, v5}, Lcom/vk/core/dialogs/snackbar/VkSnackbar$a;-><init>(Landroid/content/Context;ZILkotlin/jvm/internal/i;)V
+    invoke-direct {v3, p1, v1, v4, v5}, Lcom/vk/core/dialogs/snackbar/VkSnackbar$a;-><init>(Landroid/content/Context;ZILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     const-wide/16 v4, 0x7d0
 
@@ -674,7 +674,7 @@
 
     const-string v1, "context.getString(resId)"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {v3, v0}, Lcom/vk/core/dialogs/snackbar/VkSnackbar$a;->a(Ljava/lang/CharSequence;)Lcom/vk/core/dialogs/snackbar/VkSnackbar$a;
 
@@ -697,17 +697,17 @@
 
     const-string v1, "context.getString(if (is\u2026tring.fave_cancel_remove)"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     new-instance v1, Lcom/vk/fave/FaveController$showSnackbar$$inlined$let$lambda$1;
 
-    invoke-direct {v1, v2, p2, p1, p3}, Lcom/vk/fave/FaveController$showSnackbar$$inlined$let$lambda$1;-><init>(ZLb/h/h/f/a;Landroid/content/Context;Lcom/vk/fave/entities/e;)V
+    invoke-direct {v1, v2, p2, p1, p3}, Lcom/vk/fave/FaveController$showSnackbar$$inlined$let$lambda$1;-><init>(ZLb/h/h/f/Favable;Landroid/content/Context;Lcom/vk/fave/entities/FaveMetaInfo;)V
 
-    invoke-virtual {v3, v0, v1}, Lcom/vk/core/dialogs/snackbar/VkSnackbar$a;->a(Ljava/lang/CharSequence;Lkotlin/jvm/b/b;)Lcom/vk/core/dialogs/snackbar/VkSnackbar$a;
+    invoke-virtual {v3, v0, v1}, Lcom/vk/core/dialogs/snackbar/VkSnackbar$a;->a(Ljava/lang/CharSequence;Lkotlin/jvm/b/Functions2;)Lcom/vk/core/dialogs/snackbar/VkSnackbar$a;
 
     .line 61
     :cond_1
-    invoke-static {v3}, Lcom/vk/extensions/s;->a(Lcom/vk/core/dialogs/snackbar/VkSnackbar$a;)V
+    invoke-static {v3}, Lcom/vk/extensions/VkSnackbarExt;->a(Lcom/vk/core/dialogs/snackbar/VkSnackbar$a;)V
 
     goto :goto_1
 
@@ -739,31 +739,31 @@
     return-void
 .end method
 
-.method public static final a(Landroid/content/Context;Lb/h/h/f/a;Lcom/vk/fave/entities/e;Lkotlin/jvm/b/c;Lkotlin/jvm/b/b;Z)V
+.method public static final a(Landroid/content/Context;Lb/h/h/f/Favable;Lcom/vk/fave/entities/FaveMetaInfo;Lkotlin/jvm/b/Functions1;Lkotlin/jvm/b/Functions2;Z)V
     .locals 10
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
             "Landroid/content/Context;",
-            "Lb/h/h/f/a;",
-            "Lcom/vk/fave/entities/e;",
-            "Lkotlin/jvm/b/c<",
+            "Lb/h/h/f/Favable;",
+            "Lcom/vk/fave/entities/FaveMetaInfo;",
+            "Lkotlin/jvm/b/Functions1<",
             "-",
             "Ljava/lang/Boolean;",
             "-",
-            "Lb/h/h/f/a;",
-            "Lkotlin/m;",
+            "Lb/h/h/f/Favable;",
+            "Lkotlin/Unit;",
             ">;",
-            "Lkotlin/jvm/b/b<",
+            "Lkotlin/jvm/b/Functions2<",
             "-",
-            "Lb/h/h/f/a;",
-            "Lkotlin/m;",
+            "Lb/h/h/f/Favable;",
+            "Lkotlin/Unit;",
             ">;Z)V"
         }
     .end annotation
 
     .line 85
-    invoke-interface {p1}, Lb/h/h/f/a;->Y0()Z
+    invoke-interface {p1}, Lb/h/h/f/Favable;->Y0()Z
 
     move-result v0
 
@@ -772,7 +772,7 @@
     .line 86
     sget-object v1, Lcom/vk/fave/FaveController;->a:Lcom/vk/fave/FaveController;
 
-    invoke-direct {v1, p1, p2}, Lcom/vk/fave/FaveController;->b(Lb/h/h/f/a;Lcom/vk/fave/entities/e;)Lcom/vk/api/base/d;
+    invoke-direct {v1, p1, p2}, Lcom/vk/fave/FaveController;->b(Lb/h/h/f/Favable;Lcom/vk/fave/entities/FaveMetaInfo;)Lcom/vk/api/base/ApiRequest;
 
     move-result-object v1
 
@@ -782,7 +782,7 @@
     :cond_0
     sget-object v1, Lcom/vk/fave/FaveController;->a:Lcom/vk/fave/FaveController;
 
-    invoke-direct {v1, p1, p2}, Lcom/vk/fave/FaveController;->a(Lb/h/h/f/a;Lcom/vk/fave/entities/e;)Lcom/vk/api/base/d;
+    invoke-direct {v1, p1, p2}, Lcom/vk/fave/FaveController;->a(Lb/h/h/f/Favable;Lcom/vk/fave/entities/FaveMetaInfo;)Lcom/vk/api/base/ApiRequest;
 
     move-result-object v1
 
@@ -798,11 +798,11 @@
 
     move-result-object v0
 
-    invoke-interface {p3, v0, p1}, Lkotlin/jvm/b/c;->a(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {p3, v0, p1}, Lkotlin/jvm/b/Functions1;->a(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p3
 
-    check-cast p3, Lkotlin/m;
+    check-cast p3, Lkotlin/Unit;
 
     :cond_1
     if-eqz v1, :cond_2
@@ -810,7 +810,7 @@
     const/4 p3, 0x0
 
     .line 89
-    invoke-static {v1, p3, v2, p3}, Lcom/vk/api/base/d;->d(Lcom/vk/api/base/d;Lcom/vk/api/base/e;ILjava/lang/Object;)Lc/a/m;
+    invoke-static {v1, p3, v2, p3}, Lcom/vk/api/base/ApiRequest;->d(Lcom/vk/api/base/ApiRequest;Lcom/vk/api/base/ApiThreadHolder;ILjava/lang/Object;)Lio/reactivex/Observable;
 
     move-result-object p3
 
@@ -831,15 +831,15 @@
 
     move-object v9, p4
 
-    invoke-direct/range {v3 .. v9}, Lcom/vk/fave/FaveController$m;-><init>(Lb/h/h/f/a;ZZLandroid/content/Context;Lcom/vk/fave/entities/e;Lkotlin/jvm/b/b;)V
+    invoke-direct/range {v3 .. v9}, Lcom/vk/fave/FaveController$m;-><init>(Lb/h/h/f/Favable;ZZLandroid/content/Context;Lcom/vk/fave/entities/FaveMetaInfo;Lkotlin/jvm/b/Functions2;)V
 
     .line 91
     new-instance p2, Lcom/vk/fave/FaveController$n;
 
-    invoke-direct {p2, p4, p1}, Lcom/vk/fave/FaveController$n;-><init>(Lkotlin/jvm/b/b;Lb/h/h/f/a;)V
+    invoke-direct {p2, p4, p1}, Lcom/vk/fave/FaveController$n;-><init>(Lkotlin/jvm/b/Functions2;Lb/h/h/f/Favable;)V
 
     .line 92
-    invoke-virtual {p3, v0, p2}, Lc/a/m;->a(Lc/a/z/g;Lc/a/z/g;)Lio/reactivex/disposables/b;
+    invoke-virtual {p3, v0, p2}, Lio/reactivex/Observable;->a(Lio/reactivex/functions/Consumer;Lio/reactivex/functions/Consumer;)Lio/reactivex/disposables/Disposable;
 
     move-result-object p1
 
@@ -848,13 +848,13 @@
     sget-object p2, Lcom/vk/fave/FaveController;->a:Lcom/vk/fave/FaveController;
 
     .line 93
-    invoke-direct {p2, p1, p0}, Lcom/vk/fave/FaveController;->a(Lio/reactivex/disposables/b;Landroid/content/Context;)V
+    invoke-direct {p2, p1, p0}, Lcom/vk/fave/FaveController;->a(Lio/reactivex/disposables/Disposable;Landroid/content/Context;)V
 
     :cond_2
     return-void
 .end method
 
-.method public static synthetic a(Landroid/content/Context;Lb/h/h/f/a;Lcom/vk/fave/entities/e;Lkotlin/jvm/b/c;Lkotlin/jvm/b/b;ZILjava/lang/Object;)V
+.method public static synthetic a(Landroid/content/Context;Lb/h/h/f/Favable;Lcom/vk/fave/entities/FaveMetaInfo;Lkotlin/jvm/b/Functions1;Lkotlin/jvm/b/Functions2;ZILjava/lang/Object;)V
     .locals 7
 
     and-int/lit8 p7, p6, 0x8
@@ -904,28 +904,28 @@
     move-object v3, p2
 
     .line 84
-    invoke-static/range {v1 .. v6}, Lcom/vk/fave/FaveController;->a(Landroid/content/Context;Lb/h/h/f/a;Lcom/vk/fave/entities/e;Lkotlin/jvm/b/c;Lkotlin/jvm/b/b;Z)V
+    invoke-static/range {v1 .. v6}, Lcom/vk/fave/FaveController;->a(Landroid/content/Context;Lb/h/h/f/Favable;Lcom/vk/fave/entities/FaveMetaInfo;Lkotlin/jvm/b/Functions1;Lkotlin/jvm/b/Functions2;Z)V
 
     return-void
 .end method
 
-.method public static final a(Landroid/content/Context;Lcom/vk/fave/entities/FavePage;Lcom/vk/fave/entities/e;Lkotlin/jvm/b/b;Lkotlin/jvm/b/b;Z)V
+.method public static final a(Landroid/content/Context;Lcom/vk/fave/entities/FavePage;Lcom/vk/fave/entities/FaveMetaInfo;Lkotlin/jvm/b/Functions2;Lkotlin/jvm/b/Functions2;Z)V
     .locals 20
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
             "Landroid/content/Context;",
             "Lcom/vk/fave/entities/FavePage;",
-            "Lcom/vk/fave/entities/e;",
-            "Lkotlin/jvm/b/b<",
+            "Lcom/vk/fave/entities/FaveMetaInfo;",
+            "Lkotlin/jvm/b/Functions2<",
             "-",
             "Ljava/lang/Integer;",
-            "Lkotlin/m;",
+            "Lkotlin/Unit;",
             ">;",
-            "Lkotlin/jvm/b/b<",
+            "Lkotlin/jvm/b/Functions2<",
             "-",
             "Ljava/lang/Integer;",
-            "Lkotlin/m;",
+            "Lkotlin/Unit;",
             ">;Z)V"
         }
     .end annotation
@@ -965,33 +965,33 @@
     if-eqz v1, :cond_1
 
     .line 99
-    new-instance v0, Lcom/vk/api/fave/u;
+    new-instance v0, Lcom/vk/api/fave/FaveRemovePage;
 
     invoke-virtual {v9}, Lcom/vk/dto/newsfeed/Owner;->getUid()I
 
     move-result v3
 
-    invoke-virtual/range {p2 .. p2}, Lcom/vk/fave/entities/e;->b()Ljava/lang/String;
+    invoke-virtual/range {p2 .. p2}, Lcom/vk/fave/entities/FaveMetaInfo;->b()Ljava/lang/String;
 
     move-result-object v4
 
-    invoke-direct {v0, v3, v4}, Lcom/vk/api/fave/u;-><init>(ILjava/lang/String;)V
+    invoke-direct {v0, v3, v4}, Lcom/vk/api/fave/FaveRemovePage;-><init>(ILjava/lang/String;)V
 
     goto :goto_0
 
     .line 100
     :cond_1
-    new-instance v0, Lcom/vk/api/fave/d;
+    new-instance v0, Lcom/vk/api/fave/FaveAddPage;
 
     invoke-virtual {v9}, Lcom/vk/dto/newsfeed/Owner;->getUid()I
 
     move-result v3
 
-    invoke-virtual/range {p2 .. p2}, Lcom/vk/fave/entities/e;->b()Ljava/lang/String;
+    invoke-virtual/range {p2 .. p2}, Lcom/vk/fave/entities/FaveMetaInfo;->b()Ljava/lang/String;
 
     move-result-object v4
 
-    invoke-direct {v0, v3, v4}, Lcom/vk/api/fave/d;-><init>(ILjava/lang/String;)V
+    invoke-direct {v0, v3, v4}, Lcom/vk/api/fave/FaveAddPage;-><init>(ILjava/lang/String;)V
 
     .line 101
     :goto_0
@@ -1000,7 +1000,7 @@
     const/4 v3, 0x0
 
     .line 102
-    invoke-static {v0, v3, v2, v3}, Lcom/vk/api/base/d;->d(Lcom/vk/api/base/d;Lcom/vk/api/base/e;ILjava/lang/Object;)Lc/a/m;
+    invoke-static {v0, v3, v2, v3}, Lcom/vk/api/base/ApiRequest;->d(Lcom/vk/api/base/ApiRequest;Lcom/vk/api/base/ApiThreadHolder;ILjava/lang/Object;)Lio/reactivex/Observable;
 
     move-result-object v11
 
@@ -1019,7 +1019,7 @@
     move-object/from16 v12, p0
 
     .line 103
-    invoke-static/range {v11 .. v19}, Lcom/vk/core/extensions/RxExtKt;->a(Lc/a/m;Landroid/content/Context;JIZZILjava/lang/Object;)Lc/a/m;
+    invoke-static/range {v11 .. v19}, Lcom/vk/core/extensions/RxExtKt;->a(Lio/reactivex/Observable;Landroid/content/Context;JIZZILjava/lang/Object;)Lio/reactivex/Observable;
 
     move-result-object v11
 
@@ -1042,34 +1042,34 @@
 
     move-object/from16 v8, p4
 
-    invoke-direct/range {v0 .. v8}, Lcom/vk/fave/FaveController$o;-><init>(ZLcom/vk/fave/entities/FavePage;ZLandroid/content/Context;Lcom/vk/fave/entities/e;Lkotlin/jvm/b/b;Lcom/vk/dto/newsfeed/Owner;Lkotlin/jvm/b/b;)V
+    invoke-direct/range {v0 .. v8}, Lcom/vk/fave/FaveController$o;-><init>(ZLcom/vk/fave/entities/FavePage;ZLandroid/content/Context;Lcom/vk/fave/entities/FaveMetaInfo;Lkotlin/jvm/b/Functions2;Lcom/vk/dto/newsfeed/Owner;Lkotlin/jvm/b/Functions2;)V
 
     .line 105
     new-instance v0, Lcom/vk/fave/FaveController$p;
 
     move-object/from16 v1, p4
 
-    invoke-direct {v0, v1, v9}, Lcom/vk/fave/FaveController$p;-><init>(Lkotlin/jvm/b/b;Lcom/vk/dto/newsfeed/Owner;)V
+    invoke-direct {v0, v1, v9}, Lcom/vk/fave/FaveController$p;-><init>(Lkotlin/jvm/b/Functions2;Lcom/vk/dto/newsfeed/Owner;)V
 
     .line 106
-    invoke-virtual {v11, v12, v0}, Lc/a/m;->a(Lc/a/z/g;Lc/a/z/g;)Lio/reactivex/disposables/b;
+    invoke-virtual {v11, v12, v0}, Lio/reactivex/Observable;->a(Lio/reactivex/functions/Consumer;Lio/reactivex/functions/Consumer;)Lio/reactivex/disposables/Disposable;
 
     move-result-object v0
 
     const-string v1, "request.toUiObservable()\u2026r.uid)\n                })"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     move-object/from16 v1, p0
 
     .line 107
-    invoke-direct {v10, v0, v1}, Lcom/vk/fave/FaveController;->a(Lio/reactivex/disposables/b;Landroid/content/Context;)V
+    invoke-direct {v10, v0, v1}, Lcom/vk/fave/FaveController;->a(Lio/reactivex/disposables/Disposable;Landroid/content/Context;)V
 
     :cond_2
     return-void
 .end method
 
-.method public static synthetic a(Landroid/content/Context;Lcom/vk/fave/entities/FavePage;Lcom/vk/fave/entities/e;Lkotlin/jvm/b/b;Lkotlin/jvm/b/b;ZILjava/lang/Object;)V
+.method public static synthetic a(Landroid/content/Context;Lcom/vk/fave/entities/FavePage;Lcom/vk/fave/entities/FaveMetaInfo;Lkotlin/jvm/b/Functions2;Lkotlin/jvm/b/Functions2;ZILjava/lang/Object;)V
     .locals 7
 
     and-int/lit8 p7, p6, 0x8
@@ -1119,12 +1119,12 @@
     move-object v3, p2
 
     .line 95
-    invoke-static/range {v1 .. v6}, Lcom/vk/fave/FaveController;->a(Landroid/content/Context;Lcom/vk/fave/entities/FavePage;Lcom/vk/fave/entities/e;Lkotlin/jvm/b/b;Lkotlin/jvm/b/b;Z)V
+    invoke-static/range {v1 .. v6}, Lcom/vk/fave/FaveController;->a(Landroid/content/Context;Lcom/vk/fave/entities/FavePage;Lcom/vk/fave/entities/FaveMetaInfo;Lkotlin/jvm/b/Functions2;Lkotlin/jvm/b/Functions2;Z)V
 
     return-void
 .end method
 
-.method private final a(Landroid/content/Context;Lcom/vk/fave/entities/FavePage;ZLcom/vk/fave/entities/e;)V
+.method private final a(Landroid/content/Context;Lcom/vk/fave/entities/FavePage;ZLcom/vk/fave/entities/FaveMetaInfo;)V
     .locals 5
 
     .line 63
@@ -1147,7 +1147,7 @@
 
     const/4 v4, 0x0
 
-    invoke-direct {v2, p1, v1, v3, v4}, Lcom/vk/core/dialogs/snackbar/VkSnackbar$a;-><init>(Landroid/content/Context;ZILkotlin/jvm/internal/i;)V
+    invoke-direct {v2, p1, v1, v3, v4}, Lcom/vk/core/dialogs/snackbar/VkSnackbar$a;-><init>(Landroid/content/Context;ZILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     const-wide/16 v3, 0x7d0
 
@@ -1166,7 +1166,7 @@
 
     const-string v1, "context.getString(resId)"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {v2, v0}, Lcom/vk/core/dialogs/snackbar/VkSnackbar$a;->a(Ljava/lang/CharSequence;)Lcom/vk/core/dialogs/snackbar/VkSnackbar$a;
 
@@ -1189,17 +1189,17 @@
 
     const-string v1, "context.getString(if (is\u2026tring.fave_cancel_remove)"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     new-instance v1, Lcom/vk/fave/FaveController$showSnackbar$$inlined$let$lambda$2;
 
-    invoke-direct {v1, p1, p3, p2, p4}, Lcom/vk/fave/FaveController$showSnackbar$$inlined$let$lambda$2;-><init>(Landroid/content/Context;ZLcom/vk/fave/entities/FavePage;Lcom/vk/fave/entities/e;)V
+    invoke-direct {v1, p1, p3, p2, p4}, Lcom/vk/fave/FaveController$showSnackbar$$inlined$let$lambda$2;-><init>(Landroid/content/Context;ZLcom/vk/fave/entities/FavePage;Lcom/vk/fave/entities/FaveMetaInfo;)V
 
-    invoke-virtual {v2, v0, v1}, Lcom/vk/core/dialogs/snackbar/VkSnackbar$a;->a(Ljava/lang/CharSequence;Lkotlin/jvm/b/b;)Lcom/vk/core/dialogs/snackbar/VkSnackbar$a;
+    invoke-virtual {v2, v0, v1}, Lcom/vk/core/dialogs/snackbar/VkSnackbar$a;->a(Ljava/lang/CharSequence;Lkotlin/jvm/b/Functions2;)Lcom/vk/core/dialogs/snackbar/VkSnackbar$a;
 
     .line 69
     :cond_1
-    invoke-static {v2}, Lcom/vk/extensions/s;->a(Lcom/vk/core/dialogs/snackbar/VkSnackbar$a;)V
+    invoke-static {v2}, Lcom/vk/extensions/VkSnackbarExt;->a(Lcom/vk/core/dialogs/snackbar/VkSnackbar$a;)V
 
     goto :goto_1
 
@@ -1231,13 +1231,13 @@
     return-void
 .end method
 
-.method public static final a(Landroid/content/Context;Lcom/vtosters/lite/api/ExtendedUserProfile;Lcom/vk/fave/entities/e;)V
+.method public static final a(Landroid/content/Context;Lcom/vtosters/lite/api/ExtendedUserProfile;Lcom/vk/fave/entities/FaveMetaInfo;)V
     .locals 9
 
     .line 94
-    sget-object v0, Lcom/vk/fave/d;->a:Lcom/vk/fave/d;
+    sget-object v0, Lcom/vk/fave/FaveConverter;->a:Lcom/vk/fave/FaveConverter;
 
-    invoke-virtual {v0, p1}, Lcom/vk/fave/d;->a(Lcom/vtosters/lite/api/ExtendedUserProfile;)Lcom/vk/fave/entities/FavePage;
+    invoke-virtual {v0, p1}, Lcom/vk/fave/FaveConverter;->a(Lcom/vtosters/lite/api/ExtendedUserProfile;)Lcom/vk/fave/entities/FavePage;
 
     move-result-object v2
 
@@ -1255,12 +1255,12 @@
 
     move-object v3, p2
 
-    invoke-static/range {v1 .. v8}, Lcom/vk/fave/FaveController;->a(Landroid/content/Context;Lcom/vk/fave/entities/FavePage;Lcom/vk/fave/entities/e;Lkotlin/jvm/b/b;Lkotlin/jvm/b/b;ZILjava/lang/Object;)V
+    invoke-static/range {v1 .. v8}, Lcom/vk/fave/FaveController;->a(Landroid/content/Context;Lcom/vk/fave/entities/FavePage;Lcom/vk/fave/entities/FaveMetaInfo;Lkotlin/jvm/b/Functions2;Lkotlin/jvm/b/Functions2;ZILjava/lang/Object;)V
 
     return-void
 .end method
 
-.method private final a(Landroid/content/Context;Ljava/util/List;Lcom/vk/fave/entities/e;)V
+.method private final a(Landroid/content/Context;Ljava/util/List;Lcom/vk/fave/entities/FaveMetaInfo;)V
     .locals 4
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -1269,19 +1269,19 @@
             "Ljava/util/List<",
             "Lcom/vk/fave/entities/FaveTag;",
             ">;",
-            "Lcom/vk/fave/entities/e;",
+            "Lcom/vk/fave/entities/FaveMetaInfo;",
             ")V"
         }
     .end annotation
 
     .line 71
-    invoke-virtual {p3}, Lcom/vk/fave/entities/e;->b()Ljava/lang/String;
+    invoke-virtual {p3}, Lcom/vk/fave/entities/FaveMetaInfo;->b()Ljava/lang/String;
 
     move-result-object p3
 
     const-string v0, "fave"
 
-    invoke-static {p3, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {p3, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result p3
 
@@ -1316,7 +1316,7 @@
     const-string v0, "if (tags.isEmpty()) cont\u2026dd_successful, tags.size)"
 
     .line 74
-    invoke-static {p2, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p2, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 75
     new-instance v0, Lcom/vk/core/dialogs/snackbar/VkSnackbar$a;
@@ -1327,7 +1327,7 @@
 
     const/4 v3, 0x0
 
-    invoke-direct {v0, p1, v1, v2, v3}, Lcom/vk/core/dialogs/snackbar/VkSnackbar$a;-><init>(Landroid/content/Context;ZILkotlin/jvm/internal/i;)V
+    invoke-direct {v0, p1, v1, v2, v3}, Lcom/vk/core/dialogs/snackbar/VkSnackbar$a;-><init>(Landroid/content/Context;ZILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     const-wide/16 v1, 0x7d0
 
@@ -1358,49 +1358,49 @@
 
     const-string v1, "context.getString(R.string.fave_move_to_screen)"
 
-    invoke-static {p2, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p2, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     :goto_1
     new-instance v1, Lcom/vk/fave/FaveController$showSnackbar$3;
 
     invoke-direct {v1, p3, p1}, Lcom/vk/fave/FaveController$showSnackbar$3;-><init>(ZLandroid/content/Context;)V
 
-    invoke-virtual {v0, p2, v1}, Lcom/vk/core/dialogs/snackbar/VkSnackbar$a;->a(Ljava/lang/CharSequence;Lkotlin/jvm/b/b;)Lcom/vk/core/dialogs/snackbar/VkSnackbar$a;
+    invoke-virtual {v0, p2, v1}, Lcom/vk/core/dialogs/snackbar/VkSnackbar$a;->a(Ljava/lang/CharSequence;Lkotlin/jvm/b/Functions2;)Lcom/vk/core/dialogs/snackbar/VkSnackbar$a;
 
     .line 80
-    invoke-static {v0}, Lcom/vk/extensions/s;->a(Lcom/vk/core/dialogs/snackbar/VkSnackbar$a;)V
+    invoke-static {v0}, Lcom/vk/extensions/VkSnackbarExt;->a(Lcom/vk/core/dialogs/snackbar/VkSnackbar$a;)V
 
     return-void
 .end method
 
-.method public static final synthetic a(Lcom/vk/fave/FaveController;Landroid/content/Context;Lb/h/h/f/a;Lcom/vk/fave/entities/e;)V
+.method public static final synthetic a(Lcom/vk/fave/FaveController;Landroid/content/Context;Lb/h/h/f/Favable;Lcom/vk/fave/entities/FaveMetaInfo;)V
     .locals 0
 
     .line 1
-    invoke-direct {p0, p1, p2, p3}, Lcom/vk/fave/FaveController;->a(Landroid/content/Context;Lb/h/h/f/a;Lcom/vk/fave/entities/e;)V
+    invoke-direct {p0, p1, p2, p3}, Lcom/vk/fave/FaveController;->a(Landroid/content/Context;Lb/h/h/f/Favable;Lcom/vk/fave/entities/FaveMetaInfo;)V
 
     return-void
 .end method
 
-.method public static final synthetic a(Lcom/vk/fave/FaveController;Landroid/content/Context;Lcom/vk/fave/entities/FavePage;ZLcom/vk/fave/entities/e;)V
+.method public static final synthetic a(Lcom/vk/fave/FaveController;Landroid/content/Context;Lcom/vk/fave/entities/FavePage;ZLcom/vk/fave/entities/FaveMetaInfo;)V
     .locals 0
 
     .line 2
-    invoke-direct {p0, p1, p2, p3, p4}, Lcom/vk/fave/FaveController;->a(Landroid/content/Context;Lcom/vk/fave/entities/FavePage;ZLcom/vk/fave/entities/e;)V
+    invoke-direct {p0, p1, p2, p3, p4}, Lcom/vk/fave/FaveController;->a(Landroid/content/Context;Lcom/vk/fave/entities/FavePage;ZLcom/vk/fave/entities/FaveMetaInfo;)V
 
     return-void
 .end method
 
-.method public static final synthetic a(Lcom/vk/fave/FaveController;Landroid/content/Context;Ljava/util/List;Lcom/vk/fave/entities/e;)V
+.method public static final synthetic a(Lcom/vk/fave/FaveController;Landroid/content/Context;Ljava/util/List;Lcom/vk/fave/entities/FaveMetaInfo;)V
     .locals 0
 
     .line 3
-    invoke-direct {p0, p1, p2, p3}, Lcom/vk/fave/FaveController;->a(Landroid/content/Context;Ljava/util/List;Lcom/vk/fave/entities/e;)V
+    invoke-direct {p0, p1, p2, p3}, Lcom/vk/fave/FaveController;->a(Landroid/content/Context;Ljava/util/List;Lcom/vk/fave/entities/FaveMetaInfo;)V
 
     return-void
 .end method
 
-.method private final a(Lio/reactivex/disposables/b;Landroid/content/Context;)V
+.method private final a(Lio/reactivex/disposables/Disposable;Landroid/content/Context;)V
     .locals 2
 
     const/4 v0, 0x0
@@ -1430,21 +1430,21 @@
     if-eqz p2, :cond_2
 
     .line 185
-    invoke-static {p1, p2}, Lcom/vk/extensions/p;->a(Lio/reactivex/disposables/b;Lcom/vtosters/lite/VKActivity;)Lio/reactivex/disposables/b;
+    invoke-static {p1, p2}, Lcom/vk/extensions/VKRxExt;->a(Lio/reactivex/disposables/Disposable;Lcom/vtosters/lite/VKActivity;)Lio/reactivex/disposables/Disposable;
 
     :cond_2
     return-void
 .end method
 
-.method private final b(Lb/h/h/f/a;Lcom/vk/fave/entities/e;)Lcom/vk/api/base/d;
+.method private final b(Lb/h/h/f/Favable;Lcom/vk/fave/entities/FaveMetaInfo;)Lcom/vk/api/base/ApiRequest;
     .locals 2
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lb/h/h/f/a;",
-            "Lcom/vk/fave/entities/e;",
+            "Lb/h/h/f/Favable;",
+            "Lcom/vk/fave/entities/FaveMetaInfo;",
             ")",
-            "Lcom/vk/api/base/d<",
+            "Lcom/vk/api/base/ApiRequest<",
             "Ljava/lang/Boolean;",
             ">;"
         }
@@ -1457,7 +1457,7 @@
 
     if-eqz v0, :cond_0
 
-    new-instance v1, Lcom/vk/api/fave/w;
+    new-instance v1, Lcom/vk/api/fave/FaveRemovePost;
 
     .line 4
     check-cast p1, Lcom/vk/dto/newsfeed/entries/Post;
@@ -1472,12 +1472,12 @@
     move-result p1
 
     .line 6
-    invoke-virtual {p2}, Lcom/vk/fave/entities/e;->b()Ljava/lang/String;
+    invoke-virtual {p2}, Lcom/vk/fave/entities/FaveMetaInfo;->b()Ljava/lang/String;
 
     move-result-object p2
 
     .line 7
-    invoke-direct {v1, v0, p1, p2}, Lcom/vk/api/fave/w;-><init>(IILjava/lang/String;)V
+    invoke-direct {v1, v0, p1, p2}, Lcom/vk/api/fave/FaveRemovePost;-><init>(IILjava/lang/String;)V
 
     goto/16 :goto_0
 
@@ -1487,7 +1487,7 @@
 
     if-eqz v0, :cond_1
 
-    new-instance v1, Lcom/vk/api/fave/r;
+    new-instance v1, Lcom/vk/api/fave/FaveRemoveArticle;
 
     .line 9
     check-cast p1, Lcom/vtosters/lite/attachments/ArticleAttachment;
@@ -1510,12 +1510,12 @@
     move-result p1
 
     .line 11
-    invoke-virtual {p2}, Lcom/vk/fave/entities/e;->b()Ljava/lang/String;
+    invoke-virtual {p2}, Lcom/vk/fave/entities/FaveMetaInfo;->b()Ljava/lang/String;
 
     move-result-object p2
 
     .line 12
-    invoke-direct {v1, v0, p1, p2}, Lcom/vk/api/fave/r;-><init>(IILjava/lang/String;)V
+    invoke-direct {v1, v0, p1, p2}, Lcom/vk/api/fave/FaveRemoveArticle;-><init>(IILjava/lang/String;)V
 
     goto/16 :goto_0
 
@@ -1536,18 +1536,18 @@
     if-eqz v0, :cond_8
 
     .line 14
-    new-instance v1, Lcom/vk/api/fave/p;
+    new-instance v1, Lcom/vk/api/fave/FaveNewRemoveLink;
 
     .line 15
     iget-object p1, p1, Lcom/vk/dto/attachments/SnippetAttachment;->N:Ljava/lang/String;
 
     .line 16
-    invoke-virtual {p2}, Lcom/vk/fave/entities/e;->b()Ljava/lang/String;
+    invoke-virtual {p2}, Lcom/vk/fave/entities/FaveMetaInfo;->b()Ljava/lang/String;
 
     move-result-object p2
 
     .line 17
-    invoke-direct {v1, v0, p1, p2}, Lcom/vk/api/fave/p;-><init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-direct {v1, v0, p1, p2}, Lcom/vk/api/fave/FaveNewRemoveLink;-><init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
 
     goto/16 :goto_0
 
@@ -1568,15 +1568,15 @@
     if-eqz p1, :cond_8
 
     .line 19
-    new-instance v0, Lcom/vk/api/fave/p;
+    new-instance v0, Lcom/vk/api/fave/FaveNewRemoveLink;
 
     .line 20
-    invoke-virtual {p2}, Lcom/vk/fave/entities/e;->b()Ljava/lang/String;
+    invoke-virtual {p2}, Lcom/vk/fave/entities/FaveMetaInfo;->b()Ljava/lang/String;
 
     move-result-object p2
 
     .line 21
-    invoke-direct {v0, p1, v1, p2}, Lcom/vk/api/fave/p;-><init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-direct {v0, p1, v1, p2}, Lcom/vk/api/fave/FaveNewRemoveLink;-><init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
 
     move-object v1, v0
 
@@ -1588,7 +1588,7 @@
 
     if-eqz v0, :cond_4
 
-    new-instance v1, Lcom/vk/api/fave/s;
+    new-instance v1, Lcom/vk/api/fave/FaveRemoveGood;
 
     .line 23
     check-cast p1, Lcom/vk/dto/common/Good;
@@ -1599,12 +1599,12 @@
     iget p1, p1, Lcom/vk/dto/common/Good;->b:I
 
     .line 25
-    invoke-virtual {p2}, Lcom/vk/fave/entities/e;->b()Ljava/lang/String;
+    invoke-virtual {p2}, Lcom/vk/fave/entities/FaveMetaInfo;->b()Ljava/lang/String;
 
     move-result-object p2
 
     .line 26
-    invoke-direct {v1, v0, p1, p2}, Lcom/vk/api/fave/s;-><init>(IILjava/lang/String;)V
+    invoke-direct {v1, v0, p1, p2}, Lcom/vk/api/fave/FaveRemoveGood;-><init>(IILjava/lang/String;)V
 
     goto :goto_0
 
@@ -1614,7 +1614,7 @@
 
     if-eqz v0, :cond_5
 
-    new-instance v1, Lcom/vk/api/fave/y;
+    new-instance v1, Lcom/vk/api/fave/FaveRemoveVideo;
 
     .line 28
     check-cast p1, Lcom/vtosters/lite/attachments/VideoAttachment;
@@ -1633,12 +1633,12 @@
     iget p1, p1, Lcom/vk/dto/common/VideoFile;->a:I
 
     .line 30
-    invoke-virtual {p2}, Lcom/vk/fave/entities/e;->b()Ljava/lang/String;
+    invoke-virtual {p2}, Lcom/vk/fave/entities/FaveMetaInfo;->b()Ljava/lang/String;
 
     move-result-object p2
 
     .line 31
-    invoke-direct {v1, v0, p1, p2}, Lcom/vk/api/fave/y;-><init>(IILjava/lang/String;)V
+    invoke-direct {v1, v0, p1, p2}, Lcom/vk/api/fave/FaveRemoveVideo;-><init>(IILjava/lang/String;)V
 
     goto :goto_0
 
@@ -1648,7 +1648,7 @@
 
     if-eqz v0, :cond_6
 
-    new-instance v1, Lcom/vk/api/fave/v;
+    new-instance v1, Lcom/vk/api/fave/FaveRemovePodcast;
 
     .line 33
     check-cast p1, Lcom/vtosters/lite/attachments/PodcastAttachment;
@@ -1667,12 +1667,12 @@
     iget p1, p1, Lcom/vk/dto/music/MusicTrack;->d:I
 
     .line 35
-    invoke-virtual {p2}, Lcom/vk/fave/entities/e;->b()Ljava/lang/String;
+    invoke-virtual {p2}, Lcom/vk/fave/entities/FaveMetaInfo;->b()Ljava/lang/String;
 
     move-result-object p2
 
     .line 36
-    invoke-direct {v1, v0, p1, p2}, Lcom/vk/api/fave/v;-><init>(IILjava/lang/String;)V
+    invoke-direct {v1, v0, p1, p2}, Lcom/vk/api/fave/FaveRemovePodcast;-><init>(IILjava/lang/String;)V
 
     goto :goto_0
 
@@ -1682,18 +1682,18 @@
 
     if-eqz v0, :cond_7
 
-    new-instance v1, Lcom/vk/api/fave/t;
+    new-instance v1, Lcom/vk/api/fave/FaveRemoveNarrative;
 
     .line 38
     check-cast p1, Lcom/vk/dto/narratives/Narrative;
 
     .line 39
-    invoke-virtual {p2}, Lcom/vk/fave/entities/e;->b()Ljava/lang/String;
+    invoke-virtual {p2}, Lcom/vk/fave/entities/FaveMetaInfo;->b()Ljava/lang/String;
 
     move-result-object p2
 
     .line 40
-    invoke-direct {v1, p1, p2}, Lcom/vk/api/fave/t;-><init>(Lcom/vk/dto/narratives/Narrative;Ljava/lang/String;)V
+    invoke-direct {v1, p1, p2}, Lcom/vk/api/fave/FaveRemoveNarrative;-><init>(Lcom/vk/dto/narratives/Narrative;Ljava/lang/String;)V
 
     goto :goto_0
 
@@ -1703,7 +1703,7 @@
 
     if-eqz v0, :cond_8
 
-    new-instance v1, Lcom/vk/api/fave/u;
+    new-instance v1, Lcom/vk/api/fave/FaveRemovePage;
 
     .line 42
     check-cast p1, Lcom/vtosters/lite/attachments/EventAttachment;
@@ -1717,25 +1717,25 @@
     move-result p1
 
     .line 43
-    invoke-virtual {p2}, Lcom/vk/fave/entities/e;->b()Ljava/lang/String;
+    invoke-virtual {p2}, Lcom/vk/fave/entities/FaveMetaInfo;->b()Ljava/lang/String;
 
     move-result-object p2
 
     .line 44
-    invoke-direct {v1, p1, p2}, Lcom/vk/api/fave/u;-><init>(ILjava/lang/String;)V
+    invoke-direct {v1, p1, p2}, Lcom/vk/api/fave/FaveRemovePage;-><init>(ILjava/lang/String;)V
 
     :cond_8
     :goto_0
     return-object v1
 .end method
 
-.method private final b(Lb/h/h/f/a;)Ljava/lang/Integer;
+.method private final b(Lb/h/h/f/Favable;)Ljava/lang/Integer;
     .locals 2
     .annotation build Landroidx/annotation/StringRes;
     .end annotation
 
     .line 45
-    invoke-interface {p1}, Lb/h/h/f/a;->Y0()Z
+    invoke-interface {p1}, Lb/h/h/f/Favable;->Y0()Z
 
     move-result v0
 
@@ -1899,7 +1899,7 @@
     return-object p1
 .end method
 
-.method public static final b(Landroid/content/Context;Lb/h/h/f/a;Lcom/vk/fave/entities/e;)V
+.method public static final b(Landroid/content/Context;Lb/h/h/f/Favable;Lcom/vk/fave/entities/FaveMetaInfo;)V
     .locals 8
 
     .line 53
@@ -1919,7 +1919,7 @@
 
     move-object v2, p2
 
-    invoke-static/range {v0 .. v7}, Lcom/vk/fave/FaveController;->a(Landroid/content/Context;Lb/h/h/f/a;Lcom/vk/fave/entities/e;Lkotlin/jvm/b/c;Lkotlin/jvm/b/b;ZILjava/lang/Object;)V
+    invoke-static/range {v0 .. v7}, Lcom/vk/fave/FaveController;->a(Landroid/content/Context;Lb/h/h/f/Favable;Lcom/vk/fave/entities/FaveMetaInfo;Lkotlin/jvm/b/Functions1;Lkotlin/jvm/b/Functions2;ZILjava/lang/Object;)V
 
     return-void
 .end method
@@ -2049,12 +2049,12 @@
     .end packed-switch
 .end method
 
-.method public final a()Lc/a/m;
+.method public final a()Lio/reactivex/Observable;
     .locals 3
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "()",
-            "Lc/a/m<",
+            "Lio/reactivex/Observable<",
             "Ljava/util/List<",
             "Lcom/vk/fave/entities/FaveTag;",
             ">;>;"
@@ -2062,47 +2062,47 @@
     .end annotation
 
     .line 123
-    new-instance v0, Lcom/vk/api/fave/l;
+    new-instance v0, Lcom/vk/api/fave/FaveGetTags;
 
-    invoke-direct {v0}, Lcom/vk/api/fave/l;-><init>()V
+    invoke-direct {v0}, Lcom/vk/api/fave/FaveGetTags;-><init>()V
 
     const/4 v1, 0x0
 
     const/4 v2, 0x1
 
     .line 124
-    invoke-static {v0, v1, v2, v1}, Lcom/vk/api/base/d;->d(Lcom/vk/api/base/d;Lcom/vk/api/base/e;ILjava/lang/Object;)Lc/a/m;
+    invoke-static {v0, v1, v2, v1}, Lcom/vk/api/base/ApiRequest;->d(Lcom/vk/api/base/ApiRequest;Lcom/vk/api/base/ApiThreadHolder;ILjava/lang/Object;)Lio/reactivex/Observable;
 
     move-result-object v0
 
     return-object v0
 .end method
 
-.method public final a(IILjava/lang/Integer;Lcom/vk/fave/entities/FaveType;Lcom/vk/fave/entities/e;)Lc/a/m;
+.method public final a(IILjava/lang/Integer;Lcom/vk/fave/entities/FaveType;Lcom/vk/fave/entities/FaveMetaInfo;)Lio/reactivex/Observable;
     .locals 11
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(II",
             "Ljava/lang/Integer;",
             "Lcom/vk/fave/entities/FaveType;",
-            "Lcom/vk/fave/entities/e;",
+            "Lcom/vk/fave/entities/FaveMetaInfo;",
             ")",
-            "Lc/a/m<",
-            "Lcom/vk/fave/entities/c;",
+            "Lio/reactivex/Observable<",
+            "Lcom/vk/fave/entities/FaveResponseEntries1;",
             ">;"
         }
     .end annotation
 
     .line 111
-    new-instance v10, Lcom/vk/api/fave/j;
+    new-instance v10, Lcom/vk/api/fave/FaveGet;
 
     .line 112
-    invoke-virtual/range {p5 .. p5}, Lcom/vk/fave/entities/e;->b()Ljava/lang/String;
+    invoke-virtual/range {p5 .. p5}, Lcom/vk/fave/entities/FaveMetaInfo;->b()Ljava/lang/String;
 
     move-result-object v4
 
     .line 113
-    invoke-virtual/range {p5 .. p5}, Lcom/vk/fave/entities/e;->d()Z
+    invoke-virtual/range {p5 .. p5}, Lcom/vk/fave/entities/FaveMetaInfo;->d()Z
 
     move-result v5
 
@@ -2123,31 +2123,31 @@
     move-object v6, p4
 
     .line 114
-    invoke-direct/range {v0 .. v9}, Lcom/vk/api/fave/j;-><init>(IILjava/lang/Integer;Ljava/lang/String;ZLcom/vk/fave/entities/FaveType;Ljava/lang/String;ILkotlin/jvm/internal/i;)V
+    invoke-direct/range {v0 .. v9}, Lcom/vk/api/fave/FaveGet;-><init>(IILjava/lang/Integer;Ljava/lang/String;ZLcom/vk/fave/entities/FaveType;Ljava/lang/String;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     const/4 v0, 0x0
 
     const/4 v1, 0x1
 
     .line 115
-    invoke-static {v10, v0, v1, v0}, Lcom/vk/api/base/d;->d(Lcom/vk/api/base/d;Lcom/vk/api/base/e;ILjava/lang/Object;)Lc/a/m;
+    invoke-static {v10, v0, v1, v0}, Lcom/vk/api/base/ApiRequest;->d(Lcom/vk/api/base/ApiRequest;Lcom/vk/api/base/ApiThreadHolder;ILjava/lang/Object;)Lio/reactivex/Observable;
 
     move-result-object v0
 
     return-object v0
 .end method
 
-.method public final a(ILjava/lang/Integer;ILcom/vk/fave/entities/e;)Lc/a/m;
+.method public final a(ILjava/lang/Integer;ILcom/vk/fave/entities/FaveMetaInfo;)Lio/reactivex/Observable;
     .locals 7
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(I",
             "Ljava/lang/Integer;",
             "I",
-            "Lcom/vk/fave/entities/e;",
+            "Lcom/vk/fave/entities/FaveMetaInfo;",
             ")",
-            "Lc/a/m<",
-            "Lcom/vk/fave/entities/h;",
+            "Lio/reactivex/Observable<",
+            "Lcom/vk/fave/entities/FaveResponseEntries2;",
             ">;"
         }
     .end annotation
@@ -2156,15 +2156,15 @@
     sget-object v0, Lcom/vk/fave/FaveController$getFavesWithPages$1;->a:Lcom/vk/fave/FaveController$getFavesWithPages$1;
 
     .line 117
-    new-instance v0, Lcom/vk/api/fave/m;
+    new-instance v0, Lcom/vk/api/fave/FaveGetWithPages;
 
     .line 118
-    invoke-virtual {p4}, Lcom/vk/fave/entities/e;->b()Ljava/lang/String;
+    invoke-virtual {p4}, Lcom/vk/fave/entities/FaveMetaInfo;->b()Ljava/lang/String;
 
     move-result-object v5
 
     .line 119
-    invoke-virtual {p4}, Lcom/vk/fave/entities/e;->d()Z
+    invoke-virtual {p4}, Lcom/vk/fave/entities/FaveMetaInfo;->d()Z
 
     move-result v6
 
@@ -2177,32 +2177,32 @@
     move v4, p3
 
     .line 120
-    invoke-direct/range {v1 .. v6}, Lcom/vk/api/fave/m;-><init>(ILjava/lang/Integer;ILjava/lang/String;Z)V
+    invoke-direct/range {v1 .. v6}, Lcom/vk/api/fave/FaveGetWithPages;-><init>(ILjava/lang/Integer;ILjava/lang/String;Z)V
 
     const/4 p1, 0x0
 
     const/4 p2, 0x1
 
     .line 121
-    invoke-static {v0, p1, p2, p1}, Lcom/vk/api/base/d;->d(Lcom/vk/api/base/d;Lcom/vk/api/base/e;ILjava/lang/Object;)Lc/a/m;
+    invoke-static {v0, p1, p2, p1}, Lcom/vk/api/base/ApiRequest;->d(Lcom/vk/api/base/ApiRequest;Lcom/vk/api/base/ApiThreadHolder;ILjava/lang/Object;)Lio/reactivex/Observable;
 
     move-result-object p1
 
     .line 122
     sget-object p2, Lcom/vk/fave/FaveController$d;->a:Lcom/vk/fave/FaveController$d;
 
-    invoke-virtual {p1, p2}, Lc/a/m;->d(Lc/a/z/g;)Lc/a/m;
+    invoke-virtual {p1, p2}, Lio/reactivex/Observable;->d(Lio/reactivex/functions/Consumer;)Lio/reactivex/Observable;
 
     move-result-object p1
 
     const-string p2, "FaveGetWithPages(\n      \u2026doOnNext { markAsSeen() }"
 
-    invoke-static {p1, p2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, p2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     return-object p1
 .end method
 
-.method public final a(Landroid/content/Context;Lcom/vk/fave/entities/FaveTag;)Lc/a/m;
+.method public final a(Landroid/content/Context;Lcom/vk/fave/entities/FaveTag;)Lio/reactivex/Observable;
     .locals 11
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -2210,7 +2210,7 @@
             "Landroid/content/Context;",
             "Lcom/vk/fave/entities/FaveTag;",
             ")",
-            "Lc/a/m<",
+            "Lio/reactivex/Observable<",
             "Ljava/lang/Boolean;",
             ">;"
         }
@@ -2225,27 +2225,27 @@
     invoke-direct {v0, p2}, Lcom/vk/fave/FaveController$removeTag$2;-><init>(Lcom/vk/fave/entities/FaveTag;)V
 
     .line 138
-    new-instance v1, Lcom/vk/api/fave/x;
+    new-instance v1, Lcom/vk/api/fave/FaveRemoveTag;
 
     invoke-virtual {p2}, Lcom/vk/fave/entities/FaveTag;->u1()I
 
     move-result p2
 
-    invoke-direct {v1, p2}, Lcom/vk/api/fave/x;-><init>(I)V
+    invoke-direct {v1, p2}, Lcom/vk/api/fave/FaveRemoveTag;-><init>(I)V
 
     const/4 p2, 0x0
 
     const/4 v2, 0x1
 
     .line 139
-    invoke-static {v1, p2, v2, p2}, Lcom/vk/api/base/d;->d(Lcom/vk/api/base/d;Lcom/vk/api/base/e;ILjava/lang/Object;)Lc/a/m;
+    invoke-static {v1, p2, v2, p2}, Lcom/vk/api/base/ApiRequest;->d(Lcom/vk/api/base/ApiRequest;Lcom/vk/api/base/ApiThreadHolder;ILjava/lang/Object;)Lio/reactivex/Observable;
 
     move-result-object p2
 
     .line 140
     sget-object v1, Lcom/vk/fave/FaveController$g;->a:Lcom/vk/fave/FaveController$g;
 
-    invoke-virtual {p2, v1}, Lc/a/m;->c(Lc/a/z/g;)Lc/a/m;
+    invoke-virtual {p2, v1}, Lio/reactivex/Observable;->c(Lio/reactivex/functions/Consumer;)Lio/reactivex/Observable;
 
     move-result-object p2
 
@@ -2254,13 +2254,13 @@
 
     invoke-direct {v1, v0}, Lcom/vk/fave/FaveController$h;-><init>(Lcom/vk/fave/FaveController$removeTag$2;)V
 
-    invoke-virtual {p2, v1}, Lc/a/m;->d(Lc/a/z/g;)Lc/a/m;
+    invoke-virtual {p2, v1}, Lio/reactivex/Observable;->d(Lio/reactivex/functions/Consumer;)Lio/reactivex/Observable;
 
     move-result-object v2
 
     const-string p2, "FaveRemoveTag(tag.tagId)\u2026Error()\n                }"
 
-    invoke-static {v2, p2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v2, p2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     const-wide/16 v4, 0x0
 
@@ -2277,14 +2277,14 @@
     move-object v3, p1
 
     .line 142
-    invoke-static/range {v2 .. v10}, Lcom/vk/core/extensions/RxExtKt;->a(Lc/a/m;Landroid/content/Context;JIZZILjava/lang/Object;)Lc/a/m;
+    invoke-static/range {v2 .. v10}, Lcom/vk/core/extensions/RxExtKt;->a(Lio/reactivex/Observable;Landroid/content/Context;JIZZILjava/lang/Object;)Lio/reactivex/Observable;
 
     move-result-object p1
 
     return-object p1
 .end method
 
-.method public final a(Landroid/content/Context;Lcom/vk/fave/entities/FaveTag;Ljava/lang/String;)Lc/a/m;
+.method public final a(Landroid/content/Context;Lcom/vk/fave/entities/FaveTag;Ljava/lang/String;)Lio/reactivex/Observable;
     .locals 10
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -2293,7 +2293,7 @@
             "Lcom/vk/fave/entities/FaveTag;",
             "Ljava/lang/String;",
             ")",
-            "Lc/a/m<",
+            "Lio/reactivex/Observable<",
             "Ljava/lang/Boolean;",
             ">;"
         }
@@ -2308,27 +2308,27 @@
     invoke-direct {v0, p2, p3}, Lcom/vk/fave/FaveController$editTag$2;-><init>(Lcom/vk/fave/entities/FaveTag;Ljava/lang/String;)V
 
     .line 131
-    new-instance v1, Lcom/vk/api/fave/i;
+    new-instance v1, Lcom/vk/api/fave/FaveEditTag;
 
     invoke-virtual {p2}, Lcom/vk/fave/entities/FaveTag;->u1()I
 
     move-result p2
 
-    invoke-direct {v1, p2, p3}, Lcom/vk/api/fave/i;-><init>(ILjava/lang/String;)V
+    invoke-direct {v1, p2, p3}, Lcom/vk/api/fave/FaveEditTag;-><init>(ILjava/lang/String;)V
 
     const/4 p2, 0x0
 
     const/4 p3, 0x1
 
     .line 132
-    invoke-static {v1, p2, p3, p2}, Lcom/vk/api/base/d;->d(Lcom/vk/api/base/d;Lcom/vk/api/base/e;ILjava/lang/Object;)Lc/a/m;
+    invoke-static {v1, p2, p3, p2}, Lcom/vk/api/base/ApiRequest;->d(Lcom/vk/api/base/ApiRequest;Lcom/vk/api/base/ApiThreadHolder;ILjava/lang/Object;)Lio/reactivex/Observable;
 
     move-result-object p2
 
     .line 133
     sget-object p3, Lcom/vk/fave/FaveController$b;->a:Lcom/vk/fave/FaveController$b;
 
-    invoke-virtual {p2, p3}, Lc/a/m;->c(Lc/a/z/g;)Lc/a/m;
+    invoke-virtual {p2, p3}, Lio/reactivex/Observable;->c(Lio/reactivex/functions/Consumer;)Lio/reactivex/Observable;
 
     move-result-object p2
 
@@ -2337,13 +2337,13 @@
 
     invoke-direct {p3, v0}, Lcom/vk/fave/FaveController$c;-><init>(Lcom/vk/fave/FaveController$editTag$2;)V
 
-    invoke-virtual {p2, p3}, Lc/a/m;->d(Lc/a/z/g;)Lc/a/m;
+    invoke-virtual {p2, p3}, Lio/reactivex/Observable;->d(Lio/reactivex/functions/Consumer;)Lio/reactivex/Observable;
 
     move-result-object v1
 
     const-string p2, "FaveEditTag(tag.tagId, n\u2026Error()\n                }"
 
-    invoke-static {v1, p2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v1, p2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     const-wide/16 v3, 0x0
 
@@ -2360,14 +2360,14 @@
     move-object v2, p1
 
     .line 135
-    invoke-static/range {v1 .. v9}, Lcom/vk/core/extensions/RxExtKt;->a(Lc/a/m;Landroid/content/Context;JIZZILjava/lang/Object;)Lc/a/m;
+    invoke-static/range {v1 .. v9}, Lcom/vk/core/extensions/RxExtKt;->a(Lio/reactivex/Observable;Landroid/content/Context;JIZZILjava/lang/Object;)Lio/reactivex/Observable;
 
     move-result-object p1
 
     return-object p1
 .end method
 
-.method public final a(Landroid/content/Context;Ljava/lang/String;)Lc/a/m;
+.method public final a(Landroid/content/Context;Ljava/lang/String;)Lio/reactivex/Observable;
     .locals 10
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -2375,36 +2375,36 @@
             "Landroid/content/Context;",
             "Ljava/lang/String;",
             ")",
-            "Lc/a/m<",
+            "Lio/reactivex/Observable<",
             "Lcom/vk/fave/entities/FaveTag;",
             ">;"
         }
     .end annotation
 
     .line 125
-    new-instance v0, Lcom/vk/api/fave/g;
+    new-instance v0, Lcom/vk/api/fave/FaveAddTag;
 
     const/4 v1, 0x1
 
-    invoke-direct {v0, p2, v1}, Lcom/vk/api/fave/g;-><init>(Ljava/lang/String;Z)V
+    invoke-direct {v0, p2, v1}, Lcom/vk/api/fave/FaveAddTag;-><init>(Ljava/lang/String;Z)V
 
     const/4 p2, 0x0
 
     .line 126
-    invoke-static {v0, p2, v1, p2}, Lcom/vk/api/base/d;->d(Lcom/vk/api/base/d;Lcom/vk/api/base/e;ILjava/lang/Object;)Lc/a/m;
+    invoke-static {v0, p2, v1, p2}, Lcom/vk/api/base/ApiRequest;->d(Lcom/vk/api/base/ApiRequest;Lcom/vk/api/base/ApiThreadHolder;ILjava/lang/Object;)Lio/reactivex/Observable;
 
     move-result-object p2
 
     .line 127
     sget-object v0, Lcom/vk/fave/FaveController$a;->a:Lcom/vk/fave/FaveController$a;
 
-    invoke-virtual {p2, v0}, Lc/a/m;->d(Lc/a/z/g;)Lc/a/m;
+    invoke-virtual {p2, v0}, Lio/reactivex/Observable;->d(Lio/reactivex/functions/Consumer;)Lio/reactivex/Observable;
 
     move-result-object v1
 
     const-string p2, "FaveAddTag(name, withFro\u2026AG, it)\n                }"
 
-    invoke-static {v1, p2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v1, p2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     const-wide/16 v3, 0x0
 
@@ -2421,38 +2421,38 @@
     move-object v2, p1
 
     .line 128
-    invoke-static/range {v1 .. v9}, Lcom/vk/core/extensions/RxExtKt;->a(Lc/a/m;Landroid/content/Context;JIZZILjava/lang/Object;)Lc/a/m;
+    invoke-static/range {v1 .. v9}, Lcom/vk/core/extensions/RxExtKt;->a(Lio/reactivex/Observable;Landroid/content/Context;JIZZILjava/lang/Object;)Lio/reactivex/Observable;
 
     move-result-object p1
 
     return-object p1
 .end method
 
-.method public final a(Ljava/lang/String;Ljava/lang/Integer;Lcom/vk/fave/entities/e;)Lc/a/m;
+.method public final a(Ljava/lang/String;Ljava/lang/Integer;Lcom/vk/fave/entities/FaveMetaInfo;)Lio/reactivex/Observable;
     .locals 8
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
             "Ljava/lang/String;",
             "Ljava/lang/Integer;",
-            "Lcom/vk/fave/entities/e;",
+            "Lcom/vk/fave/entities/FaveMetaInfo;",
             ")",
-            "Lc/a/m<",
-            "Lcom/vk/fave/entities/k;",
+            "Lio/reactivex/Observable<",
+            "Lcom/vk/fave/entities/FaveResponseEntries;",
             ">;"
         }
     .end annotation
 
     .line 171
-    new-instance v7, Lcom/vk/api/fave/b0;
+    new-instance v7, Lcom/vk/api/fave/PagesGet;
 
     .line 172
-    invoke-virtual {p3}, Lcom/vk/fave/entities/e;->b()Ljava/lang/String;
+    invoke-virtual {p3}, Lcom/vk/fave/entities/FaveMetaInfo;->b()Ljava/lang/String;
 
     move-result-object v5
 
     .line 173
-    invoke-virtual {p3}, Lcom/vk/fave/entities/e;->d()Z
+    invoke-virtual {p3}, Lcom/vk/fave/entities/FaveMetaInfo;->d()Z
 
     move-result v6
 
@@ -2467,14 +2467,14 @@
     move-object v4, p2
 
     .line 174
-    invoke-direct/range {v0 .. v6}, Lcom/vk/api/fave/b0;-><init>(IILjava/lang/String;Ljava/lang/Integer;Ljava/lang/String;Z)V
+    invoke-direct/range {v0 .. v6}, Lcom/vk/api/fave/PagesGet;-><init>(IILjava/lang/String;Ljava/lang/Integer;Ljava/lang/String;Z)V
 
     const/4 p1, 0x0
 
     const/4 p2, 0x1
 
     .line 175
-    invoke-static {v7, p1, p2, p1}, Lcom/vk/api/base/d;->d(Lcom/vk/api/base/d;Lcom/vk/api/base/e;ILjava/lang/Object;)Lc/a/m;
+    invoke-static {v7, p1, p2, p1}, Lcom/vk/api/base/ApiRequest;->d(Lcom/vk/api/base/ApiRequest;Lcom/vk/api/base/ApiThreadHolder;ILjava/lang/Object;)Lio/reactivex/Observable;
 
     move-result-object p1
 
@@ -2496,16 +2496,16 @@
     move-result v0
 
     .line 177
-    sget-object v1, Lcom/vk/fave/h;->a:Lcom/vk/fave/h;
+    sget-object v1, Lcom/vk/fave/FaveReporter;->a:Lcom/vk/fave/FaveReporter;
 
-    invoke-virtual {v1, p2}, Lcom/vk/fave/h;->a(Lcom/vk/fave/entities/FavePage;)V
+    invoke-virtual {v1, p2}, Lcom/vk/fave/FaveReporter;->a(Lcom/vk/fave/entities/FavePage;)V
 
     .line 178
-    new-instance v1, Lcom/vk/profile/ui/c$z;
+    new-instance v1, Lcom/vk/profile/ui/BaseProfileFragment$z;
 
-    invoke-direct {v1, v0}, Lcom/vk/profile/ui/c$z;-><init>(I)V
+    invoke-direct {v1, v0}, Lcom/vk/profile/ui/BaseProfileFragment$z;-><init>(I)V
 
-    invoke-virtual {v1, p1}, Lcom/vk/navigation/o;->a(Landroid/content/Context;)V
+    invoke-virtual {v1, p1}, Lcom/vk/navigation/Navigator;->a(Landroid/content/Context;)V
 
     .line 179
     invoke-virtual {p2}, Lcom/vk/fave/entities/FavePage;->k0()Ljava/lang/String;
@@ -2542,9 +2542,9 @@
 
     if-eqz p1, :cond_2
 
-    new-instance p1, Lcom/vk/api/fave/a0;
+    new-instance p1, Lcom/vk/api/fave/FaveTrackPageInteraction;
 
-    invoke-direct {p1, v0, v5}, Lcom/vk/api/fave/a0;-><init>(IZ)V
+    invoke-direct {p1, v0, v5}, Lcom/vk/api/fave/FaveTrackPageInteraction;-><init>(IZ)V
 
     goto :goto_1
 
@@ -2558,9 +2558,9 @@
 
     if-eqz p1, :cond_2
 
-    new-instance p1, Lcom/vk/api/fave/a0;
+    new-instance p1, Lcom/vk/api/fave/FaveTrackPageInteraction;
 
-    invoke-direct {p1, v0, v3}, Lcom/vk/api/fave/a0;-><init>(IZ)V
+    invoke-direct {p1, v0, v3}, Lcom/vk/api/fave/FaveTrackPageInteraction;-><init>(IZ)V
 
     goto :goto_1
 
@@ -2597,7 +2597,7 @@
     if-eqz p1, :cond_3
 
     .line 183
-    invoke-static {p1, v4, v5, v4}, Lcom/vk/api/base/d;->d(Lcom/vk/api/base/d;Lcom/vk/api/base/e;ILjava/lang/Object;)Lc/a/m;
+    invoke-static {p1, v4, v5, v4}, Lcom/vk/api/base/ApiRequest;->d(Lcom/vk/api/base/ApiRequest;Lcom/vk/api/base/ApiThreadHolder;ILjava/lang/Object;)Lio/reactivex/Observable;
 
     move-result-object p1
 
@@ -2607,23 +2607,23 @@
 
     sget-object v0, Lcom/vk/fave/FaveController$f;->a:Lcom/vk/fave/FaveController$f;
 
-    invoke-virtual {p1, p2, v0}, Lc/a/m;->a(Lc/a/z/g;Lc/a/z/g;)Lio/reactivex/disposables/b;
+    invoke-virtual {p1, p2, v0}, Lio/reactivex/Observable;->a(Lio/reactivex/functions/Consumer;Lio/reactivex/functions/Consumer;)Lio/reactivex/disposables/Disposable;
 
     :cond_3
     return-void
 .end method
 
-.method public final a(Landroid/content/Context;Lcom/vk/fave/entities/l;Ljava/util/List;Lcom/vk/fave/entities/e;)V
+.method public final a(Landroid/content/Context;Lcom/vk/fave/entities/WithTags;Ljava/util/List;Lcom/vk/fave/entities/FaveMetaInfo;)V
     .locals 6
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
             "Landroid/content/Context;",
-            "Lcom/vk/fave/entities/l;",
+            "Lcom/vk/fave/entities/WithTags;",
             "Ljava/util/List<",
             "Lcom/vk/fave/entities/FaveTag;",
             ">;",
-            "Lcom/vk/fave/entities/e;",
+            "Lcom/vk/fave/entities/FaveMetaInfo;",
             ")V"
         }
     .end annotation
@@ -2638,7 +2638,7 @@
 
     .line 160
     :try_start_0
-    invoke-direct {p0, p2, p3, p4}, Lcom/vk/fave/FaveController;->a(Lcom/vk/fave/entities/l;Ljava/util/List;Lcom/vk/fave/entities/e;)Lcom/vk/api/base/d;
+    invoke-direct {p0, p2, p3, p4}, Lcom/vk/fave/FaveController;->a(Lcom/vk/fave/entities/WithTags;Ljava/util/List;Lcom/vk/fave/entities/FaveMetaInfo;)Lcom/vk/api/base/ApiRequest;
 
     move-result-object v4
 
@@ -2656,46 +2656,46 @@
     invoke-static {p1}, Lcom/vk/log/L;->b([Ljava/lang/Object;)V
 
     .line 162
-    invoke-static {v1, v2, v0, v3}, Lcom/vk/core/util/k1;->a(IZILjava/lang/Object;)V
+    invoke-static {v1, v2, v0, v3}, Lcom/vk/core/util/ToastUtils;->a(IZILjava/lang/Object;)V
 
     return-void
 
     .line 163
     :cond_0
-    invoke-static {v4, v3, v5, v3}, Lcom/vk/api/base/d;->d(Lcom/vk/api/base/d;Lcom/vk/api/base/e;ILjava/lang/Object;)Lc/a/m;
+    invoke-static {v4, v3, v5, v3}, Lcom/vk/api/base/ApiRequest;->d(Lcom/vk/api/base/ApiRequest;Lcom/vk/api/base/ApiThreadHolder;ILjava/lang/Object;)Lio/reactivex/Observable;
 
     move-result-object v4
 
     .line 164
     new-instance v5, Lcom/vk/fave/FaveController$l;
 
-    invoke-direct {v5, p2, p3, p1, p4}, Lcom/vk/fave/FaveController$l;-><init>(Lcom/vk/fave/entities/l;Ljava/util/List;Landroid/content/Context;Lcom/vk/fave/entities/e;)V
+    invoke-direct {v5, p2, p3, p1, p4}, Lcom/vk/fave/FaveController$l;-><init>(Lcom/vk/fave/entities/WithTags;Ljava/util/List;Landroid/content/Context;Lcom/vk/fave/entities/FaveMetaInfo;)V
 
     .line 165
     sget-object p2, Lcom/vk/fave/FaveController$setTags$2;->c:Lcom/vk/fave/FaveController$setTags$2;
 
     if-eqz p2, :cond_1
 
-    new-instance p3, Lcom/vk/fave/b;
+    new-instance p3, Lcom/vk/fave/FaveController1;
 
-    invoke-direct {p3, p2}, Lcom/vk/fave/b;-><init>(Lkotlin/jvm/b/b;)V
+    invoke-direct {p3, p2}, Lcom/vk/fave/FaveController1;-><init>(Lkotlin/jvm/b/Functions2;)V
 
     move-object p2, p3
 
     :cond_1
-    check-cast p2, Lc/a/z/g;
+    check-cast p2, Lio/reactivex/functions/Consumer;
 
     .line 166
-    invoke-virtual {v4, v5, p2}, Lc/a/m;->a(Lc/a/z/g;Lc/a/z/g;)Lio/reactivex/disposables/b;
+    invoke-virtual {v4, v5, p2}, Lio/reactivex/Observable;->a(Lio/reactivex/functions/Consumer;Lio/reactivex/functions/Consumer;)Lio/reactivex/disposables/Disposable;
 
     move-result-object p2
 
     const-string p3, "request.toUiObservable()\u2026hrowable::showToastError)"
 
-    invoke-static {p2, p3}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p2, p3}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 167
-    invoke-direct {p0, p2, p1}, Lcom/vk/fave/FaveController;->a(Lio/reactivex/disposables/b;Landroid/content/Context;)V
+    invoke-direct {p0, p2, p1}, Lcom/vk/fave/FaveController;->a(Lio/reactivex/disposables/Disposable;Landroid/content/Context;)V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
@@ -2703,7 +2703,7 @@
 
     .line 168
     :catchall_0
-    invoke-static {v1, v2, v0, v3}, Lcom/vk/core/util/k1;->a(IZILjava/lang/Object;)V
+    invoke-static {v1, v2, v0, v3}, Lcom/vk/core/util/ToastUtils;->a(IZILjava/lang/Object;)V
 
     :goto_0
     return-void
@@ -2765,16 +2765,16 @@
     goto :goto_0
 
     :cond_0
-    new-instance v1, Lcom/vk/api/fave/z;
+    new-instance v1, Lcom/vk/api/fave/FaveReorderTags;
 
-    invoke-direct {v1, v0}, Lcom/vk/api/fave/z;-><init>(Ljava/util/List;)V
+    invoke-direct {v1, v0}, Lcom/vk/api/fave/FaveReorderTags;-><init>(Ljava/util/List;)V
 
     const/4 v0, 0x1
 
     const/4 v2, 0x0
 
     .line 190
-    invoke-static {v1, v2, v0, v2}, Lcom/vk/api/base/d;->d(Lcom/vk/api/base/d;Lcom/vk/api/base/e;ILjava/lang/Object;)Lc/a/m;
+    invoke-static {v1, v2, v0, v2}, Lcom/vk/api/base/ApiRequest;->d(Lcom/vk/api/base/ApiRequest;Lcom/vk/api/base/ApiThreadHolder;ILjava/lang/Object;)Lio/reactivex/Observable;
 
     move-result-object v0
 
@@ -2787,46 +2787,46 @@
     sget-object p2, Lcom/vk/fave/FaveController$j;->a:Lcom/vk/fave/FaveController$j;
 
     .line 193
-    invoke-virtual {v0, v1, p2}, Lc/a/m;->a(Lc/a/z/g;Lc/a/z/g;)Lio/reactivex/disposables/b;
+    invoke-virtual {v0, v1, p2}, Lio/reactivex/Observable;->a(Lio/reactivex/functions/Consumer;Lio/reactivex/functions/Consumer;)Lio/reactivex/disposables/Disposable;
 
     move-result-object p2
 
     const-string v0, "FaveReorderTags(list.map\u2026.e(it)\n                })"
 
-    invoke-static {p2, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p2, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 194
-    invoke-direct {p0, p2, p1}, Lcom/vk/fave/FaveController;->a(Lio/reactivex/disposables/b;Landroid/content/Context;)V
+    invoke-direct {p0, p2, p1}, Lcom/vk/fave/FaveController;->a(Lio/reactivex/disposables/Disposable;Landroid/content/Context;)V
 
     return-void
 .end method
 
-.method public final a(Lb/h/h/f/a;)V
+.method public final a(Lb/h/h/f/Favable;)V
     .locals 3
 
     .line 81
-    sget-object v0, Lcom/vk/newsfeed/controllers/a;->e:Lcom/vk/newsfeed/controllers/a;
+    sget-object v0, Lcom/vk/newsfeed/controllers/NewsfeedController;->e:Lcom/vk/newsfeed/controllers/NewsfeedController;
 
-    invoke-virtual {v0}, Lcom/vk/newsfeed/controllers/a;->n()Lb/h/g/l/d;
+    invoke-virtual {v0}, Lcom/vk/newsfeed/controllers/NewsfeedController;->n()Lb/h/g/l/NotificationCenter;
 
     move-result-object v0
 
-    sget-object v1, Lcom/vk/fave/d;->a:Lcom/vk/fave/d;
+    sget-object v1, Lcom/vk/fave/FaveConverter;->a:Lcom/vk/fave/FaveConverter;
 
     const/4 v2, 0x0
 
-    invoke-virtual {v1, p1, v2}, Lcom/vk/fave/d;->b(Lb/h/h/f/a;Z)Lcom/vk/dto/newsfeed/entries/NewsEntry;
+    invoke-virtual {v1, p1, v2}, Lcom/vk/fave/FaveConverter;->b(Lb/h/h/f/Favable;Z)Lcom/vk/dto/newsfeed/entries/NewsEntry;
 
     move-result-object v1
 
     const/16 v2, 0x75
 
-    invoke-virtual {v0, v2, v1}, Lb/h/g/l/d;->a(ILjava/lang/Object;)V
+    invoke-virtual {v0, v2, v1}, Lb/h/g/l/NotificationCenter;->a(ILjava/lang/Object;)V
 
     .line 82
-    sget-object v0, Lcom/vk/fave/d;->a:Lcom/vk/fave/d;
+    sget-object v0, Lcom/vk/fave/FaveConverter;->a:Lcom/vk/fave/FaveConverter;
 
-    invoke-virtual {v0, p1}, Lcom/vk/fave/d;->e(Lb/h/h/f/a;)Ljava/lang/Object;
+    invoke-virtual {v0, p1}, Lcom/vk/fave/FaveConverter;->e(Lb/h/h/f/Favable;)Ljava/lang/Object;
 
     move-result-object p1
 
@@ -2842,11 +2842,11 @@
     if-eqz p1, :cond_1
 
     .line 83
-    new-instance v0, Lcom/vk/libvideo/y/l;
+    new-instance v0, Lcom/vk/libvideo/y/VideoEvents6;
 
-    invoke-direct {v0, p1}, Lcom/vk/libvideo/y/l;-><init>(Lcom/vk/dto/common/VideoFile;)V
+    invoke-direct {v0, p1}, Lcom/vk/libvideo/y/VideoEvents6;-><init>(Lcom/vk/dto/common/VideoFile;)V
 
-    invoke-static {v0}, Lcom/vk/libvideo/y/m;->a(Lcom/vk/libvideo/y/a;)V
+    invoke-static {v0}, Lcom/vk/libvideo/y/VideoEventBus;->a(Lcom/vk/libvideo/y/VideoEvents1;)V
 
     :cond_1
     return-void
@@ -2875,13 +2875,13 @@
     .locals 2
 
     .line 170
-    invoke-static {}, Lb/h/g/l/d;->a()Lb/h/g/l/d;
+    invoke-static {}, Lb/h/g/l/NotificationCenter;->a()Lb/h/g/l/NotificationCenter;
 
     move-result-object v0
 
     const/16 v1, 0x4b1
 
-    invoke-virtual {v0, v1, p1}, Lb/h/g/l/d;->a(ILjava/lang/Object;)V
+    invoke-virtual {v0, v1, p1}, Lb/h/g/l/NotificationCenter;->a(ILjava/lang/Object;)V
 
     return-void
 .end method
@@ -2892,7 +2892,7 @@
     .line 169
     sget-object v0, Lcom/vk/fave/FaveController$handleLimitTagError$1;->a:Lcom/vk/fave/FaveController$handleLimitTagError$1;
 
-    invoke-static {p1, v0}, Lcom/vk/api/base/j;->a(Ljava/lang/Throwable;Lkotlin/jvm/b/b;)V
+    invoke-static {p1, v0}, Lcom/vk/api/base/ThrowableExt;->a(Ljava/lang/Throwable;Lkotlin/jvm/b/Functions2;)V
 
     return-void
 .end method

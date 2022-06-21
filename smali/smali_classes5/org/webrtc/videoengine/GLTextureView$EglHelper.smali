@@ -141,7 +141,7 @@
 
     move-result-object p1
 
-    invoke-static {p0, p1}, Le/c/a/a;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {p0, p1}, Le/c/a/Log;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     return-void
 .end method
@@ -395,7 +395,7 @@
     const-string v2, "EglHelper.createWindowSurface returned EGL_BAD_NATIVE_WINDOW."
 
     .line 12
-    invoke-static {v0, v2}, Le/c/a/a;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v2}, Le/c/a/Log;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     :cond_4
     return v1

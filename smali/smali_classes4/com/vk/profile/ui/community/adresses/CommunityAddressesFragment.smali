@@ -1,11 +1,11 @@
 .class public final Lcom/vk/profile/ui/community/adresses/CommunityAddressesFragment;
-.super Lcom/vk/core/fragments/b;
+.super Lcom/vk/core/fragments/BaseFragment1;
 .source "CommunityAddressesFragment.kt"
 
 # interfaces
-.implements Lcom/vk/navigation/b0/k;
-.implements Lcom/vk/profile/view/a;
-.implements Lcom/vk/core/ui/themes/f;
+.implements Lcom/vk/navigation/b0/FragmentWithoutBottomMenuBar;
+.implements Lcom/vk/profile/view/CommunityAddressView;
+.implements Lcom/vk/core/ui/themes/Themable;
 
 
 # annotations
@@ -32,13 +32,13 @@
 # instance fields
 .field private F:Lcom/vk/profile/ui/community/adresses/CommunityAddressesFragment$f;
 
-.field private G:Lcom/vk/profile/ui/community/adresses/a;
+.field private G:Lcom/vk/profile/ui/community/adresses/AddressesAdapter;
 
-.field private H:Lcom/vk/lists/s;
+.field private H:Lcom/vk/lists/PaginatedRecyclerAdapter;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Lcom/vk/lists/s<",
-            "Lcom/vk/profile/ui/community/adresses/a;",
+            "Lcom/vk/lists/PaginatedRecyclerAdapter<",
+            "Lcom/vk/profile/ui/community/adresses/AddressesAdapter;",
             ">;"
         }
     .end annotation
@@ -84,17 +84,17 @@
 
 .field private b0:Lcom/google/android/gms/maps/c;
 
-.field private c0:Lb/d/b/a/f/c;
+.field private c0:Lb/d/b/a/f/ClusterManager;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Lb/d/b/a/f/c<",
-            "Lcom/vk/profile/data/a;",
+            "Lb/d/b/a/f/ClusterManager<",
+            "Lcom/vk/profile/data/AddressClusterAdapter;",
             ">;"
         }
     .end annotation
 .end field
 
-.field private d0:Lcom/vk/profile/ui/community/adresses/c;
+.field private d0:Lcom/vk/profile/ui/community/adresses/AddressesRenderer;
 
 .field public e0:Lcom/vk/profile/ui/community/adresses/AddressesListBehavior;
     .annotation system Ldalvik/annotation/Signature;
@@ -116,11 +116,11 @@
     .end annotation
 .end field
 
-.field private g0:Lb/d/b/a/f/a;
+.field private g0:Lb/d/b/a/f/Cluster;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Lb/d/b/a/f/a<",
-            "Lcom/vk/profile/data/a;",
+            "Lb/d/b/a/f/Cluster<",
+            "Lcom/vk/profile/data/AddressClusterAdapter;",
             ">;"
         }
     .end annotation
@@ -132,19 +132,19 @@
 
 .field private j0:Z
 
-.field public k0:Lcom/vk/profile/presenter/f/a;
+.field public k0:Lcom/vk/profile/presenter/f/CommunityAddressPresenter;
 
 .field private l0:I
 
-.field private m0:Lcom/vk/profile/ui/community/adresses/b;
+.field private m0:Lcom/vk/profile/ui/community/adresses/AddressesPaginatedView;
 
-.field private final n0:Lkotlin/jvm/b/c;
+.field private final n0:Lkotlin/jvm/b/Functions1;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Lkotlin/jvm/b/c<",
+            "Lkotlin/jvm/b/Functions1<",
             "Ljava/lang/Integer;",
             "Ljava/lang/Integer;",
-            "Lkotlin/m;",
+            "Lkotlin/Unit;",
             ">;"
         }
     .end annotation
@@ -159,7 +159,7 @@
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, v1}, Lcom/vk/profile/ui/community/adresses/CommunityAddressesFragment$c;-><init>(Lkotlin/jvm/internal/i;)V
+    invoke-direct {v0, v1}, Lcom/vk/profile/ui/community/adresses/CommunityAddressesFragment$c;-><init>(Lkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     sput-object v0, Lcom/vk/profile/ui/community/adresses/CommunityAddressesFragment;->p0:Lcom/vk/profile/ui/community/adresses/CommunityAddressesFragment$c;
 
@@ -181,7 +181,7 @@
     .locals 1
 
     .line 1
-    invoke-direct {p0}, Lcom/vk/core/fragments/b;-><init>()V
+    invoke-direct {p0}, Lcom/vk/core/fragments/BaseFragment1;-><init>()V
 
     .line 2
     new-instance v0, Landroid/os/Handler;
@@ -204,7 +204,7 @@
 
     invoke-direct {v0, p0}, Lcom/vk/profile/ui/community/adresses/CommunityAddressesFragment$sizeListener$1;-><init>(Lcom/vk/profile/ui/community/adresses/CommunityAddressesFragment;)V
 
-    iput-object v0, p0, Lcom/vk/profile/ui/community/adresses/CommunityAddressesFragment;->n0:Lkotlin/jvm/b/c;
+    iput-object v0, p0, Lcom/vk/profile/ui/community/adresses/CommunityAddressesFragment;->n0:Lkotlin/jvm/b/Functions1;
 
     return-void
 .end method
@@ -235,7 +235,7 @@
     :cond_0
     const-string v0, "contentView"
 
-    invoke-static {v0}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v0}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     const/4 v0, 0x0
 
@@ -291,7 +291,7 @@
 
     if-eqz v0, :cond_4
 
-    iget-object v1, p0, Lcom/vk/profile/ui/community/adresses/CommunityAddressesFragment;->k0:Lcom/vk/profile/presenter/f/a;
+    iget-object v1, p0, Lcom/vk/profile/ui/community/adresses/CommunityAddressesFragment;->k0:Lcom/vk/profile/presenter/f/CommunityAddressPresenter;
 
     const-string v3, "presenter"
 
@@ -299,29 +299,29 @@
 
     if-eqz v1, :cond_3
 
-    invoke-virtual {v1}, Lcom/vk/profile/presenter/f/a;->b()Ljava/util/ArrayList;
+    invoke-virtual {v1}, Lcom/vk/profile/presenter/f/CommunityAddressPresenter;->b()Ljava/util/ArrayList;
 
     move-result-object v1
 
-    iget-object v5, p0, Lcom/vk/profile/ui/community/adresses/CommunityAddressesFragment;->k0:Lcom/vk/profile/presenter/f/a;
+    iget-object v5, p0, Lcom/vk/profile/ui/community/adresses/CommunityAddressesFragment;->k0:Lcom/vk/profile/presenter/f/CommunityAddressPresenter;
 
     if-eqz v5, :cond_2
 
-    invoke-virtual {v5}, Lcom/vk/profile/presenter/f/a;->o()Landroid/location/Location;
+    invoke-virtual {v5}, Lcom/vk/profile/presenter/f/CommunityAddressPresenter;->o()Landroid/location/Location;
 
     move-result-object v3
 
-    invoke-static {v0, v1, v3, v4}, Lcom/vk/profile/utils/a;->a(Lcom/google/android/gms/maps/c;Ljava/util/List;Landroid/location/Location;Lcom/vk/dto/profile/Address;)V
+    invoke-static {v0, v1, v3, v4}, Lcom/vk/profile/utils/AddressesUtils;->a(Lcom/google/android/gms/maps/c;Ljava/util/List;Landroid/location/Location;Lcom/vk/dto/profile/Address;)V
 
     goto :goto_0
 
     :cond_2
-    invoke-static {v3}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v3}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v4
 
     :cond_3
-    invoke-static {v3}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v3}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v4
 
@@ -344,7 +344,7 @@
     .locals 3
 
     .line 1
-    iget-object v0, p0, Lcom/vk/profile/ui/community/adresses/CommunityAddressesFragment;->g0:Lb/d/b/a/f/a;
+    iget-object v0, p0, Lcom/vk/profile/ui/community/adresses/CommunityAddressesFragment;->g0:Lb/d/b/a/f/Cluster;
 
     if-eqz v0, :cond_2
 
@@ -356,7 +356,7 @@
     iput v1, p0, Lcom/vk/profile/ui/community/adresses/CommunityAddressesFragment;->h0:I
 
     .line 3
-    invoke-interface {v0}, Lb/d/b/a/f/a;->l0()I
+    invoke-interface {v0}, Lb/d/b/a/f/Cluster;->l0()I
 
     move-result v1
 
@@ -371,7 +371,7 @@
     iget v1, p0, Lcom/vk/profile/ui/community/adresses/CommunityAddressesFragment;->h0:I
 
     .line 6
-    invoke-interface {v0}, Lb/d/b/a/f/a;->a()Ljava/util/Collection;
+    invoke-interface {v0}, Lb/d/b/a/f/Cluster;->a()Ljava/util/Collection;
 
     move-result-object v0
 
@@ -395,10 +395,10 @@
 
     move-result-object v0
 
-    check-cast v0, Lcom/vk/profile/data/a;
+    check-cast v0, Lcom/vk/profile/data/AddressClusterAdapter;
 
     .line 9
-    invoke-direct {p0, v0}, Lcom/vk/profile/ui/community/adresses/CommunityAddressesFragment;->a(Lcom/vk/profile/data/a;)V
+    invoke-direct {p0, v0}, Lcom/vk/profile/ui/community/adresses/CommunityAddressesFragment;->a(Lcom/vk/profile/data/AddressClusterAdapter;)V
 
     .line 10
     iget-object v1, p0, Lcom/vk/profile/ui/community/adresses/CommunityAddressesFragment;->F:Lcom/vk/profile/ui/community/adresses/CommunityAddressesFragment$f;
@@ -407,7 +407,7 @@
 
     const/4 v2, 0x0
 
-    invoke-virtual {v0}, Lcom/vk/profile/data/a;->a()Lcom/vk/dto/profile/PlainAddress;
+    invoke-virtual {v0}, Lcom/vk/profile/data/AddressClusterAdapter;->a()Lcom/vk/dto/profile/PlainAddress;
 
     move-result-object v0
 
@@ -418,7 +418,7 @@
     :cond_1
     const-string v0, "state"
 
-    invoke-static {v0}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v0}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     const/4 v0, 0x0
 
@@ -520,12 +520,12 @@
     goto :goto_0
 
     :cond_0
-    invoke-static {v4}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v4}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v2
 
     :cond_1
-    invoke-static {v1}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v1}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v2
 
@@ -574,12 +574,12 @@
     goto :goto_1
 
     :cond_3
-    invoke-static {v4}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v4}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v2
 
     :cond_4
-    invoke-static {v1}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v1}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v2
 
@@ -616,12 +616,12 @@
     goto :goto_2
 
     :cond_6
-    invoke-static {v1}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v1}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v2
 
     :cond_7
-    invoke-static {v1}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v1}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v2
 
@@ -630,62 +630,62 @@
     return-void
 
     :cond_9
-    invoke-static {v1}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v1}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v2
 
     :cond_a
-    invoke-static {v1}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v1}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v2
 
     .line 12
     :cond_b
-    invoke-static {v1}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v1}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v2
 
     .line 13
     :cond_c
-    invoke-static {v4}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v4}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v2
 
     .line 14
     :cond_d
-    invoke-static {v4}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v4}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v2
 
     .line 15
     :cond_e
-    invoke-static {v1}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v1}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v2
 
     :cond_f
-    invoke-static {v1}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v1}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v2
 
     .line 16
     :cond_10
-    invoke-static {v1}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v1}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v2
 
     .line 17
     :cond_11
-    invoke-static {v1}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v1}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v2
 .end method
 
-.method public static final synthetic a(Lcom/vk/profile/ui/community/adresses/CommunityAddressesFragment;)Lcom/vk/profile/ui/community/adresses/a;
+.method public static final synthetic a(Lcom/vk/profile/ui/community/adresses/CommunityAddressesFragment;)Lcom/vk/profile/ui/community/adresses/AddressesAdapter;
     .locals 0
 
     .line 1
-    iget-object p0, p0, Lcom/vk/profile/ui/community/adresses/CommunityAddressesFragment;->G:Lcom/vk/profile/ui/community/adresses/a;
+    iget-object p0, p0, Lcom/vk/profile/ui/community/adresses/CommunityAddressesFragment;->G:Lcom/vk/profile/ui/community/adresses/AddressesAdapter;
 
     return-object p0
 .end method
@@ -771,22 +771,22 @@
 
     .line 15
     :cond_2
-    new-instance v0, Lb/d/b/a/f/c;
+    new-instance v0, Lb/d/b/a/f/ClusterManager;
 
     invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getActivity()Landroidx/fragment/app/FragmentActivity;
 
     move-result-object v4
 
-    invoke-direct {v0, v4, p1}, Lb/d/b/a/f/c;-><init>(Landroid/content/Context;Lcom/google/android/gms/maps/c;)V
+    invoke-direct {v0, v4, p1}, Lb/d/b/a/f/ClusterManager;-><init>(Landroid/content/Context;Lcom/google/android/gms/maps/c;)V
 
-    iput-object v0, p0, Lcom/vk/profile/ui/community/adresses/CommunityAddressesFragment;->c0:Lb/d/b/a/f/c;
+    iput-object v0, p0, Lcom/vk/profile/ui/community/adresses/CommunityAddressesFragment;->c0:Lb/d/b/a/f/ClusterManager;
 
     .line 16
-    iget-object v0, p0, Lcom/vk/profile/ui/community/adresses/CommunityAddressesFragment;->c0:Lb/d/b/a/f/c;
+    iget-object v0, p0, Lcom/vk/profile/ui/community/adresses/CommunityAddressesFragment;->c0:Lb/d/b/a/f/ClusterManager;
 
     if-eqz v0, :cond_3
 
-    invoke-virtual {v0}, Lb/d/b/a/f/c;->e()Lb/d/b/a/a;
+    invoke-virtual {v0}, Lb/d/b/a/f/ClusterManager;->e()Lb/d/b/a/MarkerManager;
 
     move-result-object v0
 
@@ -794,7 +794,7 @@
 
     const-string v4, "selected"
 
-    invoke-virtual {v0, v4}, Lb/d/b/a/a;->b(Ljava/lang/String;)Lb/d/b/a/a$a;
+    invoke-virtual {v0, v4}, Lb/d/b/a/MarkerManager;->b(Ljava/lang/String;)Lb/d/b/a/MarkerManager$a;
 
     move-result-object v0
 
@@ -811,11 +811,11 @@
 
     invoke-direct {v4, p0}, Lcom/vk/profile/ui/community/adresses/CommunityAddressesFragment$g;-><init>(Lcom/vk/profile/ui/community/adresses/CommunityAddressesFragment;)V
 
-    invoke-virtual {v0, v4}, Lb/d/b/a/a$a;->a(Lcom/google/android/gms/maps/c$h;)V
+    invoke-virtual {v0, v4}, Lb/d/b/a/MarkerManager$a;->a(Lcom/google/android/gms/maps/c$h;)V
 
     .line 18
     :cond_4
-    new-instance v0, Lcom/vk/profile/ui/community/adresses/c;
+    new-instance v0, Lcom/vk/profile/ui/community/adresses/AddressesRenderer;
 
     invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getContext()Landroid/content/Context;
 
@@ -825,16 +825,16 @@
 
     const-string v5, "context!!"
 
-    invoke-static {v4, v5}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v4, v5}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    iget-object v5, p0, Lcom/vk/profile/ui/community/adresses/CommunityAddressesFragment;->c0:Lb/d/b/a/f/c;
+    iget-object v5, p0, Lcom/vk/profile/ui/community/adresses/CommunityAddressesFragment;->c0:Lb/d/b/a/f/ClusterManager;
 
-    invoke-direct {v0, v4, p1, v5}, Lcom/vk/profile/ui/community/adresses/c;-><init>(Landroid/content/Context;Lcom/google/android/gms/maps/c;Lb/d/b/a/f/c;)V
+    invoke-direct {v0, v4, p1, v5}, Lcom/vk/profile/ui/community/adresses/AddressesRenderer;-><init>(Landroid/content/Context;Lcom/google/android/gms/maps/c;Lb/d/b/a/f/ClusterManager;)V
 
-    iput-object v0, p0, Lcom/vk/profile/ui/community/adresses/CommunityAddressesFragment;->d0:Lcom/vk/profile/ui/community/adresses/c;
+    iput-object v0, p0, Lcom/vk/profile/ui/community/adresses/CommunityAddressesFragment;->d0:Lcom/vk/profile/ui/community/adresses/AddressesRenderer;
 
     .line 19
-    iget-object v0, p0, Lcom/vk/profile/ui/community/adresses/CommunityAddressesFragment;->d0:Lcom/vk/profile/ui/community/adresses/c;
+    iget-object v0, p0, Lcom/vk/profile/ui/community/adresses/CommunityAddressesFragment;->d0:Lcom/vk/profile/ui/community/adresses/AddressesRenderer;
 
     if-eqz v0, :cond_5
 
@@ -842,40 +842,40 @@
 
     invoke-direct {v4, p0}, Lcom/vk/profile/ui/community/adresses/CommunityAddressesFragment$initMap$2;-><init>(Lcom/vk/profile/ui/community/adresses/CommunityAddressesFragment;)V
 
-    invoke-virtual {v0, v4}, Lcom/vk/profile/ui/community/adresses/c;->a(Lkotlin/jvm/b/a;)V
+    invoke-virtual {v0, v4}, Lcom/vk/profile/ui/community/adresses/AddressesRenderer;->a(Lkotlin/jvm/b/Functions;)V
 
     .line 20
     :cond_5
-    iget-object v0, p0, Lcom/vk/profile/ui/community/adresses/CommunityAddressesFragment;->c0:Lb/d/b/a/f/c;
+    iget-object v0, p0, Lcom/vk/profile/ui/community/adresses/CommunityAddressesFragment;->c0:Lb/d/b/a/f/ClusterManager;
 
     if-eqz v0, :cond_6
 
-    iget-object v4, p0, Lcom/vk/profile/ui/community/adresses/CommunityAddressesFragment;->d0:Lcom/vk/profile/ui/community/adresses/c;
+    iget-object v4, p0, Lcom/vk/profile/ui/community/adresses/CommunityAddressesFragment;->d0:Lcom/vk/profile/ui/community/adresses/AddressesRenderer;
 
-    invoke-virtual {v0, v4}, Lb/d/b/a/f/c;->a(Lb/d/b/a/f/e/a;)V
+    invoke-virtual {v0, v4}, Lb/d/b/a/f/ClusterManager;->a(Lb/d/b/a/f/e/ClusterRenderer;)V
 
     .line 21
     :cond_6
-    new-instance v0, Lcom/vk/profile/ui/community/adresses/e/a;
+    new-instance v0, Lcom/vk/profile/ui/community/adresses/e/HackedNonHierarchicalDistanceBasedAlgorithm;
 
-    invoke-direct {v0}, Lcom/vk/profile/ui/community/adresses/e/a;-><init>()V
+    invoke-direct {v0}, Lcom/vk/profile/ui/community/adresses/e/HackedNonHierarchicalDistanceBasedAlgorithm;-><init>()V
 
     .line 22
-    iget-object v4, p0, Lcom/vk/profile/ui/community/adresses/CommunityAddressesFragment;->c0:Lb/d/b/a/f/c;
+    iget-object v4, p0, Lcom/vk/profile/ui/community/adresses/CommunityAddressesFragment;->c0:Lb/d/b/a/f/ClusterManager;
 
     if-eqz v4, :cond_7
 
-    invoke-virtual {v4, v0}, Lb/d/b/a/f/c;->a(Lb/d/b/a/f/d/a;)V
+    invoke-virtual {v4, v0}, Lb/d/b/a/f/ClusterManager;->a(Lb/d/b/a/f/d/Algorithm;)V
 
     .line 23
     :cond_7
-    iget-object v0, p0, Lcom/vk/profile/ui/community/adresses/CommunityAddressesFragment;->d0:Lcom/vk/profile/ui/community/adresses/c;
+    iget-object v0, p0, Lcom/vk/profile/ui/community/adresses/CommunityAddressesFragment;->d0:Lcom/vk/profile/ui/community/adresses/AddressesRenderer;
 
     if-eqz v0, :cond_8
 
     iget-object v4, p0, Lcom/vk/profile/ui/community/adresses/CommunityAddressesFragment;->V:Landroid/graphics/Bitmap;
 
-    invoke-virtual {v0, v4}, Lcom/vk/profile/ui/community/adresses/c;->a(Landroid/graphics/Bitmap;)V
+    invoke-virtual {v0, v4}, Lcom/vk/profile/ui/community/adresses/AddressesRenderer;->a(Landroid/graphics/Bitmap;)V
 
     :cond_8
     const/4 v0, 0x1
@@ -943,7 +943,7 @@
     if-eqz p1, :cond_e
 
     .line 29
-    iget-object v0, p0, Lcom/vk/profile/ui/community/adresses/CommunityAddressesFragment;->c0:Lb/d/b/a/f/c;
+    iget-object v0, p0, Lcom/vk/profile/ui/community/adresses/CommunityAddressesFragment;->c0:Lb/d/b/a/f/ClusterManager;
 
     invoke-virtual {p1, v0}, Lcom/google/android/gms/maps/c;->a(Lcom/google/android/gms/maps/c$c;)V
 
@@ -951,13 +951,13 @@
     if-eqz p1, :cond_f
 
     .line 30
-    iget-object v0, p0, Lcom/vk/profile/ui/community/adresses/CommunityAddressesFragment;->c0:Lb/d/b/a/f/c;
+    iget-object v0, p0, Lcom/vk/profile/ui/community/adresses/CommunityAddressesFragment;->c0:Lb/d/b/a/f/ClusterManager;
 
     invoke-virtual {p1, v0}, Lcom/google/android/gms/maps/c;->a(Lcom/google/android/gms/maps/c$h;)V
 
     .line 31
     :cond_f
-    iget-object v0, p0, Lcom/vk/profile/ui/community/adresses/CommunityAddressesFragment;->c0:Lb/d/b/a/f/c;
+    iget-object v0, p0, Lcom/vk/profile/ui/community/adresses/CommunityAddressesFragment;->c0:Lb/d/b/a/f/ClusterManager;
 
     if-eqz v0, :cond_10
 
@@ -965,11 +965,11 @@
 
     invoke-direct {v4, p0}, Lcom/vk/profile/ui/community/adresses/CommunityAddressesFragment$h;-><init>(Lcom/vk/profile/ui/community/adresses/CommunityAddressesFragment;)V
 
-    invoke-virtual {v0, v4}, Lb/d/b/a/f/c;->a(Lb/d/b/a/f/c$e;)V
+    invoke-virtual {v0, v4}, Lb/d/b/a/f/ClusterManager;->a(Lb/d/b/a/f/ClusterManager$e;)V
 
     .line 32
     :cond_10
-    iget-object v0, p0, Lcom/vk/profile/ui/community/adresses/CommunityAddressesFragment;->c0:Lb/d/b/a/f/c;
+    iget-object v0, p0, Lcom/vk/profile/ui/community/adresses/CommunityAddressesFragment;->c0:Lb/d/b/a/f/ClusterManager;
 
     if-eqz v0, :cond_11
 
@@ -977,7 +977,7 @@
 
     invoke-direct {v4, p0, p1}, Lcom/vk/profile/ui/community/adresses/CommunityAddressesFragment$i;-><init>(Lcom/vk/profile/ui/community/adresses/CommunityAddressesFragment;Lcom/google/android/gms/maps/c;)V
 
-    invoke-virtual {v0, v4}, Lb/d/b/a/f/c;->a(Lb/d/b/a/f/c$c;)V
+    invoke-virtual {v0, v4}, Lb/d/b/a/f/ClusterManager;->a(Lb/d/b/a/f/ClusterManager$c;)V
 
     .line 33
     :cond_11
@@ -1020,9 +1020,9 @@
 
     const-string v4, "activity!!"
 
-    invoke-static {v0, v4}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v4}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    invoke-static {v0}, Lcom/vk/profile/utils/a;->a(Landroid/content/Context;)Lc/a/m;
+    invoke-static {v0}, Lcom/vk/profile/utils/AddressesUtils;->a(Landroid/content/Context;)Lio/reactivex/Observable;
 
     move-result-object v0
 
@@ -1030,37 +1030,37 @@
 
     invoke-direct {v4, p1}, Lcom/vk/profile/ui/community/adresses/CommunityAddressesFragment$j;-><init>(Lcom/google/android/gms/maps/c;)V
 
-    invoke-virtual {v0, v4}, Lc/a/m;->f(Lc/a/z/g;)Lio/reactivex/disposables/b;
+    invoke-virtual {v0, v4}, Lio/reactivex/Observable;->f(Lio/reactivex/functions/Consumer;)Lio/reactivex/disposables/Disposable;
 
     move-result-object v0
 
     const-string v4, "getLastKnownLocationOpti\u2026          }\n            }"
 
-    invoke-static {v0, v4}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v4}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 38
-    iget-object v4, p0, Lcom/vk/profile/ui/community/adresses/CommunityAddressesFragment;->k0:Lcom/vk/profile/presenter/f/a;
+    iget-object v4, p0, Lcom/vk/profile/ui/community/adresses/CommunityAddressesFragment;->k0:Lcom/vk/profile/presenter/f/CommunityAddressPresenter;
 
     if-eqz v4, :cond_13
 
-    invoke-virtual {v4}, Lcom/vk/profile/presenter/f/a;->e()Lio/reactivex/disposables/a;
+    invoke-virtual {v4}, Lcom/vk/profile/presenter/f/CommunityAddressPresenter;->e()Lio/reactivex/disposables/CompositeDisposable;
 
     move-result-object v2
 
-    invoke-static {v0, v2}, Lcom/vk/core/extensions/RxExtKt;->a(Lio/reactivex/disposables/b;Lio/reactivex/disposables/a;)Lio/reactivex/disposables/b;
+    invoke-static {v0, v2}, Lcom/vk/core/extensions/RxExtKt;->a(Lio/reactivex/disposables/Disposable;Lio/reactivex/disposables/CompositeDisposable;)Lio/reactivex/disposables/Disposable;
 
     goto :goto_1
 
     :cond_13
     const-string p1, "presenter"
 
-    invoke-static {p1}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {p1}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v2
 
     .line 39
     :cond_14
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     throw v2
 
@@ -1117,25 +1117,25 @@
 
     .line 44
     :cond_1a
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     throw v2
 
     .line 45
     :cond_1b
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     throw v2
 
     .line 46
     :cond_1c
-    invoke-static {v1}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v1}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v2
 
     .line 47
     :cond_1d
-    invoke-static {v1}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v1}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v2
 .end method
@@ -1193,11 +1193,11 @@
     return-void
 .end method
 
-.method private final a(Lcom/vk/profile/data/a;)V
+.method private final a(Lcom/vk/profile/data/AddressClusterAdapter;)V
     .locals 3
 
     .line 48
-    iget-object v0, p0, Lcom/vk/profile/ui/community/adresses/CommunityAddressesFragment;->c0:Lb/d/b/a/f/c;
+    iget-object v0, p0, Lcom/vk/profile/ui/community/adresses/CommunityAddressesFragment;->c0:Lb/d/b/a/f/ClusterManager;
 
     const-string v1, "selected"
 
@@ -1205,13 +1205,13 @@
 
     if-eqz v0, :cond_0
 
-    invoke-virtual {v0}, Lb/d/b/a/f/c;->e()Lb/d/b/a/a;
+    invoke-virtual {v0}, Lb/d/b/a/f/ClusterManager;->e()Lb/d/b/a/MarkerManager;
 
     move-result-object v0
 
     if-eqz v0, :cond_0
 
-    invoke-virtual {v0, v1}, Lb/d/b/a/a;->a(Ljava/lang/String;)Lb/d/b/a/a$a;
+    invoke-virtual {v0, v1}, Lb/d/b/a/MarkerManager;->a(Ljava/lang/String;)Lb/d/b/a/MarkerManager$a;
 
     move-result-object v0
 
@@ -1224,23 +1224,23 @@
     if-eqz v0, :cond_1
 
     .line 49
-    invoke-virtual {v0}, Lb/d/b/a/a$a;->a()V
+    invoke-virtual {v0}, Lb/d/b/a/MarkerManager$a;->a()V
 
     :cond_1
     if-eqz p1, :cond_3
 
     .line 50
-    iget-object v0, p0, Lcom/vk/profile/ui/community/adresses/CommunityAddressesFragment;->c0:Lb/d/b/a/f/c;
+    iget-object v0, p0, Lcom/vk/profile/ui/community/adresses/CommunityAddressesFragment;->c0:Lb/d/b/a/f/ClusterManager;
 
     if-eqz v0, :cond_3
 
-    invoke-virtual {v0}, Lb/d/b/a/f/c;->e()Lb/d/b/a/a;
+    invoke-virtual {v0}, Lb/d/b/a/f/ClusterManager;->e()Lb/d/b/a/MarkerManager;
 
     move-result-object v0
 
     if-eqz v0, :cond_3
 
-    invoke-virtual {v0, v1}, Lb/d/b/a/a;->a(Ljava/lang/String;)Lb/d/b/a/a$a;
+    invoke-virtual {v0, v1}, Lb/d/b/a/MarkerManager;->a(Ljava/lang/String;)Lb/d/b/a/MarkerManager$a;
 
     move-result-object v0
 
@@ -1251,7 +1251,7 @@
     invoke-direct {v1}, Lcom/google/android/gms/maps/model/MarkerOptions;-><init>()V
 
     .line 51
-    invoke-virtual {p1}, Lcom/vk/profile/data/a;->b()Lcom/google/android/gms/maps/model/LatLng;
+    invoke-virtual {p1}, Lcom/vk/profile/data/AddressClusterAdapter;->b()Lcom/google/android/gms/maps/model/LatLng;
 
     move-result-object p1
 
@@ -1267,11 +1267,11 @@
     move-result-object p1
 
     .line 53
-    iget-object v1, p0, Lcom/vk/profile/ui/community/adresses/CommunityAddressesFragment;->d0:Lcom/vk/profile/ui/community/adresses/c;
+    iget-object v1, p0, Lcom/vk/profile/ui/community/adresses/CommunityAddressesFragment;->d0:Lcom/vk/profile/ui/community/adresses/AddressesRenderer;
 
     if-eqz v1, :cond_2
 
-    invoke-virtual {v1}, Lcom/vk/profile/ui/community/adresses/c;->e()Lcom/google/android/gms/maps/model/a;
+    invoke-virtual {v1}, Lcom/vk/profile/ui/community/adresses/AddressesRenderer;->e()Lcom/google/android/gms/maps/model/a;
 
     move-result-object v2
 
@@ -1288,7 +1288,7 @@
     move-result-object p1
 
     .line 55
-    invoke-virtual {v0, p1}, Lb/d/b/a/a$a;->a(Lcom/google/android/gms/maps/model/MarkerOptions;)Lcom/google/android/gms/maps/model/c;
+    invoke-virtual {v0, p1}, Lb/d/b/a/MarkerManager$a;->a(Lcom/google/android/gms/maps/model/MarkerOptions;)Lcom/google/android/gms/maps/model/c;
 
     :cond_3
     return-void
@@ -1312,11 +1312,11 @@
     return-void
 .end method
 
-.method public static final synthetic a(Lcom/vk/profile/ui/community/adresses/CommunityAddressesFragment;Lb/d/b/a/f/a;)V
+.method public static final synthetic a(Lcom/vk/profile/ui/community/adresses/CommunityAddressesFragment;Lb/d/b/a/f/Cluster;)V
     .locals 0
 
     .line 7
-    iput-object p1, p0, Lcom/vk/profile/ui/community/adresses/CommunityAddressesFragment;->g0:Lb/d/b/a/f/a;
+    iput-object p1, p0, Lcom/vk/profile/ui/community/adresses/CommunityAddressesFragment;->g0:Lb/d/b/a/f/Cluster;
 
     return-void
 .end method
@@ -1339,11 +1339,11 @@
     return-void
 .end method
 
-.method public static final synthetic a(Lcom/vk/profile/ui/community/adresses/CommunityAddressesFragment;Lcom/vk/profile/data/a;)V
+.method public static final synthetic a(Lcom/vk/profile/ui/community/adresses/CommunityAddressesFragment;Lcom/vk/profile/data/AddressClusterAdapter;)V
     .locals 0
 
     .line 6
-    invoke-direct {p0, p1}, Lcom/vk/profile/ui/community/adresses/CommunityAddressesFragment;->a(Lcom/vk/profile/data/a;)V
+    invoke-direct {p0, p1}, Lcom/vk/profile/ui/community/adresses/CommunityAddressesFragment;->a(Lcom/vk/profile/data/AddressClusterAdapter;)V
 
     return-void
 .end method
@@ -1479,12 +1479,12 @@
 
     invoke-direct {v1, p0, p1}, Lcom/vk/profile/ui/community/adresses/CommunityAddressesFragment$m;-><init>(Lcom/vk/profile/ui/community/adresses/CommunityAddressesFragment;Lcom/vk/dto/profile/PlainAddress;)V
 
-    invoke-static {v0, v3, v1}, Lcom/vk/profile/utils/a;->a(Lcom/google/android/gms/maps/model/LatLngBounds;Lcom/google/android/gms/maps/c;Lcom/google/android/gms/maps/c$a;)V
+    invoke-static {v0, v3, v1}, Lcom/vk/profile/utils/AddressesUtils;->a(Lcom/google/android/gms/maps/model/LatLngBounds;Lcom/google/android/gms/maps/c;Lcom/google/android/gms/maps/c$a;)V
 
     return v2
 
     :cond_1
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     throw v1
 
@@ -1527,7 +1527,7 @@
     :cond_0
     const-string p0, "addressesRecycler"
 
-    invoke-static {p0}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {p0}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     const/4 p0, 0x0
 
@@ -1567,7 +1567,7 @@
     :cond_0
     const-string p0, "errorView"
 
-    invoke-static {p0}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {p0}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     const/4 p0, 0x0
 
@@ -1596,7 +1596,7 @@
     :cond_0
     const-string p0, "fullAddress"
 
-    invoke-static {p0}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {p0}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     const/4 p0, 0x0
 
@@ -1661,7 +1661,7 @@
     :cond_0
     const-string p0, "listHeader"
 
-    invoke-static {p0}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {p0}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     const/4 p0, 0x0
 
@@ -1699,7 +1699,7 @@
     :cond_0
     const-string p0, "mapFrame"
 
-    invoke-static {p0}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {p0}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     const/4 p0, 0x0
 
@@ -1719,7 +1719,7 @@
     :cond_0
     const-string p0, "progress"
 
-    invoke-static {p0}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {p0}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     const/4 p0, 0x0
 
@@ -1739,27 +1739,27 @@
     :cond_0
     const-string p0, "recyclerFrame"
 
-    invoke-static {p0}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {p0}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     const/4 p0, 0x0
 
     throw p0
 .end method
 
-.method public static final synthetic s(Lcom/vk/profile/ui/community/adresses/CommunityAddressesFragment;)Lcom/vk/profile/ui/community/adresses/c;
+.method public static final synthetic s(Lcom/vk/profile/ui/community/adresses/CommunityAddressesFragment;)Lcom/vk/profile/ui/community/adresses/AddressesRenderer;
     .locals 0
 
     .line 1
-    iget-object p0, p0, Lcom/vk/profile/ui/community/adresses/CommunityAddressesFragment;->d0:Lcom/vk/profile/ui/community/adresses/c;
+    iget-object p0, p0, Lcom/vk/profile/ui/community/adresses/CommunityAddressesFragment;->d0:Lcom/vk/profile/ui/community/adresses/AddressesRenderer;
 
     return-object p0
 .end method
 
-.method public static final synthetic t(Lcom/vk/profile/ui/community/adresses/CommunityAddressesFragment;)Lb/d/b/a/f/a;
+.method public static final synthetic t(Lcom/vk/profile/ui/community/adresses/CommunityAddressesFragment;)Lb/d/b/a/f/Cluster;
     .locals 0
 
     .line 1
-    iget-object p0, p0, Lcom/vk/profile/ui/community/adresses/CommunityAddressesFragment;->g0:Lb/d/b/a/f/a;
+    iget-object p0, p0, Lcom/vk/profile/ui/community/adresses/CommunityAddressesFragment;->g0:Lb/d/b/a/f/Cluster;
 
     return-object p0
 .end method
@@ -1786,7 +1786,7 @@
     :cond_0
     const-string p0, "state"
 
-    invoke-static {p0}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {p0}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     const/4 p0, 0x0
 
@@ -1806,7 +1806,7 @@
     :cond_0
     const-string p0, "toolbar"
 
-    invoke-static {p0}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {p0}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     const/4 p0, 0x0
 
@@ -1826,11 +1826,11 @@
     .end annotation
 
     .line 2
-    iget-object v0, p0, Lcom/vk/profile/ui/community/adresses/CommunityAddressesFragment;->c0:Lb/d/b/a/f/c;
+    iget-object v0, p0, Lcom/vk/profile/ui/community/adresses/CommunityAddressesFragment;->c0:Lb/d/b/a/f/ClusterManager;
 
     if-eqz v0, :cond_0
 
-    invoke-virtual {v0}, Lb/d/b/a/f/c;->a()V
+    invoke-virtual {v0}, Lb/d/b/a/f/ClusterManager;->a()V
 
     :cond_0
     if-eqz p1, :cond_2
@@ -1855,25 +1855,25 @@
     check-cast v0, Lcom/vk/dto/profile/PlainAddress;
 
     .line 4
-    iget-object v1, p0, Lcom/vk/profile/ui/community/adresses/CommunityAddressesFragment;->c0:Lb/d/b/a/f/c;
+    iget-object v1, p0, Lcom/vk/profile/ui/community/adresses/CommunityAddressesFragment;->c0:Lb/d/b/a/f/ClusterManager;
 
     if-eqz v1, :cond_1
 
-    new-instance v2, Lcom/vk/profile/data/a;
+    new-instance v2, Lcom/vk/profile/data/AddressClusterAdapter;
 
-    invoke-direct {v2, v0}, Lcom/vk/profile/data/a;-><init>(Lcom/vk/dto/profile/PlainAddress;)V
+    invoke-direct {v2, v0}, Lcom/vk/profile/data/AddressClusterAdapter;-><init>(Lcom/vk/dto/profile/PlainAddress;)V
 
-    invoke-virtual {v1, v2}, Lb/d/b/a/f/c;->a(Lb/d/b/a/f/b;)V
+    invoke-virtual {v1, v2}, Lb/d/b/a/f/ClusterManager;->a(Lb/d/b/a/f/ClusterItem;)V
 
     goto :goto_0
 
     .line 5
     :cond_2
-    iget-object p1, p0, Lcom/vk/profile/ui/community/adresses/CommunityAddressesFragment;->c0:Lb/d/b/a/f/c;
+    iget-object p1, p0, Lcom/vk/profile/ui/community/adresses/CommunityAddressesFragment;->c0:Lb/d/b/a/f/ClusterManager;
 
     if-eqz p1, :cond_3
 
-    invoke-virtual {p1}, Lb/d/b/a/f/c;->b()V
+    invoke-virtual {p1}, Lb/d/b/a/f/ClusterManager;->b()V
 
     :cond_3
     return-void
@@ -1908,22 +1908,22 @@
 
 
 # virtual methods
-.method public bridge synthetic A4()Lcom/vk/lists/t$q;
+.method public bridge synthetic A4()Lcom/vk/lists/PaginationHelper$q;
     .locals 1
 
     .line 1
-    invoke-virtual {p0}, Lcom/vk/profile/ui/community/adresses/CommunityAddressesFragment;->A4()Lcom/vk/profile/ui/community/adresses/b;
+    invoke-virtual {p0}, Lcom/vk/profile/ui/community/adresses/CommunityAddressesFragment;->A4()Lcom/vk/profile/ui/community/adresses/AddressesPaginatedView;
 
     move-result-object v0
 
     return-object v0
 .end method
 
-.method public A4()Lcom/vk/profile/ui/community/adresses/b;
+.method public A4()Lcom/vk/profile/ui/community/adresses/AddressesPaginatedView;
     .locals 1
 
     .line 2
-    iget-object v0, p0, Lcom/vk/profile/ui/community/adresses/CommunityAddressesFragment;->m0:Lcom/vk/profile/ui/community/adresses/b;
+    iget-object v0, p0, Lcom/vk/profile/ui/community/adresses/CommunityAddressesFragment;->m0:Lcom/vk/profile/ui/community/adresses/AddressesPaginatedView;
 
     if-eqz v0, :cond_0
 
@@ -1932,7 +1932,7 @@
     :cond_0
     const-string v0, "paginatedView"
 
-    invoke-static {v0}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v0}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     const/4 v0, 0x0
 
@@ -1960,7 +1960,7 @@
     :cond_0
     const-string v0, "addressBehavior"
 
-    invoke-static {v0}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v0}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     const/4 v0, 0x0
 
@@ -1997,7 +1997,7 @@
     :cond_0
     const-string v0, "listBehavior"
 
-    invoke-static {v0}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v0}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     const/4 v0, 0x0
 
@@ -2022,21 +2022,21 @@
     return v0
 .end method
 
-.method public final U4()Lkotlin/jvm/b/c;
+.method public final U4()Lkotlin/jvm/b/Functions1;
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "()",
-            "Lkotlin/jvm/b/c<",
+            "Lkotlin/jvm/b/Functions1<",
             "Ljava/lang/Integer;",
             "Ljava/lang/Integer;",
-            "Lkotlin/m;",
+            "Lkotlin/Unit;",
             ">;"
         }
     .end annotation
 
     .line 1
-    iget-object v0, p0, Lcom/vk/profile/ui/community/adresses/CommunityAddressesFragment;->n0:Lkotlin/jvm/b/c;
+    iget-object v0, p0, Lcom/vk/profile/ui/community/adresses/CommunityAddressesFragment;->n0:Lkotlin/jvm/b/Functions1;
 
     return-object v0
 .end method
@@ -2057,7 +2057,7 @@
 
     const-string v3, "NO_LOCATION"
 
-    invoke-static {v2, v3}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v2, v3}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v2
 
@@ -2067,11 +2067,11 @@
 
     .line 57
     :cond_0
-    iget-object v2, p0, Lcom/vk/profile/ui/community/adresses/CommunityAddressesFragment;->G:Lcom/vk/profile/ui/community/adresses/a;
+    iget-object v2, p0, Lcom/vk/profile/ui/community/adresses/CommunityAddressesFragment;->G:Lcom/vk/profile/ui/community/adresses/AddressesAdapter;
 
     if-eqz v2, :cond_1
 
-    invoke-virtual {v2, p1}, Lcom/vk/profile/ui/community/adresses/a;->a(Landroid/location/Location;)V
+    invoke-virtual {v2, p1}, Lcom/vk/profile/ui/community/adresses/AddressesAdapter;->a(Landroid/location/Location;)V
 
     .line 58
     :cond_1
@@ -2084,18 +2084,18 @@
     goto :goto_1
 
     :cond_2
-    invoke-static {v0}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v0}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v1
 
     .line 59
     :cond_3
     :goto_0
-    iget-object p1, p0, Lcom/vk/profile/ui/community/adresses/CommunityAddressesFragment;->G:Lcom/vk/profile/ui/community/adresses/a;
+    iget-object p1, p0, Lcom/vk/profile/ui/community/adresses/CommunityAddressesFragment;->G:Lcom/vk/profile/ui/community/adresses/AddressesAdapter;
 
     if-eqz p1, :cond_4
 
-    invoke-virtual {p1, v1}, Lcom/vk/profile/ui/community/adresses/a;->a(Landroid/location/Location;)V
+    invoke-virtual {p1, v1}, Lcom/vk/profile/ui/community/adresses/AddressesAdapter;->a(Landroid/location/Location;)V
 
     .line 60
     :cond_4
@@ -2109,7 +2109,7 @@
     return-void
 
     :cond_5
-    invoke-static {v0}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v0}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v1
 .end method
@@ -2129,7 +2129,7 @@
     :cond_0
     const-string p1, "state"
 
-    invoke-static {p1}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {p1}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     const/4 p1, 0x0
 
@@ -2148,15 +2148,15 @@
     .end annotation
 
     .line 5
-    iget-object v0, p0, Lcom/vk/profile/ui/community/adresses/CommunityAddressesFragment;->G:Lcom/vk/profile/ui/community/adresses/a;
+    iget-object v0, p0, Lcom/vk/profile/ui/community/adresses/CommunityAddressesFragment;->G:Lcom/vk/profile/ui/community/adresses/AddressesAdapter;
 
     if-eqz v0, :cond_0
 
-    invoke-virtual {v0, p1}, Lcom/vk/profile/ui/community/adresses/a;->setItems(Ljava/util/List;)V
+    invoke-virtual {v0, p1}, Lcom/vk/profile/ui/community/adresses/AddressesAdapter;->setItems(Ljava/util/List;)V
 
     .line 6
     :cond_0
-    iget-object p1, p0, Lcom/vk/profile/ui/community/adresses/CommunityAddressesFragment;->G:Lcom/vk/profile/ui/community/adresses/a;
+    iget-object p1, p0, Lcom/vk/profile/ui/community/adresses/CommunityAddressesFragment;->G:Lcom/vk/profile/ui/community/adresses/AddressesAdapter;
 
     const/4 v0, 0x0
 
@@ -2166,16 +2166,16 @@
 
     if-eqz v1, :cond_1
 
-    iget-object v2, p0, Lcom/vk/profile/ui/community/adresses/CommunityAddressesFragment;->n0:Lkotlin/jvm/b/c;
+    iget-object v2, p0, Lcom/vk/profile/ui/community/adresses/CommunityAddressesFragment;->n0:Lkotlin/jvm/b/Functions1;
 
-    invoke-virtual {p1, v1, v2}, Lcom/vk/profile/ui/community/adresses/a;->a(Landroidx/recyclerview/widget/RecyclerView;Lkotlin/jvm/b/c;)V
+    invoke-virtual {p1, v1, v2}, Lcom/vk/profile/ui/community/adresses/AddressesAdapter;->a(Landroidx/recyclerview/widget/RecyclerView;Lkotlin/jvm/b/Functions1;)V
 
     goto :goto_0
 
     :cond_1
     const-string p1, "addressesRecycler"
 
-    invoke-static {p1}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {p1}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v0
 
@@ -2198,7 +2198,7 @@
     :cond_3
     const-string p1, "state"
 
-    invoke-static {p1}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {p1}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v0
 .end method
@@ -2218,7 +2218,7 @@
     :cond_0
     const-string p1, "state"
 
-    invoke-static {p1}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {p1}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     const/4 p1, 0x0
 
@@ -2238,15 +2238,15 @@
     .end annotation
 
     .line 3
-    iget-object v0, p0, Lcom/vk/profile/ui/community/adresses/CommunityAddressesFragment;->G:Lcom/vk/profile/ui/community/adresses/a;
+    iget-object v0, p0, Lcom/vk/profile/ui/community/adresses/CommunityAddressesFragment;->G:Lcom/vk/profile/ui/community/adresses/AddressesAdapter;
 
     if-eqz v0, :cond_0
 
-    invoke-virtual {v0, p1, p2}, Lcom/vk/profile/ui/community/adresses/a;->a(Ljava/util/List;Z)V
+    invoke-virtual {v0, p1, p2}, Lcom/vk/profile/ui/community/adresses/AddressesAdapter;->a(Ljava/util/List;Z)V
 
     .line 4
     :cond_0
-    iget-object p1, p0, Lcom/vk/profile/ui/community/adresses/CommunityAddressesFragment;->G:Lcom/vk/profile/ui/community/adresses/a;
+    iget-object p1, p0, Lcom/vk/profile/ui/community/adresses/CommunityAddressesFragment;->G:Lcom/vk/profile/ui/community/adresses/AddressesAdapter;
 
     const/4 p2, 0x0
 
@@ -2256,16 +2256,16 @@
 
     if-eqz v0, :cond_1
 
-    iget-object v1, p0, Lcom/vk/profile/ui/community/adresses/CommunityAddressesFragment;->n0:Lkotlin/jvm/b/c;
+    iget-object v1, p0, Lcom/vk/profile/ui/community/adresses/CommunityAddressesFragment;->n0:Lkotlin/jvm/b/Functions1;
 
-    invoke-virtual {p1, v0, v1}, Lcom/vk/profile/ui/community/adresses/a;->a(Landroidx/recyclerview/widget/RecyclerView;Lkotlin/jvm/b/c;)V
+    invoke-virtual {p1, v0, v1}, Lcom/vk/profile/ui/community/adresses/AddressesAdapter;->a(Landroidx/recyclerview/widget/RecyclerView;Lkotlin/jvm/b/Functions1;)V
 
     goto :goto_0
 
     :cond_1
     const-string p1, "addressesRecycler"
 
-    invoke-static {p1}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {p1}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw p2
 
@@ -2288,7 +2288,7 @@
     :cond_3
     const-string p1, "state"
 
-    invoke-static {p1}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {p1}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw p2
 .end method
@@ -2335,23 +2335,23 @@
 
     const-string v1, "activity!!"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     return-object v0
 
     :cond_0
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     const/4 v0, 0x0
 
     throw v0
 .end method
 
-.method public final getPresenter()Lcom/vk/profile/presenter/f/a;
+.method public final getPresenter()Lcom/vk/profile/presenter/f/CommunityAddressPresenter;
     .locals 1
 
     .line 1
-    iget-object v0, p0, Lcom/vk/profile/ui/community/adresses/CommunityAddressesFragment;->k0:Lcom/vk/profile/presenter/f/a;
+    iget-object v0, p0, Lcom/vk/profile/ui/community/adresses/CommunityAddressesFragment;->k0:Lcom/vk/profile/presenter/f/CommunityAddressPresenter;
 
     if-eqz v0, :cond_0
 
@@ -2360,7 +2360,7 @@
     :cond_0
     const-string v0, "presenter"
 
-    invoke-static {v0}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v0}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     const/4 v0, 0x0
 
@@ -2379,7 +2379,7 @@
     const/4 v3, 0x2
 
     .line 1
-    invoke-static {v1, v2, v3, v0}, Lcom/vk/core/util/k1;->a(IZILjava/lang/Object;)V
+    invoke-static {v1, v2, v3, v0}, Lcom/vk/core/util/ToastUtils;->a(IZILjava/lang/Object;)V
 
     .line 2
     iget-object v1, p0, Lcom/vk/profile/ui/community/adresses/CommunityAddressesFragment;->F:Lcom/vk/profile/ui/community/adresses/CommunityAddressesFragment$f;
@@ -2399,7 +2399,7 @@
     goto :goto_0
 
     :cond_0
-    invoke-static {v2}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v2}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v0
 
@@ -2408,7 +2408,7 @@
     return-void
 
     :cond_2
-    invoke-static {v2}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v2}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v0
 .end method
@@ -2441,7 +2441,7 @@
     const-string v0, "state"
 
     .line 4
-    invoke-static {v0}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v0}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     const/4 v0, 0x0
 
@@ -2457,7 +2457,7 @@
     .end annotation
 
     .line 1
-    invoke-super {p0, p1}, Lcom/vk/core/fragments/b;->onCreate(Landroid/os/Bundle;)V
+    invoke-super {p0, p1}, Lcom/vk/core/fragments/BaseFragment1;->onCreate(Landroid/os/Bundle;)V
 
     .line 2
     invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getArguments()Landroid/os/Bundle;
@@ -2509,25 +2509,25 @@
     if-eqz p1, :cond_0
 
     .line 5
-    new-instance p1, Lcom/vk/profile/presenter/f/c;
+    new-instance p1, Lcom/vk/profile/presenter/f/CommunityOldAddressSupportPresenter;
 
     iget v1, p0, Lcom/vk/profile/ui/community/adresses/CommunityAddressesFragment;->U:I
 
-    invoke-direct {p1, v1, p0}, Lcom/vk/profile/presenter/f/c;-><init>(ILcom/vk/profile/view/a;)V
+    invoke-direct {p1, v1, p0}, Lcom/vk/profile/presenter/f/CommunityOldAddressSupportPresenter;-><init>(ILcom/vk/profile/view/CommunityAddressView;)V
 
     goto :goto_0
 
     .line 6
     :cond_0
-    new-instance p1, Lcom/vk/profile/presenter/f/a;
+    new-instance p1, Lcom/vk/profile/presenter/f/CommunityAddressPresenter;
 
     iget v1, p0, Lcom/vk/profile/ui/community/adresses/CommunityAddressesFragment;->U:I
 
-    invoke-direct {p1, v1, p0}, Lcom/vk/profile/presenter/f/a;-><init>(ILcom/vk/profile/view/a;)V
+    invoke-direct {p1, v1, p0}, Lcom/vk/profile/presenter/f/CommunityAddressPresenter;-><init>(ILcom/vk/profile/view/CommunityAddressView;)V
 
     .line 7
     :goto_0
-    iput-object p1, p0, Lcom/vk/profile/ui/community/adresses/CommunityAddressesFragment;->k0:Lcom/vk/profile/presenter/f/a;
+    iput-object p1, p0, Lcom/vk/profile/ui/community/adresses/CommunityAddressesFragment;->k0:Lcom/vk/profile/presenter/f/CommunityAddressPresenter;
 
     .line 8
     invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getArguments()Landroid/os/Bundle;
@@ -2547,21 +2547,21 @@
 
     invoke-direct {v0, p0, p1}, Lcom/vk/profile/ui/community/adresses/CommunityAddressesFragment$n;-><init>(Lcom/vk/profile/ui/community/adresses/CommunityAddressesFragment;Ljava/lang/String;)V
 
-    invoke-static {v0}, Lc/a/m;->a(Ljava/util/concurrent/Callable;)Lc/a/m;
+    invoke-static {v0}, Lio/reactivex/Observable;->a(Ljava/util/concurrent/Callable;)Lio/reactivex/Observable;
 
     move-result-object p1
 
     .line 10
     sget-object v0, Lcom/vk/profile/ui/community/adresses/CommunityAddressesFragment$o;->a:Lcom/vk/profile/ui/community/adresses/CommunityAddressesFragment$o;
 
-    invoke-virtual {p1, v0}, Lc/a/m;->e(Lc/a/z/j;)Lc/a/m;
+    invoke-virtual {p1, v0}, Lio/reactivex/Observable;->e(Lio/reactivex/functions/Function;)Lio/reactivex/Observable;
 
     move-result-object p1
 
     .line 11
     sget-object v0, Lcom/vk/profile/ui/community/adresses/CommunityAddressesFragment$p;->a:Lcom/vk/profile/ui/community/adresses/CommunityAddressesFragment$p;
 
-    invoke-virtual {p1, v0}, Lc/a/m;->e(Lc/a/z/j;)Lc/a/m;
+    invoke-virtual {p1, v0}, Lio/reactivex/Observable;->e(Lio/reactivex/functions/Function;)Lio/reactivex/Observable;
 
     move-result-object p1
 
@@ -2574,36 +2574,36 @@
     sget-object v1, Lcom/vk/profile/ui/community/adresses/CommunityAddressesFragment$r;->a:Lcom/vk/profile/ui/community/adresses/CommunityAddressesFragment$r;
 
     .line 14
-    invoke-virtual {p1, v0, v1}, Lc/a/m;->a(Lc/a/z/g;Lc/a/z/g;)Lio/reactivex/disposables/b;
+    invoke-virtual {p1, v0, v1}, Lio/reactivex/Observable;->a(Lio/reactivex/functions/Consumer;Lio/reactivex/functions/Consumer;)Lio/reactivex/disposables/Disposable;
 
     .line 15
     iget p1, p0, Lcom/vk/profile/ui/community/adresses/CommunityAddressesFragment;->U:I
 
-    invoke-static {p1}, Lcom/vk/profile/e/f;->a(I)V
+    invoke-static {p1}, Lcom/vk/profile/e/ProfileTracker1;->a(I)V
 
     return-void
 
     .line 16
     :cond_1
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     throw v0
 
     .line 17
     :cond_2
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     throw v0
 
     .line 18
     :cond_3
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     throw v0
 
     .line 19
     :cond_4
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     throw v0
 .end method
@@ -2627,7 +2627,7 @@
 
     const-string p2, "inflater.inflate(R.layou\u2026addres, container, false)"
 
-    invoke-static {p1, p2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, p2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     iput-object p1, p0, Lcom/vk/profile/ui/community/adresses/CommunityAddressesFragment;->W:Landroid/view/View;
 
@@ -2648,7 +2648,7 @@
 
     const-string v1, "contentView.findViewById(R.id.full_address)"
 
-    invoke-static {p1, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     check-cast p1, Lcom/vk/profile/ui/community/adresses/FullAddressView;
 
@@ -2667,7 +2667,7 @@
 
     const-string v1, "contentView.findViewById(R.id.addresses_recycler)"
 
-    invoke-static {p1, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     check-cast p1, Landroidx/recyclerview/widget/RecyclerView;
 
@@ -2686,7 +2686,7 @@
 
     const-string v1, "contentView.findViewById(R.id.toolbar)"
 
-    invoke-static {p1, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     check-cast p1, Landroidx/appcompat/widget/Toolbar;
 
@@ -2705,7 +2705,7 @@
 
     const-string v1, "contentView.findViewById(R.id.map_frame)"
 
-    invoke-static {p1, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     iput-object p1, p0, Lcom/vk/profile/ui/community/adresses/CommunityAddressesFragment;->J:Landroid/view/View;
 
@@ -2722,7 +2722,7 @@
 
     const-string v1, "contentView.findViewById(R.id.list_header)"
 
-    invoke-static {p1, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     iput-object p1, p0, Lcom/vk/profile/ui/community/adresses/CommunityAddressesFragment;->P:Landroid/view/View;
 
@@ -2739,7 +2739,7 @@
 
     const-string v1, "contentView.findViewById(R.id.progress)"
 
-    invoke-static {p1, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     iput-object p1, p0, Lcom/vk/profile/ui/community/adresses/CommunityAddressesFragment;->Q:Landroid/view/View;
 
@@ -2756,7 +2756,7 @@
 
     const-string v1, "contentView.findViewById(R.id.error_view)"
 
-    invoke-static {p1, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     check-cast p1, Lcom/vk/lists/DefaultErrorView;
 
@@ -2775,7 +2775,7 @@
 
     const-string v1, "contentView.findViewById(R.id.recycler_frame)"
 
-    invoke-static {p1, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     iput-object p1, p0, Lcom/vk/profile/ui/community/adresses/CommunityAddressesFragment;->M:Landroid/view/View;
 
@@ -2892,7 +2892,7 @@
 
     invoke-direct {v4, p0}, Lcom/vk/profile/ui/community/adresses/CommunityAddressesFragment$onCreateView$2;-><init>(Lcom/vk/profile/ui/community/adresses/CommunityAddressesFragment;)V
 
-    invoke-static {p1, p0, v4}, Lcom/vk/extensions/m;->a(Landroidx/appcompat/widget/Toolbar;Lcom/vk/core/fragments/FragmentImpl;Lkotlin/jvm/b/b;)V
+    invoke-static {p1, p0, v4}, Lcom/vk/extensions/ToolbarExt1;->a(Landroidx/appcompat/widget/Toolbar;Lcom/vk/core/fragments/FragmentImpl;Lkotlin/jvm/b/Functions2;)V
 
     .line 19
     iget-object p1, p0, Lcom/vk/profile/ui/community/adresses/CommunityAddressesFragment;->K:Landroidx/appcompat/widget/Toolbar;
@@ -2960,7 +2960,7 @@
 
     invoke-direct {v4, p0}, Lcom/vk/profile/ui/community/adresses/CommunityAddressesFragment$u;-><init>(Lcom/vk/profile/ui/community/adresses/CommunityAddressesFragment;)V
 
-    invoke-virtual {p1, v4}, Lcom/vk/lists/a;->setRetryClickListener(Lcom/vk/lists/r;)V
+    invoke-virtual {p1, v4}, Lcom/vk/lists/AbstractErrorView;->setRetryClickListener(Lcom/vk/lists/OnRetryClickListener;)V
 
     .line 25
     iget-object p1, p0, Lcom/vk/profile/ui/community/adresses/CommunityAddressesFragment;->f0:Lcom/vk/core/ui/VkBottomSheetBehavior;
@@ -2990,31 +2990,31 @@
     invoke-virtual {p1, v2, p3}, Lcom/vk/profile/ui/community/adresses/AddressesListBehavior;->b(IZ)V
 
     .line 28
-    new-instance p1, Lcom/vk/profile/ui/community/adresses/a;
+    new-instance p1, Lcom/vk/profile/ui/community/adresses/AddressesAdapter;
 
     new-instance v2, Lcom/vk/profile/ui/community/adresses/CommunityAddressesFragment$onCreateView$7;
 
     invoke-direct {v2, p0}, Lcom/vk/profile/ui/community/adresses/CommunityAddressesFragment$onCreateView$7;-><init>(Lcom/vk/profile/ui/community/adresses/CommunityAddressesFragment;)V
 
-    invoke-direct {p1, v2}, Lcom/vk/profile/ui/community/adresses/a;-><init>(Lkotlin/jvm/b/b;)V
+    invoke-direct {p1, v2}, Lcom/vk/profile/ui/community/adresses/AddressesAdapter;-><init>(Lkotlin/jvm/b/Functions2;)V
 
-    iput-object p1, p0, Lcom/vk/profile/ui/community/adresses/CommunityAddressesFragment;->G:Lcom/vk/profile/ui/community/adresses/a;
+    iput-object p1, p0, Lcom/vk/profile/ui/community/adresses/CommunityAddressesFragment;->G:Lcom/vk/profile/ui/community/adresses/AddressesAdapter;
 
     .line 29
-    new-instance p1, Lcom/vk/lists/s;
+    new-instance p1, Lcom/vk/lists/PaginatedRecyclerAdapter;
 
-    iget-object v4, p0, Lcom/vk/profile/ui/community/adresses/CommunityAddressesFragment;->G:Lcom/vk/profile/ui/community/adresses/a;
+    iget-object v4, p0, Lcom/vk/profile/ui/community/adresses/CommunityAddressesFragment;->G:Lcom/vk/profile/ui/community/adresses/AddressesAdapter;
 
     if-eqz v4, :cond_9
 
     .line 30
-    sget-object v5, Lcom/vk/lists/k;->a:Lcom/vk/lists/k;
+    sget-object v5, Lcom/vk/lists/FooterErrorViewProvider;->a:Lcom/vk/lists/FooterErrorViewProvider;
 
     .line 31
-    sget-object v6, Lcom/vk/lists/l;->a:Lcom/vk/lists/l;
+    sget-object v6, Lcom/vk/lists/FooterLoadingViewProvider;->a:Lcom/vk/lists/FooterLoadingViewProvider;
 
     .line 32
-    sget-object v7, Lcom/vk/lists/j;->a:Lcom/vk/lists/j;
+    sget-object v7, Lcom/vk/lists/FooterEmptyViewProvider;->a:Lcom/vk/lists/FooterEmptyViewProvider;
 
     new-instance v8, Lcom/vk/profile/ui/community/adresses/CommunityAddressesFragment$v;
 
@@ -3023,16 +3023,16 @@
     move-object v3, p1
 
     .line 33
-    invoke-direct/range {v3 .. v8}, Lcom/vk/lists/s;-><init>(Landroidx/recyclerview/widget/RecyclerView$Adapter;Lcom/vk/lists/k;Lcom/vk/lists/l;Lcom/vk/lists/j;Lcom/vk/lists/r;)V
+    invoke-direct/range {v3 .. v8}, Lcom/vk/lists/PaginatedRecyclerAdapter;-><init>(Landroidx/recyclerview/widget/RecyclerView$Adapter;Lcom/vk/lists/FooterErrorViewProvider;Lcom/vk/lists/FooterLoadingViewProvider;Lcom/vk/lists/FooterEmptyViewProvider;Lcom/vk/lists/OnRetryClickListener;)V
 
-    iput-object p1, p0, Lcom/vk/profile/ui/community/adresses/CommunityAddressesFragment;->H:Lcom/vk/lists/s;
+    iput-object p1, p0, Lcom/vk/profile/ui/community/adresses/CommunityAddressesFragment;->H:Lcom/vk/lists/PaginatedRecyclerAdapter;
 
     .line 34
     iget-object p1, p0, Lcom/vk/profile/ui/community/adresses/CommunityAddressesFragment;->I:Landroidx/recyclerview/widget/RecyclerView;
 
     if-eqz p1, :cond_8
 
-    iget-object v2, p0, Lcom/vk/profile/ui/community/adresses/CommunityAddressesFragment;->H:Lcom/vk/lists/s;
+    iget-object v2, p0, Lcom/vk/profile/ui/community/adresses/CommunityAddressesFragment;->H:Lcom/vk/lists/PaginatedRecyclerAdapter;
 
     const-string v3, "wrapperAdapter"
 
@@ -3063,29 +3063,29 @@
 
     invoke-direct {v2, p0}, Lcom/vk/profile/ui/community/adresses/CommunityAddressesFragment$onCreateView$9;-><init>(Lcom/vk/profile/ui/community/adresses/CommunityAddressesFragment;)V
 
-    invoke-static {p1, v2}, Lcom/vk/extensions/ViewExtKt;->a(Landroid/view/View;Lkotlin/jvm/b/d;)V
+    invoke-static {p1, v2}, Lcom/vk/extensions/ViewExtKt;->a(Landroid/view/View;Lkotlin/jvm/b/Functions4;)V
 
     .line 38
-    new-instance p1, Lcom/vk/profile/ui/community/adresses/b;
+    new-instance p1, Lcom/vk/profile/ui/community/adresses/AddressesPaginatedView;
 
     iget-object v2, p0, Lcom/vk/profile/ui/community/adresses/CommunityAddressesFragment;->I:Landroidx/recyclerview/widget/RecyclerView;
 
     if-eqz v2, :cond_4
 
-    iget-object v1, p0, Lcom/vk/profile/ui/community/adresses/CommunityAddressesFragment;->H:Lcom/vk/lists/s;
+    iget-object v1, p0, Lcom/vk/profile/ui/community/adresses/CommunityAddressesFragment;->H:Lcom/vk/lists/PaginatedRecyclerAdapter;
 
     if-eqz v1, :cond_3
 
-    invoke-direct {p1, v2, v1, p0}, Lcom/vk/profile/ui/community/adresses/b;-><init>(Landroidx/recyclerview/widget/RecyclerView;Lcom/vk/lists/s;Lcom/vk/profile/view/a;)V
+    invoke-direct {p1, v2, v1, p0}, Lcom/vk/profile/ui/community/adresses/AddressesPaginatedView;-><init>(Landroidx/recyclerview/widget/RecyclerView;Lcom/vk/lists/PaginatedRecyclerAdapter;Lcom/vk/profile/view/CommunityAddressView;)V
 
-    iput-object p1, p0, Lcom/vk/profile/ui/community/adresses/CommunityAddressesFragment;->m0:Lcom/vk/profile/ui/community/adresses/b;
+    iput-object p1, p0, Lcom/vk/profile/ui/community/adresses/CommunityAddressesFragment;->m0:Lcom/vk/profile/ui/community/adresses/AddressesPaginatedView;
 
     .line 39
-    iget-object p1, p0, Lcom/vk/profile/ui/community/adresses/CommunityAddressesFragment;->k0:Lcom/vk/profile/presenter/f/a;
+    iget-object p1, p0, Lcom/vk/profile/ui/community/adresses/CommunityAddressesFragment;->k0:Lcom/vk/profile/presenter/f/CommunityAddressPresenter;
 
     if-eqz p1, :cond_2
 
-    invoke-virtual {p1}, Lcom/vk/profile/presenter/f/a;->r()V
+    invoke-virtual {p1}, Lcom/vk/profile/presenter/f/CommunityAddressPresenter;->r()V
 
     .line 40
     invoke-virtual {p0, p3}, Lcom/vk/profile/ui/community/adresses/CommunityAddressesFragment;->y(Z)V
@@ -3101,7 +3101,7 @@
     return-object p1
 
     :cond_1
-    invoke-static {v0}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v0}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw p2
 
@@ -3109,24 +3109,24 @@
     const-string p1, "presenter"
 
     .line 43
-    invoke-static {p1}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {p1}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw p2
 
     .line 44
     :cond_3
-    invoke-static {v3}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v3}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw p2
 
     :cond_4
-    invoke-static {v1}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v1}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw p2
 
     .line 45
     :cond_5
-    invoke-static {v0}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v0}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw p2
 
@@ -3134,42 +3134,42 @@
     const-string p1, "state"
 
     .line 46
-    invoke-static {p1}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {p1}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw p2
 
     .line 47
     :cond_7
-    invoke-static {v3}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v3}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw p2
 
     :cond_8
-    invoke-static {v1}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v1}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw p2
 
     .line 48
     :cond_9
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     throw p2
 
     .line 49
     :cond_a
-    invoke-static {v3}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v3}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw p2
 
     .line 50
     :cond_b
-    invoke-static {v2}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v2}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw p2
 
     .line 51
     :cond_c
-    invoke-static {v2}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v2}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw p2
 
@@ -3177,42 +3177,42 @@
     const-string p1, "errorView"
 
     .line 52
-    invoke-static {p1}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {p1}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw p2
 
     .line 53
     :cond_e
-    invoke-static {v3}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v3}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw p2
 
     .line 54
     :cond_f
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     throw p2
 
     :cond_10
-    invoke-static {v1}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v1}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw p2
 
     .line 55
     :cond_11
-    invoke-static {v1}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v1}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw p2
 
     .line 56
     :cond_12
-    invoke-static {v1}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v1}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw p2
 
     .line 57
     :cond_13
-    invoke-static {v2}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v2}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw p2
 
@@ -3226,13 +3226,13 @@
     :cond_15
     const-string p1, "fullAddress"
 
-    invoke-static {p1}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {p1}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw p2
 
     .line 58
     :cond_16
-    invoke-static {v3}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v3}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw p2
 
@@ -3246,61 +3246,61 @@
     :cond_18
     const-string p1, "recyclerFrame"
 
-    invoke-static {p1}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {p1}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw p2
 
     .line 59
     :cond_19
-    invoke-static {v0}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v0}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw p2
 
     .line 60
     :cond_1a
-    invoke-static {v0}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v0}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw p2
 
     .line 61
     :cond_1b
-    invoke-static {v0}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v0}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw p2
 
     .line 62
     :cond_1c
-    invoke-static {v0}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v0}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw p2
 
     .line 63
     :cond_1d
-    invoke-static {v0}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v0}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw p2
 
     .line 64
     :cond_1e
-    invoke-static {v0}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v0}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw p2
 
     .line 65
     :cond_1f
-    invoke-static {v0}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v0}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw p2
 
     .line 66
     :cond_20
-    invoke-static {v0}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v0}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw p2
 
     .line 67
     :cond_21
-    invoke-static {v0}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v0}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw p2
 .end method
@@ -3309,16 +3309,16 @@
     .locals 2
 
     .line 1
-    invoke-super {p0}, Lcom/vk/core/fragments/b;->onDestroy()V
+    invoke-super {p0}, Lcom/vk/core/fragments/BaseFragment1;->onDestroy()V
 
     .line 2
-    iget-object v0, p0, Lcom/vk/profile/ui/community/adresses/CommunityAddressesFragment;->k0:Lcom/vk/profile/presenter/f/a;
+    iget-object v0, p0, Lcom/vk/profile/ui/community/adresses/CommunityAddressesFragment;->k0:Lcom/vk/profile/presenter/f/CommunityAddressPresenter;
 
     const/4 v1, 0x0
 
     if-eqz v0, :cond_2
 
-    invoke-virtual {v0}, Lcom/vk/profile/presenter/f/a;->s()V
+    invoke-virtual {v0}, Lcom/vk/profile/presenter/f/CommunityAddressPresenter;->s()V
 
     .line 3
     iget-object v0, p0, Lcom/vk/profile/ui/community/adresses/CommunityAddressesFragment;->L:Lcom/vk/profile/ui/community/adresses/FullAddressView;
@@ -3335,7 +3335,7 @@
     :cond_1
     const-string v0, "fullAddress"
 
-    invoke-static {v0}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v0}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v1
 
@@ -3343,7 +3343,7 @@
     const-string v0, "presenter"
 
     .line 4
-    invoke-static {v0}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v0}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v1
 .end method
@@ -3393,7 +3393,7 @@
     :cond_0
     const-string p1, "state"
 
-    invoke-static {p1}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {p1}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     const/4 p1, 0x0
 
@@ -3467,7 +3467,7 @@
     const-string v0, "recyclerFrame"
 
     .line 11
-    invoke-static {v0}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v0}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v1
 
@@ -3475,7 +3475,7 @@
     const-string v0, "fullAddress"
 
     .line 12
-    invoke-static {v0}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v0}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v1
 .end method
@@ -3501,7 +3501,7 @@
 
     const/16 v2, 0x8
 
-    invoke-virtual {v0, v2}, Lcom/vk/lists/a;->setVisibility(I)V
+    invoke-virtual {v0, v2}, Lcom/vk/lists/AbstractErrorView;->setVisibility(I)V
 
     .line 3
     iget-object v0, p0, Lcom/vk/profile/ui/community/adresses/CommunityAddressesFragment;->M:Landroid/view/View;
@@ -3551,19 +3551,19 @@
     goto :goto_0
 
     :cond_0
-    invoke-static {v0}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v0}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v1
 
     .line 8
     :cond_1
-    invoke-static {v5}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v5}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v1
 
     .line 9
     :cond_2
-    invoke-static {v4}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v4}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v1
 
@@ -3593,19 +3593,19 @@
     return-void
 
     :cond_4
-    invoke-static {v4}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v4}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v1
 
     .line 13
     :cond_5
-    invoke-static {v0}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v0}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v1
 
     .line 14
     :cond_6
-    invoke-static {v5}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v5}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v1
 
@@ -3613,7 +3613,7 @@
     const-string p1, "mapFrame"
 
     .line 15
-    invoke-static {p1}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {p1}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v1
 
@@ -3621,7 +3621,7 @@
     const-string p1, "recyclerFrame"
 
     .line 16
-    invoke-static {p1}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {p1}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v1
 
@@ -3629,7 +3629,7 @@
     const-string p1, "errorView"
 
     .line 17
-    invoke-static {p1}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {p1}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v1
 .end method

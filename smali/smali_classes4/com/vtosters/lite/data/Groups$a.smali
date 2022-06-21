@@ -51,7 +51,7 @@
     if-nez v1, :cond_0
 
     .line 3
-    invoke-static {}, Lcom/vtosters/lite/j0/d;->b()Ljava/util/List;
+    invoke-static {}, Lcom/vtosters/lite/j0/GroupsCache;->b()Ljava/util/List;
 
     move-result-object v1
 
@@ -74,29 +74,29 @@
 
     .line 7
     :cond_0
-    new-instance v0, Lcom/vk/api/execute/d;
+    new-instance v0, Lcom/vk/api/execute/ExecuteGroupsGet;
 
-    invoke-static {}, Lcom/vtosters/lite/i0/c;->d()Lb/h/h/d/c;
+    invoke-static {}, Lcom/vtosters/lite/auth/VKAccountManager;->d()Lcom/vk/auth/api/VKAccount;
 
     move-result-object v1
 
-    invoke-virtual {v1}, Lb/h/h/d/c;->D0()I
+    invoke-virtual {v1}, Lcom/vk/auth/api/VKAccount;->D0()I
 
     move-result v1
 
-    invoke-direct {v0, v1}, Lcom/vk/api/execute/d;-><init>(I)V
+    invoke-direct {v0, v1}, Lcom/vk/api/execute/ExecuteGroupsGet;-><init>(I)V
 
     new-instance v1, Lcom/vtosters/lite/data/Groups$a$a;
 
     invoke-direct {v1, p0}, Lcom/vtosters/lite/data/Groups$a$a;-><init>(Lcom/vtosters/lite/data/Groups$a;)V
 
     .line 8
-    invoke-virtual {v0, v1}, Lcom/vk/api/base/d;->a(Lcom/vk/api/base/a;)Lcom/vk/api/base/b;
+    invoke-virtual {v0, v1}, Lcom/vk/api/base/ApiRequest;->a(Lcom/vk/api/base/ApiCallback;)Lcom/vk/api/base/ApiCallbackDisposable;
 
     move-result-object v0
 
     .line 9
-    invoke-virtual {v0}, Lcom/vk/api/base/b;->b()Z
+    invoke-virtual {v0}, Lcom/vk/api/base/ApiCallbackDisposable;->b()Z
 
     .line 10
     invoke-static {v2}, Lcom/vtosters/lite/data/Groups;->a(Z)Z

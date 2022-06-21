@@ -27,7 +27,7 @@
 
     invoke-direct {v0, p1, p0}, Lcom/facebook/internal/FeatureManager$a;-><init>(Lcom/facebook/internal/FeatureManager$c;Lcom/facebook/internal/FeatureManager$Feature;)V
 
-    invoke-static {v0}, Lcom/facebook/internal/g;->a(Lcom/facebook/internal/g$c;)V
+    invoke-static {v0}, Lcom/facebook/internal/FetchedAppGateKeepersManager;->a(Lcom/facebook/internal/FetchedAppGateKeepersManager$c;)V
 
     return-void
 .end method
@@ -101,12 +101,12 @@
     move-result p0
 
     .line 6
-    invoke-static {}, Lcom/facebook/e;->f()Ljava/lang/String;
+    invoke-static {}, Lcom/facebook/FacebookSdk;->f()Ljava/lang/String;
 
     move-result-object v1
 
     .line 7
-    invoke-static {v0, v1, p0}, Lcom/facebook/internal/g;->a(Ljava/lang/String;Ljava/lang/String;Z)Z
+    invoke-static {v0, v1, p0}, Lcom/facebook/internal/FetchedAppGateKeepersManager;->a(Ljava/lang/String;Ljava/lang/String;Z)Z
 
     move-result p0
 

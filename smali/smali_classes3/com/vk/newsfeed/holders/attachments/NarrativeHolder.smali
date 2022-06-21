@@ -1,10 +1,10 @@
 .class public final Lcom/vk/newsfeed/holders/attachments/NarrativeHolder;
-.super Lcom/vk/newsfeed/holders/attachments/k;
+.super Lcom/vk/newsfeed/holders/attachments/BaseAttachmentHolder;
 .source "NarrativeHolder.kt"
 
 # interfaces
 .implements Landroid/view/View$OnClickListener;
-.implements Lcom/vk/newsfeed/posting/viewpresenter/attachments/f;
+.implements Lcom/vk/newsfeed/posting/viewpresenter/attachments/AttachmentsPreviewInterfaces3;
 
 
 # instance fields
@@ -32,14 +32,14 @@
     const v0, 0x7f0d0088
 
     .line 1
-    invoke-direct {p0, v0, p1}, Lcom/vk/newsfeed/holders/attachments/k;-><init>(ILandroid/view/ViewGroup;)V
+    invoke-direct {p0, v0, p1}, Lcom/vk/newsfeed/holders/attachments/BaseAttachmentHolder;-><init>(ILandroid/view/ViewGroup;)V
 
     .line 2
     iget-object p1, p0, Landroidx/recyclerview/widget/RecyclerView$ViewHolder;->itemView:Landroid/view/View;
 
     const-string v0, "itemView"
 
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     const/4 v1, 0x2
 
@@ -47,7 +47,7 @@
 
     const v3, 0x7f0a0158
 
-    invoke-static {p1, v3, v2, v1, v2}, Lcom/vk/extensions/ViewExtKt;->a(Landroid/view/View;ILkotlin/jvm/b/b;ILjava/lang/Object;)Landroid/view/View;
+    invoke-static {p1, v3, v2, v1, v2}, Lcom/vk/extensions/ViewExtKt;->a(Landroid/view/View;ILkotlin/jvm/b/Functions2;ILjava/lang/Object;)Landroid/view/View;
 
     move-result-object p1
 
@@ -58,11 +58,11 @@
     .line 3
     iget-object p1, p0, Landroidx/recyclerview/widget/RecyclerView$ViewHolder;->itemView:Landroid/view/View;
 
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     const v3, 0x7f0a02eb
 
-    invoke-static {p1, v3, v2, v1, v2}, Lcom/vk/extensions/ViewExtKt;->a(Landroid/view/View;ILkotlin/jvm/b/b;ILjava/lang/Object;)Landroid/view/View;
+    invoke-static {p1, v3, v2, v1, v2}, Lcom/vk/extensions/ViewExtKt;->a(Landroid/view/View;ILkotlin/jvm/b/Functions2;ILjava/lang/Object;)Landroid/view/View;
 
     move-result-object p1
 
@@ -73,11 +73,11 @@
     .line 4
     iget-object p1, p0, Landroidx/recyclerview/widget/RecyclerView$ViewHolder;->itemView:Landroid/view/View;
 
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     const v3, 0x7f0a03e1
 
-    invoke-static {p1, v3, v2, v1, v2}, Lcom/vk/extensions/ViewExtKt;->a(Landroid/view/View;ILkotlin/jvm/b/b;ILjava/lang/Object;)Landroid/view/View;
+    invoke-static {p1, v3, v2, v1, v2}, Lcom/vk/extensions/ViewExtKt;->a(Landroid/view/View;ILkotlin/jvm/b/Functions2;ILjava/lang/Object;)Landroid/view/View;
 
     move-result-object p1
 
@@ -88,11 +88,11 @@
     .line 5
     iget-object p1, p0, Landroidx/recyclerview/widget/RecyclerView$ViewHolder;->itemView:Landroid/view/View;
 
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     const v3, 0x7f0a0d80
 
-    invoke-static {p1, v3, v2, v1, v2}, Lcom/vk/extensions/ViewExtKt;->a(Landroid/view/View;ILkotlin/jvm/b/b;ILjava/lang/Object;)Landroid/view/View;
+    invoke-static {p1, v3, v2, v1, v2}, Lcom/vk/extensions/ViewExtKt;->a(Landroid/view/View;ILkotlin/jvm/b/Functions2;ILjava/lang/Object;)Landroid/view/View;
 
     move-result-object p1
 
@@ -103,11 +103,11 @@
     .line 6
     iget-object p1, p0, Landroidx/recyclerview/widget/RecyclerView$ViewHolder;->itemView:Landroid/view/View;
 
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     const v3, 0x7f0a0141
 
-    invoke-static {p1, v3, v2, v1, v2}, Lcom/vk/extensions/ViewExtKt;->a(Landroid/view/View;ILkotlin/jvm/b/b;ILjava/lang/Object;)Landroid/view/View;
+    invoke-static {p1, v3, v2, v1, v2}, Lcom/vk/extensions/ViewExtKt;->a(Landroid/view/View;ILkotlin/jvm/b/Functions2;ILjava/lang/Object;)Landroid/view/View;
 
     move-result-object p1
 
@@ -118,11 +118,11 @@
     .line 7
     iget-object p1, p0, Landroidx/recyclerview/widget/RecyclerView$ViewHolder;->itemView:Landroid/view/View;
 
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     const v3, 0x7f0a0a7f
 
-    invoke-static {p1, v3, v2, v1, v2}, Lcom/vk/extensions/ViewExtKt;->a(Landroid/view/View;ILkotlin/jvm/b/b;ILjava/lang/Object;)Landroid/view/View;
+    invoke-static {p1, v3, v2, v1, v2}, Lcom/vk/extensions/ViewExtKt;->a(Landroid/view/View;ILkotlin/jvm/b/Functions2;ILjava/lang/Object;)Landroid/view/View;
 
     move-result-object p1
 
@@ -131,11 +131,11 @@
     .line 8
     iget-object p1, p0, Landroidx/recyclerview/widget/RecyclerView$ViewHolder;->itemView:Landroid/view/View;
 
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     const v0, 0x7f0a0c7c
 
-    invoke-static {p1, v0, v2, v1, v2}, Lcom/vk/extensions/ViewExtKt;->a(Landroid/view/View;ILkotlin/jvm/b/b;ILjava/lang/Object;)Landroid/view/View;
+    invoke-static {p1, v0, v2, v1, v2}, Lcom/vk/extensions/ViewExtKt;->a(Landroid/view/View;ILkotlin/jvm/b/Functions2;ILjava/lang/Object;)Landroid/view/View;
 
     move-result-object p1
 
@@ -167,18 +167,18 @@
     iget-object v0, p0, Lcom/vk/newsfeed/holders/attachments/NarrativeHolder;->H:Lcom/vk/imageloader/view/VKImageView;
 
     .line 12
-    invoke-virtual {p0}, Lcom/vtosters/lite/ui/b0/i;->e0()Landroid/content/res/Resources;
+    invoke-virtual {p0}, Lcom/vtosters/lite/ui/holder/RecyclerHolder;->e0()Landroid/content/res/Resources;
 
     move-result-object v1
 
-    invoke-static {v1}, Lcom/facebook/drawee/generic/b;->a(Landroid/content/res/Resources;)Lcom/facebook/drawee/generic/b;
+    invoke-static {v1}, Lcom/facebook/drawee/generic/GenericDraweeHierarchyBuilder;->a(Landroid/content/res/Resources;)Lcom/facebook/drawee/generic/GenericDraweeHierarchyBuilder;
 
     move-result-object v1
 
     .line 13
-    sget-object v2, Lcom/facebook/drawee/drawable/r$b;->o:Lcom/facebook/drawee/drawable/r$b;
+    sget-object v2, Lcom/facebook/drawee/drawable/ScalingUtils$b;->o:Lcom/facebook/drawee/drawable/ScalingUtils$b;
 
-    invoke-virtual {v1, v2}, Lcom/facebook/drawee/generic/b;->a(Lcom/facebook/drawee/drawable/r$b;)Lcom/facebook/drawee/generic/b;
+    invoke-virtual {v1, v2}, Lcom/facebook/drawee/generic/GenericDraweeHierarchyBuilder;->a(Lcom/facebook/drawee/drawable/ScalingUtils$b;)Lcom/facebook/drawee/generic/GenericDraweeHierarchyBuilder;
 
     const/high16 v2, 0x41000000    # 8.0f
 
@@ -191,14 +191,14 @@
 
     move-result-object v2
 
-    invoke-virtual {v1, v2}, Lcom/facebook/drawee/generic/b;->a(Lcom/facebook/drawee/generic/RoundingParams;)Lcom/facebook/drawee/generic/b;
+    invoke-virtual {v1, v2}, Lcom/facebook/drawee/generic/GenericDraweeHierarchyBuilder;->a(Lcom/facebook/drawee/generic/RoundingParams;)Lcom/facebook/drawee/generic/GenericDraweeHierarchyBuilder;
 
     .line 15
-    invoke-virtual {v1}, Lcom/facebook/drawee/generic/b;->a()Lcom/facebook/drawee/generic/a;
+    invoke-virtual {v1}, Lcom/facebook/drawee/generic/GenericDraweeHierarchyBuilder;->a()Lcom/facebook/drawee/generic/GenericDraweeHierarchy;
 
     move-result-object v1
 
-    invoke-virtual {v0, v1}, Lcom/vk/imageloader/view/VKDraweeView;->setHierarchy(Lcom/facebook/u/e/b;)V
+    invoke-virtual {v0, v1}, Lcom/vk/imageloader/view/VKDraweeView;->setHierarchy(Lcom/facebook/u/e/DraweeHierarchy;)V
 
     .line 16
     iget-object v0, p0, Lcom/vk/newsfeed/holders/attachments/NarrativeHolder;->H:Lcom/vk/imageloader/view/VKImageView;
@@ -220,7 +220,7 @@
 
     const-string v1, "itemView.findViewById(R.id.narrative_root)"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     check-cast v0, Landroid/widget/FrameLayout;
 
@@ -300,7 +300,7 @@
 
     const-string v1, "itemView"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {p1}, Lcom/vk/dto/narratives/Narrative;->B1()Z
 
@@ -379,7 +379,7 @@
 
     const/4 v3, -0x1
 
-    invoke-static {v3, v2}, Lcom/vk/core/util/p;->b(IF)I
+    invoke-static {v3, v2}, Lcom/vk/core/util/ColorUtils;->b(IF)I
 
     move-result v4
 
@@ -393,7 +393,7 @@
     .line 11
     iget-object v0, p0, Lcom/vk/newsfeed/holders/attachments/NarrativeHolder;->L:Landroid/widget/TextView;
 
-    invoke-static {v3, v2}, Lcom/vk/core/util/p;->b(IF)I
+    invoke-static {v3, v2}, Lcom/vk/core/util/ColorUtils;->b(IF)I
 
     move-result v2
 
@@ -409,16 +409,16 @@
 
     const v1, 0x7f080167
 
-    invoke-virtual {v0, v1}, Lcom/vk/imageloader/view/a;->setPlaceholderImage(I)V
+    invoke-virtual {v0, v1}, Lcom/vk/imageloader/view/GenericVKImageView;->setPlaceholderImage(I)V
 
     .line 14
     iget-object v0, p0, Lcom/vk/newsfeed/holders/attachments/NarrativeHolder;->H:Lcom/vk/imageloader/view/VKImageView;
 
-    invoke-static {}, Lcom/vk/narratives/NarrativeController;->c()Lcom/vk/imageloader/o/f;
+    invoke-static {}, Lcom/vk/narratives/NarrativeController;->c()Lcom/vk/imageloader/o/StoryPreviewPostProcessor;
 
     move-result-object v1
 
-    invoke-virtual {v0, v1}, Lcom/vk/imageloader/view/VKImageView;->setPostprocessor(Lcom/facebook/imagepipeline/request/a;)V
+    invoke-virtual {v0, v1}, Lcom/vk/imageloader/view/VKImageView;->setPostprocessor(Lcom/facebook/imagepipeline/request/BasePostprocessor;)V
 
     .line 15
     iget-object v0, p0, Lcom/vk/newsfeed/holders/attachments/NarrativeHolder;->H:Lcom/vk/imageloader/view/VKImageView;
@@ -482,13 +482,13 @@
     .line 21
     iget-object p1, p0, Lcom/vk/newsfeed/holders/attachments/NarrativeHolder;->H:Lcom/vk/imageloader/view/VKImageView;
 
-    invoke-virtual {p1}, Lcom/vk/imageloader/view/VKDraweeView;->getHierarchy()Lcom/facebook/u/e/b;
+    invoke-virtual {p1}, Lcom/vk/imageloader/view/VKDraweeView;->getHierarchy()Lcom/facebook/u/e/DraweeHierarchy;
 
     move-result-object p1
 
-    check-cast p1, Lcom/facebook/drawee/generic/a;
+    check-cast p1, Lcom/facebook/drawee/generic/GenericDraweeHierarchy;
 
-    invoke-virtual {p1, v1}, Lcom/facebook/drawee/generic/a;->e(Landroid/graphics/drawable/Drawable;)V
+    invoke-virtual {p1, v1}, Lcom/facebook/drawee/generic/GenericDraweeHierarchy;->e(Landroid/graphics/drawable/Drawable;)V
 
     .line 22
     iget-object p1, p0, Lcom/vk/newsfeed/holders/attachments/NarrativeHolder;->H:Lcom/vk/imageloader/view/VKImageView;
@@ -524,17 +524,17 @@
 
     const v1, 0x7f04059b
 
-    invoke-static {v0, v1}, Lcom/vk/extensions/l;->a(Landroid/widget/TextView;I)V
+    invoke-static {v0, v1}, Lcom/vk/extensions/TextViewExt;->a(Landroid/widget/TextView;I)V
 
     .line 3
     iget-object v0, p0, Lcom/vk/newsfeed/holders/attachments/NarrativeHolder;->K:Landroid/widget/TextView;
 
-    invoke-static {v0, v1}, Lcom/vk/extensions/l;->a(Landroid/widget/TextView;I)V
+    invoke-static {v0, v1}, Lcom/vk/extensions/TextViewExt;->a(Landroid/widget/TextView;I)V
 
     .line 4
     iget-object v0, p0, Lcom/vk/newsfeed/holders/attachments/NarrativeHolder;->L:Landroid/widget/TextView;
 
-    invoke-static {v0, v1}, Lcom/vk/extensions/l;->a(Landroid/widget/TextView;I)V
+    invoke-static {v0, v1}, Lcom/vk/extensions/TextViewExt;->a(Landroid/widget/TextView;I)V
 
     .line 5
     iget-object v0, p0, Lcom/vk/newsfeed/holders/attachments/NarrativeHolder;->H:Lcom/vk/imageloader/view/VKImageView;
@@ -544,15 +544,15 @@
     .line 6
     iget-object v0, p0, Lcom/vk/newsfeed/holders/attachments/NarrativeHolder;->H:Lcom/vk/imageloader/view/VKImageView;
 
-    invoke-virtual {v0}, Lcom/vk/imageloader/view/VKDraweeView;->getHierarchy()Lcom/facebook/u/e/b;
+    invoke-virtual {v0}, Lcom/vk/imageloader/view/VKDraweeView;->getHierarchy()Lcom/facebook/u/e/DraweeHierarchy;
 
     move-result-object v0
 
-    check-cast v0, Lcom/facebook/drawee/generic/a;
+    check-cast v0, Lcom/facebook/drawee/generic/GenericDraweeHierarchy;
 
     const/4 v1, 0x0
 
-    invoke-virtual {v0, v1}, Lcom/facebook/drawee/generic/a;->e(Landroid/graphics/drawable/Drawable;)V
+    invoke-virtual {v0, v1}, Lcom/facebook/drawee/generic/GenericDraweeHierarchy;->e(Landroid/graphics/drawable/Drawable;)V
 
     .line 7
     iget-object v0, p0, Lcom/vk/newsfeed/holders/attachments/NarrativeHolder;->H:Lcom/vk/imageloader/view/VKImageView;
@@ -622,26 +622,26 @@
     if-eqz v0, :cond_3
 
     .line 4
-    invoke-virtual {p0}, Lcom/vk/newsfeed/holders/h;->j0()Ljava/lang/String;
+    invoke-virtual {p0}, Lcom/vk/newsfeed/holders/BaseNewsEntryHolder;->j0()Ljava/lang/String;
 
     move-result-object v0
 
     const-string v2, "fave"
 
-    invoke-static {v0, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v0, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v0
 
     if-eqz v0, :cond_1
 
     .line 5
-    sget-object v0, Lcom/vk/fave/h;->a:Lcom/vk/fave/h;
+    sget-object v0, Lcom/vk/fave/FaveReporter;->a:Lcom/vk/fave/FaveReporter;
 
-    invoke-virtual {p0}, Lcom/vk/newsfeed/holders/h;->k0()Lcom/vk/dto/newsfeed/entries/NewsEntry;
+    invoke-virtual {p0}, Lcom/vk/newsfeed/holders/BaseNewsEntryHolder;->k0()Lcom/vk/dto/newsfeed/entries/NewsEntry;
 
     move-result-object v2
 
-    invoke-virtual {v0, v2, p1}, Lcom/vk/fave/h;->a(Lcom/vk/dto/newsfeed/entries/NewsEntry;Lb/h/h/f/a;)V
+    invoke-virtual {v0, v2, p1}, Lcom/vk/fave/FaveReporter;->a(Lcom/vk/dto/newsfeed/entries/NewsEntry;Lb/h/h/f/Favable;)V
 
     .line 6
     :cond_1
@@ -674,7 +674,7 @@
 
     move-result v1
 
-    invoke-static {v1}, Lcom/vk/dto/stories/d/a;->a(I)Ljava/lang/String;
+    invoke-static {v1}, Lcom/vk/dto/stories/d/StoriesContainerExt;->a(I)Ljava/lang/String;
 
     move-result-object v6
 
@@ -684,7 +684,7 @@
     invoke-direct {v7, p0}, Lcom/vk/newsfeed/holders/attachments/NarrativeHolder$a;-><init>(Lcom/vk/newsfeed/holders/attachments/NarrativeHolder;)V
 
     .line 11
-    iget-object v1, p0, Lcom/vtosters/lite/ui/b0/i;->b:Ljava/lang/Object;
+    iget-object v1, p0, Lcom/vtosters/lite/ui/holder/RecyclerHolder;->b:Ljava/lang/Object;
 
     instance-of v1, v1, Lcom/vk/dto/newsfeed/entries/FaveEntry;
 
@@ -701,7 +701,7 @@
     move-object v8, v1
 
     .line 12
-    invoke-virtual {p0}, Lcom/vk/newsfeed/holders/h;->j0()Ljava/lang/String;
+    invoke-virtual {p0}, Lcom/vk/newsfeed/holders/BaseNewsEntryHolder;->j0()Ljava/lang/String;
 
     move-result-object v9
 
@@ -738,7 +738,7 @@
     const-string v0, "narrative_open"
 
     .line 17
-    invoke-static {v0}, Lcom/vtosters/lite/data/n;->c(Ljava/lang/String;)Lcom/vtosters/lite/data/n$l;
+    invoke-static {v0}, Lcom/vtosters/lite/data/Analytics;->c(Ljava/lang/String;)Lcom/vtosters/lite/data/Analytics$l;
 
     move-result-object v0
 
@@ -753,7 +753,7 @@
 
     const-string v2, "owner_id"
 
-    invoke-virtual {v0, v2, v1}, Lcom/vtosters/lite/data/n$l;->a(Ljava/lang/String;Ljava/lang/Object;)Lcom/vtosters/lite/data/n$l;
+    invoke-virtual {v0, v2, v1}, Lcom/vtosters/lite/data/Analytics$l;->a(Ljava/lang/String;Ljava/lang/Object;)Lcom/vtosters/lite/data/Analytics$l;
 
     .line 19
     invoke-virtual {p1}, Lcom/vk/dto/narratives/Narrative;->getId()I
@@ -766,10 +766,10 @@
 
     const-string v1, "narrative_id"
 
-    invoke-virtual {v0, v1, p1}, Lcom/vtosters/lite/data/n$l;->a(Ljava/lang/String;Ljava/lang/Object;)Lcom/vtosters/lite/data/n$l;
+    invoke-virtual {v0, v1, p1}, Lcom/vtosters/lite/data/Analytics$l;->a(Ljava/lang/String;Ljava/lang/Object;)Lcom/vtosters/lite/data/Analytics$l;
 
     .line 20
-    invoke-virtual {v0}, Lcom/vtosters/lite/data/n$l;->b()Lcom/vtosters/lite/data/n$l;
+    invoke-virtual {v0}, Lcom/vtosters/lite/data/Analytics$l;->b()Lcom/vtosters/lite/data/Analytics$l;
 
     return-void
 .end method
@@ -782,7 +782,7 @@
 
     const-string v1, "itemView"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {v0}, Landroid/view/View;->getContext()Landroid/content/Context;
 
@@ -790,7 +790,7 @@
 
     const-string v1, "itemView.context"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     return-object v0
 .end method
@@ -812,7 +812,7 @@
     if-ne v0, v1, :cond_0
 
     .line 2
-    invoke-virtual {p0}, Lcom/vk/newsfeed/holders/h;->k0()Lcom/vk/dto/newsfeed/entries/NewsEntry;
+    invoke-virtual {p0}, Lcom/vk/newsfeed/holders/BaseNewsEntryHolder;->k0()Lcom/vk/dto/newsfeed/entries/NewsEntry;
 
     move-result-object v0
 
@@ -845,13 +845,13 @@
     if-eqz v1, :cond_0
 
     .line 2
-    invoke-virtual {p0}, Lcom/vtosters/lite/ui/b0/i;->d0()Landroid/view/ViewGroup;
+    invoke-virtual {p0}, Lcom/vtosters/lite/ui/holder/RecyclerHolder;->d0()Landroid/view/ViewGroup;
 
     move-result-object v0
 
     const-string v2, "parent"
 
-    invoke-static {v0, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {v0}, Landroid/view/ViewGroup;->getContext()Landroid/content/Context;
 
@@ -859,16 +859,16 @@
 
     const-string v2, "parent.context"
 
-    invoke-static {v0, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 3
-    new-instance v2, Lcom/vk/fave/entities/e;
+    new-instance v2, Lcom/vk/fave/entities/FaveMetaInfo;
 
     invoke-virtual {v1}, Lcom/vk/dto/narratives/Narrative;->t1()Ljava/lang/String;
 
     move-result-object v4
 
-    invoke-virtual {p0}, Lcom/vk/newsfeed/holders/h;->j0()Ljava/lang/String;
+    invoke-virtual {p0}, Lcom/vk/newsfeed/holders/BaseNewsEntryHolder;->j0()Ljava/lang/String;
 
     move-result-object v5
 
@@ -882,7 +882,7 @@
 
     move-object v3, v2
 
-    invoke-direct/range {v3 .. v9}, Lcom/vk/fave/entities/e;-><init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Lcom/vk/fave/entities/FaveSource;ILkotlin/jvm/internal/i;)V
+    invoke-direct/range {v3 .. v9}, Lcom/vk/fave/entities/FaveMetaInfo;-><init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Lcom/vk/fave/entities/FaveSource;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     .line 4
     new-instance v3, Lcom/vk/newsfeed/holders/attachments/NarrativeHolder$onFaveClick$1;
@@ -899,7 +899,7 @@
     const/16 v6, 0x20
 
     .line 6
-    invoke-static/range {v0 .. v7}, Lcom/vk/fave/FaveController;->a(Landroid/content/Context;Lb/h/h/f/a;Lcom/vk/fave/entities/e;Lkotlin/jvm/b/c;Lkotlin/jvm/b/b;ZILjava/lang/Object;)V
+    invoke-static/range {v0 .. v7}, Lcom/vk/fave/FaveController;->a(Landroid/content/Context;Lb/h/h/f/Favable;Lcom/vk/fave/entities/FaveMetaInfo;Lkotlin/jvm/b/Functions1;Lkotlin/jvm/b/Functions2;ZILjava/lang/Object;)V
 
     :cond_0
     return-void
@@ -968,11 +968,11 @@
     return-void
 .end method
 
-.method public a(Lcom/vk/newsfeed/posting/viewpresenter/attachments/a;)V
+.method public a(Lcom/vk/newsfeed/posting/viewpresenter/attachments/AttachmentsPreviewInterfaces;)V
     .locals 0
 
     .line 2
-    invoke-static {p0, p1}, Lcom/vk/newsfeed/posting/viewpresenter/attachments/f$a;->a(Lcom/vk/newsfeed/posting/viewpresenter/attachments/f;Lcom/vk/newsfeed/posting/viewpresenter/attachments/a;)V
+    invoke-static {p0, p1}, Lcom/vk/newsfeed/posting/viewpresenter/attachments/AttachmentsPreviewInterfaces$a;->a(Lcom/vk/newsfeed/posting/viewpresenter/attachments/AttachmentsPreviewInterfaces3;Lcom/vk/newsfeed/posting/viewpresenter/attachments/AttachmentsPreviewInterfaces;)V
 
     return-void
 .end method
@@ -994,7 +994,7 @@
 
     move-result-object p1
 
-    invoke-virtual {p1}, Lcom/vk/fave/entities/FaveItem;->t1()Lb/h/h/f/a;
+    invoke-virtual {p1}, Lcom/vk/fave/entities/FaveItem;->t1()Lb/h/h/f/Favable;
 
     move-result-object p1
 
@@ -1015,7 +1015,7 @@
 
     .line 5
     :cond_1
-    invoke-virtual {p0}, Lcom/vk/newsfeed/holders/attachments/k;->o0()Lcom/vk/dto/common/Attachment;
+    invoke-virtual {p0}, Lcom/vk/newsfeed/holders/attachments/BaseAttachmentHolder;->o0()Lcom/vk/dto/common/Attachment;
 
     move-result-object p1
 
@@ -1043,7 +1043,7 @@
 
     const-string v1, "itemView"
 
-    invoke-static {p1, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     if-eqz v0, :cond_4
 
@@ -1114,7 +1114,7 @@
     .locals 0
 
     .line 1
-    invoke-static {p0, p1}, Lcom/vk/newsfeed/posting/viewpresenter/attachments/f$a;->a(Lcom/vk/newsfeed/posting/viewpresenter/attachments/f;Z)V
+    invoke-static {p0, p1}, Lcom/vk/newsfeed/posting/viewpresenter/attachments/AttachmentsPreviewInterfaces$a;->a(Lcom/vk/newsfeed/posting/viewpresenter/attachments/AttachmentsPreviewInterfaces3;Z)V
 
     return-void
 .end method
@@ -1132,7 +1132,7 @@
     .line 2
     iget-object v0, p0, Landroidx/recyclerview/widget/RecyclerView$ViewHolder;->itemView:Landroid/view/View;
 
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v0
 
@@ -1150,7 +1150,7 @@
     :cond_0
     iget-object v0, p0, Lcom/vk/newsfeed/holders/attachments/NarrativeHolder;->J:Landroid/widget/ImageView;
 
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result p1
 

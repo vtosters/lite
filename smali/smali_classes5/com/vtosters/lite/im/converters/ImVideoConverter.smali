@@ -3,7 +3,7 @@
 .source "ImVideoConverter.kt"
 
 # interfaces
-.implements Lcom/vk/im/engine/j/b;
+.implements Lcom/vk/im/engine/j/FileConverter;
 
 
 # annotations
@@ -17,10 +17,10 @@
 # instance fields
 .field private final b:Lcom/vk/media/ext/VideoEncoderSettings;
 
-.field private final c:Lkotlin/jvm/b/a;
+.field private final c:Lkotlin/jvm/b/Functions;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Lkotlin/jvm/b/a<",
+            "Lkotlin/jvm/b/Functions<",
             "Ljava/lang/Boolean;",
             ">;"
         }
@@ -29,13 +29,13 @@
 
 
 # direct methods
-.method public constructor <init>(Lcom/vk/media/ext/VideoEncoderSettings;Lkotlin/jvm/b/a;)V
+.method public constructor <init>(Lcom/vk/media/ext/VideoEncoderSettings;Lkotlin/jvm/b/Functions;)V
     .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
             "Lcom/vk/media/ext/VideoEncoderSettings;",
-            "Lkotlin/jvm/b/a<",
+            "Lkotlin/jvm/b/Functions<",
             "Ljava/lang/Boolean;",
             ">;)V"
         }
@@ -46,18 +46,18 @@
 
     iput-object p1, p0, Lcom/vtosters/lite/im/converters/ImVideoConverter;->b:Lcom/vk/media/ext/VideoEncoderSettings;
 
-    iput-object p2, p0, Lcom/vtosters/lite/im/converters/ImVideoConverter;->c:Lkotlin/jvm/b/a;
+    iput-object p2, p0, Lcom/vtosters/lite/im/converters/ImVideoConverter;->c:Lkotlin/jvm/b/Functions;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public a(Landroid/content/Context;Landroid/net/Uri;Ljava/io/File;Lcom/vk/im/engine/j/f;)Landroid/net/Uri;
+.method public a(Landroid/content/Context;Landroid/net/Uri;Ljava/io/File;Lcom/vk/im/engine/j/ProgressListener;)Landroid/net/Uri;
     .locals 6
 
     .line 2
-    invoke-static {p1, p2}, Lb/h/g/m/b;->a(Landroid/content/Context;Landroid/net/Uri;)Ljava/lang/String;
+    invoke-static {p1, p2}, Lb/h/g/m/FilePathUtils;->a(Landroid/content/Context;Landroid/net/Uri;)Ljava/lang/String;
 
     move-result-object p1
 
@@ -65,7 +65,7 @@
 
     const-string p2, "FilePathUtils.getPathFro\u2026rce not exists: $source\")"
 
-    invoke-static {p1, p2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, p2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 3
     new-instance p2, Ljava/io/File;
@@ -84,7 +84,7 @@
 
     .line 4
     :try_start_0
-    invoke-interface {p4, v1, v2}, Lcom/vk/im/engine/j/f;->a(II)V
+    invoke-interface {p4, v1, v2}, Lcom/vk/im/engine/j/ProgressListener;->a(II)V
 
     goto :goto_0
 
@@ -96,13 +96,13 @@
     .line 5
     :cond_0
     :goto_0
-    new-instance v3, Lb/h/p/a$a;
+    new-instance v3, Lb/h/p/MediaEncoder$a;
 
     new-instance v4, Lcom/vtosters/lite/im/converters/ImVideoConverter$a;
 
-    invoke-direct {v4, p4, v2}, Lcom/vtosters/lite/im/converters/ImVideoConverter$a;-><init>(Lcom/vk/im/engine/j/f;I)V
+    invoke-direct {v4, p4, v2}, Lcom/vtosters/lite/im/converters/ImVideoConverter$a;-><init>(Lcom/vk/im/engine/j/ProgressListener;I)V
 
-    invoke-direct {v3, p2, p3, v4}, Lb/h/p/a$a;-><init>(Ljava/io/File;Ljava/io/File;Lb/h/p/a$e;)V
+    invoke-direct {v3, p2, p3, v4}, Lb/h/p/MediaEncoder$a;-><init>(Ljava/io/File;Ljava/io/File;Lb/h/p/MediaEncoder$e;)V
 
     .line 6
     iget-object p2, p0, Lcom/vtosters/lite/im/converters/ImVideoConverter;->b:Lcom/vk/media/ext/VideoEncoderSettings;
@@ -111,7 +111,7 @@
 
     move-result p2
 
-    invoke-virtual {v3, p2}, Lb/h/p/a$a;->c(I)V
+    invoke-virtual {v3, p2}, Lb/h/p/MediaEncoder$a;->c(I)V
 
     .line 7
     iget-object p2, p0, Lcom/vtosters/lite/im/converters/ImVideoConverter;->b:Lcom/vk/media/ext/VideoEncoderSettings;
@@ -120,16 +120,16 @@
 
     move-result p2
 
-    invoke-virtual {v3, p2}, Lb/h/p/a$a;->d(I)V
+    invoke-virtual {v3, p2}, Lb/h/p/MediaEncoder$a;->d(I)V
 
     .line 8
-    invoke-virtual {v3}, Lb/h/p/a$a;->q()I
+    invoke-virtual {v3}, Lb/h/p/MediaEncoder$a;->q()I
 
     move-result p2
 
     int-to-float p2, p2
 
-    invoke-static {}, Lcom/vk/stories/t0;->a()F
+    invoke-static {}, Lcom/vk/stories/StoriesProcessor;->a()F
 
     move-result v4
 
@@ -137,20 +137,20 @@
 
     float-to-int p2, p2
 
-    invoke-virtual {v3, p2}, Lb/h/p/a$a;->e(I)V
+    invoke-virtual {v3, p2}, Lb/h/p/MediaEncoder$a;->e(I)V
 
     .line 9
-    invoke-static {v3, v1, p1, v0}, Lb/h/p/a$a;->a(Lb/h/p/a$a;ZILjava/lang/Object;)Lb/h/p/a;
+    invoke-static {v3, v1, p1, v0}, Lb/h/p/MediaEncoder$a;->a(Lb/h/p/MediaEncoder$a;ZILjava/lang/Object;)Lb/h/p/MediaEncoder;
 
     move-result-object v0
 
     .line 10
-    invoke-interface {v0}, Lb/h/p/a;->b()Z
+    invoke-interface {v0}, Lb/h/p/MediaEncoder;->b()Z
 
     if-eqz p4, :cond_1
 
     .line 11
-    invoke-interface {p4, v2, v2}, Lcom/vk/im/engine/j/f;->a(II)V
+    invoke-interface {p4, v2, v2}, Lcom/vk/im/engine/j/ProgressListener;->a(II)V
 
     .line 12
     :cond_1
@@ -204,14 +204,14 @@
 
     const-string p4, "Uri.parse(\"file://\" + outputFile.absolutePath)"
 
-    invoke-static {p2, p4}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p2, p4}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
     if-eqz v0, :cond_2
 
     .line 15
-    invoke-interface {v0}, Lb/h/p/a;->a()V
+    invoke-interface {v0}, Lb/h/p/MediaEncoder;->a()V
 
     :cond_2
     return-object p2
@@ -245,7 +245,7 @@
     invoke-static {p4}, Lcom/vk/log/L;->b([Ljava/lang/Object;)V
 
     .line 18
-    invoke-static {p3}, Lb/h/g/m/d;->d(Ljava/io/File;)Z
+    invoke-static {p3}, Lb/h/g/m/FileUtils;->d(Ljava/io/File;)Z
 
     .line 19
     new-instance p1, Lcom/vtosters/lite/im/converters/ImVideoConverter$MediaConverterException;
@@ -264,7 +264,7 @@
     if-eqz v0, :cond_4
 
     .line 20
-    invoke-interface {v0}, Lb/h/p/a;->a()V
+    invoke-interface {v0}, Lb/h/p/MediaEncoder;->a()V
 
     :cond_4
     throw p1
@@ -296,9 +296,9 @@
     .locals 0
 
     .line 1
-    iget-object p1, p0, Lcom/vtosters/lite/im/converters/ImVideoConverter;->c:Lkotlin/jvm/b/a;
+    iget-object p1, p0, Lcom/vtosters/lite/im/converters/ImVideoConverter;->c:Lkotlin/jvm/b/Functions;
 
-    invoke-interface {p1}, Lkotlin/jvm/b/a;->invoke()Ljava/lang/Object;
+    invoke-interface {p1}, Lkotlin/jvm/b/Functions;->invoke()Ljava/lang/Object;
 
     move-result-object p1
 

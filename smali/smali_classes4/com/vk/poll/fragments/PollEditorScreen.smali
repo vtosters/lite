@@ -16,100 +16,100 @@
 
 
 # static fields
-.field static final synthetic i0:[Lkotlin/u/j;
+.field static final synthetic i0:[Lkotlin/u/KProperty5;
 
 
 # instance fields
-.field private final B:Lkotlin/e;
+.field private final B:Lkotlin/Lazy2;
 
-.field private final C:Lkotlin/e;
+.field private final C:Lkotlin/Lazy2;
 
-.field private final D:Lkotlin/e;
+.field private final D:Lkotlin/Lazy2;
 
-.field private final E:Lkotlin/e;
+.field private final E:Lkotlin/Lazy2;
 
-.field private final F:Lkotlin/e;
+.field private final F:Lkotlin/Lazy2;
 
-.field private final G:Lkotlin/e;
+.field private final G:Lkotlin/Lazy2;
 
-.field private final H:Lkotlin/e;
+.field private final H:Lkotlin/Lazy2;
 
-.field private final I:Lkotlin/e;
+.field private final I:Lkotlin/Lazy2;
 
-.field private final J:Lkotlin/e;
+.field private final J:Lkotlin/Lazy2;
 
-.field private final K:Lkotlin/e;
+.field private final K:Lkotlin/Lazy2;
 
-.field private final L:Lkotlin/e;
+.field private final L:Lkotlin/Lazy2;
 
-.field private final M:Lkotlin/e;
+.field private final M:Lkotlin/Lazy2;
 
-.field private final N:Lkotlin/e;
+.field private final N:Lkotlin/Lazy2;
 
-.field private final O:Lkotlin/e;
+.field private final O:Lkotlin/Lazy2;
 
-.field private final P:Lkotlin/e;
+.field private final P:Lkotlin/Lazy2;
 
-.field private Q:Lkotlin/jvm/b/a;
+.field private Q:Lkotlin/jvm/b/Functions;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Lkotlin/jvm/b/a<",
-            "Lkotlin/m;",
+            "Lkotlin/jvm/b/Functions<",
+            "Lkotlin/Unit;",
             ">;"
         }
     .end annotation
 .end field
 
-.field private R:Lkotlin/jvm/b/a;
+.field private R:Lkotlin/jvm/b/Functions;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Lkotlin/jvm/b/a<",
-            "Lkotlin/m;",
+            "Lkotlin/jvm/b/Functions<",
+            "Lkotlin/Unit;",
             ">;"
         }
     .end annotation
 .end field
 
-.field private S:Lkotlin/jvm/b/a;
+.field private S:Lkotlin/jvm/b/Functions;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Lkotlin/jvm/b/a<",
-            "Lkotlin/m;",
+            "Lkotlin/jvm/b/Functions<",
+            "Lkotlin/Unit;",
             ">;"
         }
     .end annotation
 .end field
 
-.field private T:Lkotlin/jvm/b/c;
+.field private T:Lkotlin/jvm/b/Functions1;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Lkotlin/jvm/b/c<",
+            "Lkotlin/jvm/b/Functions1<",
             "-",
             "Lcom/vtosters/lite/attachments/PollAttachment;",
             "-",
             "Ljava/lang/String;",
-            "Lkotlin/m;",
+            "Lkotlin/Unit;",
             ">;"
         }
     .end annotation
 .end field
 
-.field private U:Lkotlin/jvm/b/b;
+.field private U:Lkotlin/jvm/b/Functions2;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Lkotlin/jvm/b/b<",
+            "Lkotlin/jvm/b/Functions2<",
             "-",
             "Ljava/lang/Boolean;",
-            "Lkotlin/m;",
+            "Lkotlin/Unit;",
             ">;"
         }
     .end annotation
 .end field
 
-.field private V:Lc/a/r;
+.field private V:Lio/reactivex/Observer;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Lc/a/r<",
+            "Lio/reactivex/Observer<",
             "Ljava/lang/Boolean;",
             ">;"
         }
@@ -124,15 +124,15 @@
 
 .field private final Z:Lcom/vk/poll/fragments/PollEditorScreen$i;
 
-.field private final a:Lio/reactivex/disposables/a;
+.field private final a:Lio/reactivex/disposables/CompositeDisposable;
 
-.field private final a0:Lkotlin/e;
+.field private final a0:Lkotlin/Lazy2;
 
 .field private final b:Lio/reactivex/subjects/PublishSubject;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Lio/reactivex/subjects/PublishSubject<",
-            "Lkotlin/m;",
+            "Lkotlin/Unit;",
             ">;"
         }
     .end annotation
@@ -176,7 +176,7 @@
 
 .field private final g0:Z
 
-.field private final h:Lkotlin/e;
+.field private final h:Lkotlin/Lazy2;
 
 .field private final h0:J
 
@@ -187,13 +187,13 @@
 
     const/16 v0, 0x15
 
-    new-array v0, v0, [Lkotlin/u/j;
+    new-array v0, v0, [Lkotlin/u/KProperty5;
 
     new-instance v1, Lkotlin/jvm/internal/PropertyReference1Impl;
 
     const-class v2, Lcom/vk/poll/fragments/PollEditorScreen;
 
-    invoke-static {v2}, Lkotlin/jvm/internal/o;->a(Ljava/lang/Class;)Lkotlin/u/c;
+    invoke-static {v2}, Lkotlin/jvm/internal/Reflection;->a(Ljava/lang/Class;)Lkotlin/u/KClass;
 
     move-result-object v2
 
@@ -201,9 +201,9 @@
 
     const-string v4, "getContentRootContainer()Landroid/view/ViewGroup;"
 
-    invoke-direct {v1, v2, v3, v4}, Lkotlin/jvm/internal/PropertyReference1Impl;-><init>(Lkotlin/u/e;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-direct {v1, v2, v3, v4}, Lkotlin/jvm/internal/PropertyReference1Impl;-><init>(Lkotlin/u/KDeclarationContainer;Ljava/lang/String;Ljava/lang/String;)V
 
-    invoke-static {v1}, Lkotlin/jvm/internal/o;->a(Lkotlin/jvm/internal/PropertyReference1;)Lkotlin/u/l;
+    invoke-static {v1}, Lkotlin/jvm/internal/Reflection;->a(Lkotlin/jvm/internal/PropertyReference1;)Lkotlin/u/KProperty2;
 
     const/4 v2, 0x0
 
@@ -213,7 +213,7 @@
 
     const-class v2, Lcom/vk/poll/fragments/PollEditorScreen;
 
-    invoke-static {v2}, Lkotlin/jvm/internal/o;->a(Ljava/lang/Class;)Lkotlin/u/c;
+    invoke-static {v2}, Lkotlin/jvm/internal/Reflection;->a(Ljava/lang/Class;)Lkotlin/u/KClass;
 
     move-result-object v2
 
@@ -221,9 +221,9 @@
 
     const-string v4, "getScrollView()Landroidx/core/widget/NestedScrollView;"
 
-    invoke-direct {v1, v2, v3, v4}, Lkotlin/jvm/internal/PropertyReference1Impl;-><init>(Lkotlin/u/e;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-direct {v1, v2, v3, v4}, Lkotlin/jvm/internal/PropertyReference1Impl;-><init>(Lkotlin/u/KDeclarationContainer;Ljava/lang/String;Ljava/lang/String;)V
 
-    invoke-static {v1}, Lkotlin/jvm/internal/o;->a(Lkotlin/jvm/internal/PropertyReference1;)Lkotlin/u/l;
+    invoke-static {v1}, Lkotlin/jvm/internal/Reflection;->a(Lkotlin/jvm/internal/PropertyReference1;)Lkotlin/u/KProperty2;
 
     const/4 v2, 0x1
 
@@ -233,7 +233,7 @@
 
     const-class v2, Lcom/vk/poll/fragments/PollEditorScreen;
 
-    invoke-static {v2}, Lkotlin/jvm/internal/o;->a(Ljava/lang/Class;)Lkotlin/u/c;
+    invoke-static {v2}, Lkotlin/jvm/internal/Reflection;->a(Ljava/lang/Class;)Lkotlin/u/KClass;
 
     move-result-object v2
 
@@ -241,9 +241,9 @@
 
     const-string v4, "getTopShadowLayout()Lcom/vk/attachpicker/widget/TopShadowLinearLayout;"
 
-    invoke-direct {v1, v2, v3, v4}, Lkotlin/jvm/internal/PropertyReference1Impl;-><init>(Lkotlin/u/e;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-direct {v1, v2, v3, v4}, Lkotlin/jvm/internal/PropertyReference1Impl;-><init>(Lkotlin/u/KDeclarationContainer;Ljava/lang/String;Ljava/lang/String;)V
 
-    invoke-static {v1}, Lkotlin/jvm/internal/o;->a(Lkotlin/jvm/internal/PropertyReference1;)Lkotlin/u/l;
+    invoke-static {v1}, Lkotlin/jvm/internal/Reflection;->a(Lkotlin/jvm/internal/PropertyReference1;)Lkotlin/u/KProperty2;
 
     const/4 v2, 0x2
 
@@ -253,7 +253,7 @@
 
     const-class v2, Lcom/vk/poll/fragments/PollEditorScreen;
 
-    invoke-static {v2}, Lkotlin/jvm/internal/o;->a(Ljava/lang/Class;)Lkotlin/u/c;
+    invoke-static {v2}, Lkotlin/jvm/internal/Reflection;->a(Ljava/lang/Class;)Lkotlin/u/KClass;
 
     move-result-object v2
 
@@ -261,9 +261,9 @@
 
     const-string v4, "getQuestionSymbolsLeftText()Landroid/widget/TextView;"
 
-    invoke-direct {v1, v2, v3, v4}, Lkotlin/jvm/internal/PropertyReference1Impl;-><init>(Lkotlin/u/e;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-direct {v1, v2, v3, v4}, Lkotlin/jvm/internal/PropertyReference1Impl;-><init>(Lkotlin/u/KDeclarationContainer;Ljava/lang/String;Ljava/lang/String;)V
 
-    invoke-static {v1}, Lkotlin/jvm/internal/o;->a(Lkotlin/jvm/internal/PropertyReference1;)Lkotlin/u/l;
+    invoke-static {v1}, Lkotlin/jvm/internal/Reflection;->a(Lkotlin/jvm/internal/PropertyReference1;)Lkotlin/u/KProperty2;
 
     const/4 v2, 0x3
 
@@ -273,7 +273,7 @@
 
     const-class v2, Lcom/vk/poll/fragments/PollEditorScreen;
 
-    invoke-static {v2}, Lkotlin/jvm/internal/o;->a(Ljava/lang/Class;)Lkotlin/u/c;
+    invoke-static {v2}, Lkotlin/jvm/internal/Reflection;->a(Ljava/lang/Class;)Lkotlin/u/KClass;
 
     move-result-object v2
 
@@ -281,9 +281,9 @@
 
     const-string v4, "getOptionAddBtn()Landroid/widget/TextView;"
 
-    invoke-direct {v1, v2, v3, v4}, Lkotlin/jvm/internal/PropertyReference1Impl;-><init>(Lkotlin/u/e;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-direct {v1, v2, v3, v4}, Lkotlin/jvm/internal/PropertyReference1Impl;-><init>(Lkotlin/u/KDeclarationContainer;Ljava/lang/String;Ljava/lang/String;)V
 
-    invoke-static {v1}, Lkotlin/jvm/internal/o;->a(Lkotlin/jvm/internal/PropertyReference1;)Lkotlin/u/l;
+    invoke-static {v1}, Lkotlin/jvm/internal/Reflection;->a(Lkotlin/jvm/internal/PropertyReference1;)Lkotlin/u/KProperty2;
 
     const/4 v2, 0x4
 
@@ -293,7 +293,7 @@
 
     const-class v2, Lcom/vk/poll/fragments/PollEditorScreen;
 
-    invoke-static {v2}, Lkotlin/jvm/internal/o;->a(Ljava/lang/Class;)Lkotlin/u/c;
+    invoke-static {v2}, Lkotlin/jvm/internal/Reflection;->a(Ljava/lang/Class;)Lkotlin/u/KClass;
 
     move-result-object v2
 
@@ -301,9 +301,9 @@
 
     const-string v4, "getCreatePollBtn()Landroid/widget/ImageView;"
 
-    invoke-direct {v1, v2, v3, v4}, Lkotlin/jvm/internal/PropertyReference1Impl;-><init>(Lkotlin/u/e;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-direct {v1, v2, v3, v4}, Lkotlin/jvm/internal/PropertyReference1Impl;-><init>(Lkotlin/u/KDeclarationContainer;Ljava/lang/String;Ljava/lang/String;)V
 
-    invoke-static {v1}, Lkotlin/jvm/internal/o;->a(Lkotlin/jvm/internal/PropertyReference1;)Lkotlin/u/l;
+    invoke-static {v1}, Lkotlin/jvm/internal/Reflection;->a(Lkotlin/jvm/internal/PropertyReference1;)Lkotlin/u/KProperty2;
 
     const/4 v2, 0x5
 
@@ -313,7 +313,7 @@
 
     const-class v2, Lcom/vk/poll/fragments/PollEditorScreen;
 
-    invoke-static {v2}, Lkotlin/jvm/internal/o;->a(Ljava/lang/Class;)Lkotlin/u/c;
+    invoke-static {v2}, Lkotlin/jvm/internal/Reflection;->a(Ljava/lang/Class;)Lkotlin/u/KClass;
 
     move-result-object v2
 
@@ -321,9 +321,9 @@
 
     const-string v4, "getSettingAnonymousView()Lcom/vk/poll/views/PollSettingView;"
 
-    invoke-direct {v1, v2, v3, v4}, Lkotlin/jvm/internal/PropertyReference1Impl;-><init>(Lkotlin/u/e;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-direct {v1, v2, v3, v4}, Lkotlin/jvm/internal/PropertyReference1Impl;-><init>(Lkotlin/u/KDeclarationContainer;Ljava/lang/String;Ljava/lang/String;)V
 
-    invoke-static {v1}, Lkotlin/jvm/internal/o;->a(Lkotlin/jvm/internal/PropertyReference1;)Lkotlin/u/l;
+    invoke-static {v1}, Lkotlin/jvm/internal/Reflection;->a(Lkotlin/jvm/internal/PropertyReference1;)Lkotlin/u/KProperty2;
 
     const/4 v2, 0x6
 
@@ -333,7 +333,7 @@
 
     const-class v2, Lcom/vk/poll/fragments/PollEditorScreen;
 
-    invoke-static {v2}, Lkotlin/jvm/internal/o;->a(Ljava/lang/Class;)Lkotlin/u/c;
+    invoke-static {v2}, Lkotlin/jvm/internal/Reflection;->a(Ljava/lang/Class;)Lkotlin/u/KClass;
 
     move-result-object v2
 
@@ -341,9 +341,9 @@
 
     const-string v4, "getSettingMultiVariantsView()Lcom/vk/poll/views/PollSettingView;"
 
-    invoke-direct {v1, v2, v3, v4}, Lkotlin/jvm/internal/PropertyReference1Impl;-><init>(Lkotlin/u/e;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-direct {v1, v2, v3, v4}, Lkotlin/jvm/internal/PropertyReference1Impl;-><init>(Lkotlin/u/KDeclarationContainer;Ljava/lang/String;Ljava/lang/String;)V
 
-    invoke-static {v1}, Lkotlin/jvm/internal/o;->a(Lkotlin/jvm/internal/PropertyReference1;)Lkotlin/u/l;
+    invoke-static {v1}, Lkotlin/jvm/internal/Reflection;->a(Lkotlin/jvm/internal/PropertyReference1;)Lkotlin/u/KProperty2;
 
     const/4 v2, 0x7
 
@@ -353,7 +353,7 @@
 
     const-class v2, Lcom/vk/poll/fragments/PollEditorScreen;
 
-    invoke-static {v2}, Lkotlin/jvm/internal/o;->a(Ljava/lang/Class;)Lkotlin/u/c;
+    invoke-static {v2}, Lkotlin/jvm/internal/Reflection;->a(Ljava/lang/Class;)Lkotlin/u/KClass;
 
     move-result-object v2
 
@@ -361,9 +361,9 @@
 
     const-string v4, "getSettingLimitView()Lcom/vk/poll/views/PollSettingView;"
 
-    invoke-direct {v1, v2, v3, v4}, Lkotlin/jvm/internal/PropertyReference1Impl;-><init>(Lkotlin/u/e;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-direct {v1, v2, v3, v4}, Lkotlin/jvm/internal/PropertyReference1Impl;-><init>(Lkotlin/u/KDeclarationContainer;Ljava/lang/String;Ljava/lang/String;)V
 
-    invoke-static {v1}, Lkotlin/jvm/internal/o;->a(Lkotlin/jvm/internal/PropertyReference1;)Lkotlin/u/l;
+    invoke-static {v1}, Lkotlin/jvm/internal/Reflection;->a(Lkotlin/jvm/internal/PropertyReference1;)Lkotlin/u/KProperty2;
 
     const/16 v2, 0x8
 
@@ -373,7 +373,7 @@
 
     const-class v2, Lcom/vk/poll/fragments/PollEditorScreen;
 
-    invoke-static {v2}, Lkotlin/jvm/internal/o;->a(Ljava/lang/Class;)Lkotlin/u/c;
+    invoke-static {v2}, Lkotlin/jvm/internal/Reflection;->a(Ljava/lang/Class;)Lkotlin/u/KClass;
 
     move-result-object v2
 
@@ -381,9 +381,9 @@
 
     const-string v4, "getBackgroundRecyclerView()Lcom/vk/lists/RecyclerPaginatedView;"
 
-    invoke-direct {v1, v2, v3, v4}, Lkotlin/jvm/internal/PropertyReference1Impl;-><init>(Lkotlin/u/e;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-direct {v1, v2, v3, v4}, Lkotlin/jvm/internal/PropertyReference1Impl;-><init>(Lkotlin/u/KDeclarationContainer;Ljava/lang/String;Ljava/lang/String;)V
 
-    invoke-static {v1}, Lkotlin/jvm/internal/o;->a(Lkotlin/jvm/internal/PropertyReference1;)Lkotlin/u/l;
+    invoke-static {v1}, Lkotlin/jvm/internal/Reflection;->a(Lkotlin/jvm/internal/PropertyReference1;)Lkotlin/u/KProperty2;
 
     const/16 v2, 0x9
 
@@ -393,7 +393,7 @@
 
     const-class v2, Lcom/vk/poll/fragments/PollEditorScreen;
 
-    invoke-static {v2}, Lkotlin/jvm/internal/o;->a(Ljava/lang/Class;)Lkotlin/u/c;
+    invoke-static {v2}, Lkotlin/jvm/internal/Reflection;->a(Ljava/lang/Class;)Lkotlin/u/KClass;
 
     move-result-object v2
 
@@ -401,9 +401,9 @@
 
     const-string v4, "getBackgroundDescriptionView()Landroid/view/View;"
 
-    invoke-direct {v1, v2, v3, v4}, Lkotlin/jvm/internal/PropertyReference1Impl;-><init>(Lkotlin/u/e;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-direct {v1, v2, v3, v4}, Lkotlin/jvm/internal/PropertyReference1Impl;-><init>(Lkotlin/u/KDeclarationContainer;Ljava/lang/String;Ljava/lang/String;)V
 
-    invoke-static {v1}, Lkotlin/jvm/internal/o;->a(Lkotlin/jvm/internal/PropertyReference1;)Lkotlin/u/l;
+    invoke-static {v1}, Lkotlin/jvm/internal/Reflection;->a(Lkotlin/jvm/internal/PropertyReference1;)Lkotlin/u/KProperty2;
 
     const/16 v2, 0xa
 
@@ -413,7 +413,7 @@
 
     const-class v2, Lcom/vk/poll/fragments/PollEditorScreen;
 
-    invoke-static {v2}, Lkotlin/jvm/internal/o;->a(Ljava/lang/Class;)Lkotlin/u/c;
+    invoke-static {v2}, Lkotlin/jvm/internal/Reflection;->a(Ljava/lang/Class;)Lkotlin/u/KClass;
 
     move-result-object v2
 
@@ -421,9 +421,9 @@
 
     const-string v4, "getOptionDescriptionView()Landroid/view/View;"
 
-    invoke-direct {v1, v2, v3, v4}, Lkotlin/jvm/internal/PropertyReference1Impl;-><init>(Lkotlin/u/e;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-direct {v1, v2, v3, v4}, Lkotlin/jvm/internal/PropertyReference1Impl;-><init>(Lkotlin/u/KDeclarationContainer;Ljava/lang/String;Ljava/lang/String;)V
 
-    invoke-static {v1}, Lkotlin/jvm/internal/o;->a(Lkotlin/jvm/internal/PropertyReference1;)Lkotlin/u/l;
+    invoke-static {v1}, Lkotlin/jvm/internal/Reflection;->a(Lkotlin/jvm/internal/PropertyReference1;)Lkotlin/u/KProperty2;
 
     const/16 v2, 0xb
 
@@ -433,7 +433,7 @@
 
     const-class v2, Lcom/vk/poll/fragments/PollEditorScreen;
 
-    invoke-static {v2}, Lkotlin/jvm/internal/o;->a(Ljava/lang/Class;)Lkotlin/u/c;
+    invoke-static {v2}, Lkotlin/jvm/internal/Reflection;->a(Ljava/lang/Class;)Lkotlin/u/KClass;
 
     move-result-object v2
 
@@ -441,9 +441,9 @@
 
     const-string v4, "getQuestionView()Landroid/widget/EditText;"
 
-    invoke-direct {v1, v2, v3, v4}, Lkotlin/jvm/internal/PropertyReference1Impl;-><init>(Lkotlin/u/e;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-direct {v1, v2, v3, v4}, Lkotlin/jvm/internal/PropertyReference1Impl;-><init>(Lkotlin/u/KDeclarationContainer;Ljava/lang/String;Ljava/lang/String;)V
 
-    invoke-static {v1}, Lkotlin/jvm/internal/o;->a(Lkotlin/jvm/internal/PropertyReference1;)Lkotlin/u/l;
+    invoke-static {v1}, Lkotlin/jvm/internal/Reflection;->a(Lkotlin/jvm/internal/PropertyReference1;)Lkotlin/u/KProperty2;
 
     const/16 v2, 0xc
 
@@ -453,7 +453,7 @@
 
     const-class v2, Lcom/vk/poll/fragments/PollEditorScreen;
 
-    invoke-static {v2}, Lkotlin/jvm/internal/o;->a(Ljava/lang/Class;)Lkotlin/u/c;
+    invoke-static {v2}, Lkotlin/jvm/internal/Reflection;->a(Ljava/lang/Class;)Lkotlin/u/KClass;
 
     move-result-object v2
 
@@ -461,9 +461,9 @@
 
     const-string v4, "getOptionContainer()Landroid/view/ViewGroup;"
 
-    invoke-direct {v1, v2, v3, v4}, Lkotlin/jvm/internal/PropertyReference1Impl;-><init>(Lkotlin/u/e;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-direct {v1, v2, v3, v4}, Lkotlin/jvm/internal/PropertyReference1Impl;-><init>(Lkotlin/u/KDeclarationContainer;Ljava/lang/String;Ljava/lang/String;)V
 
-    invoke-static {v1}, Lkotlin/jvm/internal/o;->a(Lkotlin/jvm/internal/PropertyReference1;)Lkotlin/u/l;
+    invoke-static {v1}, Lkotlin/jvm/internal/Reflection;->a(Lkotlin/jvm/internal/PropertyReference1;)Lkotlin/u/KProperty2;
 
     const/16 v2, 0xd
 
@@ -473,7 +473,7 @@
 
     const-class v2, Lcom/vk/poll/fragments/PollEditorScreen;
 
-    invoke-static {v2}, Lkotlin/jvm/internal/o;->a(Ljava/lang/Class;)Lkotlin/u/c;
+    invoke-static {v2}, Lkotlin/jvm/internal/Reflection;->a(Ljava/lang/Class;)Lkotlin/u/KClass;
 
     move-result-object v2
 
@@ -481,9 +481,9 @@
 
     const-string v4, "getTimePickerView()Lcom/vk/poll/views/PollTimePickerView;"
 
-    invoke-direct {v1, v2, v3, v4}, Lkotlin/jvm/internal/PropertyReference1Impl;-><init>(Lkotlin/u/e;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-direct {v1, v2, v3, v4}, Lkotlin/jvm/internal/PropertyReference1Impl;-><init>(Lkotlin/u/KDeclarationContainer;Ljava/lang/String;Ljava/lang/String;)V
 
-    invoke-static {v1}, Lkotlin/jvm/internal/o;->a(Lkotlin/jvm/internal/PropertyReference1;)Lkotlin/u/l;
+    invoke-static {v1}, Lkotlin/jvm/internal/Reflection;->a(Lkotlin/jvm/internal/PropertyReference1;)Lkotlin/u/KProperty2;
 
     const/16 v2, 0xe
 
@@ -493,7 +493,7 @@
 
     const-class v2, Lcom/vk/poll/fragments/PollEditorScreen;
 
-    invoke-static {v2}, Lkotlin/jvm/internal/o;->a(Ljava/lang/Class;)Lkotlin/u/c;
+    invoke-static {v2}, Lkotlin/jvm/internal/Reflection;->a(Ljava/lang/Class;)Lkotlin/u/KClass;
 
     move-result-object v2
 
@@ -501,9 +501,9 @@
 
     const-string v4, "getToolbarContainer()Landroid/view/ViewGroup;"
 
-    invoke-direct {v1, v2, v3, v4}, Lkotlin/jvm/internal/PropertyReference1Impl;-><init>(Lkotlin/u/e;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-direct {v1, v2, v3, v4}, Lkotlin/jvm/internal/PropertyReference1Impl;-><init>(Lkotlin/u/KDeclarationContainer;Ljava/lang/String;Ljava/lang/String;)V
 
-    invoke-static {v1}, Lkotlin/jvm/internal/o;->a(Lkotlin/jvm/internal/PropertyReference1;)Lkotlin/u/l;
+    invoke-static {v1}, Lkotlin/jvm/internal/Reflection;->a(Lkotlin/jvm/internal/PropertyReference1;)Lkotlin/u/KProperty2;
 
     const/16 v2, 0xf
 
@@ -513,7 +513,7 @@
 
     const-class v2, Lcom/vk/poll/fragments/PollEditorScreen;
 
-    invoke-static {v2}, Lkotlin/jvm/internal/o;->a(Ljava/lang/Class;)Lkotlin/u/c;
+    invoke-static {v2}, Lkotlin/jvm/internal/Reflection;->a(Ljava/lang/Class;)Lkotlin/u/KClass;
 
     move-result-object v2
 
@@ -521,9 +521,9 @@
 
     const-string v4, "<v#0>"
 
-    invoke-direct {v1, v2, v3, v4}, Lkotlin/jvm/internal/PropertyReference0Impl;-><init>(Lkotlin/u/e;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-direct {v1, v2, v3, v4}, Lkotlin/jvm/internal/PropertyReference0Impl;-><init>(Lkotlin/u/KDeclarationContainer;Ljava/lang/String;Ljava/lang/String;)V
 
-    invoke-static {v1}, Lkotlin/jvm/internal/o;->a(Lkotlin/jvm/internal/PropertyReference0;)Lkotlin/u/k;
+    invoke-static {v1}, Lkotlin/jvm/internal/Reflection;->a(Lkotlin/jvm/internal/PropertyReference0;)Lkotlin/u/KProperty1;
 
     const/16 v2, 0x10
 
@@ -533,7 +533,7 @@
 
     const-class v2, Lcom/vk/poll/fragments/PollEditorScreen;
 
-    invoke-static {v2}, Lkotlin/jvm/internal/o;->a(Ljava/lang/Class;)Lkotlin/u/c;
+    invoke-static {v2}, Lkotlin/jvm/internal/Reflection;->a(Ljava/lang/Class;)Lkotlin/u/KClass;
 
     move-result-object v2
 
@@ -541,9 +541,9 @@
 
     const-string v4, "<v#1>"
 
-    invoke-direct {v1, v2, v3, v4}, Lkotlin/jvm/internal/PropertyReference0Impl;-><init>(Lkotlin/u/e;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-direct {v1, v2, v3, v4}, Lkotlin/jvm/internal/PropertyReference0Impl;-><init>(Lkotlin/u/KDeclarationContainer;Ljava/lang/String;Ljava/lang/String;)V
 
-    invoke-static {v1}, Lkotlin/jvm/internal/o;->a(Lkotlin/jvm/internal/PropertyReference0;)Lkotlin/u/k;
+    invoke-static {v1}, Lkotlin/jvm/internal/Reflection;->a(Lkotlin/jvm/internal/PropertyReference0;)Lkotlin/u/KProperty1;
 
     const/16 v2, 0x11
 
@@ -553,7 +553,7 @@
 
     const-class v2, Lcom/vk/poll/fragments/PollEditorScreen;
 
-    invoke-static {v2}, Lkotlin/jvm/internal/o;->a(Ljava/lang/Class;)Lkotlin/u/c;
+    invoke-static {v2}, Lkotlin/jvm/internal/Reflection;->a(Ljava/lang/Class;)Lkotlin/u/KClass;
 
     move-result-object v2
 
@@ -561,9 +561,9 @@
 
     const-string v4, "<v#2>"
 
-    invoke-direct {v1, v2, v3, v4}, Lkotlin/jvm/internal/PropertyReference0Impl;-><init>(Lkotlin/u/e;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-direct {v1, v2, v3, v4}, Lkotlin/jvm/internal/PropertyReference0Impl;-><init>(Lkotlin/u/KDeclarationContainer;Ljava/lang/String;Ljava/lang/String;)V
 
-    invoke-static {v1}, Lkotlin/jvm/internal/o;->a(Lkotlin/jvm/internal/PropertyReference0;)Lkotlin/u/k;
+    invoke-static {v1}, Lkotlin/jvm/internal/Reflection;->a(Lkotlin/jvm/internal/PropertyReference0;)Lkotlin/u/KProperty1;
 
     const/16 v2, 0x12
 
@@ -573,7 +573,7 @@
 
     const-class v2, Lcom/vk/poll/fragments/PollEditorScreen;
 
-    invoke-static {v2}, Lkotlin/jvm/internal/o;->a(Ljava/lang/Class;)Lkotlin/u/c;
+    invoke-static {v2}, Lkotlin/jvm/internal/Reflection;->a(Ljava/lang/Class;)Lkotlin/u/KClass;
 
     move-result-object v2
 
@@ -581,9 +581,9 @@
 
     const-string v4, "<v#3>"
 
-    invoke-direct {v1, v2, v3, v4}, Lkotlin/jvm/internal/PropertyReference0Impl;-><init>(Lkotlin/u/e;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-direct {v1, v2, v3, v4}, Lkotlin/jvm/internal/PropertyReference0Impl;-><init>(Lkotlin/u/KDeclarationContainer;Ljava/lang/String;Ljava/lang/String;)V
 
-    invoke-static {v1}, Lkotlin/jvm/internal/o;->a(Lkotlin/jvm/internal/PropertyReference0;)Lkotlin/u/k;
+    invoke-static {v1}, Lkotlin/jvm/internal/Reflection;->a(Lkotlin/jvm/internal/PropertyReference0;)Lkotlin/u/KProperty1;
 
     const/16 v2, 0x13
 
@@ -593,7 +593,7 @@
 
     const-class v2, Lcom/vk/poll/fragments/PollEditorScreen;
 
-    invoke-static {v2}, Lkotlin/jvm/internal/o;->a(Ljava/lang/Class;)Lkotlin/u/c;
+    invoke-static {v2}, Lkotlin/jvm/internal/Reflection;->a(Ljava/lang/Class;)Lkotlin/u/KClass;
 
     move-result-object v2
 
@@ -601,15 +601,15 @@
 
     const-string v4, "getCloseChangesDialog()Landroidx/appcompat/app/AlertDialog$Builder;"
 
-    invoke-direct {v1, v2, v3, v4}, Lkotlin/jvm/internal/PropertyReference1Impl;-><init>(Lkotlin/u/e;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-direct {v1, v2, v3, v4}, Lkotlin/jvm/internal/PropertyReference1Impl;-><init>(Lkotlin/u/KDeclarationContainer;Ljava/lang/String;Ljava/lang/String;)V
 
-    invoke-static {v1}, Lkotlin/jvm/internal/o;->a(Lkotlin/jvm/internal/PropertyReference1;)Lkotlin/u/l;
+    invoke-static {v1}, Lkotlin/jvm/internal/Reflection;->a(Lkotlin/jvm/internal/PropertyReference1;)Lkotlin/u/KProperty2;
 
     const/16 v2, 0x14
 
     aput-object v1, v0, v2
 
-    sput-object v0, Lcom/vk/poll/fragments/PollEditorScreen;->i0:[Lkotlin/u/j;
+    sput-object v0, Lcom/vk/poll/fragments/PollEditorScreen;->i0:[Lkotlin/u/KProperty5;
 
     return-void
 .end method
@@ -633,11 +633,11 @@
     iput-wide p6, p0, Lcom/vk/poll/fragments/PollEditorScreen;->h0:J
 
     .line 2
-    new-instance p1, Lio/reactivex/disposables/a;
+    new-instance p1, Lio/reactivex/disposables/CompositeDisposable;
 
-    invoke-direct {p1}, Lio/reactivex/disposables/a;-><init>()V
+    invoke-direct {p1}, Lio/reactivex/disposables/CompositeDisposable;-><init>()V
 
-    iput-object p1, p0, Lcom/vk/poll/fragments/PollEditorScreen;->a:Lio/reactivex/disposables/a;
+    iput-object p1, p0, Lcom/vk/poll/fragments/PollEditorScreen;->a:Lio/reactivex/disposables/CompositeDisposable;
 
     .line 3
     invoke-static {}, Lio/reactivex/subjects/PublishSubject;->p()Lio/reactivex/subjects/PublishSubject;
@@ -646,7 +646,7 @@
 
     const-string p2, "PublishSubject.create<Unit>()"
 
-    invoke-static {p1, p2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, p2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     iput-object p1, p0, Lcom/vk/poll/fragments/PollEditorScreen;->b:Lio/reactivex/subjects/PublishSubject;
 
@@ -663,7 +663,7 @@
 
     iget-boolean p4, p0, Lcom/vk/poll/fragments/PollEditorScreen;->g0:Z
 
-    invoke-direct {p1, p2, p3, p4}, Lcom/vk/poll/adapters/PollBackgroundAdapter;-><init>(Lkotlin/jvm/b/a;Lkotlin/jvm/b/a;Z)V
+    invoke-direct {p1, p2, p3, p4}, Lcom/vk/poll/adapters/PollBackgroundAdapter;-><init>(Lkotlin/jvm/b/Functions;Lkotlin/jvm/b/Functions;Z)V
 
     iput-object p1, p0, Lcom/vk/poll/fragments/PollEditorScreen;->c:Lcom/vk/poll/adapters/PollBackgroundAdapter;
 
@@ -691,176 +691,176 @@
 
     invoke-direct {p1, p0}, Lcom/vk/poll/fragments/PollEditorScreen$contentRootContainer$2;-><init>(Lcom/vk/poll/fragments/PollEditorScreen;)V
 
-    invoke-static {p1}, Lkotlin/g;->a(Lkotlin/jvm/b/a;)Lkotlin/e;
+    invoke-static {p1}, Lkotlin/g;->a(Lkotlin/jvm/b/Functions;)Lkotlin/Lazy2;
 
     move-result-object p1
 
-    iput-object p1, p0, Lcom/vk/poll/fragments/PollEditorScreen;->h:Lkotlin/e;
+    iput-object p1, p0, Lcom/vk/poll/fragments/PollEditorScreen;->h:Lkotlin/Lazy2;
 
     .line 9
     new-instance p1, Lcom/vk/poll/fragments/PollEditorScreen$scrollView$2;
 
     invoke-direct {p1, p0}, Lcom/vk/poll/fragments/PollEditorScreen$scrollView$2;-><init>(Lcom/vk/poll/fragments/PollEditorScreen;)V
 
-    invoke-static {p1}, Lkotlin/g;->a(Lkotlin/jvm/b/a;)Lkotlin/e;
+    invoke-static {p1}, Lkotlin/g;->a(Lkotlin/jvm/b/Functions;)Lkotlin/Lazy2;
 
     move-result-object p1
 
-    iput-object p1, p0, Lcom/vk/poll/fragments/PollEditorScreen;->B:Lkotlin/e;
+    iput-object p1, p0, Lcom/vk/poll/fragments/PollEditorScreen;->B:Lkotlin/Lazy2;
 
     .line 10
     new-instance p1, Lcom/vk/poll/fragments/PollEditorScreen$topShadowLayout$2;
 
     invoke-direct {p1, p0}, Lcom/vk/poll/fragments/PollEditorScreen$topShadowLayout$2;-><init>(Lcom/vk/poll/fragments/PollEditorScreen;)V
 
-    invoke-static {p1}, Lkotlin/g;->a(Lkotlin/jvm/b/a;)Lkotlin/e;
+    invoke-static {p1}, Lkotlin/g;->a(Lkotlin/jvm/b/Functions;)Lkotlin/Lazy2;
 
     move-result-object p1
 
-    iput-object p1, p0, Lcom/vk/poll/fragments/PollEditorScreen;->C:Lkotlin/e;
+    iput-object p1, p0, Lcom/vk/poll/fragments/PollEditorScreen;->C:Lkotlin/Lazy2;
 
     .line 11
     new-instance p1, Lcom/vk/poll/fragments/PollEditorScreen$questionSymbolsLeftText$2;
 
     invoke-direct {p1, p0}, Lcom/vk/poll/fragments/PollEditorScreen$questionSymbolsLeftText$2;-><init>(Lcom/vk/poll/fragments/PollEditorScreen;)V
 
-    invoke-static {p1}, Lkotlin/g;->a(Lkotlin/jvm/b/a;)Lkotlin/e;
+    invoke-static {p1}, Lkotlin/g;->a(Lkotlin/jvm/b/Functions;)Lkotlin/Lazy2;
 
     move-result-object p1
 
-    iput-object p1, p0, Lcom/vk/poll/fragments/PollEditorScreen;->D:Lkotlin/e;
+    iput-object p1, p0, Lcom/vk/poll/fragments/PollEditorScreen;->D:Lkotlin/Lazy2;
 
     .line 12
     new-instance p1, Lcom/vk/poll/fragments/PollEditorScreen$optionAddBtn$2;
 
     invoke-direct {p1, p0}, Lcom/vk/poll/fragments/PollEditorScreen$optionAddBtn$2;-><init>(Lcom/vk/poll/fragments/PollEditorScreen;)V
 
-    invoke-static {p1}, Lkotlin/g;->a(Lkotlin/jvm/b/a;)Lkotlin/e;
+    invoke-static {p1}, Lkotlin/g;->a(Lkotlin/jvm/b/Functions;)Lkotlin/Lazy2;
 
     move-result-object p1
 
-    iput-object p1, p0, Lcom/vk/poll/fragments/PollEditorScreen;->E:Lkotlin/e;
+    iput-object p1, p0, Lcom/vk/poll/fragments/PollEditorScreen;->E:Lkotlin/Lazy2;
 
     .line 13
     new-instance p1, Lcom/vk/poll/fragments/PollEditorScreen$createPollBtn$2;
 
     invoke-direct {p1, p0}, Lcom/vk/poll/fragments/PollEditorScreen$createPollBtn$2;-><init>(Lcom/vk/poll/fragments/PollEditorScreen;)V
 
-    invoke-static {p1}, Lkotlin/g;->a(Lkotlin/jvm/b/a;)Lkotlin/e;
+    invoke-static {p1}, Lkotlin/g;->a(Lkotlin/jvm/b/Functions;)Lkotlin/Lazy2;
 
     move-result-object p1
 
-    iput-object p1, p0, Lcom/vk/poll/fragments/PollEditorScreen;->F:Lkotlin/e;
+    iput-object p1, p0, Lcom/vk/poll/fragments/PollEditorScreen;->F:Lkotlin/Lazy2;
 
     .line 14
     new-instance p1, Lcom/vk/poll/fragments/PollEditorScreen$settingAnonymousView$2;
 
     invoke-direct {p1, p0}, Lcom/vk/poll/fragments/PollEditorScreen$settingAnonymousView$2;-><init>(Lcom/vk/poll/fragments/PollEditorScreen;)V
 
-    invoke-static {p1}, Lkotlin/g;->a(Lkotlin/jvm/b/a;)Lkotlin/e;
+    invoke-static {p1}, Lkotlin/g;->a(Lkotlin/jvm/b/Functions;)Lkotlin/Lazy2;
 
     move-result-object p1
 
-    iput-object p1, p0, Lcom/vk/poll/fragments/PollEditorScreen;->G:Lkotlin/e;
+    iput-object p1, p0, Lcom/vk/poll/fragments/PollEditorScreen;->G:Lkotlin/Lazy2;
 
     .line 15
     new-instance p1, Lcom/vk/poll/fragments/PollEditorScreen$settingMultiVariantsView$2;
 
     invoke-direct {p1, p0}, Lcom/vk/poll/fragments/PollEditorScreen$settingMultiVariantsView$2;-><init>(Lcom/vk/poll/fragments/PollEditorScreen;)V
 
-    invoke-static {p1}, Lkotlin/g;->a(Lkotlin/jvm/b/a;)Lkotlin/e;
+    invoke-static {p1}, Lkotlin/g;->a(Lkotlin/jvm/b/Functions;)Lkotlin/Lazy2;
 
     move-result-object p1
 
-    iput-object p1, p0, Lcom/vk/poll/fragments/PollEditorScreen;->H:Lkotlin/e;
+    iput-object p1, p0, Lcom/vk/poll/fragments/PollEditorScreen;->H:Lkotlin/Lazy2;
 
     .line 16
     new-instance p1, Lcom/vk/poll/fragments/PollEditorScreen$settingLimitView$2;
 
     invoke-direct {p1, p0}, Lcom/vk/poll/fragments/PollEditorScreen$settingLimitView$2;-><init>(Lcom/vk/poll/fragments/PollEditorScreen;)V
 
-    invoke-static {p1}, Lkotlin/g;->a(Lkotlin/jvm/b/a;)Lkotlin/e;
+    invoke-static {p1}, Lkotlin/g;->a(Lkotlin/jvm/b/Functions;)Lkotlin/Lazy2;
 
     move-result-object p1
 
-    iput-object p1, p0, Lcom/vk/poll/fragments/PollEditorScreen;->I:Lkotlin/e;
+    iput-object p1, p0, Lcom/vk/poll/fragments/PollEditorScreen;->I:Lkotlin/Lazy2;
 
     .line 17
     new-instance p1, Lcom/vk/poll/fragments/PollEditorScreen$backgroundRecyclerView$2;
 
     invoke-direct {p1, p0}, Lcom/vk/poll/fragments/PollEditorScreen$backgroundRecyclerView$2;-><init>(Lcom/vk/poll/fragments/PollEditorScreen;)V
 
-    invoke-static {p1}, Lkotlin/g;->a(Lkotlin/jvm/b/a;)Lkotlin/e;
+    invoke-static {p1}, Lkotlin/g;->a(Lkotlin/jvm/b/Functions;)Lkotlin/Lazy2;
 
     move-result-object p1
 
-    iput-object p1, p0, Lcom/vk/poll/fragments/PollEditorScreen;->J:Lkotlin/e;
+    iput-object p1, p0, Lcom/vk/poll/fragments/PollEditorScreen;->J:Lkotlin/Lazy2;
 
     .line 18
     new-instance p1, Lcom/vk/poll/fragments/PollEditorScreen$backgroundDescriptionView$2;
 
     invoke-direct {p1, p0}, Lcom/vk/poll/fragments/PollEditorScreen$backgroundDescriptionView$2;-><init>(Lcom/vk/poll/fragments/PollEditorScreen;)V
 
-    invoke-static {p1}, Lkotlin/g;->a(Lkotlin/jvm/b/a;)Lkotlin/e;
+    invoke-static {p1}, Lkotlin/g;->a(Lkotlin/jvm/b/Functions;)Lkotlin/Lazy2;
 
     move-result-object p1
 
-    iput-object p1, p0, Lcom/vk/poll/fragments/PollEditorScreen;->K:Lkotlin/e;
+    iput-object p1, p0, Lcom/vk/poll/fragments/PollEditorScreen;->K:Lkotlin/Lazy2;
 
     .line 19
     new-instance p1, Lcom/vk/poll/fragments/PollEditorScreen$optionDescriptionView$2;
 
     invoke-direct {p1, p0}, Lcom/vk/poll/fragments/PollEditorScreen$optionDescriptionView$2;-><init>(Lcom/vk/poll/fragments/PollEditorScreen;)V
 
-    invoke-static {p1}, Lkotlin/g;->a(Lkotlin/jvm/b/a;)Lkotlin/e;
+    invoke-static {p1}, Lkotlin/g;->a(Lkotlin/jvm/b/Functions;)Lkotlin/Lazy2;
 
     move-result-object p1
 
-    iput-object p1, p0, Lcom/vk/poll/fragments/PollEditorScreen;->L:Lkotlin/e;
+    iput-object p1, p0, Lcom/vk/poll/fragments/PollEditorScreen;->L:Lkotlin/Lazy2;
 
     .line 20
     new-instance p1, Lcom/vk/poll/fragments/PollEditorScreen$questionView$2;
 
     invoke-direct {p1, p0}, Lcom/vk/poll/fragments/PollEditorScreen$questionView$2;-><init>(Lcom/vk/poll/fragments/PollEditorScreen;)V
 
-    invoke-static {p1}, Lkotlin/g;->a(Lkotlin/jvm/b/a;)Lkotlin/e;
+    invoke-static {p1}, Lkotlin/g;->a(Lkotlin/jvm/b/Functions;)Lkotlin/Lazy2;
 
     move-result-object p1
 
-    iput-object p1, p0, Lcom/vk/poll/fragments/PollEditorScreen;->M:Lkotlin/e;
+    iput-object p1, p0, Lcom/vk/poll/fragments/PollEditorScreen;->M:Lkotlin/Lazy2;
 
     .line 21
     new-instance p1, Lcom/vk/poll/fragments/PollEditorScreen$optionContainer$2;
 
     invoke-direct {p1, p0}, Lcom/vk/poll/fragments/PollEditorScreen$optionContainer$2;-><init>(Lcom/vk/poll/fragments/PollEditorScreen;)V
 
-    invoke-static {p1}, Lkotlin/g;->a(Lkotlin/jvm/b/a;)Lkotlin/e;
+    invoke-static {p1}, Lkotlin/g;->a(Lkotlin/jvm/b/Functions;)Lkotlin/Lazy2;
 
     move-result-object p1
 
-    iput-object p1, p0, Lcom/vk/poll/fragments/PollEditorScreen;->N:Lkotlin/e;
+    iput-object p1, p0, Lcom/vk/poll/fragments/PollEditorScreen;->N:Lkotlin/Lazy2;
 
     .line 22
     new-instance p1, Lcom/vk/poll/fragments/PollEditorScreen$timePickerView$2;
 
     invoke-direct {p1, p0}, Lcom/vk/poll/fragments/PollEditorScreen$timePickerView$2;-><init>(Lcom/vk/poll/fragments/PollEditorScreen;)V
 
-    invoke-static {p1}, Lkotlin/g;->a(Lkotlin/jvm/b/a;)Lkotlin/e;
+    invoke-static {p1}, Lkotlin/g;->a(Lkotlin/jvm/b/Functions;)Lkotlin/Lazy2;
 
     move-result-object p1
 
-    iput-object p1, p0, Lcom/vk/poll/fragments/PollEditorScreen;->O:Lkotlin/e;
+    iput-object p1, p0, Lcom/vk/poll/fragments/PollEditorScreen;->O:Lkotlin/Lazy2;
 
     .line 23
     new-instance p1, Lcom/vk/poll/fragments/PollEditorScreen$toolbarContainer$2;
 
     invoke-direct {p1, p0}, Lcom/vk/poll/fragments/PollEditorScreen$toolbarContainer$2;-><init>(Lcom/vk/poll/fragments/PollEditorScreen;)V
 
-    invoke-static {p1}, Lkotlin/g;->a(Lkotlin/jvm/b/a;)Lkotlin/e;
+    invoke-static {p1}, Lkotlin/g;->a(Lkotlin/jvm/b/Functions;)Lkotlin/Lazy2;
 
     move-result-object p1
 
-    iput-object p1, p0, Lcom/vk/poll/fragments/PollEditorScreen;->P:Lkotlin/e;
+    iput-object p1, p0, Lcom/vk/poll/fragments/PollEditorScreen;->P:Lkotlin/Lazy2;
 
     .line 24
     iget-object p1, p0, Lcom/vk/poll/fragments/PollEditorScreen;->e0:Lcom/vtosters/lite/attachments/PollAttachment;
@@ -903,11 +903,11 @@
 
     invoke-direct {p1, p0}, Lcom/vk/poll/fragments/PollEditorScreen$closeChangesDialog$2;-><init>(Lcom/vk/poll/fragments/PollEditorScreen;)V
 
-    invoke-static {p1}, Lkotlin/g;->a(Lkotlin/jvm/b/a;)Lkotlin/e;
+    invoke-static {p1}, Lkotlin/g;->a(Lkotlin/jvm/b/Functions;)Lkotlin/Lazy2;
 
     move-result-object p1
 
-    iput-object p1, p0, Lcom/vk/poll/fragments/PollEditorScreen;->a0:Lkotlin/e;
+    iput-object p1, p0, Lcom/vk/poll/fragments/PollEditorScreen;->a0:Lkotlin/Lazy2;
 
     .line 29
     new-instance p1, Lcom/vk/poll/fragments/PollEditorScreen$receiver$1;
@@ -919,7 +919,7 @@
     return-void
 .end method
 
-.method public synthetic constructor <init>(ILjava/lang/String;Lcom/vtosters/lite/attachments/PollAttachment;IZJILkotlin/jvm/internal/i;)V
+.method public synthetic constructor <init>(ILjava/lang/String;Lcom/vtosters/lite/attachments/PollAttachment;IZJILkotlin/jvm/internal/DefaultConstructorMarker;)V
     .locals 9
 
     and-int/lit8 v0, p8, 0x4
@@ -1017,7 +1017,7 @@
 
     const/4 v2, 0x0
 
-    invoke-static {v2, v1}, Lkotlin/t/e;->d(II)Lkotlin/t/d;
+    invoke-static {v2, v1}, Lkotlin/t/e;->d(II)Lkotlin/t/Ranges1;
 
     move-result-object v1
 
@@ -1036,9 +1036,9 @@
 
     move-object v3, v1
 
-    check-cast v3, Lkotlin/collections/a0;
+    check-cast v3, Lkotlin/collections/Iterators1;
 
-    invoke-virtual {v3}, Lkotlin/collections/a0;->a()I
+    invoke-virtual {v3}, Lkotlin/collections/Iterators1;->a()I
 
     move-result v3
 
@@ -1213,15 +1213,15 @@
 .method private final D()Landroid/widget/TextView;
     .locals 3
 
-    iget-object v0, p0, Lcom/vk/poll/fragments/PollEditorScreen;->D:Lkotlin/e;
+    iget-object v0, p0, Lcom/vk/poll/fragments/PollEditorScreen;->D:Lkotlin/Lazy2;
 
-    sget-object v1, Lcom/vk/poll/fragments/PollEditorScreen;->i0:[Lkotlin/u/j;
+    sget-object v1, Lcom/vk/poll/fragments/PollEditorScreen;->i0:[Lkotlin/u/KProperty5;
 
     const/4 v2, 0x3
 
     aget-object v1, v1, v2
 
-    invoke-interface {v0}, Lkotlin/e;->getValue()Ljava/lang/Object;
+    invoke-interface {v0}, Lkotlin/Lazy2;->getValue()Ljava/lang/Object;
 
     move-result-object v0
 
@@ -1233,15 +1233,15 @@
 .method private final E()Landroid/widget/EditText;
     .locals 3
 
-    iget-object v0, p0, Lcom/vk/poll/fragments/PollEditorScreen;->M:Lkotlin/e;
+    iget-object v0, p0, Lcom/vk/poll/fragments/PollEditorScreen;->M:Lkotlin/Lazy2;
 
-    sget-object v1, Lcom/vk/poll/fragments/PollEditorScreen;->i0:[Lkotlin/u/j;
+    sget-object v1, Lcom/vk/poll/fragments/PollEditorScreen;->i0:[Lkotlin/u/KProperty5;
 
     const/16 v2, 0xc
 
     aget-object v1, v1, v2
 
-    invoke-interface {v0}, Lkotlin/e;->getValue()Ljava/lang/Object;
+    invoke-interface {v0}, Lkotlin/Lazy2;->getValue()Ljava/lang/Object;
 
     move-result-object v0
 
@@ -1253,15 +1253,15 @@
 .method private final F()Landroidx/core/widget/NestedScrollView;
     .locals 3
 
-    iget-object v0, p0, Lcom/vk/poll/fragments/PollEditorScreen;->B:Lkotlin/e;
+    iget-object v0, p0, Lcom/vk/poll/fragments/PollEditorScreen;->B:Lkotlin/Lazy2;
 
-    sget-object v1, Lcom/vk/poll/fragments/PollEditorScreen;->i0:[Lkotlin/u/j;
+    sget-object v1, Lcom/vk/poll/fragments/PollEditorScreen;->i0:[Lkotlin/u/KProperty5;
 
     const/4 v2, 0x1
 
     aget-object v1, v1, v2
 
-    invoke-interface {v0}, Lkotlin/e;->getValue()Ljava/lang/Object;
+    invoke-interface {v0}, Lkotlin/Lazy2;->getValue()Ljava/lang/Object;
 
     move-result-object v0
 
@@ -1273,15 +1273,15 @@
 .method private final G()Lcom/vk/poll/views/PollSettingView;
     .locals 3
 
-    iget-object v0, p0, Lcom/vk/poll/fragments/PollEditorScreen;->G:Lkotlin/e;
+    iget-object v0, p0, Lcom/vk/poll/fragments/PollEditorScreen;->G:Lkotlin/Lazy2;
 
-    sget-object v1, Lcom/vk/poll/fragments/PollEditorScreen;->i0:[Lkotlin/u/j;
+    sget-object v1, Lcom/vk/poll/fragments/PollEditorScreen;->i0:[Lkotlin/u/KProperty5;
 
     const/4 v2, 0x6
 
     aget-object v1, v1, v2
 
-    invoke-interface {v0}, Lkotlin/e;->getValue()Ljava/lang/Object;
+    invoke-interface {v0}, Lkotlin/Lazy2;->getValue()Ljava/lang/Object;
 
     move-result-object v0
 
@@ -1293,15 +1293,15 @@
 .method private final H()Lcom/vk/poll/views/PollSettingView;
     .locals 3
 
-    iget-object v0, p0, Lcom/vk/poll/fragments/PollEditorScreen;->I:Lkotlin/e;
+    iget-object v0, p0, Lcom/vk/poll/fragments/PollEditorScreen;->I:Lkotlin/Lazy2;
 
-    sget-object v1, Lcom/vk/poll/fragments/PollEditorScreen;->i0:[Lkotlin/u/j;
+    sget-object v1, Lcom/vk/poll/fragments/PollEditorScreen;->i0:[Lkotlin/u/KProperty5;
 
     const/16 v2, 0x8
 
     aget-object v1, v1, v2
 
-    invoke-interface {v0}, Lkotlin/e;->getValue()Ljava/lang/Object;
+    invoke-interface {v0}, Lkotlin/Lazy2;->getValue()Ljava/lang/Object;
 
     move-result-object v0
 
@@ -1313,15 +1313,15 @@
 .method private final I()Lcom/vk/poll/views/PollSettingView;
     .locals 3
 
-    iget-object v0, p0, Lcom/vk/poll/fragments/PollEditorScreen;->H:Lkotlin/e;
+    iget-object v0, p0, Lcom/vk/poll/fragments/PollEditorScreen;->H:Lkotlin/Lazy2;
 
-    sget-object v1, Lcom/vk/poll/fragments/PollEditorScreen;->i0:[Lkotlin/u/j;
+    sget-object v1, Lcom/vk/poll/fragments/PollEditorScreen;->i0:[Lkotlin/u/KProperty5;
 
     const/4 v2, 0x7
 
     aget-object v1, v1, v2
 
-    invoke-interface {v0}, Lkotlin/e;->getValue()Ljava/lang/Object;
+    invoke-interface {v0}, Lkotlin/Lazy2;->getValue()Ljava/lang/Object;
 
     move-result-object v0
 
@@ -1333,15 +1333,15 @@
 .method private final J()Lcom/vk/attachpicker/widget/TopShadowLinearLayout;
     .locals 3
 
-    iget-object v0, p0, Lcom/vk/poll/fragments/PollEditorScreen;->C:Lkotlin/e;
+    iget-object v0, p0, Lcom/vk/poll/fragments/PollEditorScreen;->C:Lkotlin/Lazy2;
 
-    sget-object v1, Lcom/vk/poll/fragments/PollEditorScreen;->i0:[Lkotlin/u/j;
+    sget-object v1, Lcom/vk/poll/fragments/PollEditorScreen;->i0:[Lkotlin/u/KProperty5;
 
     const/4 v2, 0x2
 
     aget-object v1, v1, v2
 
-    invoke-interface {v0}, Lkotlin/e;->getValue()Ljava/lang/Object;
+    invoke-interface {v0}, Lkotlin/Lazy2;->getValue()Ljava/lang/Object;
 
     move-result-object v0
 
@@ -1394,11 +1394,11 @@
 
     invoke-direct {v2, v0, p0}, Lcom/vk/poll/fragments/PollEditorScreen$isPollChanged$$inlined$let$lambda$1;-><init>(Lcom/vk/dto/polls/Poll;Lcom/vk/poll/fragments/PollEditorScreen;)V
 
-    invoke-static {v2}, Lkotlin/g;->a(Lkotlin/jvm/b/a;)Lkotlin/e;
+    invoke-static {v2}, Lkotlin/g;->a(Lkotlin/jvm/b/Functions;)Lkotlin/Lazy2;
 
     move-result-object v2
 
-    sget-object v3, Lcom/vk/poll/fragments/PollEditorScreen;->i0:[Lkotlin/u/j;
+    sget-object v3, Lcom/vk/poll/fragments/PollEditorScreen;->i0:[Lkotlin/u/KProperty5;
 
     const/16 v4, 0x10
 
@@ -1409,11 +1409,11 @@
 
     invoke-direct {v3, v0, p0}, Lcom/vk/poll/fragments/PollEditorScreen$isPollChanged$$inlined$let$lambda$2;-><init>(Lcom/vk/dto/polls/Poll;Lcom/vk/poll/fragments/PollEditorScreen;)V
 
-    invoke-static {v3}, Lkotlin/g;->a(Lkotlin/jvm/b/a;)Lkotlin/e;
+    invoke-static {v3}, Lkotlin/g;->a(Lkotlin/jvm/b/Functions;)Lkotlin/Lazy2;
 
     move-result-object v3
 
-    sget-object v4, Lcom/vk/poll/fragments/PollEditorScreen;->i0:[Lkotlin/u/j;
+    sget-object v4, Lcom/vk/poll/fragments/PollEditorScreen;->i0:[Lkotlin/u/KProperty5;
 
     const/16 v5, 0x11
 
@@ -1424,11 +1424,11 @@
 
     invoke-direct {v4, v0, p0}, Lcom/vk/poll/fragments/PollEditorScreen$isPollChanged$$inlined$let$lambda$3;-><init>(Lcom/vk/dto/polls/Poll;Lcom/vk/poll/fragments/PollEditorScreen;)V
 
-    invoke-static {v4}, Lkotlin/g;->a(Lkotlin/jvm/b/a;)Lkotlin/e;
+    invoke-static {v4}, Lkotlin/g;->a(Lkotlin/jvm/b/Functions;)Lkotlin/Lazy2;
 
     move-result-object v0
 
-    sget-object v4, Lcom/vk/poll/fragments/PollEditorScreen;->i0:[Lkotlin/u/j;
+    sget-object v4, Lcom/vk/poll/fragments/PollEditorScreen;->i0:[Lkotlin/u/KProperty5;
 
     const/16 v5, 0x12
 
@@ -1439,18 +1439,18 @@
 
     invoke-direct {v4, p0}, Lcom/vk/poll/fragments/PollEditorScreen$isPollChanged$$inlined$let$lambda$4;-><init>(Lcom/vk/poll/fragments/PollEditorScreen;)V
 
-    invoke-static {v4}, Lkotlin/g;->a(Lkotlin/jvm/b/a;)Lkotlin/e;
+    invoke-static {v4}, Lkotlin/g;->a(Lkotlin/jvm/b/Functions;)Lkotlin/Lazy2;
 
     move-result-object v4
 
-    sget-object v5, Lcom/vk/poll/fragments/PollEditorScreen;->i0:[Lkotlin/u/j;
+    sget-object v5, Lcom/vk/poll/fragments/PollEditorScreen;->i0:[Lkotlin/u/KProperty5;
 
     const/16 v6, 0x13
 
     aget-object v5, v5, v6
 
     .line 6
-    invoke-interface {v0}, Lkotlin/e;->getValue()Ljava/lang/Object;
+    invoke-interface {v0}, Lkotlin/Lazy2;->getValue()Ljava/lang/Object;
 
     move-result-object v0
 
@@ -1462,7 +1462,7 @@
 
     if-nez v0, :cond_0
 
-    invoke-interface {v2}, Lkotlin/e;->getValue()Ljava/lang/Object;
+    invoke-interface {v2}, Lkotlin/Lazy2;->getValue()Ljava/lang/Object;
 
     move-result-object v0
 
@@ -1474,7 +1474,7 @@
 
     if-nez v0, :cond_0
 
-    invoke-interface {v3}, Lkotlin/e;->getValue()Ljava/lang/Object;
+    invoke-interface {v3}, Lkotlin/Lazy2;->getValue()Ljava/lang/Object;
 
     move-result-object v0
 
@@ -1486,7 +1486,7 @@
 
     if-nez v0, :cond_0
 
-    invoke-interface {v4}, Lkotlin/e;->getValue()Ljava/lang/Object;
+    invoke-interface {v4}, Lkotlin/Lazy2;->getValue()Ljava/lang/Object;
 
     move-result-object v0
 
@@ -1633,13 +1633,13 @@
     move-result-object v0
 
     .line 6
-    instance-of v3, v0, Lb/h/s/a/a;
+    instance-of v3, v0, Lb/h/s/a/PollCustomBackground;
 
     if-eqz v3, :cond_8
 
-    check-cast v0, Lb/h/s/a/a;
+    check-cast v0, Lb/h/s/a/PollCustomBackground;
 
-    invoke-virtual {v0}, Lb/h/s/a/a;->c()Lcom/vk/dto/polls/PhotoPoll;
+    invoke-virtual {v0}, Lb/h/s/a/PollCustomBackground;->c()Lcom/vk/dto/polls/PhotoPoll;
 
     move-result-object v0
 
@@ -1669,15 +1669,15 @@
     .locals 1
 
     .line 1
-    iget-object v0, p0, Lcom/vk/poll/fragments/PollEditorScreen;->S:Lkotlin/jvm/b/a;
+    iget-object v0, p0, Lcom/vk/poll/fragments/PollEditorScreen;->S:Lkotlin/jvm/b/Functions;
 
     if-eqz v0, :cond_0
 
-    invoke-interface {v0}, Lkotlin/jvm/b/a;->invoke()Ljava/lang/Object;
+    invoke-interface {v0}, Lkotlin/jvm/b/Functions;->invoke()Ljava/lang/Object;
 
     move-result-object v0
 
-    check-cast v0, Lkotlin/m;
+    check-cast v0, Lkotlin/Unit;
 
     :cond_0
     return-void
@@ -1844,7 +1844,7 @@
     .line 19
     iget-object v3, p0, Lcom/vk/poll/fragments/PollEditorScreen;->c:Lcom/vk/poll/adapters/PollBackgroundAdapter;
 
-    new-instance v14, Lb/h/s/a/a;
+    new-instance v14, Lb/h/s/a/PollCustomBackground;
 
     const/4 v5, 0x0
 
@@ -1864,9 +1864,9 @@
 
     move-object v4, v14
 
-    invoke-direct/range {v4 .. v13}, Lb/h/s/a/a;-><init>(Ljava/lang/Integer;Lcom/vk/dto/polls/PhotoPoll;IILandroid/graphics/Bitmap;Landroid/graphics/Bitmap;Ljava/lang/String;ILkotlin/jvm/internal/i;)V
+    invoke-direct/range {v4 .. v13}, Lb/h/s/a/PollCustomBackground;-><init>(Ljava/lang/Integer;Lcom/vk/dto/polls/PhotoPoll;IILandroid/graphics/Bitmap;Landroid/graphics/Bitmap;Ljava/lang/String;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
-    invoke-virtual {v3, v14}, Lcom/vk/poll/adapters/PollBackgroundAdapter;->a(Lb/h/s/a/a;)V
+    invoke-virtual {v3, v14}, Lcom/vk/poll/adapters/PollBackgroundAdapter;->a(Lb/h/s/a/PollCustomBackground;)V
 
     goto :goto_1
 
@@ -2023,7 +2023,7 @@
 
     const/4 v1, 0x0
 
-    invoke-static {v1, v0}, Lkotlin/t/e;->d(II)Lkotlin/t/d;
+    invoke-static {v1, v0}, Lkotlin/t/e;->d(II)Lkotlin/t/Ranges1;
 
     move-result-object v0
 
@@ -2042,9 +2042,9 @@
 
     move-object v2, v0
 
-    check-cast v2, Lkotlin/collections/a0;
+    check-cast v2, Lkotlin/collections/Iterators1;
 
-    invoke-virtual {v2}, Lkotlin/collections/a0;->a()I
+    invoke-virtual {v2}, Lkotlin/collections/Iterators1;->a()I
 
     move-result v2
 
@@ -2088,19 +2088,19 @@
 
     .line 171
     :try_start_0
-    invoke-static {v0}, Lcom/vk/core/util/y0;->c(I)I
+    invoke-static {v0}, Lcom/vk/core/util/ResUtils;->c(I)I
 
     move-result v0
 
     const v1, 0x7f07023c
 
     .line 172
-    invoke-static {v1}, Lcom/vk/core/util/y0;->c(I)I
+    invoke-static {v1}, Lcom/vk/core/util/ResUtils;->c(I)I
 
     move-result v1
 
     .line 173
-    invoke-static {p1, v0, v1}, Lcom/vk/core/util/m;->a(Landroid/graphics/Bitmap;II)Landroid/graphics/Bitmap;
+    invoke-static {p1, v0, v1}, Lcom/vk/core/util/BitmapUtils;->a(Landroid/graphics/Bitmap;II)Landroid/graphics/Bitmap;
 
     move-result-object p1
     :try_end_0
@@ -2140,14 +2140,14 @@
 
     const-string v0, "rootView.findViewById(id)"
 
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     return-object p1
 
     :cond_0
     const-string p1, "rootView"
 
-    invoke-static {p1}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {p1}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     const/4 p1, 0x0
 
@@ -2219,7 +2219,7 @@
 
     const-string v0, "textView.compoundDrawablesRelative"
 
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     const/4 v0, 0x0
 
@@ -2232,7 +2232,7 @@
     if-eqz p1, :cond_0
 
     .line 148
-    sget-object v0, Lcom/vk/core/util/i;->a:Landroid/content/Context;
+    sget-object v0, Lcom/vk/core/util/AppContextHolder;->a:Landroid/content/Context;
 
     invoke-static {v0, p2}, Landroidx/core/content/ContextCompat;->getColor(Landroid/content/Context;I)I
 
@@ -2343,21 +2343,21 @@
     invoke-direct {v0, v1}, Ljava/io/File;-><init>(Ljava/lang/String;)V
 
     .line 161
-    invoke-static {v0}, Lcom/vk/core/util/e0;->a(Ljava/io/File;)I
+    invoke-static {v0}, Lcom/vk/core/util/Exif;->a(Ljava/io/File;)I
 
     move-result v0
 
     .line 162
-    new-instance v1, Lcom/vtosters/lite/upload/l/n;
+    new-instance v1, Lcom/vtosters/lite/upload/l/PollPhotoUploadTask;
 
     iget v2, p0, Lcom/vk/poll/fragments/PollEditorScreen;->c0:I
 
-    invoke-direct {v1, p1, v2}, Lcom/vtosters/lite/upload/l/n;-><init>(Ljava/lang/String;I)V
+    invoke-direct {v1, p1, v2}, Lcom/vtosters/lite/upload/l/PollPhotoUploadTask;-><init>(Ljava/lang/String;I)V
 
     .line 163
-    new-instance v2, Lb/h/s/a/a;
+    new-instance v2, Lb/h/s/a/PollCustomBackground;
 
-    invoke-virtual {v1}, Lcom/vtosters/lite/upload/j;->m()I
+    invoke-virtual {v1}, Lcom/vtosters/lite/upload/UploadTask;->m()I
 
     move-result v3
 
@@ -2383,7 +2383,7 @@
 
     move-object v10, p1
 
-    invoke-direct/range {v3 .. v12}, Lb/h/s/a/a;-><init>(Ljava/lang/Integer;Lcom/vk/dto/polls/PhotoPoll;IILandroid/graphics/Bitmap;Landroid/graphics/Bitmap;Ljava/lang/String;ILkotlin/jvm/internal/i;)V
+    invoke-direct/range {v3 .. v12}, Lb/h/s/a/PollCustomBackground;-><init>(Ljava/lang/Integer;Lcom/vk/dto/polls/PhotoPoll;IILandroid/graphics/Bitmap;Landroid/graphics/Bitmap;Ljava/lang/String;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     .line 164
     :try_start_0
@@ -2391,7 +2391,7 @@
 
     move-result-object p1
 
-    invoke-static {p1}, Lb/h/g/m/d;->h(Landroid/net/Uri;)Ljava/lang/String;
+    invoke-static {p1}, Lb/h/g/m/FileUtils;->h(Landroid/net/Uri;)Ljava/lang/String;
 
     move-result-object p1
 
@@ -2399,29 +2399,29 @@
 
     move-result-object p1
 
-    invoke-virtual {v2, p1}, Lb/h/s/a/a;->b(Landroid/graphics/Bitmap;)V
+    invoke-virtual {v2, p1}, Lb/h/s/a/PollCustomBackground;->b(Landroid/graphics/Bitmap;)V
 
     if-eqz v0, :cond_0
 
     .line 165
-    invoke-virtual {v2}, Lb/h/s/a/a;->e()Landroid/graphics/Bitmap;
+    invoke-virtual {v2}, Lb/h/s/a/PollCustomBackground;->e()Landroid/graphics/Bitmap;
 
     move-result-object p1
 
     const/4 v3, 0x0
 
-    invoke-static {p1, v0, v3}, Lcom/vk/core/util/m;->a(Landroid/graphics/Bitmap;IZ)Landroid/graphics/Bitmap;
+    invoke-static {p1, v0, v3}, Lcom/vk/core/util/BitmapUtils;->a(Landroid/graphics/Bitmap;IZ)Landroid/graphics/Bitmap;
 
     move-result-object p1
 
-    invoke-virtual {v2, p1}, Lb/h/s/a/a;->b(Landroid/graphics/Bitmap;)V
+    invoke-virtual {v2, p1}, Lb/h/s/a/PollCustomBackground;->b(Landroid/graphics/Bitmap;)V
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
     .line 166
     :catch_0
     :cond_0
-    invoke-virtual {v2}, Lb/h/s/a/a;->e()Landroid/graphics/Bitmap;
+    invoke-virtual {v2}, Lb/h/s/a/PollCustomBackground;->e()Landroid/graphics/Bitmap;
 
     move-result-object p1
 
@@ -2429,12 +2429,12 @@
 
     move-result-object p1
 
-    invoke-virtual {v2, p1}, Lb/h/s/a/a;->a(Landroid/graphics/Bitmap;)V
+    invoke-virtual {v2, p1}, Lb/h/s/a/PollCustomBackground;->a(Landroid/graphics/Bitmap;)V
 
     .line 167
     iget-object p1, p0, Lcom/vk/poll/fragments/PollEditorScreen;->c:Lcom/vk/poll/adapters/PollBackgroundAdapter;
 
-    invoke-virtual {p1, v2}, Lcom/vk/poll/adapters/PollBackgroundAdapter;->a(Lb/h/s/a/a;)V
+    invoke-virtual {p1, v2}, Lcom/vk/poll/adapters/PollBackgroundAdapter;->a(Lb/h/s/a/PollCustomBackground;)V
 
     .line 168
     invoke-direct {p0}, Lcom/vk/poll/fragments/PollEditorScreen;->o()Lcom/vk/lists/RecyclerPaginatedView;
@@ -2457,7 +2457,7 @@
     invoke-virtual {p1, v0}, Landroidx/recyclerview/widget/RecyclerView;->scrollToPosition(I)V
 
     .line 170
-    invoke-static {v1}, Lcom/vtosters/lite/upload/Upload;->c(Lcom/vtosters/lite/upload/j;)I
+    invoke-static {v1}, Lcom/vtosters/lite/upload/Upload;->c(Lcom/vtosters/lite/upload/UploadTask;)I
 
     return-void
 .end method
@@ -2479,13 +2479,13 @@
     sget-object v1, Lcom/vk/poll/fragments/PollEditorScreen$errorHandler$2;->c:Lcom/vk/poll/fragments/PollEditorScreen$errorHandler$2;
 
     .line 152
-    invoke-static {p1, v0, v1}, Lcom/vk/api/base/c;->a(Lcom/vk/api/sdk/exceptions/VKApiExecutionException;Lkotlin/jvm/b/b;Lkotlin/jvm/b/b;)V
+    invoke-static {p1, v0, v1}, Lcom/vk/api/base/ApiExt;->a(Lcom/vk/api/sdk/exceptions/VKApiExecutionException;Lkotlin/jvm/b/Functions2;Lkotlin/jvm/b/Functions2;)V
 
     goto :goto_0
 
     .line 153
     :cond_0
-    invoke-static {p1}, Lcom/vk/api/base/j;->c(Ljava/lang/Throwable;)V
+    invoke-static {p1}, Lcom/vk/api/base/ThrowableExt;->c(Ljava/lang/Throwable;)V
 
     :goto_0
     return-void
@@ -2541,7 +2541,7 @@
     const-string v2, "animator"
 
     .line 156
-    invoke-static {v1, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     const/16 v2, 0xe1
 
@@ -2550,7 +2550,7 @@
     invoke-virtual {v1, v2, v3}, Landroid/animation/ValueAnimator;->setDuration(J)Landroid/animation/ValueAnimator;
 
     .line 157
-    sget-object v2, Lcom/vk/core/util/h;->b:Landroid/view/animation/DecelerateInterpolator;
+    sget-object v2, Lcom/vk/core/util/AnimationUtils;->b:Landroid/view/animation/DecelerateInterpolator;
 
     invoke-virtual {v1, v2}, Landroid/animation/ValueAnimator;->setInterpolator(Landroid/animation/TimeInterpolator;)V
 
@@ -2682,7 +2682,7 @@
 
     invoke-direct {p1, p0, v0}, Lcom/vk/poll/fragments/PollEditorScreen$addOptionItem$2;-><init>(Lcom/vk/poll/fragments/PollEditorScreen;Lcom/vk/poll/views/PollOptionEditView;)V
 
-    invoke-virtual {v0, p1}, Lcom/vk/poll/views/PollOptionEditView;->setRemoveClickListener(Lkotlin/jvm/b/a;)V
+    invoke-virtual {v0, p1}, Lcom/vk/poll/views/PollOptionEditView;->setRemoveClickListener(Lkotlin/jvm/b/Functions;)V
 
     .line 141
     new-instance p1, Lcom/vk/poll/fragments/PollEditorScreen$c;
@@ -2743,11 +2743,11 @@
     return-object p0
 .end method
 
-.method public static final synthetic f(Lcom/vk/poll/fragments/PollEditorScreen;)Lio/reactivex/disposables/a;
+.method public static final synthetic f(Lcom/vk/poll/fragments/PollEditorScreen;)Lio/reactivex/disposables/CompositeDisposable;
     .locals 0
 
     .line 1
-    iget-object p0, p0, Lcom/vk/poll/fragments/PollEditorScreen;->a:Lio/reactivex/disposables/a;
+    iget-object p0, p0, Lcom/vk/poll/fragments/PollEditorScreen;->a:Lio/reactivex/disposables/CompositeDisposable;
 
     return-object p0
 .end method
@@ -2811,12 +2811,12 @@
     .line 2
     iget-object v0, p0, Lcom/vk/poll/fragments/PollEditorScreen;->c:Lcom/vk/poll/adapters/PollBackgroundAdapter;
 
-    invoke-virtual {v0}, Lcom/vk/poll/adapters/PollBackgroundAdapter;->l()Lkotlin/sequences/j;
+    invoke-virtual {v0}, Lcom/vk/poll/adapters/PollBackgroundAdapter;->l()Lkotlin/sequences/Sequence;
 
     move-result-object v0
 
     .line 3
-    invoke-interface {v0}, Lkotlin/sequences/j;->iterator()Ljava/util/Iterator;
+    invoke-interface {v0}, Lkotlin/sequences/Sequence;->iterator()Ljava/util/Iterator;
 
     move-result-object v0
 
@@ -2919,14 +2919,14 @@
 
     .line 4
     :cond_0
-    instance-of v2, v0, Lb/h/s/a/a;
+    instance-of v2, v0, Lb/h/s/a/PollCustomBackground;
 
     if-eqz v2, :cond_2
 
     .line 5
-    check-cast v0, Lb/h/s/a/a;
+    check-cast v0, Lb/h/s/a/PollCustomBackground;
 
-    invoke-virtual {v0}, Lb/h/s/a/a;->c()Lcom/vk/dto/polls/PhotoPoll;
+    invoke-virtual {v0}, Lb/h/s/a/PollCustomBackground;->c()Lcom/vk/dto/polls/PhotoPoll;
 
     move-result-object v0
 
@@ -2979,15 +2979,15 @@
 .method private final n()Landroid/view/View;
     .locals 3
 
-    iget-object v0, p0, Lcom/vk/poll/fragments/PollEditorScreen;->K:Lkotlin/e;
+    iget-object v0, p0, Lcom/vk/poll/fragments/PollEditorScreen;->K:Lkotlin/Lazy2;
 
-    sget-object v1, Lcom/vk/poll/fragments/PollEditorScreen;->i0:[Lkotlin/u/j;
+    sget-object v1, Lcom/vk/poll/fragments/PollEditorScreen;->i0:[Lkotlin/u/KProperty5;
 
     const/16 v2, 0xa
 
     aget-object v1, v1, v2
 
-    invoke-interface {v0}, Lkotlin/e;->getValue()Ljava/lang/Object;
+    invoke-interface {v0}, Lkotlin/Lazy2;->getValue()Ljava/lang/Object;
 
     move-result-object v0
 
@@ -3008,15 +3008,15 @@
 .method private final o()Lcom/vk/lists/RecyclerPaginatedView;
     .locals 3
 
-    iget-object v0, p0, Lcom/vk/poll/fragments/PollEditorScreen;->J:Lkotlin/e;
+    iget-object v0, p0, Lcom/vk/poll/fragments/PollEditorScreen;->J:Lkotlin/Lazy2;
 
-    sget-object v1, Lcom/vk/poll/fragments/PollEditorScreen;->i0:[Lkotlin/u/j;
+    sget-object v1, Lcom/vk/poll/fragments/PollEditorScreen;->i0:[Lkotlin/u/KProperty5;
 
     const/16 v2, 0x9
 
     aget-object v1, v1, v2
 
-    invoke-interface {v0}, Lkotlin/e;->getValue()Ljava/lang/Object;
+    invoke-interface {v0}, Lkotlin/Lazy2;->getValue()Ljava/lang/Object;
 
     move-result-object v0
 
@@ -3039,15 +3039,15 @@
 .method private final p()Landroidx/appcompat/app/AlertDialog$Builder;
     .locals 3
 
-    iget-object v0, p0, Lcom/vk/poll/fragments/PollEditorScreen;->a0:Lkotlin/e;
+    iget-object v0, p0, Lcom/vk/poll/fragments/PollEditorScreen;->a0:Lkotlin/Lazy2;
 
-    sget-object v1, Lcom/vk/poll/fragments/PollEditorScreen;->i0:[Lkotlin/u/j;
+    sget-object v1, Lcom/vk/poll/fragments/PollEditorScreen;->i0:[Lkotlin/u/KProperty5;
 
     const/16 v2, 0x14
 
     aget-object v1, v1, v2
 
-    invoke-interface {v0}, Lkotlin/e;->getValue()Ljava/lang/Object;
+    invoke-interface {v0}, Lkotlin/Lazy2;->getValue()Ljava/lang/Object;
 
     move-result-object v0
 
@@ -3070,15 +3070,15 @@
 .method private final q()Landroid/view/ViewGroup;
     .locals 3
 
-    iget-object v0, p0, Lcom/vk/poll/fragments/PollEditorScreen;->h:Lkotlin/e;
+    iget-object v0, p0, Lcom/vk/poll/fragments/PollEditorScreen;->h:Lkotlin/Lazy2;
 
-    sget-object v1, Lcom/vk/poll/fragments/PollEditorScreen;->i0:[Lkotlin/u/j;
+    sget-object v1, Lcom/vk/poll/fragments/PollEditorScreen;->i0:[Lkotlin/u/KProperty5;
 
     const/4 v2, 0x0
 
     aget-object v1, v1, v2
 
-    invoke-interface {v0}, Lkotlin/e;->getValue()Ljava/lang/Object;
+    invoke-interface {v0}, Lkotlin/Lazy2;->getValue()Ljava/lang/Object;
 
     move-result-object v0
 
@@ -3112,7 +3112,7 @@
 
     const-string v1, "optionContainer.context"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     return-object v0
 .end method
@@ -3131,15 +3131,15 @@
 .method private final s()Landroid/widget/ImageView;
     .locals 3
 
-    iget-object v0, p0, Lcom/vk/poll/fragments/PollEditorScreen;->F:Lkotlin/e;
+    iget-object v0, p0, Lcom/vk/poll/fragments/PollEditorScreen;->F:Lkotlin/Lazy2;
 
-    sget-object v1, Lcom/vk/poll/fragments/PollEditorScreen;->i0:[Lkotlin/u/j;
+    sget-object v1, Lcom/vk/poll/fragments/PollEditorScreen;->i0:[Lkotlin/u/KProperty5;
 
     const/4 v2, 0x5
 
     aget-object v1, v1, v2
 
-    invoke-interface {v0}, Lkotlin/e;->getValue()Ljava/lang/Object;
+    invoke-interface {v0}, Lkotlin/Lazy2;->getValue()Ljava/lang/Object;
 
     move-result-object v0
 
@@ -3186,7 +3186,7 @@
 
     sget-object v3, Lcom/vk/poll/fragments/PollEditorScreen$getEditResult$1$oldOptions$1;->a:Lcom/vk/poll/fragments/PollEditorScreen$getEditResult$1$oldOptions$1;
 
-    invoke-static {v0, v3}, Lcom/vk/core/extensions/c;->b(Ljava/util/Collection;Lkotlin/jvm/b/b;)Ljava/util/Map;
+    invoke-static {v0, v3}, Lcom/vk/core/extensions/CollectionExt;->b(Ljava/util/Collection;Lkotlin/jvm/b/Functions2;)Ljava/util/Map;
 
     move-result-object v0
 
@@ -3260,7 +3260,7 @@
 
     move-result-object v6
 
-    invoke-static {v5, v6}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v5, v6}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v5
 
@@ -3495,7 +3495,7 @@
 
     move-result-object v4
 
-    instance-of v4, v4, Lb/h/s/a/a;
+    instance-of v4, v4, Lb/h/s/a/PollCustomBackground;
 
     if-nez v1, :cond_8
 
@@ -3513,15 +3513,15 @@
 .method private final w()Landroid/widget/TextView;
     .locals 3
 
-    iget-object v0, p0, Lcom/vk/poll/fragments/PollEditorScreen;->E:Lkotlin/e;
+    iget-object v0, p0, Lcom/vk/poll/fragments/PollEditorScreen;->E:Lkotlin/Lazy2;
 
-    sget-object v1, Lcom/vk/poll/fragments/PollEditorScreen;->i0:[Lkotlin/u/j;
+    sget-object v1, Lcom/vk/poll/fragments/PollEditorScreen;->i0:[Lkotlin/u/KProperty5;
 
     const/4 v2, 0x4
 
     aget-object v1, v1, v2
 
-    invoke-interface {v0}, Lkotlin/e;->getValue()Ljava/lang/Object;
+    invoke-interface {v0}, Lkotlin/Lazy2;->getValue()Ljava/lang/Object;
 
     move-result-object v0
 
@@ -3533,15 +3533,15 @@
 .method private final x()Landroid/view/ViewGroup;
     .locals 3
 
-    iget-object v0, p0, Lcom/vk/poll/fragments/PollEditorScreen;->N:Lkotlin/e;
+    iget-object v0, p0, Lcom/vk/poll/fragments/PollEditorScreen;->N:Lkotlin/Lazy2;
 
-    sget-object v1, Lcom/vk/poll/fragments/PollEditorScreen;->i0:[Lkotlin/u/j;
+    sget-object v1, Lcom/vk/poll/fragments/PollEditorScreen;->i0:[Lkotlin/u/KProperty5;
 
     const/16 v2, 0xd
 
     aget-object v1, v1, v2
 
-    invoke-interface {v0}, Lkotlin/e;->getValue()Ljava/lang/Object;
+    invoke-interface {v0}, Lkotlin/Lazy2;->getValue()Ljava/lang/Object;
 
     move-result-object v0
 
@@ -3553,15 +3553,15 @@
 .method private final y()Landroid/view/View;
     .locals 3
 
-    iget-object v0, p0, Lcom/vk/poll/fragments/PollEditorScreen;->L:Lkotlin/e;
+    iget-object v0, p0, Lcom/vk/poll/fragments/PollEditorScreen;->L:Lkotlin/Lazy2;
 
-    sget-object v1, Lcom/vk/poll/fragments/PollEditorScreen;->i0:[Lkotlin/u/j;
+    sget-object v1, Lcom/vk/poll/fragments/PollEditorScreen;->i0:[Lkotlin/u/KProperty5;
 
     const/16 v2, 0xb
 
     aget-object v1, v1, v2
 
-    invoke-interface {v0}, Lkotlin/e;->getValue()Ljava/lang/Object;
+    invoke-interface {v0}, Lkotlin/Lazy2;->getValue()Ljava/lang/Object;
 
     move-result-object v0
 
@@ -3609,7 +3609,7 @@
 
     const-string v1, "inflater.inflate(R.layou\u2026r_view, container, false)"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     iput-object v0, v6, Lcom/vk/poll/fragments/PollEditorScreen;->g:Landroid/view/View;
 
@@ -3659,7 +3659,7 @@
 
     move-result-object v0
 
-    sget-object v8, Lcom/vk/core/drawable/l;->c:Lcom/vk/core/drawable/l;
+    sget-object v8, Lcom/vk/core/drawable/VkUiDrawableHelper;->c:Lcom/vk/core/drawable/VkUiDrawableHelper;
 
     iget-object v1, v6, Lcom/vk/poll/fragments/PollEditorScreen;->g:Landroid/view/View;
 
@@ -3675,7 +3675,7 @@
 
     const-string v1, "rootView.context"
 
-    invoke-static {v9, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v9, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     const/4 v10, 0x0
 
@@ -3689,7 +3689,7 @@
 
     const/4 v15, 0x0
 
-    invoke-static/range {v8 .. v15}, Lcom/vk/core/drawable/l;->a(Lcom/vk/core/drawable/l;Landroid/content/Context;IIIIILjava/lang/Object;)Landroid/graphics/drawable/Drawable;
+    invoke-static/range {v8 .. v15}, Lcom/vk/core/drawable/VkUiDrawableHelper;->a(Lcom/vk/core/drawable/VkUiDrawableHelper;Landroid/content/Context;IIIIILjava/lang/Object;)Landroid/graphics/drawable/Drawable;
 
     move-result-object v1
 
@@ -3796,9 +3796,9 @@
 
     move-result-object v2
 
-    new-instance v3, Lcom/vk/lists/l0/c;
+    new-instance v3, Lcom/vk/lists/l0/SpacesItemDecoration;
 
-    invoke-direct {v3, v1, v8}, Lcom/vk/lists/l0/c;-><init>(IZ)V
+    invoke-direct {v3, v1, v8}, Lcom/vk/lists/l0/SpacesItemDecoration;-><init>(IZ)V
 
     invoke-virtual {v2, v3}, Landroidx/recyclerview/widget/RecyclerView;->addItemDecoration(Landroidx/recyclerview/widget/RecyclerView$ItemDecoration;)V
 
@@ -3809,7 +3809,7 @@
 
     const-string v3, "rv.recyclerView"
 
-    invoke-static {v2, v3}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v2, v3}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {v2, v7}, Landroidx/recyclerview/widget/RecyclerView;->setClipToPadding(Z)V
 
@@ -3818,7 +3818,7 @@
 
     move-result-object v2
 
-    invoke-static {v2, v3}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v2, v3}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {v2, v7}, Landroid/view/ViewGroup;->setFocusable(Z)V
 
@@ -3864,19 +3864,19 @@
     .line 38
     iget-object v1, v6, Lcom/vk/poll/fragments/PollEditorScreen;->X:Lcom/vk/poll/fragments/PollEditorScreen$dataProvider$1;
 
-    invoke-static {v1}, Lcom/vk/lists/t;->a(Lcom/vk/lists/t$o;)Lcom/vk/lists/t$k;
+    invoke-static {v1}, Lcom/vk/lists/PaginationHelper;->a(Lcom/vk/lists/PaginationHelper$o;)Lcom/vk/lists/PaginationHelper$k;
 
     move-result-object v1
 
     .line 39
-    invoke-virtual {v1, v7}, Lcom/vk/lists/t$k;->d(I)Lcom/vk/lists/t$k;
+    invoke-virtual {v1, v7}, Lcom/vk/lists/PaginationHelper$k;->d(I)Lcom/vk/lists/PaginationHelper$k;
 
     const-string v2, "PaginationHelper\n       \u2026      .setPreloadCount(0)"
 
-    invoke-static {v1, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 40
-    invoke-static {v1, v0}, Lcom/vk/lists/u;->b(Lcom/vk/lists/t$k;Lcom/vk/lists/RecyclerPaginatedView;)Lcom/vk/lists/t;
+    invoke-static {v1, v0}, Lcom/vk/lists/PaginationHelperExt;->b(Lcom/vk/lists/PaginationHelper$k;Lcom/vk/lists/RecyclerPaginatedView;)Lcom/vk/lists/PaginationHelper;
 
     .line 41
     iget-object v0, v6, Lcom/vk/poll/fragments/PollEditorScreen;->d:Ljava/util/List;
@@ -3996,7 +3996,7 @@
 
     invoke-direct {v1, v6}, Lcom/vk/poll/fragments/PollEditorScreen$createView$2;-><init>(Lcom/vk/poll/fragments/PollEditorScreen;)V
 
-    invoke-virtual {v0, v1}, Lcom/vk/poll/views/PollSettingView;->setOnCheckedChangeListener(Lkotlin/jvm/b/b;)V
+    invoke-virtual {v0, v1}, Lcom/vk/poll/views/PollSettingView;->setOnCheckedChangeListener(Lkotlin/jvm/b/Functions2;)V
 
     .line 57
     iget-object v0, v6, Lcom/vk/poll/fragments/PollEditorScreen;->b:Lio/reactivex/subjects/PublishSubject;
@@ -4005,16 +4005,16 @@
 
     sget-object v3, Ljava/util/concurrent/TimeUnit;->MILLISECONDS:Ljava/util/concurrent/TimeUnit;
 
-    invoke-virtual {v0, v1, v2, v3}, Lc/a/m;->f(JLjava/util/concurrent/TimeUnit;)Lc/a/m;
+    invoke-virtual {v0, v1, v2, v3}, Lio/reactivex/Observable;->f(JLjava/util/concurrent/TimeUnit;)Lio/reactivex/Observable;
 
     move-result-object v0
 
     .line 58
-    invoke-static {}, Lc/a/y/c/a;->a()Lc/a/s;
+    invoke-static {}, Lio/reactivex/schedulers/AndroidSchedulers;->a()Lio/reactivex/Scheduler;
 
     move-result-object v1
 
-    invoke-virtual {v0, v1}, Lc/a/m;->a(Lc/a/s;)Lc/a/m;
+    invoke-virtual {v0, v1}, Lio/reactivex/Observable;->a(Lio/reactivex/Scheduler;)Lio/reactivex/Observable;
 
     move-result-object v0
 
@@ -4024,19 +4024,19 @@
     invoke-direct {v1, v6}, Lcom/vk/poll/fragments/PollEditorScreen$f;-><init>(Lcom/vk/poll/fragments/PollEditorScreen;)V
 
     .line 60
-    invoke-static {}, Lcom/vk/core/util/z0;->b()Lc/a/z/g;
+    invoke-static {}, Lcom/vk/core/util/RxUtil;->b()Lio/reactivex/functions/Consumer;
 
     move-result-object v2
 
     .line 61
-    invoke-virtual {v0, v1, v2}, Lc/a/m;->a(Lc/a/z/g;Lc/a/z/g;)Lio/reactivex/disposables/b;
+    invoke-virtual {v0, v1, v2}, Lio/reactivex/Observable;->a(Lio/reactivex/functions/Consumer;Lio/reactivex/functions/Consumer;)Lio/reactivex/disposables/Disposable;
 
     move-result-object v0
 
     .line 62
-    iget-object v1, v6, Lcom/vk/poll/fragments/PollEditorScreen;->a:Lio/reactivex/disposables/a;
+    iget-object v1, v6, Lcom/vk/poll/fragments/PollEditorScreen;->a:Lio/reactivex/disposables/CompositeDisposable;
 
-    invoke-virtual {v1, v0}, Lio/reactivex/disposables/a;->b(Lio/reactivex/disposables/b;)Z
+    invoke-virtual {v1, v0}, Lio/reactivex/disposables/CompositeDisposable;->b(Lio/reactivex/disposables/Disposable;)Z
 
     .line 63
     new-instance v0, Lkotlin/jvm/internal/Ref$BooleanRef;
@@ -4120,7 +4120,7 @@
 
     move-result-object v0
 
-    invoke-static {v0}, Lcom/vk/core/util/l0;->b(Landroid/view/View;)V
+    invoke-static {v0}, Lcom/vk/core/util/KeyboardUtils;->b(Landroid/view/View;)V
 
     .line 73
     :cond_4
@@ -4131,30 +4131,30 @@
     return-object v0
 
     :cond_5
-    invoke-static/range {v17 .. v17}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static/range {v17 .. v17}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v16
 
     .line 74
     :cond_6
-    invoke-static/range {v17 .. v17}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static/range {v17 .. v17}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v16
 .end method
 
-.method public final a()Lkotlin/jvm/b/a;
+.method public final a()Lkotlin/jvm/b/Functions;
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "()",
-            "Lkotlin/jvm/b/a<",
-            "Lkotlin/m;",
+            "Lkotlin/jvm/b/Functions<",
+            "Lkotlin/Unit;",
             ">;"
         }
     .end annotation
 
     .line 7
-    iget-object v0, p0, Lcom/vk/poll/fragments/PollEditorScreen;->R:Lkotlin/jvm/b/a;
+    iget-object v0, p0, Lcom/vk/poll/fragments/PollEditorScreen;->R:Lkotlin/jvm/b/Functions;
 
     return-object v0
 .end method
@@ -4228,7 +4228,7 @@
     :goto_2
     const-string p3, "imagesResult.getParcelab\u2026ULT_FILES) ?: ArrayList()"
 
-    invoke-static {p2, p3}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p2, p3}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     const-string p3, "result_video_flags"
 
@@ -4272,10 +4272,10 @@
 
     move-object v3, v2
 
-    check-cast v3, Lkotlin/collections/x;
+    check-cast v3, Lkotlin/collections/IndexedValue;
 
     .line 120
-    invoke-virtual {v3}, Lkotlin/collections/x;->d()Ljava/lang/Object;
+    invoke-virtual {v3}, Lkotlin/collections/IndexedValue;->d()Ljava/lang/Object;
 
     move-result-object v3
 
@@ -4320,10 +4320,10 @@
     move-result-object v2
 
     .line 123
-    check-cast v2, Lkotlin/collections/x;
+    check-cast v2, Lkotlin/collections/IndexedValue;
 
     .line 124
-    invoke-virtual {v2}, Lkotlin/collections/x;->c()I
+    invoke-virtual {v2}, Lkotlin/collections/IndexedValue;->c()I
 
     move-result v2
 
@@ -4404,7 +4404,7 @@
     const-string p2, "it"
 
     .line 128
-    invoke-static {p1, p2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, p2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-direct {p0, p1}, Lcom/vk/poll/fragments/PollEditorScreen;->a(Ljava/lang/String;)V
 
@@ -4412,19 +4412,19 @@
     return-void
 .end method
 
-.method public final a(Lc/a/r;)V
+.method public final a(Lio/reactivex/Observer;)V
     .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lc/a/r<",
+            "Lio/reactivex/Observer<",
             "Ljava/lang/Boolean;",
             ">;)V"
         }
     .end annotation
 
     .line 10
-    iput-object p1, p0, Lcom/vk/poll/fragments/PollEditorScreen;->V:Lc/a/r;
+    iput-object p1, p0, Lcom/vk/poll/fragments/PollEditorScreen;->V:Lio/reactivex/Observer;
 
     return-void
 .end method
@@ -4605,7 +4605,7 @@
     move-result-object v6
 
     .line 88
-    new-instance v18, Lb/h/c/v/d;
+    new-instance v18, Lcom/vk/api/polls/PollsEditExec;
 
     invoke-virtual {v8}, Lcom/vtosters/lite/attachments/PollAttachment;->b()I
 
@@ -4704,7 +4704,7 @@
     move-object/from16 v17, v20
 
     .line 97
-    invoke-direct/range {v4 .. v17}, Lb/h/c/v/d;-><init>(IILjava/lang/String;Ljava/util/List;Ljava/util/List;Ljava/util/Map;ZZZLjava/lang/Integer;Ljava/lang/Integer;Ljava/lang/Long;Ljava/lang/String;)V
+    invoke-direct/range {v4 .. v17}, Lcom/vk/api/polls/PollsEditExec;-><init>(IILjava/lang/String;Ljava/util/List;Ljava/util/List;Ljava/util/Map;ZZZLjava/lang/Integer;Ljava/lang/Integer;Ljava/lang/Long;Ljava/lang/String;)V
 
     move-object v14, v1
 
@@ -4772,7 +4772,7 @@
     iget-object v13, v0, Lcom/vk/poll/fragments/PollEditorScreen;->d0:Ljava/lang/String;
 
     .line 106
-    new-instance v15, Lcom/vtosters/lite/api/n/a;
+    new-instance v15, Lcom/vtosters/lite/api/n/PollsCreate;
 
     move-object v4, v15
 
@@ -4788,13 +4788,13 @@
 
     move-object/from16 v12, v16
 
-    invoke-direct/range {v4 .. v13}, Lcom/vtosters/lite/api/n/a;-><init>(Ljava/lang/String;Ljava/util/List;IZZLjava/lang/Integer;Ljava/lang/Integer;Ljava/lang/Long;Ljava/lang/String;)V
+    invoke-direct/range {v4 .. v13}, Lcom/vtosters/lite/api/n/PollsCreate;-><init>(Ljava/lang/String;Ljava/util/List;IZZLjava/lang/Integer;Ljava/lang/Integer;Ljava/lang/Long;Ljava/lang/String;)V
 
     :goto_7
     const/4 v1, 0x1
 
     .line 107
-    invoke-static {v15, v14, v1, v14}, Lcom/vk/api/base/d;->d(Lcom/vk/api/base/d;Lcom/vk/api/base/e;ILjava/lang/Object;)Lc/a/m;
+    invoke-static {v15, v14, v1, v14}, Lcom/vk/api/base/ApiRequest;->d(Lcom/vk/api/base/ApiRequest;Lcom/vk/api/base/ApiThreadHolder;ILjava/lang/Object;)Lio/reactivex/Observable;
 
     move-result-object v2
 
@@ -4811,7 +4811,7 @@
     const/4 v10, 0x0
 
     .line 108
-    invoke-static/range {v2 .. v10}, Lcom/vk/core/extensions/RxExtKt;->a(Lc/a/m;Landroid/content/Context;JIZZILjava/lang/Object;)Lc/a/m;
+    invoke-static/range {v2 .. v10}, Lcom/vk/core/extensions/RxExtKt;->a(Lio/reactivex/Observable;Landroid/content/Context;JIZZILjava/lang/Object;)Lio/reactivex/Observable;
 
     move-result-object v2
 
@@ -4827,120 +4827,120 @@
 
     invoke-direct {v4, v0}, Lcom/vk/poll/fragments/PollEditorScreen$createPoll$2;-><init>(Lcom/vk/poll/fragments/PollEditorScreen;)V
 
-    new-instance v5, Lcom/vk/poll/fragments/a;
+    new-instance v5, Lcom/vk/poll/fragments/PollEditorFragment1;
 
-    invoke-direct {v5, v4}, Lcom/vk/poll/fragments/a;-><init>(Lkotlin/jvm/b/b;)V
+    invoke-direct {v5, v4}, Lcom/vk/poll/fragments/PollEditorFragment1;-><init>(Lkotlin/jvm/b/Functions2;)V
 
     .line 111
-    invoke-virtual {v2, v3, v5}, Lc/a/m;->a(Lc/a/z/g;Lc/a/z/g;)Lio/reactivex/disposables/b;
+    invoke-virtual {v2, v3, v5}, Lio/reactivex/Observable;->a(Lio/reactivex/functions/Consumer;Lio/reactivex/functions/Consumer;)Lio/reactivex/disposables/Disposable;
 
     move-result-object v2
 
     .line 112
-    iget-object v3, v0, Lcom/vk/poll/fragments/PollEditorScreen;->a:Lio/reactivex/disposables/a;
+    iget-object v3, v0, Lcom/vk/poll/fragments/PollEditorScreen;->a:Lio/reactivex/disposables/CompositeDisposable;
 
-    new-array v1, v1, [Lio/reactivex/disposables/b;
+    new-array v1, v1, [Lio/reactivex/disposables/Disposable;
 
     const/4 v4, 0x0
 
     aput-object v2, v1, v4
 
-    invoke-virtual {v3, v1}, Lio/reactivex/disposables/a;->a([Lio/reactivex/disposables/b;)Z
+    invoke-virtual {v3, v1}, Lio/reactivex/disposables/CompositeDisposable;->a([Lio/reactivex/disposables/Disposable;)Z
 
     :cond_a
     :goto_8
     return-void
 .end method
 
-.method public final a(Lkotlin/jvm/b/a;)V
+.method public final a(Lkotlin/jvm/b/Functions;)V
     .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lkotlin/jvm/b/a<",
-            "Lkotlin/m;",
+            "Lkotlin/jvm/b/Functions<",
+            "Lkotlin/Unit;",
             ">;)V"
         }
     .end annotation
 
     .line 6
-    iput-object p1, p0, Lcom/vk/poll/fragments/PollEditorScreen;->Q:Lkotlin/jvm/b/a;
+    iput-object p1, p0, Lcom/vk/poll/fragments/PollEditorScreen;->Q:Lkotlin/jvm/b/Functions;
 
     return-void
 .end method
 
-.method public final a(Lkotlin/jvm/b/b;)V
+.method public final a(Lkotlin/jvm/b/Functions2;)V
     .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lkotlin/jvm/b/b<",
+            "Lkotlin/jvm/b/Functions2<",
             "-",
             "Ljava/lang/Boolean;",
-            "Lkotlin/m;",
+            "Lkotlin/Unit;",
             ">;)V"
         }
     .end annotation
 
     .line 9
-    iput-object p1, p0, Lcom/vk/poll/fragments/PollEditorScreen;->U:Lkotlin/jvm/b/b;
+    iput-object p1, p0, Lcom/vk/poll/fragments/PollEditorScreen;->U:Lkotlin/jvm/b/Functions2;
 
     return-void
 .end method
 
-.method public final a(Lkotlin/jvm/b/c;)V
+.method public final a(Lkotlin/jvm/b/Functions1;)V
     .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lkotlin/jvm/b/c<",
+            "Lkotlin/jvm/b/Functions1<",
             "-",
             "Lcom/vtosters/lite/attachments/PollAttachment;",
             "-",
             "Ljava/lang/String;",
-            "Lkotlin/m;",
+            "Lkotlin/Unit;",
             ">;)V"
         }
     .end annotation
 
     .line 8
-    iput-object p1, p0, Lcom/vk/poll/fragments/PollEditorScreen;->T:Lkotlin/jvm/b/c;
+    iput-object p1, p0, Lcom/vk/poll/fragments/PollEditorScreen;->T:Lkotlin/jvm/b/Functions1;
 
     return-void
 .end method
 
-.method public final b()Lkotlin/jvm/b/c;
+.method public final b()Lkotlin/jvm/b/Functions1;
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "()",
-            "Lkotlin/jvm/b/c<",
+            "Lkotlin/jvm/b/Functions1<",
             "Lcom/vtosters/lite/attachments/PollAttachment;",
             "Ljava/lang/String;",
-            "Lkotlin/m;",
+            "Lkotlin/Unit;",
             ">;"
         }
     .end annotation
 
     .line 4
-    iget-object v0, p0, Lcom/vk/poll/fragments/PollEditorScreen;->T:Lkotlin/jvm/b/c;
+    iget-object v0, p0, Lcom/vk/poll/fragments/PollEditorScreen;->T:Lkotlin/jvm/b/Functions1;
 
     return-object v0
 .end method
 
-.method public final b(Lkotlin/jvm/b/a;)V
+.method public final b(Lkotlin/jvm/b/Functions;)V
     .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lkotlin/jvm/b/a<",
-            "Lkotlin/m;",
+            "Lkotlin/jvm/b/Functions<",
+            "Lkotlin/Unit;",
             ">;)V"
         }
     .end annotation
 
     .line 3
-    iput-object p1, p0, Lcom/vk/poll/fragments/PollEditorScreen;->R:Lkotlin/jvm/b/a;
+    iput-object p1, p0, Lcom/vk/poll/fragments/PollEditorScreen;->R:Lkotlin/jvm/b/Functions;
 
     return-void
 .end method
@@ -4948,15 +4948,15 @@
 .method public final c()Lcom/vk/poll/views/PollTimePickerView;
     .locals 3
 
-    iget-object v0, p0, Lcom/vk/poll/fragments/PollEditorScreen;->O:Lkotlin/e;
+    iget-object v0, p0, Lcom/vk/poll/fragments/PollEditorScreen;->O:Lkotlin/Lazy2;
 
-    sget-object v1, Lcom/vk/poll/fragments/PollEditorScreen;->i0:[Lkotlin/u/j;
+    sget-object v1, Lcom/vk/poll/fragments/PollEditorScreen;->i0:[Lkotlin/u/KProperty5;
 
     const/16 v2, 0xe
 
     aget-object v1, v1, v2
 
-    invoke-interface {v0}, Lkotlin/e;->getValue()Ljava/lang/Object;
+    invoke-interface {v0}, Lkotlin/Lazy2;->getValue()Ljava/lang/Object;
 
     move-result-object v0
 
@@ -4965,19 +4965,19 @@
     return-object v0
 .end method
 
-.method public final c(Lkotlin/jvm/b/a;)V
+.method public final c(Lkotlin/jvm/b/Functions;)V
     .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lkotlin/jvm/b/a<",
-            "Lkotlin/m;",
+            "Lkotlin/jvm/b/Functions<",
+            "Lkotlin/Unit;",
             ">;)V"
         }
     .end annotation
 
     .line 2
-    iput-object p1, p0, Lcom/vk/poll/fragments/PollEditorScreen;->S:Lkotlin/jvm/b/a;
+    iput-object p1, p0, Lcom/vk/poll/fragments/PollEditorScreen;->S:Lkotlin/jvm/b/Functions;
 
     return-void
 .end method
@@ -4985,15 +4985,15 @@
 .method public final d()Landroid/view/ViewGroup;
     .locals 3
 
-    iget-object v0, p0, Lcom/vk/poll/fragments/PollEditorScreen;->P:Lkotlin/e;
+    iget-object v0, p0, Lcom/vk/poll/fragments/PollEditorScreen;->P:Lkotlin/Lazy2;
 
-    sget-object v1, Lcom/vk/poll/fragments/PollEditorScreen;->i0:[Lkotlin/u/j;
+    sget-object v1, Lcom/vk/poll/fragments/PollEditorScreen;->i0:[Lkotlin/u/KProperty5;
 
     const/16 v2, 0xf
 
     aget-object v1, v1, v2
 
-    invoke-interface {v0}, Lkotlin/e;->getValue()Ljava/lang/Object;
+    invoke-interface {v0}, Lkotlin/Lazy2;->getValue()Ljava/lang/Object;
 
     move-result-object v0
 
@@ -5107,16 +5107,16 @@
 
     .line 7
     :cond_0
-    new-instance v0, Lb/h/c/v/a;
+    new-instance v0, Lcom/vk/api/polls/PollAnswersLimit;
 
     iget v1, p0, Lcom/vk/poll/fragments/PollEditorScreen;->c0:I
 
-    invoke-direct {v0, v1}, Lb/h/c/v/a;-><init>(I)V
+    invoke-direct {v0, v1}, Lcom/vk/api/polls/PollAnswersLimit;-><init>(I)V
 
     const/4 v1, 0x1
 
     .line 8
-    invoke-static {v0, v2, v1, v2}, Lcom/vk/api/base/d;->d(Lcom/vk/api/base/d;Lcom/vk/api/base/e;ILjava/lang/Object;)Lc/a/m;
+    invoke-static {v0, v2, v1, v2}, Lcom/vk/api/base/ApiRequest;->d(Lcom/vk/api/base/ApiRequest;Lcom/vk/api/base/ApiThreadHolder;ILjava/lang/Object;)Lio/reactivex/Observable;
 
     move-result-object v0
 
@@ -5130,24 +5130,24 @@
 
     if-eqz v2, :cond_1
 
-    new-instance v3, Lcom/vk/poll/fragments/a;
+    new-instance v3, Lcom/vk/poll/fragments/PollEditorFragment1;
 
-    invoke-direct {v3, v2}, Lcom/vk/poll/fragments/a;-><init>(Lkotlin/jvm/b/b;)V
+    invoke-direct {v3, v2}, Lcom/vk/poll/fragments/PollEditorFragment1;-><init>(Lkotlin/jvm/b/Functions2;)V
 
     move-object v2, v3
 
     :cond_1
-    check-cast v2, Lc/a/z/g;
+    check-cast v2, Lio/reactivex/functions/Consumer;
 
     .line 11
-    invoke-virtual {v0, v1, v2}, Lc/a/m;->a(Lc/a/z/g;Lc/a/z/g;)Lio/reactivex/disposables/b;
+    invoke-virtual {v0, v1, v2}, Lio/reactivex/Observable;->a(Lio/reactivex/functions/Consumer;Lio/reactivex/functions/Consumer;)Lio/reactivex/disposables/Disposable;
 
     move-result-object v0
 
     .line 12
-    iget-object v1, p0, Lcom/vk/poll/fragments/PollEditorScreen;->a:Lio/reactivex/disposables/a;
+    iget-object v1, p0, Lcom/vk/poll/fragments/PollEditorScreen;->a:Lio/reactivex/disposables/CompositeDisposable;
 
-    invoke-virtual {v1, v0}, Lio/reactivex/disposables/a;->b(Lio/reactivex/disposables/b;)Z
+    invoke-virtual {v1, v0}, Lio/reactivex/disposables/CompositeDisposable;->b(Lio/reactivex/disposables/Disposable;)Z
 
     return-void
 .end method
@@ -5156,9 +5156,9 @@
     .locals 4
 
     .line 2
-    iget-object v0, p0, Lcom/vk/poll/fragments/PollEditorScreen;->a:Lio/reactivex/disposables/a;
+    iget-object v0, p0, Lcom/vk/poll/fragments/PollEditorScreen;->a:Lio/reactivex/disposables/CompositeDisposable;
 
-    invoke-virtual {v0}, Lio/reactivex/disposables/a;->o()V
+    invoke-virtual {v0}, Lio/reactivex/disposables/CompositeDisposable;->o()V
 
     .line 3
     :try_start_0
@@ -5315,7 +5315,7 @@
     move-result v0
 
     .line 3
-    iget-object v1, p0, Lcom/vk/poll/fragments/PollEditorScreen;->V:Lc/a/r;
+    iget-object v1, p0, Lcom/vk/poll/fragments/PollEditorScreen;->V:Lio/reactivex/Observer;
 
     if-eqz v1, :cond_0
 
@@ -5323,7 +5323,7 @@
 
     move-result-object v2
 
-    invoke-interface {v1, v2}, Lc/a/r;->b(Ljava/lang/Object;)V
+    invoke-interface {v1, v2}, Lio/reactivex/Observer;->b(Ljava/lang/Object;)V
 
     .line 4
     :cond_0
@@ -5369,10 +5369,10 @@
 
     const/4 v4, 0x0
 
-    invoke-static {v1, v2, v4, v3, v4}, Lcom/vk/extensions/e;->b(Landroid/widget/ImageView;ILandroid/graphics/PorterDuff$Mode;ILjava/lang/Object;)V
+    invoke-static {v1, v2, v4, v3, v4}, Lcom/vk/extensions/ImageViewExt;->b(Landroid/widget/ImageView;ILandroid/graphics/PorterDuff$Mode;ILjava/lang/Object;)V
 
     .line 6
-    iget-object v1, p0, Lcom/vk/poll/fragments/PollEditorScreen;->U:Lkotlin/jvm/b/b;
+    iget-object v1, p0, Lcom/vk/poll/fragments/PollEditorScreen;->U:Lkotlin/jvm/b/Functions2;
 
     if-eqz v1, :cond_4
 
@@ -5380,11 +5380,11 @@
 
     move-result-object v0
 
-    invoke-interface {v1, v0}, Lkotlin/jvm/b/b;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v1, v0}, Lkotlin/jvm/b/Functions2;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v0
 
-    check-cast v0, Lkotlin/m;
+    check-cast v0, Lkotlin/Unit;
 
     :cond_4
     return-void
@@ -5430,15 +5430,15 @@
     invoke-virtual {p1}, Landroid/view/View;->clearFocus()V
 
     .line 4
-    iget-object p1, p0, Lcom/vk/poll/fragments/PollEditorScreen;->Q:Lkotlin/jvm/b/a;
+    iget-object p1, p0, Lcom/vk/poll/fragments/PollEditorScreen;->Q:Lkotlin/jvm/b/Functions;
 
     if-eqz p1, :cond_6
 
-    invoke-interface {p1}, Lkotlin/jvm/b/a;->invoke()Ljava/lang/Object;
+    invoke-interface {p1}, Lkotlin/jvm/b/Functions;->invoke()Ljava/lang/Object;
 
     move-result-object p1
 
-    check-cast p1, Lkotlin/m;
+    check-cast p1, Lkotlin/Unit;
 
     goto :goto_3
 

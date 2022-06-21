@@ -3,12 +3,12 @@
 .source "StoryBoxConverter.kt"
 
 # interfaces
-.implements Lc/a/z/j;
+.implements Lio/reactivex/functions/Function;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/stories/clickable/box/StoryBoxConverter;->a(Lcom/vk/dto/stories/model/actions/ActionSticker;)Lc/a/m;
+    value = Lcom/vk/stories/clickable/box/StoryBoxConverter;->a(Lcom/vk/dto/stories/model/actions/ActionSticker;)Lio/reactivex/Observable;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -24,7 +24,7 @@
         "Ljava/lang/Object;",
         ">",
         "Ljava/lang/Object;",
-        "Lc/a/z/j<",
+        "Lio/reactivex/functions/Function<",
         "TT;TR;>;"
     }
 .end annotation
@@ -51,7 +51,7 @@
 
 
 # virtual methods
-.method public final a(Lcom/vk/dto/stickers/AnimatedStickerInfo;)Lcom/vk/attachpicker/stickers/g0;
+.method public final a(Lcom/vk/dto/stickers/AnimatedStickerInfo;)Lcom/vk/attachpicker/stickers/RLottieSticker1;
     .locals 4
 
     .line 1
@@ -64,7 +64,7 @@
     if-eqz v0, :cond_0
 
     .line 2
-    new-instance v0, Lcom/vk/attachpicker/stickers/d0;
+    new-instance v0, Lcom/vk/attachpicker/stickers/RLottieSticker;
 
     iget-object v1, p0, Lcom/vk/stories/clickable/box/StoryBoxConverter$f;->a:Lcom/vk/dto/stories/model/actions/ActionSticker;
 
@@ -80,13 +80,13 @@
 
     iget-object v3, p0, Lcom/vk/stories/clickable/box/StoryBoxConverter$f;->b:Ljava/lang/String;
 
-    invoke-direct {v0, v1, v2, p1, v3}, Lcom/vk/attachpicker/stickers/d0;-><init>(IILcom/vk/dto/stickers/AnimatedStickerInfo;Ljava/lang/String;)V
+    invoke-direct {v0, v1, v2, p1, v3}, Lcom/vk/attachpicker/stickers/RLottieSticker;-><init>(IILcom/vk/dto/stickers/AnimatedStickerInfo;Ljava/lang/String;)V
 
     goto :goto_0
 
     .line 3
     :cond_0
-    new-instance v0, Lcom/vk/attachpicker/stickers/g0;
+    new-instance v0, Lcom/vk/attachpicker/stickers/RLottieSticker1;
 
     iget-object v1, p0, Lcom/vk/stories/clickable/box/StoryBoxConverter$f;->b:Ljava/lang/String;
 
@@ -96,7 +96,7 @@
 
     move-result v2
 
-    invoke-direct {v0, p1, v1, v2}, Lcom/vk/attachpicker/stickers/g0;-><init>(Lcom/vk/dto/stickers/AnimatedStickerInfo;Ljava/lang/String;I)V
+    invoke-direct {v0, p1, v1, v2}, Lcom/vk/attachpicker/stickers/RLottieSticker1;-><init>(Lcom/vk/dto/stickers/AnimatedStickerInfo;Ljava/lang/String;I)V
 
     :goto_0
     return-object v0
@@ -108,7 +108,7 @@
     .line 1
     check-cast p1, Lcom/vk/dto/stickers/AnimatedStickerInfo;
 
-    invoke-virtual {p0, p1}, Lcom/vk/stories/clickable/box/StoryBoxConverter$f;->a(Lcom/vk/dto/stickers/AnimatedStickerInfo;)Lcom/vk/attachpicker/stickers/g0;
+    invoke-virtual {p0, p1}, Lcom/vk/stories/clickable/box/StoryBoxConverter$f;->a(Lcom/vk/dto/stickers/AnimatedStickerInfo;)Lcom/vk/attachpicker/stickers/RLottieSticker1;
 
     move-result-object p1
 

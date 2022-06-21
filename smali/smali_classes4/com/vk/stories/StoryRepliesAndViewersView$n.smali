@@ -3,7 +3,7 @@
 .source "StoryRepliesAndViewersView.kt"
 
 # interfaces
-.implements Lb/h/g/l/e;
+.implements Lb/h/g/l/NotificationListener;
 
 
 # annotations
@@ -22,7 +22,7 @@
         "Ljava/lang/Object;",
         ">",
         "Ljava/lang/Object;",
-        "Lb/h/g/l/e<",
+        "Lb/h/g/l/NotificationListener<",
         "Lcom/vk/stories/StoriesController$g;",
         ">;"
     }
@@ -54,7 +54,7 @@
 
     const-string p2, "hData"
 
-    invoke-static {p3, p2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p3, p2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-static {p1, p3}, Lcom/vk/stories/StoryRepliesAndViewersView;->a(Lcom/vk/stories/StoryRepliesAndViewersView;Lcom/vk/stories/StoriesController$g;)V
 

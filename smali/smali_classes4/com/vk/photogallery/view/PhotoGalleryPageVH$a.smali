@@ -1,5 +1,5 @@
 .class public final Lcom/vk/photogallery/view/PhotoGalleryPageVH$a;
-.super Lcom/vk/photogallery/view/a;
+.super Lcom/vk/photogallery/view/OnVisibleRangeChangedScrollListener;
 .source "PhotoGalleryPageVH.kt"
 
 
@@ -30,7 +30,7 @@
     .line 1
     iput-object p1, p0, Lcom/vk/photogallery/view/PhotoGalleryPageVH$a;->e:Lcom/vk/photogallery/view/PhotoGalleryPageVH;
 
-    invoke-direct {p0}, Lcom/vk/photogallery/view/a;-><init>()V
+    invoke-direct {p0}, Lcom/vk/photogallery/view/OnVisibleRangeChangedScrollListener;-><init>()V
 
     return-void
 .end method
@@ -43,16 +43,16 @@
     .line 1
     iget-object p1, p0, Lcom/vk/photogallery/view/PhotoGalleryPageVH$a;->e:Lcom/vk/photogallery/view/PhotoGalleryPageVH;
 
-    invoke-static {p1}, Lcom/vk/photogallery/view/PhotoGalleryPageVH;->d(Lcom/vk/photogallery/view/PhotoGalleryPageVH;)Lcom/vk/photogallery/dto/d;
+    invoke-static {p1}, Lcom/vk/photogallery/view/PhotoGalleryPageVH;->d(Lcom/vk/photogallery/view/PhotoGalleryPageVH;)Lcom/vk/photogallery/dto/GalleryState4;
 
     move-result-object p1
 
-    invoke-virtual {p1}, Lcom/vk/photogallery/dto/d;->d()Lcom/vk/photogallery/dto/m;
+    invoke-virtual {p1}, Lcom/vk/photogallery/dto/GalleryState4;->d()Lcom/vk/photogallery/dto/GalleryState1;
 
     move-result-object p1
 
     .line 2
-    invoke-virtual {p1}, Lcom/vk/photogallery/dto/m;->d()Z
+    invoke-virtual {p1}, Lcom/vk/photogallery/dto/GalleryState1;->d()Z
 
     move-result v0
 
@@ -74,7 +74,7 @@
 
     move-result-object p2
 
-    invoke-virtual {p1}, Lcom/vk/photogallery/dto/m;->b()I
+    invoke-virtual {p1}, Lcom/vk/photogallery/dto/GalleryState1;->b()I
 
     move-result p1
 

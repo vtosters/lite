@@ -24,7 +24,7 @@
     return-void
 .end method
 
-.method public synthetic constructor <init>(Lkotlin/jvm/internal/i;)V
+.method public synthetic constructor <init>(Lkotlin/jvm/internal/DefaultConstructorMarker;)V
     .locals 0
 
     .line 2
@@ -217,7 +217,7 @@
     check-cast v2, Lcom/vk/dto/common/Attachment;
 
     .line 108
-    instance-of v2, v2, Lcom/vtosters/lite/attachments/c;
+    instance-of v2, v2, Lcom/vtosters/lite/attachments/ThumbAttachment;
 
     if-eqz v2, :cond_0
 
@@ -335,7 +335,7 @@
 
     .line 116
     :cond_7
-    invoke-static {p1}, Lcom/vtosters/lite/attachments/a;->d(Ljava/util/List;)V
+    invoke-static {p1}, Lcom/vtosters/lite/attachments/AttachmentUtils;->d(Ljava/util/List;)V
 
     .line 117
     :cond_8
@@ -396,11 +396,11 @@
     const/4 v15, 0x0
 
     .line 104
-    invoke-virtual/range {p1 .. p1}, Lcom/vk/dto/newsfeed/entries/Post;->N1()Lcom/vk/common/links/i;
+    invoke-virtual/range {p1 .. p1}, Lcom/vk/dto/newsfeed/entries/Post;->N1()Lcom/vk/common/links/ParsedText;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/vk/common/links/i;->a()Lcom/vk/common/links/i;
+    invoke-virtual {v0}, Lcom/vk/common/links/ParsedText;->a()Lcom/vk/common/links/ParsedText;
 
     move-result-object v28
 
@@ -458,7 +458,7 @@
     const/4 v1, 0x0
 
     .line 106
-    invoke-static/range {v0 .. v36}, Lcom/vk/dto/newsfeed/entries/Post;->a(Lcom/vk/dto/newsfeed/entries/Post;Lcom/vk/dto/newsfeed/Flags;IILcom/vk/dto/newsfeed/Owner;ILcom/vk/dto/newsfeed/Owner;ILjava/lang/String;Ljava/lang/String;IZLcom/vk/dto/newsfeed/entries/Post$Caption;Ljava/util/ArrayList;Lcom/vk/dto/newsfeed/CommentPreview;Lcom/vk/dto/newsfeed/activities/Activity;Lcom/vk/dto/newsfeed/entries/Post;Lcom/vk/dto/newsfeed/Counters;Lcom/vk/dto/newsfeed/entries/Post$Source;ZLcom/vk/dto/newsfeed/entries/Post$EasyPromote;ZLandroid/os/Bundle;Lcom/vk/dto/newsfeed/entries/Post$TrackData;Lcom/vk/dto/newsfeed/entries/Poster;Lcom/vk/dto/newsfeed/entries/Post$Cut;Lcom/vk/dto/newsfeed/entries/Copyright;Lcom/vk/dto/newsfeed/Rating;Lcom/vk/common/links/i;Lcom/vk/dto/newsfeed/Owner;Lcom/vk/dto/newsfeed/entries/Post$Feedback;ILcom/vk/dto/newsfeed/entries/Post$Subtitle;Lcom/vk/dto/newsfeed/entries/Post$SourceFrom;IILjava/lang/Object;)Lcom/vk/dto/newsfeed/entries/Post;
+    invoke-static/range {v0 .. v36}, Lcom/vk/dto/newsfeed/entries/Post;->a(Lcom/vk/dto/newsfeed/entries/Post;Lcom/vk/dto/newsfeed/Flags;IILcom/vk/dto/newsfeed/Owner;ILcom/vk/dto/newsfeed/Owner;ILjava/lang/String;Ljava/lang/String;IZLcom/vk/dto/newsfeed/entries/Post$Caption;Ljava/util/ArrayList;Lcom/vk/dto/newsfeed/CommentPreview;Lcom/vk/dto/newsfeed/activities/Activity;Lcom/vk/dto/newsfeed/entries/Post;Lcom/vk/dto/newsfeed/Counters;Lcom/vk/dto/newsfeed/entries/Post$Source;ZLcom/vk/dto/newsfeed/entries/Post$EasyPromote;ZLandroid/os/Bundle;Lcom/vk/dto/newsfeed/entries/Post$TrackData;Lcom/vk/dto/newsfeed/entries/Poster;Lcom/vk/dto/newsfeed/entries/Post$Cut;Lcom/vk/dto/newsfeed/entries/Copyright;Lcom/vk/dto/newsfeed/Rating;Lcom/vk/common/links/ParsedText;Lcom/vk/dto/newsfeed/Owner;Lcom/vk/dto/newsfeed/entries/Post$Feedback;ILcom/vk/dto/newsfeed/entries/Post$Subtitle;Lcom/vk/dto/newsfeed/entries/Post$SourceFrom;IILjava/lang/Object;)Lcom/vk/dto/newsfeed/entries/Post;
 
     move-result-object v0
 
@@ -550,7 +550,7 @@
 
     move-object v15, v4
 
-    invoke-direct/range {v15 .. v23}, Lcom/vk/dto/newsfeed/Owner;-><init>(ILjava/lang/String;Ljava/lang/String;Lcom/vk/dto/common/VerifyInfo;Lcom/vk/dto/common/Image;Ljava/lang/String;ILkotlin/jvm/internal/i;)V
+    invoke-direct/range {v15 .. v23}, Lcom/vk/dto/newsfeed/Owner;-><init>(ILjava/lang/String;Ljava/lang/String;Lcom/vk/dto/common/VerifyInfo;Lcom/vk/dto/common/Image;Ljava/lang/String;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     const/4 v7, 0x0
 
@@ -570,7 +570,7 @@
     :goto_1
     invoke-virtual {v4, v8}, Lcom/vk/dto/newsfeed/Owner;->b(Lcom/vk/dto/newsfeed/Owner;)V
 
-    sget-object v8, Lkotlin/m;->a:Lkotlin/m;
+    sget-object v8, Lkotlin/Unit;->a:Lkotlin/Unit;
 
     .line 7
     invoke-virtual {v0, v6, v3}, Lorg/json/JSONObject;->optInt(Ljava/lang/String;I)I
@@ -590,7 +590,7 @@
     const-string v5, "reply"
 
     .line 8
-    invoke-static {v14, v5}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v14, v5}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v6
 
@@ -654,7 +654,7 @@
 
     .line 11
     :goto_3
-    invoke-static {v5, v14}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v5, v14}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v5
 
@@ -693,7 +693,7 @@
 
     move-object/from16 v16, v28
 
-    invoke-direct/range {v16 .. v22}, Lcom/vk/dto/newsfeed/entries/Post$TrackData;-><init>(Ljava/lang/String;IZLjava/lang/Boolean;ILkotlin/jvm/internal/i;)V
+    invoke-direct/range {v16 .. v22}, Lcom/vk/dto/newsfeed/entries/Post$TrackData;-><init>(Ljava/lang/String;IZLjava/lang/Boolean;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     const/4 v5, 0x0
 
@@ -796,7 +796,7 @@
     :goto_8
     invoke-virtual {v6, v9}, Lcom/vk/dto/newsfeed/entries/Post$Caption;->d(Ljava/lang/String;)V
 
-    sget-object v9, Lkotlin/m;->a:Lkotlin/m;
+    sget-object v9, Lkotlin/Unit;->a:Lkotlin/Unit;
 
     move-object/from16 v18, v6
 
@@ -866,7 +866,7 @@
     if-eqz v11, :cond_b
 
     .line 24
-    invoke-static {v11, v2, v1}, Lcom/vtosters/lite/attachments/a;->a(Lorg/json/JSONObject;Ljava/lang/String;Landroid/util/SparseArray;)Lcom/vk/dto/common/Attachment;
+    invoke-static {v11, v2, v1}, Lcom/vtosters/lite/attachments/AttachmentUtils;->a(Lorg/json/JSONObject;Ljava/lang/String;Landroid/util/SparseArray;)Lcom/vk/dto/common/Attachment;
 
     move-result-object v11
 
@@ -935,7 +935,7 @@
     move/from16 v37, v5
 
     .line 29
-    invoke-direct/range {v35 .. v40}, Lcom/vk/dto/newsfeed/entries/Post$Cut;-><init>(IFZILkotlin/jvm/internal/i;)V
+    invoke-direct/range {v35 .. v40}, Lcom/vk/dto/newsfeed/entries/Post$Cut;-><init>(IFZILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     move-object/from16 v11, p0
 
@@ -998,13 +998,13 @@
     if-ne v11, v14, :cond_11
 
     .line 34
-    sget-object v11, Lb/h/h/a;->b:Lb/h/h/a$a;
+    sget-object v11, Lb/h/h/ModelConfig;->b:Lb/h/h/ModelConfig$a;
 
     const-string v14, "ModelConfig.callback"
 
-    invoke-static {v11, v14}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v11, v14}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    invoke-interface {v11}, Lb/h/h/a$a;->c()I
+    invoke-interface {v11}, Lb/h/h/ModelConfig$a;->c()I
 
     move-result v11
 
@@ -1028,7 +1028,7 @@
     invoke-virtual {v6, v3, v11}, Lcom/vk/dto/newsfeed/Flags;->c(IZ)V
 
     .line 36
-    sget-object v3, Lkotlin/m;->a:Lkotlin/m;
+    sget-object v3, Lkotlin/Unit;->a:Lkotlin/Unit;
 
     :cond_12
     const/16 v3, 0x40
@@ -1066,7 +1066,7 @@
 
     .line 40
     :cond_14
-    sget-object v3, Lkotlin/m;->a:Lkotlin/m;
+    sget-object v3, Lkotlin/Unit;->a:Lkotlin/Unit;
 
     const-string v3, "text"
 
@@ -1120,7 +1120,7 @@
 
     const-string v4, "api"
 
-    invoke-static {v13, v4}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v13, v4}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v4
 
@@ -1155,7 +1155,7 @@
 
     move-result-object v11
 
-    invoke-static {v11, v4}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v11, v4}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v11
 
@@ -1209,7 +1209,7 @@
     if-eqz v11, :cond_1d
 
     .line 51
-    invoke-static {v11}, Lcom/vtosters/lite/attachments/a;->a(Lorg/json/JSONObject;)Lcom/vtosters/lite/attachments/GeoAttachment;
+    invoke-static {v11}, Lcom/vtosters/lite/attachments/AttachmentUtils;->a(Lorg/json/JSONObject;)Lcom/vtosters/lite/attachments/GeoAttachment;
 
     move-result-object v11
 
@@ -1233,11 +1233,11 @@
     invoke-virtual {v9, v11}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
     .line 55
-    sget-object v5, Lkotlin/m;->a:Lkotlin/m;
+    sget-object v5, Lkotlin/Unit;->a:Lkotlin/Unit;
 
     .line 56
     :cond_1c
-    sget-object v5, Lkotlin/m;->a:Lkotlin/m;
+    sget-object v5, Lkotlin/Unit;->a:Lkotlin/Unit;
 
     :cond_1d
     const-string v5, "signer_id"
@@ -1380,7 +1380,7 @@
     move-result-object v11
 
     .line 68
-    sget-object v12, Lkotlin/m;->a:Lkotlin/m;
+    sget-object v12, Lkotlin/Unit;->a:Lkotlin/Unit;
 
     goto :goto_16
 
@@ -1414,7 +1414,7 @@
 
     .line 71
     :cond_23
-    sget-object v2, Lkotlin/m;->a:Lkotlin/m;
+    sget-object v2, Lkotlin/Unit;->a:Lkotlin/Unit;
 
     :cond_24
     move-object v2, v11
@@ -1471,11 +1471,11 @@
 
     move-result-object v5
 
-    sget-object v8, Lcom/vk/core/util/i;->a:Landroid/content/Context;
+    sget-object v8, Lcom/vk/core/util/AppContextHolder;->a:Landroid/content/Context;
 
     const-string v11, "AppContextHolder.context"
 
-    invoke-static {v8, v11}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v8, v11}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {v8}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
@@ -1619,15 +1619,15 @@
     invoke-virtual {v6, v5, v8}, Lcom/vk/dto/newsfeed/Flags;->c(IZ)V
 
     .line 84
-    sget-object v5, Lcom/vk/common/links/i;->d:Lcom/vk/common/links/i$a;
+    sget-object v5, Lcom/vk/common/links/ParsedText;->d:Lcom/vk/common/links/ParsedText$a;
 
-    invoke-static {v14, v3}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v14, v3}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {v15}, Lcom/vk/dto/newsfeed/entries/Post$Cut;->w1()F
 
     move-result v3
 
-    invoke-virtual {v5, v14, v7, v3}, Lcom/vk/common/links/i$a;->a(Ljava/lang/String;Landroid/os/Bundle;F)Lcom/vk/common/links/i;
+    invoke-virtual {v5, v14, v7, v3}, Lcom/vk/common/links/ParsedText$a;->a(Ljava/lang/String;Landroid/os/Bundle;F)Lcom/vk/common/links/ParsedText;
 
     move-result-object v3
 
@@ -1759,7 +1759,7 @@
     move-object/from16 v37, v0
 
     .line 90
-    invoke-direct/range {v5 .. v41}, Lcom/vk/dto/newsfeed/entries/Post;-><init>(Lcom/vk/dto/newsfeed/Flags;IILcom/vk/dto/newsfeed/Owner;ILcom/vk/dto/newsfeed/Owner;ILjava/lang/String;Ljava/lang/String;IZLcom/vk/dto/newsfeed/entries/Post$Caption;Ljava/util/ArrayList;Lcom/vk/dto/newsfeed/CommentPreview;Lcom/vk/dto/newsfeed/activities/Activity;Lcom/vk/dto/newsfeed/entries/Post;Lcom/vk/dto/newsfeed/Counters;Lcom/vk/dto/newsfeed/entries/Post$Source;ZLcom/vk/dto/newsfeed/entries/Post$EasyPromote;ZLandroid/os/Bundle;Lcom/vk/dto/newsfeed/entries/Post$TrackData;Lcom/vk/dto/newsfeed/entries/Poster;Lcom/vk/dto/newsfeed/entries/Post$Cut;Lcom/vk/dto/newsfeed/entries/Copyright;Lcom/vk/dto/newsfeed/Rating;Lcom/vk/common/links/i;Lcom/vk/dto/newsfeed/Owner;Lcom/vk/dto/newsfeed/entries/Post$Feedback;ILcom/vk/dto/newsfeed/entries/Post$Subtitle;Lcom/vk/dto/newsfeed/entries/Post$SourceFrom;IILkotlin/jvm/internal/i;)V
+    invoke-direct/range {v5 .. v41}, Lcom/vk/dto/newsfeed/entries/Post;-><init>(Lcom/vk/dto/newsfeed/Flags;IILcom/vk/dto/newsfeed/Owner;ILcom/vk/dto/newsfeed/Owner;ILjava/lang/String;Ljava/lang/String;IZLcom/vk/dto/newsfeed/entries/Post$Caption;Ljava/util/ArrayList;Lcom/vk/dto/newsfeed/CommentPreview;Lcom/vk/dto/newsfeed/activities/Activity;Lcom/vk/dto/newsfeed/entries/Post;Lcom/vk/dto/newsfeed/Counters;Lcom/vk/dto/newsfeed/entries/Post$Source;ZLcom/vk/dto/newsfeed/entries/Post$EasyPromote;ZLandroid/os/Bundle;Lcom/vk/dto/newsfeed/entries/Post$TrackData;Lcom/vk/dto/newsfeed/entries/Poster;Lcom/vk/dto/newsfeed/entries/Post$Cut;Lcom/vk/dto/newsfeed/entries/Copyright;Lcom/vk/dto/newsfeed/Rating;Lcom/vk/common/links/ParsedText;Lcom/vk/dto/newsfeed/Owner;Lcom/vk/dto/newsfeed/entries/Post$Feedback;ILcom/vk/dto/newsfeed/entries/Post$Subtitle;Lcom/vk/dto/newsfeed/entries/Post$SourceFrom;IILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     return-object v46
 .end method

@@ -16,7 +16,7 @@
 
 .field private b:I
 
-.field private c:Lcom/vk/audiomsg/player/a;
+.field private c:Lcom/vk/audiomsg/player/AudioMsgPlayer;
 
 .field private final d:Lcom/vk/audiomsg/player/service/AudioMsgPlayerNotificationService$a;
 
@@ -38,11 +38,11 @@
     return-void
 .end method
 
-.method private final a(Landroid/content/Context;Ljava/lang/String;Lcom/vk/audiomsg/player/a;)Landroid/app/Notification;
+.method private final a(Landroid/content/Context;Ljava/lang/String;Lcom/vk/audiomsg/player/AudioMsgPlayer;)Landroid/app/Notification;
     .locals 4
 
     .line 3
-    invoke-interface {p3}, Lcom/vk/audiomsg/player/a;->b()Z
+    invoke-interface {p3}, Lcom/vk/audiomsg/player/AudioMsgPlayer;->b()Z
 
     move-result v0
 
@@ -66,16 +66,16 @@
 
     const-string v3, "context.getString(R.stri\u2026rvice_notification_title)"
 
-    invoke-static {v2, v3}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v2, v3}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 6
-    invoke-interface {p3}, Lcom/vk/audiomsg/player/a;->S()Lcom/vk/audiomsg/player/d;
+    invoke-interface {p3}, Lcom/vk/audiomsg/player/AudioMsgPlayer;->S()Lcom/vk/audiomsg/player/AudioMsgTrack;
 
     move-result-object p3
 
     if-eqz p3, :cond_1
 
-    invoke-virtual {p3}, Lcom/vk/audiomsg/player/d;->d()Ljava/lang/String;
+    invoke-virtual {p3}, Lcom/vk/audiomsg/player/AudioMsgTrack;->d()Ljava/lang/String;
 
     move-result-object p3
 
@@ -201,7 +201,7 @@
 
     const-string p2, "NotificationCompat.Build\u2026\n                .build()"
 
-    invoke-static {p1, p2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, p2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     return-object p1
 
@@ -236,7 +236,7 @@
 
     const-string p2, "PendingIntent.getBroadca\u2026tent.FLAG_UPDATE_CURRENT)"
 
-    invoke-static {p1, p2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, p2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     return-object p1
 .end method
@@ -307,11 +307,11 @@
 
     if-eqz v1, :cond_1
 
-    iget-object v3, p0, Lcom/vk/audiomsg/player/service/AudioMsgPlayerNotificationService;->c:Lcom/vk/audiomsg/player/a;
+    iget-object v3, p0, Lcom/vk/audiomsg/player/service/AudioMsgPlayerNotificationService;->c:Lcom/vk/audiomsg/player/AudioMsgPlayer;
 
     if-eqz v3, :cond_0
 
-    invoke-direct {p0, p0, v1, v3}, Lcom/vk/audiomsg/player/service/AudioMsgPlayerNotificationService;->a(Landroid/content/Context;Ljava/lang/String;Lcom/vk/audiomsg/player/a;)Landroid/app/Notification;
+    invoke-direct {p0, p0, v1, v3}, Lcom/vk/audiomsg/player/service/AudioMsgPlayerNotificationService;->a(Landroid/content/Context;Ljava/lang/String;Lcom/vk/audiomsg/player/AudioMsgPlayer;)Landroid/app/Notification;
 
     move-result-object v1
 
@@ -322,14 +322,14 @@
     :cond_0
     const-string v0, "player"
 
-    invoke-static {v0}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v0}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v2
 
     :cond_1
     const-string v0, "channelId"
 
-    invoke-static {v0}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v0}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v2
 .end method
@@ -369,7 +369,7 @@
 
     const-string v0, "PendingIntent.getBroadca\u2026tent.FLAG_UPDATE_CURRENT)"
 
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     return-object p1
 .end method
@@ -440,7 +440,7 @@
 
     const-string v1, "context.getString(R.stri\u2026yer_service_channel_name)"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 2
     new-instance v1, Landroid/app/NotificationChannel;
@@ -560,40 +560,40 @@
     invoke-super {p0}, Landroid/app/Service;->onCreate()V
 
     .line 2
-    sget-object v0, Lcom/vk/audiomsg/player/service/a;->j:Lcom/vk/audiomsg/player/service/a;
+    sget-object v0, Lcom/vk/audiomsg/player/service/AudioMsgPlayerNotificationHelper;->j:Lcom/vk/audiomsg/player/service/AudioMsgPlayerNotificationHelper;
 
-    invoke-virtual {v0}, Lcom/vk/audiomsg/player/service/a;->a()Ljava/lang/String;
+    invoke-virtual {v0}, Lcom/vk/audiomsg/player/service/AudioMsgPlayerNotificationHelper;->a()Ljava/lang/String;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/vk/audiomsg/player/service/AudioMsgPlayerNotificationService;->a:Ljava/lang/String;
 
     .line 3
-    sget-object v0, Lcom/vk/audiomsg/player/service/a;->j:Lcom/vk/audiomsg/player/service/a;
+    sget-object v0, Lcom/vk/audiomsg/player/service/AudioMsgPlayerNotificationHelper;->j:Lcom/vk/audiomsg/player/service/AudioMsgPlayerNotificationHelper;
 
-    invoke-virtual {v0}, Lcom/vk/audiomsg/player/service/a;->b()I
+    invoke-virtual {v0}, Lcom/vk/audiomsg/player/service/AudioMsgPlayerNotificationHelper;->b()I
 
     move-result v0
 
     iput v0, p0, Lcom/vk/audiomsg/player/service/AudioMsgPlayerNotificationService;->b:I
 
     .line 4
-    sget-object v0, Lcom/vk/audiomsg/player/service/a;->j:Lcom/vk/audiomsg/player/service/a;
+    sget-object v0, Lcom/vk/audiomsg/player/service/AudioMsgPlayerNotificationHelper;->j:Lcom/vk/audiomsg/player/service/AudioMsgPlayerNotificationHelper;
 
-    invoke-virtual {v0}, Lcom/vk/audiomsg/player/service/a;->e()Lkotlin/jvm/b/a;
-
-    move-result-object v0
-
-    invoke-interface {v0}, Lkotlin/jvm/b/a;->invoke()Ljava/lang/Object;
+    invoke-virtual {v0}, Lcom/vk/audiomsg/player/service/AudioMsgPlayerNotificationHelper;->e()Lkotlin/jvm/b/Functions;
 
     move-result-object v0
 
-    check-cast v0, Lcom/vk/audiomsg/player/a;
+    invoke-interface {v0}, Lkotlin/jvm/b/Functions;->invoke()Ljava/lang/Object;
 
-    iput-object v0, p0, Lcom/vk/audiomsg/player/service/AudioMsgPlayerNotificationService;->c:Lcom/vk/audiomsg/player/a;
+    move-result-object v0
+
+    check-cast v0, Lcom/vk/audiomsg/player/AudioMsgPlayer;
+
+    iput-object v0, p0, Lcom/vk/audiomsg/player/service/AudioMsgPlayerNotificationService;->c:Lcom/vk/audiomsg/player/AudioMsgPlayer;
 
     .line 5
-    iget-object v0, p0, Lcom/vk/audiomsg/player/service/AudioMsgPlayerNotificationService;->c:Lcom/vk/audiomsg/player/a;
+    iget-object v0, p0, Lcom/vk/audiomsg/player/service/AudioMsgPlayerNotificationService;->c:Lcom/vk/audiomsg/player/AudioMsgPlayer;
 
     const/4 v1, 0x0
 
@@ -601,7 +601,7 @@
 
     iget-object v2, p0, Lcom/vk/audiomsg/player/service/AudioMsgPlayerNotificationService;->d:Lcom/vk/audiomsg/player/service/AudioMsgPlayerNotificationService$a;
 
-    invoke-interface {v0, v2}, Lcom/vk/audiomsg/player/a;->a(Lcom/vk/audiomsg/player/b;)V
+    invoke-interface {v0, v2}, Lcom/vk/audiomsg/player/AudioMsgPlayer;->a(Lcom/vk/audiomsg/player/AudioMsgPlayerListener;)V
 
     .line 6
     iget-object v0, p0, Lcom/vk/audiomsg/player/service/AudioMsgPlayerNotificationService;->a:Ljava/lang/String;
@@ -614,9 +614,9 @@
     invoke-direct {p0}, Lcom/vk/audiomsg/player/service/AudioMsgPlayerNotificationService;->a()V
 
     .line 8
-    sget-object v0, Lcom/vk/audiomsg/player/service/a;->j:Lcom/vk/audiomsg/player/service/a;
+    sget-object v0, Lcom/vk/audiomsg/player/service/AudioMsgPlayerNotificationHelper;->j:Lcom/vk/audiomsg/player/service/AudioMsgPlayerNotificationHelper;
 
-    invoke-virtual {v0}, Lcom/vk/audiomsg/player/service/a;->f()V
+    invoke-virtual {v0}, Lcom/vk/audiomsg/player/service/AudioMsgPlayerNotificationHelper;->f()V
 
     return-void
 
@@ -624,7 +624,7 @@
     const-string v0, "channelId"
 
     .line 9
-    invoke-static {v0}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v0}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v1
 
@@ -632,7 +632,7 @@
     const-string v0, "player"
 
     .line 10
-    invoke-static {v0}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v0}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v1
 .end method
@@ -644,13 +644,13 @@
     invoke-super {p0}, Landroid/app/Service;->onDestroy()V
 
     .line 2
-    iget-object v0, p0, Lcom/vk/audiomsg/player/service/AudioMsgPlayerNotificationService;->c:Lcom/vk/audiomsg/player/a;
+    iget-object v0, p0, Lcom/vk/audiomsg/player/service/AudioMsgPlayerNotificationService;->c:Lcom/vk/audiomsg/player/AudioMsgPlayer;
 
     if-eqz v0, :cond_0
 
     iget-object v1, p0, Lcom/vk/audiomsg/player/service/AudioMsgPlayerNotificationService;->d:Lcom/vk/audiomsg/player/service/AudioMsgPlayerNotificationService$a;
 
-    invoke-interface {v0, v1}, Lcom/vk/audiomsg/player/a;->b(Lcom/vk/audiomsg/player/b;)V
+    invoke-interface {v0, v1}, Lcom/vk/audiomsg/player/AudioMsgPlayer;->b(Lcom/vk/audiomsg/player/AudioMsgPlayerListener;)V
 
     const/4 v0, 0x1
 
@@ -663,7 +663,7 @@
     const-string v0, "player"
 
     .line 4
-    invoke-static {v0}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v0}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     const/4 v0, 0x0
 

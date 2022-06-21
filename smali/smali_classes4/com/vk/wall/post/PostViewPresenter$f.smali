@@ -40,11 +40,11 @@
     .line 1
     iget-object v0, p0, Lcom/vk/wall/post/PostViewPresenter$f;->a:Lcom/vk/wall/post/PostViewPresenter;
 
-    invoke-virtual {v0}, Lcom/vk/wall/post/PostViewPresenter;->e()Lcom/vk/wall/post/c;
+    invoke-virtual {v0}, Lcom/vk/wall/post/PostViewPresenter;->e()Lcom/vk/wall/post/PostViewContract;
 
     move-result-object v0
 
-    invoke-interface {v0}, Lcom/vk/wall/post/c;->finish()V
+    invoke-interface {v0}, Lcom/vk/wall/post/PostViewContract;->finish()V
 
     return-void
 .end method

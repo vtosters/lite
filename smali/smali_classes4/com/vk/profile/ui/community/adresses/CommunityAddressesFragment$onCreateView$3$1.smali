@@ -60,11 +60,11 @@
 
     iget-object p1, p1, Lcom/vk/profile/ui/community/adresses/CommunityAddressesFragment$onCreateView$3;->a:Lcom/vk/profile/ui/community/adresses/CommunityAddressesFragment;
 
-    invoke-virtual {p1}, Lcom/vk/profile/ui/community/adresses/CommunityAddressesFragment;->getPresenter()Lcom/vk/profile/presenter/f/a;
+    invoke-virtual {p1}, Lcom/vk/profile/ui/community/adresses/CommunityAddressesFragment;->getPresenter()Lcom/vk/profile/presenter/f/CommunityAddressPresenter;
 
     move-result-object p1
 
-    invoke-virtual {p1}, Lcom/vk/profile/presenter/f/a;->t()V
+    invoke-virtual {p1}, Lcom/vk/profile/presenter/f/CommunityAddressPresenter;->t()V
 
     .line 4
     sget-object v0, Lcom/vk/permission/PermissionHelper;->r:Lcom/vk/permission/PermissionHelper;
@@ -101,7 +101,7 @@
     const/4 v8, 0x0
 
     .line 8
-    invoke-static/range {v0 .. v8}, Lcom/vk/permission/PermissionHelper;->a(Lcom/vk/permission/PermissionHelper;Landroid/app/Activity;[Ljava/lang/String;IILkotlin/jvm/b/a;Lkotlin/jvm/b/b;ILjava/lang/Object;)Z
+    invoke-static/range {v0 .. v8}, Lcom/vk/permission/PermissionHelper;->a(Lcom/vk/permission/PermissionHelper;Landroid/app/Activity;[Ljava/lang/String;IILkotlin/jvm/b/Functions;Lkotlin/jvm/b/Functions2;ILjava/lang/Object;)Z
 
     return-void
 .end method

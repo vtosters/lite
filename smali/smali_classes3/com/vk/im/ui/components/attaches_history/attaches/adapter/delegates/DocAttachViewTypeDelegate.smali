@@ -1,5 +1,5 @@
 .class public final Lcom/vk/im/ui/components/attaches_history/attaches/adapter/delegates/DocAttachViewTypeDelegate;
-.super Lcom/vk/im/ui/views/adapter_delegate/f;
+.super Lcom/vk/im/ui/views/adapter_delegate/ViewTypeDelegate;
 .source "DocAttachViewTypeDelegate.kt"
 
 
@@ -12,7 +12,7 @@
 
 .annotation system Ldalvik/annotation/Signature;
     value = {
-        "Lcom/vk/im/ui/views/adapter_delegate/f<",
+        "Lcom/vk/im/ui/views/adapter_delegate/ViewTypeDelegate<",
         "Lcom/vk/im/ui/components/attaches_history/attaches/model/simple/SimpleAttachListItem;",
         ">;"
     }
@@ -20,7 +20,7 @@
 
 
 # instance fields
-.field private a:Lcom/vk/im/ui/components/attaches_history/attaches/adapter/delegates/c;
+.field private a:Lcom/vk/im/ui/components/attaches_history/attaches/adapter/delegates/DocAttachCallback;
 
 .field private final b:Ljava/text/SimpleDateFormat;
     .annotation build Landroid/annotation/SuppressLint;
@@ -36,7 +36,7 @@
     .locals 1
 
     .line 1
-    invoke-direct {p0}, Lcom/vk/im/ui/views/adapter_delegate/f;-><init>()V
+    invoke-direct {p0}, Lcom/vk/im/ui/views/adapter_delegate/ViewTypeDelegate;-><init>()V
 
     .line 2
     new-instance p1, Ljava/text/SimpleDateFormat;
@@ -61,23 +61,23 @@
 
 
 # virtual methods
-.method public final a()Lcom/vk/im/ui/components/attaches_history/attaches/adapter/delegates/c;
+.method public final a()Lcom/vk/im/ui/components/attaches_history/attaches/adapter/delegates/DocAttachCallback;
     .locals 1
 
     .line 2
-    iget-object v0, p0, Lcom/vk/im/ui/components/attaches_history/attaches/adapter/delegates/DocAttachViewTypeDelegate;->a:Lcom/vk/im/ui/components/attaches_history/attaches/adapter/delegates/c;
+    iget-object v0, p0, Lcom/vk/im/ui/components/attaches_history/attaches/adapter/delegates/DocAttachViewTypeDelegate;->a:Lcom/vk/im/ui/components/attaches_history/attaches/adapter/delegates/DocAttachCallback;
 
     return-object v0
 .end method
 
-.method public a(Landroid/view/ViewGroup;)Lcom/vk/im/ui/views/adapter_delegate/d;
+.method public a(Landroid/view/ViewGroup;)Lcom/vk/im/ui/views/adapter_delegate/ListItemViewHolder;
     .locals 5
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
             "Landroid/view/ViewGroup;",
             ")",
-            "Lcom/vk/im/ui/views/adapter_delegate/d<",
+            "Lcom/vk/im/ui/views/adapter_delegate/ListItemViewHolder<",
             "Lcom/vk/im/ui/components/attaches_history/attaches/model/simple/SimpleAttachListItem;",
             ">;"
         }
@@ -103,16 +103,16 @@
     return-object v0
 .end method
 
-.method public final a(Lcom/vk/im/ui/components/attaches_history/attaches/adapter/delegates/c;)V
+.method public final a(Lcom/vk/im/ui/components/attaches_history/attaches/adapter/delegates/DocAttachCallback;)V
     .locals 0
 
     .line 3
-    iput-object p1, p0, Lcom/vk/im/ui/components/attaches_history/attaches/adapter/delegates/DocAttachViewTypeDelegate;->a:Lcom/vk/im/ui/components/attaches_history/attaches/adapter/delegates/c;
+    iput-object p1, p0, Lcom/vk/im/ui/components/attaches_history/attaches/adapter/delegates/DocAttachViewTypeDelegate;->a:Lcom/vk/im/ui/components/attaches_history/attaches/adapter/delegates/DocAttachCallback;
 
     return-void
 .end method
 
-.method public a(Lcom/vk/im/ui/views/adapter_delegate/c;)Z
+.method public a(Lcom/vk/im/ui/views/adapter_delegate/ListItem;)Z
     .locals 1
 
     .line 4

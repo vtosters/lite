@@ -23,7 +23,7 @@
     const-string v1, "PermissionChecker.c-tor"
 
     .line 2
-    invoke-static {v0, v1}, Le/c/a/a;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Le/c/a/Log;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 3
     iput-object p1, p0, Lru/mail/voip2/PermissionChecker;->context:Landroid/content/Context;
@@ -108,7 +108,7 @@
 
     const-string v2, "voip_permission"
 
-    invoke-static {v2, v1}, Le/c/a/a;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v2, v1}, Le/c/a/Log;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     return v0
 .end method
@@ -142,7 +142,7 @@
 
     const-string v2, "voip_permission"
 
-    invoke-static {v2, v1}, Le/c/a/a;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v2, v1}, Le/c/a/Log;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     return v0
 .end method

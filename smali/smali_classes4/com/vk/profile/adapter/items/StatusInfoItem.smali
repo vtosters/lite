@@ -1,5 +1,5 @@
 .class public final Lcom/vk/profile/adapter/items/StatusInfoItem;
-.super Lcom/vk/profile/adapter/items/w;
+.super Lcom/vk/profile/adapter/items/OverviewInfoItem;
 .source "StatusInfoItem.kt"
 
 
@@ -24,13 +24,13 @@
     move-object v10, p0
 
     .line 1
-    new-instance v1, Lcom/vk/profile/adapter/items/w$c;
+    new-instance v1, Lcom/vk/profile/adapter/items/OverviewInfoItem$c;
 
     move v0, p1
 
     move/from16 v2, p5
 
-    invoke-direct {v1, p1, v2}, Lcom/vk/profile/adapter/items/w$c;-><init>(II)V
+    invoke-direct {v1, p1, v2}, Lcom/vk/profile/adapter/items/OverviewInfoItem$c;-><init>(II)V
 
     const/4 v6, 0x0
 
@@ -50,7 +50,7 @@
 
     move/from16 v5, p6
 
-    invoke-direct/range {v0 .. v9}, Lcom/vk/profile/adapter/items/w;-><init>(Lcom/vk/profile/adapter/items/w$a;Ljava/lang/CharSequence;ILjava/lang/Runnable;IIIILkotlin/jvm/internal/i;)V
+    invoke-direct/range {v0 .. v9}, Lcom/vk/profile/adapter/items/OverviewInfoItem;-><init>(Lcom/vk/profile/adapter/items/OverviewInfoItem$a;Ljava/lang/CharSequence;ILjava/lang/Runnable;IIIILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     move-object/from16 v0, p7
 
@@ -64,7 +64,7 @@
     return-void
 .end method
 
-.method public synthetic constructor <init>(ILjava/lang/CharSequence;ILjava/lang/Runnable;IILcom/vk/dto/music/MusicTrack;ILkotlin/jvm/internal/i;)V
+.method public synthetic constructor <init>(ILjava/lang/CharSequence;ILjava/lang/Runnable;IILcom/vk/dto/music/MusicTrack;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
     .locals 9
 
     and-int/lit8 v0, p8, 0x10
@@ -145,15 +145,15 @@
     return-object v0
 .end method
 
-.method public a(Landroid/view/ViewGroup;)Lcom/vtosters/lite/ui/b0/i;
+.method public a(Landroid/view/ViewGroup;)Lcom/vtosters/lite/ui/holder/RecyclerHolder;
     .locals 2
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
             "Landroid/view/ViewGroup;",
             ")",
-            "Lcom/vtosters/lite/ui/b0/i<",
-            "Lcom/vk/profile/adapter/items/w;",
+            "Lcom/vtosters/lite/ui/holder/RecyclerHolder<",
+            "Lcom/vk/profile/adapter/items/OverviewInfoItem;",
             ">;"
         }
     .end annotation
@@ -161,7 +161,7 @@
     .line 1
     new-instance v0, Lcom/vk/profile/adapter/items/StatusInfoItem$StatusInfoItemHolder;
 
-    invoke-virtual {p0}, Lcom/vk/profile/adapter/items/w;->S()I
+    invoke-virtual {p0}, Lcom/vk/profile/adapter/items/OverviewInfoItem;->S()I
 
     move-result v1
 

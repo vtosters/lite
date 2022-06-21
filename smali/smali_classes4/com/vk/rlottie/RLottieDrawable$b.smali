@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/rlottie/RLottieDrawable;-><init>(Ljava/lang/String;ILjava/lang/String;IILkotlin/jvm/b/c;Lkotlin/jvm/b/c;)V
+    value = Lcom/vk/rlottie/RLottieDrawable;-><init>(Ljava/lang/String;ILjava/lang/String;IILkotlin/jvm/b/Functions1;Lkotlin/jvm/b/Functions1;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;

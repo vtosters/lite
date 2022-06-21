@@ -3,12 +3,12 @@
 .source "VideoAttachment.java"
 
 # interfaces
-.implements Lcom/vtosters/lite/attachments/c;
-.implements Lcom/vk/dto/attachments/b;
+.implements Lcom/vtosters/lite/attachments/ThumbAttachment;
+.implements Lcom/vk/dto/attachments/ImageAttachment;
 .implements Lcom/vk/dto/common/Image$ConvertToImage;
-.implements Lcom/vk/newsfeed/i0/b;
-.implements Lb/h/h/f/a;
-.implements Lcom/vk/dto/common/k;
+.implements Lcom/vk/newsfeed/i0/PostingDraftJsonItem;
+.implements Lb/h/h/f/Favable;
+.implements Lcom/vk/dto/common/WithOwner;
 
 
 # static fields
@@ -68,9 +68,9 @@
     invoke-direct {p0}, Lcom/vk/dto/common/Attachment;-><init>()V
 
     .line 8
-    sget-object v0, Lcom/vk/core/util/p0;->b:Lcom/vk/core/util/p0;
+    sget-object v0, Lcom/vk/core/util/MediaLoadingInfo;->b:Lcom/vk/core/util/MediaLoadingInfo;
 
-    invoke-virtual {v0}, Lcom/vk/core/util/p0;->d()Z
+    invoke-virtual {v0}, Lcom/vk/core/util/MediaLoadingInfo;->d()Z
 
     move-result v0
 
@@ -173,9 +173,9 @@
     invoke-direct {p0}, Lcom/vk/dto/common/Attachment;-><init>()V
 
     .line 2
-    sget-object v0, Lcom/vk/core/util/p0;->b:Lcom/vk/core/util/p0;
+    sget-object v0, Lcom/vk/core/util/MediaLoadingInfo;->b:Lcom/vk/core/util/MediaLoadingInfo;
 
-    invoke-virtual {v0}, Lcom/vk/core/util/p0;->d()Z
+    invoke-virtual {v0}, Lcom/vk/core/util/MediaLoadingInfo;->d()Z
 
     move-result v0
 
@@ -241,7 +241,7 @@
     .line 2
     new-instance v0, Lcom/vtosters/lite/attachments/VideoAttachment;
 
-    invoke-static {p0}, Lcom/vk/dto/common/i;->a(Lorg/json/JSONObject;)Lcom/vk/dto/common/VideoFile;
+    invoke-static {p0}, Lcom/vk/dto/common/VideoFileFactory;->a(Lorg/json/JSONObject;)Lcom/vk/dto/common/VideoFile;
 
     move-result-object p0
 
@@ -420,9 +420,9 @@
     .end annotation
 
     .line 1
-    sget-object v0, Lcom/vk/newsfeed/i0/b;->w:Lcom/vk/newsfeed/i0/b$a;
+    sget-object v0, Lcom/vk/newsfeed/i0/PostingDraftJsonItem;->w:Lcom/vk/newsfeed/i0/PostingDraftJsonItem$a;
 
-    invoke-virtual {v0, p0}, Lcom/vk/newsfeed/i0/b$a;->a(Lcom/vk/newsfeed/i0/b;)Lorg/json/JSONObject;
+    invoke-virtual {v0, p0}, Lcom/vk/newsfeed/i0/PostingDraftJsonItem$a;->a(Lcom/vk/newsfeed/i0/PostingDraftJsonItem;)Lorg/json/JSONObject;
 
     move-result-object v0
 
@@ -850,7 +850,7 @@
 
     move-result-object v0
 
-    invoke-static {v0}, Lb/h/g/i/a;->b(Ljava/lang/Iterable;)Lcom/vk/dto/common/ImageSize;
+    invoke-static {v0}, Lb/h/g/i/ImageSizeExt;->b(Ljava/lang/Iterable;)Lcom/vk/dto/common/ImageSize;
 
     move-result-object v0
 
@@ -909,7 +909,7 @@
     .end annotation
 
     .line 1
-    sget-object v0, Lcom/vk/core/util/i;->a:Landroid/content/Context;
+    sget-object v0, Lcom/vk/core/util/AppContextHolder;->a:Landroid/content/Context;
 
     const v1, 0x7f121033
 
@@ -924,7 +924,7 @@
     .locals 1
 
     .line 1
-    sget v0, Lcom/vk/dto/attachments/a;->e:I
+    sget v0, Lcom/vk/dto/attachments/AttachmentWeights;->e:I
 
     return v0
 .end method

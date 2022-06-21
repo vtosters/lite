@@ -3,7 +3,7 @@
 .source "MsgListVc.kt"
 
 # interfaces
-.implements Lcom/vk/im/ui/components/viewcontrollers/msg_list/j/e$b;
+.implements Lcom/vk/im/ui/components/viewcontrollers/msg_list/j/ScrollToMentionController$b;
 
 
 # annotations
@@ -77,13 +77,13 @@
     .line 1
     iget-object v0, p0, Lcom/vk/im/ui/components/viewcontrollers/msg_list/MsgListVc$g;->a:Lcom/vk/im/ui/components/viewcontrollers/msg_list/MsgListVc;
 
-    invoke-virtual {v0}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/MsgListVc;->g()Lcom/vk/im/ui/components/viewcontrollers/msg_list/e;
+    invoke-virtual {v0}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/MsgListVc;->g()Lcom/vk/im/ui/components/viewcontrollers/msg_list/MsgListVcCallback;
 
     move-result-object v0
 
     if-eqz v0, :cond_0
 
-    invoke-interface {v0}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/e;->e()V
+    invoke-interface {v0}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/MsgListVcCallback;->e()V
 
     :cond_0
     return-void

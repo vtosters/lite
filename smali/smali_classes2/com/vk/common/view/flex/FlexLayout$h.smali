@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/common/view/flex/FlexLayout;->a(Lcom/vk/common/view/flex/FlexLayoutResult;Lcom/vk/common/view/flex/FlexLayoutResult;Lkotlin/jvm/b/b;Lkotlin/jvm/b/a;)V
+    value = Lcom/vk/common/view/flex/FlexLayout;->a(Lcom/vk/common/view/flex/FlexLayoutResult;Lcom/vk/common/view/flex/FlexLayoutResult;Lkotlin/jvm/b/Functions2;Lkotlin/jvm/b/Functions;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -20,16 +20,16 @@
 # instance fields
 .field final synthetic a:Lcom/vk/common/view/flex/FlexLayout;
 
-.field final synthetic b:Lkotlin/jvm/b/a;
+.field final synthetic b:Lkotlin/jvm/b/Functions;
 
 
 # direct methods
-.method constructor <init>(Lcom/vk/common/view/flex/FlexLayout;Lkotlin/jvm/b/a;)V
+.method constructor <init>(Lcom/vk/common/view/flex/FlexLayout;Lkotlin/jvm/b/Functions;)V
     .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lkotlin/jvm/b/a;",
+            "Lkotlin/jvm/b/Functions;",
             ")V"
         }
     .end annotation
@@ -37,7 +37,7 @@
     .line 1
     iput-object p1, p0, Lcom/vk/common/view/flex/FlexLayout$h;->a:Lcom/vk/common/view/flex/FlexLayout;
 
-    iput-object p2, p0, Lcom/vk/common/view/flex/FlexLayout$h;->b:Lkotlin/jvm/b/a;
+    iput-object p2, p0, Lcom/vk/common/view/flex/FlexLayout$h;->b:Lkotlin/jvm/b/Functions;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -57,9 +57,9 @@
     invoke-static {p1, v0}, Lcom/vk/common/view/flex/FlexLayout;->a(Lcom/vk/common/view/flex/FlexLayout;Z)V
 
     .line 2
-    iget-object p1, p0, Lcom/vk/common/view/flex/FlexLayout$h;->b:Lkotlin/jvm/b/a;
+    iget-object p1, p0, Lcom/vk/common/view/flex/FlexLayout$h;->b:Lkotlin/jvm/b/Functions;
 
-    invoke-interface {p1}, Lkotlin/jvm/b/a;->invoke()Ljava/lang/Object;
+    invoke-interface {p1}, Lkotlin/jvm/b/Functions;->invoke()Ljava/lang/Object;
 
     return-void
 .end method
@@ -75,9 +75,9 @@
     invoke-static {p1, v0}, Lcom/vk/common/view/flex/FlexLayout;->a(Lcom/vk/common/view/flex/FlexLayout;Z)V
 
     .line 2
-    iget-object p1, p0, Lcom/vk/common/view/flex/FlexLayout$h;->b:Lkotlin/jvm/b/a;
+    iget-object p1, p0, Lcom/vk/common/view/flex/FlexLayout$h;->b:Lkotlin/jvm/b/Functions;
 
-    invoke-interface {p1}, Lkotlin/jvm/b/a;->invoke()Ljava/lang/Object;
+    invoke-interface {p1}, Lkotlin/jvm/b/Functions;->invoke()Ljava/lang/Object;
 
     return-void
 .end method

@@ -5,7 +5,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/superapp/holders/SuperAppWidgetMiniappsHolder;->a(Lcom/vk/superapp/g/k;)V
+    value = Lcom/vk/superapp/holders/SuperAppWidgetMiniappsHolder;->a(Lcom/vk/superapp/g/SuperAppWidgetMiniappsItem;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;

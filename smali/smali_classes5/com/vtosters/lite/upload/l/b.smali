@@ -7,16 +7,16 @@
 
 
 # instance fields
-.field private final synthetic a:Lcom/vtosters/lite/upload/l/j;
+.field private final synthetic a:Lcom/vtosters/lite/upload/l/HTTPResumableUploadTask;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lcom/vtosters/lite/upload/l/j;)V
+.method public synthetic constructor <init>(Lcom/vtosters/lite/upload/l/HTTPResumableUploadTask;)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lcom/vtosters/lite/upload/l/b;->a:Lcom/vtosters/lite/upload/l/j;
+    iput-object p1, p0, Lcom/vtosters/lite/upload/l/b;->a:Lcom/vtosters/lite/upload/l/HTTPResumableUploadTask;
 
     return-void
 .end method
@@ -26,9 +26,9 @@
 .method public final run()V
     .locals 1
 
-    iget-object v0, p0, Lcom/vtosters/lite/upload/l/b;->a:Lcom/vtosters/lite/upload/l/j;
+    iget-object v0, p0, Lcom/vtosters/lite/upload/l/b;->a:Lcom/vtosters/lite/upload/l/HTTPResumableUploadTask;
 
-    invoke-virtual {v0}, Lcom/vtosters/lite/upload/l/j;->y()V
+    invoke-virtual {v0}, Lcom/vtosters/lite/upload/l/HTTPResumableUploadTask;->y()V
 
     return-void
 .end method

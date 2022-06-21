@@ -105,7 +105,7 @@
     const/high16 v0, 0x43700000    # 240.0f
 
     .line 3
-    invoke-static {v0}, Ld/a/a/c/e;->a(F)I
+    invoke-static {v0}, Lme/grishka/appkit/utils/V;->a(F)I
 
     move-result v0
 

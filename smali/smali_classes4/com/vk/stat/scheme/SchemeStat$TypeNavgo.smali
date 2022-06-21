@@ -80,7 +80,7 @@
     return-void
 .end method
 
-.method public synthetic constructor <init>(Lcom/vk/stat/scheme/SchemeStat$TypeNavgo$Subtype;Lcom/vk/stat/scheme/SchemeStat$EventScreen;Ljava/lang/String;Lcom/vk/stat/scheme/SchemeStat$EventItem;Lcom/vk/stat/scheme/SchemeStat$EventItem;Lcom/vk/stat/scheme/SchemeStat$TypeNavgo$Type;Lcom/vk/stat/scheme/SchemeStat$TypeSuperappScreenItem;ILkotlin/jvm/internal/i;)V
+.method public synthetic constructor <init>(Lcom/vk/stat/scheme/SchemeStat$TypeNavgo$Subtype;Lcom/vk/stat/scheme/SchemeStat$EventScreen;Ljava/lang/String;Lcom/vk/stat/scheme/SchemeStat$EventItem;Lcom/vk/stat/scheme/SchemeStat$EventItem;Lcom/vk/stat/scheme/SchemeStat$TypeNavgo$Type;Lcom/vk/stat/scheme/SchemeStat$TypeSuperappScreenItem;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
     .locals 10
 
     and-int/lit8 v0, p8, 0x8
@@ -277,7 +277,7 @@
 
     iget-object v1, p1, Lcom/vk/stat/scheme/SchemeStat$TypeNavgo;->a:Lcom/vk/stat/scheme/SchemeStat$TypeNavgo$Subtype;
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v0
 
@@ -287,7 +287,7 @@
 
     iget-object v1, p1, Lcom/vk/stat/scheme/SchemeStat$TypeNavgo;->b:Lcom/vk/stat/scheme/SchemeStat$EventScreen;
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v0
 
@@ -297,7 +297,7 @@
 
     iget-object v1, p1, Lcom/vk/stat/scheme/SchemeStat$TypeNavgo;->c:Ljava/lang/String;
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v0
 
@@ -307,7 +307,7 @@
 
     iget-object v1, p1, Lcom/vk/stat/scheme/SchemeStat$TypeNavgo;->d:Lcom/vk/stat/scheme/SchemeStat$EventItem;
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v0
 
@@ -317,7 +317,7 @@
 
     iget-object v1, p1, Lcom/vk/stat/scheme/SchemeStat$TypeNavgo;->e:Lcom/vk/stat/scheme/SchemeStat$EventItem;
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v0
 
@@ -327,7 +327,7 @@
 
     iget-object v1, p1, Lcom/vk/stat/scheme/SchemeStat$TypeNavgo;->f:Lcom/vk/stat/scheme/SchemeStat$TypeNavgo$Type;
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v0
 
@@ -337,7 +337,7 @@
 
     iget-object p1, p1, Lcom/vk/stat/scheme/SchemeStat$TypeNavgo;->g:Lcom/vk/stat/scheme/SchemeStat$TypeSuperappScreenItem;
 
-    invoke-static {v0, p1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v0, p1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result p1
 

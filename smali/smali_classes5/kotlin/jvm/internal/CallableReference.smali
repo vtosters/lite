@@ -3,7 +3,7 @@
 .source "CallableReference.java"
 
 # interfaces
-.implements Lkotlin/u/b;
+.implements Lkotlin/u/KCallable;
 .implements Ljava/io/Serializable;
 
 
@@ -20,7 +20,7 @@
 
 
 # instance fields
-.field private transient a:Lkotlin/u/b;
+.field private transient a:Lkotlin/u/KCallable;
 
 .field protected final receiver:Ljava/lang/Object;
 
@@ -64,27 +64,27 @@
 
 
 # virtual methods
-.method public b()Lkotlin/u/b;
+.method public b()Lkotlin/u/KCallable;
     .locals 1
 
     .line 1
-    iget-object v0, p0, Lkotlin/jvm/internal/CallableReference;->a:Lkotlin/u/b;
+    iget-object v0, p0, Lkotlin/jvm/internal/CallableReference;->a:Lkotlin/u/KCallable;
 
     if-nez v0, :cond_0
 
     .line 2
-    invoke-virtual {p0}, Lkotlin/jvm/internal/CallableReference;->c()Lkotlin/u/b;
+    invoke-virtual {p0}, Lkotlin/jvm/internal/CallableReference;->c()Lkotlin/u/KCallable;
 
     move-result-object v0
 
     .line 3
-    iput-object v0, p0, Lkotlin/jvm/internal/CallableReference;->a:Lkotlin/u/b;
+    iput-object v0, p0, Lkotlin/jvm/internal/CallableReference;->a:Lkotlin/u/KCallable;
 
     :cond_0
     return-object v0
 .end method
 
-.method protected abstract c()Lkotlin/u/b;
+.method protected abstract c()Lkotlin/u/KCallable;
 .end method
 
 .method public d()Ljava/lang/Object;
@@ -107,7 +107,7 @@
     throw v0
 .end method
 
-.method public f()Lkotlin/u/e;
+.method public f()Lkotlin/u/KDeclarationContainer;
     .locals 1
 
     .line 1
@@ -118,11 +118,11 @@
     throw v0
 .end method
 
-.method protected g()Lkotlin/u/b;
+.method protected g()Lkotlin/u/KCallable;
     .locals 1
 
     .line 1
-    invoke-virtual {p0}, Lkotlin/jvm/internal/CallableReference;->b()Lkotlin/u/b;
+    invoke-virtual {p0}, Lkotlin/jvm/internal/CallableReference;->b()Lkotlin/u/KCallable;
 
     move-result-object v0
 

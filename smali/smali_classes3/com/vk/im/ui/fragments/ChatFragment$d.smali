@@ -1,5 +1,5 @@
 .class final Lcom/vk/im/ui/fragments/ChatFragment$d;
-.super Lcom/vk/im/ui/q/h/c/a/a;
+.super Lcom/vk/im/ui/q/h/c/a/DialogActionsVcByView;
 .source "ChatFragment.kt"
 
 
@@ -34,7 +34,7 @@
     .line 1
     iput-object p1, p0, Lcom/vk/im/ui/fragments/ChatFragment$d;->l:Lcom/vk/im/ui/fragments/ChatFragment;
 
-    invoke-direct {p0, p2}, Lcom/vk/im/ui/q/h/c/a/a;-><init>(Landroid/view/ViewGroup;)V
+    invoke-direct {p0, p2}, Lcom/vk/im/ui/q/h/c/a/DialogActionsVcByView;-><init>(Landroid/view/ViewGroup;)V
 
     .line 2
     new-instance p1, Landroid/os/Handler;
@@ -46,18 +46,18 @@
     return-void
 .end method
 
-.method public static final synthetic a(Lcom/vk/im/ui/fragments/ChatFragment$d;Ljava/util/List;Lkotlin/jvm/b/b;)V
+.method public static final synthetic a(Lcom/vk/im/ui/fragments/ChatFragment$d;Ljava/util/List;Lkotlin/jvm/b/Functions2;)V
     .locals 0
 
     .line 1
-    invoke-super {p0, p1, p2}, Lcom/vk/im/ui/q/h/c/a/a;->a(Ljava/util/List;Lkotlin/jvm/b/b;)V
+    invoke-super {p0, p1, p2}, Lcom/vk/im/ui/q/h/c/a/DialogActionsVcByView;->a(Ljava/util/List;Lkotlin/jvm/b/Functions2;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public a(Ljava/util/List;Lkotlin/jvm/b/b;)V
+.method public a(Ljava/util/List;Lkotlin/jvm/b/Functions2;)V
     .locals 4
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -66,10 +66,10 @@
             "+",
             "Lcom/vk/im/ui/components/common/DialogAction;",
             ">;",
-            "Lkotlin/jvm/b/b<",
+            "Lkotlin/jvm/b/Functions2<",
             "-",
             "Lcom/vk/im/ui/components/common/DialogAction;",
-            "Lkotlin/m;",
+            "Lkotlin/Unit;",
             ">;)V"
         }
     .end annotation
@@ -88,7 +88,7 @@
 
     move-result-object v0
 
-    invoke-static {v0}, Lcom/vk/core/util/l0;->a(Landroid/content/Context;)V
+    invoke-static {v0}, Lcom/vk/core/util/KeyboardUtils;->a(Landroid/content/Context;)V
 
     .line 4
     iget-object v0, p0, Lcom/vk/im/ui/fragments/ChatFragment$d;->l:Lcom/vk/im/ui/fragments/ChatFragment;
@@ -97,7 +97,7 @@
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/vk/im/ui/q/c;->r()V
+    invoke-virtual {v0}, Lcom/vk/im/ui/q/Component;->r()V
 
     .line 5
     sget-object v0, Lcom/vk/core/vc/KeyboardController;->g:Lcom/vk/core/vc/KeyboardController;
@@ -119,11 +119,11 @@
     :goto_0
     iget-object v2, p0, Lcom/vk/im/ui/fragments/ChatFragment$d;->l:Lcom/vk/im/ui/fragments/ChatFragment;
 
-    invoke-static {v2}, Lcom/vk/im/ui/fragments/ChatFragment;->l(Lcom/vk/im/ui/fragments/ChatFragment;)Lcom/vk/im/ui/q/h/f/a;
+    invoke-static {v2}, Lcom/vk/im/ui/fragments/ChatFragment;->l(Lcom/vk/im/ui/fragments/ChatFragment;)Lcom/vk/im/ui/q/h/f/IMsgSendVc;
 
     move-result-object v2
 
-    invoke-interface {v2}, Lcom/vk/im/ui/q/h/f/a;->o()Z
+    invoke-interface {v2}, Lcom/vk/im/ui/q/h/f/IMsgSendVc;->o()Z
 
     move-result v2
 
@@ -137,7 +137,7 @@
 
     new-instance v3, Lcom/vk/im/ui/fragments/ChatFragment$d$a;
 
-    invoke-direct {v3, p0, p1, p2}, Lcom/vk/im/ui/fragments/ChatFragment$d$a;-><init>(Lcom/vk/im/ui/fragments/ChatFragment$d;Ljava/util/List;Lkotlin/jvm/b/b;)V
+    invoke-direct {v3, p0, p1, p2}, Lcom/vk/im/ui/fragments/ChatFragment$d$a;-><init>(Lcom/vk/im/ui/fragments/ChatFragment$d;Ljava/util/List;Lkotlin/jvm/b/Functions2;)V
 
     invoke-virtual {v2, v3, v0, v1}, Landroid/os/Handler;->postDelayed(Ljava/lang/Runnable;J)Z
 
@@ -155,7 +155,7 @@
     invoke-virtual {v0, v1}, Landroid/os/Handler;->removeCallbacksAndMessages(Ljava/lang/Object;)V
 
     .line 9
-    invoke-virtual {p0}, Lcom/vk/im/ui/q/h/c/a/a;->isVisible()Z
+    invoke-virtual {p0}, Lcom/vk/im/ui/q/h/c/a/DialogActionsVcByView;->isVisible()Z
 
     move-result v0
 
@@ -184,11 +184,11 @@
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/vk/im/ui/q/c;->q()V
+    invoke-virtual {v0}, Lcom/vk/im/ui/q/Component;->q()V
 
     .line 11
     :cond_0
-    invoke-super {p0, p1}, Lcom/vk/im/ui/q/h/c/a/a;->a(Z)Z
+    invoke-super {p0, p1}, Lcom/vk/im/ui/q/h/c/a/DialogActionsVcByView;->a(Z)Z
 
     move-result p1
 

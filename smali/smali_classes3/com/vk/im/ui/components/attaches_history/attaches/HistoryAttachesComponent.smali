@@ -1,5 +1,5 @@
 .class public abstract Lcom/vk/im/ui/components/attaches_history/attaches/HistoryAttachesComponent;
-.super Lcom/vk/im/ui/q/c;
+.super Lcom/vk/im/ui/q/Component;
 .source "HistoryAttachesComponent.kt"
 
 
@@ -12,15 +12,15 @@
 
 
 # static fields
-.field static final synthetic H:[Lkotlin/u/j;
+.field static final synthetic H:[Lkotlin/u/KProperty5;
 
 
 # instance fields
 .field private B:Ljava/lang/String;
 
-.field private final C:Lcom/vk/im/engine/a;
+.field private final C:Lcom/vk/im/engine/ImEngine;
 
-.field private final D:Lcom/vk/im/ui/p/b;
+.field private final D:Lcom/vk/im/ui/p/ImBridge8;
 
 .field private final E:Landroid/content/Context;
 
@@ -28,17 +28,17 @@
 
 .field private final G:I
 
-.field private final g:Lcom/vk/core/util/u0;
+.field private final g:Lcom/vk/core/util/Provider2;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Lcom/vk/core/util/u0<",
-            "Lcom/vk/im/ui/components/attaches_history/attaches/vc/b;",
+            "Lcom/vk/core/util/Provider2<",
+            "Lcom/vk/im/ui/components/attaches_history/attaches/vc/HistoryAttachesVC;",
             ">;"
         }
     .end annotation
 .end field
 
-.field private final h:Lcom/vk/core/util/u0;
+.field private final h:Lcom/vk/core/util/Provider2;
 
 
 # direct methods
@@ -47,13 +47,13 @@
 
     const/4 v0, 0x1
 
-    new-array v0, v0, [Lkotlin/u/j;
+    new-array v0, v0, [Lkotlin/u/KProperty5;
 
     new-instance v1, Lkotlin/jvm/internal/PropertyReference1Impl;
 
     const-class v2, Lcom/vk/im/ui/components/attaches_history/attaches/HistoryAttachesComponent;
 
-    invoke-static {v2}, Lkotlin/jvm/internal/o;->a(Ljava/lang/Class;)Lkotlin/u/c;
+    invoke-static {v2}, Lkotlin/jvm/internal/Reflection;->a(Ljava/lang/Class;)Lkotlin/u/KClass;
 
     move-result-object v2
 
@@ -61,34 +61,34 @@
 
     const-string v4, "getVc()Lcom/vk/im/ui/components/attaches_history/attaches/vc/HistoryAttachesVC;"
 
-    invoke-direct {v1, v2, v3, v4}, Lkotlin/jvm/internal/PropertyReference1Impl;-><init>(Lkotlin/u/e;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-direct {v1, v2, v3, v4}, Lkotlin/jvm/internal/PropertyReference1Impl;-><init>(Lkotlin/u/KDeclarationContainer;Ljava/lang/String;Ljava/lang/String;)V
 
-    invoke-static {v1}, Lkotlin/jvm/internal/o;->a(Lkotlin/jvm/internal/PropertyReference1;)Lkotlin/u/l;
+    invoke-static {v1}, Lkotlin/jvm/internal/Reflection;->a(Lkotlin/jvm/internal/PropertyReference1;)Lkotlin/u/KProperty2;
 
     const/4 v2, 0x0
 
     aput-object v1, v0, v2
 
-    sput-object v0, Lcom/vk/im/ui/components/attaches_history/attaches/HistoryAttachesComponent;->H:[Lkotlin/u/j;
+    sput-object v0, Lcom/vk/im/ui/components/attaches_history/attaches/HistoryAttachesComponent;->H:[Lkotlin/u/KProperty5;
 
     new-instance v0, Lcom/vk/im/ui/components/attaches_history/attaches/HistoryAttachesComponent$a;
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, v1}, Lcom/vk/im/ui/components/attaches_history/attaches/HistoryAttachesComponent$a;-><init>(Lkotlin/jvm/internal/i;)V
+    invoke-direct {v0, v1}, Lcom/vk/im/ui/components/attaches_history/attaches/HistoryAttachesComponent$a;-><init>(Lkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     return-void
 .end method
 
-.method public constructor <init>(Lcom/vk/im/engine/a;Lcom/vk/im/ui/p/b;Landroid/content/Context;Lcom/vk/im/engine/models/attaches/MediaType;I)V
+.method public constructor <init>(Lcom/vk/im/engine/ImEngine;Lcom/vk/im/ui/p/ImBridge8;Landroid/content/Context;Lcom/vk/im/engine/models/attaches/MediaType;I)V
     .locals 0
 
     .line 1
-    invoke-direct {p0}, Lcom/vk/im/ui/q/c;-><init>()V
+    invoke-direct {p0}, Lcom/vk/im/ui/q/Component;-><init>()V
 
-    iput-object p1, p0, Lcom/vk/im/ui/components/attaches_history/attaches/HistoryAttachesComponent;->C:Lcom/vk/im/engine/a;
+    iput-object p1, p0, Lcom/vk/im/ui/components/attaches_history/attaches/HistoryAttachesComponent;->C:Lcom/vk/im/engine/ImEngine;
 
-    iput-object p2, p0, Lcom/vk/im/ui/components/attaches_history/attaches/HistoryAttachesComponent;->D:Lcom/vk/im/ui/p/b;
+    iput-object p2, p0, Lcom/vk/im/ui/components/attaches_history/attaches/HistoryAttachesComponent;->D:Lcom/vk/im/ui/p/ImBridge8;
 
     iput-object p3, p0, Lcom/vk/im/ui/components/attaches_history/attaches/HistoryAttachesComponent;->E:Landroid/content/Context;
 
@@ -101,36 +101,36 @@
 
     invoke-direct {p1, p0}, Lcom/vk/im/ui/components/attaches_history/attaches/HistoryAttachesComponent$vcHolder$1;-><init>(Lcom/vk/im/ui/components/attaches_history/attaches/HistoryAttachesComponent;)V
 
-    invoke-static {p1}, Lcom/vk/core/util/w0;->a(Lkotlin/jvm/b/a;)Lcom/vk/core/util/u0;
+    invoke-static {p1}, Lcom/vk/core/util/Provider1;->a(Lkotlin/jvm/b/Functions;)Lcom/vk/core/util/Provider2;
 
     move-result-object p1
 
-    iput-object p1, p0, Lcom/vk/im/ui/components/attaches_history/attaches/HistoryAttachesComponent;->g:Lcom/vk/core/util/u0;
+    iput-object p1, p0, Lcom/vk/im/ui/components/attaches_history/attaches/HistoryAttachesComponent;->g:Lcom/vk/core/util/Provider2;
 
     .line 3
-    iget-object p1, p0, Lcom/vk/im/ui/components/attaches_history/attaches/HistoryAttachesComponent;->g:Lcom/vk/core/util/u0;
+    iget-object p1, p0, Lcom/vk/im/ui/components/attaches_history/attaches/HistoryAttachesComponent;->g:Lcom/vk/core/util/Provider2;
 
-    iput-object p1, p0, Lcom/vk/im/ui/components/attaches_history/attaches/HistoryAttachesComponent;->h:Lcom/vk/core/util/u0;
+    iput-object p1, p0, Lcom/vk/im/ui/components/attaches_history/attaches/HistoryAttachesComponent;->h:Lcom/vk/core/util/Provider2;
 
     return-void
 .end method
 
-.method private final B()Lcom/vk/im/ui/components/attaches_history/attaches/vc/b;
+.method private final B()Lcom/vk/im/ui/components/attaches_history/attaches/vc/HistoryAttachesVC;
     .locals 3
 
-    iget-object v0, p0, Lcom/vk/im/ui/components/attaches_history/attaches/HistoryAttachesComponent;->h:Lcom/vk/core/util/u0;
+    iget-object v0, p0, Lcom/vk/im/ui/components/attaches_history/attaches/HistoryAttachesComponent;->h:Lcom/vk/core/util/Provider2;
 
-    sget-object v1, Lcom/vk/im/ui/components/attaches_history/attaches/HistoryAttachesComponent;->H:[Lkotlin/u/j;
+    sget-object v1, Lcom/vk/im/ui/components/attaches_history/attaches/HistoryAttachesComponent;->H:[Lkotlin/u/KProperty5;
 
     const/4 v2, 0x0
 
     aget-object v1, v1, v2
 
-    invoke-static {v0, p0, v1}, Lcom/vk/core/util/w0;->a(Lcom/vk/core/util/u0;Ljava/lang/Object;Lkotlin/u/j;)Ljava/lang/Object;
+    invoke-static {v0, p0, v1}, Lcom/vk/core/util/Provider1;->a(Lcom/vk/core/util/Provider2;Ljava/lang/Object;Lkotlin/u/KProperty5;)Ljava/lang/Object;
 
     move-result-object v0
 
-    check-cast v0, Lcom/vk/im/ui/components/attaches_history/attaches/vc/b;
+    check-cast v0, Lcom/vk/im/ui/components/attaches_history/attaches/vc/HistoryAttachesVC;
 
     return-object v0
 .end method
@@ -148,7 +148,7 @@
 
     const/4 v2, 0x2
 
-    invoke-static {p0, v1, v0, v2, v0}, Lcom/vk/im/ui/components/attaches_history/attaches/HistoryAttachesComponent;->a(Lcom/vk/im/ui/components/attaches_history/attaches/HistoryAttachesComponent;ILjava/lang/String;ILjava/lang/Object;)Lc/a/t;
+    invoke-static {p0, v1, v0, v2, v0}, Lcom/vk/im/ui/components/attaches_history/attaches/HistoryAttachesComponent;->a(Lcom/vk/im/ui/components/attaches_history/attaches/HistoryAttachesComponent;ILjava/lang/String;ILjava/lang/Object;)Lio/reactivex/Single;
 
     move-result-object v0
 
@@ -157,7 +157,7 @@
 
     invoke-direct {v1, p0}, Lcom/vk/im/ui/components/attaches_history/attaches/HistoryAttachesComponent$b;-><init>(Lcom/vk/im/ui/components/attaches_history/attaches/HistoryAttachesComponent;)V
 
-    invoke-virtual {v0, v1}, Lc/a/t;->c(Lc/a/z/g;)Lc/a/t;
+    invoke-virtual {v0, v1}, Lio/reactivex/Single;->c(Lio/reactivex/functions/Consumer;)Lio/reactivex/Single;
 
     move-result-object v0
 
@@ -172,28 +172,28 @@
     invoke-direct {v2, p0}, Lcom/vk/im/ui/components/attaches_history/attaches/HistoryAttachesComponent$d;-><init>(Lcom/vk/im/ui/components/attaches_history/attaches/HistoryAttachesComponent;)V
 
     .line 6
-    invoke-virtual {v0, v1, v2}, Lc/a/t;->a(Lc/a/z/g;Lc/a/z/g;)Lio/reactivex/disposables/b;
+    invoke-virtual {v0, v1, v2}, Lio/reactivex/Single;->a(Lio/reactivex/functions/Consumer;Lio/reactivex/functions/Consumer;)Lio/reactivex/disposables/Disposable;
 
     move-result-object v0
 
     const-string v1, "loadAttachesSingle(peerI\u2026      }\n                )"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 7
-    invoke-static {v0, p0}, Lcom/vk/im/ui/q/d;->a(Lio/reactivex/disposables/b;Lcom/vk/im/ui/q/c;)V
+    invoke-static {v0, p0}, Lcom/vk/im/ui/q/ComponentExt;->a(Lio/reactivex/disposables/Disposable;Lcom/vk/im/ui/q/Component;)V
 
     return-void
 .end method
 
-.method private final a(ILjava/lang/String;)Lc/a/t;
+.method private final a(ILjava/lang/String;)Lio/reactivex/Single;
     .locals 3
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(I",
             "Ljava/lang/String;",
             ")",
-            "Lc/a/t<",
+            "Lio/reactivex/Single<",
             "Ljava/util/List<",
             "Lcom/vk/im/engine/models/attaches/HistoryAttach;",
             ">;>;"
@@ -201,7 +201,7 @@
     .end annotation
 
     .line 5
-    new-instance v0, Lcom/vk/im/engine/commands/messages/a;
+    new-instance v0, Lcom/vk/im/engine/commands/messages/DialogGetAttachHistoryCmd;
 
     .line 6
     iget-object v1, p0, Lcom/vk/im/ui/components/attaches_history/attaches/HistoryAttachesComponent;->F:Lcom/vk/im/engine/models/attaches/MediaType;
@@ -209,12 +209,12 @@
     const/16 v2, 0x64
 
     .line 7
-    invoke-direct {v0, p1, v1, p2, v2}, Lcom/vk/im/engine/commands/messages/a;-><init>(ILcom/vk/im/engine/models/attaches/MediaType;Ljava/lang/String;I)V
+    invoke-direct {v0, p1, v1, p2, v2}, Lcom/vk/im/engine/commands/messages/DialogGetAttachHistoryCmd;-><init>(ILcom/vk/im/engine/models/attaches/MediaType;Ljava/lang/String;I)V
 
     .line 8
-    iget-object p1, p0, Lcom/vk/im/ui/components/attaches_history/attaches/HistoryAttachesComponent;->C:Lcom/vk/im/engine/a;
+    iget-object p1, p0, Lcom/vk/im/ui/components/attaches_history/attaches/HistoryAttachesComponent;->C:Lcom/vk/im/engine/ImEngine;
 
-    invoke-virtual {p1, v0}, Lcom/vk/im/engine/a;->b(Lcom/vk/im/engine/i/c;)Lc/a/t;
+    invoke-virtual {p1, v0}, Lcom/vk/im/engine/ImEngine;->b(Lcom/vk/im/engine/i/ImEngineCmd;)Lio/reactivex/Single;
 
     move-result-object p1
 
@@ -223,36 +223,36 @@
 
     invoke-direct {p2, p0}, Lcom/vk/im/ui/components/attaches_history/attaches/HistoryAttachesComponent$e;-><init>(Lcom/vk/im/ui/components/attaches_history/attaches/HistoryAttachesComponent;)V
 
-    invoke-virtual {p1, p2}, Lc/a/t;->d(Lc/a/z/g;)Lc/a/t;
+    invoke-virtual {p1, p2}, Lio/reactivex/Single;->d(Lio/reactivex/functions/Consumer;)Lio/reactivex/Single;
 
     move-result-object p1
 
     .line 10
-    sget-object p2, Lcom/vk/im/ui/components/attaches_history/attaches/HistoryAttachesComponent$loadAttachesSingle$2;->c:Lkotlin/u/l;
+    sget-object p2, Lcom/vk/im/ui/components/attaches_history/attaches/HistoryAttachesComponent$loadAttachesSingle$2;->c:Lkotlin/u/KProperty2;
 
     if-eqz p2, :cond_0
 
-    new-instance v0, Lcom/vk/im/ui/components/attaches_history/attaches/e;
+    new-instance v0, Lcom/vk/im/ui/components/attaches_history/attaches/HistoryAttachesComponent1;
 
-    invoke-direct {v0, p2}, Lcom/vk/im/ui/components/attaches_history/attaches/e;-><init>(Lkotlin/jvm/b/b;)V
+    invoke-direct {v0, p2}, Lcom/vk/im/ui/components/attaches_history/attaches/HistoryAttachesComponent1;-><init>(Lkotlin/jvm/b/Functions2;)V
 
     move-object p2, v0
 
     :cond_0
-    check-cast p2, Lc/a/z/j;
+    check-cast p2, Lio/reactivex/functions/Function;
 
-    invoke-virtual {p1, p2}, Lc/a/t;->b(Lc/a/z/j;)Lc/a/t;
+    invoke-virtual {p1, p2}, Lio/reactivex/Single;->b(Lio/reactivex/functions/Function;)Lio/reactivex/Single;
 
     move-result-object p1
 
     const-string p2, "imEngine.submitWithCance\u2026esponse::historyAttaches)"
 
-    invoke-static {p1, p2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, p2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     return-object p1
 .end method
 
-.method static synthetic a(Lcom/vk/im/ui/components/attaches_history/attaches/HistoryAttachesComponent;ILjava/lang/String;ILjava/lang/Object;)Lc/a/t;
+.method static synthetic a(Lcom/vk/im/ui/components/attaches_history/attaches/HistoryAttachesComponent;ILjava/lang/String;ILjava/lang/Object;)Lio/reactivex/Single;
     .locals 0
 
     if-nez p4, :cond_1
@@ -265,7 +265,7 @@
 
     .line 3
     :cond_0
-    invoke-direct {p0, p1, p2}, Lcom/vk/im/ui/components/attaches_history/attaches/HistoryAttachesComponent;->a(ILjava/lang/String;)Lc/a/t;
+    invoke-direct {p0, p1, p2}, Lcom/vk/im/ui/components/attaches_history/attaches/HistoryAttachesComponent;->a(ILjava/lang/String;)Lio/reactivex/Single;
 
     move-result-object p0
 
@@ -282,11 +282,11 @@
     throw p0
 .end method
 
-.method public static final synthetic a(Lcom/vk/im/ui/components/attaches_history/attaches/HistoryAttachesComponent;)Lcom/vk/im/ui/components/attaches_history/attaches/vc/b;
+.method public static final synthetic a(Lcom/vk/im/ui/components/attaches_history/attaches/HistoryAttachesComponent;)Lcom/vk/im/ui/components/attaches_history/attaches/vc/HistoryAttachesVC;
     .locals 0
 
     .line 1
-    invoke-direct {p0}, Lcom/vk/im/ui/components/attaches_history/attaches/HistoryAttachesComponent;->B()Lcom/vk/im/ui/components/attaches_history/attaches/vc/b;
+    invoke-direct {p0}, Lcom/vk/im/ui/components/attaches_history/attaches/HistoryAttachesComponent;->B()Lcom/vk/im/ui/components/attaches_history/attaches/vc/HistoryAttachesVC;
 
     move-result-object p0
 
@@ -317,7 +317,7 @@
 
     const/4 v2, 0x2
 
-    invoke-static {p0, v1, v0, v2, v0}, Lcom/vk/im/ui/components/attaches_history/attaches/HistoryAttachesComponent;->a(Lcom/vk/im/ui/components/attaches_history/attaches/HistoryAttachesComponent;ILjava/lang/String;ILjava/lang/Object;)Lc/a/t;
+    invoke-static {p0, v1, v0, v2, v0}, Lcom/vk/im/ui/components/attaches_history/attaches/HistoryAttachesComponent;->a(Lcom/vk/im/ui/components/attaches_history/attaches/HistoryAttachesComponent;ILjava/lang/String;ILjava/lang/Object;)Lio/reactivex/Single;
 
     move-result-object v0
 
@@ -326,7 +326,7 @@
 
     invoke-direct {v1, p0}, Lcom/vk/im/ui/components/attaches_history/attaches/HistoryAttachesComponent$j;-><init>(Lcom/vk/im/ui/components/attaches_history/attaches/HistoryAttachesComponent;)V
 
-    invoke-virtual {v0, v1}, Lc/a/t;->c(Lc/a/z/g;)Lc/a/t;
+    invoke-virtual {v0, v1}, Lio/reactivex/Single;->c(Lio/reactivex/functions/Consumer;)Lio/reactivex/Single;
 
     move-result-object v0
 
@@ -341,16 +341,16 @@
     invoke-direct {v2, p0}, Lcom/vk/im/ui/components/attaches_history/attaches/HistoryAttachesComponent$l;-><init>(Lcom/vk/im/ui/components/attaches_history/attaches/HistoryAttachesComponent;)V
 
     .line 6
-    invoke-virtual {v0, v1, v2}, Lc/a/t;->a(Lc/a/z/g;Lc/a/z/g;)Lio/reactivex/disposables/b;
+    invoke-virtual {v0, v1, v2}, Lio/reactivex/Single;->a(Lio/reactivex/functions/Consumer;Lio/reactivex/functions/Consumer;)Lio/reactivex/disposables/Disposable;
 
     move-result-object v0
 
     const-string v1, "loadAttachesSingle(peerI\u2026      }\n                )"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 7
-    invoke-static {v0, p0}, Lcom/vk/im/ui/q/d;->a(Lio/reactivex/disposables/b;Lcom/vk/im/ui/q/c;)V
+    invoke-static {v0, p0}, Lcom/vk/im/ui/q/ComponentExt;->a(Lio/reactivex/disposables/Disposable;Lcom/vk/im/ui/q/Component;)V
 
     return-void
 .end method
@@ -369,7 +369,7 @@
 
     move-result-object p1
 
-    invoke-static {v0, p1}, Lcom/vk/im/ui/utils/b;->a(Landroid/content/Context;Ljava/lang/CharSequence;)V
+    invoke-static {v0, p1}, Lcom/vk/im/ui/utils/ClipboardUtils;->a(Landroid/content/Context;Ljava/lang/CharSequence;)V
 
     .line 12
     iget-object p1, p0, Lcom/vk/im/ui/components/attaches_history/attaches/HistoryAttachesComponent;->E:Landroid/content/Context;
@@ -382,7 +382,7 @@
 
     const/4 v3, 0x0
 
-    invoke-static {p1, v0, v1, v2, v3}, Lcom/vk/core/util/ContextExtKt;->a(Landroid/content/Context;IIILjava/lang/Object;)Lkotlin/m;
+    invoke-static {p1, v0, v1, v2, v3}, Lcom/vk/core/util/ContextExtKt;->a(Landroid/content/Context;IIILjava/lang/Object;)Lkotlin/Unit;
 
     return-void
 .end method
@@ -391,34 +391,34 @@
     .locals 1
 
     .line 1
-    iget-object p1, p0, Lcom/vk/im/ui/components/attaches_history/attaches/HistoryAttachesComponent;->g:Lcom/vk/core/util/u0;
+    iget-object p1, p0, Lcom/vk/im/ui/components/attaches_history/attaches/HistoryAttachesComponent;->g:Lcom/vk/core/util/Provider2;
 
-    invoke-interface {p1}, Lcom/vk/core/util/u0;->reset()V
+    invoke-interface {p1}, Lcom/vk/core/util/Provider2;->reset()V
 
     .line 2
-    invoke-direct {p0}, Lcom/vk/im/ui/components/attaches_history/attaches/HistoryAttachesComponent;->B()Lcom/vk/im/ui/components/attaches_history/attaches/vc/b;
+    invoke-direct {p0}, Lcom/vk/im/ui/components/attaches_history/attaches/HistoryAttachesComponent;->B()Lcom/vk/im/ui/components/attaches_history/attaches/vc/HistoryAttachesVC;
 
     move-result-object p1
 
-    invoke-interface {p1, p2}, Lcom/vk/im/ui/components/attaches_history/attaches/vc/b;->a(Landroid/view/ViewGroup;)Landroid/view/View;
+    invoke-interface {p1, p2}, Lcom/vk/im/ui/components/attaches_history/attaches/vc/HistoryAttachesVC;->a(Landroid/view/ViewGroup;)Landroid/view/View;
 
     move-result-object p1
 
     .line 3
-    invoke-virtual {p0}, Lcom/vk/im/ui/components/attaches_history/attaches/HistoryAttachesComponent;->v()Lcom/vk/im/ui/components/attaches_history/attaches/l/a;
+    invoke-virtual {p0}, Lcom/vk/im/ui/components/attaches_history/attaches/HistoryAttachesComponent;->v()Lcom/vk/im/ui/components/attaches_history/attaches/l/BaseAttachesModel;
 
     move-result-object p2
 
-    invoke-virtual {p2}, Lcom/vk/im/ui/components/attaches_history/attaches/l/a;->e()Lc/a/m;
+    invoke-virtual {p2}, Lcom/vk/im/ui/components/attaches_history/attaches/l/BaseAttachesModel;->e()Lio/reactivex/Observable;
 
     move-result-object p2
 
     .line 4
-    invoke-static {}, Lc/a/y/c/a;->a()Lc/a/s;
+    invoke-static {}, Lio/reactivex/schedulers/AndroidSchedulers;->a()Lio/reactivex/Scheduler;
 
     move-result-object p3
 
-    invoke-virtual {p2, p3}, Lc/a/m;->a(Lc/a/s;)Lc/a/m;
+    invoke-virtual {p2, p3}, Lio/reactivex/Observable;->a(Lio/reactivex/Scheduler;)Lio/reactivex/Observable;
 
     move-result-object p2
 
@@ -427,91 +427,91 @@
 
     invoke-direct {p3, p0}, Lcom/vk/im/ui/components/attaches_history/attaches/HistoryAttachesComponent$i;-><init>(Lcom/vk/im/ui/components/attaches_history/attaches/HistoryAttachesComponent;)V
 
-    invoke-virtual {p2, p3}, Lc/a/m;->f(Lc/a/z/g;)Lio/reactivex/disposables/b;
+    invoke-virtual {p2, p3}, Lio/reactivex/Observable;->f(Lio/reactivex/functions/Consumer;)Lio/reactivex/disposables/Disposable;
 
     move-result-object p2
 
     const-string p3, "model.observeListWithDif\u2026c.showItems(list, diff) }"
 
-    invoke-static {p2, p3}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p2, p3}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 6
-    invoke-static {p2, p0}, Lcom/vk/im/ui/q/d;->a(Lio/reactivex/disposables/b;Lcom/vk/im/ui/q/c;)V
+    invoke-static {p2, p0}, Lcom/vk/im/ui/q/ComponentExt;->a(Lio/reactivex/disposables/Disposable;Lcom/vk/im/ui/q/Component;)V
 
     .line 7
-    invoke-virtual {p0}, Lcom/vk/im/ui/components/attaches_history/attaches/HistoryAttachesComponent;->v()Lcom/vk/im/ui/components/attaches_history/attaches/l/a;
+    invoke-virtual {p0}, Lcom/vk/im/ui/components/attaches_history/attaches/HistoryAttachesComponent;->v()Lcom/vk/im/ui/components/attaches_history/attaches/l/BaseAttachesModel;
 
     move-result-object p2
 
-    invoke-virtual {p2}, Lcom/vk/im/ui/components/attaches_history/attaches/l/a;->f()Lc/a/m;
+    invoke-virtual {p2}, Lcom/vk/im/ui/components/attaches_history/attaches/l/BaseAttachesModel;->f()Lio/reactivex/Observable;
 
     move-result-object p2
 
     .line 8
     new-instance p3, Lcom/vk/im/ui/components/attaches_history/attaches/HistoryAttachesComponent$onCreateView$2;
 
-    invoke-direct {p0}, Lcom/vk/im/ui/components/attaches_history/attaches/HistoryAttachesComponent;->B()Lcom/vk/im/ui/components/attaches_history/attaches/vc/b;
+    invoke-direct {p0}, Lcom/vk/im/ui/components/attaches_history/attaches/HistoryAttachesComponent;->B()Lcom/vk/im/ui/components/attaches_history/attaches/vc/HistoryAttachesVC;
 
     move-result-object v0
 
-    invoke-direct {p3, v0}, Lcom/vk/im/ui/components/attaches_history/attaches/HistoryAttachesComponent$onCreateView$2;-><init>(Lcom/vk/im/ui/components/attaches_history/attaches/vc/b;)V
+    invoke-direct {p3, v0}, Lcom/vk/im/ui/components/attaches_history/attaches/HistoryAttachesComponent$onCreateView$2;-><init>(Lcom/vk/im/ui/components/attaches_history/attaches/vc/HistoryAttachesVC;)V
 
-    new-instance v0, Lcom/vk/im/ui/components/attaches_history/attaches/d;
+    new-instance v0, Lcom/vk/im/ui/components/attaches_history/attaches/HistoryAttachesComponent2;
 
-    invoke-direct {v0, p3}, Lcom/vk/im/ui/components/attaches_history/attaches/d;-><init>(Lkotlin/jvm/b/b;)V
+    invoke-direct {v0, p3}, Lcom/vk/im/ui/components/attaches_history/attaches/HistoryAttachesComponent2;-><init>(Lkotlin/jvm/b/Functions2;)V
 
-    invoke-virtual {p2, v0}, Lc/a/m;->f(Lc/a/z/g;)Lio/reactivex/disposables/b;
+    invoke-virtual {p2, v0}, Lio/reactivex/Observable;->f(Lio/reactivex/functions/Consumer;)Lio/reactivex/disposables/Disposable;
 
     move-result-object p2
 
     const-string p3, "model.observeLoading()\n \u2026ubscribe(vc::showLoading)"
 
-    invoke-static {p2, p3}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p2, p3}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 9
-    invoke-static {p2, p0}, Lcom/vk/im/ui/q/d;->a(Lio/reactivex/disposables/b;Lcom/vk/im/ui/q/c;)V
+    invoke-static {p2, p0}, Lcom/vk/im/ui/q/ComponentExt;->a(Lio/reactivex/disposables/Disposable;Lcom/vk/im/ui/q/Component;)V
 
     .line 10
-    invoke-virtual {p0}, Lcom/vk/im/ui/components/attaches_history/attaches/HistoryAttachesComponent;->v()Lcom/vk/im/ui/components/attaches_history/attaches/l/a;
+    invoke-virtual {p0}, Lcom/vk/im/ui/components/attaches_history/attaches/HistoryAttachesComponent;->v()Lcom/vk/im/ui/components/attaches_history/attaches/l/BaseAttachesModel;
 
     move-result-object p2
 
-    invoke-virtual {p2}, Lcom/vk/im/ui/components/attaches_history/attaches/l/a;->g()Lc/a/m;
+    invoke-virtual {p2}, Lcom/vk/im/ui/components/attaches_history/attaches/l/BaseAttachesModel;->g()Lio/reactivex/Observable;
 
     move-result-object p2
 
     .line 11
     new-instance p3, Lcom/vk/im/ui/components/attaches_history/attaches/HistoryAttachesComponent$onCreateView$3;
 
-    invoke-direct {p0}, Lcom/vk/im/ui/components/attaches_history/attaches/HistoryAttachesComponent;->B()Lcom/vk/im/ui/components/attaches_history/attaches/vc/b;
+    invoke-direct {p0}, Lcom/vk/im/ui/components/attaches_history/attaches/HistoryAttachesComponent;->B()Lcom/vk/im/ui/components/attaches_history/attaches/vc/HistoryAttachesVC;
 
     move-result-object v0
 
-    invoke-direct {p3, v0}, Lcom/vk/im/ui/components/attaches_history/attaches/HistoryAttachesComponent$onCreateView$3;-><init>(Lcom/vk/im/ui/components/attaches_history/attaches/vc/b;)V
+    invoke-direct {p3, v0}, Lcom/vk/im/ui/components/attaches_history/attaches/HistoryAttachesComponent$onCreateView$3;-><init>(Lcom/vk/im/ui/components/attaches_history/attaches/vc/HistoryAttachesVC;)V
 
-    new-instance v0, Lcom/vk/im/ui/components/attaches_history/attaches/d;
+    new-instance v0, Lcom/vk/im/ui/components/attaches_history/attaches/HistoryAttachesComponent2;
 
-    invoke-direct {v0, p3}, Lcom/vk/im/ui/components/attaches_history/attaches/d;-><init>(Lkotlin/jvm/b/b;)V
+    invoke-direct {v0, p3}, Lcom/vk/im/ui/components/attaches_history/attaches/HistoryAttachesComponent2;-><init>(Lkotlin/jvm/b/Functions2;)V
 
-    invoke-virtual {p2, v0}, Lc/a/m;->f(Lc/a/z/g;)Lio/reactivex/disposables/b;
+    invoke-virtual {p2, v0}, Lio/reactivex/Observable;->f(Lio/reactivex/functions/Consumer;)Lio/reactivex/disposables/Disposable;
 
     move-result-object p2
 
     const-string p3, "model.observeRefreshing(\u2026showPullToRefreshLoading)"
 
-    invoke-static {p2, p3}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p2, p3}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 12
-    invoke-static {p2, p0}, Lcom/vk/im/ui/q/d;->a(Lio/reactivex/disposables/b;Lcom/vk/im/ui/q/c;)V
+    invoke-static {p2, p0}, Lcom/vk/im/ui/q/ComponentExt;->a(Lio/reactivex/disposables/Disposable;Lcom/vk/im/ui/q/Component;)V
 
     if-eqz p4, :cond_0
 
     .line 13
-    invoke-virtual {p0}, Lcom/vk/im/ui/components/attaches_history/attaches/HistoryAttachesComponent;->v()Lcom/vk/im/ui/components/attaches_history/attaches/l/a;
+    invoke-virtual {p0}, Lcom/vk/im/ui/components/attaches_history/attaches/HistoryAttachesComponent;->v()Lcom/vk/im/ui/components/attaches_history/attaches/l/BaseAttachesModel;
 
     move-result-object p2
 
-    invoke-virtual {p2}, Lcom/vk/im/ui/components/attaches_history/attaches/l/a;->d()Z
+    invoke-virtual {p2}, Lcom/vk/im/ui/components/attaches_history/attaches/l/BaseAttachesModel;->d()Z
 
     move-result p2
 
@@ -531,9 +531,9 @@
     move-object/from16 v0, p0
 
     .line 15
-    iget-object v1, v0, Lcom/vk/im/ui/components/attaches_history/attaches/HistoryAttachesComponent;->D:Lcom/vk/im/ui/p/b;
+    iget-object v1, v0, Lcom/vk/im/ui/components/attaches_history/attaches/HistoryAttachesComponent;->D:Lcom/vk/im/ui/p/ImBridge8;
 
-    invoke-interface {v1}, Lcom/vk/im/ui/p/b;->b()Lcom/vk/im/ui/p/e;
+    invoke-interface {v1}, Lcom/vk/im/ui/p/ImBridge8;->b()Lcom/vk/im/ui/p/ImBridge11;
 
     move-result-object v2
 
@@ -601,7 +601,7 @@
     const/16 v27, 0x0
 
     .line 19
-    invoke-static/range {v2 .. v27}, Lcom/vk/im/ui/p/e$b;->a(Lcom/vk/im/ui/p/e;Landroid/content/Context;ILcom/vk/im/engine/models/dialogs/DialogExt;Ljava/lang/String;Lcom/vk/im/ui/components/msg_list/MsgListOpenMode;ZLjava/util/List;Ljava/util/List;Ljava/util/List;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Lcom/vk/im/engine/models/conversations/BotButton;Ljava/lang/String;Ljava/lang/Boolean;Ljava/lang/Boolean;Ljava/lang/Boolean;Ljava/lang/Boolean;Ljava/lang/Class;Lkotlin/jvm/b/a;Lkotlin/jvm/b/b;ILjava/lang/Object;)V
+    invoke-static/range {v2 .. v27}, Lcom/vk/im/ui/p/ImBridge$b1;->a(Lcom/vk/im/ui/p/ImBridge11;Landroid/content/Context;ILcom/vk/im/engine/models/dialogs/DialogExt;Ljava/lang/String;Lcom/vk/im/ui/components/msg_list/MsgListOpenMode;ZLjava/util/List;Ljava/util/List;Ljava/util/List;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Lcom/vk/im/engine/models/conversations/BotButton;Ljava/lang/String;Ljava/lang/Boolean;Ljava/lang/Boolean;Ljava/lang/Boolean;Ljava/lang/Boolean;Ljava/lang/Class;Lkotlin/jvm/b/Functions;Lkotlin/jvm/b/Functions2;ILjava/lang/Object;)V
 
     .line 20
     sget-object v1, Lcom/vk/metrics/eventtracking/VkTracker;->k:Lcom/vk/metrics/eventtracking/VkTracker;
@@ -611,7 +611,7 @@
 
     move-result-object v2
 
-    invoke-static {v2}, Lcom/vk/core/extensions/k;->a(Ljava/lang/Object;)Ljava/lang/String;
+    invoke-static {v2}, Lcom/vk/core/extensions/GeneralFunctions;->a(Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object v2
 
@@ -629,9 +629,9 @@
     .locals 3
 
     .line 1
-    iget-object v0, p0, Lcom/vk/im/ui/components/attaches_history/attaches/HistoryAttachesComponent;->D:Lcom/vk/im/ui/p/b;
+    iget-object v0, p0, Lcom/vk/im/ui/components/attaches_history/attaches/HistoryAttachesComponent;->D:Lcom/vk/im/ui/p/ImBridge8;
 
-    invoke-interface {v0}, Lcom/vk/im/ui/p/b;->q()Lcom/vk/im/ui/p/m;
+    invoke-interface {v0}, Lcom/vk/im/ui/p/ImBridge8;->q()Lcom/vk/im/ui/p/ImBridge6;
 
     move-result-object v0
 
@@ -641,7 +641,7 @@
 
     move-result-object v2
 
-    invoke-interface {v0, v1, v2}, Lcom/vk/im/ui/p/m;->a(Landroid/content/Context;Lcom/vk/im/engine/models/attaches/Attach;)V
+    invoke-interface {v0, v1, v2}, Lcom/vk/im/ui/p/ImBridge6;->a(Landroid/content/Context;Lcom/vk/im/engine/models/attaches/Attach;)V
 
     .line 2
     sget-object v0, Lcom/vk/metrics/eventtracking/VkTracker;->k:Lcom/vk/metrics/eventtracking/VkTracker;
@@ -651,7 +651,7 @@
 
     move-result-object p1
 
-    invoke-static {p1}, Lcom/vk/core/extensions/k;->a(Ljava/lang/Object;)Ljava/lang/String;
+    invoke-static {p1}, Lcom/vk/core/extensions/GeneralFunctions;->a(Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object p1
 
@@ -669,19 +669,19 @@
     .locals 1
 
     .line 1
-    invoke-super {p0}, Lcom/vk/im/ui/q/c;->n()V
+    invoke-super {p0}, Lcom/vk/im/ui/q/Component;->n()V
 
     .line 2
-    invoke-direct {p0}, Lcom/vk/im/ui/components/attaches_history/attaches/HistoryAttachesComponent;->B()Lcom/vk/im/ui/components/attaches_history/attaches/vc/b;
+    invoke-direct {p0}, Lcom/vk/im/ui/components/attaches_history/attaches/HistoryAttachesComponent;->B()Lcom/vk/im/ui/components/attaches_history/attaches/vc/HistoryAttachesVC;
 
     move-result-object v0
 
-    invoke-interface {v0}, Lcom/vk/im/ui/components/attaches_history/attaches/vc/b;->a()V
+    invoke-interface {v0}, Lcom/vk/im/ui/components/attaches_history/attaches/vc/HistoryAttachesVC;->a()V
 
     .line 3
-    iget-object v0, p0, Lcom/vk/im/ui/components/attaches_history/attaches/HistoryAttachesComponent;->g:Lcom/vk/core/util/u0;
+    iget-object v0, p0, Lcom/vk/im/ui/components/attaches_history/attaches/HistoryAttachesComponent;->g:Lcom/vk/core/util/Provider2;
 
-    invoke-interface {v0}, Lcom/vk/core/util/u0;->u()V
+    invoke-interface {v0}, Lcom/vk/core/util/Provider2;->u()V
 
     return-void
 .end method
@@ -695,29 +695,29 @@
     return-object v0
 .end method
 
-.method protected final t()Lcom/vk/im/ui/p/b;
+.method protected final t()Lcom/vk/im/ui/p/ImBridge8;
     .locals 1
 
     .line 1
-    iget-object v0, p0, Lcom/vk/im/ui/components/attaches_history/attaches/HistoryAttachesComponent;->D:Lcom/vk/im/ui/p/b;
+    iget-object v0, p0, Lcom/vk/im/ui/components/attaches_history/attaches/HistoryAttachesComponent;->D:Lcom/vk/im/ui/p/ImBridge8;
 
     return-object v0
 .end method
 
-.method protected final u()Lcom/vk/im/engine/a;
+.method protected final u()Lcom/vk/im/engine/ImEngine;
     .locals 1
 
     .line 1
-    iget-object v0, p0, Lcom/vk/im/ui/components/attaches_history/attaches/HistoryAttachesComponent;->C:Lcom/vk/im/engine/a;
+    iget-object v0, p0, Lcom/vk/im/ui/components/attaches_history/attaches/HistoryAttachesComponent;->C:Lcom/vk/im/engine/ImEngine;
 
     return-object v0
 .end method
 
-.method protected abstract v()Lcom/vk/im/ui/components/attaches_history/attaches/l/a;
+.method protected abstract v()Lcom/vk/im/ui/components/attaches_history/attaches/l/BaseAttachesModel;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "()",
-            "Lcom/vk/im/ui/components/attaches_history/attaches/l/a<",
+            "Lcom/vk/im/ui/components/attaches_history/attaches/l/BaseAttachesModel<",
             "*>;"
         }
     .end annotation
@@ -736,11 +736,11 @@
     .locals 1
 
     .line 1
-    invoke-direct {p0}, Lcom/vk/im/ui/components/attaches_history/attaches/HistoryAttachesComponent;->B()Lcom/vk/im/ui/components/attaches_history/attaches/vc/b;
+    invoke-direct {p0}, Lcom/vk/im/ui/components/attaches_history/attaches/HistoryAttachesComponent;->B()Lcom/vk/im/ui/components/attaches_history/attaches/vc/HistoryAttachesVC;
 
     move-result-object v0
 
-    invoke-interface {v0}, Lcom/vk/im/ui/components/attaches_history/attaches/vc/b;->getTitle()Ljava/lang/String;
+    invoke-interface {v0}, Lcom/vk/im/ui/components/attaches_history/attaches/vc/HistoryAttachesVC;->getTitle()Ljava/lang/String;
 
     move-result-object v0
 
@@ -751,11 +751,11 @@
     .locals 3
 
     .line 1
-    invoke-virtual {p0}, Lcom/vk/im/ui/components/attaches_history/attaches/HistoryAttachesComponent;->v()Lcom/vk/im/ui/components/attaches_history/attaches/l/a;
+    invoke-virtual {p0}, Lcom/vk/im/ui/components/attaches_history/attaches/HistoryAttachesComponent;->v()Lcom/vk/im/ui/components/attaches_history/attaches/l/BaseAttachesModel;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/vk/im/ui/components/attaches_history/attaches/l/a;->d()Z
+    invoke-virtual {v0}, Lcom/vk/im/ui/components/attaches_history/attaches/l/BaseAttachesModel;->d()Z
 
     move-result v0
 
@@ -765,11 +765,11 @@
 
     if-eqz v0, :cond_0
 
-    invoke-virtual {p0}, Lcom/vk/im/ui/components/attaches_history/attaches/HistoryAttachesComponent;->v()Lcom/vk/im/ui/components/attaches_history/attaches/l/a;
+    invoke-virtual {p0}, Lcom/vk/im/ui/components/attaches_history/attaches/HistoryAttachesComponent;->v()Lcom/vk/im/ui/components/attaches_history/attaches/l/BaseAttachesModel;
 
     move-result-object v0
 
-    invoke-interface {v0}, Lcom/vk/im/ui/components/attaches_history/attaches/pagination/a;->getState()Lcom/vk/im/ui/components/attaches_history/attaches/pagination/PageLoadingState;
+    invoke-interface {v0}, Lcom/vk/im/ui/components/attaches_history/attaches/pagination/PageLoadingModel;->getState()Lcom/vk/im/ui/components/attaches_history/attaches/pagination/PageLoadingState;
 
     move-result-object v0
 
@@ -784,7 +784,7 @@
 
     iget-object v1, p0, Lcom/vk/im/ui/components/attaches_history/attaches/HistoryAttachesComponent;->B:Ljava/lang/String;
 
-    invoke-direct {p0, v0, v1}, Lcom/vk/im/ui/components/attaches_history/attaches/HistoryAttachesComponent;->a(ILjava/lang/String;)Lc/a/t;
+    invoke-direct {p0, v0, v1}, Lcom/vk/im/ui/components/attaches_history/attaches/HistoryAttachesComponent;->a(ILjava/lang/String;)Lio/reactivex/Single;
 
     move-result-object v0
 
@@ -793,7 +793,7 @@
 
     invoke-direct {v1, p0}, Lcom/vk/im/ui/components/attaches_history/attaches/HistoryAttachesComponent$f;-><init>(Lcom/vk/im/ui/components/attaches_history/attaches/HistoryAttachesComponent;)V
 
-    invoke-virtual {v0, v1}, Lc/a/t;->c(Lc/a/z/g;)Lc/a/t;
+    invoke-virtual {v0, v1}, Lio/reactivex/Single;->c(Lio/reactivex/functions/Consumer;)Lio/reactivex/Single;
 
     move-result-object v0
 
@@ -808,20 +808,20 @@
     invoke-direct {v2, p0}, Lcom/vk/im/ui/components/attaches_history/attaches/HistoryAttachesComponent$h;-><init>(Lcom/vk/im/ui/components/attaches_history/attaches/HistoryAttachesComponent;)V
 
     .line 6
-    invoke-virtual {v0, v1, v2}, Lc/a/t;->a(Lc/a/z/g;Lc/a/z/g;)Lio/reactivex/disposables/b;
+    invoke-virtual {v0, v1, v2}, Lio/reactivex/Single;->a(Lio/reactivex/functions/Consumer;Lio/reactivex/functions/Consumer;)Lio/reactivex/disposables/Disposable;
 
     move-result-object v0
 
     const-string v1, "loadAttachesSingle(peerI\u2026  }\n                    )"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 7
-    invoke-static {v0, p0}, Lcom/vk/im/ui/q/d;->a(Lio/reactivex/disposables/b;Lcom/vk/im/ui/q/c;)V
+    invoke-static {v0, p0}, Lcom/vk/im/ui/q/ComponentExt;->a(Lio/reactivex/disposables/Disposable;Lcom/vk/im/ui/q/Component;)V
 
     :cond_0
     return-void
 .end method
 
-.method protected abstract z()Lcom/vk/im/ui/components/attaches_history/attaches/vc/b;
+.method protected abstract z()Lcom/vk/im/ui/components/attaches_history/attaches/vc/HistoryAttachesVC;
 .end method

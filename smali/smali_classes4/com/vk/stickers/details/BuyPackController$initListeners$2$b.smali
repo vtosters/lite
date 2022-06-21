@@ -3,7 +3,7 @@
 .source "BuyPackController.kt"
 
 # interfaces
-.implements Lc/a/z/g;
+.implements Lio/reactivex/functions/Consumer;
 
 
 # annotations
@@ -22,7 +22,7 @@
         "Ljava/lang/Object;",
         ">",
         "Ljava/lang/Object;",
-        "Lc/a/z/g<",
+        "Lio/reactivex/functions/Consumer<",
         "Ljava/lang/Throwable;",
         ">;"
     }
@@ -71,7 +71,7 @@
 
     if-eqz p1, :cond_1
 
-    invoke-static {p1}, Lcom/vk/api/base/j;->c(Ljava/lang/Throwable;)V
+    invoke-static {p1}, Lcom/vk/api/base/ThrowableExt;->c(Ljava/lang/Throwable;)V
 
     :cond_1
     return-void

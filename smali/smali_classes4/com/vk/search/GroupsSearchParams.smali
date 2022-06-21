@@ -45,7 +45,7 @@
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, v1}, Lcom/vk/search/GroupsSearchParams$a;-><init>(Lkotlin/jvm/internal/i;)V
+    invoke-direct {v0, v1}, Lcom/vk/search/GroupsSearchParams$a;-><init>(Lkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     sput-object v0, Lcom/vk/search/GroupsSearchParams;->I:Lcom/vk/search/GroupsSearchParams$a;
 
@@ -174,7 +174,7 @@
     if-eq v1, v2, :cond_1
 
     .line 4
-    sget-object v2, Lcom/vk/core/util/i;->a:Landroid/content/Context;
+    sget-object v2, Lcom/vk/core/util/AppContextHolder;->a:Landroid/content/Context;
 
     invoke-virtual {v1}, Lcom/vk/search/GroupsSearchParams$SortType;->c()I
 
@@ -186,7 +186,7 @@
 
     const-string v2, "AppContextHolder.context.getString(sortType.resId)"
 
-    invoke-static {v1, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {v0, v1}, Lcom/vk/dto/common/SearchParams$b;->a(Ljava/lang/String;)V
 
@@ -199,7 +199,7 @@
     if-eq v1, v2, :cond_2
 
     .line 6
-    sget-object v2, Lcom/vk/core/util/i;->a:Landroid/content/Context;
+    sget-object v2, Lcom/vk/core/util/AppContextHolder;->a:Landroid/content/Context;
 
     invoke-virtual {v1}, Lcom/vk/search/GroupsSearchParams$CommunityType;->c()I
 
@@ -211,7 +211,7 @@
 
     const-string v2, "AppContextHolder.context.getString(type.resId)"
 
-    invoke-static {v1, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {v0, v1}, Lcom/vk/dto/common/SearchParams$b;->a(Ljava/lang/String;)V
 
@@ -225,7 +225,7 @@
     if-nez v1, :cond_3
 
     .line 9
-    sget-object v1, Lcom/vk/core/util/i;->a:Landroid/content/Context;
+    sget-object v1, Lcom/vk/core/util/AppContextHolder;->a:Landroid/content/Context;
 
     const v2, 0x7f120307
 
@@ -235,7 +235,7 @@
 
     const-string v2, "AppContextHolder.context\u2026rch_safe_search_disabled)"
 
-    invoke-static {v1, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {v0, v1}, Lcom/vk/dto/common/SearchParams$b;->a(Ljava/lang/String;)V
 
@@ -246,7 +246,7 @@
     if-nez v1, :cond_4
 
     .line 11
-    sget-object v1, Lcom/vk/core/util/i;->a:Landroid/content/Context;
+    sget-object v1, Lcom/vk/core/util/AppContextHolder;->a:Landroid/content/Context;
 
     const v2, 0x7f1202fa
 
@@ -256,7 +256,7 @@
 
     const-string v2, "AppContextHolder.context\u2026rch_only_future_disabled)"
 
-    invoke-static {v1, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {v0, v1}, Lcom/vk/dto/common/SearchParams$b;->a(Ljava/lang/String;)V
 

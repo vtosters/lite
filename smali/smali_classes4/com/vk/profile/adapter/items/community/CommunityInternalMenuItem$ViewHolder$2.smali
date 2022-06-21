@@ -3,12 +3,12 @@
 .source "CommunityInternalMenuItem.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/b;
+.implements Lkotlin/jvm/b/Functions2;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/profile/adapter/items/community/CommunityInternalMenuItem$ViewHolder;-><init>(Landroid/view/ViewGroup;Lcom/vk/profile/adapter/di/a;)V
+    value = Lcom/vk/profile/adapter/items/community/CommunityInternalMenuItem$ViewHolder;-><init>(Landroid/view/ViewGroup;Lcom/vk/profile/adapter/di/CommunityDataScope;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -19,7 +19,7 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/b<",
+        "Lkotlin/jvm/b/Functions2<",
         "Landroid/view/View;",
         "Ljava/lang/Boolean;",
         ">;"
@@ -56,13 +56,13 @@
 
     const-string v1, "itemView"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {v0}, Landroid/view/View;->getContext()Landroid/content/Context;
 
     move-result-object v0
 
-    invoke-static {v0}, Lcom/vk/core/util/c;->a(Landroid/content/Context;)Lcom/vk/core/util/c$b;
+    invoke-static {v0}, Lcom/vk/core/util/AlertDialogs;->a(Landroid/content/Context;)Lcom/vk/core/util/AlertDialogs$b;
 
     move-result-object v0
 
@@ -71,7 +71,7 @@
 
     iget-object v2, v2, Landroidx/recyclerview/widget/RecyclerView$ViewHolder;->itemView:Landroid/view/View;
 
-    invoke-static {v2, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v2, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {v2}, Landroid/view/View;->getContext()Landroid/content/Context;
 
@@ -87,14 +87,14 @@
 
     invoke-direct {v3, p0, p1}, Lcom/vk/profile/adapter/items/community/CommunityInternalMenuItem$ViewHolder$2$a;-><init>(Lcom/vk/profile/adapter/items/community/CommunityInternalMenuItem$ViewHolder$2;Landroid/view/View;)V
 
-    invoke-virtual {v0, v2, v3}, Lcom/vk/core/util/c$b;->a(Ljava/lang/String;Ljava/lang/Runnable;)Lcom/vk/core/util/c$b;
+    invoke-virtual {v0, v2, v3}, Lcom/vk/core/util/AlertDialogs$b;->a(Ljava/lang/String;Ljava/lang/Runnable;)Lcom/vk/core/util/AlertDialogs$b;
 
     .line 3
     iget-object p1, p0, Lcom/vk/profile/adapter/items/community/CommunityInternalMenuItem$ViewHolder$2;->this$0:Lcom/vk/profile/adapter/items/community/CommunityInternalMenuItem$ViewHolder;
 
     iget-object p1, p1, Landroidx/recyclerview/widget/RecyclerView$ViewHolder;->itemView:Landroid/view/View;
 
-    invoke-static {p1, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {p1}, Landroid/view/View;->getContext()Landroid/content/Context;
 
@@ -110,16 +110,16 @@
 
     invoke-direct {v2, p0}, Lcom/vk/profile/adapter/items/community/CommunityInternalMenuItem$ViewHolder$2$b;-><init>(Lcom/vk/profile/adapter/items/community/CommunityInternalMenuItem$ViewHolder$2;)V
 
-    invoke-virtual {v0, p1, v2}, Lcom/vk/core/util/c$b;->a(Ljava/lang/String;Ljava/lang/Runnable;)Lcom/vk/core/util/c$b;
+    invoke-virtual {v0, p1, v2}, Lcom/vk/core/util/AlertDialogs$b;->a(Ljava/lang/String;Ljava/lang/Runnable;)Lcom/vk/core/util/AlertDialogs$b;
 
     .line 4
     iget-object p1, p0, Lcom/vk/profile/adapter/items/community/CommunityInternalMenuItem$ViewHolder$2;->this$0:Lcom/vk/profile/adapter/items/community/CommunityInternalMenuItem$ViewHolder;
 
-    invoke-static {p1}, Lcom/vk/profile/adapter/items/community/CommunityInternalMenuItem$ViewHolder;->b(Lcom/vk/profile/adapter/items/community/CommunityInternalMenuItem$ViewHolder;)Lcom/vk/dto/profile/a$b;
+    invoke-static {p1}, Lcom/vk/profile/adapter/items/community/CommunityInternalMenuItem$ViewHolder;->b(Lcom/vk/profile/adapter/items/community/CommunityInternalMenuItem$ViewHolder;)Lcom/vk/dto/profile/CommunityInternalMenu$b;
 
     move-result-object p1
 
-    invoke-virtual {p1}, Lcom/vk/dto/profile/a$b;->c()Ljava/lang/String;
+    invoke-virtual {p1}, Lcom/vk/dto/profile/CommunityInternalMenu$b;->c()Ljava/lang/String;
 
     move-result-object p1
 
@@ -127,7 +127,7 @@
 
     if-eqz p1, :cond_2
 
-    invoke-static {p1}, Lcom/vk/common/links/b;->a(Ljava/lang/String;)Z
+    invoke-static {p1}, Lcom/vk/common/links/LinkParser;->a(Ljava/lang/String;)Z
 
     move-result p1
 
@@ -138,7 +138,7 @@
 
     iget-object p1, p1, Landroidx/recyclerview/widget/RecyclerView$ViewHolder;->itemView:Landroid/view/View;
 
-    invoke-static {p1, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {p1}, Landroid/view/View;->getContext()Landroid/content/Context;
 
@@ -154,22 +154,22 @@
 
     invoke-direct {v1, p0}, Lcom/vk/profile/adapter/items/community/CommunityInternalMenuItem$ViewHolder$2$c;-><init>(Lcom/vk/profile/adapter/items/community/CommunityInternalMenuItem$ViewHolder$2;)V
 
-    invoke-virtual {v0, p1, v1}, Lcom/vk/core/util/c$b;->a(Ljava/lang/String;Ljava/lang/Runnable;)Lcom/vk/core/util/c$b;
+    invoke-virtual {v0, p1, v1}, Lcom/vk/core/util/AlertDialogs$b;->a(Ljava/lang/String;Ljava/lang/Runnable;)Lcom/vk/core/util/AlertDialogs$b;
 
     .line 6
     :cond_0
-    invoke-virtual {v0}, Lcom/vk/core/util/c$b;->a()Lcom/vk/core/dialogs/alert/VkAlertDialog$Builder;
+    invoke-virtual {v0}, Lcom/vk/core/util/AlertDialogs$b;->a()Lcom/vk/core/dialogs/alert/VkAlertDialog$Builder;
 
     move-result-object p1
 
     .line 7
     iget-object v0, p0, Lcom/vk/profile/adapter/items/community/CommunityInternalMenuItem$ViewHolder$2;->this$0:Lcom/vk/profile/adapter/items/community/CommunityInternalMenuItem$ViewHolder;
 
-    invoke-static {v0}, Lcom/vk/profile/adapter/items/community/CommunityInternalMenuItem$ViewHolder;->b(Lcom/vk/profile/adapter/items/community/CommunityInternalMenuItem$ViewHolder;)Lcom/vk/dto/profile/a$b;
+    invoke-static {v0}, Lcom/vk/profile/adapter/items/community/CommunityInternalMenuItem$ViewHolder;->b(Lcom/vk/profile/adapter/items/community/CommunityInternalMenuItem$ViewHolder;)Lcom/vk/dto/profile/CommunityInternalMenu$b;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/vk/dto/profile/a$b;->c()Ljava/lang/String;
+    invoke-virtual {v0}, Lcom/vk/dto/profile/CommunityInternalMenu$b;->c()Ljava/lang/String;
 
     move-result-object v0
 
@@ -186,13 +186,13 @@
 
     .line 9
     :cond_1
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     throw v2
 
     .line 10
     :cond_2
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     throw v2
 .end method

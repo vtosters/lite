@@ -3,12 +3,12 @@
 .source "MsgStorageChangesHandlerCmd.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/b;
+.implements Lkotlin/jvm/b/Functions2;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/im/engine/commands/storage_updates/MsgStorageChangesHandlerCmd;->a(Lcom/vk/im/engine/d;Lcom/vk/im/engine/models/messages/MsgFromUser;)V
+    value = Lcom/vk/im/engine/commands/storage_updates/MsgStorageChangesHandlerCmd;->a(Lcom/vk/im/engine/ImEnvironment;Lcom/vk/im/engine/models/messages/MsgFromUser;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -19,7 +19,7 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/b<",
+        "Lkotlin/jvm/b/Functions2<",
         "Lcom/vk/instantjobs/InstantJob;",
         "Ljava/lang/Boolean;",
         ">;"

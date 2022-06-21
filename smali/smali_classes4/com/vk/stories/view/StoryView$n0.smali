@@ -38,7 +38,7 @@
     .line 1
     iget-object p1, p0, Lcom/vk/stories/view/StoryView$n0;->a:Lcom/vk/stories/view/StoryView;
 
-    iget-object v0, p1, Lcom/vk/stories/view/StoryView;->C1:Lcom/vk/stories/view/y1;
+    iget-object v0, p1, Lcom/vk/stories/view/StoryView;->C1:Lcom/vk/stories/view/VideoThumbProgress;
 
     if-eqz v0, :cond_1
 
@@ -69,9 +69,9 @@
     .line 6
     iget-object p1, p0, Lcom/vk/stories/view/StoryView$n0;->a:Lcom/vk/stories/view/StoryView;
 
-    iget-object p1, p1, Lcom/vk/stories/view/StoryView;->C1:Lcom/vk/stories/view/y1;
+    iget-object p1, p1, Lcom/vk/stories/view/StoryView;->C1:Lcom/vk/stories/view/VideoThumbProgress;
 
-    invoke-virtual {p1}, Lcom/vk/stories/view/y1;->getProgressView()Lcom/vk/stories/view/LineProgress;
+    invoke-virtual {p1}, Lcom/vk/stories/view/VideoThumbProgress;->getProgressView()Lcom/vk/stories/view/LineProgress;
 
     move-result-object p1
 
@@ -156,7 +156,7 @@
 
     const/4 v0, 0x0
 
-    iput-object v0, p1, Lcom/vk/stories/view/StoryView;->C1:Lcom/vk/stories/view/y1;
+    iput-object v0, p1, Lcom/vk/stories/view/StoryView;->C1:Lcom/vk/stories/view/VideoThumbProgress;
 
     :cond_1
     return-void

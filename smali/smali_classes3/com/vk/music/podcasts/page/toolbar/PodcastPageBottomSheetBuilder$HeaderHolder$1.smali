@@ -3,7 +3,7 @@
 .source "PodcastPageBottomSheetBuilder.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/b;
+.implements Lkotlin/jvm/b/Functions2;
 
 
 # annotations
@@ -19,9 +19,9 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/b<",
+        "Lkotlin/jvm/b/Functions2<",
         "Landroid/view/View;",
-        "Lkotlin/m;",
+        "Lkotlin/Unit;",
         ">;"
     }
 .end annotation
@@ -58,13 +58,13 @@
 
     iget-object v0, p0, Lcom/vk/music/podcasts/page/toolbar/PodcastPageBottomSheetBuilder$HeaderHolder$1;->this$0:Lcom/vk/music/podcasts/page/toolbar/PodcastPageBottomSheetBuilder$HeaderHolder;
 
-    invoke-static {v0}, Lcom/vk/music/podcasts/page/toolbar/PodcastPageBottomSheetBuilder$HeaderHolder;->a(Lcom/vk/music/podcasts/page/toolbar/PodcastPageBottomSheetBuilder$HeaderHolder;)Lcom/vk/music/bottomsheets/a/a;
+    invoke-static {v0}, Lcom/vk/music/podcasts/page/toolbar/PodcastPageBottomSheetBuilder$HeaderHolder;->a(Lcom/vk/music/podcasts/page/toolbar/PodcastPageBottomSheetBuilder$HeaderHolder;)Lcom/vk/music/bottomsheets/a/MusicAction;
 
     move-result-object v0
 
-    sget-object v1, Lkotlin/m;->a:Lkotlin/m;
+    sget-object v1, Lkotlin/Unit;->a:Lkotlin/Unit;
 
-    invoke-virtual {p1, v0, v1}, Lcom/vk/music/bottomsheets/AutoDismissListener;->a(Lcom/vk/music/bottomsheets/a/a;Ljava/lang/Object;)Z
+    invoke-virtual {p1, v0, v1}, Lcom/vk/music/bottomsheets/AutoDismissListener;->a(Lcom/vk/music/bottomsheets/a/MusicAction;Ljava/lang/Object;)Z
 
     return-void
 .end method
@@ -77,7 +77,7 @@
 
     invoke-virtual {p0, p1}, Lcom/vk/music/podcasts/page/toolbar/PodcastPageBottomSheetBuilder$HeaderHolder$1;->a(Landroid/view/View;)V
 
-    sget-object p1, Lkotlin/m;->a:Lkotlin/m;
+    sget-object p1, Lkotlin/Unit;->a:Lkotlin/Unit;
 
     return-object p1
 .end method

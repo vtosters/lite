@@ -13,7 +13,7 @@
 
 
 # instance fields
-.field public final a:Lcom/crashlytics/android/answers/c0;
+.field public final a:Lcom/crashlytics/android/answers/SessionEventMetadata;
 
 .field public final b:J
 
@@ -60,12 +60,12 @@
 
 
 # direct methods
-.method private constructor <init>(Lcom/crashlytics/android/answers/c0;JLcom/crashlytics/android/answers/SessionEvent$Type;Ljava/util/Map;Ljava/lang/String;Ljava/util/Map;Ljava/lang/String;Ljava/util/Map;)V
+.method private constructor <init>(Lcom/crashlytics/android/answers/SessionEventMetadata;JLcom/crashlytics/android/answers/SessionEvent$Type;Ljava/util/Map;Ljava/lang/String;Ljava/util/Map;Ljava/lang/String;Ljava/util/Map;)V
     .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lcom/crashlytics/android/answers/c0;",
+            "Lcom/crashlytics/android/answers/SessionEventMetadata;",
             "J",
             "Lcom/crashlytics/android/answers/SessionEvent$Type;",
             "Ljava/util/Map<",
@@ -89,7 +89,7 @@
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 3
-    iput-object p1, p0, Lcom/crashlytics/android/answers/SessionEvent;->a:Lcom/crashlytics/android/answers/c0;
+    iput-object p1, p0, Lcom/crashlytics/android/answers/SessionEvent;->a:Lcom/crashlytics/android/answers/SessionEventMetadata;
 
     .line 4
     iput-wide p2, p0, Lcom/crashlytics/android/answers/SessionEvent;->b:J
@@ -115,11 +115,11 @@
     return-void
 .end method
 
-.method synthetic constructor <init>(Lcom/crashlytics/android/answers/c0;JLcom/crashlytics/android/answers/SessionEvent$Type;Ljava/util/Map;Ljava/lang/String;Ljava/util/Map;Ljava/lang/String;Ljava/util/Map;Lcom/crashlytics/android/answers/SessionEvent$a;)V
+.method synthetic constructor <init>(Lcom/crashlytics/android/answers/SessionEventMetadata;JLcom/crashlytics/android/answers/SessionEvent$Type;Ljava/util/Map;Ljava/lang/String;Ljava/util/Map;Ljava/lang/String;Ljava/util/Map;Lcom/crashlytics/android/answers/SessionEvent$a;)V
     .locals 0
 
     .line 1
-    invoke-direct/range {p0 .. p9}, Lcom/crashlytics/android/answers/SessionEvent;-><init>(Lcom/crashlytics/android/answers/c0;JLcom/crashlytics/android/answers/SessionEvent$Type;Ljava/util/Map;Ljava/lang/String;Ljava/util/Map;Ljava/lang/String;Ljava/util/Map;)V
+    invoke-direct/range {p0 .. p9}, Lcom/crashlytics/android/answers/SessionEvent;-><init>(Lcom/crashlytics/android/answers/SessionEventMetadata;JLcom/crashlytics/android/answers/SessionEvent$Type;Ljava/util/Map;Ljava/lang/String;Ljava/util/Map;Ljava/lang/String;Ljava/util/Map;)V
 
     return-void
 .end method
@@ -180,7 +180,7 @@
     return-object v0
 .end method
 
-.method public static a(Lcom/crashlytics/android/answers/m;)Lcom/crashlytics/android/answers/SessionEvent$b;
+.method public static a(Lcom/crashlytics/android/answers/CustomEvent;)Lcom/crashlytics/android/answers/SessionEvent$b;
     .locals 2
 
     .line 10
@@ -191,14 +191,14 @@
     invoke-direct {v0, v1}, Lcom/crashlytics/android/answers/SessionEvent$b;-><init>(Lcom/crashlytics/android/answers/SessionEvent$Type;)V
 
     .line 11
-    invoke-virtual {p0}, Lcom/crashlytics/android/answers/m;->b()Ljava/lang/String;
+    invoke-virtual {p0}, Lcom/crashlytics/android/answers/CustomEvent;->b()Ljava/lang/String;
 
     move-result-object v1
 
     invoke-virtual {v0, v1}, Lcom/crashlytics/android/answers/SessionEvent$b;->a(Ljava/lang/String;)Lcom/crashlytics/android/answers/SessionEvent$b;
 
     .line 12
-    invoke-virtual {p0}, Lcom/crashlytics/android/answers/d;->a()Ljava/util/Map;
+    invoke-virtual {p0}, Lcom/crashlytics/android/answers/AnswersEvent;->a()Ljava/util/Map;
 
     move-result-object p0
 
@@ -348,7 +348,7 @@
     .line 11
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget-object v1, p0, Lcom/crashlytics/android/answers/SessionEvent;->a:Lcom/crashlytics/android/answers/c0;
+    iget-object v1, p0, Lcom/crashlytics/android/answers/SessionEvent;->a:Lcom/crashlytics/android/answers/SessionEventMetadata;
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 

@@ -33,7 +33,7 @@
 
     move-result-object p1
 
-    invoke-static {}, Lcom/facebook/e;->f()Ljava/lang/String;
+    invoke-static {}, Lcom/facebook/FacebookSdk;->f()Ljava/lang/String;
 
     move-result-object v0
 
@@ -49,7 +49,7 @@
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 3
-    invoke-static {p1}, Lcom/facebook/internal/r;->d(Ljava/lang/String;)Z
+    invoke-static {p1}, Lcom/facebook/internal/Utility;->d(Ljava/lang/String;)Z
 
     move-result v0
 
@@ -124,7 +124,7 @@
 
     iget-object v2, p0, Lcom/facebook/appevents/AccessTokenAppIdPair;->accessTokenString:Ljava/lang/String;
 
-    invoke-static {v0, v2}, Lcom/facebook/internal/r;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v0, v2}, Lcom/facebook/internal/Utility;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v0
 
@@ -135,7 +135,7 @@
     iget-object v0, p0, Lcom/facebook/appevents/AccessTokenAppIdPair;->applicationId:Ljava/lang/String;
 
     .line 4
-    invoke-static {p1, v0}, Lcom/facebook/internal/r;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {p1, v0}, Lcom/facebook/internal/Utility;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result p1
 

@@ -3,12 +3,12 @@
 .source "MasksController.java"
 
 # interfaces
-.implements Lc/a/z/a;
+.implements Lio/reactivex/functions/Action;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/masks/MasksController;->c()Lc/a/m;
+    value = Lcom/vk/masks/MasksController;->c()Lio/reactivex/Observable;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -48,7 +48,7 @@
 
     const/4 v1, 0x0
 
-    invoke-static {v0, v1}, Lcom/vk/masks/MasksController;->a(Lcom/vk/masks/MasksController;Lio/reactivex/disposables/b;)V
+    invoke-static {v0, v1}, Lcom/vk/masks/MasksController;->a(Lcom/vk/masks/MasksController;Lio/reactivex/disposables/Disposable;)V
 
     return-void
 .end method

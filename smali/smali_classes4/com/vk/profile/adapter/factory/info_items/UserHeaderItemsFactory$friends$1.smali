@@ -3,12 +3,12 @@
 .source "UserHeaderItemsFactory.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/b;
+.implements Lkotlin/jvm/b/Functions2;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/profile/adapter/factory/info_items/UserHeaderItemsFactory;-><init>(Landroid/content/Context;Lcom/vk/profile/presenter/UserPresenter;Lcom/vk/newsfeed/k0/b/b/i;Ljava/util/ArrayList;Landroid/view/View$OnClickListener;Lkotlin/jvm/b/b;)V
+    value = Lcom/vk/profile/adapter/factory/info_items/UserHeaderItemsFactory;-><init>(Landroid/content/Context;Lcom/vk/profile/presenter/UserPresenter;Lcom/vk/newsfeed/k0/b/b/PostingItemPresenter;Ljava/util/ArrayList;Landroid/view/View$OnClickListener;Lkotlin/jvm/b/Functions2;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -19,9 +19,9 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/b<",
+        "Lkotlin/jvm/b/Functions2<",
         "Lcom/vtosters/lite/api/ExtendedUserProfile;",
-        "Lcom/vk/profile/adapter/items/w;",
+        "Lcom/vk/profile/adapter/items/OverviewInfoItem;",
         ">;"
     }
 .end annotation
@@ -54,13 +54,13 @@
 
 
 # virtual methods
-.method public final a(Lcom/vtosters/lite/api/ExtendedUserProfile;)Lcom/vk/profile/adapter/items/w;
+.method public final a(Lcom/vtosters/lite/api/ExtendedUserProfile;)Lcom/vk/profile/adapter/items/OverviewInfoItem;
     .locals 13
 
     const-string v0, "friends"
 
     .line 1
-    invoke-static {p1, v0}, Lcom/vk/profile/utils/d;->a(Lcom/vtosters/lite/api/ExtendedUserProfile;Ljava/lang/String;)Z
+    invoke-static {p1, v0}, Lcom/vk/profile/utils/ProfileExt;->a(Lcom/vtosters/lite/api/ExtendedUserProfile;Ljava/lang/String;)Z
 
     move-result v1
 
@@ -74,13 +74,13 @@
 
     if-lez v1, :cond_7
 
-    invoke-static {}, Lcom/vk/core/ui/themes/d;->e()Z
+    invoke-static {}, Lcom/vk/core/ui/themes/MilkshakeHelper;->e()Z
 
     move-result v1
 
     if-eqz v1, :cond_0
 
-    invoke-static {p1}, Lcom/vk/profile/utils/d;->d(Lcom/vtosters/lite/api/ExtendedUserProfile;)Z
+    invoke-static {p1}, Lcom/vk/profile/utils/ProfileExt;->d(Lcom/vtosters/lite/api/ExtendedUserProfile;)Z
 
     move-result v1
 
@@ -120,7 +120,7 @@
     const v5, 0x7f12024c
 
     .line 4
-    invoke-static {v0, v3, v5, v4}, Lcom/vk/core/util/b1;->a(IIIZ)Ljava/lang/String;
+    invoke-static {v0, v3, v5, v4}, Lcom/vk/core/util/StringUtils;->a(IIIZ)Ljava/lang/String;
 
     move-result-object v0
 
@@ -141,7 +141,7 @@
 
     const v5, 0x7f120458
 
-    invoke-static {v1, v0, v5, v4}, Lcom/vk/core/util/b1;->a(IIIZ)Ljava/lang/String;
+    invoke-static {v1, v0, v5, v4}, Lcom/vk/core/util/StringUtils;->a(IIIZ)Ljava/lang/String;
 
     move-result-object v0
 
@@ -155,7 +155,7 @@
     move-object v5, v0
 
     .line 6
-    new-instance v0, Lcom/vk/profile/adapter/items/w;
+    new-instance v0, Lcom/vk/profile/adapter/items/OverviewInfoItem;
 
     const v4, 0x7f08083a
 
@@ -175,10 +175,10 @@
 
     move-object v3, v0
 
-    invoke-direct/range {v3 .. v12}, Lcom/vk/profile/adapter/items/w;-><init>(ILjava/lang/CharSequence;Ljava/lang/Runnable;IIIIILkotlin/jvm/internal/i;)V
+    invoke-direct/range {v3 .. v12}, Lcom/vk/profile/adapter/items/OverviewInfoItem;-><init>(ILjava/lang/CharSequence;Ljava/lang/Runnable;IIIIILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     .line 7
-    invoke-static {p1}, Lcom/vk/profile/utils/d;->b(Lcom/vtosters/lite/api/ExtendedUserProfile;)Z
+    invoke-static {p1}, Lcom/vk/profile/utils/ProfileExt;->b(Lcom/vtosters/lite/api/ExtendedUserProfile;)Z
 
     move-result v3
 
@@ -192,11 +192,11 @@
 
     invoke-direct {v3, p0, p1}, Lcom/vk/profile/adapter/factory/info_items/UserHeaderItemsFactory$friends$1$a;-><init>(Lcom/vk/profile/adapter/factory/info_items/UserHeaderItemsFactory$friends$1;Lcom/vtosters/lite/api/ExtendedUserProfile;)V
 
-    invoke-virtual {v0, v3}, Lcom/vk/profile/adapter/items/w;->a(Ljava/lang/Runnable;)V
+    invoke-virtual {v0, v3}, Lcom/vk/profile/adapter/items/OverviewInfoItem;->a(Ljava/lang/Runnable;)V
 
     .line 9
     :cond_4
-    invoke-static {p1}, Lcom/vk/profile/utils/d;->b(Lcom/vtosters/lite/api/ExtendedUserProfile;)Z
+    invoke-static {p1}, Lcom/vk/profile/utils/ProfileExt;->b(Lcom/vtosters/lite/api/ExtendedUserProfile;)Z
 
     move-result v3
 
@@ -209,38 +209,38 @@
     if-lez v1, :cond_5
 
     .line 10
-    new-instance v1, Lcom/vk/api/friends/f;
+    new-instance v1, Lcom/vk/api/friends/FriendsGetMutual;
 
     iget-object v3, p1, Lcom/vtosters/lite/api/ExtendedUserProfile;->a:Lcom/vk/dto/user/UserProfile;
 
     iget v3, v3, Lcom/vk/dto/user/UserProfile;->b:I
 
-    invoke-direct {v1, v3}, Lcom/vk/api/friends/f;-><init>(I)V
+    invoke-direct {v1, v3}, Lcom/vk/api/friends/FriendsGetMutual;-><init>(I)V
 
     const/4 v3, 0x1
 
     .line 11
-    invoke-static {v1, v2, v3, v2}, Lcom/vk/api/base/d;->d(Lcom/vk/api/base/d;Lcom/vk/api/base/e;ILjava/lang/Object;)Lc/a/m;
+    invoke-static {v1, v2, v3, v2}, Lcom/vk/api/base/ApiRequest;->d(Lcom/vk/api/base/ApiRequest;Lcom/vk/api/base/ApiThreadHolder;ILjava/lang/Object;)Lio/reactivex/Observable;
 
     move-result-object v1
 
     .line 12
     new-instance v2, Lcom/vk/profile/adapter/factory/info_items/UserHeaderItemsFactory$friends$1$b;
 
-    invoke-direct {v2, p0, p1, v0}, Lcom/vk/profile/adapter/factory/info_items/UserHeaderItemsFactory$friends$1$b;-><init>(Lcom/vk/profile/adapter/factory/info_items/UserHeaderItemsFactory$friends$1;Lcom/vtosters/lite/api/ExtendedUserProfile;Lcom/vk/profile/adapter/items/w;)V
+    invoke-direct {v2, p0, p1, v0}, Lcom/vk/profile/adapter/factory/info_items/UserHeaderItemsFactory$friends$1$b;-><init>(Lcom/vk/profile/adapter/factory/info_items/UserHeaderItemsFactory$friends$1;Lcom/vtosters/lite/api/ExtendedUserProfile;Lcom/vk/profile/adapter/items/OverviewInfoItem;)V
 
-    invoke-virtual {v1, v2}, Lc/a/m;->f(Lc/a/z/g;)Lio/reactivex/disposables/b;
+    invoke-virtual {v1, v2}, Lio/reactivex/Observable;->f(Lio/reactivex/functions/Consumer;)Lio/reactivex/disposables/Disposable;
 
     move-result-object v1
 
     const-string v2, "FriendsGetMutual(profile\u2026                        }"
 
-    invoke-static {v1, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 13
     iget-object v2, p0, Lcom/vk/profile/adapter/factory/info_items/UserHeaderItemsFactory$friends$1;->$context:Landroid/content/Context;
 
-    invoke-static {v1, v2}, Lcom/vk/extensions/p;->a(Lio/reactivex/disposables/b;Landroid/content/Context;)Lio/reactivex/disposables/b;
+    invoke-static {v1, v2}, Lcom/vk/extensions/VKRxExt;->a(Lio/reactivex/disposables/Disposable;Landroid/content/Context;)Lio/reactivex/disposables/Disposable;
 
     .line 14
     :cond_5
@@ -257,7 +257,7 @@
     .line 15
     iget-object v1, p0, Lcom/vk/profile/adapter/factory/info_items/UserHeaderItemsFactory$friends$1;->this$0:Lcom/vk/profile/adapter/factory/info_items/UserHeaderItemsFactory;
 
-    invoke-virtual {v0}, Lcom/vk/profile/adapter/items/w;->U()Ljava/util/ArrayList;
+    invoke-virtual {v0}, Lcom/vk/profile/adapter/items/OverviewInfoItem;->U()Ljava/util/ArrayList;
 
     move-result-object v2
 
@@ -276,7 +276,7 @@
     .line 1
     check-cast p1, Lcom/vtosters/lite/api/ExtendedUserProfile;
 
-    invoke-virtual {p0, p1}, Lcom/vk/profile/adapter/factory/info_items/UserHeaderItemsFactory$friends$1;->a(Lcom/vtosters/lite/api/ExtendedUserProfile;)Lcom/vk/profile/adapter/items/w;
+    invoke-virtual {p0, p1}, Lcom/vk/profile/adapter/factory/info_items/UserHeaderItemsFactory$friends$1;->a(Lcom/vtosters/lite/api/ExtendedUserProfile;)Lcom/vk/profile/adapter/items/OverviewInfoItem;
 
     move-result-object p1
 

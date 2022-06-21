@@ -3,7 +3,7 @@
 .source "StateHistory.kt"
 
 # interfaces
-.implements Lcom/vk/im/engine/utils/collection/d$a;
+.implements Lcom/vk/im/engine/utils/collection/IntCollection$a;
 
 
 # annotations

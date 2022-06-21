@@ -6,19 +6,19 @@
 # instance fields
 .field private a:Lcom/vk/photoviewer/PhotoViewer$g;
 
-.field private b:Lkotlin/jvm/b/b;
+.field private b:Lkotlin/jvm/b/Functions2;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Lkotlin/jvm/b/b<",
+            "Lkotlin/jvm/b/Functions2<",
             "-",
             "Lcom/vk/dto/tags/Tag;",
-            "Lkotlin/m;",
+            "Lkotlin/Unit;",
             ">;"
         }
     .end annotation
 .end field
 
-.field private final c:Lcom/vk/core/util/s0;
+.field private final c:Lcom/vk/core/util/PriceFormatter;
 
 .field private d:Ljava/util/List;
     .annotation system Ldalvik/annotation/Signature;
@@ -34,7 +34,7 @@
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/util/List<",
-            "Lcom/vk/ui/photoviewer/b;",
+            "Lcom/vk/ui/photoviewer/TaggedGoodsOverlayView;",
             ">;"
         }
     .end annotation
@@ -44,7 +44,7 @@
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/util/Stack<",
-            "Lcom/vk/ui/photoviewer/b;",
+            "Lcom/vk/ui/photoviewer/TaggedGoodsOverlayView;",
             ">;"
         }
     .end annotation
@@ -59,11 +59,11 @@
     invoke-direct {p0, p1, p2, p3}, Landroid/widget/FrameLayout;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
 
     .line 3
-    new-instance p1, Lcom/vk/core/util/s0;
+    new-instance p1, Lcom/vk/core/util/PriceFormatter;
 
-    invoke-direct {p1}, Lcom/vk/core/util/s0;-><init>()V
+    invoke-direct {p1}, Lcom/vk/core/util/PriceFormatter;-><init>()V
 
-    iput-object p1, p0, Lcom/vk/ui/photoviewer/GoodsOverlayView;->c:Lcom/vk/core/util/s0;
+    iput-object p1, p0, Lcom/vk/ui/photoviewer/GoodsOverlayView;->c:Lcom/vk/core/util/PriceFormatter;
 
     .line 4
     invoke-static {}, Lkotlin/collections/l;->a()Ljava/util/List;
@@ -94,7 +94,7 @@
     return-void
 .end method
 
-.method public synthetic constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;IILkotlin/jvm/internal/i;)V
+.method public synthetic constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;IILkotlin/jvm/internal/DefaultConstructorMarker;)V
     .locals 0
 
     and-int/lit8 p5, p4, 0x2
@@ -203,10 +203,10 @@
 
     move-result-object v1
 
-    check-cast v1, Lcom/vk/ui/photoviewer/b;
+    check-cast v1, Lcom/vk/ui/photoviewer/TaggedGoodsOverlayView;
 
     .line 18
-    invoke-virtual {v1, p0}, Lcom/vk/ui/photoviewer/b;->a(Landroid/view/ViewGroup;)V
+    invoke-virtual {v1, p0}, Lcom/vk/ui/photoviewer/TaggedGoodsOverlayView;->a(Landroid/view/ViewGroup;)V
 
     .line 19
     iget-object v2, p0, Lcom/vk/ui/photoviewer/GoodsOverlayView;->f:Ljava/util/Stack;
@@ -228,7 +228,7 @@
     .locals 10
 
     .line 21
-    invoke-direct {p0}, Lcom/vk/ui/photoviewer/GoodsOverlayView;->getOrCreateBubble()Lcom/vk/ui/photoviewer/b;
+    invoke-direct {p0}, Lcom/vk/ui/photoviewer/GoodsOverlayView;->getOrCreateBubble()Lcom/vk/ui/photoviewer/TaggedGoodsOverlayView;
 
     move-result-object v0
 
@@ -241,7 +241,7 @@
 
     move-result-object v1
 
-    invoke-virtual {v0, v1}, Lcom/vk/ui/photoviewer/b;->b(Ljava/lang/CharSequence;)V
+    invoke-virtual {v0, v1}, Lcom/vk/ui/photoviewer/TaggedGoodsOverlayView;->b(Ljava/lang/CharSequence;)V
 
     .line 23
     invoke-virtual {p2}, Lcom/vk/dto/tags/Tag;->t1()Lcom/vk/dto/tags/TagLink;
@@ -259,7 +259,7 @@
     if-eqz v1, :cond_0
 
     .line 24
-    iget-object v4, p0, Lcom/vk/ui/photoviewer/GoodsOverlayView;->c:Lcom/vk/core/util/s0;
+    iget-object v4, p0, Lcom/vk/ui/photoviewer/GoodsOverlayView;->c:Lcom/vk/core/util/PriceFormatter;
 
     invoke-virtual {v1}, Lcom/vk/dto/attachments/Product;->y1()I
 
@@ -269,7 +269,7 @@
 
     move-result-object v1
 
-    invoke-virtual {v4, v5, v1}, Lcom/vk/core/util/s0;->a(ILjava/lang/String;)Ljava/lang/CharSequence;
+    invoke-virtual {v4, v5, v1}, Lcom/vk/core/util/PriceFormatter;->a(ILjava/lang/String;)Ljava/lang/CharSequence;
 
     move-result-object v1
 
@@ -305,14 +305,14 @@
 
     .line 26
     :goto_0
-    invoke-virtual {v0, v1}, Lcom/vk/ui/photoviewer/b;->a(Ljava/lang/CharSequence;)V
+    invoke-virtual {v0, v1}, Lcom/vk/ui/photoviewer/TaggedGoodsOverlayView;->a(Ljava/lang/CharSequence;)V
 
     .line 27
     new-instance v1, Lcom/vk/ui/photoviewer/GoodsOverlayView$attachBubble$1;
 
     invoke-direct {v1, p0, p2}, Lcom/vk/ui/photoviewer/GoodsOverlayView$attachBubble$1;-><init>(Lcom/vk/ui/photoviewer/GoodsOverlayView;Lcom/vk/dto/tags/Tag;)V
 
-    invoke-virtual {v0, v1}, Lcom/vk/ui/photoviewer/b;->a(Lkotlin/jvm/b/a;)V
+    invoke-virtual {v0, v1}, Lcom/vk/ui/photoviewer/TaggedGoodsOverlayView;->a(Lkotlin/jvm/b/Functions;)V
 
     .line 28
     iget v1, p1, Landroid/graphics/RectF;->left:F
@@ -372,7 +372,7 @@
     const/4 v2, 0x1
 
     :cond_1
-    invoke-virtual {v0, p1, p2, p0, v2}, Lcom/vk/ui/photoviewer/b;->a(FFLandroid/view/ViewGroup;Z)V
+    invoke-virtual {v0, p1, p2, p0, v2}, Lcom/vk/ui/photoviewer/TaggedGoodsOverlayView;->a(FFLandroid/view/ViewGroup;Z)V
 
     .line 31
     iget-object p1, p0, Lcom/vk/ui/photoviewer/GoodsOverlayView;->e:Ljava/util/List;
@@ -403,7 +403,7 @@
     return p1
 .end method
 
-.method private final getOrCreateBubble()Lcom/vk/ui/photoviewer/b;
+.method private final getOrCreateBubble()Lcom/vk/ui/photoviewer/TaggedGoodsOverlayView;
     .locals 3
 
     .line 1
@@ -426,15 +426,15 @@
 
     const-string v1, "bubblePool.pop()"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    check-cast v0, Lcom/vk/ui/photoviewer/b;
+    check-cast v0, Lcom/vk/ui/photoviewer/TaggedGoodsOverlayView;
 
     goto :goto_0
 
     .line 3
     :cond_0
-    sget-object v0, Lcom/vk/ui/photoviewer/b;->h:Lcom/vk/ui/photoviewer/b$b;
+    sget-object v0, Lcom/vk/ui/photoviewer/TaggedGoodsOverlayView;->h:Lcom/vk/ui/photoviewer/TaggedGoodsOverlayView$b;
 
     invoke-virtual {p0}, Landroid/widget/FrameLayout;->getContext()Landroid/content/Context;
 
@@ -442,9 +442,9 @@
 
     const-string v2, "context"
 
-    invoke-static {v1, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    invoke-virtual {v0, v1}, Lcom/vk/ui/photoviewer/b$b;->a(Landroid/content/Context;)Lcom/vk/ui/photoviewer/b;
+    invoke-virtual {v0, v1}, Lcom/vk/ui/photoviewer/TaggedGoodsOverlayView$b;->a(Landroid/content/Context;)Lcom/vk/ui/photoviewer/TaggedGoodsOverlayView;
 
     move-result-object v0
 
@@ -671,20 +671,20 @@
     return-object v0
 .end method
 
-.method public final getOnBubbleClickListener()Lkotlin/jvm/b/b;
+.method public final getOnBubbleClickListener()Lkotlin/jvm/b/Functions2;
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "()",
-            "Lkotlin/jvm/b/b<",
+            "Lkotlin/jvm/b/Functions2<",
             "Lcom/vk/dto/tags/Tag;",
-            "Lkotlin/m;",
+            "Lkotlin/Unit;",
             ">;"
         }
     .end annotation
 
     .line 1
-    iget-object v0, p0, Lcom/vk/ui/photoviewer/GoodsOverlayView;->b:Lkotlin/jvm/b/b;
+    iget-object v0, p0, Lcom/vk/ui/photoviewer/GoodsOverlayView;->b:Lkotlin/jvm/b/Functions2;
 
     return-object v0
 .end method
@@ -718,21 +718,21 @@
     return-void
 .end method
 
-.method public final setOnBubbleClickListener(Lkotlin/jvm/b/b;)V
+.method public final setOnBubbleClickListener(Lkotlin/jvm/b/Functions2;)V
     .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lkotlin/jvm/b/b<",
+            "Lkotlin/jvm/b/Functions2<",
             "-",
             "Lcom/vk/dto/tags/Tag;",
-            "Lkotlin/m;",
+            "Lkotlin/Unit;",
             ">;)V"
         }
     .end annotation
 
     .line 1
-    iput-object p1, p0, Lcom/vk/ui/photoviewer/GoodsOverlayView;->b:Lkotlin/jvm/b/b;
+    iput-object p1, p0, Lcom/vk/ui/photoviewer/GoodsOverlayView;->b:Lkotlin/jvm/b/Functions2;
 
     return-void
 .end method

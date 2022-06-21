@@ -3,7 +3,7 @@
 .source "ValidationHandlerChainCall.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/d;
+.implements Lkotlin/jvm/b/Functions4;
 
 
 # annotations
@@ -19,13 +19,13 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/FunctionReference;",
-        "Lkotlin/jvm/b/d<",
-        "Lcom/vk/api/sdk/i;",
+        "Lkotlin/jvm/b/Functions4<",
+        "Lcom/vk/api/sdk/VKApiValidationHandler;",
         "Ljava/lang/String;",
-        "Lcom/vk/api/sdk/i$a<",
-        "Lcom/vk/api/sdk/i$b;",
+        "Lcom/vk/api/sdk/VKApiValidationHandler$a<",
+        "Lcom/vk/api/sdk/VKApiValidationHandler$b;",
         ">;",
-        "Lkotlin/m;",
+        "Lkotlin/Unit;",
         ">;"
     }
 .end annotation
@@ -64,34 +64,34 @@
     .locals 0
 
     .line 1
-    check-cast p1, Lcom/vk/api/sdk/i;
+    check-cast p1, Lcom/vk/api/sdk/VKApiValidationHandler;
 
     check-cast p2, Ljava/lang/String;
 
-    check-cast p3, Lcom/vk/api/sdk/i$a;
+    check-cast p3, Lcom/vk/api/sdk/VKApiValidationHandler$a;
 
-    invoke-virtual {p0, p1, p2, p3}, Lcom/vk/api/sdk/chain/ValidationHandlerChainCall$handleValidation$credentials$1;->a(Lcom/vk/api/sdk/i;Ljava/lang/String;Lcom/vk/api/sdk/i$a;)V
+    invoke-virtual {p0, p1, p2, p3}, Lcom/vk/api/sdk/chain/ValidationHandlerChainCall$handleValidation$credentials$1;->a(Lcom/vk/api/sdk/VKApiValidationHandler;Ljava/lang/String;Lcom/vk/api/sdk/VKApiValidationHandler$a;)V
 
-    sget-object p1, Lkotlin/m;->a:Lkotlin/m;
+    sget-object p1, Lkotlin/Unit;->a:Lkotlin/Unit;
 
     return-object p1
 .end method
 
-.method public final a(Lcom/vk/api/sdk/i;Ljava/lang/String;Lcom/vk/api/sdk/i$a;)V
+.method public final a(Lcom/vk/api/sdk/VKApiValidationHandler;Ljava/lang/String;Lcom/vk/api/sdk/VKApiValidationHandler$a;)V
     .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lcom/vk/api/sdk/i;",
+            "Lcom/vk/api/sdk/VKApiValidationHandler;",
             "Ljava/lang/String;",
-            "Lcom/vk/api/sdk/i$a<",
-            "Lcom/vk/api/sdk/i$b;",
+            "Lcom/vk/api/sdk/VKApiValidationHandler$a<",
+            "Lcom/vk/api/sdk/VKApiValidationHandler$b;",
             ">;)V"
         }
     .end annotation
 
     .line 2
-    invoke-interface {p1, p2, p3}, Lcom/vk/api/sdk/i;->a(Ljava/lang/String;Lcom/vk/api/sdk/i$a;)V
+    invoke-interface {p1, p2, p3}, Lcom/vk/api/sdk/VKApiValidationHandler;->a(Ljava/lang/String;Lcom/vk/api/sdk/VKApiValidationHandler$a;)V
 
     return-void
 .end method
@@ -104,12 +104,12 @@
     return-object v0
 .end method
 
-.method public final f()Lkotlin/u/e;
+.method public final f()Lkotlin/u/KDeclarationContainer;
     .locals 1
 
-    const-class v0, Lcom/vk/api/sdk/i;
+    const-class v0, Lcom/vk/api/sdk/VKApiValidationHandler;
 
-    invoke-static {v0}, Lkotlin/jvm/internal/o;->a(Ljava/lang/Class;)Lkotlin/u/c;
+    invoke-static {v0}, Lkotlin/jvm/internal/Reflection;->a(Ljava/lang/Class;)Lkotlin/u/KClass;
 
     move-result-object v0
 

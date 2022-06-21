@@ -24,7 +24,7 @@
     return-void
 .end method
 
-.method public synthetic constructor <init>(Lkotlin/jvm/internal/i;)V
+.method public synthetic constructor <init>(Lkotlin/jvm/internal/DefaultConstructorMarker;)V
     .locals 0
 
     .line 2
@@ -95,7 +95,7 @@
 
     const-string v8, "this.getJSONObject(i)"
 
-    invoke-static {v7, v8}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v7, v8}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 8
     sget-object v8, Lcom/vk/newsfeed/posting/dto/PosterConfigCategory;->d:Lcom/vk/newsfeed/posting/dto/PosterConfigCategory$b;
@@ -126,7 +126,7 @@
 
     const-string v4, "jo.optJSONObject(\"constants\")"
 
-    invoke-static {p1, v4}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v4}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {v1, p1}, Lcom/vk/dto/newsfeed/entries/Poster$Constants$b;->a(Lorg/json/JSONObject;)Lcom/vk/dto/newsfeed/entries/Poster$Constants;
 
@@ -137,7 +137,7 @@
 
     const-string v4, "textPlaceholder"
 
-    invoke-static {v2, v4}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v2, v4}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-direct {v1, v0, p1, v2, v3}, Lcom/vk/newsfeed/posting/dto/PosterSettings;-><init>(Ljava/util/List;Lcom/vk/dto/newsfeed/entries/Poster$Constants;Ljava/lang/String;Z)V
 

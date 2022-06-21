@@ -3,7 +3,7 @@
 .source "NotificationsAdapter.kt"
 
 # interfaces
-.implements Lc/a/z/g;
+.implements Lio/reactivex/functions/Consumer;
 
 
 # annotations
@@ -22,7 +22,7 @@
         "Ljava/lang/Object;",
         ">",
         "Ljava/lang/Object;",
-        "Lc/a/z/g<",
+        "Lio/reactivex/functions/Consumer<",
         "Ljava/lang/Boolean;",
         ">;"
     }
@@ -64,11 +64,11 @@
     .line 1
     iget-object p1, p0, Lcom/vk/notifications/NotificationsAdapter$e;->a:Lcom/vk/notifications/NotificationsAdapter;
 
-    invoke-static {p1}, Lcom/vk/notifications/NotificationsAdapter;->a(Lcom/vk/notifications/NotificationsAdapter;)Lcom/vk/lists/b;
+    invoke-static {p1}, Lcom/vk/notifications/NotificationsAdapter;->a(Lcom/vk/notifications/NotificationsAdapter;)Lcom/vk/lists/BaseListDataSet;
 
     move-result-object p1
 
-    invoke-interface {p1}, Lcom/vk/lists/d;->size()I
+    invoke-interface {p1}, Lcom/vk/lists/DataSet;->size()I
 
     move-result p1
 
@@ -81,7 +81,7 @@
     .line 2
     iget-object p1, p0, Lcom/vk/notifications/NotificationsAdapter$e;->a:Lcom/vk/notifications/NotificationsAdapter;
 
-    invoke-static {p1}, Lcom/vk/notifications/NotificationsAdapter;->a(Lcom/vk/notifications/NotificationsAdapter;)Lcom/vk/lists/b;
+    invoke-static {p1}, Lcom/vk/notifications/NotificationsAdapter;->a(Lcom/vk/notifications/NotificationsAdapter;)Lcom/vk/lists/BaseListDataSet;
 
     move-result-object p1
 
@@ -108,7 +108,7 @@
     :cond_1
     iget-object p1, p0, Lcom/vk/notifications/NotificationsAdapter$e;->a:Lcom/vk/notifications/NotificationsAdapter;
 
-    invoke-static {p1}, Lcom/vk/notifications/NotificationsAdapter;->a(Lcom/vk/notifications/NotificationsAdapter;)Lcom/vk/lists/b;
+    invoke-static {p1}, Lcom/vk/notifications/NotificationsAdapter;->a(Lcom/vk/notifications/NotificationsAdapter;)Lcom/vk/lists/BaseListDataSet;
 
     move-result-object p1
 

@@ -38,7 +38,7 @@
     .line 1
     iget-object v0, p0, Lcom/vk/profile/presenter/UserPresenter$k;->b:Landroid/content/Context;
 
-    invoke-static {}, Lcom/vk/core/util/m0;->a()Ljava/lang/String;
+    invoke-static {}, Lcom/vk/core/util/LangUtils;->a()Ljava/lang/String;
 
     move-result-object v1
 
@@ -46,7 +46,7 @@
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Lcom/vtosters/lite/fragments/money/p;->a(Landroid/content/Context;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/vtosters/lite/fragments/money/MoneyWebViewFragment;->a(Landroid/content/Context;Ljava/lang/String;)V
 
     return-void
 .end method

@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/instantjobs/impl/InstantJobExecutor;->u(Lcom/vk/instantjobs/impl/b;)Lcom/vk/instantjobs/impl/InstantJobExecutor$b;
+    value = Lcom/vk/instantjobs/impl/InstantJobExecutor;->u(Lcom/vk/instantjobs/impl/InstantJobInfo;)Lcom/vk/instantjobs/impl/InstantJobExecutor$b;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -61,7 +61,7 @@
     .line 1
     invoke-virtual {p0}, Lcom/vk/instantjobs/impl/InstantJobExecutor$f;->call()V
 
-    sget-object v0, Lkotlin/m;->a:Lkotlin/m;
+    sget-object v0, Lkotlin/Unit;->a:Lkotlin/Unit;
 
     return-object v0
 .end method

@@ -422,7 +422,7 @@
 
     const-string v1, "motion_controller"
 
-    invoke-static {v1, v0}, Le/c/a/a;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, v0}, Le/c/a/Log;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 2
     :try_start_0
@@ -456,7 +456,7 @@
 
     move-result-object p0
 
-    invoke-static {v1, p0}, Le/c/a/a;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, p0}, Le/c/a/Log;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     const/4 v0, 0x0
 
@@ -526,7 +526,7 @@
     const-string v1, "updateEulerAngles - failed to get rotation matrix!"
 
     .line 2
-    invoke-static {v0, v1}, Le/c/a/a;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Le/c/a/Log;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     return-void
 
@@ -660,7 +660,7 @@
 
     const-string v1, "motion_controller"
 
-    invoke-static {v1, v0}, Le/c/a/a;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, v0}, Le/c/a/Log;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 2
     iget-object v0, p0, Lorg/webrtc/videoengine/MotionController;->rotationVectorSensor:Landroid/hardware/Sensor;
@@ -915,7 +915,7 @@
 
     const-string v1, "motion_controller"
 
-    invoke-static {v1, v0}, Le/c/a/a;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, v0}, Le/c/a/Log;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 2
     iget-boolean v0, p0, Lorg/webrtc/videoengine/MotionController;->started:Z
@@ -1093,7 +1093,7 @@
 
     move-result-object p1
 
-    invoke-static {v1, p1}, Le/c/a/a;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, p1}, Le/c/a/Log;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 16
     iput-boolean v2, p0, Lorg/webrtc/videoengine/MotionController;->started:Z
@@ -1126,7 +1126,7 @@
 
     const-string v1, "motion_controller"
 
-    invoke-static {v1, v0}, Le/c/a/a;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, v0}, Le/c/a/Log;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 2
     iget-boolean v0, p0, Lorg/webrtc/videoengine/MotionController;->started:Z

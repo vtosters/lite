@@ -3,7 +3,7 @@
 .source "PostsController.kt"
 
 # interfaces
-.implements Lc/a/z/g;
+.implements Lio/reactivex/functions/Consumer;
 
 
 # annotations
@@ -22,8 +22,8 @@
         "Ljava/lang/Object;",
         ">",
         "Ljava/lang/Object;",
-        "Lc/a/z/g<",
-        "Lcom/vtosters/lite/api/newsfeed/d$a;",
+        "Lio/reactivex/functions/Consumer<",
+        "Lcom/vtosters/lite/api/newsfeed/NewsfeedIgnoreItem$a;",
         ">;"
     }
 .end annotation
@@ -50,11 +50,11 @@
 
 
 # virtual methods
-.method public final a(Lcom/vtosters/lite/api/newsfeed/d$a;)V
+.method public final a(Lcom/vtosters/lite/api/newsfeed/NewsfeedIgnoreItem$a;)V
     .locals 3
 
     .line 1
-    iget v0, p1, Lcom/vtosters/lite/api/newsfeed/d$a;->a:I
+    iget v0, p1, Lcom/vtosters/lite/api/newsfeed/NewsfeedIgnoreItem$a;->a:I
 
     if-lez v0, :cond_0
 
@@ -63,7 +63,7 @@
 
     iget-object v1, p0, Lcom/vk/newsfeed/controllers/PostsController$q;->a:Lcom/vk/dto/newsfeed/entries/NewsEntry;
 
-    iget-object p1, p1, Lcom/vtosters/lite/api/newsfeed/d$a;->b:Ljava/lang/String;
+    iget-object p1, p1, Lcom/vtosters/lite/api/newsfeed/NewsfeedIgnoreItem$a;->b:Ljava/lang/String;
 
     invoke-static {v0, v1, p1}, Lcom/vk/newsfeed/controllers/PostsController;->a(Lcom/vk/newsfeed/controllers/PostsController;Lcom/vk/dto/newsfeed/entries/NewsEntry;Ljava/lang/String;)V
 
@@ -91,9 +91,9 @@
     invoke-virtual {p1, v0}, Lcom/vk/dto/newsfeed/entries/NewsEntry;->j(Z)V
 
     .line 5
-    sget-object p1, Lcom/vk/newsfeed/controllers/a;->e:Lcom/vk/newsfeed/controllers/a;
+    sget-object p1, Lcom/vk/newsfeed/controllers/NewsfeedController;->e:Lcom/vk/newsfeed/controllers/NewsfeedController;
 
-    invoke-virtual {p1}, Lcom/vk/newsfeed/controllers/a;->n()Lb/h/g/l/d;
+    invoke-virtual {p1}, Lcom/vk/newsfeed/controllers/NewsfeedController;->n()Lb/h/g/l/NotificationCenter;
 
     move-result-object p1
 
@@ -101,15 +101,15 @@
 
     iget-object v1, p0, Lcom/vk/newsfeed/controllers/PostsController$q;->a:Lcom/vk/dto/newsfeed/entries/NewsEntry;
 
-    invoke-virtual {p1, v0, v1}, Lb/h/g/l/d;->a(ILjava/lang/Object;)V
+    invoke-virtual {p1, v0, v1}, Lb/h/g/l/NotificationCenter;->a(ILjava/lang/Object;)V
 
     goto :goto_1
 
     .line 6
     :cond_1
-    sget-object p1, Lcom/vk/newsfeed/controllers/a;->e:Lcom/vk/newsfeed/controllers/a;
+    sget-object p1, Lcom/vk/newsfeed/controllers/NewsfeedController;->e:Lcom/vk/newsfeed/controllers/NewsfeedController;
 
-    invoke-virtual {p1}, Lcom/vk/newsfeed/controllers/a;->n()Lb/h/g/l/d;
+    invoke-virtual {p1}, Lcom/vk/newsfeed/controllers/NewsfeedController;->n()Lb/h/g/l/NotificationCenter;
 
     move-result-object p1
 
@@ -117,7 +117,7 @@
 
     const/16 v1, 0x64
 
-    invoke-virtual {p1, v1, v0}, Lb/h/g/l/d;->a(ILjava/lang/Object;)V
+    invoke-virtual {p1, v1, v0}, Lb/h/g/l/NotificationCenter;->a(ILjava/lang/Object;)V
 
     .line 7
     iget-object p1, p0, Lcom/vk/newsfeed/controllers/PostsController$q;->a:Lcom/vk/dto/newsfeed/entries/NewsEntry;
@@ -154,13 +154,13 @@
     check-cast v0, Lcom/vk/dto/newsfeed/entries/LatestNewsItem;
 
     .line 10
-    sget-object v2, Lcom/vk/newsfeed/controllers/a;->e:Lcom/vk/newsfeed/controllers/a;
+    sget-object v2, Lcom/vk/newsfeed/controllers/NewsfeedController;->e:Lcom/vk/newsfeed/controllers/NewsfeedController;
 
-    invoke-virtual {v2}, Lcom/vk/newsfeed/controllers/a;->n()Lb/h/g/l/d;
+    invoke-virtual {v2}, Lcom/vk/newsfeed/controllers/NewsfeedController;->n()Lb/h/g/l/NotificationCenter;
 
     move-result-object v2
 
-    invoke-virtual {v2, v1, v0}, Lb/h/g/l/d;->a(ILjava/lang/Object;)V
+    invoke-virtual {v2, v1, v0}, Lb/h/g/l/NotificationCenter;->a(ILjava/lang/Object;)V
 
     goto :goto_0
 
@@ -174,7 +174,7 @@
     const/4 v2, 0x0
 
     .line 11
-    invoke-static {p1, v0, v1, v2}, Lcom/vk/core/util/k1;->a(IZILjava/lang/Object;)V
+    invoke-static {p1, v0, v1, v2}, Lcom/vk/core/util/ToastUtils;->a(IZILjava/lang/Object;)V
 
     :goto_1
     return-void
@@ -184,9 +184,9 @@
     .locals 0
 
     .line 1
-    check-cast p1, Lcom/vtosters/lite/api/newsfeed/d$a;
+    check-cast p1, Lcom/vtosters/lite/api/newsfeed/NewsfeedIgnoreItem$a;
 
-    invoke-virtual {p0, p1}, Lcom/vk/newsfeed/controllers/PostsController$q;->a(Lcom/vtosters/lite/api/newsfeed/d$a;)V
+    invoke-virtual {p0, p1}, Lcom/vk/newsfeed/controllers/PostsController$q;->a(Lcom/vtosters/lite/api/newsfeed/NewsfeedIgnoreItem$a;)V
 
     return-void
 .end method

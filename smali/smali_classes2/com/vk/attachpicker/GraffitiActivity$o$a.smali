@@ -3,7 +3,7 @@
 .source "GraffitiActivity.java"
 
 # interfaces
-.implements Lcom/vk/attachpicker/widget/r$d;
+.implements Lcom/vk/attachpicker/widget/WidthSelectorView$d;
 
 
 # annotations
@@ -47,7 +47,7 @@
 
     move-result-object v0
 
-    sget-object v1, Lcom/vk/attachpicker/drawing/d;->j:[F
+    sget-object v1, Lcom/vk/attachpicker/drawing/DrawingState;->j:[F
 
     aget p1, v1, p1
 

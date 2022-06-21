@@ -1,5 +1,5 @@
 .class Lcom/vk/libvideo/live/views/live/LivePresenter$d;
-.super Lc/a/c0/a;
+.super Lio/reactivex/observers/DisposableObserver/DisposableObserver;
 .source "LivePresenter.java"
 
 
@@ -15,7 +15,7 @@
 
 .annotation system Ldalvik/annotation/Signature;
     value = {
-        "Lc/a/c0/a<",
+        "Lio/reactivex/observers/DisposableObserver/DisposableObserver<",
         "Ljava/lang/Boolean;",
         ">;"
     }
@@ -27,7 +27,7 @@
     .locals 0
 
     .line 1
-    invoke-direct {p0}, Lc/a/c0/a;-><init>()V
+    invoke-direct {p0}, Lio/reactivex/observers/DisposableObserver/DisposableObserver;-><init>()V
 
     return-void
 .end method

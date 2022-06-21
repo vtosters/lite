@@ -612,7 +612,7 @@
     if-eqz v0, :cond_8
 
     .line 7
-    check-cast v0, Lcom/vtosters/lite/ui/adapters/l;
+    check-cast v0, Lcom/vtosters/lite/ui/adapters/RelationAdapter;
 
     sget-object v3, Lcom/vk/search/PeopleSearchParams;->N:Lcom/vk/search/PeopleSearchParams$a;
 
@@ -628,7 +628,7 @@
     const/4 v1, 0x0
 
     :goto_3
-    invoke-virtual {v0, v1}, Lcom/vtosters/lite/ui/adapters/l;->a(Z)V
+    invoke-virtual {v0, v1}, Lcom/vtosters/lite/ui/adapters/RelationAdapter;->a(Z)V
 
     goto :goto_4
 
@@ -765,7 +765,7 @@
 
     const v1, 0x7f0a0dca
 
-    invoke-static {p1, v1, v0}, Lcom/vk/extensions/ViewExtKt;->a(Landroid/view/View;ILkotlin/jvm/b/b;)Landroid/view/View;
+    invoke-static {p1, v1, v0}, Lcom/vk/extensions/ViewExtKt;->a(Landroid/view/View;ILkotlin/jvm/b/Functions2;)Landroid/view/View;
 
     move-result-object v0
 
@@ -780,7 +780,7 @@
 
     const v1, 0x7f0a0df6
 
-    invoke-static {p1, v1, v0}, Lcom/vk/extensions/ViewExtKt;->a(Landroid/view/View;ILkotlin/jvm/b/b;)Landroid/view/View;
+    invoke-static {p1, v1, v0}, Lcom/vk/extensions/ViewExtKt;->a(Landroid/view/View;ILkotlin/jvm/b/Functions2;)Landroid/view/View;
 
     move-result-object v0
 
@@ -795,7 +795,7 @@
 
     const v1, 0x7f0a0de5
 
-    invoke-static {p1, v1, v0}, Lcom/vk/extensions/ViewExtKt;->a(Landroid/view/View;ILkotlin/jvm/b/b;)Landroid/view/View;
+    invoke-static {p1, v1, v0}, Lcom/vk/extensions/ViewExtKt;->a(Landroid/view/View;ILkotlin/jvm/b/Functions2;)Landroid/view/View;
 
     move-result-object v0
 
@@ -810,7 +810,7 @@
     const v2, 0x7f0a0c66
 
     .line 8
-    invoke-static {p1, v2, v1, v0, v1}, Lcom/vk/extensions/ViewExtKt;->a(Landroid/view/View;ILkotlin/jvm/b/b;ILjava/lang/Object;)Landroid/view/View;
+    invoke-static {p1, v2, v1, v0, v1}, Lcom/vk/extensions/ViewExtKt;->a(Landroid/view/View;ILkotlin/jvm/b/Functions2;ILjava/lang/Object;)Landroid/view/View;
 
     move-result-object v2
 
@@ -821,7 +821,7 @@
     const v2, 0x7f0a0c67
 
     .line 9
-    invoke-static {p1, v2, v1, v0, v1}, Lcom/vk/extensions/ViewExtKt;->a(Landroid/view/View;ILkotlin/jvm/b/b;ILjava/lang/Object;)Landroid/view/View;
+    invoke-static {p1, v2, v1, v0, v1}, Lcom/vk/extensions/ViewExtKt;->a(Landroid/view/View;ILkotlin/jvm/b/Functions2;ILjava/lang/Object;)Landroid/view/View;
 
     move-result-object v2
 
@@ -835,7 +835,7 @@
     const v2, 0x7f0a0c6c
 
     .line 11
-    invoke-static {p1, v2, v1, v0, v1}, Lcom/vk/extensions/ViewExtKt;->a(Landroid/view/View;ILkotlin/jvm/b/b;ILjava/lang/Object;)Landroid/view/View;
+    invoke-static {p1, v2, v1, v0, v1}, Lcom/vk/extensions/ViewExtKt;->a(Landroid/view/View;ILkotlin/jvm/b/Functions2;ILjava/lang/Object;)Landroid/view/View;
 
     move-result-object p1
 
@@ -1017,7 +1017,7 @@
     .locals 5
 
     .line 1
-    new-instance v0, Lcom/vtosters/lite/ui/adapters/l;
+    new-instance v0, Lcom/vtosters/lite/ui/adapters/RelationAdapter;
 
     invoke-virtual {p0}, Lcom/vk/search/view/BaseSearchParamsView;->getActivity()Landroid/app/Activity;
 
@@ -1031,7 +1031,7 @@
 
     const v4, 0x7f0d01a3
 
-    invoke-direct {v0, v3, v1, v4, v2}, Lcom/vtosters/lite/ui/adapters/l;-><init>(ZLandroid/content/Context;I[Lcom/vtosters/lite/Relation;)V
+    invoke-direct {v0, v3, v1, v4, v2}, Lcom/vtosters/lite/ui/adapters/RelationAdapter;-><init>(ZLandroid/content/Context;I[Lcom/vtosters/lite/Relation;)V
 
     const v1, 0x7f0d01a2
 
@@ -1053,7 +1053,7 @@
 
     new-instance v2, Lcom/vk/search/view/PeopleSearchParamsView$d;
 
-    invoke-direct {v2, p0, v0}, Lcom/vk/search/view/PeopleSearchParamsView$d;-><init>(Lcom/vk/search/view/PeopleSearchParamsView;Lcom/vtosters/lite/ui/adapters/l;)V
+    invoke-direct {v2, p0, v0}, Lcom/vk/search/view/PeopleSearchParamsView$d;-><init>(Lcom/vk/search/view/PeopleSearchParamsView;Lcom/vtosters/lite/ui/adapters/RelationAdapter;)V
 
     invoke-virtual {v1, v2}, Landroid/widget/Spinner;->setOnItemSelectedListener(Landroid/widget/AdapterView$OnItemSelectedListener;)V
 

@@ -40,13 +40,13 @@
 
 
 # virtual methods
-.method public final a(I)Lc/a/m;
+.method public final a(I)Lio/reactivex/Observable;
     .locals 2
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(I)",
-            "Lc/a/m<",
-            "Lcom/vk/mentions/h;",
+            "Lio/reactivex/Observable<",
+            "Lcom/vk/mentions/MentionModels2;",
             ">;"
         }
     .end annotation
@@ -58,11 +58,11 @@
     .end annotation
 
     .line 6
-    sget-object v0, Lcom/vk/common/j/a;->c:Lcom/vk/common/j/a;
+    sget-object v0, Lcom/vk/common/cache/SerializerCache;->c:Lcom/vk/common/cache/SerializerCache;
 
     const-string v1, "mentionProfiles"
 
-    invoke-virtual {v0, v1}, Lcom/vk/common/j/a;->a(Ljava/lang/String;)Lc/a/m;
+    invoke-virtual {v0, v1}, Lcom/vk/common/cache/SerializerCache;->a(Ljava/lang/String;)Lio/reactivex/Observable;
 
     move-result-object v0
 
@@ -71,48 +71,48 @@
 
     invoke-direct {v1, p1}, Lcom/vk/newsfeed/MentionsStorage$a;-><init>(I)V
 
-    invoke-virtual {v0, v1}, Lc/a/m;->c(Lc/a/z/j;)Lc/a/m;
+    invoke-virtual {v0, v1}, Lio/reactivex/Observable;->c(Lio/reactivex/functions/Function;)Lio/reactivex/Observable;
 
     move-result-object p1
 
     const-string v0, "SerializerCache.get<Seri\u2026      }\n                }"
 
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     return-object p1
 .end method
 
-.method public final a(Lcom/vk/mentions/h;)V
+.method public final a(Lcom/vk/mentions/MentionModels2;)V
     .locals 2
 
     .line 1
-    sget-object v0, Lcom/vk/common/j/a;->c:Lcom/vk/common/j/a;
+    sget-object v0, Lcom/vk/common/cache/SerializerCache;->c:Lcom/vk/common/cache/SerializerCache;
 
     const-string v1, "mentionProfiles"
 
-    invoke-virtual {v0, v1}, Lcom/vk/common/j/a;->a(Ljava/lang/String;)Lc/a/m;
+    invoke-virtual {v0, v1}, Lcom/vk/common/cache/SerializerCache;->a(Ljava/lang/String;)Lio/reactivex/Observable;
 
     move-result-object v0
 
     .line 2
     sget-object v1, Lcom/vk/newsfeed/MentionsStorage$b;->a:Lcom/vk/newsfeed/MentionsStorage$b;
 
-    invoke-virtual {v0, v1}, Lc/a/m;->e(Lc/a/z/j;)Lc/a/m;
+    invoke-virtual {v0, v1}, Lio/reactivex/Observable;->e(Lio/reactivex/functions/Function;)Lio/reactivex/Observable;
 
     move-result-object v0
 
     .line 3
     new-instance v1, Lcom/vk/newsfeed/MentionsStorage$c;
 
-    invoke-direct {v1, p1}, Lcom/vk/newsfeed/MentionsStorage$c;-><init>(Lcom/vk/mentions/h;)V
+    invoke-direct {v1, p1}, Lcom/vk/newsfeed/MentionsStorage$c;-><init>(Lcom/vk/mentions/MentionModels2;)V
 
     .line 4
-    invoke-static {}, Lcom/vk/core/util/z0;->b()Lc/a/z/g;
+    invoke-static {}, Lcom/vk/core/util/RxUtil;->b()Lio/reactivex/functions/Consumer;
 
     move-result-object p1
 
     .line 5
-    invoke-virtual {v0, v1, p1}, Lc/a/m;->a(Lc/a/z/g;Lc/a/z/g;)Lio/reactivex/disposables/b;
+    invoke-virtual {v0, v1, p1}, Lio/reactivex/Observable;->a(Lio/reactivex/functions/Consumer;Lio/reactivex/functions/Consumer;)Lio/reactivex/disposables/Disposable;
 
     move-result-object p1
 

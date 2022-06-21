@@ -3,7 +3,7 @@
 .source "AddressMapInfoItem.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/a;
+.implements Lkotlin/jvm/b/Functions;
 
 
 # annotations
@@ -19,8 +19,8 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/a<",
-        "Lkotlin/m;",
+        "Lkotlin/jvm/b/Functions<",
+        "Lkotlin/Unit;",
         ">;"
     }
 .end annotation
@@ -51,7 +51,7 @@
     .line 1
     invoke-virtual {p0}, Lcom/vk/profile/adapter/items/AddressMapInfoItem$MapHolder$onClick$1;->invoke()V
 
-    sget-object v0, Lkotlin/m;->a:Lkotlin/m;
+    sget-object v0, Lkotlin/Unit;->a:Lkotlin/Unit;
 
     return-object v0
 .end method
@@ -71,7 +71,7 @@
 
     move-result-object v0
 
-    invoke-static {v0}, Lcom/vk/profile/adapter/items/AddressMapInfoItem;->a(Lcom/vk/profile/adapter/items/AddressMapInfoItem;)Lcom/vk/profile/presenter/f/b;
+    invoke-static {v0}, Lcom/vk/profile/adapter/items/AddressMapInfoItem;->a(Lcom/vk/profile/adapter/items/AddressMapInfoItem;)Lcom/vk/profile/presenter/f/CommunityLocationController;
 
     move-result-object v0
 
@@ -81,11 +81,11 @@
 
     move-result-object v1
 
-    invoke-virtual {v1}, Lcom/vk/profile/adapter/items/AddressMapInfoItem;->Q()Lcom/vtosters/lite/api/i;
+    invoke-virtual {v1}, Lcom/vk/profile/adapter/items/AddressMapInfoItem;->Q()Lcom/vtosters/lite/api/ExtendedCommunityProfile;
 
     move-result-object v1
 
-    invoke-virtual {v0, v1}, Lcom/vk/profile/presenter/f/b;->b(Lcom/vtosters/lite/api/i;)V
+    invoke-virtual {v0, v1}, Lcom/vk/profile/presenter/f/CommunityLocationController;->b(Lcom/vtosters/lite/api/ExtendedCommunityProfile;)V
 
     .line 4
     new-instance v0, Lcom/vk/profile/ui/community/adresses/CommunityAddressesFragment$b;
@@ -96,11 +96,11 @@
 
     move-result-object v1
 
-    invoke-static {v1}, Lcom/vk/profile/adapter/items/AddressMapInfoItem;->a(Lcom/vk/profile/adapter/items/AddressMapInfoItem;)Lcom/vk/profile/presenter/f/b;
+    invoke-static {v1}, Lcom/vk/profile/adapter/items/AddressMapInfoItem;->a(Lcom/vk/profile/adapter/items/AddressMapInfoItem;)Lcom/vk/profile/presenter/f/CommunityLocationController;
 
     move-result-object v1
 
-    invoke-virtual {v1}, Lcom/vk/profile/presenter/f/b;->d()I
+    invoke-virtual {v1}, Lcom/vk/profile/presenter/f/CommunityLocationController;->d()I
 
     move-result v1
 
@@ -110,7 +110,7 @@
 
     move-result-object v2
 
-    invoke-virtual {v2}, Lcom/vk/profile/adapter/items/AddressMapInfoItem;->Q()Lcom/vtosters/lite/api/i;
+    invoke-virtual {v2}, Lcom/vk/profile/adapter/items/AddressMapInfoItem;->Q()Lcom/vtosters/lite/api/ExtendedCommunityProfile;
 
     move-result-object v2
 
@@ -131,20 +131,20 @@
 
     move-result-object v1
 
-    invoke-static {v1}, Lcom/vk/profile/adapter/items/AddressMapInfoItem;->a(Lcom/vk/profile/adapter/items/AddressMapInfoItem;)Lcom/vk/profile/presenter/f/b;
+    invoke-static {v1}, Lcom/vk/profile/adapter/items/AddressMapInfoItem;->a(Lcom/vk/profile/adapter/items/AddressMapInfoItem;)Lcom/vk/profile/presenter/f/CommunityLocationController;
 
     move-result-object v1
 
-    invoke-virtual {v1}, Lcom/vk/profile/presenter/f/b;->b()Landroid/app/Activity;
+    invoke-virtual {v1}, Lcom/vk/profile/presenter/f/CommunityLocationController;->b()Landroid/app/Activity;
 
     move-result-object v1
 
     if-eqz v1, :cond_0
 
-    invoke-virtual {v0, v1}, Lcom/vk/navigation/o;->a(Landroid/content/Context;)V
+    invoke-virtual {v0, v1}, Lcom/vk/navigation/Navigator;->a(Landroid/content/Context;)V
 
     .line 6
-    new-instance v0, Lcom/vk/profile/e/b;
+    new-instance v0, Lcom/vk/profile/e/CommunityScreenTracker1;
 
     iget-object v1, p0, Lcom/vk/profile/adapter/items/AddressMapInfoItem$MapHolder$onClick$1;->this$0:Lcom/vk/profile/adapter/items/AddressMapInfoItem$MapHolder;
 
@@ -152,7 +152,7 @@
 
     move-result-object v1
 
-    invoke-virtual {v1}, Lcom/vk/profile/adapter/items/AddressMapInfoItem;->Q()Lcom/vtosters/lite/api/i;
+    invoke-virtual {v1}, Lcom/vk/profile/adapter/items/AddressMapInfoItem;->Q()Lcom/vtosters/lite/api/ExtendedCommunityProfile;
 
     move-result-object v1
 
@@ -160,35 +160,35 @@
 
     iget v1, v1, Lcom/vk/dto/user/UserProfile;->b:I
 
-    invoke-direct {v0, v1}, Lcom/vk/profile/e/b;-><init>(I)V
+    invoke-direct {v0, v1}, Lcom/vk/profile/e/CommunityScreenTracker1;-><init>(I)V
 
     const/16 v1, 0x23
 
     .line 7
-    invoke-static {v1}, Lcom/vk/profile/e/c;->a(I)Ljava/lang/String;
+    invoke-static {v1}, Lcom/vk/profile/e/CommunityScreenTracker;->a(I)Ljava/lang/String;
 
     move-result-object v1
 
-    invoke-virtual {v0, v1}, Lcom/vk/profile/e/b;->a(Ljava/lang/String;)Lcom/vk/profile/e/b;
+    invoke-virtual {v0, v1}, Lcom/vk/profile/e/CommunityScreenTracker1;->a(Ljava/lang/String;)Lcom/vk/profile/e/CommunityScreenTracker1;
 
     const-string v1, "address"
 
     .line 8
-    invoke-virtual {v0, v1}, Lcom/vk/profile/e/b;->d(Ljava/lang/String;)Lcom/vk/profile/e/b;
+    invoke-virtual {v0, v1}, Lcom/vk/profile/e/CommunityScreenTracker1;->d(Ljava/lang/String;)Lcom/vk/profile/e/CommunityScreenTracker1;
 
     .line 9
-    invoke-virtual {v0}, Lcom/vk/profile/e/b;->a()V
+    invoke-virtual {v0}, Lcom/vk/profile/e/CommunityScreenTracker1;->a()V
 
     const/4 v0, 0x1
 
     .line 10
-    invoke-static {v0}, Lcom/vk/profile/e/f;->a(Z)V
+    invoke-static {v0}, Lcom/vk/profile/e/ProfileTracker1;->a(Z)V
 
     return-void
 
     .line 11
     :cond_0
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     const/4 v0, 0x0
 

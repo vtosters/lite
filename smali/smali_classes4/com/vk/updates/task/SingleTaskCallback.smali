@@ -20,10 +20,10 @@
 
 
 # instance fields
-.field private final observer:Lc/a/v;
+.field private final observer:Lio/reactivex/SingleObserver;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Lc/a/v<",
+            "Lio/reactivex/SingleObserver<",
             "-TT;>;"
         }
     .end annotation
@@ -31,14 +31,14 @@
 
 
 # direct methods
-.method public constructor <init>(Lcom/google/android/play/core/tasks/b;Lc/a/v;)V
+.method public constructor <init>(Lcom/google/android/play/core/tasks/b;Lio/reactivex/SingleObserver;)V
     .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
             "Lcom/google/android/play/core/tasks/b<",
             "*>;",
-            "Lc/a/v<",
+            "Lio/reactivex/SingleObserver<",
             "-TT;>;)V"
         }
     .end annotation
@@ -46,7 +46,7 @@
     .line 1
     invoke-direct {p0, p1}, Lcom/vk/updates/task/TaskDisposable;-><init>(Lcom/google/android/play/core/tasks/b;)V
 
-    iput-object p2, p0, Lcom/vk/updates/task/SingleTaskCallback;->observer:Lc/a/v;
+    iput-object p2, p0, Lcom/vk/updates/task/SingleTaskCallback;->observer:Lio/reactivex/SingleObserver;
 
     return-void
 .end method
@@ -81,26 +81,26 @@
     if-eqz v0, :cond_1
 
     .line 3
-    iget-object v0, p0, Lcom/vk/updates/task/SingleTaskCallback;->observer:Lc/a/v;
+    iget-object v0, p0, Lcom/vk/updates/task/SingleTaskCallback;->observer:Lio/reactivex/SingleObserver;
 
     invoke-virtual {p1}, Lcom/google/android/play/core/tasks/b;->b()Ljava/lang/Object;
 
     move-result-object p1
 
-    invoke-interface {v0, p1}, Lc/a/v;->a(Ljava/lang/Object;)V
+    invoke-interface {v0, p1}, Lio/reactivex/SingleObserver;->a(Ljava/lang/Object;)V
 
     goto :goto_0
 
     .line 4
     :cond_1
     :try_start_0
-    iget-object v0, p0, Lcom/vk/updates/task/SingleTaskCallback;->observer:Lc/a/v;
+    iget-object v0, p0, Lcom/vk/updates/task/SingleTaskCallback;->observer:Lio/reactivex/SingleObserver;
 
     invoke-virtual {p1}, Lcom/google/android/play/core/tasks/b;->a()Ljava/lang/Exception;
 
     move-result-object v1
 
-    invoke-interface {v0, v1}, Lc/a/v;->a(Ljava/lang/Throwable;)V
+    invoke-interface {v0, v1}, Lio/reactivex/SingleObserver;->a(Ljava/lang/Throwable;)V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
@@ -110,7 +110,7 @@
     move-exception v0
 
     .line 5
-    invoke-static {v0}, Lio/reactivex/exceptions/a;->b(Ljava/lang/Throwable;)V
+    invoke-static {v0}, Lio/reactivex/exceptions/Exceptions;->b(Ljava/lang/Throwable;)V
 
     .line 6
     new-instance v1, Lio/reactivex/exceptions/CompositeException;
@@ -133,7 +133,7 @@
 
     invoke-direct {v1, v2}, Lio/reactivex/exceptions/CompositeException;-><init>([Ljava/lang/Throwable;)V
 
-    invoke-static {v1}, Lc/a/e0/a;->b(Ljava/lang/Throwable;)V
+    invoke-static {v1}, Lio/reactivex/plugins/RxJavaPlugins;->b(Ljava/lang/Throwable;)V
 
     :goto_0
     return-void

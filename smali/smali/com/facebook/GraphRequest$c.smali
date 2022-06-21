@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/facebook/GraphRequest;->a(Lcom/facebook/h;Ljava/util/List;)V
+    value = Lcom/facebook/GraphRequest;->a(Lcom/facebook/GraphRequestBatch;Ljava/util/List;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -20,17 +20,17 @@
 # instance fields
 .field final synthetic a:Ljava/util/ArrayList;
 
-.field final synthetic b:Lcom/facebook/h;
+.field final synthetic b:Lcom/facebook/GraphRequestBatch;
 
 
 # direct methods
-.method constructor <init>(Ljava/util/ArrayList;Lcom/facebook/h;)V
+.method constructor <init>(Ljava/util/ArrayList;Lcom/facebook/GraphRequestBatch;)V
     .locals 0
 
     .line 1
     iput-object p1, p0, Lcom/facebook/GraphRequest$c;->a:Ljava/util/ArrayList;
 
-    iput-object p2, p0, Lcom/facebook/GraphRequest$c;->b:Lcom/facebook/h;
+    iput-object p2, p0, Lcom/facebook/GraphRequest$c;->b:Lcom/facebook/GraphRequestBatch;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -69,17 +69,17 @@
 
     iget-object v1, v1, Landroid/util/Pair;->second:Ljava/lang/Object;
 
-    check-cast v1, Lcom/facebook/i;
+    check-cast v1, Lcom/facebook/GraphResponse;
 
-    invoke-interface {v2, v1}, Lcom/facebook/GraphRequest$f;->a(Lcom/facebook/i;)V
+    invoke-interface {v2, v1}, Lcom/facebook/GraphRequest$f;->a(Lcom/facebook/GraphResponse;)V
 
     goto :goto_0
 
     .line 3
     :cond_0
-    iget-object v0, p0, Lcom/facebook/GraphRequest$c;->b:Lcom/facebook/h;
+    iget-object v0, p0, Lcom/facebook/GraphRequest$c;->b:Lcom/facebook/GraphRequestBatch;
 
-    invoke-virtual {v0}, Lcom/facebook/h;->g()Ljava/util/List;
+    invoke-virtual {v0}, Lcom/facebook/GraphRequestBatch;->g()Ljava/util/List;
 
     move-result-object v0
 
@@ -99,12 +99,12 @@
 
     move-result-object v1
 
-    check-cast v1, Lcom/facebook/h$a;
+    check-cast v1, Lcom/facebook/GraphRequestBatch$a;
 
     .line 5
-    iget-object v2, p0, Lcom/facebook/GraphRequest$c;->b:Lcom/facebook/h;
+    iget-object v2, p0, Lcom/facebook/GraphRequest$c;->b:Lcom/facebook/GraphRequestBatch;
 
-    invoke-interface {v1, v2}, Lcom/facebook/h$a;->a(Lcom/facebook/h;)V
+    invoke-interface {v1, v2}, Lcom/facebook/GraphRequestBatch$a;->a(Lcom/facebook/GraphRequestBatch;)V
 
     goto :goto_1
 

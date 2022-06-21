@@ -3,7 +3,7 @@
 .source "ComponentsAdapter.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/b;
+.implements Lkotlin/jvm/b/Functions2;
 
 
 # annotations
@@ -19,9 +19,9 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/b<",
+        "Lkotlin/jvm/b/Functions2<",
         "Landroid/view/ViewGroup;",
-        "Lcom/vk/components/holders/c;",
+        "Lcom/vk/components/holders/ButtonsComponentViewHolder;",
         ">;"
     }
 .end annotation
@@ -56,13 +56,13 @@
 
 
 # virtual methods
-.method public final a(Landroid/view/ViewGroup;)Lcom/vk/components/holders/c;
+.method public final a(Landroid/view/ViewGroup;)Lcom/vk/components/holders/ButtonsComponentViewHolder;
     .locals 1
 
     .line 1
-    new-instance v0, Lcom/vk/components/holders/c;
+    new-instance v0, Lcom/vk/components/holders/ButtonsComponentViewHolder;
 
-    invoke-direct {v0, p1}, Lcom/vk/components/holders/c;-><init>(Landroid/view/ViewGroup;)V
+    invoke-direct {v0, p1}, Lcom/vk/components/holders/ButtonsComponentViewHolder;-><init>(Landroid/view/ViewGroup;)V
 
     return-object v0
 .end method
@@ -73,7 +73,7 @@
     .line 1
     check-cast p1, Landroid/view/ViewGroup;
 
-    invoke-virtual {p0, p1}, Lcom/vk/components/ComponentsExample$4;->a(Landroid/view/ViewGroup;)Lcom/vk/components/holders/c;
+    invoke-virtual {p0, p1}, Lcom/vk/components/ComponentsExample$4;->a(Landroid/view/ViewGroup;)Lcom/vk/components/holders/ButtonsComponentViewHolder;
 
     move-result-object p1
 

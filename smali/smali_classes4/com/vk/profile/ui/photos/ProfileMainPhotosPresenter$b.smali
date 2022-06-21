@@ -3,12 +3,12 @@
 .source "ProfileMainPhotosPresenter.kt"
 
 # interfaces
-.implements Lc/a/z/c;
+.implements Lio/reactivex/functions/BiFunction;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/profile/ui/photos/ProfileMainPhotosPresenter;->a(Z)Lc/a/m;
+    value = Lcom/vk/profile/ui/photos/ProfileMainPhotosPresenter;->a(Z)Lio/reactivex/Observable;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -26,16 +26,16 @@
         "Ljava/lang/Object;",
         ">",
         "Ljava/lang/Object;",
-        "Lc/a/z/c<",
+        "Lio/reactivex/functions/BiFunction<",
         "Lcom/vk/api/photos/PhotosGetAlbums$b;",
-        "Lcom/vk/core/util/q0<",
-        "Lcom/vk/api/photos/p$a;",
+        "Lcom/vk/core/util/Optional<",
+        "Lcom/vk/api/photos/PhotosGetNewTags$a;",
         ">;",
         "Lkotlin/Pair<",
         "+",
         "Lcom/vk/api/photos/PhotosGetAlbums$b;",
         "+",
-        "Lcom/vk/api/photos/p$a;",
+        "Lcom/vk/api/photos/PhotosGetNewTags$a;",
         ">;>;"
     }
 .end annotation
@@ -74,27 +74,27 @@
     .line 1
     check-cast p1, Lcom/vk/api/photos/PhotosGetAlbums$b;
 
-    check-cast p2, Lcom/vk/core/util/q0;
+    check-cast p2, Lcom/vk/core/util/Optional;
 
-    invoke-virtual {p0, p1, p2}, Lcom/vk/profile/ui/photos/ProfileMainPhotosPresenter$b;->a(Lcom/vk/api/photos/PhotosGetAlbums$b;Lcom/vk/core/util/q0;)Lkotlin/Pair;
+    invoke-virtual {p0, p1, p2}, Lcom/vk/profile/ui/photos/ProfileMainPhotosPresenter$b;->a(Lcom/vk/api/photos/PhotosGetAlbums$b;Lcom/vk/core/util/Optional;)Lkotlin/Pair;
 
     move-result-object p1
 
     return-object p1
 .end method
 
-.method public final a(Lcom/vk/api/photos/PhotosGetAlbums$b;Lcom/vk/core/util/q0;)Lkotlin/Pair;
+.method public final a(Lcom/vk/api/photos/PhotosGetAlbums$b;Lcom/vk/core/util/Optional;)Lkotlin/Pair;
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
             "Lcom/vk/api/photos/PhotosGetAlbums$b;",
-            "Lcom/vk/core/util/q0<",
-            "Lcom/vk/api/photos/p$a;",
+            "Lcom/vk/core/util/Optional<",
+            "Lcom/vk/api/photos/PhotosGetNewTags$a;",
             ">;)",
             "Lkotlin/Pair<",
             "Lcom/vk/api/photos/PhotosGetAlbums$b;",
-            "Lcom/vk/api/photos/p$a;",
+            "Lcom/vk/api/photos/PhotosGetNewTags$a;",
             ">;"
         }
     .end annotation
@@ -102,7 +102,7 @@
     .line 2
     new-instance v0, Lkotlin/Pair;
 
-    invoke-virtual {p2}, Lcom/vk/core/util/q0;->a()Ljava/lang/Object;
+    invoke-virtual {p2}, Lcom/vk/core/util/Optional;->a()Ljava/lang/Object;
 
     move-result-object p2
 

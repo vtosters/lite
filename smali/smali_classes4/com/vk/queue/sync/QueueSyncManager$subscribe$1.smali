@@ -3,12 +3,12 @@
 .source "QueueSyncManager.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/c;
+.implements Lkotlin/jvm/b/Functions1;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/queue/sync/QueueSyncManager;->a(Lb/h/u/b/c;Ljava/lang/Object;Lkotlin/jvm/b/a;Lkotlin/jvm/b/b;Lkotlin/jvm/b/b;)Lcom/vk/queue/sync/a;
+    value = Lcom/vk/queue/sync/QueueSyncManager;->a(Lb/h/u/b/QueueEvent;Ljava/lang/Object;Lkotlin/jvm/b/Functions;Lkotlin/jvm/b/Functions2;Lkotlin/jvm/b/Functions2;)Lcom/vk/queue/sync/CancellationSignal;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -19,24 +19,24 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/c<",
-        "Lb/h/u/b/c<",
+        "Lkotlin/jvm/b/Functions1<",
+        "Lb/h/u/b/QueueEvent<",
         "TT;>;TT;",
-        "Lkotlin/m;",
+        "Lkotlin/Unit;",
         ">;"
     }
 .end annotation
 
 
 # instance fields
-.field final synthetic $doOnEvent:Lkotlin/jvm/b/b;
+.field final synthetic $doOnEvent:Lkotlin/jvm/b/Functions2;
 
 
 # direct methods
-.method constructor <init>(Lkotlin/jvm/b/b;)V
+.method constructor <init>(Lkotlin/jvm/b/Functions2;)V
     .locals 0
 
-    iput-object p1, p0, Lcom/vk/queue/sync/QueueSyncManager$subscribe$1;->$doOnEvent:Lkotlin/jvm/b/b;
+    iput-object p1, p0, Lcom/vk/queue/sync/QueueSyncManager$subscribe$1;->$doOnEvent:Lkotlin/jvm/b/Functions2;
 
     const/4 p1, 0x2
 
@@ -51,35 +51,35 @@
     .locals 0
 
     .line 1
-    check-cast p1, Lb/h/u/b/c;
+    check-cast p1, Lb/h/u/b/QueueEvent;
 
-    invoke-virtual {p0, p1, p2}, Lcom/vk/queue/sync/QueueSyncManager$subscribe$1;->a(Lb/h/u/b/c;Ljava/lang/Object;)V
+    invoke-virtual {p0, p1, p2}, Lcom/vk/queue/sync/QueueSyncManager$subscribe$1;->a(Lb/h/u/b/QueueEvent;Ljava/lang/Object;)V
 
-    sget-object p1, Lkotlin/m;->a:Lkotlin/m;
+    sget-object p1, Lkotlin/Unit;->a:Lkotlin/Unit;
 
     return-object p1
 .end method
 
-.method public final a(Lb/h/u/b/c;Ljava/lang/Object;)V
+.method public final a(Lb/h/u/b/QueueEvent;Ljava/lang/Object;)V
     .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lb/h/u/b/c<",
+            "Lb/h/u/b/QueueEvent<",
             "TT;>;TT;)V"
         }
     .end annotation
 
     .line 2
-    iget-object p1, p0, Lcom/vk/queue/sync/QueueSyncManager$subscribe$1;->$doOnEvent:Lkotlin/jvm/b/b;
+    iget-object p1, p0, Lcom/vk/queue/sync/QueueSyncManager$subscribe$1;->$doOnEvent:Lkotlin/jvm/b/Functions2;
 
     if-eqz p1, :cond_0
 
-    invoke-interface {p1, p2}, Lkotlin/jvm/b/b;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {p1, p2}, Lkotlin/jvm/b/Functions2;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p1
 
-    check-cast p1, Lkotlin/m;
+    check-cast p1, Lkotlin/Unit;
 
     :cond_0
     return-void

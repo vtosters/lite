@@ -1,5 +1,5 @@
 .class Lcom/vk/stories/StoryChooseReceiversActivity$s;
-.super Lcom/vk/lists/i0;
+.super Lcom/vk/lists/SimpleAdapter;
 .source "StoryChooseReceiversActivity.java"
 
 
@@ -15,8 +15,8 @@
 
 .annotation system Ldalvik/annotation/Signature;
     value = {
-        "Lcom/vk/lists/i0<",
-        "Lcom/vk/stories/d1/a;",
+        "Lcom/vk/lists/SimpleAdapter<",
+        "Lcom/vk/stories/d1/StoryDialogItem;",
         "Landroidx/recyclerview/widget/RecyclerView$ViewHolder;",
         ">;"
     }
@@ -34,7 +34,7 @@
     .line 2
     iput-object p1, p0, Lcom/vk/stories/StoryChooseReceiversActivity$s;->c:Lcom/vk/stories/StoryChooseReceiversActivity;
 
-    invoke-direct {p0}, Lcom/vk/lists/i0;-><init>()V
+    invoke-direct {p0}, Lcom/vk/lists/SimpleAdapter;-><init>()V
 
     const/4 p1, 0x1
 
@@ -120,7 +120,7 @@
 
     const p3, 0x7f1212a5
 
-    invoke-static {p2, p3}, Lcom/vk/core/util/ContextExtKt;->n(Landroid/content/Context;I)Lkotlin/m;
+    invoke-static {p2, p3}, Lcom/vk/core/util/ContextExtKt;->n(Landroid/content/Context;I)Lkotlin/Unit;
 
     .line 6
     invoke-virtual {p0, p1}, Landroidx/recyclerview/widget/RecyclerView$Adapter;->notifyItemChanged(I)V
@@ -191,9 +191,9 @@
     .locals 1
 
     .line 1
-    iget-object v0, p0, Lcom/vk/lists/i0;->a:Lcom/vk/lists/b;
+    iget-object v0, p0, Lcom/vk/lists/SimpleAdapter;->a:Lcom/vk/lists/BaseListDataSet;
 
-    invoke-interface {v0}, Lcom/vk/lists/d;->size()I
+    invoke-interface {v0}, Lcom/vk/lists/DataSet;->size()I
 
     move-result v0
 
@@ -206,9 +206,9 @@
     .locals 1
 
     .line 1
-    iget-object v0, p0, Lcom/vk/lists/i0;->a:Lcom/vk/lists/b;
+    iget-object v0, p0, Lcom/vk/lists/SimpleAdapter;->a:Lcom/vk/lists/BaseListDataSet;
 
-    invoke-interface {v0}, Lcom/vk/lists/d;->size()I
+    invoke-interface {v0}, Lcom/vk/lists/DataSet;->size()I
 
     move-result v0
 
@@ -228,17 +228,17 @@
 
     .line 1
     :cond_0
-    iget-object v0, p0, Lcom/vk/lists/i0;->a:Lcom/vk/lists/b;
+    iget-object v0, p0, Lcom/vk/lists/SimpleAdapter;->a:Lcom/vk/lists/BaseListDataSet;
 
     add-int/lit8 p1, p1, -0x1
 
-    invoke-interface {v0, p1}, Lcom/vk/lists/d;->k(I)Ljava/lang/Object;
+    invoke-interface {v0, p1}, Lcom/vk/lists/DataSet;->k(I)Ljava/lang/Object;
 
     move-result-object p1
 
-    check-cast p1, Lcom/vk/stories/d1/a;
+    check-cast p1, Lcom/vk/stories/d1/StoryDialogItem;
 
-    invoke-virtual {p1}, Lcom/vk/stories/d1/a;->b()I
+    invoke-virtual {p1}, Lcom/vk/stories/d1/StoryDialogItem;->b()I
 
     move-result p1
 
@@ -270,20 +270,20 @@
     .end param
 
     .line 1
-    instance-of v0, p1, Lcom/vk/stories/holders/h;
+    instance-of v0, p1, Lcom/vk/stories/holders/StoriesDialogHolder;
 
     if-eqz v0, :cond_0
 
     .line 2
-    iget-object v0, p0, Lcom/vk/lists/i0;->a:Lcom/vk/lists/b;
+    iget-object v0, p0, Lcom/vk/lists/SimpleAdapter;->a:Lcom/vk/lists/BaseListDataSet;
 
     add-int/lit8 p2, p2, -0x1
 
-    invoke-interface {v0, p2}, Lcom/vk/lists/d;->k(I)Ljava/lang/Object;
+    invoke-interface {v0, p2}, Lcom/vk/lists/DataSet;->k(I)Ljava/lang/Object;
 
     move-result-object p2
 
-    check-cast p2, Lcom/vk/stories/d1/a;
+    check-cast p2, Lcom/vk/stories/d1/StoryDialogItem;
 
     .line 3
     iget-object v0, p0, Lcom/vk/stories/StoryChooseReceiversActivity$s;->c:Lcom/vk/stories/StoryChooseReceiversActivity;
@@ -292,7 +292,7 @@
 
     move-result-object v0
 
-    invoke-virtual {p2}, Lcom/vk/stories/d1/a;->b()I
+    invoke-virtual {p2}, Lcom/vk/stories/d1/StoryDialogItem;->b()I
 
     move-result v1
 
@@ -304,12 +304,12 @@
 
     move-result v0
 
-    invoke-virtual {p2, v0}, Lcom/vk/stories/d1/a;->a(Z)V
+    invoke-virtual {p2, v0}, Lcom/vk/stories/d1/StoryDialogItem;->a(Z)V
 
     .line 4
-    check-cast p1, Lcom/vk/stories/holders/h;
+    check-cast p1, Lcom/vk/stories/holders/StoriesDialogHolder;
 
-    invoke-virtual {p1, p2}, Lcom/vtosters/lite/ui/b0/i;->a(Ljava/lang/Object;)V
+    invoke-virtual {p1, p2}, Lcom/vtosters/lite/ui/holder/RecyclerHolder;->a(Ljava/lang/Object;)V
 
     goto :goto_0
 
@@ -322,9 +322,9 @@
     .line 6
     check-cast p1, Lcom/vk/stories/StoryChooseReceiversActivity$r;
 
-    iget-object p2, p0, Lcom/vk/lists/i0;->a:Lcom/vk/lists/b;
+    iget-object p2, p0, Lcom/vk/lists/SimpleAdapter;->a:Lcom/vk/lists/BaseListDataSet;
 
-    invoke-interface {p2}, Lcom/vk/lists/d;->f()Ljava/util/List;
+    invoke-interface {p2}, Lcom/vk/lists/DataSet;->f()Ljava/util/List;
 
     move-result-object p2
 
@@ -366,13 +366,13 @@
 
     .line 3
     :cond_0
-    new-instance p2, Lcom/vk/stories/holders/h;
+    new-instance p2, Lcom/vk/stories/holders/StoriesDialogHolder;
 
     new-instance v0, Lcom/vk/stories/StoryChooseReceiversActivity$s$a;
 
     invoke-direct {v0, p0}, Lcom/vk/stories/StoryChooseReceiversActivity$s$a;-><init>(Lcom/vk/stories/StoryChooseReceiversActivity$s;)V
 
-    invoke-direct {p2, p1, v0}, Lcom/vk/stories/holders/h;-><init>(Landroid/view/ViewGroup;Lkotlin/jvm/b/d;)V
+    invoke-direct {p2, p1, v0}, Lcom/vk/stories/holders/StoriesDialogHolder;-><init>(Landroid/view/ViewGroup;Lkotlin/jvm/b/Functions4;)V
 
     return-object p2
 .end method

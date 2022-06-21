@@ -41,19 +41,19 @@
     .line 1
     iget-object v0, p0, Lcom/vk/stories/view/StoryView$d;->a:Lcom/vk/stories/view/StoryView;
 
-    iget-boolean v1, v0, Lcom/vk/stories/view/e1;->G:Z
+    iget-boolean v1, v0, Lcom/vk/stories/view/BaseStoryView;->G:Z
 
     if-nez v1, :cond_0
 
     const/4 v1, 0x0
 
     .line 2
-    invoke-virtual {v0, v1}, Lcom/vk/stories/view/e1;->c(Z)V
+    invoke-virtual {v0, v1}, Lcom/vk/stories/view/BaseStoryView;->c(Z)V
 
     .line 3
     iget-object v0, p0, Lcom/vk/stories/view/StoryView$d;->a:Lcom/vk/stories/view/StoryView;
 
-    invoke-virtual {v0}, Lcom/vk/stories/view/e1;->t()V
+    invoke-virtual {v0}, Lcom/vk/stories/view/BaseStoryView;->t()V
 
     :cond_0
     return-void
@@ -65,17 +65,17 @@
     .line 1
     iget-object v0, p0, Lcom/vk/stories/view/StoryView$d;->a:Lcom/vk/stories/view/StoryView;
 
-    iget-boolean v1, v0, Lcom/vk/stories/view/e1;->G:Z
+    iget-boolean v1, v0, Lcom/vk/stories/view/BaseStoryView;->G:Z
 
     if-nez v1, :cond_0
 
     .line 2
-    invoke-virtual {v0}, Lcom/vk/stories/view/e1;->J()V
+    invoke-virtual {v0}, Lcom/vk/stories/view/BaseStoryView;->J()V
 
     .line 3
     iget-object v0, p0, Lcom/vk/stories/view/StoryView$d;->a:Lcom/vk/stories/view/StoryView;
 
-    invoke-virtual {v0}, Lcom/vk/stories/view/e1;->I()V
+    invoke-virtual {v0}, Lcom/vk/stories/view/BaseStoryView;->I()V
 
     :cond_0
     return-void

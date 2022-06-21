@@ -3,7 +3,7 @@
 .source "DiscoverSearchFragment.kt"
 
 # interfaces
-.implements Lc/a/z/g;
+.implements Lio/reactivex/functions/Consumer;
 
 
 # annotations
@@ -22,8 +22,8 @@
         "Ljava/lang/Object;",
         ">",
         "Ljava/lang/Object;",
-        "Lc/a/z/g<",
-        "Lb/h/v/e;",
+        "Lio/reactivex/functions/Consumer<",
+        "Lb/h/v/TextViewTextChangeEvent;",
         ">;"
     }
 .end annotation
@@ -46,7 +46,7 @@
 
 
 # virtual methods
-.method public final a(Lb/h/v/e;)V
+.method public final a(Lb/h/v/TextViewTextChangeEvent;)V
     .locals 2
 
     .line 1
@@ -79,7 +79,7 @@
 
     if-eqz v0, :cond_1
 
-    invoke-virtual {p1}, Lb/h/v/e;->d()Ljava/lang/CharSequence;
+    invoke-virtual {p1}, Lb/h/v/TextViewTextChangeEvent;->d()Ljava/lang/CharSequence;
 
     move-result-object p1
 
@@ -97,9 +97,9 @@
     .locals 0
 
     .line 1
-    check-cast p1, Lb/h/v/e;
+    check-cast p1, Lb/h/v/TextViewTextChangeEvent;
 
-    invoke-virtual {p0, p1}, Lcom/vk/search/fragment/DiscoverSearchFragment$g;->a(Lb/h/v/e;)V
+    invoke-virtual {p0, p1}, Lcom/vk/search/fragment/DiscoverSearchFragment$g;->a(Lb/h/v/TextViewTextChangeEvent;)V
 
     return-void
 .end method

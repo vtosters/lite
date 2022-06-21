@@ -3,7 +3,7 @@
 .source "StoriesBackgroundLoader.kt"
 
 # interfaces
-.implements Lcom/vk/core/network/b/a$b;
+.implements Lcom/vk/core/network/b/NetworkTrafficMeter$b;
 
 
 # annotations

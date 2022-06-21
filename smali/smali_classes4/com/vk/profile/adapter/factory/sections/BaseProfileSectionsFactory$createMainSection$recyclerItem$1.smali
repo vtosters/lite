@@ -3,7 +3,7 @@
 .source "BaseProfileSectionsFactory.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/b;
+.implements Lkotlin/jvm/b/Functions2;
 
 
 # annotations
@@ -19,7 +19,7 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/b<",
+        "Lkotlin/jvm/b/Functions2<",
         "Landroid/content/Context;",
         "Lme/grishka/appkit/views/UsableRecyclerView;",
         ">;"
@@ -60,9 +60,9 @@
     .locals 1
 
     .line 1
-    sget-object v0, Lcom/vk/profile/ui/d/a;->a:Lcom/vk/profile/ui/d/a$a;
+    sget-object v0, Lcom/vk/profile/ui/d/SectionViews;->a:Lcom/vk/profile/ui/d/SectionViews$a;
 
-    invoke-virtual {v0, p1}, Lcom/vk/profile/ui/d/a$a;->b(Landroid/content/Context;)Lme/grishka/appkit/views/UsableRecyclerView;
+    invoke-virtual {v0, p1}, Lcom/vk/profile/ui/d/SectionViews$a;->b(Landroid/content/Context;)Lme/grishka/appkit/views/UsableRecyclerView;
 
     move-result-object p1
 

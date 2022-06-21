@@ -1,5 +1,5 @@
 .class Lru/ok/android/sdk/OkAuthActivity$c;
-.super Lru/ok/android/sdk/c;
+.super Lru/ok/android/sdk/OkWebViewClient;
 .source "OkAuthActivity.java"
 
 
@@ -26,7 +26,7 @@
     iput-object p1, p0, Lru/ok/android/sdk/OkAuthActivity$c;->c:Lru/ok/android/sdk/OkAuthActivity;
 
     .line 2
-    invoke-direct {p0, p2}, Lru/ok/android/sdk/c;-><init>(Landroid/content/Context;)V
+    invoke-direct {p0, p2}, Lru/ok/android/sdk/OkWebViewClient;-><init>(Landroid/content/Context;)V
 
     return-void
 .end method
@@ -37,12 +37,12 @@
     .locals 0
 
     .line 1
-    invoke-super {p0, p1, p2, p3, p4}, Lru/ok/android/sdk/c;->onReceivedError(Landroid/webkit/WebView;ILjava/lang/String;Ljava/lang/String;)V
+    invoke-super {p0, p1, p2, p3, p4}, Lru/ok/android/sdk/OkWebViewClient;->onReceivedError(Landroid/webkit/WebView;ILjava/lang/String;Ljava/lang/String;)V
 
     .line 2
     iget-object p1, p0, Lru/ok/android/sdk/OkAuthActivity$c;->c:Lru/ok/android/sdk/OkAuthActivity;
 
-    invoke-virtual {p0, p2}, Lru/ok/android/sdk/c;->a(I)Ljava/lang/String;
+    invoke-virtual {p0, p2}, Lru/ok/android/sdk/OkWebViewClient;->a(I)Ljava/lang/String;
 
     move-result-object p2
 
@@ -55,12 +55,12 @@
     .locals 0
 
     .line 1
-    invoke-super {p0, p1, p2, p3}, Lru/ok/android/sdk/c;->onReceivedSslError(Landroid/webkit/WebView;Landroid/webkit/SslErrorHandler;Landroid/net/http/SslError;)V
+    invoke-super {p0, p1, p2, p3}, Lru/ok/android/sdk/OkWebViewClient;->onReceivedSslError(Landroid/webkit/WebView;Landroid/webkit/SslErrorHandler;Landroid/net/http/SslError;)V
 
     .line 2
     iget-object p1, p0, Lru/ok/android/sdk/OkAuthActivity$c;->c:Lru/ok/android/sdk/OkAuthActivity;
 
-    invoke-virtual {p0, p3}, Lru/ok/android/sdk/c;->a(Landroid/net/http/SslError;)Ljava/lang/String;
+    invoke-virtual {p0, p3}, Lru/ok/android/sdk/OkWebViewClient;->a(Landroid/net/http/SslError;)Ljava/lang/String;
 
     move-result-object p2
 
@@ -309,7 +309,7 @@
 
     .line 12
     :cond_9
-    invoke-super/range {p0 .. p2}, Lru/ok/android/sdk/c;->shouldOverrideUrlLoading(Landroid/webkit/WebView;Ljava/lang/String;)Z
+    invoke-super/range {p0 .. p2}, Lru/ok/android/sdk/OkWebViewClient;->shouldOverrideUrlLoading(Landroid/webkit/WebView;Ljava/lang/String;)Z
 
     move-result v1
 

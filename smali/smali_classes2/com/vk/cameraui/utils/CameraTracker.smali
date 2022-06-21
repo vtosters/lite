@@ -64,7 +64,7 @@
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, v1}, Lcom/vk/cameraui/utils/CameraTracker$b;-><init>(Lkotlin/jvm/internal/i;)V
+    invoke-direct {v0, v1}, Lcom/vk/cameraui/utils/CameraTracker$b;-><init>(Lkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     sput-object v0, Lcom/vk/cameraui/utils/CameraTracker;->n:Lcom/vk/cameraui/utils/CameraTracker$b;
 
@@ -143,7 +143,7 @@
     return-void
 .end method
 
-.method static synthetic a(Lcom/vk/cameraui/utils/CameraTracker;Ljava/lang/String;Lkotlin/jvm/b/b;ILjava/lang/Object;)Lcom/vtosters/lite/data/n$l;
+.method static synthetic a(Lcom/vk/cameraui/utils/CameraTracker;Ljava/lang/String;Lkotlin/jvm/b/Functions2;ILjava/lang/Object;)Lcom/vtosters/lite/data/Analytics$l;
     .locals 0
 
     and-int/lit8 p3, p3, 0x2
@@ -154,39 +154,39 @@
 
     .line 22
     :cond_0
-    invoke-direct {p0, p1, p2}, Lcom/vk/cameraui/utils/CameraTracker;->a(Ljava/lang/String;Lkotlin/jvm/b/b;)Lcom/vtosters/lite/data/n$l;
+    invoke-direct {p0, p1, p2}, Lcom/vk/cameraui/utils/CameraTracker;->a(Ljava/lang/String;Lkotlin/jvm/b/Functions2;)Lcom/vtosters/lite/data/Analytics$l;
 
     move-result-object p0
 
     return-object p0
 .end method
 
-.method private final a(Ljava/lang/String;Lkotlin/jvm/b/b;)Lcom/vtosters/lite/data/n$l;
+.method private final a(Ljava/lang/String;Lkotlin/jvm/b/Functions2;)Lcom/vtosters/lite/data/Analytics$l;
     .locals 2
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
             "Ljava/lang/String;",
-            "Lkotlin/jvm/b/b<",
+            "Lkotlin/jvm/b/Functions2<",
             "-",
-            "Lcom/vtosters/lite/data/n$l;",
-            "Lkotlin/m;",
+            "Lcom/vtosters/lite/data/Analytics$l;",
+            "Lkotlin/Unit;",
             ">;)",
-            "Lcom/vtosters/lite/data/n$l;"
+            "Lcom/vtosters/lite/data/Analytics$l;"
         }
     .end annotation
 
     const-string v0, "camera_action"
 
     .line 7
-    invoke-static {v0}, Lcom/vtosters/lite/data/n;->c(Ljava/lang/String;)Lcom/vtosters/lite/data/n$l;
+    invoke-static {v0}, Lcom/vtosters/lite/data/Analytics;->c(Ljava/lang/String;)Lcom/vtosters/lite/data/Analytics$l;
 
     move-result-object v0
 
     const-string v1, "action_type"
 
     .line 8
-    invoke-virtual {v0, v1, p1}, Lcom/vtosters/lite/data/n$l;->a(Ljava/lang/String;Ljava/lang/Object;)Lcom/vtosters/lite/data/n$l;
+    invoke-virtual {v0, v1, p1}, Lcom/vtosters/lite/data/Analytics$l;->a(Ljava/lang/String;Ljava/lang/Object;)Lcom/vtosters/lite/data/Analytics$l;
 
     .line 9
     iget-object p1, p0, Lcom/vk/cameraui/utils/CameraTracker;->a:Lcom/vk/cameraui/utils/CameraTracker$a;
@@ -197,7 +197,7 @@
 
     const-string v1, "user_id"
 
-    invoke-virtual {v0, v1, p1}, Lcom/vtosters/lite/data/n$l;->a(Ljava/lang/String;Ljava/lang/Object;)Lcom/vtosters/lite/data/n$l;
+    invoke-virtual {v0, v1, p1}, Lcom/vtosters/lite/data/Analytics$l;->a(Ljava/lang/String;Ljava/lang/Object;)Lcom/vtosters/lite/data/Analytics$l;
 
     .line 10
     iget-object p1, p0, Lcom/vk/cameraui/utils/CameraTracker;->a:Lcom/vk/cameraui/utils/CameraTracker$a;
@@ -208,7 +208,7 @@
 
     const-string v1, "object_id"
 
-    invoke-virtual {v0, v1, p1}, Lcom/vtosters/lite/data/n$l;->a(Ljava/lang/String;Ljava/lang/Object;)Lcom/vtosters/lite/data/n$l;
+    invoke-virtual {v0, v1, p1}, Lcom/vtosters/lite/data/Analytics$l;->a(Ljava/lang/String;Ljava/lang/Object;)Lcom/vtosters/lite/data/Analytics$l;
 
     .line 11
     iget-object p1, p0, Lcom/vk/cameraui/utils/CameraTracker;->a:Lcom/vk/cameraui/utils/CameraTracker$a;
@@ -219,7 +219,7 @@
 
     const-string v1, "object_type"
 
-    invoke-virtual {v0, v1, p1}, Lcom/vtosters/lite/data/n$l;->a(Ljava/lang/String;Ljava/lang/Object;)Lcom/vtosters/lite/data/n$l;
+    invoke-virtual {v0, v1, p1}, Lcom/vtosters/lite/data/Analytics$l;->a(Ljava/lang/String;Ljava/lang/Object;)Lcom/vtosters/lite/data/Analytics$l;
 
     .line 12
     iget-object p1, p0, Lcom/vk/cameraui/utils/CameraTracker;->a:Lcom/vk/cameraui/utils/CameraTracker$a;
@@ -230,7 +230,7 @@
 
     const-string v1, "camera_mode"
 
-    invoke-virtual {v0, v1, p1}, Lcom/vtosters/lite/data/n$l;->a(Ljava/lang/String;Ljava/lang/Object;)Lcom/vtosters/lite/data/n$l;
+    invoke-virtual {v0, v1, p1}, Lcom/vtosters/lite/data/Analytics$l;->a(Ljava/lang/String;Ljava/lang/Object;)Lcom/vtosters/lite/data/Analytics$l;
 
     .line 13
     iget-object p1, p0, Lcom/vk/cameraui/utils/CameraTracker;->a:Lcom/vk/cameraui/utils/CameraTracker$a;
@@ -241,7 +241,7 @@
 
     const-string v1, "camera_state"
 
-    invoke-virtual {v0, v1, p1}, Lcom/vtosters/lite/data/n$l;->a(Ljava/lang/String;Ljava/lang/Object;)Lcom/vtosters/lite/data/n$l;
+    invoke-virtual {v0, v1, p1}, Lcom/vtosters/lite/data/Analytics$l;->a(Ljava/lang/String;Ljava/lang/Object;)Lcom/vtosters/lite/data/Analytics$l;
 
     .line 14
     iget-object p1, p0, Lcom/vk/cameraui/utils/CameraTracker;->a:Lcom/vk/cameraui/utils/CameraTracker$a;
@@ -252,7 +252,7 @@
 
     const-string v1, "camera_entry_point"
 
-    invoke-virtual {v0, v1, p1}, Lcom/vtosters/lite/data/n$l;->a(Ljava/lang/String;Ljava/lang/Object;)Lcom/vtosters/lite/data/n$l;
+    invoke-virtual {v0, v1, p1}, Lcom/vtosters/lite/data/Analytics$l;->a(Ljava/lang/String;Ljava/lang/Object;)Lcom/vtosters/lite/data/Analytics$l;
 
     .line 15
     iget-object p1, p0, Lcom/vk/cameraui/utils/CameraTracker;->a:Lcom/vk/cameraui/utils/CameraTracker$a;
@@ -263,7 +263,7 @@
 
     const-string v1, "question_story_id"
 
-    invoke-virtual {v0, v1, p1}, Lcom/vtosters/lite/data/n$l;->a(Ljava/lang/String;Ljava/lang/Object;)Lcom/vtosters/lite/data/n$l;
+    invoke-virtual {v0, v1, p1}, Lcom/vtosters/lite/data/Analytics$l;->a(Ljava/lang/String;Ljava/lang/Object;)Lcom/vtosters/lite/data/Analytics$l;
 
     .line 16
     iget-object p1, p0, Lcom/vk/cameraui/utils/CameraTracker;->a:Lcom/vk/cameraui/utils/CameraTracker$a;
@@ -274,7 +274,7 @@
 
     const-string v1, "question_theme"
 
-    invoke-virtual {v0, v1, p1}, Lcom/vtosters/lite/data/n$l;->a(Ljava/lang/String;Ljava/lang/Object;)Lcom/vtosters/lite/data/n$l;
+    invoke-virtual {v0, v1, p1}, Lcom/vtosters/lite/data/Analytics$l;->a(Ljava/lang/String;Ljava/lang/Object;)Lcom/vtosters/lite/data/Analytics$l;
 
     .line 17
     iget-object p1, p0, Lcom/vk/cameraui/utils/CameraTracker;->a:Lcom/vk/cameraui/utils/CameraTracker$a;
@@ -285,7 +285,7 @@
 
     const-string v1, "question_text"
 
-    invoke-virtual {v0, v1, p1}, Lcom/vtosters/lite/data/n$l;->a(Ljava/lang/String;Ljava/lang/Object;)Lcom/vtosters/lite/data/n$l;
+    invoke-virtual {v0, v1, p1}, Lcom/vtosters/lite/data/Analytics$l;->a(Ljava/lang/String;Ljava/lang/Object;)Lcom/vtosters/lite/data/Analytics$l;
 
     .line 18
     iget-object p1, p0, Lcom/vk/cameraui/utils/CameraTracker;->a:Lcom/vk/cameraui/utils/CameraTracker$a;
@@ -300,7 +300,7 @@
 
     const-string v1, "has_question_reply"
 
-    invoke-virtual {v0, v1, p1}, Lcom/vtosters/lite/data/n$l;->a(Ljava/lang/String;Ljava/lang/Object;)Lcom/vtosters/lite/data/n$l;
+    invoke-virtual {v0, v1, p1}, Lcom/vtosters/lite/data/Analytics$l;->a(Ljava/lang/String;Ljava/lang/Object;)Lcom/vtosters/lite/data/Analytics$l;
 
     .line 19
     iget-object p1, p0, Lcom/vk/cameraui/utils/CameraTracker;->a:Lcom/vk/cameraui/utils/CameraTracker$a;
@@ -311,29 +311,29 @@
 
     const-string v1, "ref"
 
-    invoke-virtual {v0, v1, p1}, Lcom/vtosters/lite/data/n$l;->a(Ljava/lang/String;Ljava/lang/Object;)Lcom/vtosters/lite/data/n$l;
+    invoke-virtual {v0, v1, p1}, Lcom/vtosters/lite/data/Analytics$l;->a(Ljava/lang/String;Ljava/lang/Object;)Lcom/vtosters/lite/data/Analytics$l;
 
     if-eqz p2, :cond_0
 
     const-string p1, "it"
 
     .line 20
-    invoke-static {v0, p1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, p1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    invoke-interface {p2, v0}, Lkotlin/jvm/b/b;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {p2, v0}, Lkotlin/jvm/b/Functions2;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p1
 
-    check-cast p1, Lkotlin/m;
+    check-cast p1, Lkotlin/Unit;
 
     .line 21
     :cond_0
-    invoke-virtual {v0}, Lcom/vtosters/lite/data/n$l;->b()Lcom/vtosters/lite/data/n$l;
+    invoke-virtual {v0}, Lcom/vtosters/lite/data/Analytics$l;->b()Lcom/vtosters/lite/data/Analytics$l;
 
     return-object v0
 .end method
 
-.method public static synthetic a(Lcom/vk/cameraui/utils/CameraTracker;Lcom/vk/stories/analytics/StoryPublishEvent;Lkotlin/jvm/b/b;ILjava/lang/Object;)V
+.method public static synthetic a(Lcom/vk/cameraui/utils/CameraTracker;Lcom/vk/stories/analytics/StoryPublishEvent;Lkotlin/jvm/b/Functions2;ILjava/lang/Object;)V
     .locals 0
 
     and-int/lit8 p3, p3, 0x2
@@ -344,7 +344,7 @@
 
     .line 23
     :cond_0
-    invoke-virtual {p0, p1, p2}, Lcom/vk/cameraui/utils/CameraTracker;->a(Lcom/vk/stories/analytics/StoryPublishEvent;Lkotlin/jvm/b/b;)V
+    invoke-virtual {p0, p1, p2}, Lcom/vk/cameraui/utils/CameraTracker;->a(Lcom/vk/stories/analytics/StoryPublishEvent;Lkotlin/jvm/b/Functions2;)V
 
     return-void
 .end method
@@ -478,7 +478,7 @@
 
     const-string p1, "brand_action"
 
-    invoke-direct {p0, p1, v0}, Lcom/vk/cameraui/utils/CameraTracker;->a(Ljava/lang/String;Lkotlin/jvm/b/b;)Lcom/vtosters/lite/data/n$l;
+    invoke-direct {p0, p1, v0}, Lcom/vk/cameraui/utils/CameraTracker;->a(Ljava/lang/String;Lkotlin/jvm/b/Functions2;)Lcom/vtosters/lite/data/Analytics$l;
 
     return-void
 .end method
@@ -493,7 +493,7 @@
 
     const-string p1, "live_action_links_onboarding_page"
 
-    invoke-direct {p0, p1, v0}, Lcom/vk/cameraui/utils/CameraTracker;->a(Ljava/lang/String;Lkotlin/jvm/b/b;)Lcom/vtosters/lite/data/n$l;
+    invoke-direct {p0, p1, v0}, Lcom/vk/cameraui/utils/CameraTracker;->a(Ljava/lang/String;Lkotlin/jvm/b/Functions2;)Lcom/vtosters/lite/data/Analytics$l;
 
     .line 3
     sget-object p1, Lcom/vk/stories/analytics/StoryPublishEvent;->MASK_ON:Lcom/vk/stories/analytics/StoryPublishEvent;
@@ -502,7 +502,7 @@
 
     const/4 v0, 0x2
 
-    invoke-static {p0, p1, p2, v0, p2}, Lcom/vk/cameraui/utils/CameraTracker;->a(Lcom/vk/cameraui/utils/CameraTracker;Lcom/vk/stories/analytics/StoryPublishEvent;Lkotlin/jvm/b/b;ILjava/lang/Object;)V
+    invoke-static {p0, p1, p2, v0, p2}, Lcom/vk/cameraui/utils/CameraTracker;->a(Lcom/vk/cameraui/utils/CameraTracker;Lcom/vk/stories/analytics/StoryPublishEvent;Lkotlin/jvm/b/Functions2;ILjava/lang/Object;)V
 
     return-void
 .end method
@@ -514,21 +514,21 @@
 
     const/4 v1, 0x2
 
-    invoke-static {p0, p1, v0, v1, v0}, Lcom/vk/cameraui/utils/CameraTracker;->a(Lcom/vk/cameraui/utils/CameraTracker;Lcom/vk/stories/analytics/StoryPublishEvent;Lkotlin/jvm/b/b;ILjava/lang/Object;)V
+    invoke-static {p0, p1, v0, v1, v0}, Lcom/vk/cameraui/utils/CameraTracker;->a(Lcom/vk/cameraui/utils/CameraTracker;Lcom/vk/stories/analytics/StoryPublishEvent;Lkotlin/jvm/b/Functions2;ILjava/lang/Object;)V
 
     return-void
 .end method
 
-.method public final a(Lcom/vk/stories/analytics/StoryPublishEvent;Lkotlin/jvm/b/b;)V
+.method public final a(Lcom/vk/stories/analytics/StoryPublishEvent;Lkotlin/jvm/b/Functions2;)V
     .locals 8
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
             "Lcom/vk/stories/analytics/StoryPublishEvent;",
-            "Lkotlin/jvm/b/b<",
+            "Lkotlin/jvm/b/Functions2<",
             "-",
-            "Lcom/vtosters/lite/data/n$l;",
-            "Lkotlin/m;",
+            "Lcom/vtosters/lite/data/Analytics$l;",
+            "Lkotlin/Unit;",
             ">;)V"
         }
     .end annotation
@@ -550,7 +550,7 @@
 
     move-object v5, p2
 
-    invoke-static/range {v0 .. v7}, Lcom/vk/stories/analytics/CameraAnalytics;->a(Lcom/vk/stories/analytics/StoryPublishEvent;Lcom/vk/cameraui/utils/CameraTracker$a;Lcom/vk/dto/stories/model/StoryUploadParams;Lcom/vk/dto/stories/model/CommonUploadParams;ZLkotlin/jvm/b/b;ILjava/lang/Object;)V
+    invoke-static/range {v0 .. v7}, Lcom/vk/stories/analytics/CameraAnalytics;->a(Lcom/vk/stories/analytics/StoryPublishEvent;Lcom/vk/cameraui/utils/CameraTracker$a;Lcom/vk/dto/stories/model/StoryUploadParams;Lcom/vk/dto/stories/model/CommonUploadParams;ZLkotlin/jvm/b/Functions2;ILjava/lang/Object;)V
 
     return-void
 .end method
@@ -565,7 +565,7 @@
 
     const-string p1, "mask_off"
 
-    invoke-direct {p0, p1, v0}, Lcom/vk/cameraui/utils/CameraTracker;->a(Ljava/lang/String;Lkotlin/jvm/b/b;)Lcom/vtosters/lite/data/n$l;
+    invoke-direct {p0, p1, v0}, Lcom/vk/cameraui/utils/CameraTracker;->a(Ljava/lang/String;Lkotlin/jvm/b/Functions2;)Lcom/vtosters/lite/data/Analytics$l;
 
     .line 5
     sget-object p1, Lcom/vk/stories/analytics/StoryPublishEvent;->MASK_OFF:Lcom/vk/stories/analytics/StoryPublishEvent;
@@ -574,7 +574,7 @@
 
     const/4 v1, 0x2
 
-    invoke-static {p0, p1, v0, v1, v0}, Lcom/vk/cameraui/utils/CameraTracker;->a(Lcom/vk/cameraui/utils/CameraTracker;Lcom/vk/stories/analytics/StoryPublishEvent;Lkotlin/jvm/b/b;ILjava/lang/Object;)V
+    invoke-static {p0, p1, v0, v1, v0}, Lcom/vk/cameraui/utils/CameraTracker;->a(Lcom/vk/cameraui/utils/CameraTracker;Lcom/vk/stories/analytics/StoryPublishEvent;Lkotlin/jvm/b/Functions2;ILjava/lang/Object;)V
 
     return-void
 .end method
@@ -589,7 +589,7 @@
     const/4 v2, 0x2
 
     .line 3
-    invoke-static {p0, v1, v0, v2, v0}, Lcom/vk/cameraui/utils/CameraTracker;->a(Lcom/vk/cameraui/utils/CameraTracker;Ljava/lang/String;Lkotlin/jvm/b/b;ILjava/lang/Object;)Lcom/vtosters/lite/data/n$l;
+    invoke-static {p0, v1, v0, v2, v0}, Lcom/vk/cameraui/utils/CameraTracker;->a(Lcom/vk/cameraui/utils/CameraTracker;Ljava/lang/String;Lkotlin/jvm/b/Functions2;ILjava/lang/Object;)Lcom/vtosters/lite/data/Analytics$l;
 
     return-void
 .end method
@@ -604,7 +604,7 @@
 
     const-string p1, "brand_detected"
 
-    invoke-direct {p0, p1, v0}, Lcom/vk/cameraui/utils/CameraTracker;->a(Ljava/lang/String;Lkotlin/jvm/b/b;)Lcom/vtosters/lite/data/n$l;
+    invoke-direct {p0, p1, v0}, Lcom/vk/cameraui/utils/CameraTracker;->a(Ljava/lang/String;Lkotlin/jvm/b/Functions2;)Lcom/vtosters/lite/data/Analytics$l;
 
     return-void
 .end method
@@ -629,7 +629,7 @@
 
     move-object v0, p1
 
-    invoke-static/range {v0 .. v7}, Lcom/vk/stories/analytics/CameraAnalytics;->a(Lcom/vk/stories/analytics/StoryPublishEvent;Lcom/vk/cameraui/utils/CameraTracker$a;Lcom/vk/dto/stories/model/StoryUploadParams;Lcom/vk/dto/stories/model/CommonUploadParams;ZLkotlin/jvm/b/b;ILjava/lang/Object;)V
+    invoke-static/range {v0 .. v7}, Lcom/vk/stories/analytics/CameraAnalytics;->a(Lcom/vk/stories/analytics/StoryPublishEvent;Lcom/vk/cameraui/utils/CameraTracker$a;Lcom/vk/dto/stories/model/StoryUploadParams;Lcom/vk/dto/stories/model/CommonUploadParams;ZLkotlin/jvm/b/Functions2;ILjava/lang/Object;)V
 
     return-void
 .end method
@@ -644,7 +644,7 @@
 
     const-string p1, "mask_on"
 
-    invoke-direct {p0, p1, v0}, Lcom/vk/cameraui/utils/CameraTracker;->a(Ljava/lang/String;Lkotlin/jvm/b/b;)Lcom/vtosters/lite/data/n$l;
+    invoke-direct {p0, p1, v0}, Lcom/vk/cameraui/utils/CameraTracker;->a(Ljava/lang/String;Lkotlin/jvm/b/Functions2;)Lcom/vtosters/lite/data/Analytics$l;
 
     .line 2
     sget-object p1, Lcom/vk/stories/analytics/StoryPublishEvent;->MASK_ON:Lcom/vk/stories/analytics/StoryPublishEvent;
@@ -653,7 +653,7 @@
 
     const/4 v1, 0x2
 
-    invoke-static {p0, p1, v0, v1, v0}, Lcom/vk/cameraui/utils/CameraTracker;->a(Lcom/vk/cameraui/utils/CameraTracker;Lcom/vk/stories/analytics/StoryPublishEvent;Lkotlin/jvm/b/b;ILjava/lang/Object;)V
+    invoke-static {p0, p1, v0, v1, v0}, Lcom/vk/cameraui/utils/CameraTracker;->a(Lcom/vk/cameraui/utils/CameraTracker;Lcom/vk/stories/analytics/StoryPublishEvent;Lkotlin/jvm/b/Functions2;ILjava/lang/Object;)V
 
     return-void
 .end method
@@ -668,12 +668,12 @@
     const-string v2, "focus"
 
     .line 3
-    invoke-static {p0, v2, v1, v0, v1}, Lcom/vk/cameraui/utils/CameraTracker;->a(Lcom/vk/cameraui/utils/CameraTracker;Ljava/lang/String;Lkotlin/jvm/b/b;ILjava/lang/Object;)Lcom/vtosters/lite/data/n$l;
+    invoke-static {p0, v2, v1, v0, v1}, Lcom/vk/cameraui/utils/CameraTracker;->a(Lcom/vk/cameraui/utils/CameraTracker;Ljava/lang/String;Lkotlin/jvm/b/Functions2;ILjava/lang/Object;)Lcom/vtosters/lite/data/Analytics$l;
 
     .line 4
     sget-object v2, Lcom/vk/stories/analytics/StoryPublishEvent;->FOCUS:Lcom/vk/stories/analytics/StoryPublishEvent;
 
-    invoke-static {p0, v2, v1, v0, v1}, Lcom/vk/cameraui/utils/CameraTracker;->a(Lcom/vk/cameraui/utils/CameraTracker;Lcom/vk/stories/analytics/StoryPublishEvent;Lkotlin/jvm/b/b;ILjava/lang/Object;)V
+    invoke-static {p0, v2, v1, v0, v1}, Lcom/vk/cameraui/utils/CameraTracker;->a(Lcom/vk/cameraui/utils/CameraTracker;Lcom/vk/stories/analytics/StoryPublishEvent;Lkotlin/jvm/b/Functions2;ILjava/lang/Object;)V
 
     return-void
 .end method
@@ -688,7 +688,7 @@
 
     const-string p1, "switch_camera"
 
-    invoke-direct {p0, p1, v0}, Lcom/vk/cameraui/utils/CameraTracker;->a(Ljava/lang/String;Lkotlin/jvm/b/b;)Lcom/vtosters/lite/data/n$l;
+    invoke-direct {p0, p1, v0}, Lcom/vk/cameraui/utils/CameraTracker;->a(Ljava/lang/String;Lkotlin/jvm/b/Functions2;)Lcom/vtosters/lite/data/Analytics$l;
 
     .line 2
     sget-object p1, Lcom/vk/stories/analytics/StoryPublishEvent;->SWITCH_CAMERA:Lcom/vk/stories/analytics/StoryPublishEvent;
@@ -697,7 +697,7 @@
 
     const/4 v1, 0x2
 
-    invoke-static {p0, p1, v0, v1, v0}, Lcom/vk/cameraui/utils/CameraTracker;->a(Lcom/vk/cameraui/utils/CameraTracker;Lcom/vk/stories/analytics/StoryPublishEvent;Lkotlin/jvm/b/b;ILjava/lang/Object;)V
+    invoke-static {p0, p1, v0, v1, v0}, Lcom/vk/cameraui/utils/CameraTracker;->a(Lcom/vk/cameraui/utils/CameraTracker;Lcom/vk/stories/analytics/StoryPublishEvent;Lkotlin/jvm/b/Functions2;ILjava/lang/Object;)V
 
     return-void
 .end method
@@ -712,7 +712,7 @@
     const/4 v2, 0x2
 
     .line 1
-    invoke-static {p0, v1, v0, v2, v0}, Lcom/vk/cameraui/utils/CameraTracker;->a(Lcom/vk/cameraui/utils/CameraTracker;Ljava/lang/String;Lkotlin/jvm/b/b;ILjava/lang/Object;)Lcom/vtosters/lite/data/n$l;
+    invoke-static {p0, v1, v0, v2, v0}, Lcom/vk/cameraui/utils/CameraTracker;->a(Lcom/vk/cameraui/utils/CameraTracker;Ljava/lang/String;Lkotlin/jvm/b/Functions2;ILjava/lang/Object;)Lcom/vtosters/lite/data/Analytics$l;
 
     .line 2
     sget-object v3, Lcom/vk/stories/analytics/StoryPublishEvent;->OPEN_CAMERA:Lcom/vk/stories/analytics/StoryPublishEvent;
@@ -731,7 +731,7 @@
 
     const/4 v10, 0x0
 
-    invoke-static/range {v3 .. v10}, Lcom/vk/stories/analytics/CameraAnalytics;->a(Lcom/vk/stories/analytics/StoryPublishEvent;Lcom/vk/cameraui/utils/CameraTracker$a;Lcom/vk/dto/stories/model/StoryUploadParams;Lcom/vk/dto/stories/model/CommonUploadParams;ZLkotlin/jvm/b/b;ILjava/lang/Object;)V
+    invoke-static/range {v3 .. v10}, Lcom/vk/stories/analytics/CameraAnalytics;->a(Lcom/vk/stories/analytics/StoryPublishEvent;Lcom/vk/cameraui/utils/CameraTracker$a;Lcom/vk/dto/stories/model/StoryUploadParams;Lcom/vk/dto/stories/model/CommonUploadParams;ZLkotlin/jvm/b/Functions2;ILjava/lang/Object;)V
 
     return-void
 .end method

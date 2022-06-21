@@ -3,12 +3,12 @@
 .source "FeatureManager.kt"
 
 # interfaces
-.implements Lc/a/z/g;
+.implements Lio/reactivex/functions/Consumer;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/toggle/FeatureManager;->a(Lkotlin/jvm/b/a;Lkotlin/jvm/b/a;)Lio/reactivex/disposables/b;
+    value = Lcom/vk/toggle/FeatureManager;->a(Lkotlin/jvm/b/Functions;Lkotlin/jvm/b/Functions;)Lio/reactivex/disposables/Disposable;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -22,22 +22,22 @@
         "Ljava/lang/Object;",
         ">",
         "Ljava/lang/Object;",
-        "Lc/a/z/g<",
-        "Lcom/vk/toggle/a$b;",
+        "Lio/reactivex/functions/Consumer<",
+        "Lcom/vk/toggle/FeaturePublishSubject$b;",
         ">;"
     }
 .end annotation
 
 
 # instance fields
-.field final synthetic a:Lkotlin/jvm/b/a;
+.field final synthetic a:Lkotlin/jvm/b/Functions;
 
 
 # direct methods
-.method constructor <init>(Lkotlin/jvm/b/a;)V
+.method constructor <init>(Lkotlin/jvm/b/Functions;)V
     .locals 0
 
-    iput-object p1, p0, Lcom/vk/toggle/FeatureManager$d;->a:Lkotlin/jvm/b/a;
+    iput-object p1, p0, Lcom/vk/toggle/FeatureManager$d;->a:Lkotlin/jvm/b/Functions;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -46,13 +46,13 @@
 
 
 # virtual methods
-.method public final a(Lcom/vk/toggle/a$b;)V
+.method public final a(Lcom/vk/toggle/FeaturePublishSubject$b;)V
     .locals 0
 
     .line 1
-    iget-object p1, p0, Lcom/vk/toggle/FeatureManager$d;->a:Lkotlin/jvm/b/a;
+    iget-object p1, p0, Lcom/vk/toggle/FeatureManager$d;->a:Lkotlin/jvm/b/Functions;
 
-    invoke-interface {p1}, Lkotlin/jvm/b/a;->invoke()Ljava/lang/Object;
+    invoke-interface {p1}, Lkotlin/jvm/b/Functions;->invoke()Ljava/lang/Object;
 
     return-void
 .end method
@@ -61,9 +61,9 @@
     .locals 0
 
     .line 1
-    check-cast p1, Lcom/vk/toggle/a$b;
+    check-cast p1, Lcom/vk/toggle/FeaturePublishSubject$b;
 
-    invoke-virtual {p0, p1}, Lcom/vk/toggle/FeatureManager$d;->a(Lcom/vk/toggle/a$b;)V
+    invoke-virtual {p0, p1}, Lcom/vk/toggle/FeatureManager$d;->a(Lcom/vk/toggle/FeaturePublishSubject$b;)V
 
     return-void
 .end method

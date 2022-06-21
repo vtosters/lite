@@ -3,12 +3,12 @@
 .source "QRViewUtils.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/b;
+.implements Lkotlin/jvm/b/Functions2;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/qrcode/QRViewUtils;->a(Landroid/app/Activity;Lcom/vk/qrcode/QRParser;Lcom/vk/qrcode/d;Ljava/lang/Object;)V
+    value = Lcom/vk/qrcode/QRViewUtils;->a(Landroid/app/Activity;Lcom/vk/qrcode/QRParser;Lcom/vk/qrcode/QRTypes9;Ljava/lang/Object;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -19,9 +19,9 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/b<",
-        "Lcom/vk/core/dialogs/bottomsheet/e;",
-        "Lkotlin/m;",
+        "Lkotlin/jvm/b/Functions2<",
+        "Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet;",
+        "Lkotlin/Unit;",
         ">;"
     }
 .end annotation
@@ -56,11 +56,11 @@
 
 
 # virtual methods
-.method public final a(Lcom/vk/core/dialogs/bottomsheet/e;)V
+.method public final a(Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet;)V
     .locals 1
 
     .line 1
-    invoke-virtual {p1}, Lcom/vk/core/dialogs/bottomsheet/e;->D4()Landroid/widget/TextView;
+    invoke-virtual {p1}, Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet;->D4()Landroid/widget/TextView;
 
     move-result-object p1
 
@@ -79,11 +79,11 @@
     .locals 0
 
     .line 1
-    check-cast p1, Lcom/vk/core/dialogs/bottomsheet/e;
+    check-cast p1, Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet;
 
-    invoke-virtual {p0, p1}, Lcom/vk/qrcode/QRViewUtils$forBrand$onShowListener$1;->a(Lcom/vk/core/dialogs/bottomsheet/e;)V
+    invoke-virtual {p0, p1}, Lcom/vk/qrcode/QRViewUtils$forBrand$onShowListener$1;->a(Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet;)V
 
-    sget-object p1, Lkotlin/m;->a:Lkotlin/m;
+    sget-object p1, Lkotlin/Unit;->a:Lkotlin/Unit;
 
     return-object p1
 .end method

@@ -14,10 +14,10 @@
     .end annotation
 .end field
 
-.field public static final i0:Lcom/vk/dto/common/data/c;
+.field public static final i0:Lcom/vk/dto/common/data/JsonParser;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Lcom/vk/dto/common/data/c<",
+            "Lcom/vk/dto/common/data/JsonParser<",
             "Lcom/vk/api/users/UsersSearch$SearchProfile;",
             ">;"
         }
@@ -45,7 +45,7 @@
 
     invoke-direct {v0}, Lcom/vk/api/users/UsersSearch$SearchProfile$b;-><init>()V
 
-    sput-object v0, Lcom/vk/api/users/UsersSearch$SearchProfile;->i0:Lcom/vk/dto/common/data/c;
+    sput-object v0, Lcom/vk/api/users/UsersSearch$SearchProfile;->i0:Lcom/vk/dto/common/data/JsonParser;
 
     return-void
 .end method

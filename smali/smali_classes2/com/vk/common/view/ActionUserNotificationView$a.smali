@@ -3,7 +3,7 @@
 .source "ActionUserNotificationView.kt"
 
 # interfaces
-.implements Lc/a/z/g;
+.implements Lio/reactivex/functions/Consumer;
 
 
 # annotations
@@ -22,7 +22,7 @@
         "Ljava/lang/Object;",
         ">",
         "Ljava/lang/Object;",
-        "Lc/a/z/g<",
+        "Lio/reactivex/functions/Consumer<",
         "Ljava/lang/Boolean;",
         ">;"
     }
@@ -56,7 +56,7 @@
     .line 1
     iget-object p1, p0, Lcom/vk/common/view/ActionUserNotificationView$a;->b:Lcom/vk/common/view/ActionUserNotificationView;
 
-    invoke-virtual {p1}, Lcom/vk/common/view/ActionUserNotificationView;->getOnHideCallback()Lkotlin/jvm/b/b;
+    invoke-virtual {p1}, Lcom/vk/common/view/ActionUserNotificationView;->getOnHideCallback()Lkotlin/jvm/b/Functions2;
 
     move-result-object p1
 
@@ -64,11 +64,11 @@
 
     iget-object v0, p0, Lcom/vk/common/view/ActionUserNotificationView$a;->a:Lcom/vk/dto/common/data/UserNotification;
 
-    invoke-interface {p1, v0}, Lkotlin/jvm/b/b;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {p1, v0}, Lkotlin/jvm/b/Functions2;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p1
 
-    check-cast p1, Lkotlin/m;
+    check-cast p1, Lkotlin/Unit;
 
     :cond_0
     return-void

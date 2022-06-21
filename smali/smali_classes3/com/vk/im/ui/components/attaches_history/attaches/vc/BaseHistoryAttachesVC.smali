@@ -3,7 +3,7 @@
 .source "BaseHistoryAttachesVC.kt"
 
 # interfaces
-.implements Lcom/vk/im/ui/components/attaches_history/attaches/vc/b;
+.implements Lcom/vk/im/ui/components/attaches_history/attaches/vc/HistoryAttachesVC;
 
 
 # instance fields
@@ -90,7 +90,7 @@
     :cond_1
     const-string p1, "emptyStateTextView"
 
-    invoke-static {p1}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {p1}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     const/4 p1, 0x0
 
@@ -165,11 +165,11 @@
 
     .line 30
     :cond_3
-    invoke-virtual {p0}, Lcom/vk/im/ui/components/attaches_history/attaches/vc/BaseHistoryAttachesVC;->b()Lcom/vk/im/ui/views/adapter_delegate/a;
+    invoke-virtual {p0}, Lcom/vk/im/ui/components/attaches_history/attaches/vc/BaseHistoryAttachesVC;->b()Lcom/vk/im/ui/views/adapter_delegate/DelegationAdapter;
 
     move-result-object p1
 
-    invoke-virtual {p1}, Lcom/vk/im/ui/views/adapter_delegate/a;->getItemCount()I
+    invoke-virtual {p1}, Lcom/vk/im/ui/views/adapter_delegate/DelegationAdapter;->getItemCount()I
 
     move-result p1
 
@@ -203,7 +203,7 @@
     :cond_1
     const-string p1, "attachesRecyclerView"
 
-    invoke-static {p1}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {p1}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v1
 .end method
@@ -229,7 +229,7 @@
 
     const-string v2, "view.findViewById(R.id.root_view)"
 
-    invoke-static {v0, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     iput-object v0, p0, Lcom/vk/im/ui/components/attaches_history/attaches/vc/BaseHistoryAttachesVC;->a:Landroid/view/View;
 
@@ -242,7 +242,7 @@
 
     const-string v2, "view.findViewById(R.id.vkim_progress)"
 
-    invoke-static {v0, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     check-cast v0, Lcom/pnikosis/materialishprogress/ProgressWheel;
 
@@ -257,7 +257,7 @@
 
     const-string v2, "view.findViewById(R.id.vkim_recycler_view)"
 
-    invoke-static {v0, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     check-cast v0, Landroidx/recyclerview/widget/RecyclerView;
 
@@ -278,7 +278,7 @@
     invoke-virtual {v0, v3}, Landroidx/recyclerview/widget/RecyclerView;->setLayoutManager(Landroidx/recyclerview/widget/RecyclerView$LayoutManager;)V
 
     .line 8
-    invoke-virtual {p0}, Lcom/vk/im/ui/components/attaches_history/attaches/vc/BaseHistoryAttachesVC;->b()Lcom/vk/im/ui/views/adapter_delegate/a;
+    invoke-virtual {p0}, Lcom/vk/im/ui/components/attaches_history/attaches/vc/BaseHistoryAttachesVC;->b()Lcom/vk/im/ui/views/adapter_delegate/DelegationAdapter;
 
     move-result-object v3
 
@@ -298,7 +298,7 @@
 
     const-string v3, "view.findViewById(R.id.vkim_swipe_refresh_layout)"
 
-    invoke-static {v0, v3}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v3}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     check-cast v0, Landroidx/swiperefreshlayout/widget/SwipeRefreshLayout;
 
@@ -332,9 +332,9 @@
 
     invoke-direct {v1, v3}, Lcom/vk/im/ui/components/attaches_history/attaches/vc/BaseHistoryAttachesVC$createView$2;-><init>(Lcom/vk/im/ui/components/attaches_history/attaches/HistoryAttachesComponent;)V
 
-    new-instance v3, Lcom/vk/im/ui/components/attaches_history/attaches/vc/a;
+    new-instance v3, Lcom/vk/im/ui/components/attaches_history/attaches/vc/BaseHistoryAttachesVC1;
 
-    invoke-direct {v3, v1}, Lcom/vk/im/ui/components/attaches_history/attaches/vc/a;-><init>(Lkotlin/jvm/b/a;)V
+    invoke-direct {v3, v1}, Lcom/vk/im/ui/components/attaches_history/attaches/vc/BaseHistoryAttachesVC1;-><init>(Lkotlin/jvm/b/Functions;)V
 
     invoke-virtual {v0, v3}, Landroidx/swiperefreshlayout/widget/SwipeRefreshLayout;->setOnRefreshListener(Landroidx/swiperefreshlayout/widget/SwipeRefreshLayout$OnRefreshListener;)V
 
@@ -347,7 +347,7 @@
 
     const-string v1, "view.findViewById(R.id.vkim_empty_list_view)"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     check-cast v0, Landroid/widget/TextView;
 
@@ -369,19 +369,19 @@
     :cond_0
     const-string p1, "emptyStateTextView"
 
-    invoke-static {p1}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {p1}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v2
 
     .line 15
     :cond_1
-    invoke-static {v3}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v3}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v2
 
     .line 16
     :cond_2
-    invoke-static {v3}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v3}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v2
 
@@ -389,7 +389,7 @@
     const-string p1, "attachesRecyclerView"
 
     .line 17
-    invoke-static {p1}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {p1}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v2
 .end method
@@ -411,7 +411,7 @@
     :cond_0
     const-string v0, "attachesRecyclerView"
 
-    invoke-static {v0}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v0}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     const/4 v0, 0x0
 
@@ -425,7 +425,7 @@
             "(",
             "Ljava/util/List<",
             "+",
-            "Lcom/vk/im/ui/views/adapter_delegate/c;",
+            "Lcom/vk/im/ui/views/adapter_delegate/ListItem;",
             ">;",
             "Landroidx/recyclerview/widget/DiffUtil$DiffResult;",
             ")V"
@@ -433,14 +433,14 @@
     .end annotation
 
     .line 19
-    invoke-virtual {p0}, Lcom/vk/im/ui/components/attaches_history/attaches/vc/BaseHistoryAttachesVC;->b()Lcom/vk/im/ui/views/adapter_delegate/a;
+    invoke-virtual {p0}, Lcom/vk/im/ui/components/attaches_history/attaches/vc/BaseHistoryAttachesVC;->b()Lcom/vk/im/ui/views/adapter_delegate/DelegationAdapter;
 
     move-result-object v0
 
-    invoke-virtual {v0, p1}, Lcom/vk/im/ui/views/adapter_delegate/a;->setItems(Ljava/util/List;)V
+    invoke-virtual {v0, p1}, Lcom/vk/im/ui/views/adapter_delegate/DelegationAdapter;->setItems(Ljava/util/List;)V
 
     .line 20
-    invoke-virtual {p0}, Lcom/vk/im/ui/components/attaches_history/attaches/vc/BaseHistoryAttachesVC;->b()Lcom/vk/im/ui/views/adapter_delegate/a;
+    invoke-virtual {p0}, Lcom/vk/im/ui/components/attaches_history/attaches/vc/BaseHistoryAttachesVC;->b()Lcom/vk/im/ui/views/adapter_delegate/DelegationAdapter;
 
     move-result-object p1
 
@@ -517,11 +517,11 @@
 
     .line 11
     :cond_3
-    invoke-virtual {p0}, Lcom/vk/im/ui/components/attaches_history/attaches/vc/BaseHistoryAttachesVC;->b()Lcom/vk/im/ui/views/adapter_delegate/a;
+    invoke-virtual {p0}, Lcom/vk/im/ui/components/attaches_history/attaches/vc/BaseHistoryAttachesVC;->b()Lcom/vk/im/ui/views/adapter_delegate/DelegationAdapter;
 
     move-result-object p1
 
-    invoke-virtual {p1}, Lcom/vk/im/ui/views/adapter_delegate/a;->getItemCount()I
+    invoke-virtual {p1}, Lcom/vk/im/ui/views/adapter_delegate/DelegationAdapter;->getItemCount()I
 
     move-result p1
 
@@ -529,14 +529,14 @@
     return p1
 .end method
 
-.method protected abstract b()Lcom/vk/im/ui/views/adapter_delegate/a;
+.method protected abstract b()Lcom/vk/im/ui/views/adapter_delegate/DelegationAdapter;
 .end method
 
 .method public b(Ljava/lang/Throwable;)V
     .locals 0
 
     .line 2
-    invoke-static {p1}, Lcom/vk/im/ui/components/common/e;->c(Ljava/lang/Throwable;)V
+    invoke-static {p1}, Lcom/vk/im/ui/components/common/NotifyIdUtils;->c(Ljava/lang/Throwable;)V
 
     return-void
 .end method
@@ -554,7 +554,7 @@
     :cond_0
     const-string v0, "attachesRecyclerView"
 
-    invoke-static {v0}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v0}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     const/4 v0, 0x0
 
@@ -574,7 +574,7 @@
     :cond_0
     const-string v0, "attachesRecyclerView"
 
-    invoke-static {v0}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v0}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     const/4 v0, 0x0
 
@@ -631,7 +631,7 @@
     :cond_1
     const-string p1, "progressView"
 
-    invoke-static {p1}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {p1}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     const/4 p1, 0x0
 
@@ -653,7 +653,7 @@
     :cond_0
     const-string p1, "swipeRefreshLayout"
 
-    invoke-static {p1}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {p1}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     const/4 p1, 0x0
 

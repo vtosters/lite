@@ -3,7 +3,7 @@
 .source "VkUiConnectFragment.kt"
 
 # interfaces
-.implements Lcom/vk/webapp/p/a/a$b;
+.implements Lcom/vk/webapp/p/a/StatusNavBarController$b1;
 
 
 # annotations
@@ -35,25 +35,25 @@
 
 
 # virtual methods
-.method public a(Lcom/vk/webapp/q/a/a;)V
+.method public a(Lcom/vk/webapp/q/a/StatusNavBarConfig;)V
     .locals 1
 
     .line 1
     iget-object v0, p0, Lcom/vk/webapp/VkUiConnectFragment$z;->a:Lcom/vk/webapp/VkUiConnectFragment;
 
-    invoke-virtual {v0}, Lcom/vk/webapp/VkUiConnectFragment;->a5()Lcom/vk/webapp/o/b;
+    invoke-virtual {v0}, Lcom/vk/webapp/VkUiConnectFragment;->a5()Lcom/vk/webapp/o/VkUiConnectFragmentDelegate;
 
     move-result-object v0
 
-    invoke-interface {v0}, Lcom/vk/webapp/o/b;->o()Lcom/vk/webapp/VkUiConnectFragment$b;
+    invoke-interface {v0}, Lcom/vk/webapp/o/VkUiConnectFragmentDelegate;->o()Lcom/vk/webapp/VkUiConnectFragment$b;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/vk/webapp/VkUiConnectFragment$b;->a()Lcom/vk/webapp/cache/a$a;
+    invoke-virtual {v0}, Lcom/vk/webapp/VkUiConnectFragment$b;->a()Lcom/vk/webapp/cache/AppsCache$a;
 
     move-result-object v0
 
-    invoke-virtual {v0, p1}, Lcom/vk/webapp/cache/a$a;->a(Lcom/vk/webapp/q/a/a;)V
+    invoke-virtual {v0, p1}, Lcom/vk/webapp/cache/AppsCache$a;->a(Lcom/vk/webapp/q/a/StatusNavBarConfig;)V
 
     return-void
 .end method

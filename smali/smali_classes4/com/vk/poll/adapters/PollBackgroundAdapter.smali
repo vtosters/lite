@@ -1,5 +1,5 @@
 .class public final Lcom/vk/poll/adapters/PollBackgroundAdapter;
-.super Lcom/vk/lists/i0;
+.super Lcom/vk/lists/SimpleAdapter;
 .source "PollBackgroundAdapter.kt"
 
 
@@ -12,7 +12,7 @@
 
 .annotation system Ldalvik/annotation/Signature;
     value = {
-        "Lcom/vk/lists/i0<",
+        "Lcom/vk/lists/SimpleAdapter<",
         "Lcom/vk/dto/polls/PollBackground;",
         "Landroidx/recyclerview/widget/RecyclerView$ViewHolder;",
         ">;"
@@ -25,7 +25,7 @@
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/util/List<",
-            "Lb/h/s/a/a;",
+            "Lb/h/s/a/PollCustomBackground;",
             ">;"
         }
     .end annotation
@@ -35,21 +35,21 @@
 
 .field private e:Ljava/lang/Object;
 
-.field private final f:Lkotlin/jvm/b/a;
+.field private final f:Lkotlin/jvm/b/Functions;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Lkotlin/jvm/b/a<",
-            "Lkotlin/m;",
+            "Lkotlin/jvm/b/Functions<",
+            "Lkotlin/Unit;",
             ">;"
         }
     .end annotation
 .end field
 
-.field private final g:Lkotlin/jvm/b/a;
+.field private final g:Lkotlin/jvm/b/Functions;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Lkotlin/jvm/b/a<",
-            "Lkotlin/m;",
+            "Lkotlin/jvm/b/Functions<",
+            "Lkotlin/Unit;",
             ">;"
         }
     .end annotation
@@ -66,31 +66,31 @@
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, v1}, Lcom/vk/poll/adapters/PollBackgroundAdapter$a;-><init>(Lkotlin/jvm/internal/i;)V
+    invoke-direct {v0, v1}, Lcom/vk/poll/adapters/PollBackgroundAdapter$a;-><init>(Lkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     return-void
 .end method
 
-.method public constructor <init>(Lkotlin/jvm/b/a;Lkotlin/jvm/b/a;Z)V
+.method public constructor <init>(Lkotlin/jvm/b/Functions;Lkotlin/jvm/b/Functions;Z)V
     .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lkotlin/jvm/b/a<",
-            "Lkotlin/m;",
+            "Lkotlin/jvm/b/Functions<",
+            "Lkotlin/Unit;",
             ">;",
-            "Lkotlin/jvm/b/a<",
-            "Lkotlin/m;",
+            "Lkotlin/jvm/b/Functions<",
+            "Lkotlin/Unit;",
             ">;Z)V"
         }
     .end annotation
 
     .line 1
-    invoke-direct {p0}, Lcom/vk/lists/i0;-><init>()V
+    invoke-direct {p0}, Lcom/vk/lists/SimpleAdapter;-><init>()V
 
-    iput-object p1, p0, Lcom/vk/poll/adapters/PollBackgroundAdapter;->f:Lkotlin/jvm/b/a;
+    iput-object p1, p0, Lcom/vk/poll/adapters/PollBackgroundAdapter;->f:Lkotlin/jvm/b/Functions;
 
-    iput-object p2, p0, Lcom/vk/poll/adapters/PollBackgroundAdapter;->g:Lkotlin/jvm/b/a;
+    iput-object p2, p0, Lcom/vk/poll/adapters/PollBackgroundAdapter;->g:Lkotlin/jvm/b/Functions;
 
     iput-boolean p3, p0, Lcom/vk/poll/adapters/PollBackgroundAdapter;->h:Z
 
@@ -110,9 +110,9 @@
     add-int/lit8 p1, p1, -0x1
 
     .line 1
-    iget-object v0, p0, Lcom/vk/lists/i0;->a:Lcom/vk/lists/b;
+    iget-object v0, p0, Lcom/vk/lists/SimpleAdapter;->a:Lcom/vk/lists/BaseListDataSet;
 
-    invoke-interface {v0}, Lcom/vk/lists/d;->size()I
+    invoke-interface {v0}, Lcom/vk/lists/DataSet;->size()I
 
     move-result v0
 
@@ -127,9 +127,9 @@
     add-int/lit8 p1, p1, 0x1
 
     .line 1
-    iget-object v0, p0, Lcom/vk/lists/i0;->a:Lcom/vk/lists/b;
+    iget-object v0, p0, Lcom/vk/lists/SimpleAdapter;->a:Lcom/vk/lists/BaseListDataSet;
 
-    invoke-interface {v0}, Lcom/vk/lists/d;->size()I
+    invoke-interface {v0}, Lcom/vk/lists/DataSet;->size()I
 
     move-result v0
 
@@ -156,14 +156,14 @@
 
 
 # virtual methods
-.method public final a(Landroid/content/Intent;Lkotlin/jvm/b/a;)V
+.method public final a(Landroid/content/Intent;Lkotlin/jvm/b/Functions;)V
     .locals 9
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
             "Landroid/content/Intent;",
-            "Lkotlin/jvm/b/a<",
-            "Lkotlin/m;",
+            "Lkotlin/jvm/b/Functions<",
+            "Lkotlin/Unit;",
             ">;)V"
         }
     .end annotation
@@ -175,7 +175,7 @@
 
     const-string v1, "com.vkontakte.android.UPLOAD_PROGRESS"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v0
 
@@ -195,7 +195,7 @@
 
     const-string v5, "com.vkontakte.android.UPLOAD_DONE"
 
-    invoke-static {v0, v5}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v0, v5}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v0
 
@@ -211,7 +211,7 @@
 
     const-string v5, "com.vkontakte.android.UPLOAD_FAILED"
 
-    invoke-static {v0, v5}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v0, v5}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v0
 
@@ -246,16 +246,16 @@
 
     move-object v6, v5
 
-    check-cast v6, Lkotlin/collections/x;
+    check-cast v6, Lkotlin/collections/IndexedValue;
 
     .line 8
-    invoke-virtual {v6}, Lkotlin/collections/x;->d()Ljava/lang/Object;
+    invoke-virtual {v6}, Lkotlin/collections/IndexedValue;->d()Ljava/lang/Object;
 
     move-result-object v6
 
-    check-cast v6, Lb/h/s/a/a;
+    check-cast v6, Lb/h/s/a/PollCustomBackground;
 
-    invoke-virtual {v6}, Lb/h/s/a/a;->f()Ljava/lang/Integer;
+    invoke-virtual {v6}, Lb/h/s/a/PollCustomBackground;->f()Ljava/lang/Integer;
 
     move-result-object v6
 
@@ -288,7 +288,7 @@
 
     .line 9
     :goto_2
-    check-cast v5, Lkotlin/collections/x;
+    check-cast v5, Lkotlin/collections/IndexedValue;
 
     if-eqz v5, :cond_16
 
@@ -411,13 +411,13 @@
 
     .line 15
     :goto_9
-    invoke-static {p1, v4, v7, v3}, Lcom/vk/core/util/k1;->a(IZILjava/lang/Object;)V
+    invoke-static {p1, v4, v7, v3}, Lcom/vk/core/util/ToastUtils;->a(IZILjava/lang/Object;)V
 
     .line 16
     :cond_d
     iget-object p1, p0, Lcom/vk/poll/adapters/PollBackgroundAdapter;->c:Ljava/util/List;
 
-    invoke-virtual {v5}, Lkotlin/collections/x;->c()I
+    invoke-virtual {v5}, Lkotlin/collections/IndexedValue;->c()I
 
     move-result v0
 
@@ -427,7 +427,7 @@
     invoke-virtual {p0, v3}, Lcom/vk/poll/adapters/PollBackgroundAdapter;->d(Ljava/lang/Object;)V
 
     .line 18
-    invoke-virtual {v5}, Lkotlin/collections/x;->c()I
+    invoke-virtual {v5}, Lkotlin/collections/IndexedValue;->c()I
 
     move-result p1
 
@@ -438,7 +438,7 @@
     invoke-virtual {p0, p1}, Landroidx/recyclerview/widget/RecyclerView$Adapter;->notifyItemRemoved(I)V
 
     .line 19
-    invoke-interface {p2}, Lkotlin/jvm/b/a;->invoke()Ljava/lang/Object;
+    invoke-interface {p2}, Lkotlin/jvm/b/Functions;->invoke()Ljava/lang/Object;
 
     goto/16 :goto_d
 
@@ -489,16 +489,16 @@
 
     move-object v8, v7
 
-    check-cast v8, Lkotlin/collections/x;
+    check-cast v8, Lkotlin/collections/IndexedValue;
 
     .line 24
-    invoke-virtual {v8}, Lkotlin/collections/x;->d()Ljava/lang/Object;
+    invoke-virtual {v8}, Lkotlin/collections/IndexedValue;->d()Ljava/lang/Object;
 
     move-result-object v8
 
-    check-cast v8, Lb/h/s/a/a;
+    check-cast v8, Lb/h/s/a/PollCustomBackground;
 
-    invoke-virtual {v8}, Lb/h/s/a/a;->f()Ljava/lang/Integer;
+    invoke-virtual {v8}, Lb/h/s/a/PollCustomBackground;->f()Ljava/lang/Integer;
 
     move-result-object v8
 
@@ -528,7 +528,7 @@
 
     .line 25
     :cond_12
-    check-cast v3, Lkotlin/collections/x;
+    check-cast v3, Lkotlin/collections/IndexedValue;
 
     if-eqz v3, :cond_16
 
@@ -548,56 +548,56 @@
     if-eqz v2, :cond_16
 
     .line 28
-    invoke-virtual {v3}, Lkotlin/collections/x;->d()Ljava/lang/Object;
+    invoke-virtual {v3}, Lkotlin/collections/IndexedValue;->d()Ljava/lang/Object;
 
     move-result-object v0
 
-    check-cast v0, Lb/h/s/a/a;
+    check-cast v0, Lb/h/s/a/PollCustomBackground;
 
-    invoke-virtual {v0, v5}, Lb/h/s/a/a;->a(I)V
+    invoke-virtual {v0, v5}, Lb/h/s/a/PollCustomBackground;->a(I)V
 
     .line 29
-    invoke-virtual {v3}, Lkotlin/collections/x;->d()Ljava/lang/Object;
+    invoke-virtual {v3}, Lkotlin/collections/IndexedValue;->d()Ljava/lang/Object;
 
     move-result-object v0
 
-    check-cast v0, Lb/h/s/a/a;
+    check-cast v0, Lb/h/s/a/PollCustomBackground;
 
-    invoke-virtual {v0, v1}, Lb/h/s/a/a;->b(I)V
+    invoke-virtual {v0, v1}, Lb/h/s/a/PollCustomBackground;->b(I)V
 
     .line 30
-    invoke-virtual {v3}, Lkotlin/collections/x;->d()Ljava/lang/Object;
+    invoke-virtual {v3}, Lkotlin/collections/IndexedValue;->d()Ljava/lang/Object;
 
     move-result-object v0
 
-    check-cast v0, Lb/h/s/a/a;
+    check-cast v0, Lb/h/s/a/PollCustomBackground;
 
     move-object v1, p1
 
     check-cast v1, Lcom/vk/dto/polls/PhotoPoll;
 
-    invoke-virtual {v0, v1}, Lb/h/s/a/a;->a(Lcom/vk/dto/polls/PhotoPoll;)V
+    invoke-virtual {v0, v1}, Lb/h/s/a/PollCustomBackground;->a(Lcom/vk/dto/polls/PhotoPoll;)V
 
     .line 31
-    invoke-virtual {v3}, Lkotlin/collections/x;->d()Ljava/lang/Object;
+    invoke-virtual {v3}, Lkotlin/collections/IndexedValue;->d()Ljava/lang/Object;
 
     move-result-object v0
 
-    check-cast v0, Lb/h/s/a/a;
+    check-cast v0, Lb/h/s/a/PollCustomBackground;
 
-    invoke-virtual {v0}, Lb/h/s/a/a;->c()Lcom/vk/dto/polls/PhotoPoll;
+    invoke-virtual {v0}, Lb/h/s/a/PollCustomBackground;->c()Lcom/vk/dto/polls/PhotoPoll;
 
     move-result-object v0
 
     if-eqz v0, :cond_14
 
-    invoke-virtual {v3}, Lkotlin/collections/x;->d()Ljava/lang/Object;
+    invoke-virtual {v3}, Lkotlin/collections/IndexedValue;->d()Ljava/lang/Object;
 
     move-result-object v1
 
-    check-cast v1, Lb/h/s/a/a;
+    check-cast v1, Lb/h/s/a/PollCustomBackground;
 
-    invoke-virtual {v1}, Lb/h/s/a/a;->e()Landroid/graphics/Bitmap;
+    invoke-virtual {v1}, Lb/h/s/a/PollCustomBackground;->e()Landroid/graphics/Bitmap;
 
     move-result-object v1
 
@@ -605,25 +605,25 @@
 
     .line 32
     :cond_14
-    invoke-virtual {v3}, Lkotlin/collections/x;->d()Ljava/lang/Object;
+    invoke-virtual {v3}, Lkotlin/collections/IndexedValue;->d()Ljava/lang/Object;
 
     move-result-object v0
 
-    check-cast v0, Lb/h/s/a/a;
+    check-cast v0, Lb/h/s/a/PollCustomBackground;
 
-    invoke-virtual {v0}, Lb/h/s/a/a;->c()Lcom/vk/dto/polls/PhotoPoll;
+    invoke-virtual {v0}, Lb/h/s/a/PollCustomBackground;->c()Lcom/vk/dto/polls/PhotoPoll;
 
     move-result-object v0
 
     if-eqz v0, :cond_15
 
-    invoke-virtual {v3}, Lkotlin/collections/x;->d()Ljava/lang/Object;
+    invoke-virtual {v3}, Lkotlin/collections/IndexedValue;->d()Ljava/lang/Object;
 
     move-result-object v1
 
-    check-cast v1, Lb/h/s/a/a;
+    check-cast v1, Lb/h/s/a/PollCustomBackground;
 
-    invoke-virtual {v1}, Lb/h/s/a/a;->d()Landroid/graphics/Bitmap;
+    invoke-virtual {v1}, Lb/h/s/a/PollCustomBackground;->d()Landroid/graphics/Bitmap;
 
     move-result-object v1
 
@@ -631,7 +631,7 @@
 
     .line 33
     :cond_15
-    invoke-virtual {v3}, Lkotlin/collections/x;->c()I
+    invoke-virtual {v3}, Lkotlin/collections/IndexedValue;->c()I
 
     move-result v0
 
@@ -644,14 +644,14 @@
     if-eqz p1, :cond_16
 
     .line 34
-    invoke-interface {p2}, Lkotlin/jvm/b/a;->invoke()Ljava/lang/Object;
+    invoke-interface {p2}, Lkotlin/jvm/b/Functions;->invoke()Ljava/lang/Object;
 
     :cond_16
     :goto_d
     return-void
 .end method
 
-.method public final a(Lb/h/s/a/a;)V
+.method public final a(Lb/h/s/a/PollCustomBackground;)V
     .locals 1
 
     .line 1
@@ -712,19 +712,19 @@
 
     if-eqz v3, :cond_4
 
-    iget-object v3, p0, Lcom/vk/lists/i0;->a:Lcom/vk/lists/b;
+    iget-object v3, p0, Lcom/vk/lists/SimpleAdapter;->a:Lcom/vk/lists/BaseListDataSet;
 
     const-string v5, "dataSet"
 
-    invoke-static {v3, v5}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v3, v5}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    invoke-interface {v3}, Lcom/vk/lists/d;->f()Ljava/util/List;
+    invoke-interface {v3}, Lcom/vk/lists/DataSet;->f()Ljava/util/List;
 
     move-result-object v3
 
     const-string v5, "dataSet.list"
 
-    invoke-static {v3, v5}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v3, v5}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-static {v3}, Lkotlin/collections/l;->w(Ljava/lang/Iterable;)Ljava/lang/Iterable;
 
@@ -747,9 +747,9 @@
 
     move-object v6, v5
 
-    check-cast v6, Lkotlin/collections/x;
+    check-cast v6, Lkotlin/collections/IndexedValue;
 
-    invoke-virtual {v6}, Lkotlin/collections/x;->d()Ljava/lang/Object;
+    invoke-virtual {v6}, Lkotlin/collections/IndexedValue;->d()Ljava/lang/Object;
 
     move-result-object v6
 
@@ -782,12 +782,12 @@
     move-object v4, v5
 
     :cond_3
-    check-cast v4, Lkotlin/collections/x;
+    check-cast v4, Lkotlin/collections/IndexedValue;
 
     if-eqz v4, :cond_7
 
     .line 5
-    invoke-virtual {v4}, Lkotlin/collections/x;->c()I
+    invoke-virtual {v4}, Lkotlin/collections/IndexedValue;->c()I
 
     move-result v0
 
@@ -806,7 +806,7 @@
 
     .line 7
     :cond_4
-    instance-of v1, v0, Lb/h/s/a/a;
+    instance-of v1, v0, Lb/h/s/a/PollCustomBackground;
 
     if-eqz v1, :cond_7
 
@@ -833,16 +833,16 @@
 
     move-object v5, v3
 
-    check-cast v5, Lkotlin/collections/x;
+    check-cast v5, Lkotlin/collections/IndexedValue;
 
     .line 8
-    invoke-virtual {v5}, Lkotlin/collections/x;->d()Ljava/lang/Object;
+    invoke-virtual {v5}, Lkotlin/collections/IndexedValue;->d()Ljava/lang/Object;
 
     move-result-object v5
 
-    check-cast v5, Lb/h/s/a/a;
+    check-cast v5, Lb/h/s/a/PollCustomBackground;
 
-    invoke-static {v5, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v5, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v5
 
@@ -855,12 +855,12 @@
 
     .line 9
     :goto_1
-    check-cast v3, Lkotlin/collections/x;
+    check-cast v3, Lkotlin/collections/IndexedValue;
 
     if-eqz v3, :cond_7
 
     .line 10
-    invoke-virtual {v3}, Lkotlin/collections/x;->c()I
+    invoke-virtual {v3}, Lkotlin/collections/IndexedValue;->c()I
 
     move-result v0
 
@@ -881,9 +881,9 @@
     iput-object p1, p0, Lcom/vk/poll/adapters/PollBackgroundAdapter;->e:Ljava/lang/Object;
 
     .line 13
-    iget-object p1, p0, Lcom/vk/poll/adapters/PollBackgroundAdapter;->g:Lkotlin/jvm/b/a;
+    iget-object p1, p0, Lcom/vk/poll/adapters/PollBackgroundAdapter;->g:Lkotlin/jvm/b/Functions;
 
-    invoke-interface {p1}, Lkotlin/jvm/b/a;->invoke()Ljava/lang/Object;
+    invoke-interface {p1}, Lkotlin/jvm/b/Functions;->invoke()Ljava/lang/Object;
 
     return-void
 .end method
@@ -892,13 +892,13 @@
     .locals 2
 
     .line 1
-    iget-object v0, p0, Lcom/vk/lists/i0;->a:Lcom/vk/lists/b;
+    iget-object v0, p0, Lcom/vk/lists/SimpleAdapter;->a:Lcom/vk/lists/BaseListDataSet;
 
     const-string v1, "dataSet"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    invoke-interface {v0}, Lcom/vk/lists/d;->f()Ljava/util/List;
+    invoke-interface {v0}, Lcom/vk/lists/DataSet;->f()Ljava/util/List;
 
     move-result-object v0
 
@@ -913,9 +913,9 @@
     goto :goto_0
 
     :cond_0
-    iget-object v0, p0, Lcom/vk/lists/i0;->a:Lcom/vk/lists/b;
+    iget-object v0, p0, Lcom/vk/lists/SimpleAdapter;->a:Lcom/vk/lists/BaseListDataSet;
 
-    invoke-interface {v0}, Lcom/vk/lists/d;->size()I
+    invoke-interface {v0}, Lcom/vk/lists/DataSet;->size()I
 
     move-result v0
 
@@ -948,9 +948,9 @@
 
     move-result v0
 
-    iget-object v1, p0, Lcom/vk/lists/i0;->a:Lcom/vk/lists/b;
+    iget-object v1, p0, Lcom/vk/lists/SimpleAdapter;->a:Lcom/vk/lists/BaseListDataSet;
 
-    invoke-interface {v1}, Lcom/vk/lists/d;->size()I
+    invoke-interface {v1}, Lcom/vk/lists/DataSet;->size()I
 
     move-result v1
 
@@ -1003,12 +1003,12 @@
     return-object v0
 .end method
 
-.method public final l()Lkotlin/sequences/j;
+.method public final l()Lkotlin/sequences/Sequence;
     .locals 2
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "()",
-            "Lkotlin/sequences/j<",
+            "Lkotlin/sequences/Sequence<",
             "Ljava/lang/Integer;",
             ">;"
         }
@@ -1017,26 +1017,26 @@
     .line 1
     iget-object v0, p0, Lcom/vk/poll/adapters/PollBackgroundAdapter;->c:Ljava/util/List;
 
-    invoke-static {v0}, Lkotlin/collections/l;->d(Ljava/lang/Iterable;)Lkotlin/sequences/j;
+    invoke-static {v0}, Lkotlin/collections/l;->d(Ljava/lang/Iterable;)Lkotlin/sequences/Sequence;
 
     move-result-object v0
 
     .line 2
     sget-object v1, Lcom/vk/poll/adapters/PollBackgroundAdapter$getUnfinishedPhotosUploadTaskIds$1;->a:Lcom/vk/poll/adapters/PollBackgroundAdapter$getUnfinishedPhotosUploadTaskIds$1;
 
-    invoke-static {v0, v1}, Lkotlin/sequences/m;->b(Lkotlin/sequences/j;Lkotlin/jvm/b/b;)Lkotlin/sequences/j;
+    invoke-static {v0, v1}, Lkotlin/sequences/m;->b(Lkotlin/sequences/Sequence;Lkotlin/jvm/b/Functions2;)Lkotlin/sequences/Sequence;
 
     move-result-object v0
 
     .line 3
     sget-object v1, Lcom/vk/poll/adapters/PollBackgroundAdapter$getUnfinishedPhotosUploadTaskIds$2;->a:Lcom/vk/poll/adapters/PollBackgroundAdapter$getUnfinishedPhotosUploadTaskIds$2;
 
-    invoke-static {v0, v1}, Lkotlin/sequences/m;->e(Lkotlin/sequences/j;Lkotlin/jvm/b/b;)Lkotlin/sequences/j;
+    invoke-static {v0, v1}, Lkotlin/sequences/m;->e(Lkotlin/sequences/Sequence;Lkotlin/jvm/b/Functions2;)Lkotlin/sequences/Sequence;
 
     move-result-object v0
 
     .line 4
-    invoke-static {v0}, Lkotlin/sequences/m;->g(Lkotlin/sequences/j;)Lkotlin/sequences/j;
+    invoke-static {v0}, Lkotlin/sequences/m;->g(Lkotlin/sequences/Sequence;)Lkotlin/sequences/Sequence;
 
     move-result-object v0
 
@@ -1073,7 +1073,7 @@
     .locals 4
 
     .line 1
-    instance-of v0, p1, Lcom/vk/poll/adapters/b;
+    instance-of v0, p1, Lcom/vk/poll/adapters/PollBackgroundViewHolder;
 
     const-string v1, "dataSet.list"
 
@@ -1081,15 +1081,15 @@
 
     if-eqz v0, :cond_0
 
-    iget-object v0, p0, Lcom/vk/lists/i0;->a:Lcom/vk/lists/b;
+    iget-object v0, p0, Lcom/vk/lists/SimpleAdapter;->a:Lcom/vk/lists/BaseListDataSet;
 
-    invoke-static {v0, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    invoke-interface {v0}, Lcom/vk/lists/d;->f()Ljava/util/List;
+    invoke-interface {v0}, Lcom/vk/lists/DataSet;->f()Ljava/util/List;
 
     move-result-object v0
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-direct {p0, p2}, Lcom/vk/poll/adapters/PollBackgroundAdapter;->J(I)I
 
@@ -1104,15 +1104,15 @@
     if-eqz p2, :cond_7
 
     .line 2
-    check-cast p1, Lcom/vk/poll/adapters/b;
+    check-cast p1, Lcom/vk/poll/adapters/PollBackgroundViewHolder;
 
-    invoke-virtual {p1, p2}, Lcom/vtosters/lite/ui/b0/i;->a(Ljava/lang/Object;)V
+    invoke-virtual {p1, p2}, Lcom/vtosters/lite/ui/holder/RecyclerHolder;->a(Ljava/lang/Object;)V
 
     goto/16 :goto_0
 
     .line 3
     :cond_0
-    instance-of v0, p1, Lcom/vk/poll/adapters/c;
+    instance-of v0, p1, Lcom/vk/poll/adapters/PollCustomBackgroundViewHolder;
 
     if-eqz v0, :cond_1
 
@@ -1126,74 +1126,74 @@
 
     move-result-object p2
 
-    check-cast p2, Lb/h/s/a/a;
+    check-cast p2, Lb/h/s/a/PollCustomBackground;
 
     if-eqz p2, :cond_7
 
     .line 4
-    check-cast p1, Lcom/vk/poll/adapters/c;
+    check-cast p1, Lcom/vk/poll/adapters/PollCustomBackgroundViewHolder;
 
-    invoke-virtual {p1, p2}, Lcom/vtosters/lite/ui/b0/i;->a(Ljava/lang/Object;)V
+    invoke-virtual {p1, p2}, Lcom/vtosters/lite/ui/holder/RecyclerHolder;->a(Ljava/lang/Object;)V
 
     goto :goto_0
 
     .line 5
     :cond_1
-    instance-of v0, p1, Lcom/vk/poll/adapters/d;
+    instance-of v0, p1, Lcom/vk/poll/adapters/PollDefaultBackgroundViewHolder;
 
     const/4 v3, 0x0
 
     if-eqz v0, :cond_2
 
-    check-cast p1, Lcom/vk/poll/adapters/d;
+    check-cast p1, Lcom/vk/poll/adapters/PollDefaultBackgroundViewHolder;
 
-    invoke-virtual {p1, v3}, Lcom/vtosters/lite/ui/b0/i;->a(Ljava/lang/Object;)V
+    invoke-virtual {p1, v3}, Lcom/vtosters/lite/ui/holder/RecyclerHolder;->a(Ljava/lang/Object;)V
 
     goto :goto_0
 
     .line 6
     :cond_2
-    instance-of v0, p1, Lcom/vk/poll/adapters/k;
+    instance-of v0, p1, Lcom/vk/poll/adapters/PollSelectPhotoViewHolder;
 
     if-eqz v0, :cond_3
 
-    check-cast p1, Lcom/vk/poll/adapters/k;
+    check-cast p1, Lcom/vk/poll/adapters/PollSelectPhotoViewHolder;
 
-    sget-object p2, Lkotlin/m;->a:Lkotlin/m;
+    sget-object p2, Lkotlin/Unit;->a:Lkotlin/Unit;
 
-    invoke-virtual {p1, p2}, Lcom/vtosters/lite/ui/b0/i;->a(Ljava/lang/Object;)V
+    invoke-virtual {p1, p2}, Lcom/vtosters/lite/ui/holder/RecyclerHolder;->a(Ljava/lang/Object;)V
 
     goto :goto_0
 
     .line 7
     :cond_3
-    instance-of v0, p1, Lcom/vk/poll/adapters/o;
+    instance-of v0, p1, Lcom/vk/poll/adapters/PollBackgroundSmallViewHolders1;
 
     if-eqz v0, :cond_4
 
-    check-cast p1, Lcom/vk/poll/adapters/o;
+    check-cast p1, Lcom/vk/poll/adapters/PollBackgroundSmallViewHolders1;
 
-    invoke-virtual {p1, v3}, Lcom/vtosters/lite/ui/b0/i;->a(Ljava/lang/Object;)V
+    invoke-virtual {p1, v3}, Lcom/vtosters/lite/ui/holder/RecyclerHolder;->a(Ljava/lang/Object;)V
 
     goto :goto_0
 
     .line 8
     :cond_4
-    instance-of v0, p1, Lcom/vk/poll/adapters/e;
+    instance-of v0, p1, Lcom/vk/poll/adapters/PollBackgroundSmallViewHolders3;
 
     if-eqz v0, :cond_5
 
-    check-cast p1, Lcom/vk/poll/adapters/e;
+    check-cast p1, Lcom/vk/poll/adapters/PollBackgroundSmallViewHolders3;
 
-    iget-object v0, p0, Lcom/vk/lists/i0;->a:Lcom/vk/lists/b;
+    iget-object v0, p0, Lcom/vk/lists/SimpleAdapter;->a:Lcom/vk/lists/BaseListDataSet;
 
-    invoke-static {v0, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    invoke-interface {v0}, Lcom/vk/lists/d;->f()Ljava/util/List;
+    invoke-interface {v0}, Lcom/vk/lists/DataSet;->f()Ljava/util/List;
 
     move-result-object v0
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-direct {p0, p2}, Lcom/vk/poll/adapters/PollBackgroundAdapter;->J(I)I
 
@@ -1203,17 +1203,17 @@
 
     move-result-object p2
 
-    invoke-virtual {p1, p2}, Lcom/vtosters/lite/ui/b0/i;->a(Ljava/lang/Object;)V
+    invoke-virtual {p1, p2}, Lcom/vtosters/lite/ui/holder/RecyclerHolder;->a(Ljava/lang/Object;)V
 
     goto :goto_0
 
     .line 9
     :cond_5
-    instance-of v0, p1, Lcom/vk/poll/adapters/f;
+    instance-of v0, p1, Lcom/vk/poll/adapters/PollBackgroundSmallViewHolders4;
 
     if-eqz v0, :cond_6
 
-    check-cast p1, Lcom/vk/poll/adapters/f;
+    check-cast p1, Lcom/vk/poll/adapters/PollBackgroundSmallViewHolders4;
 
     iget-object v0, p0, Lcom/vk/poll/adapters/PollBackgroundAdapter;->c:Ljava/util/List;
 
@@ -1225,21 +1225,21 @@
 
     move-result-object p2
 
-    invoke-virtual {p1, p2}, Lcom/vtosters/lite/ui/b0/i;->a(Ljava/lang/Object;)V
+    invoke-virtual {p1, p2}, Lcom/vtosters/lite/ui/holder/RecyclerHolder;->a(Ljava/lang/Object;)V
 
     goto :goto_0
 
     .line 10
     :cond_6
-    instance-of p2, p1, Lcom/vk/poll/adapters/l;
+    instance-of p2, p1, Lcom/vk/poll/adapters/PollBackgroundSmallViewHolders2;
 
     if-eqz p2, :cond_7
 
-    check-cast p1, Lcom/vk/poll/adapters/l;
+    check-cast p1, Lcom/vk/poll/adapters/PollBackgroundSmallViewHolders2;
 
-    sget-object p2, Lkotlin/m;->a:Lkotlin/m;
+    sget-object p2, Lkotlin/Unit;->a:Lkotlin/Unit;
 
-    invoke-virtual {p1, p2}, Lcom/vtosters/lite/ui/b0/i;->a(Ljava/lang/Object;)V
+    invoke-virtual {p1, p2}, Lcom/vtosters/lite/ui/holder/RecyclerHolder;->a(Ljava/lang/Object;)V
 
     :cond_7
     :goto_0
@@ -1305,47 +1305,47 @@
     if-eq p2, v1, :cond_0
 
     .line 2
-    new-instance p2, Lcom/vk/poll/adapters/l;
+    new-instance p2, Lcom/vk/poll/adapters/PollBackgroundSmallViewHolders2;
 
-    iget-object v0, p0, Lcom/vk/poll/adapters/PollBackgroundAdapter;->f:Lkotlin/jvm/b/a;
+    iget-object v0, p0, Lcom/vk/poll/adapters/PollBackgroundAdapter;->f:Lkotlin/jvm/b/Functions;
 
-    invoke-direct {p2, p1, v0}, Lcom/vk/poll/adapters/l;-><init>(Landroid/view/ViewGroup;Lkotlin/jvm/b/a;)V
+    invoke-direct {p2, p1, v0}, Lcom/vk/poll/adapters/PollBackgroundSmallViewHolders2;-><init>(Landroid/view/ViewGroup;Lkotlin/jvm/b/Functions;)V
 
     goto :goto_0
 
     .line 3
     :cond_0
-    new-instance p2, Lcom/vk/poll/adapters/f;
+    new-instance p2, Lcom/vk/poll/adapters/PollBackgroundSmallViewHolders4;
 
     new-instance v0, Lcom/vk/poll/adapters/PollBackgroundAdapter$onCreateViewHolder$3;
 
     invoke-direct {v0, p0}, Lcom/vk/poll/adapters/PollBackgroundAdapter$onCreateViewHolder$3;-><init>(Lcom/vk/poll/adapters/PollBackgroundAdapter;)V
 
-    invoke-direct {p2, p1, v0}, Lcom/vk/poll/adapters/f;-><init>(Landroid/view/ViewGroup;Lkotlin/u/g;)V
+    invoke-direct {p2, p1, v0}, Lcom/vk/poll/adapters/PollBackgroundSmallViewHolders4;-><init>(Landroid/view/ViewGroup;Lkotlin/u/KProperty;)V
 
     goto :goto_0
 
     .line 4
     :cond_1
-    new-instance p2, Lcom/vk/poll/adapters/e;
+    new-instance p2, Lcom/vk/poll/adapters/PollBackgroundSmallViewHolders3;
 
     new-instance v0, Lcom/vk/poll/adapters/PollBackgroundAdapter$onCreateViewHolder$2;
 
     invoke-direct {v0, p0}, Lcom/vk/poll/adapters/PollBackgroundAdapter$onCreateViewHolder$2;-><init>(Lcom/vk/poll/adapters/PollBackgroundAdapter;)V
 
-    invoke-direct {p2, p1, v0}, Lcom/vk/poll/adapters/e;-><init>(Landroid/view/ViewGroup;Lkotlin/u/g;)V
+    invoke-direct {p2, p1, v0}, Lcom/vk/poll/adapters/PollBackgroundSmallViewHolders3;-><init>(Landroid/view/ViewGroup;Lkotlin/u/KProperty;)V
 
     goto :goto_0
 
     .line 5
     :cond_2
-    new-instance p2, Lcom/vk/poll/adapters/o;
+    new-instance p2, Lcom/vk/poll/adapters/PollBackgroundSmallViewHolders1;
 
     new-instance v0, Lcom/vk/poll/adapters/PollBackgroundAdapter$onCreateViewHolder$1;
 
     invoke-direct {v0, p0}, Lcom/vk/poll/adapters/PollBackgroundAdapter$onCreateViewHolder$1;-><init>(Lcom/vk/poll/adapters/PollBackgroundAdapter;)V
 
-    invoke-direct {p2, p1, v0}, Lcom/vk/poll/adapters/o;-><init>(Landroid/view/ViewGroup;Lkotlin/u/g;)V
+    invoke-direct {p2, p1, v0}, Lcom/vk/poll/adapters/PollBackgroundSmallViewHolders1;-><init>(Landroid/view/ViewGroup;Lkotlin/u/KProperty;)V
 
     goto :goto_0
 
@@ -1361,57 +1361,57 @@
     if-eq p2, v0, :cond_4
 
     .line 6
-    new-instance p2, Lcom/vk/poll/adapters/k;
+    new-instance p2, Lcom/vk/poll/adapters/PollSelectPhotoViewHolder;
 
-    iget-object v0, p0, Lcom/vk/poll/adapters/PollBackgroundAdapter;->f:Lkotlin/jvm/b/a;
+    iget-object v0, p0, Lcom/vk/poll/adapters/PollBackgroundAdapter;->f:Lkotlin/jvm/b/Functions;
 
-    invoke-direct {p2, p1, v0}, Lcom/vk/poll/adapters/k;-><init>(Landroid/view/ViewGroup;Lkotlin/jvm/b/a;)V
+    invoke-direct {p2, p1, v0}, Lcom/vk/poll/adapters/PollSelectPhotoViewHolder;-><init>(Landroid/view/ViewGroup;Lkotlin/jvm/b/Functions;)V
 
     goto :goto_0
 
     .line 7
     :cond_4
-    new-instance p2, Lcom/vk/poll/adapters/k;
+    new-instance p2, Lcom/vk/poll/adapters/PollSelectPhotoViewHolder;
 
-    iget-object v0, p0, Lcom/vk/poll/adapters/PollBackgroundAdapter;->f:Lkotlin/jvm/b/a;
+    iget-object v0, p0, Lcom/vk/poll/adapters/PollBackgroundAdapter;->f:Lkotlin/jvm/b/Functions;
 
-    invoke-direct {p2, p1, v0}, Lcom/vk/poll/adapters/k;-><init>(Landroid/view/ViewGroup;Lkotlin/jvm/b/a;)V
+    invoke-direct {p2, p1, v0}, Lcom/vk/poll/adapters/PollSelectPhotoViewHolder;-><init>(Landroid/view/ViewGroup;Lkotlin/jvm/b/Functions;)V
 
     goto :goto_0
 
     .line 8
     :cond_5
-    new-instance p2, Lcom/vk/poll/adapters/c;
+    new-instance p2, Lcom/vk/poll/adapters/PollCustomBackgroundViewHolder;
 
     new-instance v0, Lcom/vk/poll/adapters/PollBackgroundAdapter$onCreateViewHolder$6;
 
     invoke-direct {v0, p0}, Lcom/vk/poll/adapters/PollBackgroundAdapter$onCreateViewHolder$6;-><init>(Lcom/vk/poll/adapters/PollBackgroundAdapter;)V
 
-    invoke-direct {p2, p1, v0}, Lcom/vk/poll/adapters/c;-><init>(Landroid/view/ViewGroup;Lkotlin/u/g;)V
+    invoke-direct {p2, p1, v0}, Lcom/vk/poll/adapters/PollCustomBackgroundViewHolder;-><init>(Landroid/view/ViewGroup;Lkotlin/u/KProperty;)V
 
     goto :goto_0
 
     .line 9
     :cond_6
-    new-instance p2, Lcom/vk/poll/adapters/b;
+    new-instance p2, Lcom/vk/poll/adapters/PollBackgroundViewHolder;
 
     new-instance v0, Lcom/vk/poll/adapters/PollBackgroundAdapter$onCreateViewHolder$5;
 
     invoke-direct {v0, p0}, Lcom/vk/poll/adapters/PollBackgroundAdapter$onCreateViewHolder$5;-><init>(Lcom/vk/poll/adapters/PollBackgroundAdapter;)V
 
-    invoke-direct {p2, p1, v0}, Lcom/vk/poll/adapters/b;-><init>(Landroid/view/ViewGroup;Lkotlin/u/g;)V
+    invoke-direct {p2, p1, v0}, Lcom/vk/poll/adapters/PollBackgroundViewHolder;-><init>(Landroid/view/ViewGroup;Lkotlin/u/KProperty;)V
 
     goto :goto_0
 
     .line 10
     :cond_7
-    new-instance p2, Lcom/vk/poll/adapters/d;
+    new-instance p2, Lcom/vk/poll/adapters/PollDefaultBackgroundViewHolder;
 
     new-instance v0, Lcom/vk/poll/adapters/PollBackgroundAdapter$onCreateViewHolder$4;
 
     invoke-direct {v0, p0}, Lcom/vk/poll/adapters/PollBackgroundAdapter$onCreateViewHolder$4;-><init>(Lcom/vk/poll/adapters/PollBackgroundAdapter;)V
 
-    invoke-direct {p2, p1, v0}, Lcom/vk/poll/adapters/d;-><init>(Landroid/view/ViewGroup;Lkotlin/u/g;)V
+    invoke-direct {p2, p1, v0}, Lcom/vk/poll/adapters/PollDefaultBackgroundViewHolder;-><init>(Landroid/view/ViewGroup;Lkotlin/u/KProperty;)V
 
     :goto_0
     return-object p2

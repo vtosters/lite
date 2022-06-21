@@ -1,5 +1,5 @@
 .class public final Lcom/vk/im/engine/commands/etc/NotifyContentVisibleViaBgCmd;
-.super Lcom/vk/im/engine/i/a;
+.super Lcom/vk/im/engine/i/BaseImEngineCmd;
 .source "NotifyContentVisibleViaBgCmd.kt"
 
 
@@ -12,7 +12,7 @@
 
 .annotation system Ldalvik/annotation/Signature;
     value = {
-        "Lcom/vk/im/engine/i/a<",
+        "Lcom/vk/im/engine/i/BaseImEngineCmd<",
         "Ljava/lang/Boolean;",
         ">;"
     }
@@ -54,7 +54,7 @@
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, v1}, Lcom/vk/im/engine/commands/etc/NotifyContentVisibleViaBgCmd$a;-><init>(Lkotlin/jvm/internal/i;)V
+    invoke-direct {v0, v1}, Lcom/vk/im/engine/commands/etc/NotifyContentVisibleViaBgCmd$a;-><init>(Lkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     const-string v0, "NotifyContentVisibleViaBgCmd"
 
@@ -71,7 +71,7 @@
 
     const/4 v1, 0x3
 
-    invoke-direct {p0, v0, v0, v1, v0}, Lcom/vk/im/engine/commands/etc/NotifyContentVisibleViaBgCmd;-><init>(Ljava/util/Collection;Ljava/util/Collection;ILkotlin/jvm/internal/i;)V
+    invoke-direct {p0, v0, v0, v1, v0}, Lcom/vk/im/engine/commands/etc/NotifyContentVisibleViaBgCmd;-><init>(Ljava/util/Collection;Ljava/util/Collection;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     return-void
 .end method
@@ -92,7 +92,7 @@
     .end annotation
 
     .line 3
-    invoke-direct {p0}, Lcom/vk/im/engine/i/a;-><init>()V
+    invoke-direct {p0}, Lcom/vk/im/engine/i/BaseImEngineCmd;-><init>()V
 
     iput-object p1, p0, Lcom/vk/im/engine/commands/etc/NotifyContentVisibleViaBgCmd;->b:Ljava/util/Collection;
 
@@ -101,7 +101,7 @@
     return-void
 .end method
 
-.method public synthetic constructor <init>(Ljava/util/Collection;Ljava/util/Collection;ILkotlin/jvm/internal/i;)V
+.method public synthetic constructor <init>(Ljava/util/Collection;Ljava/util/Collection;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
     .locals 0
 
     and-int/lit8 p4, p3, 0x1
@@ -129,7 +129,7 @@
     return-void
 .end method
 
-.method static synthetic a(Lcom/vk/im/engine/commands/etc/NotifyContentVisibleViaBgCmd;Ljava/util/Collection;Ljava/lang/Class;Ljava/util/Collection;Lkotlin/jvm/b/b;ILjava/lang/Object;)Ljava/util/Collection;
+.method static synthetic a(Lcom/vk/im/engine/commands/etc/NotifyContentVisibleViaBgCmd;Ljava/util/Collection;Ljava/lang/Class;Ljava/util/Collection;Lkotlin/jvm/b/Functions2;ILjava/lang/Object;)Ljava/util/Collection;
     .locals 0
 
     and-int/lit8 p5, p5, 0x8
@@ -140,7 +140,7 @@
     sget-object p4, Lcom/vk/im/engine/commands/etc/NotifyContentVisibleViaBgCmd$getAttaches$1;->a:Lcom/vk/im/engine/commands/etc/NotifyContentVisibleViaBgCmd$getAttaches$1;
 
     :cond_0
-    invoke-direct {p0, p1, p2, p3, p4}, Lcom/vk/im/engine/commands/etc/NotifyContentVisibleViaBgCmd;->a(Ljava/util/Collection;Ljava/lang/Class;Ljava/util/Collection;Lkotlin/jvm/b/b;)Ljava/util/Collection;
+    invoke-direct {p0, p1, p2, p3, p4}, Lcom/vk/im/engine/commands/etc/NotifyContentVisibleViaBgCmd;->a(Ljava/util/Collection;Ljava/lang/Class;Ljava/util/Collection;Lkotlin/jvm/b/Functions2;)Ljava/util/Collection;
 
     return-object p3
 .end method
@@ -167,7 +167,7 @@
 
     move-result-object v0
 
-    invoke-static {v0, p2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v0, p2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v0
 
@@ -197,7 +197,7 @@
 
     const-class v1, Lcom/vk/im/engine/models/attaches/AttachWall;
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v0
 
@@ -283,7 +283,7 @@
     return-object p3
 .end method
 
-.method private final a(Lcom/vk/im/engine/models/messages/WithUserContent;Ljava/lang/Class;Ljava/util/Collection;Lkotlin/jvm/b/b;)Ljava/util/Collection;
+.method private final a(Lcom/vk/im/engine/models/messages/WithUserContent;Ljava/lang/Class;Ljava/util/Collection;Lkotlin/jvm/b/Functions2;)Ljava/util/Collection;
     .locals 5
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -295,7 +295,7 @@
             "TT;>;",
             "Ljava/util/Collection<",
             "TT;>;",
-            "Lkotlin/jvm/b/b<",
+            "Lkotlin/jvm/b/Functions2<",
             "-",
             "Lcom/vk/im/engine/models/messages/WithUserContent;",
             "Ljava/lang/Boolean;",
@@ -398,7 +398,7 @@
     check-cast v1, Lcom/vk/im/engine/models/messages/NestedMsg;
 
     .line 32
-    invoke-direct {p0, v1, p2, p3, p4}, Lcom/vk/im/engine/commands/etc/NotifyContentVisibleViaBgCmd;->a(Lcom/vk/im/engine/models/messages/WithUserContent;Ljava/lang/Class;Ljava/util/Collection;Lkotlin/jvm/b/b;)Ljava/util/Collection;
+    invoke-direct {p0, v1, p2, p3, p4}, Lcom/vk/im/engine/commands/etc/NotifyContentVisibleViaBgCmd;->a(Lcom/vk/im/engine/models/messages/WithUserContent;Ljava/lang/Class;Ljava/util/Collection;Lkotlin/jvm/b/Functions2;)Ljava/util/Collection;
 
     add-int/lit8 v2, v2, 0x1
 
@@ -424,7 +424,7 @@
     check-cast v0, Lcom/vk/im/engine/models/messages/NestedMsg;
 
     .line 34
-    invoke-direct {p0, v0, p2, p3, p4}, Lcom/vk/im/engine/commands/etc/NotifyContentVisibleViaBgCmd;->a(Lcom/vk/im/engine/models/messages/WithUserContent;Ljava/lang/Class;Ljava/util/Collection;Lkotlin/jvm/b/b;)Ljava/util/Collection;
+    invoke-direct {p0, v0, p2, p3, p4}, Lcom/vk/im/engine/commands/etc/NotifyContentVisibleViaBgCmd;->a(Lcom/vk/im/engine/models/messages/WithUserContent;Ljava/lang/Class;Ljava/util/Collection;Lkotlin/jvm/b/Functions2;)Ljava/util/Collection;
 
     goto :goto_3
 
@@ -432,7 +432,7 @@
     return-object p3
 .end method
 
-.method private final a(Ljava/util/Collection;Ljava/lang/Class;Ljava/util/Collection;Lkotlin/jvm/b/b;)Ljava/util/Collection;
+.method private final a(Ljava/util/Collection;Ljava/lang/Class;Ljava/util/Collection;Lkotlin/jvm/b/Functions2;)Ljava/util/Collection;
     .locals 4
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -447,7 +447,7 @@
             "TT;>;",
             "Ljava/util/Collection<",
             "TT;>;",
-            "Lkotlin/jvm/b/b<",
+            "Lkotlin/jvm/b/Functions2<",
             "-",
             "Lcom/vk/im/engine/models/messages/WithUserContent;",
             "Ljava/lang/Boolean;",
@@ -491,7 +491,7 @@
 
     if-eqz v3, :cond_0
 
-    invoke-interface {p4, v2}, Lkotlin/jvm/b/b;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {p4, v2}, Lkotlin/jvm/b/Functions2;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v3
 
@@ -506,7 +506,7 @@
     .line 48
     check-cast v2, Lcom/vk/im/engine/models/messages/WithUserContent;
 
-    invoke-direct {p0, v2, p2, p3, p4}, Lcom/vk/im/engine/commands/etc/NotifyContentVisibleViaBgCmd;->a(Lcom/vk/im/engine/models/messages/WithUserContent;Ljava/lang/Class;Ljava/util/Collection;Lkotlin/jvm/b/b;)Ljava/util/Collection;
+    invoke-direct {p0, v2, p2, p3, p4}, Lcom/vk/im/engine/commands/etc/NotifyContentVisibleViaBgCmd;->a(Lcom/vk/im/engine/models/messages/WithUserContent;Ljava/lang/Class;Ljava/util/Collection;Lkotlin/jvm/b/Functions2;)Ljava/util/Collection;
 
     :cond_0
     add-int/lit8 v0, v0, 0x1
@@ -538,7 +538,7 @@
 
     if-eqz v1, :cond_2
 
-    invoke-interface {p4, v0}, Lkotlin/jvm/b/b;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {p4, v0}, Lkotlin/jvm/b/Functions2;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v1
 
@@ -553,7 +553,7 @@
     .line 51
     check-cast v0, Lcom/vk/im/engine/models/messages/WithUserContent;
 
-    invoke-direct {p0, v0, p2, p3, p4}, Lcom/vk/im/engine/commands/etc/NotifyContentVisibleViaBgCmd;->a(Lcom/vk/im/engine/models/messages/WithUserContent;Ljava/lang/Class;Ljava/util/Collection;Lkotlin/jvm/b/b;)Ljava/util/Collection;
+    invoke-direct {p0, v0, p2, p3, p4}, Lcom/vk/im/engine/commands/etc/NotifyContentVisibleViaBgCmd;->a(Lcom/vk/im/engine/models/messages/WithUserContent;Ljava/lang/Class;Ljava/util/Collection;Lkotlin/jvm/b/Functions2;)Ljava/util/Collection;
 
     goto :goto_1
 
@@ -561,7 +561,7 @@
     return-object p3
 .end method
 
-.method private final a(Lcom/vk/im/engine/models/attaches/AttachVideo;Lcom/vk/im/engine/d;)Z
+.method private final a(Lcom/vk/im/engine/models/attaches/AttachVideo;Lcom/vk/im/engine/ImEnvironment;)Z
     .locals 6
 
     .line 16
@@ -721,7 +721,7 @@
 
     .line 20
     :cond_8
-    invoke-interface {p2}, Lcom/vk/im/engine/d;->r0()J
+    invoke-interface {p2}, Lcom/vk/im/engine/ImEnvironment;->r0()J
 
     move-result-wide v0
 
@@ -731,7 +731,7 @@
 
     sub-long/2addr v0, v4
 
-    invoke-interface {p2}, Lcom/vk/im/engine/d;->c0()Lcom/vk/im/engine/ImConfig;
+    invoke-interface {p2}, Lcom/vk/im/engine/ImEnvironment;->c0()Lcom/vk/im/engine/ImConfig;
 
     move-result-object p1
 
@@ -754,7 +754,7 @@
     .line 21
     :cond_a
     :goto_8
-    invoke-interface {p2}, Lcom/vk/im/engine/d;->r0()J
+    invoke-interface {p2}, Lcom/vk/im/engine/ImEnvironment;->r0()J
 
     move-result-wide v0
 
@@ -764,7 +764,7 @@
 
     sub-long/2addr v0, v4
 
-    invoke-interface {p2}, Lcom/vk/im/engine/d;->c0()Lcom/vk/im/engine/ImConfig;
+    invoke-interface {p2}, Lcom/vk/im/engine/ImEnvironment;->c0()Lcom/vk/im/engine/ImConfig;
 
     move-result-object p1
 
@@ -785,12 +785,12 @@
     return v2
 .end method
 
-.method private final b(Lcom/vk/im/engine/d;)Ljava/util/List;
+.method private final b(Lcom/vk/im/engine/ImEnvironment;)Ljava/util/List;
     .locals 10
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lcom/vk/im/engine/d;",
+            "Lcom/vk/im/engine/ImEnvironment;",
             ")",
             "Ljava/util/List<",
             "Lcom/vk/im/engine/models/messages/Msg;",
@@ -818,7 +818,7 @@
 
     move-object v3, v7
 
-    invoke-static/range {v0 .. v6}, Lcom/vk/im/engine/commands/etc/NotifyContentVisibleViaBgCmd;->a(Lcom/vk/im/engine/commands/etc/NotifyContentVisibleViaBgCmd;Ljava/util/Collection;Ljava/lang/Class;Ljava/util/Collection;Lkotlin/jvm/b/b;ILjava/lang/Object;)Ljava/util/Collection;
+    invoke-static/range {v0 .. v6}, Lcom/vk/im/engine/commands/etc/NotifyContentVisibleViaBgCmd;->a(Lcom/vk/im/engine/commands/etc/NotifyContentVisibleViaBgCmd;Ljava/util/Collection;Ljava/lang/Class;Ljava/util/Collection;Lkotlin/jvm/b/Functions2;ILjava/lang/Object;)Ljava/util/Collection;
 
     .line 4
     new-instance v0, Ljava/util/ArrayList;
@@ -851,7 +851,7 @@
     check-cast v5, Lcom/vk/im/engine/models/attaches/AttachPoll;
 
     .line 6
-    invoke-interface {p1}, Lcom/vk/im/engine/d;->r0()J
+    invoke-interface {p1}, Lcom/vk/im/engine/ImEnvironment;->r0()J
 
     move-result-wide v6
 
@@ -861,7 +861,7 @@
 
     sub-long/2addr v6, v8
 
-    invoke-interface {p1}, Lcom/vk/im/engine/d;->c0()Lcom/vk/im/engine/ImConfig;
+    invoke-interface {p1}, Lcom/vk/im/engine/ImEnvironment;->c0()Lcom/vk/im/engine/ImConfig;
 
     move-result-object v5
 
@@ -889,12 +889,12 @@
     :cond_2
     sget-object v1, Lcom/vk/im/engine/commands/etc/NotifyContentVisibleViaBgCmd$getMsgsToUpdateFromPolls$pollIds$2;->a:Lcom/vk/im/engine/commands/etc/NotifyContentVisibleViaBgCmd$getMsgsToUpdateFromPolls$pollIds$2;
 
-    invoke-static {v0, v1}, Lcom/vk/im/engine/utils/collection/e;->a(Ljava/util/Collection;Lkotlin/jvm/b/b;)Lcom/vk/im/engine/utils/collection/d;
+    invoke-static {v0, v1}, Lcom/vk/im/engine/utils/collection/IntCollectionExt;->a(Ljava/util/Collection;Lkotlin/jvm/b/Functions2;)Lcom/vk/im/engine/utils/collection/IntCollection;
 
     move-result-object v0
 
     .line 8
-    invoke-interface {v0}, Lcom/vk/im/engine/utils/collection/d;->isEmpty()Z
+    invoke-interface {v0}, Lcom/vk/im/engine/utils/collection/IntCollection;->isEmpty()Z
 
     move-result v1
 
@@ -924,7 +924,7 @@
 
     .line 11
     :cond_3
-    invoke-interface {p1}, Lcom/vk/im/engine/d;->a0()Lcom/vk/im/engine/internal/storage/StorageManager;
+    invoke-interface {p1}, Lcom/vk/im/engine/ImEnvironment;->a0()Lcom/vk/im/engine/internal/storage/StorageManager;
 
     move-result-object p1
 
@@ -932,19 +932,19 @@
 
     move-result-object p1
 
-    invoke-virtual {p1, v0}, Lcom/vk/im/engine/internal/storage/delegates/messages/MsgStorageManager;->c(Lcom/vk/im/engine/utils/collection/d;)Ljava/util/List;
+    invoke-virtual {p1, v0}, Lcom/vk/im/engine/internal/storage/delegates/messages/MsgStorageManager;->c(Lcom/vk/im/engine/utils/collection/IntCollection;)Ljava/util/List;
 
     move-result-object p1
 
     return-object p1
 .end method
 
-.method private final c(Lcom/vk/im/engine/d;)Ljava/util/List;
+.method private final c(Lcom/vk/im/engine/ImEnvironment;)Ljava/util/List;
     .locals 4
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lcom/vk/im/engine/d;",
+            "Lcom/vk/im/engine/ImEnvironment;",
             ")",
             "Ljava/util/List<",
             "Lcom/vk/im/engine/models/messages/Msg;",
@@ -964,7 +964,7 @@
 
     sget-object v3, Lcom/vk/im/engine/commands/etc/NotifyContentVisibleViaBgCmd$getMsgsToUpdateFromVideos$videoIds$1;->a:Lcom/vk/im/engine/commands/etc/NotifyContentVisibleViaBgCmd$getMsgsToUpdateFromVideos$videoIds$1;
 
-    invoke-direct {p0, v1, v2, v0, v3}, Lcom/vk/im/engine/commands/etc/NotifyContentVisibleViaBgCmd;->a(Ljava/util/Collection;Ljava/lang/Class;Ljava/util/Collection;Lkotlin/jvm/b/b;)Ljava/util/Collection;
+    invoke-direct {p0, v1, v2, v0, v3}, Lcom/vk/im/engine/commands/etc/NotifyContentVisibleViaBgCmd;->a(Ljava/util/Collection;Ljava/lang/Class;Ljava/util/Collection;Lkotlin/jvm/b/Functions2;)Ljava/util/Collection;
 
     .line 3
     new-instance v1, Ljava/util/ArrayList;
@@ -993,7 +993,7 @@
     check-cast v3, Lcom/vk/im/engine/models/attaches/AttachVideo;
 
     .line 5
-    invoke-direct {p0, v3, p1}, Lcom/vk/im/engine/commands/etc/NotifyContentVisibleViaBgCmd;->a(Lcom/vk/im/engine/models/attaches/AttachVideo;Lcom/vk/im/engine/d;)Z
+    invoke-direct {p0, v3, p1}, Lcom/vk/im/engine/commands/etc/NotifyContentVisibleViaBgCmd;->a(Lcom/vk/im/engine/models/attaches/AttachVideo;Lcom/vk/im/engine/ImEnvironment;)Z
 
     move-result v3
 
@@ -1007,12 +1007,12 @@
     :cond_1
     sget-object v0, Lcom/vk/im/engine/commands/etc/NotifyContentVisibleViaBgCmd$getMsgsToUpdateFromVideos$videoIds$3;->a:Lcom/vk/im/engine/commands/etc/NotifyContentVisibleViaBgCmd$getMsgsToUpdateFromVideos$videoIds$3;
 
-    invoke-static {v1, v0}, Lcom/vk/im/engine/utils/collection/e;->a(Ljava/util/Collection;Lkotlin/jvm/b/b;)Lcom/vk/im/engine/utils/collection/d;
+    invoke-static {v1, v0}, Lcom/vk/im/engine/utils/collection/IntCollectionExt;->a(Ljava/util/Collection;Lkotlin/jvm/b/Functions2;)Lcom/vk/im/engine/utils/collection/IntCollection;
 
     move-result-object v0
 
     .line 7
-    invoke-interface {v0}, Lcom/vk/im/engine/utils/collection/d;->isEmpty()Z
+    invoke-interface {v0}, Lcom/vk/im/engine/utils/collection/IntCollection;->isEmpty()Z
 
     move-result v1
 
@@ -1046,7 +1046,7 @@
 
     .line 10
     :cond_2
-    invoke-interface {p1}, Lcom/vk/im/engine/d;->a0()Lcom/vk/im/engine/internal/storage/StorageManager;
+    invoke-interface {p1}, Lcom/vk/im/engine/ImEnvironment;->a0()Lcom/vk/im/engine/internal/storage/StorageManager;
 
     move-result-object p1
 
@@ -1054,7 +1054,7 @@
 
     move-result-object p1
 
-    invoke-virtual {p1, v0}, Lcom/vk/im/engine/internal/storage/delegates/messages/MsgStorageManager;->c(Lcom/vk/im/engine/utils/collection/d;)Ljava/util/List;
+    invoke-virtual {p1, v0}, Lcom/vk/im/engine/internal/storage/delegates/messages/MsgStorageManager;->c(Lcom/vk/im/engine/utils/collection/IntCollection;)Ljava/util/List;
 
     move-result-object p1
 
@@ -1063,7 +1063,7 @@
 
 
 # virtual methods
-.method public a(Lcom/vk/im/engine/d;)Ljava/lang/Boolean;
+.method public a(Lcom/vk/im/engine/ImEnvironment;)Ljava/lang/Boolean;
     .locals 9
 
     .line 2
@@ -1110,7 +1110,7 @@
 
     .line 4
     :cond_0
-    invoke-interface {p1}, Lcom/vk/im/engine/d;->i0()Lcom/vk/im/engine/internal/sync/ImBgSyncManager;
+    invoke-interface {p1}, Lcom/vk/im/engine/ImEnvironment;->i0()Lcom/vk/im/engine/internal/sync/ImBgSyncManager;
 
     move-result-object v0
 
@@ -1119,7 +1119,7 @@
     invoke-virtual {v0, v1}, Lcom/vk/im/engine/internal/sync/ImBgSyncManager;->a(Ljava/util/Collection;)V
 
     .line 5
-    invoke-interface {p1}, Lcom/vk/im/engine/d;->i0()Lcom/vk/im/engine/internal/sync/ImBgSyncManager;
+    invoke-interface {p1}, Lcom/vk/im/engine/ImEnvironment;->i0()Lcom/vk/im/engine/internal/sync/ImBgSyncManager;
 
     move-result-object v0
 
@@ -1133,14 +1133,14 @@
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
     .line 7
-    invoke-direct {p0, p1}, Lcom/vk/im/engine/commands/etc/NotifyContentVisibleViaBgCmd;->b(Lcom/vk/im/engine/d;)Ljava/util/List;
+    invoke-direct {p0, p1}, Lcom/vk/im/engine/commands/etc/NotifyContentVisibleViaBgCmd;->b(Lcom/vk/im/engine/ImEnvironment;)Ljava/util/List;
 
     move-result-object v1
 
     invoke-interface {v0, v1}, Ljava/util/List;->addAll(Ljava/util/Collection;)Z
 
     .line 8
-    invoke-direct {p0, p1}, Lcom/vk/im/engine/commands/etc/NotifyContentVisibleViaBgCmd;->c(Lcom/vk/im/engine/d;)Ljava/util/List;
+    invoke-direct {p0, p1}, Lcom/vk/im/engine/commands/etc/NotifyContentVisibleViaBgCmd;->c(Lcom/vk/im/engine/ImEnvironment;)Ljava/util/List;
 
     move-result-object v1
 
@@ -1164,7 +1164,7 @@
     .line 11
     sget-object v3, Lcom/vk/im/engine/commands/etc/NotifyContentVisibleViaBgCmd$onExecute$cmd$1;->a:Lcom/vk/im/engine/commands/etc/NotifyContentVisibleViaBgCmd$onExecute$cmd$1;
 
-    invoke-static {v0, v3}, Lcom/vk/im/engine/utils/collection/e;->a(Ljava/util/Collection;Lkotlin/jvm/b/b;)Lcom/vk/im/engine/utils/collection/d;
+    invoke-static {v0, v3}, Lcom/vk/im/engine/utils/collection/IntCollectionExt;->a(Ljava/util/Collection;Lkotlin/jvm/b/Functions2;)Lcom/vk/im/engine/utils/collection/IntCollection;
 
     move-result-object v5
 
@@ -1179,19 +1179,19 @@
     move-object v3, v1
 
     .line 14
-    invoke-direct/range {v3 .. v8}, Lcom/vk/im/engine/commands/messages/MsgGetByIdCmd;-><init>(Lcom/vk/im/engine/models/messages/MsgIdType;Lcom/vk/im/engine/utils/collection/d;Lcom/vk/im/engine/models/Source;ZLjava/lang/Object;)V
+    invoke-direct/range {v3 .. v8}, Lcom/vk/im/engine/commands/messages/MsgGetByIdCmd;-><init>(Lcom/vk/im/engine/models/messages/MsgIdType;Lcom/vk/im/engine/utils/collection/IntCollection;Lcom/vk/im/engine/models/Source;ZLjava/lang/Object;)V
 
     .line 15
-    invoke-interface {p1, p0, v1}, Lcom/vk/im/engine/d;->a(Ljava/lang/Object;Lcom/vk/im/engine/i/c;)Ljava/lang/Object;
+    invoke-interface {p1, p0, v1}, Lcom/vk/im/engine/ImEnvironment;->a(Ljava/lang/Object;Lcom/vk/im/engine/i/ImEngineCmd;)Ljava/lang/Object;
 
     return-object v2
 .end method
 
-.method public bridge synthetic a(Lcom/vk/im/engine/d;)Ljava/lang/Object;
+.method public bridge synthetic a(Lcom/vk/im/engine/ImEnvironment;)Ljava/lang/Object;
     .locals 0
 
     .line 1
-    invoke-virtual {p0, p1}, Lcom/vk/im/engine/commands/etc/NotifyContentVisibleViaBgCmd;->a(Lcom/vk/im/engine/d;)Ljava/lang/Boolean;
+    invoke-virtual {p0, p1}, Lcom/vk/im/engine/commands/etc/NotifyContentVisibleViaBgCmd;->a(Lcom/vk/im/engine/ImEnvironment;)Ljava/lang/Boolean;
 
     move-result-object p1
 
@@ -1202,13 +1202,13 @@
     .locals 2
 
     .line 1
-    invoke-static {}, Lcom/vk/im/engine/internal/d;->a()Ljava/lang/String;
+    invoke-static {}, Lcom/vk/im/engine/internal/QueueNames;->a()Ljava/lang/String;
 
     move-result-object v0
 
     const-string v1, "QueueNames.forAttachesUpdates()"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     return-object v0
 .end method
@@ -1240,7 +1240,7 @@
 
     iget-object v3, p1, Lcom/vk/im/engine/commands/etc/NotifyContentVisibleViaBgCmd;->b:Ljava/util/Collection;
 
-    invoke-static {v1, v3}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v1, v3}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v1
 
@@ -1256,7 +1256,7 @@
 
     iget-object p1, p1, Lcom/vk/im/engine/commands/etc/NotifyContentVisibleViaBgCmd;->c:Ljava/util/Collection;
 
-    invoke-static {v1, p1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v1, p1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result p1
 

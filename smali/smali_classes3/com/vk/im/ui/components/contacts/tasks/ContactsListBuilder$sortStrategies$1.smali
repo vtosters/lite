@@ -3,7 +3,7 @@
 .source "ContactsListBuilder.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/b;
+.implements Lkotlin/jvm/b/Functions2;
 
 
 # annotations
@@ -19,14 +19,14 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/b<",
+        "Lkotlin/jvm/b/Functions2<",
         "Ljava/util/List<",
         "+",
-        "Lcom/vk/im/engine/models/j;",
+        "Lcom/vk/im/engine/models/Profile;",
         ">;",
         "Ljava/util/List<",
         "+",
-        "Lcom/vk/im/engine/models/j;",
+        "Lcom/vk/im/engine/models/Profile;",
         ">;>;"
     }
 .end annotation
@@ -68,10 +68,10 @@
             "(",
             "Ljava/util/List<",
             "+",
-            "Lcom/vk/im/engine/models/j;",
+            "Lcom/vk/im/engine/models/Profile;",
             ">;)",
             "Ljava/util/List<",
-            "Lcom/vk/im/engine/models/j;",
+            "Lcom/vk/im/engine/models/Profile;",
             ">;"
         }
     .end annotation

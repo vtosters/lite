@@ -40,13 +40,13 @@
     .line 1
     iget-object p1, p0, Lcom/vk/im/ui/components/viewcontrollers/msg_view/header/MsgViewHeaderVc$a;->a:Lcom/vk/im/ui/components/viewcontrollers/msg_view/header/MsgViewHeaderVc;
 
-    invoke-virtual {p1}, Lcom/vk/im/ui/components/viewcontrollers/msg_view/header/MsgViewHeaderVc;->b()Lcom/vk/im/ui/components/viewcontrollers/msg_view/header/a;
+    invoke-virtual {p1}, Lcom/vk/im/ui/components/viewcontrollers/msg_view/header/MsgViewHeaderVc;->b()Lcom/vk/im/ui/components/viewcontrollers/msg_view/header/MsgViewHeaderVcCallback;
 
     move-result-object p1
 
     if-eqz p1, :cond_0
 
-    invoke-interface {p1}, Lcom/vk/im/ui/components/viewcontrollers/msg_view/header/a;->onClose()V
+    invoke-interface {p1}, Lcom/vk/im/ui/components/viewcontrollers/msg_view/header/MsgViewHeaderVcCallback;->onClose()V
 
     :cond_0
     return-void

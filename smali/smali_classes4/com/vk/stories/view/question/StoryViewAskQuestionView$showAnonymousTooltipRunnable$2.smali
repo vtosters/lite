@@ -3,12 +3,12 @@
 .source "StoryViewAskQuestionView.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/a;
+.implements Lkotlin/jvm/b/Functions;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/stories/view/question/StoryViewAskQuestionView;-><init>(Lcom/vk/stories/view/question/b;Lcom/vk/stories/view/t1;)V
+    value = Lcom/vk/stories/view/question/StoryViewAskQuestionView;-><init>(Lcom/vk/stories/view/question/StoryViewAskQuestionContract2;Lcom/vk/stories/view/BaseStoryViewContract1;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -19,7 +19,7 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/a<",
+        "Lkotlin/jvm/b/Functions<",
         "Ljava/lang/Runnable;",
         ">;"
     }

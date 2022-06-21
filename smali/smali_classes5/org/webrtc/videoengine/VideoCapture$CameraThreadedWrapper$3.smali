@@ -61,7 +61,7 @@
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Le/c/a/a;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Le/c/a/Log;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 2
     iget-object v0, p0, Lorg/webrtc/videoengine/VideoCapture$CameraThreadedWrapper$3;->this$1:Lorg/webrtc/videoengine/VideoCapture$CameraThreadedWrapper;

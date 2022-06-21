@@ -3,12 +3,12 @@
 .source "MsgSearchComponent.kt"
 
 # interfaces
-.implements Lc/a/z/g;
+.implements Lio/reactivex/functions/Consumer;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/im/ui/components/msg_search/MsgSearchComponent;->a(Ljava/lang/Object;Lcom/vk/im/engine/models/SearchMode;ILkotlin/jvm/b/a;)V
+    value = Lcom/vk/im/ui/components/msg_search/MsgSearchComponent;->a(Ljava/lang/Object;Lcom/vk/im/engine/models/SearchMode;ILkotlin/jvm/b/Functions;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -22,7 +22,7 @@
         "Ljava/lang/Object;",
         ">",
         "Ljava/lang/Object;",
-        "Lc/a/z/g<",
+        "Lio/reactivex/functions/Consumer<",
         "Ljava/lang/Throwable;",
         ">;"
     }
@@ -72,11 +72,11 @@
     .line 3
     iget-object p1, p0, Lcom/vk/im/ui/components/msg_search/MsgSearchComponent$c;->a:Lcom/vk/im/ui/components/msg_search/MsgSearchComponent;
 
-    invoke-static {p1}, Lcom/vk/im/ui/components/msg_search/MsgSearchComponent;->f(Lcom/vk/im/ui/components/msg_search/MsgSearchComponent;)Lcom/vk/im/ui/components/msg_search/b;
+    invoke-static {p1}, Lcom/vk/im/ui/components/msg_search/MsgSearchComponent;->f(Lcom/vk/im/ui/components/msg_search/MsgSearchComponent;)Lcom/vk/im/ui/components/msg_search/MsgSearchReporter;
 
     move-result-object p1
 
-    invoke-virtual {p1}, Lcom/vk/im/ui/components/msg_search/b;->b()V
+    invoke-virtual {p1}, Lcom/vk/im/ui/components/msg_search/MsgSearchReporter;->b()V
 
     return-void
 .end method

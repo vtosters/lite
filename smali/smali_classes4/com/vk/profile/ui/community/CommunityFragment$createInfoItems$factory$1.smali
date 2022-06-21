@@ -3,7 +3,7 @@
 .source "CommunityFragment.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/b;
+.implements Lkotlin/jvm/b/Functions2;
 
 
 # annotations
@@ -19,9 +19,9 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/b<",
+        "Lkotlin/jvm/b/Functions2<",
         "Lcom/vk/profile/ui/header/BaseHeaderView;",
-        "Lkotlin/m;",
+        "Lkotlin/Unit;",
         ">;"
     }
 .end annotation
@@ -85,7 +85,7 @@
 
     if-eqz v0, :cond_0
 
-    invoke-virtual {v0}, Lcom/vk/profile/data/cover/model/CommunityCoverModel;->j()Lb/h/g/t/c;
+    invoke-virtual {v0}, Lcom/vk/profile/data/cover/model/CommunityCoverModel;->j()Lb/h/g/t/ValidatorSet;
 
     move-result-object v0
 
@@ -95,7 +95,7 @@
 
     instance-of p1, p1, Lcom/vk/profile/ui/header/CommunityHeaderView$c;
 
-    invoke-virtual {v0, v1, p1}, Lb/h/g/t/c;->a(IZ)V
+    invoke-virtual {v0, v1, p1}, Lb/h/g/t/ValidatorSet;->a(IZ)V
 
     :cond_0
     return-void
@@ -109,7 +109,7 @@
 
     invoke-virtual {p0, p1}, Lcom/vk/profile/ui/community/CommunityFragment$createInfoItems$factory$1;->a(Lcom/vk/profile/ui/header/BaseHeaderView;)V
 
-    sget-object p1, Lkotlin/m;->a:Lkotlin/m;
+    sget-object p1, Lkotlin/Unit;->a:Lkotlin/Unit;
 
     return-object p1
 .end method

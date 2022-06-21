@@ -40,11 +40,11 @@
     .line 1
     iget-object v0, p0, Lcom/vk/queue/sync/QueueSyncManager$b;->a:Lcom/vk/queue/sync/QueueSyncManager;
 
-    invoke-static {v0}, Lcom/vk/queue/sync/QueueSyncManager;->a(Lcom/vk/queue/sync/QueueSyncManager;)Lcom/vk/queue/sync/d/a;
+    invoke-static {v0}, Lcom/vk/queue/sync/QueueSyncManager;->a(Lcom/vk/queue/sync/QueueSyncManager;)Lcom/vk/queue/sync/d/QueueStorageManager;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/vk/queue/sync/d/a;->a()V
+    invoke-virtual {v0}, Lcom/vk/queue/sync/d/QueueStorageManager;->a()V
 
     return-void
 .end method

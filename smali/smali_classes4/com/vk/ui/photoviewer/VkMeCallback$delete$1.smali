@@ -3,7 +3,7 @@
 .source "VkMeCallback.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/a;
+.implements Lkotlin/jvm/b/Functions;
 
 
 # annotations
@@ -19,8 +19,8 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/a<",
-        "Lkotlin/m;",
+        "Lkotlin/jvm/b/Functions<",
+        "Lkotlin/Unit;",
         ">;"
     }
 .end annotation
@@ -59,7 +59,7 @@
     .line 1
     invoke-virtual {p0}, Lcom/vk/ui/photoviewer/VkMeCallback$delete$1;->invoke()V
 
-    sget-object v0, Lkotlin/m;->a:Lkotlin/m;
+    sget-object v0, Lkotlin/Unit;->a:Lkotlin/Unit;
 
     return-object v0
 .end method
@@ -79,11 +79,11 @@
     .line 3
     iget-object v1, p0, Lcom/vk/ui/photoviewer/VkMeCallback$delete$1;->this$0:Lcom/vk/ui/photoviewer/VkMeCallback;
 
-    invoke-static {v1}, Lcom/vk/ui/photoviewer/VkMeCallback;->b(Lcom/vk/ui/photoviewer/VkMeCallback;)Lcom/vk/im/engine/a;
+    invoke-static {v1}, Lcom/vk/ui/photoviewer/VkMeCallback;->b(Lcom/vk/ui/photoviewer/VkMeCallback;)Lcom/vk/im/engine/ImEngine;
 
     move-result-object v1
 
-    new-instance v2, Lcom/vk/im/engine/i/f/a;
+    new-instance v2, Lcom/vk/im/engine/i/f/DeletePhotoCmd;
 
     iget-object v3, p0, Lcom/vk/ui/photoviewer/VkMeCallback$delete$1;->$attach:Lcom/vk/im/engine/models/attaches/AttachImage;
 
@@ -97,9 +97,9 @@
 
     move-result v4
 
-    invoke-direct {v2, v3, v4}, Lcom/vk/im/engine/i/f/a;-><init>(II)V
+    invoke-direct {v2, v3, v4}, Lcom/vk/im/engine/i/f/DeletePhotoCmd;-><init>(II)V
 
-    invoke-virtual {v1, v2}, Lcom/vk/im/engine/a;->b(Lcom/vk/im/engine/i/c;)Lc/a/t;
+    invoke-virtual {v1, v2}, Lcom/vk/im/engine/ImEngine;->b(Lcom/vk/im/engine/i/ImEngineCmd;)Lio/reactivex/Single;
 
     move-result-object v1
 
@@ -108,7 +108,7 @@
 
     invoke-direct {v2, p0, v0}, Lcom/vk/ui/photoviewer/VkMeCallback$delete$1$1;-><init>(Lcom/vk/ui/photoviewer/VkMeCallback$delete$1;Lkotlin/jvm/internal/Ref$ObjectRef;)V
 
-    invoke-virtual {v1, v2}, Lc/a/t;->c(Lc/a/z/g;)Lc/a/t;
+    invoke-virtual {v1, v2}, Lio/reactivex/Single;->c(Lio/reactivex/functions/Consumer;)Lio/reactivex/Single;
 
     move-result-object v1
 
@@ -120,12 +120,12 @@
     const-string v3, "VkMeCallback"
 
     .line 6
-    invoke-static {v3}, Lcom/vk/core/util/z0;->a(Ljava/lang/String;)Lc/a/z/g;
+    invoke-static {v3}, Lcom/vk/core/util/RxUtil;->a(Ljava/lang/String;)Lio/reactivex/functions/Consumer;
 
     move-result-object v3
 
     .line 7
-    invoke-virtual {v1, v2, v3}, Lc/a/t;->a(Lc/a/z/g;Lc/a/z/g;)Lio/reactivex/disposables/b;
+    invoke-virtual {v1, v2, v3}, Lio/reactivex/Single;->a(Lio/reactivex/functions/Consumer;Lio/reactivex/functions/Consumer;)Lio/reactivex/disposables/Disposable;
 
     move-result-object v1
 

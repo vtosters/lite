@@ -3,12 +3,12 @@
 .source "MultiCameraEditorView.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/b;
+.implements Lkotlin/jvm/b/Functions2;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/stories/editor/multi/MultiCameraEditorView;->setStoryPickerData(Lcom/vk/lists/b;)V
+    value = Lcom/vk/stories/editor/multi/MultiCameraEditorView;->setStoryPickerData(Lcom/vk/lists/BaseListDataSet;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -19,9 +19,9 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/b<",
+        "Lkotlin/jvm/b/Functions2<",
         "Ljava/lang/Integer;",
-        "Lkotlin/m;",
+        "Lkotlin/Unit;",
         ">;"
     }
 .end annotation
@@ -52,7 +52,7 @@
     .line 1
     iget-object v0, p0, Lcom/vk/stories/editor/multi/MultiCameraEditorView$setStoryPickerData$2;->this$0:Lcom/vk/stories/editor/multi/MultiCameraEditorView;
 
-    invoke-static {v0}, Lcom/vk/stories/editor/multi/MultiCameraEditorView;->a(Lcom/vk/stories/editor/multi/MultiCameraEditorView;)Lcom/vk/stories/editor/multi/g;
+    invoke-static {v0}, Lcom/vk/stories/editor/multi/MultiCameraEditorView;->a(Lcom/vk/stories/editor/multi/MultiCameraEditorView;)Lcom/vk/stories/editor/multi/MultiCameraEditorContract;
 
     move-result-object v0
 
@@ -62,7 +62,7 @@
 
     move-result-object p1
 
-    invoke-interface {v0, p1}, Lcom/vk/stories/editor/multi/g;->b(Ljava/lang/Integer;)V
+    invoke-interface {v0, p1}, Lcom/vk/stories/editor/multi/MultiCameraEditorContract;->b(Ljava/lang/Integer;)V
 
     :cond_0
     return-void
@@ -80,7 +80,7 @@
 
     invoke-virtual {p0, p1}, Lcom/vk/stories/editor/multi/MultiCameraEditorView$setStoryPickerData$2;->a(I)V
 
-    sget-object p1, Lkotlin/m;->a:Lkotlin/m;
+    sget-object p1, Lkotlin/Unit;->a:Lkotlin/Unit;
 
     return-object p1
 .end method

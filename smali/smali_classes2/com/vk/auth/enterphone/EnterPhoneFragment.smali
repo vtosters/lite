@@ -3,7 +3,7 @@
 .source "EnterPhoneFragment.kt"
 
 # interfaces
-.implements Lcom/vk/auth/enterphone/e;
+.implements Lcom/vk/auth/enterphone/EnterPhoneView;
 
 
 # annotations
@@ -16,9 +16,9 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lcom/vk/auth/base/BaseAuthFragment<",
-        "Lcom/vk/auth/enterphone/c;",
+        "Lcom/vk/auth/enterphone/EnterPhonePresenter;",
         ">;",
-        "Lcom/vk/auth/enterphone/e;"
+        "Lcom/vk/auth/enterphone/EnterPhoneView;"
     }
 .end annotation
 
@@ -39,7 +39,7 @@
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, v1}, Lcom/vk/auth/enterphone/EnterPhoneFragment$a;-><init>(Lkotlin/jvm/internal/i;)V
+    invoke-direct {v0, v1}, Lcom/vk/auth/enterphone/EnterPhoneFragment$a;-><init>(Lkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     return-void
 .end method
@@ -60,15 +60,15 @@
     return-void
 .end method
 
-.method public static final synthetic a(Lcom/vk/auth/enterphone/EnterPhoneFragment;)Lcom/vk/auth/enterphone/c;
+.method public static final synthetic a(Lcom/vk/auth/enterphone/EnterPhoneFragment;)Lcom/vk/auth/enterphone/EnterPhonePresenter;
     .locals 0
 
     .line 1
-    invoke-virtual {p0}, Lcom/vk/auth/base/BaseAuthFragment;->getPresenter()Lcom/vk/auth/base/a;
+    invoke-virtual {p0}, Lcom/vk/auth/base/BaseAuthFragment;->getPresenter()Lcom/vk/auth/base/AuthPresenter;
 
     move-result-object p0
 
-    check-cast p0, Lcom/vk/auth/enterphone/c;
+    check-cast p0, Lcom/vk/auth/enterphone/EnterPhonePresenter;
 
     return-object p0
 .end method
@@ -92,7 +92,7 @@
     :cond_0
     const-string p1, "phoneView"
 
-    invoke-static {p1}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {p1}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     const/4 p1, 0x0
 
@@ -114,7 +114,7 @@
     :cond_0
     const-string v0, "phoneView"
 
-    invoke-static {v0}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v0}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     const/4 v0, 0x0
 
@@ -136,7 +136,7 @@
     :cond_0
     const-string p1, "phoneView"
 
-    invoke-static {p1}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {p1}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     const/4 p1, 0x0
 
@@ -153,14 +153,14 @@
 
     const-string v1, "requireActivity()"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 2
-    invoke-virtual {p0}, Lcom/vk/auth/base/BaseAuthFragment;->C4()Lcom/vk/auth/main/i;
+    invoke-virtual {p0}, Lcom/vk/auth/base/BaseAuthFragment;->C4()Lcom/vk/auth/main/AuthUiManager;
 
     move-result-object v1
 
-    invoke-interface {v1, v0}, Lcom/vk/auth/main/i;->a(Landroid/content/Context;)Landroidx/appcompat/app/AlertDialog$Builder;
+    invoke-interface {v1, v0}, Lcom/vk/auth/main/AuthUiManager;->a(Landroid/content/Context;)Landroidx/appcompat/app/AlertDialog$Builder;
 
     move-result-object v0
 
@@ -230,7 +230,7 @@
     :cond_0
     const-string p1, "termsController"
 
-    invoke-static {p1}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {p1}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v1
 
@@ -238,7 +238,7 @@
     const-string p1, "phoneView"
 
     .line 3
-    invoke-static {p1}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {p1}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v1
 .end method
@@ -264,19 +264,19 @@
     move-result-object p1
 
     .line 2
-    invoke-virtual {p0}, Lcom/vk/auth/base/BaseAuthFragment;->getPresenter()Lcom/vk/auth/base/a;
+    invoke-virtual {p0}, Lcom/vk/auth/base/BaseAuthFragment;->getPresenter()Lcom/vk/auth/base/AuthPresenter;
 
     move-result-object p2
 
-    check-cast p2, Lcom/vk/auth/enterphone/c;
+    check-cast p2, Lcom/vk/auth/enterphone/EnterPhonePresenter;
 
-    invoke-interface {p2, p1}, Lcom/vk/auth/enterphone/c;->b(Lcom/vk/auth/enterphone/choosecountry/Country;)V
+    invoke-interface {p2, p1}, Lcom/vk/auth/enterphone/EnterPhonePresenter;->b(Lcom/vk/auth/enterphone/choosecountry/Country;)V
 
     goto :goto_0
 
     .line 3
     :cond_0
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     const/4 p1, 0x0
 
@@ -328,13 +328,13 @@
     invoke-virtual {v0, v1}, Lcom/vk/auth/ui/VkAuthPhoneView;->b(Landroid/text/TextWatcher;)V
 
     .line 3
-    invoke-virtual {p0}, Lcom/vk/auth/base/BaseAuthFragment;->getPresenter()Lcom/vk/auth/base/a;
+    invoke-virtual {p0}, Lcom/vk/auth/base/BaseAuthFragment;->getPresenter()Lcom/vk/auth/base/AuthPresenter;
 
     move-result-object v0
 
-    check-cast v0, Lcom/vk/auth/enterphone/c;
+    check-cast v0, Lcom/vk/auth/enterphone/EnterPhonePresenter;
 
-    invoke-interface {v0}, Lcom/vk/auth/enterphone/c;->o2()V
+    invoke-interface {v0}, Lcom/vk/auth/enterphone/EnterPhonePresenter;->o2()V
 
     .line 4
     invoke-super {p0}, Landroidx/fragment/app/Fragment;->onDestroyView()V
@@ -345,7 +345,7 @@
     const-string v0, "phoneView"
 
     .line 5
-    invoke-static {v0}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v0}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v1
 
@@ -353,7 +353,7 @@
     const-string v0, "termsController"
 
     .line 6
-    invoke-static {v0}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v0}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v1
 .end method
@@ -373,7 +373,7 @@
 
     const-string v0, "view.findViewById(R.id.title)"
 
-    invoke-static {p2, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p2, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     check-cast p2, Landroid/widget/TextView;
 
@@ -386,7 +386,7 @@
 
     const-string v0, "view.findViewById(R.id.subtitle)"
 
-    invoke-static {p2, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p2, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     check-cast p2, Landroid/widget/TextView;
 
@@ -399,7 +399,7 @@
 
     const-string v0, "view.findViewById(R.id.phone)"
 
-    invoke-static {p2, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p2, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     check-cast p2, Lcom/vk/auth/ui/VkAuthPhoneView;
 
@@ -414,11 +414,11 @@
 
     if-eqz p2, :cond_5
 
-    invoke-virtual {p0}, Lcom/vk/auth/base/BaseAuthFragment;->C4()Lcom/vk/auth/main/i;
+    invoke-virtual {p0}, Lcom/vk/auth/base/BaseAuthFragment;->C4()Lcom/vk/auth/main/AuthUiManager;
 
     move-result-object v2
 
-    invoke-interface {v2}, Lcom/vk/auth/main/i;->a()Z
+    invoke-interface {v2}, Lcom/vk/auth/main/AuthUiManager;->a()Z
 
     move-result v2
 
@@ -434,17 +434,17 @@
     .line 7
     new-instance p2, Lcom/vk/auth/terms/TermsController;
 
-    invoke-virtual {p0}, Lcom/vk/auth/base/BaseAuthFragment;->getPresenter()Lcom/vk/auth/base/a;
+    invoke-virtual {p0}, Lcom/vk/auth/base/BaseAuthFragment;->getPresenter()Lcom/vk/auth/base/AuthPresenter;
 
     move-result-object v2
 
-    check-cast v2, Lcom/vk/auth/terms/a;
+    check-cast v2, Lcom/vk/auth/terms/TermsPresenter;
 
     const-string v3, "termsContainer"
 
-    invoke-static {p1, v3}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v3}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    invoke-direct {p2, v2, p1}, Lcom/vk/auth/terms/TermsController;-><init>(Lcom/vk/auth/terms/a;Landroid/view/View;)V
+    invoke-direct {p2, v2, p1}, Lcom/vk/auth/terms/TermsController;-><init>(Lcom/vk/auth/terms/TermsPresenter;Landroid/view/View;)V
 
     iput-object p2, p0, Lcom/vk/auth/enterphone/EnterPhoneFragment;->g:Lcom/vk/auth/terms/TermsController;
 
@@ -464,13 +464,13 @@
 
     if-eqz p1, :cond_3
 
-    invoke-virtual {p0}, Lcom/vk/auth/base/BaseAuthFragment;->getPresenter()Lcom/vk/auth/base/a;
+    invoke-virtual {p0}, Lcom/vk/auth/base/BaseAuthFragment;->getPresenter()Lcom/vk/auth/base/AuthPresenter;
 
     move-result-object p2
 
-    check-cast p2, Lcom/vk/auth/enterphone/c;
+    check-cast p2, Lcom/vk/auth/enterphone/EnterPhonePresenter;
 
-    invoke-interface {p2}, Lcom/vk/auth/enterphone/c;->u2()Z
+    invoke-interface {p2}, Lcom/vk/auth/enterphone/EnterPhonePresenter;->u2()Z
 
     move-result p2
 
@@ -494,7 +494,7 @@
 
     invoke-direct {p2, p0}, Lcom/vk/auth/enterphone/EnterPhoneFragment$onViewCreated$1;-><init>(Lcom/vk/auth/enterphone/EnterPhoneFragment;)V
 
-    invoke-virtual {p1, p2}, Lcom/vk/auth/ui/VkAuthPhoneView;->setChooseCountryClickListener(Lkotlin/jvm/b/a;)V
+    invoke-virtual {p1, p2}, Lcom/vk/auth/ui/VkAuthPhoneView;->setChooseCountryClickListener(Lkotlin/jvm/b/Functions;)V
 
     .line 12
     invoke-virtual {p0}, Lcom/vk/auth/base/BaseAuthFragment;->E4()Lcom/vk/auth/ui/VkLoadingButton;
@@ -507,47 +507,47 @@
 
     invoke-direct {p2, p0}, Lcom/vk/auth/enterphone/EnterPhoneFragment$onViewCreated$2;-><init>(Lcom/vk/auth/enterphone/EnterPhoneFragment;)V
 
-    invoke-static {p1, p2}, Lcom/vk/auth/utils/AuthExtensionsKt;->a(Landroid/view/View;Lkotlin/jvm/b/b;)V
+    invoke-static {p1, p2}, Lcom/vk/auth/utils/AuthExtensionsKt;->a(Landroid/view/View;Lkotlin/jvm/b/Functions2;)V
 
     .line 13
     :cond_0
-    invoke-virtual {p0}, Lcom/vk/auth/base/BaseAuthFragment;->getPresenter()Lcom/vk/auth/base/a;
+    invoke-virtual {p0}, Lcom/vk/auth/base/BaseAuthFragment;->getPresenter()Lcom/vk/auth/base/AuthPresenter;
 
     move-result-object p1
 
-    check-cast p1, Lcom/vk/auth/enterphone/c;
+    check-cast p1, Lcom/vk/auth/enterphone/EnterPhonePresenter;
 
-    invoke-interface {p1, p0}, Lcom/vk/auth/enterphone/c;->a(Lcom/vk/auth/enterphone/e;)V
+    invoke-interface {p1, p0}, Lcom/vk/auth/enterphone/EnterPhonePresenter;->a(Lcom/vk/auth/enterphone/EnterPhoneView;)V
 
     return-void
 
     .line 14
     :cond_1
-    invoke-static {v0}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v0}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v1
 
     .line 15
     :cond_2
-    invoke-static {v0}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v0}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v1
 
     .line 16
     :cond_3
-    invoke-static {p2}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {p2}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v1
 
     .line 17
     :cond_4
-    invoke-static {p2}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {p2}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v1
 
     .line 18
     :cond_5
-    invoke-static {v0}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v0}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v1
 .end method

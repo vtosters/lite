@@ -44,7 +44,7 @@
 
     const/4 v2, 0x1
 
-    invoke-static {v0, v1, v2, v1}, Lcom/vtosters/lite/fragments/messages/chat/vc/MsgSendVc;->a(Lcom/vtosters/lite/fragments/messages/chat/vc/MsgSendVc;Lkotlin/jvm/b/b;ILjava/lang/Object;)V
+    invoke-static {v0, v1, v2, v1}, Lcom/vtosters/lite/fragments/messages/chat/vc/MsgSendVc;->a(Lcom/vtosters/lite/fragments/messages/chat/vc/MsgSendVc;Lkotlin/jvm/b/Functions2;ILjava/lang/Object;)V
 
     return-void
 .end method

@@ -42,7 +42,7 @@
     .locals 2
 
     .line 1
-    new-instance v0, Lcom/vk/profile/ui/c$z;
+    new-instance v0, Lcom/vk/profile/ui/BaseProfileFragment$z;
 
     iget-object v1, p0, Lcom/vk/search/holder/StoryElongatedViewHolder$a$a;->b:Lcom/vk/dto/stories/model/StoriesContainer;
 
@@ -50,17 +50,17 @@
 
     move-result v1
 
-    invoke-direct {v0, v1}, Lcom/vk/profile/ui/c$z;-><init>(I)V
+    invoke-direct {v0, v1}, Lcom/vk/profile/ui/BaseProfileFragment$z;-><init>(I)V
 
     iget-object v1, p0, Lcom/vk/search/holder/StoryElongatedViewHolder$a$a;->a:Lcom/vk/search/holder/StoryElongatedViewHolder$a;
 
     iget-object v1, v1, Lcom/vk/search/holder/StoryElongatedViewHolder$a;->a:Lcom/vk/search/holder/StoryElongatedViewHolder;
 
-    invoke-virtual {v1}, Lcom/vtosters/lite/ui/b0/i;->getContext()Landroid/content/Context;
+    invoke-virtual {v1}, Lcom/vtosters/lite/ui/holder/RecyclerHolder;->getContext()Landroid/content/Context;
 
     move-result-object v1
 
-    invoke-virtual {v0, v1}, Lcom/vk/navigation/o;->a(Landroid/content/Context;)V
+    invoke-virtual {v0, v1}, Lcom/vk/navigation/Navigator;->a(Landroid/content/Context;)V
 
     return-void
 .end method

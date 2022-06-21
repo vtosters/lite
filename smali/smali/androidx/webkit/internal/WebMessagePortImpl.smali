@@ -31,7 +31,7 @@
     .line 4
     const-class v0, Lorg/chromium/support_lib_boundary/WebMessagePortBoundaryInterface;
 
-    invoke-static {v0, p1}, Lorg/chromium/support_lib_boundary/a/a;->a(Ljava/lang/Class;Ljava/lang/reflect/InvocationHandler;)Ljava/lang/Object;
+    invoke-static {v0, p1}, Lorg/chromium/support_lib_boundary/a/BoundaryInterfaceReflectionUtil;->a(Ljava/lang/Class;Ljava/lang/reflect/InvocationHandler;)Ljava/lang/Object;
 
     move-result-object p1
 
@@ -164,7 +164,7 @@
     move-result-object v1
 
     .line 4
-    invoke-static {v0, v1}, Lorg/chromium/support_lib_boundary/a/a;->a(Ljava/lang/Class;Ljava/lang/reflect/InvocationHandler;)Ljava/lang/Object;
+    invoke-static {v0, v1}, Lorg/chromium/support_lib_boundary/a/BoundaryInterfaceReflectionUtil;->a(Ljava/lang/Class;Ljava/lang/reflect/InvocationHandler;)Ljava/lang/Object;
 
     move-result-object v0
 
@@ -402,7 +402,7 @@
     invoke-direct {v1, p1}, Landroidx/webkit/internal/WebMessageAdapter;-><init>(Landroidx/webkit/WebMessageCompat;)V
 
     .line 6
-    invoke-static {v1}, Lorg/chromium/support_lib_boundary/a/a;->a(Ljava/lang/Object;)Ljava/lang/reflect/InvocationHandler;
+    invoke-static {v1}, Lorg/chromium/support_lib_boundary/a/BoundaryInterfaceReflectionUtil;->a(Ljava/lang/Object;)Ljava/lang/reflect/InvocationHandler;
 
     move-result-object p1
 
@@ -478,7 +478,7 @@
     invoke-direct {v1, p2}, Landroidx/webkit/internal/WebMessageCallbackAdapter;-><init>(Landroidx/webkit/WebMessagePortCompat$WebMessageCallbackCompat;)V
 
     .line 14
-    invoke-static {v1}, Lorg/chromium/support_lib_boundary/a/a;->a(Ljava/lang/Object;)Ljava/lang/reflect/InvocationHandler;
+    invoke-static {v1}, Lorg/chromium/support_lib_boundary/a/BoundaryInterfaceReflectionUtil;->a(Ljava/lang/Object;)Ljava/lang/reflect/InvocationHandler;
 
     move-result-object p2
 
@@ -554,7 +554,7 @@
     invoke-direct {v1, p1}, Landroidx/webkit/internal/WebMessageCallbackAdapter;-><init>(Landroidx/webkit/WebMessagePortCompat$WebMessageCallbackCompat;)V
 
     .line 6
-    invoke-static {v1}, Lorg/chromium/support_lib_boundary/a/a;->a(Ljava/lang/Object;)Ljava/lang/reflect/InvocationHandler;
+    invoke-static {v1}, Lorg/chromium/support_lib_boundary/a/BoundaryInterfaceReflectionUtil;->a(Ljava/lang/Object;)Ljava/lang/reflect/InvocationHandler;
 
     move-result-object p1
 

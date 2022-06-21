@@ -44,7 +44,7 @@
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, v1}, Lcom/vk/dto/search/SearchItem$c;-><init>(Lkotlin/jvm/internal/i;)V
+    invoke-direct {v0, v1}, Lcom/vk/dto/search/SearchItem$c;-><init>(Lkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     .line 1
     new-instance v0, Lcom/vk/dto/search/SearchItem$b;
@@ -237,7 +237,7 @@
 
     const-string v1, "o.getJSONObject(ServerKeys.LINK)"
 
-    invoke-static {p1, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {v0, p1}, Lcom/vk/dto/common/NamedActionLink$b;->a(Lorg/json/JSONObject;)Lcom/vk/dto/common/NamedActionLink;
 

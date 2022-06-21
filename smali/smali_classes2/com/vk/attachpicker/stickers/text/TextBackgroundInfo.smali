@@ -48,7 +48,7 @@
     return-void
 .end method
 
-.method public static a(Lcom/vk/attachpicker/stickers/text/TextBackgroundInfo;)Lcom/vk/stories/views/c/b/a;
+.method public static a(Lcom/vk/attachpicker/stickers/text/TextBackgroundInfo;)Lcom/vk/stories/views/c/b/StoryTextBackgroundDrawer;
     .locals 4
 
     const/4 v0, 0x0
@@ -71,14 +71,14 @@
     if-ne v1, v2, :cond_1
 
     .line 3
-    new-instance v0, Lcom/vk/stories/views/c/b/c;
+    new-instance v0, Lcom/vk/stories/views/c/b/TextLineTextBackgroundDrawer;
 
-    invoke-direct {v0}, Lcom/vk/stories/views/c/b/c;-><init>()V
+    invoke-direct {v0}, Lcom/vk/stories/views/c/b/TextLineTextBackgroundDrawer;-><init>()V
 
     .line 4
     iget-boolean v1, p0, Lcom/vk/attachpicker/stickers/text/TextBackgroundInfo;->h:Z
 
-    invoke-virtual {v0, v1}, Lcom/vk/stories/views/c/b/c;->a(Z)V
+    invoke-virtual {v0, v1}, Lcom/vk/stories/views/c/b/TextLineTextBackgroundDrawer;->a(Z)V
 
     goto :goto_0
 
@@ -89,39 +89,39 @@
     if-ne v1, v2, :cond_2
 
     .line 6
-    new-instance v0, Lcom/vk/stories/views/c/b/e;
+    new-instance v0, Lcom/vk/stories/views/c/b/TextWidthBackgroundDrawer;
 
-    invoke-direct {v0}, Lcom/vk/stories/views/c/b/e;-><init>()V
+    invoke-direct {v0}, Lcom/vk/stories/views/c/b/TextWidthBackgroundDrawer;-><init>()V
 
     .line 7
     iget v1, p0, Lcom/vk/attachpicker/stickers/text/TextBackgroundInfo;->f:I
 
-    invoke-static {v1}, Lcom/vk/core/util/p;->a(I)I
+    invoke-static {v1}, Lcom/vk/core/util/ColorUtils;->a(I)I
 
     move-result v1
 
-    invoke-virtual {v0, v1}, Lcom/vk/stories/views/c/b/e;->c(I)V
+    invoke-virtual {v0, v1}, Lcom/vk/stories/views/c/b/TextWidthBackgroundDrawer;->c(I)V
 
     .line 8
     iget v1, p0, Lcom/vk/attachpicker/stickers/text/TextBackgroundInfo;->j:F
 
-    invoke-virtual {v0, v1}, Lcom/vk/stories/views/c/b/e;->b(F)V
+    invoke-virtual {v0, v1}, Lcom/vk/stories/views/c/b/TextWidthBackgroundDrawer;->b(F)V
 
     .line 9
     :goto_0
     iget v1, p0, Lcom/vk/attachpicker/stickers/text/TextBackgroundInfo;->i:I
 
-    invoke-interface {v0, v1}, Lcom/vk/stories/views/c/b/b;->a(I)V
+    invoke-interface {v0, v1}, Lcom/vk/stories/views/c/b/TextBackgroundDrawer;->a(I)V
 
     .line 10
     iget v1, p0, Lcom/vk/attachpicker/stickers/text/TextBackgroundInfo;->g:F
 
-    invoke-interface {v0, v1}, Lcom/vk/stories/views/c/b/b;->a(F)V
+    invoke-interface {v0, v1}, Lcom/vk/stories/views/c/b/TextBackgroundDrawer;->a(F)V
 
     .line 11
     iget v1, p0, Lcom/vk/attachpicker/stickers/text/TextBackgroundInfo;->f:I
 
-    invoke-interface {v0, v1}, Lcom/vk/stories/views/c/b/b;->setColor(I)V
+    invoke-interface {v0, v1}, Lcom/vk/stories/views/c/b/TextBackgroundDrawer;->setColor(I)V
 
     .line 12
     iget v1, p0, Lcom/vk/attachpicker/stickers/text/TextBackgroundInfo;->b:I
@@ -132,7 +132,7 @@
 
     iget p0, p0, Lcom/vk/attachpicker/stickers/text/TextBackgroundInfo;->e:I
 
-    invoke-interface {v0, v1, v2, v3, p0}, Lcom/vk/stories/views/c/b/b;->a(IIII)V
+    invoke-interface {v0, v1, v2, v3, p0}, Lcom/vk/stories/views/c/b/TextBackgroundDrawer;->a(IIII)V
 
     :cond_2
     :goto_1

@@ -3,12 +3,12 @@
 .source "OggTrackPlayer.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/b;
+.implements Lkotlin/jvm/b/Functions2;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/audiomsg/player/trackplayer/oggtrackplayer/OggTrackPlayer;->a(Lcom/vk/audiomsg/player/f;Lcom/vk/audiomsg/player/d;Landroid/net/Uri;Ljava/lang/Throwable;)V
+    value = Lcom/vk/audiomsg/player/trackplayer/oggtrackplayer/OggTrackPlayer;->a(Lcom/vk/audiomsg/player/Source;Lcom/vk/audiomsg/player/AudioMsgTrack;Landroid/net/Uri;Ljava/lang/Throwable;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -19,9 +19,9 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/b<",
-        "Lcom/vk/audiomsg/player/k/b;",
-        "Lkotlin/m;",
+        "Lkotlin/jvm/b/Functions2<",
+        "Lcom/vk/audiomsg/player/k/TrackPlayerListener;",
+        "Lkotlin/Unit;",
         ">;"
     }
 .end annotation
@@ -30,24 +30,24 @@
 # instance fields
 .field final synthetic $resource:Landroid/net/Uri;
 
-.field final synthetic $source:Lcom/vk/audiomsg/player/f;
+.field final synthetic $source:Lcom/vk/audiomsg/player/Source;
 
 .field final synthetic $th:Ljava/lang/Throwable;
 
-.field final synthetic $track:Lcom/vk/audiomsg/player/d;
+.field final synthetic $track:Lcom/vk/audiomsg/player/AudioMsgTrack;
 
 .field final synthetic this$0:Lcom/vk/audiomsg/player/trackplayer/oggtrackplayer/OggTrackPlayer;
 
 
 # direct methods
-.method constructor <init>(Lcom/vk/audiomsg/player/trackplayer/oggtrackplayer/OggTrackPlayer;Lcom/vk/audiomsg/player/f;Lcom/vk/audiomsg/player/d;Landroid/net/Uri;Ljava/lang/Throwable;)V
+.method constructor <init>(Lcom/vk/audiomsg/player/trackplayer/oggtrackplayer/OggTrackPlayer;Lcom/vk/audiomsg/player/Source;Lcom/vk/audiomsg/player/AudioMsgTrack;Landroid/net/Uri;Ljava/lang/Throwable;)V
     .locals 0
 
     iput-object p1, p0, Lcom/vk/audiomsg/player/trackplayer/oggtrackplayer/OggTrackPlayer$notifyOnResourceLoadError$1;->this$0:Lcom/vk/audiomsg/player/trackplayer/oggtrackplayer/OggTrackPlayer;
 
-    iput-object p2, p0, Lcom/vk/audiomsg/player/trackplayer/oggtrackplayer/OggTrackPlayer$notifyOnResourceLoadError$1;->$source:Lcom/vk/audiomsg/player/f;
+    iput-object p2, p0, Lcom/vk/audiomsg/player/trackplayer/oggtrackplayer/OggTrackPlayer$notifyOnResourceLoadError$1;->$source:Lcom/vk/audiomsg/player/Source;
 
-    iput-object p3, p0, Lcom/vk/audiomsg/player/trackplayer/oggtrackplayer/OggTrackPlayer$notifyOnResourceLoadError$1;->$track:Lcom/vk/audiomsg/player/d;
+    iput-object p3, p0, Lcom/vk/audiomsg/player/trackplayer/oggtrackplayer/OggTrackPlayer$notifyOnResourceLoadError$1;->$track:Lcom/vk/audiomsg/player/AudioMsgTrack;
 
     iput-object p4, p0, Lcom/vk/audiomsg/player/trackplayer/oggtrackplayer/OggTrackPlayer$notifyOnResourceLoadError$1;->$resource:Landroid/net/Uri;
 
@@ -62,15 +62,15 @@
 
 
 # virtual methods
-.method public final a(Lcom/vk/audiomsg/player/k/b;)V
+.method public final a(Lcom/vk/audiomsg/player/k/TrackPlayerListener;)V
     .locals 6
 
     .line 1
     iget-object v1, p0, Lcom/vk/audiomsg/player/trackplayer/oggtrackplayer/OggTrackPlayer$notifyOnResourceLoadError$1;->this$0:Lcom/vk/audiomsg/player/trackplayer/oggtrackplayer/OggTrackPlayer;
 
-    iget-object v2, p0, Lcom/vk/audiomsg/player/trackplayer/oggtrackplayer/OggTrackPlayer$notifyOnResourceLoadError$1;->$source:Lcom/vk/audiomsg/player/f;
+    iget-object v2, p0, Lcom/vk/audiomsg/player/trackplayer/oggtrackplayer/OggTrackPlayer$notifyOnResourceLoadError$1;->$source:Lcom/vk/audiomsg/player/Source;
 
-    iget-object v3, p0, Lcom/vk/audiomsg/player/trackplayer/oggtrackplayer/OggTrackPlayer$notifyOnResourceLoadError$1;->$track:Lcom/vk/audiomsg/player/d;
+    iget-object v3, p0, Lcom/vk/audiomsg/player/trackplayer/oggtrackplayer/OggTrackPlayer$notifyOnResourceLoadError$1;->$track:Lcom/vk/audiomsg/player/AudioMsgTrack;
 
     iget-object v4, p0, Lcom/vk/audiomsg/player/trackplayer/oggtrackplayer/OggTrackPlayer$notifyOnResourceLoadError$1;->$resource:Landroid/net/Uri;
 
@@ -78,7 +78,7 @@
 
     move-object v0, p1
 
-    invoke-interface/range {v0 .. v5}, Lcom/vk/audiomsg/player/k/b;->a(Lcom/vk/audiomsg/player/k/a;Lcom/vk/audiomsg/player/f;Lcom/vk/audiomsg/player/d;Landroid/net/Uri;Ljava/lang/Throwable;)V
+    invoke-interface/range {v0 .. v5}, Lcom/vk/audiomsg/player/k/TrackPlayerListener;->a(Lcom/vk/audiomsg/player/k/TrackPlayer;Lcom/vk/audiomsg/player/Source;Lcom/vk/audiomsg/player/AudioMsgTrack;Landroid/net/Uri;Ljava/lang/Throwable;)V
 
     return-void
 .end method
@@ -87,11 +87,11 @@
     .locals 0
 
     .line 1
-    check-cast p1, Lcom/vk/audiomsg/player/k/b;
+    check-cast p1, Lcom/vk/audiomsg/player/k/TrackPlayerListener;
 
-    invoke-virtual {p0, p1}, Lcom/vk/audiomsg/player/trackplayer/oggtrackplayer/OggTrackPlayer$notifyOnResourceLoadError$1;->a(Lcom/vk/audiomsg/player/k/b;)V
+    invoke-virtual {p0, p1}, Lcom/vk/audiomsg/player/trackplayer/oggtrackplayer/OggTrackPlayer$notifyOnResourceLoadError$1;->a(Lcom/vk/audiomsg/player/k/TrackPlayerListener;)V
 
-    sget-object p1, Lkotlin/m;->a:Lkotlin/m;
+    sget-object p1, Lkotlin/Unit;->a:Lkotlin/Unit;
 
     return-object p1
 .end method

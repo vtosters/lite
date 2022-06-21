@@ -3,7 +3,7 @@
 .source "NotificationsPresenter.kt"
 
 # interfaces
-.implements Lcom/vk/lists/y;
+.implements Lcom/vk/lists/PreloadCallback;
 
 
 # annotations
@@ -46,7 +46,7 @@
 
     move-result-object v1
 
-    invoke-virtual {v1, p1}, Lcom/vk/lists/o;->k(I)Ljava/lang/Object;
+    invoke-virtual {v1, p1}, Lcom/vk/lists/ListDataSet;->k(I)Ljava/lang/Object;
 
     move-result-object p1
 

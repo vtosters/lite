@@ -3,7 +3,7 @@
 .source "CommunityPresenter.kt"
 
 # interfaces
-.implements Lc/a/z/g;
+.implements Lio/reactivex/functions/Consumer;
 
 
 # annotations
@@ -22,7 +22,7 @@
         "Ljava/lang/Object;",
         ">",
         "Ljava/lang/Object;",
-        "Lc/a/z/g<",
+        "Lio/reactivex/functions/Consumer<",
         "Ljava/lang/Boolean;",
         ">;"
     }
@@ -52,11 +52,11 @@
     .line 1
     iget-object p1, p0, Lcom/vk/profile/presenter/CommunityPresenter$d;->a:Lcom/vk/profile/presenter/CommunityPresenter;
 
-    invoke-virtual {p1}, Lcom/vk/newsfeed/presenters/i;->I()Lcom/vtosters/lite/api/ExtendedUserProfile;
+    invoke-virtual {p1}, Lcom/vk/newsfeed/presenters/NewsFeedProfilePresenter;->I()Lcom/vtosters/lite/api/ExtendedUserProfile;
 
     move-result-object p1
 
-    check-cast p1, Lcom/vtosters/lite/api/i;
+    check-cast p1, Lcom/vtosters/lite/api/ExtendedCommunityProfile;
 
     if-eqz p1, :cond_0
 
@@ -73,11 +73,11 @@
     :cond_0
     iget-object p1, p0, Lcom/vk/profile/presenter/CommunityPresenter$d;->a:Lcom/vk/profile/presenter/CommunityPresenter;
 
-    invoke-virtual {p1}, Lcom/vk/newsfeed/presenters/i;->I()Lcom/vtosters/lite/api/ExtendedUserProfile;
+    invoke-virtual {p1}, Lcom/vk/newsfeed/presenters/NewsFeedProfilePresenter;->I()Lcom/vtosters/lite/api/ExtendedUserProfile;
 
     move-result-object p1
 
-    check-cast p1, Lcom/vtosters/lite/api/i;
+    check-cast p1, Lcom/vtosters/lite/api/ExtendedCommunityProfile;
 
     if-eqz p1, :cond_1
 
@@ -89,19 +89,19 @@
     :cond_1
     iget-object p1, p0, Lcom/vk/profile/presenter/CommunityPresenter$d;->a:Lcom/vk/profile/presenter/CommunityPresenter;
 
-    invoke-virtual {p1}, Lcom/vk/newsfeed/presenters/i;->L()I
+    invoke-virtual {p1}, Lcom/vk/newsfeed/presenters/NewsFeedProfilePresenter;->L()I
 
     move-result p1
 
     iget-object v0, p0, Lcom/vk/profile/presenter/CommunityPresenter$d;->a:Lcom/vk/profile/presenter/CommunityPresenter;
 
-    invoke-virtual {v0}, Lcom/vk/newsfeed/presenters/i;->I()Lcom/vtosters/lite/api/ExtendedUserProfile;
+    invoke-virtual {v0}, Lcom/vk/newsfeed/presenters/NewsFeedProfilePresenter;->I()Lcom/vtosters/lite/api/ExtendedUserProfile;
 
     move-result-object v0
 
     if-eqz v0, :cond_2
 
-    check-cast v0, Lcom/vtosters/lite/api/i;
+    check-cast v0, Lcom/vtosters/lite/api/ExtendedCommunityProfile;
 
     iget v0, v0, Lcom/vtosters/lite/api/ExtendedUserProfile;->R0:I
 
@@ -110,17 +110,17 @@
     .line 5
     iget-object p1, p0, Lcom/vk/profile/presenter/CommunityPresenter$d;->a:Lcom/vk/profile/presenter/CommunityPresenter;
 
-    invoke-virtual {p1}, Lcom/vk/newsfeed/presenters/i;->M()Lcom/vk/newsfeed/contracts/u;
+    invoke-virtual {p1}, Lcom/vk/newsfeed/presenters/NewsFeedProfilePresenter;->M()Lcom/vk/newsfeed/contracts/ProfileContract;
 
     move-result-object p1
 
-    invoke-interface {p1}, Lcom/vk/newsfeed/contracts/u;->q2()V
+    invoke-interface {p1}, Lcom/vk/newsfeed/contracts/ProfileContract;->q2()V
 
     return-void
 
     .line 6
     :cond_2
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     const/4 p1, 0x0
 

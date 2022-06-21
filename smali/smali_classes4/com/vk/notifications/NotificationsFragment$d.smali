@@ -3,12 +3,12 @@
 .source "NotificationsFragment.kt"
 
 # interfaces
-.implements Lcom/vk/notifications/m;
+.implements Lcom/vk/notifications/OnCreateViewHolderListener;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/notifications/NotificationsFragment;->a(Lcom/vk/notifications/NotificationsDataSet;Lcom/vk/lists/t$k;)Lcom/vk/lists/t;
+    value = Lcom/vk/notifications/NotificationsFragment;->a(Lcom/vk/notifications/NotificationsDataSet;Lcom/vk/lists/PaginationHelper$k;)Lcom/vk/lists/PaginationHelper;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;

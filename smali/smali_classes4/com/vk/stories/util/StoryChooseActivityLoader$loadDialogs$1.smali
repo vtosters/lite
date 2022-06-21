@@ -3,12 +3,12 @@
 .source "StoryChooseActivityLoader.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/b;
+.implements Lkotlin/jvm/b/Functions2;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/stories/util/StoryChooseActivityLoader;->a(Ljava/lang/String;II)Lc/a/m;
+    value = Lcom/vk/stories/util/StoryChooseActivityLoader;->a(Ljava/lang/String;II)Lio/reactivex/Observable;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -19,11 +19,11 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/FunctionReference;",
-        "Lkotlin/jvm/b/b<",
+        "Lkotlin/jvm/b/Functions2<",
         "Lcom/vk/im/engine/commands/messages/MsgSearchExtCmd$a;",
         "Ljava/util/List<",
         "+",
-        "Lcom/vk/stories/d1/a;",
+        "Lcom/vk/stories/d1/StoryDialogItem;",
         ">;>;"
     }
 .end annotation
@@ -50,7 +50,7 @@
             "Lcom/vk/im/engine/commands/messages/MsgSearchExtCmd$a;",
             ")",
             "Ljava/util/List<",
-            "Lcom/vk/stories/d1/a;",
+            "Lcom/vk/stories/d1/StoryDialogItem;",
             ">;"
         }
     .end annotation
@@ -75,12 +75,12 @@
     return-object v0
 .end method
 
-.method public final f()Lkotlin/u/e;
+.method public final f()Lkotlin/u/KDeclarationContainer;
     .locals 1
 
     const-class v0, Lcom/vk/stories/util/StoryChooseActivityLoader;
 
-    invoke-static {v0}, Lkotlin/jvm/internal/o;->a(Ljava/lang/Class;)Lkotlin/u/c;
+    invoke-static {v0}, Lkotlin/jvm/internal/Reflection;->a(Ljava/lang/Class;)Lkotlin/u/KClass;
 
     move-result-object v0
 

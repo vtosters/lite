@@ -3,7 +3,7 @@
 .source "SearchParamsDialogSheet.kt"
 
 # interfaces
-.implements Lc/a/z/g;
+.implements Lio/reactivex/functions/Consumer;
 
 
 # annotations
@@ -22,7 +22,7 @@
         "Ljava/lang/Object;",
         ">",
         "Ljava/lang/Object;",
-        "Lc/a/z/g<",
+        "Lio/reactivex/functions/Consumer<",
         "Ljava/lang/Object;",
         ">;"
     }
@@ -52,7 +52,7 @@
     .line 1
     iget-object v0, p0, Lcom/vk/search/SearchParamsDialogSheet$c;->a:Lcom/vk/search/SearchParamsDialogSheet;
 
-    invoke-static {v0}, Lcom/vk/search/SearchParamsDialogSheet;->a(Lcom/vk/search/SearchParamsDialogSheet;)Lcom/vk/core/dialogs/bottomsheet/e;
+    invoke-static {v0}, Lcom/vk/search/SearchParamsDialogSheet;->a(Lcom/vk/search/SearchParamsDialogSheet;)Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet;
 
     move-result-object v0
 
@@ -76,7 +76,7 @@
 
     .line 3
     :goto_0
-    invoke-virtual {v0, p1}, Lcom/vk/core/dialogs/bottomsheet/e;->p0(I)Landroid/view/View;
+    invoke-virtual {v0, p1}, Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet;->p0(I)Landroid/view/View;
 
     return-void
 .end method

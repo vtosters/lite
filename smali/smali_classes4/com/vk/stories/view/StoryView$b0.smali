@@ -3,7 +3,7 @@
 .source "StoryView.java"
 
 # interfaces
-.implements Lcom/vk/common/g/a;
+.implements Lcom/vk/common/g/F0;
 
 
 # annotations
@@ -19,7 +19,7 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Ljava/lang/Object;",
-        "Lcom/vk/common/g/a<",
+        "Lcom/vk/common/g/F0<",
         "Ljava/lang/Void;",
         ">;"
     }
@@ -71,7 +71,7 @@
     const v0, 0x7f120ec0
 
     .line 4
-    invoke-static {v0}, Lcom/vk/core/util/k1;->a(I)V
+    invoke-static {v0}, Lcom/vk/core/util/ToastUtils;->a(I)V
 
     const/4 v0, 0x0
 

@@ -3,8 +3,8 @@
 .source "PostingAttachLocationFragment.kt"
 
 # interfaces
-.implements Lcom/vk/core/util/k0;
-.implements Lpub/devrel/easypermissions/b$a;
+.implements Lcom/vk/core/util/ItemClickListener;
+.implements Lpub/devrel/easypermissions/EasyPermissions$a;
 
 
 # annotations
@@ -23,10 +23,10 @@
         "Lcom/vk/dto/geo/GeoLocation;",
         "Lcom/vk/newsfeed/posting/attachments/PostingAttachLocationFragment$c;",
         ">;",
-        "Lcom/vk/core/util/k0<",
+        "Lcom/vk/core/util/ItemClickListener<",
         "Lcom/vk/dto/geo/GeoLocation;",
         ">;",
-        "Lpub/devrel/easypermissions/b$a;"
+        "Lpub/devrel/easypermissions/EasyPermissions$a;"
     }
 .end annotation
 
@@ -59,7 +59,7 @@
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, v1}, Lcom/vk/newsfeed/posting/attachments/PostingAttachLocationFragment$a;-><init>(Lkotlin/jvm/internal/i;)V
+    invoke-direct {v0, v1}, Lcom/vk/newsfeed/posting/attachments/PostingAttachLocationFragment$a;-><init>(Lkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     sput-object v0, Lcom/vk/newsfeed/posting/attachments/PostingAttachLocationFragment;->r0:Lcom/vk/newsfeed/posting/attachments/PostingAttachLocationFragment$a;
 
@@ -78,7 +78,7 @@
     move-object v0, v15
 
     .line 3
-    sget-object v1, Lcom/vk/core/util/i;->a:Landroid/content/Context;
+    sget-object v1, Lcom/vk/core/util/AppContextHolder;->a:Landroid/content/Context;
 
     const v2, 0x7f1202a0
 
@@ -119,7 +119,7 @@
     const/16 v17, 0x0
 
     .line 4
-    invoke-direct/range {v0 .. v17}, Lcom/vk/dto/geo/GeoLocation;-><init>(IIIIIDDLjava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;ILkotlin/jvm/internal/i;)V
+    invoke-direct/range {v0 .. v17}, Lcom/vk/dto/geo/GeoLocation;-><init>(IIIIIDDLjava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     move-object/from16 v0, p0
 
@@ -260,14 +260,14 @@
 
     aput-object v2, v1, v3
 
-    invoke-static {v0, v1}, Lpub/devrel/easypermissions/b;->a(Landroid/content/Context;[Ljava/lang/String;)Z
+    invoke-static {v0, v1}, Lpub/devrel/easypermissions/EasyPermissions;->a(Landroid/content/Context;[Ljava/lang/String;)Z
 
     move-result v0
 
     return v0
 
     :cond_0
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     const/4 v0, 0x0
 
@@ -288,7 +288,7 @@
 
     const-string v2, "activity!!"
 
-    invoke-static {v1, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {v0, v1}, Lcom/vk/location/LocationUtils;->g(Landroid/content/Context;)Z
 
@@ -335,7 +335,7 @@
 
     .line 5
     :cond_2
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     const/4 v0, 0x0
 
@@ -364,7 +364,7 @@
 
     .line 3
     :cond_1
-    invoke-virtual {p0}, Lcom/vk/attachpicker/base/BaseAttachPickerFragment;->a5()Lcom/vk/lists/t;
+    invoke-virtual {p0}, Lcom/vk/attachpicker/base/BaseAttachPickerFragment;->a5()Lcom/vk/lists/PaginationHelper;
 
     move-result-object v0
 
@@ -372,17 +372,17 @@
 
     if-eqz v0, :cond_2
 
-    invoke-virtual {v0, v1}, Lcom/vk/lists/t;->b(Z)V
+    invoke-virtual {v0, v1}, Lcom/vk/lists/PaginationHelper;->b(Z)V
 
     .line 4
     :cond_2
-    invoke-virtual {p0}, Lcom/vk/attachpicker/base/BaseAttachPickerFragment;->a5()Lcom/vk/lists/t;
+    invoke-virtual {p0}, Lcom/vk/attachpicker/base/BaseAttachPickerFragment;->a5()Lcom/vk/lists/PaginationHelper;
 
     move-result-object v0
 
     if-eqz v0, :cond_3
 
-    invoke-virtual {v0}, Lcom/vk/lists/t;->h()V
+    invoke-virtual {v0}, Lcom/vk/lists/PaginationHelper;->h()V
 
     .line 5
     :cond_3
@@ -471,7 +471,7 @@
 
     const-string v1, "activity!!"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     iget-object v1, p0, Lcom/vk/newsfeed/posting/attachments/PostingAttachLocationFragment;->o0:Landroid/location/Location;
 
@@ -486,21 +486,21 @@
 
     .line 11
     :cond_0
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     const/4 p1, 0x0
 
     throw p1
 .end method
 
-.method public a(Landroid/view/ViewGroup;ILcom/vk/attachpicker/base/f;)Lcom/vk/newsfeed/posting/attachments/PostingAttachLocationFragment$c;
+.method public a(Landroid/view/ViewGroup;ILcom/vk/attachpicker/base/StreamParcelableSelection;)Lcom/vk/newsfeed/posting/attachments/PostingAttachLocationFragment$c;
     .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
             "Landroid/view/ViewGroup;",
             "I",
-            "Lcom/vk/attachpicker/base/f<",
+            "Lcom/vk/attachpicker/base/StreamParcelableSelection<",
             "Lcom/vk/dto/geo/GeoLocation;",
             ">;)",
             "Lcom/vk/newsfeed/posting/attachments/PostingAttachLocationFragment$c;"
@@ -514,23 +514,23 @@
 
     iget-object p3, p0, Lcom/vk/newsfeed/posting/attachments/PostingAttachLocationFragment;->p0:Ljava/lang/String;
 
-    invoke-direct {p2, p1, p3, p0}, Lcom/vk/newsfeed/posting/attachments/PostingAttachLocationFragment$c;-><init>(Landroid/view/ViewGroup;Ljava/lang/String;Lcom/vk/core/util/k0;)V
+    invoke-direct {p2, p1, p3, p0}, Lcom/vk/newsfeed/posting/attachments/PostingAttachLocationFragment$c;-><init>(Landroid/view/ViewGroup;Ljava/lang/String;Lcom/vk/core/util/ItemClickListener;)V
 
     return-object p2
 
     :cond_0
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     const/4 p1, 0x0
 
     throw p1
 .end method
 
-.method public bridge synthetic a(Landroid/view/ViewGroup;ILcom/vk/attachpicker/base/f;)Lcom/vtosters/lite/ui/b0/i;
+.method public bridge synthetic a(Landroid/view/ViewGroup;ILcom/vk/attachpicker/base/StreamParcelableSelection;)Lcom/vtosters/lite/ui/holder/RecyclerHolder;
     .locals 0
 
     .line 5
-    invoke-virtual {p0, p1, p2, p3}, Lcom/vk/newsfeed/posting/attachments/PostingAttachLocationFragment;->a(Landroid/view/ViewGroup;ILcom/vk/attachpicker/base/f;)Lcom/vk/newsfeed/posting/attachments/PostingAttachLocationFragment$c;
+    invoke-virtual {p0, p1, p2, p3}, Lcom/vk/newsfeed/posting/attachments/PostingAttachLocationFragment;->a(Landroid/view/ViewGroup;ILcom/vk/attachpicker/base/StreamParcelableSelection;)Lcom/vk/newsfeed/posting/attachments/PostingAttachLocationFragment$c;
 
     move-result-object p1
 
@@ -606,14 +606,14 @@
 
     const-string p2, "Intent().putExtra(KEY_AT\u2026SS, currentAddress ?: \"\")"
 
-    invoke-static {p1, p2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, p2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 14
-    invoke-virtual {p0}, Lcom/vk/attachpicker/base/BaseAttachPickerFragment;->R4()Lcom/vk/attachpicker/j;
+    invoke-virtual {p0}, Lcom/vk/attachpicker/base/BaseAttachPickerFragment;->R4()Lcom/vk/attachpicker/AttachResulter;
 
     move-result-object p2
 
-    invoke-interface {p2, p1}, Lcom/vk/attachpicker/j;->a(Landroid/content/Intent;)V
+    invoke-interface {p2, p1}, Lcom/vk/attachpicker/AttachResulter;->a(Landroid/content/Intent;)V
 
     return-void
 .end method
@@ -629,14 +629,14 @@
     return-void
 .end method
 
-.method protected b(ILcom/vk/lists/t;)Lc/a/m;
+.method protected b(ILcom/vk/lists/PaginationHelper;)Lio/reactivex/Observable;
     .locals 2
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(I",
-            "Lcom/vk/lists/t;",
+            "Lcom/vk/lists/PaginationHelper;",
             ")",
-            "Lc/a/m<",
+            "Lio/reactivex/Observable<",
             "Lcom/vk/api/base/VkPaginationList<",
             "Lcom/vk/dto/geo/GeoLocation;",
             ">;>;"
@@ -648,7 +648,7 @@
 
     invoke-direct {v0, p0}, Lcom/vk/newsfeed/posting/attachments/PostingAttachLocationFragment$d;-><init>(Lcom/vk/newsfeed/posting/attachments/PostingAttachLocationFragment;)V
 
-    invoke-static {v0}, Lc/a/m;->c(Ljava/util/concurrent/Callable;)Lc/a/m;
+    invoke-static {v0}, Lio/reactivex/Observable;->c(Ljava/util/concurrent/Callable;)Lio/reactivex/Observable;
 
     move-result-object v0
 
@@ -657,14 +657,14 @@
 
     invoke-direct {v1, p0}, Lcom/vk/newsfeed/posting/attachments/PostingAttachLocationFragment$e;-><init>(Lcom/vk/newsfeed/posting/attachments/PostingAttachLocationFragment;)V
 
-    invoke-virtual {v0, v1}, Lc/a/m;->c(Lc/a/z/j;)Lc/a/m;
+    invoke-virtual {v0, v1}, Lio/reactivex/Observable;->c(Lio/reactivex/functions/Function;)Lio/reactivex/Observable;
 
     move-result-object v0
 
     .line 4
     sget-object v1, Lcom/vk/newsfeed/posting/attachments/PostingAttachLocationFragment$f;->a:Lcom/vk/newsfeed/posting/attachments/PostingAttachLocationFragment$f;
 
-    invoke-virtual {v0, v1}, Lc/a/m;->i(Lc/a/z/j;)Lc/a/m;
+    invoke-virtual {v0, v1}, Lio/reactivex/Observable;->i(Lio/reactivex/functions/Function;)Lio/reactivex/Observable;
 
     move-result-object v0
 
@@ -673,22 +673,22 @@
 
     invoke-direct {v1, p0}, Lcom/vk/newsfeed/posting/attachments/PostingAttachLocationFragment$g;-><init>(Lcom/vk/newsfeed/posting/attachments/PostingAttachLocationFragment;)V
 
-    invoke-virtual {v0, v1}, Lc/a/m;->d(Lc/a/z/g;)Lc/a/m;
+    invoke-virtual {v0, v1}, Lio/reactivex/Observable;->d(Lio/reactivex/functions/Consumer;)Lio/reactivex/Observable;
 
     move-result-object v0
 
     .line 6
     new-instance v1, Lcom/vk/newsfeed/posting/attachments/PostingAttachLocationFragment$h;
 
-    invoke-direct {v1, p0, p1, p2}, Lcom/vk/newsfeed/posting/attachments/PostingAttachLocationFragment$h;-><init>(Lcom/vk/newsfeed/posting/attachments/PostingAttachLocationFragment;ILcom/vk/lists/t;)V
+    invoke-direct {v1, p0, p1, p2}, Lcom/vk/newsfeed/posting/attachments/PostingAttachLocationFragment$h;-><init>(Lcom/vk/newsfeed/posting/attachments/PostingAttachLocationFragment;ILcom/vk/lists/PaginationHelper;)V
 
-    invoke-virtual {v0, v1}, Lc/a/m;->c(Lc/a/z/j;)Lc/a/m;
+    invoke-virtual {v0, v1}, Lio/reactivex/Observable;->c(Lio/reactivex/functions/Function;)Lio/reactivex/Observable;
 
     move-result-object p1
 
     const-string p2, "Observable.fromCallable \u2026oUiObservable()\n        }"
 
-    invoke-static {p1, p2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, p2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     return-object p1
 .end method
@@ -718,14 +718,14 @@
     return-void
 .end method
 
-.method protected c(ILcom/vk/lists/t;)Lc/a/m;
+.method protected c(ILcom/vk/lists/PaginationHelper;)Lio/reactivex/Observable;
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(I",
-            "Lcom/vk/lists/t;",
+            "Lcom/vk/lists/PaginationHelper;",
             ")",
-            "Lc/a/m<",
+            "Lio/reactivex/Observable<",
             "Lcom/vk/api/base/VkPaginationList<",
             "Lcom/vk/dto/geo/GeoLocation;",
             ">;>;"
@@ -733,7 +733,7 @@
     .end annotation
 
     .line 2
-    invoke-virtual {p0, p1, p2}, Lcom/vk/newsfeed/posting/attachments/PostingAttachLocationFragment;->b(ILcom/vk/lists/t;)Lc/a/m;
+    invoke-virtual {p0, p1, p2}, Lcom/vk/newsfeed/posting/attachments/PostingAttachLocationFragment;->b(ILcom/vk/lists/PaginationHelper;)Lio/reactivex/Observable;
 
     move-result-object p2
 
@@ -742,13 +742,13 @@
 
     invoke-direct {v0, p0, p1}, Lcom/vk/newsfeed/posting/attachments/PostingAttachLocationFragment$i;-><init>(Lcom/vk/newsfeed/posting/attachments/PostingAttachLocationFragment;I)V
 
-    invoke-virtual {p2, v0}, Lc/a/m;->e(Lc/a/z/j;)Lc/a/m;
+    invoke-virtual {p2, v0}, Lio/reactivex/Observable;->e(Lio/reactivex/functions/Function;)Lio/reactivex/Observable;
 
     move-result-object p1
 
     const-string p2, "getSearchData(offset, he\u2026 it\n                    }"
 
-    invoke-static {p1, p2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, p2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     return-object p1
 .end method
@@ -784,7 +784,7 @@
 
     const-string v1, "rootView.context"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {v0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
@@ -875,7 +875,7 @@
 
     .line 12
     :cond_0
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     const/4 p1, 0x0
 
@@ -943,7 +943,7 @@
     .locals 0
 
     .line 1
-    invoke-super {p0}, Lcom/vk/core/fragments/b;->onResume()V
+    invoke-super {p0}, Lcom/vk/core/fragments/BaseFragment1;->onResume()V
 
     .line 2
     invoke-direct {p0}, Lcom/vk/newsfeed/posting/attachments/PostingAttachLocationFragment;->i5()V
@@ -969,7 +969,7 @@
 
     const v0, 0x7f0a00e5
 
-    invoke-static {p1, v0, p2}, Lcom/vk/extensions/ViewExtKt;->a(Landroid/view/View;ILkotlin/jvm/b/b;)Landroid/view/View;
+    invoke-static {p1, v0, p2}, Lcom/vk/extensions/ViewExtKt;->a(Landroid/view/View;ILkotlin/jvm/b/Functions2;)Landroid/view/View;
 
     .line 4
     sget-object v1, Lcom/vk/permission/RequiredPermissionHelper;->I:Lcom/vk/permission/RequiredPermissionHelper$a;
@@ -1011,7 +1011,7 @@
     move-object v3, p0
 
     .line 9
-    invoke-virtual/range {v1 .. v11}, Lcom/vk/permission/RequiredPermissionHelper$a;->b(Landroid/app/Activity;Lcom/vk/core/fragments/FragmentImpl;Landroid/widget/FrameLayout;III[Ljava/lang/String;[Ljava/lang/String;Lkotlin/jvm/b/a;Z)Lcom/vk/permission/RequiredPermissionHelper;
+    invoke-virtual/range {v1 .. v11}, Lcom/vk/permission/RequiredPermissionHelper$a;->b(Landroid/app/Activity;Lcom/vk/core/fragments/FragmentImpl;Landroid/widget/FrameLayout;III[Ljava/lang/String;[Ljava/lang/String;Lkotlin/jvm/b/Functions;Z)Lcom/vk/permission/RequiredPermissionHelper;
 
     move-result-object p1
 

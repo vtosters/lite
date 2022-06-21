@@ -1,5 +1,5 @@
 .class public final Lcom/vk/notifications/settings/CommunitiesManageNotificationsFragment$CommunitiesAdapter$a;
-.super Lcom/vtosters/lite/ui/b0/i;
+.super Lcom/vtosters/lite/ui/holder/RecyclerHolder;
 .source "CommunitiesManageNotificationsFragment.kt"
 
 
@@ -15,7 +15,7 @@
 
 .annotation system Ldalvik/annotation/Signature;
     value = {
-        "Lcom/vtosters/lite/ui/b0/i<",
+        "Lcom/vtosters/lite/ui/holder/RecyclerHolder<",
         "Ljava/lang/Object;",
         ">;"
     }
@@ -36,7 +36,7 @@
     const p1, 0x7f0d0222
 
     .line 1
-    invoke-direct {p0, p1, p2}, Lcom/vtosters/lite/ui/b0/i;-><init>(ILandroid/view/ViewGroup;)V
+    invoke-direct {p0, p1, p2}, Lcom/vtosters/lite/ui/holder/RecyclerHolder;-><init>(ILandroid/view/ViewGroup;)V
 
     return-void
 .end method

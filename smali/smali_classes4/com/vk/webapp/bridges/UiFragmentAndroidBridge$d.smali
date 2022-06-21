@@ -44,11 +44,11 @@
     .line 1
     iget-object v0, p0, Lcom/vk/webapp/bridges/UiFragmentAndroidBridge$d;->a:Lcom/vk/webapp/bridges/UiFragmentAndroidBridge;
 
-    invoke-static {v0}, Lcom/vk/webapp/bridges/UiFragmentAndroidBridge;->a(Lcom/vk/webapp/bridges/UiFragmentAndroidBridge;)Lcom/vk/webapp/o/c;
+    invoke-static {v0}, Lcom/vk/webapp/bridges/UiFragmentAndroidBridge;->a(Lcom/vk/webapp/bridges/UiFragmentAndroidBridge;)Lcom/vk/webapp/o/VkUiFragmentDelegate;
 
     move-result-object v0
 
-    invoke-interface {v0}, Lcom/vk/webapp/o/c;->e()Lcom/vk/webapp/VkUiFragment;
+    invoke-interface {v0}, Lcom/vk/webapp/o/VkUiFragmentDelegate;->e()Lcom/vk/webapp/VkUiFragment;
 
     move-result-object v0
 

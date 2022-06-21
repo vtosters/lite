@@ -3,7 +3,7 @@
 .source "MusicPlaylistFragment.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/c;
+.implements Lkotlin/jvm/b/Functions1;
 
 
 # annotations
@@ -19,7 +19,7 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/c<",
+        "Lkotlin/jvm/b/Functions1<",
         "Ljava/lang/Integer;",
         "Lcom/vk/music/playlist/modern/adapters/MusicPlaylistScreenAdapter;",
         "Lcom/vk/dto/music/MusicTrack;",
@@ -61,7 +61,7 @@
     .locals 2
 
     .line 2
-    invoke-virtual {p2, p1}, Lcom/vk/lists/p;->I(I)Landroidx/recyclerview/widget/RecyclerView$Adapter;
+    invoke-virtual {p2, p1}, Lcom/vk/lists/MergedAdapter;->I(I)Landroidx/recyclerview/widget/RecyclerView$Adapter;
 
     move-result-object v0
 
@@ -71,7 +71,7 @@
     if-eqz v1, :cond_0
 
     .line 4
-    invoke-virtual {p2, v0}, Lcom/vk/lists/p;->b(Landroidx/recyclerview/widget/RecyclerView$Adapter;)I
+    invoke-virtual {p2, v0}, Lcom/vk/lists/MergedAdapter;->b(Landroidx/recyclerview/widget/RecyclerView$Adapter;)I
 
     move-result p2
 

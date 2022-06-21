@@ -3,12 +3,12 @@
 .source "QueueChecker.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/b;
+.implements Lkotlin/jvm/b/Functions2;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/queue/sync/QueueChecker;->b(Ljava/util/Collection;Lkotlin/jvm/b/c;)V
+    value = Lcom/vk/queue/sync/QueueChecker;->b(Ljava/util/Collection;Lkotlin/jvm/b/Functions1;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -19,13 +19,13 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/b<",
+        "Lkotlin/jvm/b/Functions2<",
         "Ljava/util/Map<",
-        "Lcom/vk/queue/sync/models/b;",
+        "Lcom/vk/queue/sync/models/QueueAccessParams;",
         "+",
-        "Lcom/vk/queue/sync/models/b;",
+        "Lcom/vk/queue/sync/models/QueueAccessParams;",
         ">;",
-        "Lkotlin/m;",
+        "Lkotlin/Unit;",
         ">;"
     }
 .end annotation
@@ -56,8 +56,8 @@
         value = {
             "(",
             "Ljava/util/Map<",
-            "Lcom/vk/queue/sync/models/b;",
-            "Lcom/vk/queue/sync/models/b;",
+            "Lcom/vk/queue/sync/models/QueueAccessParams;",
+            "Lcom/vk/queue/sync/models/QueueAccessParams;",
             ">;)V"
         }
     .end annotation
@@ -104,9 +104,9 @@
 
     move-result-object v2
 
-    check-cast v2, Lcom/vk/queue/sync/models/b;
+    check-cast v2, Lcom/vk/queue/sync/models/QueueAccessParams;
 
-    invoke-virtual {v2}, Lcom/vk/queue/sync/models/b;->c()Ljava/lang/String;
+    invoke-virtual {v2}, Lcom/vk/queue/sync/models/QueueAccessParams;->c()Ljava/lang/String;
 
     move-result-object v2
 
@@ -123,11 +123,11 @@
     :cond_0
     iget-object p1, p0, Lcom/vk/queue/sync/QueueChecker$runLongPollLooper$2;->this$0:Lcom/vk/queue/sync/QueueChecker;
 
-    invoke-static {p1}, Lcom/vk/queue/sync/QueueChecker;->a(Lcom/vk/queue/sync/QueueChecker;)Lcom/vk/queue/sync/d/a;
+    invoke-static {p1}, Lcom/vk/queue/sync/QueueChecker;->a(Lcom/vk/queue/sync/QueueChecker;)Lcom/vk/queue/sync/d/QueueStorageManager;
 
     move-result-object p1
 
-    invoke-virtual {p1, v0}, Lcom/vk/queue/sync/d/a;->a(Ljava/util/Map;)V
+    invoke-virtual {p1, v0}, Lcom/vk/queue/sync/d/QueueStorageManager;->a(Ljava/util/Map;)V
 
     return-void
 .end method
@@ -140,7 +140,7 @@
 
     invoke-virtual {p0, p1}, Lcom/vk/queue/sync/QueueChecker$runLongPollLooper$2;->a(Ljava/util/Map;)V
 
-    sget-object p1, Lkotlin/m;->a:Lkotlin/m;
+    sget-object p1, Lkotlin/Unit;->a:Lkotlin/Unit;
 
     return-object p1
 .end method

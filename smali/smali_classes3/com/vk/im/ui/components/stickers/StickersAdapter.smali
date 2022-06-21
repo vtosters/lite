@@ -1,5 +1,5 @@
 .class public final Lcom/vk/im/ui/components/stickers/StickersAdapter;
-.super Lcom/vk/im/ui/views/adapter_delegate/a;
+.super Lcom/vk/im/ui/views/adapter_delegate/DelegationAdapter;
 .source "StickersAdapter.kt"
 
 
@@ -34,7 +34,7 @@
     const/4 v2, 0x0
 
     .line 1
-    invoke-direct {p0, v1, v0, v2}, Lcom/vk/im/ui/views/adapter_delegate/a;-><init>(ZILkotlin/jvm/internal/i;)V
+    invoke-direct {p0, v1, v0, v2}, Lcom/vk/im/ui/views/adapter_delegate/DelegationAdapter;-><init>(ZILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     .line 2
     invoke-static {}, Lkotlin/collections/l;->a()Ljava/util/List;
@@ -47,13 +47,13 @@
     invoke-virtual {p0, v0}, Landroidx/recyclerview/widget/RecyclerView$Adapter;->setHasStableIds(Z)V
 
     .line 4
-    const-class v0, Lcom/vk/im/ui/components/stickers/b;
+    const-class v0, Lcom/vk/im/ui/components/stickers/StickerAdapterItems;
 
     new-instance v1, Lcom/vk/im/ui/components/stickers/StickersAdapter$1;
 
     invoke-direct {v1, p1}, Lcom/vk/im/ui/components/stickers/StickersAdapter$1;-><init>(Lcom/vk/im/ui/components/stickers/StickersAdapter$a;)V
 
-    invoke-virtual {p0, v0, v1}, Lcom/vk/im/ui/views/adapter_delegate/a;->a(Ljava/lang/Class;Lkotlin/jvm/b/b;)V
+    invoke-virtual {p0, v0, v1}, Lcom/vk/im/ui/views/adapter_delegate/DelegationAdapter;->a(Ljava/lang/Class;Lkotlin/jvm/b/Functions2;)V
 
     return-void
 .end method
@@ -68,9 +68,9 @@
 
     if-eqz p1, :cond_0
 
-    sget-object p1, Lcom/vk/stickers/t;->l:Lcom/vk/stickers/t;
+    sget-object p1, Lcom/vk/stickers/Stickers;->l:Lcom/vk/stickers/Stickers;
 
-    invoke-virtual {p1}, Lcom/vk/stickers/t;->o()Z
+    invoke-virtual {p1}, Lcom/vk/stickers/Stickers;->o()Z
 
     move-result p1
 
@@ -154,13 +154,13 @@
     check-cast v1, Lcom/vk/dto/stickers/StickerItem;
 
     .line 7
-    new-instance v2, Lcom/vk/im/ui/components/stickers/b;
+    new-instance v2, Lcom/vk/im/ui/components/stickers/StickerAdapterItems;
 
     invoke-direct {p0, v1}, Lcom/vk/im/ui/components/stickers/StickersAdapter;->a(Lcom/vk/dto/stickers/StickerItem;)Z
 
     move-result v3
 
-    invoke-direct {v2, v1, v3}, Lcom/vk/im/ui/components/stickers/b;-><init>(Lcom/vk/dto/stickers/StickerItem;Z)V
+    invoke-direct {v2, v1, v3}, Lcom/vk/im/ui/components/stickers/StickerAdapterItems;-><init>(Lcom/vk/dto/stickers/StickerItem;Z)V
 
     invoke-interface {v0, v2}, Ljava/util/Collection;->add(Ljava/lang/Object;)Z
 
@@ -168,7 +168,7 @@
 
     .line 8
     :cond_0
-    invoke-virtual {p0, v0}, Lcom/vk/im/ui/views/adapter_delegate/a;->setItems(Ljava/util/List;)V
+    invoke-virtual {p0, v0}, Lcom/vk/im/ui/views/adapter_delegate/DelegationAdapter;->setItems(Ljava/util/List;)V
 
     return-void
 .end method

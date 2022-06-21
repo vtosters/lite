@@ -6,11 +6,11 @@
 # instance fields
 .field private final i:J
 
-.field private final j:Lcom/vk/core/util/b0;
+.field private final j:Lcom/vk/core/util/ElapsedTimeCounter;
 
 .field private k:Z
 
-.field private final l:Lcom/vk/imageloader/o/f;
+.field private final l:Lcom/vk/imageloader/o/StoryPreviewPostProcessor;
 
 .field private final m:Ljava/lang/String;
 
@@ -30,16 +30,16 @@
     iput-wide v0, p0, Lcom/vk/profile/data/cover/model/ImageCoverItem;->i:J
 
     .line 3
-    new-instance p2, Lcom/vk/core/util/b0;
+    new-instance p2, Lcom/vk/core/util/ElapsedTimeCounter;
 
-    invoke-direct {p2}, Lcom/vk/core/util/b0;-><init>()V
+    invoke-direct {p2}, Lcom/vk/core/util/ElapsedTimeCounter;-><init>()V
 
-    iput-object p2, p0, Lcom/vk/profile/data/cover/model/ImageCoverItem;->j:Lcom/vk/core/util/b0;
+    iput-object p2, p0, Lcom/vk/profile/data/cover/model/ImageCoverItem;->j:Lcom/vk/core/util/ElapsedTimeCounter;
 
     .line 4
-    sget-object p2, Lcom/vk/imageloader/o/f;->d:Lcom/vk/imageloader/o/f;
+    sget-object p2, Lcom/vk/imageloader/o/StoryPreviewPostProcessor;->d:Lcom/vk/imageloader/o/StoryPreviewPostProcessor;
 
-    iput-object p2, p0, Lcom/vk/profile/data/cover/model/ImageCoverItem;->l:Lcom/vk/imageloader/o/f;
+    iput-object p2, p0, Lcom/vk/profile/data/cover/model/ImageCoverItem;->l:Lcom/vk/imageloader/o/StoryPreviewPostProcessor;
 
     const/4 p2, 0x0
 
@@ -64,11 +64,11 @@
     return-void
 .end method
 
-.method private final d(Lcom/vk/profile/ui/cover/c;)V
+.method private final d(Lcom/vk/profile/ui/cover/CoverViewItem;)V
     .locals 2
 
     .line 1
-    invoke-virtual {p1}, Lcom/vk/profile/ui/cover/c;->getVideoTextureView()Lcom/vk/media/player/video/view/VideoTextureView;
+    invoke-virtual {p1}, Lcom/vk/profile/ui/cover/CoverViewItem;->getVideoTextureView()Lcom/vk/media/player/video/view/VideoTextureView;
 
     move-result-object v0
 
@@ -97,7 +97,7 @@
     const/4 v0, 0x0
 
     :goto_0
-    invoke-virtual {p1, v0}, Lcom/vk/profile/ui/cover/c;->a(F)V
+    invoke-virtual {p1, v0}, Lcom/vk/profile/ui/cover/CoverViewItem;->a(F)V
 
     .line 3
     iget-boolean v0, p0, Lcom/vk/profile/data/cover/model/ImageCoverItem;->k:Z
@@ -105,20 +105,20 @@
     if-eqz v0, :cond_1
 
     .line 4
-    invoke-direct {p0, p1}, Lcom/vk/profile/data/cover/model/ImageCoverItem;->e(Lcom/vk/profile/ui/cover/c;)V
+    invoke-direct {p0, p1}, Lcom/vk/profile/data/cover/model/ImageCoverItem;->e(Lcom/vk/profile/ui/cover/CoverViewItem;)V
 
     .line 5
     :cond_1
     new-instance v0, Lcom/vk/profile/data/cover/model/ImageCoverItem$initView$1;
 
-    invoke-direct {v0, p0, p1}, Lcom/vk/profile/data/cover/model/ImageCoverItem$initView$1;-><init>(Lcom/vk/profile/data/cover/model/ImageCoverItem;Lcom/vk/profile/ui/cover/c;)V
+    invoke-direct {v0, p0, p1}, Lcom/vk/profile/data/cover/model/ImageCoverItem$initView$1;-><init>(Lcom/vk/profile/data/cover/model/ImageCoverItem;Lcom/vk/profile/ui/cover/CoverViewItem;)V
 
-    invoke-virtual {p1, v0}, Lcom/vk/profile/ui/cover/c;->setOnRetry(Lkotlin/jvm/b/a;)V
+    invoke-virtual {p1, v0}, Lcom/vk/profile/ui/cover/CoverViewItem;->setOnRetry(Lkotlin/jvm/b/Functions;)V
 
     return-void
 .end method
 
-.method private final e(Lcom/vk/profile/ui/cover/c;)V
+.method private final e(Lcom/vk/profile/ui/cover/CoverViewItem;)V
     .locals 4
 
     .line 1
@@ -133,16 +133,16 @@
     if-nez v0, :cond_0
 
     .line 2
-    invoke-virtual {p1}, Lcom/vk/profile/ui/cover/c;->getImageView()Lcom/vk/imageloader/view/VKImageView;
+    invoke-virtual {p1}, Lcom/vk/profile/ui/cover/CoverViewItem;->getImageView()Lcom/vk/imageloader/view/VKImageView;
 
     move-result-object v0
 
-    iget-object v2, p0, Lcom/vk/profile/data/cover/model/ImageCoverItem;->l:Lcom/vk/imageloader/o/f;
+    iget-object v2, p0, Lcom/vk/profile/data/cover/model/ImageCoverItem;->l:Lcom/vk/imageloader/o/StoryPreviewPostProcessor;
 
-    invoke-virtual {v0, v2, v1}, Lcom/vk/imageloader/view/VKImageView;->a(Lcom/facebook/imagepipeline/request/a;Lcom/facebook/imagepipeline/request/a;)V
+    invoke-virtual {v0, v2, v1}, Lcom/vk/imageloader/view/VKImageView;->a(Lcom/facebook/imagepipeline/request/BasePostprocessor;Lcom/facebook/imagepipeline/request/BasePostprocessor;)V
 
     .line 3
-    invoke-virtual {p1}, Lcom/vk/profile/ui/cover/c;->getImageView()Lcom/vk/imageloader/view/VKImageView;
+    invoke-virtual {p1}, Lcom/vk/profile/ui/cover/CoverViewItem;->getImageView()Lcom/vk/imageloader/view/VKImageView;
 
     move-result-object p1
 
@@ -168,14 +168,14 @@
 
     .line 4
     :cond_0
-    invoke-virtual {p1}, Lcom/vk/profile/ui/cover/c;->getImageView()Lcom/vk/imageloader/view/VKImageView;
+    invoke-virtual {p1}, Lcom/vk/profile/ui/cover/CoverViewItem;->getImageView()Lcom/vk/imageloader/view/VKImageView;
 
     move-result-object v0
 
-    invoke-virtual {v0, v1}, Lcom/vk/imageloader/view/VKImageView;->setPostprocessor(Lcom/facebook/imagepipeline/request/a;)V
+    invoke-virtual {v0, v1}, Lcom/vk/imageloader/view/VKImageView;->setPostprocessor(Lcom/facebook/imagepipeline/request/BasePostprocessor;)V
 
     .line 5
-    invoke-virtual {p1}, Lcom/vk/profile/ui/cover/c;->getImageView()Lcom/vk/imageloader/view/VKImageView;
+    invoke-virtual {p1}, Lcom/vk/profile/ui/cover/CoverViewItem;->getImageView()Lcom/vk/imageloader/view/VKImageView;
 
     move-result-object p1
 
@@ -222,12 +222,12 @@
 
     move-result-object v0
 
-    check-cast v0, Lcom/vk/profile/ui/cover/c;
+    check-cast v0, Lcom/vk/profile/ui/cover/CoverViewItem;
 
     if-eqz v0, :cond_1
 
     .line 4
-    invoke-virtual {v0, p1}, Lcom/vk/profile/ui/cover/c;->a(F)V
+    invoke-virtual {v0, p1}, Lcom/vk/profile/ui/cover/CoverViewItem;->a(F)V
 
     .line 5
     :cond_1
@@ -241,14 +241,14 @@
 
     if-eqz v0, :cond_2
 
-    invoke-virtual {v0}, Lcom/vk/profile/ui/cover/CoverViewPager;->getCurrentViewItem()Lcom/vk/profile/ui/cover/c;
+    invoke-virtual {v0}, Lcom/vk/profile/ui/cover/CoverViewPager;->getCurrentViewItem()Lcom/vk/profile/ui/cover/CoverViewItem;
 
     move-result-object v0
 
     if-eqz v0, :cond_2
 
     .line 6
-    invoke-virtual {v0, p1}, Lcom/vk/profile/ui/cover/c;->a(F)V
+    invoke-virtual {v0, p1}, Lcom/vk/profile/ui/cover/CoverViewItem;->a(F)V
 
     :cond_2
     return-void
@@ -270,14 +270,14 @@
     invoke-super {p0}, Lcom/vk/profile/data/cover/model/CommunityCoverModel$b;->b()V
 
     .line 17
-    iget-object v0, p0, Lcom/vk/profile/data/cover/model/ImageCoverItem;->j:Lcom/vk/core/util/b0;
+    iget-object v0, p0, Lcom/vk/profile/data/cover/model/ImageCoverItem;->j:Lcom/vk/core/util/ElapsedTimeCounter;
 
-    invoke-virtual {v0}, Lcom/vk/core/util/b0;->d()V
+    invoke-virtual {v0}, Lcom/vk/core/util/ElapsedTimeCounter;->d()V
 
     .line 18
-    iget-object v0, p0, Lcom/vk/profile/data/cover/model/ImageCoverItem;->j:Lcom/vk/core/util/b0;
+    iget-object v0, p0, Lcom/vk/profile/data/cover/model/ImageCoverItem;->j:Lcom/vk/core/util/ElapsedTimeCounter;
 
-    invoke-virtual {v0}, Lcom/vk/core/util/b0;->b()V
+    invoke-virtual {v0}, Lcom/vk/core/util/ElapsedTimeCounter;->b()V
 
     const/4 v0, 0x0
 
@@ -287,11 +287,11 @@
     return-void
 .end method
 
-.method public b(Lcom/vk/profile/ui/cover/c;)V
+.method public b(Lcom/vk/profile/ui/cover/CoverViewItem;)V
     .locals 2
 
     .line 1
-    invoke-direct {p0, p1}, Lcom/vk/profile/data/cover/model/ImageCoverItem;->d(Lcom/vk/profile/ui/cover/c;)V
+    invoke-direct {p0, p1}, Lcom/vk/profile/data/cover/model/ImageCoverItem;->d(Lcom/vk/profile/ui/cover/CoverViewItem;)V
 
     .line 2
     invoke-virtual {p0}, Lcom/vk/profile/data/cover/model/CommunityCoverModel$b;->d()Lcom/vk/dto/stories/model/StoryEntry;
@@ -333,23 +333,23 @@
     if-eqz v0, :cond_1
 
     .line 6
-    invoke-virtual {p1}, Lcom/vk/profile/ui/cover/c;->getImageView()Lcom/vk/imageloader/view/VKImageView;
+    invoke-virtual {p1}, Lcom/vk/profile/ui/cover/CoverViewItem;->getImageView()Lcom/vk/imageloader/view/VKImageView;
 
     move-result-object v0
 
-    invoke-virtual {v0, v1}, Lcom/vk/imageloader/view/VKImageView;->setOnLoadCallback(Lcom/vk/imageloader/g;)V
+    invoke-virtual {v0, v1}, Lcom/vk/imageloader/view/VKImageView;->setOnLoadCallback(Lcom/vk/imageloader/OnLoadCallback;)V
 
     .line 7
-    invoke-virtual {p1}, Lcom/vk/profile/ui/cover/c;->getImageView()Lcom/vk/imageloader/view/VKImageView;
+    invoke-virtual {p1}, Lcom/vk/profile/ui/cover/CoverViewItem;->getImageView()Lcom/vk/imageloader/view/VKImageView;
 
     move-result-object v0
 
-    iget-object v1, p0, Lcom/vk/profile/data/cover/model/ImageCoverItem;->l:Lcom/vk/imageloader/o/f;
+    iget-object v1, p0, Lcom/vk/profile/data/cover/model/ImageCoverItem;->l:Lcom/vk/imageloader/o/StoryPreviewPostProcessor;
 
-    invoke-virtual {v0, v1}, Lcom/vk/imageloader/view/VKImageView;->setPostprocessor(Lcom/facebook/imagepipeline/request/a;)V
+    invoke-virtual {v0, v1}, Lcom/vk/imageloader/view/VKImageView;->setPostprocessor(Lcom/facebook/imagepipeline/request/BasePostprocessor;)V
 
     .line 8
-    invoke-virtual {p1}, Lcom/vk/profile/ui/cover/c;->getImageView()Lcom/vk/imageloader/view/VKImageView;
+    invoke-virtual {p1}, Lcom/vk/profile/ui/cover/CoverViewItem;->getImageView()Lcom/vk/imageloader/view/VKImageView;
 
     move-result-object p1
 
@@ -388,35 +388,35 @@
     invoke-virtual {p0, v0}, Lcom/vk/profile/data/cover/model/CommunityCoverModel$b;->b(I)V
 
     .line 12
-    invoke-virtual {p1}, Lcom/vk/profile/ui/cover/c;->getImageView()Lcom/vk/imageloader/view/VKImageView;
+    invoke-virtual {p1}, Lcom/vk/profile/ui/cover/CoverViewItem;->getImageView()Lcom/vk/imageloader/view/VKImageView;
 
     move-result-object v0
 
     new-instance v1, Lcom/vk/profile/data/cover/model/ImageCoverItem$a;
 
-    invoke-direct {v1, p0, p1}, Lcom/vk/profile/data/cover/model/ImageCoverItem$a;-><init>(Lcom/vk/profile/data/cover/model/ImageCoverItem;Lcom/vk/profile/ui/cover/c;)V
+    invoke-direct {v1, p0, p1}, Lcom/vk/profile/data/cover/model/ImageCoverItem$a;-><init>(Lcom/vk/profile/data/cover/model/ImageCoverItem;Lcom/vk/profile/ui/cover/CoverViewItem;)V
 
-    invoke-virtual {v0, v1}, Lcom/vk/imageloader/view/VKImageView;->setOnLoadCallback(Lcom/vk/imageloader/g;)V
+    invoke-virtual {v0, v1}, Lcom/vk/imageloader/view/VKImageView;->setOnLoadCallback(Lcom/vk/imageloader/OnLoadCallback;)V
 
     goto :goto_0
 
     .line 13
     :cond_2
-    invoke-virtual {p1}, Lcom/vk/profile/ui/cover/c;->getImageView()Lcom/vk/imageloader/view/VKImageView;
+    invoke-virtual {p1}, Lcom/vk/profile/ui/cover/CoverViewItem;->getImageView()Lcom/vk/imageloader/view/VKImageView;
 
     move-result-object v0
 
-    invoke-virtual {v0, v1}, Lcom/vk/imageloader/view/VKImageView;->setOnLoadCallback(Lcom/vk/imageloader/g;)V
+    invoke-virtual {v0, v1}, Lcom/vk/imageloader/view/VKImageView;->setOnLoadCallback(Lcom/vk/imageloader/OnLoadCallback;)V
 
     .line 14
     :goto_0
-    invoke-direct {p0, p1}, Lcom/vk/profile/data/cover/model/ImageCoverItem;->e(Lcom/vk/profile/ui/cover/c;)V
+    invoke-direct {p0, p1}, Lcom/vk/profile/data/cover/model/ImageCoverItem;->e(Lcom/vk/profile/ui/cover/CoverViewItem;)V
 
     goto :goto_1
 
     .line 15
     :cond_3
-    invoke-virtual {p1}, Lcom/vk/profile/ui/cover/c;->getImageView()Lcom/vk/imageloader/view/VKImageView;
+    invoke-virtual {p1}, Lcom/vk/profile/ui/cover/CoverViewItem;->getImageView()Lcom/vk/imageloader/view/VKImageView;
 
     move-result-object p1
 
@@ -443,14 +443,14 @@
     return v1
 .end method
 
-.method public c(Lcom/vk/profile/ui/cover/c;)V
+.method public c(Lcom/vk/profile/ui/cover/CoverViewItem;)V
     .locals 0
 
     .line 1
-    invoke-super {p0, p1}, Lcom/vk/profile/data/cover/model/CommunityCoverModel$b;->c(Lcom/vk/profile/ui/cover/c;)V
+    invoke-super {p0, p1}, Lcom/vk/profile/data/cover/model/CommunityCoverModel$b;->c(Lcom/vk/profile/ui/cover/CoverViewItem;)V
 
     .line 2
-    invoke-direct {p0, p1}, Lcom/vk/profile/data/cover/model/ImageCoverItem;->d(Lcom/vk/profile/ui/cover/c;)V
+    invoke-direct {p0, p1}, Lcom/vk/profile/data/cover/model/ImageCoverItem;->d(Lcom/vk/profile/ui/cover/CoverViewItem;)V
 
     return-void
 .end method
@@ -459,9 +459,9 @@
     .locals 3
 
     .line 1
-    iget-object v0, p0, Lcom/vk/profile/data/cover/model/ImageCoverItem;->j:Lcom/vk/core/util/b0;
+    iget-object v0, p0, Lcom/vk/profile/data/cover/model/ImageCoverItem;->j:Lcom/vk/core/util/ElapsedTimeCounter;
 
-    invoke-virtual {v0}, Lcom/vk/core/util/b0;->a()J
+    invoke-virtual {v0}, Lcom/vk/core/util/ElapsedTimeCounter;->a()J
 
     move-result-wide v0
 
@@ -482,17 +482,17 @@
     if-lez v1, :cond_0
 
     .line 2
-    invoke-virtual {p0}, Lcom/vk/profile/data/cover/model/CommunityCoverModel$b;->f()Lkotlin/jvm/b/a;
+    invoke-virtual {p0}, Lcom/vk/profile/data/cover/model/CommunityCoverModel$b;->f()Lkotlin/jvm/b/Functions;
 
     move-result-object v2
 
     if-eqz v2, :cond_0
 
-    invoke-interface {v2}, Lkotlin/jvm/b/a;->invoke()Ljava/lang/Object;
+    invoke-interface {v2}, Lkotlin/jvm/b/Functions;->invoke()Ljava/lang/Object;
 
     move-result-object v2
 
-    check-cast v2, Lkotlin/m;
+    check-cast v2, Lkotlin/Unit;
 
     :cond_0
     if-lez v1, :cond_1
@@ -518,9 +518,9 @@
     invoke-super {p0}, Lcom/vk/profile/data/cover/model/CommunityCoverModel$b;->m()V
 
     .line 2
-    iget-object v0, p0, Lcom/vk/profile/data/cover/model/ImageCoverItem;->j:Lcom/vk/core/util/b0;
+    iget-object v0, p0, Lcom/vk/profile/data/cover/model/ImageCoverItem;->j:Lcom/vk/core/util/ElapsedTimeCounter;
 
-    invoke-virtual {v0}, Lcom/vk/core/util/b0;->d()V
+    invoke-virtual {v0}, Lcom/vk/core/util/ElapsedTimeCounter;->d()V
 
     return-void
 .end method
@@ -533,11 +533,11 @@
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/vk/profile/data/cover/model/CommunityCoverModel;->k()Lcom/vk/profile/data/cover/model/a;
+    invoke-virtual {v0}, Lcom/vk/profile/data/cover/model/CommunityCoverModel;->k()Lcom/vk/profile/data/cover/model/LiveCoverPreloaderManager;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/vk/profile/data/cover/model/a;->a()V
+    invoke-virtual {v0}, Lcom/vk/profile/data/cover/model/LiveCoverPreloaderManager;->a()V
 
     .line 2
     invoke-virtual {p0}, Lcom/vk/profile/data/cover/model/CommunityCoverModel$b;->i()I
@@ -554,22 +554,22 @@
     invoke-super {p0}, Lcom/vk/profile/data/cover/model/CommunityCoverModel$b;->n()V
 
     .line 4
-    iget-object v0, p0, Lcom/vk/profile/data/cover/model/ImageCoverItem;->j:Lcom/vk/core/util/b0;
+    iget-object v0, p0, Lcom/vk/profile/data/cover/model/ImageCoverItem;->j:Lcom/vk/core/util/ElapsedTimeCounter;
 
-    invoke-virtual {v0}, Lcom/vk/core/util/b0;->c()V
+    invoke-virtual {v0}, Lcom/vk/core/util/ElapsedTimeCounter;->c()V
 
     .line 5
     invoke-virtual {p0}, Lcom/vk/profile/data/cover/model/CommunityCoverModel$b;->e()Lcom/vk/profile/data/cover/model/CommunityCoverModel;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/vk/profile/data/cover/model/CommunityCoverModel;->j()Lb/h/g/t/c;
+    invoke-virtual {v0}, Lcom/vk/profile/data/cover/model/CommunityCoverModel;->j()Lb/h/g/t/ValidatorSet;
 
     move-result-object v0
 
     const/4 v2, 0x1
 
-    invoke-virtual {v0, v1, v2}, Lb/h/g/t/c;->a(IZ)V
+    invoke-virtual {v0, v1, v2}, Lb/h/g/t/ValidatorSet;->a(IZ)V
 
     goto :goto_0
 
@@ -579,13 +579,13 @@
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/vk/profile/data/cover/model/CommunityCoverModel;->j()Lb/h/g/t/c;
+    invoke-virtual {v0}, Lcom/vk/profile/data/cover/model/CommunityCoverModel;->j()Lb/h/g/t/ValidatorSet;
 
     move-result-object v0
 
     const/4 v2, 0x0
 
-    invoke-virtual {v0, v1, v2}, Lb/h/g/t/c;->a(IZ)V
+    invoke-virtual {v0, v1, v2}, Lb/h/g/t/ValidatorSet;->a(IZ)V
 
     :goto_0
     return-void

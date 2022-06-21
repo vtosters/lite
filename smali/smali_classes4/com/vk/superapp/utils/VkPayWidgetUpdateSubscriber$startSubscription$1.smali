@@ -3,7 +3,7 @@
 .source "VkPayWidgetUpdateSubscriber.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/b;
+.implements Lkotlin/jvm/b/Functions2;
 
 
 # annotations
@@ -19,9 +19,9 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/b<",
-        "Lb/h/u/b/e$a;",
-        "Lkotlin/m;",
+        "Lkotlin/jvm/b/Functions2<",
+        "Lb/h/u/b/VkPayBalanceQueueEvent$a;",
+        "Lkotlin/Unit;",
         ">;"
     }
 .end annotation
@@ -54,7 +54,7 @@
 
 
 # virtual methods
-.method public final a(Lb/h/u/b/e$a;)V
+.method public final a(Lb/h/u/b/VkPayBalanceQueueEvent$a;)V
     .locals 5
 
     .line 1
@@ -64,7 +64,7 @@
 
     iget-object v2, p0, Lcom/vk/superapp/utils/VkPayWidgetUpdateSubscriber$startSubscription$1;->$callback:Lcom/vk/superapp/utils/VkPayWidgetUpdateSubscriber$a;
 
-    invoke-virtual {p1}, Lb/h/u/b/e$a;->a()J
+    invoke-virtual {p1}, Lb/h/u/b/VkPayBalanceQueueEvent$a;->a()J
 
     move-result-wide v3
 
@@ -77,11 +77,11 @@
     .locals 0
 
     .line 1
-    check-cast p1, Lb/h/u/b/e$a;
+    check-cast p1, Lb/h/u/b/VkPayBalanceQueueEvent$a;
 
-    invoke-virtual {p0, p1}, Lcom/vk/superapp/utils/VkPayWidgetUpdateSubscriber$startSubscription$1;->a(Lb/h/u/b/e$a;)V
+    invoke-virtual {p0, p1}, Lcom/vk/superapp/utils/VkPayWidgetUpdateSubscriber$startSubscription$1;->a(Lb/h/u/b/VkPayBalanceQueueEvent$a;)V
 
-    sget-object p1, Lkotlin/m;->a:Lkotlin/m;
+    sget-object p1, Lkotlin/Unit;->a:Lkotlin/Unit;
 
     return-object p1
 .end method

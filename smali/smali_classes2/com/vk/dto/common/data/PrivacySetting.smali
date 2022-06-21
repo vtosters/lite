@@ -342,9 +342,9 @@
     .end annotation
 
     .line 1
-    sget-object v0, Lb/h/h/a;->b:Lb/h/h/a$a;
+    sget-object v0, Lb/h/h/ModelConfig;->b:Lb/h/h/ModelConfig$a;
 
-    invoke-interface {v0, p0}, Lb/h/h/a$a;->a(Lorg/json/JSONObject;)Ljava/util/List;
+    invoke-interface {v0, p0}, Lb/h/h/ModelConfig$a;->a(Lorg/json/JSONObject;)Ljava/util/List;
 
     move-result-object p0
 

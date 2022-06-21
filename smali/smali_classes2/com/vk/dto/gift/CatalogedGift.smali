@@ -1,5 +1,5 @@
 .class public Lcom/vk/dto/gift/CatalogedGift;
-.super Lcom/vk/dto/common/e;
+.super Lcom/vk/dto/common/Model;
 .source "CatalogedGift.java"
 
 # interfaces
@@ -62,7 +62,7 @@
     .locals 1
 
     .line 14
-    invoke-direct {p0}, Lcom/vk/dto/common/e;-><init>()V
+    invoke-direct {p0}, Lcom/vk/dto/common/Model;-><init>()V
 
     .line 15
     const-class v0, Lcom/vk/dto/gift/Gift;
@@ -180,7 +180,7 @@
     .locals 2
 
     .line 1
-    invoke-direct {p0}, Lcom/vk/dto/common/e;-><init>()V
+    invoke-direct {p0}, Lcom/vk/dto/common/Model;-><init>()V
 
     const-string v0, "gift"
 

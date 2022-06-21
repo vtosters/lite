@@ -43,11 +43,11 @@
     .line 1
     iget-object v0, p0, Lcom/vk/profile/ui/photos/photo_list/PhotoAlbumFragment$e;->a:Lcom/vk/profile/ui/photos/photo_list/PhotoAlbumFragment;
 
-    invoke-virtual {v0}, Lcom/vk/profile/ui/photos/photo_list/PhotoListFragmentNew;->Z4()Lcom/vk/profile/ui/photos/a;
+    invoke-virtual {v0}, Lcom/vk/profile/ui/photos/photo_list/PhotoListFragmentNew;->Z4()Lcom/vk/profile/ui/photos/PhotoListAdapter;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/vk/profile/ui/photos/a;->k()Ljava/util/ArrayList;
+    invoke-virtual {v0}, Lcom/vk/profile/ui/photos/PhotoListAdapter;->k()Ljava/util/ArrayList;
 
     move-result-object v0
 

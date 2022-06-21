@@ -50,7 +50,7 @@
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, p1, v1}, Lcom/vk/im/engine/models/conversations/PushSettings;-><init>(Lcom/vk/core/serialize/Serializer;Lkotlin/jvm/internal/i;)V
+    invoke-direct {v0, p1, v1}, Lcom/vk/im/engine/models/conversations/PushSettings;-><init>(Lcom/vk/core/serialize/Serializer;Lkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     return-object v0
 .end method

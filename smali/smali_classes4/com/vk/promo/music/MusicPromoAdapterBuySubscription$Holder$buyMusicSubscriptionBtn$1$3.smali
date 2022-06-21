@@ -3,12 +3,12 @@
 .source "MusicPromoAdapterBuySubscription.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/d;
+.implements Lkotlin/jvm/b/Functions4;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/promo/music/MusicPromoAdapterBuySubscription$Holder;-><init>(Landroid/view/ViewGroup;Lcom/vk/music/subscription/a;Lkotlin/jvm/b/b;)V
+    value = Lcom/vk/promo/music/MusicPromoAdapterBuySubscription$Holder;-><init>(Landroid/view/ViewGroup;Lcom/vk/music/subscription/BuyMusicSubscriptionButtonModel;Lkotlin/jvm/b/Functions2;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -19,11 +19,11 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/d<",
+        "Lkotlin/jvm/b/Functions4<",
         "Landroid/widget/TextView;",
         "Landroid/widget/TextView;",
         "Lcom/vk/dto/common/data/Subscription;",
-        "Lkotlin/m;",
+        "Lkotlin/Unit;",
         ">;"
     }
 .end annotation
@@ -70,7 +70,7 @@
 
     invoke-virtual {p0, p1, p2, p3}, Lcom/vk/promo/music/MusicPromoAdapterBuySubscription$Holder$buyMusicSubscriptionBtn$1$3;->a(Landroid/widget/TextView;Landroid/widget/TextView;Lcom/vk/dto/common/data/Subscription;)V
 
-    sget-object p1, Lkotlin/m;->a:Lkotlin/m;
+    sget-object p1, Lkotlin/Unit;->a:Lkotlin/Unit;
 
     return-object p1
 .end method
@@ -90,7 +90,7 @@
 
     const-string v2, "context"
 
-    invoke-static {v1, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     const v3, 0x7f040022
 
@@ -162,7 +162,7 @@
 
     move-result-object p1
 
-    invoke-static {p1, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     const p3, 0x7f0400e3
 

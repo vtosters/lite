@@ -1,5 +1,5 @@
 .class public Lcom/vk/webapp/VkUiFragment$a;
-.super Lcom/vk/navigation/o;
+.super Lcom/vk/navigation/Navigator;
 .source "VkUiFragment.kt"
 
 
@@ -22,7 +22,7 @@
 
     const/4 v1, 0x2
 
-    invoke-direct {p0, p1, v0, v1, v0}, Lcom/vk/webapp/VkUiFragment$a;-><init>(Ljava/lang/String;Ljava/lang/Class;ILkotlin/jvm/internal/i;)V
+    invoke-direct {p0, p1, v0, v1, v0}, Lcom/vk/webapp/VkUiFragment$a;-><init>(Ljava/lang/String;Ljava/lang/Class;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     return-void
 .end method
@@ -41,10 +41,10 @@
     .end annotation
 
     .line 1
-    invoke-direct {p0, p2}, Lcom/vk/navigation/o;-><init>(Ljava/lang/Class;)V
+    invoke-direct {p0, p2}, Lcom/vk/navigation/Navigator;-><init>(Ljava/lang/Class;)V
 
     .line 2
-    iget-object p2, p0, Lcom/vk/navigation/o;->O0:Landroid/os/Bundle;
+    iget-object p2, p0, Lcom/vk/navigation/Navigator;->O0:Landroid/os/Bundle;
 
     const-string v0, "key_url"
 
@@ -53,7 +53,7 @@
     return-void
 .end method
 
-.method public synthetic constructor <init>(Ljava/lang/String;Ljava/lang/Class;ILkotlin/jvm/internal/i;)V
+.method public synthetic constructor <init>(Ljava/lang/String;Ljava/lang/Class;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
     .locals 0
 
     and-int/lit8 p3, p3, 0x2
@@ -75,7 +75,7 @@
     .locals 2
 
     .line 1
-    iget-object v0, p0, Lcom/vk/navigation/o;->O0:Landroid/os/Bundle;
+    iget-object v0, p0, Lcom/vk/navigation/Navigator;->O0:Landroid/os/Bundle;
 
     const-string v1, "key_application_id"
 
@@ -88,7 +88,7 @@
     .locals 3
 
     .line 1
-    iget-object v0, p0, Lcom/vk/navigation/o;->O0:Landroid/os/Bundle;
+    iget-object v0, p0, Lcom/vk/navigation/Navigator;->O0:Landroid/os/Bundle;
 
     const-string v1, "no_bottom_navigation"
 

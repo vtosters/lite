@@ -3,7 +3,7 @@
 .source "CameraVideoEncoder.java"
 
 # interfaces
-.implements Lb/h/p/a$e;
+.implements Lb/h/p/MediaEncoder$e;
 
 
 # annotations

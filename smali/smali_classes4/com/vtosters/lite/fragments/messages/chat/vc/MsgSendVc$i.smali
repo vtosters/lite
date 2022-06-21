@@ -1,5 +1,5 @@
 .class public final Lcom/vtosters/lite/fragments/messages/chat/vc/MsgSendVc$i;
-.super Lcom/vk/stickers/b0$k;
+.super Lcom/vk/stickers/StickersView$k;
 .source "MsgSendVc.kt"
 
 
@@ -30,7 +30,7 @@
     .line 1
     iput-object p1, p0, Lcom/vtosters/lite/fragments/messages/chat/vc/MsgSendVc$i;->c:Lcom/vtosters/lite/fragments/messages/chat/vc/MsgSendVc;
 
-    invoke-direct {p0}, Lcom/vk/stickers/b0$k;-><init>()V
+    invoke-direct {p0}, Lcom/vk/stickers/StickersView$k;-><init>()V
 
     return-void
 .end method
@@ -71,9 +71,9 @@
 
     .line 7
     :cond_0
-    sget-object v0, Lcom/vtosters/lite/im/a;->a:Lcom/vtosters/lite/im/a;
+    sget-object v0, Lcom/vtosters/lite/im/AppAttachToImAttachConverter;->a:Lcom/vtosters/lite/im/AppAttachToImAttachConverter;
 
-    invoke-virtual {v0, p1, p2, p3}, Lcom/vtosters/lite/im/a;->a(ILcom/vk/dto/stickers/StickerItem;Ljava/lang/String;)Lcom/vk/im/engine/models/attaches/AttachSticker;
+    invoke-virtual {v0, p1, p2, p3}, Lcom/vtosters/lite/im/AppAttachToImAttachConverter;->a(ILcom/vk/dto/stickers/StickerItem;Ljava/lang/String;)Lcom/vk/im/engine/models/attaches/AttachSticker;
 
     move-result-object p1
 
@@ -109,7 +109,7 @@
     .line 9
     iget-object p2, p0, Lcom/vtosters/lite/fragments/messages/chat/vc/MsgSendVc$i;->c:Lcom/vtosters/lite/fragments/messages/chat/vc/MsgSendVc;
 
-    invoke-static {p2}, Lcom/vtosters/lite/fragments/messages/chat/vc/MsgSendVc;->f(Lcom/vtosters/lite/fragments/messages/chat/vc/MsgSendVc;)Lcom/vk/im/ui/q/h/f/b;
+    invoke-static {p2}, Lcom/vtosters/lite/fragments/messages/chat/vc/MsgSendVc;->f(Lcom/vtosters/lite/fragments/messages/chat/vc/MsgSendVc;)Lcom/vk/im/ui/q/h/f/MsgSendVcCallback;
 
     move-result-object v0
 
@@ -133,7 +133,7 @@
 
     const/4 v10, 0x0
 
-    invoke-static/range {v0 .. v10}, Lcom/vk/im/ui/q/h/f/b$a;->a(Lcom/vk/im/ui/q/h/f/b;ILjava/lang/String;Ljava/lang/String;Ljava/util/List;Ljava/lang/Integer;Lcom/vk/im/engine/models/messages/e;Lcom/vk/im/engine/utils/collection/h;Lcom/vk/im/engine/commands/messages/z;ILjava/lang/Object;)V
+    invoke-static/range {v0 .. v10}, Lcom/vk/im/ui/q/h/f/MsgSendVcCallback$a;->a(Lcom/vk/im/ui/q/h/f/MsgSendVcCallback;ILjava/lang/String;Ljava/lang/String;Ljava/util/List;Ljava/lang/Integer;Lcom/vk/im/engine/models/messages/MsgSendSource;Lcom/vk/im/engine/utils/collection/IntSet;Lcom/vk/im/engine/commands/messages/MsgSendConfig;ILjava/lang/Object;)V
 
     .line 10
     iget-object p1, p0, Lcom/vtosters/lite/fragments/messages/chat/vc/MsgSendVc$i;->c:Lcom/vtosters/lite/fragments/messages/chat/vc/MsgSendVc;
@@ -218,11 +218,11 @@
     :cond_0
     iget-object p1, p0, Lcom/vtosters/lite/fragments/messages/chat/vc/MsgSendVc$i;->c:Lcom/vtosters/lite/fragments/messages/chat/vc/MsgSendVc;
 
-    invoke-static {p1}, Lcom/vtosters/lite/fragments/messages/chat/vc/MsgSendVc;->o(Lcom/vtosters/lite/fragments/messages/chat/vc/MsgSendVc;)Lcom/vk/stickers/b0;
+    invoke-static {p1}, Lcom/vtosters/lite/fragments/messages/chat/vc/MsgSendVc;->o(Lcom/vtosters/lite/fragments/messages/chat/vc/MsgSendVc;)Lcom/vk/stickers/StickersView;
 
     move-result-object p1
 
-    invoke-virtual {p1}, Lcom/vk/stickers/b0;->b()V
+    invoke-virtual {p1}, Lcom/vk/stickers/StickersView;->b()V
 
     return-void
 .end method

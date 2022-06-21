@@ -3,7 +3,7 @@
 .source "StoryMusicDelegate.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/b;
+.implements Lkotlin/jvm/b/Functions2;
 
 
 # annotations
@@ -19,9 +19,9 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/b<",
+        "Lkotlin/jvm/b/Functions2<",
         "Lcom/vk/dto/music/MusicTrack;",
-        "Lkotlin/m;",
+        "Lkotlin/Unit;",
         ">;"
     }
 .end annotation
@@ -100,7 +100,7 @@
 
     const/4 v0, 0x0
 
-    invoke-virtual {p1, v0}, Lcom/vk/stories/clickable/delegates/a;->a(Lcom/vk/attachpicker/stickers/ISticker;)V
+    invoke-virtual {p1, v0}, Lcom/vk/stories/clickable/delegates/StoryBaseDialogDelegate;->a(Lcom/vk/attachpicker/stickers/ISticker;)V
 
     return-void
 .end method
@@ -113,7 +113,7 @@
 
     invoke-virtual {p0, p1}, Lcom/vk/stories/clickable/delegates/StoryMusicDelegate$openMusicSelector$1$1;->a(Lcom/vk/dto/music/MusicTrack;)V
 
-    sget-object p1, Lkotlin/m;->a:Lkotlin/m;
+    sget-object p1, Lkotlin/Unit;->a:Lkotlin/Unit;
 
     return-object p1
 .end method

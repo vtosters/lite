@@ -44,7 +44,7 @@
     const-string v0, "it"
 
     .line 1
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {p1}, Landroid/view/View;->getContext()Landroid/content/Context;
 
@@ -66,7 +66,7 @@
 
     iget-wide v4, v0, Lcom/vk/dto/profile/PlainAddress;->c:D
 
-    invoke-static {v1, v2, v3, v4, v5}, Lcom/vk/profile/utils/e;->a(Landroid/content/Context;DD)Ljava/util/List;
+    invoke-static {v1, v2, v3, v4, v5}, Lcom/vk/profile/utils/RouteToUtils;->a(Landroid/content/Context;DD)Ljava/util/List;
 
     move-result-object v0
 
@@ -80,17 +80,17 @@
     if-eqz v1, :cond_0
 
     .line 5
-    sget-object v1, Lcom/vk/profile/ui/f/a;->a:Lcom/vk/profile/ui/f/a$b;
+    sget-object v1, Lcom/vk/profile/ui/f/AppPickerDialog;->a:Lcom/vk/profile/ui/f/AppPickerDialog$b;
 
     const-string v2, "ctx"
 
-    invoke-static {p1, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     new-instance v2, Lcom/vk/profile/ui/community/adresses/FullAddressView$2$$special$$inlined$let$lambda$1;
 
     invoke-direct {v2, p0, p1}, Lcom/vk/profile/ui/community/adresses/FullAddressView$2$$special$$inlined$let$lambda$1;-><init>(Lcom/vk/profile/ui/community/adresses/FullAddressView$2;Landroid/content/Context;)V
 
-    invoke-virtual {v1, p1, v0, v2}, Lcom/vk/profile/ui/f/a$b;->a(Landroid/content/Context;Ljava/util/List;Lkotlin/jvm/b/b;)V
+    invoke-virtual {v1, p1, v0, v2}, Lcom/vk/profile/ui/f/AppPickerDialog$b;->a(Landroid/content/Context;Ljava/util/List;Lkotlin/jvm/b/Functions2;)V
 
     goto :goto_0
 
@@ -104,7 +104,7 @@
     const/4 v2, 0x0
 
     .line 6
-    invoke-static {p1, v0, v1, v2}, Lcom/vk/core/util/k1;->a(IZILjava/lang/Object;)V
+    invoke-static {p1, v0, v1, v2}, Lcom/vk/core/util/ToastUtils;->a(IZILjava/lang/Object;)V
 
     :cond_1
     :goto_0

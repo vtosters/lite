@@ -3,12 +3,12 @@
 .source "CatalogGetAudioSearchRequestFactory.kt"
 
 # interfaces
-.implements Lc/a/z/c;
+.implements Lio/reactivex/functions/BiFunction;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/catalog2/core/api/music/CatalogGetAudioSearchRequestFactory;-><init>(Lcom/vk/catalog2/core/h;Lcom/vk/music/k/a;Ljava/lang/String;)V
+    value = Lcom/vk/catalog2/core/api/music/CatalogGetAudioSearchRequestFactory;-><init>(Lcom/vk/catalog2/core/CatalogParser;Lcom/vk/music/k/MusicSuggestionModel;Ljava/lang/String;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -26,15 +26,15 @@
         "Ljava/lang/Object;",
         ">",
         "Ljava/lang/Object;",
-        "Lc/a/z/c<",
-        "Lcom/vk/catalog2/core/api/dto/d<",
+        "Lio/reactivex/functions/BiFunction<",
+        "Lcom/vk/catalog2/core/api/dto/CatalogResponse<",
         "Lcom/vk/catalog2/core/api/dto/CatalogSection;",
         ">;",
         "Ljava/util/List<",
         "+",
         "Ljava/lang/String;",
         ">;",
-        "Lcom/vk/catalog2/core/api/dto/d<",
+        "Lcom/vk/catalog2/core/api/dto/CatalogResponse<",
         "Lcom/vk/catalog2/core/api/dto/CatalogSection;",
         ">;>;"
     }
@@ -58,18 +58,18 @@
 
 
 # virtual methods
-.method public final a(Lcom/vk/catalog2/core/api/dto/d;Ljava/util/List;)Lcom/vk/catalog2/core/api/dto/d;
+.method public final a(Lcom/vk/catalog2/core/api/dto/CatalogResponse;Ljava/util/List;)Lcom/vk/catalog2/core/api/dto/CatalogResponse;
     .locals 4
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lcom/vk/catalog2/core/api/dto/d<",
+            "Lcom/vk/catalog2/core/api/dto/CatalogResponse<",
             "Lcom/vk/catalog2/core/api/dto/CatalogSection;",
             ">;",
             "Ljava/util/List<",
             "Ljava/lang/String;",
             ">;)",
-            "Lcom/vk/catalog2/core/api/dto/d<",
+            "Lcom/vk/catalog2/core/api/dto/CatalogResponse<",
             "Lcom/vk/catalog2/core/api/dto/CatalogSection;",
             ">;"
         }
@@ -87,7 +87,7 @@
     if-eqz v0, :cond_0
 
     .line 3
-    invoke-virtual {p1}, Lcom/vk/catalog2/core/api/dto/d;->b()Ljava/lang/Object;
+    invoke-virtual {p1}, Lcom/vk/catalog2/core/api/dto/CatalogResponse;->b()Ljava/lang/Object;
 
     move-result-object v0
 
@@ -108,7 +108,7 @@
     invoke-interface {v0, v2, v3}, Ljava/util/List;->add(ILjava/lang/Object;)V
 
     .line 4
-    invoke-virtual {p1}, Lcom/vk/catalog2/core/api/dto/d;->b()Ljava/lang/Object;
+    invoke-virtual {p1}, Lcom/vk/catalog2/core/api/dto/CatalogResponse;->b()Ljava/lang/Object;
 
     move-result-object v0
 
@@ -127,7 +127,7 @@
     invoke-interface {v0, v1, v2}, Ljava/util/List;->add(ILjava/lang/Object;)V
 
     .line 5
-    invoke-virtual {p1}, Lcom/vk/catalog2/core/api/dto/d;->a()Lcom/vk/catalog2/core/api/dto/CatalogExtendedData;
+    invoke-virtual {p1}, Lcom/vk/catalog2/core/api/dto/CatalogResponse;->a()Lcom/vk/catalog2/core/api/dto/CatalogExtendedData;
 
     move-result-object v0
 
@@ -151,11 +151,11 @@
     .locals 0
 
     .line 1
-    check-cast p1, Lcom/vk/catalog2/core/api/dto/d;
+    check-cast p1, Lcom/vk/catalog2/core/api/dto/CatalogResponse;
 
     check-cast p2, Ljava/util/List;
 
-    invoke-virtual {p0, p1, p2}, Lcom/vk/catalog2/core/api/music/CatalogGetAudioSearchRequestFactory$a;->a(Lcom/vk/catalog2/core/api/dto/d;Ljava/util/List;)Lcom/vk/catalog2/core/api/dto/d;
+    invoke-virtual {p0, p1, p2}, Lcom/vk/catalog2/core/api/music/CatalogGetAudioSearchRequestFactory$a;->a(Lcom/vk/catalog2/core/api/dto/CatalogResponse;Ljava/util/List;)Lcom/vk/catalog2/core/api/dto/CatalogResponse;
 
     return-object p1
 .end method

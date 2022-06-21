@@ -3,12 +3,12 @@
 .source "CommunityAddressesFragment.kt"
 
 # interfaces
-.implements Lc/a/z/j;
+.implements Lio/reactivex/functions/Function;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/profile/ui/community/adresses/CommunityAddressesFragment$n;->call()Lc/a/m;
+    value = Lcom/vk/profile/ui/community/adresses/CommunityAddressesFragment$n;->call()Lio/reactivex/Observable;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -24,9 +24,9 @@
         "Ljava/lang/Object;",
         ">",
         "Ljava/lang/Object;",
-        "Lc/a/z/j<",
+        "Lio/reactivex/functions/Function<",
         "TT;",
-        "Lc/a/p<",
+        "Lio/reactivex/ObservableSource<",
         "+TR;>;>;"
     }
 .end annotation
@@ -59,14 +59,14 @@
 
 
 # virtual methods
-.method public final a(Lcom/vk/dto/group/Group;)Lc/a/m;
+.method public final a(Lcom/vk/dto/group/Group;)Lio/reactivex/Observable;
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
             "Lcom/vk/dto/group/Group;",
             ")",
-            "Lc/a/m<",
+            "Lio/reactivex/Observable<",
             "Landroid/graphics/Bitmap;",
             ">;"
         }
@@ -81,7 +81,7 @@
 
     sget-object v0, Lcom/vk/imageloader/ImageScreenSize;->SIZE_28DP:Lcom/vk/imageloader/ImageScreenSize;
 
-    invoke-static {p1, v0}, Lcom/vk/imageloader/VKImageLoader;->a(Landroid/net/Uri;Lcom/vk/imageloader/ImageScreenSize;)Lc/a/m;
+    invoke-static {p1, v0}, Lcom/vk/imageloader/VKImageLoader;->a(Landroid/net/Uri;Lcom/vk/imageloader/ImageScreenSize;)Lio/reactivex/Observable;
 
     move-result-object p1
 
@@ -94,7 +94,7 @@
     .line 1
     check-cast p1, Lcom/vk/dto/group/Group;
 
-    invoke-virtual {p0, p1}, Lcom/vk/profile/ui/community/adresses/CommunityAddressesFragment$n$a;->a(Lcom/vk/dto/group/Group;)Lc/a/m;
+    invoke-virtual {p0, p1}, Lcom/vk/profile/ui/community/adresses/CommunityAddressesFragment$n$a;->a(Lcom/vk/dto/group/Group;)Lio/reactivex/Observable;
 
     move-result-object p1
 

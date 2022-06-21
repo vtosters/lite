@@ -15,5 +15,5 @@
 
 
 # virtual methods
-.method public abstract a(Lcom/vk/media/camera/qrcode/a$b;)V
+.method public abstract a(Lcom/vk/media/camera/qrcode/CameraQRDecoderCallback$b;)V
 .end method

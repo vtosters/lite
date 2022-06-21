@@ -3,7 +3,7 @@
 .source "SocialGraphLoginFragment.kt"
 
 # interfaces
-.implements Lcom/facebook/d;
+.implements Lcom/facebook/FacebookCallback;
 
 
 # annotations
@@ -19,8 +19,8 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Ljava/lang/Object;",
-        "Lcom/facebook/d<",
-        "Lcom/facebook/login/d;",
+        "Lcom/facebook/FacebookCallback<",
+        "Lcom/facebook/login/LoginResult;",
         ">;"
     }
 .end annotation
@@ -61,7 +61,7 @@
 
     const/4 v1, 0x0
 
-    invoke-static {v0, v1}, Lcom/vk/socialgraph/init/SocialGraphLoginFragment;->a(Lcom/vk/socialgraph/init/SocialGraphLoginFragment;Lcom/facebook/c;)V
+    invoke-static {v0, v1}, Lcom/vk/socialgraph/init/SocialGraphLoginFragment;->a(Lcom/vk/socialgraph/init/SocialGraphLoginFragment;Lcom/facebook/CallbackManager;)V
 
     .line 7
     instance-of p1, p1, Lcom/facebook/FacebookAuthorizationException;
@@ -103,7 +103,7 @@
 
     const/4 v2, 0x0
 
-    invoke-static {p1, v2, v0, v1}, Lcom/vk/core/util/k1;->a(IZILjava/lang/Object;)V
+    invoke-static {p1, v2, v0, v1}, Lcom/vk/core/util/ToastUtils;->a(IZILjava/lang/Object;)V
 
     .line 12
     iget-object p1, p0, Lcom/vk/socialgraph/init/SocialGraphLoginFragment$d;->a:Lcom/vk/socialgraph/init/SocialGraphLoginFragment;
@@ -113,7 +113,7 @@
     return-void
 .end method
 
-.method public a(Lcom/facebook/login/d;)V
+.method public a(Lcom/facebook/login/LoginResult;)V
     .locals 2
 
     .line 2
@@ -121,10 +121,10 @@
 
     const/4 v1, 0x0
 
-    invoke-static {v0, v1}, Lcom/vk/socialgraph/init/SocialGraphLoginFragment;->a(Lcom/vk/socialgraph/init/SocialGraphLoginFragment;Lcom/facebook/c;)V
+    invoke-static {v0, v1}, Lcom/vk/socialgraph/init/SocialGraphLoginFragment;->a(Lcom/vk/socialgraph/init/SocialGraphLoginFragment;Lcom/facebook/CallbackManager;)V
 
     .line 3
-    invoke-virtual {p1}, Lcom/facebook/login/d;->a()Lcom/facebook/AccessToken;
+    invoke-virtual {p1}, Lcom/facebook/login/LoginResult;->a()Lcom/facebook/AccessToken;
 
     move-result-object p1
 
@@ -159,9 +159,9 @@
     .locals 0
 
     .line 1
-    check-cast p1, Lcom/facebook/login/d;
+    check-cast p1, Lcom/facebook/login/LoginResult;
 
-    invoke-virtual {p0, p1}, Lcom/vk/socialgraph/init/SocialGraphLoginFragment$d;->a(Lcom/facebook/login/d;)V
+    invoke-virtual {p0, p1}, Lcom/vk/socialgraph/init/SocialGraphLoginFragment$d;->a(Lcom/facebook/login/LoginResult;)V
 
     return-void
 .end method
@@ -174,7 +174,7 @@
 
     const/4 v1, 0x0
 
-    invoke-static {v0, v1}, Lcom/vk/socialgraph/init/SocialGraphLoginFragment;->a(Lcom/vk/socialgraph/init/SocialGraphLoginFragment;Lcom/facebook/c;)V
+    invoke-static {v0, v1}, Lcom/vk/socialgraph/init/SocialGraphLoginFragment;->a(Lcom/vk/socialgraph/init/SocialGraphLoginFragment;Lcom/facebook/CallbackManager;)V
 
     .line 2
     iget-object v0, p0, Lcom/vk/socialgraph/init/SocialGraphLoginFragment$d;->a:Lcom/vk/socialgraph/init/SocialGraphLoginFragment;

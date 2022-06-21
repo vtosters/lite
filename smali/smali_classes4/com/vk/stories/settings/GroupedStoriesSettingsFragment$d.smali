@@ -43,7 +43,7 @@
     .line 2
     iget-object p1, p0, Lcom/vk/stories/settings/GroupedStoriesSettingsFragment$d;->a:Lcom/vk/stories/settings/GroupedStoriesSettingsFragment;
 
-    invoke-virtual {p1}, Lcom/vk/stories/settings/GroupedStoriesSettingsFragment;->getPresenter()Lcom/vk/stories/settings/c;
+    invoke-virtual {p1}, Lcom/vk/stories/settings/GroupedStoriesSettingsFragment;->getPresenter()Lcom/vk/stories/settings/GroupedStoriesSettingsScreenContract;
 
     move-result-object p1
 
@@ -51,7 +51,7 @@
 
     const/4 p2, 0x1
 
-    invoke-interface {p1, p2}, Lcom/vk/stories/settings/c;->h(Z)V
+    invoke-interface {p1, p2}, Lcom/vk/stories/settings/GroupedStoriesSettingsScreenContract;->h(Z)V
 
     :cond_0
     return-void

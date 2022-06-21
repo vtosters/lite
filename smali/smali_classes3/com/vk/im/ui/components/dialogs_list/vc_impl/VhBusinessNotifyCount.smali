@@ -3,7 +3,7 @@
 .source "VhBusinessNotifyCount.kt"
 
 # interfaces
-.implements Lcom/vk/pullfromtopofrecycler/c;
+.implements Lcom/vk/pullfromtopofrecycler/PullFromTopViewHolder;
 
 
 # annotations
@@ -33,7 +33,7 @@
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, v1}, Lcom/vk/im/ui/components/dialogs_list/vc_impl/VhBusinessNotifyCount$a;-><init>(Lkotlin/jvm/internal/i;)V
+    invoke-direct {v0, v1}, Lcom/vk/im/ui/components/dialogs_list/vc_impl/VhBusinessNotifyCount$a;-><init>(Lkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     sput-object v0, Lcom/vk/im/ui/components/dialogs_list/vc_impl/VhBusinessNotifyCount;->c:Lcom/vk/im/ui/components/dialogs_list/vc_impl/VhBusinessNotifyCount$a;
 
@@ -62,13 +62,13 @@
 
     const-string v0, "view"
 
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     new-instance v0, Lcom/vk/im/ui/components/dialogs_list/vc_impl/VhBusinessNotifyCount$1;
 
     invoke-direct {v0, p0}, Lcom/vk/im/ui/components/dialogs_list/vc_impl/VhBusinessNotifyCount$1;-><init>(Lcom/vk/im/ui/components/dialogs_list/vc_impl/VhBusinessNotifyCount;)V
 
-    invoke-static {p1, v0}, Lcom/vk/extensions/ViewExtKt;->e(Landroid/view/View;Lkotlin/jvm/b/b;)V
+    invoke-static {p1, v0}, Lcom/vk/extensions/ViewExtKt;->e(Landroid/view/View;Lkotlin/jvm/b/Functions2;)V
 
     return-void
 .end method
@@ -101,13 +101,13 @@
 
     const-string v1, "view"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    sget-object v2, Lcom/vk/im/ui/formatters/a;->a:Lcom/vk/im/ui/formatters/a;
+    sget-object v2, Lcom/vk/im/ui/formatters/BusinessNotifyCountFormatter;->a:Lcom/vk/im/ui/formatters/BusinessNotifyCountFormatter;
 
     iget-object v3, p0, Lcom/vk/im/ui/components/dialogs_list/vc_impl/VhBusinessNotifyCount;->a:Landroid/widget/TextView;
 
-    invoke-static {v3, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v3, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {v3}, Landroid/widget/TextView;->getContext()Landroid/content/Context;
 
@@ -115,9 +115,9 @@
 
     const-string v3, "view.context"
 
-    invoke-static {v1, v3}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v1, v3}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    invoke-virtual {v2, v1, p1}, Lcom/vk/im/ui/formatters/a;->a(Landroid/content/Context;I)Ljava/lang/CharSequence;
+    invoke-virtual {v2, v1, p1}, Lcom/vk/im/ui/formatters/BusinessNotifyCountFormatter;->a(Landroid/content/Context;I)Ljava/lang/CharSequence;
 
     move-result-object p1
 

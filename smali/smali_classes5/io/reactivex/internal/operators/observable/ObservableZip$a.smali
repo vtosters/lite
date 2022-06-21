@@ -3,7 +3,7 @@
 .source "ObservableZip.java"
 
 # interfaces
-.implements Lc/a/r;
+.implements Lio/reactivex/Observer;
 
 
 # annotations
@@ -24,7 +24,7 @@
         "Ljava/lang/Object;",
         ">",
         "Ljava/lang/Object;",
-        "Lc/a/r<",
+        "Lio/reactivex/Observer<",
         "TT;>;"
     }
 .end annotation
@@ -40,10 +40,10 @@
     .end annotation
 .end field
 
-.field final b:Lio/reactivex/internal/queue/a;
+.field final b:Lio/reactivex/internal/queue/SpscLinkedArrayQueue;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Lio/reactivex/internal/queue/a<",
+            "Lio/reactivex/internal/queue/SpscLinkedArrayQueue<",
             "TT;>;"
         }
     .end annotation
@@ -57,7 +57,7 @@
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/util/concurrent/atomic/AtomicReference<",
-            "Lio/reactivex/disposables/b;",
+            "Lio/reactivex/disposables/Disposable;",
             ">;"
         }
     .end annotation
@@ -89,11 +89,11 @@
     iput-object p1, p0, Lio/reactivex/internal/operators/observable/ObservableZip$a;->a:Lio/reactivex/internal/operators/observable/ObservableZip$ZipCoordinator;
 
     .line 4
-    new-instance p1, Lio/reactivex/internal/queue/a;
+    new-instance p1, Lio/reactivex/internal/queue/SpscLinkedArrayQueue;
 
-    invoke-direct {p1, p2}, Lio/reactivex/internal/queue/a;-><init>(I)V
+    invoke-direct {p1, p2}, Lio/reactivex/internal/queue/SpscLinkedArrayQueue;-><init>(I)V
 
-    iput-object p1, p0, Lio/reactivex/internal/operators/observable/ObservableZip$a;->b:Lio/reactivex/internal/queue/a;
+    iput-object p1, p0, Lio/reactivex/internal/operators/observable/ObservableZip$a;->b:Lio/reactivex/internal/queue/SpscLinkedArrayQueue;
 
     return-void
 .end method
@@ -111,13 +111,13 @@
     return-void
 .end method
 
-.method public a(Lio/reactivex/disposables/b;)V
+.method public a(Lio/reactivex/disposables/Disposable;)V
     .locals 1
 
     .line 1
     iget-object v0, p0, Lio/reactivex/internal/operators/observable/ObservableZip$a;->e:Ljava/util/concurrent/atomic/AtomicReference;
 
-    invoke-static {v0, p1}, Lio/reactivex/internal/disposables/DisposableHelper;->c(Ljava/util/concurrent/atomic/AtomicReference;Lio/reactivex/disposables/b;)Z
+    invoke-static {v0, p1}, Lio/reactivex/internal/disposables/DisposableHelper;->c(Ljava/util/concurrent/atomic/AtomicReference;Lio/reactivex/disposables/Disposable;)Z
 
     return-void
 .end method
@@ -166,9 +166,9 @@
     .end annotation
 
     .line 1
-    iget-object v0, p0, Lio/reactivex/internal/operators/observable/ObservableZip$a;->b:Lio/reactivex/internal/queue/a;
+    iget-object v0, p0, Lio/reactivex/internal/operators/observable/ObservableZip$a;->b:Lio/reactivex/internal/queue/SpscLinkedArrayQueue;
 
-    invoke-virtual {v0, p1}, Lio/reactivex/internal/queue/a;->offer(Ljava/lang/Object;)Z
+    invoke-virtual {v0, p1}, Lio/reactivex/internal/queue/SpscLinkedArrayQueue;->offer(Ljava/lang/Object;)Z
 
     .line 2
     iget-object p1, p0, Lio/reactivex/internal/operators/observable/ObservableZip$a;->a:Lio/reactivex/internal/operators/observable/ObservableZip$ZipCoordinator;

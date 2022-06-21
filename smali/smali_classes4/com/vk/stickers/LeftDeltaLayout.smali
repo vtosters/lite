@@ -8,7 +8,7 @@
 
 .field private b:F
 
-.field private c:Lcom/vk/stickers/c;
+.field private c:Lcom/vk/stickers/CalloutPopupBackgroundDrawable;
 
 
 # direct methods
@@ -77,7 +77,7 @@
     move-result p1
 
     .line 3
-    iget-object p2, p0, Lcom/vk/stickers/LeftDeltaLayout;->c:Lcom/vk/stickers/c;
+    iget-object p2, p0, Lcom/vk/stickers/LeftDeltaLayout;->c:Lcom/vk/stickers/CalloutPopupBackgroundDrawable;
 
     if-eqz p2, :cond_0
 
@@ -94,10 +94,10 @@
 
     add-int/2addr v0, v1
 
-    invoke-virtual {p2, v0}, Lcom/vk/stickers/c;->b(I)V
+    invoke-virtual {p2, v0}, Lcom/vk/stickers/CalloutPopupBackgroundDrawable;->b(I)V
 
     .line 5
-    iget-object p2, p0, Lcom/vk/stickers/LeftDeltaLayout;->c:Lcom/vk/stickers/c;
+    iget-object p2, p0, Lcom/vk/stickers/LeftDeltaLayout;->c:Lcom/vk/stickers/CalloutPopupBackgroundDrawable;
 
     const/16 v0, 0x20
 
@@ -105,10 +105,10 @@
 
     move-result v0
 
-    invoke-virtual {p2, v0}, Lcom/vk/stickers/c;->a(I)V
+    invoke-virtual {p2, v0}, Lcom/vk/stickers/CalloutPopupBackgroundDrawable;->a(I)V
 
     .line 6
-    iget-object p2, p0, Lcom/vk/stickers/LeftDeltaLayout;->c:Lcom/vk/stickers/c;
+    iget-object p2, p0, Lcom/vk/stickers/LeftDeltaLayout;->c:Lcom/vk/stickers/CalloutPopupBackgroundDrawable;
 
     invoke-virtual {p2}, Landroid/graphics/drawable/Drawable;->invalidateSelf()V
 
@@ -221,11 +221,11 @@
     return-void
 .end method
 
-.method public setCalloutPopupBackgroundDrawable(Lcom/vk/stickers/c;)V
+.method public setCalloutPopupBackgroundDrawable(Lcom/vk/stickers/CalloutPopupBackgroundDrawable;)V
     .locals 0
 
     .line 1
-    iput-object p1, p0, Lcom/vk/stickers/LeftDeltaLayout;->c:Lcom/vk/stickers/c;
+    iput-object p1, p0, Lcom/vk/stickers/LeftDeltaLayout;->c:Lcom/vk/stickers/CalloutPopupBackgroundDrawable;
 
     return-void
 .end method

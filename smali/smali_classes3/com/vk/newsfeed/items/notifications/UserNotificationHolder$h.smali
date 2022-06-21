@@ -3,7 +3,7 @@
 .source "UserNotificationHolder.kt"
 
 # interfaces
-.implements Lcom/vk/attachpicker/p$a;
+.implements Lcom/vk/attachpicker/SelectionContext$a;
 
 
 # annotations

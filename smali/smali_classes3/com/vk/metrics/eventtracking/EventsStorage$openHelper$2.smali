@@ -3,7 +3,7 @@
 .source "EventsStorage.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/a;
+.implements Lkotlin/jvm/b/Functions;
 
 
 # annotations
@@ -19,8 +19,8 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/a<",
-        "Lcom/vk/metrics/eventtracking/a;",
+        "Lkotlin/jvm/b/Functions<",
+        "Lcom/vk/metrics/eventtracking/EventsStorage1;",
         ">;"
     }
 .end annotation
@@ -45,15 +45,15 @@
 
 
 # virtual methods
-.method public final invoke()Lcom/vk/metrics/eventtracking/a;
+.method public final invoke()Lcom/vk/metrics/eventtracking/EventsStorage1;
     .locals 2
 
     .line 2
-    new-instance v0, Lcom/vk/metrics/eventtracking/a;
+    new-instance v0, Lcom/vk/metrics/eventtracking/EventsStorage1;
 
     iget-object v1, p0, Lcom/vk/metrics/eventtracking/EventsStorage$openHelper$2;->$ctx:Landroid/content/Context;
 
-    invoke-direct {v0, v1}, Lcom/vk/metrics/eventtracking/a;-><init>(Landroid/content/Context;)V
+    invoke-direct {v0, v1}, Lcom/vk/metrics/eventtracking/EventsStorage1;-><init>(Landroid/content/Context;)V
 
     return-object v0
 .end method
@@ -62,7 +62,7 @@
     .locals 1
 
     .line 1
-    invoke-virtual {p0}, Lcom/vk/metrics/eventtracking/EventsStorage$openHelper$2;->invoke()Lcom/vk/metrics/eventtracking/a;
+    invoke-virtual {p0}, Lcom/vk/metrics/eventtracking/EventsStorage$openHelper$2;->invoke()Lcom/vk/metrics/eventtracking/EventsStorage1;
 
     move-result-object v0
 

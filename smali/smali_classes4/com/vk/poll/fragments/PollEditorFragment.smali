@@ -1,11 +1,11 @@
 .class public final Lcom/vk/poll/fragments/PollEditorFragment;
-.super Lcom/vk/core/fragments/b;
+.super Lcom/vk/core/fragments/BaseFragment1;
 .source "PollEditorFragment.kt"
 
 # interfaces
-.implements Lcom/vk/navigation/b0/k;
-.implements Lcom/vk/newsfeed/posting/attachments/b;
-.implements Lcom/vk/navigation/b0/a;
+.implements Lcom/vk/navigation/b0/FragmentWithoutBottomMenuBar;
+.implements Lcom/vk/newsfeed/posting/attachments/PostingRestoreOnSwipeAttachFragment;
+.implements Lcom/vk/navigation/b0/FragmentWhiteStatusBar;
 
 
 # annotations
@@ -20,11 +20,11 @@
 # instance fields
 .field private F:Lcom/vk/poll/fragments/PollEditorScreen;
 
-.field private G:Lkotlin/jvm/b/a;
+.field private G:Lkotlin/jvm/b/Functions;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Lkotlin/jvm/b/a<",
-            "Lkotlin/m;",
+            "Lkotlin/jvm/b/Functions<",
+            "Lkotlin/Unit;",
             ">;"
         }
     .end annotation
@@ -32,10 +32,10 @@
 
 .field private H:Z
 
-.field private I:Lc/a/r;
+.field private I:Lio/reactivex/Observer;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Lc/a/r<",
+            "Lio/reactivex/Observer<",
             "Ljava/lang/Boolean;",
             ">;"
         }
@@ -51,7 +51,7 @@
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, v1}, Lcom/vk/poll/fragments/PollEditorFragment$b;-><init>(Lkotlin/jvm/internal/i;)V
+    invoke-direct {v0, v1}, Lcom/vk/poll/fragments/PollEditorFragment$b;-><init>(Lkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     return-void
 .end method
@@ -60,7 +60,7 @@
     .locals 0
 
     .line 1
-    invoke-direct {p0}, Lcom/vk/core/fragments/b;-><init>()V
+    invoke-direct {p0}, Lcom/vk/core/fragments/BaseFragment1;-><init>()V
 
     return-void
 .end method
@@ -78,7 +78,7 @@
     :cond_0
     const-string p0, "screen"
 
-    invoke-static {p0}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {p0}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     const/4 p0, 0x0
 
@@ -91,7 +91,7 @@
     .locals 1
 
     .line 1
-    invoke-static {p0}, Lcom/vk/navigation/b0/a$a;->b(Lcom/vk/navigation/b0/a;)Z
+    invoke-static {p0}, Lcom/vk/navigation/b0/FragmentWhiteStatusBar$a;->b(Lcom/vk/navigation/b0/FragmentWhiteStatusBar;)Z
 
     move-result v0
 
@@ -113,7 +113,7 @@
     :cond_0
     const-string v0, "screen"
 
-    invoke-static {v0}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v0}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     const/4 v0, 0x0
 
@@ -124,7 +124,7 @@
     .locals 1
 
     .line 1
-    invoke-static {p0}, Lcom/vk/navigation/b0/a$a;->a(Lcom/vk/navigation/b0/a;)I
+    invoke-static {p0}, Lcom/vk/navigation/b0/FragmentWhiteStatusBar$a;->a(Lcom/vk/navigation/b0/FragmentWhiteStatusBar;)I
 
     move-result v0
 
@@ -147,25 +147,25 @@
 
     if-eqz v0, :cond_0
 
-    invoke-static {v0}, Lcom/vk/core/util/l0;->b(Landroid/view/View;)V
+    invoke-static {v0}, Lcom/vk/core/util/KeyboardUtils;->b(Landroid/view/View;)V
 
     :cond_0
     return-void
 .end method
 
-.method public final a(Lc/a/r;)V
+.method public final a(Lio/reactivex/Observer;)V
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lc/a/r<",
+            "Lio/reactivex/Observer<",
             "Ljava/lang/Boolean;",
             ">;)V"
         }
     .end annotation
 
     .line 2
-    iput-object p1, p0, Lcom/vk/poll/fragments/PollEditorFragment;->I:Lc/a/r;
+    iput-object p1, p0, Lcom/vk/poll/fragments/PollEditorFragment;->I:Lio/reactivex/Observer;
 
     .line 3
     iget-object v0, p0, Lcom/vk/poll/fragments/PollEditorFragment;->F:Lcom/vk/poll/fragments/PollEditorScreen;
@@ -175,14 +175,14 @@
     if-eqz v0, :cond_0
 
     .line 4
-    invoke-virtual {v0, p1}, Lcom/vk/poll/fragments/PollEditorScreen;->a(Lc/a/r;)V
+    invoke-virtual {v0, p1}, Lcom/vk/poll/fragments/PollEditorScreen;->a(Lio/reactivex/Observer;)V
 
     goto :goto_0
 
     :cond_0
     const-string p1, "screen"
 
-    invoke-static {p1}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {p1}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     const/4 p1, 0x0
 
@@ -216,7 +216,7 @@
     :cond_0
     const-string p1, "screen"
 
-    invoke-static {p1}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {p1}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     const/4 p1, 0x0
 
@@ -248,7 +248,7 @@
     :cond_0
     const-string v0, "screen"
 
-    invoke-static {v0}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v0}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     const/4 v0, 0x0
 
@@ -272,7 +272,7 @@
     :cond_0
     const-string v0, "screen"
 
-    invoke-static {v0}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v0}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     const/4 v0, 0x0
 
@@ -294,7 +294,7 @@
     :cond_0
     const-string p1, "screen"
 
-    invoke-static {p1}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {p1}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     const/4 p1, 0x0
 
@@ -359,7 +359,7 @@
     goto :goto_0
 
     :cond_0
-    invoke-static {v1}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v1}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v0
 
@@ -369,14 +369,14 @@
 
     invoke-direct {p1, p0}, Lcom/vk/poll/fragments/PollEditorFragment$onConfigurationChanged$1;-><init>(Lcom/vk/poll/fragments/PollEditorFragment;)V
 
-    iput-object p1, p0, Lcom/vk/poll/fragments/PollEditorFragment;->G:Lkotlin/jvm/b/a;
+    iput-object p1, p0, Lcom/vk/poll/fragments/PollEditorFragment;->G:Lkotlin/jvm/b/Functions;
 
     :goto_0
     return-void
 
     .line 6
     :cond_2
-    invoke-static {v1}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v1}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v0
 .end method
@@ -387,7 +387,7 @@
     move-object/from16 v0, p0
 
     .line 1
-    invoke-super/range {p0 .. p1}, Lcom/vk/core/fragments/b;->onCreate(Landroid/os/Bundle;)V
+    invoke-super/range {p0 .. p1}, Lcom/vk/core/fragments/BaseFragment1;->onCreate(Landroid/os/Bundle;)V
 
     .line 2
     invoke-virtual/range {p0 .. p0}, Landroidx/fragment/app/Fragment;->getArguments()Landroid/os/Bundle;
@@ -440,7 +440,7 @@
     const/4 v4, 0x2
 
     .line 4
-    invoke-static {v1, v3, v4, v6}, Lcom/vk/core/util/k1;->a(IZILjava/lang/Object;)V
+    invoke-static {v1, v3, v4, v6}, Lcom/vk/core/util/ToastUtils;->a(IZILjava/lang/Object;)V
 
     .line 5
     invoke-virtual/range {p0 .. p0}, Lcom/vk/core/fragments/FragmentImpl;->finish()V
@@ -564,7 +564,7 @@
 
     move-object v7, v1
 
-    invoke-direct/range {v7 .. v16}, Lcom/vk/poll/fragments/PollEditorScreen;-><init>(ILjava/lang/String;Lcom/vtosters/lite/attachments/PollAttachment;IZJILkotlin/jvm/internal/i;)V
+    invoke-direct/range {v7 .. v16}, Lcom/vk/poll/fragments/PollEditorScreen;-><init>(ILjava/lang/String;Lcom/vtosters/lite/attachments/PollAttachment;IZJILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     iput-object v1, v0, Lcom/vk/poll/fragments/PollEditorFragment;->F:Lcom/vk/poll/fragments/PollEditorScreen;
 
@@ -573,9 +573,9 @@
 
     if-eqz v1, :cond_9
 
-    iget-object v2, v0, Lcom/vk/poll/fragments/PollEditorFragment;->I:Lc/a/r;
+    iget-object v2, v0, Lcom/vk/poll/fragments/PollEditorFragment;->I:Lio/reactivex/Observer;
 
-    invoke-virtual {v1, v2}, Lcom/vk/poll/fragments/PollEditorScreen;->a(Lc/a/r;)V
+    invoke-virtual {v1, v2}, Lcom/vk/poll/fragments/PollEditorScreen;->a(Lio/reactivex/Observer;)V
 
     .line 14
     invoke-virtual/range {p0 .. p0}, Landroidx/fragment/app/Fragment;->getArguments()Landroid/os/Bundle;
@@ -599,7 +599,7 @@
     const-string v1, "screen"
 
     .line 15
-    invoke-static {v1}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v1}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v6
 .end method
@@ -635,7 +635,7 @@
     goto :goto_0
 
     :cond_0
-    invoke-static {v1}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v1}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v0
 
@@ -650,7 +650,7 @@
 
     invoke-direct {p3, p0}, Lcom/vk/poll/fragments/PollEditorFragment$onCreateView$1;-><init>(Lcom/vk/poll/fragments/PollEditorFragment;)V
 
-    invoke-virtual {p2, p3}, Lcom/vk/poll/fragments/PollEditorScreen;->a(Lkotlin/jvm/b/a;)V
+    invoke-virtual {p2, p3}, Lcom/vk/poll/fragments/PollEditorScreen;->a(Lkotlin/jvm/b/Functions;)V
 
     .line 5
     iget-object p2, p0, Lcom/vk/poll/fragments/PollEditorFragment;->F:Lcom/vk/poll/fragments/PollEditorScreen;
@@ -661,7 +661,7 @@
 
     invoke-direct {p3, p0}, Lcom/vk/poll/fragments/PollEditorFragment$onCreateView$2;-><init>(Lcom/vk/poll/fragments/PollEditorFragment;)V
 
-    invoke-virtual {p2, p3}, Lcom/vk/poll/fragments/PollEditorScreen;->b(Lkotlin/jvm/b/a;)V
+    invoke-virtual {p2, p3}, Lcom/vk/poll/fragments/PollEditorScreen;->b(Lkotlin/jvm/b/Functions;)V
 
     .line 6
     iget-object p2, p0, Lcom/vk/poll/fragments/PollEditorFragment;->F:Lcom/vk/poll/fragments/PollEditorScreen;
@@ -672,7 +672,7 @@
 
     invoke-direct {p3, p0}, Lcom/vk/poll/fragments/PollEditorFragment$onCreateView$3;-><init>(Lcom/vk/poll/fragments/PollEditorFragment;)V
 
-    invoke-virtual {p2, p3}, Lcom/vk/poll/fragments/PollEditorScreen;->c(Lkotlin/jvm/b/a;)V
+    invoke-virtual {p2, p3}, Lcom/vk/poll/fragments/PollEditorScreen;->c(Lkotlin/jvm/b/Functions;)V
 
     .line 7
     iget-object p2, p0, Lcom/vk/poll/fragments/PollEditorFragment;->F:Lcom/vk/poll/fragments/PollEditorScreen;
@@ -683,36 +683,36 @@
 
     invoke-direct {p3, p0}, Lcom/vk/poll/fragments/PollEditorFragment$onCreateView$4;-><init>(Lcom/vk/poll/fragments/PollEditorFragment;)V
 
-    invoke-virtual {p2, p3}, Lcom/vk/poll/fragments/PollEditorScreen;->a(Lkotlin/jvm/b/c;)V
+    invoke-virtual {p2, p3}, Lcom/vk/poll/fragments/PollEditorScreen;->a(Lkotlin/jvm/b/Functions1;)V
 
     return-object p1
 
     :cond_2
-    invoke-static {v1}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v1}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v0
 
     .line 8
     :cond_3
-    invoke-static {v1}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v1}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v0
 
     .line 9
     :cond_4
-    invoke-static {v1}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v1}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v0
 
     .line 10
     :cond_5
-    invoke-static {v1}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v1}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v0
 
     .line 11
     :cond_6
-    invoke-static {v1}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v1}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v0
 .end method
@@ -728,7 +728,7 @@
     invoke-virtual {v0}, Lcom/vk/poll/fragments/PollEditorScreen;->h()V
 
     .line 2
-    invoke-super {p0}, Lcom/vk/core/fragments/b;->onDestroy()V
+    invoke-super {p0}, Lcom/vk/core/fragments/BaseFragment1;->onDestroy()V
 
     return-void
 
@@ -736,7 +736,7 @@
     const-string v0, "screen"
 
     .line 3
-    invoke-static {v0}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v0}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     const/4 v0, 0x0
 
@@ -777,7 +777,7 @@
     .locals 2
 
     .line 1
-    invoke-super {p0}, Lcom/vk/core/fragments/b;->onResume()V
+    invoke-super {p0}, Lcom/vk/core/fragments/BaseFragment1;->onResume()V
 
     .line 2
     invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getActivity()Landroidx/fragment/app/FragmentActivity;
@@ -806,31 +806,31 @@
     const-string v1, "it"
 
     .line 4
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {p0}, Lcom/vk/poll/fragments/PollEditorFragment;->R3()I
 
     move-result v1
 
-    invoke-static {v0, v1}, Lcom/vk/core/extensions/a;->a(Landroid/app/Activity;I)V
+    invoke-static {v0, v1}, Lcom/vk/core/extensions/ActivityExt;->a(Landroid/app/Activity;I)V
 
     .line 5
     :cond_0
-    iget-object v0, p0, Lcom/vk/poll/fragments/PollEditorFragment;->G:Lkotlin/jvm/b/a;
+    iget-object v0, p0, Lcom/vk/poll/fragments/PollEditorFragment;->G:Lkotlin/jvm/b/Functions;
 
     if-eqz v0, :cond_1
 
-    invoke-interface {v0}, Lkotlin/jvm/b/a;->invoke()Ljava/lang/Object;
+    invoke-interface {v0}, Lkotlin/jvm/b/Functions;->invoke()Ljava/lang/Object;
 
     move-result-object v0
 
-    check-cast v0, Lkotlin/m;
+    check-cast v0, Lkotlin/Unit;
 
     :cond_1
     const/4 v0, 0x0
 
     .line 6
-    iput-object v0, p0, Lcom/vk/poll/fragments/PollEditorFragment;->G:Lkotlin/jvm/b/a;
+    iput-object v0, p0, Lcom/vk/poll/fragments/PollEditorFragment;->G:Lkotlin/jvm/b/Functions;
 
     return-void
 .end method
@@ -866,12 +866,12 @@
     if-eqz p2, :cond_0
 
     .line 4
-    instance-of v2, p2, Lcom/vk/core/view/a;
+    instance-of v2, p2, Lcom/vk/core/view/FitSystemWindowsFragmentWrapperFrameLayout;
 
     if-eqz v2, :cond_0
 
     .line 5
-    check-cast p2, Lcom/vk/core/view/a;
+    check-cast p2, Lcom/vk/core/view/FitSystemWindowsFragmentWrapperFrameLayout;
 
     invoke-virtual {p2, v1}, Landroid/widget/FrameLayout;->setFitsSystemWindows(Z)V
 
@@ -930,13 +930,13 @@
     :cond_4
     const-string p1, "screen"
 
-    invoke-static {p1}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {p1}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v0
 
     .line 10
     :cond_5
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     throw v0
 .end method

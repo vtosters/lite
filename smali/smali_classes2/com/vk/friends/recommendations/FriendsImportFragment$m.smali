@@ -3,12 +3,12 @@
 .source "FriendsImportFragment.kt"
 
 # interfaces
-.implements Lc/a/z/g;
+.implements Lio/reactivex/functions/Consumer;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/friends/recommendations/FriendsImportFragment;->a(Lc/a/m;ZLcom/vk/lists/t;)V
+    value = Lcom/vk/friends/recommendations/FriendsImportFragment;->a(Lio/reactivex/Observable;ZLcom/vk/lists/PaginationHelper;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -22,7 +22,7 @@
         "Ljava/lang/Object;",
         ">",
         "Ljava/lang/Object;",
-        "Lc/a/z/g<",
+        "Lio/reactivex/functions/Consumer<",
         "Lcom/vk/dto/common/data/VKFromList<",
         "Lcom/vk/friends/recommendations/Item;",
         ">;>;"
@@ -33,16 +33,16 @@
 # instance fields
 .field final synthetic a:Lcom/vk/friends/recommendations/FriendsImportFragment;
 
-.field final synthetic b:Lcom/vk/lists/t;
+.field final synthetic b:Lcom/vk/lists/PaginationHelper;
 
 
 # direct methods
-.method constructor <init>(Lcom/vk/friends/recommendations/FriendsImportFragment;Lcom/vk/lists/t;)V
+.method constructor <init>(Lcom/vk/friends/recommendations/FriendsImportFragment;Lcom/vk/lists/PaginationHelper;)V
     .locals 0
 
     iput-object p1, p0, Lcom/vk/friends/recommendations/FriendsImportFragment$m;->a:Lcom/vk/friends/recommendations/FriendsImportFragment;
 
-    iput-object p2, p0, Lcom/vk/friends/recommendations/FriendsImportFragment$m;->b:Lcom/vk/lists/t;
+    iput-object p2, p0, Lcom/vk/friends/recommendations/FriendsImportFragment$m;->b:Lcom/vk/lists/PaginationHelper;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -63,11 +63,11 @@
     .end annotation
 
     .line 1
-    iget-object v0, p0, Lcom/vk/friends/recommendations/FriendsImportFragment$m;->b:Lcom/vk/lists/t;
+    iget-object v0, p0, Lcom/vk/friends/recommendations/FriendsImportFragment$m;->b:Lcom/vk/lists/PaginationHelper;
 
     if-eqz v0, :cond_0
 
-    invoke-virtual {v0}, Lcom/vk/lists/t;->b()Ljava/lang/String;
+    invoke-virtual {v0}, Lcom/vk/lists/PaginationHelper;->b()Ljava/lang/String;
 
     move-result-object v0
 
@@ -101,15 +101,15 @@
 
     iget-object v0, p0, Lcom/vk/friends/recommendations/FriendsImportFragment$m;->a:Lcom/vk/friends/recommendations/FriendsImportFragment;
 
-    invoke-static {v0}, Lcom/vk/friends/recommendations/FriendsImportFragment;->b(Lcom/vk/friends/recommendations/FriendsImportFragment;)Lcom/vk/friends/recommendations/c;
+    invoke-static {v0}, Lcom/vk/friends/recommendations/FriendsImportFragment;->b(Lcom/vk/friends/recommendations/FriendsImportFragment;)Lcom/vk/friends/recommendations/FriendsRecommendationsAdapter;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/vk/lists/i0;->clear()V
+    invoke-virtual {v0}, Lcom/vk/lists/SimpleAdapter;->clear()V
 
     .line 2
     :cond_3
-    iget-object v0, p0, Lcom/vk/friends/recommendations/FriendsImportFragment$m;->b:Lcom/vk/lists/t;
+    iget-object v0, p0, Lcom/vk/friends/recommendations/FriendsImportFragment$m;->b:Lcom/vk/lists/PaginationHelper;
 
     if-eqz v0, :cond_4
 
@@ -117,17 +117,17 @@
 
     move-result-object v1
 
-    invoke-virtual {v0, v1}, Lcom/vk/lists/t;->a(Ljava/lang/String;)V
+    invoke-virtual {v0, v1}, Lcom/vk/lists/PaginationHelper;->a(Ljava/lang/String;)V
 
     .line 3
     :cond_4
     iget-object v0, p0, Lcom/vk/friends/recommendations/FriendsImportFragment$m;->a:Lcom/vk/friends/recommendations/FriendsImportFragment;
 
-    invoke-static {v0}, Lcom/vk/friends/recommendations/FriendsImportFragment;->b(Lcom/vk/friends/recommendations/FriendsImportFragment;)Lcom/vk/friends/recommendations/c;
+    invoke-static {v0}, Lcom/vk/friends/recommendations/FriendsImportFragment;->b(Lcom/vk/friends/recommendations/FriendsImportFragment;)Lcom/vk/friends/recommendations/FriendsRecommendationsAdapter;
 
     move-result-object v0
 
-    invoke-virtual {v0, p1}, Lcom/vk/lists/i0;->g(Ljava/util/List;)V
+    invoke-virtual {v0, p1}, Lcom/vk/lists/SimpleAdapter;->g(Ljava/util/List;)V
 
     return-void
 .end method

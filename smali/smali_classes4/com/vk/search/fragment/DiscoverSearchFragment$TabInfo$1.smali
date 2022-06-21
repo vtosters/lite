@@ -3,12 +3,12 @@
 .source "DiscoverSearchFragment.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/b;
+.implements Lkotlin/jvm/b/Functions2;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/search/fragment/DiscoverSearchFragment$TabInfo;-><init>(Lcom/vk/stats/AppUseTime$Section;ILkotlin/jvm/b/a;Lkotlin/jvm/b/b;I)V
+    value = Lcom/vk/search/fragment/DiscoverSearchFragment$TabInfo;-><init>(Lcom/vk/stats/AppUseTime$Section;ILkotlin/jvm/b/Functions;Lkotlin/jvm/b/Functions2;I)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;

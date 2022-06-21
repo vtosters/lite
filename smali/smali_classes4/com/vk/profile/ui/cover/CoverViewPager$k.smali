@@ -1,5 +1,5 @@
 .class public final Lcom/vk/profile/ui/cover/CoverViewPager$k;
-.super Lcom/vk/core/ui/infiniteviewpager/b;
+.super Lcom/vk/core/ui/infiniteviewpager/InfiniteViewPager;
 .source "CoverViewPager.kt"
 
 
@@ -33,7 +33,7 @@
     .line 1
     iput-object p1, p0, Lcom/vk/profile/ui/cover/CoverViewPager$k;->a:Lcom/vk/profile/ui/cover/CoverViewPager;
 
-    invoke-direct {p0, p3}, Lcom/vk/core/ui/infiniteviewpager/b;-><init>(Landroid/content/Context;)V
+    invoke-direct {p0, p3}, Lcom/vk/core/ui/infiniteviewpager/InfiniteViewPager;-><init>(Landroid/content/Context;)V
 
     return-void
 .end method

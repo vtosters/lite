@@ -1,13 +1,13 @@
 .class public final Lcom/vk/im/engine/commands/attaches/RequestAudioMsgTranscriptionCmd;
-.super Lcom/vk/im/engine/i/a;
+.super Lcom/vk/im/engine/i/BaseImEngineCmd;
 .source "RequestAudioMsgTranscriptionCmd.kt"
 
 
 # annotations
 .annotation system Ldalvik/annotation/Signature;
     value = {
-        "Lcom/vk/im/engine/i/a<",
-        "Lkotlin/m;",
+        "Lcom/vk/im/engine/i/BaseImEngineCmd<",
+        "Lkotlin/Unit;",
         ">;"
     }
 .end annotation
@@ -28,7 +28,7 @@
     .locals 0
 
     .line 1
-    invoke-direct {p0}, Lcom/vk/im/engine/i/a;-><init>()V
+    invoke-direct {p0}, Lcom/vk/im/engine/i/BaseImEngineCmd;-><init>()V
 
     iput p1, p0, Lcom/vk/im/engine/commands/attaches/RequestAudioMsgTranscriptionCmd;->b:I
 
@@ -41,7 +41,7 @@
     return-void
 .end method
 
-.method public synthetic constructor <init>(IIZLjava/lang/Object;ILkotlin/jvm/internal/i;)V
+.method public synthetic constructor <init>(IIZLjava/lang/Object;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
     .locals 0
 
     and-int/lit8 p6, p5, 0x4
@@ -84,22 +84,22 @@
 
 
 # virtual methods
-.method public bridge synthetic a(Lcom/vk/im/engine/d;)Ljava/lang/Object;
+.method public bridge synthetic a(Lcom/vk/im/engine/ImEnvironment;)Ljava/lang/Object;
     .locals 0
 
     .line 2
-    invoke-virtual {p0, p1}, Lcom/vk/im/engine/commands/attaches/RequestAudioMsgTranscriptionCmd;->a(Lcom/vk/im/engine/d;)V
+    invoke-virtual {p0, p1}, Lcom/vk/im/engine/commands/attaches/RequestAudioMsgTranscriptionCmd;->a(Lcom/vk/im/engine/ImEnvironment;)V
 
-    sget-object p1, Lkotlin/m;->a:Lkotlin/m;
+    sget-object p1, Lkotlin/Unit;->a:Lkotlin/Unit;
 
     return-object p1
 .end method
 
-.method public a(Lcom/vk/im/engine/d;)V
+.method public a(Lcom/vk/im/engine/ImEnvironment;)V
     .locals 10
 
     .line 3
-    invoke-interface {p1}, Lcom/vk/im/engine/d;->a0()Lcom/vk/im/engine/internal/storage/StorageManager;
+    invoke-interface {p1}, Lcom/vk/im/engine/ImEnvironment;->a0()Lcom/vk/im/engine/internal/storage/StorageManager;
 
     move-result-object v0
 
@@ -133,7 +133,7 @@
 
     invoke-direct {v3, p0}, Lcom/vk/im/engine/commands/attaches/RequestAudioMsgTranscriptionCmd$onExecute$attach$1;-><init>(Lcom/vk/im/engine/commands/attaches/RequestAudioMsgTranscriptionCmd;)V
 
-    invoke-virtual {v0, v3, v1}, Lcom/vk/im/engine/models/messages/MsgFromUser;->a(Lkotlin/jvm/b/b;Z)Lcom/vk/im/engine/models/attaches/Attach;
+    invoke-virtual {v0, v3, v1}, Lcom/vk/im/engine/models/messages/MsgFromUser;->a(Lkotlin/jvm/b/Functions2;Z)Lcom/vk/im/engine/models/attaches/Attach;
 
     move-result-object v3
 
@@ -167,37 +167,37 @@
 
     .line 6
     :cond_3
-    invoke-interface {p1}, Lcom/vk/im/engine/d;->k0()Lcom/vk/api/internal/ApiManager;
+    invoke-interface {p1}, Lcom/vk/im/engine/ImEnvironment;->k0()Lcom/vk/api/internal/ApiManager;
 
     move-result-object v4
 
-    new-instance v5, Lcom/vk/im/engine/internal/api_commands/messages/k;
+    new-instance v5, Lcom/vk/im/engine/internal/api_commands/messages/MessagesGetByIdApiCmd;
 
     invoke-virtual {v0}, Lcom/vk/im/engine/models/messages/Msg;->C1()I
 
     move-result v6
 
-    invoke-static {v6}, Lcom/vk/im/engine/utils/collection/e;->a(I)Lcom/vk/im/engine/utils/collection/IntArrayList;
+    invoke-static {v6}, Lcom/vk/im/engine/utils/collection/IntCollectionExt;->a(I)Lcom/vk/im/engine/utils/collection/IntArrayList;
 
     move-result-object v6
 
     const-string v7, "intListOf(msg.vkId)"
 
-    invoke-static {v6, v7}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v6, v7}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     iget-boolean v7, p0, Lcom/vk/im/engine/commands/attaches/RequestAudioMsgTranscriptionCmd;->d:Z
 
-    invoke-interface {p1}, Lcom/vk/im/engine/d;->p0()Ljava/lang/String;
+    invoke-interface {p1}, Lcom/vk/im/engine/ImEnvironment;->p0()Ljava/lang/String;
 
     move-result-object v8
 
     const-string v9, "env.languageCode"
 
-    invoke-static {v8, v9}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v8, v9}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    invoke-direct {v5, v6, v7, v8}, Lcom/vk/im/engine/internal/api_commands/messages/k;-><init>(Lcom/vk/im/engine/utils/collection/d;ZLjava/lang/String;)V
+    invoke-direct {v5, v6, v7, v8}, Lcom/vk/im/engine/internal/api_commands/messages/MessagesGetByIdApiCmd;-><init>(Lcom/vk/im/engine/utils/collection/IntCollection;ZLjava/lang/String;)V
 
-    invoke-virtual {v4, v5}, Lcom/vk/api/internal/ApiManager;->a(Lcom/vk/api/sdk/internal/a;)Ljava/lang/Object;
+    invoke-virtual {v4, v5}, Lcom/vk/api/internal/ApiManager;->a(Lcom/vk/api/sdk/internal/ApiCommand;)Ljava/lang/Object;
 
     move-result-object v4
 
@@ -227,7 +227,7 @@
 
     invoke-direct {v5, v3}, Lcom/vk/im/engine/commands/attaches/RequestAudioMsgTranscriptionCmd$onExecute$actualAttach$1;-><init>(Lcom/vk/im/engine/models/attaches/AttachAudioMsg;)V
 
-    invoke-virtual {v4, v5, v1}, Lcom/vk/im/engine/models/messages/MsgFromUser;->a(Lkotlin/jvm/b/b;Z)Lcom/vk/im/engine/models/attaches/Attach;
+    invoke-virtual {v4, v5, v1}, Lcom/vk/im/engine/models/messages/MsgFromUser;->a(Lkotlin/jvm/b/Functions2;Z)Lcom/vk/im/engine/models/attaches/Attach;
 
     move-result-object v5
 
@@ -263,26 +263,26 @@
 
     invoke-direct {v0, v4}, Lcom/vk/im/engine/internal/merge/messages/MsgHistoryFromServerMergeTask;-><init>(Lcom/vk/im/engine/models/messages/Msg;)V
 
-    invoke-virtual {v0, p1}, Lcom/vk/im/engine/internal/k/a;->a(Lcom/vk/im/engine/d;)Ljava/lang/Object;
+    invoke-virtual {v0, p1}, Lcom/vk/im/engine/internal/k/MergeTask;->a(Lcom/vk/im/engine/ImEnvironment;)Ljava/lang/Object;
 
     .line 10
-    invoke-interface {p1}, Lcom/vk/im/engine/d;->n0()Lcom/vk/im/engine/internal/c;
+    invoke-interface {p1}, Lcom/vk/im/engine/ImEnvironment;->n0()Lcom/vk/im/engine/internal/EventHelper;
 
     move-result-object p1
 
     iget-object v0, p0, Lcom/vk/im/engine/commands/attaches/RequestAudioMsgTranscriptionCmd;->e:Ljava/lang/Object;
 
-    invoke-virtual {p1, v0, v4}, Lcom/vk/im/engine/internal/c;->a(Ljava/lang/Object;Lcom/vk/im/engine/models/messages/Msg;)V
+    invoke-virtual {p1, v0, v4}, Lcom/vk/im/engine/internal/EventHelper;->a(Ljava/lang/Object;Lcom/vk/im/engine/models/messages/Msg;)V
 
     return-void
 
     .line 11
     :cond_7
-    invoke-interface {p1}, Lcom/vk/im/engine/d;->k0()Lcom/vk/api/internal/ApiManager;
+    invoke-interface {p1}, Lcom/vk/im/engine/ImEnvironment;->k0()Lcom/vk/api/internal/ApiManager;
 
     move-result-object v1
 
-    new-instance v2, Lcom/vk/im/engine/internal/api_commands/messages/d0;
+    new-instance v2, Lcom/vk/im/engine/internal/api_commands/messages/RecogniseAudioMessageApiCmd;
 
     invoke-virtual {v0}, Lcom/vk/im/engine/models/messages/Msg;->C1()I
 
@@ -298,12 +298,12 @@
 
     iget-boolean v5, p0, Lcom/vk/im/engine/commands/attaches/RequestAudioMsgTranscriptionCmd;->d:Z
 
-    invoke-direct {v2, v0, v4, v3, v5}, Lcom/vk/im/engine/internal/api_commands/messages/d0;-><init>(IIIZ)V
+    invoke-direct {v2, v0, v4, v3, v5}, Lcom/vk/im/engine/internal/api_commands/messages/RecogniseAudioMessageApiCmd;-><init>(IIIZ)V
 
-    invoke-virtual {v1, v2}, Lcom/vk/api/internal/ApiManager;->a(Lcom/vk/api/sdk/internal/a;)Ljava/lang/Object;
+    invoke-virtual {v1, v2}, Lcom/vk/api/internal/ApiManager;->a(Lcom/vk/api/sdk/internal/ApiCommand;)Ljava/lang/Object;
 
     .line 12
-    invoke-interface {p1}, Lcom/vk/im/engine/d;->f0()Lcom/vk/instantjobs/b;
+    invoke-interface {p1}, Lcom/vk/im/engine/ImEnvironment;->f0()Lcom/vk/instantjobs/InstantJobManager;
 
     move-result-object v0
 
@@ -311,10 +311,10 @@
 
     invoke-direct {v1, p0}, Lcom/vk/im/engine/commands/attaches/RequestAudioMsgTranscriptionCmd$onExecute$1;-><init>(Lcom/vk/im/engine/commands/attaches/RequestAudioMsgTranscriptionCmd;)V
 
-    invoke-virtual {v0, v1}, Lcom/vk/instantjobs/b;->b(Lkotlin/jvm/b/b;)V
+    invoke-virtual {v0, v1}, Lcom/vk/instantjobs/InstantJobManager;->b(Lkotlin/jvm/b/Functions2;)V
 
     .line 13
-    invoke-interface {p1}, Lcom/vk/im/engine/d;->c0()Lcom/vk/im/engine/ImConfig;
+    invoke-interface {p1}, Lcom/vk/im/engine/ImEnvironment;->c0()Lcom/vk/im/engine/ImConfig;
 
     move-result-object v0
 
@@ -335,11 +335,11 @@
     invoke-direct {v2, v3, v4, v0, v1}, Lcom/vk/im/engine/internal/jobs/msg/MsgFailAudioTranscriptWithDelayJob;-><init>(IIJ)V
 
     .line 18
-    invoke-interface {p1}, Lcom/vk/im/engine/d;->f0()Lcom/vk/instantjobs/b;
+    invoke-interface {p1}, Lcom/vk/im/engine/ImEnvironment;->f0()Lcom/vk/instantjobs/InstantJobManager;
 
     move-result-object p1
 
-    invoke-virtual {p1, v2}, Lcom/vk/instantjobs/b;->a(Lcom/vk/instantjobs/InstantJob;)V
+    invoke-virtual {p1, v2}, Lcom/vk/instantjobs/InstantJobManager;->a(Lcom/vk/instantjobs/InstantJob;)V
 
     :cond_8
     :goto_3
@@ -379,7 +379,7 @@
 
     iget-object p1, p1, Lcom/vk/im/engine/commands/attaches/RequestAudioMsgTranscriptionCmd;->e:Ljava/lang/Object;
 
-    invoke-static {v0, p1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v0, p1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result p1
 

@@ -3,12 +3,12 @@
 .source "FeatureManager.kt"
 
 # interfaces
-.implements Lc/a/z/g;
+.implements Lio/reactivex/functions/Consumer;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/toggle/FeatureManager;->a(Lkotlin/jvm/b/a;Lkotlin/jvm/b/a;)Lio/reactivex/disposables/b;
+    value = Lcom/vk/toggle/FeatureManager;->a(Lkotlin/jvm/b/Functions;Lkotlin/jvm/b/Functions;)Lio/reactivex/disposables/Disposable;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -22,7 +22,7 @@
         "Ljava/lang/Object;",
         ">",
         "Ljava/lang/Object;",
-        "Lc/a/z/g<",
+        "Lio/reactivex/functions/Consumer<",
         "Ljava/lang/Throwable;",
         ">;"
     }
@@ -30,14 +30,14 @@
 
 
 # instance fields
-.field final synthetic a:Lkotlin/jvm/b/a;
+.field final synthetic a:Lkotlin/jvm/b/Functions;
 
 
 # direct methods
-.method constructor <init>(Lkotlin/jvm/b/a;)V
+.method constructor <init>(Lkotlin/jvm/b/Functions;)V
     .locals 0
 
-    iput-object p1, p0, Lcom/vk/toggle/FeatureManager$e;->a:Lkotlin/jvm/b/a;
+    iput-object p1, p0, Lcom/vk/toggle/FeatureManager$e;->a:Lkotlin/jvm/b/Functions;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -50,15 +50,15 @@
     .locals 0
 
     .line 1
-    iget-object p1, p0, Lcom/vk/toggle/FeatureManager$e;->a:Lkotlin/jvm/b/a;
+    iget-object p1, p0, Lcom/vk/toggle/FeatureManager$e;->a:Lkotlin/jvm/b/Functions;
 
     if-eqz p1, :cond_0
 
-    invoke-interface {p1}, Lkotlin/jvm/b/a;->invoke()Ljava/lang/Object;
+    invoke-interface {p1}, Lkotlin/jvm/b/Functions;->invoke()Ljava/lang/Object;
 
     move-result-object p1
 
-    check-cast p1, Lkotlin/m;
+    check-cast p1, Lkotlin/Unit;
 
     :cond_0
     return-void

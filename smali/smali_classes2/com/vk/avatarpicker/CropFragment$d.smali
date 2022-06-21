@@ -3,7 +3,7 @@
 .source "CropFragment.kt"
 
 # interfaces
-.implements Lc/a/z/g;
+.implements Lio/reactivex/functions/Consumer;
 
 
 # annotations
@@ -22,7 +22,7 @@
         "Ljava/lang/Object;",
         ">",
         "Ljava/lang/Object;",
-        "Lc/a/z/g<",
+        "Lio/reactivex/functions/Consumer<",
         "Landroid/graphics/Bitmap;",
         ">;"
     }
@@ -50,11 +50,11 @@
     .locals 6
 
     .line 1
-    new-instance v2, Lcom/vk/crop/j;
+    new-instance v2, Lcom/vk/crop/GeometryState;
 
     const-string v0, "bitmap"
 
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {p1}, Landroid/graphics/Bitmap;->getWidth()I
 
@@ -68,7 +68,7 @@
 
     int-to-float v1, v1
 
-    invoke-direct {v2, v0, v1}, Lcom/vk/crop/j;-><init>(FF)V
+    invoke-direct {v2, v0, v1}, Lcom/vk/crop/GeometryState;-><init>(FF)V
 
     .line 2
     iget-object v0, p0, Lcom/vk/avatarpicker/CropFragment$d;->a:Lcom/vk/avatarpicker/CropFragment;
@@ -78,7 +78,7 @@
     move-result-object v0
 
     .line 3
-    sget-object v3, Lcom/vk/crop/d;->e:Lcom/vk/crop/d;
+    sget-object v3, Lcom/vk/crop/CropAspectRatio;->e:Lcom/vk/crop/CropAspectRatio;
 
     const/4 v4, 0x1
 
@@ -87,7 +87,7 @@
     move-object v1, p1
 
     .line 4
-    invoke-virtual/range {v0 .. v5}, Lcom/vk/crop/CropImageView;->a(Landroid/graphics/Bitmap;Lcom/vk/crop/j;Lcom/vk/crop/d;ZZ)V
+    invoke-virtual/range {v0 .. v5}, Lcom/vk/crop/CropImageView;->a(Landroid/graphics/Bitmap;Lcom/vk/crop/GeometryState;Lcom/vk/crop/CropAspectRatio;ZZ)V
 
     return-void
 .end method

@@ -51,7 +51,7 @@
 
     const-string v0, "headerPositions.removeAt(index)"
 
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     check-cast p1, Ljava/lang/Number;
 
@@ -146,9 +146,9 @@
 
     if-eqz v3, :cond_1
 
-    check-cast v3, Lcom/vk/feedlikes/b;
+    check-cast v3, Lcom/vk/feedlikes/StickyHeadersLinearLayoutManager1;
 
-    invoke-interface {v3, v2}, Lcom/vk/feedlikes/b;->B(I)Z
+    invoke-interface {v3, v2}, Lcom/vk/feedlikes/StickyHeadersLinearLayoutManager1;->B(I)Z
 
     move-result v3
 
@@ -174,7 +174,7 @@
 
     .line 5
     :cond_1
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     throw v1
 
@@ -220,7 +220,7 @@
 
     .line 8
     :cond_4
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     throw v1
 .end method
@@ -305,9 +305,9 @@
 
     if-eqz v0, :cond_3
 
-    check-cast v0, Lcom/vk/feedlikes/b;
+    check-cast v0, Lcom/vk/feedlikes/StickyHeadersLinearLayoutManager1;
 
-    invoke-interface {v0, p1}, Lcom/vk/feedlikes/b;->B(I)Z
+    invoke-interface {v0, p1}, Lcom/vk/feedlikes/StickyHeadersLinearLayoutManager1;->B(I)Z
 
     move-result v0
 
@@ -359,7 +359,7 @@
 
     .line 8
     :cond_3
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     const/4 p1, 0x0
 
@@ -414,7 +414,7 @@
 
     move-result-object v4
 
-    invoke-static {v4, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v4, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     check-cast v4, Ljava/lang/Number;
 
@@ -504,7 +504,7 @@
 
     move-result-object v4
 
-    invoke-static {v4, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v4, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     check-cast v4, Ljava/lang/Number;
 

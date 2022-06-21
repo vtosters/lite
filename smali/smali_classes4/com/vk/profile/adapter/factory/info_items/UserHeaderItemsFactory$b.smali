@@ -50,7 +50,7 @@
 
     iget-object v0, p0, Lcom/vk/profile/adapter/factory/info_items/UserHeaderItemsFactory$b;->a:Lcom/vk/profile/adapter/factory/info_items/UserHeaderItemsFactory;
 
-    invoke-virtual {v0}, Lcom/vk/profile/adapter/b/a;->a()Landroid/content/Context;
+    invoke-virtual {v0}, Lcom/vk/profile/adapter/b/BaseItemsFactory;->a()Landroid/content/Context;
 
     move-result-object v0
 

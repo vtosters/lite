@@ -3,7 +3,7 @@
 .source "lambda"
 
 # interfaces
-.implements Lc/a/z/g;
+.implements Lio/reactivex/functions/Consumer;
 
 
 # instance fields
@@ -15,11 +15,11 @@
 
 .field private final synthetic d:I
 
-.field private final synthetic e:Lcom/vk/api/base/a;
+.field private final synthetic e:Lcom/vk/api/base/ApiCallback;
 
 
 # direct methods
-.method public synthetic constructor <init>(IIIILcom/vk/api/base/a;)V
+.method public synthetic constructor <init>(IIIILcom/vk/api/base/ApiCallback;)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -32,7 +32,7 @@
 
     iput p4, p0, Lcom/vk/stories/i;->d:I
 
-    iput-object p5, p0, Lcom/vk/stories/i;->e:Lcom/vk/api/base/a;
+    iput-object p5, p0, Lcom/vk/stories/i;->e:Lcom/vk/api/base/ApiCallback;
 
     return-void
 .end method
@@ -50,13 +50,13 @@
 
     iget v3, p0, Lcom/vk/stories/i;->d:I
 
-    iget-object v4, p0, Lcom/vk/stories/i;->e:Lcom/vk/api/base/a;
+    iget-object v4, p0, Lcom/vk/stories/i;->e:Lcom/vk/api/base/ApiCallback;
 
     move-object v5, p1
 
     check-cast v5, Ljava/lang/Integer;
 
-    invoke-static/range {v0 .. v5}, Lcom/vk/stories/StoriesController;->a(IIIILcom/vk/api/base/a;Ljava/lang/Integer;)V
+    invoke-static/range {v0 .. v5}, Lcom/vk/stories/StoriesController;->a(IIIILcom/vk/api/base/ApiCallback;Ljava/lang/Integer;)V
 
     return-void
 .end method

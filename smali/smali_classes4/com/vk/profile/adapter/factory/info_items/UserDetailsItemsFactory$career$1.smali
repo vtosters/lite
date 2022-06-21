@@ -3,7 +3,7 @@
 .source "UserDetailsItemsFactory.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/b;
+.implements Lkotlin/jvm/b/Functions2;
 
 
 # annotations
@@ -19,7 +19,7 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/b<",
+        "Lkotlin/jvm/b/Functions2<",
         "Lcom/vtosters/lite/api/ExtendedUserProfile;",
         "Ljava/util/ArrayList<",
         "Lcom/vk/profile/adapter/BaseInfoItem;",
@@ -99,7 +99,7 @@
 
     const-string v1, "profile.career"
 
-    invoke-static {p1, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 4
     invoke-interface {p1}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
@@ -135,7 +135,7 @@
 
     const-string v6, "e.city"
 
-    invoke-static {v4, v6}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v4, v6}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 7
     iget v6, v1, Lcom/vtosters/lite/api/ExtendedUserProfile$e;->e:I
@@ -391,13 +391,13 @@
     .line 22
     :cond_d
     :goto_6
-    new-instance v1, Lcom/vk/profile/adapter/items/l;
+    new-instance v1, Lcom/vk/profile/adapter/items/DetailsCareerItem;
 
     const-string v8, "title"
 
-    invoke-static {v5, v8}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v5, v8}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    invoke-direct {v1, v5, v4, v6, v7}, Lcom/vk/profile/adapter/items/l;-><init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Runnable;)V
+    invoke-direct {v1, v5, v4, v6, v7}, Lcom/vk/profile/adapter/items/DetailsCareerItem;-><init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Runnable;)V
 
     invoke-virtual {v0, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
@@ -414,7 +414,7 @@
     if-eqz p1, :cond_f
 
     .line 24
-    new-instance p1, Lcom/vk/profile/adapter/items/n;
+    new-instance p1, Lcom/vk/profile/adapter/items/DetailsHeaderItem;
 
     const v4, 0x7f12018f
 
@@ -428,7 +428,7 @@
 
     move-object v3, p1
 
-    invoke-direct/range {v3 .. v8}, Lcom/vk/profile/adapter/items/n;-><init>(ILjava/lang/String;Ljava/lang/Runnable;ILkotlin/jvm/internal/i;)V
+    invoke-direct/range {v3 .. v8}, Lcom/vk/profile/adapter/items/DetailsHeaderItem;-><init>(ILjava/lang/String;Ljava/lang/Runnable;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     invoke-virtual {v0, v2, p1}, Ljava/util/ArrayList;->add(ILjava/lang/Object;)V
 

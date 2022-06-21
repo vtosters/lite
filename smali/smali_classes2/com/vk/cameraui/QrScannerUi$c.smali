@@ -1,5 +1,5 @@
 .class final Lcom/vk/cameraui/QrScannerUi$c;
-.super Lcom/vk/core/ui/v/j/g/a;
+.super Lcom/vk/core/ui/v/j/g/UiTrackingPagerAdapter;
 .source "QrScannerUi.kt"
 
 
@@ -23,7 +23,7 @@
     .locals 0
 
     .line 1
-    invoke-direct {p0}, Lcom/vk/core/ui/v/j/g/a;-><init>()V
+    invoke-direct {p0}, Lcom/vk/core/ui/v/j/g/UiTrackingPagerAdapter;-><init>()V
 
     iput-object p1, p0, Lcom/vk/cameraui/QrScannerUi$c;->c:Lcom/vk/qrcode/QRSharingView;
 

@@ -1,5 +1,5 @@
 .class public final Lcom/vk/stories/clickable/dialogs/geo/holders/StoryGeoPlaceHolder;
-.super Lcom/vk/common/e/b;
+.super Lcom/vk/common/e/BaseItemHolder;
 .source "StoryGeoPlaceHolder.kt"
 
 
@@ -12,8 +12,8 @@
 
 .annotation system Ldalvik/annotation/Signature;
     value = {
-        "Lcom/vk/common/e/b<",
-        "Lcom/vk/stories/clickable/models/geo/b;",
+        "Lcom/vk/common/e/BaseItemHolder<",
+        "Lcom/vk/stories/clickable/models/geo/StoryGeoPlaceItem;",
         ">;"
     }
 .end annotation
@@ -32,14 +32,14 @@
     .locals 0
 
     .line 1
-    invoke-direct {p0, p1}, Lcom/vk/common/e/b;-><init>(Landroid/view/View;)V
+    invoke-direct {p0, p1}, Lcom/vk/common/e/BaseItemHolder;-><init>(Landroid/view/View;)V
 
     iput-object p2, p0, Lcom/vk/stories/clickable/dialogs/geo/holders/StoryGeoPlaceHolder;->e:Lcom/vk/stories/clickable/dialogs/geo/holders/StoryGeoPlaceHolder$a;
 
     const p2, 0x7f0a09bf
 
     .line 2
-    invoke-virtual {p0, p2}, Lcom/vk/common/e/b;->i(I)Landroid/view/View;
+    invoke-virtual {p0, p2}, Lcom/vk/common/e/BaseItemHolder;->i(I)Landroid/view/View;
 
     move-result-object p2
 
@@ -50,7 +50,7 @@
     const p2, 0x7f0a09be
 
     .line 3
-    invoke-virtual {p0, p2}, Lcom/vk/common/e/b;->i(I)Landroid/view/View;
+    invoke-virtual {p0, p2}, Lcom/vk/common/e/BaseItemHolder;->i(I)Landroid/view/View;
 
     move-result-object p2
 
@@ -63,7 +63,7 @@
 
     invoke-direct {p2, p0}, Lcom/vk/stories/clickable/dialogs/geo/holders/StoryGeoPlaceHolder$1;-><init>(Lcom/vk/stories/clickable/dialogs/geo/holders/StoryGeoPlaceHolder;)V
 
-    invoke-static {p1, p2}, Lcom/vk/core/extensions/ViewGroupExtKt;->a(Landroid/view/View;Lkotlin/jvm/b/b;)V
+    invoke-static {p1, p2}, Lcom/vk/core/extensions/ViewGroupExtKt;->a(Landroid/view/View;Lkotlin/jvm/b/Functions2;)V
 
     return-void
 .end method
@@ -77,28 +77,28 @@
     return-object p0
 .end method
 
-.method public static final synthetic b(Lcom/vk/stories/clickable/dialogs/geo/holders/StoryGeoPlaceHolder;)Lcom/vk/stories/clickable/models/geo/b;
+.method public static final synthetic b(Lcom/vk/stories/clickable/dialogs/geo/holders/StoryGeoPlaceHolder;)Lcom/vk/stories/clickable/models/geo/StoryGeoPlaceItem;
     .locals 0
 
     .line 1
-    invoke-virtual {p0}, Lcom/vk/common/e/b;->d0()Lcom/vk/common/i/b;
+    invoke-virtual {p0}, Lcom/vk/common/e/BaseItemHolder;->d0()Lcom/vk/common/i/RecyclerItem;
 
     move-result-object p0
 
-    check-cast p0, Lcom/vk/stories/clickable/models/geo/b;
+    check-cast p0, Lcom/vk/stories/clickable/models/geo/StoryGeoPlaceItem;
 
     return-object p0
 .end method
 
 
 # virtual methods
-.method protected a(Lcom/vk/stories/clickable/models/geo/b;)V
+.method protected a(Lcom/vk/stories/clickable/models/geo/StoryGeoPlaceItem;)V
     .locals 2
 
     .line 2
     iget-object v0, p0, Lcom/vk/stories/clickable/dialogs/geo/holders/StoryGeoPlaceHolder;->c:Landroid/widget/TextView;
 
-    invoke-virtual {p1}, Lcom/vk/stories/clickable/models/geo/b;->c()Lcom/vk/dto/geo/GeoLocation;
+    invoke-virtual {p1}, Lcom/vk/stories/clickable/models/geo/StoryGeoPlaceItem;->c()Lcom/vk/dto/geo/GeoLocation;
 
     move-result-object v1
 
@@ -111,22 +111,22 @@
     .line 3
     iget-object v0, p0, Lcom/vk/stories/clickable/dialogs/geo/holders/StoryGeoPlaceHolder;->d:Landroid/widget/TextView;
 
-    invoke-virtual {p1}, Lcom/vk/stories/clickable/models/geo/b;->d()Ljava/lang/String;
+    invoke-virtual {p1}, Lcom/vk/stories/clickable/models/geo/StoryGeoPlaceItem;->d()Ljava/lang/String;
 
     move-result-object p1
 
-    invoke-static {v0, p1}, Lcom/vk/core/extensions/a0;->a(Landroid/widget/TextView;Ljava/lang/CharSequence;)V
+    invoke-static {v0, p1}, Lcom/vk/core/extensions/TextViewExt;->a(Landroid/widget/TextView;Ljava/lang/CharSequence;)V
 
     return-void
 .end method
 
-.method public bridge synthetic b(Lcom/vk/common/i/b;)V
+.method public bridge synthetic b(Lcom/vk/common/i/RecyclerItem;)V
     .locals 0
 
     .line 2
-    check-cast p1, Lcom/vk/stories/clickable/models/geo/b;
+    check-cast p1, Lcom/vk/stories/clickable/models/geo/StoryGeoPlaceItem;
 
-    invoke-virtual {p0, p1}, Lcom/vk/stories/clickable/dialogs/geo/holders/StoryGeoPlaceHolder;->a(Lcom/vk/stories/clickable/models/geo/b;)V
+    invoke-virtual {p0, p1}, Lcom/vk/stories/clickable/dialogs/geo/holders/StoryGeoPlaceHolder;->a(Lcom/vk/stories/clickable/models/geo/StoryGeoPlaceItem;)V
 
     return-void
 .end method

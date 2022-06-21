@@ -1,11 +1,11 @@
 .class public final Lcom/vk/profile/ui/photos/photo_list/PhotoAlbumFragment$b;
-.super Lcom/vk/profile/ui/b;
+.super Lcom/vk/profile/ui/AnimationPaginatedView;
 .source "PhotoAlbumFragment.kt"
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/profile/ui/photos/photo_list/PhotoAlbumFragment;->R4()Lcom/vk/profile/ui/b;
+    value = Lcom/vk/profile/ui/photos/photo_list/PhotoAlbumFragment;->R4()Lcom/vk/profile/ui/AnimationPaginatedView;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -44,7 +44,7 @@
 
     move-object v1, p2
 
-    invoke-direct/range {v0 .. v5}, Lcom/vk/profile/ui/b;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;IILkotlin/jvm/internal/i;)V
+    invoke-direct/range {v0 .. v5}, Lcom/vk/profile/ui/AnimationPaginatedView;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;IILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     return-void
 .end method
@@ -87,7 +87,7 @@
 
     move-result-object v0
 
-    invoke-static {v0}, Lcom/vk/profile/ui/photos/album_list/a;->a(Lcom/vk/dto/photo/PhotoAlbum;)Z
+    invoke-static {v0}, Lcom/vk/profile/ui/photos/album_list/PhotoAlbumsUtils;->a(Lcom/vk/dto/photo/PhotoAlbum;)Z
 
     move-result v0
 
@@ -106,7 +106,7 @@
     const-string v0, "addPhotoButton"
 
     .line 5
-    invoke-static {p2, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p2, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     const/16 v0, 0x8
 
@@ -116,13 +116,13 @@
     const-string p2, "view"
 
     .line 6
-    invoke-static {p1, p2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, p2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     return-object p1
 
     .line 7
     :cond_1
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     const/4 p1, 0x0
 

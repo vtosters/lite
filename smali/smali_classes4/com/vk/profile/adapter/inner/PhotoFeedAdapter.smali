@@ -1,5 +1,5 @@
 .class public abstract Lcom/vk/profile/adapter/inner/PhotoFeedAdapter;
-.super Lcom/vtosters/lite/ui/adapters/b;
+.super Lcom/vtosters/lite/ui/adapters/LoadingAdapter;
 .source "PhotoFeedAdapter.kt"
 
 
@@ -14,7 +14,7 @@
 
 .annotation system Ldalvik/annotation/Signature;
     value = {
-        "Lcom/vtosters/lite/ui/adapters/b<",
+        "Lcom/vtosters/lite/ui/adapters/LoadingAdapter<",
         "Lcom/vk/dto/photo/Photo;",
         "Lcom/vk/profile/adapter/inner/PhotoFeedAdapter$c;",
         ">;"
@@ -23,21 +23,21 @@
 
 
 # static fields
-.field static final synthetic h:[Lkotlin/u/j;
+.field static final synthetic h:[Lkotlin/u/KProperty5;
 
 
 # instance fields
-.field private e:Lcom/vk/bridges/p$d;
+.field private e:Lcom/vk/bridges/ImageViewer$d;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Lcom/vk/bridges/p$d<",
+            "Lcom/vk/bridges/ImageViewer$d<",
             "Lcom/vk/dto/photo/Photo;",
             ">;"
         }
     .end annotation
 .end field
 
-.field private final f:Lkotlin/e;
+.field private final f:Lkotlin/Lazy2;
 
 .field private g:Lcom/vtosters/lite/api/ExtendedUserProfile;
 
@@ -48,13 +48,13 @@
 
     const/4 v0, 0x1
 
-    new-array v0, v0, [Lkotlin/u/j;
+    new-array v0, v0, [Lkotlin/u/KProperty5;
 
     new-instance v1, Lkotlin/jvm/internal/PropertyReference1Impl;
 
     const-class v2, Lcom/vk/profile/adapter/inner/PhotoFeedAdapter;
 
-    invoke-static {v2}, Lkotlin/jvm/internal/o;->a(Ljava/lang/Class;)Lkotlin/u/c;
+    invoke-static {v2}, Lkotlin/jvm/internal/Reflection;->a(Ljava/lang/Class;)Lkotlin/u/KClass;
 
     move-result-object v2
 
@@ -62,15 +62,15 @@
 
     const-string v4, "getViewerCallback()Lcom/vk/profile/adapter/inner/PhotoFeedAdapter$ImageViewerCallback;"
 
-    invoke-direct {v1, v2, v3, v4}, Lkotlin/jvm/internal/PropertyReference1Impl;-><init>(Lkotlin/u/e;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-direct {v1, v2, v3, v4}, Lkotlin/jvm/internal/PropertyReference1Impl;-><init>(Lkotlin/u/KDeclarationContainer;Ljava/lang/String;Ljava/lang/String;)V
 
-    invoke-static {v1}, Lkotlin/jvm/internal/o;->a(Lkotlin/jvm/internal/PropertyReference1;)Lkotlin/u/l;
+    invoke-static {v1}, Lkotlin/jvm/internal/Reflection;->a(Lkotlin/jvm/internal/PropertyReference1;)Lkotlin/u/KProperty2;
 
     const/4 v2, 0x0
 
     aput-object v1, v0, v2
 
-    sput-object v0, Lcom/vk/profile/adapter/inner/PhotoFeedAdapter;->h:[Lkotlin/u/j;
+    sput-object v0, Lcom/vk/profile/adapter/inner/PhotoFeedAdapter;->h:[Lkotlin/u/KProperty5;
 
     return-void
 .end method
@@ -83,7 +83,7 @@
 
     const/16 v1, 0x32
 
-    invoke-direct {p0, v0, v1}, Lcom/vtosters/lite/ui/adapters/b;-><init>(Ljava/util/List;I)V
+    invoke-direct {p0, v0, v1}, Lcom/vtosters/lite/ui/adapters/LoadingAdapter;-><init>(Ljava/util/List;I)V
 
     iput-object p1, p0, Lcom/vk/profile/adapter/inner/PhotoFeedAdapter;->g:Lcom/vtosters/lite/api/ExtendedUserProfile;
 
@@ -92,29 +92,29 @@
 
     invoke-direct {p1, p0}, Lcom/vk/profile/adapter/inner/PhotoFeedAdapter$viewerCallback$2;-><init>(Lcom/vk/profile/adapter/inner/PhotoFeedAdapter;)V
 
-    invoke-static {p1}, Lkotlin/g;->a(Lkotlin/jvm/b/a;)Lkotlin/e;
+    invoke-static {p1}, Lkotlin/g;->a(Lkotlin/jvm/b/Functions;)Lkotlin/Lazy2;
 
     move-result-object p1
 
-    iput-object p1, p0, Lcom/vk/profile/adapter/inner/PhotoFeedAdapter;->f:Lkotlin/e;
+    iput-object p1, p0, Lcom/vk/profile/adapter/inner/PhotoFeedAdapter;->f:Lkotlin/Lazy2;
 
     return-void
 .end method
 
-.method public static final synthetic a(Lcom/vk/profile/adapter/inner/PhotoFeedAdapter;)Ld/a/a/c/c;
+.method public static final synthetic a(Lcom/vk/profile/adapter/inner/PhotoFeedAdapter;)Lme/grishka/appkit/utils/Preloader;
     .locals 0
 
     .line 1
-    iget-object p0, p0, Lcom/vtosters/lite/ui/adapters/b;->a:Ld/a/a/c/c;
+    iget-object p0, p0, Lcom/vtosters/lite/ui/adapters/LoadingAdapter;->a:Lme/grishka/appkit/utils/Preloader;
 
     return-object p0
 .end method
 
-.method public static final synthetic a(Lcom/vk/profile/adapter/inner/PhotoFeedAdapter;Lcom/vk/bridges/p$d;)V
+.method public static final synthetic a(Lcom/vk/profile/adapter/inner/PhotoFeedAdapter;Lcom/vk/bridges/ImageViewer$d;)V
     .locals 0
 
     .line 2
-    iput-object p1, p0, Lcom/vk/profile/adapter/inner/PhotoFeedAdapter;->e:Lcom/vk/bridges/p$d;
+    iput-object p1, p0, Lcom/vk/profile/adapter/inner/PhotoFeedAdapter;->e:Lcom/vk/bridges/ImageViewer$d;
 
     return-void
 .end method
@@ -123,7 +123,7 @@
     .locals 0
 
     .line 1
-    iget-object p0, p0, Lcom/vtosters/lite/ui/adapters/b;->d:Ljava/lang/ref/WeakReference;
+    iget-object p0, p0, Lcom/vtosters/lite/ui/adapters/LoadingAdapter;->d:Ljava/lang/ref/WeakReference;
 
     return-object p0
 .end method
@@ -139,11 +139,11 @@
     return-object p0
 .end method
 
-.method public static final synthetic d(Lcom/vk/profile/adapter/inner/PhotoFeedAdapter;)Lcom/vk/bridges/p$d;
+.method public static final synthetic d(Lcom/vk/profile/adapter/inner/PhotoFeedAdapter;)Lcom/vk/bridges/ImageViewer$d;
     .locals 0
 
     .line 1
-    iget-object p0, p0, Lcom/vk/profile/adapter/inner/PhotoFeedAdapter;->e:Lcom/vk/bridges/p$d;
+    iget-object p0, p0, Lcom/vk/profile/adapter/inner/PhotoFeedAdapter;->e:Lcom/vk/bridges/ImageViewer$d;
 
     return-object p0
 .end method
@@ -160,15 +160,15 @@
 .method private final k()Lcom/vk/profile/adapter/inner/PhotoFeedAdapter$b;
     .locals 3
 
-    iget-object v0, p0, Lcom/vk/profile/adapter/inner/PhotoFeedAdapter;->f:Lkotlin/e;
+    iget-object v0, p0, Lcom/vk/profile/adapter/inner/PhotoFeedAdapter;->f:Lkotlin/Lazy2;
 
-    sget-object v1, Lcom/vk/profile/adapter/inner/PhotoFeedAdapter;->h:[Lkotlin/u/j;
+    sget-object v1, Lcom/vk/profile/adapter/inner/PhotoFeedAdapter;->h:[Lkotlin/u/KProperty5;
 
     const/4 v2, 0x0
 
     aget-object v1, v1, v2
 
-    invoke-interface {v0}, Lkotlin/e;->getValue()Ljava/lang/Object;
+    invoke-interface {v0}, Lkotlin/Lazy2;->getValue()Ljava/lang/Object;
 
     move-result-object v0
 
@@ -181,9 +181,9 @@
     .locals 1
 
     .line 1
-    iget-object v0, p0, Lcom/vtosters/lite/ui/adapters/b;->a:Ld/a/a/c/c;
+    iget-object v0, p0, Lcom/vtosters/lite/ui/adapters/LoadingAdapter;->a:Lme/grishka/appkit/utils/Preloader;
 
-    invoke-virtual {v0}, Ld/a/a/c/c;->e()V
+    invoke-virtual {v0}, Lme/grishka/appkit/utils/Preloader;->e()V
 
     return-void
 .end method
@@ -194,13 +194,13 @@
     .locals 1
 
     .line 3
-    iget-object v0, p0, Lcom/vtosters/lite/ui/adapters/b;->b:Ljava/util/ArrayList;
+    iget-object v0, p0, Lcom/vtosters/lite/ui/adapters/LoadingAdapter;->b:Ljava/util/ArrayList;
 
     invoke-virtual {v0, p2}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
 
     move-result-object p2
 
-    invoke-virtual {p1, p2}, Lcom/vtosters/lite/ui/b0/i;->a(Ljava/lang/Object;)V
+    invoke-virtual {p1, p2}, Lcom/vtosters/lite/ui/holder/RecyclerHolder;->a(Ljava/lang/Object;)V
 
     return-void
 .end method
@@ -209,7 +209,7 @@
     .locals 2
 
     .line 2
-    iget-object p2, p0, Lcom/vtosters/lite/ui/adapters/b;->b:Ljava/util/ArrayList;
+    iget-object p2, p0, Lcom/vtosters/lite/ui/adapters/LoadingAdapter;->b:Ljava/util/ArrayList;
 
     invoke-virtual {p2, p1}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
 
@@ -252,7 +252,7 @@
 
     const-string p2, "displayItems[position].g\u20262) 200 else 130 else 130)"
 
-    invoke-static {p1, p2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, p2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {p1}, Lcom/vk/dto/common/ImageSize;->v1()Ljava/lang/String;
 
@@ -340,7 +340,7 @@
     if-nez v2, :cond_0
 
     .line 3
-    iget-object v2, p0, Lcom/vtosters/lite/ui/adapters/b;->b:Ljava/util/ArrayList;
+    iget-object v2, p0, Lcom/vtosters/lite/ui/adapters/LoadingAdapter;->b:Ljava/util/ArrayList;
 
     invoke-virtual {v2, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
@@ -348,15 +348,15 @@
 
     .line 4
     :cond_1
-    iget-object v0, p0, Lcom/vk/profile/adapter/inner/PhotoFeedAdapter;->e:Lcom/vk/bridges/p$d;
+    iget-object v0, p0, Lcom/vk/profile/adapter/inner/PhotoFeedAdapter;->e:Lcom/vk/bridges/ImageViewer$d;
 
     if-eqz v0, :cond_2
 
-    invoke-interface {v0, p1}, Lcom/vk/bridges/p$d;->a(Ljava/util/List;)V
+    invoke-interface {v0, p1}, Lcom/vk/bridges/ImageViewer$d;->a(Ljava/util/List;)V
 
     .line 5
     :cond_2
-    iget-object p1, p0, Lcom/vtosters/lite/ui/adapters/b;->b:Ljava/util/ArrayList;
+    iget-object p1, p0, Lcom/vtosters/lite/ui/adapters/LoadingAdapter;->b:Ljava/util/ArrayList;
 
     invoke-virtual {p1}, Ljava/util/ArrayList;->size()I
 

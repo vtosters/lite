@@ -3,7 +3,7 @@
 .source "MsgStorageManager.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/b;
+.implements Lkotlin/jvm/b/Functions2;
 
 
 # annotations
@@ -19,9 +19,9 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/b<",
+        "Lkotlin/jvm/b/Functions2<",
         "Lio/requery/android/database/sqlite/SQLiteDatabase;",
-        "Lkotlin/m;",
+        "Lkotlin/Unit;",
         ">;"
     }
 .end annotation
@@ -80,16 +80,16 @@
 
     move-result-object v1
 
-    check-cast v1, Lcom/vk/im/engine/models/messages/d;
+    check-cast v1, Lcom/vk/im/engine/models/messages/MsgHistoryOnServerIsEmpty;
 
     const-string v2, "stmt"
 
     .line 4
-    invoke-static {p1, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     const/4 v2, 0x1
 
-    invoke-virtual {v1}, Lcom/vk/im/engine/models/messages/d;->a()I
+    invoke-virtual {v1}, Lcom/vk/im/engine/models/messages/MsgHistoryOnServerIsEmpty;->a()I
 
     move-result v3
 
@@ -98,7 +98,7 @@
     const/4 v2, 0x2
 
     .line 5
-    invoke-virtual {v1}, Lcom/vk/im/engine/models/messages/d;->c()Z
+    invoke-virtual {v1}, Lcom/vk/im/engine/models/messages/MsgHistoryOnServerIsEmpty;->c()Z
 
     move-result v3
 
@@ -107,7 +107,7 @@
     const/4 v2, 0x3
 
     .line 6
-    invoke-virtual {v1}, Lcom/vk/im/engine/models/messages/d;->b()I
+    invoke-virtual {v1}, Lcom/vk/im/engine/models/messages/MsgHistoryOnServerIsEmpty;->b()I
 
     move-result v1
 
@@ -120,14 +120,14 @@
 
     .line 8
     :cond_0
-    sget-object v0, Lkotlin/m;->a:Lkotlin/m;
+    sget-object v0, Lkotlin/Unit;->a:Lkotlin/Unit;
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
     const/4 v0, 0x0
 
     .line 9
-    invoke-static {p1, v0}, Lkotlin/io/b;->a(Ljava/io/Closeable;Ljava/lang/Throwable;)V
+    invoke-static {p1, v0}, Lkotlin/io/Closeable;->a(Ljava/io/Closeable;Ljava/lang/Throwable;)V
 
     return-void
 
@@ -142,7 +142,7 @@
     :catchall_1
     move-exception v1
 
-    invoke-static {p1, v0}, Lkotlin/io/b;->a(Ljava/io/Closeable;Ljava/lang/Throwable;)V
+    invoke-static {p1, v0}, Lkotlin/io/Closeable;->a(Ljava/io/Closeable;Ljava/lang/Throwable;)V
 
     throw v1
 .end method
@@ -155,7 +155,7 @@
 
     invoke-virtual {p0, p1}, Lcom/vk/im/engine/internal/storage/delegates/messages/MsgStorageManager$putHistoryIsEmptyValueToDb$1;->a(Lio/requery/android/database/sqlite/SQLiteDatabase;)V
 
-    sget-object p1, Lkotlin/m;->a:Lkotlin/m;
+    sget-object p1, Lkotlin/Unit;->a:Lkotlin/Unit;
 
     return-object p1
 .end method

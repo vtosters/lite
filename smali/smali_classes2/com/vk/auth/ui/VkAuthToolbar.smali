@@ -37,7 +37,7 @@
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, v1}, Lcom/vk/auth/ui/VkAuthToolbar$a;-><init>(Lkotlin/jvm/internal/i;)V
+    invoke-direct {v0, v1}, Lcom/vk/auth/ui/VkAuthToolbar$a;-><init>(Lkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     sput-object v0, Lcom/vk/auth/ui/VkAuthToolbar;->g:Lcom/vk/auth/ui/VkAuthToolbar$a;
 
@@ -59,7 +59,7 @@
 
     move-object v1, p1
 
-    invoke-direct/range {v0 .. v5}, Lcom/vk/auth/ui/VkAuthToolbar;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;IILkotlin/jvm/internal/i;)V
+    invoke-direct/range {v0 .. v5}, Lcom/vk/auth/ui/VkAuthToolbar;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;IILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     return-void
 .end method
@@ -79,7 +79,7 @@
 
     move-object v2, p2
 
-    invoke-direct/range {v0 .. v5}, Lcom/vk/auth/ui/VkAuthToolbar;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;IILkotlin/jvm/internal/i;)V
+    invoke-direct/range {v0 .. v5}, Lcom/vk/auth/ui/VkAuthToolbar;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;IILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     return-void
 .end method
@@ -300,7 +300,7 @@
     throw p2
 .end method
 
-.method public synthetic constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;IILkotlin/jvm/internal/i;)V
+.method public synthetic constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;IILkotlin/jvm/internal/DefaultConstructorMarker;)V
     .locals 0
 
     and-int/lit8 p5, p4, 0x2
@@ -622,7 +622,7 @@
 
     const-string v1, "titleView.text"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     return-object v0
 .end method
@@ -642,7 +642,7 @@
     .line 1
     iget-object v0, p0, Lcom/vk/auth/ui/VkAuthToolbar;->c:Landroidx/appcompat/widget/AppCompatImageButton;
 
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v0
 
@@ -935,15 +935,15 @@
     return-void
 .end method
 
-.method public final setNavigationOnClickListener(Lkotlin/jvm/b/b;)V
+.method public final setNavigationOnClickListener(Lkotlin/jvm/b/Functions2;)V
     .locals 2
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lkotlin/jvm/b/b<",
+            "Lkotlin/jvm/b/Functions2<",
             "-",
             "Landroid/view/View;",
-            "Lkotlin/m;",
+            "Lkotlin/Unit;",
             ">;)V"
         }
     .end annotation
@@ -951,9 +951,9 @@
     .line 2
     iget-object v0, p0, Lcom/vk/auth/ui/VkAuthToolbar;->c:Landroidx/appcompat/widget/AppCompatImageButton;
 
-    new-instance v1, Lcom/vk/auth/ui/b;
+    new-instance v1, Lcom/vk/auth/ui/VkAuthToolbar1;
 
-    invoke-direct {v1, p1}, Lcom/vk/auth/ui/b;-><init>(Lkotlin/jvm/b/b;)V
+    invoke-direct {v1, p1}, Lcom/vk/auth/ui/VkAuthToolbar1;-><init>(Lkotlin/jvm/b/Functions2;)V
 
     invoke-virtual {v0, v1}, Landroid/widget/ImageButton;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 

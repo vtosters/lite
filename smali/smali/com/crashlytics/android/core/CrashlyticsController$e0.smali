@@ -3,7 +3,7 @@
 .source "CrashlyticsController.java"
 
 # interfaces
-.implements Lcom/crashlytics/android/core/m0$b;
+.implements Lcom/crashlytics/android/core/ReportUploader$b;
 
 
 # annotations

@@ -3,12 +3,12 @@
 .source "VKAnimationLoader.kt"
 
 # interfaces
-.implements Lc/a/z/j;
+.implements Lio/reactivex/functions/Function;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/stickers/views/animation/VKAnimationLoader;->b(Ljava/lang/String;Ljava/lang/String;)Lc/a/m;
+    value = Lcom/vk/stickers/views/animation/VKAnimationLoader;->b(Ljava/lang/String;Ljava/lang/String;)Lio/reactivex/Observable;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -24,7 +24,7 @@
         "Ljava/lang/Object;",
         ">",
         "Ljava/lang/Object;",
-        "Lc/a/z/j<",
+        "Lio/reactivex/functions/Function<",
         "TT;TR;>;"
     }
 .end annotation
@@ -65,7 +65,7 @@
 
     move-result-object p1
 
-    invoke-static {p1}, Lcom/vk/core/util/f0;->c([B)Ljava/lang/String;
+    invoke-static {p1}, Lcom/vk/core/util/GZIPCompression;->c([B)Ljava/lang/String;
 
     move-result-object p1
 

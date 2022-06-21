@@ -78,11 +78,11 @@
     .line 2
     iget-object p1, p0, Lcom/android/installreferrer/api/InstallReferrerClientImpl$InstallReferrerServiceConnection;->this$0:Lcom/android/installreferrer/api/InstallReferrerClientImpl;
 
-    invoke-static {p2}, Lb/d/a/b/a/a$a;->a(Landroid/os/IBinder;)Lb/d/a/b/a/a;
+    invoke-static {p2}, Lb/d/a/b/a/IGetInstallReferrerService$a;->a(Landroid/os/IBinder;)Lb/d/a/b/a/IGetInstallReferrerService;
 
     move-result-object p2
 
-    invoke-static {p1, p2}, Lcom/android/installreferrer/api/InstallReferrerClientImpl;->access$102(Lcom/android/installreferrer/api/InstallReferrerClientImpl;Lb/d/a/b/a/a;)Lb/d/a/b/a/a;
+    invoke-static {p1, p2}, Lcom/android/installreferrer/api/InstallReferrerClientImpl;->access$102(Lcom/android/installreferrer/api/InstallReferrerClientImpl;Lb/d/a/b/a/IGetInstallReferrerService;)Lb/d/a/b/a/IGetInstallReferrerService;
 
     .line 3
     iget-object p1, p0, Lcom/android/installreferrer/api/InstallReferrerClientImpl$InstallReferrerServiceConnection;->this$0:Lcom/android/installreferrer/api/InstallReferrerClientImpl;
@@ -116,7 +116,7 @@
 
     const/4 v0, 0x0
 
-    invoke-static {p1, v0}, Lcom/android/installreferrer/api/InstallReferrerClientImpl;->access$102(Lcom/android/installreferrer/api/InstallReferrerClientImpl;Lb/d/a/b/a/a;)Lb/d/a/b/a/a;
+    invoke-static {p1, v0}, Lcom/android/installreferrer/api/InstallReferrerClientImpl;->access$102(Lcom/android/installreferrer/api/InstallReferrerClientImpl;Lb/d/a/b/a/IGetInstallReferrerService;)Lb/d/a/b/a/IGetInstallReferrerService;
 
     .line 3
     iget-object p1, p0, Lcom/android/installreferrer/api/InstallReferrerClientImpl$InstallReferrerServiceConnection;->this$0:Lcom/android/installreferrer/api/InstallReferrerClientImpl;

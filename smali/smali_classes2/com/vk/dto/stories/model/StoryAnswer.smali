@@ -47,7 +47,7 @@
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, v1}, Lcom/vk/dto/stories/model/StoryAnswer$b;-><init>(Lkotlin/jvm/internal/i;)V
+    invoke-direct {v0, v1}, Lcom/vk/dto/stories/model/StoryAnswer$b;-><init>(Lkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     .line 1
     new-instance v0, Lcom/vk/dto/stories/model/StoryAnswer$a;
@@ -87,7 +87,7 @@
     return-void
 .end method
 
-.method public synthetic constructor <init>(IIILjava/lang/String;Ljava/lang/String;Lcom/vk/dto/user/UserProfile;IILkotlin/jvm/internal/i;)V
+.method public synthetic constructor <init>(IIILjava/lang/String;Ljava/lang/String;Lcom/vk/dto/user/UserProfile;IILkotlin/jvm/internal/DefaultConstructorMarker;)V
     .locals 9
 
     and-int/lit8 v0, p8, 0x20

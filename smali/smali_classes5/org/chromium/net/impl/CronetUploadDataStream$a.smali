@@ -104,7 +104,7 @@
     .line 9
     iget-object v0, p0, Lorg/chromium/net/impl/CronetUploadDataStream$a;->a:Lorg/chromium/net/impl/CronetUploadDataStream;
 
-    invoke-static {v0}, Lorg/chromium/net/impl/CronetUploadDataStream;->e(Lorg/chromium/net/impl/CronetUploadDataStream;)Lorg/chromium/net/impl/r;
+    invoke-static {v0}, Lorg/chromium/net/impl/CronetUploadDataStream;->e(Lorg/chromium/net/impl/CronetUploadDataStream;)Lorg/chromium/net/impl/VersionSafeCallbacks4;
 
     move-result-object v0
 
@@ -116,7 +116,7 @@
 
     move-result-object v2
 
-    invoke-virtual {v0, v1, v2}, Lorg/chromium/net/impl/r;->a(Lorg/chromium/net/v;Ljava/nio/ByteBuffer;)V
+    invoke-virtual {v0, v1, v2}, Lorg/chromium/net/impl/VersionSafeCallbacks4;->a(Lorg/chromium/net/UploadDataSink;Ljava/nio/ByteBuffer;)V
     :try_end_1
     .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_0
 

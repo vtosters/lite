@@ -19,7 +19,7 @@
 
 .field private final b:Lcom/vk/im/engine/models/ProfilesInfo;
 
-.field private final c:Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/b;
+.field private final c:Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/AdapterEntryList;
 
 .field private final d:Z
 
@@ -27,7 +27,7 @@
 
 
 # direct methods
-.method public constructor <init>(Lcom/vk/im/engine/models/messages/MsgHistory;Lcom/vk/im/engine/models/ProfilesInfo;Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/b;ZLandroidx/recyclerview/widget/DiffUtil$DiffResult;)V
+.method public constructor <init>(Lcom/vk/im/engine/models/messages/MsgHistory;Lcom/vk/im/engine/models/ProfilesInfo;Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/AdapterEntryList;ZLandroidx/recyclerview/widget/DiffUtil$DiffResult;)V
     .locals 0
 
     .line 1
@@ -37,7 +37,7 @@
 
     iput-object p2, p0, Lcom/vk/im/ui/components/msg_list/tasks/UpdateMsgViaCacheTask$b;->b:Lcom/vk/im/engine/models/ProfilesInfo;
 
-    iput-object p3, p0, Lcom/vk/im/ui/components/msg_list/tasks/UpdateMsgViaCacheTask$b;->c:Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/b;
+    iput-object p3, p0, Lcom/vk/im/ui/components/msg_list/tasks/UpdateMsgViaCacheTask$b;->c:Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/AdapterEntryList;
 
     iput-boolean p4, p0, Lcom/vk/im/ui/components/msg_list/tasks/UpdateMsgViaCacheTask$b;->d:Z
 
@@ -57,11 +57,11 @@
     return-object v0
 .end method
 
-.method public final b()Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/b;
+.method public final b()Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/AdapterEntryList;
     .locals 1
 
     .line 1
-    iget-object v0, p0, Lcom/vk/im/ui/components/msg_list/tasks/UpdateMsgViaCacheTask$b;->c:Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/b;
+    iget-object v0, p0, Lcom/vk/im/ui/components/msg_list/tasks/UpdateMsgViaCacheTask$b;->c:Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/AdapterEntryList;
 
     return-object v0
 .end method
@@ -108,7 +108,7 @@
 
     iget-object v1, p1, Lcom/vk/im/ui/components/msg_list/tasks/UpdateMsgViaCacheTask$b;->a:Lcom/vk/im/engine/models/messages/MsgHistory;
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v0
 
@@ -118,17 +118,17 @@
 
     iget-object v1, p1, Lcom/vk/im/ui/components/msg_list/tasks/UpdateMsgViaCacheTask$b;->b:Lcom/vk/im/engine/models/ProfilesInfo;
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    iget-object v0, p0, Lcom/vk/im/ui/components/msg_list/tasks/UpdateMsgViaCacheTask$b;->c:Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/b;
+    iget-object v0, p0, Lcom/vk/im/ui/components/msg_list/tasks/UpdateMsgViaCacheTask$b;->c:Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/AdapterEntryList;
 
-    iget-object v1, p1, Lcom/vk/im/ui/components/msg_list/tasks/UpdateMsgViaCacheTask$b;->c:Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/b;
+    iget-object v1, p1, Lcom/vk/im/ui/components/msg_list/tasks/UpdateMsgViaCacheTask$b;->c:Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/AdapterEntryList;
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v0
 
@@ -144,7 +144,7 @@
 
     iget-object p1, p1, Lcom/vk/im/ui/components/msg_list/tasks/UpdateMsgViaCacheTask$b;->e:Landroidx/recyclerview/widget/DiffUtil$DiffResult;
 
-    invoke-static {v0, p1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v0, p1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result p1
 
@@ -173,7 +173,7 @@
 
     if-eqz v0, :cond_0
 
-    invoke-virtual {v0}, Lcom/vk/im/engine/models/d;->hashCode()I
+    invoke-virtual {v0}, Lcom/vk/im/engine/models/History;->hashCode()I
 
     move-result v0
 
@@ -203,7 +203,7 @@
 
     mul-int/lit8 v0, v0, 0x1f
 
-    iget-object v2, p0, Lcom/vk/im/ui/components/msg_list/tasks/UpdateMsgViaCacheTask$b;->c:Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/b;
+    iget-object v2, p0, Lcom/vk/im/ui/components/msg_list/tasks/UpdateMsgViaCacheTask$b;->c:Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/AdapterEntryList;
 
     if-eqz v2, :cond_2
 
@@ -273,7 +273,7 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget-object v1, p0, Lcom/vk/im/ui/components/msg_list/tasks/UpdateMsgViaCacheTask$b;->c:Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/b;
+    iget-object v1, p0, Lcom/vk/im/ui/components/msg_list/tasks/UpdateMsgViaCacheTask$b;->c:Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/AdapterEntryList;
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 

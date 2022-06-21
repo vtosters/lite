@@ -3,7 +3,7 @@
 .source "ArtistInfoVh.kt"
 
 # interfaces
-.implements Lcom/vk/catalog2/core/holders/common/n;
+.implements Lcom/vk/catalog2/core/holders/common/CatalogViewHolder;
 .implements Landroid/view/View$OnClickListener;
 
 
@@ -24,11 +24,11 @@
 
 
 # instance fields
-.field private B:Lcom/facebook/imagepipeline/request/a;
+.field private B:Lcom/facebook/imagepipeline/request/BasePostprocessor;
 
-.field private final C:Lcom/vk/music/player/d;
+.field private final C:Lcom/vk/music/player/PlayerModel;
 
-.field private final D:Lcom/vk/music/d/a;
+.field private final D:Lcom/vk/music/d/MusicArtistModel;
 
 .field private a:Lcom/vk/imageloader/view/VKImageView;
 
@@ -44,7 +44,7 @@
 
 .field private g:Lcom/vk/catalog2/core/blocks/UIBlockMusicArtist;
 
-.field private h:Lio/reactivex/disposables/b;
+.field private h:Lio/reactivex/disposables/Disposable;
 
 
 # direct methods
@@ -55,7 +55,7 @@
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, v1}, Lcom/vk/catalog2/core/holders/music/artist/ArtistInfoVh$a;-><init>(Lkotlin/jvm/internal/i;)V
+    invoke-direct {v0, v1}, Lcom/vk/catalog2/core/holders/music/artist/ArtistInfoVh$a;-><init>(Lkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     .line 1
     sget v0, Lcom/vk/catalog2/core/p;->ic_done_16:I
@@ -75,15 +75,15 @@
     return-void
 .end method
 
-.method public constructor <init>(Lcom/facebook/imagepipeline/request/a;Lcom/vk/music/player/d;Lcom/vk/music/d/a;)V
+.method public constructor <init>(Lcom/facebook/imagepipeline/request/BasePostprocessor;Lcom/vk/music/player/PlayerModel;Lcom/vk/music/d/MusicArtistModel;)V
     .locals 0
 
     .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p2, p0, Lcom/vk/catalog2/core/holders/music/artist/ArtistInfoVh;->C:Lcom/vk/music/player/d;
+    iput-object p2, p0, Lcom/vk/catalog2/core/holders/music/artist/ArtistInfoVh;->C:Lcom/vk/music/player/PlayerModel;
 
-    iput-object p3, p0, Lcom/vk/catalog2/core/holders/music/artist/ArtistInfoVh;->D:Lcom/vk/music/d/a;
+    iput-object p3, p0, Lcom/vk/catalog2/core/holders/music/artist/ArtistInfoVh;->D:Lcom/vk/music/d/MusicArtistModel;
 
     if-eqz p1, :cond_0
 
@@ -91,14 +91,14 @@
 
     .line 2
     :cond_0
-    new-instance p1, Lb/h/g/n/b/a;
+    new-instance p1, Lb/h/g/n/b/BlurTransform;
 
     const/16 p2, 0x19
 
-    invoke-direct {p1, p2}, Lb/h/g/n/b/a;-><init>(I)V
+    invoke-direct {p1, p2}, Lb/h/g/n/b/BlurTransform;-><init>(I)V
 
     :goto_0
-    iput-object p1, p0, Lcom/vk/catalog2/core/holders/music/artist/ArtistInfoVh;->B:Lcom/facebook/imagepipeline/request/a;
+    iput-object p1, p0, Lcom/vk/catalog2/core/holders/music/artist/ArtistInfoVh;->B:Lcom/facebook/imagepipeline/request/BasePostprocessor;
 
     return-void
 .end method
@@ -116,18 +116,18 @@
     :cond_0
     const-string p0, "subscribeToggle"
 
-    invoke-static {p0}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {p0}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     const/4 p0, 0x0
 
     throw p0
 .end method
 
-.method public static final synthetic a(Lcom/vk/catalog2/core/holders/music/artist/ArtistInfoVh;Lio/reactivex/disposables/b;)V
+.method public static final synthetic a(Lcom/vk/catalog2/core/holders/music/artist/ArtistInfoVh;Lio/reactivex/disposables/Disposable;)V
     .locals 0
 
     .line 2
-    iput-object p1, p0, Lcom/vk/catalog2/core/holders/music/artist/ArtistInfoVh;->h:Lio/reactivex/disposables/b;
+    iput-object p1, p0, Lcom/vk/catalog2/core/holders/music/artist/ArtistInfoVh;->h:Lio/reactivex/disposables/Disposable;
 
     return-void
 .end method
@@ -156,7 +156,7 @@
     .locals 0
 
     .line 5
-    invoke-static {p0, p1}, Lcom/vk/catalog2/core/holders/common/n$a;->a(Lcom/vk/catalog2/core/holders/common/n;Landroid/view/View$OnClickListener;)Landroid/view/View$OnClickListener;
+    invoke-static {p0, p1}, Lcom/vk/catalog2/core/holders/common/CatalogViewHolder$a;->a(Lcom/vk/catalog2/core/holders/common/CatalogViewHolder;Landroid/view/View$OnClickListener;)Landroid/view/View$OnClickListener;
 
     move-result-object p1
 
@@ -209,13 +209,13 @@
     const-string p2, "view"
 
     .line 10
-    invoke-static {p1, p2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, p2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     sget p2, Lcom/vk/catalog2/core/q;->artist_header_background:I
 
     const/4 v0, 0x2
 
-    invoke-static {p1, p2, p3, v0, p3}, Lcom/vk/extensions/ViewExtKt;->a(Landroid/view/View;ILkotlin/jvm/b/b;ILjava/lang/Object;)Landroid/view/View;
+    invoke-static {p1, p2, p3, v0, p3}, Lcom/vk/extensions/ViewExtKt;->a(Landroid/view/View;ILkotlin/jvm/b/Functions2;ILjava/lang/Object;)Landroid/view/View;
 
     move-result-object p2
 
@@ -235,7 +235,7 @@
     .line 12
     sget p2, Lcom/vk/catalog2/core/q;->artist_header_image:I
 
-    invoke-static {p1, p2, p3, v0, p3}, Lcom/vk/extensions/ViewExtKt;->a(Landroid/view/View;ILkotlin/jvm/b/b;ILjava/lang/Object;)Landroid/view/View;
+    invoke-static {p1, p2, p3, v0, p3}, Lcom/vk/extensions/ViewExtKt;->a(Landroid/view/View;ILkotlin/jvm/b/Functions2;ILjava/lang/Object;)Landroid/view/View;
 
     move-result-object p2
 
@@ -246,7 +246,7 @@
     .line 13
     sget p2, Lcom/vk/catalog2/core/q;->subscription_state:I
 
-    invoke-static {p1, p2, p3, v0, p3}, Lcom/vk/extensions/ViewExtKt;->a(Landroid/view/View;ILkotlin/jvm/b/b;ILjava/lang/Object;)Landroid/view/View;
+    invoke-static {p1, p2, p3, v0, p3}, Lcom/vk/extensions/ViewExtKt;->a(Landroid/view/View;ILkotlin/jvm/b/Functions2;ILjava/lang/Object;)Landroid/view/View;
 
     move-result-object p2
 
@@ -261,7 +261,7 @@
     .line 16
     sget p2, Lcom/vk/catalog2/core/q;->artist_genre:I
 
-    invoke-static {p1, p2, p3, v0, p3}, Lcom/vk/extensions/ViewExtKt;->a(Landroid/view/View;ILkotlin/jvm/b/b;ILjava/lang/Object;)Landroid/view/View;
+    invoke-static {p1, p2, p3, v0, p3}, Lcom/vk/extensions/ViewExtKt;->a(Landroid/view/View;ILkotlin/jvm/b/Functions2;ILjava/lang/Object;)Landroid/view/View;
 
     move-result-object p2
 
@@ -272,7 +272,7 @@
     .line 17
     sget p2, Lcom/vk/catalog2/core/q;->artist_listen_all:I
 
-    invoke-static {p1, p2, p3, v0, p3}, Lcom/vk/extensions/ViewExtKt;->a(Landroid/view/View;ILkotlin/jvm/b/b;ILjava/lang/Object;)Landroid/view/View;
+    invoke-static {p1, p2, p3, v0, p3}, Lcom/vk/extensions/ViewExtKt;->a(Landroid/view/View;ILkotlin/jvm/b/Functions2;ILjava/lang/Object;)Landroid/view/View;
 
     move-result-object p2
 
@@ -310,7 +310,7 @@
 
     sget v1, Lcom/vk/catalog2/core/n;->black:I
 
-    invoke-static {p3, v0, v1}, Lcom/vk/core/util/z;->a(Landroid/content/Context;II)Landroid/graphics/drawable/Drawable;
+    invoke-static {p3, v0, v1}, Lcom/vk/core/util/DrawableUtils;->a(Landroid/content/Context;II)Landroid/graphics/drawable/Drawable;
 
     move-result-object p3
 
@@ -345,7 +345,7 @@
 
     const-string p3, "view.context"
 
-    invoke-static {p2, p3}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p2, p3}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     sget p3, Lcom/vk/catalog2/core/o;->music_artist_header_bottom_margin_genre_no:I
 
@@ -354,7 +354,7 @@
     const-string p2, "inflater.inflate(R.layou\u2026argin_genre_no)\n        }"
 
     .line 23
-    invoke-static {p1, p2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, p2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     return-object p1
 
@@ -362,7 +362,7 @@
     const-string p1, "listenBtn"
 
     .line 24
-    invoke-static {p1}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {p1}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw p3
 .end method
@@ -371,17 +371,17 @@
     .locals 1
 
     .line 50
-    iget-object v0, p0, Lcom/vk/catalog2/core/holders/music/artist/ArtistInfoVh;->h:Lio/reactivex/disposables/b;
+    iget-object v0, p0, Lcom/vk/catalog2/core/holders/music/artist/ArtistInfoVh;->h:Lio/reactivex/disposables/Disposable;
 
     if-eqz v0, :cond_0
 
-    invoke-interface {v0}, Lio/reactivex/disposables/b;->o()V
+    invoke-interface {v0}, Lio/reactivex/disposables/Disposable;->o()V
 
     :cond_0
     const/4 v0, 0x0
 
     .line 51
-    iput-object v0, p0, Lcom/vk/catalog2/core/holders/music/artist/ArtistInfoVh;->h:Lio/reactivex/disposables/b;
+    iput-object v0, p0, Lcom/vk/catalog2/core/holders/music/artist/ArtistInfoVh;->h:Lio/reactivex/disposables/Disposable;
 
     return-void
 .end method
@@ -417,7 +417,7 @@
     :cond_0
     const-string p1, "subscribeToggle"
 
-    invoke-static {p1}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {p1}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v1
 
@@ -425,7 +425,7 @@
     const-string p1, "artistGenre"
 
     .line 55
-    invoke-static {p1}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {p1}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v1
 
@@ -433,7 +433,7 @@
     const-string p1, "listenBtn"
 
     .line 56
-    invoke-static {p1}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {p1}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v1
 .end method
@@ -499,14 +499,14 @@
 
     if-eqz v4, :cond_2
 
-    iget-object v6, v0, Lcom/vk/catalog2/core/holders/music/artist/ArtistInfoVh;->B:Lcom/facebook/imagepipeline/request/a;
+    iget-object v6, v0, Lcom/vk/catalog2/core/holders/music/artist/ArtistInfoVh;->B:Lcom/facebook/imagepipeline/request/BasePostprocessor;
 
-    invoke-virtual {v4, v6}, Lcom/vk/imageloader/view/VKImageView;->setPostprocessor(Lcom/facebook/imagepipeline/request/a;)V
+    invoke-virtual {v4, v6}, Lcom/vk/imageloader/view/VKImageView;->setPostprocessor(Lcom/facebook/imagepipeline/request/BasePostprocessor;)V
 
     goto :goto_1
 
     :cond_2
-    invoke-static {v5}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v5}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v3
 
@@ -544,13 +544,13 @@
     goto :goto_2
 
     :cond_4
-    invoke-static {v8}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v8}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v3
 
     .line 33
     :cond_5
-    invoke-static {v8}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v8}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v3
 
@@ -581,13 +581,13 @@
     goto :goto_2
 
     :cond_7
-    invoke-static {v8}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v8}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v3
 
     .line 37
     :cond_8
-    invoke-static {v8}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v8}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v3
 
@@ -628,7 +628,7 @@
     goto :goto_3
 
     :cond_a
-    invoke-static {v5}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v5}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v3
 
@@ -658,13 +658,13 @@
     goto :goto_4
 
     :cond_c
-    invoke-static {v5}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v5}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v3
 
     .line 41
     :cond_d
-    invoke-static {v5}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v5}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v3
 
@@ -693,7 +693,7 @@
 
     const/16 v17, 0x0
 
-    invoke-static/range {v9 .. v17}, Lkotlin/collections/l;->a(Ljava/lang/Iterable;Ljava/lang/CharSequence;Ljava/lang/CharSequence;Ljava/lang/CharSequence;ILjava/lang/CharSequence;Lkotlin/jvm/b/b;ILjava/lang/Object;)Ljava/lang/String;
+    invoke-static/range {v9 .. v17}, Lkotlin/collections/l;->a(Ljava/lang/Iterable;Ljava/lang/CharSequence;Ljava/lang/CharSequence;Ljava/lang/CharSequence;ILjava/lang/CharSequence;Lkotlin/jvm/b/Functions2;ILjava/lang/Object;)Ljava/lang/String;
 
     move-result-object v2
 
@@ -758,25 +758,25 @@
     :cond_12
     const-string v1, "listenBtn"
 
-    invoke-static {v1}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v1}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v3
 
     .line 47
     :cond_13
-    invoke-static {v5}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v5}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v3
 
     .line 48
     :cond_14
-    invoke-static {v5}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v5}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v3
 
     .line 49
     :cond_15
-    invoke-static {v8}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v8}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v3
 
@@ -788,7 +788,7 @@
     .locals 0
 
     .line 3
-    invoke-static {p0, p1, p2}, Lcom/vk/catalog2/core/holders/common/n$a;->a(Lcom/vk/catalog2/core/holders/common/n;Lcom/vk/catalog2/core/blocks/UIBlock;I)V
+    invoke-static {p0, p1, p2}, Lcom/vk/catalog2/core/holders/common/CatalogViewHolder$a;->a(Lcom/vk/catalog2/core/holders/common/CatalogViewHolder;Lcom/vk/catalog2/core/blocks/UIBlock;I)V
 
     return-void
 .end method
@@ -797,7 +797,7 @@
     .locals 0
 
     .line 4
-    invoke-static {p0, p1, p2, p3}, Lcom/vk/catalog2/core/holders/common/n$a;->a(Lcom/vk/catalog2/core/holders/common/n;Lcom/vk/catalog2/core/blocks/UIBlock;II)V
+    invoke-static {p0, p1, p2, p3}, Lcom/vk/catalog2/core/holders/common/CatalogViewHolder$a;->a(Lcom/vk/catalog2/core/holders/common/CatalogViewHolder;Lcom/vk/catalog2/core/blocks/UIBlock;II)V
 
     return-void
 .end method
@@ -864,7 +864,7 @@
     move-result v1
 
     .line 6
-    iget-object v2, p0, Lcom/vk/catalog2/core/holders/music/artist/ArtistInfoVh;->C:Lcom/vk/music/player/d;
+    iget-object v2, p0, Lcom/vk/catalog2/core/holders/music/artist/ArtistInfoVh;->C:Lcom/vk/music/player/PlayerModel;
 
     invoke-static {v1}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
 
@@ -878,7 +878,7 @@
 
     move-result-object v0
 
-    invoke-interface {v2, p1, v1, v0}, Lcom/vk/music/player/d;->a(Ljava/lang/String;Ljava/lang/Boolean;Lcom/vk/music/common/MusicPlaybackLaunchContext;)V
+    invoke-interface {v2, p1, v1, v0}, Lcom/vk/music/player/PlayerModel;->a(Ljava/lang/String;Ljava/lang/Boolean;Lcom/vk/music/common/MusicPlaybackLaunchContext;)V
 
     goto :goto_2
 
@@ -909,7 +909,7 @@
     if-eqz p1, :cond_7
 
     .line 9
-    iget-object v1, p0, Lcom/vk/catalog2/core/holders/music/artist/ArtistInfoVh;->h:Lio/reactivex/disposables/b;
+    iget-object v1, p0, Lcom/vk/catalog2/core/holders/music/artist/ArtistInfoVh;->h:Lio/reactivex/disposables/Disposable;
 
     if-eqz v1, :cond_5
 
@@ -926,7 +926,7 @@
     if-eqz v1, :cond_6
 
     .line 11
-    iget-object v1, p0, Lcom/vk/catalog2/core/holders/music/artist/ArtistInfoVh;->D:Lcom/vk/music/d/a;
+    iget-object v1, p0, Lcom/vk/catalog2/core/holders/music/artist/ArtistInfoVh;->D:Lcom/vk/music/d/MusicArtistModel;
 
     invoke-virtual {v0}, Lcom/vk/catalog2/core/blocks/UIBlock;->y1()Ljava/lang/String;
 
@@ -936,9 +936,9 @@
 
     move-result-object v0
 
-    invoke-static {v0, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    invoke-interface {v1, p1, v0}, Lcom/vk/music/d/a;->b(Lcom/vk/dto/music/Artist;Lcom/vk/music/common/MusicPlaybackLaunchContext;)Lc/a/m;
+    invoke-interface {v1, p1, v0}, Lcom/vk/music/d/MusicArtistModel;->b(Lcom/vk/dto/music/Artist;Lcom/vk/music/common/MusicPlaybackLaunchContext;)Lio/reactivex/Observable;
 
     move-result-object v0
 
@@ -953,11 +953,11 @@
     invoke-direct {p1, p0}, Lcom/vk/catalog2/core/holders/music/artist/ArtistInfoVh$c;-><init>(Lcom/vk/catalog2/core/holders/music/artist/ArtistInfoVh;)V
 
     .line 14
-    invoke-virtual {v0, v1, p1}, Lc/a/m;->a(Lc/a/z/g;Lc/a/z/g;)Lio/reactivex/disposables/b;
+    invoke-virtual {v0, v1, p1}, Lio/reactivex/Observable;->a(Lio/reactivex/functions/Consumer;Lio/reactivex/functions/Consumer;)Lio/reactivex/disposables/Disposable;
 
     move-result-object p1
 
-    iput-object p1, p0, Lcom/vk/catalog2/core/holders/music/artist/ArtistInfoVh;->h:Lio/reactivex/disposables/b;
+    iput-object p1, p0, Lcom/vk/catalog2/core/holders/music/artist/ArtistInfoVh;->h:Lio/reactivex/disposables/Disposable;
 
     goto :goto_2
 
@@ -970,7 +970,7 @@
     if-eqz v1, :cond_7
 
     .line 16
-    iget-object v1, p0, Lcom/vk/catalog2/core/holders/music/artist/ArtistInfoVh;->D:Lcom/vk/music/d/a;
+    iget-object v1, p0, Lcom/vk/catalog2/core/holders/music/artist/ArtistInfoVh;->D:Lcom/vk/music/d/MusicArtistModel;
 
     invoke-virtual {v0}, Lcom/vk/catalog2/core/blocks/UIBlock;->y1()Ljava/lang/String;
 
@@ -980,9 +980,9 @@
 
     move-result-object v0
 
-    invoke-static {v0, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    invoke-interface {v1, p1, v0}, Lcom/vk/music/d/a;->a(Lcom/vk/dto/music/Artist;Lcom/vk/music/common/MusicPlaybackLaunchContext;)Lc/a/m;
+    invoke-interface {v1, p1, v0}, Lcom/vk/music/d/MusicArtistModel;->a(Lcom/vk/dto/music/Artist;Lcom/vk/music/common/MusicPlaybackLaunchContext;)Lio/reactivex/Observable;
 
     move-result-object p1
 
@@ -997,11 +997,11 @@
     invoke-direct {v1, p0}, Lcom/vk/catalog2/core/holders/music/artist/ArtistInfoVh$e;-><init>(Lcom/vk/catalog2/core/holders/music/artist/ArtistInfoVh;)V
 
     .line 19
-    invoke-virtual {p1, v0, v1}, Lc/a/m;->a(Lc/a/z/g;Lc/a/z/g;)Lio/reactivex/disposables/b;
+    invoke-virtual {p1, v0, v1}, Lio/reactivex/Observable;->a(Lio/reactivex/functions/Consumer;Lio/reactivex/functions/Consumer;)Lio/reactivex/disposables/Disposable;
 
     move-result-object p1
 
-    iput-object p1, p0, Lcom/vk/catalog2/core/holders/music/artist/ArtistInfoVh;->h:Lio/reactivex/disposables/b;
+    iput-object p1, p0, Lcom/vk/catalog2/core/holders/music/artist/ArtistInfoVh;->h:Lio/reactivex/disposables/Disposable;
 
     :cond_7
     :goto_2

@@ -12,17 +12,17 @@
 
 
 # static fields
-.field static final synthetic a:[Lkotlin/u/j;
+.field static final synthetic a:[Lkotlin/u/KProperty5;
 
-.field private static final b:Lcom/vk/core/util/d1;
+.field private static final b:Lcom/vk/core/util/ThreadLocalDelegate;
 
-.field private static final c:Lcom/vk/core/util/d1;
+.field private static final c:Lcom/vk/core/util/ThreadLocalDelegate;
 
-.field private static final d:Lcom/vk/im/ui/formatters/j;
+.field private static final d:Lcom/vk/im/ui/formatters/MsgAttachFormatter;
 
-.field private static final e:Lcom/vk/im/ui/formatters/n;
+.field private static final e:Lcom/vk/im/ui/formatters/MsgNestedFormatter;
 
-.field private static final f:Lcom/vk/im/ui/components/dialogs_list/formatters/a;
+.field private static final f:Lcom/vk/im/ui/components/dialogs_list/formatters/EmojiFormatter;
 
 .field public static final g:Lcom/vk/im/ui/components/dialogs_list/formatters/MsgSearchFormatter;
 
@@ -35,11 +35,11 @@
 
     const/4 v1, 0x2
 
-    new-array v1, v1, [Lkotlin/u/j;
+    new-array v1, v1, [Lkotlin/u/KProperty5;
 
     new-instance v2, Lkotlin/jvm/internal/PropertyReference1Impl;
 
-    invoke-static {v0}, Lkotlin/jvm/internal/o;->a(Ljava/lang/Class;)Lkotlin/u/c;
+    invoke-static {v0}, Lkotlin/jvm/internal/Reflection;->a(Ljava/lang/Class;)Lkotlin/u/KClass;
 
     move-result-object v3
 
@@ -47,9 +47,9 @@
 
     const-string v5, "getBuilder()Landroid/text/SpannableStringBuilder;"
 
-    invoke-direct {v2, v3, v4, v5}, Lkotlin/jvm/internal/PropertyReference1Impl;-><init>(Lkotlin/u/e;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-direct {v2, v3, v4, v5}, Lkotlin/jvm/internal/PropertyReference1Impl;-><init>(Lkotlin/u/KDeclarationContainer;Ljava/lang/String;Ljava/lang/String;)V
 
-    invoke-static {v2}, Lkotlin/jvm/internal/o;->a(Lkotlin/jvm/internal/PropertyReference1;)Lkotlin/u/l;
+    invoke-static {v2}, Lkotlin/jvm/internal/Reflection;->a(Lkotlin/jvm/internal/PropertyReference1;)Lkotlin/u/KProperty2;
 
     const/4 v3, 0x0
 
@@ -57,7 +57,7 @@
 
     new-instance v2, Lkotlin/jvm/internal/PropertyReference1Impl;
 
-    invoke-static {v0}, Lkotlin/jvm/internal/o;->a(Ljava/lang/Class;)Lkotlin/u/c;
+    invoke-static {v0}, Lkotlin/jvm/internal/Reflection;->a(Ljava/lang/Class;)Lkotlin/u/KClass;
 
     move-result-object v0
 
@@ -65,15 +65,15 @@
 
     const-string v4, "getFoundTokens()Landroid/util/SparseIntArray;"
 
-    invoke-direct {v2, v0, v3, v4}, Lkotlin/jvm/internal/PropertyReference1Impl;-><init>(Lkotlin/u/e;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-direct {v2, v0, v3, v4}, Lkotlin/jvm/internal/PropertyReference1Impl;-><init>(Lkotlin/u/KDeclarationContainer;Ljava/lang/String;Ljava/lang/String;)V
 
-    invoke-static {v2}, Lkotlin/jvm/internal/o;->a(Lkotlin/jvm/internal/PropertyReference1;)Lkotlin/u/l;
+    invoke-static {v2}, Lkotlin/jvm/internal/Reflection;->a(Lkotlin/jvm/internal/PropertyReference1;)Lkotlin/u/KProperty2;
 
     const/4 v0, 0x1
 
     aput-object v2, v1, v0
 
-    sput-object v1, Lcom/vk/im/ui/components/dialogs_list/formatters/MsgSearchFormatter;->a:[Lkotlin/u/j;
+    sput-object v1, Lcom/vk/im/ui/components/dialogs_list/formatters/MsgSearchFormatter;->a:[Lkotlin/u/KProperty5;
 
     .line 1
     new-instance v0, Lcom/vk/im/ui/components/dialogs_list/formatters/MsgSearchFormatter;
@@ -85,49 +85,49 @@
     .line 2
     sget-object v0, Lcom/vk/im/ui/components/dialogs_list/formatters/MsgSearchFormatter$builder$2;->a:Lcom/vk/im/ui/components/dialogs_list/formatters/MsgSearchFormatter$builder$2;
 
-    invoke-static {v0}, Lcom/vk/core/util/f1;->a(Lkotlin/jvm/b/a;)Lcom/vk/core/util/d1;
+    invoke-static {v0}, Lcom/vk/core/util/ThreadLocalDelegate1;->a(Lkotlin/jvm/b/Functions;)Lcom/vk/core/util/ThreadLocalDelegate;
 
     move-result-object v0
 
-    sput-object v0, Lcom/vk/im/ui/components/dialogs_list/formatters/MsgSearchFormatter;->b:Lcom/vk/core/util/d1;
+    sput-object v0, Lcom/vk/im/ui/components/dialogs_list/formatters/MsgSearchFormatter;->b:Lcom/vk/core/util/ThreadLocalDelegate;
 
     .line 3
     sget-object v0, Lcom/vk/im/ui/components/dialogs_list/formatters/MsgSearchFormatter$foundTokens$2;->a:Lcom/vk/im/ui/components/dialogs_list/formatters/MsgSearchFormatter$foundTokens$2;
 
-    invoke-static {v0}, Lcom/vk/core/util/f1;->a(Lkotlin/jvm/b/a;)Lcom/vk/core/util/d1;
+    invoke-static {v0}, Lcom/vk/core/util/ThreadLocalDelegate1;->a(Lkotlin/jvm/b/Functions;)Lcom/vk/core/util/ThreadLocalDelegate;
 
     move-result-object v0
 
-    sput-object v0, Lcom/vk/im/ui/components/dialogs_list/formatters/MsgSearchFormatter;->c:Lcom/vk/core/util/d1;
+    sput-object v0, Lcom/vk/im/ui/components/dialogs_list/formatters/MsgSearchFormatter;->c:Lcom/vk/core/util/ThreadLocalDelegate;
 
     .line 4
-    new-instance v0, Lcom/vk/im/ui/formatters/j;
+    new-instance v0, Lcom/vk/im/ui/formatters/MsgAttachFormatter;
 
-    sget-object v1, Lcom/vk/core/util/i;->a:Landroid/content/Context;
+    sget-object v1, Lcom/vk/core/util/AppContextHolder;->a:Landroid/content/Context;
 
     const-string v2, "AppContextHolder.context"
 
-    invoke-static {v1, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    invoke-direct {v0, v1}, Lcom/vk/im/ui/formatters/j;-><init>(Landroid/content/Context;)V
+    invoke-direct {v0, v1}, Lcom/vk/im/ui/formatters/MsgAttachFormatter;-><init>(Landroid/content/Context;)V
 
-    sput-object v0, Lcom/vk/im/ui/components/dialogs_list/formatters/MsgSearchFormatter;->d:Lcom/vk/im/ui/formatters/j;
+    sput-object v0, Lcom/vk/im/ui/components/dialogs_list/formatters/MsgSearchFormatter;->d:Lcom/vk/im/ui/formatters/MsgAttachFormatter;
 
     .line 5
-    new-instance v0, Lcom/vk/im/ui/formatters/n;
+    new-instance v0, Lcom/vk/im/ui/formatters/MsgNestedFormatter;
 
-    sget-object v1, Lcom/vk/core/util/i;->a:Landroid/content/Context;
+    sget-object v1, Lcom/vk/core/util/AppContextHolder;->a:Landroid/content/Context;
 
-    invoke-static {v1, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    invoke-direct {v0, v1}, Lcom/vk/im/ui/formatters/n;-><init>(Landroid/content/Context;)V
+    invoke-direct {v0, v1}, Lcom/vk/im/ui/formatters/MsgNestedFormatter;-><init>(Landroid/content/Context;)V
 
-    sput-object v0, Lcom/vk/im/ui/components/dialogs_list/formatters/MsgSearchFormatter;->e:Lcom/vk/im/ui/formatters/n;
+    sput-object v0, Lcom/vk/im/ui/components/dialogs_list/formatters/MsgSearchFormatter;->e:Lcom/vk/im/ui/formatters/MsgNestedFormatter;
 
     .line 6
-    sget-object v0, Lcom/vk/im/ui/components/dialogs_list/formatters/a;->b:Lcom/vk/im/ui/components/dialogs_list/formatters/a;
+    sget-object v0, Lcom/vk/im/ui/components/dialogs_list/formatters/EmojiFormatter;->b:Lcom/vk/im/ui/components/dialogs_list/formatters/EmojiFormatter;
 
-    sput-object v0, Lcom/vk/im/ui/components/dialogs_list/formatters/MsgSearchFormatter;->f:Lcom/vk/im/ui/components/dialogs_list/formatters/a;
+    sput-object v0, Lcom/vk/im/ui/components/dialogs_list/formatters/MsgSearchFormatter;->f:Lcom/vk/im/ui/components/dialogs_list/formatters/EmojiFormatter;
 
     return-void
 .end method
@@ -275,15 +275,15 @@
 .method private final a()Landroid/text/SpannableStringBuilder;
     .locals 3
 
-    sget-object v0, Lcom/vk/im/ui/components/dialogs_list/formatters/MsgSearchFormatter;->b:Lcom/vk/core/util/d1;
+    sget-object v0, Lcom/vk/im/ui/components/dialogs_list/formatters/MsgSearchFormatter;->b:Lcom/vk/core/util/ThreadLocalDelegate;
 
-    sget-object v1, Lcom/vk/im/ui/components/dialogs_list/formatters/MsgSearchFormatter;->a:[Lkotlin/u/j;
+    sget-object v1, Lcom/vk/im/ui/components/dialogs_list/formatters/MsgSearchFormatter;->a:[Lkotlin/u/KProperty5;
 
     const/4 v2, 0x0
 
     aget-object v1, v1, v2
 
-    invoke-static {v0, p0, v1}, Lcom/vk/core/util/f1;->a(Lcom/vk/core/util/d1;Ljava/lang/Object;Lkotlin/u/j;)Ljava/lang/Object;
+    invoke-static {v0, p0, v1}, Lcom/vk/core/util/ThreadLocalDelegate1;->a(Lcom/vk/core/util/ThreadLocalDelegate;Ljava/lang/Object;Lkotlin/u/KProperty5;)Ljava/lang/Object;
 
     move-result-object v0
 
@@ -383,9 +383,9 @@
     if-eqz v0, :cond_1
 
     .line 76
-    sget-object v0, Lcom/vk/im/ui/components/dialogs_list/formatters/MsgSearchFormatter;->d:Lcom/vk/im/ui/formatters/j;
+    sget-object v0, Lcom/vk/im/ui/components/dialogs_list/formatters/MsgSearchFormatter;->d:Lcom/vk/im/ui/formatters/MsgAttachFormatter;
 
-    invoke-virtual {v0, p2}, Lcom/vk/im/ui/formatters/j;->a(Lcom/vk/im/engine/models/messages/Msg;)Ljava/lang/CharSequence;
+    invoke-virtual {v0, p2}, Lcom/vk/im/ui/formatters/MsgAttachFormatter;->a(Lcom/vk/im/engine/models/messages/Msg;)Ljava/lang/CharSequence;
 
     move-result-object p2
 
@@ -580,7 +580,7 @@
 
     add-int/lit8 v4, v4, 0x1
 
-    invoke-static {v5, v3, v4}, Lcom/vk/core/extensions/x;->a(Landroid/util/SparseIntArray;II)V
+    invoke-static {v5, v3, v4}, Lcom/vk/core/extensions/SparseArrayExt1;->a(Landroid/util/SparseIntArray;II)V
 
     add-int/lit8 v2, v2, 0x1
 
@@ -652,13 +652,13 @@
     if-le v1, v4, :cond_6
 
     .line 64
-    sget-object v1, Lcom/vk/im/ui/components/dialogs_list/formatters/h;->b:Lcom/vk/im/ui/components/dialogs_list/formatters/h;
+    sget-object v1, Lcom/vk/im/ui/components/dialogs_list/formatters/MsgBodyUserFormatter;->b:Lcom/vk/im/ui/components/dialogs_list/formatters/MsgBodyUserFormatter;
 
-    invoke-virtual {v1}, Lcom/vk/im/ui/components/dialogs_list/formatters/h;->a()I
+    invoke-virtual {v1}, Lcom/vk/im/ui/components/dialogs_list/formatters/MsgBodyUserFormatter;->a()I
 
     move-result v1
 
-    invoke-static {p1, v1, v2, v3}, Lcom/vk/extensions/k;->a(Landroid/text/SpannableStringBuilder;III)V
+    invoke-static {p1, v1, v2, v3}, Lcom/vk/extensions/SpannableExt;->a(Landroid/text/SpannableStringBuilder;III)V
 
     :cond_6
     add-int/lit8 v0, v0, 0x1
@@ -768,15 +768,15 @@
 
     .line 33
     :cond_5
-    invoke-interface {p1}, Lcom/vk/im/engine/models/messages/g;->e0()I
+    invoke-interface {p1}, Lcom/vk/im/engine/models/messages/WithFrom;->e0()I
 
     move-result v4
 
-    invoke-interface {p1}, Lcom/vk/im/engine/models/messages/g;->W()Lcom/vk/im/engine/models/MemberType;
+    invoke-interface {p1}, Lcom/vk/im/engine/models/messages/WithFrom;->W()Lcom/vk/im/engine/models/MemberType;
 
     move-result-object v5
 
-    invoke-static {p3, v4, v5}, Lcom/vk/im/ui/components/dialogs_list/formatters/d;->a(Lcom/vk/im/engine/models/ProfilesSimpleInfo;ILcom/vk/im/engine/models/MemberType;)Ljava/lang/String;
+    invoke-static {p3, v4, v5}, Lcom/vk/im/ui/components/dialogs_list/formatters/MemberInfoExt;->a(Lcom/vk/im/engine/models/ProfilesSimpleInfo;ILcom/vk/im/engine/models/MemberType;)Ljava/lang/String;
 
     move-result-object v4
 
@@ -834,7 +834,7 @@
     move-result-object p1
 
     .line 38
-    invoke-static {p1}, Lkotlin/collections/l;->d(Ljava/lang/Iterable;)Lkotlin/sequences/j;
+    invoke-static {p1}, Lkotlin/collections/l;->d(Ljava/lang/Iterable;)Lkotlin/sequences/Sequence;
 
     move-result-object p1
 
@@ -843,12 +843,12 @@
 
     invoke-direct {v0, p2, p3, p4}, Lcom/vk/im/ui/components/dialogs_list/formatters/MsgSearchFormatter$find$3;-><init>(Ljava/util/List;Lcom/vk/im/engine/models/ProfilesSimpleInfo;I)V
 
-    invoke-static {p1, v0}, Lkotlin/sequences/m;->e(Lkotlin/sequences/j;Lkotlin/jvm/b/b;)Lkotlin/sequences/j;
+    invoke-static {p1, v0}, Lkotlin/sequences/m;->e(Lkotlin/sequences/Sequence;Lkotlin/jvm/b/Functions2;)Lkotlin/sequences/Sequence;
 
     move-result-object p1
 
     .line 40
-    invoke-interface {p1}, Lkotlin/sequences/j;->iterator()Ljava/util/Iterator;
+    invoke-interface {p1}, Lkotlin/sequences/Sequence;->iterator()Ljava/util/Iterator;
 
     move-result-object p1
 
@@ -940,9 +940,9 @@
     .end annotation
 
     .line 14
-    sget-object v0, Lcom/vk/im/engine/utils/i;->a:Lcom/vk/im/engine/utils/i;
+    sget-object v0, Lcom/vk/im/engine/utils/MsgSearchTokenizer1;->a:Lcom/vk/im/engine/utils/MsgSearchTokenizer1;
 
-    invoke-virtual {v0, p5}, Lcom/vk/im/engine/utils/i;->a(Ljava/util/List;)Ljava/util/List;
+    invoke-virtual {v0, p5}, Lcom/vk/im/engine/utils/MsgSearchTokenizer1;->a(Ljava/util/List;)Ljava/util/List;
 
     move-result-object v0
 
@@ -978,7 +978,7 @@
 
     move-result-object v2
 
-    invoke-static {v2}, Lcom/vk/im/ui/formatters/h;->a(Ljava/lang/CharSequence;)Ljava/lang/CharSequence;
+    invoke-static {v2}, Lcom/vk/im/ui/formatters/MentionStrip;->a(Ljava/lang/CharSequence;)Ljava/lang/CharSequence;
 
     move-result-object v2
 
@@ -1001,7 +1001,7 @@
 
     move-result-object v3
 
-    sget-object v4, Lcom/vk/im/ui/components/dialogs_list/formatters/MsgSearchFormatter;->f:Lcom/vk/im/ui/components/dialogs_list/formatters/a;
+    sget-object v4, Lcom/vk/im/ui/components/dialogs_list/formatters/MsgSearchFormatter;->f:Lcom/vk/im/ui/components/dialogs_list/formatters/EmojiFormatter;
 
     new-instance v5, Lkotlin/text/Regex;
 
@@ -1015,7 +1015,7 @@
 
     move-result-object v2
 
-    invoke-virtual {v4, v2}, Lcom/vk/im/ui/components/dialogs_list/formatters/a;->a(Ljava/lang/CharSequence;)Ljava/lang/CharSequence;
+    invoke-virtual {v4, v2}, Lcom/vk/im/ui/components/dialogs_list/formatters/EmojiFormatter;->a(Ljava/lang/CharSequence;)Ljava/lang/CharSequence;
 
     move-result-object v2
 
@@ -1043,7 +1043,7 @@
     if-ne p3, v0, :cond_1
 
     .line 25
-    sget-object v2, Lcom/vk/im/ui/components/dialogs_list/formatters/h;->b:Lcom/vk/im/ui/components/dialogs_list/formatters/h;
+    sget-object v2, Lcom/vk/im/ui/components/dialogs_list/formatters/MsgBodyUserFormatter;->b:Lcom/vk/im/ui/components/dialogs_list/formatters/MsgBodyUserFormatter;
 
     move-object v3, v9
 
@@ -1057,11 +1057,11 @@
 
     move-object v8, p5
 
-    invoke-virtual/range {v2 .. v8}, Lcom/vk/im/ui/components/dialogs_list/formatters/h;->a(Landroid/text/SpannableStringBuilder;Lcom/vk/im/engine/models/messages/MsgFromUser;Lcom/vk/im/engine/models/Member;Lcom/vk/im/engine/models/ProfilesSimpleInfo;Lcom/vk/im/engine/models/messages/WithUserContent;Ljava/util/List;)Landroid/text/SpannableStringBuilder;
+    invoke-virtual/range {v2 .. v8}, Lcom/vk/im/ui/components/dialogs_list/formatters/MsgBodyUserFormatter;->a(Landroid/text/SpannableStringBuilder;Lcom/vk/im/engine/models/messages/MsgFromUser;Lcom/vk/im/engine/models/Member;Lcom/vk/im/engine/models/ProfilesSimpleInfo;Lcom/vk/im/engine/models/messages/WithUserContent;Ljava/util/List;)Landroid/text/SpannableStringBuilder;
 
     .line 26
     :cond_1
-    invoke-static {v9}, Lcom/vk/extensions/k;->a(Landroid/text/SpannableStringBuilder;)Landroid/text/SpannableString;
+    invoke-static {v9}, Lcom/vk/extensions/SpannableExt;->a(Landroid/text/SpannableStringBuilder;)Landroid/text/SpannableString;
 
     move-result-object p1
 
@@ -1139,11 +1139,11 @@
     if-eqz v0, :cond_1
 
     .line 2
-    sget-object v0, Lcom/vk/im/ui/components/dialogs_list/formatters/MsgSearchFormatter;->e:Lcom/vk/im/ui/formatters/n;
+    sget-object v0, Lcom/vk/im/ui/components/dialogs_list/formatters/MsgSearchFormatter;->e:Lcom/vk/im/ui/formatters/MsgNestedFormatter;
 
     sget-object v1, Lcom/vk/im/engine/models/messages/NestedMsg$Type;->FWD:Lcom/vk/im/engine/models/messages/NestedMsg$Type;
 
-    invoke-virtual {v0, p2, v1}, Lcom/vk/im/ui/formatters/n;->a(Lcom/vk/im/engine/models/messages/WithUserContent;Lcom/vk/im/engine/models/messages/NestedMsg$Type;)Ljava/lang/String;
+    invoke-virtual {v0, p2, v1}, Lcom/vk/im/ui/formatters/MsgNestedFormatter;->a(Lcom/vk/im/engine/models/messages/WithUserContent;Lcom/vk/im/engine/models/messages/NestedMsg$Type;)Ljava/lang/String;
 
     move-result-object p2
 
@@ -1156,15 +1156,15 @@
 .method private final b()Landroid/util/SparseIntArray;
     .locals 3
 
-    sget-object v0, Lcom/vk/im/ui/components/dialogs_list/formatters/MsgSearchFormatter;->c:Lcom/vk/core/util/d1;
+    sget-object v0, Lcom/vk/im/ui/components/dialogs_list/formatters/MsgSearchFormatter;->c:Lcom/vk/core/util/ThreadLocalDelegate;
 
-    sget-object v1, Lcom/vk/im/ui/components/dialogs_list/formatters/MsgSearchFormatter;->a:[Lkotlin/u/j;
+    sget-object v1, Lcom/vk/im/ui/components/dialogs_list/formatters/MsgSearchFormatter;->a:[Lkotlin/u/KProperty5;
 
     const/4 v2, 0x1
 
     aget-object v1, v1, v2
 
-    invoke-static {v0, p0, v1}, Lcom/vk/core/util/f1;->a(Lcom/vk/core/util/d1;Ljava/lang/Object;Lkotlin/u/j;)Ljava/lang/Object;
+    invoke-static {v0, p0, v1}, Lcom/vk/core/util/ThreadLocalDelegate1;->a(Lcom/vk/core/util/ThreadLocalDelegate;Ljava/lang/Object;Lkotlin/u/KProperty5;)Ljava/lang/Object;
 
     move-result-object v0
 
@@ -1200,11 +1200,11 @@
     if-eqz v0, :cond_1
 
     .line 2
-    sget-object v0, Lcom/vk/im/ui/components/dialogs_list/formatters/MsgSearchFormatter;->e:Lcom/vk/im/ui/formatters/n;
+    sget-object v0, Lcom/vk/im/ui/components/dialogs_list/formatters/MsgSearchFormatter;->e:Lcom/vk/im/ui/formatters/MsgNestedFormatter;
 
     sget-object v1, Lcom/vk/im/engine/models/messages/NestedMsg$Type;->REPLY:Lcom/vk/im/engine/models/messages/NestedMsg$Type;
 
-    invoke-virtual {v0, p2, v1}, Lcom/vk/im/ui/formatters/n;->a(Lcom/vk/im/engine/models/messages/WithUserContent;Lcom/vk/im/engine/models/messages/NestedMsg$Type;)Ljava/lang/String;
+    invoke-virtual {v0, p2, v1}, Lcom/vk/im/ui/formatters/MsgNestedFormatter;->a(Lcom/vk/im/engine/models/messages/WithUserContent;Lcom/vk/im/engine/models/messages/NestedMsg$Type;)Ljava/lang/String;
 
     move-result-object p2
 
@@ -1216,7 +1216,7 @@
 
 
 # virtual methods
-.method public final a(Ljava/util/Collection;Lcom/vk/im/engine/models/Member;Lkotlin/jvm/b/b;ZLcom/vk/im/engine/models/ProfilesSimpleInfo;Ljava/util/List;)Lkotlin/Pair;
+.method public final a(Ljava/util/Collection;Lcom/vk/im/engine/models/Member;Lkotlin/jvm/b/Functions2;ZLcom/vk/im/engine/models/ProfilesSimpleInfo;Ljava/util/List;)Lkotlin/Pair;
     .locals 12
     .annotation build Landroidx/annotation/WorkerThread;
     .end annotation
@@ -1229,7 +1229,7 @@
             "Lcom/vk/im/engine/models/messages/Msg;",
             ">;",
             "Lcom/vk/im/engine/models/Member;",
-            "Lkotlin/jvm/b/b<",
+            "Lkotlin/jvm/b/Functions2<",
             "-",
             "Lcom/vk/im/engine/models/messages/Msg;",
             "Ljava/lang/Integer;",
@@ -1346,7 +1346,7 @@
 
     .line 9
     :goto_1
-    invoke-interface {p3, v5}, Lkotlin/jvm/b/b;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {p3, v5}, Lkotlin/jvm/b/Functions2;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v6
 
@@ -1372,10 +1372,10 @@
     check-cast v7, Lcom/vk/im/engine/models/messages/WithUserContent;
 
     :goto_2
-    invoke-static {v3, v6, v7}, Lcom/vk/core/extensions/x;->a(Landroid/util/SparseArray;ILjava/lang/Object;)V
+    invoke-static {v3, v6, v7}, Lcom/vk/core/extensions/SparseArrayExt1;->a(Landroid/util/SparseArray;ILjava/lang/Object;)V
 
     .line 10
-    invoke-interface {p3, v5}, Lkotlin/jvm/b/b;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {p3, v5}, Lkotlin/jvm/b/Functions2;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v5
 
@@ -1389,13 +1389,13 @@
 
     move-result-object v0
 
-    invoke-static {v2, v5, v0}, Lcom/vk/core/extensions/x;->a(Landroid/util/SparseArray;ILjava/lang/Object;)V
+    invoke-static {v2, v5, v0}, Lcom/vk/core/extensions/SparseArrayExt1;->a(Landroid/util/SparseArray;ILjava/lang/Object;)V
 
     goto :goto_0
 
     .line 11
     :cond_1
-    invoke-interface {p3, v5}, Lkotlin/jvm/b/b;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {p3, v5}, Lkotlin/jvm/b/Functions2;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v0
 
@@ -1429,10 +1429,10 @@
     invoke-direct {v6}, Lcom/vk/im/engine/models/messages/MsgFromUser;-><init>()V
 
     :goto_4
-    invoke-static {v3, v0, v6}, Lcom/vk/core/extensions/x;->a(Landroid/util/SparseArray;ILjava/lang/Object;)V
+    invoke-static {v3, v0, v6}, Lcom/vk/core/extensions/SparseArrayExt1;->a(Landroid/util/SparseArray;ILjava/lang/Object;)V
 
     .line 12
-    invoke-interface {p3, v5}, Lkotlin/jvm/b/b;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {p3, v5}, Lkotlin/jvm/b/Functions2;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v0
 
@@ -1444,7 +1444,7 @@
 
     const-string v5, "..."
 
-    invoke-static {v2, v0, v5}, Lcom/vk/core/extensions/x;->a(Landroid/util/SparseArray;ILjava/lang/Object;)V
+    invoke-static {v2, v0, v5}, Lcom/vk/core/extensions/SparseArrayExt1;->a(Landroid/util/SparseArray;ILjava/lang/Object;)V
 
     goto/16 :goto_0
 

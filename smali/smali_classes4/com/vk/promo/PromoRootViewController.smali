@@ -4,7 +4,7 @@
 
 # interfaces
 .implements Lcom/vk/promo/PromoViewController;
-.implements Lcom/vk/promo/f;
+.implements Lcom/vk/promo/PromoNavigator;
 
 
 # annotations
@@ -38,13 +38,13 @@
 
 .field private final F:I
 
-.field private a:Lcom/vk/promo/f;
+.field private a:Lcom/vk/promo/PromoNavigator;
 
 .field private b:Landroidx/viewpager/widget/ViewPager;
 
 .field private c:Lcom/vk/core/widget/PageIndicator;
 
-.field private d:Lcom/vk/promo/a;
+.field private d:Lcom/vk/promo/PromoAdapter;
 
 .field private final e:Lcom/vk/promo/PromoRootViewController$d;
 
@@ -71,7 +71,7 @@
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, v1}, Lcom/vk/promo/PromoRootViewController$b;-><init>(Lkotlin/jvm/internal/i;)V
+    invoke-direct {v0, v1}, Lcom/vk/promo/PromoRootViewController$b;-><init>(Lkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     .line 1
     new-instance v0, Lcom/vk/promo/PromoRootViewController$a;
@@ -157,7 +157,7 @@
 
     .line 15
     :cond_1
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     const/4 p1, 0x0
 
@@ -220,13 +220,13 @@
     iput p8, p0, Lcom/vk/promo/PromoRootViewController;->F:I
 
     .line 2
-    new-instance p1, Lcom/vk/promo/a;
+    new-instance p1, Lcom/vk/promo/PromoAdapter;
 
     iget-object p2, p0, Lcom/vk/promo/PromoRootViewController;->f:Ljava/util/List;
 
-    invoke-direct {p1, p2, p0}, Lcom/vk/promo/a;-><init>(Ljava/util/List;Lcom/vk/promo/f;)V
+    invoke-direct {p1, p2, p0}, Lcom/vk/promo/PromoAdapter;-><init>(Ljava/util/List;Lcom/vk/promo/PromoNavigator;)V
 
-    iput-object p1, p0, Lcom/vk/promo/PromoRootViewController;->d:Lcom/vk/promo/a;
+    iput-object p1, p0, Lcom/vk/promo/PromoRootViewController;->d:Lcom/vk/promo/PromoAdapter;
 
     .line 3
     new-instance p1, Lcom/vk/promo/PromoRootViewController$d;
@@ -238,7 +238,7 @@
     return-void
 .end method
 
-.method public synthetic constructor <init>(Ljava/util/List;IIIZIIIILkotlin/jvm/internal/i;)V
+.method public synthetic constructor <init>(Ljava/util/List;IIIZIIIILkotlin/jvm/internal/DefaultConstructorMarker;)V
     .locals 8
 
     move/from16 v0, p9
@@ -351,11 +351,11 @@
     return-void
 .end method
 
-.method public static final synthetic a(Lcom/vk/promo/PromoRootViewController;)Lcom/vk/promo/a;
+.method public static final synthetic a(Lcom/vk/promo/PromoRootViewController;)Lcom/vk/promo/PromoAdapter;
     .locals 0
 
     .line 1
-    iget-object p0, p0, Lcom/vk/promo/PromoRootViewController;->d:Lcom/vk/promo/a;
+    iget-object p0, p0, Lcom/vk/promo/PromoRootViewController;->d:Lcom/vk/promo/PromoAdapter;
 
     return-object p0
 .end method
@@ -379,9 +379,9 @@
 
     if-eqz v0, :cond_0
 
-    iget-object v1, p0, Lcom/vk/promo/PromoRootViewController;->d:Lcom/vk/promo/a;
+    iget-object v1, p0, Lcom/vk/promo/PromoRootViewController;->d:Lcom/vk/promo/PromoAdapter;
 
-    invoke-virtual {v1}, Lcom/vk/promo/a;->getCount()I
+    invoke-virtual {v1}, Lcom/vk/promo/PromoAdapter;->getCount()I
 
     move-result v1
 
@@ -403,7 +403,7 @@
 
     move-result-object v2
 
-    invoke-static {v2, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v2, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     iget v3, p0, Lcom/vk/promo/PromoRootViewController;->E:I
 
@@ -427,7 +427,7 @@
 
     move-result-object v2
 
-    invoke-static {v2, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v2, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     iget v3, p0, Lcom/vk/promo/PromoRootViewController;->F:I
 
@@ -458,7 +458,7 @@
 
     move-result-object v2
 
-    invoke-static {v2, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v2, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     iget v3, p0, Lcom/vk/promo/PromoRootViewController;->E:I
 
@@ -498,7 +498,7 @@
 
     move-result-object p1
 
-    invoke-static {p1, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     iget v1, p0, Lcom/vk/promo/PromoRootViewController;->D:I
 
@@ -541,7 +541,7 @@
     if-eqz v0, :cond_0
 
     .line 5
-    iget-object v1, p0, Lcom/vk/promo/PromoRootViewController;->d:Lcom/vk/promo/a;
+    iget-object v1, p0, Lcom/vk/promo/PromoRootViewController;->d:Lcom/vk/promo/PromoAdapter;
 
     invoke-virtual {v0, v1}, Landroidx/viewpager/widget/ViewPager;->setAdapter(Landroidx/viewpager/widget/PagerAdapter;)V
 
@@ -573,11 +573,11 @@
 
 
 # virtual methods
-.method public a(Landroid/view/LayoutInflater;Landroid/view/ViewGroup;Lcom/vk/promo/f;)Landroid/view/View;
+.method public a(Landroid/view/LayoutInflater;Landroid/view/ViewGroup;Lcom/vk/promo/PromoNavigator;)Landroid/view/View;
     .locals 2
 
     .line 14
-    iput-object p3, p0, Lcom/vk/promo/PromoRootViewController;->a:Lcom/vk/promo/f;
+    iput-object p3, p0, Lcom/vk/promo/PromoRootViewController;->a:Lcom/vk/promo/PromoNavigator;
 
     .line 15
     sget p3, Lcom/vk/promo/l;->promo_fragment:I
@@ -625,7 +625,7 @@
 
     const/4 v1, 0x0
 
-    invoke-static {p2, p3, v1, v0, v1}, Lcom/vk/extensions/e;->b(Landroid/widget/ImageView;ILandroid/graphics/PorterDuff$Mode;ILjava/lang/Object;)V
+    invoke-static {p2, p3, v1, v0, v1}, Lcom/vk/extensions/ImageViewExt;->b(Landroid/widget/ImageView;ILandroid/graphics/PorterDuff$Mode;ILjava/lang/Object;)V
 
     .line 20
     :cond_2
@@ -636,7 +636,7 @@
     const-string p2, "view"
 
     .line 21
-    invoke-static {p1, p2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, p2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-direct {p0, p1}, Lcom/vk/promo/PromoRootViewController;->b(Landroid/view/View;)V
 
@@ -774,11 +774,11 @@
     .line 5
     :cond_2
     :goto_1
-    iget-object v0, p0, Lcom/vk/promo/PromoRootViewController;->a:Lcom/vk/promo/f;
+    iget-object v0, p0, Lcom/vk/promo/PromoRootViewController;->a:Lcom/vk/promo/PromoNavigator;
 
     if-eqz v0, :cond_3
 
-    invoke-interface {v0, p1}, Lcom/vk/promo/f;->a(Lcom/vk/promo/PromoViewController;)V
+    invoke-interface {v0, p1}, Lcom/vk/promo/PromoNavigator;->a(Lcom/vk/promo/PromoViewController;)V
 
     :cond_3
     return-void
@@ -805,22 +805,22 @@
     .locals 2
 
     .line 1
-    invoke-static {}, Lcom/vk/promo/d;->a()Lb/h/v/d;
+    invoke-static {}, Lcom/vk/promo/PromoHelper;->a()Lb/h/v/RxBus;
 
     move-result-object v0
 
-    new-instance v1, Lcom/vk/promo/g;
+    new-instance v1, Lcom/vk/promo/PromoSeenEvent;
 
-    invoke-direct {v1, p0}, Lcom/vk/promo/g;-><init>(Lcom/vk/promo/PromoViewController;)V
+    invoke-direct {v1, p0}, Lcom/vk/promo/PromoSeenEvent;-><init>(Lcom/vk/promo/PromoViewController;)V
 
-    invoke-virtual {v0, v1}, Lb/h/v/d;->a(Ljava/lang/Object;)V
+    invoke-virtual {v0, v1}, Lb/h/v/RxBus;->a(Ljava/lang/Object;)V
 
     .line 2
-    iget-object v0, p0, Lcom/vk/promo/PromoRootViewController;->a:Lcom/vk/promo/f;
+    iget-object v0, p0, Lcom/vk/promo/PromoRootViewController;->a:Lcom/vk/promo/PromoNavigator;
 
     if-eqz v0, :cond_0
 
-    invoke-interface {v0}, Lcom/vk/promo/f;->close()V
+    invoke-interface {v0}, Lcom/vk/promo/PromoNavigator;->close()V
 
     :cond_0
     return-void
@@ -861,7 +861,7 @@
     if-eqz v0, :cond_1
 
     .line 3
-    iget-object v1, p0, Lcom/vk/promo/PromoRootViewController;->d:Lcom/vk/promo/a;
+    iget-object v1, p0, Lcom/vk/promo/PromoRootViewController;->d:Lcom/vk/promo/PromoAdapter;
 
     invoke-virtual {v0, v1}, Landroidx/viewpager/widget/ViewPager;->setAdapter(Landroidx/viewpager/widget/PagerAdapter;)V
 
@@ -872,7 +872,7 @@
 
     .line 5
     :cond_1
-    iget-object p1, p0, Lcom/vk/promo/PromoRootViewController;->d:Lcom/vk/promo/a;
+    iget-object p1, p0, Lcom/vk/promo/PromoRootViewController;->d:Lcom/vk/promo/PromoAdapter;
 
     invoke-virtual {p1}, Landroidx/viewpager/widget/PagerAdapter;->notifyDataSetChanged()V
 

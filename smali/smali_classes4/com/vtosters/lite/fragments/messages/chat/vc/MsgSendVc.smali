@@ -3,7 +3,7 @@
 .source "MsgSendVc.kt"
 
 # interfaces
-.implements Lcom/vk/im/ui/q/h/f/a;
+.implements Lcom/vk/im/ui/q/h/f/IMsgSendVc;
 .implements Lcom/vk/core/vc/KeyboardController$a;
 
 
@@ -59,7 +59,7 @@
 
 .field private D:Lcom/vk/im/ui/views/WriteBarDisabled;
 
-.field private E:Lcom/vk/stickers/b0;
+.field private E:Lcom/vk/stickers/StickersView;
 
 .field private F:Landroid/widget/EditText;
 
@@ -71,11 +71,11 @@
 
 .field private J:Lcom/vk/im/ui/components/msg_send/MsgRequestVc;
 
-.field private K:Lcom/vk/im/ui/q/h/f/b;
+.field private K:Lcom/vk/im/ui/q/h/f/MsgSendVcCallback;
 
-.field private L:Lcom/vk/stickers/f0/a;
+.field private L:Lcom/vk/stickers/f0/KeyboardPopup;
 
-.field private M:Lcom/vk/stickers/f0/a;
+.field private M:Lcom/vk/stickers/f0/KeyboardPopup;
 
 .field private final N:Lcom/vtosters/lite/fragments/messages/chat/vc/MsgSendVc$b;
 
@@ -83,13 +83,13 @@
 
 .field private final P:Lcom/vtosters/lite/fragments/messages/chat/vc/ImDraftsHelper;
 
-.field private final Q:Lcom/vk/im/ui/components/bot_keyboard/d;
+.field private final Q:Lcom/vk/im/ui/components/bot_keyboard/BotKeyboardComponent;
 
-.field private final R:Lcom/vk/im/engine/a;
+.field private final R:Lcom/vk/im/engine/ImEngine;
 
-.field private final S:Lcom/vk/im/ui/p/b;
+.field private final S:Lcom/vk/im/ui/p/ImBridge8;
 
-.field private final T:Lcom/vk/navigation/a;
+.field private final T:Lcom/vk/navigation/ActivityLauncher;
 
 .field private final U:I
 
@@ -111,9 +111,9 @@
 
 .field private e:Lcom/vtosters/lite/fragments/messages/chat/vc/MsgSendVc$State;
 
-.field private final f:Lio/reactivex/disposables/a;
+.field private final f:Lio/reactivex/disposables/CompositeDisposable;
 
-.field private final g:Lcom/vk/im/engine/reporters/c;
+.field private final g:Lcom/vk/im/engine/reporters/BotKeyboardReporter;
 
 .field private h:Z
 
@@ -126,7 +126,7 @@
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, v1}, Lcom/vtosters/lite/fragments/messages/chat/vc/MsgSendVc$a;-><init>(Lkotlin/jvm/internal/i;)V
+    invoke-direct {v0, v1}, Lcom/vtosters/lite/fragments/messages/chat/vc/MsgSendVc$a;-><init>(Lkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     const-string v0, "fwd_messages"
 
@@ -183,24 +183,24 @@
     return-void
 .end method
 
-.method public constructor <init>(Lcom/vk/im/engine/a;Lcom/vk/im/ui/p/b;Lcom/vk/navigation/a;ILcom/vk/im/ui/ImUiModule;)V
+.method public constructor <init>(Lcom/vk/im/engine/ImEngine;Lcom/vk/im/ui/p/ImBridge8;Lcom/vk/navigation/ActivityLauncher;ILcom/vk/im/ui/ImUiModule;)V
     .locals 0
 
     .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lcom/vtosters/lite/fragments/messages/chat/vc/MsgSendVc;->R:Lcom/vk/im/engine/a;
+    iput-object p1, p0, Lcom/vtosters/lite/fragments/messages/chat/vc/MsgSendVc;->R:Lcom/vk/im/engine/ImEngine;
 
-    iput-object p2, p0, Lcom/vtosters/lite/fragments/messages/chat/vc/MsgSendVc;->S:Lcom/vk/im/ui/p/b;
+    iput-object p2, p0, Lcom/vtosters/lite/fragments/messages/chat/vc/MsgSendVc;->S:Lcom/vk/im/ui/p/ImBridge8;
 
-    iput-object p3, p0, Lcom/vtosters/lite/fragments/messages/chat/vc/MsgSendVc;->T:Lcom/vk/navigation/a;
+    iput-object p3, p0, Lcom/vtosters/lite/fragments/messages/chat/vc/MsgSendVc;->T:Lcom/vk/navigation/ActivityLauncher;
 
     iput p4, p0, Lcom/vtosters/lite/fragments/messages/chat/vc/MsgSendVc;->U:I
 
     .line 2
-    iget-object p1, p0, Lcom/vtosters/lite/fragments/messages/chat/vc/MsgSendVc;->T:Lcom/vk/navigation/a;
+    iget-object p1, p0, Lcom/vtosters/lite/fragments/messages/chat/vc/MsgSendVc;->T:Lcom/vk/navigation/ActivityLauncher;
 
-    invoke-interface {p1}, Lcom/vk/navigation/a;->a()Landroid/content/Context;
+    invoke-interface {p1}, Lcom/vk/navigation/ActivityLauncher;->a()Landroid/content/Context;
 
     move-result-object p1
 
@@ -225,22 +225,22 @@
     iput-object p1, p0, Lcom/vtosters/lite/fragments/messages/chat/vc/MsgSendVc;->e:Lcom/vtosters/lite/fragments/messages/chat/vc/MsgSendVc$State;
 
     .line 5
-    new-instance p1, Lio/reactivex/disposables/a;
+    new-instance p1, Lio/reactivex/disposables/CompositeDisposable;
 
-    invoke-direct {p1}, Lio/reactivex/disposables/a;-><init>()V
+    invoke-direct {p1}, Lio/reactivex/disposables/CompositeDisposable;-><init>()V
 
-    iput-object p1, p0, Lcom/vtosters/lite/fragments/messages/chat/vc/MsgSendVc;->f:Lio/reactivex/disposables/a;
+    iput-object p1, p0, Lcom/vtosters/lite/fragments/messages/chat/vc/MsgSendVc;->f:Lio/reactivex/disposables/CompositeDisposable;
 
     .line 6
-    invoke-virtual {p5}, Lcom/vk/im/ui/ImUiModule;->c()Lcom/vk/im/engine/reporters/k;
+    invoke-virtual {p5}, Lcom/vk/im/ui/ImUiModule;->c()Lcom/vk/im/engine/reporters/ImReporters;
 
     move-result-object p1
 
-    invoke-virtual {p1}, Lcom/vk/im/engine/reporters/k;->b()Lcom/vk/im/engine/reporters/c;
+    invoke-virtual {p1}, Lcom/vk/im/engine/reporters/ImReporters;->b()Lcom/vk/im/engine/reporters/BotKeyboardReporter;
 
     move-result-object p1
 
-    iput-object p1, p0, Lcom/vtosters/lite/fragments/messages/chat/vc/MsgSendVc;->g:Lcom/vk/im/engine/reporters/c;
+    iput-object p1, p0, Lcom/vtosters/lite/fragments/messages/chat/vc/MsgSendVc;->g:Lcom/vk/im/engine/reporters/BotKeyboardReporter;
 
     .line 7
     new-instance p1, Lcom/vtosters/lite/fragments/messages/chat/vc/MsgSendVc$b;
@@ -271,7 +271,7 @@
 
     const-string p3, "activity.applicationContext"
 
-    invoke-static {p2, p3}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p2, p3}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     iget p3, p0, Lcom/vtosters/lite/fragments/messages/chat/vc/MsgSendVc;->U:I
 
@@ -280,29 +280,29 @@
     iput-object p1, p0, Lcom/vtosters/lite/fragments/messages/chat/vc/MsgSendVc;->P:Lcom/vtosters/lite/fragments/messages/chat/vc/ImDraftsHelper;
 
     .line 10
-    new-instance p1, Lcom/vk/im/ui/components/bot_keyboard/d;
+    new-instance p1, Lcom/vk/im/ui/components/bot_keyboard/BotKeyboardComponent;
 
-    iget-object p2, p0, Lcom/vtosters/lite/fragments/messages/chat/vc/MsgSendVc;->R:Lcom/vk/im/engine/a;
+    iget-object p2, p0, Lcom/vtosters/lite/fragments/messages/chat/vc/MsgSendVc;->R:Lcom/vk/im/engine/ImEngine;
 
-    invoke-virtual {p5}, Lcom/vk/im/ui/ImUiModule;->f()Lcom/vk/core/ui/w/a;
+    invoke-virtual {p5}, Lcom/vk/im/ui/ImUiModule;->f()Lcom/vk/core/ui/w/VkPools;
 
     move-result-object p3
 
-    invoke-virtual {p3}, Lcom/vk/core/ui/w/a;->c()Lcom/vk/core/ui/w/b;
+    invoke-virtual {p3}, Lcom/vk/core/ui/w/VkPools;->c()Lcom/vk/core/ui/w/VkViewPoolProvider;
 
     move-result-object p3
 
     iget p4, p0, Lcom/vtosters/lite/fragments/messages/chat/vc/MsgSendVc;->U:I
 
-    invoke-direct {p1, p2, p3, p4}, Lcom/vk/im/ui/components/bot_keyboard/d;-><init>(Lcom/vk/im/engine/a;Lcom/vk/core/ui/w/b;I)V
+    invoke-direct {p1, p2, p3, p4}, Lcom/vk/im/ui/components/bot_keyboard/BotKeyboardComponent;-><init>(Lcom/vk/im/engine/ImEngine;Lcom/vk/core/ui/w/VkViewPoolProvider;I)V
 
-    iput-object p1, p0, Lcom/vtosters/lite/fragments/messages/chat/vc/MsgSendVc;->Q:Lcom/vk/im/ui/components/bot_keyboard/d;
+    iput-object p1, p0, Lcom/vtosters/lite/fragments/messages/chat/vc/MsgSendVc;->Q:Lcom/vk/im/ui/components/bot_keyboard/BotKeyboardComponent;
 
     return-void
 
     .line 11
     :cond_0
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     const/4 p1, 0x0
 
@@ -315,29 +315,29 @@
     if-eqz p1, :cond_0
 
     .line 273
-    iget-object p1, p0, Lcom/vtosters/lite/fragments/messages/chat/vc/MsgSendVc;->S:Lcom/vk/im/ui/p/b;
+    iget-object p1, p0, Lcom/vtosters/lite/fragments/messages/chat/vc/MsgSendVc;->S:Lcom/vk/im/ui/p/ImBridge8;
 
-    invoke-interface {p1}, Lcom/vk/im/ui/p/b;->b()Lcom/vk/im/ui/p/e;
+    invoke-interface {p1}, Lcom/vk/im/ui/p/ImBridge8;->b()Lcom/vk/im/ui/p/ImBridge11;
 
     move-result-object p1
 
     iget-object v0, p0, Lcom/vtosters/lite/fragments/messages/chat/vc/MsgSendVc;->a:Landroid/app/Activity;
 
-    invoke-interface {p1, v0}, Lcom/vk/im/ui/p/e;->e(Landroid/content/Context;)V
+    invoke-interface {p1, v0}, Lcom/vk/im/ui/p/ImBridge11;->e(Landroid/content/Context;)V
 
     goto :goto_0
 
     .line 274
     :cond_0
-    iget-object p1, p0, Lcom/vtosters/lite/fragments/messages/chat/vc/MsgSendVc;->S:Lcom/vk/im/ui/p/b;
+    iget-object p1, p0, Lcom/vtosters/lite/fragments/messages/chat/vc/MsgSendVc;->S:Lcom/vk/im/ui/p/ImBridge8;
 
-    invoke-interface {p1}, Lcom/vk/im/ui/p/b;->b()Lcom/vk/im/ui/p/e;
+    invoke-interface {p1}, Lcom/vk/im/ui/p/ImBridge8;->b()Lcom/vk/im/ui/p/ImBridge11;
 
     move-result-object p1
 
     iget-object v0, p0, Lcom/vtosters/lite/fragments/messages/chat/vc/MsgSendVc;->a:Landroid/app/Activity;
 
-    invoke-interface {p1, v0}, Lcom/vk/im/ui/p/e;->c(Landroid/content/Context;)V
+    invoke-interface {p1, v0}, Lcom/vk/im/ui/p/ImBridge11;->c(Landroid/content/Context;)V
 
     :goto_0
     return-void
@@ -369,13 +369,13 @@
 
     .line 52
     :cond_0
-    iget-object v1, p0, Lcom/vtosters/lite/fragments/messages/chat/vc/MsgSendVc;->S:Lcom/vk/im/ui/p/b;
+    iget-object v1, p0, Lcom/vtosters/lite/fragments/messages/chat/vc/MsgSendVc;->S:Lcom/vk/im/ui/p/ImBridge8;
 
-    invoke-interface {v1}, Lcom/vk/im/ui/p/b;->o()Lcom/vk/im/ui/p/a;
+    invoke-interface {v1}, Lcom/vk/im/ui/p/ImBridge8;->o()Lcom/vk/im/ui/p/ImBridge1;
 
     move-result-object v1
 
-    invoke-interface {v1, v0}, Lcom/vk/im/ui/p/a;->a(Landroid/content/Context;)Lcom/vk/im/ui/components/install_vk_me/VkMePromoController;
+    invoke-interface {v1, v0}, Lcom/vk/im/ui/p/ImBridge1;->a(Landroid/content/Context;)Lcom/vk/im/ui/components/install_vk_me/VkMePromoController;
 
     move-result-object v1
 
@@ -467,7 +467,7 @@
 
     if-eqz v2, :cond_4
 
-    invoke-static {v2, v0}, Lcom/vk/core/extensions/a0;->b(Landroid/widget/TextView;Landroid/graphics/drawable/Drawable;)V
+    invoke-static {v2, v0}, Lcom/vk/core/extensions/TextViewExt;->b(Landroid/widget/TextView;Landroid/graphics/drawable/Drawable;)V
 
     .line 62
     :cond_4
@@ -568,7 +568,7 @@
 
     .line 71
     :cond_b
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     throw v1
 
@@ -594,7 +594,7 @@
     if-ne p1, v0, :cond_0
 
     .line 267
-    iget-object v0, p0, Lcom/vtosters/lite/fragments/messages/chat/vc/MsgSendVc;->R:Lcom/vk/im/engine/a;
+    iget-object v0, p0, Lcom/vtosters/lite/fragments/messages/chat/vc/MsgSendVc;->R:Lcom/vk/im/engine/ImEngine;
 
     new-instance v7, Lcom/vk/im/engine/commands/requests/MsgRequestStatusChangeCmd;
 
@@ -608,9 +608,9 @@
 
     move-object v3, p1
 
-    invoke-direct/range {v1 .. v6}, Lcom/vk/im/engine/commands/requests/MsgRequestStatusChangeCmd;-><init>(ILcom/vk/im/engine/models/MsgRequestStatus;Ljava/lang/Object;ILkotlin/jvm/internal/i;)V
+    invoke-direct/range {v1 .. v6}, Lcom/vk/im/engine/commands/requests/MsgRequestStatusChangeCmd;-><init>(ILcom/vk/im/engine/models/MsgRequestStatus;Ljava/lang/Object;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
-    invoke-virtual {v0, v7}, Lcom/vk/im/engine/a;->a(Lcom/vk/im/engine/i/c;)V
+    invoke-virtual {v0, v7}, Lcom/vk/im/engine/ImEngine;->a(Lcom/vk/im/engine/i/ImEngineCmd;)V
 
     return-void
 
@@ -633,12 +633,12 @@
 
     move-object v3, p1
 
-    invoke-direct/range {v1 .. v6}, Lcom/vk/im/engine/commands/requests/MsgRequestStatusChangeCmd;-><init>(ILcom/vk/im/engine/models/MsgRequestStatus;Ljava/lang/Object;ILkotlin/jvm/internal/i;)V
+    invoke-direct/range {v1 .. v6}, Lcom/vk/im/engine/commands/requests/MsgRequestStatusChangeCmd;-><init>(ILcom/vk/im/engine/models/MsgRequestStatus;Ljava/lang/Object;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     .line 270
-    iget-object p1, p0, Lcom/vtosters/lite/fragments/messages/chat/vc/MsgSendVc;->R:Lcom/vk/im/engine/a;
+    iget-object p1, p0, Lcom/vtosters/lite/fragments/messages/chat/vc/MsgSendVc;->R:Lcom/vk/im/engine/ImEngine;
 
-    invoke-virtual {p1, p0, v0}, Lcom/vk/im/engine/a;->c(Ljava/lang/Object;Lcom/vk/im/engine/i/c;)Lc/a/t;
+    invoke-virtual {p1, p0, v0}, Lcom/vk/im/engine/ImEngine;->c(Ljava/lang/Object;Lcom/vk/im/engine/i/ImEngineCmd;)Lio/reactivex/Single;
 
     move-result-object p1
 
@@ -647,30 +647,30 @@
 
     invoke-direct {v0, p0}, Lcom/vtosters/lite/fragments/messages/chat/vc/MsgSendVc$changeMsgRequest$1;-><init>(Lcom/vtosters/lite/fragments/messages/chat/vc/MsgSendVc;)V
 
-    new-instance v1, Lcom/vtosters/lite/fragments/messages/chat/vc/b;
+    new-instance v1, Lcom/vtosters/lite/fragments/messages/chat/vc/MsgSendVc1;
 
-    invoke-direct {v1, v0}, Lcom/vtosters/lite/fragments/messages/chat/vc/b;-><init>(Lkotlin/jvm/b/b;)V
+    invoke-direct {v1, v0}, Lcom/vtosters/lite/fragments/messages/chat/vc/MsgSendVc1;-><init>(Lkotlin/jvm/b/Functions2;)V
 
     new-instance v0, Lcom/vtosters/lite/fragments/messages/chat/vc/MsgSendVc$changeMsgRequest$2;
 
     invoke-direct {v0, p0}, Lcom/vtosters/lite/fragments/messages/chat/vc/MsgSendVc$changeMsgRequest$2;-><init>(Lcom/vtosters/lite/fragments/messages/chat/vc/MsgSendVc;)V
 
-    new-instance v2, Lcom/vtosters/lite/fragments/messages/chat/vc/b;
+    new-instance v2, Lcom/vtosters/lite/fragments/messages/chat/vc/MsgSendVc1;
 
-    invoke-direct {v2, v0}, Lcom/vtosters/lite/fragments/messages/chat/vc/b;-><init>(Lkotlin/jvm/b/b;)V
+    invoke-direct {v2, v0}, Lcom/vtosters/lite/fragments/messages/chat/vc/MsgSendVc1;-><init>(Lkotlin/jvm/b/Functions2;)V
 
-    invoke-virtual {p1, v1, v2}, Lc/a/t;->a(Lc/a/z/g;Lc/a/z/g;)Lio/reactivex/disposables/b;
+    invoke-virtual {p1, v1, v2}, Lio/reactivex/Single;->a(Lio/reactivex/functions/Consumer;Lio/reactivex/functions/Consumer;)Lio/reactivex/disposables/Disposable;
 
     move-result-object p1
 
     const-string v0, "engine.submitSingle(this\u2026eMsgRequestChangeFailure)"
 
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 272
-    iget-object v0, p0, Lcom/vtosters/lite/fragments/messages/chat/vc/MsgSendVc;->f:Lio/reactivex/disposables/a;
+    iget-object v0, p0, Lcom/vtosters/lite/fragments/messages/chat/vc/MsgSendVc;->f:Lio/reactivex/disposables/CompositeDisposable;
 
-    invoke-static {p1, v0}, Lcom/vk/core/extensions/RxExtKt;->a(Lio/reactivex/disposables/b;Lio/reactivex/disposables/a;)Lio/reactivex/disposables/b;
+    invoke-static {p1, v0}, Lcom/vk/core/extensions/RxExtKt;->a(Lio/reactivex/disposables/Disposable;Lio/reactivex/disposables/CompositeDisposable;)Lio/reactivex/disposables/Disposable;
 
     :cond_1
     return-void
@@ -700,7 +700,7 @@
     move-result p2
 
     .line 256
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v0
 
@@ -760,14 +760,14 @@
     const/4 p1, 0x0
 
     .line 260
-    invoke-static {p0, p1, v1, p1}, Lcom/vtosters/lite/fragments/messages/chat/vc/MsgSendVc;->a(Lcom/vtosters/lite/fragments/messages/chat/vc/MsgSendVc;Lkotlin/jvm/b/b;ILjava/lang/Object;)V
+    invoke-static {p0, p1, v1, p1}, Lcom/vtosters/lite/fragments/messages/chat/vc/MsgSendVc;->a(Lcom/vtosters/lite/fragments/messages/chat/vc/MsgSendVc;Lkotlin/jvm/b/Functions2;ILjava/lang/Object;)V
 
     :cond_4
     :goto_2
     return-void
 .end method
 
-.method private final a(Lcom/vk/im/engine/models/messages/f;)V
+.method private final a(Lcom/vk/im/engine/models/messages/MsgsExt;)V
     .locals 3
 
     .line 120
@@ -775,17 +775,17 @@
 
     if-eqz v0, :cond_0
 
-    invoke-virtual {p1}, Lcom/vk/im/engine/models/messages/f;->a()Lcom/vk/im/engine/models/a;
+    invoke-virtual {p1}, Lcom/vk/im/engine/models/messages/MsgsExt;->a()Lcom/vk/im/engine/models/EntityIntMap;
 
     move-result-object v1
 
-    iget-object v1, v1, Lcom/vk/im/engine/models/a;->c:Landroid/util/SparseArray;
+    iget-object v1, v1, Lcom/vk/im/engine/models/EntityIntMap;->c:Landroid/util/SparseArray;
 
     const-string v2, "info.msgs.cached"
 
-    invoke-static {v1, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    invoke-static {v1}, Lcom/vk/core/extensions/x;->h(Landroid/util/SparseArray;)Ljava/util/List;
+    invoke-static {v1}, Lcom/vk/core/extensions/SparseArrayExt1;->h(Landroid/util/SparseArray;)Ljava/util/List;
 
     move-result-object v1
 
@@ -795,7 +795,7 @@
 
     check-cast v1, Lcom/vk/im/engine/models/messages/MsgFromUser;
 
-    invoke-virtual {p1}, Lcom/vk/im/engine/models/messages/f;->b()Lcom/vk/im/engine/models/ProfilesInfo;
+    invoke-virtual {p1}, Lcom/vk/im/engine/models/messages/MsgsExt;->b()Lcom/vk/im/engine/models/ProfilesInfo;
 
     move-result-object p1
 
@@ -810,7 +810,7 @@
     :cond_0
     const-string p1, "writeBarView"
 
-    invoke-static {p1}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {p1}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     const/4 p1, 0x0
 
@@ -889,13 +889,13 @@
     goto :goto_2
 
     :cond_2
-    invoke-static {}, Lcom/vk/bridges/g;->a()Lcom/vk/bridges/f;
+    invoke-static {}, Lcom/vk/bridges/AuthBridge;->a()Lcom/vk/bridges/AuthBridge3;
 
     move-result-object v5
 
     iget v6, p0, Lcom/vtosters/lite/fragments/messages/chat/vc/MsgSendVc;->U:I
 
-    invoke-interface {v5, v6}, Lcom/vk/bridges/f;->a(I)Z
+    invoke-interface {v5, v6}, Lcom/vk/bridges/AuthBridge3;->a(I)Z
 
     move-result v5
 
@@ -913,13 +913,13 @@
 
     .line 181
     :cond_3
-    invoke-static {}, Lcom/vk/bridges/g;->a()Lcom/vk/bridges/f;
+    invoke-static {}, Lcom/vk/bridges/AuthBridge;->a()Lcom/vk/bridges/AuthBridge3;
 
     move-result-object v6
 
     iget v7, p0, Lcom/vtosters/lite/fragments/messages/chat/vc/MsgSendVc;->U:I
 
-    invoke-interface {v6, v7}, Lcom/vk/bridges/f;->a(I)Z
+    invoke-interface {v6, v7}, Lcom/vk/bridges/AuthBridge3;->a(I)Z
 
     move-result v6
 
@@ -1118,11 +1118,11 @@
     iput v5, v1, Lcom/vtosters/lite/ui/WriteBar;->C:I
 
     .line 195
-    iget-object v1, p0, Lcom/vtosters/lite/fragments/messages/chat/vc/MsgSendVc;->E:Lcom/vk/stickers/b0;
+    iget-object v1, p0, Lcom/vtosters/lite/fragments/messages/chat/vc/MsgSendVc;->E:Lcom/vk/stickers/StickersView;
 
     if-eqz v1, :cond_2a
 
-    invoke-virtual {v1, p1}, Lcom/vk/stickers/b0;->setStickersEnabled(Z)V
+    invoke-virtual {v1, p1}, Lcom/vk/stickers/StickersView;->setStickersEnabled(Z)V
 
     .line 196
     iget-object p1, p0, Lcom/vtosters/lite/fragments/messages/chat/vc/MsgSendVc;->e:Lcom/vtosters/lite/fragments/messages/chat/vc/MsgSendVc$State;
@@ -1199,31 +1199,31 @@
     goto/16 :goto_f
 
     :cond_c
-    invoke-static {v11}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v11}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v2
 
     .line 202
     :cond_d
-    invoke-static {v7}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v7}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v2
 
     .line 203
     :cond_e
-    invoke-static {v1}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v1}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v2
 
     .line 204
     :cond_f
-    invoke-static {v6}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v6}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v2
 
     .line 205
     :cond_10
-    invoke-static {v11}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v11}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v2
 
@@ -1259,25 +1259,25 @@
     goto/16 :goto_f
 
     :cond_12
-    invoke-static {v1}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v1}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v2
 
     .line 210
     :cond_13
-    invoke-static {v6}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v6}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v2
 
     .line 211
     :cond_14
-    invoke-static {v11}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v11}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v2
 
     .line 212
     :cond_15
-    invoke-static {v11}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v11}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v2
 
@@ -1312,9 +1312,9 @@
 
     new-instance v1, Landroid/text/InputFilter$LengthFilter;
 
-    iget-object v4, p0, Lcom/vtosters/lite/fragments/messages/chat/vc/MsgSendVc;->R:Lcom/vk/im/engine/a;
+    iget-object v4, p0, Lcom/vtosters/lite/fragments/messages/chat/vc/MsgSendVc;->R:Lcom/vk/im/engine/ImEngine;
 
-    invoke-virtual {v4}, Lcom/vk/im/engine/a;->d()Lcom/vk/im/engine/ImConfig;
+    invoke-virtual {v4}, Lcom/vk/im/engine/ImEngine;->d()Lcom/vk/im/engine/ImConfig;
 
     move-result-object v4
 
@@ -1338,31 +1338,31 @@
     goto/16 :goto_f
 
     :cond_17
-    invoke-static {v11}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v11}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v2
 
     .line 218
     :cond_18
-    invoke-static {v7}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v7}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v2
 
     .line 219
     :cond_19
-    invoke-static {v1}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v1}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v2
 
     .line 220
     :cond_1a
-    invoke-static {v6}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v6}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v2
 
     .line 221
     :cond_1b
-    invoke-static {v11}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v11}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v2
 
@@ -1476,18 +1476,18 @@
 
     invoke-direct {v0, p0, v3}, Lcom/vtosters/lite/fragments/messages/chat/vc/MsgSendVc$updateWritebar$1;-><init>(Lcom/vtosters/lite/fragments/messages/chat/vc/MsgSendVc;Z)V
 
-    invoke-static {p1, v0}, Lcom/vk/core/extensions/ViewGroupExtKt;->a(Landroid/view/View;Lkotlin/jvm/b/b;)V
+    invoke-static {p1, v0}, Lcom/vk/core/extensions/ViewGroupExtKt;->a(Landroid/view/View;Lkotlin/jvm/b/Functions2;)V
 
     goto :goto_e
 
     :cond_21
-    invoke-static {v6}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v6}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v2
 
     .line 231
     :cond_22
-    invoke-static {v6}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v6}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v2
 
@@ -1514,44 +1514,44 @@
     :goto_e
     iget-object p1, p0, Lcom/vtosters/lite/fragments/messages/chat/vc/MsgSendVc;->a:Landroid/app/Activity;
 
-    invoke-static {p1}, Lcom/vk/core/util/l0;->a(Landroid/content/Context;)V
+    invoke-static {p1}, Lcom/vk/core/util/KeyboardUtils;->a(Landroid/content/Context;)V
 
     :goto_f
     return-void
 
     .line 235
     :cond_24
-    invoke-static {v6}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v6}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v2
 
     .line 236
     :cond_25
-    invoke-static {v6}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v6}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v2
 
     .line 237
     :cond_26
-    invoke-static {v1}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v1}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v2
 
     .line 238
     :cond_27
-    invoke-static {v6}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v6}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v2
 
     .line 239
     :cond_28
-    invoke-static {v11}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v11}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v2
 
     .line 240
     :cond_29
-    invoke-static {v11}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v11}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v2
 
@@ -1559,67 +1559,67 @@
     const-string p1, "stickersView"
 
     .line 241
-    invoke-static {p1}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {p1}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v2
 
     .line 242
     :cond_2b
-    invoke-static {v11}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v11}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v2
 
     .line 243
     :cond_2c
-    invoke-static {v11}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v11}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v2
 
     .line 244
     :cond_2d
-    invoke-static {v11}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v11}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v2
 
     .line 245
     :cond_2e
-    invoke-static {v11}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v11}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v2
 
     .line 246
     :cond_2f
-    invoke-static {v11}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v11}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v2
 
     .line 247
     :cond_30
-    invoke-static {v11}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v11}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v2
 
     .line 248
     :cond_31
-    invoke-static {v11}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v11}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v2
 
     .line 249
     :cond_32
-    invoke-static {v11}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v11}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v2
 
     .line 250
     :cond_33
-    invoke-static {v11}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v11}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v2
 
     .line 251
     :cond_34
-    invoke-static {v11}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v11}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v2
 .end method
@@ -1642,20 +1642,20 @@
     return-void
 .end method
 
-.method public static final synthetic a(Lcom/vtosters/lite/fragments/messages/chat/vc/MsgSendVc;Lcom/vk/im/engine/models/messages/e$b;)V
+.method public static final synthetic a(Lcom/vtosters/lite/fragments/messages/chat/vc/MsgSendVc;Lcom/vk/im/engine/models/messages/MsgSendSource$b;)V
     .locals 0
 
     .line 7
-    invoke-direct {p0, p1}, Lcom/vtosters/lite/fragments/messages/chat/vc/MsgSendVc;->b(Lcom/vk/im/engine/models/messages/e$b;)V
+    invoke-direct {p0, p1}, Lcom/vtosters/lite/fragments/messages/chat/vc/MsgSendVc;->b(Lcom/vk/im/engine/models/messages/MsgSendSource$b;)V
 
     return-void
 .end method
 
-.method public static final synthetic a(Lcom/vtosters/lite/fragments/messages/chat/vc/MsgSendVc;Lcom/vk/im/engine/models/messages/f;)V
+.method public static final synthetic a(Lcom/vtosters/lite/fragments/messages/chat/vc/MsgSendVc;Lcom/vk/im/engine/models/messages/MsgsExt;)V
     .locals 0
 
     .line 6
-    invoke-direct {p0, p1}, Lcom/vtosters/lite/fragments/messages/chat/vc/MsgSendVc;->a(Lcom/vk/im/engine/models/messages/f;)V
+    invoke-direct {p0, p1}, Lcom/vtosters/lite/fragments/messages/chat/vc/MsgSendVc;->a(Lcom/vk/im/engine/models/messages/MsgsExt;)V
 
     return-void
 .end method
@@ -1678,7 +1678,7 @@
     return-void
 .end method
 
-.method static synthetic a(Lcom/vtosters/lite/fragments/messages/chat/vc/MsgSendVc;Lkotlin/jvm/b/b;ILjava/lang/Object;)V
+.method static synthetic a(Lcom/vtosters/lite/fragments/messages/chat/vc/MsgSendVc;Lkotlin/jvm/b/Functions2;ILjava/lang/Object;)V
     .locals 0
 
     and-int/lit8 p2, p2, 0x1
@@ -1689,7 +1689,7 @@
     sget-object p1, Lcom/vtosters/lite/fragments/messages/chat/vc/MsgSendVc$showBotKeyboard$1;->c:Lcom/vtosters/lite/fragments/messages/chat/vc/MsgSendVc$showBotKeyboard$1;
 
     :cond_0
-    invoke-direct {p0, p1}, Lcom/vtosters/lite/fragments/messages/chat/vc/MsgSendVc;->a(Lkotlin/jvm/b/b;)V
+    invoke-direct {p0, p1}, Lcom/vtosters/lite/fragments/messages/chat/vc/MsgSendVc;->a(Lkotlin/jvm/b/Functions2;)V
 
     return-void
 .end method
@@ -1737,18 +1737,18 @@
     if-eqz v0, :cond_3
 
     .line 155
-    iget-object p1, p0, Lcom/vtosters/lite/fragments/messages/chat/vc/MsgSendVc;->K:Lcom/vk/im/ui/q/h/f/b;
+    iget-object p1, p0, Lcom/vtosters/lite/fragments/messages/chat/vc/MsgSendVc;->K:Lcom/vk/im/ui/q/h/f/MsgSendVcCallback;
 
     if-eqz p1, :cond_2
 
-    invoke-interface {p1}, Lcom/vk/im/ui/q/h/f/b;->i()V
+    invoke-interface {p1}, Lcom/vk/im/ui/q/h/f/MsgSendVcCallback;->i()V
 
     goto :goto_2
 
     :cond_2
     const-string p1, "callback"
 
-    invoke-static {p1}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {p1}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     const/4 p1, 0x0
 
@@ -1848,7 +1848,7 @@
     goto :goto_0
 
     :cond_0
-    invoke-static {v1}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v1}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v2
 
@@ -1871,7 +1871,7 @@
     goto :goto_1
 
     :cond_2
-    invoke-static {v1}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v1}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v2
 
@@ -1891,7 +1891,7 @@
     goto :goto_2
 
     :cond_4
-    invoke-static {v1}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v1}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v2
 
@@ -1902,10 +1902,10 @@
 
     if-eqz p1, :cond_8
 
-    invoke-static {p1}, Lcom/vk/core/util/l0;->b(Landroid/view/View;)V
+    invoke-static {p1}, Lcom/vk/core/util/KeyboardUtils;->b(Landroid/view/View;)V
 
     .line 149
-    iget-object p1, p0, Lcom/vtosters/lite/fragments/messages/chat/vc/MsgSendVc;->K:Lcom/vk/im/ui/q/h/f/b;
+    iget-object p1, p0, Lcom/vtosters/lite/fragments/messages/chat/vc/MsgSendVc;->K:Lcom/vk/im/ui/q/h/f/MsgSendVcCallback;
 
     if-eqz p1, :cond_7
 
@@ -1913,48 +1913,48 @@
 
     if-eqz p2, :cond_6
 
-    invoke-interface {p1, p2}, Lcom/vk/im/ui/q/h/f/b;->a(Lcom/vk/im/engine/models/messages/MsgFromUser;)V
+    invoke-interface {p1, p2}, Lcom/vk/im/ui/q/h/f/MsgSendVcCallback;->a(Lcom/vk/im/engine/models/messages/MsgFromUser;)V
 
     return-void
 
     :cond_6
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     throw v2
 
     :cond_7
     const-string p1, "callback"
 
-    invoke-static {p1}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {p1}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v2
 
     .line 150
     :cond_8
-    invoke-static {v0}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v0}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v2
 
     .line 151
     :cond_9
-    invoke-static {v0}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v0}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v2
 
     :cond_a
-    invoke-static {v0}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v0}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v2
 
     .line 152
     :cond_b
-    invoke-static {v0}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v0}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v2
 
     .line 153
     :cond_c
-    invoke-static {v1}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v1}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v2
 .end method
@@ -1963,20 +1963,20 @@
     .locals 0
 
     .line 275
-    invoke-static {p1}, Lcom/vk/im/ui/components/common/e;->c(Ljava/lang/Throwable;)V
+    invoke-static {p1}, Lcom/vk/im/ui/components/common/NotifyIdUtils;->c(Ljava/lang/Throwable;)V
 
     return-void
 .end method
 
-.method private final a(Lkotlin/jvm/b/b;)V
+.method private final a(Lkotlin/jvm/b/Functions2;)V
     .locals 2
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lkotlin/jvm/b/b<",
+            "Lkotlin/jvm/b/Functions2<",
             "-",
-            "Lcom/vk/stickers/f0/a;",
-            "Lkotlin/m;",
+            "Lcom/vk/stickers/f0/KeyboardPopup;",
+            "Lkotlin/Unit;",
             ">;)V"
         }
     .end annotation
@@ -1989,16 +1989,16 @@
     invoke-virtual {v0, v1}, Landroid/os/Handler;->removeCallbacksAndMessages(Ljava/lang/Object;)V
 
     .line 263
-    invoke-direct {p0}, Lcom/vtosters/lite/fragments/messages/chat/vc/MsgSendVc;->j()Lcom/vk/stickers/f0/a;
+    invoke-direct {p0}, Lcom/vtosters/lite/fragments/messages/chat/vc/MsgSendVc;->j()Lcom/vk/stickers/f0/KeyboardPopup;
 
     move-result-object v0
 
-    invoke-interface {p1, v0}, Lkotlin/jvm/b/b;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {p1, v0}, Lkotlin/jvm/b/Functions2;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
 
     .line 264
-    iget-object p1, p0, Lcom/vtosters/lite/fragments/messages/chat/vc/MsgSendVc;->L:Lcom/vk/stickers/f0/a;
+    iget-object p1, p0, Lcom/vtosters/lite/fragments/messages/chat/vc/MsgSendVc;->L:Lcom/vk/stickers/f0/KeyboardPopup;
 
-    invoke-direct {p0, p1}, Lcom/vtosters/lite/fragments/messages/chat/vc/MsgSendVc;->a(Lcom/vk/stickers/f0/a;)Z
+    invoke-direct {p0, p1}, Lcom/vtosters/lite/fragments/messages/chat/vc/MsgSendVc;->a(Lcom/vk/stickers/f0/KeyboardPopup;)Z
 
     return-void
 .end method
@@ -2045,9 +2045,9 @@
 
     .line 126
     :goto_0
-    sget-object v0, Lcom/vtosters/lite/im/a;->a:Lcom/vtosters/lite/im/a;
+    sget-object v0, Lcom/vtosters/lite/im/AppAttachToImAttachConverter;->a:Lcom/vtosters/lite/im/AppAttachToImAttachConverter;
 
-    invoke-virtual {v0, p1}, Lcom/vtosters/lite/im/a;->a(Lcom/vk/dto/common/Attachment;)Lcom/vk/im/engine/models/attaches/Attach;
+    invoke-virtual {v0, p1}, Lcom/vtosters/lite/im/AppAttachToImAttachConverter;->a(Lcom/vk/dto/common/Attachment;)Lcom/vk/im/engine/models/attaches/Attach;
 
     move-result-object p1
 
@@ -2085,7 +2085,7 @@
 
     .line 128
     :goto_1
-    iget-object v3, p0, Lcom/vtosters/lite/fragments/messages/chat/vc/MsgSendVc;->K:Lcom/vk/im/ui/q/h/f/b;
+    iget-object v3, p0, Lcom/vtosters/lite/fragments/messages/chat/vc/MsgSendVc;->K:Lcom/vk/im/ui/q/h/f/MsgSendVcCallback;
 
     if-eqz v3, :cond_6
 
@@ -2109,7 +2109,7 @@
 
     const/4 v13, 0x0
 
-    invoke-static/range {v3 .. v13}, Lcom/vk/im/ui/q/h/f/b$a;->a(Lcom/vk/im/ui/q/h/f/b;ILjava/lang/String;Ljava/lang/String;Ljava/util/List;Ljava/lang/Integer;Lcom/vk/im/engine/models/messages/e;Lcom/vk/im/engine/utils/collection/h;Lcom/vk/im/engine/commands/messages/z;ILjava/lang/Object;)V
+    invoke-static/range {v3 .. v13}, Lcom/vk/im/ui/q/h/f/MsgSendVcCallback$a;->a(Lcom/vk/im/ui/q/h/f/MsgSendVcCallback;ILjava/lang/String;Ljava/lang/String;Ljava/util/List;Ljava/lang/Integer;Lcom/vk/im/engine/models/messages/MsgSendSource;Lcom/vk/im/engine/utils/collection/IntSet;Lcom/vk/im/engine/commands/messages/MsgSendConfig;ILjava/lang/Object;)V
 
     .line 129
     iget-object p1, p0, Lcom/vtosters/lite/fragments/messages/chat/vc/MsgSendVc;->B:Lcom/vtosters/lite/ui/WriteBar;
@@ -2121,7 +2121,7 @@
     goto :goto_2
 
     :cond_5
-    invoke-static {v0}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v0}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v1
 
@@ -2129,13 +2129,13 @@
     const-string p1, "callback"
 
     .line 130
-    invoke-static {p1}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {p1}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v1
 
     .line 131
     :cond_7
-    invoke-static {v0}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v0}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v1
 
@@ -2153,7 +2153,7 @@
     goto :goto_3
 
     :cond_9
-    invoke-static {v0}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v0}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v1
 
@@ -2164,7 +2164,7 @@
     return p1
 .end method
 
-.method private final a(Lcom/vk/stickers/f0/a;)Z
+.method private final a(Lcom/vk/stickers/f0/KeyboardPopup;)Z
     .locals 2
 
     const/4 v0, 0x1
@@ -2172,15 +2172,15 @@
     if-eqz p1, :cond_0
 
     .line 280
-    invoke-virtual {p1}, Lcom/vk/stickers/f0/a;->b()Z
+    invoke-virtual {p1}, Lcom/vk/stickers/f0/KeyboardPopup;->b()Z
 
     move-result v1
 
     if-ne v1, v0, :cond_0
 
-    invoke-virtual {p1}, Lcom/vk/stickers/f0/a;->a()V
+    invoke-virtual {p1}, Lcom/vk/stickers/f0/KeyboardPopup;->a()V
 
-    sget-object p1, Lkotlin/m;->a:Lkotlin/m;
+    sget-object p1, Lkotlin/Unit;->a:Lkotlin/Unit;
 
     goto :goto_0
 
@@ -2213,18 +2213,18 @@
     return p0
 .end method
 
-.method public static final synthetic a(Lcom/vtosters/lite/fragments/messages/chat/vc/MsgSendVc;Lcom/vk/stickers/f0/a;)Z
+.method public static final synthetic a(Lcom/vtosters/lite/fragments/messages/chat/vc/MsgSendVc;Lcom/vk/stickers/f0/KeyboardPopup;)Z
     .locals 0
 
     .line 5
-    invoke-direct {p0, p1}, Lcom/vtosters/lite/fragments/messages/chat/vc/MsgSendVc;->a(Lcom/vk/stickers/f0/a;)Z
+    invoke-direct {p0, p1}, Lcom/vtosters/lite/fragments/messages/chat/vc/MsgSendVc;->a(Lcom/vk/stickers/f0/KeyboardPopup;)Z
 
     move-result p0
 
     return p0
 .end method
 
-.method private final a(Ljava/lang/String;Ljava/util/List;Lcom/vk/im/engine/utils/collection/h;)Z
+.method private final a(Ljava/lang/String;Ljava/util/List;Lcom/vk/im/engine/utils/collection/IntSet;)Z
     .locals 2
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -2234,7 +2234,7 @@
             "+",
             "Lcom/vk/im/engine/models/attaches/Attach;",
             ">;",
-            "Lcom/vk/im/engine/utils/collection/h;",
+            "Lcom/vk/im/engine/utils/collection/IntSet;",
             ")Z"
         }
     .end annotation
@@ -2278,7 +2278,7 @@
     if-eqz p1, :cond_1
 
     .line 278
-    invoke-interface {p3}, Lcom/vk/im/engine/utils/collection/d;->isEmpty()Z
+    invoke-interface {p3}, Lcom/vk/im/engine/utils/collection/IntCollection;->isEmpty()Z
 
     move-result p1
 
@@ -2316,18 +2316,18 @@
     .locals 11
 
     .line 7
-    new-instance v0, Lb/h/c/k/a;
+    new-instance v0, Lcom/vk/api/gifts/GiftGetByStickerId;
 
     iget-object v1, p0, Lcom/vtosters/lite/fragments/messages/chat/vc/MsgSendVc;->a:Landroid/app/Activity;
 
-    invoke-direct {v0, v1, p1}, Lb/h/c/k/a;-><init>(Landroid/content/Context;I)V
+    invoke-direct {v0, v1, p1}, Lcom/vk/api/gifts/GiftGetByStickerId;-><init>(Landroid/content/Context;I)V
 
     const/4 p1, 0x0
 
     const/4 v1, 0x1
 
     .line 8
-    invoke-static {v0, p1, v1, p1}, Lcom/vk/api/base/d;->d(Lcom/vk/api/base/d;Lcom/vk/api/base/e;ILjava/lang/Object;)Lc/a/m;
+    invoke-static {v0, p1, v1, p1}, Lcom/vk/api/base/ApiRequest;->d(Lcom/vk/api/base/ApiRequest;Lcom/vk/api/base/ApiThreadHolder;ILjava/lang/Object;)Lio/reactivex/Observable;
 
     move-result-object v2
 
@@ -2346,7 +2346,7 @@
 
     const/4 v10, 0x0
 
-    invoke-static/range {v2 .. v10}, Lcom/vk/core/extensions/RxExtKt;->a(Lc/a/m;Landroid/content/Context;JIZZILjava/lang/Object;)Lc/a/m;
+    invoke-static/range {v2 .. v10}, Lcom/vk/core/extensions/RxExtKt;->a(Lio/reactivex/Observable;Landroid/content/Context;JIZZILjava/lang/Object;)Lio/reactivex/Observable;
 
     move-result-object p1
 
@@ -2355,18 +2355,18 @@
 
     invoke-direct {v0, p0}, Lcom/vtosters/lite/fragments/messages/chat/vc/MsgSendVc$f;-><init>(Lcom/vtosters/lite/fragments/messages/chat/vc/MsgSendVc;)V
 
-    invoke-virtual {p1, v0}, Lc/a/m;->f(Lc/a/z/g;)Lio/reactivex/disposables/b;
+    invoke-virtual {p1, v0}, Lio/reactivex/Observable;->f(Lio/reactivex/functions/Consumer;)Lio/reactivex/disposables/Disposable;
 
     move-result-object p1
 
     const-string v0, "GiftGetByStickerId(activ\u2026rrers.LONGTAP_KEYBOARD) }"
 
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 11
-    iget-object v0, p0, Lcom/vtosters/lite/fragments/messages/chat/vc/MsgSendVc;->f:Lio/reactivex/disposables/a;
+    iget-object v0, p0, Lcom/vtosters/lite/fragments/messages/chat/vc/MsgSendVc;->f:Lio/reactivex/disposables/CompositeDisposable;
 
-    invoke-static {p1, v0}, Lcom/vk/core/extensions/RxExtKt;->a(Lio/reactivex/disposables/b;Lio/reactivex/disposables/a;)Lio/reactivex/disposables/b;
+    invoke-static {p1, v0}, Lcom/vk/core/extensions/RxExtKt;->a(Lio/reactivex/disposables/Disposable;Lio/reactivex/disposables/CompositeDisposable;)Lio/reactivex/disposables/Disposable;
 
     return-void
 .end method
@@ -2401,17 +2401,17 @@
     .line 56
     sget-object p1, Lcom/vtosters/lite/fragments/messages/chat/vc/MsgSendVc$updateBotKeyboardVisibility$1;->c:Lcom/vtosters/lite/fragments/messages/chat/vc/MsgSendVc$updateBotKeyboardVisibility$1;
 
-    invoke-direct {p0, p1}, Lcom/vtosters/lite/fragments/messages/chat/vc/MsgSendVc;->a(Lkotlin/jvm/b/b;)V
+    invoke-direct {p0, p1}, Lcom/vtosters/lite/fragments/messages/chat/vc/MsgSendVc;->a(Lkotlin/jvm/b/Functions2;)V
 
     :cond_1
     return-void
 .end method
 
-.method private final b(Lcom/vk/im/engine/models/messages/e$b;)V
+.method private final b(Lcom/vk/im/engine/models/messages/MsgSendSource$b;)V
     .locals 14
 
     .line 13
-    invoke-virtual {p1}, Lcom/vk/im/engine/models/messages/e$b;->a()Lcom/vk/im/engine/models/conversations/BotButton;
+    invoke-virtual {p1}, Lcom/vk/im/engine/models/messages/MsgSendSource$b;->a()Lcom/vk/im/engine/models/conversations/BotButton;
 
     move-result-object v0
 
@@ -2422,7 +2422,7 @@
 
     if-eqz v1, :cond_1
 
-    iget-object v3, p0, Lcom/vtosters/lite/fragments/messages/chat/vc/MsgSendVc;->K:Lcom/vk/im/ui/q/h/f/b;
+    iget-object v3, p0, Lcom/vtosters/lite/fragments/messages/chat/vc/MsgSendVc;->K:Lcom/vk/im/ui/q/h/f/MsgSendVcCallback;
 
     if-eqz v3, :cond_0
 
@@ -2457,14 +2457,14 @@
     move-object v9, p1
 
     .line 17
-    invoke-static/range {v3 .. v13}, Lcom/vk/im/ui/q/h/f/b$a;->a(Lcom/vk/im/ui/q/h/f/b;ILjava/lang/String;Ljava/lang/String;Ljava/util/List;Ljava/lang/Integer;Lcom/vk/im/engine/models/messages/e;Lcom/vk/im/engine/utils/collection/h;Lcom/vk/im/engine/commands/messages/z;ILjava/lang/Object;)V
+    invoke-static/range {v3 .. v13}, Lcom/vk/im/ui/q/h/f/MsgSendVcCallback$a;->a(Lcom/vk/im/ui/q/h/f/MsgSendVcCallback;ILjava/lang/String;Ljava/lang/String;Ljava/util/List;Ljava/lang/Integer;Lcom/vk/im/engine/models/messages/MsgSendSource;Lcom/vk/im/engine/utils/collection/IntSet;Lcom/vk/im/engine/commands/messages/MsgSendConfig;ILjava/lang/Object;)V
 
     goto/16 :goto_0
 
     :cond_0
     const-string p1, "callback"
 
-    invoke-static {p1}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {p1}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v2
 
@@ -2475,22 +2475,22 @@
     if-eqz v1, :cond_2
 
     .line 19
-    iget-object v1, p0, Lcom/vtosters/lite/fragments/messages/chat/vc/MsgSendVc;->g:Lcom/vk/im/engine/reporters/c;
+    iget-object v1, p0, Lcom/vtosters/lite/fragments/messages/chat/vc/MsgSendVc;->g:Lcom/vk/im/engine/reporters/BotKeyboardReporter;
 
     iget v2, p0, Lcom/vtosters/lite/fragments/messages/chat/vc/MsgSendVc;->U:I
 
-    invoke-virtual {v1, v2, p1}, Lcom/vk/im/engine/reporters/c;->a(ILcom/vk/im/engine/models/messages/e;)V
+    invoke-virtual {v1, v2, p1}, Lcom/vk/im/engine/reporters/BotKeyboardReporter;->a(ILcom/vk/im/engine/models/messages/MsgSendSource;)V
 
     .line 20
-    iget-object p1, p0, Lcom/vtosters/lite/fragments/messages/chat/vc/MsgSendVc;->S:Lcom/vk/im/ui/p/b;
+    iget-object p1, p0, Lcom/vtosters/lite/fragments/messages/chat/vc/MsgSendVc;->S:Lcom/vk/im/ui/p/ImBridge8;
 
-    invoke-interface {p1}, Lcom/vk/im/ui/p/b;->o()Lcom/vk/im/ui/p/a;
+    invoke-interface {p1}, Lcom/vk/im/ui/p/ImBridge8;->o()Lcom/vk/im/ui/p/ImBridge1;
 
     move-result-object p1
 
-    iget-object v1, p0, Lcom/vtosters/lite/fragments/messages/chat/vc/MsgSendVc;->T:Lcom/vk/navigation/a;
+    iget-object v1, p0, Lcom/vtosters/lite/fragments/messages/chat/vc/MsgSendVc;->T:Lcom/vk/navigation/ActivityLauncher;
 
-    invoke-interface {v1}, Lcom/vk/navigation/a;->a()Landroid/content/Context;
+    invoke-interface {v1}, Lcom/vk/navigation/ActivityLauncher;->a()Landroid/content/Context;
 
     move-result-object v1
 
@@ -2500,7 +2500,7 @@
 
     move-result-object v0
 
-    invoke-interface {p1, v1, v0}, Lcom/vk/im/ui/p/a;->a(Landroid/content/Context;Ljava/lang/String;)V
+    invoke-interface {p1, v1, v0}, Lcom/vk/im/ui/p/ImBridge1;->a(Landroid/content/Context;Ljava/lang/String;)V
 
     goto/16 :goto_0
 
@@ -2511,16 +2511,16 @@
     if-eqz v1, :cond_3
 
     .line 22
-    iget-object v1, p0, Lcom/vtosters/lite/fragments/messages/chat/vc/MsgSendVc;->g:Lcom/vk/im/engine/reporters/c;
+    iget-object v1, p0, Lcom/vtosters/lite/fragments/messages/chat/vc/MsgSendVc;->g:Lcom/vk/im/engine/reporters/BotKeyboardReporter;
 
     iget v2, p0, Lcom/vtosters/lite/fragments/messages/chat/vc/MsgSendVc;->U:I
 
-    invoke-virtual {v1, v2, p1}, Lcom/vk/im/engine/reporters/c;->a(ILcom/vk/im/engine/models/messages/e;)V
+    invoke-virtual {v1, v2, p1}, Lcom/vk/im/engine/reporters/BotKeyboardReporter;->a(ILcom/vk/im/engine/models/messages/MsgSendSource;)V
 
     .line 23
-    iget-object p1, p0, Lcom/vtosters/lite/fragments/messages/chat/vc/MsgSendVc;->S:Lcom/vk/im/ui/p/b;
+    iget-object p1, p0, Lcom/vtosters/lite/fragments/messages/chat/vc/MsgSendVc;->S:Lcom/vk/im/ui/p/ImBridge8;
 
-    invoke-interface {p1}, Lcom/vk/im/ui/p/b;->c()Lcom/vk/im/ui/p/l;
+    invoke-interface {p1}, Lcom/vk/im/ui/p/ImBridge8;->c()Lcom/vk/im/ui/p/ImBridge9;
 
     move-result-object p1
 
@@ -2532,7 +2532,7 @@
 
     move-result-object v0
 
-    invoke-interface {p1, v1, v0}, Lcom/vk/im/ui/p/l;->a(Landroid/content/Context;Ljava/lang/String;)V
+    invoke-interface {p1, v1, v0}, Lcom/vk/im/ui/p/ImBridge9;->a(Landroid/content/Context;Ljava/lang/String;)V
 
     goto/16 :goto_0
 
@@ -2543,16 +2543,16 @@
     if-eqz v1, :cond_4
 
     .line 25
-    iget-object v1, p0, Lcom/vtosters/lite/fragments/messages/chat/vc/MsgSendVc;->g:Lcom/vk/im/engine/reporters/c;
+    iget-object v1, p0, Lcom/vtosters/lite/fragments/messages/chat/vc/MsgSendVc;->g:Lcom/vk/im/engine/reporters/BotKeyboardReporter;
 
     iget v2, p0, Lcom/vtosters/lite/fragments/messages/chat/vc/MsgSendVc;->U:I
 
-    invoke-virtual {v1, v2, p1}, Lcom/vk/im/engine/reporters/c;->a(ILcom/vk/im/engine/models/messages/e;)V
+    invoke-virtual {v1, v2, p1}, Lcom/vk/im/engine/reporters/BotKeyboardReporter;->a(ILcom/vk/im/engine/models/messages/MsgSendSource;)V
 
     .line 26
-    iget-object p1, p0, Lcom/vtosters/lite/fragments/messages/chat/vc/MsgSendVc;->S:Lcom/vk/im/ui/p/b;
+    iget-object p1, p0, Lcom/vtosters/lite/fragments/messages/chat/vc/MsgSendVc;->S:Lcom/vk/im/ui/p/ImBridge8;
 
-    invoke-interface {p1}, Lcom/vk/im/ui/p/b;->c()Lcom/vk/im/ui/p/l;
+    invoke-interface {p1}, Lcom/vk/im/ui/p/ImBridge8;->c()Lcom/vk/im/ui/p/ImBridge9;
 
     move-result-object p1
 
@@ -2568,7 +2568,7 @@
 
     move-result-object v0
 
-    invoke-interface {p1, v1, v2, v0}, Lcom/vk/im/ui/p/l;->a(Landroid/content/Context;ILjava/lang/String;)V
+    invoke-interface {p1, v1, v2, v0}, Lcom/vk/im/ui/p/ImBridge9;->a(Landroid/content/Context;ILjava/lang/String;)V
 
     goto :goto_0
 
@@ -2585,13 +2585,13 @@
 
     iget v5, p0, Lcom/vtosters/lite/fragments/messages/chat/vc/MsgSendVc;->U:I
 
-    iget-object v6, p0, Lcom/vtosters/lite/fragments/messages/chat/vc/MsgSendVc;->S:Lcom/vk/im/ui/p/b;
+    iget-object v6, p0, Lcom/vtosters/lite/fragments/messages/chat/vc/MsgSendVc;->S:Lcom/vk/im/ui/p/ImBridge8;
 
-    invoke-static {}, Lcom/vk/im/engine/c;->a()Lcom/vk/im/engine/a;
+    invoke-static {}, Lcom/vk/im/engine/ImEngine1;->a()Lcom/vk/im/engine/ImEngine;
 
     move-result-object v7
 
-    iget-object v8, p0, Lcom/vtosters/lite/fragments/messages/chat/vc/MsgSendVc;->T:Lcom/vk/navigation/a;
+    iget-object v8, p0, Lcom/vtosters/lite/fragments/messages/chat/vc/MsgSendVc;->T:Lcom/vk/navigation/ActivityLauncher;
 
     const/4 v9, 0x0
 
@@ -2603,12 +2603,12 @@
 
     move-object v3, v1
 
-    invoke-direct/range {v3 .. v12}, Lcom/vk/im/ui/components/msg_send/picker/PickerComponent;-><init>(Landroid/app/Activity;ILcom/vk/im/ui/p/b;Lcom/vk/im/engine/a;Lcom/vk/navigation/a;Ljava/lang/String;Lcom/vk/im/engine/models/messages/e;ILkotlin/jvm/internal/i;)V
+    invoke-direct/range {v3 .. v12}, Lcom/vk/im/ui/components/msg_send/picker/PickerComponent;-><init>(Landroid/app/Activity;ILcom/vk/im/ui/p/ImBridge8;Lcom/vk/im/engine/ImEngine;Lcom/vk/navigation/ActivityLauncher;Ljava/lang/String;Lcom/vk/im/engine/models/messages/MsgSendSource;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     .line 29
     new-instance v2, Lcom/vtosters/lite/fragments/messages/chat/vc/MsgSendVc$g;
 
-    invoke-direct {v2, p0, v0, p1}, Lcom/vtosters/lite/fragments/messages/chat/vc/MsgSendVc$g;-><init>(Lcom/vtosters/lite/fragments/messages/chat/vc/MsgSendVc;Lcom/vk/im/engine/models/conversations/BotButton;Lcom/vk/im/engine/models/messages/e$b;)V
+    invoke-direct {v2, p0, v0, p1}, Lcom/vtosters/lite/fragments/messages/chat/vc/MsgSendVc$g;-><init>(Lcom/vtosters/lite/fragments/messages/chat/vc/MsgSendVc;Lcom/vk/im/engine/models/conversations/BotButton;Lcom/vk/im/engine/models/messages/MsgSendSource$b;)V
 
     invoke-virtual {v1, v2}, Lcom/vk/im/ui/components/msg_send/picker/PickerComponent;->a(Lcom/vk/im/ui/components/msg_send/picker/PickerComponent$a;)V
 
@@ -2617,7 +2617,7 @@
 
     move-result-object v0
 
-    invoke-virtual {v1, v0, p1}, Lcom/vk/im/ui/components/msg_send/picker/PickerComponent;->a(Ljava/lang/String;Lcom/vk/im/engine/models/messages/e;)V
+    invoke-virtual {v1, v0, p1}, Lcom/vk/im/ui/components/msg_send/picker/PickerComponent;->a(Ljava/lang/String;Lcom/vk/im/engine/models/messages/MsgSendSource;)V
 
     goto :goto_0
 
@@ -2628,24 +2628,24 @@
     if-eqz v1, :cond_7
 
     .line 32
-    iget-object v0, p0, Lcom/vtosters/lite/fragments/messages/chat/vc/MsgSendVc;->R:Lcom/vk/im/engine/a;
+    iget-object v0, p0, Lcom/vtosters/lite/fragments/messages/chat/vc/MsgSendVc;->R:Lcom/vk/im/engine/ImEngine;
 
-    new-instance v1, Lcom/vk/im/engine/i/d/b;
+    new-instance v1, Lcom/vk/im/engine/i/d/BotBtnEventSendCmd;
 
-    invoke-virtual {p1}, Lcom/vk/im/engine/models/messages/e$b;->b()Lcom/vk/im/engine/models/conversations/c;
+    invoke-virtual {p1}, Lcom/vk/im/engine/models/messages/MsgSendSource$b;->b()Lcom/vk/im/engine/models/conversations/BotKeyboard2;
 
     move-result-object p1
 
     if-eqz p1, :cond_6
 
-    invoke-direct {v1, p1}, Lcom/vk/im/engine/i/d/b;-><init>(Lcom/vk/im/engine/models/conversations/c;)V
+    invoke-direct {v1, p1}, Lcom/vk/im/engine/i/d/BotBtnEventSendCmd;-><init>(Lcom/vk/im/engine/models/conversations/BotKeyboard2;)V
 
-    invoke-virtual {v0, v1}, Lcom/vk/im/engine/a;->a(Lcom/vk/im/engine/i/c;)V
+    invoke-virtual {v0, v1}, Lcom/vk/im/engine/ImEngine;->a(Lcom/vk/im/engine/i/ImEngineCmd;)V
 
     goto :goto_0
 
     :cond_6
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     throw v2
 
@@ -2663,28 +2663,28 @@
 
     const/4 v3, 0x2
 
-    invoke-static {p1, v0, v1, v3, v2}, Lcom/vk/core/util/ContextExtKt;->a(Landroid/content/Context;IIILjava/lang/Object;)Lkotlin/m;
+    invoke-static {p1, v0, v1, v3, v2}, Lcom/vk/core/util/ContextExtKt;->a(Landroid/content/Context;IIILjava/lang/Object;)Lkotlin/Unit;
 
     :cond_8
     :goto_0
     return-void
 .end method
 
-.method private final b(Lcom/vk/im/engine/models/messages/f;)V
+.method private final b(Lcom/vk/im/engine/models/messages/MsgsExt;)V
     .locals 7
 
     .line 34
-    invoke-virtual {p1}, Lcom/vk/im/engine/models/messages/f;->a()Lcom/vk/im/engine/models/a;
+    invoke-virtual {p1}, Lcom/vk/im/engine/models/messages/MsgsExt;->a()Lcom/vk/im/engine/models/EntityIntMap;
 
     move-result-object v0
 
-    iget-object v0, v0, Lcom/vk/im/engine/models/a;->c:Landroid/util/SparseArray;
+    iget-object v0, v0, Lcom/vk/im/engine/models/EntityIntMap;->c:Landroid/util/SparseArray;
 
     const-string v1, "info.msgs.cached"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    invoke-static {v0}, Lcom/vk/core/extensions/x;->h(Landroid/util/SparseArray;)Ljava/util/List;
+    invoke-static {v0}, Lcom/vk/core/extensions/SparseArrayExt1;->h(Landroid/util/SparseArray;)Ljava/util/List;
 
     move-result-object v0
 
@@ -2697,7 +2697,7 @@
     check-cast v0, Lcom/vk/im/engine/models/messages/MsgFromUser;
 
     .line 35
-    invoke-virtual {p1}, Lcom/vk/im/engine/models/messages/f;->b()Lcom/vk/im/engine/models/ProfilesInfo;
+    invoke-virtual {p1}, Lcom/vk/im/engine/models/messages/MsgsExt;->b()Lcom/vk/im/engine/models/ProfilesInfo;
 
     move-result-object p1
 
@@ -2720,13 +2720,13 @@
     iput-object v0, p0, Lcom/vtosters/lite/fragments/messages/chat/vc/MsgSendVc;->b:Lcom/vk/im/engine/models/messages/MsgFromUser;
 
     .line 39
-    sget-object p1, Lcom/vk/im/ui/components/dialogs_list/formatters/f;->c:Lcom/vk/im/ui/components/dialogs_list/formatters/f;
+    sget-object p1, Lcom/vk/im/ui/components/dialogs_list/formatters/MentionsFormatter;->c:Lcom/vk/im/ui/components/dialogs_list/formatters/MentionsFormatter;
 
     invoke-virtual {v0}, Lcom/vk/im/engine/models/messages/MsgFromUser;->f()Ljava/lang/String;
 
     move-result-object v1
 
-    invoke-virtual {p1, v1}, Lcom/vk/im/ui/components/dialogs_list/formatters/f;->a(Ljava/lang/CharSequence;)Ljava/lang/CharSequence;
+    invoke-virtual {p1, v1}, Lcom/vk/im/ui/components/dialogs_list/formatters/MentionsFormatter;->a(Ljava/lang/CharSequence;)Ljava/lang/CharSequence;
 
     move-result-object v2
 
@@ -2761,9 +2761,9 @@
     check-cast v1, Lcom/vk/im/engine/models/attaches/Attach;
 
     .line 44
-    sget-object v4, Lcom/vtosters/lite/im/b;->a:Lcom/vtosters/lite/im/b;
+    sget-object v4, Lcom/vtosters/lite/im/ImAttachToAppAttachConverter;->a:Lcom/vtosters/lite/im/ImAttachToAppAttachConverter;
 
-    invoke-virtual {v4, v1}, Lcom/vtosters/lite/im/b;->a(Lcom/vk/im/engine/models/attaches/Attach;)Lcom/vk/dto/common/Attachment;
+    invoke-virtual {v4, v1}, Lcom/vtosters/lite/im/ImAttachToAppAttachConverter;->a(Lcom/vk/im/engine/models/attaches/Attach;)Lcom/vk/dto/common/Attachment;
 
     move-result-object v1
 
@@ -2848,7 +2848,7 @@
     goto :goto_2
 
     :cond_4
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     throw v1
 
@@ -2883,11 +2883,11 @@
     return-void
 .end method
 
-.method public static final synthetic b(Lcom/vtosters/lite/fragments/messages/chat/vc/MsgSendVc;Lcom/vk/im/engine/models/messages/f;)V
+.method public static final synthetic b(Lcom/vtosters/lite/fragments/messages/chat/vc/MsgSendVc;Lcom/vk/im/engine/models/messages/MsgsExt;)V
     .locals 0
 
     .line 4
-    invoke-direct {p0, p1}, Lcom/vtosters/lite/fragments/messages/chat/vc/MsgSendVc;->b(Lcom/vk/im/engine/models/messages/f;)V
+    invoke-direct {p0, p1}, Lcom/vtosters/lite/fragments/messages/chat/vc/MsgSendVc;->b(Lcom/vk/im/engine/models/messages/MsgsExt;)V
 
     return-void
 .end method
@@ -2912,7 +2912,7 @@
     return-void
 .end method
 
-.method private final b(Ljava/lang/String;Ljava/util/List;Lcom/vk/im/engine/utils/collection/h;)Z
+.method private final b(Ljava/lang/String;Ljava/util/List;Lcom/vk/im/engine/utils/collection/IntSet;)Z
     .locals 2
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -2922,7 +2922,7 @@
             "+",
             "Lcom/vk/im/engine/models/attaches/Attach;",
             ">;",
-            "Lcom/vk/im/engine/utils/collection/h;",
+            "Lcom/vk/im/engine/utils/collection/IntSet;",
             ")Z"
         }
     .end annotation
@@ -2937,7 +2937,7 @@
 
     move-result-object v1
 
-    invoke-static {v1, p1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v1, p1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result p1
 
@@ -2961,7 +2961,7 @@
     if-eqz p1, :cond_0
 
     .line 60
-    invoke-interface {p3}, Lcom/vk/im/engine/utils/collection/d;->isEmpty()Z
+    invoke-interface {p3}, Lcom/vk/im/engine/utils/collection/IntCollection;->isEmpty()Z
 
     move-result p1
 
@@ -2989,7 +2989,7 @@
 
     .line 61
     :cond_1
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     const/4 p1, 0x0
 
@@ -3027,9 +3027,9 @@
     iput p1, v0, Lcom/vtosters/lite/ui/WriteBar;->C:I
 
     .line 7
-    iget-object v0, p0, Lcom/vtosters/lite/fragments/messages/chat/vc/MsgSendVc;->Q:Lcom/vk/im/ui/components/bot_keyboard/d;
+    iget-object v0, p0, Lcom/vtosters/lite/fragments/messages/chat/vc/MsgSendVc;->Q:Lcom/vk/im/ui/components/bot_keyboard/BotKeyboardComponent;
 
-    invoke-virtual {v0, p1}, Lcom/vk/im/ui/components/bot_keyboard/d;->a(I)V
+    invoke-virtual {v0, p1}, Lcom/vk/im/ui/components/bot_keyboard/BotKeyboardComponent;->a(I)V
 
     .line 8
     invoke-direct {p0}, Lcom/vtosters/lite/fragments/messages/chat/vc/MsgSendVc;->q()V
@@ -3040,7 +3040,7 @@
     const-string p1, "writeBarView"
 
     .line 9
-    invoke-static {p1}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {p1}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     const/4 p1, 0x0
 
@@ -3067,31 +3067,31 @@
     return-void
 .end method
 
-.method public static final synthetic d(Lcom/vtosters/lite/fragments/messages/chat/vc/MsgSendVc;)Lcom/vk/stickers/f0/a;
+.method public static final synthetic d(Lcom/vtosters/lite/fragments/messages/chat/vc/MsgSendVc;)Lcom/vk/stickers/f0/KeyboardPopup;
     .locals 0
 
     .line 1
-    invoke-direct {p0}, Lcom/vtosters/lite/fragments/messages/chat/vc/MsgSendVc;->j()Lcom/vk/stickers/f0/a;
+    invoke-direct {p0}, Lcom/vtosters/lite/fragments/messages/chat/vc/MsgSendVc;->j()Lcom/vk/stickers/f0/KeyboardPopup;
 
     move-result-object p0
 
     return-object p0
 .end method
 
-.method public static final synthetic e(Lcom/vtosters/lite/fragments/messages/chat/vc/MsgSendVc;)Lcom/vk/stickers/f0/a;
+.method public static final synthetic e(Lcom/vtosters/lite/fragments/messages/chat/vc/MsgSendVc;)Lcom/vk/stickers/f0/KeyboardPopup;
     .locals 0
 
     .line 1
-    iget-object p0, p0, Lcom/vtosters/lite/fragments/messages/chat/vc/MsgSendVc;->M:Lcom/vk/stickers/f0/a;
+    iget-object p0, p0, Lcom/vtosters/lite/fragments/messages/chat/vc/MsgSendVc;->M:Lcom/vk/stickers/f0/KeyboardPopup;
 
     return-object p0
 .end method
 
-.method public static final synthetic f(Lcom/vtosters/lite/fragments/messages/chat/vc/MsgSendVc;)Lcom/vk/im/ui/q/h/f/b;
+.method public static final synthetic f(Lcom/vtosters/lite/fragments/messages/chat/vc/MsgSendVc;)Lcom/vk/im/ui/q/h/f/MsgSendVcCallback;
     .locals 0
 
     .line 1
-    iget-object p0, p0, Lcom/vtosters/lite/fragments/messages/chat/vc/MsgSendVc;->K:Lcom/vk/im/ui/q/h/f/b;
+    iget-object p0, p0, Lcom/vtosters/lite/fragments/messages/chat/vc/MsgSendVc;->K:Lcom/vk/im/ui/q/h/f/MsgSendVcCallback;
 
     if-eqz p0, :cond_0
 
@@ -3100,7 +3100,7 @@
     :cond_0
     const-string p0, "callback"
 
-    invoke-static {p0}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {p0}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     const/4 p0, 0x0
 
@@ -3140,7 +3140,7 @@
     :cond_0
     const-string p0, "editInput"
 
-    invoke-static {p0}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {p0}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     const/4 p0, 0x0
 
@@ -3171,7 +3171,7 @@
 
     const-string v1, "editInput.text"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-interface {v0}, Ljava/lang/CharSequence;->length()I
 
@@ -3189,11 +3189,11 @@
     :goto_0
     if-eqz v0, :cond_2
 
-    iget-object v0, p0, Lcom/vtosters/lite/fragments/messages/chat/vc/MsgSendVc;->Q:Lcom/vk/im/ui/components/bot_keyboard/d;
+    iget-object v0, p0, Lcom/vtosters/lite/fragments/messages/chat/vc/MsgSendVc;->Q:Lcom/vk/im/ui/components/bot_keyboard/BotKeyboardComponent;
 
     iget-object v1, p0, Lcom/vtosters/lite/fragments/messages/chat/vc/MsgSendVc;->c:Lcom/vk/im/engine/models/dialogs/Dialog;
 
-    invoke-virtual {v0, v1}, Lcom/vk/im/ui/components/bot_keyboard/d;->a(Lcom/vk/im/engine/models/dialogs/Dialog;)Z
+    invoke-virtual {v0, v1}, Lcom/vk/im/ui/components/bot_keyboard/BotKeyboardComponent;->a(Lcom/vk/im/engine/models/dialogs/Dialog;)Z
 
     move-result v0
 
@@ -3204,7 +3204,7 @@
     :cond_1
     const-string v0, "editInput"
 
-    invoke-static {v0}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v0}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     const/4 v0, 0x0
 
@@ -3226,11 +3226,11 @@
     return-object p0
 .end method
 
-.method private final j()Lcom/vk/stickers/f0/a;
+.method private final j()Lcom/vk/stickers/f0/KeyboardPopup;
     .locals 11
 
     .line 2
-    iget-object v0, p0, Lcom/vtosters/lite/fragments/messages/chat/vc/MsgSendVc;->M:Lcom/vk/stickers/f0/a;
+    iget-object v0, p0, Lcom/vtosters/lite/fragments/messages/chat/vc/MsgSendVc;->M:Lcom/vk/stickers/f0/KeyboardPopup;
 
     const/4 v1, 0x0
 
@@ -3242,22 +3242,22 @@
 
     .line 3
     :cond_0
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     throw v1
 
     .line 4
     :cond_1
-    iget-object v0, p0, Lcom/vtosters/lite/fragments/messages/chat/vc/MsgSendVc;->Q:Lcom/vk/im/ui/components/bot_keyboard/d;
+    iget-object v0, p0, Lcom/vtosters/lite/fragments/messages/chat/vc/MsgSendVc;->Q:Lcom/vk/im/ui/components/bot_keyboard/BotKeyboardComponent;
 
     new-instance v2, Lcom/vtosters/lite/fragments/messages/chat/vc/MsgSendVc$d;
 
     invoke-direct {v2, p0}, Lcom/vtosters/lite/fragments/messages/chat/vc/MsgSendVc$d;-><init>(Lcom/vtosters/lite/fragments/messages/chat/vc/MsgSendVc;)V
 
-    invoke-virtual {v0, v2}, Lcom/vk/im/ui/components/bot_keyboard/d;->a(Lcom/vk/im/ui/components/bot_keyboard/d$a;)V
+    invoke-virtual {v0, v2}, Lcom/vk/im/ui/components/bot_keyboard/BotKeyboardComponent;->a(Lcom/vk/im/ui/components/bot_keyboard/BotKeyboardComponent$a;)V
 
     .line 5
-    iget-object v0, p0, Lcom/vtosters/lite/fragments/messages/chat/vc/MsgSendVc;->Q:Lcom/vk/im/ui/components/bot_keyboard/d;
+    iget-object v0, p0, Lcom/vtosters/lite/fragments/messages/chat/vc/MsgSendVc;->Q:Lcom/vk/im/ui/components/bot_keyboard/BotKeyboardComponent;
 
     iget-object v2, p0, Lcom/vtosters/lite/fragments/messages/chat/vc/MsgSendVc;->a:Landroid/app/Activity;
 
@@ -3267,12 +3267,12 @@
 
     sget-object v4, Landroid/os/Bundle;->EMPTY:Landroid/os/Bundle;
 
-    invoke-virtual {v0, v2, v3, v4}, Lcom/vk/im/ui/q/c;->a(Landroid/content/Context;Landroid/view/ViewGroup;Landroid/os/Bundle;)Landroid/view/View;
+    invoke-virtual {v0, v2, v3, v4}, Lcom/vk/im/ui/q/Component;->a(Landroid/content/Context;Landroid/view/ViewGroup;Landroid/os/Bundle;)Landroid/view/View;
 
     move-result-object v8
 
     .line 6
-    new-instance v0, Lcom/vk/stickers/f0/a;
+    new-instance v0, Lcom/vk/stickers/f0/KeyboardPopup;
 
     iget-object v6, p0, Lcom/vtosters/lite/fragments/messages/chat/vc/MsgSendVc;->a:Landroid/app/Activity;
 
@@ -3288,15 +3288,15 @@
 
     move-object v5, v0
 
-    invoke-direct/range {v5 .. v10}, Lcom/vk/stickers/f0/a;-><init>(Landroid/app/Activity;Landroid/view/View;Landroid/view/View;ZLcom/vk/stickers/f0/a$j;)V
+    invoke-direct/range {v5 .. v10}, Lcom/vk/stickers/f0/KeyboardPopup;-><init>(Landroid/app/Activity;Landroid/view/View;Landroid/view/View;ZLcom/vk/stickers/f0/KeyboardPopup$j;)V
 
     .line 7
     iget-object v1, p0, Lcom/vtosters/lite/fragments/messages/chat/vc/MsgSendVc;->N:Lcom/vtosters/lite/fragments/messages/chat/vc/MsgSendVc$b;
 
-    invoke-virtual {v0, v1}, Lcom/vk/stickers/f0/a;->a(Lcom/vk/stickers/f0/a$l;)V
+    invoke-virtual {v0, v1}, Lcom/vk/stickers/f0/KeyboardPopup;->a(Lcom/vk/stickers/f0/KeyboardPopup$l;)V
 
     .line 8
-    iput-object v0, p0, Lcom/vtosters/lite/fragments/messages/chat/vc/MsgSendVc;->M:Lcom/vk/stickers/f0/a;
+    iput-object v0, p0, Lcom/vtosters/lite/fragments/messages/chat/vc/MsgSendVc;->M:Lcom/vk/stickers/f0/KeyboardPopup;
 
     return-object v0
 
@@ -3304,7 +3304,7 @@
     const-string v0, "rootView"
 
     .line 9
-    invoke-static {v0}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v0}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v1
 
@@ -3312,7 +3312,7 @@
     const-string v0, "writeBarView"
 
     .line 10
-    invoke-static {v0}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v0}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v1
 .end method
@@ -3426,11 +3426,11 @@
 
     move-result-object v0
 
-    invoke-static {v0, v5}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v5}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     const-string v1, "when {\n                d\u2026{ context.getString(it) }"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     return-object v0
 
@@ -3525,11 +3525,11 @@
 
     move-result-object v0
 
-    invoke-static {v0, v5}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v5}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     const-string v1, "when (permission) {\n    \u2026{ context.getString(it) }"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     return-object v0
 
@@ -3573,22 +3573,22 @@
     return v0
 .end method
 
-.method public static final synthetic m(Lcom/vtosters/lite/fragments/messages/chat/vc/MsgSendVc;)Lcom/vk/stickers/f0/a;
+.method public static final synthetic m(Lcom/vtosters/lite/fragments/messages/chat/vc/MsgSendVc;)Lcom/vk/stickers/f0/KeyboardPopup;
     .locals 0
 
     .line 1
-    invoke-direct {p0}, Lcom/vtosters/lite/fragments/messages/chat/vc/MsgSendVc;->n()Lcom/vk/stickers/f0/a;
+    invoke-direct {p0}, Lcom/vtosters/lite/fragments/messages/chat/vc/MsgSendVc;->n()Lcom/vk/stickers/f0/KeyboardPopup;
 
     move-result-object p0
 
     return-object p0
 .end method
 
-.method private final n()Lcom/vk/stickers/f0/a;
+.method private final n()Lcom/vk/stickers/f0/KeyboardPopup;
     .locals 5
 
     .line 4
-    iget-object v0, p0, Lcom/vtosters/lite/fragments/messages/chat/vc/MsgSendVc;->L:Lcom/vk/stickers/f0/a;
+    iget-object v0, p0, Lcom/vtosters/lite/fragments/messages/chat/vc/MsgSendVc;->L:Lcom/vk/stickers/f0/KeyboardPopup;
 
     const/4 v1, 0x0
 
@@ -3600,13 +3600,13 @@
 
     .line 5
     :cond_0
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     throw v1
 
     .line 6
     :cond_1
-    new-instance v0, Lcom/vk/stickers/f0/a;
+    new-instance v0, Lcom/vk/stickers/f0/KeyboardPopup;
 
     iget-object v2, p0, Lcom/vtosters/lite/fragments/messages/chat/vc/MsgSendVc;->a:Landroid/app/Activity;
 
@@ -3614,11 +3614,11 @@
 
     if-eqz v3, :cond_4
 
-    iget-object v4, p0, Lcom/vtosters/lite/fragments/messages/chat/vc/MsgSendVc;->E:Lcom/vk/stickers/b0;
+    iget-object v4, p0, Lcom/vtosters/lite/fragments/messages/chat/vc/MsgSendVc;->E:Lcom/vk/stickers/StickersView;
 
     if-eqz v4, :cond_3
 
-    invoke-direct {v0, v2, v3, v4}, Lcom/vk/stickers/f0/a;-><init>(Landroid/app/Activity;Landroid/view/View;Landroid/view/View;)V
+    invoke-direct {v0, v2, v3, v4}, Lcom/vk/stickers/f0/KeyboardPopup;-><init>(Landroid/app/Activity;Landroid/view/View;Landroid/view/View;)V
 
     .line 7
     iget-object v2, p0, Lcom/vtosters/lite/fragments/messages/chat/vc/MsgSendVc;->B:Lcom/vtosters/lite/ui/WriteBar;
@@ -3631,15 +3631,15 @@
 
     const/4 v2, 0x0
 
-    invoke-virtual {v0, v1, v2}, Lcom/vk/stickers/f0/a;->a(Landroid/view/View;I)V
+    invoke-virtual {v0, v1, v2}, Lcom/vk/stickers/f0/KeyboardPopup;->a(Landroid/view/View;I)V
 
     .line 8
     iget-object v1, p0, Lcom/vtosters/lite/fragments/messages/chat/vc/MsgSendVc;->N:Lcom/vtosters/lite/fragments/messages/chat/vc/MsgSendVc$b;
 
-    invoke-virtual {v0, v1}, Lcom/vk/stickers/f0/a;->a(Lcom/vk/stickers/f0/a$l;)V
+    invoke-virtual {v0, v1}, Lcom/vk/stickers/f0/KeyboardPopup;->a(Lcom/vk/stickers/f0/KeyboardPopup$l;)V
 
     .line 9
-    iput-object v0, p0, Lcom/vtosters/lite/fragments/messages/chat/vc/MsgSendVc;->L:Lcom/vk/stickers/f0/a;
+    iput-object v0, p0, Lcom/vtosters/lite/fragments/messages/chat/vc/MsgSendVc;->L:Lcom/vk/stickers/f0/KeyboardPopup;
 
     return-object v0
 
@@ -3647,7 +3647,7 @@
     const-string v0, "writeBarView"
 
     .line 10
-    invoke-static {v0}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v0}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v1
 
@@ -3655,32 +3655,32 @@
     const-string v0, "stickersView"
 
     .line 11
-    invoke-static {v0}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v0}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v1
 
     :cond_4
     const-string v0, "rootView"
 
-    invoke-static {v0}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v0}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v1
 .end method
 
-.method public static final synthetic n(Lcom/vtosters/lite/fragments/messages/chat/vc/MsgSendVc;)Lcom/vk/stickers/f0/a;
+.method public static final synthetic n(Lcom/vtosters/lite/fragments/messages/chat/vc/MsgSendVc;)Lcom/vk/stickers/f0/KeyboardPopup;
     .locals 0
 
     .line 1
-    iget-object p0, p0, Lcom/vtosters/lite/fragments/messages/chat/vc/MsgSendVc;->L:Lcom/vk/stickers/f0/a;
+    iget-object p0, p0, Lcom/vtosters/lite/fragments/messages/chat/vc/MsgSendVc;->L:Lcom/vk/stickers/f0/KeyboardPopup;
 
     return-object p0
 .end method
 
-.method public static final synthetic o(Lcom/vtosters/lite/fragments/messages/chat/vc/MsgSendVc;)Lcom/vk/stickers/b0;
+.method public static final synthetic o(Lcom/vtosters/lite/fragments/messages/chat/vc/MsgSendVc;)Lcom/vk/stickers/StickersView;
     .locals 0
 
     .line 1
-    iget-object p0, p0, Lcom/vtosters/lite/fragments/messages/chat/vc/MsgSendVc;->E:Lcom/vk/stickers/b0;
+    iget-object p0, p0, Lcom/vtosters/lite/fragments/messages/chat/vc/MsgSendVc;->E:Lcom/vk/stickers/StickersView;
 
     if-eqz p0, :cond_0
 
@@ -3689,7 +3689,7 @@
     :cond_0
     const-string p0, "stickersView"
 
-    invoke-static {p0}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {p0}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     const/4 p0, 0x0
 
@@ -3709,18 +3709,18 @@
     .locals 2
 
     .line 2
-    invoke-static {}, Lcom/vk/audio/a;->m()Lcom/vk/audio/a;
+    invoke-static {}, Lcom/vk/audio/AudioMessageUtils;->m()Lcom/vk/audio/AudioMessageUtils;
 
     move-result-object v0
 
     iget v1, p0, Lcom/vtosters/lite/fragments/messages/chat/vc/MsgSendVc;->U:I
 
-    invoke-virtual {v0, v1}, Lcom/vk/audio/a;->a(I)Lcom/vk/audio/AudioMsgTrackByRecord;
+    invoke-virtual {v0, v1}, Lcom/vk/audio/AudioMessageUtils;->a(I)Lcom/vk/audio/AudioMsgTrackByRecord;
 
     move-result-object v0
 
     .line 3
-    iget-object v1, p0, Lcom/vtosters/lite/fragments/messages/chat/vc/MsgSendVc;->K:Lcom/vk/im/ui/q/h/f/b;
+    iget-object v1, p0, Lcom/vtosters/lite/fragments/messages/chat/vc/MsgSendVc;->K:Lcom/vk/im/ui/q/h/f/MsgSendVcCallback;
 
     if-eqz v1, :cond_1
 
@@ -3734,14 +3734,14 @@
     const/4 v0, 0x0
 
     :goto_0
-    invoke-interface {v1, v0}, Lcom/vk/im/ui/q/h/f/b;->a(Z)V
+    invoke-interface {v1, v0}, Lcom/vk/im/ui/q/h/f/MsgSendVcCallback;->a(Z)V
 
     return-void
 
     :cond_1
     const-string v0, "callback"
 
-    invoke-static {v0}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v0}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     const/4 v0, 0x0
 
@@ -3761,7 +3761,7 @@
     :cond_0
     const-string p0, "writeBarView"
 
-    invoke-static {p0}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {p0}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     const/4 p0, 0x0
 
@@ -3826,7 +3826,7 @@
 
     const-string v3, "writeBarView.attachments"
 
-    invoke-static {v0, v3}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v3}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-interface {v0}, Ljava/util/Collection;->isEmpty()Z
 
@@ -3850,7 +3850,7 @@
 
     const-string v5, "writeBarView.text"
 
-    invoke-static {v0, v5}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v5}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-interface {v0}, Ljava/lang/CharSequence;->length()I
 
@@ -3888,13 +3888,13 @@
 
     if-eqz v4, :cond_8
 
-    sget-object v5, Lcom/vk/im/ui/components/dialogs_list/formatters/f;->c:Lcom/vk/im/ui/components/dialogs_list/formatters/f;
+    sget-object v5, Lcom/vk/im/ui/components/dialogs_list/formatters/MentionsFormatter;->c:Lcom/vk/im/ui/components/dialogs_list/formatters/MentionsFormatter;
 
     invoke-virtual {v0}, Lcom/vtosters/lite/fragments/messages/chat/vc/ImDraftsHelper$b;->d()Ljava/lang/String;
 
     move-result-object v6
 
-    invoke-virtual {v5, v6}, Lcom/vk/im/ui/components/dialogs_list/formatters/f;->a(Ljava/lang/CharSequence;)Ljava/lang/CharSequence;
+    invoke-virtual {v5, v6}, Lcom/vk/im/ui/components/dialogs_list/formatters/MentionsFormatter;->a(Ljava/lang/CharSequence;)Ljava/lang/CharSequence;
 
     move-result-object v5
 
@@ -3952,7 +3952,7 @@
     goto :goto_1
 
     :cond_3
-    invoke-static {v1}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v1}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v2
 
@@ -3975,30 +3975,30 @@
     return v3
 
     :cond_5
-    invoke-static {v1}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v1}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v2
 
     .line 10
     :cond_6
-    invoke-static {v5}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v5}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v2
 
     :cond_7
-    invoke-static {v5}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v5}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v2
 
     .line 11
     :cond_8
-    invoke-static {v1}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v1}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v2
 
     .line 12
     :cond_9
-    invoke-static {v1}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v1}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v2
 
@@ -4007,7 +4007,7 @@
     return v4
 
     :cond_b
-    invoke-static {v1}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v1}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v2
 .end method
@@ -4019,7 +4019,7 @@
     new-instance v0, Lcom/vtosters/lite/fragments/messages/chat/vc/ImDraftsHelper$b;
 
     .line 3
-    sget-object v1, Lcom/vk/im/ui/components/dialogs_list/formatters/f;->c:Lcom/vk/im/ui/components/dialogs_list/formatters/f;
+    sget-object v1, Lcom/vk/im/ui/components/dialogs_list/formatters/MentionsFormatter;->c:Lcom/vk/im/ui/components/dialogs_list/formatters/MentionsFormatter;
 
     iget-object v2, p0, Lcom/vtosters/lite/fragments/messages/chat/vc/MsgSendVc;->F:Landroid/widget/EditText;
 
@@ -4033,9 +4033,9 @@
 
     const-string v4, "editInput.text"
 
-    invoke-static {v2, v4}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v2, v4}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    invoke-virtual {v1, v2}, Lcom/vk/im/ui/components/dialogs_list/formatters/f;->b(Ljava/lang/CharSequence;)Ljava/lang/String;
+    invoke-virtual {v1, v2}, Lcom/vk/im/ui/components/dialogs_list/formatters/MentionsFormatter;->b(Ljava/lang/CharSequence;)Ljava/lang/String;
 
     move-result-object v1
 
@@ -4052,7 +4052,7 @@
 
     const-string v5, "writeBarView.attachments"
 
-    invoke-static {v2, v5}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v2, v5}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 5
     iget-object v5, p0, Lcom/vtosters/lite/fragments/messages/chat/vc/MsgSendVc;->B:Lcom/vtosters/lite/ui/WriteBar;
@@ -4096,19 +4096,19 @@
 
     .line 10
     :cond_1
-    invoke-static {v4}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v4}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v3
 
     .line 11
     :cond_2
-    invoke-static {v4}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v4}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v3
 
     .line 12
     :cond_3
-    invoke-static {v4}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v4}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v3
 
@@ -4116,7 +4116,7 @@
     const-string v0, "editInput"
 
     .line 13
-    invoke-static {v0}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v0}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v3
 .end method
@@ -4167,7 +4167,7 @@
     const-string v5, "attachment"
 
     .line 3
-    invoke-static {v4, v5}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v4, v5}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-direct {p0, v4}, Lcom/vtosters/lite/fragments/messages/chat/vc/MsgSendVc;->a(Lcom/vk/dto/common/Attachment;)Z
 
@@ -4179,7 +4179,7 @@
 
     .line 4
     :cond_1
-    sget-object v3, Lcom/vk/im/ui/components/dialogs_list/formatters/f;->c:Lcom/vk/im/ui/components/dialogs_list/formatters/f;
+    sget-object v3, Lcom/vk/im/ui/components/dialogs_list/formatters/MentionsFormatter;->c:Lcom/vk/im/ui/components/dialogs_list/formatters/MentionsFormatter;
 
     iget-object v4, p0, Lcom/vtosters/lite/fragments/messages/chat/vc/MsgSendVc;->F:Landroid/widget/EditText;
 
@@ -4191,9 +4191,9 @@
 
     const-string v5, "editInput.editableText"
 
-    invoke-static {v4, v5}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v4, v5}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    invoke-virtual {v3, v4}, Lcom/vk/im/ui/components/dialogs_list/formatters/f;->b(Ljava/lang/CharSequence;)Ljava/lang/String;
+    invoke-virtual {v3, v4}, Lcom/vk/im/ui/components/dialogs_list/formatters/MentionsFormatter;->b(Ljava/lang/CharSequence;)Ljava/lang/String;
 
     move-result-object v3
 
@@ -4210,34 +4210,34 @@
     const-string v3, "attachmentList"
 
     .line 5
-    invoke-static {v0, v3}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v3}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 6
-    invoke-static {v0}, Lkotlin/collections/l;->d(Ljava/lang/Iterable;)Lkotlin/sequences/j;
+    invoke-static {v0}, Lkotlin/collections/l;->d(Ljava/lang/Iterable;)Lkotlin/sequences/Sequence;
 
     move-result-object v3
 
     .line 7
     sget-object v4, Lcom/vtosters/lite/fragments/messages/chat/vc/MsgSendVc$sendMessage$attachList$1;->a:Lcom/vtosters/lite/fragments/messages/chat/vc/MsgSendVc$sendMessage$attachList$1;
 
-    invoke-static {v3, v4}, Lkotlin/sequences/m;->b(Lkotlin/sequences/j;Lkotlin/jvm/b/b;)Lkotlin/sequences/j;
+    invoke-static {v3, v4}, Lkotlin/sequences/m;->b(Lkotlin/sequences/Sequence;Lkotlin/jvm/b/Functions2;)Lkotlin/sequences/Sequence;
 
     move-result-object v3
 
     .line 8
     sget-object v4, Lcom/vtosters/lite/fragments/messages/chat/vc/MsgSendVc$sendMessage$attachList$2;->a:Lcom/vtosters/lite/fragments/messages/chat/vc/MsgSendVc$sendMessage$attachList$2;
 
-    invoke-static {v3, v4}, Lkotlin/sequences/m;->e(Lkotlin/sequences/j;Lkotlin/jvm/b/b;)Lkotlin/sequences/j;
+    invoke-static {v3, v4}, Lkotlin/sequences/m;->e(Lkotlin/sequences/Sequence;Lkotlin/jvm/b/Functions2;)Lkotlin/sequences/Sequence;
 
     move-result-object v3
 
     .line 9
-    invoke-static {v3}, Lkotlin/sequences/m;->g(Lkotlin/sequences/j;)Lkotlin/sequences/j;
+    invoke-static {v3}, Lkotlin/sequences/m;->g(Lkotlin/sequences/Sequence;)Lkotlin/sequences/Sequence;
 
     move-result-object v3
 
     .line 10
-    invoke-static {v3}, Lkotlin/sequences/m;->l(Lkotlin/sequences/j;)Ljava/util/List;
+    invoke-static {v3}, Lkotlin/sequences/m;->l(Lkotlin/sequences/Sequence;)Ljava/util/List;
 
     move-result-object v8
 
@@ -4361,7 +4361,7 @@
 
     .line 24
     :cond_6
-    invoke-static {v3}, Lcom/vk/im/engine/utils/collection/e;->c(Ljava/util/Collection;)Lcom/vk/im/engine/utils/collection/c;
+    invoke-static {v3}, Lcom/vk/im/engine/utils/collection/IntCollectionExt;->c(Ljava/util/Collection;)Lcom/vk/im/engine/utils/collection/IntArraySet;
 
     move-result-object v11
 
@@ -4393,19 +4393,19 @@
 
     .line 26
     :goto_3
-    invoke-static {v0}, Lkotlin/collections/l;->d(Ljava/lang/Iterable;)Lkotlin/sequences/j;
+    invoke-static {v0}, Lkotlin/collections/l;->d(Ljava/lang/Iterable;)Lkotlin/sequences/Sequence;
 
     move-result-object v0
 
     .line 27
     sget-object v1, Lcom/vtosters/lite/fragments/messages/chat/vc/MsgSendVc$sendMessage$1;->a:Lcom/vtosters/lite/fragments/messages/chat/vc/MsgSendVc$sendMessage$1;
 
-    invoke-static {v0, v1}, Lkotlin/sequences/m;->b(Lkotlin/sequences/j;Lkotlin/jvm/b/b;)Lkotlin/sequences/j;
+    invoke-static {v0, v1}, Lkotlin/sequences/m;->b(Lkotlin/sequences/Sequence;Lkotlin/jvm/b/Functions2;)Lkotlin/sequences/Sequence;
 
     move-result-object v0
 
     .line 28
-    invoke-interface {v0}, Lkotlin/sequences/j;->iterator()Ljava/util/Iterator;
+    invoke-interface {v0}, Lkotlin/sequences/Sequence;->iterator()Ljava/util/Iterator;
 
     move-result-object v0
 
@@ -4425,22 +4425,22 @@
     check-cast v1, Lcom/vk/dto/common/Attachment;
 
     .line 29
-    iget-object v4, p0, Lcom/vtosters/lite/fragments/messages/chat/vc/MsgSendVc;->K:Lcom/vk/im/ui/q/h/f/b;
+    iget-object v4, p0, Lcom/vtosters/lite/fragments/messages/chat/vc/MsgSendVc;->K:Lcom/vk/im/ui/q/h/f/MsgSendVcCallback;
 
     if-eqz v4, :cond_8
 
-    sget-object v3, Lcom/vtosters/lite/im/a;->a:Lcom/vtosters/lite/im/a;
+    sget-object v3, Lcom/vtosters/lite/im/AppAttachToImAttachConverter;->a:Lcom/vtosters/lite/im/AppAttachToImAttachConverter;
 
-    invoke-virtual {v3, v1}, Lcom/vtosters/lite/im/a;->a(Lcom/vk/dto/common/Attachment;)Lcom/vk/im/engine/models/attaches/Attach;
+    invoke-virtual {v3, v1}, Lcom/vtosters/lite/im/AppAttachToImAttachConverter;->a(Lcom/vk/dto/common/Attachment;)Lcom/vk/im/engine/models/attaches/Attach;
 
     move-result-object v1
 
-    invoke-interface {v4, v1}, Lcom/vk/im/ui/q/h/f/b;->a(Lcom/vk/im/engine/models/attaches/Attach;)V
+    invoke-interface {v4, v1}, Lcom/vk/im/ui/q/h/f/MsgSendVcCallback;->a(Lcom/vk/im/engine/models/attaches/Attach;)V
 
     goto :goto_4
 
     :cond_8
-    invoke-static {v3}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v3}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v2
 
@@ -4453,14 +4453,14 @@
     if-ne v0, v1, :cond_c
 
     .line 31
-    invoke-direct {p0, v6, v8, v11}, Lcom/vtosters/lite/fragments/messages/chat/vc/MsgSendVc;->a(Ljava/lang/String;Ljava/util/List;Lcom/vk/im/engine/utils/collection/h;)Z
+    invoke-direct {p0, v6, v8, v11}, Lcom/vtosters/lite/fragments/messages/chat/vc/MsgSendVc;->a(Ljava/lang/String;Ljava/util/List;Lcom/vk/im/engine/utils/collection/IntSet;)Z
 
     move-result v0
 
     if-eqz v0, :cond_b
 
     .line 32
-    iget-object v0, p0, Lcom/vtosters/lite/fragments/messages/chat/vc/MsgSendVc;->K:Lcom/vk/im/ui/q/h/f/b;
+    iget-object v0, p0, Lcom/vtosters/lite/fragments/messages/chat/vc/MsgSendVc;->K:Lcom/vk/im/ui/q/h/f/MsgSendVcCallback;
 
     if-eqz v0, :cond_a
 
@@ -4470,18 +4470,18 @@
 
     invoke-direct {v2, p0}, Lcom/vtosters/lite/fragments/messages/chat/vc/MsgSendVc$sendMessage$3;-><init>(Lcom/vtosters/lite/fragments/messages/chat/vc/MsgSendVc;)V
 
-    invoke-interface {v0, v1, v2}, Lcom/vk/im/ui/q/h/f/b;->a(Lcom/vk/im/engine/models/messages/MsgFromUser;Lkotlin/jvm/b/a;)V
+    invoke-interface {v0, v1, v2}, Lcom/vk/im/ui/q/h/f/MsgSendVcCallback;->a(Lcom/vk/im/engine/models/messages/MsgFromUser;Lkotlin/jvm/b/Functions;)V
 
     return-void
 
     :cond_a
-    invoke-static {v3}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v3}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v2
 
     .line 33
     :cond_b
-    invoke-direct {p0, v6, v8, v11}, Lcom/vtosters/lite/fragments/messages/chat/vc/MsgSendVc;->b(Ljava/lang/String;Ljava/util/List;Lcom/vk/im/engine/utils/collection/h;)Z
+    invoke-direct {p0, v6, v8, v11}, Lcom/vtosters/lite/fragments/messages/chat/vc/MsgSendVc;->b(Ljava/lang/String;Ljava/util/List;Lcom/vk/im/engine/utils/collection/IntSet;)Z
 
     move-result v0
 
@@ -4497,7 +4497,7 @@
     invoke-virtual {p0}, Lcom/vtosters/lite/fragments/messages/chat/vc/MsgSendVc;->h()V
 
     .line 36
-    iget-object v4, p0, Lcom/vtosters/lite/fragments/messages/chat/vc/MsgSendVc;->K:Lcom/vk/im/ui/q/h/f/b;
+    iget-object v4, p0, Lcom/vtosters/lite/fragments/messages/chat/vc/MsgSendVc;->K:Lcom/vk/im/ui/q/h/f/MsgSendVcCallback;
 
     if-eqz v4, :cond_e
 
@@ -4531,7 +4531,7 @@
     const/4 v14, 0x0
 
     .line 38
-    invoke-static/range {v4 .. v14}, Lcom/vk/im/ui/q/h/f/b$a;->a(Lcom/vk/im/ui/q/h/f/b;ILjava/lang/String;Ljava/lang/String;Ljava/util/List;Ljava/lang/Integer;Lcom/vk/im/engine/models/messages/e;Lcom/vk/im/engine/utils/collection/h;Lcom/vk/im/engine/commands/messages/z;ILjava/lang/Object;)V
+    invoke-static/range {v4 .. v14}, Lcom/vk/im/ui/q/h/f/MsgSendVcCallback$a;->a(Lcom/vk/im/ui/q/h/f/MsgSendVcCallback;ILjava/lang/String;Ljava/lang/String;Ljava/util/List;Ljava/lang/Integer;Lcom/vk/im/engine/models/messages/MsgSendSource;Lcom/vk/im/engine/utils/collection/IntSet;Lcom/vk/im/engine/commands/messages/MsgSendConfig;ILjava/lang/Object;)V
 
     .line 39
     invoke-virtual {p0}, Lcom/vtosters/lite/fragments/messages/chat/vc/MsgSendVc;->d()V
@@ -4540,13 +4540,13 @@
 
     .line 40
     :cond_e
-    invoke-static {v3}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v3}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v2
 
     .line 41
     :cond_f
-    invoke-static {v1}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v1}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v2
 
@@ -4563,13 +4563,13 @@
     :cond_11
     const-string v0, "editInput"
 
-    invoke-static {v0}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v0}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v2
 
     .line 43
     :cond_12
-    invoke-static {v1}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v1}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v2
 .end method
@@ -4583,13 +4583,13 @@
     invoke-direct {v0, p0}, Lcom/vtosters/lite/fragments/messages/chat/vc/MsgSendVc$i;-><init>(Lcom/vtosters/lite/fragments/messages/chat/vc/MsgSendVc;)V
 
     .line 2
-    iget-object v1, p0, Lcom/vtosters/lite/fragments/messages/chat/vc/MsgSendVc;->E:Lcom/vk/stickers/b0;
+    iget-object v1, p0, Lcom/vtosters/lite/fragments/messages/chat/vc/MsgSendVc;->E:Lcom/vk/stickers/StickersView;
 
     const/4 v2, 0x0
 
     if-eqz v1, :cond_4
 
-    invoke-virtual {v1, v0}, Lcom/vk/stickers/b0;->setListener(Lcom/vk/stickers/b0$k;)V
+    invoke-virtual {v1, v0}, Lcom/vk/stickers/StickersView;->setListener(Lcom/vk/stickers/StickersView$k;)V
 
     .line 3
     iget-object v1, p0, Lcom/vtosters/lite/fragments/messages/chat/vc/MsgSendVc;->B:Lcom/vtosters/lite/ui/WriteBar;
@@ -4598,7 +4598,7 @@
 
     if-eqz v1, :cond_3
 
-    invoke-virtual {v1, v0}, Lcom/vtosters/lite/ui/WriteBar;->setAutoSuggestPopupListener(Lcom/vk/stickers/b0$k;)V
+    invoke-virtual {v1, v0}, Lcom/vtosters/lite/ui/WriteBar;->setAutoSuggestPopupListener(Lcom/vk/stickers/StickersView$k;)V
 
     .line 4
     iget-object v0, p0, Lcom/vtosters/lite/fragments/messages/chat/vc/MsgSendVc;->B:Lcom/vtosters/lite/ui/WriteBar;
@@ -4609,7 +4609,7 @@
 
     invoke-direct {v1}, Lcom/vtosters/lite/im/ImAudioMsgPlayer;-><init>()V
 
-    invoke-virtual {v0, v1}, Lcom/vtosters/lite/ui/WriteBar;->setAudioMsgPlayer(Lcom/vk/im/ui/r/a/a;)V
+    invoke-virtual {v0, v1}, Lcom/vtosters/lite/ui/WriteBar;->setAudioMsgPlayer(Lcom/vk/im/ui/r/a/AudioMsgPlayer;)V
 
     .line 5
     iget-object v0, p0, Lcom/vtosters/lite/fragments/messages/chat/vc/MsgSendVc;->B:Lcom/vtosters/lite/ui/WriteBar;
@@ -4631,7 +4631,7 @@
 
     invoke-direct {v1, p0}, Lcom/vtosters/lite/fragments/messages/chat/vc/MsgSendVc$setUpListeners$2;-><init>(Lcom/vtosters/lite/fragments/messages/chat/vc/MsgSendVc;)V
 
-    invoke-static {v0, v1}, Lcom/vk/core/extensions/ViewGroupExtKt;->a(Landroid/view/View;Lkotlin/jvm/b/b;)V
+    invoke-static {v0, v1}, Lcom/vk/core/extensions/ViewGroupExtKt;->a(Landroid/view/View;Lkotlin/jvm/b/Functions2;)V
 
     .line 7
     sget-object v0, Lcom/vk/core/vc/KeyboardController;->g:Lcom/vk/core/vc/KeyboardController;
@@ -4644,25 +4644,25 @@
     const-string v0, "editInput"
 
     .line 8
-    invoke-static {v0}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v0}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v2
 
     .line 9
     :cond_1
-    invoke-static {v3}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v3}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v2
 
     .line 10
     :cond_2
-    invoke-static {v3}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v3}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v2
 
     .line 11
     :cond_3
-    invoke-static {v3}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v3}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v2
 
@@ -4670,7 +4670,7 @@
     const-string v0, "stickersView"
 
     .line 12
-    invoke-static {v0}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v0}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v2
 .end method
@@ -4720,9 +4720,9 @@
     invoke-virtual {v0, v1}, Landroid/os/Handler;->removeCallbacksAndMessages(Ljava/lang/Object;)V
 
     .line 106
-    iget-object v0, p0, Lcom/vtosters/lite/fragments/messages/chat/vc/MsgSendVc;->Q:Lcom/vk/im/ui/components/bot_keyboard/d;
+    iget-object v0, p0, Lcom/vtosters/lite/fragments/messages/chat/vc/MsgSendVc;->Q:Lcom/vk/im/ui/components/bot_keyboard/BotKeyboardComponent;
 
-    invoke-virtual {v0}, Lcom/vk/im/ui/q/c;->h()V
+    invoke-virtual {v0}, Lcom/vk/im/ui/q/Component;->h()V
 
     .line 107
     iget-object v0, p0, Lcom/vtosters/lite/fragments/messages/chat/vc/MsgSendVc;->J:Lcom/vk/im/ui/components/msg_send/MsgRequestVc;
@@ -4732,9 +4732,9 @@
     invoke-virtual {v0}, Lcom/vk/im/ui/components/msg_send/MsgRequestVc;->g()V
 
     .line 108
-    iget-object v0, p0, Lcom/vtosters/lite/fragments/messages/chat/vc/MsgSendVc;->f:Lio/reactivex/disposables/a;
+    iget-object v0, p0, Lcom/vtosters/lite/fragments/messages/chat/vc/MsgSendVc;->f:Lio/reactivex/disposables/CompositeDisposable;
 
-    invoke-virtual {v0}, Lio/reactivex/disposables/a;->a()V
+    invoke-virtual {v0}, Lio/reactivex/disposables/CompositeDisposable;->a()V
 
     .line 109
     sget-object v0, Lcom/vk/core/vc/KeyboardController;->g:Lcom/vk/core/vc/KeyboardController;
@@ -4747,7 +4747,7 @@
     const-string v0, "msgRequestVc"
 
     .line 110
-    invoke-static {v0}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v0}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v1
 .end method
@@ -4770,7 +4770,7 @@
 
     .line 74
     :cond_1
-    sget-object v0, Lcom/vk/navigation/q;->h0:Ljava/lang/String;
+    sget-object v0, Lcom/vk/navigation/NavigatorKeys;->h0:Ljava/lang/String;
 
     invoke-virtual {p2, v0}, Landroid/os/Bundle;->containsKey(Ljava/lang/String;)Z
 
@@ -4785,7 +4785,7 @@
     if-eqz v0, :cond_5
 
     .line 75
-    sget-object v0, Lcom/vk/navigation/q;->h0:Ljava/lang/String;
+    sget-object v0, Lcom/vk/navigation/NavigatorKeys;->h0:Ljava/lang/String;
 
     invoke-virtual {p2, v0}, Landroid/os/Bundle;->getIntegerArrayList(Ljava/lang/String;)Ljava/util/ArrayList;
 
@@ -4823,14 +4823,14 @@
     goto :goto_2
 
     :cond_4
-    invoke-static {v2}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v2}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v3
 
     .line 77
     :cond_5
     :goto_2
-    sget-object v0, Lcom/vk/navigation/q;->I:Ljava/lang/String;
+    sget-object v0, Lcom/vk/navigation/NavigatorKeys;->I:Ljava/lang/String;
 
     invoke-virtual {p2, v0}, Landroid/os/Bundle;->containsKey(Ljava/lang/String;)Z
 
@@ -4839,7 +4839,7 @@
     if-eqz v0, :cond_9
 
     .line 78
-    sget-object v0, Lcom/vk/navigation/q;->I:Ljava/lang/String;
+    sget-object v0, Lcom/vk/navigation/NavigatorKeys;->I:Ljava/lang/String;
 
     invoke-virtual {p2, v0}, Landroid/os/Bundle;->getParcelable(Ljava/lang/String;)Landroid/os/Parcelable;
 
@@ -4855,13 +4855,13 @@
     check-cast v0, Lcom/vk/dto/newsfeed/entries/NewsEntry;
 
     .line 79
-    instance-of v4, v0, Lcom/vk/dto/newsfeed/h;
+    instance-of v4, v0, Lcom/vk/dto/newsfeed/WithAttachments;
 
     if-eqz v4, :cond_7
 
-    check-cast v0, Lcom/vk/dto/newsfeed/h;
+    check-cast v0, Lcom/vk/dto/newsfeed/WithAttachments;
 
-    invoke-interface {v0}, Lcom/vk/dto/newsfeed/h;->k1()Ljava/util/List;
+    invoke-interface {v0}, Lcom/vk/dto/newsfeed/WithAttachments;->k1()Ljava/util/List;
 
     move-result-object v0
 
@@ -4891,14 +4891,14 @@
     goto :goto_4
 
     :cond_8
-    invoke-static {v2}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v2}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v3
 
     .line 81
     :cond_9
     :goto_4
-    sget-object v0, Lcom/vk/navigation/q;->H:Ljava/lang/String;
+    sget-object v0, Lcom/vk/navigation/NavigatorKeys;->H:Ljava/lang/String;
 
     invoke-virtual {p2, v0}, Landroid/os/Bundle;->containsKey(Ljava/lang/String;)Z
 
@@ -4907,7 +4907,7 @@
     if-eqz v0, :cond_c
 
     .line 82
-    sget-object v0, Lcom/vk/navigation/q;->H:Ljava/lang/String;
+    sget-object v0, Lcom/vk/navigation/NavigatorKeys;->H:Ljava/lang/String;
 
     invoke-virtual {p2, v0}, Landroid/os/Bundle;->getStringArrayList(Ljava/lang/String;)Ljava/util/ArrayList;
 
@@ -4946,19 +4946,19 @@
     goto :goto_5
 
     :cond_a
-    invoke-static {v2}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v2}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v3
 
     .line 84
     :cond_b
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     throw v3
 
     .line 85
     :cond_c
-    sget-object v0, Lcom/vk/navigation/q;->J:Ljava/lang/String;
+    sget-object v0, Lcom/vk/navigation/NavigatorKeys;->J:Ljava/lang/String;
 
     invoke-virtual {p2, v0}, Landroid/os/Bundle;->containsKey(Ljava/lang/String;)Z
 
@@ -4971,7 +4971,7 @@
 
     if-eqz v0, :cond_d
 
-    sget-object v4, Lcom/vk/navigation/q;->J:Ljava/lang/String;
+    sget-object v4, Lcom/vk/navigation/NavigatorKeys;->J:Ljava/lang/String;
 
     invoke-virtual {p2, v4}, Landroid/os/Bundle;->getString(Ljava/lang/String;)Ljava/lang/String;
 
@@ -4982,14 +4982,14 @@
     goto :goto_6
 
     :cond_d
-    invoke-static {v2}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v2}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v3
 
     .line 87
     :cond_e
     :goto_6
-    sget-object v0, Lcom/vk/navigation/q;->M:Ljava/lang/String;
+    sget-object v0, Lcom/vk/navigation/NavigatorKeys;->M:Ljava/lang/String;
 
     invoke-virtual {p2, v0}, Landroid/os/Bundle;->containsKey(Ljava/lang/String;)Z
 
@@ -4998,7 +4998,7 @@
     if-eqz v0, :cond_12
 
     .line 88
-    sget-object v0, Lcom/vk/navigation/q;->M:Ljava/lang/String;
+    sget-object v0, Lcom/vk/navigation/NavigatorKeys;->M:Ljava/lang/String;
 
     invoke-virtual {p2, v0}, Landroid/os/Bundle;->getParcelableArray(Ljava/lang/String;)[Landroid/os/Parcelable;
 
@@ -5040,19 +5040,19 @@
     throw p1
 
     :cond_10
-    invoke-static {v2}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v2}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v3
 
     .line 90
     :cond_11
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     throw v3
 
     .line 91
     :cond_12
-    sget-object v0, Lcom/vk/navigation/q;->f0:Ljava/lang/String;
+    sget-object v0, Lcom/vk/navigation/NavigatorKeys;->f0:Ljava/lang/String;
 
     invoke-virtual {p2, v0}, Landroid/os/Bundle;->containsKey(Ljava/lang/String;)Z
 
@@ -5061,7 +5061,7 @@
     if-eqz v0, :cond_13
 
     .line 92
-    sget-object v0, Lcom/vk/navigation/q;->f0:Ljava/lang/String;
+    sget-object v0, Lcom/vk/navigation/NavigatorKeys;->f0:Ljava/lang/String;
 
     invoke-virtual {p2, v0}, Landroid/os/Bundle;->getParcelable(Ljava/lang/String;)Landroid/os/Parcelable;
 
@@ -5080,7 +5080,7 @@
 
     .line 94
     :cond_13
-    sget-object v0, Lcom/vk/navigation/q;->i0:Ljava/lang/String;
+    sget-object v0, Lcom/vk/navigation/NavigatorKeys;->i0:Ljava/lang/String;
 
     invoke-virtual {p2, v0}, Landroid/os/Bundle;->containsKey(Ljava/lang/String;)Z
 
@@ -5089,7 +5089,7 @@
     if-eqz v0, :cond_14
 
     .line 95
-    sget-object v0, Lcom/vk/navigation/q;->i0:Ljava/lang/String;
+    sget-object v0, Lcom/vk/navigation/NavigatorKeys;->i0:Ljava/lang/String;
 
     invoke-virtual {p2, v0}, Landroid/os/Bundle;->getBundle(Ljava/lang/String;)Landroid/os/Bundle;
 
@@ -5099,20 +5099,20 @@
 
     .line 96
     :cond_14
-    sget-object p1, Lcom/vk/im/ui/components/msg_send/a;->a:Lcom/vk/im/ui/components/msg_send/a;
+    sget-object p1, Lcom/vk/im/ui/components/msg_send/InlineButtonSendDelegate;->a:Lcom/vk/im/ui/components/msg_send/InlineButtonSendDelegate;
 
     new-instance v0, Lcom/vtosters/lite/fragments/messages/chat/vc/MsgSendVc$onNewIntent$hasInlineBtnMsg$1;
 
     invoke-direct {v0, p0}, Lcom/vtosters/lite/fragments/messages/chat/vc/MsgSendVc$onNewIntent$hasInlineBtnMsg$1;-><init>(Lcom/vtosters/lite/fragments/messages/chat/vc/MsgSendVc;)V
 
-    invoke-virtual {p1, p2, v0}, Lcom/vk/im/ui/components/msg_send/a;->a(Landroid/os/Bundle;Lkotlin/jvm/b/e;)Z
+    invoke-virtual {p1, p2, v0}, Lcom/vk/im/ui/components/msg_send/InlineButtonSendDelegate;->a(Landroid/os/Bundle;Lkotlin/jvm/b/Functions3;)Z
 
     move-result p1
 
     if-nez p1, :cond_18
 
     .line 97
-    sget-object p1, Lcom/vk/navigation/q;->A0:Ljava/lang/String;
+    sget-object p1, Lcom/vk/navigation/NavigatorKeys;->A0:Ljava/lang/String;
 
     invoke-virtual {p2, p1}, Landroid/os/Bundle;->containsKey(Ljava/lang/String;)Z
 
@@ -5121,7 +5121,7 @@
     if-eqz p1, :cond_18
 
     .line 98
-    sget-object p1, Lcom/vk/navigation/q;->A0:Ljava/lang/String;
+    sget-object p1, Lcom/vk/navigation/NavigatorKeys;->A0:Ljava/lang/String;
 
     invoke-virtual {p2, p1}, Landroid/os/Bundle;->getParcelableArrayList(Ljava/lang/String;)Ljava/util/ArrayList;
 
@@ -5159,11 +5159,11 @@
 
     if-eqz v5, :cond_15
 
-    sget-object v6, Lcom/vtosters/lite/im/b;->a:Lcom/vtosters/lite/im/b;
+    sget-object v6, Lcom/vtosters/lite/im/ImAttachToAppAttachConverter;->a:Lcom/vtosters/lite/im/ImAttachToAppAttachConverter;
 
-    invoke-static {v4, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v4, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    invoke-virtual {v6, v4}, Lcom/vtosters/lite/im/b;->a(Lcom/vk/im/engine/models/attaches/Attach;)Lcom/vk/dto/common/Attachment;
+    invoke-virtual {v6, v4}, Lcom/vtosters/lite/im/ImAttachToAppAttachConverter;->a(Lcom/vk/im/engine/models/attaches/Attach;)Lcom/vk/dto/common/Attachment;
 
     move-result-object v4
 
@@ -5174,7 +5174,7 @@
     goto :goto_8
 
     :cond_15
-    invoke-static {v2}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v2}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v3
 
@@ -5202,11 +5202,11 @@
 
     if-eqz v1, :cond_17
 
-    sget-object v4, Lcom/vtosters/lite/im/b;->a:Lcom/vtosters/lite/im/b;
+    sget-object v4, Lcom/vtosters/lite/im/ImAttachToAppAttachConverter;->a:Lcom/vtosters/lite/im/ImAttachToAppAttachConverter;
 
-    invoke-static {p2, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p2, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    invoke-virtual {v4, p2}, Lcom/vtosters/lite/im/b;->a(Lcom/vk/im/engine/models/attaches/Attach;)Lcom/vk/dto/common/Attachment;
+    invoke-virtual {v4, p2}, Lcom/vtosters/lite/im/ImAttachToAppAttachConverter;->a(Lcom/vk/im/engine/models/attaches/Attach;)Lcom/vk/dto/common/Attachment;
 
     move-result-object p2
 
@@ -5215,7 +5215,7 @@
     goto :goto_9
 
     :cond_17
-    invoke-static {v2}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v2}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v3
 
@@ -5229,13 +5229,13 @@
     .line 111
     iget-object p1, p0, Lcom/vtosters/lite/fragments/messages/chat/vc/MsgSendVc;->a:Landroid/app/Activity;
 
-    invoke-static {p1}, Lcom/vk/stickers/f0/a;->a(Landroid/app/Activity;)Ljava/util/Set;
+    invoke-static {p1}, Lcom/vk/stickers/f0/KeyboardPopup;->a(Landroid/app/Activity;)Ljava/util/Set;
 
     move-result-object p1
 
     const-string v0, "KeyboardPopup.getAll(activity)"
 
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 112
     invoke-interface {p1}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
@@ -5258,7 +5258,7 @@
     const-string v1, "it"
 
     .line 113
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-static {v0}, Lcom/vk/core/ui/themes/VKThemeHelper;->a(Landroid/view/View;)V
 
@@ -5372,16 +5372,16 @@
     invoke-direct {p0, v1}, Lcom/vtosters/lite/fragments/messages/chat/vc/MsgSendVc;->a(Landroid/view/View;)V
 
     .line 171
-    iget-object v1, p0, Lcom/vtosters/lite/fragments/messages/chat/vc/MsgSendVc;->Q:Lcom/vk/im/ui/components/bot_keyboard/d;
+    iget-object v1, p0, Lcom/vtosters/lite/fragments/messages/chat/vc/MsgSendVc;->Q:Lcom/vk/im/ui/components/bot_keyboard/BotKeyboardComponent;
 
-    invoke-virtual {v1, p1}, Lcom/vk/im/ui/components/bot_keyboard/d;->b(Lcom/vk/im/engine/models/dialogs/Dialog;)V
+    invoke-virtual {v1, p1}, Lcom/vk/im/ui/components/bot_keyboard/BotKeyboardComponent;->b(Lcom/vk/im/engine/models/dialogs/Dialog;)V
 
     .line 172
-    iget-object v1, p0, Lcom/vtosters/lite/fragments/messages/chat/vc/MsgSendVc;->M:Lcom/vk/stickers/f0/a;
+    iget-object v1, p0, Lcom/vtosters/lite/fragments/messages/chat/vc/MsgSendVc;->M:Lcom/vk/stickers/f0/KeyboardPopup;
 
     if-eqz v1, :cond_6
 
-    invoke-virtual {v1}, Lcom/vk/stickers/f0/a;->c()V
+    invoke-virtual {v1}, Lcom/vk/stickers/f0/KeyboardPopup;->c()V
 
     :cond_6
     if-nez v0, :cond_7
@@ -5402,7 +5402,7 @@
     const-string p1, "rootView"
 
     .line 175
-    invoke-static {p1}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {p1}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     const/4 p1, 0x0
 
@@ -5425,7 +5425,7 @@
 
     .line 115
     :cond_0
-    new-instance v0, Lcom/vk/im/engine/commands/messages/h;
+    new-instance v0, Lcom/vk/im/engine/commands/messages/MsgGetByIdExtCmd;
 
     sget-object v2, Lcom/vk/im/engine/models/messages/MsgIdType;->LOCAL_ID:Lcom/vk/im/engine/models/messages/MsgIdType;
 
@@ -5445,12 +5445,12 @@
 
     move-object v1, v0
 
-    invoke-direct/range {v1 .. v8}, Lcom/vk/im/engine/commands/messages/h;-><init>(Lcom/vk/im/engine/models/messages/MsgIdType;ILcom/vk/im/engine/models/Source;ZLjava/lang/Object;ILkotlin/jvm/internal/i;)V
+    invoke-direct/range {v1 .. v8}, Lcom/vk/im/engine/commands/messages/MsgGetByIdExtCmd;-><init>(Lcom/vk/im/engine/models/messages/MsgIdType;ILcom/vk/im/engine/models/Source;ZLjava/lang/Object;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     .line 116
-    iget-object p1, p0, Lcom/vtosters/lite/fragments/messages/chat/vc/MsgSendVc;->R:Lcom/vk/im/engine/a;
+    iget-object p1, p0, Lcom/vtosters/lite/fragments/messages/chat/vc/MsgSendVc;->R:Lcom/vk/im/engine/ImEngine;
 
-    invoke-virtual {p1, v0}, Lcom/vk/im/engine/a;->b(Lcom/vk/im/engine/i/c;)Lc/a/t;
+    invoke-virtual {p1, v0}, Lcom/vk/im/engine/ImEngine;->b(Lcom/vk/im/engine/i/ImEngineCmd;)Lio/reactivex/Single;
 
     move-result-object p1
 
@@ -5459,30 +5459,30 @@
 
     invoke-direct {v0, p0}, Lcom/vtosters/lite/fragments/messages/chat/vc/MsgSendVc$onMessageReplyRequested$1;-><init>(Lcom/vtosters/lite/fragments/messages/chat/vc/MsgSendVc;)V
 
-    new-instance v1, Lcom/vtosters/lite/fragments/messages/chat/vc/b;
+    new-instance v1, Lcom/vtosters/lite/fragments/messages/chat/vc/MsgSendVc1;
 
-    invoke-direct {v1, v0}, Lcom/vtosters/lite/fragments/messages/chat/vc/b;-><init>(Lkotlin/jvm/b/b;)V
+    invoke-direct {v1, v0}, Lcom/vtosters/lite/fragments/messages/chat/vc/MsgSendVc1;-><init>(Lkotlin/jvm/b/Functions2;)V
 
     new-instance v0, Lcom/vtosters/lite/fragments/messages/chat/vc/MsgSendVc$onMessageReplyRequested$2;
 
     invoke-direct {v0, p0}, Lcom/vtosters/lite/fragments/messages/chat/vc/MsgSendVc$onMessageReplyRequested$2;-><init>(Lcom/vtosters/lite/fragments/messages/chat/vc/MsgSendVc;)V
 
-    new-instance v2, Lcom/vtosters/lite/fragments/messages/chat/vc/b;
+    new-instance v2, Lcom/vtosters/lite/fragments/messages/chat/vc/MsgSendVc1;
 
-    invoke-direct {v2, v0}, Lcom/vtosters/lite/fragments/messages/chat/vc/b;-><init>(Lkotlin/jvm/b/b;)V
+    invoke-direct {v2, v0}, Lcom/vtosters/lite/fragments/messages/chat/vc/MsgSendVc1;-><init>(Lkotlin/jvm/b/Functions2;)V
 
-    invoke-virtual {p1, v1, v2}, Lc/a/t;->a(Lc/a/z/g;Lc/a/z/g;)Lio/reactivex/disposables/b;
+    invoke-virtual {p1, v1, v2}, Lio/reactivex/Single;->a(Lio/reactivex/functions/Consumer;Lio/reactivex/functions/Consumer;)Lio/reactivex/disposables/Disposable;
 
     move-result-object p1
 
     const-string v0, "engine.submitWithCancelO\u2026 ::onMsgToReplyLoadError)"
 
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 118
-    iget-object v0, p0, Lcom/vtosters/lite/fragments/messages/chat/vc/MsgSendVc;->f:Lio/reactivex/disposables/a;
+    iget-object v0, p0, Lcom/vtosters/lite/fragments/messages/chat/vc/MsgSendVc;->f:Lio/reactivex/disposables/CompositeDisposable;
 
-    invoke-static {p1, v0}, Lcom/vk/core/extensions/RxExtKt;->a(Lio/reactivex/disposables/b;Lio/reactivex/disposables/a;)Lio/reactivex/disposables/b;
+    invoke-static {p1, v0}, Lcom/vk/core/extensions/RxExtKt;->a(Lio/reactivex/disposables/Disposable;Lio/reactivex/disposables/CompositeDisposable;)Lio/reactivex/disposables/Disposable;
 
     return-void
 
@@ -5502,7 +5502,7 @@
     :cond_2
     const-string p1, "writeBarView"
 
-    invoke-static {p1}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {p1}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v0
 .end method
@@ -5529,7 +5529,7 @@
 
     .line 136
     :cond_0
-    new-instance v0, Lcom/vk/im/engine/commands/messages/h;
+    new-instance v0, Lcom/vk/im/engine/commands/messages/MsgGetByIdExtCmd;
 
     sget-object v3, Lcom/vk/im/engine/models/messages/MsgIdType;->LOCAL_ID:Lcom/vk/im/engine/models/messages/MsgIdType;
 
@@ -5549,12 +5549,12 @@
 
     move-object v2, v0
 
-    invoke-direct/range {v2 .. v9}, Lcom/vk/im/engine/commands/messages/h;-><init>(Lcom/vk/im/engine/models/messages/MsgIdType;ILcom/vk/im/engine/models/Source;ZLjava/lang/Object;ILkotlin/jvm/internal/i;)V
+    invoke-direct/range {v2 .. v9}, Lcom/vk/im/engine/commands/messages/MsgGetByIdExtCmd;-><init>(Lcom/vk/im/engine/models/messages/MsgIdType;ILcom/vk/im/engine/models/Source;ZLjava/lang/Object;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     .line 137
-    iget-object p1, p0, Lcom/vtosters/lite/fragments/messages/chat/vc/MsgSendVc;->R:Lcom/vk/im/engine/a;
+    iget-object p1, p0, Lcom/vtosters/lite/fragments/messages/chat/vc/MsgSendVc;->R:Lcom/vk/im/engine/ImEngine;
 
-    invoke-virtual {p1, v0}, Lcom/vk/im/engine/a;->b(Lcom/vk/im/engine/i/c;)Lc/a/t;
+    invoke-virtual {p1, v0}, Lcom/vk/im/engine/ImEngine;->b(Lcom/vk/im/engine/i/ImEngineCmd;)Lio/reactivex/Single;
 
     move-result-object p1
 
@@ -5563,48 +5563,48 @@
 
     invoke-direct {v0, p0}, Lcom/vtosters/lite/fragments/messages/chat/vc/MsgSendVc$startMsgEdit$1;-><init>(Lcom/vtosters/lite/fragments/messages/chat/vc/MsgSendVc;)V
 
-    new-instance v1, Lcom/vtosters/lite/fragments/messages/chat/vc/b;
+    new-instance v1, Lcom/vtosters/lite/fragments/messages/chat/vc/MsgSendVc1;
 
-    invoke-direct {v1, v0}, Lcom/vtosters/lite/fragments/messages/chat/vc/b;-><init>(Lkotlin/jvm/b/b;)V
+    invoke-direct {v1, v0}, Lcom/vtosters/lite/fragments/messages/chat/vc/MsgSendVc1;-><init>(Lkotlin/jvm/b/Functions2;)V
 
     new-instance v0, Lcom/vtosters/lite/fragments/messages/chat/vc/MsgSendVc$startMsgEdit$2;
 
     invoke-direct {v0, p0}, Lcom/vtosters/lite/fragments/messages/chat/vc/MsgSendVc$startMsgEdit$2;-><init>(Lcom/vtosters/lite/fragments/messages/chat/vc/MsgSendVc;)V
 
-    new-instance v2, Lcom/vtosters/lite/fragments/messages/chat/vc/b;
+    new-instance v2, Lcom/vtosters/lite/fragments/messages/chat/vc/MsgSendVc1;
 
-    invoke-direct {v2, v0}, Lcom/vtosters/lite/fragments/messages/chat/vc/b;-><init>(Lkotlin/jvm/b/b;)V
+    invoke-direct {v2, v0}, Lcom/vtosters/lite/fragments/messages/chat/vc/MsgSendVc1;-><init>(Lkotlin/jvm/b/Functions2;)V
 
-    invoke-virtual {p1, v1, v2}, Lc/a/t;->a(Lc/a/z/g;Lc/a/z/g;)Lio/reactivex/disposables/b;
+    invoke-virtual {p1, v1, v2}, Lio/reactivex/Single;->a(Lio/reactivex/functions/Consumer;Lio/reactivex/functions/Consumer;)Lio/reactivex/disposables/Disposable;
 
     move-result-object p1
 
     const-string v0, "engine.submitWithCancelO\u2026:onStartMsgEditLoadError)"
 
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 139
-    iget-object v0, p0, Lcom/vtosters/lite/fragments/messages/chat/vc/MsgSendVc;->f:Lio/reactivex/disposables/a;
+    iget-object v0, p0, Lcom/vtosters/lite/fragments/messages/chat/vc/MsgSendVc;->f:Lio/reactivex/disposables/CompositeDisposable;
 
-    invoke-static {p1, v0}, Lcom/vk/core/extensions/RxExtKt;->a(Lio/reactivex/disposables/b;Lio/reactivex/disposables/a;)Lio/reactivex/disposables/b;
+    invoke-static {p1, v0}, Lcom/vk/core/extensions/RxExtKt;->a(Lio/reactivex/disposables/Disposable;Lio/reactivex/disposables/CompositeDisposable;)Lio/reactivex/disposables/Disposable;
 
     return-void
 .end method
 
-.method public a(Lcom/vk/im/engine/models/messages/e$b;)V
+.method public a(Lcom/vk/im/engine/models/messages/MsgSendSource$b;)V
     .locals 0
 
     .line 133
-    invoke-direct {p0, p1}, Lcom/vtosters/lite/fragments/messages/chat/vc/MsgSendVc;->b(Lcom/vk/im/engine/models/messages/e$b;)V
+    invoke-direct {p0, p1}, Lcom/vtosters/lite/fragments/messages/chat/vc/MsgSendVc;->b(Lcom/vk/im/engine/models/messages/MsgSendSource$b;)V
 
     return-void
 .end method
 
-.method public a(Lcom/vk/im/ui/q/h/f/b;Landroid/view/View;Landroid/os/Bundle;)V
+.method public a(Lcom/vk/im/ui/q/h/f/MsgSendVcCallback;Landroid/view/View;Landroid/os/Bundle;)V
     .locals 6
 
     .line 10
-    iput-object p1, p0, Lcom/vtosters/lite/fragments/messages/chat/vc/MsgSendVc;->K:Lcom/vk/im/ui/q/h/f/b;
+    iput-object p1, p0, Lcom/vtosters/lite/fragments/messages/chat/vc/MsgSendVc;->K:Lcom/vk/im/ui/q/h/f/MsgSendVcCallback;
 
     .line 11
     iput-object p2, p0, Lcom/vtosters/lite/fragments/messages/chat/vc/MsgSendVc;->C:Landroid/view/View;
@@ -5658,7 +5658,7 @@
 
     const-string v2, "rootView.findViewById(R.id.write_bar_disabled)"
 
-    invoke-static {p1, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     check-cast p1, Lcom/vk/im/ui/views/WriteBarDisabled;
 
@@ -5677,7 +5677,7 @@
 
     const-string v2, "rootView.findViewById(R.id.write_bar)"
 
-    invoke-static {p1, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     check-cast p1, Lcom/vtosters/lite/ui/WriteBar;
 
@@ -5698,7 +5698,7 @@
 
     const-string v3, "writeBarView.findViewById(R.id.writebar_send)"
 
-    invoke-static {p1, v3}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v3}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 17
     iget-object p1, p0, Lcom/vtosters/lite/fragments/messages/chat/vc/MsgSendVc;->B:Lcom/vtosters/lite/ui/WriteBar;
@@ -5740,28 +5740,28 @@
     if-eqz p1, :cond_b
 
     .line 20
-    iget-object p2, p0, Lcom/vtosters/lite/fragments/messages/chat/vc/MsgSendVc;->K:Lcom/vk/im/ui/q/h/f/b;
+    iget-object p2, p0, Lcom/vtosters/lite/fragments/messages/chat/vc/MsgSendVc;->K:Lcom/vk/im/ui/q/h/f/MsgSendVcCallback;
 
     const-string v3, "callback"
 
     if-eqz p2, :cond_a
 
-    invoke-interface {p2}, Lcom/vk/im/ui/q/h/f/b;->c()Lcom/vk/navigation/a;
+    invoke-interface {p2}, Lcom/vk/im/ui/q/h/f/MsgSendVcCallback;->c()Lcom/vk/navigation/ActivityLauncher;
 
     move-result-object p2
 
-    invoke-virtual {p1, p2}, Lcom/vtosters/lite/ui/WriteBar;->setFragment(Lcom/vk/navigation/a;)V
+    invoke-virtual {p1, p2}, Lcom/vtosters/lite/ui/WriteBar;->setFragment(Lcom/vk/navigation/ActivityLauncher;)V
 
     .line 21
     iget-object p1, p0, Lcom/vtosters/lite/fragments/messages/chat/vc/MsgSendVc;->B:Lcom/vtosters/lite/ui/WriteBar;
 
     if-eqz p1, :cond_9
 
-    iget-object p2, p0, Lcom/vtosters/lite/fragments/messages/chat/vc/MsgSendVc;->K:Lcom/vk/im/ui/q/h/f/b;
+    iget-object p2, p0, Lcom/vtosters/lite/fragments/messages/chat/vc/MsgSendVc;->K:Lcom/vk/im/ui/q/h/f/MsgSendVcCallback;
 
     if-eqz p2, :cond_8
 
-    invoke-interface {p2}, Lcom/vk/im/ui/q/h/f/b;->h()Ljava/lang/Object;
+    invoke-interface {p2}, Lcom/vk/im/ui/q/h/f/MsgSendVcCallback;->h()Ljava/lang/Object;
 
     move-result-object p2
 
@@ -5781,13 +5781,13 @@
 
     if-eqz p1, :cond_6
 
-    invoke-static {}, Lcom/vk/bridges/g;->a()Lcom/vk/bridges/f;
+    invoke-static {}, Lcom/vk/bridges/AuthBridge;->a()Lcom/vk/bridges/AuthBridge3;
 
     move-result-object v3
 
     iget v5, p0, Lcom/vtosters/lite/fragments/messages/chat/vc/MsgSendVc;->U:I
 
-    invoke-interface {v3, v5}, Lcom/vk/bridges/f;->a(I)Z
+    invoke-interface {v3, v5}, Lcom/vk/bridges/AuthBridge3;->a(I)Z
 
     move-result v3
 
@@ -5798,13 +5798,13 @@
 
     if-eqz p1, :cond_5
 
-    invoke-static {}, Lcom/vk/bridges/g;->a()Lcom/vk/bridges/f;
+    invoke-static {}, Lcom/vk/bridges/AuthBridge;->a()Lcom/vk/bridges/AuthBridge3;
 
     move-result-object v3
 
     iget v5, p0, Lcom/vtosters/lite/fragments/messages/chat/vc/MsgSendVc;->U:I
 
-    invoke-interface {v3, v5}, Lcom/vk/bridges/f;->a(I)Z
+    invoke-interface {v3, v5}, Lcom/vk/bridges/AuthBridge3;->a(I)Z
 
     move-result v3
 
@@ -5822,11 +5822,11 @@
 
     if-eqz p1, :cond_3
 
-    invoke-static {}, Lcom/vk/bridges/g;->a()Lcom/vk/bridges/f;
+    invoke-static {}, Lcom/vk/bridges/AuthBridge;->a()Lcom/vk/bridges/AuthBridge3;
 
     move-result-object v3
 
-    invoke-interface {v3}, Lcom/vk/bridges/f;->b()I
+    invoke-interface {v3}, Lcom/vk/bridges/AuthBridge3;->b()I
 
     move-result v3
 
@@ -5851,7 +5851,7 @@
     invoke-virtual {p1, p2}, Landroid/widget/EditText;->setImeOptions(I)V
 
     .line 29
-    new-instance p1, Lcom/vk/stickers/b0;
+    new-instance p1, Lcom/vk/stickers/StickersView;
 
     iget-object p2, p0, Lcom/vtosters/lite/fragments/messages/chat/vc/MsgSendVc;->C:Landroid/view/View;
 
@@ -5861,9 +5861,9 @@
 
     move-result-object p2
 
-    invoke-direct {p1, p2}, Lcom/vk/stickers/b0;-><init>(Landroid/content/Context;)V
+    invoke-direct {p1, p2}, Lcom/vk/stickers/StickersView;-><init>(Landroid/content/Context;)V
 
-    iput-object p1, p0, Lcom/vtosters/lite/fragments/messages/chat/vc/MsgSendVc;->E:Lcom/vk/stickers/b0;
+    iput-object p1, p0, Lcom/vtosters/lite/fragments/messages/chat/vc/MsgSendVc;->E:Lcom/vk/stickers/StickersView;
 
     .line 30
     iget p1, p0, Lcom/vtosters/lite/fragments/messages/chat/vc/MsgSendVc;->U:I
@@ -5877,7 +5877,7 @@
 
     .line 32
     :cond_0
-    invoke-static {v0}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v0}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v1
 
@@ -5885,71 +5885,71 @@
     const-string p1, "editInput"
 
     .line 33
-    invoke-static {p1}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {p1}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v1
 
     .line 34
     :cond_2
-    invoke-static {v2}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v2}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v1
 
     .line 35
     :cond_3
-    invoke-static {v2}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v2}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v1
 
     .line 36
     :cond_4
-    invoke-static {v2}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v2}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v1
 
     .line 37
     :cond_5
-    invoke-static {v2}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v2}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v1
 
     .line 38
     :cond_6
-    invoke-static {v2}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v2}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v1
 
     .line 39
     :cond_7
-    invoke-static {v2}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v2}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v1
 
     .line 40
     :cond_8
-    invoke-static {v3}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v3}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v1
 
     :cond_9
-    invoke-static {v2}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v2}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v1
 
     .line 41
     :cond_a
-    invoke-static {v3}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v3}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v1
 
     :cond_b
-    invoke-static {v2}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v2}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v1
 
     .line 42
     :cond_c
-    invoke-static {v2}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v2}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v1
 
@@ -5964,37 +5964,37 @@
     throw p1
 
     :cond_e
-    invoke-static {v2}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v2}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v1
 
     .line 44
     :cond_f
-    invoke-static {v2}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v2}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v1
 
     .line 45
     :cond_10
-    invoke-static {v0}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v0}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v1
 
     .line 46
     :cond_11
-    invoke-static {v0}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v0}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v1
 
     .line 47
     :cond_12
-    invoke-static {v0}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v0}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v1
 
     .line 48
     :cond_13
-    invoke-static {v0}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v0}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v1
 .end method
@@ -6016,7 +6016,7 @@
     .end annotation
 
     .line 134
-    iget-object v0, p0, Lcom/vtosters/lite/fragments/messages/chat/vc/MsgSendVc;->K:Lcom/vk/im/ui/q/h/f/b;
+    iget-object v0, p0, Lcom/vtosters/lite/fragments/messages/chat/vc/MsgSendVc;->K:Lcom/vk/im/ui/q/h/f/MsgSendVcCallback;
 
     const/4 v1, 0x0
 
@@ -6026,11 +6026,11 @@
 
     const/4 v5, 0x0
 
-    new-instance v6, Lcom/vk/im/engine/models/messages/e$a;
+    new-instance v6, Lcom/vk/im/engine/models/messages/MsgSendSource$a;
 
     const/4 v3, 0x2
 
-    invoke-direct {v6, p4, v1, v3, v1}, Lcom/vk/im/engine/models/messages/e$a;-><init>(Lcom/vk/im/engine/models/conversations/BotButton;Lcom/vk/im/engine/models/conversations/c;ILkotlin/jvm/internal/i;)V
+    invoke-direct {v6, p4, v1, v3, v1}, Lcom/vk/im/engine/models/messages/MsgSendSource$a;-><init>(Lcom/vk/im/engine/models/conversations/BotButton;Lcom/vk/im/engine/models/conversations/BotKeyboard2;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     const/4 v7, 0x0
 
@@ -6048,14 +6048,14 @@
 
     move-object v4, p3
 
-    invoke-static/range {v0 .. v10}, Lcom/vk/im/ui/q/h/f/b$a;->a(Lcom/vk/im/ui/q/h/f/b;ILjava/lang/String;Ljava/lang/String;Ljava/util/List;Ljava/lang/Integer;Lcom/vk/im/engine/models/messages/e;Lcom/vk/im/engine/utils/collection/h;Lcom/vk/im/engine/commands/messages/z;ILjava/lang/Object;)V
+    invoke-static/range {v0 .. v10}, Lcom/vk/im/ui/q/h/f/MsgSendVcCallback$a;->a(Lcom/vk/im/ui/q/h/f/MsgSendVcCallback;ILjava/lang/String;Ljava/lang/String;Ljava/util/List;Ljava/lang/Integer;Lcom/vk/im/engine/models/messages/MsgSendSource;Lcom/vk/im/engine/utils/collection/IntSet;Lcom/vk/im/engine/commands/messages/MsgSendConfig;ILjava/lang/Object;)V
 
     return-void
 
     :cond_0
     const-string p1, "callback"
 
-    invoke-static {p1}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {p1}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v1
 .end method
@@ -6099,7 +6099,7 @@
     .locals 0
 
     .line 6
-    invoke-static {p0, p1}, Lcom/vk/im/ui/q/h/f/a$a;->a(Lcom/vk/im/ui/q/h/f/a;Landroid/os/Bundle;)V
+    invoke-static {p0, p1}, Lcom/vk/im/ui/q/h/f/IMsgSendVc$a;->a(Lcom/vk/im/ui/q/h/f/IMsgSendVc;Landroid/os/Bundle;)V
 
     return-void
 .end method
@@ -6143,18 +6143,18 @@
     invoke-direct {p0, v1}, Lcom/vtosters/lite/fragments/messages/chat/vc/MsgSendVc;->a(Lcom/vtosters/lite/fragments/messages/chat/vc/MsgSendVc$State;)V
 
     .line 22
-    iget-object v1, p0, Lcom/vtosters/lite/fragments/messages/chat/vc/MsgSendVc;->K:Lcom/vk/im/ui/q/h/f/b;
+    iget-object v1, p0, Lcom/vtosters/lite/fragments/messages/chat/vc/MsgSendVc;->K:Lcom/vk/im/ui/q/h/f/MsgSendVcCallback;
 
     if-eqz v1, :cond_1
 
-    invoke-interface {v1}, Lcom/vk/im/ui/q/h/f/b;->d()V
+    invoke-interface {v1}, Lcom/vk/im/ui/q/h/f/MsgSendVcCallback;->d()V
 
     return-void
 
     :cond_1
     const-string v1, "callback"
 
-    invoke-static {v1}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v1}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v0
 .end method
@@ -6234,7 +6234,7 @@
 
     const-string v0, "bundle.getParcelableArra\u2026>(KEY_ATTACHES) ?: return"
 
-    invoke-static {v3, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v3, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 8
     sget-object v0, Lcom/vtosters/lite/fragments/messages/chat/vc/MsgSendVc;->b0:Ljava/lang/String;
@@ -6289,13 +6289,13 @@
     goto :goto_0
 
     :cond_3
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     throw v4
 
     .line 11
     :cond_4
-    sget-object v0, Lcom/vk/im/ui/components/dialogs_list/formatters/f;->c:Lcom/vk/im/ui/components/dialogs_list/formatters/f;
+    sget-object v0, Lcom/vk/im/ui/components/dialogs_list/formatters/MentionsFormatter;->c:Lcom/vk/im/ui/components/dialogs_list/formatters/MentionsFormatter;
 
     sget-object v1, Lcom/vtosters/lite/fragments/messages/chat/vc/MsgSendVc;->Z:Ljava/lang/String;
 
@@ -6303,7 +6303,7 @@
 
     move-result-object v1
 
-    invoke-virtual {v0, v1}, Lcom/vk/im/ui/components/dialogs_list/formatters/f;->a(Ljava/lang/CharSequence;)Ljava/lang/CharSequence;
+    invoke-virtual {v0, v1}, Lcom/vk/im/ui/components/dialogs_list/formatters/MentionsFormatter;->a(Ljava/lang/CharSequence;)Ljava/lang/CharSequence;
 
     move-result-object v2
 
@@ -6318,7 +6318,7 @@
 
     const-string v1, "bundle.getIntegerArrayList(KEY_FWD_MESSAGES)!!"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 13
     sget-object v1, Lcom/vtosters/lite/fragments/messages/chat/vc/MsgSendVc;->c0:Ljava/lang/String;
@@ -6353,7 +6353,7 @@
 
     .line 16
     :cond_5
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     throw v4
 
@@ -6366,14 +6366,14 @@
     .locals 0
 
     .line 2
-    iget-object p1, p0, Lcom/vtosters/lite/fragments/messages/chat/vc/MsgSendVc;->L:Lcom/vk/stickers/f0/a;
+    iget-object p1, p0, Lcom/vtosters/lite/fragments/messages/chat/vc/MsgSendVc;->L:Lcom/vk/stickers/f0/KeyboardPopup;
 
-    invoke-direct {p0, p1}, Lcom/vtosters/lite/fragments/messages/chat/vc/MsgSendVc;->a(Lcom/vk/stickers/f0/a;)Z
+    invoke-direct {p0, p1}, Lcom/vtosters/lite/fragments/messages/chat/vc/MsgSendVc;->a(Lcom/vk/stickers/f0/KeyboardPopup;)Z
 
     .line 3
-    iget-object p1, p0, Lcom/vtosters/lite/fragments/messages/chat/vc/MsgSendVc;->M:Lcom/vk/stickers/f0/a;
+    iget-object p1, p0, Lcom/vtosters/lite/fragments/messages/chat/vc/MsgSendVc;->M:Lcom/vk/stickers/f0/KeyboardPopup;
 
-    invoke-direct {p0, p1}, Lcom/vtosters/lite/fragments/messages/chat/vc/MsgSendVc;->a(Lcom/vk/stickers/f0/a;)Z
+    invoke-direct {p0, p1}, Lcom/vtosters/lite/fragments/messages/chat/vc/MsgSendVc;->a(Lcom/vk/stickers/f0/KeyboardPopup;)Z
 
     return-void
 .end method
@@ -6382,11 +6382,11 @@
     .locals 2
 
     .line 2
-    iget-object v0, p0, Lcom/vtosters/lite/fragments/messages/chat/vc/MsgSendVc;->M:Lcom/vk/stickers/f0/a;
+    iget-object v0, p0, Lcom/vtosters/lite/fragments/messages/chat/vc/MsgSendVc;->M:Lcom/vk/stickers/f0/KeyboardPopup;
 
     if-eqz v0, :cond_0
 
-    invoke-virtual {v0}, Lcom/vk/stickers/f0/a;->a()V
+    invoke-virtual {v0}, Lcom/vk/stickers/f0/KeyboardPopup;->a()V
 
     .line 3
     :cond_0
@@ -6403,7 +6403,7 @@
     :cond_1
     const-string v0, "writeBarView"
 
-    invoke-static {v0}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v0}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     const/4 v0, 0x0
 
@@ -6414,14 +6414,14 @@
     .locals 1
 
     .line 2
-    iget-object v0, p0, Lcom/vtosters/lite/fragments/messages/chat/vc/MsgSendVc;->L:Lcom/vk/stickers/f0/a;
+    iget-object v0, p0, Lcom/vtosters/lite/fragments/messages/chat/vc/MsgSendVc;->L:Lcom/vk/stickers/f0/KeyboardPopup;
 
-    invoke-direct {p0, v0}, Lcom/vtosters/lite/fragments/messages/chat/vc/MsgSendVc;->a(Lcom/vk/stickers/f0/a;)Z
+    invoke-direct {p0, v0}, Lcom/vtosters/lite/fragments/messages/chat/vc/MsgSendVc;->a(Lcom/vk/stickers/f0/KeyboardPopup;)Z
 
     .line 3
-    iget-object v0, p0, Lcom/vtosters/lite/fragments/messages/chat/vc/MsgSendVc;->M:Lcom/vk/stickers/f0/a;
+    iget-object v0, p0, Lcom/vtosters/lite/fragments/messages/chat/vc/MsgSendVc;->M:Lcom/vk/stickers/f0/KeyboardPopup;
 
-    invoke-direct {p0, v0}, Lcom/vtosters/lite/fragments/messages/chat/vc/MsgSendVc;->a(Lcom/vk/stickers/f0/a;)Z
+    invoke-direct {p0, v0}, Lcom/vtosters/lite/fragments/messages/chat/vc/MsgSendVc;->a(Lcom/vk/stickers/f0/KeyboardPopup;)Z
 
     .line 4
     iget-object v0, p0, Lcom/vtosters/lite/fragments/messages/chat/vc/MsgSendVc;->B:Lcom/vtosters/lite/ui/WriteBar;
@@ -6435,7 +6435,7 @@
     :cond_0
     const-string v0, "writeBarView"
 
-    invoke-static {v0}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v0}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     const/4 v0, 0x0
 
@@ -6463,7 +6463,7 @@
     :cond_0
     const-string v0, "editInput"
 
-    invoke-static {v0}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v0}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     const/4 v0, 0x0
 
@@ -6503,19 +6503,19 @@
     return-void
 
     :cond_0
-    invoke-static {v2}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v2}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v1
 
     .line 5
     :cond_1
-    invoke-static {v2}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v2}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v1
 
     .line 6
     :cond_2
-    invoke-static {v2}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v2}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v1
 .end method
@@ -6531,33 +6531,33 @@
     if-ne v0, v1, :cond_2
 
     .line 4
-    iget-object v0, p0, Lcom/vtosters/lite/fragments/messages/chat/vc/MsgSendVc;->M:Lcom/vk/stickers/f0/a;
+    iget-object v0, p0, Lcom/vtosters/lite/fragments/messages/chat/vc/MsgSendVc;->M:Lcom/vk/stickers/f0/KeyboardPopup;
 
     if-eqz v0, :cond_0
 
-    invoke-virtual {v0}, Lcom/vk/stickers/f0/a;->a()V
+    invoke-virtual {v0}, Lcom/vk/stickers/f0/KeyboardPopup;->a()V
 
     .line 5
     :cond_0
-    invoke-direct {p0}, Lcom/vtosters/lite/fragments/messages/chat/vc/MsgSendVc;->n()Lcom/vk/stickers/f0/a;
+    invoke-direct {p0}, Lcom/vtosters/lite/fragments/messages/chat/vc/MsgSendVc;->n()Lcom/vk/stickers/f0/KeyboardPopup;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/vk/stickers/f0/a;->d()V
+    invoke-virtual {v0}, Lcom/vk/stickers/f0/KeyboardPopup;->d()V
 
     .line 6
-    iget-object v0, p0, Lcom/vtosters/lite/fragments/messages/chat/vc/MsgSendVc;->E:Lcom/vk/stickers/b0;
+    iget-object v0, p0, Lcom/vtosters/lite/fragments/messages/chat/vc/MsgSendVc;->E:Lcom/vk/stickers/StickersView;
 
     if-eqz v0, :cond_1
 
-    invoke-virtual {v0, p1}, Lcom/vk/stickers/b0;->a(I)V
+    invoke-virtual {v0, p1}, Lcom/vk/stickers/StickersView;->a(I)V
 
     goto :goto_0
 
     :cond_1
     const-string p1, "stickersView"
 
-    invoke-static {p1}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {p1}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     const/4 p1, 0x0
 
@@ -6609,9 +6609,9 @@
     invoke-virtual {v0}, Lcom/vtosters/lite/ui/WriteBar;->h()V
 
     .line 3
-    iget-object v0, p0, Lcom/vtosters/lite/fragments/messages/chat/vc/MsgSendVc;->L:Lcom/vk/stickers/f0/a;
+    iget-object v0, p0, Lcom/vtosters/lite/fragments/messages/chat/vc/MsgSendVc;->L:Lcom/vk/stickers/f0/KeyboardPopup;
 
-    invoke-direct {p0, v0}, Lcom/vtosters/lite/fragments/messages/chat/vc/MsgSendVc;->a(Lcom/vk/stickers/f0/a;)Z
+    invoke-direct {p0, v0}, Lcom/vtosters/lite/fragments/messages/chat/vc/MsgSendVc;->a(Lcom/vk/stickers/f0/KeyboardPopup;)Z
 
     move-result v0
 
@@ -6623,9 +6623,9 @@
 
     .line 4
     :cond_0
-    iget-object v0, p0, Lcom/vtosters/lite/fragments/messages/chat/vc/MsgSendVc;->M:Lcom/vk/stickers/f0/a;
+    iget-object v0, p0, Lcom/vtosters/lite/fragments/messages/chat/vc/MsgSendVc;->M:Lcom/vk/stickers/f0/KeyboardPopup;
 
-    invoke-direct {p0, v0}, Lcom/vtosters/lite/fragments/messages/chat/vc/MsgSendVc;->a(Lcom/vk/stickers/f0/a;)Z
+    invoke-direct {p0, v0}, Lcom/vtosters/lite/fragments/messages/chat/vc/MsgSendVc;->a(Lcom/vk/stickers/f0/KeyboardPopup;)Z
 
     move-result v0
 
@@ -6643,7 +6643,7 @@
     const-string v0, "writeBarView"
 
     .line 5
-    invoke-static {v0}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v0}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     const/4 v0, 0x0
 
@@ -6666,7 +6666,7 @@
     if-eqz v3, :cond_0
 
     .line 1
-    sget-object v5, Lcom/vk/navigation/q;->Q:Ljava/lang/String;
+    sget-object v5, Lcom/vk/navigation/NavigatorKeys;->Q:Ljava/lang/String;
 
     invoke-virtual {v3, v5, v4}, Landroid/content/Intent;->getIntExtra(Ljava/lang/String;I)I
 
@@ -6683,7 +6683,7 @@
     if-eqz v3, :cond_1
 
     .line 2
-    sget-object v4, Lcom/vk/navigation/q;->i0:Ljava/lang/String;
+    sget-object v4, Lcom/vk/navigation/NavigatorKeys;->i0:Ljava/lang/String;
 
     invoke-virtual {v3, v4}, Landroid/content/Intent;->getBundleExtra(Ljava/lang/String;)Landroid/os/Bundle;
 
@@ -6691,7 +6691,7 @@
 
     if-eqz v4, :cond_1
 
-    sget-object v5, Lcom/vk/navigation/q;->h0:Ljava/lang/String;
+    sget-object v5, Lcom/vk/navigation/NavigatorKeys;->h0:Ljava/lang/String;
 
     invoke-virtual {v4, v5}, Landroid/os/Bundle;->getIntegerArrayList(Ljava/lang/String;)Ljava/util/ArrayList;
 
@@ -6712,7 +6712,7 @@
 
     const-string v4, "data?.getBundleExtra(Nav\u2026           ?: ArrayList()"
 
-    invoke-static {v14, v4}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v14, v4}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     const/16 v4, 0x2710
 
@@ -6732,15 +6732,15 @@
     goto :goto_2
 
     :cond_2
-    invoke-static {v6}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v6}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v5
 
     .line 5
     :cond_3
-    sget-object v4, Lcom/vk/im/ui/p/e;->a:Lcom/vk/im/ui/p/e$a;
+    sget-object v4, Lcom/vk/im/ui/p/ImBridge11;->a:Lcom/vk/im/ui/p/ImBridge$a4;
 
-    invoke-virtual {v4}, Lcom/vk/im/ui/p/e$a;->a()I
+    invoke-virtual {v4}, Lcom/vk/im/ui/p/ImBridge$a4;->a()I
 
     move-result v4
 
@@ -6785,15 +6785,15 @@
     goto :goto_2
 
     :cond_6
-    invoke-static {v6}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v6}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v5
 
     .line 8
     :cond_7
-    iget-object v1, v0, Lcom/vtosters/lite/fragments/messages/chat/vc/MsgSendVc;->S:Lcom/vk/im/ui/p/b;
+    iget-object v1, v0, Lcom/vtosters/lite/fragments/messages/chat/vc/MsgSendVc;->S:Lcom/vk/im/ui/p/ImBridge8;
 
-    invoke-interface {v1}, Lcom/vk/im/ui/p/b;->b()Lcom/vk/im/ui/p/e;
+    invoke-interface {v1}, Lcom/vk/im/ui/p/ImBridge8;->b()Lcom/vk/im/ui/p/ImBridge11;
 
     move-result-object v5
 
@@ -6845,7 +6845,7 @@
     const/16 v30, 0x0
 
     .line 10
-    invoke-static/range {v5 .. v30}, Lcom/vk/im/ui/p/e$b;->a(Lcom/vk/im/ui/p/e;Landroid/content/Context;ILcom/vk/im/engine/models/dialogs/DialogExt;Ljava/lang/String;Lcom/vk/im/ui/components/msg_list/MsgListOpenMode;ZLjava/util/List;Ljava/util/List;Ljava/util/List;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Lcom/vk/im/engine/models/conversations/BotButton;Ljava/lang/String;Ljava/lang/Boolean;Ljava/lang/Boolean;Ljava/lang/Boolean;Ljava/lang/Boolean;Ljava/lang/Class;Lkotlin/jvm/b/a;Lkotlin/jvm/b/b;ILjava/lang/Object;)V
+    invoke-static/range {v5 .. v30}, Lcom/vk/im/ui/p/ImBridge$b1;->a(Lcom/vk/im/ui/p/ImBridge11;Landroid/content/Context;ILcom/vk/im/engine/models/dialogs/DialogExt;Ljava/lang/String;Lcom/vk/im/ui/components/msg_list/MsgListOpenMode;ZLjava/util/List;Ljava/util/List;Ljava/util/List;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Lcom/vk/im/engine/models/conversations/BotButton;Ljava/lang/String;Ljava/lang/Boolean;Ljava/lang/Boolean;Ljava/lang/Boolean;Ljava/lang/Boolean;Ljava/lang/Class;Lkotlin/jvm/b/Functions;Lkotlin/jvm/b/Functions2;ILjava/lang/Object;)V
 
     :cond_8
     :goto_2
@@ -6879,7 +6879,7 @@
     :cond_1
     const-string v0, "writeBarView"
 
-    invoke-static {v0}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v0}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     const/4 v0, 0x0
 
@@ -6917,7 +6917,7 @@
     const-string v0, "writeBarView"
 
     .line 4
-    invoke-static {v0}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v0}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     const/4 v0, 0x0
 
@@ -6970,7 +6970,7 @@
 
     const-string v3, "writeBarView.attachments"
 
-    invoke-static {v0, v3}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v3}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     const-class v4, Lcom/vtosters/lite/attachments/FwdMessagesAttachment;
 
@@ -7019,7 +7019,7 @@
     .line 9
     sget-object v0, Lcom/vtosters/lite/fragments/messages/chat/vc/MsgSendVc;->Z:Ljava/lang/String;
 
-    sget-object v4, Lcom/vk/im/ui/components/dialogs_list/formatters/f;->c:Lcom/vk/im/ui/components/dialogs_list/formatters/f;
+    sget-object v4, Lcom/vk/im/ui/components/dialogs_list/formatters/MentionsFormatter;->c:Lcom/vk/im/ui/components/dialogs_list/formatters/MentionsFormatter;
 
     iget-object v5, p0, Lcom/vtosters/lite/fragments/messages/chat/vc/MsgSendVc;->B:Lcom/vtosters/lite/ui/WriteBar;
 
@@ -7031,9 +7031,9 @@
 
     const-string v6, "writeBarView.text"
 
-    invoke-static {v5, v6}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v5, v6}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    invoke-virtual {v4, v5}, Lcom/vk/im/ui/components/dialogs_list/formatters/f;->b(Ljava/lang/CharSequence;)Ljava/lang/String;
+    invoke-virtual {v4, v5}, Lcom/vk/im/ui/components/dialogs_list/formatters/MentionsFormatter;->b(Ljava/lang/CharSequence;)Ljava/lang/String;
 
     move-result-object v4
 
@@ -7063,7 +7063,7 @@
 
     move-result-object v4
 
-    invoke-static {v4, v3}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v4, v3}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 12
     new-instance v3, Ljava/util/ArrayList;
@@ -7144,37 +7144,37 @@
     return-void
 
     :cond_3
-    invoke-static {v2}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v2}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v1
 
     .line 18
     :cond_4
-    invoke-static {v2}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v2}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v1
 
     .line 19
     :cond_5
-    invoke-static {v2}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v2}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v1
 
     .line 20
     :cond_6
-    invoke-static {v2}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v2}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v1
 
     .line 21
     :cond_7
-    invoke-static {v2}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v2}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v1
 
     .line 22
     :cond_8
-    invoke-static {v2}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v2}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v1
 .end method
@@ -7183,7 +7183,7 @@
     .locals 0
 
     .line 1
-    invoke-static {p0}, Lcom/vk/im/ui/q/h/f/a$a;->a(Lcom/vk/im/ui/q/h/f/a;)V
+    invoke-static {p0}, Lcom/vk/im/ui/q/h/f/IMsgSendVc$a;->a(Lcom/vk/im/ui/q/h/f/IMsgSendVc;)V
 
     return-void
 .end method
@@ -7192,7 +7192,7 @@
     .locals 0
 
     .line 1
-    invoke-static {p0}, Lcom/vk/im/ui/q/h/f/a$a;->b(Lcom/vk/im/ui/q/h/f/a;)V
+    invoke-static {p0}, Lcom/vk/im/ui/q/h/f/IMsgSendVc$a;->b(Lcom/vk/im/ui/q/h/f/IMsgSendVc;)V
 
     return-void
 .end method

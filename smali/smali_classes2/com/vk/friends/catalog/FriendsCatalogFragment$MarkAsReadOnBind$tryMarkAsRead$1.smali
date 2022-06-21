@@ -3,7 +3,7 @@
 .source "FriendsCatalogFragment.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/b;
+.implements Lkotlin/jvm/b/Functions2;
 
 
 # annotations
@@ -19,9 +19,9 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/b<",
+        "Lkotlin/jvm/b/Functions2<",
         "Ljava/lang/Boolean;",
-        "Lkotlin/m;",
+        "Lkotlin/Unit;",
         ">;"
     }
 .end annotation
@@ -71,7 +71,7 @@
     invoke-static {p1, v0, v1, v2}, Lcom/vk/notifications/NotificationsFragment$a;->a(Lcom/vk/notifications/NotificationsFragment$a;ZILjava/lang/Object;)V
 
     .line 2
-    invoke-static {v0}, Lcom/vtosters/lite/w;->g(I)V
+    invoke-static {v0}, Lcom/vtosters/lite/MenuCountersState;->g(I)V
 
     return-void
 .end method
@@ -84,7 +84,7 @@
 
     invoke-virtual {p0, p1}, Lcom/vk/friends/catalog/FriendsCatalogFragment$MarkAsReadOnBind$tryMarkAsRead$1;->a(Ljava/lang/Boolean;)V
 
-    sget-object p1, Lkotlin/m;->a:Lkotlin/m;
+    sget-object p1, Lkotlin/Unit;->a:Lkotlin/Unit;
 
     return-object p1
 .end method

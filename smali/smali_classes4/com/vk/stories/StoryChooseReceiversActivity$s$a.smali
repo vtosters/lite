@@ -3,7 +3,7 @@
 .source "StoryChooseReceiversActivity.java"
 
 # interfaces
-.implements Lkotlin/jvm/b/d;
+.implements Lkotlin/jvm/b/Functions4;
 
 
 # annotations
@@ -19,11 +19,11 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Ljava/lang/Object;",
-        "Lkotlin/jvm/b/d<",
+        "Lkotlin/jvm/b/Functions4<",
         "Ljava/lang/Integer;",
         "Ljava/lang/Boolean;",
         "Ljava/lang/Integer;",
-        "Lkotlin/m;",
+        "Lkotlin/Unit;",
         ">;"
     }
 .end annotation
@@ -57,14 +57,14 @@
 
     check-cast p3, Ljava/lang/Integer;
 
-    invoke-virtual {p0, p1, p2, p3}, Lcom/vk/stories/StoryChooseReceiversActivity$s$a;->a(Ljava/lang/Integer;Ljava/lang/Boolean;Ljava/lang/Integer;)Lkotlin/m;
+    invoke-virtual {p0, p1, p2, p3}, Lcom/vk/stories/StoryChooseReceiversActivity$s$a;->a(Ljava/lang/Integer;Ljava/lang/Boolean;Ljava/lang/Integer;)Lkotlin/Unit;
 
     move-result-object p1
 
     return-object p1
 .end method
 
-.method public a(Ljava/lang/Integer;Ljava/lang/Boolean;Ljava/lang/Integer;)Lkotlin/m;
+.method public a(Ljava/lang/Integer;Ljava/lang/Boolean;Ljava/lang/Integer;)Lkotlin/Unit;
     .locals 1
 
     .line 2
@@ -85,7 +85,7 @@
     invoke-static {v0, p1, p2, p3}, Lcom/vk/stories/StoryChooseReceiversActivity$s;->a(Lcom/vk/stories/StoryChooseReceiversActivity$s;IZI)V
 
     .line 3
-    sget-object p1, Lkotlin/m;->a:Lkotlin/m;
+    sget-object p1, Lkotlin/Unit;->a:Lkotlin/Unit;
 
     return-object p1
 .end method

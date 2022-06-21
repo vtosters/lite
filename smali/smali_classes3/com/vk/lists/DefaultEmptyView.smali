@@ -3,7 +3,7 @@
 .source "DefaultEmptyView.java"
 
 # interfaces
-.implements Lcom/vk/lists/v;
+.implements Lcom/vk/lists/PaginationListEmptyView;
 
 
 # instance fields
@@ -153,7 +153,7 @@
 
     const/16 p2, 0x20
 
-    invoke-static {p1, p2}, Lcom/vk/lists/k0;->a(Landroid/content/res/Resources;I)I
+    invoke-static {p1, p2}, Lcom/vk/lists/Util;->a(Landroid/content/res/Resources;I)I
 
     move-result p1
 
@@ -164,7 +164,7 @@
 
     const/16 p2, 0x3c
 
-    invoke-static {p0, p2}, Lcom/vk/lists/k0;->a(Landroid/content/res/Resources;I)I
+    invoke-static {p0, p2}, Lcom/vk/lists/Util;->a(Landroid/content/res/Resources;I)I
 
     move-result p0
 
@@ -200,7 +200,7 @@
 
     const/16 v1, 0x20
 
-    invoke-static {v0, v1}, Lcom/vk/lists/k0;->a(Landroid/content/res/Resources;I)I
+    invoke-static {v0, v1}, Lcom/vk/lists/Util;->a(Landroid/content/res/Resources;I)I
 
     move-result v0
 
@@ -209,7 +209,7 @@
 
     move-result-object v2
 
-    invoke-static {v2, v1}, Lcom/vk/lists/k0;->a(Landroid/content/res/Resources;I)I
+    invoke-static {v2, v1}, Lcom/vk/lists/Util;->a(Landroid/content/res/Resources;I)I
 
     move-result v1
 
@@ -220,7 +220,7 @@
 
     const/16 v3, 0x38
 
-    invoke-static {v2, v3}, Lcom/vk/lists/k0;->a(Landroid/content/res/Resources;I)I
+    invoke-static {v2, v3}, Lcom/vk/lists/Util;->a(Landroid/content/res/Resources;I)I
 
     move-result v2
 
@@ -269,7 +269,7 @@
 
     sget v0, Lcom/vk/lists/a0;->text_placeholder:I
 
-    invoke-static {p1, v0}, Lcom/vk/extensions/l;->a(Landroid/widget/TextView;I)V
+    invoke-static {p1, v0}, Lcom/vk/extensions/TextViewExt;->a(Landroid/widget/TextView;I)V
 
     return-void
 .end method

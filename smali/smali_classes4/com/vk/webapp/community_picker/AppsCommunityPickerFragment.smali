@@ -1,10 +1,10 @@
 .class public final Lcom/vk/webapp/community_picker/AppsCommunityPickerFragment;
-.super Lcom/vk/core/fragments/c;
+.super Lcom/vk/core/fragments/BaseMvpFragment;
 .source "AppsCommunityPickerFragment.kt"
 
 # interfaces
-.implements Lcom/vk/navigation/b0/k;
-.implements Lcom/vk/webapp/community_picker/c;
+.implements Lcom/vk/navigation/b0/FragmentWithoutBottomMenuBar;
+.implements Lcom/vk/webapp/community_picker/AppsCommunityPickerContract1;
 
 
 # annotations
@@ -19,11 +19,11 @@
 
 .annotation system Ldalvik/annotation/Signature;
     value = {
-        "Lcom/vk/core/fragments/c<",
-        "Lcom/vk/webapp/community_picker/a;",
+        "Lcom/vk/core/fragments/BaseMvpFragment<",
+        "Lcom/vk/webapp/community_picker/AppsCommunityPickerContract;",
         ">;",
-        "Lcom/vk/navigation/b0/k;",
-        "Lcom/vk/webapp/community_picker/c;"
+        "Lcom/vk/navigation/b0/FragmentWithoutBottomMenuBar;",
+        "Lcom/vk/webapp/community_picker/AppsCommunityPickerContract1;"
     }
 .end annotation
 
@@ -47,7 +47,7 @@
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, v1}, Lcom/vk/webapp/community_picker/AppsCommunityPickerFragment$c;-><init>(Lkotlin/jvm/internal/i;)V
+    invoke-direct {v0, v1}, Lcom/vk/webapp/community_picker/AppsCommunityPickerFragment$c;-><init>(Lkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     sput-object v0, Lcom/vk/webapp/community_picker/AppsCommunityPickerFragment;->H:Lcom/vk/webapp/community_picker/AppsCommunityPickerFragment$c;
 
@@ -58,7 +58,7 @@
     .locals 1
 
     .line 1
-    invoke-direct {p0}, Lcom/vk/core/fragments/c;-><init>()V
+    invoke-direct {p0}, Lcom/vk/core/fragments/BaseMvpFragment;-><init>()V
 
     .line 2
     new-instance v0, Lcom/vk/webapp/community_picker/AppsCommunityPickerFragment$a;
@@ -68,11 +68,11 @@
     iput-object v0, p0, Lcom/vk/webapp/community_picker/AppsCommunityPickerFragment;->G:Lcom/vk/webapp/community_picker/AppsCommunityPickerFragment$a;
 
     .line 3
-    new-instance v0, Lcom/vk/webapp/community_picker/b;
+    new-instance v0, Lcom/vk/webapp/community_picker/AppsCommunityPickerContract2;
 
-    invoke-direct {v0, p0}, Lcom/vk/webapp/community_picker/b;-><init>(Lcom/vk/webapp/community_picker/c;)V
+    invoke-direct {v0, p0}, Lcom/vk/webapp/community_picker/AppsCommunityPickerContract2;-><init>(Lcom/vk/webapp/community_picker/AppsCommunityPickerContract1;)V
 
-    invoke-virtual {p0, v0}, Lcom/vk/core/fragments/c;->a(Lb/h/r/c;)V
+    invoke-virtual {p0, v0}, Lcom/vk/core/fragments/BaseMvpFragment;->a(Lb/h/r/BaseScreenContract;)V
 
     return-void
 .end method
@@ -99,7 +99,7 @@
     const/4 v3, 0x0
 
     .line 1
-    invoke-static {v0, v1, v2, v3}, Lcom/vk/core/util/k1;->a(IZILjava/lang/Object;)V
+    invoke-static {v0, v1, v2, v3}, Lcom/vk/core/util/ToastUtils;->a(IZILjava/lang/Object;)V
 
     return-void
 .end method
@@ -134,14 +134,14 @@
     .locals 2
 
     .line 1
-    invoke-super {p0, p1}, Lcom/vk/core/fragments/b;->onCreate(Landroid/os/Bundle;)V
+    invoke-super {p0, p1}, Lcom/vk/core/fragments/BaseFragment1;->onCreate(Landroid/os/Bundle;)V
 
     .line 2
     invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getArguments()Landroid/os/Bundle;
 
     move-result-object p1
 
-    invoke-virtual {p0}, Lcom/vk/core/fragments/c;->getPresenter()Lb/h/r/c;
+    invoke-virtual {p0}, Lcom/vk/core/fragments/BaseMvpFragment;->getPresenter()Lb/h/r/BaseScreenContract;
 
     move-result-object v0
 
@@ -150,7 +150,7 @@
     if-eqz v0, :cond_1
 
     .line 3
-    check-cast v0, Lcom/vk/webapp/community_picker/a;
+    check-cast v0, Lcom/vk/webapp/community_picker/AppsCommunityPickerContract;
 
     const-string v1, "groups"
 
@@ -170,7 +170,7 @@
 
     .line 5
     :goto_0
-    invoke-interface {v0, p1}, Lcom/vk/webapp/community_picker/a;->b(Ljava/util/List;)V
+    invoke-interface {v0, p1}, Lcom/vk/webapp/community_picker/AppsCommunityPickerContract;->b(Ljava/util/List;)V
 
     :cond_1
     return-void
@@ -200,7 +200,7 @@
     const p3, 0x7f080624
 
     .line 3
-    invoke-static {p2, p3}, Lcom/vtosters/lite/f0;->a(Landroidx/appcompat/widget/Toolbar;I)V
+    invoke-static {p2, p3}, Lcom/vtosters/lite/ViewUtils;->a(Landroidx/appcompat/widget/Toolbar;I)V
 
     const p3, 0x7f120564
 

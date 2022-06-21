@@ -3,7 +3,7 @@
 .source "ContextMenuDelegate.kt"
 
 # interfaces
-.implements Lcom/vk/photoviewer/d;
+.implements Lcom/vk/photoviewer/ContextMenuListener;
 .implements Landroid/view/ViewTreeObserver$OnGlobalLayoutListener;
 
 
@@ -81,7 +81,7 @@
     throw p1
 .end method
 
-.method private final a(Landroid/widget/EditText;Ljava/util/List;Lkotlin/jvm/b/c;)Landroid/view/ViewGroup;
+.method private final a(Landroid/widget/EditText;Ljava/util/List;Lkotlin/jvm/b/Functions1;)Landroid/view/ViewGroup;
     .locals 11
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -92,12 +92,12 @@
             "Ljava/lang/Integer;",
             "Ljava/lang/String;",
             ">;>;",
-            "Lkotlin/jvm/b/c<",
+            "Lkotlin/jvm/b/Functions1<",
             "-",
             "Landroid/view/View;",
             "-",
             "Ljava/lang/Integer;",
-            "Lkotlin/m;",
+            "Lkotlin/Unit;",
             ">;)",
             "Landroid/view/ViewGroup;"
         }
@@ -225,7 +225,7 @@
 
     move-object v6, v8
 
-    invoke-direct/range {v1 .. v6}, Lcom/vk/photoviewer/ContextMenuDelegate$b;-><init>(Lkotlin/Pair;Landroid/view/LayoutInflater;Landroid/view/ViewGroup;Lkotlin/jvm/b/c;Landroid/view/ViewGroup;)V
+    invoke-direct/range {v1 .. v6}, Lcom/vk/photoviewer/ContextMenuDelegate$b;-><init>(Lkotlin/Pair;Landroid/view/LayoutInflater;Landroid/view/ViewGroup;Lkotlin/jvm/b/Functions1;Landroid/view/ViewGroup;)V
 
     invoke-virtual {p2, v10}, Landroid/widget/TextView;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
@@ -271,7 +271,7 @@
     :cond_0
     const-string p0, "view"
 
-    invoke-static {p0}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {p0}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     const/4 p0, 0x0
 
@@ -318,7 +318,7 @@
     iput v0, v6, Landroid/view/WindowManager$LayoutParams;->x:I
 
     .line 43
-    invoke-static {p1}, Lcom/vk/photoviewer/b;->a(Landroid/view/View;)Landroid/graphics/Rect;
+    invoke-static {p1}, Lcom/vk/photoviewer/AnimationCalculator1;->a(Landroid/view/View;)Landroid/graphics/Rect;
 
     move-result-object v0
 
@@ -477,7 +477,7 @@
 
     const-string v5, "view.text"
 
-    invoke-static {v2, v5}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v2, v5}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-interface {v2}, Ljava/lang/CharSequence;->length()I
 
@@ -716,7 +716,7 @@
 
     const-string v1, "context.resources"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {v0}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
 
@@ -859,7 +859,7 @@
 
     const-string v2, "textView.text"
 
-    invoke-static {v1, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {p1}, Landroid/widget/EditText;->getSelectionStart()I
 
@@ -967,7 +967,7 @@
 
     const-string v1, "anchor.get() ?: return"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 2
     iget-object v1, p0, Lcom/vk/photoviewer/ContextMenuDelegate;->c:Landroid/view/ViewGroup;
@@ -987,7 +987,7 @@
     check-cast v1, Landroid/view/WindowManager$LayoutParams;
 
     .line 3
-    invoke-static {v0}, Lcom/vk/photoviewer/b;->a(Landroid/view/View;)Landroid/graphics/Rect;
+    invoke-static {v0}, Lcom/vk/photoviewer/AnimationCalculator1;->a(Landroid/view/View;)Landroid/graphics/Rect;
 
     move-result-object v4
 
@@ -1032,7 +1032,7 @@
     goto :goto_0
 
     :cond_0
-    invoke-static {v3}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v3}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v2
 
@@ -1042,7 +1042,7 @@
 
     .line 6
     :cond_2
-    invoke-static {v3}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v3}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v2
 
@@ -1057,7 +1057,7 @@
     throw v0
 
     :cond_4
-    invoke-static {v3}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v3}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v2
 
@@ -1109,7 +1109,7 @@
 
     invoke-direct {v2, p0, p1, p2, p3}, Lcom/vk/photoviewer/ContextMenuDelegate$showContextMenuForChild$1;-><init>(Lcom/vk/photoviewer/ContextMenuDelegate;Landroid/view/View;FF)V
 
-    invoke-direct {p0, v0, v1, v2}, Lcom/vk/photoviewer/ContextMenuDelegate;->a(Landroid/widget/EditText;Ljava/util/List;Lkotlin/jvm/b/c;)Landroid/view/ViewGroup;
+    invoke-direct {p0, v0, v1, v2}, Lcom/vk/photoviewer/ContextMenuDelegate;->a(Landroid/widget/EditText;Ljava/util/List;Lkotlin/jvm/b/Functions1;)Landroid/view/ViewGroup;
 
     move-result-object p2
 
@@ -1139,7 +1139,7 @@
 
     invoke-direct {v1, p0}, Lcom/vk/photoviewer/ContextMenuDelegate$showContextMenuForChild$2;-><init>(Lcom/vk/photoviewer/ContextMenuDelegate;)V
 
-    invoke-static {p2, v1}, Lcom/vk/photoviewer/q;->a(Landroid/view/View;Lkotlin/jvm/b/a;)V
+    invoke-static {p2, v1}, Lcom/vk/photoviewer/ViewExt;->a(Landroid/view/View;Lkotlin/jvm/b/Functions;)V
 
     .line 9
     iget-object p2, p0, Lcom/vk/photoviewer/ContextMenuDelegate;->c:Landroid/view/ViewGroup;
@@ -1150,7 +1150,7 @@
 
     invoke-direct {v1, p0}, Lcom/vk/photoviewer/ContextMenuDelegate$showContextMenuForChild$3;-><init>(Lcom/vk/photoviewer/ContextMenuDelegate;)V
 
-    invoke-static {p2, v1}, Lcom/vk/photoviewer/q;->b(Landroid/view/View;Lkotlin/jvm/b/a;)V
+    invoke-static {p2, v1}, Lcom/vk/photoviewer/ViewExt;->b(Landroid/view/View;Lkotlin/jvm/b/Functions;)V
 
     .line 10
     iget-object p2, p0, Lcom/vk/photoviewer/ContextMenuDelegate;->c:Landroid/view/ViewGroup;
@@ -1177,31 +1177,31 @@
     return p1
 
     :cond_1
-    invoke-static {v0}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v0}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw p3
 
     .line 12
     :cond_2
-    invoke-static {v0}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v0}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw p3
 
     .line 13
     :cond_3
-    invoke-static {v0}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v0}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw p3
 
     .line 14
     :cond_4
-    invoke-static {v0}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v0}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw p3
 
     .line 15
     :cond_5
-    invoke-static {v0}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v0}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw p3
 .end method

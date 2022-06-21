@@ -1,11 +1,11 @@
 .class public final Lcom/vk/mediastore/legacy/ProgressResponseBody$b;
-.super Lokio/g;
+.super Lokio/ForwardingSource;
 .source "ProgressResponseBody.kt"
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/mediastore/legacy/ProgressResponseBody;->b(Lokio/r;)Lcom/vk/mediastore/legacy/ProgressResponseBody$b;
+    value = Lcom/vk/mediastore/legacy/ProgressResponseBody;->b(Lokio/Source;)Lcom/vk/mediastore/legacy/ProgressResponseBody$b;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -23,13 +23,13 @@
 
 
 # direct methods
-.method constructor <init>(Lcom/vk/mediastore/legacy/ProgressResponseBody;Lokio/r;Lokio/r;)V
+.method constructor <init>(Lcom/vk/mediastore/legacy/ProgressResponseBody;Lokio/Source;Lokio/Source;)V
     .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lokio/r;",
-            "Lokio/r;",
+            "Lokio/Source;",
+            "Lokio/Source;",
             ")V"
         }
     .end annotation
@@ -37,14 +37,14 @@
     .line 1
     iput-object p1, p0, Lcom/vk/mediastore/legacy/ProgressResponseBody$b;->d:Lcom/vk/mediastore/legacy/ProgressResponseBody;
 
-    invoke-direct {p0, p3}, Lokio/g;-><init>(Lokio/r;)V
+    invoke-direct {p0, p3}, Lokio/ForwardingSource;-><init>(Lokio/Source;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public b(Lokio/c;J)J
+.method public b(Lokio/Buffer;J)J
     .locals 4
 
     .line 1
@@ -68,7 +68,7 @@
 
     .line 4
     :cond_0
-    invoke-super {p0, p1, p2, p3}, Lokio/g;->b(Lokio/c;J)J
+    invoke-super {p0, p1, p2, p3}, Lokio/ForwardingSource;->b(Lokio/Buffer;J)J
 
     move-result-wide p1
 
@@ -108,11 +108,11 @@
 
     iget-object v2, p0, Lcom/vk/mediastore/legacy/ProgressResponseBody$b;->d:Lcom/vk/mediastore/legacy/ProgressResponseBody;
 
-    invoke-static {v2}, Lcom/vk/mediastore/legacy/ProgressResponseBody;->b(Lcom/vk/mediastore/legacy/ProgressResponseBody;)Lokhttp3/c0;
+    invoke-static {v2}, Lcom/vk/mediastore/legacy/ProgressResponseBody;->b(Lcom/vk/mediastore/legacy/ProgressResponseBody;)Lokhttp3/ResponseBody;
 
     move-result-object v2
 
-    invoke-virtual {v2}, Lokhttp3/c0;->d()J
+    invoke-virtual {v2}, Lokhttp3/ResponseBody;->d()J
 
     move-result-wide v2
 

@@ -3,7 +3,7 @@
 .source "AppsCommunityPickerFragment.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/b;
+.implements Lkotlin/jvm/b/Functions2;
 
 
 # annotations
@@ -19,9 +19,9 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/b<",
+        "Lkotlin/jvm/b/Functions2<",
         "Landroid/view/View;",
-        "Lkotlin/m;",
+        "Lkotlin/Unit;",
         ">;"
     }
 .end annotation
@@ -54,11 +54,11 @@
 
     iget-object p1, p1, Lcom/vk/webapp/community_picker/AppsCommunityPickerFragment$GroupHolder;->f:Lcom/vk/webapp/community_picker/AppsCommunityPickerFragment;
 
-    invoke-virtual {p1}, Lcom/vk/core/fragments/c;->getPresenter()Lb/h/r/c;
+    invoke-virtual {p1}, Lcom/vk/core/fragments/BaseMvpFragment;->getPresenter()Lb/h/r/BaseScreenContract;
 
     move-result-object p1
 
-    check-cast p1, Lcom/vk/webapp/community_picker/a;
+    check-cast p1, Lcom/vk/webapp/community_picker/AppsCommunityPickerContract;
 
     if-eqz p1, :cond_0
 
@@ -70,9 +70,9 @@
 
     const-string v1, "item"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    invoke-interface {p1, v0}, Lcom/vk/webapp/community_picker/a;->a(Lcom/vk/dto/apps/AppsGroupsContainer;)V
+    invoke-interface {p1, v0}, Lcom/vk/webapp/community_picker/AppsCommunityPickerContract;->a(Lcom/vk/dto/apps/AppsGroupsContainer;)V
 
     :cond_0
     return-void
@@ -86,7 +86,7 @@
 
     invoke-virtual {p0, p1}, Lcom/vk/webapp/community_picker/AppsCommunityPickerFragment$GroupHolder$1;->a(Landroid/view/View;)V
 
-    sget-object p1, Lkotlin/m;->a:Lkotlin/m;
+    sget-object p1, Lkotlin/Unit;->a:Lkotlin/Unit;
 
     return-object p1
 .end method

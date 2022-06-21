@@ -1,12 +1,12 @@
 .class public final Lcom/vk/api/fave/FaveSetTags;
-.super Lcom/vk/api/base/d;
+.super Lcom/vk/api/base/ApiRequest;
 .source "FaveSetTags.kt"
 
 
 # annotations
 .annotation system Ldalvik/annotation/Signature;
     value = {
-        "Lcom/vk/api/base/d<",
+        "Lcom/vk/api/base/ApiRequest<",
         "Ljava/lang/Boolean;",
         ">;"
     }
@@ -43,7 +43,7 @@
     const-string v4, "fave.setTags"
 
     .line 1
-    invoke-direct {p0, v4}, Lcom/vk/api/base/d;-><init>(Ljava/lang/String;)V
+    invoke-direct {p0, v4}, Lcom/vk/api/base/ApiRequest;-><init>(Ljava/lang/String;)V
 
     .line 2
     invoke-virtual {p1}, Lcom/vk/fave/entities/FaveType;->a()Ljava/lang/String;
@@ -52,7 +52,7 @@
 
     const-string v5, "item_type"
 
-    invoke-virtual {p0, v5, v4}, Lcom/vk/api/base/d;->c(Ljava/lang/String;Ljava/lang/String;)Lcom/vk/api/base/d;
+    invoke-virtual {p0, v5, v4}, Lcom/vk/api/base/ApiRequest;->c(Ljava/lang/String;Ljava/lang/String;)Lcom/vk/api/base/ApiRequest;
 
     if-eqz p2, :cond_0
 
@@ -65,7 +65,7 @@
 
     const-string v5, "item_id"
 
-    invoke-virtual {p0, v5, v4}, Lcom/vk/api/base/d;->b(Ljava/lang/String;I)Lcom/vk/api/base/d;
+    invoke-virtual {p0, v5, v4}, Lcom/vk/api/base/ApiRequest;->b(Ljava/lang/String;I)Lcom/vk/api/base/ApiRequest;
 
     :cond_0
     if-eqz p3, :cond_1
@@ -79,7 +79,7 @@
 
     const-string v5, "item_owner_id"
 
-    invoke-virtual {p0, v5, v4}, Lcom/vk/api/base/d;->b(Ljava/lang/String;I)Lcom/vk/api/base/d;
+    invoke-virtual {p0, v5, v4}, Lcom/vk/api/base/ApiRequest;->b(Ljava/lang/String;I)Lcom/vk/api/base/ApiRequest;
 
     :cond_1
     if-eqz v3, :cond_2
@@ -87,7 +87,7 @@
     const-string v4, "ref"
 
     .line 5
-    invoke-virtual {p0, v4, v3}, Lcom/vk/api/base/d;->c(Ljava/lang/String;Ljava/lang/String;)Lcom/vk/api/base/d;
+    invoke-virtual {p0, v4, v3}, Lcom/vk/api/base/ApiRequest;->c(Ljava/lang/String;Ljava/lang/String;)Lcom/vk/api/base/ApiRequest;
 
     :cond_2
     const-string v3, "is_from_snackbar"
@@ -95,7 +95,7 @@
     move/from16 v4, p8
 
     .line 6
-    invoke-virtual {p0, v3, v4}, Lcom/vk/api/base/d;->a(Ljava/lang/String;Z)Lcom/vk/api/base/d;
+    invoke-virtual {p0, v3, v4}, Lcom/vk/api/base/ApiRequest;->a(Ljava/lang/String;Z)Lcom/vk/api/base/ApiRequest;
 
     if-eqz v1, :cond_4
 
@@ -123,7 +123,7 @@
     const-string v2, "link_id"
 
     .line 8
-    invoke-virtual {p0, v2, p4}, Lcom/vk/api/base/d;->c(Ljava/lang/String;Ljava/lang/String;)Lcom/vk/api/base/d;
+    invoke-virtual {p0, v2, p4}, Lcom/vk/api/base/ApiRequest;->c(Ljava/lang/String;Ljava/lang/String;)Lcom/vk/api/base/ApiRequest;
 
     goto :goto_2
 
@@ -133,7 +133,7 @@
     const-string v1, "link_url"
 
     .line 9
-    invoke-virtual {p0, v1, v2}, Lcom/vk/api/base/d;->c(Ljava/lang/String;Ljava/lang/String;)Lcom/vk/api/base/d;
+    invoke-virtual {p0, v1, v2}, Lcom/vk/api/base/ApiRequest;->c(Ljava/lang/String;Ljava/lang/String;)Lcom/vk/api/base/ApiRequest;
 
     :cond_6
     :goto_2
@@ -156,13 +156,13 @@
 
     move-object/from16 v2, p6
 
-    invoke-static/range {v2 .. v10}, Lkotlin/collections/l;->a(Ljava/lang/Iterable;Ljava/lang/CharSequence;Ljava/lang/CharSequence;Ljava/lang/CharSequence;ILjava/lang/CharSequence;Lkotlin/jvm/b/b;ILjava/lang/Object;)Ljava/lang/String;
+    invoke-static/range {v2 .. v10}, Lkotlin/collections/l;->a(Ljava/lang/Iterable;Ljava/lang/CharSequence;Ljava/lang/CharSequence;Ljava/lang/CharSequence;ILjava/lang/CharSequence;Lkotlin/jvm/b/Functions2;ILjava/lang/Object;)Ljava/lang/String;
 
     move-result-object v1
 
     const-string v2, "tag_ids"
 
-    invoke-virtual {p0, v2, v1}, Lcom/vk/api/base/d;->c(Ljava/lang/String;Ljava/lang/String;)Lcom/vk/api/base/d;
+    invoke-virtual {p0, v2, v1}, Lcom/vk/api/base/ApiRequest;->c(Ljava/lang/String;Ljava/lang/String;)Lcom/vk/api/base/ApiRequest;
 
     return-void
 .end method

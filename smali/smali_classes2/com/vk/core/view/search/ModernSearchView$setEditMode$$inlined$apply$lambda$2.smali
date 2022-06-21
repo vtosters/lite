@@ -3,12 +3,12 @@
 .source "ModernSearchView.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/b;
+.implements Lkotlin/jvm/b/Functions2;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/core/view/search/ModernSearchView;->a(Lkotlin/jvm/b/a;Lkotlin/jvm/b/a;)V
+    value = Lcom/vk/core/view/search/ModernSearchView;->a(Lkotlin/jvm/b/Functions;Lkotlin/jvm/b/Functions;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -19,27 +19,27 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/b<",
+        "Lkotlin/jvm/b/Functions2<",
         "Landroid/view/View;",
-        "Lkotlin/m;",
+        "Lkotlin/Unit;",
         ">;"
     }
 .end annotation
 
 
 # instance fields
-.field final synthetic $voiceButtonAction$inlined:Lkotlin/jvm/b/a;
+.field final synthetic $voiceButtonAction$inlined:Lkotlin/jvm/b/Functions;
 
 .field final synthetic this$0:Lcom/vk/core/view/search/ModernSearchView;
 
 
 # direct methods
-.method constructor <init>(Lcom/vk/core/view/search/ModernSearchView;Lkotlin/jvm/b/a;)V
+.method constructor <init>(Lcom/vk/core/view/search/ModernSearchView;Lkotlin/jvm/b/Functions;)V
     .locals 0
 
     iput-object p1, p0, Lcom/vk/core/view/search/ModernSearchView$setEditMode$$inlined$apply$lambda$2;->this$0:Lcom/vk/core/view/search/ModernSearchView;
 
-    iput-object p2, p0, Lcom/vk/core/view/search/ModernSearchView$setEditMode$$inlined$apply$lambda$2;->$voiceButtonAction$inlined:Lkotlin/jvm/b/a;
+    iput-object p2, p0, Lcom/vk/core/view/search/ModernSearchView$setEditMode$$inlined$apply$lambda$2;->$voiceButtonAction$inlined:Lkotlin/jvm/b/Functions;
 
     const/4 p1, 0x1
 
@@ -60,22 +60,22 @@
 
     move-result-object p1
 
-    invoke-static {p1}, Lcom/vk/core/extensions/a0;->b(Landroid/widget/TextView;)Z
+    invoke-static {p1}, Lcom/vk/core/extensions/TextViewExt;->b(Landroid/widget/TextView;)Z
 
     move-result p1
 
     if-eqz p1, :cond_0
 
     .line 2
-    iget-object p1, p0, Lcom/vk/core/view/search/ModernSearchView$setEditMode$$inlined$apply$lambda$2;->$voiceButtonAction$inlined:Lkotlin/jvm/b/a;
+    iget-object p1, p0, Lcom/vk/core/view/search/ModernSearchView$setEditMode$$inlined$apply$lambda$2;->$voiceButtonAction$inlined:Lkotlin/jvm/b/Functions;
 
     if-eqz p1, :cond_1
 
-    invoke-interface {p1}, Lkotlin/jvm/b/a;->invoke()Ljava/lang/Object;
+    invoke-interface {p1}, Lkotlin/jvm/b/Functions;->invoke()Ljava/lang/Object;
 
     move-result-object p1
 
-    check-cast p1, Lkotlin/m;
+    check-cast p1, Lkotlin/Unit;
 
     goto :goto_0
 
@@ -98,7 +98,7 @@
 
     invoke-virtual {p0, p1}, Lcom/vk/core/view/search/ModernSearchView$setEditMode$$inlined$apply$lambda$2;->a(Landroid/view/View;)V
 
-    sget-object p1, Lkotlin/m;->a:Lkotlin/m;
+    sget-object p1, Lkotlin/Unit;->a:Lkotlin/Unit;
 
     return-object p1
 .end method

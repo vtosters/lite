@@ -3,7 +3,7 @@
 .source "StoryChooseReceiversActivity.java"
 
 # interfaces
-.implements Lcom/vtosters/lite/ui/x$i;
+.implements Lcom/vtosters/lite/ui/SearchViewWrapper$i;
 
 
 # annotations

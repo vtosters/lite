@@ -3,8 +3,8 @@
 .source "VkHtmlGameFragment.kt"
 
 # interfaces
-.implements Lcom/vk/navigation/b0/m;
-.implements Lcom/vk/navigation/b0/l;
+.implements Lcom/vk/navigation/b0/FragmentWithoutStatusBar;
+.implements Lcom/vk/navigation/b0/FragmentWithoutLeftMenu;
 
 
 # annotations
@@ -23,9 +23,9 @@
 # instance fields
 .field private final P0:Lcom/vk/webapp/VkUiFragment$VkWebChromeClient;
 
-.field private final Q0:Lcom/vk/webapp/o/a;
+.field private final Q0:Lcom/vk/webapp/o/VkHtmlGameFragmentDelegate;
 
-.field private R0:Lcom/vk/core/util/e;
+.field private R0:Lcom/vk/core/util/AndroidBug5497Workaround;
 
 .field private final S0:Lcom/vk/webapp/fragments/VkHtmlGameFragment$g;
 
@@ -38,7 +38,7 @@
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, v1}, Lcom/vk/webapp/fragments/VkHtmlGameFragment$b;-><init>(Lkotlin/jvm/internal/i;)V
+    invoke-direct {v0, v1}, Lcom/vk/webapp/fragments/VkHtmlGameFragment$b;-><init>(Lkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     sput-object v0, Lcom/vk/webapp/fragments/VkHtmlGameFragment;->T0:Lcom/vk/webapp/fragments/VkHtmlGameFragment$b;
 
@@ -59,22 +59,22 @@
     iput-object v0, p0, Lcom/vk/webapp/fragments/VkHtmlGameFragment;->P0:Lcom/vk/webapp/VkUiFragment$VkWebChromeClient;
 
     .line 3
-    invoke-super {p0}, Lcom/vk/webapp/VkUiConnectFragment;->a5()Lcom/vk/webapp/o/b;
+    invoke-super {p0}, Lcom/vk/webapp/VkUiConnectFragment;->a5()Lcom/vk/webapp/o/VkUiConnectFragmentDelegate;
 
     move-result-object v0
 
     if-eqz v0, :cond_0
 
-    check-cast v0, Lcom/vk/webapp/o/a;
+    check-cast v0, Lcom/vk/webapp/o/VkHtmlGameFragmentDelegate;
 
-    iput-object v0, p0, Lcom/vk/webapp/fragments/VkHtmlGameFragment;->Q0:Lcom/vk/webapp/o/a;
+    iput-object v0, p0, Lcom/vk/webapp/fragments/VkHtmlGameFragment;->Q0:Lcom/vk/webapp/o/VkHtmlGameFragmentDelegate;
 
     .line 4
-    invoke-virtual {p0}, Lcom/vk/webapp/fragments/VkHtmlGameFragment;->a5()Lcom/vk/webapp/o/a;
+    invoke-virtual {p0}, Lcom/vk/webapp/fragments/VkHtmlGameFragment;->a5()Lcom/vk/webapp/o/VkHtmlGameFragmentDelegate;
 
     move-result-object v0
 
-    invoke-virtual {p0, v0}, Lcom/vk/webapp/fragments/VkHtmlGameFragment;->a(Lcom/vk/webapp/o/b;)V
+    invoke-virtual {p0, v0}, Lcom/vk/webapp/fragments/VkHtmlGameFragment;->a(Lcom/vk/webapp/o/VkUiConnectFragmentDelegate;)V
 
     .line 5
     new-instance v0, Lcom/vk/webapp/fragments/VkHtmlGameFragment$g;
@@ -96,7 +96,7 @@
     throw v0
 .end method
 
-.method private final M5()Lcom/vk/webapp/bridges/c;
+.method private final M5()Lcom/vk/webapp/bridges/VkHtmlGameBridge;
     .locals 2
 
     .line 1
@@ -106,7 +106,7 @@
 
     if-eqz v0, :cond_0
 
-    check-cast v0, Lcom/vk/webapp/bridges/c;
+    check-cast v0, Lcom/vk/webapp/bridges/VkHtmlGameBridge;
 
     return-object v0
 
@@ -124,19 +124,19 @@
     .locals 10
 
     .line 56
-    invoke-virtual {p0}, Lcom/vk/webapp/VkUiFragment;->c5()Lio/reactivex/disposables/a;
+    invoke-virtual {p0}, Lcom/vk/webapp/VkUiFragment;->c5()Lio/reactivex/disposables/CompositeDisposable;
 
     move-result-object v0
 
-    invoke-virtual {p0}, Lcom/vk/webapp/fragments/VkHtmlGameFragment;->a5()Lcom/vk/webapp/o/a;
+    invoke-virtual {p0}, Lcom/vk/webapp/fragments/VkHtmlGameFragment;->a5()Lcom/vk/webapp/o/VkHtmlGameFragmentDelegate;
 
     move-result-object v1
 
-    invoke-interface {v1}, Lcom/vk/webapp/o/c;->F()I
+    invoke-interface {v1}, Lcom/vk/webapp/o/VkUiFragmentDelegate;->F()I
 
     move-result v1
 
-    invoke-static {v1, p2, p3, p4}, Lcom/vk/api/apps/a0;->a(IILjava/lang/String;Ljava/lang/String;)Lcom/vk/api/apps/a0;
+    invoke-static {v1, p2, p3, p4}, Lcom/vk/api/apps/AppsSendRequest;->a(IILjava/lang/String;Ljava/lang/String;)Lcom/vk/api/apps/AppsSendRequest;
 
     move-result-object p2
 
@@ -145,7 +145,7 @@
     const/4 p4, 0x1
 
     .line 57
-    invoke-static {p2, p3, p4, p3}, Lcom/vk/api/base/d;->d(Lcom/vk/api/base/d;Lcom/vk/api/base/e;ILjava/lang/Object;)Lc/a/m;
+    invoke-static {p2, p3, p4, p3}, Lcom/vk/api/base/ApiRequest;->d(Lcom/vk/api/base/ApiRequest;Lcom/vk/api/base/ApiThreadHolder;ILjava/lang/Object;)Lio/reactivex/Observable;
 
     move-result-object v1
 
@@ -166,7 +166,7 @@
 
     const/4 v9, 0x0
 
-    invoke-static/range {v1 .. v9}, Lcom/vk/core/extensions/RxExtKt;->a(Lc/a/m;Landroid/content/Context;JIZZILjava/lang/Object;)Lc/a/m;
+    invoke-static/range {v1 .. v9}, Lcom/vk/core/extensions/RxExtKt;->a(Lio/reactivex/Observable;Landroid/content/Context;JIZZILjava/lang/Object;)Lio/reactivex/Observable;
 
     move-result-object p2
 
@@ -181,12 +181,12 @@
     invoke-direct {p4, p0, p1}, Lcom/vk/webapp/fragments/VkHtmlGameFragment$k;-><init>(Lcom/vk/webapp/fragments/VkHtmlGameFragment;Landroidx/appcompat/app/AlertDialog;)V
 
     .line 61
-    invoke-virtual {p2, p3, p4}, Lc/a/m;->a(Lc/a/z/g;Lc/a/z/g;)Lio/reactivex/disposables/b;
+    invoke-virtual {p2, p3, p4}, Lio/reactivex/Observable;->a(Lio/reactivex/functions/Consumer;Lio/reactivex/functions/Consumer;)Lio/reactivex/disposables/Disposable;
 
     move-result-object p1
 
     .line 62
-    invoke-virtual {v0, p1}, Lio/reactivex/disposables/a;->b(Lio/reactivex/disposables/b;)Z
+    invoke-virtual {v0, p1}, Lio/reactivex/disposables/CompositeDisposable;->b(Lio/reactivex/disposables/Disposable;)Z
 
     return-void
 .end method
@@ -205,7 +205,7 @@
 
     const-string v2, "requireContext()"
 
-    invoke-static {v1, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-direct {v0, v1}, Lcom/vk/core/dialogs/alert/VkAlertDialog$Builder;-><init>(Landroid/content/Context;)V
 
@@ -218,7 +218,7 @@
 
     const-string v3, "getString(R.string.htmlg\u2026ill_receive_notification)"
 
-    invoke-static {v2, v3}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v2, v3}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 37
     new-instance v3, Landroid/text/SpannableString;
@@ -312,11 +312,11 @@
     const-string v7, "requestView"
 
     .line 40
-    invoke-static {v1, v7}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v1, v7}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     const v7, 0x7f0a0deb
 
-    invoke-static {v1, v7, v5, v2, v5}, Lcom/vk/extensions/ViewExtKt;->a(Landroid/view/View;ILkotlin/jvm/b/b;ILjava/lang/Object;)Landroid/view/View;
+    invoke-static {v1, v7, v5, v2, v5}, Lcom/vk/extensions/ViewExtKt;->a(Landroid/view/View;ILkotlin/jvm/b/Functions2;ILjava/lang/Object;)Landroid/view/View;
 
     move-result-object v7
 
@@ -327,17 +327,17 @@
     const v3, 0x7f0a0dea
 
     .line 41
-    invoke-static {v1, v3, v5, v2, v5}, Lcom/vk/extensions/ViewExtKt;->a(Landroid/view/View;ILkotlin/jvm/b/b;ILjava/lang/Object;)Landroid/view/View;
+    invoke-static {v1, v3, v5, v2, v5}, Lcom/vk/extensions/ViewExtKt;->a(Landroid/view/View;ILkotlin/jvm/b/Functions2;ILjava/lang/Object;)Landroid/view/View;
 
     move-result-object v3
 
     check-cast v3, Landroid/widget/TextView;
 
-    invoke-static {}, Lcom/vk/bridges/g;->a()Lcom/vk/bridges/f;
+    invoke-static {}, Lcom/vk/bridges/AuthBridge;->a()Lcom/vk/bridges/AuthBridge3;
 
     move-result-object v7
 
-    invoke-interface {v7}, Lcom/vk/bridges/f;->h()Lcom/vk/bridges/Account;
+    invoke-interface {v7}, Lcom/vk/bridges/AuthBridge3;->h()Lcom/vk/bridges/Account;
 
     move-result-object v7
 
@@ -350,7 +350,7 @@
     const v3, 0x7f0a0de9
 
     .line 42
-    invoke-static {v1, v3, v5, v2, v5}, Lcom/vk/extensions/ViewExtKt;->a(Landroid/view/View;ILkotlin/jvm/b/b;ILjava/lang/Object;)Landroid/view/View;
+    invoke-static {v1, v3, v5, v2, v5}, Lcom/vk/extensions/ViewExtKt;->a(Landroid/view/View;ILkotlin/jvm/b/Functions2;ILjava/lang/Object;)Landroid/view/View;
 
     move-result-object v3
 
@@ -363,7 +363,7 @@
     const v3, 0x7f0a098c
 
     .line 43
-    invoke-static {v1, v3, v5, v2, v5}, Lcom/vk/extensions/ViewExtKt;->a(Landroid/view/View;ILkotlin/jvm/b/b;ILjava/lang/Object;)Landroid/view/View;
+    invoke-static {v1, v3, v5, v2, v5}, Lcom/vk/extensions/ViewExtKt;->a(Landroid/view/View;ILkotlin/jvm/b/Functions2;ILjava/lang/Object;)Landroid/view/View;
 
     move-result-object v3
 
@@ -372,7 +372,7 @@
     const v8, 0x7f0a05eb
 
     .line 44
-    invoke-static {v1, v8, v5, v2, v5}, Lcom/vk/extensions/ViewExtKt;->a(Landroid/view/View;ILkotlin/jvm/b/b;ILjava/lang/Object;)Landroid/view/View;
+    invoke-static {v1, v8, v5, v2, v5}, Lcom/vk/extensions/ViewExtKt;->a(Landroid/view/View;ILkotlin/jvm/b/Functions2;ILjava/lang/Object;)Landroid/view/View;
 
     move-result-object v8
 
@@ -381,7 +381,7 @@
     const v9, 0x7f0a0a3e
 
     .line 45
-    invoke-static {v1, v9, v5, v2, v5}, Lcom/vk/extensions/ViewExtKt;->a(Landroid/view/View;ILkotlin/jvm/b/b;ILjava/lang/Object;)Landroid/view/View;
+    invoke-static {v1, v9, v5, v2, v5}, Lcom/vk/extensions/ViewExtKt;->a(Landroid/view/View;ILkotlin/jvm/b/Functions2;ILjava/lang/Object;)Landroid/view/View;
 
     move-result-object v9
 
@@ -390,7 +390,7 @@
     const v10, 0x7f0a08f3
 
     .line 46
-    invoke-static {v1, v10, v5, v2, v5}, Lcom/vk/extensions/ViewExtKt;->a(Landroid/view/View;ILkotlin/jvm/b/b;ILjava/lang/Object;)Landroid/view/View;
+    invoke-static {v1, v10, v5, v2, v5}, Lcom/vk/extensions/ViewExtKt;->a(Landroid/view/View;ILkotlin/jvm/b/Functions2;ILjava/lang/Object;)Landroid/view/View;
 
     move-result-object v2
 
@@ -399,11 +399,11 @@
     check-cast v10, Landroid/widget/Button;
 
     .line 47
-    invoke-static {}, Lcom/vk/bridges/g;->a()Lcom/vk/bridges/f;
+    invoke-static {}, Lcom/vk/bridges/AuthBridge;->a()Lcom/vk/bridges/AuthBridge3;
 
     move-result-object v2
 
-    invoke-interface {v2}, Lcom/vk/bridges/f;->h()Lcom/vk/bridges/Account;
+    invoke-interface {v2}, Lcom/vk/bridges/AuthBridge3;->h()Lcom/vk/bridges/Account;
 
     move-result-object v2
 
@@ -414,11 +414,11 @@
     invoke-virtual {v3, v2}, Lcom/vk/imageloader/view/VKImageView;->a(Ljava/lang/String;)V
 
     .line 48
-    invoke-virtual {p0}, Lcom/vk/webapp/fragments/VkHtmlGameFragment;->a5()Lcom/vk/webapp/o/a;
+    invoke-virtual {p0}, Lcom/vk/webapp/fragments/VkHtmlGameFragment;->a5()Lcom/vk/webapp/o/VkHtmlGameFragmentDelegate;
 
     move-result-object v2
 
-    invoke-interface {v2}, Lcom/vk/webapp/o/b;->l()Lcom/vk/dto/common/data/ApiApplication;
+    invoke-interface {v2}, Lcom/vk/webapp/o/VkUiConnectFragmentDelegate;->l()Lcom/vk/dto/common/data/ApiApplication;
 
     move-result-object v2
 
@@ -427,11 +427,11 @@
     if-eqz v2, :cond_0
 
     .line 49
-    invoke-virtual {p0}, Lcom/vk/webapp/fragments/VkHtmlGameFragment;->a5()Lcom/vk/webapp/o/a;
+    invoke-virtual {p0}, Lcom/vk/webapp/fragments/VkHtmlGameFragment;->a5()Lcom/vk/webapp/o/VkHtmlGameFragmentDelegate;
 
     move-result-object v2
 
-    invoke-interface {v2}, Lcom/vk/webapp/o/b;->l()Lcom/vk/dto/common/data/ApiApplication;
+    invoke-interface {v2}, Lcom/vk/webapp/o/VkUiConnectFragmentDelegate;->l()Lcom/vk/dto/common/data/ApiApplication;
 
     move-result-object v2
 
@@ -449,7 +449,7 @@
 
     const-string v3, "delegate.app.icon.getImageByWidth(Screen.dp(36))"
 
-    invoke-static {v2, v3}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v2, v3}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {v2}, Lcom/vk/dto/common/ImageSize;->v1()Ljava/lang/String;
 
@@ -458,7 +458,7 @@
     const-string v3, "imageUrl"
 
     .line 50
-    invoke-static {v2, v3}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v2, v3}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-static {v2}, Lkotlin/text/l;->a(Ljava/lang/CharSequence;)Z
 
@@ -536,16 +536,16 @@
     return-void
 .end method
 
-.method public static final synthetic a(Lcom/vk/webapp/fragments/VkHtmlGameFragment;Ljava/lang/String;Ljava/lang/String;IILkotlin/jvm/b/b;Lkotlin/jvm/b/a;)V
+.method public static final synthetic a(Lcom/vk/webapp/fragments/VkHtmlGameFragment;Ljava/lang/String;Ljava/lang/String;IILkotlin/jvm/b/Functions2;Lkotlin/jvm/b/Functions;)V
     .locals 0
 
     .line 2
-    invoke-direct/range {p0 .. p6}, Lcom/vk/webapp/fragments/VkHtmlGameFragment;->a(Ljava/lang/String;Ljava/lang/String;IILkotlin/jvm/b/b;Lkotlin/jvm/b/a;)V
+    invoke-direct/range {p0 .. p6}, Lcom/vk/webapp/fragments/VkHtmlGameFragment;->a(Ljava/lang/String;Ljava/lang/String;IILkotlin/jvm/b/Functions2;Lkotlin/jvm/b/Functions;)V
 
     return-void
 .end method
 
-.method private final a(Ljava/lang/String;Ljava/lang/String;IILkotlin/jvm/b/b;Lkotlin/jvm/b/a;)V
+.method private final a(Ljava/lang/String;Ljava/lang/String;IILkotlin/jvm/b/Functions2;Lkotlin/jvm/b/Functions;)V
     .locals 9
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -553,40 +553,40 @@
             "Ljava/lang/String;",
             "Ljava/lang/String;",
             "II",
-            "Lkotlin/jvm/b/b<",
+            "Lkotlin/jvm/b/Functions2<",
             "-",
-            "Lcom/vk/dto/common/f;",
-            "Lkotlin/m;",
+            "Lcom/vk/dto/common/Order;",
+            "Lkotlin/Unit;",
             ">;",
-            "Lkotlin/jvm/b/a<",
-            "Lkotlin/m;",
+            "Lkotlin/jvm/b/Functions<",
+            "Lkotlin/Unit;",
             ">;)V"
         }
     .end annotation
 
     .line 63
-    invoke-virtual {p0}, Lcom/vk/webapp/VkUiFragment;->c5()Lio/reactivex/disposables/a;
+    invoke-virtual {p0}, Lcom/vk/webapp/VkUiFragment;->c5()Lio/reactivex/disposables/CompositeDisposable;
 
     move-result-object v0
 
-    new-instance v1, Lb/h/c/s/a;
+    new-instance v1, Lcom/vk/api/orders/OrdersBuyItem;
 
-    invoke-virtual {p0}, Lcom/vk/webapp/fragments/VkHtmlGameFragment;->a5()Lcom/vk/webapp/o/a;
+    invoke-virtual {p0}, Lcom/vk/webapp/fragments/VkHtmlGameFragment;->a5()Lcom/vk/webapp/o/VkHtmlGameFragmentDelegate;
 
     move-result-object v2
 
-    invoke-interface {v2}, Lcom/vk/webapp/o/c;->F()I
+    invoke-interface {v2}, Lcom/vk/webapp/o/VkUiFragmentDelegate;->F()I
 
     move-result v2
 
-    invoke-direct {v1, v2, p1, p2, p3}, Lb/h/c/s/a;-><init>(ILjava/lang/String;Ljava/lang/String;I)V
+    invoke-direct {v1, v2, p1, p2, p3}, Lcom/vk/api/orders/OrdersBuyItem;-><init>(ILjava/lang/String;Ljava/lang/String;I)V
 
     const/4 p3, 0x0
 
     const/4 v2, 0x1
 
     .line 64
-    invoke-static {v1, p3, v2, p3}, Lcom/vk/api/base/d;->d(Lcom/vk/api/base/d;Lcom/vk/api/base/e;ILjava/lang/Object;)Lc/a/m;
+    invoke-static {v1, p3, v2, p3}, Lcom/vk/api/base/ApiRequest;->d(Lcom/vk/api/base/ApiRequest;Lcom/vk/api/base/ApiThreadHolder;ILjava/lang/Object;)Lio/reactivex/Observable;
 
     move-result-object p3
 
@@ -607,29 +607,29 @@
 
     move-object v7, p6
 
-    invoke-direct/range {v1 .. v7}, Lcom/vk/webapp/fragments/VkHtmlGameFragment$e;-><init>(Lcom/vk/webapp/fragments/VkHtmlGameFragment;ILjava/lang/String;Ljava/lang/String;Lkotlin/jvm/b/b;Lkotlin/jvm/b/a;)V
+    invoke-direct/range {v1 .. v7}, Lcom/vk/webapp/fragments/VkHtmlGameFragment$e;-><init>(Lcom/vk/webapp/fragments/VkHtmlGameFragment;ILjava/lang/String;Ljava/lang/String;Lkotlin/jvm/b/Functions2;Lkotlin/jvm/b/Functions;)V
 
     .line 66
     new-instance p1, Lcom/vk/webapp/fragments/VkHtmlGameFragment$f;
 
-    invoke-direct {p1, p6}, Lcom/vk/webapp/fragments/VkHtmlGameFragment$f;-><init>(Lkotlin/jvm/b/a;)V
+    invoke-direct {p1, p6}, Lcom/vk/webapp/fragments/VkHtmlGameFragment$f;-><init>(Lkotlin/jvm/b/Functions;)V
 
     .line 67
-    invoke-virtual {p3, v8, p1}, Lc/a/m;->a(Lc/a/z/g;Lc/a/z/g;)Lio/reactivex/disposables/b;
+    invoke-virtual {p3, v8, p1}, Lio/reactivex/Observable;->a(Lio/reactivex/functions/Consumer;Lio/reactivex/functions/Consumer;)Lio/reactivex/disposables/Disposable;
 
     move-result-object p1
 
     .line 68
-    invoke-virtual {v0, p1}, Lio/reactivex/disposables/a;->b(Lio/reactivex/disposables/b;)Z
+    invoke-virtual {v0, p1}, Lio/reactivex/disposables/CompositeDisposable;->b(Lio/reactivex/disposables/Disposable;)Z
 
     return-void
 .end method
 
-.method public static final synthetic b(Lcom/vk/webapp/fragments/VkHtmlGameFragment;)Lcom/vk/webapp/bridges/c;
+.method public static final synthetic b(Lcom/vk/webapp/fragments/VkHtmlGameFragment;)Lcom/vk/webapp/bridges/VkHtmlGameBridge;
     .locals 0
 
     .line 1
-    invoke-direct {p0}, Lcom/vk/webapp/fragments/VkHtmlGameFragment;->M5()Lcom/vk/webapp/bridges/c;
+    invoke-direct {p0}, Lcom/vk/webapp/fragments/VkHtmlGameFragment;->M5()Lcom/vk/webapp/bridges/VkHtmlGameBridge;
 
     move-result-object p0
 
@@ -672,7 +672,7 @@
 
     const-string p2, "data.getParcelableArrayL\u2026ra<UserProfile>(\"result\")"
 
-    invoke-static {p1, p2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, p2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 2
     new-instance p2, Ljava/util/ArrayList;
@@ -717,19 +717,19 @@
 
     .line 6
     :cond_0
-    invoke-virtual {p0}, Lcom/vk/webapp/VkUiFragment;->c5()Lio/reactivex/disposables/a;
+    invoke-virtual {p0}, Lcom/vk/webapp/VkUiFragment;->c5()Lio/reactivex/disposables/CompositeDisposable;
 
     move-result-object p1
 
-    invoke-virtual {p0}, Lcom/vk/webapp/fragments/VkHtmlGameFragment;->a5()Lcom/vk/webapp/o/a;
+    invoke-virtual {p0}, Lcom/vk/webapp/fragments/VkHtmlGameFragment;->a5()Lcom/vk/webapp/o/VkHtmlGameFragmentDelegate;
 
     move-result-object v0
 
-    invoke-interface {v0}, Lcom/vk/webapp/o/c;->F()I
+    invoke-interface {v0}, Lcom/vk/webapp/o/VkUiFragmentDelegate;->F()I
 
     move-result v0
 
-    invoke-static {v0, p2}, Lcom/vk/api/apps/a0;->a(ILjava/util/ArrayList;)Lcom/vk/api/apps/a0;
+    invoke-static {v0, p2}, Lcom/vk/api/apps/AppsSendRequest;->a(ILjava/util/ArrayList;)Lcom/vk/api/apps/AppsSendRequest;
 
     move-result-object v0
 
@@ -738,7 +738,7 @@
     const/4 v2, 0x0
 
     .line 7
-    invoke-static {v0, v2, v1, v2}, Lcom/vk/api/base/d;->d(Lcom/vk/api/base/d;Lcom/vk/api/base/e;ILjava/lang/Object;)Lc/a/m;
+    invoke-static {v0, v2, v1, v2}, Lcom/vk/api/base/ApiRequest;->d(Lcom/vk/api/base/ApiRequest;Lcom/vk/api/base/ApiThreadHolder;ILjava/lang/Object;)Lio/reactivex/Observable;
 
     move-result-object v3
 
@@ -759,7 +759,7 @@
 
     const/4 v11, 0x0
 
-    invoke-static/range {v3 .. v11}, Lcom/vk/core/extensions/RxExtKt;->a(Lc/a/m;Landroid/content/Context;JIZZILjava/lang/Object;)Lc/a/m;
+    invoke-static/range {v3 .. v11}, Lcom/vk/core/extensions/RxExtKt;->a(Lio/reactivex/Observable;Landroid/content/Context;JIZZILjava/lang/Object;)Lio/reactivex/Observable;
 
     move-result-object v0
 
@@ -774,18 +774,18 @@
     invoke-direct {v2, p0, p2}, Lcom/vk/webapp/fragments/VkHtmlGameFragment$d;-><init>(Lcom/vk/webapp/fragments/VkHtmlGameFragment;Ljava/util/ArrayList;)V
 
     .line 11
-    invoke-virtual {v0, v1, v2}, Lc/a/m;->a(Lc/a/z/g;Lc/a/z/g;)Lio/reactivex/disposables/b;
+    invoke-virtual {v0, v1, v2}, Lio/reactivex/Observable;->a(Lio/reactivex/functions/Consumer;Lio/reactivex/functions/Consumer;)Lio/reactivex/disposables/Disposable;
 
     move-result-object p2
 
     .line 12
-    invoke-virtual {p1, p2}, Lio/reactivex/disposables/a;->b(Lio/reactivex/disposables/b;)Z
+    invoke-virtual {p1, p2}, Lio/reactivex/disposables/CompositeDisposable;->b(Lio/reactivex/disposables/Disposable;)Z
 
     goto :goto_1
 
     .line 13
     :cond_1
-    invoke-direct {p0}, Lcom/vk/webapp/fragments/VkHtmlGameFragment;->M5()Lcom/vk/webapp/bridges/c;
+    invoke-direct {p0}, Lcom/vk/webapp/fragments/VkHtmlGameFragment;->M5()Lcom/vk/webapp/bridges/VkHtmlGameBridge;
 
     move-result-object p1
 
@@ -803,7 +803,7 @@
 
     const-string v1, "VKWebAppShowInviteBoxFailed"
 
-    invoke-virtual {p1, p2, v1, v0}, Lcom/vk/webapp/bridges/a;->a(Lcom/vk/webapp/internal/data/JsApiMethodType;Ljava/lang/String;Lorg/json/JSONObject;)V
+    invoke-virtual {p1, p2, v1, v0}, Lcom/vk/webapp/bridges/AndroidBridge;->a(Lcom/vk/webapp/internal/data/JsApiMethodType;Ljava/lang/String;Lorg/json/JSONObject;)V
 
     :goto_1
     return-void
@@ -823,11 +823,11 @@
     move-result-object v0
 
     .line 3
-    invoke-virtual {p0}, Lcom/vk/webapp/fragments/VkHtmlGameFragment;->a5()Lcom/vk/webapp/o/a;
+    invoke-virtual {p0}, Lcom/vk/webapp/fragments/VkHtmlGameFragment;->a5()Lcom/vk/webapp/o/VkHtmlGameFragmentDelegate;
 
     move-result-object v1
 
-    invoke-interface {v1}, Lcom/vk/webapp/o/b;->l()Lcom/vk/dto/common/data/ApiApplication;
+    invoke-interface {v1}, Lcom/vk/webapp/o/VkUiConnectFragmentDelegate;->l()Lcom/vk/dto/common/data/ApiApplication;
 
     move-result-object v1
 
@@ -869,11 +869,11 @@
     .line 1
     sget-object v0, Lcom/vk/webapp/fragments/VkHtmlGameFragment;->T0:Lcom/vk/webapp/fragments/VkHtmlGameFragment$b;
 
-    invoke-virtual {p0}, Lcom/vk/webapp/fragments/VkHtmlGameFragment;->a5()Lcom/vk/webapp/o/a;
+    invoke-virtual {p0}, Lcom/vk/webapp/fragments/VkHtmlGameFragment;->a5()Lcom/vk/webapp/o/VkHtmlGameFragmentDelegate;
 
     move-result-object v1
 
-    invoke-interface {v1}, Lcom/vk/webapp/o/b;->l()Lcom/vk/dto/common/data/ApiApplication;
+    invoke-interface {v1}, Lcom/vk/webapp/o/VkUiConnectFragmentDelegate;->l()Lcom/vk/dto/common/data/ApiApplication;
 
     move-result-object v1
 
@@ -914,17 +914,17 @@
     .locals 3
 
     .line 1
-    new-instance v0, Lcom/vtosters/lite/fragments/w2/h$b;
+    new-instance v0, Lcom/vtosters/lite/fragments/w2/SendRequestToGameFragment$b;
 
-    invoke-virtual {p0}, Lcom/vk/webapp/fragments/VkHtmlGameFragment;->a5()Lcom/vk/webapp/o/a;
+    invoke-virtual {p0}, Lcom/vk/webapp/fragments/VkHtmlGameFragment;->a5()Lcom/vk/webapp/o/VkHtmlGameFragmentDelegate;
 
     move-result-object v1
 
-    invoke-interface {v1}, Lcom/vk/webapp/o/c;->F()I
+    invoke-interface {v1}, Lcom/vk/webapp/o/VkUiFragmentDelegate;->F()I
 
     move-result v1
 
-    invoke-direct {v0, v1}, Lcom/vtosters/lite/fragments/w2/h$b;-><init>(I)V
+    invoke-direct {v0, v1}, Lcom/vtosters/lite/fragments/w2/SendRequestToGameFragment$b;-><init>(I)V
 
     .line 2
     invoke-virtual {v0}, Lcom/vtosters/lite/fragments/friends/FriendsFragment$a;->i()Lcom/vtosters/lite/fragments/friends/FriendsFragment$a;
@@ -946,14 +946,14 @@
 
     const-string v2, "getString(R.string.games_invite_friends)"
 
-    invoke-static {v1, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {v0, v1}, Lcom/vtosters/lite/fragments/friends/FriendsFragment$a;->a(Ljava/lang/String;)Lcom/vtosters/lite/fragments/friends/FriendsFragment$a;
 
     const/16 v1, 0x259
 
     .line 6
-    invoke-virtual {v0, p0, v1}, Lcom/vk/navigation/o;->a(Lcom/vk/core/fragments/FragmentImpl;I)V
+    invoke-virtual {v0, p0, v1}, Lcom/vk/navigation/Navigator;->a(Lcom/vk/core/fragments/FragmentImpl;I)V
 
     return-void
 .end method
@@ -980,7 +980,7 @@
     move-object v0, v1
 
     :goto_0
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v0
 
@@ -988,11 +988,11 @@
 
     if-nez v0, :cond_5
 
-    invoke-virtual {p0}, Lcom/vk/webapp/fragments/VkHtmlGameFragment;->a5()Lcom/vk/webapp/o/a;
+    invoke-virtual {p0}, Lcom/vk/webapp/fragments/VkHtmlGameFragment;->a5()Lcom/vk/webapp/o/VkHtmlGameFragmentDelegate;
 
     move-result-object v0
 
-    invoke-interface {v0}, Lcom/vk/webapp/o/b;->isRedirect()Z
+    invoke-interface {v0}, Lcom/vk/webapp/o/VkUiConnectFragmentDelegate;->isRedirect()Z
 
     move-result v0
 
@@ -1034,13 +1034,13 @@
 
     const-string v4, "(this as java.lang.String).toLowerCase()"
 
-    invoke-static {v0, v4}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v4}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     if-eqz v0, :cond_3
 
-    sget-object v4, Lcom/vk/common/links/c;->p:Lcom/vk/common/links/c$a;
+    sget-object v4, Lcom/vk/common/links/LinkProcessor;->p:Lcom/vk/common/links/LinkProcessor$a;
 
-    invoke-virtual {v4}, Lcom/vk/common/links/c$a;->c()Lkotlin/text/Regex;
+    invoke-virtual {v4}, Lcom/vk/common/links/LinkProcessor$a;->c()Lkotlin/text/Regex;
 
     move-result-object v4
 
@@ -1068,46 +1068,46 @@
 
     .line 4
     :goto_2
-    invoke-virtual {p0}, Lcom/vk/webapp/fragments/VkHtmlGameFragment;->a5()Lcom/vk/webapp/o/a;
+    invoke-virtual {p0}, Lcom/vk/webapp/fragments/VkHtmlGameFragment;->a5()Lcom/vk/webapp/o/VkHtmlGameFragmentDelegate;
 
     move-result-object v4
 
-    invoke-interface {v4}, Lcom/vk/webapp/o/a;->r()Z
+    invoke-interface {v4}, Lcom/vk/webapp/o/VkHtmlGameFragmentDelegate;->r()Z
 
     move-result v4
 
     .line 5
-    invoke-virtual {p0}, Lcom/vk/webapp/fragments/VkHtmlGameFragment;->a5()Lcom/vk/webapp/o/a;
+    invoke-virtual {p0}, Lcom/vk/webapp/fragments/VkHtmlGameFragment;->a5()Lcom/vk/webapp/o/VkHtmlGameFragmentDelegate;
 
     move-result-object v5
 
-    invoke-interface {v5, v0}, Lcom/vk/webapp/o/a;->d(Z)V
+    invoke-interface {v5, v0}, Lcom/vk/webapp/o/VkHtmlGameFragmentDelegate;->d(Z)V
 
     if-nez v0, :cond_5
 
     if-nez v4, :cond_5
 
     .line 6
-    sget-object v0, Lcom/vk/common/links/c;->p:Lcom/vk/common/links/c$a;
+    sget-object v0, Lcom/vk/common/links/LinkProcessor;->p:Lcom/vk/common/links/LinkProcessor$a;
 
-    invoke-virtual {v0, v1}, Lcom/vk/common/links/c$a;->b(Landroid/net/Uri;)Z
+    invoke-virtual {v0, v1}, Lcom/vk/common/links/LinkProcessor$a;->b(Landroid/net/Uri;)Z
 
     move-result v0
 
     if-eqz v0, :cond_5
 
     .line 7
-    invoke-virtual {p0}, Ld/a/a/a/h;->getContext()Landroid/content/Context;
+    invoke-virtual {p0}, Lme/grishka/appkit/fragments/AppKitFragment;->getContext()Landroid/content/Context;
 
     move-result-object v5
 
     if-eqz v5, :cond_4
 
-    sget-object v4, Lcom/vk/common/links/c;->p:Lcom/vk/common/links/c$a;
+    sget-object v4, Lcom/vk/common/links/LinkProcessor;->p:Lcom/vk/common/links/LinkProcessor$a;
 
     const-string v0, "it"
 
-    invoke-static {v5, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v5, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     const/4 v7, 0x0
 
@@ -1117,7 +1117,7 @@
 
     move-object v6, p1
 
-    invoke-static/range {v4 .. v9}, Lcom/vk/common/links/c$a;->a(Lcom/vk/common/links/c$a;Landroid/content/Context;Ljava/lang/String;Landroid/os/Bundle;ILjava/lang/Object;)V
+    invoke-static/range {v4 .. v9}, Lcom/vk/common/links/LinkProcessor$a;->a(Lcom/vk/common/links/LinkProcessor$a;Landroid/content/Context;Ljava/lang/String;Landroid/os/Bundle;ILjava/lang/Object;)V
 
     :cond_4
     return v3
@@ -1136,7 +1136,7 @@
     move-result-object p2
 
     .line 8
-    invoke-virtual {p0}, Ld/a/a/a/h;->Q4()Landroidx/appcompat/widget/Toolbar;
+    invoke-virtual {p0}, Lme/grishka/appkit/fragments/AppKitFragment;->Q4()Landroidx/appcompat/widget/Toolbar;
 
     move-result-object p3
 
@@ -1146,11 +1146,11 @@
 
     .line 9
     :cond_0
-    invoke-virtual {p0}, Lcom/vk/webapp/fragments/VkHtmlGameFragment;->a5()Lcom/vk/webapp/o/a;
+    invoke-virtual {p0}, Lcom/vk/webapp/fragments/VkHtmlGameFragment;->a5()Lcom/vk/webapp/o/VkHtmlGameFragmentDelegate;
 
     move-result-object p3
 
-    invoke-interface {p3}, Lcom/vk/webapp/o/b;->l()Lcom/vk/dto/common/data/ApiApplication;
+    invoke-interface {p3}, Lcom/vk/webapp/o/VkUiConnectFragmentDelegate;->l()Lcom/vk/dto/common/data/ApiApplication;
 
     move-result-object p3
 
@@ -1194,23 +1194,23 @@
     const-string p3, "this"
 
     .line 15
-    invoke-static {p1, p3}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, p3}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     const p3, 0x7f0a04b4
 
     const/4 v1, 0x2
 
-    invoke-static {p1, p3, v2, v1, v2}, Lcom/vk/extensions/ViewExtKt;->a(Landroid/view/View;ILkotlin/jvm/b/b;ILjava/lang/Object;)Landroid/view/View;
+    invoke-static {p1, p3, v2, v1, v2}, Lcom/vk/extensions/ViewExtKt;->a(Landroid/view/View;ILkotlin/jvm/b/Functions2;ILjava/lang/Object;)Landroid/view/View;
 
     move-result-object p3
 
     check-cast p3, Landroid/widget/TextView;
 
-    invoke-virtual {p0}, Lcom/vk/webapp/fragments/VkHtmlGameFragment;->a5()Lcom/vk/webapp/o/a;
+    invoke-virtual {p0}, Lcom/vk/webapp/fragments/VkHtmlGameFragment;->a5()Lcom/vk/webapp/o/VkHtmlGameFragmentDelegate;
 
     move-result-object v3
 
-    invoke-interface {v3}, Lcom/vk/webapp/o/b;->l()Lcom/vk/dto/common/data/ApiApplication;
+    invoke-interface {v3}, Lcom/vk/webapp/o/VkUiConnectFragmentDelegate;->l()Lcom/vk/dto/common/data/ApiApplication;
 
     move-result-object v3
 
@@ -1221,7 +1221,7 @@
     const p3, 0x7f0a025c
 
     .line 16
-    invoke-static {p1, p3, v2, v1, v2}, Lcom/vk/extensions/ViewExtKt;->a(Landroid/view/View;ILkotlin/jvm/b/b;ILjava/lang/Object;)Landroid/view/View;
+    invoke-static {p1, p3, v2, v1, v2}, Lcom/vk/extensions/ViewExtKt;->a(Landroid/view/View;ILkotlin/jvm/b/Functions2;ILjava/lang/Object;)Landroid/view/View;
 
     move-result-object p3
 
@@ -1234,7 +1234,7 @@
     const p3, 0x7f0a083e
 
     .line 17
-    invoke-static {p1, p3, v2, v1, v2}, Lcom/vk/extensions/ViewExtKt;->a(Landroid/view/View;ILkotlin/jvm/b/b;ILjava/lang/Object;)Landroid/view/View;
+    invoke-static {p1, p3, v2, v1, v2}, Lcom/vk/extensions/ViewExtKt;->a(Landroid/view/View;ILkotlin/jvm/b/Functions2;ILjava/lang/Object;)Landroid/view/View;
 
     move-result-object p3
 
@@ -1276,28 +1276,28 @@
 
     .line 28
     :cond_0
-    invoke-virtual {p0}, Lcom/vk/webapp/VkUiFragment;->c5()Lio/reactivex/disposables/a;
+    invoke-virtual {p0}, Lcom/vk/webapp/VkUiFragment;->c5()Lio/reactivex/disposables/CompositeDisposable;
 
     move-result-object v0
 
-    new-instance v1, Lcom/vk/api/apps/a;
+    new-instance v1, Lcom/vk/api/apps/AppGetWithUser;
 
-    invoke-virtual {p0}, Lcom/vk/webapp/fragments/VkHtmlGameFragment;->a5()Lcom/vk/webapp/o/a;
+    invoke-virtual {p0}, Lcom/vk/webapp/fragments/VkHtmlGameFragment;->a5()Lcom/vk/webapp/o/VkHtmlGameFragmentDelegate;
 
     move-result-object v2
 
-    invoke-interface {v2}, Lcom/vk/webapp/o/c;->F()I
+    invoke-interface {v2}, Lcom/vk/webapp/o/VkUiFragmentDelegate;->F()I
 
     move-result v2
 
-    invoke-direct {v1, v2, p1}, Lcom/vk/api/apps/a;-><init>(II)V
+    invoke-direct {v1, v2, p1}, Lcom/vk/api/apps/AppGetWithUser;-><init>(II)V
 
     const/4 p1, 0x1
 
     const/4 v2, 0x0
 
     .line 29
-    invoke-static {v1, v2, p1, v2}, Lcom/vk/api/base/d;->d(Lcom/vk/api/base/d;Lcom/vk/api/base/e;ILjava/lang/Object;)Lc/a/m;
+    invoke-static {v1, v2, p1, v2}, Lcom/vk/api/base/ApiRequest;->d(Lcom/vk/api/base/ApiRequest;Lcom/vk/api/base/ApiThreadHolder;ILjava/lang/Object;)Lio/reactivex/Observable;
 
     move-result-object v3
 
@@ -1318,7 +1318,7 @@
 
     const/4 v11, 0x0
 
-    invoke-static/range {v3 .. v11}, Lcom/vk/core/extensions/RxExtKt;->a(Lc/a/m;Landroid/content/Context;JIZZILjava/lang/Object;)Lc/a/m;
+    invoke-static/range {v3 .. v11}, Lcom/vk/core/extensions/RxExtKt;->a(Lio/reactivex/Observable;Landroid/content/Context;JIZZILjava/lang/Object;)Lio/reactivex/Observable;
 
     move-result-object p1
 
@@ -1333,12 +1333,12 @@
     invoke-direct {p2, p0}, Lcom/vk/webapp/fragments/VkHtmlGameFragment$o;-><init>(Lcom/vk/webapp/fragments/VkHtmlGameFragment;)V
 
     .line 33
-    invoke-virtual {p1, v1, p2}, Lc/a/m;->a(Lc/a/z/g;Lc/a/z/g;)Lio/reactivex/disposables/b;
+    invoke-virtual {p1, v1, p2}, Lio/reactivex/Observable;->a(Lio/reactivex/functions/Consumer;Lio/reactivex/functions/Consumer;)Lio/reactivex/disposables/Disposable;
 
     move-result-object p1
 
     .line 34
-    invoke-virtual {v0, p1}, Lio/reactivex/disposables/a;->b(Lio/reactivex/disposables/b;)Z
+    invoke-virtual {v0, p1}, Lio/reactivex/disposables/CompositeDisposable;->b(Lio/reactivex/disposables/Disposable;)Z
 
     :goto_0
     return-void
@@ -1374,60 +1374,60 @@
     return-void
 .end method
 
-.method protected a(Lcom/vk/webapp/o/b;)V
+.method protected a(Lcom/vk/webapp/o/VkUiConnectFragmentDelegate;)V
     .locals 1
 
     .line 5
-    invoke-super {p0, p1}, Lcom/vk/webapp/VkUiConnectFragment;->a(Lcom/vk/webapp/o/b;)V
+    invoke-super {p0, p1}, Lcom/vk/webapp/VkUiConnectFragment;->a(Lcom/vk/webapp/o/VkUiConnectFragmentDelegate;)V
 
     .line 6
-    invoke-direct {p0}, Lcom/vk/webapp/fragments/VkHtmlGameFragment;->M5()Lcom/vk/webapp/bridges/c;
+    invoke-direct {p0}, Lcom/vk/webapp/fragments/VkHtmlGameFragment;->M5()Lcom/vk/webapp/bridges/VkHtmlGameBridge;
 
     move-result-object v0
 
-    check-cast p1, Lcom/vk/webapp/o/a;
+    check-cast p1, Lcom/vk/webapp/o/VkHtmlGameFragmentDelegate;
 
-    invoke-virtual {v0, p1}, Lcom/vk/webapp/bridges/c;->a(Lcom/vk/webapp/o/a;)V
+    invoke-virtual {v0, p1}, Lcom/vk/webapp/bridges/VkHtmlGameBridge;->a(Lcom/vk/webapp/o/VkHtmlGameFragmentDelegate;)V
 
     return-void
 .end method
 
-.method protected a5()Lcom/vk/webapp/o/a;
+.method protected a5()Lcom/vk/webapp/o/VkHtmlGameFragmentDelegate;
     .locals 1
 
     .line 3
-    iget-object v0, p0, Lcom/vk/webapp/fragments/VkHtmlGameFragment;->Q0:Lcom/vk/webapp/o/a;
+    iget-object v0, p0, Lcom/vk/webapp/fragments/VkHtmlGameFragment;->Q0:Lcom/vk/webapp/o/VkHtmlGameFragmentDelegate;
 
     return-object v0
 .end method
 
-.method public bridge synthetic a5()Lcom/vk/webapp/o/b;
+.method public bridge synthetic a5()Lcom/vk/webapp/o/VkUiConnectFragmentDelegate;
     .locals 1
 
     .line 1
-    invoke-virtual {p0}, Lcom/vk/webapp/fragments/VkHtmlGameFragment;->a5()Lcom/vk/webapp/o/a;
+    invoke-virtual {p0}, Lcom/vk/webapp/fragments/VkHtmlGameFragment;->a5()Lcom/vk/webapp/o/VkHtmlGameFragmentDelegate;
 
     move-result-object v0
 
     return-object v0
 .end method
 
-.method public bridge synthetic a5()Lcom/vk/webapp/o/c;
+.method public bridge synthetic a5()Lcom/vk/webapp/o/VkUiFragmentDelegate;
     .locals 1
 
     .line 2
-    invoke-virtual {p0}, Lcom/vk/webapp/fragments/VkHtmlGameFragment;->a5()Lcom/vk/webapp/o/a;
+    invoke-virtual {p0}, Lcom/vk/webapp/fragments/VkHtmlGameFragment;->a5()Lcom/vk/webapp/o/VkHtmlGameFragmentDelegate;
 
     move-result-object v0
 
     return-object v0
 .end method
 
-.method protected b(Landroid/content/Context;)Lcom/vk/webapp/r/a;
+.method protected b(Landroid/content/Context;)Lcom/vk/webapp/r/ILoader;
     .locals 7
 
     .line 2
-    new-instance v6, Lcom/vk/webapp/r/e;
+    new-instance v6, Lcom/vk/webapp/r/VkGamesLoader;
 
     const/4 v2, 0x0
 
@@ -1441,7 +1441,7 @@
 
     move-object v1, p1
 
-    invoke-direct/range {v0 .. v5}, Lcom/vk/webapp/r/e;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;IILkotlin/jvm/internal/i;)V
+    invoke-direct/range {v0 .. v5}, Lcom/vk/webapp/r/VkGamesLoader;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;IILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     return-object v6
 .end method
@@ -1454,7 +1454,7 @@
 
     invoke-direct {v0, p0, p1, p2}, Lcom/vk/webapp/fragments/VkHtmlGameFragment$showOrderBox$1;-><init>(Lcom/vk/webapp/fragments/VkHtmlGameFragment;Ljava/lang/String;Ljava/lang/String;)V
 
-    invoke-static {v0}, Lcom/vtosters/lite/f0;->c(Ljava/lang/Runnable;)V
+    invoke-static {v0}, Lcom/vtosters/lite/ViewUtils;->c(Ljava/lang/Runnable;)V
 
     return-void
 .end method
@@ -1479,11 +1479,11 @@
 
     move-result-object p1
 
-    invoke-static {p1}, Lcom/vk/core/util/e;->a(Landroid/app/Activity;)Lcom/vk/core/util/e;
+    invoke-static {p1}, Lcom/vk/core/util/AndroidBug5497Workaround;->a(Landroid/app/Activity;)Lcom/vk/core/util/AndroidBug5497Workaround;
 
     move-result-object p1
 
-    iput-object p1, p0, Lcom/vk/webapp/fragments/VkHtmlGameFragment;->R0:Lcom/vk/core/util/e;
+    iput-object p1, p0, Lcom/vk/webapp/fragments/VkHtmlGameFragment;->R0:Lcom/vk/core/util/AndroidBug5497Workaround;
 
     return-void
 .end method
@@ -1524,7 +1524,7 @@
     const-string v0, "activity"
 
     .line 3
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {p1}, Landroid/app/Activity;->getWindow()Landroid/view/Window;
 
@@ -1542,11 +1542,11 @@
     .locals 1
 
     .line 1
-    iget-object v0, p0, Lcom/vk/webapp/fragments/VkHtmlGameFragment;->R0:Lcom/vk/core/util/e;
+    iget-object v0, p0, Lcom/vk/webapp/fragments/VkHtmlGameFragment;->R0:Lcom/vk/core/util/AndroidBug5497Workaround;
 
     if-eqz v0, :cond_0
 
-    invoke-virtual {v0}, Lcom/vk/core/util/e;->a()V
+    invoke-virtual {v0}, Lcom/vk/core/util/AndroidBug5497Workaround;->a()V
 
     .line 2
     :cond_0
@@ -1559,7 +1559,7 @@
     .locals 1
 
     .line 1
-    invoke-static {p0}, Lcom/vk/navigation/b0/m$a;->a(Lcom/vk/navigation/b0/m;)Z
+    invoke-static {p0}, Lcom/vk/navigation/b0/FragmentWithoutStatusBar$a;->a(Lcom/vk/navigation/b0/FragmentWithoutStatusBar;)Z
 
     move-result v0
 
@@ -1570,66 +1570,66 @@
     .locals 1
 
     .line 2
-    invoke-virtual {p0}, Lcom/vk/webapp/fragments/VkHtmlGameFragment;->q5()Lcom/vk/webapp/bridges/c;
+    invoke-virtual {p0}, Lcom/vk/webapp/fragments/VkHtmlGameFragment;->q5()Lcom/vk/webapp/bridges/VkHtmlGameBridge;
 
     move-result-object v0
 
     return-object v0
 .end method
 
-.method public bridge synthetic q5()Lcom/vk/webapp/bridges/a;
+.method public bridge synthetic q5()Lcom/vk/webapp/bridges/AndroidBridge;
     .locals 1
 
     .line 1
-    invoke-virtual {p0}, Lcom/vk/webapp/fragments/VkHtmlGameFragment;->q5()Lcom/vk/webapp/bridges/c;
+    invoke-virtual {p0}, Lcom/vk/webapp/fragments/VkHtmlGameFragment;->q5()Lcom/vk/webapp/bridges/VkHtmlGameBridge;
 
     move-result-object v0
 
     return-object v0
 .end method
 
-.method public q5()Lcom/vk/webapp/bridges/c;
+.method public q5()Lcom/vk/webapp/bridges/VkHtmlGameBridge;
     .locals 2
 
     .line 3
-    new-instance v0, Lcom/vk/webapp/bridges/c;
+    new-instance v0, Lcom/vk/webapp/bridges/VkHtmlGameBridge;
 
-    new-instance v1, Lcom/vk/webapp/delegates/mock/a;
+    new-instance v1, Lcom/vk/webapp/delegates/mock/VkHtmlGameFragmentDelegateMock;
 
-    invoke-direct {v1}, Lcom/vk/webapp/delegates/mock/a;-><init>()V
+    invoke-direct {v1}, Lcom/vk/webapp/delegates/mock/VkHtmlGameFragmentDelegateMock;-><init>()V
 
-    invoke-direct {v0, p0, v1}, Lcom/vk/webapp/bridges/c;-><init>(Landroidx/fragment/app/Fragment;Lcom/vk/webapp/o/a;)V
+    invoke-direct {v0, p0, v1}, Lcom/vk/webapp/bridges/VkHtmlGameBridge;-><init>(Landroidx/fragment/app/Fragment;Lcom/vk/webapp/o/VkHtmlGameFragmentDelegate;)V
 
     return-object v0
 .end method
 
-.method public r5()Lcom/vk/webapp/o/a;
+.method public r5()Lcom/vk/webapp/o/VkHtmlGameFragmentDelegate;
     .locals 1
 
     .line 3
-    new-instance v0, Lcom/vk/webapp/delegates/impl/a;
+    new-instance v0, Lcom/vk/webapp/delegates/impl/VkHtmlGameFragmentDelegateImpl;
 
-    invoke-direct {v0, p0}, Lcom/vk/webapp/delegates/impl/a;-><init>(Lcom/vk/webapp/fragments/VkHtmlGameFragment;)V
+    invoke-direct {v0, p0}, Lcom/vk/webapp/delegates/impl/VkHtmlGameFragmentDelegateImpl;-><init>(Lcom/vk/webapp/fragments/VkHtmlGameFragment;)V
 
     return-object v0
 .end method
 
-.method public bridge synthetic r5()Lcom/vk/webapp/o/b;
+.method public bridge synthetic r5()Lcom/vk/webapp/o/VkUiConnectFragmentDelegate;
     .locals 1
 
     .line 1
-    invoke-virtual {p0}, Lcom/vk/webapp/fragments/VkHtmlGameFragment;->r5()Lcom/vk/webapp/o/a;
+    invoke-virtual {p0}, Lcom/vk/webapp/fragments/VkHtmlGameFragment;->r5()Lcom/vk/webapp/o/VkHtmlGameFragmentDelegate;
 
     move-result-object v0
 
     return-object v0
 .end method
 
-.method public bridge synthetic r5()Lcom/vk/webapp/o/c;
+.method public bridge synthetic r5()Lcom/vk/webapp/o/VkUiFragmentDelegate;
     .locals 1
 
     .line 2
-    invoke-virtual {p0}, Lcom/vk/webapp/fragments/VkHtmlGameFragment;->r5()Lcom/vk/webapp/o/a;
+    invoke-virtual {p0}, Lcom/vk/webapp/fragments/VkHtmlGameFragment;->r5()Lcom/vk/webapp/o/VkHtmlGameFragmentDelegate;
 
     move-result-object v0
 
@@ -1640,17 +1640,17 @@
     .locals 13
 
     .line 1
-    invoke-virtual {p0}, Lcom/vk/webapp/VkUiFragment;->c5()Lio/reactivex/disposables/a;
+    invoke-virtual {p0}, Lcom/vk/webapp/VkUiFragment;->c5()Lio/reactivex/disposables/CompositeDisposable;
 
     move-result-object v0
 
     new-instance v1, Lcom/vk/api/apps/AppsGetGameLeaderboard;
 
-    invoke-virtual {p0}, Lcom/vk/webapp/fragments/VkHtmlGameFragment;->a5()Lcom/vk/webapp/o/a;
+    invoke-virtual {p0}, Lcom/vk/webapp/fragments/VkHtmlGameFragment;->a5()Lcom/vk/webapp/o/VkHtmlGameFragmentDelegate;
 
     move-result-object v2
 
-    invoke-interface {v2}, Lcom/vk/webapp/o/c;->F()I
+    invoke-interface {v2}, Lcom/vk/webapp/o/VkUiFragmentDelegate;->F()I
 
     move-result v2
 
@@ -1661,7 +1661,7 @@
     const/4 v3, 0x1
 
     .line 2
-    invoke-static {v1, v2, v3, v2}, Lcom/vk/api/base/d;->d(Lcom/vk/api/base/d;Lcom/vk/api/base/e;ILjava/lang/Object;)Lc/a/m;
+    invoke-static {v1, v2, v3, v2}, Lcom/vk/api/base/ApiRequest;->d(Lcom/vk/api/base/ApiRequest;Lcom/vk/api/base/ApiThreadHolder;ILjava/lang/Object;)Lio/reactivex/Observable;
 
     move-result-object v4
 
@@ -1682,7 +1682,7 @@
 
     const/4 v12, 0x0
 
-    invoke-static/range {v4 .. v12}, Lcom/vk/core/extensions/RxExtKt;->a(Lc/a/m;Landroid/content/Context;JIZZILjava/lang/Object;)Lc/a/m;
+    invoke-static/range {v4 .. v12}, Lcom/vk/core/extensions/RxExtKt;->a(Lio/reactivex/Observable;Landroid/content/Context;JIZZILjava/lang/Object;)Lio/reactivex/Observable;
 
     move-result-object v1
 
@@ -1697,12 +1697,12 @@
     invoke-direct {p1, p0}, Lcom/vk/webapp/fragments/VkHtmlGameFragment$m;-><init>(Lcom/vk/webapp/fragments/VkHtmlGameFragment;)V
 
     .line 6
-    invoke-virtual {v1, v2, p1}, Lc/a/m;->a(Lc/a/z/g;Lc/a/z/g;)Lio/reactivex/disposables/b;
+    invoke-virtual {v1, v2, p1}, Lio/reactivex/Observable;->a(Lio/reactivex/functions/Consumer;Lio/reactivex/functions/Consumer;)Lio/reactivex/disposables/Disposable;
 
     move-result-object p1
 
     .line 7
-    invoke-virtual {v0, p1}, Lio/reactivex/disposables/a;->b(Lio/reactivex/disposables/b;)Z
+    invoke-virtual {v0, p1}, Lio/reactivex/disposables/CompositeDisposable;->b(Lio/reactivex/disposables/Disposable;)Z
 
     return-void
 .end method

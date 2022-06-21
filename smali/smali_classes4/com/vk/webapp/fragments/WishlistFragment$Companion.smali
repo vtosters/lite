@@ -24,7 +24,7 @@
     return-void
 .end method
 
-.method public synthetic constructor <init>(Lkotlin/jvm/internal/i;)V
+.method public synthetic constructor <init>(Lkotlin/jvm/internal/DefaultConstructorMarker;)V
     .locals 0
 
     .line 2
@@ -78,7 +78,7 @@
     move-result-object v0
 
     .line 6
-    invoke-static {}, Lcom/vk/core/util/m0;->a()Ljava/lang/String;
+    invoke-static {}, Lcom/vk/core/util/LangUtils;->a()Ljava/lang/String;
 
     move-result-object v1
 
@@ -110,14 +110,14 @@
     .line 8
     sget-object v1, Lcom/vk/webapp/fragments/WishlistFragment$Companion$getUrl$1;->a:Lcom/vk/webapp/fragments/WishlistFragment$Companion$getUrl$1;
 
-    invoke-static {v0, p1, v1}, Lcom/vk/webapp/fragments/m;->a(Ljava/lang/Object;Ljava/lang/Object;Lkotlin/jvm/b/c;)Ljava/lang/Object;
+    invoke-static {v0, p1, v1}, Lcom/vk/webapp/fragments/WishlistFragment1;->a(Ljava/lang/Object;Ljava/lang/Object;Lkotlin/jvm/b/Functions1;)Ljava/lang/Object;
 
     move-result-object p1
 
     .line 9
     sget-object v0, Lcom/vk/webapp/fragments/WishlistFragment$Companion$getUrl$2;->a:Lcom/vk/webapp/fragments/WishlistFragment$Companion$getUrl$2;
 
-    invoke-static {p1, p2, v0}, Lcom/vk/webapp/fragments/m;->a(Ljava/lang/Object;Ljava/lang/Object;Lkotlin/jvm/b/c;)Ljava/lang/Object;
+    invoke-static {p1, p2, v0}, Lcom/vk/webapp/fragments/WishlistFragment1;->a(Ljava/lang/Object;Ljava/lang/Object;Lkotlin/jvm/b/Functions1;)Ljava/lang/Object;
 
     move-result-object p1
 
@@ -130,7 +130,7 @@
 
     const-string p2, "Uri.Builder()\n          \u2026              .toString()"
 
-    invoke-static {p1, p2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, p2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     return-object p1
 .end method

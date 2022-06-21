@@ -40,9 +40,9 @@
     .line 1
     iget-object v0, p0, Lcom/vk/utils/AppUtils$c$a;->a:Lcom/vk/utils/AppUtils$c;
 
-    iget-object v0, v0, Lcom/vk/utils/AppUtils$c;->c:Lcom/vk/log/d/a;
+    iget-object v0, v0, Lcom/vk/utils/AppUtils$c;->c:Lcom/vk/log/d/Archive;
 
-    invoke-virtual {v0}, Lcom/vk/log/d/a;->a()V
+    invoke-virtual {v0}, Lcom/vk/log/d/Archive;->a()V
 
     return-void
 .end method

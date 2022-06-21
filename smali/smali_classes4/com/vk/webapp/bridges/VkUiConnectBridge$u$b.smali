@@ -3,7 +3,7 @@
 .source "VkUiConnectBridge.kt"
 
 # interfaces
-.implements Lc/a/z/g;
+.implements Lio/reactivex/functions/Consumer;
 
 
 # annotations
@@ -22,7 +22,7 @@
         "Ljava/lang/Object;",
         ">",
         "Ljava/lang/Object;",
-        "Lc/a/z/g<",
+        "Lio/reactivex/functions/Consumer<",
         "Ljava/lang/Throwable;",
         ">;"
     }
@@ -95,11 +95,11 @@
 
     iget-object v2, p1, Lcom/vk/webapp/bridges/VkUiConnectBridge$u;->g:Ljava/util/List;
 
-    iget-object v3, p1, Lcom/vk/webapp/bridges/VkUiConnectBridge$u;->b:Lcom/vk/webapp/internal/data/c;
+    iget-object v3, p1, Lcom/vk/webapp/bridges/VkUiConnectBridge$u;->b:Lcom/vk/webapp/internal/data/JsApiMethodType1;
 
     iget-object p1, p1, Lcom/vk/webapp/bridges/VkUiConnectBridge$u;->f:Ljava/lang/Integer;
 
-    invoke-static {v0, v1, v2, v3, p1}, Lcom/vk/webapp/bridges/VkUiConnectBridge;->b(Lcom/vk/webapp/bridges/VkUiConnectBridge;ILjava/util/List;Lcom/vk/webapp/internal/data/c;Ljava/lang/Integer;)V
+    invoke-static {v0, v1, v2, v3, p1}, Lcom/vk/webapp/bridges/VkUiConnectBridge;->b(Lcom/vk/webapp/bridges/VkUiConnectBridge;ILjava/util/List;Lcom/vk/webapp/internal/data/JsApiMethodType1;Ljava/lang/Integer;)V
 
     goto :goto_5
 
@@ -204,13 +204,13 @@
 
     iget-object v2, p0, Lcom/vk/webapp/bridges/VkUiConnectBridge$u$b;->b:Lcom/vk/webapp/internal/data/JsApiMethodType;
 
-    iget-object v0, v0, Lcom/vk/webapp/bridges/VkUiConnectBridge$u;->b:Lcom/vk/webapp/internal/data/c;
+    iget-object v0, v0, Lcom/vk/webapp/bridges/VkUiConnectBridge$u;->b:Lcom/vk/webapp/internal/data/JsApiMethodType1;
 
-    invoke-virtual {v0}, Lcom/vk/webapp/internal/data/c;->a()Ljava/lang/String;
+    invoke-virtual {v0}, Lcom/vk/webapp/internal/data/JsApiMethodType1;->a()Ljava/lang/String;
 
     move-result-object v0
 
-    invoke-virtual {v1, v2, v0, p1}, Lcom/vk/webapp/bridges/a;->a(Lcom/vk/webapp/internal/data/JsApiMethodType;Ljava/lang/String;Lorg/json/JSONObject;)V
+    invoke-virtual {v1, v2, v0, p1}, Lcom/vk/webapp/bridges/AndroidBridge;->a(Lcom/vk/webapp/internal/data/JsApiMethodType;Ljava/lang/String;Lorg/json/JSONObject;)V
 
     :goto_5
     return-void

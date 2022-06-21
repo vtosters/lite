@@ -24,7 +24,7 @@
     return-void
 .end method
 
-.method public synthetic constructor <init>(Lkotlin/jvm/internal/i;)V
+.method public synthetic constructor <init>(Lkotlin/jvm/internal/DefaultConstructorMarker;)V
     .locals 0
 
     .line 2
@@ -70,7 +70,7 @@
     :goto_0
     new-instance v2, Lcom/vk/auth/api/models/ConfirmPhoneResponse;
 
-    invoke-static {p2, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p2, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     sget-object v0, Lcom/vk/auth/api/models/ConfirmPhoneResponse$PasswordScreen;->Companion:Lcom/vk/auth/api/models/ConfirmPhoneResponse$PasswordScreen$a;
 

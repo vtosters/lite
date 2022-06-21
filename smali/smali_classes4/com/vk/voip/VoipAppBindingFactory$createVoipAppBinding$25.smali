@@ -3,12 +3,12 @@
 .source "VoipAppBindingFactory.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/a;
+.implements Lkotlin/jvm/b/Functions;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/voip/VoipAppBindingFactory;->a()Lcom/vk/voip/k;
+    value = Lcom/vk/voip/VoipAppBindingFactory;->a()Lcom/vk/voip/VoipAppBinding;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -19,7 +19,7 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/a<",
+        "Lkotlin/jvm/b/Functions<",
         "Ljava/lang/String;",
         ">;"
     }
@@ -70,12 +70,12 @@
     .locals 1
 
     .line 2
-    sget-object v0, Lcom/vk/core/util/i;->a:Landroid/content/Context;
+    sget-object v0, Lcom/vk/core/util/AppContextHolder;->a:Landroid/content/Context;
 
-    invoke-static {v0}, Lcom/vk/media/camera/j;->a(Landroid/content/Context;)V
+    invoke-static {v0}, Lcom/vk/media/camera/CameraUtils;->a(Landroid/content/Context;)V
 
     .line 3
-    invoke-static {}, Lcom/vk/media/camera/l/a;->e()Ljava/lang/String;
+    invoke-static {}, Lcom/vk/media/camera/l/CameraMasksUtils;->e()Ljava/lang/String;
 
     move-result-object v0
 

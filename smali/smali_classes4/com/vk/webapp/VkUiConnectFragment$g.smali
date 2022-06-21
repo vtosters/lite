@@ -3,7 +3,7 @@
 .source "VkUiConnectFragment.kt"
 
 # interfaces
-.implements Lcom/vk/core/dialogs/bottomsheet/h$d;
+.implements Lcom/vk/core/dialogs/bottomsheet/ModalDialogInterface$d;
 
 
 # annotations

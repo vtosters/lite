@@ -104,7 +104,7 @@
 
     move-result-object v0
 
-    instance-of v1, v0, Lcom/vk/navigation/n;
+    instance-of v1, v0, Lcom/vk/navigation/NavigationDelegateProvider;
 
     const/4 v2, 0x0
 
@@ -113,11 +113,11 @@
     move-object v0, v2
 
     :cond_0
-    check-cast v0, Lcom/vk/navigation/n;
+    check-cast v0, Lcom/vk/navigation/NavigationDelegateProvider;
 
     if-eqz v0, :cond_1
 
-    invoke-interface {v0}, Lcom/vk/navigation/n;->E0()Lcom/vk/navigation/NavigationDelegate;
+    invoke-interface {v0}, Lcom/vk/navigation/NavigationDelegateProvider;->E0()Lcom/vk/navigation/NavigationDelegate;
 
     move-result-object v0
 
@@ -147,7 +147,7 @@
     :cond_2
     const-string p1, "parentSectionProvider"
 
-    invoke-static {p1}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {p1}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v2
 .end method
@@ -211,7 +211,7 @@
     const-string v0, "app_use_time"
 
     .line 2
-    invoke-static {v0}, Lcom/vtosters/lite/data/n;->c(Ljava/lang/String;)Lcom/vtosters/lite/data/n$l;
+    invoke-static {v0}, Lcom/vtosters/lite/data/Analytics;->c(Ljava/lang/String;)Lcom/vtosters/lite/data/Analytics$l;
 
     move-result-object v0
 
@@ -220,10 +220,10 @@
 
     const-string v2, "times"
 
-    invoke-virtual {v0, v2, v1}, Lcom/vtosters/lite/data/n$l;->a(Ljava/lang/String;Ljava/lang/Object;)Lcom/vtosters/lite/data/n$l;
+    invoke-virtual {v0, v2, v1}, Lcom/vtosters/lite/data/Analytics$l;->a(Ljava/lang/String;Ljava/lang/Object;)Lcom/vtosters/lite/data/Analytics$l;
 
     .line 4
-    invoke-virtual {v0}, Lcom/vtosters/lite/data/n$l;->b()Lcom/vtosters/lite/data/n$l;
+    invoke-virtual {v0}, Lcom/vtosters/lite/data/Analytics$l;->b()Lcom/vtosters/lite/data/Analytics$l;
 
     .line 5
     new-instance v0, Lorg/json/JSONArray;
@@ -362,7 +362,7 @@
     goto :goto_0
 
     :cond_1
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     throw v1
 
@@ -385,7 +385,7 @@
 
     .line 10
     :cond_4
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     throw v1
 .end method
@@ -429,7 +429,7 @@
 
     const-string v2, "it"
 
-    invoke-static {v0, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {v0}, Ljava/lang/Long;->longValue()J
 
@@ -570,7 +570,7 @@
 
     const-string v4, "it"
 
-    invoke-static {v0, v4}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v4}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {v0}, Ljava/lang/Long;->longValue()J
 

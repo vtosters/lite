@@ -3,7 +3,7 @@
 .source "StickersKeyboardAdapter.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/b;
+.implements Lkotlin/jvm/b/Functions2;
 
 
 # annotations
@@ -19,8 +19,8 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/b<",
-        "Lcom/vk/stickers/e0/a;",
+        "Lkotlin/jvm/b/Functions2<",
+        "Lcom/vk/stickers/e0/StickerBaseRecyclerItem;",
         "Ljava/lang/Boolean;",
         ">;"
     }
@@ -46,19 +46,19 @@
 
 
 # virtual methods
-.method public final a(Lcom/vk/stickers/e0/a;)Z
+.method public final a(Lcom/vk/stickers/e0/StickerBaseRecyclerItem;)Z
     .locals 2
 
     .line 1
-    instance-of v0, p1, Lcom/vk/stickers/e0/c;
+    instance-of v0, p1, Lcom/vk/stickers/e0/StickerHeaderRecyclerItem;
 
     if-eqz v0, :cond_0
 
     move-object v0, p1
 
-    check-cast v0, Lcom/vk/stickers/e0/c;
+    check-cast v0, Lcom/vk/stickers/e0/StickerHeaderRecyclerItem;
 
-    invoke-virtual {v0}, Lcom/vk/stickers/e0/c;->g()I
+    invoke-virtual {v0}, Lcom/vk/stickers/e0/StickerHeaderRecyclerItem;->g()I
 
     move-result v0
 
@@ -68,13 +68,13 @@
 
     .line 2
     :cond_0
-    instance-of v0, p1, Lcom/vk/stickers/e0/b;
+    instance-of v0, p1, Lcom/vk/stickers/e0/StickerBuyRecyclerItem;
 
     if-eqz v0, :cond_2
 
-    check-cast p1, Lcom/vk/stickers/e0/b;
+    check-cast p1, Lcom/vk/stickers/e0/StickerBuyRecyclerItem;
 
-    invoke-virtual {p1}, Lcom/vk/stickers/e0/b;->e()Lcom/vk/dto/stickers/StickerStockItem;
+    invoke-virtual {p1}, Lcom/vk/stickers/e0/StickerBuyRecyclerItem;->e()Lcom/vk/dto/stickers/StickerStockItem;
 
     move-result-object p1
 
@@ -102,9 +102,9 @@
     .locals 0
 
     .line 1
-    check-cast p1, Lcom/vk/stickers/e0/a;
+    check-cast p1, Lcom/vk/stickers/e0/StickerBaseRecyclerItem;
 
-    invoke-virtual {p0, p1}, Lcom/vk/stickers/StickersKeyboardAdapter$getStickerPackPosition$1;->a(Lcom/vk/stickers/e0/a;)Z
+    invoke-virtual {p0, p1}, Lcom/vk/stickers/StickersKeyboardAdapter$getStickerPackPosition$1;->a(Lcom/vk/stickers/e0/StickerBaseRecyclerItem;)Z
 
     move-result p1
 

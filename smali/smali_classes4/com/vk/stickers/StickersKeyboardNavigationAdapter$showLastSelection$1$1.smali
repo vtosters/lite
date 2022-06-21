@@ -3,7 +3,7 @@
 .source "StickersKeyboardNavigationAdapter.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/b;
+.implements Lkotlin/jvm/b/Functions2;
 
 
 # annotations
@@ -19,9 +19,9 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/b<",
-        "Lcom/vk/stickers/e0/d;",
-        "Lcom/vk/stickers/e0/d;",
+        "Lkotlin/jvm/b/Functions2<",
+        "Lcom/vk/stickers/e0/StickerNavigationRecyclerItem;",
+        "Lcom/vk/stickers/e0/StickerNavigationRecyclerItem;",
         ">;"
     }
 .end annotation
@@ -56,7 +56,7 @@
 
 
 # virtual methods
-.method public final a(Lcom/vk/stickers/e0/d;)Lcom/vk/stickers/e0/d;
+.method public final a(Lcom/vk/stickers/e0/StickerNavigationRecyclerItem;)Lcom/vk/stickers/e0/StickerNavigationRecyclerItem;
     .locals 7
 
     const/4 v1, 0x0
@@ -74,7 +74,7 @@
     move-object v0, p1
 
     .line 1
-    invoke-static/range {v0 .. v6}, Lcom/vk/stickers/e0/d;->a(Lcom/vk/stickers/e0/d;Ljava/lang/String;ILjava/lang/String;ZILjava/lang/Object;)Lcom/vk/stickers/e0/d;
+    invoke-static/range {v0 .. v6}, Lcom/vk/stickers/e0/StickerNavigationRecyclerItem;->a(Lcom/vk/stickers/e0/StickerNavigationRecyclerItem;Ljava/lang/String;ILjava/lang/String;ZILjava/lang/Object;)Lcom/vk/stickers/e0/StickerNavigationRecyclerItem;
 
     move-result-object p1
 
@@ -85,9 +85,9 @@
     .locals 0
 
     .line 1
-    check-cast p1, Lcom/vk/stickers/e0/d;
+    check-cast p1, Lcom/vk/stickers/e0/StickerNavigationRecyclerItem;
 
-    invoke-virtual {p0, p1}, Lcom/vk/stickers/StickersKeyboardNavigationAdapter$showLastSelection$1$1;->a(Lcom/vk/stickers/e0/d;)Lcom/vk/stickers/e0/d;
+    invoke-virtual {p0, p1}, Lcom/vk/stickers/StickersKeyboardNavigationAdapter$showLastSelection$1$1;->a(Lcom/vk/stickers/e0/StickerNavigationRecyclerItem;)Lcom/vk/stickers/e0/StickerNavigationRecyclerItem;
 
     move-result-object p1
 

@@ -3,12 +3,12 @@
 .source "MusicSectionsContainer.kt"
 
 # interfaces
-.implements Lcom/vk/music/sections/f$a;
+.implements Lcom/vk/music/sections/MusicSectionsModel$a;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/music/sections/MusicSectionsContainer;-><init>(Landroid/content/Context;Lcom/vk/music/sections/f;ZZ)V
+    value = Lcom/vk/music/sections/MusicSectionsContainer;-><init>(Landroid/content/Context;Lcom/vk/music/sections/MusicSectionsModel;ZZ)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -44,7 +44,7 @@
     .locals 0
 
     .line 2
-    invoke-static {p0}, Lcom/vk/music/sections/f$a$a;->a(Lcom/vk/music/sections/f$a;)V
+    invoke-static {p0}, Lcom/vk/music/sections/MusicSectionsModel$a$a;->a(Lcom/vk/music/sections/MusicSectionsModel$a;)V
 
     return-void
 .end method
@@ -53,12 +53,12 @@
     .locals 0
 
     .line 1
-    invoke-static {p0, p1, p2}, Lcom/vk/music/sections/f$a$a;->a(Lcom/vk/music/sections/f$a;Lcom/vk/dto/music/Section;Ljava/lang/Object;)V
+    invoke-static {p0, p1, p2}, Lcom/vk/music/sections/MusicSectionsModel$a$a;->a(Lcom/vk/music/sections/MusicSectionsModel$a;Lcom/vk/dto/music/Section;Ljava/lang/Object;)V
 
     return-void
 .end method
 
-.method public a(Lcom/vk/music/sections/f;)V
+.method public a(Lcom/vk/music/sections/MusicSectionsModel;)V
     .locals 2
 
     .line 3
@@ -73,7 +73,7 @@
 
     move-result-object v0
 
-    invoke-interface {p1}, Lcom/vk/music/sections/f;->e0()Ljava/util/ArrayList;
+    invoke-interface {p1}, Lcom/vk/music/sections/MusicSectionsModel;->e0()Ljava/util/ArrayList;
 
     move-result-object v1
 
@@ -82,15 +82,15 @@
     .line 5
     iget-object v0, p0, Lcom/vk/music/sections/MusicSectionsContainer$g;->a:Lcom/vk/music/sections/MusicSectionsContainer;
 
-    invoke-static {v0}, Lcom/vk/music/sections/MusicSectionsContainer;->c(Lcom/vk/music/sections/MusicSectionsContainer;)Lcom/vk/music/view/v/f;
+    invoke-static {v0}, Lcom/vk/music/sections/MusicSectionsContainer;->c(Lcom/vk/music/sections/MusicSectionsContainer;)Lcom/vk/music/view/v/ViewAdapter;
 
     move-result-object v0
 
-    invoke-interface {p1}, Lcom/vk/music/sections/f;->m()Z
+    invoke-interface {p1}, Lcom/vk/music/sections/MusicSectionsModel;->m()Z
 
     move-result p1
 
-    invoke-virtual {v0, p1}, Lcom/vk/music/view/v/f;->b(Z)V
+    invoke-virtual {v0, p1}, Lcom/vk/music/view/v/ViewAdapter;->b(Z)V
 
     .line 6
     iget-object p1, p0, Lcom/vk/music/sections/MusicSectionsContainer$g;->a:Lcom/vk/music/sections/MusicSectionsContainer;
@@ -100,7 +100,7 @@
     return-void
 .end method
 
-.method public a(Lcom/vk/music/sections/f;Lcom/vk/api/sdk/exceptions/VKApiExecutionException;)V
+.method public a(Lcom/vk/music/sections/MusicSectionsModel;Lcom/vk/api/sdk/exceptions/VKApiExecutionException;)V
     .locals 2
 
     .line 7
@@ -129,7 +129,7 @@
 
     .line 9
     :cond_0
-    invoke-interface {p1}, Lcom/vk/music/sections/f;->e0()Ljava/util/ArrayList;
+    invoke-interface {p1}, Lcom/vk/music/sections/MusicSectionsModel;->e0()Ljava/util/ArrayList;
 
     move-result-object p1
 
@@ -138,11 +138,11 @@
     .line 10
     iget-object p1, p0, Lcom/vk/music/sections/MusicSectionsContainer$g;->a:Lcom/vk/music/sections/MusicSectionsContainer;
 
-    invoke-static {p1}, Lcom/vk/music/sections/MusicSectionsContainer;->b(Lcom/vk/music/sections/MusicSectionsContainer;)Lcom/vtosters/lite/ui/v;
+    invoke-static {p1}, Lcom/vk/music/sections/MusicSectionsContainer;->b(Lcom/vk/music/sections/MusicSectionsContainer;)Lcom/vtosters/lite/ui/MusicErrorViewHelper;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/vtosters/lite/ui/v;->a()Landroid/view/View;
+    invoke-virtual {v0}, Lcom/vtosters/lite/ui/MusicErrorViewHelper;->a()Landroid/view/View;
 
     move-result-object v0
 
@@ -155,17 +155,17 @@
     .line 11
     iget-object p1, p0, Lcom/vk/music/sections/MusicSectionsContainer$g;->a:Lcom/vk/music/sections/MusicSectionsContainer;
 
-    invoke-static {p1}, Lcom/vk/music/sections/MusicSectionsContainer;->b(Lcom/vk/music/sections/MusicSectionsContainer;)Lcom/vtosters/lite/ui/v;
+    invoke-static {p1}, Lcom/vk/music/sections/MusicSectionsContainer;->b(Lcom/vk/music/sections/MusicSectionsContainer;)Lcom/vtosters/lite/ui/MusicErrorViewHelper;
 
     move-result-object p1
 
-    invoke-virtual {p1, p2}, Lcom/vtosters/lite/ui/v;->a(Lcom/vk/api/sdk/exceptions/VKApiExecutionException;)V
+    invoke-virtual {p1, p2}, Lcom/vtosters/lite/ui/MusicErrorViewHelper;->a(Lcom/vk/api/sdk/exceptions/VKApiExecutionException;)V
 
     :cond_1
     return-void
 .end method
 
-.method public b(Lcom/vk/music/sections/f;)V
+.method public b(Lcom/vk/music/sections/MusicSectionsModel;)V
     .locals 2
 
     .line 1
@@ -175,7 +175,7 @@
 
     move-result-object v0
 
-    invoke-interface {p1}, Lcom/vk/music/sections/f;->e0()Ljava/util/ArrayList;
+    invoke-interface {p1}, Lcom/vk/music/sections/MusicSectionsModel;->e0()Ljava/util/ArrayList;
 
     move-result-object v1
 
@@ -184,20 +184,20 @@
     .line 2
     iget-object v0, p0, Lcom/vk/music/sections/MusicSectionsContainer$g;->a:Lcom/vk/music/sections/MusicSectionsContainer;
 
-    invoke-static {v0}, Lcom/vk/music/sections/MusicSectionsContainer;->c(Lcom/vk/music/sections/MusicSectionsContainer;)Lcom/vk/music/view/v/f;
+    invoke-static {v0}, Lcom/vk/music/sections/MusicSectionsContainer;->c(Lcom/vk/music/sections/MusicSectionsContainer;)Lcom/vk/music/view/v/ViewAdapter;
 
     move-result-object v0
 
-    invoke-interface {p1}, Lcom/vk/music/sections/f;->m()Z
+    invoke-interface {p1}, Lcom/vk/music/sections/MusicSectionsModel;->m()Z
 
     move-result p1
 
-    invoke-virtual {v0, p1}, Lcom/vk/music/view/v/f;->b(Z)V
+    invoke-virtual {v0, p1}, Lcom/vk/music/view/v/ViewAdapter;->b(Z)V
 
     return-void
 .end method
 
-.method public b(Lcom/vk/music/sections/f;Lcom/vk/api/sdk/exceptions/VKApiExecutionException;)V
+.method public b(Lcom/vk/music/sections/MusicSectionsModel;Lcom/vk/api/sdk/exceptions/VKApiExecutionException;)V
     .locals 0
 
     return-void

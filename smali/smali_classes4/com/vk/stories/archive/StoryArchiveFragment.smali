@@ -1,11 +1,11 @@
 .class public final Lcom/vk/stories/archive/StoryArchiveFragment;
-.super Lcom/vk/core/fragments/c;
+.super Lcom/vk/core/fragments/BaseMvpFragment;
 .source "StoryArchiveFragment.kt"
 
 # interfaces
-.implements Lcom/vk/stories/archive/b;
-.implements Lcom/vk/core/ui/themes/f;
-.implements Lcom/vk/navigation/b0/f;
+.implements Lcom/vk/stories/archive/StoryArchiveContract1;
+.implements Lcom/vk/core/ui/themes/Themable;
+.implements Lcom/vk/navigation/b0/FragmentWithCustomOrientation;
 
 
 # annotations
@@ -18,12 +18,12 @@
 
 .annotation system Ldalvik/annotation/Signature;
     value = {
-        "Lcom/vk/core/fragments/c<",
-        "Lcom/vk/stories/archive/a;",
+        "Lcom/vk/core/fragments/BaseMvpFragment<",
+        "Lcom/vk/stories/archive/StoryArchiveContract;",
         ">;",
-        "Lcom/vk/stories/archive/b;",
-        "Lcom/vk/core/ui/themes/f;",
-        "Lcom/vk/navigation/b0/f;"
+        "Lcom/vk/stories/archive/StoryArchiveContract1;",
+        "Lcom/vk/core/ui/themes/Themable;",
+        "Lcom/vk/navigation/b0/FragmentWithCustomOrientation;"
     }
 .end annotation
 
@@ -45,7 +45,7 @@
 
 .field private L:Landroid/os/Handler;
 
-.field private M:Lcom/vk/stories/archive/list/a;
+.field private M:Lcom/vk/stories/archive/list/StoryArchiveAdapter;
 
 .field private final N:Lcom/vk/stories/archive/StoryArchiveFragment$j;
 
@@ -58,7 +58,7 @@
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, v1}, Lcom/vk/stories/archive/StoryArchiveFragment$b;-><init>(Lkotlin/jvm/internal/i;)V
+    invoke-direct {v0, v1}, Lcom/vk/stories/archive/StoryArchiveFragment$b;-><init>(Lkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     const/4 v0, 0x3
 
@@ -76,7 +76,7 @@
     .locals 2
 
     .line 1
-    invoke-direct {p0}, Lcom/vk/core/fragments/c;-><init>()V
+    invoke-direct {p0}, Lcom/vk/core/fragments/BaseMvpFragment;-><init>()V
 
     .line 2
     new-instance v0, Landroid/os/Handler;
@@ -110,24 +110,24 @@
     if-eqz v0, :cond_0
 
     .line 2
-    new-instance v0, Lcom/vk/cameraui/builder/a;
+    new-instance v0, Lcom/vk/cameraui/builder/CameraBuilder;
 
     sget-object v1, Lcom/vk/stat/scheme/SchemeStat$EventScreen;->STORY_ARCHIVE:Lcom/vk/stat/scheme/SchemeStat$EventScreen;
 
-    invoke-static {v1}, Lcom/vk/stat/scheme/f;->a(Lcom/vk/stat/scheme/SchemeStat$EventScreen;)Ljava/lang/String;
+    invoke-static {v1}, Lcom/vk/stat/scheme/SchemeStatEx;->a(Lcom/vk/stat/scheme/SchemeStat$EventScreen;)Ljava/lang/String;
 
     move-result-object v1
 
-    invoke-direct {v0, v1, p1}, Lcom/vk/cameraui/builder/a;-><init>(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-direct {v0, v1, p1}, Lcom/vk/cameraui/builder/CameraBuilder;-><init>(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 3
-    invoke-static {p0}, Lcom/vk/navigation/b;->a(Lcom/vk/core/fragments/FragmentImpl;)Lcom/vk/navigation/a;
+    invoke-static {p0}, Lcom/vk/navigation/ActivityLauncher1;->a(Lcom/vk/core/fragments/FragmentImpl;)Lcom/vk/navigation/ActivityLauncher;
 
     move-result-object p1
 
     const/16 v1, 0xe4
 
-    invoke-virtual {v0, p1, v1}, Lcom/vk/cameraui/builder/a;->a(Lcom/vk/navigation/a;I)V
+    invoke-virtual {v0, p1, v1}, Lcom/vk/cameraui/builder/CameraBuilder;->a(Lcom/vk/navigation/ActivityLauncher;I)V
 
     :cond_0
     return-void
@@ -166,7 +166,7 @@
     move-result-object v0
 
     .line 6
-    sget-object v1, Lcom/vk/core/util/h;->f:Landroidx/interpolator/view/animation/LinearOutSlowInInterpolator;
+    sget-object v1, Lcom/vk/core/util/AnimationUtils;->f:Landroidx/interpolator/view/animation/LinearOutSlowInInterpolator;
 
     invoke-virtual {v0, v1}, Landroid/view/ViewPropertyAnimator;->setInterpolator(Landroid/animation/TimeInterpolator;)Landroid/view/ViewPropertyAnimator;
 
@@ -190,11 +190,11 @@
     return-void
 .end method
 
-.method public static final synthetic a(Lcom/vk/stories/archive/StoryArchiveFragment;)Lcom/vk/stories/archive/list/a;
+.method public static final synthetic a(Lcom/vk/stories/archive/StoryArchiveFragment;)Lcom/vk/stories/archive/list/StoryArchiveAdapter;
     .locals 0
 
     .line 1
-    iget-object p0, p0, Lcom/vk/stories/archive/StoryArchiveFragment;->M:Lcom/vk/stories/archive/list/a;
+    iget-object p0, p0, Lcom/vk/stories/archive/StoryArchiveFragment;->M:Lcom/vk/stories/archive/list/StoryArchiveAdapter;
 
     return-object p0
 .end method
@@ -211,18 +211,18 @@
 
     const-string v0, "this.activity ?: return"
 
-    invoke-static {v1, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v1, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 9
-    invoke-virtual {p0}, Lcom/vk/core/fragments/c;->getPresenter()Lb/h/r/c;
+    invoke-virtual {p0}, Lcom/vk/core/fragments/BaseMvpFragment;->getPresenter()Lb/h/r/BaseScreenContract;
 
     move-result-object v0
 
-    check-cast v0, Lcom/vk/stories/archive/a;
+    check-cast v0, Lcom/vk/stories/archive/StoryArchiveContract;
 
     if-eqz v0, :cond_0
 
-    invoke-interface {v0}, Lcom/vk/stories/archive/a;->X0()Ljava/util/ArrayList;
+    invoke-interface {v0}, Lcom/vk/stories/archive/StoryArchiveContract;->X0()Ljava/util/ArrayList;
 
     move-result-object v2
 
@@ -249,7 +249,7 @@
     .line 14
     sget-object p1, Lcom/vk/stat/scheme/SchemeStat$EventScreen;->STORY_ARCHIVE:Lcom/vk/stat/scheme/SchemeStat$EventScreen;
 
-    invoke-static {p1}, Lcom/vk/stat/scheme/f;->a(Lcom/vk/stat/scheme/SchemeStat$EventScreen;)Ljava/lang/String;
+    invoke-static {p1}, Lcom/vk/stat/scheme/SchemeStatEx;->a(Lcom/vk/stat/scheme/SchemeStat$EventScreen;)Ljava/lang/String;
 
     move-result-object v6
 
@@ -423,7 +423,7 @@
     move-result-object p1
 
     .line 9
-    sget-object v0, Lcom/vk/core/util/h;->g:Landroidx/interpolator/view/animation/FastOutLinearInInterpolator;
+    sget-object v0, Lcom/vk/core/util/AnimationUtils;->g:Landroidx/interpolator/view/animation/FastOutLinearInInterpolator;
 
     invoke-virtual {p1, v0}, Landroid/view/ViewPropertyAnimator;->setInterpolator(Landroid/animation/TimeInterpolator;)Landroid/view/ViewPropertyAnimator;
 
@@ -476,43 +476,43 @@
 
     invoke-direct {v1, p0, p1}, Lcom/vk/stories/archive/StoryArchiveFragment$showFastScroller$1;-><init>(Lcom/vk/stories/archive/StoryArchiveFragment;Z)V
 
-    invoke-static {v0, v1}, Lcom/vk/extensions/ViewExtKt;->f(Landroid/view/View;Lkotlin/jvm/b/a;)V
+    invoke-static {v0, v1}, Lcom/vk/extensions/ViewExtKt;->f(Landroid/view/View;Lkotlin/jvm/b/Functions;)V
 
     :cond_0
     return-void
 .end method
 
-.method public a(Lcom/vk/lists/o;Lcom/vk/lists/t$k;)Lcom/vk/lists/t;
+.method public a(Lcom/vk/lists/ListDataSet;Lcom/vk/lists/PaginationHelper$k;)Lcom/vk/lists/PaginationHelper;
     .locals 2
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lcom/vk/lists/o<",
-            "Lcom/vk/common/i/b;",
+            "Lcom/vk/lists/ListDataSet<",
+            "Lcom/vk/common/i/RecyclerItem;",
             ">;",
-            "Lcom/vk/lists/t$k;",
+            "Lcom/vk/lists/PaginationHelper$k;",
             ")",
-            "Lcom/vk/lists/t;"
+            "Lcom/vk/lists/PaginationHelper;"
         }
     .end annotation
 
     .line 5
-    new-instance v0, Lcom/vk/stories/archive/list/a;
+    new-instance v0, Lcom/vk/stories/archive/list/StoryArchiveAdapter;
 
     new-instance v1, Lcom/vk/stories/archive/StoryArchiveFragment$bindPagination$1;
 
     invoke-direct {v1, p0}, Lcom/vk/stories/archive/StoryArchiveFragment$bindPagination$1;-><init>(Lcom/vk/stories/archive/StoryArchiveFragment;)V
 
-    invoke-direct {v0, p1, v1}, Lcom/vk/stories/archive/list/a;-><init>(Lcom/vk/lists/o;Lkotlin/jvm/b/b;)V
+    invoke-direct {v0, p1, v1}, Lcom/vk/stories/archive/list/StoryArchiveAdapter;-><init>(Lcom/vk/lists/ListDataSet;Lkotlin/jvm/b/Functions2;)V
 
-    iput-object v0, p0, Lcom/vk/stories/archive/StoryArchiveFragment;->M:Lcom/vk/stories/archive/list/a;
+    iput-object v0, p0, Lcom/vk/stories/archive/StoryArchiveFragment;->M:Lcom/vk/stories/archive/list/StoryArchiveAdapter;
 
     .line 6
     iget-object p1, p0, Lcom/vk/stories/archive/StoryArchiveFragment;->H:Lcom/vk/stories/archive/list/StoryArchiveRecyclerPaginatedView;
 
     if-eqz p1, :cond_0
 
-    iget-object v0, p0, Lcom/vk/stories/archive/StoryArchiveFragment;->M:Lcom/vk/stories/archive/list/a;
+    iget-object v0, p0, Lcom/vk/stories/archive/StoryArchiveFragment;->M:Lcom/vk/stories/archive/list/StoryArchiveAdapter;
 
     invoke-virtual {p1, v0}, Lcom/vk/lists/RecyclerPaginatedView;->setAdapter(Landroidx/recyclerview/widget/RecyclerView$Adapter;)V
 
@@ -522,14 +522,14 @@
 
     if-eqz p1, :cond_1
 
-    invoke-static {p2, p1}, Lcom/vk/lists/u;->b(Lcom/vk/lists/t$k;Lcom/vk/lists/RecyclerPaginatedView;)Lcom/vk/lists/t;
+    invoke-static {p2, p1}, Lcom/vk/lists/PaginationHelperExt;->b(Lcom/vk/lists/PaginationHelper$k;Lcom/vk/lists/RecyclerPaginatedView;)Lcom/vk/lists/PaginationHelper;
 
     move-result-object p1
 
     return-object p1
 
     :cond_1
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     const/4 p1, 0x0
 
@@ -559,7 +559,7 @@
     const/4 v0, 0x0
 
     .line 2
-    invoke-static {p1, p2, p3, v0}, Lcom/vk/core/util/k1;->a(IZILjava/lang/Object;)V
+    invoke-static {p1, p2, p3, v0}, Lcom/vk/core/util/ToastUtils;->a(IZILjava/lang/Object;)V
 
     :cond_0
     return-void
@@ -569,14 +569,14 @@
     .locals 0
 
     .line 1
-    invoke-super {p0, p1}, Lcom/vk/core/fragments/b;->onCreate(Landroid/os/Bundle;)V
+    invoke-super {p0, p1}, Lcom/vk/core/fragments/BaseFragment1;->onCreate(Landroid/os/Bundle;)V
 
     .line 2
-    new-instance p1, Lcom/vk/stories/archive/d;
+    new-instance p1, Lcom/vk/stories/archive/StoryArchivePresenter;
 
-    invoke-direct {p1, p0}, Lcom/vk/stories/archive/d;-><init>(Lcom/vk/stories/archive/b;)V
+    invoke-direct {p1, p0}, Lcom/vk/stories/archive/StoryArchivePresenter;-><init>(Lcom/vk/stories/archive/StoryArchiveContract1;)V
 
-    invoke-virtual {p0, p1}, Lcom/vk/core/fragments/c;->a(Lb/h/r/c;)V
+    invoke-virtual {p0, p1}, Lcom/vk/core/fragments/BaseMvpFragment;->a(Lb/h/r/BaseScreenContract;)V
 
     return-void
 .end method
@@ -669,7 +669,7 @@
 
     const-string v2, "context"
 
-    invoke-static {v1, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     const v2, 0x7f080376
 
@@ -737,13 +737,13 @@
     invoke-interface {v1, v2}, Landroid/view/MenuItem;->setOnMenuItemClickListener(Landroid/view/MenuItem$OnMenuItemClickListener;)Landroid/view/MenuItem;
 
     .line 16
-    invoke-static {p2}, Lcom/vk/extensions/t/a;->a(Landroidx/appcompat/widget/Toolbar;)V
+    invoke-static {p2}, Lcom/vk/extensions/t/ToolbarExt;->a(Landroidx/appcompat/widget/Toolbar;)V
 
     goto :goto_1
 
     .line 17
     :cond_2
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     throw v0
 
@@ -779,7 +779,7 @@
 
     const-string v4, "recyclerView"
 
-    invoke-static {v2, v4}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v2, v4}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {v2, v1}, Landroidx/recyclerview/widget/RecyclerView;->setLayoutManager(Landroidx/recyclerview/widget/RecyclerView$LayoutManager;)V
 
@@ -788,7 +788,7 @@
 
     invoke-direct {v1, p0}, Lcom/vk/stories/archive/StoryArchiveFragment$onCreateView$$inlined$run$lambda$4;-><init>(Lcom/vk/stories/archive/StoryArchiveFragment;)V
 
-    invoke-virtual {p2, v1}, Lcom/vk/stories/archive/list/StoryArchiveRecyclerPaginatedView;->setOpenCamera(Lkotlin/jvm/b/a;)V
+    invoke-virtual {p2, v1}, Lcom/vk/stories/archive/list/StoryArchiveRecyclerPaginatedView;->setOpenCamera(Lkotlin/jvm/b/Functions;)V
 
     .line 23
     invoke-virtual {p2}, Lcom/vk/lists/RecyclerPaginatedView;->getRecyclerView()Landroidx/recyclerview/widget/RecyclerView;
@@ -800,11 +800,11 @@
     invoke-virtual {v1, v2}, Landroidx/recyclerview/widget/RecyclerView;->addOnScrollListener(Landroidx/recyclerview/widget/RecyclerView$OnScrollListener;)V
 
     .line 24
-    new-instance v1, Lcom/vk/stories/archive/list/b;
+    new-instance v1, Lcom/vk/stories/archive/list/StoryArchiveGridSpacingItemDecoration;
 
     sget v2, Lcom/vk/stories/archive/StoryArchiveFragment;->O:I
 
-    invoke-direct {v1, v3, v2, p3}, Lcom/vk/stories/archive/list/b;-><init>(IIZ)V
+    invoke-direct {v1, v3, v2, p3}, Lcom/vk/stories/archive/list/StoryArchiveGridSpacingItemDecoration;-><init>(IIZ)V
 
     invoke-virtual {p2, v1}, Lcom/vk/lists/RecyclerPaginatedView;->setItemDecoration(Landroidx/recyclerview/widget/RecyclerView$ItemDecoration;)V
 
@@ -813,7 +813,7 @@
 
     move-result-object v1
 
-    invoke-static {v1, v4}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v1, v4}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {v1, p3}, Landroid/view/ViewGroup;->setVerticalScrollBarEnabled(Z)V
 
@@ -826,7 +826,7 @@
 
     move-result-object p2
 
-    invoke-static {p2, v4}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p2, v4}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {v1, p2}, Lcom/vk/stories/archive/views/StoryArchiveFastScrollView;->a(Landroidx/recyclerview/widget/RecyclerView;)V
 
@@ -844,7 +844,7 @@
 
     .line 28
     :cond_5
-    invoke-virtual {p0}, Lcom/vk/core/fragments/c;->getContext()Landroidx/fragment/app/FragmentActivity;
+    invoke-virtual {p0}, Lcom/vk/core/fragments/BaseMvpFragment;->getContext()Landroidx/fragment/app/FragmentActivity;
 
     move-result-object p2
 
@@ -939,7 +939,7 @@
     iput-object v0, p0, Lcom/vk/stories/archive/StoryArchiveFragment;->I:Lcom/vk/stories/archive/views/StoryArchiveFastScrollView;
 
     .line 6
-    invoke-super {p0}, Lcom/vk/core/fragments/c;->onDestroyView()V
+    invoke-super {p0}, Lcom/vk/core/fragments/BaseMvpFragment;->onDestroyView()V
 
     return-void
 .end method
@@ -948,7 +948,7 @@
     .locals 2
 
     .line 1
-    invoke-super {p0}, Lcom/vk/core/fragments/c;->onStart()V
+    invoke-super {p0}, Lcom/vk/core/fragments/BaseMvpFragment;->onStart()V
 
     .line 2
     invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getActivity()Landroidx/fragment/app/FragmentActivity;
@@ -983,7 +983,7 @@
 
     .line 2
     :cond_0
-    invoke-super {p0}, Lcom/vk/core/fragments/c;->onStop()V
+    invoke-super {p0}, Lcom/vk/core/fragments/BaseMvpFragment;->onStop()V
 
     return-void
 .end method
@@ -996,7 +996,7 @@
 
     if-eqz v0, :cond_0
 
-    invoke-static {v0}, Lcom/vk/extensions/t/a;->a(Landroidx/appcompat/widget/Toolbar;)V
+    invoke-static {v0}, Lcom/vk/extensions/t/ToolbarExt;->a(Landroidx/appcompat/widget/Toolbar;)V
 
     .line 2
     :cond_0

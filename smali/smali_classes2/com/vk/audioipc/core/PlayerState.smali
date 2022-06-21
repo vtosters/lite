@@ -42,7 +42,7 @@
 
 .field private I:Lcom/vk/music/common/MusicPlaybackLaunchContext;
 
-.field private J:Lcom/vk/music/player/a;
+.field private J:Lcom/vk/music/player/AdvertisementInfo;
 
 .field private K:Z
 
@@ -89,7 +89,7 @@
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, v1}, Lcom/vk/audioipc/core/PlayerState$b;-><init>(Lkotlin/jvm/internal/i;)V
+    invoke-direct {v0, v1}, Lcom/vk/audioipc/core/PlayerState$b;-><init>(Lkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     sput-object v0, Lcom/vk/audioipc/core/PlayerState;->M:Lcom/vk/audioipc/core/PlayerState$b;
 
@@ -151,7 +151,7 @@
 
     const/16 v22, 0x0
 
-    invoke-direct/range {v0 .. v22}, Lcom/vk/audioipc/core/PlayerState;-><init>(Lcom/vk/dto/music/MusicTrack;Ljava/util/List;Ljava/util/List;FFZLcom/vk/music/player/LoopMode;JZILcom/vk/music/player/PlayState;Lcom/vk/music/player/PlayerMode;FFFLcom/vk/music/common/MusicPlaybackLaunchContext;Lcom/vk/music/player/a;ZZILkotlin/jvm/internal/i;)V
+    invoke-direct/range {v0 .. v22}, Lcom/vk/audioipc/core/PlayerState;-><init>(Lcom/vk/dto/music/MusicTrack;Ljava/util/List;Ljava/util/List;FFZLcom/vk/music/player/LoopMode;JZILcom/vk/music/player/PlayState;Lcom/vk/music/player/PlayerMode;FFFLcom/vk/music/common/MusicPlaybackLaunchContext;Lcom/vk/music/player/AdvertisementInfo;ZZILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     return-void
 .end method
@@ -293,20 +293,20 @@
     move-object/from16 v2, p0
 
     .line 24
-    invoke-direct/range {v2 .. v24}, Lcom/vk/audioipc/core/PlayerState;-><init>(Lcom/vk/dto/music/MusicTrack;Ljava/util/List;Ljava/util/List;FFZLcom/vk/music/player/LoopMode;JZILcom/vk/music/player/PlayState;Lcom/vk/music/player/PlayerMode;FFFLcom/vk/music/common/MusicPlaybackLaunchContext;Lcom/vk/music/player/a;ZZILkotlin/jvm/internal/i;)V
+    invoke-direct/range {v2 .. v24}, Lcom/vk/audioipc/core/PlayerState;-><init>(Lcom/vk/dto/music/MusicTrack;Ljava/util/List;Ljava/util/List;FFZLcom/vk/music/player/LoopMode;JZILcom/vk/music/player/PlayState;Lcom/vk/music/player/PlayerMode;FFFLcom/vk/music/common/MusicPlaybackLaunchContext;Lcom/vk/music/player/AdvertisementInfo;ZZILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     return-void
 
     .line 25
     :cond_0
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     const/4 v0, 0x0
 
     throw v0
 .end method
 
-.method public constructor <init>(Lcom/vk/dto/music/MusicTrack;Ljava/util/List;Ljava/util/List;FFZLcom/vk/music/player/LoopMode;JZILcom/vk/music/player/PlayState;Lcom/vk/music/player/PlayerMode;FFFLcom/vk/music/common/MusicPlaybackLaunchContext;Lcom/vk/music/player/a;ZZ)V
+.method public constructor <init>(Lcom/vk/dto/music/MusicTrack;Ljava/util/List;Ljava/util/List;FFZLcom/vk/music/player/LoopMode;JZILcom/vk/music/player/PlayState;Lcom/vk/music/player/PlayerMode;FFFLcom/vk/music/common/MusicPlaybackLaunchContext;Lcom/vk/music/player/AdvertisementInfo;ZZ)V
     .locals 3
     .param p4    # F
         .annotation build Landroidx/annotation/FloatRange;
@@ -354,7 +354,7 @@
             "Lcom/vk/music/player/PlayerMode;",
             "FFF",
             "Lcom/vk/music/common/MusicPlaybackLaunchContext;",
-            "Lcom/vk/music/player/a;",
+            "Lcom/vk/music/player/AdvertisementInfo;",
             "ZZ)V"
         }
     .end annotation
@@ -430,7 +430,7 @@
 
     move-object/from16 v1, p18
 
-    iput-object v1, v0, Lcom/vk/audioipc/core/PlayerState;->J:Lcom/vk/music/player/a;
+    iput-object v1, v0, Lcom/vk/audioipc/core/PlayerState;->J:Lcom/vk/music/player/AdvertisementInfo;
 
     move/from16 v1, p19
 
@@ -443,7 +443,7 @@
     return-void
 .end method
 
-.method public synthetic constructor <init>(Lcom/vk/dto/music/MusicTrack;Ljava/util/List;Ljava/util/List;FFZLcom/vk/music/player/LoopMode;JZILcom/vk/music/player/PlayState;Lcom/vk/music/player/PlayerMode;FFFLcom/vk/music/common/MusicPlaybackLaunchContext;Lcom/vk/music/player/a;ZZILkotlin/jvm/internal/i;)V
+.method public synthetic constructor <init>(Lcom/vk/dto/music/MusicTrack;Ljava/util/List;Ljava/util/List;FFZLcom/vk/music/player/LoopMode;JZILcom/vk/music/player/PlayState;Lcom/vk/music/player/PlayerMode;FFFLcom/vk/music/common/MusicPlaybackLaunchContext;Lcom/vk/music/player/AdvertisementInfo;ZZILkotlin/jvm/internal/DefaultConstructorMarker;)V
     .locals 21
 
     move/from16 v0, p21
@@ -486,7 +486,7 @@
 
     const-string v5, "Collections.unmodifiableList(trackList)"
 
-    invoke-static {v4, v5}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v4, v5}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     goto :goto_2
 
@@ -656,7 +656,7 @@
 
     const-string v2, "MusicPlaybackLaunchContext.NONE"
 
-    invoke-static {v8, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v8, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     goto :goto_f
 
@@ -749,12 +749,12 @@
     move/from16 p21, v0
 
     .line 7
-    invoke-direct/range {p1 .. p21}, Lcom/vk/audioipc/core/PlayerState;-><init>(Lcom/vk/dto/music/MusicTrack;Ljava/util/List;Ljava/util/List;FFZLcom/vk/music/player/LoopMode;JZILcom/vk/music/player/PlayState;Lcom/vk/music/player/PlayerMode;FFFLcom/vk/music/common/MusicPlaybackLaunchContext;Lcom/vk/music/player/a;ZZ)V
+    invoke-direct/range {p1 .. p21}, Lcom/vk/audioipc/core/PlayerState;-><init>(Lcom/vk/dto/music/MusicTrack;Ljava/util/List;Ljava/util/List;FFZLcom/vk/music/player/LoopMode;JZILcom/vk/music/player/PlayState;Lcom/vk/music/player/PlayerMode;FFFLcom/vk/music/common/MusicPlaybackLaunchContext;Lcom/vk/music/player/AdvertisementInfo;ZZ)V
 
     return-void
 .end method
 
-.method public static synthetic a(Lcom/vk/audioipc/core/PlayerState;Lcom/vk/dto/music/MusicTrack;Ljava/util/List;Ljava/util/List;FFZLcom/vk/music/player/LoopMode;JZILcom/vk/music/player/PlayState;Lcom/vk/music/player/PlayerMode;FFFLcom/vk/music/common/MusicPlaybackLaunchContext;Lcom/vk/music/player/a;ZZILjava/lang/Object;)Lcom/vk/audioipc/core/PlayerState;
+.method public static synthetic a(Lcom/vk/audioipc/core/PlayerState;Lcom/vk/dto/music/MusicTrack;Ljava/util/List;Ljava/util/List;FFZLcom/vk/music/player/LoopMode;JZILcom/vk/music/player/PlayState;Lcom/vk/music/player/PlayerMode;FFFLcom/vk/music/common/MusicPlaybackLaunchContext;Lcom/vk/music/player/AdvertisementInfo;ZZILjava/lang/Object;)Lcom/vk/audioipc/core/PlayerState;
     .locals 17
 
     move-object/from16 v0, p0
@@ -969,7 +969,7 @@
 
     if-eqz v16, :cond_10
 
-    iget-object v15, v0, Lcom/vk/audioipc/core/PlayerState;->J:Lcom/vk/music/player/a;
+    iget-object v15, v0, Lcom/vk/audioipc/core/PlayerState;->J:Lcom/vk/music/player/AdvertisementInfo;
 
     goto :goto_10
 
@@ -1035,7 +1035,7 @@
 
     move/from16 p20, v1
 
-    invoke-virtual/range {p0 .. p20}, Lcom/vk/audioipc/core/PlayerState;->a(Lcom/vk/dto/music/MusicTrack;Ljava/util/List;Ljava/util/List;FFZLcom/vk/music/player/LoopMode;JZILcom/vk/music/player/PlayState;Lcom/vk/music/player/PlayerMode;FFFLcom/vk/music/common/MusicPlaybackLaunchContext;Lcom/vk/music/player/a;ZZ)Lcom/vk/audioipc/core/PlayerState;
+    invoke-virtual/range {p0 .. p20}, Lcom/vk/audioipc/core/PlayerState;->a(Lcom/vk/dto/music/MusicTrack;Ljava/util/List;Ljava/util/List;FFZLcom/vk/music/player/LoopMode;JZILcom/vk/music/player/PlayState;Lcom/vk/music/player/PlayerMode;FFFLcom/vk/music/common/MusicPlaybackLaunchContext;Lcom/vk/music/player/AdvertisementInfo;ZZ)Lcom/vk/audioipc/core/PlayerState;
 
     move-result-object v0
 
@@ -1177,7 +1177,7 @@
     return v0
 .end method
 
-.method public final a(Lcom/vk/dto/music/MusicTrack;Ljava/util/List;Ljava/util/List;FFZLcom/vk/music/player/LoopMode;JZILcom/vk/music/player/PlayState;Lcom/vk/music/player/PlayerMode;FFFLcom/vk/music/common/MusicPlaybackLaunchContext;Lcom/vk/music/player/a;ZZ)Lcom/vk/audioipc/core/PlayerState;
+.method public final a(Lcom/vk/dto/music/MusicTrack;Ljava/util/List;Ljava/util/List;FFZLcom/vk/music/player/LoopMode;JZILcom/vk/music/player/PlayState;Lcom/vk/music/player/PlayerMode;FFFLcom/vk/music/common/MusicPlaybackLaunchContext;Lcom/vk/music/player/AdvertisementInfo;ZZ)Lcom/vk/audioipc/core/PlayerState;
     .locals 22
     .param p4    # F
         .annotation build Landroidx/annotation/FloatRange;
@@ -1225,7 +1225,7 @@
             "Lcom/vk/music/player/PlayerMode;",
             "FFF",
             "Lcom/vk/music/common/MusicPlaybackLaunchContext;",
-            "Lcom/vk/music/player/a;",
+            "Lcom/vk/music/player/AdvertisementInfo;",
             "ZZ)",
             "Lcom/vk/audioipc/core/PlayerState;"
         }
@@ -1273,7 +1273,7 @@
 
     move-object/from16 v0, v21
 
-    invoke-direct/range {v0 .. v20}, Lcom/vk/audioipc/core/PlayerState;-><init>(Lcom/vk/dto/music/MusicTrack;Ljava/util/List;Ljava/util/List;FFZLcom/vk/music/player/LoopMode;JZILcom/vk/music/player/PlayState;Lcom/vk/music/player/PlayerMode;FFFLcom/vk/music/common/MusicPlaybackLaunchContext;Lcom/vk/music/player/a;ZZ)V
+    invoke-direct/range {v0 .. v20}, Lcom/vk/audioipc/core/PlayerState;-><init>(Lcom/vk/dto/music/MusicTrack;Ljava/util/List;Ljava/util/List;FFZLcom/vk/music/player/LoopMode;JZILcom/vk/music/player/PlayState;Lcom/vk/music/player/PlayerMode;FFFLcom/vk/music/common/MusicPlaybackLaunchContext;Lcom/vk/music/player/AdvertisementInfo;ZZ)V
 
     return-object v21
 .end method
@@ -1438,11 +1438,11 @@
     return-void
 .end method
 
-.method public final a(Lcom/vk/music/player/a;)V
+.method public final a(Lcom/vk/music/player/AdvertisementInfo;)V
     .locals 0
 
     .line 8
-    iput-object p1, p0, Lcom/vk/audioipc/core/PlayerState;->J:Lcom/vk/music/player/a;
+    iput-object p1, p0, Lcom/vk/audioipc/core/PlayerState;->J:Lcom/vk/music/player/AdvertisementInfo;
 
     return-void
 .end method
@@ -1508,7 +1508,7 @@
     const/4 v0, 0x0
 
     .line 4
-    iput-object v0, p0, Lcom/vk/audioipc/core/PlayerState;->J:Lcom/vk/music/player/a;
+    iput-object v0, p0, Lcom/vk/audioipc/core/PlayerState;->J:Lcom/vk/music/player/AdvertisementInfo;
 
     const/4 v1, -0x1
 
@@ -1523,7 +1523,7 @@
 
     const-string v1, "MusicPlaybackLaunchContext.NONE"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     iput-object v0, p0, Lcom/vk/audioipc/core/PlayerState;->I:Lcom/vk/music/common/MusicPlaybackLaunchContext;
 
@@ -1563,7 +1563,7 @@
 
     iget-object v1, p1, Lcom/vk/audioipc/core/PlayerState;->a:Lcom/vk/dto/music/MusicTrack;
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v0
 
@@ -1573,7 +1573,7 @@
 
     iget-object v1, p1, Lcom/vk/audioipc/core/PlayerState;->b:Ljava/util/List;
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v0
 
@@ -1583,7 +1583,7 @@
 
     iget-object v1, p1, Lcom/vk/audioipc/core/PlayerState;->c:Ljava/util/List;
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v0
 
@@ -1619,7 +1619,7 @@
 
     iget-object v1, p1, Lcom/vk/audioipc/core/PlayerState;->g:Lcom/vk/music/player/LoopMode;
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v0
 
@@ -1649,7 +1649,7 @@
 
     iget-object v1, p1, Lcom/vk/audioipc/core/PlayerState;->D:Lcom/vk/music/player/PlayState;
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v0
 
@@ -1659,7 +1659,7 @@
 
     iget-object v1, p1, Lcom/vk/audioipc/core/PlayerState;->E:Lcom/vk/music/player/PlayerMode;
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v0
 
@@ -1699,17 +1699,17 @@
 
     iget-object v1, p1, Lcom/vk/audioipc/core/PlayerState;->I:Lcom/vk/music/common/MusicPlaybackLaunchContext;
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    iget-object v0, p0, Lcom/vk/audioipc/core/PlayerState;->J:Lcom/vk/music/player/a;
+    iget-object v0, p0, Lcom/vk/audioipc/core/PlayerState;->J:Lcom/vk/music/player/AdvertisementInfo;
 
-    iget-object v1, p1, Lcom/vk/audioipc/core/PlayerState;->J:Lcom/vk/music/player/a;
+    iget-object v1, p1, Lcom/vk/audioipc/core/PlayerState;->J:Lcom/vk/music/player/AdvertisementInfo;
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v0
 
@@ -1973,11 +1973,11 @@
 
     mul-int/lit8 v0, v0, 0x1f
 
-    iget-object v2, p0, Lcom/vk/audioipc/core/PlayerState;->J:Lcom/vk/music/player/a;
+    iget-object v2, p0, Lcom/vk/audioipc/core/PlayerState;->J:Lcom/vk/music/player/AdvertisementInfo;
 
     if-eqz v2, :cond_9
 
-    invoke-virtual {v2}, Lcom/vk/music/player/a;->hashCode()I
+    invoke-virtual {v2}, Lcom/vk/music/player/AdvertisementInfo;->hashCode()I
 
     move-result v1
 
@@ -2216,7 +2216,7 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget-object v1, p0, Lcom/vk/audioipc/core/PlayerState;->J:Lcom/vk/music/player/a;
+    iget-object v1, p0, Lcom/vk/audioipc/core/PlayerState;->J:Lcom/vk/music/player/AdvertisementInfo;
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
@@ -2247,11 +2247,11 @@
     return-object v0
 .end method
 
-.method public final u1()Lcom/vk/music/player/a;
+.method public final u1()Lcom/vk/music/player/AdvertisementInfo;
     .locals 1
 
     .line 1
-    iget-object v0, p0, Lcom/vk/audioipc/core/PlayerState;->J:Lcom/vk/music/player/a;
+    iget-object v0, p0, Lcom/vk/audioipc/core/PlayerState;->J:Lcom/vk/music/player/AdvertisementInfo;
 
     return-object v0
 .end method

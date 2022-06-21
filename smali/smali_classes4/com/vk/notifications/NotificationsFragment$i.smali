@@ -38,28 +38,28 @@
     .locals 1
 
     .line 1
-    new-instance p1, Lcom/vk/navigation/o;
+    new-instance p1, Lcom/vk/navigation/Navigator;
 
     const-class v0, Lcom/vk/notifications/settings/NotificationsSettingsFragment;
 
-    invoke-direct {p1, v0}, Lcom/vk/navigation/o;-><init>(Ljava/lang/Class;)V
+    invoke-direct {p1, v0}, Lcom/vk/navigation/Navigator;-><init>(Ljava/lang/Class;)V
 
     iget-object v0, p0, Lcom/vk/notifications/NotificationsFragment$i;->a:Lcom/vk/notifications/NotificationsFragment;
 
-    invoke-virtual {v0}, Lcom/vk/core/fragments/c;->getContext()Landroidx/fragment/app/FragmentActivity;
+    invoke-virtual {v0}, Lcom/vk/core/fragments/BaseMvpFragment;->getContext()Landroidx/fragment/app/FragmentActivity;
 
     move-result-object v0
 
     if-eqz v0, :cond_0
 
-    invoke-virtual {p1, v0}, Lcom/vk/navigation/o;->a(Landroid/content/Context;)V
+    invoke-virtual {p1, v0}, Lcom/vk/navigation/Navigator;->a(Landroid/content/Context;)V
 
     const/4 p1, 0x1
 
     return p1
 
     :cond_0
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     const/4 p1, 0x0
 

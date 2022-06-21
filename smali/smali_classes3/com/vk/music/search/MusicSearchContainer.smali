@@ -24,7 +24,7 @@
 # instance fields
 .field private final a:Landroid/app/Activity;
 
-.field private final b:Lcom/vk/music/search/d;
+.field private final b:Lcom/vk/music/search/MusicSearchStatesContainer;
 
 .field private final c:Lcom/vk/core/view/search/ModernSearchView;
 
@@ -34,7 +34,7 @@
 
 .field private final f:Lcom/vk/core/fragments/FragmentImpl;
 
-.field private final g:Lcom/vk/music/search/c;
+.field private final g:Lcom/vk/music/search/MusicSearchModelImpl;
 
 
 # direct methods
@@ -45,7 +45,7 @@
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, v1}, Lcom/vk/music/search/MusicSearchContainer$a;-><init>(Lkotlin/jvm/internal/i;)V
+    invoke-direct {v0, v1}, Lcom/vk/music/search/MusicSearchContainer$a;-><init>(Lkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     const/16 v0, 0x30
 
@@ -59,7 +59,7 @@
     return-void
 .end method
 
-.method public constructor <init>(Lcom/vk/core/fragments/FragmentImpl;Lcom/vk/music/search/c;)V
+.method public constructor <init>(Lcom/vk/core/fragments/FragmentImpl;Lcom/vk/music/search/MusicSearchModelImpl;)V
     .locals 10
 
     .line 1
@@ -71,7 +71,7 @@
 
     iput-object p1, p0, Lcom/vk/music/search/MusicSearchContainer;->f:Lcom/vk/core/fragments/FragmentImpl;
 
-    iput-object p2, p0, Lcom/vk/music/search/MusicSearchContainer;->g:Lcom/vk/music/search/c;
+    iput-object p2, p0, Lcom/vk/music/search/MusicSearchContainer;->g:Lcom/vk/music/search/MusicSearchModelImpl;
 
     .line 2
     invoke-virtual {p0}, Landroid/widget/LinearLayout;->getContext()Landroid/content/Context;
@@ -80,7 +80,7 @@
 
     const-string p2, "context"
 
-    invoke-static {p1, p2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, p2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-static {p1}, Lcom/vk/core/util/ContextExtKt;->e(Landroid/content/Context;)Landroid/app/Activity;
 
@@ -99,7 +99,7 @@
 
     move-result-object v2
 
-    invoke-static {v2, p2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v2, p2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     const/4 v3, 0x0
 
@@ -111,7 +111,7 @@
 
     move-object v1, p1
 
-    invoke-direct/range {v1 .. v6}, Lcom/vk/core/view/search/ModernSearchView;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;IILkotlin/jvm/internal/i;)V
+    invoke-direct/range {v1 .. v6}, Lcom/vk/core/view/search/ModernSearchView;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;IILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     iput-object p1, p0, Lcom/vk/music/search/MusicSearchContainer;->c:Lcom/vk/core/view/search/ModernSearchView;
 
@@ -152,7 +152,7 @@
     invoke-virtual {p2, v1, p0}, Landroid/view/LayoutInflater;->inflate(ILandroid/view/ViewGroup;)Landroid/view/View;
 
     .line 8
-    new-instance p2, Lcom/vk/music/search/d;
+    new-instance p2, Lcom/vk/music/search/MusicSearchStatesContainer;
 
     iget-object v1, p0, Lcom/vk/music/search/MusicSearchContainer;->f:Lcom/vk/core/fragments/FragmentImpl;
 
@@ -164,18 +164,18 @@
 
     const-string v2, "fragment.context!!"
 
-    invoke-static {v1, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    iget-object v2, p0, Lcom/vk/music/search/MusicSearchContainer;->g:Lcom/vk/music/search/c;
+    iget-object v2, p0, Lcom/vk/music/search/MusicSearchContainer;->g:Lcom/vk/music/search/MusicSearchModelImpl;
 
-    invoke-virtual {v2}, Lcom/vk/music/search/c;->h0()Lcom/vk/music/sections/g;
+    invoke-virtual {v2}, Lcom/vk/music/search/MusicSearchModelImpl;->h0()Lcom/vk/music/sections/MusicSectionsModelImpl;
 
     move-result-object v2
 
     .line 9
-    iget-object v3, p0, Lcom/vk/music/search/MusicSearchContainer;->g:Lcom/vk/music/search/c;
+    iget-object v3, p0, Lcom/vk/music/search/MusicSearchContainer;->g:Lcom/vk/music/search/MusicSearchModelImpl;
 
-    invoke-virtual {v3}, Lcom/vk/music/search/c;->i0()Lcom/vk/music/model/p;
+    invoke-virtual {v3}, Lcom/vk/music/search/MusicSearchModelImpl;->i0()Lcom/vk/music/model/MusicSearchSuggestionModel;
 
     move-result-object v3
 
@@ -184,9 +184,9 @@
     invoke-direct {v4, p0}, Lcom/vk/music/search/MusicSearchContainer$1;-><init>(Lcom/vk/music/search/MusicSearchContainer;)V
 
     .line 10
-    invoke-direct {p2, v1, v2, v3, v4}, Lcom/vk/music/search/d;-><init>(Landroid/content/Context;Lcom/vk/music/sections/f;Lcom/vk/music/model/p;Lkotlin/jvm/b/b;)V
+    invoke-direct {p2, v1, v2, v3, v4}, Lcom/vk/music/search/MusicSearchStatesContainer;-><init>(Landroid/content/Context;Lcom/vk/music/sections/MusicSectionsModel;Lcom/vk/music/model/MusicSearchSuggestionModel;Lkotlin/jvm/b/Functions2;)V
 
-    iput-object p2, p0, Lcom/vk/music/search/MusicSearchContainer;->b:Lcom/vk/music/search/d;
+    iput-object p2, p0, Lcom/vk/music/search/MusicSearchContainer;->b:Lcom/vk/music/search/MusicSearchStatesContainer;
 
     .line 11
     new-instance p2, Lcom/vk/music/search/MusicSearchContainer$c;
@@ -200,11 +200,11 @@
 
     move-result-object v1
 
-    invoke-virtual {v1, p2}, Lcom/vk/core/widget/LifecycleHandler;->a(Lcom/vk/core/widget/a;)V
+    invoke-virtual {v1, p2}, Lcom/vk/core/widget/LifecycleHandler;->a(Lcom/vk/core/widget/LifecycleListener;)V
 
     const-string v2, "LifecycleHandler.install\u2026ener(lifecycleListener) }"
 
-    invoke-static {v1, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 13
     new-instance v2, Lcom/vk/music/search/MusicSearchContainer$voiceButtonAction$1;
@@ -212,7 +212,7 @@
     invoke-direct {v2, v1, p2}, Lcom/vk/music/search/MusicSearchContainer$voiceButtonAction$1;-><init>(Lcom/vk/core/widget/LifecycleHandler;Lcom/vk/music/search/MusicSearchContainer$c;)V
 
     .line 14
-    invoke-static {}, Lcom/vk/core/ui/themes/d;->e()Z
+    invoke-static {}, Lcom/vk/core/ui/themes/MilkshakeHelper;->e()Z
 
     move-result p2
 
@@ -228,14 +228,14 @@
 
     if-nez p2, :cond_0
 
-    invoke-direct {p0, v2}, Lcom/vk/music/search/MusicSearchContainer;->a(Lkotlin/jvm/b/a;)Landroid/view/View;
+    invoke-direct {p0, v2}, Lcom/vk/music/search/MusicSearchContainer;->a(Lkotlin/jvm/b/Functions;)Landroid/view/View;
 
     move-result-object p2
 
     goto :goto_0
 
     :cond_0
-    invoke-direct {p0, v2}, Lcom/vk/music/search/MusicSearchContainer;->b(Lkotlin/jvm/b/a;)Landroid/view/View;
+    invoke-direct {p0, v2}, Lcom/vk/music/search/MusicSearchContainer;->b(Lkotlin/jvm/b/Functions;)Landroid/view/View;
 
     move-result-object p2
 
@@ -245,7 +245,7 @@
     const/4 v2, 0x2
 
     .line 15
-    invoke-static {p0, v1, v0, v2, v0}, Lcom/vk/extensions/ViewExtKt;->a(Landroid/view/View;ILkotlin/jvm/b/b;ILjava/lang/Object;)Landroid/view/View;
+    invoke-static {p0, v1, v0, v2, v0}, Lcom/vk/extensions/ViewExtKt;->a(Landroid/view/View;ILkotlin/jvm/b/Functions2;ILjava/lang/Object;)Landroid/view/View;
 
     move-result-object v0
 
@@ -266,19 +266,19 @@
     invoke-virtual {v0, p2, v1}, Landroid/widget/LinearLayout;->addView(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
 
     .line 16
-    iget-object p2, p0, Lcom/vk/music/search/MusicSearchContainer;->b:Lcom/vk/music/search/d;
+    iget-object p2, p0, Lcom/vk/music/search/MusicSearchContainer;->b:Lcom/vk/music/search/MusicSearchStatesContainer;
 
     invoke-virtual {p0, p2}, Landroid/widget/LinearLayout;->addView(Landroid/view/View;)V
 
     .line 17
-    iget-object p2, p0, Lcom/vk/music/search/MusicSearchContainer;->b:Lcom/vk/music/search/d;
+    iget-object p2, p0, Lcom/vk/music/search/MusicSearchContainer;->b:Lcom/vk/music/search/MusicSearchStatesContainer;
 
     const/4 v0, 0x0
 
     invoke-static {p2, v0}, Lcom/vk/extensions/ViewExtKt;->b(Landroid/view/View;Z)V
 
     .line 18
-    iget-object v1, p0, Lcom/vk/music/search/MusicSearchContainer;->b:Lcom/vk/music/search/d;
+    iget-object v1, p0, Lcom/vk/music/search/MusicSearchContainer;->b:Lcom/vk/music/search/MusicSearchStatesContainer;
 
     const-wide/16 v2, 0x12c
 
@@ -295,9 +295,9 @@
     invoke-static/range {v1 .. v9}, Lcom/vk/core/extensions/AnimationExtKt;->a(Landroid/view/View;JJLjava/lang/Runnable;Landroid/view/animation/Interpolator;ILjava/lang/Object;)Landroid/view/ViewPropertyAnimator;
 
     .line 19
-    iget-object p2, p0, Lcom/vk/music/search/MusicSearchContainer;->g:Lcom/vk/music/search/c;
+    iget-object p2, p0, Lcom/vk/music/search/MusicSearchContainer;->g:Lcom/vk/music/search/MusicSearchModelImpl;
 
-    invoke-virtual {p2}, Lcom/vk/music/search/c;->g0()Ljava/lang/String;
+    invoke-virtual {p2}, Lcom/vk/music/search/MusicSearchModelImpl;->g0()Ljava/lang/String;
 
     move-result-object p2
 
@@ -318,9 +318,9 @@
     .line 20
     iget-object p1, p0, Lcom/vk/music/search/MusicSearchContainer;->c:Lcom/vk/core/view/search/ModernSearchView;
 
-    iget-object p2, p0, Lcom/vk/music/search/MusicSearchContainer;->g:Lcom/vk/music/search/c;
+    iget-object p2, p0, Lcom/vk/music/search/MusicSearchContainer;->g:Lcom/vk/music/search/MusicSearchModelImpl;
 
-    invoke-virtual {p2}, Lcom/vk/music/search/c;->g0()Ljava/lang/String;
+    invoke-virtual {p2}, Lcom/vk/music/search/MusicSearchModelImpl;->g0()Ljava/lang/String;
 
     move-result-object p2
 
@@ -344,24 +344,24 @@
 
     .line 23
     :cond_3
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     throw v0
 
     .line 24
     :cond_4
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     throw v0
 .end method
 
-.method private final a(Lkotlin/jvm/b/a;)Landroid/view/View;
+.method private final a(Lkotlin/jvm/b/Functions;)Landroid/view/View;
     .locals 4
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lkotlin/jvm/b/a<",
-            "Lkotlin/m;",
+            "Lkotlin/jvm/b/Functions<",
+            "Lkotlin/Unit;",
             ">;)",
             "Landroid/view/View;"
         }
@@ -402,7 +402,7 @@
     invoke-virtual {v2, v1}, Lcom/vk/core/view/search/ModernSearchView;->setRightIconVoice(Z)V
 
     .line 8
-    invoke-static {}, Lcom/vk/core/utils/i;->b()Z
+    invoke-static {}, Lcom/vk/core/utils/VoiceUtils;->b()Z
 
     move-result v1
 
@@ -417,7 +417,7 @@
 
     .line 9
     :goto_0
-    invoke-virtual {v2, v3, p1}, Lcom/vk/core/view/search/ModernSearchView;->a(Lkotlin/jvm/b/a;Lkotlin/jvm/b/a;)V
+    invoke-virtual {v2, v3, p1}, Lcom/vk/core/view/search/ModernSearchView;->a(Lkotlin/jvm/b/Functions;Lkotlin/jvm/b/Functions;)V
 
     const p1, 0x7f1207bd
 
@@ -458,7 +458,7 @@
 
     const-string v2, "context"
 
-    invoke-static {v1, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     const v2, 0x7f0802f9
 
@@ -497,13 +497,13 @@
     return-object v0
 .end method
 
-.method private final a()Lc/a/m;
+.method private final a()Lio/reactivex/Observable;
     .locals 2
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "()",
-            "Lc/a/m<",
-            "Lb/h/v/e;",
+            "Lio/reactivex/Observable<",
+            "Lb/h/v/TextViewTextChangeEvent;",
             ">;"
         }
     .end annotation
@@ -511,20 +511,20 @@
     .line 19
     iget-object v0, p0, Lcom/vk/music/search/MusicSearchContainer;->c:Lcom/vk/core/view/search/ModernSearchView;
 
-    invoke-virtual {v0}, Lcom/vk/core/view/search/ModernSearchView;->c()Lb/h/v/c;
+    invoke-virtual {v0}, Lcom/vk/core/view/search/ModernSearchView;->c()Lb/h/v/InitialValueObservable;
 
     move-result-object v0
 
     .line 20
-    iget-object v1, p0, Lcom/vk/music/search/MusicSearchContainer;->g:Lcom/vk/music/search/c;
+    iget-object v1, p0, Lcom/vk/music/search/MusicSearchContainer;->g:Lcom/vk/music/search/MusicSearchModelImpl;
 
-    invoke-virtual {v1}, Lcom/vk/music/search/c;->f0()Z
+    invoke-virtual {v1}, Lcom/vk/music/search/MusicSearchModelImpl;->f0()Z
 
     move-result v1
 
     if-nez v1, :cond_0
 
-    invoke-virtual {v0}, Lb/h/v/c;->p()Lc/a/m;
+    invoke-virtual {v0}, Lb/h/v/InitialValueObservable;->p()Lio/reactivex/Observable;
 
     :cond_0
     return-object v0
@@ -539,13 +539,13 @@
     return-object p0
 .end method
 
-.method private final b(Lkotlin/jvm/b/a;)Landroid/view/View;
+.method private final b(Lkotlin/jvm/b/Functions;)Landroid/view/View;
     .locals 3
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lkotlin/jvm/b/a<",
-            "Lkotlin/m;",
+            "Lkotlin/jvm/b/Functions<",
+            "Lkotlin/Unit;",
             ">;)",
             "Landroid/view/View;"
         }
@@ -567,10 +567,10 @@
     .line 5
     new-instance v1, Lcom/vk/music/search/MusicSearchContainer$initOldTheme$$inlined$apply$lambda$1;
 
-    invoke-direct {v1, v0, p0, p1}, Lcom/vk/music/search/MusicSearchContainer$initOldTheme$$inlined$apply$lambda$1;-><init>(Lcom/vk/core/view/search/ModernSearchView;Lcom/vk/music/search/MusicSearchContainer;Lkotlin/jvm/b/a;)V
+    invoke-direct {v1, v0, p0, p1}, Lcom/vk/music/search/MusicSearchContainer$initOldTheme$$inlined$apply$lambda$1;-><init>(Lcom/vk/core/view/search/ModernSearchView;Lcom/vk/music/search/MusicSearchContainer;Lkotlin/jvm/b/Functions;)V
 
     .line 6
-    invoke-static {}, Lcom/vk/core/utils/i;->b()Z
+    invoke-static {}, Lcom/vk/core/utils/VoiceUtils;->b()Z
 
     move-result v2
 
@@ -583,7 +583,7 @@
 
     .line 7
     :goto_0
-    invoke-virtual {v0, v1, p1}, Lcom/vk/core/view/search/ModernSearchView;->a(Lkotlin/jvm/b/a;Lkotlin/jvm/b/a;)V
+    invoke-virtual {v0, v1, p1}, Lcom/vk/core/view/search/ModernSearchView;->a(Lkotlin/jvm/b/Functions;Lkotlin/jvm/b/Functions;)V
 
     const p1, 0x7f1207bd
 
@@ -596,11 +596,11 @@
     return-object p1
 .end method
 
-.method public static final synthetic b(Lcom/vk/music/search/MusicSearchContainer;)Lcom/vk/music/search/c;
+.method public static final synthetic b(Lcom/vk/music/search/MusicSearchContainer;)Lcom/vk/music/search/MusicSearchModelImpl;
     .locals 0
 
     .line 1
-    iget-object p0, p0, Lcom/vk/music/search/MusicSearchContainer;->g:Lcom/vk/music/search/c;
+    iget-object p0, p0, Lcom/vk/music/search/MusicSearchContainer;->g:Lcom/vk/music/search/MusicSearchModelImpl;
 
     return-object p0
 .end method
@@ -609,9 +609,9 @@
     .locals 1
 
     .line 10
-    iget-object v0, p0, Lcom/vk/music/search/MusicSearchContainer;->b:Lcom/vk/music/search/d;
+    iget-object v0, p0, Lcom/vk/music/search/MusicSearchContainer;->b:Lcom/vk/music/search/MusicSearchStatesContainer;
 
-    invoke-virtual {v0}, Lcom/vk/music/search/d;->c()V
+    invoke-virtual {v0}, Lcom/vk/music/search/MusicSearchStatesContainer;->c()V
 
     return-void
 .end method
@@ -639,9 +639,9 @@
     invoke-virtual {v0}, Lcom/vk/core/view/search/ModernSearchView;->b()V
 
     .line 4
-    iget-object v0, p0, Lcom/vk/music/search/MusicSearchContainer;->b:Lcom/vk/music/search/d;
+    iget-object v0, p0, Lcom/vk/music/search/MusicSearchContainer;->b:Lcom/vk/music/search/MusicSearchStatesContainer;
 
-    invoke-virtual {v0}, Lcom/vk/music/search/d;->d()Z
+    invoke-virtual {v0}, Lcom/vk/music/search/MusicSearchStatesContainer;->d()Z
 
     move-result v0
 
@@ -691,14 +691,14 @@
     invoke-super {p0}, Landroid/widget/LinearLayout;->onAttachedToWindow()V
 
     .line 2
-    invoke-direct {p0}, Lcom/vk/music/search/MusicSearchContainer;->a()Lc/a/m;
+    invoke-direct {p0}, Lcom/vk/music/search/MusicSearchContainer;->a()Lio/reactivex/Observable;
 
     move-result-object v0
 
     .line 3
     sget-object v1, Lcom/vk/music/search/MusicSearchContainer$e;->a:Lcom/vk/music/search/MusicSearchContainer$e;
 
-    invoke-virtual {v0, v1}, Lc/a/m;->e(Lc/a/z/j;)Lc/a/m;
+    invoke-virtual {v0, v1}, Lio/reactivex/Observable;->e(Lio/reactivex/functions/Function;)Lio/reactivex/Observable;
 
     move-result-object v0
 
@@ -707,16 +707,16 @@
 
     const-wide/16 v2, 0x190
 
-    invoke-virtual {v0, v2, v3, v1}, Lc/a/m;->b(JLjava/util/concurrent/TimeUnit;)Lc/a/m;
+    invoke-virtual {v0, v2, v3, v1}, Lio/reactivex/Observable;->b(JLjava/util/concurrent/TimeUnit;)Lio/reactivex/Observable;
 
     move-result-object v0
 
     .line 5
-    invoke-static {}, Lc/a/y/c/a;->a()Lc/a/s;
+    invoke-static {}, Lio/reactivex/schedulers/AndroidSchedulers;->a()Lio/reactivex/Scheduler;
 
     move-result-object v1
 
-    invoke-virtual {v0, v1}, Lc/a/m;->a(Lc/a/s;)Lc/a/m;
+    invoke-virtual {v0, v1}, Lio/reactivex/Observable;->a(Lio/reactivex/Scheduler;)Lio/reactivex/Observable;
 
     move-result-object v0
 
@@ -728,24 +728,24 @@
     const-string v2, "MusicSearchFeature"
 
     .line 7
-    invoke-static {v2}, Lcom/vk/core/util/z0;->a(Ljava/lang/String;)Lc/a/z/g;
+    invoke-static {v2}, Lcom/vk/core/util/RxUtil;->a(Ljava/lang/String;)Lio/reactivex/functions/Consumer;
 
     move-result-object v2
 
     .line 8
-    invoke-virtual {v0, v1, v2}, Lc/a/m;->a(Lc/a/z/g;Lc/a/z/g;)Lio/reactivex/disposables/b;
+    invoke-virtual {v0, v1, v2}, Lio/reactivex/Observable;->a(Lio/reactivex/functions/Consumer;Lio/reactivex/functions/Consumer;)Lio/reactivex/disposables/Disposable;
 
     .line 9
-    iget-object v0, p0, Lcom/vk/music/search/MusicSearchContainer;->g:Lcom/vk/music/search/c;
+    iget-object v0, p0, Lcom/vk/music/search/MusicSearchContainer;->g:Lcom/vk/music/search/MusicSearchModelImpl;
 
     iget-object v1, p0, Lcom/vk/music/search/MusicSearchContainer;->e:Lcom/vk/music/search/MusicSearchContainer$d;
 
-    invoke-virtual {v0, v1}, Lcom/vk/music/search/c;->a(Lcom/vk/music/search/b$a;)V
+    invoke-virtual {v0, v1}, Lcom/vk/music/search/MusicSearchModelImpl;->a(Lcom/vk/music/search/MusicSearchModel$a;)V
 
     .line 10
-    iget-object v0, p0, Lcom/vk/music/search/MusicSearchContainer;->g:Lcom/vk/music/search/c;
+    iget-object v0, p0, Lcom/vk/music/search/MusicSearchContainer;->g:Lcom/vk/music/search/MusicSearchModelImpl;
 
-    invoke-virtual {v0}, Lcom/vk/music/search/c;->f0()Z
+    invoke-virtual {v0}, Lcom/vk/music/search/MusicSearchModelImpl;->f0()Z
 
     move-result v0
 
@@ -764,11 +764,11 @@
     invoke-super {p0}, Landroid/widget/LinearLayout;->onDetachedFromWindow()V
 
     .line 2
-    iget-object v0, p0, Lcom/vk/music/search/MusicSearchContainer;->g:Lcom/vk/music/search/c;
+    iget-object v0, p0, Lcom/vk/music/search/MusicSearchContainer;->g:Lcom/vk/music/search/MusicSearchModelImpl;
 
     iget-object v1, p0, Lcom/vk/music/search/MusicSearchContainer;->e:Lcom/vk/music/search/MusicSearchContainer$d;
 
-    invoke-virtual {v0, v1}, Lcom/vk/music/search/c;->b(Lcom/vk/music/search/b$a;)V
+    invoke-virtual {v0, v1}, Lcom/vk/music/search/MusicSearchModelImpl;->b(Lcom/vk/music/search/MusicSearchModel$a;)V
 
     return-void
 .end method

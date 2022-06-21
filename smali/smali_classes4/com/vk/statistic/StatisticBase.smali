@@ -62,7 +62,7 @@
 
     iget-object v0, p0, Lcom/vk/statistic/StatisticBase;->b:Ljava/lang/String;
 
-    invoke-static {v0}, Lcom/vk/statistic/a;->b(Ljava/lang/String;)Z
+    invoke-static {v0}, Lcom/vk/statistic/SentTable;->b(Ljava/lang/String;)Z
 
     move-result v0
 
@@ -85,7 +85,7 @@
     .locals 1
 
     .line 1
-    sget-object v0, Lcom/vk/statistic/a;->b:Ljava/util/Set;
+    sget-object v0, Lcom/vk/statistic/SentTable;->b:Ljava/util/Set;
 
     if-eqz v0, :cond_0
 
@@ -494,7 +494,7 @@
     .line 3
     iget-object v0, p0, Lcom/vk/statistic/StatisticBase;->b:Ljava/lang/String;
 
-    invoke-static {v0}, Lcom/vk/statistic/a;->a(Ljava/lang/String;)V
+    invoke-static {v0}, Lcom/vk/statistic/SentTable;->a(Ljava/lang/String;)V
 
     :cond_0
     return-void
@@ -502,9 +502,9 @@
 
 
 # virtual methods
-.method public a(Lcom/vk/statistic/b;)V
+.method public a(Lcom/vk/statistic/StatisticSender;)V
     .locals 2
-    .param p1    # Lcom/vk/statistic/b;
+    .param p1    # Lcom/vk/statistic/StatisticSender;
         .annotation build Landroidx/annotation/NonNull;
         .end annotation
     .end param
@@ -523,7 +523,7 @@
 
     if-eqz v0, :cond_1
 
-    invoke-interface {p1, p0}, Lcom/vk/statistic/b;->a(Lcom/vk/statistic/StatisticBase;)Z
+    invoke-interface {p1, p0}, Lcom/vk/statistic/StatisticSender;->a(Lcom/vk/statistic/StatisticBase;)Z
 
     move-result p1
 
@@ -544,7 +544,7 @@
 
     new-instance v1, Lcom/vk/statistic/StatisticBase$a;
 
-    invoke-direct {v1, p0, p1}, Lcom/vk/statistic/StatisticBase$a;-><init>(Lcom/vk/statistic/StatisticBase;Lcom/vk/statistic/b;)V
+    invoke-direct {v1, p0, p1}, Lcom/vk/statistic/StatisticBase$a;-><init>(Lcom/vk/statistic/StatisticBase;Lcom/vk/statistic/StatisticSender;)V
 
     invoke-interface {v0, v1}, Ljava/util/concurrent/ExecutorService;->submit(Ljava/lang/Runnable;)Ljava/util/concurrent/Future;
 
@@ -553,7 +553,7 @@
     return-void
 .end method
 
-.method public a(Lcom/vk/statistic/b;IJ)V
+.method public a(Lcom/vk/statistic/StatisticSender;IJ)V
     .locals 8
 
     .line 6
@@ -589,7 +589,7 @@
 
     move-wide v5, p3
 
-    invoke-direct/range {v1 .. v6}, Lcom/vk/statistic/StatisticBase$b;-><init>(Lcom/vk/statistic/StatisticBase;Lcom/vk/statistic/b;IJ)V
+    invoke-direct/range {v1 .. v6}, Lcom/vk/statistic/StatisticBase$b;-><init>(Lcom/vk/statistic/StatisticBase;Lcom/vk/statistic/StatisticSender;IJ)V
 
     invoke-interface {v0, v7}, Ljava/util/concurrent/ExecutorService;->submit(Ljava/lang/Runnable;)Ljava/util/concurrent/Future;
 

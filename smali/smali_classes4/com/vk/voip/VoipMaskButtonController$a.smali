@@ -3,7 +3,7 @@
 .source "VoipMaskButtonController.kt"
 
 # interfaces
-.implements Lcom/vk/cameraui/widgets/masks/a$c;
+.implements Lcom/vk/cameraui/widgets/masks/BaseMasksWrap$c;
 
 
 # annotations

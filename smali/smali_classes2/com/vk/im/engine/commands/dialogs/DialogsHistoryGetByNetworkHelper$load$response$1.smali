@@ -3,12 +3,12 @@
 .source "DialogsHistoryGetByNetworkHelper.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/a;
+.implements Lkotlin/jvm/b/Functions;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/im/engine/commands/dialogs/DialogsHistoryGetByNetworkHelper;->a(Lcom/vk/im/engine/d;Lcom/vk/im/engine/commands/dialogs/w;)Lcom/vk/im/engine/models/dialogs/DialogsHistory;
+    value = Lcom/vk/im/engine/commands/dialogs/DialogsHistoryGetByNetworkHelper;->a(Lcom/vk/im/engine/ImEnvironment;Lcom/vk/im/engine/commands/dialogs/DialogsHistoryGetArgs;)Lcom/vk/im/engine/models/dialogs/DialogsHistory;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -19,17 +19,17 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/a<",
-        "Lcom/vk/im/engine/internal/api_commands/messages/m$b;",
+        "Lkotlin/jvm/b/Functions<",
+        "Lcom/vk/im/engine/internal/api_commands/messages/MessagesGetConversationsApiCmd$b;",
         ">;"
     }
 .end annotation
 
 
 # instance fields
-.field final synthetic $args:Lcom/vk/im/engine/commands/dialogs/w;
+.field final synthetic $args:Lcom/vk/im/engine/commands/dialogs/DialogsHistoryGetArgs;
 
-.field final synthetic $env:Lcom/vk/im/engine/d;
+.field final synthetic $env:Lcom/vk/im/engine/ImEnvironment;
 
 .field final synthetic $limit:I
 
@@ -37,14 +37,14 @@
 
 
 # direct methods
-.method constructor <init>(Lcom/vk/im/engine/d;ILcom/vk/im/engine/commands/dialogs/w;I)V
+.method constructor <init>(Lcom/vk/im/engine/ImEnvironment;ILcom/vk/im/engine/commands/dialogs/DialogsHistoryGetArgs;I)V
     .locals 0
 
-    iput-object p1, p0, Lcom/vk/im/engine/commands/dialogs/DialogsHistoryGetByNetworkHelper$load$response$1;->$env:Lcom/vk/im/engine/d;
+    iput-object p1, p0, Lcom/vk/im/engine/commands/dialogs/DialogsHistoryGetByNetworkHelper$load$response$1;->$env:Lcom/vk/im/engine/ImEnvironment;
 
     iput p2, p0, Lcom/vk/im/engine/commands/dialogs/DialogsHistoryGetByNetworkHelper$load$response$1;->$offsetMsgVkId:I
 
-    iput-object p3, p0, Lcom/vk/im/engine/commands/dialogs/DialogsHistoryGetByNetworkHelper$load$response$1;->$args:Lcom/vk/im/engine/commands/dialogs/w;
+    iput-object p3, p0, Lcom/vk/im/engine/commands/dialogs/DialogsHistoryGetByNetworkHelper$load$response$1;->$args:Lcom/vk/im/engine/commands/dialogs/DialogsHistoryGetArgs;
 
     iput p4, p0, Lcom/vk/im/engine/commands/dialogs/DialogsHistoryGetByNetworkHelper$load$response$1;->$limit:I
 
@@ -57,31 +57,31 @@
 
 
 # virtual methods
-.method public final invoke()Lcom/vk/im/engine/internal/api_commands/messages/m$b;
+.method public final invoke()Lcom/vk/im/engine/internal/api_commands/messages/MessagesGetConversationsApiCmd$b;
     .locals 6
 
     .line 2
     sget-object v0, Lcom/vk/im/engine/commands/dialogs/DialogsHistoryGetByNetworkHelper;->a:Lcom/vk/im/engine/commands/dialogs/DialogsHistoryGetByNetworkHelper;
 
-    iget-object v1, p0, Lcom/vk/im/engine/commands/dialogs/DialogsHistoryGetByNetworkHelper$load$response$1;->$env:Lcom/vk/im/engine/d;
+    iget-object v1, p0, Lcom/vk/im/engine/commands/dialogs/DialogsHistoryGetByNetworkHelper$load$response$1;->$env:Lcom/vk/im/engine/ImEnvironment;
 
     iget v2, p0, Lcom/vk/im/engine/commands/dialogs/DialogsHistoryGetByNetworkHelper$load$response$1;->$offsetMsgVkId:I
 
-    iget-object v3, p0, Lcom/vk/im/engine/commands/dialogs/DialogsHistoryGetByNetworkHelper$load$response$1;->$args:Lcom/vk/im/engine/commands/dialogs/w;
+    iget-object v3, p0, Lcom/vk/im/engine/commands/dialogs/DialogsHistoryGetByNetworkHelper$load$response$1;->$args:Lcom/vk/im/engine/commands/dialogs/DialogsHistoryGetArgs;
 
-    invoke-virtual {v3}, Lcom/vk/im/engine/commands/dialogs/w;->b()Lcom/vk/im/engine/models/dialogs/DialogsFilter;
+    invoke-virtual {v3}, Lcom/vk/im/engine/commands/dialogs/DialogsHistoryGetArgs;->b()Lcom/vk/im/engine/models/dialogs/DialogsFilter;
 
     move-result-object v3
 
     iget v4, p0, Lcom/vk/im/engine/commands/dialogs/DialogsHistoryGetByNetworkHelper$load$response$1;->$limit:I
 
-    iget-object v5, p0, Lcom/vk/im/engine/commands/dialogs/DialogsHistoryGetByNetworkHelper$load$response$1;->$args:Lcom/vk/im/engine/commands/dialogs/w;
+    iget-object v5, p0, Lcom/vk/im/engine/commands/dialogs/DialogsHistoryGetByNetworkHelper$load$response$1;->$args:Lcom/vk/im/engine/commands/dialogs/DialogsHistoryGetArgs;
 
-    invoke-virtual {v5}, Lcom/vk/im/engine/commands/dialogs/w;->f()Z
+    invoke-virtual {v5}, Lcom/vk/im/engine/commands/dialogs/DialogsHistoryGetArgs;->f()Z
 
     move-result v5
 
-    invoke-static/range {v0 .. v5}, Lcom/vk/im/engine/commands/dialogs/DialogsHistoryGetByNetworkHelper;->a(Lcom/vk/im/engine/commands/dialogs/DialogsHistoryGetByNetworkHelper;Lcom/vk/im/engine/d;ILcom/vk/im/engine/models/dialogs/DialogsFilter;IZ)Lcom/vk/im/engine/internal/api_commands/messages/m$b;
+    invoke-static/range {v0 .. v5}, Lcom/vk/im/engine/commands/dialogs/DialogsHistoryGetByNetworkHelper;->a(Lcom/vk/im/engine/commands/dialogs/DialogsHistoryGetByNetworkHelper;Lcom/vk/im/engine/ImEnvironment;ILcom/vk/im/engine/models/dialogs/DialogsFilter;IZ)Lcom/vk/im/engine/internal/api_commands/messages/MessagesGetConversationsApiCmd$b;
 
     move-result-object v0
 
@@ -92,7 +92,7 @@
     .locals 1
 
     .line 1
-    invoke-virtual {p0}, Lcom/vk/im/engine/commands/dialogs/DialogsHistoryGetByNetworkHelper$load$response$1;->invoke()Lcom/vk/im/engine/internal/api_commands/messages/m$b;
+    invoke-virtual {p0}, Lcom/vk/im/engine/commands/dialogs/DialogsHistoryGetByNetworkHelper$load$response$1;->invoke()Lcom/vk/im/engine/internal/api_commands/messages/MessagesGetConversationsApiCmd$b;
 
     move-result-object v0
 

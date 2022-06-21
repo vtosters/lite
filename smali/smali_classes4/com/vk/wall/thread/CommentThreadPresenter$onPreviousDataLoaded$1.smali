@@ -3,12 +3,12 @@
 .source "CommentThreadPresenter.kt"
 
 # interfaces
-.implements Lc/a/z/g;
+.implements Lio/reactivex/functions/Consumer;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/wall/thread/CommentThreadPresenter;->a(Lc/a/m;ZZ)V
+    value = Lcom/vk/wall/thread/CommentThreadPresenter;->a(Lio/reactivex/Observable;ZZ)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -22,8 +22,8 @@
         "Ljava/lang/Object;",
         ">",
         "Ljava/lang/Object;",
-        "Lc/a/z/g<",
-        "Lcom/vtosters/lite/api/wall/a;",
+        "Lio/reactivex/functions/Consumer<",
+        "Lcom/vtosters/lite/api/wall/GetCommentsResult;",
         ">;"
     }
 .end annotation
@@ -58,13 +58,13 @@
 
 
 # virtual methods
-.method public final a(Lcom/vtosters/lite/api/wall/a;)V
+.method public final a(Lcom/vtosters/lite/api/wall/GetCommentsResult;)V
     .locals 12
 
     .line 1
     iget-object v0, p0, Lcom/vk/wall/thread/CommentThreadPresenter$onPreviousDataLoaded$1;->b:Lcom/vtosters/lite/NewsComment;
 
-    iget v1, p1, Lcom/vtosters/lite/api/wall/a;->b:I
+    iget v1, p1, Lcom/vtosters/lite/api/wall/GetCommentsResult;->b:I
 
     iput v1, v0, Lcom/vtosters/lite/NewsComment;->R:I
 
@@ -85,7 +85,7 @@
     invoke-interface {v0}, Ljava/util/List;->clear()V
 
     .line 4
-    iget-object v0, p1, Lcom/vtosters/lite/api/wall/a;->a:Lcom/vk/dto/common/data/VKList;
+    iget-object v0, p1, Lcom/vtosters/lite/api/wall/GetCommentsResult;->a:Lcom/vk/dto/common/data/VKList;
 
     invoke-virtual {v0}, Ljava/util/ArrayList;->size()I
 
@@ -99,7 +99,7 @@
     .line 6
     iget-object v5, p0, Lcom/vk/wall/thread/CommentThreadPresenter$onPreviousDataLoaded$1;->a:Lcom/vk/wall/thread/CommentThreadPresenter;
 
-    invoke-virtual {v5}, Lcom/vk/wall/thread/CommentThreadPresenter;->s()Lcom/vk/wall/c;
+    invoke-virtual {v5}, Lcom/vk/wall/thread/CommentThreadPresenter;->s()Lcom/vk/wall/CommentDisplayItemsBuilder;
 
     move-result-object v5
 
@@ -109,7 +109,7 @@
 
     move-result-object v6
 
-    invoke-virtual {v5, v6}, Lcom/vk/wall/c;->a(Ljava/util/List;)Ljava/util/List;
+    invoke-virtual {v5, v6}, Lcom/vk/wall/CommentDisplayItemsBuilder;->a(Ljava/util/List;)Ljava/util/List;
 
     move-result-object v5
 
@@ -123,13 +123,13 @@
     if-le v5, v0, :cond_0
 
     .line 8
-    new-instance v0, Lcom/vk/wall/b;
+    new-instance v0, Lcom/vk/wall/CommentDisplayItem;
 
     const/4 v8, 0x0
 
-    sget-object v5, Lcom/vtosters/lite/o0/a;->H:Lcom/vtosters/lite/o0/a$a;
+    sget-object v5, Lcom/vtosters/lite/o0/CommentsAdapter;->H:Lcom/vtosters/lite/o0/CommentsAdapter$a;
 
-    invoke-virtual {v5}, Lcom/vtosters/lite/o0/a$a;->g()I
+    invoke-virtual {v5}, Lcom/vtosters/lite/o0/CommentsAdapter$a;->g()I
 
     move-result v9
 
@@ -139,7 +139,7 @@
 
     move-object v6, v0
 
-    invoke-direct/range {v6 .. v11}, Lcom/vk/wall/b;-><init>(Lcom/vtosters/lite/q;Lcom/vtosters/lite/q;IILkotlin/jvm/internal/i;)V
+    invoke-direct/range {v6 .. v11}, Lcom/vk/wall/CommentDisplayItem;-><init>(Lcom/vtosters/lite/Comment;Lcom/vtosters/lite/Comment;IILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     invoke-virtual {v1, v0}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
@@ -147,17 +147,17 @@
     :cond_0
     iget-object v0, p0, Lcom/vk/wall/thread/CommentThreadPresenter$onPreviousDataLoaded$1;->a:Lcom/vk/wall/thread/CommentThreadPresenter;
 
-    invoke-virtual {v0}, Lcom/vk/wall/thread/CommentThreadPresenter;->s()Lcom/vk/wall/c;
+    invoke-virtual {v0}, Lcom/vk/wall/thread/CommentThreadPresenter;->s()Lcom/vk/wall/CommentDisplayItemsBuilder;
 
     move-result-object v0
 
     iget-object v5, p0, Lcom/vk/wall/thread/CommentThreadPresenter$onPreviousDataLoaded$1;->b:Lcom/vtosters/lite/NewsComment;
 
-    iget-object v6, p1, Lcom/vtosters/lite/api/wall/a;->a:Lcom/vk/dto/common/data/VKList;
+    iget-object v6, p1, Lcom/vtosters/lite/api/wall/GetCommentsResult;->a:Lcom/vk/dto/common/data/VKList;
 
-    invoke-static {v6, v4}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v6, v4}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    invoke-virtual {v0, v5, v6}, Lcom/vk/wall/c;->a(Lcom/vtosters/lite/NewsComment;Ljava/util/List;)Ljava/util/List;
+    invoke-virtual {v0, v5, v6}, Lcom/vk/wall/CommentDisplayItemsBuilder;->a(Lcom/vtosters/lite/NewsComment;Ljava/util/List;)Ljava/util/List;
 
     move-result-object v0
 
@@ -166,43 +166,43 @@
     .line 10
     iget-object v0, p0, Lcom/vk/wall/thread/CommentThreadPresenter$onPreviousDataLoaded$1;->a:Lcom/vk/wall/thread/CommentThreadPresenter;
 
-    invoke-virtual {v0}, Lcom/vk/wall/thread/CommentThreadPresenter;->r()Lcom/vk/lists/o;
+    invoke-virtual {v0}, Lcom/vk/wall/thread/CommentThreadPresenter;->r()Lcom/vk/lists/ListDataSet;
 
     move-result-object v0
 
-    invoke-virtual {v0, v1}, Lcom/vk/lists/o;->setItems(Ljava/util/List;)V
+    invoke-virtual {v0, v1}, Lcom/vk/lists/ListDataSet;->setItems(Ljava/util/List;)V
 
     goto/16 :goto_2
 
     .line 11
     :cond_1
-    iget-object v0, p1, Lcom/vtosters/lite/api/wall/a;->a:Lcom/vk/dto/common/data/VKList;
+    iget-object v0, p1, Lcom/vtosters/lite/api/wall/GetCommentsResult;->a:Lcom/vk/dto/common/data/VKList;
 
-    invoke-static {v0, v4}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v4}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     new-instance v1, Lcom/vk/wall/thread/CommentThreadPresenter$onPreviousDataLoaded$1$1;
 
     invoke-direct {v1, p0}, Lcom/vk/wall/thread/CommentThreadPresenter$onPreviousDataLoaded$1$1;-><init>(Lcom/vk/wall/thread/CommentThreadPresenter$onPreviousDataLoaded$1;)V
 
-    invoke-static {v0, v1}, Lkotlin/collections/l;->a(Ljava/util/List;Lkotlin/jvm/b/b;)Z
+    invoke-static {v0, v1}, Lkotlin/collections/l;->a(Ljava/util/List;Lkotlin/jvm/b/Functions2;)Z
 
     .line 12
     iget-object v0, p0, Lcom/vk/wall/thread/CommentThreadPresenter$onPreviousDataLoaded$1;->a:Lcom/vk/wall/thread/CommentThreadPresenter;
 
-    invoke-virtual {v0}, Lcom/vk/wall/thread/CommentThreadPresenter;->r()Lcom/vk/lists/o;
+    invoke-virtual {v0}, Lcom/vk/wall/thread/CommentThreadPresenter;->r()Lcom/vk/lists/ListDataSet;
 
     move-result-object v0
 
     sget-object v1, Lcom/vk/wall/thread/CommentThreadPresenter$onPreviousDataLoaded$1$showMorePosition$1;->a:Lcom/vk/wall/thread/CommentThreadPresenter$onPreviousDataLoaded$1$showMorePosition$1;
 
-    invoke-virtual {v0, v1}, Lcom/vk/lists/o;->d(Lkotlin/jvm/b/b;)I
+    invoke-virtual {v0, v1}, Lcom/vk/lists/ListDataSet;->d(Lkotlin/jvm/b/Functions2;)I
 
     move-result v0
 
     .line 13
-    iget v1, p1, Lcom/vtosters/lite/api/wall/a;->c:I
+    iget v1, p1, Lcom/vtosters/lite/api/wall/GetCommentsResult;->c:I
 
-    iget-object v5, p1, Lcom/vtosters/lite/api/wall/a;->a:Lcom/vk/dto/common/data/VKList;
+    iget-object v5, p1, Lcom/vtosters/lite/api/wall/GetCommentsResult;->a:Lcom/vk/dto/common/data/VKList;
 
     invoke-virtual {v5}, Ljava/util/ArrayList;->size()I
 
@@ -219,7 +219,7 @@
 
     if-ge v1, v5, :cond_2
 
-    iget-object v1, p1, Lcom/vtosters/lite/api/wall/a;->a:Lcom/vk/dto/common/data/VKList;
+    iget-object v1, p1, Lcom/vtosters/lite/api/wall/GetCommentsResult;->a:Lcom/vk/dto/common/data/VKList;
 
     invoke-virtual {v1}, Ljava/util/ArrayList;->isEmpty()Z
 
@@ -231,11 +231,11 @@
     :cond_2
     iget-object v1, p0, Lcom/vk/wall/thread/CommentThreadPresenter$onPreviousDataLoaded$1;->a:Lcom/vk/wall/thread/CommentThreadPresenter;
 
-    invoke-virtual {v1}, Lcom/vk/wall/thread/CommentThreadPresenter;->r()Lcom/vk/lists/o;
+    invoke-virtual {v1}, Lcom/vk/wall/thread/CommentThreadPresenter;->r()Lcom/vk/lists/ListDataSet;
 
     move-result-object v1
 
-    invoke-virtual {v1, v0}, Lcom/vk/lists/o;->j(I)V
+    invoke-virtual {v1, v0}, Lcom/vk/lists/ListDataSet;->j(I)V
 
     const/4 v0, -0x1
 
@@ -247,30 +247,30 @@
     .line 16
     iget-object v1, p0, Lcom/vk/wall/thread/CommentThreadPresenter$onPreviousDataLoaded$1;->a:Lcom/vk/wall/thread/CommentThreadPresenter;
 
-    invoke-virtual {v1}, Lcom/vk/wall/thread/CommentThreadPresenter;->r()Lcom/vk/lists/o;
+    invoke-virtual {v1}, Lcom/vk/wall/thread/CommentThreadPresenter;->r()Lcom/vk/lists/ListDataSet;
 
     move-result-object v1
 
-    invoke-virtual {v1, v0}, Lcom/vk/lists/o;->k(I)Ljava/lang/Object;
+    invoke-virtual {v1, v0}, Lcom/vk/lists/ListDataSet;->k(I)Ljava/lang/Object;
 
     move-result-object v1
 
-    check-cast v1, Lcom/vk/wall/b;
+    check-cast v1, Lcom/vk/wall/CommentDisplayItem;
 
     invoke-static {v3}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
 
     move-result-object v5
 
-    invoke-virtual {v1, v5}, Lcom/vk/wall/b;->a(Ljava/lang/Object;)V
+    invoke-virtual {v1, v5}, Lcom/vk/wall/CommentDisplayItem;->a(Ljava/lang/Object;)V
 
     .line 17
     iget-object v1, p0, Lcom/vk/wall/thread/CommentThreadPresenter$onPreviousDataLoaded$1;->a:Lcom/vk/wall/thread/CommentThreadPresenter;
 
-    invoke-virtual {v1}, Lcom/vk/wall/thread/CommentThreadPresenter;->r()Lcom/vk/lists/o;
+    invoke-virtual {v1}, Lcom/vk/wall/thread/CommentThreadPresenter;->r()Lcom/vk/lists/ListDataSet;
 
     move-result-object v1
 
-    invoke-virtual {v1, v0}, Lcom/vk/lists/b;->a(I)V
+    invoke-virtual {v1, v0}, Lcom/vk/lists/BaseListDataSet;->a(I)V
 
     :cond_4
     :goto_0
@@ -284,11 +284,11 @@
     :cond_5
     iget-object v0, p0, Lcom/vk/wall/thread/CommentThreadPresenter$onPreviousDataLoaded$1;->a:Lcom/vk/wall/thread/CommentThreadPresenter;
 
-    invoke-virtual {v0}, Lcom/vk/wall/thread/CommentThreadPresenter;->r()Lcom/vk/lists/o;
+    invoke-virtual {v0}, Lcom/vk/wall/thread/CommentThreadPresenter;->r()Lcom/vk/lists/ListDataSet;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/vk/lists/o;->size()I
+    invoke-virtual {v0}, Lcom/vk/lists/ListDataSet;->size()I
 
     move-result v0
 
@@ -305,33 +305,33 @@
     :goto_1
     iget-object v1, p0, Lcom/vk/wall/thread/CommentThreadPresenter$onPreviousDataLoaded$1;->a:Lcom/vk/wall/thread/CommentThreadPresenter;
 
-    invoke-virtual {v1}, Lcom/vk/wall/thread/CommentThreadPresenter;->r()Lcom/vk/lists/o;
+    invoke-virtual {v1}, Lcom/vk/wall/thread/CommentThreadPresenter;->r()Lcom/vk/lists/ListDataSet;
 
     move-result-object v1
 
     iget-object v5, p0, Lcom/vk/wall/thread/CommentThreadPresenter$onPreviousDataLoaded$1;->a:Lcom/vk/wall/thread/CommentThreadPresenter;
 
-    invoke-virtual {v5}, Lcom/vk/wall/thread/CommentThreadPresenter;->s()Lcom/vk/wall/c;
+    invoke-virtual {v5}, Lcom/vk/wall/thread/CommentThreadPresenter;->s()Lcom/vk/wall/CommentDisplayItemsBuilder;
 
     move-result-object v5
 
     iget-object v6, p0, Lcom/vk/wall/thread/CommentThreadPresenter$onPreviousDataLoaded$1;->b:Lcom/vtosters/lite/NewsComment;
 
-    iget-object v7, p1, Lcom/vtosters/lite/api/wall/a;->a:Lcom/vk/dto/common/data/VKList;
+    iget-object v7, p1, Lcom/vtosters/lite/api/wall/GetCommentsResult;->a:Lcom/vk/dto/common/data/VKList;
 
-    invoke-static {v7, v4}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v7, v4}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    invoke-virtual {v5, v6, v7}, Lcom/vk/wall/c;->a(Lcom/vtosters/lite/NewsComment;Ljava/util/List;)Ljava/util/List;
+    invoke-virtual {v5, v6, v7}, Lcom/vk/wall/CommentDisplayItemsBuilder;->a(Lcom/vtosters/lite/NewsComment;Ljava/util/List;)Ljava/util/List;
 
     move-result-object v5
 
-    invoke-virtual {v1, v0, v5}, Lcom/vk/lists/o;->b(ILjava/util/List;)V
+    invoke-virtual {v1, v0, v5}, Lcom/vk/lists/ListDataSet;->b(ILjava/util/List;)V
 
     .line 20
     :goto_2
-    iget-object v0, p1, Lcom/vtosters/lite/api/wall/a;->a:Lcom/vk/dto/common/data/VKList;
+    iget-object v0, p1, Lcom/vtosters/lite/api/wall/GetCommentsResult;->a:Lcom/vk/dto/common/data/VKList;
 
-    invoke-static {v0, v4}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v4}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-interface {v0}, Ljava/util/Collection;->isEmpty()Z
 
@@ -346,9 +346,9 @@
 
     iget-object v0, v0, Lcom/vtosters/lite/NewsComment;->S:Ljava/util/List;
 
-    iget-object p1, p1, Lcom/vtosters/lite/api/wall/a;->a:Lcom/vk/dto/common/data/VKList;
+    iget-object p1, p1, Lcom/vtosters/lite/api/wall/GetCommentsResult;->a:Lcom/vk/dto/common/data/VKList;
 
-    invoke-static {p1, v4}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v4}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-interface {v0, v3, p1}, Ljava/util/List;->addAll(ILjava/util/Collection;)Z
 
@@ -375,11 +375,11 @@
     .line 24
     iget-object p1, p0, Lcom/vk/wall/thread/CommentThreadPresenter$onPreviousDataLoaded$1;->a:Lcom/vk/wall/thread/CommentThreadPresenter;
 
-    invoke-virtual {p1}, Lcom/vk/wall/thread/CommentThreadPresenter;->G()Lcom/vk/wall/f;
+    invoke-virtual {p1}, Lcom/vk/wall/thread/CommentThreadPresenter;->G()Lcom/vk/wall/CommentsListContract2;
 
     move-result-object p1
 
-    invoke-interface {p1}, Lcom/vk/wall/f;->v3()V
+    invoke-interface {p1}, Lcom/vk/wall/CommentsListContract2;->v3()V
 
     :cond_9
     return-void
@@ -389,9 +389,9 @@
     .locals 0
 
     .line 1
-    check-cast p1, Lcom/vtosters/lite/api/wall/a;
+    check-cast p1, Lcom/vtosters/lite/api/wall/GetCommentsResult;
 
-    invoke-virtual {p0, p1}, Lcom/vk/wall/thread/CommentThreadPresenter$onPreviousDataLoaded$1;->a(Lcom/vtosters/lite/api/wall/a;)V
+    invoke-virtual {p0, p1}, Lcom/vk/wall/thread/CommentThreadPresenter$onPreviousDataLoaded$1;->a(Lcom/vtosters/lite/api/wall/GetCommentsResult;)V
 
     return-void
 .end method

@@ -1,5 +1,5 @@
 .class Lcom/vtosters/lite/GameCardActivity$c;
-.super Lcom/vtosters/lite/api/l;
+.super Lcom/vtosters/lite/api/SimpleCallback;
 .source "GameCardActivity.java"
 
 
@@ -15,7 +15,7 @@
 
 .annotation system Ldalvik/annotation/Signature;
     value = {
-        "Lcom/vtosters/lite/api/l<",
+        "Lcom/vtosters/lite/api/SimpleCallback<",
         "Ljava/util/ArrayList<",
         "Lcom/vk/dto/games/GameGenre;",
         ">;>;"
@@ -34,7 +34,7 @@
     .line 1
     iput-object p1, p0, Lcom/vtosters/lite/GameCardActivity$c;->c:Lcom/vtosters/lite/GameCardActivity;
 
-    invoke-direct {p0}, Lcom/vtosters/lite/api/l;-><init>()V
+    invoke-direct {p0}, Lcom/vtosters/lite/api/SimpleCallback;-><init>()V
 
     return-void
 .end method

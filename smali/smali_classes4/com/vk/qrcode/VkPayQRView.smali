@@ -61,7 +61,7 @@
 
     const-string v0, "findViewById(R.id.iv_qr)"
 
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     check-cast p1, Landroid/widget/ImageView;
 
@@ -76,7 +76,7 @@
 
     const-string v0, "findViewById(R.id.switch_big_amount)"
 
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     check-cast p1, Landroidx/appcompat/widget/SwitchCompat;
 
@@ -85,9 +85,9 @@
     .line 8
     iget-object p1, p0, Lcom/vk/qrcode/VkPayQRView;->b:Landroidx/appcompat/widget/SwitchCompat;
 
-    new-instance v0, Lcom/vk/qrcode/u;
+    new-instance v0, Lcom/vk/qrcode/VkPayQRView4;
 
-    invoke-direct {v0, p0}, Lcom/vk/qrcode/u;-><init>(Lcom/vk/qrcode/VkPayQRView;)V
+    invoke-direct {v0, p0}, Lcom/vk/qrcode/VkPayQRView4;-><init>(Lcom/vk/qrcode/VkPayQRView;)V
 
     invoke-virtual {p1, v0}, Landroid/widget/CompoundButton;->setOnCheckedChangeListener(Landroid/widget/CompoundButton$OnCheckedChangeListener;)V
 
@@ -121,17 +121,17 @@
     return-void
 .end method
 
-.method private final a(Ljava/lang/String;ZLkotlin/jvm/b/b;)V
+.method private final a(Ljava/lang/String;ZLkotlin/jvm/b/Functions2;)V
     .locals 3
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
             "Ljava/lang/String;",
             "Z",
-            "Lkotlin/jvm/b/b<",
+            "Lkotlin/jvm/b/Functions2<",
             "-",
             "Landroid/graphics/Bitmap;",
-            "Lkotlin/m;",
+            "Lkotlin/Unit;",
             ">;)V"
         }
     .end annotation
@@ -155,7 +155,7 @@
 
     const-string v2, "context"
 
-    invoke-static {v1, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-direct {v0, v1}, Lcom/vk/qrcode/QRUtils$a;-><init>(Landroid/content/Context;)V
 
@@ -166,16 +166,16 @@
     invoke-virtual {v0, p2}, Lcom/vk/qrcode/QRUtils$a;->a(I)Lcom/vk/qrcode/QRUtils$a;
 
     .line 11
-    invoke-virtual {v0}, Lcom/vk/qrcode/QRUtils$a;->a()Lc/a/m;
+    invoke-virtual {v0}, Lcom/vk/qrcode/QRUtils$a;->a()Lio/reactivex/Observable;
 
     move-result-object p1
 
     if-eqz p3, :cond_1
 
     .line 12
-    new-instance p2, Lcom/vk/qrcode/v;
+    new-instance p2, Lcom/vk/qrcode/VkPayQRView2;
 
-    invoke-direct {p2, p3}, Lcom/vk/qrcode/v;-><init>(Lkotlin/jvm/b/b;)V
+    invoke-direct {p2, p3}, Lcom/vk/qrcode/VkPayQRView2;-><init>(Lkotlin/jvm/b/Functions2;)V
 
     goto :goto_1
 
@@ -183,9 +183,9 @@
     move-object p2, p3
 
     :goto_1
-    check-cast p2, Lc/a/z/g;
+    check-cast p2, Lio/reactivex/functions/Consumer;
 
-    invoke-virtual {p1, p2}, Lc/a/m;->f(Lc/a/z/g;)Lio/reactivex/disposables/b;
+    invoke-virtual {p1, p2}, Lio/reactivex/Observable;->f(Lio/reactivex/functions/Consumer;)Lio/reactivex/disposables/Disposable;
 
     move-result-object p1
 
@@ -222,9 +222,9 @@
     const-string p3, "subscription"
 
     .line 14
-    invoke-static {p1, p3}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, p3}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    invoke-static {p1, p2}, Lcom/vk/extensions/p;->a(Lio/reactivex/disposables/b;Lcom/vtosters/lite/VKActivity;)Lio/reactivex/disposables/b;
+    invoke-static {p1, p2}, Lcom/vk/extensions/VKRxExt;->a(Lio/reactivex/disposables/Disposable;Lcom/vtosters/lite/VKActivity;)Lio/reactivex/disposables/Disposable;
 
     :cond_4
     return-void
@@ -268,7 +268,7 @@
     .locals 7
 
     .line 4
-    sget-object v0, Lcom/vk/qrcode/x;->a:Lcom/vk/qrcode/x;
+    sget-object v0, Lcom/vk/qrcode/VkPayQRView1;->a:Lcom/vk/qrcode/VkPayQRView1;
 
     const/4 v5, 0x0
 
@@ -278,12 +278,12 @@
 
     move-wide v3, p1
 
-    invoke-virtual/range {v0 .. v5}, Lcom/vk/qrcode/x;->a(Ljava/lang/String;Ljava/lang/String;JZ)Ljava/lang/String;
+    invoke-virtual/range {v0 .. v5}, Lcom/vk/qrcode/VkPayQRView1;->a(Ljava/lang/String;Ljava/lang/String;JZ)Ljava/lang/String;
 
     move-result-object v0
 
     .line 5
-    sget-object v1, Lcom/vk/qrcode/x;->a:Lcom/vk/qrcode/x;
+    sget-object v1, Lcom/vk/qrcode/VkPayQRView1;->a:Lcom/vk/qrcode/VkPayQRView1;
 
     const/4 v6, 0x1
 
@@ -293,7 +293,7 @@
 
     move-wide v4, p1
 
-    invoke-virtual/range {v1 .. v6}, Lcom/vk/qrcode/x;->a(Ljava/lang/String;Ljava/lang/String;JZ)Ljava/lang/String;
+    invoke-virtual/range {v1 .. v6}, Lcom/vk/qrcode/VkPayQRView1;->a(Ljava/lang/String;Ljava/lang/String;JZ)Ljava/lang/String;
 
     move-result-object p1
 
@@ -304,7 +304,7 @@
 
     const/4 p3, 0x0
 
-    invoke-direct {p0, v0, p3, p2}, Lcom/vk/qrcode/VkPayQRView;->a(Ljava/lang/String;ZLkotlin/jvm/b/b;)V
+    invoke-direct {p0, v0, p3, p2}, Lcom/vk/qrcode/VkPayQRView;->a(Ljava/lang/String;ZLkotlin/jvm/b/Functions2;)V
 
     .line 7
     new-instance p2, Lcom/vk/qrcode/VkPayQRView$prepareQrCodes$2;
@@ -313,7 +313,7 @@
 
     const/4 p3, 0x1
 
-    invoke-direct {p0, p1, p3, p2}, Lcom/vk/qrcode/VkPayQRView;->a(Ljava/lang/String;ZLkotlin/jvm/b/b;)V
+    invoke-direct {p0, p1, p3, p2}, Lcom/vk/qrcode/VkPayQRView;->a(Ljava/lang/String;ZLkotlin/jvm/b/Functions2;)V
 
     return-void
 .end method

@@ -3,7 +3,7 @@
 .source "VideoFileController.kt"
 
 # interfaces
-.implements Lb/h/g/l/e;
+.implements Lb/h/g/l/NotificationListener;
 
 
 # annotations
@@ -22,7 +22,7 @@
         "Ljava/lang/Object;",
         ">",
         "Ljava/lang/Object;",
-        "Lb/h/g/l/e<",
+        "Lb/h/g/l/NotificationListener<",
         "Ljava/lang/Object;",
         ">;"
     }
@@ -69,10 +69,10 @@
     if-eqz p3, :cond_1
 
     .line 1
-    check-cast p3, Lb/h/g/l/b;
+    check-cast p3, Lb/h/g/l/EventWallPostReposted;
 
     .line 2
-    invoke-virtual {p3}, Lb/h/g/l/b;->c()I
+    invoke-virtual {p3}, Lb/h/g/l/EventWallPostReposted;->c()I
 
     move-result p1
 
@@ -86,7 +86,7 @@
 
     if-ne p1, p2, :cond_6
 
-    invoke-virtual {p3}, Lb/h/g/l/b;->b()I
+    invoke-virtual {p3}, Lb/h/g/l/EventWallPostReposted;->b()I
 
     move-result p1
 
@@ -107,7 +107,7 @@
 
     move-result-object p1
 
-    invoke-virtual {p3}, Lb/h/g/l/b;->a()I
+    invoke-virtual {p3}, Lb/h/g/l/EventWallPostReposted;->a()I
 
     move-result p2
 
@@ -120,7 +120,7 @@
 
     move-result-object p1
 
-    invoke-virtual {p3}, Lb/h/g/l/b;->d()I
+    invoke-virtual {p3}, Lb/h/g/l/EventWallPostReposted;->d()I
 
     move-result p2
 
@@ -133,7 +133,7 @@
 
     move-result-object p1
 
-    invoke-virtual {p3}, Lb/h/g/l/b;->e()Z
+    invoke-virtual {p3}, Lb/h/g/l/EventWallPostReposted;->e()Z
 
     move-result p2
 
@@ -146,7 +146,7 @@
 
     move-result-object p1
 
-    invoke-virtual {p3}, Lb/h/g/l/b;->f()Z
+    invoke-virtual {p3}, Lb/h/g/l/EventWallPostReposted;->f()Z
 
     move-result p2
 

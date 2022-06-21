@@ -3,7 +3,7 @@
 .source "BaseAuthPresenter.kt"
 
 # interfaces
-.implements Lc/a/z/g;
+.implements Lio/reactivex/functions/Consumer;
 
 
 # annotations
@@ -22,8 +22,8 @@
         "Ljava/lang/Object;",
         ">",
         "Ljava/lang/Object;",
-        "Lc/a/z/g<",
-        "Lcom/vk/auth/api/models/d;",
+        "Lio/reactivex/functions/Consumer<",
+        "Lcom/vk/auth/api/models/SignUpResult;",
         ">;"
     }
 .end annotation
@@ -46,7 +46,7 @@
 
 
 # virtual methods
-.method public final a(Lcom/vk/auth/api/models/d;)V
+.method public final a(Lcom/vk/auth/api/models/SignUpResult;)V
     .locals 0
 
     .line 1
@@ -65,9 +65,9 @@
     .locals 0
 
     .line 1
-    check-cast p1, Lcom/vk/auth/api/models/d;
+    check-cast p1, Lcom/vk/auth/api/models/SignUpResult;
 
-    invoke-virtual {p0, p1}, Lcom/vk/auth/base/BaseAuthPresenter$b;->a(Lcom/vk/auth/api/models/d;)V
+    invoke-virtual {p0, p1}, Lcom/vk/auth/base/BaseAuthPresenter$b;->a(Lcom/vk/auth/api/models/SignUpResult;)V
 
     return-void
 .end method

@@ -56,7 +56,7 @@
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, v1}, Lcom/vk/search/PeopleSearchParams$a;-><init>(Lkotlin/jvm/internal/i;)V
+    invoke-direct {v0, v1}, Lcom/vk/search/PeopleSearchParams$a;-><init>(Lkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     sput-object v0, Lcom/vk/search/PeopleSearchParams;->N:Lcom/vk/search/PeopleSearchParams$a;
 
@@ -268,7 +268,7 @@
     if-ne v1, v2, :cond_1
 
     .line 5
-    sget-object v1, Lcom/vk/core/util/i;->a:Landroid/content/Context;
+    sget-object v1, Lcom/vk/core/util/AppContextHolder;->a:Landroid/content/Context;
 
     const v2, 0x7f1202ee
 
@@ -278,7 +278,7 @@
 
     const-string v2, "AppContextHolder.context\u2026cover_search_gender_male)"
 
-    invoke-static {v1, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {v0, v1}, Lcom/vk/dto/common/SearchParams$b;->a(Ljava/lang/String;)V
 
@@ -291,7 +291,7 @@
     if-ne v1, v2, :cond_2
 
     .line 7
-    sget-object v1, Lcom/vk/core/util/i;->a:Landroid/content/Context;
+    sget-object v1, Lcom/vk/core/util/AppContextHolder;->a:Landroid/content/Context;
 
     const v2, 0x7f1202ed
 
@@ -301,14 +301,14 @@
 
     const-string v2, "AppContextHolder.context\u2026ver_search_gender_female)"
 
-    invoke-static {v1, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {v0, v1}, Lcom/vk/dto/common/SearchParams$b;->a(Ljava/lang/String;)V
 
     .line 8
     :cond_2
     :goto_0
-    sget-object v1, Lcom/vk/core/util/i;->a:Landroid/content/Context;
+    sget-object v1, Lcom/vk/core/util/AppContextHolder;->a:Landroid/content/Context;
 
     const v2, 0x7f12047c
 
@@ -318,10 +318,10 @@
 
     const-string v2, "AppContextHolder.context.getString(R.string.from)"
 
-    invoke-static {v1, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 9
-    sget-object v2, Lcom/vk/core/util/i;->a:Landroid/content/Context;
+    sget-object v2, Lcom/vk/core/util/AppContextHolder;->a:Landroid/content/Context;
 
     const v3, 0x7f120fdb
 
@@ -331,7 +331,7 @@
 
     const-string v3, "AppContextHolder.context.getString(R.string.to)"
 
-    invoke-static {v2, v3}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v2, v3}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 10
     iget v3, p0, Lcom/vk/search/PeopleSearchParams;->B:I
@@ -441,7 +441,7 @@
     if-eq v1, v2, :cond_7
 
     .line 17
-    sget-object v2, Lcom/vk/core/util/i;->a:Landroid/content/Context;
+    sget-object v2, Lcom/vk/core/util/AppContextHolder;->a:Landroid/content/Context;
 
     iget v3, p0, Lcom/vk/search/PeopleSearchParams;->h:I
 
@@ -463,7 +463,7 @@
 
     const-string v2, "relationships.getName(Ap\u2026t, gender == GENDER_MALE)"
 
-    invoke-static {v1, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {v0, v1}, Lcom/vk/dto/common/SearchParams$b;->a(Ljava/lang/String;)V
 

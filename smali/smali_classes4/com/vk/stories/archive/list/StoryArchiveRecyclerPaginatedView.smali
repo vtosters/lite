@@ -4,11 +4,11 @@
 
 
 # instance fields
-.field private V:Lkotlin/jvm/b/a;
+.field private V:Lkotlin/jvm/b/Functions;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Lkotlin/jvm/b/a<",
-            "Lkotlin/m;",
+            "Lkotlin/jvm/b/Functions<",
+            "Lkotlin/Unit;",
             ">;"
         }
     .end annotation
@@ -70,52 +70,52 @@
 
     const-string v0, "findViewById<View>(R.id.publish_story)"
 
-    invoke-static {p2, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p2, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     new-instance v0, Lcom/vk/stories/archive/list/StoryArchiveRecyclerPaginatedView$createEmptyView$$inlined$apply$lambda$1;
 
     invoke-direct {v0, p0}, Lcom/vk/stories/archive/list/StoryArchiveRecyclerPaginatedView$createEmptyView$$inlined$apply$lambda$1;-><init>(Lcom/vk/stories/archive/list/StoryArchiveRecyclerPaginatedView;)V
 
-    invoke-static {p2, v0}, Lcom/vk/extensions/ViewExtKt;->e(Landroid/view/View;Lkotlin/jvm/b/b;)V
+    invoke-static {p2, v0}, Lcom/vk/extensions/ViewExtKt;->e(Landroid/view/View;Lkotlin/jvm/b/Functions2;)V
 
     const-string p2, "LayoutInflater.from(cont\u2026)\n            }\n        }"
 
     .line 3
-    invoke-static {p1, p2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, p2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     return-object p1
 .end method
 
-.method public final getOpenCamera()Lkotlin/jvm/b/a;
+.method public final getOpenCamera()Lkotlin/jvm/b/Functions;
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "()",
-            "Lkotlin/jvm/b/a<",
-            "Lkotlin/m;",
+            "Lkotlin/jvm/b/Functions<",
+            "Lkotlin/Unit;",
             ">;"
         }
     .end annotation
 
     .line 1
-    iget-object v0, p0, Lcom/vk/stories/archive/list/StoryArchiveRecyclerPaginatedView;->V:Lkotlin/jvm/b/a;
+    iget-object v0, p0, Lcom/vk/stories/archive/list/StoryArchiveRecyclerPaginatedView;->V:Lkotlin/jvm/b/Functions;
 
     return-object v0
 .end method
 
-.method public final setOpenCamera(Lkotlin/jvm/b/a;)V
+.method public final setOpenCamera(Lkotlin/jvm/b/Functions;)V
     .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lkotlin/jvm/b/a<",
-            "Lkotlin/m;",
+            "Lkotlin/jvm/b/Functions<",
+            "Lkotlin/Unit;",
             ">;)V"
         }
     .end annotation
 
     .line 1
-    iput-object p1, p0, Lcom/vk/stories/archive/list/StoryArchiveRecyclerPaginatedView;->V:Lkotlin/jvm/b/a;
+    iput-object p1, p0, Lcom/vk/stories/archive/list/StoryArchiveRecyclerPaginatedView;->V:Lkotlin/jvm/b/Functions;
 
     return-void
 .end method

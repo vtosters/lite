@@ -3,7 +3,7 @@
 .source "CameraEffectTextures.java"
 
 # interfaces
-.implements Lcom/facebook/share/model/a;
+.implements Lcom/facebook/share/model/ShareModelBuilder;
 
 
 # annotations
@@ -19,7 +19,7 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Ljava/lang/Object;",
-        "Lcom/facebook/share/model/a<",
+        "Lcom/facebook/share/model/ShareModelBuilder<",
         "Lcom/facebook/share/model/CameraEffectTextures;",
         "Lcom/facebook/share/model/CameraEffectTextures$b;",
         ">;"

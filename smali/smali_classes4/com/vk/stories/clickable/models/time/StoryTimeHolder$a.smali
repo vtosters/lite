@@ -47,9 +47,9 @@
     .locals 1
 
     .line 2
-    new-instance v0, Lcom/vk/stories/clickable/models/time/a;
+    new-instance v0, Lcom/vk/stories/clickable/models/time/StoryTimeHolder1;
 
-    invoke-direct {v0, p1, p2}, Lcom/vk/stories/clickable/models/time/a;-><init>(J)V
+    invoke-direct {v0, p1, p2}, Lcom/vk/stories/clickable/models/time/StoryTimeHolder1;-><init>(J)V
 
     return-object v0
 .end method
@@ -58,9 +58,9 @@
     .locals 1
 
     .line 1
-    new-instance v0, Lcom/vk/stories/clickable/models/time/a;
+    new-instance v0, Lcom/vk/stories/clickable/models/time/StoryTimeHolder1;
 
-    invoke-direct {v0, p1}, Lcom/vk/stories/clickable/models/time/a;-><init>(Ljava/lang/String;)V
+    invoke-direct {v0, p1}, Lcom/vk/stories/clickable/models/time/StoryTimeHolder1;-><init>(Ljava/lang/String;)V
 
     return-object v0
 .end method

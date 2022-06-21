@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/audiomsg/player/impl/PrefetchDelegate;->d(Lcom/vk/audiomsg/player/f;)Ljava/util/concurrent/CountDownLatch;
+    value = Lcom/vk/audiomsg/player/impl/PrefetchDelegate;->d(Lcom/vk/audiomsg/player/Source;)Ljava/util/concurrent/CountDownLatch;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;

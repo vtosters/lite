@@ -46,7 +46,7 @@
 
     const-string v1, "map"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {v0}, Lcom/google/android/gms/maps/c;->b()Lcom/google/android/gms/maps/model/CameraPosition;
 
@@ -61,11 +61,11 @@
 
     iget-object v1, v1, Lcom/vk/im/ui/components/msg_send/picker/location/MapVh$b;->a:Lcom/vk/im/ui/components/msg_send/picker/location/MapVh;
 
-    invoke-static {v1}, Lcom/vk/im/ui/components/msg_send/picker/location/MapVh;->e(Lcom/vk/im/ui/components/msg_send/picker/location/MapVh;)Lcom/vk/im/ui/components/msg_send/picker/location/g;
+    invoke-static {v1}, Lcom/vk/im/ui/components/msg_send/picker/location/MapVh;->e(Lcom/vk/im/ui/components/msg_send/picker/location/MapVh;)Lcom/vk/im/ui/components/msg_send/picker/location/LocationStateItems;
 
     move-result-object v1
 
-    invoke-virtual {v1}, Lcom/vk/im/ui/components/msg_send/picker/location/g;->a()Lcom/vk/dto/geo/GeoLocation;
+    invoke-virtual {v1}, Lcom/vk/im/ui/components/msg_send/picker/location/LocationStateItems;->a()Lcom/vk/dto/geo/GeoLocation;
 
     move-result-object v1
 
@@ -104,7 +104,7 @@
 
     const-string v3, "mapPos"
 
-    invoke-static {v0, v3}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v3}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-static {v1, v2, v0}, Lcom/vk/im/ui/components/msg_send/picker/location/MapVh;->a(Lcom/vk/im/ui/components/msg_send/picker/location/MapVh;Lcom/google/android/gms/maps/model/LatLng;Lcom/google/android/gms/maps/model/LatLng;)Z
 
@@ -122,7 +122,7 @@
 
     iget-object v1, v1, Lcom/vk/im/ui/components/msg_send/picker/location/MapVh$b;->a:Lcom/vk/im/ui/components/msg_send/picker/location/MapVh;
 
-    invoke-virtual {v1}, Lcom/vk/im/ui/components/msg_send/picker/location/MapVh;->e0()Lcom/vk/im/ui/components/msg_send/picker/location/f;
+    invoke-virtual {v1}, Lcom/vk/im/ui/components/msg_send/picker/location/MapVh;->e0()Lcom/vk/im/ui/components/msg_send/picker/location/MapCallback;
 
     move-result-object v1
 
@@ -132,7 +132,7 @@
 
     iget-wide v4, v0, Lcom/google/android/gms/maps/model/LatLng;->b:D
 
-    invoke-interface {v1, v2, v3, v4, v5}, Lcom/vk/im/ui/components/msg_send/picker/location/f;->a(DD)V
+    invoke-interface {v1, v2, v3, v4, v5}, Lcom/vk/im/ui/components/msg_send/picker/location/MapCallback;->a(DD)V
 
     :cond_3
     return-void

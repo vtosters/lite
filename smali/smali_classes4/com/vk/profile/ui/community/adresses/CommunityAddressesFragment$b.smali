@@ -1,5 +1,5 @@
 .class public final Lcom/vk/profile/ui/community/adresses/CommunityAddressesFragment$b;
-.super Lcom/vk/navigation/o;
+.super Lcom/vk/navigation/Navigator;
 .source "CommunityAddressesFragment.kt"
 
 
@@ -21,29 +21,29 @@
     .line 1
     const-class v0, Lcom/vk/profile/ui/community/adresses/CommunityAddressesFragment;
 
-    invoke-direct {p0, v0}, Lcom/vk/navigation/o;-><init>(Ljava/lang/Class;)V
+    invoke-direct {p0, v0}, Lcom/vk/navigation/Navigator;-><init>(Ljava/lang/Class;)V
 
     const/4 v0, 0x0
 
     .line 2
-    invoke-virtual {p0, v0}, Lcom/vk/navigation/o;->b(Z)Lcom/vk/navigation/o;
+    invoke-virtual {p0, v0}, Lcom/vk/navigation/Navigator;->b(Z)Lcom/vk/navigation/Navigator;
 
     .line 3
-    iget-object v0, p0, Lcom/vk/navigation/o;->O0:Landroid/os/Bundle;
+    iget-object v0, p0, Lcom/vk/navigation/Navigator;->O0:Landroid/os/Bundle;
 
     const-string v1, "address_id"
 
     invoke-virtual {v0, v1, p1}, Landroid/os/Bundle;->putInt(Ljava/lang/String;I)V
 
     .line 4
-    iget-object p1, p0, Lcom/vk/navigation/o;->O0:Landroid/os/Bundle;
+    iget-object p1, p0, Lcom/vk/navigation/Navigator;->O0:Landroid/os/Bundle;
 
     const-string v0, "url"
 
     invoke-virtual {p1, v0, p2}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 5
-    iget-object p1, p0, Lcom/vk/navigation/o;->O0:Landroid/os/Bundle;
+    iget-object p1, p0, Lcom/vk/navigation/Navigator;->O0:Landroid/os/Bundle;
 
     const-string p2, "main_address"
 
@@ -52,7 +52,7 @@
     return-void
 .end method
 
-.method public synthetic constructor <init>(ILjava/lang/String;Lcom/vk/dto/profile/Address;ILkotlin/jvm/internal/i;)V
+.method public synthetic constructor <init>(ILjava/lang/String;Lcom/vk/dto/profile/Address;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
     .locals 1
 
     and-int/lit8 p5, p4, 0x2
@@ -83,7 +83,7 @@
     .locals 2
 
     .line 1
-    iget-object v0, p0, Lcom/vk/navigation/o;->O0:Landroid/os/Bundle;
+    iget-object v0, p0, Lcom/vk/navigation/Navigator;->O0:Landroid/os/Bundle;
 
     const-string v1, "start_form_aid"
 
@@ -96,7 +96,7 @@
     .locals 2
 
     .line 2
-    iget-object v0, p0, Lcom/vk/navigation/o;->O0:Landroid/os/Bundle;
+    iget-object v0, p0, Lcom/vk/navigation/Navigator;->O0:Landroid/os/Bundle;
 
     const-string v1, "old_address"
 
@@ -109,7 +109,7 @@
     .locals 3
 
     .line 1
-    iget-object v0, p0, Lcom/vk/navigation/o;->O0:Landroid/os/Bundle;
+    iget-object v0, p0, Lcom/vk/navigation/Navigator;->O0:Landroid/os/Bundle;
 
     const-string v1, "show_main_address"
 

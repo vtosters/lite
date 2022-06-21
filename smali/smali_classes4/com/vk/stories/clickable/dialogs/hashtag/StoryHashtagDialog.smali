@@ -3,7 +3,7 @@
 .source "StoryHashtagDialog.kt"
 
 # interfaces
-.implements Lcom/vk/stories/clickable/dialogs/hashtag/c;
+.implements Lcom/vk/stories/clickable/dialogs/hashtag/StoryHashtagDialogContract;
 
 
 # instance fields
@@ -13,13 +13,13 @@
 
 .field private D:Z
 
-.field private E:Lcom/vk/stories/clickable/dialogs/hashtag/b;
+.field private E:Lcom/vk/stories/clickable/dialogs/hashtag/StoryHashtagDialogContract1;
 
-.field private final F:Lcom/vk/stories/clickable/models/d;
+.field private final F:Lcom/vk/stories/clickable/models/StoryHashtagTypeParams5;
 
-.field private final G:Lcom/vk/stories/clickable/dialogs/hashtag/a;
+.field private final G:Lcom/vk/stories/clickable/dialogs/hashtag/StoryHashtagDialog1;
 
-.field private a:Lcom/vk/core/util/d;
+.field private a:Lcom/vk/core/util/AndroidBug5497Workaround2;
 
 .field public b:Landroid/widget/TextView;
 
@@ -37,15 +37,15 @@
 
 
 # direct methods
-.method public constructor <init>(Landroid/content/Context;ZLcom/vk/stories/clickable/models/d;Lcom/vk/stories/clickable/dialogs/hashtag/a;Ljava/util/List;I)V
+.method public constructor <init>(Landroid/content/Context;ZLcom/vk/stories/clickable/models/StoryHashtagTypeParams5;Lcom/vk/stories/clickable/dialogs/hashtag/StoryHashtagDialog1;Ljava/util/List;I)V
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
             "Landroid/content/Context;",
             "Z",
-            "Lcom/vk/stories/clickable/models/d;",
-            "Lcom/vk/stories/clickable/dialogs/hashtag/a;",
+            "Lcom/vk/stories/clickable/models/StoryHashtagTypeParams5;",
+            "Lcom/vk/stories/clickable/dialogs/hashtag/StoryHashtagDialog1;",
             "Ljava/util/List<",
             "Ljava/lang/String;",
             ">;I)V"
@@ -53,22 +53,22 @@
     .end annotation
 
     .line 1
-    invoke-static {p2}, Lcom/vk/attachpicker/stickers/j0;->a(Z)I
+    invoke-static {p2}, Lcom/vk/attachpicker/stickers/StickerDialogUtils;->a(Z)I
 
     move-result v0
 
     invoke-direct {p0, p1, v0}, Landroid/app/Dialog;-><init>(Landroid/content/Context;I)V
 
-    iput-object p3, p0, Lcom/vk/stories/clickable/dialogs/hashtag/StoryHashtagDialog;->F:Lcom/vk/stories/clickable/models/d;
+    iput-object p3, p0, Lcom/vk/stories/clickable/dialogs/hashtag/StoryHashtagDialog;->F:Lcom/vk/stories/clickable/models/StoryHashtagTypeParams5;
 
-    iput-object p4, p0, Lcom/vk/stories/clickable/dialogs/hashtag/StoryHashtagDialog;->G:Lcom/vk/stories/clickable/dialogs/hashtag/a;
+    iput-object p4, p0, Lcom/vk/stories/clickable/dialogs/hashtag/StoryHashtagDialog;->G:Lcom/vk/stories/clickable/dialogs/hashtag/StoryHashtagDialog1;
 
     .line 2
     new-instance p3, Lcom/vk/stories/clickable/dialogs/hashtag/StoryHashtagDialogPresenter;
 
-    invoke-direct {p3, p0, p5, p6}, Lcom/vk/stories/clickable/dialogs/hashtag/StoryHashtagDialogPresenter;-><init>(Lcom/vk/stories/clickable/dialogs/hashtag/c;Ljava/util/List;I)V
+    invoke-direct {p3, p0, p5, p6}, Lcom/vk/stories/clickable/dialogs/hashtag/StoryHashtagDialogPresenter;-><init>(Lcom/vk/stories/clickable/dialogs/hashtag/StoryHashtagDialogContract;Ljava/util/List;I)V
 
-    iput-object p3, p0, Lcom/vk/stories/clickable/dialogs/hashtag/StoryHashtagDialog;->E:Lcom/vk/stories/clickable/dialogs/hashtag/b;
+    iput-object p3, p0, Lcom/vk/stories/clickable/dialogs/hashtag/StoryHashtagDialog;->E:Lcom/vk/stories/clickable/dialogs/hashtag/StoryHashtagDialogContract1;
 
     .line 3
     invoke-virtual {p0}, Landroid/app/Dialog;->getWindow()Landroid/view/Window;
@@ -98,7 +98,7 @@
     if-eqz p2, :cond_2
 
     .line 5
-    new-instance p2, Lcom/vk/core/util/d;
+    new-instance p2, Lcom/vk/core/util/AndroidBug5497Workaround2;
 
     invoke-virtual {p0}, Landroid/app/Dialog;->getWindow()Landroid/view/Window;
 
@@ -106,14 +106,14 @@
 
     if-eqz p3, :cond_1
 
-    invoke-direct {p2, p3, p1}, Lcom/vk/core/util/d;-><init>(Landroid/view/Window;Landroid/view/View;)V
+    invoke-direct {p2, p3, p1}, Lcom/vk/core/util/AndroidBug5497Workaround2;-><init>(Landroid/view/Window;Landroid/view/View;)V
 
-    iput-object p2, p0, Lcom/vk/stories/clickable/dialogs/hashtag/StoryHashtagDialog;->a:Lcom/vk/core/util/d;
+    iput-object p2, p0, Lcom/vk/stories/clickable/dialogs/hashtag/StoryHashtagDialog;->a:Lcom/vk/core/util/AndroidBug5497Workaround2;
 
     goto :goto_0
 
     :cond_1
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     throw p4
 
@@ -122,7 +122,7 @@
     const-string p2, "view"
 
     .line 6
-    invoke-static {p1, p2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, p2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {p0, p1}, Lcom/vk/stories/clickable/dialogs/hashtag/StoryHashtagDialog;->a(Landroid/view/View;)V
 
@@ -138,7 +138,7 @@
 
     invoke-direct {p3, p0}, Lcom/vk/stories/clickable/dialogs/hashtag/StoryHashtagDialog$1;-><init>(Lcom/vk/stories/clickable/dialogs/hashtag/StoryHashtagDialog;)V
 
-    invoke-static {p2, p3}, Lcom/vk/extensions/ViewExtKt;->e(Landroid/view/View;Lkotlin/jvm/b/b;)V
+    invoke-static {p2, p3}, Lcom/vk/extensions/ViewExtKt;->e(Landroid/view/View;Lkotlin/jvm/b/Functions2;)V
 
     .line 9
     invoke-virtual {p0}, Lcom/vk/stories/clickable/dialogs/hashtag/StoryHashtagDialog;->k()Landroid/view/ViewGroup;
@@ -149,7 +149,7 @@
 
     invoke-direct {p3, p0}, Lcom/vk/stories/clickable/dialogs/hashtag/StoryHashtagDialog$2;-><init>(Lcom/vk/stories/clickable/dialogs/hashtag/StoryHashtagDialog;)V
 
-    invoke-static {p2, p3}, Lcom/vk/extensions/ViewExtKt;->e(Landroid/view/View;Lkotlin/jvm/b/b;)V
+    invoke-static {p2, p3}, Lcom/vk/extensions/ViewExtKt;->e(Landroid/view/View;Lkotlin/jvm/b/Functions2;)V
 
     .line 10
     invoke-virtual {p0}, Lcom/vk/stories/clickable/dialogs/hashtag/StoryHashtagDialog;->h()Lcom/vk/stories/clickable/views/StoryGradientEditText;
@@ -160,7 +160,7 @@
 
     invoke-direct {p3, p0}, Lcom/vk/stories/clickable/dialogs/hashtag/StoryHashtagDialog$a;-><init>(Lcom/vk/stories/clickable/dialogs/hashtag/StoryHashtagDialog;)V
 
-    invoke-virtual {p2, p3}, Lcom/vk/stories/clickable/views/StoryGradientEditText;->setPressKey(Lcom/vk/stories/clickable/views/a;)V
+    invoke-virtual {p2, p3}, Lcom/vk/stories/clickable/views/StoryGradientEditText;->setPressKey(Lcom/vk/stories/clickable/views/StoryGradientEditText1;)V
 
     .line 11
     invoke-virtual {p0}, Lcom/vk/stories/clickable/dialogs/hashtag/StoryHashtagDialog;->c()Lcom/vk/stories/clickable/views/PrivacyHintView;
@@ -174,13 +174,13 @@
     invoke-virtual {p2, p3}, Lcom/vk/stories/clickable/views/PrivacyHintView;->setSetupButtonClickListener(Landroid/view/View$OnClickListener;)V
 
     .line 12
-    invoke-virtual {p0}, Lcom/vk/stories/clickable/dialogs/hashtag/StoryHashtagDialog;->getPresenter()Lcom/vk/stories/clickable/dialogs/hashtag/b;
+    invoke-virtual {p0}, Lcom/vk/stories/clickable/dialogs/hashtag/StoryHashtagDialog;->getPresenter()Lcom/vk/stories/clickable/dialogs/hashtag/StoryHashtagDialogContract1;
 
     move-result-object p2
 
     if-eqz p2, :cond_3
 
-    invoke-interface {p2}, Lcom/vk/stories/clickable/dialogs/hashtag/b;->onStart()V
+    invoke-interface {p2}, Lcom/vk/stories/clickable/dialogs/hashtag/StoryHashtagDialogContract1;->onStart()V
 
     .line 13
     :cond_3
@@ -191,11 +191,11 @@
 
 
 # virtual methods
-.method public A0()Lcom/vk/stories/clickable/models/d;
+.method public A0()Lcom/vk/stories/clickable/models/StoryHashtagTypeParams5;
     .locals 1
 
     .line 1
-    iget-object v0, p0, Lcom/vk/stories/clickable/dialogs/hashtag/StoryHashtagDialog;->F:Lcom/vk/stories/clickable/models/d;
+    iget-object v0, p0, Lcom/vk/stories/clickable/dialogs/hashtag/StoryHashtagDialog;->F:Lcom/vk/stories/clickable/models/StoryHashtagTypeParams5;
 
     return-object v0
 .end method
@@ -204,7 +204,7 @@
     .locals 0
 
     .line 3
-    invoke-static {p0, p1}, Lcom/vk/stories/clickable/dialogs/hashtag/c$a;->a(Lcom/vk/stories/clickable/dialogs/hashtag/c;I)V
+    invoke-static {p0, p1}, Lcom/vk/stories/clickable/dialogs/hashtag/StoryHashtagDialogContract$a;->a(Lcom/vk/stories/clickable/dialogs/hashtag/StoryHashtagDialogContract;I)V
 
     return-void
 .end method
@@ -213,7 +213,7 @@
     .locals 0
 
     .line 2
-    invoke-static {p0, p1}, Lcom/vk/stories/clickable/dialogs/hashtag/c$a;->a(Lcom/vk/stories/clickable/dialogs/hashtag/c;Landroid/view/View;)V
+    invoke-static {p0, p1}, Lcom/vk/stories/clickable/dialogs/hashtag/StoryHashtagDialogContract$a;->a(Lcom/vk/stories/clickable/dialogs/hashtag/StoryHashtagDialogContract;Landroid/view/View;)V
 
     return-void
 .end method
@@ -227,11 +227,11 @@
     return-void
 .end method
 
-.method public a(Lcom/vk/stories/clickable/models/c;)V
+.method public a(Lcom/vk/stories/clickable/models/StoryHashtagTypeParams2;)V
     .locals 0
 
     .line 1
-    invoke-static {p0, p1}, Lcom/vk/stories/clickable/dialogs/hashtag/c$a;->a(Lcom/vk/stories/clickable/dialogs/hashtag/c;Lcom/vk/stories/clickable/models/c;)V
+    invoke-static {p0, p1}, Lcom/vk/stories/clickable/dialogs/hashtag/StoryHashtagDialogContract$a;->a(Lcom/vk/stories/clickable/dialogs/hashtag/StoryHashtagDialogContract;Lcom/vk/stories/clickable/models/StoryHashtagTypeParams2;)V
 
     return-void
 .end method
@@ -290,11 +290,11 @@
     return v0
 .end method
 
-.method public a0()Lcom/vk/stories/clickable/dialogs/hashtag/a;
+.method public a0()Lcom/vk/stories/clickable/dialogs/hashtag/StoryHashtagDialog1;
     .locals 1
 
     .line 1
-    iget-object v0, p0, Lcom/vk/stories/clickable/dialogs/hashtag/StoryHashtagDialog;->G:Lcom/vk/stories/clickable/dialogs/hashtag/a;
+    iget-object v0, p0, Lcom/vk/stories/clickable/dialogs/hashtag/StoryHashtagDialog;->G:Lcom/vk/stories/clickable/dialogs/hashtag/StoryHashtagDialog1;
 
     return-object v0
 .end method
@@ -348,7 +348,7 @@
     :cond_0
     const-string v0, "privacyHintView"
 
-    invoke-static {v0}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v0}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     const/4 v0, 0x0
 
@@ -377,7 +377,7 @@
     :cond_0
     const-string v0, "hashtagsTopView"
 
-    invoke-static {v0}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v0}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     const/4 v0, 0x0
 
@@ -388,7 +388,7 @@
     .locals 0
 
     .line 1
-    invoke-static {p0}, Lcom/vk/stories/clickable/dialogs/hashtag/c$a;->c(Lcom/vk/stories/clickable/dialogs/hashtag/c;)V
+    invoke-static {p0}, Lcom/vk/stories/clickable/dialogs/hashtag/StoryHashtagDialogContract$a;->c(Lcom/vk/stories/clickable/dialogs/hashtag/StoryHashtagDialogContract;)V
 
     return-void
 .end method
@@ -397,21 +397,21 @@
     .locals 1
 
     .line 1
-    invoke-virtual {p0}, Lcom/vk/stories/clickable/dialogs/hashtag/StoryHashtagDialog;->getPresenter()Lcom/vk/stories/clickable/dialogs/hashtag/b;
+    invoke-virtual {p0}, Lcom/vk/stories/clickable/dialogs/hashtag/StoryHashtagDialog;->getPresenter()Lcom/vk/stories/clickable/dialogs/hashtag/StoryHashtagDialogContract1;
 
     move-result-object v0
 
     if-eqz v0, :cond_0
 
-    invoke-interface {v0}, Lcom/vk/stories/clickable/dialogs/hashtag/b;->onStop()V
+    invoke-interface {v0}, Lcom/vk/stories/clickable/dialogs/hashtag/StoryHashtagDialogContract1;->onStop()V
 
     .line 2
     :cond_0
-    iget-object v0, p0, Lcom/vk/stories/clickable/dialogs/hashtag/StoryHashtagDialog;->a:Lcom/vk/core/util/d;
+    iget-object v0, p0, Lcom/vk/stories/clickable/dialogs/hashtag/StoryHashtagDialog;->a:Lcom/vk/core/util/AndroidBug5497Workaround2;
 
     if-eqz v0, :cond_1
 
-    invoke-virtual {v0}, Lcom/vk/core/util/d;->a()V
+    invoke-virtual {v0}, Lcom/vk/core/util/AndroidBug5497Workaround2;->a()V
 
     .line 3
     :cond_1
@@ -424,7 +424,7 @@
     .locals 0
 
     .line 1
-    invoke-static {p0}, Lcom/vk/stories/clickable/dialogs/hashtag/c$a;->b(Lcom/vk/stories/clickable/dialogs/hashtag/c;)V
+    invoke-static {p0}, Lcom/vk/stories/clickable/dialogs/hashtag/StoryHashtagDialogContract$a;->b(Lcom/vk/stories/clickable/dialogs/hashtag/StoryHashtagDialogContract;)V
 
     return-void
 .end method
@@ -442,7 +442,7 @@
     :cond_0
     const-string v0, "prefixTextView"
 
-    invoke-static {v0}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v0}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     const/4 v0, 0x0
 
@@ -462,29 +462,29 @@
     :cond_0
     const-string v0, "doneView"
 
-    invoke-static {v0}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v0}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     const/4 v0, 0x0
 
     throw v0
 .end method
 
-.method public bridge synthetic getPresenter()Lb/h/r/a;
+.method public bridge synthetic getPresenter()Lb/h/r/BaseContract;
     .locals 1
 
     .line 1
-    invoke-virtual {p0}, Lcom/vk/stories/clickable/dialogs/hashtag/StoryHashtagDialog;->getPresenter()Lcom/vk/stories/clickable/dialogs/hashtag/b;
+    invoke-virtual {p0}, Lcom/vk/stories/clickable/dialogs/hashtag/StoryHashtagDialog;->getPresenter()Lcom/vk/stories/clickable/dialogs/hashtag/StoryHashtagDialogContract1;
 
     move-result-object v0
 
     return-object v0
 .end method
 
-.method public getPresenter()Lcom/vk/stories/clickable/dialogs/hashtag/b;
+.method public getPresenter()Lcom/vk/stories/clickable/dialogs/hashtag/StoryHashtagDialogContract1;
     .locals 1
 
     .line 2
-    iget-object v0, p0, Lcom/vk/stories/clickable/dialogs/hashtag/StoryHashtagDialog;->E:Lcom/vk/stories/clickable/dialogs/hashtag/b;
+    iget-object v0, p0, Lcom/vk/stories/clickable/dialogs/hashtag/StoryHashtagDialog;->E:Lcom/vk/stories/clickable/dialogs/hashtag/StoryHashtagDialogContract1;
 
     return-object v0
 .end method
@@ -502,7 +502,7 @@
     :cond_0
     const-string v0, "editText"
 
-    invoke-static {v0}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v0}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     const/4 v0, 0x0
 
@@ -522,18 +522,18 @@
     :cond_0
     const-string v0, "editTextContainer"
 
-    invoke-static {v0}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v0}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     const/4 v0, 0x0
 
     throw v0
 .end method
 
-.method public j()Lcom/vk/stories/clickable/models/b;
+.method public j()Lcom/vk/stories/clickable/models/StoryHashtagTypeParams3;
     .locals 1
 
     .line 1
-    invoke-static {p0}, Lcom/vk/stories/clickable/dialogs/hashtag/c$a;->a(Lcom/vk/stories/clickable/dialogs/hashtag/c;)Lcom/vk/stories/clickable/models/b;
+    invoke-static {p0}, Lcom/vk/stories/clickable/dialogs/hashtag/StoryHashtagDialogContract$a;->a(Lcom/vk/stories/clickable/dialogs/hashtag/StoryHashtagDialogContract;)Lcom/vk/stories/clickable/models/StoryHashtagTypeParams3;
 
     move-result-object v0
 
@@ -553,7 +553,7 @@
     :cond_0
     const-string v0, "rootViewGroup"
 
-    invoke-static {v0}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v0}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     const/4 v0, 0x0
 
@@ -564,7 +564,7 @@
     .locals 0
 
     .line 1
-    invoke-static {p0}, Lcom/vk/stories/clickable/dialogs/hashtag/c$a;->d(Lcom/vk/stories/clickable/dialogs/hashtag/c;)V
+    invoke-static {p0}, Lcom/vk/stories/clickable/dialogs/hashtag/StoryHashtagDialogContract$a;->d(Lcom/vk/stories/clickable/dialogs/hashtag/StoryHashtagDialogContract;)V
 
     return-void
 .end method
@@ -582,7 +582,7 @@
     :cond_0
     const-string v0, "hashTagTypeContainer"
 
-    invoke-static {v0}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v0}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     const/4 v0, 0x0
 
@@ -602,7 +602,7 @@
     :cond_0
     const-string v0, "hashTagTypeTextView"
 
-    invoke-static {v0}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v0}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     const/4 v0, 0x0
 
@@ -616,11 +616,11 @@
     invoke-super {p0}, Landroid/app/Dialog;->show()V
 
     .line 2
-    iget-object v0, p0, Lcom/vk/stories/clickable/dialogs/hashtag/StoryHashtagDialog;->a:Lcom/vk/core/util/d;
+    iget-object v0, p0, Lcom/vk/stories/clickable/dialogs/hashtag/StoryHashtagDialog;->a:Lcom/vk/core/util/AndroidBug5497Workaround2;
 
     if-eqz v0, :cond_0
 
-    invoke-virtual {v0}, Lcom/vk/core/util/d;->b()V
+    invoke-virtual {v0}, Lcom/vk/core/util/AndroidBug5497Workaround2;->b()V
 
     :cond_0
     return-void

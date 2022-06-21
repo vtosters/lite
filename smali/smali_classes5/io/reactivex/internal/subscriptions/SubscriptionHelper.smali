@@ -3,7 +3,7 @@
 .source "SubscriptionHelper.java"
 
 # interfaces
-.implements Le/b/d;
+.implements Le/b/Subscription;
 
 
 # annotations
@@ -12,7 +12,7 @@
         "Ljava/lang/Enum<",
         "Lio/reactivex/internal/subscriptions/SubscriptionHelper;",
         ">;",
-        "Le/b/d;"
+        "Le/b/Subscription;"
     }
 .end annotation
 
@@ -76,7 +76,7 @@
 
     invoke-direct {v0, v1}, Lio/reactivex/exceptions/ProtocolViolationException;-><init>(Ljava/lang/String;)V
 
-    invoke-static {v0}, Lc/a/e0/a;->b(Ljava/lang/Throwable;)V
+    invoke-static {v0}, Lio/reactivex/plugins/RxJavaPlugins;->b(Ljava/lang/Throwable;)V
 
     return-void
 .end method
@@ -87,7 +87,7 @@
         value = {
             "(",
             "Ljava/util/concurrent/atomic/AtomicReference<",
-            "Le/b/d;",
+            "Le/b/Subscription;",
             ">;",
             "Ljava/util/concurrent/atomic/AtomicLong;",
             "J)V"
@@ -99,12 +99,12 @@
 
     move-result-object v0
 
-    check-cast v0, Le/b/d;
+    check-cast v0, Le/b/Subscription;
 
     if-eqz v0, :cond_0
 
     .line 19
-    invoke-interface {v0, p2, p3}, Le/b/d;->a(J)V
+    invoke-interface {v0, p2, p3}, Le/b/Subscription;->a(J)V
 
     goto :goto_0
 
@@ -117,14 +117,14 @@
     if-eqz v0, :cond_1
 
     .line 21
-    invoke-static {p1, p2, p3}, Lio/reactivex/internal/util/b;->a(Ljava/util/concurrent/atomic/AtomicLong;J)J
+    invoke-static {p1, p2, p3}, Lio/reactivex/internal/util/BackpressureHelper;->a(Ljava/util/concurrent/atomic/AtomicLong;J)J
 
     .line 22
     invoke-virtual {p0}, Ljava/util/concurrent/atomic/AtomicReference;->get()Ljava/lang/Object;
 
     move-result-object p0
 
-    check-cast p0, Le/b/d;
+    check-cast p0, Le/b/Subscription;
 
     if-eqz p0, :cond_1
 
@@ -140,14 +140,14 @@
     if-eqz p1, :cond_1
 
     .line 24
-    invoke-interface {p0, v0, v1}, Le/b/d;->a(J)V
+    invoke-interface {p0, v0, v1}, Le/b/Subscription;->a(J)V
 
     :cond_1
     :goto_0
     return-void
 .end method
 
-.method public static a(Le/b/d;Le/b/d;)Z
+.method public static a(Le/b/Subscription;Le/b/Subscription;)Z
     .locals 1
 
     const/4 v0, 0x0
@@ -161,7 +161,7 @@
 
     invoke-direct {p0, p1}, Ljava/lang/NullPointerException;-><init>(Ljava/lang/String;)V
 
-    invoke-static {p0}, Lc/a/e0/a;->b(Ljava/lang/Throwable;)V
+    invoke-static {p0}, Lio/reactivex/plugins/RxJavaPlugins;->b(Ljava/lang/Throwable;)V
 
     return v0
 
@@ -169,7 +169,7 @@
     if-eqz p0, :cond_1
 
     .line 2
-    invoke-interface {p1}, Le/b/d;->cancel()V
+    invoke-interface {p1}, Le/b/Subscription;->cancel()V
 
     .line 3
     invoke-static {}, Lio/reactivex/internal/subscriptions/SubscriptionHelper;->a()V
@@ -188,7 +188,7 @@
         value = {
             "(",
             "Ljava/util/concurrent/atomic/AtomicReference<",
-            "Le/b/d;",
+            "Le/b/Subscription;",
             ">;)Z"
         }
     .end annotation
@@ -198,7 +198,7 @@
 
     move-result-object v0
 
-    check-cast v0, Le/b/d;
+    check-cast v0, Le/b/Subscription;
 
     .line 11
     sget-object v1, Lio/reactivex/internal/subscriptions/SubscriptionHelper;->CANCELLED:Lio/reactivex/internal/subscriptions/SubscriptionHelper;
@@ -210,7 +210,7 @@
 
     move-result-object p0
 
-    check-cast p0, Le/b/d;
+    check-cast p0, Le/b/Subscription;
 
     .line 13
     sget-object v0, Lio/reactivex/internal/subscriptions/SubscriptionHelper;->CANCELLED:Lio/reactivex/internal/subscriptions/SubscriptionHelper;
@@ -220,7 +220,7 @@
     if-eqz p0, :cond_0
 
     .line 14
-    invoke-interface {p0}, Le/b/d;->cancel()V
+    invoke-interface {p0}, Le/b/Subscription;->cancel()V
 
     :cond_0
     const/4 p0, 0x1
@@ -233,15 +233,15 @@
     return p0
 .end method
 
-.method public static a(Ljava/util/concurrent/atomic/AtomicReference;Le/b/d;)Z
+.method public static a(Ljava/util/concurrent/atomic/AtomicReference;Le/b/Subscription;)Z
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
             "Ljava/util/concurrent/atomic/AtomicReference<",
-            "Le/b/d;",
+            "Le/b/Subscription;",
             ">;",
-            "Le/b/d;",
+            "Le/b/Subscription;",
             ")Z"
         }
     .end annotation
@@ -249,7 +249,7 @@
     const-string v0, "s is null"
 
     .line 5
-    invoke-static {p1, v0}, Lc/a/a0/a/b;->a(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
+    invoke-static {p1, v0}, Lc/a/a0/a/ObjectHelper;->a(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
     const/4 v0, 0x0
 
@@ -261,7 +261,7 @@
     if-nez v0, :cond_1
 
     .line 7
-    invoke-interface {p1}, Le/b/d;->cancel()V
+    invoke-interface {p1}, Le/b/Subscription;->cancel()V
 
     .line 8
     invoke-virtual {p0}, Ljava/util/concurrent/atomic/AtomicReference;->get()Ljava/lang/Object;
@@ -286,28 +286,28 @@
     return p0
 .end method
 
-.method public static a(Ljava/util/concurrent/atomic/AtomicReference;Le/b/d;J)Z
+.method public static a(Ljava/util/concurrent/atomic/AtomicReference;Le/b/Subscription;J)Z
     .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
             "Ljava/util/concurrent/atomic/AtomicReference<",
-            "Le/b/d;",
+            "Le/b/Subscription;",
             ">;",
-            "Le/b/d;",
+            "Le/b/Subscription;",
             "J)Z"
         }
     .end annotation
 
     .line 25
-    invoke-static {p0, p1}, Lio/reactivex/internal/subscriptions/SubscriptionHelper;->a(Ljava/util/concurrent/atomic/AtomicReference;Le/b/d;)Z
+    invoke-static {p0, p1}, Lio/reactivex/internal/subscriptions/SubscriptionHelper;->a(Ljava/util/concurrent/atomic/AtomicReference;Le/b/Subscription;)Z
 
     move-result p0
 
     if-eqz p0, :cond_0
 
     .line 26
-    invoke-interface {p1, p2, p3}, Le/b/d;->a(J)V
+    invoke-interface {p1, p2, p3}, Le/b/Subscription;->a(J)V
 
     const/4 p0, 0x1
 
@@ -319,22 +319,22 @@
     return p0
 .end method
 
-.method public static a(Ljava/util/concurrent/atomic/AtomicReference;Ljava/util/concurrent/atomic/AtomicLong;Le/b/d;)Z
+.method public static a(Ljava/util/concurrent/atomic/AtomicReference;Ljava/util/concurrent/atomic/AtomicLong;Le/b/Subscription;)Z
     .locals 3
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
             "Ljava/util/concurrent/atomic/AtomicReference<",
-            "Le/b/d;",
+            "Le/b/Subscription;",
             ">;",
             "Ljava/util/concurrent/atomic/AtomicLong;",
-            "Le/b/d;",
+            "Le/b/Subscription;",
             ")Z"
         }
     .end annotation
 
     .line 15
-    invoke-static {p0, p2}, Lio/reactivex/internal/subscriptions/SubscriptionHelper;->a(Ljava/util/concurrent/atomic/AtomicReference;Le/b/d;)Z
+    invoke-static {p0, p2}, Lio/reactivex/internal/subscriptions/SubscriptionHelper;->a(Ljava/util/concurrent/atomic/AtomicReference;Le/b/Subscription;)Z
 
     move-result p0
 
@@ -352,7 +352,7 @@
     if-eqz v2, :cond_0
 
     .line 17
-    invoke-interface {p2, p0, p1}, Le/b/d;->a(J)V
+    invoke-interface {p2, p0, p1}, Le/b/Subscription;->a(J)V
 
     :cond_0
     const/4 p0, 0x1
@@ -387,7 +387,7 @@
 
     invoke-direct {v0, p0}, Lio/reactivex/exceptions/ProtocolViolationException;-><init>(Ljava/lang/String;)V
 
-    invoke-static {v0}, Lc/a/e0/a;->b(Ljava/lang/Throwable;)V
+    invoke-static {v0}, Lio/reactivex/plugins/RxJavaPlugins;->b(Ljava/lang/Throwable;)V
 
     return-void
 .end method
@@ -420,7 +420,7 @@
 
     invoke-direct {v0, p0}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
 
-    invoke-static {v0}, Lc/a/e0/a;->b(Ljava/lang/Throwable;)V
+    invoke-static {v0}, Lio/reactivex/plugins/RxJavaPlugins;->b(Ljava/lang/Throwable;)V
 
     const/4 p0, 0x0
 

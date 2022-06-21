@@ -3,8 +3,8 @@
 .source "ObservableSwitchMap.java"
 
 # interfaces
-.implements Lc/a/r;
-.implements Lio/reactivex/disposables/b;
+.implements Lio/reactivex/Observer;
+.implements Lio/reactivex/disposables/Disposable;
 
 
 # annotations
@@ -25,9 +25,9 @@
         "Ljava/lang/Object;",
         ">",
         "Ljava/util/concurrent/atomic/AtomicInteger;",
-        "Lc/a/r<",
+        "Lio/reactivex/Observer<",
         "TT;>;",
-        "Lio/reactivex/disposables/b;"
+        "Lio/reactivex/disposables/Disposable;"
     }
 .end annotation
 
@@ -66,10 +66,10 @@
 
 .field volatile done:Z
 
-.field final downstream:Lc/a/r;
+.field final downstream:Lio/reactivex/Observer;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Lc/a/r<",
+            "Lio/reactivex/Observer<",
             "-TR;>;"
         }
     .end annotation
@@ -77,12 +77,12 @@
 
 .field final errors:Lio/reactivex/internal/util/AtomicThrowable;
 
-.field final mapper:Lc/a/z/j;
+.field final mapper:Lio/reactivex/functions/Function;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Lc/a/z/j<",
+            "Lio/reactivex/functions/Function<",
             "-TT;+",
-            "Lc/a/p<",
+            "Lio/reactivex/ObservableSource<",
             "+TR;>;>;"
         }
     .end annotation
@@ -90,7 +90,7 @@
 
 .field volatile unique:J
 
-.field upstream:Lio/reactivex/disposables/b;
+.field upstream:Lio/reactivex/disposables/Disposable;
 
 
 # direct methods
@@ -118,16 +118,16 @@
     return-void
 .end method
 
-.method constructor <init>(Lc/a/r;Lc/a/z/j;IZ)V
+.method constructor <init>(Lio/reactivex/Observer;Lio/reactivex/functions/Function;IZ)V
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lc/a/r<",
+            "Lio/reactivex/Observer<",
             "-TR;>;",
-            "Lc/a/z/j<",
+            "Lio/reactivex/functions/Function<",
             "-TT;+",
-            "Lc/a/p<",
+            "Lio/reactivex/ObservableSource<",
             "+TR;>;>;IZ)V"
         }
     .end annotation
@@ -143,10 +143,10 @@
     iput-object v0, p0, Lio/reactivex/internal/operators/observable/ObservableSwitchMap$SwitchMapObserver;->active:Ljava/util/concurrent/atomic/AtomicReference;
 
     .line 3
-    iput-object p1, p0, Lio/reactivex/internal/operators/observable/ObservableSwitchMap$SwitchMapObserver;->downstream:Lc/a/r;
+    iput-object p1, p0, Lio/reactivex/internal/operators/observable/ObservableSwitchMap$SwitchMapObserver;->downstream:Lio/reactivex/Observer;
 
     .line 4
-    iput-object p2, p0, Lio/reactivex/internal/operators/observable/ObservableSwitchMap$SwitchMapObserver;->mapper:Lc/a/z/j;
+    iput-object p2, p0, Lio/reactivex/internal/operators/observable/ObservableSwitchMap$SwitchMapObserver;->mapper:Lio/reactivex/functions/Function;
 
     .line 5
     iput p3, p0, Lio/reactivex/internal/operators/observable/ObservableSwitchMap$SwitchMapObserver;->bufferSize:I
@@ -206,25 +206,25 @@
     return-void
 .end method
 
-.method public a(Lio/reactivex/disposables/b;)V
+.method public a(Lio/reactivex/disposables/Disposable;)V
     .locals 1
 
     .line 1
-    iget-object v0, p0, Lio/reactivex/internal/operators/observable/ObservableSwitchMap$SwitchMapObserver;->upstream:Lio/reactivex/disposables/b;
+    iget-object v0, p0, Lio/reactivex/internal/operators/observable/ObservableSwitchMap$SwitchMapObserver;->upstream:Lio/reactivex/disposables/Disposable;
 
-    invoke-static {v0, p1}, Lio/reactivex/internal/disposables/DisposableHelper;->a(Lio/reactivex/disposables/b;Lio/reactivex/disposables/b;)Z
+    invoke-static {v0, p1}, Lio/reactivex/internal/disposables/DisposableHelper;->a(Lio/reactivex/disposables/Disposable;Lio/reactivex/disposables/Disposable;)Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
     .line 2
-    iput-object p1, p0, Lio/reactivex/internal/operators/observable/ObservableSwitchMap$SwitchMapObserver;->upstream:Lio/reactivex/disposables/b;
+    iput-object p1, p0, Lio/reactivex/internal/operators/observable/ObservableSwitchMap$SwitchMapObserver;->upstream:Lio/reactivex/disposables/Disposable;
 
     .line 3
-    iget-object p1, p0, Lio/reactivex/internal/operators/observable/ObservableSwitchMap$SwitchMapObserver;->downstream:Lc/a/r;
+    iget-object p1, p0, Lio/reactivex/internal/operators/observable/ObservableSwitchMap$SwitchMapObserver;->downstream:Lio/reactivex/Observer;
 
-    invoke-interface {p1, p0}, Lc/a/r;->a(Lio/reactivex/disposables/b;)V
+    invoke-interface {p1, p0}, Lio/reactivex/Observer;->a(Lio/reactivex/disposables/Disposable;)V
 
     :cond_0
     return-void
@@ -265,9 +265,9 @@
     if-nez p2, :cond_0
 
     .line 17
-    iget-object p2, p0, Lio/reactivex/internal/operators/observable/ObservableSwitchMap$SwitchMapObserver;->upstream:Lio/reactivex/disposables/b;
+    iget-object p2, p0, Lio/reactivex/internal/operators/observable/ObservableSwitchMap$SwitchMapObserver;->upstream:Lio/reactivex/disposables/Disposable;
 
-    invoke-interface {p2}, Lio/reactivex/disposables/b;->o()V
+    invoke-interface {p2}, Lio/reactivex/disposables/Disposable;->o()V
 
     :cond_0
     const/4 p2, 0x1
@@ -282,7 +282,7 @@
 
     .line 20
     :cond_1
-    invoke-static {p2}, Lc/a/e0/a;->b(Ljava/lang/Throwable;)V
+    invoke-static {p2}, Lio/reactivex/plugins/RxJavaPlugins;->b(Ljava/lang/Throwable;)V
 
     :goto_0
     return-void
@@ -325,7 +325,7 @@
 
     .line 9
     :cond_1
-    invoke-static {p1}, Lc/a/e0/a;->b(Ljava/lang/Throwable;)V
+    invoke-static {p1}, Lio/reactivex/plugins/RxJavaPlugins;->b(Ljava/lang/Throwable;)V
 
     :goto_0
     return-void
@@ -386,17 +386,17 @@
     .line 5
     :cond_0
     :try_start_0
-    iget-object v2, p0, Lio/reactivex/internal/operators/observable/ObservableSwitchMap$SwitchMapObserver;->mapper:Lc/a/z/j;
+    iget-object v2, p0, Lio/reactivex/internal/operators/observable/ObservableSwitchMap$SwitchMapObserver;->mapper:Lio/reactivex/functions/Function;
 
-    invoke-interface {v2, p1}, Lc/a/z/j;->apply(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v2, p1}, Lio/reactivex/functions/Function;->apply(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p1
 
     const-string v2, "The ObservableSource returned is null"
 
-    invoke-static {p1, v2}, Lc/a/a0/a/b;->a(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
+    invoke-static {p1, v2}, Lc/a/a0/a/ObjectHelper;->a(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
-    check-cast p1, Lc/a/p;
+    check-cast p1, Lio/reactivex/ObservableSource;
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
@@ -435,7 +435,7 @@
     if-eqz v0, :cond_1
 
     .line 10
-    invoke-interface {p1, v2}, Lc/a/p;->a(Lc/a/r;)V
+    invoke-interface {p1, v2}, Lio/reactivex/ObservableSource;->a(Lio/reactivex/Observer;)V
 
     :goto_0
     return-void
@@ -444,12 +444,12 @@
     move-exception p1
 
     .line 11
-    invoke-static {p1}, Lio/reactivex/exceptions/a;->b(Ljava/lang/Throwable;)V
+    invoke-static {p1}, Lio/reactivex/exceptions/Exceptions;->b(Ljava/lang/Throwable;)V
 
     .line 12
-    iget-object v0, p0, Lio/reactivex/internal/operators/observable/ObservableSwitchMap$SwitchMapObserver;->upstream:Lio/reactivex/disposables/b;
+    iget-object v0, p0, Lio/reactivex/internal/operators/observable/ObservableSwitchMap$SwitchMapObserver;->upstream:Lio/reactivex/disposables/Disposable;
 
-    invoke-interface {v0}, Lio/reactivex/disposables/b;->o()V
+    invoke-interface {v0}, Lio/reactivex/disposables/Disposable;->o()V
 
     .line 13
     invoke-virtual {p0, p1}, Lio/reactivex/internal/operators/observable/ObservableSwitchMap$SwitchMapObserver;->a(Ljava/lang/Throwable;)V
@@ -471,7 +471,7 @@
 
     .line 2
     :cond_0
-    iget-object v0, p0, Lio/reactivex/internal/operators/observable/ObservableSwitchMap$SwitchMapObserver;->downstream:Lc/a/r;
+    iget-object v0, p0, Lio/reactivex/internal/operators/observable/ObservableSwitchMap$SwitchMapObserver;->downstream:Lio/reactivex/Observer;
 
     .line 3
     iget-object v1, p0, Lio/reactivex/internal/operators/observable/ObservableSwitchMap$SwitchMapObserver;->active:Ljava/util/concurrent/atomic/AtomicReference;
@@ -531,13 +531,13 @@
     if-eqz v1, :cond_4
 
     .line 9
-    invoke-interface {v0, v1}, Lc/a/r;->a(Ljava/lang/Throwable;)V
+    invoke-interface {v0, v1}, Lio/reactivex/Observer;->a(Ljava/lang/Throwable;)V
 
     goto :goto_2
 
     .line 10
     :cond_4
-    invoke-interface {v0}, Lc/a/r;->b()V
+    invoke-interface {v0}, Lio/reactivex/Observer;->b()V
 
     :goto_2
     return-void
@@ -561,7 +561,7 @@
 
     move-result-object v1
 
-    invoke-interface {v0, v1}, Lc/a/r;->a(Ljava/lang/Throwable;)V
+    invoke-interface {v0, v1}, Lio/reactivex/Observer;->a(Ljava/lang/Throwable;)V
 
     return-void
 
@@ -569,7 +569,7 @@
     if-eqz v5, :cond_7
 
     .line 13
-    invoke-interface {v0}, Lc/a/r;->b()V
+    invoke-interface {v0}, Lio/reactivex/Observer;->b()V
 
     return-void
 
@@ -584,7 +584,7 @@
     if-eqz v5, :cond_12
 
     .line 15
-    iget-object v7, v5, Lio/reactivex/internal/operators/observable/ObservableSwitchMap$SwitchMapInnerObserver;->queue:Lc/a/a0/b/k;
+    iget-object v7, v5, Lio/reactivex/internal/operators/observable/ObservableSwitchMap$SwitchMapInnerObserver;->queue:Lc/a/a0/b/SimpleQueue;
 
     if-eqz v7, :cond_12
 
@@ -596,7 +596,7 @@
     if-eqz v8, :cond_a
 
     .line 17
-    invoke-interface {v7}, Lc/a/a0/b/k;->isEmpty()Z
+    invoke-interface {v7}, Lc/a/a0/b/SimpleQueue;->isEmpty()Z
 
     move-result v8
 
@@ -628,7 +628,7 @@
 
     move-result-object v1
 
-    invoke-interface {v0, v1}, Lc/a/r;->a(Ljava/lang/Throwable;)V
+    invoke-interface {v0, v1}, Lio/reactivex/Observer;->a(Ljava/lang/Throwable;)V
 
     return-void
 
@@ -685,7 +685,7 @@
 
     move-result-object v1
 
-    invoke-interface {v0, v1}, Lc/a/r;->a(Ljava/lang/Throwable;)V
+    invoke-interface {v0, v1}, Lio/reactivex/Observer;->a(Ljava/lang/Throwable;)V
 
     return-void
 
@@ -695,7 +695,7 @@
 
     .line 27
     :try_start_0
-    invoke-interface {v7}, Lc/a/a0/b/k;->poll()Ljava/lang/Object;
+    invoke-interface {v7}, Lc/a/a0/b/SimpleQueue;->poll()Ljava/lang/Object;
 
     move-result-object v11
     :try_end_0
@@ -707,7 +707,7 @@
     move-exception v8
 
     .line 28
-    invoke-static {v8}, Lio/reactivex/exceptions/a;->b(Ljava/lang/Throwable;)V
+    invoke-static {v8}, Lio/reactivex/exceptions/Exceptions;->b(Ljava/lang/Throwable;)V
 
     .line 29
     iget-object v11, p0, Lio/reactivex/internal/operators/observable/ObservableSwitchMap$SwitchMapObserver;->errors:Lio/reactivex/internal/util/AtomicThrowable;
@@ -723,9 +723,9 @@
     invoke-virtual {p0}, Lio/reactivex/internal/operators/observable/ObservableSwitchMap$SwitchMapObserver;->a()V
 
     .line 32
-    iget-object v8, p0, Lio/reactivex/internal/operators/observable/ObservableSwitchMap$SwitchMapObserver;->upstream:Lio/reactivex/disposables/b;
+    iget-object v8, p0, Lio/reactivex/internal/operators/observable/ObservableSwitchMap$SwitchMapObserver;->upstream:Lio/reactivex/disposables/Disposable;
 
-    invoke-interface {v8}, Lio/reactivex/disposables/b;->o()V
+    invoke-interface {v8}, Lio/reactivex/disposables/Disposable;->o()V
 
     .line 33
     iput-boolean v3, p0, Lio/reactivex/internal/operators/observable/ObservableSwitchMap$SwitchMapObserver;->done:Z
@@ -771,7 +771,7 @@
 
     .line 36
     :cond_11
-    invoke-interface {v0, v11}, Lc/a/r;->b(Ljava/lang/Object;)V
+    invoke-interface {v0, v11}, Lio/reactivex/Observer;->b(Ljava/lang/Object;)V
 
     goto :goto_3
 
@@ -811,9 +811,9 @@
     iput-boolean v0, p0, Lio/reactivex/internal/operators/observable/ObservableSwitchMap$SwitchMapObserver;->cancelled:Z
 
     .line 3
-    iget-object v0, p0, Lio/reactivex/internal/operators/observable/ObservableSwitchMap$SwitchMapObserver;->upstream:Lio/reactivex/disposables/b;
+    iget-object v0, p0, Lio/reactivex/internal/operators/observable/ObservableSwitchMap$SwitchMapObserver;->upstream:Lio/reactivex/disposables/Disposable;
 
-    invoke-interface {v0}, Lio/reactivex/disposables/b;->o()V
+    invoke-interface {v0}, Lio/reactivex/disposables/Disposable;->o()V
 
     .line 4
     invoke-virtual {p0}, Lio/reactivex/internal/operators/observable/ObservableSwitchMap$SwitchMapObserver;->a()V

@@ -1,5 +1,5 @@
 .class abstract Lcom/vk/notifications/GroupedNotificationsAdapter$c;
-.super Lcom/vk/lists/m$b;
+.super Lcom/vk/lists/HeaderAdapter$b;
 .source "GroupedNotificationsAdapter.kt"
 
 
@@ -15,7 +15,7 @@
 
 .annotation system Ldalvik/annotation/Signature;
     value = {
-        "Lcom/vk/lists/m$b<",
+        "Lcom/vk/lists/HeaderAdapter$b<",
         "Lcom/vk/dto/notifications/NotificationItem;",
         ">;"
     }
@@ -32,7 +32,7 @@
     .end annotation
 
     .line 1
-    invoke-direct {p0}, Lcom/vk/lists/m$b;-><init>()V
+    invoke-direct {p0}, Lcom/vk/lists/HeaderAdapter$b;-><init>()V
 
     return-void
 .end method
@@ -43,18 +43,18 @@
     .locals 0
 
     .line 1
-    invoke-virtual {p0, p1}, Lcom/vk/notifications/GroupedNotificationsAdapter$c;->a(Landroid/view/ViewGroup;)Lcom/vk/common/widget/d;
+    invoke-virtual {p0, p1}, Lcom/vk/notifications/GroupedNotificationsAdapter$c;->a(Landroid/view/ViewGroup;)Lcom/vk/common/widget/HeaderHolder;
 
     move-result-object p1
 
     return-object p1
 .end method
 
-.method public a(Landroid/view/ViewGroup;)Lcom/vk/common/widget/d;
+.method public a(Landroid/view/ViewGroup;)Lcom/vk/common/widget/HeaderHolder;
     .locals 7
 
     .line 3
-    new-instance v6, Lcom/vk/common/widget/d;
+    new-instance v6, Lcom/vk/common/widget/HeaderHolder;
 
     const v2, 0x7f100070
 
@@ -68,7 +68,7 @@
 
     move-object v1, p1
 
-    invoke-direct/range {v0 .. v5}, Lcom/vk/common/widget/d;-><init>(Landroid/view/ViewGroup;IIILkotlin/jvm/internal/i;)V
+    invoke-direct/range {v0 .. v5}, Lcom/vk/common/widget/HeaderHolder;-><init>(Landroid/view/ViewGroup;IIILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     return-object v6
 .end method

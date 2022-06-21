@@ -1377,12 +1377,12 @@
     move-result v7
 
     .line 9
-    invoke-static {p1, v2, v4, v0}, Lcom/vk/im/ui/views/e;->a(IIII)I
+    invoke-static {p1, v2, v4, v0}, Lcom/vk/im/ui/views/MeasureUtils;->a(IIII)I
 
     move-result p1
 
     .line 10
-    invoke-static {p2, v3, v5, v1}, Lcom/vk/im/ui/views/e;->a(IIII)I
+    invoke-static {p2, v3, v5, v1}, Lcom/vk/im/ui/views/MeasureUtils;->a(IIII)I
 
     move-result p2
 
@@ -1887,7 +1887,7 @@
     const v0, 0x3ecccccd    # 0.4f
 
     .line 3
-    invoke-static {p1, v0}, Lcom/vk/core/util/p;->b(IF)I
+    invoke-static {p1, v0}, Lcom/vk/core/util/ColorUtils;->b(IF)I
 
     move-result p1
 

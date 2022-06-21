@@ -1,5 +1,5 @@
 .class public final Lcom/vk/poll/adapters/PollResultAnswerHolder;
-.super Lcom/vtosters/lite/ui/b0/i;
+.super Lcom/vtosters/lite/ui/holder/RecyclerHolder;
 .source "PollResultAnswerHolder.kt"
 
 
@@ -12,8 +12,8 @@
 
 .annotation system Ldalvik/annotation/Signature;
     value = {
-        "Lcom/vtosters/lite/ui/b0/i<",
-        "Lcom/vk/dto/polls/b;",
+        "Lcom/vtosters/lite/ui/holder/RecyclerHolder<",
+        "Lcom/vk/dto/polls/PollExtra1;",
         ">;"
     }
 .end annotation
@@ -39,21 +39,21 @@
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, v1}, Lcom/vk/poll/adapters/PollResultAnswerHolder$a;-><init>(Lkotlin/jvm/internal/i;)V
+    invoke-direct {v0, v1}, Lcom/vk/poll/adapters/PollResultAnswerHolder$a;-><init>(Lkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     return-void
 .end method
 
-.method public constructor <init>(Landroid/view/ViewGroup;Lkotlin/jvm/b/b;)V
+.method public constructor <init>(Landroid/view/ViewGroup;Lkotlin/jvm/b/Functions2;)V
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
             "Landroid/view/ViewGroup;",
-            "Lkotlin/jvm/b/b<",
+            "Lkotlin/jvm/b/Functions2<",
             "-",
-            "Lcom/vk/dto/polls/b;",
-            "Lkotlin/m;",
+            "Lcom/vk/dto/polls/PollExtra1;",
+            "Lkotlin/Unit;",
             ">;)V"
         }
     .end annotation
@@ -61,7 +61,7 @@
     const v0, 0x7f0d0462
 
     .line 1
-    invoke-direct {p0, v0, p1}, Lcom/vtosters/lite/ui/b0/i;-><init>(ILandroid/view/ViewGroup;)V
+    invoke-direct {p0, v0, p1}, Lcom/vtosters/lite/ui/holder/RecyclerHolder;-><init>(ILandroid/view/ViewGroup;)V
 
     .line 2
     iget-object p1, p0, Landroidx/recyclerview/widget/RecyclerView$ViewHolder;->itemView:Landroid/view/View;
@@ -74,7 +74,7 @@
 
     const-string v0, "itemView.findViewById(R.id.poll_answer)"
 
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     check-cast p1, Landroid/widget/TextView;
 
@@ -91,7 +91,7 @@
 
     const-string v0, "itemView.findViewById(R.id.poll_rate)"
 
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     check-cast p1, Landroidx/appcompat/widget/AppCompatTextView;
 
@@ -108,7 +108,7 @@
 
     const-string v0, "itemView.findViewById(R.id.poll_visual_result)"
 
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     iput-object p1, p0, Lcom/vk/poll/adapters/PollResultAnswerHolder;->e:Landroid/view/View;
 
@@ -123,7 +123,7 @@
 
     const-string v0, "itemView.findViewById(R.id.poll_strip_view)"
 
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     check-cast p1, Lcom/vk/core/view/PhotoStripView;
 
@@ -140,7 +140,7 @@
 
     const-string v0, "itemView.findViewById(R.id.poll_votes_count)"
 
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     check-cast p1, Landroid/widget/TextView;
 
@@ -151,24 +151,24 @@
 
     const-string v0, "itemView"
 
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     new-instance v0, Lcom/vk/poll/adapters/PollResultAnswerHolder$1;
 
-    invoke-direct {v0, p0, p2}, Lcom/vk/poll/adapters/PollResultAnswerHolder$1;-><init>(Lcom/vk/poll/adapters/PollResultAnswerHolder;Lkotlin/jvm/b/b;)V
+    invoke-direct {v0, p0, p2}, Lcom/vk/poll/adapters/PollResultAnswerHolder$1;-><init>(Lcom/vk/poll/adapters/PollResultAnswerHolder;Lkotlin/jvm/b/Functions2;)V
 
-    invoke-static {p1, v0}, Lcom/vk/core/extensions/ViewGroupExtKt;->a(Landroid/view/View;Lkotlin/jvm/b/b;)V
+    invoke-static {p1, v0}, Lcom/vk/core/extensions/ViewGroupExtKt;->a(Landroid/view/View;Lkotlin/jvm/b/Functions2;)V
 
     return-void
 .end method
 
-.method public static final synthetic a(Lcom/vk/poll/adapters/PollResultAnswerHolder;)Lcom/vk/dto/polls/b;
+.method public static final synthetic a(Lcom/vk/poll/adapters/PollResultAnswerHolder;)Lcom/vk/dto/polls/PollExtra1;
     .locals 0
 
     .line 1
-    iget-object p0, p0, Lcom/vtosters/lite/ui/b0/i;->b:Ljava/lang/Object;
+    iget-object p0, p0, Lcom/vtosters/lite/ui/holder/RecyclerHolder;->b:Ljava/lang/Object;
 
-    check-cast p0, Lcom/vk/dto/polls/b;
+    check-cast p0, Lcom/vk/dto/polls/PollExtra1;
 
     return-object p0
 .end method
@@ -181,7 +181,7 @@
 
     const-string v1, "itemView"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {v0}, Landroid/view/View;->getContext()Landroid/content/Context;
 
@@ -230,7 +230,7 @@
 
     const-string v1, "itemView"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {v0}, Landroid/view/View;->getContext()Landroid/content/Context;
 
@@ -249,7 +249,7 @@
     const-string v3, "it"
 
     .line 2
-    invoke-static {v0, v3}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v3}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {v0}, Landroid/graphics/drawable/Drawable;->getConstantState()Landroid/graphics/drawable/Drawable$ConstantState;
 
@@ -275,7 +275,7 @@
     .line 3
     iget-object v0, p0, Landroidx/recyclerview/widget/RecyclerView$ViewHolder;->itemView:Landroid/view/View;
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {v0}, Landroid/view/View;->getContext()Landroid/content/Context;
 
@@ -283,7 +283,7 @@
 
     const-string v1, "itemView.context"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {v0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
@@ -305,7 +305,7 @@
 
 
 # virtual methods
-.method public a(Lcom/vk/dto/polls/b;)V
+.method public a(Lcom/vk/dto/polls/PollExtra1;)V
     .locals 2
 
     const/4 p1, 0x1
@@ -324,11 +324,11 @@
     return-void
 .end method
 
-.method public final a(Lcom/vk/dto/polls/b;Lcom/vk/dto/polls/PollExtra;Lcom/vk/dto/polls/Poll;)V
+.method public final a(Lcom/vk/dto/polls/PollExtra1;Lcom/vk/dto/polls/PollExtra;Lcom/vk/dto/polls/Poll;)V
     .locals 9
 
     .line 2
-    iput-object p1, p0, Lcom/vtosters/lite/ui/b0/i;->b:Ljava/lang/Object;
+    iput-object p1, p0, Lcom/vtosters/lite/ui/holder/RecyclerHolder;->b:Ljava/lang/Object;
 
     const/4 v0, 0x1
 
@@ -337,12 +337,12 @@
     if-eqz p1, :cond_8
 
     .line 3
-    invoke-virtual {p1}, Lcom/vk/dto/polls/b;->e()I
+    invoke-virtual {p1}, Lcom/vk/dto/polls/PollExtra1;->e()I
 
     move-result v2
 
     .line 4
-    invoke-virtual {p1}, Lcom/vk/dto/polls/b;->c()F
+    invoke-virtual {p1}, Lcom/vk/dto/polls/PollExtra1;->c()F
 
     move-result v3
 
@@ -355,7 +355,7 @@
 
     if-eqz v4, :cond_0
 
-    invoke-virtual {p1}, Lcom/vk/dto/polls/b;->a()I
+    invoke-virtual {p1}, Lcom/vk/dto/polls/PollExtra1;->a()I
 
     move-result v5
 
@@ -376,7 +376,7 @@
     :goto_0
     iget-object v5, p0, Lcom/vk/poll/adapters/PollResultAnswerHolder;->d:Landroidx/appcompat/widget/AppCompatTextView;
 
-    sget-object v6, Lkotlin/jvm/internal/r;->a:Lkotlin/jvm/internal/r;
+    sget-object v6, Lkotlin/jvm/internal/PrimitiveCompanionObjects1;->a:Lkotlin/jvm/internal/PrimitiveCompanionObjects1;
 
     new-array v6, v0, [Ljava/lang/Object;
 
@@ -406,7 +406,7 @@
 
     const-string v7, "java.lang.String.format(format, *args)"
 
-    invoke-static {v6, v7}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v6, v7}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {v5, v6}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
@@ -434,7 +434,7 @@
     .line 10
     iget-object v4, p0, Lcom/vk/poll/adapters/PollResultAnswerHolder;->c:Landroid/widget/TextView;
 
-    invoke-virtual {p1}, Lcom/vk/dto/polls/b;->d()Ljava/lang/String;
+    invoke-virtual {p1}, Lcom/vk/dto/polls/PollExtra1;->d()Ljava/lang/String;
 
     move-result-object v5
 
@@ -473,11 +473,11 @@
     invoke-virtual {v5, v1}, Landroid/widget/TextView;->setVisibility(I)V
 
     .line 15
-    invoke-virtual {p1}, Lcom/vk/dto/polls/b;->b()Ljava/util/List;
+    invoke-virtual {p1}, Lcom/vk/dto/polls/PollExtra1;->b()Ljava/util/List;
 
     move-result-object v5
 
-    invoke-static {v5}, Lkotlin/collections/l;->d(Ljava/lang/Iterable;)Lkotlin/sequences/j;
+    invoke-static {v5}, Lkotlin/collections/l;->d(Ljava/lang/Iterable;)Lkotlin/sequences/Sequence;
 
     move-result-object v5
 
@@ -486,30 +486,30 @@
 
     invoke-direct {v7, p0, p2, p3}, Lcom/vk/poll/adapters/PollResultAnswerHolder$bind$$inlined$let$lambda$1;-><init>(Lcom/vk/poll/adapters/PollResultAnswerHolder;Lcom/vk/dto/polls/PollExtra;Lcom/vk/dto/polls/Poll;)V
 
-    invoke-static {v5, v7}, Lkotlin/sequences/m;->e(Lkotlin/sequences/j;Lkotlin/jvm/b/b;)Lkotlin/sequences/j;
+    invoke-static {v5, v7}, Lkotlin/sequences/m;->e(Lkotlin/sequences/Sequence;Lkotlin/jvm/b/Functions2;)Lkotlin/sequences/Sequence;
 
     move-result-object p2
 
     .line 17
-    invoke-static {p2}, Lkotlin/sequences/m;->g(Lkotlin/sequences/j;)Lkotlin/sequences/j;
+    invoke-static {p2}, Lkotlin/sequences/m;->g(Lkotlin/sequences/Sequence;)Lkotlin/sequences/Sequence;
 
     move-result-object p2
 
     .line 18
     sget-object v5, Lcom/vk/poll/adapters/PollResultAnswerHolder$bind$1$friendsUrls$2;->a:Lcom/vk/poll/adapters/PollResultAnswerHolder$bind$1$friendsUrls$2;
 
-    invoke-static {p2, v5}, Lkotlin/sequences/m;->e(Lkotlin/sequences/j;Lkotlin/jvm/b/b;)Lkotlin/sequences/j;
+    invoke-static {p2, v5}, Lkotlin/sequences/m;->e(Lkotlin/sequences/Sequence;Lkotlin/jvm/b/Functions2;)Lkotlin/sequences/Sequence;
 
     move-result-object p2
 
     const/4 v5, 0x5
 
     .line 19
-    invoke-static {p2, v5}, Lkotlin/sequences/m;->a(Lkotlin/sequences/j;I)Lkotlin/sequences/j;
+    invoke-static {p2, v5}, Lkotlin/sequences/m;->a(Lkotlin/sequences/Sequence;I)Lkotlin/sequences/Sequence;
 
     move-result-object p2
 
-    invoke-static {p2}, Lkotlin/sequences/m;->l(Lkotlin/sequences/j;)Ljava/util/List;
+    invoke-static {p2}, Lkotlin/sequences/m;->l(Lkotlin/sequences/Sequence;)Ljava/util/List;
 
     move-result-object p2
 
@@ -571,11 +571,11 @@
     .line 25
     iget-object p2, p0, Lcom/vk/poll/adapters/PollResultAnswerHolder;->g:Landroid/widget/TextView;
 
-    sget-object v4, Lcom/vk/core/util/i;->a:Landroid/content/Context;
+    sget-object v4, Lcom/vk/core/util/AppContextHolder;->a:Landroid/content/Context;
 
     const-string v5, "AppContextHolder.context"
 
-    invoke-static {v4, v5}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v4, v5}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     const v5, 0x7f100090
 
@@ -629,14 +629,14 @@
     move-result-object p2
 
     .line 32
-    instance-of v2, p2, Lcom/vk/poll/views/b;
+    instance-of v2, p2, Lcom/vk/poll/views/PollResultRateDrawable;
 
     if-nez v2, :cond_6
 
     .line 33
-    new-instance p2, Lcom/vk/poll/views/b;
+    new-instance p2, Lcom/vk/poll/views/PollResultRateDrawable;
 
-    invoke-direct {p2}, Lcom/vk/poll/views/b;-><init>()V
+    invoke-direct {p2}, Lcom/vk/poll/views/PollResultRateDrawable;-><init>()V
 
     :cond_6
     const/16 v2, 0x64
@@ -659,7 +659,7 @@
     .line 35
     move-object v3, p2
 
-    check-cast v3, Lcom/vk/poll/views/b;
+    check-cast v3, Lcom/vk/poll/views/PollResultRateDrawable;
 
     invoke-virtual {v3}, Landroid/graphics/drawable/Drawable;->getLevel()I
 
@@ -668,11 +668,11 @@
     if-eq v4, v2, :cond_7
 
     .line 36
-    invoke-virtual {v3, v1, v1}, Lcom/vk/poll/views/b;->a(IZ)V
+    invoke-virtual {v3, v1, v1}, Lcom/vk/poll/views/PollResultRateDrawable;->a(IZ)V
 
     .line 37
     :cond_7
-    invoke-virtual {v3, v2, v0}, Lcom/vk/poll/views/b;->a(IZ)V
+    invoke-virtual {v3, v2, v0}, Lcom/vk/poll/views/PollResultRateDrawable;->a(IZ)V
 
     .line 38
     iget-object v2, p0, Lcom/vk/poll/adapters/PollResultAnswerHolder;->e:Landroid/view/View;
@@ -685,11 +685,11 @@
 
     const-string v2, "itemView"
 
-    invoke-static {p2, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p2, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     if-eqz p1, :cond_9
 
-    invoke-virtual {p1}, Lcom/vk/dto/polls/b;->e()I
+    invoke-virtual {p1}, Lcom/vk/dto/polls/PollExtra1;->e()I
 
     move-result p1
 
@@ -722,9 +722,9 @@
     .locals 0
 
     .line 1
-    check-cast p1, Lcom/vk/dto/polls/b;
+    check-cast p1, Lcom/vk/dto/polls/PollExtra1;
 
-    invoke-virtual {p0, p1}, Lcom/vk/poll/adapters/PollResultAnswerHolder;->a(Lcom/vk/dto/polls/b;)V
+    invoke-virtual {p0, p1}, Lcom/vk/poll/adapters/PollResultAnswerHolder;->a(Lcom/vk/dto/polls/PollExtra1;)V
 
     return-void
 .end method

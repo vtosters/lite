@@ -3,9 +3,9 @@
 .source "VkUiConnectFragment.kt"
 
 # interfaces
-.implements Lcom/vk/navigation/b0/k;
-.implements Lcom/vk/navigation/b0/i;
-.implements Lcom/vk/navigation/b0/f;
+.implements Lcom/vk/navigation/b0/FragmentWithoutBottomMenuBar;
+.implements Lcom/vk/navigation/b0/FragmentWithSystemTopBar;
+.implements Lcom/vk/navigation/b0/FragmentWithCustomOrientation;
 
 
 # annotations
@@ -28,7 +28,7 @@
 
 
 # instance fields
-.field private final A0:Lcom/vk/webapp/o/b;
+.field private final A0:Lcom/vk/webapp/o/VkUiConnectFragmentDelegate;
 
 .field private B0:Lcom/vk/webapp/bridges/VkUiConnectBridge;
 
@@ -42,17 +42,17 @@
 
 .field private G0:Z
 
-.field private H0:Lcom/vk/webapp/r/a;
+.field private H0:Lcom/vk/webapp/r/ILoader;
 
 .field private I0:Landroid/view/View;
 
-.field private J0:Lcom/vk/core/dialogs/bottomsheet/e;
+.field private J0:Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet;
 
 .field private K0:Z
 
 .field private L0:Lcom/vk/webapp/VkUiConnectFragment$d;
 
-.field private M0:Lcom/vk/webapp/helpers/e;
+.field private M0:Lcom/vk/webapp/helpers/WebClients2;
 
 .field private N0:Ljava/lang/String;
 
@@ -67,7 +67,7 @@
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, v1}, Lcom/vk/webapp/VkUiConnectFragment$c;-><init>(Lkotlin/jvm/internal/i;)V
+    invoke-direct {v0, v1}, Lcom/vk/webapp/VkUiConnectFragment$c;-><init>(Lkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     return-void
 .end method
@@ -79,18 +79,18 @@
     invoke-direct {p0}, Lcom/vk/webapp/VkUiFragment;-><init>()V
 
     .line 2
-    invoke-super {p0}, Lcom/vk/webapp/VkUiFragment;->a5()Lcom/vk/webapp/o/c;
+    invoke-super {p0}, Lcom/vk/webapp/VkUiFragment;->a5()Lcom/vk/webapp/o/VkUiFragmentDelegate;
 
     move-result-object v0
 
     if-eqz v0, :cond_1
 
-    check-cast v0, Lcom/vk/webapp/o/b;
+    check-cast v0, Lcom/vk/webapp/o/VkUiConnectFragmentDelegate;
 
-    iput-object v0, p0, Lcom/vk/webapp/VkUiConnectFragment;->A0:Lcom/vk/webapp/o/b;
+    iput-object v0, p0, Lcom/vk/webapp/VkUiConnectFragment;->A0:Lcom/vk/webapp/o/VkUiConnectFragmentDelegate;
 
     .line 3
-    invoke-super {p0}, Lcom/vk/webapp/VkUiFragment;->Z4()Lcom/vk/webapp/bridges/a;
+    invoke-super {p0}, Lcom/vk/webapp/VkUiFragment;->Z4()Lcom/vk/webapp/bridges/AndroidBridge;
 
     move-result-object v0
 
@@ -169,23 +169,23 @@
 
     .line 2
     :cond_0
-    invoke-virtual {p0}, Lcom/vk/webapp/VkUiConnectFragment;->a5()Lcom/vk/webapp/o/b;
+    invoke-virtual {p0}, Lcom/vk/webapp/VkUiConnectFragment;->a5()Lcom/vk/webapp/o/VkUiConnectFragmentDelegate;
 
     move-result-object v0
 
-    invoke-interface {v0}, Lcom/vk/webapp/o/b;->j()Lcom/vk/webapp/cache/c;
+    invoke-interface {v0}, Lcom/vk/webapp/o/VkUiConnectFragmentDelegate;->j()Lcom/vk/webapp/cache/AppsCacheManager;
 
     move-result-object v0
 
-    invoke-virtual {p0}, Lcom/vk/webapp/VkUiConnectFragment;->a5()Lcom/vk/webapp/o/b;
+    invoke-virtual {p0}, Lcom/vk/webapp/VkUiConnectFragment;->a5()Lcom/vk/webapp/o/VkUiConnectFragmentDelegate;
 
     move-result-object v1
 
-    invoke-interface {v1}, Lcom/vk/webapp/o/c;->F()I
+    invoke-interface {v1}, Lcom/vk/webapp/o/VkUiFragmentDelegate;->F()I
 
     move-result v1
 
-    invoke-interface {v0, v1}, Lcom/vk/webapp/cache/a;->remove(I)Lcom/vk/webapp/cache/a$a;
+    invoke-interface {v0, v1}, Lcom/vk/webapp/cache/AppsCache;->remove(I)Lcom/vk/webapp/cache/AppsCache$a;
 
     if-eqz p1, :cond_1
 
@@ -204,7 +204,7 @@
     const/4 v2, 0x0
 
     .line 5
-    invoke-static {p1, v0, v1, v2}, Lcom/vk/core/util/k1;->a(IZILjava/lang/Object;)V
+    invoke-static {p1, v0, v1, v2}, Lcom/vk/core/util/ToastUtils;->a(IZILjava/lang/Object;)V
 
     :cond_1
     return-void
@@ -218,11 +218,11 @@
 
     if-nez v0, :cond_1
 
-    invoke-virtual {p0}, Lcom/vk/webapp/VkUiConnectFragment;->a5()Lcom/vk/webapp/o/b;
+    invoke-virtual {p0}, Lcom/vk/webapp/VkUiConnectFragment;->a5()Lcom/vk/webapp/o/VkUiConnectFragmentDelegate;
 
     move-result-object v0
 
-    invoke-interface {v0}, Lcom/vk/webapp/o/b;->k()Z
+    invoke-interface {v0}, Lcom/vk/webapp/o/VkUiConnectFragmentDelegate;->k()Z
 
     move-result v0
 
@@ -232,24 +232,24 @@
 
     .line 2
     :cond_0
-    new-instance v0, Lb/h/c/n/e;
+    new-instance v0, Lcom/vk/api/apps/AppsRemoveFromMenu;
 
-    invoke-virtual {p0}, Lcom/vk/webapp/VkUiConnectFragment;->a5()Lcom/vk/webapp/o/b;
+    invoke-virtual {p0}, Lcom/vk/webapp/VkUiConnectFragment;->a5()Lcom/vk/webapp/o/VkUiConnectFragmentDelegate;
 
     move-result-object v1
 
-    invoke-interface {v1}, Lcom/vk/webapp/o/c;->F()I
+    invoke-interface {v1}, Lcom/vk/webapp/o/VkUiFragmentDelegate;->F()I
 
     move-result v1
 
-    invoke-direct {v0, v1}, Lb/h/c/n/e;-><init>(I)V
+    invoke-direct {v0, v1}, Lcom/vk/api/apps/AppsRemoveFromMenu;-><init>(I)V
 
     const/4 v1, 0x1
 
     const/4 v2, 0x0
 
     .line 3
-    invoke-static {v0, v2, v1, v2}, Lcom/vk/api/base/d;->d(Lcom/vk/api/base/d;Lcom/vk/api/base/e;ILjava/lang/Object;)Lc/a/m;
+    invoke-static {v0, v2, v1, v2}, Lcom/vk/api/base/ApiRequest;->d(Lcom/vk/api/base/ApiRequest;Lcom/vk/api/base/ApiThreadHolder;ILjava/lang/Object;)Lio/reactivex/Observable;
 
     move-result-object v0
 
@@ -258,16 +258,16 @@
 
     invoke-direct {v1, p0, p1}, Lcom/vk/webapp/VkUiConnectFragment$s;-><init>(Lcom/vk/webapp/VkUiConnectFragment;Z)V
 
-    invoke-virtual {v0, v1}, Lc/a/m;->d(Lc/a/z/g;)Lc/a/m;
+    invoke-virtual {v0, v1}, Lio/reactivex/Observable;->d(Lio/reactivex/functions/Consumer;)Lio/reactivex/Observable;
 
     move-result-object v0
 
     const-string v1, "observable"
 
     .line 5
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    invoke-direct {p0, v0, p1}, Lcom/vk/webapp/VkUiConnectFragment;->a(Lc/a/m;Z)V
+    invoke-direct {p0, v0, p1}, Lcom/vk/webapp/VkUiConnectFragment;->a(Lio/reactivex/Observable;Z)V
 
     :cond_1
     :goto_0
@@ -287,28 +287,28 @@
     .locals 4
 
     .line 1
-    invoke-virtual {p0}, Lcom/vk/webapp/VkUiFragment;->c5()Lio/reactivex/disposables/a;
+    invoke-virtual {p0}, Lcom/vk/webapp/VkUiFragment;->c5()Lio/reactivex/disposables/CompositeDisposable;
 
     move-result-object v0
 
-    new-instance v1, Lcom/vk/api/apps/d;
+    new-instance v1, Lcom/vk/api/apps/AppsAllowNotifications;
 
-    invoke-virtual {p0}, Lcom/vk/webapp/VkUiConnectFragment;->a5()Lcom/vk/webapp/o/b;
+    invoke-virtual {p0}, Lcom/vk/webapp/VkUiConnectFragment;->a5()Lcom/vk/webapp/o/VkUiConnectFragmentDelegate;
 
     move-result-object v2
 
-    invoke-interface {v2}, Lcom/vk/webapp/o/c;->F()I
+    invoke-interface {v2}, Lcom/vk/webapp/o/VkUiFragmentDelegate;->F()I
 
     move-result v2
 
-    invoke-direct {v1, v2}, Lcom/vk/api/apps/d;-><init>(I)V
+    invoke-direct {v1, v2}, Lcom/vk/api/apps/AppsAllowNotifications;-><init>(I)V
 
     const/4 v2, 0x0
 
     const/4 v3, 0x1
 
     .line 2
-    invoke-static {v1, v2, v3, v2}, Lcom/vk/api/base/d;->d(Lcom/vk/api/base/d;Lcom/vk/api/base/e;ILjava/lang/Object;)Lc/a/m;
+    invoke-static {v1, v2, v3, v2}, Lcom/vk/api/base/ApiRequest;->d(Lcom/vk/api/base/ApiRequest;Lcom/vk/api/base/ApiThreadHolder;ILjava/lang/Object;)Lio/reactivex/Observable;
 
     move-result-object v1
 
@@ -323,12 +323,12 @@
     invoke-direct {v3, p0}, Lcom/vk/webapp/VkUiConnectFragment$j;-><init>(Lcom/vk/webapp/VkUiConnectFragment;)V
 
     .line 5
-    invoke-virtual {v1, v2, v3}, Lc/a/m;->a(Lc/a/z/g;Lc/a/z/g;)Lio/reactivex/disposables/b;
+    invoke-virtual {v1, v2, v3}, Lio/reactivex/Observable;->a(Lio/reactivex/functions/Consumer;Lio/reactivex/functions/Consumer;)Lio/reactivex/disposables/Disposable;
 
     move-result-object v1
 
     .line 6
-    invoke-virtual {v0, v1}, Lio/reactivex/disposables/a;->b(Lio/reactivex/disposables/b;)Z
+    invoke-virtual {v0, v1}, Lio/reactivex/disposables/CompositeDisposable;->b(Lio/reactivex/disposables/Disposable;)Z
 
     return-void
 .end method
@@ -337,11 +337,11 @@
     .locals 5
 
     .line 1
-    invoke-virtual {p0}, Lcom/vk/webapp/VkUiConnectFragment;->a5()Lcom/vk/webapp/o/b;
+    invoke-virtual {p0}, Lcom/vk/webapp/VkUiConnectFragment;->a5()Lcom/vk/webapp/o/VkUiConnectFragmentDelegate;
 
     move-result-object v0
 
-    invoke-interface {v0}, Lcom/vk/webapp/o/b;->f()Z
+    invoke-interface {v0}, Lcom/vk/webapp/o/VkUiConnectFragmentDelegate;->f()Z
 
     move-result v0
 
@@ -371,7 +371,7 @@
     :goto_0
     const-string v4, "apps_catalog"
 
-    invoke-static {v0, v4}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v0, v4}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v0
 
@@ -392,7 +392,7 @@
     :cond_1
     const-string v0, "menu"
 
-    invoke-static {v3, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v3, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v0
 
@@ -400,11 +400,11 @@
 
     if-eqz v0, :cond_2
 
-    invoke-static {}, Lcom/vtosters/lite/i0/c;->d()Lb/h/h/d/c;
+    invoke-static {}, Lcom/vtosters/lite/auth/VKAccountManager;->d()Lcom/vk/auth/api/VKAccount;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lb/h/h/d/c;->p0()Z
+    invoke-virtual {v0}, Lcom/vk/auth/api/VKAccount;->p0()Z
 
     move-result v0
 
@@ -423,28 +423,28 @@
     .locals 4
 
     .line 1
-    invoke-virtual {p0}, Lcom/vk/webapp/VkUiFragment;->c5()Lio/reactivex/disposables/a;
+    invoke-virtual {p0}, Lcom/vk/webapp/VkUiFragment;->c5()Lio/reactivex/disposables/CompositeDisposable;
 
     move-result-object v0
 
-    new-instance v1, Lcom/vk/api/apps/x;
+    new-instance v1, Lcom/vk/api/apps/AppsIsNotificationsAllowed;
 
-    invoke-virtual {p0}, Lcom/vk/webapp/VkUiConnectFragment;->a5()Lcom/vk/webapp/o/b;
+    invoke-virtual {p0}, Lcom/vk/webapp/VkUiConnectFragment;->a5()Lcom/vk/webapp/o/VkUiConnectFragmentDelegate;
 
     move-result-object v2
 
-    invoke-interface {v2}, Lcom/vk/webapp/o/c;->F()I
+    invoke-interface {v2}, Lcom/vk/webapp/o/VkUiFragmentDelegate;->F()I
 
     move-result v2
 
-    invoke-direct {v1, v2}, Lcom/vk/api/apps/x;-><init>(I)V
+    invoke-direct {v1, v2}, Lcom/vk/api/apps/AppsIsNotificationsAllowed;-><init>(I)V
 
     const/4 v2, 0x0
 
     const/4 v3, 0x1
 
     .line 2
-    invoke-static {v1, v2, v3, v2}, Lcom/vk/api/base/d;->d(Lcom/vk/api/base/d;Lcom/vk/api/base/e;ILjava/lang/Object;)Lc/a/m;
+    invoke-static {v1, v2, v3, v2}, Lcom/vk/api/base/ApiRequest;->d(Lcom/vk/api/base/ApiRequest;Lcom/vk/api/base/ApiThreadHolder;ILjava/lang/Object;)Lio/reactivex/Observable;
 
     move-result-object v1
 
@@ -457,12 +457,12 @@
     sget-object v3, Lcom/vk/webapp/VkUiConnectFragment$l;->a:Lcom/vk/webapp/VkUiConnectFragment$l;
 
     .line 5
-    invoke-virtual {v1, v2, v3}, Lc/a/m;->a(Lc/a/z/g;Lc/a/z/g;)Lio/reactivex/disposables/b;
+    invoke-virtual {v1, v2, v3}, Lio/reactivex/Observable;->a(Lio/reactivex/functions/Consumer;Lio/reactivex/functions/Consumer;)Lio/reactivex/disposables/Disposable;
 
     move-result-object v1
 
     .line 6
-    invoke-virtual {v0, v1}, Lio/reactivex/disposables/a;->b(Lio/reactivex/disposables/b;)Z
+    invoke-virtual {v0, v1}, Lio/reactivex/disposables/CompositeDisposable;->b(Lio/reactivex/disposables/Disposable;)Z
 
     return-void
 .end method
@@ -546,7 +546,7 @@
 
     const-string v1, "settings"
 
-    invoke-static {p1, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {p1, v2}, Landroid/webkit/WebSettings;->setAllowFileAccess(Z)V
 
@@ -555,7 +555,7 @@
 
     move-result-object p1
 
-    invoke-static {p1, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {p1, v2}, Landroid/webkit/WebSettings;->setDomStorageEnabled(Z)V
 
@@ -564,7 +564,7 @@
 
     move-result-object p1
 
-    invoke-static {p1, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     const/4 v3, -0x1
 
@@ -575,7 +575,7 @@
 
     move-result-object p1
 
-    invoke-static {p1, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {p1, v2}, Landroid/webkit/WebSettings;->setJavaScriptEnabled(Z)V
 
@@ -591,7 +591,7 @@
 
     move-result-object p1
 
-    invoke-static {p1, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     const/16 v2, 0x64
 
@@ -602,7 +602,7 @@
 
     move-result-object p1
 
-    invoke-static {p1, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     const/16 v1, 0x10
 
@@ -639,7 +639,7 @@
     return-object v0
 .end method
 
-.method private final Q(Ljava/lang/String;)Lcom/vk/webapp/cache/a$a;
+.method private final Q(Ljava/lang/String;)Lcom/vk/webapp/cache/AppsCache$a;
     .locals 1
 
     .line 1
@@ -649,11 +649,11 @@
 
     .line 2
     :try_start_0
-    invoke-interface {v0}, Lkotlin/jvm/b/a;->invoke()Ljava/lang/Object;
+    invoke-interface {v0}, Lkotlin/jvm/b/Functions;->invoke()Ljava/lang/Object;
 
     move-result-object p1
 
-    check-cast p1, Lcom/vk/webapp/cache/a$a;
+    check-cast p1, Lcom/vk/webapp/cache/AppsCache$a;
     :try_end_0
     .catch Ljava/lang/OutOfMemoryError; {:try_start_0 .. :try_end_0} :catch_1
     .catch Landroid/util/AndroidRuntimeException; {:try_start_0 .. :try_end_0} :catch_0
@@ -676,11 +676,11 @@
     invoke-static {}, Lcom/vk/imageloader/VKImageLoader;->f()V
 
     .line 6
-    invoke-interface {v0}, Lkotlin/jvm/b/a;->invoke()Ljava/lang/Object;
+    invoke-interface {v0}, Lkotlin/jvm/b/Functions;->invoke()Ljava/lang/Object;
 
     move-result-object p1
 
-    check-cast p1, Lcom/vk/webapp/cache/a$a;
+    check-cast p1, Lcom/vk/webapp/cache/AppsCache$a;
 
     :goto_0
     return-object p1
@@ -721,11 +721,11 @@
 
     if-nez v0, :cond_1
 
-    invoke-virtual {p0}, Lcom/vk/webapp/VkUiConnectFragment;->a5()Lcom/vk/webapp/o/b;
+    invoke-virtual {p0}, Lcom/vk/webapp/VkUiConnectFragment;->a5()Lcom/vk/webapp/o/VkUiConnectFragmentDelegate;
 
     move-result-object v0
 
-    invoke-interface {v0}, Lcom/vk/webapp/o/b;->k()Z
+    invoke-interface {v0}, Lcom/vk/webapp/o/VkUiConnectFragmentDelegate;->k()Z
 
     move-result v0
 
@@ -735,24 +735,24 @@
 
     .line 2
     :cond_0
-    new-instance v0, Lb/h/c/n/b;
+    new-instance v0, Lcom/vk/api/apps/AppsAddToMenu;
 
-    invoke-virtual {p0}, Lcom/vk/webapp/VkUiConnectFragment;->a5()Lcom/vk/webapp/o/b;
+    invoke-virtual {p0}, Lcom/vk/webapp/VkUiConnectFragment;->a5()Lcom/vk/webapp/o/VkUiConnectFragmentDelegate;
 
     move-result-object v1
 
-    invoke-interface {v1}, Lcom/vk/webapp/o/c;->F()I
+    invoke-interface {v1}, Lcom/vk/webapp/o/VkUiFragmentDelegate;->F()I
 
     move-result v1
 
-    invoke-direct {v0, v1}, Lb/h/c/n/b;-><init>(I)V
+    invoke-direct {v0, v1}, Lcom/vk/api/apps/AppsAddToMenu;-><init>(I)V
 
     const/4 v1, 0x1
 
     const/4 v2, 0x0
 
     .line 3
-    invoke-static {v0, v2, v1, v2}, Lcom/vk/api/base/d;->d(Lcom/vk/api/base/d;Lcom/vk/api/base/e;ILjava/lang/Object;)Lc/a/m;
+    invoke-static {v0, v2, v1, v2}, Lcom/vk/api/base/ApiRequest;->d(Lcom/vk/api/base/ApiRequest;Lcom/vk/api/base/ApiThreadHolder;ILjava/lang/Object;)Lio/reactivex/Observable;
 
     move-result-object v0
 
@@ -761,7 +761,7 @@
 
     invoke-direct {v2, p0}, Lcom/vk/webapp/VkUiConnectFragment$q;-><init>(Lcom/vk/webapp/VkUiConnectFragment;)V
 
-    invoke-virtual {v0, v2}, Lc/a/m;->d(Lc/a/z/g;)Lc/a/m;
+    invoke-virtual {v0, v2}, Lio/reactivex/Observable;->d(Lio/reactivex/functions/Consumer;)Lio/reactivex/Observable;
 
     move-result-object v0
 
@@ -770,16 +770,16 @@
 
     invoke-direct {v2, p0}, Lcom/vk/webapp/VkUiConnectFragment$r;-><init>(Lcom/vk/webapp/VkUiConnectFragment;)V
 
-    invoke-virtual {v0, v2}, Lc/a/m;->c(Lc/a/z/g;)Lc/a/m;
+    invoke-virtual {v0, v2}, Lio/reactivex/Observable;->c(Lio/reactivex/functions/Consumer;)Lio/reactivex/Observable;
 
     move-result-object v0
 
     const-string v2, "observable"
 
     .line 6
-    invoke-static {v0, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    invoke-direct {p0, v0, v1}, Lcom/vk/webapp/VkUiConnectFragment;->a(Lc/a/m;Z)V
+    invoke-direct {p0, v0, v1}, Lcom/vk/webapp/VkUiConnectFragment;->a(Lio/reactivex/Observable;Z)V
 
     :cond_1
     :goto_0
@@ -790,24 +790,24 @@
     .locals 12
 
     .line 1
-    new-instance v0, Lcom/vk/api/apps/r;
+    new-instance v0, Lcom/vk/api/apps/AppsGetGroupsList;
 
-    invoke-virtual {p0}, Lcom/vk/webapp/VkUiConnectFragment;->a5()Lcom/vk/webapp/o/b;
+    invoke-virtual {p0}, Lcom/vk/webapp/VkUiConnectFragment;->a5()Lcom/vk/webapp/o/VkUiConnectFragmentDelegate;
 
     move-result-object v1
 
-    invoke-interface {v1}, Lcom/vk/webapp/o/c;->F()I
+    invoke-interface {v1}, Lcom/vk/webapp/o/VkUiFragmentDelegate;->F()I
 
     move-result v1
 
-    invoke-direct {v0, v1}, Lcom/vk/api/apps/r;-><init>(I)V
+    invoke-direct {v0, v1}, Lcom/vk/api/apps/AppsGetGroupsList;-><init>(I)V
 
     const/4 v1, 0x0
 
     const/4 v2, 0x1
 
     .line 2
-    invoke-static {v0, v1, v2, v1}, Lcom/vk/api/base/d;->d(Lcom/vk/api/base/d;Lcom/vk/api/base/e;ILjava/lang/Object;)Lc/a/m;
+    invoke-static {v0, v1, v2, v1}, Lcom/vk/api/base/ApiRequest;->d(Lcom/vk/api/base/ApiRequest;Lcom/vk/api/base/ApiThreadHolder;ILjava/lang/Object;)Lio/reactivex/Observable;
 
     move-result-object v3
 
@@ -828,7 +828,7 @@
 
     const/4 v11, 0x0
 
-    invoke-static/range {v3 .. v11}, Lcom/vk/core/extensions/RxExtKt;->a(Lc/a/m;Landroid/content/Context;JIZZILjava/lang/Object;)Lc/a/m;
+    invoke-static/range {v3 .. v11}, Lcom/vk/core/extensions/RxExtKt;->a(Lio/reactivex/Observable;Landroid/content/Context;JIZZILjava/lang/Object;)Lio/reactivex/Observable;
 
     move-result-object v0
 
@@ -843,20 +843,20 @@
     invoke-direct {v2, p0}, Lcom/vk/webapp/VkUiConnectFragment$u;-><init>(Lcom/vk/webapp/VkUiConnectFragment;)V
 
     .line 6
-    invoke-virtual {v0, v1, v2}, Lc/a/m;->a(Lc/a/z/g;Lc/a/z/g;)Lio/reactivex/disposables/b;
+    invoke-virtual {v0, v1, v2}, Lio/reactivex/Observable;->a(Lio/reactivex/functions/Consumer;Lio/reactivex/functions/Consumer;)Lio/reactivex/disposables/Disposable;
 
     move-result-object v0
 
     const-string v1, "AppsGetGroupsList(delega\u2026SON())\n                })"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 7
-    invoke-virtual {p0}, Lcom/vk/webapp/VkUiFragment;->c5()Lio/reactivex/disposables/a;
+    invoke-virtual {p0}, Lcom/vk/webapp/VkUiFragment;->c5()Lio/reactivex/disposables/CompositeDisposable;
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Lcom/vk/core/extensions/RxExtKt;->a(Lio/reactivex/disposables/b;Lio/reactivex/disposables/a;)Lio/reactivex/disposables/b;
+    invoke-static {v0, v1}, Lcom/vk/core/extensions/RxExtKt;->a(Lio/reactivex/disposables/Disposable;Lio/reactivex/disposables/CompositeDisposable;)Lio/reactivex/disposables/Disposable;
 
     return-void
 .end method
@@ -893,11 +893,11 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {p0}, Lcom/vk/webapp/VkUiConnectFragment;->a5()Lcom/vk/webapp/o/b;
+    invoke-virtual {p0}, Lcom/vk/webapp/VkUiConnectFragment;->a5()Lcom/vk/webapp/o/VkUiConnectFragmentDelegate;
 
     move-result-object v1
 
-    invoke-interface {v1}, Lcom/vk/webapp/o/c;->F()I
+    invoke-interface {v1}, Lcom/vk/webapp/o/VkUiFragmentDelegate;->F()I
 
     move-result v1
 
@@ -912,7 +912,7 @@
 
     .line 3
     :cond_1
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     throw v1
 .end method
@@ -921,11 +921,11 @@
     .locals 5
 
     .line 1
-    invoke-virtual {p0}, Lcom/vk/webapp/VkUiConnectFragment;->a5()Lcom/vk/webapp/o/b;
+    invoke-virtual {p0}, Lcom/vk/webapp/VkUiConnectFragment;->a5()Lcom/vk/webapp/o/VkUiConnectFragmentDelegate;
 
     move-result-object v0
 
-    invoke-interface {v0}, Lcom/vk/webapp/o/b;->f()Z
+    invoke-interface {v0}, Lcom/vk/webapp/o/VkUiConnectFragmentDelegate;->f()Z
 
     move-result v0
 
@@ -944,7 +944,7 @@
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Lkotlin/k;->a(Ljava/lang/Object;Ljava/lang/Object;)Lkotlin/Pair;
+    invoke-static {v0, v1}, Lkotlin/Tuples;->a(Ljava/lang/Object;Ljava/lang/Object;)Lkotlin/Pair;
 
     move-result-object v0
 
@@ -952,7 +952,7 @@
 
     .line 3
     :cond_0
-    invoke-static {}, Lcom/vk/core/ui/themes/d;->e()Z
+    invoke-static {}, Lcom/vk/core/ui/themes/MilkshakeHelper;->e()Z
 
     move-result v0
 
@@ -971,7 +971,7 @@
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Lkotlin/k;->a(Ljava/lang/Object;Ljava/lang/Object;)Lkotlin/Pair;
+    invoke-static {v0, v1}, Lkotlin/Tuples;->a(Ljava/lang/Object;Ljava/lang/Object;)Lkotlin/Pair;
 
     move-result-object v0
 
@@ -991,7 +991,7 @@
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Lkotlin/k;->a(Ljava/lang/Object;Ljava/lang/Object;)Lkotlin/Pair;
+    invoke-static {v0, v1}, Lkotlin/Tuples;->a(Ljava/lang/Object;Ljava/lang/Object;)Lkotlin/Pair;
 
     move-result-object v0
 
@@ -1028,7 +1028,7 @@
 
     const-string v4, "activity!!"
 
-    invoke-static {v3, v4}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v3, v4}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-direct {v2, v3}, Lcom/vk/core/dialogs/alert/VkAlertDialog$Builder;-><init>(Landroid/content/Context;)V
 
@@ -1042,11 +1042,11 @@
     const/4 v3, 0x0
 
     .line 9
-    invoke-virtual {p0}, Lcom/vk/webapp/VkUiConnectFragment;->a5()Lcom/vk/webapp/o/b;
+    invoke-virtual {p0}, Lcom/vk/webapp/VkUiConnectFragment;->a5()Lcom/vk/webapp/o/VkUiConnectFragmentDelegate;
 
     move-result-object v4
 
-    invoke-interface {v4}, Lcom/vk/webapp/o/b;->l()Lcom/vk/dto/common/data/ApiApplication;
+    invoke-interface {v4}, Lcom/vk/webapp/o/VkUiConnectFragmentDelegate;->l()Lcom/vk/dto/common/data/ApiApplication;
 
     move-result-object v4
 
@@ -1083,7 +1083,7 @@
 
     .line 13
     :cond_2
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     const/4 v0, 0x0
 
@@ -1094,23 +1094,23 @@
     .locals 2
 
     .line 1
-    invoke-virtual {p0}, Lcom/vk/webapp/VkUiFragment;->c5()Lio/reactivex/disposables/a;
+    invoke-virtual {p0}, Lcom/vk/webapp/VkUiFragment;->c5()Lio/reactivex/disposables/CompositeDisposable;
 
     move-result-object v0
 
-    invoke-virtual {p0}, Lcom/vk/webapp/VkUiConnectFragment;->a5()Lcom/vk/webapp/o/b;
+    invoke-virtual {p0}, Lcom/vk/webapp/VkUiConnectFragment;->a5()Lcom/vk/webapp/o/VkUiConnectFragmentDelegate;
 
     move-result-object v1
 
-    invoke-interface {v1}, Lcom/vk/webapp/o/b;->w()Lcom/vk/webapp/helpers/b;
+    invoke-interface {v1}, Lcom/vk/webapp/o/VkUiConnectFragmentDelegate;->w()Lcom/vk/webapp/helpers/VkAppsAnalytics;
 
     move-result-object v1
 
-    invoke-virtual {v1}, Lcom/vk/webapp/helpers/b;->a()Lio/reactivex/disposables/b;
+    invoke-virtual {v1}, Lcom/vk/webapp/helpers/VkAppsAnalytics;->a()Lio/reactivex/disposables/Disposable;
 
     move-result-object v1
 
-    invoke-virtual {v0, v1}, Lio/reactivex/disposables/a;->b(Lio/reactivex/disposables/b;)Z
+    invoke-virtual {v0, v1}, Lio/reactivex/disposables/CompositeDisposable;->b(Lio/reactivex/disposables/Disposable;)Z
 
     return-void
 .end method
@@ -1119,11 +1119,11 @@
     .locals 8
 
     .line 1
-    invoke-virtual {p0}, Lcom/vk/webapp/VkUiConnectFragment;->a5()Lcom/vk/webapp/o/b;
+    invoke-virtual {p0}, Lcom/vk/webapp/VkUiConnectFragment;->a5()Lcom/vk/webapp/o/VkUiConnectFragmentDelegate;
 
     move-result-object v0
 
-    invoke-interface {v0}, Lcom/vk/webapp/o/b;->f()Z
+    invoke-interface {v0}, Lcom/vk/webapp/o/VkUiConnectFragmentDelegate;->f()Z
 
     move-result v0
 
@@ -1137,7 +1137,7 @@
 
     .line 2
     :cond_0
-    invoke-static {}, Lcom/vk/core/ui/themes/d;->e()Z
+    invoke-static {}, Lcom/vk/core/ui/themes/MilkshakeHelper;->e()Z
 
     move-result v0
 
@@ -1158,7 +1158,7 @@
     :goto_0
     sget-object v1, Lcom/vk/qrcode/QRViewUtils;->m:Lcom/vk/qrcode/QRViewUtils;
 
-    invoke-virtual {p0}, Ld/a/a/a/h;->getContext()Landroid/content/Context;
+    invoke-virtual {p0}, Lme/grishka/appkit/fragments/AppKitFragment;->getContext()Landroid/content/Context;
 
     move-result-object v2
 
@@ -1166,13 +1166,13 @@
 
     const-string v0, "context!!"
 
-    invoke-static {v2, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v2, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    invoke-virtual {p0}, Lcom/vk/webapp/VkUiConnectFragment;->a5()Lcom/vk/webapp/o/b;
+    invoke-virtual {p0}, Lcom/vk/webapp/VkUiConnectFragment;->a5()Lcom/vk/webapp/o/VkUiConnectFragmentDelegate;
 
     move-result-object v0
 
-    invoke-interface {v0}, Lcom/vk/webapp/o/c;->n()Ljava/lang/String;
+    invoke-interface {v0}, Lcom/vk/webapp/o/VkUiFragmentDelegate;->n()Ljava/lang/String;
 
     move-result-object v3
 
@@ -1187,7 +1187,7 @@
     return-void
 
     :cond_2
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     const/4 v0, 0x0
 
@@ -1198,16 +1198,16 @@
     .locals 5
 
     .line 1
-    invoke-static {}, Lcom/vtosters/lite/i0/c;->d()Lb/h/h/d/c;
+    invoke-static {}, Lcom/vtosters/lite/auth/VKAccountManager;->d()Lcom/vk/auth/api/VKAccount;
 
     move-result-object v0
 
     const/4 v1, 0x0
 
-    invoke-virtual {v0, v1}, Lb/h/h/d/c;->E(Z)V
+    invoke-virtual {v0, v1}, Lcom/vk/auth/api/VKAccount;->E(Z)V
 
     .line 2
-    invoke-static {v1}, Lcom/vk/api/account/u;->g(Z)Lcom/vk/api/account/u;
+    invoke-static {v1}, Lcom/vk/api/account/AccountSetInfo;->g(Z)Lcom/vk/api/account/AccountSetInfo;
 
     move-result-object v0
 
@@ -1216,18 +1216,18 @@
     const/4 v3, 0x1
 
     .line 3
-    invoke-static {v0, v2, v3, v2}, Lcom/vk/api/base/d;->d(Lcom/vk/api/base/d;Lcom/vk/api/base/e;ILjava/lang/Object;)Lc/a/m;
+    invoke-static {v0, v2, v3, v2}, Lcom/vk/api/base/ApiRequest;->d(Lcom/vk/api/base/ApiRequest;Lcom/vk/api/base/ApiThreadHolder;ILjava/lang/Object;)Lio/reactivex/Observable;
 
     move-result-object v0
 
     .line 4
-    invoke-virtual {v0}, Lc/a/m;->j()Lio/reactivex/disposables/b;
+    invoke-virtual {v0}, Lio/reactivex/Observable;->j()Lio/reactivex/disposables/Disposable;
 
     move-result-object v0
 
     const-string v3, "AccountSetInfo.setShowVk\u2026             .subscribe()"
 
-    invoke-static {v0, v3}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v3}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 5
     invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getActivity()Landroidx/fragment/app/FragmentActivity;
@@ -1238,9 +1238,9 @@
 
     const-string v4, "activity!!"
 
-    invoke-static {v3, v4}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v3, v4}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    invoke-static {v0, v3}, Lcom/vk/extensions/p;->a(Lio/reactivex/disposables/b;Landroidx/fragment/app/FragmentActivity;)Lio/reactivex/disposables/b;
+    invoke-static {v0, v3}, Lcom/vk/extensions/VKRxExt;->a(Lio/reactivex/disposables/Disposable;Landroidx/fragment/app/FragmentActivity;)Lio/reactivex/disposables/Disposable;
 
     .line 6
     invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getLayoutInflater()Landroid/view/LayoutInflater;
@@ -1282,7 +1282,7 @@
 
     const-string v2, "AlertDialog.Builder(acti\u2026View(dialogView).create()"
 
-    invoke-static {v1, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 8
     invoke-virtual {v1}, Landroid/app/Dialog;->getWindow()Landroid/view/Window;
@@ -1291,7 +1291,7 @@
 
     if-eqz v2, :cond_0
 
-    invoke-static {}, Lcom/vk/core/drawable/l$a;->c()Lcom/vk/core/drawable/f;
+    invoke-static {}, Lcom/vk/core/drawable/VkUiDrawableHelper$a;->c()Lcom/vk/core/drawable/InnerStrokeDrawable;
 
     move-result-object v3
 
@@ -1315,7 +1315,7 @@
     check-cast v2, Landroid/widget/Button;
 
     .line 11
-    invoke-static {}, Lcom/vk/core/ui/themes/d;->e()Z
+    invoke-static {}, Lcom/vk/core/ui/themes/MilkshakeHelper;->e()Z
 
     move-result v3
 
@@ -1407,7 +1407,7 @@
 
     .line 19
     :cond_7
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     throw v2
 
@@ -1423,7 +1423,7 @@
 
     .line 21
     :cond_9
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     throw v2
 .end method
@@ -1452,7 +1452,7 @@
 
     invoke-direct {v1, v0, p0}, Lcom/vk/webapp/VkUiConnectFragment$showTipIfNeeded$$inlined$let$lambda$1;-><init>(Landroid/view/View;Lcom/vk/webapp/VkUiConnectFragment;)V
 
-    invoke-static {v0, v1}, Lcom/vk/extensions/ViewExtKt;->g(Landroid/view/View;Lkotlin/jvm/b/a;)Ljava/lang/Object;
+    invoke-static {v0, v1}, Lcom/vk/extensions/ViewExtKt;->g(Landroid/view/View;Lkotlin/jvm/b/Functions;)Ljava/lang/Object;
 
     :cond_0
     return-void
@@ -1462,48 +1462,48 @@
     .locals 4
 
     .line 1
-    invoke-virtual {p0}, Lcom/vk/webapp/VkUiConnectFragment;->a5()Lcom/vk/webapp/o/b;
+    invoke-virtual {p0}, Lcom/vk/webapp/VkUiConnectFragment;->a5()Lcom/vk/webapp/o/VkUiConnectFragmentDelegate;
 
     move-result-object v0
 
-    invoke-interface {v0}, Lcom/vk/webapp/o/b;->f()Z
+    invoke-interface {v0}, Lcom/vk/webapp/o/VkUiConnectFragmentDelegate;->f()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
     .line 2
-    new-instance v0, Lcom/vk/api/apps/z;
+    new-instance v0, Lcom/vk/api/apps/AppsRemove;
 
-    invoke-virtual {p0}, Lcom/vk/webapp/VkUiConnectFragment;->a5()Lcom/vk/webapp/o/b;
+    invoke-virtual {p0}, Lcom/vk/webapp/VkUiConnectFragment;->a5()Lcom/vk/webapp/o/VkUiConnectFragmentDelegate;
 
     move-result-object v1
 
-    invoke-interface {v1}, Lcom/vk/webapp/o/c;->F()I
+    invoke-interface {v1}, Lcom/vk/webapp/o/VkUiFragmentDelegate;->F()I
 
     move-result v1
 
-    invoke-direct {v0, v1}, Lcom/vk/api/apps/z;-><init>(I)V
+    invoke-direct {v0, v1}, Lcom/vk/api/apps/AppsRemove;-><init>(I)V
 
     goto :goto_0
 
     .line 3
     :cond_0
-    new-instance v0, Lcom/vk/api/apps/b;
+    new-instance v0, Lcom/vk/api/apps/AppUninstall;
 
-    invoke-virtual {p0}, Lcom/vk/webapp/VkUiConnectFragment;->a5()Lcom/vk/webapp/o/b;
+    invoke-virtual {p0}, Lcom/vk/webapp/VkUiConnectFragment;->a5()Lcom/vk/webapp/o/VkUiConnectFragmentDelegate;
 
     move-result-object v1
 
-    invoke-interface {v1}, Lcom/vk/webapp/o/c;->F()I
+    invoke-interface {v1}, Lcom/vk/webapp/o/VkUiFragmentDelegate;->F()I
 
     move-result v1
 
-    invoke-direct {v0, v1}, Lcom/vk/api/apps/b;-><init>(I)V
+    invoke-direct {v0, v1}, Lcom/vk/api/apps/AppUninstall;-><init>(I)V
 
     .line 4
     :goto_0
-    invoke-virtual {p0}, Lcom/vk/webapp/VkUiFragment;->c5()Lio/reactivex/disposables/a;
+    invoke-virtual {p0}, Lcom/vk/webapp/VkUiFragment;->c5()Lio/reactivex/disposables/CompositeDisposable;
 
     move-result-object v1
 
@@ -1512,7 +1512,7 @@
     const/4 v3, 0x0
 
     .line 5
-    invoke-static {v0, v3, v2, v3}, Lcom/vk/api/base/d;->d(Lcom/vk/api/base/d;Lcom/vk/api/base/e;ILjava/lang/Object;)Lc/a/m;
+    invoke-static {v0, v3, v2, v3}, Lcom/vk/api/base/ApiRequest;->d(Lcom/vk/api/base/ApiRequest;Lcom/vk/api/base/ApiThreadHolder;ILjava/lang/Object;)Lio/reactivex/Observable;
 
     move-result-object v0
 
@@ -1525,12 +1525,12 @@
     sget-object v3, Lcom/vk/webapp/VkUiConnectFragment$s0;->a:Lcom/vk/webapp/VkUiConnectFragment$s0;
 
     .line 8
-    invoke-virtual {v0, v2, v3}, Lc/a/m;->a(Lc/a/z/g;Lc/a/z/g;)Lio/reactivex/disposables/b;
+    invoke-virtual {v0, v2, v3}, Lio/reactivex/Observable;->a(Lio/reactivex/functions/Consumer;Lio/reactivex/functions/Consumer;)Lio/reactivex/disposables/Disposable;
 
     move-result-object v0
 
     .line 9
-    invoke-virtual {v1, v0}, Lio/reactivex/disposables/a;->b(Lio/reactivex/disposables/b;)Z
+    invoke-virtual {v1, v0}, Lio/reactivex/disposables/CompositeDisposable;->b(Lio/reactivex/disposables/Disposable;)Z
 
     return-void
 .end method
@@ -1583,12 +1583,12 @@
     return-object p1
 .end method
 
-.method private final a(Lc/a/m;Z)V
+.method private final a(Lio/reactivex/Observable;Z)V
     .locals 9
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lc/a/m<",
+            "Lio/reactivex/Observable<",
             "Ljava/lang/Boolean;",
             ">;Z)V"
         }
@@ -1613,7 +1613,7 @@
 
     move-object v0, p1
 
-    invoke-static/range {v0 .. v8}, Lcom/vk/core/extensions/RxExtKt;->a(Lc/a/m;Landroid/content/Context;JIZZILjava/lang/Object;)Lc/a/m;
+    invoke-static/range {v0 .. v8}, Lcom/vk/core/extensions/RxExtKt;->a(Lio/reactivex/Observable;Landroid/content/Context;JIZZILjava/lang/Object;)Lio/reactivex/Observable;
 
     move-result-object p1
 
@@ -1622,7 +1622,7 @@
 
     invoke-direct {v0, p0}, Lcom/vk/webapp/VkUiConnectFragment$j0;-><init>(Lcom/vk/webapp/VkUiConnectFragment;)V
 
-    invoke-virtual {p1, v0}, Lc/a/m;->e(Lc/a/z/g;)Lc/a/m;
+    invoke-virtual {p1, v0}, Lio/reactivex/Observable;->e(Lio/reactivex/functions/Consumer;)Lio/reactivex/Observable;
 
     move-result-object p1
 
@@ -1631,7 +1631,7 @@
 
     invoke-direct {v0, p0}, Lcom/vk/webapp/VkUiConnectFragment$k0;-><init>(Lcom/vk/webapp/VkUiConnectFragment;)V
 
-    invoke-virtual {p1, v0}, Lc/a/m;->e(Lc/a/z/a;)Lc/a/m;
+    invoke-virtual {p1, v0}, Lio/reactivex/Observable;->e(Lio/reactivex/functions/Action;)Lio/reactivex/Observable;
 
     move-result-object p1
 
@@ -1644,20 +1644,20 @@
 
     invoke-direct {v1, p0, p2}, Lcom/vk/webapp/VkUiConnectFragment$m0;-><init>(Lcom/vk/webapp/VkUiConnectFragment;Z)V
 
-    invoke-virtual {p1, v0, v1}, Lc/a/m;->a(Lc/a/z/g;Lc/a/z/g;)Lio/reactivex/disposables/b;
+    invoke-virtual {p1, v0, v1}, Lio/reactivex/Observable;->a(Lio/reactivex/functions/Consumer;Lio/reactivex/functions/Consumer;)Lio/reactivex/disposables/Disposable;
 
     move-result-object p1
 
     const-string p2, "observable\n             \u2026     }\n                })"
 
-    invoke-static {p1, p2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, p2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 55
-    invoke-virtual {p0}, Lcom/vk/webapp/VkUiFragment;->c5()Lio/reactivex/disposables/a;
+    invoke-virtual {p0}, Lcom/vk/webapp/VkUiFragment;->c5()Lio/reactivex/disposables/CompositeDisposable;
 
     move-result-object p2
 
-    invoke-static {p1, p2}, Lcom/vk/core/extensions/RxExtKt;->a(Lio/reactivex/disposables/b;Lio/reactivex/disposables/a;)Lio/reactivex/disposables/b;
+    invoke-static {p1, p2}, Lcom/vk/core/extensions/RxExtKt;->a(Lio/reactivex/disposables/Disposable;Lio/reactivex/disposables/CompositeDisposable;)Lio/reactivex/disposables/Disposable;
 
     return-void
 .end method
@@ -1712,7 +1712,7 @@
     .locals 6
 
     .line 74
-    new-instance v0, Lcom/vk/api/users/b;
+    new-instance v0, Lcom/vk/api/users/UsersGet;
 
     const-string v1, "id"
 
@@ -1728,14 +1728,14 @@
 
     move-result-object v1
 
-    invoke-direct {v0, p1, v1}, Lcom/vk/api/users/b;-><init>([I[Ljava/lang/String;)V
+    invoke-direct {v0, p1, v1}, Lcom/vk/api/users/UsersGet;-><init>([I[Ljava/lang/String;)V
 
     const/4 p1, 0x0
 
     const/4 v1, 0x1
 
     .line 75
-    invoke-static {v0, p1, v1, p1}, Lcom/vk/api/base/d;->d(Lcom/vk/api/base/d;Lcom/vk/api/base/e;ILjava/lang/Object;)Lc/a/m;
+    invoke-static {v0, p1, v1, p1}, Lcom/vk/api/base/ApiRequest;->d(Lcom/vk/api/base/ApiRequest;Lcom/vk/api/base/ApiThreadHolder;ILjava/lang/Object;)Lio/reactivex/Observable;
 
     move-result-object p1
 
@@ -1750,20 +1750,20 @@
     invoke-direct {v1, p0}, Lcom/vk/webapp/VkUiConnectFragment$i0;-><init>(Lcom/vk/webapp/VkUiConnectFragment;)V
 
     .line 78
-    invoke-virtual {p1, v0, v1}, Lc/a/m;->a(Lc/a/z/g;Lc/a/z/g;)Lio/reactivex/disposables/b;
+    invoke-virtual {p1, v0, v1}, Lio/reactivex/Observable;->a(Lio/reactivex/functions/Consumer;Lio/reactivex/functions/Consumer;)Lio/reactivex/disposables/Disposable;
 
     move-result-object p1
 
     const-string v0, "UsersGet(ids, arrayOf(\"i\u2026SON())\n                })"
 
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 79
-    invoke-virtual {p0}, Lcom/vk/webapp/VkUiFragment;->c5()Lio/reactivex/disposables/a;
+    invoke-virtual {p0}, Lcom/vk/webapp/VkUiFragment;->c5()Lio/reactivex/disposables/CompositeDisposable;
 
     move-result-object v0
 
-    invoke-static {p1, v0}, Lcom/vk/core/extensions/RxExtKt;->a(Lio/reactivex/disposables/b;Lio/reactivex/disposables/a;)Lio/reactivex/disposables/b;
+    invoke-static {p1, v0}, Lcom/vk/core/extensions/RxExtKt;->a(Lio/reactivex/disposables/Disposable;Lio/reactivex/disposables/CompositeDisposable;)Lio/reactivex/disposables/Disposable;
 
     return-void
 .end method
@@ -1791,11 +1791,11 @@
 
     if-nez v0, :cond_0
 
-    invoke-virtual {p0}, Lcom/vk/webapp/VkUiConnectFragment;->a5()Lcom/vk/webapp/o/b;
+    invoke-virtual {p0}, Lcom/vk/webapp/VkUiConnectFragment;->a5()Lcom/vk/webapp/o/VkUiConnectFragmentDelegate;
 
     move-result-object v0
 
-    invoke-interface {v0}, Lcom/vk/webapp/o/b;->f()Z
+    invoke-interface {v0}, Lcom/vk/webapp/o/VkUiConnectFragmentDelegate;->f()Z
 
     move-result v0
 
@@ -1818,11 +1818,11 @@
     return-void
 .end method
 
-.method public static final synthetic b(Lcom/vk/webapp/VkUiConnectFragment;Ljava/lang/String;)Lcom/vk/webapp/cache/a$a;
+.method public static final synthetic b(Lcom/vk/webapp/VkUiConnectFragment;Ljava/lang/String;)Lcom/vk/webapp/cache/AppsCache$a;
     .locals 0
 
     .line 3
-    invoke-direct {p0, p1}, Lcom/vk/webapp/VkUiConnectFragment;->Q(Ljava/lang/String;)Lcom/vk/webapp/cache/a$a;
+    invoke-direct {p0, p1}, Lcom/vk/webapp/VkUiConnectFragment;->Q(Ljava/lang/String;)Lcom/vk/webapp/cache/AppsCache$a;
 
     move-result-object p0
 
@@ -1882,7 +1882,7 @@
     check-cast p1, Lcom/vk/identity/IdentityContext;
 
     .line 5
-    invoke-virtual {p0}, Lcom/vk/webapp/VkUiConnectFragment;->a5()Lcom/vk/webapp/o/b;
+    invoke-virtual {p0}, Lcom/vk/webapp/VkUiConnectFragment;->a5()Lcom/vk/webapp/o/VkUiConnectFragmentDelegate;
 
     move-result-object v0
 
@@ -1890,20 +1890,20 @@
 
     move-result-object v1
 
-    invoke-interface {v0, v1}, Lcom/vk/webapp/o/b;->a(Lcom/vk/dto/identity/IdentityCardData;)V
+    invoke-interface {v0, v1}, Lcom/vk/webapp/o/VkUiConnectFragmentDelegate;->a(Lcom/vk/dto/identity/IdentityCardData;)V
 
     .line 6
-    invoke-virtual {p0}, Lcom/vk/webapp/VkUiConnectFragment;->a5()Lcom/vk/webapp/o/b;
+    invoke-virtual {p0}, Lcom/vk/webapp/VkUiConnectFragment;->a5()Lcom/vk/webapp/o/VkUiConnectFragmentDelegate;
 
     move-result-object v0
 
-    invoke-interface {v0}, Lcom/vk/webapp/o/b;->q()Lcom/vk/identity/IdentityController;
+    invoke-interface {v0}, Lcom/vk/webapp/o/VkUiConnectFragmentDelegate;->q()Lcom/vk/identity/IdentityController;
 
     move-result-object v0
 
     const-string v1, "identityContext"
 
-    invoke-static {p1, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {v0, p1}, Lcom/vk/identity/IdentityController;->a(Lcom/vk/identity/IdentityContext;)V
 
@@ -1965,7 +1965,7 @@
 
     const-string p1, "VKWebAppGetPersonalCardResult"
 
-    invoke-virtual {v1, v2, p1, v3}, Lcom/vk/webapp/bridges/a;->a(Lcom/vk/webapp/internal/data/JsApiMethodType;Ljava/lang/String;Lorg/json/JSONObject;)V
+    invoke-virtual {v1, v2, p1, v3}, Lcom/vk/webapp/bridges/AndroidBridge;->a(Lcom/vk/webapp/internal/data/JsApiMethodType;Ljava/lang/String;Lorg/json/JSONObject;)V
 
     goto :goto_1
 
@@ -1990,7 +1990,7 @@
 
     const-string v2, "VKWebAppGetPersonalCardFailed"
 
-    invoke-virtual {p1, v0, v2, v1}, Lcom/vk/webapp/bridges/a;->a(Lcom/vk/webapp/internal/data/JsApiMethodType;Ljava/lang/String;Lorg/json/JSONObject;)V
+    invoke-virtual {p1, v0, v2, v1}, Lcom/vk/webapp/bridges/AndroidBridge;->a(Lcom/vk/webapp/internal/data/JsApiMethodType;Ljava/lang/String;Lorg/json/JSONObject;)V
 
     :goto_1
     return-void
@@ -2042,7 +2042,7 @@
 
     move-result-object v0
 
-    invoke-virtual {p1, p2, v1, v0}, Lcom/vk/webapp/bridges/a;->a(Lcom/vk/webapp/internal/data/JsApiMethodType;Ljava/lang/String;Lorg/json/JSONObject;)V
+    invoke-virtual {p1, p2, v1, v0}, Lcom/vk/webapp/bridges/AndroidBridge;->a(Lcom/vk/webapp/internal/data/JsApiMethodType;Ljava/lang/String;Lorg/json/JSONObject;)V
 
     goto :goto_4
 
@@ -2170,7 +2170,7 @@
 
     move-result-object v0
 
-    invoke-virtual {p1, p2, v1, v0}, Lcom/vk/webapp/bridges/a;->a(Lcom/vk/webapp/internal/data/JsApiMethodType;Ljava/lang/String;Lorg/json/JSONObject;)V
+    invoke-virtual {p1, p2, v1, v0}, Lcom/vk/webapp/bridges/AndroidBridge;->a(Lcom/vk/webapp/internal/data/JsApiMethodType;Ljava/lang/String;Lorg/json/JSONObject;)V
 
     return-void
 .end method
@@ -2198,22 +2198,22 @@
     if-lez p1, :cond_1
 
     .line 3
-    new-instance p2, Lcom/vk/api/apps/c;
+    new-instance p2, Lcom/vk/api/apps/AppsAddToGroup;
 
-    invoke-virtual {p0}, Lcom/vk/webapp/VkUiConnectFragment;->a5()Lcom/vk/webapp/o/b;
+    invoke-virtual {p0}, Lcom/vk/webapp/VkUiConnectFragment;->a5()Lcom/vk/webapp/o/VkUiConnectFragmentDelegate;
 
     move-result-object v1
 
-    invoke-interface {v1}, Lcom/vk/webapp/o/c;->F()I
+    invoke-interface {v1}, Lcom/vk/webapp/o/VkUiFragmentDelegate;->F()I
 
     move-result v1
 
-    invoke-direct {p2, v1, p1}, Lcom/vk/api/apps/c;-><init>(II)V
+    invoke-direct {p2, v1, p1}, Lcom/vk/api/apps/AppsAddToGroup;-><init>(II)V
 
     const/4 v1, 0x1
 
     .line 4
-    invoke-static {p2, v0, v1, v0}, Lcom/vk/api/base/d;->d(Lcom/vk/api/base/d;Lcom/vk/api/base/e;ILjava/lang/Object;)Lc/a/m;
+    invoke-static {p2, v0, v1, v0}, Lcom/vk/api/base/ApiRequest;->d(Lcom/vk/api/base/ApiRequest;Lcom/vk/api/base/ApiThreadHolder;ILjava/lang/Object;)Lio/reactivex/Observable;
 
     move-result-object p2
 
@@ -2228,20 +2228,20 @@
     invoke-direct {p1, p0}, Lcom/vk/webapp/VkUiConnectFragment$w;-><init>(Lcom/vk/webapp/VkUiConnectFragment;)V
 
     .line 7
-    invoke-virtual {p2, v0, p1}, Lc/a/m;->a(Lc/a/z/g;Lc/a/z/g;)Lio/reactivex/disposables/b;
+    invoke-virtual {p2, v0, p1}, Lio/reactivex/Observable;->a(Lio/reactivex/functions/Consumer;Lio/reactivex/functions/Consumer;)Lio/reactivex/disposables/Disposable;
 
     move-result-object p1
 
     const-string p2, "AppsAddToGroup(delegate.\u2026                       })"
 
-    invoke-static {p1, p2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, p2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 8
-    invoke-virtual {p0}, Lcom/vk/webapp/VkUiFragment;->c5()Lio/reactivex/disposables/a;
+    invoke-virtual {p0}, Lcom/vk/webapp/VkUiFragment;->c5()Lio/reactivex/disposables/CompositeDisposable;
 
     move-result-object p2
 
-    invoke-static {p1, p2}, Lcom/vk/core/extensions/RxExtKt;->a(Lio/reactivex/disposables/b;Lio/reactivex/disposables/a;)Lio/reactivex/disposables/b;
+    invoke-static {p1, p2}, Lcom/vk/core/extensions/RxExtKt;->a(Lio/reactivex/disposables/Disposable;Lio/reactivex/disposables/CompositeDisposable;)Lio/reactivex/disposables/Disposable;
 
     goto :goto_0
 
@@ -2263,7 +2263,7 @@
 
     const-string v1, "VKWebAppAddToCommunityFailed"
 
-    invoke-virtual {p1, p2, v1, v0}, Lcom/vk/webapp/bridges/a;->a(Lcom/vk/webapp/internal/data/JsApiMethodType;Ljava/lang/String;Lorg/json/JSONObject;)V
+    invoke-virtual {p1, p2, v1, v0}, Lcom/vk/webapp/bridges/AndroidBridge;->a(Lcom/vk/webapp/internal/data/JsApiMethodType;Ljava/lang/String;Lorg/json/JSONObject;)V
 
     :cond_1
     :goto_0
@@ -2396,7 +2396,7 @@
 
     sget-object v0, Lcom/vk/webapp/internal/data/JsApiMethodType;->CLOSE_APP:Lcom/vk/webapp/internal/data/JsApiMethodType;
 
-    invoke-virtual {p2, v0, p1}, Lcom/vk/webapp/bridges/a;->a(Lcom/vk/webapp/internal/data/JsApiMethodType;Lorg/json/JSONObject;)V
+    invoke-virtual {p2, v0, p1}, Lcom/vk/webapp/bridges/AndroidBridge;->a(Lcom/vk/webapp/internal/data/JsApiMethodType;Lorg/json/JSONObject;)V
 
     :goto_4
     return-void
@@ -2469,7 +2469,7 @@
 
     const-string v1, "VKWebAppOpenPayFormResult"
 
-    invoke-virtual {p2, v0, v1, p1}, Lcom/vk/webapp/bridges/a;->a(Lcom/vk/webapp/internal/data/JsApiMethodType;Ljava/lang/String;Lorg/json/JSONObject;)V
+    invoke-virtual {p2, v0, v1, p1}, Lcom/vk/webapp/bridges/AndroidBridge;->a(Lcom/vk/webapp/internal/data/JsApiMethodType;Ljava/lang/String;Lorg/json/JSONObject;)V
 
     goto :goto_1
 
@@ -2491,7 +2491,7 @@
 
     const-string v1, "VKWebAppOpenPayFormFailed"
 
-    invoke-virtual {p1, p2, v1, v0}, Lcom/vk/webapp/bridges/a;->a(Lcom/vk/webapp/internal/data/JsApiMethodType;Ljava/lang/String;Lorg/json/JSONObject;)V
+    invoke-virtual {p1, p2, v1, v0}, Lcom/vk/webapp/bridges/AndroidBridge;->a(Lcom/vk/webapp/internal/data/JsApiMethodType;Ljava/lang/String;Lorg/json/JSONObject;)V
 
     :goto_1
     return-void
@@ -2556,7 +2556,7 @@
 
     const-string v0, "activity!!"
 
-    invoke-static {p2, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p2, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-direct {p1, p2}, Lcom/vk/core/dialogs/alert/VkAlertDialog$Builder;-><init>(Landroid/content/Context;)V
 
@@ -2577,7 +2577,7 @@
 
     .line 8
     :cond_1
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     throw v2
 
@@ -2656,7 +2656,7 @@
 
     sget-object v0, Lcom/vk/webapp/internal/data/JsApiMethodType;->SHOW_WALL_POST_BOX:Lcom/vk/webapp/internal/data/JsApiMethodType;
 
-    invoke-virtual {p2, v0, p1}, Lcom/vk/webapp/bridges/a;->a(Lcom/vk/webapp/internal/data/JsApiMethodType;Lorg/json/JSONObject;)V
+    invoke-virtual {p2, v0, p1}, Lcom/vk/webapp/bridges/AndroidBridge;->a(Lcom/vk/webapp/internal/data/JsApiMethodType;Lorg/json/JSONObject;)V
 
     return-void
 .end method
@@ -2700,7 +2700,7 @@
     move-result-object v0
 
     .line 4
-    invoke-virtual {p1, v2, p2, v0}, Lcom/vk/webapp/bridges/a;->a(Lcom/vk/webapp/internal/data/JsApiMethodType;Ljava/lang/String;Lorg/json/JSONObject;)V
+    invoke-virtual {p1, v2, p2, v0}, Lcom/vk/webapp/bridges/AndroidBridge;->a(Lcom/vk/webapp/internal/data/JsApiMethodType;Ljava/lang/String;Lorg/json/JSONObject;)V
 
     goto :goto_0
 
@@ -2720,7 +2720,7 @@
     move-result-object v0
 
     .line 7
-    invoke-virtual {p1, v2, p2, v0}, Lcom/vk/webapp/bridges/a;->a(Lcom/vk/webapp/internal/data/JsApiMethodType;Ljava/lang/String;Lorg/json/JSONObject;)V
+    invoke-virtual {p1, v2, p2, v0}, Lcom/vk/webapp/bridges/AndroidBridge;->a(Lcom/vk/webapp/internal/data/JsApiMethodType;Ljava/lang/String;Lorg/json/JSONObject;)V
 
     goto :goto_0
 
@@ -2745,11 +2745,11 @@
 
     sget-object v1, Lcom/vk/webapp/internal/data/JsApiMethodType;->SHOW_COMMUNITY_WIDGET_PREVIEW_BOX:Lcom/vk/webapp/internal/data/JsApiMethodType;
 
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     const-string v0, "VKWebAppShowCommunityWidgetPreviewBoxResult"
 
-    invoke-virtual {p2, v1, v0, p1}, Lcom/vk/webapp/bridges/a;->a(Lcom/vk/webapp/internal/data/JsApiMethodType;Ljava/lang/String;Lorg/json/JSONObject;)V
+    invoke-virtual {p2, v1, v0, p1}, Lcom/vk/webapp/bridges/AndroidBridge;->a(Lcom/vk/webapp/internal/data/JsApiMethodType;Ljava/lang/String;Lorg/json/JSONObject;)V
 
     :goto_0
     return-void
@@ -2827,7 +2827,7 @@
     const/4 v3, 0x0
 
     .line 2
-    invoke-static {v0, v1, v2, v3}, Lcom/vk/core/util/k1;->a(IZILjava/lang/Object;)V
+    invoke-static {v0, v1, v2, v3}, Lcom/vk/core/util/ToastUtils;->a(IZILjava/lang/Object;)V
 
     .line 3
     invoke-virtual {p0}, Lcom/vk/webapp/VkUiConnectFragment;->Z4()Lcom/vk/webapp/bridges/VkUiConnectBridge;
@@ -2846,7 +2846,7 @@
 
     const-string v3, "VKWebAppAddToCommunityFailed"
 
-    invoke-virtual {v0, v1, v3, v2}, Lcom/vk/webapp/bridges/a;->a(Lcom/vk/webapp/internal/data/JsApiMethodType;Ljava/lang/String;Lorg/json/JSONObject;)V
+    invoke-virtual {v0, v1, v3, v2}, Lcom/vk/webapp/bridges/AndroidBridge;->a(Lcom/vk/webapp/internal/data/JsApiMethodType;Ljava/lang/String;Lorg/json/JSONObject;)V
 
     .line 4
     :cond_0
@@ -2865,13 +2865,13 @@
     .locals 6
 
     .line 1
-    invoke-virtual {p0}, Ld/a/a/a/h;->Q4()Landroidx/appcompat/widget/Toolbar;
+    invoke-virtual {p0}, Lme/grishka/appkit/fragments/AppKitFragment;->Q4()Landroidx/appcompat/widget/Toolbar;
 
     move-result-object v0
 
     const-string v1, "toolbar"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getArguments()Landroid/os/Bundle;
 
@@ -2890,11 +2890,11 @@
     invoke-virtual {v0, v2}, Landroidx/appcompat/widget/Toolbar;->setTitle(Ljava/lang/CharSequence;)V
 
     .line 2
-    invoke-virtual {p0}, Ld/a/a/a/h;->Q4()Landroidx/appcompat/widget/Toolbar;
+    invoke-virtual {p0}, Lme/grishka/appkit/fragments/AppKitFragment;->Q4()Landroidx/appcompat/widget/Toolbar;
 
     move-result-object v0
 
-    invoke-virtual {p0}, Ld/a/a/a/h;->getContext()Landroid/content/Context;
+    invoke-virtual {p0}, Lme/grishka/appkit/fragments/AppKitFragment;->getContext()Landroid/content/Context;
 
     move-result-object v2
 
@@ -2903,13 +2903,13 @@
     invoke-virtual {v0, v2, v4}, Landroidx/appcompat/widget/Toolbar;->setTitleTextAppearance(Landroid/content/Context;I)V
 
     .line 3
-    invoke-virtual {p0}, Ld/a/a/a/h;->Q4()Landroidx/appcompat/widget/Toolbar;
+    invoke-virtual {p0}, Lme/grishka/appkit/fragments/AppKitFragment;->Q4()Landroidx/appcompat/widget/Toolbar;
 
     move-result-object v0
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    invoke-virtual {p0}, Ld/a/a/a/h;->getContext()Landroid/content/Context;
+    invoke-virtual {p0}, Lme/grishka/appkit/fragments/AppKitFragment;->getContext()Landroid/content/Context;
 
     move-result-object v2
 
@@ -2917,7 +2917,7 @@
 
     const-string v4, "context!!"
 
-    invoke-static {v2, v4}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v2, v4}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     const v4, 0x7f080967
 
@@ -2930,16 +2930,16 @@
     invoke-virtual {v0, v2}, Landroidx/appcompat/widget/Toolbar;->setNavigationIcon(Landroid/graphics/drawable/Drawable;)V
 
     .line 4
-    invoke-virtual {p0}, Ld/a/a/a/h;->Q4()Landroidx/appcompat/widget/Toolbar;
+    invoke-virtual {p0}, Lme/grishka/appkit/fragments/AppKitFragment;->Q4()Landroidx/appcompat/widget/Toolbar;
 
     move-result-object v0
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    invoke-static {v0}, Lcom/vk/extensions/t/a;->a(Landroidx/appcompat/widget/Toolbar;)V
+    invoke-static {v0}, Lcom/vk/extensions/t/ToolbarExt;->a(Landroidx/appcompat/widget/Toolbar;)V
 
     .line 5
-    invoke-virtual {p0}, Ld/a/a/a/h;->getContext()Landroid/content/Context;
+    invoke-virtual {p0}, Lme/grishka/appkit/fragments/AppKitFragment;->getContext()Landroid/content/Context;
 
     move-result-object v0
 
@@ -2998,19 +2998,19 @@
     const-string v1, "navigationContainer"
 
     .line 11
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     return-object v0
 
     .line 12
     :cond_1
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     throw v3
 
     .line 13
     :cond_2
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     throw v3
 .end method
@@ -3027,28 +3027,28 @@
     .locals 4
 
     .line 1
-    invoke-virtual {p0}, Lcom/vk/webapp/VkUiFragment;->c5()Lio/reactivex/disposables/a;
+    invoke-virtual {p0}, Lcom/vk/webapp/VkUiFragment;->c5()Lio/reactivex/disposables/CompositeDisposable;
 
     move-result-object v0
 
-    new-instance v1, Lcom/vk/api/apps/f;
+    new-instance v1, Lcom/vk/api/apps/AppsDenyNotifications;
 
-    invoke-virtual {p0}, Lcom/vk/webapp/VkUiConnectFragment;->a5()Lcom/vk/webapp/o/b;
+    invoke-virtual {p0}, Lcom/vk/webapp/VkUiConnectFragment;->a5()Lcom/vk/webapp/o/VkUiConnectFragmentDelegate;
 
     move-result-object v2
 
-    invoke-interface {v2}, Lcom/vk/webapp/o/c;->F()I
+    invoke-interface {v2}, Lcom/vk/webapp/o/VkUiFragmentDelegate;->F()I
 
     move-result v2
 
-    invoke-direct {v1, v2}, Lcom/vk/api/apps/f;-><init>(I)V
+    invoke-direct {v1, v2}, Lcom/vk/api/apps/AppsDenyNotifications;-><init>(I)V
 
     const/4 v2, 0x0
 
     const/4 v3, 0x1
 
     .line 2
-    invoke-static {v1, v2, v3, v2}, Lcom/vk/api/base/d;->d(Lcom/vk/api/base/d;Lcom/vk/api/base/e;ILjava/lang/Object;)Lc/a/m;
+    invoke-static {v1, v2, v3, v2}, Lcom/vk/api/base/ApiRequest;->d(Lcom/vk/api/base/ApiRequest;Lcom/vk/api/base/ApiThreadHolder;ILjava/lang/Object;)Lio/reactivex/Observable;
 
     move-result-object v1
 
@@ -3063,12 +3063,12 @@
     invoke-direct {v3, p0}, Lcom/vk/webapp/VkUiConnectFragment$p;-><init>(Lcom/vk/webapp/VkUiConnectFragment;)V
 
     .line 5
-    invoke-virtual {v1, v2, v3}, Lc/a/m;->a(Lc/a/z/g;Lc/a/z/g;)Lio/reactivex/disposables/b;
+    invoke-virtual {v1, v2, v3}, Lio/reactivex/Observable;->a(Lio/reactivex/functions/Consumer;Lio/reactivex/functions/Consumer;)Lio/reactivex/disposables/Disposable;
 
     move-result-object v1
 
     .line 6
-    invoke-virtual {v0, v1}, Lio/reactivex/disposables/a;->b(Lio/reactivex/disposables/b;)Z
+    invoke-virtual {v0, v1}, Lio/reactivex/disposables/CompositeDisposable;->b(Lio/reactivex/disposables/Disposable;)Z
 
     return-void
 .end method
@@ -3133,9 +3133,9 @@
 
     const-string v4, "result"
 
-    invoke-static {v0, v4}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v4}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    invoke-virtual {v1, v2, v3, v0}, Lcom/vk/webapp/bridges/a;->a(Lcom/vk/webapp/internal/data/JsApiMethodType;Ljava/lang/String;Lorg/json/JSONObject;)V
+    invoke-virtual {v1, v2, v3, v0}, Lcom/vk/webapp/bridges/AndroidBridge;->a(Lcom/vk/webapp/internal/data/JsApiMethodType;Ljava/lang/String;Lorg/json/JSONObject;)V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
@@ -3162,7 +3162,7 @@
     .locals 7
 
     .line 1
-    invoke-virtual {p0}, Ld/a/a/a/h;->getContext()Landroid/content/Context;
+    invoke-virtual {p0}, Lme/grishka/appkit/fragments/AppKitFragment;->getContext()Landroid/content/Context;
 
     move-result-object v0
 
@@ -3188,7 +3188,7 @@
 
     const-string v3, "VKWebAppAllowNotificationsFailed"
 
-    invoke-static/range {v1 .. v6}, Lcom/vk/webapp/bridges/a;->a(Lcom/vk/webapp/bridges/a;Lcom/vk/webapp/internal/data/JsApiMethodType;Ljava/lang/String;ZILjava/lang/Object;)Z
+    invoke-static/range {v1 .. v6}, Lcom/vk/webapp/bridges/AndroidBridge;->a(Lcom/vk/webapp/bridges/AndroidBridge;Lcom/vk/webapp/internal/data/JsApiMethodType;Ljava/lang/String;ZILjava/lang/Object;)Z
 
     move-result v0
 
@@ -3198,9 +3198,9 @@
 
     .line 3
     :cond_1
-    sget-object v0, Lcom/vk/webapp/r/b;->d:Lcom/vk/webapp/r/b$a;
+    sget-object v0, Lcom/vk/webapp/r/PermissionBottomSheetDialog;->d:Lcom/vk/webapp/r/PermissionBottomSheetDialog$a;
 
-    invoke-virtual {p0}, Ld/a/a/a/h;->getContext()Landroid/content/Context;
+    invoke-virtual {p0}, Lme/grishka/appkit/fragments/AppKitFragment;->getContext()Landroid/content/Context;
 
     move-result-object v1
 
@@ -3208,9 +3208,9 @@
 
     const-string v2, "context!!"
 
-    invoke-static {v1, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    invoke-virtual {v0, v1}, Lcom/vk/webapp/r/b$a;->a(Landroid/content/Context;)Lcom/vk/webapp/r/b;
+    invoke-virtual {v0, v1}, Lcom/vk/webapp/r/PermissionBottomSheetDialog$a;->a(Landroid/content/Context;)Lcom/vk/webapp/r/PermissionBottomSheetDialog;
 
     move-result-object v0
 
@@ -3219,7 +3219,7 @@
 
     invoke-direct {v1, p0}, Lcom/vk/webapp/VkUiConnectFragment$c0;-><init>(Lcom/vk/webapp/VkUiConnectFragment;)V
 
-    invoke-virtual {v0, v1}, Lcom/vk/common/view/j/c;->a(Lcom/vk/common/view/j/c$a;)V
+    invoke-virtual {v0, v1}, Lcom/vk/common/view/j/ConfirmationBottomSheetDialog;->a(Lcom/vk/common/view/j/ConfirmationBottomSheetDialog$a;)V
 
     .line 5
     invoke-virtual {v0}, Landroidx/fragment/app/Fragment;->isStateSaved()Z
@@ -3238,7 +3238,7 @@
 
     .line 6
     :cond_2
-    invoke-virtual {p0}, Ld/a/a/a/h;->getContext()Landroid/content/Context;
+    invoke-virtual {p0}, Lme/grishka/appkit/fragments/AppKitFragment;->getContext()Landroid/content/Context;
 
     move-result-object v1
 
@@ -3255,11 +3255,11 @@
     invoke-virtual {v0, v1, v2}, Landroidx/fragment/app/DialogFragment;->show(Landroidx/fragment/app/FragmentManager;Ljava/lang/String;)V
 
     .line 7
-    invoke-virtual {p0}, Lcom/vk/webapp/VkUiConnectFragment;->a5()Lcom/vk/webapp/o/b;
+    invoke-virtual {p0}, Lcom/vk/webapp/VkUiConnectFragment;->a5()Lcom/vk/webapp/o/VkUiConnectFragmentDelegate;
 
     move-result-object v0
 
-    invoke-interface {v0}, Lcom/vk/webapp/o/b;->w()Lcom/vk/webapp/helpers/b;
+    invoke-interface {v0}, Lcom/vk/webapp/o/VkUiConnectFragmentDelegate;->w()Lcom/vk/webapp/helpers/VkAppsAnalytics;
 
     move-result-object v0
 
@@ -3267,7 +3267,7 @@
 
     const-string v2, "show"
 
-    invoke-virtual {v0, v1, v2}, Lcom/vk/webapp/helpers/b;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-virtual {v0, v1, v2}, Lcom/vk/webapp/helpers/VkAppsAnalytics;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     return-void
 
@@ -3287,7 +3287,7 @@
 
     .line 9
     :cond_5
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     const/4 v0, 0x0
 
@@ -3298,20 +3298,20 @@
     .locals 4
 
     .line 1
-    invoke-virtual {p0}, Lcom/vk/webapp/VkUiFragment;->c5()Lio/reactivex/disposables/a;
+    invoke-virtual {p0}, Lcom/vk/webapp/VkUiFragment;->c5()Lio/reactivex/disposables/CompositeDisposable;
 
     move-result-object v0
 
-    new-instance v1, Lcom/vk/api/users/d;
+    new-instance v1, Lcom/vk/api/users/UsersGetMyInfoJson;
 
-    invoke-direct {v1}, Lcom/vk/api/users/d;-><init>()V
+    invoke-direct {v1}, Lcom/vk/api/users/UsersGetMyInfoJson;-><init>()V
 
     const/4 v2, 0x0
 
     const/4 v3, 0x1
 
     .line 2
-    invoke-static {v1, v2, v3, v2}, Lcom/vk/api/base/d;->d(Lcom/vk/api/base/d;Lcom/vk/api/base/e;ILjava/lang/Object;)Lc/a/m;
+    invoke-static {v1, v2, v3, v2}, Lcom/vk/api/base/ApiRequest;->d(Lcom/vk/api/base/ApiRequest;Lcom/vk/api/base/ApiThreadHolder;ILjava/lang/Object;)Lio/reactivex/Observable;
 
     move-result-object v1
 
@@ -3326,12 +3326,12 @@
     invoke-direct {v3, p0}, Lcom/vk/webapp/VkUiConnectFragment$g0;-><init>(Lcom/vk/webapp/VkUiConnectFragment;)V
 
     .line 5
-    invoke-virtual {v1, v2, v3}, Lc/a/m;->a(Lc/a/z/g;Lc/a/z/g;)Lio/reactivex/disposables/b;
+    invoke-virtual {v1, v2, v3}, Lio/reactivex/Observable;->a(Lio/reactivex/functions/Consumer;Lio/reactivex/functions/Consumer;)Lio/reactivex/disposables/Disposable;
 
     move-result-object v1
 
     .line 6
-    invoke-virtual {v0, v1}, Lio/reactivex/disposables/a;->b(Lio/reactivex/disposables/b;)Z
+    invoke-virtual {v0, v1}, Lio/reactivex/disposables/CompositeDisposable;->b(Lio/reactivex/disposables/Disposable;)Z
 
     return-void
 .end method
@@ -3359,7 +3359,7 @@
     invoke-virtual {v0, v1, v2}, Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
 
     .line 4
-    iget-boolean v1, p0, Ld/a/a/a/h;->I:Z
+    iget-boolean v1, p0, Lme/grishka/appkit/fragments/AppKitFragment;->I:Z
 
     if-eqz v1, :cond_0
 
@@ -3400,7 +3400,7 @@
 
     move-result-object v0
 
-    invoke-virtual {v1, v2, v0}, Lcom/vk/webapp/bridges/a;->a(Lcom/vk/webapp/internal/data/JsApiMethodType;Lorg/json/JSONObject;)V
+    invoke-virtual {v1, v2, v0}, Lcom/vk/webapp/bridges/AndroidBridge;->a(Lcom/vk/webapp/internal/data/JsApiMethodType;Lorg/json/JSONObject;)V
 
     return-void
 .end method
@@ -3427,7 +3427,7 @@
 
     const-string v3, "VKWebAppShowNativeAdsFailed"
 
-    invoke-virtual {v0, v1, v3, v2}, Lcom/vk/webapp/bridges/a;->a(Lcom/vk/webapp/internal/data/JsApiMethodType;Ljava/lang/String;Lorg/json/JSONObject;)V
+    invoke-virtual {v0, v1, v3, v2}, Lcom/vk/webapp/bridges/AndroidBridge;->a(Lcom/vk/webapp/internal/data/JsApiMethodType;Ljava/lang/String;Lorg/json/JSONObject;)V
 
     return-void
 .end method
@@ -3455,11 +3455,11 @@
 
     sget-object v3, Lcom/vk/webapp/internal/data/JsApiMethodType;->SHOW_NATIVE_ADS:Lcom/vk/webapp/internal/data/JsApiMethodType;
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     const-string v1, "VKWebAppShowNativeAdsResult"
 
-    invoke-virtual {v2, v3, v1, v0}, Lcom/vk/webapp/bridges/a;->a(Lcom/vk/webapp/internal/data/JsApiMethodType;Ljava/lang/String;Lorg/json/JSONObject;)V
+    invoke-virtual {v2, v3, v1, v0}, Lcom/vk/webapp/bridges/AndroidBridge;->a(Lcom/vk/webapp/internal/data/JsApiMethodType;Ljava/lang/String;Lorg/json/JSONObject;)V
 
     return-void
 .end method
@@ -3476,11 +3476,11 @@
 
     const-string v2, "requireContext()"
 
-    invoke-static {v1, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     const-string v2, "mimi_app_options"
 
-    invoke-virtual {v0, v1, v2}, Lcom/vk/core/dialogs/bottomsheet/f;->a(Landroid/content/Context;Ljava/lang/String;)Lcom/vk/core/dialogs/bottomsheet/e;
+    invoke-virtual {v0, v1, v2}, Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheetMenu;->a(Landroid/content/Context;Ljava/lang/String;)Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet;
 
     return-void
 .end method
@@ -3489,17 +3489,17 @@
     .locals 8
 
     .line 1
-    invoke-virtual {p0}, Lcom/vk/webapp/VkUiFragment;->c5()Lio/reactivex/disposables/a;
+    invoke-virtual {p0}, Lcom/vk/webapp/VkUiFragment;->c5()Lio/reactivex/disposables/CompositeDisposable;
 
     move-result-object v0
 
-    new-instance v7, Lcom/vk/api/apps/g;
+    new-instance v7, Lcom/vk/api/apps/AppsGet;
 
-    invoke-virtual {p0}, Lcom/vk/webapp/VkUiConnectFragment;->a5()Lcom/vk/webapp/o/b;
+    invoke-virtual {p0}, Lcom/vk/webapp/VkUiConnectFragment;->a5()Lcom/vk/webapp/o/VkUiConnectFragmentDelegate;
 
     move-result-object v1
 
-    invoke-interface {v1}, Lcom/vk/webapp/o/c;->F()I
+    invoke-interface {v1}, Lcom/vk/webapp/o/VkUiFragmentDelegate;->F()I
 
     move-result v2
 
@@ -3513,14 +3513,14 @@
 
     move-object v1, v7
 
-    invoke-direct/range {v1 .. v6}, Lcom/vk/api/apps/g;-><init>(ILjava/lang/String;Ljava/lang/String;ILkotlin/jvm/internal/i;)V
+    invoke-direct/range {v1 .. v6}, Lcom/vk/api/apps/AppsGet;-><init>(ILjava/lang/String;Ljava/lang/String;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     const/4 v1, 0x0
 
     const/4 v2, 0x1
 
     .line 2
-    invoke-static {v7, v1, v2, v1}, Lcom/vk/api/base/d;->d(Lcom/vk/api/base/d;Lcom/vk/api/base/e;ILjava/lang/Object;)Lc/a/m;
+    invoke-static {v7, v1, v2, v1}, Lcom/vk/api/base/ApiRequest;->d(Lcom/vk/api/base/ApiRequest;Lcom/vk/api/base/ApiThreadHolder;ILjava/lang/Object;)Lio/reactivex/Observable;
 
     move-result-object v1
 
@@ -3533,12 +3533,12 @@
     sget-object v3, Lcom/vk/webapp/VkUiConnectFragment$u0;->a:Lcom/vk/webapp/VkUiConnectFragment$u0;
 
     .line 5
-    invoke-virtual {v1, v2, v3}, Lc/a/m;->a(Lc/a/z/g;Lc/a/z/g;)Lio/reactivex/disposables/b;
+    invoke-virtual {v1, v2, v3}, Lio/reactivex/Observable;->a(Lio/reactivex/functions/Consumer;Lio/reactivex/functions/Consumer;)Lio/reactivex/disposables/Disposable;
 
     move-result-object v1
 
     .line 6
-    invoke-virtual {v0, v1}, Lio/reactivex/disposables/a;->b(Lio/reactivex/disposables/b;)Z
+    invoke-virtual {v0, v1}, Lio/reactivex/disposables/CompositeDisposable;->b(Lio/reactivex/disposables/Disposable;)Z
 
     return-void
 .end method
@@ -3563,17 +3563,17 @@
     const/4 v0, 0x0
 
     :goto_0
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v0
 
     if-nez v0, :cond_3
 
-    invoke-virtual {p0}, Lcom/vk/webapp/VkUiConnectFragment;->a5()Lcom/vk/webapp/o/b;
+    invoke-virtual {p0}, Lcom/vk/webapp/VkUiConnectFragment;->a5()Lcom/vk/webapp/o/VkUiConnectFragmentDelegate;
 
     move-result-object v0
 
-    invoke-interface {v0}, Lcom/vk/webapp/o/b;->isRedirect()Z
+    invoke-interface {v0}, Lcom/vk/webapp/o/VkUiConnectFragmentDelegate;->isRedirect()Z
 
     move-result v0
 
@@ -3590,11 +3590,11 @@
     if-eqz v2, :cond_2
 
     .line 3
-    sget-object v1, Lcom/vk/common/links/c;->p:Lcom/vk/common/links/c$a;
+    sget-object v1, Lcom/vk/common/links/LinkProcessor;->p:Lcom/vk/common/links/LinkProcessor$a;
 
     const-string v0, "it"
 
-    invoke-static {v2, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v2, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     const/4 v4, 0x0
 
@@ -3604,7 +3604,7 @@
 
     move-object v3, p1
 
-    invoke-static/range {v1 .. v6}, Lcom/vk/common/links/c$a;->a(Lcom/vk/common/links/c$a;Landroid/content/Context;Ljava/lang/String;Landroid/os/Bundle;ILjava/lang/Object;)V
+    invoke-static/range {v1 .. v6}, Lcom/vk/common/links/LinkProcessor$a;->a(Lcom/vk/common/links/LinkProcessor$a;Landroid/content/Context;Ljava/lang/String;Landroid/os/Bundle;ILjava/lang/Object;)V
 
     :cond_2
     const/4 p1, 0x1
@@ -3622,19 +3622,19 @@
     .locals 4
 
     .line 1
-    invoke-virtual {p0}, Lcom/vk/webapp/VkUiFragment;->f5()Lcom/vk/webapp/g;
+    invoke-virtual {p0}, Lcom/vk/webapp/VkUiFragment;->f5()Lcom/vk/webapp/SharingController;
 
     move-result-object v0
 
-    invoke-static {p0}, Lcom/vk/navigation/b;->a(Lcom/vk/core/fragments/FragmentImpl;)Lcom/vk/navigation/a;
+    invoke-static {p0}, Lcom/vk/navigation/ActivityLauncher1;->a(Lcom/vk/core/fragments/FragmentImpl;)Lcom/vk/navigation/ActivityLauncher;
 
     move-result-object v1
 
-    invoke-virtual {p0}, Lcom/vk/webapp/VkUiConnectFragment;->a5()Lcom/vk/webapp/o/b;
+    invoke-virtual {p0}, Lcom/vk/webapp/VkUiConnectFragment;->a5()Lcom/vk/webapp/o/VkUiConnectFragmentDelegate;
 
     move-result-object v2
 
-    invoke-interface {v2}, Lcom/vk/webapp/o/b;->l()Lcom/vk/dto/common/data/ApiApplication;
+    invoke-interface {v2}, Lcom/vk/webapp/o/VkUiConnectFragmentDelegate;->l()Lcom/vk/dto/common/data/ApiApplication;
 
     move-result-object v2
 
@@ -3648,7 +3648,7 @@
     :goto_0
     const/16 v3, 0x64
 
-    invoke-virtual {v0, v1, v2, p1, v3}, Lcom/vk/webapp/g;->a(Lcom/vk/navigation/a;Lcom/vk/dto/common/data/ApiApplication;Ljava/lang/String;I)V
+    invoke-virtual {v0, v1, v2, p1, v3}, Lcom/vk/webapp/SharingController;->a(Lcom/vk/navigation/ActivityLauncher;Lcom/vk/dto/common/data/ApiApplication;Ljava/lang/String;I)V
 
     return-void
 .end method
@@ -3657,15 +3657,15 @@
     .locals 2
 
     .line 1
-    invoke-virtual {p0}, Lcom/vk/webapp/VkUiConnectFragment;->a5()Lcom/vk/webapp/o/b;
+    invoke-virtual {p0}, Lcom/vk/webapp/VkUiConnectFragment;->a5()Lcom/vk/webapp/o/VkUiConnectFragmentDelegate;
 
     move-result-object v0
 
-    invoke-interface {v0}, Lcom/vk/webapp/o/b;->o()Lcom/vk/webapp/VkUiConnectFragment$b;
+    invoke-interface {v0}, Lcom/vk/webapp/o/VkUiConnectFragmentDelegate;->o()Lcom/vk/webapp/VkUiConnectFragment$b;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/vk/webapp/VkUiConnectFragment$b;->a()Lcom/vk/webapp/cache/a$a;
+    invoke-virtual {v0}, Lcom/vk/webapp/VkUiConnectFragment$b;->a()Lcom/vk/webapp/cache/AppsCache$a;
 
     move-result-object v0
 
@@ -3673,10 +3673,10 @@
 
     move-result-object v1
 
-    invoke-virtual {v0, v1}, Lcom/vk/webapp/cache/a$a;->a(Ljava/lang/String;)V
+    invoke-virtual {v0, v1}, Lcom/vk/webapp/cache/AppsCache$a;->a(Ljava/lang/String;)V
 
     .line 2
-    invoke-super {p0}, Ld/a/a/a/j;->P3()V
+    invoke-super {p0}, Lme/grishka/appkit/fragments/LoaderFragment;->P3()V
 
     .line 3
     invoke-direct {p0}, Lcom/vk/webapp/VkUiConnectFragment;->Y5()V
@@ -3697,7 +3697,7 @@
     .locals 1
 
     .line 1
-    iget-boolean v0, p0, Ld/a/a/a/j;->Q:Z
+    iget-boolean v0, p0, Lme/grishka/appkit/fragments/LoaderFragment;->Q:Z
 
     if-eqz v0, :cond_0
 
@@ -3705,21 +3705,21 @@
 
     .line 2
     :cond_0
-    invoke-super {p0}, Ld/a/a/a/j;->W4()V
+    invoke-super {p0}, Lme/grishka/appkit/fragments/LoaderFragment;->W4()V
 
     .line 3
-    iget-object v0, p0, Lcom/vk/webapp/VkUiConnectFragment;->H0:Lcom/vk/webapp/r/a;
+    iget-object v0, p0, Lcom/vk/webapp/VkUiConnectFragment;->H0:Lcom/vk/webapp/r/ILoader;
 
     if-eqz v0, :cond_1
 
-    invoke-interface {v0}, Lcom/vk/webapp/r/a;->start()V
+    invoke-interface {v0}, Lcom/vk/webapp/r/ILoader;->start()V
 
     return-void
 
     :cond_1
     const-string v0, "loader"
 
-    invoke-static {v0}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v0}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     const/4 v0, 0x0
 
@@ -3735,7 +3735,7 @@
     return-object v0
 .end method
 
-.method public bridge synthetic Z4()Lcom/vk/webapp/bridges/a;
+.method public bridge synthetic Z4()Lcom/vk/webapp/bridges/AndroidBridge;
     .locals 1
 
     .line 1
@@ -3775,24 +3775,24 @@
 
     .line 10
     :try_start_0
-    invoke-virtual {p0}, Lcom/vk/webapp/VkUiConnectFragment;->a5()Lcom/vk/webapp/o/b;
+    invoke-virtual {p0}, Lcom/vk/webapp/VkUiConnectFragment;->a5()Lcom/vk/webapp/o/VkUiConnectFragmentDelegate;
 
     move-result-object p2
 
-    invoke-interface {p2}, Lcom/vk/webapp/o/b;->o()Lcom/vk/webapp/VkUiConnectFragment$b;
+    invoke-interface {p2}, Lcom/vk/webapp/o/VkUiConnectFragmentDelegate;->o()Lcom/vk/webapp/VkUiConnectFragment$b;
 
     move-result-object p2
 
-    invoke-virtual {p2}, Lcom/vk/webapp/VkUiConnectFragment$b;->a()Lcom/vk/webapp/cache/a$a;
+    invoke-virtual {p2}, Lcom/vk/webapp/VkUiConnectFragment$b;->a()Lcom/vk/webapp/cache/AppsCache$a;
 
     move-result-object p2
 
     .line 11
-    invoke-virtual {p0}, Lcom/vk/webapp/VkUiConnectFragment;->a5()Lcom/vk/webapp/o/b;
+    invoke-virtual {p0}, Lcom/vk/webapp/VkUiConnectFragment;->a5()Lcom/vk/webapp/o/VkUiConnectFragmentDelegate;
 
     move-result-object v0
 
-    invoke-interface {v0}, Lcom/vk/webapp/o/b;->o()Lcom/vk/webapp/VkUiConnectFragment$b;
+    invoke-interface {v0}, Lcom/vk/webapp/o/VkUiConnectFragmentDelegate;->o()Lcom/vk/webapp/VkUiConnectFragment$b;
 
     move-result-object v0
 
@@ -3801,41 +3801,41 @@
     move-result v0
 
     .line 12
-    invoke-virtual {p0}, Lcom/vk/webapp/VkUiConnectFragment;->a5()Lcom/vk/webapp/o/b;
+    invoke-virtual {p0}, Lcom/vk/webapp/VkUiConnectFragment;->a5()Lcom/vk/webapp/o/VkUiConnectFragmentDelegate;
 
     move-result-object v1
 
-    invoke-interface {v1}, Lcom/vk/webapp/o/b;->o()Lcom/vk/webapp/VkUiConnectFragment$b;
+    invoke-interface {v1}, Lcom/vk/webapp/o/VkUiConnectFragmentDelegate;->o()Lcom/vk/webapp/VkUiConnectFragment$b;
 
     move-result-object v1
 
-    invoke-virtual {v1}, Lcom/vk/webapp/VkUiConnectFragment$b;->a()Lcom/vk/webapp/cache/a$a;
+    invoke-virtual {v1}, Lcom/vk/webapp/VkUiConnectFragment$b;->a()Lcom/vk/webapp/cache/AppsCache$a;
 
     move-result-object v1
 
-    invoke-virtual {v1}, Lcom/vk/webapp/cache/a$a;->d()Landroid/view/View;
+    invoke-virtual {v1}, Lcom/vk/webapp/cache/AppsCache$a;->d()Landroid/view/View;
 
     move-result-object v1
 
     .line 13
-    invoke-virtual {p0}, Lcom/vk/webapp/VkUiConnectFragment;->a5()Lcom/vk/webapp/o/b;
+    invoke-virtual {p0}, Lcom/vk/webapp/VkUiConnectFragment;->a5()Lcom/vk/webapp/o/VkUiConnectFragmentDelegate;
 
     move-result-object v2
 
-    invoke-interface {v2}, Lcom/vk/webapp/o/b;->o()Lcom/vk/webapp/VkUiConnectFragment$b;
+    invoke-interface {v2}, Lcom/vk/webapp/o/VkUiConnectFragmentDelegate;->o()Lcom/vk/webapp/VkUiConnectFragment$b;
 
     move-result-object v2
 
-    invoke-virtual {v2}, Lcom/vk/webapp/VkUiConnectFragment$b;->a()Lcom/vk/webapp/cache/a$a;
+    invoke-virtual {v2}, Lcom/vk/webapp/VkUiConnectFragment$b;->a()Lcom/vk/webapp/cache/AppsCache$a;
 
     move-result-object v2
 
-    invoke-virtual {v2}, Lcom/vk/webapp/cache/a$a;->c()Landroid/webkit/WebChromeClient$CustomViewCallback;
+    invoke-virtual {v2}, Lcom/vk/webapp/cache/AppsCache$a;->c()Landroid/webkit/WebChromeClient$CustomViewCallback;
 
     move-result-object v2
 
     .line 14
-    invoke-virtual {p2}, Lcom/vk/webapp/cache/a$a;->g()Landroid/webkit/WebView;
+    invoke-virtual {p2}, Lcom/vk/webapp/cache/AppsCache$a;->g()Landroid/webkit/WebView;
 
     move-result-object v3
 
@@ -3853,7 +3853,7 @@
     invoke-virtual {p0, v3, v0}, Lcom/vk/webapp/VkUiConnectFragment;->a(Landroid/webkit/WebView;Z)V
 
     .line 16
-    invoke-virtual {p2}, Lcom/vk/webapp/cache/a$a;->a()Lcom/vk/webapp/n/a/a;
+    invoke-virtual {p2}, Lcom/vk/webapp/cache/AppsCache$a;->a()Lcom/vk/webapp/n/a/WebAppBridge;
 
     move-result-object p2
 
@@ -3870,7 +3870,7 @@
 
     move-result-object v3
 
-    invoke-direct {p2, v3}, Lcom/vk/webapp/helpers/AppForegroundNotifier;-><init>(Lcom/vk/webapp/bridges/a;)V
+    invoke-direct {p2, v3}, Lcom/vk/webapp/helpers/AppForegroundNotifier;-><init>(Lcom/vk/webapp/bridges/AndroidBridge;)V
 
     iput-object p2, p0, Lcom/vk/webapp/VkUiConnectFragment;->O0:Lcom/vk/webapp/helpers/AppForegroundNotifier;
 
@@ -3921,19 +3921,19 @@
 
     move-result-object p2
 
-    invoke-virtual {p2}, Lcom/vk/webapp/bridges/VkUiConnectBridge;->g()Lcom/vk/webapp/o/b;
+    invoke-virtual {p2}, Lcom/vk/webapp/bridges/VkUiConnectBridge;->g()Lcom/vk/webapp/o/VkUiConnectFragmentDelegate;
 
     move-result-object p2
 
-    invoke-interface {p2}, Lcom/vk/webapp/o/c;->finish()V
+    invoke-interface {p2}, Lcom/vk/webapp/o/VkUiFragmentDelegate;->finish()V
 
     .line 22
     :cond_2
-    invoke-virtual {p0}, Lcom/vk/webapp/VkUiConnectFragment;->a5()Lcom/vk/webapp/o/b;
+    invoke-virtual {p0}, Lcom/vk/webapp/VkUiConnectFragment;->a5()Lcom/vk/webapp/o/VkUiConnectFragmentDelegate;
 
     move-result-object p2
 
-    invoke-interface {p2}, Lcom/vk/webapp/o/b;->o()Lcom/vk/webapp/VkUiConnectFragment$b;
+    invoke-interface {p2}, Lcom/vk/webapp/o/VkUiConnectFragmentDelegate;->o()Lcom/vk/webapp/VkUiConnectFragment$b;
 
     move-result-object p2
 
@@ -3979,7 +3979,7 @@
 
     move-result-object p2
 
-    invoke-virtual {p2, v1, v2}, Lcom/vk/webapp/helpers/f;->onShowCustomView(Landroid/view/View;Landroid/webkit/WebChromeClient$CustomViewCallback;)V
+    invoke-virtual {p2, v1, v2}, Lcom/vk/webapp/helpers/WebClients4;->onShowCustomView(Landroid/view/View;Landroid/webkit/WebChromeClient$CustomViewCallback;)V
 
     goto :goto_1
 
@@ -3987,7 +3987,7 @@
     const-string p2, "appForegroundNotifier"
 
     .line 28
-    invoke-static {p2}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {p2}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
@@ -3997,11 +3997,11 @@
     :cond_5
     :goto_1
     :try_start_1
-    invoke-virtual {p0}, Lcom/vk/webapp/VkUiConnectFragment;->a5()Lcom/vk/webapp/o/b;
+    invoke-virtual {p0}, Lcom/vk/webapp/VkUiConnectFragment;->a5()Lcom/vk/webapp/o/VkUiConnectFragmentDelegate;
 
     move-result-object p2
 
-    invoke-virtual {p0, p2}, Lcom/vk/webapp/VkUiConnectFragment;->a(Lcom/vk/webapp/o/b;)V
+    invoke-virtual {p0, p2}, Lcom/vk/webapp/VkUiConnectFragment;->a(Lcom/vk/webapp/o/VkUiConnectFragmentDelegate;)V
 
     .line 30
     new-instance p2, Landroid/view/ViewGroup$LayoutParams;
@@ -4031,7 +4031,7 @@
 
     .line 33
     :cond_7
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
@@ -4052,7 +4052,7 @@
 
     const-wide/16 v0, 0xc8
 
-    invoke-static {p2, v0, v1}, Lcom/vtosters/lite/f0;->a(Ljava/lang/Runnable;J)V
+    invoke-static {p2, v0, v1}, Lcom/vtosters/lite/ViewUtils;->a(Ljava/lang/Runnable;J)V
 
     :goto_2
     return-object p1
@@ -4072,11 +4072,11 @@
     .locals 8
 
     .line 68
-    invoke-virtual {p0}, Lcom/vk/webapp/VkUiFragment;->c5()Lio/reactivex/disposables/a;
+    invoke-virtual {p0}, Lcom/vk/webapp/VkUiFragment;->c5()Lio/reactivex/disposables/CompositeDisposable;
 
     move-result-object v0
 
-    new-instance v7, Lcom/vk/api/groups/w;
+    new-instance v7, Lcom/vk/api/groups/GroupsSendPayload;
 
     move-object v1, v7
 
@@ -4088,14 +4088,14 @@
 
     move-wide v5, p4
 
-    invoke-direct/range {v1 .. v6}, Lcom/vk/api/groups/w;-><init>(IILjava/lang/String;J)V
+    invoke-direct/range {v1 .. v6}, Lcom/vk/api/groups/GroupsSendPayload;-><init>(IILjava/lang/String;J)V
 
     const/4 p1, 0x0
 
     const/4 p2, 0x1
 
     .line 69
-    invoke-static {v7, p1, p2, p1}, Lcom/vk/api/base/d;->d(Lcom/vk/api/base/d;Lcom/vk/api/base/e;ILjava/lang/Object;)Lc/a/m;
+    invoke-static {v7, p1, p2, p1}, Lcom/vk/api/base/ApiRequest;->d(Lcom/vk/api/base/ApiRequest;Lcom/vk/api/base/ApiThreadHolder;ILjava/lang/Object;)Lio/reactivex/Observable;
 
     move-result-object p1
 
@@ -4110,12 +4110,12 @@
     invoke-direct {p3, p0}, Lcom/vk/webapp/VkUiConnectFragment$o0;-><init>(Lcom/vk/webapp/VkUiConnectFragment;)V
 
     .line 72
-    invoke-virtual {p1, p2, p3}, Lc/a/m;->a(Lc/a/z/g;Lc/a/z/g;)Lio/reactivex/disposables/b;
+    invoke-virtual {p1, p2, p3}, Lio/reactivex/Observable;->a(Lio/reactivex/functions/Consumer;Lio/reactivex/functions/Consumer;)Lio/reactivex/disposables/Disposable;
 
     move-result-object p1
 
     .line 73
-    invoke-virtual {v0, p1}, Lio/reactivex/disposables/a;->b(Lio/reactivex/disposables/b;)Z
+    invoke-virtual {v0, p1}, Lio/reactivex/disposables/CompositeDisposable;->b(Lio/reactivex/disposables/Disposable;)Z
 
     return-void
 .end method
@@ -4144,10 +4144,10 @@
 
     move-result-object v1
 
-    invoke-virtual {v0, v1}, Lcom/vk/webapp/helpers/f;->a(Landroid/widget/FrameLayout;)V
+    invoke-virtual {v0, v1}, Lcom/vk/webapp/helpers/WebClients4;->a(Landroid/widget/FrameLayout;)V
 
     .line 39
-    invoke-virtual {p0}, Lcom/vk/webapp/VkUiFragment;->l5()Lcom/vk/webapp/helpers/g;
+    invoke-virtual {p0}, Lcom/vk/webapp/VkUiFragment;->l5()Lcom/vk/webapp/helpers/WebClients;
 
     move-result-object v0
 
@@ -4176,7 +4176,7 @@
 
     move-result-object p2
 
-    invoke-virtual {p2, p1}, Lcom/vk/webapp/bridges/a;->a(Landroid/webkit/WebView;)V
+    invoke-virtual {p2, p1}, Lcom/vk/webapp/bridges/AndroidBridge;->a(Landroid/webkit/WebView;)V
 
     .line 43
     :cond_1
@@ -4186,7 +4186,7 @@
 
     const-string p2, "settings"
 
-    invoke-static {p1, p2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, p2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {p1}, Landroid/webkit/WebSettings;->getUserAgentString()Ljava/lang/String;
 
@@ -4197,21 +4197,21 @@
     return-void
 .end method
 
-.method public a(Lcom/vk/core/ui/v/g;)V
+.method public a(Lcom/vk/core/ui/v/UiTrackingScreen;)V
     .locals 5
 
     .line 80
-    invoke-super {p0, p1}, Lcom/vk/core/fragments/FragmentImpl;->a(Lcom/vk/core/ui/v/g;)V
+    invoke-super {p0, p1}, Lcom/vk/core/fragments/FragmentImpl;->a(Lcom/vk/core/ui/v/UiTrackingScreen;)V
 
     .line 81
     new-instance v0, Lcom/vk/stat/scheme/SchemeStat$EventItem;
 
     .line 82
-    invoke-virtual {p0}, Lcom/vk/webapp/VkUiConnectFragment;->a5()Lcom/vk/webapp/o/b;
+    invoke-virtual {p0}, Lcom/vk/webapp/VkUiConnectFragment;->a5()Lcom/vk/webapp/o/VkUiConnectFragmentDelegate;
 
     move-result-object v1
 
-    invoke-interface {v1}, Lcom/vk/webapp/o/b;->l()Lcom/vk/dto/common/data/ApiApplication;
+    invoke-interface {v1}, Lcom/vk/webapp/o/VkUiConnectFragmentDelegate;->l()Lcom/vk/dto/common/data/ApiApplication;
 
     move-result-object v1
 
@@ -4221,7 +4221,7 @@
 
     const-string v2, "this.delegate.app.isHtmlGame"
 
-    invoke-static {v1, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {v1}, Ljava/lang/Boolean;->booleanValue()Z
 
@@ -4238,11 +4238,11 @@
 
     .line 83
     :goto_0
-    invoke-virtual {p0}, Lcom/vk/webapp/VkUiConnectFragment;->a5()Lcom/vk/webapp/o/b;
+    invoke-virtual {p0}, Lcom/vk/webapp/VkUiConnectFragment;->a5()Lcom/vk/webapp/o/VkUiConnectFragmentDelegate;
 
     move-result-object v2
 
-    invoke-interface {v2}, Lcom/vk/webapp/o/b;->l()Lcom/vk/dto/common/data/ApiApplication;
+    invoke-interface {v2}, Lcom/vk/webapp/o/VkUiConnectFragmentDelegate;->l()Lcom/vk/dto/common/data/ApiApplication;
 
     move-result-object v2
 
@@ -4269,7 +4269,7 @@
     .line 86
     invoke-direct {v0, v1, v3, v2, v4}, Lcom/vk/stat/scheme/SchemeStat$EventItem;-><init>(Lcom/vk/stat/scheme/SchemeStat$EventItem$Type;Ljava/lang/Integer;Ljava/lang/Integer;Ljava/lang/String;)V
 
-    invoke-virtual {p1, v0}, Lcom/vk/core/ui/v/g;->a(Lcom/vk/stat/scheme/SchemeStat$EventItem;)V
+    invoke-virtual {p1, v0}, Lcom/vk/core/ui/v/UiTrackingScreen;->a(Lcom/vk/stat/scheme/SchemeStat$EventItem;)V
 
     return-void
 .end method
@@ -4283,7 +4283,7 @@
     return-void
 .end method
 
-.method protected a(Lcom/vk/webapp/o/b;)V
+.method protected a(Lcom/vk/webapp/o/VkUiConnectFragmentDelegate;)V
     .locals 1
 
     .line 7
@@ -4291,7 +4291,7 @@
 
     move-result-object v0
 
-    invoke-virtual {v0, p1}, Lcom/vk/webapp/bridges/VkUiConnectBridge;->a(Lcom/vk/webapp/o/b;)V
+    invoke-virtual {v0, p1}, Lcom/vk/webapp/bridges/VkUiConnectBridge;->a(Lcom/vk/webapp/o/VkUiConnectFragmentDelegate;)V
 
     return-void
 .end method
@@ -4300,15 +4300,15 @@
     .locals 2
 
     .line 48
-    invoke-static {}, Lcom/vk/bridges/g;->a()Lcom/vk/bridges/f;
+    invoke-static {}, Lcom/vk/bridges/AuthBridge;->a()Lcom/vk/bridges/AuthBridge3;
 
     move-result-object v0
 
-    invoke-interface {v0}, Lcom/vk/bridges/f;->c()Lcom/vk/bridges/a;
+    invoke-interface {v0}, Lcom/vk/bridges/AuthBridge3;->c()Lcom/vk/bridges/AuthBridge1;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/vk/bridges/a;->u()Z
+    invoke-virtual {v0}, Lcom/vk/bridges/AuthBridge1;->u()Z
 
     move-result v0
 
@@ -4344,19 +4344,19 @@
 
     const/16 p1, 0x65
 
-    invoke-virtual {p2, p0, p1}, Lcom/vk/navigation/o;->a(Lcom/vk/core/fragments/FragmentImpl;I)V
+    invoke-virtual {p2, p0, p1}, Lcom/vk/navigation/Navigator;->a(Lcom/vk/core/fragments/FragmentImpl;I)V
 
     :cond_0
     return-void
 .end method
 
-.method public final a(ZLkotlin/jvm/b/a;)V
+.method public final a(ZLkotlin/jvm/b/Functions;)V
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(Z",
-            "Lkotlin/jvm/b/a<",
-            "Lkotlin/m;",
+            "Lkotlin/jvm/b/Functions<",
+            "Lkotlin/Unit;",
             ">;)V"
         }
     .end annotation
@@ -4372,7 +4372,7 @@
     .line 65
     sget-object p1, Lcom/vk/camera/FlashlightUtils;->c:Lcom/vk/camera/FlashlightUtils;
 
-    invoke-virtual {p1, v0, p2}, Lcom/vk/camera/FlashlightUtils;->b(Lkotlin/jvm/b/a;Lkotlin/jvm/b/a;)V
+    invoke-virtual {p1, v0, p2}, Lcom/vk/camera/FlashlightUtils;->b(Lkotlin/jvm/b/Functions;Lkotlin/jvm/b/Functions;)V
 
     goto :goto_0
 
@@ -4380,7 +4380,7 @@
     :cond_0
     sget-object p1, Lcom/vk/camera/FlashlightUtils;->c:Lcom/vk/camera/FlashlightUtils;
 
-    invoke-virtual {p1, v0, p2}, Lcom/vk/camera/FlashlightUtils;->a(Lkotlin/jvm/b/a;Lkotlin/jvm/b/a;)V
+    invoke-virtual {p1, v0, p2}, Lcom/vk/camera/FlashlightUtils;->a(Lkotlin/jvm/b/Functions;Lkotlin/jvm/b/Functions;)V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
@@ -4398,9 +4398,9 @@
     .locals 1
 
     .line 56
-    new-instance p2, Lcom/vtosters/lite/fragments/friends/h/j$a;
+    new-instance p2, Lcom/vtosters/lite/fragments/friends/h/VkUiFriendsListFragment$a;
 
-    invoke-direct {p2}, Lcom/vtosters/lite/fragments/friends/h/j$a;-><init>()V
+    invoke-direct {p2}, Lcom/vtosters/lite/fragments/friends/h/VkUiFriendsListFragment$a;-><init>()V
 
     .line 57
     invoke-virtual {p2}, Lcom/vtosters/lite/fragments/friends/FriendsFragment$a;->i()Lcom/vtosters/lite/fragments/friends/FriendsFragment$a;
@@ -4425,41 +4425,41 @@
     const p1, 0x7f1210ed
 
     .line 62
-    invoke-virtual {p0, p1}, Ld/a/a/a/h;->setTitle(I)V
+    invoke-virtual {p0, p1}, Lme/grishka/appkit/fragments/AppKitFragment;->setTitle(I)V
 
     const/16 p1, 0x68
 
     .line 63
-    invoke-virtual {p2, p0, p1}, Lcom/vk/navigation/o;->a(Lcom/vk/core/fragments/FragmentImpl;I)V
+    invoke-virtual {p2, p0, p1}, Lcom/vk/navigation/Navigator;->a(Lcom/vk/core/fragments/FragmentImpl;I)V
 
     return-void
 .end method
 
-.method protected a5()Lcom/vk/webapp/o/b;
+.method protected a5()Lcom/vk/webapp/o/VkUiConnectFragmentDelegate;
     .locals 1
 
     .line 2
-    iget-object v0, p0, Lcom/vk/webapp/VkUiConnectFragment;->A0:Lcom/vk/webapp/o/b;
+    iget-object v0, p0, Lcom/vk/webapp/VkUiConnectFragment;->A0:Lcom/vk/webapp/o/VkUiConnectFragmentDelegate;
 
     return-object v0
 .end method
 
-.method public bridge synthetic a5()Lcom/vk/webapp/o/c;
+.method public bridge synthetic a5()Lcom/vk/webapp/o/VkUiFragmentDelegate;
     .locals 1
 
     .line 1
-    invoke-virtual {p0}, Lcom/vk/webapp/VkUiConnectFragment;->a5()Lcom/vk/webapp/o/b;
+    invoke-virtual {p0}, Lcom/vk/webapp/VkUiConnectFragment;->a5()Lcom/vk/webapp/o/VkUiConnectFragmentDelegate;
 
     move-result-object v0
 
     return-object v0
 .end method
 
-.method protected b(Landroid/content/Context;)Lcom/vk/webapp/r/a;
+.method protected b(Landroid/content/Context;)Lcom/vk/webapp/r/ILoader;
     .locals 7
 
     .line 4
-    new-instance v6, Lcom/vk/webapp/r/d;
+    new-instance v6, Lcom/vk/webapp/r/VkAppsLoader;
 
     const/4 v2, 0x0
 
@@ -4473,7 +4473,7 @@
 
     move-object v1, p1
 
-    invoke-direct/range {v0 .. v5}, Lcom/vk/webapp/r/d;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;IILkotlin/jvm/internal/i;)V
+    invoke-direct/range {v0 .. v5}, Lcom/vk/webapp/r/VkAppsLoader;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;IILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     return-object v6
 .end method
@@ -4482,7 +4482,7 @@
     .locals 1
 
     .line 1
-    invoke-static {p0}, Lcom/vk/navigation/b0/i$a;->a(Lcom/vk/navigation/b0/i;)Z
+    invoke-static {p0}, Lcom/vk/navigation/b0/FragmentWithSystemTopBar$a;->a(Lcom/vk/navigation/b0/FragmentWithSystemTopBar;)Z
 
     move-result v0
 
@@ -4560,21 +4560,21 @@
     .locals 2
 
     .line 1
-    invoke-virtual {p0}, Lcom/vk/webapp/VkUiConnectFragment;->a5()Lcom/vk/webapp/o/b;
+    invoke-virtual {p0}, Lcom/vk/webapp/VkUiConnectFragment;->a5()Lcom/vk/webapp/o/VkUiConnectFragmentDelegate;
 
     move-result-object v0
 
-    invoke-interface {v0}, Lcom/vk/webapp/o/c;->g()Lcom/vk/webapp/commands/VkUiCommandsController;
+    invoke-interface {v0}, Lcom/vk/webapp/o/VkUiFragmentDelegate;->g()Lcom/vk/webapp/commands/VkUiCommandsController;
 
     move-result-object v0
 
     if-eqz v0, :cond_0
 
-    invoke-virtual {p0}, Lcom/vk/webapp/VkUiConnectFragment;->a5()Lcom/vk/webapp/o/b;
+    invoke-virtual {p0}, Lcom/vk/webapp/VkUiConnectFragment;->a5()Lcom/vk/webapp/o/VkUiConnectFragmentDelegate;
 
     move-result-object v1
 
-    invoke-interface {v1}, Lcom/vk/webapp/o/c;->F()I
+    invoke-interface {v1}, Lcom/vk/webapp/o/VkUiFragmentDelegate;->F()I
 
     move-result v1
 
@@ -4640,13 +4640,13 @@
 
     .line 8
     :pswitch_6
-    invoke-virtual {p0}, Lcom/vk/webapp/VkUiFragment;->f5()Lcom/vk/webapp/g;
+    invoke-virtual {p0}, Lcom/vk/webapp/VkUiFragment;->f5()Lcom/vk/webapp/SharingController;
 
     move-result-object p1
 
     iget-object v0, p0, Lcom/vk/webapp/VkUiConnectFragment;->E0:Lcom/vk/webapp/VkUiConnectFragment$b0;
 
-    invoke-virtual {p1, p2, p3, v0}, Lcom/vk/webapp/g;->a(ILandroid/content/Intent;Lcom/vk/webapp/b;)V
+    invoke-virtual {p1, p2, p3, v0}, Lcom/vk/webapp/SharingController;->a(ILandroid/content/Intent;Lcom/vk/webapp/SharingController1;)V
 
     goto :goto_0
 
@@ -4686,17 +4686,17 @@
     const/4 p1, 0x1
 
     .line 2
-    invoke-virtual {p0, p1}, Ld/a/a/a/h;->setHasOptionsMenu(Z)V
+    invoke-virtual {p0, p1}, Lme/grishka/appkit/fragments/AppKitFragment;->setHasOptionsMenu(Z)V
 
     .line 3
-    invoke-virtual {p0}, Lcom/vk/webapp/VkUiConnectFragment;->a5()Lcom/vk/webapp/o/b;
+    invoke-virtual {p0}, Lcom/vk/webapp/VkUiConnectFragment;->a5()Lcom/vk/webapp/o/VkUiConnectFragmentDelegate;
 
     move-result-object p1
 
-    invoke-interface {p1}, Lcom/vk/webapp/o/b;->onCreate()V
+    invoke-interface {p1}, Lcom/vk/webapp/o/VkUiConnectFragmentDelegate;->onCreate()V
 
     .line 4
-    invoke-virtual {p0}, Lcom/vk/webapp/VkUiConnectFragment;->a5()Lcom/vk/webapp/o/b;
+    invoke-virtual {p0}, Lcom/vk/webapp/VkUiConnectFragment;->a5()Lcom/vk/webapp/o/VkUiConnectFragmentDelegate;
 
     move-result-object p1
 
@@ -4704,7 +4704,7 @@
 
     invoke-direct {v0, p0}, Lcom/vk/webapp/VkUiConnectFragment$onCreate$1;-><init>(Lcom/vk/webapp/VkUiConnectFragment;)V
 
-    invoke-interface {p1, v0}, Lcom/vk/webapp/o/b;->a(Lkotlin/jvm/b/b;)V
+    invoke-interface {p1, v0}, Lcom/vk/webapp/o/VkUiConnectFragmentDelegate;->a(Lkotlin/jvm/b/Functions2;)V
 
     .line 5
     invoke-direct {p0}, Lcom/vk/webapp/VkUiConnectFragment;->N5()V
@@ -4716,11 +4716,11 @@
     .locals 4
 
     .line 1
-    invoke-virtual {p0}, Lcom/vk/webapp/VkUiConnectFragment;->a5()Lcom/vk/webapp/o/b;
+    invoke-virtual {p0}, Lcom/vk/webapp/VkUiConnectFragment;->a5()Lcom/vk/webapp/o/VkUiConnectFragmentDelegate;
 
     move-result-object v0
 
-    invoke-interface {v0}, Lcom/vk/webapp/o/b;->v()Ljava/util/Collection;
+    invoke-interface {v0}, Lcom/vk/webapp/o/VkUiConnectFragmentDelegate;->v()Ljava/util/Collection;
 
     move-result-object v0
 
@@ -4740,24 +4740,24 @@
 
     move-result-object v1
 
-    check-cast v1, Lcom/vk/webapp/utils/a;
+    check-cast v1, Lcom/vk/webapp/utils/WebAppOpenListener;
 
     .line 3
-    invoke-virtual {p0}, Lcom/vk/webapp/VkUiConnectFragment;->a5()Lcom/vk/webapp/o/b;
+    invoke-virtual {p0}, Lcom/vk/webapp/VkUiConnectFragment;->a5()Lcom/vk/webapp/o/VkUiConnectFragmentDelegate;
 
     move-result-object v2
 
-    invoke-interface {v2}, Lcom/vk/webapp/o/c;->F()I
+    invoke-interface {v2}, Lcom/vk/webapp/o/VkUiFragmentDelegate;->F()I
 
     move-result v2
 
-    invoke-interface {v1, v2}, Lcom/vk/webapp/utils/a;->a(I)V
+    invoke-interface {v1, v2}, Lcom/vk/webapp/utils/WebAppOpenListener;->a(I)V
 
     goto :goto_0
 
     .line 4
     :cond_0
-    invoke-super {p0, p1, p2, p3}, Ld/a/a/a/j;->onCreateView(Landroid/view/LayoutInflater;Landroid/view/ViewGroup;Landroid/os/Bundle;)Landroid/view/View;
+    invoke-super {p0, p1, p2, p3}, Lme/grishka/appkit/fragments/LoaderFragment;->onCreateView(Landroid/view/LayoutInflater;Landroid/view/ViewGroup;Landroid/os/Bundle;)Landroid/view/View;
 
     move-result-object p2
 
@@ -4767,7 +4767,7 @@
 
     const-string v0, "super.onCreateView(infla\u2026er, savedInstanceState)!!"
 
-    invoke-static {p2, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p2, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     const v0, 0x7f0a077f
 
@@ -4788,20 +4788,20 @@
 
     const-string v1, "inflater.context"
 
-    invoke-static {p1, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    invoke-virtual {p0, p1}, Lcom/vk/webapp/VkUiConnectFragment;->b(Landroid/content/Context;)Lcom/vk/webapp/r/a;
+    invoke-virtual {p0, p1}, Lcom/vk/webapp/VkUiConnectFragment;->b(Landroid/content/Context;)Lcom/vk/webapp/r/ILoader;
 
     move-result-object p1
 
-    iput-object p1, p0, Lcom/vk/webapp/VkUiConnectFragment;->H0:Lcom/vk/webapp/r/a;
+    iput-object p1, p0, Lcom/vk/webapp/VkUiConnectFragment;->H0:Lcom/vk/webapp/r/ILoader;
 
     .line 8
-    iget-object p1, p0, Lcom/vk/webapp/VkUiConnectFragment;->H0:Lcom/vk/webapp/r/a;
+    iget-object p1, p0, Lcom/vk/webapp/VkUiConnectFragment;->H0:Lcom/vk/webapp/r/ILoader;
 
     if-eqz p1, :cond_2
 
-    invoke-interface {p1}, Lcom/vk/webapp/r/a;->getLoaderView()Landroid/view/View;
+    invoke-interface {p1}, Lcom/vk/webapp/r/ILoader;->getLoaderView()Landroid/view/View;
 
     move-result-object p1
 
@@ -4849,11 +4849,11 @@
 
     check-cast p3, Lcom/vk/imageloader/view/VKImageView;
 
-    invoke-virtual {p0}, Lcom/vk/webapp/VkUiConnectFragment;->a5()Lcom/vk/webapp/o/b;
+    invoke-virtual {p0}, Lcom/vk/webapp/VkUiConnectFragment;->a5()Lcom/vk/webapp/o/VkUiConnectFragmentDelegate;
 
     move-result-object v1
 
-    invoke-interface {v1}, Lcom/vk/webapp/o/b;->l()Lcom/vk/dto/common/data/ApiApplication;
+    invoke-interface {v1}, Lcom/vk/webapp/o/VkUiConnectFragmentDelegate;->l()Lcom/vk/dto/common/data/ApiApplication;
 
     move-result-object v1
 
@@ -4867,7 +4867,7 @@
 
     const-string v2, "delegate.app.icon.getImageByWidth(150)"
 
-    invoke-static {v1, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {v1}, Lcom/vk/dto/common/ImageSize;->v1()Ljava/lang/String;
 
@@ -4884,15 +4884,15 @@
 
     const-string v1, "findViewById<TextView>(R.id.tvAppName)"
 
-    invoke-static {p3, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p3, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     check-cast p3, Landroid/widget/TextView;
 
-    invoke-virtual {p0}, Lcom/vk/webapp/VkUiConnectFragment;->a5()Lcom/vk/webapp/o/b;
+    invoke-virtual {p0}, Lcom/vk/webapp/VkUiConnectFragment;->a5()Lcom/vk/webapp/o/VkUiConnectFragmentDelegate;
 
     move-result-object v1
 
-    invoke-interface {v1}, Lcom/vk/webapp/o/b;->l()Lcom/vk/dto/common/data/ApiApplication;
+    invoke-interface {v1}, Lcom/vk/webapp/o/VkUiConnectFragmentDelegate;->l()Lcom/vk/dto/common/data/ApiApplication;
 
     move-result-object v1
 
@@ -4910,11 +4910,11 @@
     invoke-virtual {v0, p1, p3}, Landroid/widget/FrameLayout;->addView(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
 
     .line 15
-    invoke-virtual {p0}, Lcom/vk/webapp/VkUiConnectFragment;->a5()Lcom/vk/webapp/o/b;
+    invoke-virtual {p0}, Lcom/vk/webapp/VkUiConnectFragment;->a5()Lcom/vk/webapp/o/VkUiConnectFragmentDelegate;
 
     move-result-object p1
 
-    invoke-interface {p1}, Lcom/vk/webapp/o/b;->o()Lcom/vk/webapp/VkUiConnectFragment$b;
+    invoke-interface {p1}, Lcom/vk/webapp/o/VkUiConnectFragmentDelegate;->o()Lcom/vk/webapp/VkUiConnectFragment$b;
 
     move-result-object p1
 
@@ -4924,17 +4924,17 @@
 
     xor-int/lit8 p1, p1, 0x1
 
-    iput-boolean p1, p0, Ld/a/a/a/j;->Q:Z
+    iput-boolean p1, p0, Lme/grishka/appkit/fragments/LoaderFragment;->Q:Z
 
     .line 16
-    iget-boolean p1, p0, Ld/a/a/a/j;->Q:Z
+    iget-boolean p1, p0, Lme/grishka/appkit/fragments/LoaderFragment;->Q:Z
 
     if-eqz p1, :cond_1
 
     const/4 p1, 0x0
 
     .line 17
-    iput-boolean p1, p0, Ld/a/a/a/j;->S:Z
+    iput-boolean p1, p0, Lme/grishka/appkit/fragments/LoaderFragment;->S:Z
 
     .line 18
     invoke-virtual {p0}, Lcom/vk/webapp/VkUiFragment;->p2()V
@@ -4946,13 +4946,13 @@
     const-string p1, "loader"
 
     .line 19
-    invoke-static {p1}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {p1}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw p3
 
     .line 20
     :cond_3
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     throw p3
 .end method
@@ -4970,7 +4970,7 @@
     invoke-virtual {v0}, Lcom/vk/webapp/helpers/AppForegroundNotifier;->a()V
 
     .line 2
-    iget-object v0, p0, Ld/a/a/a/j;->O:Landroid/view/View;
+    iget-object v0, p0, Lme/grishka/appkit/fragments/LoaderFragment;->O:Landroid/view/View;
 
     instance-of v2, v0, Landroid/view/ViewGroup;
 
@@ -4997,18 +4997,18 @@
     invoke-super {p0}, Lcom/vk/webapp/VkUiFragment;->onDestroyView()V
 
     .line 5
-    iget-object v0, p0, Lcom/vk/webapp/VkUiConnectFragment;->H0:Lcom/vk/webapp/r/a;
+    iget-object v0, p0, Lcom/vk/webapp/VkUiConnectFragment;->H0:Lcom/vk/webapp/r/ILoader;
 
     if-eqz v0, :cond_3
 
-    invoke-interface {v0}, Lcom/vk/webapp/r/a;->stop()V
+    invoke-interface {v0}, Lcom/vk/webapp/r/ILoader;->stop()V
 
     .line 6
-    invoke-virtual {p0}, Lcom/vk/webapp/VkUiConnectFragment;->a5()Lcom/vk/webapp/o/b;
+    invoke-virtual {p0}, Lcom/vk/webapp/VkUiConnectFragment;->a5()Lcom/vk/webapp/o/VkUiConnectFragmentDelegate;
 
     move-result-object v0
 
-    invoke-interface {v0}, Lcom/vk/webapp/o/b;->v()Ljava/util/Collection;
+    invoke-interface {v0}, Lcom/vk/webapp/o/VkUiConnectFragmentDelegate;->v()Ljava/util/Collection;
 
     move-result-object v0
 
@@ -5028,18 +5028,18 @@
 
     move-result-object v2
 
-    check-cast v2, Lcom/vk/webapp/utils/a;
+    check-cast v2, Lcom/vk/webapp/utils/WebAppOpenListener;
 
     .line 8
-    invoke-virtual {p0}, Lcom/vk/webapp/VkUiConnectFragment;->a5()Lcom/vk/webapp/o/b;
+    invoke-virtual {p0}, Lcom/vk/webapp/VkUiConnectFragment;->a5()Lcom/vk/webapp/o/VkUiConnectFragmentDelegate;
 
     move-result-object v3
 
-    invoke-interface {v3}, Lcom/vk/webapp/o/c;->F()I
+    invoke-interface {v3}, Lcom/vk/webapp/o/VkUiFragmentDelegate;->F()I
 
     move-result v3
 
-    invoke-interface {v2, v3}, Lcom/vk/webapp/utils/a;->b(I)V
+    invoke-interface {v2, v3}, Lcom/vk/webapp/utils/WebAppOpenListener;->b(I)V
 
     goto :goto_0
 
@@ -5049,7 +5049,7 @@
 
     const/4 v2, 0x3
 
-    invoke-static {v0, v1, v1, v2, v1}, Lcom/vk/camera/FlashlightUtils;->a(Lcom/vk/camera/FlashlightUtils;Lkotlin/jvm/b/a;Lkotlin/jvm/b/a;ILjava/lang/Object;)V
+    invoke-static {v0, v1, v1, v2, v1}, Lcom/vk/camera/FlashlightUtils;->a(Lcom/vk/camera/FlashlightUtils;Lkotlin/jvm/b/Functions;Lkotlin/jvm/b/Functions;ILjava/lang/Object;)V
 
     return-void
 
@@ -5057,7 +5057,7 @@
     const-string v0, "loader"
 
     .line 10
-    invoke-static {v0}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v0}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v1
 
@@ -5065,7 +5065,7 @@
     const-string v0, "appForegroundNotifier"
 
     .line 11
-    invoke-static {v0}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v0}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v1
 .end method
@@ -5096,27 +5096,27 @@
 
     .line 4
     :cond_0
-    iget-object v0, p0, Lcom/vk/webapp/VkUiConnectFragment;->J0:Lcom/vk/core/dialogs/bottomsheet/e;
+    iget-object v0, p0, Lcom/vk/webapp/VkUiConnectFragment;->J0:Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet;
 
     if-eqz v0, :cond_1
 
-    invoke-virtual {v0}, Lcom/vk/core/dialogs/bottomsheet/e;->dismissAllowingStateLoss()V
+    invoke-virtual {v0}, Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet;->dismissAllowingStateLoss()V
 
     .line 5
     :cond_1
-    iput-object v1, p0, Lcom/vk/webapp/VkUiConnectFragment;->J0:Lcom/vk/core/dialogs/bottomsheet/e;
+    iput-object v1, p0, Lcom/vk/webapp/VkUiConnectFragment;->J0:Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet;
 
     .line 6
     iget-object v0, p0, Lcom/vk/webapp/VkUiConnectFragment;->L0:Lcom/vk/webapp/VkUiConnectFragment$d;
 
-    invoke-virtual {v0}, Lcom/vk/core/dialogs/bottomsheet/f;->b()V
+    invoke-virtual {v0}, Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheetMenu;->b()V
 
     .line 7
     sget-object v0, Lcom/vk/camera/FlashlightUtils;->c:Lcom/vk/camera/FlashlightUtils;
 
     const/4 v2, 0x3
 
-    invoke-static {v0, v1, v1, v2, v1}, Lcom/vk/camera/FlashlightUtils;->a(Lcom/vk/camera/FlashlightUtils;Lkotlin/jvm/b/a;Lkotlin/jvm/b/a;ILjava/lang/Object;)V
+    invoke-static {v0, v1, v1, v2, v1}, Lcom/vk/camera/FlashlightUtils;->a(Lcom/vk/camera/FlashlightUtils;Lkotlin/jvm/b/Functions;Lkotlin/jvm/b/Functions;ILjava/lang/Object;)V
 
     .line 8
     invoke-super {p0}, Lcom/vk/webapp/VkUiFragment;->onPause()V
@@ -5127,7 +5127,7 @@
     const-string v0, "appForegroundNotifier"
 
     .line 9
-    invoke-static {v0}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v0}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v1
 .end method
@@ -5139,34 +5139,34 @@
     invoke-super {p0}, Lcom/vk/webapp/VkUiFragment;->onResume()V
 
     .line 2
-    invoke-virtual {p0}, Lcom/vk/webapp/VkUiConnectFragment;->a5()Lcom/vk/webapp/o/b;
+    invoke-virtual {p0}, Lcom/vk/webapp/VkUiConnectFragment;->a5()Lcom/vk/webapp/o/VkUiConnectFragmentDelegate;
 
     move-result-object v0
 
-    invoke-interface {v0}, Lcom/vk/webapp/o/b;->o()Lcom/vk/webapp/VkUiConnectFragment$b;
+    invoke-interface {v0}, Lcom/vk/webapp/o/VkUiConnectFragmentDelegate;->o()Lcom/vk/webapp/VkUiConnectFragment$b;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/vk/webapp/VkUiConnectFragment$b;->a()Lcom/vk/webapp/cache/a$a;
+    invoke-virtual {v0}, Lcom/vk/webapp/VkUiConnectFragment$b;->a()Lcom/vk/webapp/cache/AppsCache$a;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/vk/webapp/cache/a$a;->f()Lcom/vk/webapp/q/a/a;
+    invoke-virtual {v0}, Lcom/vk/webapp/cache/AppsCache$a;->f()Lcom/vk/webapp/q/a/StatusNavBarConfig;
 
     move-result-object v0
 
     if-eqz v0, :cond_0
 
     .line 3
-    invoke-virtual {p0}, Lcom/vk/webapp/VkUiConnectFragment;->a5()Lcom/vk/webapp/o/b;
+    invoke-virtual {p0}, Lcom/vk/webapp/VkUiConnectFragment;->a5()Lcom/vk/webapp/o/VkUiConnectFragmentDelegate;
 
     move-result-object v1
 
-    invoke-interface {v1}, Lcom/vk/webapp/o/c;->u()Lcom/vk/webapp/p/a/a;
+    invoke-interface {v1}, Lcom/vk/webapp/o/VkUiFragmentDelegate;->u()Lcom/vk/webapp/p/a/StatusNavBarController;
 
     move-result-object v1
 
-    invoke-virtual {v1, v0}, Lcom/vk/webapp/p/a/a;->a(Lcom/vk/webapp/q/a/a;)V
+    invoke-virtual {v1, v0}, Lcom/vk/webapp/p/a/StatusNavBarController;->a(Lcom/vk/webapp/q/a/StatusNavBarConfig;)V
 
     .line 4
     :cond_0
@@ -5181,7 +5181,7 @@
     :cond_1
     const-string v0, "appForegroundNotifier"
 
-    invoke-static {v0}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v0}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     const/4 v0, 0x0
 
@@ -5215,7 +5215,7 @@
     move-result-object p1
 
     .line 6
-    iget-object v0, p0, Ld/a/a/a/j;->P:Landroid/view/ViewGroup;
+    iget-object v0, p0, Lme/grishka/appkit/fragments/LoaderFragment;->P:Landroid/view/ViewGroup;
 
     const v1, 0x7f0a00b3
 
@@ -5239,11 +5239,11 @@
 
     .line 8
     :goto_0
-    invoke-virtual {p0}, Lcom/vk/webapp/VkUiConnectFragment;->a5()Lcom/vk/webapp/o/b;
+    invoke-virtual {p0}, Lcom/vk/webapp/VkUiConnectFragment;->a5()Lcom/vk/webapp/o/VkUiConnectFragmentDelegate;
 
     move-result-object v0
 
-    invoke-interface {v0}, Lcom/vk/webapp/o/c;->u()Lcom/vk/webapp/p/a/a;
+    invoke-interface {v0}, Lcom/vk/webapp/o/VkUiFragmentDelegate;->u()Lcom/vk/webapp/p/a/StatusNavBarController;
 
     move-result-object v0
 
@@ -5255,49 +5255,49 @@
     if-eqz p1, :cond_1
 
     .line 10
-    invoke-virtual {v0, p1}, Lcom/vk/webapp/p/a/a;->a(Landroid/view/View;)V
+    invoke-virtual {v0, p1}, Lcom/vk/webapp/p/a/StatusNavBarController;->a(Landroid/view/View;)V
 
     goto :goto_1
 
     :cond_1
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     throw p2
 
     .line 11
     :cond_2
     :goto_1
-    invoke-virtual {p0}, Ld/a/a/a/h;->Q4()Landroidx/appcompat/widget/Toolbar;
+    invoke-virtual {p0}, Lme/grishka/appkit/fragments/AppKitFragment;->Q4()Landroidx/appcompat/widget/Toolbar;
 
     move-result-object p2
 
     const-string v1, "toolbar"
 
-    invoke-static {p2, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p2, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    invoke-virtual {v0, p2}, Lcom/vk/webapp/p/a/a;->a(Landroid/view/View;)V
+    invoke-virtual {v0, p2}, Lcom/vk/webapp/p/a/StatusNavBarController;->a(Landroid/view/View;)V
 
     .line 12
-    invoke-virtual {p0}, Lcom/vk/webapp/VkUiConnectFragment;->a5()Lcom/vk/webapp/o/b;
+    invoke-virtual {p0}, Lcom/vk/webapp/VkUiConnectFragment;->a5()Lcom/vk/webapp/o/VkUiConnectFragmentDelegate;
 
     move-result-object p2
 
-    invoke-interface {p2}, Lcom/vk/webapp/o/b;->o()Lcom/vk/webapp/VkUiConnectFragment$b;
+    invoke-interface {p2}, Lcom/vk/webapp/o/VkUiConnectFragmentDelegate;->o()Lcom/vk/webapp/VkUiConnectFragment$b;
 
     move-result-object p2
 
-    invoke-virtual {p2}, Lcom/vk/webapp/VkUiConnectFragment$b;->a()Lcom/vk/webapp/cache/a$a;
+    invoke-virtual {p2}, Lcom/vk/webapp/VkUiConnectFragment$b;->a()Lcom/vk/webapp/cache/AppsCache$a;
 
     move-result-object p2
 
-    invoke-virtual {p2}, Lcom/vk/webapp/cache/a$a;->f()Lcom/vk/webapp/q/a/a;
+    invoke-virtual {p2}, Lcom/vk/webapp/cache/AppsCache$a;->f()Lcom/vk/webapp/q/a/StatusNavBarConfig;
 
     move-result-object p2
 
     if-eqz p2, :cond_3
 
     .line 13
-    invoke-virtual {p0, p2}, Lcom/vk/webapp/VkUiFragment;->a(Lcom/vk/webapp/q/a/a;)V
+    invoke-virtual {p0, p2}, Lcom/vk/webapp/VkUiFragment;->a(Lcom/vk/webapp/q/a/StatusNavBarConfig;)V
 
     .line 14
     :cond_3
@@ -5305,44 +5305,44 @@
 
     invoke-direct {p2, p0, p1}, Lcom/vk/webapp/VkUiConnectFragment$z;-><init>(Lcom/vk/webapp/VkUiConnectFragment;Landroid/view/View;)V
 
-    invoke-virtual {v0, p2}, Lcom/vk/webapp/p/a/a;->a(Lcom/vk/webapp/p/a/a$b;)V
+    invoke-virtual {v0, p2}, Lcom/vk/webapp/p/a/StatusNavBarController;->a(Lcom/vk/webapp/p/a/StatusNavBarController$b1;)V
 
     .line 15
     new-instance p1, Lcom/vk/webapp/VkUiConnectFragment$a0;
 
     invoke-direct {p1, p0}, Lcom/vk/webapp/VkUiConnectFragment$a0;-><init>(Lcom/vk/webapp/VkUiConnectFragment;)V
 
-    iput-object p1, p0, Lcom/vk/webapp/VkUiConnectFragment;->M0:Lcom/vk/webapp/helpers/e;
+    iput-object p1, p0, Lcom/vk/webapp/VkUiConnectFragment;->M0:Lcom/vk/webapp/helpers/WebClients2;
 
     .line 16
     invoke-virtual {p0}, Lcom/vk/webapp/VkUiFragment;->j5()Lcom/vk/webapp/VkUiFragment$VkWebChromeClient;
 
     move-result-object p1
 
-    iget-object p2, p0, Lcom/vk/webapp/VkUiConnectFragment;->M0:Lcom/vk/webapp/helpers/e;
+    iget-object p2, p0, Lcom/vk/webapp/VkUiConnectFragment;->M0:Lcom/vk/webapp/helpers/WebClients2;
 
-    invoke-virtual {p1, p2}, Lcom/vk/webapp/helpers/f;->a(Lcom/vk/webapp/helpers/e;)V
+    invoke-virtual {p1, p2}, Lcom/vk/webapp/helpers/WebClients4;->a(Lcom/vk/webapp/helpers/WebClients2;)V
 
     .line 17
-    invoke-virtual {p0}, Lcom/vk/webapp/VkUiConnectFragment;->a5()Lcom/vk/webapp/o/b;
+    invoke-virtual {p0}, Lcom/vk/webapp/VkUiConnectFragment;->a5()Lcom/vk/webapp/o/VkUiConnectFragmentDelegate;
 
     move-result-object p1
 
-    invoke-interface {p1}, Lcom/vk/webapp/o/c;->g()Lcom/vk/webapp/commands/VkUiCommandsController;
+    invoke-interface {p1}, Lcom/vk/webapp/o/VkUiFragmentDelegate;->g()Lcom/vk/webapp/commands/VkUiCommandsController;
 
     move-result-object p1
 
     if-eqz p1, :cond_4
 
-    invoke-virtual {p0}, Lcom/vk/webapp/VkUiConnectFragment;->a5()Lcom/vk/webapp/o/b;
+    invoke-virtual {p0}, Lcom/vk/webapp/VkUiConnectFragment;->a5()Lcom/vk/webapp/o/VkUiConnectFragmentDelegate;
 
     move-result-object p2
 
-    invoke-interface {p2}, Lcom/vk/webapp/o/b;->w()Lcom/vk/webapp/helpers/b;
+    invoke-interface {p2}, Lcom/vk/webapp/o/VkUiConnectFragmentDelegate;->w()Lcom/vk/webapp/helpers/VkAppsAnalytics;
 
     move-result-object p2
 
-    invoke-virtual {p1, p2}, Lcom/vk/webapp/commands/VkUiCommandsController;->a(Lcom/vk/webapp/helpers/b;)V
+    invoke-virtual {p1, p2}, Lcom/vk/webapp/commands/VkUiCommandsController;->a(Lcom/vk/webapp/helpers/VkAppsAnalytics;)V
 
     :cond_4
     return-void
@@ -5365,15 +5365,15 @@
     iput-boolean v0, p0, Lcom/vk/webapp/VkUiConnectFragment;->G0:Z
 
     .line 4
-    invoke-virtual {p0}, Lcom/vk/webapp/VkUiConnectFragment;->a5()Lcom/vk/webapp/o/b;
+    invoke-virtual {p0}, Lcom/vk/webapp/VkUiConnectFragment;->a5()Lcom/vk/webapp/o/VkUiConnectFragmentDelegate;
 
     move-result-object v0
 
-    invoke-interface {v0}, Lcom/vk/webapp/o/b;->o()Lcom/vk/webapp/VkUiConnectFragment$b;
+    invoke-interface {v0}, Lcom/vk/webapp/o/VkUiConnectFragmentDelegate;->o()Lcom/vk/webapp/VkUiConnectFragment$b;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/vk/webapp/VkUiConnectFragment$b;->a()Lcom/vk/webapp/cache/a$a;
+    invoke-virtual {v0}, Lcom/vk/webapp/VkUiConnectFragment$b;->a()Lcom/vk/webapp/cache/AppsCache$a;
 
     move-result-object v0
 
@@ -5381,7 +5381,7 @@
 
     move-result-object v1
 
-    invoke-virtual {v0, v1}, Lcom/vk/webapp/cache/a$a;->a(Ljava/lang/String;)V
+    invoke-virtual {v0, v1}, Lcom/vk/webapp/cache/AppsCache$a;->a(Ljava/lang/String;)V
 
     return-void
 .end method
@@ -5392,16 +5392,16 @@
     .line 2
     new-instance v0, Lcom/vk/webapp/bridges/VkUiConnectBridge;
 
-    invoke-virtual {p0}, Lcom/vk/webapp/VkUiConnectFragment;->a5()Lcom/vk/webapp/o/b;
+    invoke-virtual {p0}, Lcom/vk/webapp/VkUiConnectFragment;->a5()Lcom/vk/webapp/o/VkUiConnectFragmentDelegate;
 
     move-result-object v1
 
-    invoke-direct {v0, v1}, Lcom/vk/webapp/bridges/VkUiConnectBridge;-><init>(Lcom/vk/webapp/o/b;)V
+    invoke-direct {v0, v1}, Lcom/vk/webapp/bridges/VkUiConnectBridge;-><init>(Lcom/vk/webapp/o/VkUiConnectFragmentDelegate;)V
 
     return-object v0
 .end method
 
-.method public bridge synthetic q5()Lcom/vk/webapp/bridges/a;
+.method public bridge synthetic q5()Lcom/vk/webapp/bridges/AndroidBridge;
     .locals 1
 
     .line 1
@@ -5412,7 +5412,7 @@
     return-object v0
 .end method
 
-.method public r5()Lcom/vk/webapp/o/b;
+.method public r5()Lcom/vk/webapp/o/VkUiConnectFragmentDelegate;
     .locals 1
 
     .line 2
@@ -5423,11 +5423,11 @@
     return-object v0
 .end method
 
-.method public bridge synthetic r5()Lcom/vk/webapp/o/c;
+.method public bridge synthetic r5()Lcom/vk/webapp/o/VkUiFragmentDelegate;
     .locals 1
 
     .line 1
-    invoke-virtual {p0}, Lcom/vk/webapp/VkUiConnectFragment;->r5()Lcom/vk/webapp/o/b;
+    invoke-virtual {p0}, Lcom/vk/webapp/VkUiConnectFragment;->r5()Lcom/vk/webapp/o/VkUiConnectFragmentDelegate;
 
     move-result-object v0
 
@@ -5438,11 +5438,11 @@
     .locals 1
 
     .line 1
-    iget-object v0, p0, Lcom/vk/webapp/VkUiConnectFragment;->H0:Lcom/vk/webapp/r/a;
+    iget-object v0, p0, Lcom/vk/webapp/VkUiConnectFragment;->H0:Lcom/vk/webapp/r/ILoader;
 
     if-eqz v0, :cond_0
 
-    invoke-interface {v0}, Lcom/vk/webapp/r/a;->stop()V
+    invoke-interface {v0}, Lcom/vk/webapp/r/ILoader;->stop()V
 
     .line 2
     invoke-super {p0}, Lcom/vk/webapp/VkUiFragment;->t5()V
@@ -5456,7 +5456,7 @@
     const-string v0, "loader"
 
     .line 4
-    invoke-static {v0}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v0}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     const/4 v0, 0x0
 
@@ -5472,7 +5472,7 @@
     invoke-direct {v0, p0}, Lcom/vk/webapp/VkUiConnectFragment$f;-><init>(Lcom/vk/webapp/VkUiConnectFragment;)V
 
     .line 2
-    new-instance v1, Lcom/vk/core/dialogs/bottomsheet/e$a;
+    new-instance v1, Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet$a;
 
     invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getActivity()Landroidx/fragment/app/FragmentActivity;
 
@@ -5484,25 +5484,25 @@
 
     const-string v4, "activity!!"
 
-    invoke-static {v2, v4}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v2, v4}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    invoke-direct {v1, v2}, Lcom/vk/core/dialogs/bottomsheet/e$a;-><init>(Landroid/content/Context;)V
+    invoke-direct {v1, v2}, Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet$a;-><init>(Landroid/content/Context;)V
 
     const v2, 0x7f080843
 
     const v4, 0x7f040022
 
     .line 3
-    invoke-static {v2, v4}, Lcom/vk/core/ui/themes/VKThemeHelper;->a(II)Lcom/vk/core/drawable/i;
+    invoke-static {v2, v4}, Lcom/vk/core/ui/themes/VKThemeHelper;->a(II)Lcom/vk/core/drawable/RecoloredDrawable;
 
     move-result-object v2
 
-    invoke-virtual {v1, v2}, Lcom/vk/core/dialogs/bottomsheet/e$a;->b(Landroid/graphics/drawable/Drawable;)Lcom/vk/core/dialogs/bottomsheet/e$a;
+    invoke-virtual {v1, v2}, Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet$a;->b(Landroid/graphics/drawable/Drawable;)Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet$a;
 
     const v2, 0x7f1210c4
 
     .line 4
-    invoke-virtual {v1, v2}, Lcom/vk/core/dialogs/bottomsheet/e$a;->j(I)Lcom/vk/core/dialogs/bottomsheet/e$a;
+    invoke-virtual {v1, v2}, Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet$a;->j(I)Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet$a;
 
     const v2, 0x7f1210c5
 
@@ -5511,39 +5511,39 @@
     const/4 v5, 0x2
 
     .line 5
-    invoke-static {v1, v2, v4, v5, v3}, Lcom/vk/core/dialogs/bottomsheet/e$a;->a(Lcom/vk/core/dialogs/bottomsheet/e$a;IIILjava/lang/Object;)Lcom/vk/core/dialogs/bottomsheet/e$a;
+    invoke-static {v1, v2, v4, v5, v3}, Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet$a;->a(Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet$a;IIILjava/lang/Object;)Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet$a;
 
     const v2, 0x7f120093
 
     .line 6
-    invoke-virtual {v1, v2, v0}, Lcom/vk/core/dialogs/bottomsheet/e$a;->b(ILcom/vk/core/dialogs/bottomsheet/h$e;)Lcom/vk/core/dialogs/bottomsheet/e$a;
+    invoke-virtual {v1, v2, v0}, Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet$a;->b(ILcom/vk/core/dialogs/bottomsheet/ModalDialogInterface$e;)Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet$a;
 
     const v2, 0x7f12018c
 
     .line 7
-    invoke-virtual {v1, v2, v0}, Lcom/vk/core/dialogs/bottomsheet/e$a;->a(ILcom/vk/core/dialogs/bottomsheet/h$e;)Lcom/vk/core/dialogs/bottomsheet/e$a;
+    invoke-virtual {v1, v2, v0}, Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet$a;->a(ILcom/vk/core/dialogs/bottomsheet/ModalDialogInterface$e;)Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet$a;
 
     .line 8
     new-instance v2, Lcom/vk/webapp/VkUiConnectFragment$e;
 
     invoke-direct {v2, v0}, Lcom/vk/webapp/VkUiConnectFragment$e;-><init>(Lcom/vk/webapp/VkUiConnectFragment$f;)V
 
-    invoke-virtual {v1, v2}, Lcom/vk/core/dialogs/bottomsheet/e$a;->a(Lcom/vk/core/dialogs/bottomsheet/h$d;)Lcom/vk/core/dialogs/bottomsheet/e$a;
+    invoke-virtual {v1, v2}, Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet$a;->a(Lcom/vk/core/dialogs/bottomsheet/ModalDialogInterface$d;)Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet$a;
 
     const/4 v0, 0x1
 
     .line 9
-    invoke-static {v1, v3, v0, v3}, Lcom/vk/core/dialogs/bottomsheet/e$a;->a(Lcom/vk/core/dialogs/bottomsheet/e$a;Ljava/lang/String;ILjava/lang/Object;)Lcom/vk/core/dialogs/bottomsheet/e;
+    invoke-static {v1, v3, v0, v3}, Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet$a;->a(Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet$a;Ljava/lang/String;ILjava/lang/Object;)Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet;
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/vk/webapp/VkUiConnectFragment;->J0:Lcom/vk/core/dialogs/bottomsheet/e;
+    iput-object v0, p0, Lcom/vk/webapp/VkUiConnectFragment;->J0:Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet;
 
     return-void
 
     .line 10
     :cond_0
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     throw v3
 .end method
@@ -5557,11 +5557,11 @@
     invoke-direct {v0}, Lorg/json/JSONObject;-><init>()V
 
     .line 2
-    invoke-virtual {p0}, Lcom/vk/webapp/VkUiConnectFragment;->a5()Lcom/vk/webapp/o/b;
+    invoke-virtual {p0}, Lcom/vk/webapp/VkUiConnectFragment;->a5()Lcom/vk/webapp/o/VkUiConnectFragmentDelegate;
 
     move-result-object v1
 
-    invoke-interface {v1}, Lcom/vk/webapp/o/b;->k()Z
+    invoke-interface {v1}, Lcom/vk/webapp/o/VkUiConnectFragmentDelegate;->k()Z
 
     move-result v1
 
@@ -5583,7 +5583,7 @@
 
     const-string v3, "VKWebAppAddToFavoritesResult"
 
-    invoke-virtual {v1, v2, v3, v0}, Lcom/vk/webapp/bridges/a;->a(Lcom/vk/webapp/internal/data/JsApiMethodType;Ljava/lang/String;Lorg/json/JSONObject;)V
+    invoke-virtual {v1, v2, v3, v0}, Lcom/vk/webapp/bridges/AndroidBridge;->a(Lcom/vk/webapp/internal/data/JsApiMethodType;Ljava/lang/String;Lorg/json/JSONObject;)V
 
     return-void
 
@@ -5603,7 +5603,7 @@
 
     const-string v6, "VKWebAppAddToFavoritesFailed"
 
-    invoke-static/range {v4 .. v9}, Lcom/vk/webapp/bridges/a;->a(Lcom/vk/webapp/bridges/a;Lcom/vk/webapp/internal/data/JsApiMethodType;Ljava/lang/String;ZILjava/lang/Object;)Z
+    invoke-static/range {v4 .. v9}, Lcom/vk/webapp/bridges/AndroidBridge;->a(Lcom/vk/webapp/bridges/AndroidBridge;Lcom/vk/webapp/internal/data/JsApiMethodType;Ljava/lang/String;ZILjava/lang/Object;)Z
 
     move-result v1
 
@@ -5618,11 +5618,11 @@
     invoke-direct {v1, p0, v0}, Lcom/vk/webapp/VkUiConnectFragment$h;-><init>(Lcom/vk/webapp/VkUiConnectFragment;Lorg/json/JSONObject;)V
 
     .line 7
-    invoke-virtual {p0}, Lcom/vk/webapp/VkUiConnectFragment;->a5()Lcom/vk/webapp/o/b;
+    invoke-virtual {p0}, Lcom/vk/webapp/VkUiConnectFragment;->a5()Lcom/vk/webapp/o/VkUiConnectFragmentDelegate;
 
     move-result-object v0
 
-    invoke-interface {v0}, Lcom/vk/webapp/o/b;->f()Z
+    invoke-interface {v0}, Lcom/vk/webapp/o/VkUiConnectFragmentDelegate;->f()Z
 
     move-result v0
 
@@ -5635,11 +5635,11 @@
     new-array v2, v2, [Ljava/lang/Object;
 
     .line 8
-    invoke-virtual {p0}, Lcom/vk/webapp/VkUiConnectFragment;->a5()Lcom/vk/webapp/o/b;
+    invoke-virtual {p0}, Lcom/vk/webapp/VkUiConnectFragment;->a5()Lcom/vk/webapp/o/VkUiConnectFragmentDelegate;
 
     move-result-object v4
 
-    invoke-interface {v4}, Lcom/vk/webapp/o/b;->l()Lcom/vk/dto/common/data/ApiApplication;
+    invoke-interface {v4}, Lcom/vk/webapp/o/VkUiConnectFragmentDelegate;->l()Lcom/vk/dto/common/data/ApiApplication;
 
     move-result-object v4
 
@@ -5653,7 +5653,7 @@
 
     const-string v2, "getString(R.string.game_\u2026itle, delegate.app.title)"
 
-    invoke-static {v0, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     const v2, 0x7f120483
 
@@ -5664,7 +5664,7 @@
 
     const-string v4, "getString(R.string.game_add_to_menu_subtitle)"
 
-    invoke-static {v2, v4}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v2, v4}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     goto :goto_0
 
@@ -5678,7 +5678,7 @@
 
     const-string v2, "getString(R.string.add_vkapp_to_favorite)"
 
-    invoke-static {v0, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     const v2, 0x7f1200b5
 
@@ -5689,11 +5689,11 @@
 
     const-string v4, "getString(R.string.add_v\u2026p_to_favorite_suggestion)"
 
-    invoke-static {v2, v4}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v2, v4}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 12
     :goto_0
-    new-instance v4, Lcom/vk/core/dialogs/bottomsheet/e$a;
+    new-instance v4, Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet$a;
 
     invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getActivity()Landroidx/fragment/app/FragmentActivity;
 
@@ -5705,56 +5705,56 @@
 
     const-string v7, "activity!!"
 
-    invoke-static {v5, v7}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v5, v7}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    invoke-direct {v4, v5}, Lcom/vk/core/dialogs/bottomsheet/e$a;-><init>(Landroid/content/Context;)V
+    invoke-direct {v4, v5}, Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet$a;-><init>(Landroid/content/Context;)V
 
     const v5, 0x7f080488
 
     const v7, 0x7f040022
 
     .line 13
-    invoke-static {v5, v7}, Lcom/vk/core/ui/themes/VKThemeHelper;->a(II)Lcom/vk/core/drawable/i;
+    invoke-static {v5, v7}, Lcom/vk/core/ui/themes/VKThemeHelper;->a(II)Lcom/vk/core/drawable/RecoloredDrawable;
 
     move-result-object v5
 
-    invoke-virtual {v4, v5}, Lcom/vk/core/dialogs/bottomsheet/e$a;->b(Landroid/graphics/drawable/Drawable;)Lcom/vk/core/dialogs/bottomsheet/e$a;
+    invoke-virtual {v4, v5}, Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet$a;->b(Landroid/graphics/drawable/Drawable;)Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet$a;
 
     .line 14
-    invoke-virtual {v4, v0}, Lcom/vk/core/dialogs/bottomsheet/e$a;->d(Ljava/lang/CharSequence;)Lcom/vk/core/dialogs/bottomsheet/e$a;
+    invoke-virtual {v4, v0}, Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet$a;->d(Ljava/lang/CharSequence;)Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet$a;
 
     const/4 v5, 0x2
 
     .line 15
-    invoke-static {v4, v2, v3, v5, v6}, Lcom/vk/core/dialogs/bottomsheet/e$a;->a(Lcom/vk/core/dialogs/bottomsheet/e$a;Ljava/lang/CharSequence;IILjava/lang/Object;)Lcom/vk/core/dialogs/bottomsheet/e$a;
+    invoke-static {v4, v2, v3, v5, v6}, Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet$a;->a(Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet$a;Ljava/lang/CharSequence;IILjava/lang/Object;)Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet$a;
 
     const v3, 0x7f120093
 
     .line 16
-    invoke-virtual {v4, v3, v1}, Lcom/vk/core/dialogs/bottomsheet/e$a;->b(ILcom/vk/core/dialogs/bottomsheet/h$e;)Lcom/vk/core/dialogs/bottomsheet/e$a;
+    invoke-virtual {v4, v3, v1}, Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet$a;->b(ILcom/vk/core/dialogs/bottomsheet/ModalDialogInterface$e;)Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet$a;
 
     const v3, 0x7f12018c
 
     .line 17
-    invoke-virtual {v4, v3, v1}, Lcom/vk/core/dialogs/bottomsheet/e$a;->a(ILcom/vk/core/dialogs/bottomsheet/h$e;)Lcom/vk/core/dialogs/bottomsheet/e$a;
+    invoke-virtual {v4, v3, v1}, Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet$a;->a(ILcom/vk/core/dialogs/bottomsheet/ModalDialogInterface$e;)Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet$a;
 
     .line 18
     new-instance v3, Lcom/vk/webapp/VkUiConnectFragment$g;
 
     invoke-direct {v3, v0, v2, v1}, Lcom/vk/webapp/VkUiConnectFragment$g;-><init>(Ljava/lang/String;Ljava/lang/String;Lcom/vk/webapp/VkUiConnectFragment$h;)V
 
-    invoke-virtual {v4, v3}, Lcom/vk/core/dialogs/bottomsheet/e$a;->a(Lcom/vk/core/dialogs/bottomsheet/h$d;)Lcom/vk/core/dialogs/bottomsheet/e$a;
+    invoke-virtual {v4, v3}, Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet$a;->a(Lcom/vk/core/dialogs/bottomsheet/ModalDialogInterface$d;)Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet$a;
 
     const-string v0, "VkUiConnectFragment.addToFavoritesBottomSheet"
 
     .line 19
-    invoke-virtual {v4, v0}, Lcom/vk/core/dialogs/bottomsheet/e$a;->a(Ljava/lang/String;)Lcom/vk/core/dialogs/bottomsheet/e;
+    invoke-virtual {v4, v0}, Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet$a;->a(Ljava/lang/String;)Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet;
 
     return-void
 
     .line 20
     :cond_3
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     throw v6
 .end method

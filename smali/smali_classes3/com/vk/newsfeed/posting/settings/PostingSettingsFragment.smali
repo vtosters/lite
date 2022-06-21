@@ -1,12 +1,12 @@
 .class public final Lcom/vk/newsfeed/posting/settings/PostingSettingsFragment;
-.super Lcom/vk/core/fragments/c;
+.super Lcom/vk/core/fragments/BaseMvpFragment;
 .source "PostingSettingsFragment.kt"
 
 # interfaces
-.implements Lcom/vk/newsfeed/posting/settings/b;
+.implements Lcom/vk/newsfeed/posting/settings/PostingSettingsContract1;
 .implements Landroid/view/View$OnClickListener;
-.implements Lcom/vk/navigation/b0/k;
-.implements Lcom/vk/navigation/b0/a;
+.implements Lcom/vk/navigation/b0/FragmentWithoutBottomMenuBar;
+.implements Lcom/vk/navigation/b0/FragmentWhiteStatusBar;
 
 
 # annotations
@@ -18,19 +18,19 @@
 
 .annotation system Ldalvik/annotation/Signature;
     value = {
-        "Lcom/vk/core/fragments/c<",
-        "Lcom/vk/newsfeed/posting/settings/a;",
+        "Lcom/vk/core/fragments/BaseMvpFragment<",
+        "Lcom/vk/newsfeed/posting/settings/PostingSettingsContract;",
         ">;",
-        "Lcom/vk/newsfeed/posting/settings/b;",
+        "Lcom/vk/newsfeed/posting/settings/PostingSettingsContract1;",
         "Landroid/view/View$OnClickListener;",
-        "Lcom/vk/navigation/b0/k;",
-        "Lcom/vk/navigation/b0/a;"
+        "Lcom/vk/navigation/b0/FragmentWithoutBottomMenuBar;",
+        "Lcom/vk/navigation/b0/FragmentWhiteStatusBar;"
     }
 .end annotation
 
 
 # static fields
-.field static final synthetic S:[Lkotlin/u/j;
+.field static final synthetic S:[Lkotlin/u/KProperty5;
 
 .field private static final T:I
 
@@ -41,7 +41,7 @@
 
 
 # instance fields
-.field private G:Lcom/vk/newsfeed/posting/settings/a;
+.field private G:Lcom/vk/newsfeed/posting/settings/PostingSettingsContract;
 
 .field private H:Lcom/vk/common/view/settings/SettingsSwitchView;
 
@@ -63,7 +63,7 @@
 
 .field private final Q:Lcom/vk/newsfeed/posting/settings/PostingSettingsFragment$b;
 
-.field private final R:Lkotlin/e;
+.field private final R:Lkotlin/Lazy2;
 
 
 # direct methods
@@ -72,13 +72,13 @@
 
     const/4 v0, 0x1
 
-    new-array v0, v0, [Lkotlin/u/j;
+    new-array v0, v0, [Lkotlin/u/KProperty5;
 
     new-instance v1, Lkotlin/jvm/internal/PropertyReference1Impl;
 
     const-class v2, Lcom/vk/newsfeed/posting/settings/PostingSettingsFragment;
 
-    invoke-static {v2}, Lkotlin/jvm/internal/o;->a(Ljava/lang/Class;)Lkotlin/u/c;
+    invoke-static {v2}, Lkotlin/jvm/internal/Reflection;->a(Ljava/lang/Class;)Lkotlin/u/KClass;
 
     move-result-object v2
 
@@ -86,21 +86,21 @@
 
     const-string v4, "getSubtitleSpannableString()Landroid/text/SpannableString;"
 
-    invoke-direct {v1, v2, v3, v4}, Lkotlin/jvm/internal/PropertyReference1Impl;-><init>(Lkotlin/u/e;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-direct {v1, v2, v3, v4}, Lkotlin/jvm/internal/PropertyReference1Impl;-><init>(Lkotlin/u/KDeclarationContainer;Ljava/lang/String;Ljava/lang/String;)V
 
-    invoke-static {v1}, Lkotlin/jvm/internal/o;->a(Lkotlin/jvm/internal/PropertyReference1;)Lkotlin/u/l;
+    invoke-static {v1}, Lkotlin/jvm/internal/Reflection;->a(Lkotlin/jvm/internal/PropertyReference1;)Lkotlin/u/KProperty2;
 
     const/4 v2, 0x0
 
     aput-object v1, v0, v2
 
-    sput-object v0, Lcom/vk/newsfeed/posting/settings/PostingSettingsFragment;->S:[Lkotlin/u/j;
+    sput-object v0, Lcom/vk/newsfeed/posting/settings/PostingSettingsFragment;->S:[Lkotlin/u/KProperty5;
 
     new-instance v0, Lcom/vk/newsfeed/posting/settings/PostingSettingsFragment$a;
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, v1}, Lcom/vk/newsfeed/posting/settings/PostingSettingsFragment$a;-><init>(Lkotlin/jvm/internal/i;)V
+    invoke-direct {v0, v1}, Lcom/vk/newsfeed/posting/settings/PostingSettingsFragment$a;-><init>(Lkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     sput-object v0, Lcom/vk/newsfeed/posting/settings/PostingSettingsFragment;->U:Lcom/vk/newsfeed/posting/settings/PostingSettingsFragment$a;
 
@@ -120,7 +120,7 @@
     .locals 1
 
     .line 1
-    invoke-direct {p0}, Lcom/vk/core/fragments/c;-><init>()V
+    invoke-direct {p0}, Lcom/vk/core/fragments/BaseMvpFragment;-><init>()V
 
     .line 2
     new-instance v0, Lcom/vk/newsfeed/posting/settings/PostingSettingsFragment$b;
@@ -134,11 +134,11 @@
 
     invoke-direct {v0, p0}, Lcom/vk/newsfeed/posting/settings/PostingSettingsFragment$subtitleSpannableString$2;-><init>(Lcom/vk/newsfeed/posting/settings/PostingSettingsFragment;)V
 
-    invoke-static {v0}, Lkotlin/g;->a(Lkotlin/jvm/b/a;)Lkotlin/e;
+    invoke-static {v0}, Lkotlin/g;->a(Lkotlin/jvm/b/Functions;)Lkotlin/Lazy2;
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/vk/newsfeed/posting/settings/PostingSettingsFragment;->R:Lkotlin/e;
+    iput-object v0, p0, Lcom/vk/newsfeed/posting/settings/PostingSettingsFragment;->R:Lkotlin/Lazy2;
 
     return-void
 .end method
@@ -154,15 +154,15 @@
 .method private final Q4()Landroid/text/SpannableString;
     .locals 3
 
-    iget-object v0, p0, Lcom/vk/newsfeed/posting/settings/PostingSettingsFragment;->R:Lkotlin/e;
+    iget-object v0, p0, Lcom/vk/newsfeed/posting/settings/PostingSettingsFragment;->R:Lkotlin/Lazy2;
 
-    sget-object v1, Lcom/vk/newsfeed/posting/settings/PostingSettingsFragment;->S:[Lkotlin/u/j;
+    sget-object v1, Lcom/vk/newsfeed/posting/settings/PostingSettingsFragment;->S:[Lkotlin/u/KProperty5;
 
     const/4 v2, 0x0
 
     aget-object v1, v1, v2
 
-    invoke-interface {v0}, Lkotlin/e;->getValue()Ljava/lang/Object;
+    invoke-interface {v0}, Lkotlin/Lazy2;->getValue()Ljava/lang/Object;
 
     move-result-object v0
 
@@ -207,7 +207,7 @@
 
     if-eqz v0, :cond_0
 
-    invoke-virtual {v0}, Lcom/vk/common/view/settings/b;->a()Z
+    invoke-virtual {v0}, Lcom/vk/common/view/settings/SettingsView;->a()Z
 
     move-result v0
 
@@ -228,7 +228,7 @@
 
     if-eqz v0, :cond_0
 
-    invoke-virtual {v0, p1}, Lcom/vk/common/view/settings/b;->setChecked(Z)V
+    invoke-virtual {v0, p1}, Lcom/vk/common/view/settings/SettingsView;->setChecked(Z)V
 
     :cond_0
     return-void
@@ -242,7 +242,7 @@
 
     if-eqz v0, :cond_0
 
-    invoke-virtual {v0}, Lcom/vk/common/view/settings/b;->a()Z
+    invoke-virtual {v0}, Lcom/vk/common/view/settings/SettingsView;->a()Z
 
     move-result v0
 
@@ -259,7 +259,7 @@
     .locals 1
 
     .line 1
-    invoke-static {p0}, Lcom/vk/navigation/b0/a$a;->b(Lcom/vk/navigation/b0/a;)Z
+    invoke-static {p0}, Lcom/vk/navigation/b0/FragmentWhiteStatusBar$a;->b(Lcom/vk/navigation/b0/FragmentWhiteStatusBar;)Z
 
     move-result v0
 
@@ -288,7 +288,7 @@
 
     if-eqz v0, :cond_0
 
-    invoke-virtual {v0, p1}, Lcom/vk/common/view/settings/b;->setButtonEnabled(Z)V
+    invoke-virtual {v0, p1}, Lcom/vk/common/view/settings/SettingsView;->setButtonEnabled(Z)V
 
     :cond_0
     return-void
@@ -330,7 +330,7 @@
 
     if-eqz v0, :cond_0
 
-    invoke-virtual {v0, p1}, Lcom/vk/common/view/settings/b;->setButtonEnabled(Z)V
+    invoke-virtual {v0, p1}, Lcom/vk/common/view/settings/SettingsView;->setButtonEnabled(Z)V
 
     :cond_0
     return-void
@@ -340,7 +340,7 @@
     .locals 1
 
     .line 1
-    invoke-static {p0}, Lcom/vk/navigation/b0/a$a;->a(Lcom/vk/navigation/b0/a;)I
+    invoke-static {p0}, Lcom/vk/navigation/b0/FragmentWhiteStatusBar$a;->a(Lcom/vk/navigation/b0/FragmentWhiteStatusBar;)I
 
     move-result v0
 
@@ -355,7 +355,7 @@
 
     if-eqz v0, :cond_0
 
-    invoke-virtual {v0, p1}, Lcom/vk/common/view/settings/b;->setChecked(Z)V
+    invoke-virtual {v0, p1}, Lcom/vk/common/view/settings/SettingsView;->setChecked(Z)V
 
     :cond_0
     return-void
@@ -369,7 +369,7 @@
 
     if-eqz v0, :cond_0
 
-    invoke-virtual {v0}, Lcom/vk/common/view/settings/b;->a()Z
+    invoke-virtual {v0}, Lcom/vk/common/view/settings/SettingsView;->a()Z
 
     move-result v0
 
@@ -404,7 +404,7 @@
 
     if-eqz v0, :cond_0
 
-    invoke-virtual {v0}, Lcom/vk/common/view/settings/b;->a()Z
+    invoke-virtual {v0}, Lcom/vk/common/view/settings/SettingsView;->a()Z
 
     move-result v0
 
@@ -425,7 +425,7 @@
 
     if-eqz v0, :cond_0
 
-    invoke-virtual {v0}, Lcom/vk/common/view/settings/b;->a()Z
+    invoke-virtual {v0}, Lcom/vk/common/view/settings/SettingsView;->a()Z
 
     move-result v0
 
@@ -446,17 +446,17 @@
 
     if-eqz v0, :cond_0
 
-    invoke-virtual {v0, p1}, Lcom/vk/common/view/settings/b;->setChecked(Z)V
+    invoke-virtual {v0, p1}, Lcom/vk/common/view/settings/SettingsView;->setChecked(Z)V
 
     :cond_0
     return-void
 .end method
 
-.method public a(Lcom/vk/newsfeed/posting/settings/a;)V
+.method public a(Lcom/vk/newsfeed/posting/settings/PostingSettingsContract;)V
     .locals 0
 
     .line 1
-    iput-object p1, p0, Lcom/vk/newsfeed/posting/settings/PostingSettingsFragment;->G:Lcom/vk/newsfeed/posting/settings/a;
+    iput-object p1, p0, Lcom/vk/newsfeed/posting/settings/PostingSettingsFragment;->G:Lcom/vk/newsfeed/posting/settings/PostingSettingsContract;
 
     return-void
 .end method
@@ -488,7 +488,7 @@
     .locals 8
 
     .line 1
-    new-instance v7, Lcom/vk/core/dialogs/actionspopup/a$b;
+    new-instance v7, Lcom/vk/core/dialogs/actionspopup/ActionsPopup$b;
 
     iget-object v1, p0, Lcom/vk/newsfeed/posting/settings/PostingSettingsFragment;->P:Landroid/view/View;
 
@@ -504,7 +504,7 @@
 
     move-object v0, v7
 
-    invoke-direct/range {v0 .. v5}, Lcom/vk/core/dialogs/actionspopup/a$b;-><init>(Landroid/view/View;ZIILkotlin/jvm/internal/i;)V
+    invoke-direct/range {v0 .. v5}, Lcom/vk/core/dialogs/actionspopup/ActionsPopup$b;-><init>(Landroid/view/View;ZIILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     const v1, 0x7f1203df
 
@@ -519,7 +519,7 @@
 
     const/4 v6, 0x0
 
-    invoke-static/range {v0 .. v6}, Lcom/vk/core/dialogs/actionspopup/a$b;->a(Lcom/vk/core/dialogs/actionspopup/a$b;ILandroid/graphics/drawable/Drawable;ZLkotlin/jvm/b/a;ILjava/lang/Object;)Lcom/vk/core/dialogs/actionspopup/a$b;
+    invoke-static/range {v0 .. v6}, Lcom/vk/core/dialogs/actionspopup/ActionsPopup$b;->a(Lcom/vk/core/dialogs/actionspopup/ActionsPopup$b;ILandroid/graphics/drawable/Drawable;ZLkotlin/jvm/b/Functions;ILjava/lang/Object;)Lcom/vk/core/dialogs/actionspopup/ActionsPopup$b;
 
     const v1, 0x7f1202b3
 
@@ -528,10 +528,10 @@
 
     invoke-direct {v4, p0}, Lcom/vk/newsfeed/posting/settings/PostingSettingsFragment$showSourceMenu$2;-><init>(Lcom/vk/newsfeed/posting/settings/PostingSettingsFragment;)V
 
-    invoke-static/range {v0 .. v6}, Lcom/vk/core/dialogs/actionspopup/a$b;->a(Lcom/vk/core/dialogs/actionspopup/a$b;ILandroid/graphics/drawable/Drawable;ZLkotlin/jvm/b/a;ILjava/lang/Object;)Lcom/vk/core/dialogs/actionspopup/a$b;
+    invoke-static/range {v0 .. v6}, Lcom/vk/core/dialogs/actionspopup/ActionsPopup$b;->a(Lcom/vk/core/dialogs/actionspopup/ActionsPopup$b;ILandroid/graphics/drawable/Drawable;ZLkotlin/jvm/b/Functions;ILjava/lang/Object;)Lcom/vk/core/dialogs/actionspopup/ActionsPopup$b;
 
     .line 4
-    invoke-virtual {v7}, Lcom/vk/core/dialogs/actionspopup/a$b;->c()Lcom/vk/core/dialogs/actionspopup/a;
+    invoke-virtual {v7}, Lcom/vk/core/dialogs/actionspopup/ActionsPopup$b;->c()Lcom/vk/core/dialogs/actionspopup/ActionsPopup;
 
     :cond_0
     return-void
@@ -559,7 +559,7 @@
 
     if-eqz v0, :cond_0
 
-    invoke-virtual {v0, p1}, Lcom/vk/common/view/settings/b;->setButtonEnabled(Z)V
+    invoke-virtual {v0, p1}, Lcom/vk/common/view/settings/SettingsView;->setButtonEnabled(Z)V
 
     :cond_0
     return-void
@@ -573,28 +573,28 @@
 
     if-eqz v0, :cond_0
 
-    invoke-virtual {v0, p1}, Lcom/vk/common/view/settings/b;->setChecked(Z)V
+    invoke-virtual {v0, p1}, Lcom/vk/common/view/settings/SettingsView;->setChecked(Z)V
 
     :cond_0
     return-void
 .end method
 
-.method public bridge synthetic getPresenter()Lb/h/r/c;
+.method public bridge synthetic getPresenter()Lb/h/r/BaseScreenContract;
     .locals 1
 
     .line 1
-    invoke-virtual {p0}, Lcom/vk/newsfeed/posting/settings/PostingSettingsFragment;->getPresenter()Lcom/vk/newsfeed/posting/settings/a;
+    invoke-virtual {p0}, Lcom/vk/newsfeed/posting/settings/PostingSettingsFragment;->getPresenter()Lcom/vk/newsfeed/posting/settings/PostingSettingsContract;
 
     move-result-object v0
 
     return-object v0
 .end method
 
-.method public getPresenter()Lcom/vk/newsfeed/posting/settings/a;
+.method public getPresenter()Lcom/vk/newsfeed/posting/settings/PostingSettingsContract;
     .locals 1
 
     .line 2
-    iget-object v0, p0, Lcom/vk/newsfeed/posting/settings/PostingSettingsFragment;->G:Lcom/vk/newsfeed/posting/settings/a;
+    iget-object v0, p0, Lcom/vk/newsfeed/posting/settings/PostingSettingsFragment;->G:Lcom/vk/newsfeed/posting/settings/PostingSettingsContract;
 
     return-object v0
 .end method
@@ -621,7 +621,7 @@
 
     if-eqz v0, :cond_0
 
-    invoke-virtual {v0, p1}, Lcom/vk/common/view/settings/b;->setChecked(Z)V
+    invoke-virtual {v0, p1}, Lcom/vk/common/view/settings/SettingsView;->setChecked(Z)V
 
     :cond_0
     return-void
@@ -663,18 +663,18 @@
 
     if-ne v2, v1, :cond_3
 
-    invoke-virtual {p0}, Lcom/vk/newsfeed/posting/settings/PostingSettingsFragment;->getPresenter()Lcom/vk/newsfeed/posting/settings/a;
+    invoke-virtual {p0}, Lcom/vk/newsfeed/posting/settings/PostingSettingsFragment;->getPresenter()Lcom/vk/newsfeed/posting/settings/PostingSettingsContract;
 
     move-result-object p1
 
     if-eqz p1, :cond_2
 
-    invoke-interface {p1}, Lcom/vk/newsfeed/posting/settings/a;->w()V
+    invoke-interface {p1}, Lcom/vk/newsfeed/posting/settings/PostingSettingsContract;->w()V
 
     goto :goto_5
 
     :cond_2
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     throw v0
 
@@ -713,18 +713,18 @@
     if-ne v2, v1, :cond_8
 
     :goto_3
-    invoke-virtual {p0}, Lcom/vk/newsfeed/posting/settings/PostingSettingsFragment;->getPresenter()Lcom/vk/newsfeed/posting/settings/a;
+    invoke-virtual {p0}, Lcom/vk/newsfeed/posting/settings/PostingSettingsFragment;->getPresenter()Lcom/vk/newsfeed/posting/settings/PostingSettingsContract;
 
     move-result-object p1
 
     if-eqz p1, :cond_7
 
-    invoke-interface {p1}, Lcom/vk/newsfeed/posting/settings/a;->P0()V
+    invoke-interface {p1}, Lcom/vk/newsfeed/posting/settings/PostingSettingsContract;->P0()V
 
     goto :goto_5
 
     :cond_7
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     throw v0
 
@@ -744,18 +744,18 @@
 
     if-ne p1, v1, :cond_b
 
-    invoke-virtual {p0}, Lcom/vk/newsfeed/posting/settings/PostingSettingsFragment;->getPresenter()Lcom/vk/newsfeed/posting/settings/a;
+    invoke-virtual {p0}, Lcom/vk/newsfeed/posting/settings/PostingSettingsFragment;->getPresenter()Lcom/vk/newsfeed/posting/settings/PostingSettingsContract;
 
     move-result-object p1
 
     if-eqz p1, :cond_a
 
-    invoke-interface {p1}, Lcom/vk/newsfeed/posting/settings/a;->Q0()V
+    invoke-interface {p1}, Lcom/vk/newsfeed/posting/settings/PostingSettingsContract;->Q0()V
 
     goto :goto_5
 
     :cond_a
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     throw v0
 
@@ -768,10 +768,10 @@
     .locals 2
 
     .line 1
-    invoke-super {p0, p1}, Lcom/vk/core/fragments/b;->onCreate(Landroid/os/Bundle;)V
+    invoke-super {p0, p1}, Lcom/vk/core/fragments/BaseFragment1;->onCreate(Landroid/os/Bundle;)V
 
     .line 2
-    new-instance p1, Lcom/vk/newsfeed/posting/settings/d;
+    new-instance p1, Lcom/vk/newsfeed/posting/settings/PostingSettingsPresenter;
 
     iget-object v0, p0, Lcom/vk/newsfeed/posting/settings/PostingSettingsFragment;->Q:Lcom/vk/newsfeed/posting/settings/PostingSettingsFragment$b;
 
@@ -779,9 +779,9 @@
 
     move-result-object v1
 
-    invoke-direct {p1, p0, v0, v1}, Lcom/vk/newsfeed/posting/settings/d;-><init>(Lcom/vk/newsfeed/posting/settings/b;Lcom/vk/newsfeed/posting/settings/e;Landroid/os/Bundle;)V
+    invoke-direct {p1, p0, v0, v1}, Lcom/vk/newsfeed/posting/settings/PostingSettingsPresenter;-><init>(Lcom/vk/newsfeed/posting/settings/PostingSettingsContract1;Lcom/vk/newsfeed/posting/settings/PostingSettingsProviders;Landroid/os/Bundle;)V
 
-    invoke-virtual {p0, p1}, Lcom/vk/newsfeed/posting/settings/PostingSettingsFragment;->a(Lcom/vk/newsfeed/posting/settings/a;)V
+    invoke-virtual {p0, p1}, Lcom/vk/newsfeed/posting/settings/PostingSettingsFragment;->a(Lcom/vk/newsfeed/posting/settings/PostingSettingsContract;)V
 
     return-void
 .end method
@@ -846,7 +846,7 @@
 
     invoke-direct {p3, p0}, Lcom/vk/newsfeed/posting/settings/PostingSettingsFragment$c;-><init>(Lcom/vk/newsfeed/posting/settings/PostingSettingsFragment;)V
 
-    invoke-virtual {p2, p3}, Lcom/vk/common/view/settings/b;->setOnCheckedChangesListener(Landroid/widget/CompoundButton$OnCheckedChangeListener;)V
+    invoke-virtual {p2, p3}, Lcom/vk/common/view/settings/SettingsView;->setOnCheckedChangesListener(Landroid/widget/CompoundButton$OnCheckedChangeListener;)V
 
     .line 10
     invoke-direct {p0, p2}, Lcom/vk/newsfeed/posting/settings/PostingSettingsFragment;->a(Landroid/view/View;)V
@@ -946,7 +946,7 @@
     const-string p3, "tv"
 
     .line 29
-    invoke-static {p2, p3}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p2, p3}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-direct {p0}, Lcom/vk/newsfeed/posting/settings/PostingSettingsFragment;->Q4()Landroid/text/SpannableString;
 
@@ -1010,7 +1010,7 @@
     iput-object v0, p0, Lcom/vk/newsfeed/posting/settings/PostingSettingsFragment;->L:Lcom/vk/common/view/settings/SettingsSwitchView;
 
     .line 10
-    invoke-super {p0}, Lcom/vk/core/fragments/c;->onDestroyView()V
+    invoke-super {p0}, Lcom/vk/core/fragments/BaseMvpFragment;->onDestroyView()V
 
     return-void
 .end method
@@ -1019,7 +1019,7 @@
     .locals 2
 
     .line 1
-    invoke-super {p0}, Lcom/vk/core/fragments/c;->onResume()V
+    invoke-super {p0}, Lcom/vk/core/fragments/BaseMvpFragment;->onResume()V
 
     .line 2
     invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getActivity()Landroidx/fragment/app/FragmentActivity;
@@ -1044,13 +1044,13 @@
     const-string v1, "it"
 
     .line 4
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {p0}, Lcom/vk/newsfeed/posting/settings/PostingSettingsFragment;->R3()I
 
     move-result v1
 
-    invoke-static {v0, v1}, Lcom/vk/core/extensions/a;->a(Landroid/app/Activity;I)V
+    invoke-static {v0, v1}, Lcom/vk/core/extensions/ActivityExt;->a(Landroid/app/Activity;I)V
 
     :cond_0
     return-void

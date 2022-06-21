@@ -18,16 +18,16 @@
 
 
 # instance fields
-.field final synthetic a:Lcom/vk/libvideo/ui/e;
+.field final synthetic a:Lcom/vk/libvideo/ui/VideoListItemView;
 
 .field final synthetic b:Lcom/vk/libvideo/dialogs/VideoFeedDialog$g;
 
 
 # direct methods
-.method constructor <init>(Lcom/vk/libvideo/ui/e;Lcom/vk/libvideo/dialogs/VideoFeedDialog$g;)V
+.method constructor <init>(Lcom/vk/libvideo/ui/VideoListItemView;Lcom/vk/libvideo/dialogs/VideoFeedDialog$g;)V
     .locals 0
 
-    iput-object p1, p0, Lcom/vk/libvideo/dialogs/VideoFeedDialog$g$b;->a:Lcom/vk/libvideo/ui/e;
+    iput-object p1, p0, Lcom/vk/libvideo/dialogs/VideoFeedDialog$g$b;->a:Lcom/vk/libvideo/ui/VideoListItemView;
 
     iput-object p2, p0, Lcom/vk/libvideo/dialogs/VideoFeedDialog$g$b;->b:Lcom/vk/libvideo/dialogs/VideoFeedDialog$g;
 
@@ -95,15 +95,15 @@
 
     move-result-object v1
 
-    iget-object v2, p0, Lcom/vk/libvideo/dialogs/VideoFeedDialog$g$b;->a:Lcom/vk/libvideo/ui/e;
+    iget-object v2, p0, Lcom/vk/libvideo/dialogs/VideoFeedDialog$g$b;->a:Lcom/vk/libvideo/ui/VideoListItemView;
 
     invoke-virtual {v2}, Lcom/vk/libvideo/ui/VideoView;->getVideoView()Lcom/vk/media/player/video/view/VideoTextureView;
 
     move-result-object v2
 
-    iget-object v3, p0, Lcom/vk/libvideo/dialogs/VideoFeedDialog$g$b;->a:Lcom/vk/libvideo/ui/e;
+    iget-object v3, p0, Lcom/vk/libvideo/dialogs/VideoFeedDialog$g$b;->a:Lcom/vk/libvideo/ui/VideoListItemView;
 
-    invoke-virtual {v3}, Lcom/vk/libvideo/ui/e;->getVideoConfig()Lcom/vk/libvideo/autoplay/AutoPlayConfig;
+    invoke-virtual {v3}, Lcom/vk/libvideo/ui/VideoListItemView;->getVideoConfig()Lcom/vk/libvideo/autoplay/AutoPlayConfig;
 
     move-result-object v3
 

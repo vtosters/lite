@@ -12,7 +12,7 @@
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/util/List<",
-            "Lcom/vk/common/view/flex/f;",
+            "Lcom/vk/common/view/flex/SizeEntities2;",
             ">;"
         }
     .end annotation
@@ -26,7 +26,7 @@
         value = {
             "(II",
             "Ljava/util/List<",
-            "Lcom/vk/common/view/flex/f;",
+            "Lcom/vk/common/view/flex/SizeEntities2;",
             ">;)V"
         }
     .end annotation
@@ -91,19 +91,19 @@
     .line 5
     iget-object v3, p0, Lcom/vk/common/view/flex/FlexLayoutResult;->c:Ljava/util/List;
 
-    invoke-static {v3}, Lkotlin/collections/l;->d(Ljava/lang/Iterable;)Lkotlin/sequences/j;
+    invoke-static {v3}, Lkotlin/collections/l;->d(Ljava/lang/Iterable;)Lkotlin/sequences/Sequence;
 
     move-result-object v3
 
     .line 6
     sget-object v4, Lcom/vk/common/view/flex/FlexLayoutResult$deepCopy$1;->a:Lcom/vk/common/view/flex/FlexLayoutResult$deepCopy$1;
 
-    invoke-static {v3, v4}, Lkotlin/sequences/m;->e(Lkotlin/sequences/j;Lkotlin/jvm/b/b;)Lkotlin/sequences/j;
+    invoke-static {v3, v4}, Lkotlin/sequences/m;->e(Lkotlin/sequences/Sequence;Lkotlin/jvm/b/Functions2;)Lkotlin/sequences/Sequence;
 
     move-result-object v3
 
     .line 7
-    invoke-static {v3}, Lkotlin/sequences/m;->m(Lkotlin/sequences/j;)Ljava/util/List;
+    invoke-static {v3}, Lkotlin/sequences/m;->m(Lkotlin/sequences/Sequence;)Ljava/util/List;
 
     move-result-object v3
 
@@ -119,7 +119,7 @@
         value = {
             "(II",
             "Ljava/util/List<",
-            "Lcom/vk/common/view/flex/f;",
+            "Lcom/vk/common/view/flex/SizeEntities2;",
             ">;)",
             "Lcom/vk/common/view/flex/FlexLayoutResult;"
         }
@@ -147,7 +147,7 @@
         value = {
             "()",
             "Ljava/util/List<",
-            "Lcom/vk/common/view/flex/f;",
+            "Lcom/vk/common/view/flex/SizeEntities2;",
             ">;"
         }
     .end annotation
@@ -212,7 +212,7 @@
 
     iget-object p1, p1, Lcom/vk/common/view/flex/FlexLayoutResult;->c:Ljava/util/List;
 
-    invoke-static {v0, p1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v0, p1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result p1
 

@@ -246,7 +246,7 @@
 
     const-string v1, "Create"
 
-    invoke-static {v0, v1}, Le/c/a/a;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Le/c/a/Log;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 2
     new-instance v0, Lorg/webrtc/videoengine/VideoCapture;
@@ -340,7 +340,7 @@
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Le/c/a/a;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Le/c/a/Log;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     const/4 v0, 0x1
 
@@ -391,7 +391,7 @@
 
     move-result-object p1
 
-    invoke-static {v0, p1}, Le/c/a/a;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, p1}, Le/c/a/Log;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     return-void
 .end method
@@ -420,7 +420,7 @@
 
     move-result-object p1
 
-    invoke-static {v0, p1}, Le/c/a/a;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, p1}, Le/c/a/Log;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     return-void
 .end method
@@ -457,7 +457,7 @@
 
     move-result-object p3
 
-    invoke-static {v0, p3}, Le/c/a/a;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, p3}, Le/c/a/Log;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 2
     iget-boolean p3, p0, Lorg/webrtc/videoengine/VideoCapture;->_started:Z
@@ -503,7 +503,7 @@
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Le/c/a/a;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Le/c/a/Log;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     if-eqz p2, :cond_0
 
@@ -613,7 +613,7 @@
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Le/c/a/a;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Le/c/a/Log;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 2
     iput p1, p0, Lorg/webrtc/videoengine/VideoCapture;->_torchMode:I
@@ -667,7 +667,7 @@
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Le/c/a/a;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Le/c/a/Log;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 2
     iget-object v0, p0, Lorg/webrtc/videoengine/VideoCapture;->_cameraWrapper:Lorg/webrtc/videoengine/VideoCapture$CameraThreadedWrapper;
@@ -745,7 +745,7 @@
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Le/c/a/a;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Le/c/a/Log;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 2
     iget-object v0, p0, Lorg/webrtc/videoengine/VideoCapture;->_captureDeviceLock:Ljava/lang/Object;
@@ -801,7 +801,7 @@
 
     const-string p2, "VideoCapture.StartCapture: parentFrame || context not set, skip <<<"
 
-    invoke-static {p1, p2}, Le/c/a/a;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {p1, p2}, Le/c/a/Log;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     return v5
 
@@ -818,7 +818,7 @@
 
     const-string p2, "VideoCapture.StartCapture -- FAILED, prepareHandlerThread -- ERROR <<<"
 
-    invoke-static {p1, p2}, Le/c/a/a;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {p1, p2}, Le/c/a/Log;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     const/4 p1, -0x1
 
@@ -842,7 +842,7 @@
 
     const-string p2, "VideoCapture.StartCapture: camera surface not ready, skip <<<"
 
-    invoke-static {p1, p2}, Le/c/a/a;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {p1, p2}, Le/c/a/Log;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     return v5
 
@@ -857,7 +857,7 @@
 
     const-string p2, "VideoCapture.StartCapture <<<"
 
-    invoke-static {p1, p2}, Le/c/a/a;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {p1, p2}, Le/c/a/Log;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     return v5
 
@@ -903,7 +903,7 @@
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Le/c/a/a;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Le/c/a/Log;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 2
     iget-boolean v0, p0, Lorg/webrtc/videoengine/VideoCapture;->_performingPhoto:Z
@@ -956,7 +956,7 @@
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Le/c/a/a;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Le/c/a/Log;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     const/4 v0, 0x0
 
@@ -1014,7 +1014,7 @@
 
     move-result-object v2
 
-    invoke-static {v1, v2}, Le/c/a/a;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Le/c/a/Log;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     return v0
 
@@ -1653,7 +1653,7 @@
     move-result-object v1
 
     .line 4
-    invoke-static {v0, v1}, Le/c/a/a;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Le/c/a/Log;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 5
     sget-object v0, Lorg/webrtc/videoengine/VideoCapture;->_workingContext:Ljava/lang/ref/WeakReference;
@@ -1724,7 +1724,7 @@
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Le/c/a/a;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Le/c/a/Log;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 2
     iget-object v0, p0, Lorg/webrtc/videoengine/VideoCapture;->_cameraWrapper:Lorg/webrtc/videoengine/VideoCapture$CameraThreadedWrapper;
@@ -1882,7 +1882,7 @@
 
     move-result-object v0
 
-    invoke-static {v2, v0}, Le/c/a/a;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v2, v0}, Le/c/a/Log;->a(Ljava/lang/String;Ljava/lang/String;)V
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_0
 
@@ -1912,7 +1912,7 @@
 
     move-result-object v0
 
-    invoke-static {v2, v0}, Le/c/a/a;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v2, v0}, Le/c/a/Log;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 17
     :cond_4
@@ -1921,7 +1921,7 @@
 
     const-string v2, "prepareHandlerThread <<<"
 
-    invoke-static {v0, v2}, Le/c/a/a;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v2}, Le/c/a/Log;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     return v1
 .end method
@@ -2011,7 +2011,7 @@
 
     move-result-object p0
 
-    invoke-static {v0, p0}, Le/c/a/a;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, p0}, Le/c/a/Log;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     :cond_1
     :goto_0
@@ -2064,7 +2064,7 @@
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Le/c/a/a;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Le/c/a/Log;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 2
     sget-object v0, Lorg/webrtc/videoengine/VideoCapture;->_captureInstance:Ljava/lang/ref/WeakReference;
@@ -2126,7 +2126,7 @@
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Le/c/a/a;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Le/c/a/Log;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 2
     iget-object v0, p0, Lorg/webrtc/videoengine/VideoCapture;->_cameraWrapper:Lorg/webrtc/videoengine/VideoCapture$CameraThreadedWrapper;
@@ -2271,7 +2271,7 @@
     move-result-object p1
 
     .line 7
-    invoke-static {v0, p1}, Le/c/a/a;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, p1}, Le/c/a/Log;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 8
     iget-object p1, p0, Lorg/webrtc/videoengine/VideoCapture;->_cameraWrapper:Lorg/webrtc/videoengine/VideoCapture$CameraThreadedWrapper;
@@ -2338,7 +2338,7 @@
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Le/c/a/a;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Le/c/a/Log;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 2
     iget-object v0, p0, Lorg/webrtc/videoengine/VideoCapture;->_captureDeviceLock:Ljava/lang/Object;
@@ -2404,7 +2404,7 @@
 
     const-string v1, "surfaceDestroyed >>>"
 
-    invoke-static {v0, v1}, Le/c/a/a;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Le/c/a/Log;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 2
     iget-object v0, p0, Lorg/webrtc/videoengine/VideoCapture;->_cameraWrapper:Lorg/webrtc/videoengine/VideoCapture$CameraThreadedWrapper;
@@ -2431,7 +2431,7 @@
 
     const-string v2, "VideoCapture.nativeOnPause"
 
-    invoke-static {v0, v2}, Le/c/a/a;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v2}, Le/c/a/Log;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 6
     iget-object v0, p0, Lorg/webrtc/videoengine/VideoCapture;->_videoCaptureDevice:Lorg/webrtc/videoengine/VideoCaptureDeviceInfoAndroid$AndroidVideoCaptureDevice;
@@ -2451,7 +2451,7 @@
 
     const-string v1, "surfaceDestroyed <<<"
 
-    invoke-static {v0, v1}, Le/c/a/a;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Le/c/a/Log;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     return-void
 
@@ -2517,7 +2517,7 @@
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Le/c/a/a;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Le/c/a/Log;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 2
     iget-boolean v0, p0, Lorg/webrtc/videoengine/VideoCapture;->_waitingSurfaceCreation:Z
@@ -2583,7 +2583,7 @@
 
     const-string v1, "VideoCapture.surfaceReady <<<"
 
-    invoke-static {v0, v1}, Le/c/a/a;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Le/c/a/Log;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     return-void
 

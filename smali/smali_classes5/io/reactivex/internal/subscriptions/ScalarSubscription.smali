@@ -3,7 +3,7 @@
 .source "ScalarSubscription.java"
 
 # interfaces
-.implements Lc/a/a0/b/h;
+.implements Lc/a/a0/b/QueueSubscription;
 
 
 # annotations
@@ -13,7 +13,7 @@
         "Ljava/lang/Object;",
         ">",
         "Ljava/util/concurrent/atomic/AtomicInteger;",
-        "Lc/a/a0/b/h<",
+        "Lc/a/a0/b/QueueSubscription<",
         "TT;>;"
     }
 .end annotation
@@ -24,10 +24,10 @@
 
 
 # instance fields
-.field final subscriber:Le/b/c;
+.field final subscriber:Le/b/Subscriber;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Le/b/c<",
+            "Le/b/Subscriber<",
             "-TT;>;"
         }
     .end annotation
@@ -43,12 +43,12 @@
 
 
 # direct methods
-.method public constructor <init>(Le/b/c;Ljava/lang/Object;)V
+.method public constructor <init>(Le/b/Subscriber;Ljava/lang/Object;)V
     .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Le/b/c<",
+            "Le/b/Subscriber<",
             "-TT;>;TT;)V"
         }
     .end annotation
@@ -57,7 +57,7 @@
     invoke-direct {p0}, Ljava/util/concurrent/atomic/AtomicInteger;-><init>()V
 
     .line 2
-    iput-object p1, p0, Lio/reactivex/internal/subscriptions/ScalarSubscription;->subscriber:Le/b/c;
+    iput-object p1, p0, Lio/reactivex/internal/subscriptions/ScalarSubscription;->subscriber:Le/b/Subscriber;
 
     .line 3
     iput-object p2, p0, Lio/reactivex/internal/subscriptions/ScalarSubscription;->value:Ljava/lang/Object;
@@ -100,12 +100,12 @@
     if-eqz p1, :cond_1
 
     .line 3
-    iget-object p1, p0, Lio/reactivex/internal/subscriptions/ScalarSubscription;->subscriber:Le/b/c;
+    iget-object p1, p0, Lio/reactivex/internal/subscriptions/ScalarSubscription;->subscriber:Le/b/Subscriber;
 
     .line 4
     iget-object p2, p0, Lio/reactivex/internal/subscriptions/ScalarSubscription;->value:Ljava/lang/Object;
 
-    invoke-interface {p1, p2}, Le/b/c;->b(Ljava/lang/Object;)V
+    invoke-interface {p1, p2}, Le/b/Subscriber;->b(Ljava/lang/Object;)V
 
     .line 5
     invoke-virtual {p0}, Ljava/util/concurrent/atomic/AtomicInteger;->get()I
@@ -117,7 +117,7 @@
     if-eq p2, v0, :cond_1
 
     .line 6
-    invoke-interface {p1}, Le/b/c;->b()V
+    invoke-interface {p1}, Le/b/Subscriber;->b()V
 
     :cond_1
     return-void

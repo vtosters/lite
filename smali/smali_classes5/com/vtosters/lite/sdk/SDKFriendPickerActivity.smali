@@ -36,7 +36,7 @@
 
     const v0, 0x1020002
 
-    invoke-virtual {p1, v0}, Lcom/vk/core/fragments/j/b/b;->a(I)Lcom/vk/core/fragments/j/b/a;
+    invoke-virtual {p1, v0}, Lcom/vk/core/fragments/j/b/ParentSupportFragmentManager;->a(I)Lcom/vk/core/fragments/j/b/ParentSupportFragment;
 
     move-result-object p1
 
@@ -47,7 +47,7 @@
 
     move-result-object p1
 
-    invoke-virtual {p1}, Lcom/vk/core/fragments/FragmentManagerImpl;->i()Lcom/vk/core/fragments/f;
+    invoke-virtual {p1}, Lcom/vk/core/fragments/FragmentManagerImpl;->i()Lcom/vk/core/fragments/FragmentManagerImplSimple;
 
     move-result-object p1
 
@@ -65,7 +65,7 @@
 
     move-result-object v1
 
-    invoke-virtual {p1, v0, v1}, Lcom/vk/core/fragments/f;->a(ILcom/vk/core/fragments/FragmentImpl;)V
+    invoke-virtual {p1, v0, v1}, Lcom/vk/core/fragments/FragmentManagerImplSimple;->a(ILcom/vk/core/fragments/FragmentImpl;)V
 
     :cond_0
     return-void

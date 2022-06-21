@@ -15,10 +15,10 @@
 
 
 # static fields
-.field private static final B:Lcom/vk/dto/common/data/c;
+.field private static final B:Lcom/vk/dto/common/data/JsonParser;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Lcom/vk/dto/common/data/c<",
+            "Lcom/vk/dto/common/data/JsonParser<",
             "Lcom/vk/dto/group/GroupChat;",
             ">;"
         }
@@ -54,7 +54,7 @@
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, v1}, Lcom/vk/dto/group/GroupChat$b;-><init>(Lkotlin/jvm/internal/i;)V
+    invoke-direct {v0, v1}, Lcom/vk/dto/group/GroupChat$b;-><init>(Lkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     sput-object v0, Lcom/vk/dto/group/GroupChat;->CREATOR:Lcom/vk/dto/group/GroupChat$b;
 
@@ -63,7 +63,7 @@
 
     invoke-direct {v0}, Lcom/vk/dto/group/GroupChat$a;-><init>()V
 
-    sput-object v0, Lcom/vk/dto/group/GroupChat;->B:Lcom/vk/dto/common/data/c;
+    sput-object v0, Lcom/vk/dto/group/GroupChat;->B:Lcom/vk/dto/common/data/JsonParser;
 
     return-void
 .end method
@@ -112,7 +112,7 @@
 
     const-string v3, "parcel.readString()!!"
 
-    invoke-static {v2, v3}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v2, v3}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 13
     invoke-virtual {p1}, Landroid/os/Parcel;->readString()Ljava/lang/String;
@@ -121,7 +121,7 @@
 
     if-eqz v4, :cond_1
 
-    invoke-static {v4, v3}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v4, v3}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 14
     invoke-virtual {p1}, Landroid/os/Parcel;->readString()Ljava/lang/String;
@@ -130,7 +130,7 @@
 
     if-eqz v5, :cond_0
 
-    invoke-static {v5, v3}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v5, v3}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 15
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
@@ -173,19 +173,19 @@
 
     .line 20
     :cond_0
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     throw v0
 
     .line 21
     :cond_1
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     throw v0
 
     .line 22
     :cond_2
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     throw v0
 .end method
@@ -209,7 +209,7 @@
 
     const-string v0, "json.optString(\"title\")"
 
-    invoke-static {v3, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v3, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     const-string v0, "photo"
 
@@ -220,7 +220,7 @@
 
     const-string v0, "json.optString(\"photo\")"
 
-    invoke-static {v4, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v4, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     const-string v0, "invite_link"
 
@@ -231,7 +231,7 @@
 
     const-string v0, "json.optString(\"invite_link\")"
 
-    invoke-static {v5, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v5, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     const-string v0, "activity_count"
 
@@ -269,11 +269,11 @@
     return-void
 .end method
 
-.method public static final synthetic N()Lcom/vk/dto/common/data/c;
+.method public static final synthetic N()Lcom/vk/dto/common/data/JsonParser;
     .locals 1
 
     .line 1
-    sget-object v0, Lcom/vk/dto/group/GroupChat;->B:Lcom/vk/dto/common/data/c;
+    sget-object v0, Lcom/vk/dto/group/GroupChat;->B:Lcom/vk/dto/common/data/JsonParser;
 
     return-object v0
 .end method

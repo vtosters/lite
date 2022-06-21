@@ -118,7 +118,7 @@
     .line 5
     :cond_3
     :goto_1
-    new-instance v4, Lcom/vk/superapp/g/n;
+    new-instance v4, Lcom/vk/superapp/g/SuperAppWidgetVkPayItem;
 
     new-instance v11, Lcom/vk/dto/menu/widgets/SuperAppWidgetVkPay;
 
@@ -148,7 +148,7 @@
 
     invoke-direct/range {v5 .. v10}, Lcom/vk/dto/menu/widgets/SuperAppWidgetVkPay;-><init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Long;)V
 
-    invoke-direct {v4, v11}, Lcom/vk/superapp/g/n;-><init>(Lcom/vk/dto/menu/widgets/SuperAppWidgetVkPay;)V
+    invoke-direct {v4, v11}, Lcom/vk/superapp/g/SuperAppWidgetVkPayItem;-><init>(Lcom/vk/dto/menu/widgets/SuperAppWidgetVkPay;)V
 
     .line 6
     sget-object v1, Lcom/vk/menu/MenuCache;->q:Lcom/vk/menu/MenuCache;
@@ -211,7 +211,7 @@
     .line 10
     iget-object v0, p0, Lcom/vk/superapp/utils/VkPayWidgetUpdateSubscriber$c;->c:Lcom/vk/superapp/utils/VkPayWidgetUpdateSubscriber$a;
 
-    invoke-interface {v0, v4}, Lcom/vk/superapp/utils/VkPayWidgetUpdateSubscriber$a;->a(Lcom/vk/common/i/b;)V
+    invoke-interface {v0, v4}, Lcom/vk/superapp/utils/VkPayWidgetUpdateSubscriber$a;->a(Lcom/vk/common/i/RecyclerItem;)V
 
     goto :goto_2
 

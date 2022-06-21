@@ -14,7 +14,7 @@
 
 
 # static fields
-.field static final synthetic l:[Lkotlin/u/j;
+.field static final synthetic l:[Lkotlin/u/KProperty5;
 
 .field private static final m:I
 
@@ -46,19 +46,19 @@
 
 .field private final e:Lcom/vk/libvideo/VideoFileController$Receiver;
 
-.field private final f:Lcom/vk/core/util/x;
+.field private final f:Lcom/vk/core/util/RxUtil1;
 
-.field private final g:Lb/h/g/l/e;
+.field private final g:Lb/h/g/l/NotificationListener;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Lb/h/g/l/e<",
+            "Lb/h/g/l/NotificationListener<",
             "Ljava/lang/Object;",
             ">;"
         }
     .end annotation
 .end field
 
-.field private final h:Lio/reactivex/disposables/b;
+.field private final h:Lio/reactivex/disposables/Disposable;
 
 .field private i:Lcom/vk/dto/common/VideoFile;
 
@@ -73,13 +73,13 @@
 
     const/4 v0, 0x1
 
-    new-array v0, v0, [Lkotlin/u/j;
+    new-array v0, v0, [Lkotlin/u/KProperty5;
 
     new-instance v1, Lkotlin/jvm/internal/MutablePropertyReference1Impl;
 
     const-class v2, Lcom/vk/libvideo/VideoFileController;
 
-    invoke-static {v2}, Lkotlin/jvm/internal/o;->a(Ljava/lang/Class;)Lkotlin/u/c;
+    invoke-static {v2}, Lkotlin/jvm/internal/Reflection;->a(Ljava/lang/Class;)Lkotlin/u/KClass;
 
     move-result-object v2
 
@@ -87,26 +87,26 @@
 
     const-string v4, "getVideoUpdateDisposable()Lio/reactivex/disposables/Disposable;"
 
-    invoke-direct {v1, v2, v3, v4}, Lkotlin/jvm/internal/MutablePropertyReference1Impl;-><init>(Lkotlin/u/e;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-direct {v1, v2, v3, v4}, Lkotlin/jvm/internal/MutablePropertyReference1Impl;-><init>(Lkotlin/u/KDeclarationContainer;Ljava/lang/String;Ljava/lang/String;)V
 
-    invoke-static {v1}, Lkotlin/jvm/internal/o;->a(Lkotlin/jvm/internal/MutablePropertyReference1;)Lkotlin/u/h;
+    invoke-static {v1}, Lkotlin/jvm/internal/Reflection;->a(Lkotlin/jvm/internal/MutablePropertyReference1;)Lkotlin/u/KProperty4;
 
     const/4 v2, 0x0
 
     aput-object v1, v0, v2
 
-    sput-object v0, Lcom/vk/libvideo/VideoFileController;->l:[Lkotlin/u/j;
+    sput-object v0, Lcom/vk/libvideo/VideoFileController;->l:[Lkotlin/u/KProperty5;
 
     new-instance v0, Lcom/vk/libvideo/VideoFileController$b;
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, v1}, Lcom/vk/libvideo/VideoFileController$b;-><init>(Lkotlin/jvm/internal/i;)V
+    invoke-direct {v0, v1}, Lcom/vk/libvideo/VideoFileController$b;-><init>(Lkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     .line 1
-    sget-object v0, Lcom/vk/libvideo/t;->a:Lcom/vk/libvideo/t;
+    sget-object v0, Lcom/vk/libvideo/VideoUtils;->a:Lcom/vk/libvideo/VideoUtils;
 
-    invoke-virtual {v0}, Lcom/vk/libvideo/t;->a()I
+    invoke-virtual {v0}, Lcom/vk/libvideo/VideoUtils;->a()I
 
     move-result v0
 
@@ -153,21 +153,21 @@
     iput-object p1, p0, Lcom/vk/libvideo/VideoFileController;->e:Lcom/vk/libvideo/VideoFileController$Receiver;
 
     .line 5
-    new-instance p1, Lcom/vk/core/util/x;
+    new-instance p1, Lcom/vk/core/util/RxUtil1;
 
-    invoke-direct {p1}, Lcom/vk/core/util/x;-><init>()V
+    invoke-direct {p1}, Lcom/vk/core/util/RxUtil1;-><init>()V
 
-    iput-object p1, p0, Lcom/vk/libvideo/VideoFileController;->f:Lcom/vk/core/util/x;
+    iput-object p1, p0, Lcom/vk/libvideo/VideoFileController;->f:Lcom/vk/core/util/RxUtil1;
 
     .line 6
     new-instance p1, Lcom/vk/libvideo/VideoFileController$f;
 
     invoke-direct {p1, p0}, Lcom/vk/libvideo/VideoFileController$f;-><init>(Lcom/vk/libvideo/VideoFileController;)V
 
-    iput-object p1, p0, Lcom/vk/libvideo/VideoFileController;->g:Lb/h/g/l/e;
+    iput-object p1, p0, Lcom/vk/libvideo/VideoFileController;->g:Lb/h/g/l/NotificationListener;
 
     .line 7
-    invoke-static {}, Lcom/vk/libvideo/y/m;->a()Lc/a/m;
+    invoke-static {}, Lcom/vk/libvideo/y/VideoEventBus;->a()Lio/reactivex/Observable;
 
     move-result-object p1
 
@@ -175,44 +175,44 @@
 
     invoke-direct {p2, p0}, Lcom/vk/libvideo/VideoFileController$k;-><init>(Lcom/vk/libvideo/VideoFileController;)V
 
-    invoke-virtual {p1, p2}, Lc/a/m;->f(Lc/a/z/g;)Lio/reactivex/disposables/b;
+    invoke-virtual {p1, p2}, Lio/reactivex/Observable;->f(Lio/reactivex/functions/Consumer;)Lio/reactivex/disposables/Disposable;
 
     move-result-object p1
 
-    iput-object p1, p0, Lcom/vk/libvideo/VideoFileController;->h:Lio/reactivex/disposables/b;
+    iput-object p1, p0, Lcom/vk/libvideo/VideoFileController;->h:Lio/reactivex/disposables/Disposable;
 
     .line 8
-    invoke-static {}, Lb/h/g/l/d;->a()Lb/h/g/l/d;
+    invoke-static {}, Lb/h/g/l/NotificationCenter;->a()Lb/h/g/l/NotificationCenter;
 
     move-result-object p1
 
-    iget-object p2, p0, Lcom/vk/libvideo/VideoFileController;->g:Lb/h/g/l/e;
+    iget-object p2, p0, Lcom/vk/libvideo/VideoFileController;->g:Lb/h/g/l/NotificationListener;
 
     const/16 p3, 0x66
 
-    invoke-virtual {p1, p3, p2}, Lb/h/g/l/d;->a(ILb/h/g/l/e;)V
+    invoke-virtual {p1, p3, p2}, Lb/h/g/l/NotificationCenter;->a(ILb/h/g/l/NotificationListener;)V
 
     .line 9
-    invoke-static {}, Lb/h/g/l/d;->a()Lb/h/g/l/d;
+    invoke-static {}, Lb/h/g/l/NotificationCenter;->a()Lb/h/g/l/NotificationCenter;
 
     move-result-object p1
 
-    iget-object p2, p0, Lcom/vk/libvideo/VideoFileController;->g:Lb/h/g/l/e;
+    iget-object p2, p0, Lcom/vk/libvideo/VideoFileController;->g:Lb/h/g/l/NotificationListener;
 
     const/16 p3, 0x9
 
-    invoke-virtual {p1, p3, p2}, Lb/h/g/l/d;->a(ILb/h/g/l/e;)V
+    invoke-virtual {p1, p3, p2}, Lb/h/g/l/NotificationCenter;->a(ILb/h/g/l/NotificationListener;)V
 
     .line 10
-    invoke-static {}, Lb/h/g/l/d;->a()Lb/h/g/l/d;
+    invoke-static {}, Lb/h/g/l/NotificationCenter;->a()Lb/h/g/l/NotificationCenter;
 
     move-result-object p1
 
-    iget-object p2, p0, Lcom/vk/libvideo/VideoFileController;->g:Lb/h/g/l/e;
+    iget-object p2, p0, Lcom/vk/libvideo/VideoFileController;->g:Lb/h/g/l/NotificationListener;
 
     const/16 p3, 0x6b
 
-    invoke-virtual {p1, p3, p2}, Lb/h/g/l/d;->a(ILb/h/g/l/e;)V
+    invoke-virtual {p1, p3, p2}, Lb/h/g/l/NotificationCenter;->a(ILb/h/g/l/NotificationListener;)V
 
     .line 11
     iget-object p1, p0, Lcom/vk/libvideo/VideoFileController;->i:Lcom/vk/dto/common/VideoFile;
@@ -459,7 +459,7 @@
     if-eqz p1, :cond_0
 
     .line 57
-    sget-object v0, Lcom/vk/navigation/q;->e:Ljava/lang/String;
+    sget-object v0, Lcom/vk/navigation/NavigatorKeys;->e:Ljava/lang/String;
 
     invoke-virtual {p1, v0}, Landroid/os/Bundle;->getString(Ljava/lang/String;)Ljava/lang/String;
 
@@ -473,14 +473,14 @@
     :goto_0
     const-string v1, "video"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v0
 
     if-eqz v0, :cond_1
 
     .line 58
-    sget-object v0, Lcom/vk/navigation/q;->B:Ljava/lang/String;
+    sget-object v0, Lcom/vk/navigation/NavigatorKeys;->B:Ljava/lang/String;
 
     invoke-virtual {p1, v0}, Landroid/os/Bundle;->getInt(Ljava/lang/String;)I
 
@@ -493,7 +493,7 @@
     if-ne v0, v1, :cond_1
 
     .line 59
-    sget-object v0, Lcom/vk/navigation/q;->E:Ljava/lang/String;
+    sget-object v0, Lcom/vk/navigation/NavigatorKeys;->E:Ljava/lang/String;
 
     invoke-virtual {p1, v0}, Landroid/os/Bundle;->getInt(Ljava/lang/String;)I
 
@@ -582,7 +582,7 @@
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v0
 
@@ -596,19 +596,19 @@
 
     .line 10
     :cond_0
-    instance-of v0, p1, Lcom/vk/dto/newsfeed/c;
+    instance-of v0, p1, Lcom/vk/dto/newsfeed/Likable;
 
     if-nez v0, :cond_1
 
     const/4 p1, 0x0
 
     :cond_1
-    check-cast p1, Lcom/vk/dto/newsfeed/c;
+    check-cast p1, Lcom/vk/dto/newsfeed/Likable;
 
     if-eqz p1, :cond_6
 
     .line 11
-    invoke-interface {p1}, Lcom/vk/dto/newsfeed/c;->M0()Z
+    invoke-interface {p1}, Lcom/vk/dto/newsfeed/Likable;->M0()Z
 
     move-result v0
 
@@ -619,7 +619,7 @@
     if-eq v0, v3, :cond_3
 
     .line 12
-    invoke-interface {p1}, Lcom/vk/dto/newsfeed/c;->M0()Z
+    invoke-interface {p1}, Lcom/vk/dto/newsfeed/Likable;->M0()Z
 
     move-result v0
 
@@ -630,7 +630,7 @@
 
     iget v2, v0, Lcom/vk/dto/common/VideoFile;->P:I
 
-    invoke-interface {p1}, Lcom/vk/dto/newsfeed/c;->M0()Z
+    invoke-interface {p1}, Lcom/vk/dto/newsfeed/Likable;->M0()Z
 
     move-result v3
 
@@ -648,7 +648,7 @@
 
     .line 14
     :cond_3
-    invoke-interface {p1}, Lcom/vk/dto/newsfeed/c;->d1()I
+    invoke-interface {p1}, Lcom/vk/dto/newsfeed/Likable;->d1()I
 
     move-result v0
 
@@ -659,7 +659,7 @@
     if-eq v0, v2, :cond_4
 
     .line 15
-    invoke-interface {p1}, Lcom/vk/dto/newsfeed/c;->d1()I
+    invoke-interface {p1}, Lcom/vk/dto/newsfeed/Likable;->d1()I
 
     move-result v0
 
@@ -668,7 +668,7 @@
     .line 16
     iget-object v0, p0, Lcom/vk/libvideo/VideoFileController;->i:Lcom/vk/dto/common/VideoFile;
 
-    invoke-interface {p1}, Lcom/vk/dto/newsfeed/c;->Q0()Z
+    invoke-interface {p1}, Lcom/vk/dto/newsfeed/Likable;->Q0()Z
 
     move-result v1
 
@@ -676,13 +676,13 @@
 
     .line 17
     :cond_4
-    invoke-interface {p1}, Lcom/vk/dto/newsfeed/c;->W0()I
+    invoke-interface {p1}, Lcom/vk/dto/newsfeed/Likable;->W0()I
 
     move-result v0
 
     if-ltz v0, :cond_5
 
-    invoke-interface {p1}, Lcom/vk/dto/newsfeed/c;->d1()I
+    invoke-interface {p1}, Lcom/vk/dto/newsfeed/Likable;->d1()I
 
     move-result v0
 
@@ -693,7 +693,7 @@
     if-eq v0, v2, :cond_5
 
     .line 18
-    invoke-interface {p1}, Lcom/vk/dto/newsfeed/c;->W0()I
+    invoke-interface {p1}, Lcom/vk/dto/newsfeed/Likable;->W0()I
 
     move-result p1
 
@@ -742,7 +742,7 @@
     return-void
 .end method
 
-.method public static synthetic a(Lcom/vk/libvideo/VideoFileController;Landroid/content/Context;ILkotlin/jvm/b/a;ILjava/lang/Object;)V
+.method public static synthetic a(Lcom/vk/libvideo/VideoFileController;Landroid/content/Context;ILkotlin/jvm/b/Functions;ILjava/lang/Object;)V
     .locals 0
 
     and-int/lit8 p5, p4, 0x2
@@ -760,7 +760,7 @@
 
     .line 41
     :cond_1
-    invoke-virtual {p0, p1, p2, p3}, Lcom/vk/libvideo/VideoFileController;->a(Landroid/content/Context;ILkotlin/jvm/b/a;)V
+    invoke-virtual {p0, p1, p2, p3}, Lcom/vk/libvideo/VideoFileController;->a(Landroid/content/Context;ILkotlin/jvm/b/Functions;)V
 
     return-void
 .end method
@@ -792,34 +792,34 @@
     return-void
 .end method
 
-.method private final a(Lio/reactivex/disposables/b;)V
+.method private final a(Lio/reactivex/disposables/Disposable;)V
     .locals 3
 
-    iget-object v0, p0, Lcom/vk/libvideo/VideoFileController;->f:Lcom/vk/core/util/x;
+    iget-object v0, p0, Lcom/vk/libvideo/VideoFileController;->f:Lcom/vk/core/util/RxUtil1;
 
-    sget-object v1, Lcom/vk/libvideo/VideoFileController;->l:[Lkotlin/u/j;
+    sget-object v1, Lcom/vk/libvideo/VideoFileController;->l:[Lkotlin/u/KProperty5;
 
     const/4 v2, 0x0
 
     aget-object v1, v1, v2
 
-    invoke-virtual {v0, p0, v1, p1}, Lcom/vk/core/util/x;->a(Ljava/lang/Object;Lkotlin/u/j;Lio/reactivex/disposables/b;)V
+    invoke-virtual {v0, p0, v1, p1}, Lcom/vk/core/util/RxUtil1;->a(Ljava/lang/Object;Lkotlin/u/KProperty5;Lio/reactivex/disposables/Disposable;)V
 
     return-void
 .end method
 
-.method private final g()Lio/reactivex/disposables/b;
+.method private final g()Lio/reactivex/disposables/Disposable;
     .locals 3
 
-    iget-object v0, p0, Lcom/vk/libvideo/VideoFileController;->f:Lcom/vk/core/util/x;
+    iget-object v0, p0, Lcom/vk/libvideo/VideoFileController;->f:Lcom/vk/core/util/RxUtil1;
 
-    sget-object v1, Lcom/vk/libvideo/VideoFileController;->l:[Lkotlin/u/j;
+    sget-object v1, Lcom/vk/libvideo/VideoFileController;->l:[Lkotlin/u/KProperty5;
 
     const/4 v2, 0x0
 
     aget-object v1, v1, v2
 
-    invoke-virtual {v0, p0, v1}, Lcom/vk/core/util/x;->a(Ljava/lang/Object;Lkotlin/u/j;)Lio/reactivex/disposables/b;
+    invoke-virtual {v0, p0, v1}, Lcom/vk/core/util/RxUtil1;->a(Ljava/lang/Object;Lkotlin/u/KProperty5;)Lio/reactivex/disposables/Disposable;
 
     move-result-object v0
 
@@ -830,13 +830,13 @@
     .locals 4
 
     .line 1
-    new-instance v0, Lcom/vk/api/video/y;
+    new-instance v0, Lcom/vk/api/video/VideoIsAdded;
 
-    invoke-static {}, Lcom/vk/bridges/g;->a()Lcom/vk/bridges/f;
+    invoke-static {}, Lcom/vk/bridges/AuthBridge;->a()Lcom/vk/bridges/AuthBridge3;
 
     move-result-object v1
 
-    invoke-interface {v1}, Lcom/vk/bridges/f;->b()I
+    invoke-interface {v1}, Lcom/vk/bridges/AuthBridge3;->b()I
 
     move-result v1
 
@@ -846,14 +846,14 @@
 
     iget v2, v2, Lcom/vk/dto/common/VideoFile;->b:I
 
-    invoke-direct {v0, v1, v3, v2}, Lcom/vk/api/video/y;-><init>(III)V
+    invoke-direct {v0, v1, v3, v2}, Lcom/vk/api/video/VideoIsAdded;-><init>(III)V
 
     const/4 v1, 0x0
 
     const/4 v2, 0x1
 
     .line 2
-    invoke-static {v0, v1, v2, v1}, Lcom/vk/api/base/d;->d(Lcom/vk/api/base/d;Lcom/vk/api/base/e;ILjava/lang/Object;)Lc/a/m;
+    invoke-static {v0, v1, v2, v1}, Lcom/vk/api/base/ApiRequest;->d(Lcom/vk/api/base/ApiRequest;Lcom/vk/api/base/ApiThreadHolder;ILjava/lang/Object;)Lio/reactivex/Observable;
 
     move-result-object v0
 
@@ -862,7 +862,7 @@
 
     invoke-direct {v1, p0, p1, p1}, Lcom/vk/libvideo/VideoFileController$j;-><init>(Lcom/vk/libvideo/VideoFileController;Landroid/content/Context;Landroid/content/Context;)V
 
-    invoke-virtual {v0, v1}, Lc/a/m;->a(Lc/a/r;)V
+    invoke-virtual {v0, v1}, Lio/reactivex/Observable;->a(Lio/reactivex/Observer;)V
 
     return-void
 .end method
@@ -957,7 +957,7 @@
 
     if-nez v0, :cond_1
 
-    invoke-static {}, Lcom/vk/bridges/g;->a()Lcom/vk/bridges/f;
+    invoke-static {}, Lcom/vk/bridges/AuthBridge;->a()Lcom/vk/bridges/AuthBridge3;
 
     move-result-object v0
 
@@ -965,7 +965,7 @@
 
     iget v1, v1, Lcom/vk/dto/common/VideoFile;->a:I
 
-    invoke-interface {v0, v1}, Lcom/vk/bridges/f;->b(I)Z
+    invoke-interface {v0, v1}, Lcom/vk/bridges/AuthBridge3;->b(I)Z
 
     move-result v0
 
@@ -1010,7 +1010,7 @@
     iput-boolean v0, p0, Lcom/vk/libvideo/VideoFileController;->a:Z
 
     .line 38
-    new-instance v1, Lcom/vk/api/video/a;
+    new-instance v1, Lcom/vk/api/video/VideoAdd;
 
     iget-object v2, p0, Lcom/vk/libvideo/VideoFileController;->i:Lcom/vk/dto/common/VideoFile;
 
@@ -1022,18 +1022,18 @@
 
     iget-object v5, p0, Lcom/vk/libvideo/VideoFileController;->k:Ljava/lang/String;
 
-    invoke-direct {v1, v3, v2, v4, v5}, Lcom/vk/api/video/a;-><init>(IILjava/lang/String;Ljava/lang/String;)V
+    invoke-direct {v1, v3, v2, v4, v5}, Lcom/vk/api/video/VideoAdd;-><init>(IILjava/lang/String;Ljava/lang/String;)V
 
     iget-object v2, p0, Lcom/vk/libvideo/VideoFileController;->i:Lcom/vk/dto/common/VideoFile;
 
     iget-object v2, v2, Lcom/vk/dto/common/VideoFile;->l0:Ljava/lang/String;
 
-    invoke-virtual {v1, v2}, Lcom/vk/api/video/a;->d(Ljava/lang/String;)Lcom/vk/api/video/a;
+    invoke-virtual {v1, v2}, Lcom/vk/api/video/VideoAdd;->d(Ljava/lang/String;)Lcom/vk/api/video/VideoAdd;
 
     const/4 v2, 0x0
 
     .line 39
-    invoke-static {v1, v2, v0, v2}, Lcom/vk/api/base/d;->d(Lcom/vk/api/base/d;Lcom/vk/api/base/e;ILjava/lang/Object;)Lc/a/m;
+    invoke-static {v1, v2, v0, v2}, Lcom/vk/api/base/ApiRequest;->d(Lcom/vk/api/base/ApiRequest;Lcom/vk/api/base/ApiThreadHolder;ILjava/lang/Object;)Lio/reactivex/Observable;
 
     move-result-object v0
 
@@ -1042,21 +1042,21 @@
 
     invoke-direct {v1, p0, p1, p1}, Lcom/vk/libvideo/VideoFileController$c;-><init>(Lcom/vk/libvideo/VideoFileController;Landroid/content/Context;Landroid/content/Context;)V
 
-    invoke-virtual {v0, v1}, Lc/a/m;->a(Lc/a/r;)V
+    invoke-virtual {v0, v1}, Lio/reactivex/Observable;->a(Lio/reactivex/Observer;)V
 
     :cond_1
     return-void
 .end method
 
-.method public final a(Landroid/content/Context;ILkotlin/jvm/b/a;)V
+.method public final a(Landroid/content/Context;ILkotlin/jvm/b/Functions;)V
     .locals 4
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
             "Landroid/content/Context;",
             "I",
-            "Lkotlin/jvm/b/a<",
-            "Lkotlin/m;",
+            "Lkotlin/jvm/b/Functions<",
+            "Lkotlin/Unit;",
             ">;)V"
         }
     .end annotation
@@ -1114,17 +1114,17 @@
     if-nez p2, :cond_2
 
     .line 47
-    invoke-static {}, Lcom/vk/bridges/g;->a()Lcom/vk/bridges/f;
+    invoke-static {}, Lcom/vk/bridges/AuthBridge;->a()Lcom/vk/bridges/AuthBridge3;
 
     move-result-object p2
 
-    invoke-interface {p2}, Lcom/vk/bridges/f;->b()I
+    invoke-interface {p2}, Lcom/vk/bridges/AuthBridge3;->b()I
 
     move-result p2
 
     .line 48
     :cond_2
-    new-instance v1, Lcom/vk/api/video/e;
+    new-instance v1, Lcom/vk/api/video/VideoDelete;
 
     iget-object v2, p0, Lcom/vk/libvideo/VideoFileController;->i:Lcom/vk/dto/common/VideoFile;
 
@@ -1132,27 +1132,27 @@
 
     iget v2, v2, Lcom/vk/dto/common/VideoFile;->b:I
 
-    invoke-direct {v1, v3, v2, p2}, Lcom/vk/api/video/e;-><init>(III)V
+    invoke-direct {v1, v3, v2, p2}, Lcom/vk/api/video/VideoDelete;-><init>(III)V
 
     iget-object p2, p0, Lcom/vk/libvideo/VideoFileController;->i:Lcom/vk/dto/common/VideoFile;
 
     iget-object p2, p2, Lcom/vk/dto/common/VideoFile;->l0:Ljava/lang/String;
 
-    invoke-virtual {v1, p2}, Lcom/vk/api/video/e;->d(Ljava/lang/String;)Lcom/vk/api/video/e;
+    invoke-virtual {v1, p2}, Lcom/vk/api/video/VideoDelete;->d(Ljava/lang/String;)Lcom/vk/api/video/VideoDelete;
 
     const/4 p2, 0x0
 
     .line 49
-    invoke-static {v1, p2, v0, p2}, Lcom/vk/api/base/d;->d(Lcom/vk/api/base/d;Lcom/vk/api/base/e;ILjava/lang/Object;)Lc/a/m;
+    invoke-static {v1, p2, v0, p2}, Lcom/vk/api/base/ApiRequest;->d(Lcom/vk/api/base/ApiRequest;Lcom/vk/api/base/ApiThreadHolder;ILjava/lang/Object;)Lio/reactivex/Observable;
 
     move-result-object p2
 
     .line 50
     new-instance v0, Lcom/vk/libvideo/VideoFileController$g;
 
-    invoke-direct {v0, p0, p1, p3, p1}, Lcom/vk/libvideo/VideoFileController$g;-><init>(Lcom/vk/libvideo/VideoFileController;Landroid/content/Context;Lkotlin/jvm/b/a;Landroid/content/Context;)V
+    invoke-direct {v0, p0, p1, p3, p1}, Lcom/vk/libvideo/VideoFileController$g;-><init>(Lcom/vk/libvideo/VideoFileController;Landroid/content/Context;Lkotlin/jvm/b/Functions;Landroid/content/Context;)V
 
-    invoke-virtual {p2, v0}, Lc/a/m;->a(Lc/a/r;)V
+    invoke-virtual {p2, v0}, Lio/reactivex/Observable;->a(Lio/reactivex/Observer;)V
 
     :cond_3
     return-void
@@ -1228,7 +1228,7 @@
     .locals 9
 
     .line 22
-    sget-object v0, Lcom/vk/api/video/p;->J:Lcom/vk/api/video/p$a;
+    sget-object v0, Lcom/vk/api/video/VideoGetById;->J:Lcom/vk/api/video/VideoGetById$a;
 
     iget-object v1, p0, Lcom/vk/libvideo/VideoFileController;->i:Lcom/vk/dto/common/VideoFile;
 
@@ -1256,7 +1256,7 @@
 
     move-object v7, v8
 
-    invoke-static/range {v0 .. v7}, Lcom/vk/api/video/p$a;->a(Lcom/vk/api/video/p$a;IILjava/lang/String;JILjava/lang/Object;)Lcom/vk/api/video/p;
+    invoke-static/range {v0 .. v7}, Lcom/vk/api/video/VideoGetById$a;->a(Lcom/vk/api/video/VideoGetById$a;IILjava/lang/String;JILjava/lang/Object;)Lcom/vk/api/video/VideoGetById;
 
     move-result-object v0
 
@@ -1265,18 +1265,18 @@
     const/4 v2, 0x1
 
     .line 23
-    invoke-static {v0, v1, v2, v1}, Lcom/vk/api/base/d;->c(Lcom/vk/api/base/d;Lcom/vk/api/base/e;ILjava/lang/Object;)Lc/a/t;
+    invoke-static {v0, v1, v2, v1}, Lcom/vk/api/base/ApiRequest;->c(Lcom/vk/api/base/ApiRequest;Lcom/vk/api/base/ApiThreadHolder;ILjava/lang/Object;)Lio/reactivex/Single;
 
     move-result-object v0
 
     .line 24
     sget-object v1, Lcom/vk/core/concurrent/VkExecutors;->x:Lcom/vk/core/concurrent/VkExecutors;
 
-    invoke-virtual {v1}, Lcom/vk/core/concurrent/VkExecutors;->j()Lc/a/s;
+    invoke-virtual {v1}, Lcom/vk/core/concurrent/VkExecutors;->j()Lio/reactivex/Scheduler;
 
     move-result-object v1
 
-    invoke-virtual {v0, v1}, Lc/a/t;->a(Lc/a/s;)Lc/a/t;
+    invoke-virtual {v0, v1}, Lio/reactivex/Single;->a(Lio/reactivex/Scheduler;)Lio/reactivex/Single;
 
     move-result-object v0
 
@@ -1289,11 +1289,11 @@
     sget-object p1, Lcom/vk/libvideo/VideoFileController$e;->a:Lcom/vk/libvideo/VideoFileController$e;
 
     .line 27
-    invoke-virtual {v0, v1, p1}, Lc/a/t;->a(Lc/a/z/g;Lc/a/z/g;)Lio/reactivex/disposables/b;
+    invoke-virtual {v0, v1, p1}, Lio/reactivex/Single;->a(Lio/reactivex/functions/Consumer;Lio/reactivex/functions/Consumer;)Lio/reactivex/disposables/Disposable;
 
     move-result-object p1
 
-    invoke-direct {p0, p1}, Lcom/vk/libvideo/VideoFileController;->a(Lio/reactivex/disposables/b;)V
+    invoke-direct {p0, p1}, Lcom/vk/libvideo/VideoFileController;->a(Lio/reactivex/disposables/Disposable;)V
 
     return-void
 .end method
@@ -1341,7 +1341,7 @@
     .locals 3
 
     .line 5
-    invoke-static {}, Lcom/vk/bridges/l0;->a()Lcom/vk/bridges/k0;
+    invoke-static {}, Lcom/vk/bridges/VideoBridge;->a()Lcom/vk/bridges/VideoBridge1;
 
     move-result-object v0
 
@@ -1349,7 +1349,7 @@
 
     iget-object v2, p0, Lcom/vk/libvideo/VideoFileController;->j:Ljava/lang/String;
 
-    invoke-interface {v0, p1, v1, v2}, Lcom/vk/bridges/k0;->a(Landroid/app/Activity;Lcom/vk/dto/common/VideoFile;Ljava/lang/String;)V
+    invoke-interface {v0, p1, v1, v2}, Lcom/vk/bridges/VideoBridge1;->a(Landroid/app/Activity;Lcom/vk/dto/common/VideoFile;Ljava/lang/String;)V
 
     return-void
 .end method
@@ -1386,7 +1386,7 @@
 
     move-result-object v0
 
-    invoke-static {p1, v0}, Lcom/vk/core/util/l0;->a(Landroid/content/Context;Ljava/lang/CharSequence;)V
+    invoke-static {p1, v0}, Lcom/vk/core/util/KeyboardUtils;->a(Landroid/content/Context;Ljava/lang/CharSequence;)V
 
     .line 4
     sget p1, Lcom/vk/libvideo/j;->link_copied:I
@@ -1397,7 +1397,7 @@
 
     const/4 v2, 0x0
 
-    invoke-static {p1, v0, v1, v2}, Lcom/vk/core/util/k1;->a(IZILjava/lang/Object;)V
+    invoke-static {p1, v0, v1, v2}, Lcom/vk/core/util/ToastUtils;->a(IZILjava/lang/Object;)V
 
     return-void
 .end method
@@ -1451,28 +1451,28 @@
 
     .line 4
     :goto_0
-    iget-object p1, p0, Lcom/vk/libvideo/VideoFileController;->h:Lio/reactivex/disposables/b;
+    iget-object p1, p0, Lcom/vk/libvideo/VideoFileController;->h:Lio/reactivex/disposables/Disposable;
 
-    invoke-interface {p1}, Lio/reactivex/disposables/b;->o()V
+    invoke-interface {p1}, Lio/reactivex/disposables/Disposable;->o()V
 
     .line 5
-    invoke-direct {p0}, Lcom/vk/libvideo/VideoFileController;->g()Lio/reactivex/disposables/b;
+    invoke-direct {p0}, Lcom/vk/libvideo/VideoFileController;->g()Lio/reactivex/disposables/Disposable;
 
     move-result-object p1
 
     if-eqz p1, :cond_0
 
-    invoke-interface {p1}, Lio/reactivex/disposables/b;->o()V
+    invoke-interface {p1}, Lio/reactivex/disposables/Disposable;->o()V
 
     .line 6
     :cond_0
-    invoke-static {}, Lb/h/g/l/d;->a()Lb/h/g/l/d;
+    invoke-static {}, Lb/h/g/l/NotificationCenter;->a()Lb/h/g/l/NotificationCenter;
 
     move-result-object p1
 
-    iget-object v0, p0, Lcom/vk/libvideo/VideoFileController;->g:Lb/h/g/l/e;
+    iget-object v0, p0, Lcom/vk/libvideo/VideoFileController;->g:Lb/h/g/l/NotificationListener;
 
-    invoke-virtual {p1, v0}, Lb/h/g/l/d;->a(Lb/h/g/l/e;)V
+    invoke-virtual {p1, v0}, Lb/h/g/l/NotificationCenter;->a(Lb/h/g/l/NotificationListener;)V
 
     return-void
 .end method
@@ -1495,7 +1495,7 @@
     invoke-direct {v4, p0}, Lcom/vk/libvideo/VideoFileController$likeVideo$callback$1;-><init>(Lcom/vk/libvideo/VideoFileController;)V
 
     .line 3
-    invoke-static {}, Lcom/vk/bridges/x;->a()Lcom/vk/bridges/w;
+    invoke-static {}, Lcom/vk/bridges/PostsBridge1;->a()Lcom/vk/bridges/PostsBridge2;
 
     move-result-object v0
 
@@ -1507,7 +1507,7 @@
 
     move-object v2, p1
 
-    invoke-interface/range {v0 .. v5}, Lcom/vk/bridges/w;->a(Lcom/vk/dto/newsfeed/c;Landroid/content/Context;Ljava/lang/String;Lkotlin/jvm/b/a;Ljava/lang/String;)V
+    invoke-interface/range {v0 .. v5}, Lcom/vk/bridges/PostsBridge2;->a(Lcom/vk/dto/newsfeed/Likable;Landroid/content/Context;Ljava/lang/String;Lkotlin/jvm/b/Functions;Ljava/lang/String;)V
 
     .line 4
     iget-object p1, p0, Lcom/vk/libvideo/VideoFileController;->d:Ljava/util/HashSet;
@@ -1561,7 +1561,7 @@
     if-eqz v0, :cond_3
 
     .line 3
-    instance-of v1, v0, Lcom/vk/navigation/n;
+    instance-of v1, v0, Lcom/vk/navigation/NavigationDelegateProvider;
 
     const/4 v2, 0x0
 
@@ -1570,12 +1570,12 @@
     move-object v0, v2
 
     :cond_0
-    check-cast v0, Lcom/vk/navigation/n;
+    check-cast v0, Lcom/vk/navigation/NavigationDelegateProvider;
 
     if-eqz v0, :cond_3
 
     .line 4
-    invoke-interface {v0}, Lcom/vk/navigation/n;->E0()Lcom/vk/navigation/NavigationDelegate;
+    invoke-interface {v0}, Lcom/vk/navigation/NavigationDelegateProvider;->E0()Lcom/vk/navigation/NavigationDelegate;
 
     move-result-object v0
 
@@ -1653,7 +1653,7 @@
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v0
 
@@ -1665,23 +1665,23 @@
 
     .line 8
     :cond_3
-    invoke-static {}, Lcom/vk/bridges/x;->a()Lcom/vk/bridges/w;
+    invoke-static {}, Lcom/vk/bridges/PostsBridge1;->a()Lcom/vk/bridges/PostsBridge2;
 
     move-result-object v0
 
     iget-object v1, p0, Lcom/vk/libvideo/VideoFileController;->i:Lcom/vk/dto/common/VideoFile;
 
-    invoke-interface {v0, v1}, Lcom/vk/bridges/w;->a(Lcom/vk/dto/common/VideoFile;)Lcom/vk/bridges/y;
+    invoke-interface {v0, v1}, Lcom/vk/bridges/PostsBridge2;->a(Lcom/vk/dto/common/VideoFile;)Lcom/vk/bridges/PostsBridge;
 
     move-result-object v0
 
     iget-object v1, p0, Lcom/vk/libvideo/VideoFileController;->j:Ljava/lang/String;
 
-    invoke-virtual {v0, v1}, Lcom/vk/bridges/y;->c(Ljava/lang/String;)Lcom/vk/bridges/y;
+    invoke-virtual {v0, v1}, Lcom/vk/bridges/PostsBridge;->c(Ljava/lang/String;)Lcom/vk/bridges/PostsBridge;
 
-    invoke-virtual {v0}, Lcom/vk/bridges/y;->h()Lcom/vk/bridges/y;
+    invoke-virtual {v0}, Lcom/vk/bridges/PostsBridge;->h()Lcom/vk/bridges/PostsBridge;
 
-    invoke-virtual {v0, p1}, Lcom/vk/navigation/o;->a(Landroid/content/Context;)V
+    invoke-virtual {v0, p1}, Lcom/vk/navigation/Navigator;->a(Landroid/content/Context;)V
 
     const/4 p1, 0x1
 
@@ -1699,7 +1699,7 @@
 
     if-eqz v0, :cond_0
 
-    invoke-static {}, Lcom/vk/bridges/e;->a()Lcom/vk/bridges/d;
+    invoke-static {}, Lcom/vk/bridges/AudioBridge;->a()Lcom/vk/bridges/AudioBridge1;
 
     move-result-object v0
 
@@ -1707,13 +1707,13 @@
 
     iget-object v2, p0, Lcom/vk/libvideo/VideoFileController;->j:Ljava/lang/String;
 
-    invoke-interface {v0, p1, v1, v2}, Lcom/vk/bridges/d;->a(Landroid/content/Context;Lcom/vk/dto/common/VideoFile;Ljava/lang/String;)V
+    invoke-interface {v0, p1, v1, v2}, Lcom/vk/bridges/AudioBridge1;->a(Landroid/content/Context;Lcom/vk/dto/common/VideoFile;Ljava/lang/String;)V
 
     goto :goto_1
 
     .line 4
     :cond_0
-    invoke-static {}, Lcom/vk/bridges/j0;->a()Lcom/vk/bridges/i0;
+    invoke-static {}, Lcom/vk/bridges/UsersBridge1;->a()Lcom/vk/bridges/UsersBridge;
 
     move-result-object v3
 
@@ -1747,7 +1747,7 @@
 
     move-object v4, p1
 
-    invoke-static/range {v3 .. v11}, Lcom/vk/bridges/i0$a;->a(Lcom/vk/bridges/i0;Landroid/content/Context;IZLjava/lang/String;Ljava/lang/String;Lcom/vk/dto/profile/HeaderCatchUpLink;ILjava/lang/Object;)V
+    invoke-static/range {v3 .. v11}, Lcom/vk/bridges/UsersBridge$a;->a(Lcom/vk/bridges/UsersBridge;Landroid/content/Context;IZLjava/lang/String;Ljava/lang/String;Lcom/vk/dto/profile/HeaderCatchUpLink;ILjava/lang/Object;)V
 
     :goto_1
     return-void
@@ -1787,13 +1787,13 @@
     .locals 2
 
     .line 1
-    invoke-static {}, Lcom/vk/bridges/a0;->a()Lcom/vk/bridges/z;
+    invoke-static {}, Lcom/vk/bridges/SharingBridge;->a()Lcom/vk/bridges/SharingBridge1;
 
     move-result-object v0
 
     iget-object v1, p0, Lcom/vk/libvideo/VideoFileController;->i:Lcom/vk/dto/common/VideoFile;
 
-    invoke-interface {v0, p1, v1}, Lcom/vk/bridges/z;->a(Landroid/content/Context;Lcom/vk/dto/common/VideoFile;)V
+    invoke-interface {v0, p1, v1}, Lcom/vk/bridges/SharingBridge1;->a(Landroid/content/Context;Lcom/vk/dto/common/VideoFile;)V
 
     return-void
 .end method
@@ -1802,7 +1802,7 @@
     .locals 8
 
     .line 1
-    invoke-static {}, Lcom/vk/bridges/j0;->a()Lcom/vk/bridges/i0;
+    invoke-static {}, Lcom/vk/bridges/UsersBridge1;->a()Lcom/vk/bridges/UsersBridge;
 
     move-result-object v0
 
@@ -1831,7 +1831,7 @@
 
     move-object v6, v7
 
-    invoke-static/range {v0 .. v6}, Lcom/vk/bridges/i0$a;->b(Lcom/vk/bridges/i0;IZLjava/lang/String;ZILjava/lang/Object;)Lc/a/m;
+    invoke-static/range {v0 .. v6}, Lcom/vk/bridges/UsersBridge$a;->b(Lcom/vk/bridges/UsersBridge;IZLjava/lang/String;ZILjava/lang/Object;)Lio/reactivex/Observable;
 
     move-result-object v0
 
@@ -1840,7 +1840,7 @@
 
     invoke-direct {v1, p0, p1, p1}, Lcom/vk/libvideo/VideoFileController$h;-><init>(Lcom/vk/libvideo/VideoFileController;Landroid/content/Context;Landroid/content/Context;)V
 
-    invoke-virtual {v0, v1}, Lc/a/m;->a(Lc/a/r;)V
+    invoke-virtual {v0, v1}, Lio/reactivex/Observable;->a(Lio/reactivex/Observer;)V
 
     return-void
 .end method
@@ -1849,7 +1849,7 @@
     .locals 8
 
     .line 1
-    invoke-static {}, Lcom/vk/bridges/j0;->a()Lcom/vk/bridges/i0;
+    invoke-static {}, Lcom/vk/bridges/UsersBridge1;->a()Lcom/vk/bridges/UsersBridge;
 
     move-result-object v0
 
@@ -1878,7 +1878,7 @@
 
     move-object v6, v7
 
-    invoke-static/range {v0 .. v6}, Lcom/vk/bridges/i0$a;->b(Lcom/vk/bridges/i0;IZLjava/lang/String;ZILjava/lang/Object;)Lc/a/m;
+    invoke-static/range {v0 .. v6}, Lcom/vk/bridges/UsersBridge$a;->b(Lcom/vk/bridges/UsersBridge;IZLjava/lang/String;ZILjava/lang/Object;)Lio/reactivex/Observable;
 
     move-result-object v0
 
@@ -1887,7 +1887,7 @@
 
     invoke-direct {v1, p0, p1, p1}, Lcom/vk/libvideo/VideoFileController$i;-><init>(Lcom/vk/libvideo/VideoFileController;Landroid/content/Context;Landroid/content/Context;)V
 
-    invoke-virtual {v0, v1}, Lc/a/m;->a(Lc/a/r;)V
+    invoke-virtual {v0, v1}, Lio/reactivex/Observable;->a(Lio/reactivex/Observer;)V
 
     return-void
 .end method

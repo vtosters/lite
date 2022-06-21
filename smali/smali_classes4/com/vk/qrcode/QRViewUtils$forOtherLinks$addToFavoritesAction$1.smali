@@ -3,12 +3,12 @@
 .source "QRViewUtils.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/a;
+.implements Lkotlin/jvm/b/Functions;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/qrcode/QRViewUtils;->f(Landroid/app/Activity;Lcom/vk/qrcode/QRParser;Lcom/vk/qrcode/i;)V
+    value = Lcom/vk/qrcode/QRViewUtils;->f(Landroid/app/Activity;Lcom/vk/qrcode/QRParser;Lcom/vk/qrcode/QRTypes7;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -19,22 +19,22 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/a<",
-        "Lkotlin/m;",
+        "Lkotlin/jvm/b/Functions<",
+        "Lkotlin/Unit;",
         ">;"
     }
 .end annotation
 
 
 # instance fields
-.field final synthetic $action:Lcom/vk/qrcode/i;
+.field final synthetic $action:Lcom/vk/qrcode/QRTypes7;
 
 
 # direct methods
-.method constructor <init>(Lcom/vk/qrcode/i;)V
+.method constructor <init>(Lcom/vk/qrcode/QRTypes7;)V
     .locals 0
 
-    iput-object p1, p0, Lcom/vk/qrcode/QRViewUtils$forOtherLinks$addToFavoritesAction$1;->$action:Lcom/vk/qrcode/i;
+    iput-object p1, p0, Lcom/vk/qrcode/QRViewUtils$forOtherLinks$addToFavoritesAction$1;->$action:Lcom/vk/qrcode/QRTypes7;
 
     const/4 p1, 0x0
 
@@ -51,7 +51,7 @@
     .line 1
     invoke-virtual {p0}, Lcom/vk/qrcode/QRViewUtils$forOtherLinks$addToFavoritesAction$1;->invoke()V
 
-    sget-object v0, Lkotlin/m;->a:Lkotlin/m;
+    sget-object v0, Lkotlin/Unit;->a:Lkotlin/Unit;
 
     return-object v0
 .end method
@@ -60,7 +60,7 @@
     .locals 6
 
     .line 2
-    iget-object v0, p0, Lcom/vk/qrcode/QRViewUtils$forOtherLinks$addToFavoritesAction$1;->$action:Lcom/vk/qrcode/i;
+    iget-object v0, p0, Lcom/vk/qrcode/QRViewUtils$forOtherLinks$addToFavoritesAction$1;->$action:Lcom/vk/qrcode/QRTypes7;
 
     sget-object v3, Lcom/vk/qrcode/QRViewUtils$forOtherLinks$addToFavoritesAction$1$1;->a:Lcom/vk/qrcode/QRViewUtils$forOtherLinks$addToFavoritesAction$1$1;
 
@@ -72,7 +72,7 @@
 
     const/4 v5, 0x0
 
-    invoke-static/range {v0 .. v5}, Lcom/vk/qrcode/l;->a(Lcom/vk/qrcode/l;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;ILjava/lang/Object;)V
+    invoke-static/range {v0 .. v5}, Lcom/vk/qrcode/QRTypes6;->a(Lcom/vk/qrcode/QRTypes6;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;ILjava/lang/Object;)V
 
     return-void
 .end method

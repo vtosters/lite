@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/superapp/holders/SuperAppWidgetSportsHolder;-><init>(Landroid/view/View;Lcom/vk/superapp/holders/b;)V
+    value = Lcom/vk/superapp/holders/SuperAppWidgetSportsHolder;-><init>(Landroid/view/View;Lcom/vk/superapp/holders/SuperAppClickListener;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;

@@ -3,7 +3,7 @@
 .source "QueueSyncManager.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/b;
+.implements Lkotlin/jvm/b/Functions2;
 
 
 # annotations
@@ -19,10 +19,10 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/FunctionReference;",
-        "Lkotlin/jvm/b/b<",
-        "Lcom/vk/queue/sync/c<",
+        "Lkotlin/jvm/b/Functions2<",
+        "Lcom/vk/queue/sync/Subscriber<",
         "*>;",
-        "Lkotlin/m;",
+        "Lkotlin/Unit;",
         ">;"
     }
 .end annotation
@@ -41,12 +41,12 @@
 
 
 # virtual methods
-.method public final a(Lcom/vk/queue/sync/c;)V
+.method public final a(Lcom/vk/queue/sync/Subscriber;)V
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lcom/vk/queue/sync/c<",
+            "Lcom/vk/queue/sync/Subscriber<",
             "*>;)V"
         }
     .end annotation
@@ -56,7 +56,7 @@
     check-cast v0, Lcom/vk/queue/sync/QueueSyncManager;
 
     .line 1
-    invoke-static {v0, p1}, Lcom/vk/queue/sync/QueueSyncManager;->b(Lcom/vk/queue/sync/QueueSyncManager;Lcom/vk/queue/sync/c;)V
+    invoke-static {v0, p1}, Lcom/vk/queue/sync/QueueSyncManager;->b(Lcom/vk/queue/sync/QueueSyncManager;Lcom/vk/queue/sync/Subscriber;)V
 
     return-void
 .end method
@@ -69,12 +69,12 @@
     return-object v0
 .end method
 
-.method public final f()Lkotlin/u/e;
+.method public final f()Lkotlin/u/KDeclarationContainer;
     .locals 1
 
     const-class v0, Lcom/vk/queue/sync/QueueSyncManager;
 
-    invoke-static {v0}, Lkotlin/jvm/internal/o;->a(Ljava/lang/Class;)Lkotlin/u/c;
+    invoke-static {v0}, Lkotlin/jvm/internal/Reflection;->a(Ljava/lang/Class;)Lkotlin/u/KClass;
 
     move-result-object v0
 
@@ -93,11 +93,11 @@
     .locals 0
 
     .line 1
-    check-cast p1, Lcom/vk/queue/sync/c;
+    check-cast p1, Lcom/vk/queue/sync/Subscriber;
 
-    invoke-virtual {p0, p1}, Lcom/vk/queue/sync/QueueSyncManager$invalidateSubscribers$runner$2;->a(Lcom/vk/queue/sync/c;)V
+    invoke-virtual {p0, p1}, Lcom/vk/queue/sync/QueueSyncManager$invalidateSubscribers$runner$2;->a(Lcom/vk/queue/sync/Subscriber;)V
 
-    sget-object p1, Lkotlin/m;->a:Lkotlin/m;
+    sget-object p1, Lkotlin/Unit;->a:Lkotlin/Unit;
 
     return-object p1
 .end method

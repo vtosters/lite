@@ -3,12 +3,12 @@
 .source "VkUiConnectFragment.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/a;
+.implements Lkotlin/jvm/b/Functions;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/webapp/VkUiConnectFragment;->Q(Ljava/lang/String;)Lcom/vk/webapp/cache/a$a;
+    value = Lcom/vk/webapp/VkUiConnectFragment;->Q(Ljava/lang/String;)Lcom/vk/webapp/cache/AppsCache$a;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -19,8 +19,8 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/a<",
-        "Lcom/vk/webapp/cache/a$a;",
+        "Lkotlin/jvm/b/Functions<",
+        "Lcom/vk/webapp/cache/AppsCache$a;",
         ">;"
     }
 .end annotation
@@ -49,11 +49,11 @@
 
 
 # virtual methods
-.method public final invoke()Lcom/vk/webapp/cache/a$a;
+.method public final invoke()Lcom/vk/webapp/cache/AppsCache$a;
     .locals 11
 
     .line 2
-    new-instance v10, Lcom/vk/webapp/cache/a$a;
+    new-instance v10, Lcom/vk/webapp/cache/AppsCache$a;
 
     .line 3
     iget-object v0, p0, Lcom/vk/webapp/VkUiConnectFragment$tryCreateCacheEntry$entryCreator$1;->this$0:Lcom/vk/webapp/VkUiConnectFragment;
@@ -88,7 +88,7 @@
     move-object v0, v10
 
     .line 5
-    invoke-direct/range {v0 .. v9}, Lcom/vk/webapp/cache/a$a;-><init>(Ljava/lang/String;Landroid/webkit/WebView;Ljava/lang/String;Lcom/vk/webapp/n/a/a;Lcom/vk/webapp/q/a/a;Landroid/view/View;Landroid/webkit/WebChromeClient$CustomViewCallback;ILkotlin/jvm/internal/i;)V
+    invoke-direct/range {v0 .. v9}, Lcom/vk/webapp/cache/AppsCache$a;-><init>(Ljava/lang/String;Landroid/webkit/WebView;Ljava/lang/String;Lcom/vk/webapp/n/a/WebAppBridge;Lcom/vk/webapp/q/a/StatusNavBarConfig;Landroid/view/View;Landroid/webkit/WebChromeClient$CustomViewCallback;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     return-object v10
 .end method
@@ -97,7 +97,7 @@
     .locals 1
 
     .line 1
-    invoke-virtual {p0}, Lcom/vk/webapp/VkUiConnectFragment$tryCreateCacheEntry$entryCreator$1;->invoke()Lcom/vk/webapp/cache/a$a;
+    invoke-virtual {p0}, Lcom/vk/webapp/VkUiConnectFragment$tryCreateCacheEntry$entryCreator$1;->invoke()Lcom/vk/webapp/cache/AppsCache$a;
 
     move-result-object v0
 

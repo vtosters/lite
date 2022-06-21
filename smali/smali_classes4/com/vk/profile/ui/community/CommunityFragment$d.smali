@@ -1,5 +1,5 @@
 .class public final Lcom/vk/profile/ui/community/CommunityFragment$d;
-.super Lcom/vk/api/base/d;
+.super Lcom/vk/api/base/ApiRequest;
 .source "CommunityFragment.kt"
 
 
@@ -15,7 +15,7 @@
 
 .annotation system Ldalvik/annotation/Signature;
     value = {
-        "Lcom/vk/api/base/d<",
+        "Lcom/vk/api/base/ApiRequest<",
         "Ljava/lang/Integer;",
         ">;"
     }
@@ -34,21 +34,21 @@
     .end annotation
 
     .line 1
-    invoke-direct {p0, p2}, Lcom/vk/api/base/d;-><init>(Ljava/lang/String;)V
+    invoke-direct {p0, p2}, Lcom/vk/api/base/ApiRequest;-><init>(Ljava/lang/String;)V
 
     const-string p2, "count"
 
     const-string v0, "0"
 
     .line 2
-    invoke-virtual {p0, p2, v0}, Lcom/vk/api/base/d;->c(Ljava/lang/String;Ljava/lang/String;)Lcom/vk/api/base/d;
+    invoke-virtual {p0, p2, v0}, Lcom/vk/api/base/ApiRequest;->c(Ljava/lang/String;Ljava/lang/String;)Lcom/vk/api/base/ApiRequest;
 
     .line 3
     invoke-static {p1}, Lcom/vk/profile/ui/community/CommunityFragment;->k(Lcom/vk/profile/ui/community/CommunityFragment;)Lcom/vk/profile/presenter/CommunityPresenter;
 
     move-result-object p1
 
-    invoke-virtual {p1}, Lcom/vk/newsfeed/presenters/i;->L()I
+    invoke-virtual {p1}, Lcom/vk/newsfeed/presenters/NewsFeedProfilePresenter;->L()I
 
     move-result p1
 
@@ -56,14 +56,14 @@
 
     const-string p2, "group_id"
 
-    invoke-virtual {p0, p2, p1}, Lcom/vk/api/base/d;->b(Ljava/lang/String;I)Lcom/vk/api/base/d;
+    invoke-virtual {p0, p2, p1}, Lcom/vk/api/base/ApiRequest;->b(Ljava/lang/String;I)Lcom/vk/api/base/ApiRequest;
 
     const-string p1, "filter"
 
     const-string p2, "unread"
 
     .line 4
-    invoke-virtual {p0, p1, p2}, Lcom/vk/api/base/d;->c(Ljava/lang/String;Ljava/lang/String;)Lcom/vk/api/base/d;
+    invoke-virtual {p0, p1, p2}, Lcom/vk/api/base/ApiRequest;->c(Ljava/lang/String;Ljava/lang/String;)Lcom/vk/api/base/ApiRequest;
 
     return-void
 .end method

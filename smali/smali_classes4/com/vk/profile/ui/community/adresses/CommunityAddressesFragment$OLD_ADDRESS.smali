@@ -113,7 +113,7 @@
 
     invoke-direct {v1, p0}, Lcom/vk/profile/ui/community/adresses/CommunityAddressesFragment$OLD_ADDRESS$initialize$1;-><init>(Lcom/vk/profile/ui/community/adresses/CommunityAddressesFragment$OLD_ADDRESS;)V
 
-    invoke-static {v0, v1}, Lcom/vk/extensions/ViewExtKt;->c(Landroid/view/View;Lkotlin/jvm/b/b;)V
+    invoke-static {v0, v1}, Lcom/vk/extensions/ViewExtKt;->c(Landroid/view/View;Lkotlin/jvm/b/Functions2;)V
 
     .line 3
     iget-object v0, p0, Lcom/vk/profile/ui/community/adresses/CommunityAddressesFragment$OLD_ADDRESS;->c:Lcom/vk/profile/ui/community/adresses/CommunityAddressesFragment;

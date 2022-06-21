@@ -3,12 +3,12 @@
 .source "EntriesListPresenter.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/b;
+.implements Lkotlin/jvm/b/Functions2;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/newsfeed/presenters/EntriesListPresenter;->a(Lcom/vk/lists/o;Lcom/vk/dto/newsfeed/entries/NewsEntry;I)V
+    value = Lcom/vk/newsfeed/presenters/EntriesListPresenter;->a(Lcom/vk/lists/ListDataSet;Lcom/vk/dto/newsfeed/entries/NewsEntry;I)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -19,8 +19,8 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/b<",
-        "Lcom/vtosters/lite/ui/f0/b;",
+        "Lkotlin/jvm/b/Functions2<",
+        "Lcom/vtosters/lite/ui/f0/PostDisplayItem;",
         "Ljava/lang/Boolean;",
         ">;"
     }
@@ -50,15 +50,15 @@
 
 
 # virtual methods
-.method public final a(Lcom/vtosters/lite/ui/f0/b;)Z
+.method public final a(Lcom/vtosters/lite/ui/f0/PostDisplayItem;)Z
     .locals 2
 
     const-string v0, "it"
 
     .line 1
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    invoke-virtual {p1}, Lcom/vtosters/lite/ui/f0/b;->e()I
+    invoke-virtual {p1}, Lcom/vtosters/lite/ui/f0/PostDisplayItem;->e()I
 
     move-result v0
 
@@ -66,11 +66,11 @@
 
     if-ne v0, v1, :cond_0
 
-    iget-object p1, p1, Lcom/vtosters/lite/ui/f0/b;->b:Lcom/vk/dto/newsfeed/entries/NewsEntry;
+    iget-object p1, p1, Lcom/vtosters/lite/ui/f0/PostDisplayItem;->b:Lcom/vk/dto/newsfeed/entries/NewsEntry;
 
     iget-object v0, p0, Lcom/vk/newsfeed/presenters/EntriesListPresenter$updatePostDisplayItem$1;->$entry:Lcom/vk/dto/newsfeed/entries/NewsEntry;
 
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result p1
 
@@ -91,9 +91,9 @@
     .locals 0
 
     .line 1
-    check-cast p1, Lcom/vtosters/lite/ui/f0/b;
+    check-cast p1, Lcom/vtosters/lite/ui/f0/PostDisplayItem;
 
-    invoke-virtual {p0, p1}, Lcom/vk/newsfeed/presenters/EntriesListPresenter$updatePostDisplayItem$1;->a(Lcom/vtosters/lite/ui/f0/b;)Z
+    invoke-virtual {p0, p1}, Lcom/vk/newsfeed/presenters/EntriesListPresenter$updatePostDisplayItem$1;->a(Lcom/vtosters/lite/ui/f0/PostDisplayItem;)Z
 
     move-result p1
 

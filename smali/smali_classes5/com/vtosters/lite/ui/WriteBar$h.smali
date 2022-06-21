@@ -35,7 +35,7 @@
 
 
 # virtual methods
-.method public a(Landroid/net/Uri;Ljava/lang/CharSequence;Lkotlin/jvm/b/a;)V
+.method public a(Landroid/net/Uri;Ljava/lang/CharSequence;Lkotlin/jvm/b/Functions;)V
     .locals 1
     .param p1    # Landroid/net/Uri;
         .annotation build Landroidx/annotation/NonNull;
@@ -45,7 +45,7 @@
         .annotation build Landroidx/annotation/Nullable;
         .end annotation
     .end param
-    .param p3    # Lkotlin/jvm/b/a;
+    .param p3    # Lkotlin/jvm/b/Functions;
         .annotation build Landroidx/annotation/NonNull;
         .end annotation
     .end param
@@ -54,8 +54,8 @@
             "(",
             "Landroid/net/Uri;",
             "Ljava/lang/CharSequence;",
-            "Lkotlin/jvm/b/a<",
-            "Lkotlin/m;",
+            "Lkotlin/jvm/b/Functions<",
+            "Lkotlin/Unit;",
             ">;)V"
         }
     .end annotation
@@ -63,7 +63,7 @@
     .line 1
     iget-object v0, p0, Lcom/vtosters/lite/ui/WriteBar$h;->a:Lcom/vtosters/lite/ui/WriteBar;
 
-    invoke-static {v0, p1, p2, p3}, Lcom/vtosters/lite/ui/WriteBar;->a(Lcom/vtosters/lite/ui/WriteBar;Landroid/net/Uri;Ljava/lang/CharSequence;Lkotlin/jvm/b/a;)V
+    invoke-static {v0, p1, p2, p3}, Lcom/vtosters/lite/ui/WriteBar;->a(Lcom/vtosters/lite/ui/WriteBar;Landroid/net/Uri;Ljava/lang/CharSequence;Lkotlin/jvm/b/Functions;)V
 
     return-void
 .end method

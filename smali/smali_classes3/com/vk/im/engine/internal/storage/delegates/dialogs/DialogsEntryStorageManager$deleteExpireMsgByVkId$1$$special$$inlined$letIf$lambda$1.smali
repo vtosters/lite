@@ -3,12 +3,12 @@
 .source "DialogsEntryStorageManager.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/b;
+.implements Lkotlin/jvm/b/Functions2;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/im/engine/internal/storage/delegates/dialogs/DialogsEntryStorageManager$deleteExpireMsgByVkId$1;->a(Lcom/vk/im/engine/internal/storage/models/a;)Lcom/vk/im/engine/internal/storage/models/a;
+    value = Lcom/vk/im/engine/internal/storage/delegates/dialogs/DialogsEntryStorageManager$deleteExpireMsgByVkId$1;->a(Lcom/vk/im/engine/internal/storage/models/DialogStorageModel;)Lcom/vk/im/engine/internal/storage/models/DialogStorageModel;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -19,7 +19,7 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/b<",
+        "Lkotlin/jvm/b/Functions2<",
         "Ljava/lang/Integer;",
         "Ljava/lang/Boolean;",
         ">;"
@@ -28,18 +28,18 @@
 
 
 # instance fields
-.field final synthetic $dialog$inlined:Lcom/vk/im/engine/internal/storage/models/a;
+.field final synthetic $dialog$inlined:Lcom/vk/im/engine/internal/storage/models/DialogStorageModel;
 
 .field final synthetic this$0:Lcom/vk/im/engine/internal/storage/delegates/dialogs/DialogsEntryStorageManager$deleteExpireMsgByVkId$1;
 
 
 # direct methods
-.method constructor <init>(Lcom/vk/im/engine/internal/storage/delegates/dialogs/DialogsEntryStorageManager$deleteExpireMsgByVkId$1;Lcom/vk/im/engine/internal/storage/models/a;)V
+.method constructor <init>(Lcom/vk/im/engine/internal/storage/delegates/dialogs/DialogsEntryStorageManager$deleteExpireMsgByVkId$1;Lcom/vk/im/engine/internal/storage/models/DialogStorageModel;)V
     .locals 0
 
     iput-object p1, p0, Lcom/vk/im/engine/internal/storage/delegates/dialogs/DialogsEntryStorageManager$deleteExpireMsgByVkId$1$$special$$inlined$letIf$lambda$1;->this$0:Lcom/vk/im/engine/internal/storage/delegates/dialogs/DialogsEntryStorageManager$deleteExpireMsgByVkId$1;
 
-    iput-object p2, p0, Lcom/vk/im/engine/internal/storage/delegates/dialogs/DialogsEntryStorageManager$deleteExpireMsgByVkId$1$$special$$inlined$letIf$lambda$1;->$dialog$inlined:Lcom/vk/im/engine/internal/storage/models/a;
+    iput-object p2, p0, Lcom/vk/im/engine/internal/storage/delegates/dialogs/DialogsEntryStorageManager$deleteExpireMsgByVkId$1$$special$$inlined$letIf$lambda$1;->$dialog$inlined:Lcom/vk/im/engine/internal/storage/models/DialogStorageModel;
 
     const/4 p1, 0x1
 

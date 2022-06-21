@@ -29,7 +29,7 @@
 
 .field protected d:Lcom/vk/media/recorder/RecorderBase$g;
 
-.field protected e:Lcom/vk/media/camera/h$d;
+.field protected e:Lcom/vk/media/camera/CameraRenderBase$d;
 
 .field protected f:Landroid/media/MediaRecorder$OnInfoListener;
 
@@ -143,7 +143,7 @@
 
 
 # virtual methods
-.method public a()Lcom/vk/media/recorder/g;
+.method public a()Lcom/vk/media/recorder/StreamAnalytics;
     .locals 1
     .annotation build Landroidx/annotation/Nullable;
     .end annotation
@@ -213,13 +213,13 @@
     return-void
 .end method
 
-.method protected a(Lb/h/p/c$c;)V
+.method protected a(Lb/h/p/MediaUtils$c;)V
     .locals 1
 
     .line 10
     iget-object v0, p0, Lcom/vk/media/recorder/RecorderBase;->c:Lcom/vk/media/camera/CameraObject$a;
 
-    invoke-virtual {v0, p1}, Lcom/vk/media/camera/CameraObject$a;->a(Lb/h/p/c$c;)V
+    invoke-virtual {v0, p1}, Lcom/vk/media/camera/CameraObject$a;->a(Lb/h/p/MediaUtils$c;)V
 
     return-void
 .end method
@@ -233,20 +233,20 @@
     return-void
 .end method
 
-.method public a(Lcom/vk/media/camera/g;)V
+.method public a(Lcom/vk/media/camera/CameraRender;)V
     .locals 1
 
     .line 8
-    invoke-virtual {p1}, Lcom/vk/media/camera/h;->l()Lcom/vk/media/camera/h$d;
+    invoke-virtual {p1}, Lcom/vk/media/camera/CameraRenderBase;->l()Lcom/vk/media/camera/CameraRenderBase$d;
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/vk/media/recorder/RecorderBase;->e:Lcom/vk/media/camera/h$d;
+    iput-object v0, p0, Lcom/vk/media/recorder/RecorderBase;->e:Lcom/vk/media/camera/CameraRenderBase$d;
 
     .line 9
     iget-object v0, p0, Lcom/vk/media/recorder/RecorderBase;->d:Lcom/vk/media/recorder/RecorderBase$g;
 
-    invoke-virtual {p1, v0}, Lcom/vk/media/camera/g;->a(Lcom/vk/media/recorder/RecorderBase$g;)V
+    invoke-virtual {p1, v0}, Lcom/vk/media/camera/CameraRender;->a(Lcom/vk/media/recorder/RecorderBase$g;)V
 
     return-void
 .end method

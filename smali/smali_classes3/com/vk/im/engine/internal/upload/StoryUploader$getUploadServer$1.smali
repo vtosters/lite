@@ -3,12 +3,12 @@
 .source "StoryUploader.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/c;
+.implements Lkotlin/jvm/b/Functions1;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/im/engine/internal/upload/StoryUploader;->f()Lcom/vk/im/engine/models/upload/a;
+    value = Lcom/vk/im/engine/internal/upload/StoryUploader;->f()Lcom/vk/im/engine/models/upload/UploadServer;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -19,24 +19,24 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/c<",
+        "Lkotlin/jvm/b/Functions1<",
         "Ljava/lang/String;",
         "Ljava/lang/Object;",
-        "Lkotlin/m;",
+        "Lkotlin/Unit;",
         ">;"
     }
 .end annotation
 
 
 # instance fields
-.field final synthetic $callBuilder:Lcom/vk/api/internal/k$a;
+.field final synthetic $callBuilder:Lcom/vk/api/internal/MethodCall$a;
 
 
 # direct methods
-.method constructor <init>(Lcom/vk/api/internal/k$a;)V
+.method constructor <init>(Lcom/vk/api/internal/MethodCall$a;)V
     .locals 0
 
-    iput-object p1, p0, Lcom/vk/im/engine/internal/upload/StoryUploader$getUploadServer$1;->$callBuilder:Lcom/vk/api/internal/k$a;
+    iput-object p1, p0, Lcom/vk/im/engine/internal/upload/StoryUploader$getUploadServer$1;->$callBuilder:Lcom/vk/api/internal/MethodCall$a;
 
     const/4 p1, 0x2
 
@@ -55,7 +55,7 @@
 
     invoke-virtual {p0, p1, p2}, Lcom/vk/im/engine/internal/upload/StoryUploader$getUploadServer$1;->a(Ljava/lang/String;Ljava/lang/Object;)V
 
-    sget-object p1, Lkotlin/m;->a:Lkotlin/m;
+    sget-object p1, Lkotlin/Unit;->a:Lkotlin/Unit;
 
     return-object p1
 .end method
@@ -66,9 +66,9 @@
     if-eqz p2, :cond_0
 
     .line 2
-    iget-object v0, p0, Lcom/vk/im/engine/internal/upload/StoryUploader$getUploadServer$1;->$callBuilder:Lcom/vk/api/internal/k$a;
+    iget-object v0, p0, Lcom/vk/im/engine/internal/upload/StoryUploader$getUploadServer$1;->$callBuilder:Lcom/vk/api/internal/MethodCall$a;
 
-    invoke-virtual {v0, p1, p2}, Lcom/vk/api/internal/k$a;->a(Ljava/lang/String;Ljava/lang/Object;)Lcom/vk/api/internal/k$a;
+    invoke-virtual {v0, p1, p2}, Lcom/vk/api/internal/MethodCall$a;->a(Ljava/lang/String;Ljava/lang/Object;)Lcom/vk/api/internal/MethodCall$a;
 
     :cond_0
     return-void

@@ -3,12 +3,12 @@
 .source "GroupedNotificationsFragment.kt"
 
 # interfaces
-.implements Lc/a/z/g;
+.implements Lio/reactivex/functions/Consumer;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/notifications/GroupedNotificationsFragment;->a(Lcom/vk/lists/t;Z)Lc/a/m;
+    value = Lcom/vk/notifications/GroupedNotificationsFragment;->a(Lcom/vk/lists/PaginationHelper;Z)Lio/reactivex/Observable;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -22,8 +22,8 @@
         "Ljava/lang/Object;",
         ">",
         "Ljava/lang/Object;",
-        "Lc/a/z/g<",
-        "Lcom/vk/dto/notifications/b;",
+        "Lio/reactivex/functions/Consumer<",
+        "Lcom/vk/dto/notifications/NotificationsGetGroupedResponse;",
         ">;"
     }
 .end annotation
@@ -46,7 +46,7 @@
 
 
 # virtual methods
-.method public final a(Lcom/vk/dto/notifications/b;)V
+.method public final a(Lcom/vk/dto/notifications/NotificationsGetGroupedResponse;)V
     .locals 0
 
     .line 1
@@ -68,9 +68,9 @@
     .locals 0
 
     .line 1
-    check-cast p1, Lcom/vk/dto/notifications/b;
+    check-cast p1, Lcom/vk/dto/notifications/NotificationsGetGroupedResponse;
 
-    invoke-virtual {p0, p1}, Lcom/vk/notifications/GroupedNotificationsFragment$j;->a(Lcom/vk/dto/notifications/b;)V
+    invoke-virtual {p0, p1}, Lcom/vk/notifications/GroupedNotificationsFragment$j;->a(Lcom/vk/dto/notifications/NotificationsGetGroupedResponse;)V
 
     return-void
 .end method

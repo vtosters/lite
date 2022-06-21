@@ -13,7 +13,7 @@
 
 
 # static fields
-.field static final synthetic M:[Lkotlin/u/j;
+.field static final synthetic M:[Lkotlin/u/KProperty5;
 
 .field public static final N:Lcom/vk/pushes/notifications/im/MessageNotification$a;
 
@@ -33,7 +33,7 @@
 
 .field private final G:Z
 
-.field private final H:Lkotlin/e;
+.field private final H:Lkotlin/Lazy2;
 
 .field private final I:Ljava/util/List;
     .annotation system Ldalvik/annotation/Signature;
@@ -45,13 +45,13 @@
     .end annotation
 .end field
 
-.field private final J:Lkotlin/e;
+.field private final J:Lkotlin/Lazy2;
 
 .field private final K:Lcom/vk/pushes/notifications/im/MessageNotification$MessageNotificationContainer;
 
 .field private final L:Ljava/io/File;
 
-.field private final z:Lkotlin/e;
+.field private final z:Lkotlin/Lazy2;
 
 
 # direct methods
@@ -62,11 +62,11 @@
 
     const/4 v1, 0x3
 
-    new-array v1, v1, [Lkotlin/u/j;
+    new-array v1, v1, [Lkotlin/u/KProperty5;
 
     new-instance v2, Lkotlin/jvm/internal/PropertyReference1Impl;
 
-    invoke-static {v0}, Lkotlin/jvm/internal/o;->a(Ljava/lang/Class;)Lkotlin/u/c;
+    invoke-static {v0}, Lkotlin/jvm/internal/Reflection;->a(Ljava/lang/Class;)Lkotlin/u/KClass;
 
     move-result-object v3
 
@@ -74,9 +74,9 @@
 
     const-string v5, "getContentIntent()Landroid/app/PendingIntent;"
 
-    invoke-direct {v2, v3, v4, v5}, Lkotlin/jvm/internal/PropertyReference1Impl;-><init>(Lkotlin/u/e;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-direct {v2, v3, v4, v5}, Lkotlin/jvm/internal/PropertyReference1Impl;-><init>(Lkotlin/u/KDeclarationContainer;Ljava/lang/String;Ljava/lang/String;)V
 
-    invoke-static {v2}, Lkotlin/jvm/internal/o;->a(Lkotlin/jvm/internal/PropertyReference1;)Lkotlin/u/l;
+    invoke-static {v2}, Lkotlin/jvm/internal/Reflection;->a(Lkotlin/jvm/internal/PropertyReference1;)Lkotlin/u/KProperty2;
 
     const/4 v3, 0x0
 
@@ -84,7 +84,7 @@
 
     new-instance v2, Lkotlin/jvm/internal/PropertyReference1Impl;
 
-    invoke-static {v0}, Lkotlin/jvm/internal/o;->a(Ljava/lang/Class;)Lkotlin/u/c;
+    invoke-static {v0}, Lkotlin/jvm/internal/Reflection;->a(Ljava/lang/Class;)Lkotlin/u/KClass;
 
     move-result-object v3
 
@@ -92,9 +92,9 @@
 
     const-string v5, "getStyle()Landroidx/core/app/NotificationCompat$Style;"
 
-    invoke-direct {v2, v3, v4, v5}, Lkotlin/jvm/internal/PropertyReference1Impl;-><init>(Lkotlin/u/e;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-direct {v2, v3, v4, v5}, Lkotlin/jvm/internal/PropertyReference1Impl;-><init>(Lkotlin/u/KDeclarationContainer;Ljava/lang/String;Ljava/lang/String;)V
 
-    invoke-static {v2}, Lkotlin/jvm/internal/o;->a(Lkotlin/jvm/internal/PropertyReference1;)Lkotlin/u/l;
+    invoke-static {v2}, Lkotlin/jvm/internal/Reflection;->a(Lkotlin/jvm/internal/PropertyReference1;)Lkotlin/u/KProperty2;
 
     const/4 v3, 0x1
 
@@ -102,7 +102,7 @@
 
     new-instance v2, Lkotlin/jvm/internal/PropertyReference1Impl;
 
-    invoke-static {v0}, Lkotlin/jvm/internal/o;->a(Ljava/lang/Class;)Lkotlin/u/c;
+    invoke-static {v0}, Lkotlin/jvm/internal/Reflection;->a(Ljava/lang/Class;)Lkotlin/u/KClass;
 
     move-result-object v0
 
@@ -110,21 +110,21 @@
 
     const-string v4, "isMsgTextEnabled()Z"
 
-    invoke-direct {v2, v0, v3, v4}, Lkotlin/jvm/internal/PropertyReference1Impl;-><init>(Lkotlin/u/e;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-direct {v2, v0, v3, v4}, Lkotlin/jvm/internal/PropertyReference1Impl;-><init>(Lkotlin/u/KDeclarationContainer;Ljava/lang/String;Ljava/lang/String;)V
 
-    invoke-static {v2}, Lkotlin/jvm/internal/o;->a(Lkotlin/jvm/internal/PropertyReference1;)Lkotlin/u/l;
+    invoke-static {v2}, Lkotlin/jvm/internal/Reflection;->a(Lkotlin/jvm/internal/PropertyReference1;)Lkotlin/u/KProperty2;
 
     const/4 v0, 0x2
 
     aput-object v2, v1, v0
 
-    sput-object v1, Lcom/vk/pushes/notifications/im/MessageNotification;->M:[Lkotlin/u/j;
+    sput-object v1, Lcom/vk/pushes/notifications/im/MessageNotification;->M:[Lkotlin/u/KProperty5;
 
     new-instance v0, Lcom/vk/pushes/notifications/im/MessageNotification$a;
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, v1}, Lcom/vk/pushes/notifications/im/MessageNotification$a;-><init>(Lkotlin/jvm/internal/i;)V
+    invoke-direct {v0, v1}, Lcom/vk/pushes/notifications/im/MessageNotification$a;-><init>(Lkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     sput-object v0, Lcom/vk/pushes/notifications/im/MessageNotification;->N:Lcom/vk/pushes/notifications/im/MessageNotification$a;
 
@@ -163,7 +163,7 @@
     move-object v3, p3
 
     .line 1
-    invoke-direct/range {v0 .. v7}, Lcom/vk/pushes/notifications/UrlNotification;-><init>(Landroid/content/Context;Lcom/vk/pushes/notifications/UrlNotification$a;Landroid/graphics/Bitmap;Landroid/graphics/Bitmap;Ljava/io/File;ILkotlin/jvm/internal/i;)V
+    invoke-direct/range {v0 .. v7}, Lcom/vk/pushes/notifications/UrlNotification;-><init>(Landroid/content/Context;Lcom/vk/pushes/notifications/UrlNotification$a;Landroid/graphics/Bitmap;Landroid/graphics/Bitmap;Ljava/io/File;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     iput-object p2, p0, Lcom/vk/pushes/notifications/im/MessageNotification;->K:Lcom/vk/pushes/notifications/im/MessageNotification$MessageNotificationContainer;
 
@@ -174,11 +174,11 @@
 
     invoke-direct {p2, p0, p1}, Lcom/vk/pushes/notifications/im/MessageNotification$contentIntent$2;-><init>(Lcom/vk/pushes/notifications/im/MessageNotification;Landroid/content/Context;)V
 
-    invoke-static {p2}, Lkotlin/g;->a(Lkotlin/jvm/b/a;)Lkotlin/e;
+    invoke-static {p2}, Lkotlin/g;->a(Lkotlin/jvm/b/Functions;)Lkotlin/Lazy2;
 
     move-result-object p2
 
-    iput-object p2, p0, Lcom/vk/pushes/notifications/im/MessageNotification;->z:Lkotlin/e;
+    iput-object p2, p0, Lcom/vk/pushes/notifications/im/MessageNotification;->z:Lkotlin/Lazy2;
 
     .line 3
     invoke-direct {p0}, Lcom/vk/pushes/notifications/im/MessageNotification;->E()Z
@@ -256,11 +256,11 @@
 
     invoke-direct {p3, p0}, Lcom/vk/pushes/notifications/im/MessageNotification$style$2;-><init>(Lcom/vk/pushes/notifications/im/MessageNotification;)V
 
-    invoke-static {p2, p3}, Lkotlin/g;->a(Lkotlin/LazyThreadSafetyMode;Lkotlin/jvm/b/a;)Lkotlin/e;
+    invoke-static {p2, p3}, Lkotlin/g;->a(Lkotlin/LazyThreadSafetyMode;Lkotlin/jvm/b/Functions;)Lkotlin/Lazy2;
 
     move-result-object p2
 
-    iput-object p2, p0, Lcom/vk/pushes/notifications/im/MessageNotification;->H:Lkotlin/e;
+    iput-object p2, p0, Lcom/vk/pushes/notifications/im/MessageNotification;->H:Lkotlin/Lazy2;
 
     .line 11
     iput-object p5, p0, Lcom/vk/pushes/notifications/im/MessageNotification;->I:Ljava/util/List;
@@ -272,11 +272,11 @@
 
     invoke-direct {p3, p0, p1}, Lcom/vk/pushes/notifications/im/MessageNotification$isMsgTextEnabled$2;-><init>(Lcom/vk/pushes/notifications/im/MessageNotification;Landroid/content/Context;)V
 
-    invoke-static {p2, p3}, Lkotlin/g;->a(Lkotlin/LazyThreadSafetyMode;Lkotlin/jvm/b/a;)Lkotlin/e;
+    invoke-static {p2, p3}, Lkotlin/g;->a(Lkotlin/LazyThreadSafetyMode;Lkotlin/jvm/b/Functions;)Lkotlin/Lazy2;
 
     move-result-object p1
 
-    iput-object p1, p0, Lcom/vk/pushes/notifications/im/MessageNotification;->J:Lkotlin/e;
+    iput-object p1, p0, Lcom/vk/pushes/notifications/im/MessageNotification;->J:Lkotlin/Lazy2;
 
     return-void
 .end method
@@ -313,7 +313,7 @@
 
     const-string v1, "RemoteInput.Builder(Noti\u2026\n                .build()"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     const-string v1, "msg_send"
 
@@ -405,7 +405,7 @@
 
     const-string v1, "Action.Builder(R.drawabl\u2026\n                .build()"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     return-object v0
 .end method
@@ -488,11 +488,11 @@
     invoke-direct {v7}, Landroidx/core/app/Person$Builder;-><init>()V
 
     .line 8
-    invoke-static {}, Lcom/vk/bridges/g;->a()Lcom/vk/bridges/f;
+    invoke-static {}, Lcom/vk/bridges/AuthBridge;->a()Lcom/vk/bridges/AuthBridge3;
 
     move-result-object v8
 
-    invoke-interface {v8}, Lcom/vk/bridges/f;->h()Lcom/vk/bridges/Account;
+    invoke-interface {v8}, Lcom/vk/bridges/AuthBridge3;->h()Lcom/vk/bridges/Account;
 
     move-result-object v8
 
@@ -511,7 +511,7 @@
 
     const-string v8, "Person.Builder()\n       \u2026\n                .build()"
 
-    invoke-static {v7, v8}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v7, v8}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 10
     new-instance v8, Landroidx/core/app/NotificationCompat$MessagingStyle;
@@ -607,7 +607,7 @@
 
     const-string v7, "Person.Builder()\n       \u2026                 .build()"
 
-    invoke-static {v6, v7}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v6, v7}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 21
     iget-object v7, p0, Lcom/vk/pushes/notifications/im/MessageNotification;->L:Ljava/io/File;
@@ -628,7 +628,7 @@
     .line 23
     iget-object v9, p0, Lcom/vk/pushes/notifications/im/MessageNotification;->L:Ljava/io/File;
 
-    invoke-static {v7, v9}, Lcom/vk/core/extensions/q;->a(Landroidx/core/app/NotificationCompat$MessagingStyle$Message;Ljava/io/File;)V
+    invoke-static {v7, v9}, Lcom/vk/core/extensions/NotificationExt;->a(Landroidx/core/app/NotificationCompat$MessagingStyle$Message;Ljava/io/File;)V
 
     .line 24
     invoke-virtual {v8, v7}, Landroidx/core/app/NotificationCompat$MessagingStyle;->addMessage(Landroidx/core/app/NotificationCompat$MessagingStyle$Message;)Landroidx/core/app/NotificationCompat$MessagingStyle;
@@ -903,7 +903,7 @@
     const-string v0, "if (OsUtil.isAtLeastNoug\u2026   }\n\n        style\n    }"
 
     .line 46
-    invoke-static {v8, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v8, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     :cond_11
     return-object v8
@@ -957,7 +957,7 @@
 
     const-string v1, "ctx.resources.getQuantit\u2026ize, unreadMessages.size)"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     return-object v0
 .end method
@@ -1051,15 +1051,15 @@
 .method private final F()Z
     .locals 3
 
-    iget-object v0, p0, Lcom/vk/pushes/notifications/im/MessageNotification;->J:Lkotlin/e;
+    iget-object v0, p0, Lcom/vk/pushes/notifications/im/MessageNotification;->J:Lkotlin/Lazy2;
 
-    sget-object v1, Lcom/vk/pushes/notifications/im/MessageNotification;->M:[Lkotlin/u/j;
+    sget-object v1, Lcom/vk/pushes/notifications/im/MessageNotification;->M:[Lkotlin/u/KProperty5;
 
     const/4 v2, 0x2
 
     aget-object v1, v1, v2
 
-    invoke-interface {v0}, Lkotlin/e;->getValue()Ljava/lang/Object;
+    invoke-interface {v0}, Lkotlin/Lazy2;->getValue()Ljava/lang/Object;
 
     move-result-object v0
 
@@ -1115,13 +1115,13 @@
     if-eqz v0, :cond_1
 
     .line 22
-    invoke-static {p1}, Lcom/vk/core/extensions/z;->a(Ljava/lang/CharSequence;)Z
+    invoke-static {p1}, Lcom/vk/core/extensions/StringExt;->a(Ljava/lang/CharSequence;)Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    invoke-static {p2}, Lcom/vk/core/extensions/z;->a(Ljava/lang/CharSequence;)Z
+    invoke-static {p2}, Lcom/vk/core/extensions/StringExt;->a(Ljava/lang/CharSequence;)Z
 
     move-result v0
 
@@ -1153,13 +1153,13 @@
 
     const-string p2, "java.lang.String.format(this, *args)"
 
-    invoke-static {p1, p2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, p2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     goto :goto_0
 
     .line 23
     :cond_0
-    invoke-static {p1}, Lcom/vk/core/extensions/z;->a(Ljava/lang/CharSequence;)Z
+    invoke-static {p1}, Lcom/vk/core/extensions/StringExt;->a(Ljava/lang/CharSequence;)Z
 
     move-result v0
 
@@ -1183,7 +1183,7 @@
     .locals 6
 
     .line 1
-    sget-object v0, Lcom/vk/pushes/j/b;->d:Lcom/vk/pushes/j/b;
+    sget-object v0, Lcom/vk/pushes/j/DndHelper;->d:Lcom/vk/pushes/j/DndHelper;
 
     invoke-virtual {p0}, Lcom/vk/pushes/notifications/base/SimpleNotification;->l()Landroid/content/Context;
 
@@ -1199,7 +1199,7 @@
 
     move-result-object v2
 
-    invoke-virtual {v0, v1, v2}, Lcom/vk/pushes/j/b;->a(Landroid/content/Context;Ljava/lang/Integer;)Lcom/vk/pushes/j/b$a;
+    invoke-virtual {v0, v1, v2}, Lcom/vk/pushes/j/DndHelper;->a(Landroid/content/Context;Ljava/lang/Integer;)Lcom/vk/pushes/j/DndHelper$a;
 
     move-result-object v0
 
@@ -1222,7 +1222,7 @@
     invoke-virtual {v1, v3, v2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;I)Landroid/content/Intent;
 
     .line 4
-    invoke-virtual {v0}, Lcom/vk/pushes/j/b$a;->a()I
+    invoke-virtual {v0}, Lcom/vk/pushes/j/DndHelper$a;->a()I
 
     move-result v2
 
@@ -1253,7 +1253,7 @@
 
     invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v0}, Lcom/vk/pushes/j/b$a;->b()Ljava/lang/String;
+    invoke-virtual {v0}, Lcom/vk/pushes/j/DndHelper$a;->b()Ljava/lang/String;
 
     move-result-object v0
 
@@ -1302,7 +1302,7 @@
 
     const-string v1, "Action.Builder(R.drawabl\u2026\n                .build()"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     return-object v0
 .end method
@@ -1391,7 +1391,7 @@
 
     const-string v1, "Action.Builder(R.drawabl\u2026\n                .build()"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     return-object v0
 .end method
@@ -1410,18 +1410,18 @@
     invoke-super {p0, p1}, Lcom/vk/pushes/notifications/base/BaseNotification;->a(Landroid/app/NotificationManager;)V
 
     .line 3
-    sget-object v0, Lcom/vk/pushes/j/e;->a:Lcom/vk/pushes/j/e;
+    sget-object v0, Lcom/vk/pushes/j/NotificationHelper;->a:Lcom/vk/pushes/j/NotificationHelper;
 
-    invoke-virtual {v0}, Lcom/vk/pushes/j/e;->a()Z
+    invoke-virtual {v0}, Lcom/vk/pushes/j/NotificationHelper;->a()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
     .line 4
-    sget-object v0, Lcom/vk/pushes/j/c;->b:Lcom/vk/pushes/j/c;
+    sget-object v0, Lcom/vk/pushes/j/MessageNotificationHelper;->b:Lcom/vk/pushes/j/MessageNotificationHelper;
 
-    invoke-virtual {v0, p1}, Lcom/vk/pushes/j/c;->a(Landroid/app/NotificationManager;)I
+    invoke-virtual {v0, p1}, Lcom/vk/pushes/j/MessageNotificationHelper;->a(Landroid/app/NotificationManager;)I
 
     move-result v0
 
@@ -1430,7 +1430,7 @@
     if-le v0, v1, :cond_0
 
     .line 5
-    new-instance v1, Lcom/vk/pushes/notifications/im/c;
+    new-instance v1, Lcom/vk/pushes/notifications/im/MessageGroupNotification;
 
     invoke-virtual {p0}, Lcom/vk/pushes/notifications/base/SimpleNotification;->l()Landroid/content/Context;
 
@@ -1440,7 +1440,7 @@
 
     move-result-object v3
 
-    invoke-direct {v1, v2, v0, v3}, Lcom/vk/pushes/notifications/im/c;-><init>(Landroid/content/Context;ILjava/lang/String;)V
+    invoke-direct {v1, v2, v0, v3}, Lcom/vk/pushes/notifications/im/MessageGroupNotification;-><init>(Landroid/content/Context;ILjava/lang/String;)V
 
     invoke-virtual {v1, p1}, Lcom/vk/pushes/notifications/base/BaseNotification;->a(Landroid/app/NotificationManager;)V
 
@@ -1519,7 +1519,7 @@
 
     const-string v2, "java.lang.String.format(this, *args)"
 
-    invoke-static {v0, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {v1, v0}, Landroidx/core/app/NotificationCompat$Builder;->setTicker(Ljava/lang/CharSequence;)Landroidx/core/app/NotificationCompat$Builder;
 
@@ -1546,7 +1546,7 @@
     move-result-object v0
 
     .line 12
-    invoke-static {v0}, Lcom/vk/core/extensions/z;->a(Ljava/lang/CharSequence;)Z
+    invoke-static {v0}, Lcom/vk/core/extensions/StringExt;->a(Ljava/lang/CharSequence;)Z
 
     move-result v1
 
@@ -1624,11 +1624,11 @@
 
     aput-object v2, v0, v1
 
-    invoke-static {v0}, Lkotlin/sequences/m;->a([Ljava/lang/Object;)Lkotlin/sequences/j;
+    invoke-static {v0}, Lkotlin/sequences/m;->a([Ljava/lang/Object;)Lkotlin/sequences/Sequence;
 
     move-result-object v0
 
-    invoke-static {p1, v0}, Lkotlin/collections/l;->a(Ljava/util/Collection;Lkotlin/sequences/j;)Z
+    invoke-static {p1, v0}, Lkotlin/collections/l;->a(Ljava/util/Collection;Lkotlin/sequences/Sequence;)Z
 
     :cond_2
     return-void
@@ -1758,15 +1758,15 @@
 .method protected k()Landroid/app/PendingIntent;
     .locals 3
 
-    iget-object v0, p0, Lcom/vk/pushes/notifications/im/MessageNotification;->z:Lkotlin/e;
+    iget-object v0, p0, Lcom/vk/pushes/notifications/im/MessageNotification;->z:Lkotlin/Lazy2;
 
-    sget-object v1, Lcom/vk/pushes/notifications/im/MessageNotification;->M:[Lkotlin/u/j;
+    sget-object v1, Lcom/vk/pushes/notifications/im/MessageNotification;->M:[Lkotlin/u/KProperty5;
 
     const/4 v2, 0x0
 
     aget-object v1, v1, v2
 
-    invoke-interface {v0}, Lkotlin/e;->getValue()Ljava/lang/Object;
+    invoke-interface {v0}, Lkotlin/Lazy2;->getValue()Ljava/lang/Object;
 
     move-result-object v0
 
@@ -1814,15 +1814,15 @@
 .method protected t()Landroidx/core/app/NotificationCompat$Style;
     .locals 3
 
-    iget-object v0, p0, Lcom/vk/pushes/notifications/im/MessageNotification;->H:Lkotlin/e;
+    iget-object v0, p0, Lcom/vk/pushes/notifications/im/MessageNotification;->H:Lkotlin/Lazy2;
 
-    sget-object v1, Lcom/vk/pushes/notifications/im/MessageNotification;->M:[Lkotlin/u/j;
+    sget-object v1, Lcom/vk/pushes/notifications/im/MessageNotification;->M:[Lkotlin/u/KProperty5;
 
     const/4 v2, 0x1
 
     aget-object v1, v1, v2
 
-    invoke-interface {v0}, Lkotlin/e;->getValue()Ljava/lang/Object;
+    invoke-interface {v0}, Lkotlin/Lazy2;->getValue()Ljava/lang/Object;
 
     move-result-object v0
 

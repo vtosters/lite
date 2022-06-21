@@ -3,7 +3,7 @@
 .source "VkSnackbar.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/a;
+.implements Lkotlin/jvm/b/Functions;
 
 
 # annotations
@@ -19,8 +19,8 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/a<",
-        "Lkotlin/m;",
+        "Lkotlin/jvm/b/Functions<",
+        "Lkotlin/Unit;",
         ">;"
     }
 .end annotation
@@ -51,7 +51,7 @@
     .line 1
     invoke-virtual {p0}, Lcom/vk/core/dialogs/snackbar/VkSnackbar$internalShow$$inlined$let$lambda$1;->invoke()V
 
-    sget-object v0, Lkotlin/m;->a:Lkotlin/m;
+    sget-object v0, Lkotlin/Unit;->a:Lkotlin/Unit;
 
     return-object v0
 .end method
@@ -62,21 +62,21 @@
     .line 2
     iget-object v0, p0, Lcom/vk/core/dialogs/snackbar/VkSnackbar$internalShow$$inlined$let$lambda$1;->this$0:Lcom/vk/core/dialogs/snackbar/VkSnackbar;
 
-    invoke-virtual {v0}, Lcom/vk/core/dialogs/snackbar/VkSnackbar;->b()Lkotlin/jvm/b/a;
+    invoke-virtual {v0}, Lcom/vk/core/dialogs/snackbar/VkSnackbar;->b()Lkotlin/jvm/b/Functions;
 
     move-result-object v0
 
     if-eqz v0, :cond_0
 
-    invoke-interface {v0}, Lkotlin/jvm/b/a;->invoke()Ljava/lang/Object;
+    invoke-interface {v0}, Lkotlin/jvm/b/Functions;->invoke()Ljava/lang/Object;
 
     move-result-object v0
 
-    check-cast v0, Lkotlin/m;
+    check-cast v0, Lkotlin/Unit;
 
     .line 3
     :cond_0
-    sget-object v0, Lcom/vk/core/dialogs/snackbar/b;->e:Lcom/vk/core/dialogs/snackbar/b;
+    sget-object v0, Lcom/vk/core/dialogs/snackbar/VkSnackbarManager;->e:Lcom/vk/core/dialogs/snackbar/VkSnackbarManager;
 
     iget-object v1, p0, Lcom/vk/core/dialogs/snackbar/VkSnackbar$internalShow$$inlined$let$lambda$1;->this$0:Lcom/vk/core/dialogs/snackbar/VkSnackbar;
 
@@ -84,7 +84,7 @@
 
     move-result-object v1
 
-    invoke-virtual {v0, v1}, Lcom/vk/core/dialogs/snackbar/b;->d(Lcom/vk/core/dialogs/snackbar/b$a;)V
+    invoke-virtual {v0, v1}, Lcom/vk/core/dialogs/snackbar/VkSnackbarManager;->d(Lcom/vk/core/dialogs/snackbar/VkSnackbarManager$a;)V
 
     return-void
 .end method

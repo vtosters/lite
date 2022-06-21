@@ -13,7 +13,7 @@
 
 
 # static fields
-.field static final synthetic a:[Lkotlin/u/j;
+.field static final synthetic a:[Lkotlin/u/KProperty5;
 
 .field private static b:Ljava/util/concurrent/CopyOnWriteArrayList;
     .annotation system Ldalvik/annotation/Signature;
@@ -28,27 +28,27 @@
 
 .field private static c:Lcom/vk/core/ui/themes/VKTheme;
 
-.field private static final d:Lcom/vk/core/util/u0;
+.field private static final d:Lcom/vk/core/util/Provider2;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Lcom/vk/core/util/u0<",
+            "Lcom/vk/core/util/Provider2<",
             "Lcom/vk/core/ui/themes/VKThemeHelper$b;",
             ">;"
         }
     .end annotation
 .end field
 
-.field private static final e:Lcom/vk/core/util/u0;
+.field private static final e:Lcom/vk/core/util/Provider2;
 
-.field private static final f:Lkotlin/e;
+.field private static final f:Lkotlin/Lazy2;
 
-.field private static final g:Lkotlin/e;
+.field private static final g:Lkotlin/Lazy2;
 
-.field private static final h:Lkotlin/e;
+.field private static final h:Lkotlin/Lazy2;
 
-.field private static i:Lcom/vk/core/ui/themes/a;
+.field private static i:Lcom/vk/core/ui/themes/ActivitiesProvider;
 
-.field private static final j:Lkotlin/e;
+.field private static final j:Lkotlin/Lazy2;
 
 .field public static final k:Lcom/vk/core/ui/themes/VKThemeHelper;
 
@@ -61,11 +61,11 @@
 
     const/4 v1, 0x5
 
-    new-array v1, v1, [Lkotlin/u/j;
+    new-array v1, v1, [Lkotlin/u/KProperty5;
 
     new-instance v2, Lkotlin/jvm/internal/PropertyReference1Impl;
 
-    invoke-static {v0}, Lkotlin/jvm/internal/o;->a(Ljava/lang/Class;)Lkotlin/u/c;
+    invoke-static {v0}, Lkotlin/jvm/internal/Reflection;->a(Ljava/lang/Class;)Lkotlin/u/KClass;
 
     move-result-object v3
 
@@ -73,9 +73,9 @@
 
     const-string v5, "getThemedContext()Landroid/content/Context;"
 
-    invoke-direct {v2, v3, v4, v5}, Lkotlin/jvm/internal/PropertyReference1Impl;-><init>(Lkotlin/u/e;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-direct {v2, v3, v4, v5}, Lkotlin/jvm/internal/PropertyReference1Impl;-><init>(Lkotlin/u/KDeclarationContainer;Ljava/lang/String;Ljava/lang/String;)V
 
-    invoke-static {v2}, Lkotlin/jvm/internal/o;->a(Lkotlin/jvm/internal/PropertyReference1;)Lkotlin/u/l;
+    invoke-static {v2}, Lkotlin/jvm/internal/Reflection;->a(Lkotlin/jvm/internal/PropertyReference1;)Lkotlin/u/KProperty2;
 
     const/4 v3, 0x0
 
@@ -83,7 +83,7 @@
 
     new-instance v2, Lkotlin/jvm/internal/PropertyReference1Impl;
 
-    invoke-static {v0}, Lkotlin/jvm/internal/o;->a(Ljava/lang/Class;)Lkotlin/u/c;
+    invoke-static {v0}, Lkotlin/jvm/internal/Reflection;->a(Ljava/lang/Class;)Lkotlin/u/KClass;
 
     move-result-object v3
 
@@ -91,9 +91,9 @@
 
     const-string v5, "getLightContext()Landroid/content/Context;"
 
-    invoke-direct {v2, v3, v4, v5}, Lkotlin/jvm/internal/PropertyReference1Impl;-><init>(Lkotlin/u/e;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-direct {v2, v3, v4, v5}, Lkotlin/jvm/internal/PropertyReference1Impl;-><init>(Lkotlin/u/KDeclarationContainer;Ljava/lang/String;Ljava/lang/String;)V
 
-    invoke-static {v2}, Lkotlin/jvm/internal/o;->a(Lkotlin/jvm/internal/PropertyReference1;)Lkotlin/u/l;
+    invoke-static {v2}, Lkotlin/jvm/internal/Reflection;->a(Lkotlin/jvm/internal/PropertyReference1;)Lkotlin/u/KProperty2;
 
     const/4 v3, 0x1
 
@@ -101,7 +101,7 @@
 
     new-instance v2, Lkotlin/jvm/internal/PropertyReference1Impl;
 
-    invoke-static {v0}, Lkotlin/jvm/internal/o;->a(Ljava/lang/Class;)Lkotlin/u/c;
+    invoke-static {v0}, Lkotlin/jvm/internal/Reflection;->a(Ljava/lang/Class;)Lkotlin/u/KClass;
 
     move-result-object v3
 
@@ -109,9 +109,9 @@
 
     const-string v5, "getDarkContext()Landroid/content/Context;"
 
-    invoke-direct {v2, v3, v4, v5}, Lkotlin/jvm/internal/PropertyReference1Impl;-><init>(Lkotlin/u/e;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-direct {v2, v3, v4, v5}, Lkotlin/jvm/internal/PropertyReference1Impl;-><init>(Lkotlin/u/KDeclarationContainer;Ljava/lang/String;Ljava/lang/String;)V
 
-    invoke-static {v2}, Lkotlin/jvm/internal/o;->a(Lkotlin/jvm/internal/PropertyReference1;)Lkotlin/u/l;
+    invoke-static {v2}, Lkotlin/jvm/internal/Reflection;->a(Lkotlin/jvm/internal/PropertyReference1;)Lkotlin/u/KProperty2;
 
     const/4 v3, 0x2
 
@@ -119,7 +119,7 @@
 
     new-instance v2, Lkotlin/jvm/internal/PropertyReference1Impl;
 
-    invoke-static {v0}, Lkotlin/jvm/internal/o;->a(Ljava/lang/Class;)Lkotlin/u/c;
+    invoke-static {v0}, Lkotlin/jvm/internal/Reflection;->a(Ljava/lang/Class;)Lkotlin/u/KClass;
 
     move-result-object v3
 
@@ -127,9 +127,9 @@
 
     const-string v5, "getThemeBinder()Lcom/vk/core/ui/themes/ThemeBinder;"
 
-    invoke-direct {v2, v3, v4, v5}, Lkotlin/jvm/internal/PropertyReference1Impl;-><init>(Lkotlin/u/e;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-direct {v2, v3, v4, v5}, Lkotlin/jvm/internal/PropertyReference1Impl;-><init>(Lkotlin/u/KDeclarationContainer;Ljava/lang/String;Ljava/lang/String;)V
 
-    invoke-static {v2}, Lkotlin/jvm/internal/o;->a(Lkotlin/jvm/internal/PropertyReference1;)Lkotlin/u/l;
+    invoke-static {v2}, Lkotlin/jvm/internal/Reflection;->a(Lkotlin/jvm/internal/PropertyReference1;)Lkotlin/u/KProperty2;
 
     const/4 v3, 0x3
 
@@ -137,7 +137,7 @@
 
     new-instance v2, Lkotlin/jvm/internal/PropertyReference1Impl;
 
-    invoke-static {v0}, Lkotlin/jvm/internal/o;->a(Ljava/lang/Class;)Lkotlin/u/c;
+    invoke-static {v0}, Lkotlin/jvm/internal/Reflection;->a(Ljava/lang/Class;)Lkotlin/u/KClass;
 
     move-result-object v0
 
@@ -145,15 +145,15 @@
 
     const-string v4, "getDarkMapStyleOptions()Lcom/google/android/gms/maps/model/MapStyleOptions;"
 
-    invoke-direct {v2, v0, v3, v4}, Lkotlin/jvm/internal/PropertyReference1Impl;-><init>(Lkotlin/u/e;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-direct {v2, v0, v3, v4}, Lkotlin/jvm/internal/PropertyReference1Impl;-><init>(Lkotlin/u/KDeclarationContainer;Ljava/lang/String;Ljava/lang/String;)V
 
-    invoke-static {v2}, Lkotlin/jvm/internal/o;->a(Lkotlin/jvm/internal/PropertyReference1;)Lkotlin/u/l;
+    invoke-static {v2}, Lkotlin/jvm/internal/Reflection;->a(Lkotlin/jvm/internal/PropertyReference1;)Lkotlin/u/KProperty2;
 
     const/4 v0, 0x4
 
     aput-object v2, v1, v0
 
-    sput-object v1, Lcom/vk/core/ui/themes/VKThemeHelper;->a:[Lkotlin/u/j;
+    sput-object v1, Lcom/vk/core/ui/themes/VKThemeHelper;->a:[Lkotlin/u/KProperty5;
 
     .line 1
     new-instance v0, Lcom/vk/core/ui/themes/VKThemeHelper;
@@ -179,52 +179,52 @@
     .line 4
     sget-object v0, Lcom/vk/core/ui/themes/VKThemeHelper$themedContextProvider$1;->a:Lcom/vk/core/ui/themes/VKThemeHelper$themedContextProvider$1;
 
-    invoke-static {v0}, Lcom/vk/core/util/w0;->a(Lkotlin/jvm/b/a;)Lcom/vk/core/util/u0;
+    invoke-static {v0}, Lcom/vk/core/util/Provider1;->a(Lkotlin/jvm/b/Functions;)Lcom/vk/core/util/Provider2;
 
     move-result-object v0
 
-    sput-object v0, Lcom/vk/core/ui/themes/VKThemeHelper;->d:Lcom/vk/core/util/u0;
+    sput-object v0, Lcom/vk/core/ui/themes/VKThemeHelper;->d:Lcom/vk/core/util/Provider2;
 
     .line 5
-    sget-object v0, Lcom/vk/core/ui/themes/VKThemeHelper;->d:Lcom/vk/core/util/u0;
+    sget-object v0, Lcom/vk/core/ui/themes/VKThemeHelper;->d:Lcom/vk/core/util/Provider2;
 
-    sput-object v0, Lcom/vk/core/ui/themes/VKThemeHelper;->e:Lcom/vk/core/util/u0;
+    sput-object v0, Lcom/vk/core/ui/themes/VKThemeHelper;->e:Lcom/vk/core/util/Provider2;
 
     .line 6
     sget-object v0, Lcom/vk/core/ui/themes/VKThemeHelper$lightContext$2;->a:Lcom/vk/core/ui/themes/VKThemeHelper$lightContext$2;
 
-    invoke-static {v0}, Lkotlin/g;->a(Lkotlin/jvm/b/a;)Lkotlin/e;
+    invoke-static {v0}, Lkotlin/g;->a(Lkotlin/jvm/b/Functions;)Lkotlin/Lazy2;
 
     move-result-object v0
 
-    sput-object v0, Lcom/vk/core/ui/themes/VKThemeHelper;->f:Lkotlin/e;
+    sput-object v0, Lcom/vk/core/ui/themes/VKThemeHelper;->f:Lkotlin/Lazy2;
 
     .line 7
     sget-object v0, Lcom/vk/core/ui/themes/VKThemeHelper$darkContext$2;->a:Lcom/vk/core/ui/themes/VKThemeHelper$darkContext$2;
 
-    invoke-static {v0}, Lkotlin/g;->a(Lkotlin/jvm/b/a;)Lkotlin/e;
+    invoke-static {v0}, Lkotlin/g;->a(Lkotlin/jvm/b/Functions;)Lkotlin/Lazy2;
 
     move-result-object v0
 
-    sput-object v0, Lcom/vk/core/ui/themes/VKThemeHelper;->g:Lkotlin/e;
+    sput-object v0, Lcom/vk/core/ui/themes/VKThemeHelper;->g:Lkotlin/Lazy2;
 
     .line 8
     sget-object v0, Lcom/vk/core/ui/themes/VKThemeHelper$themeBinder$2;->a:Lcom/vk/core/ui/themes/VKThemeHelper$themeBinder$2;
 
-    invoke-static {v0}, Lkotlin/g;->a(Lkotlin/jvm/b/a;)Lkotlin/e;
+    invoke-static {v0}, Lkotlin/g;->a(Lkotlin/jvm/b/Functions;)Lkotlin/Lazy2;
 
     move-result-object v0
 
-    sput-object v0, Lcom/vk/core/ui/themes/VKThemeHelper;->h:Lkotlin/e;
+    sput-object v0, Lcom/vk/core/ui/themes/VKThemeHelper;->h:Lkotlin/Lazy2;
 
     .line 9
     sget-object v0, Lcom/vk/core/ui/themes/VKThemeHelper$darkMapStyleOptions$2;->a:Lcom/vk/core/ui/themes/VKThemeHelper$darkMapStyleOptions$2;
 
-    invoke-static {v0}, Lkotlin/g;->a(Lkotlin/jvm/b/a;)Lkotlin/e;
+    invoke-static {v0}, Lkotlin/g;->a(Lkotlin/jvm/b/Functions;)Lkotlin/Lazy2;
 
     move-result-object v0
 
-    sput-object v0, Lcom/vk/core/ui/themes/VKThemeHelper;->j:Lkotlin/e;
+    sput-object v0, Lcom/vk/core/ui/themes/VKThemeHelper;->j:Lkotlin/Lazy2;
 
     return-void
 .end method
@@ -315,7 +315,7 @@
 
     const-string v1, "activity.window"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {v0}, Landroid/view/Window;->getDecorView()Landroid/view/View;
 
@@ -341,7 +341,7 @@
 
     .line 104
     :try_start_0
-    invoke-static {v0}, Lcom/vk/core/util/m;->a(Landroid/view/View;)Landroid/graphics/Bitmap;
+    invoke-static {v0}, Lcom/vk/core/util/BitmapUtils;->a(Landroid/view/View;)Landroid/graphics/Bitmap;
 
     move-result-object p1
 
@@ -370,7 +370,7 @@
     throw p1
 .end method
 
-.method public static final a(II)Lcom/vk/core/drawable/i;
+.method public static final a(II)Lcom/vk/core/drawable/RecoloredDrawable;
     .locals 2
     .param p0    # I
         .annotation build Landroidx/annotation/DrawableRes;
@@ -382,7 +382,7 @@
     .end param
 
     .line 29
-    new-instance v0, Lcom/vk/core/drawable/i;
+    new-instance v0, Lcom/vk/core/drawable/RecoloredDrawable;
 
     sget-object v1, Lcom/vk/core/ui/themes/VKThemeHelper;->k:Lcom/vk/core/ui/themes/VKThemeHelper;
 
@@ -398,7 +398,7 @@
 
     move-result p1
 
-    invoke-direct {v0, p0, p1}, Lcom/vk/core/drawable/i;-><init>(Landroid/graphics/drawable/Drawable;I)V
+    invoke-direct {v0, p0, p1}, Lcom/vk/core/drawable/RecoloredDrawable;-><init>(Landroid/graphics/drawable/Drawable;I)V
 
     return-object v0
 .end method
@@ -470,16 +470,16 @@
     throw p1
 .end method
 
-.method public final a(Landroid/app/Activity;Lcom/vk/core/ui/themes/VKTheme;[F)V
+.method private final a(Landroid/app/Activity;Lcom/vk/core/ui/themes/VKTheme;[F)V
     .locals 2
 
     .line 30
     invoke-direct {p0, p2}, Lcom/vk/core/ui/themes/VKThemeHelper;->b(Lcom/vk/core/ui/themes/VKTheme;)V
 
     .line 31
-    sget-object v0, Lcom/vk/core/ui/themes/VKThemeHelper;->d:Lcom/vk/core/util/u0;
+    sget-object v0, Lcom/vk/core/ui/themes/VKThemeHelper;->d:Lcom/vk/core/util/Provider2;
 
-    invoke-interface {v0}, Lcom/vk/core/util/u0;->reset()V
+    invoke-interface {v0}, Lcom/vk/core/util/Provider2;->reset()V
 
     .line 32
     invoke-direct {p0, p1}, Lcom/vk/core/ui/themes/VKThemeHelper;->c(Landroid/app/Activity;)V
@@ -496,11 +496,11 @@
 
     .line 35
     :cond_0
-    sget-object p1, Lcom/vk/core/ui/themes/VKThemeHelper;->i:Lcom/vk/core/ui/themes/a;
+    sget-object p1, Lcom/vk/core/ui/themes/VKThemeHelper;->i:Lcom/vk/core/ui/themes/ActivitiesProvider;
 
     if-eqz p1, :cond_2
 
-    invoke-interface {p1}, Lcom/vk/core/ui/themes/a;->a()Ljava/util/List;
+    invoke-interface {p1}, Lcom/vk/core/ui/themes/ActivitiesProvider;->a()Ljava/util/List;
 
     move-result-object p1
 
@@ -537,7 +537,7 @@
     const-string p3, "it"
 
     .line 38
-    invoke-static {p2, p3}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p2, p3}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {p2}, Landroid/app/Activity;->isDestroyed()Z
 
@@ -593,15 +593,15 @@
     invoke-virtual {p1, v2}, Landroid/app/Activity;->setTheme(I)V
 
     .line 51
-    instance-of v2, p1, Lcom/vk/core/ui/themes/f;
+    instance-of v2, p1, Lcom/vk/core/ui/themes/Themable;
 
     if-eqz v2, :cond_1
 
     move-object v2, p1
 
-    check-cast v2, Lcom/vk/core/ui/themes/f;
+    check-cast v2, Lcom/vk/core/ui/themes/Themable;
 
-    invoke-interface {v2}, Lcom/vk/core/ui/themes/f;->v()V
+    invoke-interface {v2}, Lcom/vk/core/ui/themes/Themable;->v()V
 
     .line 52
     :cond_1
@@ -623,7 +623,7 @@
 
     const-string v3, "activity.supportFragmentManager"
 
-    invoke-static {v2, v3}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v2, v3}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {v2}, Landroidx/fragment/app/FragmentManager;->getFragments()Ljava/util/List;
 
@@ -631,9 +631,9 @@
 
     const-string v3, "activity.supportFragmentManager.fragments"
 
-    invoke-static {v2, v3}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v2, v3}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    const-class v3, Lcom/vk/core/ui/themes/f;
+    const-class v3, Lcom/vk/core/ui/themes/Themable;
 
     invoke-static {v2, v3}, Lkotlin/collections/l;->a(Ljava/lang/Iterable;Ljava/lang/Class;)Ljava/util/List;
 
@@ -655,10 +655,10 @@
 
     move-result-object v3
 
-    check-cast v3, Lcom/vk/core/ui/themes/f;
+    check-cast v3, Lcom/vk/core/ui/themes/Themable;
 
     .line 56
-    invoke-interface {v3}, Lcom/vk/core/ui/themes/f;->v()V
+    invoke-interface {v3}, Lcom/vk/core/ui/themes/Themable;->v()V
 
     goto :goto_1
 
@@ -670,7 +670,7 @@
 
     const-string v2, "activity.window"
 
-    invoke-static {p1, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {p1}, Landroid/view/Window;->getDecorView()Landroid/view/View;
 
@@ -694,7 +694,7 @@
     goto :goto_2
 
     :cond_3
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     throw v0
 
@@ -778,7 +778,7 @@
     const-string v4, "child"
 
     .line 98
-    invoke-static {v3, v4}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v3, v4}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-static {v3}, Lcom/vk/core/ui/themes/VKThemeHelper;->a(Landroid/view/View;)V
 
@@ -854,13 +854,13 @@
     move-result-object p1
 
     .line 23
-    new-instance v0, Lcom/vk/core/drawable/i;
+    new-instance v0, Lcom/vk/core/drawable/RecoloredDrawable;
 
     invoke-static {p2}, Lcom/vk/core/ui/themes/VKThemeHelper;->d(I)I
 
     move-result v1
 
-    invoke-direct {v0, p1, v1}, Lcom/vk/core/drawable/i;-><init>(Landroid/graphics/drawable/Drawable;I)V
+    invoke-direct {v0, p1, v1}, Lcom/vk/core/drawable/RecoloredDrawable;-><init>(Landroid/graphics/drawable/Drawable;I)V
 
     invoke-virtual {p0, v0}, Landroid/view/View;->setBackground(Landroid/graphics/drawable/Drawable;)V
 
@@ -915,7 +915,7 @@
 
     const-string v1, "getChildAt(i)"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     const/4 v1, 0x1
 
@@ -969,7 +969,7 @@
 
     const-string v0, "window.context"
 
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     sget v0, Lb/h/z/c;->black:I
 
@@ -989,7 +989,7 @@
 
     const-string v1, "window.decorView"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 69
     invoke-virtual {v0}, Landroid/view/View;->getSystemUiVisibility()I
@@ -1020,7 +1020,7 @@
 
     move-result p0
 
-    invoke-static {p0}, Lcom/vk/core/util/p;->b(I)Z
+    invoke-static {p0}, Lcom/vk/core/util/ColorUtils;->b(I)Z
 
     move-result p0
 
@@ -1030,7 +1030,7 @@
     if-nez v2, :cond_5
 
     .line 72
-    invoke-static {p1}, Lcom/vk/core/util/p;->b(I)Z
+    invoke-static {p1}, Lcom/vk/core/util/ColorUtils;->b(I)Z
 
     move-result p0
 
@@ -1170,7 +1170,7 @@
 
     const v2, 0x3ecccccd    # 0.4f
 
-    invoke-static {v1, v2}, Lcom/vk/core/util/p;->b(IF)I
+    invoke-static {v1, v2}, Lcom/vk/core/util/ColorUtils;->b(IF)I
 
     move-result v1
 
@@ -1185,7 +1185,7 @@
 
     move-result v1
 
-    invoke-static {v1, v2}, Lcom/vk/core/util/p;->b(IF)I
+    invoke-static {v1, v2}, Lcom/vk/core/util/ColorUtils;->b(IF)I
 
     move-result v1
 
@@ -1252,13 +1252,13 @@
     move-result-object p1
 
     .line 20
-    new-instance v0, Lcom/vk/core/drawable/i;
+    new-instance v0, Lcom/vk/core/drawable/RecoloredDrawable;
 
     invoke-static {p2}, Lcom/vk/core/ui/themes/VKThemeHelper;->d(I)I
 
     move-result v1
 
-    invoke-direct {v0, p1, v1}, Lcom/vk/core/drawable/i;-><init>(Landroid/graphics/drawable/Drawable;I)V
+    invoke-direct {v0, p1, v1}, Lcom/vk/core/drawable/RecoloredDrawable;-><init>(Landroid/graphics/drawable/Drawable;I)V
 
     invoke-virtual {p0, v0}, Landroid/widget/ImageView;->setImageDrawable(Landroid/graphics/drawable/Drawable;)V
 
@@ -1308,13 +1308,13 @@
     .end param
 
     .line 17
-    new-instance v0, Lcom/vk/core/drawable/i;
+    new-instance v0, Lcom/vk/core/drawable/RecoloredDrawable;
 
     invoke-static {p2}, Lcom/vk/core/ui/themes/VKThemeHelper;->d(I)I
 
     move-result v1
 
-    invoke-direct {v0, p1, v1}, Lcom/vk/core/drawable/i;-><init>(Landroid/graphics/drawable/Drawable;I)V
+    invoke-direct {v0, p1, v1}, Lcom/vk/core/drawable/RecoloredDrawable;-><init>(Landroid/graphics/drawable/Drawable;I)V
 
     invoke-virtual {p0, v0}, Landroid/widget/ImageView;->setImageDrawable(Landroid/graphics/drawable/Drawable;)V
 
@@ -1391,7 +1391,7 @@
     const-string v1, "anim"
 
     .line 112
-    invoke-static {p2, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p2, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     const-wide/16 v1, 0x1f4
 
@@ -1409,7 +1409,7 @@
 
     invoke-direct {v1, v0, p1}, Lcom/vk/core/ui/themes/VKThemeHelper$animateCover$1;-><init>(Landroid/widget/FrameLayout;Landroid/widget/ImageView;)V
 
-    invoke-static {p2, v1}, Lcom/vk/core/extensions/AnimationExtKt;->a(Landroid/animation/Animator;Lkotlin/jvm/b/a;)V
+    invoke-static {p2, v1}, Lcom/vk/core/extensions/AnimationExtKt;->a(Landroid/animation/Animator;Lkotlin/jvm/b/Functions;)V
 
     .line 115
     invoke-virtual {p2}, Landroid/animation/Animator;->start()V
@@ -1631,12 +1631,12 @@
 
     const-string v0, "ColorStateList.valueOf(resolveColor(res))"
 
-    invoke-static {p0, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p0, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     return-object p0
 .end method
 
-.method public static final b(II)Lcom/vk/core/drawable/i;
+.method public static final b(II)Lcom/vk/core/drawable/RecoloredDrawable;
     .locals 0
     .param p0    # I
         .annotation build Landroidx/annotation/AttrRes;
@@ -1652,7 +1652,7 @@
 
     move-result p0
 
-    invoke-static {p0, p1}, Lcom/vk/core/ui/themes/VKThemeHelper;->a(II)Lcom/vk/core/drawable/i;
+    invoke-static {p0, p1}, Lcom/vk/core/ui/themes/VKThemeHelper;->a(II)Lcom/vk/core/drawable/RecoloredDrawable;
 
     move-result-object p0
 
@@ -1740,7 +1740,7 @@
     .line 9
     sget-object v0, Lcom/vk/core/ui/themes/VKThemeHelper;->k:Lcom/vk/core/ui/themes/VKThemeHelper;
 
-    invoke-static {}, Lcom/vk/core/ui/themes/d;->e()Z
+    invoke-static {}, Lcom/vk/core/ui/themes/MilkshakeHelper;->e()Z
 
     move-result v1
 
@@ -1847,7 +1847,7 @@
     .line 1
     new-instance v0, Landroidx/appcompat/view/ContextThemeWrapper;
 
-    sget-object v1, Lcom/vk/core/util/i;->a:Landroid/content/Context;
+    sget-object v1, Lcom/vk/core/util/AppContextHolder;->a:Landroid/content/Context;
 
     invoke-virtual {p0}, Lcom/vk/core/ui/themes/VKTheme;->c()I
 
@@ -1879,7 +1879,7 @@
     return-object p0
 .end method
 
-.method public static final c(II)Lcom/vk/core/drawable/i;
+.method public static final c(II)Lcom/vk/core/drawable/RecoloredDrawable;
     .locals 1
     .param p0    # I
         .annotation build Landroidx/annotation/AttrRes;
@@ -1891,13 +1891,13 @@
     .end param
 
     .line 2
-    new-instance v0, Lcom/vk/core/drawable/i;
+    new-instance v0, Lcom/vk/core/drawable/RecoloredDrawable;
 
     invoke-static {p0}, Lcom/vk/core/ui/themes/VKThemeHelper;->f(I)Landroid/graphics/drawable/Drawable;
 
     move-result-object p0
 
-    invoke-direct {v0, p0, p1}, Lcom/vk/core/drawable/i;-><init>(Landroid/graphics/drawable/Drawable;I)V
+    invoke-direct {v0, p0, p1}, Lcom/vk/core/drawable/RecoloredDrawable;-><init>(Landroid/graphics/drawable/Drawable;I)V
 
     return-object v0
 .end method
@@ -1934,7 +1934,7 @@
 
     const-string v2, "AppCompatResources::clas\u2026ield(\"sColorStateCaches\")"
 
-    invoke-static {v1, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 6
     invoke-virtual {v1, v0}, Ljava/lang/reflect/Field;->setAccessible(Z)V
@@ -2065,7 +2065,7 @@
     if-eqz v0, :cond_2
 
     .line 5
-    invoke-static {p1}, Lcom/vk/core/util/p;->b(I)Z
+    invoke-static {p1}, Lcom/vk/core/util/ColorUtils;->b(I)Z
 
     move-result p1
 
@@ -2095,7 +2095,7 @@
 
     const-string v0, "activity.window"
 
-    invoke-static {p0, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p0, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-static {p0}, Lcom/vk/core/ui/themes/VKThemeHelper;->a(Landroid/view/Window;)V
 
@@ -2138,7 +2138,7 @@
     .locals 2
 
     .line 2
-    invoke-static {}, Lcom/vk/core/ui/themes/d;->e()Z
+    invoke-static {}, Lcom/vk/core/ui/themes/MilkshakeHelper;->e()Z
 
     move-result v0
 
@@ -2151,7 +2151,7 @@
 
     const-string v1, "activity.window"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {v0}, Landroid/view/Window;->getDecorView()Landroid/view/View;
 
@@ -2165,7 +2165,7 @@
 
     move-result v1
 
-    invoke-static {p0, v0, v1}, Lcom/vk/extensions/b;->a(Landroid/app/Activity;Landroid/view/View;Z)V
+    invoke-static {p0, v0, v1}, Lcom/vk/extensions/ActivityExt;->a(Landroid/app/Activity;Landroid/view/View;Z)V
 
     goto :goto_0
 
@@ -2184,7 +2184,7 @@
 
     move-result v0
 
-    invoke-static {p0, v0}, Lcom/vk/extensions/b;->b(Landroid/app/Activity;I)V
+    invoke-static {p0, v0}, Lcom/vk/extensions/ActivityExt;->b(Landroid/app/Activity;I)V
 
     :cond_1
     :goto_0
@@ -2305,15 +2305,15 @@
 .method private final g()Landroid/content/Context;
     .locals 3
 
-    sget-object v0, Lcom/vk/core/ui/themes/VKThemeHelper;->g:Lkotlin/e;
+    sget-object v0, Lcom/vk/core/ui/themes/VKThemeHelper;->g:Lkotlin/Lazy2;
 
-    sget-object v1, Lcom/vk/core/ui/themes/VKThemeHelper;->a:[Lkotlin/u/j;
+    sget-object v1, Lcom/vk/core/ui/themes/VKThemeHelper;->a:[Lkotlin/u/KProperty5;
 
     const/4 v2, 0x2
 
     aget-object v1, v1, v2
 
-    invoke-interface {v0}, Lkotlin/e;->getValue()Ljava/lang/Object;
+    invoke-interface {v0}, Lkotlin/Lazy2;->getValue()Ljava/lang/Object;
 
     move-result-object v0
 
@@ -2325,15 +2325,15 @@
 .method private final h()Lcom/google/android/gms/maps/model/MapStyleOptions;
     .locals 3
 
-    sget-object v0, Lcom/vk/core/ui/themes/VKThemeHelper;->j:Lkotlin/e;
+    sget-object v0, Lcom/vk/core/ui/themes/VKThemeHelper;->j:Lkotlin/Lazy2;
 
-    sget-object v1, Lcom/vk/core/ui/themes/VKThemeHelper;->a:[Lkotlin/u/j;
+    sget-object v1, Lcom/vk/core/ui/themes/VKThemeHelper;->a:[Lkotlin/u/KProperty5;
 
     const/4 v2, 0x4
 
     aget-object v1, v1, v2
 
-    invoke-interface {v0}, Lkotlin/e;->getValue()Ljava/lang/Object;
+    invoke-interface {v0}, Lkotlin/Lazy2;->getValue()Ljava/lang/Object;
 
     move-result-object v0
 
@@ -2346,7 +2346,7 @@
     .locals 1
 
     .line 1
-    invoke-static {}, Lcom/vk/core/ui/themes/d;->e()Z
+    invoke-static {}, Lcom/vk/core/ui/themes/MilkshakeHelper;->e()Z
 
     move-result v0
 
@@ -2379,15 +2379,15 @@
 .method private final k()Landroid/content/Context;
     .locals 3
 
-    sget-object v0, Lcom/vk/core/ui/themes/VKThemeHelper;->f:Lkotlin/e;
+    sget-object v0, Lcom/vk/core/ui/themes/VKThemeHelper;->f:Lkotlin/Lazy2;
 
-    sget-object v1, Lcom/vk/core/ui/themes/VKThemeHelper;->a:[Lkotlin/u/j;
+    sget-object v1, Lcom/vk/core/ui/themes/VKThemeHelper;->a:[Lkotlin/u/KProperty5;
 
     const/4 v2, 0x1
 
     aget-object v1, v1, v2
 
-    invoke-interface {v0}, Lkotlin/e;->getValue()Ljava/lang/Object;
+    invoke-interface {v0}, Lkotlin/Lazy2;->getValue()Ljava/lang/Object;
 
     move-result-object v0
 
@@ -2426,15 +2426,15 @@
 .method private final m()Lcom/vk/core/ui/themes/ThemeBinder;
     .locals 3
 
-    sget-object v0, Lcom/vk/core/ui/themes/VKThemeHelper;->h:Lkotlin/e;
+    sget-object v0, Lcom/vk/core/ui/themes/VKThemeHelper;->h:Lkotlin/Lazy2;
 
-    sget-object v1, Lcom/vk/core/ui/themes/VKThemeHelper;->a:[Lkotlin/u/j;
+    sget-object v1, Lcom/vk/core/ui/themes/VKThemeHelper;->a:[Lkotlin/u/KProperty5;
 
     const/4 v2, 0x3
 
     aget-object v1, v1, v2
 
-    invoke-interface {v0}, Lkotlin/e;->getValue()Ljava/lang/Object;
+    invoke-interface {v0}, Lkotlin/Lazy2;->getValue()Ljava/lang/Object;
 
     move-result-object v0
 
@@ -2461,15 +2461,15 @@
 .method private final o()Landroid/content/Context;
     .locals 3
 
-    sget-object v0, Lcom/vk/core/ui/themes/VKThemeHelper;->e:Lcom/vk/core/util/u0;
+    sget-object v0, Lcom/vk/core/ui/themes/VKThemeHelper;->e:Lcom/vk/core/util/Provider2;
 
-    sget-object v1, Lcom/vk/core/ui/themes/VKThemeHelper;->a:[Lkotlin/u/j;
+    sget-object v1, Lcom/vk/core/ui/themes/VKThemeHelper;->a:[Lkotlin/u/KProperty5;
 
     const/4 v2, 0x0
 
     aget-object v1, v1, v2
 
-    invoke-static {v0, p0, v1}, Lcom/vk/core/util/w0;->a(Lcom/vk/core/util/u0;Ljava/lang/Object;Lkotlin/u/j;)Ljava/lang/Object;
+    invoke-static {v0, p0, v1}, Lcom/vk/core/util/Provider1;->a(Lcom/vk/core/util/Provider2;Ljava/lang/Object;Lkotlin/u/KProperty5;)Ljava/lang/Object;
 
     move-result-object v0
 
@@ -2584,7 +2584,7 @@
 
     const v2, 0x3ecccccd    # 0.4f
 
-    invoke-static {v1, v2}, Lcom/vk/core/util/p;->b(IF)I
+    invoke-static {v1, v2}, Lcom/vk/core/util/ColorUtils;->b(IF)I
 
     move-result v1
 
@@ -2601,7 +2601,7 @@
 
     const v2, 0x3df5c28f    # 0.12f
 
-    invoke-static {v1, v2}, Lcom/vk/core/util/p;->b(IF)I
+    invoke-static {v1, v2}, Lcom/vk/core/util/ColorUtils;->b(IF)I
 
     move-result v1
 
@@ -2629,7 +2629,7 @@
 
     const v2, 0x3ef5c28f    # 0.48f
 
-    invoke-static {v1, v2}, Lcom/vk/core/util/p;->b(IF)I
+    invoke-static {v1, v2}, Lcom/vk/core/util/ColorUtils;->b(IF)I
 
     move-result v1
 
@@ -2889,16 +2889,16 @@
     return-void
 .end method
 
-.method public final a(Lcom/vk/core/ui/themes/a;)V
+.method public final a(Lcom/vk/core/ui/themes/ActivitiesProvider;)V
     .locals 0
 
     .line 2
-    sput-object p1, Lcom/vk/core/ui/themes/VKThemeHelper;->i:Lcom/vk/core/ui/themes/a;
+    sput-object p1, Lcom/vk/core/ui/themes/VKThemeHelper;->i:Lcom/vk/core/ui/themes/ActivitiesProvider;
 
     return-void
 .end method
 
-.method public final a(Lcom/vk/core/ui/themes/i;)V
+.method public final a(Lcom/vk/core/ui/themes/ThemeTagRuleVisitor;)V
     .locals 1
 
     .line 10
@@ -2906,7 +2906,7 @@
 
     move-result-object v0
 
-    invoke-virtual {v0, p1}, Lcom/vk/core/ui/themes/ThemeBinder;->a(Lcom/vk/core/ui/themes/i;)V
+    invoke-virtual {v0, p1}, Lcom/vk/core/ui/themes/ThemeBinder;->a(Lcom/vk/core/ui/themes/ThemeTagRuleVisitor;)V
 
     return-void
 .end method
@@ -2919,9 +2919,9 @@
     .end param
 
     .line 76
-    sget-object v0, Lcom/vk/core/ui/themes/g;->b:Lcom/vk/core/ui/themes/g;
+    sget-object v0, Lcom/vk/core/ui/themes/ThemeAttributes;->b:Lcom/vk/core/ui/themes/ThemeAttributes;
 
-    invoke-virtual {v0, p1}, Lcom/vk/core/ui/themes/g;->a(I)Z
+    invoke-virtual {v0, p1}, Lcom/vk/core/ui/themes/ThemeAttributes;->a(I)Z
 
     move-result p1
 
@@ -2939,7 +2939,7 @@
     sput-object v0, Lcom/vk/core/ui/themes/VKThemeHelper;->c:Lcom/vk/core/ui/themes/VKTheme;
 
     .line 17
-    invoke-static {}, Lcom/vk/core/ui/themes/d;->e()Z
+    invoke-static {}, Lcom/vk/core/ui/themes/MilkshakeHelper;->e()Z
 
     move-result v0
 
@@ -2959,9 +2959,9 @@
     invoke-direct {p0, v0}, Lcom/vk/core/ui/themes/VKThemeHelper;->b(Lcom/vk/core/ui/themes/VKTheme;)V
 
     .line 19
-    sget-object v1, Lcom/vk/core/ui/themes/VKThemeHelper;->d:Lcom/vk/core/util/u0;
+    sget-object v1, Lcom/vk/core/ui/themes/VKThemeHelper;->d:Lcom/vk/core/util/Provider2;
 
-    invoke-interface {v1}, Lcom/vk/core/util/u0;->reset()V
+    invoke-interface {v1}, Lcom/vk/core/util/Provider2;->reset()V
 
     .line 20
     invoke-direct {p0, v0}, Lcom/vk/core/ui/themes/VKThemeHelper;->a(Lcom/vk/core/ui/themes/VKTheme;)V
@@ -3001,7 +3001,7 @@
 
     check-cast v2, Lcom/vk/core/ui/themes/VKThemeHelper$a;
 
-    invoke-static {p1, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {p1, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v2
 

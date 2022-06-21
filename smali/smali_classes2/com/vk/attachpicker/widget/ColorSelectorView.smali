@@ -61,7 +61,7 @@
     invoke-direct {p0, p1, p2}, Landroidx/viewpager/widget/ViewPager;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
 
     .line 3
-    sget-object v0, Lcom/vk/attachpicker/drawing/b;->a:[I
+    sget-object v0, Lcom/vk/attachpicker/drawing/DrawingColors;->a:[I
 
     const/4 v1, 0x0
 
@@ -256,7 +256,7 @@
 
     .line 2
     :goto_0
-    sget-object v2, Lcom/vk/attachpicker/drawing/b;->a:[I
+    sget-object v2, Lcom/vk/attachpicker/drawing/DrawingColors;->a:[I
 
     array-length v3, v2
 

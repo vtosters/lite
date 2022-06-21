@@ -46,17 +46,17 @@
     .line 1
     iget-object v0, p0, Lcom/vk/stories/archive/StoryArchiveFragment$h;->a:Lcom/vk/stories/archive/StoryArchiveFragment;
 
-    invoke-static {v0}, Lcom/vk/stories/archive/StoryArchiveFragment;->a(Lcom/vk/stories/archive/StoryArchiveFragment;)Lcom/vk/stories/archive/list/a;
+    invoke-static {v0}, Lcom/vk/stories/archive/StoryArchiveFragment;->a(Lcom/vk/stories/archive/StoryArchiveFragment;)Lcom/vk/stories/archive/list/StoryArchiveAdapter;
 
     move-result-object v0
 
     if-eqz v0, :cond_0
 
-    invoke-static {p1}, Lcom/vk/core/extensions/z;->i(Ljava/lang/String;)I
+    invoke-static {p1}, Lcom/vk/core/extensions/StringExt;->i(Ljava/lang/String;)I
 
     move-result p1
 
-    invoke-virtual {v0, p1}, Lcom/vk/stories/archive/list/a;->H(I)I
+    invoke-virtual {v0, p1}, Lcom/vk/stories/archive/list/StoryArchiveAdapter;->H(I)I
 
     move-result p1
 
@@ -87,7 +87,7 @@
     .line 1
     iget-object v0, p0, Lcom/vk/stories/archive/StoryArchiveFragment$h;->a:Lcom/vk/stories/archive/StoryArchiveFragment;
 
-    invoke-static {v0}, Lcom/vk/stories/archive/StoryArchiveFragment;->a(Lcom/vk/stories/archive/StoryArchiveFragment;)Lcom/vk/stories/archive/list/a;
+    invoke-static {v0}, Lcom/vk/stories/archive/StoryArchiveFragment;->a(Lcom/vk/stories/archive/StoryArchiveFragment;)Lcom/vk/stories/archive/list/StoryArchiveAdapter;
 
     move-result-object v0
 
@@ -95,11 +95,11 @@
 
     if-eqz v0, :cond_0
 
-    invoke-static {p1}, Lcom/vk/core/extensions/z;->i(Ljava/lang/String;)I
+    invoke-static {p1}, Lcom/vk/core/extensions/StringExt;->i(Ljava/lang/String;)I
 
     move-result p1
 
-    invoke-virtual {v0, p1}, Lcom/vk/stories/archive/list/a;->H(I)I
+    invoke-virtual {v0, p1}, Lcom/vk/stories/archive/list/StoryArchiveAdapter;->H(I)I
 
     move-result p1
 

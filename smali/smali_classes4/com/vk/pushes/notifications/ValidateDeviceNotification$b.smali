@@ -71,7 +71,7 @@
 
     const-string v0, "context.optString(DEVICE_TOKEN)"
 
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     iput-object p1, p0, Lcom/vk/pushes/notifications/ValidateDeviceNotification$b;->E:Ljava/lang/String;
 

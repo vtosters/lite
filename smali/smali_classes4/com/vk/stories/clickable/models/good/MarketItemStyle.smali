@@ -40,21 +40,21 @@
     const v1, 0x7f060220
 
     .line 1
-    invoke-static {v1}, Lcom/vk/core/util/y0;->b(I)I
+    invoke-static {v1}, Lcom/vk/core/util/ResUtils;->b(I)I
 
     move-result v4
 
     const v1, 0x7f06021f
 
     .line 2
-    invoke-static {v1}, Lcom/vk/core/util/y0;->b(I)I
+    invoke-static {v1}, Lcom/vk/core/util/ResUtils;->b(I)I
 
     move-result v5
 
     const v1, 0x7f06030c
 
     .line 3
-    invoke-static {v1}, Lcom/vk/core/util/y0;->b(I)I
+    invoke-static {v1}, Lcom/vk/core/util/ResUtils;->b(I)I
 
     move-result v6
 

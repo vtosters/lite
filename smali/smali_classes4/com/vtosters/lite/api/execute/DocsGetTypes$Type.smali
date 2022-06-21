@@ -209,7 +209,7 @@
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, v1}, Lcom/vtosters/lite/api/execute/DocsGetTypes$Type$a;-><init>(Lkotlin/jvm/internal/i;)V
+    invoke-direct {v0, v1}, Lcom/vtosters/lite/api/execute/DocsGetTypes$Type$a;-><init>(Lkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     sput-object v0, Lcom/vtosters/lite/api/execute/DocsGetTypes$Type;->Companion:Lcom/vtosters/lite/api/execute/DocsGetTypes$Type$a;
 

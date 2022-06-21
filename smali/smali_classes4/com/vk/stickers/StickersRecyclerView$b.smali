@@ -103,13 +103,13 @@
     .line 7
     iget-object v0, p0, Lcom/vk/stickers/StickersRecyclerView$b;->c:Lcom/vk/stickers/StickersRecyclerView;
 
-    invoke-static {v0}, Lcom/vk/stickers/StickersRecyclerView;->c(Lcom/vk/stickers/StickersRecyclerView;)Lcom/vk/stickers/g0/a;
+    invoke-static {v0}, Lcom/vk/stickers/StickersRecyclerView;->c(Lcom/vk/stickers/StickersRecyclerView;)Lcom/vk/stickers/g0/StickerKeyboardListener;
 
     move-result-object v0
 
     if-eqz v0, :cond_0
 
-    invoke-interface {v0, p3}, Lcom/vk/stickers/g0/a;->a(I)V
+    invoke-interface {v0, p3}, Lcom/vk/stickers/g0/StickerKeyboardListener;->a(I)V
 
     .line 8
     :cond_0
@@ -118,7 +118,7 @@
     .line 9
     iget-object p3, p0, Lcom/vk/stickers/StickersRecyclerView$b;->c:Lcom/vk/stickers/StickersRecyclerView;
 
-    invoke-static {p3}, Lcom/vk/stickers/StickersRecyclerView;->b(Lcom/vk/stickers/StickersRecyclerView;)Lcom/vk/stickers/x;
+    invoke-static {p3}, Lcom/vk/stickers/StickersRecyclerView;->b(Lcom/vk/stickers/StickersRecyclerView;)Lcom/vk/stickers/StickersKeyboardAnalytics;
 
     move-result-object p3
 
@@ -138,7 +138,7 @@
 
     move-result v0
 
-    invoke-virtual {p3, v0}, Lcom/vk/stickers/x;->b(I)V
+    invoke-virtual {p3, v0}, Lcom/vk/stickers/StickersKeyboardAnalytics;->b(I)V
 
     goto :goto_0
 
@@ -187,13 +187,13 @@
     .line 14
     iget-object p1, p0, Lcom/vk/stickers/StickersRecyclerView$b;->c:Lcom/vk/stickers/StickersRecyclerView;
 
-    invoke-static {p1}, Lcom/vk/stickers/StickersRecyclerView;->b(Lcom/vk/stickers/StickersRecyclerView;)Lcom/vk/stickers/x;
+    invoke-static {p1}, Lcom/vk/stickers/StickersRecyclerView;->b(Lcom/vk/stickers/StickersRecyclerView;)Lcom/vk/stickers/StickersKeyboardAnalytics;
 
     move-result-object p1
 
     if-eqz p1, :cond_5
 
-    invoke-virtual {p1}, Lcom/vk/stickers/x;->c()V
+    invoke-virtual {p1}, Lcom/vk/stickers/StickersKeyboardAnalytics;->c()V
 
     :cond_5
     return-void

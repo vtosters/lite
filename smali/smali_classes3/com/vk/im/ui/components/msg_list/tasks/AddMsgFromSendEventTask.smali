@@ -1,13 +1,13 @@
 .class public final Lcom/vk/im/ui/components/msg_list/tasks/AddMsgFromSendEventTask;
-.super Lcom/vk/im/ui/utils/ui_queue_task/c;
+.super Lcom/vk/im/ui/utils/ui_queue_task/UiQueueTask;
 .source "AddMsgFromSendEventTask.kt"
 
 
 # annotations
 .annotation system Ldalvik/annotation/Signature;
     value = {
-        "Lcom/vk/im/ui/utils/ui_queue_task/c<",
-        "Lcom/vk/im/ui/components/msg_list/k/a;",
+        "Lcom/vk/im/ui/utils/ui_queue_task/UiQueueTask<",
+        "Lcom/vk/im/ui/components/msg_list/k/LoadHistoryModel;",
         ">;"
     }
 .end annotation
@@ -42,7 +42,7 @@
     .end annotation
 
     .line 1
-    invoke-direct {p0}, Lcom/vk/im/ui/utils/ui_queue_task/c;-><init>()V
+    invoke-direct {p0}, Lcom/vk/im/ui/utils/ui_queue_task/UiQueueTask;-><init>()V
 
     iput-object p1, p0, Lcom/vk/im/ui/components/msg_list/tasks/AddMsgFromSendEventTask;->e:Lcom/vk/im/ui/components/msg_list/MsgListComponent;
 
@@ -51,11 +51,11 @@
     return-void
 .end method
 
-.method private final a(Lcom/vk/im/engine/models/messages/MsgHistory;Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/b;Z)Lcom/vk/im/ui/components/msg_list/k/a;
+.method private final a(Lcom/vk/im/engine/models/messages/MsgHistory;Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/AdapterEntryList;Z)Lcom/vk/im/ui/components/msg_list/k/LoadHistoryModel;
     .locals 11
 
     .line 3
-    iget-boolean v0, p1, Lcom/vk/im/engine/models/d;->hasHistoryAfter:Z
+    iget-boolean v0, p1, Lcom/vk/im/engine/models/History;->hasHistoryAfter:Z
 
     const/4 v1, 0x0
 
@@ -88,7 +88,7 @@
 
     iget-object v5, p0, Lcom/vk/im/ui/components/msg_list/tasks/AddMsgFromSendEventTask;->f:Ljava/util/List;
 
-    invoke-static {}, Lcom/vk/im/engine/utils/collection/e;->c()Lcom/vk/im/engine/utils/collection/h;
+    invoke-static {}, Lcom/vk/im/engine/utils/collection/IntCollectionExt;->c()Lcom/vk/im/engine/utils/collection/IntSet;
 
     move-result-object v6
 
@@ -102,7 +102,7 @@
 
     move-object v4, p1
 
-    invoke-direct/range {v4 .. v10}, Lcom/vk/im/engine/models/messages/MsgHistory;-><init>(Ljava/lang/Iterable;Lcom/vk/im/engine/utils/collection/h;ZZZZ)V
+    invoke-direct/range {v4 .. v10}, Lcom/vk/im/engine/models/messages/MsgHistory;-><init>(Ljava/lang/Iterable;Lcom/vk/im/engine/utils/collection/IntSet;ZZZZ)V
 
     goto :goto_2
 
@@ -116,15 +116,15 @@
 
     iget-object v4, p0, Lcom/vk/im/ui/components/msg_list/tasks/AddMsgFromSendEventTask;->f:Ljava/util/List;
 
-    invoke-static {p1, v4, v3, v0, v3}, Lcom/vk/im/engine/models/d;->a(Lcom/vk/im/engine/models/d;Ljava/util/Collection;Lcom/vk/im/engine/utils/collection/d;ILjava/lang/Object;)V
+    invoke-static {p1, v4, v3, v0, v3}, Lcom/vk/im/engine/models/History;->a(Lcom/vk/im/engine/models/History;Ljava/util/Collection;Lcom/vk/im/engine/utils/collection/IntCollection;ILjava/lang/Object;)V
 
     :goto_2
     if-ne p3, v2, :cond_3
 
     .line 6
-    sget-object p3, Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/b;->b:Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/b$a;
+    sget-object p3, Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/AdapterEntryList;->b:Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/AdapterEntryList$a;
 
-    invoke-static {p3, p1, v1, v0, v3}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/b$a;->a(Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/b$a;Lcom/vk/im/engine/models/messages/MsgHistory;IILjava/lang/Object;)Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/b;
+    invoke-static {p3, p1, v1, v0, v3}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/AdapterEntryList$a;->a(Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/AdapterEntryList$a;Lcom/vk/im/engine/models/messages/MsgHistory;IILjava/lang/Object;)Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/AdapterEntryList;
 
     move-result-object p3
 
@@ -134,7 +134,7 @@
     if-nez p3, :cond_4
 
     .line 7
-    invoke-virtual {p2}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/b;->b()Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/b;
+    invoke-virtual {p2}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/AdapterEntryList;->b()Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/AdapterEntryList;
 
     move-result-object p3
 
@@ -150,13 +150,13 @@
 
     move-object v0, p3
 
-    invoke-static/range {v0 .. v5}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/b;->a(Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/b;Ljava/util/List;ZIILjava/lang/Object;)Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/b;
+    invoke-static/range {v0 .. v5}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/AdapterEntryList;->a(Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/AdapterEntryList;Ljava/util/List;ZIILjava/lang/Object;)Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/AdapterEntryList;
 
     .line 8
     :goto_3
-    new-instance v0, Lcom/vk/im/ui/components/msg_list/tasks/a;
+    new-instance v0, Lcom/vk/im/ui/components/msg_list/tasks/AdapterEntryDiffCallback;
 
-    invoke-direct {v0, p2, p3}, Lcom/vk/im/ui/components/msg_list/tasks/a;-><init>(Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/b;Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/b;)V
+    invoke-direct {v0, p2, p3}, Lcom/vk/im/ui/components/msg_list/tasks/AdapterEntryDiffCallback;-><init>(Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/AdapterEntryList;Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/AdapterEntryList;)V
 
     invoke-static {v0}, Landroidx/recyclerview/widget/DiffUtil;->calculateDiff(Landroidx/recyclerview/widget/DiffUtil$Callback;)Landroidx/recyclerview/widget/DiffUtil$DiffResult;
 
@@ -164,16 +164,16 @@
 
     const-string v0, "DiffUtil.calculateDiff(A\u2026EntryList, newEntryList))"
 
-    invoke-static {p2, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p2, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 9
-    new-instance v0, Lcom/vk/im/ui/components/msg_list/k/a;
+    new-instance v0, Lcom/vk/im/ui/components/msg_list/k/LoadHistoryModel;
 
     new-instance v1, Lcom/vk/im/engine/models/ProfilesInfo;
 
     invoke-direct {v1}, Lcom/vk/im/engine/models/ProfilesInfo;-><init>()V
 
-    invoke-direct {v0, p1, v1, p3, p2}, Lcom/vk/im/ui/components/msg_list/k/a;-><init>(Lcom/vk/im/engine/models/messages/MsgHistory;Lcom/vk/im/engine/models/ProfilesInfo;Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/b;Landroidx/recyclerview/widget/DiffUtil$DiffResult;)V
+    invoke-direct {v0, p1, v1, p3, p2}, Lcom/vk/im/ui/components/msg_list/k/LoadHistoryModel;-><init>(Lcom/vk/im/engine/models/messages/MsgHistory;Lcom/vk/im/engine/models/ProfilesInfo;Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/AdapterEntryList;Landroidx/recyclerview/widget/DiffUtil$DiffResult;)V
 
     return-object v0
 
@@ -194,29 +194,29 @@
     throw p1
 .end method
 
-.method public static final synthetic a(Lcom/vk/im/ui/components/msg_list/tasks/AddMsgFromSendEventTask;Lcom/vk/im/engine/models/messages/MsgHistory;Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/b;Z)Lcom/vk/im/ui/components/msg_list/k/a;
+.method public static final synthetic a(Lcom/vk/im/ui/components/msg_list/tasks/AddMsgFromSendEventTask;Lcom/vk/im/engine/models/messages/MsgHistory;Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/AdapterEntryList;Z)Lcom/vk/im/ui/components/msg_list/k/LoadHistoryModel;
     .locals 0
 
     .line 1
-    invoke-direct {p0, p1, p2, p3}, Lcom/vk/im/ui/components/msg_list/tasks/AddMsgFromSendEventTask;->a(Lcom/vk/im/engine/models/messages/MsgHistory;Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/b;Z)Lcom/vk/im/ui/components/msg_list/k/a;
+    invoke-direct {p0, p1, p2, p3}, Lcom/vk/im/ui/components/msg_list/tasks/AddMsgFromSendEventTask;->a(Lcom/vk/im/engine/models/messages/MsgHistory;Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/AdapterEntryList;Z)Lcom/vk/im/ui/components/msg_list/k/LoadHistoryModel;
 
     move-result-object p0
 
     return-object p0
 .end method
 
-.method public static final synthetic a(Lcom/vk/im/ui/components/msg_list/tasks/AddMsgFromSendEventTask;Lcom/vk/im/ui/components/msg_list/k/a;)V
+.method public static final synthetic a(Lcom/vk/im/ui/components/msg_list/tasks/AddMsgFromSendEventTask;Lcom/vk/im/ui/components/msg_list/k/LoadHistoryModel;)V
     .locals 0
 
     .line 2
-    invoke-virtual {p0, p1}, Lcom/vk/im/ui/utils/ui_queue_task/c;->d(Ljava/lang/Object;)V
+    invoke-virtual {p0, p1}, Lcom/vk/im/ui/utils/ui_queue_task/UiQueueTask;->d(Ljava/lang/Object;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method protected a(Lcom/vk/im/ui/components/msg_list/k/a;)V
+.method protected a(Lcom/vk/im/ui/components/msg_list/k/LoadHistoryModel;)V
     .locals 10
 
     .line 12
@@ -231,18 +231,18 @@
 
     move-result-object v1
 
-    invoke-virtual {p1}, Lcom/vk/im/ui/components/msg_list/k/a;->c()Lcom/vk/im/engine/models/messages/MsgHistory;
+    invoke-virtual {p1}, Lcom/vk/im/ui/components/msg_list/k/LoadHistoryModel;->c()Lcom/vk/im/engine/models/messages/MsgHistory;
 
     move-result-object v2
 
-    invoke-virtual {v1, v2}, Lcom/vk/im/engine/models/d;->a(Lcom/vk/im/engine/models/d;)V
+    invoke-virtual {v1, v2}, Lcom/vk/im/engine/models/History;->a(Lcom/vk/im/engine/models/History;)V
 
     .line 14
-    invoke-virtual {p1}, Lcom/vk/im/ui/components/msg_list/k/a;->b()Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/b;
+    invoke-virtual {p1}, Lcom/vk/im/ui/components/msg_list/k/LoadHistoryModel;->b()Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/AdapterEntryList;
 
     move-result-object v1
 
-    invoke-virtual {v0, v1}, Lcom/vk/im/ui/components/msg_list/StateHistory;->a(Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/b;)V
+    invoke-virtual {v0, v1}, Lcom/vk/im/ui/components/msg_list/StateHistory;->a(Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/AdapterEntryList;)V
 
     const/4 v1, -0x1
 
@@ -253,7 +253,7 @@
     iget-object v2, p0, Lcom/vk/im/ui/components/msg_list/tasks/AddMsgFromSendEventTask;->e:Lcom/vk/im/ui/components/msg_list/MsgListComponent;
 
     .line 17
-    invoke-virtual {p1}, Lcom/vk/im/ui/components/msg_list/k/a;->a()Landroidx/recyclerview/widget/DiffUtil$DiffResult;
+    invoke-virtual {p1}, Lcom/vk/im/ui/components/msg_list/k/LoadHistoryModel;->a()Landroidx/recyclerview/widget/DiffUtil$DiffResult;
 
     move-result-object v7
 
@@ -270,7 +270,7 @@
     move-object v3, p0
 
     .line 18
-    invoke-static/range {v2 .. v9}, Lcom/vk/im/ui/components/msg_list/MsgListComponent;->a(Lcom/vk/im/ui/components/msg_list/MsgListComponent;Ljava/lang/Object;ZLcom/vk/im/ui/components/viewcontrollers/msg_list/f;ZLandroidx/recyclerview/widget/DiffUtil$DiffResult;ILjava/lang/Object;)V
+    invoke-static/range {v2 .. v9}, Lcom/vk/im/ui/components/msg_list/MsgListComponent;->a(Lcom/vk/im/ui/components/msg_list/MsgListComponent;Ljava/lang/Object;ZLcom/vk/im/ui/components/viewcontrollers/msg_list/ScrollParams;ZLandroidx/recyclerview/widget/DiffUtil$DiffResult;ILjava/lang/Object;)V
 
     .line 19
     iget-object p1, p0, Lcom/vk/im/ui/components/msg_list/tasks/AddMsgFromSendEventTask;->e:Lcom/vk/im/ui/components/msg_list/MsgListComponent;
@@ -290,9 +290,9 @@
     .locals 0
 
     .line 1
-    check-cast p1, Lcom/vk/im/ui/components/msg_list/k/a;
+    check-cast p1, Lcom/vk/im/ui/components/msg_list/k/LoadHistoryModel;
 
-    invoke-virtual {p0, p1}, Lcom/vk/im/ui/components/msg_list/tasks/AddMsgFromSendEventTask;->a(Lcom/vk/im/ui/components/msg_list/k/a;)V
+    invoke-virtual {p0, p1}, Lcom/vk/im/ui/components/msg_list/tasks/AddMsgFromSendEventTask;->a(Lcom/vk/im/ui/components/msg_list/k/LoadHistoryModel;)V
 
     return-void
 .end method
@@ -322,13 +322,13 @@
 
     move-result-object v1
 
-    invoke-virtual {v1}, Lcom/vk/im/ui/components/msg_list/StateHistory;->i()Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/b;
+    invoke-virtual {v1}, Lcom/vk/im/ui/components/msg_list/StateHistory;->i()Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/AdapterEntryList;
 
     move-result-object v1
 
     if-eqz v1, :cond_0
 
-    invoke-virtual {v1}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/b;->b()Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/b;
+    invoke-virtual {v1}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/AdapterEntryList;->b()Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/AdapterEntryList;
 
     move-result-object v1
 
@@ -337,9 +337,9 @@
     goto :goto_0
 
     :cond_0
-    new-instance v1, Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/b;
+    new-instance v1, Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/AdapterEntryList;
 
-    invoke-direct {v1}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/b;-><init>()V
+    invoke-direct {v1}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/AdapterEntryList;-><init>()V
 
     .line 3
     :goto_0
@@ -356,42 +356,42 @@
     xor-int/lit8 v2, v2, 0x1
 
     .line 4
-    sget-object v3, Lcom/vk/core/util/z0;->a:Lcom/vk/core/util/z0;
+    sget-object v3, Lcom/vk/core/util/RxUtil;->a:Lcom/vk/core/util/RxUtil;
 
     new-instance v4, Lcom/vk/im/ui/components/msg_list/tasks/AddMsgFromSendEventTask$onExecute$1;
 
-    invoke-direct {v4, p0, v0, v1, v2}, Lcom/vk/im/ui/components/msg_list/tasks/AddMsgFromSendEventTask$onExecute$1;-><init>(Lcom/vk/im/ui/components/msg_list/tasks/AddMsgFromSendEventTask;Lcom/vk/im/engine/models/messages/MsgHistory;Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/b;Z)V
+    invoke-direct {v4, p0, v0, v1, v2}, Lcom/vk/im/ui/components/msg_list/tasks/AddMsgFromSendEventTask$onExecute$1;-><init>(Lcom/vk/im/ui/components/msg_list/tasks/AddMsgFromSendEventTask;Lcom/vk/im/engine/models/messages/MsgHistory;Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/AdapterEntryList;Z)V
 
-    invoke-virtual {v3, v4}, Lcom/vk/core/util/z0;->a(Lkotlin/jvm/b/a;)Lc/a/t;
+    invoke-virtual {v3, v4}, Lcom/vk/core/util/RxUtil;->a(Lkotlin/jvm/b/Functions;)Lio/reactivex/Single;
 
     move-result-object v0
 
     .line 5
     sget-object v1, Lcom/vk/im/engine/concurrent/ImExecutors;->e:Lcom/vk/im/engine/concurrent/ImExecutors;
 
-    invoke-virtual {v1}, Lcom/vk/im/engine/concurrent/ImExecutors;->c()Lc/a/s;
+    invoke-virtual {v1}, Lcom/vk/im/engine/concurrent/ImExecutors;->c()Lio/reactivex/Scheduler;
 
     move-result-object v1
 
-    invoke-virtual {v0, v1}, Lc/a/t;->b(Lc/a/s;)Lc/a/t;
+    invoke-virtual {v0, v1}, Lio/reactivex/Single;->b(Lio/reactivex/Scheduler;)Lio/reactivex/Single;
 
     move-result-object v0
 
     .line 6
-    invoke-static {}, Lc/a/y/c/a;->a()Lc/a/s;
+    invoke-static {}, Lio/reactivex/schedulers/AndroidSchedulers;->a()Lio/reactivex/Scheduler;
 
     move-result-object v1
 
-    invoke-virtual {v0, v1}, Lc/a/t;->a(Lc/a/s;)Lc/a/t;
+    invoke-virtual {v0, v1}, Lio/reactivex/Single;->a(Lio/reactivex/Scheduler;)Lio/reactivex/Single;
 
     move-result-object v0
 
     const-string v1, "RxUtil.toSingle {\n      \u2026dSchedulers.mainThread())"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 7
-    invoke-static {v0, p0}, Lcom/vk/im/ui/utils/ui_queue_task/a;->a(Lc/a/t;Lcom/vk/im/ui/utils/ui_queue_task/c;)Lio/reactivex/disposables/b;
+    invoke-static {v0, p0}, Lcom/vk/im/ui/utils/ui_queue_task/RxExtForUiQueue;->a(Lio/reactivex/Single;Lcom/vk/im/ui/utils/ui_queue_task/UiQueueTask;)Lio/reactivex/disposables/Disposable;
 
     return-void
 .end method

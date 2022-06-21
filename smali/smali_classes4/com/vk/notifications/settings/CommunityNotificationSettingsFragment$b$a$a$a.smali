@@ -3,7 +3,7 @@
 .source "CommunityNotificationSettingsFragment.kt"
 
 # interfaces
-.implements Lc/a/z/g;
+.implements Lio/reactivex/functions/Consumer;
 
 
 # annotations
@@ -22,7 +22,7 @@
         "Ljava/lang/Object;",
         ">",
         "Ljava/lang/Object;",
-        "Lc/a/z/g<",
+        "Lio/reactivex/functions/Consumer<",
         "Ljava/lang/Boolean;",
         ">;"
     }
@@ -54,7 +54,7 @@
 
     iget-object p1, p1, Lcom/vk/notifications/settings/CommunityNotificationSettingsFragment$b$a$a;->b:Lcom/vk/notifications/settings/CommunityNotificationSettingsFragment$b;
 
-    invoke-virtual {p1}, Lcom/vk/notifications/settings/CommunityNotificationSettingsFragment$b;->P()Lb/h/h/g/b;
+    invoke-virtual {p1}, Lcom/vk/notifications/settings/CommunityNotificationSettingsFragment$b;->P()Lb/h/h/g/SettingsSectionItem;
 
     move-result-object p1
 
@@ -62,17 +62,17 @@
 
     iget-object v0, v0, Lcom/vk/notifications/settings/CommunityNotificationSettingsFragment$b$a$a;->b:Lcom/vk/notifications/settings/CommunityNotificationSettingsFragment$b;
 
-    invoke-virtual {v0}, Lcom/vk/notifications/settings/CommunityNotificationSettingsFragment$b;->P()Lb/h/h/g/b;
+    invoke-virtual {v0}, Lcom/vk/notifications/settings/CommunityNotificationSettingsFragment$b;->P()Lb/h/h/g/SettingsSectionItem;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lb/h/h/g/b;->d()Z
+    invoke-virtual {v0}, Lb/h/h/g/SettingsSectionItem;->d()Z
 
     move-result v0
 
     xor-int/lit8 v0, v0, 0x1
 
-    invoke-virtual {p1, v0}, Lb/h/h/g/b;->a(Z)V
+    invoke-virtual {p1, v0}, Lb/h/h/g/SettingsSectionItem;->a(Z)V
 
     .line 2
     sget-object p1, Lcom/vk/notifications/NotificationsFragment;->O:Lcom/vk/notifications/NotificationsFragment$a;

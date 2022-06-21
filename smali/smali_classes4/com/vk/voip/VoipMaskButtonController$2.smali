@@ -3,7 +3,7 @@
 .source "VoipMaskButtonController.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/b;
+.implements Lkotlin/jvm/b/Functions2;
 
 
 # annotations
@@ -19,12 +19,12 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/b<",
+        "Lkotlin/jvm/b/Functions2<",
         "Ljava/util/List<",
         "+",
-        "Lcom/vk/dto/masks/a;",
+        "Lcom/vk/dto/masks/MasksListItem;",
         ">;",
-        "Lkotlin/m;",
+        "Lkotlin/Unit;",
         ">;"
     }
 .end annotation
@@ -55,7 +55,7 @@
         value = {
             "(",
             "Ljava/util/List<",
-            "Lcom/vk/dto/masks/a;",
+            "Lcom/vk/dto/masks/MasksListItem;",
             ">;)V"
         }
     .end annotation
@@ -95,10 +95,10 @@
 
     move-result-object v1
 
-    check-cast v1, Lcom/vk/dto/masks/a;
+    check-cast v1, Lcom/vk/dto/masks/MasksListItem;
 
     .line 4
-    invoke-virtual {v1}, Lcom/vk/dto/masks/a;->c()Lcom/vk/dto/masks/Mask;
+    invoke-virtual {v1}, Lcom/vk/dto/masks/MasksListItem;->c()Lcom/vk/dto/masks/Mask;
 
     move-result-object v1
 
@@ -131,7 +131,7 @@
 
     invoke-virtual {p0, p1}, Lcom/vk/voip/VoipMaskButtonController$2;->a(Ljava/util/List;)V
 
-    sget-object p1, Lkotlin/m;->a:Lkotlin/m;
+    sget-object p1, Lkotlin/Unit;->a:Lkotlin/Unit;
 
     return-object p1
 .end method

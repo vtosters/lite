@@ -20,16 +20,16 @@
 # instance fields
 .field final synthetic a:Lcom/vk/auth/init/exchange/ExchangeLoginFragment$onCreate$2;
 
-.field final synthetic b:Lcom/vk/auth/init/exchange/c;
+.field final synthetic b:Lcom/vk/auth/init/exchange/UserItem;
 
 
 # direct methods
-.method constructor <init>(Lcom/vk/auth/init/exchange/ExchangeLoginFragment$onCreate$2;Lcom/vk/auth/init/exchange/c;)V
+.method constructor <init>(Lcom/vk/auth/init/exchange/ExchangeLoginFragment$onCreate$2;Lcom/vk/auth/init/exchange/UserItem;)V
     .locals 0
 
     iput-object p1, p0, Lcom/vk/auth/init/exchange/ExchangeLoginFragment$onCreate$2$a;->a:Lcom/vk/auth/init/exchange/ExchangeLoginFragment$onCreate$2;
 
-    iput-object p2, p0, Lcom/vk/auth/init/exchange/ExchangeLoginFragment$onCreate$2$a;->b:Lcom/vk/auth/init/exchange/c;
+    iput-object p2, p0, Lcom/vk/auth/init/exchange/ExchangeLoginFragment$onCreate$2$a;->b:Lcom/vk/auth/init/exchange/UserItem;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -46,13 +46,13 @@
 
     iget-object p1, p1, Lcom/vk/auth/init/exchange/ExchangeLoginFragment$onCreate$2;->this$0:Lcom/vk/auth/init/exchange/ExchangeLoginFragment;
 
-    invoke-static {p1}, Lcom/vk/auth/init/exchange/ExchangeLoginFragment;->e(Lcom/vk/auth/init/exchange/ExchangeLoginFragment;)Lcom/vk/auth/init/exchange/a;
+    invoke-static {p1}, Lcom/vk/auth/init/exchange/ExchangeLoginFragment;->e(Lcom/vk/auth/init/exchange/ExchangeLoginFragment;)Lcom/vk/auth/init/exchange/ExchangeLoginPresenter;
 
     move-result-object p1
 
-    iget-object p2, p0, Lcom/vk/auth/init/exchange/ExchangeLoginFragment$onCreate$2$a;->b:Lcom/vk/auth/init/exchange/c;
+    iget-object p2, p0, Lcom/vk/auth/init/exchange/ExchangeLoginFragment$onCreate$2$a;->b:Lcom/vk/auth/init/exchange/UserItem;
 
-    invoke-virtual {p1, p2}, Lcom/vk/auth/init/exchange/a;->a(Lcom/vk/auth/init/exchange/c;)V
+    invoke-virtual {p1, p2}, Lcom/vk/auth/init/exchange/ExchangeLoginPresenter;->a(Lcom/vk/auth/init/exchange/UserItem;)V
 
     return-void
 .end method

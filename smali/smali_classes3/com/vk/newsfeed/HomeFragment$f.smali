@@ -3,7 +3,7 @@
 .source "HomeFragment.kt"
 
 # interfaces
-.implements Lc/a/z/g;
+.implements Lio/reactivex/functions/Consumer;
 
 
 # annotations
@@ -22,10 +22,10 @@
         "Ljava/lang/Object;",
         ">",
         "Ljava/lang/Object;",
-        "Lc/a/z/g<",
+        "Lio/reactivex/functions/Consumer<",
         "Ljava/util/List<",
         "+",
-        "Lcom/vk/newsfeed/r;",
+        "Lcom/vk/newsfeed/NewsListsAdapter2;",
         ">;>;"
     }
 .end annotation
@@ -54,7 +54,7 @@
         value = {
             "(",
             "Ljava/util/List<",
-            "Lcom/vk/newsfeed/r;",
+            "Lcom/vk/newsfeed/NewsListsAdapter2;",
             ">;)V"
         }
     .end annotation

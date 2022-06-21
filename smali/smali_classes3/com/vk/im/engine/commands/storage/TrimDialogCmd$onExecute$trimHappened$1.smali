@@ -3,12 +3,12 @@
 .source "TrimDialogCmd.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/b;
+.implements Lkotlin/jvm/b/Functions2;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/im/engine/commands/storage/TrimDialogCmd;->a(Lcom/vk/im/engine/d;)Ljava/lang/Boolean;
+    value = Lcom/vk/im/engine/commands/storage/TrimDialogCmd;->a(Lcom/vk/im/engine/ImEnvironment;)Ljava/lang/Boolean;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -19,7 +19,7 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/b<",
+        "Lkotlin/jvm/b/Functions2<",
         "Lcom/vk/im/engine/internal/storage/StorageManager;",
         "Ljava/lang/Boolean;",
         ">;"
@@ -28,18 +28,18 @@
 
 
 # instance fields
-.field final synthetic $env:Lcom/vk/im/engine/d;
+.field final synthetic $env:Lcom/vk/im/engine/ImEnvironment;
 
 .field final synthetic this$0:Lcom/vk/im/engine/commands/storage/TrimDialogCmd;
 
 
 # direct methods
-.method constructor <init>(Lcom/vk/im/engine/commands/storage/TrimDialogCmd;Lcom/vk/im/engine/d;)V
+.method constructor <init>(Lcom/vk/im/engine/commands/storage/TrimDialogCmd;Lcom/vk/im/engine/ImEnvironment;)V
     .locals 0
 
     iput-object p1, p0, Lcom/vk/im/engine/commands/storage/TrimDialogCmd$onExecute$trimHappened$1;->this$0:Lcom/vk/im/engine/commands/storage/TrimDialogCmd;
 
-    iput-object p2, p0, Lcom/vk/im/engine/commands/storage/TrimDialogCmd$onExecute$trimHappened$1;->$env:Lcom/vk/im/engine/d;
+    iput-object p2, p0, Lcom/vk/im/engine/commands/storage/TrimDialogCmd$onExecute$trimHappened$1;->$env:Lcom/vk/im/engine/ImEnvironment;
 
     const/4 p1, 0x1
 
@@ -56,9 +56,9 @@
     .line 1
     iget-object p1, p0, Lcom/vk/im/engine/commands/storage/TrimDialogCmd$onExecute$trimHappened$1;->this$0:Lcom/vk/im/engine/commands/storage/TrimDialogCmd;
 
-    iget-object v0, p0, Lcom/vk/im/engine/commands/storage/TrimDialogCmd$onExecute$trimHappened$1;->$env:Lcom/vk/im/engine/d;
+    iget-object v0, p0, Lcom/vk/im/engine/commands/storage/TrimDialogCmd$onExecute$trimHappened$1;->$env:Lcom/vk/im/engine/ImEnvironment;
 
-    invoke-static {p1, v0}, Lcom/vk/im/engine/commands/storage/TrimDialogCmd;->a(Lcom/vk/im/engine/commands/storage/TrimDialogCmd;Lcom/vk/im/engine/d;)Z
+    invoke-static {p1, v0}, Lcom/vk/im/engine/commands/storage/TrimDialogCmd;->a(Lcom/vk/im/engine/commands/storage/TrimDialogCmd;Lcom/vk/im/engine/ImEnvironment;)Z
 
     move-result p1
 

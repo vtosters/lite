@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/superapp/holders/SuperAppWidgetMiniappsHolder;-><init>(Landroid/view/View;Lcom/vk/superapp/holders/b;)V
+    value = Lcom/vk/superapp/holders/SuperAppWidgetMiniappsHolder;-><init>(Landroid/view/View;Lcom/vk/superapp/holders/SuperAppClickListener;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -40,11 +40,11 @@
     .line 1
     iget-object p1, p0, Lcom/vk/superapp/holders/SuperAppWidgetMiniappsHolder$a;->a:Lcom/vk/superapp/holders/SuperAppWidgetMiniappsHolder;
 
-    invoke-static {p1}, Lcom/vk/superapp/holders/SuperAppWidgetMiniappsHolder;->b(Lcom/vk/superapp/holders/SuperAppWidgetMiniappsHolder;)Lcom/vk/superapp/g/k;
+    invoke-static {p1}, Lcom/vk/superapp/holders/SuperAppWidgetMiniappsHolder;->b(Lcom/vk/superapp/holders/SuperAppWidgetMiniappsHolder;)Lcom/vk/superapp/g/SuperAppWidgetMiniappsItem;
 
     move-result-object p1
 
-    invoke-virtual {p1}, Lcom/vk/superapp/g/k;->g()Lcom/vk/dto/menu/widgets/SuperAppWidgetMiniapps;
+    invoke-virtual {p1}, Lcom/vk/superapp/g/SuperAppWidgetMiniappsItem;->g()Lcom/vk/dto/menu/widgets/SuperAppWidgetMiniapps;
 
     move-result-object p1
 
@@ -55,7 +55,7 @@
     if-eqz v2, :cond_0
 
     .line 2
-    sget-object v0, Lcom/vk/common/links/c;->p:Lcom/vk/common/links/c$a;
+    sget-object v0, Lcom/vk/common/links/LinkProcessor;->p:Lcom/vk/common/links/LinkProcessor$a;
 
     iget-object p1, p0, Lcom/vk/superapp/holders/SuperAppWidgetMiniappsHolder$a;->a:Lcom/vk/superapp/holders/SuperAppWidgetMiniappsHolder;
 
@@ -69,7 +69,7 @@
 
     const/4 v5, 0x0
 
-    invoke-static/range {v0 .. v5}, Lcom/vk/common/links/c$a;->a(Lcom/vk/common/links/c$a;Landroid/content/Context;Ljava/lang/String;Landroid/os/Bundle;ILjava/lang/Object;)V
+    invoke-static/range {v0 .. v5}, Lcom/vk/common/links/LinkProcessor$a;->a(Lcom/vk/common/links/LinkProcessor$a;Landroid/content/Context;Ljava/lang/String;Landroid/os/Bundle;ILjava/lang/Object;)V
 
     :cond_0
     return-void

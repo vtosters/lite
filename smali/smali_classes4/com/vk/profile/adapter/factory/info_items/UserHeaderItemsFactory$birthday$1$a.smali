@@ -52,7 +52,7 @@
 
     const-string v2, "profile_birthday"
 
-    invoke-static {v0, v1, v2}, Lcom/vtosters/lite/fragments/gifts/h;->a(Landroid/content/Context;Lcom/vk/dto/user/UserProfile;Ljava/lang/String;)V
+    invoke-static {v0, v1, v2}, Lcom/vtosters/lite/fragments/gifts/GiftsCatalogFragment;->a(Landroid/content/Context;Lcom/vk/dto/user/UserProfile;Ljava/lang/String;)V
 
     return-void
 .end method

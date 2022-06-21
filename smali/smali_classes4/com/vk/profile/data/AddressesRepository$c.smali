@@ -3,12 +3,12 @@
 .source "AddressesRepository.kt"
 
 # interfaces
-.implements Lc/a/z/g;
+.implements Lio/reactivex/functions/Consumer;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/profile/data/AddressesRepository;->a(Landroid/location/Location;)Lc/a/m;
+    value = Lcom/vk/profile/data/AddressesRepository;->a(Landroid/location/Location;)Lio/reactivex/Observable;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -22,7 +22,7 @@
         "Ljava/lang/Object;",
         ">",
         "Ljava/lang/Object;",
-        "Lc/a/z/g<",
+        "Lio/reactivex/functions/Consumer<",
         "Ljava/util/List<",
         "Lcom/vk/dto/profile/PlainAddress;",
         ">;>;"
@@ -97,7 +97,7 @@
 
     invoke-direct {v0, p0, p1}, Lcom/vk/profile/data/AddressesRepository$c$a;-><init>(Lcom/vk/profile/data/AddressesRepository$c;Ljava/util/List;)V
 
-    invoke-static {v0}, Lcom/vtosters/lite/f0;->c(Ljava/lang/Runnable;)V
+    invoke-static {v0}, Lcom/vtosters/lite/ViewUtils;->c(Ljava/lang/Runnable;)V
 
     return-void
 .end method

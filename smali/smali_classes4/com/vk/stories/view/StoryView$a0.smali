@@ -68,7 +68,7 @@
 
     invoke-direct {v4, p0}, Lcom/vk/stories/view/StoryView$a0$a;-><init>(Lcom/vk/stories/view/StoryView$a0;)V
 
-    invoke-virtual {v0, v1, v2, v3, v4}, Lcom/vk/stories/view/StoryView;->a(Lcom/vk/dto/stories/model/StoryOwner;Landroid/content/Context;Ljava/lang/String;Lcom/vk/common/g/a;)V
+    invoke-virtual {v0, v1, v2, v3, v4}, Lcom/vk/stories/view/StoryView;->a(Lcom/vk/dto/stories/model/StoryOwner;Landroid/content/Context;Ljava/lang/String;Lcom/vk/common/g/F0;)V
 
     return-void
 .end method

@@ -48,36 +48,36 @@
     .locals 3
 
     .line 1
-    sget-object v0, Lcom/vk/music/common/c$a;->j:Lcom/vk/music/common/c$a;
+    sget-object v0, Lcom/vk/music/common/Music$a;->j:Lcom/vk/music/common/Music$a;
 
-    invoke-virtual {v0}, Lcom/vk/music/common/c$a;->f()Lcom/vk/music/restriction/h;
+    invoke-virtual {v0}, Lcom/vk/music/common/Music$a;->f()Lcom/vk/music/restriction/MusicRestrictionManager;
 
     move-result-object v0
 
     .line 2
-    sget-object v1, Lcom/vk/music/common/c$a;->j:Lcom/vk/music/common/c$a;
+    sget-object v1, Lcom/vk/music/common/Music$a;->j:Lcom/vk/music/common/Music$a;
 
-    invoke-virtual {v1}, Lcom/vk/music/common/c$a;->i()Lcom/vk/music/common/c$c;
+    invoke-virtual {v1}, Lcom/vk/music/common/Music$a;->i()Lcom/vk/music/common/Music$c;
 
     move-result-object v1
 
-    invoke-interface {v1}, Lcom/vk/music/common/c$c;->a()Lcom/vk/music/player/d;
+    invoke-interface {v1}, Lcom/vk/music/common/Music$c;->a()Lcom/vk/music/player/PlayerModel;
 
     move-result-object v1
 
     .line 3
-    invoke-interface {v1}, Lcom/vk/music/player/d;->M0()Lcom/vk/music/common/MusicPlaybackLaunchContext;
+    invoke-interface {v1}, Lcom/vk/music/player/PlayerModel;->M0()Lcom/vk/music/common/MusicPlaybackLaunchContext;
 
     move-result-object v1
 
     const-string v2, "newPlayerModel.playingContext"
 
-    invoke-static {v1, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     const-string v2, "background"
 
     .line 4
-    invoke-interface {v0, v2, v1}, Lcom/vk/music/restriction/h;->a(Ljava/lang/String;Lcom/vk/music/common/MusicPlaybackLaunchContext;)V
+    invoke-interface {v0, v2, v1}, Lcom/vk/music/restriction/MusicRestrictionManager;->a(Ljava/lang/String;Lcom/vk/music/common/MusicPlaybackLaunchContext;)V
 
     return-void
 .end method

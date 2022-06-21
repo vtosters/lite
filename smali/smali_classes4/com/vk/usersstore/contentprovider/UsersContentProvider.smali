@@ -19,7 +19,7 @@
 
 
 # instance fields
-.field private a:Lcom/vk/usersstore/contentprovider/a/b;
+.field private a:Lcom/vk/usersstore/contentprovider/a/UsersDbHelper;
 
 .field private b:Landroid/content/UriMatcher;
 
@@ -32,7 +32,7 @@
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, v1}, Lcom/vk/usersstore/contentprovider/UsersContentProvider$a;-><init>(Lkotlin/jvm/internal/i;)V
+    invoke-direct {v0, v1}, Lcom/vk/usersstore/contentprovider/UsersContentProvider$a;-><init>(Lkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     sput-object v0, Lcom/vk/usersstore/contentprovider/UsersContentProvider;->c:Lcom/vk/usersstore/contentprovider/UsersContentProvider$a;
 
@@ -102,7 +102,7 @@
     const-string p1, "uriMatcher"
 
     .line 14
-    invoke-static {p1}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {p1}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     const/4 p1, 0x0
 
@@ -176,7 +176,7 @@
     invoke-virtual {p2, v0, v2}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/Integer;)V
 
     .line 6
-    iget-object v0, p0, Lcom/vk/usersstore/contentprovider/UsersContentProvider;->a:Lcom/vk/usersstore/contentprovider/a/b;
+    iget-object v0, p0, Lcom/vk/usersstore/contentprovider/UsersContentProvider;->a:Lcom/vk/usersstore/contentprovider/a/UsersDbHelper;
 
     const/4 v2, 0x0
 
@@ -227,7 +227,7 @@
     const-string p1, "dbHelper"
 
     .line 9
-    invoke-static {p1}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {p1}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v2
 
@@ -263,7 +263,7 @@
     move-result v0
 
     .line 2
-    iget-object v1, p0, Lcom/vk/usersstore/contentprovider/UsersContentProvider;->a:Lcom/vk/usersstore/contentprovider/a/b;
+    iget-object v1, p0, Lcom/vk/usersstore/contentprovider/UsersContentProvider;->a:Lcom/vk/usersstore/contentprovider/a/UsersDbHelper;
 
     if-eqz v1, :cond_1
 
@@ -317,7 +317,7 @@
     const-string p1, "dbHelper"
 
     .line 6
-    invoke-static {p1}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {p1}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     const/4 p1, 0x0
 
@@ -372,14 +372,14 @@
 
     const-string v1, "context ?: return false"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 2
-    new-instance v1, Lcom/vk/usersstore/contentprovider/a/b;
+    new-instance v1, Lcom/vk/usersstore/contentprovider/a/UsersDbHelper;
 
-    invoke-direct {v1, v0}, Lcom/vk/usersstore/contentprovider/a/b;-><init>(Landroid/content/Context;)V
+    invoke-direct {v1, v0}, Lcom/vk/usersstore/contentprovider/a/UsersDbHelper;-><init>(Landroid/content/Context;)V
 
-    iput-object v1, p0, Lcom/vk/usersstore/contentprovider/UsersContentProvider;->a:Lcom/vk/usersstore/contentprovider/a/b;
+    iput-object v1, p0, Lcom/vk/usersstore/contentprovider/UsersContentProvider;->a:Lcom/vk/usersstore/contentprovider/a/UsersDbHelper;
 
     .line 3
     new-instance v1, Landroid/content/UriMatcher;
@@ -399,7 +399,7 @@
 
     if-eqz v1, :cond_1
 
-    sget-object v4, Lcom/vk/usersstore/contentprovider/a/a;->a:Lcom/vk/usersstore/contentprovider/a/a;
+    sget-object v4, Lcom/vk/usersstore/contentprovider/a/UsersContract;->a:Lcom/vk/usersstore/contentprovider/a/UsersContract;
 
     invoke-virtual {v0}, Landroid/content/Context;->getPackageName()Ljava/lang/String;
 
@@ -407,9 +407,9 @@
 
     const-string v6, "ctx.packageName"
 
-    invoke-static {v5, v6}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v5, v6}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    invoke-virtual {v4, v5}, Lcom/vk/usersstore/contentprovider/a/a;->b(Ljava/lang/String;)Ljava/lang/String;
+    invoke-virtual {v4, v5}, Lcom/vk/usersstore/contentprovider/a/UsersContract;->b(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v4
 
@@ -424,15 +424,15 @@
 
     if-eqz v1, :cond_0
 
-    sget-object v2, Lcom/vk/usersstore/contentprovider/a/a;->a:Lcom/vk/usersstore/contentprovider/a/a;
+    sget-object v2, Lcom/vk/usersstore/contentprovider/a/UsersContract;->a:Lcom/vk/usersstore/contentprovider/a/UsersContract;
 
     invoke-virtual {v0}, Landroid/content/Context;->getPackageName()Ljava/lang/String;
 
     move-result-object v0
 
-    invoke-static {v0, v6}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v6}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    invoke-virtual {v2, v0}, Lcom/vk/usersstore/contentprovider/a/a;->b(Ljava/lang/String;)Ljava/lang/String;
+    invoke-virtual {v2, v0}, Lcom/vk/usersstore/contentprovider/a/UsersContract;->b(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
@@ -447,13 +447,13 @@
     return v0
 
     :cond_0
-    invoke-static {v3}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v3}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v2
 
     .line 6
     :cond_1
-    invoke-static {v3}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v3}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v2
 
@@ -474,7 +474,7 @@
     move-object v1, p0
 
     .line 2
-    iget-object v2, v1, Lcom/vk/usersstore/contentprovider/UsersContentProvider;->a:Lcom/vk/usersstore/contentprovider/a/b;
+    iget-object v2, v1, Lcom/vk/usersstore/contentprovider/UsersContentProvider;->a:Lcom/vk/usersstore/contentprovider/a/UsersDbHelper;
 
     if-eqz v2, :cond_1
 
@@ -507,7 +507,7 @@
 
     move-result-object v0
 
-    invoke-static {v0, v11}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v11}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     return-object v0
 
@@ -550,7 +550,7 @@
 
     move-result-object v0
 
-    invoke-static {v0, v11}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v11}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     return-object v0
 
@@ -558,7 +558,7 @@
     const-string v0, "dbHelper"
 
     .line 6
-    invoke-static {v0}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v0}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     const/4 v0, 0x0
 
@@ -618,7 +618,7 @@
     invoke-virtual {p2, p3, p1}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/Integer;)V
 
     .line 6
-    iget-object p1, p0, Lcom/vk/usersstore/contentprovider/UsersContentProvider;->a:Lcom/vk/usersstore/contentprovider/a/b;
+    iget-object p1, p0, Lcom/vk/usersstore/contentprovider/UsersContentProvider;->a:Lcom/vk/usersstore/contentprovider/a/UsersDbHelper;
 
     if-eqz p1, :cond_1
 
@@ -639,7 +639,7 @@
     :cond_1
     const-string p1, "dbHelper"
 
-    invoke-static {p1}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {p1}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     const/4 p1, 0x0
 

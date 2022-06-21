@@ -3,7 +3,7 @@
 .source "VoipCallActivity.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/b;
+.implements Lkotlin/jvm/b/Functions2;
 
 
 # annotations
@@ -19,14 +19,14 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/b<",
-        "Lkotlin/jvm/b/b<",
+        "Lkotlin/jvm/b/Functions2<",
+        "Lkotlin/jvm/b/Functions2<",
         "-",
         "Ljava/lang/Boolean;",
         "+",
-        "Lkotlin/m;",
+        "Lkotlin/Unit;",
         ">;",
-        "Lkotlin/m;",
+        "Lkotlin/Unit;",
         ">;"
     }
 .end annotation
@@ -51,15 +51,15 @@
 
 
 # virtual methods
-.method public final a(Lkotlin/jvm/b/b;)V
+.method public final a(Lkotlin/jvm/b/Functions2;)V
     .locals 7
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lkotlin/jvm/b/b<",
+            "Lkotlin/jvm/b/Functions2<",
             "-",
             "Ljava/lang/Boolean;",
-            "Lkotlin/m;",
+            "Lkotlin/Unit;",
             ">;)V"
         }
     .end annotation
@@ -78,19 +78,19 @@
     .line 4
     new-instance v5, Lcom/vk/voip/VoipCallActivity$onCreate$4$1;
 
-    invoke-direct {v5, p1}, Lcom/vk/voip/VoipCallActivity$onCreate$4$1;-><init>(Lkotlin/jvm/b/b;)V
+    invoke-direct {v5, p1}, Lcom/vk/voip/VoipCallActivity$onCreate$4$1;-><init>(Lkotlin/jvm/b/Functions2;)V
 
     .line 5
     new-instance v6, Lcom/vk/voip/VoipCallActivity$onCreate$4$2;
 
-    invoke-direct {v6, p1}, Lcom/vk/voip/VoipCallActivity$onCreate$4$2;-><init>(Lkotlin/jvm/b/b;)V
+    invoke-direct {v6, p1}, Lcom/vk/voip/VoipCallActivity$onCreate$4$2;-><init>(Lkotlin/jvm/b/Functions2;)V
 
     const v3, 0x7f120a2c
 
     const v4, 0x7f120a2d
 
     .line 6
-    invoke-virtual/range {v0 .. v6}, Lcom/vk/permission/PermissionHelper;->a(Landroid/app/Activity;[Ljava/lang/String;IILkotlin/jvm/b/a;Lkotlin/jvm/b/b;)Z
+    invoke-virtual/range {v0 .. v6}, Lcom/vk/permission/PermissionHelper;->a(Landroid/app/Activity;[Ljava/lang/String;IILkotlin/jvm/b/Functions;Lkotlin/jvm/b/Functions2;)Z
 
     return-void
 .end method
@@ -99,11 +99,11 @@
     .locals 0
 
     .line 1
-    check-cast p1, Lkotlin/jvm/b/b;
+    check-cast p1, Lkotlin/jvm/b/Functions2;
 
-    invoke-virtual {p0, p1}, Lcom/vk/voip/VoipCallActivity$onCreate$4;->a(Lkotlin/jvm/b/b;)V
+    invoke-virtual {p0, p1}, Lcom/vk/voip/VoipCallActivity$onCreate$4;->a(Lkotlin/jvm/b/Functions2;)V
 
-    sget-object p1, Lkotlin/m;->a:Lkotlin/m;
+    sget-object p1, Lkotlin/Unit;->a:Lkotlin/Unit;
 
     return-object p1
 .end method

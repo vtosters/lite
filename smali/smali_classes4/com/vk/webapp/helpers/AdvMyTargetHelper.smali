@@ -12,21 +12,21 @@
 
 
 # instance fields
-.field private a:Lkotlin/jvm/b/a;
+.field private a:Lkotlin/jvm/b/Functions;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Lkotlin/jvm/b/a<",
-            "Lkotlin/m;",
+            "Lkotlin/jvm/b/Functions<",
+            "Lkotlin/Unit;",
             ">;"
         }
     .end annotation
 .end field
 
-.field private b:Lkotlin/jvm/b/a;
+.field private b:Lkotlin/jvm/b/Functions;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Lkotlin/jvm/b/a<",
-            "Lkotlin/m;",
+            "Lkotlin/jvm/b/Functions<",
+            "Lkotlin/Unit;",
             ">;"
         }
     .end annotation
@@ -51,40 +51,40 @@
     return-void
 .end method
 
-.method public static final synthetic a(Lcom/vk/webapp/helpers/AdvMyTargetHelper;)Lkotlin/jvm/b/a;
+.method public static final synthetic a(Lcom/vk/webapp/helpers/AdvMyTargetHelper;)Lkotlin/jvm/b/Functions;
     .locals 0
 
     .line 1
-    iget-object p0, p0, Lcom/vk/webapp/helpers/AdvMyTargetHelper;->b:Lkotlin/jvm/b/a;
+    iget-object p0, p0, Lcom/vk/webapp/helpers/AdvMyTargetHelper;->b:Lkotlin/jvm/b/Functions;
 
     return-object p0
 .end method
 
-.method public static final synthetic b(Lcom/vk/webapp/helpers/AdvMyTargetHelper;)Lkotlin/jvm/b/a;
+.method public static final synthetic b(Lcom/vk/webapp/helpers/AdvMyTargetHelper;)Lkotlin/jvm/b/Functions;
     .locals 0
 
     .line 1
-    iget-object p0, p0, Lcom/vk/webapp/helpers/AdvMyTargetHelper;->a:Lkotlin/jvm/b/a;
+    iget-object p0, p0, Lcom/vk/webapp/helpers/AdvMyTargetHelper;->a:Lkotlin/jvm/b/Functions;
 
     return-object p0
 .end method
 
 
 # virtual methods
-.method public final a(Lkotlin/jvm/b/a;)Lcom/vk/webapp/helpers/AdvMyTargetHelper;
+.method public final a(Lkotlin/jvm/b/Functions;)Lcom/vk/webapp/helpers/AdvMyTargetHelper;
     .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lkotlin/jvm/b/a<",
-            "Lkotlin/m;",
+            "Lkotlin/jvm/b/Functions<",
+            "Lkotlin/Unit;",
             ">;)",
             "Lcom/vk/webapp/helpers/AdvMyTargetHelper;"
         }
     .end annotation
 
     .line 2
-    iput-object p1, p0, Lcom/vk/webapp/helpers/AdvMyTargetHelper;->b:Lkotlin/jvm/b/a;
+    iput-object p1, p0, Lcom/vk/webapp/helpers/AdvMyTargetHelper;->b:Lkotlin/jvm/b/Functions;
 
     return-object p0
 .end method
@@ -93,18 +93,18 @@
     .locals 2
 
     .line 3
-    new-instance v0, Lcom/my/target/e/a;
+    new-instance v0, Lcom/my/target/e/InterstitialAd;
 
-    invoke-direct {v0, p2, p1}, Lcom/my/target/e/a;-><init>(ILandroid/content/Context;)V
+    invoke-direct {v0, p2, p1}, Lcom/my/target/e/InterstitialAd;-><init>(ILandroid/content/Context;)V
 
     .line 4
-    invoke-virtual {v0}, Lcom/my/target/common/a;->a()Lcom/my/target/common/b;
+    invoke-virtual {v0}, Lcom/my/target/common/BaseAd;->a()Lcom/my/target/common/CustomParams;
 
     move-result-object p1
 
     const-string p2, "ad.customParams"
 
-    invoke-static {p1, p2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, p2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 5
     iget-boolean v1, p0, Lcom/vk/webapp/helpers/AdvMyTargetHelper;->c:Z
@@ -119,7 +119,7 @@
     const/4 v1, 0x1
 
     :goto_0
-    invoke-virtual {p1, v1}, Lcom/my/target/common/b;->b(I)V
+    invoke-virtual {p1, v1}, Lcom/my/target/common/CustomParams;->b(I)V
 
     .line 6
     iget v1, p0, Lcom/vk/webapp/helpers/AdvMyTargetHelper;->d:I
@@ -127,7 +127,7 @@
     if-lez v1, :cond_1
 
     .line 7
-    invoke-virtual {p1, v1}, Lcom/my/target/common/b;->a(I)V
+    invoke-virtual {p1, v1}, Lcom/my/target/common/CustomParams;->a(I)V
 
     .line 8
     :cond_1
@@ -135,7 +135,7 @@
 
     invoke-direct {p1, p0}, Lcom/vk/webapp/helpers/AdvMyTargetHelper$a;-><init>(Lcom/vk/webapp/helpers/AdvMyTargetHelper;)V
 
-    invoke-virtual {v0, p1}, Lcom/my/target/e/a;->a(Lcom/my/target/e/a$b;)V
+    invoke-virtual {v0, p1}, Lcom/my/target/e/InterstitialAd;->a(Lcom/my/target/e/InterstitialAd$b;)V
 
     .line 9
     invoke-virtual {p4}, Ljava/lang/Enum;->name()Ljava/lang/String;
@@ -150,19 +150,19 @@
 
     const-string p4, "(this as java.lang.String).toLowerCase()"
 
-    invoke-static {p1, p4}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, p4}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 10
-    invoke-virtual {v0}, Lcom/my/target/common/a;->a()Lcom/my/target/common/b;
+    invoke-virtual {v0}, Lcom/my/target/common/BaseAd;->a()Lcom/my/target/common/CustomParams;
 
     move-result-object p4
 
-    invoke-static {p4, p2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p4, p2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     const-string p2, "ad_format"
 
     .line 11
-    invoke-virtual {p4, p2, p1}, Lcom/my/target/common/b;->b(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-virtual {p4, p2, p1}, Lcom/my/target/common/CustomParams;->b(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 12
     invoke-static {p3}, Ljava/lang/String;->valueOf(I)Ljava/lang/String;
@@ -171,10 +171,10 @@
 
     const-string p2, "content_id"
 
-    invoke-virtual {p4, p2, p1}, Lcom/my/target/common/b;->b(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-virtual {p4, p2, p1}, Lcom/my/target/common/CustomParams;->b(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 13
-    invoke-virtual {v0}, Lcom/my/target/e/a;->d()V
+    invoke-virtual {v0}, Lcom/my/target/e/InterstitialAd;->d()V
 
     return-void
 
@@ -189,20 +189,20 @@
     throw p1
 .end method
 
-.method public final b(Lkotlin/jvm/b/a;)Lcom/vk/webapp/helpers/AdvMyTargetHelper;
+.method public final b(Lkotlin/jvm/b/Functions;)Lcom/vk/webapp/helpers/AdvMyTargetHelper;
     .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lkotlin/jvm/b/a<",
-            "Lkotlin/m;",
+            "Lkotlin/jvm/b/Functions<",
+            "Lkotlin/Unit;",
             ">;)",
             "Lcom/vk/webapp/helpers/AdvMyTargetHelper;"
         }
     .end annotation
 
     .line 2
-    iput-object p1, p0, Lcom/vk/webapp/helpers/AdvMyTargetHelper;->a:Lkotlin/jvm/b/a;
+    iput-object p1, p0, Lcom/vk/webapp/helpers/AdvMyTargetHelper;->a:Lkotlin/jvm/b/Functions;
 
     return-object p0
 .end method

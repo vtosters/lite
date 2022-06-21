@@ -41,7 +41,7 @@
     .line 1
     iget-object p1, p0, Lcom/vk/stories/view/StoryView$i;->a:Lcom/vk/stories/view/StoryView;
 
-    iget-object v0, p1, Lcom/vk/stories/view/e1;->D:Lcom/vk/dto/stories/model/StoryEntry;
+    iget-object v0, p1, Lcom/vk/stories/view/BaseStoryView;->D:Lcom/vk/dto/stories/model/StoryEntry;
 
     if-eqz v0, :cond_1
 
@@ -49,11 +49,11 @@
 
     if-eqz v0, :cond_1
 
-    iget-boolean v0, p1, Lcom/vk/stories/view/e1;->e:Z
+    iget-boolean v0, p1, Lcom/vk/stories/view/BaseStoryView;->e:Z
 
     if-nez v0, :cond_1
 
-    iget-object v0, p1, Lcom/vk/stories/view/e1;->a:Lcom/vk/stories/view/StoryView$u0;
+    iget-object v0, p1, Lcom/vk/stories/view/BaseStoryView;->a:Lcom/vk/stories/view/StoryView$u0;
 
     if-eqz v0, :cond_1
 
@@ -63,7 +63,7 @@
     .line 3
     iget-object p1, p0, Lcom/vk/stories/view/StoryView$i;->a:Lcom/vk/stories/view/StoryView;
 
-    iget-object p1, p1, Lcom/vk/stories/view/e1;->f:Lcom/vk/dto/stories/model/StoriesContainer;
+    iget-object p1, p1, Lcom/vk/stories/view/BaseStoryView;->f:Lcom/vk/dto/stories/model/StoriesContainer;
 
     invoke-virtual {p1}, Lcom/vk/dto/stories/model/StoriesContainer;->B1()Lcom/vk/dto/narratives/Narrative;
 
@@ -74,13 +74,13 @@
     .line 4
     iget-object p1, p0, Lcom/vk/stories/view/StoryView$i;->a:Lcom/vk/stories/view/StoryView;
 
-    iget-object v0, p1, Lcom/vk/stories/view/e1;->a:Lcom/vk/stories/view/StoryView$u0;
+    iget-object v0, p1, Lcom/vk/stories/view/BaseStoryView;->a:Lcom/vk/stories/view/StoryView$u0;
 
     new-instance v1, Lcom/vtosters/lite/attachments/StoryAttachment;
 
-    iget-object v2, p1, Lcom/vk/stories/view/e1;->D:Lcom/vk/dto/stories/model/StoryEntry;
+    iget-object v2, p1, Lcom/vk/stories/view/BaseStoryView;->D:Lcom/vk/dto/stories/model/StoryEntry;
 
-    iget-object p1, p1, Lcom/vk/stories/view/e1;->f:Lcom/vk/dto/stories/model/StoriesContainer;
+    iget-object p1, p1, Lcom/vk/stories/view/BaseStoryView;->f:Lcom/vk/dto/stories/model/StoriesContainer;
 
     invoke-virtual {p1}, Lcom/vk/dto/stories/model/StoriesContainer;->H1()Lcom/vk/dto/stories/model/StoryOwner;
 
@@ -96,7 +96,7 @@
     :cond_0
     iget-object v0, p0, Lcom/vk/stories/view/StoryView$i;->a:Lcom/vk/stories/view/StoryView;
 
-    iget-object v0, v0, Lcom/vk/stories/view/e1;->a:Lcom/vk/stories/view/StoryView$u0;
+    iget-object v0, v0, Lcom/vk/stories/view/BaseStoryView;->a:Lcom/vk/stories/view/StoryView$u0;
 
     new-instance v1, Lcom/vtosters/lite/attachments/NarrativeAttachment;
 
@@ -107,7 +107,7 @@
     const-string v0, "narrative_share"
 
     .line 6
-    invoke-static {v0}, Lcom/vtosters/lite/data/n;->c(Ljava/lang/String;)Lcom/vtosters/lite/data/n$l;
+    invoke-static {v0}, Lcom/vtosters/lite/data/Analytics;->c(Ljava/lang/String;)Lcom/vtosters/lite/data/Analytics$l;
 
     move-result-object v0
 
@@ -122,7 +122,7 @@
 
     const-string v2, "owner_id"
 
-    invoke-virtual {v0, v2, v1}, Lcom/vtosters/lite/data/n$l;->a(Ljava/lang/String;Ljava/lang/Object;)Lcom/vtosters/lite/data/n$l;
+    invoke-virtual {v0, v2, v1}, Lcom/vtosters/lite/data/Analytics$l;->a(Ljava/lang/String;Ljava/lang/Object;)Lcom/vtosters/lite/data/Analytics$l;
 
     .line 8
     invoke-virtual {p1}, Lcom/vk/dto/narratives/Narrative;->getId()I
@@ -135,10 +135,10 @@
 
     const-string v1, "narrative_id"
 
-    invoke-virtual {v0, v1, p1}, Lcom/vtosters/lite/data/n$l;->a(Ljava/lang/String;Ljava/lang/Object;)Lcom/vtosters/lite/data/n$l;
+    invoke-virtual {v0, v1, p1}, Lcom/vtosters/lite/data/Analytics$l;->a(Ljava/lang/String;Ljava/lang/Object;)Lcom/vtosters/lite/data/Analytics$l;
 
     .line 9
-    invoke-virtual {v0}, Lcom/vtosters/lite/data/n$l;->b()Lcom/vtosters/lite/data/n$l;
+    invoke-virtual {v0}, Lcom/vtosters/lite/data/Analytics$l;->b()Lcom/vtosters/lite/data/Analytics$l;
 
     :cond_1
     :goto_0

@@ -3,7 +3,7 @@
 .source "BannedFragment.kt"
 
 # interfaces
-.implements Lcom/vk/navigation/b0/k;
+.implements Lcom/vk/navigation/b0/FragmentWithoutBottomMenuBar;
 
 
 # annotations
@@ -17,7 +17,7 @@
 
 
 # static fields
-.field static final synthetic E0:[Lkotlin/u/j;
+.field static final synthetic E0:[Lkotlin/u/KProperty5;
 
 .field private static F0:J
 
@@ -29,11 +29,11 @@
 # instance fields
 .field private final A0:Lcom/vk/webapp/fragments/BannedFragment$BannedUserBridge;
 
-.field private final B0:Lkotlin/e;
+.field private final B0:Lkotlin/Lazy2;
 
-.field private final C0:Lkotlin/e;
+.field private final C0:Lkotlin/Lazy2;
 
-.field private final D0:Lkotlin/e;
+.field private final D0:Lkotlin/Lazy2;
 
 
 # direct methods
@@ -42,13 +42,13 @@
 
     const/4 v0, 0x3
 
-    new-array v0, v0, [Lkotlin/u/j;
+    new-array v0, v0, [Lkotlin/u/KProperty5;
 
     new-instance v1, Lkotlin/jvm/internal/PropertyReference1Impl;
 
     const-class v2, Lcom/vk/webapp/fragments/BannedFragment;
 
-    invoke-static {v2}, Lkotlin/jvm/internal/o;->a(Ljava/lang/Class;)Lkotlin/u/c;
+    invoke-static {v2}, Lkotlin/jvm/internal/Reflection;->a(Ljava/lang/Class;)Lkotlin/u/KClass;
 
     move-result-object v2
 
@@ -56,9 +56,9 @@
 
     const-string v4, "getAccessToken()Ljava/lang/String;"
 
-    invoke-direct {v1, v2, v3, v4}, Lkotlin/jvm/internal/PropertyReference1Impl;-><init>(Lkotlin/u/e;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-direct {v1, v2, v3, v4}, Lkotlin/jvm/internal/PropertyReference1Impl;-><init>(Lkotlin/u/KDeclarationContainer;Ljava/lang/String;Ljava/lang/String;)V
 
-    invoke-static {v1}, Lkotlin/jvm/internal/o;->a(Lkotlin/jvm/internal/PropertyReference1;)Lkotlin/u/l;
+    invoke-static {v1}, Lkotlin/jvm/internal/Reflection;->a(Lkotlin/jvm/internal/PropertyReference1;)Lkotlin/u/KProperty2;
 
     const/4 v2, 0x0
 
@@ -68,7 +68,7 @@
 
     const-class v2, Lcom/vk/webapp/fragments/BannedFragment;
 
-    invoke-static {v2}, Lkotlin/jvm/internal/o;->a(Ljava/lang/Class;)Lkotlin/u/c;
+    invoke-static {v2}, Lkotlin/jvm/internal/Reflection;->a(Ljava/lang/Class;)Lkotlin/u/KClass;
 
     move-result-object v2
 
@@ -76,9 +76,9 @@
 
     const-string v4, "getSecret()Ljava/lang/String;"
 
-    invoke-direct {v1, v2, v3, v4}, Lkotlin/jvm/internal/PropertyReference1Impl;-><init>(Lkotlin/u/e;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-direct {v1, v2, v3, v4}, Lkotlin/jvm/internal/PropertyReference1Impl;-><init>(Lkotlin/u/KDeclarationContainer;Ljava/lang/String;Ljava/lang/String;)V
 
-    invoke-static {v1}, Lkotlin/jvm/internal/o;->a(Lkotlin/jvm/internal/PropertyReference1;)Lkotlin/u/l;
+    invoke-static {v1}, Lkotlin/jvm/internal/Reflection;->a(Lkotlin/jvm/internal/PropertyReference1;)Lkotlin/u/KProperty2;
 
     const/4 v2, 0x1
 
@@ -88,7 +88,7 @@
 
     const-class v2, Lcom/vk/webapp/fragments/BannedFragment;
 
-    invoke-static {v2}, Lkotlin/jvm/internal/o;->a(Ljava/lang/Class;)Lkotlin/u/c;
+    invoke-static {v2}, Lkotlin/jvm/internal/Reflection;->a(Ljava/lang/Class;)Lkotlin/u/KClass;
 
     move-result-object v2
 
@@ -96,21 +96,21 @@
 
     const-string v4, "getUserWasLoggedIn()Z"
 
-    invoke-direct {v1, v2, v3, v4}, Lkotlin/jvm/internal/PropertyReference1Impl;-><init>(Lkotlin/u/e;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-direct {v1, v2, v3, v4}, Lkotlin/jvm/internal/PropertyReference1Impl;-><init>(Lkotlin/u/KDeclarationContainer;Ljava/lang/String;Ljava/lang/String;)V
 
-    invoke-static {v1}, Lkotlin/jvm/internal/o;->a(Lkotlin/jvm/internal/PropertyReference1;)Lkotlin/u/l;
+    invoke-static {v1}, Lkotlin/jvm/internal/Reflection;->a(Lkotlin/jvm/internal/PropertyReference1;)Lkotlin/u/KProperty2;
 
     const/4 v2, 0x2
 
     aput-object v1, v0, v2
 
-    sput-object v0, Lcom/vk/webapp/fragments/BannedFragment;->E0:[Lkotlin/u/j;
+    sput-object v0, Lcom/vk/webapp/fragments/BannedFragment;->E0:[Lkotlin/u/KProperty5;
 
     new-instance v0, Lcom/vk/webapp/fragments/BannedFragment$b;
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, v1}, Lcom/vk/webapp/fragments/BannedFragment$b;-><init>(Lkotlin/jvm/internal/i;)V
+    invoke-direct {v0, v1}, Lcom/vk/webapp/fragments/BannedFragment$b;-><init>(Lkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     sput-object v0, Lcom/vk/webapp/fragments/BannedFragment;->H0:Lcom/vk/webapp/fragments/BannedFragment$b;
 
@@ -146,33 +146,33 @@
 
     invoke-direct {v0, p0}, Lcom/vk/webapp/fragments/BannedFragment$accessToken$2;-><init>(Lcom/vk/webapp/fragments/BannedFragment;)V
 
-    invoke-static {v0}, Lkotlin/g;->a(Lkotlin/jvm/b/a;)Lkotlin/e;
+    invoke-static {v0}, Lkotlin/g;->a(Lkotlin/jvm/b/Functions;)Lkotlin/Lazy2;
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/vk/webapp/fragments/BannedFragment;->B0:Lkotlin/e;
+    iput-object v0, p0, Lcom/vk/webapp/fragments/BannedFragment;->B0:Lkotlin/Lazy2;
 
     .line 4
     new-instance v0, Lcom/vk/webapp/fragments/BannedFragment$secret$2;
 
     invoke-direct {v0, p0}, Lcom/vk/webapp/fragments/BannedFragment$secret$2;-><init>(Lcom/vk/webapp/fragments/BannedFragment;)V
 
-    invoke-static {v0}, Lkotlin/g;->a(Lkotlin/jvm/b/a;)Lkotlin/e;
+    invoke-static {v0}, Lkotlin/g;->a(Lkotlin/jvm/b/Functions;)Lkotlin/Lazy2;
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/vk/webapp/fragments/BannedFragment;->C0:Lkotlin/e;
+    iput-object v0, p0, Lcom/vk/webapp/fragments/BannedFragment;->C0:Lkotlin/Lazy2;
 
     .line 5
     new-instance v0, Lcom/vk/webapp/fragments/BannedFragment$userWasLoggedIn$2;
 
     invoke-direct {v0, p0}, Lcom/vk/webapp/fragments/BannedFragment$userWasLoggedIn$2;-><init>(Lcom/vk/webapp/fragments/BannedFragment;)V
 
-    invoke-static {v0}, Lkotlin/g;->a(Lkotlin/jvm/b/a;)Lkotlin/e;
+    invoke-static {v0}, Lkotlin/g;->a(Lkotlin/jvm/b/Functions;)Lkotlin/Lazy2;
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/vk/webapp/fragments/BannedFragment;->D0:Lkotlin/e;
+    iput-object v0, p0, Lcom/vk/webapp/fragments/BannedFragment;->D0:Lkotlin/Lazy2;
 
     return-void
 .end method
@@ -180,15 +180,15 @@
 .method private final A5()Z
     .locals 3
 
-    iget-object v0, p0, Lcom/vk/webapp/fragments/BannedFragment;->D0:Lkotlin/e;
+    iget-object v0, p0, Lcom/vk/webapp/fragments/BannedFragment;->D0:Lkotlin/Lazy2;
 
-    sget-object v1, Lcom/vk/webapp/fragments/BannedFragment;->E0:[Lkotlin/u/j;
+    sget-object v1, Lcom/vk/webapp/fragments/BannedFragment;->E0:[Lkotlin/u/KProperty5;
 
     const/4 v2, 0x2
 
     aget-object v1, v1, v2
 
-    invoke-interface {v0}, Lkotlin/e;->getValue()Ljava/lang/Object;
+    invoke-interface {v0}, Lkotlin/Lazy2;->getValue()Ljava/lang/Object;
 
     move-result-object v0
 
@@ -212,11 +212,11 @@
     return-object p0
 .end method
 
-.method public static final synthetic b(Lcom/vk/webapp/fragments/BannedFragment;)Lcom/vk/webapp/o/c;
+.method public static final synthetic b(Lcom/vk/webapp/fragments/BannedFragment;)Lcom/vk/webapp/o/VkUiFragmentDelegate;
     .locals 0
 
     .line 1
-    invoke-virtual {p0}, Lcom/vk/webapp/VkUiFragment;->a5()Lcom/vk/webapp/o/c;
+    invoke-virtual {p0}, Lcom/vk/webapp/VkUiFragment;->a5()Lcom/vk/webapp/o/VkUiFragmentDelegate;
 
     move-result-object p0
 
@@ -264,15 +264,15 @@
 .method private final y5()Ljava/lang/String;
     .locals 3
 
-    iget-object v0, p0, Lcom/vk/webapp/fragments/BannedFragment;->B0:Lkotlin/e;
+    iget-object v0, p0, Lcom/vk/webapp/fragments/BannedFragment;->B0:Lkotlin/Lazy2;
 
-    sget-object v1, Lcom/vk/webapp/fragments/BannedFragment;->E0:[Lkotlin/u/j;
+    sget-object v1, Lcom/vk/webapp/fragments/BannedFragment;->E0:[Lkotlin/u/KProperty5;
 
     const/4 v2, 0x0
 
     aget-object v1, v1, v2
 
-    invoke-interface {v0}, Lkotlin/e;->getValue()Ljava/lang/Object;
+    invoke-interface {v0}, Lkotlin/Lazy2;->getValue()Ljava/lang/Object;
 
     move-result-object v0
 
@@ -284,15 +284,15 @@
 .method private final z5()Ljava/lang/String;
     .locals 3
 
-    iget-object v0, p0, Lcom/vk/webapp/fragments/BannedFragment;->C0:Lkotlin/e;
+    iget-object v0, p0, Lcom/vk/webapp/fragments/BannedFragment;->C0:Lkotlin/Lazy2;
 
-    sget-object v1, Lcom/vk/webapp/fragments/BannedFragment;->E0:[Lkotlin/u/j;
+    sget-object v1, Lcom/vk/webapp/fragments/BannedFragment;->E0:[Lkotlin/u/KProperty5;
 
     const/4 v2, 0x1
 
     aget-object v1, v1, v2
 
-    invoke-interface {v0}, Lkotlin/e;->getValue()Ljava/lang/Object;
+    invoke-interface {v0}, Lkotlin/Lazy2;->getValue()Ljava/lang/Object;
 
     move-result-object v0
 
@@ -312,13 +312,13 @@
     move-result-object v0
 
     .line 2
-    sget-object v1, Lcom/vk/common/links/c;->p:Lcom/vk/common/links/c$a;
+    sget-object v1, Lcom/vk/common/links/LinkProcessor;->p:Lcom/vk/common/links/LinkProcessor$a;
 
     const-string v2, "uri"
 
-    invoke-static {v0, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    invoke-virtual {v1, v0}, Lcom/vk/common/links/c$a;->c(Landroid/net/Uri;)Z
+    invoke-virtual {v1, v0}, Lcom/vk/common/links/LinkProcessor$a;->c(Landroid/net/Uri;)Z
 
     move-result v1
 
@@ -327,22 +327,22 @@
     if-eqz v1, :cond_0
 
     .line 3
-    invoke-virtual {p0}, Ld/a/a/a/h;->getContext()Landroid/content/Context;
+    invoke-virtual {p0}, Lme/grishka/appkit/fragments/AppKitFragment;->getContext()Landroid/content/Context;
 
     move-result-object v0
 
     if-eqz v0, :cond_3
 
     .line 4
-    new-instance v1, Lcom/vtosters/lite/fragments/j2$g;
+    new-instance v1, Lcom/vtosters/lite/general/fragments/WebViewFragment$g;
 
-    invoke-direct {v1, p1}, Lcom/vtosters/lite/fragments/j2$g;-><init>(Ljava/lang/String;)V
+    invoke-direct {v1, p1}, Lcom/vtosters/lite/general/fragments/WebViewFragment$g;-><init>(Ljava/lang/String;)V
 
     .line 5
-    invoke-virtual {v1}, Lcom/vtosters/lite/fragments/j2$g;->m()Lcom/vtosters/lite/fragments/j2$g;
+    invoke-virtual {v1}, Lcom/vtosters/lite/general/fragments/WebViewFragment$g;->m()Lcom/vtosters/lite/general/fragments/WebViewFragment$g;
 
     .line 6
-    invoke-virtual {v1, v0}, Lcom/vk/navigation/o;->a(Landroid/content/Context;)V
+    invoke-virtual {v1, v0}, Lcom/vk/navigation/Navigator;->a(Landroid/content/Context;)V
 
     goto :goto_0
 
@@ -354,14 +354,14 @@
 
     const-string v3, "/restore"
 
-    invoke-static {v1, v3}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v1, v3}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v1
 
     if-eqz v1, :cond_1
 
     .line 8
-    invoke-static {}, Lcom/vk/bridges/g;->a()Lcom/vk/bridges/f;
+    invoke-static {}, Lcom/vk/bridges/AuthBridge;->a()Lcom/vk/bridges/AuthBridge3;
 
     move-result-object v3
 
@@ -377,7 +377,7 @@
 
     move-object v6, p1
 
-    invoke-static/range {v3 .. v9}, Lcom/vk/bridges/f$a;->a(Lcom/vk/bridges/f;Lcom/vk/core/fragments/FragmentImpl;ILjava/lang/String;Ljava/lang/String;ILjava/lang/Object;)V
+    invoke-static/range {v3 .. v9}, Lcom/vk/bridges/AuthBridge$a;->a(Lcom/vk/bridges/AuthBridge3;Lcom/vk/core/fragments/FragmentImpl;ILjava/lang/String;Ljava/lang/String;ILjava/lang/Object;)V
 
     goto :goto_0
 
@@ -389,25 +389,25 @@
 
     const-string v1, "/support"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v0
 
     if-eqz v0, :cond_2
 
     .line 10
-    invoke-virtual {p0}, Ld/a/a/a/h;->getContext()Landroid/content/Context;
+    invoke-virtual {p0}, Lme/grishka/appkit/fragments/AppKitFragment;->getContext()Landroid/content/Context;
 
     move-result-object v0
 
     if-eqz v0, :cond_3
 
     .line 11
-    sget-object v1, Lcom/vk/webapp/fragments/e;->B0:Lcom/vk/webapp/fragments/e$a;
+    sget-object v1, Lcom/vk/webapp/fragments/HelpFragment;->B0:Lcom/vk/webapp/fragments/HelpFragment$a;
 
     const-string v3, "it"
 
-    invoke-static {v0, v3}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v3}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-direct {p0}, Lcom/vk/webapp/fragments/BannedFragment;->y5()Ljava/lang/String;
 
@@ -417,7 +417,7 @@
 
     move-result-object v4
 
-    invoke-virtual {v1, v0, v3, v4, p1}, Lcom/vk/webapp/fragments/e$a;->a(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-virtual {v1, v0, v3, v4, p1}, Lcom/vk/webapp/fragments/HelpFragment$a;->a(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
 
     goto :goto_0
 
@@ -432,7 +432,7 @@
     return v2
 .end method
 
-.method public bridge synthetic Z4()Lcom/vk/webapp/bridges/a;
+.method public bridge synthetic Z4()Lcom/vk/webapp/bridges/AndroidBridge;
     .locals 1
 
     .line 1
@@ -456,7 +456,7 @@
     .locals 1
 
     .line 1
-    sget-object v0, Lcom/vk/bridges/t;->b:Ljava/lang/String;
+    sget-object v0, Lcom/vk/bridges/AuthBridge2;->b:Ljava/lang/String;
 
     return-object v0
 .end method
@@ -491,18 +491,18 @@
     if-nez v0, :cond_1
 
     .line 2
-    invoke-static {}, Lcom/vk/bridges/g;->a()Lcom/vk/bridges/f;
+    invoke-static {}, Lcom/vk/bridges/AuthBridge;->a()Lcom/vk/bridges/AuthBridge3;
 
     move-result-object v0
 
-    invoke-interface {v0}, Lcom/vk/bridges/f;->a()Z
+    invoke-interface {v0}, Lcom/vk/bridges/AuthBridge3;->a()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
     .line 3
-    invoke-static {}, Lcom/vk/bridges/g;->a()Lcom/vk/bridges/f;
+    invoke-static {}, Lcom/vk/bridges/AuthBridge;->a()Lcom/vk/bridges/AuthBridge3;
 
     move-result-object v0
 
@@ -510,7 +510,7 @@
 
     move-result-object v2
 
-    invoke-interface {v0, v2, v1}, Lcom/vk/bridges/f;->a(Ljava/lang/String;Z)V
+    invoke-interface {v0, v2, v1}, Lcom/vk/bridges/AuthBridge3;->a(Ljava/lang/String;Z)V
 
     :cond_0
     const/4 v0, 0x0
@@ -536,9 +536,9 @@
     if-ne p2, p1, :cond_1
 
     .line 1
-    sget-object p1, Lcom/vk/auth/c;->a:Lcom/vk/auth/c;
+    sget-object p1, Lcom/vk/auth/AuthIntentHelper;->a:Lcom/vk/auth/AuthIntentHelper;
 
-    invoke-virtual {p1, p3}, Lcom/vk/auth/c;->a(Landroid/content/Intent;)Lcom/vk/auth/api/models/AuthResult;
+    invoke-virtual {p1, p3}, Lcom/vk/auth/AuthIntentHelper;->a(Landroid/content/Intent;)Lcom/vk/auth/api/models/AuthResult;
 
     move-result-object p1
 

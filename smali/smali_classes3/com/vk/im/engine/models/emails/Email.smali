@@ -3,7 +3,7 @@
 .source "Email.kt"
 
 # interfaces
-.implements Lcom/vk/im/engine/models/j;
+.implements Lcom/vk/im/engine/models/Profile;
 
 
 # annotations
@@ -40,7 +40,7 @@
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, v1}, Lcom/vk/im/engine/models/emails/Email$b;-><init>(Lkotlin/jvm/internal/i;)V
+    invoke-direct {v0, v1}, Lcom/vk/im/engine/models/emails/Email$b;-><init>(Lkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     .line 1
     new-instance v0, Lcom/vk/im/engine/models/emails/Email$a;
@@ -62,7 +62,7 @@
 
     const/4 v2, 0x3
 
-    invoke-direct {p0, v1, v0, v2, v0}, Lcom/vk/im/engine/models/emails/Email;-><init>(ILjava/lang/String;ILkotlin/jvm/internal/i;)V
+    invoke-direct {p0, v1, v0, v2, v0}, Lcom/vk/im/engine/models/emails/Email;-><init>(ILjava/lang/String;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     return-void
 .end method
@@ -80,7 +80,7 @@
     return-void
 .end method
 
-.method public synthetic constructor <init>(ILjava/lang/String;ILkotlin/jvm/internal/i;)V
+.method public synthetic constructor <init>(ILjava/lang/String;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
     .locals 0
 
     and-int/lit8 p4, p3, 0x1
@@ -125,14 +125,14 @@
 
     .line 10
     :cond_0
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     const/4 p1, 0x0
 
     throw p1
 .end method
 
-.method public synthetic constructor <init>(Lcom/vk/core/serialize/Serializer;Lkotlin/jvm/internal/i;)V
+.method public synthetic constructor <init>(Lcom/vk/core/serialize/Serializer;Lkotlin/jvm/internal/DefaultConstructorMarker;)V
     .locals 0
 
     .line 1
@@ -164,7 +164,7 @@
     .locals 1
 
     .line 1
-    invoke-static {p0}, Lcom/vk/im/engine/models/j$b;->e(Lcom/vk/im/engine/models/j;)Z
+    invoke-static {p0}, Lcom/vk/im/engine/models/Profile$b;->e(Lcom/vk/im/engine/models/Profile;)Z
 
     move-result v0
 
@@ -195,7 +195,7 @@
     .locals 1
 
     .line 1
-    invoke-static {p0}, Lcom/vk/im/engine/models/j$b;->j(Lcom/vk/im/engine/models/j;)Z
+    invoke-static {p0}, Lcom/vk/im/engine/models/Profile$b;->j(Lcom/vk/im/engine/models/Profile;)Z
 
     move-result v0
 
@@ -206,7 +206,7 @@
     .locals 1
 
     .line 1
-    invoke-static {p0}, Lcom/vk/im/engine/models/j$b;->l(Lcom/vk/im/engine/models/j;)Z
+    invoke-static {p0}, Lcom/vk/im/engine/models/Profile$b;->l(Lcom/vk/im/engine/models/Profile;)Z
 
     move-result v0
 
@@ -217,7 +217,7 @@
     .locals 1
 
     .line 1
-    invoke-static {p0}, Lcom/vk/im/engine/models/j$b;->k(Lcom/vk/im/engine/models/j;)Lcom/vk/im/engine/models/users/UserSex;
+    invoke-static {p0}, Lcom/vk/im/engine/models/Profile$b;->k(Lcom/vk/im/engine/models/Profile;)Lcom/vk/im/engine/models/users/UserSex;
 
     move-result-object v0
 
@@ -228,7 +228,7 @@
     .locals 1
 
     .line 1
-    invoke-static {p0}, Lcom/vk/im/engine/models/j$b;->g(Lcom/vk/im/engine/models/j;)Ljava/lang/String;
+    invoke-static {p0}, Lcom/vk/im/engine/models/Profile$b;->g(Lcom/vk/im/engine/models/Profile;)Ljava/lang/String;
 
     move-result-object v0
 
@@ -239,7 +239,7 @@
     .locals 0
 
     .line 1
-    invoke-static {p0, p1}, Lcom/vk/im/engine/models/j$b;->c(Lcom/vk/im/engine/models/j;Lcom/vk/im/engine/models/users/UserNameCase;)Ljava/lang/String;
+    invoke-static {p0, p1}, Lcom/vk/im/engine/models/Profile$b;->c(Lcom/vk/im/engine/models/Profile;Lcom/vk/im/engine/models/users/UserNameCase;)Ljava/lang/String;
 
     move-result-object p1
 
@@ -268,7 +268,7 @@
     .locals 1
 
     .line 1
-    invoke-static {p0}, Lcom/vk/im/engine/models/j$b;->h(Lcom/vk/im/engine/models/j;)Ljava/lang/String;
+    invoke-static {p0}, Lcom/vk/im/engine/models/Profile$b;->h(Lcom/vk/im/engine/models/Profile;)Ljava/lang/String;
 
     move-result-object v0
 
@@ -279,7 +279,7 @@
     .locals 0
 
     .line 1
-    invoke-static {p0, p1}, Lcom/vk/im/engine/models/j$b;->b(Lcom/vk/im/engine/models/j;Lcom/vk/im/engine/models/users/UserNameCase;)Ljava/lang/String;
+    invoke-static {p0, p1}, Lcom/vk/im/engine/models/Profile$b;->b(Lcom/vk/im/engine/models/Profile;Lcom/vk/im/engine/models/users/UserNameCase;)Ljava/lang/String;
 
     move-result-object p1
 
@@ -290,7 +290,7 @@
     .locals 1
 
     .line 1
-    invoke-static {p0}, Lcom/vk/im/engine/models/j$b;->d(Lcom/vk/im/engine/models/j;)Ljava/lang/String;
+    invoke-static {p0}, Lcom/vk/im/engine/models/Profile$b;->d(Lcom/vk/im/engine/models/Profile;)Ljava/lang/String;
 
     move-result-object v0
 
@@ -301,7 +301,7 @@
     .locals 0
 
     .line 1
-    invoke-static {p0, p1}, Lcom/vk/im/engine/models/j$b;->a(Lcom/vk/im/engine/models/j;Lcom/vk/im/engine/models/users/UserNameCase;)Ljava/lang/String;
+    invoke-static {p0, p1}, Lcom/vk/im/engine/models/Profile$b;->a(Lcom/vk/im/engine/models/Profile;Lcom/vk/im/engine/models/users/UserNameCase;)Ljava/lang/String;
 
     move-result-object p1
 
@@ -312,7 +312,7 @@
     .locals 1
 
     .line 1
-    invoke-static {p0}, Lcom/vk/im/engine/models/j$b;->b(Lcom/vk/im/engine/models/j;)Z
+    invoke-static {p0}, Lcom/vk/im/engine/models/Profile$b;->b(Lcom/vk/im/engine/models/Profile;)Z
 
     move-result v0
 
@@ -323,7 +323,7 @@
     .locals 1
 
     .line 1
-    invoke-static {p0}, Lcom/vk/im/engine/models/j$b;->i(Lcom/vk/im/engine/models/j;)Lcom/vk/dto/user/OnlineInfo;
+    invoke-static {p0}, Lcom/vk/im/engine/models/Profile$b;->i(Lcom/vk/im/engine/models/Profile;)Lcom/vk/dto/user/OnlineInfo;
 
     move-result-object v0
 
@@ -355,7 +355,7 @@
 
     iget-object p1, p1, Lcom/vk/im/engine/models/emails/Email;->b:Ljava/lang/String;
 
-    invoke-static {v0, p1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v0, p1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result p1
 
@@ -379,7 +379,7 @@
     .locals 1
 
     .line 1
-    invoke-static {p0}, Lcom/vk/im/engine/models/j$b;->c(Lcom/vk/im/engine/models/j;)I
+    invoke-static {p0}, Lcom/vk/im/engine/models/Profile$b;->c(Lcom/vk/im/engine/models/Profile;)I
 
     move-result v0
 
@@ -390,7 +390,7 @@
     .locals 1
 
     .line 1
-    invoke-static {p0}, Lcom/vk/im/engine/models/j$b;->a(Lcom/vk/im/engine/models/j;)Lcom/vk/im/engine/models/ImageList;
+    invoke-static {p0}, Lcom/vk/im/engine/models/Profile$b;->a(Lcom/vk/im/engine/models/Profile;)Lcom/vk/im/engine/models/ImageList;
 
     move-result-object v0
 

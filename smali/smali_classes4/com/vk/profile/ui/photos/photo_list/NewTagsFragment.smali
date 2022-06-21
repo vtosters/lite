@@ -3,7 +3,7 @@
 .source "NewTagsFragment.kt"
 
 # interfaces
-.implements Lcom/vk/lists/t$l;
+.implements Lcom/vk/lists/PaginationHelper$l;
 
 
 # annotations
@@ -25,7 +25,7 @@
     .end annotation
 .end field
 
-.field private final V:Lcom/vk/profile/ui/photos/a;
+.field private final V:Lcom/vk/profile/ui/photos/PhotoListAdapter;
 
 .field private W:Lcom/vk/profile/ui/photos/photo_list/PhotoListFragmentPresenter;
 
@@ -45,7 +45,7 @@
     iput-object v0, p0, Lcom/vk/profile/ui/photos/photo_list/NewTagsFragment;->U:Landroid/util/SparseArray;
 
     .line 3
-    new-instance v0, Lcom/vk/profile/ui/photos/a;
+    new-instance v0, Lcom/vk/profile/ui/photos/PhotoListAdapter;
 
     new-instance v2, Lcom/vk/profile/ui/photos/photo_list/NewTagsFragment$photosAdapter$1;
 
@@ -65,9 +65,9 @@
     move-object v1, v0
 
     .line 5
-    invoke-direct/range {v1 .. v6}, Lcom/vk/profile/ui/photos/a;-><init>(Lkotlin/jvm/b/b;Lkotlin/jvm/b/b;IILkotlin/jvm/internal/i;)V
+    invoke-direct/range {v1 .. v6}, Lcom/vk/profile/ui/photos/PhotoListAdapter;-><init>(Lkotlin/jvm/b/Functions2;Lkotlin/jvm/b/Functions2;IILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
-    iput-object v0, p0, Lcom/vk/profile/ui/photos/photo_list/NewTagsFragment;->V:Lcom/vk/profile/ui/photos/a;
+    iput-object v0, p0, Lcom/vk/profile/ui/photos/photo_list/NewTagsFragment;->V:Lcom/vk/profile/ui/photos/PhotoListAdapter;
 
     .line 6
     new-instance v0, Lcom/vk/profile/ui/photos/photo_list/NewTagsFragment$b;
@@ -85,11 +85,11 @@
     .locals 1
 
     .line 1
-    invoke-virtual {p0}, Lcom/vk/profile/ui/photos/photo_list/NewTagsFragment;->Z4()Lcom/vk/profile/ui/photos/a;
+    invoke-virtual {p0}, Lcom/vk/profile/ui/photos/photo_list/NewTagsFragment;->Z4()Lcom/vk/profile/ui/photos/PhotoListAdapter;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/vk/profile/ui/photos/a;->getItemCount()I
+    invoke-virtual {v0}, Lcom/vk/profile/ui/photos/PhotoListAdapter;->getItemCount()I
 
     move-result v0
 
@@ -110,28 +110,28 @@
     .locals 3
 
     .line 1
-    invoke-virtual {p0}, Lcom/vk/profile/ui/photos/photo_list/PhotoListFragmentNew;->U4()Lcom/vk/profile/adapter/a;
+    invoke-virtual {p0}, Lcom/vk/profile/ui/photos/photo_list/PhotoListFragmentNew;->U4()Lcom/vk/profile/adapter/InfoItemsAdapter;
 
     move-result-object v0
 
-    new-instance v1, Lcom/vk/profile/ui/photos/photo_list/a;
+    new-instance v1, Lcom/vk/profile/ui/photos/photo_list/PhotoAlbumHeaderItem;
 
     new-instance v2, Lcom/vk/profile/ui/photos/photo_list/NewTagsFragment$createHeaderItems$1;
 
     invoke-direct {v2, p0}, Lcom/vk/profile/ui/photos/photo_list/NewTagsFragment$createHeaderItems$1;-><init>(Lcom/vk/profile/ui/photos/photo_list/NewTagsFragment;)V
 
-    invoke-direct {v1, v2}, Lcom/vk/profile/ui/photos/photo_list/a;-><init>(Lkotlin/jvm/b/a;)V
+    invoke-direct {v1, v2}, Lcom/vk/profile/ui/photos/photo_list/PhotoAlbumHeaderItem;-><init>(Lkotlin/jvm/b/Functions;)V
 
-    invoke-virtual {v0, v1}, Lcom/vk/lists/i0;->b(Ljava/lang/Object;)V
+    invoke-virtual {v0, v1}, Lcom/vk/lists/SimpleAdapter;->b(Ljava/lang/Object;)V
 
     return-void
 .end method
 
-.method protected Z4()Lcom/vk/profile/ui/photos/a;
+.method protected Z4()Lcom/vk/profile/ui/photos/PhotoListAdapter;
     .locals 1
 
     .line 1
-    iget-object v0, p0, Lcom/vk/profile/ui/photos/photo_list/NewTagsFragment;->V:Lcom/vk/profile/ui/photos/a;
+    iget-object v0, p0, Lcom/vk/profile/ui/photos/photo_list/NewTagsFragment;->V:Lcom/vk/profile/ui/photos/PhotoListAdapter;
 
     return-object v0
 .end method
@@ -140,34 +140,34 @@
     .locals 1
 
     .line 1
-    invoke-virtual {p0}, Lcom/vk/profile/ui/photos/photo_list/NewTagsFragment;->Z4()Lcom/vk/profile/ui/photos/a;
+    invoke-virtual {p0}, Lcom/vk/profile/ui/photos/photo_list/NewTagsFragment;->Z4()Lcom/vk/profile/ui/photos/PhotoListAdapter;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/vk/profile/ui/photos/a;->clear()V
+    invoke-virtual {v0}, Lcom/vk/profile/ui/photos/PhotoListAdapter;->clear()V
 
     return-void
 .end method
 
-.method protected g5()Lcom/vk/lists/t$k;
+.method protected g5()Lcom/vk/lists/PaginationHelper$k;
     .locals 2
 
     .line 1
-    invoke-super {p0}, Lcom/vk/profile/ui/photos/photo_list/PhotoListFragmentNew;->g5()Lcom/vk/lists/t$k;
+    invoke-super {p0}, Lcom/vk/profile/ui/photos/photo_list/PhotoListFragmentNew;->g5()Lcom/vk/lists/PaginationHelper$k;
 
     move-result-object v0
 
     .line 2
-    invoke-virtual {v0, p0}, Lcom/vk/lists/t$k;->a(Lcom/vk/lists/t$l;)Lcom/vk/lists/t$k;
+    invoke-virtual {v0, p0}, Lcom/vk/lists/PaginationHelper$k;->a(Lcom/vk/lists/PaginationHelper$l;)Lcom/vk/lists/PaginationHelper$k;
 
     const-string v1, "super.paginatorBuilder()\u2026setDataInfoProvider(this)"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     return-object v0
 .end method
 
-.method public bridge synthetic getPresenter()Lb/h/r/c;
+.method public bridge synthetic getPresenter()Lb/h/r/BaseScreenContract;
     .locals 1
 
     .line 1
@@ -225,7 +225,7 @@
 
     if-eqz p1, :cond_0
 
-    invoke-static {}, Lcom/vk/profile/ui/photos/album_list/a;->a()Lcom/vk/dto/photo/PhotoAlbum;
+    invoke-static {}, Lcom/vk/profile/ui/photos/album_list/PhotoAlbumsUtils;->a()Lcom/vk/dto/photo/PhotoAlbum;
 
     move-result-object v0
 
@@ -234,7 +234,7 @@
     return-void
 
     :cond_0
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     const/4 p1, 0x0
 
@@ -245,7 +245,7 @@
     .locals 0
 
     .line 1
-    invoke-super {p0, p1, p2}, Lcom/vk/core/fragments/c;->onViewCreated(Landroid/view/View;Landroid/os/Bundle;)V
+    invoke-super {p0, p1, p2}, Lcom/vk/core/fragments/BaseMvpFragment;->onViewCreated(Landroid/view/View;Landroid/os/Bundle;)V
 
     const p2, 0x7f0a0d9d
 
@@ -256,7 +256,7 @@
 
     const-string p2, "view.findViewById(R.id.toolbar)"
 
-    invoke-static {p1, p2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, p2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     check-cast p1, Landroidx/appcompat/widget/Toolbar;
 
@@ -284,7 +284,7 @@
     return-void
 
     :cond_0
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     const/4 p1, 0x0
 

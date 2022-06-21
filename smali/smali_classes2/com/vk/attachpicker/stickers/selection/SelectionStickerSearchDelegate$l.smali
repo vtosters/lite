@@ -3,7 +3,7 @@
 .source "SelectionStickerSearchDelegate.kt"
 
 # interfaces
-.implements Lc/a/z/g;
+.implements Lio/reactivex/functions/Consumer;
 
 
 # annotations
@@ -22,7 +22,7 @@
         "Ljava/lang/Object;",
         ">",
         "Ljava/lang/Object;",
-        "Lc/a/z/g<",
+        "Lio/reactivex/functions/Consumer<",
         "Ljava/lang/String;",
         ">;"
     }
@@ -52,13 +52,13 @@
     .line 1
     iget-object p1, p0, Lcom/vk/attachpicker/stickers/selection/SelectionStickerSearchDelegate$l;->a:Lcom/vk/attachpicker/stickers/selection/SelectionStickerSearchDelegate;
 
-    invoke-static {p1}, Lcom/vk/attachpicker/stickers/selection/SelectionStickerSearchDelegate;->e(Lcom/vk/attachpicker/stickers/selection/SelectionStickerSearchDelegate;)Lio/reactivex/disposables/b;
+    invoke-static {p1}, Lcom/vk/attachpicker/stickers/selection/SelectionStickerSearchDelegate;->e(Lcom/vk/attachpicker/stickers/selection/SelectionStickerSearchDelegate;)Lio/reactivex/disposables/Disposable;
 
     move-result-object p1
 
     if-eqz p1, :cond_0
 
-    invoke-interface {p1}, Lio/reactivex/disposables/b;->o()V
+    invoke-interface {p1}, Lio/reactivex/disposables/Disposable;->o()V
 
     .line 2
     :cond_0

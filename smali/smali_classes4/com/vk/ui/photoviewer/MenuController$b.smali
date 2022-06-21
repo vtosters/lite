@@ -3,7 +3,7 @@
 .source "MenuController.kt"
 
 # interfaces
-.implements Lc/a/z/g;
+.implements Lio/reactivex/functions/Consumer;
 
 
 # annotations
@@ -22,7 +22,7 @@
         "Ljava/lang/Object;",
         ">",
         "Ljava/lang/Object;",
-        "Lc/a/z/g<",
+        "Lio/reactivex/functions/Consumer<",
         "Ljava/lang/Boolean;",
         ">;"
     }
@@ -95,7 +95,7 @@
 
     const-string v0, "Intent(UploadUtils.Uploa\u2026tra(\"oid\", photo.ownerID)"
 
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 5
     iget-object v0, p0, Lcom/vk/ui/photoviewer/MenuController$b;->a:Lcom/vk/ui/photoviewer/MenuController;

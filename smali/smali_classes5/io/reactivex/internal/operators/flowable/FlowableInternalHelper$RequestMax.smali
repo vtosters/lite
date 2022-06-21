@@ -3,7 +3,7 @@
 .source "FlowableInternalHelper.java"
 
 # interfaces
-.implements Lc/a/z/g;
+.implements Lio/reactivex/functions/Consumer;
 
 
 # annotations
@@ -12,8 +12,8 @@
         "Ljava/lang/Enum<",
         "Lio/reactivex/internal/operators/flowable/FlowableInternalHelper$RequestMax;",
         ">;",
-        "Lc/a/z/g<",
-        "Le/b/d;",
+        "Lio/reactivex/functions/Consumer<",
+        "Le/b/Subscription;",
         ">;"
     }
 .end annotation
@@ -100,7 +100,7 @@
 
 
 # virtual methods
-.method public a(Le/b/d;)V
+.method public a(Le/b/Subscription;)V
     .locals 2
     .annotation system Ldalvik/annotation/Throws;
         value = {
@@ -111,7 +111,7 @@
     const-wide v0, 0x7fffffffffffffffL
 
     .line 1
-    invoke-interface {p1, v0, v1}, Le/b/d;->a(J)V
+    invoke-interface {p1, v0, v1}, Le/b/Subscription;->a(J)V
 
     return-void
 .end method
@@ -125,9 +125,9 @@
     .end annotation
 
     .line 1
-    check-cast p1, Le/b/d;
+    check-cast p1, Le/b/Subscription;
 
-    invoke-virtual {p0, p1}, Lio/reactivex/internal/operators/flowable/FlowableInternalHelper$RequestMax;->a(Le/b/d;)V
+    invoke-virtual {p0, p1}, Lio/reactivex/internal/operators/flowable/FlowableInternalHelper$RequestMax;->a(Le/b/Subscription;)V
 
     return-void
 .end method

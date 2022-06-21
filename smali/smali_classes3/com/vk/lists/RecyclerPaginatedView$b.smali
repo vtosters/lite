@@ -41,12 +41,12 @@
     .line 1
     iget-object v0, p0, Lcom/vk/lists/RecyclerPaginatedView$b;->a:Lcom/vk/lists/RecyclerPaginatedView;
 
-    iget-object v0, v0, Lcom/vk/lists/RecyclerPaginatedView;->P:Lkotlin/jvm/b/a;
+    iget-object v0, v0, Lcom/vk/lists/RecyclerPaginatedView;->P:Lkotlin/jvm/b/Functions;
 
     if-eqz v0, :cond_0
 
     .line 2
-    invoke-interface {v0}, Lkotlin/jvm/b/a;->invoke()Ljava/lang/Object;
+    invoke-interface {v0}, Lkotlin/jvm/b/Functions;->invoke()Ljava/lang/Object;
 
     :cond_0
     return-void

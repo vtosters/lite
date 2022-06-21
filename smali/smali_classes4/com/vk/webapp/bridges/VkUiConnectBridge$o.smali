@@ -52,7 +52,7 @@
     .line 1
     iget-object v0, p0, Lcom/vk/webapp/bridges/VkUiConnectBridge$o;->a:Lcom/vk/webapp/bridges/VkUiConnectBridge;
 
-    invoke-static {v0}, Lcom/vk/webapp/bridges/VkUiConnectBridge;->a(Lcom/vk/webapp/bridges/VkUiConnectBridge;)Lcom/vk/webapp/o/b;
+    invoke-static {v0}, Lcom/vk/webapp/bridges/VkUiConnectBridge;->a(Lcom/vk/webapp/bridges/VkUiConnectBridge;)Lcom/vk/webapp/o/VkUiConnectFragmentDelegate;
 
     move-result-object v0
 
@@ -60,17 +60,17 @@
 
     const-string v2, "appId"
 
-    invoke-static {v1, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     iget-object v2, p0, Lcom/vk/webapp/bridges/VkUiConnectBridge$o;->c:Ljava/lang/String;
 
     const-string v3, "action"
 
-    invoke-static {v2, v3}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v2, v3}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     iget-object v3, p0, Lcom/vk/webapp/bridges/VkUiConnectBridge$o;->d:Ljava/lang/String;
 
-    invoke-interface {v0, v1, v2, v3}, Lcom/vk/webapp/o/b;->a(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-interface {v0, v1, v2, v3}, Lcom/vk/webapp/o/VkUiConnectFragmentDelegate;->a(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
 
     return-void
 .end method

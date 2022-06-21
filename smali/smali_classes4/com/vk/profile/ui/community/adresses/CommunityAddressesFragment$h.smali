@@ -3,7 +3,7 @@
 .source "CommunityAddressesFragment.kt"
 
 # interfaces
-.implements Lb/d/b/a/f/c$e;
+.implements Lb/d/b/a/f/ClusterManager$e;
 
 
 # annotations
@@ -19,11 +19,11 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "<T::",
-        "Lb/d/b/a/f/b;",
+        "Lb/d/b/a/f/ClusterItem;",
         ">",
         "Ljava/lang/Object;",
-        "Lb/d/b/a/f/c$e<",
-        "Lcom/vk/profile/data/a;",
+        "Lb/d/b/a/f/ClusterManager$e<",
+        "Lcom/vk/profile/data/AddressClusterAdapter;",
         ">;"
     }
 .end annotation
@@ -46,24 +46,24 @@
 
 
 # virtual methods
-.method public bridge synthetic a(Lb/d/b/a/f/b;)Z
+.method public bridge synthetic a(Lb/d/b/a/f/ClusterItem;)Z
     .locals 0
 
     .line 1
-    check-cast p1, Lcom/vk/profile/data/a;
+    check-cast p1, Lcom/vk/profile/data/AddressClusterAdapter;
 
-    invoke-virtual {p0, p1}, Lcom/vk/profile/ui/community/adresses/CommunityAddressesFragment$h;->a(Lcom/vk/profile/data/a;)Z
+    invoke-virtual {p0, p1}, Lcom/vk/profile/ui/community/adresses/CommunityAddressesFragment$h;->a(Lcom/vk/profile/data/AddressClusterAdapter;)Z
 
     move-result p1
 
     return p1
 .end method
 
-.method public final a(Lcom/vk/profile/data/a;)Z
+.method public final a(Lcom/vk/profile/data/AddressClusterAdapter;)Z
     .locals 3
 
     .line 2
-    invoke-virtual {p1}, Lcom/vk/profile/data/a;->a()Lcom/vk/dto/profile/PlainAddress;
+    invoke-virtual {p1}, Lcom/vk/profile/data/AddressClusterAdapter;->a()Lcom/vk/dto/profile/PlainAddress;
 
     move-result-object v0
 
@@ -81,7 +81,7 @@
     .line 4
     iget-object v0, p0, Lcom/vk/profile/ui/community/adresses/CommunityAddressesFragment$h;->a:Lcom/vk/profile/ui/community/adresses/CommunityAddressesFragment;
 
-    invoke-static {v0, p1}, Lcom/vk/profile/ui/community/adresses/CommunityAddressesFragment;->a(Lcom/vk/profile/ui/community/adresses/CommunityAddressesFragment;Lcom/vk/profile/data/a;)V
+    invoke-static {v0, p1}, Lcom/vk/profile/ui/community/adresses/CommunityAddressesFragment;->a(Lcom/vk/profile/ui/community/adresses/CommunityAddressesFragment;Lcom/vk/profile/data/AddressClusterAdapter;)V
 
     const/4 p1, 0x1
 

@@ -32,15 +32,15 @@
 
 
 # instance fields
-.field private final loadCmdProvider:Lkotlin/jvm/b/d;
+.field private final loadCmdProvider:Lkotlin/jvm/b/Functions4;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Lkotlin/jvm/b/d<",
+            "Lkotlin/jvm/b/Functions4<",
             "Lcom/vk/im/engine/models/Source;",
             "Lcom/vk/im/ui/components/contacts/SortOrder;",
             "Ljava/lang/Boolean;",
-            "Lcom/vk/im/engine/i/c<",
-            "Lcom/vk/im/ui/components/contacts/a;",
+            "Lcom/vk/im/engine/i/ImEngineCmd<",
+            "Lcom/vk/im/ui/components/contacts/ContactsList;",
             ">;>;"
         }
     .end annotation
@@ -131,7 +131,7 @@
     const-string v4, "CREATE_CONVERSATION_VKME"
 
     .line 6
-    invoke-direct {v2, v4, v5, v0, v3}, Lcom/vk/im/ui/components/contacts/ContactsListFactory;-><init>(Ljava/lang/String;ILjava/util/Set;Lkotlin/jvm/b/d;)V
+    invoke-direct {v2, v4, v5, v0, v3}, Lcom/vk/im/ui/components/contacts/ContactsListFactory;-><init>(Ljava/lang/String;ILjava/util/Set;Lkotlin/jvm/b/Functions4;)V
 
     sput-object v2, Lcom/vk/im/ui/components/contacts/ContactsListFactory;->CREATE_CONVERSATION_VKME:Lcom/vk/im/ui/components/contacts/ContactsListFactory;
 
@@ -170,7 +170,7 @@
     const-string v4, "CREATE_CONVERSATION_VKAPP"
 
     .line 11
-    invoke-direct {v0, v4, v6, v2, v3}, Lcom/vk/im/ui/components/contacts/ContactsListFactory;-><init>(Ljava/lang/String;ILjava/util/Set;Lkotlin/jvm/b/d;)V
+    invoke-direct {v0, v4, v6, v2, v3}, Lcom/vk/im/ui/components/contacts/ContactsListFactory;-><init>(Ljava/lang/String;ILjava/util/Set;Lkotlin/jvm/b/Functions4;)V
 
     sput-object v0, Lcom/vk/im/ui/components/contacts/ContactsListFactory;->CREATE_CONVERSATION_VKAPP:Lcom/vk/im/ui/components/contacts/ContactsListFactory;
 
@@ -213,7 +213,7 @@
     const-string v4, "SELECT_USERS_VKME"
 
     .line 16
-    invoke-direct {v0, v4, v7, v2, v3}, Lcom/vk/im/ui/components/contacts/ContactsListFactory;-><init>(Ljava/lang/String;ILjava/util/Set;Lkotlin/jvm/b/d;)V
+    invoke-direct {v0, v4, v7, v2, v3}, Lcom/vk/im/ui/components/contacts/ContactsListFactory;-><init>(Ljava/lang/String;ILjava/util/Set;Lkotlin/jvm/b/Functions4;)V
 
     sput-object v0, Lcom/vk/im/ui/components/contacts/ContactsListFactory;->SELECT_USERS_VKME:Lcom/vk/im/ui/components/contacts/ContactsListFactory;
 
@@ -252,7 +252,7 @@
     const-string v4, "SELECT_USERS_WITHOUT_CONTACTS_VKME"
 
     .line 21
-    invoke-direct {v0, v4, v8, v2, v3}, Lcom/vk/im/ui/components/contacts/ContactsListFactory;-><init>(Ljava/lang/String;ILjava/util/Set;Lkotlin/jvm/b/d;)V
+    invoke-direct {v0, v4, v8, v2, v3}, Lcom/vk/im/ui/components/contacts/ContactsListFactory;-><init>(Ljava/lang/String;ILjava/util/Set;Lkotlin/jvm/b/Functions4;)V
 
     sput-object v0, Lcom/vk/im/ui/components/contacts/ContactsListFactory;->SELECT_USERS_WITHOUT_CONTACTS_VKME:Lcom/vk/im/ui/components/contacts/ContactsListFactory;
 
@@ -289,7 +289,7 @@
     const-string v4, "SELECT_USERS_VKAPP"
 
     .line 24
-    invoke-direct {v0, v4, v9, v2, v3}, Lcom/vk/im/ui/components/contacts/ContactsListFactory;-><init>(Ljava/lang/String;ILjava/util/Set;Lkotlin/jvm/b/d;)V
+    invoke-direct {v0, v4, v9, v2, v3}, Lcom/vk/im/ui/components/contacts/ContactsListFactory;-><init>(Ljava/lang/String;ILjava/util/Set;Lkotlin/jvm/b/Functions4;)V
 
     sput-object v0, Lcom/vk/im/ui/components/contacts/ContactsListFactory;->SELECT_USERS_VKAPP:Lcom/vk/im/ui/components/contacts/ContactsListFactory;
 
@@ -340,7 +340,7 @@
 
     const-string v4, "CONTACTS_LIST_VKME"
 
-    invoke-direct {v3, v4, v10, v0, v2}, Lcom/vk/im/ui/components/contacts/ContactsListFactory;-><init>(Ljava/lang/String;ILjava/util/Set;Lkotlin/jvm/b/d;)V
+    invoke-direct {v3, v4, v10, v0, v2}, Lcom/vk/im/ui/components/contacts/ContactsListFactory;-><init>(Ljava/lang/String;ILjava/util/Set;Lkotlin/jvm/b/Functions4;)V
 
     sput-object v3, Lcom/vk/im/ui/components/contacts/ContactsListFactory;->CONTACTS_LIST_VKME:Lcom/vk/im/ui/components/contacts/ContactsListFactory;
 
@@ -386,7 +386,7 @@
     const-string v4, "ONBOARDING_VKME"
 
     .line 39
-    invoke-direct {v0, v4, v11, v2, v3}, Lcom/vk/im/ui/components/contacts/ContactsListFactory;-><init>(Ljava/lang/String;ILjava/util/Set;Lkotlin/jvm/b/d;)V
+    invoke-direct {v0, v4, v11, v2, v3}, Lcom/vk/im/ui/components/contacts/ContactsListFactory;-><init>(Ljava/lang/String;ILjava/util/Set;Lkotlin/jvm/b/Functions4;)V
 
     sput-object v0, Lcom/vk/im/ui/components/contacts/ContactsListFactory;->ONBOARDING_VKME:Lcom/vk/im/ui/components/contacts/ContactsListFactory;
 
@@ -397,7 +397,7 @@
     return-void
 .end method
 
-.method private constructor <init>(Ljava/lang/String;ILjava/util/Set;Lkotlin/jvm/b/d;)V
+.method private constructor <init>(Ljava/lang/String;ILjava/util/Set;Lkotlin/jvm/b/Functions4;)V
     .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -406,7 +406,7 @@
             "+",
             "Lcom/vk/im/ui/components/contacts/vc/ContactsViews;",
             ">;",
-            "Lkotlin/jvm/b/d<",
+            "Lkotlin/jvm/b/Functions4<",
             "-",
             "Lcom/vk/im/engine/models/Source;",
             "-",
@@ -414,8 +414,8 @@
             "-",
             "Ljava/lang/Boolean;",
             "+",
-            "Lcom/vk/im/engine/i/c<",
-            "Lcom/vk/im/ui/components/contacts/a;",
+            "Lcom/vk/im/engine/i/ImEngineCmd<",
+            "Lcom/vk/im/ui/components/contacts/ContactsList;",
             ">;>;)V"
         }
     .end annotation
@@ -425,7 +425,7 @@
 
     iput-object p3, p0, Lcom/vk/im/ui/components/contacts/ContactsListFactory;->views:Ljava/util/Set;
 
-    iput-object p4, p0, Lcom/vk/im/ui/components/contacts/ContactsListFactory;->loadCmdProvider:Lkotlin/jvm/b/d;
+    iput-object p4, p0, Lcom/vk/im/ui/components/contacts/ContactsListFactory;->loadCmdProvider:Lkotlin/jvm/b/Functions4;
 
     return-void
 .end method
@@ -460,23 +460,23 @@
 
 
 # virtual methods
-.method public final a()Lkotlin/jvm/b/d;
+.method public final a()Lkotlin/jvm/b/Functions4;
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "()",
-            "Lkotlin/jvm/b/d<",
+            "Lkotlin/jvm/b/Functions4<",
             "Lcom/vk/im/engine/models/Source;",
             "Lcom/vk/im/ui/components/contacts/SortOrder;",
             "Ljava/lang/Boolean;",
-            "Lcom/vk/im/engine/i/c<",
-            "Lcom/vk/im/ui/components/contacts/a;",
+            "Lcom/vk/im/engine/i/ImEngineCmd<",
+            "Lcom/vk/im/ui/components/contacts/ContactsList;",
             ">;>;"
         }
     .end annotation
 
     .line 1
-    iget-object v0, p0, Lcom/vk/im/ui/components/contacts/ContactsListFactory;->loadCmdProvider:Lkotlin/jvm/b/d;
+    iget-object v0, p0, Lcom/vk/im/ui/components/contacts/ContactsListFactory;->loadCmdProvider:Lkotlin/jvm/b/Functions4;
 
     return-object v0
 .end method

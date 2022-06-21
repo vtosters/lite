@@ -3,7 +3,7 @@
 .source "LiveView.java"
 
 # interfaces
-.implements Lc/a/z/j;
+.implements Lio/reactivex/functions/Function;
 
 
 # annotations
@@ -19,7 +19,7 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Ljava/lang/Object;",
-        "Lc/a/z/j<",
+        "Lio/reactivex/functions/Function<",
         "Landroid/graphics/Bitmap;",
         "Landroid/graphics/Bitmap;",
         ">;"
@@ -64,11 +64,11 @@
     .line 2
     sget-object v0, Lcom/vk/libvideo/ui/VideoRestrictionView;->F:Lcom/vk/libvideo/ui/VideoRestrictionView$Companion;
 
-    invoke-virtual {v0}, Lcom/vk/libvideo/ui/VideoRestrictionView$Companion;->a()Lcom/facebook/x/i/a;
+    invoke-virtual {v0}, Lcom/vk/libvideo/ui/VideoRestrictionView$Companion;->a()Lcom/facebook/x/i/IterativeBoxBlurPostProcessor;
 
     move-result-object v0
 
-    invoke-virtual {v0, p1}, Lcom/facebook/x/i/a;->a(Landroid/graphics/Bitmap;)V
+    invoke-virtual {v0, p1}, Lcom/facebook/x/i/IterativeBoxBlurPostProcessor;->a(Landroid/graphics/Bitmap;)V
 
     :cond_0
     return-object p1

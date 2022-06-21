@@ -3,7 +3,7 @@
 .source "CommunityCoverModel.kt"
 
 # interfaces
-.implements Lc/a/z/g;
+.implements Lio/reactivex/functions/Consumer;
 
 
 # annotations
@@ -22,7 +22,7 @@
         "Ljava/lang/Object;",
         ">",
         "Ljava/lang/Object;",
-        "Lc/a/z/g<",
+        "Lio/reactivex/functions/Consumer<",
         "Lcom/vk/voip/VoipViewModel$h;",
         ">;"
     }
@@ -85,7 +85,7 @@
     .line 2
     iget-object v0, p0, Lcom/vk/profile/data/cover/model/CommunityCoverModel$f;->a:Lcom/vk/profile/data/cover/model/CommunityCoverModel;
 
-    invoke-virtual {v0}, Lcom/vk/profile/data/cover/model/CommunityCoverModel;->p()Lb/h/g/t/c;
+    invoke-virtual {v0}, Lcom/vk/profile/data/cover/model/CommunityCoverModel;->p()Lb/h/g/t/ValidatorSet;
 
     move-result-object v0
 
@@ -103,7 +103,7 @@
     const/4 v3, 0x0
 
     :goto_1
-    invoke-virtual {v0, v4, v3}, Lb/h/g/t/c;->a(IZ)V
+    invoke-virtual {v0, v4, v3}, Lb/h/g/t/ValidatorSet;->a(IZ)V
 
     return-void
 .end method

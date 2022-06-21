@@ -46,7 +46,7 @@
     .line 1
     iget-object p2, p0, Lcom/vk/core/view/search/ModernSearchView$b;->a:Lcom/vk/core/view/search/ModernSearchView;
 
-    invoke-virtual {p2}, Lcom/vk/core/view/search/ModernSearchView;->getOnActionSearchListener()Lkotlin/jvm/b/b;
+    invoke-virtual {p2}, Lcom/vk/core/view/search/ModernSearchView;->getOnActionSearchListener()Lkotlin/jvm/b/Functions2;
 
     move-result-object p2
 
@@ -58,11 +58,11 @@
 
     move-result-object p3
 
-    invoke-interface {p2, p3}, Lkotlin/jvm/b/b;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {p2, p3}, Lkotlin/jvm/b/Functions2;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p2
 
-    check-cast p2, Lkotlin/m;
+    check-cast p2, Lkotlin/Unit;
 
     .line 2
     :cond_0

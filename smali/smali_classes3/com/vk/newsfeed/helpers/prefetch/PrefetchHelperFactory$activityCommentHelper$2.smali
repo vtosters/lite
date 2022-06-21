@@ -3,7 +3,7 @@
 .source "PrefetchHelperFactory.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/a;
+.implements Lkotlin/jvm/b/Functions;
 
 
 # annotations
@@ -19,8 +19,8 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/a<",
-        "Lcom/vk/newsfeed/helpers/prefetch/a;",
+        "Lkotlin/jvm/b/Functions<",
+        "Lcom/vk/newsfeed/helpers/prefetch/ActivityCommentPrefetchHelper;",
         ">;"
     }
 .end annotation
@@ -55,13 +55,13 @@
 
 
 # virtual methods
-.method public final invoke()Lcom/vk/newsfeed/helpers/prefetch/a;
+.method public final invoke()Lcom/vk/newsfeed/helpers/prefetch/ActivityCommentPrefetchHelper;
     .locals 1
 
     .line 2
-    new-instance v0, Lcom/vk/newsfeed/helpers/prefetch/a;
+    new-instance v0, Lcom/vk/newsfeed/helpers/prefetch/ActivityCommentPrefetchHelper;
 
-    invoke-direct {v0}, Lcom/vk/newsfeed/helpers/prefetch/a;-><init>()V
+    invoke-direct {v0}, Lcom/vk/newsfeed/helpers/prefetch/ActivityCommentPrefetchHelper;-><init>()V
 
     return-object v0
 .end method
@@ -70,7 +70,7 @@
     .locals 1
 
     .line 1
-    invoke-virtual {p0}, Lcom/vk/newsfeed/helpers/prefetch/PrefetchHelperFactory$activityCommentHelper$2;->invoke()Lcom/vk/newsfeed/helpers/prefetch/a;
+    invoke-virtual {p0}, Lcom/vk/newsfeed/helpers/prefetch/PrefetchHelperFactory$activityCommentHelper$2;->invoke()Lcom/vk/newsfeed/helpers/prefetch/ActivityCommentPrefetchHelper;
 
     move-result-object v0
 

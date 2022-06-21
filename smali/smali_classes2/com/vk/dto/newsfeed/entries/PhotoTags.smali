@@ -3,8 +3,8 @@
 .source "PhotoTags.kt"
 
 # interfaces
-.implements Lcom/vk/dto/newsfeed/d;
-.implements Lcom/vk/dto/newsfeed/h;
+.implements Lcom/vk/dto/newsfeed/Ownable;
+.implements Lcom/vk/dto/newsfeed/WithAttachments;
 
 
 # annotations
@@ -59,7 +59,7 @@
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, v1}, Lcom/vk/dto/newsfeed/entries/PhotoTags$b;-><init>(Lkotlin/jvm/internal/i;)V
+    invoke-direct {v0, v1}, Lcom/vk/dto/newsfeed/entries/PhotoTags$b;-><init>(Lkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     sput-object v0, Lcom/vk/dto/newsfeed/entries/PhotoTags;->B:Lcom/vk/dto/newsfeed/entries/PhotoTags$b;
 

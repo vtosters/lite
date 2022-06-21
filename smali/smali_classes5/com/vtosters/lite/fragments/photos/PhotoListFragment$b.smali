@@ -101,7 +101,7 @@
     iput v3, v2, Lcom/vk/dto/photo/PhotoAlbum;->e:I
 
     .line 8
-    invoke-virtual {p1}, Ld/a/a/a/i;->K()V
+    invoke-virtual {p1}, Lme/grishka/appkit/fragments/BaseRecyclerFragment;->K()V
 
     .line 9
     :cond_0
@@ -196,7 +196,7 @@
     .line 18
     iget-object p1, p0, Lcom/vtosters/lite/fragments/photos/PhotoListFragment$b;->a:Lcom/vtosters/lite/fragments/photos/PhotoListFragment;
 
-    invoke-virtual {p1}, Ld/a/a/a/i;->K()V
+    invoke-virtual {p1}, Lme/grishka/appkit/fragments/BaseRecyclerFragment;->K()V
 
     .line 19
     iget-object p1, p0, Lcom/vtosters/lite/fragments/photos/PhotoListFragment$b;->a:Lcom/vtosters/lite/fragments/photos/PhotoListFragment;

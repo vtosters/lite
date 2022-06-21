@@ -33,32 +33,32 @@
 
 .field private final e:Lcom/vk/stories/util/ClickableStickerDelegate$a;
 
-.field private final f:Lcom/vk/camera/j/b;
+.field private final f:Lcom/vk/camera/j/CadreUtils2;
 
-.field private final g:Lcom/vk/stories/view/r1;
+.field private final g:Lcom/vk/stories/view/StoryViewClickableStickerListener;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Lcom/vk/stories/view/r1<",
+            "Lcom/vk/stories/view/StoryViewClickableStickerListener<",
             "Lcom/vk/dto/stories/model/clickable/ClickableQuestion;",
             ">;"
         }
     .end annotation
 .end field
 
-.field private final h:Lcom/vk/stories/view/r1;
+.field private final h:Lcom/vk/stories/view/StoryViewClickableStickerListener;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Lcom/vk/stories/view/r1<",
+            "Lcom/vk/stories/view/StoryViewClickableStickerListener<",
             "Lcom/vk/dto/stories/model/clickable/ClickableMusic;",
             ">;"
         }
     .end annotation
 .end field
 
-.field private final i:Lcom/vk/stories/view/r1;
+.field private final i:Lcom/vk/stories/view/StoryViewClickableStickerListener;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Lcom/vk/stories/view/r1<",
+            "Lcom/vk/stories/view/StoryViewClickableStickerListener<",
             "Lcom/vk/dto/stories/model/clickable/ClickablePoll;",
             ">;"
         }
@@ -74,26 +74,26 @@
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, v1}, Lcom/vk/stories/util/ClickableStickerDelegate$b;-><init>(Lkotlin/jvm/internal/i;)V
+    invoke-direct {v0, v1}, Lcom/vk/stories/util/ClickableStickerDelegate$b;-><init>(Lkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     return-void
 .end method
 
-.method public constructor <init>(Lcom/vk/dto/stories/model/StoriesContainer;Lcom/vk/stories/util/ClickableStickerDelegate$a;Lcom/vk/camera/j/b;Lcom/vk/stories/view/r1;Lcom/vk/stories/view/r1;Lcom/vk/stories/view/r1;)V
+.method public constructor <init>(Lcom/vk/dto/stories/model/StoriesContainer;Lcom/vk/stories/util/ClickableStickerDelegate$a;Lcom/vk/camera/j/CadreUtils2;Lcom/vk/stories/view/StoryViewClickableStickerListener;Lcom/vk/stories/view/StoryViewClickableStickerListener;Lcom/vk/stories/view/StoryViewClickableStickerListener;)V
     .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
             "Lcom/vk/dto/stories/model/StoriesContainer;",
             "Lcom/vk/stories/util/ClickableStickerDelegate$a;",
-            "Lcom/vk/camera/j/b;",
-            "Lcom/vk/stories/view/r1<",
+            "Lcom/vk/camera/j/CadreUtils2;",
+            "Lcom/vk/stories/view/StoryViewClickableStickerListener<",
             "Lcom/vk/dto/stories/model/clickable/ClickableQuestion;",
             ">;",
-            "Lcom/vk/stories/view/r1<",
+            "Lcom/vk/stories/view/StoryViewClickableStickerListener<",
             "Lcom/vk/dto/stories/model/clickable/ClickableMusic;",
             ">;",
-            "Lcom/vk/stories/view/r1<",
+            "Lcom/vk/stories/view/StoryViewClickableStickerListener<",
             "Lcom/vk/dto/stories/model/clickable/ClickablePoll;",
             ">;)V"
         }
@@ -104,13 +104,13 @@
 
     iput-object p2, p0, Lcom/vk/stories/util/ClickableStickerDelegate;->e:Lcom/vk/stories/util/ClickableStickerDelegate$a;
 
-    iput-object p3, p0, Lcom/vk/stories/util/ClickableStickerDelegate;->f:Lcom/vk/camera/j/b;
+    iput-object p3, p0, Lcom/vk/stories/util/ClickableStickerDelegate;->f:Lcom/vk/camera/j/CadreUtils2;
 
-    iput-object p4, p0, Lcom/vk/stories/util/ClickableStickerDelegate;->g:Lcom/vk/stories/view/r1;
+    iput-object p4, p0, Lcom/vk/stories/util/ClickableStickerDelegate;->g:Lcom/vk/stories/view/StoryViewClickableStickerListener;
 
-    iput-object p5, p0, Lcom/vk/stories/util/ClickableStickerDelegate;->h:Lcom/vk/stories/view/r1;
+    iput-object p5, p0, Lcom/vk/stories/util/ClickableStickerDelegate;->h:Lcom/vk/stories/view/StoryViewClickableStickerListener;
 
-    iput-object p6, p0, Lcom/vk/stories/util/ClickableStickerDelegate;->i:Lcom/vk/stories/view/r1;
+    iput-object p6, p0, Lcom/vk/stories/util/ClickableStickerDelegate;->i:Lcom/vk/stories/view/StoryViewClickableStickerListener;
 
     .line 2
     new-instance p2, Landroid/graphics/Path;
@@ -169,7 +169,7 @@
 
     const-string p2, "storiesContainer.storyEntries"
 
-    invoke-static {p1, p2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, p2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 11
     invoke-interface {p1}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
@@ -196,9 +196,9 @@
     if-eqz p2, :cond_0
 
     .line 13
-    iget-object p3, p0, Lcom/vk/stories/util/ClickableStickerDelegate;->f:Lcom/vk/camera/j/b;
+    iget-object p3, p0, Lcom/vk/stories/util/ClickableStickerDelegate;->f:Lcom/vk/camera/j/CadreUtils2;
 
-    invoke-direct {p0, p2, p3}, Lcom/vk/stories/util/ClickableStickerDelegate;->a(Lcom/vk/dto/stories/model/clickable/ClickableStickers;Lcom/vk/camera/j/b;)V
+    invoke-direct {p0, p2, p3}, Lcom/vk/stories/util/ClickableStickerDelegate;->a(Lcom/vk/dto/stories/model/clickable/ClickableStickers;Lcom/vk/camera/j/CadreUtils2;)V
 
     goto :goto_0
 
@@ -255,7 +255,7 @@
     if-eqz p1, :cond_1
 
     .line 13
-    invoke-static {p1}, Lcom/vk/core/util/o0;->a([Landroid/graphics/PointF;)Landroid/graphics/PointF;
+    invoke-static {p1}, Lcom/vk/core/util/MathUtils;->a([Landroid/graphics/PointF;)Landroid/graphics/PointF;
 
     move-result-object p1
 
@@ -326,7 +326,7 @@
     if-eqz v2, :cond_1
 
     .line 10
-    invoke-static {v2, p1, p2}, Lcom/vk/core/util/o0;->a([Landroid/graphics/PointF;FF)Z
+    invoke-static {v2, p1, p2}, Lcom/vk/core/util/MathUtils;->a([Landroid/graphics/PointF;FF)Z
 
     move-result v2
 
@@ -369,18 +369,18 @@
 
     const-string v0, "(this as java.lang.String).toLowerCase()"
 
-    invoke-static {p2, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p2, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 111
-    invoke-static {}, Lcom/vk/im/ui/p/c;->a()Lcom/vk/im/ui/p/b;
+    invoke-static {}, Lcom/vk/im/ui/p/ImBridge7;->a()Lcom/vk/im/ui/p/ImBridge8;
 
     move-result-object v0
 
-    invoke-interface {v0}, Lcom/vk/im/ui/p/b;->o()Lcom/vk/im/ui/p/a;
+    invoke-interface {v0}, Lcom/vk/im/ui/p/ImBridge8;->o()Lcom/vk/im/ui/p/ImBridge1;
 
     move-result-object v0
 
-    invoke-interface {v0, p1, p2}, Lcom/vk/im/ui/p/a;->e(Landroid/content/Context;Ljava/lang/String;)V
+    invoke-interface {v0, p1, p2}, Lcom/vk/im/ui/p/ImBridge1;->e(Landroid/content/Context;Ljava/lang/String;)V
 
     return-void
 
@@ -416,7 +416,7 @@
     move-result v2
 
     .line 116
-    invoke-static {}, Lcom/vk/bridges/j0;->a()Lcom/vk/bridges/i0;
+    invoke-static {}, Lcom/vk/bridges/UsersBridge1;->a()Lcom/vk/bridges/UsersBridge;
 
     move-result-object v0
 
@@ -434,7 +434,7 @@
 
     move-object v1, p1
 
-    invoke-static/range {v0 .. v8}, Lcom/vk/bridges/i0$a;->a(Lcom/vk/bridges/i0;Landroid/content/Context;IZLjava/lang/String;Ljava/lang/String;Lcom/vk/dto/profile/HeaderCatchUpLink;ILjava/lang/Object;)V
+    invoke-static/range {v0 .. v8}, Lcom/vk/bridges/UsersBridge$a;->a(Lcom/vk/bridges/UsersBridge;Landroid/content/Context;IZLjava/lang/String;Ljava/lang/String;Lcom/vk/dto/profile/HeaderCatchUpLink;ILjava/lang/Object;)V
 
     :cond_0
     return-void
@@ -504,7 +504,7 @@
     return-void
 .end method
 
-.method private final a(Lcom/vk/dto/stories/model/clickable/ClickableStickers;Lcom/vk/camera/j/b;)V
+.method private final a(Lcom/vk/dto/stories/model/clickable/ClickableStickers;Lcom/vk/camera/j/CadreUtils2;)V
     .locals 8
 
     .line 29
@@ -516,17 +516,17 @@
     iget-object v2, p0, Lcom/vk/stories/util/ClickableStickerDelegate;->c:Landroid/graphics/Matrix;
 
     .line 31
-    invoke-virtual {p2}, Lcom/vk/camera/j/b;->f()I
+    invoke-virtual {p2}, Lcom/vk/camera/j/CadreUtils2;->f()I
 
     move-result v3
 
     .line 32
-    invoke-virtual {p2}, Lcom/vk/camera/j/b;->b()I
+    invoke-virtual {p2}, Lcom/vk/camera/j/CadreUtils2;->b()I
 
     move-result v4
 
     .line 33
-    invoke-virtual {p2}, Lcom/vk/camera/j/b;->e()F
+    invoke-virtual {p2}, Lcom/vk/camera/j/CadreUtils2;->e()F
 
     move-result v5
 
@@ -698,11 +698,11 @@
     return-void
 .end method
 
-.method public static final synthetic a(Lcom/vk/stories/util/ClickableStickerDelegate;Lcom/vtosters/lite/data/n$l;Lcom/vk/dto/stories/model/clickable/ClickableSticker;)V
+.method public static final synthetic a(Lcom/vk/stories/util/ClickableStickerDelegate;Lcom/vtosters/lite/data/Analytics$l;Lcom/vk/dto/stories/model/clickable/ClickableSticker;)V
     .locals 0
 
     .line 1
-    invoke-direct {p0, p1, p2}, Lcom/vk/stories/util/ClickableStickerDelegate;->a(Lcom/vtosters/lite/data/n$l;Lcom/vk/dto/stories/model/clickable/ClickableSticker;)V
+    invoke-direct {p0, p1, p2}, Lcom/vk/stories/util/ClickableStickerDelegate;->a(Lcom/vtosters/lite/data/Analytics$l;Lcom/vk/dto/stories/model/clickable/ClickableSticker;)V
 
     return-void
 .end method
@@ -730,11 +730,11 @@
 
     move-result-object v5
 
-    invoke-static {v5, v3}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v5, v3}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     iget-object v0, v1, Lcom/vk/dto/stories/model/StoryEntry;->j0:Lcom/vk/dto/stories/model/StoryEntryExtended;
 
-    invoke-static {v0, v4}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v4}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {v0}, Lcom/vk/dto/stories/model/StoryEntryExtended;->t1()Lcom/vk/dto/stories/model/StoryEntry;
 
@@ -742,7 +742,7 @@
 
     const-string v1, "currentStory.parentStory.storyEntry"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {v0}, Lcom/vk/dto/stories/model/StoryEntry;->w1()Ljava/lang/String;
 
@@ -750,7 +750,7 @@
 
     const-string v0, "currentStory.parentStory.storyEntry.ownerIdStoryId"
 
-    invoke-static {v6, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v6, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     const/4 v7, 0x0
 
@@ -772,7 +772,7 @@
 
     iget-object v5, v1, Lcom/vk/dto/stories/model/StoryEntry;->j0:Lcom/vk/dto/stories/model/StoryEntryExtended;
 
-    invoke-static {v5, v4}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v5, v4}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {v5}, Lcom/vk/dto/stories/model/StoryEntryExtended;->u1()Lcom/vk/dto/stories/model/StoryOwner;
 
@@ -780,7 +780,7 @@
 
     iget-object v6, v1, Lcom/vk/dto/stories/model/StoryEntry;->j0:Lcom/vk/dto/stories/model/StoryEntryExtended;
 
-    invoke-static {v6, v4}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v6, v4}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {v6}, Lcom/vk/dto/stories/model/StoryEntryExtended;->t1()Lcom/vk/dto/stories/model/StoryEntry;
 
@@ -796,7 +796,7 @@
 
     move-result-object v6
 
-    invoke-static {v6, v3}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v6, v3}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-static {v6}, Lcom/vk/core/util/ContextExtKt;->e(Landroid/content/Context;)Landroid/app/Activity;
 
@@ -820,7 +820,7 @@
     .line 130
     iget-object v1, v1, Lcom/vk/dto/stories/model/StoryEntry;->j0:Lcom/vk/dto/stories/model/StoryEntryExtended;
 
-    invoke-static {v1, v4}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v1, v4}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {v1}, Lcom/vk/dto/stories/model/StoryEntryExtended;->u1()Lcom/vk/dto/stories/model/StoryOwner;
 
@@ -828,13 +828,13 @@
 
     const-string v2, "currentStory.parentStory.storyOwner"
 
-    invoke-static {v1, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {v1}, Lcom/vk/dto/stories/model/StoryOwner;->w1()I
 
     move-result v1
 
-    invoke-static {v1}, Lcom/vk/dto/stories/d/a;->b(I)Ljava/lang/String;
+    invoke-static {v1}, Lcom/vk/dto/stories/d/StoriesContainerExt;->b(I)Ljava/lang/String;
 
     move-result-object v10
 
@@ -878,7 +878,7 @@
     return-void
 .end method
 
-.method private final a(Lcom/vtosters/lite/data/n$l;Lcom/vk/dto/stories/model/clickable/ClickableSticker;)V
+.method private final a(Lcom/vtosters/lite/data/Analytics$l;Lcom/vk/dto/stories/model/clickable/ClickableSticker;)V
     .locals 1
 
     if-eqz p2, :cond_0
@@ -894,7 +894,7 @@
 
     const-string v0, "clickable_sticker"
 
-    invoke-virtual {p1, v0, p2}, Lcom/vtosters/lite/data/n$l;->a(Ljava/lang/String;Ljava/lang/Object;)Lcom/vtosters/lite/data/n$l;
+    invoke-virtual {p1, v0, p2}, Lcom/vtosters/lite/data/Analytics$l;->a(Ljava/lang/String;Ljava/lang/Object;)Lcom/vtosters/lite/data/Analytics$l;
 
     :cond_0
     return-void
@@ -960,7 +960,7 @@
     invoke-virtual {p2, v0, v1}, Landroid/graphics/Canvas;->drawPath(Landroid/graphics/Path;Landroid/graphics/Paint;)V
 
     .line 27
-    invoke-static {p1}, Lcom/vk/core/util/o0;->a([Landroid/graphics/PointF;)Landroid/graphics/PointF;
+    invoke-static {p1}, Lcom/vk/core/util/MathUtils;->a([Landroid/graphics/PointF;)Landroid/graphics/PointF;
 
     move-result-object p1
 
@@ -968,7 +968,7 @@
 
     const-string v0, "MathUtils.centerMassOfPolygon(polygon) ?: return"
 
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 28
     iget v0, p1, Landroid/graphics/PointF;->x:F
@@ -1001,9 +1001,9 @@
 
     .line 145
     :cond_0
-    sget-object v0, Lcom/vk/stories/clickable/e;->i:Lcom/vk/stories/clickable/e;
+    sget-object v0, Lcom/vk/stories/clickable/StoryClickableController;->i:Lcom/vk/stories/clickable/StoryClickableController;
 
-    invoke-virtual {v0}, Lcom/vk/stories/clickable/e;->f()V
+    invoke-virtual {v0}, Lcom/vk/stories/clickable/StoryClickableController;->f()V
 
     .line 146
     new-instance v0, Lcom/vk/stories/util/ClickableStickerDelegate$f;
@@ -1011,33 +1011,33 @@
     invoke-direct {v0, p0, p2, p1}, Lcom/vk/stories/util/ClickableStickerDelegate$f;-><init>(Lcom/vk/stories/util/ClickableStickerDelegate;Lcom/vk/stories/view/StoryView;Lcom/vk/dto/stories/model/clickable/ClickableHashtag;)V
 
     .line 147
-    new-instance p1, Lcom/vk/stories/view/w1$a;
+    new-instance p1, Lcom/vk/stories/view/StoryViewTooltipParams$a;
 
     const v1, 0x7f120eda
 
     .line 148
-    invoke-static {v1}, Lcom/vk/core/util/y0;->f(I)Ljava/lang/String;
+    invoke-static {v1}, Lcom/vk/core/util/ResUtils;->f(I)Ljava/lang/String;
 
     move-result-object v1
 
     const-string v2, "ResUtils.str(R.string.story_hashtag_description)"
 
-    invoke-static {v1, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 149
-    invoke-direct {p1, v1, p3, p4}, Lcom/vk/stories/view/w1$a;-><init>(Ljava/lang/String;FF)V
+    invoke-direct {p1, v1, p3, p4}, Lcom/vk/stories/view/StoryViewTooltipParams$a;-><init>(Ljava/lang/String;FF)V
 
     .line 150
-    invoke-virtual {p1, p5}, Lcom/vk/stories/view/w1$a;->a(Z)Lcom/vk/stories/view/w1$a;
+    invoke-virtual {p1, p5}, Lcom/vk/stories/view/StoryViewTooltipParams$a;->a(Z)Lcom/vk/stories/view/StoryViewTooltipParams$a;
 
-    invoke-virtual {p1}, Lcom/vk/stories/view/w1$a;->d()Lcom/vk/stories/view/w1$a;
+    invoke-virtual {p1}, Lcom/vk/stories/view/StoryViewTooltipParams$a;->d()Lcom/vk/stories/view/StoryViewTooltipParams$a;
 
-    invoke-virtual {p1}, Lcom/vk/stories/view/w1$a;->a()Lcom/vk/stories/view/w1;
+    invoke-virtual {p1}, Lcom/vk/stories/view/StoryViewTooltipParams$a;->a()Lcom/vk/stories/view/StoryViewTooltipParams;
 
     move-result-object p1
 
     .line 151
-    invoke-virtual {p2, p1, v0}, Lcom/vk/stories/view/StoryView;->a(Lcom/vk/stories/view/w1;Landroid/view/View$OnClickListener;)Landroid/app/Dialog;
+    invoke-virtual {p2, p1, v0}, Lcom/vk/stories/view/StoryView;->a(Lcom/vk/stories/view/StoryViewTooltipParams;Landroid/view/View$OnClickListener;)Landroid/app/Dialog;
 
     const/4 p1, 0x1
 
@@ -1054,7 +1054,7 @@
 
     .line 154
     :cond_0
-    invoke-static {}, Lcom/vk/stories/clickable/e;->q()Z
+    invoke-static {}, Lcom/vk/stories/clickable/StoryClickableController;->q()Z
 
     move-result v0
 
@@ -1072,9 +1072,9 @@
     move-result v1
 
     .line 156
-    sget-object v3, Lcom/vk/stories/clickable/e;->i:Lcom/vk/stories/clickable/e;
+    sget-object v3, Lcom/vk/stories/clickable/StoryClickableController;->i:Lcom/vk/stories/clickable/StoryClickableController;
 
-    invoke-virtual {v3}, Lcom/vk/stories/clickable/e;->g()V
+    invoke-virtual {v3}, Lcom/vk/stories/clickable/StoryClickableController;->g()V
 
     const/4 v3, 0x1
 
@@ -1095,7 +1095,7 @@
 
     const-string v6, "http://vkontakte.ru/images/question_c.gif"
 
-    invoke-static {v5, v6}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v5, v6}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v6
 
@@ -1185,32 +1185,32 @@
 
     move-result v1
 
-    invoke-static {v1}, Lcom/vk/core/util/y0;->f(I)Ljava/lang/String;
+    invoke-static {v1}, Lcom/vk/core/util/ResUtils;->f(I)Ljava/lang/String;
 
     move-result-object v4
 
     :cond_9
     const-string v1, "if (!withAvatar || name.\u2026                else name"
 
-    invoke-static {v4, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v4, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 163
-    new-instance v1, Lcom/vk/stories/view/w1$a;
+    new-instance v1, Lcom/vk/stories/view/StoryViewTooltipParams$a;
 
-    invoke-direct {v1, v4, p3, p4}, Lcom/vk/stories/view/w1$a;-><init>(Ljava/lang/String;FF)V
+    invoke-direct {v1, v4, p3, p4}, Lcom/vk/stories/view/StoryViewTooltipParams$a;-><init>(Ljava/lang/String;FF)V
 
-    invoke-virtual {v1}, Lcom/vk/stories/view/w1$a;->d()Lcom/vk/stories/view/w1$a;
+    invoke-virtual {v1}, Lcom/vk/stories/view/StoryViewTooltipParams$a;->d()Lcom/vk/stories/view/StoryViewTooltipParams$a;
 
     if-eqz v0, :cond_a
 
     .line 164
-    invoke-virtual {v1, v5}, Lcom/vk/stories/view/w1$a;->a(Lcom/vk/dto/common/ImageSize;)Lcom/vk/stories/view/w1$a;
+    invoke-virtual {v1, v5}, Lcom/vk/stories/view/StoryViewTooltipParams$a;->a(Lcom/vk/dto/common/ImageSize;)Lcom/vk/stories/view/StoryViewTooltipParams$a;
 
     .line 165
     :cond_a
-    invoke-virtual {v1, p5}, Lcom/vk/stories/view/w1$a;->a(Z)Lcom/vk/stories/view/w1$a;
+    invoke-virtual {v1, p5}, Lcom/vk/stories/view/StoryViewTooltipParams$a;->a(Z)Lcom/vk/stories/view/StoryViewTooltipParams$a;
 
-    invoke-virtual {v1}, Lcom/vk/stories/view/w1$a;->a()Lcom/vk/stories/view/w1;
+    invoke-virtual {v1}, Lcom/vk/stories/view/StoryViewTooltipParams$a;->a()Lcom/vk/stories/view/StoryViewTooltipParams;
 
     move-result-object p3
 
@@ -1220,7 +1220,7 @@
     invoke-direct {p4, p0, p2, p1}, Lcom/vk/stories/util/ClickableStickerDelegate$k;-><init>(Lcom/vk/stories/util/ClickableStickerDelegate;Lcom/vk/stories/view/StoryView;Lcom/vk/dto/stories/model/clickable/ClickableMention;)V
 
     .line 167
-    invoke-virtual {p2, p3, p4}, Lcom/vk/stories/view/StoryView;->a(Lcom/vk/stories/view/w1;Landroid/view/View$OnClickListener;)Landroid/app/Dialog;
+    invoke-virtual {p2, p3, p4}, Lcom/vk/stories/view/StoryView;->a(Lcom/vk/stories/view/StoryViewTooltipParams;Landroid/view/View$OnClickListener;)Landroid/app/Dialog;
 
     return v3
 
@@ -1349,31 +1349,31 @@
     move-result-object v0
 
     .line 118
-    sget-object v1, Lcom/vk/stories/clickable/e;->i:Lcom/vk/stories/clickable/e;
+    sget-object v1, Lcom/vk/stories/clickable/StoryClickableController;->i:Lcom/vk/stories/clickable/StoryClickableController;
 
-    invoke-virtual {v1}, Lcom/vk/stories/clickable/e;->e()V
+    invoke-virtual {v1}, Lcom/vk/stories/clickable/StoryClickableController;->e()V
 
     .line 119
-    new-instance v1, Lcom/vk/stories/view/w1$a;
+    new-instance v1, Lcom/vk/stories/view/StoryViewTooltipParams$a;
 
     const v2, 0x7f120ecf
 
     .line 120
-    invoke-static {v2}, Lcom/vk/core/util/y0;->f(I)Ljava/lang/String;
+    invoke-static {v2}, Lcom/vk/core/util/ResUtils;->f(I)Ljava/lang/String;
 
     move-result-object v2
 
     const-string v3, "ResUtils.str(R.string.story_geo_tooltip)"
 
-    invoke-static {v2, v3}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v2, v3}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 121
-    invoke-direct {v1, v2, p2, p3}, Lcom/vk/stories/view/w1$a;-><init>(Ljava/lang/String;FF)V
+    invoke-direct {v1, v2, p2, p3}, Lcom/vk/stories/view/StoryViewTooltipParams$a;-><init>(Ljava/lang/String;FF)V
 
     .line 122
-    invoke-virtual {v1}, Lcom/vk/stories/view/w1$a;->d()Lcom/vk/stories/view/w1$a;
+    invoke-virtual {v1}, Lcom/vk/stories/view/StoryViewTooltipParams$a;->d()Lcom/vk/stories/view/StoryViewTooltipParams$a;
 
-    invoke-virtual {v1}, Lcom/vk/stories/view/w1$a;->a()Lcom/vk/stories/view/w1;
+    invoke-virtual {v1}, Lcom/vk/stories/view/StoryViewTooltipParams$a;->a()Lcom/vk/stories/view/StoryViewTooltipParams;
 
     move-result-object p2
 
@@ -1382,7 +1382,7 @@
 
     invoke-direct {p3, p0, p4, v0}, Lcom/vk/stories/util/ClickableStickerDelegate$e;-><init>(Lcom/vk/stories/util/ClickableStickerDelegate;Lcom/vk/dto/stories/model/clickable/ClickableGeo;Landroid/content/Context;)V
 
-    invoke-virtual {p1, p2, p3}, Lcom/vk/stories/view/StoryView;->a(Lcom/vk/stories/view/w1;Landroid/view/View$OnClickListener;)Landroid/app/Dialog;
+    invoke-virtual {p1, p2, p3}, Lcom/vk/stories/view/StoryView;->a(Lcom/vk/stories/view/StoryViewTooltipParams;Landroid/view/View$OnClickListener;)Landroid/app/Dialog;
 
     const/4 p1, 0x1
 
@@ -1409,24 +1409,24 @@
     :cond_0
     const v1, 0x7f120ee4
 
-    invoke-static {v1}, Lcom/vk/core/util/y0;->f(I)Ljava/lang/String;
+    invoke-static {v1}, Lcom/vk/core/util/ResUtils;->f(I)Ljava/lang/String;
 
     move-result-object v1
 
     const-string v2, "ResUtils.str(R.string.story_link_description)"
 
-    invoke-static {v1, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 140
     :goto_0
-    new-instance v2, Lcom/vk/stories/view/w1$a;
+    new-instance v2, Lcom/vk/stories/view/StoryViewTooltipParams$a;
 
-    invoke-direct {v2, v1, p2, p3}, Lcom/vk/stories/view/w1$a;-><init>(Ljava/lang/String;FF)V
+    invoke-direct {v2, v1, p2, p3}, Lcom/vk/stories/view/StoryViewTooltipParams$a;-><init>(Ljava/lang/String;FF)V
 
     .line 141
-    invoke-virtual {v2}, Lcom/vk/stories/view/w1$a;->d()Lcom/vk/stories/view/w1$a;
+    invoke-virtual {v2}, Lcom/vk/stories/view/StoryViewTooltipParams$a;->d()Lcom/vk/stories/view/StoryViewTooltipParams$a;
 
-    invoke-virtual {v2}, Lcom/vk/stories/view/w1$a;->a()Lcom/vk/stories/view/w1;
+    invoke-virtual {v2}, Lcom/vk/stories/view/StoryViewTooltipParams$a;->a()Lcom/vk/stories/view/StoryViewTooltipParams;
 
     move-result-object p2
 
@@ -1435,7 +1435,7 @@
 
     invoke-direct {p3, p0, p4, v0}, Lcom/vk/stories/util/ClickableStickerDelegate$g;-><init>(Lcom/vk/stories/util/ClickableStickerDelegate;Lcom/vk/dto/stories/model/clickable/ClickableLink;Landroid/content/Context;)V
 
-    invoke-virtual {p1, p2, p3}, Lcom/vk/stories/view/StoryView;->a(Lcom/vk/stories/view/w1;Landroid/view/View$OnClickListener;)Landroid/app/Dialog;
+    invoke-virtual {p1, p2, p3}, Lcom/vk/stories/view/StoryView;->a(Lcom/vk/stories/view/StoryViewTooltipParams;Landroid/view/View$OnClickListener;)Landroid/app/Dialog;
 
     const/4 p1, 0x1
 
@@ -1491,7 +1491,7 @@
 
     .line 89
     :goto_0
-    new-instance v1, Lcom/vk/stories/view/w1$a;
+    new-instance v1, Lcom/vk/stories/view/StoryViewTooltipParams$a;
 
     const v3, 0x7f120ee8
 
@@ -1502,17 +1502,17 @@
 
     const-string v4, "context.getString(R.stri\u2026tory_market_item_tooltip)"
 
-    invoke-static {v3, v4}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v3, v4}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 91
-    invoke-direct {v1, v3, p2, p3}, Lcom/vk/stories/view/w1$a;-><init>(Ljava/lang/String;FF)V
+    invoke-direct {v1, v3, p2, p3}, Lcom/vk/stories/view/StoryViewTooltipParams$a;-><init>(Ljava/lang/String;FF)V
 
     .line 92
-    invoke-virtual {v1}, Lcom/vk/stories/view/w1$a;->d()Lcom/vk/stories/view/w1$a;
+    invoke-virtual {v1}, Lcom/vk/stories/view/StoryViewTooltipParams$a;->d()Lcom/vk/stories/view/StoryViewTooltipParams$a;
 
-    invoke-virtual {v1, v2}, Lcom/vk/stories/view/w1$a;->b(Lcom/vk/dto/common/ImageSize;)Lcom/vk/stories/view/w1$a;
+    invoke-virtual {v1, v2}, Lcom/vk/stories/view/StoryViewTooltipParams$a;->b(Lcom/vk/dto/common/ImageSize;)Lcom/vk/stories/view/StoryViewTooltipParams$a;
 
-    invoke-virtual {v1}, Lcom/vk/stories/view/w1$a;->a()Lcom/vk/stories/view/w1;
+    invoke-virtual {v1}, Lcom/vk/stories/view/StoryViewTooltipParams$a;->a()Lcom/vk/stories/view/StoryViewTooltipParams;
 
     move-result-object p2
 
@@ -1521,7 +1521,7 @@
 
     invoke-direct {p3, p0, p4, v0}, Lcom/vk/stories/util/ClickableStickerDelegate$h;-><init>(Lcom/vk/stories/util/ClickableStickerDelegate;Lcom/vk/dto/stories/model/clickable/ClickableMarketItem;Landroid/content/Context;)V
 
-    invoke-virtual {p1, p2, p3}, Lcom/vk/stories/view/StoryView;->a(Lcom/vk/stories/view/w1;Landroid/view/View$OnClickListener;)Landroid/app/Dialog;
+    invoke-virtual {p1, p2, p3}, Lcom/vk/stories/view/StoryView;->a(Lcom/vk/stories/view/StoryViewTooltipParams;Landroid/view/View$OnClickListener;)Landroid/app/Dialog;
 
     const/4 p1, 0x1
 
@@ -1555,7 +1555,7 @@
     if-eqz v0, :cond_2
 
     .line 179
-    new-instance v2, Lcom/vk/stories/view/w1$a;
+    new-instance v2, Lcom/vk/stories/view/StoryViewTooltipParams$a;
 
     invoke-virtual {v0}, Lcom/vk/dto/hints/Hint;->getTitle()Ljava/lang/String;
 
@@ -1573,10 +1573,10 @@
     :goto_0
     if-eqz v3, :cond_2
 
-    invoke-direct {v2, v3, p2, p3}, Lcom/vk/stories/view/w1$a;-><init>(Ljava/lang/String;FF)V
+    invoke-direct {v2, v3, p2, p3}, Lcom/vk/stories/view/StoryViewTooltipParams$a;-><init>(Ljava/lang/String;FF)V
 
     .line 180
-    invoke-virtual {v2}, Lcom/vk/stories/view/w1$a;->a()Lcom/vk/stories/view/w1;
+    invoke-virtual {v2}, Lcom/vk/stories/view/StoryViewTooltipParams$a;->a()Lcom/vk/stories/view/StoryViewTooltipParams;
 
     move-result-object p2
 
@@ -1584,7 +1584,7 @@
 
     invoke-direct {p3, p0, p4}, Lcom/vk/stories/util/ClickableStickerDelegate$m;-><init>(Lcom/vk/stories/util/ClickableStickerDelegate;Lcom/vk/dto/stories/model/clickable/ClickableMusic;)V
 
-    invoke-virtual {p1, p2, p3}, Lcom/vk/stories/view/StoryView;->a(Lcom/vk/stories/view/w1;Landroid/view/View$OnClickListener;)Landroid/app/Dialog;
+    invoke-virtual {p1, p2, p3}, Lcom/vk/stories/view/StoryView;->a(Lcom/vk/stories/view/StoryViewTooltipParams;Landroid/view/View$OnClickListener;)Landroid/app/Dialog;
 
     const/4 p1, 0x1
 
@@ -1600,7 +1600,7 @@
     .line 66
     sget-object v0, Lcom/vk/dto/stories/model/StickerType;->OWNER:Lcom/vk/dto/stories/model/StickerType;
 
-    invoke-static {v0}, Lcom/vk/stories/clickable/e;->b(Lcom/vk/dto/stories/model/StickerType;)Z
+    invoke-static {v0}, Lcom/vk/stories/clickable/StoryClickableController;->b(Lcom/vk/dto/stories/model/StickerType;)Z
 
     move-result v0
 
@@ -1612,30 +1612,30 @@
 
     .line 67
     :cond_0
-    new-instance v0, Lcom/vk/stories/view/w1$a;
+    new-instance v0, Lcom/vk/stories/view/StoryViewTooltipParams$a;
 
     const v2, 0x7f120f9a
 
     .line 68
-    invoke-static {v2}, Lcom/vk/core/util/y0;->f(I)Ljava/lang/String;
+    invoke-static {v2}, Lcom/vk/core/util/ResUtils;->f(I)Ljava/lang/String;
 
     move-result-object v2
 
     const-string v3, "ResUtils.str(R.string.story_view_go_to_author)"
 
-    invoke-static {v2, v3}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v2, v3}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 69
-    invoke-direct {v0, v2, p2, p3}, Lcom/vk/stories/view/w1$a;-><init>(Ljava/lang/String;FF)V
+    invoke-direct {v0, v2, p2, p3}, Lcom/vk/stories/view/StoryViewTooltipParams$a;-><init>(Ljava/lang/String;FF)V
 
     .line 70
-    invoke-virtual {v0, v1}, Lcom/vk/stories/view/w1$a;->a(I)Lcom/vk/stories/view/w1$a;
+    invoke-virtual {v0, v1}, Lcom/vk/stories/view/StoryViewTooltipParams$a;->a(I)Lcom/vk/stories/view/StoryViewTooltipParams$a;
 
     .line 71
-    invoke-virtual {v0}, Lcom/vk/stories/view/w1$a;->c()Lcom/vk/stories/view/w1$a;
+    invoke-virtual {v0}, Lcom/vk/stories/view/StoryViewTooltipParams$a;->c()Lcom/vk/stories/view/StoryViewTooltipParams$a;
 
     .line 72
-    invoke-virtual {v0}, Lcom/vk/stories/view/w1$a;->a()Lcom/vk/stories/view/w1;
+    invoke-virtual {v0}, Lcom/vk/stories/view/StoryViewTooltipParams$a;->a()Lcom/vk/stories/view/StoryViewTooltipParams;
 
     move-result-object p2
 
@@ -1644,7 +1644,7 @@
 
     invoke-direct {p3, p0, p4, p1, p5}, Lcom/vk/stories/util/ClickableStickerDelegate$n;-><init>(Lcom/vk/stories/util/ClickableStickerDelegate;Lcom/vk/dto/stories/model/clickable/ClickableOwner;Lcom/vk/stories/view/StoryView;I)V
 
-    invoke-virtual {p1, p2, p3}, Lcom/vk/stories/view/StoryView;->a(Lcom/vk/stories/view/w1;Landroid/view/View$OnClickListener;)Landroid/app/Dialog;
+    invoke-virtual {p1, p2, p3}, Lcom/vk/stories/view/StoryView;->a(Lcom/vk/stories/view/StoryViewTooltipParams;Landroid/view/View$OnClickListener;)Landroid/app/Dialog;
 
     const/4 p1, 0x1
 
@@ -1696,7 +1696,7 @@
     goto :goto_0
 
     :cond_1
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     const/4 p1, 0x0
 
@@ -1706,26 +1706,26 @@
     const v0, 0x7f120ed2
 
     .line 174
-    invoke-static {v0}, Lcom/vk/core/util/y0;->f(I)Ljava/lang/String;
+    invoke-static {v0}, Lcom/vk/core/util/ResUtils;->f(I)Ljava/lang/String;
 
     move-result-object v0
 
     const-string v1, "ResUtils.str(R.string.story_go_to_sticker_pack)"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 175
     :goto_0
-    new-instance v1, Lcom/vk/stories/view/w1$a;
+    new-instance v1, Lcom/vk/stories/view/StoryViewTooltipParams$a;
 
-    invoke-direct {v1, v0, p2, p3}, Lcom/vk/stories/view/w1$a;-><init>(Ljava/lang/String;FF)V
+    invoke-direct {v1, v0, p2, p3}, Lcom/vk/stories/view/StoryViewTooltipParams$a;-><init>(Ljava/lang/String;FF)V
 
-    invoke-virtual {v1}, Lcom/vk/stories/view/w1$a;->d()Lcom/vk/stories/view/w1$a;
+    invoke-virtual {v1}, Lcom/vk/stories/view/StoryViewTooltipParams$a;->d()Lcom/vk/stories/view/StoryViewTooltipParams$a;
 
-    invoke-virtual {v1, p5}, Lcom/vk/stories/view/w1$a;->a(Z)Lcom/vk/stories/view/w1$a;
+    invoke-virtual {v1, p5}, Lcom/vk/stories/view/StoryViewTooltipParams$a;->a(Z)Lcom/vk/stories/view/StoryViewTooltipParams$a;
 
     .line 176
-    invoke-virtual {v1}, Lcom/vk/stories/view/w1$a;->a()Lcom/vk/stories/view/w1;
+    invoke-virtual {v1}, Lcom/vk/stories/view/StoryViewTooltipParams$a;->a()Lcom/vk/stories/view/StoryViewTooltipParams;
 
     move-result-object p2
 
@@ -1733,7 +1733,7 @@
 
     invoke-direct {p3, p0, p4, p1}, Lcom/vk/stories/util/ClickableStickerDelegate$l;-><init>(Lcom/vk/stories/util/ClickableStickerDelegate;Lcom/vk/dto/stories/model/clickable/ClickablePackSticker;Lcom/vk/stories/view/StoryView;)V
 
-    invoke-virtual {p1, p2, p3}, Lcom/vk/stories/view/StoryView;->a(Lcom/vk/stories/view/w1;Landroid/view/View$OnClickListener;)Landroid/app/Dialog;
+    invoke-virtual {p1, p2, p3}, Lcom/vk/stories/view/StoryView;->a(Lcom/vk/stories/view/StoryViewTooltipParams;Landroid/view/View$OnClickListener;)Landroid/app/Dialog;
 
     const/4 p1, 0x1
 
@@ -1744,24 +1744,24 @@
     .locals 3
 
     .line 168
-    new-instance v0, Lcom/vk/stories/view/w1$a;
+    new-instance v0, Lcom/vk/stories/view/StoryViewTooltipParams$a;
 
     const v1, 0x7f1201fd
 
-    invoke-static {v1}, Lcom/vk/core/util/y0;->f(I)Ljava/lang/String;
+    invoke-static {v1}, Lcom/vk/core/util/ResUtils;->f(I)Ljava/lang/String;
 
     move-result-object v1
 
     const-string v2, "ResUtils.str(R.string.comment_goto_post)"
 
-    invoke-static {v1, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    invoke-direct {v0, v1, p2, p3}, Lcom/vk/stories/view/w1$a;-><init>(Ljava/lang/String;FF)V
+    invoke-direct {v0, v1, p2, p3}, Lcom/vk/stories/view/StoryViewTooltipParams$a;-><init>(Ljava/lang/String;FF)V
 
-    invoke-virtual {v0}, Lcom/vk/stories/view/w1$a;->d()Lcom/vk/stories/view/w1$a;
+    invoke-virtual {v0}, Lcom/vk/stories/view/StoryViewTooltipParams$a;->d()Lcom/vk/stories/view/StoryViewTooltipParams$a;
 
     .line 169
-    invoke-virtual {v0}, Lcom/vk/stories/view/w1$a;->a()Lcom/vk/stories/view/w1;
+    invoke-virtual {v0}, Lcom/vk/stories/view/StoryViewTooltipParams$a;->a()Lcom/vk/stories/view/StoryViewTooltipParams;
 
     move-result-object p2
 
@@ -1769,7 +1769,7 @@
 
     invoke-direct {p3, p0, p4, p1}, Lcom/vk/stories/util/ClickableStickerDelegate$j;-><init>(Lcom/vk/stories/util/ClickableStickerDelegate;Lcom/vk/dto/stories/model/clickable/ClickablePost;Lcom/vk/stories/view/StoryView;)V
 
-    invoke-virtual {p1, p2, p3}, Lcom/vk/stories/view/StoryView;->a(Lcom/vk/stories/view/w1;Landroid/view/View$OnClickListener;)Landroid/app/Dialog;
+    invoke-virtual {p1, p2, p3}, Lcom/vk/stories/view/StoryView;->a(Lcom/vk/stories/view/StoryViewTooltipParams;Landroid/view/View$OnClickListener;)Landroid/app/Dialog;
 
     const/4 p1, 0x1
 
@@ -1782,7 +1782,7 @@
     .line 74
     sget-object v0, Lcom/vk/dto/stories/model/StickerType;->REPLY:Lcom/vk/dto/stories/model/StickerType;
 
-    invoke-static {v0}, Lcom/vk/stories/clickable/e;->b(Lcom/vk/dto/stories/model/StickerType;)Z
+    invoke-static {v0}, Lcom/vk/stories/clickable/StoryClickableController;->b(Lcom/vk/dto/stories/model/StickerType;)Z
 
     move-result v0
 
@@ -1798,7 +1798,7 @@
 
     const-string v2, "currentStory.parentStory"
 
-    invoke-static {v0, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {v0}, Lcom/vk/dto/stories/model/StoryEntryExtended;->t1()Lcom/vk/dto/stories/model/StoryEntry;
 
@@ -1811,7 +1811,7 @@
     .line 76
     iget-object p2, p2, Lcom/vk/dto/stories/model/StoryEntry;->j0:Lcom/vk/dto/stories/model/StoryEntryExtended;
 
-    invoke-static {p2, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p2, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {p2}, Lcom/vk/dto/stories/model/StoryEntryExtended;->u1()Lcom/vk/dto/stories/model/StoryOwner;
 
@@ -1819,7 +1819,7 @@
 
     const-string p5, "currentStory.parentStory.storyOwner"
 
-    invoke-static {p2, p5}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p2, p5}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {p2}, Lcom/vk/dto/stories/model/StoryOwner;->w1()I
 
@@ -1844,30 +1844,30 @@
 
     .line 78
     :cond_1
-    new-instance v0, Lcom/vk/stories/view/w1$a;
+    new-instance v0, Lcom/vk/stories/view/StoryViewTooltipParams$a;
 
     const v2, 0x7f120f9b
 
     .line 79
-    invoke-static {v2}, Lcom/vk/core/util/y0;->f(I)Ljava/lang/String;
+    invoke-static {v2}, Lcom/vk/core/util/ResUtils;->f(I)Ljava/lang/String;
 
     move-result-object v2
 
     const-string v3, "ResUtils.str(R.string.story_view_go_to_story)"
 
-    invoke-static {v2, v3}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v2, v3}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 80
-    invoke-direct {v0, v2, p3, p4}, Lcom/vk/stories/view/w1$a;-><init>(Ljava/lang/String;FF)V
+    invoke-direct {v0, v2, p3, p4}, Lcom/vk/stories/view/StoryViewTooltipParams$a;-><init>(Ljava/lang/String;FF)V
 
     .line 81
-    invoke-virtual {v0, v1}, Lcom/vk/stories/view/w1$a;->a(I)Lcom/vk/stories/view/w1$a;
+    invoke-virtual {v0, v1}, Lcom/vk/stories/view/StoryViewTooltipParams$a;->a(I)Lcom/vk/stories/view/StoryViewTooltipParams$a;
 
     .line 82
-    invoke-virtual {v0}, Lcom/vk/stories/view/w1$a;->c()Lcom/vk/stories/view/w1$a;
+    invoke-virtual {v0}, Lcom/vk/stories/view/StoryViewTooltipParams$a;->c()Lcom/vk/stories/view/StoryViewTooltipParams$a;
 
     .line 83
-    invoke-virtual {v0}, Lcom/vk/stories/view/w1$a;->a()Lcom/vk/stories/view/w1;
+    invoke-virtual {v0}, Lcom/vk/stories/view/StoryViewTooltipParams$a;->a()Lcom/vk/stories/view/StoryViewTooltipParams;
 
     move-result-object p3
 
@@ -1876,18 +1876,18 @@
 
     invoke-direct {p4, p0, p5, p1, p2}, Lcom/vk/stories/util/ClickableStickerDelegate$o;-><init>(Lcom/vk/stories/util/ClickableStickerDelegate;Lcom/vk/dto/stories/model/clickable/ClickableReply;Lcom/vk/stories/view/StoryView;Lcom/vk/dto/stories/model/StoryEntry;)V
 
-    invoke-virtual {p1, p3, p4}, Lcom/vk/stories/view/StoryView;->a(Lcom/vk/stories/view/w1;Landroid/view/View$OnClickListener;)Landroid/app/Dialog;
+    invoke-virtual {p1, p3, p4}, Lcom/vk/stories/view/StoryView;->a(Lcom/vk/stories/view/StoryViewTooltipParams;Landroid/view/View$OnClickListener;)Landroid/app/Dialog;
 
     const/4 p1, 0x1
 
     return p1
 .end method
 
-.method public static final synthetic b(Lcom/vk/stories/util/ClickableStickerDelegate;)Lcom/vk/stories/view/r1;
+.method public static final synthetic b(Lcom/vk/stories/util/ClickableStickerDelegate;)Lcom/vk/stories/view/StoryViewClickableStickerListener;
     .locals 0
 
     .line 1
-    iget-object p0, p0, Lcom/vk/stories/util/ClickableStickerDelegate;->h:Lcom/vk/stories/view/r1;
+    iget-object p0, p0, Lcom/vk/stories/util/ClickableStickerDelegate;->h:Lcom/vk/stories/view/StoryViewClickableStickerListener;
 
     return-object p0
 .end method
@@ -1904,7 +1904,7 @@
 
     invoke-direct {v2, p0, p1}, Lcom/vk/stories/util/ClickableStickerDelegate$trackClickOnTooltip$1;-><init>(Lcom/vk/stories/util/ClickableStickerDelegate;Lcom/vk/dto/stories/model/clickable/ClickableSticker;)V
 
-    invoke-interface {v0, v1, v2}, Lcom/vk/stories/util/ClickableStickerDelegate$a;->a(Lcom/vk/dto/stories/model/StoryViewAction;Lkotlin/jvm/b/b;)V
+    invoke-interface {v0, v1, v2}, Lcom/vk/stories/util/ClickableStickerDelegate$a;->a(Lcom/vk/dto/stories/model/StoryViewAction;Lkotlin/jvm/b/Functions2;)V
 
     return-void
 .end method
@@ -1975,7 +1975,7 @@
     const-string v1, "polygon"
 
     .line 18
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-direct {p0, v0, p1}, Lcom/vk/stories/util/ClickableStickerDelegate;->a([Landroid/graphics/PointF;Landroid/graphics/Canvas;)V
 
@@ -2054,9 +2054,9 @@
 
     if-eqz v2, :cond_5
 
-    sget-object v2, Lcom/vk/stories/clickable/e;->i:Lcom/vk/stories/clickable/e;
+    sget-object v2, Lcom/vk/stories/clickable/StoryClickableController;->i:Lcom/vk/stories/clickable/StoryClickableController;
 
-    invoke-virtual {v2}, Lcom/vk/stories/clickable/e;->j()Z
+    invoke-virtual {v2}, Lcom/vk/stories/clickable/StoryClickableController;->j()Z
 
     move-result v2
 
@@ -2089,9 +2089,9 @@
 
     if-eqz v2, :cond_6
 
-    sget-object v2, Lcom/vk/stories/clickable/e;->i:Lcom/vk/stories/clickable/e;
+    sget-object v2, Lcom/vk/stories/clickable/StoryClickableController;->i:Lcom/vk/stories/clickable/StoryClickableController;
 
-    invoke-virtual {v2}, Lcom/vk/stories/clickable/e;->k()Z
+    invoke-virtual {v2}, Lcom/vk/stories/clickable/StoryClickableController;->k()Z
 
     move-result v2
 
@@ -2130,9 +2130,9 @@
 
     if-eqz v2, :cond_7
 
-    sget-object v2, Lcom/vk/stories/clickable/e;->i:Lcom/vk/stories/clickable/e;
+    sget-object v2, Lcom/vk/stories/clickable/StoryClickableController;->i:Lcom/vk/stories/clickable/StoryClickableController;
 
-    invoke-virtual {v2}, Lcom/vk/stories/clickable/e;->i()Z
+    invoke-virtual {v2}, Lcom/vk/stories/clickable/StoryClickableController;->i()Z
 
     move-result v2
 
@@ -2200,9 +2200,9 @@
 
     if-eqz v2, :cond_9
 
-    sget-object v2, Lcom/vk/stories/clickable/e;->i:Lcom/vk/stories/clickable/e;
+    sget-object v2, Lcom/vk/stories/clickable/StoryClickableController;->i:Lcom/vk/stories/clickable/StoryClickableController;
 
-    invoke-virtual {v2}, Lcom/vk/stories/clickable/e;->l()Z
+    invoke-virtual {v2}, Lcom/vk/stories/clickable/StoryClickableController;->l()Z
 
     move-result v2
 
@@ -2306,11 +2306,11 @@
 
     if-eqz v2, :cond_3
 
-    iget-object p1, p0, Lcom/vk/stories/util/ClickableStickerDelegate;->g:Lcom/vk/stories/view/r1;
+    iget-object p1, p0, Lcom/vk/stories/util/ClickableStickerDelegate;->g:Lcom/vk/stories/view/StoryViewClickableStickerListener;
 
     if-eqz p1, :cond_d
 
-    invoke-interface {p1, v0}, Lcom/vk/stories/view/r1;->a(Lcom/vk/dto/stories/model/clickable/ClickableSticker;)Z
+    invoke-interface {p1, v0}, Lcom/vk/stories/view/StoryViewClickableStickerListener;->a(Lcom/vk/dto/stories/model/clickable/ClickableSticker;)Z
 
     move-result v1
 
@@ -2338,11 +2338,11 @@
 
     if-eqz v2, :cond_5
 
-    iget-object p1, p0, Lcom/vk/stories/util/ClickableStickerDelegate;->h:Lcom/vk/stories/view/r1;
+    iget-object p1, p0, Lcom/vk/stories/util/ClickableStickerDelegate;->h:Lcom/vk/stories/view/StoryViewClickableStickerListener;
 
     if-eqz p1, :cond_d
 
-    invoke-interface {p1, v0}, Lcom/vk/stories/view/r1;->a(Lcom/vk/dto/stories/model/clickable/ClickableSticker;)Z
+    invoke-interface {p1, v0}, Lcom/vk/stories/view/StoryViewClickableStickerListener;->a(Lcom/vk/dto/stories/model/clickable/ClickableSticker;)Z
 
     move-result v1
 
@@ -2484,11 +2484,11 @@
 
     if-eqz p2, :cond_c
 
-    iget-object p1, p0, Lcom/vk/stories/util/ClickableStickerDelegate;->i:Lcom/vk/stories/view/r1;
+    iget-object p1, p0, Lcom/vk/stories/util/ClickableStickerDelegate;->i:Lcom/vk/stories/view/StoryViewClickableStickerListener;
 
     if-eqz p1, :cond_d
 
-    invoke-interface {p1, v0}, Lcom/vk/stories/view/r1;->a(Lcom/vk/dto/stories/model/clickable/ClickableSticker;)Z
+    invoke-interface {p1, v0}, Lcom/vk/stories/view/StoryViewClickableStickerListener;->a(Lcom/vk/dto/stories/model/clickable/ClickableSticker;)Z
 
     move-result v1
 
@@ -2521,7 +2521,7 @@
 
     invoke-direct {p3, p0, v0}, Lcom/vk/stories/util/ClickableStickerDelegate$handleClickByClickableSticker$1;-><init>(Lcom/vk/stories/util/ClickableStickerDelegate;Lcom/vk/dto/stories/model/clickable/ClickableSticker;)V
 
-    invoke-interface {p1, p2, p3}, Lcom/vk/stories/util/ClickableStickerDelegate$a;->a(Lcom/vk/dto/stories/model/StoryViewAction;Lkotlin/jvm/b/b;)V
+    invoke-interface {p1, p2, p3}, Lcom/vk/stories/util/ClickableStickerDelegate$a;->a(Lcom/vk/dto/stories/model/StoryViewAction;Lkotlin/jvm/b/Functions2;)V
 
     :cond_e
     return v1
@@ -2533,7 +2533,7 @@
     .line 181
     sget-object v0, Lcom/vk/dto/stories/model/StickerType;->APP:Lcom/vk/dto/stories/model/StickerType;
 
-    invoke-static {v0}, Lcom/vk/stories/clickable/e;->b(Lcom/vk/dto/stories/model/StickerType;)Z
+    invoke-static {v0}, Lcom/vk/stories/clickable/StoryClickableController;->b(Lcom/vk/dto/stories/model/StickerType;)Z
 
     move-result v0
 
@@ -2557,21 +2557,21 @@
     if-eqz v8, :cond_2
 
     .line 184
-    new-instance v1, Lcom/vk/api/apps/m$a;
+    new-instance v1, Lcom/vk/api/apps/AppsGetEmbeddedUrl$a;
 
     const-string v2, "webViewUrl"
 
-    invoke-static {v8, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v8, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     iget-object v2, v0, Lcom/vk/dto/common/data/ApiApplication;->b:Ljava/lang/String;
 
     const-string v3, "app.title"
 
-    invoke-static {v2, v3}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v2, v3}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     const-string v3, ""
 
-    invoke-direct {v1, v8, v3, v2}, Lcom/vk/api/apps/m$a;-><init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-direct {v1, v8, v3, v2}, Lcom/vk/api/apps/AppsGetEmbeddedUrl$a;-><init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
 
     .line 185
     invoke-virtual {p1}, Landroid/widget/FrameLayout;->getContext()Landroid/content/Context;
@@ -2581,21 +2581,21 @@
     const-string v2, "context"
 
     .line 186
-    invoke-static {v9, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v9, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-static {v9}, Lcom/vk/core/util/ContextExtKt;->e(Landroid/content/Context;)Landroid/app/Activity;
 
     move-result-object v3
 
     .line 187
-    instance-of v2, v3, Lcom/vk/navigation/u;
+    instance-of v2, v3, Lcom/vk/navigation/ResulterProvider;
 
     if-eqz v2, :cond_1
 
     .line 188
     move-object v10, v3
 
-    check-cast v10, Lcom/vk/navigation/u;
+    check-cast v10, Lcom/vk/navigation/ResulterProvider;
 
     new-instance v11, Lcom/vk/stories/util/ClickableStickerDelegate$c;
 
@@ -2611,7 +2611,7 @@
 
     invoke-direct/range {v2 .. v7}, Lcom/vk/stories/util/ClickableStickerDelegate$c;-><init>(Landroid/app/Activity;Lcom/vk/stories/util/ClickableStickerDelegate;Lcom/vk/dto/common/data/ApiApplication;Lcom/vk/stories/view/StoryView;Lcom/vk/dto/stories/model/clickable/ClickableApp;)V
 
-    invoke-interface {v10, v11}, Lcom/vk/navigation/u;->b(Lcom/vk/navigation/c;)V
+    invoke-interface {v10, v11}, Lcom/vk/navigation/ResulterProvider;->b(Lcom/vk/navigation/ActivityResulter;)V
 
     .line 189
     :cond_1
@@ -2624,7 +2624,7 @@
 
     const-string v2, "Uri.parse(webViewUrl)"
 
-    invoke-static {v6, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v6, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 191
     new-instance v10, Lcom/vk/stories/util/ClickableStickerDelegate$d;
@@ -2651,7 +2651,7 @@
     move-object v9, p1
 
     .line 193
-    invoke-static/range {v2 .. v9}, Lcom/vk/common/links/OpenFunctionsKt;->a(Landroid/content/Context;Lcom/vk/dto/common/data/ApiApplication;Lcom/vk/api/apps/m$a;ILandroid/net/Uri;Ljava/lang/String;Lcom/vk/common/links/f;Ljava/lang/Integer;)V
+    invoke-static/range {v2 .. v9}, Lcom/vk/common/links/OpenFunctionsKt;->a(Landroid/content/Context;Lcom/vk/dto/common/data/ApiApplication;Lcom/vk/api/apps/AppsGetEmbeddedUrl$a;ILandroid/net/Uri;Ljava/lang/String;Lcom/vk/common/links/OpenCallback;Ljava/lang/Integer;)V
 
     const/4 p1, 0x1
 

@@ -3,7 +3,7 @@
 .source "NavigationDelegate.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/b;
+.implements Lkotlin/jvm/b/Functions2;
 
 
 # annotations
@@ -19,7 +19,7 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/b<",
+        "Lkotlin/jvm/b/Functions2<",
         "Landroidx/fragment/app/Fragment;",
         "Ljava/lang/Boolean;",
         ">;"
@@ -60,7 +60,7 @@
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v0
 
@@ -68,14 +68,14 @@
 
     if-eqz v0, :cond_1
 
-    instance-of v0, p1, Lcom/vk/navigation/t;
+    instance-of v0, p1, Lcom/vk/navigation/ReorderableFragment;
 
     if-nez v0, :cond_0
 
     const/4 p1, 0x0
 
     :cond_0
-    check-cast p1, Lcom/vk/navigation/t;
+    check-cast p1, Lcom/vk/navigation/ReorderableFragment;
 
     if-eqz p1, :cond_1
 
@@ -85,7 +85,7 @@
 
     move-result-object v0
 
-    invoke-interface {p1, v0}, Lcom/vk/navigation/t;->c(Landroid/os/Bundle;)Z
+    invoke-interface {p1, v0}, Lcom/vk/navigation/ReorderableFragment;->c(Landroid/os/Bundle;)Z
 
     move-result p1
 

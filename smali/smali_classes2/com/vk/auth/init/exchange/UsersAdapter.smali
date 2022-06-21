@@ -24,7 +24,7 @@
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/util/ArrayList<",
-            "Lcom/vk/auth/init/exchange/c;",
+            "Lcom/vk/auth/init/exchange/UserItem;",
             ">;"
         }
     .end annotation
@@ -36,31 +36,31 @@
 
 .field private d:Z
 
-.field private final e:Lcom/vk/auth/main/i;
+.field private final e:Lcom/vk/auth/main/AuthUiManager;
 
-.field private final f:Lkotlin/jvm/b/c;
+.field private final f:Lkotlin/jvm/b/Functions1;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Lkotlin/jvm/b/c<",
+            "Lkotlin/jvm/b/Functions1<",
             "Ljava/util/List<",
-            "Lcom/vk/auth/init/exchange/c;",
+            "Lcom/vk/auth/init/exchange/UserItem;",
             ">;",
             "Ljava/lang/Integer;",
-            "Lkotlin/m;",
+            "Lkotlin/Unit;",
             ">;"
         }
     .end annotation
 .end field
 
-.field private final g:Lkotlin/jvm/b/c;
+.field private final g:Lkotlin/jvm/b/Functions1;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Lkotlin/jvm/b/c<",
+            "Lkotlin/jvm/b/Functions1<",
             "Ljava/util/List<",
-            "Lcom/vk/auth/init/exchange/c;",
+            "Lcom/vk/auth/init/exchange/UserItem;",
             ">;",
             "Ljava/lang/Integer;",
-            "Lkotlin/m;",
+            "Lkotlin/Unit;",
             ">;"
         }
     .end annotation
@@ -68,27 +68,27 @@
 
 
 # direct methods
-.method public constructor <init>(Lcom/vk/auth/main/i;Lkotlin/jvm/b/c;Lkotlin/jvm/b/c;)V
+.method public constructor <init>(Lcom/vk/auth/main/AuthUiManager;Lkotlin/jvm/b/Functions1;Lkotlin/jvm/b/Functions1;)V
     .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lcom/vk/auth/main/i;",
-            "Lkotlin/jvm/b/c<",
+            "Lcom/vk/auth/main/AuthUiManager;",
+            "Lkotlin/jvm/b/Functions1<",
             "-",
             "Ljava/util/List<",
-            "Lcom/vk/auth/init/exchange/c;",
+            "Lcom/vk/auth/init/exchange/UserItem;",
             ">;-",
             "Ljava/lang/Integer;",
-            "Lkotlin/m;",
+            "Lkotlin/Unit;",
             ">;",
-            "Lkotlin/jvm/b/c<",
+            "Lkotlin/jvm/b/Functions1<",
             "-",
             "Ljava/util/List<",
-            "Lcom/vk/auth/init/exchange/c;",
+            "Lcom/vk/auth/init/exchange/UserItem;",
             ">;-",
             "Ljava/lang/Integer;",
-            "Lkotlin/m;",
+            "Lkotlin/Unit;",
             ">;)V"
         }
     .end annotation
@@ -96,11 +96,11 @@
     .line 1
     invoke-direct {p0}, Landroidx/recyclerview/widget/RecyclerView$Adapter;-><init>()V
 
-    iput-object p1, p0, Lcom/vk/auth/init/exchange/UsersAdapter;->e:Lcom/vk/auth/main/i;
+    iput-object p1, p0, Lcom/vk/auth/init/exchange/UsersAdapter;->e:Lcom/vk/auth/main/AuthUiManager;
 
-    iput-object p2, p0, Lcom/vk/auth/init/exchange/UsersAdapter;->f:Lkotlin/jvm/b/c;
+    iput-object p2, p0, Lcom/vk/auth/init/exchange/UsersAdapter;->f:Lkotlin/jvm/b/Functions1;
 
-    iput-object p3, p0, Lcom/vk/auth/init/exchange/UsersAdapter;->g:Lkotlin/jvm/b/c;
+    iput-object p3, p0, Lcom/vk/auth/init/exchange/UsersAdapter;->g:Lkotlin/jvm/b/Functions1;
 
     .line 2
     new-instance p1, Ljava/util/ArrayList;
@@ -117,22 +117,22 @@
     return-void
 .end method
 
-.method public static final synthetic a(Lcom/vk/auth/init/exchange/UsersAdapter;Lcom/vk/auth/init/exchange/c;)I
+.method public static final synthetic a(Lcom/vk/auth/init/exchange/UsersAdapter;Lcom/vk/auth/init/exchange/UserItem;)I
     .locals 0
 
     .line 2
-    invoke-direct {p0, p1}, Lcom/vk/auth/init/exchange/UsersAdapter;->b(Lcom/vk/auth/init/exchange/c;)I
+    invoke-direct {p0, p1}, Lcom/vk/auth/init/exchange/UsersAdapter;->b(Lcom/vk/auth/init/exchange/UserItem;)I
 
     move-result p0
 
     return p0
 .end method
 
-.method public static final synthetic a(Lcom/vk/auth/init/exchange/UsersAdapter;)Lkotlin/jvm/b/c;
+.method public static final synthetic a(Lcom/vk/auth/init/exchange/UsersAdapter;)Lkotlin/jvm/b/Functions1;
     .locals 0
 
     .line 1
-    iget-object p0, p0, Lcom/vk/auth/init/exchange/UsersAdapter;->g:Lkotlin/jvm/b/c;
+    iget-object p0, p0, Lcom/vk/auth/init/exchange/UsersAdapter;->g:Lkotlin/jvm/b/Functions1;
 
     return-object p0
 .end method
@@ -146,7 +146,7 @@
     return-void
 .end method
 
-.method private final b(Lcom/vk/auth/init/exchange/c;)I
+.method private final b(Lcom/vk/auth/init/exchange/UserItem;)I
     .locals 3
 
     .line 4
@@ -174,15 +174,15 @@
 
     move-object v2, v1
 
-    check-cast v2, Lkotlin/collections/x;
+    check-cast v2, Lkotlin/collections/IndexedValue;
 
-    invoke-virtual {v2}, Lkotlin/collections/x;->d()Ljava/lang/Object;
+    invoke-virtual {v2}, Lkotlin/collections/IndexedValue;->d()Ljava/lang/Object;
 
     move-result-object v2
 
-    check-cast v2, Lcom/vk/auth/init/exchange/c;
+    check-cast v2, Lcom/vk/auth/init/exchange/UserItem;
 
-    invoke-static {v2, p1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v2, p1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v2
 
@@ -194,11 +194,11 @@
     const/4 v1, 0x0
 
     :goto_0
-    check-cast v1, Lkotlin/collections/x;
+    check-cast v1, Lkotlin/collections/IndexedValue;
 
     if-eqz v1, :cond_2
 
-    invoke-virtual {v1}, Lkotlin/collections/x;->c()I
+    invoke-virtual {v1}, Lkotlin/collections/IndexedValue;->c()I
 
     move-result p1
 
@@ -211,11 +211,11 @@
     return p1
 .end method
 
-.method public static final synthetic b(Lcom/vk/auth/init/exchange/UsersAdapter;)Lkotlin/jvm/b/c;
+.method public static final synthetic b(Lcom/vk/auth/init/exchange/UsersAdapter;)Lkotlin/jvm/b/Functions1;
     .locals 0
 
     .line 1
-    iget-object p0, p0, Lcom/vk/auth/init/exchange/UsersAdapter;->f:Lkotlin/jvm/b/c;
+    iget-object p0, p0, Lcom/vk/auth/init/exchange/UsersAdapter;->f:Lkotlin/jvm/b/Functions1;
 
     return-object p0
 .end method
@@ -252,9 +252,9 @@
 
     const-string v1, "users[position]"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    check-cast v0, Lcom/vk/auth/init/exchange/c;
+    check-cast v0, Lcom/vk/auth/init/exchange/UserItem;
 
     .line 5
     iget v1, p0, Lcom/vk/auth/init/exchange/UsersAdapter;->b:I
@@ -284,12 +284,12 @@
     iget-boolean v1, p0, Lcom/vk/auth/init/exchange/UsersAdapter;->d:Z
 
     .line 8
-    invoke-virtual {p1, v0, v2, p2, v1}, Lcom/vk/auth/init/exchange/UsersAdapter$a;->a(Lcom/vk/auth/init/exchange/c;ZZZ)V
+    invoke-virtual {p1, v0, v2, p2, v1}, Lcom/vk/auth/init/exchange/UsersAdapter$a;->a(Lcom/vk/auth/init/exchange/UserItem;ZZZ)V
 
     return-void
 .end method
 
-.method public final a(Lcom/vk/auth/init/exchange/c;)V
+.method public final a(Lcom/vk/auth/init/exchange/UserItem;)V
     .locals 4
 
     .line 13
@@ -317,19 +317,19 @@
 
     move-object v2, v1
 
-    check-cast v2, Lkotlin/collections/x;
+    check-cast v2, Lkotlin/collections/IndexedValue;
 
-    invoke-virtual {v2}, Lkotlin/collections/x;->d()Ljava/lang/Object;
+    invoke-virtual {v2}, Lkotlin/collections/IndexedValue;->d()Ljava/lang/Object;
 
     move-result-object v2
 
-    check-cast v2, Lcom/vk/auth/init/exchange/c;
+    check-cast v2, Lcom/vk/auth/init/exchange/UserItem;
 
-    invoke-virtual {v2}, Lcom/vk/auth/init/exchange/c;->e()I
+    invoke-virtual {v2}, Lcom/vk/auth/init/exchange/UserItem;->e()I
 
     move-result v2
 
-    invoke-virtual {p1}, Lcom/vk/auth/init/exchange/c;->e()I
+    invoke-virtual {p1}, Lcom/vk/auth/init/exchange/UserItem;->e()I
 
     move-result v3
 
@@ -351,21 +351,21 @@
     const/4 v1, 0x0
 
     :goto_1
-    check-cast v1, Lkotlin/collections/x;
+    check-cast v1, Lkotlin/collections/IndexedValue;
 
     if-eqz v1, :cond_3
 
     .line 15
     iget-object v0, p0, Lcom/vk/auth/init/exchange/UsersAdapter;->a:Ljava/util/ArrayList;
 
-    invoke-virtual {v1}, Lkotlin/collections/x;->c()I
+    invoke-virtual {v1}, Lkotlin/collections/IndexedValue;->c()I
 
     move-result v2
 
     invoke-virtual {v0, v2, p1}, Ljava/util/ArrayList;->set(ILjava/lang/Object;)Ljava/lang/Object;
 
     .line 16
-    invoke-virtual {v1}, Lkotlin/collections/x;->c()I
+    invoke-virtual {v1}, Lkotlin/collections/IndexedValue;->c()I
 
     move-result p1
 
@@ -381,7 +381,7 @@
         value = {
             "(",
             "Ljava/util/List<",
-            "Lcom/vk/auth/init/exchange/c;",
+            "Lcom/vk/auth/init/exchange/UserItem;",
             ">;I)V"
         }
     .end annotation
@@ -470,7 +470,7 @@
     .line 2
     new-instance p2, Lcom/vk/auth/init/exchange/UsersAdapter$a;
 
-    iget-object v0, p0, Lcom/vk/auth/init/exchange/UsersAdapter;->e:Lcom/vk/auth/main/i;
+    iget-object v0, p0, Lcom/vk/auth/init/exchange/UsersAdapter;->e:Lcom/vk/auth/main/AuthUiManager;
 
     new-instance v1, Lcom/vk/auth/init/exchange/UsersAdapter$onCreateViewHolder$1;
 
@@ -482,7 +482,7 @@
     invoke-direct {v2, p0}, Lcom/vk/auth/init/exchange/UsersAdapter$onCreateViewHolder$2;-><init>(Lcom/vk/auth/init/exchange/UsersAdapter;)V
 
     .line 4
-    invoke-direct {p2, p1, v0, v1, v2}, Lcom/vk/auth/init/exchange/UsersAdapter$a;-><init>(Landroid/view/ViewGroup;Lcom/vk/auth/main/i;Lkotlin/jvm/b/b;Lkotlin/jvm/b/b;)V
+    invoke-direct {p2, p1, v0, v1, v2}, Lcom/vk/auth/init/exchange/UsersAdapter$a;-><init>(Landroid/view/ViewGroup;Lcom/vk/auth/main/AuthUiManager;Lkotlin/jvm/b/Functions2;Lkotlin/jvm/b/Functions2;)V
 
     return-object p2
 .end method

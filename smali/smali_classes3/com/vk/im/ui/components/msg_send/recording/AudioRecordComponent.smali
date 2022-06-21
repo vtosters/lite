@@ -1,9 +1,9 @@
 .class public final Lcom/vk/im/ui/components/msg_send/recording/AudioRecordComponent;
-.super Lcom/vk/im/ui/q/c;
+.super Lcom/vk/im/ui/q/Component;
 .source "AudioRecordComponent.kt"
 
 # interfaces
-.implements Lcom/vk/im/ui/r/a/b;
+.implements Lcom/vk/im/ui/r/a/AudioMsgPlayerListener;
 
 
 # annotations
@@ -23,7 +23,7 @@
 # instance fields
 .field private final B:Lcom/vk/audio/AudioRecorder;
 
-.field private final C:Lcom/vk/im/ui/r/a/a;
+.field private final C:Lcom/vk/im/ui/r/a/AudioMsgPlayer;
 
 .field private D:Lcom/vk/audio/AudioMsgTrackByRecord;
 
@@ -33,7 +33,7 @@
 
 .field private G:Ljava/lang/String;
 
-.field private H:Lio/reactivex/disposables/b;
+.field private H:Lio/reactivex/disposables/Disposable;
 
 .field private I:I
     .annotation build Landroidx/annotation/ColorInt;
@@ -50,7 +50,7 @@
 
 .field private final N:Landroid/app/Activity;
 
-.field private final O:Lcom/vk/im/ui/p/b;
+.field private final O:Lcom/vk/im/ui/p/ImBridge8;
 
 .field private final P:I
 
@@ -71,14 +71,14 @@
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, v1}, Lcom/vk/im/ui/components/msg_send/recording/AudioRecordComponent$b;-><init>(Lkotlin/jvm/internal/i;)V
+    invoke-direct {v0, v1}, Lcom/vk/im/ui/components/msg_send/recording/AudioRecordComponent$b;-><init>(Lkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     sput-object v0, Lcom/vk/im/ui/components/msg_send/recording/AudioRecordComponent;->S:Lcom/vk/im/ui/components/msg_send/recording/AudioRecordComponent$b;
 
     return-void
 .end method
 
-.method public constructor <init>(Landroid/app/Activity;Lcom/vk/im/ui/p/b;ILandroid/view/Window;)V
+.method public constructor <init>(Landroid/app/Activity;Lcom/vk/im/ui/p/ImBridge8;ILandroid/view/Window;)V
     .locals 8
 
     const/4 v5, 0x0
@@ -97,20 +97,20 @@
 
     move-object v4, p4
 
-    invoke-direct/range {v0 .. v7}, Lcom/vk/im/ui/components/msg_send/recording/AudioRecordComponent;-><init>(Landroid/app/Activity;Lcom/vk/im/ui/p/b;ILandroid/view/Window;Lcom/vk/im/ui/themes/DialogThemeBinder;ILkotlin/jvm/internal/i;)V
+    invoke-direct/range {v0 .. v7}, Lcom/vk/im/ui/components/msg_send/recording/AudioRecordComponent;-><init>(Landroid/app/Activity;Lcom/vk/im/ui/p/ImBridge8;ILandroid/view/Window;Lcom/vk/im/ui/themes/DialogThemeBinder;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     return-void
 .end method
 
-.method public constructor <init>(Landroid/app/Activity;Lcom/vk/im/ui/p/b;ILandroid/view/Window;Lcom/vk/im/ui/themes/DialogThemeBinder;)V
+.method public constructor <init>(Landroid/app/Activity;Lcom/vk/im/ui/p/ImBridge8;ILandroid/view/Window;Lcom/vk/im/ui/themes/DialogThemeBinder;)V
     .locals 0
 
     .line 1
-    invoke-direct {p0}, Lcom/vk/im/ui/q/c;-><init>()V
+    invoke-direct {p0}, Lcom/vk/im/ui/q/Component;-><init>()V
 
     iput-object p1, p0, Lcom/vk/im/ui/components/msg_send/recording/AudioRecordComponent;->N:Landroid/app/Activity;
 
-    iput-object p2, p0, Lcom/vk/im/ui/components/msg_send/recording/AudioRecordComponent;->O:Lcom/vk/im/ui/p/b;
+    iput-object p2, p0, Lcom/vk/im/ui/components/msg_send/recording/AudioRecordComponent;->O:Lcom/vk/im/ui/p/ImBridge8;
 
     iput p3, p0, Lcom/vk/im/ui/components/msg_send/recording/AudioRecordComponent;->P:I
 
@@ -137,13 +137,13 @@
     iput-object p1, p0, Lcom/vk/im/ui/components/msg_send/recording/AudioRecordComponent;->B:Lcom/vk/audio/AudioRecorder;
 
     .line 4
-    iget-object p1, p0, Lcom/vk/im/ui/components/msg_send/recording/AudioRecordComponent;->O:Lcom/vk/im/ui/p/b;
+    iget-object p1, p0, Lcom/vk/im/ui/components/msg_send/recording/AudioRecordComponent;->O:Lcom/vk/im/ui/p/ImBridge8;
 
-    invoke-interface {p1}, Lcom/vk/im/ui/p/b;->h()Lcom/vk/im/ui/r/a/a;
+    invoke-interface {p1}, Lcom/vk/im/ui/p/ImBridge8;->h()Lcom/vk/im/ui/r/a/AudioMsgPlayer;
 
     move-result-object p1
 
-    iput-object p1, p0, Lcom/vk/im/ui/components/msg_send/recording/AudioRecordComponent;->C:Lcom/vk/im/ui/r/a/a;
+    iput-object p1, p0, Lcom/vk/im/ui/components/msg_send/recording/AudioRecordComponent;->C:Lcom/vk/im/ui/r/a/AudioMsgPlayer;
 
     .line 5
     new-instance p1, Lcom/vk/im/ui/components/msg_send/recording/AudioRecordComponent$c;
@@ -165,7 +165,7 @@
     return-void
 .end method
 
-.method public synthetic constructor <init>(Landroid/app/Activity;Lcom/vk/im/ui/p/b;ILandroid/view/Window;Lcom/vk/im/ui/themes/DialogThemeBinder;ILkotlin/jvm/internal/i;)V
+.method public synthetic constructor <init>(Landroid/app/Activity;Lcom/vk/im/ui/p/ImBridge8;ILandroid/view/Window;Lcom/vk/im/ui/themes/DialogThemeBinder;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
     .locals 7
 
     and-int/lit8 p7, p6, 0x8
@@ -191,7 +191,7 @@
 
     const/4 p4, 0x3
 
-    invoke-direct {p5, v0, v0, p4, v0}, Lcom/vk/im/ui/themes/DialogThemeBinder;-><init>(Lcom/vk/core/ui/themes/VKThemeHelper;Lcom/vk/im/engine/models/dialogs/DialogTheme;ILkotlin/jvm/internal/i;)V
+    invoke-direct {p5, v0, v0, p4, v0}, Lcom/vk/im/ui/themes/DialogThemeBinder;-><init>(Lcom/vk/core/ui/themes/VKThemeHelper;Lcom/vk/im/engine/models/dialogs/DialogTheme;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     :cond_1
     move-object v6, p5
@@ -204,16 +204,16 @@
 
     move v4, p3
 
-    invoke-direct/range {v1 .. v6}, Lcom/vk/im/ui/components/msg_send/recording/AudioRecordComponent;-><init>(Landroid/app/Activity;Lcom/vk/im/ui/p/b;ILandroid/view/Window;Lcom/vk/im/ui/themes/DialogThemeBinder;)V
+    invoke-direct/range {v1 .. v6}, Lcom/vk/im/ui/components/msg_send/recording/AudioRecordComponent;-><init>(Landroid/app/Activity;Lcom/vk/im/ui/p/ImBridge8;ILandroid/view/Window;Lcom/vk/im/ui/themes/DialogThemeBinder;)V
 
     return-void
 .end method
 
-.method public static final synthetic a(Lcom/vk/im/ui/components/msg_send/recording/AudioRecordComponent;)Lcom/vk/im/ui/r/a/a;
+.method public static final synthetic a(Lcom/vk/im/ui/components/msg_send/recording/AudioRecordComponent;)Lcom/vk/im/ui/r/a/AudioMsgPlayer;
     .locals 0
 
     .line 3
-    iget-object p0, p0, Lcom/vk/im/ui/components/msg_send/recording/AudioRecordComponent;->C:Lcom/vk/im/ui/r/a/a;
+    iget-object p0, p0, Lcom/vk/im/ui/components/msg_send/recording/AudioRecordComponent;->C:Lcom/vk/im/ui/r/a/AudioMsgPlayer;
 
     return-object p0
 .end method
@@ -224,7 +224,7 @@
     .line 10
     iget-object v0, p0, Lcom/vk/im/ui/components/msg_send/recording/AudioRecordComponent;->D:Lcom/vk/audio/AudioMsgTrackByRecord;
 
-    invoke-static {v0, p1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v0, p1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v0
 
@@ -325,7 +325,7 @@
 
     move-result-object v0
 
-    invoke-static {v0}, Lcom/vk/audio/a;->a(Lcom/vk/audio/AudioMessageSource;)V
+    invoke-static {v0}, Lcom/vk/audio/AudioMessageUtils;->a(Lcom/vk/audio/AudioMessageSource;)V
 
     .line 35
     sget-object v0, Lcom/vk/im/ui/components/msg_send/recording/AudioRecordComponent;->S:Lcom/vk/im/ui/components/msg_send/recording/AudioRecordComponent$b;
@@ -413,7 +413,7 @@
 
     .line 42
     :cond_6
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     throw v1
 .end method
@@ -629,7 +629,7 @@
     goto :goto_0
 
     :cond_1
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     const/4 p1, 0x0
 
@@ -846,7 +846,7 @@
 
     const-string v2, "activity.window"
 
-    invoke-static {v1, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     :goto_0
     iget-object v2, p0, Lcom/vk/im/ui/components/msg_send/recording/AudioRecordComponent;->E:Lcom/vk/im/ui/components/msg_send/recording/AudioRecordComponent$c;
@@ -867,17 +867,17 @@
     .locals 2
 
     .line 1
-    iget-object v0, p0, Lcom/vk/im/ui/components/msg_send/recording/AudioRecordComponent;->H:Lio/reactivex/disposables/b;
+    iget-object v0, p0, Lcom/vk/im/ui/components/msg_send/recording/AudioRecordComponent;->H:Lio/reactivex/disposables/Disposable;
 
     if-eqz v0, :cond_0
 
-    invoke-interface {v0}, Lio/reactivex/disposables/b;->o()V
+    invoke-interface {v0}, Lio/reactivex/disposables/Disposable;->o()V
 
     :cond_0
     const/4 v0, 0x0
 
     .line 2
-    iput-object v0, p0, Lcom/vk/im/ui/components/msg_send/recording/AudioRecordComponent;->H:Lio/reactivex/disposables/b;
+    iput-object v0, p0, Lcom/vk/im/ui/components/msg_send/recording/AudioRecordComponent;->H:Lio/reactivex/disposables/Disposable;
 
     const-string v0, ""
 
@@ -958,7 +958,7 @@
 
     const/4 v4, 0x2
 
-    invoke-static {v1, v2, v3, v4, v0}, Lcom/vk/audio/AudioRecorder;->a(Lcom/vk/audio/AudioRecorder;Ljava/lang/String;ZILjava/lang/Object;)Lc/a/m;
+    invoke-static {v1, v2, v3, v4, v0}, Lcom/vk/audio/AudioRecorder;->a(Lcom/vk/audio/AudioRecorder;Ljava/lang/String;ZILjava/lang/Object;)Lio/reactivex/Observable;
 
     move-result-object v0
 
@@ -967,23 +967,23 @@
 
     invoke-direct {v1, p0}, Lcom/vk/im/ui/components/msg_send/recording/AudioRecordComponent$showRecordVc$2;-><init>(Lcom/vk/im/ui/components/msg_send/recording/AudioRecordComponent;)V
 
-    new-instance v2, Lcom/vk/im/ui/components/msg_send/recording/b;
+    new-instance v2, Lcom/vk/im/ui/components/msg_send/recording/AudioRecordComponent1;
 
-    invoke-direct {v2, v1}, Lcom/vk/im/ui/components/msg_send/recording/b;-><init>(Lkotlin/jvm/b/b;)V
+    invoke-direct {v2, v1}, Lcom/vk/im/ui/components/msg_send/recording/AudioRecordComponent1;-><init>(Lkotlin/jvm/b/Functions2;)V
 
     new-instance v1, Lcom/vk/im/ui/components/msg_send/recording/AudioRecordComponent$showRecordVc$3;
 
     invoke-direct {v1, p0}, Lcom/vk/im/ui/components/msg_send/recording/AudioRecordComponent$showRecordVc$3;-><init>(Lcom/vk/im/ui/components/msg_send/recording/AudioRecordComponent;)V
 
-    new-instance v3, Lcom/vk/im/ui/components/msg_send/recording/b;
+    new-instance v3, Lcom/vk/im/ui/components/msg_send/recording/AudioRecordComponent1;
 
-    invoke-direct {v3, v1}, Lcom/vk/im/ui/components/msg_send/recording/b;-><init>(Lkotlin/jvm/b/b;)V
+    invoke-direct {v3, v1}, Lcom/vk/im/ui/components/msg_send/recording/AudioRecordComponent1;-><init>(Lkotlin/jvm/b/Functions2;)V
 
-    invoke-virtual {v0, v2, v3}, Lc/a/m;->a(Lc/a/z/g;Lc/a/z/g;)Lio/reactivex/disposables/b;
+    invoke-virtual {v0, v2, v3}, Lio/reactivex/Observable;->a(Lio/reactivex/functions/Consumer;Lio/reactivex/functions/Consumer;)Lio/reactivex/disposables/Disposable;
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/vk/im/ui/components/msg_send/recording/AudioRecordComponent;->H:Lio/reactivex/disposables/b;
+    iput-object v0, p0, Lcom/vk/im/ui/components/msg_send/recording/AudioRecordComponent;->H:Lio/reactivex/disposables/Disposable;
 
     return-void
 .end method
@@ -992,9 +992,9 @@
     .locals 3
 
     .line 1
-    iget-object v0, p0, Lcom/vk/im/ui/components/msg_send/recording/AudioRecordComponent;->C:Lcom/vk/im/ui/r/a/a;
+    iget-object v0, p0, Lcom/vk/im/ui/components/msg_send/recording/AudioRecordComponent;->C:Lcom/vk/im/ui/r/a/AudioMsgPlayer;
 
-    invoke-interface {v0}, Lcom/vk/im/ui/r/a/a;->u0()Lcom/vk/audio/AudioMsgTrackByRecord;
+    invoke-interface {v0}, Lcom/vk/im/ui/r/a/AudioMsgPlayer;->u0()Lcom/vk/audio/AudioMsgTrackByRecord;
 
     move-result-object v0
 
@@ -1018,9 +1018,9 @@
     if-ne v1, v2, :cond_1
 
     .line 3
-    iget-object v0, p0, Lcom/vk/im/ui/components/msg_send/recording/AudioRecordComponent;->C:Lcom/vk/im/ui/r/a/a;
+    iget-object v0, p0, Lcom/vk/im/ui/components/msg_send/recording/AudioRecordComponent;->C:Lcom/vk/im/ui/r/a/AudioMsgPlayer;
 
-    invoke-interface {v0}, Lcom/vk/im/ui/r/a/a;->stop()V
+    invoke-interface {v0}, Lcom/vk/im/ui/r/a/AudioMsgPlayer;->stop()V
 
     goto :goto_1
 
@@ -1028,35 +1028,35 @@
     if-eqz v0, :cond_3
 
     .line 4
-    iget-object v1, p0, Lcom/vk/im/ui/components/msg_send/recording/AudioRecordComponent;->C:Lcom/vk/im/ui/r/a/a;
+    iget-object v1, p0, Lcom/vk/im/ui/components/msg_send/recording/AudioRecordComponent;->C:Lcom/vk/im/ui/r/a/AudioMsgPlayer;
 
-    invoke-interface {v1}, Lcom/vk/im/ui/r/a/a;->c()Z
+    invoke-interface {v1}, Lcom/vk/im/ui/r/a/AudioMsgPlayer;->c()Z
 
     move-result v1
 
     if-nez v1, :cond_2
 
     .line 5
-    iget-object v1, p0, Lcom/vk/im/ui/components/msg_send/recording/AudioRecordComponent;->C:Lcom/vk/im/ui/r/a/a;
+    iget-object v1, p0, Lcom/vk/im/ui/components/msg_send/recording/AudioRecordComponent;->C:Lcom/vk/im/ui/r/a/AudioMsgPlayer;
 
     iget-object v2, p0, Lcom/vk/im/ui/components/msg_send/recording/AudioRecordComponent;->N:Landroid/app/Activity;
 
-    invoke-interface {v1, v2}, Lcom/vk/im/ui/r/a/a;->a(Landroid/app/Activity;)V
+    invoke-interface {v1, v2}, Lcom/vk/im/ui/r/a/AudioMsgPlayer;->a(Landroid/app/Activity;)V
 
     .line 6
-    iget-object v1, p0, Lcom/vk/im/ui/components/msg_send/recording/AudioRecordComponent;->C:Lcom/vk/im/ui/r/a/a;
+    iget-object v1, p0, Lcom/vk/im/ui/components/msg_send/recording/AudioRecordComponent;->C:Lcom/vk/im/ui/r/a/AudioMsgPlayer;
 
-    invoke-interface {v1, p0}, Lcom/vk/im/ui/r/a/a;->a(Lcom/vk/im/ui/r/a/b;)V
+    invoke-interface {v1, p0}, Lcom/vk/im/ui/r/a/AudioMsgPlayer;->a(Lcom/vk/im/ui/r/a/AudioMsgPlayerListener;)V
 
     .line 7
     :cond_2
-    iget-object v1, p0, Lcom/vk/im/ui/components/msg_send/recording/AudioRecordComponent;->C:Lcom/vk/im/ui/r/a/a;
+    iget-object v1, p0, Lcom/vk/im/ui/components/msg_send/recording/AudioRecordComponent;->C:Lcom/vk/im/ui/r/a/AudioMsgPlayer;
 
     invoke-static {v0}, Lkotlin/collections/l;->a(Ljava/lang/Object;)Ljava/util/List;
 
     move-result-object v2
 
-    invoke-interface {v1, v2, v0}, Lcom/vk/im/ui/r/a/a;->a(Ljava/util/List;Lcom/vk/audio/AudioMsgTrackByRecord;)V
+    invoke-interface {v1, v2, v0}, Lcom/vk/im/ui/r/a/AudioMsgPlayer;->a(Ljava/util/List;Lcom/vk/audio/AudioMsgTrackByRecord;)V
 
     :cond_3
     :goto_1
@@ -1104,18 +1104,18 @@
     return-void
 .end method
 
-.method public a(Lcom/vk/im/ui/r/a/a;)V
+.method public a(Lcom/vk/im/ui/r/a/AudioMsgPlayer;)V
     .locals 3
 
     .line 27
-    invoke-interface {p1}, Lcom/vk/im/ui/r/a/a;->u0()Lcom/vk/audio/AudioMsgTrackByRecord;
+    invoke-interface {p1}, Lcom/vk/im/ui/r/a/AudioMsgPlayer;->u0()Lcom/vk/audio/AudioMsgTrackByRecord;
 
     move-result-object p1
 
     .line 28
     iget-object v0, p0, Lcom/vk/im/ui/components/msg_send/recording/AudioRecordComponent;->D:Lcom/vk/audio/AudioMsgTrackByRecord;
 
-    invoke-static {v0, p1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v0, p1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v0
 
@@ -1173,28 +1173,28 @@
     .locals 1
 
     .line 57
-    iget-object v0, p0, Lcom/vk/im/ui/components/msg_send/recording/AudioRecordComponent;->C:Lcom/vk/im/ui/r/a/a;
+    iget-object v0, p0, Lcom/vk/im/ui/components/msg_send/recording/AudioRecordComponent;->C:Lcom/vk/im/ui/r/a/AudioMsgPlayer;
 
-    invoke-interface {v0}, Lcom/vk/im/ui/r/a/a;->c()Z
+    invoke-interface {v0}, Lcom/vk/im/ui/r/a/AudioMsgPlayer;->c()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
     .line 58
-    iget-object v0, p0, Lcom/vk/im/ui/components/msg_send/recording/AudioRecordComponent;->C:Lcom/vk/im/ui/r/a/a;
+    iget-object v0, p0, Lcom/vk/im/ui/components/msg_send/recording/AudioRecordComponent;->C:Lcom/vk/im/ui/r/a/AudioMsgPlayer;
 
-    invoke-interface {v0}, Lcom/vk/im/ui/r/a/a;->stop()V
+    invoke-interface {v0}, Lcom/vk/im/ui/r/a/AudioMsgPlayer;->stop()V
 
     .line 59
-    iget-object v0, p0, Lcom/vk/im/ui/components/msg_send/recording/AudioRecordComponent;->C:Lcom/vk/im/ui/r/a/a;
+    iget-object v0, p0, Lcom/vk/im/ui/components/msg_send/recording/AudioRecordComponent;->C:Lcom/vk/im/ui/r/a/AudioMsgPlayer;
 
-    invoke-interface {v0, p0}, Lcom/vk/im/ui/r/a/a;->b(Lcom/vk/im/ui/r/a/b;)V
+    invoke-interface {v0, p0}, Lcom/vk/im/ui/r/a/AudioMsgPlayer;->b(Lcom/vk/im/ui/r/a/AudioMsgPlayerListener;)V
 
     .line 60
-    iget-object v0, p0, Lcom/vk/im/ui/components/msg_send/recording/AudioRecordComponent;->C:Lcom/vk/im/ui/r/a/a;
+    iget-object v0, p0, Lcom/vk/im/ui/components/msg_send/recording/AudioRecordComponent;->C:Lcom/vk/im/ui/r/a/AudioMsgPlayer;
 
-    invoke-interface {v0}, Lcom/vk/im/ui/r/a/a;->a()V
+    invoke-interface {v0}, Lcom/vk/im/ui/r/a/AudioMsgPlayer;->a()V
 
     .line 61
     :cond_0
@@ -1259,7 +1259,7 @@
     move v3, v4
 
     .line 24
-    invoke-static/range {v0 .. v8}, Lcom/vk/permission/PermissionHelper;->a(Lcom/vk/permission/PermissionHelper;Landroid/app/Activity;[Ljava/lang/String;IILkotlin/jvm/b/a;Lkotlin/jvm/b/b;ILjava/lang/Object;)Z
+    invoke-static/range {v0 .. v8}, Lcom/vk/permission/PermissionHelper;->a(Lcom/vk/permission/PermissionHelper;Landroid/app/Activity;[Ljava/lang/String;IILkotlin/jvm/b/Functions;Lkotlin/jvm/b/Functions2;ILjava/lang/Object;)Z
 
     move-result p1
 
@@ -1305,10 +1305,10 @@
     .locals 4
 
     .line 1
-    invoke-super {p0}, Lcom/vk/im/ui/q/c;->o()V
+    invoke-super {p0}, Lcom/vk/im/ui/q/Component;->o()V
 
     .line 2
-    invoke-static {}, Lcom/vk/audio/a;->m()Lcom/vk/audio/a;
+    invoke-static {}, Lcom/vk/audio/AudioMessageUtils;->m()Lcom/vk/audio/AudioMessageUtils;
 
     move-result-object v0
 
@@ -1316,7 +1316,7 @@
 
     const-string v2, ""
 
-    invoke-virtual {v0, v1, v2}, Lcom/vk/audio/a;->a(Landroid/app/Activity;Ljava/lang/String;)V
+    invoke-virtual {v0, v1, v2}, Lcom/vk/audio/AudioMessageUtils;->a(Landroid/app/Activity;Ljava/lang/String;)V
 
     .line 3
     iget-object v0, p0, Lcom/vk/im/ui/components/msg_send/recording/AudioRecordComponent;->h:Landroid/os/Handler;
@@ -1343,13 +1343,13 @@
     invoke-virtual {v0, v1}, Landroid/os/Handler;->removeCallbacksAndMessages(Ljava/lang/Object;)V
 
     .line 2
-    invoke-static {}, Lcom/vk/audio/a;->m()Lcom/vk/audio/a;
+    invoke-static {}, Lcom/vk/audio/AudioMessageUtils;->m()Lcom/vk/audio/AudioMessageUtils;
 
     move-result-object v0
 
     iget-object v2, p0, Lcom/vk/im/ui/components/msg_send/recording/AudioRecordComponent;->N:Landroid/app/Activity;
 
-    invoke-virtual {v0, v2}, Lcom/vk/audio/a;->a(Landroid/app/Activity;)V
+    invoke-virtual {v0, v2}, Lcom/vk/audio/AudioMessageUtils;->a(Landroid/app/Activity;)V
 
     .line 3
     iget-object v0, p0, Lcom/vk/im/ui/components/msg_send/recording/AudioRecordComponent;->B:Lcom/vk/audio/AudioRecorder;
@@ -1393,28 +1393,28 @@
 
     .line 5
     :cond_1
-    iget-object v0, p0, Lcom/vk/im/ui/components/msg_send/recording/AudioRecordComponent;->C:Lcom/vk/im/ui/r/a/a;
+    iget-object v0, p0, Lcom/vk/im/ui/components/msg_send/recording/AudioRecordComponent;->C:Lcom/vk/im/ui/r/a/AudioMsgPlayer;
 
-    invoke-interface {v0}, Lcom/vk/im/ui/r/a/a;->c()Z
+    invoke-interface {v0}, Lcom/vk/im/ui/r/a/AudioMsgPlayer;->c()Z
 
     move-result v0
 
     if-eqz v0, :cond_2
 
     .line 6
-    iget-object v0, p0, Lcom/vk/im/ui/components/msg_send/recording/AudioRecordComponent;->C:Lcom/vk/im/ui/r/a/a;
+    iget-object v0, p0, Lcom/vk/im/ui/components/msg_send/recording/AudioRecordComponent;->C:Lcom/vk/im/ui/r/a/AudioMsgPlayer;
 
-    invoke-interface {v0}, Lcom/vk/im/ui/r/a/a;->stop()V
+    invoke-interface {v0}, Lcom/vk/im/ui/r/a/AudioMsgPlayer;->stop()V
 
     .line 7
-    iget-object v0, p0, Lcom/vk/im/ui/components/msg_send/recording/AudioRecordComponent;->C:Lcom/vk/im/ui/r/a/a;
+    iget-object v0, p0, Lcom/vk/im/ui/components/msg_send/recording/AudioRecordComponent;->C:Lcom/vk/im/ui/r/a/AudioMsgPlayer;
 
-    invoke-interface {v0}, Lcom/vk/im/ui/r/a/a;->a()V
+    invoke-interface {v0}, Lcom/vk/im/ui/r/a/AudioMsgPlayer;->a()V
 
     .line 8
-    iget-object v0, p0, Lcom/vk/im/ui/components/msg_send/recording/AudioRecordComponent;->C:Lcom/vk/im/ui/r/a/a;
+    iget-object v0, p0, Lcom/vk/im/ui/components/msg_send/recording/AudioRecordComponent;->C:Lcom/vk/im/ui/r/a/AudioMsgPlayer;
 
-    invoke-interface {v0, p0}, Lcom/vk/im/ui/r/a/a;->b(Lcom/vk/im/ui/r/a/b;)V
+    invoke-interface {v0, p0}, Lcom/vk/im/ui/r/a/AudioMsgPlayer;->b(Lcom/vk/im/ui/r/a/AudioMsgPlayerListener;)V
 
     .line 9
     :cond_2

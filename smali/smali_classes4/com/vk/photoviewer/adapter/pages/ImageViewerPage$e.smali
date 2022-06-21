@@ -3,12 +3,12 @@
 .source "ImageViewerPage.kt"
 
 # interfaces
-.implements Lcom/vk/imageloader/view/e/d;
+.implements Lcom/vk/imageloader/view/e/OnPhotoTapListener;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/photoviewer/adapter/pages/ImageViewerPage;->d()Lcom/vk/imageloader/view/c;
+    value = Lcom/vk/photoviewer/adapter/pages/ImageViewerPage;->d()Lcom/vk/imageloader/view/VKZoomableImageView;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;

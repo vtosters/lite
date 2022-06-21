@@ -3,7 +3,7 @@
 .source "MultiCameraEditorPresenter.kt"
 
 # interfaces
-.implements Lc/a/o;
+.implements Lio/reactivex/ObservableOnSubscribe;
 
 
 # annotations
@@ -22,7 +22,7 @@
         "Ljava/lang/Object;",
         ">",
         "Ljava/lang/Object;",
-        "Lc/a/o<",
+        "Lio/reactivex/ObservableOnSubscribe<",
         "TT;>;"
     }
 .end annotation
@@ -45,15 +45,15 @@
 
 
 # virtual methods
-.method public final a(Lc/a/n;)V
+.method public final a(Lio/reactivex/ObservableEmitter;)V
     .locals 5
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lc/a/n<",
+            "Lio/reactivex/ObservableEmitter<",
             "Lkotlin/Pair<",
             "Ljava/lang/Integer;",
-            "Lcom/vk/cameraui/entities/d;",
+            "Lcom/vk/cameraui/entities/StoryRawData3;",
             ">;>;)V"
         }
     .end annotation
@@ -87,7 +87,7 @@
 
     if-ltz v1, :cond_0
 
-    check-cast v2, Lcom/vk/cameraui/entities/d;
+    check-cast v2, Lcom/vk/cameraui/entities/StoryRawData3;
 
     .line 3
     new-instance v4, Lkotlin/Pair;
@@ -98,7 +98,7 @@
 
     invoke-direct {v4, v1, v2}, Lkotlin/Pair;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
 
-    invoke-interface {p1, v4}, Lc/a/f;->b(Ljava/lang/Object;)V
+    invoke-interface {p1, v4}, Lio/reactivex/Emitter;->b(Ljava/lang/Object;)V
 
     move v1, v3
 
@@ -114,7 +114,7 @@
 
     .line 5
     :cond_1
-    invoke-interface {p1}, Lc/a/f;->b()V
+    invoke-interface {p1}, Lio/reactivex/Emitter;->b()V
 
     return-void
 .end method

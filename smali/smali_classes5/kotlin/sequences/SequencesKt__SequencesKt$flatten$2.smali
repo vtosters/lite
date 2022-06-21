@@ -3,12 +3,12 @@
 .source "Sequences.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/b;
+.implements Lkotlin/jvm/b/Functions2;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lkotlin/sequences/SequencesKt__SequencesKt;->c(Lkotlin/sequences/j;)Lkotlin/sequences/j;
+    value = Lkotlin/sequences/SequencesKt__SequencesKt;->c(Lkotlin/sequences/Sequence;)Lkotlin/sequences/Sequence;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -19,7 +19,7 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/b<",
+        "Lkotlin/jvm/b/Functions2<",
         "Ljava/lang/Iterable<",
         "+TT;>;",
         "Ljava/util/Iterator<",

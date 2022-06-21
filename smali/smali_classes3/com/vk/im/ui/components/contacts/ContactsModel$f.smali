@@ -3,12 +3,12 @@
 .source "ContactsModel.kt"
 
 # interfaces
-.implements Lc/a/z/j;
+.implements Lio/reactivex/functions/Function;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/im/ui/components/contacts/ContactsModel;->e()Lc/a/m;
+    value = Lcom/vk/im/ui/components/contacts/ContactsModel;->e()Lio/reactivex/Observable;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -24,7 +24,7 @@
         "Ljava/lang/Object;",
         ">",
         "Ljava/lang/Object;",
-        "Lc/a/z/j<",
+        "Lio/reactivex/functions/Function<",
         "TT;TR;>;"
     }
 .end annotation
@@ -57,12 +57,12 @@
 
 
 # virtual methods
-.method public final a(Lcom/vk/im/ui/components/contacts/e;)Lkotlin/Pair;
+.method public final a(Lcom/vk/im/ui/components/contacts/ContactsModel1;)Lkotlin/Pair;
     .locals 2
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lcom/vk/im/ui/components/contacts/e;",
+            "Lcom/vk/im/ui/components/contacts/ContactsModel1;",
             ")",
             "Lkotlin/Pair<",
             "Ljava/lang/Throwable;",
@@ -74,11 +74,11 @@
     .line 1
     new-instance v0, Lkotlin/Pair;
 
-    invoke-virtual {p1}, Lcom/vk/im/ui/components/contacts/e;->b()Ljava/lang/Throwable;
+    invoke-virtual {p1}, Lcom/vk/im/ui/components/contacts/ContactsModel1;->b()Ljava/lang/Throwable;
 
     move-result-object v1
 
-    invoke-virtual {p1}, Lcom/vk/im/ui/components/contacts/e;->b()Ljava/lang/Throwable;
+    invoke-virtual {p1}, Lcom/vk/im/ui/components/contacts/ContactsModel1;->b()Ljava/lang/Throwable;
 
     move-result-object p1
 
@@ -105,9 +105,9 @@
     .locals 0
 
     .line 1
-    check-cast p1, Lcom/vk/im/ui/components/contacts/e;
+    check-cast p1, Lcom/vk/im/ui/components/contacts/ContactsModel1;
 
-    invoke-virtual {p0, p1}, Lcom/vk/im/ui/components/contacts/ContactsModel$f;->a(Lcom/vk/im/ui/components/contacts/e;)Lkotlin/Pair;
+    invoke-virtual {p0, p1}, Lcom/vk/im/ui/components/contacts/ContactsModel$f;->a(Lcom/vk/im/ui/components/contacts/ContactsModel1;)Lkotlin/Pair;
 
     move-result-object p1
 

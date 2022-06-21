@@ -23,23 +23,23 @@
 
 .field private final d:Landroid/widget/ImageButton;
 
-.field private final e:Lkotlin/jvm/b/b;
+.field private final e:Lkotlin/jvm/b/Functions2;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Lkotlin/jvm/b/b<",
+            "Lkotlin/jvm/b/Functions2<",
             "Lcom/vk/dto/user/RequestUserProfile;",
-            "Lkotlin/m;",
+            "Lkotlin/Unit;",
             ">;"
         }
     .end annotation
 .end field
 
-.field private final f:Lkotlin/jvm/b/b;
+.field private final f:Lkotlin/jvm/b/Functions2;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Lkotlin/jvm/b/b<",
+            "Lkotlin/jvm/b/Functions2<",
             "Lcom/vk/dto/user/RequestUserProfile;",
-            "Lkotlin/m;",
+            "Lkotlin/Unit;",
             ">;"
         }
     .end annotation
@@ -47,21 +47,21 @@
 
 
 # direct methods
-.method public constructor <init>(Landroid/view/ViewGroup;Lkotlin/jvm/b/b;Lkotlin/jvm/b/b;)V
+.method public constructor <init>(Landroid/view/ViewGroup;Lkotlin/jvm/b/Functions2;Lkotlin/jvm/b/Functions2;)V
     .locals 2
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
             "Landroid/view/ViewGroup;",
-            "Lkotlin/jvm/b/b<",
+            "Lkotlin/jvm/b/Functions2<",
             "-",
             "Lcom/vk/dto/user/RequestUserProfile;",
-            "Lkotlin/m;",
+            "Lkotlin/Unit;",
             ">;",
-            "Lkotlin/jvm/b/b<",
+            "Lkotlin/jvm/b/Functions2<",
             "-",
             "Lcom/vk/dto/user/RequestUserProfile;",
-            "Lkotlin/m;",
+            "Lkotlin/Unit;",
             ">;)V"
         }
     .end annotation
@@ -77,9 +77,9 @@
 
     invoke-direct {p0, p1}, Landroidx/recyclerview/widget/RecyclerView$ViewHolder;-><init>(Landroid/view/View;)V
 
-    iput-object p2, p0, Lcom/vk/socialgraph/list/FriendsAdapter$AddFriendViewHolder;->e:Lkotlin/jvm/b/b;
+    iput-object p2, p0, Lcom/vk/socialgraph/list/FriendsAdapter$AddFriendViewHolder;->e:Lkotlin/jvm/b/Functions2;
 
-    iput-object p3, p0, Lcom/vk/socialgraph/list/FriendsAdapter$AddFriendViewHolder;->f:Lkotlin/jvm/b/b;
+    iput-object p3, p0, Lcom/vk/socialgraph/list/FriendsAdapter$AddFriendViewHolder;->f:Lkotlin/jvm/b/Functions2;
 
     .line 2
     iget-object p1, p0, Landroidx/recyclerview/widget/RecyclerView$ViewHolder;->itemView:Landroid/view/View;
@@ -136,20 +136,20 @@
     return-void
 .end method
 
-.method public static final synthetic a(Lcom/vk/socialgraph/list/FriendsAdapter$AddFriendViewHolder;)Lkotlin/jvm/b/b;
+.method public static final synthetic a(Lcom/vk/socialgraph/list/FriendsAdapter$AddFriendViewHolder;)Lkotlin/jvm/b/Functions2;
     .locals 0
 
     .line 1
-    iget-object p0, p0, Lcom/vk/socialgraph/list/FriendsAdapter$AddFriendViewHolder;->f:Lkotlin/jvm/b/b;
+    iget-object p0, p0, Lcom/vk/socialgraph/list/FriendsAdapter$AddFriendViewHolder;->f:Lkotlin/jvm/b/Functions2;
 
     return-object p0
 .end method
 
-.method public static final synthetic b(Lcom/vk/socialgraph/list/FriendsAdapter$AddFriendViewHolder;)Lkotlin/jvm/b/b;
+.method public static final synthetic b(Lcom/vk/socialgraph/list/FriendsAdapter$AddFriendViewHolder;)Lkotlin/jvm/b/Functions2;
     .locals 0
 
     .line 1
-    iget-object p0, p0, Lcom/vk/socialgraph/list/FriendsAdapter$AddFriendViewHolder;->e:Lkotlin/jvm/b/b;
+    iget-object p0, p0, Lcom/vk/socialgraph/list/FriendsAdapter$AddFriendViewHolder;->e:Lkotlin/jvm/b/Functions2;
 
     return-object p0
 .end method
@@ -171,7 +171,7 @@
 
     const-string v1, "userNameView"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     iget-object v1, p1, Lcom/vk/dto/user/UserProfile;->d:Ljava/lang/String;
 
@@ -182,7 +182,7 @@
 
     const-string v1, "userCityView"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {p1}, Lcom/vk/dto/user/UserProfile;->J()Ljava/lang/String;
 
@@ -199,7 +199,7 @@
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v0
 
@@ -219,11 +219,11 @@
     .line 7
     iget-object v0, p0, Lcom/vk/socialgraph/list/FriendsAdapter$AddFriendViewHolder;->d:Landroid/widget/ImageButton;
 
-    invoke-static {v0, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     iget-object v3, p0, Landroidx/recyclerview/widget/RecyclerView$ViewHolder;->itemView:Landroid/view/View;
 
-    invoke-static {v3, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v3, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {v3}, Landroid/view/View;->getContext()Landroid/content/Context;
 
@@ -250,11 +250,11 @@
     .line 9
     iget-object v0, p0, Lcom/vk/socialgraph/list/FriendsAdapter$AddFriendViewHolder;->d:Landroid/widget/ImageButton;
 
-    invoke-static {v0, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     iget-object v3, p0, Landroidx/recyclerview/widget/RecyclerView$ViewHolder;->itemView:Landroid/view/View;
 
-    invoke-static {v3, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v3, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {v3}, Landroid/view/View;->getContext()Landroid/content/Context;
 
@@ -272,24 +272,24 @@
     :goto_0
     iget-object v0, p0, Landroidx/recyclerview/widget/RecyclerView$ViewHolder;->itemView:Landroid/view/View;
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     new-instance v1, Lcom/vk/socialgraph/list/FriendsAdapter$AddFriendViewHolder$bind$1;
 
     invoke-direct {v1, p0, p1}, Lcom/vk/socialgraph/list/FriendsAdapter$AddFriendViewHolder$bind$1;-><init>(Lcom/vk/socialgraph/list/FriendsAdapter$AddFriendViewHolder;Lcom/vk/dto/user/RequestUserProfile;)V
 
-    invoke-static {v0, v1}, Lcom/vk/extensions/ViewExtKt;->e(Landroid/view/View;Lkotlin/jvm/b/b;)V
+    invoke-static {v0, v1}, Lcom/vk/extensions/ViewExtKt;->e(Landroid/view/View;Lkotlin/jvm/b/Functions2;)V
 
     .line 11
     iget-object v0, p0, Lcom/vk/socialgraph/list/FriendsAdapter$AddFriendViewHolder;->d:Landroid/widget/ImageButton;
 
-    invoke-static {v0, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     new-instance v1, Lcom/vk/socialgraph/list/FriendsAdapter$AddFriendViewHolder$bind$2;
 
     invoke-direct {v1, p0, p1}, Lcom/vk/socialgraph/list/FriendsAdapter$AddFriendViewHolder$bind$2;-><init>(Lcom/vk/socialgraph/list/FriendsAdapter$AddFriendViewHolder;Lcom/vk/dto/user/RequestUserProfile;)V
 
-    invoke-static {v0, v1}, Lcom/vk/extensions/ViewExtKt;->e(Landroid/view/View;Lkotlin/jvm/b/b;)V
+    invoke-static {v0, v1}, Lcom/vk/extensions/ViewExtKt;->e(Landroid/view/View;Lkotlin/jvm/b/Functions2;)V
 
     return-void
 .end method

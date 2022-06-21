@@ -3,7 +3,7 @@
 .source "DiscoverSearchFragment.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/a;
+.implements Lkotlin/jvm/b/Functions;
 
 
 # annotations
@@ -19,8 +19,8 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/a<",
-        "Lkotlin/m;",
+        "Lkotlin/jvm/b/Functions<",
+        "Lkotlin/Unit;",
         ">;"
     }
 .end annotation
@@ -51,7 +51,7 @@
     .line 1
     invoke-virtual {p0}, Lcom/vk/search/fragment/DiscoverSearchFragment$onResume$3;->invoke()V
 
-    sget-object v0, Lkotlin/m;->a:Lkotlin/m;
+    sget-object v0, Lkotlin/Unit;->a:Lkotlin/Unit;
 
     return-object v0
 .end method
@@ -78,7 +78,7 @@
 
     if-ne v0, v1, :cond_0
 
-    invoke-static {}, Lcom/vk/core/utils/i;->b()Z
+    invoke-static {}, Lcom/vk/core/utils/VoiceUtils;->b()Z
 
     move-result v0
 
@@ -87,7 +87,7 @@
     .line 3
     iget-object v0, p0, Lcom/vk/search/fragment/DiscoverSearchFragment$onResume$3;->this$0:Lcom/vk/search/fragment/DiscoverSearchFragment;
 
-    invoke-static {v0}, Lcom/vk/core/utils/i;->a(Lcom/vk/core/fragments/FragmentImpl;)Z
+    invoke-static {v0}, Lcom/vk/core/utils/VoiceUtils;->a(Lcom/vk/core/fragments/FragmentImpl;)Z
 
     goto :goto_0
 

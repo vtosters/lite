@@ -46,7 +46,7 @@
     .locals 9
 
     .line 1
-    new-instance v0, Lb/h/g/k/a;
+    new-instance v0, Lb/h/g/k/VKProgressDialog;
 
     iget-object v1, p0, Lcom/vk/webapp/fragments/VkHtmlGameFragment$showOrderBox$1;->a:Lcom/vk/webapp/fragments/VkHtmlGameFragment;
 
@@ -58,9 +58,9 @@
 
     const-string v2, "activity!!"
 
-    invoke-static {v1, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    invoke-direct {v0, v1}, Lb/h/g/k/a;-><init>(Landroid/content/Context;)V
+    invoke-direct {v0, v1}, Lb/h/g/k/VKProgressDialog;-><init>(Landroid/content/Context;)V
 
     .line 2
     iget-object v1, p0, Lcom/vk/webapp/fragments/VkHtmlGameFragment$showOrderBox$1;->a:Lcom/vk/webapp/fragments/VkHtmlGameFragment;
@@ -84,7 +84,7 @@
     invoke-virtual {v0, v1}, Landroid/app/ProgressDialog;->setMessage(Ljava/lang/CharSequence;)V
 
     .line 5
-    invoke-static {v0}, Lcom/vtosters/lite/f0;->b(Landroid/app/Dialog;)V
+    invoke-static {v0}, Lcom/vtosters/lite/ViewUtils;->b(Landroid/app/Dialog;)V
 
     .line 6
     iget-object v2, p0, Lcom/vk/webapp/fragments/VkHtmlGameFragment$showOrderBox$1;->a:Lcom/vk/webapp/fragments/VkHtmlGameFragment;
@@ -100,21 +100,21 @@
     .line 7
     new-instance v7, Lcom/vk/webapp/fragments/VkHtmlGameFragment$showOrderBox$1$1;
 
-    invoke-direct {v7, p0, v0}, Lcom/vk/webapp/fragments/VkHtmlGameFragment$showOrderBox$1$1;-><init>(Lcom/vk/webapp/fragments/VkHtmlGameFragment$showOrderBox$1;Lb/h/g/k/a;)V
+    invoke-direct {v7, p0, v0}, Lcom/vk/webapp/fragments/VkHtmlGameFragment$showOrderBox$1$1;-><init>(Lcom/vk/webapp/fragments/VkHtmlGameFragment$showOrderBox$1;Lb/h/g/k/VKProgressDialog;)V
 
     .line 8
     new-instance v8, Lcom/vk/webapp/fragments/VkHtmlGameFragment$showOrderBox$1$2;
 
-    invoke-direct {v8, p0, v0}, Lcom/vk/webapp/fragments/VkHtmlGameFragment$showOrderBox$1$2;-><init>(Lcom/vk/webapp/fragments/VkHtmlGameFragment$showOrderBox$1;Lb/h/g/k/a;)V
+    invoke-direct {v8, p0, v0}, Lcom/vk/webapp/fragments/VkHtmlGameFragment$showOrderBox$1$2;-><init>(Lcom/vk/webapp/fragments/VkHtmlGameFragment$showOrderBox$1;Lb/h/g/k/VKProgressDialog;)V
 
     .line 9
-    invoke-static/range {v2 .. v8}, Lcom/vk/webapp/fragments/VkHtmlGameFragment;->a(Lcom/vk/webapp/fragments/VkHtmlGameFragment;Ljava/lang/String;Ljava/lang/String;IILkotlin/jvm/b/b;Lkotlin/jvm/b/a;)V
+    invoke-static/range {v2 .. v8}, Lcom/vk/webapp/fragments/VkHtmlGameFragment;->a(Lcom/vk/webapp/fragments/VkHtmlGameFragment;Ljava/lang/String;Ljava/lang/String;IILkotlin/jvm/b/Functions2;Lkotlin/jvm/b/Functions;)V
 
     return-void
 
     .line 10
     :cond_0
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     const/4 v0, 0x0
 

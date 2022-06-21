@@ -3,12 +3,12 @@
 .source "PollBackgroundAdapter.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/b;
+.implements Lkotlin/jvm/b/Functions2;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/poll/adapters/PollBackgroundAdapter;->l()Lkotlin/sequences/j;
+    value = Lcom/vk/poll/adapters/PollBackgroundAdapter;->l()Lkotlin/sequences/Sequence;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -19,8 +19,8 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/b<",
-        "Lb/h/s/a/a;",
+        "Lkotlin/jvm/b/Functions2<",
+        "Lb/h/s/a/PollCustomBackground;",
         "Ljava/lang/Boolean;",
         ">;"
     }
@@ -56,11 +56,11 @@
 
 
 # virtual methods
-.method public final a(Lb/h/s/a/a;)Z
+.method public final a(Lb/h/s/a/PollCustomBackground;)Z
     .locals 0
 
     .line 1
-    invoke-virtual {p1}, Lb/h/s/a/a;->c()Lcom/vk/dto/polls/PhotoPoll;
+    invoke-virtual {p1}, Lb/h/s/a/PollCustomBackground;->c()Lcom/vk/dto/polls/PhotoPoll;
 
     move-result-object p1
 
@@ -81,9 +81,9 @@
     .locals 0
 
     .line 1
-    check-cast p1, Lb/h/s/a/a;
+    check-cast p1, Lb/h/s/a/PollCustomBackground;
 
-    invoke-virtual {p0, p1}, Lcom/vk/poll/adapters/PollBackgroundAdapter$getUnfinishedPhotosUploadTaskIds$1;->a(Lb/h/s/a/a;)Z
+    invoke-virtual {p0, p1}, Lcom/vk/poll/adapters/PollBackgroundAdapter$getUnfinishedPhotosUploadTaskIds$1;->a(Lb/h/s/a/PollCustomBackground;)Z
 
     move-result p1
 

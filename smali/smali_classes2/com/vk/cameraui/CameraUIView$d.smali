@@ -92,7 +92,7 @@
 
     if-eqz p1, :cond_2
 
-    invoke-interface {p1}, Lcom/vk/libvideo/a0/c;->s()V
+    invoke-interface {p1}, Lcom/vk/libvideo/a0/LiveBroadcastProvider;->s()V
 
     :cond_2
     return-void

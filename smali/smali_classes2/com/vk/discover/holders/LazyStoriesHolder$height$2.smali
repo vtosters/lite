@@ -3,12 +3,12 @@
 .source "LazyStoriesHolder.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/a;
+.implements Lkotlin/jvm/b/Functions;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/discover/holders/LazyStoriesHolder;-><init>(Landroid/view/ViewGroup;Lcom/vk/discover/b;Z)V
+    value = Lcom/vk/discover/holders/LazyStoriesHolder;-><init>(Landroid/view/ViewGroup;Lcom/vk/discover/DiscoverAdapter;Z)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -19,7 +19,7 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/a<",
+        "Lkotlin/jvm/b/Functions<",
         "Ljava/lang/Float;",
         ">;"
     }
@@ -51,7 +51,7 @@
     .line 2
     iget-object v0, p0, Lcom/vk/discover/holders/LazyStoriesHolder$height$2;->this$0:Lcom/vk/discover/holders/LazyStoriesHolder;
 
-    invoke-virtual {v0}, Lcom/vtosters/lite/ui/b0/i;->e0()Landroid/content/res/Resources;
+    invoke-virtual {v0}, Lcom/vtosters/lite/ui/holder/RecyclerHolder;->e0()Landroid/content/res/Resources;
 
     move-result-object v0
 

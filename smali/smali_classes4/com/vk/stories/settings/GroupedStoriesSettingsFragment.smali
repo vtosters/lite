@@ -1,12 +1,12 @@
 .class public final Lcom/vk/stories/settings/GroupedStoriesSettingsFragment;
-.super Lcom/vk/core/fragments/c;
+.super Lcom/vk/core/fragments/BaseMvpFragment;
 .source "GroupedStoriesSettingsFragment.kt"
 
 # interfaces
-.implements Lcom/vk/stories/settings/e;
-.implements Lcom/vk/navigation/b0/k;
-.implements Lcom/vk/navigation/b0/a;
-.implements Lcom/vk/core/ui/themes/f;
+.implements Lcom/vk/stories/settings/GroupedStoriesSettingsScreenContract2;
+.implements Lcom/vk/navigation/b0/FragmentWithoutBottomMenuBar;
+.implements Lcom/vk/navigation/b0/FragmentWhiteStatusBar;
+.implements Lcom/vk/core/ui/themes/Themable;
 
 
 # annotations
@@ -19,21 +19,21 @@
 
 .annotation system Ldalvik/annotation/Signature;
     value = {
-        "Lcom/vk/core/fragments/c<",
-        "Lcom/vk/stories/settings/c;",
+        "Lcom/vk/core/fragments/BaseMvpFragment<",
+        "Lcom/vk/stories/settings/GroupedStoriesSettingsScreenContract;",
         ">;",
-        "Lcom/vk/stories/settings/e;",
-        "Lcom/vk/navigation/b0/k;",
-        "Lcom/vk/navigation/b0/a;",
-        "Lcom/vk/core/ui/themes/f;"
+        "Lcom/vk/stories/settings/GroupedStoriesSettingsScreenContract2;",
+        "Lcom/vk/navigation/b0/FragmentWithoutBottomMenuBar;",
+        "Lcom/vk/navigation/b0/FragmentWhiteStatusBar;",
+        "Lcom/vk/core/ui/themes/Themable;"
     }
 .end annotation
 
 
 # instance fields
-.field private final G:Lcom/vk/stories/settings/a;
+.field private final G:Lcom/vk/stories/settings/GroupedStoriesSettingsAdapter;
 
-.field private H:Lcom/vk/stories/settings/c;
+.field private H:Lcom/vk/stories/settings/GroupedStoriesSettingsScreenContract;
 
 .field private I:Landroid/view/MenuItem;
 
@@ -45,26 +45,26 @@
     .locals 3
 
     .line 1
-    invoke-direct {p0}, Lcom/vk/core/fragments/c;-><init>()V
+    invoke-direct {p0}, Lcom/vk/core/fragments/BaseMvpFragment;-><init>()V
 
     .line 2
     new-instance v0, Lcom/vk/stories/settings/GroupedStoriesSettingsPresenter;
 
-    invoke-direct {v0, p0}, Lcom/vk/stories/settings/GroupedStoriesSettingsPresenter;-><init>(Lcom/vk/stories/settings/e;)V
+    invoke-direct {v0, p0}, Lcom/vk/stories/settings/GroupedStoriesSettingsPresenter;-><init>(Lcom/vk/stories/settings/GroupedStoriesSettingsScreenContract2;)V
 
     .line 3
-    new-instance v1, Lcom/vk/stories/settings/a;
+    new-instance v1, Lcom/vk/stories/settings/GroupedStoriesSettingsAdapter;
 
-    invoke-virtual {v0}, Lcom/vk/stories/settings/GroupedStoriesSettingsPresenter;->a()Lcom/vk/lists/o;
+    invoke-virtual {v0}, Lcom/vk/stories/settings/GroupedStoriesSettingsPresenter;->a()Lcom/vk/lists/ListDataSet;
 
     move-result-object v2
 
-    invoke-direct {v1, v0, v2}, Lcom/vk/stories/settings/a;-><init>(Lcom/vk/stories/settings/c;Lcom/vk/lists/o;)V
+    invoke-direct {v1, v0, v2}, Lcom/vk/stories/settings/GroupedStoriesSettingsAdapter;-><init>(Lcom/vk/stories/settings/GroupedStoriesSettingsScreenContract;Lcom/vk/lists/ListDataSet;)V
 
-    iput-object v1, p0, Lcom/vk/stories/settings/GroupedStoriesSettingsFragment;->G:Lcom/vk/stories/settings/a;
+    iput-object v1, p0, Lcom/vk/stories/settings/GroupedStoriesSettingsFragment;->G:Lcom/vk/stories/settings/GroupedStoriesSettingsAdapter;
 
     .line 4
-    iput-object v0, p0, Lcom/vk/stories/settings/GroupedStoriesSettingsFragment;->H:Lcom/vk/stories/settings/c;
+    iput-object v0, p0, Lcom/vk/stories/settings/GroupedStoriesSettingsFragment;->H:Lcom/vk/stories/settings/GroupedStoriesSettingsScreenContract;
 
     return-void
 .end method
@@ -106,7 +106,7 @@
     .locals 1
 
     .line 1
-    invoke-static {p0}, Lcom/vk/navigation/b0/a$a;->b(Lcom/vk/navigation/b0/a;)Z
+    invoke-static {p0}, Lcom/vk/navigation/b0/FragmentWhiteStatusBar$a;->b(Lcom/vk/navigation/b0/FragmentWhiteStatusBar;)Z
 
     move-result v0
 
@@ -117,7 +117,7 @@
     .locals 1
 
     .line 1
-    invoke-static {p0}, Lcom/vk/navigation/b0/a$a;->a(Lcom/vk/navigation/b0/a;)I
+    invoke-static {p0}, Lcom/vk/navigation/b0/FragmentWhiteStatusBar$a;->a(Lcom/vk/navigation/b0/FragmentWhiteStatusBar;)I
 
     move-result v0
 
@@ -147,16 +147,16 @@
     return-void
 .end method
 
-.method public a(Lc/a/m;)Lc/a/m;
+.method public a(Lio/reactivex/Observable;)Lio/reactivex/Observable;
     .locals 9
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "<T:",
             "Ljava/lang/Object;",
             ">(",
-            "Lc/a/m<",
+            "Lio/reactivex/Observable<",
             "TT;>;)",
-            "Lc/a/m<",
+            "Lio/reactivex/Observable<",
             "TT;>;"
         }
     .end annotation
@@ -180,14 +180,14 @@
 
     move-object v0, p1
 
-    invoke-static/range {v0 .. v8}, Lcom/vk/core/extensions/RxExtKt;->a(Lc/a/m;Landroid/content/Context;JIZZILjava/lang/Object;)Lc/a/m;
+    invoke-static/range {v0 .. v8}, Lcom/vk/core/extensions/RxExtKt;->a(Lio/reactivex/Observable;Landroid/content/Context;JIZZILjava/lang/Object;)Lio/reactivex/Observable;
 
     move-result-object p1
 
     return-object p1
 .end method
 
-.method public a(Lcom/vk/lists/t$k;)Lcom/vk/lists/t;
+.method public a(Lcom/vk/lists/PaginationHelper$k;)Lcom/vk/lists/PaginationHelper;
     .locals 1
 
     .line 2
@@ -195,25 +195,25 @@
 
     if-eqz v0, :cond_0
 
-    invoke-static {p1, v0}, Lcom/vk/lists/u;->b(Lcom/vk/lists/t$k;Lcom/vk/lists/RecyclerPaginatedView;)Lcom/vk/lists/t;
+    invoke-static {p1, v0}, Lcom/vk/lists/PaginationHelperExt;->b(Lcom/vk/lists/PaginationHelper$k;Lcom/vk/lists/RecyclerPaginatedView;)Lcom/vk/lists/PaginationHelper;
 
     move-result-object p1
 
     return-object p1
 
     :cond_0
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     const/4 p1, 0x0
 
     throw p1
 .end method
 
-.method public c(Lio/reactivex/disposables/b;)V
+.method public c(Lio/reactivex/disposables/Disposable;)V
     .locals 0
 
     .line 1
-    invoke-virtual {p0, p1}, Lcom/vk/core/fragments/b;->b(Lio/reactivex/disposables/b;)Lio/reactivex/disposables/b;
+    invoke-virtual {p0, p1}, Lcom/vk/core/fragments/BaseFragment1;->b(Lio/reactivex/disposables/Disposable;)Lio/reactivex/disposables/Disposable;
 
     return-void
 .end method
@@ -222,9 +222,9 @@
     .locals 3
 
     .line 1
-    sget-object v0, Lcom/vk/core/util/i;->a:Landroid/content/Context;
+    sget-object v0, Lcom/vk/core/util/AppContextHolder;->a:Landroid/content/Context;
 
-    invoke-static {v0, p1}, Lcom/vk/api/base/f;->a(Landroid/content/Context;Ljava/lang/Throwable;)Ljava/lang/String;
+    invoke-static {v0, p1}, Lcom/vk/api/base/ApiUtils;->a(Landroid/content/Context;Ljava/lang/Throwable;)Ljava/lang/String;
 
     move-result-object p1
 
@@ -235,27 +235,27 @@
     const/4 v2, 0x0
 
     .line 2
-    invoke-static {p1, v0, v1, v2}, Lcom/vk/core/util/k1;->a(Ljava/lang/CharSequence;ZILjava/lang/Object;)V
+    invoke-static {p1, v0, v1, v2}, Lcom/vk/core/util/ToastUtils;->a(Ljava/lang/CharSequence;ZILjava/lang/Object;)V
 
     return-void
 .end method
 
-.method public bridge synthetic getPresenter()Lb/h/r/c;
+.method public bridge synthetic getPresenter()Lb/h/r/BaseScreenContract;
     .locals 1
 
     .line 1
-    invoke-virtual {p0}, Lcom/vk/stories/settings/GroupedStoriesSettingsFragment;->getPresenter()Lcom/vk/stories/settings/c;
+    invoke-virtual {p0}, Lcom/vk/stories/settings/GroupedStoriesSettingsFragment;->getPresenter()Lcom/vk/stories/settings/GroupedStoriesSettingsScreenContract;
 
     move-result-object v0
 
     return-object v0
 .end method
 
-.method public getPresenter()Lcom/vk/stories/settings/c;
+.method public getPresenter()Lcom/vk/stories/settings/GroupedStoriesSettingsScreenContract;
     .locals 1
 
     .line 2
-    iget-object v0, p0, Lcom/vk/stories/settings/GroupedStoriesSettingsFragment;->H:Lcom/vk/stories/settings/c;
+    iget-object v0, p0, Lcom/vk/stories/settings/GroupedStoriesSettingsFragment;->H:Lcom/vk/stories/settings/GroupedStoriesSettingsScreenContract;
 
     return-object v0
 .end method
@@ -295,7 +295,7 @@
 
     invoke-direct {v0, p0}, Lcom/vk/stories/settings/GroupedStoriesSettingsFragment$onCreateView$$inlined$apply$lambda$1;-><init>(Lcom/vk/stories/settings/GroupedStoriesSettingsFragment;)V
 
-    invoke-static {p2, p0, v0}, Lcom/vk/extensions/m;->a(Landroidx/appcompat/widget/Toolbar;Lcom/vk/core/fragments/FragmentImpl;Lkotlin/jvm/b/b;)V
+    invoke-static {p2, p0, v0}, Lcom/vk/extensions/ToolbarExt1;->a(Landroidx/appcompat/widget/Toolbar;Lcom/vk/core/fragments/FragmentImpl;Lkotlin/jvm/b/Functions2;)V
 
     .line 5
     invoke-virtual {p2}, Landroidx/appcompat/widget/Toolbar;->getMenu()Landroid/view/Menu;
@@ -313,7 +313,7 @@
     const v2, 0x7f040231
 
     .line 6
-    invoke-static {v1, v2}, Lcom/vk/core/ui/themes/VKThemeHelper;->a(II)Lcom/vk/core/drawable/i;
+    invoke-static {v1, v2}, Lcom/vk/core/ui/themes/VKThemeHelper;->a(II)Lcom/vk/core/drawable/RecoloredDrawable;
 
     move-result-object v1
 
@@ -342,7 +342,7 @@
 
     invoke-direct {v0, p0}, Lcom/vk/stories/settings/GroupedStoriesSettingsFragment$onCreateView$$inlined$apply$lambda$3;-><init>(Lcom/vk/stories/settings/GroupedStoriesSettingsFragment;)V
 
-    invoke-static {p2, v0}, Lcom/vk/extensions/ViewExtKt;->e(Landroid/view/View;Lkotlin/jvm/b/b;)V
+    invoke-static {p2, v0}, Lcom/vk/extensions/ViewExtKt;->e(Landroid/view/View;Lkotlin/jvm/b/Functions2;)V
 
     const p2, 0x7f0a0b7a
 
@@ -361,7 +361,7 @@
     const-string v1, "it"
 
     .line 14
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     new-instance v1, Lcom/vk/stories/settings/GroupedStoriesSettingsFragment$b;
 
@@ -371,7 +371,7 @@
 
     const-string v3, "context"
 
-    invoke-static {v2, v3}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v2, v3}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-direct {v1, v2}, Lcom/vk/stories/settings/GroupedStoriesSettingsFragment$b;-><init>(Landroid/content/Context;)V
 
@@ -395,7 +395,7 @@
     invoke-virtual {v0, p3}, Landroidx/recyclerview/widget/RecyclerView;->setClipToPadding(Z)V
 
     .line 18
-    iget-object p3, p0, Lcom/vk/stories/settings/GroupedStoriesSettingsFragment;->G:Lcom/vk/stories/settings/a;
+    iget-object p3, p0, Lcom/vk/stories/settings/GroupedStoriesSettingsFragment;->G:Lcom/vk/stories/settings/GroupedStoriesSettingsAdapter;
 
     invoke-virtual {p2, p3}, Lcom/vk/lists/RecyclerPaginatedView;->setAdapter(Landroidx/recyclerview/widget/RecyclerView$Adapter;)V
 
@@ -417,7 +417,7 @@
     iput-object v0, p0, Lcom/vk/stories/settings/GroupedStoriesSettingsFragment;->J:Lcom/vk/lists/RecyclerPaginatedView;
 
     .line 3
-    invoke-super {p0}, Lcom/vk/core/fragments/c;->onDestroyView()V
+    invoke-super {p0}, Lcom/vk/core/fragments/BaseMvpFragment;->onDestroyView()V
 
     return-void
 .end method
@@ -434,7 +434,7 @@
 
     const-string v1, "activity ?: return"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 2
     new-instance v1, Lcom/vk/core/dialogs/alert/VkAlertDialog$Builder;
@@ -488,7 +488,7 @@
 
     const-string v1, "activity ?: return"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 2
     new-instance v1, Lcom/vk/core/dialogs/snackbar/VkSnackbar$a;
@@ -499,7 +499,7 @@
 
     const/4 v4, 0x0
 
-    invoke-direct {v1, v0, v2, v3, v4}, Lcom/vk/core/dialogs/snackbar/VkSnackbar$a;-><init>(Landroid/content/Context;ZILkotlin/jvm/internal/i;)V
+    invoke-direct {v1, v0, v2, v3, v4}, Lcom/vk/core/dialogs/snackbar/VkSnackbar$a;-><init>(Landroid/content/Context;ZILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     const v0, 0x7f080782
 
@@ -530,7 +530,7 @@
 
     const v2, 0x7f040231
 
-    invoke-static {v1, v2}, Lcom/vk/core/ui/themes/VKThemeHelper;->a(II)Lcom/vk/core/drawable/i;
+    invoke-static {v1, v2}, Lcom/vk/core/ui/themes/VKThemeHelper;->a(II)Lcom/vk/core/drawable/RecoloredDrawable;
 
     move-result-object v1
 

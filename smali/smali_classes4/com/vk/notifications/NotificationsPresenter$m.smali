@@ -3,7 +3,7 @@
 .source "NotificationsPresenter.kt"
 
 # interfaces
-.implements Lc/a/z/g;
+.implements Lio/reactivex/functions/Consumer;
 
 
 # annotations
@@ -22,7 +22,7 @@
         "Ljava/lang/Object;",
         ">",
         "Ljava/lang/Object;",
-        "Lc/a/z/g<",
+        "Lio/reactivex/functions/Consumer<",
         "Ljava/lang/Boolean;",
         ">;"
     }
@@ -52,7 +52,7 @@
     .line 1
     iget-object p1, p0, Lcom/vk/notifications/NotificationsPresenter$m;->a:Lcom/vk/notifications/NotificationsPresenter;
 
-    invoke-virtual {p1}, Lcom/vk/notifications/NotificationsPresenter;->a()Lcom/vk/notifications/l;
+    invoke-virtual {p1}, Lcom/vk/notifications/NotificationsPresenter;->a()Lcom/vk/notifications/NotificationsContract1;
 
     move-result-object p1
 
@@ -68,10 +68,10 @@
 
     move-result-object v2
 
-    invoke-interface {p1, v0, v2}, Lcom/vk/notifications/l;->a(Ljava/lang/Integer;Ljava/lang/Integer;)V
+    invoke-interface {p1, v0, v2}, Lcom/vk/notifications/NotificationsContract1;->a(Ljava/lang/Integer;Ljava/lang/Integer;)V
 
     .line 2
-    invoke-static {v1}, Lcom/vtosters/lite/w;->k(I)V
+    invoke-static {v1}, Lcom/vtosters/lite/MenuCountersState;->k(I)V
 
     return-void
 .end method

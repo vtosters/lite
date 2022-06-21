@@ -3,12 +3,12 @@
 .source "PhotoViewer.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/a;
+.implements Lkotlin/jvm/b/Functions;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/photoviewer/PhotoViewer;->a(Ljava/lang/CharSequence;Lkotlin/jvm/b/b;)V
+    value = Lcom/vk/photoviewer/PhotoViewer;->a(Ljava/lang/CharSequence;Lkotlin/jvm/b/Functions2;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -19,26 +19,26 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/a<",
-        "Lkotlin/m;",
+        "Lkotlin/jvm/b/Functions<",
+        "Lkotlin/Unit;",
         ">;"
     }
 .end annotation
 
 
 # instance fields
-.field final synthetic $onDone:Lkotlin/jvm/b/b;
+.field final synthetic $onDone:Lkotlin/jvm/b/Functions2;
 
 .field final synthetic this$0:Lcom/vk/photoviewer/PhotoViewer;
 
 
 # direct methods
-.method constructor <init>(Lcom/vk/photoviewer/PhotoViewer;Lkotlin/jvm/b/b;)V
+.method constructor <init>(Lcom/vk/photoviewer/PhotoViewer;Lkotlin/jvm/b/Functions2;)V
     .locals 0
 
     iput-object p1, p0, Lcom/vk/photoviewer/PhotoViewer$showPickerOverlay$1;->this$0:Lcom/vk/photoviewer/PhotoViewer;
 
-    iput-object p2, p0, Lcom/vk/photoviewer/PhotoViewer$showPickerOverlay$1;->$onDone:Lkotlin/jvm/b/b;
+    iput-object p2, p0, Lcom/vk/photoviewer/PhotoViewer$showPickerOverlay$1;->$onDone:Lkotlin/jvm/b/Functions2;
 
     const/4 p1, 0x0
 
@@ -55,7 +55,7 @@
     .line 1
     invoke-virtual {p0}, Lcom/vk/photoviewer/PhotoViewer$showPickerOverlay$1;->invoke()V
 
-    sget-object v0, Lkotlin/m;->a:Lkotlin/m;
+    sget-object v0, Lkotlin/Unit;->a:Lkotlin/Unit;
 
     return-object v0
 .end method
@@ -64,7 +64,7 @@
     .locals 3
 
     .line 2
-    new-instance v0, Lcom/vk/photoviewer/p;
+    new-instance v0, Lcom/vk/photoviewer/PhotoViewer1;
 
     iget-object v1, p0, Lcom/vk/photoviewer/PhotoViewer$showPickerOverlay$1;->this$0:Lcom/vk/photoviewer/PhotoViewer;
 
@@ -86,7 +86,7 @@
 
     move-result v2
 
-    invoke-direct {v0, v1, v2}, Lcom/vk/photoviewer/p;-><init>(FF)V
+    invoke-direct {v0, v1, v2}, Lcom/vk/photoviewer/PhotoViewer1;-><init>(FF)V
 
     .line 3
     iget-object v1, p0, Lcom/vk/photoviewer/PhotoViewer$showPickerOverlay$1;->this$0:Lcom/vk/photoviewer/PhotoViewer;
@@ -94,9 +94,9 @@
     invoke-static {v1}, Lcom/vk/photoviewer/PhotoViewer;->A(Lcom/vk/photoviewer/PhotoViewer;)V
 
     .line 4
-    iget-object v1, p0, Lcom/vk/photoviewer/PhotoViewer$showPickerOverlay$1;->$onDone:Lkotlin/jvm/b/b;
+    iget-object v1, p0, Lcom/vk/photoviewer/PhotoViewer$showPickerOverlay$1;->$onDone:Lkotlin/jvm/b/Functions2;
 
-    invoke-interface {v1, v0}, Lkotlin/jvm/b/b;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v1, v0}, Lkotlin/jvm/b/Functions2;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
 
     return-void
 .end method

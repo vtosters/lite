@@ -44,7 +44,7 @@
     .line 1
     iget-object p1, p0, Lcom/vk/core/view/search/RoundedSearchView$b;->a:Lcom/vk/core/view/search/RoundedSearchView;
 
-    invoke-virtual {p1}, Lcom/vk/core/view/search/RoundedSearchView;->getOnActionSearchListener()Lkotlin/jvm/b/b;
+    invoke-virtual {p1}, Lcom/vk/core/view/search/RoundedSearchView;->getOnActionSearchListener()Lkotlin/jvm/b/Functions2;
 
     move-result-object p1
 
@@ -56,11 +56,11 @@
 
     move-result-object p2
 
-    invoke-interface {p1, p2}, Lkotlin/jvm/b/b;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {p1, p2}, Lkotlin/jvm/b/Functions2;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p1
 
-    check-cast p1, Lkotlin/m;
+    check-cast p1, Lkotlin/Unit;
 
     .line 2
     :cond_0

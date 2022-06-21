@@ -130,7 +130,7 @@
     :cond_1
     iget-object p1, p0, Lcom/vk/attachpicker/screen/BaseViewerScreen$f;->a:Lcom/vk/attachpicker/screen/BaseViewerScreen;
 
-    invoke-virtual {p1}, Lcom/vk/attachpicker/screen/BaseViewerScreen;->K()Lcom/vk/attachpicker/util/c;
+    invoke-virtual {p1}, Lcom/vk/attachpicker/screen/BaseViewerScreen;->K()Lcom/vk/attachpicker/util/OrientationLocker;
 
     move-result-object p1
 
@@ -140,7 +140,7 @@
 
     move-result-object v0
 
-    invoke-virtual {p1, v0}, Lcom/vk/attachpicker/util/c;->b(Landroid/app/Activity;)V
+    invoke-virtual {p1, v0}, Lcom/vk/attachpicker/util/OrientationLocker;->b(Landroid/app/Activity;)V
 
     .line 10
     iget-object p1, p0, Lcom/vk/attachpicker/screen/BaseViewerScreen$f;->a:Lcom/vk/attachpicker/screen/BaseViewerScreen;

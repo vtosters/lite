@@ -1,12 +1,12 @@
 .class public final Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/msgparts/carousel/MsgPartCarouselHolder;
-.super Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/c;
+.super Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/MsgPartHolderBase;
 .source "MsgPartCarouselHolder.kt"
 
 
 # annotations
 .annotation system Ldalvik/annotation/Signature;
     value = {
-        "Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/c<",
+        "Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/MsgPartHolderBase<",
         "Lcom/vk/im/engine/models/attaches/Attach;",
         ">;"
     }
@@ -14,7 +14,7 @@
 
 
 # static fields
-.field static final synthetic K:[Lkotlin/u/j;
+.field static final synthetic K:[Lkotlin/u/KProperty5;
 
 
 # instance fields
@@ -26,13 +26,13 @@
 
 .field private F:Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/msgparts/carousel/CarouselAdapter;
 
-.field private G:Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/msgparts/carousel/a;
+.field private G:Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/msgparts/carousel/CarouselDecoration;
 
-.field private final H:Lkotlin/e;
+.field private final H:Lkotlin/Lazy2;
 
-.field private final I:Lcom/vk/core/ui/w/b;
+.field private final I:Lcom/vk/core/ui/w/VkViewPoolProvider;
 
-.field private final J:Lcom/vk/core/ui/w/b;
+.field private final J:Lcom/vk/core/ui/w/VkViewPoolProvider;
 
 
 # direct methods
@@ -41,13 +41,13 @@
 
     const/4 v0, 0x1
 
-    new-array v0, v0, [Lkotlin/u/j;
+    new-array v0, v0, [Lkotlin/u/KProperty5;
 
     new-instance v1, Lkotlin/jvm/internal/PropertyReference1Impl;
 
     const-class v2, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/msgparts/carousel/MsgPartCarouselHolder;
 
-    invoke-static {v2}, Lkotlin/jvm/internal/o;->a(Ljava/lang/Class;)Lkotlin/u/c;
+    invoke-static {v2}, Lkotlin/jvm/internal/Reflection;->a(Ljava/lang/Class;)Lkotlin/u/KClass;
 
     move-result-object v2
 
@@ -55,42 +55,42 @@
 
     const-string v4, "getTextPaint()Landroid/text/TextPaint;"
 
-    invoke-direct {v1, v2, v3, v4}, Lkotlin/jvm/internal/PropertyReference1Impl;-><init>(Lkotlin/u/e;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-direct {v1, v2, v3, v4}, Lkotlin/jvm/internal/PropertyReference1Impl;-><init>(Lkotlin/u/KDeclarationContainer;Ljava/lang/String;Ljava/lang/String;)V
 
-    invoke-static {v1}, Lkotlin/jvm/internal/o;->a(Lkotlin/jvm/internal/PropertyReference1;)Lkotlin/u/l;
+    invoke-static {v1}, Lkotlin/jvm/internal/Reflection;->a(Lkotlin/jvm/internal/PropertyReference1;)Lkotlin/u/KProperty2;
 
     const/4 v2, 0x0
 
     aput-object v1, v0, v2
 
-    sput-object v0, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/msgparts/carousel/MsgPartCarouselHolder;->K:[Lkotlin/u/j;
+    sput-object v0, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/msgparts/carousel/MsgPartCarouselHolder;->K:[Lkotlin/u/KProperty5;
 
     return-void
 .end method
 
-.method public constructor <init>(Lcom/vk/core/ui/w/b;Lcom/vk/core/ui/w/b;)V
+.method public constructor <init>(Lcom/vk/core/ui/w/VkViewPoolProvider;Lcom/vk/core/ui/w/VkViewPoolProvider;)V
     .locals 0
 
     .line 1
-    invoke-direct {p0}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/c;-><init>()V
+    invoke-direct {p0}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/MsgPartHolderBase;-><init>()V
 
-    iput-object p1, p0, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/msgparts/carousel/MsgPartCarouselHolder;->I:Lcom/vk/core/ui/w/b;
+    iput-object p1, p0, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/msgparts/carousel/MsgPartCarouselHolder;->I:Lcom/vk/core/ui/w/VkViewPoolProvider;
 
-    iput-object p2, p0, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/msgparts/carousel/MsgPartCarouselHolder;->J:Lcom/vk/core/ui/w/b;
+    iput-object p2, p0, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/msgparts/carousel/MsgPartCarouselHolder;->J:Lcom/vk/core/ui/w/VkViewPoolProvider;
 
     .line 2
     sget-object p1, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/msgparts/carousel/MsgPartCarouselHolder$textPaint$2;->a:Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/msgparts/carousel/MsgPartCarouselHolder$textPaint$2;
 
-    invoke-static {p1}, Lkotlin/g;->a(Lkotlin/jvm/b/a;)Lkotlin/e;
+    invoke-static {p1}, Lkotlin/g;->a(Lkotlin/jvm/b/Functions;)Lkotlin/Lazy2;
 
     move-result-object p1
 
-    iput-object p1, p0, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/msgparts/carousel/MsgPartCarouselHolder;->H:Lkotlin/e;
+    iput-object p1, p0, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/msgparts/carousel/MsgPartCarouselHolder;->H:Lkotlin/Lazy2;
 
     return-void
 .end method
 
-.method private final a(Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/d;Lcom/vk/im/engine/models/carousel/CarouselItem;)I
+.method private final a(Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/MsgPartHolderBindArgs;Lcom/vk/im/engine/models/carousel/CarouselItem;)I
     .locals 7
 
     .line 7
@@ -107,7 +107,7 @@
     if-eqz v0, :cond_0
 
     .line 8
-    iget v0, p1, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/d;->r:I
+    iget v0, p1, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/MsgPartHolderBindArgs;->r:I
 
     int-to-float v0, v0
 
@@ -255,7 +255,7 @@
 
     move-result-object v0
 
-    iget v4, p1, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/d;->r:I
+    iget v4, p1, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/MsgPartHolderBindArgs;->r:I
 
     const/16 v5, 0xf
 
@@ -294,7 +294,7 @@
 
     move-result-object v0
 
-    iget p1, p1, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/d;->r:I
+    iget p1, p1, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/MsgPartHolderBindArgs;->r:I
 
     const/16 v2, 0xe
 
@@ -310,7 +310,7 @@
 
     .line 17
     :cond_b
-    sget-object p1, Lcom/vk/im/ui/components/bot_keyboard/e;->a:Lcom/vk/im/ui/components/bot_keyboard/e;
+    sget-object p1, Lcom/vk/im/ui/components/bot_keyboard/BotKeyboardDimensionsCalculator;->a:Lcom/vk/im/ui/components/bot_keyboard/BotKeyboardDimensionsCalculator;
 
     iget-object v0, p0, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/msgparts/carousel/MsgPartCarouselHolder;->C:Landroid/content/Context;
 
@@ -324,7 +324,7 @@
 
     if-eqz p2, :cond_c
 
-    invoke-virtual {p1, v0, p2}, Lcom/vk/im/ui/components/bot_keyboard/e;->a(Landroid/content/Context;Lcom/vk/im/engine/models/conversations/BotKeyboard;)I
+    invoke-virtual {p1, v0, p2}, Lcom/vk/im/ui/components/bot_keyboard/BotKeyboardDimensionsCalculator;->a(Landroid/content/Context;Lcom/vk/im/engine/models/conversations/BotKeyboard;)I
 
     move-result p1
 
@@ -349,24 +349,24 @@
 
     .line 19
     :cond_c
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     throw v2
 
     :cond_d
     const-string p1, "context"
 
-    invoke-static {p1}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {p1}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v2
 .end method
 
-.method private final a(Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/d;Ljava/util/List;)I
+.method private final a(Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/MsgPartHolderBindArgs;Ljava/util/List;)I
     .locals 2
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/d;",
+            "Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/MsgPartHolderBindArgs;",
             "Ljava/util/List<",
             "Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/msgparts/carousel/CarouselAdapter$a;",
             ">;)I"
@@ -420,7 +420,7 @@
 
     move-result-object v1
 
-    invoke-direct {p0, p1, v1}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/msgparts/carousel/MsgPartCarouselHolder;->a(Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/d;Lcom/vk/im/engine/models/carousel/CarouselItem;)I
+    invoke-direct {p0, p1, v1}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/msgparts/carousel/MsgPartCarouselHolder;->a(Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/MsgPartHolderBindArgs;Lcom/vk/im/engine/models/carousel/CarouselItem;)I
 
     move-result v1
 
@@ -448,7 +448,7 @@
     return p1
 
     :cond_2
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     const/4 p1, 0x0
 
@@ -515,15 +515,15 @@
 .method private final c()Landroid/text/TextPaint;
     .locals 3
 
-    iget-object v0, p0, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/msgparts/carousel/MsgPartCarouselHolder;->H:Lkotlin/e;
+    iget-object v0, p0, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/msgparts/carousel/MsgPartCarouselHolder;->H:Lkotlin/Lazy2;
 
-    sget-object v1, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/msgparts/carousel/MsgPartCarouselHolder;->K:[Lkotlin/u/j;
+    sget-object v1, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/msgparts/carousel/MsgPartCarouselHolder;->K:[Lkotlin/u/KProperty5;
 
     const/4 v2, 0x0
 
     aget-object v1, v1, v2
 
-    invoke-interface {v0}, Lkotlin/e;->getValue()Ljava/lang/Object;
+    invoke-interface {v0}, Lkotlin/Lazy2;->getValue()Ljava/lang/Object;
 
     move-result-object v0
 
@@ -532,12 +532,12 @@
     return-object v0
 .end method
 
-.method private final c(Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/d;)Ljava/util/List;
+.method private final c(Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/MsgPartHolderBindArgs;)Ljava/util/List;
     .locals 9
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/d;",
+            "Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/MsgPartHolderBindArgs;",
             ")",
             "Ljava/util/List<",
             "Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/msgparts/carousel/CarouselAdapter$a;",
@@ -546,7 +546,7 @@
     .end annotation
 
     .line 1
-    iget-object v0, p1, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/d;->a:Lcom/vk/im/engine/models/messages/Msg;
+    iget-object v0, p1, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/MsgPartHolderBindArgs;->a:Lcom/vk/im/engine/models/messages/Msg;
 
     if-eqz v0, :cond_4
 
@@ -599,11 +599,11 @@
     .line 5
     new-instance v6, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/msgparts/carousel/CarouselAdapter$a;
 
-    iget-object v7, p1, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/d;->a:Lcom/vk/im/engine/models/messages/Msg;
+    iget-object v7, p1, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/MsgPartHolderBindArgs;->a:Lcom/vk/im/engine/models/messages/Msg;
 
     const-string v8, "bindArgs.msg"
 
-    invoke-static {v7, v8}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v7, v8}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-direct {v6, v4, v7, v3}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/msgparts/carousel/CarouselAdapter$a;-><init>(Lcom/vk/im/engine/models/carousel/CarouselItem;Lcom/vk/im/engine/models/messages/Msg;I)V
 
@@ -664,7 +664,7 @@
     :cond_0
     const-string p1, "recycler"
 
-    invoke-static {p1}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {p1}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     const/4 p1, 0x0
 
@@ -681,7 +681,7 @@
 
     const-string v0, "inflater.context"
 
-    invoke-static {p2, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p2, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     iput-object p2, p0, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/msgparts/carousel/MsgPartCarouselHolder;->C:Landroid/content/Context;
 
@@ -693,7 +693,7 @@
     iput-object p2, p0, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/msgparts/carousel/MsgPartCarouselHolder;->E:Landroidx/recyclerview/widget/SnapHelper;
 
     .line 3
-    new-instance p2, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/msgparts/carousel/a;
+    new-instance p2, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/msgparts/carousel/CarouselDecoration;
 
     const/4 v0, 0x4
 
@@ -711,16 +711,16 @@
 
     move-object v0, p2
 
-    invoke-direct/range {v0 .. v5}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/msgparts/carousel/a;-><init>(IIIILkotlin/jvm/internal/i;)V
+    invoke-direct/range {v0 .. v5}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/msgparts/carousel/CarouselDecoration;-><init>(IIIILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
-    iput-object p2, p0, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/msgparts/carousel/MsgPartCarouselHolder;->G:Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/msgparts/carousel/a;
+    iput-object p2, p0, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/msgparts/carousel/MsgPartCarouselHolder;->G:Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/msgparts/carousel/CarouselDecoration;
 
     .line 4
     new-instance p2, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/msgparts/carousel/CarouselAdapter;
 
-    iget-object v0, p0, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/msgparts/carousel/MsgPartCarouselHolder;->I:Lcom/vk/core/ui/w/b;
+    iget-object v0, p0, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/msgparts/carousel/MsgPartCarouselHolder;->I:Lcom/vk/core/ui/w/VkViewPoolProvider;
 
-    invoke-virtual {v0}, Lcom/vk/core/ui/w/b;->b()Landroidx/recyclerview/widget/RecyclerView$RecycledViewPool;
+    invoke-virtual {v0}, Lcom/vk/core/ui/w/VkViewPoolProvider;->b()Landroidx/recyclerview/widget/RecyclerView$RecycledViewPool;
 
     move-result-object v0
 
@@ -781,7 +781,7 @@
 
     if-eqz p1, :cond_7
 
-    iget-object v0, p0, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/msgparts/carousel/MsgPartCarouselHolder;->G:Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/msgparts/carousel/a;
+    iget-object v0, p0, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/msgparts/carousel/MsgPartCarouselHolder;->G:Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/msgparts/carousel/CarouselDecoration;
 
     if-eqz v0, :cond_6
 
@@ -792,9 +792,9 @@
 
     if-eqz p1, :cond_5
 
-    iget-object v0, p0, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/msgparts/carousel/MsgPartCarouselHolder;->J:Lcom/vk/core/ui/w/b;
+    iget-object v0, p0, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/msgparts/carousel/MsgPartCarouselHolder;->J:Lcom/vk/core/ui/w/VkViewPoolProvider;
 
-    invoke-virtual {v0}, Lcom/vk/core/ui/w/b;->b()Landroidx/recyclerview/widget/RecyclerView$RecycledViewPool;
+    invoke-virtual {v0}, Lcom/vk/core/ui/w/VkViewPoolProvider;->b()Landroidx/recyclerview/widget/RecyclerView$RecycledViewPool;
 
     move-result-object v0
 
@@ -830,20 +830,20 @@
     return-object p1
 
     :cond_0
-    invoke-static {p2}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {p2}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v1
 
     .line 14
     :cond_1
-    invoke-static {p2}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {p2}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v1
 
     :cond_2
     const-string p1, "snapHelper"
 
-    invoke-static {p1}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {p1}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v1
 
@@ -851,18 +851,18 @@
     const-string p1, "adapter"
 
     .line 15
-    invoke-static {p1}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {p1}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v1
 
     :cond_4
-    invoke-static {p2}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {p2}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v1
 
     .line 16
     :cond_5
-    invoke-static {p2}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {p2}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v1
 
@@ -870,50 +870,50 @@
     const-string p1, "decoration"
 
     .line 17
-    invoke-static {p1}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {p1}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v1
 
     :cond_7
-    invoke-static {p2}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {p2}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v1
 
     .line 18
     :cond_8
-    invoke-static {v0}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v0}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v1
 
     :cond_9
-    invoke-static {p2}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {p2}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v1
 
     .line 19
     :cond_a
-    invoke-static {p2}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {p2}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v1
 
     .line 20
     :cond_b
-    invoke-static {p2}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {p2}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v1
 
     .line 21
     :cond_c
-    invoke-static {v0}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v0}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v1
 .end method
 
-.method protected b(Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/d;)V
+.method protected b(Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/MsgPartHolderBindArgs;)V
     .locals 6
 
     .line 22
-    iget-object v0, p1, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/d;->a:Lcom/vk/im/engine/models/messages/Msg;
+    iget-object v0, p1, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/MsgPartHolderBindArgs;->a:Lcom/vk/im/engine/models/messages/Msg;
 
     .line 23
     instance-of v1, v0, Lcom/vk/im/engine/models/messages/WithUserContent;
@@ -924,7 +924,7 @@
 
     .line 24
     :cond_0
-    iget-object v1, p0, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/msgparts/carousel/MsgPartCarouselHolder;->G:Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/msgparts/carousel/a;
+    iget-object v1, p0, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/msgparts/carousel/MsgPartCarouselHolder;->G:Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/msgparts/carousel/CarouselDecoration;
 
     const-string v2, "decoration"
 
@@ -936,25 +936,25 @@
 
     move-result v0
 
-    invoke-virtual {v1, v0}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/msgparts/carousel/a;->a(Z)V
+    invoke-virtual {v1, v0}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/msgparts/carousel/CarouselDecoration;->a(Z)V
 
     .line 25
-    iget-object v0, p0, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/msgparts/carousel/MsgPartCarouselHolder;->G:Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/msgparts/carousel/a;
+    iget-object v0, p0, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/msgparts/carousel/MsgPartCarouselHolder;->G:Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/msgparts/carousel/CarouselDecoration;
 
     if-eqz v0, :cond_c
 
-    iget v1, p1, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/d;->p:I
+    iget v1, p1, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/MsgPartHolderBindArgs;->p:I
 
-    invoke-virtual {v0, v1}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/msgparts/carousel/a;->b(I)V
+    invoke-virtual {v0, v1}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/msgparts/carousel/CarouselDecoration;->b(I)V
 
     .line 26
-    iget-object v0, p0, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/msgparts/carousel/MsgPartCarouselHolder;->G:Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/msgparts/carousel/a;
+    iget-object v0, p0, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/msgparts/carousel/MsgPartCarouselHolder;->G:Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/msgparts/carousel/CarouselDecoration;
 
     if-eqz v0, :cond_b
 
-    iget v1, p1, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/d;->q:I
+    iget v1, p1, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/MsgPartHolderBindArgs;->q:I
 
-    invoke-virtual {v0, v1}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/msgparts/carousel/a;->a(I)V
+    invoke-virtual {v0, v1}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/msgparts/carousel/CarouselDecoration;->a(I)V
 
     .line 27
     iget-object v0, p0, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/msgparts/carousel/MsgPartCarouselHolder;->F:Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/msgparts/carousel/CarouselAdapter;
@@ -963,14 +963,14 @@
 
     if-eqz v0, :cond_a
 
-    invoke-virtual {v0}, Lcom/vk/im/ui/views/adapter_delegate/a;->j()Ljava/util/List;
+    invoke-virtual {v0}, Lcom/vk/im/ui/views/adapter_delegate/DelegationAdapter;->j()Ljava/util/List;
 
     move-result-object v0
 
     if-eqz v0, :cond_9
 
     .line 28
-    invoke-direct {p0, p1}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/msgparts/carousel/MsgPartCarouselHolder;->c(Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/d;)Ljava/util/List;
+    invoke-direct {p0, p1}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/msgparts/carousel/MsgPartCarouselHolder;->c(Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/MsgPartHolderBindArgs;)Ljava/util/List;
 
     move-result-object v0
 
@@ -979,23 +979,23 @@
 
     if-eqz v2, :cond_8
 
-    iget-object v4, p1, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/d;->H:Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/b;
+    iget-object v4, p1, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/MsgPartHolderBindArgs;->H:Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/MsgListAdapterCallback;
 
-    invoke-virtual {v2, v4}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/msgparts/carousel/CarouselAdapter;->a(Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/b;)V
+    invoke-virtual {v2, v4}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/msgparts/carousel/CarouselAdapter;->a(Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/MsgListAdapterCallback;)V
 
     .line 30
     iget-object v2, p0, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/msgparts/carousel/MsgPartCarouselHolder;->F:Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/msgparts/carousel/CarouselAdapter;
 
     if-eqz v2, :cond_7
 
-    invoke-virtual {v2, v0}, Lcom/vk/im/ui/views/adapter_delegate/a;->setItems(Ljava/util/List;)V
+    invoke-virtual {v2, v0}, Lcom/vk/im/ui/views/adapter_delegate/DelegationAdapter;->setItems(Ljava/util/List;)V
 
     .line 31
     iget-object v2, p0, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/msgparts/carousel/MsgPartCarouselHolder;->F:Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/msgparts/carousel/CarouselAdapter;
 
     if-eqz v2, :cond_6
 
-    iget v4, p1, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/d;->r:I
+    iget v4, p1, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/MsgPartHolderBindArgs;->r:I
 
     const/16 v5, 0x14
 
@@ -1024,7 +1024,7 @@
     invoke-virtual {v1}, Landroidx/recyclerview/widget/RecyclerView;->invalidateItemDecorations()V
 
     .line 34
-    invoke-direct {p0, p1, v0}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/msgparts/carousel/MsgPartCarouselHolder;->a(Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/d;Ljava/util/List;)I
+    invoke-direct {p0, p1, v0}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/msgparts/carousel/MsgPartCarouselHolder;->a(Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/MsgPartHolderBindArgs;Ljava/util/List;)I
 
     move-result p1
 
@@ -1049,7 +1049,7 @@
     goto :goto_0
 
     :cond_1
-    invoke-static {v2}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v2}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v3
 
@@ -1059,37 +1059,37 @@
 
     .line 37
     :cond_3
-    invoke-static {v2}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v2}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v3
 
     .line 38
     :cond_4
-    invoke-static {v2}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v2}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v3
 
     .line 39
     :cond_5
-    invoke-static {v1}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v1}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v3
 
     .line 40
     :cond_6
-    invoke-static {v1}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v1}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v3
 
     .line 41
     :cond_7
-    invoke-static {v1}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v1}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v3
 
     .line 42
     :cond_8
-    invoke-static {v1}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v1}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v3
 
@@ -1104,25 +1104,25 @@
     throw p1
 
     :cond_a
-    invoke-static {v1}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v1}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v3
 
     .line 44
     :cond_b
-    invoke-static {v2}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v2}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v3
 
     .line 45
     :cond_c
-    invoke-static {v2}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v2}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v3
 
     .line 46
     :cond_d
-    invoke-static {v2}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v2}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v3
 .end method

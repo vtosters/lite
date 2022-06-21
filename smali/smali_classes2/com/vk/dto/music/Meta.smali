@@ -19,10 +19,10 @@
     .end annotation
 .end field
 
-.field public static final d:Lcom/vk/dto/common/data/c;
+.field public static final d:Lcom/vk/dto/common/data/JsonParser;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Lcom/vk/dto/common/data/c<",
+            "Lcom/vk/dto/common/data/JsonParser<",
             "Lcom/vk/dto/music/Meta;",
             ">;"
         }
@@ -63,7 +63,7 @@
 
     invoke-direct {v0}, Lcom/vk/dto/music/Meta$b;-><init>()V
 
-    sput-object v0, Lcom/vk/dto/music/Meta;->d:Lcom/vk/dto/common/data/c;
+    sput-object v0, Lcom/vk/dto/music/Meta;->d:Lcom/vk/dto/common/data/JsonParser;
 
     return-void
 .end method

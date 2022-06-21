@@ -3,12 +3,12 @@
 .source "StoriesBlockAuthorsHolder.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/b;
+.implements Lkotlin/jvm/b/Functions2;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/stories/holders/StoriesBlockAuthorsHolder;->a(Lkotlin/jvm/b/b;)Lkotlin/jvm/b/b;
+    value = Lcom/vk/stories/holders/StoriesBlockAuthorsHolder;->a(Lkotlin/jvm/b/Functions2;)Lkotlin/jvm/b/Functions2;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -19,27 +19,27 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/b<",
-        "Lcom/vk/stories/a1/b;",
-        "Lkotlin/m;",
+        "Lkotlin/jvm/b/Functions2<",
+        "Lcom/vk/stories/a1/AuthorItem;",
+        "Lkotlin/Unit;",
         ">;"
     }
 .end annotation
 
 
 # instance fields
-.field final synthetic $onClick:Lkotlin/jvm/b/b;
+.field final synthetic $onClick:Lkotlin/jvm/b/Functions2;
 
 .field final synthetic this$0:Lcom/vk/stories/holders/StoriesBlockAuthorsHolder;
 
 
 # direct methods
-.method constructor <init>(Lcom/vk/stories/holders/StoriesBlockAuthorsHolder;Lkotlin/jvm/b/b;)V
+.method constructor <init>(Lcom/vk/stories/holders/StoriesBlockAuthorsHolder;Lkotlin/jvm/b/Functions2;)V
     .locals 0
 
     iput-object p1, p0, Lcom/vk/stories/holders/StoriesBlockAuthorsHolder$updateSelection$1;->this$0:Lcom/vk/stories/holders/StoriesBlockAuthorsHolder;
 
-    iput-object p2, p0, Lcom/vk/stories/holders/StoriesBlockAuthorsHolder$updateSelection$1;->$onClick:Lkotlin/jvm/b/b;
+    iput-object p2, p0, Lcom/vk/stories/holders/StoriesBlockAuthorsHolder$updateSelection$1;->$onClick:Lkotlin/jvm/b/Functions2;
 
     const/4 p1, 0x1
 
@@ -50,7 +50,7 @@
 
 
 # virtual methods
-.method public final a(Lcom/vk/stories/a1/b;)V
+.method public final a(Lcom/vk/stories/a1/AuthorItem;)V
     .locals 8
 
     .line 1
@@ -88,10 +88,10 @@
 
     move-result-object v6
 
-    check-cast v6, Lcom/vk/stories/a1/b;
+    check-cast v6, Lcom/vk/stories/a1/AuthorItem;
 
     .line 3
-    invoke-virtual {v6}, Lcom/vk/stories/a1/b;->g()Z
+    invoke-virtual {v6}, Lcom/vk/stories/a1/AuthorItem;->g()Z
 
     move-result v7
 
@@ -103,7 +103,7 @@
 
     .line 4
     :cond_0
-    invoke-static {v6, p1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v6, p1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v6
 
@@ -143,9 +143,9 @@
 
     move-result-object v0
 
-    check-cast v0, Lcom/vk/stories/a1/b;
+    check-cast v0, Lcom/vk/stories/a1/AuthorItem;
 
-    invoke-virtual {v0, v1}, Lcom/vk/stories/a1/b;->a(Z)V
+    invoke-virtual {v0, v1}, Lcom/vk/stories/a1/AuthorItem;->a(Z)V
 
     .line 6
     iget-object v0, p0, Lcom/vk/stories/holders/StoriesBlockAuthorsHolder$updateSelection$1;->this$0:Lcom/vk/stories/holders/StoriesBlockAuthorsHolder;
@@ -158,16 +158,16 @@
 
     move-result-object v0
 
-    check-cast v0, Lcom/vk/stories/a1/b;
+    check-cast v0, Lcom/vk/stories/a1/AuthorItem;
 
     const/4 v2, 0x1
 
-    invoke-virtual {v0, v2}, Lcom/vk/stories/a1/b;->a(Z)V
+    invoke-virtual {v0, v2}, Lcom/vk/stories/a1/AuthorItem;->a(Z)V
 
     .line 7
     iget-object v0, p0, Lcom/vk/stories/holders/StoriesBlockAuthorsHolder$updateSelection$1;->this$0:Lcom/vk/stories/holders/StoriesBlockAuthorsHolder;
 
-    invoke-static {v0}, Lcom/vk/stories/holders/StoriesBlockAuthorsHolder;->a(Lcom/vk/stories/holders/StoriesBlockAuthorsHolder;)Lcom/vk/stories/holders/d;
+    invoke-static {v0}, Lcom/vk/stories/holders/StoriesBlockAuthorsHolder;->a(Lcom/vk/stories/holders/StoriesBlockAuthorsHolder;)Lcom/vk/stories/holders/StoriesBlockAuthorsHolder1;
 
     move-result-object v0
 
@@ -180,7 +180,7 @@
     .line 8
     iget-object v0, p0, Lcom/vk/stories/holders/StoriesBlockAuthorsHolder$updateSelection$1;->this$0:Lcom/vk/stories/holders/StoriesBlockAuthorsHolder;
 
-    invoke-static {v0}, Lcom/vk/stories/holders/StoriesBlockAuthorsHolder;->a(Lcom/vk/stories/holders/StoriesBlockAuthorsHolder;)Lcom/vk/stories/holders/d;
+    invoke-static {v0}, Lcom/vk/stories/holders/StoriesBlockAuthorsHolder;->a(Lcom/vk/stories/holders/StoriesBlockAuthorsHolder;)Lcom/vk/stories/holders/StoriesBlockAuthorsHolder1;
 
     move-result-object v0
 
@@ -192,15 +192,15 @@
 
     .line 9
     :cond_4
-    iget-object v0, p0, Lcom/vk/stories/holders/StoriesBlockAuthorsHolder$updateSelection$1;->$onClick:Lkotlin/jvm/b/b;
+    iget-object v0, p0, Lcom/vk/stories/holders/StoriesBlockAuthorsHolder$updateSelection$1;->$onClick:Lkotlin/jvm/b/Functions2;
 
     if-eqz v0, :cond_5
 
-    invoke-interface {v0, p1}, Lkotlin/jvm/b/b;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v0, p1}, Lkotlin/jvm/b/Functions2;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p1
 
-    check-cast p1, Lkotlin/m;
+    check-cast p1, Lkotlin/Unit;
 
     :cond_5
     return-void
@@ -210,11 +210,11 @@
     .locals 0
 
     .line 1
-    check-cast p1, Lcom/vk/stories/a1/b;
+    check-cast p1, Lcom/vk/stories/a1/AuthorItem;
 
-    invoke-virtual {p0, p1}, Lcom/vk/stories/holders/StoriesBlockAuthorsHolder$updateSelection$1;->a(Lcom/vk/stories/a1/b;)V
+    invoke-virtual {p0, p1}, Lcom/vk/stories/holders/StoriesBlockAuthorsHolder$updateSelection$1;->a(Lcom/vk/stories/a1/AuthorItem;)V
 
-    sget-object p1, Lkotlin/m;->a:Lkotlin/m;
+    sget-object p1, Lkotlin/Unit;->a:Lkotlin/Unit;
 
     return-object p1
 .end method

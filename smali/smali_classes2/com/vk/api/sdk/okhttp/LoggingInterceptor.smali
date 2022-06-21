@@ -3,7 +3,7 @@
 .source "LoggingInterceptor.kt"
 
 # interfaces
-.implements Lokhttp3/u;
+.implements Lokhttp3/Interceptor;
 
 
 # annotations
@@ -15,11 +15,11 @@
 
 
 # static fields
-.field static final synthetic d:[Lkotlin/u/j;
+.field static final synthetic d:[Lkotlin/u/KProperty5;
 
 
 # instance fields
-.field private final a:Lcom/vk/api/sdk/utils/c;
+.field private final a:Lcom/vk/api/sdk/utils/ThreadLocalDelegate;
 
 .field private final b:Z
 
@@ -32,13 +32,13 @@
 
     const/4 v0, 0x1
 
-    new-array v0, v0, [Lkotlin/u/j;
+    new-array v0, v0, [Lkotlin/u/KProperty5;
 
     new-instance v1, Lkotlin/jvm/internal/PropertyReference1Impl;
 
     const-class v2, Lcom/vk/api/sdk/okhttp/LoggingInterceptor;
 
-    invoke-static {v2}, Lkotlin/jvm/internal/o;->a(Ljava/lang/Class;)Lkotlin/u/c;
+    invoke-static {v2}, Lkotlin/jvm/internal/Reflection;->a(Ljava/lang/Class;)Lkotlin/u/KClass;
 
     move-result-object v2
 
@@ -46,15 +46,15 @@
 
     const-string v4, "getDelegate()Lokhttp3/logging/HttpLoggingInterceptor;"
 
-    invoke-direct {v1, v2, v3, v4}, Lkotlin/jvm/internal/PropertyReference1Impl;-><init>(Lkotlin/u/e;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-direct {v1, v2, v3, v4}, Lkotlin/jvm/internal/PropertyReference1Impl;-><init>(Lkotlin/u/KDeclarationContainer;Ljava/lang/String;Ljava/lang/String;)V
 
-    invoke-static {v1}, Lkotlin/jvm/internal/o;->a(Lkotlin/jvm/internal/PropertyReference1;)Lkotlin/u/l;
+    invoke-static {v1}, Lkotlin/jvm/internal/Reflection;->a(Lkotlin/jvm/internal/PropertyReference1;)Lkotlin/u/KProperty2;
 
     const/4 v2, 0x0
 
     aput-object v1, v0, v2
 
-    sput-object v0, Lcom/vk/api/sdk/okhttp/LoggingInterceptor;->d:[Lkotlin/u/j;
+    sput-object v0, Lcom/vk/api/sdk/okhttp/LoggingInterceptor;->d:[Lkotlin/u/KProperty5;
 
     return-void
 .end method
@@ -74,11 +74,11 @@
 
     invoke-direct {p1, p0}, Lcom/vk/api/sdk/okhttp/LoggingInterceptor$delegate$2;-><init>(Lcom/vk/api/sdk/okhttp/LoggingInterceptor;)V
 
-    invoke-static {p1}, Lcom/vk/api/sdk/utils/e;->a(Lkotlin/jvm/b/a;)Lcom/vk/api/sdk/utils/c;
+    invoke-static {p1}, Lcom/vk/api/sdk/utils/ThreadLocalDelegate1;->a(Lkotlin/jvm/b/Functions;)Lcom/vk/api/sdk/utils/ThreadLocalDelegate;
 
     move-result-object p1
 
-    iput-object p1, p0, Lcom/vk/api/sdk/okhttp/LoggingInterceptor;->a:Lcom/vk/api/sdk/utils/c;
+    iput-object p1, p0, Lcom/vk/api/sdk/okhttp/LoggingInterceptor;->a:Lcom/vk/api/sdk/utils/ThreadLocalDelegate;
 
     return-void
 .end method
@@ -86,15 +86,15 @@
 .method private final a()Lokhttp3/logging/HttpLoggingInterceptor;
     .locals 3
 
-    iget-object v0, p0, Lcom/vk/api/sdk/okhttp/LoggingInterceptor;->a:Lcom/vk/api/sdk/utils/c;
+    iget-object v0, p0, Lcom/vk/api/sdk/okhttp/LoggingInterceptor;->a:Lcom/vk/api/sdk/utils/ThreadLocalDelegate;
 
-    sget-object v1, Lcom/vk/api/sdk/okhttp/LoggingInterceptor;->d:[Lkotlin/u/j;
+    sget-object v1, Lcom/vk/api/sdk/okhttp/LoggingInterceptor;->d:[Lkotlin/u/KProperty5;
 
     const/4 v2, 0x0
 
     aget-object v1, v1, v2
 
-    invoke-static {v0, p0, v1}, Lcom/vk/api/sdk/utils/e;->a(Lcom/vk/api/sdk/utils/c;Ljava/lang/Object;Lkotlin/u/j;)Ljava/lang/Object;
+    invoke-static {v0, p0, v1}, Lcom/vk/api/sdk/utils/ThreadLocalDelegate1;->a(Lcom/vk/api/sdk/utils/ThreadLocalDelegate;Ljava/lang/Object;Lkotlin/u/KProperty5;)Ljava/lang/Object;
 
     move-result-object v0
 
@@ -123,21 +123,21 @@
 
 
 # virtual methods
-.method public a(Lokhttp3/u$a;)Lokhttp3/b0;
+.method public a(Lokhttp3/Interceptor$a;)Lokhttp3/Response;
     .locals 6
 
     .line 2
-    invoke-interface {p1}, Lokhttp3/u$a;->m0()Lokhttp3/z;
+    invoke-interface {p1}, Lokhttp3/Interceptor$a;->m0()Lokhttp3/Request;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lokhttp3/z;->a()Lokhttp3/a0;
+    invoke-virtual {v0}, Lokhttp3/Request;->a()Lokhttp3/RequestBody;
 
     move-result-object v0
 
     if-eqz v0, :cond_0
 
-    invoke-virtual {v0}, Lokhttp3/a0;->a()J
+    invoke-virtual {v0}, Lokhttp3/RequestBody;->a()J
 
     move-result-wide v0
 
@@ -172,11 +172,11 @@
 
     iget-object v1, p0, Lcom/vk/api/sdk/okhttp/LoggingInterceptor;->c:Lcom/vk/api/sdk/utils/log/Logger;
 
-    invoke-interface {v1}, Lcom/vk/api/sdk/utils/log/Logger;->a()Lkotlin/e;
+    invoke-interface {v1}, Lcom/vk/api/sdk/utils/log/Logger;->a()Lkotlin/Lazy2;
 
     move-result-object v1
 
-    invoke-interface {v1}, Lkotlin/e;->getValue()Ljava/lang/Object;
+    invoke-interface {v1}, Lkotlin/Lazy2;->getValue()Ljava/lang/Object;
 
     move-result-object v1
 
@@ -195,13 +195,13 @@
 
     move-result-object v0
 
-    invoke-virtual {v0, p1}, Lokhttp3/logging/HttpLoggingInterceptor;->a(Lokhttp3/u$a;)Lokhttp3/b0;
+    invoke-virtual {v0, p1}, Lokhttp3/logging/HttpLoggingInterceptor;->a(Lokhttp3/Interceptor$a;)Lokhttp3/Response;
 
     move-result-object p1
 
     const-string v0, "delegate.intercept(chain)"
 
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     return-object p1
 .end method

@@ -3,7 +3,7 @@
 .source "VkUiConnectFragment.kt"
 
 # interfaces
-.implements Lc/a/z/g;
+.implements Lio/reactivex/functions/Consumer;
 
 
 # annotations
@@ -22,7 +22,7 @@
         "Ljava/lang/Object;",
         ">",
         "Ljava/lang/Object;",
-        "Lc/a/z/g<",
+        "Lio/reactivex/functions/Consumer<",
         "Ljava/lang/Throwable;",
         ">;"
     }
@@ -52,11 +52,11 @@
     .line 1
     iget-object v0, p0, Lcom/vk/webapp/VkUiConnectFragment$r;->a:Lcom/vk/webapp/VkUiConnectFragment;
 
-    invoke-virtual {v0}, Lcom/vk/webapp/VkUiConnectFragment;->a5()Lcom/vk/webapp/o/b;
+    invoke-virtual {v0}, Lcom/vk/webapp/VkUiConnectFragment;->a5()Lcom/vk/webapp/o/VkUiConnectFragmentDelegate;
 
     move-result-object v0
 
-    invoke-interface {v0}, Lcom/vk/webapp/o/b;->f()Z
+    invoke-interface {v0}, Lcom/vk/webapp/o/VkUiConnectFragmentDelegate;->f()Z
 
     move-result v0
 

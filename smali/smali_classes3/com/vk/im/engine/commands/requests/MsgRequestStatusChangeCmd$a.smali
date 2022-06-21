@@ -3,12 +3,12 @@
 .source "MsgRequestStatusChangeCmd.kt"
 
 # interfaces
-.implements Lcom/vk/im/engine/utils/collection/d$a;
+.implements Lcom/vk/im/engine/utils/collection/IntCollection$a;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/im/engine/commands/requests/MsgRequestStatusChangeCmd;->a(Lcom/vk/im/engine/d;)Ljava/lang/Integer;
+    value = Lcom/vk/im/engine/commands/requests/MsgRequestStatusChangeCmd;->a(Lcom/vk/im/engine/ImEnvironment;)Ljava/lang/Integer;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -20,16 +20,16 @@
 # instance fields
 .field final synthetic a:Lcom/vk/im/engine/commands/requests/MsgRequestStatusChangeCmd;
 
-.field final synthetic b:Lcom/vk/im/engine/d;
+.field final synthetic b:Lcom/vk/im/engine/ImEnvironment;
 
 
 # direct methods
-.method constructor <init>(Lcom/vk/im/engine/commands/requests/MsgRequestStatusChangeCmd;Lcom/vk/im/engine/d;)V
+.method constructor <init>(Lcom/vk/im/engine/commands/requests/MsgRequestStatusChangeCmd;Lcom/vk/im/engine/ImEnvironment;)V
     .locals 0
 
     iput-object p1, p0, Lcom/vk/im/engine/commands/requests/MsgRequestStatusChangeCmd$a;->a:Lcom/vk/im/engine/commands/requests/MsgRequestStatusChangeCmd;
 
-    iput-object p2, p0, Lcom/vk/im/engine/commands/requests/MsgRequestStatusChangeCmd$a;->b:Lcom/vk/im/engine/d;
+    iput-object p2, p0, Lcom/vk/im/engine/commands/requests/MsgRequestStatusChangeCmd$a;->b:Lcom/vk/im/engine/ImEnvironment;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -53,13 +53,13 @@
     invoke-direct {v0, p1, v1}, Lcom/vk/im/engine/internal/jobs/requests/MsgRequestChangeStatusJob;-><init>(ILcom/vk/im/engine/models/MsgRequestStatus;)V
 
     .line 2
-    iget-object p1, p0, Lcom/vk/im/engine/commands/requests/MsgRequestStatusChangeCmd$a;->b:Lcom/vk/im/engine/d;
+    iget-object p1, p0, Lcom/vk/im/engine/commands/requests/MsgRequestStatusChangeCmd$a;->b:Lcom/vk/im/engine/ImEnvironment;
 
-    invoke-interface {p1}, Lcom/vk/im/engine/d;->f0()Lcom/vk/instantjobs/b;
+    invoke-interface {p1}, Lcom/vk/im/engine/ImEnvironment;->f0()Lcom/vk/instantjobs/InstantJobManager;
 
     move-result-object p1
 
-    invoke-virtual {p1, v0}, Lcom/vk/instantjobs/b;->a(Lcom/vk/instantjobs/InstantJob;)V
+    invoke-virtual {p1, v0}, Lcom/vk/instantjobs/InstantJobManager;->a(Lcom/vk/instantjobs/InstantJob;)V
 
     return-void
 .end method

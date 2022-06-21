@@ -1,5 +1,5 @@
 .class public final Lcom/vk/im/ui/components/chat_mr/ChatMessageRequestVc;
-.super Lcom/vk/im/ui/q/h/a;
+.super Lcom/vk/im/ui/q/h/LazyVc;
 .source "ChatMessageRequestVc.kt"
 
 
@@ -12,7 +12,7 @@
 
 
 # static fields
-.field static final synthetic q:[Lkotlin/u/j;
+.field static final synthetic q:[Lkotlin/u/KProperty5;
 
 
 # instance fields
@@ -36,7 +36,7 @@
 
 .field private n:Landroid/view/View;
 
-.field private final o:Lkotlin/e;
+.field private final o:Lkotlin/Lazy2;
 
 .field private final p:Lcom/vk/im/ui/components/chat_mr/ChatMessageRequestVc$a;
 
@@ -47,13 +47,13 @@
 
     const/4 v0, 0x1
 
-    new-array v0, v0, [Lkotlin/u/j;
+    new-array v0, v0, [Lkotlin/u/KProperty5;
 
     new-instance v1, Lkotlin/jvm/internal/PropertyReference1Impl;
 
     const-class v2, Lcom/vk/im/ui/components/chat_mr/ChatMessageRequestVc;
 
-    invoke-static {v2}, Lkotlin/jvm/internal/o;->a(Ljava/lang/Class;)Lkotlin/u/c;
+    invoke-static {v2}, Lkotlin/jvm/internal/Reflection;->a(Ljava/lang/Class;)Lkotlin/u/KClass;
 
     move-result-object v2
 
@@ -61,15 +61,15 @@
 
     const-string v4, "getPopups()Lcom/vk/im/ui/components/viewcontrollers/popup/PopupVc;"
 
-    invoke-direct {v1, v2, v3, v4}, Lkotlin/jvm/internal/PropertyReference1Impl;-><init>(Lkotlin/u/e;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-direct {v1, v2, v3, v4}, Lkotlin/jvm/internal/PropertyReference1Impl;-><init>(Lkotlin/u/KDeclarationContainer;Ljava/lang/String;Ljava/lang/String;)V
 
-    invoke-static {v1}, Lkotlin/jvm/internal/o;->a(Lkotlin/jvm/internal/PropertyReference1;)Lkotlin/u/l;
+    invoke-static {v1}, Lkotlin/jvm/internal/Reflection;->a(Lkotlin/jvm/internal/PropertyReference1;)Lkotlin/u/KProperty2;
 
     const/4 v2, 0x0
 
     aput-object v1, v0, v2
 
-    sput-object v0, Lcom/vk/im/ui/components/chat_mr/ChatMessageRequestVc;->q:[Lkotlin/u/j;
+    sput-object v0, Lcom/vk/im/ui/components/chat_mr/ChatMessageRequestVc;->q:[Lkotlin/u/KProperty5;
 
     return-void
 .end method
@@ -78,7 +78,7 @@
     .locals 0
 
     .line 1
-    invoke-direct {p0, p3, p2}, Lcom/vk/im/ui/q/h/a;-><init>(ILandroid/view/View;)V
+    invoke-direct {p0, p3, p2}, Lcom/vk/im/ui/q/h/LazyVc;-><init>(ILandroid/view/View;)V
 
     iput-object p1, p0, Lcom/vk/im/ui/components/chat_mr/ChatMessageRequestVc;->p:Lcom/vk/im/ui/components/chat_mr/ChatMessageRequestVc$a;
 
@@ -87,11 +87,11 @@
 
     invoke-direct {p1, p0}, Lcom/vk/im/ui/components/chat_mr/ChatMessageRequestVc$popups$2;-><init>(Lcom/vk/im/ui/components/chat_mr/ChatMessageRequestVc;)V
 
-    invoke-static {p1}, Lkotlin/g;->a(Lkotlin/jvm/b/a;)Lkotlin/e;
+    invoke-static {p1}, Lkotlin/g;->a(Lkotlin/jvm/b/Functions;)Lkotlin/Lazy2;
 
     move-result-object p1
 
-    iput-object p1, p0, Lcom/vk/im/ui/components/chat_mr/ChatMessageRequestVc;->o:Lkotlin/e;
+    iput-object p1, p0, Lcom/vk/im/ui/components/chat_mr/ChatMessageRequestVc;->o:Lkotlin/Lazy2;
 
     return-void
 .end method
@@ -105,7 +105,7 @@
     return-object p0
 .end method
 
-.method private final a(Lcom/vk/im/engine/models/dialogs/ChatSettings;Lcom/vk/im/engine/models/j;)Ljava/lang/CharSequence;
+.method private final a(Lcom/vk/im/engine/models/dialogs/ChatSettings;Lcom/vk/im/engine/models/Profile;)Ljava/lang/CharSequence;
     .locals 4
 
     .line 61
@@ -116,7 +116,7 @@
     if-eqz p2, :cond_0
 
     .line 62
-    invoke-interface {p2}, Lcom/vk/im/engine/models/j;->name()Ljava/lang/String;
+    invoke-interface {p2}, Lcom/vk/im/engine/models/Profile;->name()Ljava/lang/String;
 
     move-result-object v1
 
@@ -139,12 +139,12 @@
 
     move-result v3
 
-    invoke-static {v0, v1, v2, v3}, Lcom/vk/extensions/k;->a(Landroid/text/SpannableStringBuilder;Lcom/vk/core/ui/Font;II)V
+    invoke-static {v0, v1, v2, v3}, Lcom/vk/extensions/SpannableExt;->a(Landroid/text/SpannableStringBuilder;Lcom/vk/core/ui/Font;II)V
 
     if-eqz p2, :cond_1
 
     .line 64
-    invoke-interface {p2}, Lcom/vk/im/engine/models/j;->X()Lcom/vk/im/engine/models/users/UserSex;
+    invoke-interface {p2}, Lcom/vk/im/engine/models/Profile;->X()Lcom/vk/im/engine/models/users/UserSex;
 
     move-result-object p2
 
@@ -210,7 +210,7 @@
     invoke-virtual {v0, p2}, Landroid/text/SpannableStringBuilder;->append(Ljava/lang/CharSequence;)Landroid/text/SpannableStringBuilder;
 
     .line 68
-    invoke-virtual {p0}, Lcom/vk/im/ui/q/h/a;->a()Landroid/content/Context;
+    invoke-virtual {p0}, Lcom/vk/im/ui/q/h/LazyVc;->a()Landroid/content/Context;
 
     move-result-object p2
 
@@ -227,7 +227,7 @@
     .locals 2
 
     .line 56
-    invoke-virtual {p0}, Lcom/vk/im/ui/q/h/a;->a()Landroid/content/Context;
+    invoke-virtual {p0}, Lcom/vk/im/ui/q/h/LazyVc;->a()Landroid/content/Context;
 
     move-result-object v0
 
@@ -254,7 +254,7 @@
 
     .line 60
     :cond_0
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     const/4 p1, 0x0
 
@@ -285,7 +285,7 @@
     :cond_0
     const-string p0, "rejectBtn"
 
-    invoke-static {p0}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {p0}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     const/4 p0, 0x0
 
@@ -295,15 +295,15 @@
 .method private final f()Lcom/vk/im/ui/components/viewcontrollers/popup/PopupVc;
     .locals 3
 
-    iget-object v0, p0, Lcom/vk/im/ui/components/chat_mr/ChatMessageRequestVc;->o:Lkotlin/e;
+    iget-object v0, p0, Lcom/vk/im/ui/components/chat_mr/ChatMessageRequestVc;->o:Lkotlin/Lazy2;
 
-    sget-object v1, Lcom/vk/im/ui/components/chat_mr/ChatMessageRequestVc;->q:[Lkotlin/u/j;
+    sget-object v1, Lcom/vk/im/ui/components/chat_mr/ChatMessageRequestVc;->q:[Lkotlin/u/KProperty5;
 
     const/4 v2, 0x0
 
     aget-object v1, v1, v2
 
-    invoke-interface {v0}, Lkotlin/e;->getValue()Ljava/lang/Object;
+    invoke-interface {v0}, Lkotlin/Lazy2;->getValue()Ljava/lang/Object;
 
     move-result-object v0
 
@@ -326,7 +326,7 @@
 
     const-string v1, "findViewById(R.id.chat_avatar)"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     check-cast v0, Lcom/vk/im/ui/views/avatars/AvatarView;
 
@@ -341,7 +341,7 @@
 
     const-string v1, "findViewById(R.id.chat_avatar_casper)"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     check-cast v0, Landroid/widget/ImageView;
 
@@ -356,7 +356,7 @@
 
     const-string v1, "findViewById(R.id.chat_name)"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     check-cast v0, Landroid/widget/TextView;
 
@@ -371,7 +371,7 @@
 
     const-string v1, "findViewById(R.id.members_count)"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     check-cast v0, Landroid/widget/TextView;
 
@@ -386,7 +386,7 @@
 
     const-string v1, "findViewById(R.id.members_avatars)"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     check-cast v0, Lcom/vk/im/ui/views/avatars/StackAvatarView;
 
@@ -401,7 +401,7 @@
 
     const-string v1, "findViewById(R.id.info_text)"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     check-cast v0, Landroid/widget/TextView;
 
@@ -416,7 +416,7 @@
 
     const-string v1, "findViewById(R.id.inviter_avatar)"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     check-cast v0, Lcom/vk/im/ui/views/avatars/AvatarView;
 
@@ -431,7 +431,7 @@
 
     const-string v1, "findViewById(R.id.inviter_info)"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     check-cast v0, Landroid/widget/TextView;
 
@@ -446,7 +446,7 @@
 
     const-string v1, "findViewById(R.id.msg_request_accept)"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     iput-object v0, p0, Lcom/vk/im/ui/components/chat_mr/ChatMessageRequestVc;->m:Landroid/view/View;
 
@@ -459,7 +459,7 @@
 
     const-string v1, "findViewById(R.id.msg_request_reject)"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     iput-object v0, p0, Lcom/vk/im/ui/components/chat_mr/ChatMessageRequestVc;->n:Landroid/view/View;
 
@@ -485,19 +485,19 @@
     .locals 10
 
     .line 13
-    invoke-virtual {p0}, Lcom/vk/im/ui/q/h/a;->d()V
+    invoke-virtual {p0}, Lcom/vk/im/ui/q/h/LazyVc;->d()V
 
     .line 14
-    invoke-virtual {p0}, Lcom/vk/im/ui/q/h/a;->c()Landroid/view/View;
+    invoke-virtual {p0}, Lcom/vk/im/ui/q/h/LazyVc;->c()Landroid/view/View;
 
     move-result-object v0
 
     sget-object v1, Lcom/vk/im/ui/components/chat_mr/ChatMessageRequestVc$show$1;->a:Lcom/vk/im/ui/components/chat_mr/ChatMessageRequestVc$show$1;
 
-    invoke-static {v0, v1}, Lcom/vk/extensions/ViewExtKt;->e(Landroid/view/View;Lkotlin/jvm/b/b;)V
+    invoke-static {v0, v1}, Lcom/vk/extensions/ViewExtKt;->e(Landroid/view/View;Lkotlin/jvm/b/Functions2;)V
 
     .line 15
-    invoke-virtual {p4, p3}, Lcom/vk/im/engine/models/ProfilesInfo;->d(Lcom/vk/im/engine/models/Member;)Lcom/vk/im/engine/models/j;
+    invoke-virtual {p4, p3}, Lcom/vk/im/engine/models/ProfilesInfo;->d(Lcom/vk/im/engine/models/Member;)Lcom/vk/im/engine/models/Profile;
 
     move-result-object v0
 
@@ -506,7 +506,7 @@
     if-eqz v0, :cond_0
 
     .line 16
-    invoke-interface {v0}, Lcom/vk/im/engine/models/j;->g0()Lcom/vk/im/engine/models/ImageList;
+    invoke-interface {v0}, Lcom/vk/im/engine/models/Profile;->g0()Lcom/vk/im/engine/models/ImageList;
 
     move-result-object v2
 
@@ -542,7 +542,7 @@
     if-eqz v4, :cond_4
 
     .line 20
-    sget-object v4, Lcom/vk/im/ui/drawables/b;->a:Lcom/vk/im/ui/drawables/b$a;
+    sget-object v4, Lcom/vk/im/ui/drawables/CasperIndicatorDrawable;->a:Lcom/vk/im/ui/drawables/CasperIndicatorDrawable$a;
 
     iget-object v7, p0, Lcom/vk/im/ui/components/chat_mr/ChatMessageRequestVc;->e:Lcom/vk/im/ui/views/avatars/AvatarView;
 
@@ -554,9 +554,9 @@
 
     const-string v7, "chatAvatar.context"
 
-    invoke-static {v5, v7}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v5, v7}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    invoke-virtual {v4, v5}, Lcom/vk/im/ui/drawables/b$a;->b(Landroid/content/Context;)Lcom/vk/im/ui/drawables/b;
+    invoke-virtual {v4, v5}, Lcom/vk/im/ui/drawables/CasperIndicatorDrawable$a;->b(Landroid/content/Context;)Lcom/vk/im/ui/drawables/CasperIndicatorDrawable;
 
     move-result-object v4
 
@@ -565,11 +565,11 @@
 
     move-result-object v5
 
-    invoke-static {v5}, Lcom/vk/im/ui/themes/a;->a(Lcom/vk/im/engine/models/dialogs/DialogTheme;)I
+    invoke-static {v5}, Lcom/vk/im/ui/themes/DialogThemesExt;->a(Lcom/vk/im/engine/models/dialogs/DialogTheme;)I
 
     move-result v5
 
-    invoke-virtual {v4, v5}, Lcom/vk/im/ui/drawables/b;->a(I)V
+    invoke-virtual {v4, v5}, Lcom/vk/im/ui/drawables/CasperIndicatorDrawable;->a(I)V
 
     .line 22
     iget-object v5, p0, Lcom/vk/im/ui/components/chat_mr/ChatMessageRequestVc;->f:Landroid/widget/ImageView;
@@ -588,19 +588,19 @@
     goto :goto_1
 
     :cond_1
-    invoke-static {v6}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v6}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v1
 
     .line 24
     :cond_2
-    invoke-static {v6}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v6}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v1
 
     .line 25
     :cond_3
-    invoke-static {v5}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v5}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v1
 
@@ -714,7 +714,7 @@
 
     if-eqz p1, :cond_e
 
-    invoke-direct {p0, v3, v0}, Lcom/vk/im/ui/components/chat_mr/ChatMessageRequestVc;->a(Lcom/vk/im/engine/models/dialogs/ChatSettings;Lcom/vk/im/engine/models/j;)Ljava/lang/CharSequence;
+    invoke-direct {p0, v3, v0}, Lcom/vk/im/ui/components/chat_mr/ChatMessageRequestVc;->a(Lcom/vk/im/engine/models/dialogs/ChatSettings;Lcom/vk/im/engine/models/Profile;)Ljava/lang/CharSequence;
 
     move-result-object v2
 
@@ -732,7 +732,7 @@
     if-ne v2, v8, :cond_7
 
     .line 36
-    invoke-virtual {p0}, Lcom/vk/im/ui/q/h/a;->a()Landroid/content/Context;
+    invoke-virtual {p0}, Lcom/vk/im/ui/q/h/LazyVc;->a()Landroid/content/Context;
 
     move-result-object v2
 
@@ -748,7 +748,7 @@
     if-nez v2, :cond_c
 
     .line 37
-    invoke-virtual {p0}, Lcom/vk/im/ui/q/h/a;->a()Landroid/content/Context;
+    invoke-virtual {p0}, Lcom/vk/im/ui/q/h/LazyVc;->a()Landroid/content/Context;
 
     move-result-object v2
 
@@ -771,7 +771,7 @@
 
     invoke-direct {p4, p0, p3}, Lcom/vk/im/ui/components/chat_mr/ChatMessageRequestVc$show$3;-><init>(Lcom/vk/im/ui/components/chat_mr/ChatMessageRequestVc;Lcom/vk/im/engine/models/Member;)V
 
-    invoke-static {p1, p4}, Lcom/vk/extensions/ViewExtKt;->e(Landroid/view/View;Lkotlin/jvm/b/b;)V
+    invoke-static {p1, p4}, Lcom/vk/extensions/ViewExtKt;->e(Landroid/view/View;Lkotlin/jvm/b/Functions2;)V
 
     .line 40
     iget-object p1, p0, Lcom/vk/im/ui/components/chat_mr/ChatMessageRequestVc;->l:Landroid/widget/TextView;
@@ -782,7 +782,7 @@
 
     invoke-direct {p2, p0, p3}, Lcom/vk/im/ui/components/chat_mr/ChatMessageRequestVc$show$4;-><init>(Lcom/vk/im/ui/components/chat_mr/ChatMessageRequestVc;Lcom/vk/im/engine/models/Member;)V
 
-    invoke-static {p1, p2}, Lcom/vk/extensions/ViewExtKt;->e(Landroid/view/View;Lkotlin/jvm/b/b;)V
+    invoke-static {p1, p2}, Lcom/vk/extensions/ViewExtKt;->e(Landroid/view/View;Lkotlin/jvm/b/Functions2;)V
 
     .line 41
     iget-object p1, p0, Lcom/vk/im/ui/components/chat_mr/ChatMessageRequestVc;->m:Landroid/view/View;
@@ -793,7 +793,7 @@
 
     invoke-direct {p2, p0}, Lcom/vk/im/ui/components/chat_mr/ChatMessageRequestVc$show$5;-><init>(Lcom/vk/im/ui/components/chat_mr/ChatMessageRequestVc;)V
 
-    invoke-static {p1, p2}, Lcom/vk/extensions/ViewExtKt;->e(Landroid/view/View;Lkotlin/jvm/b/b;)V
+    invoke-static {p1, p2}, Lcom/vk/extensions/ViewExtKt;->e(Landroid/view/View;Lkotlin/jvm/b/Functions2;)V
 
     .line 42
     iget-object p1, p0, Lcom/vk/im/ui/components/chat_mr/ChatMessageRequestVc;->n:Landroid/view/View;
@@ -802,16 +802,16 @@
 
     new-instance p2, Lcom/vk/im/ui/components/chat_mr/ChatMessageRequestVc$show$6;
 
-    invoke-direct {p2, p0, v0}, Lcom/vk/im/ui/components/chat_mr/ChatMessageRequestVc$show$6;-><init>(Lcom/vk/im/ui/components/chat_mr/ChatMessageRequestVc;Lcom/vk/im/engine/models/j;)V
+    invoke-direct {p2, p0, v0}, Lcom/vk/im/ui/components/chat_mr/ChatMessageRequestVc$show$6;-><init>(Lcom/vk/im/ui/components/chat_mr/ChatMessageRequestVc;Lcom/vk/im/engine/models/Profile;)V
 
-    invoke-static {p1, p2}, Lcom/vk/extensions/ViewExtKt;->e(Landroid/view/View;Lkotlin/jvm/b/b;)V
+    invoke-static {p1, p2}, Lcom/vk/extensions/ViewExtKt;->e(Landroid/view/View;Lkotlin/jvm/b/Functions2;)V
 
     return-void
 
     :cond_8
     const-string p1, "rejectBtn"
 
-    invoke-static {p1}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {p1}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v1
 
@@ -819,19 +819,19 @@
     const-string p1, "acceptBtn"
 
     .line 43
-    invoke-static {p1}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {p1}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v1
 
     .line 44
     :cond_a
-    invoke-static {p2}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {p2}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v1
 
     .line 45
     :cond_b
-    invoke-static {p4}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {p4}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v1
 
@@ -847,13 +847,13 @@
     const-string p1, "infoText"
 
     .line 47
-    invoke-static {p1}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {p1}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v1
 
     .line 48
     :cond_e
-    invoke-static {p2}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {p2}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v1
 
@@ -861,7 +861,7 @@
     const-string p1, "membersCount"
 
     .line 49
-    invoke-static {p1}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {p1}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v1
 
@@ -869,13 +869,13 @@
     const-string p1, "chatName"
 
     .line 50
-    invoke-static {p1}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {p1}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v1
 
     .line 51
     :cond_11
-    invoke-static {p4}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {p4}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v1
 
@@ -883,25 +883,25 @@
     const-string p1, "membersAvatars"
 
     .line 52
-    invoke-static {p1}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {p1}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v1
 
     .line 53
     :cond_13
-    invoke-static {v6}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v6}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v1
 
     .line 54
     :cond_14
-    invoke-static {v5}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v5}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v1
 
     .line 55
     :cond_15
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     throw v1
 .end method
@@ -910,14 +910,14 @@
     .locals 11
 
     .line 1
-    invoke-virtual {p0}, Lcom/vk/im/ui/q/h/a;->b()Z
+    invoke-virtual {p0}, Lcom/vk/im/ui/q/h/LazyVc;->b()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
     .line 2
-    invoke-virtual {p0}, Lcom/vk/im/ui/q/h/a;->c()Landroid/view/View;
+    invoke-virtual {p0}, Lcom/vk/im/ui/q/h/LazyVc;->c()Landroid/view/View;
 
     move-result-object v1
 

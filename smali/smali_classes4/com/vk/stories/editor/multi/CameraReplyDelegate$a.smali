@@ -3,12 +3,12 @@
 .source "CameraReplyDelegate.kt"
 
 # interfaces
-.implements Lcom/vk/mediastore/a/c$b;
+.implements Lcom/vk/mediastore/a/VideoCache$b;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/stories/editor/multi/CameraReplyDelegate;->a(Lcom/vk/cameraui/entities/d;)V
+    value = Lcom/vk/stories/editor/multi/CameraReplyDelegate;->a(Lcom/vk/cameraui/entities/StoryRawData3;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,16 +18,16 @@
 
 
 # instance fields
-.field final synthetic a:Lcom/vk/attachpicker/stickers/reply/c;
+.field final synthetic a:Lcom/vk/attachpicker/stickers/reply/ReplyVideoViewSticker;
 
 .field final synthetic b:Lcom/vk/stories/editor/multi/CameraReplyDelegate;
 
 
 # direct methods
-.method constructor <init>(Lcom/vk/attachpicker/stickers/reply/c;Lcom/vk/stories/editor/multi/CameraReplyDelegate;Z)V
+.method constructor <init>(Lcom/vk/attachpicker/stickers/reply/ReplyVideoViewSticker;Lcom/vk/stories/editor/multi/CameraReplyDelegate;Z)V
     .locals 0
 
-    iput-object p1, p0, Lcom/vk/stories/editor/multi/CameraReplyDelegate$a;->a:Lcom/vk/attachpicker/stickers/reply/c;
+    iput-object p1, p0, Lcom/vk/stories/editor/multi/CameraReplyDelegate$a;->a:Lcom/vk/attachpicker/stickers/reply/ReplyVideoViewSticker;
 
     iput-object p2, p0, Lcom/vk/stories/editor/multi/CameraReplyDelegate$a;->b:Lcom/vk/stories/editor/multi/CameraReplyDelegate;
 
@@ -43,7 +43,7 @@
     .locals 0
 
     .line 1
-    invoke-static {p0}, Lcom/vk/mediastore/a/c$b$a;->b(Lcom/vk/mediastore/a/c$b;)V
+    invoke-static {p0}, Lcom/vk/mediastore/a/VideoCache$b$a;->b(Lcom/vk/mediastore/a/VideoCache$b;)V
 
     return-void
 .end method
@@ -78,7 +78,7 @@
     .locals 0
 
     .line 1
-    invoke-static {p0}, Lcom/vk/mediastore/a/c$b$a;->a(Lcom/vk/mediastore/a/c$b;)V
+    invoke-static {p0}, Lcom/vk/mediastore/a/VideoCache$b$a;->a(Lcom/vk/mediastore/a/VideoCache$b;)V
 
     return-void
 .end method

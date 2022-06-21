@@ -24,7 +24,7 @@
     return-void
 .end method
 
-.method public synthetic constructor <init>(Lkotlin/jvm/internal/i;)V
+.method public synthetic constructor <init>(Lkotlin/jvm/internal/DefaultConstructorMarker;)V
     .locals 0
 
     .line 2
@@ -43,7 +43,7 @@
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, v1}, Lcom/vk/articles/authorpage/ui/ArticleAuthorPageFragment$a;-><init>(Lkotlin/jvm/internal/i;)V
+    invoke-direct {v0, v1}, Lcom/vk/articles/authorpage/ui/ArticleAuthorPageFragment$a;-><init>(Lkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     invoke-static {v0}, Lcom/vk/articles/authorpage/ui/ArticleAuthorPageFragment$a;->a(Lcom/vk/articles/authorpage/ui/ArticleAuthorPageFragment$a;)Landroid/os/Bundle;
 
@@ -64,7 +64,7 @@
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, v1}, Lcom/vk/articles/authorpage/ui/ArticleAuthorPageFragment$a;-><init>(Lkotlin/jvm/internal/i;)V
+    invoke-direct {v0, v1}, Lcom/vk/articles/authorpage/ui/ArticleAuthorPageFragment$a;-><init>(Lkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     invoke-static {v0}, Lcom/vk/articles/authorpage/ui/ArticleAuthorPageFragment$a;->a(Lcom/vk/articles/authorpage/ui/ArticleAuthorPageFragment$a;)Landroid/os/Bundle;
 

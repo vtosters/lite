@@ -3,7 +3,7 @@
 .source "StoryCircleImageView.java"
 
 # interfaces
-.implements Lcom/airbnb/lottie/h;
+.implements Lcom/airbnb/lottie/LottieListener;
 
 
 # annotations
@@ -19,8 +19,8 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Ljava/lang/Object;",
-        "Lcom/airbnb/lottie/h<",
-        "Lcom/airbnb/lottie/d;",
+        "Lcom/airbnb/lottie/LottieListener<",
+        "Lcom/airbnb/lottie/LottieComposition;",
         ">;"
     }
 .end annotation
@@ -48,7 +48,7 @@
 
 
 # virtual methods
-.method public a(Lcom/airbnb/lottie/d;)V
+.method public a(Lcom/airbnb/lottie/LottieComposition;)V
     .locals 2
 
     .line 2
@@ -65,7 +65,7 @@
 
     iget-object v1, p0, Lcom/vk/stories/view/StoryCircleImageView$a;->a:Lcom/vk/dto/stories/model/StoriesContainer;
 
-    invoke-static {v0, v1, p1}, Lcom/vk/stories/view/StoryCircleImageView;->a(Lcom/vk/stories/view/StoryCircleImageView;Lcom/vk/dto/stories/model/StoriesContainer;Lcom/airbnb/lottie/d;)V
+    invoke-static {v0, v1, p1}, Lcom/vk/stories/view/StoryCircleImageView;->a(Lcom/vk/stories/view/StoryCircleImageView;Lcom/vk/dto/stories/model/StoriesContainer;Lcom/airbnb/lottie/LottieComposition;)V
 
     goto :goto_0
 
@@ -79,7 +79,7 @@
 
     new-instance v1, Lcom/vk/stories/view/StoryCircleImageView$a$a;
 
-    invoke-direct {v1, p0, p1}, Lcom/vk/stories/view/StoryCircleImageView$a$a;-><init>(Lcom/vk/stories/view/StoryCircleImageView$a;Lcom/airbnb/lottie/d;)V
+    invoke-direct {v1, p0, p1}, Lcom/vk/stories/view/StoryCircleImageView$a$a;-><init>(Lcom/vk/stories/view/StoryCircleImageView$a;Lcom/airbnb/lottie/LottieComposition;)V
 
     invoke-virtual {v0, v1}, Landroid/view/ViewTreeObserver;->addOnGlobalLayoutListener(Landroid/view/ViewTreeObserver$OnGlobalLayoutListener;)V
 
@@ -91,9 +91,9 @@
     .locals 0
 
     .line 1
-    check-cast p1, Lcom/airbnb/lottie/d;
+    check-cast p1, Lcom/airbnb/lottie/LottieComposition;
 
-    invoke-virtual {p0, p1}, Lcom/vk/stories/view/StoryCircleImageView$a;->a(Lcom/airbnb/lottie/d;)V
+    invoke-virtual {p0, p1}, Lcom/vk/stories/view/StoryCircleImageView$a;->a(Lcom/airbnb/lottie/LottieComposition;)V
 
     return-void
 .end method

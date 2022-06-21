@@ -3,12 +3,12 @@
 .source "OggTrackPlayer.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/b;
+.implements Lkotlin/jvm/b/Functions2;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/audiomsg/player/trackplayer/oggtrackplayer/OggTrackPlayer;->c(Lcom/vk/audiomsg/player/f;F)V
+    value = Lcom/vk/audiomsg/player/trackplayer/oggtrackplayer/OggTrackPlayer;->c(Lcom/vk/audiomsg/player/Source;F)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -19,16 +19,16 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/b<",
-        "Lcom/vk/audiomsg/player/k/b;",
-        "Lkotlin/m;",
+        "Lkotlin/jvm/b/Functions2<",
+        "Lcom/vk/audiomsg/player/k/TrackPlayerListener;",
+        "Lkotlin/Unit;",
         ">;"
     }
 .end annotation
 
 
 # instance fields
-.field final synthetic $source:Lcom/vk/audiomsg/player/f;
+.field final synthetic $source:Lcom/vk/audiomsg/player/Source;
 
 .field final synthetic $volume:F
 
@@ -36,12 +36,12 @@
 
 
 # direct methods
-.method constructor <init>(Lcom/vk/audiomsg/player/trackplayer/oggtrackplayer/OggTrackPlayer;Lcom/vk/audiomsg/player/f;F)V
+.method constructor <init>(Lcom/vk/audiomsg/player/trackplayer/oggtrackplayer/OggTrackPlayer;Lcom/vk/audiomsg/player/Source;F)V
     .locals 0
 
     iput-object p1, p0, Lcom/vk/audiomsg/player/trackplayer/oggtrackplayer/OggTrackPlayer$notifyOnVolumeChanged$1;->this$0:Lcom/vk/audiomsg/player/trackplayer/oggtrackplayer/OggTrackPlayer;
 
-    iput-object p2, p0, Lcom/vk/audiomsg/player/trackplayer/oggtrackplayer/OggTrackPlayer$notifyOnVolumeChanged$1;->$source:Lcom/vk/audiomsg/player/f;
+    iput-object p2, p0, Lcom/vk/audiomsg/player/trackplayer/oggtrackplayer/OggTrackPlayer$notifyOnVolumeChanged$1;->$source:Lcom/vk/audiomsg/player/Source;
 
     iput p3, p0, Lcom/vk/audiomsg/player/trackplayer/oggtrackplayer/OggTrackPlayer$notifyOnVolumeChanged$1;->$volume:F
 
@@ -54,17 +54,17 @@
 
 
 # virtual methods
-.method public final a(Lcom/vk/audiomsg/player/k/b;)V
+.method public final a(Lcom/vk/audiomsg/player/k/TrackPlayerListener;)V
     .locals 3
 
     .line 1
     iget-object v0, p0, Lcom/vk/audiomsg/player/trackplayer/oggtrackplayer/OggTrackPlayer$notifyOnVolumeChanged$1;->this$0:Lcom/vk/audiomsg/player/trackplayer/oggtrackplayer/OggTrackPlayer;
 
-    iget-object v1, p0, Lcom/vk/audiomsg/player/trackplayer/oggtrackplayer/OggTrackPlayer$notifyOnVolumeChanged$1;->$source:Lcom/vk/audiomsg/player/f;
+    iget-object v1, p0, Lcom/vk/audiomsg/player/trackplayer/oggtrackplayer/OggTrackPlayer$notifyOnVolumeChanged$1;->$source:Lcom/vk/audiomsg/player/Source;
 
     iget v2, p0, Lcom/vk/audiomsg/player/trackplayer/oggtrackplayer/OggTrackPlayer$notifyOnVolumeChanged$1;->$volume:F
 
-    invoke-interface {p1, v0, v1, v2}, Lcom/vk/audiomsg/player/k/b;->a(Lcom/vk/audiomsg/player/k/a;Lcom/vk/audiomsg/player/f;F)V
+    invoke-interface {p1, v0, v1, v2}, Lcom/vk/audiomsg/player/k/TrackPlayerListener;->a(Lcom/vk/audiomsg/player/k/TrackPlayer;Lcom/vk/audiomsg/player/Source;F)V
 
     return-void
 .end method
@@ -73,11 +73,11 @@
     .locals 0
 
     .line 1
-    check-cast p1, Lcom/vk/audiomsg/player/k/b;
+    check-cast p1, Lcom/vk/audiomsg/player/k/TrackPlayerListener;
 
-    invoke-virtual {p0, p1}, Lcom/vk/audiomsg/player/trackplayer/oggtrackplayer/OggTrackPlayer$notifyOnVolumeChanged$1;->a(Lcom/vk/audiomsg/player/k/b;)V
+    invoke-virtual {p0, p1}, Lcom/vk/audiomsg/player/trackplayer/oggtrackplayer/OggTrackPlayer$notifyOnVolumeChanged$1;->a(Lcom/vk/audiomsg/player/k/TrackPlayerListener;)V
 
-    sget-object p1, Lkotlin/m;->a:Lkotlin/m;
+    sget-object p1, Lkotlin/Unit;->a:Lkotlin/Unit;
 
     return-object p1
 .end method

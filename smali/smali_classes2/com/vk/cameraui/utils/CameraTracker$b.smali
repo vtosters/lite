@@ -24,7 +24,7 @@
     return-void
 .end method
 
-.method public synthetic constructor <init>(Lkotlin/jvm/internal/i;)V
+.method public synthetic constructor <init>(Lkotlin/jvm/internal/DefaultConstructorMarker;)V
     .locals 0
 
     .line 2
@@ -138,7 +138,7 @@
         value = {
             "(",
             "Ljava/util/List<",
-            "Lcom/vk/cameraui/entities/d;",
+            "Lcom/vk/cameraui/entities/StoryRawData3;",
             ">;)",
             "Ljava/lang/String;"
         }
@@ -160,17 +160,17 @@
 
     move-result-object p1
 
-    check-cast p1, Lcom/vk/cameraui/entities/d;
+    check-cast p1, Lcom/vk/cameraui/entities/StoryRawData3;
 
     .line 11
-    invoke-virtual {p1}, Lcom/vk/cameraui/entities/d;->f()Z
+    invoke-virtual {p1}, Lcom/vk/cameraui/entities/StoryRawData3;->f()Z
 
     move-result v0
 
     if-eqz v0, :cond_1
 
     .line 12
-    invoke-virtual {p1}, Lcom/vk/cameraui/entities/d;->s()Z
+    invoke-virtual {p1}, Lcom/vk/cameraui/entities/StoryRawData3;->s()Z
 
     move-result p1
 
@@ -187,7 +187,7 @@
 
     .line 13
     :cond_1
-    invoke-virtual {p1}, Lcom/vk/cameraui/entities/d;->s()Z
+    invoke-virtual {p1}, Lcom/vk/cameraui/entities/StoryRawData3;->s()Z
 
     move-result p1
 
@@ -238,7 +238,7 @@
         value = {
             "(",
             "Ljava/util/List<",
-            "Lcom/vk/cameraui/entities/d;",
+            "Lcom/vk/cameraui/entities/StoryRawData3;",
             ">;)",
             "Ljava/lang/String;"
         }
@@ -260,17 +260,17 @@
 
     move-result-object p1
 
-    check-cast p1, Lcom/vk/cameraui/entities/d;
+    check-cast p1, Lcom/vk/cameraui/entities/StoryRawData3;
 
     .line 4
-    invoke-virtual {p1}, Lcom/vk/cameraui/entities/d;->f()Z
+    invoke-virtual {p1}, Lcom/vk/cameraui/entities/StoryRawData3;->f()Z
 
     move-result v0
 
     if-eqz v0, :cond_1
 
     .line 5
-    invoke-virtual {p1}, Lcom/vk/cameraui/entities/d;->s()Z
+    invoke-virtual {p1}, Lcom/vk/cameraui/entities/StoryRawData3;->s()Z
 
     move-result p1
 

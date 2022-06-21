@@ -3,7 +3,7 @@
 .source "VideoRequest.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/b;
+.implements Lkotlin/jvm/b/Functions2;
 
 
 # annotations
@@ -19,7 +19,7 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/b<",
+        "Lkotlin/jvm/b/Functions2<",
         "Lorg/json/JSONObject;",
         "Lcom/vk/dto/common/VideoFile;",
         ">;"
@@ -54,7 +54,7 @@
     .locals 2
 
     .line 1
-    invoke-static {p1}, Lcom/vk/dto/common/i;->a(Lorg/json/JSONObject;)Lcom/vk/dto/common/VideoFile;
+    invoke-static {p1}, Lcom/vk/dto/common/VideoFileFactory;->a(Lorg/json/JSONObject;)Lcom/vk/dto/common/VideoFile;
 
     move-result-object p1
 

@@ -21,9 +21,9 @@
 
 .field private d:Lcom/vk/stickers/details/BuyPackController;
 
-.field private e:Lcom/vk/stickers/details/a;
+.field private e:Lcom/vk/stickers/details/StickerDetailsAdapter;
 
-.field private f:Lcom/vk/stickers/r;
+.field private f:Lcom/vk/stickers/StickerLongtapWindow;
 
 
 # direct methods
@@ -73,7 +73,7 @@
 
     const-string v0, "content.findViewById(R.id.recycler)"
 
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     check-cast p1, Lcom/vk/stickers/LongtapRecyclerView;
 
@@ -96,11 +96,11 @@
     return-void
 .end method
 
-.method public static final synthetic a(Lcom/vk/stickers/details/StickerDetailsView;)Lcom/vk/stickers/details/a;
+.method public static final synthetic a(Lcom/vk/stickers/details/StickerDetailsView;)Lcom/vk/stickers/details/StickerDetailsAdapter;
     .locals 0
 
     .line 1
-    iget-object p0, p0, Lcom/vk/stickers/details/StickerDetailsView;->e:Lcom/vk/stickers/details/a;
+    iget-object p0, p0, Lcom/vk/stickers/details/StickerDetailsView;->e:Lcom/vk/stickers/details/StickerDetailsAdapter;
 
     return-object p0
 .end method
@@ -114,11 +114,11 @@
     return-object p0
 .end method
 
-.method public static final synthetic c(Lcom/vk/stickers/details/StickerDetailsView;)Lcom/vk/stickers/r;
+.method public static final synthetic c(Lcom/vk/stickers/details/StickerDetailsView;)Lcom/vk/stickers/StickerLongtapWindow;
     .locals 0
 
     .line 1
-    iget-object p0, p0, Lcom/vk/stickers/details/StickerDetailsView;->f:Lcom/vk/stickers/r;
+    iget-object p0, p0, Lcom/vk/stickers/details/StickerDetailsView;->f:Lcom/vk/stickers/StickerLongtapWindow;
 
     if-eqz p0, :cond_0
 
@@ -127,7 +127,7 @@
     :cond_0
     const-string p0, "stickerLongTapWindow"
 
-    invoke-static {p0}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {p0}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     const/4 p0, 0x0
 
@@ -140,7 +140,7 @@
     .locals 2
 
     .line 2
-    new-instance v0, Lcom/vk/stickers/r;
+    new-instance v0, Lcom/vk/stickers/StickerLongtapWindow;
 
     if-eqz p1, :cond_0
 
@@ -154,7 +154,7 @@
 
     const-string v1, "this.context"
 
-    invoke-static {p1, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     :goto_0
     new-instance v1, Lcom/vk/stickers/details/StickerDetailsView$c;
@@ -162,12 +162,12 @@
     invoke-direct {v1}, Lcom/vk/stickers/details/StickerDetailsView$c;-><init>()V
 
     .line 4
-    invoke-direct {v0, p1, v1}, Lcom/vk/stickers/r;-><init>(Landroid/content/Context;Lcom/vk/stickers/n;)V
+    invoke-direct {v0, p1, v1}, Lcom/vk/stickers/StickerLongtapWindow;-><init>(Landroid/content/Context;Lcom/vk/stickers/StickerChecker;)V
 
-    iput-object v0, p0, Lcom/vk/stickers/details/StickerDetailsView;->f:Lcom/vk/stickers/r;
+    iput-object v0, p0, Lcom/vk/stickers/details/StickerDetailsView;->f:Lcom/vk/stickers/StickerLongtapWindow;
 
     .line 5
-    iget-object p1, p0, Lcom/vk/stickers/details/StickerDetailsView;->f:Lcom/vk/stickers/r;
+    iget-object p1, p0, Lcom/vk/stickers/details/StickerDetailsView;->f:Lcom/vk/stickers/StickerLongtapWindow;
 
     if-eqz p1, :cond_1
 
@@ -175,14 +175,14 @@
 
     invoke-direct {v0, p0}, Lcom/vk/stickers/details/StickerDetailsView$d;-><init>(Lcom/vk/stickers/details/StickerDetailsView;)V
 
-    invoke-virtual {p1, v0}, Lcom/vk/stickers/r;->a(Lcom/vk/stickers/q$b;)V
+    invoke-virtual {p1, v0}, Lcom/vk/stickers/StickerLongtapWindow;->a(Lcom/vk/stickers/StickerLongtapView$b;)V
 
     return-void
 
     :cond_1
     const-string p1, "stickerLongTapWindow"
 
-    invoke-static {p1}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {p1}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     const/4 p1, 0x0
 
@@ -205,7 +205,7 @@
 
     const-string v0, "context"
 
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-static {p1}, Lcom/vk/core/util/ContextExtKt;->a(Landroid/content/Context;)Landroid/app/Activity;
 
@@ -243,27 +243,27 @@
     goto :goto_1
 
     :cond_1
-    invoke-static {p2}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {p2}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v0
 
     .line 10
     :cond_2
     :goto_1
-    new-instance p1, Lcom/vk/stickers/details/a;
+    new-instance p1, Lcom/vk/stickers/details/StickerDetailsAdapter;
 
     iget-object v1, p0, Lcom/vk/stickers/details/StickerDetailsView;->a:Lcom/vk/dto/stickers/StickerStockItem;
 
     if-eqz v1, :cond_5
 
-    invoke-direct {p1, v1}, Lcom/vk/stickers/details/a;-><init>(Lcom/vk/dto/stickers/StickerStockItem;)V
+    invoke-direct {p1, v1}, Lcom/vk/stickers/details/StickerDetailsAdapter;-><init>(Lcom/vk/dto/stickers/StickerStockItem;)V
 
-    iput-object p1, p0, Lcom/vk/stickers/details/StickerDetailsView;->e:Lcom/vk/stickers/details/a;
+    iput-object p1, p0, Lcom/vk/stickers/details/StickerDetailsView;->e:Lcom/vk/stickers/details/StickerDetailsAdapter;
 
     .line 11
     iget-object p1, p0, Lcom/vk/stickers/details/StickerDetailsView;->c:Lcom/vk/stickers/LongtapRecyclerView;
 
-    iget-object p2, p0, Lcom/vk/stickers/details/StickerDetailsView;->e:Lcom/vk/stickers/details/a;
+    iget-object p2, p0, Lcom/vk/stickers/details/StickerDetailsView;->e:Lcom/vk/stickers/details/StickerDetailsAdapter;
 
     invoke-virtual {p1, p2}, Landroidx/recyclerview/widget/RecyclerView;->setAdapter(Landroidx/recyclerview/widget/RecyclerView$Adapter;)V
 
@@ -299,22 +299,22 @@
 
     invoke-direct {p1, p0, p3}, Lcom/vk/stickers/details/StickerDetailsView$setData$3;-><init>(Lcom/vk/stickers/details/StickerDetailsView;Landroid/view/ViewGroup;)V
 
-    invoke-static {p3, p1}, Lcom/vk/extensions/ViewExtKt;->e(Landroid/view/View;Lkotlin/jvm/b/a;)V
+    invoke-static {p3, p1}, Lcom/vk/extensions/ViewExtKt;->e(Landroid/view/View;Lkotlin/jvm/b/Functions;)V
 
     .line 16
     iget-object p1, p0, Lcom/vk/stickers/details/StickerDetailsView;->c:Lcom/vk/stickers/LongtapRecyclerView;
 
     new-instance p2, Lcom/vk/stickers/details/StickerDetailsView$a;
 
-    iget-object p3, p0, Lcom/vk/stickers/details/StickerDetailsView;->e:Lcom/vk/stickers/details/a;
+    iget-object p3, p0, Lcom/vk/stickers/details/StickerDetailsView;->e:Lcom/vk/stickers/details/StickerDetailsAdapter;
 
     if-eqz p3, :cond_4
 
-    iget-object v1, p0, Lcom/vk/stickers/details/StickerDetailsView;->f:Lcom/vk/stickers/r;
+    iget-object v1, p0, Lcom/vk/stickers/details/StickerDetailsView;->f:Lcom/vk/stickers/StickerLongtapWindow;
 
     if-eqz v1, :cond_3
 
-    invoke-direct {p2, p1, p3, v1}, Lcom/vk/stickers/details/StickerDetailsView$a;-><init>(Landroidx/recyclerview/widget/RecyclerView;Lcom/vk/stickers/details/a;Lcom/vk/stickers/r;)V
+    invoke-direct {p2, p1, p3, v1}, Lcom/vk/stickers/details/StickerDetailsView$a;-><init>(Landroidx/recyclerview/widget/RecyclerView;Lcom/vk/stickers/details/StickerDetailsAdapter;Lcom/vk/stickers/StickerLongtapWindow;)V
 
     invoke-virtual {p1, p2}, Lcom/vk/stickers/LongtapRecyclerView;->setLongtapListener(Lcom/vk/stickers/LongtapRecyclerView$b;)V
 
@@ -323,18 +323,18 @@
     :cond_3
     const-string p1, "stickerLongTapWindow"
 
-    invoke-static {p1}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {p1}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v0
 
     :cond_4
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     throw v0
 
     .line 17
     :cond_5
-    invoke-static {p2}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {p2}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v0
 .end method
@@ -352,7 +352,7 @@
     :cond_0
     const-string v0, "giftData"
 
-    invoke-static {v0}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v0}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     const/4 v0, 0x0
 
@@ -372,7 +372,7 @@
     :cond_0
     const-string v0, "pack"
 
-    invoke-static {v0}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v0}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     const/4 v0, 0x0
 

@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/imageloader/VKImageLoader;->b(Landroid/net/Uri;IIILcom/vk/imageloader/m;Lcom/vk/imageloader/l;Lcom/facebook/imagepipeline/request/c;Z)Lc/a/m;
+    value = Lcom/vk/imageloader/VKImageLoader;->b(Landroid/net/Uri;IIILcom/vk/imageloader/VKImageRequestWrapper;Lcom/vk/imageloader/VKImageRequestProgress;Lcom/facebook/imagepipeline/request/Postprocessor;Z)Lio/reactivex/Observable;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -35,17 +35,17 @@
 
 .field final synthetic d:I
 
-.field final synthetic e:Lcom/vk/imageloader/m;
+.field final synthetic e:Lcom/vk/imageloader/VKImageRequestWrapper;
 
-.field final synthetic f:Lcom/vk/imageloader/l;
+.field final synthetic f:Lcom/vk/imageloader/VKImageRequestProgress;
 
-.field final synthetic g:Lcom/facebook/imagepipeline/request/c;
+.field final synthetic g:Lcom/facebook/imagepipeline/request/Postprocessor;
 
 .field final synthetic h:Z
 
 
 # direct methods
-.method constructor <init>(Landroid/net/Uri;IIILcom/vk/imageloader/m;Lcom/vk/imageloader/l;Lcom/facebook/imagepipeline/request/c;Z)V
+.method constructor <init>(Landroid/net/Uri;IIILcom/vk/imageloader/VKImageRequestWrapper;Lcom/vk/imageloader/VKImageRequestProgress;Lcom/facebook/imagepipeline/request/Postprocessor;Z)V
     .locals 0
 
     .line 1
@@ -57,11 +57,11 @@
 
     iput p4, p0, Lcom/vk/imageloader/VKImageLoader$f;->d:I
 
-    iput-object p5, p0, Lcom/vk/imageloader/VKImageLoader$f;->e:Lcom/vk/imageloader/m;
+    iput-object p5, p0, Lcom/vk/imageloader/VKImageLoader$f;->e:Lcom/vk/imageloader/VKImageRequestWrapper;
 
-    iput-object p6, p0, Lcom/vk/imageloader/VKImageLoader$f;->f:Lcom/vk/imageloader/l;
+    iput-object p6, p0, Lcom/vk/imageloader/VKImageLoader$f;->f:Lcom/vk/imageloader/VKImageRequestProgress;
 
-    iput-object p7, p0, Lcom/vk/imageloader/VKImageLoader$f;->g:Lcom/facebook/imagepipeline/request/c;
+    iput-object p7, p0, Lcom/vk/imageloader/VKImageLoader$f;->g:Lcom/facebook/imagepipeline/request/Postprocessor;
 
     iput-boolean p8, p0, Lcom/vk/imageloader/VKImageLoader$f;->h:Z
 
@@ -91,15 +91,15 @@
 
     iget v4, p0, Lcom/vk/imageloader/VKImageLoader$f;->d:I
 
-    iget-object v5, p0, Lcom/vk/imageloader/VKImageLoader$f;->e:Lcom/vk/imageloader/m;
+    iget-object v5, p0, Lcom/vk/imageloader/VKImageLoader$f;->e:Lcom/vk/imageloader/VKImageRequestWrapper;
 
-    iget-object v6, p0, Lcom/vk/imageloader/VKImageLoader$f;->f:Lcom/vk/imageloader/l;
+    iget-object v6, p0, Lcom/vk/imageloader/VKImageLoader$f;->f:Lcom/vk/imageloader/VKImageRequestProgress;
 
-    iget-object v7, p0, Lcom/vk/imageloader/VKImageLoader$f;->g:Lcom/facebook/imagepipeline/request/c;
+    iget-object v7, p0, Lcom/vk/imageloader/VKImageLoader$f;->g:Lcom/facebook/imagepipeline/request/Postprocessor;
 
     iget-boolean v8, p0, Lcom/vk/imageloader/VKImageLoader$f;->h:Z
 
-    invoke-static/range {v1 .. v8}, Lcom/vk/imageloader/VKImageLoader;->a(Landroid/net/Uri;IIILcom/vk/imageloader/m;Lcom/vk/imageloader/l;Lcom/facebook/imagepipeline/request/c;Z)Landroid/graphics/Bitmap;
+    invoke-static/range {v1 .. v8}, Lcom/vk/imageloader/VKImageLoader;->a(Landroid/net/Uri;IIILcom/vk/imageloader/VKImageRequestWrapper;Lcom/vk/imageloader/VKImageRequestProgress;Lcom/facebook/imagepipeline/request/Postprocessor;Z)Landroid/graphics/Bitmap;
 
     move-result-object v1
 

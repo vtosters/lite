@@ -3,7 +3,7 @@
 .source "ChatSettingsVc.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/b;
+.implements Lkotlin/jvm/b/Functions2;
 
 
 # annotations
@@ -19,9 +19,9 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/b<",
+        "Lkotlin/jvm/b/Functions2<",
         "Lcom/vk/im/ui/components/common/AvatarAction;",
-        "Lkotlin/m;",
+        "Lkotlin/Unit;",
         ">;"
     }
 .end annotation
@@ -65,13 +65,13 @@
     .line 2
     iget-object v0, p0, Lcom/vk/im/ui/components/chat_settings/vc/ChatSettingsVc$showAvatarActions$1;->this$0:Lcom/vk/im/ui/components/chat_settings/vc/ChatSettingsVc;
 
-    invoke-virtual {v0}, Lcom/vk/im/ui/components/chat_settings/vc/ChatSettingsVc;->k()Lcom/vk/im/ui/components/chat_settings/vc/d;
+    invoke-virtual {v0}, Lcom/vk/im/ui/components/chat_settings/vc/ChatSettingsVc;->k()Lcom/vk/im/ui/components/chat_settings/vc/ChatSettingsVcCallback;
 
     move-result-object v0
 
     if-eqz v0, :cond_1
 
-    invoke-interface {v0, p1}, Lcom/vk/im/ui/components/chat_settings/vc/d;->b(Lcom/vk/im/ui/components/common/AvatarAction;)V
+    invoke-interface {v0, p1}, Lcom/vk/im/ui/components/chat_settings/vc/ChatSettingsVcCallback;->b(Lcom/vk/im/ui/components/common/AvatarAction;)V
 
     goto :goto_0
 
@@ -94,7 +94,7 @@
 
     invoke-virtual {p0, p1}, Lcom/vk/im/ui/components/chat_settings/vc/ChatSettingsVc$showAvatarActions$1;->a(Lcom/vk/im/ui/components/common/AvatarAction;)V
 
-    sget-object p1, Lkotlin/m;->a:Lkotlin/m;
+    sget-object p1, Lkotlin/Unit;->a:Lkotlin/Unit;
 
     return-object p1
 .end method

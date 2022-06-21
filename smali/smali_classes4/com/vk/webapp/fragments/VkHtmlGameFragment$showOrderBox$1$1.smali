@@ -3,7 +3,7 @@
 .source "VkHtmlGameFragment.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/b;
+.implements Lkotlin/jvm/b/Functions2;
 
 
 # annotations
@@ -19,27 +19,27 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/b<",
-        "Lcom/vk/dto/common/f;",
-        "Lkotlin/m;",
+        "Lkotlin/jvm/b/Functions2<",
+        "Lcom/vk/dto/common/Order;",
+        "Lkotlin/Unit;",
         ">;"
     }
 .end annotation
 
 
 # instance fields
-.field final synthetic $progress:Lb/h/g/k/a;
+.field final synthetic $progress:Lb/h/g/k/VKProgressDialog;
 
 .field final synthetic this$0:Lcom/vk/webapp/fragments/VkHtmlGameFragment$showOrderBox$1;
 
 
 # direct methods
-.method constructor <init>(Lcom/vk/webapp/fragments/VkHtmlGameFragment$showOrderBox$1;Lb/h/g/k/a;)V
+.method constructor <init>(Lcom/vk/webapp/fragments/VkHtmlGameFragment$showOrderBox$1;Lb/h/g/k/VKProgressDialog;)V
     .locals 0
 
     iput-object p1, p0, Lcom/vk/webapp/fragments/VkHtmlGameFragment$showOrderBox$1$1;->this$0:Lcom/vk/webapp/fragments/VkHtmlGameFragment$showOrderBox$1;
 
-    iput-object p2, p0, Lcom/vk/webapp/fragments/VkHtmlGameFragment$showOrderBox$1$1;->$progress:Lb/h/g/k/a;
+    iput-object p2, p0, Lcom/vk/webapp/fragments/VkHtmlGameFragment$showOrderBox$1$1;->$progress:Lb/h/g/k/VKProgressDialog;
 
     const/4 p1, 0x1
 
@@ -50,16 +50,16 @@
 
 
 # virtual methods
-.method public final a(Lcom/vk/dto/common/f;)V
+.method public final a(Lcom/vk/dto/common/Order;)V
     .locals 3
 
     .line 1
-    iget-object v0, p0, Lcom/vk/webapp/fragments/VkHtmlGameFragment$showOrderBox$1$1;->$progress:Lb/h/g/k/a;
+    iget-object v0, p0, Lcom/vk/webapp/fragments/VkHtmlGameFragment$showOrderBox$1$1;->$progress:Lb/h/g/k/VKProgressDialog;
 
-    invoke-static {v0}, Lcom/vtosters/lite/f0;->a(Landroid/app/Dialog;)V
+    invoke-static {v0}, Lcom/vtosters/lite/ViewUtils;->a(Landroid/app/Dialog;)V
 
     .line 2
-    invoke-virtual {p1}, Lcom/vk/dto/common/f;->a()Z
+    invoke-virtual {p1}, Lcom/vk/dto/common/Order;->a()Z
 
     move-result p1
 
@@ -83,7 +83,7 @@
 
     iget-object v0, v0, Lcom/vk/webapp/fragments/VkHtmlGameFragment$showOrderBox$1;->a:Lcom/vk/webapp/fragments/VkHtmlGameFragment;
 
-    invoke-static {v0}, Lcom/vk/webapp/fragments/VkHtmlGameFragment;->b(Lcom/vk/webapp/fragments/VkHtmlGameFragment;)Lcom/vk/webapp/bridges/c;
+    invoke-static {v0}, Lcom/vk/webapp/fragments/VkHtmlGameFragment;->b(Lcom/vk/webapp/fragments/VkHtmlGameFragment;)Lcom/vk/webapp/bridges/VkHtmlGameBridge;
 
     move-result-object v0
 
@@ -91,11 +91,11 @@
 
     const-string v2, "result"
 
-    invoke-static {p1, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     const-string v2, "VKWebAppShowOrderBoxResult"
 
-    invoke-virtual {v0, v1, v2, p1}, Lcom/vk/webapp/bridges/a;->a(Lcom/vk/webapp/internal/data/JsApiMethodType;Ljava/lang/String;Lorg/json/JSONObject;)V
+    invoke-virtual {v0, v1, v2, p1}, Lcom/vk/webapp/bridges/AndroidBridge;->a(Lcom/vk/webapp/internal/data/JsApiMethodType;Ljava/lang/String;Lorg/json/JSONObject;)V
 
     goto :goto_0
 
@@ -105,7 +105,7 @@
 
     iget-object p1, p1, Lcom/vk/webapp/fragments/VkHtmlGameFragment$showOrderBox$1;->a:Lcom/vk/webapp/fragments/VkHtmlGameFragment;
 
-    invoke-static {p1}, Lcom/vk/webapp/fragments/VkHtmlGameFragment;->b(Lcom/vk/webapp/fragments/VkHtmlGameFragment;)Lcom/vk/webapp/bridges/c;
+    invoke-static {p1}, Lcom/vk/webapp/fragments/VkHtmlGameFragment;->b(Lcom/vk/webapp/fragments/VkHtmlGameFragment;)Lcom/vk/webapp/bridges/VkHtmlGameBridge;
 
     move-result-object p1
 
@@ -123,7 +123,7 @@
 
     const-string v2, "VKWebAppShowOrderBoxFailed"
 
-    invoke-virtual {p1, v0, v2, v1}, Lcom/vk/webapp/bridges/a;->a(Lcom/vk/webapp/internal/data/JsApiMethodType;Ljava/lang/String;Lorg/json/JSONObject;)V
+    invoke-virtual {p1, v0, v2, v1}, Lcom/vk/webapp/bridges/AndroidBridge;->a(Lcom/vk/webapp/internal/data/JsApiMethodType;Ljava/lang/String;Lorg/json/JSONObject;)V
 
     :goto_0
     return-void
@@ -133,11 +133,11 @@
     .locals 0
 
     .line 1
-    check-cast p1, Lcom/vk/dto/common/f;
+    check-cast p1, Lcom/vk/dto/common/Order;
 
-    invoke-virtual {p0, p1}, Lcom/vk/webapp/fragments/VkHtmlGameFragment$showOrderBox$1$1;->a(Lcom/vk/dto/common/f;)V
+    invoke-virtual {p0, p1}, Lcom/vk/webapp/fragments/VkHtmlGameFragment$showOrderBox$1$1;->a(Lcom/vk/dto/common/Order;)V
 
-    sget-object p1, Lkotlin/m;->a:Lkotlin/m;
+    sget-object p1, Lkotlin/Unit;->a:Lkotlin/Unit;
 
     return-object p1
 .end method

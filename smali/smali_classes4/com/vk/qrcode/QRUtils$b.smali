@@ -21,7 +21,7 @@
 
 .field private final c:I
 
-.field private final d:Lcom/vk/media/camera/qrcode/b$b;
+.field private final d:Lcom/vk/media/camera/qrcode/CameraQRUtils$b;
 
 .field private final e:Z
 
@@ -29,7 +29,7 @@
 
 
 # direct methods
-.method public constructor <init>(Ljava/lang/String;Ljava/lang/String;ILcom/vk/media/camera/qrcode/b$b;ZI)V
+.method public constructor <init>(Ljava/lang/String;Ljava/lang/String;ILcom/vk/media/camera/qrcode/CameraQRUtils$b;ZI)V
     .locals 0
 
     .line 1
@@ -41,7 +41,7 @@
 
     iput p3, p0, Lcom/vk/qrcode/QRUtils$b;->c:I
 
-    iput-object p4, p0, Lcom/vk/qrcode/QRUtils$b;->d:Lcom/vk/media/camera/qrcode/b$b;
+    iput-object p4, p0, Lcom/vk/qrcode/QRUtils$b;->d:Lcom/vk/media/camera/qrcode/CameraQRUtils$b;
 
     iput-boolean p5, p0, Lcom/vk/qrcode/QRUtils$b;->e:Z
 
@@ -52,11 +52,11 @@
 
 
 # virtual methods
-.method public final a()Lcom/vk/media/camera/qrcode/b$b;
+.method public final a()Lcom/vk/media/camera/qrcode/CameraQRUtils$b;
     .locals 1
 
     .line 1
-    iget-object v0, p0, Lcom/vk/qrcode/QRUtils$b;->d:Lcom/vk/media/camera/qrcode/b$b;
+    iget-object v0, p0, Lcom/vk/qrcode/QRUtils$b;->d:Lcom/vk/media/camera/qrcode/CameraQRUtils$b;
 
     return-object v0
 .end method
@@ -112,7 +112,7 @@
 
     iget-object v1, p1, Lcom/vk/qrcode/QRUtils$b;->a:Ljava/lang/String;
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v0
 
@@ -122,7 +122,7 @@
 
     iget-object v1, p1, Lcom/vk/qrcode/QRUtils$b;->b:Ljava/lang/String;
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v0
 
@@ -134,11 +134,11 @@
 
     if-ne v0, v1, :cond_0
 
-    iget-object v0, p0, Lcom/vk/qrcode/QRUtils$b;->d:Lcom/vk/media/camera/qrcode/b$b;
+    iget-object v0, p0, Lcom/vk/qrcode/QRUtils$b;->d:Lcom/vk/media/camera/qrcode/CameraQRUtils$b;
 
-    iget-object v1, p1, Lcom/vk/qrcode/QRUtils$b;->d:Lcom/vk/media/camera/qrcode/b$b;
+    iget-object v1, p1, Lcom/vk/qrcode/QRUtils$b;->d:Lcom/vk/media/camera/qrcode/CameraQRUtils$b;
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v0
 
@@ -224,7 +224,7 @@
 
     mul-int/lit8 v0, v0, 0x1f
 
-    iget-object v2, p0, Lcom/vk/qrcode/QRUtils$b;->d:Lcom/vk/media/camera/qrcode/b$b;
+    iget-object v2, p0, Lcom/vk/qrcode/QRUtils$b;->d:Lcom/vk/media/camera/qrcode/CameraQRUtils$b;
 
     if-eqz v2, :cond_2
 
@@ -290,7 +290,7 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget-object v1, p0, Lcom/vk/qrcode/QRUtils$b;->d:Lcom/vk/media/camera/qrcode/b$b;
+    iget-object v1, p0, Lcom/vk/qrcode/QRUtils$b;->d:Lcom/vk/media/camera/qrcode/CameraQRUtils$b;
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 

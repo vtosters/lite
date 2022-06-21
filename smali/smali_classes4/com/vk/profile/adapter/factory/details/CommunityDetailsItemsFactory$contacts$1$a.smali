@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/profile/adapter/factory/details/CommunityDetailsItemsFactory$contacts$1;->a(Lcom/vtosters/lite/api/i;)Ljava/util/ArrayList;
+    value = Lcom/vk/profile/adapter/factory/details/CommunityDetailsItemsFactory$contacts$1;->a(Lcom/vtosters/lite/api/ExtendedCommunityProfile;)Ljava/util/ArrayList;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -48,17 +48,17 @@
 
     if-eqz v0, :cond_0
 
-    new-instance p1, Lcom/vk/profile/ui/c$z;
+    new-instance p1, Lcom/vk/profile/ui/BaseProfileFragment$z;
 
     iget v0, v0, Lcom/vk/dto/user/UserProfile;->b:I
 
-    invoke-direct {p1, v0}, Lcom/vk/profile/ui/c$z;-><init>(I)V
+    invoke-direct {p1, v0}, Lcom/vk/profile/ui/BaseProfileFragment$z;-><init>(I)V
 
     iget-object v0, p0, Lcom/vk/profile/adapter/factory/details/CommunityDetailsItemsFactory$contacts$1$a;->a:Lcom/vk/profile/adapter/factory/details/CommunityDetailsItemsFactory$contacts$1;
 
     iget-object v0, v0, Lcom/vk/profile/adapter/factory/details/CommunityDetailsItemsFactory$contacts$1;->$context:Landroid/content/Context;
 
-    invoke-virtual {p1, v0}, Lcom/vk/navigation/o;->a(Landroid/content/Context;)V
+    invoke-virtual {p1, v0}, Lcom/vk/navigation/Navigator;->a(Landroid/content/Context;)V
 
     goto :goto_0
 
@@ -66,7 +66,7 @@
     :cond_0
     iget-object p1, p1, Lcom/vtosters/lite/api/ExtendedUserProfile$Contact;->c:Ljava/lang/String;
 
-    invoke-static {p1}, Lcom/vk/core/extensions/z;->a(Ljava/lang/CharSequence;)Z
+    invoke-static {p1}, Lcom/vk/core/extensions/StringExt;->a(Ljava/lang/CharSequence;)Z
 
     move-result p1
 
@@ -112,12 +112,12 @@
 
     iget-object v0, v0, Lcom/vk/profile/adapter/factory/details/CommunityDetailsItemsFactory$contacts$1;->this$0:Lcom/vk/profile/adapter/factory/details/CommunityDetailsItemsFactory;
 
-    invoke-static {v0}, Lcom/vk/profile/adapter/factory/details/CommunityDetailsItemsFactory;->a(Lcom/vk/profile/adapter/factory/details/CommunityDetailsItemsFactory;)Lc/a/z/g;
+    invoke-static {v0}, Lcom/vk/profile/adapter/factory/details/CommunityDetailsItemsFactory;->a(Lcom/vk/profile/adapter/factory/details/CommunityDetailsItemsFactory;)Lio/reactivex/functions/Consumer;
 
     move-result-object v0
 
     .line 7
-    invoke-static {p1, v1, v0}, Lcom/vk/core/util/ContextExtKt;->a(Landroid/content/Context;Landroid/content/Intent;Lc/a/z/g;)V
+    invoke-static {p1, v1, v0}, Lcom/vk/core/util/ContextExtKt;->a(Landroid/content/Context;Landroid/content/Intent;Lio/reactivex/functions/Consumer;)V
 
     goto :goto_0
 
@@ -127,7 +127,7 @@
 
     iget-object p1, p1, Lcom/vtosters/lite/api/ExtendedUserProfile$Contact;->d:Ljava/lang/String;
 
-    invoke-static {p1}, Lcom/vk/core/extensions/z;->a(Ljava/lang/CharSequence;)Z
+    invoke-static {p1}, Lcom/vk/core/extensions/StringExt;->a(Ljava/lang/CharSequence;)Z
 
     move-result p1
 
@@ -171,12 +171,12 @@
 
     iget-object v0, v0, Lcom/vk/profile/adapter/factory/details/CommunityDetailsItemsFactory$contacts$1;->this$0:Lcom/vk/profile/adapter/factory/details/CommunityDetailsItemsFactory;
 
-    invoke-static {v0}, Lcom/vk/profile/adapter/factory/details/CommunityDetailsItemsFactory;->a(Lcom/vk/profile/adapter/factory/details/CommunityDetailsItemsFactory;)Lc/a/z/g;
+    invoke-static {v0}, Lcom/vk/profile/adapter/factory/details/CommunityDetailsItemsFactory;->a(Lcom/vk/profile/adapter/factory/details/CommunityDetailsItemsFactory;)Lio/reactivex/functions/Consumer;
 
     move-result-object v0
 
     .line 13
-    invoke-static {p1, v1, v0}, Lcom/vk/core/util/ContextExtKt;->a(Landroid/content/Context;Landroid/content/Intent;Lc/a/z/g;)V
+    invoke-static {p1, v1, v0}, Lcom/vk/core/util/ContextExtKt;->a(Landroid/content/Context;Landroid/content/Intent;Lio/reactivex/functions/Consumer;)V
 
     :cond_2
     :goto_0

@@ -3,12 +3,12 @@
 .source "CameraCompositeProcessor.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/b;
+.implements Lkotlin/jvm/b/Functions2;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/stories/editor/multi/CameraCompositeProcessor;->a(Lcom/vk/cameraui/entities/d;Lcom/vk/dto/stories/model/StoryUploadParams;)Lcom/vk/cameraui/entities/StoryMediaData;
+    value = Lcom/vk/stories/editor/multi/CameraCompositeProcessor;->a(Lcom/vk/cameraui/entities/StoryRawData3;Lcom/vk/dto/stories/model/StoryUploadParams;)Lcom/vk/cameraui/entities/StoryMediaData;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -19,7 +19,7 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/b<",
+        "Lkotlin/jvm/b/Functions2<",
         "Lcom/vk/attachpicker/stickers/ISticker;",
         "Ljava/lang/Boolean;",
         ">;"
@@ -60,7 +60,7 @@
     .locals 0
 
     .line 1
-    instance-of p1, p1, Lcom/vk/stories/clickable/stickers/c;
+    instance-of p1, p1, Lcom/vk/stories/clickable/stickers/StoryMusicSticker;
 
     return p1
 .end method

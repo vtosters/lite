@@ -39,7 +39,7 @@
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, v1}, Lcom/vk/im/engine/models/Member$b;-><init>(Lkotlin/jvm/internal/i;)V
+    invoke-direct {v0, v1}, Lcom/vk/im/engine/models/Member$b;-><init>(Lkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     sput-object v0, Lcom/vk/im/engine/models/Member;->c:Lcom/vk/im/engine/models/Member$b;
 
@@ -80,7 +80,7 @@
     iput-object v0, p0, Lcom/vk/im/engine/models/Member;->a:Lcom/vk/im/engine/models/MemberType;
 
     .line 13
-    invoke-static {p1}, Lcom/vk/im/engine/utils/e;->b(I)Lcom/vk/im/engine/models/MemberType;
+    invoke-static {p1}, Lcom/vk/im/engine/utils/ImDialogsUtils;->b(I)Lcom/vk/im/engine/models/MemberType;
 
     move-result-object v0
 
@@ -90,7 +90,7 @@
     iput-object v0, p0, Lcom/vk/im/engine/models/Member;->a:Lcom/vk/im/engine/models/MemberType;
 
     .line 15
-    invoke-static {p1}, Lcom/vk/im/engine/utils/e;->a(I)I
+    invoke-static {p1}, Lcom/vk/im/engine/utils/ImDialogsUtils;->a(I)I
 
     move-result p1
 
@@ -138,7 +138,7 @@
     return-void
 .end method
 
-.method public synthetic constructor <init>(Lcom/vk/core/serialize/Serializer;Lkotlin/jvm/internal/i;)V
+.method public synthetic constructor <init>(Lcom/vk/core/serialize/Serializer;Lkotlin/jvm/internal/DefaultConstructorMarker;)V
     .locals 0
 
     .line 1
@@ -198,7 +198,7 @@
 
     const-string v1, "MemberType.fromInt(s.readInt())"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     iput-object v0, p0, Lcom/vk/im/engine/models/Member;->a:Lcom/vk/im/engine/models/MemberType;
 
@@ -277,15 +277,15 @@
     return p1
 .end method
 
-.method public final a(Lcom/vk/im/engine/models/j;)Z
+.method public final a(Lcom/vk/im/engine/models/Profile;)Z
     .locals 1
 
     .line 2
-    invoke-interface {p1}, Lcom/vk/im/engine/models/j;->S()Lcom/vk/im/engine/models/MemberType;
+    invoke-interface {p1}, Lcom/vk/im/engine/models/Profile;->S()Lcom/vk/im/engine/models/MemberType;
 
     move-result-object v0
 
-    invoke-interface {p1}, Lcom/vk/im/engine/models/u;->getId()I
+    invoke-interface {p1}, Lcom/vk/im/engine/models/WithId;->getId()I
 
     move-result p1
 
@@ -430,7 +430,7 @@
     const/4 v2, 0x0
 
     :goto_0
-    invoke-static {v1, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v1, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v1
 

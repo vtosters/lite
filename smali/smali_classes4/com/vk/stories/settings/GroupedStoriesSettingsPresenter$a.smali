@@ -3,12 +3,12 @@
 .source "GroupedStoriesSettingsPresenter.kt"
 
 # interfaces
-.implements Lc/a/z/g;
+.implements Lio/reactivex/functions/Consumer;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/stories/settings/GroupedStoriesSettingsPresenter;->a(Lc/a/m;ZLcom/vk/lists/t;)V
+    value = Lcom/vk/stories/settings/GroupedStoriesSettingsPresenter;->a(Lio/reactivex/Observable;ZLcom/vk/lists/PaginationHelper;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -22,7 +22,7 @@
         "Ljava/lang/Object;",
         ">",
         "Ljava/lang/Object;",
-        "Lc/a/z/g<",
+        "Lio/reactivex/functions/Consumer<",
         "Lcom/vk/api/stories/StoriesGetFeedSettings$Response;",
         ">;"
     }
@@ -34,18 +34,18 @@
 
 .field final synthetic b:Z
 
-.field final synthetic c:Lcom/vk/lists/t;
+.field final synthetic c:Lcom/vk/lists/PaginationHelper;
 
 
 # direct methods
-.method constructor <init>(Lcom/vk/stories/settings/GroupedStoriesSettingsPresenter;ZLcom/vk/lists/t;)V
+.method constructor <init>(Lcom/vk/stories/settings/GroupedStoriesSettingsPresenter;ZLcom/vk/lists/PaginationHelper;)V
     .locals 0
 
     iput-object p1, p0, Lcom/vk/stories/settings/GroupedStoriesSettingsPresenter$a;->a:Lcom/vk/stories/settings/GroupedStoriesSettingsPresenter;
 
     iput-boolean p2, p0, Lcom/vk/stories/settings/GroupedStoriesSettingsPresenter$a;->b:Z
 
-    iput-object p3, p0, Lcom/vk/stories/settings/GroupedStoriesSettingsPresenter$a;->c:Lcom/vk/lists/t;
+    iput-object p3, p0, Lcom/vk/stories/settings/GroupedStoriesSettingsPresenter$a;->c:Lcom/vk/lists/PaginationHelper;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -80,7 +80,7 @@
 
     move-result-object v4
 
-    invoke-static {v3, v4}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v3, v4}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v3
 
@@ -99,7 +99,7 @@
 
     const v6, 0x7f120e5f
 
-    invoke-static {v1, v3, v4, v5, v6}, Lcom/vk/stories/settings/GroupedStoriesSettingsPresenter;->a(Lcom/vk/stories/settings/GroupedStoriesSettingsPresenter;Ljava/lang/Boolean;III)Lcom/vk/common/i/b;
+    invoke-static {v1, v3, v4, v5, v6}, Lcom/vk/stories/settings/GroupedStoriesSettingsPresenter;->a(Lcom/vk/stories/settings/GroupedStoriesSettingsPresenter;Ljava/lang/Boolean;III)Lcom/vk/common/i/RecyclerItem;
 
     move-result-object v1
 
@@ -167,21 +167,21 @@
     invoke-virtual {v0, v1}, Ljava/util/ArrayList;->addAll(Ljava/util/Collection;)Z
 
     .line 10
-    iget-object v1, p0, Lcom/vk/stories/settings/GroupedStoriesSettingsPresenter$a;->c:Lcom/vk/lists/t;
+    iget-object v1, p0, Lcom/vk/stories/settings/GroupedStoriesSettingsPresenter$a;->c:Lcom/vk/lists/PaginationHelper;
 
     invoke-virtual {p1}, Lcom/vk/dto/common/data/VKList;->a()I
 
     move-result p1
 
-    invoke-virtual {v1, p1}, Lcom/vk/lists/t;->a(I)V
+    invoke-virtual {v1, p1}, Lcom/vk/lists/PaginationHelper;->a(I)V
 
     goto :goto_2
 
     .line 11
     :cond_4
-    iget-object p1, p0, Lcom/vk/stories/settings/GroupedStoriesSettingsPresenter$a;->c:Lcom/vk/lists/t;
+    iget-object p1, p0, Lcom/vk/stories/settings/GroupedStoriesSettingsPresenter$a;->c:Lcom/vk/lists/PaginationHelper;
 
-    invoke-virtual {p1, v1}, Lcom/vk/lists/t;->b(Z)V
+    invoke-virtual {p1, v1}, Lcom/vk/lists/PaginationHelper;->b(Z)V
 
     .line 12
     :goto_2
@@ -192,20 +192,20 @@
     .line 13
     iget-object p1, p0, Lcom/vk/stories/settings/GroupedStoriesSettingsPresenter$a;->a:Lcom/vk/stories/settings/GroupedStoriesSettingsPresenter;
 
-    invoke-virtual {p1}, Lcom/vk/stories/settings/GroupedStoriesSettingsPresenter;->a()Lcom/vk/lists/o;
+    invoke-virtual {p1}, Lcom/vk/stories/settings/GroupedStoriesSettingsPresenter;->a()Lcom/vk/lists/ListDataSet;
 
     move-result-object p1
 
-    invoke-virtual {p1, v0}, Lcom/vk/lists/o;->setItems(Ljava/util/List;)V
+    invoke-virtual {p1, v0}, Lcom/vk/lists/ListDataSet;->setItems(Ljava/util/List;)V
 
     .line 14
     iget-object p1, p0, Lcom/vk/stories/settings/GroupedStoriesSettingsPresenter$a;->a:Lcom/vk/stories/settings/GroupedStoriesSettingsPresenter;
 
-    invoke-static {p1}, Lcom/vk/stories/settings/GroupedStoriesSettingsPresenter;->a(Lcom/vk/stories/settings/GroupedStoriesSettingsPresenter;)Lcom/vk/stories/settings/e;
+    invoke-static {p1}, Lcom/vk/stories/settings/GroupedStoriesSettingsPresenter;->a(Lcom/vk/stories/settings/GroupedStoriesSettingsPresenter;)Lcom/vk/stories/settings/GroupedStoriesSettingsScreenContract2;
 
     move-result-object p1
 
-    invoke-interface {p1, v2}, Lcom/vk/stories/settings/e;->V(Z)V
+    invoke-interface {p1, v2}, Lcom/vk/stories/settings/GroupedStoriesSettingsScreenContract2;->V(Z)V
 
     goto :goto_3
 
@@ -213,11 +213,11 @@
     :cond_5
     iget-object p1, p0, Lcom/vk/stories/settings/GroupedStoriesSettingsPresenter$a;->a:Lcom/vk/stories/settings/GroupedStoriesSettingsPresenter;
 
-    invoke-virtual {p1}, Lcom/vk/stories/settings/GroupedStoriesSettingsPresenter;->a()Lcom/vk/lists/o;
+    invoke-virtual {p1}, Lcom/vk/stories/settings/GroupedStoriesSettingsPresenter;->a()Lcom/vk/lists/ListDataSet;
 
     move-result-object p1
 
-    invoke-virtual {p1, v0}, Lcom/vk/lists/o;->g(Ljava/util/List;)V
+    invoke-virtual {p1, v0}, Lcom/vk/lists/ListDataSet;->g(Ljava/util/List;)V
 
     :goto_3
     return-void

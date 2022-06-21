@@ -1,5 +1,5 @@
 .class public Lcom/vk/core/ui/infiniteviewpager/ViewPagerInfinite;
-.super Lcom/vk/core/ui/infiniteviewpager/c;
+.super Lcom/vk/core/ui/infiniteviewpager/ViewPagerRatio;
 .source "ViewPagerInfinite.java"
 
 # interfaces
@@ -26,7 +26,7 @@
     .locals 0
 
     .line 1
-    invoke-direct {p0, p1}, Lcom/vk/core/ui/infiniteviewpager/c;-><init>(Landroid/content/Context;)V
+    invoke-direct {p0, p1}, Lcom/vk/core/ui/infiniteviewpager/ViewPagerRatio;-><init>(Landroid/content/Context;)V
 
     const/4 p1, 0x0
 
@@ -55,7 +55,7 @@
     .locals 1
 
     .line 8
-    invoke-direct {p0, p1, p2}, Lcom/vk/core/ui/infiniteviewpager/c;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
+    invoke-direct {p0, p1, p2}, Lcom/vk/core/ui/infiniteviewpager/ViewPagerRatio;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
 
     const/4 v0, 0x0
 

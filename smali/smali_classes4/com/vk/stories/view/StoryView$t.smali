@@ -45,7 +45,7 @@
     .line 1
     iget-object v0, p0, Lcom/vk/stories/view/StoryView$t;->b:Lcom/vk/stories/view/StoryView;
 
-    iget-object v0, v0, Lcom/vk/stories/view/e1;->f:Lcom/vk/dto/stories/model/StoriesContainer;
+    iget-object v0, v0, Lcom/vk/stories/view/BaseStoryView;->f:Lcom/vk/dto/stories/model/StoriesContainer;
 
     invoke-virtual {v0}, Lcom/vk/dto/stories/model/StoriesContainer;->B1()Lcom/vk/dto/narratives/Narrative;
 
@@ -86,7 +86,7 @@
 
     move-result-object v1
 
-    invoke-static {v2, v1}, Lcom/vk/attachpicker/widget/j;->a(Landroid/content/Context;Ljava/lang/Integer;)Lb/h/g/k/a;
+    invoke-static {v2, v1}, Lcom/vk/attachpicker/widget/LoadingDialog;->a(Landroid/content/Context;Ljava/lang/Integer;)Lb/h/g/k/VKProgressDialog;
 
     move-result-object v1
 
@@ -109,7 +109,7 @@
 
     invoke-direct {v2, p0, v1}, Lcom/vk/stories/view/StoryView$t$a;-><init>(Lcom/vk/stories/view/StoryView$t;Landroid/app/Dialog;)V
 
-    invoke-static {v0, v2}, Lcom/vk/stories/StoriesController;->a(Lcom/vk/dto/stories/model/StoryEntry;Lcom/vk/api/base/a;)V
+    invoke-static {v0, v2}, Lcom/vk/stories/StoriesController;->a(Lcom/vk/dto/stories/model/StoryEntry;Lcom/vk/api/base/ApiCallback;)V
 
     goto :goto_1
 
@@ -117,7 +117,7 @@
     :cond_2
     iget-object v0, p0, Lcom/vk/stories/view/StoryView$t;->b:Lcom/vk/stories/view/StoryView;
 
-    iget-object v0, v0, Lcom/vk/stories/view/e1;->f:Lcom/vk/dto/stories/model/StoriesContainer;
+    iget-object v0, v0, Lcom/vk/stories/view/BaseStoryView;->f:Lcom/vk/dto/stories/model/StoriesContainer;
 
     invoke-virtual {v0}, Lcom/vk/dto/stories/model/StoriesContainer;->B1()Lcom/vk/dto/narratives/Narrative;
 
@@ -131,7 +131,7 @@
 
     invoke-direct {v3, p0, v1}, Lcom/vk/stories/view/StoryView$t$c;-><init>(Lcom/vk/stories/view/StoryView$t;Landroid/app/Dialog;)V
 
-    invoke-static {v0, v2, v3}, Lcom/vk/narratives/NarrativeController;->a(Lcom/vk/dto/narratives/Narrative;Lkotlin/jvm/b/a;Lkotlin/jvm/b/b;)V
+    invoke-static {v0, v2, v3}, Lcom/vk/narratives/NarrativeController;->a(Lcom/vk/dto/narratives/Narrative;Lkotlin/jvm/b/Functions;Lkotlin/jvm/b/Functions2;)V
 
     .line 8
     :goto_1
@@ -139,7 +139,7 @@
 
     sget-object v1, Lcom/vk/dto/stories/model/StoryViewAction;->DELETE:Lcom/vk/dto/stories/model/StoryViewAction;
 
-    invoke-virtual {v0, v1}, Lcom/vk/stories/view/e1;->a(Lcom/vk/dto/stories/model/StoryViewAction;)V
+    invoke-virtual {v0, v1}, Lcom/vk/stories/view/BaseStoryView;->a(Lcom/vk/dto/stories/model/StoryViewAction;)V
 
     return-void
 .end method

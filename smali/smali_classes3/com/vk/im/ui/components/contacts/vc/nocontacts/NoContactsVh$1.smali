@@ -3,12 +3,12 @@
 .source "NoContactsVh.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/b;
+.implements Lkotlin/jvm/b/Functions2;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/im/ui/components/contacts/vc/nocontacts/NoContactsVh;-><init>(Landroid/view/View;Lcom/vk/im/ui/components/contacts/vc/nocontacts/a;)V
+    value = Lcom/vk/im/ui/components/contacts/vc/nocontacts/NoContactsVh;-><init>(Landroid/view/View;Lcom/vk/im/ui/components/contacts/vc/nocontacts/NoContactsCallback;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -19,9 +19,9 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/b<",
+        "Lkotlin/jvm/b/Functions2<",
         "Landroid/view/View;",
-        "Lkotlin/m;",
+        "Lkotlin/Unit;",
         ">;"
     }
 .end annotation
@@ -52,11 +52,11 @@
     .line 1
     iget-object p1, p0, Lcom/vk/im/ui/components/contacts/vc/nocontacts/NoContactsVh$1;->this$0:Lcom/vk/im/ui/components/contacts/vc/nocontacts/NoContactsVh;
 
-    invoke-static {p1}, Lcom/vk/im/ui/components/contacts/vc/nocontacts/NoContactsVh;->b(Lcom/vk/im/ui/components/contacts/vc/nocontacts/NoContactsVh;)Lcom/vk/im/ui/components/contacts/vc/nocontacts/b;
+    invoke-static {p1}, Lcom/vk/im/ui/components/contacts/vc/nocontacts/NoContactsVh;->b(Lcom/vk/im/ui/components/contacts/vc/nocontacts/NoContactsVh;)Lcom/vk/im/ui/components/contacts/vc/nocontacts/NoContactsItem;
 
     move-result-object p1
 
-    invoke-virtual {p1}, Lcom/vk/im/ui/components/contacts/vc/nocontacts/b;->a()Lcom/vk/im/engine/models/contacts/ContactSyncState;
+    invoke-virtual {p1}, Lcom/vk/im/ui/components/contacts/vc/nocontacts/NoContactsItem;->a()Lcom/vk/im/engine/models/contacts/ContactSyncState;
 
     move-result-object p1
 
@@ -87,11 +87,11 @@
     .line 2
     iget-object p1, p0, Lcom/vk/im/ui/components/contacts/vc/nocontacts/NoContactsVh$1;->this$0:Lcom/vk/im/ui/components/contacts/vc/nocontacts/NoContactsVh;
 
-    invoke-static {p1}, Lcom/vk/im/ui/components/contacts/vc/nocontacts/NoContactsVh;->a(Lcom/vk/im/ui/components/contacts/vc/nocontacts/NoContactsVh;)Lcom/vk/im/ui/components/contacts/vc/nocontacts/a;
+    invoke-static {p1}, Lcom/vk/im/ui/components/contacts/vc/nocontacts/NoContactsVh;->a(Lcom/vk/im/ui/components/contacts/vc/nocontacts/NoContactsVh;)Lcom/vk/im/ui/components/contacts/vc/nocontacts/NoContactsCallback;
 
     move-result-object p1
 
-    invoke-interface {p1}, Lcom/vk/im/ui/components/contacts/vc/nocontacts/a;->requestPermission()V
+    invoke-interface {p1}, Lcom/vk/im/ui/components/contacts/vc/nocontacts/NoContactsCallback;->requestPermission()V
 
     goto :goto_0
 
@@ -99,11 +99,11 @@
     :cond_0
     iget-object p1, p0, Lcom/vk/im/ui/components/contacts/vc/nocontacts/NoContactsVh$1;->this$0:Lcom/vk/im/ui/components/contacts/vc/nocontacts/NoContactsVh;
 
-    invoke-static {p1}, Lcom/vk/im/ui/components/contacts/vc/nocontacts/NoContactsVh;->a(Lcom/vk/im/ui/components/contacts/vc/nocontacts/NoContactsVh;)Lcom/vk/im/ui/components/contacts/vc/nocontacts/a;
+    invoke-static {p1}, Lcom/vk/im/ui/components/contacts/vc/nocontacts/NoContactsVh;->a(Lcom/vk/im/ui/components/contacts/vc/nocontacts/NoContactsVh;)Lcom/vk/im/ui/components/contacts/vc/nocontacts/NoContactsCallback;
 
     move-result-object p1
 
-    invoke-interface {p1}, Lcom/vk/im/ui/components/contacts/vc/nocontacts/a;->c()V
+    invoke-interface {p1}, Lcom/vk/im/ui/components/contacts/vc/nocontacts/NoContactsCallback;->c()V
 
     :cond_1
     :goto_0
@@ -118,7 +118,7 @@
 
     invoke-virtual {p0, p1}, Lcom/vk/im/ui/components/contacts/vc/nocontacts/NoContactsVh$1;->a(Landroid/view/View;)V
 
-    sget-object p1, Lkotlin/m;->a:Lkotlin/m;
+    sget-object p1, Lkotlin/Unit;->a:Lkotlin/Unit;
 
     return-object p1
 .end method

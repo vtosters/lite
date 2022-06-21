@@ -124,13 +124,13 @@
     check-cast v0, Lcom/vk/dto/music/Playlist;
 
     .line 4
-    invoke-static {}, Lcom/vk/bridges/g;->a()Lcom/vk/bridges/f;
+    invoke-static {}, Lcom/vk/bridges/AuthBridge;->a()Lcom/vk/bridges/AuthBridge3;
 
     move-result-object v1
 
     iget v2, v0, Lcom/vk/dto/music/Playlist;->b:I
 
-    invoke-interface {v1, v2}, Lcom/vk/bridges/f;->b(I)Z
+    invoke-interface {v1, v2}, Lcom/vk/bridges/AuthBridge3;->b(I)Z
 
     move-result v1
 
@@ -267,7 +267,7 @@
     .line 1
     iget-object v0, p0, Lcom/vk/music/dto/PlaylistSearchResult;->a:Ljava/util/List;
 
-    invoke-static {v0}, Lcom/vk/core/util/o;->c(Ljava/util/Collection;)Z
+    invoke-static {v0}, Lcom/vk/core/util/CollectionUtils;->c(Ljava/util/Collection;)Z
 
     move-result v0
 
@@ -275,7 +275,7 @@
 
     iget-object v0, p0, Lcom/vk/music/dto/PlaylistSearchResult;->b:Ljava/util/List;
 
-    invoke-static {v0}, Lcom/vk/core/util/o;->c(Ljava/util/Collection;)Z
+    invoke-static {v0}, Lcom/vk/core/util/CollectionUtils;->c(Ljava/util/Collection;)Z
 
     move-result v0
 

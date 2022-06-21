@@ -3,7 +3,7 @@
 .source "SpannableMeasureHelper.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/b;
+.implements Lkotlin/jvm/b/Functions2;
 
 
 # annotations
@@ -19,11 +19,11 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/b<",
+        "Lkotlin/jvm/b/Functions2<",
         "TT;",
-        "Lkotlin/sequences/j<",
+        "Lkotlin/sequences/Sequence<",
         "+",
-        "Lcom/vk/stories/clickable/c<",
+        "Lcom/vk/stories/clickable/SpannableMeasureHelper1<",
         "TT;>;>;>;"
     }
 .end annotation
@@ -64,20 +64,20 @@
     .locals 0
 
     .line 1
-    invoke-virtual {p0, p1}, Lcom/vk/stories/clickable/SpannableMeasureHelper$extractPositionOfSpannable$$inlined$let$lambda$1;->invoke(Ljava/lang/Object;)Lkotlin/sequences/j;
+    invoke-virtual {p0, p1}, Lcom/vk/stories/clickable/SpannableMeasureHelper$extractPositionOfSpannable$$inlined$let$lambda$1;->invoke(Ljava/lang/Object;)Lkotlin/sequences/Sequence;
 
     move-result-object p1
 
     return-object p1
 .end method
 
-.method public final invoke(Ljava/lang/Object;)Lkotlin/sequences/j;
+.method public final invoke(Ljava/lang/Object;)Lkotlin/sequences/Sequence;
     .locals 10
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(TT;)",
-            "Lkotlin/sequences/j<",
-            "Lcom/vk/stories/clickable/c<",
+            "Lkotlin/sequences/Sequence<",
+            "Lcom/vk/stories/clickable/SpannableMeasureHelper1<",
             "TT;>;>;"
         }
     .end annotation
@@ -122,11 +122,11 @@
     move-result v5
 
     .line 7
-    new-instance v0, Lkotlin/t/d;
+    new-instance v0, Lkotlin/t/Ranges1;
 
-    invoke-direct {v0, v3, v5}, Lkotlin/t/d;-><init>(II)V
+    invoke-direct {v0, v3, v5}, Lkotlin/t/Ranges1;-><init>(II)V
 
-    invoke-static {v0}, Lkotlin/collections/l;->d(Ljava/lang/Iterable;)Lkotlin/sequences/j;
+    invoke-static {v0}, Lkotlin/collections/l;->d(Ljava/lang/Iterable;)Lkotlin/sequences/Sequence;
 
     move-result-object v0
 
@@ -140,7 +140,7 @@
 
     invoke-direct/range {v1 .. v8}, Lcom/vk/stories/clickable/SpannableMeasureHelper$extractPositionOfSpannable$$inlined$let$lambda$1$1;-><init>(Lcom/vk/stories/clickable/SpannableMeasureHelper$extractPositionOfSpannable$$inlined$let$lambda$1;IIIILjava/lang/Object;Ljava/lang/String;)V
 
-    invoke-static {v0, v9}, Lkotlin/sequences/m;->e(Lkotlin/sequences/j;Lkotlin/jvm/b/b;)Lkotlin/sequences/j;
+    invoke-static {v0, v9}, Lkotlin/sequences/m;->e(Lkotlin/sequences/Sequence;Lkotlin/jvm/b/Functions2;)Lkotlin/sequences/Sequence;
 
     move-result-object p1
 

@@ -3,7 +3,7 @@
 .source "StoryView.java"
 
 # interfaces
-.implements Lcom/vk/api/base/a;
+.implements Lcom/vk/api/base/ApiCallback;
 
 
 # annotations
@@ -52,7 +52,7 @@
     const p1, 0x7f120369
 
     .line 8
-    invoke-static {p1}, Lcom/vk/core/util/k1;->a(I)V
+    invoke-static {p1}, Lcom/vk/core/util/ToastUtils;->a(I)V
 
     return-void
 .end method
@@ -87,7 +87,7 @@
     iget-object v1, v1, Lcom/vk/stories/view/StoryView$h0;->c:Lcom/vk/stories/view/StoryView;
 
     .line 3
-    invoke-static {v1}, Lcom/vk/stories/view/StoryView;->m(Lcom/vk/stories/view/StoryView;)Lcom/vk/stories/y0;
+    invoke-static {v1}, Lcom/vk/stories/view/StoryView;->m(Lcom/vk/stories/view/StoryView;)Lcom/vk/stories/StoryViewHelper;
 
     move-result-object v1
 
@@ -99,13 +99,13 @@
 
     iget-object v2, v2, Lcom/vk/stories/view/StoryView$h0;->c:Lcom/vk/stories/view/StoryView;
 
-    iget-object v2, v2, Lcom/vk/stories/view/e1;->f:Lcom/vk/dto/stories/model/StoriesContainer;
+    iget-object v2, v2, Lcom/vk/stories/view/BaseStoryView;->f:Lcom/vk/dto/stories/model/StoriesContainer;
 
     invoke-virtual {v2}, Lcom/vk/dto/stories/model/StoriesContainer;->H1()Lcom/vk/dto/stories/model/StoryOwner;
 
     move-result-object v2
 
-    invoke-virtual {v1, v2}, Lcom/vk/stories/y0;->d(Lcom/vk/dto/stories/model/StoryOwner;)Ljava/lang/String;
+    invoke-virtual {v1, v2}, Lcom/vk/stories/StoryViewHelper;->d(Lcom/vk/dto/stories/model/StoryOwner;)Ljava/lang/String;
 
     move-result-object v1
 
@@ -121,7 +121,7 @@
     move-result-object p1
 
     .line 5
-    invoke-static {p1}, Lcom/vk/core/util/k1;->a(Ljava/lang/CharSequence;)V
+    invoke-static {p1}, Lcom/vk/core/util/ToastUtils;->a(Ljava/lang/CharSequence;)V
 
     .line 6
     iget-object p1, p0, Lcom/vk/stories/view/StoryView$h0$a$b$a;->a:Lcom/vk/stories/view/StoryView$h0$a$b;

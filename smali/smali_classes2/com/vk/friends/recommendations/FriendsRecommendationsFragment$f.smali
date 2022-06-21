@@ -3,7 +3,7 @@
 .source "FriendsRecommendationsFragment.kt"
 
 # interfaces
-.implements Lru/ok/android/sdk/b;
+.implements Lru/ok/android/sdk/OkListener;
 
 
 # annotations
@@ -62,7 +62,7 @@
 
     const/4 v2, 0x0
 
-    invoke-static {p1, v0, v1, v2}, Lcom/vk/core/util/k1;->a(Ljava/lang/CharSequence;ZILjava/lang/Object;)V
+    invoke-static {p1, v0, v1, v2}, Lcom/vk/core/util/ToastUtils;->a(Ljava/lang/CharSequence;ZILjava/lang/Object;)V
 
     :cond_0
     return-void
@@ -80,7 +80,7 @@
 
     move-result-object v0
 
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v0
 
@@ -127,7 +127,7 @@
 
     const/4 v2, 0x0
 
-    invoke-static {p1, v0, v1, v2}, Lcom/vk/core/util/k1;->a(Ljava/lang/CharSequence;ZILjava/lang/Object;)V
+    invoke-static {p1, v0, v1, v2}, Lcom/vk/core/util/ToastUtils;->a(Ljava/lang/CharSequence;ZILjava/lang/Object;)V
 
     :cond_0
     return-void

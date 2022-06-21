@@ -38,7 +38,7 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-static {}, Lcom/facebook/e;->f()Ljava/lang/String;
+    invoke-static {}, Lcom/facebook/FacebookSdk;->f()Ljava/lang/String;
 
     move-result-object v1
 
@@ -198,7 +198,7 @@
     new-array v0, v0, [Ljava/lang/Object;
 
     .line 9
-    invoke-static {}, Lcom/facebook/e;->q()Ljava/lang/String;
+    invoke-static {}, Lcom/facebook/FacebookSdk;->q()Ljava/lang/String;
 
     move-result-object v1
 
@@ -441,7 +441,7 @@
     :goto_1
     iget-object p1, p0, Lcom/facebook/login/WebLoginMethodHandler;->c:Ljava/lang/String;
 
-    invoke-static {p1}, Lcom/facebook/internal/r;->d(Ljava/lang/String;)Z
+    invoke-static {p1}, Lcom/facebook/internal/Utility;->d(Ljava/lang/String;)Z
 
     move-result p1
 
@@ -474,7 +474,7 @@
 
     move-result-object v1
 
-    invoke-static {v1}, Lcom/facebook/internal/r;->a(Ljava/util/Collection;)Z
+    invoke-static {v1}, Lcom/facebook/internal/Utility;->a(Ljava/util/Collection;)Z
 
     move-result v1
 
@@ -580,7 +580,7 @@
 
     move-result-object p1
 
-    invoke-static {p1}, Lcom/facebook/internal/r;->a(Landroid/content/Context;)V
+    invoke-static {p1}, Lcom/facebook/internal/Utility;->a(Landroid/content/Context;)V
 
     const-string p1, "0"
 

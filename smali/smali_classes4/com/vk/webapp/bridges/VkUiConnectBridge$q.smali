@@ -51,7 +51,7 @@
     .line 2
     iget-object v0, p0, Lcom/vk/webapp/bridges/VkUiConnectBridge$q;->a:Lcom/vk/webapp/bridges/VkUiConnectBridge;
 
-    invoke-virtual {v0}, Lcom/vk/webapp/bridges/a;->f()Landroid/webkit/WebView;
+    invoke-virtual {v0}, Lcom/vk/webapp/bridges/AndroidBridge;->f()Landroid/webkit/WebView;
 
     move-result-object v0
 

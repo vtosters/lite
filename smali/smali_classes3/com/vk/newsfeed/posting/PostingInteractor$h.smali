@@ -3,12 +3,12 @@
 .source "PostingInteractor.kt"
 
 # interfaces
-.implements Lc/a/z/j;
+.implements Lio/reactivex/functions/Function;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/newsfeed/posting/PostingInteractor;->b(Lb/h/c/w/f;Lcom/vk/newsfeed/posting/dto/d;)Lc/a/m;
+    value = Lcom/vk/newsfeed/posting/PostingInteractor;->b(Lb/h/c/w/NewPostRequest;Lcom/vk/newsfeed/posting/dto/PostingRequestParams1;)Lio/reactivex/Observable;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -24,29 +24,29 @@
         "Ljava/lang/Object;",
         ">",
         "Ljava/lang/Object;",
-        "Lc/a/z/j<",
+        "Lio/reactivex/functions/Function<",
         "TT;",
-        "Lc/a/p<",
+        "Lio/reactivex/ObservableSource<",
         "+TR;>;>;"
     }
 .end annotation
 
 
 # instance fields
-.field final synthetic a:Lcom/vk/newsfeed/posting/dto/d;
+.field final synthetic a:Lcom/vk/newsfeed/posting/dto/PostingRequestParams1;
 
-.field final synthetic b:Lcom/vk/newsfeed/posting/dto/a;
+.field final synthetic b:Lcom/vk/newsfeed/posting/dto/PostingRequestParams;
 
 .field final synthetic c:Ljava/lang/Integer;
 
 
 # direct methods
-.method constructor <init>(Lcom/vk/newsfeed/posting/dto/d;Lcom/vk/newsfeed/posting/dto/a;Ljava/lang/Integer;)V
+.method constructor <init>(Lcom/vk/newsfeed/posting/dto/PostingRequestParams1;Lcom/vk/newsfeed/posting/dto/PostingRequestParams;Ljava/lang/Integer;)V
     .locals 0
 
-    iput-object p1, p0, Lcom/vk/newsfeed/posting/PostingInteractor$h;->a:Lcom/vk/newsfeed/posting/dto/d;
+    iput-object p1, p0, Lcom/vk/newsfeed/posting/PostingInteractor$h;->a:Lcom/vk/newsfeed/posting/dto/PostingRequestParams1;
 
-    iput-object p2, p0, Lcom/vk/newsfeed/posting/PostingInteractor$h;->b:Lcom/vk/newsfeed/posting/dto/a;
+    iput-object p2, p0, Lcom/vk/newsfeed/posting/PostingInteractor$h;->b:Lcom/vk/newsfeed/posting/dto/PostingRequestParams;
 
     iput-object p3, p0, Lcom/vk/newsfeed/posting/PostingInteractor$h;->c:Ljava/lang/Integer;
 
@@ -57,15 +57,15 @@
 
 
 # virtual methods
-.method public final a(Ljava/lang/String;)Lc/a/m;
+.method public final a(Ljava/lang/String;)Lio/reactivex/Observable;
     .locals 3
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
             "Ljava/lang/String;",
             ")",
-            "Lc/a/m<",
-            "Lb/h/c/w/h$a;",
+            "Lio/reactivex/Observable<",
+            "Lb/h/c/w/PosterUpload$a;",
             ">;"
         }
     .end annotation
@@ -88,9 +88,9 @@
     if-nez v0, :cond_2
 
     .line 2
-    iget-object v0, p0, Lcom/vk/newsfeed/posting/PostingInteractor$h;->a:Lcom/vk/newsfeed/posting/dto/d;
+    iget-object v0, p0, Lcom/vk/newsfeed/posting/PostingInteractor$h;->a:Lcom/vk/newsfeed/posting/dto/PostingRequestParams1;
 
-    invoke-virtual {v0}, Lcom/vk/newsfeed/posting/dto/d;->h()Ljava/lang/String;
+    invoke-virtual {v0}, Lcom/vk/newsfeed/posting/dto/PostingRequestParams1;->h()Ljava/lang/String;
 
     move-result-object v0
 
@@ -105,9 +105,9 @@
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
 
-    iget-object v2, p0, Lcom/vk/newsfeed/posting/PostingInteractor$h;->b:Lcom/vk/newsfeed/posting/dto/a;
+    iget-object v2, p0, Lcom/vk/newsfeed/posting/PostingInteractor$h;->b:Lcom/vk/newsfeed/posting/dto/PostingRequestParams;
 
-    invoke-virtual {v2}, Lcom/vk/newsfeed/posting/dto/a;->d()I
+    invoke-virtual {v2}, Lcom/vk/newsfeed/posting/dto/PostingRequestParams;->d()I
 
     move-result v2
 
@@ -148,15 +148,15 @@
 
     invoke-virtual {v2, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget-object p1, p0, Lcom/vk/newsfeed/posting/PostingInteractor$h;->a:Lcom/vk/newsfeed/posting/dto/d;
+    iget-object p1, p0, Lcom/vk/newsfeed/posting/PostingInteractor$h;->a:Lcom/vk/newsfeed/posting/dto/PostingRequestParams1;
 
-    invoke-virtual {p1}, Lcom/vk/newsfeed/posting/dto/d;->i()Lcom/vk/newsfeed/posting/dto/a;
+    invoke-virtual {p1}, Lcom/vk/newsfeed/posting/dto/PostingRequestParams1;->i()Lcom/vk/newsfeed/posting/dto/PostingRequestParams;
 
     move-result-object p1
 
     if-eqz p1, :cond_1
 
-    invoke-virtual {p1}, Lcom/vk/newsfeed/posting/dto/a;->a()Ljava/lang/String;
+    invoke-virtual {p1}, Lcom/vk/newsfeed/posting/dto/PostingRequestParams;->a()Ljava/lang/String;
 
     move-result-object p1
 
@@ -175,38 +175,38 @@
     move-result-object p1
 
     .line 5
-    new-instance v0, Lb/h/c/w/h;
+    new-instance v0, Lb/h/c/w/PosterUpload1;
 
-    iget-object v1, p0, Lcom/vk/newsfeed/posting/PostingInteractor$h;->b:Lcom/vk/newsfeed/posting/dto/a;
+    iget-object v1, p0, Lcom/vk/newsfeed/posting/PostingInteractor$h;->b:Lcom/vk/newsfeed/posting/dto/PostingRequestParams;
 
-    invoke-virtual {v1}, Lcom/vk/newsfeed/posting/dto/a;->f()I
+    invoke-virtual {v1}, Lcom/vk/newsfeed/posting/dto/PostingRequestParams;->f()I
 
     move-result v1
 
-    invoke-direct {v0, p1, v1}, Lb/h/c/w/h;-><init>(Ljava/lang/String;I)V
+    invoke-direct {v0, p1, v1}, Lb/h/c/w/PosterUpload1;-><init>(Ljava/lang/String;I)V
 
     .line 6
-    invoke-virtual {v0}, Lb/h/c/w/h;->a()Lc/a/m;
+    invoke-virtual {v0}, Lb/h/c/w/PosterUpload1;->a()Lio/reactivex/Observable;
 
     move-result-object p1
 
     .line 7
     sget-object v0, Lcom/vk/core/concurrent/VkExecutors;->x:Lcom/vk/core/concurrent/VkExecutors;
 
-    invoke-virtual {v0}, Lcom/vk/core/concurrent/VkExecutors;->m()Lc/a/s;
+    invoke-virtual {v0}, Lcom/vk/core/concurrent/VkExecutors;->m()Lio/reactivex/Scheduler;
 
     move-result-object v0
 
-    invoke-virtual {p1, v0}, Lc/a/m;->b(Lc/a/s;)Lc/a/m;
+    invoke-virtual {p1, v0}, Lio/reactivex/Observable;->b(Lio/reactivex/Scheduler;)Lio/reactivex/Observable;
 
     move-result-object p1
 
     .line 8
-    invoke-static {}, Lc/a/y/c/a;->a()Lc/a/s;
+    invoke-static {}, Lio/reactivex/schedulers/AndroidSchedulers;->a()Lio/reactivex/Scheduler;
 
     move-result-object v0
 
-    invoke-virtual {p1, v0}, Lc/a/m;->a(Lc/a/s;)Lc/a/m;
+    invoke-virtual {p1, v0}, Lio/reactivex/Observable;->a(Lio/reactivex/Scheduler;)Lio/reactivex/Observable;
 
     move-result-object p1
 
@@ -229,7 +229,7 @@
     .line 1
     check-cast p1, Ljava/lang/String;
 
-    invoke-virtual {p0, p1}, Lcom/vk/newsfeed/posting/PostingInteractor$h;->a(Ljava/lang/String;)Lc/a/m;
+    invoke-virtual {p0, p1}, Lcom/vk/newsfeed/posting/PostingInteractor$h;->a(Ljava/lang/String;)Lio/reactivex/Observable;
 
     move-result-object p1
 

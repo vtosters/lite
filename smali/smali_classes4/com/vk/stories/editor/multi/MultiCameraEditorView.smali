@@ -1,9 +1,9 @@
 .class public final Lcom/vk/stories/editor/multi/MultiCameraEditorView;
-.super Lcom/vk/stories/editor/base/d0;
+.super Lcom/vk/stories/editor/base/BaseCameraEditorView;
 .source "MultiCameraEditorView.kt"
 
 # interfaces
-.implements Lcom/vk/stories/editor/multi/h;
+.implements Lcom/vk/stories/editor/multi/MultiCameraEditorContract1;
 
 
 # annotations
@@ -20,9 +20,9 @@
 
 
 # instance fields
-.field private K0:Lcom/vk/stories/editor/multi/g;
+.field private K0:Lcom/vk/stories/editor/multi/MultiCameraEditorContract;
 
-.field private L0:Lcom/vk/stories/editor/multi/k/a;
+.field private L0:Lcom/vk/stories/editor/multi/k/MultiStoryAdapter;
 
 .field private M0:Landroidx/recyclerview/widget/RecyclerView;
 
@@ -35,7 +35,7 @@
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, v1}, Lcom/vk/stories/editor/multi/MultiCameraEditorView$a;-><init>(Lkotlin/jvm/internal/i;)V
+    invoke-direct {v0, v1}, Lcom/vk/stories/editor/multi/MultiCameraEditorView$a;-><init>(Lkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     const/16 v0, 0x6a
 
@@ -53,16 +53,16 @@
     .locals 0
 
     .line 1
-    invoke-direct {p0, p1}, Lcom/vk/stories/editor/base/d0;-><init>(Landroid/content/Context;)V
+    invoke-direct {p0, p1}, Lcom/vk/stories/editor/base/BaseCameraEditorView;-><init>(Landroid/content/Context;)V
 
     return-void
 .end method
 
-.method public static final synthetic a(Lcom/vk/stories/editor/multi/MultiCameraEditorView;)Lcom/vk/stories/editor/multi/g;
+.method public static final synthetic a(Lcom/vk/stories/editor/multi/MultiCameraEditorView;)Lcom/vk/stories/editor/multi/MultiCameraEditorContract;
     .locals 0
 
     .line 1
-    iget-object p0, p0, Lcom/vk/stories/editor/multi/MultiCameraEditorView;->K0:Lcom/vk/stories/editor/multi/g;
+    iget-object p0, p0, Lcom/vk/stories/editor/multi/MultiCameraEditorView;->K0:Lcom/vk/stories/editor/multi/MultiCameraEditorContract;
 
     return-object p0
 .end method
@@ -79,7 +79,7 @@
 
     const-string v2, "context"
 
-    invoke-static {v1, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-direct {v0, v1}, Lcom/vk/core/dialogs/alert/VkAlertDialog$Builder;-><init>(Landroid/content/Context;)V
 
@@ -119,11 +119,11 @@
     return-void
 .end method
 
-.method public static final synthetic b(Lcom/vk/stories/editor/multi/MultiCameraEditorView;)Lcom/vk/stories/editor/multi/k/a;
+.method public static final synthetic b(Lcom/vk/stories/editor/multi/MultiCameraEditorView;)Lcom/vk/stories/editor/multi/k/MultiStoryAdapter;
     .locals 0
 
     .line 1
-    iget-object p0, p0, Lcom/vk/stories/editor/multi/MultiCameraEditorView;->L0:Lcom/vk/stories/editor/multi/k/a;
+    iget-object p0, p0, Lcom/vk/stories/editor/multi/MultiCameraEditorView;->L0:Lcom/vk/stories/editor/multi/k/MultiStoryAdapter;
 
     return-object p0
 .end method
@@ -134,14 +134,14 @@
     .locals 1
 
     .line 8
-    iget-object v0, p0, Lcom/vk/stories/editor/base/d0;->m0:Lcom/vk/attachpicker/stickers/StickersDrawingViewGroup;
+    iget-object v0, p0, Lcom/vk/stories/editor/base/BaseCameraEditorView;->m0:Lcom/vk/attachpicker/stickers/StickersDrawingViewGroup;
 
     invoke-virtual {v0}, Lcom/vk/attachpicker/stickers/StickersDrawingViewGroup;->h()V
 
     return-void
 .end method
 
-.method public bridge synthetic getPresenter()Lb/h/r/a;
+.method public bridge synthetic getPresenter()Lb/h/r/BaseContract;
     .locals 1
 
     .line 1
@@ -156,7 +156,7 @@
     .locals 1
 
     .line 2
-    invoke-super {p0}, Lcom/vk/stories/editor/base/d0;->getPresenter()Lcom/vk/stories/editor/base/BaseCameraEditorContract$a;
+    invoke-super {p0}, Lcom/vk/stories/editor/base/BaseCameraEditorView;->getPresenter()Lcom/vk/stories/editor/base/BaseCameraEditorContract$a;
 
     move-result-object v0
 
@@ -172,10 +172,10 @@
     .end annotation
 
     .line 1
-    invoke-super {p0, p1}, Lcom/vk/stories/editor/base/d0;->l(I)V
+    invoke-super {p0, p1}, Lcom/vk/stories/editor/base/BaseCameraEditorView;->l(I)V
 
     .line 2
-    iget-object p1, p0, Lcom/vk/stories/editor/base/d0;->I:Landroid/widget/ImageView;
+    iget-object p1, p0, Lcom/vk/stories/editor/base/BaseCameraEditorView;->I:Landroid/widget/ImageView;
 
     invoke-virtual {p1, p0}, Landroid/widget/ImageView;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
@@ -235,7 +235,7 @@
     invoke-static {p1}, Lcom/vk/extensions/ViewExtKt;->p(Landroid/view/View;)V
 
     .line 10
-    iget-object v0, p0, Lcom/vk/stories/editor/base/d0;->D:Landroid/widget/FrameLayout;
+    iget-object v0, p0, Lcom/vk/stories/editor/base/BaseCameraEditorView;->D:Landroid/widget/FrameLayout;
 
     new-instance v1, Landroid/widget/FrameLayout$LayoutParams;
 
@@ -270,23 +270,23 @@
     if-eq v0, v1, :cond_0
 
     .line 2
-    invoke-super {p0, p1}, Lcom/vk/stories/editor/base/d0;->onClick(Landroid/view/View;)V
+    invoke-super {p0, p1}, Lcom/vk/stories/editor/base/BaseCameraEditorView;->onClick(Landroid/view/View;)V
 
     goto :goto_0
 
     .line 3
     :cond_0
-    iget-object p1, p0, Lcom/vk/stories/editor/multi/MultiCameraEditorView;->K0:Lcom/vk/stories/editor/multi/g;
+    iget-object p1, p0, Lcom/vk/stories/editor/multi/MultiCameraEditorView;->K0:Lcom/vk/stories/editor/multi/MultiCameraEditorContract;
 
     if-eqz p1, :cond_1
 
-    invoke-interface {p1}, Lcom/vk/stories/c1/b/a;->I0()V
+    invoke-interface {p1}, Lcom/vk/stories/c1/b/VideoCameraEditorContract;->I0()V
 
     :goto_0
     return-void
 
     :cond_1
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     const/4 p1, 0x0
 
@@ -297,7 +297,7 @@
     .locals 1
 
     .line 1
-    iget-object v0, p0, Lcom/vk/stories/editor/base/d0;->m0:Lcom/vk/attachpicker/stickers/StickersDrawingViewGroup;
+    iget-object v0, p0, Lcom/vk/stories/editor/base/BaseCameraEditorView;->m0:Lcom/vk/attachpicker/stickers/StickersDrawingViewGroup;
 
     invoke-virtual {v0}, Lcom/vk/attachpicker/stickers/StickersDrawingViewGroup;->f()V
 
@@ -308,7 +308,7 @@
     .locals 1
 
     .line 1
-    iget-object v0, p0, Lcom/vk/stories/editor/base/d0;->m0:Lcom/vk/attachpicker/stickers/StickersDrawingViewGroup;
+    iget-object v0, p0, Lcom/vk/stories/editor/base/BaseCameraEditorView;->m0:Lcom/vk/attachpicker/stickers/StickersDrawingViewGroup;
 
     invoke-virtual {v0}, Lcom/vk/attachpicker/stickers/StickersDrawingViewGroup;->e()V
 
@@ -319,14 +319,14 @@
     .locals 1
 
     .line 1
-    iget-object v0, p0, Lcom/vk/stories/editor/base/d0;->m0:Lcom/vk/attachpicker/stickers/StickersDrawingViewGroup;
+    iget-object v0, p0, Lcom/vk/stories/editor/base/BaseCameraEditorView;->m0:Lcom/vk/attachpicker/stickers/StickersDrawingViewGroup;
 
     invoke-virtual {v0, p1}, Lcom/vk/attachpicker/stickers/StickersDrawingViewGroup;->setNeedRequestAudioFocus(Z)V
 
     return-void
 .end method
 
-.method public bridge synthetic setPresenter(Lb/h/r/a;)V
+.method public bridge synthetic setPresenter(Lb/h/r/BaseContract;)V
     .locals 0
 
     .line 1
@@ -341,14 +341,14 @@
     .locals 1
 
     .line 2
-    invoke-super {p0, p1}, Lcom/vk/stories/editor/base/d0;->setPresenter(Lcom/vk/stories/editor/base/BaseCameraEditorContract$a;)V
+    invoke-super {p0, p1}, Lcom/vk/stories/editor/base/BaseCameraEditorView;->setPresenter(Lcom/vk/stories/editor/base/BaseCameraEditorContract$a;)V
 
     if-eqz p1, :cond_0
 
     .line 3
     check-cast p1, Lcom/vk/stories/editor/multi/MultiCameraEditorPresenter;
 
-    iput-object p1, p0, Lcom/vk/stories/editor/multi/MultiCameraEditorView;->K0:Lcom/vk/stories/editor/multi/g;
+    iput-object p1, p0, Lcom/vk/stories/editor/multi/MultiCameraEditorView;->K0:Lcom/vk/stories/editor/multi/MultiCameraEditorContract;
 
     return-void
 
@@ -362,13 +362,13 @@
     throw p1
 .end method
 
-.method public setStoryPickerData(Lcom/vk/lists/b;)V
+.method public setStoryPickerData(Lcom/vk/lists/BaseListDataSet;)V
     .locals 11
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lcom/vk/lists/b<",
-            "Lcom/vk/common/i/b;",
+            "Lcom/vk/lists/BaseListDataSet<",
+            "Lcom/vk/common/i/RecyclerItem;",
             ">;)V"
         }
     .end annotation
@@ -441,11 +441,11 @@
 
     move-object v9, v10
 
-    invoke-static/range {v0 .. v9}, Lcom/vk/core/extensions/AnimationExtKt;->a(Landroid/view/View;IIFFJLkotlin/jvm/b/a;ILjava/lang/Object;)Landroid/animation/Animator;
+    invoke-static/range {v0 .. v9}, Lcom/vk/core/extensions/AnimationExtKt;->a(Landroid/view/View;IIFFJLkotlin/jvm/b/Functions;ILjava/lang/Object;)Landroid/animation/Animator;
 
     .line 5
     :cond_0
-    new-instance v0, Lcom/vk/stories/editor/multi/k/a;
+    new-instance v0, Lcom/vk/stories/editor/multi/k/MultiStoryAdapter;
 
     new-instance v1, Lcom/vk/stories/editor/multi/MultiCameraEditorView$setStoryPickerData$2;
 
@@ -459,16 +459,16 @@
 
     invoke-direct {v3, p0}, Lcom/vk/stories/editor/multi/MultiCameraEditorView$setStoryPickerData$4;-><init>(Lcom/vk/stories/editor/multi/MultiCameraEditorView;)V
 
-    invoke-direct {v0, p1, v1, v2, v3}, Lcom/vk/stories/editor/multi/k/a;-><init>(Lcom/vk/lists/b;Lkotlin/jvm/b/b;Lkotlin/jvm/b/b;Lkotlin/jvm/b/a;)V
+    invoke-direct {v0, p1, v1, v2, v3}, Lcom/vk/stories/editor/multi/k/MultiStoryAdapter;-><init>(Lcom/vk/lists/BaseListDataSet;Lkotlin/jvm/b/Functions2;Lkotlin/jvm/b/Functions2;Lkotlin/jvm/b/Functions;)V
 
-    iput-object v0, p0, Lcom/vk/stories/editor/multi/MultiCameraEditorView;->L0:Lcom/vk/stories/editor/multi/k/a;
+    iput-object v0, p0, Lcom/vk/stories/editor/multi/MultiCameraEditorView;->L0:Lcom/vk/stories/editor/multi/k/MultiStoryAdapter;
 
     .line 6
     iget-object p1, p0, Lcom/vk/stories/editor/multi/MultiCameraEditorView;->M0:Landroidx/recyclerview/widget/RecyclerView;
 
     if-eqz p1, :cond_1
 
-    iget-object v0, p0, Lcom/vk/stories/editor/multi/MultiCameraEditorView;->L0:Lcom/vk/stories/editor/multi/k/a;
+    iget-object v0, p0, Lcom/vk/stories/editor/multi/MultiCameraEditorView;->L0:Lcom/vk/stories/editor/multi/k/MultiStoryAdapter;
 
     invoke-virtual {p1, v0}, Landroidx/recyclerview/widget/RecyclerView;->setAdapter(Landroidx/recyclerview/widget/RecyclerView$Adapter;)V
 
@@ -493,7 +493,7 @@
     .locals 1
 
     .line 1
-    iget-object v0, p0, Lcom/vk/stories/editor/base/d0;->m0:Lcom/vk/attachpicker/stickers/StickersDrawingViewGroup;
+    iget-object v0, p0, Lcom/vk/stories/editor/base/BaseCameraEditorView;->m0:Lcom/vk/attachpicker/stickers/StickersDrawingViewGroup;
 
     invoke-virtual {v0}, Lcom/vk/attachpicker/stickers/StickersDrawingViewGroup;->g()V
 

@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/newsfeed/posting/viewpresenter/poster/PosterPostingView;->a(ZLkotlin/jvm/b/a;)V
+    value = Lcom/vk/newsfeed/posting/viewpresenter/poster/PosterPostingView;->a(ZLkotlin/jvm/b/Functions;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -22,16 +22,16 @@
 
 .field final synthetic b:Z
 
-.field final synthetic c:Lkotlin/jvm/b/a;
+.field final synthetic c:Lkotlin/jvm/b/Functions;
 
 
 # direct methods
-.method constructor <init>(Lcom/vk/newsfeed/posting/viewpresenter/poster/PosterPostingView;ZLkotlin/jvm/b/a;)V
+.method constructor <init>(Lcom/vk/newsfeed/posting/viewpresenter/poster/PosterPostingView;ZLkotlin/jvm/b/Functions;)V
     .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(Z",
-            "Lkotlin/jvm/b/a;",
+            "Lkotlin/jvm/b/Functions;",
             ")V"
         }
     .end annotation
@@ -41,7 +41,7 @@
 
     iput-boolean p2, p0, Lcom/vk/newsfeed/posting/viewpresenter/poster/PosterPostingView$d;->b:Z
 
-    iput-object p3, p0, Lcom/vk/newsfeed/posting/viewpresenter/poster/PosterPostingView$d;->c:Lkotlin/jvm/b/a;
+    iput-object p3, p0, Lcom/vk/newsfeed/posting/viewpresenter/poster/PosterPostingView$d;->c:Lkotlin/jvm/b/Functions;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -79,15 +79,15 @@
 
     .line 3
     :cond_0
-    iget-object p1, p0, Lcom/vk/newsfeed/posting/viewpresenter/poster/PosterPostingView$d;->c:Lkotlin/jvm/b/a;
+    iget-object p1, p0, Lcom/vk/newsfeed/posting/viewpresenter/poster/PosterPostingView$d;->c:Lkotlin/jvm/b/Functions;
 
     if-eqz p1, :cond_1
 
-    invoke-interface {p1}, Lkotlin/jvm/b/a;->invoke()Ljava/lang/Object;
+    invoke-interface {p1}, Lkotlin/jvm/b/Functions;->invoke()Ljava/lang/Object;
 
     move-result-object p1
 
-    check-cast p1, Lkotlin/m;
+    check-cast p1, Lkotlin/Unit;
 
     :cond_1
     return-void

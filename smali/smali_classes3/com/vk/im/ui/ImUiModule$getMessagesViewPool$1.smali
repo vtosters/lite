@@ -3,12 +3,12 @@
 .source "ImUiModule.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/b;
+.implements Lkotlin/jvm/b/Functions2;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/im/ui/ImUiModule;->a(ILcom/vk/core/ui/w/b;Lcom/vk/core/ui/w/b;)Lcom/vk/core/ui/w/b;
+    value = Lcom/vk/im/ui/ImUiModule;->a(ILcom/vk/core/ui/w/VkViewPoolProvider;Lcom/vk/core/ui/w/VkViewPoolProvider;)Lcom/vk/core/ui/w/VkViewPoolProvider;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -19,7 +19,7 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/b<",
+        "Lkotlin/jvm/b/Functions2<",
         "Landroid/content/Context;",
         "Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/MsgListAdapter;",
         ">;"
@@ -28,18 +28,18 @@
 
 
 # instance fields
-.field final synthetic $carousel:Lcom/vk/core/ui/w/b;
+.field final synthetic $carousel:Lcom/vk/core/ui/w/VkViewPoolProvider;
 
-.field final synthetic $keyboard:Lcom/vk/core/ui/w/b;
+.field final synthetic $keyboard:Lcom/vk/core/ui/w/VkViewPoolProvider;
 
 
 # direct methods
-.method constructor <init>(Lcom/vk/core/ui/w/b;Lcom/vk/core/ui/w/b;)V
+.method constructor <init>(Lcom/vk/core/ui/w/VkViewPoolProvider;Lcom/vk/core/ui/w/VkViewPoolProvider;)V
     .locals 0
 
-    iput-object p1, p0, Lcom/vk/im/ui/ImUiModule$getMessagesViewPool$1;->$keyboard:Lcom/vk/core/ui/w/b;
+    iput-object p1, p0, Lcom/vk/im/ui/ImUiModule$getMessagesViewPool$1;->$keyboard:Lcom/vk/core/ui/w/VkViewPoolProvider;
 
-    iput-object p2, p0, Lcom/vk/im/ui/ImUiModule$getMessagesViewPool$1;->$carousel:Lcom/vk/core/ui/w/b;
+    iput-object p2, p0, Lcom/vk/im/ui/ImUiModule$getMessagesViewPool$1;->$carousel:Lcom/vk/core/ui/w/VkViewPoolProvider;
 
     const/4 p1, 0x1
 
@@ -62,13 +62,13 @@
 
     const-string v1, "LayoutInflater.from(it)"
 
-    invoke-static {p1, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    iget-object v1, p0, Lcom/vk/im/ui/ImUiModule$getMessagesViewPool$1;->$keyboard:Lcom/vk/core/ui/w/b;
+    iget-object v1, p0, Lcom/vk/im/ui/ImUiModule$getMessagesViewPool$1;->$keyboard:Lcom/vk/core/ui/w/VkViewPoolProvider;
 
-    iget-object v2, p0, Lcom/vk/im/ui/ImUiModule$getMessagesViewPool$1;->$carousel:Lcom/vk/core/ui/w/b;
+    iget-object v2, p0, Lcom/vk/im/ui/ImUiModule$getMessagesViewPool$1;->$carousel:Lcom/vk/core/ui/w/VkViewPoolProvider;
 
-    invoke-direct {v0, p1, v1, v2}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/MsgListAdapter;-><init>(Landroid/view/LayoutInflater;Lcom/vk/core/ui/w/b;Lcom/vk/core/ui/w/b;)V
+    invoke-direct {v0, p1, v1, v2}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/MsgListAdapter;-><init>(Landroid/view/LayoutInflater;Lcom/vk/core/ui/w/VkViewPoolProvider;Lcom/vk/core/ui/w/VkViewPoolProvider;)V
 
     return-object v0
 .end method

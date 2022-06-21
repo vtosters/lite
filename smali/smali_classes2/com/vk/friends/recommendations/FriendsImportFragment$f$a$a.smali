@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/friends/recommendations/FriendsImportFragment$f$a;->a(Lorg/json/JSONArray;Lcom/facebook/i;)V
+    value = Lcom/vk/friends/recommendations/FriendsImportFragment$f$a;->a(Lorg/json/JSONArray;Lcom/facebook/GraphResponse;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -56,7 +56,7 @@
     const/4 v3, 0x0
 
     .line 1
-    invoke-static {v0, v1, v2, v3}, Lcom/vk/core/util/k1;->a(IZILjava/lang/Object;)V
+    invoke-static {v0, v1, v2, v3}, Lcom/vk/core/util/ToastUtils;->a(IZILjava/lang/Object;)V
 
     return-void
 .end method

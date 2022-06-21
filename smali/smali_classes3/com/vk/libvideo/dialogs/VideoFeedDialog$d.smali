@@ -55,7 +55,7 @@
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v1
 
@@ -72,7 +72,7 @@
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v1
 
@@ -87,7 +87,7 @@
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v0
 
@@ -131,7 +131,7 @@
 
     iget-object v0, p0, Lcom/vk/libvideo/dialogs/VideoFeedDialog$d;->a:Lcom/vk/libvideo/dialogs/VideoFeedDialog;
 
-    invoke-static {v0}, Lcom/vk/libvideo/dialogs/VideoFeedDialog;->m(Lcom/vk/libvideo/dialogs/VideoFeedDialog;)Lcom/vk/libvideo/c0/a;
+    invoke-static {v0}, Lcom/vk/libvideo/dialogs/VideoFeedDialog;->m(Lcom/vk/libvideo/dialogs/VideoFeedDialog;)Lcom/vk/libvideo/c0/VideoSnapHelper;
 
     move-result-object v0
 
@@ -147,7 +147,7 @@
 
     move-result p1
 
-    invoke-virtual {v0, p1}, Lcom/vk/libvideo/c0/a;->a(I)V
+    invoke-virtual {v0, p1}, Lcom/vk/libvideo/c0/VideoSnapHelper;->a(I)V
 
     goto :goto_1
 

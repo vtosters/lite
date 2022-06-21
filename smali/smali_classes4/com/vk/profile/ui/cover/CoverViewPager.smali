@@ -40,7 +40,7 @@
 
 .field private E:Z
 
-.field private F:Lcom/vk/core/ui/infiniteviewpager/a;
+.field private F:Lcom/vk/core/ui/infiniteviewpager/InfinitePagerAdapter;
 
 .field private G:Z
 
@@ -81,11 +81,11 @@
 
 .field private final e:Lcom/vk/stories/view/StoryProgressView;
 
-.field private f:Lkotlin/jvm/b/a;
+.field private f:Lkotlin/jvm/b/Functions;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Lkotlin/jvm/b/a<",
-            "Lkotlin/m;",
+            "Lkotlin/jvm/b/Functions<",
+            "Lkotlin/Unit;",
             ">;"
         }
     .end annotation
@@ -97,7 +97,7 @@
             "Ljava/util/HashMap<",
             "Ljava/lang/Integer;",
             "Ljava/lang/ref/WeakReference<",
-            "Lcom/vk/profile/ui/cover/c;",
+            "Lcom/vk/profile/ui/cover/CoverViewItem;",
             ">;>;"
         }
     .end annotation
@@ -257,7 +257,7 @@
 
     const-string v2, "viewpager.getDeclaredField(\"mScroller\")"
 
-    invoke-static {v1, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 24
     invoke-virtual {v1, p2}, Ljava/lang/reflect/Field;->setAccessible(Z)V
@@ -274,7 +274,7 @@
 
     const-string v3, "viewpager.getDeclaredField(\"sInterpolator\")"
 
-    invoke-static {v2, v3}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v2, v3}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 26
     invoke-virtual {v2, p2}, Ljava/lang/reflect/Field;->setAccessible(Z)V
@@ -288,7 +288,7 @@
 
     const-string v4, "getContext()"
 
-    invoke-static {v3, v4}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v3, v4}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     const/4 v4, 0x0
 
@@ -326,7 +326,7 @@
 
     move-result-object v0
 
-    invoke-virtual {p2, v0}, Lcom/vk/core/ui/infiniteviewpager/b;->setAdapter(Landroidx/viewpager/widget/PagerAdapter;)V
+    invoke-virtual {p2, v0}, Lcom/vk/core/ui/infiniteviewpager/InfiniteViewPager;->setAdapter(Landroidx/viewpager/widget/PagerAdapter;)V
 
     .line 29
     iget-object p2, p0, Lcom/vk/profile/ui/cover/CoverViewPager;->c:Lcom/vk/profile/ui/cover/CoverViewPager$k;
@@ -382,7 +382,7 @@
     return-void
 .end method
 
-.method public synthetic constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;ILkotlin/jvm/internal/i;)V
+.method public synthetic constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
     .locals 0
 
     and-int/lit8 p3, p3, 0x2
@@ -435,7 +435,7 @@
 
     const-string v2, "context"
 
-    invoke-static {v1, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     const v3, 0x7f0809f9
 
@@ -485,7 +485,7 @@
 
     move-result-object v1
 
-    invoke-static {v1, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     const v2, 0x7f0809f0
 
@@ -535,7 +535,7 @@
     invoke-direct {v0, p0, v1}, Lcom/vk/profile/ui/cover/CoverViewPager$g;-><init>(Lcom/vk/profile/ui/cover/CoverViewPager;Landroidx/viewpager/widget/PagerAdapter;)V
 
     .line 2
-    iput-object v0, p0, Lcom/vk/profile/ui/cover/CoverViewPager;->F:Lcom/vk/core/ui/infiniteviewpager/a;
+    iput-object v0, p0, Lcom/vk/profile/ui/cover/CoverViewPager;->F:Lcom/vk/core/ui/infiniteviewpager/InfinitePagerAdapter;
 
     return-object v0
 .end method
@@ -555,7 +555,7 @@
 
     iget-object v2, p0, Lcom/vk/profile/ui/cover/CoverViewPager;->c:Lcom/vk/profile/ui/cover/CoverViewPager$k;
 
-    invoke-virtual {v2}, Lcom/vk/core/ui/infiniteviewpager/b;->getAdapterCurrentItem()I
+    invoke-virtual {v2}, Lcom/vk/core/ui/infiniteviewpager/InfiniteViewPager;->getAdapterCurrentItem()I
 
     move-result v2
 
@@ -575,7 +575,7 @@
 
     move-result-object v1
 
-    check-cast v1, Lcom/vk/profile/ui/cover/c;
+    check-cast v1, Lcom/vk/profile/ui/cover/CoverViewItem;
 
     if-eqz v1, :cond_1
 
@@ -596,7 +596,7 @@
 
     iget-object v2, p0, Lcom/vk/profile/ui/cover/CoverViewPager;->c:Lcom/vk/profile/ui/cover/CoverViewPager$k;
 
-    invoke-virtual {v2}, Lcom/vk/core/ui/infiniteviewpager/b;->getCurrentItem()I
+    invoke-virtual {v2}, Lcom/vk/core/ui/infiniteviewpager/InfiniteViewPager;->getCurrentItem()I
 
     move-result v2
 
@@ -608,9 +608,9 @@
 
     const-string v2, "it"
 
-    invoke-static {v1, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    invoke-virtual {v0, v1}, Lcom/vk/profile/data/cover/model/CommunityCoverModel$b;->c(Lcom/vk/profile/ui/cover/c;)V
+    invoke-virtual {v0, v1}, Lcom/vk/profile/data/cover/model/CommunityCoverModel$b;->c(Lcom/vk/profile/ui/cover/CoverViewItem;)V
 
     :cond_1
     return-void
@@ -641,7 +641,7 @@
     if-eqz v0, :cond_0
 
     .line 9
-    invoke-static {v0, p1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v0, p1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result p1
 
@@ -695,11 +695,11 @@
     return-object v0
 .end method
 
-.method public final getAdapter()Lcom/vk/core/ui/infiniteviewpager/a;
+.method public final getAdapter()Lcom/vk/core/ui/infiniteviewpager/InfinitePagerAdapter;
     .locals 1
 
     .line 1
-    iget-object v0, p0, Lcom/vk/profile/ui/cover/CoverViewPager;->F:Lcom/vk/core/ui/infiniteviewpager/a;
+    iget-object v0, p0, Lcom/vk/profile/ui/cover/CoverViewPager;->F:Lcom/vk/core/ui/infiniteviewpager/InfinitePagerAdapter;
 
     return-object v0
 .end method
@@ -722,7 +722,7 @@
     return v0
 .end method
 
-.method public final getCurrentViewItem()Lcom/vk/profile/ui/cover/c;
+.method public final getCurrentViewItem()Lcom/vk/profile/ui/cover/CoverViewItem;
     .locals 2
 
     .line 1
@@ -730,7 +730,7 @@
 
     iget-object v1, p0, Lcom/vk/profile/ui/cover/CoverViewPager;->c:Lcom/vk/profile/ui/cover/CoverViewPager$k;
 
-    invoke-virtual {v1}, Lcom/vk/core/ui/infiniteviewpager/b;->getAdapterCurrentItem()I
+    invoke-virtual {v1}, Lcom/vk/core/ui/infiniteviewpager/InfiniteViewPager;->getAdapterCurrentItem()I
 
     move-result v1
 
@@ -750,7 +750,7 @@
 
     move-result-object v0
 
-    check-cast v0, Lcom/vk/profile/ui/cover/c;
+    check-cast v0, Lcom/vk/profile/ui/cover/CoverViewItem;
 
     goto :goto_0
 
@@ -882,19 +882,19 @@
     return-object v0
 .end method
 
-.method public final getTapListener()Lkotlin/jvm/b/a;
+.method public final getTapListener()Lkotlin/jvm/b/Functions;
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "()",
-            "Lkotlin/jvm/b/a<",
-            "Lkotlin/m;",
+            "Lkotlin/jvm/b/Functions<",
+            "Lkotlin/Unit;",
             ">;"
         }
     .end annotation
 
     .line 1
-    iget-object v0, p0, Lcom/vk/profile/ui/cover/CoverViewPager;->f:Lkotlin/jvm/b/a;
+    iget-object v0, p0, Lcom/vk/profile/ui/cover/CoverViewPager;->f:Lkotlin/jvm/b/Functions;
 
     return-object v0
 .end method
@@ -916,7 +916,7 @@
             "Ljava/util/HashMap<",
             "Ljava/lang/Integer;",
             "Ljava/lang/ref/WeakReference<",
-            "Lcom/vk/profile/ui/cover/c;",
+            "Lcom/vk/profile/ui/cover/CoverViewItem;",
             ">;>;"
         }
     .end annotation
@@ -1039,13 +1039,13 @@
 
     if-eqz p1, :cond_2
 
-    invoke-virtual {p1}, Lcom/vk/profile/data/cover/model/CommunityCoverModel;->j()Lb/h/g/t/c;
+    invoke-virtual {p1}, Lcom/vk/profile/data/cover/model/CommunityCoverModel;->j()Lb/h/g/t/ValidatorSet;
 
     move-result-object p1
 
     if-eqz p1, :cond_2
 
-    invoke-virtual {p1, v1, v1}, Lb/h/g/t/c;->a(IZ)V
+    invoke-virtual {p1, v1, v1}, Lb/h/g/t/ValidatorSet;->a(IZ)V
 
     .line 6
     :cond_2
@@ -1058,11 +1058,11 @@
     return p1
 .end method
 
-.method public final setAdapter(Lcom/vk/core/ui/infiniteviewpager/a;)V
+.method public final setAdapter(Lcom/vk/core/ui/infiniteviewpager/InfinitePagerAdapter;)V
     .locals 0
 
     .line 1
-    iput-object p1, p0, Lcom/vk/profile/ui/cover/CoverViewPager;->F:Lcom/vk/core/ui/infiniteviewpager/a;
+    iput-object p1, p0, Lcom/vk/profile/ui/cover/CoverViewPager;->F:Lcom/vk/core/ui/infiniteviewpager/InfinitePagerAdapter;
 
     return-void
 .end method
@@ -1118,7 +1118,7 @@
     .line 1
     iget-object v0, p0, Lcom/vk/profile/ui/cover/CoverViewPager;->I:Lcom/vk/profile/data/cover/model/CommunityCoverModel;
 
-    invoke-static {v0, p1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v0, p1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v0
 
@@ -1153,7 +1153,7 @@
 
     move-result-object v1
 
-    invoke-virtual {v0, v1}, Lcom/vk/core/ui/infiniteviewpager/b;->setAdapter(Landroidx/viewpager/widget/PagerAdapter;)V
+    invoke-virtual {v0, v1}, Lcom/vk/core/ui/infiniteviewpager/InfiniteViewPager;->setAdapter(Landroidx/viewpager/widget/PagerAdapter;)V
 
     .line 6
     iput-boolean v2, p0, Lcom/vk/profile/ui/cover/CoverViewPager;->G:Z
@@ -1190,7 +1190,7 @@
 
     move-result p1
 
-    invoke-virtual {v0, p1, v2}, Lcom/vk/core/ui/infiniteviewpager/b;->setCurrentItem(IZ)V
+    invoke-virtual {v0, p1, v2}, Lcom/vk/core/ui/infiniteviewpager/InfiniteViewPager;->setCurrentItem(IZ)V
 
     :cond_2
     return-void
@@ -1211,7 +1211,7 @@
     .line 1
     iget-object v0, p0, Lcom/vk/profile/ui/cover/CoverViewPager;->O:Lcom/vk/profile/ui/cover/CoverViewPager$f;
 
-    invoke-static {v0, p1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v0, p1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v0
 
@@ -1229,19 +1229,19 @@
     return-void
 .end method
 
-.method public final setTapListener(Lkotlin/jvm/b/a;)V
+.method public final setTapListener(Lkotlin/jvm/b/Functions;)V
     .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lkotlin/jvm/b/a<",
-            "Lkotlin/m;",
+            "Lkotlin/jvm/b/Functions<",
+            "Lkotlin/Unit;",
             ">;)V"
         }
     .end annotation
 
     .line 1
-    iput-object p1, p0, Lcom/vk/profile/ui/cover/CoverViewPager;->f:Lkotlin/jvm/b/a;
+    iput-object p1, p0, Lcom/vk/profile/ui/cover/CoverViewPager;->f:Lkotlin/jvm/b/Functions;
 
     return-void
 .end method

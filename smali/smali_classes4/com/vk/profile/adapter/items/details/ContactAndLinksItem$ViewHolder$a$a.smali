@@ -68,13 +68,13 @@
 
     iget-object p1, p1, Landroidx/recyclerview/widget/RecyclerView$ViewHolder;->itemView:Landroid/view/View;
 
-    invoke-static {p1, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {p1}, Landroid/view/View;->getContext()Landroid/content/Context;
 
     move-result-object p1
 
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     iget-object p2, p0, Lcom/vk/profile/adapter/items/details/ContactAndLinksItem$ViewHolder$a$a;->a:Lcom/vk/profile/adapter/items/details/ContactAndLinksItem$ViewHolder$a;
 
@@ -86,7 +86,7 @@
 
     if-eqz p2, :cond_2
 
-    invoke-static {p1, p2}, Lcom/vk/profile/utils/g;->a(Landroid/content/Context;Ljava/lang/String;)V
+    invoke-static {p1, p2}, Lcom/vk/profile/utils/Utils;->a(Landroid/content/Context;Ljava/lang/String;)V
 
     .line 3
     iget-object p1, p0, Lcom/vk/profile/adapter/items/details/ContactAndLinksItem$ViewHolder$a$a;->a:Lcom/vk/profile/adapter/items/details/ContactAndLinksItem$ViewHolder$a;
@@ -106,13 +106,13 @@
     goto :goto_0
 
     :cond_1
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     throw v2
 
     .line 4
     :cond_2
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     throw v2
 
@@ -156,13 +156,13 @@
 
     iget-object p1, p1, Landroidx/recyclerview/widget/RecyclerView$ViewHolder;->itemView:Landroid/view/View;
 
-    invoke-static {p1, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {p1}, Landroid/view/View;->getContext()Landroid/content/Context;
 
     move-result-object p1
 
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     iget-object p2, p0, Lcom/vk/profile/adapter/items/details/ContactAndLinksItem$ViewHolder$a$a;->a:Lcom/vk/profile/adapter/items/details/ContactAndLinksItem$ViewHolder$a;
 
@@ -174,7 +174,7 @@
 
     if-eqz p2, :cond_7
 
-    invoke-static {p1, p2}, Lcom/vk/profile/utils/g;->a(Landroid/content/Context;Ljava/lang/String;)V
+    invoke-static {p1, p2}, Lcom/vk/profile/utils/Utils;->a(Landroid/content/Context;Ljava/lang/String;)V
 
     .line 8
     iget-object p1, p0, Lcom/vk/profile/adapter/items/details/ContactAndLinksItem$ViewHolder$a$a;->a:Lcom/vk/profile/adapter/items/details/ContactAndLinksItem$ViewHolder$a;
@@ -195,13 +195,13 @@
     return-void
 
     :cond_6
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     throw v2
 
     .line 9
     :cond_7
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     throw v2
 .end method

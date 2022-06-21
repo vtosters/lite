@@ -3,7 +3,7 @@
 .source "MusicStats.kt"
 
 # interfaces
-.implements Lcom/vk/music/stats/d;
+.implements Lcom/vk/music/stats/MusicStatsTracker;
 
 
 # annotations
@@ -21,7 +21,7 @@
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/util/List<",
-            "Lcom/vk/music/stats/d;",
+            "Lcom/vk/music/stats/MusicStatsTracker;",
             ">;"
         }
     .end annotation
@@ -36,7 +36,7 @@
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, v1}, Lcom/vk/music/stats/MusicStats$a;-><init>(Lkotlin/jvm/internal/i;)V
+    invoke-direct {v0, v1}, Lcom/vk/music/stats/MusicStats$a;-><init>(Lkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     return-void
 .end method
@@ -48,7 +48,7 @@
 
     const/4 v1, 0x1
 
-    invoke-direct {p0, v0, v1, v0}, Lcom/vk/music/stats/MusicStats;-><init>(Ljava/util/List;ILkotlin/jvm/internal/i;)V
+    invoke-direct {p0, v0, v1, v0}, Lcom/vk/music/stats/MusicStats;-><init>(Ljava/util/List;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     return-void
 .end method
@@ -60,7 +60,7 @@
             "(",
             "Ljava/util/List<",
             "+",
-            "Lcom/vk/music/stats/d;",
+            "Lcom/vk/music/stats/MusicStatsTracker;",
             ">;)V"
         }
     .end annotation
@@ -73,7 +73,7 @@
     return-void
 .end method
 
-.method public synthetic constructor <init>(Ljava/util/List;ILkotlin/jvm/internal/i;)V
+.method public synthetic constructor <init>(Ljava/util/List;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
     .locals 2
 
     const/4 p3, 0x1
@@ -84,25 +84,25 @@
 
     const/4 p1, 0x2
 
-    new-array p1, p1, [Lcom/vk/music/stats/d;
+    new-array p1, p1, [Lcom/vk/music/stats/MusicStatsTracker;
 
     const/4 p2, 0x0
 
     .line 2
-    new-instance v0, Lcom/vk/music/stats/e;
+    new-instance v0, Lcom/vk/music/stats/MyMusicStatsTracker;
 
     sget-object v1, Lcom/vk/music/stats/MusicStats$1;->a:Lcom/vk/music/stats/MusicStats$1;
 
-    invoke-direct {v0, v1}, Lcom/vk/music/stats/e;-><init>(Lkotlin/jvm/b/a;)V
+    invoke-direct {v0, v1}, Lcom/vk/music/stats/MyMusicStatsTracker;-><init>(Lkotlin/jvm/b/Functions;)V
 
     aput-object v0, p1, p2
 
     .line 3
-    new-instance p2, Lcom/vk/music/stats/g;
+    new-instance p2, Lcom/vk/music/stats/VKMusicStatsTracker;
 
     sget-object v0, Lcom/vk/music/stats/MusicStats$2;->a:Lcom/vk/music/stats/MusicStats$2;
 
-    invoke-direct {p2, v0}, Lcom/vk/music/stats/g;-><init>(Lkotlin/jvm/b/b;)V
+    invoke-direct {p2, v0}, Lcom/vk/music/stats/VKMusicStatsTracker;-><init>(Lkotlin/jvm/b/Functions2;)V
 
     aput-object p2, p1, p3
 
@@ -121,16 +121,16 @@
     .locals 10
 
     .line 5
-    invoke-static {}, Lcom/vk/music/j/a;->p()Lcom/vk/music/j/a;
+    invoke-static {}, Lcom/vk/music/j/MusicPrefs;->p()Lcom/vk/music/j/MusicPrefs;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/vk/music/j/a;->d()Ljava/lang/String;
+    invoke-virtual {v0}, Lcom/vk/music/j/MusicPrefs;->d()Ljava/lang/String;
 
     move-result-object v0
 
     .line 6
-    invoke-static {v0, p1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v0, p1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v1
 
@@ -140,20 +140,20 @@
 
     .line 7
     :cond_0
-    invoke-static {}, Lcom/vk/music/j/a;->p()Lcom/vk/music/j/a;
+    invoke-static {}, Lcom/vk/music/j/MusicPrefs;->p()Lcom/vk/music/j/MusicPrefs;
 
     move-result-object v1
 
     const-string v2, "MusicPrefs.getInstance()"
 
-    invoke-static {v1, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    invoke-virtual {v1}, Lcom/vk/music/j/a;->a()J
+    invoke-virtual {v1}, Lcom/vk/music/j/MusicPrefs;->a()J
 
     move-result-wide v1
 
     .line 8
-    invoke-static {}, Lcom/vk/utils/g/a;->c()J
+    invoke-static {}, Lcom/vk/utils/g/ServerClock;->c()J
 
     move-result-wide v3
 
@@ -174,11 +174,11 @@
 
     .line 9
     :cond_2
-    new-instance v1, Lcom/vk/music/stats/f;
+    new-instance v1, Lcom/vk/music/stats/PlayerStateChangedParams;
 
     const-string v2, "prevState"
 
-    invoke-static {v0, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     const/16 v2, 0x3e8
 
@@ -186,7 +186,7 @@
 
     div-long/2addr v5, v7
 
-    invoke-direct {v1, p1, v0, v5, v6}, Lcom/vk/music/stats/f;-><init>(Ljava/lang/String;Ljava/lang/String;J)V
+    invoke-direct {v1, p1, v0, v5, v6}, Lcom/vk/music/stats/PlayerStateChangedParams;-><init>(Ljava/lang/String;Ljava/lang/String;J)V
 
     .line 10
     iget-object v0, p0, Lcom/vk/music/stats/MusicStats;->b:Ljava/util/List;
@@ -207,24 +207,24 @@
 
     move-result-object v2
 
-    check-cast v2, Lcom/vk/music/stats/d;
+    check-cast v2, Lcom/vk/music/stats/MusicStatsTracker;
 
     .line 12
-    invoke-interface {v2, v1}, Lcom/vk/music/stats/d;->a(Lcom/vk/music/stats/f;)V
+    invoke-interface {v2, v1}, Lcom/vk/music/stats/MusicStatsTracker;->a(Lcom/vk/music/stats/PlayerStateChangedParams;)V
 
     goto :goto_0
 
     .line 13
     :cond_3
-    invoke-static {}, Lcom/vk/music/j/a;->p()Lcom/vk/music/j/a;
+    invoke-static {}, Lcom/vk/music/j/MusicPrefs;->p()Lcom/vk/music/j/MusicPrefs;
 
     move-result-object v0
 
     .line 14
-    invoke-virtual {v0, p1}, Lcom/vk/music/j/a;->a(Ljava/lang/String;)V
+    invoke-virtual {v0, p1}, Lcom/vk/music/j/MusicPrefs;->a(Ljava/lang/String;)V
 
     .line 15
-    invoke-virtual {v0, v3, v4}, Lcom/vk/music/j/a;->a(J)V
+    invoke-virtual {v0, v3, v4}, Lcom/vk/music/j/MusicPrefs;->a(J)V
 
     return-void
 .end method
@@ -253,10 +253,10 @@
 
     move-result-object v1
 
-    check-cast v1, Lcom/vk/music/stats/d;
+    check-cast v1, Lcom/vk/music/stats/MusicStatsTracker;
 
     .line 12
-    invoke-interface {v1}, Lcom/vk/music/stats/d;->a()V
+    invoke-interface {v1}, Lcom/vk/music/stats/MusicStatsTracker;->a()V
 
     goto :goto_0
 
@@ -268,15 +268,15 @@
     .locals 4
 
     .line 21
-    invoke-static {}, Lcom/vk/bridges/g;->a()Lcom/vk/bridges/f;
+    invoke-static {}, Lcom/vk/bridges/AuthBridge;->a()Lcom/vk/bridges/AuthBridge3;
 
     move-result-object v0
 
-    invoke-interface {v0}, Lcom/vk/bridges/f;->c()Lcom/vk/bridges/a;
+    invoke-interface {v0}, Lcom/vk/bridges/AuthBridge3;->c()Lcom/vk/bridges/AuthBridge1;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/vk/bridges/a;->i()Z
+    invoke-virtual {v0}, Lcom/vk/bridges/AuthBridge1;->i()Z
 
     move-result v0
 
@@ -297,7 +297,7 @@
     if-ltz v2, :cond_0
 
     .line 22
-    invoke-static {}, Lcom/vk/music/j/a;->p()Lcom/vk/music/j/a;
+    invoke-static {}, Lcom/vk/music/j/MusicPrefs;->p()Lcom/vk/music/j/MusicPrefs;
 
     move-result-object p1
 
@@ -309,7 +309,7 @@
     .line 24
     new-instance v0, Ljava/util/Date;
 
-    invoke-virtual {p1}, Lcom/vk/music/j/a;->n()J
+    invoke-virtual {p1}, Lcom/vk/music/j/MusicPrefs;->n()J
 
     move-result-wide v1
 
@@ -342,7 +342,7 @@
 
     move-result-object v0
 
-    invoke-static {v2, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v2, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v0
 
@@ -357,20 +357,20 @@
 
     move-result-wide v2
 
-    invoke-virtual {p1, v2, v3}, Lcom/vk/music/j/a;->d(J)V
+    invoke-virtual {p1, v2, v3}, Lcom/vk/music/j/MusicPrefs;->d(J)V
 
     .line 29
-    new-instance p1, Lcom/vk/libvideo/live/base/c;
+    new-instance p1, Lcom/vk/libvideo/live/base/CustomEvent;
 
     const-string p2, "audio_played_in_bg_more_than_5_minutes"
 
-    invoke-direct {p1, p2}, Lcom/vk/libvideo/live/base/c;-><init>(Ljava/lang/Object;)V
+    invoke-direct {p1, p2}, Lcom/vk/libvideo/live/base/CustomEvent;-><init>(Ljava/lang/Object;)V
 
     .line 30
-    invoke-virtual {p1, v1}, Lcom/vk/libvideo/live/base/c;->a(Z)Lcom/vk/libvideo/live/base/c;
+    invoke-virtual {p1, v1}, Lcom/vk/libvideo/live/base/CustomEvent;->a(Z)Lcom/vk/libvideo/live/base/CustomEvent;
 
     .line 31
-    invoke-virtual {p1}, Lcom/vk/libvideo/live/base/c;->a()Lcom/vk/libvideo/live/base/c;
+    invoke-virtual {p1}, Lcom/vk/libvideo/live/base/CustomEvent;->a()Lcom/vk/libvideo/live/base/CustomEvent;
 
     :cond_0
     return-void
@@ -411,7 +411,7 @@
     const-string v2, "extra"
 
     .line 35
-    invoke-static {v1, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {p0, p1, v0, v1, p2}, Lcom/vk/music/stats/MusicStats;->a(Landroid/content/Intent;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
 
@@ -433,12 +433,12 @@
 
     .line 37
     :cond_0
-    new-instance p1, Lcom/vk/libvideo/live/base/c;
+    new-instance p1, Lcom/vk/libvideo/live/base/CustomEvent;
 
-    invoke-direct {p1, p2}, Lcom/vk/libvideo/live/base/c;-><init>(Ljava/lang/Object;)V
+    invoke-direct {p1, p2}, Lcom/vk/libvideo/live/base/CustomEvent;-><init>(Ljava/lang/Object;)V
 
     .line 38
-    invoke-virtual {p1, p4}, Lcom/vk/libvideo/live/base/c;->a(Ljava/lang/String;)Lcom/vk/libvideo/live/base/c;
+    invoke-virtual {p1, p4}, Lcom/vk/libvideo/live/base/CustomEvent;->a(Ljava/lang/String;)Lcom/vk/libvideo/live/base/CustomEvent;
 
     .line 39
     invoke-interface {p3}, Ljava/lang/CharSequence;->length()I
@@ -459,19 +459,19 @@
     :goto_0
     if-eqz p2, :cond_2
 
-    invoke-virtual {p1, p3}, Lcom/vk/libvideo/live/base/c;->b(Ljava/lang/String;)Lcom/vk/libvideo/live/base/c;
+    invoke-virtual {p1, p3}, Lcom/vk/libvideo/live/base/CustomEvent;->b(Ljava/lang/String;)Lcom/vk/libvideo/live/base/CustomEvent;
 
     .line 40
     :cond_2
-    invoke-virtual {p1, p4}, Lcom/vk/libvideo/live/base/c;->a(Z)Lcom/vk/libvideo/live/base/c;
+    invoke-virtual {p1, p4}, Lcom/vk/libvideo/live/base/CustomEvent;->a(Z)Lcom/vk/libvideo/live/base/CustomEvent;
 
     .line 41
-    invoke-virtual {p1}, Lcom/vk/libvideo/live/base/c;->a()Lcom/vk/libvideo/live/base/c;
+    invoke-virtual {p1}, Lcom/vk/libvideo/live/base/CustomEvent;->a()Lcom/vk/libvideo/live/base/CustomEvent;
 
     return-void
 .end method
 
-.method public a(Lcom/vk/music/stats/f;)V
+.method public a(Lcom/vk/music/stats/PlayerStateChangedParams;)V
     .locals 2
 
     .line 4
@@ -493,10 +493,10 @@
 
     move-result-object v1
 
-    check-cast v1, Lcom/vk/music/stats/d;
+    check-cast v1, Lcom/vk/music/stats/MusicStatsTracker;
 
     .line 6
-    invoke-interface {v1, p1}, Lcom/vk/music/stats/d;->a(Lcom/vk/music/stats/f;)V
+    invoke-interface {v1, p1}, Lcom/vk/music/stats/MusicStatsTracker;->a(Lcom/vk/music/stats/PlayerStateChangedParams;)V
 
     goto :goto_0
 
@@ -504,7 +504,7 @@
     return-void
 .end method
 
-.method public a(Lcom/vk/music/stats/i/a;)V
+.method public a(Lcom/vk/music/stats/i/MusicPlaybackParams;)V
     .locals 2
 
     .line 13
@@ -526,10 +526,10 @@
 
     move-result-object v1
 
-    check-cast v1, Lcom/vk/music/stats/d;
+    check-cast v1, Lcom/vk/music/stats/MusicStatsTracker;
 
     .line 15
-    invoke-interface {v1, p1}, Lcom/vk/music/stats/d;->a(Lcom/vk/music/stats/i/a;)V
+    invoke-interface {v1, p1}, Lcom/vk/music/stats/MusicStatsTracker;->a(Lcom/vk/music/stats/i/MusicPlaybackParams;)V
 
     goto :goto_0
 
@@ -559,10 +559,10 @@
 
     move-result-object v1
 
-    check-cast v1, Lcom/vk/music/stats/d;
+    check-cast v1, Lcom/vk/music/stats/MusicStatsTracker;
 
     .line 20
-    invoke-interface {v1, p1}, Lcom/vk/music/stats/d;->a(Ljava/lang/String;)V
+    invoke-interface {v1, p1}, Lcom/vk/music/stats/MusicStatsTracker;->a(Ljava/lang/String;)V
 
     goto :goto_0
 
@@ -570,7 +570,7 @@
     return-void
 .end method
 
-.method public a(Ljava/lang/String;Lcom/vk/music/stats/c;)V
+.method public a(Ljava/lang/String;Lcom/vk/music/stats/MusicStatsRefer;)V
     .locals 2
 
     .line 1
@@ -592,10 +592,10 @@
 
     move-result-object v1
 
-    check-cast v1, Lcom/vk/music/stats/d;
+    check-cast v1, Lcom/vk/music/stats/MusicStatsTracker;
 
     .line 3
-    invoke-interface {v1, p1, p2}, Lcom/vk/music/stats/d;->a(Ljava/lang/String;Lcom/vk/music/stats/c;)V
+    invoke-interface {v1, p1, p2}, Lcom/vk/music/stats/MusicStatsTracker;->a(Ljava/lang/String;Lcom/vk/music/stats/MusicStatsRefer;)V
 
     goto :goto_0
 
@@ -625,10 +625,10 @@
 
     move-result-object v1
 
-    check-cast v1, Lcom/vk/music/stats/d;
+    check-cast v1, Lcom/vk/music/stats/MusicStatsTracker;
 
     .line 9
-    invoke-interface {v1, p1, p2}, Lcom/vk/music/stats/d;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-interface {v1, p1, p2}, Lcom/vk/music/stats/MusicStatsTracker;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     goto :goto_0
 
@@ -680,10 +680,10 @@
 
     move-result-object v1
 
-    check-cast v1, Lcom/vk/music/stats/d;
+    check-cast v1, Lcom/vk/music/stats/MusicStatsTracker;
 
     .line 15
-    invoke-interface {v1}, Lcom/vk/music/stats/d;->b()V
+    invoke-interface {v1}, Lcom/vk/music/stats/MusicStatsTracker;->b()V
 
     goto :goto_0
 
@@ -691,7 +691,7 @@
     return-void
 .end method
 
-.method public b(Lcom/vk/music/stats/i/a;)V
+.method public b(Lcom/vk/music/stats/i/MusicPlaybackParams;)V
     .locals 2
 
     .line 10
@@ -713,10 +713,10 @@
 
     move-result-object v1
 
-    check-cast v1, Lcom/vk/music/stats/d;
+    check-cast v1, Lcom/vk/music/stats/MusicStatsTracker;
 
     .line 12
-    invoke-interface {v1, p1}, Lcom/vk/music/stats/d;->b(Lcom/vk/music/stats/i/a;)V
+    invoke-interface {v1, p1}, Lcom/vk/music/stats/MusicStatsTracker;->b(Lcom/vk/music/stats/i/MusicPlaybackParams;)V
 
     goto :goto_0
 
@@ -746,10 +746,10 @@
 
     move-result-object v1
 
-    check-cast v1, Lcom/vk/music/stats/d;
+    check-cast v1, Lcom/vk/music/stats/MusicStatsTracker;
 
     .line 3
-    invoke-interface {v1, p1}, Lcom/vk/music/stats/d;->b(Ljava/lang/String;)V
+    invoke-interface {v1, p1}, Lcom/vk/music/stats/MusicStatsTracker;->b(Ljava/lang/String;)V
 
     goto :goto_0
 
@@ -783,10 +783,10 @@
 
     move-result-object v1
 
-    check-cast v1, Lcom/vk/music/stats/d;
+    check-cast v1, Lcom/vk/music/stats/MusicStatsTracker;
 
     .line 6
-    invoke-interface {v1, p1, p2}, Lcom/vk/music/stats/d;->b(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-interface {v1, p1, p2}, Lcom/vk/music/stats/MusicStatsTracker;->b(Ljava/lang/String;Ljava/lang/String;)V
 
     goto :goto_0
 
@@ -816,10 +816,10 @@
 
     move-result-object v1
 
-    check-cast v1, Lcom/vk/music/stats/d;
+    check-cast v1, Lcom/vk/music/stats/MusicStatsTracker;
 
     .line 9
-    invoke-interface {v1, p1}, Lcom/vk/music/stats/d;->b(Z)V
+    invoke-interface {v1, p1}, Lcom/vk/music/stats/MusicStatsTracker;->b(Z)V
 
     goto :goto_0
 
@@ -849,10 +849,10 @@
 
     move-result-object v1
 
-    check-cast v1, Lcom/vk/music/stats/d;
+    check-cast v1, Lcom/vk/music/stats/MusicStatsTracker;
 
     .line 12
-    invoke-interface {v1}, Lcom/vk/music/stats/d;->c()V
+    invoke-interface {v1}, Lcom/vk/music/stats/MusicStatsTracker;->c()V
 
     goto :goto_0
 
@@ -860,25 +860,25 @@
     return-void
 .end method
 
-.method public c(Lcom/vk/music/stats/i/a;)V
+.method public c(Lcom/vk/music/stats/i/MusicPlaybackParams;)V
     .locals 3
 
     .line 2
-    invoke-static {}, Lcom/vk/music/j/a;->p()Lcom/vk/music/j/a;
+    invoke-static {}, Lcom/vk/music/j/MusicPrefs;->p()Lcom/vk/music/j/MusicPrefs;
 
     move-result-object v0
 
     const-string v1, "none"
 
     .line 3
-    invoke-virtual {v0, v1}, Lcom/vk/music/j/a;->a(Ljava/lang/String;)V
+    invoke-virtual {v0, v1}, Lcom/vk/music/j/MusicPrefs;->a(Ljava/lang/String;)V
 
     .line 4
-    invoke-static {}, Lcom/vk/utils/g/a;->c()J
+    invoke-static {}, Lcom/vk/utils/g/ServerClock;->c()J
 
     move-result-wide v1
 
-    invoke-virtual {v0, v1, v2}, Lcom/vk/music/j/a;->a(J)V
+    invoke-virtual {v0, v1, v2}, Lcom/vk/music/j/MusicPrefs;->a(J)V
 
     if-eqz p1, :cond_0
 
@@ -901,10 +901,10 @@
 
     move-result-object v1
 
-    check-cast v1, Lcom/vk/music/stats/d;
+    check-cast v1, Lcom/vk/music/stats/MusicStatsTracker;
 
     .line 7
-    invoke-interface {v1, p1}, Lcom/vk/music/stats/d;->d(Lcom/vk/music/stats/i/a;)V
+    invoke-interface {v1, p1}, Lcom/vk/music/stats/MusicStatsTracker;->d(Lcom/vk/music/stats/i/MusicPlaybackParams;)V
 
     goto :goto_0
 
@@ -916,7 +916,7 @@
     .locals 0
 
     .line 1
-    invoke-static {p0, p1}, Lcom/vk/music/stats/d$a;->b(Lcom/vk/music/stats/d;Ljava/lang/String;)V
+    invoke-static {p0, p1}, Lcom/vk/music/stats/MusicStatsTracker$a;->b(Lcom/vk/music/stats/MusicStatsTracker;Ljava/lang/String;)V
 
     return-void
 .end method
@@ -954,7 +954,7 @@
     return-void
 .end method
 
-.method public d(Lcom/vk/music/stats/i/a;)V
+.method public d(Lcom/vk/music/stats/i/MusicPlaybackParams;)V
     .locals 2
 
     .line 1
@@ -976,10 +976,10 @@
 
     move-result-object v1
 
-    check-cast v1, Lcom/vk/music/stats/d;
+    check-cast v1, Lcom/vk/music/stats/MusicStatsTracker;
 
     .line 3
-    invoke-interface {v1, p1}, Lcom/vk/music/stats/d;->d(Lcom/vk/music/stats/i/a;)V
+    invoke-interface {v1, p1}, Lcom/vk/music/stats/MusicStatsTracker;->d(Lcom/vk/music/stats/i/MusicPlaybackParams;)V
 
     goto :goto_0
 

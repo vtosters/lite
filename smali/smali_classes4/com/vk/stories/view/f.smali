@@ -3,7 +3,7 @@
 .source "lambda"
 
 # interfaces
-.implements Lcom/facebook/common/internal/j;
+.implements Lcom/facebook/common/internal/Supplier;
 
 
 # instance fields
@@ -34,7 +34,7 @@
 
     iget-object v1, p0, Lcom/vk/stories/view/f;->b:Ljava/util/List;
 
-    invoke-virtual {v0, v1}, Lcom/vk/stories/view/StoryCircleImageView;->a(Ljava/util/List;)Lcom/facebook/datasource/b;
+    invoke-virtual {v0, v1}, Lcom/vk/stories/view/StoryCircleImageView;->a(Ljava/util/List;)Lcom/facebook/datasource/DataSource;
 
     move-result-object v0
 

@@ -54,7 +54,7 @@
 
     invoke-direct {v1, p0, p1}, Lcom/vk/im/ui/components/msg_send/picker/location/LocationState$LocationCallback$onSelectAttach$1;-><init>(Lcom/vk/im/ui/components/msg_send/picker/location/LocationState$LocationCallback;Lcom/vk/im/engine/models/attaches/Attach;)V
 
-    invoke-virtual {v0, v1}, Lcom/vk/im/ui/components/msg_send/picker/PickerVc;->a(Lkotlin/jvm/b/a;)V
+    invoke-virtual {v0, v1}, Lcom/vk/im/ui/components/msg_send/picker/PickerVc;->a(Lkotlin/jvm/b/Functions;)V
 
     return-void
 .end method
@@ -75,13 +75,13 @@
 
     iget-object p1, p0, Lcom/vk/im/ui/components/msg_send/picker/location/LocationState$LocationCallback;->a:Lcom/vk/im/ui/components/msg_send/picker/location/LocationState;
 
-    invoke-virtual {p1}, Lcom/vk/im/ui/components/msg_send/picker/d;->b()Ljava/lang/String;
+    invoke-virtual {p1}, Lcom/vk/im/ui/components/msg_send/picker/PickerState;->b()Ljava/lang/String;
 
     move-result-object v4
 
     iget-object p1, p0, Lcom/vk/im/ui/components/msg_send/picker/location/LocationState$LocationCallback;->a:Lcom/vk/im/ui/components/msg_send/picker/location/LocationState;
 
-    invoke-virtual {p1}, Lcom/vk/im/ui/components/msg_send/picker/d;->d()Lcom/vk/im/engine/models/messages/e;
+    invoke-virtual {p1}, Lcom/vk/im/ui/components/msg_send/picker/PickerState;->d()Lcom/vk/im/engine/models/messages/MsgSendSource;
 
     move-result-object v5
 
@@ -95,7 +95,7 @@
 
     move-object v6, p2
 
-    invoke-static/range {v1 .. v9}, Lcom/vk/im/ui/components/msg_send/picker/PickerComponent$a$b;->a(Lcom/vk/im/ui/components/msg_send/picker/PickerComponent$a;Ljava/lang/CharSequence;Ljava/util/List;Ljava/lang/String;Lcom/vk/im/engine/models/messages/e;Landroid/view/View;Lkotlin/jvm/b/a;ILjava/lang/Object;)V
+    invoke-static/range {v1 .. v9}, Lcom/vk/im/ui/components/msg_send/picker/PickerComponent$a$b;->a(Lcom/vk/im/ui/components/msg_send/picker/PickerComponent$a;Ljava/lang/CharSequence;Ljava/util/List;Ljava/lang/String;Lcom/vk/im/engine/models/messages/MsgSendSource;Landroid/view/View;Lkotlin/jvm/b/Functions;ILjava/lang/Object;)V
 
     return-void
 .end method
@@ -114,7 +114,7 @@
 
     const/4 v2, 0x1
 
-    invoke-static {v0, v1, v2, v1}, Lcom/vk/im/ui/components/msg_send/picker/PickerVc;->a(Lcom/vk/im/ui/components/msg_send/picker/PickerVc;Lkotlin/jvm/b/b;ILjava/lang/Object;)V
+    invoke-static {v0, v1, v2, v1}, Lcom/vk/im/ui/components/msg_send/picker/PickerVc;->a(Lcom/vk/im/ui/components/msg_send/picker/PickerVc;Lkotlin/jvm/b/Functions2;ILjava/lang/Object;)V
 
     return-void
 .end method
@@ -163,7 +163,7 @@
 
     invoke-direct {v1, p0}, Lcom/vk/im/ui/components/msg_send/picker/location/LocationState$LocationCallback$onSearchRequest$1;-><init>(Lcom/vk/im/ui/components/msg_send/picker/location/LocationState$LocationCallback;)V
 
-    invoke-virtual {v0, v1}, Lcom/vk/im/ui/components/msg_send/picker/PickerVc;->a(Lkotlin/jvm/b/b;)V
+    invoke-virtual {v0, v1}, Lcom/vk/im/ui/components/msg_send/picker/PickerVc;->a(Lkotlin/jvm/b/Functions2;)V
 
     return-void
 .end method

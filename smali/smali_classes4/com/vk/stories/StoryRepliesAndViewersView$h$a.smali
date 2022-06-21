@@ -3,12 +3,12 @@
 .source "StoryRepliesAndViewersView.kt"
 
 # interfaces
-.implements Lcom/vk/common/g/g;
+.implements Lcom/vk/common/g/VoidF1;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/stories/StoryRepliesAndViewersView$h;->onCreateViewHolder(Landroid/view/ViewGroup;I)Lcom/vk/stories/holders/n;
+    value = Lcom/vk/stories/StoryRepliesAndViewersView$h;->onCreateViewHolder(Landroid/view/ViewGroup;I)Lcom/vk/stories/holders/StoryUserProfileHolder;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -22,7 +22,7 @@
         "Ljava/lang/Object;",
         ">",
         "Ljava/lang/Object;",
-        "Lcom/vk/common/g/g<",
+        "Lcom/vk/common/g/VoidF1<",
         "Lcom/vk/dto/user/UserProfile;",
         ">;"
     }
@@ -52,15 +52,15 @@
     .line 2
     iget-object v0, p0, Lcom/vk/stories/StoryRepliesAndViewersView$h$a;->a:Lcom/vk/stories/StoryRepliesAndViewersView$h;
 
-    invoke-virtual {v0}, Lcom/vk/stories/StoryRepliesAndViewersView$h;->j()Lkotlin/jvm/b/b;
+    invoke-virtual {v0}, Lcom/vk/stories/StoryRepliesAndViewersView$h;->j()Lkotlin/jvm/b/Functions2;
 
     move-result-object v0
 
     const-string v1, "it"
 
-    invoke-static {p1, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    invoke-interface {v0, p1}, Lkotlin/jvm/b/b;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v0, p1}, Lkotlin/jvm/b/Functions2;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
 
     return-void
 .end method

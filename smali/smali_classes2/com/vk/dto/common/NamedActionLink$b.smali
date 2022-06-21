@@ -24,7 +24,7 @@
     return-void
 .end method
 
-.method public synthetic constructor <init>(Lkotlin/jvm/internal/i;)V
+.method public synthetic constructor <init>(Lkotlin/jvm/internal/DefaultConstructorMarker;)V
     .locals 0
 
     .line 2
@@ -48,9 +48,9 @@
     if-eqz v0, :cond_0
 
     .line 2
-    sget-object v1, Lcom/vk/dto/photo/Photo;->d0:Lcom/vk/dto/common/data/c;
+    sget-object v1, Lcom/vk/dto/photo/Photo;->d0:Lcom/vk/dto/common/data/JsonParser;
 
-    invoke-virtual {v1, v0}, Lcom/vk/dto/common/data/c;->a(Lorg/json/JSONObject;)Ljava/lang/Object;
+    invoke-virtual {v1, v0}, Lcom/vk/dto/common/data/JsonParser;->a(Lorg/json/JSONObject;)Ljava/lang/Object;
 
     move-result-object v0
 
@@ -88,7 +88,7 @@
 
     const-string v4, "json.optString(\"title\")"
 
-    invoke-static {v3, v4}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v3, v4}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     const-string v4, "caption"
 
@@ -99,7 +99,7 @@
 
     const-string v4, "json.optString(\"caption\")"
 
-    invoke-static {p1, v4}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v4}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 8
     invoke-direct {v1, v2, v3, p1, v0}, Lcom/vk/dto/common/NamedActionLink;-><init>(Lcom/vk/dto/common/actions/ActionOpenUrl;Ljava/lang/String;Ljava/lang/String;Lcom/vk/dto/photo/Photo;)V

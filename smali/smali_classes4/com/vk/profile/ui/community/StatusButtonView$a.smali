@@ -62,7 +62,7 @@
     return-void
 .end method
 
-.method public synthetic constructor <init>(IIIIZZILkotlin/jvm/internal/i;)V
+.method public synthetic constructor <init>(IIIIZZILkotlin/jvm/internal/DefaultConstructorMarker;)V
     .locals 7
 
     and-int/lit8 p8, p7, 0x10

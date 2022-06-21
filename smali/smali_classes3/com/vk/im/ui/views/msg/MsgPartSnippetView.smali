@@ -3,7 +3,7 @@
 .source "MsgPartSnippetView.java"
 
 # interfaces
-.implements Lcom/vk/im/ui/views/msg/a;
+.implements Lcom/vk/im/ui/views/msg/WithTime;
 
 
 # instance fields
@@ -928,7 +928,7 @@
 
     sget v6, Lcom/vk/im/ui/d;->gray_300:I
 
-    invoke-static {v0, v5, v6}, Lcom/vk/core/extensions/a0;->a(Landroid/widget/TextView;II)V
+    invoke-static {v0, v5, v6}, Lcom/vk/core/extensions/TextViewExt;->a(Landroid/widget/TextView;II)V
 
     .line 25
     new-instance v0, Lcom/vk/im/ui/views/FixTextView;

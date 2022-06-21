@@ -3,7 +3,7 @@
 .source "SingleFlatMap.java"
 
 # interfaces
-.implements Lc/a/v;
+.implements Lio/reactivex/SingleObserver;
 
 
 # annotations
@@ -22,7 +22,7 @@
         "Ljava/lang/Object;",
         ">",
         "Ljava/lang/Object;",
-        "Lc/a/v<",
+        "Lio/reactivex/SingleObserver<",
         "TR;>;"
     }
 .end annotation
@@ -33,16 +33,16 @@
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/util/concurrent/atomic/AtomicReference<",
-            "Lio/reactivex/disposables/b;",
+            "Lio/reactivex/disposables/Disposable;",
             ">;"
         }
     .end annotation
 .end field
 
-.field final b:Lc/a/v;
+.field final b:Lio/reactivex/SingleObserver;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Lc/a/v<",
+            "Lio/reactivex/SingleObserver<",
             "-TR;>;"
         }
     .end annotation
@@ -50,15 +50,15 @@
 
 
 # direct methods
-.method constructor <init>(Ljava/util/concurrent/atomic/AtomicReference;Lc/a/v;)V
+.method constructor <init>(Ljava/util/concurrent/atomic/AtomicReference;Lio/reactivex/SingleObserver;)V
     .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
             "Ljava/util/concurrent/atomic/AtomicReference<",
-            "Lio/reactivex/disposables/b;",
+            "Lio/reactivex/disposables/Disposable;",
             ">;",
-            "Lc/a/v<",
+            "Lio/reactivex/SingleObserver<",
             "-TR;>;)V"
         }
     .end annotation
@@ -70,20 +70,20 @@
     iput-object p1, p0, Lio/reactivex/internal/operators/single/SingleFlatMap$SingleFlatMapCallback$a;->a:Ljava/util/concurrent/atomic/AtomicReference;
 
     .line 3
-    iput-object p2, p0, Lio/reactivex/internal/operators/single/SingleFlatMap$SingleFlatMapCallback$a;->b:Lc/a/v;
+    iput-object p2, p0, Lio/reactivex/internal/operators/single/SingleFlatMap$SingleFlatMapCallback$a;->b:Lio/reactivex/SingleObserver;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public a(Lio/reactivex/disposables/b;)V
+.method public a(Lio/reactivex/disposables/Disposable;)V
     .locals 1
 
     .line 1
     iget-object v0, p0, Lio/reactivex/internal/operators/single/SingleFlatMap$SingleFlatMapCallback$a;->a:Ljava/util/concurrent/atomic/AtomicReference;
 
-    invoke-static {v0, p1}, Lio/reactivex/internal/disposables/DisposableHelper;->a(Ljava/util/concurrent/atomic/AtomicReference;Lio/reactivex/disposables/b;)Z
+    invoke-static {v0, p1}, Lio/reactivex/internal/disposables/DisposableHelper;->a(Ljava/util/concurrent/atomic/AtomicReference;Lio/reactivex/disposables/Disposable;)Z
 
     return-void
 .end method
@@ -97,9 +97,9 @@
     .end annotation
 
     .line 2
-    iget-object v0, p0, Lio/reactivex/internal/operators/single/SingleFlatMap$SingleFlatMapCallback$a;->b:Lc/a/v;
+    iget-object v0, p0, Lio/reactivex/internal/operators/single/SingleFlatMap$SingleFlatMapCallback$a;->b:Lio/reactivex/SingleObserver;
 
-    invoke-interface {v0, p1}, Lc/a/v;->a(Ljava/lang/Object;)V
+    invoke-interface {v0, p1}, Lio/reactivex/SingleObserver;->a(Ljava/lang/Object;)V
 
     return-void
 .end method
@@ -108,9 +108,9 @@
     .locals 1
 
     .line 3
-    iget-object v0, p0, Lio/reactivex/internal/operators/single/SingleFlatMap$SingleFlatMapCallback$a;->b:Lc/a/v;
+    iget-object v0, p0, Lio/reactivex/internal/operators/single/SingleFlatMap$SingleFlatMapCallback$a;->b:Lio/reactivex/SingleObserver;
 
-    invoke-interface {v0, p1}, Lc/a/v;->a(Ljava/lang/Throwable;)V
+    invoke-interface {v0, p1}, Lio/reactivex/SingleObserver;->a(Ljava/lang/Throwable;)V
 
     return-void
 .end method

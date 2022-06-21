@@ -1,9 +1,9 @@
 .class public final Lcom/vk/cameraui/widgets/masks/MasksWrap;
-.super Lcom/vk/cameraui/widgets/masks/a;
+.super Lcom/vk/cameraui/widgets/masks/BaseMasksWrap;
 .source "MasksWrap.kt"
 
 # interfaces
-.implements Lcom/vk/stories/masks/a$a;
+.implements Lcom/vk/stories/masks/MasksAdapter$a;
 
 
 # annotations
@@ -17,21 +17,21 @@
 # instance fields
 .field public V:Lcom/vk/stories/masks/MasksView;
 
-.field private W:Lkotlin/jvm/b/b;
+.field private W:Lkotlin/jvm/b/Functions2;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Lkotlin/jvm/b/b<",
+            "Lkotlin/jvm/b/Functions2<",
             "-",
             "Ljava/util/List<",
-            "Lcom/vk/dto/masks/a;",
+            "Lcom/vk/dto/masks/MasksListItem;",
             ">;",
-            "Lkotlin/m;",
+            "Lkotlin/Unit;",
             ">;"
         }
     .end annotation
 .end field
 
-.field private a0:Lcom/vk/stories/masks/a;
+.field private a0:Lcom/vk/stories/masks/MasksAdapter;
 
 .field private final b0:Landroidx/recyclerview/widget/RecyclerView$AdapterDataObserver;
 
@@ -44,7 +44,7 @@
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, v1}, Lcom/vk/cameraui/widgets/masks/MasksWrap$b;-><init>(Lkotlin/jvm/internal/i;)V
+    invoke-direct {v0, v1}, Lcom/vk/cameraui/widgets/masks/MasksWrap$b;-><init>(Lkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     return-void
 .end method
@@ -64,7 +64,7 @@
 
     move-object v1, p1
 
-    invoke-direct/range {v0 .. v5}, Lcom/vk/cameraui/widgets/masks/MasksWrap;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;IILkotlin/jvm/internal/i;)V
+    invoke-direct/range {v0 .. v5}, Lcom/vk/cameraui/widgets/masks/MasksWrap;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;IILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     return-void
 .end method
@@ -84,7 +84,7 @@
 
     move-object v2, p2
 
-    invoke-direct/range {v0 .. v5}, Lcom/vk/cameraui/widgets/masks/MasksWrap;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;IILkotlin/jvm/internal/i;)V
+    invoke-direct/range {v0 .. v5}, Lcom/vk/cameraui/widgets/masks/MasksWrap;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;IILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     return-void
 .end method
@@ -95,14 +95,14 @@
     const v0, 0x7f0d0318
 
     .line 2
-    invoke-direct {p0, v0, p1, p2, p3}, Lcom/vk/cameraui/widgets/masks/a;-><init>(ILandroid/content/Context;Landroid/util/AttributeSet;I)V
+    invoke-direct {p0, v0, p1, p2, p3}, Lcom/vk/cameraui/widgets/masks/BaseMasksWrap;-><init>(ILandroid/content/Context;Landroid/util/AttributeSet;I)V
 
     .line 3
-    new-instance p1, Lcom/vk/stories/masks/a;
+    new-instance p1, Lcom/vk/stories/masks/MasksAdapter;
 
-    invoke-direct {p1, p0}, Lcom/vk/stories/masks/a;-><init>(Lcom/vk/stories/masks/a$a;)V
+    invoke-direct {p1, p0}, Lcom/vk/stories/masks/MasksAdapter;-><init>(Lcom/vk/stories/masks/MasksAdapter$a;)V
 
-    iput-object p1, p0, Lcom/vk/cameraui/widgets/masks/MasksWrap;->a0:Lcom/vk/stories/masks/a;
+    iput-object p1, p0, Lcom/vk/cameraui/widgets/masks/MasksWrap;->a0:Lcom/vk/stories/masks/MasksAdapter;
 
     .line 4
     new-instance p1, Lcom/vk/cameraui/widgets/masks/MasksWrap$a;
@@ -114,7 +114,7 @@
     return-void
 .end method
 
-.method public synthetic constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;IILkotlin/jvm/internal/i;)V
+.method public synthetic constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;IILkotlin/jvm/internal/DefaultConstructorMarker;)V
     .locals 0
 
     and-int/lit8 p5, p4, 0x2
@@ -137,11 +137,11 @@
     return-void
 .end method
 
-.method public static final synthetic a(Lcom/vk/cameraui/widgets/masks/MasksWrap;)Lcom/vk/stories/masks/a;
+.method public static final synthetic a(Lcom/vk/cameraui/widgets/masks/MasksWrap;)Lcom/vk/stories/masks/MasksAdapter;
     .locals 0
 
     .line 3
-    iget-object p0, p0, Lcom/vk/cameraui/widgets/masks/MasksWrap;->a0:Lcom/vk/stories/masks/a;
+    iget-object p0, p0, Lcom/vk/cameraui/widgets/masks/MasksWrap;->a0:Lcom/vk/stories/masks/MasksAdapter;
 
     return-object p0
 .end method
@@ -163,10 +163,10 @@
         value = {
             "(",
             "Ljava/util/ArrayList<",
-            "Lcom/vk/dto/masks/a;",
+            "Lcom/vk/dto/masks/MasksListItem;",
             ">;)",
             "Ljava/util/ArrayList<",
-            "Lcom/vk/dto/masks/a;",
+            "Lcom/vk/dto/masks/MasksListItem;",
             ">;"
         }
     .end annotation
@@ -183,9 +183,9 @@
     .locals 3
 
     .line 34
-    iget-object v0, p0, Lcom/vk/cameraui/widgets/masks/MasksWrap;->a0:Lcom/vk/stories/masks/a;
+    iget-object v0, p0, Lcom/vk/cameraui/widgets/masks/MasksWrap;->a0:Lcom/vk/stories/masks/MasksAdapter;
 
-    invoke-virtual {v0}, Lcom/vk/lists/i0;->f()Ljava/util/List;
+    invoke-virtual {v0}, Lcom/vk/lists/SimpleAdapter;->f()Ljava/util/List;
 
     move-result-object v0
 
@@ -205,10 +205,10 @@
 
     move-result-object v1
 
-    check-cast v1, Lcom/vk/dto/masks/a;
+    check-cast v1, Lcom/vk/dto/masks/MasksListItem;
 
     .line 35
-    invoke-virtual {v1}, Lcom/vk/dto/masks/a;->c()Lcom/vk/dto/masks/Mask;
+    invoke-virtual {v1}, Lcom/vk/dto/masks/MasksListItem;->c()Lcom/vk/dto/masks/Mask;
 
     move-result-object v1
 
@@ -220,7 +220,7 @@
     if-eqz v2, :cond_0
 
     .line 37
-    invoke-virtual {p0}, Lcom/vk/cameraui/widgets/masks/a;->getMasksController()Lcom/vk/masks/MasksController;
+    invoke-virtual {p0}, Lcom/vk/cameraui/widgets/masks/BaseMasksWrap;->getMasksController()Lcom/vk/masks/MasksController;
 
     move-result-object v2
 
@@ -244,7 +244,7 @@
     if-eqz v2, :cond_0
 
     .line 39
-    invoke-virtual {p0}, Lcom/vk/cameraui/widgets/masks/a;->getMasksController()Lcom/vk/masks/MasksController;
+    invoke-virtual {p0}, Lcom/vk/cameraui/widgets/masks/BaseMasksWrap;->getMasksController()Lcom/vk/masks/MasksController;
 
     move-result-object v2
 
@@ -254,7 +254,7 @@
 
     .line 40
     :cond_1
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     const/4 p1, 0x0
 
@@ -286,27 +286,27 @@
     .locals 9
 
     .line 4
-    invoke-virtual {p0}, Lcom/vk/cameraui/widgets/masks/a;->getCurrentMaskDownload()Lio/reactivex/disposables/b;
+    invoke-virtual {p0}, Lcom/vk/cameraui/widgets/masks/BaseMasksWrap;->getCurrentMaskDownload()Lio/reactivex/disposables/Disposable;
 
     move-result-object v0
 
     if-eqz v0, :cond_1
 
     .line 5
-    invoke-virtual {p0}, Lcom/vk/cameraui/widgets/masks/a;->getMasksStatistics()Lcom/vk/masks/b;
+    invoke-virtual {p0}, Lcom/vk/cameraui/widgets/masks/BaseMasksWrap;->getMasksStatistics()Lcom/vk/masks/MasksAnalytics;
 
     move-result-object v1
 
-    iget-object v2, p0, Lcom/vk/cameraui/widgets/masks/MasksWrap;->a0:Lcom/vk/stories/masks/a;
+    iget-object v2, p0, Lcom/vk/cameraui/widgets/masks/MasksWrap;->a0:Lcom/vk/stories/masks/MasksAdapter;
 
-    invoke-virtual {v2}, Lcom/vk/stories/masks/a;->k()Lcom/vk/dto/masks/Mask;
+    invoke-virtual {v2}, Lcom/vk/stories/masks/MasksAdapter;->k()Lcom/vk/dto/masks/Mask;
 
     move-result-object v2
 
-    invoke-virtual {v1, v2}, Lcom/vk/masks/b;->a(Lcom/vk/dto/masks/Mask;)V
+    invoke-virtual {v1, v2}, Lcom/vk/masks/MasksAnalytics;->a(Lcom/vk/dto/masks/Mask;)V
 
     .line 6
-    invoke-virtual {p0}, Lcom/vk/cameraui/widgets/masks/a;->getCameraTracker()Lcom/vk/cameraui/utils/CameraTracker;
+    invoke-virtual {p0}, Lcom/vk/cameraui/widgets/masks/BaseMasksWrap;->getCameraTracker()Lcom/vk/cameraui/utils/CameraTracker;
 
     move-result-object v1
 
@@ -318,18 +318,18 @@
 
     const/4 v4, 0x2
 
-    invoke-static {v1, v3, v2, v4, v2}, Lcom/vk/cameraui/utils/CameraTracker;->a(Lcom/vk/cameraui/utils/CameraTracker;Lcom/vk/stories/analytics/StoryPublishEvent;Lkotlin/jvm/b/b;ILjava/lang/Object;)V
+    invoke-static {v1, v3, v2, v4, v2}, Lcom/vk/cameraui/utils/CameraTracker;->a(Lcom/vk/cameraui/utils/CameraTracker;Lcom/vk/stories/analytics/StoryPublishEvent;Lkotlin/jvm/b/Functions2;ILjava/lang/Object;)V
 
     .line 7
     :cond_0
-    invoke-interface {v0}, Lio/reactivex/disposables/b;->o()V
+    invoke-interface {v0}, Lio/reactivex/disposables/Disposable;->o()V
 
     .line 8
-    invoke-virtual {p0, v2}, Lcom/vk/cameraui/widgets/masks/a;->setCurrentMaskDownload(Lio/reactivex/disposables/b;)V
+    invoke-virtual {p0, v2}, Lcom/vk/cameraui/widgets/masks/BaseMasksWrap;->setCurrentMaskDownload(Lio/reactivex/disposables/Disposable;)V
 
     .line 9
     :cond_1
-    invoke-virtual {p0}, Lcom/vk/cameraui/widgets/masks/a;->getProgressCircular()Lcom/vtosters/lite/ui/CircularProgressView;
+    invoke-virtual {p0}, Lcom/vk/cameraui/widgets/masks/BaseMasksWrap;->getProgressCircular()Lcom/vtosters/lite/ui/CircularProgressView;
 
     move-result-object v0
 
@@ -338,7 +338,7 @@
     invoke-virtual {v0, v1}, Lcom/vtosters/lite/ui/CircularProgressView;->setProgressNoAnim(F)V
 
     .line 10
-    invoke-virtual {p0}, Lcom/vk/cameraui/widgets/masks/a;->getMasksController()Lcom/vk/masks/MasksController;
+    invoke-virtual {p0}, Lcom/vk/cameraui/widgets/masks/BaseMasksWrap;->getMasksController()Lcom/vk/masks/MasksController;
 
     move-result-object v0
 
@@ -351,10 +351,10 @@
     const/4 v0, 0x1
 
     .line 11
-    invoke-virtual {p0, v0}, Lcom/vk/cameraui/widgets/masks/a;->d(Z)V
+    invoke-virtual {p0, v0}, Lcom/vk/cameraui/widgets/masks/BaseMasksWrap;->d(Z)V
 
     .line 12
-    invoke-virtual {p0, p2, v0}, Lcom/vk/cameraui/widgets/masks/a;->a(Lcom/vk/dto/masks/Mask;Z)V
+    invoke-virtual {p0, p2, v0}, Lcom/vk/cameraui/widgets/masks/BaseMasksWrap;->a(Lcom/vk/dto/masks/Mask;Z)V
 
     .line 13
     :cond_2
@@ -363,11 +363,11 @@
     move-result-wide v5
 
     .line 14
-    invoke-virtual {p0}, Lcom/vk/cameraui/widgets/masks/a;->getMasksController()Lcom/vk/masks/MasksController;
+    invoke-virtual {p0}, Lcom/vk/cameraui/widgets/masks/BaseMasksWrap;->getMasksController()Lcom/vk/masks/MasksController;
 
     move-result-object v0
 
-    invoke-virtual {v0, p2}, Lcom/vk/masks/MasksController;->c(Lcom/vk/dto/masks/Mask;)Lc/a/m;
+    invoke-virtual {v0, p2}, Lcom/vk/masks/MasksController;->c(Lcom/vk/dto/masks/Mask;)Lio/reactivex/Observable;
 
     move-result-object v0
 
@@ -390,11 +390,11 @@
     invoke-direct {p1, p0, p2}, Lcom/vk/cameraui/widgets/masks/MasksWrap$d;-><init>(Lcom/vk/cameraui/widgets/masks/MasksWrap;Lcom/vk/dto/masks/Mask;)V
 
     .line 17
-    invoke-virtual {v0, v8, p1}, Lc/a/m;->a(Lc/a/z/g;Lc/a/z/g;)Lio/reactivex/disposables/b;
+    invoke-virtual {v0, v8, p1}, Lio/reactivex/Observable;->a(Lio/reactivex/functions/Consumer;Lio/reactivex/functions/Consumer;)Lio/reactivex/disposables/Disposable;
 
     move-result-object p1
 
-    invoke-virtual {p0, p1}, Lcom/vk/cameraui/widgets/masks/a;->setCurrentMaskDownload(Lio/reactivex/disposables/b;)V
+    invoke-virtual {p0, p1}, Lcom/vk/cameraui/widgets/masks/BaseMasksWrap;->setCurrentMaskDownload(Lio/reactivex/disposables/Disposable;)V
 
     return-void
 .end method
@@ -420,7 +420,7 @@
 
     const-string v2, "context"
 
-    invoke-static {v1, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {v0, v1}, Lcom/vk/location/LocationUtils;->g(Landroid/content/Context;)Z
 
@@ -435,7 +435,7 @@
 
     move-result-object v4
 
-    invoke-static {v4, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v4, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     const/4 v5, 0x0
 
@@ -445,7 +445,7 @@
 
     const/4 v8, 0x0
 
-    invoke-static/range {v3 .. v8}, Lcom/vk/location/LocationUtils;->a(Lcom/vk/location/LocationUtils;Landroid/content/Context;Lkotlin/jvm/b/a;Lkotlin/jvm/b/a;ILjava/lang/Object;)V
+    invoke-static/range {v3 .. v8}, Lcom/vk/location/LocationUtils;->a(Lcom/vk/location/LocationUtils;Landroid/content/Context;Lkotlin/jvm/b/Functions;Lkotlin/jvm/b/Functions;ILjava/lang/Object;)V
 
     return-void
 
@@ -480,9 +480,9 @@
 
     move-result-object v3
 
-    invoke-static {v3, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v3, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    invoke-virtual {v1, v3}, Lcom/vk/location/LocationUtils;->d(Landroid/content/Context;)Lc/a/m;
+    invoke-virtual {v1, v3}, Lcom/vk/location/LocationUtils;->d(Landroid/content/Context;)Lio/reactivex/Observable;
 
     move-result-object v1
 
@@ -491,7 +491,7 @@
 
     invoke-direct {v2, v0}, Lcom/vk/cameraui/widgets/masks/MasksWrap$i;-><init>(Landroid/app/ProgressDialog;)V
 
-    invoke-virtual {v1, v2}, Lc/a/m;->a(Lc/a/z/l;)Lc/a/m;
+    invoke-virtual {v1, v2}, Lio/reactivex/Observable;->a(Lio/reactivex/functions/Predicate;)Lio/reactivex/Observable;
 
     move-result-object v1
 
@@ -506,11 +506,11 @@
     invoke-direct {p1, v0}, Lcom/vk/cameraui/widgets/masks/MasksWrap$k;-><init>(Landroid/app/ProgressDialog;)V
 
     .line 8
-    invoke-virtual {v1, v2, p1}, Lc/a/m;->a(Lc/a/z/g;Lc/a/z/g;)Lio/reactivex/disposables/b;
+    invoke-virtual {v1, v2, p1}, Lio/reactivex/Observable;->a(Lio/reactivex/functions/Consumer;Lio/reactivex/functions/Consumer;)Lio/reactivex/disposables/Disposable;
 
     move-result-object p1
 
-    invoke-virtual {p0, p1}, Lcom/vk/cameraui/widgets/masks/a;->setLocationDisposable(Lio/reactivex/disposables/b;)V
+    invoke-virtual {p0, p1}, Lcom/vk/cameraui/widgets/masks/BaseMasksWrap;->setLocationDisposable(Lio/reactivex/disposables/Disposable;)V
 
     return-void
 .end method
@@ -558,7 +558,7 @@
     goto :goto_0
 
     :cond_0
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     throw v2
 
@@ -618,7 +618,7 @@
 
     const-string v2, "context.getString(R.string.masks_more_info)"
 
-    invoke-static {v1, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     if-eqz v1, :cond_3
 
@@ -626,7 +626,7 @@
 
     move-result-object v1
 
-    invoke-static {v1, v4}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v1, v4}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     new-instance v2, Lcom/vk/cameraui/widgets/masks/MasksWrap$f;
 
@@ -647,7 +647,7 @@
 
     const-string v1, "context.getString(R.string.cancel)"
 
-    invoke-static {p1, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     if-eqz p1, :cond_2
 
@@ -655,7 +655,7 @@
 
     move-result-object p1
 
-    invoke-static {p1, v4}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v4}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     sget-object v1, Lcom/vk/cameraui/widgets/masks/MasksWrap$g;->a:Lcom/vk/cameraui/widgets/masks/MasksWrap$g;
 
@@ -680,7 +680,7 @@
 
     .line 10
     :cond_4
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     throw v2
 
@@ -698,7 +698,7 @@
 
     const-string v1, "context.getString(R.string.ok)"
 
-    invoke-static {p1, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     if-eqz p1, :cond_6
 
@@ -706,7 +706,7 @@
 
     move-result-object p1
 
-    invoke-static {p1, v4}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v4}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     sget-object v1, Lcom/vk/cameraui/widgets/masks/MasksWrap$h;->a:Lcom/vk/cameraui/widgets/masks/MasksWrap$h;
 
@@ -728,19 +728,19 @@
 
     .line 14
     :cond_7
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     throw v2
 
     .line 15
     :cond_8
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     throw v2
 
     .line 16
     :cond_9
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     throw v2
 .end method
@@ -756,11 +756,11 @@
     if-eqz v0, :cond_0
 
     .line 2
-    invoke-virtual {p0}, Lcom/vk/cameraui/widgets/masks/a;->getMasksController()Lcom/vk/masks/MasksController;
+    invoke-virtual {p0}, Lcom/vk/cameraui/widgets/masks/BaseMasksWrap;->getMasksController()Lcom/vk/masks/MasksController;
 
     move-result-object v0
 
-    invoke-virtual {v0, p1}, Lcom/vk/masks/MasksController;->e(Lcom/vk/dto/masks/Mask;)Lc/a/m;
+    invoke-virtual {v0, p1}, Lcom/vk/masks/MasksController;->e(Lcom/vk/dto/masks/Mask;)Lio/reactivex/Observable;
 
     move-result-object p1
 
@@ -769,11 +769,11 @@
 
     invoke-direct {v0, p0}, Lcom/vk/cameraui/widgets/masks/MasksWrap$l;-><init>(Lcom/vk/cameraui/widgets/masks/MasksWrap;)V
 
-    invoke-virtual {p1, v0}, Lc/a/m;->f(Lc/a/z/g;)Lio/reactivex/disposables/b;
+    invoke-virtual {p1, v0}, Lio/reactivex/Observable;->f(Lio/reactivex/functions/Consumer;)Lio/reactivex/disposables/Disposable;
 
     move-result-object p1
 
-    invoke-virtual {p0, p1}, Lcom/vk/cameraui/widgets/masks/a;->setMarkMaskAsViewedDisposable(Lio/reactivex/disposables/b;)V
+    invoke-virtual {p0, p1}, Lcom/vk/cameraui/widgets/masks/BaseMasksWrap;->setMarkMaskAsViewedDisposable(Lio/reactivex/disposables/Disposable;)V
 
     :cond_0
     return-void
@@ -783,7 +783,7 @@
     .locals 1
 
     .line 1
-    iget-object v0, p0, Lcom/vk/cameraui/widgets/masks/MasksWrap;->a0:Lcom/vk/stories/masks/a;
+    iget-object v0, p0, Lcom/vk/cameraui/widgets/masks/MasksWrap;->a0:Lcom/vk/stories/masks/MasksAdapter;
 
     invoke-virtual {v0}, Landroidx/recyclerview/widget/RecyclerView$Adapter;->notifyDataSetChanged()V
 
@@ -792,7 +792,7 @@
 
 
 # virtual methods
-.method public a(Lcom/vk/masks/MasksController$MasksCatalogType;)Lcom/vk/lists/t;
+.method public a(Lcom/vk/masks/MasksController$MasksCatalogType;)Lcom/vk/lists/PaginationHelper;
     .locals 1
 
     .line 5
@@ -800,18 +800,18 @@
 
     invoke-direct {v0, p0, p1}, Lcom/vk/cameraui/widgets/masks/MasksWrap$e;-><init>(Lcom/vk/cameraui/widgets/masks/MasksWrap;Lcom/vk/masks/MasksController$MasksCatalogType;)V
 
-    invoke-static {v0}, Lcom/vk/lists/t;->a(Lcom/vk/lists/t$p;)Lcom/vk/lists/t$k;
+    invoke-static {v0}, Lcom/vk/lists/PaginationHelper;->a(Lcom/vk/lists/PaginationHelper$p;)Lcom/vk/lists/PaginationHelper$k;
 
     move-result-object p1
 
     const/4 v0, 0x0
 
     .line 6
-    invoke-virtual {p1, v0}, Lcom/vk/lists/t$k;->a(Z)Lcom/vk/lists/t$k;
+    invoke-virtual {p1, v0}, Lcom/vk/lists/PaginationHelper$k;->a(Z)Lcom/vk/lists/PaginationHelper$k;
 
     const-string v0, "PaginationHelper.createW\u2026ClearOnReloadError(false)"
 
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     iget-object v0, p0, Lcom/vk/cameraui/widgets/masks/MasksWrap;->V:Lcom/vk/stories/masks/MasksView;
 
@@ -821,7 +821,7 @@
 
     move-result-object v0
 
-    invoke-static {p1, v0}, Lcom/vk/lists/u;->b(Lcom/vk/lists/t$k;Lcom/vk/lists/RecyclerPaginatedView;)Lcom/vk/lists/t;
+    invoke-static {p1, v0}, Lcom/vk/lists/PaginationHelperExt;->b(Lcom/vk/lists/PaginationHelper$k;Lcom/vk/lists/RecyclerPaginatedView;)Lcom/vk/lists/PaginationHelper;
 
     move-result-object p1
 
@@ -830,7 +830,7 @@
     :cond_0
     const-string p1, "masksView"
 
-    invoke-static {p1}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {p1}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     const/4 p1, 0x0
 
@@ -847,28 +847,28 @@
     .locals 2
 
     .line 18
-    invoke-virtual {p0}, Lcom/vk/cameraui/widgets/masks/a;->j()V
+    invoke-virtual {p0}, Lcom/vk/cameraui/widgets/masks/BaseMasksWrap;->j()V
 
     .line 19
-    iget-object v0, p0, Lcom/vk/cameraui/widgets/masks/MasksWrap;->a0:Lcom/vk/stories/masks/a;
+    iget-object v0, p0, Lcom/vk/cameraui/widgets/masks/MasksWrap;->a0:Lcom/vk/stories/masks/MasksAdapter;
 
-    invoke-virtual {v0}, Lcom/vk/stories/masks/a;->k()Lcom/vk/dto/masks/Mask;
+    invoke-virtual {v0}, Lcom/vk/stories/masks/MasksAdapter;->k()Lcom/vk/dto/masks/Mask;
 
     move-result-object v0
 
-    invoke-static {p2, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {p2, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v0
 
     if-nez v0, :cond_5
 
-    iget-object v0, p0, Lcom/vk/cameraui/widgets/masks/MasksWrap;->a0:Lcom/vk/stories/masks/a;
+    iget-object v0, p0, Lcom/vk/cameraui/widgets/masks/MasksWrap;->a0:Lcom/vk/stories/masks/MasksAdapter;
 
-    invoke-virtual {v0}, Lcom/vk/stories/masks/a;->k()Lcom/vk/dto/masks/Mask;
+    invoke-virtual {v0}, Lcom/vk/stories/masks/MasksAdapter;->k()Lcom/vk/dto/masks/Mask;
 
     move-result-object v0
 
-    invoke-static {p2, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {p2, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v0
 
@@ -884,7 +884,7 @@
     invoke-virtual {p0, p2}, Lcom/vk/cameraui/widgets/masks/MasksWrap;->setSelectedMask(Lcom/vk/dto/masks/Mask;)V
 
     .line 22
-    invoke-virtual {p0}, Lcom/vk/cameraui/widgets/masks/a;->h()V
+    invoke-virtual {p0}, Lcom/vk/cameraui/widgets/masks/BaseMasksWrap;->h()V
 
     .line 23
     invoke-virtual {p2}, Lcom/vk/dto/masks/Mask;->I1()Z
@@ -906,7 +906,7 @@
 
     if-eqz v0, :cond_2
 
-    invoke-virtual {p0}, Lcom/vk/cameraui/widgets/masks/a;->getMasksController()Lcom/vk/masks/MasksController;
+    invoke-virtual {p0}, Lcom/vk/cameraui/widgets/masks/BaseMasksWrap;->getMasksController()Lcom/vk/masks/MasksController;
 
     move-result-object v0
 
@@ -927,10 +927,10 @@
 
     move-result-object v0
 
-    invoke-virtual {p0, v0}, Lcom/vk/cameraui/widgets/masks/a;->setCurrentMaskId(Ljava/lang/String;)V
+    invoke-virtual {p0, v0}, Lcom/vk/cameraui/widgets/masks/BaseMasksWrap;->setCurrentMaskId(Ljava/lang/String;)V
 
     .line 28
-    invoke-virtual {p0}, Lcom/vk/cameraui/widgets/masks/a;->getCameraTracker()Lcom/vk/cameraui/utils/CameraTracker;
+    invoke-virtual {p0}, Lcom/vk/cameraui/widgets/masks/BaseMasksWrap;->getCameraTracker()Lcom/vk/cameraui/utils/CameraTracker;
 
     move-result-object v0
 
@@ -942,7 +942,7 @@
 
     if-eqz v0, :cond_3
 
-    invoke-virtual {p0}, Lcom/vk/cameraui/widgets/masks/a;->getCurrentMaskId()Ljava/lang/String;
+    invoke-virtual {p0}, Lcom/vk/cameraui/widgets/masks/BaseMasksWrap;->getCurrentMaskId()Ljava/lang/String;
 
     move-result-object v1
 
@@ -950,7 +950,7 @@
 
     .line 29
     :cond_3
-    invoke-virtual {p0}, Lcom/vk/cameraui/widgets/masks/a;->getCameraTracker()Lcom/vk/cameraui/utils/CameraTracker;
+    invoke-virtual {p0}, Lcom/vk/cameraui/widgets/masks/BaseMasksWrap;->getCameraTracker()Lcom/vk/cameraui/utils/CameraTracker;
 
     move-result-object v0
 
@@ -976,14 +976,14 @@
     invoke-virtual {p0, p1}, Lcom/vk/cameraui/widgets/masks/MasksWrap;->setSelectedMask(Lcom/vk/dto/masks/Mask;)V
 
     .line 32
-    invoke-virtual {p0}, Lcom/vk/cameraui/widgets/masks/a;->getMasksStatistics()Lcom/vk/masks/b;
+    invoke-virtual {p0}, Lcom/vk/cameraui/widgets/masks/BaseMasksWrap;->getMasksStatistics()Lcom/vk/masks/MasksAnalytics;
 
     move-result-object p1
 
-    invoke-virtual {p1}, Lcom/vk/masks/b;->a()V
+    invoke-virtual {p1}, Lcom/vk/masks/MasksAnalytics;->a()V
 
     .line 33
-    invoke-virtual {p0}, Lcom/vk/cameraui/widgets/masks/a;->h()V
+    invoke-virtual {p0}, Lcom/vk/cameraui/widgets/masks/BaseMasksWrap;->h()V
 
     :goto_1
     return-void
@@ -993,7 +993,7 @@
     .locals 2
 
     .line 8
-    invoke-virtual {p0}, Lcom/vk/cameraui/widgets/masks/a;->c()Z
+    invoke-virtual {p0}, Lcom/vk/cameraui/widgets/masks/BaseMasksWrap;->c()Z
 
     move-result v0
 
@@ -1003,7 +1003,7 @@
 
     .line 9
     :cond_0
-    invoke-virtual {p0}, Lcom/vk/cameraui/widgets/masks/a;->f()V
+    invoke-virtual {p0}, Lcom/vk/cameraui/widgets/masks/BaseMasksWrap;->f()V
 
     const/4 v0, 0x0
 
@@ -1011,26 +1011,26 @@
     invoke-virtual {p0, v0}, Lcom/vk/cameraui/widgets/masks/MasksWrap;->setSelectedMask(Lcom/vk/dto/masks/Mask;)V
 
     .line 11
-    invoke-virtual {p0}, Lcom/vk/cameraui/widgets/masks/a;->h()V
+    invoke-virtual {p0}, Lcom/vk/cameraui/widgets/masks/BaseMasksWrap;->h()V
 
     .line 12
-    invoke-virtual {p0}, Lcom/vk/cameraui/widgets/masks/a;->j()V
+    invoke-virtual {p0}, Lcom/vk/cameraui/widgets/masks/BaseMasksWrap;->j()V
 
     .line 13
-    new-instance v1, Lcom/vk/api/masks/a;
+    new-instance v1, Lcom/vk/api/masks/MasksGetById;
 
-    invoke-direct {v1, p1}, Lcom/vk/api/masks/a;-><init>(Ljava/lang/String;)V
+    invoke-direct {v1, p1}, Lcom/vk/api/masks/MasksGetById;-><init>(Ljava/lang/String;)V
 
     const/4 p1, 0x1
 
-    invoke-static {v1, v0, p1, v0}, Lcom/vk/api/base/d;->d(Lcom/vk/api/base/d;Lcom/vk/api/base/e;ILjava/lang/Object;)Lc/a/m;
+    invoke-static {v1, v0, p1, v0}, Lcom/vk/api/base/ApiRequest;->d(Lcom/vk/api/base/ApiRequest;Lcom/vk/api/base/ApiThreadHolder;ILjava/lang/Object;)Lio/reactivex/Observable;
 
     move-result-object p1
 
     .line 14
     sget-object v0, Lcom/vk/cameraui/widgets/masks/MasksWrap$m;->a:Lcom/vk/cameraui/widgets/masks/MasksWrap$m;
 
-    invoke-virtual {p1, v0}, Lc/a/m;->e(Lc/a/z/j;)Lc/a/m;
+    invoke-virtual {p1, v0}, Lio/reactivex/Observable;->e(Lio/reactivex/functions/Function;)Lio/reactivex/Observable;
 
     move-result-object p1
 
@@ -1045,11 +1045,11 @@
     invoke-direct {v1, p0}, Lcom/vk/cameraui/widgets/masks/MasksWrap$o;-><init>(Lcom/vk/cameraui/widgets/masks/MasksWrap;)V
 
     .line 17
-    invoke-virtual {p1, v0, v1}, Lc/a/m;->a(Lc/a/z/g;Lc/a/z/g;)Lio/reactivex/disposables/b;
+    invoke-virtual {p1, v0, v1}, Lio/reactivex/Observable;->a(Lio/reactivex/functions/Consumer;Lio/reactivex/functions/Consumer;)Lio/reactivex/disposables/Disposable;
 
     move-result-object p1
 
-    invoke-virtual {p0, p1}, Lcom/vk/cameraui/widgets/masks/a;->setCurrentMaskDownload(Lio/reactivex/disposables/b;)V
+    invoke-virtual {p0, p1}, Lcom/vk/cameraui/widgets/masks/BaseMasksWrap;->setCurrentMaskDownload(Lio/reactivex/disposables/Disposable;)V
 
     return-void
 .end method
@@ -1058,7 +1058,7 @@
     .locals 1
 
     .line 2
-    iget-object p1, p0, Lcom/vk/cameraui/widgets/masks/MasksWrap;->a0:Lcom/vk/stories/masks/a;
+    iget-object p1, p0, Lcom/vk/cameraui/widgets/masks/MasksWrap;->a0:Lcom/vk/stories/masks/MasksAdapter;
 
     iget-object v0, p0, Lcom/vk/cameraui/widgets/masks/MasksWrap;->b0:Landroidx/recyclerview/widget/RecyclerView$AdapterDataObserver;
 
@@ -1073,7 +1073,7 @@
 
     move-result-object p1
 
-    iget-object v0, p0, Lcom/vk/cameraui/widgets/masks/MasksWrap;->a0:Lcom/vk/stories/masks/a;
+    iget-object v0, p0, Lcom/vk/cameraui/widgets/masks/MasksWrap;->a0:Lcom/vk/stories/masks/MasksAdapter;
 
     invoke-virtual {p1, v0}, Lcom/vk/lists/RecyclerPaginatedView;->setAdapter(Landroidx/recyclerview/widget/RecyclerView$Adapter;)V
 
@@ -1082,7 +1082,7 @@
     :cond_0
     const-string p1, "masksView"
 
-    invoke-static {p1}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {p1}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     const/4 p1, 0x0
 
@@ -1102,29 +1102,29 @@
     :cond_0
     const-string v0, "masksView"
 
-    invoke-static {v0}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v0}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     const/4 v0, 0x0
 
     throw v0
 .end method
 
-.method public final getOnMasksUpdatedCallback()Lkotlin/jvm/b/b;
+.method public final getOnMasksUpdatedCallback()Lkotlin/jvm/b/Functions2;
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "()",
-            "Lkotlin/jvm/b/b<",
+            "Lkotlin/jvm/b/Functions2<",
             "Ljava/util/List<",
-            "Lcom/vk/dto/masks/a;",
+            "Lcom/vk/dto/masks/MasksListItem;",
             ">;",
-            "Lkotlin/m;",
+            "Lkotlin/Unit;",
             ">;"
         }
     .end annotation
 
     .line 1
-    iget-object v0, p0, Lcom/vk/cameraui/widgets/masks/MasksWrap;->W:Lkotlin/jvm/b/b;
+    iget-object v0, p0, Lcom/vk/cameraui/widgets/masks/MasksWrap;->W:Lkotlin/jvm/b/Functions2;
 
     return-object v0
 .end method
@@ -1133,9 +1133,9 @@
     .locals 1
 
     .line 1
-    iget-object v0, p0, Lcom/vk/cameraui/widgets/masks/MasksWrap;->a0:Lcom/vk/stories/masks/a;
+    iget-object v0, p0, Lcom/vk/cameraui/widgets/masks/MasksWrap;->a0:Lcom/vk/stories/masks/MasksAdapter;
 
-    invoke-virtual {v0}, Lcom/vk/stories/masks/a;->k()Lcom/vk/dto/masks/Mask;
+    invoke-virtual {v0}, Lcom/vk/stories/masks/MasksAdapter;->k()Lcom/vk/dto/masks/Mask;
 
     move-result-object v0
 
@@ -1146,18 +1146,18 @@
     .locals 3
 
     .line 1
-    iget-object v0, p0, Lcom/vk/cameraui/widgets/masks/MasksWrap;->a0:Lcom/vk/stories/masks/a;
+    iget-object v0, p0, Lcom/vk/cameraui/widgets/masks/MasksWrap;->a0:Lcom/vk/stories/masks/MasksAdapter;
 
-    invoke-virtual {v0}, Lcom/vk/stories/masks/a;->k()Lcom/vk/dto/masks/Mask;
+    invoke-virtual {v0}, Lcom/vk/stories/masks/MasksAdapter;->k()Lcom/vk/dto/masks/Mask;
 
     move-result-object v0
 
     if-eqz v0, :cond_2
 
     .line 2
-    iget-object v0, p0, Lcom/vk/cameraui/widgets/masks/MasksWrap;->a0:Lcom/vk/stories/masks/a;
+    iget-object v0, p0, Lcom/vk/cameraui/widgets/masks/MasksWrap;->a0:Lcom/vk/stories/masks/MasksAdapter;
 
-    invoke-virtual {v0}, Lcom/vk/stories/masks/a;->k()Lcom/vk/dto/masks/Mask;
+    invoke-virtual {v0}, Lcom/vk/stories/masks/MasksAdapter;->k()Lcom/vk/dto/masks/Mask;
 
     move-result-object v0
 
@@ -1169,9 +1169,9 @@
 
     move-result v0
 
-    iget-object v2, p0, Lcom/vk/cameraui/widgets/masks/MasksWrap;->a0:Lcom/vk/stories/masks/a;
+    iget-object v2, p0, Lcom/vk/cameraui/widgets/masks/MasksWrap;->a0:Lcom/vk/stories/masks/MasksAdapter;
 
-    invoke-virtual {v2}, Lcom/vk/stories/masks/a;->k()Lcom/vk/dto/masks/Mask;
+    invoke-virtual {v2}, Lcom/vk/stories/masks/MasksAdapter;->k()Lcom/vk/dto/masks/Mask;
 
     move-result-object v2
 
@@ -1182,12 +1182,12 @@
     goto :goto_0
 
     :cond_0
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     throw v1
 
     :cond_1
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     throw v1
 
@@ -1200,9 +1200,9 @@
     .locals 1
 
     .line 1
-    iget-object v0, p0, Lcom/vk/cameraui/widgets/masks/MasksWrap;->a0:Lcom/vk/stories/masks/a;
+    iget-object v0, p0, Lcom/vk/cameraui/widgets/masks/MasksWrap;->a0:Lcom/vk/stories/masks/MasksAdapter;
 
-    invoke-virtual {v0, p1}, Lcom/vk/stories/masks/a;->b(F)V
+    invoke-virtual {v0, p1}, Lcom/vk/stories/masks/MasksAdapter;->b(F)V
 
     .line 2
     invoke-direct {p0}, Lcom/vk/cameraui/widgets/masks/MasksWrap;->l()V
@@ -1219,23 +1219,23 @@
     return-void
 .end method
 
-.method public final setOnMasksUpdatedCallback(Lkotlin/jvm/b/b;)V
+.method public final setOnMasksUpdatedCallback(Lkotlin/jvm/b/Functions2;)V
     .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lkotlin/jvm/b/b<",
+            "Lkotlin/jvm/b/Functions2<",
             "-",
             "Ljava/util/List<",
-            "Lcom/vk/dto/masks/a;",
+            "Lcom/vk/dto/masks/MasksListItem;",
             ">;",
-            "Lkotlin/m;",
+            "Lkotlin/Unit;",
             ">;)V"
         }
     .end annotation
 
     .line 1
-    iput-object p1, p0, Lcom/vk/cameraui/widgets/masks/MasksWrap;->W:Lkotlin/jvm/b/b;
+    iput-object p1, p0, Lcom/vk/cameraui/widgets/masks/MasksWrap;->W:Lkotlin/jvm/b/Functions2;
 
     return-void
 .end method
@@ -1244,9 +1244,9 @@
     .locals 1
 
     .line 1
-    iget-object v0, p0, Lcom/vk/cameraui/widgets/masks/MasksWrap;->a0:Lcom/vk/stories/masks/a;
+    iget-object v0, p0, Lcom/vk/cameraui/widgets/masks/MasksWrap;->a0:Lcom/vk/stories/masks/MasksAdapter;
 
-    invoke-virtual {v0, p1}, Lcom/vk/stories/masks/a;->a(Lcom/vk/dto/masks/Mask;)V
+    invoke-virtual {v0, p1}, Lcom/vk/stories/masks/MasksAdapter;->a(Lcom/vk/dto/masks/Mask;)V
 
     return-void
 .end method

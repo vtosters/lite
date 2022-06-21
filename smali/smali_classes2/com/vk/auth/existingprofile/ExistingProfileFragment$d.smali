@@ -40,11 +40,11 @@
     .line 1
     iget-object p1, p0, Lcom/vk/auth/existingprofile/ExistingProfileFragment$d;->a:Lcom/vk/auth/existingprofile/ExistingProfileFragment;
 
-    invoke-static {p1}, Lcom/vk/auth/existingprofile/ExistingProfileFragment;->c(Lcom/vk/auth/existingprofile/ExistingProfileFragment;)Lcom/vk/auth/existingprofile/a;
+    invoke-static {p1}, Lcom/vk/auth/existingprofile/ExistingProfileFragment;->c(Lcom/vk/auth/existingprofile/ExistingProfileFragment;)Lcom/vk/auth/existingprofile/ExistingProfilePresenter;
 
     move-result-object p1
 
-    invoke-virtual {p1}, Lcom/vk/auth/existingprofile/a;->z()V
+    invoke-virtual {p1}, Lcom/vk/auth/existingprofile/ExistingProfilePresenter;->z()V
 
     return-void
 .end method

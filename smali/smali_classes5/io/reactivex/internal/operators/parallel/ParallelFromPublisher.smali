@@ -1,5 +1,5 @@
 .class public final Lio/reactivex/internal/operators/parallel/ParallelFromPublisher;
-.super Lc/a/d0/a;
+.super Lio/reactivex/parallel/ParallelFlowable;
 .source "ParallelFromPublisher.java"
 
 
@@ -15,17 +15,17 @@
         "<T:",
         "Ljava/lang/Object;",
         ">",
-        "Lc/a/d0/a<",
+        "Lio/reactivex/parallel/ParallelFlowable<",
         "TT;>;"
     }
 .end annotation
 
 
 # instance fields
-.field final a:Le/b/b;
+.field final a:Le/b/Publisher;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Le/b/b<",
+            "Le/b/Publisher<",
             "+TT;>;"
         }
     .end annotation
@@ -37,21 +37,21 @@
 
 
 # direct methods
-.method public constructor <init>(Le/b/b;II)V
+.method public constructor <init>(Le/b/Publisher;II)V
     .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Le/b/b<",
+            "Le/b/Publisher<",
             "+TT;>;II)V"
         }
     .end annotation
 
     .line 1
-    invoke-direct {p0}, Lc/a/d0/a;-><init>()V
+    invoke-direct {p0}, Lio/reactivex/parallel/ParallelFlowable;-><init>()V
 
     .line 2
-    iput-object p1, p0, Lio/reactivex/internal/operators/parallel/ParallelFromPublisher;->a:Le/b/b;
+    iput-object p1, p0, Lio/reactivex/internal/operators/parallel/ParallelFromPublisher;->a:Le/b/Publisher;
 
     .line 3
     iput p2, p0, Lio/reactivex/internal/operators/parallel/ParallelFromPublisher;->b:I
@@ -73,18 +73,18 @@
     return v0
 .end method
 
-.method public a([Le/b/c;)V
+.method public a([Le/b/Subscriber;)V
     .locals 3
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "([",
-            "Le/b/c<",
+            "Le/b/Subscriber<",
             "-TT;>;)V"
         }
     .end annotation
 
     .line 2
-    invoke-virtual {p0, p1}, Lc/a/d0/a;->b([Le/b/c;)Z
+    invoke-virtual {p0, p1}, Lio/reactivex/parallel/ParallelFlowable;->b([Le/b/Subscriber;)Z
 
     move-result v0
 
@@ -94,15 +94,15 @@
 
     .line 3
     :cond_0
-    iget-object v0, p0, Lio/reactivex/internal/operators/parallel/ParallelFromPublisher;->a:Le/b/b;
+    iget-object v0, p0, Lio/reactivex/internal/operators/parallel/ParallelFromPublisher;->a:Le/b/Publisher;
 
     new-instance v1, Lio/reactivex/internal/operators/parallel/ParallelFromPublisher$ParallelDispatcher;
 
     iget v2, p0, Lio/reactivex/internal/operators/parallel/ParallelFromPublisher;->c:I
 
-    invoke-direct {v1, p1, v2}, Lio/reactivex/internal/operators/parallel/ParallelFromPublisher$ParallelDispatcher;-><init>([Le/b/c;I)V
+    invoke-direct {v1, p1, v2}, Lio/reactivex/internal/operators/parallel/ParallelFromPublisher$ParallelDispatcher;-><init>([Le/b/Subscriber;I)V
 
-    invoke-interface {v0, v1}, Le/b/b;->a(Le/b/c;)V
+    invoke-interface {v0, v1}, Le/b/Publisher;->a(Le/b/Subscriber;)V
 
     return-void
 .end method

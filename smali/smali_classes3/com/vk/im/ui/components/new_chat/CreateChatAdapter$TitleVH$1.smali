@@ -3,7 +3,7 @@
 .source "CreateChatAdapter.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/b;
+.implements Lkotlin/jvm/b/Functions2;
 
 
 # annotations
@@ -19,9 +19,9 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/b<",
+        "Lkotlin/jvm/b/Functions2<",
         "Landroid/view/View;",
-        "Lkotlin/m;",
+        "Lkotlin/Unit;",
         ">;"
     }
 .end annotation
@@ -77,7 +77,7 @@
 
     xor-int/lit8 v1, v1, 0x1
 
-    invoke-static {p1, v0, v1}, Lcom/vk/core/extensions/c;->b(Ljava/util/Collection;Ljava/lang/Object;Z)V
+    invoke-static {p1, v0, v1}, Lcom/vk/core/extensions/CollectionExt;->b(Ljava/util/Collection;Ljava/lang/Object;Z)V
 
     .line 3
     new-instance v0, Lcom/vk/im/ui/components/viewcontrollers/popup/PopupVc;
@@ -86,7 +86,7 @@
 
     const-string v2, "context"
 
-    invoke-static {v1, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-direct {v0, v1}, Lcom/vk/im/ui/components/viewcontrollers/popup/PopupVc;-><init>(Landroid/content/Context;)V
 
@@ -100,7 +100,7 @@
     invoke-direct {v1, p0}, Lcom/vk/im/ui/components/new_chat/CreateChatAdapter$TitleVH$1$1;-><init>(Lcom/vk/im/ui/components/new_chat/CreateChatAdapter$TitleVH$1;)V
 
     .line 5
-    invoke-virtual {v0, p1, v1}, Lcom/vk/im/ui/components/viewcontrollers/popup/DelegateDialogs;->a(Ljava/util/List;Lkotlin/jvm/b/b;)V
+    invoke-virtual {v0, p1, v1}, Lcom/vk/im/ui/components/viewcontrollers/popup/DelegateDialogs;->a(Ljava/util/List;Lkotlin/jvm/b/Functions2;)V
 
     return-void
 .end method
@@ -113,7 +113,7 @@
 
     invoke-virtual {p0, p1}, Lcom/vk/im/ui/components/new_chat/CreateChatAdapter$TitleVH$1;->a(Landroid/view/View;)V
 
-    sget-object p1, Lkotlin/m;->a:Lkotlin/m;
+    sget-object p1, Lkotlin/Unit;->a:Lkotlin/Unit;
 
     return-object p1
 .end method

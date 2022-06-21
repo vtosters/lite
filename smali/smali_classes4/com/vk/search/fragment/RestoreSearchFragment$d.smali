@@ -34,9 +34,9 @@
     if-ne p2, p1, :cond_0
 
     .line 1
-    sget-object p1, Lb/h/v/d;->c:Lb/h/v/d$a;
+    sget-object p1, Lb/h/v/RxBus;->c:Lb/h/v/RxBus$a;
 
-    invoke-virtual {p1}, Lb/h/v/d$a;->a()Lb/h/v/d;
+    invoke-virtual {p1}, Lb/h/v/RxBus$a;->a()Lb/h/v/RxBus;
 
     move-result-object p1
 
@@ -44,7 +44,7 @@
 
     invoke-direct {p2}, Lcom/vk/search/fragment/RestoreSearchFragment$c;-><init>()V
 
-    invoke-virtual {p1, p2}, Lb/h/v/d;->a(Ljava/lang/Object;)V
+    invoke-virtual {p1, p2}, Lb/h/v/RxBus;->a(Ljava/lang/Object;)V
 
     :cond_0
     return-void

@@ -3,7 +3,7 @@
 .source "VideoFeedAdapter.kt"
 
 # interfaces
-.implements Ld/a/a/c/c$a;
+.implements Lme/grishka/appkit/utils/Preloader$a;
 .implements Lme/grishka/appkit/views/UsableRecyclerView$l;
 
 
@@ -19,7 +19,7 @@
         "Lme/grishka/appkit/views/UsableRecyclerView$d<",
         "Lcom/vk/profile/adapter/inner/VideoFeedAdapter$VideoFeedViewHolder;",
         ">;",
-        "Ld/a/a/c/c$a<",
+        "Lme/grishka/appkit/utils/Preloader$a<",
         "Lcom/vk/dto/common/VideoFile;",
         ">;",
         "Lme/grishka/appkit/views/UsableRecyclerView$l;"
@@ -28,10 +28,10 @@
 
 
 # instance fields
-.field private a:Ld/a/a/c/c;
+.field private a:Lme/grishka/appkit/utils/Preloader;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Ld/a/a/c/c<",
+            "Lme/grishka/appkit/utils/Preloader<",
             "Lcom/vk/dto/common/VideoFile;",
             ">;"
         }
@@ -71,20 +71,20 @@
     iput-object p1, p0, Lcom/vk/profile/adapter/inner/VideoFeedAdapter;->c:Lcom/vk/profile/presenter/BaseProfilePresenter;
 
     .line 2
-    new-instance p1, Ld/a/a/c/c;
+    new-instance p1, Lme/grishka/appkit/utils/Preloader;
 
     const/16 v0, 0x14
 
-    invoke-direct {p1, p0, v0}, Ld/a/a/c/c;-><init>(Ld/a/a/c/c$a;I)V
+    invoke-direct {p1, p0, v0}, Lme/grishka/appkit/utils/Preloader;-><init>(Lme/grishka/appkit/utils/Preloader$a;I)V
 
-    iput-object p1, p0, Lcom/vk/profile/adapter/inner/VideoFeedAdapter;->a:Ld/a/a/c/c;
+    iput-object p1, p0, Lcom/vk/profile/adapter/inner/VideoFeedAdapter;->a:Lme/grishka/appkit/utils/Preloader;
 
     .line 3
-    iget-object p1, p0, Lcom/vk/profile/adapter/inner/VideoFeedAdapter;->a:Ld/a/a/c/c;
+    iget-object p1, p0, Lcom/vk/profile/adapter/inner/VideoFeedAdapter;->a:Lme/grishka/appkit/utils/Preloader;
 
     const/4 v0, 0x1
 
-    invoke-virtual {p1, p2, v0}, Ld/a/a/c/c;->a(Ljava/util/List;Z)V
+    invoke-virtual {p1, p2, v0}, Lme/grishka/appkit/utils/Preloader;->a(Ljava/util/List;Z)V
 
     return-void
 .end method
@@ -104,9 +104,9 @@
     .locals 1
 
     .line 1
-    iget-object v0, p0, Lcom/vk/profile/adapter/inner/VideoFeedAdapter;->a:Ld/a/a/c/c;
+    iget-object v0, p0, Lcom/vk/profile/adapter/inner/VideoFeedAdapter;->a:Lme/grishka/appkit/utils/Preloader;
 
-    invoke-virtual {v0}, Ld/a/a/c/c;->a()Ljava/util/ArrayList;
+    invoke-virtual {v0}, Lme/grishka/appkit/utils/Preloader;->a()Ljava/util/ArrayList;
 
     move-result-object v0
 
@@ -145,9 +145,9 @@
     .locals 1
 
     .line 2
-    iget-object v0, p0, Lcom/vk/profile/adapter/inner/VideoFeedAdapter;->a:Ld/a/a/c/c;
+    iget-object v0, p0, Lcom/vk/profile/adapter/inner/VideoFeedAdapter;->a:Lme/grishka/appkit/utils/Preloader;
 
-    invoke-virtual {v0}, Ld/a/a/c/c;->a()Ljava/util/ArrayList;
+    invoke-virtual {v0}, Lme/grishka/appkit/utils/Preloader;->a()Ljava/util/ArrayList;
 
     move-result-object v0
 
@@ -155,7 +155,7 @@
 
     move-result-object p2
 
-    invoke-virtual {p1, p2}, Lcom/vtosters/lite/ui/b0/i;->a(Ljava/lang/Object;)V
+    invoke-virtual {p1, p2}, Lcom/vtosters/lite/ui/holder/RecyclerHolder;->a(Ljava/lang/Object;)V
 
     return-void
 .end method
@@ -173,9 +173,9 @@
     .locals 0
 
     .line 1
-    iget-object p2, p0, Lcom/vk/profile/adapter/inner/VideoFeedAdapter;->a:Ld/a/a/c/c;
+    iget-object p2, p0, Lcom/vk/profile/adapter/inner/VideoFeedAdapter;->a:Lme/grishka/appkit/utils/Preloader;
 
-    invoke-virtual {p2}, Ld/a/a/c/c;->a()Ljava/util/ArrayList;
+    invoke-virtual {p2}, Lme/grishka/appkit/utils/Preloader;->a()Ljava/util/ArrayList;
 
     move-result-object p2
 
@@ -218,13 +218,13 @@
     .line 1
     iget-object v0, p0, Lcom/vk/profile/adapter/inner/VideoFeedAdapter;->c:Lcom/vk/profile/presenter/BaseProfilePresenter;
 
-    invoke-virtual {v0}, Lcom/vk/newsfeed/presenters/i;->L()I
+    invoke-virtual {v0}, Lcom/vk/newsfeed/presenters/NewsFeedProfilePresenter;->L()I
 
     move-result v0
 
     const/4 v1, 0x0
 
-    invoke-static {v0, v1, p1, p2}, Lcom/vk/api/video/k;->a(IIII)Lcom/vk/api/video/k;
+    invoke-static {v0, v1, p1, p2}, Lcom/vk/api/video/VideoGet;->a(IIII)Lcom/vk/api/video/VideoGet;
 
     move-result-object p1
 
@@ -232,12 +232,12 @@
 
     invoke-direct {p2, p0}, Lcom/vk/profile/adapter/inner/VideoFeedAdapter$a;-><init>(Lcom/vk/profile/adapter/inner/VideoFeedAdapter;)V
 
-    invoke-virtual {p1, p2}, Lcom/vk/api/base/d;->a(Lcom/vk/api/base/a;)Lcom/vk/api/base/b;
+    invoke-virtual {p1, p2}, Lcom/vk/api/base/ApiRequest;->a(Lcom/vk/api/base/ApiCallback;)Lcom/vk/api/base/ApiCallbackDisposable;
 
     move-result-object p1
 
     .line 2
-    invoke-virtual {p1}, Lcom/vk/api/base/b;->a()Lio/reactivex/disposables/b;
+    invoke-virtual {p1}, Lcom/vk/api/base/ApiCallbackDisposable;->a()Lio/reactivex/disposables/Disposable;
 
     const/4 p1, 0x1
 
@@ -251,9 +251,9 @@
     .locals 1
 
     .line 1
-    iget-object v0, p0, Lcom/vk/profile/adapter/inner/VideoFeedAdapter;->a:Ld/a/a/c/c;
+    iget-object v0, p0, Lcom/vk/profile/adapter/inner/VideoFeedAdapter;->a:Lme/grishka/appkit/utils/Preloader;
 
-    invoke-virtual {v0}, Ld/a/a/c/c;->a()Ljava/util/ArrayList;
+    invoke-virtual {v0}, Lme/grishka/appkit/utils/Preloader;->a()Ljava/util/ArrayList;
 
     move-result-object v0
 
@@ -264,19 +264,19 @@
     return v0
 .end method
 
-.method protected final j()Ld/a/a/c/c;
+.method protected final j()Lme/grishka/appkit/utils/Preloader;
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "()",
-            "Ld/a/a/c/c<",
+            "Lme/grishka/appkit/utils/Preloader<",
             "Lcom/vk/dto/common/VideoFile;",
             ">;"
         }
     .end annotation
 
     .line 1
-    iget-object v0, p0, Lcom/vk/profile/adapter/inner/VideoFeedAdapter;->a:Ld/a/a/c/c;
+    iget-object v0, p0, Lcom/vk/profile/adapter/inner/VideoFeedAdapter;->a:Lme/grishka/appkit/utils/Preloader;
 
     return-object v0
 .end method
@@ -333,9 +333,9 @@
     .locals 1
 
     .line 1
-    iget-object v0, p0, Lcom/vk/profile/adapter/inner/VideoFeedAdapter;->a:Ld/a/a/c/c;
+    iget-object v0, p0, Lcom/vk/profile/adapter/inner/VideoFeedAdapter;->a:Lme/grishka/appkit/utils/Preloader;
 
-    invoke-virtual {v0}, Ld/a/a/c/c;->e()V
+    invoke-virtual {v0}, Lme/grishka/appkit/utils/Preloader;->e()V
 
     return-void
 .end method

@@ -3,7 +3,7 @@
 .source "StoryChooseView.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/b;
+.implements Lkotlin/jvm/b/Functions2;
 
 
 # annotations
@@ -19,9 +19,9 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/b<",
+        "Lkotlin/jvm/b/Functions2<",
         "Landroid/view/View;",
-        "Lkotlin/m;",
+        "Lkotlin/Unit;",
         ">;"
     }
 .end annotation
@@ -52,13 +52,13 @@
     .line 1
     iget-object p1, p0, Lcom/vk/stories/receivers/views/StoryChooseView$initToolbar$1;->this$0:Lcom/vk/stories/receivers/views/StoryChooseView;
 
-    invoke-virtual {p1}, Lcom/vk/stories/receivers/views/StoryChooseView;->getPresenter()Lcom/vk/stories/receivers/presenters/a;
+    invoke-virtual {p1}, Lcom/vk/stories/receivers/views/StoryChooseView;->getPresenter()Lcom/vk/stories/receivers/presenters/IStoryChoosePresenter;
 
     move-result-object p1
 
     if-eqz p1, :cond_0
 
-    invoke-interface {p1}, Lcom/vk/stories/receivers/presenters/a;->K3()V
+    invoke-interface {p1}, Lcom/vk/stories/receivers/presenters/IStoryChoosePresenter;->K3()V
 
     :cond_0
     return-void
@@ -72,7 +72,7 @@
 
     invoke-virtual {p0, p1}, Lcom/vk/stories/receivers/views/StoryChooseView$initToolbar$1;->a(Landroid/view/View;)V
 
-    sget-object p1, Lkotlin/m;->a:Lkotlin/m;
+    sget-object p1, Lkotlin/Unit;->a:Lkotlin/Unit;
 
     return-object p1
 .end method

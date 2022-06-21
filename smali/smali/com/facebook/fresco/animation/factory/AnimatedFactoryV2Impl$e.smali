@@ -3,12 +3,12 @@
 .source "AnimatedFactoryV2Impl.java"
 
 # interfaces
-.implements Lcom/facebook/imagepipeline/animated/impl/b;
+.implements Lcom/facebook/imagepipeline/animated/impl/AnimatedDrawableBackendProvider;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/facebook/fresco/animation/factory/AnimatedFactoryV2Impl;->c()Lcom/facebook/imagepipeline/animated/impl/b;
+    value = Lcom/facebook/fresco/animation/factory/AnimatedFactoryV2Impl;->c()Lcom/facebook/imagepipeline/animated/impl/AnimatedDrawableBackendProvider;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -35,16 +35,16 @@
 
 
 # virtual methods
-.method public a(Lcom/facebook/imagepipeline/animated/base/d;Landroid/graphics/Rect;)Lcom/facebook/imagepipeline/animated/base/a;
+.method public a(Lcom/facebook/imagepipeline/animated/base/AnimatedImageResult;Landroid/graphics/Rect;)Lcom/facebook/imagepipeline/animated/base/AnimatedDrawableBackend;
     .locals 3
 
     .line 1
-    new-instance v0, Lcom/facebook/imagepipeline/animated/impl/a;
+    new-instance v0, Lcom/facebook/imagepipeline/animated/impl/AnimatedDrawableBackendImpl;
 
     iget-object v1, p0, Lcom/facebook/fresco/animation/factory/AnimatedFactoryV2Impl$e;->a:Lcom/facebook/fresco/animation/factory/AnimatedFactoryV2Impl;
 
     .line 2
-    invoke-static {v1}, Lcom/facebook/fresco/animation/factory/AnimatedFactoryV2Impl;->b(Lcom/facebook/fresco/animation/factory/AnimatedFactoryV2Impl;)Lcom/facebook/x/a/b/a;
+    invoke-static {v1}, Lcom/facebook/fresco/animation/factory/AnimatedFactoryV2Impl;->b(Lcom/facebook/fresco/animation/factory/AnimatedFactoryV2Impl;)Lcom/facebook/x/a/b/AnimatedDrawableUtil;
 
     move-result-object v1
 
@@ -55,7 +55,7 @@
 
     move-result v2
 
-    invoke-direct {v0, v1, p1, p2, v2}, Lcom/facebook/imagepipeline/animated/impl/a;-><init>(Lcom/facebook/x/a/b/a;Lcom/facebook/imagepipeline/animated/base/d;Landroid/graphics/Rect;Z)V
+    invoke-direct {v0, v1, p1, p2, v2}, Lcom/facebook/imagepipeline/animated/impl/AnimatedDrawableBackendImpl;-><init>(Lcom/facebook/x/a/b/AnimatedDrawableUtil;Lcom/facebook/imagepipeline/animated/base/AnimatedImageResult;Landroid/graphics/Rect;Z)V
 
     return-object v0
 .end method

@@ -1,5 +1,5 @@
 .class Lcom/vtosters/lite/fragments/market/GoodFragment$b;
-.super Lcom/vtosters/lite/api/l;
+.super Lcom/vtosters/lite/api/SimpleCallback;
 .source "GoodFragment.java"
 
 
@@ -15,7 +15,7 @@
 
 .annotation system Ldalvik/annotation/Signature;
     value = {
-        "Lcom/vtosters/lite/api/l<",
+        "Lcom/vtosters/lite/api/SimpleCallback<",
         "Ljava/lang/Integer;",
         ">;"
     }
@@ -49,7 +49,7 @@
 
     iput-boolean p6, p0, Lcom/vtosters/lite/fragments/market/GoodFragment$b;->f:Z
 
-    invoke-direct {p0, p2}, Lcom/vtosters/lite/api/l;-><init>(Lcom/vk/core/fragments/FragmentImpl;)V
+    invoke-direct {p0, p2}, Lcom/vtosters/lite/api/SimpleCallback;-><init>(Lcom/vk/core/fragments/FragmentImpl;)V
 
     return-void
 .end method
@@ -60,7 +60,7 @@
     .locals 1
 
     .line 24
-    invoke-super {p0, p1}, Lcom/vtosters/lite/api/l;->a(Lcom/vk/api/sdk/exceptions/VKApiExecutionException;)V
+    invoke-super {p0, p1}, Lcom/vtosters/lite/api/SimpleCallback;->a(Lcom/vk/api/sdk/exceptions/VKApiExecutionException;)V
 
     .line 25
     iget-object p1, p0, Lcom/vtosters/lite/fragments/market/GoodFragment$b;->g:Lcom/vtosters/lite/fragments/market/GoodFragment;
@@ -106,7 +106,7 @@
 
     if-gez v0, :cond_1
 
-    sget-object v0, Lcom/vk/core/util/i;->a:Landroid/content/Context;
+    sget-object v0, Lcom/vk/core/util/AppContextHolder;->a:Landroid/content/Context;
 
     const v2, 0x7f120201
 
@@ -177,7 +177,7 @@
     .line 11
     iget-object v0, p0, Lcom/vtosters/lite/fragments/market/GoodFragment$b;->g:Lcom/vtosters/lite/fragments/market/GoodFragment;
 
-    invoke-static {v0}, Lcom/vtosters/lite/fragments/market/GoodFragment;->o(Lcom/vtosters/lite/fragments/market/GoodFragment;)Lcom/vtosters/lite/ui/z/a;
+    invoke-static {v0}, Lcom/vtosters/lite/fragments/market/GoodFragment;->o(Lcom/vtosters/lite/fragments/market/GoodFragment;)Lcom/vtosters/lite/ui/z/ReplyBarController;
 
     move-result-object v0
 
@@ -186,21 +186,21 @@
     .line 12
     iget-object v0, p0, Lcom/vtosters/lite/fragments/market/GoodFragment$b;->g:Lcom/vtosters/lite/fragments/market/GoodFragment;
 
-    invoke-static {v0}, Lcom/vtosters/lite/fragments/market/GoodFragment;->o(Lcom/vtosters/lite/fragments/market/GoodFragment;)Lcom/vtosters/lite/ui/z/a;
+    invoke-static {v0}, Lcom/vtosters/lite/fragments/market/GoodFragment;->o(Lcom/vtosters/lite/fragments/market/GoodFragment;)Lcom/vtosters/lite/ui/z/ReplyBarController;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/vtosters/lite/ui/z/a;->b()V
+    invoke-virtual {v0}, Lcom/vtosters/lite/ui/z/ReplyBarController;->b()V
 
     .line 13
     :cond_2
     iget-object v0, p0, Lcom/vtosters/lite/fragments/market/GoodFragment$b;->g:Lcom/vtosters/lite/fragments/market/GoodFragment;
 
-    invoke-static {v0}, Lcom/vtosters/lite/fragments/market/GoodFragment;->z(Lcom/vtosters/lite/fragments/market/GoodFragment;)Ld/a/a/c/c;
+    invoke-static {v0}, Lcom/vtosters/lite/fragments/market/GoodFragment;->z(Lcom/vtosters/lite/fragments/market/GoodFragment;)Lme/grishka/appkit/utils/Preloader;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Ld/a/a/c/c;->d()Z
+    invoke-virtual {v0}, Lme/grishka/appkit/utils/Preloader;->d()Z
 
     move-result v0
 
@@ -209,7 +209,7 @@
     const p1, 0x7f12016d
 
     .line 14
-    invoke-static {p1}, Lcom/vk/core/util/k1;->a(I)V
+    invoke-static {p1}, Lcom/vk/core/util/ToastUtils;->a(I)V
 
     goto :goto_2
 
@@ -247,16 +247,16 @@
     .line 17
     iget-object p1, p0, Lcom/vtosters/lite/fragments/market/GoodFragment$b;->g:Lcom/vtosters/lite/fragments/market/GoodFragment;
 
-    invoke-static {p1}, Lcom/vtosters/lite/fragments/market/GoodFragment;->w(Lcom/vtosters/lite/fragments/market/GoodFragment;)Lcom/vtosters/lite/fragments/market/v;
+    invoke-static {p1}, Lcom/vtosters/lite/fragments/market/GoodFragment;->w(Lcom/vtosters/lite/fragments/market/GoodFragment;)Lcom/vtosters/lite/fragments/market/ProductAdapter;
 
     move-result-object p1
 
-    invoke-virtual {p1, v9}, Lcom/vtosters/lite/ui/b0/j;->b(Z)V
+    invoke-virtual {p1, v9}, Lcom/vtosters/lite/ui/holder/RecyclerSectionAdapter;->b(Z)V
 
     .line 18
     iget-object p1, p0, Lcom/vtosters/lite/fragments/market/GoodFragment$b;->g:Lcom/vtosters/lite/fragments/market/GoodFragment;
 
-    invoke-static {p1}, Lcom/vtosters/lite/fragments/market/GoodFragment;->w(Lcom/vtosters/lite/fragments/market/GoodFragment;)Lcom/vtosters/lite/fragments/market/v;
+    invoke-static {p1}, Lcom/vtosters/lite/fragments/market/GoodFragment;->w(Lcom/vtosters/lite/fragments/market/GoodFragment;)Lcom/vtosters/lite/fragments/market/ProductAdapter;
 
     move-result-object p1
 
@@ -266,12 +266,12 @@
 
     move-result-object v0
 
-    invoke-virtual {p1, v0, v9}, Lcom/vtosters/lite/ui/b0/j;->a(Ljava/util/Collection;Z)V
+    invoke-virtual {p1, v0, v9}, Lcom/vtosters/lite/ui/holder/RecyclerSectionAdapter;->a(Ljava/util/Collection;Z)V
 
     .line 19
     iget-object p1, p0, Lcom/vtosters/lite/fragments/market/GoodFragment$b;->g:Lcom/vtosters/lite/fragments/market/GoodFragment;
 
-    invoke-static {p1}, Lcom/vtosters/lite/fragments/market/GoodFragment;->w(Lcom/vtosters/lite/fragments/market/GoodFragment;)Lcom/vtosters/lite/fragments/market/v;
+    invoke-static {p1}, Lcom/vtosters/lite/fragments/market/GoodFragment;->w(Lcom/vtosters/lite/fragments/market/GoodFragment;)Lcom/vtosters/lite/fragments/market/ProductAdapter;
 
     move-result-object p1
 
@@ -293,12 +293,12 @@
 
     move-result-object v0
 
-    invoke-virtual {p1, v0, v9}, Lcom/vtosters/lite/ui/b0/j;->a(Ljava/util/Collection;Z)V
+    invoke-virtual {p1, v0, v9}, Lcom/vtosters/lite/ui/holder/RecyclerSectionAdapter;->a(Ljava/util/Collection;Z)V
 
     .line 20
     iget-object p1, p0, Lcom/vtosters/lite/fragments/market/GoodFragment$b;->g:Lcom/vtosters/lite/fragments/market/GoodFragment;
 
-    invoke-static {p1}, Lcom/vtosters/lite/fragments/market/GoodFragment;->w(Lcom/vtosters/lite/fragments/market/GoodFragment;)Lcom/vtosters/lite/fragments/market/v;
+    invoke-static {p1}, Lcom/vtosters/lite/fragments/market/GoodFragment;->w(Lcom/vtosters/lite/fragments/market/GoodFragment;)Lcom/vtosters/lite/fragments/market/ProductAdapter;
 
     move-result-object p1
 

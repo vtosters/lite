@@ -4,11 +4,11 @@
 
 
 # instance fields
-.field private a:Lkotlin/jvm/b/a;
+.field private a:Lkotlin/jvm/b/Functions;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Lkotlin/jvm/b/a<",
-            "Lkotlin/m;",
+            "Lkotlin/jvm/b/Functions<",
+            "Lkotlin/Unit;",
             ">;"
         }
     .end annotation
@@ -22,10 +22,10 @@
 
 .field private final e:Landroid/widget/ImageView;
 
-.field private f:Lkotlin/jvm/b/b;
+.field private f:Lkotlin/jvm/b/Functions2;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Lkotlin/jvm/b/b<",
+            "Lkotlin/jvm/b/Functions2<",
             "-",
             "Ljava/lang/Integer;",
             "Ljava/lang/Integer;",
@@ -53,7 +53,7 @@
 
     move-object v1, p1
 
-    invoke-direct/range {v0 .. v5}, Lcom/vk/shoppingcenter/fragment/OnboardingView;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;IILkotlin/jvm/internal/i;)V
+    invoke-direct/range {v0 .. v5}, Lcom/vk/shoppingcenter/fragment/OnboardingView;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;IILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     return-void
 .end method
@@ -73,7 +73,7 @@
 
     move-object v2, p2
 
-    invoke-direct/range {v0 .. v5}, Lcom/vk/shoppingcenter/fragment/OnboardingView;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;IILkotlin/jvm/internal/i;)V
+    invoke-direct/range {v0 .. v5}, Lcom/vk/shoppingcenter/fragment/OnboardingView;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;IILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     return-void
 .end method
@@ -107,7 +107,7 @@
 
     const-string p2, "findViewById(R.id.pager)"
 
-    invoke-static {p1, p2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, p2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     check-cast p1, Landroidx/viewpager/widget/ViewPager;
 
@@ -122,7 +122,7 @@
 
     const-string p2, "findViewById(R.id.next_button)"
 
-    invoke-static {p1, p2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, p2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     check-cast p1, Landroid/widget/Button;
 
@@ -137,7 +137,7 @@
 
     const-string p2, "findViewById(R.id.page_indicator)"
 
-    invoke-static {p1, p2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, p2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     check-cast p1, Lcom/vk/core/widget/PageIndicator;
 
@@ -152,7 +152,7 @@
 
     const-string p2, "findViewById(R.id.close_button)"
 
-    invoke-static {p1, p2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, p2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     check-cast p1, Landroid/widget/ImageView;
 
@@ -186,7 +186,7 @@
     return-void
 .end method
 
-.method public synthetic constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;IILkotlin/jvm/internal/i;)V
+.method public synthetic constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;IILkotlin/jvm/internal/DefaultConstructorMarker;)V
     .locals 0
 
     and-int/lit8 p5, p4, 0x2
@@ -213,7 +213,7 @@
     .locals 3
 
     .line 2
-    iget-object v0, p0, Lcom/vk/shoppingcenter/fragment/OnboardingView;->f:Lkotlin/jvm/b/b;
+    iget-object v0, p0, Lcom/vk/shoppingcenter/fragment/OnboardingView;->f:Lkotlin/jvm/b/Functions2;
 
     if-eqz v0, :cond_0
 
@@ -224,7 +224,7 @@
 
     move-result-object v2
 
-    invoke-interface {v0, v2}, Lkotlin/jvm/b/b;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v0, v2}, Lkotlin/jvm/b/Functions2;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v0
 
@@ -310,28 +310,28 @@
 
     .line 12
     :cond_1
-    iget-object v0, p0, Lcom/vk/shoppingcenter/fragment/OnboardingView;->a:Lkotlin/jvm/b/a;
+    iget-object v0, p0, Lcom/vk/shoppingcenter/fragment/OnboardingView;->a:Lkotlin/jvm/b/Functions;
 
     if-eqz v0, :cond_2
 
-    invoke-interface {v0}, Lkotlin/jvm/b/a;->invoke()Ljava/lang/Object;
+    invoke-interface {v0}, Lkotlin/jvm/b/Functions;->invoke()Ljava/lang/Object;
 
     move-result-object v0
 
-    check-cast v0, Lkotlin/m;
+    check-cast v0, Lkotlin/Unit;
 
     :cond_2
     :goto_1
     return-void
 .end method
 
-.method public final a(Landroidx/viewpager/widget/PagerAdapter;Lkotlin/jvm/b/b;)V
+.method public final a(Landroidx/viewpager/widget/PagerAdapter;Lkotlin/jvm/b/Functions2;)V
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
             "Landroidx/viewpager/widget/PagerAdapter;",
-            "Lkotlin/jvm/b/b<",
+            "Lkotlin/jvm/b/Functions2<",
             "-",
             "Ljava/lang/Integer;",
             "Ljava/lang/Integer;",
@@ -345,7 +345,7 @@
     invoke-virtual {v0, p1}, Landroidx/viewpager/widget/ViewPager;->setAdapter(Landroidx/viewpager/widget/PagerAdapter;)V
 
     .line 6
-    iput-object p2, p0, Lcom/vk/shoppingcenter/fragment/OnboardingView;->f:Lkotlin/jvm/b/b;
+    iput-object p2, p0, Lcom/vk/shoppingcenter/fragment/OnboardingView;->f:Lkotlin/jvm/b/Functions2;
 
     .line 7
     iget-object p2, p0, Lcom/vk/shoppingcenter/fragment/OnboardingView;->d:Lcom/vk/core/widget/PageIndicator;
@@ -364,36 +364,36 @@
     return-void
 .end method
 
-.method public final getOnFinishedListener()Lkotlin/jvm/b/a;
+.method public final getOnFinishedListener()Lkotlin/jvm/b/Functions;
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "()",
-            "Lkotlin/jvm/b/a<",
-            "Lkotlin/m;",
+            "Lkotlin/jvm/b/Functions<",
+            "Lkotlin/Unit;",
             ">;"
         }
     .end annotation
 
     .line 1
-    iget-object v0, p0, Lcom/vk/shoppingcenter/fragment/OnboardingView;->a:Lkotlin/jvm/b/a;
+    iget-object v0, p0, Lcom/vk/shoppingcenter/fragment/OnboardingView;->a:Lkotlin/jvm/b/Functions;
 
     return-object v0
 .end method
 
-.method public final setOnFinishedListener(Lkotlin/jvm/b/a;)V
+.method public final setOnFinishedListener(Lkotlin/jvm/b/Functions;)V
     .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lkotlin/jvm/b/a<",
-            "Lkotlin/m;",
+            "Lkotlin/jvm/b/Functions<",
+            "Lkotlin/Unit;",
             ">;)V"
         }
     .end annotation
 
     .line 1
-    iput-object p1, p0, Lcom/vk/shoppingcenter/fragment/OnboardingView;->a:Lkotlin/jvm/b/a;
+    iput-object p1, p0, Lcom/vk/shoppingcenter/fragment/OnboardingView;->a:Lkotlin/jvm/b/Functions;
 
     return-void
 .end method

@@ -3,7 +3,7 @@
 .source "AttachActivity.java"
 
 # interfaces
-.implements Lcom/vk/common/g/a;
+.implements Lcom/vk/common/g/F0;
 
 
 # annotations
@@ -19,7 +19,7 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Ljava/lang/Object;",
-        "Lcom/vk/common/g/a<",
+        "Lcom/vk/common/g/F0<",
         "Lcom/vk/core/fragments/FragmentImpl;",
         ">;"
     }
@@ -69,14 +69,14 @@
     sget-object v1, Lcom/vk/stat/scheme/SchemeStat$EventScreen;->POLL:Lcom/vk/stat/scheme/SchemeStat$EventScreen;
 
     :goto_0
-    invoke-static {v1}, Lcom/vk/stat/scheme/f;->a(Lcom/vk/stat/scheme/SchemeStat$EventScreen;)Ljava/lang/String;
+    invoke-static {v1}, Lcom/vk/stat/scheme/SchemeStatEx;->a(Lcom/vk/stat/scheme/SchemeStat$EventScreen;)Ljava/lang/String;
 
     move-result-object v1
 
     invoke-virtual {v0, v1}, Lcom/vk/attachpicker/fragment/PollPickerFragment$a;->a(Ljava/lang/String;)Lcom/vk/attachpicker/fragment/PollPickerFragment$a;
 
     .line 4
-    invoke-virtual {v0}, Lcom/vk/navigation/o;->a()Lcom/vk/core/fragments/FragmentImpl;
+    invoke-virtual {v0}, Lcom/vk/navigation/Navigator;->a()Lcom/vk/core/fragments/FragmentImpl;
 
     move-result-object v0
 

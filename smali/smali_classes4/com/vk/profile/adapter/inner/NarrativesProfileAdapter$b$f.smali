@@ -3,7 +3,7 @@
 .source "NarrativesProfileAdapter.kt"
 
 # interfaces
-.implements Lc/a/z/j;
+.implements Lio/reactivex/functions/Function;
 
 
 # annotations
@@ -24,7 +24,7 @@
         "Ljava/lang/Object;",
         ">",
         "Ljava/lang/Object;",
-        "Lc/a/z/j<",
+        "Lio/reactivex/functions/Function<",
         "TT;TR;>;"
     }
 .end annotation
@@ -57,11 +57,11 @@
 
 
 # virtual methods
-.method public final apply(Ljava/lang/Object;)Lcom/vk/narratives/b;
+.method public final apply(Ljava/lang/Object;)Lcom/vk/narratives/NarrativeController2;
     .locals 0
 
     .line 2
-    check-cast p1, Lcom/vk/narratives/b;
+    check-cast p1, Lcom/vk/narratives/NarrativeController2;
 
     return-object p1
 .end method
@@ -70,7 +70,7 @@
     .locals 0
 
     .line 1
-    invoke-virtual {p0, p1}, Lcom/vk/profile/adapter/inner/NarrativesProfileAdapter$b$f;->apply(Ljava/lang/Object;)Lcom/vk/narratives/b;
+    invoke-virtual {p0, p1}, Lcom/vk/profile/adapter/inner/NarrativesProfileAdapter$b$f;->apply(Ljava/lang/Object;)Lcom/vk/narratives/NarrativeController2;
 
     move-result-object p1
 

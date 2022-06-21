@@ -3,7 +3,7 @@
 .source "VkUiConnectFragment.kt"
 
 # interfaces
-.implements Lc/a/z/g;
+.implements Lio/reactivex/functions/Consumer;
 
 
 # annotations
@@ -22,7 +22,7 @@
         "Ljava/lang/Object;",
         ">",
         "Ljava/lang/Object;",
-        "Lc/a/z/g<",
+        "Lio/reactivex/functions/Consumer<",
         "Ljava/lang/Boolean;",
         ">;"
     }
@@ -52,7 +52,7 @@
     const-string v0, "it"
 
     .line 1
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {p1}, Ljava/lang/Boolean;->booleanValue()Z
 
@@ -79,11 +79,11 @@
     .line 4
     iget-object p1, p0, Lcom/vk/webapp/VkUiConnectFragment$r0;->a:Lcom/vk/webapp/VkUiConnectFragment;
 
-    invoke-virtual {p1}, Lcom/vk/webapp/VkUiConnectFragment;->a5()Lcom/vk/webapp/o/b;
+    invoke-virtual {p1}, Lcom/vk/webapp/VkUiConnectFragment;->a5()Lcom/vk/webapp/o/VkUiConnectFragmentDelegate;
 
     move-result-object p1
 
-    invoke-interface {p1}, Lcom/vk/webapp/o/b;->f()Z
+    invoke-interface {p1}, Lcom/vk/webapp/o/VkUiConnectFragmentDelegate;->f()Z
 
     move-result p1
 
@@ -95,7 +95,7 @@
 
     .line 5
     :cond_0
-    invoke-static {}, Lcom/vk/core/ui/themes/d;->e()Z
+    invoke-static {}, Lcom/vk/core/ui/themes/MilkshakeHelper;->e()Z
 
     move-result p1
 
@@ -112,16 +112,16 @@
     const/4 v0, 0x2
 
     .line 6
-    invoke-static {p1, v2, v0, v1}, Lcom/vk/core/util/k1;->a(IZILjava/lang/Object;)V
+    invoke-static {p1, v2, v0, v1}, Lcom/vk/core/util/ToastUtils;->a(IZILjava/lang/Object;)V
 
     .line 7
     iget-object p1, p0, Lcom/vk/webapp/VkUiConnectFragment$r0;->a:Lcom/vk/webapp/VkUiConnectFragment;
 
-    invoke-virtual {p1}, Lcom/vk/webapp/VkUiConnectFragment;->a5()Lcom/vk/webapp/o/b;
+    invoke-virtual {p1}, Lcom/vk/webapp/VkUiConnectFragment;->a5()Lcom/vk/webapp/o/VkUiConnectFragmentDelegate;
 
     move-result-object p1
 
-    invoke-interface {p1}, Lcom/vk/webapp/o/b;->f()Z
+    invoke-interface {p1}, Lcom/vk/webapp/o/VkUiConnectFragmentDelegate;->f()Z
 
     move-result p1
 
@@ -135,7 +135,7 @@
     .line 9
     iget-object p1, p0, Lcom/vk/webapp/VkUiConnectFragment$r0;->a:Lcom/vk/webapp/VkUiConnectFragment;
 
-    invoke-virtual {p1}, Ld/a/a/a/h;->getContext()Landroid/content/Context;
+    invoke-virtual {p1}, Lme/grishka/appkit/fragments/AppKitFragment;->getContext()Landroid/content/Context;
 
     move-result-object p1
 
@@ -143,15 +143,15 @@
 
     iget-object v0, p0, Lcom/vk/webapp/VkUiConnectFragment$r0;->a:Lcom/vk/webapp/VkUiConnectFragment;
 
-    invoke-virtual {v0}, Lcom/vk/webapp/VkUiConnectFragment;->a5()Lcom/vk/webapp/o/b;
+    invoke-virtual {v0}, Lcom/vk/webapp/VkUiConnectFragment;->a5()Lcom/vk/webapp/o/VkUiConnectFragmentDelegate;
 
     move-result-object v0
 
-    invoke-interface {v0}, Lcom/vk/webapp/o/c;->F()I
+    invoke-interface {v0}, Lcom/vk/webapp/o/VkUiFragmentDelegate;->F()I
 
     move-result v0
 
-    invoke-static {p1, v0}, Lcom/vtosters/lite/data/p;->b(Landroid/content/Context;I)V
+    invoke-static {p1, v0}, Lcom/vtosters/lite/data/Games;->b(Landroid/content/Context;I)V
 
     .line 10
     :cond_2

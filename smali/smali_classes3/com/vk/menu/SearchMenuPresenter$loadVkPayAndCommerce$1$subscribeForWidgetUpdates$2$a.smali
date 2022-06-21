@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/menu/SearchMenuPresenter$loadVkPayAndCommerce$1$subscribeForWidgetUpdates$2;->a(Lb/h/u/b/e$a;)V
+    value = Lcom/vk/menu/SearchMenuPresenter$loadVkPayAndCommerce$1$subscribeForWidgetUpdates$2;->a(Lb/h/u/b/VkPayBalanceQueueEvent$a;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -20,16 +20,16 @@
 # instance fields
 .field final synthetic a:Lcom/vk/menu/SearchMenuPresenter$loadVkPayAndCommerce$1$subscribeForWidgetUpdates$2;
 
-.field final synthetic b:Lb/h/u/b/e$a;
+.field final synthetic b:Lb/h/u/b/VkPayBalanceQueueEvent$a;
 
 
 # direct methods
-.method constructor <init>(Lcom/vk/menu/SearchMenuPresenter$loadVkPayAndCommerce$1$subscribeForWidgetUpdates$2;Lb/h/u/b/e$a;)V
+.method constructor <init>(Lcom/vk/menu/SearchMenuPresenter$loadVkPayAndCommerce$1$subscribeForWidgetUpdates$2;Lb/h/u/b/VkPayBalanceQueueEvent$a;)V
     .locals 0
 
     iput-object p1, p0, Lcom/vk/menu/SearchMenuPresenter$loadVkPayAndCommerce$1$subscribeForWidgetUpdates$2$a;->a:Lcom/vk/menu/SearchMenuPresenter$loadVkPayAndCommerce$1$subscribeForWidgetUpdates$2;
 
-    iput-object p2, p0, Lcom/vk/menu/SearchMenuPresenter$loadVkPayAndCommerce$1$subscribeForWidgetUpdates$2$a;->b:Lb/h/u/b/e$a;
+    iput-object p2, p0, Lcom/vk/menu/SearchMenuPresenter$loadVkPayAndCommerce$1$subscribeForWidgetUpdates$2$a;->b:Lb/h/u/b/VkPayBalanceQueueEvent$a;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -48,13 +48,13 @@
 
     iget-object v0, v0, Lcom/vk/menu/SearchMenuPresenter$loadVkPayAndCommerce$1;->b:Lcom/vk/menu/SearchMenuPresenter;
 
-    invoke-virtual {v0}, Lcom/vk/menu/SearchMenuPresenter;->a()Lcom/vk/menu/f;
+    invoke-virtual {v0}, Lcom/vk/menu/SearchMenuPresenter;->a()Lcom/vk/menu/SearchMenuContract1;
 
     move-result-object v0
 
     const/4 v1, 0x3
 
-    invoke-interface {v0, v1}, Lcom/vk/menu/f;->y(I)Z
+    invoke-interface {v0, v1}, Lcom/vk/menu/SearchMenuContract1;->y(I)Z
 
     move-result v0
 
@@ -64,9 +64,9 @@
 
     iget-object v0, v0, Lcom/vk/menu/SearchMenuPresenter$loadVkPayAndCommerce$1$subscribeForWidgetUpdates$2;->this$0:Lcom/vk/menu/SearchMenuPresenter$loadVkPayAndCommerce$1;
 
-    iget-object v1, p0, Lcom/vk/menu/SearchMenuPresenter$loadVkPayAndCommerce$1$subscribeForWidgetUpdates$2$a;->b:Lb/h/u/b/e$a;
+    iget-object v1, p0, Lcom/vk/menu/SearchMenuPresenter$loadVkPayAndCommerce$1$subscribeForWidgetUpdates$2$a;->b:Lb/h/u/b/VkPayBalanceQueueEvent$a;
 
-    invoke-virtual {v1}, Lb/h/u/b/e$a;->a()J
+    invoke-virtual {v1}, Lb/h/u/b/VkPayBalanceQueueEvent$a;->a()J
 
     move-result-wide v1
 
@@ -79,9 +79,9 @@
 
     iget-object v0, v0, Lcom/vk/menu/SearchMenuPresenter$loadVkPayAndCommerce$1$subscribeForWidgetUpdates$2;->this$0:Lcom/vk/menu/SearchMenuPresenter$loadVkPayAndCommerce$1;
 
-    iget-object v1, p0, Lcom/vk/menu/SearchMenuPresenter$loadVkPayAndCommerce$1$subscribeForWidgetUpdates$2$a;->b:Lb/h/u/b/e$a;
+    iget-object v1, p0, Lcom/vk/menu/SearchMenuPresenter$loadVkPayAndCommerce$1$subscribeForWidgetUpdates$2$a;->b:Lb/h/u/b/VkPayBalanceQueueEvent$a;
 
-    invoke-virtual {v1}, Lb/h/u/b/e$a;->a()J
+    invoke-virtual {v1}, Lb/h/u/b/VkPayBalanceQueueEvent$a;->a()J
 
     move-result-wide v1
 

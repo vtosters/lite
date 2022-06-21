@@ -1,5 +1,5 @@
 .class Lcom/vk/music/fragment/AudioPlayerFragment$f;
-.super Lcom/vk/music/player/d$a$a;
+.super Lcom/vk/music/player/PlayerModel$a$a;
 .source "AudioPlayerFragment.java"
 
 
@@ -25,7 +25,7 @@
     .line 1
     iput-object p1, p0, Lcom/vk/music/fragment/AudioPlayerFragment$f;->a:Lcom/vk/music/fragment/AudioPlayerFragment;
 
-    invoke-direct {p0}, Lcom/vk/music/player/d$a$a;-><init>()V
+    invoke-direct {p0}, Lcom/vk/music/player/PlayerModel$a$a;-><init>()V
 
     return-void
 .end method
@@ -41,9 +41,9 @@
 
 
 # virtual methods
-.method public c(Lcom/vk/music/player/d;)V
+.method public c(Lcom/vk/music/player/PlayerModel;)V
     .locals 1
-    .param p1    # Lcom/vk/music/player/d;
+    .param p1    # Lcom/vk/music/player/PlayerModel;
         .annotation build Landroidx/annotation/NonNull;
         .end annotation
     .end param
@@ -51,22 +51,22 @@
     .line 1
     iget-object v0, p0, Lcom/vk/music/fragment/AudioPlayerFragment$f;->a:Lcom/vk/music/fragment/AudioPlayerFragment;
 
-    iget-object v0, v0, Lcom/vk/music/fragment/AudioPlayerFragment;->C:Lcom/vk/music/dto/a;
+    iget-object v0, v0, Lcom/vk/music/fragment/AudioPlayerFragment;->C:Lcom/vk/music/dto/PlayerInfo;
 
-    invoke-interface {p1}, Lcom/vk/music/player/d;->M0()Lcom/vk/music/common/MusicPlaybackLaunchContext;
+    invoke-interface {p1}, Lcom/vk/music/player/PlayerModel;->M0()Lcom/vk/music/common/MusicPlaybackLaunchContext;
 
     move-result-object p1
 
-    iput-object p1, v0, Lcom/vk/music/dto/a;->d:Lcom/vk/music/common/MusicPlaybackLaunchContext;
+    iput-object p1, v0, Lcom/vk/music/dto/PlayerInfo;->d:Lcom/vk/music/common/MusicPlaybackLaunchContext;
 
     .line 2
     iget-object p1, p0, Lcom/vk/music/fragment/AudioPlayerFragment$f;->a:Lcom/vk/music/fragment/AudioPlayerFragment;
 
-    iget-object p1, p1, Lcom/vk/music/fragment/AudioPlayerFragment;->Y:Lcom/vk/music/view/v/a;
+    iget-object p1, p1, Lcom/vk/music/fragment/AudioPlayerFragment;->Y:Lcom/vk/music/view/v/AudioPlayerPagerAdapter;
 
-    iget-object v0, p1, Lcom/vk/music/view/v/a;->E:Lcom/vk/music/view/x/s;
+    iget-object v0, p1, Lcom/vk/music/view/v/AudioPlayerPagerAdapter;->E:Lcom/vk/music/view/x/PlaylistHolder;
 
-    invoke-virtual {p1, v0}, Lcom/vk/music/view/v/a;->a(Lcom/vtosters/lite/ui/b0/i;)V
+    invoke-virtual {p1, v0}, Lcom/vk/music/view/v/AudioPlayerPagerAdapter;->a(Lcom/vtosters/lite/ui/holder/RecyclerHolder;)V
 
     return-void
 .end method

@@ -82,7 +82,7 @@
 
     const-string p2, "activity.layoutInflater.\u2026t.bs_viewer_layout, null)"
 
-    invoke-static {p1, p2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, p2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     iput-object p1, p0, Lcom/vk/core/dialogs/bottomsheet/BottomSheetViewer;->c:Landroid/view/View;
 
@@ -104,7 +104,7 @@
 
     const-string p2, "view.findViewById(R.id.bv_dim)"
 
-    invoke-static {p1, p2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, p2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     iput-object p1, p0, Lcom/vk/core/dialogs/bottomsheet/BottomSheetViewer;->d:Landroid/view/View;
 
@@ -119,7 +119,7 @@
 
     const-string p2, "view.findViewById(R.id.bv_bottom_sheet_container)"
 
-    invoke-static {p1, p2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, p2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     check-cast p1, Landroid/widget/FrameLayout;
 
@@ -143,7 +143,7 @@
 
     const-string p2, "view.findViewById(R.id.bv_controls)"
 
-    invoke-static {p1, p2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, p2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     check-cast p1, Landroid/widget/FrameLayout;
 
@@ -188,7 +188,7 @@
 
     invoke-direct {v0, p0}, Lcom/vk/core/dialogs/bottomsheet/BottomSheetViewer$1;-><init>(Lcom/vk/core/dialogs/bottomsheet/BottomSheetViewer;)V
 
-    invoke-static {p1, v0}, Lcom/vk/extensions/ViewExtKt;->a(Landroid/view/View;Lkotlin/jvm/b/b;)V
+    invoke-static {p1, v0}, Lcom/vk/extensions/ViewExtKt;->a(Landroid/view/View;Lkotlin/jvm/b/Functions2;)V
 
     .line 14
     iget-object v1, p0, Lcom/vk/core/dialogs/bottomsheet/BottomSheetViewer;->c:Landroid/view/View;
@@ -203,7 +203,7 @@
 
     const/4 v6, 0x0
 
-    invoke-static/range {v1 .. v6}, Lcom/vk/extensions/ViewExtKt;->a(Landroid/view/View;JLkotlin/jvm/b/a;ILjava/lang/Object;)V
+    invoke-static/range {v1 .. v6}, Lcom/vk/extensions/ViewExtKt;->a(Landroid/view/View;JLkotlin/jvm/b/Functions;ILjava/lang/Object;)V
 
     .line 15
     iget-object p1, p0, Lcom/vk/core/dialogs/bottomsheet/BottomSheetViewer;->c:Landroid/view/View;
@@ -491,7 +491,7 @@
 
     invoke-direct {v1, p0}, Lcom/vk/core/dialogs/bottomsheet/BottomSheetViewer$setUpListeners$1;-><init>(Lcom/vk/core/dialogs/bottomsheet/BottomSheetViewer;)V
 
-    invoke-static {v0, v1}, Lcom/vk/extensions/ViewExtKt;->b(Landroid/view/View;Lkotlin/jvm/b/a;)V
+    invoke-static {v0, v1}, Lcom/vk/extensions/ViewExtKt;->b(Landroid/view/View;Lkotlin/jvm/b/Functions;)V
 
     .line 3
     iget-object v0, p0, Lcom/vk/core/dialogs/bottomsheet/BottomSheetViewer;->d:Landroid/view/View;
@@ -801,7 +801,7 @@
 
     const-wide/16 v2, 0x32
 
-    invoke-static {v0, v1, v2, v3}, Lcom/vk/extensions/ViewExtKt;->a(Landroid/view/View;Lkotlin/jvm/b/a;J)V
+    invoke-static {v0, v1, v2, v3}, Lcom/vk/extensions/ViewExtKt;->a(Landroid/view/View;Lkotlin/jvm/b/Functions;J)V
 
     return-void
 .end method

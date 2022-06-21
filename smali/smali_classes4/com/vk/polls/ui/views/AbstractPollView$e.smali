@@ -24,7 +24,7 @@
     return-void
 .end method
 
-.method public synthetic constructor <init>(Lkotlin/jvm/internal/i;)V
+.method public synthetic constructor <init>(Lkotlin/jvm/internal/DefaultConstructorMarker;)V
     .locals 0
 
     .line 2
@@ -74,7 +74,7 @@
 
     const v0, 0x3f19999a    # 0.6f
 
-    invoke-static {p1, v0}, Lcom/vk/core/util/p;->a(IF)I
+    invoke-static {p1, v0}, Lcom/vk/core/util/ColorUtils;->a(IF)I
 
     move-result p1
 
@@ -296,7 +296,7 @@
 
     const-string p2, "context.getString(stringRes)"
 
-    invoke-static {p1, p2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, p2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     goto :goto_2
 
@@ -333,7 +333,7 @@
     const-string p2, "if (poll.votes == 0) {\n \u2026poll.votes)\n            }"
 
     .line 21
-    invoke-static {p1, p2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, p2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     :goto_2
     return-object p1
@@ -386,11 +386,11 @@
     move-result v3
 
     .line 27
-    invoke-virtual {v1, v2, v4, v3, p3}, Lcom/vk/polls/ui/views/PhotoPollDrawable$Companion;->a(IIII)Lcom/facebook/x/f/a;
+    invoke-virtual {v1, v2, v4, v3, p3}, Lcom/vk/polls/ui/views/PhotoPollDrawable$Companion;->a(IIII)Lcom/facebook/x/f/DrawableFactory;
 
     move-result-object v1
 
-    invoke-virtual {p1, v1}, Lcom/vk/imageloader/view/VKImageView;->setDrawableFactory(Lcom/facebook/x/f/a;)V
+    invoke-virtual {p1, v1}, Lcom/vk/imageloader/view/VKImageView;->setDrawableFactory(Lcom/facebook/x/f/DrawableFactory;)V
 
     .line 28
     invoke-virtual {p2}, Lcom/vk/dto/polls/PollBackground;->t1()I
@@ -399,7 +399,7 @@
 
     const v1, 0x3f19999a    # 0.6f
 
-    invoke-static {p2, v1}, Lcom/vk/core/util/p;->a(IF)I
+    invoke-static {p2, v1}, Lcom/vk/core/util/ColorUtils;->a(IF)I
 
     move-result p2
 
@@ -444,7 +444,7 @@
     if-eqz v0, :cond_2
 
     .line 33
-    sget-object v0, Lcom/vk/polls/ui/views/d;->e:Lcom/vk/polls/ui/views/d$a;
+    sget-object v0, Lcom/vk/polls/ui/views/PollBackgroundDrawables;->e:Lcom/vk/polls/ui/views/PollBackgroundDrawables$a;
 
     move-object v1, p2
 
@@ -454,18 +454,18 @@
 
     move-result v2
 
-    invoke-virtual {v0, v1, v2}, Lcom/vk/polls/ui/views/d$a;->a(Lcom/vk/dto/polls/PollTile;I)Lcom/vk/dto/common/ImageSize;
+    invoke-virtual {v0, v1, v2}, Lcom/vk/polls/ui/views/PollBackgroundDrawables$a;->a(Lcom/vk/dto/polls/PollTile;I)Lcom/vk/dto/common/ImageSize;
 
     move-result-object v0
 
     .line 34
-    sget-object v1, Lcom/vk/polls/ui/views/d;->e:Lcom/vk/polls/ui/views/d$a;
+    sget-object v1, Lcom/vk/polls/ui/views/PollBackgroundDrawables;->e:Lcom/vk/polls/ui/views/PollBackgroundDrawables$a;
 
-    invoke-virtual {v1, p3}, Lcom/vk/polls/ui/views/d$a;->a(I)Lcom/facebook/x/f/a;
+    invoke-virtual {v1, p3}, Lcom/vk/polls/ui/views/PollBackgroundDrawables$a;->a(I)Lcom/facebook/x/f/DrawableFactory;
 
     move-result-object v1
 
-    invoke-virtual {p1, v1}, Lcom/vk/imageloader/view/VKImageView;->setDrawableFactory(Lcom/facebook/x/f/a;)V
+    invoke-virtual {p1, v1}, Lcom/vk/imageloader/view/VKImageView;->setDrawableFactory(Lcom/facebook/x/f/DrawableFactory;)V
 
     .line 35
     invoke-virtual {p2}, Lcom/vk/dto/polls/PollBackground;->t1()I

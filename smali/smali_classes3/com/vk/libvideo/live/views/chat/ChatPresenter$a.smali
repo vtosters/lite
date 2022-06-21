@@ -1,5 +1,5 @@
 .class Lcom/vk/libvideo/live/views/chat/ChatPresenter$a;
-.super Lc/a/c0/a;
+.super Lio/reactivex/observers/DisposableObserver/DisposableObserver;
 .source "ChatPresenter.java"
 
 
@@ -15,7 +15,7 @@
 
 .annotation system Ldalvik/annotation/Signature;
     value = {
-        "Lc/a/c0/a<",
+        "Lio/reactivex/observers/DisposableObserver/DisposableObserver<",
         "Ljava/lang/Boolean;",
         ">;"
     }
@@ -37,7 +37,7 @@
 
     iput p2, p0, Lcom/vk/libvideo/live/views/chat/ChatPresenter$a;->b:I
 
-    invoke-direct {p0}, Lc/a/c0/a;-><init>()V
+    invoke-direct {p0}, Lio/reactivex/observers/DisposableObserver/DisposableObserver;-><init>()V
 
     return-void
 .end method
@@ -56,7 +56,7 @@
     .line 1
     sget p1, Lcom/vk/libvideo/j;->live_comment_some_error:I
 
-    invoke-static {p1}, Lcom/vk/core/util/k1;->a(I)V
+    invoke-static {p1}, Lcom/vk/core/util/ToastUtils;->a(I)V
 
     return-void
 .end method
@@ -80,7 +80,7 @@
     .line 3
     sget v0, Lcom/vk/libvideo/j;->live_comment_user_unbanned:I
 
-    invoke-static {v0}, Lcom/vk/core/util/k1;->a(I)V
+    invoke-static {v0}, Lcom/vk/core/util/ToastUtils;->a(I)V
 
     return-void
 .end method

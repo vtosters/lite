@@ -3,7 +3,7 @@
 .source "VKTabLayout.java"
 
 # interfaces
-.implements Lcom/vk/core/ui/themes/f;
+.implements Lcom/vk/core/ui/themes/Themable;
 
 
 # annotations

@@ -3,7 +3,7 @@
 .source "PinnedMsg.kt"
 
 # interfaces
-.implements Lcom/vk/im/engine/models/messages/g;
+.implements Lcom/vk/im/engine/models/messages/WithFrom;
 .implements Lcom/vk/im/engine/models/messages/WithUserContent;
 
 
@@ -81,7 +81,7 @@
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, v1}, Lcom/vk/im/engine/models/messages/PinnedMsg$b;-><init>(Lkotlin/jvm/internal/i;)V
+    invoke-direct {v0, v1}, Lcom/vk/im/engine/models/messages/PinnedMsg$b;-><init>(Lkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     .line 1
     new-instance v0, Lcom/vk/im/engine/models/messages/PinnedMsg$a;
@@ -177,7 +177,7 @@
     return-void
 .end method
 
-.method public synthetic constructor <init>(Lcom/vk/core/serialize/Serializer;Lkotlin/jvm/internal/i;)V
+.method public synthetic constructor <init>(Lcom/vk/core/serialize/Serializer;Lkotlin/jvm/internal/DefaultConstructorMarker;)V
     .locals 0
 
     .line 1
@@ -272,7 +272,7 @@
     return-void
 .end method
 
-.method private final a(Ljava/util/Collection;Lkotlin/jvm/b/a;)V
+.method private final a(Ljava/util/Collection;Lkotlin/jvm/b/Functions;)V
     .locals 2
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -281,7 +281,7 @@
             "+",
             "Lcom/vk/im/engine/models/attaches/Attach;",
             ">;",
-            "Lkotlin/jvm/b/a<",
+            "Lkotlin/jvm/b/Functions<",
             "Ljava/lang/Integer;",
             ">;)V"
         }
@@ -316,7 +316,7 @@
     check-cast v0, Lcom/vk/im/engine/models/attaches/Attach;
 
     .line 49
-    invoke-interface {p2}, Lkotlin/jvm/b/a;->invoke()Ljava/lang/Object;
+    invoke-interface {p2}, Lkotlin/jvm/b/Functions;->invoke()Ljava/lang/Object;
 
     move-result-object v1
 
@@ -457,36 +457,36 @@
 
     .line 18
     :cond_0
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     throw v1
 
     .line 19
     :cond_1
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     throw v1
 
     .line 20
     :cond_2
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     throw v1
 
     .line 21
     :cond_3
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     throw v1
 
     .line 22
     :cond_4
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     throw v1
 .end method
 
-.method private final b(Ljava/util/Collection;Lkotlin/jvm/b/a;)V
+.method private final b(Ljava/util/Collection;Lkotlin/jvm/b/Functions;)V
     .locals 2
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -494,7 +494,7 @@
             "Ljava/util/Collection<",
             "Lcom/vk/im/engine/models/messages/NestedMsg;",
             ">;",
-            "Lkotlin/jvm/b/a<",
+            "Lkotlin/jvm/b/Functions<",
             "Ljava/lang/Integer;",
             ">;)V"
         }
@@ -529,7 +529,7 @@
     check-cast v0, Lcom/vk/im/engine/models/messages/NestedMsg;
 
     .line 25
-    invoke-interface {p2}, Lkotlin/jvm/b/a;->invoke()Ljava/lang/Object;
+    invoke-interface {p2}, Lkotlin/jvm/b/Functions;->invoke()Ljava/lang/Object;
 
     move-result-object v1
 
@@ -546,14 +546,14 @@
 
     move-result-object v1
 
-    invoke-direct {p0, v1, p2}, Lcom/vk/im/engine/models/messages/PinnedMsg;->a(Ljava/util/Collection;Lkotlin/jvm/b/a;)V
+    invoke-direct {p0, v1, p2}, Lcom/vk/im/engine/models/messages/PinnedMsg;->a(Ljava/util/Collection;Lkotlin/jvm/b/Functions;)V
 
     .line 27
     invoke-virtual {v0}, Lcom/vk/im/engine/models/messages/NestedMsg;->w0()Ljava/util/List;
 
     move-result-object v0
 
-    invoke-direct {p0, v0, p2}, Lcom/vk/im/engine/models/messages/PinnedMsg;->b(Ljava/util/Collection;Lkotlin/jvm/b/a;)V
+    invoke-direct {p0, v0, p2}, Lcom/vk/im/engine/models/messages/PinnedMsg;->b(Ljava/util/Collection;Lkotlin/jvm/b/Functions;)V
 
     goto :goto_0
 
@@ -681,7 +681,7 @@
     .locals 1
 
     .line 1
-    invoke-static {p0}, Lcom/vk/im/engine/models/messages/g$a;->b(Lcom/vk/im/engine/models/messages/g;)Lcom/vk/im/engine/models/MemberType;
+    invoke-static {p0}, Lcom/vk/im/engine/models/messages/WithFrom$a;->b(Lcom/vk/im/engine/models/messages/WithFrom;)Lcom/vk/im/engine/models/MemberType;
 
     move-result-object v0
 
@@ -699,12 +699,12 @@
     return p1
 .end method
 
-.method public a(Lkotlin/jvm/b/b;Z)Lcom/vk/im/engine/models/attaches/Attach;
+.method public a(Lkotlin/jvm/b/Functions2;Z)Lcom/vk/im/engine/models/attaches/Attach;
     .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lkotlin/jvm/b/b<",
+            "Lkotlin/jvm/b/Functions2<",
             "-",
             "Lcom/vk/im/engine/models/attaches/Attach;",
             "Ljava/lang/Boolean;",
@@ -714,19 +714,19 @@
     .end annotation
 
     .line 3
-    invoke-static {p0, p1, p2}, Lcom/vk/im/engine/models/messages/WithUserContent$DefaultImpls;->a(Lcom/vk/im/engine/models/messages/WithUserContent;Lkotlin/jvm/b/b;Z)Lcom/vk/im/engine/models/attaches/Attach;
+    invoke-static {p0, p1, p2}, Lcom/vk/im/engine/models/messages/WithUserContent$DefaultImpls;->a(Lcom/vk/im/engine/models/messages/WithUserContent;Lkotlin/jvm/b/Functions2;Z)Lcom/vk/im/engine/models/attaches/Attach;
 
     move-result-object p1
 
     return-object p1
 .end method
 
-.method public final a(Lkotlin/jvm/b/a;)Lcom/vk/im/engine/models/messages/PinnedMsg;
+.method public final a(Lkotlin/jvm/b/Functions;)Lcom/vk/im/engine/models/messages/PinnedMsg;
     .locals 2
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lkotlin/jvm/b/a<",
+            "Lkotlin/jvm/b/Functions<",
             "Ljava/lang/Integer;",
             ">;)",
             "Lcom/vk/im/engine/models/messages/PinnedMsg;"
@@ -743,14 +743,14 @@
 
     move-result-object v1
 
-    invoke-direct {p0, v1, p1}, Lcom/vk/im/engine/models/messages/PinnedMsg;->b(Ljava/util/Collection;Lkotlin/jvm/b/a;)V
+    invoke-direct {p0, v1, p1}, Lcom/vk/im/engine/models/messages/PinnedMsg;->b(Ljava/util/Collection;Lkotlin/jvm/b/Functions;)V
 
     .line 46
     invoke-virtual {v0}, Lcom/vk/im/engine/models/messages/PinnedMsg;->J0()Ljava/util/List;
 
     move-result-object v1
 
-    invoke-direct {p0, v1, p1}, Lcom/vk/im/engine/models/messages/PinnedMsg;->a(Ljava/util/Collection;Lkotlin/jvm/b/a;)V
+    invoke-direct {p0, v1, p1}, Lcom/vk/im/engine/models/messages/PinnedMsg;->a(Ljava/util/Collection;Lkotlin/jvm/b/Functions;)V
 
     return-object v0
 .end method
@@ -1087,21 +1087,21 @@
     return-void
 .end method
 
-.method public a(Lkotlin/jvm/b/b;)V
+.method public a(Lkotlin/jvm/b/Functions2;)V
     .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lkotlin/jvm/b/b<",
+            "Lkotlin/jvm/b/Functions2<",
             "-",
             "Lcom/vk/im/engine/models/messages/NestedMsg;",
-            "Lkotlin/m;",
+            "Lkotlin/Unit;",
             ">;)V"
         }
     .end annotation
 
     .line 4
-    invoke-static {p0, p1}, Lcom/vk/im/engine/models/messages/WithUserContent$DefaultImpls;->b(Lcom/vk/im/engine/models/messages/WithUserContent;Lkotlin/jvm/b/b;)V
+    invoke-static {p0, p1}, Lcom/vk/im/engine/models/messages/WithUserContent$DefaultImpls;->b(Lcom/vk/im/engine/models/messages/WithUserContent;Lkotlin/jvm/b/Functions2;)V
 
     return-void
 .end method
@@ -1123,17 +1123,17 @@
     return-void
 .end method
 
-.method public a(ZLkotlin/jvm/b/b;Lkotlin/jvm/b/b;)V
+.method public a(ZLkotlin/jvm/b/Functions2;Lkotlin/jvm/b/Functions2;)V
     .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(Z",
-            "Lkotlin/jvm/b/b<",
+            "Lkotlin/jvm/b/Functions2<",
             "-",
             "Lcom/vk/im/engine/models/attaches/Attach;",
             "Ljava/lang/Boolean;",
             ">;",
-            "Lkotlin/jvm/b/b<",
+            "Lkotlin/jvm/b/Functions2<",
             "-",
             "Lcom/vk/im/engine/models/attaches/Attach;",
             "+",
@@ -1143,7 +1143,7 @@
     .end annotation
 
     .line 10
-    invoke-static {p0, p1, p2, p3}, Lcom/vk/im/engine/models/messages/WithUserContent$DefaultImpls;->a(Lcom/vk/im/engine/models/messages/WithUserContent;ZLkotlin/jvm/b/b;Lkotlin/jvm/b/b;)V
+    invoke-static {p0, p1, p2, p3}, Lcom/vk/im/engine/models/messages/WithUserContent$DefaultImpls;->a(Lcom/vk/im/engine/models/messages/WithUserContent;ZLkotlin/jvm/b/Functions2;Lkotlin/jvm/b/Functions2;)V
 
     return-void
 .end method
@@ -1163,7 +1163,7 @@
     .locals 0
 
     .line 9
-    invoke-static {p0, p1, p2}, Lcom/vk/im/engine/models/messages/g$a;->a(Lcom/vk/im/engine/models/messages/g;Lcom/vk/im/engine/models/MemberType;I)Z
+    invoke-static {p0, p1, p2}, Lcom/vk/im/engine/models/messages/WithFrom$a;->a(Lcom/vk/im/engine/models/messages/WithFrom;Lcom/vk/im/engine/models/MemberType;I)Z
 
     move-result p1
 
@@ -1217,40 +1217,40 @@
     return-void
 .end method
 
-.method public b(Lkotlin/jvm/b/b;)V
+.method public b(Lkotlin/jvm/b/Functions2;)V
     .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lkotlin/jvm/b/b<",
+            "Lkotlin/jvm/b/Functions2<",
             "-",
             "Lcom/vk/im/engine/models/messages/NestedMsg;",
-            "Lkotlin/m;",
+            "Lkotlin/Unit;",
             ">;)V"
         }
     .end annotation
 
     .line 3
-    invoke-static {p0, p1}, Lcom/vk/im/engine/models/messages/WithUserContent$DefaultImpls;->a(Lcom/vk/im/engine/models/messages/WithUserContent;Lkotlin/jvm/b/b;)V
+    invoke-static {p0, p1}, Lcom/vk/im/engine/models/messages/WithUserContent$DefaultImpls;->a(Lcom/vk/im/engine/models/messages/WithUserContent;Lkotlin/jvm/b/Functions2;)V
 
     return-void
 .end method
 
-.method public b(Lkotlin/jvm/b/b;Z)V
+.method public b(Lkotlin/jvm/b/Functions2;Z)V
     .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lkotlin/jvm/b/b<",
+            "Lkotlin/jvm/b/Functions2<",
             "-",
             "Lcom/vk/im/engine/models/messages/NestedMsg;",
-            "Lkotlin/m;",
+            "Lkotlin/Unit;",
             ">;Z)V"
         }
     .end annotation
 
     .line 4
-    invoke-static {p0, p1, p2}, Lcom/vk/im/engine/models/messages/WithUserContent$DefaultImpls;->c(Lcom/vk/im/engine/models/messages/WithUserContent;Lkotlin/jvm/b/b;Z)V
+    invoke-static {p0, p1, p2}, Lcom/vk/im/engine/models/messages/WithUserContent$DefaultImpls;->c(Lcom/vk/im/engine/models/messages/WithUserContent;Lkotlin/jvm/b/Functions2;Z)V
 
     return-void
 .end method
@@ -1259,7 +1259,7 @@
     .locals 0
 
     .line 6
-    invoke-static {p0, p1}, Lcom/vk/im/engine/models/messages/g$a;->a(Lcom/vk/im/engine/models/messages/g;Lcom/vk/im/engine/models/Member;)Z
+    invoke-static {p0, p1}, Lcom/vk/im/engine/models/messages/WithFrom$a;->a(Lcom/vk/im/engine/models/messages/WithFrom;Lcom/vk/im/engine/models/Member;)Z
 
     move-result p1
 
@@ -1362,7 +1362,7 @@
     .locals 1
 
     .line 1
-    invoke-static {p0}, Lcom/vk/im/engine/models/messages/g$a;->a(Lcom/vk/im/engine/models/messages/g;)I
+    invoke-static {p0}, Lcom/vk/im/engine/models/messages/WithFrom$a;->a(Lcom/vk/im/engine/models/messages/WithFrom;)I
 
     move-result v0
 
@@ -1420,7 +1420,7 @@
 
     move-result-object v3
 
-    invoke-static {v1, v3}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v1, v3}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v1
 
@@ -1456,7 +1456,7 @@
 
     move-result-object v3
 
-    invoke-static {v1, v3}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v1, v3}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v1
 
@@ -1476,7 +1476,7 @@
 
     move-result-object v3
 
-    invoke-static {v1, v3}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v1, v3}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v1
 
@@ -1496,7 +1496,7 @@
 
     move-result-object v3
 
-    invoke-static {v1, v3}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v1, v3}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v1
 
@@ -1516,7 +1516,7 @@
 
     move-result-object v3
 
-    invoke-static {v1, v3}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v1, v3}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v1
 
@@ -1536,7 +1536,7 @@
 
     move-result-object v3
 
-    invoke-static {v1, v3}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v1, v3}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v1
 
@@ -1556,7 +1556,7 @@
 
     move-result-object p1
 
-    invoke-static {v1, p1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v1, p1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result p1
 

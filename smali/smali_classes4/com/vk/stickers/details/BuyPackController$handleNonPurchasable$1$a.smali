@@ -71,7 +71,7 @@
 
     .line 2
     :goto_0
-    invoke-static {}, Lcom/vk/bridges/s;->a()Lcom/vk/bridges/r;
+    invoke-static {}, Lcom/vk/bridges/LinksBridge1;->a()Lcom/vk/bridges/LinksBridge;
 
     move-result-object v1
 
@@ -103,7 +103,7 @@
 
     const-string v4, "Uri.parse(link?.url\n    \u2026                   ?: \"\")"
 
-    invoke-static {v3, v4}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v3, v4}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     const/4 v4, 0x0
 
@@ -130,7 +130,7 @@
     const/4 v11, 0x0
 
     .line 4
-    invoke-static/range {v1 .. v11}, Lcom/vk/bridges/r$a;->a(Lcom/vk/bridges/r;Landroid/content/Context;Landroid/net/Uri;ZLjava/lang/String;Landroid/os/Bundle;Lkotlin/jvm/b/a;Lkotlin/jvm/b/b;Lkotlin/jvm/b/a;ILjava/lang/Object;)Z
+    invoke-static/range {v1 .. v11}, Lcom/vk/bridges/LinksBridge$a;->a(Lcom/vk/bridges/LinksBridge;Landroid/content/Context;Landroid/net/Uri;ZLjava/lang/String;Landroid/os/Bundle;Lkotlin/jvm/b/Functions;Lkotlin/jvm/b/Functions2;Lkotlin/jvm/b/Functions;ILjava/lang/Object;)Z
 
     .line 5
     iget-object p1, p0, Lcom/vk/stickers/details/BuyPackController$handleNonPurchasable$1$a;->b:Landroidx/appcompat/app/AlertDialog;

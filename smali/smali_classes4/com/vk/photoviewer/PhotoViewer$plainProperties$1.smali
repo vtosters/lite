@@ -3,7 +3,7 @@
 .source "PhotoViewer.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/b;
+.implements Lkotlin/jvm/b/Functions2;
 
 
 # annotations
@@ -19,9 +19,9 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/b<",
-        "Lcom/vk/photoviewer/i;",
-        "Lcom/vk/photoviewer/i;",
+        "Lkotlin/jvm/b/Functions2<",
+        "Lcom/vk/photoviewer/Properties;",
+        "Lcom/vk/photoviewer/Properties;",
         ">;"
     }
 .end annotation
@@ -56,7 +56,7 @@
 
 
 # virtual methods
-.method public final a(Lcom/vk/photoviewer/i;)Lcom/vk/photoviewer/i;
+.method public final a(Lcom/vk/photoviewer/Properties;)Lcom/vk/photoviewer/Properties;
     .locals 0
 
     return-object p1
@@ -66,9 +66,9 @@
     .locals 0
 
     .line 1
-    check-cast p1, Lcom/vk/photoviewer/i;
+    check-cast p1, Lcom/vk/photoviewer/Properties;
 
-    invoke-virtual {p0, p1}, Lcom/vk/photoviewer/PhotoViewer$plainProperties$1;->a(Lcom/vk/photoviewer/i;)Lcom/vk/photoviewer/i;
+    invoke-virtual {p0, p1}, Lcom/vk/photoviewer/PhotoViewer$plainProperties$1;->a(Lcom/vk/photoviewer/Properties;)Lcom/vk/photoviewer/Properties;
 
     move-result-object p1
 

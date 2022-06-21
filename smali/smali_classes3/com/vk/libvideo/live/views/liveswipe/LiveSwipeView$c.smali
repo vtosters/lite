@@ -41,7 +41,7 @@
     .line 1
     iget-object v0, p0, Lcom/vk/libvideo/live/views/liveswipe/LiveSwipeView$c;->a:Lcom/vk/libvideo/live/views/liveswipe/LiveSwipeView;
 
-    invoke-static {v0}, Lcom/vk/libvideo/live/views/liveswipe/LiveSwipeView;->d(Lcom/vk/libvideo/live/views/liveswipe/LiveSwipeView;)Lcom/vk/libvideo/live/views/liveswipe/f;
+    invoke-static {v0}, Lcom/vk/libvideo/live/views/liveswipe/LiveSwipeView;->d(Lcom/vk/libvideo/live/views/liveswipe/LiveSwipeView;)Lcom/vk/libvideo/live/views/liveswipe/SwipeToolTip;
 
     move-result-object v0
 
@@ -50,7 +50,7 @@
     .line 2
     iget-object v0, p0, Lcom/vk/libvideo/live/views/liveswipe/LiveSwipeView$c;->a:Lcom/vk/libvideo/live/views/liveswipe/LiveSwipeView;
 
-    invoke-static {v0}, Lcom/vk/libvideo/live/views/liveswipe/LiveSwipeView;->d(Lcom/vk/libvideo/live/views/liveswipe/LiveSwipeView;)Lcom/vk/libvideo/live/views/liveswipe/f;
+    invoke-static {v0}, Lcom/vk/libvideo/live/views/liveswipe/LiveSwipeView;->d(Lcom/vk/libvideo/live/views/liveswipe/LiveSwipeView;)Lcom/vk/libvideo/live/views/liveswipe/SwipeToolTip;
 
     move-result-object v0
 
@@ -69,7 +69,7 @@
     .line 3
     iget-object v0, p0, Lcom/vk/libvideo/live/views/liveswipe/LiveSwipeView$c;->a:Lcom/vk/libvideo/live/views/liveswipe/LiveSwipeView;
 
-    invoke-static {v0}, Lcom/vk/libvideo/live/views/liveswipe/LiveSwipeView;->d(Lcom/vk/libvideo/live/views/liveswipe/LiveSwipeView;)Lcom/vk/libvideo/live/views/liveswipe/f;
+    invoke-static {v0}, Lcom/vk/libvideo/live/views/liveswipe/LiveSwipeView;->d(Lcom/vk/libvideo/live/views/liveswipe/LiveSwipeView;)Lcom/vk/libvideo/live/views/liveswipe/SwipeToolTip;
 
     move-result-object v0
 

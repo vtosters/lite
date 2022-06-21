@@ -24,7 +24,7 @@
     return-void
 .end method
 
-.method public synthetic constructor <init>(Lkotlin/jvm/internal/i;)V
+.method public synthetic constructor <init>(Lkotlin/jvm/internal/DefaultConstructorMarker;)V
     .locals 0
 
     .line 2
@@ -41,7 +41,7 @@
     if-eqz p1, :cond_0
 
     .line 1
-    invoke-static {p1}, Lcom/vk/photoviewer/b;->a(Landroid/view/View;)Landroid/graphics/Rect;
+    invoke-static {p1}, Lcom/vk/photoviewer/AnimationCalculator1;->a(Landroid/view/View;)Landroid/graphics/Rect;
 
     move-result-object p1
 

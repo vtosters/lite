@@ -47,7 +47,7 @@
     invoke-direct {v0, p0}, Landroid/support/v4/media/MediaBrowserCompat$b$b;-><init>(Landroid/support/v4/media/MediaBrowserCompat$b;)V
 
     .line 4
-    invoke-static {v0}, Landroid/support/v4/media/a;->a(Landroid/support/v4/media/a$a;)Ljava/lang/Object;
+    invoke-static {v0}, Landroid/support/v4/media/MediaBrowserCompatApi21;->a(Landroid/support/v4/media/MediaBrowserCompatApi21$a;)Ljava/lang/Object;
 
     move-result-object v0
 

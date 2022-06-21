@@ -1,5 +1,5 @@
 .class public Lcom/vk/api/friends/FriendsGetRecommendations;
-.super Lcom/vk/api/base/d;
+.super Lcom/vk/api/base/ApiRequest;
 .source "FriendsGetRecommendations.java"
 
 
@@ -12,7 +12,7 @@
 
 .annotation system Ldalvik/annotation/Signature;
     value = {
-        "Lcom/vk/api/base/d<",
+        "Lcom/vk/api/base/ApiRequest<",
         "Lcom/vk/api/friends/FriendsGetRecommendations$Result;",
         ">;"
     }
@@ -30,7 +30,7 @@
     const-string v0, "friends.getRecommendations"
 
     .line 1
-    invoke-direct {p0, v0}, Lcom/vk/api/base/d;-><init>(Ljava/lang/String;)V
+    invoke-direct {p0, v0}, Lcom/vk/api/base/ApiRequest;-><init>(Ljava/lang/String;)V
 
     .line 2
     iput-object p1, p0, Lcom/vk/api/friends/FriendsGetRecommendations;->F:Ljava/lang/String;
@@ -38,7 +38,7 @@
     const-string v0, "block_type"
 
     .line 3
-    invoke-virtual {p0, v0, p1}, Lcom/vk/api/base/d;->c(Ljava/lang/String;Ljava/lang/String;)Lcom/vk/api/base/d;
+    invoke-virtual {p0, v0, p1}, Lcom/vk/api/base/ApiRequest;->c(Ljava/lang/String;Ljava/lang/String;)Lcom/vk/api/base/ApiRequest;
 
     .line 4
     invoke-static {p2}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
@@ -50,20 +50,20 @@
     const-string p1, "start_from"
 
     .line 5
-    invoke-virtual {p0, p1, p2}, Lcom/vk/api/base/d;->c(Ljava/lang/String;Ljava/lang/String;)Lcom/vk/api/base/d;
+    invoke-virtual {p0, p1, p2}, Lcom/vk/api/base/ApiRequest;->c(Ljava/lang/String;Ljava/lang/String;)Lcom/vk/api/base/ApiRequest;
 
     :cond_0
     const-string p1, "count"
 
     .line 6
-    invoke-virtual {p0, p1, p3}, Lcom/vk/api/base/d;->b(Ljava/lang/String;I)Lcom/vk/api/base/d;
+    invoke-virtual {p0, p1, p3}, Lcom/vk/api/base/ApiRequest;->b(Ljava/lang/String;I)Lcom/vk/api/base/ApiRequest;
 
     const-string p1, "fields"
 
     const-string p2, "photo_50,photo_100,photo_200,career,city,country,education,verified,trending"
 
     .line 7
-    invoke-virtual {p0, p1, p2}, Lcom/vk/api/base/d;->c(Ljava/lang/String;Ljava/lang/String;)Lcom/vk/api/base/d;
+    invoke-virtual {p0, p1, p2}, Lcom/vk/api/base/ApiRequest;->c(Ljava/lang/String;Ljava/lang/String;)Lcom/vk/api/base/ApiRequest;
 
     return-void
 .end method
@@ -124,7 +124,7 @@
 
     move-result-object v4
 
-    invoke-static {v3, v4}, Lb/h/c/f/c/a;->a(Ljava/lang/String;Lorg/json/JSONObject;)Lcom/vk/dto/common/RecommendedProfile;
+    invoke-static {v3, v4}, Lb/h/c/f/c/RecommendedProfileFactory;->a(Ljava/lang/String;Lorg/json/JSONObject;)Lcom/vk/dto/common/RecommendedProfile;
 
     move-result-object v3
 
@@ -186,7 +186,7 @@
     const-string v0, "friend_id"
 
     .line 1
-    invoke-virtual {p0, v0, p1}, Lcom/vk/api/base/d;->b(Ljava/lang/String;I)Lcom/vk/api/base/d;
+    invoke-virtual {p0, v0, p1}, Lcom/vk/api/base/ApiRequest;->b(Ljava/lang/String;I)Lcom/vk/api/base/ApiRequest;
 
     :cond_0
     return-object p0
@@ -209,7 +209,7 @@
     const-string v0, "ref"
 
     .line 2
-    invoke-virtual {p0, v0, p1}, Lcom/vk/api/base/d;->c(Ljava/lang/String;Ljava/lang/String;)Lcom/vk/api/base/d;
+    invoke-virtual {p0, v0, p1}, Lcom/vk/api/base/ApiRequest;->c(Ljava/lang/String;Ljava/lang/String;)Lcom/vk/api/base/ApiRequest;
 
     :cond_0
     return-object p0
@@ -232,7 +232,7 @@
     const-string v0, "track_code"
 
     .line 2
-    invoke-virtual {p0, v0, p1}, Lcom/vk/api/base/d;->c(Ljava/lang/String;Ljava/lang/String;)Lcom/vk/api/base/d;
+    invoke-virtual {p0, v0, p1}, Lcom/vk/api/base/ApiRequest;->c(Ljava/lang/String;Ljava/lang/String;)Lcom/vk/api/base/ApiRequest;
 
     :cond_0
     return-object p0

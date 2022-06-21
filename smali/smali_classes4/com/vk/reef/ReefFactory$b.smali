@@ -3,7 +3,7 @@
 .source "ReefFactory.kt"
 
 # interfaces
-.implements Lcom/vk/reef/d;
+.implements Lcom/vk/reef/SendRequestController;
 
 
 # annotations
@@ -18,7 +18,7 @@
 
 
 # instance fields
-.field public a:Lcom/vk/reef/d;
+.field public a:Lcom/vk/reef/SendRequestController;
 
 
 # direct methods
@@ -33,11 +33,11 @@
 
 
 # virtual methods
-.method public final a(Lcom/vk/reef/d;)V
+.method public final a(Lcom/vk/reef/SendRequestController;)V
     .locals 0
 
     .line 2
-    iput-object p1, p0, Lcom/vk/reef/ReefFactory$b;->a:Lcom/vk/reef/d;
+    iput-object p1, p0, Lcom/vk/reef/ReefFactory$b;->a:Lcom/vk/reef/SendRequestController;
 
     return-void
 .end method
@@ -46,18 +46,18 @@
     .locals 1
 
     .line 1
-    iget-object v0, p0, Lcom/vk/reef/ReefFactory$b;->a:Lcom/vk/reef/d;
+    iget-object v0, p0, Lcom/vk/reef/ReefFactory$b;->a:Lcom/vk/reef/SendRequestController;
 
     if-eqz v0, :cond_0
 
-    invoke-interface {v0, p1, p2}, Lcom/vk/reef/d;->a(Ljava/lang/Object;Lcom/vk/reef/dto/ReefRequestReason;)V
+    invoke-interface {v0, p1, p2}, Lcom/vk/reef/SendRequestController;->a(Ljava/lang/Object;Lcom/vk/reef/dto/ReefRequestReason;)V
 
     return-void
 
     :cond_0
     const-string p1, "delegate"
 
-    invoke-static {p1}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {p1}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     const/4 p1, 0x0
 

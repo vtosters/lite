@@ -3,12 +3,12 @@
 .source "NotificationClickHandler.kt"
 
 # interfaces
-.implements Lc/a/z/g;
+.implements Lio/reactivex/functions/Consumer;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/notifications/NotificationClickHandler;->a(Landroid/content/Context;Lorg/json/JSONObject;ZLcom/vk/dto/notifications/NotificationItem;Lcom/vk/notifications/i;)V
+    value = Lcom/vk/notifications/NotificationClickHandler;->a(Landroid/content/Context;Lorg/json/JSONObject;ZLcom/vk/dto/notifications/NotificationItem;Lcom/vk/notifications/NotificationsContainer;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -22,7 +22,7 @@
         "Ljava/lang/Object;",
         ">",
         "Ljava/lang/Object;",
-        "Lc/a/z/g<",
+        "Lio/reactivex/functions/Consumer<",
         "Ljava/lang/Boolean;",
         ">;"
     }
@@ -34,18 +34,18 @@
 
 .field final synthetic b:Lcom/vk/dto/notifications/NotificationItem;
 
-.field final synthetic c:Lcom/vk/notifications/i;
+.field final synthetic c:Lcom/vk/notifications/NotificationsContainer;
 
 
 # direct methods
-.method constructor <init>(ZLcom/vk/dto/notifications/NotificationItem;Lcom/vk/notifications/i;)V
+.method constructor <init>(ZLcom/vk/dto/notifications/NotificationItem;Lcom/vk/notifications/NotificationsContainer;)V
     .locals 0
 
     iput-boolean p1, p0, Lcom/vk/notifications/NotificationClickHandler$g;->a:Z
 
     iput-object p2, p0, Lcom/vk/notifications/NotificationClickHandler$g;->b:Lcom/vk/dto/notifications/NotificationItem;
 
-    iput-object p3, p0, Lcom/vk/notifications/NotificationClickHandler$g;->c:Lcom/vk/notifications/i;
+    iput-object p3, p0, Lcom/vk/notifications/NotificationClickHandler$g;->c:Lcom/vk/notifications/NotificationsContainer;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -113,13 +113,13 @@
 
     .line 8
     :goto_0
-    iget-object p1, p0, Lcom/vk/notifications/NotificationClickHandler$g;->c:Lcom/vk/notifications/i;
+    iget-object p1, p0, Lcom/vk/notifications/NotificationClickHandler$g;->c:Lcom/vk/notifications/NotificationsContainer;
 
     if-eqz p1, :cond_1
 
     iget-object v0, p0, Lcom/vk/notifications/NotificationClickHandler$g;->b:Lcom/vk/dto/notifications/NotificationItem;
 
-    invoke-interface {p1, v0}, Lcom/vk/notifications/i;->a(Lcom/vk/dto/notifications/NotificationItem;)V
+    invoke-interface {p1, v0}, Lcom/vk/notifications/NotificationsContainer;->a(Lcom/vk/dto/notifications/NotificationItem;)V
 
     .line 9
     :cond_1

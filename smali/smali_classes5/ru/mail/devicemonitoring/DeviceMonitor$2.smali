@@ -143,7 +143,7 @@
     const-string v0, "device_monitor"
 
     .line 10
-    invoke-static {v0, p2}, Le/c/a/a;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, p2}, Le/c/a/Log;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 11
     iget-object p2, p0, Lru/mail/devicemonitoring/DeviceMonitor$2;->this$0:Lru/mail/devicemonitoring/DeviceMonitor;

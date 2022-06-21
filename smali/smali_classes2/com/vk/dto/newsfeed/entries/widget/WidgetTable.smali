@@ -62,7 +62,7 @@
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, v1}, Lcom/vk/dto/newsfeed/entries/widget/WidgetTable$b;-><init>(Lkotlin/jvm/internal/i;)V
+    invoke-direct {v0, v1}, Lcom/vk/dto/newsfeed/entries/widget/WidgetTable$b;-><init>(Lkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     const/4 v0, 0x6
 
@@ -182,7 +182,7 @@
 
     const-string v7, "head.getJSONObject(i)"
 
-    invoke-static {v6, v7}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v6, v7}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-direct {v5, v6}, Lcom/vk/dto/newsfeed/entries/widget/WidgetTable$HeadRowItem;-><init>(Lorg/json/JSONObject;)V
 
@@ -226,7 +226,7 @@
 
     const-string v5, "body.getJSONArray(i)"
 
-    invoke-static {v4, v5}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v4, v5}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-direct {v3, v4}, Lcom/vk/dto/newsfeed/entries/widget/WidgetTable$Row;-><init>(Lorg/json/JSONArray;)V
 

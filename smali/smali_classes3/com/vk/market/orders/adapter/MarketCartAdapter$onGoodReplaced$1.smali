@@ -3,7 +3,7 @@
 .source "MarketCartAdapter.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/b;
+.implements Lkotlin/jvm/b/Functions2;
 
 
 # annotations
@@ -19,8 +19,8 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/b<",
-        "Lcom/vk/market/orders/adapter/k;",
+        "Lkotlin/jvm/b/Functions2<",
+        "Lcom/vk/market/orders/adapter/MarketCartAdapter1;",
         "Ljava/lang/Boolean;",
         ">;"
     }
@@ -46,22 +46,22 @@
 
 
 # virtual methods
-.method public final a(Lcom/vk/market/orders/adapter/k;)Z
+.method public final a(Lcom/vk/market/orders/adapter/MarketCartAdapter1;)Z
     .locals 1
 
     .line 1
-    instance-of v0, p1, Lcom/vk/market/orders/adapter/n;
+    instance-of v0, p1, Lcom/vk/market/orders/adapter/MarketCartAdapter2;
 
     if-nez v0, :cond_0
 
     const/4 p1, 0x0
 
     :cond_0
-    check-cast p1, Lcom/vk/market/orders/adapter/n;
+    check-cast p1, Lcom/vk/market/orders/adapter/MarketCartAdapter2;
 
     if-eqz p1, :cond_1
 
-    invoke-virtual {p1}, Lcom/vk/market/orders/adapter/n;->a()Lcom/vk/dto/common/Good;
+    invoke-virtual {p1}, Lcom/vk/market/orders/adapter/MarketCartAdapter2;->a()Lcom/vk/dto/common/Good;
 
     move-result-object p1
 
@@ -90,9 +90,9 @@
     .locals 0
 
     .line 1
-    check-cast p1, Lcom/vk/market/orders/adapter/k;
+    check-cast p1, Lcom/vk/market/orders/adapter/MarketCartAdapter1;
 
-    invoke-virtual {p0, p1}, Lcom/vk/market/orders/adapter/MarketCartAdapter$onGoodReplaced$1;->a(Lcom/vk/market/orders/adapter/k;)Z
+    invoke-virtual {p0, p1}, Lcom/vk/market/orders/adapter/MarketCartAdapter$onGoodReplaced$1;->a(Lcom/vk/market/orders/adapter/MarketCartAdapter1;)Z
 
     move-result p1
 

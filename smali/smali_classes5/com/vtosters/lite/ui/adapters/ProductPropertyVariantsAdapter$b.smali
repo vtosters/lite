@@ -21,13 +21,13 @@
 
 
 # direct methods
-.method public constructor <init>(Lcom/vtosters/lite/ui/adapters/ProductPropertyVariantsAdapter;Landroid/view/ViewGroup;Lcom/vtosters/lite/ui/holder/market/properties/b;)V
+.method public constructor <init>(Lcom/vtosters/lite/ui/adapters/ProductPropertyVariantsAdapter;Landroid/view/ViewGroup;Lcom/vtosters/lite/ui/holder/market/properties/OnPropertyVariantClickListener;)V
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
             "Landroid/view/ViewGroup;",
-            "Lcom/vtosters/lite/ui/holder/market/properties/b;",
+            "Lcom/vtosters/lite/ui/holder/market/properties/OnPropertyVariantClickListener;",
             ")V"
         }
     .end annotation
@@ -35,7 +35,7 @@
     const v0, 0x7f0d0290
 
     .line 1
-    invoke-direct {p0, p1, p2, v0, p3}, Lcom/vtosters/lite/ui/adapters/ProductPropertyVariantsAdapter$PropertyVariantViewHolder;-><init>(Lcom/vtosters/lite/ui/adapters/ProductPropertyVariantsAdapter;Landroid/view/ViewGroup;ILcom/vtosters/lite/ui/holder/market/properties/b;)V
+    invoke-direct {p0, p1, p2, v0, p3}, Lcom/vtosters/lite/ui/adapters/ProductPropertyVariantsAdapter$PropertyVariantViewHolder;-><init>(Lcom/vtosters/lite/ui/adapters/ProductPropertyVariantsAdapter;Landroid/view/ViewGroup;ILcom/vtosters/lite/ui/holder/market/properties/OnPropertyVariantClickListener;)V
 
     .line 2
     iget-object p1, p0, Landroidx/recyclerview/widget/RecyclerView$ViewHolder;->itemView:Landroid/view/View;
@@ -48,7 +48,7 @@
 
     const-string p2, "itemView.findViewById(R.id.color)"
 
-    invoke-static {p1, p2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, p2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     check-cast p1, Landroid/widget/ImageView;
 
@@ -97,7 +97,7 @@
 
     const-string v2, "paint"
 
-    invoke-static {v1, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 5
     :try_start_0
@@ -119,7 +119,7 @@
 
     const-string v2, "imageViewColor.context"
 
-    invoke-static {p1, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     const v2, 0x7f06030c
 
@@ -136,24 +136,24 @@
 
 
 # virtual methods
-.method public a(Lcom/vtosters/lite/ui/holder/market/properties/e;)V
+.method public a(Lcom/vtosters/lite/ui/holder/market/properties/ProductPropertyItem;)V
     .locals 2
 
     .line 1
-    invoke-super {p0, p1}, Lcom/vtosters/lite/ui/adapters/ProductPropertyVariantsAdapter$PropertyVariantViewHolder;->a(Lcom/vtosters/lite/ui/holder/market/properties/e;)V
+    invoke-super {p0, p1}, Lcom/vtosters/lite/ui/adapters/ProductPropertyVariantsAdapter$PropertyVariantViewHolder;->a(Lcom/vtosters/lite/ui/holder/market/properties/ProductPropertyItem;)V
 
     .line 2
     iget-object v0, p0, Lcom/vtosters/lite/ui/adapters/ProductPropertyVariantsAdapter$b;->e:Landroid/widget/ImageView;
 
     .line 3
-    invoke-virtual {p1}, Lcom/vtosters/lite/ui/holder/market/properties/e;->c()Ljava/lang/String;
+    invoke-virtual {p1}, Lcom/vtosters/lite/ui/holder/market/properties/ProductPropertyItem;->c()Ljava/lang/String;
 
     move-result-object v1
 
     invoke-virtual {v0, v1}, Landroid/widget/ImageView;->setContentDescription(Ljava/lang/CharSequence;)V
 
     .line 4
-    invoke-virtual {p1}, Lcom/vtosters/lite/ui/holder/market/properties/e;->d()Ljava/lang/String;
+    invoke-virtual {p1}, Lcom/vtosters/lite/ui/holder/market/properties/ProductPropertyItem;->d()Ljava/lang/String;
 
     move-result-object p1
 
@@ -170,9 +170,9 @@
     .locals 0
 
     .line 1
-    check-cast p1, Lcom/vtosters/lite/ui/holder/market/properties/e;
+    check-cast p1, Lcom/vtosters/lite/ui/holder/market/properties/ProductPropertyItem;
 
-    invoke-virtual {p0, p1}, Lcom/vtosters/lite/ui/adapters/ProductPropertyVariantsAdapter$b;->a(Lcom/vtosters/lite/ui/holder/market/properties/e;)V
+    invoke-virtual {p0, p1}, Lcom/vtosters/lite/ui/adapters/ProductPropertyVariantsAdapter$b;->a(Lcom/vtosters/lite/ui/holder/market/properties/ProductPropertyItem;)V
 
     return-void
 .end method

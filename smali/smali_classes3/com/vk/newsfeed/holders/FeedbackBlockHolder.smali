@@ -1,5 +1,5 @@
 .class public final Lcom/vk/newsfeed/holders/FeedbackBlockHolder;
-.super Lcom/vk/newsfeed/holders/h;
+.super Lcom/vk/newsfeed/holders/BaseNewsEntryHolder;
 .source "FeedbackBlockHolder.kt"
 
 # interfaces
@@ -9,7 +9,7 @@
 # annotations
 .annotation system Ldalvik/annotation/Signature;
     value = {
-        "Lcom/vk/newsfeed/holders/h<",
+        "Lcom/vk/newsfeed/holders/BaseNewsEntryHolder<",
         "Lcom/vk/dto/newsfeed/entries/FeedbackPoll;",
         ">;",
         "Landroid/view/View$OnClickListener;"
@@ -26,7 +26,7 @@
 
 .field private final I:Landroid/view/View;
 
-.field private J:Lcom/vtosters/lite/ui/f0/b;
+.field private J:Lcom/vtosters/lite/ui/f0/PostDisplayItem;
 
 
 # direct methods
@@ -36,14 +36,14 @@
     const v0, 0x7f0d03da
 
     .line 1
-    invoke-direct {p0, v0, p1}, Lcom/vk/newsfeed/holders/h;-><init>(ILandroid/view/ViewGroup;)V
+    invoke-direct {p0, v0, p1}, Lcom/vk/newsfeed/holders/BaseNewsEntryHolder;-><init>(ILandroid/view/ViewGroup;)V
 
     .line 2
     iget-object p1, p0, Landroidx/recyclerview/widget/RecyclerView$ViewHolder;->itemView:Landroid/view/View;
 
     const-string v0, "itemView"
 
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     const/4 v1, 0x2
 
@@ -51,7 +51,7 @@
 
     const v3, 0x7f0a0d80
 
-    invoke-static {p1, v3, v2, v1, v2}, Lcom/vk/extensions/ViewExtKt;->a(Landroid/view/View;ILkotlin/jvm/b/b;ILjava/lang/Object;)Landroid/view/View;
+    invoke-static {p1, v3, v2, v1, v2}, Lcom/vk/extensions/ViewExtKt;->a(Landroid/view/View;ILkotlin/jvm/b/Functions2;ILjava/lang/Object;)Landroid/view/View;
 
     move-result-object p1
 
@@ -62,11 +62,11 @@
     .line 3
     iget-object p1, p0, Landroidx/recyclerview/widget/RecyclerView$ViewHolder;->itemView:Landroid/view/View;
 
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     const v3, 0x7f0a0cf2
 
-    invoke-static {p1, v3, v2, v1, v2}, Lcom/vk/extensions/ViewExtKt;->a(Landroid/view/View;ILkotlin/jvm/b/b;ILjava/lang/Object;)Landroid/view/View;
+    invoke-static {p1, v3, v2, v1, v2}, Lcom/vk/extensions/ViewExtKt;->a(Landroid/view/View;ILkotlin/jvm/b/Functions2;ILjava/lang/Object;)Landroid/view/View;
 
     move-result-object p1
 
@@ -77,11 +77,11 @@
     .line 4
     iget-object p1, p0, Landroidx/recyclerview/widget/RecyclerView$ViewHolder;->itemView:Landroid/view/View;
 
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     const v3, 0x7f0a01e4
 
-    invoke-static {p1, v3, v2, v1, v2}, Lcom/vk/extensions/ViewExtKt;->a(Landroid/view/View;ILkotlin/jvm/b/b;ILjava/lang/Object;)Landroid/view/View;
+    invoke-static {p1, v3, v2, v1, v2}, Lcom/vk/extensions/ViewExtKt;->a(Landroid/view/View;ILkotlin/jvm/b/Functions2;ILjava/lang/Object;)Landroid/view/View;
 
     move-result-object p1
 
@@ -92,11 +92,11 @@
     .line 5
     iget-object p1, p0, Landroidx/recyclerview/widget/RecyclerView$ViewHolder;->itemView:Landroid/view/View;
 
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     const v0, 0x7f0a07c7
 
-    invoke-static {p1, v0, v2, v1, v2}, Lcom/vk/extensions/ViewExtKt;->a(Landroid/view/View;ILkotlin/jvm/b/b;ILjava/lang/Object;)Landroid/view/View;
+    invoke-static {p1, v0, v2, v1, v2}, Lcom/vk/extensions/ViewExtKt;->a(Landroid/view/View;ILkotlin/jvm/b/Functions2;ILjava/lang/Object;)Landroid/view/View;
 
     move-result-object p1
 
@@ -137,11 +137,11 @@
     .locals 4
 
     .line 1
-    iget-object v0, p0, Lcom/vk/newsfeed/holders/FeedbackBlockHolder;->J:Lcom/vtosters/lite/ui/f0/b;
+    iget-object v0, p0, Lcom/vk/newsfeed/holders/FeedbackBlockHolder;->J:Lcom/vtosters/lite/ui/f0/PostDisplayItem;
 
     if-eqz v0, :cond_0
 
-    iget v0, v0, Lcom/vtosters/lite/ui/f0/b;->h:I
+    iget v0, v0, Lcom/vtosters/lite/ui/f0/PostDisplayItem;->h:I
 
     goto :goto_0
 
@@ -150,9 +150,9 @@
 
     .line 2
     :goto_0
-    new-instance v1, Lcom/vk/api/newsfeed/h;
+    new-instance v1, Lcom/vk/api/newsfeed/NewsfeedHidePollFeedback;
 
-    iget-object v2, p0, Lcom/vtosters/lite/ui/b0/i;->b:Ljava/lang/Object;
+    iget-object v2, p0, Lcom/vtosters/lite/ui/holder/RecyclerHolder;->b:Ljava/lang/Object;
 
     check-cast v2, Lcom/vk/dto/newsfeed/entries/FeedbackPoll;
 
@@ -170,15 +170,15 @@
     move-object v2, v3
 
     :goto_1
-    invoke-direct {v1, v2, v0}, Lcom/vk/api/newsfeed/h;-><init>(Ljava/lang/String;I)V
+    invoke-direct {v1, v2, v0}, Lcom/vk/api/newsfeed/NewsfeedHidePollFeedback;-><init>(Ljava/lang/String;I)V
 
     .line 3
-    invoke-virtual {v1}, Lcom/vk/api/base/d;->h()Lcom/vk/api/base/d;
+    invoke-virtual {v1}, Lcom/vk/api/base/ApiRequest;->h()Lcom/vk/api/base/ApiRequest;
 
     const/4 v0, 0x1
 
     .line 4
-    invoke-static {v1, v3, v0, v3}, Lcom/vk/api/base/d;->d(Lcom/vk/api/base/d;Lcom/vk/api/base/e;ILjava/lang/Object;)Lc/a/m;
+    invoke-static {v1, v3, v0, v3}, Lcom/vk/api/base/ApiRequest;->d(Lcom/vk/api/base/ApiRequest;Lcom/vk/api/base/ApiThreadHolder;ILjava/lang/Object;)Lio/reactivex/Observable;
 
     move-result-object v0
 
@@ -193,7 +193,7 @@
     invoke-direct {v2, p0}, Lcom/vk/newsfeed/holders/FeedbackBlockHolder$b;-><init>(Lcom/vk/newsfeed/holders/FeedbackBlockHolder;)V
 
     .line 7
-    invoke-virtual {v0, v1, v2}, Lc/a/m;->a(Lc/a/z/g;Lc/a/z/g;)Lio/reactivex/disposables/b;
+    invoke-virtual {v0, v1, v2}, Lio/reactivex/Observable;->a(Lio/reactivex/functions/Consumer;Lio/reactivex/functions/Consumer;)Lio/reactivex/disposables/Disposable;
 
     return-void
 .end method
@@ -202,7 +202,7 @@
     .locals 3
 
     .line 1
-    iget-object v0, p0, Lcom/vtosters/lite/ui/b0/i;->b:Ljava/lang/Object;
+    iget-object v0, p0, Lcom/vtosters/lite/ui/holder/RecyclerHolder;->b:Ljava/lang/Object;
 
     check-cast v0, Lcom/vk/dto/newsfeed/entries/FeedbackPoll;
 
@@ -212,19 +212,19 @@
 
     invoke-direct {v1, v0}, Lcom/vk/newsfeed/feedback/NewsfeedFeedbackPollFragment$a;-><init>(Lcom/vk/dto/newsfeed/entries/FeedbackPoll;)V
 
-    invoke-virtual {p0}, Lcom/vtosters/lite/ui/b0/i;->d0()Landroid/view/ViewGroup;
+    invoke-virtual {p0}, Lcom/vtosters/lite/ui/holder/RecyclerHolder;->d0()Landroid/view/ViewGroup;
 
     move-result-object v0
 
     const-string v2, "parent"
 
-    invoke-static {v0, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {v0}, Landroid/view/ViewGroup;->getContext()Landroid/content/Context;
 
     move-result-object v0
 
-    invoke-virtual {v1, v0}, Lcom/vk/navigation/o;->a(Landroid/content/Context;)V
+    invoke-virtual {v1, v0}, Lcom/vk/navigation/Navigator;->a(Landroid/content/Context;)V
 
     :cond_0
     return-void
@@ -234,17 +234,17 @@
     .locals 3
 
     .line 1
-    sget-object v0, Lcom/vk/newsfeed/controllers/a;->e:Lcom/vk/newsfeed/controllers/a;
+    sget-object v0, Lcom/vk/newsfeed/controllers/NewsfeedController;->e:Lcom/vk/newsfeed/controllers/NewsfeedController;
 
-    invoke-virtual {v0}, Lcom/vk/newsfeed/controllers/a;->n()Lb/h/g/l/d;
+    invoke-virtual {v0}, Lcom/vk/newsfeed/controllers/NewsfeedController;->n()Lb/h/g/l/NotificationCenter;
 
     move-result-object v0
 
-    iget-object v1, p0, Lcom/vtosters/lite/ui/b0/i;->b:Ljava/lang/Object;
+    iget-object v1, p0, Lcom/vtosters/lite/ui/holder/RecyclerHolder;->b:Ljava/lang/Object;
 
     const/16 v2, 0x64
 
-    invoke-virtual {v0, v2, v1}, Lb/h/g/l/d;->a(ILjava/lang/Object;)V
+    invoke-virtual {v0, v2, v1}, Lb/h/g/l/NotificationCenter;->a(ILjava/lang/Object;)V
 
     return-void
 .end method
@@ -253,7 +253,7 @@
     .locals 8
 
     .line 1
-    new-instance v7, Lcom/vk/core/dialogs/actionspopup/a$b;
+    new-instance v7, Lcom/vk/core/dialogs/actionspopup/ActionsPopup$b;
 
     iget-object v1, p0, Lcom/vk/newsfeed/holders/FeedbackBlockHolder;->I:Landroid/view/View;
 
@@ -267,7 +267,7 @@
 
     move-object v0, v7
 
-    invoke-direct/range {v0 .. v5}, Lcom/vk/core/dialogs/actionspopup/a$b;-><init>(Landroid/view/View;ZIILkotlin/jvm/internal/i;)V
+    invoke-direct/range {v0 .. v5}, Lcom/vk/core/dialogs/actionspopup/ActionsPopup$b;-><init>(Landroid/view/View;ZIILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     .line 2
     new-instance v4, Lcom/vk/newsfeed/holders/FeedbackBlockHolder$showActionsMenu$1;
@@ -282,10 +282,10 @@
 
     const/4 v6, 0x0
 
-    invoke-static/range {v0 .. v6}, Lcom/vk/core/dialogs/actionspopup/a$b;->a(Lcom/vk/core/dialogs/actionspopup/a$b;ILandroid/graphics/drawable/Drawable;ZLkotlin/jvm/b/a;ILjava/lang/Object;)Lcom/vk/core/dialogs/actionspopup/a$b;
+    invoke-static/range {v0 .. v6}, Lcom/vk/core/dialogs/actionspopup/ActionsPopup$b;->a(Lcom/vk/core/dialogs/actionspopup/ActionsPopup$b;ILandroid/graphics/drawable/Drawable;ZLkotlin/jvm/b/Functions;ILjava/lang/Object;)Lcom/vk/core/dialogs/actionspopup/ActionsPopup$b;
 
     .line 3
-    invoke-virtual {v7}, Lcom/vk/core/dialogs/actionspopup/a$b;->c()Lcom/vk/core/dialogs/actionspopup/a;
+    invoke-virtual {v7}, Lcom/vk/core/dialogs/actionspopup/ActionsPopup$b;->c()Lcom/vk/core/dialogs/actionspopup/ActionsPopup;
 
     return-void
 .end method
@@ -337,14 +337,14 @@
     return-void
 .end method
 
-.method public a(Lcom/vtosters/lite/ui/f0/b;)V
+.method public a(Lcom/vtosters/lite/ui/f0/PostDisplayItem;)V
     .locals 0
 
     .line 2
-    iput-object p1, p0, Lcom/vk/newsfeed/holders/FeedbackBlockHolder;->J:Lcom/vtosters/lite/ui/f0/b;
+    iput-object p1, p0, Lcom/vk/newsfeed/holders/FeedbackBlockHolder;->J:Lcom/vtosters/lite/ui/f0/PostDisplayItem;
 
     .line 3
-    invoke-super {p0, p1}, Lcom/vk/newsfeed/holders/h;->a(Lcom/vtosters/lite/ui/f0/b;)V
+    invoke-super {p0, p1}, Lcom/vk/newsfeed/holders/BaseNewsEntryHolder;->a(Lcom/vtosters/lite/ui/f0/PostDisplayItem;)V
 
     return-void
 .end method
@@ -376,7 +376,7 @@
     :cond_0
     iget-object v0, p0, Lcom/vk/newsfeed/holders/FeedbackBlockHolder;->H:Landroid/widget/TextView;
 
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v0
 
@@ -390,7 +390,7 @@
     :cond_1
     iget-object v0, p0, Lcom/vk/newsfeed/holders/FeedbackBlockHolder;->I:Landroid/view/View;
 
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result p1
 

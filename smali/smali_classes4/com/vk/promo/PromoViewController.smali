@@ -15,7 +15,7 @@
 
 
 # virtual methods
-.method public abstract a(Landroid/view/LayoutInflater;Landroid/view/ViewGroup;Lcom/vk/promo/f;)Landroid/view/View;
+.method public abstract a(Landroid/view/LayoutInflater;Landroid/view/ViewGroup;Lcom/vk/promo/PromoNavigator;)Landroid/view/View;
 .end method
 
 .method public abstract a()V

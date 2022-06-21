@@ -3,7 +3,7 @@
 .source "DeliveryInfo.kt"
 
 # interfaces
-.implements Lcom/vk/core/serialize/a;
+.implements Lcom/vk/core/serialize/JSONSerialize;
 
 
 # annotations
@@ -25,10 +25,10 @@
     .end annotation
 .end field
 
-.field private static final b:Lcom/vk/dto/common/data/c;
+.field private static final b:Lcom/vk/dto/common/data/JsonParser;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Lcom/vk/dto/common/data/c<",
+            "Lcom/vk/dto/common/data/JsonParser<",
             "Lcom/vk/dto/common/DeliveryInfo;",
             ">;"
         }
@@ -50,7 +50,7 @@
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, v1}, Lcom/vk/dto/common/DeliveryInfo$c;-><init>(Lkotlin/jvm/internal/i;)V
+    invoke-direct {v0, v1}, Lcom/vk/dto/common/DeliveryInfo$c;-><init>(Lkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     sput-object v0, Lcom/vk/dto/common/DeliveryInfo;->c:Lcom/vk/dto/common/DeliveryInfo$c;
 
@@ -67,7 +67,7 @@
 
     invoke-direct {v0}, Lcom/vk/dto/common/DeliveryInfo$a;-><init>()V
 
-    sput-object v0, Lcom/vk/dto/common/DeliveryInfo;->b:Lcom/vk/dto/common/data/c;
+    sput-object v0, Lcom/vk/dto/common/DeliveryInfo;->b:Lcom/vk/dto/common/data/JsonParser;
 
     return-void
 .end method
@@ -106,11 +106,11 @@
     return-void
 .end method
 
-.method public static final synthetic t1()Lcom/vk/dto/common/data/c;
+.method public static final synthetic t1()Lcom/vk/dto/common/data/JsonParser;
     .locals 1
 
     .line 1
-    sget-object v0, Lcom/vk/dto/common/DeliveryInfo;->b:Lcom/vk/dto/common/data/c;
+    sget-object v0, Lcom/vk/dto/common/DeliveryInfo;->b:Lcom/vk/dto/common/data/JsonParser;
 
     return-object v0
 .end method

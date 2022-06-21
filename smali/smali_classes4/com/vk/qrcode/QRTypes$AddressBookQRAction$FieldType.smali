@@ -83,7 +83,7 @@
     move-object v1, v10
 
     .line 1
-    invoke-direct/range {v1 .. v9}, Lcom/vk/qrcode/QRTypes$AddressBookQRAction$FieldType;-><init>(Ljava/lang/String;IILjava/lang/String;Ljava/lang/String;Ljava/lang/Integer;ILkotlin/jvm/internal/i;)V
+    invoke-direct/range {v1 .. v9}, Lcom/vk/qrcode/QRTypes$AddressBookQRAction$FieldType;-><init>(Ljava/lang/String;IILjava/lang/String;Ljava/lang/String;Ljava/lang/Integer;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     sput-object v10, Lcom/vk/qrcode/QRTypes$AddressBookQRAction$FieldType;->NAME:Lcom/vk/qrcode/QRTypes$AddressBookQRAction$FieldType;
 
@@ -141,7 +141,7 @@
     move-object v10, v1
 
     .line 3
-    invoke-direct/range {v10 .. v18}, Lcom/vk/qrcode/QRTypes$AddressBookQRAction$FieldType;-><init>(Ljava/lang/String;IILjava/lang/String;Ljava/lang/String;Ljava/lang/Integer;ILkotlin/jvm/internal/i;)V
+    invoke-direct/range {v10 .. v18}, Lcom/vk/qrcode/QRTypes$AddressBookQRAction$FieldType;-><init>(Ljava/lang/String;IILjava/lang/String;Ljava/lang/String;Ljava/lang/Integer;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     sput-object v1, Lcom/vk/qrcode/QRTypes$AddressBookQRAction$FieldType;->ADDRESS:Lcom/vk/qrcode/QRTypes$AddressBookQRAction$FieldType;
 
@@ -164,7 +164,7 @@
     move-object v10, v1
 
     .line 4
-    invoke-direct/range {v10 .. v18}, Lcom/vk/qrcode/QRTypes$AddressBookQRAction$FieldType;-><init>(Ljava/lang/String;IILjava/lang/String;Ljava/lang/String;Ljava/lang/Integer;ILkotlin/jvm/internal/i;)V
+    invoke-direct/range {v10 .. v18}, Lcom/vk/qrcode/QRTypes$AddressBookQRAction$FieldType;-><init>(Ljava/lang/String;IILjava/lang/String;Ljava/lang/String;Ljava/lang/Integer;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     sput-object v1, Lcom/vk/qrcode/QRTypes$AddressBookQRAction$FieldType;->PHONE:Lcom/vk/qrcode/QRTypes$AddressBookQRAction$FieldType;
 
@@ -191,7 +191,7 @@
     move-object/from16 v19, v1
 
     .line 5
-    invoke-direct/range {v19 .. v27}, Lcom/vk/qrcode/QRTypes$AddressBookQRAction$FieldType;-><init>(Ljava/lang/String;IILjava/lang/String;Ljava/lang/String;Ljava/lang/Integer;ILkotlin/jvm/internal/i;)V
+    invoke-direct/range {v19 .. v27}, Lcom/vk/qrcode/QRTypes$AddressBookQRAction$FieldType;-><init>(Ljava/lang/String;IILjava/lang/String;Ljava/lang/String;Ljava/lang/Integer;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     sput-object v1, Lcom/vk/qrcode/QRTypes$AddressBookQRAction$FieldType;->EMAIL:Lcom/vk/qrcode/QRTypes$AddressBookQRAction$FieldType;
 
@@ -220,7 +220,7 @@
     move-object v3, v1
 
     .line 6
-    invoke-direct/range {v3 .. v11}, Lcom/vk/qrcode/QRTypes$AddressBookQRAction$FieldType;-><init>(Ljava/lang/String;IILjava/lang/String;Ljava/lang/String;Ljava/lang/Integer;ILkotlin/jvm/internal/i;)V
+    invoke-direct/range {v3 .. v11}, Lcom/vk/qrcode/QRTypes$AddressBookQRAction$FieldType;-><init>(Ljava/lang/String;IILjava/lang/String;Ljava/lang/String;Ljava/lang/Integer;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     sput-object v1, Lcom/vk/qrcode/QRTypes$AddressBookQRAction$FieldType;->ORG:Lcom/vk/qrcode/QRTypes$AddressBookQRAction$FieldType;
 
@@ -241,7 +241,7 @@
     move-object v3, v1
 
     .line 7
-    invoke-direct/range {v3 .. v11}, Lcom/vk/qrcode/QRTypes$AddressBookQRAction$FieldType;-><init>(Ljava/lang/String;IILjava/lang/String;Ljava/lang/String;Ljava/lang/Integer;ILkotlin/jvm/internal/i;)V
+    invoke-direct/range {v3 .. v11}, Lcom/vk/qrcode/QRTypes$AddressBookQRAction$FieldType;-><init>(Ljava/lang/String;IILjava/lang/String;Ljava/lang/String;Ljava/lang/Integer;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     sput-object v1, Lcom/vk/qrcode/QRTypes$AddressBookQRAction$FieldType;->TITLE:Lcom/vk/qrcode/QRTypes$AddressBookQRAction$FieldType;
 
@@ -262,7 +262,7 @@
     move-object v3, v1
 
     .line 8
-    invoke-direct/range {v3 .. v11}, Lcom/vk/qrcode/QRTypes$AddressBookQRAction$FieldType;-><init>(Ljava/lang/String;IILjava/lang/String;Ljava/lang/String;Ljava/lang/Integer;ILkotlin/jvm/internal/i;)V
+    invoke-direct/range {v3 .. v11}, Lcom/vk/qrcode/QRTypes$AddressBookQRAction$FieldType;-><init>(Ljava/lang/String;IILjava/lang/String;Ljava/lang/String;Ljava/lang/Integer;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     sput-object v1, Lcom/vk/qrcode/QRTypes$AddressBookQRAction$FieldType;->SITE:Lcom/vk/qrcode/QRTypes$AddressBookQRAction$FieldType;
 
@@ -283,7 +283,7 @@
     move-object v3, v1
 
     .line 9
-    invoke-direct/range {v3 .. v11}, Lcom/vk/qrcode/QRTypes$AddressBookQRAction$FieldType;-><init>(Ljava/lang/String;IILjava/lang/String;Ljava/lang/String;Ljava/lang/Integer;ILkotlin/jvm/internal/i;)V
+    invoke-direct/range {v3 .. v11}, Lcom/vk/qrcode/QRTypes$AddressBookQRAction$FieldType;-><init>(Ljava/lang/String;IILjava/lang/String;Ljava/lang/String;Ljava/lang/Integer;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     sput-object v1, Lcom/vk/qrcode/QRTypes$AddressBookQRAction$FieldType;->NOTE:Lcom/vk/qrcode/QRTypes$AddressBookQRAction$FieldType;
 
@@ -326,7 +326,7 @@
     return-void
 .end method
 
-.method synthetic constructor <init>(Ljava/lang/String;IILjava/lang/String;Ljava/lang/String;Ljava/lang/Integer;ILkotlin/jvm/internal/i;)V
+.method synthetic constructor <init>(Ljava/lang/String;IILjava/lang/String;Ljava/lang/String;Ljava/lang/Integer;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
     .locals 9
 
     and-int/lit8 v0, p7, 0x4

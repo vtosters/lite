@@ -49,7 +49,7 @@
 
     if-eqz v0, :cond_0
 
-    invoke-virtual {v0}, Lcom/vk/lists/AbstractPaginatedView;->getErrorView()Lcom/vk/lists/a;
+    invoke-virtual {v0}, Lcom/vk/lists/AbstractPaginatedView;->getErrorView()Lcom/vk/lists/AbstractErrorView;
 
     move-result-object v0
 
@@ -67,7 +67,7 @@
     .line 3
     new-instance v1, Lcom/vk/poll/fragments/PollResultsFragment$uiStateCallbacks$1$showError$1;
 
-    invoke-direct {v1, p0, v0}, Lcom/vk/poll/fragments/PollResultsFragment$uiStateCallbacks$1$showError$1;-><init>(Lcom/vk/poll/fragments/PollResultsFragment$uiStateCallbacks$1;Lcom/vk/lists/a;)V
+    invoke-direct {v1, p0, v0}, Lcom/vk/poll/fragments/PollResultsFragment$uiStateCallbacks$1$showError$1;-><init>(Lcom/vk/poll/fragments/PollResultsFragment$uiStateCallbacks$1;Lcom/vk/lists/AbstractErrorView;)V
 
     .line 4
     instance-of v0, p1, Lcom/vk/api/sdk/exceptions/VKApiExecutionException;
@@ -87,7 +87,7 @@
     invoke-direct {v2, v1}, Lcom/vk/poll/fragments/PollResultsFragment$uiStateCallbacks$1$showError$3;-><init>(Lcom/vk/poll/fragments/PollResultsFragment$uiStateCallbacks$1$showError$1;)V
 
     .line 7
-    invoke-static {p1, v0, v2}, Lcom/vk/api/base/c;->a(Lcom/vk/api/sdk/exceptions/VKApiExecutionException;Lkotlin/jvm/b/b;Lkotlin/jvm/b/b;)V
+    invoke-static {p1, v0, v2}, Lcom/vk/api/base/ApiExt;->a(Lcom/vk/api/sdk/exceptions/VKApiExecutionException;Lkotlin/jvm/b/Functions2;Lkotlin/jvm/b/Functions2;)V
 
     goto :goto_1
 

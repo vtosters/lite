@@ -1,5 +1,5 @@
 .class public final Lcom/vk/wall/thread/CommentThreadFragment$a;
-.super Lcom/vk/navigation/o;
+.super Lcom/vk/navigation/Navigator;
 .source "CommentThreadFragment.kt"
 
 
@@ -21,26 +21,26 @@
     .line 1
     const-class v0, Lcom/vk/wall/thread/CommentThreadFragment;
 
-    invoke-direct {p0, v0}, Lcom/vk/navigation/o;-><init>(Ljava/lang/Class;)V
+    invoke-direct {p0, v0}, Lcom/vk/navigation/Navigator;-><init>(Ljava/lang/Class;)V
 
     .line 2
-    iget-object v0, p0, Lcom/vk/navigation/o;->O0:Landroid/os/Bundle;
+    iget-object v0, p0, Lcom/vk/navigation/Navigator;->O0:Landroid/os/Bundle;
 
-    sget-object v1, Lcom/vk/navigation/q;->E:Ljava/lang/String;
+    sget-object v1, Lcom/vk/navigation/NavigatorKeys;->E:Ljava/lang/String;
 
     invoke-virtual {v0, v1, p1}, Landroid/os/Bundle;->putInt(Ljava/lang/String;I)V
 
     .line 3
-    iget-object p1, p0, Lcom/vk/navigation/o;->O0:Landroid/os/Bundle;
+    iget-object p1, p0, Lcom/vk/navigation/Navigator;->O0:Landroid/os/Bundle;
 
-    sget-object v0, Lcom/vk/navigation/q;->h:Ljava/lang/String;
+    sget-object v0, Lcom/vk/navigation/NavigatorKeys;->h:Ljava/lang/String;
 
     invoke-virtual {p1, v0, p2}, Landroid/os/Bundle;->putInt(Ljava/lang/String;I)V
 
     .line 4
-    iget-object p1, p0, Lcom/vk/navigation/o;->O0:Landroid/os/Bundle;
+    iget-object p1, p0, Lcom/vk/navigation/Navigator;->O0:Landroid/os/Bundle;
 
-    sget-object p2, Lcom/vk/navigation/q;->e:Ljava/lang/String;
+    sget-object p2, Lcom/vk/navigation/NavigatorKeys;->e:Ljava/lang/String;
 
     invoke-virtual {p1, p2, p3}, Landroid/os/Bundle;->putInt(Ljava/lang/String;I)V
 
@@ -53,7 +53,7 @@
     .locals 2
 
     .line 2
-    iget-object v0, p0, Lcom/vk/navigation/o;->O0:Landroid/os/Bundle;
+    iget-object v0, p0, Lcom/vk/navigation/Navigator;->O0:Landroid/os/Bundle;
 
     iget-object p1, p1, Lcom/vk/api/likes/LikesGetList$Type;->typeName:Ljava/lang/String;
 
@@ -68,9 +68,9 @@
     .locals 2
 
     .line 1
-    iget-object v0, p0, Lcom/vk/navigation/o;->O0:Landroid/os/Bundle;
+    iget-object v0, p0, Lcom/vk/navigation/Navigator;->O0:Landroid/os/Bundle;
 
-    sget-object v1, Lcom/vk/navigation/q;->e0:Ljava/lang/String;
+    sget-object v1, Lcom/vk/navigation/NavigatorKeys;->e0:Ljava/lang/String;
 
     invoke-virtual {v0, v1, p1}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
 
@@ -81,9 +81,9 @@
     .locals 2
 
     .line 1
-    iget-object v0, p0, Lcom/vk/navigation/o;->O0:Landroid/os/Bundle;
+    iget-object v0, p0, Lcom/vk/navigation/Navigator;->O0:Landroid/os/Bundle;
 
-    sget-object v1, Lcom/vk/navigation/q;->a0:Ljava/lang/String;
+    sget-object v1, Lcom/vk/navigation/NavigatorKeys;->a0:Ljava/lang/String;
 
     invoke-virtual {v0, v1, p1}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
 
@@ -94,9 +94,9 @@
     .locals 2
 
     .line 1
-    iget-object v0, p0, Lcom/vk/navigation/o;->O0:Landroid/os/Bundle;
+    iget-object v0, p0, Lcom/vk/navigation/Navigator;->O0:Landroid/os/Bundle;
 
-    sget-object v1, Lcom/vk/navigation/q;->k0:Ljava/lang/String;
+    sget-object v1, Lcom/vk/navigation/NavigatorKeys;->k0:Ljava/lang/String;
 
     invoke-virtual {v0, v1, p1}, Landroid/os/Bundle;->putInt(Ljava/lang/String;I)V
 
@@ -107,9 +107,9 @@
     .locals 2
 
     .line 2
-    iget-object v0, p0, Lcom/vk/navigation/o;->O0:Landroid/os/Bundle;
+    iget-object v0, p0, Lcom/vk/navigation/Navigator;->O0:Landroid/os/Bundle;
 
-    sget-object v1, Lcom/vk/navigation/q;->R:Ljava/lang/String;
+    sget-object v1, Lcom/vk/navigation/NavigatorKeys;->R:Ljava/lang/String;
 
     invoke-virtual {v0, v1, p1}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
 
@@ -120,7 +120,7 @@
     .locals 2
 
     .line 3
-    iget-object v0, p0, Lcom/vk/navigation/o;->O0:Landroid/os/Bundle;
+    iget-object v0, p0, Lcom/vk/navigation/Navigator;->O0:Landroid/os/Bundle;
 
     const-string v1, "arg_can_group_comment"
 
@@ -133,7 +133,7 @@
     .locals 2
 
     .line 1
-    iget-object v0, p0, Lcom/vk/navigation/o;->O0:Landroid/os/Bundle;
+    iget-object v0, p0, Lcom/vk/navigation/Navigator;->O0:Landroid/os/Bundle;
 
     const-string v1, "arg_start_comment_id"
 
@@ -146,9 +146,9 @@
     .locals 2
 
     .line 2
-    iget-object v0, p0, Lcom/vk/navigation/o;->O0:Landroid/os/Bundle;
+    iget-object v0, p0, Lcom/vk/navigation/Navigator;->O0:Landroid/os/Bundle;
 
-    sget-object v1, Lcom/vk/navigation/q;->l0:Ljava/lang/String;
+    sget-object v1, Lcom/vk/navigation/NavigatorKeys;->l0:Ljava/lang/String;
 
     invoke-virtual {v0, v1, p1}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
 
@@ -159,7 +159,7 @@
     .locals 2
 
     .line 3
-    iget-object v0, p0, Lcom/vk/navigation/o;->O0:Landroid/os/Bundle;
+    iget-object v0, p0, Lcom/vk/navigation/Navigator;->O0:Landroid/os/Bundle;
 
     const-string v1, "arg_can_comment"
 
@@ -172,9 +172,9 @@
     .locals 2
 
     .line 1
-    iget-object v0, p0, Lcom/vk/navigation/o;->O0:Landroid/os/Bundle;
+    iget-object v0, p0, Lcom/vk/navigation/Navigator;->O0:Landroid/os/Bundle;
 
-    sget-object v1, Lcom/vk/navigation/q;->T:Ljava/lang/String;
+    sget-object v1, Lcom/vk/navigation/NavigatorKeys;->T:Ljava/lang/String;
 
     invoke-virtual {v0, v1, p1}, Landroid/os/Bundle;->putInt(Ljava/lang/String;I)V
 
@@ -185,7 +185,7 @@
     .locals 2
 
     .line 2
-    iget-object v0, p0, Lcom/vk/navigation/o;->O0:Landroid/os/Bundle;
+    iget-object v0, p0, Lcom/vk/navigation/Navigator;->O0:Landroid/os/Bundle;
 
     const-string v1, "arg_can_share_comments"
 
@@ -198,7 +198,7 @@
     .locals 2
 
     .line 1
-    iget-object v0, p0, Lcom/vk/navigation/o;->O0:Landroid/os/Bundle;
+    iget-object v0, p0, Lcom/vk/navigation/Navigator;->O0:Landroid/os/Bundle;
 
     const-string v1, "arg_show_options_menu"
 

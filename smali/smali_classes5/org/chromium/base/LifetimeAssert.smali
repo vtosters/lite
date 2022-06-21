@@ -42,7 +42,7 @@
     .locals 4
 
     .line 1
-    sget-boolean v0, Lorg/chromium/base/c;->a:Z
+    sget-boolean v0, Lorg/chromium/base/BuildConfig;->a:Z
 
     if-nez v0, :cond_0
 
@@ -73,7 +73,7 @@
     .locals 1
 
     .line 3
-    sget-boolean v0, Lorg/chromium/base/c;->a:Z
+    sget-boolean v0, Lorg/chromium/base/BuildConfig;->a:Z
 
     if-eqz v0, :cond_0
 

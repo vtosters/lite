@@ -3,12 +3,12 @@
 .source "PodcastPageErrorViewController.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/b;
+.implements Lkotlin/jvm/b/Functions2;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/music/podcasts/page/PodcastPageErrorViewController;-><init>(Landroid/view/View;Lcom/vk/music/podcasts/page/e;)V
+    value = Lcom/vk/music/podcasts/page/PodcastPageErrorViewController;-><init>(Landroid/view/View;Lcom/vk/music/podcasts/page/PodcastScreenContract;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -19,23 +19,23 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/b<",
+        "Lkotlin/jvm/b/Functions2<",
         "Landroid/view/View;",
-        "Lkotlin/m;",
+        "Lkotlin/Unit;",
         ">;"
     }
 .end annotation
 
 
 # instance fields
-.field final synthetic $presenter:Lcom/vk/music/podcasts/page/e;
+.field final synthetic $presenter:Lcom/vk/music/podcasts/page/PodcastScreenContract;
 
 
 # direct methods
-.method constructor <init>(Lcom/vk/music/podcasts/page/e;)V
+.method constructor <init>(Lcom/vk/music/podcasts/page/PodcastScreenContract;)V
     .locals 0
 
-    iput-object p1, p0, Lcom/vk/music/podcasts/page/PodcastPageErrorViewController$1;->$presenter:Lcom/vk/music/podcasts/page/e;
+    iput-object p1, p0, Lcom/vk/music/podcasts/page/PodcastPageErrorViewController$1;->$presenter:Lcom/vk/music/podcasts/page/PodcastScreenContract;
 
     const/4 p1, 0x1
 
@@ -50,11 +50,11 @@
     .locals 0
 
     .line 1
-    iget-object p1, p0, Lcom/vk/music/podcasts/page/PodcastPageErrorViewController$1;->$presenter:Lcom/vk/music/podcasts/page/e;
+    iget-object p1, p0, Lcom/vk/music/podcasts/page/PodcastPageErrorViewController$1;->$presenter:Lcom/vk/music/podcasts/page/PodcastScreenContract;
 
     if-eqz p1, :cond_0
 
-    invoke-interface {p1}, Lcom/vk/music/podcasts/page/e;->l1()V
+    invoke-interface {p1}, Lcom/vk/music/podcasts/page/PodcastScreenContract;->l1()V
 
     :cond_0
     return-void
@@ -68,7 +68,7 @@
 
     invoke-virtual {p0, p1}, Lcom/vk/music/podcasts/page/PodcastPageErrorViewController$1;->a(Landroid/view/View;)V
 
-    sget-object p1, Lkotlin/m;->a:Lkotlin/m;
+    sget-object p1, Lkotlin/Unit;->a:Lkotlin/Unit;
 
     return-object p1
 .end method

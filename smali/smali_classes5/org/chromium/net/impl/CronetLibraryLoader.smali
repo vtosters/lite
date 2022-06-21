@@ -39,7 +39,7 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-static {}, Lorg/chromium/net/impl/d;->a()Ljava/lang/String;
+    invoke-static {}, Lorg/chromium/net/impl/ImplVersion;->a()Ljava/lang/String;
 
     move-result-object v1
 
@@ -126,7 +126,7 @@
     return-void
 .end method
 
-.method public static a(Landroid/content/Context;Lorg/chromium/net/impl/b;)V
+.method public static a(Landroid/content/Context;Lorg/chromium/net/impl/CronetEngineBuilderImpl;)V
     .locals 5
 
     .line 1
@@ -141,7 +141,7 @@
     if-nez v1, :cond_1
 
     .line 3
-    invoke-static {p0}, Lorg/chromium/base/d;->a(Landroid/content/Context;)V
+    invoke-static {p0}, Lorg/chromium/base/ContextUtils;->a(Landroid/content/Context;)V
 
     .line 4
     sget-object p0, Lorg/chromium/net/impl/CronetLibraryLoader;->d:Landroid/os/HandlerThread;
@@ -172,7 +172,7 @@
     if-nez p0, :cond_4
 
     .line 8
-    invoke-virtual {p1}, Lorg/chromium/net/impl/b;->l()Lorg/chromium/net/impl/n;
+    invoke-virtual {p1}, Lorg/chromium/net/impl/CronetEngineBuilderImpl;->l()Lorg/chromium/net/impl/VersionSafeCallbacks2;
 
     move-result-object p0
 
@@ -184,7 +184,7 @@
     invoke-static {p0}, Ljava/lang/System;->loadLibrary(Ljava/lang/String;)V
 
     .line 10
-    invoke-static {}, Lorg/chromium/net/impl/d;->a()Ljava/lang/String;
+    invoke-static {}, Lorg/chromium/net/impl/ImplVersion;->a()Ljava/lang/String;
 
     move-result-object p0
 
@@ -224,7 +224,7 @@
     aput-object p0, v2, v3
 
     .line 14
-    invoke-static {p1, v4, v2}, Lorg/chromium/base/e;->b(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {p1, v4, v2}, Lorg/chromium/base/Log;->b(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     .line 15
     sput-boolean v3, Lorg/chromium/net/impl/CronetLibraryLoader;->e:Z
@@ -264,13 +264,13 @@
 
     .line 20
     :cond_3
-    invoke-virtual {p1}, Lorg/chromium/net/impl/b;->l()Lorg/chromium/net/impl/n;
+    invoke-virtual {p1}, Lorg/chromium/net/impl/CronetEngineBuilderImpl;->l()Lorg/chromium/net/impl/VersionSafeCallbacks2;
 
     move-result-object p0
 
     sget-object p1, Lorg/chromium/net/impl/CronetLibraryLoader;->b:Ljava/lang/String;
 
-    invoke-virtual {p0, p1}, Lorg/chromium/net/impl/n;->a(Ljava/lang/String;)V
+    invoke-virtual {p0, p1}, Lorg/chromium/net/impl/VersionSafeCallbacks2;->a(Ljava/lang/String;)V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
@@ -383,14 +383,14 @@
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
     .line 5
-    invoke-static {}, Lorg/chromium/base/d;->d()Landroid/content/Context;
+    invoke-static {}, Lorg/chromium/base/ContextUtils;->d()Landroid/content/Context;
 
     move-result-object v0
 
     const/4 v1, 0x0
 
     .line 6
-    invoke-static {v0, v1}, Lorg/chromium/net/impl/CronetLibraryLoader;->a(Landroid/content/Context;Lorg/chromium/net/impl/b;)V
+    invoke-static {v0, v1}, Lorg/chromium/net/impl/CronetLibraryLoader;->a(Landroid/content/Context;Lorg/chromium/net/impl/CronetEngineBuilderImpl;)V
 
     return-void
 
@@ -412,11 +412,11 @@
     .end annotation
 
     .line 1
-    invoke-static {}, Lorg/chromium/base/d;->d()Landroid/content/Context;
+    invoke-static {}, Lorg/chromium/base/ContextUtils;->d()Landroid/content/Context;
 
     move-result-object v0
 
-    invoke-static {v0}, Lorg/chromium/net/impl/l;->a(Landroid/content/Context;)Ljava/lang/String;
+    invoke-static {v0}, Lorg/chromium/net/impl/UserAgent;->a(Landroid/content/Context;)Ljava/lang/String;
 
     move-result-object v0
 

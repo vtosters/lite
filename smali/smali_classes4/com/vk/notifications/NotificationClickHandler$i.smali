@@ -3,12 +3,12 @@
 .source "NotificationClickHandler.kt"
 
 # interfaces
-.implements Lc/a/z/g;
+.implements Lio/reactivex/functions/Consumer;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/notifications/NotificationClickHandler;->c(Landroid/content/Context;Lcom/vk/dto/notifications/NotificationItem;Lcom/vk/dto/notifications/NotificationAction;Lcom/vk/notifications/i;)V
+    value = Lcom/vk/notifications/NotificationClickHandler;->c(Landroid/content/Context;Lcom/vk/dto/notifications/NotificationItem;Lcom/vk/dto/notifications/NotificationAction;Lcom/vk/notifications/NotificationsContainer;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -22,7 +22,7 @@
         "Ljava/lang/Object;",
         ">",
         "Ljava/lang/Object;",
-        "Lc/a/z/g<",
+        "Lio/reactivex/functions/Consumer<",
         "Ljava/lang/Boolean;",
         ">;"
     }
@@ -30,7 +30,7 @@
 
 
 # instance fields
-.field final synthetic a:Lcom/vk/notifications/i;
+.field final synthetic a:Lcom/vk/notifications/NotificationsContainer;
 
 .field final synthetic b:Lcom/vk/dto/notifications/NotificationAction;
 
@@ -38,10 +38,10 @@
 
 
 # direct methods
-.method constructor <init>(Lcom/vk/notifications/i;Lcom/vk/dto/notifications/NotificationAction;Lcom/vk/dto/notifications/NotificationItem;)V
+.method constructor <init>(Lcom/vk/notifications/NotificationsContainer;Lcom/vk/dto/notifications/NotificationAction;Lcom/vk/dto/notifications/NotificationItem;)V
     .locals 0
 
-    iput-object p1, p0, Lcom/vk/notifications/NotificationClickHandler$i;->a:Lcom/vk/notifications/i;
+    iput-object p1, p0, Lcom/vk/notifications/NotificationClickHandler$i;->a:Lcom/vk/notifications/NotificationsContainer;
 
     iput-object p2, p0, Lcom/vk/notifications/NotificationClickHandler$i;->b:Lcom/vk/dto/notifications/NotificationAction;
 
@@ -58,7 +58,7 @@
     .locals 2
 
     .line 1
-    iget-object p1, p0, Lcom/vk/notifications/NotificationClickHandler$i;->a:Lcom/vk/notifications/i;
+    iget-object p1, p0, Lcom/vk/notifications/NotificationClickHandler$i;->a:Lcom/vk/notifications/NotificationsContainer;
 
     if-eqz p1, :cond_0
 
@@ -70,7 +70,7 @@
 
     iget-object v1, p0, Lcom/vk/notifications/NotificationClickHandler$i;->c:Lcom/vk/dto/notifications/NotificationItem;
 
-    invoke-interface {p1, v0, v1}, Lcom/vk/notifications/i;->a(Lorg/json/JSONObject;Lcom/vk/dto/notifications/NotificationItem;)V
+    invoke-interface {p1, v0, v1}, Lcom/vk/notifications/NotificationsContainer;->a(Lorg/json/JSONObject;Lcom/vk/dto/notifications/NotificationItem;)V
 
     :cond_0
     return-void

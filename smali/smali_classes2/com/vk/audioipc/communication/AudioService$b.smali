@@ -1,5 +1,5 @@
 .class final Lcom/vk/audioipc/communication/AudioService$b;
-.super Lcom/vk/audioipc/core/q/a;
+.super Lcom/vk/audioipc/core/q/BaseAudioPlayerListener;
 .source "AudioService.kt"
 
 
@@ -30,24 +30,24 @@
     .line 1
     iput-object p1, p0, Lcom/vk/audioipc/communication/AudioService$b;->a:Lcom/vk/audioipc/communication/AudioService;
 
-    invoke-direct {p0}, Lcom/vk/audioipc/core/q/a;-><init>()V
+    invoke-direct {p0}, Lcom/vk/audioipc/core/q/BaseAudioPlayerListener;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public a(Lcom/vk/audioipc/core/d;Ljava/lang/Throwable;)V
+.method public a(Lcom/vk/audioipc/core/AudioPlayer;Ljava/lang/Throwable;)V
     .locals 1
 
     .line 1
     iget-object v0, p0, Lcom/vk/audioipc/communication/AudioService$b;->a:Lcom/vk/audioipc/communication/AudioService;
 
-    invoke-static {v0}, Lcom/vk/audioipc/communication/AudioService;->b(Lcom/vk/audioipc/communication/AudioService;)Lcom/vk/audioipc/communication/m;
+    invoke-static {v0}, Lcom/vk/audioipc/communication/AudioService;->b(Lcom/vk/audioipc/communication/AudioService;)Lcom/vk/audioipc/communication/ReceivedActionDistributor;
 
     move-result-object v0
 
-    invoke-virtual {v0, p1, p2}, Lcom/vk/audioipc/communication/m;->a(Lcom/vk/audioipc/core/d;Ljava/lang/Throwable;)V
+    invoke-virtual {v0, p1, p2}, Lcom/vk/audioipc/communication/ReceivedActionDistributor;->a(Lcom/vk/audioipc/core/AudioPlayer;Ljava/lang/Throwable;)V
 
     return-void
 .end method

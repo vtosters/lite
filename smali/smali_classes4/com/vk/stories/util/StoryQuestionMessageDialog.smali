@@ -1,9 +1,9 @@
 .class public final Lcom/vk/stories/util/StoryQuestionMessageDialog;
-.super Lcom/vk/core/fragments/b;
+.super Lcom/vk/core/fragments/BaseFragment1;
 .source "StoryQuestionMessageDialog.kt"
 
 # interfaces
-.implements Lcom/vk/navigation/b0/k;
+.implements Lcom/vk/navigation/b0/FragmentWithoutBottomMenuBar;
 
 
 # annotations
@@ -20,11 +20,11 @@
 
 .field private G:Lcom/vk/dto/stories/model/StoryQuestionEntry;
 
-.field private H:Lkotlin/jvm/b/a;
+.field private H:Lkotlin/jvm/b/Functions;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Lkotlin/jvm/b/a<",
-            "Lkotlin/m;",
+            "Lkotlin/jvm/b/Functions<",
+            "Lkotlin/Unit;",
             ">;"
         }
     .end annotation
@@ -39,7 +39,7 @@
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, v1}, Lcom/vk/stories/util/StoryQuestionMessageDialog$b;-><init>(Lkotlin/jvm/internal/i;)V
+    invoke-direct {v0, v1}, Lcom/vk/stories/util/StoryQuestionMessageDialog$b;-><init>(Lkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     return-void
 .end method
@@ -48,7 +48,7 @@
     .locals 0
 
     .line 1
-    invoke-direct {p0}, Lcom/vk/core/fragments/b;-><init>()V
+    invoke-direct {p0}, Lcom/vk/core/fragments/BaseFragment1;-><init>()V
 
     return-void
 .end method
@@ -106,7 +106,7 @@
     move-result-object v6
 
     .line 3
-    sget-object v3, Lcom/vtosters/lite/im/i;->b:Lcom/vtosters/lite/im/i;
+    sget-object v3, Lcom/vtosters/lite/im/ImSendHelper;->b:Lcom/vtosters/lite/im/ImSendHelper;
 
     iget-object p1, p0, Lcom/vk/stories/util/StoryQuestionMessageDialog;->G:Lcom/vk/dto/stories/model/StoryQuestionEntry;
 
@@ -131,7 +131,7 @@
 
     const/4 v1, 0x2
 
-    invoke-direct {p1, v0, v2, v1, v2}, Lcom/vtosters/lite/attachments/StoryAttachment;-><init>(Lcom/vk/dto/stories/model/StoryEntry;Lcom/vk/dto/stories/model/StoryOwner;ILkotlin/jvm/internal/i;)V
+    invoke-direct {p1, v0, v2, v1, v2}, Lcom/vtosters/lite/attachments/StoryAttachment;-><init>(Lcom/vk/dto/stories/model/StoryEntry;Lcom/vk/dto/stories/model/StoryOwner;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     invoke-static {p1}, Lkotlin/collections/l;->a(Ljava/lang/Object;)Ljava/util/List;
 
@@ -146,18 +146,18 @@
     move-object v4, p0
 
     .line 5
-    invoke-static/range {v3 .. v10}, Lcom/vtosters/lite/im/i;->a(Lcom/vtosters/lite/im/i;Ljava/lang/Object;ILjava/lang/String;Ljava/util/Collection;Ljava/lang/String;ILjava/lang/Object;)Z
+    invoke-static/range {v3 .. v10}, Lcom/vtosters/lite/im/ImSendHelper;->a(Lcom/vtosters/lite/im/ImSendHelper;Ljava/lang/Object;ILjava/lang/String;Ljava/util/Collection;Ljava/lang/String;ILjava/lang/Object;)Z
 
     .line 6
-    iget-object p1, p0, Lcom/vk/stories/util/StoryQuestionMessageDialog;->H:Lkotlin/jvm/b/a;
+    iget-object p1, p0, Lcom/vk/stories/util/StoryQuestionMessageDialog;->H:Lkotlin/jvm/b/Functions;
 
     if-eqz p1, :cond_2
 
-    invoke-interface {p1}, Lkotlin/jvm/b/a;->invoke()Ljava/lang/Object;
+    invoke-interface {p1}, Lkotlin/jvm/b/Functions;->invoke()Ljava/lang/Object;
 
     move-result-object p1
 
-    check-cast p1, Lkotlin/m;
+    check-cast p1, Lkotlin/Unit;
 
     :cond_2
     return-void
@@ -166,24 +166,24 @@
     const-string p1, "storyEntry"
 
     .line 7
-    invoke-static {p1}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {p1}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v2
 
     .line 8
     :cond_4
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     throw v2
 
     :cond_5
-    invoke-static {v1}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v1}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v2
 
     .line 9
     :cond_6
-    invoke-static {v1}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v1}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v2
 .end method
@@ -220,7 +220,7 @@
     :cond_1
     const-string v0, "questionEntry"
 
-    invoke-static {v0}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v0}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v1
 .end method
@@ -273,13 +273,13 @@
     return-void
 
     :cond_2
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     throw v1
 
     .line 3
     :cond_3
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     throw v1
 .end method
@@ -304,7 +304,7 @@
 
     const-string v2, "dialog!!.window!!"
 
-    invoke-static {v0, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {v0}, Landroid/view/Window;->getAttributes()Landroid/view/WindowManager$LayoutParams;
 
@@ -383,7 +383,7 @@
 
     if-eqz v3, :cond_2
 
-    invoke-static {v3, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v3, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     if-eqz v0, :cond_1
 
@@ -401,29 +401,29 @@
     throw v0
 
     :cond_2
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     throw v1
 
     :cond_3
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     throw v1
 
     .line 7
     :cond_4
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     throw v1
 
     .line 8
     :cond_5
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     throw v1
 
     :cond_6
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     throw v1
 .end method
@@ -439,19 +439,19 @@
 
 
 # virtual methods
-.method public final f(Lkotlin/jvm/b/a;)V
+.method public final f(Lkotlin/jvm/b/Functions;)V
     .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lkotlin/jvm/b/a<",
-            "Lkotlin/m;",
+            "Lkotlin/jvm/b/Functions<",
+            "Lkotlin/Unit;",
             ">;)V"
         }
     .end annotation
 
     .line 1
-    iput-object p1, p0, Lcom/vk/stories/util/StoryQuestionMessageDialog;->H:Lkotlin/jvm/b/a;
+    iput-object p1, p0, Lcom/vk/stories/util/StoryQuestionMessageDialog;->H:Lkotlin/jvm/b/Functions;
 
     return-void
 .end method
@@ -460,7 +460,7 @@
     .locals 2
 
     .line 1
-    invoke-super {p0, p1}, Lcom/vk/core/fragments/b;->onCreate(Landroid/os/Bundle;)V
+    invoke-super {p0, p1}, Lcom/vk/core/fragments/BaseFragment1;->onCreate(Landroid/os/Bundle;)V
 
     .line 2
     invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getArguments()Landroid/os/Bundle;
@@ -517,13 +517,13 @@
     return-void
 
     :cond_2
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     throw v0
 
     .line 4
     :cond_3
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     throw v0
 .end method
@@ -598,13 +598,13 @@
     const-string v4, "messageBtn"
 
     .line 9
-    invoke-static {v3, v4}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v3, v4}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     new-instance v4, Lcom/vk/stories/util/StoryQuestionMessageDialog$onCreateView$2;
 
     invoke-direct {v4, p0, v2}, Lcom/vk/stories/util/StoryQuestionMessageDialog$onCreateView$2;-><init>(Lcom/vk/stories/util/StoryQuestionMessageDialog;Landroid/widget/EditText;)V
 
-    invoke-static {v3, v4}, Lcom/vk/extensions/ViewExtKt;->e(Landroid/view/View;Lkotlin/jvm/b/b;)V
+    invoke-static {v3, v4}, Lcom/vk/extensions/ViewExtKt;->e(Landroid/view/View;Lkotlin/jvm/b/Functions2;)V
 
     .line 10
     iget-object v3, p0, Lcom/vk/stories/util/StoryQuestionMessageDialog;->F:Lcom/vk/dto/stories/model/StoryEntry;
@@ -624,7 +624,7 @@
     const-string p2, "authorNameTextView"
 
     .line 11
-    invoke-static {v0, p2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, p2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     const p2, 0x7f120f23
 
@@ -663,7 +663,7 @@
     aput-object v5, v3, p3
 
     .line 13
-    invoke-static {p2, v3}, Lcom/vk/core/util/y0;->a(I[Ljava/lang/Object;)Ljava/lang/String;
+    invoke-static {p2, v3}, Lcom/vk/core/util/ResUtils;->a(I[Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object p2
 
@@ -672,9 +672,9 @@
     const-string p2, "questionTextView"
 
     .line 14
-    invoke-static {v1, p2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v1, p2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    invoke-static {}, Lcom/vk/emoji/b;->g()Lcom/vk/emoji/b;
+    invoke-static {}, Lcom/vk/emoji/Emoji;->g()Lcom/vk/emoji/Emoji;
 
     move-result-object p2
 
@@ -686,7 +686,7 @@
 
     move-result-object p3
 
-    invoke-virtual {p2, p3}, Lcom/vk/emoji/b;->a(Ljava/lang/CharSequence;)Ljava/lang/CharSequence;
+    invoke-virtual {p2, p3}, Lcom/vk/emoji/Emoji;->a(Ljava/lang/CharSequence;)Ljava/lang/CharSequence;
 
     move-result-object p2
 
@@ -696,24 +696,24 @@
     invoke-static {}, Lcom/vk/attachpicker/fragment/StoryReporter;->h()V
 
     .line 16
-    invoke-static {v2}, Lcom/vk/core/util/l0;->b(Landroid/view/View;)V
+    invoke-static {v2}, Lcom/vk/core/util/KeyboardUtils;->b(Landroid/view/View;)V
 
     const-string p2, "view"
 
     .line 17
-    invoke-static {p1, p2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, p2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     return-object p1
 
     .line 18
     :cond_2
-    invoke-static {v6}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v6}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v4
 
     .line 19
     :cond_3
-    invoke-static {v6}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v6}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v4
 
@@ -721,7 +721,7 @@
     const-string p1, "storyEntry"
 
     .line 20
-    invoke-static {p1}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {p1}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v4
 .end method
@@ -730,7 +730,7 @@
     .locals 0
 
     .line 1
-    invoke-super {p0}, Lcom/vk/core/fragments/b;->onResume()V
+    invoke-super {p0}, Lcom/vk/core/fragments/BaseFragment1;->onResume()V
 
     .line 2
     invoke-direct {p0}, Lcom/vk/stories/util/StoryQuestionMessageDialog;->R4()V

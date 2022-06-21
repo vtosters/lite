@@ -3,12 +3,12 @@
 .source "StoryChooseActivityLoader.kt"
 
 # interfaces
-.implements Lc/a/z/j;
+.implements Lio/reactivex/functions/Function;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/stories/util/StoryChooseActivityLoader;->a(Ljava/lang/String;II)Lc/a/m;
+    value = Lcom/vk/stories/util/StoryChooseActivityLoader;->a(Ljava/lang/String;II)Lio/reactivex/Observable;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -24,9 +24,9 @@
         "Ljava/lang/Object;",
         ">",
         "Ljava/lang/Object;",
-        "Lc/a/z/j<",
+        "Lio/reactivex/functions/Function<",
         "TT;",
-        "Lc/a/p<",
+        "Lio/reactivex/ObservableSource<",
         "+TR;>;>;"
     }
 .end annotation
@@ -53,17 +53,17 @@
 
 
 # virtual methods
-.method public final a(Ljava/util/List;)Lc/a/m;
+.method public final a(Ljava/util/List;)Lio/reactivex/Observable;
     .locals 2
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
             "Ljava/util/List<",
-            "Lcom/vk/stories/d1/a;",
+            "Lcom/vk/stories/d1/StoryDialogItem;",
             ">;)",
-            "Lc/a/m<",
+            "Lio/reactivex/Observable<",
             "Ljava/util/List<",
-            "Lcom/vk/stories/d1/a;",
+            "Lcom/vk/stories/d1/StoryDialogItem;",
             ">;>;"
         }
     .end annotation
@@ -77,20 +77,20 @@
 
     if-lt v0, v1, :cond_0
 
-    invoke-static {p1}, Lc/a/m;->e(Ljava/lang/Object;)Lc/a/m;
+    invoke-static {p1}, Lio/reactivex/Observable;->e(Ljava/lang/Object;)Lio/reactivex/Observable;
 
     move-result-object p1
 
     const-string v0, "Observable.just(it)"
 
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     goto :goto_0
 
     :cond_0
     iget-object v0, p0, Lcom/vk/stories/util/StoryChooseActivityLoader$b;->a:Lcom/vk/stories/util/StoryChooseActivityLoader;
 
-    invoke-static {v0, p1, v1}, Lcom/vk/stories/util/StoryChooseActivityLoader;->a(Lcom/vk/stories/util/StoryChooseActivityLoader;Ljava/util/List;I)Lc/a/m;
+    invoke-static {v0, p1, v1}, Lcom/vk/stories/util/StoryChooseActivityLoader;->a(Lcom/vk/stories/util/StoryChooseActivityLoader;Ljava/util/List;I)Lio/reactivex/Observable;
 
     move-result-object p1
 
@@ -104,7 +104,7 @@
     .line 1
     check-cast p1, Ljava/util/List;
 
-    invoke-virtual {p0, p1}, Lcom/vk/stories/util/StoryChooseActivityLoader$b;->a(Ljava/util/List;)Lc/a/m;
+    invoke-virtual {p0, p1}, Lcom/vk/stories/util/StoryChooseActivityLoader$b;->a(Ljava/util/List;)Lio/reactivex/Observable;
 
     move-result-object p1
 

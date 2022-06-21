@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/profile/ui/photos/ProfileMainPhotosFragment;->k5()Lcom/vk/profile/adapter/items/i;
+    value = Lcom/vk/profile/ui/photos/ProfileMainPhotosFragment;->k5()Lcom/vk/profile/adapter/items/ContentTitlePhotosInfoItem;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -57,17 +57,17 @@
 
     iget-object v0, p0, Lcom/vk/profile/ui/photos/ProfileMainPhotosFragment$d;->a:Lcom/vk/profile/ui/photos/ProfileMainPhotosFragment;
 
-    invoke-virtual {v0}, Lcom/vk/core/fragments/c;->getContext()Landroidx/fragment/app/FragmentActivity;
+    invoke-virtual {v0}, Lcom/vk/core/fragments/BaseMvpFragment;->getContext()Landroidx/fragment/app/FragmentActivity;
 
     move-result-object v0
 
-    invoke-virtual {v1, v0}, Lcom/vk/navigation/o;->a(Landroid/content/Context;)V
+    invoke-virtual {v1, v0}, Lcom/vk/navigation/Navigator;->a(Landroid/content/Context;)V
 
     return-void
 
     .line 3
     :cond_0
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     const/4 v0, 0x0
 

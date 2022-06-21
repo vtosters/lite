@@ -16,13 +16,13 @@
 
 .field private b:Lcom/vk/im/engine/models/conversations/BotKeyboard;
 
-.field private c:Lcom/vk/im/ui/components/bot_keyboard/c;
+.field private c:Lcom/vk/im/ui/components/bot_keyboard/BotKeyboardCallback;
 
 .field private d:Landroid/view/View;
 
 .field private e:Landroidx/recyclerview/widget/RecyclerView;
 
-.field private f:Lcom/vk/im/ui/components/bot_keyboard/b;
+.field private f:Lcom/vk/im/ui/components/bot_keyboard/BotKeyboardAdapter;
 
 .field private g:Z
 
@@ -48,16 +48,16 @@
     iput-boolean p1, p0, Lcom/vk/im/ui/components/bot_keyboard/BotKeyboardVc;->a:Z
 
     .line 3
-    invoke-static {}, Lcom/vk/im/engine/models/conversations/b;->a()Lcom/vk/im/engine/models/conversations/BotKeyboard;
+    invoke-static {}, Lcom/vk/im/engine/models/conversations/BotKeyboard3;->a()Lcom/vk/im/engine/models/conversations/BotKeyboard;
 
     move-result-object p1
 
     iput-object p1, p0, Lcom/vk/im/ui/components/bot_keyboard/BotKeyboardVc;->b:Lcom/vk/im/engine/models/conversations/BotKeyboard;
 
     .line 4
-    sget-object p1, Lcom/vk/im/ui/components/bot_keyboard/c$b;->a:Lcom/vk/im/ui/components/bot_keyboard/c$b;
+    sget-object p1, Lcom/vk/im/ui/components/bot_keyboard/BotKeyboardCallback$b;->a:Lcom/vk/im/ui/components/bot_keyboard/BotKeyboardCallback$b;
 
-    iput-object p1, p0, Lcom/vk/im/ui/components/bot_keyboard/BotKeyboardVc;->c:Lcom/vk/im/ui/components/bot_keyboard/c;
+    iput-object p1, p0, Lcom/vk/im/ui/components/bot_keyboard/BotKeyboardVc;->c:Lcom/vk/im/ui/components/bot_keyboard/BotKeyboardCallback;
 
     return-void
 .end method
@@ -75,7 +75,7 @@
     :cond_0
     const-string p0, "recycler"
 
-    invoke-static {p0}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {p0}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     const/4 p0, 0x0
 
@@ -144,15 +144,15 @@
     return-void
 .end method
 
-.method private final a(Landroid/view/View;JLkotlin/jvm/b/a;)V
+.method private final a(Landroid/view/View;JLkotlin/jvm/b/Functions;)V
     .locals 2
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
             "Landroid/view/View;",
             "J",
-            "Lkotlin/jvm/b/a<",
-            "Lkotlin/m;",
+            "Lkotlin/jvm/b/Functions<",
+            "Lkotlin/Unit;",
             ">;)V"
         }
     .end annotation
@@ -201,7 +201,7 @@
     .line 42
     new-instance p3, Lcom/vk/im/ui/components/bot_keyboard/BotKeyboardVc$b;
 
-    invoke-direct {p3, p1, p4}, Lcom/vk/im/ui/components/bot_keyboard/BotKeyboardVc$b;-><init>(Landroid/view/View;Lkotlin/jvm/b/a;)V
+    invoke-direct {p3, p1, p4}, Lcom/vk/im/ui/components/bot_keyboard/BotKeyboardVc$b;-><init>(Landroid/view/View;Lkotlin/jvm/b/Functions;)V
 
     invoke-virtual {p2, p3}, Landroid/view/ViewPropertyAnimator;->setListener(Landroid/animation/Animator$AnimatorListener;)Landroid/view/ViewPropertyAnimator;
 
@@ -240,7 +240,7 @@
     iput-boolean v0, p0, Lcom/vk/im/ui/components/bot_keyboard/BotKeyboardVc;->a:Z
 
     .line 3
-    iget-object v0, p0, Lcom/vk/im/ui/components/bot_keyboard/BotKeyboardVc;->f:Lcom/vk/im/ui/components/bot_keyboard/b;
+    iget-object v0, p0, Lcom/vk/im/ui/components/bot_keyboard/BotKeyboardVc;->f:Lcom/vk/im/ui/components/bot_keyboard/BotKeyboardAdapter;
 
     const/4 v1, 0x0
 
@@ -250,7 +250,7 @@
 
     move-result-object v2
 
-    invoke-virtual {v0, v2}, Lcom/vk/im/ui/components/bot_keyboard/b;->m(Ljava/util/List;)V
+    invoke-virtual {v0, v2}, Lcom/vk/im/ui/components/bot_keyboard/BotKeyboardAdapter;->m(Ljava/util/List;)V
 
     .line 4
     iget-object v0, p0, Lcom/vk/im/ui/components/bot_keyboard/BotKeyboardVc;->e:Landroidx/recyclerview/widget/RecyclerView;
@@ -325,13 +325,13 @@
     goto :goto_0
 
     :cond_0
-    invoke-static {v2}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v2}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v1
 
     .line 10
     :cond_1
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     throw v1
 
@@ -341,7 +341,7 @@
 
     .line 11
     :cond_3
-    invoke-static {v2}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v2}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v1
 
@@ -349,7 +349,7 @@
     const-string p1, "adapter"
 
     .line 12
-    invoke-static {p1}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {p1}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v1
 .end method
@@ -371,16 +371,16 @@
     move-result-object v0
 
     .line 5
-    new-instance v1, Lcom/vk/im/ui/components/bot_keyboard/b;
+    new-instance v1, Lcom/vk/im/ui/components/bot_keyboard/BotKeyboardAdapter;
 
     iget-object v3, p0, Lcom/vk/im/ui/components/bot_keyboard/BotKeyboardVc;->h:Landroid/view/LayoutInflater;
 
-    invoke-direct {v1, v3}, Lcom/vk/im/ui/components/bot_keyboard/b;-><init>(Landroid/view/LayoutInflater;)V
+    invoke-direct {v1, v3}, Lcom/vk/im/ui/components/bot_keyboard/BotKeyboardAdapter;-><init>(Landroid/view/LayoutInflater;)V
 
     .line 6
-    iget-object v3, p0, Lcom/vk/im/ui/components/bot_keyboard/BotKeyboardVc;->c:Lcom/vk/im/ui/components/bot_keyboard/c;
+    iget-object v3, p0, Lcom/vk/im/ui/components/bot_keyboard/BotKeyboardVc;->c:Lcom/vk/im/ui/components/bot_keyboard/BotKeyboardCallback;
 
-    invoke-virtual {v1, v3}, Lcom/vk/im/ui/components/bot_keyboard/b;->a(Lcom/vk/im/ui/components/bot_keyboard/c;)V
+    invoke-virtual {v1, v3}, Lcom/vk/im/ui/components/bot_keyboard/BotKeyboardAdapter;->a(Lcom/vk/im/ui/components/bot_keyboard/BotKeyboardCallback;)V
 
     .line 7
     iget-object v3, p0, Lcom/vk/im/ui/components/bot_keyboard/BotKeyboardVc;->b:Lcom/vk/im/engine/models/conversations/BotKeyboard;
@@ -389,15 +389,15 @@
 
     move-result-object v3
 
-    invoke-virtual {v1, v3}, Lcom/vk/im/ui/components/bot_keyboard/b;->m(Ljava/util/List;)V
+    invoke-virtual {v1, v3}, Lcom/vk/im/ui/components/bot_keyboard/BotKeyboardAdapter;->m(Ljava/util/List;)V
 
     .line 8
     iget-boolean v3, p0, Lcom/vk/im/ui/components/bot_keyboard/BotKeyboardVc;->g:Z
 
-    invoke-virtual {v1, v3}, Lcom/vk/im/ui/components/bot_keyboard/b;->b(Z)V
+    invoke-virtual {v1, v3}, Lcom/vk/im/ui/components/bot_keyboard/BotKeyboardAdapter;->b(Z)V
 
     .line 9
-    iput-object v1, p0, Lcom/vk/im/ui/components/bot_keyboard/BotKeyboardVc;->f:Lcom/vk/im/ui/components/bot_keyboard/b;
+    iput-object v1, p0, Lcom/vk/im/ui/components/bot_keyboard/BotKeyboardVc;->f:Lcom/vk/im/ui/components/bot_keyboard/BotKeyboardAdapter;
 
     .line 10
     sget v1, Lcom/vk/im/ui/h;->vkim_bot_keyboard:I
@@ -408,7 +408,7 @@
 
     const-string v3, "container.findViewById(R.id.vkim_bot_keyboard)"
 
-    invoke-static {v1, v3}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v1, v3}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     check-cast v1, Landroidx/recyclerview/widget/RecyclerView;
 
@@ -468,7 +468,7 @@
 
     if-eqz v1, :cond_2
 
-    iget-object v4, p0, Lcom/vk/im/ui/components/bot_keyboard/BotKeyboardVc;->f:Lcom/vk/im/ui/components/bot_keyboard/b;
+    iget-object v4, p0, Lcom/vk/im/ui/components/bot_keyboard/BotKeyboardVc;->f:Lcom/vk/im/ui/components/bot_keyboard/BotKeyboardAdapter;
 
     if-eqz v4, :cond_1
 
@@ -491,13 +491,13 @@
     const-string v1, "container"
 
     .line 19
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     return-object v0
 
     .line 20
     :cond_0
-    invoke-static {v3}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v3}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v2
 
@@ -505,24 +505,24 @@
     const-string v0, "adapter"
 
     .line 21
-    invoke-static {v0}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v0}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v2
 
     :cond_2
-    invoke-static {v3}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v3}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v2
 
     .line 22
     :cond_3
-    invoke-static {v3}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v3}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v2
 
     .line 23
     :cond_4
-    invoke-static {v3}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v3}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v2
 .end method
@@ -533,7 +533,7 @@
     .line 24
     iget-object v0, p0, Lcom/vk/im/ui/components/bot_keyboard/BotKeyboardVc;->b:Lcom/vk/im/engine/models/conversations/BotKeyboard;
 
-    invoke-static {v0, p1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v0, p1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v0
 
@@ -586,14 +586,14 @@
 
     invoke-direct {v3, p0, p1}, Lcom/vk/im/ui/components/bot_keyboard/BotKeyboardVc$setKeyboard$1;-><init>(Lcom/vk/im/ui/components/bot_keyboard/BotKeyboardVc;Lcom/vk/im/engine/models/conversations/BotKeyboard;)V
 
-    invoke-direct {p0, v0, v1, v2, v3}, Lcom/vk/im/ui/components/bot_keyboard/BotKeyboardVc;->a(Landroid/view/View;JLkotlin/jvm/b/a;)V
+    invoke-direct {p0, v0, v1, v2, v3}, Lcom/vk/im/ui/components/bot_keyboard/BotKeyboardVc;->a(Landroid/view/View;JLkotlin/jvm/b/Functions;)V
 
     goto :goto_1
 
     :cond_3
     const-string p1, "recycler"
 
-    invoke-static {p1}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {p1}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     const/4 p1, 0x0
 
@@ -611,11 +611,11 @@
     return-void
 .end method
 
-.method public final a(Lcom/vk/im/ui/components/bot_keyboard/c;)V
+.method public final a(Lcom/vk/im/ui/components/bot_keyboard/BotKeyboardCallback;)V
     .locals 1
 
     .line 32
-    iput-object p1, p0, Lcom/vk/im/ui/components/bot_keyboard/BotKeyboardVc;->c:Lcom/vk/im/ui/components/bot_keyboard/c;
+    iput-object p1, p0, Lcom/vk/im/ui/components/bot_keyboard/BotKeyboardVc;->c:Lcom/vk/im/ui/components/bot_keyboard/BotKeyboardCallback;
 
     .line 33
     iget-object v0, p0, Lcom/vk/im/ui/components/bot_keyboard/BotKeyboardVc;->d:Landroid/view/View;
@@ -626,18 +626,18 @@
 
     .line 34
     :cond_0
-    iget-object v0, p0, Lcom/vk/im/ui/components/bot_keyboard/BotKeyboardVc;->f:Lcom/vk/im/ui/components/bot_keyboard/b;
+    iget-object v0, p0, Lcom/vk/im/ui/components/bot_keyboard/BotKeyboardVc;->f:Lcom/vk/im/ui/components/bot_keyboard/BotKeyboardAdapter;
 
     if-eqz v0, :cond_1
 
-    invoke-virtual {v0, p1}, Lcom/vk/im/ui/components/bot_keyboard/b;->a(Lcom/vk/im/ui/components/bot_keyboard/c;)V
+    invoke-virtual {v0, p1}, Lcom/vk/im/ui/components/bot_keyboard/BotKeyboardAdapter;->a(Lcom/vk/im/ui/components/bot_keyboard/BotKeyboardCallback;)V
 
     return-void
 
     :cond_1
     const-string p1, "adapter"
 
-    invoke-static {p1}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {p1}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     const/4 p1, 0x0
 
@@ -648,18 +648,18 @@
     .locals 1
 
     .line 31
-    iget-object v0, p0, Lcom/vk/im/ui/components/bot_keyboard/BotKeyboardVc;->f:Lcom/vk/im/ui/components/bot_keyboard/b;
+    iget-object v0, p0, Lcom/vk/im/ui/components/bot_keyboard/BotKeyboardVc;->f:Lcom/vk/im/ui/components/bot_keyboard/BotKeyboardAdapter;
 
     if-eqz v0, :cond_0
 
-    invoke-virtual {v0, p1}, Lcom/vk/im/ui/components/bot_keyboard/b;->b(Z)V
+    invoke-virtual {v0, p1}, Lcom/vk/im/ui/components/bot_keyboard/BotKeyboardAdapter;->b(Z)V
 
     return-void
 
     :cond_0
     const-string p1, "adapter"
 
-    invoke-static {p1}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {p1}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     const/4 p1, 0x0
 

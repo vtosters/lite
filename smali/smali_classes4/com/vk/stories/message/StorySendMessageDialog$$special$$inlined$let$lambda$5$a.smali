@@ -42,13 +42,13 @@
 
     iget-object v0, v0, Lcom/vk/stories/message/StorySendMessageDialog$$special$$inlined$let$lambda$5;->this$0:Lcom/vk/stories/message/StorySendMessageDialog;
 
-    invoke-static {v0}, Lcom/vk/stories/message/StorySendMessageDialog;->a(Lcom/vk/stories/message/StorySendMessageDialog;)Lcom/vk/stories/message/a;
+    invoke-static {v0}, Lcom/vk/stories/message/StorySendMessageDialog;->a(Lcom/vk/stories/message/StorySendMessageDialog;)Lcom/vk/stories/message/StorySendMessageDialog1;
 
     move-result-object v0
 
     const/4 v1, 0x1
 
-    invoke-virtual {v0, v1}, Lcom/vk/stories/message/a;->a(Z)V
+    invoke-virtual {v0, v1}, Lcom/vk/stories/message/StorySendMessageDialog1;->a(Z)V
 
     return-void
 .end method

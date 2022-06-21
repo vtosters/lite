@@ -124,7 +124,7 @@
     add-int/2addr v1, p2
 
     .line 7
-    invoke-static {v0}, Lcom/vtosters/lite/ui/refreshlayout/BottomSwipeRefreshLayout;->h(Lcom/vtosters/lite/ui/refreshlayout/BottomSwipeRefreshLayout;)Lcom/vtosters/lite/ui/refreshlayout/a;
+    invoke-static {v0}, Lcom/vtosters/lite/ui/refreshlayout/BottomSwipeRefreshLayout;->h(Lcom/vtosters/lite/ui/refreshlayout/BottomSwipeRefreshLayout;)Lcom/vtosters/lite/ui/refreshlayout/CircleImageView;
 
     move-result-object p2
 
@@ -144,7 +144,7 @@
     .line 9
     iget-object p2, p0, Lcom/vtosters/lite/ui/refreshlayout/BottomSwipeRefreshLayout$f;->a:Lcom/vtosters/lite/ui/refreshlayout/BottomSwipeRefreshLayout;
 
-    invoke-static {p2}, Lcom/vtosters/lite/ui/refreshlayout/BottomSwipeRefreshLayout;->b(Lcom/vtosters/lite/ui/refreshlayout/BottomSwipeRefreshLayout;)Lcom/vtosters/lite/ui/refreshlayout/b;
+    invoke-static {p2}, Lcom/vtosters/lite/ui/refreshlayout/BottomSwipeRefreshLayout;->b(Lcom/vtosters/lite/ui/refreshlayout/BottomSwipeRefreshLayout;)Lcom/vtosters/lite/ui/refreshlayout/MaterialProgressDrawable;
 
     move-result-object p2
 
@@ -152,7 +152,7 @@
 
     sub-float/2addr v0, p1
 
-    invoke-virtual {p2, v0}, Lcom/vtosters/lite/ui/refreshlayout/b;->a(F)V
+    invoke-virtual {p2, v0}, Lcom/vtosters/lite/ui/refreshlayout/MaterialProgressDrawable;->a(F)V
 
     return-void
 .end method

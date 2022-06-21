@@ -3,7 +3,7 @@
 .source "UploadNotification.kt"
 
 # interfaces
-.implements Lcom/vtosters/lite/upload/k$e;
+.implements Lcom/vtosters/lite/upload/UploadUtils$e;
 
 
 # annotations
@@ -17,7 +17,7 @@
 
 
 # instance fields
-.field private a:Lcom/vtosters/lite/upload/k$e;
+.field private a:Lcom/vtosters/lite/upload/UploadUtils$e;
 
 .field private b:Lcom/vk/instantjobs/InstantJob$b;
 
@@ -54,7 +54,7 @@
 
     move v1, p1
 
-    invoke-direct/range {v0 .. v8}, Lcom/vtosters/lite/upload/UploadNotification$b;-><init>(ILcom/vtosters/lite/upload/UploadNotification$State;IILandroid/os/Parcelable;Ljava/lang/Throwable;ILkotlin/jvm/internal/i;)V
+    invoke-direct/range {v0 .. v8}, Lcom/vtosters/lite/upload/UploadNotification$b;-><init>(ILcom/vtosters/lite/upload/UploadNotification$State;IILandroid/os/Parcelable;Ljava/lang/Throwable;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     iput-object v9, p0, Lcom/vtosters/lite/upload/UploadNotification;->c:Lcom/vtosters/lite/upload/UploadNotification$b;
 
@@ -90,11 +90,11 @@
 
     .line 39
     :cond_1
-    sget-object p2, Lcom/vk/core/util/i;->a:Landroid/content/Context;
+    sget-object p2, Lcom/vk/core/util/AppContextHolder;->a:Landroid/content/Context;
 
     const-string p3, "AppContextHolder.context"
 
-    invoke-static {p2, p3}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p2, p3}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {p2}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
@@ -111,7 +111,7 @@
     return-object p1
 .end method
 
-.method static synthetic a(Lcom/vtosters/lite/upload/UploadNotification;Lcom/vtosters/lite/upload/j;Landroidx/core/app/NotificationCompat$Builder;ZILjava/lang/Object;)Landroidx/core/app/NotificationCompat$Builder;
+.method static synthetic a(Lcom/vtosters/lite/upload/UploadNotification;Lcom/vtosters/lite/upload/UploadTask;Landroidx/core/app/NotificationCompat$Builder;ZILjava/lang/Object;)Landroidx/core/app/NotificationCompat$Builder;
     .locals 0
 
     and-int/lit8 p4, p4, 0x4
@@ -122,17 +122,17 @@
 
     .line 28
     :cond_0
-    invoke-direct {p0, p1, p2, p3}, Lcom/vtosters/lite/upload/UploadNotification;->a(Lcom/vtosters/lite/upload/j;Landroidx/core/app/NotificationCompat$Builder;Z)Landroidx/core/app/NotificationCompat$Builder;
+    invoke-direct {p0, p1, p2, p3}, Lcom/vtosters/lite/upload/UploadNotification;->a(Lcom/vtosters/lite/upload/UploadTask;Landroidx/core/app/NotificationCompat$Builder;Z)Landroidx/core/app/NotificationCompat$Builder;
 
     return-object p2
 .end method
 
-.method private final a(Lcom/vtosters/lite/upload/j;Landroidx/core/app/NotificationCompat$Builder;Z)Landroidx/core/app/NotificationCompat$Builder;
+.method private final a(Lcom/vtosters/lite/upload/UploadTask;Landroidx/core/app/NotificationCompat$Builder;Z)Landroidx/core/app/NotificationCompat$Builder;
     .locals 3
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lcom/vtosters/lite/upload/j<",
+            "Lcom/vtosters/lite/upload/UploadTask<",
             "*>;",
             "Landroidx/core/app/NotificationCompat$Builder;",
             "Z)",
@@ -143,7 +143,7 @@
     if-nez p3, :cond_1
 
     .line 29
-    iget-object p3, p0, Lcom/vtosters/lite/upload/UploadNotification;->a:Lcom/vtosters/lite/upload/k$e;
+    iget-object p3, p0, Lcom/vtosters/lite/upload/UploadNotification;->a:Lcom/vtosters/lite/upload/UploadUtils$e;
 
     if-eqz p3, :cond_0
 
@@ -161,7 +161,7 @@
 
     iget-boolean v2, p0, Lcom/vtosters/lite/upload/UploadNotification;->d:Z
 
-    invoke-interface {p3, p1, v0, v1, v2}, Lcom/vtosters/lite/upload/k$e;->a(Lcom/vtosters/lite/upload/j;IIZ)V
+    invoke-interface {p3, p1, v0, v1, v2}, Lcom/vtosters/lite/upload/UploadUtils$e;->a(Lcom/vtosters/lite/upload/UploadTask;IIZ)V
 
     .line 30
     :cond_0
@@ -177,11 +177,11 @@
 
     move-result v0
 
-    invoke-static {p1, p3, v0}, Lcom/vtosters/lite/upload/k$g;->a(Lcom/vtosters/lite/upload/j;II)V
+    invoke-static {p1, p3, v0}, Lcom/vtosters/lite/upload/UploadUtils$g;->a(Lcom/vtosters/lite/upload/UploadTask;II)V
 
     .line 31
     :cond_1
-    invoke-virtual {p1}, Lcom/vtosters/lite/upload/j;->o()Ljava/lang/CharSequence;
+    invoke-virtual {p1}, Lcom/vtosters/lite/upload/UploadTask;->o()Ljava/lang/CharSequence;
 
     move-result-object p1
 
@@ -239,23 +239,23 @@
 
     .line 41
     :cond_0
-    sget-object v0, Lb/h/v/d;->c:Lb/h/v/d$a;
+    sget-object v0, Lb/h/v/RxBus;->c:Lb/h/v/RxBus$a;
 
-    invoke-virtual {v0}, Lb/h/v/d$a;->a()Lb/h/v/d;
+    invoke-virtual {v0}, Lb/h/v/RxBus$a;->a()Lb/h/v/RxBus;
 
     move-result-object v0
 
-    invoke-virtual {v0, p1}, Lb/h/v/d;->a(Ljava/lang/Object;)V
+    invoke-virtual {v0, p1}, Lb/h/v/RxBus;->a(Ljava/lang/Object;)V
 
     return-void
 .end method
 
-.method private final b(Lcom/vtosters/lite/upload/j;Landroidx/core/app/NotificationCompat$Builder;)Landroidx/core/app/NotificationCompat$Builder;
+.method private final b(Lcom/vtosters/lite/upload/UploadTask;Landroidx/core/app/NotificationCompat$Builder;)Landroidx/core/app/NotificationCompat$Builder;
     .locals 3
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lcom/vtosters/lite/upload/j<",
+            "Lcom/vtosters/lite/upload/UploadTask<",
             "*>;",
             "Landroidx/core/app/NotificationCompat$Builder;",
             ")",
@@ -264,7 +264,7 @@
     .end annotation
 
     .line 3
-    invoke-static {p1}, Lcom/vtosters/lite/upload/Upload;->b(Lcom/vtosters/lite/upload/j;)Lcom/vtosters/lite/upload/UploadNotification$a;
+    invoke-static {p1}, Lcom/vtosters/lite/upload/Upload;->b(Lcom/vtosters/lite/upload/UploadTask;)Lcom/vtosters/lite/upload/UploadNotification$a;
 
     move-result-object p1
 
@@ -313,12 +313,12 @@
     return-object p2
 .end method
 
-.method private final c(Lcom/vtosters/lite/upload/j;Landroidx/core/app/NotificationCompat$Builder;)Landroidx/core/app/NotificationCompat$Builder;
+.method private final c(Lcom/vtosters/lite/upload/UploadTask;Landroidx/core/app/NotificationCompat$Builder;)Landroidx/core/app/NotificationCompat$Builder;
     .locals 4
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lcom/vtosters/lite/upload/j<",
+            "Lcom/vtosters/lite/upload/UploadTask<",
             "*>;",
             "Landroidx/core/app/NotificationCompat$Builder;",
             ")",
@@ -327,12 +327,12 @@
     .end annotation
 
     .line 1
-    invoke-static {p1}, Lcom/vtosters/lite/upload/k$g;->a(Lcom/vtosters/lite/upload/j;)Landroid/app/PendingIntent;
+    invoke-static {p1}, Lcom/vtosters/lite/upload/UploadUtils$g;->a(Lcom/vtosters/lite/upload/UploadTask;)Landroid/app/PendingIntent;
 
     move-result-object p1
 
     .line 2
-    sget-object v0, Lcom/vk/core/util/i;->a:Landroid/content/Context;
+    sget-object v0, Lcom/vk/core/util/AppContextHolder;->a:Landroid/content/Context;
 
     const v1, 0x7f12100e
 
@@ -343,7 +343,7 @@
 
     const-string v3, "context.getString(R.string.upload_error)"
 
-    invoke-static {v2, v3}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v2, v3}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 4
     invoke-virtual {v0, v1}, Landroid/content/Context;->getString(I)Ljava/lang/String;
@@ -382,11 +382,11 @@
 
 
 # virtual methods
-.method public final a()Lcom/vtosters/lite/upload/k$e;
+.method public final a()Lcom/vtosters/lite/upload/UploadUtils$e;
     .locals 1
 
     .line 1
-    iget-object v0, p0, Lcom/vtosters/lite/upload/UploadNotification;->a:Lcom/vtosters/lite/upload/k$e;
+    iget-object v0, p0, Lcom/vtosters/lite/upload/UploadNotification;->a:Lcom/vtosters/lite/upload/UploadUtils$e;
 
     return-object v0
 .end method
@@ -400,12 +400,12 @@
     return-void
 .end method
 
-.method public a(Lcom/vtosters/lite/upload/j;IIZ)V
+.method public a(Lcom/vtosters/lite/upload/UploadTask;IIZ)V
     .locals 2
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lcom/vtosters/lite/upload/j<",
+            "Lcom/vtosters/lite/upload/UploadTask<",
             "*>;IIZ)V"
         }
     .end annotation
@@ -473,12 +473,12 @@
     return-void
 .end method
 
-.method public final a(Lcom/vtosters/lite/upload/j;Landroid/os/Parcelable;)V
+.method public final a(Lcom/vtosters/lite/upload/UploadTask;Landroid/os/Parcelable;)V
     .locals 4
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lcom/vtosters/lite/upload/j<",
+            "Lcom/vtosters/lite/upload/UploadTask<",
             "*>;",
             "Landroid/os/Parcelable;",
             ")V"
@@ -486,7 +486,7 @@
     .end annotation
 
     .line 10
-    invoke-virtual {p1}, Lcom/vtosters/lite/upload/j;->r()Z
+    invoke-virtual {p1}, Lcom/vtosters/lite/upload/UploadTask;->r()Z
 
     move-result v0
 
@@ -560,7 +560,7 @@
     invoke-static {v0}, Lcom/vk/log/L;->a([Ljava/lang/Object;)V
 
     .line 16
-    invoke-static {p1, p2}, Lcom/vtosters/lite/upload/k$g;->a(Lcom/vtosters/lite/upload/j;Landroid/os/Parcelable;)V
+    invoke-static {p1, p2}, Lcom/vtosters/lite/upload/UploadUtils$g;->a(Lcom/vtosters/lite/upload/UploadTask;Landroid/os/Parcelable;)V
 
     .line 17
     new-instance p1, Lcom/vtosters/lite/upload/UploadNotification$b;
@@ -575,12 +575,12 @@
     return-void
 .end method
 
-.method public final a(Lcom/vtosters/lite/upload/j;Landroidx/core/app/NotificationCompat$Builder;)V
+.method public final a(Lcom/vtosters/lite/upload/UploadTask;Landroidx/core/app/NotificationCompat$Builder;)V
     .locals 8
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lcom/vtosters/lite/upload/j<",
+            "Lcom/vtosters/lite/upload/UploadTask<",
             "*>;",
             "Landroidx/core/app/NotificationCompat$Builder;",
             ")V"
@@ -622,13 +622,13 @@
 
     .line 24
     :cond_0
-    invoke-direct {p0, p1, p2}, Lcom/vtosters/lite/upload/UploadNotification;->c(Lcom/vtosters/lite/upload/j;Landroidx/core/app/NotificationCompat$Builder;)Landroidx/core/app/NotificationCompat$Builder;
+    invoke-direct {p0, p1, p2}, Lcom/vtosters/lite/upload/UploadNotification;->c(Lcom/vtosters/lite/upload/UploadTask;Landroidx/core/app/NotificationCompat$Builder;)Landroidx/core/app/NotificationCompat$Builder;
 
     goto :goto_0
 
     .line 25
     :cond_1
-    invoke-direct {p0, p1, p2}, Lcom/vtosters/lite/upload/UploadNotification;->b(Lcom/vtosters/lite/upload/j;Landroidx/core/app/NotificationCompat$Builder;)Landroidx/core/app/NotificationCompat$Builder;
+    invoke-direct {p0, p1, p2}, Lcom/vtosters/lite/upload/UploadNotification;->b(Lcom/vtosters/lite/upload/UploadTask;Landroidx/core/app/NotificationCompat$Builder;)Landroidx/core/app/NotificationCompat$Builder;
 
     goto :goto_0
 
@@ -646,24 +646,24 @@
     move-object v4, p2
 
     .line 26
-    invoke-static/range {v2 .. v7}, Lcom/vtosters/lite/upload/UploadNotification;->a(Lcom/vtosters/lite/upload/UploadNotification;Lcom/vtosters/lite/upload/j;Landroidx/core/app/NotificationCompat$Builder;ZILjava/lang/Object;)Landroidx/core/app/NotificationCompat$Builder;
+    invoke-static/range {v2 .. v7}, Lcom/vtosters/lite/upload/UploadNotification;->a(Lcom/vtosters/lite/upload/UploadNotification;Lcom/vtosters/lite/upload/UploadTask;Landroidx/core/app/NotificationCompat$Builder;ZILjava/lang/Object;)Landroidx/core/app/NotificationCompat$Builder;
 
     goto :goto_0
 
     .line 27
     :cond_3
-    invoke-direct {p0, p1, p2, v1}, Lcom/vtosters/lite/upload/UploadNotification;->a(Lcom/vtosters/lite/upload/j;Landroidx/core/app/NotificationCompat$Builder;Z)Landroidx/core/app/NotificationCompat$Builder;
+    invoke-direct {p0, p1, p2, v1}, Lcom/vtosters/lite/upload/UploadNotification;->a(Lcom/vtosters/lite/upload/UploadTask;Landroidx/core/app/NotificationCompat$Builder;Z)Landroidx/core/app/NotificationCompat$Builder;
 
     :goto_0
     return-void
 .end method
 
-.method public final a(Lcom/vtosters/lite/upload/j;Ljava/lang/Exception;)V
+.method public final a(Lcom/vtosters/lite/upload/UploadTask;Ljava/lang/Exception;)V
     .locals 3
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lcom/vtosters/lite/upload/j<",
+            "Lcom/vtosters/lite/upload/UploadTask<",
             "*>;",
             "Ljava/lang/Exception;",
             ")V"
@@ -732,7 +732,7 @@
     invoke-virtual {v0, p2}, Lcom/vtosters/lite/upload/UploadNotification$b;->a(Ljava/lang/Throwable;)V
 
     .line 21
-    invoke-static {p1, p2}, Lcom/vtosters/lite/upload/k$g;->a(Lcom/vtosters/lite/upload/j;Ljava/lang/Exception;)V
+    invoke-static {p1, p2}, Lcom/vtosters/lite/upload/UploadUtils$g;->a(Lcom/vtosters/lite/upload/UploadTask;Ljava/lang/Exception;)V
 
     .line 22
     new-instance p1, Lcom/vtosters/lite/upload/UploadNotification$b;
@@ -746,11 +746,11 @@
     return-void
 .end method
 
-.method public final a(Lcom/vtosters/lite/upload/k$e;)V
+.method public final a(Lcom/vtosters/lite/upload/UploadUtils$e;)V
     .locals 0
 
     .line 2
-    iput-object p1, p0, Lcom/vtosters/lite/upload/UploadNotification;->a:Lcom/vtosters/lite/upload/k$e;
+    iput-object p1, p0, Lcom/vtosters/lite/upload/UploadNotification;->a:Lcom/vtosters/lite/upload/UploadUtils$e;
 
     return-void
 .end method
@@ -759,17 +759,17 @@
     .locals 3
 
     .line 1
-    sget-object v0, Lcom/vk/pushes/j/e;->a:Lcom/vk/pushes/j/e;
+    sget-object v0, Lcom/vk/pushes/j/NotificationHelper;->a:Lcom/vk/pushes/j/NotificationHelper;
 
-    sget-object v1, Lcom/vk/core/util/i;->a:Landroid/content/Context;
+    sget-object v1, Lcom/vk/core/util/AppContextHolder;->a:Landroid/content/Context;
 
     const-string v2, "AppContextHolder.context"
 
-    invoke-static {v1, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     const/16 v2, 0xa
 
-    invoke-virtual {v0, v1, v2}, Lcom/vk/pushes/j/e;->a(Landroid/content/Context;I)V
+    invoke-virtual {v0, v1, v2}, Lcom/vk/pushes/j/NotificationHelper;->a(Landroid/content/Context;I)V
 
     .line 2
     iget-object v0, p0, Lcom/vtosters/lite/upload/UploadNotification;->c:Lcom/vtosters/lite/upload/UploadNotification$b;

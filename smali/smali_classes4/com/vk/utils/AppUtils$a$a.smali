@@ -20,11 +20,11 @@
 # instance fields
 .field private final a:Ljava/lang/String;
 
-.field private final b:Lkotlin/jvm/b/a;
+.field private final b:Lkotlin/jvm/b/Functions;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Lkotlin/jvm/b/a<",
-            "Lkotlin/m;",
+            "Lkotlin/jvm/b/Functions<",
+            "Lkotlin/Unit;",
             ">;"
         }
     .end annotation
@@ -32,14 +32,14 @@
 
 
 # direct methods
-.method public constructor <init>(Ljava/lang/String;Lkotlin/jvm/b/a;)V
+.method public constructor <init>(Ljava/lang/String;Lkotlin/jvm/b/Functions;)V
     .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
             "Ljava/lang/String;",
-            "Lkotlin/jvm/b/a<",
-            "Lkotlin/m;",
+            "Lkotlin/jvm/b/Functions<",
+            "Lkotlin/Unit;",
             ">;)V"
         }
     .end annotation
@@ -49,7 +49,7 @@
 
     iput-object p1, p0, Lcom/vk/utils/AppUtils$a$a;->a:Ljava/lang/String;
 
-    iput-object p2, p0, Lcom/vk/utils/AppUtils$a$a;->b:Lkotlin/jvm/b/a;
+    iput-object p2, p0, Lcom/vk/utils/AppUtils$a$a;->b:Lkotlin/jvm/b/Functions;
 
     return-void
 .end method
@@ -70,9 +70,9 @@
 
     .line 1
     :try_start_0
-    iget-object v0, p0, Lcom/vk/utils/AppUtils$a$a;->b:Lkotlin/jvm/b/a;
+    iget-object v0, p0, Lcom/vk/utils/AppUtils$a$a;->b:Lkotlin/jvm/b/Functions;
 
-    invoke-interface {v0}, Lkotlin/jvm/b/a;->invoke()Ljava/lang/Object;
+    invoke-interface {v0}, Lkotlin/jvm/b/Functions;->invoke()Ljava/lang/Object;
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 

@@ -1,5 +1,5 @@
 .class public final Lcom/vk/webapp/commands/VkUiGetGeoCommand;
-.super Lcom/vk/webapp/commands/c;
+.super Lcom/vk/webapp/commands/VkUiBaseCommand;
 .source "VkUiGetGeoCommand.kt"
 
 
@@ -23,7 +23,7 @@
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, v1}, Lcom/vk/webapp/commands/VkUiGetGeoCommand$a;-><init>(Lkotlin/jvm/internal/i;)V
+    invoke-direct {v0, v1}, Lcom/vk/webapp/commands/VkUiGetGeoCommand$a;-><init>(Lkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     return-void
 .end method
@@ -32,7 +32,7 @@
     .locals 0
 
     .line 1
-    invoke-direct {p0}, Lcom/vk/webapp/commands/c;-><init>()V
+    invoke-direct {p0}, Lcom/vk/webapp/commands/VkUiBaseCommand;-><init>()V
 
     return-void
 .end method
@@ -85,7 +85,7 @@
     const-string p1, "VKWebAppGeodataResult"
 
     .line 28
-    invoke-virtual {p0, p1, v0}, Lcom/vk/webapp/commands/c;->a(Ljava/lang/String;Lorg/json/JSONObject;)Lorg/json/JSONObject;
+    invoke-virtual {p0, p1, v0}, Lcom/vk/webapp/commands/VkUiBaseCommand;->a(Ljava/lang/String;Lorg/json/JSONObject;)Lorg/json/JSONObject;
 
     move-result-object p1
 
@@ -125,7 +125,7 @@
     .locals 8
 
     .line 11
-    invoke-virtual {p0}, Lcom/vk/webapp/commands/c;->c()Landroid/content/Context;
+    invoke-virtual {p0}, Lcom/vk/webapp/commands/VkUiBaseCommand;->c()Landroid/content/Context;
 
     move-result-object v0
 
@@ -137,7 +137,7 @@
 
     .line 12
     :cond_0
-    invoke-virtual {p0}, Lcom/vk/webapp/commands/c;->c()Landroid/content/Context;
+    invoke-virtual {p0}, Lcom/vk/webapp/commands/VkUiBaseCommand;->c()Landroid/content/Context;
 
     move-result-object v0
 
@@ -151,7 +151,7 @@
 
     if-eqz v0, :cond_1
 
-    invoke-static {v0}, Lcom/vk/core/extensions/a;->c(Landroid/app/Activity;)Z
+    invoke-static {v0}, Lcom/vk/core/extensions/ActivityExt;->c(Landroid/app/Activity;)Z
 
     move-result v0
 
@@ -161,7 +161,7 @@
 
     .line 13
     :cond_1
-    invoke-virtual {p0}, Lcom/vk/webapp/commands/c;->f()Lcom/vk/webapp/commands/VkUiPermissionsHandler;
+    invoke-virtual {p0}, Lcom/vk/webapp/commands/VkUiBaseCommand;->f()Lcom/vk/webapp/commands/VkUiPermissionsHandler;
 
     move-result-object v0
 
@@ -184,7 +184,7 @@
     if-eqz p1, :cond_4
 
     .line 15
-    invoke-virtual {p0}, Lcom/vk/webapp/commands/c;->b()Lcom/vk/webapp/bridges/UiFragmentAndroidBridge;
+    invoke-virtual {p0}, Lcom/vk/webapp/commands/VkUiBaseCommand;->b()Lcom/vk/webapp/bridges/UiFragmentAndroidBridge;
 
     move-result-object v2
 
@@ -200,7 +200,7 @@
 
     const-string v4, "VKWebAppGeodataFailed"
 
-    invoke-static/range {v2 .. v7}, Lcom/vk/webapp/bridges/a;->a(Lcom/vk/webapp/bridges/a;Lcom/vk/webapp/internal/data/JsApiMethodType;Ljava/lang/String;ZILjava/lang/Object;)Z
+    invoke-static/range {v2 .. v7}, Lcom/vk/webapp/bridges/AndroidBridge;->a(Lcom/vk/webapp/bridges/AndroidBridge;Lcom/vk/webapp/internal/data/JsApiMethodType;Ljava/lang/String;ZILjava/lang/Object;)Z
 
     move-result p1
 
@@ -216,15 +216,15 @@
 
     .line 16
     :cond_4
-    sget-object p1, Lcom/vk/webapp/r/b;->d:Lcom/vk/webapp/r/b$a;
+    sget-object p1, Lcom/vk/webapp/r/PermissionBottomSheetDialog;->d:Lcom/vk/webapp/r/PermissionBottomSheetDialog$a;
 
-    invoke-virtual {p0}, Lcom/vk/webapp/commands/c;->c()Landroid/content/Context;
+    invoke-virtual {p0}, Lcom/vk/webapp/commands/VkUiBaseCommand;->c()Landroid/content/Context;
 
     move-result-object v0
 
     if-eqz v0, :cond_7
 
-    invoke-virtual {p1, v0}, Lcom/vk/webapp/r/b$a;->c(Landroid/content/Context;)Lcom/vk/webapp/r/b;
+    invoke-virtual {p1, v0}, Lcom/vk/webapp/r/PermissionBottomSheetDialog$a;->c(Landroid/content/Context;)Lcom/vk/webapp/r/PermissionBottomSheetDialog;
 
     move-result-object p1
 
@@ -233,10 +233,10 @@
 
     invoke-direct {v0, p0}, Lcom/vk/webapp/commands/VkUiGetGeoCommand$d;-><init>(Lcom/vk/webapp/commands/VkUiGetGeoCommand;)V
 
-    invoke-virtual {p1, v0}, Lcom/vk/common/view/j/c;->a(Lcom/vk/common/view/j/c$a;)V
+    invoke-virtual {p1, v0}, Lcom/vk/common/view/j/ConfirmationBottomSheetDialog;->a(Lcom/vk/common/view/j/ConfirmationBottomSheetDialog$a;)V
 
     .line 18
-    invoke-virtual {p0}, Lcom/vk/webapp/commands/c;->c()Landroid/content/Context;
+    invoke-virtual {p0}, Lcom/vk/webapp/commands/VkUiBaseCommand;->c()Landroid/content/Context;
 
     move-result-object v0
 
@@ -253,7 +253,7 @@
     invoke-virtual {p1, v0, v1}, Landroidx/fragment/app/DialogFragment;->show(Landroidx/fragment/app/FragmentManager;Ljava/lang/String;)V
 
     .line 19
-    invoke-virtual {p0}, Lcom/vk/webapp/commands/c;->a()Lcom/vk/webapp/helpers/b;
+    invoke-virtual {p0}, Lcom/vk/webapp/commands/VkUiBaseCommand;->a()Lcom/vk/webapp/helpers/VkAppsAnalytics;
 
     move-result-object p1
 
@@ -263,7 +263,7 @@
 
     const-string v1, "show"
 
-    invoke-virtual {p1, v0, v1}, Lcom/vk/webapp/helpers/b;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-virtual {p1, v0, v1}, Lcom/vk/webapp/helpers/VkAppsAnalytics;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     :cond_5
     return-void
@@ -280,7 +280,7 @@
 
     .line 21
     :cond_7
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     const/4 p1, 0x0
 
@@ -314,7 +314,7 @@
     const-string v1, "VKWebAppGeodataResult"
 
     .line 3
-    invoke-virtual {p0, v1, v0}, Lcom/vk/webapp/commands/c;->a(Ljava/lang/String;Lorg/json/JSONObject;)Lorg/json/JSONObject;
+    invoke-virtual {p0, v1, v0}, Lcom/vk/webapp/commands/VkUiBaseCommand;->a(Ljava/lang/String;Lorg/json/JSONObject;)Lorg/json/JSONObject;
 
     move-result-object v0
 
@@ -339,7 +339,7 @@
     const-string v1, "VKWebAppGeodataResult"
 
     .line 3
-    invoke-virtual {p0, v1, v0}, Lcom/vk/webapp/commands/c;->a(Ljava/lang/String;Lorg/json/JSONObject;)Lorg/json/JSONObject;
+    invoke-virtual {p0, v1, v0}, Lcom/vk/webapp/commands/VkUiBaseCommand;->a(Ljava/lang/String;Lorg/json/JSONObject;)Lorg/json/JSONObject;
 
     move-result-object v0
 
@@ -352,7 +352,7 @@
     .line 1
     sget-object v0, Lcom/vk/permission/PermissionHelper;->r:Lcom/vk/permission/PermissionHelper;
 
-    invoke-virtual {p0}, Lcom/vk/webapp/commands/c;->c()Landroid/content/Context;
+    invoke-virtual {p0}, Lcom/vk/webapp/commands/VkUiBaseCommand;->c()Landroid/content/Context;
 
     move-result-object v1
 
@@ -361,11 +361,11 @@
     goto :goto_0
 
     :cond_0
-    sget-object v1, Lcom/vk/core/util/i;->a:Landroid/content/Context;
+    sget-object v1, Lcom/vk/core/util/AppContextHolder;->a:Landroid/content/Context;
 
     const-string v2, "AppContextHolder.context"
 
-    invoke-static {v1, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     :goto_0
     sget-object v2, Lcom/vk/permission/PermissionHelper;->r:Lcom/vk/permission/PermissionHelper;
@@ -382,7 +382,7 @@
     sget-object v1, Lcom/vk/permission/PermissionHelper;->r:Lcom/vk/permission/PermissionHelper;
 
     .line 3
-    invoke-virtual {p0}, Lcom/vk/webapp/commands/c;->c()Landroid/content/Context;
+    invoke-virtual {p0}, Lcom/vk/webapp/commands/VkUiBaseCommand;->c()Landroid/content/Context;
 
     move-result-object v2
 
@@ -408,7 +408,7 @@
     invoke-direct {v7, p0}, Lcom/vk/webapp/commands/VkUiGetGeoCommand$requestGeo$2;-><init>(Lcom/vk/webapp/commands/VkUiGetGeoCommand;)V
 
     .line 7
-    invoke-virtual/range {v1 .. v7}, Lcom/vk/permission/PermissionHelper;->a(Landroid/content/Context;[Ljava/lang/String;IILkotlin/jvm/b/a;Lkotlin/jvm/b/b;)Z
+    invoke-virtual/range {v1 .. v7}, Lcom/vk/permission/PermissionHelper;->a(Landroid/content/Context;[Ljava/lang/String;IILkotlin/jvm/b/Functions;Lkotlin/jvm/b/Functions2;)Z
 
     return-void
 .end method
@@ -422,7 +422,7 @@
     if-eqz v0, :cond_0
 
     .line 2
-    invoke-virtual {p0}, Lcom/vk/webapp/commands/c;->b()Lcom/vk/webapp/bridges/UiFragmentAndroidBridge;
+    invoke-virtual {p0}, Lcom/vk/webapp/commands/VkUiBaseCommand;->b()Lcom/vk/webapp/bridges/UiFragmentAndroidBridge;
 
     move-result-object v0
 
@@ -434,13 +434,13 @@
 
     move-result-object v2
 
-    invoke-virtual {v0, v1, v2}, Lcom/vk/webapp/bridges/a;->a(Lcom/vk/webapp/internal/data/JsApiMethodType;Lorg/json/JSONObject;)V
+    invoke-virtual {v0, v1, v2}, Lcom/vk/webapp/bridges/AndroidBridge;->a(Lcom/vk/webapp/internal/data/JsApiMethodType;Lorg/json/JSONObject;)V
 
     goto :goto_0
 
     .line 3
     :cond_0
-    invoke-virtual {p0}, Lcom/vk/webapp/commands/c;->b()Lcom/vk/webapp/bridges/UiFragmentAndroidBridge;
+    invoke-virtual {p0}, Lcom/vk/webapp/commands/VkUiBaseCommand;->b()Lcom/vk/webapp/bridges/UiFragmentAndroidBridge;
 
     move-result-object v0
 
@@ -452,7 +452,7 @@
 
     move-result-object v2
 
-    invoke-virtual {v0, v1, v2}, Lcom/vk/webapp/bridges/a;->a(Lcom/vk/webapp/internal/data/JsApiMethodType;Lorg/json/JSONObject;)V
+    invoke-virtual {v0, v1, v2}, Lcom/vk/webapp/bridges/AndroidBridge;->a(Lcom/vk/webapp/internal/data/JsApiMethodType;Lorg/json/JSONObject;)V
 
     :cond_1
     :goto_0
@@ -463,7 +463,7 @@
     .locals 5
 
     .line 1
-    invoke-virtual {p0}, Lcom/vk/webapp/commands/c;->d()Lio/reactivex/disposables/a;
+    invoke-virtual {p0}, Lcom/vk/webapp/commands/VkUiBaseCommand;->d()Lio/reactivex/disposables/CompositeDisposable;
 
     move-result-object v0
 
@@ -471,7 +471,7 @@
 
     sget-object v1, Lcom/vk/location/LocationUtils;->b:Lcom/vk/location/LocationUtils;
 
-    invoke-virtual {p0}, Lcom/vk/webapp/commands/c;->c()Landroid/content/Context;
+    invoke-virtual {p0}, Lcom/vk/webapp/commands/VkUiBaseCommand;->c()Landroid/content/Context;
 
     move-result-object v2
 
@@ -479,7 +479,7 @@
 
     const-wide/16 v3, 0xbb8
 
-    invoke-virtual {v1, v2, v3, v4}, Lcom/vk/location/LocationUtils;->a(Landroid/content/Context;J)Lc/a/m;
+    invoke-virtual {v1, v2, v3, v4}, Lcom/vk/location/LocationUtils;->a(Landroid/content/Context;J)Lio/reactivex/Observable;
 
     move-result-object v1
 
@@ -494,17 +494,17 @@
     invoke-direct {v3, p0}, Lcom/vk/webapp/commands/VkUiGetGeoCommand$c;-><init>(Lcom/vk/webapp/commands/VkUiGetGeoCommand;)V
 
     .line 4
-    invoke-virtual {v1, v2, v3}, Lc/a/m;->a(Lc/a/z/g;Lc/a/z/g;)Lio/reactivex/disposables/b;
+    invoke-virtual {v1, v2, v3}, Lio/reactivex/Observable;->a(Lio/reactivex/functions/Consumer;Lio/reactivex/functions/Consumer;)Lio/reactivex/disposables/Disposable;
 
     move-result-object v1
 
     .line 5
-    invoke-virtual {v0, v1}, Lio/reactivex/disposables/a;->b(Lio/reactivex/disposables/b;)Z
+    invoke-virtual {v0, v1}, Lio/reactivex/disposables/CompositeDisposable;->b(Lio/reactivex/disposables/Disposable;)Z
 
     goto :goto_0
 
     :cond_0
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     const/4 v0, 0x0
 
@@ -523,7 +523,7 @@
     const-string v0, "from_vk_pay"
 
     .line 4
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result p1
 
@@ -535,7 +535,7 @@
     if-eqz p1, :cond_3
 
     .line 6
-    invoke-virtual {p0}, Lcom/vk/webapp/commands/c;->c()Landroid/content/Context;
+    invoke-virtual {p0}, Lcom/vk/webapp/commands/VkUiBaseCommand;->c()Landroid/content/Context;
 
     move-result-object p1
 
@@ -544,7 +544,7 @@
     goto :goto_0
 
     :cond_0
-    sget-object p1, Lcom/vk/core/util/i;->a:Landroid/content/Context;
+    sget-object p1, Lcom/vk/core/util/AppContextHolder;->a:Landroid/content/Context;
 
     :goto_0
     if-eqz p1, :cond_1

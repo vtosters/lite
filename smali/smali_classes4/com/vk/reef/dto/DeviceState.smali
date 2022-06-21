@@ -1,5 +1,5 @@
 .class public final Lcom/vk/reef/dto/DeviceState;
-.super Lcom/vk/reef/dto/g;
+.super Lcom/vk/reef/dto/ReefState;
 .source "ReefState.kt"
 
 
@@ -38,7 +38,7 @@
     const/4 v0, 0x0
 
     .line 1
-    invoke-direct {p0, v0}, Lcom/vk/reef/dto/g;-><init>(Lkotlin/jvm/internal/i;)V
+    invoke-direct {p0, v0}, Lcom/vk/reef/dto/ReefState;-><init>(Lkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     iput-object p1, p0, Lcom/vk/reef/dto/DeviceState;->a:Ljava/lang/String;
 
@@ -123,7 +123,7 @@
 
     iget-object v1, p1, Lcom/vk/reef/dto/DeviceState;->a:Ljava/lang/String;
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v0
 
@@ -133,7 +133,7 @@
 
     iget-object v1, p1, Lcom/vk/reef/dto/DeviceState;->b:Lcom/vk/reef/dto/DeviceState$Type;
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v0
 
@@ -143,7 +143,7 @@
 
     iget-object v1, p1, Lcom/vk/reef/dto/DeviceState;->c:Ljava/lang/String;
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v0
 
@@ -153,7 +153,7 @@
 
     iget-object v1, p1, Lcom/vk/reef/dto/DeviceState;->d:Ljava/lang/String;
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v0
 
@@ -163,7 +163,7 @@
 
     iget-object v1, p1, Lcom/vk/reef/dto/DeviceState;->e:Ljava/lang/String;
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v0
 
@@ -173,7 +173,7 @@
 
     iget-object v1, p1, Lcom/vk/reef/dto/DeviceState;->f:Ljava/lang/String;
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v0
 
@@ -183,7 +183,7 @@
 
     iget-object v1, p1, Lcom/vk/reef/dto/DeviceState;->g:Ljava/lang/String;
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v0
 
@@ -193,7 +193,7 @@
 
     iget-object v1, p1, Lcom/vk/reef/dto/DeviceState;->h:Ljava/lang/String;
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v0
 
@@ -203,7 +203,7 @@
 
     iget-object p1, p1, Lcom/vk/reef/dto/DeviceState;->i:Lcom/vk/reef/dto/ReefBuildType;
 
-    invoke-static {v0, p1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v0, p1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result p1
 

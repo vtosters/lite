@@ -3,7 +3,7 @@
 .source "MasksView.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/b;
+.implements Lkotlin/jvm/b/Functions2;
 
 
 # annotations
@@ -19,8 +19,8 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/b<",
-        "Lcom/vk/dto/masks/a;",
+        "Lkotlin/jvm/b/Functions2<",
+        "Lcom/vk/dto/masks/MasksListItem;",
         "Ljava/lang/Boolean;",
         ">;"
     }
@@ -46,11 +46,11 @@
 
 
 # virtual methods
-.method public final a(Lcom/vk/dto/masks/a;)Z
+.method public final a(Lcom/vk/dto/masks/MasksListItem;)Z
     .locals 1
 
     .line 1
-    invoke-virtual {p1}, Lcom/vk/dto/masks/a;->d()Lcom/vk/dto/masks/MaskSection;
+    invoke-virtual {p1}, Lcom/vk/dto/masks/MasksListItem;->d()Lcom/vk/dto/masks/MaskSection;
 
     move-result-object p1
 
@@ -62,7 +62,7 @@
 
     move-result-object v0
 
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result p1
 
@@ -73,9 +73,9 @@
     .locals 0
 
     .line 1
-    check-cast p1, Lcom/vk/dto/masks/a;
+    check-cast p1, Lcom/vk/dto/masks/MasksListItem;
 
-    invoke-virtual {p0, p1}, Lcom/vk/stories/masks/MasksView$SectionHeaderView$1$index$1;->a(Lcom/vk/dto/masks/a;)Z
+    invoke-virtual {p0, p1}, Lcom/vk/stories/masks/MasksView$SectionHeaderView$1$index$1;->a(Lcom/vk/dto/masks/MasksListItem;)Z
 
     move-result p1
 

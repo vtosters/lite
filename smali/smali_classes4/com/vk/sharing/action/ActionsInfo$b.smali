@@ -51,11 +51,11 @@
     iput-boolean v1, p0, Lcom/vk/sharing/action/ActionsInfo$b;->c:Z
 
     .line 5
-    invoke-static {}, Lcom/vtosters/lite/i0/c;->d()Lb/h/h/d/c;
+    invoke-static {}, Lcom/vtosters/lite/auth/VKAccountManager;->d()Lcom/vk/auth/api/VKAccount;
 
     move-result-object v1
 
-    invoke-virtual {v1}, Lb/h/h/d/c;->s0()Z
+    invoke-virtual {v1}, Lcom/vk/auth/api/VKAccount;->s0()Z
 
     move-result v1
 

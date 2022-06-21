@@ -3,7 +3,7 @@
 .source "CommunityFragment.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/a;
+.implements Lkotlin/jvm/b/Functions;
 
 
 # annotations
@@ -19,7 +19,7 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/a<",
+        "Lkotlin/jvm/b/Functions<",
         "Ljava/lang/Integer;",
         ">;"
     }
@@ -51,11 +51,11 @@
     .line 2
     iget-object v0, p0, Lcom/vk/profile/ui/community/CommunityFragment$onCreateView$$inlined$apply$lambda$1;->this$0:Lcom/vk/profile/ui/community/CommunityFragment;
 
-    invoke-static {v0}, Lcom/vk/profile/ui/community/CommunityFragment;->f(Lcom/vk/profile/ui/community/CommunityFragment;)Lcom/vk/profile/adapter/a;
+    invoke-static {v0}, Lcom/vk/profile/ui/community/CommunityFragment;->f(Lcom/vk/profile/ui/community/CommunityFragment;)Lcom/vk/profile/adapter/InfoItemsAdapter;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/vk/lists/i0;->size()I
+    invoke-virtual {v0}, Lcom/vk/lists/SimpleAdapter;->size()I
 
     move-result v0
 

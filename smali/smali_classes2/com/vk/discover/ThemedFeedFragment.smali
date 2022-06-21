@@ -4,13 +4,13 @@
 
 # interfaces
 .implements Lcom/google/android/material/tabs/TabLayout$d;
-.implements Lcom/vk/navigation/v;
-.implements Lcom/vk/navigation/b0/c;
-.implements Lcom/vk/navigation/w;
-.implements Lcom/vk/navigation/b0/b;
-.implements Lcom/vk/discover/l;
-.implements Lcom/vk/core/ui/themes/f;
-.implements Lcom/vk/core/ui/v/j/d;
+.implements Lcom/vk/navigation/ScrolledToTop;
+.implements Lcom/vk/navigation/b0/FragmentWithAutoPlay;
+.implements Lcom/vk/navigation/SelectableFragment;
+.implements Lcom/vk/navigation/b0/FragmentWithAppBarOffsetListener;
+.implements Lcom/vk/discover/FragmentWithDiscoverCache;
+.implements Lcom/vk/core/ui/themes/Themable;
+.implements Lcom/vk/core/ui/v/j/UiTracking2;
 
 
 # annotations
@@ -24,9 +24,9 @@
 
 
 # instance fields
-.field private C:Lio/reactivex/disposables/a;
+.field private C:Lio/reactivex/disposables/CompositeDisposable;
 
-.field private D:Lcom/vk/core/util/w;
+.field private D:Lcom/vk/core/util/Dismissable;
 
 .field private E:Lcom/google/android/material/appbar/NonBouncedAppBarLayout;
 
@@ -56,7 +56,7 @@
 
 .field private R:Landroid/view/View;
 
-.field private final S:Lcom/vk/newsfeed/presenters/l$a;
+.field private final S:Lcom/vk/newsfeed/presenters/NewsfeedPresenter$a;
 
 .field private T:Lcom/vk/discover/DiscoverCategoriesContainer;
 
@@ -64,11 +64,11 @@
 
 .field private V:Z
 
-.field private W:Lkotlin/jvm/b/a;
+.field private W:Lkotlin/jvm/b/Functions;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Lkotlin/jvm/b/a<",
-            "Lkotlin/m;",
+            "Lkotlin/jvm/b/Functions<",
+            "Lkotlin/Unit;",
             ">;"
         }
     .end annotation
@@ -83,7 +83,7 @@
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, v1}, Lcom/vk/discover/ThemedFeedFragment$b;-><init>(Lkotlin/jvm/internal/i;)V
+    invoke-direct {v0, v1}, Lcom/vk/discover/ThemedFeedFragment$b;-><init>(Lkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     return-void
 .end method
@@ -95,20 +95,20 @@
     invoke-direct {p0}, Lcom/vk/core/fragments/FragmentImpl;-><init>()V
 
     .line 2
-    new-instance v0, Lio/reactivex/disposables/a;
+    new-instance v0, Lio/reactivex/disposables/CompositeDisposable;
 
-    invoke-direct {v0}, Lio/reactivex/disposables/a;-><init>()V
+    invoke-direct {v0}, Lio/reactivex/disposables/CompositeDisposable;-><init>()V
 
-    iput-object v0, p0, Lcom/vk/discover/ThemedFeedFragment;->C:Lio/reactivex/disposables/a;
+    iput-object v0, p0, Lcom/vk/discover/ThemedFeedFragment;->C:Lio/reactivex/disposables/CompositeDisposable;
 
     .line 3
-    new-instance v0, Lcom/vk/newsfeed/presenters/l$a;
+    new-instance v0, Lcom/vk/newsfeed/presenters/NewsfeedPresenter$a;
 
     sget-object v1, Lcom/vk/stats/AppUseTime$Section;->discover:Lcom/vk/stats/AppUseTime$Section;
 
-    invoke-direct {v0, v1}, Lcom/vk/newsfeed/presenters/l$a;-><init>(Lcom/vk/stats/AppUseTime$Section;)V
+    invoke-direct {v0, v1}, Lcom/vk/newsfeed/presenters/NewsfeedPresenter$a;-><init>(Lcom/vk/stats/AppUseTime$Section;)V
 
-    iput-object v0, p0, Lcom/vk/discover/ThemedFeedFragment;->S:Lcom/vk/newsfeed/presenters/l$a;
+    iput-object v0, p0, Lcom/vk/discover/ThemedFeedFragment;->S:Lcom/vk/newsfeed/presenters/NewsfeedPresenter$a;
 
     return-void
 .end method
@@ -144,7 +144,7 @@
 
     if-eqz v0, :cond_2
 
-    invoke-static {p0}, Lcom/vk/extensions/d;->a(Lcom/vk/core/fragments/FragmentImpl;)Z
+    invoke-static {p0}, Lcom/vk/extensions/FragmentImplExt;->a(Lcom/vk/core/fragments/FragmentImpl;)Z
 
     move-result v0
 
@@ -339,7 +339,7 @@
     const-string v3, "tab"
 
     .line 9
-    invoke-static {v2, v3}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v2, v3}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     iget-object v3, p0, Lcom/vk/discover/ThemedFeedFragment;->K:Lcom/vk/discover/ThemedFeedFragment$TabAdapter;
 
@@ -351,7 +351,7 @@
 
     const-string v5, "tabs.context"
 
-    invoke-static {v4, v5}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v4, v5}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {v2}, Lcom/google/android/material/tabs/TabLayout$g;->a()Landroid/view/View;
 
@@ -424,11 +424,11 @@
     return-void
 .end method
 
-.method public static final synthetic a(Lcom/vk/discover/ThemedFeedFragment;Lkotlin/jvm/b/a;)V
+.method public static final synthetic a(Lcom/vk/discover/ThemedFeedFragment;Lkotlin/jvm/b/Functions;)V
     .locals 0
 
     .line 3
-    iput-object p1, p0, Lcom/vk/discover/ThemedFeedFragment;->W:Lkotlin/jvm/b/a;
+    iput-object p1, p0, Lcom/vk/discover/ThemedFeedFragment;->W:Lkotlin/jvm/b/Functions;
 
     return-void
 .end method
@@ -442,13 +442,13 @@
     return-object p0
 .end method
 
-.method private final b(Lio/reactivex/disposables/b;)Lio/reactivex/disposables/b;
+.method private final b(Lio/reactivex/disposables/Disposable;)Lio/reactivex/disposables/Disposable;
     .locals 1
 
     .line 2
-    iget-object v0, p0, Lcom/vk/discover/ThemedFeedFragment;->C:Lio/reactivex/disposables/a;
+    iget-object v0, p0, Lcom/vk/discover/ThemedFeedFragment;->C:Lio/reactivex/disposables/CompositeDisposable;
 
-    invoke-virtual {v0, p1}, Lio/reactivex/disposables/a;->b(Lio/reactivex/disposables/b;)Z
+    invoke-virtual {v0, p1}, Lio/reactivex/disposables/CompositeDisposable;->b(Lio/reactivex/disposables/Disposable;)Z
 
     return-object p1
 .end method
@@ -475,7 +475,7 @@
     .locals 1
 
     .line 10
-    instance-of v0, p1, Lcom/vk/newsfeed/n;
+    instance-of v0, p1, Lcom/vk/newsfeed/NewsfeedCustomFragment;
 
     if-eqz v0, :cond_0
 
@@ -561,7 +561,7 @@
     if-le v1, p1, :cond_4
 
     .line 9
-    sget-object v2, Lcom/vk/newsfeed/b0;->d:Lcom/vk/newsfeed/b0;
+    sget-object v2, Lcom/vk/newsfeed/PostsAnalytics;->d:Lcom/vk/newsfeed/PostsAnalytics;
 
     invoke-virtual {v0, v6}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
 
@@ -599,7 +599,7 @@
 
     move v7, p1
 
-    invoke-virtual/range {v2 .. v7}, Lcom/vk/newsfeed/b0;->a(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;II)V
+    invoke-virtual/range {v2 .. v7}, Lcom/vk/newsfeed/PostsAnalytics;->a(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;II)V
 
     :cond_4
     :goto_1
@@ -635,7 +635,7 @@
 
     if-eqz v2, :cond_0
 
-    invoke-virtual {v2, v3}, Lcom/vk/lists/a;->setVisibility(I)V
+    invoke-virtual {v2, v3}, Lcom/vk/lists/AbstractErrorView;->setVisibility(I)V
 
     .line 5
     :cond_0
@@ -691,7 +691,7 @@
     :cond_5
     sget-object v2, Lcom/vk/discover/DiscoverDataProvider;->d:Lcom/vk/discover/DiscoverDataProvider;
 
-    invoke-virtual {v2, v4}, Lcom/vk/discover/DiscoverDataProvider;->a(Z)Lc/a/m;
+    invoke-virtual {v2, v4}, Lcom/vk/discover/DiscoverDataProvider;->a(Z)Lio/reactivex/Observable;
 
     move-result-object v2
 
@@ -705,16 +705,16 @@
     invoke-direct {p1, p0}, Lcom/vk/discover/ThemedFeedFragment$d;-><init>(Lcom/vk/discover/ThemedFeedFragment;)V
 
     .line 14
-    invoke-virtual {v2, v3, p1}, Lc/a/m;->a(Lc/a/z/g;Lc/a/z/g;)Lio/reactivex/disposables/b;
+    invoke-virtual {v2, v3, p1}, Lio/reactivex/Observable;->a(Lio/reactivex/functions/Consumer;Lio/reactivex/functions/Consumer;)Lio/reactivex/disposables/Disposable;
 
     move-result-object p1
 
     const-string v0, "DiscoverDataProvider.rel\u2026       L.w(it)\n        })"
 
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 15
-    invoke-direct {p0, p1}, Lcom/vk/discover/ThemedFeedFragment;->b(Lio/reactivex/disposables/b;)Lio/reactivex/disposables/b;
+    invoke-direct {p0, p1}, Lcom/vk/discover/ThemedFeedFragment;->b(Lio/reactivex/disposables/Disposable;)Lio/reactivex/disposables/Disposable;
 
     :cond_6
     return-void
@@ -767,15 +767,15 @@
     move-result-object v0
 
     .line 2
-    instance-of v1, v0, Lcom/vk/navigation/v;
+    instance-of v1, v0, Lcom/vk/navigation/ScrolledToTop;
 
     const/4 v2, 0x1
 
     if-eqz v1, :cond_0
 
-    check-cast v0, Lcom/vk/navigation/v;
+    check-cast v0, Lcom/vk/navigation/ScrolledToTop;
 
-    invoke-interface {v0}, Lcom/vk/navigation/v;->F()Z
+    invoke-interface {v0}, Lcom/vk/navigation/ScrolledToTop;->F()Z
 
     move-result v0
 
@@ -806,17 +806,17 @@
     .locals 1
 
     .line 1
-    iget-object v0, p0, Lcom/vk/discover/ThemedFeedFragment;->D:Lcom/vk/core/util/w;
+    iget-object v0, p0, Lcom/vk/discover/ThemedFeedFragment;->D:Lcom/vk/core/util/Dismissable;
 
     if-eqz v0, :cond_0
 
-    invoke-interface {v0}, Lcom/vk/core/util/w;->dismiss()V
+    invoke-interface {v0}, Lcom/vk/core/util/Dismissable;->dismiss()V
 
     :cond_0
     const/4 v0, 0x0
 
     .line 2
-    iput-object v0, p0, Lcom/vk/discover/ThemedFeedFragment;->D:Lcom/vk/core/util/w;
+    iput-object v0, p0, Lcom/vk/discover/ThemedFeedFragment;->D:Lcom/vk/core/util/Dismissable;
 
     .line 3
     invoke-super {p0}, Lcom/vk/core/fragments/FragmentImpl;->M4()V
@@ -836,7 +836,7 @@
 
     const-string v1, "this.activity ?: return"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 2
     sget-object v1, Lcom/vk/hints/HintsManager;->c:Lcom/vk/hints/HintsManager$d;
@@ -942,11 +942,11 @@
     invoke-direct {v1, v2, v4}, Lcom/vk/hints/HintsManager$e;-><init>(Ljava/lang/String;Landroid/graphics/Rect;)V
 
     .line 8
-    invoke-virtual {v1, v0}, Lcom/vk/hints/HintsManager$c;->a(Landroid/app/Activity;)Lcom/vk/core/util/w;
+    invoke-virtual {v1, v0}, Lcom/vk/hints/HintsManager$c;->a(Landroid/app/Activity;)Lcom/vk/core/util/Dismissable;
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/vk/discover/ThemedFeedFragment;->D:Lcom/vk/core/util/w;
+    iput-object v0, p0, Lcom/vk/discover/ThemedFeedFragment;->D:Lcom/vk/core/util/Dismissable;
 
     nop
 
@@ -984,23 +984,23 @@
     if-eqz p1, :cond_1
 
     .line 14
-    iget-object v0, p0, Lcom/vk/discover/ThemedFeedFragment;->S:Lcom/vk/newsfeed/presenters/l$a;
+    iget-object v0, p0, Lcom/vk/discover/ThemedFeedFragment;->S:Lcom/vk/newsfeed/presenters/NewsfeedPresenter$a;
 
     invoke-direct {p0, p1}, Lcom/vk/discover/ThemedFeedFragment;->d(Lcom/vk/core/fragments/FragmentImpl;)Lcom/vk/stats/AppUseTime$Section;
 
     move-result-object v1
 
-    invoke-virtual {v0, v1}, Lcom/vk/newsfeed/presenters/l$a;->a(Lcom/vk/stats/AppUseTime$Section;)V
+    invoke-virtual {v0, v1}, Lcom/vk/newsfeed/presenters/NewsfeedPresenter$a;->a(Lcom/vk/stats/AppUseTime$Section;)V
 
     .line 15
-    instance-of v0, p1, Lcom/vk/navigation/w;
+    instance-of v0, p1, Lcom/vk/navigation/SelectableFragment;
 
     if-eqz v0, :cond_1
 
     .line 16
-    check-cast p1, Lcom/vk/navigation/w;
+    check-cast p1, Lcom/vk/navigation/SelectableFragment;
 
-    invoke-interface {p1}, Lcom/vk/navigation/w;->x4()V
+    invoke-interface {p1}, Lcom/vk/navigation/SelectableFragment;->x4()V
 
     :cond_1
     return-void
@@ -1021,28 +1021,28 @@
     return-void
 .end method
 
-.method public d(Lkotlin/jvm/b/a;)V
+.method public d(Lkotlin/jvm/b/Functions;)V
     .locals 2
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lkotlin/jvm/b/a<",
-            "Lkotlin/m;",
+            "Lkotlin/jvm/b/Functions<",
+            "Lkotlin/Unit;",
             ">;)V"
         }
     .end annotation
 
     .line 2
-    iget-object v0, p0, Lcom/vk/discover/ThemedFeedFragment;->W:Lkotlin/jvm/b/a;
+    iget-object v0, p0, Lcom/vk/discover/ThemedFeedFragment;->W:Lkotlin/jvm/b/Functions;
 
     if-nez v0, :cond_0
 
     .line 3
     new-instance v0, Lcom/vk/discover/ThemedFeedFragment$setOnResumeCallback$1;
 
-    invoke-direct {v0, p0, p1}, Lcom/vk/discover/ThemedFeedFragment$setOnResumeCallback$1;-><init>(Lcom/vk/discover/ThemedFeedFragment;Lkotlin/jvm/b/a;)V
+    invoke-direct {v0, p0, p1}, Lcom/vk/discover/ThemedFeedFragment$setOnResumeCallback$1;-><init>(Lcom/vk/discover/ThemedFeedFragment;Lkotlin/jvm/b/Functions;)V
 
-    iput-object v0, p0, Lcom/vk/discover/ThemedFeedFragment;->W:Lkotlin/jvm/b/a;
+    iput-object v0, p0, Lcom/vk/discover/ThemedFeedFragment;->W:Lkotlin/jvm/b/Functions;
 
     .line 4
     invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->isResumed()Z
@@ -1051,15 +1051,15 @@
 
     if-eqz p1, :cond_1
 
-    iget-object p1, p0, Lcom/vk/discover/ThemedFeedFragment;->W:Lkotlin/jvm/b/a;
+    iget-object p1, p0, Lcom/vk/discover/ThemedFeedFragment;->W:Lkotlin/jvm/b/Functions;
 
     if-eqz p1, :cond_1
 
-    invoke-interface {p1}, Lkotlin/jvm/b/a;->invoke()Ljava/lang/Object;
+    invoke-interface {p1}, Lkotlin/jvm/b/Functions;->invoke()Ljava/lang/Object;
 
     move-result-object p1
 
-    check-cast p1, Lkotlin/m;
+    check-cast p1, Lkotlin/Unit;
 
     goto :goto_0
 
@@ -1200,7 +1200,7 @@
     const-string p2, "rootView"
 
     .line 4
-    invoke-static {p1, p2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, p2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     const p2, 0x7f0a05e9
 
@@ -1208,7 +1208,7 @@
 
     invoke-direct {v0, p0}, Lcom/vk/discover/ThemedFeedFragment$onCreateView$1;-><init>(Lcom/vk/discover/ThemedFeedFragment;)V
 
-    invoke-static {p1, p2, v0}, Lcom/vk/extensions/ViewExtKt;->a(Landroid/view/View;ILkotlin/jvm/b/b;)Landroid/view/View;
+    invoke-static {p1, p2, v0}, Lcom/vk/extensions/ViewExtKt;->a(Landroid/view/View;ILkotlin/jvm/b/Functions2;)Landroid/view/View;
 
     const p2, 0x7f0a0bc2
 
@@ -1217,7 +1217,7 @@
 
     invoke-direct {v0, p0}, Lcom/vk/discover/ThemedFeedFragment$onCreateView$2;-><init>(Lcom/vk/discover/ThemedFeedFragment;)V
 
-    invoke-static {p1, p2, v0}, Lcom/vk/extensions/ViewExtKt;->a(Landroid/view/View;ILkotlin/jvm/b/b;)Landroid/view/View;
+    invoke-static {p1, p2, v0}, Lcom/vk/extensions/ViewExtKt;->a(Landroid/view/View;ILkotlin/jvm/b/Functions2;)Landroid/view/View;
 
     move-result-object p2
 
@@ -1234,7 +1234,7 @@
 
     invoke-direct {v0, p0}, Lcom/vk/discover/ThemedFeedFragment$onCreateView$3;-><init>(Lcom/vk/discover/ThemedFeedFragment;)V
 
-    invoke-virtual {p2, v0}, Lcom/vk/core/view/search/ModernSearchView;->setStaticMode(Lkotlin/jvm/b/a;)V
+    invoke-virtual {p2, v0}, Lcom/vk/core/view/search/ModernSearchView;->setStaticMode(Lkotlin/jvm/b/Functions;)V
 
     .line 7
     :cond_1
@@ -1242,7 +1242,7 @@
 
     if-eqz p2, :cond_2
 
-    sget-object v2, Lcom/vk/core/ui/s;->a:Lcom/vk/core/ui/s$a;
+    sget-object v2, Lcom/vk/core/ui/TalkBackDrawable;->a:Lcom/vk/core/ui/TalkBackDrawable$a;
 
     const v3, 0x7f08070f
 
@@ -1254,11 +1254,11 @@
 
     const/4 v7, 0x0
 
-    invoke-static/range {v2 .. v7}, Lcom/vk/core/ui/s$a;->a(Lcom/vk/core/ui/s$a;IIIILjava/lang/Object;)Lcom/vk/core/ui/s;
+    invoke-static/range {v2 .. v7}, Lcom/vk/core/ui/TalkBackDrawable$a;->a(Lcom/vk/core/ui/TalkBackDrawable$a;IIIILjava/lang/Object;)Lcom/vk/core/ui/TalkBackDrawable;
 
     move-result-object v0
 
-    invoke-virtual {p2, v0}, Lcom/vk/core/view/search/ModernSearchView;->setStaticModeRightIcon(Lcom/vk/core/ui/s;)V
+    invoke-virtual {p2, v0}, Lcom/vk/core/view/search/ModernSearchView;->setStaticModeRightIcon(Lcom/vk/core/ui/TalkBackDrawable;)V
 
     :cond_2
     const p2, 0x7f0a02e5
@@ -1390,14 +1390,14 @@
 
     invoke-direct {v2, p0}, Lcom/vk/discover/ThemedFeedFragment$onCreateView$$inlined$also$lambda$1;-><init>(Lcom/vk/discover/ThemedFeedFragment;)V
 
-    invoke-static {p2, p0, v2}, Lcom/vk/extensions/m;->a(Landroidx/appcompat/widget/Toolbar;Lcom/vk/core/fragments/FragmentImpl;Lkotlin/jvm/b/b;)V
+    invoke-static {p2, p0, v2}, Lcom/vk/extensions/ToolbarExt1;->a(Landroidx/appcompat/widget/Toolbar;Lcom/vk/core/fragments/FragmentImpl;Lkotlin/jvm/b/Functions2;)V
 
     .line 24
     new-instance v2, Lcom/vk/discover/ThemedFeedFragment$onCreateView$$inlined$also$lambda$2;
 
     invoke-direct {v2, p0}, Lcom/vk/discover/ThemedFeedFragment$onCreateView$$inlined$also$lambda$2;-><init>(Lcom/vk/discover/ThemedFeedFragment;)V
 
-    invoke-static {p2, v2}, Lcom/vk/extensions/ViewExtKt;->e(Landroid/view/View;Lkotlin/jvm/b/b;)V
+    invoke-static {p2, v2}, Lcom/vk/extensions/ViewExtKt;->e(Landroid/view/View;Lkotlin/jvm/b/Functions2;)V
 
     .line 25
     :cond_8
@@ -1405,7 +1405,7 @@
 
     if-eqz p2, :cond_9
 
-    invoke-static {}, Lcom/vk/core/ui/themes/d;->e()Z
+    invoke-static {}, Lcom/vk/core/ui/themes/MilkshakeHelper;->e()Z
 
     move-result v2
 
@@ -1573,15 +1573,15 @@
 
     if-eqz p3, :cond_b
 
-    new-instance v0, Lcom/vk/discover/o;
+    new-instance v0, Lcom/vk/discover/ThemedFeedFragment1;
 
-    invoke-direct {v0, p2}, Lcom/vk/discover/o;-><init>(Lkotlin/jvm/b/a;)V
+    invoke-direct {v0, p2}, Lcom/vk/discover/ThemedFeedFragment1;-><init>(Lkotlin/jvm/b/Functions;)V
 
-    invoke-virtual {p3, v0}, Lcom/vk/lists/a;->setRetryClickListener(Lcom/vk/lists/r;)V
+    invoke-virtual {p3, v0}, Lcom/vk/lists/AbstractErrorView;->setRetryClickListener(Lcom/vk/lists/OnRetryClickListener;)V
 
     .line 49
     :cond_b
-    invoke-interface {p2}, Lkotlin/jvm/b/a;->invoke()Ljava/lang/Object;
+    invoke-interface {p2}, Lkotlin/jvm/b/Functions;->invoke()Ljava/lang/Object;
 
     return-object p1
 .end method
@@ -1590,9 +1590,9 @@
     .locals 1
 
     .line 1
-    iget-object v0, p0, Lcom/vk/discover/ThemedFeedFragment;->C:Lio/reactivex/disposables/a;
+    iget-object v0, p0, Lcom/vk/discover/ThemedFeedFragment;->C:Lio/reactivex/disposables/CompositeDisposable;
 
-    invoke-virtual {v0}, Lio/reactivex/disposables/a;->o()V
+    invoke-virtual {v0}, Lio/reactivex/disposables/CompositeDisposable;->o()V
 
     .line 2
     invoke-super {p0}, Landroidx/fragment/app/Fragment;->onDestroy()V
@@ -1645,15 +1645,15 @@
     iput-object v0, p0, Lcom/vk/discover/ThemedFeedFragment;->E:Lcom/google/android/material/appbar/NonBouncedAppBarLayout;
 
     .line 14
-    iget-object v1, p0, Lcom/vk/discover/ThemedFeedFragment;->D:Lcom/vk/core/util/w;
+    iget-object v1, p0, Lcom/vk/discover/ThemedFeedFragment;->D:Lcom/vk/core/util/Dismissable;
 
     if-eqz v1, :cond_0
 
-    invoke-interface {v1}, Lcom/vk/core/util/w;->dismiss()V
+    invoke-interface {v1}, Lcom/vk/core/util/Dismissable;->dismiss()V
 
     .line 15
     :cond_0
-    iput-object v0, p0, Lcom/vk/discover/ThemedFeedFragment;->D:Lcom/vk/core/util/w;
+    iput-object v0, p0, Lcom/vk/discover/ThemedFeedFragment;->D:Lcom/vk/core/util/Dismissable;
 
     .line 16
     invoke-super {p0}, Landroidx/fragment/app/DialogFragment;->onDestroyView()V
@@ -1680,20 +1680,20 @@
     if-eqz v0, :cond_0
 
     .line 4
-    iget-object v1, p0, Lcom/vk/discover/ThemedFeedFragment;->S:Lcom/vk/newsfeed/presenters/l$a;
+    iget-object v1, p0, Lcom/vk/discover/ThemedFeedFragment;->S:Lcom/vk/newsfeed/presenters/NewsfeedPresenter$a;
 
-    invoke-virtual {v1, v0}, Lcom/vk/newsfeed/presenters/l$a;->a(Lcom/vk/core/fragments/FragmentImpl;)V
+    invoke-virtual {v1, v0}, Lcom/vk/newsfeed/presenters/NewsfeedPresenter$a;->a(Lcom/vk/core/fragments/FragmentImpl;)V
 
     .line 5
     :cond_0
-    instance-of v1, v0, Lcom/vk/discover/l;
+    instance-of v1, v0, Lcom/vk/discover/FragmentWithDiscoverCache;
 
     if-eqz v1, :cond_1
 
     .line 6
-    check-cast v0, Lcom/vk/discover/l;
+    check-cast v0, Lcom/vk/discover/FragmentWithDiscoverCache;
 
-    invoke-interface {v0}, Lcom/vk/discover/l;->y4()V
+    invoke-interface {v0}, Lcom/vk/discover/FragmentWithDiscoverCache;->y4()V
 
     .line 7
     :cond_1
@@ -1721,7 +1721,7 @@
     .line 4
     iget-object v0, p0, Lcom/vk/discover/ThemedFeedFragment;->G:Landroid/widget/TextView;
 
-    invoke-static {}, Lcom/vtosters/lite/w;->d()I
+    invoke-static {}, Lcom/vtosters/lite/MenuCountersState;->d()I
 
     move-result v1
 
@@ -1739,7 +1739,7 @@
     :goto_0
     const/4 v2, 0x1
 
-    invoke-static {v0, v1, v2}, Lcom/vtosters/lite/f0;->a(Landroid/widget/TextView;Ljava/lang/Object;Z)V
+    invoke-static {v0, v1, v2}, Lcom/vtosters/lite/ViewUtils;->a(Landroid/widget/TextView;Ljava/lang/Object;Z)V
 
     .line 5
     invoke-virtual {p0}, Lcom/vk/discover/ThemedFeedFragment;->p()V
@@ -1752,9 +1752,9 @@
     if-eqz v0, :cond_1
 
     .line 7
-    iget-object v1, p0, Lcom/vk/discover/ThemedFeedFragment;->S:Lcom/vk/newsfeed/presenters/l$a;
+    iget-object v1, p0, Lcom/vk/discover/ThemedFeedFragment;->S:Lcom/vk/newsfeed/presenters/NewsfeedPresenter$a;
 
-    invoke-virtual {v1, v0}, Lcom/vk/newsfeed/presenters/l$a;->b(Lcom/vk/core/fragments/FragmentImpl;)V
+    invoke-virtual {v1, v0}, Lcom/vk/newsfeed/presenters/NewsfeedPresenter$a;->b(Lcom/vk/core/fragments/FragmentImpl;)V
 
     .line 8
     :cond_1
@@ -1771,19 +1771,19 @@
 
     invoke-direct {v1, p0}, Lcom/vk/discover/ThemedFeedFragment$onResume$3;-><init>(Lcom/vk/discover/ThemedFeedFragment;)V
 
-    invoke-static {v0, v1}, Lcom/vk/extensions/ViewExtKt;->f(Landroid/view/View;Lkotlin/jvm/b/a;)V
+    invoke-static {v0, v1}, Lcom/vk/extensions/ViewExtKt;->f(Landroid/view/View;Lkotlin/jvm/b/Functions;)V
 
     .line 10
     :cond_2
-    iget-object v0, p0, Lcom/vk/discover/ThemedFeedFragment;->W:Lkotlin/jvm/b/a;
+    iget-object v0, p0, Lcom/vk/discover/ThemedFeedFragment;->W:Lkotlin/jvm/b/Functions;
 
     if-eqz v0, :cond_3
 
-    invoke-interface {v0}, Lkotlin/jvm/b/a;->invoke()Ljava/lang/Object;
+    invoke-interface {v0}, Lkotlin/jvm/b/Functions;->invoke()Ljava/lang/Object;
 
     move-result-object v0
 
-    check-cast v0, Lkotlin/m;
+    check-cast v0, Lkotlin/Unit;
 
     :cond_3
     return-void
@@ -1805,14 +1805,14 @@
     move-result-object v0
 
     .line 3
-    instance-of v1, v0, Lcom/vk/navigation/b0/c;
+    instance-of v1, v0, Lcom/vk/navigation/b0/FragmentWithAutoPlay;
 
     if-eqz v1, :cond_0
 
     .line 4
-    check-cast v0, Lcom/vk/navigation/b0/c;
+    check-cast v0, Lcom/vk/navigation/b0/FragmentWithAutoPlay;
 
-    invoke-interface {v0}, Lcom/vk/navigation/b0/c;->p()V
+    invoke-interface {v0}, Lcom/vk/navigation/b0/FragmentWithAutoPlay;->p()V
 
     :cond_0
     return-void
@@ -1827,14 +1827,14 @@
     move-result-object v0
 
     .line 2
-    instance-of v1, v0, Lcom/vk/navigation/b0/c;
+    instance-of v1, v0, Lcom/vk/navigation/b0/FragmentWithAutoPlay;
 
     if-eqz v1, :cond_0
 
     .line 3
-    check-cast v0, Lcom/vk/navigation/b0/c;
+    check-cast v0, Lcom/vk/navigation/b0/FragmentWithAutoPlay;
 
-    invoke-interface {v0}, Lcom/vk/navigation/b0/c;->q()V
+    invoke-interface {v0}, Lcom/vk/navigation/b0/FragmentWithAutoPlay;->q()V
 
     :cond_0
     return-void
@@ -1848,19 +1848,19 @@
 
     move-result-object v0
 
-    instance-of v1, v0, Lcom/vk/discover/l;
+    instance-of v1, v0, Lcom/vk/discover/FragmentWithDiscoverCache;
 
     if-nez v1, :cond_0
 
     const/4 v0, 0x0
 
     :cond_0
-    check-cast v0, Lcom/vk/discover/l;
+    check-cast v0, Lcom/vk/discover/FragmentWithDiscoverCache;
 
     if-eqz v0, :cond_1
 
     .line 2
-    invoke-interface {v0}, Lcom/vk/discover/l;->t4()Z
+    invoke-interface {v0}, Lcom/vk/discover/FragmentWithDiscoverCache;->t4()Z
 
     move-result v0
 
@@ -1920,13 +1920,13 @@
     check-cast v1, Lcom/vk/core/fragments/FragmentImpl;
 
     .line 4
-    instance-of v2, v1, Lcom/vk/core/ui/themes/f;
+    instance-of v2, v1, Lcom/vk/core/ui/themes/Themable;
 
     if-eqz v2, :cond_1
 
-    check-cast v1, Lcom/vk/core/ui/themes/f;
+    check-cast v1, Lcom/vk/core/ui/themes/Themable;
 
-    invoke-interface {v1}, Lcom/vk/core/ui/themes/f;->v()V
+    invoke-interface {v1}, Lcom/vk/core/ui/themes/Themable;->v()V
 
     goto :goto_0
 
@@ -1943,14 +1943,14 @@
     move-result-object v0
 
     .line 2
-    instance-of v1, v0, Lcom/vk/navigation/w;
+    instance-of v1, v0, Lcom/vk/navigation/SelectableFragment;
 
     if-eqz v1, :cond_0
 
     .line 3
-    check-cast v0, Lcom/vk/navigation/w;
+    check-cast v0, Lcom/vk/navigation/SelectableFragment;
 
-    invoke-interface {v0}, Lcom/vk/navigation/w;->x4()V
+    invoke-interface {v0}, Lcom/vk/navigation/SelectableFragment;->x4()V
 
     :cond_0
     return-void

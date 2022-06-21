@@ -3,7 +3,7 @@
 .source "MediaMetricsVideo.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/a;
+.implements Lkotlin/jvm/b/Functions;
 
 
 # annotations
@@ -19,8 +19,8 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/a<",
-        "Lkotlin/m;",
+        "Lkotlin/jvm/b/Functions<",
+        "Lkotlin/Unit;",
         ">;"
     }
 .end annotation
@@ -67,7 +67,7 @@
     .line 1
     invoke-virtual {p0}, Lcom/vk/video/metrics/MediaMetricsVideo$onPositionDiscontinuity$1;->invoke()V
 
-    sget-object v0, Lkotlin/m;->a:Lkotlin/m;
+    sget-object v0, Lkotlin/Unit;->a:Lkotlin/Unit;
 
     return-object v0
 .end method
@@ -78,7 +78,7 @@
     .line 2
     iget-object v0, p0, Lcom/vk/video/metrics/MediaMetricsVideo$onPositionDiscontinuity$1;->this$0:Lcom/vk/video/metrics/MediaMetricsVideo;
 
-    invoke-static {v0}, Lcom/vk/video/metrics/MediaMetricsVideo;->a(Lcom/vk/video/metrics/MediaMetricsVideo;)Lcom/vigo/metrics/listeners/b;
+    invoke-static {v0}, Lcom/vk/video/metrics/MediaMetricsVideo;->a(Lcom/vk/video/metrics/MediaMetricsVideo;)Lcom/vigo/metrics/listeners/VigoPlayerListener;
 
     move-result-object v1
 
@@ -92,7 +92,7 @@
 
     iget-wide v7, p0, Lcom/vk/video/metrics/MediaMetricsVideo$onPositionDiscontinuity$1;->$position:J
 
-    invoke-virtual/range {v1 .. v8}, Lcom/vigo/metrics/listeners/b;->a(IJJJ)V
+    invoke-virtual/range {v1 .. v8}, Lcom/vigo/metrics/listeners/VigoPlayerListener;->a(IJJJ)V
 
     :cond_0
     return-void

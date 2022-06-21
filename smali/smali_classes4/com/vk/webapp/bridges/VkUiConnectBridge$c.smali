@@ -18,14 +18,14 @@
 
 
 # instance fields
-.field final synthetic a:Lcom/vk/webapp/o/b;
+.field final synthetic a:Lcom/vk/webapp/o/VkUiConnectFragmentDelegate;
 
 
 # direct methods
-.method constructor <init>(Lcom/vk/webapp/o/b;)V
+.method constructor <init>(Lcom/vk/webapp/o/VkUiConnectFragmentDelegate;)V
     .locals 0
 
-    iput-object p1, p0, Lcom/vk/webapp/bridges/VkUiConnectBridge$c;->a:Lcom/vk/webapp/o/b;
+    iput-object p1, p0, Lcom/vk/webapp/bridges/VkUiConnectBridge$c;->a:Lcom/vk/webapp/o/VkUiConnectFragmentDelegate;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -38,9 +38,9 @@
     .locals 1
 
     .line 1
-    iget-object v0, p0, Lcom/vk/webapp/bridges/VkUiConnectBridge$c;->a:Lcom/vk/webapp/o/b;
+    iget-object v0, p0, Lcom/vk/webapp/bridges/VkUiConnectBridge$c;->a:Lcom/vk/webapp/o/VkUiConnectFragmentDelegate;
 
-    invoke-interface {v0}, Lcom/vk/webapp/o/b;->b()V
+    invoke-interface {v0}, Lcom/vk/webapp/o/VkUiConnectFragmentDelegate;->b()V
 
     return-void
 .end method

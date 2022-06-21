@@ -3,7 +3,7 @@
 .source "VkSnackbar.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/b;
+.implements Lkotlin/jvm/b/Functions2;
 
 
 # annotations
@@ -19,9 +19,9 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/b<",
+        "Lkotlin/jvm/b/Functions2<",
         "Landroid/view/View;",
-        "Lkotlin/m;",
+        "Lkotlin/Unit;",
         ">;"
     }
 .end annotation
@@ -52,17 +52,17 @@
     .line 1
     iget-object p1, p0, Lcom/vk/core/dialogs/snackbar/VkSnackbar$createContentView$4;->this$0:Lcom/vk/core/dialogs/snackbar/VkSnackbar;
 
-    invoke-virtual {p1}, Lcom/vk/core/dialogs/snackbar/VkSnackbar;->c()Lkotlin/jvm/b/a;
+    invoke-virtual {p1}, Lcom/vk/core/dialogs/snackbar/VkSnackbar;->c()Lkotlin/jvm/b/Functions;
 
     move-result-object p1
 
     if-eqz p1, :cond_0
 
-    invoke-interface {p1}, Lkotlin/jvm/b/a;->invoke()Ljava/lang/Object;
+    invoke-interface {p1}, Lkotlin/jvm/b/Functions;->invoke()Ljava/lang/Object;
 
     move-result-object p1
 
-    check-cast p1, Lkotlin/m;
+    check-cast p1, Lkotlin/Unit;
 
     .line 2
     :cond_0
@@ -73,7 +73,7 @@
     invoke-static {p1, v0}, Lcom/vk/core/dialogs/snackbar/VkSnackbar;->a(Lcom/vk/core/dialogs/snackbar/VkSnackbar;Lcom/vk/core/dialogs/snackbar/VkSnackbarAnimator;)V
 
     .line 3
-    sget-object p1, Lcom/vk/core/dialogs/snackbar/b;->e:Lcom/vk/core/dialogs/snackbar/b;
+    sget-object p1, Lcom/vk/core/dialogs/snackbar/VkSnackbarManager;->e:Lcom/vk/core/dialogs/snackbar/VkSnackbarManager;
 
     iget-object v0, p0, Lcom/vk/core/dialogs/snackbar/VkSnackbar$createContentView$4;->this$0:Lcom/vk/core/dialogs/snackbar/VkSnackbar;
 
@@ -81,7 +81,7 @@
 
     move-result-object v0
 
-    invoke-virtual {p1, v0}, Lcom/vk/core/dialogs/snackbar/b;->c(Lcom/vk/core/dialogs/snackbar/b$a;)V
+    invoke-virtual {p1, v0}, Lcom/vk/core/dialogs/snackbar/VkSnackbarManager;->c(Lcom/vk/core/dialogs/snackbar/VkSnackbarManager$a;)V
 
     .line 4
     iget-object p1, p0, Lcom/vk/core/dialogs/snackbar/VkSnackbar$createContentView$4;->this$0:Lcom/vk/core/dialogs/snackbar/VkSnackbar;
@@ -104,7 +104,7 @@
 
     invoke-virtual {p0, p1}, Lcom/vk/core/dialogs/snackbar/VkSnackbar$createContentView$4;->a(Landroid/view/View;)V
 
-    sget-object p1, Lkotlin/m;->a:Lkotlin/m;
+    sget-object p1, Lkotlin/Unit;->a:Lkotlin/Unit;
 
     return-object p1
 .end method

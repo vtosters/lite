@@ -7,7 +7,7 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Landroidx/recyclerview/widget/RecyclerView$Adapter<",
-        "Lcom/vtosters/lite/ui/b0/i<",
+        "Lcom/vtosters/lite/ui/holder/RecyclerHolder<",
         "Lcom/vk/profile/data/CountersWrapper;",
         ">;>;"
     }
@@ -103,7 +103,7 @@
 
     invoke-direct {v2, p0, p1, p3}, Lcom/vk/profile/adapter/counters/CountersAdapterLikeIos$1;-><init>(Lcom/vk/profile/adapter/counters/CountersAdapterLikeIos;Lkotlin/jvm/internal/Ref$IntRef;Lkotlin/jvm/internal/Ref$IntRef;)V
 
-    invoke-virtual {v0, v1, p2, v2}, Lcom/vk/profile/adapter/factory/sections/BaseProfileSectionsFactory;->a(Lcom/vtosters/lite/api/ExtendedUserProfile;ZLkotlin/jvm/b/b;)V
+    invoke-virtual {v0, v1, p2, v2}, Lcom/vk/profile/adapter/factory/sections/BaseProfileSectionsFactory;->a(Lcom/vtosters/lite/api/ExtendedUserProfile;ZLkotlin/jvm/b/Functions2;)V
 
     return-void
 .end method
@@ -119,12 +119,12 @@
 
 
 # virtual methods
-.method public a(Lcom/vtosters/lite/ui/b0/i;I)V
+.method public a(Lcom/vtosters/lite/ui/holder/RecyclerHolder;I)V
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lcom/vtosters/lite/ui/b0/i<",
+            "Lcom/vtosters/lite/ui/holder/RecyclerHolder<",
             "Lcom/vk/profile/data/CountersWrapper;",
             ">;I)V"
         }
@@ -137,7 +137,7 @@
 
     move-result-object p2
 
-    invoke-virtual {p1, p2}, Lcom/vtosters/lite/ui/b0/i;->a(Ljava/lang/Object;)V
+    invoke-virtual {p1, p2}, Lcom/vtosters/lite/ui/holder/RecyclerHolder;->a(Ljava/lang/Object;)V
 
     return-void
 .end method
@@ -184,9 +184,9 @@
     .locals 0
 
     .line 1
-    check-cast p1, Lcom/vtosters/lite/ui/b0/i;
+    check-cast p1, Lcom/vtosters/lite/ui/holder/RecyclerHolder;
 
-    invoke-virtual {p0, p1, p2}, Lcom/vk/profile/adapter/counters/CountersAdapterLikeIos;->a(Lcom/vtosters/lite/ui/b0/i;I)V
+    invoke-virtual {p0, p1, p2}, Lcom/vk/profile/adapter/counters/CountersAdapterLikeIos;->a(Lcom/vtosters/lite/ui/holder/RecyclerHolder;I)V
 
     return-void
 .end method
@@ -195,21 +195,21 @@
     .locals 0
 
     .line 1
-    invoke-virtual {p0, p1, p2}, Lcom/vk/profile/adapter/counters/CountersAdapterLikeIos;->onCreateViewHolder(Landroid/view/ViewGroup;I)Lcom/vtosters/lite/ui/b0/i;
+    invoke-virtual {p0, p1, p2}, Lcom/vk/profile/adapter/counters/CountersAdapterLikeIos;->onCreateViewHolder(Landroid/view/ViewGroup;I)Lcom/vtosters/lite/ui/holder/RecyclerHolder;
 
     move-result-object p1
 
     return-object p1
 .end method
 
-.method public onCreateViewHolder(Landroid/view/ViewGroup;I)Lcom/vtosters/lite/ui/b0/i;
+.method public onCreateViewHolder(Landroid/view/ViewGroup;I)Lcom/vtosters/lite/ui/holder/RecyclerHolder;
     .locals 8
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
             "Landroid/view/ViewGroup;",
             "I)",
-            "Lcom/vtosters/lite/ui/b0/i<",
+            "Lcom/vtosters/lite/ui/holder/RecyclerHolder<",
             "Lcom/vk/profile/data/CountersWrapper;",
             ">;"
         }

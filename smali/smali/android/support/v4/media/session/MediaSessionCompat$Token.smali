@@ -32,7 +32,7 @@
 # instance fields
 .field private final a:Ljava/lang/Object;
 
-.field private b:Landroid/support/v4/media/session/b;
+.field private b:Landroid/support/v4/media/session/IMediaSession;
 
 .field private c:Landroid/os/Bundle;
 
@@ -57,23 +57,23 @@
     const/4 v0, 0x0
 
     .line 1
-    invoke-direct {p0, p1, v0, v0}, Landroid/support/v4/media/session/MediaSessionCompat$Token;-><init>(Ljava/lang/Object;Landroid/support/v4/media/session/b;Landroid/os/Bundle;)V
+    invoke-direct {p0, p1, v0, v0}, Landroid/support/v4/media/session/MediaSessionCompat$Token;-><init>(Ljava/lang/Object;Landroid/support/v4/media/session/IMediaSession;Landroid/os/Bundle;)V
 
     return-void
 .end method
 
-.method constructor <init>(Ljava/lang/Object;Landroid/support/v4/media/session/b;)V
+.method constructor <init>(Ljava/lang/Object;Landroid/support/v4/media/session/IMediaSession;)V
     .locals 1
 
     const/4 v0, 0x0
 
     .line 2
-    invoke-direct {p0, p1, p2, v0}, Landroid/support/v4/media/session/MediaSessionCompat$Token;-><init>(Ljava/lang/Object;Landroid/support/v4/media/session/b;Landroid/os/Bundle;)V
+    invoke-direct {p0, p1, p2, v0}, Landroid/support/v4/media/session/MediaSessionCompat$Token;-><init>(Ljava/lang/Object;Landroid/support/v4/media/session/IMediaSession;Landroid/os/Bundle;)V
 
     return-void
 .end method
 
-.method constructor <init>(Ljava/lang/Object;Landroid/support/v4/media/session/b;Landroid/os/Bundle;)V
+.method constructor <init>(Ljava/lang/Object;Landroid/support/v4/media/session/IMediaSession;Landroid/os/Bundle;)V
     .locals 0
 
     .line 3
@@ -83,7 +83,7 @@
     iput-object p1, p0, Landroid/support/v4/media/session/MediaSessionCompat$Token;->a:Ljava/lang/Object;
 
     .line 5
-    iput-object p2, p0, Landroid/support/v4/media/session/MediaSessionCompat$Token;->b:Landroid/support/v4/media/session/b;
+    iput-object p2, p0, Landroid/support/v4/media/session/MediaSessionCompat$Token;->b:Landroid/support/v4/media/session/IMediaSession;
 
     .line 6
     iput-object p3, p0, Landroid/support/v4/media/session/MediaSessionCompat$Token;->c:Landroid/os/Bundle;
@@ -97,14 +97,14 @@
     const/4 v0, 0x0
 
     .line 1
-    invoke-static {p0, v0}, Landroid/support/v4/media/session/MediaSessionCompat$Token;->a(Ljava/lang/Object;Landroid/support/v4/media/session/b;)Landroid/support/v4/media/session/MediaSessionCompat$Token;
+    invoke-static {p0, v0}, Landroid/support/v4/media/session/MediaSessionCompat$Token;->a(Ljava/lang/Object;Landroid/support/v4/media/session/IMediaSession;)Landroid/support/v4/media/session/MediaSessionCompat$Token;
 
     move-result-object p0
 
     return-object p0
 .end method
 
-.method public static a(Ljava/lang/Object;Landroid/support/v4/media/session/b;)Landroid/support/v4/media/session/MediaSessionCompat$Token;
+.method public static a(Ljava/lang/Object;Landroid/support/v4/media/session/IMediaSession;)Landroid/support/v4/media/session/MediaSessionCompat$Token;
     .locals 2
     .annotation build Landroidx/annotation/RestrictTo;
         value = {
@@ -124,9 +124,9 @@
     .line 3
     new-instance v0, Landroid/support/v4/media/session/MediaSessionCompat$Token;
 
-    invoke-static {p0}, Landroid/support/v4/media/session/d;->d(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-static {p0}, Landroid/support/v4/media/session/MediaSessionCompatApi21;->d(Ljava/lang/Object;)Ljava/lang/Object;
 
-    invoke-direct {v0, p0, p1}, Landroid/support/v4/media/session/MediaSessionCompat$Token;-><init>(Ljava/lang/Object;Landroid/support/v4/media/session/b;)V
+    invoke-direct {v0, p0, p1}, Landroid/support/v4/media/session/MediaSessionCompat$Token;-><init>(Ljava/lang/Object;Landroid/support/v4/media/session/IMediaSession;)V
 
     return-object v0
 
@@ -138,7 +138,7 @@
 
 
 # virtual methods
-.method public F()Landroid/support/v4/media/session/b;
+.method public F()Landroid/support/v4/media/session/IMediaSession;
     .locals 1
     .annotation build Landroidx/annotation/RestrictTo;
         value = {
@@ -147,7 +147,7 @@
     .end annotation
 
     .line 1
-    iget-object v0, p0, Landroid/support/v4/media/session/MediaSessionCompat$Token;->b:Landroid/support/v4/media/session/b;
+    iget-object v0, p0, Landroid/support/v4/media/session/MediaSessionCompat$Token;->b:Landroid/support/v4/media/session/IMediaSession;
 
     return-object v0
 .end method
@@ -189,7 +189,7 @@
     return-void
 .end method
 
-.method public a(Landroid/support/v4/media/session/b;)V
+.method public a(Landroid/support/v4/media/session/IMediaSession;)V
     .locals 0
     .annotation build Landroidx/annotation/RestrictTo;
         value = {
@@ -198,7 +198,7 @@
     .end annotation
 
     .line 4
-    iput-object p1, p0, Landroid/support/v4/media/session/MediaSessionCompat$Token;->b:Landroid/support/v4/media/session/b;
+    iput-object p1, p0, Landroid/support/v4/media/session/MediaSessionCompat$Token;->b:Landroid/support/v4/media/session/IMediaSession;
 
     return-void
 .end method

@@ -3,7 +3,7 @@
 .source "NetworkMusicTracksCache.kt"
 
 # interfaces
-.implements Lcom/vk/audioipc/core/k;
+.implements Lcom/vk/audioipc/core/MusicTracksCache;
 
 
 # annotations
@@ -31,10 +31,10 @@
     .end annotation
 .end field
 
-.field private final b:Lcom/vk/audioipc/core/n;
+.field private final b:Lcom/vk/audioipc/core/ThreadSafeField;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Lcom/vk/audioipc/core/n<",
+            "Lcom/vk/audioipc/core/ThreadSafeField<",
             "Ljava/util/Set<",
             "Lcom/vk/dto/music/MusicTrack;",
             ">;>;"
@@ -44,7 +44,7 @@
 
 .field private final c:Ljava/util/concurrent/ExecutorService;
 
-.field private final d:Lcom/vk/music/n/g;
+.field private final d:Lcom/vk/music/n/ThrowableUtils;
 
 
 # direct methods
@@ -55,12 +55,12 @@
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, v1}, Lcom/vk/audioipc/core/network/NetworkMusicTracksCache$b;-><init>(Lkotlin/jvm/internal/i;)V
+    invoke-direct {v0, v1}, Lcom/vk/audioipc/core/network/NetworkMusicTracksCache$b;-><init>(Lkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     return-void
 .end method
 
-.method public constructor <init>(Ljava/util/concurrent/ExecutorService;Lcom/vk/music/n/g;)V
+.method public constructor <init>(Ljava/util/concurrent/ExecutorService;Lcom/vk/music/n/ThrowableUtils;)V
     .locals 0
 
     .line 1
@@ -68,18 +68,18 @@
 
     iput-object p1, p0, Lcom/vk/audioipc/core/network/NetworkMusicTracksCache;->c:Ljava/util/concurrent/ExecutorService;
 
-    iput-object p2, p0, Lcom/vk/audioipc/core/network/NetworkMusicTracksCache;->d:Lcom/vk/music/n/g;
+    iput-object p2, p0, Lcom/vk/audioipc/core/network/NetworkMusicTracksCache;->d:Lcom/vk/music/n/ThrowableUtils;
 
     .line 2
     new-instance p1, Ljava/util/LinkedHashSet;
 
     invoke-direct {p1}, Ljava/util/LinkedHashSet;-><init>()V
 
-    new-instance p2, Lcom/vk/audioipc/core/n;
+    new-instance p2, Lcom/vk/audioipc/core/ThreadSafeField;
 
-    invoke-direct {p2, p1}, Lcom/vk/audioipc/core/n;-><init>(Ljava/lang/Object;)V
+    invoke-direct {p2, p1}, Lcom/vk/audioipc/core/ThreadSafeField;-><init>(Ljava/lang/Object;)V
 
-    iput-object p2, p0, Lcom/vk/audioipc/core/network/NetworkMusicTracksCache;->b:Lcom/vk/audioipc/core/n;
+    iput-object p2, p0, Lcom/vk/audioipc/core/network/NetworkMusicTracksCache;->b:Lcom/vk/audioipc/core/ThreadSafeField;
 
     return-void
 .end method
@@ -105,10 +105,10 @@
     .end annotation
 
     .line 34
-    iget-object v0, p0, Lcom/vk/audioipc/core/network/NetworkMusicTracksCache;->b:Lcom/vk/audioipc/core/n;
+    iget-object v0, p0, Lcom/vk/audioipc/core/network/NetworkMusicTracksCache;->b:Lcom/vk/audioipc/core/ThreadSafeField;
 
     .line 35
-    invoke-virtual {v0}, Lcom/vk/audioipc/core/n;->b()Ljava/lang/Object;
+    invoke-virtual {v0}, Lcom/vk/audioipc/core/ThreadSafeField;->b()Ljava/lang/Object;
 
     move-result-object v1
 
@@ -116,7 +116,7 @@
 
     .line 36
     :try_start_0
-    invoke-virtual {v0}, Lcom/vk/audioipc/core/n;->a()Ljava/lang/Object;
+    invoke-virtual {v0}, Lcom/vk/audioipc/core/ThreadSafeField;->a()Ljava/lang/Object;
 
     move-result-object v0
 
@@ -176,7 +176,7 @@
 
     invoke-direct {v0, v2}, Lcom/vk/audioipc/core/network/NetworkMusicTracksCache$downloadAndCacheIfNeeded$$inlined$apply$lambda$1;-><init>(Ljava/util/List;)V
 
-    invoke-static {p1, v0}, Lkotlin/collections/l;->a(Ljava/lang/Iterable;Lkotlin/jvm/b/b;)Z
+    invoke-static {p1, v0}, Lkotlin/collections/l;->a(Ljava/lang/Iterable;Lkotlin/jvm/b/Functions2;)Z
 
     .line 43
     invoke-interface {p1}, Ljava/util/Collection;->isEmpty()Z
@@ -232,10 +232,10 @@
     .end annotation
 
     .line 11
-    iget-object v0, p0, Lcom/vk/audioipc/core/network/NetworkMusicTracksCache;->b:Lcom/vk/audioipc/core/n;
+    iget-object v0, p0, Lcom/vk/audioipc/core/network/NetworkMusicTracksCache;->b:Lcom/vk/audioipc/core/ThreadSafeField;
 
     .line 12
-    invoke-virtual {v0}, Lcom/vk/audioipc/core/n;->b()Ljava/lang/Object;
+    invoke-virtual {v0}, Lcom/vk/audioipc/core/ThreadSafeField;->b()Ljava/lang/Object;
 
     move-result-object v1
 
@@ -243,7 +243,7 @@
 
     .line 13
     :try_start_0
-    invoke-virtual {v0}, Lcom/vk/audioipc/core/n;->a()Ljava/lang/Object;
+    invoke-virtual {v0}, Lcom/vk/audioipc/core/ThreadSafeField;->a()Ljava/lang/Object;
 
     move-result-object v0
 
@@ -313,7 +313,7 @@
 
     move-result-object v6
 
-    invoke-static {v6, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v6, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v6
 
@@ -336,7 +336,7 @@
 
     .line 20
     :cond_3
-    sget-object p1, Lkotlin/m;->a:Lkotlin/m;
+    sget-object p1, Lkotlin/Unit;->a:Lkotlin/Unit;
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
@@ -366,7 +366,7 @@
     throw p1
 .end method
 
-.method private final b(Ljava/util/List;Lcom/vk/music/player/PlayerMode;)Lc/a/m;
+.method private final b(Ljava/util/List;Lcom/vk/music/player/PlayerMode;)Lio/reactivex/Observable;
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -376,7 +376,7 @@
             ">;",
             "Lcom/vk/music/player/PlayerMode;",
             ")",
-            "Lc/a/m<",
+            "Lio/reactivex/Observable<",
             "Ljava/util/List<",
             "Lcom/vk/dto/music/MusicTrack;",
             ">;>;"
@@ -397,7 +397,7 @@
     if-eq p2, v0, :cond_0
 
     .line 16
-    invoke-direct {p0, p1}, Lcom/vk/audioipc/core/network/NetworkMusicTracksCache;->c(Ljava/util/List;)Lc/a/m;
+    invoke-direct {p0, p1}, Lcom/vk/audioipc/core/network/NetworkMusicTracksCache;->c(Ljava/util/List;)Lio/reactivex/Observable;
 
     move-result-object p1
 
@@ -405,7 +405,7 @@
 
     .line 17
     :cond_0
-    invoke-direct {p0, p1}, Lcom/vk/audioipc/core/network/NetworkMusicTracksCache;->d(Ljava/util/List;)Lc/a/m;
+    invoke-direct {p0, p1}, Lcom/vk/audioipc/core/network/NetworkMusicTracksCache;->d(Ljava/util/List;)Lio/reactivex/Observable;
 
     move-result-object p1
 
@@ -425,10 +425,10 @@
     .end annotation
 
     .line 1
-    iget-object v0, p0, Lcom/vk/audioipc/core/network/NetworkMusicTracksCache;->b:Lcom/vk/audioipc/core/n;
+    iget-object v0, p0, Lcom/vk/audioipc/core/network/NetworkMusicTracksCache;->b:Lcom/vk/audioipc/core/ThreadSafeField;
 
     .line 2
-    invoke-virtual {v0}, Lcom/vk/audioipc/core/n;->b()Ljava/lang/Object;
+    invoke-virtual {v0}, Lcom/vk/audioipc/core/ThreadSafeField;->b()Ljava/lang/Object;
 
     move-result-object v1
 
@@ -436,7 +436,7 @@
 
     .line 3
     :try_start_0
-    invoke-virtual {v0}, Lcom/vk/audioipc/core/n;->a()Ljava/lang/Object;
+    invoke-virtual {v0}, Lcom/vk/audioipc/core/ThreadSafeField;->a()Ljava/lang/Object;
 
     move-result-object v0
 
@@ -535,10 +535,10 @@
 
     invoke-direct {v2, p1}, Lcom/vk/audioipc/core/network/NetworkMusicTracksCache$clearCache$1$1;-><init>(Ljava/util/Set;)V
 
-    invoke-static {v0, v2}, Lkotlin/collections/l;->a(Ljava/lang/Iterable;Lkotlin/jvm/b/b;)Z
+    invoke-static {v0, v2}, Lkotlin/collections/l;->a(Ljava/lang/Iterable;Lkotlin/jvm/b/Functions2;)Z
 
     .line 13
-    sget-object p1, Lkotlin/m;->a:Lkotlin/m;
+    sget-object p1, Lkotlin/Unit;->a:Lkotlin/Unit;
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
@@ -555,7 +555,7 @@
     throw p1
 .end method
 
-.method private final c(Ljava/util/List;)Lc/a/m;
+.method private final c(Ljava/util/List;)Lio/reactivex/Observable;
     .locals 6
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -563,7 +563,7 @@
             "Ljava/util/List<",
             "Ljava/lang/String;",
             ">;)",
-            "Lc/a/m<",
+            "Lio/reactivex/Observable<",
             "Ljava/util/List<",
             "Lcom/vk/dto/music/MusicTrack;",
             ">;>;"
@@ -573,7 +573,7 @@
     const/16 v0, 0xf9
 
     .line 10
-    invoke-static {p1, v0}, Lcom/vk/core/extensions/c;->a(Ljava/util/Collection;I)Ljava/util/List;
+    invoke-static {p1, v0}, Lcom/vk/core/extensions/CollectionExt;->a(Ljava/util/Collection;I)Ljava/util/List;
 
     move-result-object p1
 
@@ -593,7 +593,7 @@
     if-ge v2, v1, :cond_0
 
     .line 13
-    new-instance v3, Lb/h/c/c/j;
+    new-instance v3, Lcom/vk/api/audio/AudioGetById;
 
     invoke-interface {p1, v2}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
@@ -601,25 +601,25 @@
 
     check-cast v4, Ljava/util/List;
 
-    invoke-direct {v3, v4}, Lb/h/c/c/j;-><init>(Ljava/util/List;)V
+    invoke-direct {v3, v4}, Lcom/vk/api/audio/AudioGetById;-><init>(Ljava/util/List;)V
 
     const/4 v4, 0x1
 
     const/4 v5, 0x0
 
-    invoke-static {v3, v5, v4, v5}, Lcom/vk/api/base/d;->b(Lcom/vk/api/base/d;Lcom/vk/api/base/e;ILjava/lang/Object;)Lc/a/m;
+    invoke-static {v3, v5, v4, v5}, Lcom/vk/api/base/ApiRequest;->b(Lcom/vk/api/base/ApiRequest;Lcom/vk/api/base/ApiThreadHolder;ILjava/lang/Object;)Lio/reactivex/Observable;
 
     move-result-object v3
 
     sget-object v4, Lcom/vk/audioipc/core/network/NetworkMusicTracksCache$c;->a:Lcom/vk/audioipc/core/network/NetworkMusicTracksCache$c;
 
-    invoke-virtual {v3, v4}, Lc/a/m;->e(Lc/a/z/j;)Lc/a/m;
+    invoke-virtual {v3, v4}, Lio/reactivex/Observable;->e(Lio/reactivex/functions/Function;)Lio/reactivex/Observable;
 
     move-result-object v3
 
     const-string v4, "AudioGetById(requestPort\u2026ble().map { it.toList() }"
 
-    invoke-static {v3, v4}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v3, v4}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-interface {v0, v3}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
@@ -629,13 +629,13 @@
 
     .line 14
     :cond_0
-    invoke-static {v0}, Lc/a/m;->c(Ljava/lang/Iterable;)Lc/a/m;
+    invoke-static {v0}, Lio/reactivex/Observable;->c(Ljava/lang/Iterable;)Lio/reactivex/Observable;
 
     move-result-object p1
 
     const-string v0, "Observable.merge(allRequest)"
 
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     return-object p1
 .end method
@@ -671,11 +671,11 @@
     .line 2
     new-instance v1, Lcom/vk/audioipc/core/network/NetworkMusicTracksCache$a;
 
-    invoke-direct {p0, p1, p2}, Lcom/vk/audioipc/core/network/NetworkMusicTracksCache;->b(Ljava/util/List;Lcom/vk/music/player/PlayerMode;)Lc/a/m;
+    invoke-direct {p0, p1, p2}, Lcom/vk/audioipc/core/network/NetworkMusicTracksCache;->b(Ljava/util/List;Lcom/vk/music/player/PlayerMode;)Lio/reactivex/Observable;
 
     move-result-object p1
 
-    invoke-direct {v1, p1}, Lcom/vk/audioipc/core/network/NetworkMusicTracksCache$a;-><init>(Lc/a/m;)V
+    invoke-direct {v1, p1}, Lcom/vk/audioipc/core/network/NetworkMusicTracksCache$a;-><init>(Lio/reactivex/Observable;)V
 
     .line 3
     iget-object p1, p0, Lcom/vk/audioipc/core/network/NetworkMusicTracksCache;->c:Ljava/util/concurrent/ExecutorService;
@@ -700,7 +700,7 @@
 
     const-string v1, "currentRequest!!.get()"
 
-    invoke-static {p1, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     check-cast p1, Ljava/util/List;
 
@@ -714,7 +714,7 @@
 
     .line 7
     :cond_0
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
     :try_end_0
     .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_1
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
@@ -727,9 +727,9 @@
     .line 8
     new-instance p2, Ljava/lang/RuntimeException;
 
-    iget-object v0, p0, Lcom/vk/audioipc/core/network/NetworkMusicTracksCache;->d:Lcom/vk/music/n/g;
+    iget-object v0, p0, Lcom/vk/audioipc/core/network/NetworkMusicTracksCache;->d:Lcom/vk/music/n/ThrowableUtils;
 
-    invoke-virtual {v0, p1}, Lcom/vk/music/n/g;->a(Ljava/lang/Throwable;)Ljava/lang/String;
+    invoke-virtual {v0, p1}, Lcom/vk/music/n/ThrowableUtils;->a(Ljava/lang/Throwable;)Ljava/lang/String;
 
     move-result-object p1
 
@@ -743,9 +743,9 @@
     .line 9
     new-instance p2, Lcom/vk/audioipc/core/exception/NetworkException;
 
-    iget-object v0, p0, Lcom/vk/audioipc/core/network/NetworkMusicTracksCache;->d:Lcom/vk/music/n/g;
+    iget-object v0, p0, Lcom/vk/audioipc/core/network/NetworkMusicTracksCache;->d:Lcom/vk/music/n/ThrowableUtils;
 
-    invoke-virtual {v0, p1}, Lcom/vk/music/n/g;->a(Ljava/lang/Throwable;)Ljava/lang/String;
+    invoke-virtual {v0, p1}, Lcom/vk/music/n/ThrowableUtils;->a(Ljava/lang/Throwable;)Ljava/lang/String;
 
     move-result-object p1
 
@@ -754,7 +754,7 @@
     throw p2
 .end method
 
-.method private final d(Ljava/util/List;)Lc/a/m;
+.method private final d(Ljava/util/List;)Lio/reactivex/Observable;
     .locals 7
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -762,7 +762,7 @@
             "Ljava/util/List<",
             "Ljava/lang/String;",
             ">;)",
-            "Lc/a/m<",
+            "Lio/reactivex/Observable<",
             "Ljava/util/List<",
             "Lcom/vk/dto/music/MusicTrack;",
             ">;>;"
@@ -845,47 +845,47 @@
     if-ne p1, v2, :cond_0
 
     .line 6
-    new-instance p1, Lb/h/c/u/b;
+    new-instance p1, Lcom/vk/api/podcasts/PodcastsGetEpisode;
 
-    invoke-direct {p1, v1, v0}, Lb/h/c/u/b;-><init>(II)V
+    invoke-direct {p1, v1, v0}, Lcom/vk/api/podcasts/PodcastsGetEpisode;-><init>(II)V
 
-    invoke-static {p1, v3, v2, v3}, Lcom/vk/api/base/d;->b(Lcom/vk/api/base/d;Lcom/vk/api/base/e;ILjava/lang/Object;)Lc/a/m;
+    invoke-static {p1, v3, v2, v3}, Lcom/vk/api/base/ApiRequest;->b(Lcom/vk/api/base/ApiRequest;Lcom/vk/api/base/ApiThreadHolder;ILjava/lang/Object;)Lio/reactivex/Observable;
 
     move-result-object p1
 
     sget-object v0, Lcom/vk/audioipc/core/network/NetworkMusicTracksCache$d;->a:Lcom/vk/audioipc/core/network/NetworkMusicTracksCache$d;
 
-    invoke-virtual {p1, v0}, Lc/a/m;->e(Lc/a/z/j;)Lc/a/m;
+    invoke-virtual {p1, v0}, Lio/reactivex/Observable;->e(Lio/reactivex/functions/Function;)Lio/reactivex/Observable;
 
     move-result-object p1
 
     const-string v0, "PodcastsGetEpisode(owner\u2026able().map { listOf(it) }"
 
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     goto :goto_0
 
     .line 7
     :cond_0
-    new-instance p1, Lb/h/c/u/a;
+    new-instance p1, Lcom/vk/api/podcasts/GetPodcastList;
 
     const/16 v4, 0x1e
 
-    invoke-direct {p1, v1, v0, v4}, Lb/h/c/u/a;-><init>(III)V
+    invoke-direct {p1, v1, v0, v4}, Lcom/vk/api/podcasts/GetPodcastList;-><init>(III)V
 
-    invoke-static {p1, v3, v2, v3}, Lcom/vk/api/base/d;->b(Lcom/vk/api/base/d;Lcom/vk/api/base/e;ILjava/lang/Object;)Lc/a/m;
+    invoke-static {p1, v3, v2, v3}, Lcom/vk/api/base/ApiRequest;->b(Lcom/vk/api/base/ApiRequest;Lcom/vk/api/base/ApiThreadHolder;ILjava/lang/Object;)Lio/reactivex/Observable;
 
     move-result-object p1
 
     sget-object v0, Lcom/vk/audioipc/core/network/NetworkMusicTracksCache$e;->a:Lcom/vk/audioipc/core/network/NetworkMusicTracksCache$e;
 
-    invoke-virtual {p1, v0}, Lc/a/m;->e(Lc/a/z/j;)Lc/a/m;
+    invoke-virtual {p1, v0}, Lio/reactivex/Observable;->e(Lio/reactivex/functions/Function;)Lio/reactivex/Observable;
 
     move-result-object p1
 
     const-string v0, "GetPodcastList(ownerId, \u2026ble().map { it.toList() }"
 
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     :goto_0
     return-object p1
@@ -935,10 +935,10 @@
     move-result-object p1
 
     .line 25
-    iget-object v0, p0, Lcom/vk/audioipc/core/network/NetworkMusicTracksCache;->b:Lcom/vk/audioipc/core/n;
+    iget-object v0, p0, Lcom/vk/audioipc/core/network/NetworkMusicTracksCache;->b:Lcom/vk/audioipc/core/ThreadSafeField;
 
     .line 26
-    invoke-virtual {v0}, Lcom/vk/audioipc/core/n;->b()Ljava/lang/Object;
+    invoke-virtual {v0}, Lcom/vk/audioipc/core/ThreadSafeField;->b()Ljava/lang/Object;
 
     move-result-object v1
 
@@ -946,7 +946,7 @@
 
     .line 27
     :try_start_0
-    invoke-virtual {v0}, Lcom/vk/audioipc/core/n;->a()Ljava/lang/Object;
+    invoke-virtual {v0}, Lcom/vk/audioipc/core/ThreadSafeField;->a()Ljava/lang/Object;
 
     move-result-object v0
 
@@ -977,7 +977,7 @@
 
     move-result-object v3
 
-    invoke-static {v3, p1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v3, p1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v3
 
@@ -1083,10 +1083,10 @@
     .end annotation
 
     .line 1
-    iget-object v0, p0, Lcom/vk/audioipc/core/network/NetworkMusicTracksCache;->b:Lcom/vk/audioipc/core/n;
+    iget-object v0, p0, Lcom/vk/audioipc/core/network/NetworkMusicTracksCache;->b:Lcom/vk/audioipc/core/ThreadSafeField;
 
     .line 2
-    invoke-virtual {v0}, Lcom/vk/audioipc/core/n;->b()Ljava/lang/Object;
+    invoke-virtual {v0}, Lcom/vk/audioipc/core/ThreadSafeField;->b()Ljava/lang/Object;
 
     move-result-object v1
 
@@ -1094,7 +1094,7 @@
 
     .line 3
     :try_start_0
-    invoke-virtual {v0}, Lcom/vk/audioipc/core/n;->a()Ljava/lang/Object;
+    invoke-virtual {v0}, Lcom/vk/audioipc/core/ThreadSafeField;->a()Ljava/lang/Object;
 
     move-result-object v0
 
@@ -1104,7 +1104,7 @@
     invoke-interface {v0, p1}, Ljava/util/Set;->addAll(Ljava/util/Collection;)Z
 
     .line 5
-    sget-object p1, Lkotlin/m;->a:Lkotlin/m;
+    sget-object p1, Lkotlin/Unit;->a:Lkotlin/Unit;
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 

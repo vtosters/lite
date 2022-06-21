@@ -3,7 +3,7 @@
 .source "DialogBarComponent.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/b;
+.implements Lkotlin/jvm/b/Functions2;
 
 
 # annotations
@@ -19,11 +19,11 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/FunctionReference;",
-        "Lkotlin/jvm/b/b<",
-        "Lcom/vk/im/engine/models/a<",
+        "Lkotlin/jvm/b/Functions2<",
+        "Lcom/vk/im/engine/models/EntityIntMap<",
         "Lcom/vk/im/engine/models/dialogs/Dialog;",
         ">;",
-        "Lkotlin/m;",
+        "Lkotlin/Unit;",
         ">;"
     }
 .end annotation
@@ -42,12 +42,12 @@
 
 
 # virtual methods
-.method public final a(Lcom/vk/im/engine/models/a;)V
+.method public final a(Lcom/vk/im/engine/models/EntityIntMap;)V
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lcom/vk/im/engine/models/a<",
+            "Lcom/vk/im/engine/models/EntityIntMap<",
             "Lcom/vk/im/engine/models/dialogs/Dialog;",
             ">;)V"
         }
@@ -58,7 +58,7 @@
     check-cast v0, Lcom/vk/im/ui/components/dialog_bar/DialogBarComponent;
 
     .line 1
-    invoke-static {v0, p1}, Lcom/vk/im/ui/components/dialog_bar/DialogBarComponent;->c(Lcom/vk/im/ui/components/dialog_bar/DialogBarComponent;Lcom/vk/im/engine/models/a;)V
+    invoke-static {v0, p1}, Lcom/vk/im/ui/components/dialog_bar/DialogBarComponent;->c(Lcom/vk/im/ui/components/dialog_bar/DialogBarComponent;Lcom/vk/im/engine/models/EntityIntMap;)V
 
     return-void
 .end method
@@ -71,12 +71,12 @@
     return-object v0
 .end method
 
-.method public final f()Lkotlin/u/e;
+.method public final f()Lkotlin/u/KDeclarationContainer;
     .locals 1
 
     const-class v0, Lcom/vk/im/ui/components/dialog_bar/DialogBarComponent;
 
-    invoke-static {v0}, Lkotlin/jvm/internal/o;->a(Ljava/lang/Class;)Lkotlin/u/c;
+    invoke-static {v0}, Lkotlin/jvm/internal/Reflection;->a(Ljava/lang/Class;)Lkotlin/u/KClass;
 
     move-result-object v0
 
@@ -95,11 +95,11 @@
     .locals 0
 
     .line 1
-    check-cast p1, Lcom/vk/im/engine/models/a;
+    check-cast p1, Lcom/vk/im/engine/models/EntityIntMap;
 
-    invoke-virtual {p0, p1}, Lcom/vk/im/ui/components/dialog_bar/DialogBarComponent$updateAllByCache$1;->a(Lcom/vk/im/engine/models/a;)V
+    invoke-virtual {p0, p1}, Lcom/vk/im/ui/components/dialog_bar/DialogBarComponent$updateAllByCache$1;->a(Lcom/vk/im/engine/models/EntityIntMap;)V
 
-    sget-object p1, Lkotlin/m;->a:Lkotlin/m;
+    sget-object p1, Lkotlin/Unit;->a:Lkotlin/Unit;
 
     return-object p1
 .end method

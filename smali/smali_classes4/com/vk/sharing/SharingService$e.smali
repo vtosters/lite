@@ -36,7 +36,7 @@
     .end param
 
     .line 14
-    new-instance v0, Lb/h/c/w/f;
+    new-instance v0, Lb/h/c/w/NewPostRequest;
 
     new-instance v1, Landroid/util/SparseArray;
 
@@ -44,25 +44,25 @@
 
     invoke-direct {v1, v2}, Landroid/util/SparseArray;-><init>(I)V
 
-    invoke-direct {v0, v1}, Lb/h/c/w/f;-><init>(Landroid/util/SparseArray;)V
+    invoke-direct {v0, v1}, Lb/h/c/w/NewPostRequest;-><init>(Landroid/util/SparseArray;)V
 
     .line 15
-    invoke-virtual {v0, p1}, Lb/h/c/w/f;->d(I)Lb/h/c/w/f;
+    invoke-virtual {v0, p1}, Lb/h/c/w/NewPostRequest;->d(I)Lb/h/c/w/NewPostRequest;
 
     .line 16
-    invoke-virtual {v0, p2}, Lb/h/c/w/f;->g(Ljava/lang/String;)Lb/h/c/w/f;
+    invoke-virtual {v0, p2}, Lb/h/c/w/NewPostRequest;->g(Ljava/lang/String;)Lb/h/c/w/NewPostRequest;
 
     const/4 p1, 0x1
 
     .line 17
-    invoke-virtual {v0, p1}, Lb/h/c/w/f;->c(Z)Lb/h/c/w/f;
+    invoke-virtual {v0, p1}, Lb/h/c/w/NewPostRequest;->c(Z)Lb/h/c/w/NewPostRequest;
 
     .line 18
-    invoke-static {p4}, Lcom/vk/sharing/attachment/k;->c(Lcom/vk/sharing/attachment/AttachmentInfo;)Ljava/lang/String;
+    invoke-static {p4}, Lcom/vk/sharing/attachment/Attachments;->c(Lcom/vk/sharing/attachment/AttachmentInfo;)Ljava/lang/String;
 
     move-result-object p1
 
-    invoke-virtual {v0, p1}, Lb/h/c/w/f;->e(Ljava/lang/String;)Lb/h/c/w/f;
+    invoke-virtual {v0, p1}, Lb/h/c/w/NewPostRequest;->e(Ljava/lang/String;)Lb/h/c/w/NewPostRequest;
 
     .line 19
     invoke-static {p3}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
@@ -72,7 +72,7 @@
     if-nez p1, :cond_0
 
     .line 20
-    invoke-virtual {v0, p3}, Lb/h/c/w/f;->j(Ljava/lang/String;)Lb/h/c/w/f;
+    invoke-virtual {v0, p3}, Lb/h/c/w/NewPostRequest;->j(Ljava/lang/String;)Lb/h/c/w/NewPostRequest;
 
     :cond_0
     if-eqz p5, :cond_3
@@ -83,7 +83,7 @@
     if-eqz p1, :cond_1
 
     .line 22
-    invoke-virtual {v0}, Lb/h/c/w/f;->q()Lb/h/c/w/f;
+    invoke-virtual {v0}, Lb/h/c/w/NewPostRequest;->q()Lb/h/c/w/NewPostRequest;
 
     .line 23
     :cond_1
@@ -92,7 +92,7 @@
     if-eqz p1, :cond_2
 
     .line 24
-    invoke-virtual {v0}, Lb/h/c/w/f;->s()Lb/h/c/w/f;
+    invoke-virtual {v0}, Lb/h/c/w/NewPostRequest;->s()Lb/h/c/w/NewPostRequest;
 
     .line 25
     :cond_2
@@ -101,7 +101,7 @@
     if-eqz p1, :cond_3
 
     .line 26
-    invoke-virtual {v0}, Lb/h/c/w/f;->r()Lb/h/c/w/f;
+    invoke-virtual {v0}, Lb/h/c/w/NewPostRequest;->r()Lb/h/c/w/NewPostRequest;
 
     .line 27
     :cond_3
@@ -109,12 +109,12 @@
 
     invoke-direct {p1, p0}, Lcom/vk/sharing/SharingService$e$a;-><init>(Lcom/vk/sharing/SharingService$e;)V
 
-    invoke-virtual {v0, p1}, Lcom/vk/api/base/d;->a(Lcom/vk/api/base/a;)Lcom/vk/api/base/b;
+    invoke-virtual {v0, p1}, Lcom/vk/api/base/ApiRequest;->a(Lcom/vk/api/base/ApiCallback;)Lcom/vk/api/base/ApiCallbackDisposable;
 
     move-result-object p1
 
     .line 28
-    invoke-virtual {p1}, Lcom/vk/api/base/b;->b()Z
+    invoke-virtual {p1}, Lcom/vk/api/base/ApiCallbackDisposable;->b()Z
 
     move-result p1
 
@@ -129,25 +129,25 @@
     .end param
 
     .line 29
-    new-instance v0, Lb/h/c/e0/g$b;
+    new-instance v0, Lcom/vk/api/wall/WallRepost$b;
 
-    invoke-static {p5}, Lcom/vk/sharing/attachment/k;->c(Lcom/vk/sharing/attachment/AttachmentInfo;)Ljava/lang/String;
+    invoke-static {p5}, Lcom/vk/sharing/attachment/Attachments;->c(Lcom/vk/sharing/attachment/AttachmentInfo;)Ljava/lang/String;
 
     move-result-object v1
 
-    invoke-direct {v0, v1}, Lb/h/c/e0/g$b;-><init>(Ljava/lang/String;)V
+    invoke-direct {v0, v1}, Lcom/vk/api/wall/WallRepost$b;-><init>(Ljava/lang/String;)V
 
     .line 30
-    invoke-virtual {v0, p1}, Lb/h/c/e0/g$b;->a(I)Lb/h/c/e0/g$b;
+    invoke-virtual {v0, p1}, Lcom/vk/api/wall/WallRepost$b;->a(I)Lcom/vk/api/wall/WallRepost$b;
 
     .line 31
-    invoke-virtual {v0, p2}, Lb/h/c/e0/g$b;->a(Ljava/lang/String;)Lb/h/c/e0/g$b;
+    invoke-virtual {v0, p2}, Lcom/vk/api/wall/WallRepost$b;->a(Ljava/lang/String;)Lcom/vk/api/wall/WallRepost$b;
 
     .line 32
-    invoke-virtual {v0, p3}, Lb/h/c/e0/g$b;->b(Ljava/lang/String;)Lb/h/c/e0/g$b;
+    invoke-virtual {v0, p3}, Lcom/vk/api/wall/WallRepost$b;->b(Ljava/lang/String;)Lcom/vk/api/wall/WallRepost$b;
 
     .line 33
-    invoke-virtual {v0, p4}, Lb/h/c/e0/g$b;->c(Ljava/lang/String;)Lb/h/c/e0/g$b;
+    invoke-virtual {v0, p4}, Lcom/vk/api/wall/WallRepost$b;->c(Ljava/lang/String;)Lcom/vk/api/wall/WallRepost$b;
 
     if-eqz p6, :cond_2
 
@@ -157,7 +157,7 @@
     if-eqz p1, :cond_0
 
     .line 35
-    invoke-virtual {v0}, Lb/h/c/e0/g$b;->c()Lb/h/c/e0/g$b;
+    invoke-virtual {v0}, Lcom/vk/api/wall/WallRepost$b;->c()Lcom/vk/api/wall/WallRepost$b;
 
     .line 36
     :cond_0
@@ -166,7 +166,7 @@
     if-eqz p1, :cond_1
 
     .line 37
-    invoke-virtual {v0}, Lb/h/c/e0/g$b;->b()Lb/h/c/e0/g$b;
+    invoke-virtual {v0}, Lcom/vk/api/wall/WallRepost$b;->b()Lcom/vk/api/wall/WallRepost$b;
 
     .line 38
     :cond_1
@@ -175,11 +175,11 @@
     if-eqz p1, :cond_2
 
     .line 39
-    invoke-virtual {v0}, Lb/h/c/e0/g$b;->d()Lb/h/c/e0/g$b;
+    invoke-virtual {v0}, Lcom/vk/api/wall/WallRepost$b;->d()Lcom/vk/api/wall/WallRepost$b;
 
     .line 40
     :cond_2
-    invoke-virtual {v0}, Lb/h/c/e0/g$b;->a()Lb/h/c/e0/g;
+    invoke-virtual {v0}, Lcom/vk/api/wall/WallRepost$b;->a()Lcom/vk/api/wall/WallRepost;
 
     move-result-object p1
 
@@ -188,12 +188,12 @@
     invoke-direct {p2, p0, p5}, Lcom/vk/sharing/SharingService$e$b;-><init>(Lcom/vk/sharing/SharingService$e;Lcom/vk/sharing/attachment/AttachmentInfo;)V
 
     .line 41
-    invoke-virtual {p1, p2}, Lcom/vk/api/base/d;->a(Lcom/vk/api/base/a;)Lcom/vk/api/base/b;
+    invoke-virtual {p1, p2}, Lcom/vk/api/base/ApiRequest;->a(Lcom/vk/api/base/ApiCallback;)Lcom/vk/api/base/ApiCallbackDisposable;
 
     move-result-object p1
 
     .line 42
-    invoke-virtual {p1}, Lcom/vk/api/base/b;->b()Z
+    invoke-virtual {p1}, Lcom/vk/api/base/ApiCallbackDisposable;->b()Z
 
     move-result p1
 
@@ -208,7 +208,7 @@
     const v0, 0x7f120d8e
 
     .line 43
-    invoke-static {v0}, Lcom/vk/core/util/k1;->a(I)V
+    invoke-static {v0}, Lcom/vk/core/util/ToastUtils;->a(I)V
 
     return-void
 .end method
@@ -401,7 +401,7 @@
     const-string v2, "share_post"
 
     .line 13
-    invoke-static {v1, v2}, Lcom/vtosters/lite/data/n;->a(Lcom/vk/statistic/Statistic;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lcom/vtosters/lite/data/Analytics;->a(Lcom/vk/statistic/Statistic;Ljava/lang/String;)V
 
     goto :goto_3
 
@@ -427,7 +427,7 @@
     const v0, 0x7f120d90
 
     .line 1
-    invoke-static {v0}, Lcom/vk/core/util/k1;->a(I)V
+    invoke-static {v0}, Lcom/vk/core/util/ToastUtils;->a(I)V
 
     return-void
 .end method

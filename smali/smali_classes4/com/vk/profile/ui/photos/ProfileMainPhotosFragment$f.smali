@@ -44,7 +44,7 @@
 
     move-result-object p1
 
-    instance-of p1, p1, Lcom/vk/navigation/n;
+    instance-of p1, p1, Lcom/vk/navigation/NavigationDelegateProvider;
 
     if-eqz p1, :cond_1
 
@@ -57,9 +57,9 @@
 
     if-eqz p1, :cond_0
 
-    check-cast p1, Lcom/vk/navigation/n;
+    check-cast p1, Lcom/vk/navigation/NavigationDelegateProvider;
 
-    invoke-interface {p1}, Lcom/vk/navigation/n;->E0()Lcom/vk/navigation/NavigationDelegate;
+    invoke-interface {p1}, Lcom/vk/navigation/NavigationDelegateProvider;->E0()Lcom/vk/navigation/NavigationDelegate;
 
     move-result-object p1
 
@@ -69,7 +69,7 @@
 
     move-result-object v0
 
-    invoke-virtual {p1, v0}, Lcom/vk/navigation/NavigationDelegate;->a(Lcom/vk/navigation/g;)V
+    invoke-virtual {p1, v0}, Lcom/vk/navigation/NavigationDelegate;->a(Lcom/vk/navigation/Dismissed;)V
 
     goto :goto_0
 

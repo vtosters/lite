@@ -3,12 +3,12 @@
 .source "OpenFunctions.kt"
 
 # interfaces
-.implements Lc/a/z/j;
+.implements Lio/reactivex/functions/Function;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/common/links/OpenFunctionsKt;->a(Landroid/content/Context;Ljava/lang/String;ZLjava/lang/String;Ljava/lang/String;Lcom/vk/common/links/f;)Z
+    value = Lcom/vk/common/links/OpenFunctionsKt;->a(Landroid/content/Context;Ljava/lang/String;ZLjava/lang/String;Ljava/lang/String;Lcom/vk/common/links/OpenCallback;)Z
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -24,9 +24,9 @@
         "Ljava/lang/Object;",
         ">",
         "Ljava/lang/Object;",
-        "Lc/a/z/j<",
+        "Lio/reactivex/functions/Function<",
         "TT;",
-        "Lc/a/p<",
+        "Lio/reactivex/ObservableSource<",
         "+TR;>;>;"
     }
 .end annotation
@@ -49,14 +49,14 @@
 
 
 # virtual methods
-.method public final a(Lorg/json/JSONObject;)Lc/a/m;
+.method public final a(Lorg/json/JSONObject;)Lio/reactivex/Observable;
     .locals 3
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
             "Lorg/json/JSONObject;",
             ")",
-            "Lc/a/m<",
+            "Lio/reactivex/Observable<",
             "Lcom/vk/dto/photo/Photo;",
             ">;"
         }
@@ -137,7 +137,7 @@
 
     const-string v1, "Friends.getUserBlocking(photo.userID)"
 
-    invoke-static {p1, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-static {p1}, Lkotlin/collections/l;->h(Ljava/util/List;)Ljava/lang/Object;
 
@@ -152,7 +152,7 @@
 
     .line 6
     :cond_5
-    invoke-static {v0}, Lc/a/m;->e(Ljava/lang/Object;)Lc/a/m;
+    invoke-static {v0}, Lio/reactivex/Observable;->e(Ljava/lang/Object;)Lio/reactivex/Observable;
 
     move-result-object p1
 
@@ -164,7 +164,7 @@
 
     check-cast p1, Lorg/json/JSONObject;
 
-    invoke-virtual {p0, p1}, Lcom/vk/common/links/OpenFunctionsKt$w;->a(Lorg/json/JSONObject;)Lc/a/m;
+    invoke-virtual {p0, p1}, Lcom/vk/common/links/OpenFunctionsKt$w;->a(Lorg/json/JSONObject;)Lio/reactivex/Observable;
 
     move-result-object p1
 

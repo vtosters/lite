@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/statistic/StatisticBase;->a(Lcom/vk/statistic/b;IJ)V
+    value = Lcom/vk/statistic/StatisticBase;->a(Lcom/vk/statistic/StatisticSender;IJ)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -20,7 +20,7 @@
 # instance fields
 .field private a:I
 
-.field final synthetic b:Lcom/vk/statistic/b;
+.field final synthetic b:Lcom/vk/statistic/StatisticSender;
 
 .field final synthetic c:I
 
@@ -30,13 +30,13 @@
 
 
 # direct methods
-.method constructor <init>(Lcom/vk/statistic/StatisticBase;Lcom/vk/statistic/b;IJ)V
+.method constructor <init>(Lcom/vk/statistic/StatisticBase;Lcom/vk/statistic/StatisticSender;IJ)V
     .locals 0
 
     .line 1
     iput-object p1, p0, Lcom/vk/statistic/StatisticBase$b;->e:Lcom/vk/statistic/StatisticBase;
 
-    iput-object p2, p0, Lcom/vk/statistic/StatisticBase$b;->b:Lcom/vk/statistic/b;
+    iput-object p2, p0, Lcom/vk/statistic/StatisticBase$b;->b:Lcom/vk/statistic/StatisticSender;
 
     iput p3, p0, Lcom/vk/statistic/StatisticBase$b;->c:I
 
@@ -58,7 +58,7 @@
     .locals 3
 
     .line 1
-    invoke-static {}, Lcom/vk/statistic/a;->b()V
+    invoke-static {}, Lcom/vk/statistic/SentTable;->b()V
 
     .line 2
     iget-object v0, p0, Lcom/vk/statistic/StatisticBase$b;->e:Lcom/vk/statistic/StatisticBase;
@@ -73,11 +73,11 @@
 
     .line 3
     :cond_0
-    iget-object v0, p0, Lcom/vk/statistic/StatisticBase$b;->b:Lcom/vk/statistic/b;
+    iget-object v0, p0, Lcom/vk/statistic/StatisticBase$b;->b:Lcom/vk/statistic/StatisticSender;
 
     iget-object v1, p0, Lcom/vk/statistic/StatisticBase$b;->e:Lcom/vk/statistic/StatisticBase;
 
-    invoke-interface {v0, v1}, Lcom/vk/statistic/b;->a(Lcom/vk/statistic/StatisticBase;)Z
+    invoke-interface {v0, v1}, Lcom/vk/statistic/StatisticSender;->a(Lcom/vk/statistic/StatisticBase;)Z
 
     move-result v0
 
@@ -104,7 +104,7 @@
 
     iget-wide v1, p0, Lcom/vk/statistic/StatisticBase$b;->d:J
 
-    invoke-static {v0, p0, v1, v2}, Lcom/vk/core/extensions/h;->a(Ljava/util/concurrent/ExecutorService;Ljava/lang/Runnable;J)V
+    invoke-static {v0, p0, v1, v2}, Lcom/vk/core/extensions/ExecutorExt;->a(Ljava/util/concurrent/ExecutorService;Ljava/lang/Runnable;J)V
 
     goto :goto_0
 

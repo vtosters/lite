@@ -3,12 +3,12 @@
 .source "WriteBar.java"
 
 # interfaces
-.implements Lkotlin/jvm/b/a;
+.implements Lkotlin/jvm/b/Functions;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vtosters/lite/ui/WriteBar;->b(Landroid/net/Uri;Ljava/lang/CharSequence;Lkotlin/jvm/b/a;)V
+    value = Lcom/vtosters/lite/ui/WriteBar;->b(Landroid/net/Uri;Ljava/lang/CharSequence;Lkotlin/jvm/b/Functions;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -19,8 +19,8 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Ljava/lang/Object;",
-        "Lkotlin/jvm/b/a<",
-        "Lkotlin/m;",
+        "Lkotlin/jvm/b/Functions<",
+        "Lkotlin/Unit;",
         ">;"
     }
 .end annotation
@@ -31,13 +31,13 @@
 
 .field final synthetic b:Ljava/lang/CharSequence;
 
-.field final synthetic c:Lkotlin/jvm/b/a;
+.field final synthetic c:Lkotlin/jvm/b/Functions;
 
 .field final synthetic d:Lcom/vtosters/lite/ui/WriteBar;
 
 
 # direct methods
-.method constructor <init>(Lcom/vtosters/lite/ui/WriteBar;Landroid/net/Uri;Ljava/lang/CharSequence;Lkotlin/jvm/b/a;)V
+.method constructor <init>(Lcom/vtosters/lite/ui/WriteBar;Landroid/net/Uri;Ljava/lang/CharSequence;Lkotlin/jvm/b/Functions;)V
     .locals 0
 
     .line 1
@@ -47,7 +47,7 @@
 
     iput-object p3, p0, Lcom/vtosters/lite/ui/WriteBar$m;->b:Ljava/lang/CharSequence;
 
-    iput-object p4, p0, Lcom/vtosters/lite/ui/WriteBar$m;->c:Lkotlin/jvm/b/a;
+    iput-object p4, p0, Lcom/vtosters/lite/ui/WriteBar$m;->c:Lkotlin/jvm/b/Functions;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -60,14 +60,14 @@
     .locals 1
 
     .line 1
-    invoke-virtual {p0}, Lcom/vtosters/lite/ui/WriteBar$m;->invoke()Lkotlin/m;
+    invoke-virtual {p0}, Lcom/vtosters/lite/ui/WriteBar$m;->invoke()Lkotlin/Unit;
 
     move-result-object v0
 
     return-object v0
 .end method
 
-.method public invoke()Lkotlin/m;
+.method public invoke()Lkotlin/Unit;
     .locals 4
 
     .line 2
@@ -77,12 +77,12 @@
 
     iget-object v2, p0, Lcom/vtosters/lite/ui/WriteBar$m;->b:Ljava/lang/CharSequence;
 
-    iget-object v3, p0, Lcom/vtosters/lite/ui/WriteBar$m;->c:Lkotlin/jvm/b/a;
+    iget-object v3, p0, Lcom/vtosters/lite/ui/WriteBar$m;->c:Lkotlin/jvm/b/Functions;
 
-    invoke-static {v0, v1, v2, v3}, Lcom/vtosters/lite/ui/WriteBar;->b(Lcom/vtosters/lite/ui/WriteBar;Landroid/net/Uri;Ljava/lang/CharSequence;Lkotlin/jvm/b/a;)V
+    invoke-static {v0, v1, v2, v3}, Lcom/vtosters/lite/ui/WriteBar;->b(Lcom/vtosters/lite/ui/WriteBar;Landroid/net/Uri;Ljava/lang/CharSequence;Lkotlin/jvm/b/Functions;)V
 
     .line 3
-    sget-object v0, Lkotlin/m;->a:Lkotlin/m;
+    sget-object v0, Lkotlin/Unit;->a:Lkotlin/Unit;
 
     return-object v0
 .end method

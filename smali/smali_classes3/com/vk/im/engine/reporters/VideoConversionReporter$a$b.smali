@@ -63,7 +63,7 @@
     move/from16 v11, p11
 
     .line 1
-    invoke-direct/range {v0 .. v12}, Lcom/vk/im/engine/reporters/VideoConversionReporter$a;-><init>(Lcom/vk/im/engine/reporters/VideoConversionReporter$CallContext;Ljava/lang/String;JJIIIIILkotlin/jvm/internal/i;)V
+    invoke-direct/range {v0 .. v12}, Lcom/vk/im/engine/reporters/VideoConversionReporter$a;-><init>(Lcom/vk/im/engine/reporters/VideoConversionReporter$CallContext;Ljava/lang/String;JJIIIIILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     move-object v0, p1
 
@@ -115,12 +115,12 @@
     return-object v0
 .end method
 
-.method public a(Lkotlin/jvm/b/b;Ljava/lang/String;)Lcom/vk/metrics/eventtracking/Event;
+.method public a(Lkotlin/jvm/b/Functions2;Ljava/lang/String;)Lcom/vk/metrics/eventtracking/Event;
     .locals 3
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lkotlin/jvm/b/b<",
+            "Lkotlin/jvm/b/Functions2<",
             "-",
             "Ljava/lang/String;",
             "Ljava/lang/String;",
@@ -141,7 +141,7 @@
     const-string v1, "PERF.UPLOAD_VIDEO_WITHOUT_CONVERSION"
 
     .line 3
-    invoke-interface {p1, v1}, Lkotlin/jvm/b/b;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {p1, v1}, Lkotlin/jvm/b/Functions2;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p1
 
@@ -302,7 +302,7 @@
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v0
 
@@ -316,7 +316,7 @@
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v0
 

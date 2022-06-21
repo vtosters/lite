@@ -3,7 +3,7 @@
 .source "PhotosGridView.kt"
 
 # interfaces
-.implements Lcom/vk/core/ui/themes/f;
+.implements Lcom/vk/core/ui/themes/Themable;
 
 
 # annotations
@@ -33,13 +33,13 @@
     .end annotation
 .end field
 
-.field private c:Lkotlin/jvm/b/b;
+.field private c:Lkotlin/jvm/b/Functions2;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Lkotlin/jvm/b/b<",
+            "Lkotlin/jvm/b/Functions2<",
             "-",
             "Ljava/lang/Integer;",
-            "Lkotlin/m;",
+            "Lkotlin/Unit;",
             ">;"
         }
     .end annotation
@@ -58,7 +58,7 @@
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, v1}, Lcom/vk/profile/view/PhotosGridView$a;-><init>(Lkotlin/jvm/internal/i;)V
+    invoke-direct {v0, v1}, Lcom/vk/profile/view/PhotosGridView$a;-><init>(Lkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     const/high16 v0, 0x43100000    # 144.0f
 
@@ -124,11 +124,11 @@
     return-void
 .end method
 
-.method public static final synthetic a(Lcom/vk/profile/view/PhotosGridView;)Lkotlin/jvm/b/b;
+.method public static final synthetic a(Lcom/vk/profile/view/PhotosGridView;)Lkotlin/jvm/b/Functions2;
     .locals 0
 
     .line 1
-    iget-object p0, p0, Lcom/vk/profile/view/PhotosGridView;->c:Lkotlin/jvm/b/b;
+    iget-object p0, p0, Lcom/vk/profile/view/PhotosGridView;->c:Lkotlin/jvm/b/Functions2;
 
     return-object p0
 .end method
@@ -261,7 +261,7 @@
 
     move-result v3
 
-    invoke-virtual {v2, v3}, Lcom/vk/imageloader/view/a;->setPlaceholderColor(I)V
+    invoke-virtual {v2, v3}, Lcom/vk/imageloader/view/GenericVKImageView;->setPlaceholderColor(I)V
 
     :cond_1
     add-int/lit8 v1, v1, 0x1
@@ -381,7 +381,7 @@
 
     move-result v3
 
-    invoke-virtual {v2, v3}, Lcom/vk/imageloader/view/a;->setPlaceholderColor(I)V
+    invoke-virtual {v2, v3}, Lcom/vk/imageloader/view/GenericVKImageView;->setPlaceholderColor(I)V
 
     .line 6
     iget-object v3, p0, Lcom/vk/profile/view/PhotosGridView;->b:Ljava/util/List;
@@ -546,7 +546,7 @@
 
     if-eqz v3, :cond_1
 
-    invoke-virtual {v3, v1}, Lcom/vk/imageloader/view/a;->setPlaceholderColor(I)V
+    invoke-virtual {v3, v1}, Lcom/vk/imageloader/view/GenericVKImageView;->setPlaceholderColor(I)V
 
     :cond_1
     add-int/lit8 v2, v2, 0x1
@@ -722,21 +722,21 @@
     return-void
 .end method
 
-.method public final setClickListener(Lkotlin/jvm/b/b;)V
+.method public final setClickListener(Lkotlin/jvm/b/Functions2;)V
     .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lkotlin/jvm/b/b<",
+            "Lkotlin/jvm/b/Functions2<",
             "-",
             "Ljava/lang/Integer;",
-            "Lkotlin/m;",
+            "Lkotlin/Unit;",
             ">;)V"
         }
     .end annotation
 
     .line 1
-    iput-object p1, p0, Lcom/vk/profile/view/PhotosGridView;->c:Lkotlin/jvm/b/b;
+    iput-object p1, p0, Lcom/vk/profile/view/PhotosGridView;->c:Lkotlin/jvm/b/Functions2;
 
     return-void
 .end method

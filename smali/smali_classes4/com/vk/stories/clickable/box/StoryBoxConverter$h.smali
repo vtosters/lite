@@ -3,12 +3,12 @@
 .source "StoryBoxConverter.kt"
 
 # interfaces
-.implements Lc/a/z/j;
+.implements Lio/reactivex/functions/Function;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/stories/clickable/box/StoryBoxConverter;->a(Lcom/vk/dto/stories/model/actions/ActionSticker;)Lc/a/m;
+    value = Lcom/vk/stories/clickable/box/StoryBoxConverter;->a(Lcom/vk/dto/stories/model/actions/ActionSticker;)Lio/reactivex/Observable;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -24,7 +24,7 @@
         "Ljava/lang/Object;",
         ">",
         "Ljava/lang/Object;",
-        "Lc/a/z/j<",
+        "Lio/reactivex/functions/Function<",
         "TT;TR;>;"
     }
 .end annotation
@@ -55,7 +55,7 @@
 
 
 # virtual methods
-.method public final a(Landroid/graphics/Bitmap;)Lcom/vk/attachpicker/stickers/u;
+.method public final a(Landroid/graphics/Bitmap;)Lcom/vk/attachpicker/stickers/BitmapSticker;
     .locals 7
 
     .line 1
@@ -68,7 +68,7 @@
     if-eqz v0, :cond_0
 
     .line 2
-    new-instance v0, Lcom/vk/attachpicker/stickers/e0;
+    new-instance v0, Lcom/vk/attachpicker/stickers/PackSticker;
 
     iget-object v1, p0, Lcom/vk/stories/clickable/box/StoryBoxConverter$h;->b:Lcom/vk/dto/stories/model/actions/ActionSticker;
 
@@ -96,13 +96,13 @@
 
     move-object v4, p1
 
-    invoke-direct/range {v1 .. v6}, Lcom/vk/attachpicker/stickers/e0;-><init>(IILandroid/graphics/Bitmap;ILjava/lang/String;)V
+    invoke-direct/range {v1 .. v6}, Lcom/vk/attachpicker/stickers/PackSticker;-><init>(IILandroid/graphics/Bitmap;ILjava/lang/String;)V
 
     goto :goto_0
 
     .line 3
     :cond_0
-    new-instance v0, Lcom/vk/attachpicker/stickers/u;
+    new-instance v0, Lcom/vk/attachpicker/stickers/BitmapSticker;
 
     .line 4
     iget-object v1, p0, Lcom/vk/stories/clickable/box/StoryBoxConverter$h;->a:Lcom/vk/stories/clickable/box/StoryBoxConverter;
@@ -120,7 +120,7 @@
     iget-object v3, p0, Lcom/vk/stories/clickable/box/StoryBoxConverter$h;->c:Ljava/lang/String;
 
     .line 7
-    invoke-direct {v0, p1, v1, v2, v3}, Lcom/vk/attachpicker/stickers/u;-><init>(Landroid/graphics/Bitmap;ILcom/vk/dto/stories/model/StickerType;Ljava/lang/String;)V
+    invoke-direct {v0, p1, v1, v2, v3}, Lcom/vk/attachpicker/stickers/BitmapSticker;-><init>(Landroid/graphics/Bitmap;ILcom/vk/dto/stories/model/StickerType;Ljava/lang/String;)V
 
     :goto_0
     return-object v0
@@ -132,7 +132,7 @@
     .line 1
     check-cast p1, Landroid/graphics/Bitmap;
 
-    invoke-virtual {p0, p1}, Lcom/vk/stories/clickable/box/StoryBoxConverter$h;->a(Landroid/graphics/Bitmap;)Lcom/vk/attachpicker/stickers/u;
+    invoke-virtual {p0, p1}, Lcom/vk/stories/clickable/box/StoryBoxConverter$h;->a(Landroid/graphics/Bitmap;)Lcom/vk/attachpicker/stickers/BitmapSticker;
 
     move-result-object p1
 

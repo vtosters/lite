@@ -47,27 +47,27 @@
     sget-object v0, Lcom/vk/api/base/ApiConfig;->f:Lcom/vk/api/base/ApiConfig;
 
     .line 2
-    sget-object v1, Lcom/vk/core/util/i;->a:Landroid/content/Context;
+    sget-object v1, Lcom/vk/core/util/AppContextHolder;->a:Landroid/content/Context;
 
     const-string v2, "AppContextHolder.context"
 
-    invoke-static {v1, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 3
-    new-instance v2, Lcom/vtosters/lite/api/b;
+    new-instance v2, Lcom/vtosters/lite/api/AppVKApiCallback;
 
-    invoke-direct {v2}, Lcom/vtosters/lite/api/b;-><init>()V
+    invoke-direct {v2}, Lcom/vtosters/lite/api/AppVKApiCallback;-><init>()V
 
     .line 4
-    new-instance v3, Lcom/vtosters/lite/api/h;
+    new-instance v3, Lcom/vtosters/lite/api/DefaultValidationHandler;
 
-    sget-object v4, Lcom/vk/core/util/i;->a:Landroid/content/Context;
+    sget-object v4, Lcom/vk/core/util/AppContextHolder;->a:Landroid/content/Context;
 
-    invoke-static {}, Lcom/vk/bridges/g;->a()Lcom/vk/bridges/f;
+    invoke-static {}, Lcom/vk/bridges/AuthBridge;->a()Lcom/vk/bridges/AuthBridge3;
 
     move-result-object v5
 
-    invoke-direct {v3, v4, v5}, Lcom/vtosters/lite/api/h;-><init>(Landroid/content/Context;Lcom/vk/bridges/f;)V
+    invoke-direct {v3, v4, v5}, Lcom/vtosters/lite/api/DefaultValidationHandler;-><init>(Landroid/content/Context;Lcom/vk/bridges/AuthBridge3;)V
 
     .line 5
     new-instance v4, Lcom/vtosters/lite/api/ApiWrapper$a;
@@ -75,19 +75,19 @@
     invoke-direct {v4}, Lcom/vtosters/lite/api/ApiWrapper$a;-><init>()V
 
     .line 6
-    new-instance v5, Lcom/vtosters/lite/api/g;
+    new-instance v5, Lcom/vtosters/lite/api/DefaultTokenConfirmationInfoProvider;
 
-    invoke-direct {v5}, Lcom/vtosters/lite/api/g;-><init>()V
+    invoke-direct {v5}, Lcom/vtosters/lite/api/DefaultTokenConfirmationInfoProvider;-><init>()V
 
     .line 7
-    new-instance v6, Lcom/vtosters/lite/api/f;
+    new-instance v6, Lcom/vtosters/lite/api/DefaultCredentialsChangeListener;
 
-    invoke-direct {v6}, Lcom/vtosters/lite/api/f;-><init>()V
+    invoke-direct {v6}, Lcom/vtosters/lite/api/DefaultCredentialsChangeListener;-><init>()V
 
     .line 8
-    new-instance v7, Lcom/vtosters/lite/api/e;
+    new-instance v7, Lcom/vtosters/lite/api/DefaultApiProfiler;
 
-    invoke-direct {v7}, Lcom/vtosters/lite/api/e;-><init>()V
+    invoke-direct {v7}, Lcom/vtosters/lite/api/DefaultApiProfiler;-><init>()V
 
     .line 9
     new-instance v8, Lcom/vtosters/lite/api/AppApiLogger;
@@ -99,12 +99,12 @@
     .line 10
     sget-object v9, Lcom/vtosters/lite/api/ApiWrapper$initApi$1;->a:Lcom/vtosters/lite/api/ApiWrapper$initApi$1;
 
-    invoke-static {v9}, Lkotlin/g;->a(Lkotlin/jvm/b/a;)Lkotlin/e;
+    invoke-static {v9}, Lkotlin/g;->a(Lkotlin/jvm/b/Functions;)Lkotlin/Lazy2;
 
     move-result-object v9
 
     .line 11
-    invoke-virtual/range {v0 .. v9}, Lcom/vk/api/base/ApiConfig;->a(Landroid/content/Context;Lcom/vk/api/base/ApiConfig$a;Lcom/vk/api/sdk/i;Lcom/vk/api/sdk/f;Lcom/vk/api/internal/o;Lcom/vk/api/internal/a;Lcom/vk/api/internal/b;Lcom/vk/api/sdk/utils/log/Logger;Lkotlin/e;)V
+    invoke-virtual/range {v0 .. v9}, Lcom/vk/api/base/ApiConfig;->a(Landroid/content/Context;Lcom/vk/api/base/ApiConfig$a;Lcom/vk/api/sdk/VKApiValidationHandler;Lcom/vk/api/sdk/VKApiIllegalCredentialsListener;Lcom/vk/api/internal/TokenConfirmationInfoProvider;Lcom/vk/api/internal/ApiCredentialsChangeListener;Lcom/vk/api/internal/ApiProfiler;Lcom/vk/api/sdk/utils/log/Logger;Lkotlin/Lazy2;)V
 
     return-void
 .end method
@@ -122,7 +122,7 @@
     return-void
 
     :cond_0
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     const/4 p1, 0x0
 

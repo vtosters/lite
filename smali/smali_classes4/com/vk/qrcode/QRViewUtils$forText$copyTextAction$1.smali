@@ -3,12 +3,12 @@
 .source "QRViewUtils.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/a;
+.implements Lkotlin/jvm/b/Functions;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/qrcode/QRViewUtils;->a(Landroid/app/Activity;Lcom/vk/qrcode/QRParser;Lcom/vk/qrcode/n;)V
+    value = Lcom/vk/qrcode/QRViewUtils;->a(Landroid/app/Activity;Lcom/vk/qrcode/QRParser;Lcom/vk/qrcode/QRTypes4;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -19,24 +19,24 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/a<",
-        "Lkotlin/m;",
+        "Lkotlin/jvm/b/Functions<",
+        "Lkotlin/Unit;",
         ">;"
     }
 .end annotation
 
 
 # instance fields
-.field final synthetic $action:Lcom/vk/qrcode/n;
+.field final synthetic $action:Lcom/vk/qrcode/QRTypes4;
 
 .field final synthetic $parser:Lcom/vk/qrcode/QRParser;
 
 
 # direct methods
-.method constructor <init>(Lcom/vk/qrcode/n;Lcom/vk/qrcode/QRParser;)V
+.method constructor <init>(Lcom/vk/qrcode/QRTypes4;Lcom/vk/qrcode/QRParser;)V
     .locals 0
 
-    iput-object p1, p0, Lcom/vk/qrcode/QRViewUtils$forText$copyTextAction$1;->$action:Lcom/vk/qrcode/n;
+    iput-object p1, p0, Lcom/vk/qrcode/QRViewUtils$forText$copyTextAction$1;->$action:Lcom/vk/qrcode/QRTypes4;
 
     iput-object p2, p0, Lcom/vk/qrcode/QRViewUtils$forText$copyTextAction$1;->$parser:Lcom/vk/qrcode/QRParser;
 
@@ -55,7 +55,7 @@
     .line 1
     invoke-virtual {p0}, Lcom/vk/qrcode/QRViewUtils$forText$copyTextAction$1;->invoke()V
 
-    sget-object v0, Lkotlin/m;->a:Lkotlin/m;
+    sget-object v0, Lkotlin/Unit;->a:Lkotlin/Unit;
 
     return-object v0
 .end method
@@ -64,9 +64,9 @@
     .locals 2
 
     .line 2
-    iget-object v0, p0, Lcom/vk/qrcode/QRViewUtils$forText$copyTextAction$1;->$action:Lcom/vk/qrcode/n;
+    iget-object v0, p0, Lcom/vk/qrcode/QRViewUtils$forText$copyTextAction$1;->$action:Lcom/vk/qrcode/QRTypes4;
 
-    invoke-virtual {v0}, Lcom/vk/qrcode/n;->a()Lc/a/m;
+    invoke-virtual {v0}, Lcom/vk/qrcode/QRTypes4;->a()Lio/reactivex/Observable;
 
     .line 3
     sget-object v0, Lcom/vk/qrcode/QRViewUtils;->m:Lcom/vk/qrcode/QRViewUtils;

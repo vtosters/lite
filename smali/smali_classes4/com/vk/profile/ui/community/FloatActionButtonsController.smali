@@ -52,17 +52,17 @@
     .end annotation
 .end field
 
-.field public e:Lkotlin/jvm/b/a;
+.field public e:Lkotlin/jvm/b/Functions;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Lkotlin/jvm/b/a<",
+            "Lkotlin/jvm/b/Functions<",
             "Ljava/lang/Integer;",
             ">;"
         }
     .end annotation
 .end field
 
-.field public f:Lcom/vk/profile/adapter/di/a;
+.field public f:Lcom/vk/profile/adapter/di/CommunityDataScope;
 
 .field public g:Lcom/vk/profile/adapter/di/CommunityFragmentUiScope;
 
@@ -72,7 +72,7 @@
 
 .field private j:Z
 
-.field private final k:Lb/h/g/t/c;
+.field private final k:Lb/h/g/t/ValidatorSet;
 
 .field private final l:Landroid/os/Handler;
 
@@ -89,7 +89,7 @@
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, v1}, Lcom/vk/profile/ui/community/FloatActionButtonsController$a;-><init>(Lkotlin/jvm/internal/i;)V
+    invoke-direct {v0, v1}, Lcom/vk/profile/ui/community/FloatActionButtonsController$a;-><init>(Lkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     const/high16 v0, 0x42600000    # 56.0f
 
@@ -159,7 +159,7 @@
     iput-boolean v0, p0, Lcom/vk/profile/ui/community/FloatActionButtonsController;->j:Z
 
     .line 4
-    new-instance v1, Lb/h/g/t/c;
+    new-instance v1, Lb/h/g/t/ValidatorSet;
 
     const/4 v2, 0x5
 
@@ -199,27 +199,27 @@
     aput v3, v2, v4
 
     .line 10
-    invoke-direct {v1, v2}, Lb/h/g/t/c;-><init>([I)V
+    invoke-direct {v1, v2}, Lb/h/g/t/ValidatorSet;-><init>([I)V
 
     .line 11
     new-instance v2, Lcom/vk/profile/ui/community/FloatActionButtonsController$$special$$inlined$apply$lambda$1;
 
     invoke-direct {v2, p0}, Lcom/vk/profile/ui/community/FloatActionButtonsController$$special$$inlined$apply$lambda$1;-><init>(Lcom/vk/profile/ui/community/FloatActionButtonsController;)V
 
-    invoke-virtual {v1, v2}, Lb/h/g/t/c;->a(Lkotlin/jvm/b/b;)V
+    invoke-virtual {v1, v2}, Lb/h/g/t/ValidatorSet;->a(Lkotlin/jvm/b/Functions2;)V
 
     .line 12
     sget v2, Lcom/vk/profile/ui/community/FloatActionButtonsController;->u:I
 
-    invoke-virtual {v1, v2, v0}, Lb/h/g/t/c;->a(IZ)V
+    invoke-virtual {v1, v2, v0}, Lb/h/g/t/ValidatorSet;->a(IZ)V
 
     .line 13
     sget v2, Lcom/vk/profile/ui/community/FloatActionButtonsController;->v:I
 
-    invoke-virtual {v1, v2, v0}, Lb/h/g/t/c;->a(IZ)V
+    invoke-virtual {v1, v2, v0}, Lb/h/g/t/ValidatorSet;->a(IZ)V
 
     .line 14
-    iput-object v1, p0, Lcom/vk/profile/ui/community/FloatActionButtonsController;->k:Lb/h/g/t/c;
+    iput-object v1, p0, Lcom/vk/profile/ui/community/FloatActionButtonsController;->k:Lb/h/g/t/ValidatorSet;
 
     .line 15
     new-instance v0, Landroid/os/Handler;
@@ -349,7 +349,7 @@
 
     .line 10
     :cond_3
-    invoke-static {v3}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v3}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v2
 
@@ -418,7 +418,7 @@
 
     .line 16
     :cond_8
-    invoke-static {v3}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v3}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v2
 .end method
@@ -433,7 +433,7 @@
 
     const-string v1, "activity.window"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {v0}, Landroid/view/Window;->getDecorView()Landroid/view/View;
 
@@ -441,7 +441,7 @@
 
     const-string v1, "activity.window.decorView"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {v0}, Landroid/view/View;->getHeight()I
 
@@ -492,11 +492,11 @@
 
     if-nez v0, :cond_1
 
-    iget-object v0, p0, Lcom/vk/profile/ui/community/FloatActionButtonsController;->k:Lb/h/g/t/c;
+    iget-object v0, p0, Lcom/vk/profile/ui/community/FloatActionButtonsController;->k:Lb/h/g/t/ValidatorSet;
 
     sget v3, Lcom/vk/profile/ui/community/FloatActionButtonsController;->r:I
 
-    invoke-virtual {v0, v3}, Lb/h/g/t/c;->a(I)Z
+    invoke-virtual {v0, v3}, Lb/h/g/t/ValidatorSet;->a(I)Z
 
     move-result v0
 
@@ -506,30 +506,30 @@
     iput-boolean v2, p0, Lcom/vk/profile/ui/community/FloatActionButtonsController;->j:Z
 
     .line 4
-    new-instance v0, Lcom/vk/profile/e/b;
+    new-instance v0, Lcom/vk/profile/e/CommunityScreenTracker1;
 
-    iget-object v3, p0, Lcom/vk/profile/ui/community/FloatActionButtonsController;->f:Lcom/vk/profile/adapter/di/a;
+    iget-object v3, p0, Lcom/vk/profile/ui/community/FloatActionButtonsController;->f:Lcom/vk/profile/adapter/di/CommunityDataScope;
 
     if-eqz v3, :cond_0
 
-    invoke-virtual {v3}, Lcom/vk/profile/adapter/di/a;->a()I
+    invoke-virtual {v3}, Lcom/vk/profile/adapter/di/CommunityDataScope;->a()I
 
     move-result v3
 
-    invoke-direct {v0, v3}, Lcom/vk/profile/e/b;-><init>(I)V
+    invoke-direct {v0, v3}, Lcom/vk/profile/e/CommunityScreenTracker1;-><init>(I)V
 
     .line 5
     sget-object v3, Lcom/vk/profile/ui/community/FloatActionButtonsController;->q:Ljava/lang/String;
 
-    invoke-virtual {v0, v3}, Lcom/vk/profile/e/b;->a(Ljava/lang/String;)Lcom/vk/profile/e/b;
+    invoke-virtual {v0, v3}, Lcom/vk/profile/e/CommunityScreenTracker1;->a(Ljava/lang/String;)Lcom/vk/profile/e/CommunityScreenTracker1;
 
     const-string v3, "view"
 
     .line 6
-    invoke-virtual {v0, v3}, Lcom/vk/profile/e/b;->e(Ljava/lang/String;)Lcom/vk/profile/e/b;
+    invoke-virtual {v0, v3}, Lcom/vk/profile/e/CommunityScreenTracker1;->e(Ljava/lang/String;)Lcom/vk/profile/e/CommunityScreenTracker1;
 
     .line 7
-    invoke-virtual {v0}, Lcom/vk/profile/e/b;->a()V
+    invoke-virtual {v0}, Lcom/vk/profile/e/CommunityScreenTracker1;->a()V
 
     goto :goto_0
 
@@ -537,7 +537,7 @@
     const-string p1, "dataScope"
 
     .line 8
-    invoke-static {p1}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {p1}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v1
 
@@ -631,7 +631,7 @@
 
     .line 21
     :cond_8
-    invoke-static {v4}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v4}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v1
 
@@ -696,7 +696,7 @@
 
     .line 27
     :cond_d
-    invoke-static {v4}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v4}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v1
 .end method
@@ -764,13 +764,13 @@
     return-void
 
     :cond_1
-    invoke-static {v3}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v3}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v1
 
     .line 4
     :cond_2
-    invoke-static {v3}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v3}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v1
 
@@ -781,7 +781,7 @@
     const-string v0, "container"
 
     .line 5
-    invoke-static {v0}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v0}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v1
 .end method
@@ -821,11 +821,11 @@
     move-result p1
 
     .line 19
-    iget-object v0, p0, Lcom/vk/profile/ui/community/FloatActionButtonsController;->k:Lb/h/g/t/c;
+    iget-object v0, p0, Lcom/vk/profile/ui/community/FloatActionButtonsController;->k:Lb/h/g/t/ValidatorSet;
 
     sget v1, Lcom/vk/profile/ui/community/FloatActionButtonsController;->s:I
 
-    invoke-virtual {v0, v1, p1}, Lb/h/g/t/c;->a(IZ)V
+    invoke-virtual {v0, v1, p1}, Lb/h/g/t/ValidatorSet;->a(IZ)V
 
     if-nez p1, :cond_0
 
@@ -845,15 +845,15 @@
     return-void
 .end method
 
-.method public final a(Landroid/view/ViewGroup;Lcom/vk/profile/adapter/di/CommunityFragmentUiScope;Lcom/vk/profile/adapter/di/a;Lkotlin/jvm/b/a;)V
+.method public final a(Landroid/view/ViewGroup;Lcom/vk/profile/adapter/di/CommunityFragmentUiScope;Lcom/vk/profile/adapter/di/CommunityDataScope;Lkotlin/jvm/b/Functions;)V
     .locals 3
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
             "Landroid/view/ViewGroup;",
             "Lcom/vk/profile/adapter/di/CommunityFragmentUiScope;",
-            "Lcom/vk/profile/adapter/di/a;",
-            "Lkotlin/jvm/b/a<",
+            "Lcom/vk/profile/adapter/di/CommunityDataScope;",
+            "Lkotlin/jvm/b/Functions<",
             "Ljava/lang/Integer;",
             ">;)V"
         }
@@ -878,18 +878,18 @@
 
     const-string v2, "LayoutInflater.from(uiSc\u2026n_buttons, parent, false)"
 
-    invoke-static {v0, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     iput-object v0, p0, Lcom/vk/profile/ui/community/FloatActionButtonsController;->h:Landroid/view/View;
 
     .line 4
-    iput-object p4, p0, Lcom/vk/profile/ui/community/FloatActionButtonsController;->e:Lkotlin/jvm/b/a;
+    iput-object p4, p0, Lcom/vk/profile/ui/community/FloatActionButtonsController;->e:Lkotlin/jvm/b/Functions;
 
     .line 5
     iput-object p2, p0, Lcom/vk/profile/ui/community/FloatActionButtonsController;->g:Lcom/vk/profile/adapter/di/CommunityFragmentUiScope;
 
     .line 6
-    iput-object p3, p0, Lcom/vk/profile/ui/community/FloatActionButtonsController;->f:Lcom/vk/profile/adapter/di/a;
+    iput-object p3, p0, Lcom/vk/profile/ui/community/FloatActionButtonsController;->f:Lcom/vk/profile/adapter/di/CommunityDataScope;
 
     .line 7
     invoke-virtual {p2}, Lcom/vk/profile/adapter/di/CommunityFragmentUiScope;->f()Lcom/vk/profile/ui/community/CommunityFragment;
@@ -971,34 +971,34 @@
     return-void
 
     :cond_1
-    invoke-static {p4}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {p4}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw p3
 
     .line 15
     :cond_2
-    invoke-static {p4}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {p4}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw p3
 
     .line 16
     :cond_3
-    invoke-static {p4}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {p4}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw p3
 
     .line 17
     :cond_4
-    invoke-static {p4}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {p4}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw p3
 .end method
 
-.method public final a(Lcom/vtosters/lite/api/i;Landroid/view/View$OnClickListener;)V
+.method public final a(Lcom/vtosters/lite/api/ExtendedCommunityProfile;Landroid/view/View$OnClickListener;)V
     .locals 7
 
     .line 25
-    iget-object v0, p0, Lcom/vk/profile/ui/community/FloatActionButtonsController;->k:Lb/h/g/t/c;
+    iget-object v0, p0, Lcom/vk/profile/ui/community/FloatActionButtonsController;->k:Lb/h/g/t/ValidatorSet;
 
     sget v1, Lcom/vk/profile/ui/community/FloatActionButtonsController;->r:I
 
@@ -1020,7 +1020,7 @@
 
     .line 27
     :goto_0
-    invoke-virtual {v0, v1, v2}, Lb/h/g/t/c;->a(IZ)V
+    invoke-virtual {v0, v1, v2}, Lb/h/g/t/ValidatorSet;->a(IZ)V
 
     .line 28
     iget-object v0, p0, Lcom/vk/profile/ui/community/FloatActionButtonsController;->d:Ljava/util/ArrayList;
@@ -1034,14 +1034,14 @@
 
     const/4 v2, 0x0
 
-    invoke-static {p1, v3, v4, v1, v2}, Lcom/vk/profile/utils/b;->a(Lcom/vtosters/lite/api/i;ZZILjava/lang/Object;)Ljava/util/List;
+    invoke-static {p1, v3, v4, v1, v2}, Lcom/vk/profile/utils/CommunityExt;->a(Lcom/vtosters/lite/api/ExtendedCommunityProfile;ZZILjava/lang/Object;)Ljava/util/List;
 
     move-result-object v1
 
     invoke-virtual {v0, v1}, Ljava/util/ArrayList;->addAll(Ljava/util/Collection;)Z
 
     .line 30
-    iget-object v0, p0, Lcom/vk/profile/ui/community/FloatActionButtonsController;->k:Lb/h/g/t/c;
+    iget-object v0, p0, Lcom/vk/profile/ui/community/FloatActionButtonsController;->k:Lb/h/g/t/ValidatorSet;
 
     sget v1, Lcom/vk/profile/ui/community/FloatActionButtonsController;->t:I
 
@@ -1053,7 +1053,7 @@
 
     xor-int/2addr v5, v3
 
-    invoke-virtual {v0, v1, v5}, Lb/h/g/t/c;->a(IZ)V
+    invoke-virtual {v0, v1, v5}, Lb/h/g/t/ValidatorSet;->a(IZ)V
 
     .line 31
     iget-object v0, p0, Lcom/vk/profile/ui/community/FloatActionButtonsController;->d:Ljava/util/ArrayList;
@@ -1192,24 +1192,24 @@
     goto :goto_2
 
     :cond_9
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     throw v2
 
     :cond_a
-    invoke-static {p2}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {p2}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v2
 
     .line 44
     :cond_b
-    invoke-static {p2}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {p2}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v2
 
     .line 45
     :cond_c
-    invoke-static {p2}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {p2}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v2
 
@@ -1240,7 +1240,7 @@
     :cond_0
     const-string v0, "container"
 
-    invoke-static {v0}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v0}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     const/4 v0, 0x0
 
@@ -1256,19 +1256,19 @@
     return v0
 .end method
 
-.method public final d()Lkotlin/jvm/b/a;
+.method public final d()Lkotlin/jvm/b/Functions;
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "()",
-            "Lkotlin/jvm/b/a<",
+            "Lkotlin/jvm/b/Functions<",
             "Ljava/lang/Integer;",
             ">;"
         }
     .end annotation
 
     .line 1
-    iget-object v0, p0, Lcom/vk/profile/ui/community/FloatActionButtonsController;->e:Lkotlin/jvm/b/a;
+    iget-object v0, p0, Lcom/vk/profile/ui/community/FloatActionButtonsController;->e:Lkotlin/jvm/b/Functions;
 
     if-eqz v0, :cond_0
 
@@ -1277,7 +1277,7 @@
     :cond_0
     const-string v0, "endPositionObserver"
 
-    invoke-static {v0}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v0}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     const/4 v0, 0x0
 
@@ -1306,7 +1306,7 @@
     :cond_0
     const-string v0, "uiScope"
 
-    invoke-static {v0}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v0}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     const/4 v0, 0x0
 
@@ -1317,13 +1317,13 @@
     .locals 3
 
     .line 1
-    iget-object v0, p0, Lcom/vk/profile/ui/community/FloatActionButtonsController;->k:Lb/h/g/t/c;
+    iget-object v0, p0, Lcom/vk/profile/ui/community/FloatActionButtonsController;->k:Lb/h/g/t/ValidatorSet;
 
     sget v1, Lcom/vk/profile/ui/community/FloatActionButtonsController;->v:I
 
     const/4 v2, 0x1
 
-    invoke-virtual {v0, v1, v2}, Lb/h/g/t/c;->a(IZ)V
+    invoke-virtual {v0, v1, v2}, Lb/h/g/t/ValidatorSet;->a(IZ)V
 
     return-void
 .end method
@@ -1332,13 +1332,13 @@
     .locals 3
 
     .line 1
-    iget-object v0, p0, Lcom/vk/profile/ui/community/FloatActionButtonsController;->k:Lb/h/g/t/c;
+    iget-object v0, p0, Lcom/vk/profile/ui/community/FloatActionButtonsController;->k:Lb/h/g/t/ValidatorSet;
 
     sget v1, Lcom/vk/profile/ui/community/FloatActionButtonsController;->v:I
 
     const/4 v2, 0x0
 
-    invoke-virtual {v0, v1, v2}, Lb/h/g/t/c;->a(IZ)V
+    invoke-virtual {v0, v1, v2}, Lb/h/g/t/ValidatorSet;->a(IZ)V
 
     return-void
 .end method
@@ -1360,13 +1360,13 @@
     .locals 3
 
     .line 1
-    iget-object v0, p0, Lcom/vk/profile/ui/community/FloatActionButtonsController;->k:Lb/h/g/t/c;
+    iget-object v0, p0, Lcom/vk/profile/ui/community/FloatActionButtonsController;->k:Lb/h/g/t/ValidatorSet;
 
     sget v1, Lcom/vk/profile/ui/community/FloatActionButtonsController;->u:I
 
     const/4 v2, 0x0
 
-    invoke-virtual {v0, v1, v2}, Lb/h/g/t/c;->a(IZ)V
+    invoke-virtual {v0, v1, v2}, Lb/h/g/t/ValidatorSet;->a(IZ)V
 
     return-void
 .end method

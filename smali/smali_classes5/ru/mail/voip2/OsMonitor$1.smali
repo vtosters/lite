@@ -109,7 +109,7 @@
 
     const-string v2, "os_monitor"
 
-    invoke-static {v2, v0}, Le/c/a/a;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v2, v0}, Le/c/a/Log;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 6
     iget-object v0, p0, Lru/mail/voip2/OsMonitor$1;->this$0:Lru/mail/voip2/OsMonitor;

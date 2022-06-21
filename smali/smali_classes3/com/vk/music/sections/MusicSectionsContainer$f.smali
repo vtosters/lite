@@ -1,11 +1,11 @@
 .class public final Lcom/vk/music/sections/MusicSectionsContainer$f;
-.super Lcom/vk/music/m/l/a;
+.super Lcom/vk/music/m/l/SeparatorItemDecorator;
 .source "MusicSectionsContainer.kt"
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/music/sections/MusicSectionsContainer;-><init>(Landroid/content/Context;Lcom/vk/music/sections/f;ZZ)V
+    value = Lcom/vk/music/sections/MusicSectionsContainer;-><init>(Landroid/content/Context;Lcom/vk/music/sections/MusicSectionsModel;ZZ)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -32,7 +32,7 @@
     .line 1
     iput-object p1, p0, Lcom/vk/music/sections/MusicSectionsContainer$f;->d:Lcom/vk/music/sections/MusicSectionsContainer;
 
-    invoke-direct {p0, p2}, Lcom/vk/music/m/l/a;-><init>(Landroid/content/Context;)V
+    invoke-direct {p0, p2}, Lcom/vk/music/m/l/SeparatorItemDecorator;-><init>(Landroid/content/Context;)V
 
     return-void
 .end method
@@ -148,7 +148,7 @@
     .locals 3
 
     .line 1
-    invoke-static {}, Lcom/vk/core/ui/themes/d;->e()Z
+    invoke-static {}, Lcom/vk/core/ui/themes/MilkshakeHelper;->e()Z
 
     move-result v0
 

@@ -3,7 +3,7 @@
 .source "CommunityFragment.kt"
 
 # interfaces
-.implements Lcom/vk/navigation/g;
+.implements Lcom/vk/navigation/Dismissed;
 
 
 # annotations
@@ -46,13 +46,13 @@
     .line 1
     iget-object p1, p0, Lcom/vk/profile/ui/community/CommunityFragment$b;->a:Lcom/vk/profile/ui/community/CommunityFragment;
 
-    invoke-static {p1}, Lcom/vk/profile/ui/community/CommunityFragment;->j(Lcom/vk/profile/ui/community/CommunityFragment;)Lcom/vk/core/dialogs/bottomsheet/e;
+    invoke-static {p1}, Lcom/vk/profile/ui/community/CommunityFragment;->j(Lcom/vk/profile/ui/community/CommunityFragment;)Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet;
 
     move-result-object p1
 
     if-eqz p1, :cond_0
 
-    invoke-virtual {p1}, Lcom/vk/core/dialogs/bottomsheet/e;->G4()V
+    invoke-virtual {p1}, Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet;->G4()V
 
     :cond_0
     return-void
@@ -62,7 +62,7 @@
     .locals 0
 
     .line 1
-    invoke-static {p0}, Lcom/vk/navigation/g$a;->a(Lcom/vk/navigation/g;)V
+    invoke-static {p0}, Lcom/vk/navigation/Dismissed$a;->a(Lcom/vk/navigation/Dismissed;)V
 
     return-void
 .end method

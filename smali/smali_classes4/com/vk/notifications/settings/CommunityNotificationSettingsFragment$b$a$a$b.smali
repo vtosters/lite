@@ -3,7 +3,7 @@
 .source "CommunityNotificationSettingsFragment.kt"
 
 # interfaces
-.implements Lc/a/z/g;
+.implements Lio/reactivex/functions/Consumer;
 
 
 # annotations
@@ -22,7 +22,7 @@
         "Ljava/lang/Object;",
         ">",
         "Ljava/lang/Object;",
-        "Lc/a/z/g<",
+        "Lio/reactivex/functions/Consumer<",
         "Ljava/lang/Throwable;",
         ">;"
     }
@@ -75,7 +75,7 @@
     const/4 v2, 0x0
 
     .line 2
-    invoke-static {p1, v0, v1, v2}, Lcom/vk/core/util/k1;->a(IZILjava/lang/Object;)V
+    invoke-static {p1, v0, v1, v2}, Lcom/vk/core/util/ToastUtils;->a(IZILjava/lang/Object;)V
 
     .line 3
     :cond_0
@@ -87,7 +87,7 @@
 
     xor-int/lit8 v0, v0, 0x1
 
-    invoke-virtual {p1, v0}, Lcom/vk/common/view/settings/b;->setChecked(Z)V
+    invoke-virtual {p1, v0}, Lcom/vk/common/view/settings/SettingsView;->setChecked(Z)V
 
     return-void
 .end method

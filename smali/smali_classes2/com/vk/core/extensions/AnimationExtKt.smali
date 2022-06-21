@@ -4,15 +4,15 @@
 
 
 # direct methods
-.method public static final a(Landroid/view/View;IIFFJLkotlin/jvm/b/a;)Landroid/animation/Animator;
+.method public static final a(Landroid/view/View;IIFFJLkotlin/jvm/b/Functions;)Landroid/animation/Animator;
     .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
             "Landroid/view/View;",
             "IIFFJ",
-            "Lkotlin/jvm/b/a<",
-            "Lkotlin/m;",
+            "Lkotlin/jvm/b/Functions<",
+            "Lkotlin/Unit;",
             ">;)",
             "Landroid/animation/Animator;"
         }
@@ -38,7 +38,7 @@
     .line 43
     new-instance p2, Lcom/vk/core/extensions/AnimationExtKt$c;
 
-    invoke-direct {p2, p0, p7}, Lcom/vk/core/extensions/AnimationExtKt$c;-><init>(Landroid/view/View;Lkotlin/jvm/b/a;)V
+    invoke-direct {p2, p0, p7}, Lcom/vk/core/extensions/AnimationExtKt$c;-><init>(Landroid/view/View;Lkotlin/jvm/b/Functions;)V
 
     invoke-virtual {p1, p2}, Landroid/animation/Animator;->addListener(Landroid/animation/Animator$AnimatorListener;)V
 
@@ -48,12 +48,12 @@
     const-string p0, "ViewAnimationUtils\n     \u2026    start()\n            }"
 
     .line 45
-    invoke-static {p1, p0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, p0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     return-object p1
 .end method
 
-.method public static synthetic a(Landroid/view/View;IIFFJLkotlin/jvm/b/a;ILjava/lang/Object;)Landroid/animation/Animator;
+.method public static synthetic a(Landroid/view/View;IIFFJLkotlin/jvm/b/Functions;ILjava/lang/Object;)Landroid/animation/Animator;
     .locals 10
 
     and-int/lit8 v0, p8, 0x10
@@ -95,21 +95,21 @@
     move v6, p4
 
     .line 39
-    invoke-static/range {v2 .. v9}, Lcom/vk/core/extensions/AnimationExtKt;->a(Landroid/view/View;IIFFJLkotlin/jvm/b/a;)Landroid/animation/Animator;
+    invoke-static/range {v2 .. v9}, Lcom/vk/core/extensions/AnimationExtKt;->a(Landroid/view/View;IIFFJLkotlin/jvm/b/Functions;)Landroid/animation/Animator;
 
     move-result-object v0
 
     return-object v0
 .end method
 
-.method public static final a(Landroid/animation/ValueAnimator;Lkotlin/jvm/b/a;)Landroid/animation/ValueAnimator;
+.method public static final a(Landroid/animation/ValueAnimator;Lkotlin/jvm/b/Functions;)Landroid/animation/ValueAnimator;
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
             "Landroid/animation/ValueAnimator;",
-            "Lkotlin/jvm/b/a<",
-            "Lkotlin/m;",
+            "Lkotlin/jvm/b/Functions<",
+            "Lkotlin/Unit;",
             ">;)",
             "Landroid/animation/ValueAnimator;"
         }
@@ -118,7 +118,7 @@
     .line 48
     new-instance v0, Lcom/vk/core/extensions/AnimationExtKt$g;
 
-    invoke-direct {v0, p0, p1}, Lcom/vk/core/extensions/AnimationExtKt$g;-><init>(Landroid/animation/ValueAnimator;Lkotlin/jvm/b/a;)V
+    invoke-direct {v0, p0, p1}, Lcom/vk/core/extensions/AnimationExtKt$g;-><init>(Landroid/animation/ValueAnimator;Lkotlin/jvm/b/Functions;)V
 
     invoke-virtual {p0, v0}, Landroid/animation/ValueAnimator;->addListener(Landroid/animation/Animator$AnimatorListener;)V
 
@@ -408,7 +408,7 @@
 
     invoke-direct {p2, p6}, Lcom/vk/core/extensions/AnimationExtKt$fadeIn$2;-><init>(Landroid/view/animation/Interpolator;)V
 
-    invoke-static {p0, p1, p2}, Lcom/vk/core/extensions/AnimationExtKt;->a(Ljava/lang/Object;Ljava/lang/Boolean;Lkotlin/jvm/b/b;)Ljava/lang/Object;
+    invoke-static {p0, p1, p2}, Lcom/vk/core/extensions/AnimationExtKt;->a(Ljava/lang/Object;Ljava/lang/Boolean;Lkotlin/jvm/b/Functions2;)Ljava/lang/Object;
 
     check-cast p0, Landroid/view/ViewPropertyAnimator;
 
@@ -650,7 +650,7 @@
     return-object v0
 .end method
 
-.method private static final a(Ljava/lang/Object;Ljava/lang/Boolean;Lkotlin/jvm/b/b;)Ljava/lang/Object;
+.method private static final a(Ljava/lang/Object;Ljava/lang/Boolean;Lkotlin/jvm/b/Functions2;)Ljava/lang/Object;
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -658,9 +658,9 @@
             "Ljava/lang/Object;",
             ">(TT;",
             "Ljava/lang/Boolean;",
-            "Lkotlin/jvm/b/b<",
+            "Lkotlin/jvm/b/Functions2<",
             "-TT;",
-            "Lkotlin/m;",
+            "Lkotlin/Unit;",
             ">;)TT;"
         }
     .end annotation
@@ -672,26 +672,26 @@
 
     move-result-object v0
 
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result p1
 
     if-eqz p1, :cond_0
 
-    invoke-interface {p2, p0}, Lkotlin/jvm/b/b;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {p2, p0}, Lkotlin/jvm/b/Functions2;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
 
     :cond_0
     return-object p0
 .end method
 
-.method public static final a(Landroid/animation/Animator;Lkotlin/jvm/b/a;)V
+.method public static final a(Landroid/animation/Animator;Lkotlin/jvm/b/Functions;)V
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
             "Landroid/animation/Animator;",
-            "Lkotlin/jvm/b/a<",
-            "Lkotlin/m;",
+            "Lkotlin/jvm/b/Functions<",
+            "Lkotlin/Unit;",
             ">;)V"
         }
     .end annotation
@@ -699,14 +699,14 @@
     .line 49
     new-instance v0, Lcom/vk/core/extensions/AnimationExtKt$h;
 
-    invoke-direct {v0, p0, p1}, Lcom/vk/core/extensions/AnimationExtKt$h;-><init>(Landroid/animation/Animator;Lkotlin/jvm/b/a;)V
+    invoke-direct {v0, p0, p1}, Lcom/vk/core/extensions/AnimationExtKt$h;-><init>(Landroid/animation/Animator;Lkotlin/jvm/b/Functions;)V
 
     invoke-virtual {p0, v0}, Landroid/animation/Animator;->addListener(Landroid/animation/Animator$AnimatorListener;)V
 
     return-void
 .end method
 
-.method public static final a(Landroid/animation/ValueAnimator;Lio/reactivex/disposables/a;)V
+.method public static final a(Landroid/animation/ValueAnimator;Lio/reactivex/disposables/CompositeDisposable;)V
     .locals 1
 
     .line 46
@@ -714,7 +714,7 @@
 
     invoke-direct {v0, p0}, Lcom/vk/core/extensions/AnimationExtKt$a;-><init>(Landroid/animation/ValueAnimator;)V
 
-    invoke-virtual {p1, v0}, Lio/reactivex/disposables/a;->b(Lio/reactivex/disposables/b;)Z
+    invoke-virtual {p1, v0}, Lio/reactivex/disposables/CompositeDisposable;->b(Lio/reactivex/disposables/Disposable;)Z
 
     return-void
 .end method
@@ -836,7 +836,7 @@
     return-void
 .end method
 
-.method public static final a(Landroid/view/ViewPropertyAnimator;Lio/reactivex/disposables/a;)V
+.method public static final a(Landroid/view/ViewPropertyAnimator;Lio/reactivex/disposables/CompositeDisposable;)V
     .locals 1
 
     .line 47
@@ -844,7 +844,7 @@
 
     invoke-direct {v0, p0}, Lcom/vk/core/extensions/AnimationExtKt$b;-><init>(Landroid/view/ViewPropertyAnimator;)V
 
-    invoke-virtual {p1, v0}, Lio/reactivex/disposables/a;->b(Lio/reactivex/disposables/b;)Z
+    invoke-virtual {p1, v0}, Lio/reactivex/disposables/CompositeDisposable;->b(Lio/reactivex/disposables/Disposable;)Z
 
     return-void
 .end method

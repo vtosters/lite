@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/libvideo/autoplay/VideoAutoPlay;->a(Lcom/vk/media/player/video/e;Lcom/vk/dto/common/VideoFile;IJZ)Lc/a/t;
+    value = Lcom/vk/libvideo/autoplay/VideoAutoPlay;->a(Lcom/vk/media/player/video/ExoVideoSource2;Lcom/vk/dto/common/VideoFile;IJZ)Lio/reactivex/Single;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -35,7 +35,7 @@
 
 .field final synthetic c:Lcom/vk/dto/common/VideoFile;
 
-.field final synthetic d:Lcom/vk/media/player/video/e;
+.field final synthetic d:Lcom/vk/media/player/video/ExoVideoSource2;
 
 .field final synthetic e:Z
 
@@ -43,7 +43,7 @@
 
 
 # direct methods
-.method constructor <init>(Lcom/vk/libvideo/autoplay/VideoAutoPlay;ILcom/vk/dto/common/VideoFile;Lcom/vk/media/player/video/e;ZJ)V
+.method constructor <init>(Lcom/vk/libvideo/autoplay/VideoAutoPlay;ILcom/vk/dto/common/VideoFile;Lcom/vk/media/player/video/ExoVideoSource2;ZJ)V
     .locals 0
 
     iput-object p1, p0, Lcom/vk/libvideo/autoplay/VideoAutoPlay$j;->a:Lcom/vk/libvideo/autoplay/VideoAutoPlay;
@@ -52,7 +52,7 @@
 
     iput-object p3, p0, Lcom/vk/libvideo/autoplay/VideoAutoPlay$j;->c:Lcom/vk/dto/common/VideoFile;
 
-    iput-object p4, p0, Lcom/vk/libvideo/autoplay/VideoAutoPlay$j;->d:Lcom/vk/media/player/video/e;
+    iput-object p4, p0, Lcom/vk/libvideo/autoplay/VideoAutoPlay$j;->d:Lcom/vk/media/player/video/ExoVideoSource2;
 
     iput-boolean p5, p0, Lcom/vk/libvideo/autoplay/VideoAutoPlay$j;->e:Z
 
@@ -83,7 +83,7 @@
             "()",
             "Lkotlin/Pair<",
             "Lcom/vk/dto/common/VideoFile;",
-            "Lcom/vk/media/player/video/e;",
+            "Lcom/vk/media/player/video/ExoVideoSource2;",
             ">;"
         }
     .end annotation
@@ -103,7 +103,7 @@
     :cond_0
     iget-object v1, v0, Lcom/vk/libvideo/autoplay/VideoAutoPlay$j;->c:Lcom/vk/dto/common/VideoFile;
 
-    invoke-static {v1}, Lcom/vk/libvideo/t;->a(Lcom/vk/dto/common/VideoFile;)I
+    invoke-static {v1}, Lcom/vk/libvideo/VideoUtils;->a(Lcom/vk/dto/common/VideoFile;)I
 
     move-result v1
 
@@ -116,7 +116,7 @@
     if-nez v3, :cond_4
 
     .line 5
-    iget-object v4, v0, Lcom/vk/libvideo/autoplay/VideoAutoPlay$j;->d:Lcom/vk/media/player/video/e;
+    iget-object v4, v0, Lcom/vk/libvideo/autoplay/VideoAutoPlay$j;->d:Lcom/vk/media/player/video/ExoVideoSource2;
 
     if-eqz v4, :cond_2
 
@@ -168,11 +168,11 @@
 
     const/4 v6, 0x0
 
-    invoke-static/range {v4 .. v22}, Lcom/vk/media/player/video/e;->a(Lcom/vk/media/player/video/e;Ljava/lang/String;IILjava/lang/String;IIIIIZZZLjava/lang/String;JLjava/lang/String;ILjava/lang/Object;)Lcom/vk/media/player/video/e;
+    invoke-static/range {v4 .. v22}, Lcom/vk/media/player/video/ExoVideoSource2;->a(Lcom/vk/media/player/video/ExoVideoSource2;Ljava/lang/String;IILjava/lang/String;IIIIIZZZLjava/lang/String;JLjava/lang/String;ILjava/lang/Object;)Lcom/vk/media/player/video/ExoVideoSource2;
 
     move-result-object v1
 
-    invoke-static {v2, v1}, Lkotlin/k;->a(Ljava/lang/Object;Ljava/lang/Object;)Lkotlin/Pair;
+    invoke-static {v2, v1}, Lkotlin/Tuples;->a(Ljava/lang/Object;Ljava/lang/Object;)Lkotlin/Pair;
 
     move-result-object v1
 
@@ -198,11 +198,11 @@
 
     iget-wide v5, v0, Lcom/vk/libvideo/autoplay/VideoAutoPlay$j;->f:J
 
-    invoke-static {v4, v2, v1, v5, v6}, Lcom/vk/libvideo/autoplay/VideoAutoPlay;->a(Lcom/vk/libvideo/autoplay/VideoAutoPlay;Ljava/lang/String;IJ)Lcom/vk/media/player/video/e;
+    invoke-static {v4, v2, v1, v5, v6}, Lcom/vk/libvideo/autoplay/VideoAutoPlay;->a(Lcom/vk/libvideo/autoplay/VideoAutoPlay;Ljava/lang/String;IJ)Lcom/vk/media/player/video/ExoVideoSource2;
 
     move-result-object v1
 
-    invoke-static {v3, v1}, Lkotlin/k;->a(Ljava/lang/Object;Ljava/lang/Object;)Lkotlin/Pair;
+    invoke-static {v3, v1}, Lkotlin/Tuples;->a(Ljava/lang/Object;Ljava/lang/Object;)Lkotlin/Pair;
 
     move-result-object v1
 

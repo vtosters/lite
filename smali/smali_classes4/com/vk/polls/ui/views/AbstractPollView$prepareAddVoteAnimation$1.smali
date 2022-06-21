@@ -3,7 +3,7 @@
 .source "AbstractPollView.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/c;
+.implements Lkotlin/jvm/b/Functions1;
 
 
 # annotations
@@ -19,10 +19,10 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/c<",
-        "Lcom/vk/polls/ui/views/c;",
+        "Lkotlin/jvm/b/Functions1<",
+        "Lcom/vk/polls/ui/views/PollOptionView;",
         "Ljava/lang/Integer;",
-        "Lkotlin/m;",
+        "Lkotlin/Unit;",
         ">;"
     }
 .end annotation
@@ -55,7 +55,7 @@
     .locals 0
 
     .line 1
-    check-cast p1, Lcom/vk/polls/ui/views/c;
+    check-cast p1, Lcom/vk/polls/ui/views/PollOptionView;
 
     check-cast p2, Ljava/lang/Number;
 
@@ -63,18 +63,18 @@
 
     move-result p2
 
-    invoke-virtual {p0, p1, p2}, Lcom/vk/polls/ui/views/AbstractPollView$prepareAddVoteAnimation$1;->a(Lcom/vk/polls/ui/views/c;I)V
+    invoke-virtual {p0, p1, p2}, Lcom/vk/polls/ui/views/AbstractPollView$prepareAddVoteAnimation$1;->a(Lcom/vk/polls/ui/views/PollOptionView;I)V
 
-    sget-object p1, Lkotlin/m;->a:Lkotlin/m;
+    sget-object p1, Lkotlin/Unit;->a:Lkotlin/Unit;
 
     return-object p1
 .end method
 
-.method public final a(Lcom/vk/polls/ui/views/c;I)V
+.method public final a(Lcom/vk/polls/ui/views/PollOptionView;I)V
     .locals 2
 
     .line 2
-    invoke-virtual {p1}, Lcom/vk/polls/ui/views/c;->a()V
+    invoke-virtual {p1}, Lcom/vk/polls/ui/views/PollOptionView;->a()V
 
     .line 3
     invoke-static {p1}, Lcom/vk/extensions/ViewExtKt;->i(Landroid/view/View;)Z
@@ -90,9 +90,9 @@
 
     const-string v1, "transition"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    invoke-virtual {p1, v0}, Lcom/vk/polls/ui/views/c;->a(Landroid/transition/Transition;)Landroid/animation/Animator;
+    invoke-virtual {p1, v0}, Lcom/vk/polls/ui/views/PollOptionView;->a(Landroid/transition/Transition;)Landroid/animation/Animator;
 
     move-result-object p1
 

@@ -50,18 +50,18 @@
     .line 2
     iget-object v1, p0, Lcom/vk/media/render/RenderBase$b;->a:Lcom/vk/media/render/RenderBase;
 
-    iget-object v1, v1, Lcom/vk/media/render/RenderBase;->d:Lb/h/p/c$b;
+    iget-object v1, v1, Lcom/vk/media/render/RenderBase;->d:Lb/h/p/MediaUtils$b;
 
-    invoke-virtual {v1}, Lb/h/p/c$b;->c()I
+    invoke-virtual {v1}, Lb/h/p/MediaUtils$b;->c()I
 
     move-result v1
 
     .line 3
     iget-object v2, p0, Lcom/vk/media/render/RenderBase$b;->a:Lcom/vk/media/render/RenderBase;
 
-    iget-object v2, v2, Lcom/vk/media/render/RenderBase;->d:Lb/h/p/c$b;
+    iget-object v2, v2, Lcom/vk/media/render/RenderBase;->d:Lb/h/p/MediaUtils$b;
 
-    invoke-virtual {v2}, Lb/h/p/c$b;->a()I
+    invoke-virtual {v2}, Lb/h/p/MediaUtils$b;->a()I
 
     move-result v2
 

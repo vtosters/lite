@@ -3,7 +3,7 @@
 .source "LottieAnimationView.java"
 
 # interfaces
-.implements Lcom/airbnb/lottie/h;
+.implements Lcom/airbnb/lottie/LottieListener;
 
 
 # annotations
@@ -19,8 +19,8 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Ljava/lang/Object;",
-        "Lcom/airbnb/lottie/h<",
-        "Lcom/airbnb/lottie/d;",
+        "Lcom/airbnb/lottie/LottieListener<",
+        "Lcom/airbnb/lottie/LottieComposition;",
         ">;"
     }
 .end annotation
@@ -44,13 +44,13 @@
 
 
 # virtual methods
-.method public a(Lcom/airbnb/lottie/d;)V
+.method public a(Lcom/airbnb/lottie/LottieComposition;)V
     .locals 1
 
     .line 2
     iget-object v0, p0, Lcom/airbnb/lottie/LottieAnimationView$a;->a:Lcom/airbnb/lottie/LottieAnimationView;
 
-    invoke-virtual {v0, p1}, Lcom/airbnb/lottie/LottieAnimationView;->setComposition(Lcom/airbnb/lottie/d;)V
+    invoke-virtual {v0, p1}, Lcom/airbnb/lottie/LottieAnimationView;->setComposition(Lcom/airbnb/lottie/LottieComposition;)V
 
     return-void
 .end method
@@ -59,9 +59,9 @@
     .locals 0
 
     .line 1
-    check-cast p1, Lcom/airbnb/lottie/d;
+    check-cast p1, Lcom/airbnb/lottie/LottieComposition;
 
-    invoke-virtual {p0, p1}, Lcom/airbnb/lottie/LottieAnimationView$a;->a(Lcom/airbnb/lottie/d;)V
+    invoke-virtual {p0, p1}, Lcom/airbnb/lottie/LottieAnimationView$a;->a(Lcom/airbnb/lottie/LottieComposition;)V
 
     return-void
 .end method

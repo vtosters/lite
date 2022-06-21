@@ -18,7 +18,7 @@
 
 
 # instance fields
-.field final synthetic a:Lcom/vk/profile/ui/cover/c;
+.field final synthetic a:Lcom/vk/profile/ui/cover/CoverViewItem;
 
 .field final synthetic b:Lcom/vk/profile/data/cover/model/VideoCoverItem$b;
 
@@ -26,10 +26,10 @@
 
 
 # direct methods
-.method constructor <init>(Lcom/vk/profile/ui/cover/c;Lcom/vk/profile/data/cover/model/VideoCoverItem$b;Lcom/vk/media/player/ExoPlayerBase;)V
+.method constructor <init>(Lcom/vk/profile/ui/cover/CoverViewItem;Lcom/vk/profile/data/cover/model/VideoCoverItem$b;Lcom/vk/media/player/ExoPlayerBase;)V
     .locals 0
 
-    iput-object p1, p0, Lcom/vk/profile/data/cover/model/VideoCoverItem$b$a;->a:Lcom/vk/profile/ui/cover/c;
+    iput-object p1, p0, Lcom/vk/profile/data/cover/model/VideoCoverItem$b$a;->a:Lcom/vk/profile/ui/cover/CoverViewItem;
 
     iput-object p2, p0, Lcom/vk/profile/data/cover/model/VideoCoverItem$b$a;->b:Lcom/vk/profile/data/cover/model/VideoCoverItem$b;
 
@@ -69,7 +69,7 @@
 
     move-result-object v0
 
-    check-cast v0, Lcom/vk/profile/ui/cover/c;
+    check-cast v0, Lcom/vk/profile/ui/cover/CoverViewItem;
 
     goto :goto_0
 
@@ -77,9 +77,9 @@
     const/4 v0, 0x0
 
     :goto_0
-    iget-object v1, p0, Lcom/vk/profile/data/cover/model/VideoCoverItem$b$a;->a:Lcom/vk/profile/ui/cover/c;
+    iget-object v1, p0, Lcom/vk/profile/data/cover/model/VideoCoverItem$b$a;->a:Lcom/vk/profile/ui/cover/CoverViewItem;
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v0
 
@@ -100,13 +100,13 @@
 
     iget-object v0, v0, Lcom/vk/profile/data/cover/model/VideoCoverItem$b;->a:Lcom/vk/profile/data/cover/model/VideoCoverItem;
 
-    iget-object v1, p0, Lcom/vk/profile/data/cover/model/VideoCoverItem$b$a;->a:Lcom/vk/profile/ui/cover/c;
+    iget-object v1, p0, Lcom/vk/profile/data/cover/model/VideoCoverItem$b$a;->a:Lcom/vk/profile/ui/cover/CoverViewItem;
 
     const-string v2, "it"
 
-    invoke-static {v1, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    invoke-static {v0, v1}, Lcom/vk/profile/data/cover/model/VideoCoverItem;->a(Lcom/vk/profile/data/cover/model/VideoCoverItem;Lcom/vk/profile/ui/cover/c;)V
+    invoke-static {v0, v1}, Lcom/vk/profile/data/cover/model/VideoCoverItem;->a(Lcom/vk/profile/data/cover/model/VideoCoverItem;Lcom/vk/profile/ui/cover/CoverViewItem;)V
 
     goto :goto_1
 

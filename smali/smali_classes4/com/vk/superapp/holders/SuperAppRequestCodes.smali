@@ -37,7 +37,7 @@
         value = {
             "Ljava/lang/Class<",
             "+",
-            "Lcom/vk/superapp/g/e;",
+            "Lcom/vk/superapp/g/SuperAppItems3;",
             ">;"
         }
     .end annotation
@@ -55,7 +55,7 @@
     new-instance v1, Lcom/vk/superapp/holders/SuperAppRequestCodes;
 
     .line 1
-    const-class v2, Lcom/vk/superapp/g/m;
+    const-class v2, Lcom/vk/superapp/g/SuperAppWidgetSportsItem;
 
     const/4 v3, 0x0
 
@@ -72,7 +72,7 @@
     new-instance v1, Lcom/vk/superapp/holders/SuperAppRequestCodes;
 
     .line 2
-    const-class v2, Lcom/vk/superapp/g/o;
+    const-class v2, Lcom/vk/superapp/g/SuperAppWidgetWeatherItem;
 
     const/4 v3, 0x1
 
@@ -92,7 +92,7 @@
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, v1}, Lcom/vk/superapp/holders/SuperAppRequestCodes$a;-><init>(Lkotlin/jvm/internal/i;)V
+    invoke-direct {v0, v1}, Lcom/vk/superapp/holders/SuperAppRequestCodes$a;-><init>(Lkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     sput-object v0, Lcom/vk/superapp/holders/SuperAppRequestCodes;->Companion:Lcom/vk/superapp/holders/SuperAppRequestCodes$a;
 
@@ -106,7 +106,7 @@
             "(I",
             "Ljava/lang/Class<",
             "+",
-            "Lcom/vk/superapp/g/e;",
+            "Lcom/vk/superapp/g/SuperAppItems3;",
             ">;)V"
         }
     .end annotation
@@ -167,7 +167,7 @@
             "()",
             "Ljava/lang/Class<",
             "+",
-            "Lcom/vk/superapp/g/e;",
+            "Lcom/vk/superapp/g/SuperAppItems3;",
             ">;"
         }
     .end annotation

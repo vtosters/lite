@@ -3,12 +3,12 @@
 .source "CommunityHeaderItemsFactory.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/b;
+.implements Lkotlin/jvm/b/Functions2;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/profile/adapter/factory/info_items/CommunityHeaderItemsFactory;-><init>(Landroid/content/Context;Lcom/vk/profile/presenter/CommunityPresenter;Lcom/vk/newsfeed/k0/b/b/i;Lcom/vk/profile/presenter/f/b;Landroid/view/View$OnClickListener;Lcom/vk/profile/adapter/di/CommunityFragmentUiScope;Lcom/vk/profile/adapter/di/a;Lkotlin/jvm/b/b;)V
+    value = Lcom/vk/profile/adapter/factory/info_items/CommunityHeaderItemsFactory;-><init>(Landroid/content/Context;Lcom/vk/profile/presenter/CommunityPresenter;Lcom/vk/newsfeed/k0/b/b/PostingItemPresenter;Lcom/vk/profile/presenter/f/CommunityLocationController;Landroid/view/View$OnClickListener;Lcom/vk/profile/adapter/di/CommunityFragmentUiScope;Lcom/vk/profile/adapter/di/CommunityDataScope;Lkotlin/jvm/b/Functions2;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -19,9 +19,9 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/b<",
-        "Lcom/vtosters/lite/api/i;",
-        "Lcom/vk/profile/adapter/items/a0;",
+        "Lkotlin/jvm/b/Functions2<",
+        "Lcom/vtosters/lite/api/ExtendedCommunityProfile;",
+        "Lcom/vk/profile/adapter/items/WidgetItem;",
         ">;"
     }
 .end annotation
@@ -56,7 +56,7 @@
 
 
 # virtual methods
-.method public final a(Lcom/vtosters/lite/api/i;)Lcom/vk/profile/adapter/items/a0;
+.method public final a(Lcom/vtosters/lite/api/ExtendedCommunityProfile;)Lcom/vk/profile/adapter/items/WidgetItem;
     .locals 1
 
     .line 1
@@ -67,9 +67,9 @@
     if-eqz v0, :cond_0
 
     .line 2
-    new-instance v0, Lcom/vk/profile/adapter/items/a0;
+    new-instance v0, Lcom/vk/profile/adapter/items/WidgetItem;
 
-    invoke-direct {v0, p1}, Lcom/vk/profile/adapter/items/a0;-><init>(Lcom/vtosters/lite/api/ExtendedUserProfile;)V
+    invoke-direct {v0, p1}, Lcom/vk/profile/adapter/items/WidgetItem;-><init>(Lcom/vtosters/lite/api/ExtendedUserProfile;)V
 
     return-object v0
 
@@ -83,9 +83,9 @@
     .locals 0
 
     .line 1
-    check-cast p1, Lcom/vtosters/lite/api/i;
+    check-cast p1, Lcom/vtosters/lite/api/ExtendedCommunityProfile;
 
-    invoke-virtual {p0, p1}, Lcom/vk/profile/adapter/factory/info_items/CommunityHeaderItemsFactory$widget$1;->a(Lcom/vtosters/lite/api/i;)Lcom/vk/profile/adapter/items/a0;
+    invoke-virtual {p0, p1}, Lcom/vk/profile/adapter/factory/info_items/CommunityHeaderItemsFactory$widget$1;->a(Lcom/vtosters/lite/api/ExtendedCommunityProfile;)Lcom/vk/profile/adapter/items/WidgetItem;
 
     move-result-object p1
 

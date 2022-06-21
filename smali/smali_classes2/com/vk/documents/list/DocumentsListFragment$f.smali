@@ -58,7 +58,7 @@
 
     if-eqz p1, :cond_0
 
-    invoke-static {p1}, Lcom/vk/core/util/l0;->a(Landroid/content/Context;)V
+    invoke-static {p1}, Lcom/vk/core/util/KeyboardUtils;->a(Landroid/content/Context;)V
 
     nop
 

@@ -1,5 +1,5 @@
 .class public final Lcom/vk/imageloader/VKImageBitmapPool$a;
-.super Lcom/facebook/imagepipeline/memory/g;
+.super Lcom/facebook/imagepipeline/memory/BucketsBitmapPool;
 .source "VKImageBitmapPool.kt"
 
 
@@ -15,20 +15,20 @@
 
 
 # direct methods
-.method public constructor <init>(Lcom/vk/imageloader/VKImageBitmapPool;Lcom/facebook/common/memory/c;Lcom/facebook/imagepipeline/memory/d0;Lcom/facebook/imagepipeline/memory/e0;)V
+.method public constructor <init>(Lcom/vk/imageloader/VKImageBitmapPool;Lcom/facebook/common/memory/MemoryTrimmableRegistry;Lcom/facebook/imagepipeline/memory/PoolParams;Lcom/facebook/imagepipeline/memory/PoolStatsTracker;)V
     .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lcom/facebook/common/memory/c;",
-            "Lcom/facebook/imagepipeline/memory/d0;",
-            "Lcom/facebook/imagepipeline/memory/e0;",
+            "Lcom/facebook/common/memory/MemoryTrimmableRegistry;",
+            "Lcom/facebook/imagepipeline/memory/PoolParams;",
+            "Lcom/facebook/imagepipeline/memory/PoolStatsTracker;",
             ")V"
         }
     .end annotation
 
     .line 1
-    invoke-direct {p0, p2, p3, p4}, Lcom/facebook/imagepipeline/memory/g;-><init>(Lcom/facebook/common/memory/c;Lcom/facebook/imagepipeline/memory/d0;Lcom/facebook/imagepipeline/memory/e0;)V
+    invoke-direct {p0, p2, p3, p4}, Lcom/facebook/imagepipeline/memory/BucketsBitmapPool;-><init>(Lcom/facebook/common/memory/MemoryTrimmableRegistry;Lcom/facebook/imagepipeline/memory/PoolParams;Lcom/facebook/imagepipeline/memory/PoolStatsTracker;)V
 
     return-void
 .end method
@@ -40,7 +40,7 @@
 
     .line 2
     :try_start_0
-    invoke-super {p0, p1}, Lcom/facebook/imagepipeline/memory/g;->a(I)Landroid/graphics/Bitmap;
+    invoke-super {p0, p1}, Lcom/facebook/imagepipeline/memory/BucketsBitmapPool;->a(I)Landroid/graphics/Bitmap;
 
     move-result-object p1
     :try_end_0
@@ -55,13 +55,13 @@
     invoke-static {}, Lcom/vk/imageloader/VKImageLoader;->e()V
 
     .line 4
-    sget-object v1, Lcom/vk/core/util/g0;->a:Lcom/vk/core/util/g0;
+    sget-object v1, Lcom/vk/core/util/GcTrigger;->a:Lcom/vk/core/util/GcTrigger;
 
-    invoke-virtual {v1}, Lcom/vk/core/util/g0;->a()V
+    invoke-virtual {v1}, Lcom/vk/core/util/GcTrigger;->a()V
 
     .line 5
     :try_start_1
-    invoke-super {p0, p1}, Lcom/facebook/imagepipeline/memory/g;->a(I)Landroid/graphics/Bitmap;
+    invoke-super {p0, p1}, Lcom/facebook/imagepipeline/memory/BucketsBitmapPool;->a(I)Landroid/graphics/Bitmap;
 
     move-result-object p1
     :try_end_1

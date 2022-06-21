@@ -1,5 +1,5 @@
 .class final Lcom/vk/music/search/suggestions/MusicSearchSuggestionsContainer$c;
-.super Lcom/vk/core/widget/a;
+.super Lcom/vk/core/widget/LifecycleListener;
 .source "MusicSearchSuggestionsContainer.kt"
 
 # interfaces
@@ -33,7 +33,7 @@
     .line 1
     iput-object p1, p0, Lcom/vk/music/search/suggestions/MusicSearchSuggestionsContainer$c;->c:Lcom/vk/music/search/suggestions/MusicSearchSuggestionsContainer;
 
-    invoke-direct {p0}, Lcom/vk/core/widget/a;-><init>()V
+    invoke-direct {p0}, Lcom/vk/core/widget/LifecycleListener;-><init>()V
 
     return-void
 .end method
@@ -46,16 +46,16 @@
     .line 1
     iget-object v0, p0, Lcom/vk/music/search/suggestions/MusicSearchSuggestionsContainer$c;->c:Lcom/vk/music/search/suggestions/MusicSearchSuggestionsContainer;
 
-    invoke-static {v0}, Lcom/vk/music/search/suggestions/MusicSearchSuggestionsContainer;->b(Lcom/vk/music/search/suggestions/MusicSearchSuggestionsContainer;)Lcom/vk/music/model/p;
+    invoke-static {v0}, Lcom/vk/music/search/suggestions/MusicSearchSuggestionsContainer;->b(Lcom/vk/music/search/suggestions/MusicSearchSuggestionsContainer;)Lcom/vk/music/model/MusicSearchSuggestionModel;
 
     move-result-object v0
 
-    invoke-interface {v0}, Lcom/vk/music/model/p;->x()V
+    invoke-interface {v0}, Lcom/vk/music/model/MusicSearchSuggestionModel;->x()V
 
     .line 2
     iget-object v0, p0, Lcom/vk/music/search/suggestions/MusicSearchSuggestionsContainer$c;->c:Lcom/vk/music/search/suggestions/MusicSearchSuggestionsContainer;
 
-    invoke-static {v0}, Lcom/vk/music/search/suggestions/MusicSearchSuggestionsContainer;->c(Lcom/vk/music/search/suggestions/MusicSearchSuggestionsContainer;)Lcom/vk/music/m/o/a/b;
+    invoke-static {v0}, Lcom/vk/music/search/suggestions/MusicSearchSuggestionsContainer;->c(Lcom/vk/music/search/suggestions/MusicSearchSuggestionsContainer;)Lcom/vk/music/m/o/a/SearchSuggestionsAdapter1;
 
     move-result-object v0
 
@@ -63,18 +63,18 @@
 
     move-result-object v1
 
-    invoke-virtual {v0, v1}, Lcom/vk/music/ui/common/b;->setItems(Ljava/util/List;)V
+    invoke-virtual {v0, v1}, Lcom/vk/music/ui/common/MusicAdapter;->setItems(Ljava/util/List;)V
 
     .line 3
     iget-object v0, p0, Lcom/vk/music/search/suggestions/MusicSearchSuggestionsContainer$c;->c:Lcom/vk/music/search/suggestions/MusicSearchSuggestionsContainer;
 
-    invoke-static {v0}, Lcom/vk/music/search/suggestions/MusicSearchSuggestionsContainer;->a(Lcom/vk/music/search/suggestions/MusicSearchSuggestionsContainer;)Lcom/vk/music/m/o/a/a;
+    invoke-static {v0}, Lcom/vk/music/search/suggestions/MusicSearchSuggestionsContainer;->a(Lcom/vk/music/search/suggestions/MusicSearchSuggestionsContainer;)Lcom/vk/music/m/o/a/MusicSearchSuggestionsHeaderAdapter;
 
     move-result-object v0
 
     const/4 v1, 0x0
 
-    invoke-virtual {v0, v1}, Lcom/vk/lists/j0;->d(Ljava/lang/Object;)V
+    invoke-virtual {v0, v1}, Lcom/vk/lists/SingleAdapter;->d(Ljava/lang/Object;)V
 
     return-void
 .end method

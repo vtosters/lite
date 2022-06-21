@@ -1,5 +1,5 @@
 .class public final Lcom/vk/im/ui/views/dialog_actions/DialogActionsListView;
-.super Lb/h/l/a/k;
+.super Lb/h/l/a/VkLibActionsListView;
 .source "DialogActionsListView.kt"
 
 
@@ -27,7 +27,7 @@
 
 
 # instance fields
-.field private h:Lcom/vk/im/ui/views/dialog_actions/a;
+.field private h:Lcom/vk/im/ui/views/dialog_actions/OnDialogActionClickListener;
 
 
 # direct methods
@@ -38,7 +38,7 @@
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, v1}, Lcom/vk/im/ui/views/dialog_actions/DialogActionsListView$b;-><init>(Lkotlin/jvm/internal/i;)V
+    invoke-direct {v0, v1}, Lcom/vk/im/ui/views/dialog_actions/DialogActionsListView$b;-><init>(Lkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     const/16 v0, 0x18
 
@@ -442,14 +442,14 @@
     .locals 0
 
     .line 1
-    invoke-direct {p0, p1, p2, p3}, Lb/h/l/a/k;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
+    invoke-direct {p0, p1, p2, p3}, Lb/h/l/a/VkLibActionsListView;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
 
     .line 2
     new-instance p1, Lcom/vk/im/ui/views/dialog_actions/DialogActionsListView$a;
 
     invoke-direct {p1, p0}, Lcom/vk/im/ui/views/dialog_actions/DialogActionsListView$a;-><init>(Lcom/vk/im/ui/views/dialog_actions/DialogActionsListView;)V
 
-    invoke-virtual {p0, p1}, Lb/h/l/a/k;->setActionClickListener(Lb/h/l/a/c;)V
+    invoke-virtual {p0, p1}, Lb/h/l/a/VkLibActionsListView;->setActionClickListener(Lb/h/l/a/ActionClickListener;)V
 
     return-void
 .end method
@@ -506,11 +506,11 @@
 
 
 # virtual methods
-.method public final getOnActionClickListener()Lcom/vk/im/ui/views/dialog_actions/a;
+.method public final getOnActionClickListener()Lcom/vk/im/ui/views/dialog_actions/OnDialogActionClickListener;
     .locals 1
 
     .line 1
-    iget-object v0, p0, Lcom/vk/im/ui/views/dialog_actions/DialogActionsListView;->h:Lcom/vk/im/ui/views/dialog_actions/a;
+    iget-object v0, p0, Lcom/vk/im/ui/views/dialog_actions/DialogActionsListView;->h:Lcom/vk/im/ui/views/dialog_actions/OnDialogActionClickListener;
 
     return-object v0
 .end method
@@ -630,13 +630,13 @@
     move-result-object v4
 
     .line 11
-    new-instance v5, Lb/h/l/a/a;
+    new-instance v5, Lb/h/l/a/Action;
 
     invoke-virtual {v1}, Lcom/vk/im/ui/views/dialog_actions/DialogActionsListView$b$a;->b()I
 
     move-result v1
 
-    invoke-direct {v5, v2, v1, v3, v4}, Lb/h/l/a/a;-><init>(IILandroid/graphics/drawable/Drawable;Ljava/lang/CharSequence;)V
+    invoke-direct {v5, v2, v1, v3, v4}, Lb/h/l/a/Action;-><init>(IILandroid/graphics/drawable/Drawable;Ljava/lang/CharSequence;)V
 
     invoke-interface {p1, v5}, Ljava/util/Collection;->add(Ljava/lang/Object;)Z
 
@@ -644,16 +644,16 @@
 
     .line 12
     :cond_2
-    invoke-virtual {p0, p1}, Lb/h/l/a/k;->setActions(Ljava/util/List;)V
+    invoke-virtual {p0, p1}, Lb/h/l/a/VkLibActionsListView;->setActions(Ljava/util/List;)V
 
     return-void
 .end method
 
-.method public final setOnActionClickListener(Lcom/vk/im/ui/views/dialog_actions/a;)V
+.method public final setOnActionClickListener(Lcom/vk/im/ui/views/dialog_actions/OnDialogActionClickListener;)V
     .locals 0
 
     .line 1
-    iput-object p1, p0, Lcom/vk/im/ui/views/dialog_actions/DialogActionsListView;->h:Lcom/vk/im/ui/views/dialog_actions/a;
+    iput-object p1, p0, Lcom/vk/im/ui/views/dialog_actions/DialogActionsListView;->h:Lcom/vk/im/ui/views/dialog_actions/OnDialogActionClickListener;
 
     return-void
 .end method

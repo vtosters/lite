@@ -3,12 +3,12 @@
 .source "QRViewUtils.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/a;
+.implements Lkotlin/jvm/b/Functions;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/qrcode/QRViewUtils;->h(Landroid/app/Activity;Lcom/vk/qrcode/QRParser;Lcom/vk/qrcode/i;)V
+    value = Lcom/vk/qrcode/QRViewUtils;->h(Landroid/app/Activity;Lcom/vk/qrcode/QRParser;Lcom/vk/qrcode/QRTypes7;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -19,22 +19,22 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/a<",
-        "Lkotlin/m;",
+        "Lkotlin/jvm/b/Functions<",
+        "Lkotlin/Unit;",
         ">;"
     }
 .end annotation
 
 
 # instance fields
-.field final synthetic $action:Lcom/vk/qrcode/i;
+.field final synthetic $action:Lcom/vk/qrcode/QRTypes7;
 
 
 # direct methods
-.method constructor <init>(Lcom/vk/qrcode/i;)V
+.method constructor <init>(Lcom/vk/qrcode/QRTypes7;)V
     .locals 0
 
-    iput-object p1, p0, Lcom/vk/qrcode/QRViewUtils$forShopping$openLinkAction$1;->$action:Lcom/vk/qrcode/i;
+    iput-object p1, p0, Lcom/vk/qrcode/QRViewUtils$forShopping$openLinkAction$1;->$action:Lcom/vk/qrcode/QRTypes7;
 
     const/4 p1, 0x0
 
@@ -51,7 +51,7 @@
     .line 1
     invoke-virtual {p0}, Lcom/vk/qrcode/QRViewUtils$forShopping$openLinkAction$1;->invoke()V
 
-    sget-object v0, Lkotlin/m;->a:Lkotlin/m;
+    sget-object v0, Lkotlin/Unit;->a:Lkotlin/Unit;
 
     return-object v0
 .end method
@@ -60,9 +60,9 @@
     .locals 2
 
     .line 2
-    iget-object v0, p0, Lcom/vk/qrcode/QRViewUtils$forShopping$openLinkAction$1;->$action:Lcom/vk/qrcode/i;
+    iget-object v0, p0, Lcom/vk/qrcode/QRViewUtils$forShopping$openLinkAction$1;->$action:Lcom/vk/qrcode/QRTypes7;
 
-    invoke-virtual {v0}, Lcom/vk/qrcode/i;->a()Lc/a/m;
+    invoke-virtual {v0}, Lcom/vk/qrcode/QRTypes7;->a()Lio/reactivex/Observable;
 
     .line 3
     sget-object v0, Lcom/vk/qrcode/QRStatsTracker;->b:Lcom/vk/qrcode/QRStatsTracker;

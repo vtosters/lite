@@ -162,9 +162,9 @@
 
     const-string v2, "ColorStateList.valueOf(collapseIconsColor)"
 
-    invoke-static {v1, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    invoke-static {p1, p2, p2, v0, v1}, Lcom/vk/extensions/t/a;->a(Landroidx/appcompat/widget/Toolbar;IIILandroid/content/res/ColorStateList;)V
+    invoke-static {p1, p2, p2, v0, v1}, Lcom/vk/extensions/t/ToolbarExt;->a(Landroidx/appcompat/widget/Toolbar;IIILandroid/content/res/ColorStateList;)V
 
     .line 17
     :cond_2
@@ -229,7 +229,7 @@
 
     invoke-direct {p2, p0}, Lcom/vk/profile/ui/community/CommunityParallax$1;-><init>(Lcom/vk/profile/ui/community/CommunityParallax;)V
 
-    invoke-static {p1, p2}, Lcom/vk/extensions/ViewExtKt;->a(Landroid/view/View;Lkotlin/jvm/b/d;)V
+    invoke-static {p1, p2}, Lcom/vk/extensions/ViewExtKt;->a(Landroid/view/View;Lkotlin/jvm/b/Functions4;)V
 
     :cond_6
     return-void
@@ -284,7 +284,7 @@
     .locals 3
 
     .line 3
-    invoke-static {}, Lcom/vk/core/ui/themes/d;->e()Z
+    invoke-static {}, Lcom/vk/core/ui/themes/MilkshakeHelper;->e()Z
 
     move-result v0
 
@@ -448,7 +448,7 @@
 
     const-string v1, "VKThemeHelper.themedContext().resources"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {v0}, Landroid/content/res/Resources;->getConfiguration()Landroid/content/res/Configuration;
 
@@ -554,7 +554,7 @@
     goto :goto_0
 
     :cond_1
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     throw v2
 
@@ -574,12 +574,12 @@
 
     .line 8
     :cond_3
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     throw v2
 
     :cond_4
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     throw v2
 
@@ -592,7 +592,7 @@
     .locals 3
 
     .line 1
-    invoke-static {}, Lcom/vk/core/ui/themes/d;->e()Z
+    invoke-static {}, Lcom/vk/core/ui/themes/MilkshakeHelper;->e()Z
 
     move-result v0
 
@@ -642,7 +642,7 @@
     .locals 5
 
     .line 17
-    invoke-static {}, Lcom/vk/core/ui/themes/d;->e()Z
+    invoke-static {}, Lcom/vk/core/ui/themes/MilkshakeHelper;->e()Z
 
     move-result v0
 
@@ -703,7 +703,7 @@
 
     iget v2, p0, Lcom/vk/profile/ui/community/CommunityParallax;->h:F
 
-    invoke-static {v0, v1, v2}, Lcom/vk/core/util/p;->a(IIF)I
+    invoke-static {v0, v1, v2}, Lcom/vk/core/util/ColorUtils;->a(IIF)I
 
     move-result v0
 
@@ -726,9 +726,9 @@
 
     const-string v4, "ColorStateList.valueOf(color)"
 
-    invoke-static {v0, v4}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v4}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    invoke-static {v1, v2, v2, v3, v0}, Lcom/vk/extensions/t/a;->a(Landroidx/appcompat/widget/Toolbar;IIILandroid/content/res/ColorStateList;)V
+    invoke-static {v1, v2, v2, v3, v0}, Lcom/vk/extensions/t/ToolbarExt;->a(Landroidx/appcompat/widget/Toolbar;IIILandroid/content/res/ColorStateList;)V
 
     .line 24
     :cond_1
@@ -882,7 +882,7 @@
 
     invoke-direct {v1, p0, p1}, Lcom/vk/profile/ui/community/CommunityParallax$enabled$1;-><init>(Lcom/vk/profile/ui/community/CommunityParallax;Z)V
 
-    invoke-static {v0, v1}, Lcom/vk/extensions/ViewExtKt;->b(Landroid/view/View;Lkotlin/jvm/b/b;)V
+    invoke-static {v0, v1}, Lcom/vk/extensions/ViewExtKt;->b(Landroid/view/View;Lkotlin/jvm/b/Functions2;)V
 
     .line 5
     :cond_0
@@ -991,7 +991,7 @@
 
     const-string v1, "uiScope.toolbar!!.background"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {v0}, Landroid/graphics/drawable/Drawable;->getAlpha()I
 
@@ -1006,7 +1006,7 @@
     return v0
 
     :cond_0
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     const/4 v0, 0x0
 
@@ -1059,7 +1059,7 @@
 
     iget v2, p0, Lcom/vk/profile/ui/community/CommunityParallax;->h:F
 
-    invoke-static {v0, v1, v2}, Lcom/vk/core/util/p;->a(IIF)I
+    invoke-static {v0, v1, v2}, Lcom/vk/core/util/ColorUtils;->a(IIF)I
 
     move-result v0
 
@@ -1080,9 +1080,9 @@
 
     const-string v4, "ColorStateList.valueOf(color)"
 
-    invoke-static {v3, v4}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v3, v4}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    invoke-static {v1, v2, v2, v0, v3}, Lcom/vk/extensions/t/a;->a(Landroidx/appcompat/widget/Toolbar;IIILandroid/content/res/ColorStateList;)V
+    invoke-static {v1, v2, v2, v0, v3}, Lcom/vk/extensions/t/ToolbarExt;->a(Landroidx/appcompat/widget/Toolbar;IIILandroid/content/res/ColorStateList;)V
 
     .line 4
     :cond_1
@@ -1215,9 +1215,9 @@
 
     const-string v4, "ColorStateList.valueOf(collapseIconsColor)"
 
-    invoke-static {v3, v4}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v3, v4}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    invoke-static {v0, v1, v1, v2, v3}, Lcom/vk/extensions/t/a;->a(Landroidx/appcompat/widget/Toolbar;IIILandroid/content/res/ColorStateList;)V
+    invoke-static {v0, v1, v1, v2, v3}, Lcom/vk/extensions/t/ToolbarExt;->a(Landroidx/appcompat/widget/Toolbar;IIILandroid/content/res/ColorStateList;)V
 
     :cond_5
     :goto_0

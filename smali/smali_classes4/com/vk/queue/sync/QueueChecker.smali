@@ -6,56 +6,56 @@
 # instance fields
 .field private final a:Lcom/vk/queue/sync/QueueLongPollLooper;
 
-.field private final b:Lcom/vk/queue/sync/api/a;
+.field private final b:Lcom/vk/queue/sync/api/QueueApiManager;
 
-.field private final c:Lcom/vk/queue/sync/d/a;
+.field private final c:Lcom/vk/queue/sync/d/QueueStorageManager;
 
 .field private final d:Ljava/util/concurrent/ExecutorService;
 
-.field private final e:Lb/h/u/c/a;
+.field private final e:Lb/h/u/c/QueueLogger;
 
 
 # direct methods
-.method public constructor <init>(Lcom/vk/queue/sync/api/a;Lcom/vk/queue/sync/d/a;Ljava/util/concurrent/ExecutorService;Lb/h/u/c/a;)V
+.method public constructor <init>(Lcom/vk/queue/sync/api/QueueApiManager;Lcom/vk/queue/sync/d/QueueStorageManager;Ljava/util/concurrent/ExecutorService;Lb/h/u/c/QueueLogger;)V
     .locals 0
 
     .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lcom/vk/queue/sync/QueueChecker;->b:Lcom/vk/queue/sync/api/a;
+    iput-object p1, p0, Lcom/vk/queue/sync/QueueChecker;->b:Lcom/vk/queue/sync/api/QueueApiManager;
 
-    iput-object p2, p0, Lcom/vk/queue/sync/QueueChecker;->c:Lcom/vk/queue/sync/d/a;
+    iput-object p2, p0, Lcom/vk/queue/sync/QueueChecker;->c:Lcom/vk/queue/sync/d/QueueStorageManager;
 
     iput-object p3, p0, Lcom/vk/queue/sync/QueueChecker;->d:Ljava/util/concurrent/ExecutorService;
 
-    iput-object p4, p0, Lcom/vk/queue/sync/QueueChecker;->e:Lb/h/u/c/a;
+    iput-object p4, p0, Lcom/vk/queue/sync/QueueChecker;->e:Lb/h/u/c/QueueLogger;
 
     .line 2
     new-instance p1, Lcom/vk/queue/sync/QueueLongPollLooper;
 
-    iget-object p2, p0, Lcom/vk/queue/sync/QueueChecker;->b:Lcom/vk/queue/sync/api/a;
+    iget-object p2, p0, Lcom/vk/queue/sync/QueueChecker;->b:Lcom/vk/queue/sync/api/QueueApiManager;
 
     iget-object p3, p0, Lcom/vk/queue/sync/QueueChecker;->d:Ljava/util/concurrent/ExecutorService;
 
-    iget-object p4, p0, Lcom/vk/queue/sync/QueueChecker;->e:Lb/h/u/c/a;
+    iget-object p4, p0, Lcom/vk/queue/sync/QueueChecker;->e:Lb/h/u/c/QueueLogger;
 
-    invoke-direct {p1, p2, p3, p4}, Lcom/vk/queue/sync/QueueLongPollLooper;-><init>(Lcom/vk/queue/sync/api/a;Ljava/util/concurrent/ExecutorService;Lb/h/u/c/a;)V
+    invoke-direct {p1, p2, p3, p4}, Lcom/vk/queue/sync/QueueLongPollLooper;-><init>(Lcom/vk/queue/sync/api/QueueApiManager;Ljava/util/concurrent/ExecutorService;Lb/h/u/c/QueueLogger;)V
 
     iput-object p1, p0, Lcom/vk/queue/sync/QueueChecker;->a:Lcom/vk/queue/sync/QueueLongPollLooper;
 
     return-void
 .end method
 
-.method public static final synthetic a(Lcom/vk/queue/sync/QueueChecker;)Lcom/vk/queue/sync/d/a;
+.method public static final synthetic a(Lcom/vk/queue/sync/QueueChecker;)Lcom/vk/queue/sync/d/QueueStorageManager;
     .locals 0
 
     .line 1
-    iget-object p0, p0, Lcom/vk/queue/sync/QueueChecker;->c:Lcom/vk/queue/sync/d/a;
+    iget-object p0, p0, Lcom/vk/queue/sync/QueueChecker;->c:Lcom/vk/queue/sync/d/QueueStorageManager;
 
     return-object p0
 .end method
 
-.method private final a(Ljava/util/Collection;Lkotlin/jvm/b/c;)Ljava/util/Collection;
+.method private final a(Ljava/util/Collection;Lkotlin/jvm/b/Functions1;)Ljava/util/Collection;
     .locals 3
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -63,26 +63,26 @@
             "Ljava/util/Collection<",
             "Ljava/lang/String;",
             ">;",
-            "Lkotlin/jvm/b/c<",
+            "Lkotlin/jvm/b/Functions1<",
             "-",
             "Ljava/lang/String;",
             "-",
             "Ljava/lang/Throwable;",
-            "Lkotlin/m;",
+            "Lkotlin/Unit;",
             ">;)",
             "Ljava/util/Collection<",
-            "Lcom/vk/queue/sync/models/b;",
+            "Lcom/vk/queue/sync/models/QueueAccessParams;",
             ">;"
         }
     .end annotation
 
     .line 19
-    invoke-direct {p0, p1}, Lcom/vk/queue/sync/QueueChecker;->b(Ljava/util/Collection;)Lcom/vk/queue/sync/models/d;
+    invoke-direct {p0, p1}, Lcom/vk/queue/sync/QueueChecker;->b(Ljava/util/Collection;)Lcom/vk/queue/sync/models/QueueSubscribeResponse;
 
     move-result-object p1
 
     .line 20
-    invoke-virtual {p1}, Lcom/vk/queue/sync/models/d;->b()Ljava/util/Map;
+    invoke-virtual {p1}, Lcom/vk/queue/sync/models/QueueSubscribeResponse;->b()Ljava/util/Map;
 
     move-result-object v0
 
@@ -117,13 +117,13 @@
 
     move-result-object v1
 
-    invoke-interface {p2, v2, v1}, Lkotlin/jvm/b/c;->a(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {p2, v2, v1}, Lkotlin/jvm/b/Functions1;->a(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     goto :goto_0
 
     .line 23
     :cond_0
-    invoke-virtual {p1}, Lcom/vk/queue/sync/models/d;->a()Ljava/util/Map;
+    invoke-virtual {p1}, Lcom/vk/queue/sync/models/QueueSubscribeResponse;->a()Ljava/util/Map;
 
     move-result-object p1
 
@@ -144,15 +144,15 @@
             ">;)",
             "Ljava/util/Map<",
             "Ljava/lang/String;",
-            "Lcom/vk/queue/sync/models/b;",
+            "Lcom/vk/queue/sync/models/QueueAccessParams;",
             ">;"
         }
     .end annotation
 
     .line 24
-    iget-object v0, p0, Lcom/vk/queue/sync/QueueChecker;->c:Lcom/vk/queue/sync/d/a;
+    iget-object v0, p0, Lcom/vk/queue/sync/QueueChecker;->c:Lcom/vk/queue/sync/d/QueueStorageManager;
 
-    invoke-virtual {v0, p1}, Lcom/vk/queue/sync/d/a;->a(Ljava/util/Collection;)Ljava/util/Map;
+    invoke-virtual {v0, p1}, Lcom/vk/queue/sync/d/QueueStorageManager;->a(Ljava/util/Collection;)Ljava/util/Map;
 
     move-result-object p1
 
@@ -166,20 +166,20 @@
             "(",
             "Ljava/util/Map<",
             "Ljava/lang/String;",
-            "Lcom/vk/queue/sync/models/b;",
+            "Lcom/vk/queue/sync/models/QueueAccessParams;",
             ">;)V"
         }
     .end annotation
 
     .line 25
-    iget-object v0, p0, Lcom/vk/queue/sync/QueueChecker;->c:Lcom/vk/queue/sync/d/a;
+    iget-object v0, p0, Lcom/vk/queue/sync/QueueChecker;->c:Lcom/vk/queue/sync/d/QueueStorageManager;
 
-    invoke-virtual {v0, p1}, Lcom/vk/queue/sync/d/a;->a(Ljava/util/Map;)V
+    invoke-virtual {v0, p1}, Lcom/vk/queue/sync/d/QueueStorageManager;->a(Ljava/util/Map;)V
 
     return-void
 .end method
 
-.method private final b(Ljava/util/Collection;)Lcom/vk/queue/sync/models/d;
+.method private final b(Ljava/util/Collection;)Lcom/vk/queue/sync/models/QueueSubscribeResponse;
     .locals 4
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -187,7 +187,7 @@
             "Ljava/util/Collection<",
             "Ljava/lang/String;",
             ">;)",
-            "Lcom/vk/queue/sync/models/d;"
+            "Lcom/vk/queue/sync/models/QueueSubscribeResponse;"
         }
     .end annotation
 
@@ -237,12 +237,12 @@
 
     .line 9
     :cond_1
-    invoke-direct {p0, v1}, Lcom/vk/queue/sync/QueueChecker;->c(Ljava/util/Collection;)Lcom/vk/queue/sync/models/d;
+    invoke-direct {p0, v1}, Lcom/vk/queue/sync/QueueChecker;->c(Ljava/util/Collection;)Lcom/vk/queue/sync/models/QueueSubscribeResponse;
 
     move-result-object p1
 
     .line 10
-    invoke-virtual {p1}, Lcom/vk/queue/sync/models/d;->a()Ljava/util/Map;
+    invoke-virtual {p1}, Lcom/vk/queue/sync/models/QueueSubscribeResponse;->a()Ljava/util/Map;
 
     move-result-object v2
 
@@ -267,7 +267,7 @@
     invoke-interface {v1, v0}, Ljava/util/Map;->putAll(Ljava/util/Map;)V
 
     .line 14
-    invoke-virtual {p1}, Lcom/vk/queue/sync/models/d;->a()Ljava/util/Map;
+    invoke-virtual {p1}, Lcom/vk/queue/sync/models/QueueSubscribeResponse;->a()Ljava/util/Map;
 
     move-result-object v0
 
@@ -277,26 +277,26 @@
 
     .line 15
     :goto_1
-    new-instance v1, Lcom/vk/queue/sync/models/d;
+    new-instance v1, Lcom/vk/queue/sync/models/QueueSubscribeResponse;
 
-    invoke-virtual {p1}, Lcom/vk/queue/sync/models/d;->b()Ljava/util/Map;
+    invoke-virtual {p1}, Lcom/vk/queue/sync/models/QueueSubscribeResponse;->b()Ljava/util/Map;
 
     move-result-object p1
 
-    invoke-direct {v1, v0, p1}, Lcom/vk/queue/sync/models/d;-><init>(Ljava/util/Map;Ljava/util/Map;)V
+    invoke-direct {v1, v0, p1}, Lcom/vk/queue/sync/models/QueueSubscribeResponse;-><init>(Ljava/util/Map;Ljava/util/Map;)V
 
     return-object v1
 .end method
 
-.method private final b(Ljava/util/Collection;Lkotlin/jvm/b/c;)V
+.method private final b(Ljava/util/Collection;Lkotlin/jvm/b/Functions1;)V
     .locals 2
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
             "Ljava/util/Collection<",
-            "Lcom/vk/queue/sync/models/b;",
+            "Lcom/vk/queue/sync/models/QueueAccessParams;",
             ">;",
-            "Lkotlin/jvm/b/c<",
+            "Lkotlin/jvm/b/Functions1<",
             "-",
             "Ljava/lang/String;",
             "-",
@@ -304,7 +304,7 @@
             "+",
             "Lorg/json/JSONObject;",
             ">;",
-            "Lkotlin/m;",
+            "Lkotlin/Unit;",
             ">;)V"
         }
     .end annotation
@@ -315,7 +315,7 @@
     .line 2
     new-instance v1, Lcom/vk/queue/sync/QueueChecker$runLongPollLooper$1;
 
-    invoke-direct {v1, p2}, Lcom/vk/queue/sync/QueueChecker$runLongPollLooper$1;-><init>(Lkotlin/jvm/b/c;)V
+    invoke-direct {v1, p2}, Lcom/vk/queue/sync/QueueChecker$runLongPollLooper$1;-><init>(Lkotlin/jvm/b/Functions1;)V
 
     .line 3
     new-instance p2, Lcom/vk/queue/sync/QueueChecker$runLongPollLooper$2;
@@ -323,12 +323,12 @@
     invoke-direct {p2, p0}, Lcom/vk/queue/sync/QueueChecker$runLongPollLooper$2;-><init>(Lcom/vk/queue/sync/QueueChecker;)V
 
     .line 4
-    invoke-virtual {v0, p1, v1, p2}, Lcom/vk/queue/sync/QueueLongPollLooper;->a(Ljava/util/Collection;Lkotlin/jvm/b/b;Lkotlin/jvm/b/b;)V
+    invoke-virtual {v0, p1, v1, p2}, Lcom/vk/queue/sync/QueueLongPollLooper;->a(Ljava/util/Collection;Lkotlin/jvm/b/Functions2;Lkotlin/jvm/b/Functions2;)V
 
     return-void
 .end method
 
-.method private final c(Ljava/util/Collection;)Lcom/vk/queue/sync/models/d;
+.method private final c(Ljava/util/Collection;)Lcom/vk/queue/sync/models/QueueSubscribeResponse;
     .locals 3
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -336,18 +336,18 @@
             "Ljava/util/Collection<",
             "Ljava/lang/String;",
             ">;)",
-            "Lcom/vk/queue/sync/models/d;"
+            "Lcom/vk/queue/sync/models/QueueSubscribeResponse;"
         }
     .end annotation
 
     .line 1
-    iget-object v0, p0, Lcom/vk/queue/sync/QueueChecker;->b:Lcom/vk/queue/sync/api/a;
+    iget-object v0, p0, Lcom/vk/queue/sync/QueueChecker;->b:Lcom/vk/queue/sync/api/QueueApiManager;
 
     const v1, 0x7fffffff
 
     const/4 v2, 0x1
 
-    invoke-virtual {v0, p1, v1, v2}, Lcom/vk/queue/sync/api/a;->a(Ljava/util/Collection;IZ)Lcom/vk/queue/sync/models/d;
+    invoke-virtual {v0, p1, v1, v2}, Lcom/vk/queue/sync/api/QueueApiManager;->a(Ljava/util/Collection;IZ)Lcom/vk/queue/sync/models/QueueSubscribeResponse;
 
     move-result-object p1
 
@@ -356,7 +356,7 @@
 
 
 # virtual methods
-.method public final a(Ljava/util/Collection;Lkotlin/jvm/b/c;Lkotlin/jvm/b/c;)V
+.method public final a(Ljava/util/Collection;Lkotlin/jvm/b/Functions1;Lkotlin/jvm/b/Functions1;)V
     .locals 7
     .annotation build Landroidx/annotation/WorkerThread;
     .end annotation
@@ -367,14 +367,14 @@
             "Ljava/util/Collection<",
             "Ljava/lang/String;",
             ">;",
-            "Lkotlin/jvm/b/c<",
+            "Lkotlin/jvm/b/Functions1<",
             "-",
             "Ljava/lang/String;",
             "-",
             "Ljava/lang/Throwable;",
-            "Lkotlin/m;",
+            "Lkotlin/Unit;",
             ">;",
-            "Lkotlin/jvm/b/c<",
+            "Lkotlin/jvm/b/Functions1<",
             "-",
             "Ljava/lang/String;",
             "-",
@@ -382,7 +382,7 @@
             "+",
             "Lorg/json/JSONObject;",
             ">;",
-            "Lkotlin/m;",
+            "Lkotlin/Unit;",
             ">;)V"
         }
     .end annotation
@@ -400,12 +400,12 @@
     :cond_0
     :goto_0
     :try_start_0
-    invoke-direct {p0, p1, p2}, Lcom/vk/queue/sync/QueueChecker;->a(Ljava/util/Collection;Lkotlin/jvm/b/c;)Ljava/util/Collection;
+    invoke-direct {p0, p1, p2}, Lcom/vk/queue/sync/QueueChecker;->a(Ljava/util/Collection;Lkotlin/jvm/b/Functions1;)Ljava/util/Collection;
 
     move-result-object v0
 
     .line 4
-    invoke-direct {p0, v0, p3}, Lcom/vk/queue/sync/QueueChecker;->b(Ljava/util/Collection;Lkotlin/jvm/b/c;)V
+    invoke-direct {p0, v0, p3}, Lcom/vk/queue/sync/QueueChecker;->b(Ljava/util/Collection;Lkotlin/jvm/b/Functions1;)V
     :try_end_0
     .catch Lcom/vk/queue/sync/models/QueueAccessException; {:try_start_0 .. :try_end_0} :catch_0
 
@@ -456,9 +456,9 @@
 
     move-result-object v6
 
-    check-cast v6, Lcom/vk/queue/sync/models/a;
+    check-cast v6, Lcom/vk/queue/sync/models/QueueAccessError;
 
-    invoke-virtual {v6}, Lcom/vk/queue/sync/models/a;->b()Z
+    invoke-virtual {v6}, Lcom/vk/queue/sync/models/QueueAccessError;->b()Z
 
     move-result v6
 
@@ -468,9 +468,9 @@
 
     move-result-object v6
 
-    check-cast v6, Lcom/vk/queue/sync/models/a;
+    check-cast v6, Lcom/vk/queue/sync/models/QueueAccessError;
 
-    invoke-virtual {v6}, Lcom/vk/queue/sync/models/a;->a()Z
+    invoke-virtual {v6}, Lcom/vk/queue/sync/models/QueueAccessError;->a()Z
 
     move-result v6
 
@@ -535,9 +535,9 @@
 
     move-result-object v3
 
-    check-cast v3, Lcom/vk/queue/sync/models/b;
+    check-cast v3, Lcom/vk/queue/sync/models/QueueAccessParams;
 
-    invoke-virtual {v3}, Lcom/vk/queue/sync/models/b;->c()Ljava/lang/String;
+    invoke-virtual {v3}, Lcom/vk/queue/sync/models/QueueAccessParams;->c()Ljava/lang/String;
 
     move-result-object v3
 
@@ -547,9 +547,9 @@
 
     .line 13
     :cond_5
-    iget-object v2, p0, Lcom/vk/queue/sync/QueueChecker;->c:Lcom/vk/queue/sync/d/a;
+    iget-object v2, p0, Lcom/vk/queue/sync/QueueChecker;->c:Lcom/vk/queue/sync/d/QueueStorageManager;
 
-    invoke-virtual {v2, v1}, Lcom/vk/queue/sync/d/a;->b(Ljava/util/Collection;)V
+    invoke-virtual {v2, v1}, Lcom/vk/queue/sync/d/QueueStorageManager;->b(Ljava/util/Collection;)V
 
     .line 14
     invoke-virtual {v0}, Lcom/vk/queue/sync/models/QueueAccessException;->a()Ljava/util/Map;
@@ -593,9 +593,9 @@
 
     move-result-object v3
 
-    check-cast v3, Lcom/vk/queue/sync/models/a;
+    check-cast v3, Lcom/vk/queue/sync/models/QueueAccessError;
 
-    invoke-virtual {v3}, Lcom/vk/queue/sync/models/a;->b()Z
+    invoke-virtual {v3}, Lcom/vk/queue/sync/models/QueueAccessError;->b()Z
 
     move-result v3
 
@@ -605,9 +605,9 @@
 
     move-result-object v2
 
-    check-cast v2, Lcom/vk/queue/sync/models/a;
+    check-cast v2, Lcom/vk/queue/sync/models/QueueAccessError;
 
-    invoke-virtual {v2}, Lcom/vk/queue/sync/models/a;->a()Z
+    invoke-virtual {v2}, Lcom/vk/queue/sync/models/QueueAccessError;->a()Z
 
     move-result v2
 

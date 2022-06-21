@@ -3,7 +3,7 @@
 .source "CatalogReplacementPresenter.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/c;
+.implements Lkotlin/jvm/b/Functions1;
 
 
 # annotations
@@ -19,9 +19,9 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/c<",
+        "Lkotlin/jvm/b/Functions1<",
         "Lcom/vk/catalog2/core/blocks/UIBlockList;",
-        "Lcom/vk/lists/t;",
+        "Lcom/vk/lists/PaginationHelper;",
         "Lcom/vk/catalog2/core/blocks/UIBlockList;",
         ">;"
     }
@@ -55,7 +55,7 @@
 
 
 # virtual methods
-.method public final a(Lcom/vk/catalog2/core/blocks/UIBlockList;Lcom/vk/lists/t;)Lcom/vk/catalog2/core/blocks/UIBlockList;
+.method public final a(Lcom/vk/catalog2/core/blocks/UIBlockList;Lcom/vk/lists/PaginationHelper;)Lcom/vk/catalog2/core/blocks/UIBlockList;
     .locals 1
 
     if-eqz p2, :cond_0
@@ -67,13 +67,13 @@
 
     move-result-object p1
 
-    invoke-virtual {p2, p1}, Lcom/vk/lists/t;->a(Ljava/lang/String;)V
+    invoke-virtual {p2, p1}, Lcom/vk/lists/PaginationHelper;->a(Ljava/lang/String;)V
 
     .line 3
     :cond_0
     iget-object p1, p0, Lcom/vk/catalog2/core/presenters/CatalogReplacementPresenter$handleSectionReplacement$event$2;->this$0:Lcom/vk/catalog2/core/presenters/CatalogReplacementPresenter;
 
-    invoke-static {p1}, Lcom/vk/catalog2/core/presenters/CatalogReplacementPresenter;->a(Lcom/vk/catalog2/core/presenters/CatalogReplacementPresenter;)Lcom/vk/catalog2/core/i;
+    invoke-static {p1}, Lcom/vk/catalog2/core/presenters/CatalogReplacementPresenter;->a(Lcom/vk/catalog2/core/presenters/CatalogReplacementPresenter;)Lcom/vk/catalog2/core/CatalogResponseTransformer;
 
     move-result-object p1
 
@@ -81,7 +81,7 @@
 
     iget-object v0, p0, Lcom/vk/catalog2/core/presenters/CatalogReplacementPresenter$handleSectionReplacement$event$2;->$newExtendedData:Lcom/vk/catalog2/core/api/dto/CatalogExtendedData;
 
-    invoke-interface {p1, p2, v0}, Lcom/vk/catalog2/core/i;->a(Lcom/vk/catalog2/core/api/dto/CatalogSection;Lcom/vk/catalog2/core/api/dto/CatalogExtendedData;)Lcom/vk/catalog2/core/blocks/UIBlockList;
+    invoke-interface {p1, p2, v0}, Lcom/vk/catalog2/core/CatalogResponseTransformer;->a(Lcom/vk/catalog2/core/api/dto/CatalogSection;Lcom/vk/catalog2/core/api/dto/CatalogExtendedData;)Lcom/vk/catalog2/core/blocks/UIBlockList;
 
     move-result-object p1
 
@@ -94,9 +94,9 @@
     .line 1
     check-cast p1, Lcom/vk/catalog2/core/blocks/UIBlockList;
 
-    check-cast p2, Lcom/vk/lists/t;
+    check-cast p2, Lcom/vk/lists/PaginationHelper;
 
-    invoke-virtual {p0, p1, p2}, Lcom/vk/catalog2/core/presenters/CatalogReplacementPresenter$handleSectionReplacement$event$2;->a(Lcom/vk/catalog2/core/blocks/UIBlockList;Lcom/vk/lists/t;)Lcom/vk/catalog2/core/blocks/UIBlockList;
+    invoke-virtual {p0, p1, p2}, Lcom/vk/catalog2/core/presenters/CatalogReplacementPresenter$handleSectionReplacement$event$2;->a(Lcom/vk/catalog2/core/blocks/UIBlockList;Lcom/vk/lists/PaginationHelper;)Lcom/vk/catalog2/core/blocks/UIBlockList;
 
     move-result-object p1
 

@@ -3,7 +3,7 @@
 .source "CommunityAddressesFragment.kt"
 
 # interfaces
-.implements Lc/a/z/j;
+.implements Lio/reactivex/functions/Function;
 
 
 # annotations
@@ -24,7 +24,7 @@
         "Ljava/lang/Object;",
         ">",
         "Ljava/lang/Object;",
-        "Lc/a/z/j<",
+        "Lio/reactivex/functions/Function<",
         "TT;TR;>;"
     }
 .end annotation
@@ -61,7 +61,7 @@
     .locals 0
 
     .line 1
-    invoke-static {p1}, Lcom/vk/imageloader/d;->a(Landroid/graphics/Bitmap;)Landroid/graphics/Bitmap;
+    invoke-static {p1}, Lcom/vk/imageloader/ImageLoaderUtils;->a(Landroid/graphics/Bitmap;)Landroid/graphics/Bitmap;
 
     move-result-object p1
 

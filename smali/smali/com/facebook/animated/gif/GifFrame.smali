@@ -3,12 +3,12 @@
 .source "GifFrame.java"
 
 # interfaces
-.implements Lcom/facebook/imagepipeline/animated/base/c;
+.implements Lcom/facebook/imagepipeline/animated/base/AnimatedImageFrame;
 
 
 # instance fields
 .field private mNativeContext:J
-    .annotation build Lcom/facebook/common/internal/d;
+    .annotation build Lcom/facebook/common/internal/DoNotStrip;
     .end annotation
 .end field
 
@@ -16,7 +16,7 @@
 # direct methods
 .method constructor <init>(J)V
     .locals 0
-    .annotation build Lcom/facebook/common/internal/d;
+    .annotation build Lcom/facebook/common/internal/DoNotStrip;
     .end annotation
 
     .line 1
@@ -29,57 +29,57 @@
 .end method
 
 .method private native nativeDispose()V
-    .annotation build Lcom/facebook/common/internal/d;
+    .annotation build Lcom/facebook/common/internal/DoNotStrip;
     .end annotation
 .end method
 
 .method private native nativeFinalize()V
-    .annotation build Lcom/facebook/common/internal/d;
+    .annotation build Lcom/facebook/common/internal/DoNotStrip;
     .end annotation
 .end method
 
 .method private native nativeGetDisposalMode()I
-    .annotation build Lcom/facebook/common/internal/d;
+    .annotation build Lcom/facebook/common/internal/DoNotStrip;
     .end annotation
 .end method
 
 .method private native nativeGetDurationMs()I
-    .annotation build Lcom/facebook/common/internal/d;
+    .annotation build Lcom/facebook/common/internal/DoNotStrip;
     .end annotation
 .end method
 
 .method private native nativeGetHeight()I
-    .annotation build Lcom/facebook/common/internal/d;
+    .annotation build Lcom/facebook/common/internal/DoNotStrip;
     .end annotation
 .end method
 
 .method private native nativeGetTransparentPixelColor()I
-    .annotation build Lcom/facebook/common/internal/d;
+    .annotation build Lcom/facebook/common/internal/DoNotStrip;
     .end annotation
 .end method
 
 .method private native nativeGetWidth()I
-    .annotation build Lcom/facebook/common/internal/d;
+    .annotation build Lcom/facebook/common/internal/DoNotStrip;
     .end annotation
 .end method
 
 .method private native nativeGetXOffset()I
-    .annotation build Lcom/facebook/common/internal/d;
+    .annotation build Lcom/facebook/common/internal/DoNotStrip;
     .end annotation
 .end method
 
 .method private native nativeGetYOffset()I
-    .annotation build Lcom/facebook/common/internal/d;
+    .annotation build Lcom/facebook/common/internal/DoNotStrip;
     .end annotation
 .end method
 
 .method private native nativeHasTransparency()Z
-    .annotation build Lcom/facebook/common/internal/d;
+    .annotation build Lcom/facebook/common/internal/DoNotStrip;
     .end annotation
 .end method
 
 .method private native nativeRenderFrame(IILandroid/graphics/Bitmap;)V
-    .annotation build Lcom/facebook/common/internal/d;
+    .annotation build Lcom/facebook/common/internal/DoNotStrip;
     .end annotation
 .end method
 

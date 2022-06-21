@@ -4,11 +4,11 @@
 
 
 # static fields
-.field static final synthetic b:[Lkotlin/u/j;
+.field static final synthetic b:[Lkotlin/u/KProperty5;
 
 
 # instance fields
-.field private final a:Lkotlin/e;
+.field private final a:Lkotlin/Lazy2;
 
 
 # direct methods
@@ -17,13 +17,13 @@
 
     const/4 v0, 0x1
 
-    new-array v0, v0, [Lkotlin/u/j;
+    new-array v0, v0, [Lkotlin/u/KProperty5;
 
     new-instance v1, Lkotlin/jvm/internal/PropertyReference1Impl;
 
     const-class v2, Lcom/vk/socialgraph/SocialGraphActivity;
 
-    invoke-static {v2}, Lkotlin/jvm/internal/o;->a(Ljava/lang/Class;)Lkotlin/u/c;
+    invoke-static {v2}, Lkotlin/jvm/internal/Reflection;->a(Ljava/lang/Class;)Lkotlin/u/KClass;
 
     move-result-object v2
 
@@ -31,15 +31,15 @@
 
     const-string v4, "getFmHash()I"
 
-    invoke-direct {v1, v2, v3, v4}, Lkotlin/jvm/internal/PropertyReference1Impl;-><init>(Lkotlin/u/e;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-direct {v1, v2, v3, v4}, Lkotlin/jvm/internal/PropertyReference1Impl;-><init>(Lkotlin/u/KDeclarationContainer;Ljava/lang/String;Ljava/lang/String;)V
 
-    invoke-static {v1}, Lkotlin/jvm/internal/o;->a(Lkotlin/jvm/internal/PropertyReference1;)Lkotlin/u/l;
+    invoke-static {v1}, Lkotlin/jvm/internal/Reflection;->a(Lkotlin/jvm/internal/PropertyReference1;)Lkotlin/u/KProperty2;
 
     const/4 v2, 0x0
 
     aput-object v1, v0, v2
 
-    sput-object v0, Lcom/vk/socialgraph/SocialGraphActivity;->b:[Lkotlin/u/j;
+    sput-object v0, Lcom/vk/socialgraph/SocialGraphActivity;->b:[Lkotlin/u/KProperty5;
 
     return-void
 .end method
@@ -55,11 +55,11 @@
 
     invoke-direct {v0, p0}, Lcom/vk/socialgraph/SocialGraphActivity$fmHash$2;-><init>(Lcom/vk/socialgraph/SocialGraphActivity;)V
 
-    invoke-static {v0}, Lkotlin/g;->a(Lkotlin/jvm/b/a;)Lkotlin/e;
+    invoke-static {v0}, Lkotlin/g;->a(Lkotlin/jvm/b/Functions;)Lkotlin/Lazy2;
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/vk/socialgraph/SocialGraphActivity;->a:Lkotlin/e;
+    iput-object v0, p0, Lcom/vk/socialgraph/SocialGraphActivity;->a:Lkotlin/Lazy2;
 
     return-void
 .end method
@@ -76,15 +76,15 @@
 .method private final u1()I
     .locals 3
 
-    iget-object v0, p0, Lcom/vk/socialgraph/SocialGraphActivity;->a:Lkotlin/e;
+    iget-object v0, p0, Lcom/vk/socialgraph/SocialGraphActivity;->a:Lkotlin/Lazy2;
 
-    sget-object v1, Lcom/vk/socialgraph/SocialGraphActivity;->b:[Lkotlin/u/j;
+    sget-object v1, Lcom/vk/socialgraph/SocialGraphActivity;->b:[Lkotlin/u/KProperty5;
 
     const/4 v2, 0x0
 
     aget-object v1, v1, v2
 
-    invoke-interface {v0}, Lkotlin/e;->getValue()Ljava/lang/Object;
+    invoke-interface {v0}, Lkotlin/Lazy2;->getValue()Ljava/lang/Object;
 
     move-result-object v0
 
@@ -136,9 +136,9 @@
 
     .line 3
     :cond_0
-    sget-object v0, Lcom/vk/socialgraph/h;->l:Lcom/vk/socialgraph/h$a;
+    sget-object v0, Lcom/vk/socialgraph/SocialGraphStrategyOneShotWithPriority;->l:Lcom/vk/socialgraph/SocialGraphStrategyOneShotWithPriority$a;
 
-    invoke-virtual {v0}, Lcom/vk/socialgraph/h$a;->a()Ljava/lang/String;
+    invoke-virtual {v0}, Lcom/vk/socialgraph/SocialGraphStrategyOneShotWithPriority$a;->a()Ljava/lang/String;
 
     move-result-object v1
 
@@ -166,10 +166,10 @@
 
     move-result-object v1
 
-    invoke-virtual {v0, v1}, Lcom/vk/socialgraph/h$a;->a(Ljava/lang/String;)V
+    invoke-virtual {v0, v1}, Lcom/vk/socialgraph/SocialGraphStrategyOneShotWithPriority$a;->a(Ljava/lang/String;)V
 
     .line 4
-    new-instance v0, Lcom/vk/socialgraph/h;
+    new-instance v0, Lcom/vk/socialgraph/SocialGraphStrategyOneShotWithPriority;
 
     .line 5
     invoke-virtual {p0}, Landroidx/fragment/app/FragmentActivity;->getSupportFragmentManager()Landroidx/fragment/app/FragmentManager;
@@ -178,7 +178,7 @@
 
     const-string v1, "supportFragmentManager"
 
-    invoke-static {v4, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v4, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     const v5, 0x7f0a047e
 
@@ -191,7 +191,7 @@
 
     const-string v1, "SocialGraphUtils.DEFAULT_SCREENS_ORDER"
 
-    invoke-static {v6, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v6, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 7
     new-instance v7, Lcom/vk/socialgraph/SocialGraphActivity$onCreate$socialGraphStrategy$1;
@@ -203,16 +203,16 @@
     move-object v3, p0
 
     .line 8
-    invoke-direct/range {v2 .. v7}, Lcom/vk/socialgraph/h;-><init>(Landroid/content/Context;Landroidx/fragment/app/FragmentManager;ILjava/util/List;Lkotlin/jvm/b/a;)V
+    invoke-direct/range {v2 .. v7}, Lcom/vk/socialgraph/SocialGraphStrategyOneShotWithPriority;-><init>(Landroid/content/Context;Landroidx/fragment/app/FragmentManager;ILjava/util/List;Lkotlin/jvm/b/Functions;)V
 
     .line 9
-    sget-object v1, Lcom/vk/socialgraph/g;->c:Lcom/vk/socialgraph/g;
+    sget-object v1, Lcom/vk/socialgraph/SocialGraphModule;->c:Lcom/vk/socialgraph/SocialGraphModule;
 
-    new-instance v2, Lcom/vk/auth/main/b0;
+    new-instance v2, Lcom/vk/auth/main/VkStatSender;
 
-    invoke-direct {v2}, Lcom/vk/auth/main/b0;-><init>()V
+    invoke-direct {v2}, Lcom/vk/auth/main/VkStatSender;-><init>()V
 
-    invoke-virtual {v1, v0, v2}, Lcom/vk/socialgraph/g;->a(Lcom/vk/socialgraph/SocialGraphStrategy;Lcom/vk/socialgraph/SocialStatSender;)V
+    invoke-virtual {v1, v0, v2}, Lcom/vk/socialgraph/SocialGraphModule;->a(Lcom/vk/socialgraph/SocialGraphStrategy;Lcom/vk/socialgraph/SocialStatSender;)V
 
     .line 10
     invoke-static {}, Lcom/vk/core/ui/themes/VKThemeHelper;->n()I
@@ -247,7 +247,7 @@
     if-nez p1, :cond_1
 
     .line 16
-    invoke-virtual {v0}, Lcom/vk/socialgraph/h;->a()Z
+    invoke-virtual {v0}, Lcom/vk/socialgraph/SocialGraphStrategyOneShotWithPriority;->a()Z
 
     :cond_1
     return-void
@@ -257,9 +257,9 @@
     .locals 3
 
     .line 1
-    sget-object v0, Lcom/vk/socialgraph/h;->l:Lcom/vk/socialgraph/h$a;
+    sget-object v0, Lcom/vk/socialgraph/SocialGraphStrategyOneShotWithPriority;->l:Lcom/vk/socialgraph/SocialGraphStrategyOneShotWithPriority$a;
 
-    invoke-virtual {v0}, Lcom/vk/socialgraph/h$a;->a()Ljava/lang/String;
+    invoke-virtual {v0}, Lcom/vk/socialgraph/SocialGraphStrategyOneShotWithPriority$a;->a()Ljava/lang/String;
 
     move-result-object v1
 
@@ -287,12 +287,12 @@
 
     move-result-object v1
 
-    invoke-virtual {v0, v1}, Lcom/vk/socialgraph/h$a;->a(Ljava/lang/String;)V
+    invoke-virtual {v0, v1}, Lcom/vk/socialgraph/SocialGraphStrategyOneShotWithPriority$a;->a(Ljava/lang/String;)V
 
     .line 2
-    sget-object v0, Lcom/vk/socialgraph/g;->c:Lcom/vk/socialgraph/g;
+    sget-object v0, Lcom/vk/socialgraph/SocialGraphModule;->c:Lcom/vk/socialgraph/SocialGraphModule;
 
-    invoke-virtual {v0}, Lcom/vk/socialgraph/g;->c()V
+    invoke-virtual {v0}, Lcom/vk/socialgraph/SocialGraphModule;->c()V
 
     .line 3
     invoke-super {p0}, Landroidx/fragment/app/FragmentActivity;->onDestroy()V

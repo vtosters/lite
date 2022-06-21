@@ -86,17 +86,17 @@
     .line 6
     new-instance v3, Lcom/vk/im/engine/models/dialogs/DialogExt;
 
-    new-instance v4, Lcom/vk/im/engine/models/c;
+    new-instance v4, Lcom/vk/im/engine/models/EntityWithId;
 
-    invoke-direct {v4, v0, v2, v1}, Lcom/vk/im/engine/models/c;-><init>(ILcom/vk/im/engine/models/u;Z)V
+    invoke-direct {v4, v0, v2, v1}, Lcom/vk/im/engine/models/EntityWithId;-><init>(ILcom/vk/im/engine/models/WithId;Z)V
 
-    invoke-direct {v3, v4, p1}, Lcom/vk/im/engine/models/dialogs/DialogExt;-><init>(Lcom/vk/im/engine/models/c;Lcom/vk/im/engine/models/ProfilesInfo;)V
+    invoke-direct {v3, v4, p1}, Lcom/vk/im/engine/models/dialogs/DialogExt;-><init>(Lcom/vk/im/engine/models/EntityWithId;Lcom/vk/im/engine/models/ProfilesInfo;)V
 
     return-object v3
 
     .line 7
     :cond_0
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     const/4 p1, 0x0
 

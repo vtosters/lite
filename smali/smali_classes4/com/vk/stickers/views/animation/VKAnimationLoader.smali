@@ -4,9 +4,9 @@
 
 
 # static fields
-.field static final synthetic a:[Lkotlin/u/j;
+.field static final synthetic a:[Lkotlin/u/KProperty5;
 
-.field private static final b:Lkotlin/e;
+.field private static final b:Lkotlin/Lazy2;
 
 .field private static final c:Ljava/util/ArrayList;
     .annotation system Ldalvik/annotation/Signature;
@@ -27,13 +27,13 @@
 
     const/4 v0, 0x1
 
-    new-array v0, v0, [Lkotlin/u/j;
+    new-array v0, v0, [Lkotlin/u/KProperty5;
 
     new-instance v1, Lkotlin/jvm/internal/PropertyReference1Impl;
 
     const-class v2, Lcom/vk/stickers/views/animation/VKAnimationLoader;
 
-    invoke-static {v2}, Lkotlin/jvm/internal/o;->a(Ljava/lang/Class;)Lkotlin/u/c;
+    invoke-static {v2}, Lkotlin/jvm/internal/Reflection;->a(Ljava/lang/Class;)Lkotlin/u/KClass;
 
     move-result-object v2
 
@@ -41,15 +41,15 @@
 
     const-string v4, "getInMemoryCache()Landroid/util/LruCache;"
 
-    invoke-direct {v1, v2, v3, v4}, Lkotlin/jvm/internal/PropertyReference1Impl;-><init>(Lkotlin/u/e;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-direct {v1, v2, v3, v4}, Lkotlin/jvm/internal/PropertyReference1Impl;-><init>(Lkotlin/u/KDeclarationContainer;Ljava/lang/String;Ljava/lang/String;)V
 
-    invoke-static {v1}, Lkotlin/jvm/internal/o;->a(Lkotlin/jvm/internal/PropertyReference1;)Lkotlin/u/l;
+    invoke-static {v1}, Lkotlin/jvm/internal/Reflection;->a(Lkotlin/jvm/internal/PropertyReference1;)Lkotlin/u/KProperty2;
 
     const/4 v2, 0x0
 
     aput-object v1, v0, v2
 
-    sput-object v0, Lcom/vk/stickers/views/animation/VKAnimationLoader;->a:[Lkotlin/u/j;
+    sput-object v0, Lcom/vk/stickers/views/animation/VKAnimationLoader;->a:[Lkotlin/u/KProperty5;
 
     .line 1
     new-instance v0, Lcom/vk/stickers/views/animation/VKAnimationLoader;
@@ -61,11 +61,11 @@
     .line 2
     sget-object v0, Lcom/vk/stickers/views/animation/VKAnimationLoader$inMemoryCache$2;->a:Lcom/vk/stickers/views/animation/VKAnimationLoader$inMemoryCache$2;
 
-    invoke-static {v0}, Lkotlin/g;->a(Lkotlin/jvm/b/a;)Lkotlin/e;
+    invoke-static {v0}, Lkotlin/g;->a(Lkotlin/jvm/b/Functions;)Lkotlin/Lazy2;
 
     move-result-object v0
 
-    sput-object v0, Lcom/vk/stickers/views/animation/VKAnimationLoader;->b:Lkotlin/e;
+    sput-object v0, Lcom/vk/stickers/views/animation/VKAnimationLoader;->b:Lkotlin/Lazy2;
 
     .line 3
     new-instance v0, Ljava/util/ArrayList;
@@ -117,7 +117,7 @@
     return-void
 .end method
 
-.method private final b(Ljava/lang/String;Ljava/lang/String;)Lc/a/m;
+.method private final b(Ljava/lang/String;Ljava/lang/String;)Lio/reactivex/Observable;
     .locals 3
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -125,14 +125,14 @@
             "Ljava/lang/String;",
             "Ljava/lang/String;",
             ")",
-            "Lc/a/m<",
-            "Lcom/airbnb/lottie/d;",
+            "Lio/reactivex/Observable<",
+            "Lcom/airbnb/lottie/LottieComposition;",
             ">;"
         }
     .end annotation
 
     .line 5
-    sget-object v0, Lcom/vk/common/j/a;->c:Lcom/vk/common/j/a;
+    sget-object v0, Lcom/vk/common/cache/SerializerCache;->c:Lcom/vk/common/cache/SerializerCache;
 
     invoke-direct {p0, p1}, Lcom/vk/stickers/views/animation/VKAnimationLoader;->b(Ljava/lang/String;)Ljava/lang/String;
 
@@ -140,23 +140,23 @@
 
     const/4 v2, 0x0
 
-    invoke-virtual {v0, v1, v2}, Lcom/vk/common/j/a;->a(Ljava/lang/String;Z)Lc/a/m;
+    invoke-virtual {v0, v1, v2}, Lcom/vk/common/cache/SerializerCache;->a(Ljava/lang/String;Z)Lio/reactivex/Observable;
 
     move-result-object v0
 
     .line 6
-    invoke-static {}, Lc/a/f0/b;->c()Lc/a/s;
+    invoke-static {}, Lio/reactivex/schedulers/Schedulers;->c()Lio/reactivex/Scheduler;
 
     move-result-object v1
 
-    invoke-virtual {v0, v1}, Lc/a/m;->a(Lc/a/s;)Lc/a/m;
+    invoke-virtual {v0, v1}, Lio/reactivex/Observable;->a(Lio/reactivex/Scheduler;)Lio/reactivex/Observable;
 
     move-result-object v0
 
     .line 7
     sget-object v1, Lcom/vk/stickers/views/animation/VKAnimationLoader$b;->a:Lcom/vk/stickers/views/animation/VKAnimationLoader$b;
 
-    invoke-virtual {v0, v1}, Lc/a/m;->e(Lc/a/z/j;)Lc/a/m;
+    invoke-virtual {v0, v1}, Lio/reactivex/Observable;->e(Lio/reactivex/functions/Function;)Lio/reactivex/Observable;
 
     move-result-object v0
 
@@ -165,16 +165,16 @@
 
     invoke-direct {v1, p2}, Lcom/vk/stickers/views/animation/VKAnimationLoader$c;-><init>(Ljava/lang/String;)V
 
-    invoke-virtual {v0, v1}, Lc/a/m;->e(Lc/a/z/j;)Lc/a/m;
+    invoke-virtual {v0, v1}, Lio/reactivex/Observable;->e(Lio/reactivex/functions/Function;)Lio/reactivex/Observable;
 
     move-result-object p2
 
     .line 9
-    invoke-static {}, Lc/a/y/c/a;->a()Lc/a/s;
+    invoke-static {}, Lio/reactivex/schedulers/AndroidSchedulers;->a()Lio/reactivex/Scheduler;
 
     move-result-object v0
 
-    invoke-virtual {p2, v0}, Lc/a/m;->a(Lc/a/s;)Lc/a/m;
+    invoke-virtual {p2, v0}, Lio/reactivex/Observable;->a(Lio/reactivex/Scheduler;)Lio/reactivex/Observable;
 
     move-result-object p2
 
@@ -183,13 +183,13 @@
 
     invoke-direct {v0, p1}, Lcom/vk/stickers/views/animation/VKAnimationLoader$d;-><init>(Ljava/lang/String;)V
 
-    invoke-virtual {p2, v0}, Lc/a/m;->d(Lc/a/z/g;)Lc/a/m;
+    invoke-virtual {p2, v0}, Lio/reactivex/Observable;->d(Lio/reactivex/functions/Consumer;)Lio/reactivex/Observable;
 
     move-result-object p1
 
     const-string p2, "SerializerCache.getSingl\u2026emoryCache.put(url, it) }"
 
-    invoke-static {p1, p2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, p2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     return-object p1
 .end method
@@ -242,20 +242,20 @@
             "()",
             "Landroid/util/LruCache<",
             "Ljava/lang/String;",
-            "Lcom/airbnb/lottie/d;",
+            "Lcom/airbnb/lottie/LottieComposition;",
             ">;"
         }
     .end annotation
 
-    sget-object v0, Lcom/vk/stickers/views/animation/VKAnimationLoader;->b:Lkotlin/e;
+    sget-object v0, Lcom/vk/stickers/views/animation/VKAnimationLoader;->b:Lkotlin/Lazy2;
 
-    sget-object v1, Lcom/vk/stickers/views/animation/VKAnimationLoader;->a:[Lkotlin/u/j;
+    sget-object v1, Lcom/vk/stickers/views/animation/VKAnimationLoader;->a:[Lkotlin/u/KProperty5;
 
     const/4 v2, 0x0
 
     aget-object v1, v1, v2
 
-    invoke-interface {v0}, Lkotlin/e;->getValue()Ljava/lang/Object;
+    invoke-interface {v0}, Lkotlin/Lazy2;->getValue()Ljava/lang/Object;
 
     move-result-object v0
 
@@ -264,7 +264,7 @@
     return-object v0
 .end method
 
-.method private final c(Ljava/lang/String;Ljava/lang/String;)Lc/a/m;
+.method private final c(Ljava/lang/String;Ljava/lang/String;)Lio/reactivex/Observable;
     .locals 2
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -272,38 +272,38 @@
             "Ljava/lang/String;",
             "Ljava/lang/String;",
             ")",
-            "Lc/a/m<",
-            "Lcom/airbnb/lottie/d;",
+            "Lio/reactivex/Observable<",
+            "Lcom/airbnb/lottie/LottieComposition;",
             ">;"
         }
     .end annotation
 
     .line 1
-    sget-object v0, Lcom/vk/core/util/z0;->a:Lcom/vk/core/util/z0;
+    sget-object v0, Lcom/vk/core/util/RxUtil;->a:Lcom/vk/core/util/RxUtil;
 
     new-instance v1, Lcom/vk/stickers/views/animation/VKAnimationLoader$loadFromWeb$1;
 
     invoke-direct {v1, p1, p2}, Lcom/vk/stickers/views/animation/VKAnimationLoader$loadFromWeb$1;-><init>(Ljava/lang/String;Ljava/lang/String;)V
 
-    invoke-virtual {v0, v1}, Lcom/vk/core/util/z0;->a(Lkotlin/jvm/b/a;)Lc/a/t;
+    invoke-virtual {v0, v1}, Lcom/vk/core/util/RxUtil;->a(Lkotlin/jvm/b/Functions;)Lio/reactivex/Single;
 
     move-result-object p2
 
     .line 2
-    invoke-static {}, Lc/a/f0/b;->c()Lc/a/s;
+    invoke-static {}, Lio/reactivex/schedulers/Schedulers;->c()Lio/reactivex/Scheduler;
 
     move-result-object v0
 
-    invoke-virtual {p2, v0}, Lc/a/t;->b(Lc/a/s;)Lc/a/t;
+    invoke-virtual {p2, v0}, Lio/reactivex/Single;->b(Lio/reactivex/Scheduler;)Lio/reactivex/Single;
 
     move-result-object p2
 
     .line 3
-    invoke-static {}, Lc/a/y/c/a;->a()Lc/a/s;
+    invoke-static {}, Lio/reactivex/schedulers/AndroidSchedulers;->a()Lio/reactivex/Scheduler;
 
     move-result-object v0
 
-    invoke-virtual {p2, v0}, Lc/a/t;->a(Lc/a/s;)Lc/a/t;
+    invoke-virtual {p2, v0}, Lio/reactivex/Single;->a(Lio/reactivex/Scheduler;)Lio/reactivex/Single;
 
     move-result-object p2
 
@@ -312,17 +312,17 @@
 
     invoke-direct {v0, p1}, Lcom/vk/stickers/views/animation/VKAnimationLoader$e;-><init>(Ljava/lang/String;)V
 
-    invoke-virtual {p2, v0}, Lc/a/t;->a(Lc/a/z/g;)Lc/a/t;
+    invoke-virtual {p2, v0}, Lio/reactivex/Single;->a(Lio/reactivex/functions/Consumer;)Lio/reactivex/Single;
 
     move-result-object p1
 
-    invoke-virtual {p1}, Lc/a/t;->c()Lc/a/m;
+    invoke-virtual {p1}, Lio/reactivex/Single;->c()Lio/reactivex/Observable;
 
     move-result-object p1
 
     const-string p2, "RxUtil.toSingle {\n      \u2026url, it) }.toObservable()"
 
-    invoke-static {p1, p2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, p2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     return-object p1
 .end method
@@ -331,37 +331,37 @@
     .locals 1
 
     .line 5
-    new-instance v0, Lokhttp3/z$a;
+    new-instance v0, Lokhttp3/Request$a;
 
-    invoke-direct {v0}, Lokhttp3/z$a;-><init>()V
+    invoke-direct {v0}, Lokhttp3/Request$a;-><init>()V
 
-    invoke-virtual {v0, p1}, Lokhttp3/z$a;->b(Ljava/lang/String;)Lokhttp3/z$a;
+    invoke-virtual {v0, p1}, Lokhttp3/Request$a;->b(Ljava/lang/String;)Lokhttp3/Request$a;
 
-    invoke-virtual {v0}, Lokhttp3/z$a;->a()Lokhttp3/z;
+    invoke-virtual {v0}, Lokhttp3/Request$a;->a()Lokhttp3/Request;
 
     move-result-object p1
 
     .line 6
-    invoke-static {}, Lcom/vk/core/network/Network;->j()Lokhttp3/x;
+    invoke-static {}, Lcom/vk/core/network/Network;->j()Lokhttp3/OkHttpClient;
 
     move-result-object v0
 
-    invoke-virtual {v0, p1}, Lokhttp3/x;->a(Lokhttp3/z;)Lokhttp3/e;
+    invoke-virtual {v0, p1}, Lokhttp3/OkHttpClient;->a(Lokhttp3/Request;)Lokhttp3/Call;
 
     move-result-object p1
 
-    invoke-interface {p1}, Lokhttp3/e;->execute()Lokhttp3/b0;
+    invoke-interface {p1}, Lokhttp3/Call;->execute()Lokhttp3/Response;
 
     move-result-object p1
 
     .line 7
-    invoke-virtual {p1}, Lokhttp3/b0;->a()Lokhttp3/c0;
+    invoke-virtual {p1}, Lokhttp3/Response;->a()Lokhttp3/ResponseBody;
 
     move-result-object p1
 
     if-eqz p1, :cond_0
 
-    invoke-virtual {p1}, Lokhttp3/c0;->g()Ljava/lang/String;
+    invoke-virtual {p1}, Lokhttp3/ResponseBody;->g()Ljava/lang/String;
 
     move-result-object p1
 
@@ -382,16 +382,16 @@
 
     invoke-direct {v0, p2}, Lcom/vk/stickers/views/animation/VKAnimationLoader$g;-><init>(Ljava/lang/String;)V
 
-    invoke-static {v0}, Lc/a/m;->c(Ljava/util/concurrent/Callable;)Lc/a/m;
+    invoke-static {v0}, Lio/reactivex/Observable;->c(Ljava/util/concurrent/Callable;)Lio/reactivex/Observable;
 
     move-result-object p2
 
     .line 2
-    invoke-static {}, Lc/a/f0/b;->c()Lc/a/s;
+    invoke-static {}, Lio/reactivex/schedulers/Schedulers;->c()Lio/reactivex/Scheduler;
 
     move-result-object v0
 
-    invoke-virtual {p2, v0}, Lc/a/m;->b(Lc/a/s;)Lc/a/m;
+    invoke-virtual {p2, v0}, Lio/reactivex/Observable;->b(Lio/reactivex/Scheduler;)Lio/reactivex/Observable;
 
     move-result-object p2
 
@@ -400,16 +400,16 @@
 
     invoke-direct {v0, p1}, Lcom/vk/stickers/views/animation/VKAnimationLoader$h;-><init>(Ljava/lang/String;)V
 
-    invoke-virtual {p2, v0}, Lc/a/m;->e(Lc/a/z/j;)Lc/a/m;
+    invoke-virtual {p2, v0}, Lio/reactivex/Observable;->e(Lio/reactivex/functions/Function;)Lio/reactivex/Observable;
 
     move-result-object p2
 
     .line 4
-    invoke-static {}, Lc/a/y/c/a;->a()Lc/a/s;
+    invoke-static {}, Lio/reactivex/schedulers/AndroidSchedulers;->a()Lio/reactivex/Scheduler;
 
     move-result-object v0
 
-    invoke-virtual {p2, v0}, Lc/a/m;->a(Lc/a/s;)Lc/a/m;
+    invoke-virtual {p2, v0}, Lio/reactivex/Observable;->a(Lio/reactivex/Scheduler;)Lio/reactivex/Observable;
 
     move-result-object p2
 
@@ -418,21 +418,21 @@
 
     invoke-direct {v0, p1}, Lcom/vk/stickers/views/animation/VKAnimationLoader$i;-><init>(Ljava/lang/String;)V
 
-    invoke-virtual {p2, v0}, Lc/a/m;->f(Lc/a/z/g;)Lio/reactivex/disposables/b;
+    invoke-virtual {p2, v0}, Lio/reactivex/Observable;->f(Lio/reactivex/functions/Consumer;)Lio/reactivex/disposables/Disposable;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a(Ljava/lang/String;)Lc/a/m;
+.method public final a(Ljava/lang/String;)Lio/reactivex/Observable;
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
             "Ljava/lang/String;",
             ")",
-            "Lc/a/m<",
+            "Lio/reactivex/Observable<",
             "Lcom/vk/dto/stickers/AnimatedStickerInfo;",
             ">;"
         }
@@ -443,18 +443,18 @@
 
     invoke-direct {v0, p1}, Lcom/vk/stickers/views/animation/VKAnimationLoader$f;-><init>(Ljava/lang/String;)V
 
-    invoke-static {v0}, Lc/a/m;->c(Ljava/util/concurrent/Callable;)Lc/a/m;
+    invoke-static {v0}, Lio/reactivex/Observable;->c(Ljava/util/concurrent/Callable;)Lio/reactivex/Observable;
 
     move-result-object p1
 
     const-string v0, "Observable.fromCallable<\u2026sonString\n        }\n    }"
 
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     return-object p1
 .end method
 
-.method public final a(Ljava/lang/String;Ljava/lang/String;)Lc/a/m;
+.method public final a(Ljava/lang/String;Ljava/lang/String;)Lio/reactivex/Observable;
     .locals 3
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -462,8 +462,8 @@
             "Ljava/lang/String;",
             "Ljava/lang/String;",
             ")",
-            "Lc/a/m<",
-            "Lcom/airbnb/lottie/d;",
+            "Lio/reactivex/Observable<",
+            "Lcom/airbnb/lottie/LottieComposition;",
             ">;"
         }
     .end annotation
@@ -477,17 +477,17 @@
 
     move-result-object v0
 
-    check-cast v0, Lcom/airbnb/lottie/d;
+    check-cast v0, Lcom/airbnb/lottie/LottieComposition;
 
     if-eqz v0, :cond_0
 
-    invoke-static {v0}, Lc/a/m;->e(Ljava/lang/Object;)Lc/a/m;
+    invoke-static {v0}, Lio/reactivex/Observable;->e(Ljava/lang/Object;)Lio/reactivex/Observable;
 
     move-result-object p1
 
     const-string p2, "Observable.just(it)"
 
-    invoke-static {p1, p2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, p2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     return-object p1
 
@@ -518,7 +518,7 @@
 
     move-result-object v2
 
-    invoke-static {v2, p1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v2, p1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v2
 
@@ -537,7 +537,7 @@
     .line 9
     sget-object v0, Lcom/vk/stickers/views/animation/VKAnimationLoader;->d:Lcom/vk/stickers/views/animation/VKAnimationLoader;
 
-    invoke-direct {v0, p1, p2}, Lcom/vk/stickers/views/animation/VKAnimationLoader;->b(Ljava/lang/String;Ljava/lang/String;)Lc/a/m;
+    invoke-direct {v0, p1, p2}, Lcom/vk/stickers/views/animation/VKAnimationLoader;->b(Ljava/lang/String;Ljava/lang/String;)Lio/reactivex/Observable;
 
     move-result-object p1
 
@@ -545,7 +545,7 @@
 
     .line 10
     :cond_3
-    invoke-direct {p0, p1, p2}, Lcom/vk/stickers/views/animation/VKAnimationLoader;->c(Ljava/lang/String;Ljava/lang/String;)Lc/a/m;
+    invoke-direct {p0, p1, p2}, Lcom/vk/stickers/views/animation/VKAnimationLoader;->c(Ljava/lang/String;Ljava/lang/String;)Lio/reactivex/Observable;
 
     move-result-object p1
 
@@ -597,7 +597,7 @@
     invoke-virtual {v0}, Landroid/util/LruCache;->evictAll()V
 
     .line 6
-    sget-object v0, Lcom/vk/common/j/a;->c:Lcom/vk/common/j/a;
+    sget-object v0, Lcom/vk/common/cache/SerializerCache;->c:Lcom/vk/common/cache/SerializerCache;
 
     const-string v1, "animated_stickers_list_v21"
 
@@ -605,7 +605,7 @@
 
     move-result-object v1
 
-    invoke-virtual {v0, v1}, Lcom/vk/common/j/a;->a([Ljava/lang/String;)V
+    invoke-virtual {v0, v1}, Lcom/vk/common/cache/SerializerCache;->a([Ljava/lang/String;)V
 
     return-void
 .end method
@@ -628,17 +628,17 @@
 
     .line 4
     :cond_0
-    sget-object v0, Lcom/vk/common/j/a;->c:Lcom/vk/common/j/a;
+    sget-object v0, Lcom/vk/common/cache/SerializerCache;->c:Lcom/vk/common/cache/SerializerCache;
 
     const-string v1, "animated_stickers_list_v21"
 
-    invoke-virtual {v0, v1}, Lcom/vk/common/j/a;->a(Ljava/lang/String;)Lc/a/m;
+    invoke-virtual {v0, v1}, Lcom/vk/common/cache/SerializerCache;->a(Ljava/lang/String;)Lio/reactivex/Observable;
 
     move-result-object v0
 
     sget-object v1, Lcom/vk/stickers/views/animation/VKAnimationLoader$a;->a:Lcom/vk/stickers/views/animation/VKAnimationLoader$a;
 
-    invoke-virtual {v0, v1}, Lc/a/m;->f(Lc/a/z/g;)Lio/reactivex/disposables/b;
+    invoke-virtual {v0, v1}, Lio/reactivex/Observable;->f(Lio/reactivex/functions/Consumer;)Lio/reactivex/disposables/Disposable;
 
     return-void
 .end method

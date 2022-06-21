@@ -1,10 +1,10 @@
 .class public final Lcom/vk/notifications/GroupedNotificationsAdapter;
-.super Lcom/vk/common/widget/c;
+.super Lcom/vk/common/widget/HeaderCardAdapter;
 .source "GroupedNotificationsAdapter.kt"
 
 # interfaces
-.implements Lcom/vk/notifications/i;
-.implements Lcom/vk/core/ui/o;
+.implements Lcom/vk/notifications/NotificationsContainer;
+.implements Lcom/vk/core/ui/Provider;
 
 
 # annotations
@@ -19,11 +19,11 @@
 
 .annotation system Ldalvik/annotation/Signature;
     value = {
-        "Lcom/vk/common/widget/c<",
+        "Lcom/vk/common/widget/HeaderCardAdapter<",
         "Lcom/vk/dto/notifications/NotificationItem;",
         ">;",
-        "Lcom/vk/notifications/i;",
-        "Lcom/vk/core/ui/o;"
+        "Lcom/vk/notifications/NotificationsContainer;",
+        "Lcom/vk/core/ui/Provider;"
     }
 .end annotation
 
@@ -41,7 +41,7 @@
 
 .field private C:Lcom/vk/core/ui/swipes/ButtonsSwipeView$a;
 
-.field private D:Lcom/vk/notifications/m;
+.field private D:Lcom/vk/notifications/OnCreateViewHolderListener;
 
 .field private final E:Ljava/util/ArrayList;
     .annotation system Ldalvik/annotation/Signature;
@@ -57,10 +57,10 @@
 
 .field private final G:Lcom/vk/notifications/GroupedNotificationsAdapter$d;
 
-.field private final H:Lcom/vk/im/ui/utils/k/b;
+.field private final H:Lcom/vk/im/ui/utils/k/SimpleObjectsPool;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Lcom/vk/im/ui/utils/k/b<",
+            "Lcom/vk/im/ui/utils/k/SimpleObjectsPool<",
             "Landroid/view/View;",
             ">;"
         }
@@ -80,7 +80,7 @@
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, v1}, Lcom/vk/notifications/GroupedNotificationsAdapter$a;-><init>(Lkotlin/jvm/internal/i;)V
+    invoke-direct {v0, v1}, Lcom/vk/notifications/GroupedNotificationsAdapter$a;-><init>(Lkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     return-void
 .end method
@@ -93,7 +93,7 @@
     const/4 v1, 0x1
 
     .line 1
-    invoke-direct {p0, v0, v1, v0}, Lcom/vk/common/widget/c;-><init>(Lcom/vk/lists/o;ILkotlin/jvm/internal/i;)V
+    invoke-direct {p0, v0, v1, v0}, Lcom/vk/common/widget/HeaderCardAdapter;-><init>(Lcom/vk/lists/ListDataSet;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     .line 2
     new-instance v0, Ljava/lang/ref/WeakReference;
@@ -124,15 +124,15 @@
     iput-object v0, p0, Lcom/vk/notifications/GroupedNotificationsAdapter;->G:Lcom/vk/notifications/GroupedNotificationsAdapter$d;
 
     .line 6
-    new-instance v0, Lcom/vk/im/ui/utils/k/b;
+    new-instance v0, Lcom/vk/im/ui/utils/k/SimpleObjectsPool;
 
-    new-instance v1, Lcom/vk/notifications/g$a;
+    new-instance v1, Lcom/vk/notifications/NotificationSwipeButton$a;
 
-    invoke-direct {v1, p1}, Lcom/vk/notifications/g$a;-><init>(Landroid/content/Context;)V
+    invoke-direct {v1, p1}, Lcom/vk/notifications/NotificationSwipeButton$a;-><init>(Landroid/content/Context;)V
 
-    invoke-direct {v0, v1}, Lcom/vk/im/ui/utils/k/b;-><init>(Lcom/vk/im/ui/utils/k/a;)V
+    invoke-direct {v0, v1}, Lcom/vk/im/ui/utils/k/SimpleObjectsPool;-><init>(Lcom/vk/im/ui/utils/k/ObjectFactory;)V
 
-    iput-object v0, p0, Lcom/vk/notifications/GroupedNotificationsAdapter;->H:Lcom/vk/im/ui/utils/k/b;
+    iput-object v0, p0, Lcom/vk/notifications/GroupedNotificationsAdapter;->H:Lcom/vk/im/ui/utils/k/SimpleObjectsPool;
 
     const/4 p1, -0x1
 
@@ -142,12 +142,12 @@
     .line 8
     iget-object p1, p0, Lcom/vk/notifications/GroupedNotificationsAdapter;->F:Lcom/vk/notifications/GroupedNotificationsAdapter$b;
 
-    invoke-virtual {p0, p1}, Lcom/vk/lists/m;->a(Lcom/vk/lists/m$b;)V
+    invoke-virtual {p0, p1}, Lcom/vk/lists/HeaderAdapter;->a(Lcom/vk/lists/HeaderAdapter$b;)V
 
     .line 9
     iget-object p1, p0, Lcom/vk/notifications/GroupedNotificationsAdapter;->G:Lcom/vk/notifications/GroupedNotificationsAdapter$d;
 
-    invoke-virtual {p0, p1}, Lcom/vk/lists/m;->a(Lcom/vk/lists/m$b;)V
+    invoke-virtual {p0, p1}, Lcom/vk/lists/HeaderAdapter;->a(Lcom/vk/lists/HeaderAdapter$b;)V
 
     return-void
 .end method
@@ -280,7 +280,7 @@
     move-result v0
 
     .line 13
-    new-instance v1, Lb/h/c/q/o;
+    new-instance v1, Lcom/vk/api/notifications/NotificationsRestore;
 
     const-string v2, "query"
 
@@ -288,14 +288,14 @@
 
     move-result-object p1
 
-    invoke-direct {v1, p1}, Lb/h/c/q/o;-><init>(Ljava/lang/String;)V
+    invoke-direct {v1, p1}, Lcom/vk/api/notifications/NotificationsRestore;-><init>(Ljava/lang/String;)V
 
     const/4 p1, 0x0
 
     const/4 v2, 0x1
 
     .line 14
-    invoke-static {v1, p1, v2, p1}, Lcom/vk/api/base/d;->d(Lcom/vk/api/base/d;Lcom/vk/api/base/e;ILjava/lang/Object;)Lc/a/m;
+    invoke-static {v1, p1, v2, p1}, Lcom/vk/api/base/ApiRequest;->d(Lcom/vk/api/base/ApiRequest;Lcom/vk/api/base/ApiThreadHolder;ILjava/lang/Object;)Lio/reactivex/Observable;
 
     move-result-object v3
 
@@ -316,7 +316,7 @@
 
     const/4 v11, 0x0
 
-    invoke-static/range {v3 .. v11}, Lcom/vk/core/extensions/RxExtKt;->a(Lc/a/m;Landroid/content/Context;JIZZILjava/lang/Object;)Lc/a/m;
+    invoke-static/range {v3 .. v11}, Lcom/vk/core/extensions/RxExtKt;->a(Lio/reactivex/Observable;Landroid/content/Context;JIZZILjava/lang/Object;)Lio/reactivex/Observable;
 
     move-result-object p1
 
@@ -331,7 +331,7 @@
     invoke-direct {p2, p0}, Lcom/vk/notifications/GroupedNotificationsAdapter$f;-><init>(Lcom/vk/notifications/GroupedNotificationsAdapter;)V
 
     .line 18
-    invoke-virtual {p1, v1, p2}, Lc/a/m;->a(Lc/a/z/g;Lc/a/z/g;)Lio/reactivex/disposables/b;
+    invoke-virtual {p1, v1, p2}, Lio/reactivex/Observable;->a(Lio/reactivex/functions/Consumer;Lio/reactivex/functions/Consumer;)Lio/reactivex/disposables/Disposable;
 
     return-void
 .end method
@@ -375,7 +375,7 @@
 
     const/4 v5, 0x2
 
-    invoke-direct {v3, v2, v4, v5, v0}, Lcom/vk/core/dialogs/snackbar/VkSnackbar$a;-><init>(Landroid/content/Context;ZILkotlin/jvm/internal/i;)V
+    invoke-direct {v3, v2, v4, v5, v0}, Lcom/vk/core/dialogs/snackbar/VkSnackbar$a;-><init>(Landroid/content/Context;ZILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     .line 5
     invoke-virtual {v3, v1}, Lcom/vk/core/dialogs/snackbar/VkSnackbar$a;->a(Ljava/lang/CharSequence;)Lcom/vk/core/dialogs/snackbar/VkSnackbar$a;
@@ -387,7 +387,7 @@
 
     invoke-direct {v1, p0, p1, p2, p3}, Lcom/vk/notifications/GroupedNotificationsAdapter$showRestoreSnackbar$1;-><init>(Lcom/vk/notifications/GroupedNotificationsAdapter;Lorg/json/JSONObject;Lcom/vk/dto/notifications/NotificationItem;I)V
 
-    invoke-virtual {v3, v0, v1}, Lcom/vk/core/dialogs/snackbar/VkSnackbar$a;->a(ILkotlin/jvm/b/b;)Lcom/vk/core/dialogs/snackbar/VkSnackbar$a;
+    invoke-virtual {v3, v0, v1}, Lcom/vk/core/dialogs/snackbar/VkSnackbar$a;->a(ILkotlin/jvm/b/Functions2;)Lcom/vk/core/dialogs/snackbar/VkSnackbar$a;
 
     .line 7
     invoke-virtual {v3}, Lcom/vk/core/dialogs/snackbar/VkSnackbar$a;->d()Lcom/vk/core/dialogs/snackbar/VkSnackbar;
@@ -424,19 +424,19 @@
     .locals 2
 
     .line 1
-    iget-object v0, p0, Lcom/vk/lists/i0;->a:Lcom/vk/lists/b;
+    iget-object v0, p0, Lcom/vk/lists/SimpleAdapter;->a:Lcom/vk/lists/BaseListDataSet;
 
-    invoke-interface {v0}, Lcom/vk/lists/d;->clear()V
+    invoke-interface {v0}, Lcom/vk/lists/DataSet;->clear()V
 
     .line 2
-    iget-object v0, p0, Lcom/vk/lists/i0;->a:Lcom/vk/lists/b;
+    iget-object v0, p0, Lcom/vk/lists/SimpleAdapter;->a:Lcom/vk/lists/BaseListDataSet;
 
     iget-object v1, p0, Lcom/vk/notifications/GroupedNotificationsAdapter;->E:Ljava/util/ArrayList;
 
-    invoke-interface {v0, v1}, Lcom/vk/lists/d;->g(Ljava/util/List;)V
+    invoke-interface {v0, v1}, Lcom/vk/lists/DataSet;->g(Ljava/util/List;)V
 
     .line 3
-    invoke-virtual {p0}, Lcom/vk/lists/m;->k()V
+    invoke-virtual {p0}, Lcom/vk/lists/HeaderAdapter;->k()V
 
     return-void
 .end method
@@ -467,7 +467,7 @@
     iput p1, p0, Lcom/vk/notifications/GroupedNotificationsAdapter;->I:I
 
     .line 2
-    invoke-virtual {p0}, Lcom/vk/lists/m;->k()V
+    invoke-virtual {p0}, Lcom/vk/lists/HeaderAdapter;->k()V
 
     return-void
 .end method
@@ -484,20 +484,20 @@
 
     const-string v0, "parent.context"
 
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    iget-object v0, p0, Lcom/vk/notifications/GroupedNotificationsAdapter;->H:Lcom/vk/im/ui/utils/k/b;
+    iget-object v0, p0, Lcom/vk/notifications/GroupedNotificationsAdapter;->H:Lcom/vk/im/ui/utils/k/SimpleObjectsPool;
 
     iget-object v1, p0, Lcom/vk/notifications/GroupedNotificationsAdapter;->C:Lcom/vk/core/ui/swipes/ButtonsSwipeView$a;
 
-    invoke-direct {p2, p1, p0, v0, v1}, Lcom/vk/notifications/NotificationItemHolder;-><init>(Landroid/content/Context;Lcom/vk/notifications/i;Lcom/vk/im/ui/utils/k/b;Lcom/vk/core/ui/swipes/ButtonsSwipeView$a;)V
+    invoke-direct {p2, p1, p0, v0, v1}, Lcom/vk/notifications/NotificationItemHolder;-><init>(Landroid/content/Context;Lcom/vk/notifications/NotificationsContainer;Lcom/vk/im/ui/utils/k/SimpleObjectsPool;Lcom/vk/core/ui/swipes/ButtonsSwipeView$a;)V
 
     .line 24
-    iget-object p1, p0, Lcom/vk/notifications/GroupedNotificationsAdapter;->D:Lcom/vk/notifications/m;
+    iget-object p1, p0, Lcom/vk/notifications/GroupedNotificationsAdapter;->D:Lcom/vk/notifications/OnCreateViewHolderListener;
 
     if-eqz p1, :cond_0
 
-    invoke-interface {p1, p2}, Lcom/vk/notifications/m;->a(Landroidx/recyclerview/widget/RecyclerView$ViewHolder;)V
+    invoke-interface {p1, p2}, Lcom/vk/notifications/OnCreateViewHolderListener;->a(Landroidx/recyclerview/widget/RecyclerView$ViewHolder;)V
 
     :cond_0
     return-object p2
@@ -511,13 +511,13 @@
     .line 22
     check-cast p1, Lcom/vk/notifications/NotificationItemHolder;
 
-    invoke-virtual {p0, p2}, Lcom/vk/lists/i0;->k(I)Ljava/lang/Object;
+    invoke-virtual {p0, p2}, Lcom/vk/lists/SimpleAdapter;->k(I)Ljava/lang/Object;
 
     move-result-object p2
 
     const-string v0, "getItemAt(position)"
 
-    invoke-static {p2, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p2, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     check-cast p2, Lcom/vk/dto/notifications/NotificationItem;
 
@@ -552,16 +552,16 @@
 
     invoke-direct {v0, p1}, Lcom/vk/notifications/GroupedNotificationsAdapter$updateNotification$1;-><init>(Lcom/vk/dto/notifications/NotificationItem;)V
 
-    invoke-virtual {p0, v0, p1}, Lcom/vk/lists/i0;->a(Lkotlin/jvm/b/b;Ljava/lang/Object;)V
+    invoke-virtual {p0, v0, p1}, Lcom/vk/lists/SimpleAdapter;->a(Lkotlin/jvm/b/Functions2;Ljava/lang/Object;)V
 
     return-void
 .end method
 
-.method public final a(Lcom/vk/notifications/m;)V
+.method public final a(Lcom/vk/notifications/OnCreateViewHolderListener;)V
     .locals 0
 
     .line 20
-    iput-object p1, p0, Lcom/vk/notifications/GroupedNotificationsAdapter;->D:Lcom/vk/notifications/m;
+    iput-object p1, p0, Lcom/vk/notifications/GroupedNotificationsAdapter;->D:Lcom/vk/notifications/OnCreateViewHolderListener;
 
     return-void
 .end method

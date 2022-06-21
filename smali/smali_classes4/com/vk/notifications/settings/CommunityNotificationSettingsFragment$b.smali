@@ -23,18 +23,18 @@
 # instance fields
 .field private final B:I
 
-.field private final C:Lb/h/h/g/b;
+.field private final C:Lb/h/h/g/SettingsSectionItem;
 
 .field final synthetic D:Lcom/vk/notifications/settings/CommunityNotificationSettingsFragment;
 
 
 # direct methods
-.method public constructor <init>(Lcom/vk/notifications/settings/CommunityNotificationSettingsFragment;Lb/h/h/g/b;)V
+.method public constructor <init>(Lcom/vk/notifications/settings/CommunityNotificationSettingsFragment;Lb/h/h/g/SettingsSectionItem;)V
     .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lb/h/h/g/b;",
+            "Lb/h/h/g/SettingsSectionItem;",
             ")V"
         }
     .end annotation
@@ -44,7 +44,7 @@
 
     invoke-direct {p0}, Lcom/vk/profile/adapter/BaseInfoItem;-><init>()V
 
-    iput-object p2, p0, Lcom/vk/notifications/settings/CommunityNotificationSettingsFragment$b;->C:Lb/h/h/g/b;
+    iput-object p2, p0, Lcom/vk/notifications/settings/CommunityNotificationSettingsFragment$b;->C:Lb/h/h/g/SettingsSectionItem;
 
     const/4 p1, 0x2
 
@@ -65,11 +65,11 @@
     return v0
 .end method
 
-.method public final P()Lb/h/h/g/b;
+.method public final P()Lb/h/h/g/SettingsSectionItem;
     .locals 1
 
     .line 1
-    iget-object v0, p0, Lcom/vk/notifications/settings/CommunityNotificationSettingsFragment$b;->C:Lb/h/h/g/b;
+    iget-object v0, p0, Lcom/vk/notifications/settings/CommunityNotificationSettingsFragment$b;->C:Lb/h/h/g/SettingsSectionItem;
 
     return-object v0
 .end method
@@ -85,7 +85,7 @@
     return-object v0
 .end method
 
-.method public bridge synthetic a(Landroid/view/ViewGroup;)Lcom/vtosters/lite/ui/b0/i;
+.method public bridge synthetic a(Landroid/view/ViewGroup;)Lcom/vtosters/lite/ui/holder/RecyclerHolder;
     .locals 0
 
     .line 1

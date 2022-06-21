@@ -17,7 +17,7 @@
 
     const/4 v1, 0x1
 
-    invoke-direct {p0, v0, v1, v0}, Landroidx/recyclerview/widget/internal/IdlePrefetcher;-><init>(Landroidx/recyclerview/widget/internal/DrawTimeProvider;ILkotlin/jvm/internal/i;)V
+    invoke-direct {p0, v0, v1, v0}, Landroidx/recyclerview/widget/internal/IdlePrefetcher;-><init>(Landroidx/recyclerview/widget/internal/DrawTimeProvider;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     return-void
 .end method
@@ -30,7 +30,7 @@
 
     const/4 v1, 0x0
 
-    invoke-direct {p0, v0, v1}, Landroidx/recyclerview/widget/internal/Prefetcher;-><init>(Landroidx/recyclerview/widget/internal/TaskScheduler;Lkotlin/jvm/internal/i;)V
+    invoke-direct {p0, v0, v1}, Landroidx/recyclerview/widget/internal/Prefetcher;-><init>(Landroidx/recyclerview/widget/internal/TaskScheduler;Lkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     iput-object p1, p0, Landroidx/recyclerview/widget/internal/IdlePrefetcher;->timeProvider:Landroidx/recyclerview/widget/internal/DrawTimeProvider;
 
@@ -56,7 +56,7 @@
     return-void
 .end method
 
-.method public synthetic constructor <init>(Landroidx/recyclerview/widget/internal/DrawTimeProvider;ILkotlin/jvm/internal/i;)V
+.method public synthetic constructor <init>(Landroidx/recyclerview/widget/internal/DrawTimeProvider;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
     .locals 0
 
     and-int/lit8 p2, p2, 0x1
@@ -96,12 +96,12 @@
     return-wide v0
 .end method
 
-.method private final measureDuration(Lkotlin/jvm/b/a;)J
+.method private final measureDuration(Lkotlin/jvm/b/Functions;)J
     .locals 4
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lkotlin/jvm/b/a<",
+            "Lkotlin/jvm/b/Functions<",
             "+",
             "Ljava/lang/Object;",
             ">;)J"
@@ -114,7 +114,7 @@
     move-result-wide v0
 
     .line 2
-    invoke-interface {p1}, Lkotlin/jvm/b/a;->invoke()Ljava/lang/Object;
+    invoke-interface {p1}, Lkotlin/jvm/b/Functions;->invoke()Ljava/lang/Object;
 
     .line 3
     invoke-static {p0}, Landroidx/recyclerview/widget/internal/IdlePrefetcher;->access$timeNs(Landroidx/recyclerview/widget/internal/IdlePrefetcher;)J

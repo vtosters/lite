@@ -83,7 +83,7 @@
 
     const-string v0, "ViewConfiguration.get(delegate.viewRoot().context)"
 
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {p1}, Landroid/view/ViewConfiguration;->getScaledTouchSlop()I
 
@@ -146,13 +146,13 @@
     return-void
 .end method
 
-.method private final a(Lkotlin/jvm/b/a;)V
+.method private final a(Lkotlin/jvm/b/Functions;)V
     .locals 10
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lkotlin/jvm/b/a<",
-            "Lkotlin/m;",
+            "Lkotlin/jvm/b/Functions<",
+            "Lkotlin/Unit;",
             ">;)V"
         }
     .end annotation
@@ -315,7 +315,7 @@
     .line 20
     new-instance v2, Lcom/vk/photoviewer/DismissingTouchListener$b;
 
-    invoke-direct {v2, v0, p1}, Lcom/vk/photoviewer/DismissingTouchListener$b;-><init>(Ljava/util/List;Lkotlin/jvm/b/a;)V
+    invoke-direct {v2, v0, p1}, Lcom/vk/photoviewer/DismissingTouchListener$b;-><init>(Ljava/util/List;Lkotlin/jvm/b/Functions;)V
 
     invoke-virtual {v1, v2}, Landroid/animation/AnimatorSet;->addListener(Landroid/animation/Animator$AnimatorListener;)V
 
@@ -488,7 +488,7 @@
 
     invoke-direct {p1, p0}, Lcom/vk/photoviewer/DismissingTouchListener$onTouch$1;-><init>(Lcom/vk/photoviewer/DismissingTouchListener;)V
 
-    invoke-direct {p0, p1}, Lcom/vk/photoviewer/DismissingTouchListener;->a(Lkotlin/jvm/b/a;)V
+    invoke-direct {p0, p1}, Lcom/vk/photoviewer/DismissingTouchListener;->a(Lkotlin/jvm/b/Functions;)V
 
     return v1
 
@@ -713,7 +713,7 @@
 
     invoke-direct {p1, p0}, Lcom/vk/photoviewer/DismissingTouchListener$onTouch$4;-><init>(Lcom/vk/photoviewer/DismissingTouchListener;)V
 
-    invoke-direct {p0, p1}, Lcom/vk/photoviewer/DismissingTouchListener;->a(Lkotlin/jvm/b/a;)V
+    invoke-direct {p0, p1}, Lcom/vk/photoviewer/DismissingTouchListener;->a(Lkotlin/jvm/b/Functions;)V
 
     .line 26
     iput-boolean v0, p0, Lcom/vk/photoviewer/DismissingTouchListener;->e:Z

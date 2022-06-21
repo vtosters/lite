@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/stickers/StickerSearcher$calculationObservable$2;->invoke()Lc/a/m;
+    value = Lcom/vk/stickers/StickerSearcher$calculationObservable$2;->invoke()Lio/reactivex/Observable;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;

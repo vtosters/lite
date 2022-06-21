@@ -3,12 +3,12 @@
 .source "BaseInfoItemsFactory.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/b;
+.implements Lkotlin/jvm/b/Functions2;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/profile/adapter/factory/info_items/BaseInfoItemsFactory;-><init>(Landroid/content/Context;Lcom/vk/profile/presenter/BaseProfilePresenter;Lcom/vk/newsfeed/k0/b/b/i;)V
+    value = Lcom/vk/profile/adapter/factory/info_items/BaseInfoItemsFactory;-><init>(Landroid/content/Context;Lcom/vk/profile/presenter/BaseProfilePresenter;Lcom/vk/newsfeed/k0/b/b/PostingItemPresenter;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -19,7 +19,7 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/b<",
+        "Lkotlin/jvm/b/Functions2<",
         "TT;",
         "Ljava/util/List<",
         "+",
@@ -66,11 +66,11 @@
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/vk/profile/presenter/BaseProfilePresenter;->W()Lcom/vk/profile/data/d/b;
+    invoke-virtual {v0}, Lcom/vk/profile/presenter/BaseProfilePresenter;->W()Lcom/vk/profile/data/d/MainSectionStrategy;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/vk/profile/data/d/b;->a()I
+    invoke-virtual {v0}, Lcom/vk/profile/data/d/MainSectionStrategy;->a()I
 
     move-result v0
 
@@ -94,11 +94,11 @@
 
     move-result-object v1
 
-    invoke-virtual {v1}, Lcom/vk/profile/presenter/BaseProfilePresenter;->W()Lcom/vk/profile/data/d/b;
+    invoke-virtual {v1}, Lcom/vk/profile/presenter/BaseProfilePresenter;->W()Lcom/vk/profile/data/d/MainSectionStrategy;
 
     move-result-object v1
 
-    invoke-virtual {v1}, Lcom/vk/profile/data/d/b;->a()I
+    invoke-virtual {v1}, Lcom/vk/profile/data/d/MainSectionStrategy;->a()I
 
     move-result v1
 

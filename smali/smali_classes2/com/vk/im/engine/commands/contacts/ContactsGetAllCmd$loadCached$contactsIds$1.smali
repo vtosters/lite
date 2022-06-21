@@ -3,12 +3,12 @@
 .source "ContactsGetAllCmd.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/b;
+.implements Lkotlin/jvm/b/Functions2;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/im/engine/commands/contacts/ContactsGetAllCmd;->c(Lcom/vk/im/engine/d;)Ljava/util/List;
+    value = Lcom/vk/im/engine/commands/contacts/ContactsGetAllCmd;->c(Lcom/vk/im/engine/ImEnvironment;)Ljava/util/List;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -19,7 +19,7 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/b<",
+        "Lkotlin/jvm/b/Functions2<",
         "Lcom/vk/im/engine/models/contacts/Contact;",
         "Ljava/lang/Integer;",
         ">;"

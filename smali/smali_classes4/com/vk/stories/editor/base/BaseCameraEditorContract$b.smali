@@ -3,8 +3,8 @@
 .source "BaseCameraEditorContract.java"
 
 # interfaces
-.implements Lb/h/r/b;
-.implements Lpub/devrel/easypermissions/b$a;
+.implements Lb/h/r/BaseContract1;
+.implements Lpub/devrel/easypermissions/EasyPermissions$a;
 .implements Landroidx/core/app/ActivityCompat$OnRequestPermissionsResultCallback;
 
 
@@ -21,10 +21,10 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Ljava/lang/Object;",
-        "Lb/h/r/b<",
+        "Lb/h/r/BaseContract1<",
         "Lcom/vk/stories/editor/base/BaseCameraEditorContract$a;",
         ">;",
-        "Lpub/devrel/easypermissions/b$a;",
+        "Lpub/devrel/easypermissions/EasyPermissions$a;",
         "Landroidx/core/app/ActivityCompat$OnRequestPermissionsResultCallback;"
     }
 .end annotation
@@ -80,12 +80,12 @@
     .end param
 .end method
 
-.method public abstract a(Lcom/vk/attachpicker/stickers/ISticker;Lkotlin/jvm/b/d;)V
+.method public abstract a(Lcom/vk/attachpicker/stickers/ISticker;Lkotlin/jvm/b/Functions4;)V
     .param p1    # Lcom/vk/attachpicker/stickers/ISticker;
         .annotation build Landroidx/annotation/NonNull;
         .end annotation
     .end param
-    .param p2    # Lkotlin/jvm/b/d;
+    .param p2    # Lkotlin/jvm/b/Functions4;
         .annotation build Landroidx/annotation/Nullable;
         .end annotation
     .end param
@@ -93,7 +93,7 @@
         value = {
             "(",
             "Lcom/vk/attachpicker/stickers/ISticker;",
-            "Lkotlin/jvm/b/d<",
+            "Lkotlin/jvm/b/Functions4<",
             "Ljava/lang/Integer;",
             "Ljava/lang/Integer;",
             "Lcom/vk/attachpicker/stickers/ISticker;",
@@ -103,7 +103,7 @@
     .end annotation
 .end method
 
-.method public abstract a(Lcom/vk/cameraui/entities/d;)V
+.method public abstract a(Lcom/vk/cameraui/entities/StoryRawData3;)V
 .end method
 
 .method public abstract a(Lcom/vk/dto/stories/entities/StorySharingInfo;)V
@@ -141,11 +141,11 @@
     .end param
 .end method
 
-.method public abstract b(Lkotlin/jvm/b/a;)V
+.method public abstract b(Lkotlin/jvm/b/Functions;)V
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lkotlin/jvm/b/a<",
+            "Lkotlin/jvm/b/Functions<",
             "Ljava/lang/Void;",
             ">;)V"
         }
@@ -155,7 +155,7 @@
 .method public abstract b1()V
 .end method
 
-.method public abstract getAnimationStickerManager()Lcom/vk/attachpicker/stickers/r;
+.method public abstract getAnimationStickerManager()Lcom/vk/attachpicker/stickers/AnimationChoreographer;
 .end method
 
 .method public abstract getBackgroundButtonRect()Landroid/graphics/Rect;
@@ -169,7 +169,7 @@
 .method public abstract getDrawingHistorySize()I
 .end method
 
-.method public abstract getDrawingStateCopy()Lcom/vk/attachpicker/drawing/d;
+.method public abstract getDrawingStateCopy()Lcom/vk/attachpicker/drawing/DrawingState;
     .annotation build Landroidx/annotation/NonNull;
     .end annotation
 .end method
@@ -209,7 +209,7 @@
     .end annotation
 .end method
 
-.method public abstract getStickersState()Lcom/vk/attachpicker/stickers/m0;
+.method public abstract getStickersState()Lcom/vk/attachpicker/stickers/StickersState;
     .annotation build Landroidx/annotation/NonNull;
     .end annotation
 .end method
@@ -252,8 +252,8 @@
 .method public abstract setBrushType(I)V
 .end method
 
-.method public abstract setDrawingState(Lcom/vk/attachpicker/drawing/d;)V
-    .param p1    # Lcom/vk/attachpicker/drawing/d;
+.method public abstract setDrawingState(Lcom/vk/attachpicker/drawing/DrawingState;)V
+    .param p1    # Lcom/vk/attachpicker/drawing/DrawingState;
         .annotation build Landroidx/annotation/NonNull;
         .end annotation
     .end param
@@ -308,8 +308,8 @@
 .method public abstract setSelectReceiversEnabled(Z)V
 .end method
 
-.method public abstract setStickersState(Lcom/vk/attachpicker/stickers/m0;)V
-    .param p1    # Lcom/vk/attachpicker/stickers/m0;
+.method public abstract setStickersState(Lcom/vk/attachpicker/stickers/StickersState;)V
+    .param p1    # Lcom/vk/attachpicker/stickers/StickersState;
         .annotation build Landroidx/annotation/NonNull;
         .end annotation
     .end param

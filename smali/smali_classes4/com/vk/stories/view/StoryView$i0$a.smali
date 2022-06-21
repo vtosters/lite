@@ -3,7 +3,7 @@
 .source "StoryView.java"
 
 # interfaces
-.implements Lcom/vk/api/base/a;
+.implements Lcom/vk/api/base/ApiCallback;
 
 
 # annotations
@@ -19,7 +19,7 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Ljava/lang/Object;",
-        "Lcom/vk/api/base/a<",
+        "Lcom/vk/api/base/ApiCallback<",
         "Lcom/vk/dto/stories/model/GetStoriesResponse;",
         ">;"
     }
@@ -50,7 +50,7 @@
     const p1, 0x7f120371
 
     .line 5
-    invoke-static {p1}, Lcom/vk/core/util/k1;->a(I)V
+    invoke-static {p1}, Lcom/vk/core/util/ToastUtils;->a(I)V
 
     return-void
 .end method
@@ -63,12 +63,12 @@
 
     iget-object p1, p1, Lcom/vk/stories/view/StoryView$i0;->c:Lcom/vk/stories/view/StoryView;
 
-    iget-object v0, p1, Lcom/vk/stories/view/e1;->a:Lcom/vk/stories/view/StoryView$u0;
+    iget-object v0, p1, Lcom/vk/stories/view/BaseStoryView;->a:Lcom/vk/stories/view/StoryView$u0;
 
     if-eqz v0, :cond_0
 
     .line 3
-    iget-object p1, p1, Lcom/vk/stories/view/e1;->f:Lcom/vk/dto/stories/model/StoriesContainer;
+    iget-object p1, p1, Lcom/vk/stories/view/BaseStoryView;->f:Lcom/vk/dto/stories/model/StoriesContainer;
 
     invoke-interface {v0, p1}, Lcom/vk/stories/view/StoryView$u0;->a(Lcom/vk/dto/stories/model/StoriesContainer;)V
 
@@ -88,7 +88,7 @@
     const p1, 0x7f12024d
 
     :goto_0
-    invoke-static {p1}, Lcom/vk/core/util/k1;->a(I)V
+    invoke-static {p1}, Lcom/vk/core/util/ToastUtils;->a(I)V
 
     return-void
 .end method

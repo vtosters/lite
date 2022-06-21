@@ -3,7 +3,7 @@
 .source "NotificationsPresenter.kt"
 
 # interfaces
-.implements Lc/a/z/g;
+.implements Lio/reactivex/functions/Consumer;
 
 
 # annotations
@@ -22,7 +22,7 @@
         "Ljava/lang/Object;",
         ">",
         "Ljava/lang/Object;",
-        "Lc/a/z/g<",
+        "Lio/reactivex/functions/Consumer<",
         "Lcom/vk/dto/notifications/NotificationsGetResponse;",
         ">;"
     }
@@ -58,7 +58,7 @@
 
     const-string v1, "response"
 
-    invoke-static {p1, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-static {v0, p1}, Lcom/vk/notifications/NotificationsPresenter;->a(Lcom/vk/notifications/NotificationsPresenter;Lcom/vk/dto/notifications/NotificationsGetResponse;)V
 
@@ -95,11 +95,11 @@
     .line 4
     iget-object p1, p0, Lcom/vk/notifications/NotificationsPresenter$h;->a:Lcom/vk/notifications/NotificationsPresenter;
 
-    invoke-virtual {p1}, Lcom/vk/notifications/NotificationsPresenter;->a()Lcom/vk/notifications/l;
+    invoke-virtual {p1}, Lcom/vk/notifications/NotificationsPresenter;->a()Lcom/vk/notifications/NotificationsContract1;
 
     move-result-object p1
 
-    invoke-interface {p1}, Lcom/vk/notifications/l;->isResumed()Z
+    invoke-interface {p1}, Lcom/vk/notifications/NotificationsContract1;->isResumed()Z
 
     move-result p1
 
@@ -107,11 +107,11 @@
 
     iget-object p1, p0, Lcom/vk/notifications/NotificationsPresenter$h;->a:Lcom/vk/notifications/NotificationsPresenter;
 
-    invoke-virtual {p1}, Lcom/vk/notifications/NotificationsPresenter;->a()Lcom/vk/notifications/l;
+    invoke-virtual {p1}, Lcom/vk/notifications/NotificationsPresenter;->a()Lcom/vk/notifications/NotificationsContract1;
 
     move-result-object p1
 
-    invoke-interface {p1}, Lcom/vk/notifications/l;->m3()Z
+    invoke-interface {p1}, Lcom/vk/notifications/NotificationsContract1;->m3()Z
 
     move-result p1
 
@@ -120,11 +120,11 @@
     .line 5
     iget-object p1, p0, Lcom/vk/notifications/NotificationsPresenter$h;->a:Lcom/vk/notifications/NotificationsPresenter;
 
-    invoke-virtual {p1}, Lcom/vk/notifications/NotificationsPresenter;->a()Lcom/vk/notifications/l;
+    invoke-virtual {p1}, Lcom/vk/notifications/NotificationsPresenter;->a()Lcom/vk/notifications/NotificationsContract1;
 
     move-result-object p1
 
-    invoke-interface {p1}, Lcom/vk/notifications/l;->a3()Z
+    invoke-interface {p1}, Lcom/vk/notifications/NotificationsContract1;->a3()Z
 
     move-result p1
 
@@ -133,11 +133,11 @@
     .line 6
     iget-object p1, p0, Lcom/vk/notifications/NotificationsPresenter$h;->a:Lcom/vk/notifications/NotificationsPresenter;
 
-    invoke-virtual {p1}, Lcom/vk/notifications/NotificationsPresenter;->a()Lcom/vk/notifications/l;
+    invoke-virtual {p1}, Lcom/vk/notifications/NotificationsPresenter;->a()Lcom/vk/notifications/NotificationsContract1;
 
     move-result-object p1
 
-    invoke-interface {p1}, Lcom/vk/notifications/l;->F()Z
+    invoke-interface {p1}, Lcom/vk/notifications/NotificationsContract1;->F()Z
 
     goto :goto_0
 
@@ -145,11 +145,11 @@
     :cond_0
     iget-object p1, p0, Lcom/vk/notifications/NotificationsPresenter$h;->a:Lcom/vk/notifications/NotificationsPresenter;
 
-    invoke-virtual {p1}, Lcom/vk/notifications/NotificationsPresenter;->a()Lcom/vk/notifications/l;
+    invoke-virtual {p1}, Lcom/vk/notifications/NotificationsPresenter;->a()Lcom/vk/notifications/NotificationsContract1;
 
     move-result-object p1
 
-    invoke-interface {p1}, Lcom/vk/notifications/l;->F()Z
+    invoke-interface {p1}, Lcom/vk/notifications/NotificationsContract1;->F()Z
 
     .line 8
     :cond_1
@@ -161,7 +161,7 @@
     const/4 p1, 0x0
 
     .line 9
-    invoke-static {p1}, Lcom/vtosters/lite/w;->k(I)V
+    invoke-static {p1}, Lcom/vtosters/lite/MenuCountersState;->k(I)V
 
     :cond_2
     return-void

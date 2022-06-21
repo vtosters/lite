@@ -3,7 +3,7 @@
 .source "BaseProfilePresenter.kt"
 
 # interfaces
-.implements Lc/a/z/g;
+.implements Lio/reactivex/functions/Consumer;
 
 
 # annotations
@@ -22,7 +22,7 @@
         "Ljava/lang/Object;",
         ">",
         "Ljava/lang/Object;",
-        "Lc/a/z/g<",
+        "Lio/reactivex/functions/Consumer<",
         "Ljava/lang/Boolean;",
         ">;"
     }
@@ -56,7 +56,7 @@
     .line 1
     iget-object p1, p0, Lcom/vk/profile/presenter/BaseProfilePresenter$h;->a:Lcom/vk/profile/presenter/BaseProfilePresenter;
 
-    invoke-virtual {p1}, Lcom/vk/newsfeed/presenters/i;->I()Lcom/vtosters/lite/api/ExtendedUserProfile;
+    invoke-virtual {p1}, Lcom/vk/newsfeed/presenters/NewsFeedProfilePresenter;->I()Lcom/vtosters/lite/api/ExtendedUserProfile;
 
     move-result-object p1
 
@@ -70,13 +70,13 @@
     :cond_0
     iget-object p1, p0, Lcom/vk/profile/presenter/BaseProfilePresenter$h;->a:Lcom/vk/profile/presenter/BaseProfilePresenter;
 
-    invoke-virtual {p1}, Lcom/vk/newsfeed/presenters/i;->M()Lcom/vk/newsfeed/contracts/u;
+    invoke-virtual {p1}, Lcom/vk/newsfeed/presenters/NewsFeedProfilePresenter;->M()Lcom/vk/newsfeed/contracts/ProfileContract;
 
     move-result-object p1
 
     iget-object v0, p0, Lcom/vk/profile/presenter/BaseProfilePresenter$h;->b:Ljava/lang/String;
 
-    invoke-interface {p1, v0}, Lcom/vk/newsfeed/contracts/u;->m(Ljava/lang/String;)V
+    invoke-interface {p1, v0}, Lcom/vk/newsfeed/contracts/ProfileContract;->m(Ljava/lang/String;)V
 
     .line 3
     iget-object p1, p0, Lcom/vk/profile/presenter/BaseProfilePresenter$h;->a:Lcom/vk/profile/presenter/BaseProfilePresenter;
@@ -89,35 +89,35 @@
 
     iget-object p1, p0, Lcom/vk/profile/presenter/BaseProfilePresenter$h;->a:Lcom/vk/profile/presenter/BaseProfilePresenter;
 
-    invoke-virtual {p1}, Lcom/vk/newsfeed/presenters/i;->L()I
+    invoke-virtual {p1}, Lcom/vk/newsfeed/presenters/NewsFeedProfilePresenter;->L()I
 
     move-result p1
 
-    invoke-static {p1}, Lcom/vtosters/lite/i0/c;->a(I)Z
+    invoke-static {p1}, Lcom/vtosters/lite/auth/VKAccountManager;->a(I)Z
 
     move-result p1
 
     if-eqz p1, :cond_1
 
     .line 4
-    invoke-static {}, Lcom/vtosters/lite/i0/c;->c()Lcom/vk/auth/l;
+    invoke-static {}, Lcom/vtosters/lite/auth/VKAccountManager;->c()Lcom/vk/auth/VKAccountEditor;
 
     move-result-object p1
 
     iget-object v0, p0, Lcom/vk/profile/presenter/BaseProfilePresenter$h;->b:Ljava/lang/String;
 
-    invoke-virtual {p1, v0}, Lcom/vk/auth/l;->d(Ljava/lang/String;)Lcom/vk/auth/l;
+    invoke-virtual {p1, v0}, Lcom/vk/auth/VKAccountEditor;->d(Ljava/lang/String;)Lcom/vk/auth/VKAccountEditor;
 
-    invoke-virtual {p1}, Lcom/vk/auth/l;->a()Z
+    invoke-virtual {p1}, Lcom/vk/auth/VKAccountEditor;->a()Z
 
     .line 5
     iget-object p1, p0, Lcom/vk/profile/presenter/BaseProfilePresenter$h;->a:Lcom/vk/profile/presenter/BaseProfilePresenter;
 
-    invoke-virtual {p1}, Lcom/vk/newsfeed/presenters/i;->M()Lcom/vk/newsfeed/contracts/u;
+    invoke-virtual {p1}, Lcom/vk/newsfeed/presenters/NewsFeedProfilePresenter;->M()Lcom/vk/newsfeed/contracts/ProfileContract;
 
     move-result-object p1
 
-    invoke-interface {p1}, Lcom/vk/newsfeed/contracts/u;->X1()V
+    invoke-interface {p1}, Lcom/vk/newsfeed/contracts/ProfileContract;->X1()V
 
     :cond_1
     return-void

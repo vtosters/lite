@@ -1,5 +1,5 @@
 .class public Lcom/facebook/imagepipeline/memory/MemoryPooledByteBufferOutputStream;
-.super Lcom/facebook/common/memory/i;
+.super Lcom/facebook/common/memory/PooledByteBufferOutputStream;
 .source "MemoryPooledByteBufferOutputStream.java"
 
 
@@ -12,13 +12,13 @@
 
 
 # instance fields
-.field private final a:Lcom/facebook/imagepipeline/memory/t;
+.field private final a:Lcom/facebook/imagepipeline/memory/MemoryChunkPool;
 
-.field private b:Lcom/facebook/common/references/a;
+.field private b:Lcom/facebook/common/references/CloseableReference;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Lcom/facebook/common/references/a<",
-            "Lcom/facebook/imagepipeline/memory/s;",
+            "Lcom/facebook/common/references/CloseableReference<",
+            "Lcom/facebook/imagepipeline/memory/MemoryChunk;",
             ">;"
         }
     .end annotation
@@ -28,24 +28,24 @@
 
 
 # direct methods
-.method public constructor <init>(Lcom/facebook/imagepipeline/memory/t;)V
+.method public constructor <init>(Lcom/facebook/imagepipeline/memory/MemoryChunkPool;)V
     .locals 1
 
     .line 1
-    invoke-virtual {p1}, Lcom/facebook/imagepipeline/memory/t;->f()I
+    invoke-virtual {p1}, Lcom/facebook/imagepipeline/memory/MemoryChunkPool;->f()I
 
     move-result v0
 
-    invoke-direct {p0, p1, v0}, Lcom/facebook/imagepipeline/memory/MemoryPooledByteBufferOutputStream;-><init>(Lcom/facebook/imagepipeline/memory/t;I)V
+    invoke-direct {p0, p1, v0}, Lcom/facebook/imagepipeline/memory/MemoryPooledByteBufferOutputStream;-><init>(Lcom/facebook/imagepipeline/memory/MemoryChunkPool;I)V
 
     return-void
 .end method
 
-.method public constructor <init>(Lcom/facebook/imagepipeline/memory/t;I)V
+.method public constructor <init>(Lcom/facebook/imagepipeline/memory/MemoryChunkPool;I)V
     .locals 2
 
     .line 2
-    invoke-direct {p0}, Lcom/facebook/common/memory/i;-><init>()V
+    invoke-direct {p0}, Lcom/facebook/common/memory/PooledByteBufferOutputStream;-><init>()V
 
     const/4 v0, 0x0
 
@@ -60,32 +60,32 @@
 
     .line 3
     :goto_0
-    invoke-static {v1}, Lcom/facebook/common/internal/g;->a(Z)V
+    invoke-static {v1}, Lcom/facebook/common/internal/Preconditions;->a(Z)V
 
     .line 4
-    invoke-static {p1}, Lcom/facebook/common/internal/g;->a(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-static {p1}, Lcom/facebook/common/internal/Preconditions;->a(Ljava/lang/Object;)Ljava/lang/Object;
 
-    check-cast p1, Lcom/facebook/imagepipeline/memory/t;
+    check-cast p1, Lcom/facebook/imagepipeline/memory/MemoryChunkPool;
 
-    iput-object p1, p0, Lcom/facebook/imagepipeline/memory/MemoryPooledByteBufferOutputStream;->a:Lcom/facebook/imagepipeline/memory/t;
+    iput-object p1, p0, Lcom/facebook/imagepipeline/memory/MemoryPooledByteBufferOutputStream;->a:Lcom/facebook/imagepipeline/memory/MemoryChunkPool;
 
     .line 5
     iput v0, p0, Lcom/facebook/imagepipeline/memory/MemoryPooledByteBufferOutputStream;->c:I
 
     .line 6
-    iget-object p1, p0, Lcom/facebook/imagepipeline/memory/MemoryPooledByteBufferOutputStream;->a:Lcom/facebook/imagepipeline/memory/t;
+    iget-object p1, p0, Lcom/facebook/imagepipeline/memory/MemoryPooledByteBufferOutputStream;->a:Lcom/facebook/imagepipeline/memory/MemoryChunkPool;
 
     invoke-virtual {p1, p2}, Lcom/facebook/imagepipeline/memory/BasePool;->get(I)Ljava/lang/Object;
 
     move-result-object p1
 
-    iget-object p2, p0, Lcom/facebook/imagepipeline/memory/MemoryPooledByteBufferOutputStream;->a:Lcom/facebook/imagepipeline/memory/t;
+    iget-object p2, p0, Lcom/facebook/imagepipeline/memory/MemoryPooledByteBufferOutputStream;->a:Lcom/facebook/imagepipeline/memory/MemoryChunkPool;
 
-    invoke-static {p1, p2}, Lcom/facebook/common/references/a;->a(Ljava/lang/Object;Lcom/facebook/common/references/c;)Lcom/facebook/common/references/a;
+    invoke-static {p1, p2}, Lcom/facebook/common/references/CloseableReference;->a(Ljava/lang/Object;Lcom/facebook/common/references/ResourceReleaser;)Lcom/facebook/common/references/CloseableReference;
 
     move-result-object p1
 
-    iput-object p1, p0, Lcom/facebook/imagepipeline/memory/MemoryPooledByteBufferOutputStream;->b:Lcom/facebook/common/references/a;
+    iput-object p1, p0, Lcom/facebook/imagepipeline/memory/MemoryPooledByteBufferOutputStream;->b:Lcom/facebook/common/references/CloseableReference;
 
     return-void
 .end method
@@ -94,9 +94,9 @@
     .locals 1
 
     .line 1
-    iget-object v0, p0, Lcom/facebook/imagepipeline/memory/MemoryPooledByteBufferOutputStream;->b:Lcom/facebook/common/references/a;
+    iget-object v0, p0, Lcom/facebook/imagepipeline/memory/MemoryPooledByteBufferOutputStream;->b:Lcom/facebook/common/references/CloseableReference;
 
-    invoke-static {v0}, Lcom/facebook/common/references/a;->c(Lcom/facebook/common/references/a;)Z
+    invoke-static {v0}, Lcom/facebook/common/references/CloseableReference;->c(Lcom/facebook/common/references/CloseableReference;)Z
 
     move-result v0
 
@@ -119,27 +119,27 @@
     .locals 1
 
     .line 1
-    invoke-virtual {p0}, Lcom/facebook/imagepipeline/memory/MemoryPooledByteBufferOutputStream;->a()Lcom/facebook/imagepipeline/memory/v;
+    invoke-virtual {p0}, Lcom/facebook/imagepipeline/memory/MemoryPooledByteBufferOutputStream;->a()Lcom/facebook/imagepipeline/memory/MemoryPooledByteBuffer;
 
     move-result-object v0
 
     return-object v0
 .end method
 
-.method public a()Lcom/facebook/imagepipeline/memory/v;
+.method public a()Lcom/facebook/imagepipeline/memory/MemoryPooledByteBuffer;
     .locals 3
 
     .line 2
     invoke-direct {p0}, Lcom/facebook/imagepipeline/memory/MemoryPooledByteBufferOutputStream;->b()V
 
     .line 3
-    new-instance v0, Lcom/facebook/imagepipeline/memory/v;
+    new-instance v0, Lcom/facebook/imagepipeline/memory/MemoryPooledByteBuffer;
 
-    iget-object v1, p0, Lcom/facebook/imagepipeline/memory/MemoryPooledByteBufferOutputStream;->b:Lcom/facebook/common/references/a;
+    iget-object v1, p0, Lcom/facebook/imagepipeline/memory/MemoryPooledByteBufferOutputStream;->b:Lcom/facebook/common/references/CloseableReference;
 
     iget v2, p0, Lcom/facebook/imagepipeline/memory/MemoryPooledByteBufferOutputStream;->c:I
 
-    invoke-direct {v0, v1, v2}, Lcom/facebook/imagepipeline/memory/v;-><init>(Lcom/facebook/common/references/a;I)V
+    invoke-direct {v0, v1, v2}, Lcom/facebook/imagepipeline/memory/MemoryPooledByteBuffer;-><init>(Lcom/facebook/common/references/CloseableReference;I)V
 
     return-object v0
 .end method
@@ -151,15 +151,15 @@
     invoke-direct {p0}, Lcom/facebook/imagepipeline/memory/MemoryPooledByteBufferOutputStream;->b()V
 
     .line 5
-    iget-object v0, p0, Lcom/facebook/imagepipeline/memory/MemoryPooledByteBufferOutputStream;->b:Lcom/facebook/common/references/a;
+    iget-object v0, p0, Lcom/facebook/imagepipeline/memory/MemoryPooledByteBufferOutputStream;->b:Lcom/facebook/common/references/CloseableReference;
 
-    invoke-virtual {v0}, Lcom/facebook/common/references/a;->b()Ljava/lang/Object;
+    invoke-virtual {v0}, Lcom/facebook/common/references/CloseableReference;->b()Ljava/lang/Object;
 
     move-result-object v0
 
-    check-cast v0, Lcom/facebook/imagepipeline/memory/s;
+    check-cast v0, Lcom/facebook/imagepipeline/memory/MemoryChunk;
 
-    invoke-interface {v0}, Lcom/facebook/imagepipeline/memory/s;->l0()I
+    invoke-interface {v0}, Lcom/facebook/imagepipeline/memory/MemoryChunk;->l0()I
 
     move-result v0
 
@@ -169,42 +169,42 @@
 
     .line 6
     :cond_0
-    iget-object v0, p0, Lcom/facebook/imagepipeline/memory/MemoryPooledByteBufferOutputStream;->a:Lcom/facebook/imagepipeline/memory/t;
+    iget-object v0, p0, Lcom/facebook/imagepipeline/memory/MemoryPooledByteBufferOutputStream;->a:Lcom/facebook/imagepipeline/memory/MemoryChunkPool;
 
     invoke-virtual {v0, p1}, Lcom/facebook/imagepipeline/memory/BasePool;->get(I)Ljava/lang/Object;
 
     move-result-object p1
 
-    check-cast p1, Lcom/facebook/imagepipeline/memory/s;
+    check-cast p1, Lcom/facebook/imagepipeline/memory/MemoryChunk;
 
     .line 7
-    iget-object v0, p0, Lcom/facebook/imagepipeline/memory/MemoryPooledByteBufferOutputStream;->b:Lcom/facebook/common/references/a;
+    iget-object v0, p0, Lcom/facebook/imagepipeline/memory/MemoryPooledByteBufferOutputStream;->b:Lcom/facebook/common/references/CloseableReference;
 
-    invoke-virtual {v0}, Lcom/facebook/common/references/a;->b()Ljava/lang/Object;
+    invoke-virtual {v0}, Lcom/facebook/common/references/CloseableReference;->b()Ljava/lang/Object;
 
     move-result-object v0
 
-    check-cast v0, Lcom/facebook/imagepipeline/memory/s;
+    check-cast v0, Lcom/facebook/imagepipeline/memory/MemoryChunk;
 
     iget v1, p0, Lcom/facebook/imagepipeline/memory/MemoryPooledByteBufferOutputStream;->c:I
 
     const/4 v2, 0x0
 
-    invoke-interface {v0, v2, p1, v2, v1}, Lcom/facebook/imagepipeline/memory/s;->a(ILcom/facebook/imagepipeline/memory/s;II)V
+    invoke-interface {v0, v2, p1, v2, v1}, Lcom/facebook/imagepipeline/memory/MemoryChunk;->a(ILcom/facebook/imagepipeline/memory/MemoryChunk;II)V
 
     .line 8
-    iget-object v0, p0, Lcom/facebook/imagepipeline/memory/MemoryPooledByteBufferOutputStream;->b:Lcom/facebook/common/references/a;
+    iget-object v0, p0, Lcom/facebook/imagepipeline/memory/MemoryPooledByteBufferOutputStream;->b:Lcom/facebook/common/references/CloseableReference;
 
-    invoke-virtual {v0}, Lcom/facebook/common/references/a;->close()V
+    invoke-virtual {v0}, Lcom/facebook/common/references/CloseableReference;->close()V
 
     .line 9
-    iget-object v0, p0, Lcom/facebook/imagepipeline/memory/MemoryPooledByteBufferOutputStream;->a:Lcom/facebook/imagepipeline/memory/t;
+    iget-object v0, p0, Lcom/facebook/imagepipeline/memory/MemoryPooledByteBufferOutputStream;->a:Lcom/facebook/imagepipeline/memory/MemoryChunkPool;
 
-    invoke-static {p1, v0}, Lcom/facebook/common/references/a;->a(Ljava/lang/Object;Lcom/facebook/common/references/c;)Lcom/facebook/common/references/a;
+    invoke-static {p1, v0}, Lcom/facebook/common/references/CloseableReference;->a(Ljava/lang/Object;Lcom/facebook/common/references/ResourceReleaser;)Lcom/facebook/common/references/CloseableReference;
 
     move-result-object p1
 
-    iput-object p1, p0, Lcom/facebook/imagepipeline/memory/MemoryPooledByteBufferOutputStream;->b:Lcom/facebook/common/references/a;
+    iput-object p1, p0, Lcom/facebook/imagepipeline/memory/MemoryPooledByteBufferOutputStream;->b:Lcom/facebook/common/references/CloseableReference;
 
     return-void
 .end method
@@ -213,14 +213,14 @@
     .locals 1
 
     .line 1
-    iget-object v0, p0, Lcom/facebook/imagepipeline/memory/MemoryPooledByteBufferOutputStream;->b:Lcom/facebook/common/references/a;
+    iget-object v0, p0, Lcom/facebook/imagepipeline/memory/MemoryPooledByteBufferOutputStream;->b:Lcom/facebook/common/references/CloseableReference;
 
-    invoke-static {v0}, Lcom/facebook/common/references/a;->b(Lcom/facebook/common/references/a;)V
+    invoke-static {v0}, Lcom/facebook/common/references/CloseableReference;->b(Lcom/facebook/common/references/CloseableReference;)V
 
     const/4 v0, 0x0
 
     .line 2
-    iput-object v0, p0, Lcom/facebook/imagepipeline/memory/MemoryPooledByteBufferOutputStream;->b:Lcom/facebook/common/references/a;
+    iput-object v0, p0, Lcom/facebook/imagepipeline/memory/MemoryPooledByteBufferOutputStream;->b:Lcom/facebook/common/references/CloseableReference;
 
     const/4 v0, -0x1
 
@@ -228,7 +228,7 @@
     iput v0, p0, Lcom/facebook/imagepipeline/memory/MemoryPooledByteBufferOutputStream;->c:I
 
     .line 4
-    invoke-super {p0}, Lcom/facebook/common/memory/i;->close()V
+    invoke-super {p0}, Lcom/facebook/common/memory/PooledByteBufferOutputStream;->close()V
 
     return-void
 .end method
@@ -296,17 +296,17 @@
     invoke-virtual {p0, v0}, Lcom/facebook/imagepipeline/memory/MemoryPooledByteBufferOutputStream;->a(I)V
 
     .line 5
-    iget-object v0, p0, Lcom/facebook/imagepipeline/memory/MemoryPooledByteBufferOutputStream;->b:Lcom/facebook/common/references/a;
+    iget-object v0, p0, Lcom/facebook/imagepipeline/memory/MemoryPooledByteBufferOutputStream;->b:Lcom/facebook/common/references/CloseableReference;
 
-    invoke-virtual {v0}, Lcom/facebook/common/references/a;->b()Ljava/lang/Object;
+    invoke-virtual {v0}, Lcom/facebook/common/references/CloseableReference;->b()Ljava/lang/Object;
 
     move-result-object v0
 
-    check-cast v0, Lcom/facebook/imagepipeline/memory/s;
+    check-cast v0, Lcom/facebook/imagepipeline/memory/MemoryChunk;
 
     iget v1, p0, Lcom/facebook/imagepipeline/memory/MemoryPooledByteBufferOutputStream;->c:I
 
-    invoke-interface {v0, v1, p1, p2, p3}, Lcom/facebook/imagepipeline/memory/s;->b(I[BII)I
+    invoke-interface {v0, v1, p1, p2, p3}, Lcom/facebook/imagepipeline/memory/MemoryChunk;->b(I[BII)I
 
     .line 6
     iget p1, p0, Lcom/facebook/imagepipeline/memory/MemoryPooledByteBufferOutputStream;->c:I

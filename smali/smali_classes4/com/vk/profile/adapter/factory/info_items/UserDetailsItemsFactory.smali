@@ -1,12 +1,12 @@
 .class public final Lcom/vk/profile/adapter/factory/info_items/UserDetailsItemsFactory;
-.super Lcom/vk/profile/adapter/b/a;
+.super Lcom/vk/profile/adapter/b/BaseItemsFactory;
 .source "UserDetailsItemsFactory.kt"
 
 
 # annotations
 .annotation system Ldalvik/annotation/Signature;
     value = {
-        "Lcom/vk/profile/adapter/b/a<",
+        "Lcom/vk/profile/adapter/b/BaseItemsFactory<",
         "Lcom/vtosters/lite/api/ExtendedUserProfile;",
         ">;"
     }
@@ -14,90 +14,90 @@
 
 
 # instance fields
-.field private final d:Lcom/vk/profile/adapter/b/a$h;
+.field private final d:Lcom/vk/profile/adapter/b/BaseItemsFactory$h;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Lcom/vk/profile/adapter/b/a<",
+            "Lcom/vk/profile/adapter/b/BaseItemsFactory<",
             "Lcom/vtosters/lite/api/ExtendedUserProfile;",
             ">.h;"
         }
     .end annotation
 .end field
 
-.field private final e:Lcom/vk/profile/adapter/b/a$g;
+.field private final e:Lcom/vk/profile/adapter/b/BaseItemsFactory$g;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Lcom/vk/profile/adapter/b/a<",
+            "Lcom/vk/profile/adapter/b/BaseItemsFactory<",
             "Lcom/vtosters/lite/api/ExtendedUserProfile;",
             ">.g;"
         }
     .end annotation
 .end field
 
-.field private final f:Lcom/vk/profile/adapter/b/a$g;
+.field private final f:Lcom/vk/profile/adapter/b/BaseItemsFactory$g;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Lcom/vk/profile/adapter/b/a<",
+            "Lcom/vk/profile/adapter/b/BaseItemsFactory<",
             "Lcom/vtosters/lite/api/ExtendedUserProfile;",
             ">.g;"
         }
     .end annotation
 .end field
 
-.field private final g:Lcom/vk/profile/adapter/b/a$g;
+.field private final g:Lcom/vk/profile/adapter/b/BaseItemsFactory$g;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Lcom/vk/profile/adapter/b/a<",
+            "Lcom/vk/profile/adapter/b/BaseItemsFactory<",
             "Lcom/vtosters/lite/api/ExtendedUserProfile;",
             ">.g;"
         }
     .end annotation
 .end field
 
-.field private final h:Lcom/vk/profile/adapter/b/a$g;
+.field private final h:Lcom/vk/profile/adapter/b/BaseItemsFactory$g;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Lcom/vk/profile/adapter/b/a<",
+            "Lcom/vk/profile/adapter/b/BaseItemsFactory<",
             "Lcom/vtosters/lite/api/ExtendedUserProfile;",
             ">.g;"
         }
     .end annotation
 .end field
 
-.field private final i:Lcom/vk/profile/adapter/b/a$g;
+.field private final i:Lcom/vk/profile/adapter/b/BaseItemsFactory$g;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Lcom/vk/profile/adapter/b/a<",
+            "Lcom/vk/profile/adapter/b/BaseItemsFactory<",
             "Lcom/vtosters/lite/api/ExtendedUserProfile;",
             ">.g;"
         }
     .end annotation
 .end field
 
-.field private final j:Lcom/vk/profile/adapter/b/a$g;
+.field private final j:Lcom/vk/profile/adapter/b/BaseItemsFactory$g;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Lcom/vk/profile/adapter/b/a<",
+            "Lcom/vk/profile/adapter/b/BaseItemsFactory<",
             "Lcom/vtosters/lite/api/ExtendedUserProfile;",
             ">.g;"
         }
     .end annotation
 .end field
 
-.field private final k:Lcom/vk/profile/adapter/b/a$g;
+.field private final k:Lcom/vk/profile/adapter/b/BaseItemsFactory$g;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Lcom/vk/profile/adapter/b/a<",
+            "Lcom/vk/profile/adapter/b/BaseItemsFactory<",
             "Lcom/vtosters/lite/api/ExtendedUserProfile;",
             ">.g;"
         }
     .end annotation
 .end field
 
-.field private final l:Lcom/vk/profile/adapter/b/a$g;
+.field private final l:Lcom/vk/profile/adapter/b/BaseItemsFactory$g;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Lcom/vk/profile/adapter/b/a<",
+            "Lcom/vk/profile/adapter/b/BaseItemsFactory<",
             "Lcom/vtosters/lite/api/ExtendedUserProfile;",
             ">.g;"
         }
@@ -112,106 +112,106 @@
     .locals 1
 
     .line 1
-    invoke-direct {p0, p1}, Lcom/vk/profile/adapter/b/a;-><init>(Landroid/content/Context;)V
+    invoke-direct {p0, p1}, Lcom/vk/profile/adapter/b/BaseItemsFactory;-><init>(Landroid/content/Context;)V
 
     iput-object p2, p0, Lcom/vk/profile/adapter/factory/info_items/UserDetailsItemsFactory;->m:Lcom/vk/profile/presenter/UserPresenter;
 
     .line 2
-    new-instance p2, Lcom/vk/profile/adapter/b/a$h;
+    new-instance p2, Lcom/vk/profile/adapter/b/BaseItemsFactory$h;
 
     new-instance v0, Lcom/vk/profile/adapter/factory/info_items/UserDetailsItemsFactory$status$1;
 
     invoke-direct {v0, p0}, Lcom/vk/profile/adapter/factory/info_items/UserDetailsItemsFactory$status$1;-><init>(Lcom/vk/profile/adapter/factory/info_items/UserDetailsItemsFactory;)V
 
-    invoke-direct {p2, p0, v0}, Lcom/vk/profile/adapter/b/a$h;-><init>(Lcom/vk/profile/adapter/b/a;Lkotlin/jvm/b/b;)V
+    invoke-direct {p2, p0, v0}, Lcom/vk/profile/adapter/b/BaseItemsFactory$h;-><init>(Lcom/vk/profile/adapter/b/BaseItemsFactory;Lkotlin/jvm/b/Functions2;)V
 
-    iput-object p2, p0, Lcom/vk/profile/adapter/factory/info_items/UserDetailsItemsFactory;->d:Lcom/vk/profile/adapter/b/a$h;
+    iput-object p2, p0, Lcom/vk/profile/adapter/factory/info_items/UserDetailsItemsFactory;->d:Lcom/vk/profile/adapter/b/BaseItemsFactory$h;
 
     .line 3
-    new-instance p2, Lcom/vk/profile/adapter/b/a$g;
+    new-instance p2, Lcom/vk/profile/adapter/b/BaseItemsFactory$g;
 
     new-instance v0, Lcom/vk/profile/adapter/factory/info_items/UserDetailsItemsFactory$mainInfo$1;
 
     invoke-direct {v0, p0, p1}, Lcom/vk/profile/adapter/factory/info_items/UserDetailsItemsFactory$mainInfo$1;-><init>(Lcom/vk/profile/adapter/factory/info_items/UserDetailsItemsFactory;Landroid/content/Context;)V
 
-    invoke-direct {p2, p0, v0}, Lcom/vk/profile/adapter/b/a$g;-><init>(Lcom/vk/profile/adapter/b/a;Lkotlin/jvm/b/b;)V
+    invoke-direct {p2, p0, v0}, Lcom/vk/profile/adapter/b/BaseItemsFactory$g;-><init>(Lcom/vk/profile/adapter/b/BaseItemsFactory;Lkotlin/jvm/b/Functions2;)V
 
-    iput-object p2, p0, Lcom/vk/profile/adapter/factory/info_items/UserDetailsItemsFactory;->e:Lcom/vk/profile/adapter/b/a$g;
+    iput-object p2, p0, Lcom/vk/profile/adapter/factory/info_items/UserDetailsItemsFactory;->e:Lcom/vk/profile/adapter/b/BaseItemsFactory$g;
 
     .line 4
-    new-instance p2, Lcom/vk/profile/adapter/b/a$g;
+    new-instance p2, Lcom/vk/profile/adapter/b/BaseItemsFactory$g;
 
     new-instance v0, Lcom/vk/profile/adapter/factory/info_items/UserDetailsItemsFactory$categories$1;
 
     invoke-direct {v0, p0, p1}, Lcom/vk/profile/adapter/factory/info_items/UserDetailsItemsFactory$categories$1;-><init>(Lcom/vk/profile/adapter/factory/info_items/UserDetailsItemsFactory;Landroid/content/Context;)V
 
-    invoke-direct {p2, p0, v0}, Lcom/vk/profile/adapter/b/a$g;-><init>(Lcom/vk/profile/adapter/b/a;Lkotlin/jvm/b/b;)V
+    invoke-direct {p2, p0, v0}, Lcom/vk/profile/adapter/b/BaseItemsFactory$g;-><init>(Lcom/vk/profile/adapter/b/BaseItemsFactory;Lkotlin/jvm/b/Functions2;)V
 
-    iput-object p2, p0, Lcom/vk/profile/adapter/factory/info_items/UserDetailsItemsFactory;->f:Lcom/vk/profile/adapter/b/a$g;
+    iput-object p2, p0, Lcom/vk/profile/adapter/factory/info_items/UserDetailsItemsFactory;->f:Lcom/vk/profile/adapter/b/BaseItemsFactory$g;
 
     .line 5
-    new-instance p2, Lcom/vk/profile/adapter/b/a$g;
+    new-instance p2, Lcom/vk/profile/adapter/b/BaseItemsFactory$g;
 
     new-instance v0, Lcom/vk/profile/adapter/factory/info_items/UserDetailsItemsFactory$gifts$1;
 
     invoke-direct {v0, p0, p1}, Lcom/vk/profile/adapter/factory/info_items/UserDetailsItemsFactory$gifts$1;-><init>(Lcom/vk/profile/adapter/factory/info_items/UserDetailsItemsFactory;Landroid/content/Context;)V
 
-    invoke-direct {p2, p0, v0}, Lcom/vk/profile/adapter/b/a$g;-><init>(Lcom/vk/profile/adapter/b/a;Lkotlin/jvm/b/b;)V
+    invoke-direct {p2, p0, v0}, Lcom/vk/profile/adapter/b/BaseItemsFactory$g;-><init>(Lcom/vk/profile/adapter/b/BaseItemsFactory;Lkotlin/jvm/b/Functions2;)V
 
-    iput-object p2, p0, Lcom/vk/profile/adapter/factory/info_items/UserDetailsItemsFactory;->g:Lcom/vk/profile/adapter/b/a$g;
+    iput-object p2, p0, Lcom/vk/profile/adapter/factory/info_items/UserDetailsItemsFactory;->g:Lcom/vk/profile/adapter/b/BaseItemsFactory$g;
 
     .line 6
-    new-instance p2, Lcom/vk/profile/adapter/b/a$g;
+    new-instance p2, Lcom/vk/profile/adapter/b/BaseItemsFactory$g;
 
     new-instance v0, Lcom/vk/profile/adapter/factory/info_items/UserDetailsItemsFactory$info$1;
 
     invoke-direct {v0, p0}, Lcom/vk/profile/adapter/factory/info_items/UserDetailsItemsFactory$info$1;-><init>(Lcom/vk/profile/adapter/factory/info_items/UserDetailsItemsFactory;)V
 
-    invoke-direct {p2, p0, v0}, Lcom/vk/profile/adapter/b/a$g;-><init>(Lcom/vk/profile/adapter/b/a;Lkotlin/jvm/b/b;)V
+    invoke-direct {p2, p0, v0}, Lcom/vk/profile/adapter/b/BaseItemsFactory$g;-><init>(Lcom/vk/profile/adapter/b/BaseItemsFactory;Lkotlin/jvm/b/Functions2;)V
 
-    iput-object p2, p0, Lcom/vk/profile/adapter/factory/info_items/UserDetailsItemsFactory;->h:Lcom/vk/profile/adapter/b/a$g;
+    iput-object p2, p0, Lcom/vk/profile/adapter/factory/info_items/UserDetailsItemsFactory;->h:Lcom/vk/profile/adapter/b/BaseItemsFactory$g;
 
     .line 7
-    new-instance p2, Lcom/vk/profile/adapter/b/a$g;
+    new-instance p2, Lcom/vk/profile/adapter/b/BaseItemsFactory$g;
 
     new-instance v0, Lcom/vk/profile/adapter/factory/info_items/UserDetailsItemsFactory$contacts$1;
 
     invoke-direct {v0, p1}, Lcom/vk/profile/adapter/factory/info_items/UserDetailsItemsFactory$contacts$1;-><init>(Landroid/content/Context;)V
 
-    invoke-direct {p2, p0, v0}, Lcom/vk/profile/adapter/b/a$g;-><init>(Lcom/vk/profile/adapter/b/a;Lkotlin/jvm/b/b;)V
+    invoke-direct {p2, p0, v0}, Lcom/vk/profile/adapter/b/BaseItemsFactory$g;-><init>(Lcom/vk/profile/adapter/b/BaseItemsFactory;Lkotlin/jvm/b/Functions2;)V
 
-    iput-object p2, p0, Lcom/vk/profile/adapter/factory/info_items/UserDetailsItemsFactory;->i:Lcom/vk/profile/adapter/b/a$g;
+    iput-object p2, p0, Lcom/vk/profile/adapter/factory/info_items/UserDetailsItemsFactory;->i:Lcom/vk/profile/adapter/b/BaseItemsFactory$g;
 
     .line 8
-    new-instance p2, Lcom/vk/profile/adapter/b/a$g;
+    new-instance p2, Lcom/vk/profile/adapter/b/BaseItemsFactory$g;
 
     new-instance v0, Lcom/vk/profile/adapter/factory/info_items/UserDetailsItemsFactory$career$1;
 
     invoke-direct {v0, p1}, Lcom/vk/profile/adapter/factory/info_items/UserDetailsItemsFactory$career$1;-><init>(Landroid/content/Context;)V
 
-    invoke-direct {p2, p0, v0}, Lcom/vk/profile/adapter/b/a$g;-><init>(Lcom/vk/profile/adapter/b/a;Lkotlin/jvm/b/b;)V
+    invoke-direct {p2, p0, v0}, Lcom/vk/profile/adapter/b/BaseItemsFactory$g;-><init>(Lcom/vk/profile/adapter/b/BaseItemsFactory;Lkotlin/jvm/b/Functions2;)V
 
-    iput-object p2, p0, Lcom/vk/profile/adapter/factory/info_items/UserDetailsItemsFactory;->j:Lcom/vk/profile/adapter/b/a$g;
+    iput-object p2, p0, Lcom/vk/profile/adapter/factory/info_items/UserDetailsItemsFactory;->j:Lcom/vk/profile/adapter/b/BaseItemsFactory$g;
 
     .line 9
-    new-instance p2, Lcom/vk/profile/adapter/b/a$g;
+    new-instance p2, Lcom/vk/profile/adapter/b/BaseItemsFactory$g;
 
     sget-object v0, Lcom/vk/profile/adapter/factory/info_items/UserDetailsItemsFactory$education$1;->a:Lcom/vk/profile/adapter/factory/info_items/UserDetailsItemsFactory$education$1;
 
-    invoke-direct {p2, p0, v0}, Lcom/vk/profile/adapter/b/a$g;-><init>(Lcom/vk/profile/adapter/b/a;Lkotlin/jvm/b/b;)V
+    invoke-direct {p2, p0, v0}, Lcom/vk/profile/adapter/b/BaseItemsFactory$g;-><init>(Lcom/vk/profile/adapter/b/BaseItemsFactory;Lkotlin/jvm/b/Functions2;)V
 
-    iput-object p2, p0, Lcom/vk/profile/adapter/factory/info_items/UserDetailsItemsFactory;->k:Lcom/vk/profile/adapter/b/a$g;
+    iput-object p2, p0, Lcom/vk/profile/adapter/factory/info_items/UserDetailsItemsFactory;->k:Lcom/vk/profile/adapter/b/BaseItemsFactory$g;
 
     .line 10
-    new-instance p2, Lcom/vk/profile/adapter/b/a$g;
+    new-instance p2, Lcom/vk/profile/adapter/b/BaseItemsFactory$g;
 
     new-instance v0, Lcom/vk/profile/adapter/factory/info_items/UserDetailsItemsFactory$personalInfo$1;
 
     invoke-direct {v0, p1}, Lcom/vk/profile/adapter/factory/info_items/UserDetailsItemsFactory$personalInfo$1;-><init>(Landroid/content/Context;)V
 
-    invoke-direct {p2, p0, v0}, Lcom/vk/profile/adapter/b/a$g;-><init>(Lcom/vk/profile/adapter/b/a;Lkotlin/jvm/b/b;)V
+    invoke-direct {p2, p0, v0}, Lcom/vk/profile/adapter/b/BaseItemsFactory$g;-><init>(Lcom/vk/profile/adapter/b/BaseItemsFactory;Lkotlin/jvm/b/Functions2;)V
 
-    iput-object p2, p0, Lcom/vk/profile/adapter/factory/info_items/UserDetailsItemsFactory;->l:Lcom/vk/profile/adapter/b/a$g;
+    iput-object p2, p0, Lcom/vk/profile/adapter/factory/info_items/UserDetailsItemsFactory;->l:Lcom/vk/profile/adapter/b/BaseItemsFactory$g;
 
     return-void
 .end method
@@ -343,7 +343,7 @@
 
     invoke-virtual {p1, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {p0}, Lcom/vk/profile/adapter/b/a;->b()Landroid/content/res/Resources;
+    invoke-virtual {p0}, Lcom/vk/profile/adapter/b/BaseItemsFactory;->b()Landroid/content/res/Resources;
 
     move-result-object v2
 
@@ -383,13 +383,13 @@
 
     .line 28
     :goto_2
-    invoke-static {p1}, Lcom/vk/common/links/b;->a(Ljava/lang/CharSequence;)Ljava/lang/CharSequence;
+    invoke-static {p1}, Lcom/vk/common/links/LinkParser;->a(Ljava/lang/CharSequence;)Ljava/lang/CharSequence;
 
     move-result-object p1
 
     const-string v0, "LinkParser.parseLinks(if\u2026tUtils.join(\", \", parts))"
 
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     return-object p1
 .end method
@@ -409,55 +409,55 @@
     if-lez p2, :cond_1
 
     .line 15
-    invoke-static {}, Lcom/vk/bridges/g;->a()Lcom/vk/bridges/f;
+    invoke-static {}, Lcom/vk/bridges/AuthBridge;->a()Lcom/vk/bridges/AuthBridge3;
 
     move-result-object v0
 
-    invoke-interface {v0, p2}, Lcom/vk/bridges/f;->b(I)Z
+    invoke-interface {v0, p2}, Lcom/vk/bridges/AuthBridge3;->b(I)Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
     .line 16
-    new-instance v0, Lcom/vk/profile/ui/g/b$a;
+    new-instance v0, Lcom/vk/profile/ui/g/ProfileVideoCatalogFragment$a;
 
-    invoke-direct {v0, p2, p1, p3}, Lcom/vk/profile/ui/g/b$a;-><init>(ILjava/lang/String;Ljava/lang/String;)V
+    invoke-direct {v0, p2, p1, p3}, Lcom/vk/profile/ui/g/ProfileVideoCatalogFragment$a;-><init>(ILjava/lang/String;Ljava/lang/String;)V
 
-    invoke-virtual {p0}, Lcom/vk/profile/adapter/b/a;->a()Landroid/content/Context;
+    invoke-virtual {p0}, Lcom/vk/profile/adapter/b/BaseItemsFactory;->a()Landroid/content/Context;
 
     move-result-object p1
 
-    invoke-virtual {v0, p1}, Lcom/vk/navigation/o;->a(Landroid/content/Context;)V
+    invoke-virtual {v0, p1}, Lcom/vk/navigation/Navigator;->a(Landroid/content/Context;)V
 
     goto :goto_0
 
     .line 17
     :cond_0
-    new-instance v0, Lcom/vtosters/lite/fragments/y2/z$a;
+    new-instance v0, Lcom/vtosters/lite/fragments/y2/VideoOwnerCatalogFragment$a;
 
-    invoke-direct {v0, p2, p1, p3}, Lcom/vtosters/lite/fragments/y2/z$a;-><init>(ILjava/lang/String;Ljava/lang/String;)V
+    invoke-direct {v0, p2, p1, p3}, Lcom/vtosters/lite/fragments/y2/VideoOwnerCatalogFragment$a;-><init>(ILjava/lang/String;Ljava/lang/String;)V
 
     .line 18
-    invoke-virtual {p0}, Lcom/vk/profile/adapter/b/a;->a()Landroid/content/Context;
+    invoke-virtual {p0}, Lcom/vk/profile/adapter/b/BaseItemsFactory;->a()Landroid/content/Context;
 
     move-result-object p1
 
-    invoke-virtual {v0, p1}, Lcom/vk/navigation/o;->a(Landroid/content/Context;)V
+    invoke-virtual {v0, p1}, Lcom/vk/navigation/Navigator;->a(Landroid/content/Context;)V
 
     goto :goto_0
 
     .line 19
     :cond_1
-    new-instance v0, Lcom/vk/profile/ui/g/a$a;
+    new-instance v0, Lcom/vk/profile/ui/g/CommunityVideoCatalogFragment$a;
 
-    invoke-direct {v0, p2, p1, p3}, Lcom/vk/profile/ui/g/a$a;-><init>(ILjava/lang/String;Ljava/lang/String;)V
+    invoke-direct {v0, p2, p1, p3}, Lcom/vk/profile/ui/g/CommunityVideoCatalogFragment$a;-><init>(ILjava/lang/String;Ljava/lang/String;)V
 
-    invoke-virtual {p0}, Lcom/vk/profile/adapter/b/a;->a()Landroid/content/Context;
+    invoke-virtual {p0}, Lcom/vk/profile/adapter/b/BaseItemsFactory;->a()Landroid/content/Context;
 
     move-result-object p1
 
-    invoke-virtual {v0, p1}, Lcom/vk/navigation/o;->a(Landroid/content/Context;)V
+    invoke-virtual {v0, p1}, Lcom/vk/navigation/Navigator;->a(Landroid/content/Context;)V
 
     :goto_0
     return-void
@@ -474,7 +474,7 @@
 
     .line 1
     :cond_0
-    invoke-static {}, Lcom/vk/emoji/b;->g()Lcom/vk/emoji/b;
+    invoke-static {}, Lcom/vk/emoji/Emoji;->g()Lcom/vk/emoji/Emoji;
 
     move-result-object v1
 
@@ -490,14 +490,14 @@
     iget-object v2, p1, Lcom/vtosters/lite/api/ExtendedUserProfile;->m:Ljava/lang/String;
 
     :goto_0
-    invoke-virtual {v1, v2}, Lcom/vk/emoji/b;->a(Ljava/lang/CharSequence;)Ljava/lang/CharSequence;
+    invoke-virtual {v1, v2}, Lcom/vk/emoji/Emoji;->a(Ljava/lang/CharSequence;)Ljava/lang/CharSequence;
 
     move-result-object v5
 
     const-string v1, "currentStatus"
 
     .line 2
-    invoke-static {v5, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v5, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-interface {v5}, Ljava/lang/CharSequence;->length()I
 
@@ -528,7 +528,7 @@
 
     .line 4
     :cond_3
-    invoke-static {p1}, Lcom/vk/profile/utils/d;->d(Lcom/vtosters/lite/api/ExtendedUserProfile;)Z
+    invoke-static {p1}, Lcom/vk/profile/utils/ProfileExt;->d(Lcom/vtosters/lite/api/ExtendedUserProfile;)Z
 
     move-result v1
 
@@ -580,7 +580,7 @@
 
     move-object v3, v0
 
-    invoke-direct/range {v3 .. v12}, Lcom/vk/profile/adapter/items/StatusInfoItem;-><init>(ILjava/lang/CharSequence;ILjava/lang/Runnable;IILcom/vk/dto/music/MusicTrack;ILkotlin/jvm/internal/i;)V
+    invoke-direct/range {v3 .. v12}, Lcom/vk/profile/adapter/items/StatusInfoItem;-><init>(ILjava/lang/CharSequence;ILjava/lang/Runnable;IILcom/vk/dto/music/MusicTrack;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     const/4 p1, 0x3
 
@@ -593,14 +593,14 @@
 
 
 # virtual methods
-.method public a(Lcom/vtosters/lite/api/ExtendedUserProfile;)[Lcom/vk/profile/adapter/b/a$c;
+.method public a(Lcom/vtosters/lite/api/ExtendedUserProfile;)[Lcom/vk/profile/adapter/b/BaseItemsFactory$c;
     .locals 5
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
             "Lcom/vtosters/lite/api/ExtendedUserProfile;",
             ")[",
-            "Lcom/vk/profile/adapter/b/a<",
+            "Lcom/vk/profile/adapter/b/BaseItemsFactory<",
             "Lcom/vtosters/lite/api/ExtendedUserProfile;",
             ">.c;"
         }
@@ -608,138 +608,138 @@
 
     const/16 p1, 0x9
 
-    new-array p1, p1, [Lcom/vk/profile/adapter/b/a$c;
+    new-array p1, p1, [Lcom/vk/profile/adapter/b/BaseItemsFactory$c;
 
     .line 6
-    new-instance v0, Lcom/vk/profile/adapter/b/a$c;
+    new-instance v0, Lcom/vk/profile/adapter/b/BaseItemsFactory$c;
 
     const/4 v1, 0x1
 
-    new-array v2, v1, [Lcom/vk/profile/adapter/b/a$e;
+    new-array v2, v1, [Lcom/vk/profile/adapter/b/BaseItemsFactory$e;
 
-    iget-object v3, p0, Lcom/vk/profile/adapter/factory/info_items/UserDetailsItemsFactory;->d:Lcom/vk/profile/adapter/b/a$h;
+    iget-object v3, p0, Lcom/vk/profile/adapter/factory/info_items/UserDetailsItemsFactory;->d:Lcom/vk/profile/adapter/b/BaseItemsFactory$h;
 
     const/4 v4, 0x0
 
     aput-object v3, v2, v4
 
-    invoke-direct {v0, p0, v2}, Lcom/vk/profile/adapter/b/a$c;-><init>(Lcom/vk/profile/adapter/b/a;[Lcom/vk/profile/adapter/b/a$e;)V
+    invoke-direct {v0, p0, v2}, Lcom/vk/profile/adapter/b/BaseItemsFactory$c;-><init>(Lcom/vk/profile/adapter/b/BaseItemsFactory;[Lcom/vk/profile/adapter/b/BaseItemsFactory$e;)V
 
     aput-object v0, p1, v4
 
     .line 7
-    new-instance v0, Lcom/vk/profile/adapter/b/a$c;
+    new-instance v0, Lcom/vk/profile/adapter/b/BaseItemsFactory$c;
 
-    new-array v2, v1, [Lcom/vk/profile/adapter/b/a$e;
+    new-array v2, v1, [Lcom/vk/profile/adapter/b/BaseItemsFactory$e;
 
-    iget-object v3, p0, Lcom/vk/profile/adapter/factory/info_items/UserDetailsItemsFactory;->e:Lcom/vk/profile/adapter/b/a$g;
+    iget-object v3, p0, Lcom/vk/profile/adapter/factory/info_items/UserDetailsItemsFactory;->e:Lcom/vk/profile/adapter/b/BaseItemsFactory$g;
 
     aput-object v3, v2, v4
 
-    invoke-direct {v0, p0, v2}, Lcom/vk/profile/adapter/b/a$c;-><init>(Lcom/vk/profile/adapter/b/a;[Lcom/vk/profile/adapter/b/a$e;)V
+    invoke-direct {v0, p0, v2}, Lcom/vk/profile/adapter/b/BaseItemsFactory$c;-><init>(Lcom/vk/profile/adapter/b/BaseItemsFactory;[Lcom/vk/profile/adapter/b/BaseItemsFactory$e;)V
 
     aput-object v0, p1, v1
 
     .line 8
-    new-instance v0, Lcom/vk/profile/adapter/b/a$c;
+    new-instance v0, Lcom/vk/profile/adapter/b/BaseItemsFactory$c;
 
-    new-array v2, v1, [Lcom/vk/profile/adapter/b/a$e;
+    new-array v2, v1, [Lcom/vk/profile/adapter/b/BaseItemsFactory$e;
 
-    iget-object v3, p0, Lcom/vk/profile/adapter/factory/info_items/UserDetailsItemsFactory;->f:Lcom/vk/profile/adapter/b/a$g;
+    iget-object v3, p0, Lcom/vk/profile/adapter/factory/info_items/UserDetailsItemsFactory;->f:Lcom/vk/profile/adapter/b/BaseItemsFactory$g;
 
     aput-object v3, v2, v4
 
-    invoke-direct {v0, p0, v2}, Lcom/vk/profile/adapter/b/a$c;-><init>(Lcom/vk/profile/adapter/b/a;[Lcom/vk/profile/adapter/b/a$e;)V
+    invoke-direct {v0, p0, v2}, Lcom/vk/profile/adapter/b/BaseItemsFactory$c;-><init>(Lcom/vk/profile/adapter/b/BaseItemsFactory;[Lcom/vk/profile/adapter/b/BaseItemsFactory$e;)V
 
     const/4 v2, 0x2
 
     aput-object v0, p1, v2
 
     .line 9
-    new-instance v0, Lcom/vk/profile/adapter/b/a$c;
+    new-instance v0, Lcom/vk/profile/adapter/b/BaseItemsFactory$c;
 
-    new-array v2, v1, [Lcom/vk/profile/adapter/b/a$e;
+    new-array v2, v1, [Lcom/vk/profile/adapter/b/BaseItemsFactory$e;
 
-    iget-object v3, p0, Lcom/vk/profile/adapter/factory/info_items/UserDetailsItemsFactory;->g:Lcom/vk/profile/adapter/b/a$g;
+    iget-object v3, p0, Lcom/vk/profile/adapter/factory/info_items/UserDetailsItemsFactory;->g:Lcom/vk/profile/adapter/b/BaseItemsFactory$g;
 
     aput-object v3, v2, v4
 
-    invoke-direct {v0, p0, v2}, Lcom/vk/profile/adapter/b/a$c;-><init>(Lcom/vk/profile/adapter/b/a;[Lcom/vk/profile/adapter/b/a$e;)V
+    invoke-direct {v0, p0, v2}, Lcom/vk/profile/adapter/b/BaseItemsFactory$c;-><init>(Lcom/vk/profile/adapter/b/BaseItemsFactory;[Lcom/vk/profile/adapter/b/BaseItemsFactory$e;)V
 
     const/4 v2, 0x3
 
     aput-object v0, p1, v2
 
     .line 10
-    new-instance v0, Lcom/vk/profile/adapter/b/a$c;
+    new-instance v0, Lcom/vk/profile/adapter/b/BaseItemsFactory$c;
 
-    new-array v2, v1, [Lcom/vk/profile/adapter/b/a$e;
+    new-array v2, v1, [Lcom/vk/profile/adapter/b/BaseItemsFactory$e;
 
-    iget-object v3, p0, Lcom/vk/profile/adapter/factory/info_items/UserDetailsItemsFactory;->h:Lcom/vk/profile/adapter/b/a$g;
+    iget-object v3, p0, Lcom/vk/profile/adapter/factory/info_items/UserDetailsItemsFactory;->h:Lcom/vk/profile/adapter/b/BaseItemsFactory$g;
 
     aput-object v3, v2, v4
 
-    invoke-direct {v0, p0, v2}, Lcom/vk/profile/adapter/b/a$c;-><init>(Lcom/vk/profile/adapter/b/a;[Lcom/vk/profile/adapter/b/a$e;)V
+    invoke-direct {v0, p0, v2}, Lcom/vk/profile/adapter/b/BaseItemsFactory$c;-><init>(Lcom/vk/profile/adapter/b/BaseItemsFactory;[Lcom/vk/profile/adapter/b/BaseItemsFactory$e;)V
 
     const/4 v2, 0x4
 
     aput-object v0, p1, v2
 
     .line 11
-    new-instance v0, Lcom/vk/profile/adapter/b/a$c;
+    new-instance v0, Lcom/vk/profile/adapter/b/BaseItemsFactory$c;
 
-    new-array v2, v1, [Lcom/vk/profile/adapter/b/a$e;
+    new-array v2, v1, [Lcom/vk/profile/adapter/b/BaseItemsFactory$e;
 
-    iget-object v3, p0, Lcom/vk/profile/adapter/factory/info_items/UserDetailsItemsFactory;->i:Lcom/vk/profile/adapter/b/a$g;
+    iget-object v3, p0, Lcom/vk/profile/adapter/factory/info_items/UserDetailsItemsFactory;->i:Lcom/vk/profile/adapter/b/BaseItemsFactory$g;
 
     aput-object v3, v2, v4
 
-    invoke-direct {v0, p0, v2}, Lcom/vk/profile/adapter/b/a$c;-><init>(Lcom/vk/profile/adapter/b/a;[Lcom/vk/profile/adapter/b/a$e;)V
+    invoke-direct {v0, p0, v2}, Lcom/vk/profile/adapter/b/BaseItemsFactory$c;-><init>(Lcom/vk/profile/adapter/b/BaseItemsFactory;[Lcom/vk/profile/adapter/b/BaseItemsFactory$e;)V
 
     const/4 v2, 0x5
 
     aput-object v0, p1, v2
 
     .line 12
-    new-instance v0, Lcom/vk/profile/adapter/b/a$c;
+    new-instance v0, Lcom/vk/profile/adapter/b/BaseItemsFactory$c;
 
-    new-array v2, v1, [Lcom/vk/profile/adapter/b/a$e;
+    new-array v2, v1, [Lcom/vk/profile/adapter/b/BaseItemsFactory$e;
 
-    iget-object v3, p0, Lcom/vk/profile/adapter/factory/info_items/UserDetailsItemsFactory;->j:Lcom/vk/profile/adapter/b/a$g;
+    iget-object v3, p0, Lcom/vk/profile/adapter/factory/info_items/UserDetailsItemsFactory;->j:Lcom/vk/profile/adapter/b/BaseItemsFactory$g;
 
     aput-object v3, v2, v4
 
-    invoke-direct {v0, p0, v2}, Lcom/vk/profile/adapter/b/a$c;-><init>(Lcom/vk/profile/adapter/b/a;[Lcom/vk/profile/adapter/b/a$e;)V
+    invoke-direct {v0, p0, v2}, Lcom/vk/profile/adapter/b/BaseItemsFactory$c;-><init>(Lcom/vk/profile/adapter/b/BaseItemsFactory;[Lcom/vk/profile/adapter/b/BaseItemsFactory$e;)V
 
     const/4 v2, 0x6
 
     aput-object v0, p1, v2
 
     .line 13
-    new-instance v0, Lcom/vk/profile/adapter/b/a$c;
+    new-instance v0, Lcom/vk/profile/adapter/b/BaseItemsFactory$c;
 
-    new-array v2, v1, [Lcom/vk/profile/adapter/b/a$e;
+    new-array v2, v1, [Lcom/vk/profile/adapter/b/BaseItemsFactory$e;
 
-    iget-object v3, p0, Lcom/vk/profile/adapter/factory/info_items/UserDetailsItemsFactory;->k:Lcom/vk/profile/adapter/b/a$g;
+    iget-object v3, p0, Lcom/vk/profile/adapter/factory/info_items/UserDetailsItemsFactory;->k:Lcom/vk/profile/adapter/b/BaseItemsFactory$g;
 
     aput-object v3, v2, v4
 
-    invoke-direct {v0, p0, v2}, Lcom/vk/profile/adapter/b/a$c;-><init>(Lcom/vk/profile/adapter/b/a;[Lcom/vk/profile/adapter/b/a$e;)V
+    invoke-direct {v0, p0, v2}, Lcom/vk/profile/adapter/b/BaseItemsFactory$c;-><init>(Lcom/vk/profile/adapter/b/BaseItemsFactory;[Lcom/vk/profile/adapter/b/BaseItemsFactory$e;)V
 
     const/4 v2, 0x7
 
     aput-object v0, p1, v2
 
     .line 14
-    new-instance v0, Lcom/vk/profile/adapter/b/a$c;
+    new-instance v0, Lcom/vk/profile/adapter/b/BaseItemsFactory$c;
 
-    new-array v1, v1, [Lcom/vk/profile/adapter/b/a$e;
+    new-array v1, v1, [Lcom/vk/profile/adapter/b/BaseItemsFactory$e;
 
-    iget-object v2, p0, Lcom/vk/profile/adapter/factory/info_items/UserDetailsItemsFactory;->l:Lcom/vk/profile/adapter/b/a$g;
+    iget-object v2, p0, Lcom/vk/profile/adapter/factory/info_items/UserDetailsItemsFactory;->l:Lcom/vk/profile/adapter/b/BaseItemsFactory$g;
 
     aput-object v2, v1, v4
 
-    invoke-direct {v0, p0, v1}, Lcom/vk/profile/adapter/b/a$c;-><init>(Lcom/vk/profile/adapter/b/a;[Lcom/vk/profile/adapter/b/a$e;)V
+    invoke-direct {v0, p0, v1}, Lcom/vk/profile/adapter/b/BaseItemsFactory$c;-><init>(Lcom/vk/profile/adapter/b/BaseItemsFactory;[Lcom/vk/profile/adapter/b/BaseItemsFactory$e;)V
 
     const/16 v1, 0x8
 
@@ -748,13 +748,13 @@
     return-object p1
 .end method
 
-.method public bridge synthetic a(Ljava/lang/Object;)[Lcom/vk/profile/adapter/b/a$c;
+.method public bridge synthetic a(Ljava/lang/Object;)[Lcom/vk/profile/adapter/b/BaseItemsFactory$c;
     .locals 0
 
     .line 5
     check-cast p1, Lcom/vtosters/lite/api/ExtendedUserProfile;
 
-    invoke-virtual {p0, p1}, Lcom/vk/profile/adapter/factory/info_items/UserDetailsItemsFactory;->a(Lcom/vtosters/lite/api/ExtendedUserProfile;)[Lcom/vk/profile/adapter/b/a$c;
+    invoke-virtual {p0, p1}, Lcom/vk/profile/adapter/factory/info_items/UserDetailsItemsFactory;->a(Lcom/vtosters/lite/api/ExtendedUserProfile;)[Lcom/vk/profile/adapter/b/BaseItemsFactory$c;
 
     move-result-object p1
 

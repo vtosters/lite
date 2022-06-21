@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/rlottie/RLottieDrawable;-><init>(Ljava/lang/String;ILjava/lang/String;IILkotlin/jvm/b/c;Lkotlin/jvm/b/c;)V
+    value = Lcom/vk/rlottie/RLottieDrawable;-><init>(Ljava/lang/String;ILjava/lang/String;IILkotlin/jvm/b/Functions1;Lkotlin/jvm/b/Functions1;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -174,7 +174,7 @@
     .line 10
     iget-object v0, p0, Lcom/vk/rlottie/RLottieDrawable$c;->a:Lcom/vk/rlottie/RLottieDrawable;
 
-    invoke-static {v0}, Lcom/vk/rlottie/RLottieDrawable;->f(Lcom/vk/rlottie/RLottieDrawable;)Lkotlin/jvm/b/c;
+    invoke-static {v0}, Lcom/vk/rlottie/RLottieDrawable;->f(Lcom/vk/rlottie/RLottieDrawable;)Lkotlin/jvm/b/Functions1;
 
     move-result-object v0
 
@@ -200,11 +200,11 @@
 
     move-result-object v3
 
-    invoke-interface {v0, v2, v3}, Lkotlin/jvm/b/c;->a(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v0, v2, v3}, Lkotlin/jvm/b/Functions1;->a(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v0
 
-    check-cast v0, Lkotlin/m;
+    check-cast v0, Lkotlin/Unit;
 
     .line 11
     :cond_2

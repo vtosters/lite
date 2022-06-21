@@ -51,7 +51,7 @@
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/vk/core/view/search/RoundedSearchView;->d()Lb/h/v/c;
+    invoke-virtual {v0}, Lcom/vk/core/view/search/RoundedSearchView;->d()Lb/h/v/InitialValueObservable;
 
     move-result-object v0
 
@@ -60,32 +60,32 @@
 
     const-wide/16 v2, 0xc8
 
-    invoke-virtual {v0, v2, v3, v1}, Lc/a/m;->b(JLjava/util/concurrent/TimeUnit;)Lc/a/m;
+    invoke-virtual {v0, v2, v3, v1}, Lio/reactivex/Observable;->b(JLjava/util/concurrent/TimeUnit;)Lio/reactivex/Observable;
 
     move-result-object v0
 
     .line 4
     sget-object v1, Lcom/vk/stories/clickable/dialogs/geo/holders/StoryGeoSearchHolder$b$a;->a:Lcom/vk/stories/clickable/dialogs/geo/holders/StoryGeoSearchHolder$b$a;
 
-    invoke-virtual {v0, v1}, Lc/a/m;->e(Lc/a/z/j;)Lc/a/m;
+    invoke-virtual {v0, v1}, Lio/reactivex/Observable;->e(Lio/reactivex/functions/Function;)Lio/reactivex/Observable;
 
     move-result-object v0
 
     .line 5
-    invoke-static {}, Lc/a/y/c/a;->a()Lc/a/s;
+    invoke-static {}, Lio/reactivex/schedulers/AndroidSchedulers;->a()Lio/reactivex/Scheduler;
 
     move-result-object v1
 
-    invoke-virtual {v0, v1}, Lc/a/m;->a(Lc/a/s;)Lc/a/m;
+    invoke-virtual {v0, v1}, Lio/reactivex/Observable;->a(Lio/reactivex/Scheduler;)Lio/reactivex/Observable;
 
     move-result-object v0
 
     .line 6
-    invoke-static {}, Lc/a/y/c/a;->a()Lc/a/s;
+    invoke-static {}, Lio/reactivex/schedulers/AndroidSchedulers;->a()Lio/reactivex/Scheduler;
 
     move-result-object v1
 
-    invoke-virtual {v0, v1}, Lc/a/m;->b(Lc/a/s;)Lc/a/m;
+    invoke-virtual {v0, v1}, Lio/reactivex/Observable;->b(Lio/reactivex/Scheduler;)Lio/reactivex/Observable;
 
     move-result-object v0
 
@@ -96,11 +96,11 @@
 
     sget-object v2, Lcom/vk/stories/clickable/dialogs/geo/holders/StoryGeoSearchHolder$b$c;->a:Lcom/vk/stories/clickable/dialogs/geo/holders/StoryGeoSearchHolder$b$c;
 
-    invoke-virtual {v0, v1, v2}, Lc/a/m;->a(Lc/a/z/g;Lc/a/z/g;)Lio/reactivex/disposables/b;
+    invoke-virtual {v0, v1, v2}, Lio/reactivex/Observable;->a(Lio/reactivex/functions/Consumer;Lio/reactivex/functions/Consumer;)Lio/reactivex/disposables/Disposable;
 
     move-result-object v0
 
-    invoke-static {p1, v0}, Lcom/vk/stories/clickable/dialogs/geo/holders/StoryGeoSearchHolder;->a(Lcom/vk/stories/clickable/dialogs/geo/holders/StoryGeoSearchHolder;Lio/reactivex/disposables/b;)V
+    invoke-static {p1, v0}, Lcom/vk/stories/clickable/dialogs/geo/holders/StoryGeoSearchHolder;->a(Lcom/vk/stories/clickable/dialogs/geo/holders/StoryGeoSearchHolder;Lio/reactivex/disposables/Disposable;)V
 
     return-void
 .end method
@@ -111,13 +111,13 @@
     .line 1
     iget-object p1, p0, Lcom/vk/stories/clickable/dialogs/geo/holders/StoryGeoSearchHolder$b;->a:Lcom/vk/stories/clickable/dialogs/geo/holders/StoryGeoSearchHolder;
 
-    invoke-static {p1}, Lcom/vk/stories/clickable/dialogs/geo/holders/StoryGeoSearchHolder;->b(Lcom/vk/stories/clickable/dialogs/geo/holders/StoryGeoSearchHolder;)Lio/reactivex/disposables/b;
+    invoke-static {p1}, Lcom/vk/stories/clickable/dialogs/geo/holders/StoryGeoSearchHolder;->b(Lcom/vk/stories/clickable/dialogs/geo/holders/StoryGeoSearchHolder;)Lio/reactivex/disposables/Disposable;
 
     move-result-object p1
 
     if-eqz p1, :cond_0
 
-    invoke-interface {p1}, Lio/reactivex/disposables/b;->o()V
+    invoke-interface {p1}, Lio/reactivex/disposables/Disposable;->o()V
 
     :cond_0
     return-void

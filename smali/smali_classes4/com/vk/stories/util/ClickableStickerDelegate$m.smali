@@ -51,7 +51,7 @@
     .line 2
     iget-object p1, p0, Lcom/vk/stories/util/ClickableStickerDelegate$m;->a:Lcom/vk/stories/util/ClickableStickerDelegate;
 
-    invoke-static {p1}, Lcom/vk/stories/util/ClickableStickerDelegate;->b(Lcom/vk/stories/util/ClickableStickerDelegate;)Lcom/vk/stories/view/r1;
+    invoke-static {p1}, Lcom/vk/stories/util/ClickableStickerDelegate;->b(Lcom/vk/stories/util/ClickableStickerDelegate;)Lcom/vk/stories/view/StoryViewClickableStickerListener;
 
     move-result-object p1
 
@@ -59,7 +59,7 @@
 
     iget-object v0, p0, Lcom/vk/stories/util/ClickableStickerDelegate$m;->b:Lcom/vk/dto/stories/model/clickable/ClickableMusic;
 
-    invoke-interface {p1, v0}, Lcom/vk/stories/view/r1;->a(Lcom/vk/dto/stories/model/clickable/ClickableSticker;)Z
+    invoke-interface {p1, v0}, Lcom/vk/stories/view/StoryViewClickableStickerListener;->a(Lcom/vk/dto/stories/model/clickable/ClickableSticker;)Z
 
     :cond_0
     return-void

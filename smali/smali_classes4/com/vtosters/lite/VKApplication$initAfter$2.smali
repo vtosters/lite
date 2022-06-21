@@ -3,7 +3,7 @@
 .source "VKApplication.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/a;
+.implements Lkotlin/jvm/b/Functions;
 
 
 # annotations
@@ -19,8 +19,8 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/a<",
-        "Lcom/vk/reef/h;",
+        "Lkotlin/jvm/b/Functions<",
+        "Lcom/vk/reef/VkReefSender;",
         ">;"
     }
 .end annotation
@@ -55,13 +55,13 @@
 
 
 # virtual methods
-.method public final invoke()Lcom/vk/reef/h;
+.method public final invoke()Lcom/vk/reef/VkReefSender;
     .locals 1
 
     .line 2
-    new-instance v0, Lcom/vk/reef/h;
+    new-instance v0, Lcom/vk/reef/VkReefSender;
 
-    invoke-direct {v0}, Lcom/vk/reef/h;-><init>()V
+    invoke-direct {v0}, Lcom/vk/reef/VkReefSender;-><init>()V
 
     return-object v0
 .end method
@@ -70,7 +70,7 @@
     .locals 1
 
     .line 1
-    invoke-virtual {p0}, Lcom/vtosters/lite/VKApplication$initAfter$2;->invoke()Lcom/vk/reef/h;
+    invoke-virtual {p0}, Lcom/vtosters/lite/VKApplication$initAfter$2;->invoke()Lcom/vk/reef/VkReefSender;
 
     move-result-object v0
 

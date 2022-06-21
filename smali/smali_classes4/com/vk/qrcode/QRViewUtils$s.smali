@@ -3,12 +3,12 @@
 .source "QRViewUtils.kt"
 
 # interfaces
-.implements Lc/a/z/g;
+.implements Lio/reactivex/functions/Consumer;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/qrcode/QRViewUtils;->a(Lcom/vk/qrcode/i;Landroid/app/Activity;Lcom/vk/qrcode/QRParser;)V
+    value = Lcom/vk/qrcode/QRViewUtils;->a(Lcom/vk/qrcode/QRTypes7;Landroid/app/Activity;Lcom/vk/qrcode/QRParser;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -22,24 +22,24 @@
         "Ljava/lang/Object;",
         ">",
         "Ljava/lang/Object;",
-        "Lc/a/z/g<",
-        "Lcom/vk/api/execute/e$b;",
+        "Lio/reactivex/functions/Consumer<",
+        "Lcom/vk/api/execute/ExecuteResolveScreenName$b;",
         ">;"
     }
 .end annotation
 
 
 # instance fields
-.field final synthetic a:Lcom/vk/qrcode/i;
+.field final synthetic a:Lcom/vk/qrcode/QRTypes7;
 
 .field final synthetic b:Lcom/vk/qrcode/QRParser;
 
 
 # direct methods
-.method constructor <init>(Lcom/vk/qrcode/i;Lcom/vk/qrcode/QRParser;)V
+.method constructor <init>(Lcom/vk/qrcode/QRTypes7;Lcom/vk/qrcode/QRParser;)V
     .locals 0
 
-    iput-object p1, p0, Lcom/vk/qrcode/QRViewUtils$s;->a:Lcom/vk/qrcode/i;
+    iput-object p1, p0, Lcom/vk/qrcode/QRViewUtils$s;->a:Lcom/vk/qrcode/QRTypes7;
 
     iput-object p2, p0, Lcom/vk/qrcode/QRViewUtils$s;->b:Lcom/vk/qrcode/QRParser;
 
@@ -50,11 +50,11 @@
 
 
 # virtual methods
-.method public final a(Lcom/vk/api/execute/e$b;)V
+.method public final a(Lcom/vk/api/execute/ExecuteResolveScreenName$b;)V
     .locals 3
 
     .line 1
-    invoke-virtual {p1}, Lcom/vk/api/execute/e$b;->f()Ljava/lang/String;
+    invoke-virtual {p1}, Lcom/vk/api/execute/ExecuteResolveScreenName$b;->f()Ljava/lang/String;
 
     move-result-object v0
 
@@ -86,7 +86,7 @@
 
     if-eqz v0, :cond_5
 
-    invoke-virtual {p1}, Lcom/vk/api/execute/e$b;->d()Lcom/vk/dto/group/Group;
+    invoke-virtual {p1}, Lcom/vk/api/execute/ExecuteResolveScreenName$b;->d()Lcom/vk/dto/group/Group;
 
     move-result-object p1
 
@@ -108,7 +108,7 @@
     goto :goto_1
 
     :cond_2
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     const/4 p1, 0x0
 
@@ -145,9 +145,9 @@
     .line 5
     :cond_5
     :goto_0
-    iget-object p1, p0, Lcom/vk/qrcode/QRViewUtils$s;->a:Lcom/vk/qrcode/i;
+    iget-object p1, p0, Lcom/vk/qrcode/QRViewUtils$s;->a:Lcom/vk/qrcode/QRTypes7;
 
-    invoke-virtual {p1}, Lcom/vk/qrcode/i;->g()Lcom/vk/qrcode/QRTypes$SubType;
+    invoke-virtual {p1}, Lcom/vk/qrcode/QRTypes7;->g()Lcom/vk/qrcode/QRTypes$SubType;
 
     move-result-object p1
 
@@ -155,9 +155,9 @@
     :goto_1
     sget-object v0, Lcom/vk/qrcode/QRStatsTracker;->b:Lcom/vk/qrcode/QRStatsTracker;
 
-    iget-object v1, p0, Lcom/vk/qrcode/QRViewUtils$s;->a:Lcom/vk/qrcode/i;
+    iget-object v1, p0, Lcom/vk/qrcode/QRViewUtils$s;->a:Lcom/vk/qrcode/QRTypes7;
 
-    invoke-virtual {v1}, Lcom/vk/qrcode/i;->i()Lcom/vk/qrcode/QRTypes$Type;
+    invoke-virtual {v1}, Lcom/vk/qrcode/QRTypes7;->i()Lcom/vk/qrcode/QRTypes$Type;
 
     move-result-object v1
 
@@ -176,9 +176,9 @@
     .locals 0
 
     .line 1
-    check-cast p1, Lcom/vk/api/execute/e$b;
+    check-cast p1, Lcom/vk/api/execute/ExecuteResolveScreenName$b;
 
-    invoke-virtual {p0, p1}, Lcom/vk/qrcode/QRViewUtils$s;->a(Lcom/vk/api/execute/e$b;)V
+    invoke-virtual {p0, p1}, Lcom/vk/qrcode/QRViewUtils$s;->a(Lcom/vk/api/execute/ExecuteResolveScreenName$b;)V
 
     return-void
 .end method

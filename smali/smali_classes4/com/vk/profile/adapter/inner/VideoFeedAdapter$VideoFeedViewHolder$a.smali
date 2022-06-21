@@ -67,13 +67,13 @@
     .line 1
     iget-object p1, p0, Lcom/vk/profile/adapter/inner/VideoFeedAdapter$VideoFeedViewHolder$a;->a:Lcom/vk/profile/adapter/inner/VideoFeedAdapter$VideoFeedViewHolder;
 
-    invoke-static {p1}, Lcom/vk/profile/adapter/inner/VideoFeedAdapter$VideoFeedViewHolder;->d(Lcom/vk/profile/adapter/inner/VideoFeedAdapter$VideoFeedViewHolder;)Lio/reactivex/disposables/b;
+    invoke-static {p1}, Lcom/vk/profile/adapter/inner/VideoFeedAdapter$VideoFeedViewHolder;->d(Lcom/vk/profile/adapter/inner/VideoFeedAdapter$VideoFeedViewHolder;)Lio/reactivex/disposables/Disposable;
 
     move-result-object p1
 
     if-eqz p1, :cond_0
 
-    invoke-interface {p1}, Lio/reactivex/disposables/b;->o()V
+    invoke-interface {p1}, Lio/reactivex/disposables/Disposable;->o()V
 
     :cond_0
     return-void

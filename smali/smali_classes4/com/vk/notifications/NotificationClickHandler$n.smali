@@ -3,7 +3,7 @@
 .source "NotificationClickHandler.kt"
 
 # interfaces
-.implements Lc/a/z/g;
+.implements Lio/reactivex/functions/Consumer;
 
 
 # annotations
@@ -22,7 +22,7 @@
         "Ljava/lang/Object;",
         ">",
         "Ljava/lang/Object;",
-        "Lc/a/z/g<",
+        "Lio/reactivex/functions/Consumer<",
         "Ljava/lang/Throwable;",
         ">;"
     }
@@ -62,9 +62,9 @@
     .locals 7
 
     .line 1
-    sget-object p1, Lcom/vk/newsfeed/posting/l;->T0:Lcom/vk/newsfeed/posting/l$a;
+    sget-object p1, Lcom/vk/newsfeed/posting/PostingFragmentBuilder;->T0:Lcom/vk/newsfeed/posting/PostingFragmentBuilder$a;
 
-    invoke-virtual {p1}, Lcom/vk/newsfeed/posting/l$a;->a()Lcom/vk/newsfeed/posting/l;
+    invoke-virtual {p1}, Lcom/vk/newsfeed/posting/PostingFragmentBuilder$a;->a()Lcom/vk/newsfeed/posting/PostingFragmentBuilder;
 
     move-result-object p1
 
@@ -74,7 +74,7 @@
 
     const-string v0, "text"
 
-    invoke-static {v2, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v2, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     iget-object v3, p0, Lcom/vk/notifications/NotificationClickHandler$n;->c:Ljava/util/ArrayList;
 
@@ -86,11 +86,11 @@
 
     move-object v0, p1
 
-    invoke-static/range {v0 .. v6}, Lcom/vk/newsfeed/posting/l;->a(Lcom/vk/newsfeed/posting/l;ILjava/lang/String;Ljava/util/List;Lcom/vk/dto/group/Group;ILjava/lang/Object;)Lcom/vk/newsfeed/posting/l;
+    invoke-static/range {v0 .. v6}, Lcom/vk/newsfeed/posting/PostingFragmentBuilder;->a(Lcom/vk/newsfeed/posting/PostingFragmentBuilder;ILjava/lang/String;Ljava/util/List;Lcom/vk/dto/group/Group;ILjava/lang/Object;)Lcom/vk/newsfeed/posting/PostingFragmentBuilder;
 
     iget-object v0, p0, Lcom/vk/notifications/NotificationClickHandler$n;->d:Landroid/content/Context;
 
-    invoke-virtual {p1, v0}, Lcom/vk/navigation/o;->a(Landroid/content/Context;)V
+    invoke-virtual {p1, v0}, Lcom/vk/navigation/Navigator;->a(Landroid/content/Context;)V
 
     return-void
 .end method

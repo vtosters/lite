@@ -3,12 +3,12 @@
 .source "TaggedGoodsController.kt"
 
 # interfaces
-.implements Lc/a/z/g;
+.implements Lio/reactivex/functions/Consumer;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/ui/photoviewer/TaggedGoodsController$onGoodPicked$1;->a(Lcom/vk/photoviewer/p;)V
+    value = Lcom/vk/ui/photoviewer/TaggedGoodsController$onGoodPicked$1;->a(Lcom/vk/photoviewer/PhotoViewer1;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -22,7 +22,7 @@
         "Ljava/lang/Object;",
         ">",
         "Ljava/lang/Object;",
-        "Lc/a/z/g<",
+        "Lio/reactivex/functions/Consumer<",
         "Ljava/lang/Boolean;",
         ">;"
     }
@@ -69,7 +69,7 @@
     .line 4
     iget-object p1, p1, Lcom/vk/ui/photoviewer/TaggedGoodsController$onGoodPicked$1;->this$0:Lcom/vk/ui/photoviewer/TaggedGoodsController;
 
-    invoke-static {p1}, Lcom/vk/ui/photoviewer/TaggedGoodsController;->d(Lcom/vk/ui/photoviewer/TaggedGoodsController;)Lkotlin/jvm/b/b;
+    invoke-static {p1}, Lcom/vk/ui/photoviewer/TaggedGoodsController;->d(Lcom/vk/ui/photoviewer/TaggedGoodsController;)Lkotlin/jvm/b/Functions2;
 
     move-result-object p1
 
@@ -77,7 +77,7 @@
 
     iget-object v0, v0, Lcom/vk/ui/photoviewer/TaggedGoodsController$onGoodPicked$1;->$photo:Lcom/vk/dto/photo/Photo;
 
-    invoke-interface {p1, v0}, Lkotlin/jvm/b/b;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {p1, v0}, Lkotlin/jvm/b/Functions2;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
 
     .line 5
     iget-object p1, p0, Lcom/vk/ui/photoviewer/TaggedGoodsController$onGoodPicked$1$a;->a:Lcom/vk/ui/photoviewer/TaggedGoodsController$onGoodPicked$1;
@@ -117,7 +117,7 @@
     const/4 v1, 0x0
 
     .line 7
-    invoke-static {p1, v2, v0, v1}, Lcom/vk/core/util/k1;->a(IZILjava/lang/Object;)V
+    invoke-static {p1, v2, v0, v1}, Lcom/vk/core/util/ToastUtils;->a(IZILjava/lang/Object;)V
 
     return-void
 .end method

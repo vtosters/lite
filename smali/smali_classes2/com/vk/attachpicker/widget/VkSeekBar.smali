@@ -3,7 +3,7 @@
 .source "VkSeekBar.java"
 
 # interfaces
-.implements Lcom/vk/crop/q/a$a;
+.implements Lcom/vk/crop/q/MoveGestureDetector$a;
 
 
 # annotations
@@ -22,7 +22,7 @@
 # instance fields
 .field private final B:I
 
-.field private final C:Lcom/vk/crop/q/a;
+.field private final C:Lcom/vk/crop/q/MoveGestureDetector;
 
 .field private D:F
 
@@ -185,11 +185,11 @@
     iput v0, p0, Lcom/vk/attachpicker/widget/VkSeekBar;->e:F
 
     .line 19
-    new-instance p2, Lcom/vk/crop/q/a;
+    new-instance p2, Lcom/vk/crop/q/MoveGestureDetector;
 
-    invoke-direct {p2, p0}, Lcom/vk/crop/q/a;-><init>(Lcom/vk/crop/q/a$a;)V
+    invoke-direct {p2, p0}, Lcom/vk/crop/q/MoveGestureDetector;-><init>(Lcom/vk/crop/q/MoveGestureDetector$a;)V
 
-    iput-object p2, p0, Lcom/vk/attachpicker/widget/VkSeekBar;->C:Lcom/vk/crop/q/a;
+    iput-object p2, p0, Lcom/vk/attachpicker/widget/VkSeekBar;->C:Lcom/vk/crop/q/MoveGestureDetector;
 
     const/high16 p2, 0x3f000000    # 0.5f
 
@@ -998,9 +998,9 @@
     invoke-direct {p0}, Lcom/vk/attachpicker/widget/VkSeekBar;->d()V
 
     .line 7
-    iget-object v0, p0, Lcom/vk/attachpicker/widget/VkSeekBar;->C:Lcom/vk/crop/q/a;
+    iget-object v0, p0, Lcom/vk/attachpicker/widget/VkSeekBar;->C:Lcom/vk/crop/q/MoveGestureDetector;
 
-    invoke-virtual {v0, p1}, Lcom/vk/crop/q/a;->a(Landroid/view/MotionEvent;)Z
+    invoke-virtual {v0, p1}, Lcom/vk/crop/q/MoveGestureDetector;->a(Landroid/view/MotionEvent;)Z
 
     move-result p1
 

@@ -3,7 +3,7 @@
 .source "EnterPasswordFragment.kt"
 
 # interfaces
-.implements Lcom/vk/auth/enterpassword/a;
+.implements Lcom/vk/auth/enterpassword/EnterPasswordView;
 
 
 # annotations
@@ -12,7 +12,7 @@
         "Lcom/vk/auth/base/BaseAuthFragment<",
         "Lcom/vk/auth/enterpassword/EnterPasswordPresenter;",
         ">;",
-        "Lcom/vk/auth/enterpassword/a;"
+        "Lcom/vk/auth/enterpassword/EnterPasswordView;"
     }
 .end annotation
 
@@ -130,13 +130,13 @@
     return-void
 
     :cond_0
-    invoke-static {v2}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v2}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v1
 
     .line 6
     :cond_1
-    invoke-static {v2}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v2}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v1
 
@@ -144,7 +144,7 @@
     const-string p1, "subtitleView"
 
     .line 7
-    invoke-static {p1}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {p1}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v1
 
@@ -152,7 +152,7 @@
     const-string p1, "repeatPasswordView"
 
     .line 8
-    invoke-static {p1}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {p1}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v1
 
@@ -160,7 +160,7 @@
     const-string p1, "passwordView"
 
     .line 9
-    invoke-static {p1}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {p1}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v1
 .end method
@@ -169,7 +169,7 @@
     .locals 0
 
     .line 1
-    invoke-virtual {p0}, Lcom/vk/auth/base/BaseAuthFragment;->getPresenter()Lcom/vk/auth/base/a;
+    invoke-virtual {p0}, Lcom/vk/auth/base/BaseAuthFragment;->getPresenter()Lcom/vk/auth/base/AuthPresenter;
 
     move-result-object p0
 
@@ -192,7 +192,7 @@
 
     const-string v1, "getString(R.string.vk_au\u2026_password_error_equality)"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-direct {p0, v0}, Lcom/vk/auth/enterpassword/EnterPasswordFragment;->M(Ljava/lang/String;)V
 
@@ -212,7 +212,7 @@
     :cond_0
     const-string v0, "passwordSmartTextInputLayout"
 
-    invoke-static {v0}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v0}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     const/4 v0, 0x0
 
@@ -232,7 +232,7 @@
     :cond_0
     const-string v0, "repeatPasswordSmartTextInputLayout"
 
-    invoke-static {v0}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v0}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     const/4 v0, 0x0
 
@@ -263,14 +263,14 @@
 
     const-string v0, "getString(R.string.vk_au\u2026rror_to_short, minLength)"
 
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-direct {p0, p1}, Lcom/vk/auth/enterpassword/EnterPasswordFragment;->M(Ljava/lang/String;)V
 
     return-void
 .end method
 
-.method public bridge synthetic e(Landroid/os/Bundle;)Lcom/vk/auth/base/a;
+.method public bridge synthetic e(Landroid/os/Bundle;)Lcom/vk/auth/base/AuthPresenter;
     .locals 0
 
     .line 1
@@ -316,7 +316,7 @@
     :cond_0
     const-string p1, "repeatPasswordView"
 
-    invoke-static {p1}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {p1}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v1
 
@@ -324,7 +324,7 @@
     const-string p1, "passwordView"
 
     .line 5
-    invoke-static {p1}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {p1}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v1
 .end method
@@ -354,7 +354,7 @@
     .locals 3
 
     .line 1
-    invoke-virtual {p0}, Lcom/vk/auth/base/BaseAuthFragment;->getPresenter()Lcom/vk/auth/base/a;
+    invoke-virtual {p0}, Lcom/vk/auth/base/BaseAuthFragment;->getPresenter()Lcom/vk/auth/base/AuthPresenter;
 
     move-result-object v0
 
@@ -409,7 +409,7 @@
     const-string v0, "repeatPasswordView"
 
     .line 7
-    invoke-static {v0}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v0}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v1
 
@@ -417,7 +417,7 @@
     const-string v0, "passwordView"
 
     .line 8
-    invoke-static {v0}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v0}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v1
 
@@ -425,7 +425,7 @@
     const-string v0, "repeatPasswordSmartTextInputLayout"
 
     .line 9
-    invoke-static {v0}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v0}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v1
 
@@ -433,7 +433,7 @@
     const-string v0, "passwordSmartTextInputLayout"
 
     .line 10
-    invoke-static {v0}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v0}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v1
 .end method
@@ -453,7 +453,7 @@
 
     const-string v1, "view.findViewById(R.id.subtitle)"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     check-cast v0, Landroid/widget/TextView;
 
@@ -468,7 +468,7 @@
 
     const-string v1, "view.findViewById(R.id.error)"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     check-cast v0, Landroid/widget/TextView;
 
@@ -483,7 +483,7 @@
 
     const-string v1, "view.findViewById(R.id.password_smart_layout)"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     check-cast v0, Lcom/vk/auth/ui/VkSmartPasswordTextInputLayout;
 
@@ -498,7 +498,7 @@
 
     const-string v1, "view.findViewById(R.id.r\u2026at_password_smart_layout)"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     check-cast v0, Lcom/vk/auth/ui/VkSmartPasswordTextInputLayout;
 
@@ -513,7 +513,7 @@
 
     const-string v1, "view.findViewById(R.id.password)"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     check-cast v0, Landroid/widget/EditText;
 
@@ -528,7 +528,7 @@
 
     const-string v0, "view.findViewById(R.id.repeat_password)"
 
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     check-cast p1, Landroid/widget/EditText;
 
@@ -605,7 +605,7 @@
 
     invoke-direct {v2, p0}, Lcom/vk/auth/enterpassword/EnterPasswordFragment$onViewCreated$1;-><init>(Lcom/vk/auth/enterpassword/EnterPasswordFragment;)V
 
-    invoke-static {p1, v2}, Lcom/vk/auth/utils/AuthExtensionsKt;->a(Landroid/view/View;Lkotlin/jvm/b/b;)V
+    invoke-static {p1, v2}, Lcom/vk/auth/utils/AuthExtensionsKt;->a(Landroid/view/View;Lkotlin/jvm/b/Functions2;)V
 
     :cond_0
     if-nez p2, :cond_2
@@ -622,44 +622,44 @@
     goto :goto_0
 
     :cond_1
-    invoke-static {v1}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v1}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v0
 
     .line 16
     :cond_2
     :goto_0
-    invoke-virtual {p0}, Lcom/vk/auth/base/BaseAuthFragment;->getPresenter()Lcom/vk/auth/base/a;
+    invoke-virtual {p0}, Lcom/vk/auth/base/BaseAuthFragment;->getPresenter()Lcom/vk/auth/base/AuthPresenter;
 
     move-result-object p1
 
     check-cast p1, Lcom/vk/auth/enterpassword/EnterPasswordPresenter;
 
-    invoke-virtual {p1, p0}, Lcom/vk/auth/enterpassword/EnterPasswordPresenter;->a(Lcom/vk/auth/enterpassword/a;)V
+    invoke-virtual {p1, p0}, Lcom/vk/auth/enterpassword/EnterPasswordPresenter;->a(Lcom/vk/auth/enterpassword/EnterPasswordView;)V
 
     return-void
 
     .line 17
     :cond_3
-    invoke-static {v2}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v2}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v0
 
     .line 18
     :cond_4
-    invoke-static {v1}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v1}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v0
 
     .line 19
     :cond_5
-    invoke-static {v2}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v2}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v0
 
     .line 20
     :cond_6
-    invoke-static {v1}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v1}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v0
 
@@ -667,7 +667,7 @@
     const-string p1, "repeatPasswordSmartTextInputLayout"
 
     .line 21
-    invoke-static {p1}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {p1}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v0
 
@@ -675,7 +675,7 @@
     const-string p1, "passwordSmartTextInputLayout"
 
     .line 22
-    invoke-static {p1}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {p1}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v0
 .end method

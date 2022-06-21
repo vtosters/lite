@@ -3,12 +3,12 @@
 .source "MsgStorageManager.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/b;
+.implements Lkotlin/jvm/b/Functions2;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/im/engine/internal/storage/delegates/messages/MsgStorageManager;->e(II)Lcom/vk/im/engine/models/i;
+    value = Lcom/vk/im/engine/internal/storage/delegates/messages/MsgStorageManager;->e(II)Lcom/vk/im/engine/models/Nearest;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -19,10 +19,10 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/b<",
+        "Lkotlin/jvm/b/Functions2<",
         "Lio/requery/android/database/sqlite/SQLiteDatabase;",
-        "Lcom/vk/im/engine/models/i<",
-        "Lcom/vk/im/engine/internal/storage/models/e;",
+        "Lcom/vk/im/engine/models/Nearest<",
+        "Lcom/vk/im/engine/internal/storage/models/MsgHistoryEntryStorageModel;",
         ">;>;"
     }
 .end annotation
@@ -59,15 +59,15 @@
 
 
 # virtual methods
-.method public final a(Lio/requery/android/database/sqlite/SQLiteDatabase;)Lcom/vk/im/engine/models/i;
+.method public final a(Lio/requery/android/database/sqlite/SQLiteDatabase;)Lcom/vk/im/engine/models/Nearest;
     .locals 7
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
             "Lio/requery/android/database/sqlite/SQLiteDatabase;",
             ")",
-            "Lcom/vk/im/engine/models/i<",
-            "Lcom/vk/im/engine/internal/storage/models/e;",
+            "Lcom/vk/im/engine/models/Nearest<",
+            "Lcom/vk/im/engine/internal/storage/models/MsgHistoryEntryStorageModel;",
             ">;"
         }
     .end annotation
@@ -83,7 +83,7 @@
 
     const-string v1, "db.rawQuery(sqlBefore, args)"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 2
     new-instance v1, Ljava/util/ArrayList;
@@ -111,9 +111,9 @@
     if-nez v2, :cond_0
 
     .line 5
-    sget-object v2, Lcom/vk/im/engine/internal/storage/delegates/messages/c;->a:Lcom/vk/im/engine/internal/storage/delegates/messages/c;
+    sget-object v2, Lcom/vk/im/engine/internal/storage/delegates/messages/MsgDbReader;->a:Lcom/vk/im/engine/internal/storage/delegates/messages/MsgDbReader;
 
-    invoke-virtual {v2, v0}, Lcom/vk/im/engine/internal/storage/delegates/messages/c;->a(Landroid/database/Cursor;)Lcom/vk/im/engine/internal/storage/models/e;
+    invoke-virtual {v2, v0}, Lcom/vk/im/engine/internal/storage/delegates/messages/MsgDbReader;->a(Landroid/database/Cursor;)Lcom/vk/im/engine/internal/storage/models/MsgHistoryEntryStorageModel;
 
     move-result-object v2
 
@@ -141,7 +141,7 @@
 
     const-string v0, "db.rawQuery(sqlAfter, args)"
 
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 9
     new-instance v0, Ljava/util/ArrayList;
@@ -169,9 +169,9 @@
     if-nez v2, :cond_1
 
     .line 12
-    sget-object v2, Lcom/vk/im/engine/internal/storage/delegates/messages/c;->a:Lcom/vk/im/engine/internal/storage/delegates/messages/c;
+    sget-object v2, Lcom/vk/im/engine/internal/storage/delegates/messages/MsgDbReader;->a:Lcom/vk/im/engine/internal/storage/delegates/messages/MsgDbReader;
 
-    invoke-virtual {v2, p1}, Lcom/vk/im/engine/internal/storage/delegates/messages/c;->a(Landroid/database/Cursor;)Lcom/vk/im/engine/internal/storage/models/e;
+    invoke-virtual {v2, p1}, Lcom/vk/im/engine/internal/storage/delegates/messages/MsgDbReader;->a(Landroid/database/Cursor;)Lcom/vk/im/engine/internal/storage/models/MsgHistoryEntryStorageModel;
 
     move-result-object v2
 
@@ -208,19 +208,19 @@
 
     move-result-object p1
 
-    check-cast p1, Lcom/vk/im/engine/internal/storage/models/e;
+    check-cast p1, Lcom/vk/im/engine/internal/storage/models/MsgHistoryEntryStorageModel;
 
     .line 17
     invoke-static {v1, v2}, Lkotlin/collections/l;->c(Ljava/util/List;I)Ljava/lang/Object;
 
     move-result-object v1
 
-    check-cast v1, Lcom/vk/im/engine/internal/storage/models/e;
+    check-cast v1, Lcom/vk/im/engine/internal/storage/models/MsgHistoryEntryStorageModel;
 
     .line 18
     iget v5, p0, Lcom/vk/im/engine/internal/storage/delegates/messages/MsgStorageManager$getNearest$1;->$msgVkId:I
 
-    invoke-virtual {p1}, Lcom/vk/im/engine/internal/storage/models/e;->e()I
+    invoke-virtual {p1}, Lcom/vk/im/engine/internal/storage/models/MsgHistoryEntryStorageModel;->e()I
 
     move-result v6
 
@@ -249,19 +249,19 @@
 
     move-result-object v1
 
-    check-cast v1, Lcom/vk/im/engine/internal/storage/models/e;
+    check-cast v1, Lcom/vk/im/engine/internal/storage/models/MsgHistoryEntryStorageModel;
 
     .line 21
     invoke-static {v0, v2}, Lkotlin/collections/l;->c(Ljava/util/List;I)Ljava/lang/Object;
 
     move-result-object v0
 
-    check-cast v0, Lcom/vk/im/engine/internal/storage/models/e;
+    check-cast v0, Lcom/vk/im/engine/internal/storage/models/MsgHistoryEntryStorageModel;
 
     .line 22
     iget v2, p0, Lcom/vk/im/engine/internal/storage/delegates/messages/MsgStorageManager$getNearest$1;->$msgVkId:I
 
-    invoke-virtual {v1}, Lcom/vk/im/engine/internal/storage/models/e;->e()I
+    invoke-virtual {v1}, Lcom/vk/im/engine/internal/storage/models/MsgHistoryEntryStorageModel;->e()I
 
     move-result v3
 
@@ -277,9 +277,9 @@
     .line 23
     :cond_5
     :goto_3
-    new-instance v0, Lcom/vk/im/engine/models/i;
+    new-instance v0, Lcom/vk/im/engine/models/Nearest;
 
-    invoke-direct {v0, p1, v4}, Lcom/vk/im/engine/models/i;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
+    invoke-direct {v0, p1, v4}, Lcom/vk/im/engine/models/Nearest;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
 
     return-object v0
 
@@ -306,7 +306,7 @@
     .line 1
     check-cast p1, Lio/requery/android/database/sqlite/SQLiteDatabase;
 
-    invoke-virtual {p0, p1}, Lcom/vk/im/engine/internal/storage/delegates/messages/MsgStorageManager$getNearest$1;->a(Lio/requery/android/database/sqlite/SQLiteDatabase;)Lcom/vk/im/engine/models/i;
+    invoke-virtual {p0, p1}, Lcom/vk/im/engine/internal/storage/delegates/messages/MsgStorageManager$getNearest$1;->a(Lio/requery/android/database/sqlite/SQLiteDatabase;)Lcom/vk/im/engine/models/Nearest;
 
     move-result-object p1
 

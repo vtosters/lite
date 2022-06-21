@@ -38,9 +38,9 @@
     .line 1
     iget-object v0, p0, Lcom/vtosters/lite/fragments/photos/PhotoListFragment$f;->a:Lcom/vtosters/lite/fragments/photos/PhotoListFragment;
 
-    iget-object v0, v0, Lcom/vtosters/lite/fragments/photos/PhotoListFragment;->u0:Ld/a/a/c/b;
+    iget-object v0, v0, Lcom/vtosters/lite/fragments/photos/PhotoListFragment;->u0:Lme/grishka/appkit/utils/MergeRecyclerAdapter;
 
-    invoke-virtual {v0, p1}, Ld/a/a/c/b;->J(I)Landroidx/recyclerview/widget/RecyclerView$Adapter;
+    invoke-virtual {v0, p1}, Lme/grishka/appkit/utils/MergeRecyclerAdapter;->J(I)Landroidx/recyclerview/widget/RecyclerView$Adapter;
 
     move-result-object v0
 
@@ -57,9 +57,9 @@
     :cond_0
     iget-object v1, p0, Lcom/vtosters/lite/fragments/photos/PhotoListFragment$f;->a:Lcom/vtosters/lite/fragments/photos/PhotoListFragment;
 
-    iget-object v1, v1, Lcom/vtosters/lite/fragments/photos/PhotoListFragment;->u0:Ld/a/a/c/b;
+    iget-object v1, v1, Lcom/vtosters/lite/fragments/photos/PhotoListFragment;->u0:Lme/grishka/appkit/utils/MergeRecyclerAdapter;
 
-    invoke-virtual {v1, p1}, Ld/a/a/c/b;->K(I)I
+    invoke-virtual {v1, p1}, Lme/grishka/appkit/utils/MergeRecyclerAdapter;->K(I)I
 
     move-result p1
 

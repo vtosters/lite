@@ -39,9 +39,9 @@
     .end annotation
 .end field
 
-.field private static d:Lcom/vk/toggle/b;
+.field private static d:Lcom/vk/toggle/FeatureStorage;
 
-.field private static final e:Lcom/vk/toggle/a;
+.field private static final e:Lcom/vk/toggle/FeaturePublishSubject;
 
 .field private static volatile f:Lcom/vk/toggle/FeatureManager$Sync;
 
@@ -74,11 +74,11 @@
     sput-object v0, Lcom/vk/toggle/FeatureManager;->c:Ljava/util/HashMap;
 
     .line 4
-    new-instance v0, Lcom/vk/toggle/a;
+    new-instance v0, Lcom/vk/toggle/FeaturePublishSubject;
 
-    invoke-direct {v0}, Lcom/vk/toggle/a;-><init>()V
+    invoke-direct {v0}, Lcom/vk/toggle/FeaturePublishSubject;-><init>()V
 
-    sput-object v0, Lcom/vk/toggle/FeatureManager;->e:Lcom/vk/toggle/a;
+    sput-object v0, Lcom/vk/toggle/FeatureManager;->e:Lcom/vk/toggle/FeaturePublishSubject;
 
     .line 5
     sget-object v0, Lcom/vk/toggle/FeatureManager$Sync;->Empty:Lcom/vk/toggle/FeatureManager$Sync;
@@ -141,11 +141,11 @@
     throw p0
 .end method
 
-.method public static final synthetic a(Lcom/vk/toggle/FeatureManager;)Lcom/vk/toggle/b;
+.method public static final synthetic a(Lcom/vk/toggle/FeatureManager;)Lcom/vk/toggle/FeatureStorage;
     .locals 0
 
     .line 2
-    sget-object p0, Lcom/vk/toggle/FeatureManager;->d:Lcom/vk/toggle/b;
+    sget-object p0, Lcom/vk/toggle/FeatureManager;->d:Lcom/vk/toggle/FeatureStorage;
 
     if-eqz p0, :cond_0
 
@@ -154,14 +154,14 @@
     :cond_0
     const-string p0, "storage"
 
-    invoke-static {p0}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {p0}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     const/4 p0, 0x0
 
     throw p0
 .end method
 
-.method public static synthetic a(Lcom/vk/toggle/FeatureManager;Lkotlin/jvm/b/a;Lkotlin/jvm/b/a;ILjava/lang/Object;)Lio/reactivex/disposables/b;
+.method public static synthetic a(Lcom/vk/toggle/FeatureManager;Lkotlin/jvm/b/Functions;Lkotlin/jvm/b/Functions;ILjava/lang/Object;)Lio/reactivex/disposables/Disposable;
     .locals 0
 
     and-int/lit8 p3, p3, 0x2
@@ -172,7 +172,7 @@
 
     .line 31
     :cond_0
-    invoke-virtual {p0, p1, p2}, Lcom/vk/toggle/FeatureManager;->a(Lkotlin/jvm/b/a;Lkotlin/jvm/b/a;)Lio/reactivex/disposables/b;
+    invoke-virtual {p0, p1, p2}, Lcom/vk/toggle/FeatureManager;->a(Lkotlin/jvm/b/Functions;Lkotlin/jvm/b/Functions;)Lio/reactivex/disposables/Disposable;
 
     move-result-object p0
 
@@ -224,7 +224,7 @@
 
     const-string v2, "serverFeatures.iterator()"
 
-    invoke-static {v1, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 39
     :goto_0
@@ -241,7 +241,7 @@
 
     const-string v3, "serverFeaturesIterator.next()"
 
-    invoke-static {v2, v3}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v2, v3}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     check-cast v2, Lcom/vk/toggle/FeatureManager$b;
 
@@ -316,7 +316,7 @@
 
     .line 47
     :cond_2
-    sget-object v0, Lcom/vk/toggle/FeatureManager;->d:Lcom/vk/toggle/b;
+    sget-object v0, Lcom/vk/toggle/FeatureManager;->d:Lcom/vk/toggle/FeatureStorage;
 
     const/4 v1, 0x0
 
@@ -330,7 +330,7 @@
 
     const/4 p2, 0x1
 
-    invoke-static {v0, v2, v3, p2, v1}, Lcom/vk/toggle/b;->a(Lcom/vk/toggle/b;ZLkotlin/jvm/b/b;ILjava/lang/Object;)V
+    invoke-static {v0, v2, v3, p2, v1}, Lcom/vk/toggle/FeatureStorage;->a(Lcom/vk/toggle/FeatureStorage;ZLkotlin/jvm/b/Functions2;ILjava/lang/Object;)V
 
     .line 48
     invoke-interface {p1}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
@@ -378,7 +378,7 @@
     const-string p1, "storage"
 
     .line 51
-    invoke-static {p1}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {p1}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v1
 .end method
@@ -411,7 +411,7 @@
     if-nez v1, :cond_1
 
     .line 7
-    sget-object v4, Lcom/vk/toggle/FeatureManager;->d:Lcom/vk/toggle/b;
+    sget-object v4, Lcom/vk/toggle/FeatureManager;->d:Lcom/vk/toggle/FeatureStorage;
 
     const/4 v5, 0x0
 
@@ -419,7 +419,7 @@
 
     const/4 v6, 0x2
 
-    invoke-static {v4, p1, v3, v6, v5}, Lcom/vk/toggle/b;->a(Lcom/vk/toggle/b;Ljava/lang/String;ZILjava/lang/Object;)Z
+    invoke-static {v4, p1, v3, v6, v5}, Lcom/vk/toggle/FeatureStorage;->a(Lcom/vk/toggle/FeatureStorage;Ljava/lang/String;ZILjava/lang/Object;)Z
 
     move-result v4
 
@@ -461,7 +461,7 @@
 
     move-object v6, p1
 
-    invoke-direct/range {v5 .. v10}, Lcom/vk/toggle/FeatureManager$b;-><init>(Ljava/lang/String;ZLjava/lang/String;ILkotlin/jvm/internal/i;)V
+    invoke-direct/range {v5 .. v10}, Lcom/vk/toggle/FeatureManager$b;-><init>(Ljava/lang/String;ZLjava/lang/String;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     invoke-virtual {v1}, Lcom/vk/toggle/FeatureManager$b;->d()Lcom/vk/toggle/FeatureManager$b;
 
@@ -478,7 +478,7 @@
     const-string p1, "storage"
 
     .line 11
-    invoke-static {p1}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {p1}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v5
 
@@ -613,18 +613,18 @@
     .locals 1
 
     .line 8
-    sget-object v0, Lcom/vk/toggle/FeatureManager;->d:Lcom/vk/toggle/b;
+    sget-object v0, Lcom/vk/toggle/FeatureManager;->d:Lcom/vk/toggle/FeatureStorage;
 
     if-eqz v0, :cond_0
 
-    invoke-virtual {v0, p1}, Lcom/vk/toggle/b;->a(Ljava/lang/String;)V
+    invoke-virtual {v0, p1}, Lcom/vk/toggle/FeatureStorage;->a(Ljava/lang/String;)V
 
     return-void
 
     :cond_0
     const-string p1, "storage"
 
-    invoke-static {p1}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {p1}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     const/4 p1, 0x0
 
@@ -660,20 +660,20 @@
     invoke-virtual {v2}, Ljava/util/HashMap;->clear()V
 
     .line 5
-    sget-object v2, Lcom/vk/toggle/FeatureManager;->d:Lcom/vk/toggle/b;
+    sget-object v2, Lcom/vk/toggle/FeatureManager;->d:Lcom/vk/toggle/FeatureStorage;
 
     const/4 v3, 0x0
 
     if-eqz v2, :cond_1
 
-    invoke-virtual {v2, v1}, Lcom/vk/toggle/b;->a(I)V
+    invoke-virtual {v2, v1}, Lcom/vk/toggle/FeatureStorage;->a(I)V
 
     .line 6
-    sget-object v1, Lcom/vk/toggle/FeatureManager;->d:Lcom/vk/toggle/b;
+    sget-object v1, Lcom/vk/toggle/FeatureManager;->d:Lcom/vk/toggle/FeatureStorage;
 
     if-eqz v1, :cond_0
 
-    invoke-virtual {v1}, Lcom/vk/toggle/b;->c()V
+    invoke-virtual {v1}, Lcom/vk/toggle/FeatureStorage;->c()V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
@@ -687,7 +687,7 @@
     const-string v1, "storage"
 
     .line 8
-    invoke-static {v1}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v1}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
@@ -698,7 +698,7 @@
     const-string v1, "storage"
 
     .line 9
-    invoke-static {v1}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v1}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_0
 
@@ -745,7 +745,7 @@
     invoke-virtual {v0}, Ljava/util/HashMap;->clear()V
 
     .line 2
-    sget-object v0, Lcom/vk/toggle/FeatureManager;->d:Lcom/vk/toggle/b;
+    sget-object v0, Lcom/vk/toggle/FeatureManager;->d:Lcom/vk/toggle/FeatureStorage;
 
     const/4 v1, 0x0
 
@@ -757,14 +757,14 @@
 
     const/4 v4, 0x1
 
-    invoke-static {v0, v2, v3, v4, v1}, Lcom/vk/toggle/b;->a(Lcom/vk/toggle/b;ZLkotlin/jvm/b/b;ILjava/lang/Object;)V
+    invoke-static {v0, v2, v3, v4, v1}, Lcom/vk/toggle/FeatureStorage;->a(Lcom/vk/toggle/FeatureStorage;ZLkotlin/jvm/b/Functions2;ILjava/lang/Object;)V
 
     return-void
 
     :cond_0
     const-string v0, "storage"
 
-    invoke-static {v0}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v0}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v1
 .end method
@@ -778,7 +778,7 @@
     invoke-virtual {v0}, Ljava/util/HashMap;->clear()V
 
     .line 2
-    sget-object v0, Lcom/vk/toggle/FeatureManager;->d:Lcom/vk/toggle/b;
+    sget-object v0, Lcom/vk/toggle/FeatureManager;->d:Lcom/vk/toggle/FeatureStorage;
 
     if-eqz v0, :cond_0
 
@@ -786,14 +786,14 @@
 
     sget-object v2, Lcom/vk/toggle/FeatureManager$loadUserToggles$1;->a:Lcom/vk/toggle/FeatureManager$loadUserToggles$1;
 
-    invoke-virtual {v0, v1, v2}, Lcom/vk/toggle/b;->a(ZLkotlin/jvm/b/b;)V
+    invoke-virtual {v0, v1, v2}, Lcom/vk/toggle/FeatureStorage;->a(ZLkotlin/jvm/b/Functions2;)V
 
     return-void
 
     :cond_0
     const-string v0, "storage"
 
-    invoke-static {v0}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v0}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     const/4 v0, 0x0
 
@@ -802,53 +802,53 @@
 
 
 # virtual methods
-.method public final a(Lkotlin/jvm/b/a;Lkotlin/jvm/b/a;)Lio/reactivex/disposables/b;
+.method public final a(Lkotlin/jvm/b/Functions;Lkotlin/jvm/b/Functions;)Lio/reactivex/disposables/Disposable;
     .locals 2
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lkotlin/jvm/b/a<",
-            "Lkotlin/m;",
+            "Lkotlin/jvm/b/Functions<",
+            "Lkotlin/Unit;",
             ">;",
-            "Lkotlin/jvm/b/a<",
-            "Lkotlin/m;",
+            "Lkotlin/jvm/b/Functions<",
+            "Lkotlin/Unit;",
             ">;)",
-            "Lio/reactivex/disposables/b;"
+            "Lio/reactivex/disposables/Disposable;"
         }
     .end annotation
 
     .line 32
-    sget-object v0, Lcom/vk/toggle/FeatureManager;->e:Lcom/vk/toggle/a;
+    sget-object v0, Lcom/vk/toggle/FeatureManager;->e:Lcom/vk/toggle/FeaturePublishSubject;
 
-    invoke-virtual {v0}, Lcom/vk/toggle/a;->a()Lc/a/m;
+    invoke-virtual {v0}, Lcom/vk/toggle/FeaturePublishSubject;->a()Lio/reactivex/Observable;
 
     move-result-object v0
 
     .line 33
-    const-class v1, Lcom/vk/toggle/a$b;
+    const-class v1, Lcom/vk/toggle/FeaturePublishSubject$b;
 
-    invoke-virtual {v0, v1}, Lc/a/m;->b(Ljava/lang/Class;)Lc/a/m;
+    invoke-virtual {v0, v1}, Lio/reactivex/Observable;->b(Ljava/lang/Class;)Lio/reactivex/Observable;
 
     move-result-object v0
 
     .line 34
     new-instance v1, Lcom/vk/toggle/FeatureManager$d;
 
-    invoke-direct {v1, p1}, Lcom/vk/toggle/FeatureManager$d;-><init>(Lkotlin/jvm/b/a;)V
+    invoke-direct {v1, p1}, Lcom/vk/toggle/FeatureManager$d;-><init>(Lkotlin/jvm/b/Functions;)V
 
     .line 35
     new-instance p1, Lcom/vk/toggle/FeatureManager$e;
 
-    invoke-direct {p1, p2}, Lcom/vk/toggle/FeatureManager$e;-><init>(Lkotlin/jvm/b/a;)V
+    invoke-direct {p1, p2}, Lcom/vk/toggle/FeatureManager$e;-><init>(Lkotlin/jvm/b/Functions;)V
 
     .line 36
-    invoke-virtual {v0, v1, p1}, Lc/a/m;->a(Lc/a/z/g;Lc/a/z/g;)Lio/reactivex/disposables/b;
+    invoke-virtual {v0, v1, p1}, Lio/reactivex/Observable;->a(Lio/reactivex/functions/Consumer;Lio/reactivex/functions/Consumer;)Lio/reactivex/disposables/Disposable;
 
     move-result-object p1
 
     const-string p2, "publishSubject.events\n  \u2026?.invoke()\n            })"
 
-    invoke-static {p1, p2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, p2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     return-object p1
 .end method
@@ -869,11 +869,11 @@
     move-result-wide v0
 
     .line 7
-    sget-object v2, Lcom/vk/toggle/FeatureManager;->d:Lcom/vk/toggle/b;
+    sget-object v2, Lcom/vk/toggle/FeatureManager;->d:Lcom/vk/toggle/FeatureStorage;
 
     if-eqz v2, :cond_0
 
-    invoke-virtual {v2, p1}, Lcom/vk/toggle/b;->a(I)V
+    invoke-virtual {v2, p1}, Lcom/vk/toggle/FeatureStorage;->a(I)V
 
     .line 8
     invoke-direct {p0}, Lcom/vk/toggle/FeatureManager;->f()V
@@ -922,7 +922,7 @@
     const-string p1, "storage"
 
     .line 11
-    invoke-static {p1}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {p1}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
@@ -978,7 +978,7 @@
     sput-object v2, Lcom/vk/toggle/FeatureManager;->f:Lcom/vk/toggle/FeatureManager$Sync;
 
     .line 17
-    sget-object v2, Lcom/vk/toggle/FeatureManager;->d:Lcom/vk/toggle/b;
+    sget-object v2, Lcom/vk/toggle/FeatureManager;->d:Lcom/vk/toggle/FeatureStorage;
 
     const/4 v3, 0x0
 
@@ -988,7 +988,7 @@
 
     move-result-wide v4
 
-    invoke-virtual {v2, v4, v5}, Lcom/vk/toggle/b;->a(J)V
+    invoke-virtual {v2, v4, v5}, Lcom/vk/toggle/FeatureStorage;->a(J)V
 
     .line 18
     sget v2, Lcom/vk/toggle/FeatureManager;->a:I
@@ -1003,13 +1003,13 @@
     sput p1, Lcom/vk/toggle/FeatureManager;->a:I
 
     .line 20
-    sget-object v2, Lcom/vk/toggle/FeatureManager;->d:Lcom/vk/toggle/b;
+    sget-object v2, Lcom/vk/toggle/FeatureManager;->d:Lcom/vk/toggle/FeatureStorage;
 
     if-eqz v2, :cond_0
 
     int-to-long v6, p1
 
-    invoke-virtual {v2, v6, v7}, Lcom/vk/toggle/b;->b(J)V
+    invoke-virtual {v2, v6, v7}, Lcom/vk/toggle/FeatureStorage;->b(J)V
 
     .line 21
     new-instance p1, Ljava/util/HashSet;
@@ -1041,7 +1041,7 @@
     const-string p1, "storage"
 
     .line 25
-    invoke-static {p1}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {p1}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
@@ -1060,13 +1060,13 @@
 
     .line 27
     :goto_0
-    sget-object p1, Lcom/vk/toggle/FeatureManager;->e:Lcom/vk/toggle/a;
+    sget-object p1, Lcom/vk/toggle/FeatureManager;->e:Lcom/vk/toggle/FeaturePublishSubject;
 
-    new-instance p2, Lcom/vk/toggle/a$b;
+    new-instance p2, Lcom/vk/toggle/FeaturePublishSubject$b;
 
-    invoke-direct {p2}, Lcom/vk/toggle/a$b;-><init>()V
+    invoke-direct {p2}, Lcom/vk/toggle/FeaturePublishSubject$b;-><init>()V
 
-    invoke-virtual {p1, p2}, Lcom/vk/toggle/a;->a(Lcom/vk/toggle/a$a;)V
+    invoke-virtual {p1, p2}, Lcom/vk/toggle/FeaturePublishSubject;->a(Lcom/vk/toggle/FeaturePublishSubject$a;)V
 
     new-array p1, v5, [Ljava/lang/Object;
 
@@ -1111,7 +1111,7 @@
     const-string p1, "storage"
 
     .line 30
-    invoke-static {p1}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {p1}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_0
 
@@ -1141,7 +1141,7 @@
 
     .line 4
     :try_start_0
-    new-instance v0, Lcom/vk/toggle/b;
+    new-instance v0, Lcom/vk/toggle/FeatureStorage;
 
     if-eqz p1, :cond_0
 
@@ -1151,9 +1151,9 @@
     const-string p1, ""
 
     :goto_0
-    invoke-direct {v0, p1}, Lcom/vk/toggle/b;-><init>(Ljava/lang/String;)V
+    invoke-direct {v0, p1}, Lcom/vk/toggle/FeatureStorage;-><init>(Ljava/lang/String;)V
 
-    sput-object v0, Lcom/vk/toggle/FeatureManager;->d:Lcom/vk/toggle/b;
+    sput-object v0, Lcom/vk/toggle/FeatureManager;->d:Lcom/vk/toggle/FeatureStorage;
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
@@ -1247,13 +1247,13 @@
 
     .line 2
     :try_start_0
-    sget-object v0, Lcom/vk/toggle/FeatureManager;->d:Lcom/vk/toggle/b;
+    sget-object v0, Lcom/vk/toggle/FeatureManager;->d:Lcom/vk/toggle/FeatureStorage;
 
     const/4 v1, 0x0
 
     if-eqz v0, :cond_2
 
-    invoke-virtual {v0}, Lcom/vk/toggle/b;->a()J
+    invoke-virtual {v0}, Lcom/vk/toggle/FeatureStorage;->a()J
 
     move-result-wide v2
 
@@ -1267,11 +1267,11 @@
     if-nez v0, :cond_1
 
     .line 4
-    sget-object v0, Lcom/vk/toggle/FeatureManager;->d:Lcom/vk/toggle/b;
+    sget-object v0, Lcom/vk/toggle/FeatureManager;->d:Lcom/vk/toggle/FeatureStorage;
 
     if-eqz v0, :cond_0
 
-    invoke-virtual {v0}, Lcom/vk/toggle/b;->b()I
+    invoke-virtual {v0}, Lcom/vk/toggle/FeatureStorage;->b()I
 
     move-result v0
 
@@ -1280,7 +1280,7 @@
     :cond_0
     const-string v0, "storage"
 
-    invoke-static {v0}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v0}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
@@ -1308,7 +1308,7 @@
     const-string v0, "storage"
 
     .line 7
-    invoke-static {v0}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v0}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_0
 

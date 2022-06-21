@@ -30,7 +30,7 @@
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, v1}, Lcom/vk/dto/user/deactivation/CommunityDeactivation$a;-><init>(Lkotlin/jvm/internal/i;)V
+    invoke-direct {v0, v1}, Lcom/vk/dto/user/deactivation/CommunityDeactivation$a;-><init>(Lkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     sput-object v0, Lcom/vk/dto/user/deactivation/CommunityDeactivation;->CREATOR:Lcom/vk/dto/user/deactivation/CommunityDeactivation$a;
 
@@ -62,7 +62,7 @@
 
     move-result-object v0
 
-    invoke-static {v0}, Lcom/vk/core/extensions/z;->j(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v0}, Lcom/vk/core/extensions/StringExt;->j(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 

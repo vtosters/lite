@@ -3,11 +3,11 @@
 .source "ReefWifiTracker.kt"
 
 # interfaces
-.implements Lcom/vk/reef/c;
+.implements Lcom/vk/reef/ReefStateSource;
 
 
 # instance fields
-.field private a:Lcom/vk/reef/dto/h;
+.field private a:Lcom/vk/reef/dto/ReefState6;
 
 .field private b:Ljava/util/List;
     .annotation system Ldalvik/annotation/Signature;
@@ -19,40 +19,40 @@
     .end annotation
 .end field
 
-.field private final c:Lcom/vk/reef/utils/e;
+.field private final c:Lcom/vk/reef/utils/ReefPermissionsUtil;
 
-.field private final d:Lcom/vk/reef/utils/c;
+.field private final d:Lcom/vk/reef/utils/ReefLogger;
 
-.field private final e:Lcom/vk/reef/utils/d;
+.field private final e:Lcom/vk/reef/utils/ReefNetworkUtil;
 
 .field private final f:Landroid/net/wifi/WifiManager;
 
 
 # direct methods
-.method public constructor <init>(Lcom/vk/reef/utils/e;Lcom/vk/reef/utils/c;Lcom/vk/reef/utils/d;Landroid/net/wifi/WifiManager;)V
+.method public constructor <init>(Lcom/vk/reef/utils/ReefPermissionsUtil;Lcom/vk/reef/utils/ReefLogger;Lcom/vk/reef/utils/ReefNetworkUtil;Landroid/net/wifi/WifiManager;)V
     .locals 0
 
     .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lcom/vk/reef/trackers/ReefWifiTracker;->c:Lcom/vk/reef/utils/e;
+    iput-object p1, p0, Lcom/vk/reef/trackers/ReefWifiTracker;->c:Lcom/vk/reef/utils/ReefPermissionsUtil;
 
-    iput-object p2, p0, Lcom/vk/reef/trackers/ReefWifiTracker;->d:Lcom/vk/reef/utils/c;
+    iput-object p2, p0, Lcom/vk/reef/trackers/ReefWifiTracker;->d:Lcom/vk/reef/utils/ReefLogger;
 
-    iput-object p3, p0, Lcom/vk/reef/trackers/ReefWifiTracker;->e:Lcom/vk/reef/utils/d;
+    iput-object p3, p0, Lcom/vk/reef/trackers/ReefWifiTracker;->e:Lcom/vk/reef/utils/ReefNetworkUtil;
 
     iput-object p4, p0, Lcom/vk/reef/trackers/ReefWifiTracker;->f:Landroid/net/wifi/WifiManager;
 
     .line 2
-    new-instance p1, Lcom/vk/reef/dto/h;
+    new-instance p1, Lcom/vk/reef/dto/ReefState6;
 
     invoke-static {}, Lkotlin/collections/l;->a()Ljava/util/List;
 
     move-result-object p2
 
-    invoke-direct {p1, p2}, Lcom/vk/reef/dto/h;-><init>(Ljava/util/List;)V
+    invoke-direct {p1, p2}, Lcom/vk/reef/dto/ReefState6;-><init>(Ljava/util/List;)V
 
-    iput-object p1, p0, Lcom/vk/reef/trackers/ReefWifiTracker;->a:Lcom/vk/reef/dto/h;
+    iput-object p1, p0, Lcom/vk/reef/trackers/ReefWifiTracker;->a:Lcom/vk/reef/dto/ReefState6;
 
     .line 3
     new-instance p1, Ljava/util/ArrayList;
@@ -64,11 +64,11 @@
     return-void
 .end method
 
-.method public static final synthetic a(Lcom/vk/reef/trackers/ReefWifiTracker;)Lcom/vk/reef/utils/c;
+.method public static final synthetic a(Lcom/vk/reef/trackers/ReefWifiTracker;)Lcom/vk/reef/utils/ReefLogger;
     .locals 0
 
     .line 1
-    iget-object p0, p0, Lcom/vk/reef/trackers/ReefWifiTracker;->d:Lcom/vk/reef/utils/c;
+    iget-object p0, p0, Lcom/vk/reef/trackers/ReefWifiTracker;->d:Lcom/vk/reef/utils/ReefLogger;
 
     return-object p0
 .end method
@@ -90,15 +90,15 @@
     .line 10
     new-instance v0, Lcom/vk/reef/utils/ReefWifiReceiver;
 
-    iget-object v1, p0, Lcom/vk/reef/trackers/ReefWifiTracker;->c:Lcom/vk/reef/utils/e;
+    iget-object v1, p0, Lcom/vk/reef/trackers/ReefWifiTracker;->c:Lcom/vk/reef/utils/ReefPermissionsUtil;
 
-    iget-object v2, p0, Lcom/vk/reef/trackers/ReefWifiTracker;->d:Lcom/vk/reef/utils/c;
+    iget-object v2, p0, Lcom/vk/reef/trackers/ReefWifiTracker;->d:Lcom/vk/reef/utils/ReefLogger;
 
     new-instance v3, Lcom/vk/reef/trackers/ReefWifiTracker$subscribe$receiver$1;
 
     invoke-direct {v3, p0}, Lcom/vk/reef/trackers/ReefWifiTracker$subscribe$receiver$1;-><init>(Lcom/vk/reef/trackers/ReefWifiTracker;)V
 
-    invoke-direct {v0, v1, v2, v3}, Lcom/vk/reef/utils/ReefWifiReceiver;-><init>(Lcom/vk/reef/utils/e;Lcom/vk/reef/utils/c;Lkotlin/jvm/b/b;)V
+    invoke-direct {v0, v1, v2, v3}, Lcom/vk/reef/utils/ReefWifiReceiver;-><init>(Lcom/vk/reef/utils/ReefPermissionsUtil;Lcom/vk/reef/utils/ReefLogger;Lkotlin/jvm/b/Functions2;)V
 
     .line 11
     sget-object v1, Lcom/vk/reef/utils/ReefWifiReceiver;->d:Lcom/vk/reef/utils/ReefWifiReceiver$a;
@@ -108,13 +108,13 @@
     return-void
 .end method
 
-.method public a(Lcom/vk/reef/dto/f;)V
+.method public a(Lcom/vk/reef/dto/ReefSnapshot;)V
     .locals 6
 
     .line 2
-    iget-object v0, p0, Lcom/vk/reef/trackers/ReefWifiTracker;->c:Lcom/vk/reef/utils/e;
+    iget-object v0, p0, Lcom/vk/reef/trackers/ReefWifiTracker;->c:Lcom/vk/reef/utils/ReefPermissionsUtil;
 
-    invoke-virtual {v0}, Lcom/vk/reef/utils/e;->c()Z
+    invoke-virtual {v0}, Lcom/vk/reef/utils/ReefPermissionsUtil;->c()Z
 
     move-result v0
 
@@ -140,13 +140,13 @@
 
     .line 4
     :cond_1
-    iget-object v0, p0, Lcom/vk/reef/trackers/ReefWifiTracker;->e:Lcom/vk/reef/utils/d;
+    iget-object v0, p0, Lcom/vk/reef/trackers/ReefWifiTracker;->e:Lcom/vk/reef/utils/ReefNetworkUtil;
 
     iget-object v2, p0, Lcom/vk/reef/trackers/ReefWifiTracker;->f:Landroid/net/wifi/WifiManager;
 
     iget-object v3, p0, Lcom/vk/reef/trackers/ReefWifiTracker;->b:Ljava/util/List;
 
-    invoke-virtual {v0, v2, v3}, Lcom/vk/reef/utils/d;->a(Landroid/net/wifi/WifiManager;Ljava/util/List;)Ljava/util/List;
+    invoke-virtual {v0, v2, v3}, Lcom/vk/reef/utils/ReefNetworkUtil;->a(Landroid/net/wifi/WifiManager;Ljava/util/List;)Ljava/util/List;
 
     move-result-object v0
 
@@ -174,10 +174,10 @@
 
     move-object v4, v3
 
-    check-cast v4, Lcom/vk/reef/dto/network/f;
+    check-cast v4, Lcom/vk/reef/dto/network/ReefWifiNetworkInfo;
 
     .line 7
-    invoke-virtual {v4}, Lcom/vk/reef/dto/network/f;->d()Ljava/lang/Float;
+    invoke-virtual {v4}, Lcom/vk/reef/dto/network/ReefWifiNetworkInfo;->d()Ljava/lang/Float;
 
     move-result-object v4
 
@@ -215,24 +215,24 @@
 
     .line 8
     :cond_5
-    iget-object v0, p0, Lcom/vk/reef/trackers/ReefWifiTracker;->a:Lcom/vk/reef/dto/h;
+    iget-object v0, p0, Lcom/vk/reef/trackers/ReefWifiTracker;->a:Lcom/vk/reef/dto/ReefState6;
 
-    invoke-virtual {v0, v2}, Lcom/vk/reef/dto/h;->a(Ljava/util/List;)Lcom/vk/reef/dto/h;
+    invoke-virtual {v0, v2}, Lcom/vk/reef/dto/ReefState6;->a(Ljava/util/List;)Lcom/vk/reef/dto/ReefState6;
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/vk/reef/trackers/ReefWifiTracker;->a:Lcom/vk/reef/dto/h;
+    iput-object v0, p0, Lcom/vk/reef/trackers/ReefWifiTracker;->a:Lcom/vk/reef/dto/ReefState6;
 
     .line 9
-    iget-object v0, p0, Lcom/vk/reef/trackers/ReefWifiTracker;->a:Lcom/vk/reef/dto/h;
+    iget-object v0, p0, Lcom/vk/reef/trackers/ReefWifiTracker;->a:Lcom/vk/reef/dto/ReefState6;
 
     const/4 v2, 0x0
 
-    invoke-static {v0, v2, v1, v2}, Lcom/vk/reef/dto/h;->a(Lcom/vk/reef/dto/h;Ljava/util/List;ILjava/lang/Object;)Lcom/vk/reef/dto/h;
+    invoke-static {v0, v2, v1, v2}, Lcom/vk/reef/dto/ReefState6;->a(Lcom/vk/reef/dto/ReefState6;Ljava/util/List;ILjava/lang/Object;)Lcom/vk/reef/dto/ReefState6;
 
     move-result-object v0
 
-    invoke-virtual {p1, v0}, Lcom/vk/reef/dto/f;->a(Lcom/vk/reef/dto/g;)V
+    invoke-virtual {p1, v0}, Lcom/vk/reef/dto/ReefSnapshot;->a(Lcom/vk/reef/dto/ReefState;)V
 
     :cond_6
     :goto_3

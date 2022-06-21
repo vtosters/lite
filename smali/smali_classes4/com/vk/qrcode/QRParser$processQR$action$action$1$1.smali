@@ -3,12 +3,12 @@
 .source "QRParser.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/a;
+.implements Lkotlin/jvm/b/Functions;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/qrcode/QRParser;->a(Lcom/vk/media/camera/qrcode/a$b;Z)V
+    value = Lcom/vk/qrcode/QRParser;->a(Lcom/vk/media/camera/qrcode/CameraQRDecoderCallback$b;Z)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -19,22 +19,22 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/a<",
-        "Lkotlin/m;",
+        "Lkotlin/jvm/b/Functions<",
+        "Lkotlin/Unit;",
         ">;"
     }
 .end annotation
 
 
 # instance fields
-.field final synthetic $this_apply:Lcom/vk/qrcode/d;
+.field final synthetic $this_apply:Lcom/vk/qrcode/QRTypes9;
 
 
 # direct methods
-.method constructor <init>(Lcom/vk/qrcode/d;)V
+.method constructor <init>(Lcom/vk/qrcode/QRTypes9;)V
     .locals 0
 
-    iput-object p1, p0, Lcom/vk/qrcode/QRParser$processQR$action$action$1$1;->$this_apply:Lcom/vk/qrcode/d;
+    iput-object p1, p0, Lcom/vk/qrcode/QRParser$processQR$action$action$1$1;->$this_apply:Lcom/vk/qrcode/QRTypes9;
 
     const/4 p1, 0x0
 
@@ -51,7 +51,7 @@
     .line 1
     invoke-virtual {p0}, Lcom/vk/qrcode/QRParser$processQR$action$action$1$1;->invoke()V
 
-    sget-object v0, Lkotlin/m;->a:Lkotlin/m;
+    sget-object v0, Lkotlin/Unit;->a:Lkotlin/Unit;
 
     return-object v0
 .end method
@@ -64,9 +64,9 @@
 
     invoke-direct {v0}, Lcom/vk/cameraui/utils/CameraTracker;-><init>()V
 
-    iget-object v1, p0, Lcom/vk/qrcode/QRParser$processQR$action$action$1$1;->$this_apply:Lcom/vk/qrcode/d;
+    iget-object v1, p0, Lcom/vk/qrcode/QRParser$processQR$action$action$1$1;->$this_apply:Lcom/vk/qrcode/QRTypes9;
 
-    invoke-virtual {v1}, Lcom/vk/qrcode/d;->n()I
+    invoke-virtual {v1}, Lcom/vk/qrcode/QRTypes9;->n()I
 
     move-result v1
 

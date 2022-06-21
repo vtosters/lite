@@ -1,5 +1,5 @@
 .class final Lcom/vk/silentauth/host/SilentAuthService$a;
-.super Lcom/vk/silentauth/a$a;
+.super Lcom/vk/silentauth/ISilentAuthInfoProvider$a;
 .source "SilentAuthService.kt"
 
 
@@ -23,7 +23,7 @@
     .locals 0
 
     .line 1
-    invoke-direct {p0}, Lcom/vk/silentauth/a$a;-><init>()V
+    invoke-direct {p0}, Lcom/vk/silentauth/ISilentAuthInfoProvider$a;-><init>()V
 
     iput-object p1, p0, Lcom/vk/silentauth/host/SilentAuthService$a;->a:Landroid/content/pm/PackageManager;
 
@@ -91,7 +91,7 @@
 
     const-string v3, "packageManager.getInstal\u2026geManager.GET_SIGNATURES)"
 
-    invoke-static {v2, v3}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v2, v3}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 5
     invoke-interface {v2}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
@@ -118,7 +118,7 @@
     .line 6
     iget-object v5, v5, Landroid/content/pm/PackageInfo;->packageName:Ljava/lang/String;
 
-    invoke-static {v5, v6}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v5, v6}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v5
 
@@ -150,9 +150,9 @@
     if-eqz v2, :cond_2
 
     .line 10
-    sget-object v3, Lcom/vk/silentauth/b;->a:Lcom/vk/silentauth/b;
+    sget-object v3, Lcom/vk/silentauth/SilentAuthInfoUtils;->a:Lcom/vk/silentauth/SilentAuthInfoUtils;
 
-    invoke-virtual {v3, v2}, Lcom/vk/silentauth/b;->a(Landroid/content/pm/Signature;)Ljava/lang/String;
+    invoke-virtual {v3, v2}, Lcom/vk/silentauth/SilentAuthInfoUtils;->a(Landroid/content/pm/Signature;)Ljava/lang/String;
 
     move-result-object v2
 
@@ -165,7 +165,7 @@
 
     .line 11
     :goto_1
-    invoke-static {v1, v7}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v1, v7}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v1
 
@@ -174,11 +174,11 @@
     if-nez v1, :cond_7
 
     .line 12
-    invoke-static {}, Lcom/vk/bridges/g;->a()Lcom/vk/bridges/f;
+    invoke-static {}, Lcom/vk/bridges/AuthBridge;->a()Lcom/vk/bridges/AuthBridge3;
 
     move-result-object v1
 
-    invoke-interface {v1}, Lcom/vk/bridges/f;->b()I
+    invoke-interface {v1}, Lcom/vk/bridges/AuthBridge3;->b()I
 
     move-result v14
 
@@ -198,7 +198,7 @@
     move-result-wide v15
 
     .line 15
-    new-instance v8, Lb/h/c/d/a;
+    new-instance v8, Lb/h/c/d/AuthGetCredentialsForService;
 
     move-object v1, v8
 
@@ -210,10 +210,10 @@
 
     move-object/from16 v6, p2
 
-    invoke-direct/range {v1 .. v7}, Lb/h/c/d/a;-><init>(Ljava/lang/String;JILjava/lang/String;Ljava/lang/String;)V
+    invoke-direct/range {v1 .. v7}, Lb/h/c/d/AuthGetCredentialsForService;-><init>(Ljava/lang/String;JILjava/lang/String;Ljava/lang/String;)V
 
     .line 16
-    invoke-virtual {v8}, Lcom/vk/api/base/d;->d()Ljava/lang/Object;
+    invoke-virtual {v8}, Lcom/vk/api/base/ApiRequest;->d()Ljava/lang/Object;
 
     move-result-object v1
 
@@ -249,10 +249,10 @@
     move-result-object v1
 
     .line 19
-    check-cast v1, Lb/h/h/d/b;
+    check-cast v1, Lcom/vk/auth/api/AuthServiceCredentials;
 
     .line 20
-    invoke-virtual {v1}, Lb/h/h/d/b;->i()J
+    invoke-virtual {v1}, Lcom/vk/auth/api/AuthServiceCredentials;->i()J
 
     move-result-wide v2
 
@@ -265,7 +265,7 @@
     .line 21
     sget-object v2, Ljava/util/concurrent/TimeUnit;->SECONDS:Ljava/util/concurrent/TimeUnit;
 
-    invoke-virtual {v1}, Lb/h/h/d/b;->i()J
+    invoke-virtual {v1}, Lcom/vk/auth/api/AuthServiceCredentials;->i()J
 
     move-result-wide v3
 
@@ -287,35 +287,35 @@
     new-instance v12, Lcom/vk/silentauth/SilentAuthInfo;
 
     .line 23
-    invoke-virtual {v1}, Lb/h/h/d/b;->h()Ljava/lang/String;
+    invoke-virtual {v1}, Lcom/vk/auth/api/AuthServiceCredentials;->h()Ljava/lang/String;
 
     move-result-object v4
 
-    invoke-virtual {v1}, Lb/h/h/d/b;->a()Ljava/lang/String;
+    invoke-virtual {v1}, Lcom/vk/auth/api/AuthServiceCredentials;->a()Ljava/lang/String;
 
     move-result-object v7
 
-    invoke-virtual {v1}, Lb/h/h/d/b;->f()Ljava/lang/String;
+    invoke-virtual {v1}, Lcom/vk/auth/api/AuthServiceCredentials;->f()Ljava/lang/String;
 
     move-result-object v8
 
-    invoke-virtual {v1}, Lb/h/h/d/b;->d()Ljava/lang/String;
+    invoke-virtual {v1}, Lcom/vk/auth/api/AuthServiceCredentials;->d()Ljava/lang/String;
 
     move-result-object v9
 
-    invoke-virtual {v1}, Lb/h/h/d/b;->e()Ljava/lang/String;
+    invoke-virtual {v1}, Lcom/vk/auth/api/AuthServiceCredentials;->e()Ljava/lang/String;
 
     move-result-object v10
 
-    invoke-virtual {v1}, Lb/h/h/d/b;->b()Ljava/lang/String;
+    invoke-virtual {v1}, Lcom/vk/auth/api/AuthServiceCredentials;->b()Ljava/lang/String;
 
     move-result-object v11
 
-    invoke-virtual {v1}, Lb/h/h/d/b;->c()Ljava/lang/String;
+    invoke-virtual {v1}, Lcom/vk/auth/api/AuthServiceCredentials;->c()Ljava/lang/String;
 
     move-result-object v18
 
-    invoke-virtual {v1}, Lb/h/h/d/b;->g()Ljava/lang/String;
+    invoke-virtual {v1}, Lcom/vk/auth/api/AuthServiceCredentials;->g()Ljava/lang/String;
 
     move-result-object v19
 

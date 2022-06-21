@@ -1,5 +1,5 @@
 .class public final Lcom/vk/im/engine/commands/messages/MsgSendViaBgCmd;
-.super Lcom/vk/im/engine/i/a;
+.super Lcom/vk/im/engine/i/BaseImEngineCmd;
 .source "MsgSendViaBgCmd.kt"
 
 
@@ -12,7 +12,7 @@
 
 .annotation system Ldalvik/annotation/Signature;
     value = {
-        "Lcom/vk/im/engine/i/a<",
+        "Lcom/vk/im/engine/i/BaseImEngineCmd<",
         "Ljava/util/List<",
         "+",
         "Lcom/vk/im/engine/models/messages/Msg;",
@@ -30,7 +30,7 @@
 
 .field private final c:Ljava/lang/String;
 
-.field private final d:Lcom/vk/im/engine/models/messages/e;
+.field private final d:Lcom/vk/im/engine/models/messages/MsgSendSource;
 
 .field private final e:Ljava/lang/String;
 
@@ -50,13 +50,13 @@
     .end annotation
 .end field
 
-.field private final j:Lcom/vk/im/engine/utils/collection/h;
+.field private final j:Lcom/vk/im/engine/utils/collection/IntSet;
 
 .field private final k:Ljava/lang/Integer;
 
 .field private final l:Ljava/lang/String;
 
-.field private final m:Lcom/vk/im/engine/commands/messages/z;
+.field private final m:Lcom/vk/im/engine/commands/messages/MsgSendConfig;
 
 
 # direct methods
@@ -67,7 +67,7 @@
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, v1}, Lcom/vk/im/engine/commands/messages/MsgSendViaBgCmd$a;-><init>(Lkotlin/jvm/internal/i;)V
+    invoke-direct {v0, v1}, Lcom/vk/im/engine/commands/messages/MsgSendViaBgCmd$a;-><init>(Lkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     .line 1
     const-class v0, Lcom/vk/im/engine/commands/messages/MsgSendViaBgCmd;
@@ -80,14 +80,14 @@
 
     const-string v1, "MsgSendViaBgCmd::class.java.canonicalName!!"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     sput-object v0, Lcom/vk/im/engine/commands/messages/MsgSendViaBgCmd;->n:Ljava/lang/String;
 
     return-void
 
     :cond_0
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     throw v1
 .end method
@@ -125,18 +125,18 @@
 
     move-object v0, p0
 
-    invoke-direct/range {v0 .. v14}, Lcom/vk/im/engine/commands/messages/MsgSendViaBgCmd;-><init>(ILjava/lang/String;Lcom/vk/im/engine/models/messages/e;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/util/List;Lcom/vk/im/engine/utils/collection/h;Ljava/lang/Integer;Ljava/lang/String;Lcom/vk/im/engine/commands/messages/z;ILkotlin/jvm/internal/i;)V
+    invoke-direct/range {v0 .. v14}, Lcom/vk/im/engine/commands/messages/MsgSendViaBgCmd;-><init>(ILjava/lang/String;Lcom/vk/im/engine/models/messages/MsgSendSource;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/util/List;Lcom/vk/im/engine/utils/collection/IntSet;Ljava/lang/Integer;Ljava/lang/String;Lcom/vk/im/engine/commands/messages/MsgSendConfig;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     return-void
 .end method
 
-.method public constructor <init>(ILjava/lang/String;Lcom/vk/im/engine/models/messages/e;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/util/List;Lcom/vk/im/engine/utils/collection/h;Ljava/lang/Integer;Ljava/lang/String;Lcom/vk/im/engine/commands/messages/z;)V
+.method public constructor <init>(ILjava/lang/String;Lcom/vk/im/engine/models/messages/MsgSendSource;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/util/List;Lcom/vk/im/engine/utils/collection/IntSet;Ljava/lang/Integer;Ljava/lang/String;Lcom/vk/im/engine/commands/messages/MsgSendConfig;)V
     .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(I",
             "Ljava/lang/String;",
-            "Lcom/vk/im/engine/models/messages/e;",
+            "Lcom/vk/im/engine/models/messages/MsgSendSource;",
             "Ljava/lang/String;",
             "Ljava/lang/String;",
             "Ljava/lang/String;",
@@ -145,22 +145,22 @@
             "+",
             "Lcom/vk/im/engine/models/attaches/Attach;",
             ">;",
-            "Lcom/vk/im/engine/utils/collection/h;",
+            "Lcom/vk/im/engine/utils/collection/IntSet;",
             "Ljava/lang/Integer;",
             "Ljava/lang/String;",
-            "Lcom/vk/im/engine/commands/messages/z;",
+            "Lcom/vk/im/engine/commands/messages/MsgSendConfig;",
             ")V"
         }
     .end annotation
 
     .line 5
-    invoke-direct {p0}, Lcom/vk/im/engine/i/a;-><init>()V
+    invoke-direct {p0}, Lcom/vk/im/engine/i/BaseImEngineCmd;-><init>()V
 
     iput p1, p0, Lcom/vk/im/engine/commands/messages/MsgSendViaBgCmd;->b:I
 
     iput-object p2, p0, Lcom/vk/im/engine/commands/messages/MsgSendViaBgCmd;->c:Ljava/lang/String;
 
-    iput-object p3, p0, Lcom/vk/im/engine/commands/messages/MsgSendViaBgCmd;->d:Lcom/vk/im/engine/models/messages/e;
+    iput-object p3, p0, Lcom/vk/im/engine/commands/messages/MsgSendViaBgCmd;->d:Lcom/vk/im/engine/models/messages/MsgSendSource;
 
     iput-object p4, p0, Lcom/vk/im/engine/commands/messages/MsgSendViaBgCmd;->e:Ljava/lang/String;
 
@@ -172,18 +172,18 @@
 
     iput-object p8, p0, Lcom/vk/im/engine/commands/messages/MsgSendViaBgCmd;->i:Ljava/util/List;
 
-    iput-object p9, p0, Lcom/vk/im/engine/commands/messages/MsgSendViaBgCmd;->j:Lcom/vk/im/engine/utils/collection/h;
+    iput-object p9, p0, Lcom/vk/im/engine/commands/messages/MsgSendViaBgCmd;->j:Lcom/vk/im/engine/utils/collection/IntSet;
 
     iput-object p10, p0, Lcom/vk/im/engine/commands/messages/MsgSendViaBgCmd;->k:Ljava/lang/Integer;
 
     iput-object p11, p0, Lcom/vk/im/engine/commands/messages/MsgSendViaBgCmd;->l:Ljava/lang/String;
 
-    iput-object p12, p0, Lcom/vk/im/engine/commands/messages/MsgSendViaBgCmd;->m:Lcom/vk/im/engine/commands/messages/z;
+    iput-object p12, p0, Lcom/vk/im/engine/commands/messages/MsgSendViaBgCmd;->m:Lcom/vk/im/engine/commands/messages/MsgSendConfig;
 
     .line 6
     iget p1, p0, Lcom/vk/im/engine/commands/messages/MsgSendViaBgCmd;->b:I
 
-    invoke-static {p1}, Lcom/vk/im/engine/internal/e;->b(I)Z
+    invoke-static {p1}, Lcom/vk/im/engine/internal/Validation;->b(I)Z
 
     move-result p1
 
@@ -192,7 +192,7 @@
     .line 7
     iget-object p1, p0, Lcom/vk/im/engine/commands/messages/MsgSendViaBgCmd;->i:Ljava/util/List;
 
-    invoke-static {p1}, Lcom/vk/im/engine/internal/e;->a(Ljava/util/Collection;)V
+    invoke-static {p1}, Lcom/vk/im/engine/internal/Validation;->a(Ljava/util/Collection;)V
 
     .line 8
     iget-object p1, p0, Lcom/vk/im/engine/commands/messages/MsgSendViaBgCmd;->c:Ljava/lang/String;
@@ -213,9 +213,9 @@
     xor-int/lit8 p2, p2, 0x1
 
     .line 10
-    iget-object p3, p0, Lcom/vk/im/engine/commands/messages/MsgSendViaBgCmd;->j:Lcom/vk/im/engine/utils/collection/h;
+    iget-object p3, p0, Lcom/vk/im/engine/commands/messages/MsgSendViaBgCmd;->j:Lcom/vk/im/engine/utils/collection/IntSet;
 
-    invoke-interface {p3}, Lcom/vk/im/engine/utils/collection/d;->a()Z
+    invoke-interface {p3}, Lcom/vk/im/engine/utils/collection/IntCollection;->a()Z
 
     move-result p3
 
@@ -266,7 +266,7 @@
     throw p1
 .end method
 
-.method public synthetic constructor <init>(ILjava/lang/String;Lcom/vk/im/engine/models/messages/e;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/util/List;Lcom/vk/im/engine/utils/collection/h;Ljava/lang/Integer;Ljava/lang/String;Lcom/vk/im/engine/commands/messages/z;ILkotlin/jvm/internal/i;)V
+.method public synthetic constructor <init>(ILjava/lang/String;Lcom/vk/im/engine/models/messages/MsgSendSource;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/util/List;Lcom/vk/im/engine/utils/collection/IntSet;Ljava/lang/Integer;Ljava/lang/String;Lcom/vk/im/engine/commands/messages/MsgSendConfig;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
     .locals 13
 
     move/from16 v0, p13
@@ -302,7 +302,7 @@
     if-eqz v4, :cond_2
 
     .line 1
-    sget-object v4, Lcom/vk/im/engine/models/messages/e$d;->a:Lcom/vk/im/engine/models/messages/e$d;
+    sget-object v4, Lcom/vk/im/engine/models/messages/MsgSendSource$d;->a:Lcom/vk/im/engine/models/messages/MsgSendSource$d;
 
     goto :goto_2
 
@@ -378,7 +378,7 @@
     if-eqz v10, :cond_8
 
     .line 3
-    invoke-static {}, Lcom/vk/im/engine/utils/collection/e;->c()Lcom/vk/im/engine/utils/collection/h;
+    invoke-static {}, Lcom/vk/im/engine/utils/collection/IntCollectionExt;->c()Lcom/vk/im/engine/utils/collection/IntSet;
 
     move-result-object v10
 
@@ -415,9 +415,9 @@
     if-eqz v0, :cond_b
 
     .line 4
-    sget-object v0, Lcom/vk/im/engine/commands/messages/z;->e:Lcom/vk/im/engine/commands/messages/z$a;
+    sget-object v0, Lcom/vk/im/engine/commands/messages/MsgSendConfig;->e:Lcom/vk/im/engine/commands/messages/MsgSendConfig$a;
 
-    invoke-virtual {v0}, Lcom/vk/im/engine/commands/messages/z$a;->a()Lcom/vk/im/engine/commands/messages/z;
+    invoke-virtual {v0}, Lcom/vk/im/engine/commands/messages/MsgSendConfig$a;->a()Lcom/vk/im/engine/commands/messages/MsgSendConfig;
 
     move-result-object v0
 
@@ -453,24 +453,24 @@
 
     move-object/from16 p13, v0
 
-    invoke-direct/range {p1 .. p13}, Lcom/vk/im/engine/commands/messages/MsgSendViaBgCmd;-><init>(ILjava/lang/String;Lcom/vk/im/engine/models/messages/e;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/util/List;Lcom/vk/im/engine/utils/collection/h;Ljava/lang/Integer;Ljava/lang/String;Lcom/vk/im/engine/commands/messages/z;)V
+    invoke-direct/range {p1 .. p13}, Lcom/vk/im/engine/commands/messages/MsgSendViaBgCmd;-><init>(ILjava/lang/String;Lcom/vk/im/engine/models/messages/MsgSendSource;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/util/List;Lcom/vk/im/engine/utils/collection/IntSet;Ljava/lang/Integer;Ljava/lang/String;Lcom/vk/im/engine/commands/messages/MsgSendConfig;)V
 
     return-void
 .end method
 
-.method private final a(Lcom/vk/im/engine/d;Lkotlin/jvm/b/b;)Ljava/util/List;
+.method private final a(Lcom/vk/im/engine/ImEnvironment;Lkotlin/jvm/b/Functions2;)Ljava/util/List;
     .locals 19
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lcom/vk/im/engine/d;",
-            "Lkotlin/jvm/b/b<",
+            "Lcom/vk/im/engine/ImEnvironment;",
+            "Lkotlin/jvm/b/Functions2<",
             "-",
             "Ljava/util/List<",
             "+",
             "Lcom/vk/im/engine/models/messages/Msg;",
             ">;",
-            "Lkotlin/m;",
+            "Lkotlin/Unit;",
             ">;)",
             "Ljava/util/List<",
             "Lcom/vk/im/engine/models/messages/Msg;",
@@ -489,9 +489,9 @@
 
     iget-object v3, v0, Lcom/vk/im/engine/commands/messages/MsgSendViaBgCmd;->c:Ljava/lang/String;
 
-    iget-object v4, v0, Lcom/vk/im/engine/commands/messages/MsgSendViaBgCmd;->d:Lcom/vk/im/engine/models/messages/e;
+    iget-object v4, v0, Lcom/vk/im/engine/commands/messages/MsgSendViaBgCmd;->d:Lcom/vk/im/engine/models/messages/MsgSendSource;
 
-    invoke-virtual {v1, v12, v2, v3, v4}, Lcom/vk/im/engine/commands/messages/MsgBuildHelper;->a(Lcom/vk/im/engine/d;ILjava/lang/String;Lcom/vk/im/engine/models/messages/e;)Ljava/lang/String;
+    invoke-virtual {v1, v12, v2, v3, v4}, Lcom/vk/im/engine/commands/messages/MsgBuildHelper;->a(Lcom/vk/im/engine/ImEnvironment;ILjava/lang/String;Lcom/vk/im/engine/models/messages/MsgSendSource;)Ljava/lang/String;
 
     move-result-object v4
 
@@ -500,16 +500,16 @@
 
     iget-object v2, v0, Lcom/vk/im/engine/commands/messages/MsgSendViaBgCmd;->i:Ljava/util/List;
 
-    invoke-virtual {v1, v12, v2}, Lcom/vk/im/engine/commands/messages/MsgBuildHelper;->a(Lcom/vk/im/engine/d;Ljava/util/List;)Ljava/util/List;
+    invoke-virtual {v1, v12, v2}, Lcom/vk/im/engine/commands/messages/MsgBuildHelper;->a(Lcom/vk/im/engine/ImEnvironment;Ljava/util/List;)Ljava/util/List;
 
     move-result-object v8
 
     .line 15
     sget-object v1, Lcom/vk/im/engine/commands/messages/MsgBuildHelper;->b:Lcom/vk/im/engine/commands/messages/MsgBuildHelper;
 
-    iget-object v2, v0, Lcom/vk/im/engine/commands/messages/MsgSendViaBgCmd;->j:Lcom/vk/im/engine/utils/collection/h;
+    iget-object v2, v0, Lcom/vk/im/engine/commands/messages/MsgSendViaBgCmd;->j:Lcom/vk/im/engine/utils/collection/IntSet;
 
-    invoke-virtual {v1, v12, v2}, Lcom/vk/im/engine/commands/messages/MsgBuildHelper;->a(Lcom/vk/im/engine/d;Lcom/vk/im/engine/utils/collection/d;)Ljava/util/List;
+    invoke-virtual {v1, v12, v2}, Lcom/vk/im/engine/commands/messages/MsgBuildHelper;->a(Lcom/vk/im/engine/ImEnvironment;Lcom/vk/im/engine/utils/collection/IntCollection;)Ljava/util/List;
 
     move-result-object v9
 
@@ -522,7 +522,7 @@
 
     invoke-virtual {v1}, Ljava/lang/Number;->intValue()I
 
-    invoke-interface/range {p1 .. p1}, Lcom/vk/im/engine/d;->a0()Lcom/vk/im/engine/internal/storage/StorageManager;
+    invoke-interface/range {p1 .. p1}, Lcom/vk/im/engine/ImEnvironment;->a0()Lcom/vk/im/engine/internal/storage/StorageManager;
 
     move-result-object v1
 
@@ -551,7 +551,7 @@
     .line 17
     sget-object v3, Lcom/vk/im/engine/commands/messages/MsgBuildHelper;->b:Lcom/vk/im/engine/commands/messages/MsgBuildHelper;
 
-    invoke-virtual {v3, v12, v1}, Lcom/vk/im/engine/commands/messages/MsgBuildHelper;->a(Lcom/vk/im/engine/d;Lcom/vk/im/engine/models/messages/Msg;)Lcom/vk/im/engine/models/messages/NestedMsg;
+    invoke-virtual {v3, v12, v1}, Lcom/vk/im/engine/commands/messages/MsgBuildHelper;->a(Lcom/vk/im/engine/ImEnvironment;Lcom/vk/im/engine/models/messages/Msg;)Lcom/vk/im/engine/models/messages/NestedMsg;
 
     move-result-object v3
 
@@ -576,7 +576,7 @@
 
     move-result-wide v1
 
-    new-instance v3, Lcom/vk/im/engine/commands/messages/z;
+    new-instance v3, Lcom/vk/im/engine/commands/messages/MsgSendConfig;
 
     const/4 v14, 0x0
 
@@ -592,7 +592,7 @@
 
     move-object v13, v3
 
-    invoke-direct/range {v13 .. v18}, Lcom/vk/im/engine/commands/messages/z;-><init>(ZLjava/lang/Long;Ljava/lang/Long;ILkotlin/jvm/internal/i;)V
+    invoke-direct/range {v13 .. v18}, Lcom/vk/im/engine/commands/messages/MsgSendConfig;-><init>(ZLjava/lang/Long;Ljava/lang/Long;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     goto :goto_2
 
@@ -610,7 +610,7 @@
 
     move-result-wide v1
 
-    new-instance v3, Lcom/vk/im/engine/commands/messages/z;
+    new-instance v3, Lcom/vk/im/engine/commands/messages/MsgSendConfig;
 
     const/4 v14, 0x0
 
@@ -626,7 +626,7 @@
 
     move-object v13, v3
 
-    invoke-direct/range {v13 .. v18}, Lcom/vk/im/engine/commands/messages/z;-><init>(ZLjava/lang/Long;Ljava/lang/Long;ILkotlin/jvm/internal/i;)V
+    invoke-direct/range {v13 .. v18}, Lcom/vk/im/engine/commands/messages/MsgSendConfig;-><init>(ZLjava/lang/Long;Ljava/lang/Long;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     goto :goto_2
 
@@ -642,7 +642,7 @@
 
     .line 20
     :cond_4
-    iget-object v1, v0, Lcom/vk/im/engine/commands/messages/MsgSendViaBgCmd;->m:Lcom/vk/im/engine/commands/messages/z;
+    iget-object v1, v0, Lcom/vk/im/engine/commands/messages/MsgSendViaBgCmd;->m:Lcom/vk/im/engine/commands/messages/MsgSendConfig;
 
     move-object v11, v1
 
@@ -662,7 +662,7 @@
     move-object/from16 v2, p1
 
     .line 23
-    invoke-virtual/range {v1 .. v11}, Lcom/vk/im/engine/commands/messages/MsgBuildHelper;->a(Lcom/vk/im/engine/d;ILjava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/util/List;Ljava/util/List;Lcom/vk/im/engine/models/messages/NestedMsg;Lcom/vk/im/engine/commands/messages/z;)Ljava/util/List;
+    invoke-virtual/range {v1 .. v11}, Lcom/vk/im/engine/commands/messages/MsgBuildHelper;->a(Lcom/vk/im/engine/ImEnvironment;ILjava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/util/List;Ljava/util/List;Lcom/vk/im/engine/models/messages/NestedMsg;Lcom/vk/im/engine/commands/messages/MsgSendConfig;)Ljava/util/List;
 
     move-result-object v1
 
@@ -675,28 +675,28 @@
     move-object/from16 v4, p2
 
     .line 26
-    invoke-direct {v2, v1, v3, v4}, Lcom/vk/im/engine/internal/merge/messages/MsgHistoryFromLocalMergeTask;-><init>(Ljava/util/List;Lcom/vk/im/engine/internal/merge/messages/WeightStrategy;Lkotlin/jvm/b/b;)V
+    invoke-direct {v2, v1, v3, v4}, Lcom/vk/im/engine/internal/merge/messages/MsgHistoryFromLocalMergeTask;-><init>(Ljava/util/List;Lcom/vk/im/engine/internal/merge/messages/WeightStrategy;Lkotlin/jvm/b/Functions2;)V
 
     .line 27
-    invoke-virtual {v2, v12}, Lcom/vk/im/engine/internal/k/a;->a(Lcom/vk/im/engine/d;)Ljava/lang/Object;
+    invoke-virtual {v2, v12}, Lcom/vk/im/engine/internal/k/MergeTask;->a(Lcom/vk/im/engine/ImEnvironment;)Ljava/lang/Object;
 
     move-result-object v1
 
     const-string v2, "msgListMergeTask.merge(env)"
 
-    invoke-static {v1, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     check-cast v1, Ljava/util/List;
 
     return-object v1
 .end method
 
-.method private final a(Lcom/vk/im/engine/d;Ljava/util/List;)V
+.method private final a(Lcom/vk/im/engine/ImEnvironment;Ljava/util/List;)V
     .locals 16
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lcom/vk/im/engine/d;",
+            "Lcom/vk/im/engine/ImEnvironment;",
             "Ljava/util/List<",
             "+",
             "Lcom/vk/im/engine/models/messages/Msg;",
@@ -707,15 +707,15 @@
     move-object/from16 v0, p0
 
     .line 28
-    invoke-interface/range {p1 .. p1}, Lcom/vk/im/engine/d;->a0()Lcom/vk/im/engine/internal/storage/StorageManager;
+    invoke-interface/range {p1 .. p1}, Lcom/vk/im/engine/ImEnvironment;->a0()Lcom/vk/im/engine/internal/storage/StorageManager;
 
     move-result-object v1
 
-    invoke-virtual {v1}, Lcom/vk/im/engine/internal/storage/StorageManager;->f()Lcom/vk/im/engine/internal/storage/delegates/dialogs/g;
+    invoke-virtual {v1}, Lcom/vk/im/engine/internal/storage/StorageManager;->f()Lcom/vk/im/engine/internal/storage/delegates/dialogs/DialogsStorageManager;
 
     move-result-object v1
 
-    invoke-virtual {v1}, Lcom/vk/im/engine/internal/storage/delegates/dialogs/g;->b()Lcom/vk/im/engine/internal/storage/delegates/dialogs/DialogsEntryStorageManager;
+    invoke-virtual {v1}, Lcom/vk/im/engine/internal/storage/delegates/dialogs/DialogsStorageManager;->b()Lcom/vk/im/engine/internal/storage/delegates/dialogs/DialogsEntryStorageManager;
 
     move-result-object v1
 
@@ -745,11 +745,11 @@
     check-cast v3, Lcom/vk/im/engine/models/messages/Msg;
 
     .line 31
-    sget-object v4, Lcom/vk/im/engine/utils/k;->a:Lcom/vk/im/engine/utils/k;
+    sget-object v4, Lcom/vk/im/engine/utils/MsgTimeoutUtils;->a:Lcom/vk/im/engine/utils/MsgTimeoutUtils;
 
     move-object/from16 v14, p1
 
-    invoke-virtual {v4, v14, v3}, Lcom/vk/im/engine/utils/k;->a(Lcom/vk/im/engine/d;Lcom/vk/im/engine/models/messages/Msg;)J
+    invoke-virtual {v4, v14, v3}, Lcom/vk/im/engine/utils/MsgTimeoutUtils;->a(Lcom/vk/im/engine/ImEnvironment;Lcom/vk/im/engine/models/messages/Msg;)J
 
     move-result-wide v10
 
@@ -783,11 +783,11 @@
     invoke-direct/range {v3 .. v13}, Lcom/vk/im/engine/internal/jobs/msg/MsgSendJob;-><init>(IIZZLjava/lang/String;ZJZLjava/lang/String;)V
 
     .line 37
-    invoke-interface/range {p1 .. p1}, Lcom/vk/im/engine/d;->f0()Lcom/vk/instantjobs/b;
+    invoke-interface/range {p1 .. p1}, Lcom/vk/im/engine/ImEnvironment;->f0()Lcom/vk/instantjobs/InstantJobManager;
 
     move-result-object v3
 
-    invoke-virtual {v3, v15}, Lcom/vk/instantjobs/b;->a(Lcom/vk/instantjobs/InstantJob;)V
+    invoke-virtual {v3, v15}, Lcom/vk/instantjobs/InstantJobManager;->a(Lcom/vk/instantjobs/InstantJob;)V
 
     goto :goto_0
 
@@ -795,32 +795,32 @@
     return-void
 .end method
 
-.method private final b(Lcom/vk/im/engine/d;)V
+.method private final b(Lcom/vk/im/engine/ImEnvironment;)V
     .locals 8
 
     .line 1
-    invoke-interface {p1}, Lcom/vk/im/engine/d;->a0()Lcom/vk/im/engine/internal/storage/StorageManager;
+    invoke-interface {p1}, Lcom/vk/im/engine/ImEnvironment;->a0()Lcom/vk/im/engine/internal/storage/StorageManager;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/vk/im/engine/internal/storage/StorageManager;->f()Lcom/vk/im/engine/internal/storage/delegates/dialogs/g;
+    invoke-virtual {v0}, Lcom/vk/im/engine/internal/storage/StorageManager;->f()Lcom/vk/im/engine/internal/storage/delegates/dialogs/DialogsStorageManager;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/vk/im/engine/internal/storage/delegates/dialogs/g;->b()Lcom/vk/im/engine/internal/storage/delegates/dialogs/DialogsEntryStorageManager;
+    invoke-virtual {v0}, Lcom/vk/im/engine/internal/storage/delegates/dialogs/DialogsStorageManager;->b()Lcom/vk/im/engine/internal/storage/delegates/dialogs/DialogsEntryStorageManager;
 
     move-result-object v0
 
     iget v1, p0, Lcom/vk/im/engine/commands/messages/MsgSendViaBgCmd;->b:I
 
-    invoke-virtual {v0, v1}, Lcom/vk/im/engine/internal/storage/delegates/dialogs/DialogsEntryStorageManager;->c(I)Lcom/vk/im/engine/internal/storage/models/a;
+    invoke-virtual {v0, v1}, Lcom/vk/im/engine/internal/storage/delegates/dialogs/DialogsEntryStorageManager;->c(I)Lcom/vk/im/engine/internal/storage/models/DialogStorageModel;
 
     move-result-object v0
 
     if-eqz v0, :cond_0
 
     .line 2
-    invoke-virtual {v0}, Lcom/vk/im/engine/internal/storage/models/a;->r()Lcom/vk/im/engine/models/MsgRequestStatus;
+    invoke-virtual {v0}, Lcom/vk/im/engine/internal/storage/models/DialogStorageModel;->r()Lcom/vk/im/engine/models/MsgRequestStatus;
 
     move-result-object v1
 
@@ -831,7 +831,7 @@
     :cond_0
     if-eqz v0, :cond_1
 
-    invoke-virtual {v0}, Lcom/vk/im/engine/internal/storage/models/a;->q()Lcom/vk/im/engine/models/MsgRequestStatus;
+    invoke-virtual {v0}, Lcom/vk/im/engine/internal/storage/models/DialogStorageModel;->q()Lcom/vk/im/engine/models/MsgRequestStatus;
 
     move-result-object v1
 
@@ -866,30 +866,30 @@
 
     move-object v2, v0
 
-    invoke-direct/range {v2 .. v7}, Lcom/vk/im/engine/commands/requests/MsgRequestStatusChangeCmd;-><init>(ILcom/vk/im/engine/models/MsgRequestStatus;Ljava/lang/Object;ILkotlin/jvm/internal/i;)V
+    invoke-direct/range {v2 .. v7}, Lcom/vk/im/engine/commands/requests/MsgRequestStatusChangeCmd;-><init>(ILcom/vk/im/engine/models/MsgRequestStatus;Ljava/lang/Object;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     .line 5
-    invoke-interface {p1, p0, v0}, Lcom/vk/im/engine/d;->a(Ljava/lang/Object;Lcom/vk/im/engine/i/c;)Ljava/lang/Object;
+    invoke-interface {p1, p0, v0}, Lcom/vk/im/engine/ImEnvironment;->a(Ljava/lang/Object;Lcom/vk/im/engine/i/ImEngineCmd;)Ljava/lang/Object;
 
     :cond_3
     return-void
 .end method
 
-.method private final c(Lcom/vk/im/engine/d;)V
+.method private final c(Lcom/vk/im/engine/ImEnvironment;)V
     .locals 1
 
     .line 2
-    invoke-interface {p1}, Lcom/vk/im/engine/d;->a0()Lcom/vk/im/engine/internal/storage/StorageManager;
+    invoke-interface {p1}, Lcom/vk/im/engine/ImEnvironment;->a0()Lcom/vk/im/engine/internal/storage/StorageManager;
 
     move-result-object p1
 
     .line 3
-    invoke-virtual {p1}, Lcom/vk/im/engine/internal/storage/StorageManager;->f()Lcom/vk/im/engine/internal/storage/delegates/dialogs/g;
+    invoke-virtual {p1}, Lcom/vk/im/engine/internal/storage/StorageManager;->f()Lcom/vk/im/engine/internal/storage/delegates/dialogs/DialogsStorageManager;
 
     move-result-object p1
 
     .line 4
-    invoke-virtual {p1}, Lcom/vk/im/engine/internal/storage/delegates/dialogs/g;->b()Lcom/vk/im/engine/internal/storage/delegates/dialogs/DialogsEntryStorageManager;
+    invoke-virtual {p1}, Lcom/vk/im/engine/internal/storage/delegates/dialogs/DialogsStorageManager;->b()Lcom/vk/im/engine/internal/storage/delegates/dialogs/DialogsEntryStorageManager;
 
     move-result-object p1
 
@@ -910,7 +910,7 @@
     return-object v0
 .end method
 
-.method private final d(Lcom/vk/im/engine/d;)V
+.method private final d(Lcom/vk/im/engine/ImEnvironment;)V
     .locals 4
 
     .line 2
@@ -928,12 +928,12 @@
     :cond_0
     iget v0, p0, Lcom/vk/im/engine/commands/messages/MsgSendViaBgCmd;->b:I
 
-    invoke-static {v0}, Lcom/vk/im/engine/utils/e;->c(I)I
+    invoke-static {v0}, Lcom/vk/im/engine/utils/ImDialogsUtils;->c(I)I
 
     move-result v0
 
     .line 4
-    invoke-interface {p1}, Lcom/vk/im/engine/d;->f0()Lcom/vk/instantjobs/b;
+    invoke-interface {p1}, Lcom/vk/im/engine/ImEnvironment;->f0()Lcom/vk/instantjobs/InstantJobManager;
 
     move-result-object v1
 
@@ -943,10 +943,10 @@
 
     const-string v3, "old msg receive enabled, because user sent message"
 
-    invoke-virtual {v1, v3, v2}, Lcom/vk/instantjobs/b;->b(Ljava/lang/String;Lkotlin/jvm/b/b;)V
+    invoke-virtual {v1, v3, v2}, Lcom/vk/instantjobs/InstantJobManager;->b(Ljava/lang/String;Lkotlin/jvm/b/Functions2;)V
 
     .line 5
-    invoke-interface {p1}, Lcom/vk/im/engine/d;->a0()Lcom/vk/im/engine/internal/storage/StorageManager;
+    invoke-interface {p1}, Lcom/vk/im/engine/ImEnvironment;->a0()Lcom/vk/im/engine/internal/storage/StorageManager;
 
     move-result-object p1
 
@@ -965,23 +965,23 @@
 
 
 # virtual methods
-.method public bridge synthetic a(Lcom/vk/im/engine/d;)Ljava/lang/Object;
+.method public bridge synthetic a(Lcom/vk/im/engine/ImEnvironment;)Ljava/lang/Object;
     .locals 0
 
     .line 1
-    invoke-virtual {p0, p1}, Lcom/vk/im/engine/commands/messages/MsgSendViaBgCmd;->a(Lcom/vk/im/engine/d;)Ljava/util/List;
+    invoke-virtual {p0, p1}, Lcom/vk/im/engine/commands/messages/MsgSendViaBgCmd;->a(Lcom/vk/im/engine/ImEnvironment;)Ljava/util/List;
 
     move-result-object p1
 
     return-object p1
 .end method
 
-.method public a(Lcom/vk/im/engine/d;)Ljava/util/List;
+.method public a(Lcom/vk/im/engine/ImEnvironment;)Ljava/util/List;
     .locals 5
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lcom/vk/im/engine/d;",
+            "Lcom/vk/im/engine/ImEnvironment;",
             ")",
             "Ljava/util/List<",
             "Lcom/vk/im/engine/models/messages/Msg;",
@@ -992,38 +992,38 @@
     .line 2
     new-instance v0, Lcom/vk/im/engine/commands/messages/MsgSendViaBgCmd$onExecute$msgList$1;
 
-    invoke-direct {v0, p0, p1}, Lcom/vk/im/engine/commands/messages/MsgSendViaBgCmd$onExecute$msgList$1;-><init>(Lcom/vk/im/engine/commands/messages/MsgSendViaBgCmd;Lcom/vk/im/engine/d;)V
+    invoke-direct {v0, p0, p1}, Lcom/vk/im/engine/commands/messages/MsgSendViaBgCmd$onExecute$msgList$1;-><init>(Lcom/vk/im/engine/commands/messages/MsgSendViaBgCmd;Lcom/vk/im/engine/ImEnvironment;)V
 
-    invoke-direct {p0, p1, v0}, Lcom/vk/im/engine/commands/messages/MsgSendViaBgCmd;->a(Lcom/vk/im/engine/d;Lkotlin/jvm/b/b;)Ljava/util/List;
+    invoke-direct {p0, p1, v0}, Lcom/vk/im/engine/commands/messages/MsgSendViaBgCmd;->a(Lcom/vk/im/engine/ImEnvironment;Lkotlin/jvm/b/Functions2;)Ljava/util/List;
 
     move-result-object v0
 
     .line 3
-    invoke-direct {p0, p1, v0}, Lcom/vk/im/engine/commands/messages/MsgSendViaBgCmd;->a(Lcom/vk/im/engine/d;Ljava/util/List;)V
+    invoke-direct {p0, p1, v0}, Lcom/vk/im/engine/commands/messages/MsgSendViaBgCmd;->a(Lcom/vk/im/engine/ImEnvironment;Ljava/util/List;)V
 
     .line 4
-    invoke-direct {p0, p1}, Lcom/vk/im/engine/commands/messages/MsgSendViaBgCmd;->b(Lcom/vk/im/engine/d;)V
+    invoke-direct {p0, p1}, Lcom/vk/im/engine/commands/messages/MsgSendViaBgCmd;->b(Lcom/vk/im/engine/ImEnvironment;)V
 
     .line 5
-    invoke-direct {p0, p1}, Lcom/vk/im/engine/commands/messages/MsgSendViaBgCmd;->d(Lcom/vk/im/engine/d;)V
+    invoke-direct {p0, p1}, Lcom/vk/im/engine/commands/messages/MsgSendViaBgCmd;->d(Lcom/vk/im/engine/ImEnvironment;)V
 
     .line 6
-    invoke-direct {p0, p1}, Lcom/vk/im/engine/commands/messages/MsgSendViaBgCmd;->c(Lcom/vk/im/engine/d;)V
+    invoke-direct {p0, p1}, Lcom/vk/im/engine/commands/messages/MsgSendViaBgCmd;->c(Lcom/vk/im/engine/ImEnvironment;)V
 
     .line 7
-    invoke-interface {p1}, Lcom/vk/im/engine/d;->l0()Lcom/vk/im/engine/reporters/k;
+    invoke-interface {p1}, Lcom/vk/im/engine/ImEnvironment;->l0()Lcom/vk/im/engine/reporters/ImReporters;
 
     move-result-object v1
 
     .line 8
-    invoke-virtual {v1}, Lcom/vk/im/engine/reporters/k;->j()Lcom/vk/im/engine/reporters/MsgSendReporter;
+    invoke-virtual {v1}, Lcom/vk/im/engine/reporters/ImReporters;->j()Lcom/vk/im/engine/reporters/MsgSendReporter;
 
     move-result-object v2
 
     invoke-virtual {v2, v0}, Lcom/vk/im/engine/reporters/MsgSendReporter;->a(Ljava/util/Collection;)V
 
     .line 9
-    invoke-virtual {v1}, Lcom/vk/im/engine/reporters/k;->f()Lcom/vk/im/engine/reporters/i;
+    invoke-virtual {v1}, Lcom/vk/im/engine/reporters/ImReporters;->f()Lcom/vk/im/engine/reporters/EntryPointReporter;
 
     move-result-object v2
 
@@ -1031,44 +1031,44 @@
 
     iget-object v4, p0, Lcom/vk/im/engine/commands/messages/MsgSendViaBgCmd;->h:Ljava/lang/String;
 
-    invoke-virtual {v2, p1, v3, v4}, Lcom/vk/im/engine/reporters/i;->a(Lcom/vk/im/engine/d;ILjava/lang/String;)V
+    invoke-virtual {v2, p1, v3, v4}, Lcom/vk/im/engine/reporters/EntryPointReporter;->a(Lcom/vk/im/engine/ImEnvironment;ILjava/lang/String;)V
 
     .line 10
-    invoke-virtual {v1}, Lcom/vk/im/engine/reporters/k;->b()Lcom/vk/im/engine/reporters/c;
+    invoke-virtual {v1}, Lcom/vk/im/engine/reporters/ImReporters;->b()Lcom/vk/im/engine/reporters/BotKeyboardReporter;
 
     move-result-object v1
 
     iget v2, p0, Lcom/vk/im/engine/commands/messages/MsgSendViaBgCmd;->b:I
 
-    iget-object v3, p0, Lcom/vk/im/engine/commands/messages/MsgSendViaBgCmd;->d:Lcom/vk/im/engine/models/messages/e;
+    iget-object v3, p0, Lcom/vk/im/engine/commands/messages/MsgSendViaBgCmd;->d:Lcom/vk/im/engine/models/messages/MsgSendSource;
 
-    invoke-virtual {v1, v2, v3}, Lcom/vk/im/engine/reporters/c;->a(ILcom/vk/im/engine/models/messages/e;)V
+    invoke-virtual {v1, v2, v3}, Lcom/vk/im/engine/reporters/BotKeyboardReporter;->a(ILcom/vk/im/engine/models/messages/MsgSendSource;)V
 
     .line 11
-    new-instance v1, Lcom/vk/im/engine/events/q;
+    new-instance v1, Lcom/vk/im/engine/events/OnDialogOrderUpdateEvent;
 
     sget-object v2, Lcom/vk/im/engine/commands/messages/MsgSendViaBgCmd;->n:Ljava/lang/String;
 
-    sget-object v3, Lcom/vk/im/engine/models/q;->d:Lcom/vk/im/engine/models/q$a;
+    sget-object v3, Lcom/vk/im/engine/models/Weight;->d:Lcom/vk/im/engine/models/Weight$a;
 
-    invoke-virtual {v3}, Lcom/vk/im/engine/models/q$a;->c()Lcom/vk/im/engine/models/q;
+    invoke-virtual {v3}, Lcom/vk/im/engine/models/Weight$a;->c()Lcom/vk/im/engine/models/Weight;
 
     move-result-object v3
 
     const/4 v4, 0x1
 
-    invoke-direct {v1, v2, v3, v4}, Lcom/vk/im/engine/events/q;-><init>(Ljava/lang/Object;Lcom/vk/im/engine/models/q;I)V
+    invoke-direct {v1, v2, v3, v4}, Lcom/vk/im/engine/events/OnDialogOrderUpdateEvent;-><init>(Ljava/lang/Object;Lcom/vk/im/engine/models/Weight;I)V
 
-    invoke-interface {p1, p0, v1}, Lcom/vk/im/engine/d;->a(Ljava/lang/Object;Lcom/vk/im/engine/events/a;)V
+    invoke-interface {p1, p0, v1}, Lcom/vk/im/engine/ImEnvironment;->a(Ljava/lang/Object;Lcom/vk/im/engine/events/Event;)V
 
     .line 12
-    invoke-interface {p1}, Lcom/vk/im/engine/d;->n0()Lcom/vk/im/engine/internal/c;
+    invoke-interface {p1}, Lcom/vk/im/engine/ImEnvironment;->n0()Lcom/vk/im/engine/internal/EventHelper;
 
     move-result-object v1
 
     iget v2, p0, Lcom/vk/im/engine/commands/messages/MsgSendViaBgCmd;->b:I
 
-    invoke-virtual {v1, p1, v2}, Lcom/vk/im/engine/internal/c;->a(Ljava/lang/Object;I)V
+    invoke-virtual {v1, p1, v2}, Lcom/vk/im/engine/internal/EventHelper;->a(Ljava/lang/Object;I)V
 
     return-object v0
 .end method
@@ -1103,17 +1103,17 @@
 
     iget-object v1, p1, Lcom/vk/im/engine/commands/messages/MsgSendViaBgCmd;->c:Ljava/lang/String;
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    iget-object v0, p0, Lcom/vk/im/engine/commands/messages/MsgSendViaBgCmd;->d:Lcom/vk/im/engine/models/messages/e;
+    iget-object v0, p0, Lcom/vk/im/engine/commands/messages/MsgSendViaBgCmd;->d:Lcom/vk/im/engine/models/messages/MsgSendSource;
 
-    iget-object v1, p1, Lcom/vk/im/engine/commands/messages/MsgSendViaBgCmd;->d:Lcom/vk/im/engine/models/messages/e;
+    iget-object v1, p1, Lcom/vk/im/engine/commands/messages/MsgSendViaBgCmd;->d:Lcom/vk/im/engine/models/messages/MsgSendSource;
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v0
 
@@ -1123,7 +1123,7 @@
 
     iget-object v1, p1, Lcom/vk/im/engine/commands/messages/MsgSendViaBgCmd;->e:Ljava/lang/String;
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v0
 
@@ -1133,7 +1133,7 @@
 
     iget-object v1, p1, Lcom/vk/im/engine/commands/messages/MsgSendViaBgCmd;->f:Ljava/lang/String;
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v0
 
@@ -1143,7 +1143,7 @@
 
     iget-object v1, p1, Lcom/vk/im/engine/commands/messages/MsgSendViaBgCmd;->g:Ljava/lang/String;
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v0
 
@@ -1153,7 +1153,7 @@
 
     iget-object v1, p1, Lcom/vk/im/engine/commands/messages/MsgSendViaBgCmd;->h:Ljava/lang/String;
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v0
 
@@ -1163,17 +1163,17 @@
 
     iget-object v1, p1, Lcom/vk/im/engine/commands/messages/MsgSendViaBgCmd;->i:Ljava/util/List;
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    iget-object v0, p0, Lcom/vk/im/engine/commands/messages/MsgSendViaBgCmd;->j:Lcom/vk/im/engine/utils/collection/h;
+    iget-object v0, p0, Lcom/vk/im/engine/commands/messages/MsgSendViaBgCmd;->j:Lcom/vk/im/engine/utils/collection/IntSet;
 
-    iget-object v1, p1, Lcom/vk/im/engine/commands/messages/MsgSendViaBgCmd;->j:Lcom/vk/im/engine/utils/collection/h;
+    iget-object v1, p1, Lcom/vk/im/engine/commands/messages/MsgSendViaBgCmd;->j:Lcom/vk/im/engine/utils/collection/IntSet;
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v0
 
@@ -1183,7 +1183,7 @@
 
     iget-object v1, p1, Lcom/vk/im/engine/commands/messages/MsgSendViaBgCmd;->k:Ljava/lang/Integer;
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v0
 
@@ -1193,17 +1193,17 @@
 
     iget-object v1, p1, Lcom/vk/im/engine/commands/messages/MsgSendViaBgCmd;->l:Ljava/lang/String;
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    iget-object v0, p0, Lcom/vk/im/engine/commands/messages/MsgSendViaBgCmd;->m:Lcom/vk/im/engine/commands/messages/z;
+    iget-object v0, p0, Lcom/vk/im/engine/commands/messages/MsgSendViaBgCmd;->m:Lcom/vk/im/engine/commands/messages/MsgSendConfig;
 
-    iget-object p1, p1, Lcom/vk/im/engine/commands/messages/MsgSendViaBgCmd;->m:Lcom/vk/im/engine/commands/messages/z;
+    iget-object p1, p1, Lcom/vk/im/engine/commands/messages/MsgSendViaBgCmd;->m:Lcom/vk/im/engine/commands/messages/MsgSendConfig;
 
-    invoke-static {v0, p1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v0, p1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result p1
 
@@ -1250,7 +1250,7 @@
 
     mul-int/lit8 v0, v0, 0x1f
 
-    iget-object v1, p0, Lcom/vk/im/engine/commands/messages/MsgSendViaBgCmd;->d:Lcom/vk/im/engine/models/messages/e;
+    iget-object v1, p0, Lcom/vk/im/engine/commands/messages/MsgSendViaBgCmd;->d:Lcom/vk/im/engine/models/messages/MsgSendSource;
 
     if-eqz v1, :cond_1
 
@@ -1358,7 +1358,7 @@
 
     mul-int/lit8 v0, v0, 0x1f
 
-    iget-object v1, p0, Lcom/vk/im/engine/commands/messages/MsgSendViaBgCmd;->j:Lcom/vk/im/engine/utils/collection/h;
+    iget-object v1, p0, Lcom/vk/im/engine/commands/messages/MsgSendViaBgCmd;->j:Lcom/vk/im/engine/utils/collection/IntSet;
 
     if-eqz v1, :cond_7
 
@@ -1412,11 +1412,11 @@
 
     mul-int/lit8 v0, v0, 0x1f
 
-    iget-object v1, p0, Lcom/vk/im/engine/commands/messages/MsgSendViaBgCmd;->m:Lcom/vk/im/engine/commands/messages/z;
+    iget-object v1, p0, Lcom/vk/im/engine/commands/messages/MsgSendViaBgCmd;->m:Lcom/vk/im/engine/commands/messages/MsgSendConfig;
 
     if-eqz v1, :cond_a
 
-    invoke-virtual {v1}, Lcom/vk/im/engine/commands/messages/z;->hashCode()I
+    invoke-virtual {v1}, Lcom/vk/im/engine/commands/messages/MsgSendConfig;->hashCode()I
 
     move-result v2
 
@@ -1453,7 +1453,7 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget-object v1, p0, Lcom/vk/im/engine/commands/messages/MsgSendViaBgCmd;->d:Lcom/vk/im/engine/models/messages/e;
+    iget-object v1, p0, Lcom/vk/im/engine/commands/messages/MsgSendViaBgCmd;->d:Lcom/vk/im/engine/models/messages/MsgSendSource;
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
@@ -1501,7 +1501,7 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget-object v1, p0, Lcom/vk/im/engine/commands/messages/MsgSendViaBgCmd;->j:Lcom/vk/im/engine/utils/collection/h;
+    iget-object v1, p0, Lcom/vk/im/engine/commands/messages/MsgSendViaBgCmd;->j:Lcom/vk/im/engine/utils/collection/IntSet;
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
@@ -1525,7 +1525,7 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget-object v1, p0, Lcom/vk/im/engine/commands/messages/MsgSendViaBgCmd;->m:Lcom/vk/im/engine/commands/messages/z;
+    iget-object v1, p0, Lcom/vk/im/engine/commands/messages/MsgSendViaBgCmd;->m:Lcom/vk/im/engine/commands/messages/MsgSendConfig;
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 

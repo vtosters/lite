@@ -40,7 +40,7 @@
     const-string p1, "insets"
 
     .line 1
-    invoke-static {p2, p1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p2, p1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {p2}, Landroid/view/WindowInsets;->getStableInsetTop()I
 
@@ -68,7 +68,7 @@
 
     move-result-object v3
 
-    invoke-static {v3, p1}, Lcom/vk/photoviewer/q;->a(Landroid/view/View;I)V
+    invoke-static {v3, p1}, Lcom/vk/photoviewer/ViewExt;->a(Landroid/view/View;I)V
 
     .line 6
     iget-object v3, p0, Lcom/vk/photoviewer/PhotoViewer$a;->a:Lcom/vk/photoviewer/PhotoViewer;
@@ -77,7 +77,7 @@
 
     move-result-object v3
 
-    invoke-static {v3, v0}, Lcom/vk/photoviewer/q;->a(Landroid/view/View;I)V
+    invoke-static {v3, v0}, Lcom/vk/photoviewer/ViewExt;->a(Landroid/view/View;I)V
 
     .line 7
     iget-object v3, p0, Lcom/vk/photoviewer/PhotoViewer$a;->a:Lcom/vk/photoviewer/PhotoViewer;
@@ -86,7 +86,7 @@
 
     move-result-object v3
 
-    invoke-static {v3, v2}, Lcom/vk/photoviewer/q;->e(Landroid/view/View;I)V
+    invoke-static {v3, v2}, Lcom/vk/photoviewer/ViewExt;->e(Landroid/view/View;I)V
 
     .line 8
     iget-object v3, p0, Lcom/vk/photoviewer/PhotoViewer$a;->a:Lcom/vk/photoviewer/PhotoViewer;
@@ -95,7 +95,7 @@
 
     move-result-object v3
 
-    invoke-static {v3, v1}, Lcom/vk/photoviewer/q;->e(Landroid/view/View;I)V
+    invoke-static {v3, v1}, Lcom/vk/photoviewer/ViewExt;->e(Landroid/view/View;I)V
 
     .line 9
     iget-object v3, p0, Lcom/vk/photoviewer/PhotoViewer$a;->a:Lcom/vk/photoviewer/PhotoViewer;
@@ -104,7 +104,7 @@
 
     move-result-object v3
 
-    invoke-static {v3, p1}, Lcom/vk/photoviewer/q;->d(Landroid/view/View;I)V
+    invoke-static {v3, p1}, Lcom/vk/photoviewer/ViewExt;->d(Landroid/view/View;I)V
 
     .line 10
     iget-object v3, p0, Lcom/vk/photoviewer/PhotoViewer$a;->a:Lcom/vk/photoviewer/PhotoViewer;
@@ -113,7 +113,7 @@
 
     move-result-object v3
 
-    invoke-static {v3, p1}, Lcom/vk/photoviewer/q;->d(Landroid/view/View;I)V
+    invoke-static {v3, p1}, Lcom/vk/photoviewer/ViewExt;->d(Landroid/view/View;I)V
 
     .line 11
     iget-object v3, p0, Lcom/vk/photoviewer/PhotoViewer$a;->a:Lcom/vk/photoviewer/PhotoViewer;
@@ -122,7 +122,7 @@
 
     move-result-object v3
 
-    invoke-static {v3, p1}, Lcom/vk/photoviewer/q;->d(Landroid/view/View;I)V
+    invoke-static {v3, p1}, Lcom/vk/photoviewer/ViewExt;->d(Landroid/view/View;I)V
 
     .line 12
     iget-object p1, p0, Lcom/vk/photoviewer/PhotoViewer$a;->a:Lcom/vk/photoviewer/PhotoViewer;
@@ -140,7 +140,7 @@
 
     move-result-object p1
 
-    invoke-static {p1, v2}, Lcom/vk/photoviewer/q;->b(Landroid/view/View;I)V
+    invoke-static {p1, v2}, Lcom/vk/photoviewer/ViewExt;->b(Landroid/view/View;I)V
 
     .line 14
     iget-object p1, p0, Lcom/vk/photoviewer/PhotoViewer$a;->a:Lcom/vk/photoviewer/PhotoViewer;
@@ -149,7 +149,7 @@
 
     move-result-object p1
 
-    invoke-static {p1, v2}, Lcom/vk/photoviewer/q;->b(Landroid/view/View;I)V
+    invoke-static {p1, v2}, Lcom/vk/photoviewer/ViewExt;->b(Landroid/view/View;I)V
 
     .line 15
     iget-object p1, p0, Lcom/vk/photoviewer/PhotoViewer$a;->a:Lcom/vk/photoviewer/PhotoViewer;
@@ -158,7 +158,7 @@
 
     move-result-object p1
 
-    invoke-static {p1, v2}, Lcom/vk/photoviewer/q;->b(Landroid/view/View;I)V
+    invoke-static {p1, v2}, Lcom/vk/photoviewer/ViewExt;->b(Landroid/view/View;I)V
 
     .line 16
     iget-object p1, p0, Lcom/vk/photoviewer/PhotoViewer$a;->a:Lcom/vk/photoviewer/PhotoViewer;
@@ -167,7 +167,7 @@
 
     move-result-object p1
 
-    invoke-static {p1, v2}, Lcom/vk/photoviewer/q;->b(Landroid/view/View;I)V
+    invoke-static {p1, v2}, Lcom/vk/photoviewer/ViewExt;->b(Landroid/view/View;I)V
 
     .line 17
     iget-object p1, p0, Lcom/vk/photoviewer/PhotoViewer$a;->a:Lcom/vk/photoviewer/PhotoViewer;
@@ -176,7 +176,7 @@
 
     move-result-object p1
 
-    invoke-static {p1, v1}, Lcom/vk/photoviewer/q;->c(Landroid/view/View;I)V
+    invoke-static {p1, v1}, Lcom/vk/photoviewer/ViewExt;->c(Landroid/view/View;I)V
 
     .line 18
     iget-object p1, p0, Lcom/vk/photoviewer/PhotoViewer$a;->a:Lcom/vk/photoviewer/PhotoViewer;
@@ -185,7 +185,7 @@
 
     move-result-object p1
 
-    invoke-static {p1, v1}, Lcom/vk/photoviewer/q;->c(Landroid/view/View;I)V
+    invoke-static {p1, v1}, Lcom/vk/photoviewer/ViewExt;->c(Landroid/view/View;I)V
 
     .line 19
     iget-object p1, p0, Lcom/vk/photoviewer/PhotoViewer$a;->a:Lcom/vk/photoviewer/PhotoViewer;
@@ -194,7 +194,7 @@
 
     move-result-object p1
 
-    invoke-static {p1, v1}, Lcom/vk/photoviewer/q;->c(Landroid/view/View;I)V
+    invoke-static {p1, v1}, Lcom/vk/photoviewer/ViewExt;->c(Landroid/view/View;I)V
 
     .line 20
     iget-object p1, p0, Lcom/vk/photoviewer/PhotoViewer$a;->a:Lcom/vk/photoviewer/PhotoViewer;
@@ -203,7 +203,7 @@
 
     move-result-object p1
 
-    invoke-static {p1, v1}, Lcom/vk/photoviewer/q;->c(Landroid/view/View;I)V
+    invoke-static {p1, v1}, Lcom/vk/photoviewer/ViewExt;->c(Landroid/view/View;I)V
 
     .line 21
     iget-object p1, p0, Lcom/vk/photoviewer/PhotoViewer$a;->a:Lcom/vk/photoviewer/PhotoViewer;
@@ -218,7 +218,7 @@
 
     const-string v1, "view.context"
 
-    invoke-static {p1, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     sget v1, Lcom/vk/photoviewer/j;->pick_position_prompt_bottom_margin:I
 

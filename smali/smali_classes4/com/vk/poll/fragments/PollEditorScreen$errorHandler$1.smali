@@ -3,7 +3,7 @@
 .source "PollEditorFragment.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/b;
+.implements Lkotlin/jvm/b/Functions2;
 
 
 # annotations
@@ -19,7 +19,7 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/b<",
+        "Lkotlin/jvm/b/Functions2<",
         "Lcom/vk/api/sdk/exceptions/VKApiExecutionException;",
         "Ljava/lang/Boolean;",
         ">;"
@@ -109,7 +109,7 @@
     .line 2
     sget-object v0, Lcom/vk/poll/fragments/PollEditorScreen$errorHandler$1$1;->a:Lcom/vk/poll/fragments/PollEditorScreen$errorHandler$1$1;
 
-    invoke-static {p1, v0}, Lcom/vk/api/base/j;->a(Ljava/lang/Throwable;Lkotlin/jvm/b/b;)V
+    invoke-static {p1, v0}, Lcom/vk/api/base/ThrowableExt;->a(Ljava/lang/Throwable;Lkotlin/jvm/b/Functions2;)V
 
     goto :goto_2
 

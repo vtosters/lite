@@ -81,7 +81,7 @@
     move-object v1, v9
 
     .line 1
-    invoke-direct/range {v1 .. v8}, Lcom/vk/webapp/helpers/VkAppsErrors$Client;-><init>(Ljava/lang/String;IILjava/lang/String;Ljava/lang/String;ILkotlin/jvm/internal/i;)V
+    invoke-direct/range {v1 .. v8}, Lcom/vk/webapp/helpers/VkAppsErrors$Client;-><init>(Ljava/lang/String;IILjava/lang/String;Ljava/lang/String;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     sput-object v9, Lcom/vk/webapp/helpers/VkAppsErrors$Client;->UNKNOWN_ERROR:Lcom/vk/webapp/helpers/VkAppsErrors$Client;
 
@@ -108,7 +108,7 @@
     move-object v10, v1
 
     .line 2
-    invoke-direct/range {v10 .. v17}, Lcom/vk/webapp/helpers/VkAppsErrors$Client;-><init>(Ljava/lang/String;IILjava/lang/String;Ljava/lang/String;ILkotlin/jvm/internal/i;)V
+    invoke-direct/range {v10 .. v17}, Lcom/vk/webapp/helpers/VkAppsErrors$Client;-><init>(Ljava/lang/String;IILjava/lang/String;Ljava/lang/String;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     sput-object v1, Lcom/vk/webapp/helpers/VkAppsErrors$Client;->MISSING_PARAMS:Lcom/vk/webapp/helpers/VkAppsErrors$Client;
 
@@ -133,7 +133,7 @@
     move-object v3, v1
 
     .line 3
-    invoke-direct/range {v3 .. v10}, Lcom/vk/webapp/helpers/VkAppsErrors$Client;-><init>(Ljava/lang/String;IILjava/lang/String;Ljava/lang/String;ILkotlin/jvm/internal/i;)V
+    invoke-direct/range {v3 .. v10}, Lcom/vk/webapp/helpers/VkAppsErrors$Client;-><init>(Ljava/lang/String;IILjava/lang/String;Ljava/lang/String;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     sput-object v1, Lcom/vk/webapp/helpers/VkAppsErrors$Client;->CONNECTION_LOST:Lcom/vk/webapp/helpers/VkAppsErrors$Client;
 
@@ -154,7 +154,7 @@
     move-object v3, v1
 
     .line 4
-    invoke-direct/range {v3 .. v10}, Lcom/vk/webapp/helpers/VkAppsErrors$Client;-><init>(Ljava/lang/String;IILjava/lang/String;Ljava/lang/String;ILkotlin/jvm/internal/i;)V
+    invoke-direct/range {v3 .. v10}, Lcom/vk/webapp/helpers/VkAppsErrors$Client;-><init>(Ljava/lang/String;IILjava/lang/String;Ljava/lang/String;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     sput-object v1, Lcom/vk/webapp/helpers/VkAppsErrors$Client;->USER_DENIED:Lcom/vk/webapp/helpers/VkAppsErrors$Client;
 
@@ -175,7 +175,7 @@
     move-object v3, v1
 
     .line 5
-    invoke-direct/range {v3 .. v10}, Lcom/vk/webapp/helpers/VkAppsErrors$Client;-><init>(Ljava/lang/String;IILjava/lang/String;Ljava/lang/String;ILkotlin/jvm/internal/i;)V
+    invoke-direct/range {v3 .. v10}, Lcom/vk/webapp/helpers/VkAppsErrors$Client;-><init>(Ljava/lang/String;IILjava/lang/String;Ljava/lang/String;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     sput-object v1, Lcom/vk/webapp/helpers/VkAppsErrors$Client;->INVALID_PARAMS:Lcom/vk/webapp/helpers/VkAppsErrors$Client;
 
@@ -219,7 +219,7 @@
     move-object v3, v1
 
     .line 7
-    invoke-direct/range {v3 .. v10}, Lcom/vk/webapp/helpers/VkAppsErrors$Client;-><init>(Ljava/lang/String;IILjava/lang/String;Ljava/lang/String;ILkotlin/jvm/internal/i;)V
+    invoke-direct/range {v3 .. v10}, Lcom/vk/webapp/helpers/VkAppsErrors$Client;-><init>(Ljava/lang/String;IILjava/lang/String;Ljava/lang/String;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     sput-object v1, Lcom/vk/webapp/helpers/VkAppsErrors$Client;->UNSUPPORTED_PLATFORM:Lcom/vk/webapp/helpers/VkAppsErrors$Client;
 
@@ -240,7 +240,7 @@
     move-object v3, v1
 
     .line 8
-    invoke-direct/range {v3 .. v10}, Lcom/vk/webapp/helpers/VkAppsErrors$Client;-><init>(Ljava/lang/String;IILjava/lang/String;Ljava/lang/String;ILkotlin/jvm/internal/i;)V
+    invoke-direct/range {v3 .. v10}, Lcom/vk/webapp/helpers/VkAppsErrors$Client;-><init>(Ljava/lang/String;IILjava/lang/String;Ljava/lang/String;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     sput-object v1, Lcom/vk/webapp/helpers/VkAppsErrors$Client;->NO_PERMISSIONS:Lcom/vk/webapp/helpers/VkAppsErrors$Client;
 
@@ -261,7 +261,7 @@
     move-object v3, v1
 
     .line 9
-    invoke-direct/range {v3 .. v10}, Lcom/vk/webapp/helpers/VkAppsErrors$Client;-><init>(Ljava/lang/String;IILjava/lang/String;Ljava/lang/String;ILkotlin/jvm/internal/i;)V
+    invoke-direct/range {v3 .. v10}, Lcom/vk/webapp/helpers/VkAppsErrors$Client;-><init>(Ljava/lang/String;IILjava/lang/String;Ljava/lang/String;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     sput-object v1, Lcom/vk/webapp/helpers/VkAppsErrors$Client;->NEED_USER_PERMISSIONS:Lcom/vk/webapp/helpers/VkAppsErrors$Client;
 
@@ -282,7 +282,7 @@
     move-object v3, v1
 
     .line 10
-    invoke-direct/range {v3 .. v10}, Lcom/vk/webapp/helpers/VkAppsErrors$Client;-><init>(Ljava/lang/String;IILjava/lang/String;Ljava/lang/String;ILkotlin/jvm/internal/i;)V
+    invoke-direct/range {v3 .. v10}, Lcom/vk/webapp/helpers/VkAppsErrors$Client;-><init>(Ljava/lang/String;IILjava/lang/String;Ljava/lang/String;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     sput-object v1, Lcom/vk/webapp/helpers/VkAppsErrors$Client;->INACTIVE_SCREEN:Lcom/vk/webapp/helpers/VkAppsErrors$Client;
 
@@ -318,7 +318,7 @@
     return-void
 .end method
 
-.method synthetic constructor <init>(Ljava/lang/String;IILjava/lang/String;Ljava/lang/String;ILkotlin/jvm/internal/i;)V
+.method synthetic constructor <init>(Ljava/lang/String;IILjava/lang/String;Ljava/lang/String;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
     .locals 6
 
     and-int/lit8 p6, p6, 0x4

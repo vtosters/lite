@@ -3,24 +3,24 @@
 .source "CallbackCompletableObserver.java"
 
 # interfaces
-.implements Lc/a/c;
-.implements Lio/reactivex/disposables/b;
-.implements Lc/a/z/g;
-.implements Lc/a/c0/b;
+.implements Lio/reactivex/CompletableObserver;
+.implements Lio/reactivex/disposables/Disposable;
+.implements Lio/reactivex/functions/Consumer;
+.implements Lio/reactivex/observers/DisposableObserver/LambdaConsumerIntrospection;
 
 
 # annotations
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Ljava/util/concurrent/atomic/AtomicReference<",
-        "Lio/reactivex/disposables/b;",
+        "Lio/reactivex/disposables/Disposable;",
         ">;",
-        "Lc/a/c;",
-        "Lio/reactivex/disposables/b;",
-        "Lc/a/z/g<",
+        "Lio/reactivex/CompletableObserver;",
+        "Lio/reactivex/disposables/Disposable;",
+        "Lio/reactivex/functions/Consumer<",
         "Ljava/lang/Throwable;",
         ">;",
-        "Lc/a/c0/b;"
+        "Lio/reactivex/observers/DisposableObserver/LambdaConsumerIntrospection;"
     }
 .end annotation
 
@@ -30,12 +30,12 @@
 
 
 # instance fields
-.field final onComplete:Lc/a/z/a;
+.field final onComplete:Lio/reactivex/functions/Action;
 
-.field final onError:Lc/a/z/g;
+.field final onError:Lio/reactivex/functions/Consumer;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Lc/a/z/g<",
+            "Lio/reactivex/functions/Consumer<",
             "-",
             "Ljava/lang/Throwable;",
             ">;"
@@ -45,31 +45,31 @@
 
 
 # direct methods
-.method public constructor <init>(Lc/a/z/a;)V
+.method public constructor <init>(Lio/reactivex/functions/Action;)V
     .locals 0
 
     .line 1
     invoke-direct {p0}, Ljava/util/concurrent/atomic/AtomicReference;-><init>()V
 
     .line 2
-    iput-object p0, p0, Lio/reactivex/internal/observers/CallbackCompletableObserver;->onError:Lc/a/z/g;
+    iput-object p0, p0, Lio/reactivex/internal/observers/CallbackCompletableObserver;->onError:Lio/reactivex/functions/Consumer;
 
     .line 3
-    iput-object p1, p0, Lio/reactivex/internal/observers/CallbackCompletableObserver;->onComplete:Lc/a/z/a;
+    iput-object p1, p0, Lio/reactivex/internal/observers/CallbackCompletableObserver;->onComplete:Lio/reactivex/functions/Action;
 
     return-void
 .end method
 
-.method public constructor <init>(Lc/a/z/g;Lc/a/z/a;)V
+.method public constructor <init>(Lio/reactivex/functions/Consumer;Lio/reactivex/functions/Action;)V
     .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lc/a/z/g<",
+            "Lio/reactivex/functions/Consumer<",
             "-",
             "Ljava/lang/Throwable;",
             ">;",
-            "Lc/a/z/a;",
+            "Lio/reactivex/functions/Action;",
             ")V"
         }
     .end annotation
@@ -78,21 +78,21 @@
     invoke-direct {p0}, Ljava/util/concurrent/atomic/AtomicReference;-><init>()V
 
     .line 5
-    iput-object p1, p0, Lio/reactivex/internal/observers/CallbackCompletableObserver;->onError:Lc/a/z/g;
+    iput-object p1, p0, Lio/reactivex/internal/observers/CallbackCompletableObserver;->onError:Lio/reactivex/functions/Consumer;
 
     .line 6
-    iput-object p2, p0, Lio/reactivex/internal/observers/CallbackCompletableObserver;->onComplete:Lc/a/z/a;
+    iput-object p2, p0, Lio/reactivex/internal/observers/CallbackCompletableObserver;->onComplete:Lio/reactivex/functions/Action;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public a(Lio/reactivex/disposables/b;)V
+.method public a(Lio/reactivex/disposables/Disposable;)V
     .locals 0
 
     .line 5
-    invoke-static {p0, p1}, Lio/reactivex/internal/disposables/DisposableHelper;->c(Ljava/util/concurrent/atomic/AtomicReference;Lio/reactivex/disposables/b;)Z
+    invoke-static {p0, p1}, Lio/reactivex/internal/disposables/DisposableHelper;->c(Ljava/util/concurrent/atomic/AtomicReference;Lio/reactivex/disposables/Disposable;)Z
 
     return-void
 .end method
@@ -102,9 +102,9 @@
 
     .line 1
     :try_start_0
-    iget-object v0, p0, Lio/reactivex/internal/observers/CallbackCompletableObserver;->onError:Lc/a/z/g;
+    iget-object v0, p0, Lio/reactivex/internal/observers/CallbackCompletableObserver;->onError:Lio/reactivex/functions/Consumer;
 
-    invoke-interface {v0, p1}, Lc/a/z/g;->accept(Ljava/lang/Object;)V
+    invoke-interface {v0, p1}, Lio/reactivex/functions/Consumer;->accept(Ljava/lang/Object;)V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
@@ -114,10 +114,10 @@
     move-exception p1
 
     .line 2
-    invoke-static {p1}, Lio/reactivex/exceptions/a;->b(Ljava/lang/Throwable;)V
+    invoke-static {p1}, Lio/reactivex/exceptions/Exceptions;->b(Ljava/lang/Throwable;)V
 
     .line 3
-    invoke-static {p1}, Lc/a/e0/a;->b(Ljava/lang/Throwable;)V
+    invoke-static {p1}, Lio/reactivex/plugins/RxJavaPlugins;->b(Ljava/lang/Throwable;)V
 
     .line 4
     :goto_0
@@ -149,9 +149,9 @@
 
     .line 2
     :try_start_0
-    iget-object v0, p0, Lio/reactivex/internal/observers/CallbackCompletableObserver;->onComplete:Lc/a/z/a;
+    iget-object v0, p0, Lio/reactivex/internal/observers/CallbackCompletableObserver;->onComplete:Lio/reactivex/functions/Action;
 
-    invoke-interface {v0}, Lc/a/z/a;->run()V
+    invoke-interface {v0}, Lio/reactivex/functions/Action;->run()V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
@@ -161,10 +161,10 @@
     move-exception v0
 
     .line 3
-    invoke-static {v0}, Lio/reactivex/exceptions/a;->b(Ljava/lang/Throwable;)V
+    invoke-static {v0}, Lio/reactivex/exceptions/Exceptions;->b(Ljava/lang/Throwable;)V
 
     .line 4
-    invoke-static {v0}, Lc/a/e0/a;->b(Ljava/lang/Throwable;)V
+    invoke-static {v0}, Lio/reactivex/plugins/RxJavaPlugins;->b(Ljava/lang/Throwable;)V
 
     .line 5
     :goto_0
@@ -183,7 +183,7 @@
 
     invoke-direct {v0, p1}, Lio/reactivex/exceptions/OnErrorNotImplementedException;-><init>(Ljava/lang/Throwable;)V
 
-    invoke-static {v0}, Lc/a/e0/a;->b(Ljava/lang/Throwable;)V
+    invoke-static {v0}, Lio/reactivex/plugins/RxJavaPlugins;->b(Ljava/lang/Throwable;)V
 
     return-void
 .end method

@@ -40,7 +40,7 @@
     .line 1
     iget-object v0, p0, Lcom/vk/stories/clickable/delegates/StoryGeoStickerDelegate$a;->a:Lcom/vk/stories/clickable/delegates/StoryGeoStickerDelegate;
 
-    invoke-static {v0}, Lcom/vk/stories/clickable/delegates/StoryGeoStickerDelegate;->a(Lcom/vk/stories/clickable/delegates/StoryGeoStickerDelegate;)Lcom/vk/core/dialogs/bottomsheet/e;
+    invoke-static {v0}, Lcom/vk/stories/clickable/delegates/StoryGeoStickerDelegate;->a(Lcom/vk/stories/clickable/delegates/StoryGeoStickerDelegate;)Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet;
 
     move-result-object v0
 
@@ -48,7 +48,7 @@
 
     const/4 v1, 0x3
 
-    invoke-virtual {v0, v1}, Lcom/vk/core/dialogs/bottomsheet/e;->n0(I)V
+    invoke-virtual {v0, v1}, Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet;->n0(I)V
 
     :cond_0
     return-void

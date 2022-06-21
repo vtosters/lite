@@ -3,12 +3,12 @@
 .source "LocalGalleryProvider.kt"
 
 # interfaces
-.implements Lc/a/o;
+.implements Lio/reactivex/ObservableOnSubscribe;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/photogallery/LocalGalleryProvider;->reloadFromMediaStore()Lc/a/m;
+    value = Lcom/vk/photogallery/LocalGalleryProvider;->reloadFromMediaStore()Lio/reactivex/Observable;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -22,7 +22,7 @@
         "Ljava/lang/Object;",
         ">",
         "Ljava/lang/Object;",
-        "Lc/a/o<",
+        "Lio/reactivex/ObservableOnSubscribe<",
         "TT;>;"
     }
 .end annotation
@@ -45,12 +45,12 @@
 
 
 # virtual methods
-.method public final a(Lc/a/n;)V
+.method public final a(Lio/reactivex/ObservableEmitter;)V
     .locals 5
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lc/a/n<",
+            "Lio/reactivex/ObservableEmitter<",
             "Ljava/util/List<",
             "Lcom/vk/photogallery/LocalGalleryProvider$a;",
             ">;>;)V"
@@ -58,7 +58,7 @@
     .end annotation
 
     .line 1
-    invoke-static {}, Lcom/vk/mediastore/MediaStorage;->j()Lcom/vk/mediastore/system/b;
+    invoke-static {}, Lcom/vk/mediastore/MediaStorage;->j()Lcom/vk/mediastore/system/MediaStoreController;
 
     move-result-object v0
 
@@ -76,7 +76,7 @@
 
     const-string v4, "context"
 
-    invoke-static {v3, v4}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v3, v4}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {v2, v3}, Lcom/vk/photogallery/LocalGalleryProvider;->getDefaultAlbumName(Landroid/content/Context;)Ljava/lang/String;
 
@@ -84,9 +84,9 @@
 
     new-instance v3, Lcom/vk/photogallery/LocalGalleryProvider$e$a;
 
-    invoke-direct {v3, p0, p1}, Lcom/vk/photogallery/LocalGalleryProvider$e$a;-><init>(Lcom/vk/photogallery/LocalGalleryProvider$e;Lc/a/n;)V
+    invoke-direct {v3, p0, p1}, Lcom/vk/photogallery/LocalGalleryProvider$e$a;-><init>(Lcom/vk/photogallery/LocalGalleryProvider$e;Lio/reactivex/ObservableEmitter;)V
 
-    invoke-virtual {v0, v1, v2, v3}, Lcom/vk/mediastore/system/b;->a(ILjava/lang/String;Lcom/vk/mediastore/system/b$f;)V
+    invoke-virtual {v0, v1, v2, v3}, Lcom/vk/mediastore/system/MediaStoreController;->a(ILjava/lang/String;Lcom/vk/mediastore/system/MediaStoreController$f;)V
 
     return-void
 .end method

@@ -3,12 +3,12 @@
 .source "CommentThreadPresenter.kt"
 
 # interfaces
-.implements Lc/a/z/g;
+.implements Lio/reactivex/functions/Consumer;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/wall/thread/CommentThreadPresenter;->a(Lc/a/m;ZZ)V
+    value = Lcom/vk/wall/thread/CommentThreadPresenter;->a(Lio/reactivex/Observable;ZZ)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -22,7 +22,7 @@
         "Ljava/lang/Object;",
         ">",
         "Ljava/lang/Object;",
-        "Lc/a/z/g<",
+        "Lio/reactivex/functions/Consumer<",
         "Ljava/lang/Throwable;",
         ">;"
     }
@@ -91,19 +91,19 @@
     const/4 v2, 0x0
 
     .line 5
-    invoke-static {p1, v0, v1, v2}, Lcom/vk/core/util/k1;->a(IZILjava/lang/Object;)V
+    invoke-static {p1, v0, v1, v2}, Lcom/vk/core/util/ToastUtils;->a(IZILjava/lang/Object;)V
 
     .line 6
     :cond_1
     iget-object p1, p0, Lcom/vk/wall/thread/CommentThreadPresenter$onPreviousDataLoaded$2;->a:Lcom/vk/wall/thread/CommentThreadPresenter;
 
-    invoke-virtual {p1}, Lcom/vk/wall/thread/CommentThreadPresenter;->r()Lcom/vk/lists/o;
+    invoke-virtual {p1}, Lcom/vk/wall/thread/CommentThreadPresenter;->r()Lcom/vk/lists/ListDataSet;
 
     move-result-object p1
 
     sget-object v1, Lcom/vk/wall/thread/CommentThreadPresenter$onPreviousDataLoaded$2$showMorePosition$1;->a:Lcom/vk/wall/thread/CommentThreadPresenter$onPreviousDataLoaded$2$showMorePosition$1;
 
-    invoke-virtual {p1, v1}, Lcom/vk/lists/o;->d(Lkotlin/jvm/b/b;)I
+    invoke-virtual {p1, v1}, Lcom/vk/lists/ListDataSet;->d(Lkotlin/jvm/b/Functions2;)I
 
     move-result p1
 
@@ -112,30 +112,30 @@
     .line 7
     iget-object v1, p0, Lcom/vk/wall/thread/CommentThreadPresenter$onPreviousDataLoaded$2;->a:Lcom/vk/wall/thread/CommentThreadPresenter;
 
-    invoke-virtual {v1}, Lcom/vk/wall/thread/CommentThreadPresenter;->r()Lcom/vk/lists/o;
+    invoke-virtual {v1}, Lcom/vk/wall/thread/CommentThreadPresenter;->r()Lcom/vk/lists/ListDataSet;
 
     move-result-object v1
 
-    invoke-virtual {v1, p1}, Lcom/vk/lists/o;->k(I)Ljava/lang/Object;
+    invoke-virtual {v1, p1}, Lcom/vk/lists/ListDataSet;->k(I)Ljava/lang/Object;
 
     move-result-object v1
 
-    check-cast v1, Lcom/vk/wall/b;
+    check-cast v1, Lcom/vk/wall/CommentDisplayItem;
 
     invoke-static {v0}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
 
     move-result-object v0
 
-    invoke-virtual {v1, v0}, Lcom/vk/wall/b;->a(Ljava/lang/Object;)V
+    invoke-virtual {v1, v0}, Lcom/vk/wall/CommentDisplayItem;->a(Ljava/lang/Object;)V
 
     .line 8
     iget-object v0, p0, Lcom/vk/wall/thread/CommentThreadPresenter$onPreviousDataLoaded$2;->a:Lcom/vk/wall/thread/CommentThreadPresenter;
 
-    invoke-virtual {v0}, Lcom/vk/wall/thread/CommentThreadPresenter;->r()Lcom/vk/lists/o;
+    invoke-virtual {v0}, Lcom/vk/wall/thread/CommentThreadPresenter;->r()Lcom/vk/lists/ListDataSet;
 
     move-result-object v0
 
-    invoke-virtual {v0, p1}, Lcom/vk/lists/b;->a(I)V
+    invoke-virtual {v0, p1}, Lcom/vk/lists/BaseListDataSet;->a(I)V
 
     :cond_2
     return-void

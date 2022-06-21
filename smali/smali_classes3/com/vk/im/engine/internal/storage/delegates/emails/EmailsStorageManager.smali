@@ -14,27 +14,27 @@
     .end annotation
 .end field
 
-.field private final b:Lcom/vk/im/engine/internal/storage/b;
+.field private final b:Lcom/vk/im/engine/internal/storage/StorageEnvironment;
 
 
 # direct methods
-.method public constructor <init>(Lcom/vk/im/engine/internal/storage/b;)V
+.method public constructor <init>(Lcom/vk/im/engine/internal/storage/StorageEnvironment;)V
     .locals 6
 
     .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lcom/vk/im/engine/internal/storage/delegates/emails/EmailsStorageManager;->b:Lcom/vk/im/engine/internal/storage/b;
+    iput-object p1, p0, Lcom/vk/im/engine/internal/storage/delegates/emails/EmailsStorageManager;->b:Lcom/vk/im/engine/internal/storage/StorageEnvironment;
 
     .line 2
     new-instance p1, Lcom/vk/im/engine/internal/storage/memcache/StorageMemCacheByIdHelper;
 
     .line 3
-    iget-object v0, p0, Lcom/vk/im/engine/internal/storage/delegates/emails/EmailsStorageManager;->b:Lcom/vk/im/engine/internal/storage/b;
+    iget-object v0, p0, Lcom/vk/im/engine/internal/storage/delegates/emails/EmailsStorageManager;->b:Lcom/vk/im/engine/internal/storage/StorageEnvironment;
 
     const-class v1, Lcom/vk/im/engine/models/emails/Email;
 
-    invoke-interface {v0, v1}, Lcom/vk/im/engine/internal/storage/b;->a(Ljava/lang/Class;)Lcom/vk/im/engine/internal/storage/d;
+    invoke-interface {v0, v1}, Lcom/vk/im/engine/internal/storage/StorageEnvironment;->a(Ljava/lang/Class;)Lcom/vk/im/engine/internal/storage/StorageTrigger;
 
     move-result-object v2
 
@@ -56,29 +56,29 @@
     move-object v0, p1
 
     .line 7
-    invoke-direct/range {v0 .. v5}, Lcom/vk/im/engine/internal/storage/memcache/StorageMemCacheByIdHelper;-><init>(ILcom/vk/im/engine/internal/storage/d;Lkotlin/jvm/b/b;Lkotlin/jvm/b/b;Lkotlin/jvm/b/b;)V
+    invoke-direct/range {v0 .. v5}, Lcom/vk/im/engine/internal/storage/memcache/StorageMemCacheByIdHelper;-><init>(ILcom/vk/im/engine/internal/storage/StorageTrigger;Lkotlin/jvm/b/Functions2;Lkotlin/jvm/b/Functions2;Lkotlin/jvm/b/Functions2;)V
 
     iput-object p1, p0, Lcom/vk/im/engine/internal/storage/delegates/emails/EmailsStorageManager;->a:Lcom/vk/im/engine/internal/storage/memcache/StorageMemCacheByIdHelper;
 
     return-void
 .end method
 
-.method public static final synthetic a(Lcom/vk/im/engine/internal/storage/delegates/emails/EmailsStorageManager;Lcom/vk/im/engine/utils/collection/d;)Landroid/util/SparseArray;
+.method public static final synthetic a(Lcom/vk/im/engine/internal/storage/delegates/emails/EmailsStorageManager;Lcom/vk/im/engine/utils/collection/IntCollection;)Landroid/util/SparseArray;
     .locals 0
 
     .line 2
-    invoke-direct {p0, p1}, Lcom/vk/im/engine/internal/storage/delegates/emails/EmailsStorageManager;->b(Lcom/vk/im/engine/utils/collection/d;)Landroid/util/SparseArray;
+    invoke-direct {p0, p1}, Lcom/vk/im/engine/internal/storage/delegates/emails/EmailsStorageManager;->b(Lcom/vk/im/engine/utils/collection/IntCollection;)Landroid/util/SparseArray;
 
     move-result-object p0
 
     return-object p0
 .end method
 
-.method public static final synthetic a(Lcom/vk/im/engine/internal/storage/delegates/emails/EmailsStorageManager;)Lcom/vk/im/engine/internal/storage/b;
+.method public static final synthetic a(Lcom/vk/im/engine/internal/storage/delegates/emails/EmailsStorageManager;)Lcom/vk/im/engine/internal/storage/StorageEnvironment;
     .locals 0
 
     .line 1
-    iget-object p0, p0, Lcom/vk/im/engine/internal/storage/delegates/emails/EmailsStorageManager;->b:Lcom/vk/im/engine/internal/storage/b;
+    iget-object p0, p0, Lcom/vk/im/engine/internal/storage/delegates/emails/EmailsStorageManager;->b:Lcom/vk/im/engine/internal/storage/StorageEnvironment;
 
     return-object p0
 .end method
@@ -115,12 +115,12 @@
     return-void
 .end method
 
-.method private final b(Lcom/vk/im/engine/utils/collection/d;)Landroid/util/SparseArray;
+.method private final b(Lcom/vk/im/engine/utils/collection/IntCollection;)Landroid/util/SparseArray;
     .locals 3
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lcom/vk/im/engine/utils/collection/d;",
+            "Lcom/vk/im/engine/utils/collection/IntCollection;",
             ")",
             "Landroid/util/SparseArray<",
             "Lcom/vk/im/engine/models/emails/Email;",
@@ -129,14 +129,14 @@
     .end annotation
 
     .line 3
-    invoke-interface {p1}, Lcom/vk/im/engine/utils/collection/d;->isEmpty()Z
+    invoke-interface {p1}, Lcom/vk/im/engine/utils/collection/IntCollection;->isEmpty()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
     .line 4
-    invoke-static {}, Lcom/vk/core/extensions/x;->a()Landroid/util/SparseArray;
+    invoke-static {}, Lcom/vk/core/extensions/SparseArrayExt1;->a()Landroid/util/SparseArray;
 
     move-result-object p1
 
@@ -146,7 +146,7 @@
     const-string v0, ","
 
     .line 5
-    invoke-interface {p1, v0}, Lcom/vk/im/engine/utils/collection/d;->a(Ljava/lang/String;)Ljava/lang/String;
+    invoke-interface {p1, v0}, Lcom/vk/im/engine/utils/collection/IntCollection;->a(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p1
 
@@ -170,9 +170,9 @@
     move-result-object p1
 
     .line 7
-    iget-object v0, p0, Lcom/vk/im/engine/internal/storage/delegates/emails/EmailsStorageManager;->b:Lcom/vk/im/engine/internal/storage/b;
+    iget-object v0, p0, Lcom/vk/im/engine/internal/storage/delegates/emails/EmailsStorageManager;->b:Lcom/vk/im/engine/internal/storage/StorageEnvironment;
 
-    invoke-interface {v0}, Lcom/vk/im/engine/internal/storage/b;->a()Lio/requery/android/database/sqlite/SQLiteDatabase;
+    invoke-interface {v0}, Lcom/vk/im/engine/internal/storage/StorageEnvironment;->a()Lio/requery/android/database/sqlite/SQLiteDatabase;
 
     move-result-object v0
 
@@ -262,9 +262,9 @@
 
     .line 2
     :cond_0
-    iget-object v0, p0, Lcom/vk/im/engine/internal/storage/delegates/emails/EmailsStorageManager;->b:Lcom/vk/im/engine/internal/storage/b;
+    iget-object v0, p0, Lcom/vk/im/engine/internal/storage/delegates/emails/EmailsStorageManager;->b:Lcom/vk/im/engine/internal/storage/StorageEnvironment;
 
-    invoke-interface {v0}, Lcom/vk/im/engine/internal/storage/b;->a()Lio/requery/android/database/sqlite/SQLiteDatabase;
+    invoke-interface {v0}, Lcom/vk/im/engine/internal/storage/StorageEnvironment;->a()Lio/requery/android/database/sqlite/SQLiteDatabase;
 
     move-result-object v0
 
@@ -274,19 +274,19 @@
 
     invoke-direct {v1, p0, v2, p1}, Lcom/vk/im/engine/internal/storage/delegates/emails/EmailsStorageManager$putToDb$1;-><init>(Lcom/vk/im/engine/internal/storage/delegates/emails/EmailsStorageManager;Ljava/lang/String;Ljava/util/Collection;)V
 
-    invoke-static {v0, v1}, Lcom/vk/libsqliteext/CustomSqliteExtensionsKt;->a(Lio/requery/android/database/sqlite/SQLiteDatabase;Lkotlin/jvm/b/b;)Ljava/lang/Object;
+    invoke-static {v0, v1}, Lcom/vk/libsqliteext/CustomSqliteExtensionsKt;->a(Lio/requery/android/database/sqlite/SQLiteDatabase;Lkotlin/jvm/b/Functions2;)Ljava/lang/Object;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a(Lcom/vk/im/engine/utils/collection/d;)Landroid/util/SparseArray;
+.method public final a(Lcom/vk/im/engine/utils/collection/IntCollection;)Landroid/util/SparseArray;
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lcom/vk/im/engine/utils/collection/d;",
+            "Lcom/vk/im/engine/utils/collection/IntCollection;",
             ")",
             "Landroid/util/SparseArray<",
             "Lcom/vk/im/engine/models/emails/Email;",
@@ -297,7 +297,7 @@
     .line 6
     iget-object v0, p0, Lcom/vk/im/engine/internal/storage/delegates/emails/EmailsStorageManager;->a:Lcom/vk/im/engine/internal/storage/memcache/StorageMemCacheByIdHelper;
 
-    invoke-virtual {v0, p1}, Lcom/vk/im/engine/internal/storage/memcache/StorageMemCacheByIdHelper;->a(Lcom/vk/im/engine/utils/collection/d;)Landroid/util/SparseArray;
+    invoke-virtual {v0, p1}, Lcom/vk/im/engine/internal/storage/memcache/StorageMemCacheByIdHelper;->a(Lcom/vk/im/engine/utils/collection/IntCollection;)Landroid/util/SparseArray;
 
     move-result-object p1
 

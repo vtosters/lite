@@ -3,8 +3,8 @@
 .source "VKActivity.java"
 
 # interfaces
-.implements Lcom/vk/core/fragments/e;
-.implements Lcom/vk/navigation/u;
+.implements Lcom/vk/core/fragments/FragmentManagerImplProvider;
+.implements Lcom/vk/navigation/ResulterProvider;
 
 
 # static fields
@@ -26,7 +26,7 @@
         value = {
             "Ljava/util/List<",
             "Ljava/lang/ref/WeakReference<",
-            "Lcom/vk/navigation/c;",
+            "Lcom/vk/navigation/ActivityResulter;",
             ">;>;"
         }
     .end annotation
@@ -40,7 +40,7 @@
 
 .field private g:Landroid/view/MenuInflater;
 
-.field private final h:Lio/reactivex/disposables/a;
+.field private final h:Lio/reactivex/disposables/CompositeDisposable;
 
 
 # direct methods
@@ -64,11 +64,11 @@
     iput-object v0, p0, Lcom/vtosters/lite/VKActivity;->f:Lcom/vtosters/lite/activities/LogoutReceiver;
 
     .line 5
-    new-instance v1, Lio/reactivex/disposables/a;
+    new-instance v1, Lio/reactivex/disposables/CompositeDisposable;
 
-    invoke-direct {v1}, Lio/reactivex/disposables/a;-><init>()V
+    invoke-direct {v1}, Lio/reactivex/disposables/CompositeDisposable;-><init>()V
 
-    iput-object v1, p0, Lcom/vtosters/lite/VKActivity;->h:Lio/reactivex/disposables/a;
+    iput-object v1, p0, Lcom/vtosters/lite/VKActivity;->h:Lio/reactivex/disposables/CompositeDisposable;
 
     const/4 v1, 0x1
 
@@ -83,7 +83,7 @@
 
 
 # virtual methods
-.method public a(Lcom/vk/navigation/c;)V
+.method public a(Lcom/vk/navigation/ActivityResulter;)V
     .locals 2
 
     .line 1
@@ -160,18 +160,18 @@
     throw v0
 .end method
 
-.method public b(Lio/reactivex/disposables/b;)Lio/reactivex/disposables/b;
+.method public b(Lio/reactivex/disposables/Disposable;)Lio/reactivex/disposables/Disposable;
     .locals 1
 
     .line 1
-    iget-object v0, p0, Lcom/vtosters/lite/VKActivity;->h:Lio/reactivex/disposables/a;
+    iget-object v0, p0, Lcom/vtosters/lite/VKActivity;->h:Lio/reactivex/disposables/CompositeDisposable;
 
-    invoke-virtual {v0, p1}, Lio/reactivex/disposables/a;->b(Lio/reactivex/disposables/b;)Z
+    invoke-virtual {v0, p1}, Lio/reactivex/disposables/CompositeDisposable;->b(Lio/reactivex/disposables/Disposable;)Z
 
     return-object p1
 .end method
 
-.method public b(Lcom/vk/navigation/c;)V
+.method public b(Lcom/vk/navigation/ActivityResulter;)V
     .locals 2
 
     .line 2
@@ -271,13 +271,13 @@
     if-nez v0, :cond_0
 
     .line 2
-    new-instance v0, Lcom/vtosters/lite/ui/d0/b;
+    new-instance v0, Lcom/vtosters/lite/ui/d0/TintMenuInflater;
 
     invoke-static {}, Lcom/vk/core/ui/themes/VKThemeHelper;->u()Landroid/content/Context;
 
     move-result-object v1
 
-    invoke-direct {v0, v1}, Lcom/vtosters/lite/ui/d0/b;-><init>(Landroid/content/Context;)V
+    invoke-direct {v0, v1}, Lcom/vtosters/lite/ui/d0/TintMenuInflater;-><init>(Landroid/content/Context;)V
 
     iput-object v0, p0, Lcom/vtosters/lite/VKActivity;->g:Landroid/view/MenuInflater;
 
@@ -416,10 +416,10 @@
 
     move-result-object v1
 
-    check-cast v1, Lcom/vtosters/lite/ui/x;
+    check-cast v1, Lcom/vtosters/lite/ui/SearchViewWrapper;
 
     .line 7
-    invoke-virtual {v1, v0}, Lcom/vtosters/lite/ui/x;->c(Ljava/lang/String;)V
+    invoke-virtual {v1, v0}, Lcom/vtosters/lite/ui/SearchViewWrapper;->c(Ljava/lang/String;)V
 
     .line 8
     :cond_1
@@ -460,12 +460,12 @@
 
     move-result-object v1
 
-    check-cast v1, Lcom/vk/navigation/c;
+    check-cast v1, Lcom/vk/navigation/ActivityResulter;
 
     if-eqz v1, :cond_2
 
     .line 13
-    invoke-interface {v1, p1, p2, p3}, Lcom/vk/navigation/c;->onActivityResult(IILandroid/content/Intent;)V
+    invoke-interface {v1, p1, p2, p3}, Lcom/vk/navigation/ActivityResulter;->onActivityResult(IILandroid/content/Intent;)V
 
     goto :goto_0
 
@@ -543,11 +543,11 @@
 
     if-nez p1, :cond_0
 
-    invoke-static {}, Lcom/vk/bridges/g;->a()Lcom/vk/bridges/f;
+    invoke-static {}, Lcom/vk/bridges/AuthBridge;->a()Lcom/vk/bridges/AuthBridge3;
 
     move-result-object p1
 
-    invoke-interface {p1}, Lcom/vk/bridges/f;->a()Z
+    invoke-interface {p1}, Lcom/vk/bridges/AuthBridge3;->a()Z
 
     move-result p1
 
@@ -592,7 +592,7 @@
 
     .line 9
     :cond_1
-    invoke-static {}, Lcom/vk/core/util/t;->b()Z
+    invoke-static {}, Lcom/vk/core/util/Device;->b()Z
 
     move-result p1
 
@@ -658,9 +658,9 @@
     .locals 1
 
     .line 1
-    iget-object v0, p0, Lcom/vtosters/lite/VKActivity;->h:Lio/reactivex/disposables/a;
+    iget-object v0, p0, Lcom/vtosters/lite/VKActivity;->h:Lio/reactivex/disposables/CompositeDisposable;
 
-    invoke-virtual {v0}, Lio/reactivex/disposables/a;->o()V
+    invoke-virtual {v0}, Lio/reactivex/disposables/CompositeDisposable;->o()V
 
     .line 2
     iget-object v0, p0, Lcom/vtosters/lite/VKActivity;->f:Lcom/vtosters/lite/activities/LogoutReceiver;
@@ -741,9 +741,9 @@
     invoke-virtual {v0, p0}, Lcom/vk/metrics/eventtracking/VkTracker;->onStartActivity(Landroid/app/Activity;)V
 
     .line 3
-    sget-object v0, Lcom/vk/pushes/g;->e:Lcom/vk/pushes/g;
+    sget-object v0, Lcom/vk/pushes/PushSubscriber;->e:Lcom/vk/pushes/PushSubscriber;
 
-    invoke-virtual {v0}, Lcom/vk/pushes/g;->a()V
+    invoke-virtual {v0}, Lcom/vk/pushes/PushSubscriber;->a()V
 
     return-void
 .end method
@@ -769,7 +769,7 @@
     invoke-super {p0, p1}, Landroidx/appcompat/app/AppCompatActivity;->onSupportActionModeStarted(Landroidx/appcompat/view/ActionMode;)V
 
     .line 2
-    invoke-static {p0, p1}, Lcom/vtosters/lite/f0;->a(Landroidx/appcompat/app/AppCompatActivity;Landroidx/appcompat/view/ActionMode;)V
+    invoke-static {p0, p1}, Lcom/vtosters/lite/ViewUtils;->a(Landroidx/appcompat/app/AppCompatActivity;Landroidx/appcompat/view/ActionMode;)V
 
     return-void
 .end method

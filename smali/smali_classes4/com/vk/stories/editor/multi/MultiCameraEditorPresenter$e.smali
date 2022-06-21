@@ -3,12 +3,12 @@
 .source "MultiCameraEditorPresenter.kt"
 
 # interfaces
-.implements Lc/a/z/g;
+.implements Lio/reactivex/functions/Consumer;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/stories/editor/multi/MultiCameraEditorPresenter;->b(Lcom/vk/cameraui/entities/d;)V
+    value = Lcom/vk/stories/editor/multi/MultiCameraEditorPresenter;->b(Lcom/vk/cameraui/entities/StoryRawData3;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -22,7 +22,7 @@
         "Ljava/lang/Object;",
         ">",
         "Ljava/lang/Object;",
-        "Lc/a/z/g<",
+        "Lio/reactivex/functions/Consumer<",
         "Ljava/lang/Throwable;",
         ">;"
     }
@@ -30,14 +30,14 @@
 
 
 # instance fields
-.field final synthetic a:Lcom/vk/cameraui/entities/d;
+.field final synthetic a:Lcom/vk/cameraui/entities/StoryRawData3;
 
 
 # direct methods
-.method constructor <init>(Lcom/vk/stories/editor/multi/MultiCameraEditorPresenter;Lcom/vk/cameraui/entities/d;)V
+.method constructor <init>(Lcom/vk/stories/editor/multi/MultiCameraEditorPresenter;Lcom/vk/cameraui/entities/StoryRawData3;)V
     .locals 0
 
-    iput-object p2, p0, Lcom/vk/stories/editor/multi/MultiCameraEditorPresenter$e;->a:Lcom/vk/cameraui/entities/d;
+    iput-object p2, p0, Lcom/vk/stories/editor/multi/MultiCameraEditorPresenter$e;->a:Lcom/vk/cameraui/entities/StoryRawData3;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -50,11 +50,11 @@
     .locals 1
 
     .line 1
-    iget-object p1, p0, Lcom/vk/stories/editor/multi/MultiCameraEditorPresenter$e;->a:Lcom/vk/cameraui/entities/d;
+    iget-object p1, p0, Lcom/vk/stories/editor/multi/MultiCameraEditorPresenter$e;->a:Lcom/vk/cameraui/entities/StoryRawData3;
 
     const/4 v0, 0x0
 
-    invoke-virtual {p1, v0}, Lcom/vk/cameraui/entities/d;->a(Ljava/util/List;)V
+    invoke-virtual {p1, v0}, Lcom/vk/cameraui/entities/StoryRawData3;->a(Ljava/util/List;)V
 
     return-void
 .end method

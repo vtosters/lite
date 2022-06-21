@@ -3,7 +3,7 @@
 .source "DynamicGridLayout.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/b;
+.implements Lkotlin/jvm/b/Functions2;
 
 
 # annotations
@@ -19,11 +19,11 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/b<",
-        "Lcom/vk/catalog2/core/ui/view/c;",
-        "Lkotlin/sequences/j<",
+        "Lkotlin/jvm/b/Functions2<",
+        "Lcom/vk/catalog2/core/ui/view/DynamicGridLayout1;",
+        "Lkotlin/sequences/Sequence<",
         "+",
-        "Lcom/vk/catalog2/core/ui/view/b;",
+        "Lcom/vk/catalog2/core/ui/view/DynamicGridLayout2;",
         ">;>;"
     }
 .end annotation
@@ -58,25 +58,25 @@
 
 
 # virtual methods
-.method public final a(Lcom/vk/catalog2/core/ui/view/c;)Lkotlin/sequences/j;
+.method public final a(Lcom/vk/catalog2/core/ui/view/DynamicGridLayout1;)Lkotlin/sequences/Sequence;
     .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lcom/vk/catalog2/core/ui/view/c;",
+            "Lcom/vk/catalog2/core/ui/view/DynamicGridLayout1;",
             ")",
-            "Lkotlin/sequences/j<",
-            "Lcom/vk/catalog2/core/ui/view/b;",
+            "Lkotlin/sequences/Sequence<",
+            "Lcom/vk/catalog2/core/ui/view/DynamicGridLayout2;",
             ">;"
         }
     .end annotation
 
     .line 1
-    invoke-virtual {p1}, Lcom/vk/catalog2/core/ui/view/c;->a()Ljava/util/List;
+    invoke-virtual {p1}, Lcom/vk/catalog2/core/ui/view/DynamicGridLayout1;->a()Ljava/util/List;
 
     move-result-object p1
 
-    invoke-static {p1}, Lkotlin/collections/l;->d(Ljava/lang/Iterable;)Lkotlin/sequences/j;
+    invoke-static {p1}, Lkotlin/collections/l;->d(Ljava/lang/Iterable;)Lkotlin/sequences/Sequence;
 
     move-result-object p1
 
@@ -87,9 +87,9 @@
     .locals 0
 
     .line 1
-    check-cast p1, Lcom/vk/catalog2/core/ui/view/c;
+    check-cast p1, Lcom/vk/catalog2/core/ui/view/DynamicGridLayout1;
 
-    invoke-virtual {p0, p1}, Lcom/vk/catalog2/core/ui/view/DynamicGridLayout$onLayout$1;->a(Lcom/vk/catalog2/core/ui/view/c;)Lkotlin/sequences/j;
+    invoke-virtual {p0, p1}, Lcom/vk/catalog2/core/ui/view/DynamicGridLayout$onLayout$1;->a(Lcom/vk/catalog2/core/ui/view/DynamicGridLayout1;)Lkotlin/sequences/Sequence;
 
     move-result-object p1
 

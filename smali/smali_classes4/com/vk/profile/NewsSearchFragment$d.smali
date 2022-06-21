@@ -3,7 +3,7 @@
 .source "NewsSearchFragment.kt"
 
 # interfaces
-.implements Lcom/vtosters/lite/ui/x$i;
+.implements Lcom/vtosters/lite/ui/SearchViewWrapper$i;
 
 
 # annotations
@@ -61,11 +61,11 @@
     .line 1
     iget-object v0, p0, Lcom/vk/profile/NewsSearchFragment$d;->a:Lcom/vk/profile/NewsSearchFragment;
 
-    invoke-static {v0}, Lcom/vk/profile/NewsSearchFragment;->a(Lcom/vk/profile/NewsSearchFragment;)Lcom/vk/newsfeed/contracts/l;
+    invoke-static {v0}, Lcom/vk/profile/NewsSearchFragment;->a(Lcom/vk/profile/NewsSearchFragment;)Lcom/vk/newsfeed/contracts/NewsSearchContract1;
 
     move-result-object v0
 
-    invoke-interface {v0, p1}, Lcom/vk/newsfeed/contracts/l;->d(Ljava/lang/String;)V
+    invoke-interface {v0, p1}, Lcom/vk/newsfeed/contracts/NewsSearchContract1;->d(Ljava/lang/String;)V
 
     return-void
 .end method

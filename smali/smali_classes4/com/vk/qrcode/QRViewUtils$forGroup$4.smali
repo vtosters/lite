@@ -3,12 +3,12 @@
 .source "QRViewUtils.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/a;
+.implements Lkotlin/jvm/b/Functions;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/qrcode/QRViewUtils;->a(Landroid/app/Activity;Lcom/vk/qrcode/QRParser;Lcom/vk/qrcode/i;Lcom/vk/dto/group/Group;)V
+    value = Lcom/vk/qrcode/QRViewUtils;->a(Landroid/app/Activity;Lcom/vk/qrcode/QRParser;Lcom/vk/qrcode/QRTypes7;Lcom/vk/dto/group/Group;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -19,22 +19,22 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/a<",
-        "Lkotlin/m;",
+        "Lkotlin/jvm/b/Functions<",
+        "Lkotlin/Unit;",
         ">;"
     }
 .end annotation
 
 
 # instance fields
-.field final synthetic $openGroup:Lkotlin/jvm/b/a;
+.field final synthetic $openGroup:Lkotlin/jvm/b/Functions;
 
 
 # direct methods
-.method constructor <init>(Lkotlin/jvm/b/a;)V
+.method constructor <init>(Lkotlin/jvm/b/Functions;)V
     .locals 0
 
-    iput-object p1, p0, Lcom/vk/qrcode/QRViewUtils$forGroup$4;->$openGroup:Lkotlin/jvm/b/a;
+    iput-object p1, p0, Lcom/vk/qrcode/QRViewUtils$forGroup$4;->$openGroup:Lkotlin/jvm/b/Functions;
 
     const/4 p1, 0x0
 
@@ -51,7 +51,7 @@
     .line 1
     invoke-virtual {p0}, Lcom/vk/qrcode/QRViewUtils$forGroup$4;->invoke()V
 
-    sget-object v0, Lkotlin/m;->a:Lkotlin/m;
+    sget-object v0, Lkotlin/Unit;->a:Lkotlin/Unit;
 
     return-object v0
 .end method
@@ -60,9 +60,9 @@
     .locals 2
 
     .line 2
-    iget-object v0, p0, Lcom/vk/qrcode/QRViewUtils$forGroup$4;->$openGroup:Lkotlin/jvm/b/a;
+    iget-object v0, p0, Lcom/vk/qrcode/QRViewUtils$forGroup$4;->$openGroup:Lkotlin/jvm/b/Functions;
 
-    invoke-interface {v0}, Lkotlin/jvm/b/a;->invoke()Ljava/lang/Object;
+    invoke-interface {v0}, Lkotlin/jvm/b/Functions;->invoke()Ljava/lang/Object;
 
     .line 3
     sget-object v0, Lcom/vk/qrcode/QRStatsTracker;->b:Lcom/vk/qrcode/QRStatsTracker;

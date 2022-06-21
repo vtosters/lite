@@ -3,12 +3,12 @@
 .source "MusicCatalogSelector.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/c;
+.implements Lkotlin/jvm/b/Functions1;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/music/stories/MusicCatalogSelector;->a(Landroidx/appcompat/app/AppCompatActivity;Lkotlin/jvm/b/b;Landroid/content/DialogInterface$OnCancelListener;)V
+    value = Lcom/vk/music/stories/MusicCatalogSelector;->a(Landroidx/appcompat/app/AppCompatActivity;Lkotlin/jvm/b/Functions2;Landroid/content/DialogInterface$OnCancelListener;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -19,7 +19,7 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/c<",
+        "Lkotlin/jvm/b/Functions1<",
         "Lcom/vk/core/fragments/FragmentImpl;",
         "Landroid/view/ViewGroup;",
         "Landroid/view/View;",
@@ -61,7 +61,7 @@
     move-object/from16 v0, p0
 
     .line 2
-    new-instance v15, Lcom/vk/catalog2/core/e;
+    new-instance v15, Lcom/vk/catalog2/core/CatalogEntryPointParams;
 
     move-object v1, v15
 
@@ -75,7 +75,7 @@
     move-object v6, v3
 
     .line 4
-    invoke-static {v3}, Lcom/vk/music/stories/MusicCatalogSelector;->f(Lcom/vk/music/stories/MusicCatalogSelector;)Lcom/vk/music/stories/f;
+    invoke-static {v3}, Lcom/vk/music/stories/MusicCatalogSelector;->f(Lcom/vk/music/stories/MusicCatalogSelector;)Lcom/vk/music/stories/MusicStoriesPlayerModel;
 
     move-result-object v11
 
@@ -114,12 +114,12 @@
     const/16 v21, 0x0
 
     .line 5
-    invoke-direct/range {v1 .. v21}, Lcom/vk/catalog2/core/e;-><init>(Landroid/content/Context;Ljava/lang/String;Lcom/vk/catalog2/core/util/g;Lcom/vk/stickers/bridge/o;Lcom/vk/catalog2/core/CatalogRouter;Lcom/vk/catalog2/core/w/a;ZLcom/vk/catalog2/core/w/b;Landroidx/recyclerview/widget/RecyclerView$RecycledViewPool;Lcom/vk/music/player/d;Lcom/vk/lists/i;Lcom/vk/catalog2/core/util/f;Lb/h/g/n/b/a;Lcom/vk/metrics/performance/scroll/ScrollScreenType;Lcom/vk/catalog2/core/analytics/CatalogAnalyticsHelper;Lcom/vk/catalog2/core/analytics/d;Lcom/vk/catalog2/core/b;Ljava/util/List;ILkotlin/jvm/internal/i;)V
+    invoke-direct/range {v1 .. v21}, Lcom/vk/catalog2/core/CatalogEntryPointParams;-><init>(Landroid/content/Context;Ljava/lang/String;Lcom/vk/catalog2/core/util/CatalogOnClickListener;Lcom/vk/stickers/bridge/StickersBridge1;Lcom/vk/catalog2/core/CatalogRouter;Lcom/vk/catalog2/core/w/CatalogCommandsBus;ZLcom/vk/catalog2/core/w/CatalogEventsBus;Landroidx/recyclerview/widget/RecyclerView$RecycledViewPool;Lcom/vk/music/player/PlayerModel;Lcom/vk/lists/ErrorViewConfiguration;Lcom/vk/catalog2/core/util/CatalogImageUtils;Lb/h/g/n/b/BlurTransform;Lcom/vk/metrics/performance/scroll/ScrollScreenType;Lcom/vk/catalog2/core/analytics/CatalogAnalyticsHelper;Lcom/vk/catalog2/core/analytics/CatalogBindListener1;Lcom/vk/catalog2/core/CatalogDisposableHolder;Ljava/util/List;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     .line 6
     iget-object v1, v0, Lcom/vk/music/stories/MusicCatalogSelector$show$1;->this$0:Lcom/vk/music/stories/MusicCatalogSelector;
 
-    invoke-static {v1}, Lcom/vk/music/stories/MusicCatalogSelector;->e(Lcom/vk/music/stories/MusicCatalogSelector;)Lcom/vk/core/dialogs/bottomsheet/k/a;
+    invoke-static {v1}, Lcom/vk/music/stories/MusicCatalogSelector;->e(Lcom/vk/music/stories/MusicCatalogSelector;)Lcom/vk/core/dialogs/bottomsheet/k/CustomisableModalBottomSheet;
 
     move-result-object v1
 
@@ -127,7 +127,7 @@
 
     if-eqz v1, :cond_0
 
-    invoke-interface {v1}, Lcom/vk/core/dialogs/bottomsheet/k/a;->U3()Lcom/vk/core/dialogs/bottomsheet/k/b/b;
+    invoke-interface {v1}, Lcom/vk/core/dialogs/bottomsheet/k/CustomisableModalBottomSheet;->U3()Lcom/vk/core/dialogs/bottomsheet/k/b/ModalBottomSheetController;
 
     move-result-object v1
 
@@ -139,31 +139,31 @@
     :goto_0
     if-eqz v1, :cond_1
 
-    check-cast v1, Lcom/vk/music/stories/b;
+    check-cast v1, Lcom/vk/music/stories/MusicStoriesBottomSheetController;
 
     move-object/from16 v3, v22
 
-    invoke-virtual {v1, v3}, Lcom/vk/music/stories/b;->a(Lcom/vk/catalog2/core/e;)V
+    invoke-virtual {v1, v3}, Lcom/vk/music/stories/MusicStoriesBottomSheetController;->a(Lcom/vk/catalog2/core/CatalogEntryPointParams;)V
 
     .line 7
     iget-object v1, v0, Lcom/vk/music/stories/MusicCatalogSelector$show$1;->this$0:Lcom/vk/music/stories/MusicCatalogSelector;
 
-    new-instance v4, Lcom/vk/catalog2/core/y/e/a;
+    new-instance v4, Lcom/vk/catalog2/core/y/e/MusicStorySelectorCatalogVh;
 
-    invoke-static {v1}, Lcom/vk/music/stories/MusicCatalogSelector;->b(Lcom/vk/music/stories/MusicCatalogSelector;)Lcom/vk/music/stories/c;
+    invoke-static {v1}, Lcom/vk/music/stories/MusicCatalogSelector;->b(Lcom/vk/music/stories/MusicCatalogSelector;)Lcom/vk/music/stories/MusicStoriesCatalogConfiguration;
 
     move-result-object v5
 
     const/4 v6, 0x0
 
-    invoke-direct {v4, v5, v3, v6}, Lcom/vk/catalog2/core/y/e/a;-><init>(Lcom/vk/catalog2/core/a;Lcom/vk/catalog2/core/e;Z)V
+    invoke-direct {v4, v5, v3, v6}, Lcom/vk/catalog2/core/y/e/MusicStorySelectorCatalogVh;-><init>(Lcom/vk/catalog2/core/CatalogConfiguration;Lcom/vk/catalog2/core/CatalogEntryPointParams;Z)V
 
-    invoke-static {v1, v4}, Lcom/vk/music/stories/MusicCatalogSelector;->a(Lcom/vk/music/stories/MusicCatalogSelector;Lcom/vk/catalog2/core/y/e/a;)V
+    invoke-static {v1, v4}, Lcom/vk/music/stories/MusicCatalogSelector;->a(Lcom/vk/music/stories/MusicCatalogSelector;Lcom/vk/catalog2/core/y/e/MusicStorySelectorCatalogVh;)V
 
     .line 8
     iget-object v1, v0, Lcom/vk/music/stories/MusicCatalogSelector$show$1;->this$0:Lcom/vk/music/stories/MusicCatalogSelector;
 
-    invoke-static {v1}, Lcom/vk/music/stories/MusicCatalogSelector;->c(Lcom/vk/music/stories/MusicCatalogSelector;)Lcom/vk/catalog2/core/y/e/a;
+    invoke-static {v1}, Lcom/vk/music/stories/MusicCatalogSelector;->c(Lcom/vk/music/stories/MusicCatalogSelector;)Lcom/vk/catalog2/core/y/e/MusicStorySelectorCatalogVh;
 
     move-result-object v1
 
@@ -171,11 +171,11 @@
 
     const-string v4, "inflater"
 
-    invoke-static {v3, v4}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v3, v4}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     move-object/from16 v4, p2
 
-    invoke-virtual {v1, v3, v4, v2}, Lcom/vk/catalog2/core/y/e/a;->a(Landroid/view/LayoutInflater;Landroid/view/ViewGroup;Landroid/os/Bundle;)Landroid/view/View;
+    invoke-virtual {v1, v3, v4, v2}, Lcom/vk/catalog2/core/y/e/MusicStorySelectorCatalogVh;->a(Landroid/view/LayoutInflater;Landroid/view/ViewGroup;Landroid/os/Bundle;)Landroid/view/View;
 
     move-result-object v1
 

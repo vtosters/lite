@@ -51,7 +51,7 @@
     const-string v1, "Java releaseEncoder on release thread"
 
     .line 1
-    invoke-static {v0, v1}, Le/c/a/a;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Le/c/a/Log;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 2
     :try_start_0
@@ -100,7 +100,7 @@
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Le/c/a/a;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Le/c/a/Log;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 5
     :goto_0
@@ -150,7 +150,7 @@
 
     move-result-object v2
 
-    invoke-static {v0, v2}, Le/c/a/a;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v2}, Le/c/a/Log;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 8
     iget-object v2, p0, Lorg/webrtc/videoengine/MediaCodecVideoEncoder$1;->val$caughtException:Lorg/webrtc/videoengine/MediaCodecVideoEncoder$1CaughtException;
@@ -161,7 +161,7 @@
     const-string v1, "Java releaseEncoder on release thread done"
 
     .line 9
-    invoke-static {v0, v1}, Le/c/a/a;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Le/c/a/Log;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 10
     iget-object v0, p0, Lorg/webrtc/videoengine/MediaCodecVideoEncoder$1;->val$releaseDone:Ljava/util/concurrent/CountDownLatch;

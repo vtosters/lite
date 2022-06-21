@@ -10,11 +10,11 @@
 
 .field private final c:Landroid/widget/ImageButton;
 
-.field private d:Lkotlin/jvm/b/a;
+.field private d:Lkotlin/jvm/b/Functions;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Lkotlin/jvm/b/a<",
-            "Lkotlin/m;",
+            "Lkotlin/jvm/b/Functions<",
+            "Lkotlin/Unit;",
             ">;"
         }
     .end annotation
@@ -83,7 +83,7 @@
 
     const-string v2, "findViewById(R.id.tv)"
 
-    invoke-static {v1, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     check-cast v1, Landroid/widget/TextView;
 
@@ -98,7 +98,7 @@
 
     const-string v2, "findViewById(R.id.btn)"
 
-    invoke-static {v1, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     check-cast v1, Landroid/widget/ImageButton;
 
@@ -113,7 +113,7 @@
 
     const-string v2, "findViewById(R.id.btn_small)"
 
-    invoke-static {v1, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     check-cast v1, Landroid/widget/ImageButton;
 
@@ -317,19 +317,19 @@
 
 
 # virtual methods
-.method public final getOnButtonClickCallback()Lkotlin/jvm/b/a;
+.method public final getOnButtonClickCallback()Lkotlin/jvm/b/Functions;
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "()",
-            "Lkotlin/jvm/b/a<",
-            "Lkotlin/m;",
+            "Lkotlin/jvm/b/Functions<",
+            "Lkotlin/Unit;",
             ">;"
         }
     .end annotation
 
     .line 1
-    iget-object v0, p0, Lcom/vk/voip/VoipTextButton;->d:Lkotlin/jvm/b/a;
+    iget-object v0, p0, Lcom/vk/voip/VoipTextButton;->d:Lkotlin/jvm/b/Functions;
 
     return-object v0
 .end method
@@ -352,19 +352,19 @@
     return-void
 .end method
 
-.method public final setOnButtonClickCallback(Lkotlin/jvm/b/a;)V
+.method public final setOnButtonClickCallback(Lkotlin/jvm/b/Functions;)V
     .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lkotlin/jvm/b/a<",
-            "Lkotlin/m;",
+            "Lkotlin/jvm/b/Functions<",
+            "Lkotlin/Unit;",
             ">;)V"
         }
     .end annotation
 
     .line 1
-    iput-object p1, p0, Lcom/vk/voip/VoipTextButton;->d:Lkotlin/jvm/b/a;
+    iput-object p1, p0, Lcom/vk/voip/VoipTextButton;->d:Lkotlin/jvm/b/Functions;
 
     return-void
 .end method

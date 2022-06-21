@@ -3,12 +3,12 @@
 .source "InAppUpdates.kt"
 
 # interfaces
-.implements Lc/a/z/g;
+.implements Lio/reactivex/functions/Consumer;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/updates/core/InAppUpdates;->a()Lio/reactivex/disposables/b;
+    value = Lcom/vk/updates/core/InAppUpdates;->a()Lio/reactivex/disposables/Disposable;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -22,7 +22,7 @@
         "Ljava/lang/Object;",
         ">",
         "Ljava/lang/Object;",
-        "Lc/a/z/g<",
+        "Lio/reactivex/functions/Consumer<",
         "Lkotlin/Pair<",
         "+",
         "Ljava/lang/Boolean;",
@@ -72,7 +72,7 @@
 
     const-string v1, "it.second"
 
-    invoke-static {p1, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     check-cast p1, Lb/d/a/d/a/a/a;
 

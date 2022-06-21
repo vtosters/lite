@@ -363,7 +363,7 @@
     move-object v1, v8
 
     .line 1
-    invoke-direct/range {v1 .. v7}, Lcom/vk/toggle/Features$Type;-><init>(Ljava/lang/String;ILjava/lang/String;ZILkotlin/jvm/internal/i;)V
+    invoke-direct/range {v1 .. v7}, Lcom/vk/toggle/Features$Type;-><init>(Ljava/lang/String;ILjava/lang/String;ZILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     sput-object v8, Lcom/vk/toggle/Features$Type;->AB_NEWS_VIDEO_LAYOUT_TEXT:Lcom/vk/toggle/Features$Type;
 
@@ -388,7 +388,7 @@
     move-object v9, v1
 
     .line 2
-    invoke-direct/range {v9 .. v15}, Lcom/vk/toggle/Features$Type;-><init>(Ljava/lang/String;ILjava/lang/String;ZILkotlin/jvm/internal/i;)V
+    invoke-direct/range {v9 .. v15}, Lcom/vk/toggle/Features$Type;-><init>(Ljava/lang/String;ILjava/lang/String;ZILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     sput-object v1, Lcom/vk/toggle/Features$Type;->AB_MULTI_GIFTS:Lcom/vk/toggle/Features$Type;
 
@@ -413,7 +413,7 @@
     move-object v3, v1
 
     .line 3
-    invoke-direct/range {v3 .. v9}, Lcom/vk/toggle/Features$Type;-><init>(Ljava/lang/String;ILjava/lang/String;ZILkotlin/jvm/internal/i;)V
+    invoke-direct/range {v3 .. v9}, Lcom/vk/toggle/Features$Type;-><init>(Ljava/lang/String;ILjava/lang/String;ZILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     sput-object v1, Lcom/vk/toggle/Features$Type;->AB_STICKERS_DISCOVER:Lcom/vk/toggle/Features$Type;
 
@@ -432,7 +432,7 @@
     move-object v3, v1
 
     .line 4
-    invoke-direct/range {v3 .. v9}, Lcom/vk/toggle/Features$Type;-><init>(Ljava/lang/String;ILjava/lang/String;ZILkotlin/jvm/internal/i;)V
+    invoke-direct/range {v3 .. v9}, Lcom/vk/toggle/Features$Type;-><init>(Ljava/lang/String;ILjava/lang/String;ZILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     sput-object v1, Lcom/vk/toggle/Features$Type;->AB_GIFTS_FROM_KEYBOARD:Lcom/vk/toggle/Features$Type;
 
@@ -451,7 +451,7 @@
     move-object v3, v1
 
     .line 5
-    invoke-direct/range {v3 .. v9}, Lcom/vk/toggle/Features$Type;-><init>(Ljava/lang/String;ILjava/lang/String;ZILkotlin/jvm/internal/i;)V
+    invoke-direct/range {v3 .. v9}, Lcom/vk/toggle/Features$Type;-><init>(Ljava/lang/String;ILjava/lang/String;ZILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     sput-object v1, Lcom/vk/toggle/Features$Type;->AB_IM_LP_ATTACHES:Lcom/vk/toggle/Features$Type;
 
@@ -470,7 +470,7 @@
     move-object v3, v1
 
     .line 6
-    invoke-direct/range {v3 .. v9}, Lcom/vk/toggle/Features$Type;-><init>(Ljava/lang/String;ILjava/lang/String;ZILkotlin/jvm/internal/i;)V
+    invoke-direct/range {v3 .. v9}, Lcom/vk/toggle/Features$Type;-><init>(Ljava/lang/String;ILjava/lang/String;ZILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     sput-object v1, Lcom/vk/toggle/Features$Type;->AB_IM_VIEW_POOL:Lcom/vk/toggle/Features$Type;
 
@@ -489,7 +489,7 @@
     move-object v3, v1
 
     .line 7
-    invoke-direct/range {v3 .. v9}, Lcom/vk/toggle/Features$Type;-><init>(Ljava/lang/String;ILjava/lang/String;ZILkotlin/jvm/internal/i;)V
+    invoke-direct/range {v3 .. v9}, Lcom/vk/toggle/Features$Type;-><init>(Ljava/lang/String;ILjava/lang/String;ZILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     sput-object v1, Lcom/vk/toggle/Features$Type;->FEATURE_APP_STATISTIC_PRODUCT:Lcom/vk/toggle/Features$Type;
 
@@ -508,7 +508,7 @@
     move-object v3, v1
 
     .line 8
-    invoke-direct/range {v3 .. v9}, Lcom/vk/toggle/Features$Type;-><init>(Ljava/lang/String;ILjava/lang/String;ZILkotlin/jvm/internal/i;)V
+    invoke-direct/range {v3 .. v9}, Lcom/vk/toggle/Features$Type;-><init>(Ljava/lang/String;ILjava/lang/String;ZILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     sput-object v1, Lcom/vk/toggle/Features$Type;->FEATURE_APP_STATISTIC_MEDIA:Lcom/vk/toggle/Features$Type;
 
@@ -527,7 +527,7 @@
     move-object v3, v1
 
     .line 9
-    invoke-direct/range {v3 .. v9}, Lcom/vk/toggle/Features$Type;-><init>(Ljava/lang/String;ILjava/lang/String;ZILkotlin/jvm/internal/i;)V
+    invoke-direct/range {v3 .. v9}, Lcom/vk/toggle/Features$Type;-><init>(Ljava/lang/String;ILjava/lang/String;ZILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     sput-object v1, Lcom/vk/toggle/Features$Type;->FEATURE_APP_STATISTIC_FTR:Lcom/vk/toggle/Features$Type;
 
@@ -546,7 +546,7 @@
     move-object v3, v1
 
     .line 10
-    invoke-direct/range {v3 .. v9}, Lcom/vk/toggle/Features$Type;-><init>(Ljava/lang/String;ILjava/lang/String;ZILkotlin/jvm/internal/i;)V
+    invoke-direct/range {v3 .. v9}, Lcom/vk/toggle/Features$Type;-><init>(Ljava/lang/String;ILjava/lang/String;ZILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     sput-object v1, Lcom/vk/toggle/Features$Type;->FEATURE_APP_STATISTIC_BENCHMARK:Lcom/vk/toggle/Features$Type;
 
@@ -565,7 +565,7 @@
     move-object v3, v1
 
     .line 11
-    invoke-direct/range {v3 .. v9}, Lcom/vk/toggle/Features$Type;-><init>(Ljava/lang/String;ILjava/lang/String;ZILkotlin/jvm/internal/i;)V
+    invoke-direct/range {v3 .. v9}, Lcom/vk/toggle/Features$Type;-><init>(Ljava/lang/String;ILjava/lang/String;ZILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     sput-object v1, Lcom/vk/toggle/Features$Type;->FEATURE_DEBUG_LOG_CONFIG:Lcom/vk/toggle/Features$Type;
 
@@ -584,7 +584,7 @@
     move-object v3, v1
 
     .line 12
-    invoke-direct/range {v3 .. v9}, Lcom/vk/toggle/Features$Type;-><init>(Ljava/lang/String;ILjava/lang/String;ZILkotlin/jvm/internal/i;)V
+    invoke-direct/range {v3 .. v9}, Lcom/vk/toggle/Features$Type;-><init>(Ljava/lang/String;ILjava/lang/String;ZILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     sput-object v1, Lcom/vk/toggle/Features$Type;->FEATURE_DEBUG_MENU:Lcom/vk/toggle/Features$Type;
 
@@ -603,7 +603,7 @@
     move-object v3, v1
 
     .line 13
-    invoke-direct/range {v3 .. v9}, Lcom/vk/toggle/Features$Type;-><init>(Ljava/lang/String;ILjava/lang/String;ZILkotlin/jvm/internal/i;)V
+    invoke-direct/range {v3 .. v9}, Lcom/vk/toggle/Features$Type;-><init>(Ljava/lang/String;ILjava/lang/String;ZILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     sput-object v1, Lcom/vk/toggle/Features$Type;->FEATURE_DEBUG_VIDEO_RENDERER:Lcom/vk/toggle/Features$Type;
 
@@ -622,7 +622,7 @@
     move-object v3, v1
 
     .line 14
-    invoke-direct/range {v3 .. v9}, Lcom/vk/toggle/Features$Type;-><init>(Ljava/lang/String;ILjava/lang/String;ZILkotlin/jvm/internal/i;)V
+    invoke-direct/range {v3 .. v9}, Lcom/vk/toggle/Features$Type;-><init>(Ljava/lang/String;ILjava/lang/String;ZILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     sput-object v1, Lcom/vk/toggle/Features$Type;->FEATURE_DEBUG_FULL_MSG_LOGS:Lcom/vk/toggle/Features$Type;
 
@@ -641,7 +641,7 @@
     move-object v3, v1
 
     .line 15
-    invoke-direct/range {v3 .. v9}, Lcom/vk/toggle/Features$Type;-><init>(Ljava/lang/String;ILjava/lang/String;ZILkotlin/jvm/internal/i;)V
+    invoke-direct/range {v3 .. v9}, Lcom/vk/toggle/Features$Type;-><init>(Ljava/lang/String;ILjava/lang/String;ZILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     sput-object v1, Lcom/vk/toggle/Features$Type;->FEATURE_DEBUG_CRASH_INFO:Lcom/vk/toggle/Features$Type;
 
@@ -660,7 +660,7 @@
     move-object v3, v1
 
     .line 16
-    invoke-direct/range {v3 .. v9}, Lcom/vk/toggle/Features$Type;-><init>(Ljava/lang/String;ILjava/lang/String;ZILkotlin/jvm/internal/i;)V
+    invoke-direct/range {v3 .. v9}, Lcom/vk/toggle/Features$Type;-><init>(Ljava/lang/String;ILjava/lang/String;ZILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     sput-object v1, Lcom/vk/toggle/Features$Type;->FEATURE_BUGTRACKER_ENABLED:Lcom/vk/toggle/Features$Type;
 
@@ -679,7 +679,7 @@
     move-object v3, v1
 
     .line 17
-    invoke-direct/range {v3 .. v9}, Lcom/vk/toggle/Features$Type;-><init>(Ljava/lang/String;ILjava/lang/String;ZILkotlin/jvm/internal/i;)V
+    invoke-direct/range {v3 .. v9}, Lcom/vk/toggle/Features$Type;-><init>(Ljava/lang/String;ILjava/lang/String;ZILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     sput-object v1, Lcom/vk/toggle/Features$Type;->FEATURE_DEBUG_STAT_NAVIGATION:Lcom/vk/toggle/Features$Type;
 
@@ -698,7 +698,7 @@
     move-object v3, v1
 
     .line 18
-    invoke-direct/range {v3 .. v9}, Lcom/vk/toggle/Features$Type;-><init>(Ljava/lang/String;ILjava/lang/String;ZILkotlin/jvm/internal/i;)V
+    invoke-direct/range {v3 .. v9}, Lcom/vk/toggle/Features$Type;-><init>(Ljava/lang/String;ILjava/lang/String;ZILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     sput-object v1, Lcom/vk/toggle/Features$Type;->FEATURE_DEBUG_CYCLE_CALLS:Lcom/vk/toggle/Features$Type;
 
@@ -717,7 +717,7 @@
     move-object v3, v1
 
     .line 19
-    invoke-direct/range {v3 .. v9}, Lcom/vk/toggle/Features$Type;-><init>(Ljava/lang/String;ILjava/lang/String;ZILkotlin/jvm/internal/i;)V
+    invoke-direct/range {v3 .. v9}, Lcom/vk/toggle/Features$Type;-><init>(Ljava/lang/String;ILjava/lang/String;ZILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     sput-object v1, Lcom/vk/toggle/Features$Type;->FEATURE_MUSIC_STOP_PLAYER_ON_TASK_REMOVAL:Lcom/vk/toggle/Features$Type;
 
@@ -736,7 +736,7 @@
     move-object v3, v1
 
     .line 20
-    invoke-direct/range {v3 .. v9}, Lcom/vk/toggle/Features$Type;-><init>(Ljava/lang/String;ILjava/lang/String;ZILkotlin/jvm/internal/i;)V
+    invoke-direct/range {v3 .. v9}, Lcom/vk/toggle/Features$Type;-><init>(Ljava/lang/String;ILjava/lang/String;ZILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     sput-object v1, Lcom/vk/toggle/Features$Type;->FEATURE_MUSIC_SUBS_PUSH:Lcom/vk/toggle/Features$Type;
 
@@ -755,7 +755,7 @@
     move-object v3, v1
 
     .line 21
-    invoke-direct/range {v3 .. v9}, Lcom/vk/toggle/Features$Type;-><init>(Ljava/lang/String;ILjava/lang/String;ZILkotlin/jvm/internal/i;)V
+    invoke-direct/range {v3 .. v9}, Lcom/vk/toggle/Features$Type;-><init>(Ljava/lang/String;ILjava/lang/String;ZILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     sput-object v1, Lcom/vk/toggle/Features$Type;->FEATURE_MUSIC_AUDIO_SERVICE:Lcom/vk/toggle/Features$Type;
 
@@ -774,7 +774,7 @@
     move-object v3, v1
 
     .line 22
-    invoke-direct/range {v3 .. v9}, Lcom/vk/toggle/Features$Type;-><init>(Ljava/lang/String;ILjava/lang/String;ZILkotlin/jvm/internal/i;)V
+    invoke-direct/range {v3 .. v9}, Lcom/vk/toggle/Features$Type;-><init>(Ljava/lang/String;ILjava/lang/String;ZILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     sput-object v1, Lcom/vk/toggle/Features$Type;->FEATURE_MUSIC_BG_OFF:Lcom/vk/toggle/Features$Type;
 
@@ -793,7 +793,7 @@
     move-object v3, v1
 
     .line 23
-    invoke-direct/range {v3 .. v9}, Lcom/vk/toggle/Features$Type;-><init>(Ljava/lang/String;ILjava/lang/String;ZILkotlin/jvm/internal/i;)V
+    invoke-direct/range {v3 .. v9}, Lcom/vk/toggle/Features$Type;-><init>(Ljava/lang/String;ILjava/lang/String;ZILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     sput-object v1, Lcom/vk/toggle/Features$Type;->FEATURE_MUSIC_ARTIST_CATALOG:Lcom/vk/toggle/Features$Type;
 
@@ -812,7 +812,7 @@
     move-object v3, v1
 
     .line 24
-    invoke-direct/range {v3 .. v9}, Lcom/vk/toggle/Features$Type;-><init>(Ljava/lang/String;ILjava/lang/String;ZILkotlin/jvm/internal/i;)V
+    invoke-direct/range {v3 .. v9}, Lcom/vk/toggle/Features$Type;-><init>(Ljava/lang/String;ILjava/lang/String;ZILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     sput-object v1, Lcom/vk/toggle/Features$Type;->FEATURE_MUS_PUSH_RES_COUNT:Lcom/vk/toggle/Features$Type;
 
@@ -831,7 +831,7 @@
     move-object v3, v1
 
     .line 25
-    invoke-direct/range {v3 .. v9}, Lcom/vk/toggle/Features$Type;-><init>(Ljava/lang/String;ILjava/lang/String;ZILkotlin/jvm/internal/i;)V
+    invoke-direct/range {v3 .. v9}, Lcom/vk/toggle/Features$Type;-><init>(Ljava/lang/String;ILjava/lang/String;ZILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     sput-object v1, Lcom/vk/toggle/Features$Type;->FEATURE_MUS_RETRIES_BUY_SUB_COUNT:Lcom/vk/toggle/Features$Type;
 
@@ -850,7 +850,7 @@
     move-object v3, v1
 
     .line 26
-    invoke-direct/range {v3 .. v9}, Lcom/vk/toggle/Features$Type;-><init>(Ljava/lang/String;ILjava/lang/String;ZILkotlin/jvm/internal/i;)V
+    invoke-direct/range {v3 .. v9}, Lcom/vk/toggle/Features$Type;-><init>(Ljava/lang/String;ILjava/lang/String;ZILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     sput-object v1, Lcom/vk/toggle/Features$Type;->FEATURE_MUSIC_REINIT_PLAYER:Lcom/vk/toggle/Features$Type;
 
@@ -869,7 +869,7 @@
     move-object v3, v1
 
     .line 27
-    invoke-direct/range {v3 .. v9}, Lcom/vk/toggle/Features$Type;-><init>(Ljava/lang/String;ILjava/lang/String;ZILkotlin/jvm/internal/i;)V
+    invoke-direct/range {v3 .. v9}, Lcom/vk/toggle/Features$Type;-><init>(Ljava/lang/String;ILjava/lang/String;ZILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     sput-object v1, Lcom/vk/toggle/Features$Type;->FEATURE_MUSIC_NEW_CATALOG:Lcom/vk/toggle/Features$Type;
 
@@ -888,7 +888,7 @@
     move-object v3, v1
 
     .line 28
-    invoke-direct/range {v3 .. v9}, Lcom/vk/toggle/Features$Type;-><init>(Ljava/lang/String;ILjava/lang/String;ZILkotlin/jvm/internal/i;)V
+    invoke-direct/range {v3 .. v9}, Lcom/vk/toggle/Features$Type;-><init>(Ljava/lang/String;ILjava/lang/String;ZILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     sput-object v1, Lcom/vk/toggle/Features$Type;->FEATURE_MUSIC_LIKE_IN_PLAYER:Lcom/vk/toggle/Features$Type;
 
@@ -907,7 +907,7 @@
     move-object v3, v1
 
     .line 29
-    invoke-direct/range {v3 .. v9}, Lcom/vk/toggle/Features$Type;-><init>(Ljava/lang/String;ILjava/lang/String;ZILkotlin/jvm/internal/i;)V
+    invoke-direct/range {v3 .. v9}, Lcom/vk/toggle/Features$Type;-><init>(Ljava/lang/String;ILjava/lang/String;ZILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     sput-object v1, Lcom/vk/toggle/Features$Type;->FEATURE_STORY_PRELOADING:Lcom/vk/toggle/Features$Type;
 
@@ -926,7 +926,7 @@
     move-object v3, v1
 
     .line 30
-    invoke-direct/range {v3 .. v9}, Lcom/vk/toggle/Features$Type;-><init>(Ljava/lang/String;ILjava/lang/String;ZILkotlin/jvm/internal/i;)V
+    invoke-direct/range {v3 .. v9}, Lcom/vk/toggle/Features$Type;-><init>(Ljava/lang/String;ILjava/lang/String;ZILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     sput-object v1, Lcom/vk/toggle/Features$Type;->FEATURE_STORY_ARCHIVE:Lcom/vk/toggle/Features$Type;
 
@@ -945,7 +945,7 @@
     move-object v3, v1
 
     .line 31
-    invoke-direct/range {v3 .. v9}, Lcom/vk/toggle/Features$Type;-><init>(Ljava/lang/String;ILjava/lang/String;ZILkotlin/jvm/internal/i;)V
+    invoke-direct/range {v3 .. v9}, Lcom/vk/toggle/Features$Type;-><init>(Ljava/lang/String;ILjava/lang/String;ZILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     sput-object v1, Lcom/vk/toggle/Features$Type;->FEATURE_STORY_VOICE_ANSWER:Lcom/vk/toggle/Features$Type;
 
@@ -964,7 +964,7 @@
     move-object v3, v1
 
     .line 32
-    invoke-direct/range {v3 .. v9}, Lcom/vk/toggle/Features$Type;-><init>(Ljava/lang/String;ILjava/lang/String;ZILkotlin/jvm/internal/i;)V
+    invoke-direct/range {v3 .. v9}, Lcom/vk/toggle/Features$Type;-><init>(Ljava/lang/String;ILjava/lang/String;ZILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     sput-object v1, Lcom/vk/toggle/Features$Type;->FEATURE_STORY_QUESTION:Lcom/vk/toggle/Features$Type;
 
@@ -983,7 +983,7 @@
     move-object v3, v1
 
     .line 33
-    invoke-direct/range {v3 .. v9}, Lcom/vk/toggle/Features$Type;-><init>(Ljava/lang/String;ILjava/lang/String;ZILkotlin/jvm/internal/i;)V
+    invoke-direct/range {v3 .. v9}, Lcom/vk/toggle/Features$Type;-><init>(Ljava/lang/String;ILjava/lang/String;ZILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     sput-object v1, Lcom/vk/toggle/Features$Type;->FEATURE_STORIES_FEED_TYPE:Lcom/vk/toggle/Features$Type;
 
@@ -1002,7 +1002,7 @@
     move-object v3, v1
 
     .line 34
-    invoke-direct/range {v3 .. v9}, Lcom/vk/toggle/Features$Type;-><init>(Ljava/lang/String;ILjava/lang/String;ZILkotlin/jvm/internal/i;)V
+    invoke-direct/range {v3 .. v9}, Lcom/vk/toggle/Features$Type;-><init>(Ljava/lang/String;ILjava/lang/String;ZILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     sput-object v1, Lcom/vk/toggle/Features$Type;->FEATURE_STORIES_AVATAR:Lcom/vk/toggle/Features$Type;
 
@@ -1021,7 +1021,7 @@
     move-object v3, v1
 
     .line 35
-    invoke-direct/range {v3 .. v9}, Lcom/vk/toggle/Features$Type;-><init>(Ljava/lang/String;ILjava/lang/String;ZILkotlin/jvm/internal/i;)V
+    invoke-direct/range {v3 .. v9}, Lcom/vk/toggle/Features$Type;-><init>(Ljava/lang/String;ILjava/lang/String;ZILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     sput-object v1, Lcom/vk/toggle/Features$Type;->FEATURE_STORIES_SHOW_ALWAYS:Lcom/vk/toggle/Features$Type;
 
@@ -1040,7 +1040,7 @@
     move-object v3, v1
 
     .line 36
-    invoke-direct/range {v3 .. v9}, Lcom/vk/toggle/Features$Type;-><init>(Ljava/lang/String;ILjava/lang/String;ZILkotlin/jvm/internal/i;)V
+    invoke-direct/range {v3 .. v9}, Lcom/vk/toggle/Features$Type;-><init>(Ljava/lang/String;ILjava/lang/String;ZILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     sput-object v1, Lcom/vk/toggle/Features$Type;->FEATURE_STORY_GIF:Lcom/vk/toggle/Features$Type;
 
@@ -1059,7 +1059,7 @@
     move-object v3, v1
 
     .line 37
-    invoke-direct/range {v3 .. v9}, Lcom/vk/toggle/Features$Type;-><init>(Ljava/lang/String;ILjava/lang/String;ZILkotlin/jvm/internal/i;)V
+    invoke-direct/range {v3 .. v9}, Lcom/vk/toggle/Features$Type;-><init>(Ljava/lang/String;ILjava/lang/String;ZILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     sput-object v1, Lcom/vk/toggle/Features$Type;->FEATURE_STORY_BOX:Lcom/vk/toggle/Features$Type;
 
@@ -1078,7 +1078,7 @@
     move-object v3, v1
 
     .line 38
-    invoke-direct/range {v3 .. v9}, Lcom/vk/toggle/Features$Type;-><init>(Ljava/lang/String;ILjava/lang/String;ZILkotlin/jvm/internal/i;)V
+    invoke-direct/range {v3 .. v9}, Lcom/vk/toggle/Features$Type;-><init>(Ljava/lang/String;ILjava/lang/String;ZILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     sput-object v1, Lcom/vk/toggle/Features$Type;->FEATURE_STORY_HIGH_QUALITY:Lcom/vk/toggle/Features$Type;
 
@@ -1097,7 +1097,7 @@
     move-object v3, v1
 
     .line 39
-    invoke-direct/range {v3 .. v9}, Lcom/vk/toggle/Features$Type;-><init>(Ljava/lang/String;ILjava/lang/String;ZILkotlin/jvm/internal/i;)V
+    invoke-direct/range {v3 .. v9}, Lcom/vk/toggle/Features$Type;-><init>(Ljava/lang/String;ILjava/lang/String;ZILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     sput-object v1, Lcom/vk/toggle/Features$Type;->FEATURE_STORY_TIME:Lcom/vk/toggle/Features$Type;
 
@@ -1116,7 +1116,7 @@
     move-object v3, v1
 
     .line 40
-    invoke-direct/range {v3 .. v9}, Lcom/vk/toggle/Features$Type;-><init>(Ljava/lang/String;ILjava/lang/String;ZILkotlin/jvm/internal/i;)V
+    invoke-direct/range {v3 .. v9}, Lcom/vk/toggle/Features$Type;-><init>(Ljava/lang/String;ILjava/lang/String;ZILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     sput-object v1, Lcom/vk/toggle/Features$Type;->FEATURE_STORY_MASKS_FRONTAL:Lcom/vk/toggle/Features$Type;
 
@@ -1135,7 +1135,7 @@
     move-object v3, v1
 
     .line 41
-    invoke-direct/range {v3 .. v9}, Lcom/vk/toggle/Features$Type;-><init>(Ljava/lang/String;ILjava/lang/String;ZILkotlin/jvm/internal/i;)V
+    invoke-direct/range {v3 .. v9}, Lcom/vk/toggle/Features$Type;-><init>(Ljava/lang/String;ILjava/lang/String;ZILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     sput-object v1, Lcom/vk/toggle/Features$Type;->FEATURE_STORY_POST_REPOST:Lcom/vk/toggle/Features$Type;
 
@@ -1154,7 +1154,7 @@
     move-object v3, v1
 
     .line 42
-    invoke-direct/range {v3 .. v9}, Lcom/vk/toggle/Features$Type;-><init>(Ljava/lang/String;ILjava/lang/String;ZILkotlin/jvm/internal/i;)V
+    invoke-direct/range {v3 .. v9}, Lcom/vk/toggle/Features$Type;-><init>(Ljava/lang/String;ILjava/lang/String;ZILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     sput-object v1, Lcom/vk/toggle/Features$Type;->FEATURE_STORY_MENTION_ICON:Lcom/vk/toggle/Features$Type;
 
@@ -1173,7 +1173,7 @@
     move-object v3, v1
 
     .line 43
-    invoke-direct/range {v3 .. v9}, Lcom/vk/toggle/Features$Type;-><init>(Ljava/lang/String;ILjava/lang/String;ZILkotlin/jvm/internal/i;)V
+    invoke-direct/range {v3 .. v9}, Lcom/vk/toggle/Features$Type;-><init>(Ljava/lang/String;ILjava/lang/String;ZILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     sput-object v1, Lcom/vk/toggle/Features$Type;->FEATURE_STORY_ENDLESS_VIDEO:Lcom/vk/toggle/Features$Type;
 
@@ -1192,7 +1192,7 @@
     move-object v3, v1
 
     .line 44
-    invoke-direct/range {v3 .. v9}, Lcom/vk/toggle/Features$Type;-><init>(Ljava/lang/String;ILjava/lang/String;ZILkotlin/jvm/internal/i;)V
+    invoke-direct/range {v3 .. v9}, Lcom/vk/toggle/Features$Type;-><init>(Ljava/lang/String;ILjava/lang/String;ZILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     sput-object v1, Lcom/vk/toggle/Features$Type;->FEATURE_STORY_ONE_TIME:Lcom/vk/toggle/Features$Type;
 
@@ -1211,7 +1211,7 @@
     move-object v3, v1
 
     .line 45
-    invoke-direct/range {v3 .. v9}, Lcom/vk/toggle/Features$Type;-><init>(Ljava/lang/String;ILjava/lang/String;ZILkotlin/jvm/internal/i;)V
+    invoke-direct/range {v3 .. v9}, Lcom/vk/toggle/Features$Type;-><init>(Ljava/lang/String;ILjava/lang/String;ZILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     sput-object v1, Lcom/vk/toggle/Features$Type;->FEATURE_STORY_EDITOR_TYPE:Lcom/vk/toggle/Features$Type;
 
@@ -1230,7 +1230,7 @@
     move-object v3, v1
 
     .line 46
-    invoke-direct/range {v3 .. v9}, Lcom/vk/toggle/Features$Type;-><init>(Ljava/lang/String;ILjava/lang/String;ZILkotlin/jvm/internal/i;)V
+    invoke-direct/range {v3 .. v9}, Lcom/vk/toggle/Features$Type;-><init>(Ljava/lang/String;ILjava/lang/String;ZILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     sput-object v1, Lcom/vk/toggle/Features$Type;->FEATURE_STORY_PHOTO_STICKER:Lcom/vk/toggle/Features$Type;
 
@@ -1249,7 +1249,7 @@
     move-object v3, v1
 
     .line 47
-    invoke-direct/range {v3 .. v9}, Lcom/vk/toggle/Features$Type;-><init>(Ljava/lang/String;ILjava/lang/String;ZILkotlin/jvm/internal/i;)V
+    invoke-direct/range {v3 .. v9}, Lcom/vk/toggle/Features$Type;-><init>(Ljava/lang/String;ILjava/lang/String;ZILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     sput-object v1, Lcom/vk/toggle/Features$Type;->FEATURE_STORY_FAST_REACTIONS:Lcom/vk/toggle/Features$Type;
 
@@ -1268,7 +1268,7 @@
     move-object v3, v1
 
     .line 48
-    invoke-direct/range {v3 .. v9}, Lcom/vk/toggle/Features$Type;-><init>(Ljava/lang/String;ILjava/lang/String;ZILkotlin/jvm/internal/i;)V
+    invoke-direct/range {v3 .. v9}, Lcom/vk/toggle/Features$Type;-><init>(Ljava/lang/String;ILjava/lang/String;ZILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     sput-object v1, Lcom/vk/toggle/Features$Type;->FEATURE_STORY_GROUPED:Lcom/vk/toggle/Features$Type;
 
@@ -1287,7 +1287,7 @@
     move-object v3, v1
 
     .line 49
-    invoke-direct/range {v3 .. v9}, Lcom/vk/toggle/Features$Type;-><init>(Ljava/lang/String;ILjava/lang/String;ZILkotlin/jvm/internal/i;)V
+    invoke-direct/range {v3 .. v9}, Lcom/vk/toggle/Features$Type;-><init>(Ljava/lang/String;ILjava/lang/String;ZILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     sput-object v1, Lcom/vk/toggle/Features$Type;->FEATURE_STORY_SEND_DIALOG_LIST:Lcom/vk/toggle/Features$Type;
 
@@ -1306,7 +1306,7 @@
     move-object v3, v1
 
     .line 50
-    invoke-direct/range {v3 .. v9}, Lcom/vk/toggle/Features$Type;-><init>(Ljava/lang/String;ILjava/lang/String;ZILkotlin/jvm/internal/i;)V
+    invoke-direct/range {v3 .. v9}, Lcom/vk/toggle/Features$Type;-><init>(Ljava/lang/String;ILjava/lang/String;ZILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     sput-object v1, Lcom/vk/toggle/Features$Type;->FEATURE_STORY_ARCHIVE_POST:Lcom/vk/toggle/Features$Type;
 
@@ -1325,7 +1325,7 @@
     move-object v3, v1
 
     .line 51
-    invoke-direct/range {v3 .. v9}, Lcom/vk/toggle/Features$Type;-><init>(Ljava/lang/String;ILjava/lang/String;ZILkotlin/jvm/internal/i;)V
+    invoke-direct/range {v3 .. v9}, Lcom/vk/toggle/Features$Type;-><init>(Ljava/lang/String;ILjava/lang/String;ZILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     sput-object v1, Lcom/vk/toggle/Features$Type;->FEATURE_STORY_EDITOR_GALLERY:Lcom/vk/toggle/Features$Type;
 
@@ -1344,7 +1344,7 @@
     move-object v3, v1
 
     .line 52
-    invoke-direct/range {v3 .. v9}, Lcom/vk/toggle/Features$Type;-><init>(Ljava/lang/String;ILjava/lang/String;ZILkotlin/jvm/internal/i;)V
+    invoke-direct/range {v3 .. v9}, Lcom/vk/toggle/Features$Type;-><init>(Ljava/lang/String;ILjava/lang/String;ZILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     sput-object v1, Lcom/vk/toggle/Features$Type;->FEATURE_STORY_ANSWER_PUBLIC:Lcom/vk/toggle/Features$Type;
 
@@ -1363,7 +1363,7 @@
     move-object v3, v1
 
     .line 53
-    invoke-direct/range {v3 .. v9}, Lcom/vk/toggle/Features$Type;-><init>(Ljava/lang/String;ILjava/lang/String;ZILkotlin/jvm/internal/i;)V
+    invoke-direct/range {v3 .. v9}, Lcom/vk/toggle/Features$Type;-><init>(Ljava/lang/String;ILjava/lang/String;ZILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     sput-object v1, Lcom/vk/toggle/Features$Type;->FEATURE_STORY_SAVE_DEFAULT_ON:Lcom/vk/toggle/Features$Type;
 
@@ -1382,7 +1382,7 @@
     move-object v3, v1
 
     .line 54
-    invoke-direct/range {v3 .. v9}, Lcom/vk/toggle/Features$Type;-><init>(Ljava/lang/String;ILjava/lang/String;ZILkotlin/jvm/internal/i;)V
+    invoke-direct/range {v3 .. v9}, Lcom/vk/toggle/Features$Type;-><init>(Ljava/lang/String;ILjava/lang/String;ZILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     sput-object v1, Lcom/vk/toggle/Features$Type;->FEATURE_STORY_CADRE:Lcom/vk/toggle/Features$Type;
 
@@ -1401,7 +1401,7 @@
     move-object v3, v1
 
     .line 55
-    invoke-direct/range {v3 .. v9}, Lcom/vk/toggle/Features$Type;-><init>(Ljava/lang/String;ILjava/lang/String;ZILkotlin/jvm/internal/i;)V
+    invoke-direct/range {v3 .. v9}, Lcom/vk/toggle/Features$Type;-><init>(Ljava/lang/String;ILjava/lang/String;ZILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     sput-object v1, Lcom/vk/toggle/Features$Type;->FEATURE_STORY_VIEWER_CAMERA:Lcom/vk/toggle/Features$Type;
 
@@ -1420,7 +1420,7 @@
     move-object v3, v1
 
     .line 56
-    invoke-direct/range {v3 .. v9}, Lcom/vk/toggle/Features$Type;-><init>(Ljava/lang/String;ILjava/lang/String;ZILkotlin/jvm/internal/i;)V
+    invoke-direct/range {v3 .. v9}, Lcom/vk/toggle/Features$Type;-><init>(Ljava/lang/String;ILjava/lang/String;ZILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     sput-object v1, Lcom/vk/toggle/Features$Type;->FEATURE_STORY_STICKER_PACK:Lcom/vk/toggle/Features$Type;
 
@@ -1439,7 +1439,7 @@
     move-object v3, v1
 
     .line 57
-    invoke-direct/range {v3 .. v9}, Lcom/vk/toggle/Features$Type;-><init>(Ljava/lang/String;ILjava/lang/String;ZILkotlin/jvm/internal/i;)V
+    invoke-direct/range {v3 .. v9}, Lcom/vk/toggle/Features$Type;-><init>(Ljava/lang/String;ILjava/lang/String;ZILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     sput-object v1, Lcom/vk/toggle/Features$Type;->FEATURE_STORY_QUESTION_STYLE:Lcom/vk/toggle/Features$Type;
 
@@ -1458,7 +1458,7 @@
     move-object v3, v1
 
     .line 58
-    invoke-direct/range {v3 .. v9}, Lcom/vk/toggle/Features$Type;-><init>(Ljava/lang/String;ILjava/lang/String;ZILkotlin/jvm/internal/i;)V
+    invoke-direct/range {v3 .. v9}, Lcom/vk/toggle/Features$Type;-><init>(Ljava/lang/String;ILjava/lang/String;ZILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     sput-object v1, Lcom/vk/toggle/Features$Type;->FEATURE_STORY_POLLS:Lcom/vk/toggle/Features$Type;
 
@@ -1477,7 +1477,7 @@
     move-object v3, v1
 
     .line 59
-    invoke-direct/range {v3 .. v9}, Lcom/vk/toggle/Features$Type;-><init>(Ljava/lang/String;ILjava/lang/String;ZILkotlin/jvm/internal/i;)V
+    invoke-direct/range {v3 .. v9}, Lcom/vk/toggle/Features$Type;-><init>(Ljava/lang/String;ILjava/lang/String;ZILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     sput-object v1, Lcom/vk/toggle/Features$Type;->FEATURE_STORY_PHOTO_SHARING:Lcom/vk/toggle/Features$Type;
 
@@ -1496,7 +1496,7 @@
     move-object v3, v1
 
     .line 60
-    invoke-direct/range {v3 .. v9}, Lcom/vk/toggle/Features$Type;-><init>(Ljava/lang/String;ILjava/lang/String;ZILkotlin/jvm/internal/i;)V
+    invoke-direct/range {v3 .. v9}, Lcom/vk/toggle/Features$Type;-><init>(Ljava/lang/String;ILjava/lang/String;ZILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     sput-object v1, Lcom/vk/toggle/Features$Type;->FEATURE_STORY_CAMERA_TOOLTIP:Lcom/vk/toggle/Features$Type;
 
@@ -1515,7 +1515,7 @@
     move-object v3, v1
 
     .line 61
-    invoke-direct/range {v3 .. v9}, Lcom/vk/toggle/Features$Type;-><init>(Ljava/lang/String;ILjava/lang/String;ZILkotlin/jvm/internal/i;)V
+    invoke-direct/range {v3 .. v9}, Lcom/vk/toggle/Features$Type;-><init>(Ljava/lang/String;ILjava/lang/String;ZILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     sput-object v1, Lcom/vk/toggle/Features$Type;->FEATURE_STORY_APP_STICKER:Lcom/vk/toggle/Features$Type;
 
@@ -1534,7 +1534,7 @@
     move-object v3, v1
 
     .line 62
-    invoke-direct/range {v3 .. v9}, Lcom/vk/toggle/Features$Type;-><init>(Ljava/lang/String;ILjava/lang/String;ZILkotlin/jvm/internal/i;)V
+    invoke-direct/range {v3 .. v9}, Lcom/vk/toggle/Features$Type;-><init>(Ljava/lang/String;ILjava/lang/String;ZILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     sput-object v1, Lcom/vk/toggle/Features$Type;->FEATURE_STORY_NEW_FRAME:Lcom/vk/toggle/Features$Type;
 
@@ -1553,7 +1553,7 @@
     move-object v3, v1
 
     .line 63
-    invoke-direct/range {v3 .. v9}, Lcom/vk/toggle/Features$Type;-><init>(Ljava/lang/String;ILjava/lang/String;ZILkotlin/jvm/internal/i;)V
+    invoke-direct/range {v3 .. v9}, Lcom/vk/toggle/Features$Type;-><init>(Ljava/lang/String;ILjava/lang/String;ZILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     sput-object v1, Lcom/vk/toggle/Features$Type;->FEATURE_STORY_BAKGROUND_ALL:Lcom/vk/toggle/Features$Type;
 
@@ -1572,7 +1572,7 @@
     move-object v3, v1
 
     .line 64
-    invoke-direct/range {v3 .. v9}, Lcom/vk/toggle/Features$Type;-><init>(Ljava/lang/String;ILjava/lang/String;ZILkotlin/jvm/internal/i;)V
+    invoke-direct/range {v3 .. v9}, Lcom/vk/toggle/Features$Type;-><init>(Ljava/lang/String;ILjava/lang/String;ZILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     sput-object v1, Lcom/vk/toggle/Features$Type;->FEATURE_STORY_RLOTTIE:Lcom/vk/toggle/Features$Type;
 
@@ -1591,7 +1591,7 @@
     move-object v3, v1
 
     .line 65
-    invoke-direct/range {v3 .. v9}, Lcom/vk/toggle/Features$Type;-><init>(Ljava/lang/String;ILjava/lang/String;ZILkotlin/jvm/internal/i;)V
+    invoke-direct/range {v3 .. v9}, Lcom/vk/toggle/Features$Type;-><init>(Ljava/lang/String;ILjava/lang/String;ZILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     sput-object v1, Lcom/vk/toggle/Features$Type;->FEATURE_STORY_RLOTTIE_CACHE:Lcom/vk/toggle/Features$Type;
 
@@ -1610,7 +1610,7 @@
     move-object v3, v1
 
     .line 66
-    invoke-direct/range {v3 .. v9}, Lcom/vk/toggle/Features$Type;-><init>(Ljava/lang/String;ILjava/lang/String;ZILkotlin/jvm/internal/i;)V
+    invoke-direct/range {v3 .. v9}, Lcom/vk/toggle/Features$Type;-><init>(Ljava/lang/String;ILjava/lang/String;ZILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     sput-object v1, Lcom/vk/toggle/Features$Type;->FEATURE_STORY_MODERN_PUBLISH:Lcom/vk/toggle/Features$Type;
 
@@ -1629,7 +1629,7 @@
     move-object v3, v1
 
     .line 67
-    invoke-direct/range {v3 .. v9}, Lcom/vk/toggle/Features$Type;-><init>(Ljava/lang/String;ILjava/lang/String;ZILkotlin/jvm/internal/i;)V
+    invoke-direct/range {v3 .. v9}, Lcom/vk/toggle/Features$Type;-><init>(Ljava/lang/String;ILjava/lang/String;ZILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     sput-object v1, Lcom/vk/toggle/Features$Type;->FEATURE_STORY_WITH_CONTEXT:Lcom/vk/toggle/Features$Type;
 
@@ -1648,7 +1648,7 @@
     move-object v3, v1
 
     .line 68
-    invoke-direct/range {v3 .. v9}, Lcom/vk/toggle/Features$Type;-><init>(Ljava/lang/String;ILjava/lang/String;ZILkotlin/jvm/internal/i;)V
+    invoke-direct/range {v3 .. v9}, Lcom/vk/toggle/Features$Type;-><init>(Ljava/lang/String;ILjava/lang/String;ZILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     sput-object v1, Lcom/vk/toggle/Features$Type;->FEATURE_NARRATIVE_SNIPPET_TYPE:Lcom/vk/toggle/Features$Type;
 
@@ -1667,7 +1667,7 @@
     move-object v3, v1
 
     .line 69
-    invoke-direct/range {v3 .. v9}, Lcom/vk/toggle/Features$Type;-><init>(Ljava/lang/String;ILjava/lang/String;ZILkotlin/jvm/internal/i;)V
+    invoke-direct/range {v3 .. v9}, Lcom/vk/toggle/Features$Type;-><init>(Ljava/lang/String;ILjava/lang/String;ZILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     sput-object v1, Lcom/vk/toggle/Features$Type;->FEATURE_STORY_MUSIC_REPLIES:Lcom/vk/toggle/Features$Type;
 
@@ -1686,7 +1686,7 @@
     move-object v3, v1
 
     .line 70
-    invoke-direct/range {v3 .. v9}, Lcom/vk/toggle/Features$Type;-><init>(Ljava/lang/String;ILjava/lang/String;ZILkotlin/jvm/internal/i;)V
+    invoke-direct/range {v3 .. v9}, Lcom/vk/toggle/Features$Type;-><init>(Ljava/lang/String;ILjava/lang/String;ZILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     sput-object v1, Lcom/vk/toggle/Features$Type;->FEATURE_STORY_MUSIC_REPLIES_2:Lcom/vk/toggle/Features$Type;
 
@@ -1705,7 +1705,7 @@
     move-object v3, v1
 
     .line 71
-    invoke-direct/range {v3 .. v9}, Lcom/vk/toggle/Features$Type;-><init>(Ljava/lang/String;ILjava/lang/String;ZILkotlin/jvm/internal/i;)V
+    invoke-direct/range {v3 .. v9}, Lcom/vk/toggle/Features$Type;-><init>(Ljava/lang/String;ILjava/lang/String;ZILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     sput-object v1, Lcom/vk/toggle/Features$Type;->FEATURE_STORY_MUSIC_EDITOR:Lcom/vk/toggle/Features$Type;
 
@@ -1724,7 +1724,7 @@
     move-object v3, v1
 
     .line 72
-    invoke-direct/range {v3 .. v9}, Lcom/vk/toggle/Features$Type;-><init>(Ljava/lang/String;ILjava/lang/String;ZILkotlin/jvm/internal/i;)V
+    invoke-direct/range {v3 .. v9}, Lcom/vk/toggle/Features$Type;-><init>(Ljava/lang/String;ILjava/lang/String;ZILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     sput-object v1, Lcom/vk/toggle/Features$Type;->FEATURE_STICKERS_NEW_CATALOG:Lcom/vk/toggle/Features$Type;
 
@@ -1743,7 +1743,7 @@
     move-object v3, v1
 
     .line 73
-    invoke-direct/range {v3 .. v9}, Lcom/vk/toggle/Features$Type;-><init>(Ljava/lang/String;ILjava/lang/String;ZILkotlin/jvm/internal/i;)V
+    invoke-direct/range {v3 .. v9}, Lcom/vk/toggle/Features$Type;-><init>(Ljava/lang/String;ILjava/lang/String;ZILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     sput-object v1, Lcom/vk/toggle/Features$Type;->FEATURE_STICKERS_BOT_LINK:Lcom/vk/toggle/Features$Type;
 
@@ -1762,7 +1762,7 @@
     move-object v3, v1
 
     .line 74
-    invoke-direct/range {v3 .. v9}, Lcom/vk/toggle/Features$Type;-><init>(Ljava/lang/String;ILjava/lang/String;ZILkotlin/jvm/internal/i;)V
+    invoke-direct/range {v3 .. v9}, Lcom/vk/toggle/Features$Type;-><init>(Ljava/lang/String;ILjava/lang/String;ZILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     sput-object v1, Lcom/vk/toggle/Features$Type;->EXPERIMENT_NEWS_VIDEO_LAYOUT_TEXT:Lcom/vk/toggle/Features$Type;
 
@@ -1781,7 +1781,7 @@
     move-object v3, v1
 
     .line 75
-    invoke-direct/range {v3 .. v9}, Lcom/vk/toggle/Features$Type;-><init>(Ljava/lang/String;ILjava/lang/String;ZILkotlin/jvm/internal/i;)V
+    invoke-direct/range {v3 .. v9}, Lcom/vk/toggle/Features$Type;-><init>(Ljava/lang/String;ILjava/lang/String;ZILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     sput-object v1, Lcom/vk/toggle/Features$Type;->FEATURE_DISCOVER_CATEGORIES:Lcom/vk/toggle/Features$Type;
 
@@ -1800,7 +1800,7 @@
     move-object v3, v1
 
     .line 76
-    invoke-direct/range {v3 .. v9}, Lcom/vk/toggle/Features$Type;-><init>(Ljava/lang/String;ILjava/lang/String;ZILkotlin/jvm/internal/i;)V
+    invoke-direct/range {v3 .. v9}, Lcom/vk/toggle/Features$Type;-><init>(Ljava/lang/String;ILjava/lang/String;ZILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     sput-object v1, Lcom/vk/toggle/Features$Type;->EXPERIMENT_NEWS_DISABLE_CACHE:Lcom/vk/toggle/Features$Type;
 
@@ -1819,7 +1819,7 @@
     move-object v3, v1
 
     .line 77
-    invoke-direct/range {v3 .. v9}, Lcom/vk/toggle/Features$Type;-><init>(Ljava/lang/String;ILjava/lang/String;ZILkotlin/jvm/internal/i;)V
+    invoke-direct/range {v3 .. v9}, Lcom/vk/toggle/Features$Type;-><init>(Ljava/lang/String;ILjava/lang/String;ZILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     sput-object v1, Lcom/vk/toggle/Features$Type;->FEATURE_NEWS_GAMES_IN_DISCOVER:Lcom/vk/toggle/Features$Type;
 
@@ -1838,7 +1838,7 @@
     move-object v3, v1
 
     .line 78
-    invoke-direct/range {v3 .. v9}, Lcom/vk/toggle/Features$Type;-><init>(Ljava/lang/String;ILjava/lang/String;ZILkotlin/jvm/internal/i;)V
+    invoke-direct/range {v3 .. v9}, Lcom/vk/toggle/Features$Type;-><init>(Ljava/lang/String;ILjava/lang/String;ZILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     sput-object v1, Lcom/vk/toggle/Features$Type;->FEATURE_COMPACT_REPOST:Lcom/vk/toggle/Features$Type;
 
@@ -1857,7 +1857,7 @@
     move-object v3, v1
 
     .line 79
-    invoke-direct/range {v3 .. v9}, Lcom/vk/toggle/Features$Type;-><init>(Ljava/lang/String;ILjava/lang/String;ZILkotlin/jvm/internal/i;)V
+    invoke-direct/range {v3 .. v9}, Lcom/vk/toggle/Features$Type;-><init>(Ljava/lang/String;ILjava/lang/String;ZILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     sput-object v1, Lcom/vk/toggle/Features$Type;->FEATURE_NOTIFICATION_ANIM:Lcom/vk/toggle/Features$Type;
 
@@ -1876,7 +1876,7 @@
     move-object v3, v1
 
     .line 80
-    invoke-direct/range {v3 .. v9}, Lcom/vk/toggle/Features$Type;-><init>(Ljava/lang/String;ILjava/lang/String;ZILkotlin/jvm/internal/i;)V
+    invoke-direct/range {v3 .. v9}, Lcom/vk/toggle/Features$Type;-><init>(Ljava/lang/String;ILjava/lang/String;ZILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     sput-object v1, Lcom/vk/toggle/Features$Type;->FEATURE_NEWS_HEADER_SCROLL:Lcom/vk/toggle/Features$Type;
 
@@ -1895,7 +1895,7 @@
     move-object v3, v1
 
     .line 81
-    invoke-direct/range {v3 .. v9}, Lcom/vk/toggle/Features$Type;-><init>(Ljava/lang/String;ILjava/lang/String;ZILkotlin/jvm/internal/i;)V
+    invoke-direct/range {v3 .. v9}, Lcom/vk/toggle/Features$Type;-><init>(Ljava/lang/String;ILjava/lang/String;ZILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     sput-object v1, Lcom/vk/toggle/Features$Type;->FEATURE_FORCE_RETURN:Lcom/vk/toggle/Features$Type;
 
@@ -1914,7 +1914,7 @@
     move-object v3, v1
 
     .line 82
-    invoke-direct/range {v3 .. v9}, Lcom/vk/toggle/Features$Type;-><init>(Ljava/lang/String;ILjava/lang/String;ZILkotlin/jvm/internal/i;)V
+    invoke-direct/range {v3 .. v9}, Lcom/vk/toggle/Features$Type;-><init>(Ljava/lang/String;ILjava/lang/String;ZILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     sput-object v1, Lcom/vk/toggle/Features$Type;->FEATURE_CHECK_PARENT_FRAGMENT_HIDDEN_STATE:Lcom/vk/toggle/Features$Type;
 
@@ -1933,7 +1933,7 @@
     move-object v3, v1
 
     .line 83
-    invoke-direct/range {v3 .. v9}, Lcom/vk/toggle/Features$Type;-><init>(Ljava/lang/String;ILjava/lang/String;ZILkotlin/jvm/internal/i;)V
+    invoke-direct/range {v3 .. v9}, Lcom/vk/toggle/Features$Type;-><init>(Ljava/lang/String;ILjava/lang/String;ZILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     sput-object v1, Lcom/vk/toggle/Features$Type;->FEATURE_SEAMLESS_CACHE:Lcom/vk/toggle/Features$Type;
 
@@ -1952,7 +1952,7 @@
     move-object v3, v1
 
     .line 84
-    invoke-direct/range {v3 .. v9}, Lcom/vk/toggle/Features$Type;-><init>(Ljava/lang/String;ILjava/lang/String;ZILkotlin/jvm/internal/i;)V
+    invoke-direct/range {v3 .. v9}, Lcom/vk/toggle/Features$Type;-><init>(Ljava/lang/String;ILjava/lang/String;ZILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     sput-object v1, Lcom/vk/toggle/Features$Type;->FEATURE_FEED_CACHE_NOCOUNTER:Lcom/vk/toggle/Features$Type;
 
@@ -1971,7 +1971,7 @@
     move-object v3, v1
 
     .line 85
-    invoke-direct/range {v3 .. v9}, Lcom/vk/toggle/Features$Type;-><init>(Ljava/lang/String;ILjava/lang/String;ZILkotlin/jvm/internal/i;)V
+    invoke-direct/range {v3 .. v9}, Lcom/vk/toggle/Features$Type;-><init>(Ljava/lang/String;ILjava/lang/String;ZILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     sput-object v1, Lcom/vk/toggle/Features$Type;->FEATURE_FEED_DEFAULT_LIST_ALWAYS:Lcom/vk/toggle/Features$Type;
 
@@ -1990,7 +1990,7 @@
     move-object v3, v1
 
     .line 86
-    invoke-direct/range {v3 .. v9}, Lcom/vk/toggle/Features$Type;-><init>(Ljava/lang/String;ILjava/lang/String;ZILkotlin/jvm/internal/i;)V
+    invoke-direct/range {v3 .. v9}, Lcom/vk/toggle/Features$Type;-><init>(Ljava/lang/String;ILjava/lang/String;ZILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     sput-object v1, Lcom/vk/toggle/Features$Type;->FEATURE_PODCASTS_PAGE:Lcom/vk/toggle/Features$Type;
 
@@ -2009,7 +2009,7 @@
     move-object v3, v1
 
     .line 87
-    invoke-direct/range {v3 .. v9}, Lcom/vk/toggle/Features$Type;-><init>(Ljava/lang/String;ILjava/lang/String;ZILkotlin/jvm/internal/i;)V
+    invoke-direct/range {v3 .. v9}, Lcom/vk/toggle/Features$Type;-><init>(Ljava/lang/String;ILjava/lang/String;ZILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     sput-object v1, Lcom/vk/toggle/Features$Type;->EXPERIMENT_FORCE_INSTALL_VK_ME:Lcom/vk/toggle/Features$Type;
 
@@ -2028,7 +2028,7 @@
     move-object v3, v1
 
     .line 88
-    invoke-direct/range {v3 .. v9}, Lcom/vk/toggle/Features$Type;-><init>(Ljava/lang/String;ILjava/lang/String;ZILkotlin/jvm/internal/i;)V
+    invoke-direct/range {v3 .. v9}, Lcom/vk/toggle/Features$Type;-><init>(Ljava/lang/String;ILjava/lang/String;ZILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     sput-object v1, Lcom/vk/toggle/Features$Type;->FEATURE_IM_DISABLE_FORCE_OPEN_VK_ME:Lcom/vk/toggle/Features$Type;
 
@@ -2047,7 +2047,7 @@
     move-object v3, v1
 
     .line 89
-    invoke-direct/range {v3 .. v9}, Lcom/vk/toggle/Features$Type;-><init>(Ljava/lang/String;ILjava/lang/String;ZILkotlin/jvm/internal/i;)V
+    invoke-direct/range {v3 .. v9}, Lcom/vk/toggle/Features$Type;-><init>(Ljava/lang/String;ILjava/lang/String;ZILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     sput-object v1, Lcom/vk/toggle/Features$Type;->FEATURE_IM_GIF_AUTOPLAY:Lcom/vk/toggle/Features$Type;
 
@@ -2066,7 +2066,7 @@
     move-object v3, v1
 
     .line 90
-    invoke-direct/range {v3 .. v9}, Lcom/vk/toggle/Features$Type;-><init>(Ljava/lang/String;ILjava/lang/String;ZILkotlin/jvm/internal/i;)V
+    invoke-direct/range {v3 .. v9}, Lcom/vk/toggle/Features$Type;-><init>(Ljava/lang/String;ILjava/lang/String;ZILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     sput-object v1, Lcom/vk/toggle/Features$Type;->FEATURE_SHARE_MSGS_ON_INVITE:Lcom/vk/toggle/Features$Type;
 
@@ -2085,7 +2085,7 @@
     move-object v3, v1
 
     .line 91
-    invoke-direct/range {v3 .. v9}, Lcom/vk/toggle/Features$Type;-><init>(Ljava/lang/String;ILjava/lang/String;ZILkotlin/jvm/internal/i;)V
+    invoke-direct/range {v3 .. v9}, Lcom/vk/toggle/Features$Type;-><init>(Ljava/lang/String;ILjava/lang/String;ZILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     sput-object v1, Lcom/vk/toggle/Features$Type;->FEATURE_IM_CASPER_MSGS:Lcom/vk/toggle/Features$Type;
 
@@ -2104,7 +2104,7 @@
     move-object v3, v1
 
     .line 92
-    invoke-direct/range {v3 .. v9}, Lcom/vk/toggle/Features$Type;-><init>(Ljava/lang/String;ILjava/lang/String;ZILkotlin/jvm/internal/i;)V
+    invoke-direct/range {v3 .. v9}, Lcom/vk/toggle/Features$Type;-><init>(Ljava/lang/String;ILjava/lang/String;ZILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     sput-object v1, Lcom/vk/toggle/Features$Type;->FEATURE_IM_MR_IN_VKAPP:Lcom/vk/toggle/Features$Type;
 
@@ -2123,7 +2123,7 @@
     move-object v3, v1
 
     .line 93
-    invoke-direct/range {v3 .. v9}, Lcom/vk/toggle/Features$Type;-><init>(Ljava/lang/String;ILjava/lang/String;ZILkotlin/jvm/internal/i;)V
+    invoke-direct/range {v3 .. v9}, Lcom/vk/toggle/Features$Type;-><init>(Ljava/lang/String;ILjava/lang/String;ZILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     sput-object v1, Lcom/vk/toggle/Features$Type;->FEATURE_IM_AUDIO_MSG_TRANSCRIPT:Lcom/vk/toggle/Features$Type;
 
@@ -2142,7 +2142,7 @@
     move-object v3, v1
 
     .line 94
-    invoke-direct/range {v3 .. v9}, Lcom/vk/toggle/Features$Type;-><init>(Ljava/lang/String;ILjava/lang/String;ZILkotlin/jvm/internal/i;)V
+    invoke-direct/range {v3 .. v9}, Lcom/vk/toggle/Features$Type;-><init>(Ljava/lang/String;ILjava/lang/String;ZILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     sput-object v1, Lcom/vk/toggle/Features$Type;->AB_IM_LONGPOLL_MSG_BATCHING:Lcom/vk/toggle/Features$Type;
 
@@ -2161,7 +2161,7 @@
     move-object v3, v1
 
     .line 95
-    invoke-direct/range {v3 .. v9}, Lcom/vk/toggle/Features$Type;-><init>(Ljava/lang/String;ILjava/lang/String;ZILkotlin/jvm/internal/i;)V
+    invoke-direct/range {v3 .. v9}, Lcom/vk/toggle/Features$Type;-><init>(Ljava/lang/String;ILjava/lang/String;ZILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     sput-object v1, Lcom/vk/toggle/Features$Type;->FEATURE_VKPAY_PAY_WITH_QR:Lcom/vk/toggle/Features$Type;
 
@@ -2180,7 +2180,7 @@
     move-object v3, v1
 
     .line 96
-    invoke-direct/range {v3 .. v9}, Lcom/vk/toggle/Features$Type;-><init>(Ljava/lang/String;ILjava/lang/String;ZILkotlin/jvm/internal/i;)V
+    invoke-direct/range {v3 .. v9}, Lcom/vk/toggle/Features$Type;-><init>(Ljava/lang/String;ILjava/lang/String;ZILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     sput-object v1, Lcom/vk/toggle/Features$Type;->FEATURE_MONEY_TRANSFERS_VKPAY:Lcom/vk/toggle/Features$Type;
 
@@ -2199,7 +2199,7 @@
     move-object v3, v1
 
     .line 97
-    invoke-direct/range {v3 .. v9}, Lcom/vk/toggle/Features$Type;-><init>(Ljava/lang/String;ILjava/lang/String;ZILkotlin/jvm/internal/i;)V
+    invoke-direct/range {v3 .. v9}, Lcom/vk/toggle/Features$Type;-><init>(Ljava/lang/String;ILjava/lang/String;ZILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     sput-object v1, Lcom/vk/toggle/Features$Type;->FEATURE_VKPAY_WIDGET:Lcom/vk/toggle/Features$Type;
 
@@ -2218,7 +2218,7 @@
     move-object v3, v1
 
     .line 98
-    invoke-direct/range {v3 .. v9}, Lcom/vk/toggle/Features$Type;-><init>(Ljava/lang/String;ILjava/lang/String;ZILkotlin/jvm/internal/i;)V
+    invoke-direct/range {v3 .. v9}, Lcom/vk/toggle/Features$Type;-><init>(Ljava/lang/String;ILjava/lang/String;ZILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     sput-object v1, Lcom/vk/toggle/Features$Type;->FEATURE_WISHLIST_ENTRY_POINT:Lcom/vk/toggle/Features$Type;
 
@@ -2237,7 +2237,7 @@
     move-object v3, v1
 
     .line 99
-    invoke-direct/range {v3 .. v9}, Lcom/vk/toggle/Features$Type;-><init>(Ljava/lang/String;ILjava/lang/String;ZILkotlin/jvm/internal/i;)V
+    invoke-direct/range {v3 .. v9}, Lcom/vk/toggle/Features$Type;-><init>(Ljava/lang/String;ILjava/lang/String;ZILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     sput-object v1, Lcom/vk/toggle/Features$Type;->FEATURE_WISHLIST_MY_PROFILE:Lcom/vk/toggle/Features$Type;
 
@@ -2256,7 +2256,7 @@
     move-object v3, v1
 
     .line 100
-    invoke-direct/range {v3 .. v9}, Lcom/vk/toggle/Features$Type;-><init>(Ljava/lang/String;ILjava/lang/String;ZILkotlin/jvm/internal/i;)V
+    invoke-direct/range {v3 .. v9}, Lcom/vk/toggle/Features$Type;-><init>(Ljava/lang/String;ILjava/lang/String;ZILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     sput-object v1, Lcom/vk/toggle/Features$Type;->FEATURE_INAPP_UPDATES:Lcom/vk/toggle/Features$Type;
 
@@ -2275,7 +2275,7 @@
     move-object v3, v1
 
     .line 101
-    invoke-direct/range {v3 .. v9}, Lcom/vk/toggle/Features$Type;-><init>(Ljava/lang/String;ILjava/lang/String;ZILkotlin/jvm/internal/i;)V
+    invoke-direct/range {v3 .. v9}, Lcom/vk/toggle/Features$Type;-><init>(Ljava/lang/String;ILjava/lang/String;ZILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     sput-object v1, Lcom/vk/toggle/Features$Type;->FEATURE_ML_FEATURES:Lcom/vk/toggle/Features$Type;
 
@@ -2294,7 +2294,7 @@
     move-object v3, v1
 
     .line 102
-    invoke-direct/range {v3 .. v9}, Lcom/vk/toggle/Features$Type;-><init>(Ljava/lang/String;ILjava/lang/String;ZILkotlin/jvm/internal/i;)V
+    invoke-direct/range {v3 .. v9}, Lcom/vk/toggle/Features$Type;-><init>(Ljava/lang/String;ILjava/lang/String;ZILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     sput-object v1, Lcom/vk/toggle/Features$Type;->FEATURE_ML_MODELS_LOADING:Lcom/vk/toggle/Features$Type;
 
@@ -2313,7 +2313,7 @@
     move-object v3, v1
 
     .line 103
-    invoke-direct/range {v3 .. v9}, Lcom/vk/toggle/Features$Type;-><init>(Ljava/lang/String;ILjava/lang/String;ZILkotlin/jvm/internal/i;)V
+    invoke-direct/range {v3 .. v9}, Lcom/vk/toggle/Features$Type;-><init>(Ljava/lang/String;ILjava/lang/String;ZILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     sput-object v1, Lcom/vk/toggle/Features$Type;->FEATURE_ASYNC_PURCHASE_MANAGER:Lcom/vk/toggle/Features$Type;
 
@@ -2332,7 +2332,7 @@
     move-object v3, v1
 
     .line 104
-    invoke-direct/range {v3 .. v9}, Lcom/vk/toggle/Features$Type;-><init>(Ljava/lang/String;ILjava/lang/String;ZILkotlin/jvm/internal/i;)V
+    invoke-direct/range {v3 .. v9}, Lcom/vk/toggle/Features$Type;-><init>(Ljava/lang/String;ILjava/lang/String;ZILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     sput-object v1, Lcom/vk/toggle/Features$Type;->FEATURE_PURCHASE_MANAGER_RETRIES_ENABLED:Lcom/vk/toggle/Features$Type;
 
@@ -2351,7 +2351,7 @@
     move-object v3, v1
 
     .line 105
-    invoke-direct/range {v3 .. v9}, Lcom/vk/toggle/Features$Type;-><init>(Ljava/lang/String;ILjava/lang/String;ZILkotlin/jvm/internal/i;)V
+    invoke-direct/range {v3 .. v9}, Lcom/vk/toggle/Features$Type;-><init>(Ljava/lang/String;ILjava/lang/String;ZILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     sput-object v1, Lcom/vk/toggle/Features$Type;->FEATURE_CATALOG_NO_STATE:Lcom/vk/toggle/Features$Type;
 
@@ -2370,7 +2370,7 @@
     move-object v3, v1
 
     .line 106
-    invoke-direct/range {v3 .. v9}, Lcom/vk/toggle/Features$Type;-><init>(Ljava/lang/String;ILjava/lang/String;ZILkotlin/jvm/internal/i;)V
+    invoke-direct/range {v3 .. v9}, Lcom/vk/toggle/Features$Type;-><init>(Ljava/lang/String;ILjava/lang/String;ZILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     sput-object v1, Lcom/vk/toggle/Features$Type;->FEATURE_CATALOG_24CACHE:Lcom/vk/toggle/Features$Type;
 
@@ -2389,7 +2389,7 @@
     move-object v3, v1
 
     .line 107
-    invoke-direct/range {v3 .. v9}, Lcom/vk/toggle/Features$Type;-><init>(Ljava/lang/String;ILjava/lang/String;ZILkotlin/jvm/internal/i;)V
+    invoke-direct/range {v3 .. v9}, Lcom/vk/toggle/Features$Type;-><init>(Ljava/lang/String;ILjava/lang/String;ZILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     sput-object v1, Lcom/vk/toggle/Features$Type;->FEATURE_AWAY_APP_ENTRY_POINT:Lcom/vk/toggle/Features$Type;
 
@@ -2408,7 +2408,7 @@
     move-object v3, v1
 
     .line 108
-    invoke-direct/range {v3 .. v9}, Lcom/vk/toggle/Features$Type;-><init>(Ljava/lang/String;ILjava/lang/String;ZILkotlin/jvm/internal/i;)V
+    invoke-direct/range {v3 .. v9}, Lcom/vk/toggle/Features$Type;-><init>(Ljava/lang/String;ILjava/lang/String;ZILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     sput-object v1, Lcom/vk/toggle/Features$Type;->FEATURE_PRODUCT_ATTACH_BTN:Lcom/vk/toggle/Features$Type;
 
@@ -2427,7 +2427,7 @@
     move-object v3, v1
 
     .line 109
-    invoke-direct/range {v3 .. v9}, Lcom/vk/toggle/Features$Type;-><init>(Ljava/lang/String;ILjava/lang/String;ZILkotlin/jvm/internal/i;)V
+    invoke-direct/range {v3 .. v9}, Lcom/vk/toggle/Features$Type;-><init>(Ljava/lang/String;ILjava/lang/String;ZILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     sput-object v1, Lcom/vk/toggle/Features$Type;->FEATURE_GROUP_ADMIN_MESSAGES:Lcom/vk/toggle/Features$Type;
 
@@ -2446,7 +2446,7 @@
     move-object v3, v1
 
     .line 110
-    invoke-direct/range {v3 .. v9}, Lcom/vk/toggle/Features$Type;-><init>(Ljava/lang/String;ILjava/lang/String;ZILkotlin/jvm/internal/i;)V
+    invoke-direct/range {v3 .. v9}, Lcom/vk/toggle/Features$Type;-><init>(Ljava/lang/String;ILjava/lang/String;ZILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     sput-object v1, Lcom/vk/toggle/Features$Type;->FEATURE_VK_APPS_SEARCH:Lcom/vk/toggle/Features$Type;
 
@@ -2465,7 +2465,7 @@
     move-object v3, v1
 
     .line 111
-    invoke-direct/range {v3 .. v9}, Lcom/vk/toggle/Features$Type;-><init>(Ljava/lang/String;ILjava/lang/String;ZILkotlin/jvm/internal/i;)V
+    invoke-direct/range {v3 .. v9}, Lcom/vk/toggle/Features$Type;-><init>(Ljava/lang/String;ILjava/lang/String;ZILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     sput-object v1, Lcom/vk/toggle/Features$Type;->FEATURE_NEW_FORMAT_SHOW_WPB:Lcom/vk/toggle/Features$Type;
 
@@ -2484,7 +2484,7 @@
     move-object v3, v1
 
     .line 112
-    invoke-direct/range {v3 .. v9}, Lcom/vk/toggle/Features$Type;-><init>(Ljava/lang/String;ILjava/lang/String;ZILkotlin/jvm/internal/i;)V
+    invoke-direct/range {v3 .. v9}, Lcom/vk/toggle/Features$Type;-><init>(Ljava/lang/String;ILjava/lang/String;ZILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     sput-object v1, Lcom/vk/toggle/Features$Type;->FEATURE_ML_BRANDS:Lcom/vk/toggle/Features$Type;
 
@@ -2503,7 +2503,7 @@
     move-object v3, v1
 
     .line 113
-    invoke-direct/range {v3 .. v9}, Lcom/vk/toggle/Features$Type;-><init>(Ljava/lang/String;ILjava/lang/String;ZILkotlin/jvm/internal/i;)V
+    invoke-direct/range {v3 .. v9}, Lcom/vk/toggle/Features$Type;-><init>(Ljava/lang/String;ILjava/lang/String;ZILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     sput-object v1, Lcom/vk/toggle/Features$Type;->FEATURE_VKUI_INTERNAL_TO_MINI_APPS:Lcom/vk/toggle/Features$Type;
 
@@ -2522,7 +2522,7 @@
     move-object v3, v1
 
     .line 114
-    invoke-direct/range {v3 .. v9}, Lcom/vk/toggle/Features$Type;-><init>(Ljava/lang/String;ILjava/lang/String;ZILkotlin/jvm/internal/i;)V
+    invoke-direct/range {v3 .. v9}, Lcom/vk/toggle/Features$Type;-><init>(Ljava/lang/String;ILjava/lang/String;ZILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     sput-object v1, Lcom/vk/toggle/Features$Type;->FEATURE_WEBVIEW_TOKEN_ACTIVE:Lcom/vk/toggle/Features$Type;
 
@@ -2541,7 +2541,7 @@
     move-object v3, v1
 
     .line 115
-    invoke-direct/range {v3 .. v9}, Lcom/vk/toggle/Features$Type;-><init>(Ljava/lang/String;ILjava/lang/String;ZILkotlin/jvm/internal/i;)V
+    invoke-direct/range {v3 .. v9}, Lcom/vk/toggle/Features$Type;-><init>(Ljava/lang/String;ILjava/lang/String;ZILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     sput-object v1, Lcom/vk/toggle/Features$Type;->FEATURE_VOTES_BALANCE:Lcom/vk/toggle/Features$Type;
 
@@ -2560,7 +2560,7 @@
     move-object v3, v1
 
     .line 116
-    invoke-direct/range {v3 .. v9}, Lcom/vk/toggle/Features$Type;-><init>(Ljava/lang/String;ILjava/lang/String;ZILkotlin/jvm/internal/i;)V
+    invoke-direct/range {v3 .. v9}, Lcom/vk/toggle/Features$Type;-><init>(Ljava/lang/String;ILjava/lang/String;ZILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     sput-object v1, Lcom/vk/toggle/Features$Type;->FEATURE_VOTES_BALANCE_PROMO:Lcom/vk/toggle/Features$Type;
 
@@ -2579,7 +2579,7 @@
     move-object v3, v1
 
     .line 117
-    invoke-direct/range {v3 .. v9}, Lcom/vk/toggle/Features$Type;-><init>(Ljava/lang/String;ILjava/lang/String;ZILkotlin/jvm/internal/i;)V
+    invoke-direct/range {v3 .. v9}, Lcom/vk/toggle/Features$Type;-><init>(Ljava/lang/String;ILjava/lang/String;ZILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     sput-object v1, Lcom/vk/toggle/Features$Type;->FEATURE_REEF:Lcom/vk/toggle/Features$Type;
 
@@ -2598,7 +2598,7 @@
     move-object v3, v1
 
     .line 118
-    invoke-direct/range {v3 .. v9}, Lcom/vk/toggle/Features$Type;-><init>(Ljava/lang/String;ILjava/lang/String;ZILkotlin/jvm/internal/i;)V
+    invoke-direct/range {v3 .. v9}, Lcom/vk/toggle/Features$Type;-><init>(Ljava/lang/String;ILjava/lang/String;ZILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     sput-object v1, Lcom/vk/toggle/Features$Type;->FEATURE_GROUP_MSG_PUSH_PARAM:Lcom/vk/toggle/Features$Type;
 
@@ -2617,7 +2617,7 @@
     move-object v3, v1
 
     .line 119
-    invoke-direct/range {v3 .. v9}, Lcom/vk/toggle/Features$Type;-><init>(Ljava/lang/String;ILjava/lang/String;ZILkotlin/jvm/internal/i;)V
+    invoke-direct/range {v3 .. v9}, Lcom/vk/toggle/Features$Type;-><init>(Ljava/lang/String;ILjava/lang/String;ZILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     sput-object v1, Lcom/vk/toggle/Features$Type;->FEATURE_IMAGE_QUALITY_UPGRADE:Lcom/vk/toggle/Features$Type;
 
@@ -2636,7 +2636,7 @@
     move-object v3, v1
 
     .line 120
-    invoke-direct/range {v3 .. v9}, Lcom/vk/toggle/Features$Type;-><init>(Ljava/lang/String;ILjava/lang/String;ZILkotlin/jvm/internal/i;)V
+    invoke-direct/range {v3 .. v9}, Lcom/vk/toggle/Features$Type;-><init>(Ljava/lang/String;ILjava/lang/String;ZILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     sput-object v1, Lcom/vk/toggle/Features$Type;->FEATURE_MOZJPEG:Lcom/vk/toggle/Features$Type;
 
@@ -2655,7 +2655,7 @@
     move-object v3, v1
 
     .line 121
-    invoke-direct/range {v3 .. v9}, Lcom/vk/toggle/Features$Type;-><init>(Ljava/lang/String;ILjava/lang/String;ZILkotlin/jvm/internal/i;)V
+    invoke-direct/range {v3 .. v9}, Lcom/vk/toggle/Features$Type;-><init>(Ljava/lang/String;ILjava/lang/String;ZILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     sput-object v1, Lcom/vk/toggle/Features$Type;->FEATURE_APP_ABOUT_MOBILEHELP:Lcom/vk/toggle/Features$Type;
 
@@ -2674,7 +2674,7 @@
     move-object v3, v1
 
     .line 122
-    invoke-direct/range {v3 .. v9}, Lcom/vk/toggle/Features$Type;-><init>(Ljava/lang/String;ILjava/lang/String;ZILkotlin/jvm/internal/i;)V
+    invoke-direct/range {v3 .. v9}, Lcom/vk/toggle/Features$Type;-><init>(Ljava/lang/String;ILjava/lang/String;ZILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     sput-object v1, Lcom/vk/toggle/Features$Type;->FEATURE_INTERNAL_STORAGE_LOGS:Lcom/vk/toggle/Features$Type;
 
@@ -2693,7 +2693,7 @@
     move-object v3, v1
 
     .line 123
-    invoke-direct/range {v3 .. v9}, Lcom/vk/toggle/Features$Type;-><init>(Ljava/lang/String;ILjava/lang/String;ZILkotlin/jvm/internal/i;)V
+    invoke-direct/range {v3 .. v9}, Lcom/vk/toggle/Features$Type;-><init>(Ljava/lang/String;ILjava/lang/String;ZILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     sput-object v1, Lcom/vk/toggle/Features$Type;->FEATURE_QR_DYNAMIC_FRAME:Lcom/vk/toggle/Features$Type;
 
@@ -2712,7 +2712,7 @@
     move-object v3, v1
 
     .line 124
-    invoke-direct/range {v3 .. v9}, Lcom/vk/toggle/Features$Type;-><init>(Ljava/lang/String;ILjava/lang/String;ZILkotlin/jvm/internal/i;)V
+    invoke-direct/range {v3 .. v9}, Lcom/vk/toggle/Features$Type;-><init>(Ljava/lang/String;ILjava/lang/String;ZILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     sput-object v1, Lcom/vk/toggle/Features$Type;->FEATURE_QR_CREATE_QR:Lcom/vk/toggle/Features$Type;
 
@@ -2731,7 +2731,7 @@
     move-object v3, v1
 
     .line 125
-    invoke-direct/range {v3 .. v9}, Lcom/vk/toggle/Features$Type;-><init>(Ljava/lang/String;ILjava/lang/String;ZILkotlin/jvm/internal/i;)V
+    invoke-direct/range {v3 .. v9}, Lcom/vk/toggle/Features$Type;-><init>(Ljava/lang/String;ILjava/lang/String;ZILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     sput-object v1, Lcom/vk/toggle/Features$Type;->FEATURE_QR_SCAN_FROM_PHOTO:Lcom/vk/toggle/Features$Type;
 
@@ -2750,7 +2750,7 @@
     move-object v3, v1
 
     .line 126
-    invoke-direct/range {v3 .. v9}, Lcom/vk/toggle/Features$Type;-><init>(Ljava/lang/String;ILjava/lang/String;ZILkotlin/jvm/internal/i;)V
+    invoke-direct/range {v3 .. v9}, Lcom/vk/toggle/Features$Type;-><init>(Ljava/lang/String;ILjava/lang/String;ZILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     sput-object v1, Lcom/vk/toggle/Features$Type;->FEATURE_QR_VISION_DECODER:Lcom/vk/toggle/Features$Type;
 
@@ -2769,7 +2769,7 @@
     move-object v3, v1
 
     .line 127
-    invoke-direct/range {v3 .. v9}, Lcom/vk/toggle/Features$Type;-><init>(Ljava/lang/String;ILjava/lang/String;ZILkotlin/jvm/internal/i;)V
+    invoke-direct/range {v3 .. v9}, Lcom/vk/toggle/Features$Type;-><init>(Ljava/lang/String;ILjava/lang/String;ZILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     sput-object v1, Lcom/vk/toggle/Features$Type;->FEATURE_MILKSHAKE:Lcom/vk/toggle/Features$Type;
 
@@ -2788,7 +2788,7 @@
     move-object v3, v1
 
     .line 128
-    invoke-direct/range {v3 .. v9}, Lcom/vk/toggle/Features$Type;-><init>(Ljava/lang/String;ILjava/lang/String;ZILkotlin/jvm/internal/i;)V
+    invoke-direct/range {v3 .. v9}, Lcom/vk/toggle/Features$Type;-><init>(Ljava/lang/String;ILjava/lang/String;ZILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     sput-object v1, Lcom/vk/toggle/Features$Type;->FEATURE_MILKSHAKE_FORCE_DISABLED:Lcom/vk/toggle/Features$Type;
 
@@ -2807,7 +2807,7 @@
     move-object v3, v1
 
     .line 129
-    invoke-direct/range {v3 .. v9}, Lcom/vk/toggle/Features$Type;-><init>(Ljava/lang/String;ILjava/lang/String;ZILkotlin/jvm/internal/i;)V
+    invoke-direct/range {v3 .. v9}, Lcom/vk/toggle/Features$Type;-><init>(Ljava/lang/String;ILjava/lang/String;ZILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     sput-object v1, Lcom/vk/toggle/Features$Type;->FEATURE_MILKSHAKE_ACTIVATION_DISABLED:Lcom/vk/toggle/Features$Type;
 
@@ -2826,7 +2826,7 @@
     move-object v3, v1
 
     .line 130
-    invoke-direct/range {v3 .. v9}, Lcom/vk/toggle/Features$Type;-><init>(Ljava/lang/String;ILjava/lang/String;ZILkotlin/jvm/internal/i;)V
+    invoke-direct/range {v3 .. v9}, Lcom/vk/toggle/Features$Type;-><init>(Ljava/lang/String;ILjava/lang/String;ZILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     sput-object v1, Lcom/vk/toggle/Features$Type;->FEATURE_MILKSHAKE_NEWS_HEADER_HIDE:Lcom/vk/toggle/Features$Type;
 
@@ -2845,7 +2845,7 @@
     move-object v3, v1
 
     .line 131
-    invoke-direct/range {v3 .. v9}, Lcom/vk/toggle/Features$Type;-><init>(Ljava/lang/String;ILjava/lang/String;ZILkotlin/jvm/internal/i;)V
+    invoke-direct/range {v3 .. v9}, Lcom/vk/toggle/Features$Type;-><init>(Ljava/lang/String;ILjava/lang/String;ZILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     sput-object v1, Lcom/vk/toggle/Features$Type;->FEATURE_MILKSHAKE_NEWS_SCROLL_ON_BACK:Lcom/vk/toggle/Features$Type;
 
@@ -2864,7 +2864,7 @@
     move-object v3, v1
 
     .line 132
-    invoke-direct/range {v3 .. v9}, Lcom/vk/toggle/Features$Type;-><init>(Ljava/lang/String;ILjava/lang/String;ZILkotlin/jvm/internal/i;)V
+    invoke-direct/range {v3 .. v9}, Lcom/vk/toggle/Features$Type;-><init>(Ljava/lang/String;ILjava/lang/String;ZILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     sput-object v1, Lcom/vk/toggle/Features$Type;->FEATURE_MILKSHAKE_NOTIFICATIONS_RETURN:Lcom/vk/toggle/Features$Type;
 
@@ -2883,7 +2883,7 @@
     move-object v3, v1
 
     .line 133
-    invoke-direct/range {v3 .. v9}, Lcom/vk/toggle/Features$Type;-><init>(Ljava/lang/String;ILjava/lang/String;ZILkotlin/jvm/internal/i;)V
+    invoke-direct/range {v3 .. v9}, Lcom/vk/toggle/Features$Type;-><init>(Ljava/lang/String;ILjava/lang/String;ZILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     sput-object v1, Lcom/vk/toggle/Features$Type;->FEATURE_MILKSHAKE_SWITCH_THEME_ON_TAP:Lcom/vk/toggle/Features$Type;
 
@@ -2902,7 +2902,7 @@
     move-object v3, v1
 
     .line 134
-    invoke-direct/range {v3 .. v9}, Lcom/vk/toggle/Features$Type;-><init>(Ljava/lang/String;ILjava/lang/String;ZILkotlin/jvm/internal/i;)V
+    invoke-direct/range {v3 .. v9}, Lcom/vk/toggle/Features$Type;-><init>(Ljava/lang/String;ILjava/lang/String;ZILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     sput-object v1, Lcom/vk/toggle/Features$Type;->FEATURE_MILKSHAKE_FEED_BLUE_TITLE:Lcom/vk/toggle/Features$Type;
 
@@ -2921,7 +2921,7 @@
     move-object v3, v1
 
     .line 135
-    invoke-direct/range {v3 .. v9}, Lcom/vk/toggle/Features$Type;-><init>(Ljava/lang/String;ILjava/lang/String;ZILkotlin/jvm/internal/i;)V
+    invoke-direct/range {v3 .. v9}, Lcom/vk/toggle/Features$Type;-><init>(Ljava/lang/String;ILjava/lang/String;ZILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     sput-object v1, Lcom/vk/toggle/Features$Type;->FEATURE_MILKSHAKE_CHANGE_FEED_BY_TIMEOUT:Lcom/vk/toggle/Features$Type;
 
@@ -2940,7 +2940,7 @@
     move-object v3, v1
 
     .line 136
-    invoke-direct/range {v3 .. v9}, Lcom/vk/toggle/Features$Type;-><init>(Ljava/lang/String;ILjava/lang/String;ZILkotlin/jvm/internal/i;)V
+    invoke-direct/range {v3 .. v9}, Lcom/vk/toggle/Features$Type;-><init>(Ljava/lang/String;ILjava/lang/String;ZILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     sput-object v1, Lcom/vk/toggle/Features$Type;->FEATURE_MILKSHAKE_NEWS_HEADER_HIDE_SNAP:Lcom/vk/toggle/Features$Type;
 
@@ -2959,7 +2959,7 @@
     move-object v3, v1
 
     .line 137
-    invoke-direct/range {v3 .. v9}, Lcom/vk/toggle/Features$Type;-><init>(Ljava/lang/String;ILjava/lang/String;ZILkotlin/jvm/internal/i;)V
+    invoke-direct/range {v3 .. v9}, Lcom/vk/toggle/Features$Type;-><init>(Ljava/lang/String;ILjava/lang/String;ZILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     sput-object v1, Lcom/vk/toggle/Features$Type;->FEATURE_MILKSHAKE_DISCOVER_IN_MENU:Lcom/vk/toggle/Features$Type;
 
@@ -2978,7 +2978,7 @@
     move-object v3, v1
 
     .line 138
-    invoke-direct/range {v3 .. v9}, Lcom/vk/toggle/Features$Type;-><init>(Ljava/lang/String;ILjava/lang/String;ZILkotlin/jvm/internal/i;)V
+    invoke-direct/range {v3 .. v9}, Lcom/vk/toggle/Features$Type;-><init>(Ljava/lang/String;ILjava/lang/String;ZILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     sput-object v1, Lcom/vk/toggle/Features$Type;->FEATURE_SUPERAPP_MENU:Lcom/vk/toggle/Features$Type;
 
@@ -2997,7 +2997,7 @@
     move-object v3, v1
 
     .line 139
-    invoke-direct/range {v3 .. v9}, Lcom/vk/toggle/Features$Type;-><init>(Ljava/lang/String;ILjava/lang/String;ZILkotlin/jvm/internal/i;)V
+    invoke-direct/range {v3 .. v9}, Lcom/vk/toggle/Features$Type;-><init>(Ljava/lang/String;ILjava/lang/String;ZILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     sput-object v1, Lcom/vk/toggle/Features$Type;->FEATURE_GQUIC_INTEGRATION:Lcom/vk/toggle/Features$Type;
 
@@ -3016,7 +3016,7 @@
     move-object v3, v1
 
     .line 140
-    invoke-direct/range {v3 .. v9}, Lcom/vk/toggle/Features$Type;-><init>(Ljava/lang/String;ILjava/lang/String;ZILkotlin/jvm/internal/i;)V
+    invoke-direct/range {v3 .. v9}, Lcom/vk/toggle/Features$Type;-><init>(Ljava/lang/String;ILjava/lang/String;ZILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     sput-object v1, Lcom/vk/toggle/Features$Type;->FEATURE_GQUIC_BETA_TEST:Lcom/vk/toggle/Features$Type;
 
@@ -3035,7 +3035,7 @@
     move-object v3, v1
 
     .line 141
-    invoke-direct/range {v3 .. v9}, Lcom/vk/toggle/Features$Type;-><init>(Ljava/lang/String;ILjava/lang/String;ZILkotlin/jvm/internal/i;)V
+    invoke-direct/range {v3 .. v9}, Lcom/vk/toggle/Features$Type;-><init>(Ljava/lang/String;ILjava/lang/String;ZILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     sput-object v1, Lcom/vk/toggle/Features$Type;->FEATURE_GQUIC_METRICS_ENABLE:Lcom/vk/toggle/Features$Type;
 
@@ -3054,7 +3054,7 @@
     move-object v3, v1
 
     .line 142
-    invoke-direct/range {v3 .. v9}, Lcom/vk/toggle/Features$Type;-><init>(Ljava/lang/String;ILjava/lang/String;ZILkotlin/jvm/internal/i;)V
+    invoke-direct/range {v3 .. v9}, Lcom/vk/toggle/Features$Type;-><init>(Ljava/lang/String;ILjava/lang/String;ZILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     sput-object v1, Lcom/vk/toggle/Features$Type;->FEATURE_TRAFFIC_SAVER:Lcom/vk/toggle/Features$Type;
 
@@ -3073,7 +3073,7 @@
     move-object v3, v1
 
     .line 143
-    invoke-direct/range {v3 .. v9}, Lcom/vk/toggle/Features$Type;-><init>(Ljava/lang/String;ILjava/lang/String;ZILkotlin/jvm/internal/i;)V
+    invoke-direct/range {v3 .. v9}, Lcom/vk/toggle/Features$Type;-><init>(Ljava/lang/String;ILjava/lang/String;ZILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     sput-object v1, Lcom/vk/toggle/Features$Type;->FEATURE_QUEUE_COUNTERS:Lcom/vk/toggle/Features$Type;
 
@@ -3092,7 +3092,7 @@
     move-object v3, v1
 
     .line 144
-    invoke-direct/range {v3 .. v9}, Lcom/vk/toggle/Features$Type;-><init>(Ljava/lang/String;ILjava/lang/String;ZILkotlin/jvm/internal/i;)V
+    invoke-direct/range {v3 .. v9}, Lcom/vk/toggle/Features$Type;-><init>(Ljava/lang/String;ILjava/lang/String;ZILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     sput-object v1, Lcom/vk/toggle/Features$Type;->FEATURE_ROAMING_AUTOPLAY:Lcom/vk/toggle/Features$Type;
 
@@ -3111,7 +3111,7 @@
     move-object v3, v1
 
     .line 145
-    invoke-direct/range {v3 .. v9}, Lcom/vk/toggle/Features$Type;-><init>(Ljava/lang/String;ILjava/lang/String;ZILkotlin/jvm/internal/i;)V
+    invoke-direct/range {v3 .. v9}, Lcom/vk/toggle/Features$Type;-><init>(Ljava/lang/String;ILjava/lang/String;ZILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     sput-object v1, Lcom/vk/toggle/Features$Type;->FEATURE_MEMORIES_ENABLED:Lcom/vk/toggle/Features$Type;
 
@@ -3130,7 +3130,7 @@
     move-object v3, v1
 
     .line 146
-    invoke-direct/range {v3 .. v9}, Lcom/vk/toggle/Features$Type;-><init>(Ljava/lang/String;ILjava/lang/String;ZILkotlin/jvm/internal/i;)V
+    invoke-direct/range {v3 .. v9}, Lcom/vk/toggle/Features$Type;-><init>(Ljava/lang/String;ILjava/lang/String;ZILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     sput-object v1, Lcom/vk/toggle/Features$Type;->FEATURE_VKUI_TOKEN_CACHE:Lcom/vk/toggle/Features$Type;
 
@@ -3149,7 +3149,7 @@
     move-object v3, v1
 
     .line 147
-    invoke-direct/range {v3 .. v9}, Lcom/vk/toggle/Features$Type;-><init>(Ljava/lang/String;ILjava/lang/String;ZILkotlin/jvm/internal/i;)V
+    invoke-direct/range {v3 .. v9}, Lcom/vk/toggle/Features$Type;-><init>(Ljava/lang/String;ILjava/lang/String;ZILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     sput-object v1, Lcom/vk/toggle/Features$Type;->FEATURE_VIDEO_ADS:Lcom/vk/toggle/Features$Type;
 
@@ -3168,7 +3168,7 @@
     move-object v3, v1
 
     .line 148
-    invoke-direct/range {v3 .. v9}, Lcom/vk/toggle/Features$Type;-><init>(Ljava/lang/String;ILjava/lang/String;ZILkotlin/jvm/internal/i;)V
+    invoke-direct/range {v3 .. v9}, Lcom/vk/toggle/Features$Type;-><init>(Ljava/lang/String;ILjava/lang/String;ZILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     sput-object v1, Lcom/vk/toggle/Features$Type;->FEATURE_VIDEO_RESTRICTION:Lcom/vk/toggle/Features$Type;
 
@@ -3187,7 +3187,7 @@
     move-object v3, v1
 
     .line 149
-    invoke-direct/range {v3 .. v9}, Lcom/vk/toggle/Features$Type;-><init>(Ljava/lang/String;ILjava/lang/String;ZILkotlin/jvm/internal/i;)V
+    invoke-direct/range {v3 .. v9}, Lcom/vk/toggle/Features$Type;-><init>(Ljava/lang/String;ILjava/lang/String;ZILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     sput-object v1, Lcom/vk/toggle/Features$Type;->FEATURE_FAVE_PERF_IMPROVE:Lcom/vk/toggle/Features$Type;
 
@@ -3206,7 +3206,7 @@
     move-object v3, v1
 
     .line 150
-    invoke-direct/range {v3 .. v9}, Lcom/vk/toggle/Features$Type;-><init>(Ljava/lang/String;ILjava/lang/String;ZILkotlin/jvm/internal/i;)V
+    invoke-direct/range {v3 .. v9}, Lcom/vk/toggle/Features$Type;-><init>(Ljava/lang/String;ILjava/lang/String;ZILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     sput-object v1, Lcom/vk/toggle/Features$Type;->FEATURE_MENU_GAMES_CAROUSEL:Lcom/vk/toggle/Features$Type;
 
@@ -3225,7 +3225,7 @@
     move-object v3, v1
 
     .line 151
-    invoke-direct/range {v3 .. v9}, Lcom/vk/toggle/Features$Type;-><init>(Ljava/lang/String;ILjava/lang/String;ZILkotlin/jvm/internal/i;)V
+    invoke-direct/range {v3 .. v9}, Lcom/vk/toggle/Features$Type;-><init>(Ljava/lang/String;ILjava/lang/String;ZILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     sput-object v1, Lcom/vk/toggle/Features$Type;->FEATURE_CACHE_INFO_UNTIL:Lcom/vk/toggle/Features$Type;
 
@@ -3244,7 +3244,7 @@
     move-object v3, v1
 
     .line 152
-    invoke-direct/range {v3 .. v9}, Lcom/vk/toggle/Features$Type;-><init>(Ljava/lang/String;ILjava/lang/String;ZILkotlin/jvm/internal/i;)V
+    invoke-direct/range {v3 .. v9}, Lcom/vk/toggle/Features$Type;-><init>(Ljava/lang/String;ILjava/lang/String;ZILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     sput-object v1, Lcom/vk/toggle/Features$Type;->FEATURE_SECURITY_SETTINGS:Lcom/vk/toggle/Features$Type;
 
@@ -3263,7 +3263,7 @@
     move-object v3, v1
 
     .line 153
-    invoke-direct/range {v3 .. v9}, Lcom/vk/toggle/Features$Type;-><init>(Ljava/lang/String;ILjava/lang/String;ZILkotlin/jvm/internal/i;)V
+    invoke-direct/range {v3 .. v9}, Lcom/vk/toggle/Features$Type;-><init>(Ljava/lang/String;ILjava/lang/String;ZILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     sput-object v1, Lcom/vk/toggle/Features$Type;->FEATURE_VOIP_PREALLOCATE:Lcom/vk/toggle/Features$Type;
 
@@ -3296,7 +3296,7 @@
     return-void
 .end method
 
-.method synthetic constructor <init>(Ljava/lang/String;ILjava/lang/String;ZILkotlin/jvm/internal/i;)V
+.method synthetic constructor <init>(Ljava/lang/String;ILjava/lang/String;ZILkotlin/jvm/internal/DefaultConstructorMarker;)V
     .locals 0
 
     and-int/lit8 p5, p5, 0x2

@@ -162,7 +162,7 @@
     .line 3
     sget-object v0, Lcom/vk/media/gles/EglDrawable$b;->i:[F
 
-    invoke-static {v0}, Lcom/vk/media/gles/b;->a([F)Ljava/nio/FloatBuffer;
+    invoke-static {v0}, Lcom/vk/media/gles/EglUtils;->a([F)Ljava/nio/FloatBuffer;
 
     move-result-object v0
 
@@ -227,12 +227,12 @@
     sget-object v0, Lcom/vk/media/gles/EglDrawable$Rotation;->ROTATION_0:Lcom/vk/media/gles/EglDrawable$Rotation;
 
     .line 31
-    invoke-static {p0}, Lcom/vk/media/camera/j;->a(Z)Z
+    invoke-static {p0}, Lcom/vk/media/camera/CameraUtils;->a(Z)Z
 
     move-result p0
 
     .line 32
-    invoke-static {}, Lcom/vk/media/camera/j;->e()I
+    invoke-static {}, Lcom/vk/media/camera/CameraUtils;->e()I
 
     move-result v1
 
@@ -691,7 +691,7 @@
 
     move-result-object p1
 
-    invoke-static {p1}, Lcom/vk/media/gles/b;->a([F)Ljava/nio/FloatBuffer;
+    invoke-static {p1}, Lcom/vk/media/gles/EglUtils;->a([F)Ljava/nio/FloatBuffer;
 
     move-result-object p1
 
@@ -704,7 +704,7 @@
 
     move-result-object p1
 
-    invoke-static {p1}, Lcom/vk/media/gles/b;->a([F)Ljava/nio/FloatBuffer;
+    invoke-static {p1}, Lcom/vk/media/gles/EglUtils;->a([F)Ljava/nio/FloatBuffer;
 
     move-result-object p1
 

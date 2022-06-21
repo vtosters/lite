@@ -3,12 +3,12 @@
 .source "CommunityHeaderItemsFactory.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/b;
+.implements Lkotlin/jvm/b/Functions2;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/profile/adapter/factory/info_items/CommunityHeaderItemsFactory;-><init>(Landroid/content/Context;Lcom/vk/profile/presenter/CommunityPresenter;Lcom/vk/newsfeed/k0/b/b/i;Lcom/vk/profile/presenter/f/b;Landroid/view/View$OnClickListener;Lcom/vk/profile/adapter/di/CommunityFragmentUiScope;Lcom/vk/profile/adapter/di/a;Lkotlin/jvm/b/b;)V
+    value = Lcom/vk/profile/adapter/factory/info_items/CommunityHeaderItemsFactory;-><init>(Landroid/content/Context;Lcom/vk/profile/presenter/CommunityPresenter;Lcom/vk/newsfeed/k0/b/b/PostingItemPresenter;Lcom/vk/profile/presenter/f/CommunityLocationController;Landroid/view/View$OnClickListener;Lcom/vk/profile/adapter/di/CommunityFragmentUiScope;Lcom/vk/profile/adapter/di/CommunityDataScope;Lkotlin/jvm/b/Functions2;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -19,9 +19,9 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/b<",
-        "Lcom/vtosters/lite/api/i;",
-        "Lcom/vk/profile/adapter/items/z;",
+        "Lkotlin/jvm/b/Functions2<",
+        "Lcom/vtosters/lite/api/ExtendedCommunityProfile;",
+        "Lcom/vk/profile/adapter/items/ViewInfoItem;",
         ">;"
     }
 .end annotation
@@ -30,18 +30,18 @@
 # instance fields
 .field final synthetic $context:Landroid/content/Context;
 
-.field final synthetic $postingItemPresenter:Lcom/vk/newsfeed/k0/b/b/i;
+.field final synthetic $postingItemPresenter:Lcom/vk/newsfeed/k0/b/b/PostingItemPresenter;
 
 .field final synthetic this$0:Lcom/vk/profile/adapter/factory/info_items/CommunityHeaderItemsFactory;
 
 
 # direct methods
-.method constructor <init>(Lcom/vk/profile/adapter/factory/info_items/CommunityHeaderItemsFactory;Lcom/vk/newsfeed/k0/b/b/i;Landroid/content/Context;)V
+.method constructor <init>(Lcom/vk/profile/adapter/factory/info_items/CommunityHeaderItemsFactory;Lcom/vk/newsfeed/k0/b/b/PostingItemPresenter;Landroid/content/Context;)V
     .locals 0
 
     iput-object p1, p0, Lcom/vk/profile/adapter/factory/info_items/CommunityHeaderItemsFactory$posting$1;->this$0:Lcom/vk/profile/adapter/factory/info_items/CommunityHeaderItemsFactory;
 
-    iput-object p2, p0, Lcom/vk/profile/adapter/factory/info_items/CommunityHeaderItemsFactory$posting$1;->$postingItemPresenter:Lcom/vk/newsfeed/k0/b/b/i;
+    iput-object p2, p0, Lcom/vk/profile/adapter/factory/info_items/CommunityHeaderItemsFactory$posting$1;->$postingItemPresenter:Lcom/vk/newsfeed/k0/b/b/PostingItemPresenter;
 
     iput-object p3, p0, Lcom/vk/profile/adapter/factory/info_items/CommunityHeaderItemsFactory$posting$1;->$context:Landroid/content/Context;
 
@@ -54,7 +54,7 @@
 
 
 # virtual methods
-.method public final a(Lcom/vtosters/lite/api/i;)Lcom/vk/profile/adapter/items/z;
+.method public final a(Lcom/vtosters/lite/api/ExtendedCommunityProfile;)Lcom/vk/profile/adapter/items/ViewInfoItem;
     .locals 4
 
     .line 1
@@ -71,11 +71,11 @@
     iget v0, v0, Lcom/vk/dto/user/UserProfile;->b:I
 
     .line 2
-    invoke-static {}, Lcom/vtosters/lite/i0/c;->d()Lb/h/h/d/c;
+    invoke-static {}, Lcom/vtosters/lite/auth/VKAccountManager;->d()Lcom/vk/auth/api/VKAccount;
 
     move-result-object v3
 
-    invoke-virtual {v3}, Lb/h/h/d/c;->D0()I
+    invoke-virtual {v3}, Lcom/vk/auth/api/VKAccount;->D0()I
 
     move-result v3
 
@@ -114,7 +114,7 @@
     .line 4
     iget-object v0, p0, Lcom/vk/profile/adapter/factory/info_items/CommunityHeaderItemsFactory$posting$1;->this$0:Lcom/vk/profile/adapter/factory/info_items/CommunityHeaderItemsFactory;
 
-    invoke-virtual {v0, p1}, Lcom/vk/profile/adapter/factory/info_items/BaseInfoItemsFactory;->a(Lcom/vtosters/lite/api/ExtendedUserProfile;)Lcom/vk/profile/adapter/items/z;
+    invoke-virtual {v0, p1}, Lcom/vk/profile/adapter/factory/info_items/BaseInfoItemsFactory;->a(Lcom/vtosters/lite/api/ExtendedUserProfile;)Lcom/vk/profile/adapter/items/ViewInfoItem;
 
     move-result-object p1
 
@@ -122,11 +122,11 @@
 
     .line 5
     :cond_3
-    invoke-static {}, Lcom/vtosters/lite/i0/c;->d()Lb/h/h/d/c;
+    invoke-static {}, Lcom/vtosters/lite/auth/VKAccountManager;->d()Lcom/vk/auth/api/VKAccount;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lb/h/h/d/c;->D0()I
+    invoke-virtual {v0}, Lcom/vk/auth/api/VKAccount;->D0()I
 
     move-result v0
 
@@ -143,12 +143,12 @@
     .line 6
     iget-object v0, p0, Lcom/vk/profile/adapter/factory/info_items/CommunityHeaderItemsFactory$posting$1;->this$0:Lcom/vk/profile/adapter/factory/info_items/CommunityHeaderItemsFactory;
 
-    invoke-virtual {v0, p1}, Lcom/vk/profile/adapter/factory/info_items/BaseInfoItemsFactory;->a(Lcom/vtosters/lite/api/ExtendedUserProfile;)Lcom/vk/profile/adapter/items/z;
+    invoke-virtual {v0, p1}, Lcom/vk/profile/adapter/factory/info_items/BaseInfoItemsFactory;->a(Lcom/vtosters/lite/api/ExtendedUserProfile;)Lcom/vk/profile/adapter/items/ViewInfoItem;
 
     move-result-object p1
 
     .line 7
-    iget-object v0, p0, Lcom/vk/profile/adapter/factory/info_items/CommunityHeaderItemsFactory$posting$1;->$postingItemPresenter:Lcom/vk/newsfeed/k0/b/b/i;
+    iget-object v0, p0, Lcom/vk/profile/adapter/factory/info_items/CommunityHeaderItemsFactory$posting$1;->$postingItemPresenter:Lcom/vk/newsfeed/k0/b/b/PostingItemPresenter;
 
     iget-object v1, p0, Lcom/vk/profile/adapter/factory/info_items/CommunityHeaderItemsFactory$posting$1;->$context:Landroid/content/Context;
 
@@ -160,9 +160,9 @@
 
     const-string v2, "context.getString(R.string.profile_suggest_post)"
 
-    invoke-static {v1, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    invoke-virtual {v0, v1}, Lcom/vk/newsfeed/k0/b/b/i;->a(Ljava/lang/String;)V
+    invoke-virtual {v0, v1}, Lcom/vk/newsfeed/k0/b/b/PostingItemPresenter;->a(Ljava/lang/String;)V
 
     return-object p1
 
@@ -176,9 +176,9 @@
     .locals 0
 
     .line 1
-    check-cast p1, Lcom/vtosters/lite/api/i;
+    check-cast p1, Lcom/vtosters/lite/api/ExtendedCommunityProfile;
 
-    invoke-virtual {p0, p1}, Lcom/vk/profile/adapter/factory/info_items/CommunityHeaderItemsFactory$posting$1;->a(Lcom/vtosters/lite/api/i;)Lcom/vk/profile/adapter/items/z;
+    invoke-virtual {p0, p1}, Lcom/vk/profile/adapter/factory/info_items/CommunityHeaderItemsFactory$posting$1;->a(Lcom/vtosters/lite/api/ExtendedCommunityProfile;)Lcom/vk/profile/adapter/items/ViewInfoItem;
 
     move-result-object p1
 

@@ -15,7 +15,7 @@
 
 
 # direct methods
-.method public constructor <init>(Landroid/content/Context;Lcom/vk/im/ui/components/viewcontrollers/popup/f;)V
+.method public constructor <init>(Landroid/content/Context;Lcom/vk/im/ui/components/viewcontrollers/popup/PopupScheduler;)V
     .locals 0
 
     .line 1
@@ -46,13 +46,13 @@
     return-void
 .end method
 
-.method public final a(Lkotlin/jvm/b/a;)V
+.method public final a(Lkotlin/jvm/b/Functions;)V
     .locals 17
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lkotlin/jvm/b/a<",
-            "Lkotlin/m;",
+            "Lkotlin/jvm/b/Functions<",
+            "Lkotlin/Unit;",
             ">;)V"
         }
     .end annotation
@@ -82,7 +82,7 @@
 
     move-object/from16 v3, p1
 
-    invoke-direct {v11, v3}, Lcom/vk/im/ui/components/viewcontrollers/popup/DelegateSearches$showSubmitRecentClear$1;-><init>(Lkotlin/jvm/b/a;)V
+    invoke-direct {v11, v3}, Lcom/vk/im/ui/components/viewcontrollers/popup/DelegateSearches$showSubmitRecentClear$1;-><init>(Lkotlin/jvm/b/Functions;)V
 
     .line 9
     new-instance v14, Lcom/vk/im/ui/components/viewcontrollers/popup/DelegateSearches$showSubmitRecentClear$2;
@@ -108,7 +108,7 @@
     const/16 v16, 0x0
 
     .line 10
-    invoke-static/range {v1 .. v16}, Lcom/vk/im/ui/components/viewcontrollers/popup/g;->a(Landroid/content/Context;ILjava/lang/CharSequence;ILjava/lang/CharSequence;ILjava/lang/CharSequence;ILjava/lang/CharSequence;ZLkotlin/jvm/b/a;Lkotlin/jvm/b/a;Lkotlin/jvm/b/a;Lkotlin/jvm/b/a;ILjava/lang/Object;)Landroidx/appcompat/app/AlertDialog$Builder;
+    invoke-static/range {v1 .. v16}, Lcom/vk/im/ui/components/viewcontrollers/popup/PopupUtils;->a(Landroid/content/Context;ILjava/lang/CharSequence;ILjava/lang/CharSequence;ILjava/lang/CharSequence;ILjava/lang/CharSequence;ZLkotlin/jvm/b/Functions;Lkotlin/jvm/b/Functions;Lkotlin/jvm/b/Functions;Lkotlin/jvm/b/Functions;ILjava/lang/Object;)Landroidx/appcompat/app/AlertDialog$Builder;
 
     move-result-object v1
 

@@ -3,12 +3,12 @@
 .source "PollEditorFragment.kt"
 
 # interfaces
-.implements Lc/a/z/g;
+.implements Lio/reactivex/functions/Consumer;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/poll/fragments/PollEditorScreen$dataProvider$1;->a(Lc/a/m;ZLcom/vk/lists/t;)V
+    value = Lcom/vk/poll/fragments/PollEditorScreen$dataProvider$1;->a(Lio/reactivex/Observable;ZLcom/vk/lists/PaginationHelper;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -22,7 +22,7 @@
         "Ljava/lang/Object;",
         ">",
         "Ljava/lang/Object;",
-        "Lc/a/z/g<",
+        "Lio/reactivex/functions/Consumer<",
         "Ljava/util/List<",
         "+",
         "Lcom/vk/dto/polls/PollBackground;",
@@ -74,7 +74,7 @@
     const-string v0, "srcBackgrounds"
 
     .line 2
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 3
     new-instance v0, Ljava/util/ArrayList;
@@ -126,7 +126,7 @@
 
     move-result-object v0
 
-    invoke-virtual {v0, p1}, Lcom/vk/lists/i0;->setItems(Ljava/util/List;)V
+    invoke-virtual {v0, p1}, Lcom/vk/lists/SimpleAdapter;->setItems(Ljava/util/List;)V
 
     .line 7
     iget-object p1, p0, Lcom/vk/poll/fragments/PollEditorScreen$dataProvider$1$a;->a:Lcom/vk/poll/fragments/PollEditorScreen$dataProvider$1;

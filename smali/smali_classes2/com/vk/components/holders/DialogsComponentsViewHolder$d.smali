@@ -3,7 +3,7 @@
 .source "DialogsComponentsViewHolder.kt"
 
 # interfaces
-.implements Lcom/vk/core/dialogs/bottomsheet/h$e;
+.implements Lcom/vk/core/dialogs/bottomsheet/ModalDialogInterface$e;
 
 
 # annotations
@@ -52,24 +52,24 @@
     const/4 v2, 0x2
 
     .line 1
-    invoke-static {v0, v1, v2, p1}, Lcom/vk/core/util/k1;->a(Ljava/lang/CharSequence;ZILjava/lang/Object;)V
+    invoke-static {v0, v1, v2, p1}, Lcom/vk/core/util/ToastUtils;->a(Ljava/lang/CharSequence;ZILjava/lang/Object;)V
 
     .line 2
     iget-object v0, p0, Lcom/vk/components/holders/DialogsComponentsViewHolder$d;->a:Lcom/vk/components/holders/DialogsComponentsViewHolder;
 
-    invoke-static {v0}, Lcom/vk/components/holders/DialogsComponentsViewHolder;->a(Lcom/vk/components/holders/DialogsComponentsViewHolder;)Lcom/vk/core/dialogs/bottomsheet/e;
+    invoke-static {v0}, Lcom/vk/components/holders/DialogsComponentsViewHolder;->a(Lcom/vk/components/holders/DialogsComponentsViewHolder;)Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet;
 
     move-result-object v0
 
     if-eqz v0, :cond_0
 
-    invoke-virtual {v0}, Lcom/vk/core/dialogs/bottomsheet/e;->dismiss()V
+    invoke-virtual {v0}, Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet;->dismiss()V
 
     .line 3
     :cond_0
     iget-object v0, p0, Lcom/vk/components/holders/DialogsComponentsViewHolder$d;->a:Lcom/vk/components/holders/DialogsComponentsViewHolder;
 
-    invoke-static {v0, p1}, Lcom/vk/components/holders/DialogsComponentsViewHolder;->a(Lcom/vk/components/holders/DialogsComponentsViewHolder;Lcom/vk/core/dialogs/bottomsheet/e;)V
+    invoke-static {v0, p1}, Lcom/vk/components/holders/DialogsComponentsViewHolder;->a(Lcom/vk/components/holders/DialogsComponentsViewHolder;Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet;)V
 
     return-void
 .end method

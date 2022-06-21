@@ -15,7 +15,7 @@
 
 
 # static fields
-.field static final synthetic a:[Lkotlin/u/j;
+.field static final synthetic a:[Lkotlin/u/KProperty5;
 
 
 # direct methods
@@ -24,13 +24,13 @@
 
     const/4 v0, 0x1
 
-    new-array v0, v0, [Lkotlin/u/j;
+    new-array v0, v0, [Lkotlin/u/KProperty5;
 
     new-instance v1, Lkotlin/jvm/internal/PropertyReference1Impl;
 
     const-class v2, Lcom/vk/reef/trackers/ReefClientTracker$a;
 
-    invoke-static {v2}, Lkotlin/jvm/internal/o;->a(Ljava/lang/Class;)Lkotlin/u/c;
+    invoke-static {v2}, Lkotlin/jvm/internal/Reflection;->a(Ljava/lang/Class;)Lkotlin/u/KClass;
 
     move-result-object v2
 
@@ -38,15 +38,15 @@
 
     const-string v4, "getTmpBuilder()Ljava/lang/StringBuilder;"
 
-    invoke-direct {v1, v2, v3, v4}, Lkotlin/jvm/internal/PropertyReference1Impl;-><init>(Lkotlin/u/e;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-direct {v1, v2, v3, v4}, Lkotlin/jvm/internal/PropertyReference1Impl;-><init>(Lkotlin/u/KDeclarationContainer;Ljava/lang/String;Ljava/lang/String;)V
 
-    invoke-static {v1}, Lkotlin/jvm/internal/o;->a(Lkotlin/jvm/internal/PropertyReference1;)Lkotlin/u/l;
+    invoke-static {v1}, Lkotlin/jvm/internal/Reflection;->a(Lkotlin/jvm/internal/PropertyReference1;)Lkotlin/u/KProperty2;
 
     const/4 v2, 0x0
 
     aput-object v1, v0, v2
 
-    sput-object v0, Lcom/vk/reef/trackers/ReefClientTracker$a;->a:[Lkotlin/u/j;
+    sput-object v0, Lcom/vk/reef/trackers/ReefClientTracker$a;->a:[Lkotlin/u/KProperty5;
 
     return-void
 .end method
@@ -60,7 +60,7 @@
     return-void
 .end method
 
-.method public synthetic constructor <init>(Lkotlin/jvm/internal/i;)V
+.method public synthetic constructor <init>(Lkotlin/jvm/internal/DefaultConstructorMarker;)V
     .locals 0
 
     .line 2
@@ -72,19 +72,19 @@
 .method private final a()Ljava/lang/StringBuilder;
     .locals 4
 
-    invoke-static {}, Lcom/vk/reef/trackers/ReefClientTracker;->d()Lcom/vk/core/util/d1;
+    invoke-static {}, Lcom/vk/reef/trackers/ReefClientTracker;->d()Lcom/vk/core/util/ThreadLocalDelegate;
 
     move-result-object v0
 
     sget-object v1, Lcom/vk/reef/trackers/ReefClientTracker;->c:Lcom/vk/reef/trackers/ReefClientTracker$a;
 
-    sget-object v2, Lcom/vk/reef/trackers/ReefClientTracker$a;->a:[Lkotlin/u/j;
+    sget-object v2, Lcom/vk/reef/trackers/ReefClientTracker$a;->a:[Lkotlin/u/KProperty5;
 
     const/4 v3, 0x0
 
     aget-object v2, v2, v3
 
-    invoke-static {v0, v1, v2}, Lcom/vk/core/util/f1;->a(Lcom/vk/core/util/d1;Ljava/lang/Object;Lkotlin/u/j;)Ljava/lang/Object;
+    invoke-static {v0, v1, v2}, Lcom/vk/core/util/ThreadLocalDelegate1;->a(Lcom/vk/core/util/ThreadLocalDelegate;Ljava/lang/Object;Lkotlin/u/KProperty5;)Ljava/lang/Object;
 
     move-result-object v0
 
@@ -168,7 +168,7 @@
 
     const-string v2, "Charset.forName(charsetName)"
 
-    invoke-static {v1, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {p1, v1}, Ljava/lang/String;->getBytes(Ljava/nio/charset/Charset;)[B
 
@@ -176,7 +176,7 @@
 
     const-string v1, "(this as java.lang.String).getBytes(charset)"
 
-    invoke-static {p1, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {v0, p1}, Ljava/security/MessageDigest;->digest([B)[B
 
@@ -194,7 +194,7 @@
     const-string v0, "md5"
 
     .line 4
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-direct {p0, p1}, Lcom/vk/reef/trackers/ReefClientTracker$a;->a([B)V
 
@@ -209,7 +209,7 @@
 
     const-string v0, "tmpBuilder.toString()"
 
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 

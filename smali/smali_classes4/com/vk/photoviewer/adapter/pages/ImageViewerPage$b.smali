@@ -15,13 +15,13 @@
 
 
 # virtual methods
-.method public abstract a(Landroid/view/ViewGroup;Lkotlin/jvm/b/a;)Landroid/view/View;
+.method public abstract a(Landroid/view/ViewGroup;Lkotlin/jvm/b/Functions;)Landroid/view/View;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
             "Landroid/view/ViewGroup;",
-            "Lkotlin/jvm/b/a<",
-            "Lkotlin/m;",
+            "Lkotlin/jvm/b/Functions<",
+            "Lkotlin/Unit;",
             ">;)",
             "Landroid/view/View;"
         }

@@ -47,7 +47,7 @@
 
 
 # virtual methods
-.method public a(Lcom/facebook/i;)V
+.method public a(Lcom/facebook/GraphResponse;)V
     .locals 8
 
     .line 1
@@ -67,7 +67,7 @@
 
     .line 2
     :cond_0
-    invoke-virtual {p1}, Lcom/facebook/i;->a()Lcom/facebook/FacebookRequestError;
+    invoke-virtual {p1}, Lcom/facebook/GraphResponse;->a()Lcom/facebook/FacebookRequestError;
 
     move-result-object v0
 
@@ -76,7 +76,7 @@
     .line 3
     iget-object v0, p0, Lcom/facebook/login/DeviceAuthDialog$g;->d:Lcom/facebook/login/DeviceAuthDialog;
 
-    invoke-virtual {p1}, Lcom/facebook/i;->a()Lcom/facebook/FacebookRequestError;
+    invoke-virtual {p1}, Lcom/facebook/GraphResponse;->a()Lcom/facebook/FacebookRequestError;
 
     move-result-object p1
 
@@ -91,7 +91,7 @@
     .line 4
     :cond_1
     :try_start_0
-    invoke-virtual {p1}, Lcom/facebook/i;->b()Lorg/json/JSONObject;
+    invoke-virtual {p1}, Lcom/facebook/GraphResponse;->b()Lorg/json/JSONObject;
 
     move-result-object p1
 
@@ -103,7 +103,7 @@
     move-result-object v2
 
     .line 6
-    invoke-static {p1}, Lcom/facebook/internal/r;->b(Lorg/json/JSONObject;)Lcom/facebook/internal/r$d;
+    invoke-static {p1}, Lcom/facebook/internal/Utility;->b(Lorg/json/JSONObject;)Lcom/facebook/internal/Utility$d;
 
     move-result-object v3
 
@@ -129,19 +129,19 @@
     move-result-object p1
 
     .line 10
-    invoke-static {p1}, Lcom/facebook/s/a/a;->a(Ljava/lang/String;)V
+    invoke-static {p1}, Lcom/facebook/s/a/DeviceRequestsHelper;->a(Ljava/lang/String;)V
 
     .line 11
-    invoke-static {}, Lcom/facebook/e;->f()Ljava/lang/String;
+    invoke-static {}, Lcom/facebook/FacebookSdk;->f()Ljava/lang/String;
 
     move-result-object p1
 
-    invoke-static {p1}, Lcom/facebook/internal/FetchedAppSettingsManager;->c(Ljava/lang/String;)Lcom/facebook/internal/h;
+    invoke-static {p1}, Lcom/facebook/internal/FetchedAppSettingsManager;->c(Ljava/lang/String;)Lcom/facebook/internal/FetchedAppSettings;
 
     move-result-object p1
 
     .line 12
-    invoke-virtual {p1}, Lcom/facebook/internal/h;->j()Ljava/util/EnumSet;
+    invoke-virtual {p1}, Lcom/facebook/internal/FetchedAppSettings;->j()Ljava/util/EnumSet;
 
     move-result-object p1
 
@@ -178,7 +178,7 @@
 
     iget-object v7, p0, Lcom/facebook/login/DeviceAuthDialog$g;->c:Ljava/util/Date;
 
-    invoke-static/range {v1 .. v7}, Lcom/facebook/login/DeviceAuthDialog;->a(Lcom/facebook/login/DeviceAuthDialog;Ljava/lang/String;Lcom/facebook/internal/r$d;Ljava/lang/String;Ljava/lang/String;Ljava/util/Date;Ljava/util/Date;)V
+    invoke-static/range {v1 .. v7}, Lcom/facebook/login/DeviceAuthDialog;->a(Lcom/facebook/login/DeviceAuthDialog;Ljava/lang/String;Lcom/facebook/internal/Utility$d;Ljava/lang/String;Ljava/lang/String;Ljava/util/Date;Ljava/util/Date;)V
 
     return-void
 
@@ -192,7 +192,7 @@
 
     iget-object v6, p0, Lcom/facebook/login/DeviceAuthDialog$g;->c:Ljava/util/Date;
 
-    invoke-static/range {v1 .. v6}, Lcom/facebook/login/DeviceAuthDialog;->a(Lcom/facebook/login/DeviceAuthDialog;Ljava/lang/String;Lcom/facebook/internal/r$d;Ljava/lang/String;Ljava/util/Date;Ljava/util/Date;)V
+    invoke-static/range {v1 .. v6}, Lcom/facebook/login/DeviceAuthDialog;->a(Lcom/facebook/login/DeviceAuthDialog;Ljava/lang/String;Lcom/facebook/internal/Utility$d;Ljava/lang/String;Ljava/util/Date;Ljava/util/Date;)V
 
     return-void
 

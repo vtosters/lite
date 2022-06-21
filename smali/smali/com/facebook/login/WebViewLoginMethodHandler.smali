@@ -24,7 +24,7 @@
 
 
 # instance fields
-.field private d:Lcom/facebook/internal/t;
+.field private d:Lcom/facebook/internal/WebDialog;
 
 .field private e:Ljava/lang/String;
 
@@ -74,17 +74,17 @@
     .locals 1
 
     .line 1
-    iget-object v0, p0, Lcom/facebook/login/WebViewLoginMethodHandler;->d:Lcom/facebook/internal/t;
+    iget-object v0, p0, Lcom/facebook/login/WebViewLoginMethodHandler;->d:Lcom/facebook/internal/WebDialog;
 
     if-eqz v0, :cond_0
 
     .line 2
-    invoke-virtual {v0}, Lcom/facebook/internal/t;->cancel()V
+    invoke-virtual {v0}, Lcom/facebook/internal/WebDialog;->cancel()V
 
     const/4 v0, 0x0
 
     .line 3
-    iput-object v0, p0, Lcom/facebook/login/WebViewLoginMethodHandler;->d:Lcom/facebook/internal/t;
+    iput-object v0, p0, Lcom/facebook/login/WebViewLoginMethodHandler;->d:Lcom/facebook/internal/WebDialog;
 
     :cond_0
     return-void
@@ -150,7 +150,7 @@
     move-result-object v2
 
     .line 6
-    invoke-static {v2}, Lcom/facebook/internal/r;->f(Landroid/content/Context;)Z
+    invoke-static {v2}, Lcom/facebook/internal/Utility;->f(Landroid/content/Context;)Z
 
     move-result v3
 
@@ -180,19 +180,19 @@
     invoke-virtual {v4, p1}, Lcom/facebook/login/WebViewLoginMethodHandler$c;->a(Ljava/lang/String;)Lcom/facebook/login/WebViewLoginMethodHandler$c;
 
     .line 12
-    invoke-virtual {v4, v1}, Lcom/facebook/internal/t$e;->a(Lcom/facebook/internal/t$g;)Lcom/facebook/internal/t$e;
+    invoke-virtual {v4, v1}, Lcom/facebook/internal/WebDialog$e;->a(Lcom/facebook/internal/WebDialog$g;)Lcom/facebook/internal/WebDialog$e;
 
     .line 13
-    invoke-virtual {v4}, Lcom/facebook/internal/t$e;->a()Lcom/facebook/internal/t;
+    invoke-virtual {v4}, Lcom/facebook/internal/WebDialog$e;->a()Lcom/facebook/internal/WebDialog;
 
     move-result-object p1
 
-    iput-object p1, p0, Lcom/facebook/login/WebViewLoginMethodHandler;->d:Lcom/facebook/internal/t;
+    iput-object p1, p0, Lcom/facebook/login/WebViewLoginMethodHandler;->d:Lcom/facebook/internal/WebDialog;
 
     .line 14
-    new-instance p1, Lcom/facebook/internal/d;
+    new-instance p1, Lcom/facebook/internal/FacebookDialogFragment;
 
-    invoke-direct {p1}, Lcom/facebook/internal/d;-><init>()V
+    invoke-direct {p1}, Lcom/facebook/internal/FacebookDialogFragment;-><init>()V
 
     const/4 v0, 0x1
 
@@ -200,9 +200,9 @@
     invoke-virtual {p1, v0}, Landroidx/fragment/app/Fragment;->setRetainInstance(Z)V
 
     .line 16
-    iget-object v1, p0, Lcom/facebook/login/WebViewLoginMethodHandler;->d:Lcom/facebook/internal/t;
+    iget-object v1, p0, Lcom/facebook/login/WebViewLoginMethodHandler;->d:Lcom/facebook/internal/WebDialog;
 
-    invoke-virtual {p1, v1}, Lcom/facebook/internal/d;->a(Landroid/app/Dialog;)V
+    invoke-virtual {p1, v1}, Lcom/facebook/internal/FacebookDialogFragment;->a(Landroid/app/Dialog;)V
 
     .line 17
     invoke-virtual {v2}, Landroidx/fragment/app/FragmentActivity;->getSupportFragmentManager()Landroidx/fragment/app/FragmentManager;

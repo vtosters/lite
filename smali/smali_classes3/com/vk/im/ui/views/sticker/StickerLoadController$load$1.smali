@@ -3,7 +3,7 @@
 .source "StickerLoadController.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/b;
+.implements Lkotlin/jvm/b/Functions2;
 
 
 # annotations
@@ -19,9 +19,9 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/b<",
+        "Lkotlin/jvm/b/Functions2<",
         "Ljava/lang/String;",
-        "Lkotlin/m;",
+        "Lkotlin/Unit;",
         ">;"
     }
 .end annotation
@@ -52,13 +52,13 @@
     .line 1
     iget-object v0, p0, Lcom/vk/im/ui/views/sticker/StickerLoadController$load$1;->this$0:Lcom/vk/im/ui/views/sticker/StickerLoadController;
 
-    invoke-static {v0}, Lcom/vk/im/ui/views/sticker/StickerLoadController;->a(Lcom/vk/im/ui/views/sticker/StickerLoadController;)Lcom/vk/im/ui/views/sticker/d;
+    invoke-static {v0}, Lcom/vk/im/ui/views/sticker/StickerLoadController;->a(Lcom/vk/im/ui/views/sticker/StickerLoadController;)Lcom/vk/im/ui/views/sticker/StickerAnimationCallback;
 
     move-result-object v0
 
     if-eqz v0, :cond_0
 
-    invoke-interface {v0, p1}, Lcom/vk/im/ui/views/sticker/d;->a(Ljava/lang/String;)V
+    invoke-interface {v0, p1}, Lcom/vk/im/ui/views/sticker/StickerAnimationCallback;->a(Ljava/lang/String;)V
 
     :cond_0
     return-void
@@ -72,7 +72,7 @@
 
     invoke-virtual {p0, p1}, Lcom/vk/im/ui/views/sticker/StickerLoadController$load$1;->a(Ljava/lang/String;)V
 
-    sget-object p1, Lkotlin/m;->a:Lkotlin/m;
+    sget-object p1, Lkotlin/Unit;->a:Lkotlin/Unit;
 
     return-object p1
 .end method

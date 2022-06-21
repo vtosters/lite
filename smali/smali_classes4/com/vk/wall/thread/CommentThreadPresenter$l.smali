@@ -3,7 +3,7 @@
 .source "CommentThreadPresenter.kt"
 
 # interfaces
-.implements Lc/a/z/g;
+.implements Lio/reactivex/functions/Consumer;
 
 
 # annotations
@@ -22,7 +22,7 @@
         "Ljava/lang/Object;",
         ">",
         "Ljava/lang/Object;",
-        "Lc/a/z/g<",
+        "Lio/reactivex/functions/Consumer<",
         "Lcom/vtosters/lite/NewsComment;",
         ">;"
     }
@@ -77,11 +77,11 @@
     .line 4
     iget-object p1, p0, Lcom/vk/wall/thread/CommentThreadPresenter$l;->a:Lcom/vk/wall/thread/CommentThreadPresenter;
 
-    invoke-virtual {p1}, Lcom/vk/wall/thread/CommentThreadPresenter;->G()Lcom/vk/wall/f;
+    invoke-virtual {p1}, Lcom/vk/wall/thread/CommentThreadPresenter;->G()Lcom/vk/wall/CommentsListContract2;
 
     move-result-object p1
 
-    invoke-interface {p1}, Lcom/vk/wall/f;->x3()V
+    invoke-interface {p1}, Lcom/vk/wall/CommentsListContract2;->x3()V
 
     goto/16 :goto_2
 
@@ -111,13 +111,13 @@
     :cond_1
     iget-object v0, p0, Lcom/vk/wall/thread/CommentThreadPresenter$l;->a:Lcom/vk/wall/thread/CommentThreadPresenter;
 
-    invoke-virtual {v0}, Lcom/vk/wall/thread/CommentThreadPresenter;->z()Lcom/vk/wall/h/a;
+    invoke-virtual {v0}, Lcom/vk/wall/thread/CommentThreadPresenter;->z()Lcom/vk/wall/replybar/ReplyBarContract;
 
     move-result-object v0
 
     if-eqz v0, :cond_2
 
-    invoke-interface {v0}, Lcom/vk/wall/h/a;->M2()Lcom/vtosters/lite/NewsComment;
+    invoke-interface {v0}, Lcom/vk/wall/replybar/ReplyBarContract;->M2()Lcom/vtosters/lite/NewsComment;
 
     move-result-object v0
 
@@ -135,11 +135,11 @@
     .line 10
     iget-object v2, p0, Lcom/vk/wall/thread/CommentThreadPresenter$l;->a:Lcom/vk/wall/thread/CommentThreadPresenter;
 
-    invoke-virtual {v2}, Lcom/vk/wall/thread/CommentThreadPresenter;->G()Lcom/vk/wall/f;
+    invoke-virtual {v2}, Lcom/vk/wall/thread/CommentThreadPresenter;->G()Lcom/vk/wall/CommentsListContract2;
 
     move-result-object v2
 
-    invoke-interface {v2}, Lcom/vk/wall/f;->b3()V
+    invoke-interface {v2}, Lcom/vk/wall/CommentsListContract2;->b3()V
 
     .line 11
     :cond_3
@@ -179,13 +179,13 @@
     .line 15
     iget-object v3, p0, Lcom/vk/wall/thread/CommentThreadPresenter$l;->a:Lcom/vk/wall/thread/CommentThreadPresenter;
 
-    invoke-virtual {v3}, Lcom/vk/wall/thread/CommentThreadPresenter;->z()Lcom/vk/wall/h/a;
+    invoke-virtual {v3}, Lcom/vk/wall/thread/CommentThreadPresenter;->z()Lcom/vk/wall/replybar/ReplyBarContract;
 
     move-result-object v3
 
     if-eqz v3, :cond_4
 
-    invoke-interface {v3}, Lcom/vk/wall/h/a;->S2()V
+    invoke-interface {v3}, Lcom/vk/wall/replybar/ReplyBarContract;->S2()V
 
     goto :goto_1
 
@@ -204,43 +204,43 @@
     :cond_6
     iget-object v1, p0, Lcom/vk/wall/thread/CommentThreadPresenter$l;->a:Lcom/vk/wall/thread/CommentThreadPresenter;
 
-    invoke-virtual {v1}, Lcom/vk/wall/thread/CommentThreadPresenter;->G()Lcom/vk/wall/f;
+    invoke-virtual {v1}, Lcom/vk/wall/thread/CommentThreadPresenter;->G()Lcom/vk/wall/CommentsListContract2;
 
     move-result-object v1
 
-    invoke-interface {v1}, Lcom/vk/wall/f;->D()V
+    invoke-interface {v1}, Lcom/vk/wall/CommentsListContract2;->D()V
 
     .line 19
     iget-object v1, p0, Lcom/vk/wall/thread/CommentThreadPresenter$l;->a:Lcom/vk/wall/thread/CommentThreadPresenter;
 
-    invoke-virtual {v1}, Lcom/vk/wall/thread/CommentThreadPresenter;->G()Lcom/vk/wall/f;
+    invoke-virtual {v1}, Lcom/vk/wall/thread/CommentThreadPresenter;->G()Lcom/vk/wall/CommentsListContract2;
 
     move-result-object v1
 
-    invoke-interface {v1}, Lcom/vk/wall/f;->M1()V
+    invoke-interface {v1}, Lcom/vk/wall/CommentsListContract2;->M1()V
 
     .line 20
     iget-object v1, p0, Lcom/vk/wall/thread/CommentThreadPresenter$l;->a:Lcom/vk/wall/thread/CommentThreadPresenter;
 
     const-string v2, "comment"
 
-    invoke-static {p1, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    invoke-virtual {v1, p1}, Lcom/vk/wall/thread/CommentThreadPresenter;->i(Lcom/vtosters/lite/q;)V
+    invoke-virtual {v1, p1}, Lcom/vk/wall/thread/CommentThreadPresenter;->i(Lcom/vtosters/lite/Comment;)V
 
     .line 21
-    invoke-static {}, Lcom/vk/sharing/target/n;->c()Lcom/vk/sharing/target/n;
+    invoke-static {}, Lcom/vk/sharing/target/GroupsForCommentsImpersonation;->c()Lcom/vk/sharing/target/GroupsForCommentsImpersonation;
 
     move-result-object v1
 
-    invoke-virtual {v1}, Lcom/vk/sharing/target/n;->a()V
+    invoke-virtual {v1}, Lcom/vk/sharing/target/GroupsForCommentsImpersonation;->a()V
 
     .line 22
     iget-object v1, p0, Lcom/vk/wall/thread/CommentThreadPresenter$l;->a:Lcom/vk/wall/thread/CommentThreadPresenter;
 
     iget-object v2, p1, Lcom/vtosters/lite/NewsComment;->C:[I
 
-    invoke-virtual {v1, p1, v0, v2}, Lcom/vk/wall/thread/CommentThreadPresenter;->a(Lcom/vtosters/lite/q;Lcom/vtosters/lite/q;[I)V
+    invoke-virtual {v1, p1, v0, v2}, Lcom/vk/wall/thread/CommentThreadPresenter;->a(Lcom/vtosters/lite/Comment;Lcom/vtosters/lite/Comment;[I)V
 
     :cond_7
     :goto_2

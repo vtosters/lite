@@ -215,7 +215,7 @@
 
     const-string v0, "textView.context"
 
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     sget v0, Lb/h/z/e;->ic_explicit_28:I
 
@@ -223,7 +223,7 @@
 
     move-result-object p1
 
-    invoke-static {p0, p1}, Lcom/vk/core/extensions/a0;->a(Landroid/widget/TextView;Landroid/graphics/drawable/Drawable;)V
+    invoke-static {p0, p1}, Lcom/vk/core/extensions/TextViewExt;->a(Landroid/widget/TextView;Landroid/graphics/drawable/Drawable;)V
 
     goto :goto_0
 
@@ -231,7 +231,7 @@
     const/4 p1, 0x0
 
     .line 8
-    invoke-static {p0, p1}, Lcom/vk/core/extensions/a0;->a(Landroid/widget/TextView;Landroid/graphics/drawable/Drawable;)V
+    invoke-static {p0, p1}, Lcom/vk/core/extensions/TextViewExt;->a(Landroid/widget/TextView;Landroid/graphics/drawable/Drawable;)V
 
     :goto_0
     return-void
@@ -270,7 +270,7 @@
 
     move-object v0, p0
 
-    invoke-static/range {v0 .. v8}, Lkotlin/collections/l;->a(Ljava/lang/Iterable;Ljava/lang/CharSequence;Ljava/lang/CharSequence;Ljava/lang/CharSequence;ILjava/lang/CharSequence;Lkotlin/jvm/b/b;ILjava/lang/Object;)Ljava/lang/String;
+    invoke-static/range {v0 .. v8}, Lkotlin/collections/l;->a(Ljava/lang/Iterable;Ljava/lang/CharSequence;Ljava/lang/CharSequence;Ljava/lang/CharSequence;ILjava/lang/CharSequence;Lkotlin/jvm/b/Functions2;ILjava/lang/Object;)Ljava/lang/String;
 
     move-result-object p0
 
@@ -299,7 +299,7 @@
 
     const-string v1, "textView.context"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-static {v0, p2}, Lcom/vk/core/util/ContextExtKt;->h(Landroid/content/Context;I)I
 

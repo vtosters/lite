@@ -49,14 +49,14 @@
     .locals 1
 
     .line 1
-    invoke-virtual {p0}, Lcom/vk/stories/StoriesPixelsController$a;->call()Lkotlin/m;
+    invoke-virtual {p0}, Lcom/vk/stories/StoriesPixelsController$a;->call()Lkotlin/Unit;
 
     move-result-object v0
 
     return-object v0
 .end method
 
-.method public final call()Lkotlin/m;
+.method public final call()Lkotlin/Unit;
     .locals 10
 
     .line 2
@@ -64,7 +64,7 @@
 
     if-eqz v0, :cond_0
 
-    new-instance v9, Lcom/vk/api/internal/e;
+    new-instance v9, Lcom/vk/api/internal/HttpUrlCall;
 
     iget-object v2, p0, Lcom/vk/stories/StoriesPixelsController$a;->a:Ljava/lang/String;
 
@@ -80,11 +80,11 @@
 
     move-object v1, v9
 
-    invoke-direct/range {v1 .. v8}, Lcom/vk/api/internal/e;-><init>(Ljava/lang/String;JIZILkotlin/jvm/internal/i;)V
+    invoke-direct/range {v1 .. v8}, Lcom/vk/api/internal/HttpUrlCall;-><init>(Ljava/lang/String;JIZILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
-    invoke-virtual {v0, v9}, Lcom/vk/api/internal/ApiManager;->a(Lcom/vk/api/internal/e;)V
+    invoke-virtual {v0, v9}, Lcom/vk/api/internal/ApiManager;->a(Lcom/vk/api/internal/HttpUrlCall;)V
 
-    sget-object v0, Lkotlin/m;->a:Lkotlin/m;
+    sget-object v0, Lkotlin/Unit;->a:Lkotlin/Unit;
 
     goto :goto_0
 

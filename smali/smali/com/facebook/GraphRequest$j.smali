@@ -20,7 +20,7 @@
 # instance fields
 .field private final a:Ljava/io/OutputStream;
 
-.field private final b:Lcom/facebook/internal/l;
+.field private final b:Lcom/facebook/internal/Logger;
 
 .field private c:Z
 
@@ -28,7 +28,7 @@
 
 
 # direct methods
-.method public constructor <init>(Ljava/io/OutputStream;Lcom/facebook/internal/l;Z)V
+.method public constructor <init>(Ljava/io/OutputStream;Lcom/facebook/internal/Logger;Z)V
     .locals 1
 
     .line 1
@@ -48,7 +48,7 @@
     iput-object p1, p0, Lcom/facebook/GraphRequest$j;->a:Ljava/io/OutputStream;
 
     .line 5
-    iput-object p2, p0, Lcom/facebook/GraphRequest$j;->b:Lcom/facebook/internal/l;
+    iput-object p2, p0, Lcom/facebook/GraphRequest$j;->b:Lcom/facebook/internal/Logger;
 
     .line 6
     iput-boolean p3, p0, Lcom/facebook/GraphRequest$j;->d:Z
@@ -154,7 +154,7 @@
     invoke-virtual {p0}, Lcom/facebook/GraphRequest$j;->a()V
 
     .line 45
-    iget-object p2, p0, Lcom/facebook/GraphRequest$j;->b:Lcom/facebook/internal/l;
+    iget-object p2, p0, Lcom/facebook/GraphRequest$j;->b:Lcom/facebook/internal/Logger;
 
     if-eqz p2, :cond_0
 
@@ -175,7 +175,7 @@
 
     const-string v0, "<Image>"
 
-    invoke-virtual {p2, p1, v0}, Lcom/facebook/internal/l;->a(Ljava/lang/String;Ljava/lang/Object;)V
+    invoke-virtual {p2, p1, v0}, Lcom/facebook/internal/Logger;->a(Ljava/lang/String;Ljava/lang/Object;)V
 
     :cond_0
     return-void
@@ -200,23 +200,23 @@
     .line 56
     iget-object p3, p0, Lcom/facebook/GraphRequest$j;->a:Ljava/io/OutputStream;
 
-    instance-of p3, p3, Lcom/facebook/m;
+    instance-of p3, p3, Lcom/facebook/ProgressNoopOutputStream;
 
     const/4 v0, 0x0
 
     if-eqz p3, :cond_1
 
     .line 57
-    invoke-static {p2}, Lcom/facebook/internal/r;->a(Landroid/net/Uri;)J
+    invoke-static {p2}, Lcom/facebook/internal/Utility;->a(Landroid/net/Uri;)J
 
     move-result-wide p2
 
     .line 58
     iget-object v1, p0, Lcom/facebook/GraphRequest$j;->a:Ljava/io/OutputStream;
 
-    check-cast v1, Lcom/facebook/m;
+    check-cast v1, Lcom/facebook/ProgressNoopOutputStream;
 
-    invoke-virtual {v1, p2, p3}, Lcom/facebook/m;->i(J)V
+    invoke-virtual {v1, p2, p3}, Lcom/facebook/ProgressNoopOutputStream;->i(J)V
 
     const/4 p2, 0x0
 
@@ -224,7 +224,7 @@
 
     .line 59
     :cond_1
-    invoke-static {}, Lcom/facebook/e;->e()Landroid/content/Context;
+    invoke-static {}, Lcom/facebook/FacebookSdk;->e()Landroid/content/Context;
 
     move-result-object p3
 
@@ -241,7 +241,7 @@
     .line 62
     iget-object p3, p0, Lcom/facebook/GraphRequest$j;->a:Ljava/io/OutputStream;
 
-    invoke-static {p2, p3}, Lcom/facebook/internal/r;->a(Ljava/io/InputStream;Ljava/io/OutputStream;)I
+    invoke-static {p2, p3}, Lcom/facebook/internal/Utility;->a(Ljava/io/InputStream;Ljava/io/OutputStream;)I
 
     move-result p2
 
@@ -259,7 +259,7 @@
     invoke-virtual {p0}, Lcom/facebook/GraphRequest$j;->a()V
 
     .line 65
-    iget-object p3, p0, Lcom/facebook/GraphRequest$j;->b:Lcom/facebook/internal/l;
+    iget-object p3, p0, Lcom/facebook/GraphRequest$j;->b:Lcom/facebook/internal/Logger;
 
     if-eqz p3, :cond_2
 
@@ -298,7 +298,7 @@
     move-result-object p2
 
     .line 68
-    invoke-virtual {p3, p1, p2}, Lcom/facebook/internal/l;->a(Ljava/lang/String;Ljava/lang/Object;)V
+    invoke-virtual {p3, p1, p2}, Lcom/facebook/internal/Logger;->a(Ljava/lang/String;Ljava/lang/Object;)V
 
     :cond_2
     return-void
@@ -323,20 +323,20 @@
     .line 70
     iget-object p3, p0, Lcom/facebook/GraphRequest$j;->a:Ljava/io/OutputStream;
 
-    instance-of v0, p3, Lcom/facebook/m;
+    instance-of v0, p3, Lcom/facebook/ProgressNoopOutputStream;
 
     const/4 v1, 0x0
 
     if-eqz v0, :cond_1
 
     .line 71
-    check-cast p3, Lcom/facebook/m;
+    check-cast p3, Lcom/facebook/ProgressNoopOutputStream;
 
     invoke-virtual {p2}, Landroid/os/ParcelFileDescriptor;->getStatSize()J
 
     move-result-wide v2
 
-    invoke-virtual {p3, v2, v3}, Lcom/facebook/m;->i(J)V
+    invoke-virtual {p3, v2, v3}, Lcom/facebook/ProgressNoopOutputStream;->i(J)V
 
     const/4 p2, 0x0
 
@@ -351,7 +351,7 @@
     .line 73
     iget-object p2, p0, Lcom/facebook/GraphRequest$j;->a:Ljava/io/OutputStream;
 
-    invoke-static {p3, p2}, Lcom/facebook/internal/r;->a(Ljava/io/InputStream;Ljava/io/OutputStream;)I
+    invoke-static {p3, p2}, Lcom/facebook/internal/Utility;->a(Ljava/io/InputStream;Ljava/io/OutputStream;)I
 
     move-result p2
 
@@ -369,7 +369,7 @@
     invoke-virtual {p0}, Lcom/facebook/GraphRequest$j;->a()V
 
     .line 76
-    iget-object p3, p0, Lcom/facebook/GraphRequest$j;->b:Lcom/facebook/internal/l;
+    iget-object p3, p0, Lcom/facebook/GraphRequest$j;->b:Lcom/facebook/internal/Logger;
 
     if-eqz p3, :cond_2
 
@@ -408,7 +408,7 @@
     move-result-object p2
 
     .line 79
-    invoke-virtual {p3, p1, p2}, Lcom/facebook/internal/l;->a(Ljava/lang/String;Ljava/lang/Object;)V
+    invoke-virtual {p3, p1, p2}, Lcom/facebook/internal/Logger;->a(Ljava/lang/String;Ljava/lang/Object;)V
 
     :cond_2
     return-void
@@ -425,14 +425,14 @@
     .line 1
     iget-object v0, p0, Lcom/facebook/GraphRequest$j;->a:Ljava/io/OutputStream;
 
-    instance-of v1, v0, Lcom/facebook/o;
+    instance-of v1, v0, Lcom/facebook/RequestOutputStream;
 
     if-eqz v1, :cond_0
 
     .line 2
-    check-cast v0, Lcom/facebook/o;
+    check-cast v0, Lcom/facebook/RequestOutputStream;
 
-    invoke-interface {v0, p3}, Lcom/facebook/o;->a(Lcom/facebook/GraphRequest;)V
+    invoke-interface {v0, p3}, Lcom/facebook/RequestOutputStream;->a(Lcom/facebook/GraphRequest;)V
 
     .line 3
     :cond_0
@@ -597,7 +597,7 @@
     invoke-virtual {p0}, Lcom/facebook/GraphRequest$j;->a()V
 
     .line 39
-    iget-object v0, p0, Lcom/facebook/GraphRequest$j;->b:Lcom/facebook/internal/l;
+    iget-object v0, p0, Lcom/facebook/GraphRequest$j;->b:Lcom/facebook/internal/Logger;
 
     if-eqz v0, :cond_0
 
@@ -616,7 +616,7 @@
 
     move-result-object p1
 
-    invoke-virtual {v0, p1, p2}, Lcom/facebook/internal/l;->a(Ljava/lang/String;Ljava/lang/Object;)V
+    invoke-virtual {v0, p1, p2}, Lcom/facebook/internal/Logger;->a(Ljava/lang/String;Ljava/lang/Object;)V
 
     :cond_0
     return-void
@@ -739,7 +739,7 @@
     .line 23
     iget-object v0, p0, Lcom/facebook/GraphRequest$j;->a:Ljava/io/OutputStream;
 
-    instance-of v1, v0, Lcom/facebook/o;
+    instance-of v1, v0, Lcom/facebook/RequestOutputStream;
 
     if-nez v1, :cond_0
 
@@ -754,7 +754,7 @@
 
     .line 25
     :cond_0
-    check-cast v0, Lcom/facebook/o;
+    check-cast v0, Lcom/facebook/RequestOutputStream;
 
     const/4 v1, 0x0
 
@@ -796,7 +796,7 @@
     move-result-object v4
 
     .line 30
-    invoke-interface {v0, v3}, Lcom/facebook/o;->a(Lcom/facebook/GraphRequest;)V
+    invoke-interface {v0, v3}, Lcom/facebook/RequestOutputStream;->a(Lcom/facebook/GraphRequest;)V
 
     const/4 v3, 0x1
 
@@ -845,7 +845,7 @@
     invoke-virtual {p0, v0, p3}, Lcom/facebook/GraphRequest$j;->a(Ljava/lang/String;[Ljava/lang/Object;)V
 
     .line 34
-    iget-object p3, p0, Lcom/facebook/GraphRequest$j;->b:Lcom/facebook/internal/l;
+    iget-object p3, p0, Lcom/facebook/GraphRequest$j;->b:Lcom/facebook/internal/Logger;
 
     if-eqz p3, :cond_3
 
@@ -868,7 +868,7 @@
 
     move-result-object p2
 
-    invoke-virtual {p3, p1, p2}, Lcom/facebook/internal/l;->a(Ljava/lang/String;Ljava/lang/Object;)V
+    invoke-virtual {p3, p1, p2}, Lcom/facebook/internal/Logger;->a(Ljava/lang/String;Ljava/lang/Object;)V
 
     :cond_3
     return-void
@@ -905,7 +905,7 @@
     invoke-virtual {p0}, Lcom/facebook/GraphRequest$j;->a()V
 
     .line 51
-    iget-object v1, p0, Lcom/facebook/GraphRequest$j;->b:Lcom/facebook/internal/l;
+    iget-object v1, p0, Lcom/facebook/GraphRequest$j;->b:Lcom/facebook/internal/Logger;
 
     if-eqz v1, :cond_0
 
@@ -946,7 +946,7 @@
     move-result-object p2
 
     .line 54
-    invoke-virtual {v1, p1, p2}, Lcom/facebook/internal/l;->a(Ljava/lang/String;Ljava/lang/Object;)V
+    invoke-virtual {v1, p1, p2}, Lcom/facebook/internal/Logger;->a(Ljava/lang/String;Ljava/lang/Object;)V
 
     :cond_0
     return-void

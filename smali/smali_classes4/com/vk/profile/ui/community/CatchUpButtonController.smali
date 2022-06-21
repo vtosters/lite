@@ -14,15 +14,15 @@
 # instance fields
 .field private a:Lcom/vk/core/dialogs/snackbar/VkSnackbar;
 
-.field private b:Lcom/vk/core/util/b0;
+.field private b:Lcom/vk/core/util/ElapsedTimeCounter;
 
 .field private final c:Landroid/os/Handler;
 
-.field private d:Lcom/vk/profile/ui/community/a;
+.field private d:Lcom/vk/profile/ui/community/CatchUpContentView;
 
 .field private e:Z
 
-.field private final f:Lb/h/g/t/c;
+.field private final f:Lb/h/g/t/ValidatorSet;
 
 .field private final g:Ljava/lang/Runnable;
 
@@ -41,7 +41,7 @@
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, v1}, Lcom/vk/profile/ui/community/CatchUpButtonController$a;-><init>(Lkotlin/jvm/internal/i;)V
+    invoke-direct {v0, v1}, Lcom/vk/profile/ui/community/CatchUpButtonController$a;-><init>(Lkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     return-void
 .end method
@@ -59,11 +59,11 @@
     iput-object p3, p0, Lcom/vk/profile/ui/community/CatchUpButtonController;->j:Lcom/vk/dto/profile/HeaderCatchUpLink;
 
     .line 2
-    new-instance p1, Lcom/vk/core/util/b0;
+    new-instance p1, Lcom/vk/core/util/ElapsedTimeCounter;
 
-    invoke-direct {p1}, Lcom/vk/core/util/b0;-><init>()V
+    invoke-direct {p1}, Lcom/vk/core/util/ElapsedTimeCounter;-><init>()V
 
-    iput-object p1, p0, Lcom/vk/profile/ui/community/CatchUpButtonController;->b:Lcom/vk/core/util/b0;
+    iput-object p1, p0, Lcom/vk/profile/ui/community/CatchUpButtonController;->b:Lcom/vk/core/util/ElapsedTimeCounter;
 
     .line 3
     new-instance p1, Landroid/os/Handler;
@@ -82,7 +82,7 @@
     iput-boolean p1, p0, Lcom/vk/profile/ui/community/CatchUpButtonController;->e:Z
 
     .line 5
-    new-instance p2, Lb/h/g/t/c;
+    new-instance p2, Lb/h/g/t/ValidatorSet;
 
     const/4 p3, 0x3
 
@@ -90,25 +90,25 @@
 
     fill-array-data v0, :array_0
 
-    invoke-direct {p2, v0}, Lb/h/g/t/c;-><init>([I)V
+    invoke-direct {p2, v0}, Lb/h/g/t/ValidatorSet;-><init>([I)V
 
     .line 6
     new-instance v0, Lcom/vk/profile/ui/community/CatchUpButtonController$$special$$inlined$apply$lambda$1;
 
     invoke-direct {v0, p0}, Lcom/vk/profile/ui/community/CatchUpButtonController$$special$$inlined$apply$lambda$1;-><init>(Lcom/vk/profile/ui/community/CatchUpButtonController;)V
 
-    invoke-virtual {p2, v0}, Lb/h/g/t/c;->a(Lkotlin/jvm/b/b;)V
+    invoke-virtual {p2, v0}, Lb/h/g/t/ValidatorSet;->a(Lkotlin/jvm/b/Functions2;)V
 
     .line 7
-    invoke-virtual {p2, p3, p1}, Lb/h/g/t/c;->a(IZ)V
+    invoke-virtual {p2, p3, p1}, Lb/h/g/t/ValidatorSet;->a(IZ)V
 
     const/4 p3, 0x4
 
     .line 8
-    invoke-virtual {p2, p3, p1}, Lb/h/g/t/c;->a(IZ)V
+    invoke-virtual {p2, p3, p1}, Lb/h/g/t/ValidatorSet;->a(IZ)V
 
     .line 9
-    iput-object p2, p0, Lcom/vk/profile/ui/community/CatchUpButtonController;->f:Lb/h/g/t/c;
+    iput-object p2, p0, Lcom/vk/profile/ui/community/CatchUpButtonController;->f:Lb/h/g/t/ValidatorSet;
 
     .line 10
     new-instance p1, Lcom/vk/profile/ui/community/CatchUpButtonController$b;
@@ -127,11 +127,11 @@
     .end array-data
 .end method
 
-.method public static final synthetic a(Lcom/vk/profile/ui/community/CatchUpButtonController;)Lb/h/g/t/c;
+.method public static final synthetic a(Lcom/vk/profile/ui/community/CatchUpButtonController;)Lb/h/g/t/ValidatorSet;
     .locals 0
 
     .line 1
-    iget-object p0, p0, Lcom/vk/profile/ui/community/CatchUpButtonController;->f:Lb/h/g/t/c;
+    iget-object p0, p0, Lcom/vk/profile/ui/community/CatchUpButtonController;->f:Lb/h/g/t/ValidatorSet;
 
     return-object p0
 .end method
@@ -174,9 +174,9 @@
 
     int-to-long v0, v0
 
-    iget-object v2, p0, Lcom/vk/profile/ui/community/CatchUpButtonController;->b:Lcom/vk/core/util/b0;
+    iget-object v2, p0, Lcom/vk/profile/ui/community/CatchUpButtonController;->b:Lcom/vk/core/util/ElapsedTimeCounter;
 
-    invoke-virtual {v2}, Lcom/vk/core/util/b0;->a()J
+    invoke-virtual {v2}, Lcom/vk/core/util/ElapsedTimeCounter;->a()J
 
     move-result-wide v2
 
@@ -198,11 +198,11 @@
     if-gez v4, :cond_2
 
     .line 4
-    iget-object v4, p0, Lcom/vk/profile/ui/community/CatchUpButtonController;->b:Lcom/vk/core/util/b0;
+    iget-object v4, p0, Lcom/vk/profile/ui/community/CatchUpButtonController;->b:Lcom/vk/core/util/ElapsedTimeCounter;
 
     sub-long/2addr v0, v2
 
-    invoke-virtual {v4, v0, v1}, Lcom/vk/core/util/b0;->a(J)V
+    invoke-virtual {v4, v0, v1}, Lcom/vk/core/util/ElapsedTimeCounter;->a(J)V
 
     move-wide v0, v2
 
@@ -347,7 +347,7 @@
 
     .line 13
     :goto_4
-    new-instance v2, Lcom/vk/profile/ui/community/a;
+    new-instance v2, Lcom/vk/profile/ui/community/CatchUpContentView;
 
     const/4 v9, 0x0
 
@@ -359,25 +359,25 @@
 
     move-object v7, v2
 
-    invoke-direct/range {v7 .. v12}, Lcom/vk/profile/ui/community/a;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;IILkotlin/jvm/internal/i;)V
+    invoke-direct/range {v7 .. v12}, Lcom/vk/profile/ui/community/CatchUpContentView;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;IILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
-    iput-object v2, p0, Lcom/vk/profile/ui/community/CatchUpButtonController;->d:Lcom/vk/profile/ui/community/a;
+    iput-object v2, p0, Lcom/vk/profile/ui/community/CatchUpButtonController;->d:Lcom/vk/profile/ui/community/CatchUpContentView;
 
     .line 14
-    iget-object v2, p0, Lcom/vk/profile/ui/community/CatchUpButtonController;->d:Lcom/vk/profile/ui/community/a;
+    iget-object v2, p0, Lcom/vk/profile/ui/community/CatchUpButtonController;->d:Lcom/vk/profile/ui/community/CatchUpContentView;
 
     if-eqz v2, :cond_b
 
     iget-object v6, p0, Lcom/vk/profile/ui/community/CatchUpButtonController;->j:Lcom/vk/dto/profile/HeaderCatchUpLink;
 
-    invoke-virtual {v2, v6}, Lcom/vk/profile/ui/community/a;->setCatchUpLink(Lcom/vk/dto/profile/HeaderCatchUpLink;)V
+    invoke-virtual {v2, v6}, Lcom/vk/profile/ui/community/CatchUpContentView;->setCatchUpLink(Lcom/vk/dto/profile/HeaderCatchUpLink;)V
 
     .line 15
-    iget-object v2, p0, Lcom/vk/profile/ui/community/CatchUpButtonController;->d:Lcom/vk/profile/ui/community/a;
+    iget-object v2, p0, Lcom/vk/profile/ui/community/CatchUpButtonController;->d:Lcom/vk/profile/ui/community/CatchUpContentView;
 
     if-eqz v2, :cond_7
 
-    invoke-virtual {v2, v5}, Lcom/vk/profile/ui/community/a;->setDark(Z)V
+    invoke-virtual {v2, v5}, Lcom/vk/profile/ui/community/CatchUpContentView;->setDark(Z)V
 
     .line 16
     :cond_7
@@ -416,7 +416,7 @@
     invoke-virtual {v2, v0}, Lcom/vk/core/dialogs/snackbar/VkSnackbar$a;->a(Ljava/lang/Integer;)Lcom/vk/core/dialogs/snackbar/VkSnackbar$a;
 
     .line 21
-    iget-object v0, p0, Lcom/vk/profile/ui/community/CatchUpButtonController;->d:Lcom/vk/profile/ui/community/a;
+    iget-object v0, p0, Lcom/vk/profile/ui/community/CatchUpButtonController;->d:Lcom/vk/profile/ui/community/CatchUpContentView;
 
     invoke-virtual {v2, v0}, Lcom/vk/core/dialogs/snackbar/VkSnackbar$a;->a(Landroid/view/View;)Lcom/vk/core/dialogs/snackbar/VkSnackbar$a;
 
@@ -425,7 +425,7 @@
 
     invoke-direct {v0, p0}, Lcom/vk/profile/ui/community/CatchUpButtonController$showSnackBar$1;-><init>(Lcom/vk/profile/ui/community/CatchUpButtonController;)V
 
-    invoke-virtual {v2, v0}, Lcom/vk/core/dialogs/snackbar/VkSnackbar$a;->a(Lkotlin/jvm/b/a;)Lcom/vk/core/dialogs/snackbar/VkSnackbar$a;
+    invoke-virtual {v2, v0}, Lcom/vk/core/dialogs/snackbar/VkSnackbar$a;->a(Lkotlin/jvm/b/Functions;)Lcom/vk/core/dialogs/snackbar/VkSnackbar$a;
 
     .line 23
     invoke-virtual {v2}, Lcom/vk/core/dialogs/snackbar/VkSnackbar$a;->a()Lcom/vk/core/dialogs/snackbar/VkSnackbar;
@@ -452,7 +452,7 @@
 
     invoke-direct {v1, p0}, Lcom/vk/profile/ui/community/CatchUpButtonController$showSnackBar$2;-><init>(Lcom/vk/profile/ui/community/CatchUpButtonController;)V
 
-    invoke-virtual {v0, v1}, Lcom/vk/core/dialogs/snackbar/VkSnackbar;->a(Lkotlin/jvm/b/a;)V
+    invoke-virtual {v0, v1}, Lcom/vk/core/dialogs/snackbar/VkSnackbar;->a(Lkotlin/jvm/b/Functions;)V
 
     .line 26
     :cond_8
@@ -464,7 +464,7 @@
 
     invoke-direct {v1, p0}, Lcom/vk/profile/ui/community/CatchUpButtonController$showSnackBar$3;-><init>(Lcom/vk/profile/ui/community/CatchUpButtonController;)V
 
-    invoke-virtual {v0, v1}, Lcom/vk/core/dialogs/snackbar/VkSnackbar;->b(Lkotlin/jvm/b/a;)V
+    invoke-virtual {v0, v1}, Lcom/vk/core/dialogs/snackbar/VkSnackbar;->b(Lkotlin/jvm/b/Functions;)V
 
     .line 27
     :cond_9
@@ -494,14 +494,14 @@
     .line 31
     iget-object v0, p0, Lcom/vk/profile/ui/community/CatchUpButtonController;->j:Lcom/vk/dto/profile/HeaderCatchUpLink;
 
-    invoke-static {v0}, Lcom/vk/profile/e/a;->a(Lcom/vk/dto/profile/HeaderCatchUpLink;)V
+    invoke-static {v0}, Lcom/vk/profile/e/CatchUpButtonTracker;->a(Lcom/vk/dto/profile/HeaderCatchUpLink;)V
 
     :cond_a
     return-void
 
     .line 32
     :cond_b
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     const/4 v0, 0x0
 
@@ -539,21 +539,21 @@
     if-lez p1, :cond_0
 
     .line 2
-    iget-object p1, p0, Lcom/vk/profile/ui/community/CatchUpButtonController;->f:Lb/h/g/t/c;
+    iget-object p1, p0, Lcom/vk/profile/ui/community/CatchUpButtonController;->f:Lb/h/g/t/ValidatorSet;
 
     const/4 v1, 0x0
 
-    invoke-virtual {p1, v0, v1}, Lb/h/g/t/c;->a(IZ)V
+    invoke-virtual {p1, v0, v1}, Lb/h/g/t/ValidatorSet;->a(IZ)V
 
     goto :goto_0
 
     .line 3
     :cond_0
-    iget-object p1, p0, Lcom/vk/profile/ui/community/CatchUpButtonController;->f:Lb/h/g/t/c;
+    iget-object p1, p0, Lcom/vk/profile/ui/community/CatchUpButtonController;->f:Lb/h/g/t/ValidatorSet;
 
     const/4 v1, 0x1
 
-    invoke-virtual {p1, v0, v1}, Lb/h/g/t/c;->a(IZ)V
+    invoke-virtual {p1, v0, v1}, Lb/h/g/t/ValidatorSet;->a(IZ)V
 
     :goto_0
     return-void
@@ -586,11 +586,11 @@
     return-object v0
 .end method
 
-.method public final e()Lcom/vk/core/util/b0;
+.method public final e()Lcom/vk/core/util/ElapsedTimeCounter;
     .locals 1
 
     .line 1
-    iget-object v0, p0, Lcom/vk/profile/ui/community/CatchUpButtonController;->b:Lcom/vk/core/util/b0;
+    iget-object v0, p0, Lcom/vk/profile/ui/community/CatchUpButtonController;->b:Lcom/vk/core/util/ElapsedTimeCounter;
 
     return-object v0
 .end method
@@ -608,11 +608,11 @@
     .locals 2
 
     .line 1
-    iget-object v0, p0, Lcom/vk/profile/ui/community/CatchUpButtonController;->f:Lb/h/g/t/c;
+    iget-object v0, p0, Lcom/vk/profile/ui/community/CatchUpButtonController;->f:Lb/h/g/t/ValidatorSet;
 
     const/4 v1, 0x1
 
-    invoke-virtual {v0, v1, v1}, Lb/h/g/t/c;->a(IZ)V
+    invoke-virtual {v0, v1, v1}, Lb/h/g/t/ValidatorSet;->a(IZ)V
 
     return-void
 .end method
@@ -621,13 +621,13 @@
     .locals 3
 
     .line 1
-    iget-object v0, p0, Lcom/vk/profile/ui/community/CatchUpButtonController;->f:Lb/h/g/t/c;
+    iget-object v0, p0, Lcom/vk/profile/ui/community/CatchUpButtonController;->f:Lb/h/g/t/ValidatorSet;
 
     const/4 v1, 0x2
 
     const/4 v2, 0x0
 
-    invoke-virtual {v0, v1, v2}, Lb/h/g/t/c;->a(IZ)V
+    invoke-virtual {v0, v1, v2}, Lb/h/g/t/ValidatorSet;->a(IZ)V
 
     return-void
 .end method
@@ -636,13 +636,13 @@
     .locals 3
 
     .line 1
-    iget-object v0, p0, Lcom/vk/profile/ui/community/CatchUpButtonController;->f:Lb/h/g/t/c;
+    iget-object v0, p0, Lcom/vk/profile/ui/community/CatchUpButtonController;->f:Lb/h/g/t/ValidatorSet;
 
     const/4 v1, 0x2
 
     const/4 v2, 0x1
 
-    invoke-virtual {v0, v1, v2}, Lb/h/g/t/c;->a(IZ)V
+    invoke-virtual {v0, v1, v2}, Lb/h/g/t/ValidatorSet;->a(IZ)V
 
     return-void
 .end method

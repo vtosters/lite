@@ -3,7 +3,7 @@
 .source "SearchHolder.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/b;
+.implements Lkotlin/jvm/b/Functions2;
 
 
 # annotations
@@ -19,9 +19,9 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/b<",
-        "Lcom/vk/common/i/b;",
-        "Lcom/vk/dto/discover/b/d;",
+        "Lkotlin/jvm/b/Functions2<",
+        "Lcom/vk/common/i/RecyclerItem;",
+        "Lcom/vk/dto/discover/b/SearchProfileItem;",
         ">;"
     }
 .end annotation
@@ -56,15 +56,15 @@
 
 
 # virtual methods
-.method public final a(Lcom/vk/common/i/b;)Lcom/vk/dto/discover/b/d;
+.method public final a(Lcom/vk/common/i/RecyclerItem;)Lcom/vk/dto/discover/b/SearchProfileItem;
     .locals 2
 
     if-eqz p1, :cond_1
 
     .line 1
-    check-cast p1, Lcom/vk/dto/discover/b/d;
+    check-cast p1, Lcom/vk/dto/discover/b/SearchProfileItem;
 
-    invoke-virtual {p1}, Lcom/vk/dto/discover/b/d;->e()Lcom/vk/dto/user/UserProfile;
+    invoke-virtual {p1}, Lcom/vk/dto/discover/b/SearchProfileItem;->e()Lcom/vk/dto/user/UserProfile;
 
     move-result-object v0
 
@@ -91,9 +91,9 @@
     .locals 0
 
     .line 1
-    check-cast p1, Lcom/vk/common/i/b;
+    check-cast p1, Lcom/vk/common/i/RecyclerItem;
 
-    invoke-virtual {p0, p1}, Lcom/vk/search/holder/SearchHolder$addToFriends$1$2;->a(Lcom/vk/common/i/b;)Lcom/vk/dto/discover/b/d;
+    invoke-virtual {p0, p1}, Lcom/vk/search/holder/SearchHolder$addToFriends$1$2;->a(Lcom/vk/common/i/RecyclerItem;)Lcom/vk/dto/discover/b/SearchProfileItem;
 
     move-result-object p1
 

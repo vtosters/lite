@@ -3,7 +3,7 @@
 .source "BalanceFragment.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/b;
+.implements Lkotlin/jvm/b/Functions2;
 
 
 # annotations
@@ -19,9 +19,9 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/b<",
+        "Lkotlin/jvm/b/Functions2<",
         "Landroid/view/View;",
-        "Lkotlin/m;",
+        "Lkotlin/Unit;",
         ">;"
     }
 .end annotation
@@ -52,17 +52,17 @@
     .line 1
     iget-object p1, p0, Lcom/vk/balance/BalanceFragment$onCreateView$1;->this$0:Lcom/vk/balance/BalanceFragment;
 
-    invoke-virtual {p1}, Lcom/vk/core/fragments/c;->getPresenter()Lb/h/r/c;
+    invoke-virtual {p1}, Lcom/vk/core/fragments/BaseMvpFragment;->getPresenter()Lb/h/r/BaseScreenContract;
 
     move-result-object p1
 
-    check-cast p1, Lcom/vk/balance/a;
+    check-cast p1, Lcom/vk/balance/BalanceContract;
 
     if-eqz p1, :cond_0
 
     iget-object v0, p0, Lcom/vk/balance/BalanceFragment$onCreateView$1;->this$0:Lcom/vk/balance/BalanceFragment;
 
-    invoke-interface {p1, v0}, Lcom/vk/balance/a;->a(Lcom/vk/core/fragments/b;)V
+    invoke-interface {p1, v0}, Lcom/vk/balance/BalanceContract;->a(Lcom/vk/core/fragments/BaseFragment1;)V
 
     :cond_0
     return-void
@@ -76,7 +76,7 @@
 
     invoke-virtual {p0, p1}, Lcom/vk/balance/BalanceFragment$onCreateView$1;->a(Landroid/view/View;)V
 
-    sget-object p1, Lkotlin/m;->a:Lkotlin/m;
+    sget-object p1, Lkotlin/Unit;->a:Lkotlin/Unit;
 
     return-object p1
 .end method

@@ -3,7 +3,7 @@
 .source "NarrativesProfileAdapter.kt"
 
 # interfaces
-.implements Lc/a/z/g;
+.implements Lio/reactivex/functions/Consumer;
 
 
 # annotations
@@ -22,8 +22,8 @@
         "Ljava/lang/Object;",
         ">",
         "Ljava/lang/Object;",
-        "Lc/a/z/g<",
-        "Lcom/vk/narratives/b;",
+        "Lio/reactivex/functions/Consumer<",
+        "Lcom/vk/narratives/NarrativeController2;",
         ">;"
     }
 .end annotation
@@ -46,7 +46,7 @@
 
 
 # virtual methods
-.method public final a(Lcom/vk/narratives/b;)V
+.method public final a(Lcom/vk/narratives/NarrativeController2;)V
     .locals 5
 
     .line 1
@@ -54,11 +54,11 @@
 
     iget-object v0, v0, Lcom/vk/profile/adapter/inner/NarrativesProfileAdapter$b;->a:Lcom/vk/profile/adapter/inner/NarrativesProfileAdapter;
 
-    invoke-static {v0}, Lcom/vk/profile/adapter/inner/NarrativesProfileAdapter;->b(Lcom/vk/profile/adapter/inner/NarrativesProfileAdapter;)Lcom/vk/lists/b;
+    invoke-static {v0}, Lcom/vk/profile/adapter/inner/NarrativesProfileAdapter;->b(Lcom/vk/profile/adapter/inner/NarrativesProfileAdapter;)Lcom/vk/lists/BaseListDataSet;
 
     move-result-object v0
 
-    invoke-interface {v0}, Lcom/vk/lists/d;->size()I
+    invoke-interface {v0}, Lcom/vk/lists/DataSet;->size()I
 
     move-result v0
 
@@ -72,27 +72,27 @@
 
     iget-object v2, v2, Lcom/vk/profile/adapter/inner/NarrativesProfileAdapter$b;->a:Lcom/vk/profile/adapter/inner/NarrativesProfileAdapter;
 
-    invoke-static {v2}, Lcom/vk/profile/adapter/inner/NarrativesProfileAdapter;->b(Lcom/vk/profile/adapter/inner/NarrativesProfileAdapter;)Lcom/vk/lists/b;
+    invoke-static {v2}, Lcom/vk/profile/adapter/inner/NarrativesProfileAdapter;->b(Lcom/vk/profile/adapter/inner/NarrativesProfileAdapter;)Lcom/vk/lists/BaseListDataSet;
 
     move-result-object v2
 
-    invoke-interface {v2, v1}, Lcom/vk/lists/d;->k(I)Ljava/lang/Object;
+    invoke-interface {v2, v1}, Lcom/vk/lists/DataSet;->k(I)Ljava/lang/Object;
 
     move-result-object v2
 
-    instance-of v3, v2, Lcom/vk/profile/adapter/items/v;
+    instance-of v3, v2, Lcom/vk/profile/adapter/items/NarrativeProfileItem;
 
     if-nez v3, :cond_0
 
     const/4 v2, 0x0
 
     :cond_0
-    check-cast v2, Lcom/vk/profile/adapter/items/v;
+    check-cast v2, Lcom/vk/profile/adapter/items/NarrativeProfileItem;
 
     if-eqz v2, :cond_1
 
     .line 3
-    invoke-virtual {v2}, Lcom/vk/profile/adapter/items/v;->c()Lcom/vk/dto/narratives/Narrative;
+    invoke-virtual {v2}, Lcom/vk/profile/adapter/items/NarrativeProfileItem;->c()Lcom/vk/dto/narratives/Narrative;
 
     move-result-object v3
 
@@ -100,13 +100,13 @@
 
     move-result v3
 
-    invoke-virtual {p1}, Lcom/vk/narratives/b;->a()I
+    invoke-virtual {p1}, Lcom/vk/narratives/NarrativeController2;->a()I
 
     move-result v4
 
     if-ne v3, v4, :cond_1
 
-    invoke-virtual {v2}, Lcom/vk/profile/adapter/items/v;->c()Lcom/vk/dto/narratives/Narrative;
+    invoke-virtual {v2}, Lcom/vk/profile/adapter/items/NarrativeProfileItem;->c()Lcom/vk/dto/narratives/Narrative;
 
     move-result-object v3
 
@@ -114,14 +114,14 @@
 
     move-result v3
 
-    invoke-virtual {p1}, Lcom/vk/narratives/b;->b()I
+    invoke-virtual {p1}, Lcom/vk/narratives/NarrativeController2;->b()I
 
     move-result v4
 
     if-ne v3, v4, :cond_1
 
     .line 4
-    invoke-virtual {v2}, Lcom/vk/profile/adapter/items/v;->c()Lcom/vk/dto/narratives/Narrative;
+    invoke-virtual {v2}, Lcom/vk/profile/adapter/items/NarrativeProfileItem;->c()Lcom/vk/dto/narratives/Narrative;
 
     move-result-object p1
 
@@ -134,11 +134,11 @@
 
     iget-object p1, p1, Lcom/vk/profile/adapter/inner/NarrativesProfileAdapter$b;->a:Lcom/vk/profile/adapter/inner/NarrativesProfileAdapter;
 
-    invoke-static {p1}, Lcom/vk/profile/adapter/inner/NarrativesProfileAdapter;->b(Lcom/vk/profile/adapter/inner/NarrativesProfileAdapter;)Lcom/vk/lists/b;
+    invoke-static {p1}, Lcom/vk/profile/adapter/inner/NarrativesProfileAdapter;->b(Lcom/vk/profile/adapter/inner/NarrativesProfileAdapter;)Lcom/vk/lists/BaseListDataSet;
 
     move-result-object p1
 
-    invoke-virtual {p1, v1}, Lcom/vk/lists/b;->a(I)V
+    invoke-virtual {p1, v1}, Lcom/vk/lists/BaseListDataSet;->a(I)V
 
     goto :goto_1
 
@@ -156,9 +156,9 @@
     .locals 0
 
     .line 1
-    check-cast p1, Lcom/vk/narratives/b;
+    check-cast p1, Lcom/vk/narratives/NarrativeController2;
 
-    invoke-virtual {p0, p1}, Lcom/vk/profile/adapter/inner/NarrativesProfileAdapter$b$g;->a(Lcom/vk/narratives/b;)V
+    invoke-virtual {p0, p1}, Lcom/vk/profile/adapter/inner/NarrativesProfileAdapter$b$g;->a(Lcom/vk/narratives/NarrativeController2;)V
 
     return-void
 .end method

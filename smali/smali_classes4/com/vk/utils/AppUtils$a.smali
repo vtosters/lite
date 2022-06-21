@@ -51,17 +51,17 @@
     .end annotation
 .end field
 
-.field private final d:Lcom/vk/core/util/g1;
+.field private final d:Lcom/vk/core/util/TimeLogger;
 
 
 # direct methods
-.method public constructor <init>(Lcom/vk/core/util/g1;)V
+.method public constructor <init>(Lcom/vk/core/util/TimeLogger;)V
     .locals 0
 
     .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lcom/vk/utils/AppUtils$a;->d:Lcom/vk/core/util/g1;
+    iput-object p1, p0, Lcom/vk/utils/AppUtils$a;->d:Lcom/vk/core/util/TimeLogger;
 
     .line 2
     new-instance p1, Ljava/util/ArrayList;
@@ -96,7 +96,7 @@
     return-object p0
 .end method
 
-.method private final a(Lcom/vk/core/util/g1;Lcom/vk/utils/AppUtils$a$a;)V
+.method private final a(Lcom/vk/core/util/TimeLogger;Lcom/vk/utils/AppUtils$a$a;)V
     .locals 1
 
     .line 29
@@ -104,7 +104,7 @@
 
     move-result-object v0
 
-    invoke-virtual {p1, v0}, Lcom/vk/core/util/g1;->b(Ljava/lang/String;)Lcom/vk/core/util/g1;
+    invoke-virtual {p1, v0}, Lcom/vk/core/util/TimeLogger;->b(Ljava/lang/String;)Lcom/vk/core/util/TimeLogger;
 
     .line 30
     invoke-virtual {p2}, Lcom/vk/utils/AppUtils$a$a;->run()V
@@ -114,27 +114,27 @@
 
     move-result-object p2
 
-    invoke-virtual {p1, p2}, Lcom/vk/core/util/g1;->c(Ljava/lang/String;)Lcom/vk/core/util/g1;
+    invoke-virtual {p1, p2}, Lcom/vk/core/util/TimeLogger;->c(Ljava/lang/String;)Lcom/vk/core/util/TimeLogger;
 
     return-void
 .end method
 
-.method public static final synthetic a(Lcom/vk/utils/AppUtils$a;Lcom/vk/core/util/g1;Lcom/vk/utils/AppUtils$a$a;)V
+.method public static final synthetic a(Lcom/vk/utils/AppUtils$a;Lcom/vk/core/util/TimeLogger;Lcom/vk/utils/AppUtils$a$a;)V
     .locals 0
 
     .line 2
-    invoke-direct {p0, p1, p2}, Lcom/vk/utils/AppUtils$a;->a(Lcom/vk/core/util/g1;Lcom/vk/utils/AppUtils$a$a;)V
+    invoke-direct {p0, p1, p2}, Lcom/vk/utils/AppUtils$a;->a(Lcom/vk/core/util/TimeLogger;Lcom/vk/utils/AppUtils$a$a;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a()Lcom/vk/core/util/g1;
+.method public final a()Lcom/vk/core/util/TimeLogger;
     .locals 1
 
     .line 3
-    iget-object v0, p0, Lcom/vk/utils/AppUtils$a;->d:Lcom/vk/core/util/g1;
+    iget-object v0, p0, Lcom/vk/utils/AppUtils$a;->d:Lcom/vk/core/util/TimeLogger;
 
     return-object v0
 .end method
@@ -180,9 +180,9 @@
     check-cast v3, Lcom/vk/utils/AppUtils$a$a;
 
     .line 8
-    iget-object v4, p0, Lcom/vk/utils/AppUtils$a;->d:Lcom/vk/core/util/g1;
+    iget-object v4, p0, Lcom/vk/utils/AppUtils$a;->d:Lcom/vk/core/util/TimeLogger;
 
-    invoke-direct {p0, v4, v3}, Lcom/vk/utils/AppUtils$a;->a(Lcom/vk/core/util/g1;Lcom/vk/utils/AppUtils$a$a;)V
+    invoke-direct {p0, v4, v3}, Lcom/vk/utils/AppUtils$a;->a(Lcom/vk/core/util/TimeLogger;Lcom/vk/utils/AppUtils$a$a;)V
 
     goto :goto_0
 
@@ -231,9 +231,9 @@
     check-cast v8, Lcom/vk/utils/AppUtils$a$a;
 
     .line 13
-    iget-object v9, p0, Lcom/vk/utils/AppUtils$a;->d:Lcom/vk/core/util/g1;
+    iget-object v9, p0, Lcom/vk/utils/AppUtils$a;->d:Lcom/vk/core/util/TimeLogger;
 
-    invoke-direct {p0, v9, v8}, Lcom/vk/utils/AppUtils$a;->a(Lcom/vk/core/util/g1;Lcom/vk/utils/AppUtils$a$a;)V
+    invoke-direct {p0, v9, v8}, Lcom/vk/utils/AppUtils$a;->a(Lcom/vk/core/util/TimeLogger;Lcom/vk/utils/AppUtils$a$a;)V
 
     goto :goto_1
 
@@ -248,9 +248,9 @@
     new-array v8, v6, [Ljava/lang/Object;
 
     .line 15
-    sget-object v9, Lcom/vk/core/util/g1;->a:Ljava/lang/String;
+    sget-object v9, Lcom/vk/core/util/TimeLogger;->a:Ljava/lang/String;
 
-    invoke-static {v9, v5}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v9, v5}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     aput-object v9, v8, v7
 
@@ -279,23 +279,23 @@
     invoke-static {v8}, Lcom/vk/log/L;->c([Ljava/lang/Object;)V
 
     .line 16
-    invoke-static {v7, p1}, Lc/a/g;->a(II)Lc/a/g;
+    invoke-static {v7, p1}, Lio/reactivex/Flowable;->a(II)Lio/reactivex/Flowable;
 
     move-result-object p1
 
     .line 17
-    invoke-virtual {p1}, Lc/a/g;->d()Lc/a/d0/a;
+    invoke-virtual {p1}, Lio/reactivex/Flowable;->d()Lio/reactivex/parallel/ParallelFlowable;
 
     move-result-object p1
 
     .line 18
     sget-object v8, Lcom/vk/core/concurrent/VkExecutors;->x:Lcom/vk/core/concurrent/VkExecutors;
 
-    invoke-virtual {v8}, Lcom/vk/core/concurrent/VkExecutors;->b()Lc/a/s;
+    invoke-virtual {v8}, Lcom/vk/core/concurrent/VkExecutors;->b()Lio/reactivex/Scheduler;
 
     move-result-object v8
 
-    invoke-virtual {p1, v8}, Lc/a/d0/a;->a(Lc/a/s;)Lc/a/d0/a;
+    invoke-virtual {p1, v8}, Lio/reactivex/parallel/ParallelFlowable;->a(Lio/reactivex/Scheduler;)Lio/reactivex/parallel/ParallelFlowable;
 
     move-result-object p1
 
@@ -304,16 +304,16 @@
 
     invoke-direct {v8, p0}, Lcom/vk/utils/AppUtils$a$b;-><init>(Lcom/vk/utils/AppUtils$a;)V
 
-    invoke-virtual {p1, v8}, Lc/a/d0/a;->a(Lc/a/z/j;)Lc/a/d0/a;
+    invoke-virtual {p1, v8}, Lio/reactivex/parallel/ParallelFlowable;->a(Lio/reactivex/functions/Function;)Lio/reactivex/parallel/ParallelFlowable;
 
     move-result-object p1
 
     .line 20
-    invoke-virtual {p1}, Lc/a/d0/a;->b()Lc/a/g;
+    invoke-virtual {p1}, Lio/reactivex/parallel/ParallelFlowable;->b()Lio/reactivex/Flowable;
 
     move-result-object p1
 
-    invoke-virtual {p1}, Lc/a/g;->a()Ljava/lang/Object;
+    invoke-virtual {p1}, Lio/reactivex/Flowable;->a()Ljava/lang/Object;
 
     .line 21
     :cond_2
@@ -350,9 +350,9 @@
     check-cast v10, Lcom/vk/utils/AppUtils$a$a;
 
     .line 25
-    iget-object v11, p0, Lcom/vk/utils/AppUtils$a;->d:Lcom/vk/core/util/g1;
+    iget-object v11, p0, Lcom/vk/utils/AppUtils$a;->d:Lcom/vk/core/util/TimeLogger;
 
-    invoke-direct {p0, v11, v10}, Lcom/vk/utils/AppUtils$a;->a(Lcom/vk/core/util/g1;Lcom/vk/utils/AppUtils$a$a;)V
+    invoke-direct {p0, v11, v10}, Lcom/vk/utils/AppUtils$a;->a(Lcom/vk/core/util/TimeLogger;Lcom/vk/utils/AppUtils$a$a;)V
 
     goto :goto_2
 
@@ -367,9 +367,9 @@
     new-array p1, v6, [Ljava/lang/Object;
 
     .line 27
-    sget-object v0, Lcom/vk/core/util/g1;->a:Ljava/lang/String;
+    sget-object v0, Lcom/vk/core/util/TimeLogger;->a:Ljava/lang/String;
 
-    invoke-static {v0, v5}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v5}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     aput-object v0, p1, v7
 
@@ -404,11 +404,11 @@
     invoke-static {p1}, Lcom/vk/log/L;->c([Ljava/lang/Object;)V
 
     .line 28
-    iget-object p1, p0, Lcom/vk/utils/AppUtils$a;->d:Lcom/vk/core/util/g1;
+    iget-object p1, p0, Lcom/vk/utils/AppUtils$a;->d:Lcom/vk/core/util/TimeLogger;
 
     const-string v0, "complete!"
 
-    invoke-virtual {p1, v0}, Lcom/vk/core/util/g1;->a(Ljava/lang/String;)Lcom/vk/core/util/g1;
+    invoke-virtual {p1, v0}, Lcom/vk/core/util/TimeLogger;->a(Ljava/lang/String;)Lcom/vk/core/util/TimeLogger;
 
     return-void
 .end method

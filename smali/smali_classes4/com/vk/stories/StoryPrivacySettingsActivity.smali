@@ -3,7 +3,7 @@
 .source "StoryPrivacySettingsActivity.java"
 
 # interfaces
-.implements Lcom/vk/core/ui/themes/f;
+.implements Lcom/vk/core/ui/themes/Themable;
 
 
 # annotations
@@ -17,7 +17,7 @@
 # instance fields
 .field private G:Landroid/widget/FrameLayout;
 
-.field private H:Lio/reactivex/disposables/b;
+.field private H:Lio/reactivex/disposables/Disposable;
 
 .field private I:Ljava/lang/String;
 
@@ -52,11 +52,11 @@
     return-object p1
 .end method
 
-.method static synthetic a(Lcom/vk/stories/StoryPrivacySettingsActivity;Lio/reactivex/disposables/b;)Lio/reactivex/disposables/b;
+.method static synthetic a(Lcom/vk/stories/StoryPrivacySettingsActivity;Lio/reactivex/disposables/Disposable;)Lio/reactivex/disposables/Disposable;
     .locals 0
 
     .line 1
-    iput-object p1, p0, Lcom/vk/stories/StoryPrivacySettingsActivity;->H:Lio/reactivex/disposables/b;
+    iput-object p1, p0, Lcom/vk/stories/StoryPrivacySettingsActivity;->H:Lio/reactivex/disposables/Disposable;
 
     return-object p1
 .end method
@@ -83,29 +83,29 @@
     .locals 2
 
     .line 1
-    new-instance v0, Lcom/vk/api/account/m;
+    new-instance v0, Lcom/vk/api/account/AccountGetPrivacySettings;
 
     invoke-static {}, Lcom/vk/stories/StoriesController;->m()Z
 
     move-result v1
 
-    invoke-direct {v0, v1}, Lcom/vk/api/account/m;-><init>(Z)V
+    invoke-direct {v0, v1}, Lcom/vk/api/account/AccountGetPrivacySettings;-><init>(Z)V
 
     new-instance v1, Lcom/vk/stories/StoryPrivacySettingsActivity$a;
 
     invoke-direct {v1, p0, p0}, Lcom/vk/stories/StoryPrivacySettingsActivity$a;-><init>(Lcom/vk/stories/StoryPrivacySettingsActivity;Landroid/content/Context;)V
 
     .line 2
-    invoke-virtual {v0, v1}, Lcom/vk/api/base/d;->a(Lcom/vk/api/base/a;)Lcom/vk/api/base/b;
+    invoke-virtual {v0, v1}, Lcom/vk/api/base/ApiRequest;->a(Lcom/vk/api/base/ApiCallback;)Lcom/vk/api/base/ApiCallbackDisposable;
 
     move-result-object v0
 
     .line 3
-    invoke-virtual {v0}, Lcom/vk/api/base/b;->a()Lio/reactivex/disposables/b;
+    invoke-virtual {v0}, Lcom/vk/api/base/ApiCallbackDisposable;->a()Lio/reactivex/disposables/Disposable;
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/vk/stories/StoryPrivacySettingsActivity;->H:Lio/reactivex/disposables/b;
+    iput-object v0, p0, Lcom/vk/stories/StoryPrivacySettingsActivity;->H:Lio/reactivex/disposables/Disposable;
 
     return-void
 .end method
@@ -176,7 +176,7 @@
     invoke-direct {p0}, Lcom/vk/stories/StoryPrivacySettingsActivity;->w1()V
 
     .line 7
-    invoke-static {p0}, Lcom/vk/extensions/b;->a(Landroid/app/Activity;)V
+    invoke-static {p0}, Lcom/vk/extensions/ActivityExt;->a(Landroid/app/Activity;)V
 
     .line 8
     invoke-static {p0}, Lcom/vk/core/ui/themes/VKThemeHelper;->d(Landroid/app/Activity;)V
@@ -191,12 +191,12 @@
     invoke-super {p0}, Lcom/vtosters/lite/VKActivity;->onDestroy()V
 
     .line 2
-    iget-object v0, p0, Lcom/vk/stories/StoryPrivacySettingsActivity;->H:Lio/reactivex/disposables/b;
+    iget-object v0, p0, Lcom/vk/stories/StoryPrivacySettingsActivity;->H:Lio/reactivex/disposables/Disposable;
 
     if-eqz v0, :cond_0
 
     .line 3
-    invoke-interface {v0}, Lio/reactivex/disposables/b;->o()V
+    invoke-interface {v0}, Lio/reactivex/disposables/Disposable;->o()V
 
     :cond_0
     return-void

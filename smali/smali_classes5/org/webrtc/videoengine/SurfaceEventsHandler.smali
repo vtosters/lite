@@ -415,7 +415,7 @@
 
     move-result-object v0
 
-    invoke-static {v1, v0}, Le/c/a/a;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, v0}, Le/c/a/Log;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 4
     :cond_0
@@ -614,7 +614,7 @@
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Le/c/a/a;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Le/c/a/Log;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 10
     iget-object v0, p0, Lorg/webrtc/videoengine/SurfaceEventsHandler;->_systemAutoRotationEnabled:Ljava/lang/Boolean;
@@ -728,7 +728,7 @@
 
     move-result-object v2
 
-    invoke-static {v1, v2}, Le/c/a/a;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Le/c/a/Log;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 10
     iget-object v1, p0, Lorg/webrtc/videoengine/SurfaceEventsHandler;->_callback:Lorg/webrtc/videoengine/SurfaceEventsHandler$SurfaceEventsCallback;
@@ -817,7 +817,7 @@
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Le/c/a/a;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Le/c/a/Log;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 2
     invoke-static {}, Lorg/webrtc/videoengine/SurfaceEventsHandler;->UiThread()Z
@@ -891,7 +891,7 @@
 
     move-result-object p3
 
-    invoke-static {p1, p3}, Le/c/a/a;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {p1, p3}, Le/c/a/Log;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 9
     iget-object p1, p0, Lorg/webrtc/videoengine/SurfaceEventsHandler;->_cameraSurfaceHolder:Landroid/view/SurfaceHolder;
@@ -931,7 +931,7 @@
 
     move-result-object v0
 
-    invoke-static {p3, v0}, Le/c/a/a;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {p3, v0}, Le/c/a/Log;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     if-nez p1, :cond_5
 
@@ -974,7 +974,7 @@
 
     move-result-object p3
 
-    invoke-static {p1, p3}, Le/c/a/a;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {p1, p3}, Le/c/a/Log;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 15
     iget-object p1, p0, Lorg/webrtc/videoengine/SurfaceEventsHandler;->_surfaceViewRef:Ljava/lang/ref/WeakReference;

@@ -24,7 +24,7 @@
     return-void
 .end method
 
-.method public synthetic constructor <init>(Lkotlin/jvm/internal/i;)V
+.method public synthetic constructor <init>(Lkotlin/jvm/internal/DefaultConstructorMarker;)V
     .locals 0
 
     .line 2
@@ -43,7 +43,7 @@
 
     move-result-wide v0
 
-    invoke-static {v0, v1}, Lkotlin/s/d;->a(J)Lkotlin/s/c;
+    invoke-static {v0, v1}, Lkotlin/s/Random1;->a(J)Lkotlin/s/Random;
 
     move-result-object v0
 
@@ -53,7 +53,7 @@
 
     array-length v1, v1
 
-    invoke-virtual {v0, v1}, Lkotlin/s/c;->b(I)I
+    invoke-virtual {v0, v1}, Lkotlin/s/Random;->b(I)I
 
     move-result v0
 

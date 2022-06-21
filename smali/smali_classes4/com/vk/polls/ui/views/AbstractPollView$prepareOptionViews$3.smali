@@ -3,7 +3,7 @@
 .source "AbstractPollView.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/c;
+.implements Lkotlin/jvm/b/Functions1;
 
 
 # annotations
@@ -19,10 +19,10 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/c<",
-        "Lcom/vk/polls/ui/views/c;",
+        "Lkotlin/jvm/b/Functions1<",
+        "Lcom/vk/polls/ui/views/PollOptionView;",
         "Ljava/lang/Integer;",
-        "Lkotlin/m;",
+        "Lkotlin/Unit;",
         ">;"
     }
 .end annotation
@@ -55,7 +55,7 @@
     .locals 0
 
     .line 1
-    check-cast p1, Lcom/vk/polls/ui/views/c;
+    check-cast p1, Lcom/vk/polls/ui/views/PollOptionView;
 
     check-cast p2, Ljava/lang/Number;
 
@@ -63,14 +63,14 @@
 
     move-result p2
 
-    invoke-virtual {p0, p1, p2}, Lcom/vk/polls/ui/views/AbstractPollView$prepareOptionViews$3;->a(Lcom/vk/polls/ui/views/c;I)V
+    invoke-virtual {p0, p1, p2}, Lcom/vk/polls/ui/views/AbstractPollView$prepareOptionViews$3;->a(Lcom/vk/polls/ui/views/PollOptionView;I)V
 
-    sget-object p1, Lkotlin/m;->a:Lkotlin/m;
+    sget-object p1, Lkotlin/Unit;->a:Lkotlin/Unit;
 
     return-object p1
 .end method
 
-.method public final a(Lcom/vk/polls/ui/views/c;I)V
+.method public final a(Lcom/vk/polls/ui/views/PollOptionView;I)V
     .locals 4
 
     const/4 v0, 0x0
@@ -103,7 +103,7 @@
 
     iget-boolean v3, p0, Lcom/vk/polls/ui/views/AbstractPollView$prepareOptionViews$3;->$animate:Z
 
-    invoke-virtual {p1, v1, v2, v3}, Lcom/vk/polls/ui/views/c;->a(Lcom/vk/dto/polls/Poll;Lcom/vk/dto/polls/PollOption;Z)V
+    invoke-virtual {p1, v1, v2, v3}, Lcom/vk/polls/ui/views/PollOptionView;->a(Lcom/vk/dto/polls/Poll;Lcom/vk/dto/polls/PollOption;Z)V
 
     .line 4
     invoke-virtual {p1}, Landroid/widget/FrameLayout;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;

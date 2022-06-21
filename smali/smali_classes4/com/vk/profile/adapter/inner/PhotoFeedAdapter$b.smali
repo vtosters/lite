@@ -3,7 +3,7 @@
 .source "PhotoFeedAdapter.kt"
 
 # interfaces
-.implements Lcom/vk/bridges/p$a;
+.implements Lcom/vk/bridges/ImageViewer$a;
 
 
 # annotations
@@ -86,7 +86,7 @@
     .locals 0
 
     .line 1
-    invoke-static {p0, p1}, Lcom/vk/bridges/p$a$a;->b(Lcom/vk/bridges/p$a;I)V
+    invoke-static {p0, p1}, Lcom/vk/bridges/ImageViewer$a$a;->b(Lcom/vk/bridges/ImageViewer$a;I)V
 
     return-void
 .end method
@@ -104,7 +104,7 @@
     .locals 1
 
     .line 2
-    invoke-static {p0}, Lcom/vk/bridges/p$a$a;->g(Lcom/vk/bridges/p$a;)Z
+    invoke-static {p0}, Lcom/vk/bridges/ImageViewer$a$a;->g(Lcom/vk/bridges/ImageViewer$a;)Z
 
     move-result v0
 
@@ -135,7 +135,7 @@
 
     const-string v2, "recyclerRef?.get() ?: return null"
 
-    invoke-static {v0, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     const/4 v2, 0x0
 
@@ -165,7 +165,7 @@
     .line 9
     check-cast v5, Lcom/vk/profile/adapter/inner/PhotoFeedAdapter$c;
 
-    invoke-virtual {v5}, Lcom/vtosters/lite/ui/b0/i;->c0()Ljava/lang/Object;
+    invoke-virtual {v5}, Lcom/vtosters/lite/ui/holder/RecyclerHolder;->c0()Ljava/lang/Object;
 
     move-result-object v5
 
@@ -174,15 +174,15 @@
     .line 10
     iget-object v6, p0, Lcom/vk/profile/adapter/inner/PhotoFeedAdapter$b;->b:Lcom/vk/profile/adapter/inner/PhotoFeedAdapter;
 
-    invoke-static {v6}, Lcom/vk/profile/adapter/inner/PhotoFeedAdapter;->a(Lcom/vk/profile/adapter/inner/PhotoFeedAdapter;)Ld/a/a/c/c;
+    invoke-static {v6}, Lcom/vk/profile/adapter/inner/PhotoFeedAdapter;->a(Lcom/vk/profile/adapter/inner/PhotoFeedAdapter;)Lme/grishka/appkit/utils/Preloader;
 
     move-result-object v6
 
     const-string v7, "preloader"
 
-    invoke-static {v6, v7}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v6, v7}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    invoke-virtual {v6}, Ld/a/a/c/c;->a()Ljava/util/ArrayList;
+    invoke-virtual {v6}, Lme/grishka/appkit/utils/Preloader;->a()Ljava/util/ArrayList;
 
     move-result-object v6
 
@@ -293,7 +293,7 @@
     .locals 0
 
     .line 1
-    invoke-static {p0}, Lcom/vk/bridges/p$a$a;->f(Lcom/vk/bridges/p$a;)V
+    invoke-static {p0}, Lcom/vk/bridges/ImageViewer$a$a;->f(Lcom/vk/bridges/ImageViewer$a;)V
 
     return-void
 .end method
@@ -304,15 +304,15 @@
     .line 1
     iget-object v0, p0, Lcom/vk/profile/adapter/inner/PhotoFeedAdapter$b;->b:Lcom/vk/profile/adapter/inner/PhotoFeedAdapter;
 
-    invoke-static {v0}, Lcom/vk/profile/adapter/inner/PhotoFeedAdapter;->a(Lcom/vk/profile/adapter/inner/PhotoFeedAdapter;)Ld/a/a/c/c;
+    invoke-static {v0}, Lcom/vk/profile/adapter/inner/PhotoFeedAdapter;->a(Lcom/vk/profile/adapter/inner/PhotoFeedAdapter;)Lme/grishka/appkit/utils/Preloader;
 
     move-result-object v0
 
     const-string v1, "preloader"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    invoke-virtual {v0}, Ld/a/a/c/c;->d()Z
+    invoke-virtual {v0}, Lme/grishka/appkit/utils/Preloader;->d()Z
 
     move-result v0
 
@@ -331,16 +331,16 @@
     .locals 0
 
     .line 1
-    invoke-static {p0}, Lcom/vk/bridges/p$a$a;->d(Lcom/vk/bridges/p$a;)V
+    invoke-static {p0}, Lcom/vk/bridges/ImageViewer$a$a;->d(Lcom/vk/bridges/ImageViewer$a;)V
 
     return-void
 .end method
 
-.method public g()Lcom/vk/bridges/p$c;
+.method public g()Lcom/vk/bridges/ImageViewer$c;
     .locals 1
 
     .line 1
-    invoke-static {p0}, Lcom/vk/bridges/p$a$a;->a(Lcom/vk/bridges/p$a;)Lcom/vk/bridges/p$c;
+    invoke-static {p0}, Lcom/vk/bridges/ImageViewer$a$a;->a(Lcom/vk/bridges/ImageViewer$a;)Lcom/vk/bridges/ImageViewer$c;
 
     move-result-object v0
 
@@ -355,7 +355,7 @@
 
     const/4 v1, 0x0
 
-    invoke-static {v0, v1}, Lcom/vk/profile/adapter/inner/PhotoFeedAdapter;->a(Lcom/vk/profile/adapter/inner/PhotoFeedAdapter;Lcom/vk/bridges/p$d;)V
+    invoke-static {v0, v1}, Lcom/vk/profile/adapter/inner/PhotoFeedAdapter;->a(Lcom/vk/profile/adapter/inner/PhotoFeedAdapter;Lcom/vk/bridges/ImageViewer$d;)V
 
     return-void
 .end method

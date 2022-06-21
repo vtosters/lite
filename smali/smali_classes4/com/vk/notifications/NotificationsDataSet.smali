@@ -1,18 +1,18 @@
 .class public final Lcom/vk/notifications/NotificationsDataSet;
-.super Lcom/vk/lists/o;
+.super Lcom/vk/lists/ListDataSet;
 .source "NotificationsDataSet.kt"
 
 # interfaces
-.implements Lcom/vk/notifications/i;
+.implements Lcom/vk/notifications/NotificationsContainer;
 
 
 # annotations
 .annotation system Ldalvik/annotation/Signature;
     value = {
-        "Lcom/vk/lists/o<",
+        "Lcom/vk/lists/ListDataSet<",
         "Lcom/vk/dto/notifications/NotificationsGetResponse$NotificationsResponseItem;",
         ">;",
-        "Lcom/vk/notifications/i;"
+        "Lcom/vk/notifications/NotificationsContainer;"
     }
 .end annotation
 
@@ -22,7 +22,7 @@
     .locals 0
 
     .line 1
-    invoke-direct {p0}, Lcom/vk/lists/o;-><init>()V
+    invoke-direct {p0}, Lcom/vk/lists/ListDataSet;-><init>()V
 
     return-void
 .end method
@@ -31,13 +31,13 @@
     .locals 1
 
     .line 1
-    invoke-static {}, Lcom/vk/core/ui/themes/d;->e()Z
+    invoke-static {}, Lcom/vk/core/ui/themes/MilkshakeHelper;->e()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    invoke-static {}, Lcom/vk/core/ui/themes/d;->g()Z
+    invoke-static {}, Lcom/vk/core/ui/themes/MilkshakeHelper;->g()Z
 
     move-result v0
 
@@ -82,7 +82,7 @@
 
     invoke-direct {v0, p1}, Lcom/vk/notifications/NotificationsDataSet$insertItem$i$1;-><init>(Lcom/vk/dto/notifications/NotificationsGetResponse$NotificationsResponseItem;)V
 
-    invoke-virtual {p0, v0}, Lcom/vk/lists/o;->d(Lkotlin/jvm/b/b;)I
+    invoke-virtual {p0, v0}, Lcom/vk/lists/ListDataSet;->d(Lkotlin/jvm/b/Functions2;)I
 
     move-result v0
 
@@ -95,10 +95,10 @@
 
     .line 19
     :cond_1
-    invoke-virtual {p0, p1}, Lcom/vk/lists/o;->b(Ljava/lang/Object;)V
+    invoke-virtual {p0, p1}, Lcom/vk/lists/ListDataSet;->b(Ljava/lang/Object;)V
 
     .line 20
-    invoke-virtual {p0}, Lcom/vk/lists/o;->size()I
+    invoke-virtual {p0}, Lcom/vk/lists/ListDataSet;->size()I
 
     move-result p1
 
@@ -128,7 +128,7 @@
 
     .line 11
     :cond_0
-    invoke-super {p0, p1, p2}, Lcom/vk/lists/o;->c(ILjava/lang/Object;)V
+    invoke-super {p0, p1, p2}, Lcom/vk/lists/ListDataSet;->c(ILjava/lang/Object;)V
 
     return-void
 .end method
@@ -149,7 +149,7 @@
     move-result-object p1
 
     .line 15
-    invoke-virtual {p0, v0, p1}, Lcom/vk/lists/o;->a(Lkotlin/jvm/b/b;Ljava/lang/Object;)V
+    invoke-virtual {p0, v0, p1}, Lcom/vk/lists/ListDataSet;->a(Lkotlin/jvm/b/Functions2;Ljava/lang/Object;)V
 
     return-void
 .end method
@@ -181,11 +181,11 @@
     if-ltz v0, :cond_6
 
     .line 2
-    iget-object v1, p0, Lcom/vk/lists/o;->c:Ljava/util/ArrayList;
+    iget-object v1, p0, Lcom/vk/lists/ListDataSet;->c:Ljava/util/ArrayList;
 
     const-string v2, "list"
 
-    invoke-static {v1, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     const/4 v2, 0x0
 
@@ -246,7 +246,7 @@
     move-result-object v4
 
     :cond_2
-    invoke-static {v3, v4}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v3, v4}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v3
 
@@ -266,7 +266,7 @@
     if-ltz v2, :cond_5
 
     .line 6
-    iget-object v1, p0, Lcom/vk/lists/o;->c:Ljava/util/ArrayList;
+    iget-object v1, p0, Lcom/vk/lists/ListDataSet;->c:Ljava/util/ArrayList;
 
     invoke-virtual {v1}, Ljava/util/ArrayList;->size()I
 
@@ -275,7 +275,7 @@
     if-ge v2, v1, :cond_5
 
     .line 7
-    invoke-virtual {p0, v2}, Lcom/vk/lists/o;->j(I)V
+    invoke-virtual {p0, v2}, Lcom/vk/lists/ListDataSet;->j(I)V
 
     :cond_5
     add-int/lit8 v0, v0, -0x1
@@ -286,7 +286,7 @@
     :cond_6
     sget-object v0, Lcom/vk/notifications/NotificationsDataSet$prependNotifications$1;->a:Lcom/vk/notifications/NotificationsDataSet$prependNotifications$1;
 
-    invoke-virtual {p0, v0}, Lcom/vk/lists/o;->b(Lkotlin/jvm/b/b;)V
+    invoke-virtual {p0, v0}, Lcom/vk/lists/ListDataSet;->b(Lkotlin/jvm/b/Functions2;)V
 
     .line 9
     invoke-virtual {p0, p1}, Lcom/vk/notifications/NotificationsDataSet;->j(Ljava/util/List;)V
@@ -302,7 +302,7 @@
 
     invoke-direct {p1, p2}, Lcom/vk/notifications/NotificationsDataSet$removeNotification$1;-><init>(Lcom/vk/dto/notifications/NotificationItem;)V
 
-    invoke-virtual {p0, p1}, Lcom/vk/lists/o;->b(Lkotlin/jvm/b/b;)V
+    invoke-virtual {p0, p1}, Lcom/vk/lists/ListDataSet;->b(Lkotlin/jvm/b/Functions2;)V
 
     return-void
 .end method
@@ -381,7 +381,7 @@
 
     .line 5
     :cond_3
-    invoke-super {p0, p1}, Lcom/vk/lists/o;->g(Ljava/util/List;)V
+    invoke-super {p0, p1}, Lcom/vk/lists/ListDataSet;->g(Ljava/util/List;)V
 
     :cond_4
     return-void
@@ -461,7 +461,7 @@
 
     .line 5
     :cond_3
-    invoke-super {p0, p1}, Lcom/vk/lists/o;->j(Ljava/util/List;)V
+    invoke-super {p0, p1}, Lcom/vk/lists/ListDataSet;->j(Ljava/util/List;)V
 
     :cond_4
     return-void
@@ -547,7 +547,7 @@
     .line 5
     :cond_4
     :goto_2
-    invoke-super {p0, p1}, Lcom/vk/lists/o;->setItems(Ljava/util/List;)V
+    invoke-super {p0, p1}, Lcom/vk/lists/ListDataSet;->setItems(Ljava/util/List;)V
 
     return-void
 .end method

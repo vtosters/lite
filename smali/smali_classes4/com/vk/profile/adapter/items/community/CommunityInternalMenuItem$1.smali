@@ -3,12 +3,12 @@
 .source "CommunityInternalMenuItem.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/b;
+.implements Lkotlin/jvm/b/Functions2;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/profile/adapter/items/community/CommunityInternalMenuItem;-><init>(Ljava/util/List;Lcom/vk/profile/adapter/di/a;)V
+    value = Lcom/vk/profile/adapter/items/community/CommunityInternalMenuItem;-><init>(Ljava/util/List;Lcom/vk/profile/adapter/di/CommunityDataScope;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -19,7 +19,7 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/b<",
+        "Lkotlin/jvm/b/Functions2<",
         "Landroid/content/Context;",
         "Lme/grishka/appkit/views/UsableRecyclerView;",
         ">;"

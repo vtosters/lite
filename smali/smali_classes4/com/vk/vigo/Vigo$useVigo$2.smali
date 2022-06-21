@@ -3,7 +3,7 @@
 .source "Vigo.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/a;
+.implements Lkotlin/jvm/b/Functions;
 
 
 # annotations
@@ -19,7 +19,7 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/a<",
+        "Lkotlin/jvm/b/Functions<",
         "Ljava/lang/Boolean;",
         ">;"
     }
@@ -74,11 +74,11 @@
     .locals 1
 
     .line 2
-    invoke-static {}, Lcom/vk/bridges/l0;->a()Lcom/vk/bridges/k0;
+    invoke-static {}, Lcom/vk/bridges/VideoBridge;->a()Lcom/vk/bridges/VideoBridge1;
 
     move-result-object v0
 
-    invoke-interface {v0}, Lcom/vk/bridges/k0;->e()Z
+    invoke-interface {v0}, Lcom/vk/bridges/VideoBridge1;->e()Z
 
     move-result v0
 

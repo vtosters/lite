@@ -3,7 +3,7 @@
 .source "TaggedGoodsController.kt"
 
 # interfaces
-.implements Lc/a/z/a;
+.implements Lio/reactivex/functions/Action;
 
 
 # annotations
@@ -48,7 +48,7 @@
 
     const-string v2, "photo.taggedGoods"
 
-    invoke-static {v1, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-interface {v1}, Ljava/util/Collection;->isEmpty()Z
 
@@ -68,13 +68,13 @@
     .line 3
     iget-object v0, p0, Lcom/vk/ui/photoviewer/TaggedGoodsController$d;->a:Lcom/vk/ui/photoviewer/TaggedGoodsController;
 
-    invoke-static {v0}, Lcom/vk/ui/photoviewer/TaggedGoodsController;->d(Lcom/vk/ui/photoviewer/TaggedGoodsController;)Lkotlin/jvm/b/b;
+    invoke-static {v0}, Lcom/vk/ui/photoviewer/TaggedGoodsController;->d(Lcom/vk/ui/photoviewer/TaggedGoodsController;)Lkotlin/jvm/b/Functions2;
 
     move-result-object v0
 
     iget-object v1, p0, Lcom/vk/ui/photoviewer/TaggedGoodsController$d;->b:Lcom/vk/dto/photo/Photo;
 
-    invoke-interface {v0, v1}, Lkotlin/jvm/b/b;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v0, v1}, Lkotlin/jvm/b/Functions2;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
 
     .line 4
     iget-object v0, p0, Lcom/vk/ui/photoviewer/TaggedGoodsController$d;->a:Lcom/vk/ui/photoviewer/TaggedGoodsController;
@@ -130,7 +130,7 @@
 
     iget-object v1, v1, Lcom/vk/dto/photo/Photo;->P:Ljava/util/List;
 
-    invoke-static {v1, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {v0, v1}, Lcom/vk/ui/photoviewer/GoodsOverlayView;->a(Ljava/util/List;)V
 

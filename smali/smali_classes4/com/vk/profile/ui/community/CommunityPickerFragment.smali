@@ -1,5 +1,5 @@
 .class public final Lcom/vk/profile/ui/community/CommunityPickerFragment;
-.super Lcom/vk/core/fragments/b;
+.super Lcom/vk/core/fragments/BaseFragment1;
 .source "CommunityPickerFragment.kt"
 
 
@@ -27,7 +27,7 @@
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, v1}, Lcom/vk/profile/ui/community/CommunityPickerFragment$c;-><init>(Lkotlin/jvm/internal/i;)V
+    invoke-direct {v0, v1}, Lcom/vk/profile/ui/community/CommunityPickerFragment$c;-><init>(Lkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     return-void
 .end method
@@ -36,7 +36,7 @@
     .locals 0
 
     .line 1
-    invoke-direct {p0}, Lcom/vk/core/fragments/b;-><init>()V
+    invoke-direct {p0}, Lcom/vk/core/fragments/BaseFragment1;-><init>()V
 
     return-void
 .end method
@@ -96,7 +96,7 @@
     goto :goto_0
 
     :cond_0
-    invoke-static {v0}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v0}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v1
 
@@ -109,14 +109,14 @@
 
     const/4 v0, 0x1
 
-    invoke-static {p1, v1, v0, v1}, Lcom/vk/extensions/h;->a(Lcom/vk/lists/RecyclerPaginatedView;Lkotlin/jvm/b/c;ILjava/lang/Object;)Lcom/vk/core/ui/d;
+    invoke-static {p1, v1, v0, v1}, Lcom/vk/extensions/RecyclerPaginatedViewExt;->a(Lcom/vk/lists/RecyclerPaginatedView;Lkotlin/jvm/b/Functions1;ILjava/lang/Object;)Lcom/vk/core/ui/CardItemDecorator;
 
     move-result-object p1
 
     const/4 v0, 0x0
 
     .line 5
-    invoke-virtual {p1, v0}, Lcom/vk/core/ui/d;->b(Z)V
+    invoke-virtual {p1, v0}, Lcom/vk/core/ui/CardItemDecorator;->b(Z)V
 
     .line 6
     iput-object p1, p0, Lcom/vk/profile/ui/community/CommunityPickerFragment;->F:Landroidx/recyclerview/widget/RecyclerView$ItemDecoration;
@@ -124,7 +124,7 @@
     return-void
 
     :cond_2
-    invoke-static {v0}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v0}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v1
 .end method
@@ -133,7 +133,7 @@
     .locals 1
 
     .line 1
-    invoke-super {p0, p1}, Lcom/vk/core/fragments/b;->onCreate(Landroid/os/Bundle;)V
+    invoke-super {p0, p1}, Lcom/vk/core/fragments/BaseFragment1;->onCreate(Landroid/os/Bundle;)V
 
     .line 2
     invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getArguments()Landroid/os/Bundle;
@@ -171,7 +171,7 @@
 
     const-string v0, "contentView.findViewById(R.id.rpb_list)"
 
-    invoke-static {p2, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p2, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     check-cast p2, Lcom/vk/lists/RecyclerPaginatedView;
 
@@ -189,13 +189,13 @@
     const-string v0, "toolbar"
 
     .line 4
-    invoke-static {p2, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p2, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     new-instance v0, Lcom/vk/profile/ui/community/CommunityPickerFragment$onCreateView$1;
 
     invoke-direct {v0, p0}, Lcom/vk/profile/ui/community/CommunityPickerFragment$onCreateView$1;-><init>(Lcom/vk/profile/ui/community/CommunityPickerFragment;)V
 
-    invoke-static {p2, p0, v0}, Lcom/vk/extensions/m;->a(Landroidx/appcompat/widget/Toolbar;Lcom/vk/core/fragments/FragmentImpl;Lkotlin/jvm/b/b;)V
+    invoke-static {p2, p0, v0}, Lcom/vk/extensions/ToolbarExt1;->a(Landroidx/appcompat/widget/Toolbar;Lcom/vk/core/fragments/FragmentImpl;Lkotlin/jvm/b/Functions2;)V
 
     const v0, 0x7f12025b
 
@@ -217,7 +217,7 @@
 
     const-string v2, "paginatedView.recyclerView"
 
-    invoke-static {p2, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p2, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     new-instance v2, Landroidx/recyclerview/widget/LinearLayoutManager;
 
@@ -248,12 +248,12 @@
 
     const/4 v3, 0x1
 
-    invoke-static {v2, v1, v3, v1}, Lcom/vk/extensions/h;->a(Lcom/vk/lists/RecyclerPaginatedView;Lkotlin/jvm/b/c;ILjava/lang/Object;)Lcom/vk/core/ui/d;
+    invoke-static {v2, v1, v3, v1}, Lcom/vk/extensions/RecyclerPaginatedViewExt;->a(Lcom/vk/lists/RecyclerPaginatedView;Lkotlin/jvm/b/Functions1;ILjava/lang/Object;)Lcom/vk/core/ui/CardItemDecorator;
 
     move-result-object v2
 
     .line 10
-    invoke-virtual {v2, p3}, Lcom/vk/core/ui/d;->b(Z)V
+    invoke-virtual {v2, p3}, Lcom/vk/core/ui/CardItemDecorator;->b(Z)V
 
     .line 11
     iput-object v2, p0, Lcom/vk/profile/ui/community/CommunityPickerFragment;->F:Landroidx/recyclerview/widget/RecyclerView$ItemDecoration;
@@ -279,52 +279,52 @@
     invoke-direct {v2}, Lcom/vk/profile/ui/community/CommunityPickerFragment$e;-><init>()V
 
     .line 14
-    invoke-static {p3, v2, p2, v1}, Lcom/vk/core/util/p1/f;->a(ILcom/vk/core/util/p1/e;Lcom/vk/core/util/p1/d;Lio/reactivex/disposables/a;)Lcom/vk/lists/t$k;
+    invoke-static {p3, v2, p2, v1}, Lcom/vk/core/util/p1/PaginationUtils;->a(ILcom/vk/core/util/p1/PaginatedListDataProvider;Lcom/vk/core/util/p1/PaginatedListDataObserver;Lio/reactivex/disposables/CompositeDisposable;)Lcom/vk/lists/PaginationHelper$k;
 
     move-result-object p3
 
     .line 15
-    invoke-virtual {p3, p2}, Lcom/vk/lists/t$k;->a(Lcom/vk/lists/t$l;)Lcom/vk/lists/t$k;
+    invoke-virtual {p3, p2}, Lcom/vk/lists/PaginationHelper$k;->a(Lcom/vk/lists/PaginationHelper$l;)Lcom/vk/lists/PaginationHelper$k;
 
     const-string p2, "PaginationUtils.createWi\u2026DataInfoProvider(adapter)"
 
-    invoke-static {p3, p2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p3, p2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 16
     iget-object p2, p0, Lcom/vk/profile/ui/community/CommunityPickerFragment;->G:Lcom/vk/lists/RecyclerPaginatedView;
 
     if-eqz p2, :cond_0
 
-    invoke-static {p3, p2}, Lcom/vk/lists/u;->b(Lcom/vk/lists/t$k;Lcom/vk/lists/RecyclerPaginatedView;)Lcom/vk/lists/t;
+    invoke-static {p3, p2}, Lcom/vk/lists/PaginationHelperExt;->b(Lcom/vk/lists/PaginationHelper$k;Lcom/vk/lists/RecyclerPaginatedView;)Lcom/vk/lists/PaginationHelper;
 
     return-object p1
 
     :cond_0
-    invoke-static {v0}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v0}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v1
 
     .line 17
     :cond_1
-    invoke-static {v0}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v0}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v1
 
     .line 18
     :cond_2
-    invoke-static {v0}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v0}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v1
 
     .line 19
     :cond_3
-    invoke-static {v0}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v0}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v1
 
     .line 20
     :cond_4
-    invoke-static {v0}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v0}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v1
 .end method

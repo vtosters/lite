@@ -3,8 +3,8 @@
 .source "StoryMentionSpan.kt"
 
 # interfaces
-.implements Lcom/vk/mentions/k;
-.implements Lcom/vk/stories/clickable/f;
+.implements Lcom/vk/mentions/Spans;
+.implements Lcom/vk/stories/clickable/StoryMentionSpan1;
 
 
 # instance fields
@@ -23,7 +23,7 @@
     return-void
 .end method
 
-.method public synthetic constructor <init>(IZIILkotlin/jvm/internal/i;)V
+.method public synthetic constructor <init>(IZIILkotlin/jvm/internal/DefaultConstructorMarker;)V
     .locals 0
 
     and-int/lit8 p5, p4, 0x2

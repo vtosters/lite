@@ -3,12 +3,12 @@
 .source "CommunityHeaderItemsFactory.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/b;
+.implements Lkotlin/jvm/b/Functions2;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/profile/adapter/factory/info_items/CommunityHeaderItemsFactory;-><init>(Landroid/content/Context;Lcom/vk/profile/presenter/CommunityPresenter;Lcom/vk/newsfeed/k0/b/b/i;Lcom/vk/profile/presenter/f/b;Landroid/view/View$OnClickListener;Lcom/vk/profile/adapter/di/CommunityFragmentUiScope;Lcom/vk/profile/adapter/di/a;Lkotlin/jvm/b/b;)V
+    value = Lcom/vk/profile/adapter/factory/info_items/CommunityHeaderItemsFactory;-><init>(Landroid/content/Context;Lcom/vk/profile/presenter/CommunityPresenter;Lcom/vk/newsfeed/k0/b/b/PostingItemPresenter;Lcom/vk/profile/presenter/f/CommunityLocationController;Landroid/view/View$OnClickListener;Lcom/vk/profile/adapter/di/CommunityFragmentUiScope;Lcom/vk/profile/adapter/di/CommunityDataScope;Lkotlin/jvm/b/Functions2;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -19,8 +19,8 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/b<",
-        "Lcom/vtosters/lite/api/i;",
+        "Lkotlin/jvm/b/Functions2<",
+        "Lcom/vtosters/lite/api/ExtendedCommunityProfile;",
         "Ljava/util/ArrayList<",
         "Lcom/vk/profile/adapter/BaseInfoItem;",
         ">;>;"
@@ -47,12 +47,12 @@
 
 
 # virtual methods
-.method public final a(Lcom/vtosters/lite/api/i;)Ljava/util/ArrayList;
+.method public final a(Lcom/vtosters/lite/api/ExtendedCommunityProfile;)Ljava/util/ArrayList;
     .locals 9
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lcom/vtosters/lite/api/i;",
+            "Lcom/vtosters/lite/api/ExtendedCommunityProfile;",
             ")",
             "Ljava/util/ArrayList<",
             "Lcom/vk/profile/adapter/BaseInfoItem;",
@@ -84,7 +84,7 @@
 
     const-string v2, "profile.appButtons"
 
-    invoke-static {v1, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-interface {v1}, Ljava/util/Collection;->size()I
 
@@ -107,7 +107,7 @@
     check-cast v4, Lcom/vtosters/lite/api/ExtendedUserProfile$a;
 
     .line 5
-    new-instance v5, Lcom/vk/profile/adapter/items/f;
+    new-instance v5, Lcom/vk/profile/adapter/items/CommunityAppButtonItem;
 
     iget v6, v4, Lcom/vtosters/lite/api/ExtendedUserProfile$a;->a:I
 
@@ -115,15 +115,15 @@
 
     const-string v8, "appButtonData.title"
 
-    invoke-static {v7, v8}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v7, v8}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     iget-object v8, p0, Lcom/vk/profile/adapter/factory/info_items/CommunityHeaderItemsFactory$communityApplications$1;->$presenter:Lcom/vk/profile/presenter/CommunityPresenter;
 
-    invoke-virtual {v8}, Lcom/vk/newsfeed/presenters/i;->L()I
+    invoke-virtual {v8}, Lcom/vk/newsfeed/presenters/NewsFeedProfilePresenter;->L()I
 
     move-result v8
 
-    invoke-direct {v5, v6, v7, v8}, Lcom/vk/profile/adapter/items/f;-><init>(ILjava/lang/String;I)V
+    invoke-direct {v5, v6, v7, v8}, Lcom/vk/profile/adapter/items/CommunityAppButtonItem;-><init>(ILjava/lang/String;I)V
 
     .line 6
     iget-object v6, v4, Lcom/vtosters/lite/api/ExtendedUserProfile$a;->c:Ljava/util/ArrayList;
@@ -145,7 +145,7 @@
 
     iget-object v6, v6, Lcom/vtosters/lite/api/ExtendedUserProfile$b;->a:Ljava/lang/String;
 
-    invoke-virtual {v5, v6}, Lcom/vk/profile/adapter/items/f;->c(Ljava/lang/String;)V
+    invoke-virtual {v5, v6}, Lcom/vk/profile/adapter/items/CommunityAppButtonItem;->c(Ljava/lang/String;)V
 
     .line 8
     :cond_1
@@ -182,7 +182,7 @@
     .line 10
     iget-object v4, v6, Lcom/vtosters/lite/api/ExtendedUserProfile$b;->a:Ljava/lang/String;
 
-    invoke-virtual {v5, v4}, Lcom/vk/profile/adapter/items/f;->c(Ljava/lang/String;)V
+    invoke-virtual {v5, v4}, Lcom/vk/profile/adapter/items/CommunityAppButtonItem;->c(Ljava/lang/String;)V
 
     .line 11
     :cond_3
@@ -200,9 +200,9 @@
     .locals 0
 
     .line 1
-    check-cast p1, Lcom/vtosters/lite/api/i;
+    check-cast p1, Lcom/vtosters/lite/api/ExtendedCommunityProfile;
 
-    invoke-virtual {p0, p1}, Lcom/vk/profile/adapter/factory/info_items/CommunityHeaderItemsFactory$communityApplications$1;->a(Lcom/vtosters/lite/api/i;)Ljava/util/ArrayList;
+    invoke-virtual {p0, p1}, Lcom/vk/profile/adapter/factory/info_items/CommunityHeaderItemsFactory$communityApplications$1;->a(Lcom/vtosters/lite/api/ExtendedCommunityProfile;)Ljava/util/ArrayList;
 
     move-result-object p1
 

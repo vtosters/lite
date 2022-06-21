@@ -3,12 +3,12 @@
 .source "UserHeaderItemsFactory.kt"
 
 # interfaces
-.implements Lc/a/z/g;
+.implements Lio/reactivex/functions/Consumer;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/profile/adapter/factory/info_items/UserHeaderItemsFactory$friends$1;->a(Lcom/vtosters/lite/api/ExtendedUserProfile;)Lcom/vk/profile/adapter/items/w;
+    value = Lcom/vk/profile/adapter/factory/info_items/UserHeaderItemsFactory$friends$1;->a(Lcom/vtosters/lite/api/ExtendedUserProfile;)Lcom/vk/profile/adapter/items/OverviewInfoItem;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -22,7 +22,7 @@
         "Ljava/lang/Object;",
         ">",
         "Ljava/lang/Object;",
-        "Lc/a/z/g<",
+        "Lio/reactivex/functions/Consumer<",
         "Ljava/util/List<",
         "+",
         "Lcom/vk/dto/user/UserProfile;",
@@ -36,18 +36,18 @@
 
 .field final synthetic b:Lcom/vtosters/lite/api/ExtendedUserProfile;
 
-.field final synthetic c:Lcom/vk/profile/adapter/items/w;
+.field final synthetic c:Lcom/vk/profile/adapter/items/OverviewInfoItem;
 
 
 # direct methods
-.method constructor <init>(Lcom/vk/profile/adapter/factory/info_items/UserHeaderItemsFactory$friends$1;Lcom/vtosters/lite/api/ExtendedUserProfile;Lcom/vk/profile/adapter/items/w;)V
+.method constructor <init>(Lcom/vk/profile/adapter/factory/info_items/UserHeaderItemsFactory$friends$1;Lcom/vtosters/lite/api/ExtendedUserProfile;Lcom/vk/profile/adapter/items/OverviewInfoItem;)V
     .locals 0
 
     iput-object p1, p0, Lcom/vk/profile/adapter/factory/info_items/UserHeaderItemsFactory$friends$1$b;->a:Lcom/vk/profile/adapter/factory/info_items/UserHeaderItemsFactory$friends$1;
 
     iput-object p2, p0, Lcom/vk/profile/adapter/factory/info_items/UserHeaderItemsFactory$friends$1$b;->b:Lcom/vtosters/lite/api/ExtendedUserProfile;
 
-    iput-object p3, p0, Lcom/vk/profile/adapter/factory/info_items/UserHeaderItemsFactory$friends$1$b;->c:Lcom/vk/profile/adapter/items/w;
+    iput-object p3, p0, Lcom/vk/profile/adapter/factory/info_items/UserHeaderItemsFactory$friends$1$b;->c:Lcom/vk/profile/adapter/items/OverviewInfoItem;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -102,9 +102,9 @@
 
     iget-object v0, p0, Lcom/vk/profile/adapter/factory/info_items/UserHeaderItemsFactory$friends$1$b;->b:Lcom/vtosters/lite/api/ExtendedUserProfile;
 
-    iget-object v1, p0, Lcom/vk/profile/adapter/factory/info_items/UserHeaderItemsFactory$friends$1$b;->c:Lcom/vk/profile/adapter/items/w;
+    iget-object v1, p0, Lcom/vk/profile/adapter/factory/info_items/UserHeaderItemsFactory$friends$1$b;->c:Lcom/vk/profile/adapter/items/OverviewInfoItem;
 
-    invoke-virtual {v1}, Lcom/vk/profile/adapter/items/w;->U()Ljava/util/ArrayList;
+    invoke-virtual {v1}, Lcom/vk/profile/adapter/items/OverviewInfoItem;->U()Ljava/util/ArrayList;
 
     move-result-object v1
 

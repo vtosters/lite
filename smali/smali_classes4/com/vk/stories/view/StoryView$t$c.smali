@@ -3,7 +3,7 @@
 .source "StoryView.java"
 
 # interfaces
-.implements Lkotlin/jvm/b/b;
+.implements Lkotlin/jvm/b/Functions2;
 
 
 # annotations
@@ -19,9 +19,9 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Ljava/lang/Object;",
-        "Lkotlin/jvm/b/b<",
+        "Lkotlin/jvm/b/Functions2<",
         "Ljava/lang/Throwable;",
-        "Lkotlin/m;",
+        "Lkotlin/Unit;",
         ">;"
     }
 .end annotation
@@ -45,13 +45,13 @@
 
 
 # virtual methods
-.method public a(Ljava/lang/Throwable;)Lkotlin/m;
+.method public a(Ljava/lang/Throwable;)Lkotlin/Unit;
     .locals 0
 
     .line 1
     iget-object p1, p0, Lcom/vk/stories/view/StoryView$t$c;->a:Landroid/app/Dialog;
 
-    invoke-static {p1}, Lcom/vk/attachpicker/widget/j;->a(Landroid/app/Dialog;)V
+    invoke-static {p1}, Lcom/vk/attachpicker/widget/LoadingDialog;->a(Landroid/app/Dialog;)V
 
     const/4 p1, 0x0
 
@@ -64,7 +64,7 @@
     .line 1
     check-cast p1, Ljava/lang/Throwable;
 
-    invoke-virtual {p0, p1}, Lcom/vk/stories/view/StoryView$t$c;->a(Ljava/lang/Throwable;)Lkotlin/m;
+    invoke-virtual {p0, p1}, Lcom/vk/stories/view/StoryView$t$c;->a(Ljava/lang/Throwable;)Lkotlin/Unit;
 
     move-result-object p1
 

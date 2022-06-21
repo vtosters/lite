@@ -7,16 +7,16 @@
 
 
 # instance fields
-.field private final synthetic a:Lorg/chromium/net/d;
+.field private final synthetic a:Lorg/chromium/net/AndroidTelephonyManagerBridge;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lorg/chromium/net/d;)V
+.method public synthetic constructor <init>(Lorg/chromium/net/AndroidTelephonyManagerBridge;)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lorg/chromium/net/a;->a:Lorg/chromium/net/d;
+    iput-object p1, p0, Lorg/chromium/net/a;->a:Lorg/chromium/net/AndroidTelephonyManagerBridge;
 
     return-void
 .end method
@@ -26,9 +26,9 @@
 .method public final run()V
     .locals 1
 
-    iget-object v0, p0, Lorg/chromium/net/a;->a:Lorg/chromium/net/d;
+    iget-object v0, p0, Lorg/chromium/net/a;->a:Lorg/chromium/net/AndroidTelephonyManagerBridge;
 
-    invoke-static {v0}, Lorg/chromium/net/d;->a(Lorg/chromium/net/d;)V
+    invoke-static {v0}, Lorg/chromium/net/AndroidTelephonyManagerBridge;->a(Lorg/chromium/net/AndroidTelephonyManagerBridge;)V
 
     return-void
 .end method

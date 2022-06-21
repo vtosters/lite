@@ -1,5 +1,5 @@
 .class public final Lcom/vk/im/engine/events/OnCacheInvalidateEvent;
-.super Lcom/vk/im/engine/events/a;
+.super Lcom/vk/im/engine/events/Event;
 .source "OnCacheInvalidateEvent.kt"
 
 
@@ -20,7 +20,7 @@
     .locals 0
 
     .line 1
-    invoke-direct {p0, p1}, Lcom/vk/im/engine/events/a;-><init>(Ljava/lang/Object;)V
+    invoke-direct {p0, p1}, Lcom/vk/im/engine/events/Event;-><init>(Ljava/lang/Object;)V
 
     iput-object p2, p0, Lcom/vk/im/engine/events/OnCacheInvalidateEvent;->c:Lcom/vk/im/engine/events/OnCacheInvalidateEvent$Reason;
 

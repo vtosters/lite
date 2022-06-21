@@ -40,11 +40,11 @@
     .line 1
     iget-object p1, p0, Lcom/vk/wall/BaseCommentsFragment$d;->a:Lcom/vk/wall/BaseCommentsFragment;
 
-    invoke-static {p1}, Lcom/vk/wall/BaseCommentsFragment;->a(Lcom/vk/wall/BaseCommentsFragment;)Lcom/vk/stickers/e;
+    invoke-static {p1}, Lcom/vk/wall/BaseCommentsFragment;->a(Lcom/vk/wall/BaseCommentsFragment;)Lcom/vk/stickers/PauseAnimationScrollListener;
 
     move-result-object p1
 
-    invoke-virtual {p1}, Lcom/vk/stickers/e;->a()V
+    invoke-virtual {p1}, Lcom/vk/stickers/PauseAnimationScrollListener;->a()V
 
     return-void
 .end method

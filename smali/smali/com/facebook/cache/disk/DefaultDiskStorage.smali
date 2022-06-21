@@ -3,7 +3,7 @@
 .source "DefaultDiskStorage.java"
 
 # interfaces
-.implements Lcom/facebook/cache/disk/c;
+.implements Lcom/facebook/cache/disk/DiskStorage;
 
 
 # annotations
@@ -41,7 +41,7 @@
 
 .field private final d:Lcom/facebook/cache/common/CacheErrorLogger;
 
-.field private final e:Lcom/facebook/common/time/a;
+.field private final e:Lcom/facebook/common/time/Clock;
 
 
 # direct methods
@@ -74,7 +74,7 @@
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 2
-    invoke-static {p1}, Lcom/facebook/common/internal/g;->a(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-static {p1}, Lcom/facebook/common/internal/Preconditions;->a(Ljava/lang/Object;)Ljava/lang/Object;
 
     .line 3
     iput-object p1, p0, Lcom/facebook/cache/disk/DefaultDiskStorage;->a:Ljava/io/File;
@@ -106,11 +106,11 @@
     invoke-direct {p0}, Lcom/facebook/cache/disk/DefaultDiskStorage;->f()V
 
     .line 8
-    invoke-static {}, Lcom/facebook/common/time/c;->a()Lcom/facebook/common/time/c;
+    invoke-static {}, Lcom/facebook/common/time/SystemClock;->a()Lcom/facebook/common/time/SystemClock;
 
     move-result-object p1
 
-    iput-object p1, p0, Lcom/facebook/cache/disk/DefaultDiskStorage;->e:Lcom/facebook/common/time/a;
+    iput-object p1, p0, Lcom/facebook/cache/disk/DefaultDiskStorage;->e:Lcom/facebook/common/time/Clock;
 
     return-void
 .end method
@@ -361,9 +361,9 @@
     if-eqz v0, :cond_0
 
     .line 25
-    iget-object p2, p0, Lcom/facebook/cache/disk/DefaultDiskStorage;->e:Lcom/facebook/common/time/a;
+    iget-object p2, p0, Lcom/facebook/cache/disk/DefaultDiskStorage;->e:Lcom/facebook/common/time/Clock;
 
-    invoke-interface {p2}, Lcom/facebook/common/time/a;->now()J
+    invoke-interface {p2}, Lcom/facebook/common/time/Clock;->now()J
 
     move-result-wide v1
 
@@ -444,11 +444,11 @@
     return-object p0
 .end method
 
-.method static synthetic d(Lcom/facebook/cache/disk/DefaultDiskStorage;)Lcom/facebook/common/time/a;
+.method static synthetic d(Lcom/facebook/cache/disk/DefaultDiskStorage;)Lcom/facebook/common/time/Clock;
     .locals 0
 
     .line 1
-    iget-object p0, p0, Lcom/facebook/cache/disk/DefaultDiskStorage;->e:Lcom/facebook/common/time/a;
+    iget-object p0, p0, Lcom/facebook/cache/disk/DefaultDiskStorage;->e:Lcom/facebook/common/time/Clock;
 
     return-object p0
 .end method
@@ -565,7 +565,7 @@
     .line 3
     iget-object v0, p0, Lcom/facebook/cache/disk/DefaultDiskStorage;->a:Ljava/io/File;
 
-    invoke-static {v0}, Lcom/facebook/common/file/a;->b(Ljava/io/File;)Z
+    invoke-static {v0}, Lcom/facebook/common/file/FileTree;->b(Ljava/io/File;)Z
 
     goto :goto_0
 
@@ -660,19 +660,19 @@
 
 
 # virtual methods
-.method public a(Lcom/facebook/cache/disk/c$a;)J
+.method public a(Lcom/facebook/cache/disk/DiskStorage$a;)J
     .locals 2
 
     .line 26
     check-cast p1, Lcom/facebook/cache/disk/DefaultDiskStorage$c;
 
     .line 27
-    invoke-virtual {p1}, Lcom/facebook/cache/disk/DefaultDiskStorage$c;->a()Lcom/facebook/r/b;
+    invoke-virtual {p1}, Lcom/facebook/cache/disk/DefaultDiskStorage$c;->a()Lcom/facebook/r/FileBinaryResource;
 
     move-result-object p1
 
     .line 28
-    invoke-virtual {p1}, Lcom/facebook/r/b;->b()Ljava/io/File;
+    invoke-virtual {p1}, Lcom/facebook/r/FileBinaryResource;->b()Ljava/io/File;
 
     move-result-object p1
 
@@ -698,7 +698,7 @@
     return-wide v0
 .end method
 
-.method public a(Ljava/lang/String;Ljava/lang/Object;)Lcom/facebook/cache/disk/c$b;
+.method public a(Ljava/lang/String;Ljava/lang/Object;)Lcom/facebook/cache/disk/DiskStorage$b;
     .locals 3
     .annotation system Ldalvik/annotation/Throws;
         value = {
@@ -772,7 +772,7 @@
     .line 33
     iget-object v0, p0, Lcom/facebook/cache/disk/DefaultDiskStorage;->a:Ljava/io/File;
 
-    invoke-static {v0}, Lcom/facebook/common/file/a;->a(Ljava/io/File;)Z
+    invoke-static {v0}, Lcom/facebook/common/file/FileTree;->a(Ljava/io/File;)Z
 
     return-void
 .end method
@@ -804,7 +804,7 @@
 
     invoke-direct {v1, p0, v2}, Lcom/facebook/cache/disk/DefaultDiskStorage$f;-><init>(Lcom/facebook/cache/disk/DefaultDiskStorage;Lcom/facebook/cache/disk/DefaultDiskStorage$a;)V
 
-    invoke-static {v0, v1}, Lcom/facebook/common/file/a;->a(Ljava/io/File;Lcom/facebook/common/file/b;)V
+    invoke-static {v0, v1}, Lcom/facebook/common/file/FileTree;->a(Ljava/io/File;Lcom/facebook/common/file/FileTreeVisitor;)V
 
     return-void
 .end method
@@ -822,7 +822,7 @@
     return p1
 .end method
 
-.method public c(Ljava/lang/String;Ljava/lang/Object;)Lcom/facebook/r/a;
+.method public c(Ljava/lang/String;Ljava/lang/Object;)Lcom/facebook/r/BinaryResource;
     .locals 2
 
     .line 4
@@ -838,16 +838,16 @@
     if-eqz p2, :cond_0
 
     .line 6
-    iget-object p2, p0, Lcom/facebook/cache/disk/DefaultDiskStorage;->e:Lcom/facebook/common/time/a;
+    iget-object p2, p0, Lcom/facebook/cache/disk/DefaultDiskStorage;->e:Lcom/facebook/common/time/Clock;
 
-    invoke-interface {p2}, Lcom/facebook/common/time/a;->now()J
+    invoke-interface {p2}, Lcom/facebook/common/time/Clock;->now()J
 
     move-result-wide v0
 
     invoke-virtual {p1, v0, v1}, Ljava/io/File;->setLastModified(J)Z
 
     .line 7
-    invoke-static {p1}, Lcom/facebook/r/b;->a(Ljava/io/File;)Lcom/facebook/r/b;
+    invoke-static {p1}, Lcom/facebook/r/FileBinaryResource;->a(Ljava/io/File;)Lcom/facebook/r/FileBinaryResource;
 
     move-result-object p1
 
@@ -890,7 +890,7 @@
         value = {
             "()",
             "Ljava/util/List<",
-            "Lcom/facebook/cache/disk/c$a;",
+            "Lcom/facebook/cache/disk/DiskStorage$a;",
             ">;"
         }
     .end annotation
@@ -911,7 +911,7 @@
     .line 4
     iget-object v1, p0, Lcom/facebook/cache/disk/DefaultDiskStorage;->c:Ljava/io/File;
 
-    invoke-static {v1, v0}, Lcom/facebook/common/file/a;->a(Ljava/io/File;Lcom/facebook/common/file/b;)V
+    invoke-static {v1, v0}, Lcom/facebook/common/file/FileTree;->a(Ljava/io/File;Lcom/facebook/common/file/FileTreeVisitor;)V
 
     .line 5
     invoke-virtual {v0}, Lcom/facebook/cache/disk/DefaultDiskStorage$b;->a()Ljava/util/List;

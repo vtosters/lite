@@ -3,7 +3,7 @@
 .source "ReefProtocol.java"
 
 # interfaces
-.implements Lcom/vk/reef/protocol/g;
+.implements Lcom/vk/reef/protocol/ReefProtocol;
 
 
 # annotations
@@ -21,7 +21,7 @@
         "Lcom/vk/reef/protocol/ReefProtocol$ContentState;",
         "Lcom/vk/reef/protocol/ReefProtocol$ContentState$a;",
         ">;",
-        "Lcom/vk/reef/protocol/g;"
+        "Lcom/vk/reef/protocol/ReefProtocol;"
     }
 .end annotation
 
@@ -306,7 +306,7 @@
     .locals 11
 
     .line 26
-    sget-object v0, Lcom/vk/reef/protocol/a;->a:[I
+    sget-object v0, Lcom/vk/reef/protocol/ReefProtocol1;->a:[I
 
     invoke-virtual {p1}, Ljava/lang/Enum;->ordinal()I
 
@@ -783,7 +783,7 @@
     :pswitch_4
     new-instance p1, Lcom/vk/reef/protocol/ReefProtocol$ContentState$a;
 
-    invoke-direct {p1, v0}, Lcom/vk/reef/protocol/ReefProtocol$ContentState$a;-><init>(Lcom/vk/reef/protocol/a;)V
+    invoke-direct {p1, v0}, Lcom/vk/reef/protocol/ReefProtocol$ContentState$a;-><init>(Lcom/vk/reef/protocol/ReefProtocol1;)V
 
     return-object p1
 

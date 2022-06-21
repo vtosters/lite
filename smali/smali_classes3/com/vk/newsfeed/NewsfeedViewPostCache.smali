@@ -62,11 +62,11 @@
 
 
 # virtual methods
-.method public final a()Lio/reactivex/disposables/b;
+.method public final a()Lio/reactivex/disposables/Disposable;
     .locals 5
 
     .line 3
-    sget-object v0, Lcom/vk/common/j/a;->c:Lcom/vk/common/j/a;
+    sget-object v0, Lcom/vk/common/cache/SerializerCache;->c:Lcom/vk/common/cache/SerializerCache;
 
     const-string v1, "newsfeed:cache:view_post:ids"
 
@@ -76,7 +76,7 @@
 
     const/4 v4, 0x0
 
-    invoke-static {v0, v1, v2, v3, v4}, Lcom/vk/common/j/a;->a(Lcom/vk/common/j/a;Ljava/lang/String;ZILjava/lang/Object;)Lc/a/m;
+    invoke-static {v0, v1, v2, v3, v4}, Lcom/vk/common/cache/SerializerCache;->a(Lcom/vk/common/cache/SerializerCache;Ljava/lang/String;ZILjava/lang/Object;)Lio/reactivex/Observable;
 
     move-result-object v0
 
@@ -86,13 +86,13 @@
     sget-object v2, Lcom/vk/newsfeed/NewsfeedViewPostCache$b;->a:Lcom/vk/newsfeed/NewsfeedViewPostCache$b;
 
     .line 5
-    invoke-virtual {v0, v1, v2}, Lc/a/m;->a(Lc/a/z/g;Lc/a/z/g;)Lio/reactivex/disposables/b;
+    invoke-virtual {v0, v1, v2}, Lio/reactivex/Observable;->a(Lio/reactivex/functions/Consumer;Lio/reactivex/functions/Consumer;)Lio/reactivex/disposables/Disposable;
 
     move-result-object v0
 
     const-string v1, "SerializerCache.getSingl\u2026gException(it)\n        })"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     return-object v0
 .end method
@@ -114,13 +114,13 @@
     .locals 3
 
     .line 7
-    sget-object v0, Lcom/vk/common/j/a;->c:Lcom/vk/common/j/a;
+    sget-object v0, Lcom/vk/common/cache/SerializerCache;->c:Lcom/vk/common/cache/SerializerCache;
 
     sget-object v1, Lcom/vk/newsfeed/NewsfeedViewPostCache;->a:Lcom/vk/newsfeed/NewsfeedViewPostCache$SetWrapper;
 
     const-string v2, "newsfeed:cache:view_post:ids"
 
-    invoke-virtual {v0, v2, v1}, Lcom/vk/common/j/a;->a(Ljava/lang/String;Lcom/vk/core/serialize/Serializer$StreamParcelable;)V
+    invoke-virtual {v0, v2, v1}, Lcom/vk/common/cache/SerializerCache;->a(Ljava/lang/String;Lcom/vk/core/serialize/Serializer$StreamParcelable;)V
 
     return-void
 .end method

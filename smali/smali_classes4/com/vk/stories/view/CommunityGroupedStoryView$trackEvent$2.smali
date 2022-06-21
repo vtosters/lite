@@ -3,12 +3,12 @@
 .source "CommunityGroupedStoryView.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/b;
+.implements Lkotlin/jvm/b/Functions2;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/stories/view/CommunityGroupedStoryView;->a(Lcom/vk/dto/stories/model/StoryViewAction;Lkotlin/jvm/b/b;)V
+    value = Lcom/vk/stories/view/CommunityGroupedStoryView;->a(Lcom/vk/dto/stories/model/StoryViewAction;Lkotlin/jvm/b/Functions2;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -19,9 +19,9 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/b<",
-        "Lcom/vtosters/lite/data/n$l;",
-        "Lkotlin/m;",
+        "Lkotlin/jvm/b/Functions2<",
+        "Lcom/vtosters/lite/data/Analytics$l;",
+        "Lkotlin/Unit;",
         ">;"
     }
 .end annotation
@@ -30,14 +30,14 @@
 # instance fields
 .field final synthetic $eventType:Lcom/vk/dto/stories/model/StoryViewAction;
 
-.field final synthetic $withParams:Lkotlin/jvm/b/b;
+.field final synthetic $withParams:Lkotlin/jvm/b/Functions2;
 
 
 # direct methods
-.method constructor <init>(Lkotlin/jvm/b/b;Lcom/vk/dto/stories/model/StoryViewAction;)V
+.method constructor <init>(Lkotlin/jvm/b/Functions2;Lcom/vk/dto/stories/model/StoryViewAction;)V
     .locals 0
 
-    iput-object p1, p0, Lcom/vk/stories/view/CommunityGroupedStoryView$trackEvent$2;->$withParams:Lkotlin/jvm/b/b;
+    iput-object p1, p0, Lcom/vk/stories/view/CommunityGroupedStoryView$trackEvent$2;->$withParams:Lkotlin/jvm/b/Functions2;
 
     iput-object p2, p0, Lcom/vk/stories/view/CommunityGroupedStoryView$trackEvent$2;->$eventType:Lcom/vk/dto/stories/model/StoryViewAction;
 
@@ -50,19 +50,19 @@
 
 
 # virtual methods
-.method public final a(Lcom/vtosters/lite/data/n$l;)V
+.method public final a(Lcom/vtosters/lite/data/Analytics$l;)V
     .locals 2
 
     .line 1
-    iget-object v0, p0, Lcom/vk/stories/view/CommunityGroupedStoryView$trackEvent$2;->$withParams:Lkotlin/jvm/b/b;
+    iget-object v0, p0, Lcom/vk/stories/view/CommunityGroupedStoryView$trackEvent$2;->$withParams:Lkotlin/jvm/b/Functions2;
 
     if-eqz v0, :cond_0
 
-    invoke-interface {v0, p1}, Lkotlin/jvm/b/b;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v0, p1}, Lkotlin/jvm/b/Functions2;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v0
 
-    check-cast v0, Lkotlin/m;
+    check-cast v0, Lkotlin/Unit;
 
     .line 2
     :cond_0
@@ -70,7 +70,7 @@
 
     const-string v1, "group_feed"
 
-    invoke-static {p1, v1, v0}, Lcom/vk/stories/util/m;->a(Lcom/vtosters/lite/data/n$l;Ljava/lang/String;Lcom/vk/dto/stories/model/StoryViewAction;)Lcom/vtosters/lite/data/n$l;
+    invoke-static {p1, v1, v0}, Lcom/vk/stories/util/StoryAnalyticsEventBuilderExt;->a(Lcom/vtosters/lite/data/Analytics$l;Ljava/lang/String;Lcom/vk/dto/stories/model/StoryViewAction;)Lcom/vtosters/lite/data/Analytics$l;
 
     return-void
 .end method
@@ -79,11 +79,11 @@
     .locals 0
 
     .line 1
-    check-cast p1, Lcom/vtosters/lite/data/n$l;
+    check-cast p1, Lcom/vtosters/lite/data/Analytics$l;
 
-    invoke-virtual {p0, p1}, Lcom/vk/stories/view/CommunityGroupedStoryView$trackEvent$2;->a(Lcom/vtosters/lite/data/n$l;)V
+    invoke-virtual {p0, p1}, Lcom/vk/stories/view/CommunityGroupedStoryView$trackEvent$2;->a(Lcom/vtosters/lite/data/Analytics$l;)V
 
-    sget-object p1, Lkotlin/m;->a:Lkotlin/m;
+    sget-object p1, Lkotlin/Unit;->a:Lkotlin/Unit;
 
     return-object p1
 .end method

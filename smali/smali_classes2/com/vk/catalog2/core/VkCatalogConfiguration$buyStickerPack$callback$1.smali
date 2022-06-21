@@ -3,12 +3,12 @@
 .source "VkCatalogConfiguration.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/a;
+.implements Lkotlin/jvm/b/Functions;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/catalog2/core/VkCatalogConfiguration;->a(Lcom/vk/stickers/bridge/o;Lcom/vk/dto/stickers/StickerStockItem;)V
+    value = Lcom/vk/catalog2/core/VkCatalogConfiguration;->a(Lcom/vk/stickers/bridge/StickersBridge1;Lcom/vk/dto/stickers/StickerStockItem;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -19,8 +19,8 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/a<",
-        "Lkotlin/m;",
+        "Lkotlin/jvm/b/Functions<",
+        "Lkotlin/Unit;",
         ">;"
     }
 .end annotation
@@ -51,7 +51,7 @@
     .line 1
     invoke-virtual {p0}, Lcom/vk/catalog2/core/VkCatalogConfiguration$buyStickerPack$callback$1;->invoke()V
 
-    sget-object v0, Lkotlin/m;->a:Lkotlin/m;
+    sget-object v0, Lkotlin/Unit;->a:Lkotlin/Unit;
 
     return-object v0
 .end method
@@ -77,17 +77,17 @@
     if-nez v0, :cond_0
 
     .line 3
-    new-instance v0, Lcom/vk/stickers/d0/a;
+    new-instance v0, Lcom/vk/stickers/d0/StickerEvent1;
 
-    invoke-direct {v0}, Lcom/vk/stickers/d0/a;-><init>()V
+    invoke-direct {v0}, Lcom/vk/stickers/d0/StickerEvent1;-><init>()V
 
-    invoke-static {v0}, Lcom/vk/stickers/d0/h;->a(Lcom/vk/stickers/d0/f;)V
+    invoke-static {v0}, Lcom/vk/stickers/d0/StickersEventBus;->a(Lcom/vk/stickers/d0/StickerEvent6;)V
 
     goto :goto_0
 
     .line 4
     :cond_0
-    new-instance v0, Lcom/vk/stickers/d0/c;
+    new-instance v0, Lcom/vk/stickers/d0/StickerEvent2;
 
     iget-object v1, p0, Lcom/vk/catalog2/core/VkCatalogConfiguration$buyStickerPack$callback$1;->$pack:Lcom/vk/dto/stickers/StickerStockItem;
 
@@ -99,9 +99,9 @@
 
     move-result-object v1
 
-    invoke-direct {v0, v1}, Lcom/vk/stickers/d0/c;-><init>(Ljava/lang/String;)V
+    invoke-direct {v0, v1}, Lcom/vk/stickers/d0/StickerEvent2;-><init>(Ljava/lang/String;)V
 
-    invoke-static {v0}, Lcom/vk/stickers/d0/h;->a(Lcom/vk/stickers/d0/f;)V
+    invoke-static {v0}, Lcom/vk/stickers/d0/StickersEventBus;->a(Lcom/vk/stickers/d0/StickerEvent6;)V
 
     :goto_0
     return-void

@@ -32,7 +32,7 @@
     return-object p0
 .end method
 
-.method public static final a(Landroid/database/sqlite/SQLiteDatabase;Lkotlin/jvm/b/b;)Ljava/lang/Object;
+.method public static final a(Landroid/database/sqlite/SQLiteDatabase;Lkotlin/jvm/b/Functions2;)Ljava/lang/Object;
     .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -40,7 +40,7 @@
             "Ljava/lang/Object;",
             ">(",
             "Landroid/database/sqlite/SQLiteDatabase;",
-            "Lkotlin/jvm/b/b<",
+            "Lkotlin/jvm/b/Functions2<",
             "-",
             "Landroid/database/sqlite/SQLiteDatabase;",
             "+TR;>;)TR;"
@@ -52,7 +52,7 @@
 
     .line 4
     :try_start_0
-    invoke-interface {p1, p0}, Lkotlin/jvm/b/b;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {p1, p0}, Lkotlin/jvm/b/Functions2;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p1
 
@@ -82,7 +82,7 @@
 
     invoke-direct {v0, p0}, Lcom/vk/stat/storage/DatabaseStorageKt$dropAllTables$1;-><init>(Landroid/database/sqlite/SQLiteDatabase;)V
 
-    invoke-static {p0, v0}, Lcom/vk/stat/storage/DatabaseStorageKt;->a(Landroid/database/sqlite/SQLiteDatabase;Lkotlin/jvm/b/b;)Ljava/lang/Object;
+    invoke-static {p0, v0}, Lcom/vk/stat/storage/DatabaseStorageKt;->a(Landroid/database/sqlite/SQLiteDatabase;Lkotlin/jvm/b/Functions2;)Ljava/lang/Object;
 
     return-void
 .end method
@@ -101,7 +101,7 @@
 
     const-string p1, "getString(getColumnIndexOrThrow(column))"
 
-    invoke-static {p0, p1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p0, p1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     return-object p0
 .end method
@@ -171,12 +171,12 @@
 
     .line 8
     :cond_0
-    sget-object v2, Lkotlin/m;->a:Lkotlin/m;
+    sget-object v2, Lkotlin/Unit;->a:Lkotlin/Unit;
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
     .line 9
-    invoke-static {p0, v1}, Lkotlin/io/b;->a(Ljava/io/Closeable;Ljava/lang/Throwable;)V
+    invoke-static {p0, v1}, Lkotlin/io/Closeable;->a(Ljava/io/Closeable;Ljava/lang/Throwable;)V
 
     return-object v0
 
@@ -191,7 +191,7 @@
     :catchall_1
     move-exception v1
 
-    invoke-static {p0, v0}, Lkotlin/io/b;->a(Ljava/io/Closeable;Ljava/lang/Throwable;)V
+    invoke-static {p0, v0}, Lkotlin/io/Closeable;->a(Ljava/io/Closeable;Ljava/lang/Throwable;)V
 
     throw v1
 

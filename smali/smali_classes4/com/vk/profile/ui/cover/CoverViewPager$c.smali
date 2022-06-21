@@ -99,7 +99,7 @@
     :goto_0
     iget-object v2, p0, Lcom/vk/profile/ui/cover/CoverViewPager$c;->b:Lcom/vk/profile/ui/cover/CoverViewPager;
 
-    invoke-static {v0, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v0, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v0
 
@@ -116,7 +116,7 @@
 
     if-eqz v0, :cond_2
 
-    invoke-virtual {v0}, Lcom/vk/profile/data/cover/model/CommunityCoverModel;->j()Lb/h/g/t/c;
+    invoke-virtual {v0}, Lcom/vk/profile/data/cover/model/CommunityCoverModel;->j()Lb/h/g/t/ValidatorSet;
 
     move-result-object v0
 
@@ -124,7 +124,7 @@
 
     const/4 v3, 0x0
 
-    invoke-virtual {v0, v3, v2}, Lb/h/g/t/c;->a(IZ)V
+    invoke-virtual {v0, v3, v2}, Lb/h/g/t/ValidatorSet;->a(IZ)V
 
     .line 6
     :cond_2
@@ -148,7 +148,7 @@
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/vk/core/ui/infiniteviewpager/b;->getAdapterCurrentItem()I
+    invoke-virtual {v0}, Lcom/vk/core/ui/infiniteviewpager/InfiniteViewPager;->getAdapterCurrentItem()I
 
     move-result v0
 
@@ -205,7 +205,7 @@
     .line 11
     iget-object v0, p0, Lcom/vk/profile/ui/cover/CoverViewPager$c;->b:Lcom/vk/profile/ui/cover/CoverViewPager;
 
-    invoke-virtual {v0}, Lcom/vk/profile/ui/cover/CoverViewPager;->getAdapter()Lcom/vk/core/ui/infiniteviewpager/a;
+    invoke-virtual {v0}, Lcom/vk/profile/ui/cover/CoverViewPager;->getAdapter()Lcom/vk/core/ui/infiniteviewpager/InfinitePagerAdapter;
 
     move-result-object v0
 
@@ -213,7 +213,7 @@
 
     if-eqz v0, :cond_4
 
-    invoke-virtual {v0}, Lcom/vk/core/ui/infiniteviewpager/a;->a()I
+    invoke-virtual {v0}, Lcom/vk/core/ui/infiniteviewpager/InfinitePagerAdapter;->a()I
 
     move-result v0
 
@@ -248,13 +248,13 @@
     .line 13
     iget-object v0, p0, Lcom/vk/profile/ui/cover/CoverViewPager$c;->b:Lcom/vk/profile/ui/cover/CoverViewPager;
 
-    invoke-virtual {v0}, Lcom/vk/profile/ui/cover/CoverViewPager;->getAdapter()Lcom/vk/core/ui/infiniteviewpager/a;
+    invoke-virtual {v0}, Lcom/vk/profile/ui/cover/CoverViewPager;->getAdapter()Lcom/vk/core/ui/infiniteviewpager/InfinitePagerAdapter;
 
     move-result-object v0
 
     if-eqz v0, :cond_2
 
-    invoke-virtual {v0}, Lcom/vk/core/ui/infiniteviewpager/a;->a()I
+    invoke-virtual {v0}, Lcom/vk/core/ui/infiniteviewpager/InfinitePagerAdapter;->a()I
 
     move-result v0
 
@@ -295,7 +295,7 @@
 
     move-result-object p1
 
-    check-cast p1, Lcom/vk/profile/ui/cover/c;
+    check-cast p1, Lcom/vk/profile/ui/cover/CoverViewItem;
 
     if-eqz p1, :cond_1
 
@@ -303,16 +303,16 @@
 
     const-string v2, "it"
 
-    invoke-static {p1, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    invoke-virtual {v1, v0, p1}, Lcom/vk/profile/data/cover/model/CommunityCoverModel;->a(Lcom/vk/profile/ui/cover/CoverViewPager;Lcom/vk/profile/ui/cover/c;)V
+    invoke-virtual {v1, v0, p1}, Lcom/vk/profile/data/cover/model/CommunityCoverModel;->a(Lcom/vk/profile/ui/cover/CoverViewPager;Lcom/vk/profile/ui/cover/CoverViewItem;)V
 
     :cond_1
     return-void
 
     .line 17
     :cond_2
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     throw v1
 
@@ -322,7 +322,7 @@
 
     .line 18
     :cond_4
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     throw v1
 .end method
@@ -351,7 +351,7 @@
     :goto_0
     iget-object v1, p0, Lcom/vk/profile/ui/cover/CoverViewPager$c;->b:Lcom/vk/profile/ui/cover/CoverViewPager;
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v0
 
@@ -415,7 +415,7 @@
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/vk/core/ui/infiniteviewpager/b;->b()V
+    invoke-virtual {v0}, Lcom/vk/core/ui/infiniteviewpager/InfiniteViewPager;->b()V
 
     :cond_2
     return-void

@@ -72,7 +72,7 @@
         value = {
             "()",
             "Ljava/util/ArrayList<",
-            "Lcom/vk/menu/d;",
+            "Lcom/vk/menu/MenuViewItem;",
             ">;"
         }
     .end annotation
@@ -83,7 +83,7 @@
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
     .line 3
-    invoke-static {}, Lcom/vtosters/lite/j0/b;->e()Ljava/util/List;
+    invoke-static {}, Lcom/vtosters/lite/j0/Cache;->e()Ljava/util/List;
 
     move-result-object v1
 
@@ -93,7 +93,7 @@
 
     .line 4
     :cond_0
-    invoke-static {}, Lcom/vtosters/lite/j0/b;->f()Ljava/util/List;
+    invoke-static {}, Lcom/vtosters/lite/j0/Cache;->f()Ljava/util/List;
 
     move-result-object v1
 
@@ -123,16 +123,16 @@
     if-eqz v2, :cond_2
 
     .line 7
-    new-instance v2, Lcom/vk/menu/d;
+    new-instance v2, Lcom/vk/menu/MenuViewItem;
 
     const/4 v6, 0x3
 
     const/4 v7, 0x0
 
-    invoke-direct {v2, v6, v5, v7}, Lcom/vk/menu/d;-><init>(IILjava/lang/Object;)V
+    invoke-direct {v2, v6, v5, v7}, Lcom/vk/menu/MenuViewItem;-><init>(IILjava/lang/Object;)V
 
     .line 8
-    invoke-virtual {v2, v4}, Lcom/vk/menu/d;->a(I)V
+    invoke-virtual {v2, v4}, Lcom/vk/menu/MenuViewItem;->a(I)V
 
     .line 9
     invoke-interface {v1, v2}, Ljava/util/Collection;->add(Ljava/lang/Object;)Z
@@ -157,12 +157,12 @@
     check-cast v2, Lcom/vk/dto/user/BirthdayEntry;
 
     .line 11
-    new-instance v6, Lcom/vk/menu/d;
+    new-instance v6, Lcom/vk/menu/MenuViewItem;
 
-    invoke-direct {v6, v4, v5, v2}, Lcom/vk/menu/d;-><init>(IILjava/lang/Object;)V
+    invoke-direct {v6, v4, v5, v2}, Lcom/vk/menu/MenuViewItem;-><init>(IILjava/lang/Object;)V
 
     .line 12
-    invoke-virtual {v6, v3}, Lcom/vk/menu/d;->a(I)V
+    invoke-virtual {v6, v3}, Lcom/vk/menu/MenuViewItem;->a(I)V
 
     .line 13
     invoke-interface {v1, v6}, Ljava/util/Collection;->add(Ljava/lang/Object;)Z
@@ -175,13 +175,13 @@
 
     move-result-object v0
 
-    check-cast v0, Lcom/vk/menu/d;
+    check-cast v0, Lcom/vk/menu/MenuViewItem;
 
     if-eqz v0, :cond_4
 
     const/4 v2, 0x4
 
-    invoke-virtual {v0, v2}, Lcom/vk/menu/d;->a(I)V
+    invoke-virtual {v0, v2}, Lcom/vk/menu/MenuViewItem;->a(I)V
 
     :cond_4
     return-object v1

@@ -3,7 +3,7 @@
 .source "UserDetailsItemsFactory.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/b;
+.implements Lkotlin/jvm/b/Functions2;
 
 
 # annotations
@@ -19,7 +19,7 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/b<",
+        "Lkotlin/jvm/b/Functions2<",
         "Lcom/vtosters/lite/api/ExtendedUserProfile;",
         "Ljava/util/ArrayList<",
         "Lcom/vk/profile/adapter/BaseInfoItem;",
@@ -74,7 +74,7 @@
     if-lez v1, :cond_0
 
     .line 2
-    new-instance v1, Lcom/vk/profile/adapter/items/n;
+    new-instance v1, Lcom/vk/profile/adapter/items/DetailsHeaderItem;
 
     const v3, 0x7f1204d5
 
@@ -82,7 +82,7 @@
 
     move-result v0
 
-    invoke-static {v0}, Lcom/vk/core/util/b1;->c(I)Ljava/lang/String;
+    invoke-static {v0}, Lcom/vk/core/util/StringUtils;->c(I)Ljava/lang/String;
 
     move-result-object v4
 
@@ -94,7 +94,7 @@
 
     move-object v2, v1
 
-    invoke-direct/range {v2 .. v7}, Lcom/vk/profile/adapter/items/n;-><init>(ILjava/lang/String;Ljava/lang/Runnable;ILkotlin/jvm/internal/i;)V
+    invoke-direct/range {v2 .. v7}, Lcom/vk/profile/adapter/items/DetailsHeaderItem;-><init>(ILjava/lang/String;Ljava/lang/Runnable;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     .line 3
     new-instance v0, Lcom/vk/profile/adapter/factory/info_items/UserDetailsItemsFactory$gifts$1$a;
@@ -102,7 +102,7 @@
     invoke-direct {v0, p0, p1}, Lcom/vk/profile/adapter/factory/info_items/UserDetailsItemsFactory$gifts$1$a;-><init>(Lcom/vk/profile/adapter/factory/info_items/UserDetailsItemsFactory$gifts$1;Lcom/vtosters/lite/api/ExtendedUserProfile;)V
 
     .line 4
-    invoke-virtual {v1, v0}, Lcom/vk/profile/adapter/items/n;->a(Ljava/lang/Runnable;)V
+    invoke-virtual {v1, v0}, Lcom/vk/profile/adapter/items/DetailsHeaderItem;->a(Ljava/lang/Runnable;)V
 
     const/4 v2, 0x2
 
@@ -115,7 +115,7 @@
     const/4 v1, 0x1
 
     .line 5
-    new-instance v3, Lcom/vk/profile/adapter/items/m;
+    new-instance v3, Lcom/vk/profile/adapter/items/DetailsGiftsItem;
 
     iget-object v4, p0, Lcom/vk/profile/adapter/factory/info_items/UserDetailsItemsFactory$gifts$1;->this$0:Lcom/vk/profile/adapter/factory/info_items/UserDetailsItemsFactory;
 
@@ -123,7 +123,7 @@
 
     move-result-object v4
 
-    invoke-direct {v3, p1, v4, v0}, Lcom/vk/profile/adapter/items/m;-><init>(Lcom/vtosters/lite/api/ExtendedUserProfile;Lcom/vk/profile/presenter/UserPresenter;Ljava/lang/Runnable;)V
+    invoke-direct {v3, p1, v4, v0}, Lcom/vk/profile/adapter/items/DetailsGiftsItem;-><init>(Lcom/vtosters/lite/api/ExtendedUserProfile;Lcom/vk/profile/presenter/UserPresenter;Ljava/lang/Runnable;)V
 
     aput-object v3, v2, v1
 

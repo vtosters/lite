@@ -24,7 +24,7 @@
     return-void
 .end method
 
-.method public synthetic constructor <init>(Lkotlin/jvm/internal/i;)V
+.method public synthetic constructor <init>(Lkotlin/jvm/internal/DefaultConstructorMarker;)V
     .locals 0
 
     .line 2
@@ -37,11 +37,11 @@
     .locals 1
 
     .line 2
-    invoke-static {}, Lcom/vk/pushes/f;->a()Lcom/vk/pushes/e;
+    invoke-static {}, Lcom/vk/pushes/PushBridge1;->a()Lcom/vk/pushes/PushBridge;
 
     move-result-object v0
 
-    invoke-interface {v0}, Lcom/vk/pushes/e;->c()Z
+    invoke-interface {v0}, Lcom/vk/pushes/PushBridge;->c()Z
 
     move-result v0
 

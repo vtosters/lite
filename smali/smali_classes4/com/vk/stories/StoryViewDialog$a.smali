@@ -49,7 +49,7 @@
     .line 1
     iget-object v0, p0, Lcom/vk/stories/StoryViewDialog$a;->a:Lcom/vk/dto/stories/model/StoriesContainer;
 
-    invoke-static {v0}, Lcom/vk/dto/stories/d/a;->b(Lcom/vk/dto/stories/model/StoriesContainer;)Z
+    invoke-static {v0}, Lcom/vk/dto/stories/d/StoriesContainerExt;->b(Lcom/vk/dto/stories/model/StoriesContainer;)Z
 
     move-result v0
 
@@ -58,7 +58,7 @@
     .line 2
     iget-object v0, p0, Lcom/vk/stories/StoryViewDialog$a;->a:Lcom/vk/dto/stories/model/StoriesContainer;
 
-    invoke-static {v0}, Lcom/vk/dto/stories/d/a;->h(Lcom/vk/dto/stories/model/StoriesContainer;)Ljava/util/List;
+    invoke-static {v0}, Lcom/vk/dto/stories/d/StoriesContainerExt;->h(Lcom/vk/dto/stories/model/StoriesContainer;)Ljava/util/List;
 
     move-result-object v0
 

@@ -4,23 +4,23 @@
 
 
 # instance fields
-.field private a:Lc/a/m;
+.field private a:Lio/reactivex/Observable;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Lc/a/m<",
+            "Lio/reactivex/Observable<",
             "Ljava/util/List<",
-            "Lcom/vk/stories/d1/a;",
+            "Lcom/vk/stories/d1/StoryDialogItem;",
             ">;>;"
         }
     .end annotation
 .end field
 
-.field private final b:Lcom/vk/im/engine/a;
+.field private final b:Lcom/vk/im/engine/ImEngine;
 
-.field private final c:Lkotlin/jvm/b/a;
+.field private final c:Lkotlin/jvm/b/Functions;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Lkotlin/jvm/b/a<",
+            "Lkotlin/jvm/b/Functions<",
             "Ljava/util/Set<",
             "Ljava/lang/Integer;",
             ">;>;"
@@ -30,13 +30,13 @@
 
 
 # direct methods
-.method public constructor <init>(Lcom/vk/im/engine/a;Lkotlin/jvm/b/a;)V
+.method public constructor <init>(Lcom/vk/im/engine/ImEngine;Lkotlin/jvm/b/Functions;)V
     .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lcom/vk/im/engine/a;",
-            "Lkotlin/jvm/b/a<",
+            "Lcom/vk/im/engine/ImEngine;",
+            "Lkotlin/jvm/b/Functions<",
             "+",
             "Ljava/util/Set<",
             "Ljava/lang/Integer;",
@@ -47,27 +47,27 @@
     .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lcom/vk/stories/util/StoryChooseActivityLoader;->b:Lcom/vk/im/engine/a;
+    iput-object p1, p0, Lcom/vk/stories/util/StoryChooseActivityLoader;->b:Lcom/vk/im/engine/ImEngine;
 
-    iput-object p2, p0, Lcom/vk/stories/util/StoryChooseActivityLoader;->c:Lkotlin/jvm/b/a;
+    iput-object p2, p0, Lcom/vk/stories/util/StoryChooseActivityLoader;->c:Lkotlin/jvm/b/Functions;
 
     return-void
 .end method
 
-.method private final a(I)Lc/a/m;
+.method private final a(I)Lio/reactivex/Observable;
     .locals 4
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(I)",
-            "Lc/a/m<",
+            "Lio/reactivex/Observable<",
             "Ljava/util/List<",
-            "Lcom/vk/stories/d1/a;",
+            "Lcom/vk/stories/d1/StoryDialogItem;",
             ">;>;"
         }
     .end annotation
 
     .line 36
-    iget-object v0, p0, Lcom/vk/stories/util/StoryChooseActivityLoader;->b:Lcom/vk/im/engine/a;
+    iget-object v0, p0, Lcom/vk/stories/util/StoryChooseActivityLoader;->b:Lcom/vk/im/engine/ImEngine;
 
     new-instance v1, Lcom/vk/im/engine/commands/contacts/HintsGetCmd;
 
@@ -79,12 +79,12 @@
 
     const-string p1, "StoryShare"
 
-    invoke-virtual {v0, p1, v1}, Lcom/vk/im/engine/a;->c(Ljava/lang/Object;Lcom/vk/im/engine/i/c;)Lc/a/t;
+    invoke-virtual {v0, p1, v1}, Lcom/vk/im/engine/ImEngine;->c(Ljava/lang/Object;Lcom/vk/im/engine/i/ImEngineCmd;)Lio/reactivex/Single;
 
     move-result-object p1
 
     .line 37
-    invoke-virtual {p1}, Lc/a/t;->c()Lc/a/m;
+    invoke-virtual {p1}, Lio/reactivex/Single;->c()Lio/reactivex/Observable;
 
     move-result-object p1
 
@@ -93,29 +93,29 @@
 
     invoke-direct {v0, p0}, Lcom/vk/stories/util/StoryChooseActivityLoader$createHintsObservable$1;-><init>(Lcom/vk/stories/util/StoryChooseActivityLoader;)V
 
-    new-instance v1, Lcom/vk/stories/util/o;
+    new-instance v1, Lcom/vk/stories/util/StoryChooseActivityLoader1;
 
-    invoke-direct {v1, v0}, Lcom/vk/stories/util/o;-><init>(Lkotlin/jvm/b/b;)V
+    invoke-direct {v1, v0}, Lcom/vk/stories/util/StoryChooseActivityLoader1;-><init>(Lkotlin/jvm/b/Functions2;)V
 
-    invoke-virtual {p1, v1}, Lc/a/m;->e(Lc/a/z/j;)Lc/a/m;
+    invoke-virtual {p1, v1}, Lio/reactivex/Observable;->e(Lio/reactivex/functions/Function;)Lio/reactivex/Observable;
 
     move-result-object p1
 
     const-string v0, "imEngine.submitSingle<Li\u2026      .map(::createItems)"
 
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     return-object p1
 .end method
 
-.method private final a(Lcom/vk/dto/stories/model/CommonUploadParams;)Lc/a/m;
+.method private final a(Lcom/vk/dto/stories/model/CommonUploadParams;)Lio/reactivex/Observable;
     .locals 2
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
             "Lcom/vk/dto/stories/model/CommonUploadParams;",
             ")",
-            "Lc/a/m<",
+            "Lio/reactivex/Observable<",
             "Ljava/util/List<",
             "Lcom/vk/dto/group/Group;",
             ">;>;"
@@ -123,9 +123,9 @@
     .end annotation
 
     .line 57
-    sget-object v0, Lcom/vk/stories/a1/d;->e:Lcom/vk/stories/a1/d;
+    sget-object v0, Lcom/vk/stories/a1/StoryGroups;->e:Lcom/vk/stories/a1/StoryGroups;
 
-    invoke-virtual {v0}, Lcom/vk/stories/a1/d;->c()Lc/a/m;
+    invoke-virtual {v0}, Lcom/vk/stories/a1/StoryGroups;->c()Lio/reactivex/Observable;
 
     move-result-object v0
 
@@ -133,45 +133,45 @@
 
     invoke-direct {v1, p1}, Lcom/vk/stories/util/StoryChooseActivityLoader$c;-><init>(Lcom/vk/dto/stories/model/CommonUploadParams;)V
 
-    invoke-virtual {v0, v1}, Lc/a/m;->e(Lc/a/z/j;)Lc/a/m;
+    invoke-virtual {v0, v1}, Lio/reactivex/Observable;->e(Lio/reactivex/functions/Function;)Lio/reactivex/Observable;
 
     move-result-object p1
 
     const-string v0, "StoryGroups.loadData().m\u2026   filterGroups\n        }"
 
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     return-object p1
 .end method
 
-.method public static final synthetic a(Lcom/vk/stories/util/StoryChooseActivityLoader;Ljava/util/List;I)Lc/a/m;
+.method public static final synthetic a(Lcom/vk/stories/util/StoryChooseActivityLoader;Ljava/util/List;I)Lio/reactivex/Observable;
     .locals 0
 
     .line 1
-    invoke-direct {p0, p1, p2}, Lcom/vk/stories/util/StoryChooseActivityLoader;->a(Ljava/util/List;I)Lc/a/m;
+    invoke-direct {p0, p1, p2}, Lcom/vk/stories/util/StoryChooseActivityLoader;->a(Ljava/util/List;I)Lio/reactivex/Observable;
 
     move-result-object p0
 
     return-object p0
 .end method
 
-.method private final a(Ljava/util/List;I)Lc/a/m;
+.method private final a(Ljava/util/List;I)Lio/reactivex/Observable;
     .locals 2
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
             "Ljava/util/List<",
-            "Lcom/vk/stories/d1/a;",
+            "Lcom/vk/stories/d1/StoryDialogItem;",
             ">;I)",
-            "Lc/a/m<",
+            "Lio/reactivex/Observable<",
             "Ljava/util/List<",
-            "Lcom/vk/stories/d1/a;",
+            "Lcom/vk/stories/d1/StoryDialogItem;",
             ">;>;"
         }
     .end annotation
 
     .line 34
-    invoke-direct {p0, p2}, Lcom/vk/stories/util/StoryChooseActivityLoader;->a(I)Lc/a/m;
+    invoke-direct {p0, p2}, Lcom/vk/stories/util/StoryChooseActivityLoader;->a(I)Lio/reactivex/Observable;
 
     move-result-object v0
 
@@ -180,37 +180,37 @@
 
     invoke-direct {v1, p1, p2}, Lcom/vk/stories/util/StoryChooseActivityLoader$a;-><init>(Ljava/util/List;I)V
 
-    invoke-virtual {v0, v1}, Lc/a/m;->e(Lc/a/z/j;)Lc/a/m;
+    invoke-virtual {v0, v1}, Lio/reactivex/Observable;->e(Lio/reactivex/functions/Function;)Lio/reactivex/Observable;
 
     move-result-object p1
 
     const-string p2, "createHintsObservable(pa\u2026nedList\n                }"
 
-    invoke-static {p1, p2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, p2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     return-object p1
 .end method
 
-.method private final a(Lcom/vk/im/engine/commands/contacts/m$a;)Ljava/util/List;
+.method private final a(Lcom/vk/im/engine/commands/contacts/RecentDialogsGetCmd$a;)Ljava/util/List;
     .locals 6
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lcom/vk/im/engine/commands/contacts/m$a;",
+            "Lcom/vk/im/engine/commands/contacts/RecentDialogsGetCmd$a;",
             ")",
             "Ljava/util/List<",
-            "Lcom/vk/stories/d1/a;",
+            "Lcom/vk/stories/d1/StoryDialogItem;",
             ">;"
         }
     .end annotation
 
     .line 47
-    invoke-virtual {p1}, Lcom/vk/im/engine/commands/contacts/m$a;->a()Ljava/util/List;
+    invoke-virtual {p1}, Lcom/vk/im/engine/commands/contacts/RecentDialogsGetCmd$a;->a()Ljava/util/List;
 
     move-result-object v0
 
     .line 48
-    invoke-virtual {p1}, Lcom/vk/im/engine/commands/contacts/m$a;->b()Lcom/vk/im/engine/models/ProfilesInfo;
+    invoke-virtual {p1}, Lcom/vk/im/engine/commands/contacts/RecentDialogsGetCmd$a;->b()Lcom/vk/im/engine/models/ProfilesInfo;
 
     move-result-object p1
 
@@ -242,7 +242,7 @@
     check-cast v2, Lcom/vk/im/engine/models/dialogs/Dialog;
 
     .line 51
-    sget-object v3, Lcom/vk/stories/d1/a;->f:Lcom/vk/stories/d1/a$a;
+    sget-object v3, Lcom/vk/stories/d1/StoryDialogItem;->f:Lcom/vk/stories/d1/StoryDialogItem$a;
 
     invoke-direct {p0}, Lcom/vk/stories/util/StoryChooseActivityLoader;->b()Ljava/util/Set;
 
@@ -260,7 +260,7 @@
 
     move-result v4
 
-    invoke-virtual {v3, v2, p1, v4}, Lcom/vk/stories/d1/a$a;->a(Lcom/vk/im/engine/models/dialogs/Dialog;Lcom/vk/im/engine/models/ProfilesInfo;Z)Lcom/vk/stories/d1/a;
+    invoke-virtual {v3, v2, p1, v4}, Lcom/vk/stories/d1/StoryDialogItem$a;->a(Lcom/vk/im/engine/models/dialogs/Dialog;Lcom/vk/im/engine/models/ProfilesInfo;Z)Lcom/vk/stories/d1/StoryDialogItem;
 
     move-result-object v2
 
@@ -280,7 +280,7 @@
             "Lcom/vk/im/engine/commands/messages/MsgSearchExtCmd$a;",
             ")",
             "Ljava/util/List<",
-            "Lcom/vk/stories/d1/a;",
+            "Lcom/vk/stories/d1/StoryDialogItem;",
             ">;"
         }
     .end annotation
@@ -323,7 +323,7 @@
     check-cast v2, Lcom/vk/im/engine/models/dialogs/Dialog;
 
     .line 46
-    sget-object v3, Lcom/vk/stories/d1/a;->f:Lcom/vk/stories/d1/a$a;
+    sget-object v3, Lcom/vk/stories/d1/StoryDialogItem;->f:Lcom/vk/stories/d1/StoryDialogItem$a;
 
     invoke-direct {p0}, Lcom/vk/stories/util/StoryChooseActivityLoader;->b()Ljava/util/Set;
 
@@ -341,7 +341,7 @@
 
     move-result v4
 
-    invoke-virtual {v3, v2, p1, v4}, Lcom/vk/stories/d1/a$a;->a(Lcom/vk/im/engine/models/dialogs/Dialog;Lcom/vk/im/engine/models/ProfilesSimpleInfo;Z)Lcom/vk/stories/d1/a;
+    invoke-virtual {v3, v2, p1, v4}, Lcom/vk/stories/d1/StoryDialogItem$a;->a(Lcom/vk/im/engine/models/dialogs/Dialog;Lcom/vk/im/engine/models/ProfilesSimpleInfo;Z)Lcom/vk/stories/d1/StoryDialogItem;
 
     move-result-object v2
 
@@ -353,28 +353,28 @@
     return-object v1
 .end method
 
-.method private final a(Lcom/vk/im/engine/models/dialogs/h;)Ljava/util/List;
+.method private final a(Lcom/vk/im/engine/models/dialogs/DialogsHistoryExt;)Ljava/util/List;
     .locals 6
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lcom/vk/im/engine/models/dialogs/h;",
+            "Lcom/vk/im/engine/models/dialogs/DialogsHistoryExt;",
             ")",
             "Ljava/util/List<",
-            "Lcom/vk/stories/d1/a;",
+            "Lcom/vk/stories/d1/StoryDialogItem;",
             ">;"
         }
     .end annotation
 
     .line 52
-    invoke-virtual {p1}, Lcom/vk/im/engine/models/dialogs/h;->a()Lcom/vk/im/engine/models/dialogs/DialogsHistory;
+    invoke-virtual {p1}, Lcom/vk/im/engine/models/dialogs/DialogsHistoryExt;->a()Lcom/vk/im/engine/models/dialogs/DialogsHistory;
 
     move-result-object v0
 
-    iget-object v0, v0, Lcom/vk/im/engine/models/d;->list:Ljava/util/List;
+    iget-object v0, v0, Lcom/vk/im/engine/models/History;->list:Ljava/util/List;
 
     .line 53
-    invoke-virtual {p1}, Lcom/vk/im/engine/models/dialogs/h;->b()Lcom/vk/im/engine/models/ProfilesInfo;
+    invoke-virtual {p1}, Lcom/vk/im/engine/models/dialogs/DialogsHistoryExt;->b()Lcom/vk/im/engine/models/ProfilesInfo;
 
     move-result-object p1
 
@@ -406,11 +406,11 @@
     check-cast v2, Lcom/vk/im/engine/models/dialogs/Dialog;
 
     .line 56
-    sget-object v3, Lcom/vk/stories/d1/a;->f:Lcom/vk/stories/d1/a$a;
+    sget-object v3, Lcom/vk/stories/d1/StoryDialogItem;->f:Lcom/vk/stories/d1/StoryDialogItem$a;
 
     const-string v4, "dialog"
 
-    invoke-static {v2, v4}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v2, v4}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-direct {p0}, Lcom/vk/stories/util/StoryChooseActivityLoader;->b()Ljava/util/Set;
 
@@ -428,7 +428,7 @@
 
     move-result v4
 
-    invoke-virtual {v3, v2, p1, v4}, Lcom/vk/stories/d1/a$a;->a(Lcom/vk/im/engine/models/dialogs/Dialog;Lcom/vk/im/engine/models/ProfilesInfo;Z)Lcom/vk/stories/d1/a;
+    invoke-virtual {v3, v2, p1, v4}, Lcom/vk/stories/d1/StoryDialogItem$a;->a(Lcom/vk/im/engine/models/dialogs/Dialog;Lcom/vk/im/engine/models/ProfilesInfo;Z)Lcom/vk/stories/d1/StoryDialogItem;
 
     move-result-object v2
 
@@ -440,11 +440,11 @@
     return-object v1
 .end method
 
-.method public static final synthetic a(Lcom/vk/stories/util/StoryChooseActivityLoader;Lcom/vk/im/engine/commands/contacts/m$a;)Ljava/util/List;
+.method public static final synthetic a(Lcom/vk/stories/util/StoryChooseActivityLoader;Lcom/vk/im/engine/commands/contacts/RecentDialogsGetCmd$a;)Ljava/util/List;
     .locals 0
 
     .line 2
-    invoke-direct {p0, p1}, Lcom/vk/stories/util/StoryChooseActivityLoader;->a(Lcom/vk/im/engine/commands/contacts/m$a;)Ljava/util/List;
+    invoke-direct {p0, p1}, Lcom/vk/stories/util/StoryChooseActivityLoader;->a(Lcom/vk/im/engine/commands/contacts/RecentDialogsGetCmd$a;)Ljava/util/List;
 
     move-result-object p0
 
@@ -462,11 +462,11 @@
     return-object p0
 .end method
 
-.method public static final synthetic a(Lcom/vk/stories/util/StoryChooseActivityLoader;Lcom/vk/im/engine/models/dialogs/h;)Ljava/util/List;
+.method public static final synthetic a(Lcom/vk/stories/util/StoryChooseActivityLoader;Lcom/vk/im/engine/models/dialogs/DialogsHistoryExt;)Ljava/util/List;
     .locals 0
 
     .line 4
-    invoke-direct {p0, p1}, Lcom/vk/stories/util/StoryChooseActivityLoader;->a(Lcom/vk/im/engine/models/dialogs/h;)Ljava/util/List;
+    invoke-direct {p0, p1}, Lcom/vk/stories/util/StoryChooseActivityLoader;->a(Lcom/vk/im/engine/models/dialogs/DialogsHistoryExt;)Ljava/util/List;
 
     move-result-object p0
 
@@ -491,10 +491,10 @@
             "(",
             "Ljava/util/List<",
             "+",
-            "Lcom/vk/im/engine/models/j;",
+            "Lcom/vk/im/engine/models/Profile;",
             ">;)",
             "Ljava/util/List<",
-            "Lcom/vk/stories/d1/a;",
+            "Lcom/vk/stories/d1/StoryDialogItem;",
             ">;"
         }
     .end annotation
@@ -524,16 +524,16 @@
 
     move-result-object v1
 
-    check-cast v1, Lcom/vk/im/engine/models/j;
+    check-cast v1, Lcom/vk/im/engine/models/Profile;
 
     .line 41
-    sget-object v2, Lcom/vk/stories/d1/a;->f:Lcom/vk/stories/d1/a$a;
+    sget-object v2, Lcom/vk/stories/d1/StoryDialogItem;->f:Lcom/vk/stories/d1/StoryDialogItem$a;
 
     invoke-direct {p0}, Lcom/vk/stories/util/StoryChooseActivityLoader;->b()Ljava/util/Set;
 
     move-result-object v3
 
-    invoke-interface {v1}, Lcom/vk/im/engine/models/j;->f0()I
+    invoke-interface {v1}, Lcom/vk/im/engine/models/Profile;->f0()I
 
     move-result v4
 
@@ -545,7 +545,7 @@
 
     move-result v3
 
-    invoke-virtual {v2, v1, v3}, Lcom/vk/stories/d1/a$a;->a(Lcom/vk/im/engine/models/j;Z)Lcom/vk/stories/d1/a;
+    invoke-virtual {v2, v1, v3}, Lcom/vk/stories/d1/StoryDialogItem$a;->a(Lcom/vk/im/engine/models/Profile;Z)Lcom/vk/stories/d1/StoryDialogItem;
 
     move-result-object v1
 
@@ -569,9 +569,9 @@
     .end annotation
 
     .line 1
-    iget-object v0, p0, Lcom/vk/stories/util/StoryChooseActivityLoader;->c:Lkotlin/jvm/b/a;
+    iget-object v0, p0, Lcom/vk/stories/util/StoryChooseActivityLoader;->c:Lkotlin/jvm/b/Functions;
 
-    invoke-interface {v0}, Lkotlin/jvm/b/a;->invoke()Ljava/lang/Object;
+    invoke-interface {v0}, Lkotlin/jvm/b/Functions;->invoke()Ljava/lang/Object;
 
     move-result-object v0
 
@@ -582,7 +582,7 @@
 
 
 # virtual methods
-.method public final a(ILcom/vk/dto/stories/model/CommonUploadParams;Ljava/lang/String;I)Lc/a/m;
+.method public final a(ILcom/vk/dto/stories/model/CommonUploadParams;Ljava/lang/String;I)Lio/reactivex/Observable;
     .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -590,28 +590,28 @@
             "Lcom/vk/dto/stories/model/CommonUploadParams;",
             "Ljava/lang/String;",
             "I)",
-            "Lc/a/m<",
-            "Lcom/vk/stories/e1/a;",
+            "Lio/reactivex/Observable<",
+            "Lcom/vk/stories/e1/StoryReceiverTarget;",
             ">;"
         }
     .end annotation
 
     .line 29
-    invoke-virtual {p0, p3, p1, p4}, Lcom/vk/stories/util/StoryChooseActivityLoader;->a(Ljava/lang/String;II)Lc/a/m;
+    invoke-virtual {p0, p3, p1, p4}, Lcom/vk/stories/util/StoryChooseActivityLoader;->a(Ljava/lang/String;II)Lio/reactivex/Observable;
 
     move-result-object p3
 
     if-nez p1, :cond_0
 
     .line 30
-    invoke-direct {p0, p2}, Lcom/vk/stories/util/StoryChooseActivityLoader;->a(Lcom/vk/dto/stories/model/CommonUploadParams;)Lc/a/m;
+    invoke-direct {p0, p2}, Lcom/vk/stories/util/StoryChooseActivityLoader;->a(Lcom/vk/dto/stories/model/CommonUploadParams;)Lio/reactivex/Observable;
 
     move-result-object p2
 
     goto :goto_0
 
     :cond_0
-    invoke-static {}, Lc/a/m;->l()Lc/a/m;
+    invoke-static {}, Lio/reactivex/Observable;->l()Lio/reactivex/Observable;
 
     move-result-object p2
 
@@ -622,27 +622,27 @@
     invoke-direct {p4, p1}, Lcom/vk/stories/util/StoryChooseActivityLoader$d;-><init>(I)V
 
     .line 32
-    invoke-static {p3, p2, p4}, Lc/a/m;->b(Lc/a/p;Lc/a/p;Lc/a/z/c;)Lc/a/m;
+    invoke-static {p3, p2, p4}, Lio/reactivex/Observable;->b(Lio/reactivex/ObservableSource;Lio/reactivex/ObservableSource;Lio/reactivex/functions/BiFunction;)Lio/reactivex/Observable;
 
     move-result-object p1
 
     const-string p2, "Observable.zip(\n        \u2026              }\n        )"
 
-    invoke-static {p1, p2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, p2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     return-object p1
 .end method
 
-.method public final a(Ljava/lang/String;II)Lc/a/m;
+.method public final a(Ljava/lang/String;II)Lio/reactivex/Observable;
     .locals 13
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
             "Ljava/lang/String;",
             "II)",
-            "Lc/a/m<",
+            "Lio/reactivex/Observable<",
             "Ljava/util/List<",
-            "Lcom/vk/stories/d1/a;",
+            "Lcom/vk/stories/d1/StoryDialogItem;",
             ">;>;"
         }
     .end annotation
@@ -677,7 +677,7 @@
     if-eqz v10, :cond_2
 
     .line 7
-    iget-object v3, v0, Lcom/vk/stories/util/StoryChooseActivityLoader;->a:Lc/a/m;
+    iget-object v3, v0, Lcom/vk/stories/util/StoryChooseActivityLoader;->a:Lio/reactivex/Observable;
 
     if-eqz v3, :cond_2
 
@@ -687,7 +687,7 @@
 
     .line 8
     :cond_1
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     throw v1
 
@@ -725,14 +725,14 @@
     invoke-direct/range {v1 .. v9}, Lcom/vk/im/engine/commands/messages/MsgSearchExtCmd;-><init>(Ljava/lang/String;Lcom/vk/im/engine/models/Source;Lcom/vk/im/engine/models/SearchMode;IILjava/lang/Long;Ljava/lang/Integer;Z)V
 
     .line 11
-    iget-object v1, v0, Lcom/vk/stories/util/StoryChooseActivityLoader;->b:Lcom/vk/im/engine/a;
+    iget-object v1, v0, Lcom/vk/stories/util/StoryChooseActivityLoader;->b:Lcom/vk/im/engine/ImEngine;
 
-    invoke-virtual {v1, v11, v12}, Lcom/vk/im/engine/a;->c(Ljava/lang/Object;Lcom/vk/im/engine/i/c;)Lc/a/t;
+    invoke-virtual {v1, v11, v12}, Lcom/vk/im/engine/ImEngine;->c(Ljava/lang/Object;Lcom/vk/im/engine/i/ImEngineCmd;)Lio/reactivex/Single;
 
     move-result-object v1
 
     .line 12
-    invoke-virtual {v1}, Lc/a/t;->c()Lc/a/m;
+    invoke-virtual {v1}, Lio/reactivex/Single;->c()Lio/reactivex/Observable;
 
     move-result-object v1
 
@@ -741,17 +741,17 @@
 
     invoke-direct {v2, p0}, Lcom/vk/stories/util/StoryChooseActivityLoader$loadDialogs$1;-><init>(Lcom/vk/stories/util/StoryChooseActivityLoader;)V
 
-    new-instance v3, Lcom/vk/stories/util/o;
+    new-instance v3, Lcom/vk/stories/util/StoryChooseActivityLoader1;
 
-    invoke-direct {v3, v2}, Lcom/vk/stories/util/o;-><init>(Lkotlin/jvm/b/b;)V
+    invoke-direct {v3, v2}, Lcom/vk/stories/util/StoryChooseActivityLoader1;-><init>(Lkotlin/jvm/b/Functions2;)V
 
-    invoke-virtual {v1, v3}, Lc/a/m;->e(Lc/a/z/j;)Lc/a/m;
+    invoke-virtual {v1, v3}, Lio/reactivex/Observable;->e(Lio/reactivex/functions/Function;)Lio/reactivex/Observable;
 
     move-result-object v1
 
     const-string v2, "imEngine.submitSingle<Ms\u2026      .map(::createItems)"
 
-    invoke-static {v1, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     goto/16 :goto_1
 
@@ -759,27 +759,27 @@
     const-string v4, "recent"
 
     .line 14
-    invoke-static {v3, v4}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v3, v4}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v4
 
     if-eqz v4, :cond_4
 
     .line 15
-    iget-object v3, v0, Lcom/vk/stories/util/StoryChooseActivityLoader;->b:Lcom/vk/im/engine/a;
+    iget-object v3, v0, Lcom/vk/stories/util/StoryChooseActivityLoader;->b:Lcom/vk/im/engine/ImEngine;
 
-    new-instance v4, Lcom/vk/im/engine/commands/contacts/m;
+    new-instance v4, Lcom/vk/im/engine/commands/contacts/RecentDialogsGetCmd;
 
     sget-object v6, Lcom/vk/im/engine/models/Source;->ACTUAL:Lcom/vk/im/engine/models/Source;
 
-    invoke-direct {v4, v5, v6, v2, v1}, Lcom/vk/im/engine/commands/contacts/m;-><init>(ILcom/vk/im/engine/models/Source;ZLjava/lang/Object;)V
+    invoke-direct {v4, v5, v6, v2, v1}, Lcom/vk/im/engine/commands/contacts/RecentDialogsGetCmd;-><init>(ILcom/vk/im/engine/models/Source;ZLjava/lang/Object;)V
 
-    invoke-virtual {v3, v11, v4}, Lcom/vk/im/engine/a;->c(Ljava/lang/Object;Lcom/vk/im/engine/i/c;)Lc/a/t;
+    invoke-virtual {v3, v11, v4}, Lcom/vk/im/engine/ImEngine;->c(Ljava/lang/Object;Lcom/vk/im/engine/i/ImEngineCmd;)Lio/reactivex/Single;
 
     move-result-object v1
 
     .line 16
-    invoke-virtual {v1}, Lc/a/t;->c()Lc/a/m;
+    invoke-virtual {v1}, Lio/reactivex/Single;->c()Lio/reactivex/Observable;
 
     move-result-object v1
 
@@ -788,11 +788,11 @@
 
     invoke-direct {v2, p0}, Lcom/vk/stories/util/StoryChooseActivityLoader$loadDialogs$2;-><init>(Lcom/vk/stories/util/StoryChooseActivityLoader;)V
 
-    new-instance v3, Lcom/vk/stories/util/o;
+    new-instance v3, Lcom/vk/stories/util/StoryChooseActivityLoader1;
 
-    invoke-direct {v3, v2}, Lcom/vk/stories/util/o;-><init>(Lkotlin/jvm/b/b;)V
+    invoke-direct {v3, v2}, Lcom/vk/stories/util/StoryChooseActivityLoader1;-><init>(Lkotlin/jvm/b/Functions2;)V
 
-    invoke-virtual {v1, v3}, Lc/a/m;->e(Lc/a/z/j;)Lc/a/m;
+    invoke-virtual {v1, v3}, Lio/reactivex/Observable;->e(Lio/reactivex/functions/Function;)Lio/reactivex/Observable;
 
     move-result-object v1
 
@@ -801,13 +801,13 @@
 
     invoke-direct {v2, p0, v5}, Lcom/vk/stories/util/StoryChooseActivityLoader$b;-><init>(Lcom/vk/stories/util/StoryChooseActivityLoader;I)V
 
-    invoke-virtual {v1, v2}, Lc/a/m;->c(Lc/a/z/j;)Lc/a/m;
+    invoke-virtual {v1, v2}, Lio/reactivex/Observable;->c(Lio/reactivex/functions/Function;)Lio/reactivex/Observable;
 
     move-result-object v1
 
     const-string v2, "imEngine.submitSingle<Re\u2026MoreHints(it, pageSize) }"
 
-    invoke-static {v1, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     goto :goto_1
 
@@ -815,18 +815,18 @@
     const-string v1, "last_dialogs"
 
     .line 19
-    invoke-static {v3, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v3, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v1
 
     if-eqz v1, :cond_5
 
     .line 20
-    new-instance v8, Lcom/vk/im/engine/commands/dialogs/w;
+    new-instance v8, Lcom/vk/im/engine/commands/dialogs/DialogsHistoryGetArgs;
 
-    sget-object v1, Lcom/vk/im/engine/models/q;->d:Lcom/vk/im/engine/models/q$a;
+    sget-object v1, Lcom/vk/im/engine/models/Weight;->d:Lcom/vk/im/engine/models/Weight$a;
 
-    invoke-virtual {v1}, Lcom/vk/im/engine/models/q$a;->c()Lcom/vk/im/engine/models/q;
+    invoke-virtual {v1}, Lcom/vk/im/engine/models/Weight$a;->c()Lcom/vk/im/engine/models/Weight;
 
     move-result-object v2
 
@@ -850,21 +850,21 @@
     move-object v7, v9
 
     .line 22
-    invoke-direct/range {v1 .. v7}, Lcom/vk/im/engine/commands/dialogs/w;-><init>(Lcom/vk/im/engine/models/q;Lcom/vk/im/engine/models/dialogs/DialogsFilter;ILcom/vk/im/engine/models/Source;ZLjava/lang/Object;)V
+    invoke-direct/range {v1 .. v7}, Lcom/vk/im/engine/commands/dialogs/DialogsHistoryGetArgs;-><init>(Lcom/vk/im/engine/models/Weight;Lcom/vk/im/engine/models/dialogs/DialogsFilter;ILcom/vk/im/engine/models/Source;ZLjava/lang/Object;)V
 
     .line 23
-    iget-object v1, v0, Lcom/vk/stories/util/StoryChooseActivityLoader;->b:Lcom/vk/im/engine/a;
+    iget-object v1, v0, Lcom/vk/stories/util/StoryChooseActivityLoader;->b:Lcom/vk/im/engine/ImEngine;
 
-    new-instance v2, Lcom/vk/im/engine/commands/dialogs/v;
+    new-instance v2, Lcom/vk/im/engine/commands/dialogs/DialogsHistoryExtGetCmd;
 
-    invoke-direct {v2, v8}, Lcom/vk/im/engine/commands/dialogs/v;-><init>(Lcom/vk/im/engine/commands/dialogs/w;)V
+    invoke-direct {v2, v8}, Lcom/vk/im/engine/commands/dialogs/DialogsHistoryExtGetCmd;-><init>(Lcom/vk/im/engine/commands/dialogs/DialogsHistoryGetArgs;)V
 
-    invoke-virtual {v1, v11, v2}, Lcom/vk/im/engine/a;->c(Ljava/lang/Object;Lcom/vk/im/engine/i/c;)Lc/a/t;
+    invoke-virtual {v1, v11, v2}, Lcom/vk/im/engine/ImEngine;->c(Ljava/lang/Object;Lcom/vk/im/engine/i/ImEngineCmd;)Lio/reactivex/Single;
 
     move-result-object v1
 
     .line 24
-    invoke-virtual {v1}, Lc/a/t;->c()Lc/a/m;
+    invoke-virtual {v1}, Lio/reactivex/Single;->c()Lio/reactivex/Observable;
 
     move-result-object v1
 
@@ -873,23 +873,23 @@
 
     invoke-direct {v2, p0}, Lcom/vk/stories/util/StoryChooseActivityLoader$loadDialogs$4;-><init>(Lcom/vk/stories/util/StoryChooseActivityLoader;)V
 
-    new-instance v3, Lcom/vk/stories/util/o;
+    new-instance v3, Lcom/vk/stories/util/StoryChooseActivityLoader1;
 
-    invoke-direct {v3, v2}, Lcom/vk/stories/util/o;-><init>(Lkotlin/jvm/b/b;)V
+    invoke-direct {v3, v2}, Lcom/vk/stories/util/StoryChooseActivityLoader1;-><init>(Lkotlin/jvm/b/Functions2;)V
 
-    invoke-virtual {v1, v3}, Lc/a/m;->e(Lc/a/z/j;)Lc/a/m;
+    invoke-virtual {v1, v3}, Lio/reactivex/Observable;->e(Lio/reactivex/functions/Function;)Lio/reactivex/Observable;
 
     move-result-object v1
 
     const-string v2, "imEngine.submitSingle<Di\u2026      .map(::createItems)"
 
-    invoke-static {v1, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     goto :goto_1
 
     .line 26
     :cond_5
-    invoke-direct {p0, v5}, Lcom/vk/stories/util/StoryChooseActivityLoader;->a(I)Lc/a/m;
+    invoke-direct {p0, v5}, Lcom/vk/stories/util/StoryChooseActivityLoader;->a(I)Lio/reactivex/Observable;
 
     move-result-object v1
 
@@ -897,16 +897,16 @@
     if-eqz v10, :cond_6
 
     .line 27
-    invoke-virtual {v1}, Lc/a/m;->d()Lc/a/m;
+    invoke-virtual {v1}, Lio/reactivex/Observable;->d()Lio/reactivex/Observable;
 
     move-result-object v1
 
     const-string v2, "observable.cache()"
 
-    invoke-static {v1, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 28
-    iput-object v1, v0, Lcom/vk/stories/util/StoryChooseActivityLoader;->a:Lc/a/m;
+    iput-object v1, v0, Lcom/vk/stories/util/StoryChooseActivityLoader;->a:Lio/reactivex/Observable;
 
     :cond_6
     return-object v1
@@ -918,7 +918,7 @@
     const/4 v0, 0x0
 
     .line 33
-    iput-object v0, p0, Lcom/vk/stories/util/StoryChooseActivityLoader;->a:Lc/a/m;
+    iput-object v0, p0, Lcom/vk/stories/util/StoryChooseActivityLoader;->a:Lio/reactivex/Observable;
 
     return-void
 .end method

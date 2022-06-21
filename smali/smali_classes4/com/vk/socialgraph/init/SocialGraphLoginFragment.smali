@@ -1,5 +1,5 @@
 .class public final Lcom/vk/socialgraph/init/SocialGraphLoginFragment;
-.super Lcom/vk/socialgraph/init/a;
+.super Lcom/vk/socialgraph/init/BaseSocialGraphInitFragment;
 .source "SocialGraphLoginFragment.kt"
 
 
@@ -12,7 +12,7 @@
 
 
 # static fields
-.field static final synthetic G:[Lkotlin/u/j;
+.field static final synthetic G:[Lkotlin/u/KProperty5;
 
 .field public static final H:Lcom/vk/socialgraph/init/SocialGraphLoginFragment$a;
 
@@ -22,13 +22,13 @@
 
 .field private C:Landroid/view/View;
 
-.field private D:Lcom/facebook/c;
+.field private D:Lcom/facebook/CallbackManager;
 
-.field private E:Lcom/twitter/sdk/android/core/identity/h;
+.field private E:Lcom/twitter/sdk/android/core/identity/TwitterAuthClient;
 
-.field private final F:Lkotlin/e;
+.field private final F:Lkotlin/Lazy2;
 
-.field private b:Lb/h/g/k/a;
+.field private b:Lb/h/g/k/VKProgressDialog;
 
 .field private c:Lcom/vk/socialgraph/SocialGraphUtils$ServiceType;
 
@@ -49,13 +49,13 @@
 
     const/4 v0, 0x1
 
-    new-array v0, v0, [Lkotlin/u/j;
+    new-array v0, v0, [Lkotlin/u/KProperty5;
 
     new-instance v1, Lkotlin/jvm/internal/PropertyReference1Impl;
 
     const-class v2, Lcom/vk/socialgraph/init/SocialGraphLoginFragment;
 
-    invoke-static {v2}, Lkotlin/jvm/internal/o;->a(Ljava/lang/Class;)Lkotlin/u/c;
+    invoke-static {v2}, Lkotlin/jvm/internal/Reflection;->a(Ljava/lang/Class;)Lkotlin/u/KClass;
 
     move-result-object v2
 
@@ -63,21 +63,21 @@
 
     const-string v4, "getDirtyHackActivity()Landroid/app/Activity;"
 
-    invoke-direct {v1, v2, v3, v4}, Lkotlin/jvm/internal/PropertyReference1Impl;-><init>(Lkotlin/u/e;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-direct {v1, v2, v3, v4}, Lkotlin/jvm/internal/PropertyReference1Impl;-><init>(Lkotlin/u/KDeclarationContainer;Ljava/lang/String;Ljava/lang/String;)V
 
-    invoke-static {v1}, Lkotlin/jvm/internal/o;->a(Lkotlin/jvm/internal/PropertyReference1;)Lkotlin/u/l;
+    invoke-static {v1}, Lkotlin/jvm/internal/Reflection;->a(Lkotlin/jvm/internal/PropertyReference1;)Lkotlin/u/KProperty2;
 
     const/4 v2, 0x0
 
     aput-object v1, v0, v2
 
-    sput-object v0, Lcom/vk/socialgraph/init/SocialGraphLoginFragment;->G:[Lkotlin/u/j;
+    sput-object v0, Lcom/vk/socialgraph/init/SocialGraphLoginFragment;->G:[Lkotlin/u/KProperty5;
 
     new-instance v0, Lcom/vk/socialgraph/init/SocialGraphLoginFragment$a;
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, v1}, Lcom/vk/socialgraph/init/SocialGraphLoginFragment$a;-><init>(Lkotlin/jvm/internal/i;)V
+    invoke-direct {v0, v1}, Lcom/vk/socialgraph/init/SocialGraphLoginFragment$a;-><init>(Lkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     sput-object v0, Lcom/vk/socialgraph/init/SocialGraphLoginFragment;->H:Lcom/vk/socialgraph/init/SocialGraphLoginFragment$a;
 
@@ -88,18 +88,18 @@
     .locals 1
 
     .line 1
-    invoke-direct {p0}, Lcom/vk/socialgraph/init/a;-><init>()V
+    invoke-direct {p0}, Lcom/vk/socialgraph/init/BaseSocialGraphInitFragment;-><init>()V
 
     .line 2
     new-instance v0, Lcom/vk/socialgraph/init/SocialGraphLoginFragment$dirtyHackActivity$2;
 
     invoke-direct {v0, p0}, Lcom/vk/socialgraph/init/SocialGraphLoginFragment$dirtyHackActivity$2;-><init>(Lcom/vk/socialgraph/init/SocialGraphLoginFragment;)V
 
-    invoke-static {v0}, Lkotlin/g;->a(Lkotlin/jvm/b/a;)Lkotlin/e;
+    invoke-static {v0}, Lkotlin/g;->a(Lkotlin/jvm/b/Functions;)Lkotlin/Lazy2;
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/vk/socialgraph/init/SocialGraphLoginFragment;->F:Lkotlin/e;
+    iput-object v0, p0, Lcom/vk/socialgraph/init/SocialGraphLoginFragment;->F:Lkotlin/Lazy2;
 
     return-void
 .end method
@@ -118,15 +118,15 @@
 .method private final F4()Landroid/app/Activity;
     .locals 3
 
-    iget-object v0, p0, Lcom/vk/socialgraph/init/SocialGraphLoginFragment;->F:Lkotlin/e;
+    iget-object v0, p0, Lcom/vk/socialgraph/init/SocialGraphLoginFragment;->F:Lkotlin/Lazy2;
 
-    sget-object v1, Lcom/vk/socialgraph/init/SocialGraphLoginFragment;->G:[Lkotlin/u/j;
+    sget-object v1, Lcom/vk/socialgraph/init/SocialGraphLoginFragment;->G:[Lkotlin/u/KProperty5;
 
     const/4 v2, 0x0
 
     aget-object v1, v1, v2
 
-    invoke-interface {v0}, Lkotlin/e;->getValue()Ljava/lang/Object;
+    invoke-interface {v0}, Lkotlin/Lazy2;->getValue()Ljava/lang/Object;
 
     move-result-object v0
 
@@ -181,7 +181,7 @@
     const/4 v7, 0x0
 
     .line 6
-    invoke-static/range {v0 .. v7}, Lcom/vk/permission/PermissionHelper;->a(Lcom/vk/permission/PermissionHelper;Landroid/content/Context;[Ljava/lang/String;ILkotlin/jvm/b/a;Lkotlin/jvm/b/b;ILjava/lang/Object;)Z
+    invoke-static/range {v0 .. v7}, Lcom/vk/permission/PermissionHelper;->a(Lcom/vk/permission/PermissionHelper;Landroid/content/Context;[Ljava/lang/String;ILkotlin/jvm/b/Functions;Lkotlin/jvm/b/Functions2;ILjava/lang/Object;)Z
 
     :cond_0
     return-void
@@ -247,10 +247,10 @@
 
     const-string v2, "CBAOIQPLEBABABABA"
 
-    invoke-static {v0, v1, v2}, Lru/ok/android/sdk/a;->a(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)Lru/ok/android/sdk/a;
+    invoke-static {v0, v1, v2}, Lru/ok/android/sdk/Odnoklassniki;->a(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)Lru/ok/android/sdk/Odnoklassniki;
 
     .line 2
-    invoke-static {}, Lru/ok/android/sdk/a;->d()Lru/ok/android/sdk/a;
+    invoke-static {}, Lru/ok/android/sdk/Odnoklassniki;->d()Lru/ok/android/sdk/Odnoklassniki;
 
     move-result-object v0
 
@@ -273,7 +273,7 @@
     const-string v4, "com.vk.vkclient://ok-oauth"
 
     .line 5
-    invoke-virtual {v0, v1, v4, v2, v3}, Lru/ok/android/sdk/a;->a(Landroid/app/Activity;Ljava/lang/String;Lru/ok/android/sdk/util/OkAuthType;[Ljava/lang/String;)V
+    invoke-virtual {v0, v1, v4, v2, v3}, Lru/ok/android/sdk/Odnoklassniki;->a(Landroid/app/Activity;Ljava/lang/String;Lru/ok/android/sdk/util/OkAuthType;[Ljava/lang/String;)V
 
     return-void
 .end method
@@ -284,70 +284,70 @@
     .line 1
     new-instance v0, Lcom/twitter/sdk/android/core/TwitterAuthConfig;
 
-    invoke-static {}, Lcom/vk/bridges/g;->a()Lcom/vk/bridges/f;
+    invoke-static {}, Lcom/vk/bridges/AuthBridge;->a()Lcom/vk/bridges/AuthBridge3;
 
     move-result-object v1
 
-    invoke-interface {v1}, Lcom/vk/bridges/f;->c()Lcom/vk/bridges/a;
+    invoke-interface {v1}, Lcom/vk/bridges/AuthBridge3;->c()Lcom/vk/bridges/AuthBridge1;
 
     move-result-object v1
 
-    invoke-virtual {v1}, Lcom/vk/bridges/a;->r()Ljava/lang/String;
+    invoke-virtual {v1}, Lcom/vk/bridges/AuthBridge1;->r()Ljava/lang/String;
 
     move-result-object v1
 
-    invoke-static {}, Lcom/vk/bridges/g;->a()Lcom/vk/bridges/f;
+    invoke-static {}, Lcom/vk/bridges/AuthBridge;->a()Lcom/vk/bridges/AuthBridge3;
 
     move-result-object v2
 
-    invoke-interface {v2}, Lcom/vk/bridges/f;->c()Lcom/vk/bridges/a;
+    invoke-interface {v2}, Lcom/vk/bridges/AuthBridge3;->c()Lcom/vk/bridges/AuthBridge1;
 
     move-result-object v2
 
-    invoke-virtual {v2}, Lcom/vk/bridges/a;->s()Ljava/lang/String;
+    invoke-virtual {v2}, Lcom/vk/bridges/AuthBridge1;->s()Ljava/lang/String;
 
     move-result-object v2
 
     invoke-direct {v0, v1, v2}, Lcom/twitter/sdk/android/core/TwitterAuthConfig;-><init>(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 2
-    new-instance v1, Lcom/twitter/sdk/android/core/p$b;
+    new-instance v1, Lcom/twitter/sdk/android/core/TwitterConfig$b;
 
     invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->requireContext()Landroid/content/Context;
 
     move-result-object v2
 
-    invoke-direct {v1, v2}, Lcom/twitter/sdk/android/core/p$b;-><init>(Landroid/content/Context;)V
+    invoke-direct {v1, v2}, Lcom/twitter/sdk/android/core/TwitterConfig$b;-><init>(Landroid/content/Context;)V
 
     .line 3
-    new-instance v2, Lcom/twitter/sdk/android/core/c;
+    new-instance v2, Lcom/twitter/sdk/android/core/DefaultLogger;
 
     const/4 v3, 0x3
 
-    invoke-direct {v2, v3}, Lcom/twitter/sdk/android/core/c;-><init>(I)V
+    invoke-direct {v2, v3}, Lcom/twitter/sdk/android/core/DefaultLogger;-><init>(I)V
 
-    invoke-virtual {v1, v2}, Lcom/twitter/sdk/android/core/p$b;->a(Lcom/twitter/sdk/android/core/g;)Lcom/twitter/sdk/android/core/p$b;
+    invoke-virtual {v1, v2}, Lcom/twitter/sdk/android/core/TwitterConfig$b;->a(Lcom/twitter/sdk/android/core/Logger;)Lcom/twitter/sdk/android/core/TwitterConfig$b;
 
     .line 4
-    invoke-virtual {v1, v0}, Lcom/twitter/sdk/android/core/p$b;->a(Lcom/twitter/sdk/android/core/TwitterAuthConfig;)Lcom/twitter/sdk/android/core/p$b;
+    invoke-virtual {v1, v0}, Lcom/twitter/sdk/android/core/TwitterConfig$b;->a(Lcom/twitter/sdk/android/core/TwitterAuthConfig;)Lcom/twitter/sdk/android/core/TwitterConfig$b;
 
     .line 5
-    invoke-virtual {v1}, Lcom/twitter/sdk/android/core/p$b;->a()Lcom/twitter/sdk/android/core/p;
+    invoke-virtual {v1}, Lcom/twitter/sdk/android/core/TwitterConfig$b;->a()Lcom/twitter/sdk/android/core/TwitterConfig;
 
     move-result-object v0
 
     .line 6
-    invoke-static {v0}, Lcom/twitter/sdk/android/core/n;->b(Lcom/twitter/sdk/android/core/p;)V
+    invoke-static {v0}, Lcom/twitter/sdk/android/core/Twitter;->b(Lcom/twitter/sdk/android/core/TwitterConfig;)V
 
     .line 7
-    new-instance v0, Lcom/twitter/sdk/android/core/identity/h;
+    new-instance v0, Lcom/twitter/sdk/android/core/identity/TwitterAuthClient;
 
-    invoke-direct {v0}, Lcom/twitter/sdk/android/core/identity/h;-><init>()V
+    invoke-direct {v0}, Lcom/twitter/sdk/android/core/identity/TwitterAuthClient;-><init>()V
 
-    iput-object v0, p0, Lcom/vk/socialgraph/init/SocialGraphLoginFragment;->E:Lcom/twitter/sdk/android/core/identity/h;
+    iput-object v0, p0, Lcom/vk/socialgraph/init/SocialGraphLoginFragment;->E:Lcom/twitter/sdk/android/core/identity/TwitterAuthClient;
 
     .line 8
-    iget-object v0, p0, Lcom/vk/socialgraph/init/SocialGraphLoginFragment;->E:Lcom/twitter/sdk/android/core/identity/h;
+    iget-object v0, p0, Lcom/vk/socialgraph/init/SocialGraphLoginFragment;->E:Lcom/twitter/sdk/android/core/identity/TwitterAuthClient;
 
     if-eqz v0, :cond_0
 
@@ -359,12 +359,12 @@
 
     invoke-direct {v2, p0}, Lcom/vk/socialgraph/init/SocialGraphLoginFragment$e;-><init>(Lcom/vk/socialgraph/init/SocialGraphLoginFragment;)V
 
-    invoke-virtual {v0, v1, v2}, Lcom/twitter/sdk/android/core/identity/h;->a(Landroid/app/Activity;Lcom/twitter/sdk/android/core/b;)V
+    invoke-virtual {v0, v1, v2}, Lcom/twitter/sdk/android/core/identity/TwitterAuthClient;->a(Landroid/app/Activity;Lcom/twitter/sdk/android/core/Callback;)V
 
     return-void
 
     :cond_0
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     const/4 v0, 0x0
 
@@ -391,7 +391,7 @@
 
     const-string v1, "AccountManager.get(activ\u2026ountsByType(\"com.google\")"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 2
     array-length v1, v0
@@ -489,7 +489,7 @@
 
     const-string v1, "accounts[0]"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-direct {p0, v0}, Lcom/vk/socialgraph/init/SocialGraphLoginFragment;->b(Landroid/accounts/Account;)V
 
@@ -589,7 +589,7 @@
     :cond_0
     const-string p0, "serviceType"
 
-    invoke-static {p0}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {p0}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     const/4 p0, 0x0
 
@@ -621,7 +621,7 @@
 
     const-string v5, "GoogleAuthUtil.getToken(\u2026www.google.com/m8/feeds\")"
 
-    invoke-static {v4, v5}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v4, v5}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
     :try_end_0
     .catch Lcom/google/android/gms/auth/GooglePlayServicesAvailabilityException; {:try_start_0 .. :try_end_0} :catch_3
     .catch Lcom/google/android/gms/auth/UserRecoverableAuthException; {:try_start_0 .. :try_end_0} :catch_2
@@ -790,11 +790,11 @@
     return-void
 .end method
 
-.method public static final synthetic a(Lcom/vk/socialgraph/init/SocialGraphLoginFragment;Lcom/facebook/c;)V
+.method public static final synthetic a(Lcom/vk/socialgraph/init/SocialGraphLoginFragment;Lcom/facebook/CallbackManager;)V
     .locals 0
 
     .line 6
-    iput-object p1, p0, Lcom/vk/socialgraph/init/SocialGraphLoginFragment;->D:Lcom/facebook/c;
+    iput-object p1, p0, Lcom/vk/socialgraph/init/SocialGraphLoginFragment;->D:Lcom/facebook/CallbackManager;
 
     return-void
 .end method
@@ -821,32 +821,32 @@
 
     invoke-direct {v0, p0, p1}, Lcom/vk/socialgraph/init/SocialGraphLoginFragment$g;-><init>(Lcom/vk/socialgraph/init/SocialGraphLoginFragment;Landroid/accounts/Account;)V
 
-    invoke-static {v0}, Lc/a/m;->c(Ljava/util/concurrent/Callable;)Lc/a/m;
+    invoke-static {v0}, Lio/reactivex/Observable;->c(Ljava/util/concurrent/Callable;)Lio/reactivex/Observable;
 
     move-result-object v0
 
     .line 5
-    invoke-static {}, Lc/a/f0/b;->b()Lc/a/s;
+    invoke-static {}, Lio/reactivex/schedulers/Schedulers;->b()Lio/reactivex/Scheduler;
 
     move-result-object v1
 
-    invoke-virtual {v0, v1}, Lc/a/m;->b(Lc/a/s;)Lc/a/m;
+    invoke-virtual {v0, v1}, Lio/reactivex/Observable;->b(Lio/reactivex/Scheduler;)Lio/reactivex/Observable;
 
     move-result-object v0
 
     .line 6
-    invoke-static {}, Lc/a/y/c/a;->a()Lc/a/s;
+    invoke-static {}, Lio/reactivex/schedulers/AndroidSchedulers;->a()Lio/reactivex/Scheduler;
 
     move-result-object v1
 
-    invoke-virtual {v0, v1}, Lc/a/m;->a(Lc/a/s;)Lc/a/m;
+    invoke-virtual {v0, v1}, Lio/reactivex/Observable;->a(Lio/reactivex/Scheduler;)Lio/reactivex/Observable;
 
     move-result-object v0
 
     .line 7
     sget-object v1, Lcom/vk/socialgraph/init/SocialGraphLoginFragment$h;->a:Lcom/vk/socialgraph/init/SocialGraphLoginFragment$h;
 
-    invoke-virtual {v0, v1}, Lc/a/m;->a(Lc/a/z/l;)Lc/a/m;
+    invoke-virtual {v0, v1}, Lio/reactivex/Observable;->a(Lio/reactivex/functions/Predicate;)Lio/reactivex/Observable;
 
     move-result-object v0
 
@@ -855,7 +855,7 @@
 
     invoke-direct {v1, p0}, Lcom/vk/socialgraph/init/SocialGraphLoginFragment$i;-><init>(Lcom/vk/socialgraph/init/SocialGraphLoginFragment;)V
 
-    invoke-virtual {v0, v1}, Lc/a/m;->e(Lc/a/z/g;)Lc/a/m;
+    invoke-virtual {v0, v1}, Lio/reactivex/Observable;->e(Lio/reactivex/functions/Consumer;)Lio/reactivex/Observable;
 
     move-result-object v0
 
@@ -864,7 +864,7 @@
 
     invoke-direct {v1, p0}, Lcom/vk/socialgraph/init/SocialGraphLoginFragment$j;-><init>(Lcom/vk/socialgraph/init/SocialGraphLoginFragment;)V
 
-    invoke-virtual {v0, v1}, Lc/a/m;->e(Lc/a/z/a;)Lc/a/m;
+    invoke-virtual {v0, v1}, Lio/reactivex/Observable;->e(Lio/reactivex/functions/Action;)Lio/reactivex/Observable;
 
     move-result-object v0
 
@@ -879,7 +879,7 @@
     invoke-direct {p1, p0}, Lcom/vk/socialgraph/init/SocialGraphLoginFragment$l;-><init>(Lcom/vk/socialgraph/init/SocialGraphLoginFragment;)V
 
     .line 12
-    invoke-virtual {v0, v1, p1}, Lc/a/m;->a(Lc/a/z/g;Lc/a/z/g;)Lio/reactivex/disposables/b;
+    invoke-virtual {v0, v1, p1}, Lio/reactivex/Observable;->a(Lio/reactivex/functions/Consumer;Lio/reactivex/functions/Consumer;)Lio/reactivex/disposables/Disposable;
 
     return-void
 .end method
@@ -938,7 +938,7 @@
     invoke-direct {p0, v0}, Lcom/vk/socialgraph/init/SocialGraphLoginFragment;->t0(Z)V
 
     .line 3
-    invoke-virtual {p0}, Lcom/vk/socialgraph/init/a;->D4()Lcom/vk/socialgraph/SocialGraphStrategy;
+    invoke-virtual {p0}, Lcom/vk/socialgraph/init/BaseSocialGraphInitFragment;->D4()Lcom/vk/socialgraph/SocialGraphStrategy;
 
     move-result-object v0
 
@@ -965,21 +965,21 @@
     if-eqz p1, :cond_0
 
     .line 1
-    sget-object p1, Lcom/vk/core/util/n1;->a:Lcom/vk/core/util/n1;
+    sget-object p1, Lcom/vk/core/util/ViewUtils1;->a:Lcom/vk/core/util/ViewUtils1;
 
-    iget-object v0, p0, Lcom/vk/socialgraph/init/SocialGraphLoginFragment;->b:Lb/h/g/k/a;
+    iget-object v0, p0, Lcom/vk/socialgraph/init/SocialGraphLoginFragment;->b:Lb/h/g/k/VKProgressDialog;
 
-    invoke-virtual {p1, v0}, Lcom/vk/core/util/n1;->b(Landroid/app/Dialog;)V
+    invoke-virtual {p1, v0}, Lcom/vk/core/util/ViewUtils1;->b(Landroid/app/Dialog;)V
 
     goto :goto_0
 
     .line 2
     :cond_0
-    sget-object p1, Lcom/vk/core/util/n1;->a:Lcom/vk/core/util/n1;
+    sget-object p1, Lcom/vk/core/util/ViewUtils1;->a:Lcom/vk/core/util/ViewUtils1;
 
-    iget-object v0, p0, Lcom/vk/socialgraph/init/SocialGraphLoginFragment;->b:Lb/h/g/k/a;
+    iget-object v0, p0, Lcom/vk/socialgraph/init/SocialGraphLoginFragment;->b:Lb/h/g/k/VKProgressDialog;
 
-    invoke-virtual {p1, v0}, Lcom/vk/core/util/n1;->a(Landroid/app/Dialog;)V
+    invoke-virtual {p1, v0}, Lcom/vk/core/util/ViewUtils1;->a(Landroid/app/Dialog;)V
 
     :goto_0
     return-void
@@ -989,24 +989,24 @@
     .locals 3
 
     .line 1
-    invoke-static {}, Lcom/facebook/e;->t()Z
+    invoke-static {}, Lcom/facebook/FacebookSdk;->t()Z
 
     move-result v0
 
     if-nez v0, :cond_0
 
     .line 2
-    sget-object v0, Lcom/vk/core/util/i;->a:Landroid/content/Context;
+    sget-object v0, Lcom/vk/core/util/AppContextHolder;->a:Landroid/content/Context;
 
-    invoke-static {v0}, Lcom/facebook/e;->c(Landroid/content/Context;)V
+    invoke-static {v0}, Lcom/facebook/FacebookSdk;->c(Landroid/content/Context;)V
 
     .line 3
     :cond_0
-    invoke-static {}, Lcom/facebook/c$a;->a()Lcom/facebook/c;
+    invoke-static {}, Lcom/facebook/CallbackManager$a;->a()Lcom/facebook/CallbackManager;
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/vk/socialgraph/init/SocialGraphLoginFragment;->D:Lcom/facebook/c;
+    iput-object v0, p0, Lcom/vk/socialgraph/init/SocialGraphLoginFragment;->D:Lcom/facebook/CallbackManager;
 
     .line 4
     invoke-static {}, Lcom/facebook/login/LoginManager;->b()Lcom/facebook/login/LoginManager;
@@ -1014,13 +1014,13 @@
     move-result-object v0
 
     .line 5
-    iget-object v1, p0, Lcom/vk/socialgraph/init/SocialGraphLoginFragment;->D:Lcom/facebook/c;
+    iget-object v1, p0, Lcom/vk/socialgraph/init/SocialGraphLoginFragment;->D:Lcom/facebook/CallbackManager;
 
     new-instance v2, Lcom/vk/socialgraph/init/SocialGraphLoginFragment$d;
 
     invoke-direct {v2, p0, p1}, Lcom/vk/socialgraph/init/SocialGraphLoginFragment$d;-><init>(Lcom/vk/socialgraph/init/SocialGraphLoginFragment;I)V
 
-    invoke-virtual {v0, v1, v2}, Lcom/facebook/login/LoginManager;->a(Lcom/facebook/c;Lcom/facebook/d;)V
+    invoke-virtual {v0, v1, v2}, Lcom/facebook/login/LoginManager;->a(Lcom/facebook/CallbackManager;Lcom/facebook/FacebookCallback;)V
 
     .line 6
     invoke-virtual {v0}, Lcom/facebook/login/LoginManager;->a()V
@@ -1062,7 +1062,7 @@
     if-eqz p1, :cond_0
 
     .line 2
-    invoke-virtual {p0}, Lcom/vk/socialgraph/init/a;->C4()Lcom/vk/socialgraph/SocialStatSender;
+    invoke-virtual {p0}, Lcom/vk/socialgraph/init/BaseSocialGraphInitFragment;->C4()Lcom/vk/socialgraph/SocialStatSender;
 
     move-result-object p1
 
@@ -1076,7 +1076,7 @@
 
     .line 3
     :cond_0
-    invoke-virtual {p0}, Lcom/vk/socialgraph/init/a;->C4()Lcom/vk/socialgraph/SocialStatSender;
+    invoke-virtual {p0}, Lcom/vk/socialgraph/init/BaseSocialGraphInitFragment;->C4()Lcom/vk/socialgraph/SocialStatSender;
 
     move-result-object p1
 
@@ -1094,7 +1094,7 @@
     const-string p1, "serviceType"
 
     .line 4
-    invoke-static {p1}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {p1}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     const/4 p1, 0x0
 
@@ -1154,7 +1154,7 @@
 
     const-string p3, "AccountManager.get(activity)"
 
-    invoke-static {p2, p3}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p2, p3}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {p2}, Landroid/accounts/AccountManager;->getAccounts()[Landroid/accounts/Account;
 
@@ -1162,7 +1162,7 @@
 
     const-string p3, "AccountManager.get(activity).accounts"
 
-    invoke-static {p2, p3}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p2, p3}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 4
     array-length p3, p2
@@ -1175,7 +1175,7 @@
     .line 5
     iget-object v3, v1, Landroid/accounts/Account;->name:Ljava/lang/String;
 
-    invoke-static {v3, p1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v3, p1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v3
 
@@ -1183,7 +1183,7 @@
 
     iget-object v3, v1, Landroid/accounts/Account;->type:Ljava/lang/String;
 
-    invoke-static {v3, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v3, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v3
 
@@ -1192,7 +1192,7 @@
     const-string p1, "account"
 
     .line 6
-    invoke-static {v1, p1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v1, p1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-direct {p0, v1}, Lcom/vk/socialgraph/init/SocialGraphLoginFragment;->b(Landroid/accounts/Account;)V
 
@@ -1232,12 +1232,12 @@
     goto :goto_2
 
     :cond_4
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     throw v2
 
     :cond_5
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     throw v2
 
@@ -1249,37 +1249,37 @@
 
     .line 9
     :cond_7
-    iget-object v0, p0, Lcom/vk/socialgraph/init/SocialGraphLoginFragment;->D:Lcom/facebook/c;
+    iget-object v0, p0, Lcom/vk/socialgraph/init/SocialGraphLoginFragment;->D:Lcom/facebook/CallbackManager;
 
     if-eqz v0, :cond_8
 
     if-eqz v0, :cond_c
 
     .line 10
-    invoke-interface {v0, p1, p2, p3}, Lcom/facebook/c;->onActivityResult(IILandroid/content/Intent;)Z
+    invoke-interface {v0, p1, p2, p3}, Lcom/facebook/CallbackManager;->onActivityResult(IILandroid/content/Intent;)Z
 
     goto :goto_2
 
     .line 11
     :cond_8
-    invoke-static {}, Lru/ok/android/sdk/a;->e()Z
+    invoke-static {}, Lru/ok/android/sdk/Odnoklassniki;->e()Z
 
     move-result v0
 
     if-eqz v0, :cond_9
 
-    invoke-static {}, Lru/ok/android/sdk/a;->d()Lru/ok/android/sdk/a;
+    invoke-static {}, Lru/ok/android/sdk/Odnoklassniki;->d()Lru/ok/android/sdk/Odnoklassniki;
 
     move-result-object v0
 
-    invoke-virtual {v0, p1}, Lru/ok/android/sdk/a;->b(I)Z
+    invoke-virtual {v0, p1}, Lru/ok/android/sdk/Odnoklassniki;->b(I)Z
 
     move-result v0
 
     if-eqz v0, :cond_9
 
     .line 12
-    invoke-static {}, Lru/ok/android/sdk/a;->d()Lru/ok/android/sdk/a;
+    invoke-static {}, Lru/ok/android/sdk/Odnoklassniki;->d()Lru/ok/android/sdk/Odnoklassniki;
 
     move-result-object v0
 
@@ -1287,30 +1287,30 @@
 
     move-result-object v1
 
-    invoke-virtual {v0, p1, p2, p3, v1}, Lru/ok/android/sdk/a;->b(IILandroid/content/Intent;Lru/ok/android/sdk/b;)Z
+    invoke-virtual {v0, p1, p2, p3, v1}, Lru/ok/android/sdk/Odnoklassniki;->b(IILandroid/content/Intent;Lru/ok/android/sdk/OkListener;)Z
 
     goto :goto_2
 
     .line 13
     :cond_9
-    invoke-static {}, Lru/ok/android/sdk/a;->e()Z
+    invoke-static {}, Lru/ok/android/sdk/Odnoklassniki;->e()Z
 
     move-result v0
 
     if-eqz v0, :cond_a
 
-    invoke-static {}, Lru/ok/android/sdk/a;->d()Lru/ok/android/sdk/a;
+    invoke-static {}, Lru/ok/android/sdk/Odnoklassniki;->d()Lru/ok/android/sdk/Odnoklassniki;
 
     move-result-object v0
 
-    invoke-virtual {v0, p1}, Lru/ok/android/sdk/a;->e(I)Z
+    invoke-virtual {v0, p1}, Lru/ok/android/sdk/Odnoklassniki;->e(I)Z
 
     move-result v0
 
     if-eqz v0, :cond_a
 
     .line 14
-    invoke-static {}, Lru/ok/android/sdk/a;->d()Lru/ok/android/sdk/a;
+    invoke-static {}, Lru/ok/android/sdk/Odnoklassniki;->d()Lru/ok/android/sdk/Odnoklassniki;
 
     move-result-object v0
 
@@ -1318,28 +1318,28 @@
 
     move-result-object v1
 
-    invoke-virtual {v0, p1, p2, p3, v1}, Lru/ok/android/sdk/a;->a(IILandroid/content/Intent;Lru/ok/android/sdk/b;)Z
+    invoke-virtual {v0, p1, p2, p3, v1}, Lru/ok/android/sdk/Odnoklassniki;->a(IILandroid/content/Intent;Lru/ok/android/sdk/OkListener;)Z
 
     goto :goto_2
 
     .line 15
     :cond_a
-    iget-object v0, p0, Lcom/vk/socialgraph/init/SocialGraphLoginFragment;->E:Lcom/twitter/sdk/android/core/identity/h;
+    iget-object v0, p0, Lcom/vk/socialgraph/init/SocialGraphLoginFragment;->E:Lcom/twitter/sdk/android/core/identity/TwitterAuthClient;
 
     if-eqz v0, :cond_b
 
-    invoke-virtual {v0}, Lcom/twitter/sdk/android/core/identity/h;->b()I
+    invoke-virtual {v0}, Lcom/twitter/sdk/android/core/identity/TwitterAuthClient;->b()I
 
     move-result v0
 
     if-ne p1, v0, :cond_b
 
     .line 16
-    iget-object v0, p0, Lcom/vk/socialgraph/init/SocialGraphLoginFragment;->E:Lcom/twitter/sdk/android/core/identity/h;
+    iget-object v0, p0, Lcom/vk/socialgraph/init/SocialGraphLoginFragment;->E:Lcom/twitter/sdk/android/core/identity/TwitterAuthClient;
 
     if-eqz v0, :cond_c
 
-    invoke-virtual {v0, p1, p2, p3}, Lcom/twitter/sdk/android/core/identity/h;->a(IILandroid/content/Intent;)V
+    invoke-virtual {v0, p1, p2, p3}, Lcom/twitter/sdk/android/core/identity/TwitterAuthClient;->a(IILandroid/content/Intent;)V
 
     goto :goto_2
 
@@ -1359,14 +1359,14 @@
     invoke-super {p0, p1}, Landroidx/fragment/app/Fragment;->onAttach(Landroid/content/Context;)V
 
     .line 2
-    new-instance v0, Lb/h/g/k/a;
+    new-instance v0, Lb/h/g/k/VKProgressDialog;
 
-    invoke-direct {v0, p1}, Lb/h/g/k/a;-><init>(Landroid/content/Context;)V
+    invoke-direct {v0, p1}, Lb/h/g/k/VKProgressDialog;-><init>(Landroid/content/Context;)V
 
-    iput-object v0, p0, Lcom/vk/socialgraph/init/SocialGraphLoginFragment;->b:Lb/h/g/k/a;
+    iput-object v0, p0, Lcom/vk/socialgraph/init/SocialGraphLoginFragment;->b:Lb/h/g/k/VKProgressDialog;
 
     .line 3
-    iget-object p1, p0, Lcom/vk/socialgraph/init/SocialGraphLoginFragment;->b:Lb/h/g/k/a;
+    iget-object p1, p0, Lcom/vk/socialgraph/init/SocialGraphLoginFragment;->b:Lb/h/g/k/VKProgressDialog;
 
     const/4 v0, 0x0
 
@@ -1381,7 +1381,7 @@
     invoke-virtual {p1, v1}, Landroid/app/ProgressDialog;->setMessage(Ljava/lang/CharSequence;)V
 
     .line 4
-    iget-object p1, p0, Lcom/vk/socialgraph/init/SocialGraphLoginFragment;->b:Lb/h/g/k/a;
+    iget-object p1, p0, Lcom/vk/socialgraph/init/SocialGraphLoginFragment;->b:Lb/h/g/k/VKProgressDialog;
 
     if-eqz p1, :cond_0
 
@@ -1392,13 +1392,13 @@
     return-void
 
     :cond_0
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     throw v0
 
     .line 5
     :cond_1
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     throw v0
 .end method
@@ -1475,7 +1475,7 @@
     const/4 v0, 0x0
 
     .line 3
-    iput-object v0, p0, Lcom/vk/socialgraph/init/SocialGraphLoginFragment;->b:Lb/h/g/k/a;
+    iput-object v0, p0, Lcom/vk/socialgraph/init/SocialGraphLoginFragment;->b:Lb/h/g/k/VKProgressDialog;
 
     return-void
 .end method
@@ -1484,7 +1484,7 @@
     .locals 5
 
     .line 1
-    invoke-super {p0, p1, p2}, Lcom/vk/socialgraph/init/a;->onViewCreated(Landroid/view/View;Landroid/os/Bundle;)V
+    invoke-super {p0, p1, p2}, Lcom/vk/socialgraph/init/BaseSocialGraphInitFragment;->onViewCreated(Landroid/view/View;Landroid/os/Bundle;)V
 
     .line 2
     sget p2, Lcom/vk/socialgraph/c;->big_icon:I
@@ -1495,7 +1495,7 @@
 
     const-string v0, "view.findViewById(R.id.big_icon)"
 
-    invoke-static {p2, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p2, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     check-cast p2, Landroid/widget/ImageView;
 
@@ -1510,7 +1510,7 @@
 
     const-string v0, "view.findViewById(R.id.title)"
 
-    invoke-static {p2, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p2, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     check-cast p2, Landroid/widget/TextView;
 
@@ -1525,7 +1525,7 @@
 
     const-string v0, "view.findViewById(R.id.subtitle)"
 
-    invoke-static {p2, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p2, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     check-cast p2, Landroid/widget/TextView;
 
@@ -1540,7 +1540,7 @@
 
     const-string v0, "view.findViewById(R.id.login_via_button)"
 
-    invoke-static {p2, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p2, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     iput-object p2, p0, Lcom/vk/socialgraph/init/SocialGraphLoginFragment;->g:Landroid/view/View;
 
@@ -1553,7 +1553,7 @@
 
     const-string v0, "view.findViewById(R.id.login_via_icon)"
 
-    invoke-static {p2, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p2, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     check-cast p2, Landroid/widget/ImageView;
 
@@ -1568,7 +1568,7 @@
 
     const-string v0, "view.findViewById(R.id.login_via_text)"
 
-    invoke-static {p2, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p2, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     check-cast p2, Landroid/widget/TextView;
 
@@ -1583,7 +1583,7 @@
 
     const-string p2, "view.findViewById(R.id.skip)"
 
-    invoke-static {p1, p2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, p2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     iput-object p1, p0, Lcom/vk/socialgraph/init/SocialGraphLoginFragment;->C:Landroid/view/View;
 
@@ -1602,7 +1602,7 @@
 
     const-string v2, "requireContext()"
 
-    invoke-static {v1, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     iget-object v3, p0, Lcom/vk/socialgraph/init/SocialGraphLoginFragment;->c:Lcom/vk/socialgraph/SocialGraphUtils$ServiceType;
 
@@ -1627,7 +1627,7 @@
 
     move-result-object v1
 
-    invoke-static {v1, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     iget-object v3, p0, Lcom/vk/socialgraph/init/SocialGraphLoginFragment;->c:Lcom/vk/socialgraph/SocialGraphUtils$ServiceType;
 
@@ -1650,7 +1650,7 @@
 
     move-result-object v1
 
-    invoke-static {v1, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     iget-object v3, p0, Lcom/vk/socialgraph/init/SocialGraphLoginFragment;->c:Lcom/vk/socialgraph/SocialGraphUtils$ServiceType;
 
@@ -1673,7 +1673,7 @@
 
     move-result-object v1
 
-    invoke-static {v1, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     iget-object v3, p0, Lcom/vk/socialgraph/init/SocialGraphLoginFragment;->c:Lcom/vk/socialgraph/SocialGraphUtils$ServiceType;
 
@@ -1692,7 +1692,7 @@
 
     move-result-object v0
 
-    invoke-static {v0, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     iget-object v1, p0, Lcom/vk/socialgraph/init/SocialGraphLoginFragment;->c:Lcom/vk/socialgraph/SocialGraphUtils$ServiceType;
 
@@ -1720,7 +1720,7 @@
     :cond_0
     const-string p1, "buttonIconView"
 
-    invoke-static {p1}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {p1}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw p2
 
@@ -1735,7 +1735,7 @@
 
     invoke-direct {v0, p0}, Lcom/vk/socialgraph/init/SocialGraphLoginFragment$onViewCreated$2;-><init>(Lcom/vk/socialgraph/init/SocialGraphLoginFragment;)V
 
-    invoke-static {p1, v0}, Lcom/vk/extensions/ViewExtKt;->e(Landroid/view/View;Lkotlin/jvm/b/b;)V
+    invoke-static {p1, v0}, Lcom/vk/extensions/ViewExtKt;->e(Landroid/view/View;Lkotlin/jvm/b/Functions2;)V
 
     .line 16
     iget-object p1, p0, Lcom/vk/socialgraph/init/SocialGraphLoginFragment;->C:Landroid/view/View;
@@ -1746,14 +1746,14 @@
 
     invoke-direct {p2, p0}, Lcom/vk/socialgraph/init/SocialGraphLoginFragment$onViewCreated$3;-><init>(Lcom/vk/socialgraph/init/SocialGraphLoginFragment;)V
 
-    invoke-static {p1, p2}, Lcom/vk/extensions/ViewExtKt;->e(Landroid/view/View;Lkotlin/jvm/b/b;)V
+    invoke-static {p1, p2}, Lcom/vk/extensions/ViewExtKt;->e(Landroid/view/View;Lkotlin/jvm/b/Functions2;)V
 
     return-void
 
     :cond_2
     const-string p1, "skipButton"
 
-    invoke-static {p1}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {p1}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw p2
 
@@ -1761,65 +1761,65 @@
     const-string p1, "loginButton"
 
     .line 17
-    invoke-static {p1}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {p1}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw p2
 
     .line 18
     :cond_4
-    invoke-static {v4}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v4}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw p2
 
     .line 19
     :cond_5
-    invoke-static {v4}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v4}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw p2
 
     :cond_6
     const-string p1, "buttonTextView"
 
-    invoke-static {p1}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {p1}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw p2
 
     .line 20
     :cond_7
-    invoke-static {v4}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v4}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw p2
 
     :cond_8
     const-string p1, "subtitleView"
 
-    invoke-static {p1}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {p1}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw p2
 
     .line 21
     :cond_9
-    invoke-static {v4}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v4}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw p2
 
     :cond_a
     const-string p1, "titleView"
 
-    invoke-static {p1}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {p1}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw p2
 
     .line 22
     :cond_b
-    invoke-static {v4}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v4}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw p2
 
     :cond_c
     const-string p1, "bigIconView"
 
-    invoke-static {p1}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {p1}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw p2
 .end method

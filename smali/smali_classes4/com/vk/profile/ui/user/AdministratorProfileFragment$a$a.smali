@@ -1,5 +1,5 @@
 .class public final Lcom/vk/profile/ui/user/AdministratorProfileFragment$a$a;
-.super Lcom/vtosters/lite/ui/b0/i;
+.super Lcom/vtosters/lite/ui/holder/RecyclerHolder;
 .source "AdministratorProfileFragment.kt"
 
 
@@ -15,7 +15,7 @@
 
 .annotation system Ldalvik/annotation/Signature;
     value = {
-        "Lcom/vtosters/lite/ui/b0/i<",
+        "Lcom/vtosters/lite/ui/holder/RecyclerHolder<",
         "Lcom/vk/profile/adapter/BaseInfoItem;",
         ">;"
     }
@@ -43,7 +43,7 @@
     .line 1
     iput-object p1, p0, Lcom/vk/profile/ui/user/AdministratorProfileFragment$a$a;->d:Lcom/vk/profile/ui/user/AdministratorProfileFragment$a;
 
-    invoke-direct {p0, p3, p2}, Lcom/vtosters/lite/ui/b0/i;-><init>(Landroid/view/View;Landroid/view/ViewGroup;)V
+    invoke-direct {p0, p3, p2}, Lcom/vtosters/lite/ui/holder/RecyclerHolder;-><init>(Landroid/view/View;Landroid/view/ViewGroup;)V
 
     iput-object p3, p0, Lcom/vk/profile/ui/user/AdministratorProfileFragment$a$a;->c:Lcom/vk/profile/ui/header/BaseHeaderView;
 
@@ -134,7 +134,7 @@
     move-result-object p1
 
     .line 5
-    sget v2, Lcom/vk/profile/ui/c;->W0:I
+    sget v2, Lcom/vk/profile/ui/BaseProfileFragment;->W0:I
 
     const/4 v3, 0x0
 
@@ -159,7 +159,7 @@
 
     iget-object v6, v6, Lcom/vk/dto/user/UserProfile;->Q:Lcom/vk/dto/common/VerifyInfo;
 
-    invoke-static {v6, v5}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v6, v5}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     iget-object v5, p0, Lcom/vk/profile/ui/user/AdministratorProfileFragment$a$a;->d:Lcom/vk/profile/ui/user/AdministratorProfileFragment$a;
 
@@ -171,7 +171,7 @@
 
     if-eqz v5, :cond_0
 
-    invoke-static {v5, v4}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v5, v4}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     sget-object v3, Lcom/vk/core/utils/VerifyInfoHelper$ColorTheme;->ultraLight:Lcom/vk/core/utils/VerifyInfoHelper$ColorTheme;
 
@@ -182,7 +182,7 @@
     goto :goto_0
 
     :cond_0
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     throw v3
 
@@ -202,7 +202,7 @@
 
     iget-object v6, v6, Lcom/vk/dto/user/UserProfile;->Q:Lcom/vk/dto/common/VerifyInfo;
 
-    invoke-static {v6, v5}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v6, v5}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     iget-object v5, p0, Lcom/vk/profile/ui/user/AdministratorProfileFragment$a$a;->d:Lcom/vk/profile/ui/user/AdministratorProfileFragment$a;
 
@@ -214,7 +214,7 @@
 
     if-eqz v5, :cond_2
 
-    invoke-static {v5, v4}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v5, v4}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     const/4 v7, 0x0
 
@@ -271,7 +271,7 @@
 
     .line 12
     :cond_2
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     throw v3
 
@@ -302,7 +302,7 @@
 
     const-string v0, "headerView.findViewById<View>(R.id.profile_photo)"
 
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {p1, v1}, Landroid/view/View;->setClickable(Z)V
 
@@ -338,7 +338,7 @@
 
     const-string v1, "itemView"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {v0}, Landroid/view/View;->getContext()Landroid/content/Context;
 
@@ -346,7 +346,7 @@
 
     const-string v1, "itemView.context"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {p1}, Lcom/vk/profile/presenter/UserPresenter$a$a;->b()I
 

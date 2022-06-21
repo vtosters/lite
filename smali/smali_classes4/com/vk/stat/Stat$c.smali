@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/stat/Stat;->a(Lcom/vk/stat/a/d;ZZLjava/lang/Long;)V
+    value = Lcom/vk/stat/Stat;->a(Lcom/vk/stat/a/StatEvent5;ZZLjava/lang/Long;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -48,7 +48,7 @@
     .line 1
     sget-object v0, Lcom/vk/stat/Stat;->l:Lcom/vk/stat/Stat;
 
-    invoke-static {v0}, Lcom/vk/stat/Stat;->c(Lcom/vk/stat/Stat;)Lcom/vk/stat/storage/c;
+    invoke-static {v0}, Lcom/vk/stat/Stat;->c(Lcom/vk/stat/Stat;)Lcom/vk/stat/storage/Storage;
 
     move-result-object v0
 
@@ -60,7 +60,7 @@
 
     iget-object v3, p0, Lcom/vk/stat/Stat$c;->c:Ljava/lang/String;
 
-    invoke-interface {v0, v1, v2, v3}, Lcom/vk/stat/storage/c;->a(ZZLjava/lang/String;)V
+    invoke-interface {v0, v1, v2, v3}, Lcom/vk/stat/storage/Storage;->a(ZZLjava/lang/String;)V
 
     .line 2
     :cond_0

@@ -3,7 +3,7 @@
 .source "VKAnimationLoader.kt"
 
 # interfaces
-.implements Lc/a/z/g;
+.implements Lio/reactivex/functions/Consumer;
 
 
 # annotations
@@ -22,8 +22,8 @@
         "Ljava/lang/Object;",
         ">",
         "Ljava/lang/Object;",
-        "Lc/a/z/g<",
-        "Lkotlin/m;",
+        "Lio/reactivex/functions/Consumer<",
+        "Lkotlin/Unit;",
         ">;"
     }
 .end annotation
@@ -46,7 +46,7 @@
 
 
 # virtual methods
-.method public final a(Lkotlin/m;)V
+.method public final a(Lkotlin/Unit;)V
     .locals 7
 
     .line 1
@@ -81,7 +81,7 @@
 
     iget-object v2, p0, Lcom/vk/stickers/views/animation/VKAnimationLoader$i;->a:Ljava/lang/String;
 
-    invoke-static {v1, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v1, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v1
 
@@ -118,12 +118,12 @@
 
     move-object v0, v6
 
-    invoke-direct/range {v0 .. v5}, Lcom/vk/dto/stickers/AnimatedStickerInfo;-><init>(Ljava/lang/String;IIILkotlin/jvm/internal/i;)V
+    invoke-direct/range {v0 .. v5}, Lcom/vk/dto/stickers/AnimatedStickerInfo;-><init>(Ljava/lang/String;IIILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     invoke-virtual {p1, v6}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
     .line 3
-    sget-object p1, Lcom/vk/common/j/a;->c:Lcom/vk/common/j/a;
+    sget-object p1, Lcom/vk/common/cache/SerializerCache;->c:Lcom/vk/common/cache/SerializerCache;
 
     sget-object v0, Lcom/vk/stickers/views/animation/VKAnimationLoader;->d:Lcom/vk/stickers/views/animation/VKAnimationLoader;
 
@@ -133,7 +133,7 @@
 
     const-string v1, "animated_stickers_list_v21"
 
-    invoke-virtual {p1, v1, v0}, Lcom/vk/common/j/a;->a(Ljava/lang/String;Ljava/util/List;)V
+    invoke-virtual {p1, v1, v0}, Lcom/vk/common/cache/SerializerCache;->a(Ljava/lang/String;Ljava/util/List;)V
 
     :cond_2
     return-void
@@ -143,9 +143,9 @@
     .locals 0
 
     .line 1
-    check-cast p1, Lkotlin/m;
+    check-cast p1, Lkotlin/Unit;
 
-    invoke-virtual {p0, p1}, Lcom/vk/stickers/views/animation/VKAnimationLoader$i;->a(Lkotlin/m;)V
+    invoke-virtual {p0, p1}, Lcom/vk/stickers/views/animation/VKAnimationLoader$i;->a(Lkotlin/Unit;)V
 
     return-void
 .end method

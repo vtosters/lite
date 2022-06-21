@@ -1302,7 +1302,7 @@
 
     iget-object v1, p0, Landroidx/webkit/internal/WebViewFeatureInternal;->mInternalFeatureValue:Ljava/lang/String;
 
-    invoke-static {v0, v1}, Lorg/chromium/support_lib_boundary/a/a;->a(Ljava/util/Collection;Ljava/lang/String;)Z
+    invoke-static {v0, v1}, Lorg/chromium/support_lib_boundary/a/BoundaryInterfaceReflectionUtil;->a(Ljava/util/Collection;Ljava/lang/String;)Z
 
     move-result v0
 

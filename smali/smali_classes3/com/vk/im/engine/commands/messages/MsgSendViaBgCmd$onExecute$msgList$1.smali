@@ -3,12 +3,12 @@
 .source "MsgSendViaBgCmd.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/b;
+.implements Lkotlin/jvm/b/Functions2;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/im/engine/commands/messages/MsgSendViaBgCmd;->a(Lcom/vk/im/engine/d;)Ljava/util/List;
+    value = Lcom/vk/im/engine/commands/messages/MsgSendViaBgCmd;->a(Lcom/vk/im/engine/ImEnvironment;)Ljava/util/List;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -19,30 +19,30 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/b<",
+        "Lkotlin/jvm/b/Functions2<",
         "Ljava/util/List<",
         "+",
         "Lcom/vk/im/engine/models/messages/Msg;",
         ">;",
-        "Lkotlin/m;",
+        "Lkotlin/Unit;",
         ">;"
     }
 .end annotation
 
 
 # instance fields
-.field final synthetic $env:Lcom/vk/im/engine/d;
+.field final synthetic $env:Lcom/vk/im/engine/ImEnvironment;
 
 .field final synthetic this$0:Lcom/vk/im/engine/commands/messages/MsgSendViaBgCmd;
 
 
 # direct methods
-.method constructor <init>(Lcom/vk/im/engine/commands/messages/MsgSendViaBgCmd;Lcom/vk/im/engine/d;)V
+.method constructor <init>(Lcom/vk/im/engine/commands/messages/MsgSendViaBgCmd;Lcom/vk/im/engine/ImEnvironment;)V
     .locals 0
 
     iput-object p1, p0, Lcom/vk/im/engine/commands/messages/MsgSendViaBgCmd$onExecute$msgList$1;->this$0:Lcom/vk/im/engine/commands/messages/MsgSendViaBgCmd;
 
-    iput-object p2, p0, Lcom/vk/im/engine/commands/messages/MsgSendViaBgCmd$onExecute$msgList$1;->$env:Lcom/vk/im/engine/d;
+    iput-object p2, p0, Lcom/vk/im/engine/commands/messages/MsgSendViaBgCmd$onExecute$msgList$1;->$env:Lcom/vk/im/engine/ImEnvironment;
 
     const/4 p1, 0x1
 
@@ -66,7 +66,7 @@
     .end annotation
 
     .line 1
-    iget-object v0, p0, Lcom/vk/im/engine/commands/messages/MsgSendViaBgCmd$onExecute$msgList$1;->$env:Lcom/vk/im/engine/d;
+    iget-object v0, p0, Lcom/vk/im/engine/commands/messages/MsgSendViaBgCmd$onExecute$msgList$1;->$env:Lcom/vk/im/engine/ImEnvironment;
 
     iget-object v1, p0, Lcom/vk/im/engine/commands/messages/MsgSendViaBgCmd$onExecute$msgList$1;->this$0:Lcom/vk/im/engine/commands/messages/MsgSendViaBgCmd;
 
@@ -120,11 +120,11 @@
     goto :goto_0
 
     :cond_0
-    new-instance p1, Lcom/vk/im/engine/events/g0;
+    new-instance p1, Lcom/vk/im/engine/events/OnMsgSendEvent;
 
-    invoke-direct {p1, v2, v3, v4}, Lcom/vk/im/engine/events/g0;-><init>(Ljava/lang/Object;ILjava/util/List;)V
+    invoke-direct {p1, v2, v3, v4}, Lcom/vk/im/engine/events/OnMsgSendEvent;-><init>(Ljava/lang/Object;ILjava/util/List;)V
 
-    invoke-interface {v0, v1, p1}, Lcom/vk/im/engine/d;->a(Ljava/lang/Object;Lcom/vk/im/engine/events/a;)V
+    invoke-interface {v0, v1, p1}, Lcom/vk/im/engine/ImEnvironment;->a(Ljava/lang/Object;Lcom/vk/im/engine/events/Event;)V
 
     return-void
 .end method
@@ -137,7 +137,7 @@
 
     invoke-virtual {p0, p1}, Lcom/vk/im/engine/commands/messages/MsgSendViaBgCmd$onExecute$msgList$1;->a(Ljava/util/List;)V
 
-    sget-object p1, Lkotlin/m;->a:Lkotlin/m;
+    sget-object p1, Lkotlin/Unit;->a:Lkotlin/Unit;
 
     return-object p1
 .end method

@@ -16,7 +16,7 @@
 
 
 # direct methods
-.method public constructor <init>(Landroid/content/Context;Lcom/vk/im/ui/components/viewcontrollers/popup/f;)V
+.method public constructor <init>(Landroid/content/Context;Lcom/vk/im/ui/components/viewcontrollers/popup/PopupScheduler;)V
     .locals 0
 
     .line 1
@@ -70,13 +70,13 @@
     return-void
 .end method
 
-.method public final a(Lkotlin/jvm/b/a;)V
+.method public final a(Lkotlin/jvm/b/Functions;)V
     .locals 18
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lkotlin/jvm/b/a<",
-            "Lkotlin/m;",
+            "Lkotlin/jvm/b/Functions<",
+            "Lkotlin/Unit;",
             ">;)V"
         }
     .end annotation
@@ -86,7 +86,7 @@
     .line 6
     iget-object v1, v0, Lcom/vk/im/ui/components/viewcontrollers/popup/DelegateAttaches;->b:Landroid/app/Dialog;
 
-    invoke-static {v1}, Lcom/vk/core/extensions/e;->a(Landroid/app/Dialog;)Z
+    invoke-static {v1}, Lcom/vk/core/extensions/DIalogExt;->a(Landroid/app/Dialog;)Z
 
     move-result v1
 
@@ -125,7 +125,7 @@
 
     move-object/from16 v1, p1
 
-    invoke-direct {v12, v1}, Lcom/vk/im/ui/components/viewcontrollers/popup/DelegateAttaches$showDeletePhotoDialog$1;-><init>(Lkotlin/jvm/b/a;)V
+    invoke-direct {v12, v1}, Lcom/vk/im/ui/components/viewcontrollers/popup/DelegateAttaches$showDeletePhotoDialog$1;-><init>(Lkotlin/jvm/b/Functions;)V
 
     const/4 v13, 0x0
 
@@ -141,7 +141,7 @@
     const/16 v17, 0x0
 
     .line 14
-    invoke-static/range {v2 .. v17}, Lcom/vk/im/ui/components/viewcontrollers/popup/g;->a(Landroid/content/Context;ILjava/lang/CharSequence;ILjava/lang/CharSequence;ILjava/lang/CharSequence;ILjava/lang/CharSequence;ZLkotlin/jvm/b/a;Lkotlin/jvm/b/a;Lkotlin/jvm/b/a;Lkotlin/jvm/b/a;ILjava/lang/Object;)Landroidx/appcompat/app/AlertDialog$Builder;
+    invoke-static/range {v2 .. v17}, Lcom/vk/im/ui/components/viewcontrollers/popup/PopupUtils;->a(Landroid/content/Context;ILjava/lang/CharSequence;ILjava/lang/CharSequence;ILjava/lang/CharSequence;ILjava/lang/CharSequence;ZLkotlin/jvm/b/Functions;Lkotlin/jvm/b/Functions;Lkotlin/jvm/b/Functions;Lkotlin/jvm/b/Functions;ILjava/lang/Object;)Landroidx/appcompat/app/AlertDialog$Builder;
 
     move-result-object v1
 
@@ -169,13 +169,13 @@
     return-void
 .end method
 
-.method public final b(Lkotlin/jvm/b/a;)V
+.method public final b(Lkotlin/jvm/b/Functions;)V
     .locals 18
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lkotlin/jvm/b/a<",
-            "Lkotlin/m;",
+            "Lkotlin/jvm/b/Functions<",
+            "Lkotlin/Unit;",
             ">;)V"
         }
     .end annotation
@@ -185,7 +185,7 @@
     .line 2
     iget-object v1, v0, Lcom/vk/im/ui/components/viewcontrollers/popup/DelegateAttaches;->a:Landroid/app/Dialog;
 
-    invoke-static {v1}, Lcom/vk/core/extensions/e;->a(Landroid/app/Dialog;)Z
+    invoke-static {v1}, Lcom/vk/core/extensions/DIalogExt;->a(Landroid/app/Dialog;)Z
 
     move-result v1
 
@@ -224,7 +224,7 @@
 
     move-object/from16 v1, p1
 
-    invoke-direct {v12, v1}, Lcom/vk/im/ui/components/viewcontrollers/popup/DelegateAttaches$showDeleteVideoDialog$1;-><init>(Lkotlin/jvm/b/a;)V
+    invoke-direct {v12, v1}, Lcom/vk/im/ui/components/viewcontrollers/popup/DelegateAttaches$showDeleteVideoDialog$1;-><init>(Lkotlin/jvm/b/Functions;)V
 
     const/4 v13, 0x0
 
@@ -240,7 +240,7 @@
     const/16 v17, 0x0
 
     .line 10
-    invoke-static/range {v2 .. v17}, Lcom/vk/im/ui/components/viewcontrollers/popup/g;->a(Landroid/content/Context;ILjava/lang/CharSequence;ILjava/lang/CharSequence;ILjava/lang/CharSequence;ILjava/lang/CharSequence;ZLkotlin/jvm/b/a;Lkotlin/jvm/b/a;Lkotlin/jvm/b/a;Lkotlin/jvm/b/a;ILjava/lang/Object;)Landroidx/appcompat/app/AlertDialog$Builder;
+    invoke-static/range {v2 .. v17}, Lcom/vk/im/ui/components/viewcontrollers/popup/PopupUtils;->a(Landroid/content/Context;ILjava/lang/CharSequence;ILjava/lang/CharSequence;ILjava/lang/CharSequence;ILjava/lang/CharSequence;ZLkotlin/jvm/b/Functions;Lkotlin/jvm/b/Functions;Lkotlin/jvm/b/Functions;Lkotlin/jvm/b/Functions;ILjava/lang/Object;)Landroidx/appcompat/app/AlertDialog$Builder;
 
     move-result-object v1
 

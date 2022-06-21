@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/im/engine/internal/storage_trigger_impl/StorageTriggerHandler;-><init>(Lcom/vk/im/engine/d;)V
+    value = Lcom/vk/im/engine/internal/storage_trigger_impl/StorageTriggerHandler;-><init>(Lcom/vk/im/engine/ImEnvironment;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;

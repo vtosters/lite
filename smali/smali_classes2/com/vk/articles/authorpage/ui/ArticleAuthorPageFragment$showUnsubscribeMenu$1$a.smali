@@ -42,13 +42,13 @@
 
     iget-object p1, p1, Lcom/vk/articles/authorpage/ui/ArticleAuthorPageFragment$showUnsubscribeMenu$1;->this$0:Lcom/vk/articles/authorpage/ui/ArticleAuthorPageFragment;
 
-    invoke-virtual {p1}, Lcom/vk/articles/authorpage/ui/ArticleAuthorPageFragment;->getPresenter()Lcom/vk/articles/authorpage/a;
+    invoke-virtual {p1}, Lcom/vk/articles/authorpage/ui/ArticleAuthorPageFragment;->getPresenter()Lcom/vk/articles/authorpage/ArticleAuthorPageContract;
 
     move-result-object p1
 
     if-eqz p1, :cond_0
 
-    invoke-interface {p1}, Lcom/vk/articles/authorpage/a;->c1()V
+    invoke-interface {p1}, Lcom/vk/articles/authorpage/ArticleAuthorPageContract;->c1()V
 
     :cond_0
     return-void

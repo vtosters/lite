@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/im/engine/models/messages/MsgHistory;->a(Lcom/vk/im/engine/models/a;)V
+    value = Lcom/vk/im/engine/models/messages/MsgHistory;->a(Lcom/vk/im/engine/models/EntityIntMap;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;

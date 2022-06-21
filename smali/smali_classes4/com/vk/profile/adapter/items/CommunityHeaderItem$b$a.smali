@@ -3,7 +3,7 @@
 .source "CommunityHeaderItem.kt"
 
 # interfaces
-.implements Lcom/vk/libvideo/r;
+.implements Lcom/vk/libvideo/VideoUI;
 
 
 # annotations
@@ -49,7 +49,7 @@
 
     const/4 v7, 0x0
 
-    invoke-static/range {v0 .. v7}, Lcom/vk/libvideo/autoplay/AutoPlayConfig;->a(Lcom/vk/libvideo/autoplay/AutoPlayConfig;ZZZLcom/vk/libvideo/VideoTracker$PlayerType;Lkotlin/jvm/b/a;ILjava/lang/Object;)Lcom/vk/libvideo/autoplay/AutoPlayConfig;
+    invoke-static/range {v0 .. v7}, Lcom/vk/libvideo/autoplay/AutoPlayConfig;->a(Lcom/vk/libvideo/autoplay/AutoPlayConfig;ZZZLcom/vk/libvideo/VideoTracker$PlayerType;Lkotlin/jvm/b/Functions;ILjava/lang/Object;)Lcom/vk/libvideo/autoplay/AutoPlayConfig;
 
     move-result-object p1
 
@@ -64,7 +64,7 @@
     .locals 0
 
     .line 1
-    invoke-static {p0, p1}, Lcom/vk/libvideo/r$a;->a(Lcom/vk/libvideo/r;Landroid/view/View;)V
+    invoke-static {p0, p1}, Lcom/vk/libvideo/VideoUI$a;->a(Lcom/vk/libvideo/VideoUI;Landroid/view/View;)V
 
     return-void
 .end method
@@ -73,7 +73,7 @@
     .locals 0
 
     .line 1
-    invoke-static {p0, p1}, Lcom/vk/libvideo/r$a;->b(Lcom/vk/libvideo/r;Landroid/view/View;)V
+    invoke-static {p0, p1}, Lcom/vk/libvideo/VideoUI$a;->b(Lcom/vk/libvideo/VideoUI;Landroid/view/View;)V
 
     return-void
 .end method
@@ -104,7 +104,7 @@
     return-object v0
 .end method
 
-.method public setFocusController(Lcom/vk/libvideo/q;)V
+.method public setFocusController(Lcom/vk/libvideo/VideoUI2;)V
     .locals 0
 
     return-void

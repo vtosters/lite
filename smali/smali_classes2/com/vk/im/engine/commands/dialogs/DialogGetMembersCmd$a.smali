@@ -15,11 +15,11 @@
 
 
 # instance fields
-.field private final a:Lcom/vk/im/engine/models/b;
+.field private final a:Lcom/vk/im/engine/models/EntityValue;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Lcom/vk/im/engine/models/b<",
-            "Lcom/vk/im/engine/models/dialogs/d;",
+            "Lcom/vk/im/engine/models/EntityValue<",
+            "Lcom/vk/im/engine/models/dialogs/DialogMembersList;",
             ">;"
         }
     .end annotation
@@ -29,13 +29,13 @@
 
 
 # direct methods
-.method public constructor <init>(Lcom/vk/im/engine/models/b;Lcom/vk/im/engine/models/ProfilesSimpleInfo;)V
+.method public constructor <init>(Lcom/vk/im/engine/models/EntityValue;Lcom/vk/im/engine/models/ProfilesSimpleInfo;)V
     .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lcom/vk/im/engine/models/b<",
-            "Lcom/vk/im/engine/models/dialogs/d;",
+            "Lcom/vk/im/engine/models/EntityValue<",
+            "Lcom/vk/im/engine/models/dialogs/DialogMembersList;",
             ">;",
             "Lcom/vk/im/engine/models/ProfilesSimpleInfo;",
             ")V"
@@ -45,7 +45,7 @@
     .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lcom/vk/im/engine/commands/dialogs/DialogGetMembersCmd$a;->a:Lcom/vk/im/engine/models/b;
+    iput-object p1, p0, Lcom/vk/im/engine/commands/dialogs/DialogGetMembersCmd$a;->a:Lcom/vk/im/engine/models/EntityValue;
 
     iput-object p2, p0, Lcom/vk/im/engine/commands/dialogs/DialogGetMembersCmd$a;->b:Lcom/vk/im/engine/models/ProfilesSimpleInfo;
 
@@ -63,19 +63,19 @@
     return-object v0
 .end method
 
-.method public final b()Lcom/vk/im/engine/models/b;
+.method public final b()Lcom/vk/im/engine/models/EntityValue;
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "()",
-            "Lcom/vk/im/engine/models/b<",
-            "Lcom/vk/im/engine/models/dialogs/d;",
+            "Lcom/vk/im/engine/models/EntityValue<",
+            "Lcom/vk/im/engine/models/dialogs/DialogMembersList;",
             ">;"
         }
     .end annotation
 
     .line 1
-    iget-object v0, p0, Lcom/vk/im/engine/commands/dialogs/DialogGetMembersCmd$a;->a:Lcom/vk/im/engine/models/b;
+    iget-object v0, p0, Lcom/vk/im/engine/commands/dialogs/DialogGetMembersCmd$a;->a:Lcom/vk/im/engine/models/EntityValue;
 
     return-object v0
 .end method
@@ -91,11 +91,11 @@
 
     check-cast p1, Lcom/vk/im/engine/commands/dialogs/DialogGetMembersCmd$a;
 
-    iget-object v0, p0, Lcom/vk/im/engine/commands/dialogs/DialogGetMembersCmd$a;->a:Lcom/vk/im/engine/models/b;
+    iget-object v0, p0, Lcom/vk/im/engine/commands/dialogs/DialogGetMembersCmd$a;->a:Lcom/vk/im/engine/models/EntityValue;
 
-    iget-object v1, p1, Lcom/vk/im/engine/commands/dialogs/DialogGetMembersCmd$a;->a:Lcom/vk/im/engine/models/b;
+    iget-object v1, p1, Lcom/vk/im/engine/commands/dialogs/DialogGetMembersCmd$a;->a:Lcom/vk/im/engine/models/EntityValue;
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v0
 
@@ -105,7 +105,7 @@
 
     iget-object p1, p1, Lcom/vk/im/engine/commands/dialogs/DialogGetMembersCmd$a;->b:Lcom/vk/im/engine/models/ProfilesSimpleInfo;
 
-    invoke-static {v0, p1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v0, p1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result p1
 
@@ -128,13 +128,13 @@
 .method public hashCode()I
     .locals 3
 
-    iget-object v0, p0, Lcom/vk/im/engine/commands/dialogs/DialogGetMembersCmd$a;->a:Lcom/vk/im/engine/models/b;
+    iget-object v0, p0, Lcom/vk/im/engine/commands/dialogs/DialogGetMembersCmd$a;->a:Lcom/vk/im/engine/models/EntityValue;
 
     const/4 v1, 0x0
 
     if-eqz v0, :cond_0
 
-    invoke-virtual {v0}, Lcom/vk/im/engine/models/b;->hashCode()I
+    invoke-virtual {v0}, Lcom/vk/im/engine/models/EntityValue;->hashCode()I
 
     move-result v0
 
@@ -171,7 +171,7 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget-object v1, p0, Lcom/vk/im/engine/commands/dialogs/DialogGetMembersCmd$a;->a:Lcom/vk/im/engine/models/b;
+    iget-object v1, p0, Lcom/vk/im/engine/commands/dialogs/DialogGetMembersCmd$a;->a:Lcom/vk/im/engine/models/EntityValue;
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 

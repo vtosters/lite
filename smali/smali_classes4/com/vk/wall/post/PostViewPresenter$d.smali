@@ -3,7 +3,7 @@
 .source "PostViewPresenter.kt"
 
 # interfaces
-.implements Lc/a/z/g;
+.implements Lio/reactivex/functions/Consumer;
 
 
 # annotations
@@ -22,7 +22,7 @@
         "Ljava/lang/Object;",
         ">",
         "Ljava/lang/Object;",
-        "Lc/a/z/g<",
+        "Lio/reactivex/functions/Consumer<",
         "Ljava/lang/Object;",
         ">;"
     }
@@ -60,7 +60,7 @@
 
     move-result-object v0
 
-    instance-of v1, v0, Lcom/vk/dto/newsfeed/d;
+    instance-of v1, v0, Lcom/vk/dto/newsfeed/Ownable;
 
     const/4 v2, 0x0
 
@@ -69,11 +69,11 @@
     move-object v0, v2
 
     :cond_0
-    check-cast v0, Lcom/vk/dto/newsfeed/d;
+    check-cast v0, Lcom/vk/dto/newsfeed/Ownable;
 
     if-eqz v0, :cond_1
 
-    invoke-interface {v0}, Lcom/vk/dto/newsfeed/d;->L0()Lcom/vk/dto/newsfeed/Owner;
+    invoke-interface {v0}, Lcom/vk/dto/newsfeed/Ownable;->L0()Lcom/vk/dto/newsfeed/Owner;
 
     move-result-object v0
 
@@ -110,7 +110,7 @@
     .line 5
     iget-object p1, p0, Lcom/vk/wall/post/PostViewPresenter$d;->a:Lcom/vk/wall/post/PostViewPresenter;
 
-    invoke-static {p1}, Lcom/vk/wall/post/PostViewPresenter;->d(Lcom/vk/wall/post/PostViewPresenter;)Lcom/vk/lists/o;
+    invoke-static {p1}, Lcom/vk/wall/post/PostViewPresenter;->d(Lcom/vk/wall/post/PostViewPresenter;)Lcom/vk/lists/ListDataSet;
 
     move-result-object p1
 
@@ -120,7 +120,7 @@
 
     move-result v0
 
-    invoke-virtual {p1, v0}, Lcom/vk/lists/b;->a(I)V
+    invoke-virtual {p1, v0}, Lcom/vk/lists/BaseListDataSet;->a(I)V
 
     goto :goto_1
 
@@ -147,7 +147,7 @@
     .line 8
     iget-object p1, p0, Lcom/vk/wall/post/PostViewPresenter$d;->a:Lcom/vk/wall/post/PostViewPresenter;
 
-    invoke-static {p1}, Lcom/vk/wall/post/PostViewPresenter;->d(Lcom/vk/wall/post/PostViewPresenter;)Lcom/vk/lists/o;
+    invoke-static {p1}, Lcom/vk/wall/post/PostViewPresenter;->d(Lcom/vk/wall/post/PostViewPresenter;)Lcom/vk/lists/ListDataSet;
 
     move-result-object p1
 
@@ -157,7 +157,7 @@
 
     move-result v0
 
-    invoke-virtual {p1, v0}, Lcom/vk/lists/b;->a(I)V
+    invoke-virtual {p1, v0}, Lcom/vk/lists/BaseListDataSet;->a(I)V
 
     :cond_5
     :goto_1

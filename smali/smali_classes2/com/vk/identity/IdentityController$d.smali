@@ -3,7 +3,7 @@
 .source "IdentityController.kt"
 
 # interfaces
-.implements Lcom/vk/core/dialogs/bottomsheet/h$f;
+.implements Lcom/vk/core/dialogs/bottomsheet/ModalDialogInterface$f;
 
 
 # annotations
@@ -35,11 +35,11 @@
 
 
 # virtual methods
-.method public a(Lcom/vk/core/dialogs/bottomsheet/e;)V
+.method public a(Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet;)V
     .locals 1
 
     .line 1
-    invoke-virtual {p1}, Lcom/vk/core/dialogs/bottomsheet/e;->E4()Landroid/widget/TextView;
+    invoke-virtual {p1}, Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet;->E4()Landroid/widget/TextView;
 
     move-result-object p1
 

@@ -3,7 +3,7 @@
 .source "PhotoViewer.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/a;
+.implements Lkotlin/jvm/b/Functions;
 
 
 # annotations
@@ -19,8 +19,8 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/a<",
-        "Lkotlin/m;",
+        "Lkotlin/jvm/b/Functions<",
+        "Lkotlin/Unit;",
         ">;"
     }
 .end annotation
@@ -51,7 +51,7 @@
     .line 1
     invoke-virtual {p0}, Lcom/vk/photoviewer/PhotoViewer$show$1;->invoke()V
 
-    sget-object v0, Lkotlin/m;->a:Lkotlin/m;
+    sget-object v0, Lkotlin/Unit;->a:Lkotlin/Unit;
 
     return-object v0
 .end method
@@ -62,7 +62,7 @@
     .line 2
     iget-object v0, p0, Lcom/vk/photoviewer/PhotoViewer$show$1;->this$0:Lcom/vk/photoviewer/PhotoViewer;
 
-    invoke-static {v0}, Lcom/vk/photoviewer/PhotoViewer;->p(Lcom/vk/photoviewer/PhotoViewer;)Lkotlin/jvm/b/b;
+    invoke-static {v0}, Lcom/vk/photoviewer/PhotoViewer;->p(Lcom/vk/photoviewer/PhotoViewer;)Lkotlin/jvm/b/Functions2;
 
     move-result-object v1
 
@@ -76,7 +76,7 @@
     invoke-direct {v3, p0}, Lcom/vk/photoviewer/PhotoViewer$show$1$2;-><init>(Lcom/vk/photoviewer/PhotoViewer$show$1;)V
 
     .line 4
-    invoke-static {v0, v1, v2, v3}, Lcom/vk/photoviewer/PhotoViewer;->a(Lcom/vk/photoviewer/PhotoViewer;Lkotlin/jvm/b/b;Lkotlin/jvm/b/a;Lkotlin/jvm/b/a;)V
+    invoke-static {v0, v1, v2, v3}, Lcom/vk/photoviewer/PhotoViewer;->a(Lcom/vk/photoviewer/PhotoViewer;Lkotlin/jvm/b/Functions2;Lkotlin/jvm/b/Functions;Lkotlin/jvm/b/Functions;)V
 
     return-void
 .end method

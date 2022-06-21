@@ -3,7 +3,7 @@
 .source "QueueSyncRunner.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/a;
+.implements Lkotlin/jvm/b/Functions;
 
 
 # annotations
@@ -19,24 +19,24 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/a<",
-        "Lkotlin/m;",
+        "Lkotlin/jvm/b/Functions<",
+        "Lkotlin/Unit;",
         ">;"
     }
 .end annotation
 
 
 # instance fields
-.field final synthetic $it:Lcom/vk/queue/sync/c;
+.field final synthetic $it:Lcom/vk/queue/sync/Subscriber;
 
 .field final synthetic this$0:Lcom/vk/queue/sync/QueueSyncRunner;
 
 
 # direct methods
-.method constructor <init>(Lcom/vk/queue/sync/c;Lcom/vk/queue/sync/QueueSyncRunner;)V
+.method constructor <init>(Lcom/vk/queue/sync/Subscriber;Lcom/vk/queue/sync/QueueSyncRunner;)V
     .locals 0
 
-    iput-object p1, p0, Lcom/vk/queue/sync/QueueSyncRunner$run$$inlined$forEach$lambda$1;->$it:Lcom/vk/queue/sync/c;
+    iput-object p1, p0, Lcom/vk/queue/sync/QueueSyncRunner$run$$inlined$forEach$lambda$1;->$it:Lcom/vk/queue/sync/Subscriber;
 
     iput-object p2, p0, Lcom/vk/queue/sync/QueueSyncRunner$run$$inlined$forEach$lambda$1;->this$0:Lcom/vk/queue/sync/QueueSyncRunner;
 
@@ -55,7 +55,7 @@
     .line 1
     invoke-virtual {p0}, Lcom/vk/queue/sync/QueueSyncRunner$run$$inlined$forEach$lambda$1;->invoke()V
 
-    sget-object v0, Lkotlin/m;->a:Lkotlin/m;
+    sget-object v0, Lkotlin/Unit;->a:Lkotlin/Unit;
 
     return-object v0
 .end method
@@ -66,9 +66,9 @@
     .line 2
     iget-object v0, p0, Lcom/vk/queue/sync/QueueSyncRunner$run$$inlined$forEach$lambda$1;->this$0:Lcom/vk/queue/sync/QueueSyncRunner;
 
-    iget-object v1, p0, Lcom/vk/queue/sync/QueueSyncRunner$run$$inlined$forEach$lambda$1;->$it:Lcom/vk/queue/sync/c;
+    iget-object v1, p0, Lcom/vk/queue/sync/QueueSyncRunner$run$$inlined$forEach$lambda$1;->$it:Lcom/vk/queue/sync/Subscriber;
 
-    invoke-static {v0, v1}, Lcom/vk/queue/sync/QueueSyncRunner;->a(Lcom/vk/queue/sync/QueueSyncRunner;Lcom/vk/queue/sync/c;)V
+    invoke-static {v0, v1}, Lcom/vk/queue/sync/QueueSyncRunner;->a(Lcom/vk/queue/sync/QueueSyncRunner;Lcom/vk/queue/sync/Subscriber;)V
 
     return-void
 .end method

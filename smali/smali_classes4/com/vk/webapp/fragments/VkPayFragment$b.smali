@@ -24,7 +24,7 @@
     return-void
 .end method
 
-.method public synthetic constructor <init>(Lkotlin/jvm/internal/i;)V
+.method public synthetic constructor <init>(Lkotlin/jvm/internal/DefaultConstructorMarker;)V
     .locals 0
 
     .line 2
@@ -64,15 +64,15 @@
 
     if-nez v3, :cond_0
 
-    invoke-static {}, Lcom/vk/bridges/g;->a()Lcom/vk/bridges/f;
+    invoke-static {}, Lcom/vk/bridges/AuthBridge;->a()Lcom/vk/bridges/AuthBridge3;
 
     move-result-object v3
 
-    invoke-interface {v3}, Lcom/vk/bridges/f;->c()Lcom/vk/bridges/a;
+    invoke-interface {v3}, Lcom/vk/bridges/AuthBridge3;->c()Lcom/vk/bridges/AuthBridge1;
 
     move-result-object v3
 
-    invoke-virtual {v3}, Lcom/vk/bridges/a;->v()Ljava/lang/String;
+    invoke-virtual {v3}, Lcom/vk/bridges/AuthBridge1;->v()Ljava/lang/String;
 
     move-result-object v3
 

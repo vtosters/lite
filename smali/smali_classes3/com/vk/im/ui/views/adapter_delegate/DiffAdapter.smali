@@ -56,7 +56,7 @@
 
     invoke-direct {v1, p0}, Lcom/vk/im/ui/views/adapter_delegate/DiffAdapter$adapterUpdateCallback$1;-><init>(Lcom/vk/im/ui/views/adapter_delegate/DiffAdapter;)V
 
-    invoke-direct {v0, p0, v1}, Lcom/vk/im/ui/views/adapter_delegate/DiffAdapter$AdapterUpdateCallback;-><init>(Landroidx/recyclerview/widget/RecyclerView$Adapter;Lkotlin/jvm/b/a;)V
+    invoke-direct {v0, p0, v1}, Lcom/vk/im/ui/views/adapter_delegate/DiffAdapter$AdapterUpdateCallback;-><init>(Landroidx/recyclerview/widget/RecyclerView$Adapter;Lkotlin/jvm/b/Functions;)V
 
     .line 2
     new-instance v1, Landroidx/recyclerview/widget/AsyncDifferConfig$Builder;
@@ -69,7 +69,7 @@
 
     const-string v1, "AsyncDifferConfig.Builder(diffCallback).build()"
 
-    invoke-static {p1, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 3
     new-instance v1, Landroidx/recyclerview/widget/AsyncListDiffer;
@@ -141,7 +141,7 @@
     return-object p1
 
     :cond_0
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     const/4 p1, 0x0
 

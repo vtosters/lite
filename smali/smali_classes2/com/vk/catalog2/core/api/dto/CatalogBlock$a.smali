@@ -135,12 +135,12 @@
     move-result-object v8
 
     .line 11
-    invoke-static {p1}, Lcom/vk/core/extensions/w;->a(Lcom/vk/core/serialize/Serializer;)Ljava/util/List;
+    invoke-static {p1}, Lcom/vk/core/extensions/SerializerExt;->a(Lcom/vk/core/serialize/Serializer;)Ljava/util/List;
 
     move-result-object v9
 
     .line 12
-    invoke-static {p1}, Lcom/vk/core/extensions/w;->a(Lcom/vk/core/serialize/Serializer;)Ljava/util/List;
+    invoke-static {p1}, Lcom/vk/core/extensions/SerializerExt;->a(Lcom/vk/core/serialize/Serializer;)Ljava/util/List;
 
     move-result-object v10
 
@@ -155,19 +155,19 @@
 
     .line 14
     :cond_1
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     throw v0
 
     .line 15
     :cond_2
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     throw v0
 
     .line 16
     :cond_3
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     throw v0
 .end method

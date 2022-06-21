@@ -3,7 +3,7 @@
 .source "StickerSearcher.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/a;
+.implements Lkotlin/jvm/b/Functions;
 
 
 # annotations
@@ -19,8 +19,8 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/a<",
-        "Lc/a/m<",
+        "Lkotlin/jvm/b/Functions<",
+        "Lio/reactivex/Observable<",
         "Landroid/util/SparseIntArray;",
         ">;>;"
     }
@@ -46,12 +46,12 @@
 
 
 # virtual methods
-.method public final invoke()Lc/a/m;
+.method public final invoke()Lio/reactivex/Observable;
     .locals 2
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "()",
-            "Lc/a/m<",
+            "Lio/reactivex/Observable<",
             "Landroid/util/SparseIntArray;",
             ">;"
         }
@@ -62,20 +62,20 @@
 
     invoke-direct {v0, p0}, Lcom/vk/stickers/StickerSearcher$calculationObservable$2$a;-><init>(Lcom/vk/stickers/StickerSearcher$calculationObservable$2;)V
 
-    invoke-static {v0}, Lc/a/m;->c(Ljava/util/concurrent/Callable;)Lc/a/m;
+    invoke-static {v0}, Lio/reactivex/Observable;->c(Ljava/util/concurrent/Callable;)Lio/reactivex/Observable;
 
     move-result-object v0
 
     .line 3
-    invoke-static {}, Lc/a/f0/b;->a()Lc/a/s;
+    invoke-static {}, Lio/reactivex/schedulers/Schedulers;->a()Lio/reactivex/Scheduler;
 
     move-result-object v1
 
-    invoke-virtual {v0, v1}, Lc/a/m;->b(Lc/a/s;)Lc/a/m;
+    invoke-virtual {v0, v1}, Lio/reactivex/Observable;->b(Lio/reactivex/Scheduler;)Lio/reactivex/Observable;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lc/a/m;->d()Lc/a/m;
+    invoke-virtual {v0}, Lio/reactivex/Observable;->d()Lio/reactivex/Observable;
 
     move-result-object v0
 
@@ -86,7 +86,7 @@
     .locals 1
 
     .line 1
-    invoke-virtual {p0}, Lcom/vk/stickers/StickerSearcher$calculationObservable$2;->invoke()Lc/a/m;
+    invoke-virtual {p0}, Lcom/vk/stickers/StickerSearcher$calculationObservable$2;->invoke()Lio/reactivex/Observable;
 
     move-result-object v0
 

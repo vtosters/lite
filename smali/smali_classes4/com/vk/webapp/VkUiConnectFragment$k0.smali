@@ -3,12 +3,12 @@
 .source "VkUiConnectFragment.kt"
 
 # interfaces
-.implements Lc/a/z/a;
+.implements Lio/reactivex/functions/Action;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/webapp/VkUiConnectFragment;->a(Lc/a/m;Z)V
+    value = Lcom/vk/webapp/VkUiConnectFragment;->a(Lio/reactivex/Observable;Z)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;

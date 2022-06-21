@@ -3,7 +3,7 @@
 .source "AdvMyTargetHelper.kt"
 
 # interfaces
-.implements Lcom/my/target/e/a$b;
+.implements Lcom/my/target/e/InterstitialAd$b;
 
 
 # annotations
@@ -40,73 +40,73 @@
 
 
 # virtual methods
-.method public a(Lcom/my/target/e/a;)V
+.method public a(Lcom/my/target/e/InterstitialAd;)V
     .locals 0
 
     return-void
 .end method
 
-.method public a(Ljava/lang/String;Lcom/my/target/e/a;)V
+.method public a(Ljava/lang/String;Lcom/my/target/e/InterstitialAd;)V
     .locals 0
 
     .line 1
     iget-object p1, p0, Lcom/vk/webapp/helpers/AdvMyTargetHelper$a;->a:Lcom/vk/webapp/helpers/AdvMyTargetHelper;
 
-    invoke-static {p1}, Lcom/vk/webapp/helpers/AdvMyTargetHelper;->a(Lcom/vk/webapp/helpers/AdvMyTargetHelper;)Lkotlin/jvm/b/a;
+    invoke-static {p1}, Lcom/vk/webapp/helpers/AdvMyTargetHelper;->a(Lcom/vk/webapp/helpers/AdvMyTargetHelper;)Lkotlin/jvm/b/Functions;
 
     move-result-object p1
 
     if-eqz p1, :cond_0
 
-    invoke-interface {p1}, Lkotlin/jvm/b/a;->invoke()Ljava/lang/Object;
+    invoke-interface {p1}, Lkotlin/jvm/b/Functions;->invoke()Ljava/lang/Object;
 
     move-result-object p1
 
-    check-cast p1, Lkotlin/m;
+    check-cast p1, Lkotlin/Unit;
 
     :cond_0
     return-void
 .end method
 
-.method public b(Lcom/my/target/e/a;)V
+.method public b(Lcom/my/target/e/InterstitialAd;)V
     .locals 0
 
     .line 1
     iget-object p1, p0, Lcom/vk/webapp/helpers/AdvMyTargetHelper$a;->a:Lcom/vk/webapp/helpers/AdvMyTargetHelper;
 
-    invoke-static {p1}, Lcom/vk/webapp/helpers/AdvMyTargetHelper;->b(Lcom/vk/webapp/helpers/AdvMyTargetHelper;)Lkotlin/jvm/b/a;
+    invoke-static {p1}, Lcom/vk/webapp/helpers/AdvMyTargetHelper;->b(Lcom/vk/webapp/helpers/AdvMyTargetHelper;)Lkotlin/jvm/b/Functions;
 
     move-result-object p1
 
     if-eqz p1, :cond_0
 
-    invoke-interface {p1}, Lkotlin/jvm/b/a;->invoke()Ljava/lang/Object;
+    invoke-interface {p1}, Lkotlin/jvm/b/Functions;->invoke()Ljava/lang/Object;
 
     move-result-object p1
 
-    check-cast p1, Lkotlin/m;
+    check-cast p1, Lkotlin/Unit;
 
     :cond_0
     return-void
 .end method
 
-.method public c(Lcom/my/target/e/a;)V
+.method public c(Lcom/my/target/e/InterstitialAd;)V
     .locals 0
 
     return-void
 .end method
 
-.method public d(Lcom/my/target/e/a;)V
+.method public d(Lcom/my/target/e/InterstitialAd;)V
     .locals 0
 
     return-void
 .end method
 
-.method public e(Lcom/my/target/e/a;)V
+.method public e(Lcom/my/target/e/InterstitialAd;)V
     .locals 0
 
     .line 1
-    invoke-virtual {p1}, Lcom/my/target/e/a;->e()V
+    invoke-virtual {p1}, Lcom/my/target/e/InterstitialAd;->e()V
 
     return-void
 .end method

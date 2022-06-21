@@ -1,5 +1,5 @@
 .class public final Lcom/vk/im/ui/components/chat_settings/vc/VhCreateCasperChat;
-.super Lcom/vk/im/ui/components/chat_settings/vc/e;
+.super Lcom/vk/im/ui/components/chat_settings/vc/VhBase;
 .source "VhCreateCasperChat.kt"
 
 
@@ -9,51 +9,51 @@
 
 .annotation system Ldalvik/annotation/Signature;
     value = {
-        "Lcom/vk/im/ui/components/chat_settings/vc/e<",
-        "Lcom/vk/im/ui/components/chat_settings/vc/b$b;",
+        "Lcom/vk/im/ui/components/chat_settings/vc/VhBase<",
+        "Lcom/vk/im/ui/components/chat_settings/vc/ListItems$b;",
         ">;"
     }
 .end annotation
 
 
 # instance fields
-.field private final a:Lcom/vk/im/ui/components/chat_settings/vc/a;
+.field private final a:Lcom/vk/im/ui/components/chat_settings/vc/AdapterCallback;
 
 
 # direct methods
-.method public constructor <init>(Lcom/vk/im/ui/components/chat_settings/vc/a;Landroid/view/ViewGroup;)V
+.method public constructor <init>(Lcom/vk/im/ui/components/chat_settings/vc/AdapterCallback;Landroid/view/ViewGroup;)V
     .locals 1
 
     .line 1
     sget v0, Lcom/vk/im/ui/j;->vkim_chat_settings_create_casper_chat:I
 
-    invoke-direct {p0, v0, p2}, Lcom/vk/im/ui/components/chat_settings/vc/e;-><init>(ILandroid/view/ViewGroup;)V
+    invoke-direct {p0, v0, p2}, Lcom/vk/im/ui/components/chat_settings/vc/VhBase;-><init>(ILandroid/view/ViewGroup;)V
 
-    iput-object p1, p0, Lcom/vk/im/ui/components/chat_settings/vc/VhCreateCasperChat;->a:Lcom/vk/im/ui/components/chat_settings/vc/a;
+    iput-object p1, p0, Lcom/vk/im/ui/components/chat_settings/vc/VhCreateCasperChat;->a:Lcom/vk/im/ui/components/chat_settings/vc/AdapterCallback;
 
     .line 2
     iget-object p1, p0, Landroidx/recyclerview/widget/RecyclerView$ViewHolder;->itemView:Landroid/view/View;
 
     const-string p2, "itemView"
 
-    invoke-static {p1, p2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, p2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     new-instance p2, Lcom/vk/im/ui/components/chat_settings/vc/VhCreateCasperChat$1;
 
     invoke-direct {p2, p0}, Lcom/vk/im/ui/components/chat_settings/vc/VhCreateCasperChat$1;-><init>(Lcom/vk/im/ui/components/chat_settings/vc/VhCreateCasperChat;)V
 
-    invoke-static {p1, p2}, Lcom/vk/extensions/ViewExtKt;->e(Landroid/view/View;Lkotlin/jvm/b/b;)V
+    invoke-static {p1, p2}, Lcom/vk/extensions/ViewExtKt;->e(Landroid/view/View;Lkotlin/jvm/b/Functions2;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final e0()Lcom/vk/im/ui/components/chat_settings/vc/a;
+.method public final e0()Lcom/vk/im/ui/components/chat_settings/vc/AdapterCallback;
     .locals 1
 
     .line 1
-    iget-object v0, p0, Lcom/vk/im/ui/components/chat_settings/vc/VhCreateCasperChat;->a:Lcom/vk/im/ui/components/chat_settings/vc/a;
+    iget-object v0, p0, Lcom/vk/im/ui/components/chat_settings/vc/VhCreateCasperChat;->a:Lcom/vk/im/ui/components/chat_settings/vc/AdapterCallback;
 
     return-object v0
 .end method

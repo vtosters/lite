@@ -25,12 +25,12 @@
 
 .field private final c:Landroid/content/Context;
 
-.field private final d:Lkotlin/jvm/b/b;
+.field private final d:Lkotlin/jvm/b/Functions2;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Lkotlin/jvm/b/b<",
+            "Lkotlin/jvm/b/Functions2<",
             "Lcom/vk/instantjobs/utils/BatteryLevelDetector$Level;",
-            "Lkotlin/m;",
+            "Lkotlin/Unit;",
             ">;"
         }
     .end annotation
@@ -38,16 +38,16 @@
 
 
 # direct methods
-.method public constructor <init>(Landroid/content/Context;Lkotlin/jvm/b/b;)V
+.method public constructor <init>(Landroid/content/Context;Lkotlin/jvm/b/Functions2;)V
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
             "Landroid/content/Context;",
-            "Lkotlin/jvm/b/b<",
+            "Lkotlin/jvm/b/Functions2<",
             "-",
             "Lcom/vk/instantjobs/utils/BatteryLevelDetector$Level;",
-            "Lkotlin/m;",
+            "Lkotlin/Unit;",
             ">;)V"
         }
     .end annotation
@@ -57,7 +57,7 @@
 
     iput-object p1, p0, Lcom/vk/instantjobs/utils/BatteryLevelDetector;->c:Landroid/content/Context;
 
-    iput-object p2, p0, Lcom/vk/instantjobs/utils/BatteryLevelDetector;->d:Lkotlin/jvm/b/b;
+    iput-object p2, p0, Lcom/vk/instantjobs/utils/BatteryLevelDetector;->d:Lkotlin/jvm/b/Functions2;
 
     .line 2
     sget-object p1, Lcom/vk/instantjobs/utils/BatteryLevelDetector$Level;->NORMAL:Lcom/vk/instantjobs/utils/BatteryLevelDetector$Level;
@@ -91,7 +91,7 @@
 
     const-string p2, "context.registerReceiver(receiver, intentFilter)!!"
 
-    invoke-static {p1, p2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, p2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 6
     invoke-direct {p0, p1}, Lcom/vk/instantjobs/utils/BatteryLevelDetector;->a(Landroid/content/Intent;)Lcom/vk/instantjobs/utils/BatteryLevelDetector$Level;
@@ -104,7 +104,7 @@
 
     .line 7
     :cond_0
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     const/4 p1, 0x0
 
@@ -177,9 +177,9 @@
     iput-object p1, p0, Lcom/vk/instantjobs/utils/BatteryLevelDetector;->a:Lcom/vk/instantjobs/utils/BatteryLevelDetector$Level;
 
     .line 6
-    iget-object v0, p0, Lcom/vk/instantjobs/utils/BatteryLevelDetector;->d:Lkotlin/jvm/b/b;
+    iget-object v0, p0, Lcom/vk/instantjobs/utils/BatteryLevelDetector;->d:Lkotlin/jvm/b/Functions2;
 
-    invoke-interface {v0, p1}, Lkotlin/jvm/b/b;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v0, p1}, Lkotlin/jvm/b/Functions2;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
 
     :cond_0
     return-void

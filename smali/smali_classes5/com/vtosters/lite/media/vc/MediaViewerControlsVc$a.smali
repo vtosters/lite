@@ -56,13 +56,13 @@
     .line 2
     iget-object p1, p0, Lcom/vtosters/lite/media/vc/MediaViewerControlsVc$a;->b:Lcom/vtosters/lite/media/vc/MediaViewerControlsVc;
 
-    invoke-static {p1}, Lcom/vtosters/lite/media/vc/MediaViewerControlsVc;->b(Lcom/vtosters/lite/media/vc/MediaViewerControlsVc;)Lio/reactivex/disposables/b;
+    invoke-static {p1}, Lcom/vtosters/lite/media/vc/MediaViewerControlsVc;->b(Lcom/vtosters/lite/media/vc/MediaViewerControlsVc;)Lio/reactivex/disposables/Disposable;
 
     move-result-object p1
 
     if-eqz p1, :cond_0
 
-    invoke-interface {p1}, Lio/reactivex/disposables/b;->o()V
+    invoke-interface {p1}, Lio/reactivex/disposables/Disposable;->o()V
 
     :cond_0
     return-void

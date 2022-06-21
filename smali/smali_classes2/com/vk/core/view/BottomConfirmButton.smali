@@ -49,7 +49,7 @@
 
     move-object v1, p1
 
-    invoke-direct/range {v0 .. v5}, Lcom/vk/core/view/BottomConfirmButton;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;IILkotlin/jvm/internal/i;)V
+    invoke-direct/range {v0 .. v5}, Lcom/vk/core/view/BottomConfirmButton;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;IILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     return-void
 .end method
@@ -69,7 +69,7 @@
 
     move-object v2, p2
 
-    invoke-direct/range {v0 .. v5}, Lcom/vk/core/view/BottomConfirmButton;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;IILkotlin/jvm/internal/i;)V
+    invoke-direct/range {v0 .. v5}, Lcom/vk/core/view/BottomConfirmButton;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;IILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     return-void
 .end method
@@ -143,7 +143,7 @@
 
     const-string v5, "findViewById(R.id.bcb_send)"
 
-    invoke-static {v4, v5}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v4, v5}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     iput-object v4, v0, Lcom/vk/core/view/BottomConfirmButton;->a:Landroid/view/View;
 
@@ -156,7 +156,7 @@
 
     const-string v5, "findViewById(R.id.bcb_send_text)"
 
-    invoke-static {v4, v5}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v4, v5}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     check-cast v4, Landroid/widget/TextView;
 
@@ -171,7 +171,7 @@
 
     const-string v5, "findViewById(R.id.bcb_send_counter)"
 
-    invoke-static {v4, v5}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v4, v5}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     check-cast v4, Landroid/widget/TextView;
 
@@ -186,7 +186,7 @@
 
     const-string v5, "findViewById(R.id.bcb_cancel)"
 
-    invoke-static {v4, v5}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v4, v5}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     check-cast v4, Landroid/widget/TextView;
 
@@ -387,7 +387,7 @@
     :cond_2
     iget-object v1, v0, Lcom/vk/core/view/BottomConfirmButton;->a:Landroid/view/View;
 
-    sget-object v7, Lcom/vk/core/drawable/l;->c:Lcom/vk/core/drawable/l;
+    sget-object v7, Lcom/vk/core/drawable/VkUiDrawableHelper;->c:Lcom/vk/core/drawable/VkUiDrawableHelper;
 
     const/4 v9, 0x0
 
@@ -427,7 +427,7 @@
     move-object/from16 v17, v19
 
     .line 32
-    invoke-static/range {v7 .. v17}, Lcom/vk/core/drawable/l;->a(Lcom/vk/core/drawable/l;IIZIIFLandroid/content/Context;Landroid/graphics/Bitmap;ILjava/lang/Object;)Landroid/graphics/drawable/RippleDrawable;
+    invoke-static/range {v7 .. v17}, Lcom/vk/core/drawable/VkUiDrawableHelper;->a(Lcom/vk/core/drawable/VkUiDrawableHelper;IIZIIFLandroid/content/Context;Landroid/graphics/Bitmap;ILjava/lang/Object;)Landroid/graphics/drawable/RippleDrawable;
 
     move-result-object v7
 
@@ -467,7 +467,7 @@
     .line 38
     iget-object v1, v0, Lcom/vk/core/view/BottomConfirmButton;->d:Landroid/widget/TextView;
 
-    sget-object v9, Lcom/vk/core/drawable/l;->c:Lcom/vk/core/drawable/l;
+    sget-object v9, Lcom/vk/core/drawable/VkUiDrawableHelper;->c:Lcom/vk/core/drawable/VkUiDrawableHelper;
 
     const/4 v13, 0x0
 
@@ -489,7 +489,7 @@
     move/from16 v18, v3
 
     .line 40
-    invoke-static/range {v9 .. v19}, Lcom/vk/core/drawable/l;->a(Lcom/vk/core/drawable/l;IIZIIFLandroid/content/Context;Landroid/graphics/Bitmap;ILjava/lang/Object;)Landroid/graphics/drawable/RippleDrawable;
+    invoke-static/range {v9 .. v19}, Lcom/vk/core/drawable/VkUiDrawableHelper;->a(Lcom/vk/core/drawable/VkUiDrawableHelper;IIZIIFLandroid/content/Context;Landroid/graphics/Bitmap;ILjava/lang/Object;)Landroid/graphics/drawable/RippleDrawable;
 
     move-result-object v3
 
@@ -509,7 +509,7 @@
     return-void
 .end method
 
-.method public synthetic constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;IILkotlin/jvm/internal/i;)V
+.method public synthetic constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;IILkotlin/jvm/internal/DefaultConstructorMarker;)V
     .locals 0
 
     and-int/lit8 p5, p4, 0x2
@@ -592,7 +592,7 @@
 
     const-string v1, "context.getDrawable(drawableRes)!!.mutate()"
 
-    invoke-static {p1, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     const/4 v1, 0x0
 
@@ -602,7 +602,7 @@
     const/4 p2, 0x2
 
     .line 3
-    invoke-static {p1, p3, v0, p2, v0}, Lcom/vk/core/extensions/f;->a(Landroid/graphics/drawable/Drawable;ILandroid/graphics/PorterDuff$Mode;ILjava/lang/Object;)Landroid/graphics/drawable/Drawable;
+    invoke-static {p1, p3, v0, p2, v0}, Lcom/vk/core/extensions/DrawableExt;->a(Landroid/graphics/drawable/Drawable;ILandroid/graphics/PorterDuff$Mode;ILjava/lang/Object;)Landroid/graphics/drawable/Drawable;
 
     .line 4
     iget-object p2, p0, Lcom/vk/core/view/BottomConfirmButton;->b:Landroid/widget/TextView;
@@ -613,7 +613,7 @@
 
     .line 5
     :cond_0
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     throw v0
 .end method
@@ -756,7 +756,7 @@
     .line 1
     iget-object v0, p0, Lcom/vk/core/view/BottomConfirmButton;->a:Landroid/view/View;
 
-    sget-object v1, Lcom/vk/core/drawable/l;->c:Lcom/vk/core/drawable/l;
+    sget-object v1, Lcom/vk/core/drawable/VkUiDrawableHelper;->c:Lcom/vk/core/drawable/VkUiDrawableHelper;
 
     .line 2
     iget v2, p0, Lcom/vk/core/view/BottomConfirmButton;->B:I
@@ -782,7 +782,7 @@
     move v2, p1
 
     .line 3
-    invoke-static/range {v1 .. v11}, Lcom/vk/core/drawable/l;->a(Lcom/vk/core/drawable/l;IIZIIFLandroid/content/Context;Landroid/graphics/Bitmap;ILjava/lang/Object;)Landroid/graphics/drawable/RippleDrawable;
+    invoke-static/range {v1 .. v11}, Lcom/vk/core/drawable/VkUiDrawableHelper;->a(Lcom/vk/core/drawable/VkUiDrawableHelper;IIZIIFLandroid/content/Context;Landroid/graphics/Bitmap;ILjava/lang/Object;)Landroid/graphics/drawable/RippleDrawable;
 
     move-result-object v1
 
@@ -875,7 +875,7 @@
 
     invoke-direct {v1, p1}, Lcom/vk/core/view/BottomConfirmButton$setListener$1;-><init>(Lcom/vk/core/view/BottomConfirmButton$a;)V
 
-    invoke-static {v0, v1}, Lcom/vk/core/extensions/ViewGroupExtKt;->a(Landroid/view/View;Lkotlin/jvm/b/b;)V
+    invoke-static {v0, v1}, Lcom/vk/core/extensions/ViewGroupExtKt;->a(Landroid/view/View;Lkotlin/jvm/b/Functions2;)V
 
     .line 2
     iget-object v0, p0, Lcom/vk/core/view/BottomConfirmButton;->a:Landroid/view/View;
@@ -884,7 +884,7 @@
 
     invoke-direct {v1, p1}, Lcom/vk/core/view/BottomConfirmButton$setListener$2;-><init>(Lcom/vk/core/view/BottomConfirmButton$a;)V
 
-    invoke-static {v0, v1}, Lcom/vk/extensions/ViewExtKt;->f(Landroid/view/View;Lkotlin/jvm/b/b;)V
+    invoke-static {v0, v1}, Lcom/vk/extensions/ViewExtKt;->f(Landroid/view/View;Lkotlin/jvm/b/Functions2;)V
 
     .line 3
     iget-object v0, p0, Lcom/vk/core/view/BottomConfirmButton;->d:Landroid/widget/TextView;
@@ -893,7 +893,7 @@
 
     invoke-direct {v1, p1}, Lcom/vk/core/view/BottomConfirmButton$setListener$3;-><init>(Lcom/vk/core/view/BottomConfirmButton$a;)V
 
-    invoke-static {v0, v1}, Lcom/vk/core/extensions/ViewGroupExtKt;->a(Landroid/view/View;Lkotlin/jvm/b/b;)V
+    invoke-static {v0, v1}, Lcom/vk/core/extensions/ViewGroupExtKt;->a(Landroid/view/View;Lkotlin/jvm/b/Functions2;)V
 
     return-void
 .end method

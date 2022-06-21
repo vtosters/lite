@@ -3,7 +3,7 @@
 .source "StoryHashtagSearchItem.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/b;
+.implements Lkotlin/jvm/b/Functions2;
 
 
 # annotations
@@ -19,9 +19,9 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/b<",
+        "Lkotlin/jvm/b/Functions2<",
         "Ljava/lang/String;",
-        "Lcom/vk/stories/clickable/models/e;",
+        "Lcom/vk/stories/clickable/models/StoryHashtagSearchItem;",
         ">;"
     }
 .end annotation
@@ -56,13 +56,13 @@
 
 
 # virtual methods
-.method public final a(Ljava/lang/String;)Lcom/vk/stories/clickable/models/e;
+.method public final a(Ljava/lang/String;)Lcom/vk/stories/clickable/models/StoryHashtagSearchItem;
     .locals 1
 
     .line 1
-    new-instance v0, Lcom/vk/stories/clickable/models/e;
+    new-instance v0, Lcom/vk/stories/clickable/models/StoryHashtagSearchItem;
 
-    invoke-direct {v0, p1}, Lcom/vk/stories/clickable/models/e;-><init>(Ljava/lang/String;)V
+    invoke-direct {v0, p1}, Lcom/vk/stories/clickable/models/StoryHashtagSearchItem;-><init>(Ljava/lang/String;)V
 
     return-object v0
 .end method
@@ -73,7 +73,7 @@
     .line 1
     check-cast p1, Ljava/lang/String;
 
-    invoke-virtual {p0, p1}, Lcom/vk/stories/clickable/models/StoryHashtagSearchResult$Companion$parse$hashtags$1;->a(Ljava/lang/String;)Lcom/vk/stories/clickable/models/e;
+    invoke-virtual {p0, p1}, Lcom/vk/stories/clickable/models/StoryHashtagSearchResult$Companion$parse$hashtags$1;->a(Ljava/lang/String;)Lcom/vk/stories/clickable/models/StoryHashtagSearchItem;
 
     move-result-object p1
 

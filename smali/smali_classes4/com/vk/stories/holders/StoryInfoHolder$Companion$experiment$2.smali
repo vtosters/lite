@@ -3,7 +3,7 @@
 .source "StoryInfoHolder.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/a;
+.implements Lkotlin/jvm/b/Functions;
 
 
 # annotations
@@ -19,7 +19,7 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/a<",
+        "Lkotlin/jvm/b/Functions<",
         "Lcom/vk/stories/holders/StoryInfoHolder$ViewType;",
         ">;"
     }
@@ -82,7 +82,7 @@
 
     if-eqz v0, :cond_0
 
-    invoke-static {v0}, Lcom/vk/core/extensions/z;->h(Ljava/lang/String;)Ljava/lang/Integer;
+    invoke-static {v0}, Lcom/vk/core/extensions/StringExt;->h(Ljava/lang/String;)Ljava/lang/Integer;
 
     move-result-object v0
 

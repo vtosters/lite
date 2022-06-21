@@ -33,7 +33,7 @@
 
 
 # direct methods
-.method constructor <init>(Lcom/vk/core/dialogs/bottomsheet/e$a;Ljava/lang/String;Landroid/app/Activity;Lcom/vk/qrcode/QRParser;Lcom/vk/qrcode/QRTypes$AddressBookQRAction$VcPayload;Lcom/vk/qrcode/QRViewUtils$d;)V
+.method constructor <init>(Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet$a;Ljava/lang/String;Landroid/app/Activity;Lcom/vk/qrcode/QRParser;Lcom/vk/qrcode/QRTypes$AddressBookQRAction$VcPayload;Lcom/vk/qrcode/QRViewUtils$d;)V
     .locals 0
 
     iput-object p3, p0, Lcom/vk/qrcode/QRViewUtils$c;->a:Landroid/app/Activity;
@@ -80,7 +80,7 @@
 
     .line 3
     :cond_0
-    sget-object v0, Lcom/vk/common/links/c;->p:Lcom/vk/common/links/c$a;
+    sget-object v0, Lcom/vk/common/links/LinkProcessor;->p:Lcom/vk/common/links/LinkProcessor$a;
 
     iget-object v1, p0, Lcom/vk/qrcode/QRViewUtils$c;->a:Landroid/app/Activity;
 
@@ -94,7 +94,7 @@
 
     const/4 v5, 0x0
 
-    invoke-static/range {v0 .. v5}, Lcom/vk/common/links/c$a;->a(Lcom/vk/common/links/c$a;Landroid/content/Context;Ljava/lang/String;Landroid/os/Bundle;ILjava/lang/Object;)V
+    invoke-static/range {v0 .. v5}, Lcom/vk/common/links/LinkProcessor$a;->a(Lcom/vk/common/links/LinkProcessor$a;Landroid/content/Context;Ljava/lang/String;Landroid/os/Bundle;ILjava/lang/Object;)V
 
     goto :goto_0
 

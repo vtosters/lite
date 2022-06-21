@@ -3,7 +3,7 @@
 .source "BaseSearchParamsView.kt"
 
 # interfaces
-.implements Lcom/vtosters/lite/fragments/c1$c;
+.implements Lcom/vtosters/lite/general/fragments/DatabaseSearchFragment$c;
 
 
 # annotations
@@ -22,7 +22,7 @@
         "Ljava/lang/Object;",
         ">",
         "Ljava/lang/Object;",
-        "Lcom/vtosters/lite/fragments/c1$c<",
+        "Lcom/vtosters/lite/general/fragments/DatabaseSearchFragment$c<",
         "Lcom/vk/dto/common/City;",
         ">;"
     }

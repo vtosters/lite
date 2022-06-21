@@ -3,12 +3,12 @@
 .source "QRViewUtils.kt"
 
 # interfaces
-.implements Lc/a/z/g;
+.implements Lio/reactivex/functions/Consumer;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/qrcode/QRViewUtils;->j(Landroid/app/Activity;Lcom/vk/qrcode/QRParser;Lcom/vk/qrcode/i;)V
+    value = Lcom/vk/qrcode/QRViewUtils;->j(Landroid/app/Activity;Lcom/vk/qrcode/QRParser;Lcom/vk/qrcode/QRTypes7;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -22,7 +22,7 @@
         "Ljava/lang/Object;",
         ">",
         "Ljava/lang/Object;",
-        "Lc/a/z/g<",
+        "Lio/reactivex/functions/Consumer<",
         "Lcom/vk/dto/common/data/ApiApplication;",
         ">;"
     }
@@ -34,18 +34,18 @@
 
 .field final synthetic b:Lcom/vk/qrcode/QRParser;
 
-.field final synthetic c:Lcom/vk/qrcode/i;
+.field final synthetic c:Lcom/vk/qrcode/QRTypes7;
 
 
 # direct methods
-.method constructor <init>(Landroid/app/Activity;Lcom/vk/qrcode/QRParser;Lcom/vk/qrcode/i;)V
+.method constructor <init>(Landroid/app/Activity;Lcom/vk/qrcode/QRParser;Lcom/vk/qrcode/QRTypes7;)V
     .locals 0
 
     iput-object p1, p0, Lcom/vk/qrcode/QRViewUtils$r;->a:Landroid/app/Activity;
 
     iput-object p2, p0, Lcom/vk/qrcode/QRViewUtils$r;->b:Lcom/vk/qrcode/QRParser;
 
-    iput-object p3, p0, Lcom/vk/qrcode/QRViewUtils$r;->c:Lcom/vk/qrcode/i;
+    iput-object p3, p0, Lcom/vk/qrcode/QRViewUtils$r;->c:Lcom/vk/qrcode/QRTypes7;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -66,9 +66,9 @@
 
     iget-object v2, p0, Lcom/vk/qrcode/QRViewUtils$r;->b:Lcom/vk/qrcode/QRParser;
 
-    iget-object v3, p0, Lcom/vk/qrcode/QRViewUtils$r;->c:Lcom/vk/qrcode/i;
+    iget-object v3, p0, Lcom/vk/qrcode/QRViewUtils$r;->c:Lcom/vk/qrcode/QRTypes7;
 
-    invoke-static {v0, v1, v2, v3, p1}, Lcom/vk/qrcode/QRViewUtils;->a(Lcom/vk/qrcode/QRViewUtils;Landroid/app/Activity;Lcom/vk/qrcode/QRParser;Lcom/vk/qrcode/i;Lcom/vk/dto/common/data/ApiApplication;)V
+    invoke-static {v0, v1, v2, v3, p1}, Lcom/vk/qrcode/QRViewUtils;->a(Lcom/vk/qrcode/QRViewUtils;Landroid/app/Activity;Lcom/vk/qrcode/QRParser;Lcom/vk/qrcode/QRTypes7;Lcom/vk/dto/common/data/ApiApplication;)V
 
     :cond_0
     return-void

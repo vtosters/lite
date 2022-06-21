@@ -3,7 +3,7 @@
 .source "ProxyVideoCache.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/a;
+.implements Lkotlin/jvm/b/Functions;
 
 
 # annotations
@@ -19,8 +19,8 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/a<",
-        "Lcom/danikula/videocache/f;",
+        "Lkotlin/jvm/b/Functions<",
+        "Lcom/danikula/videocache/HttpProxyCacheServer;",
         ">;"
     }
 .end annotation
@@ -53,15 +53,15 @@
 
 
 # virtual methods
-.method public final invoke()Lcom/danikula/videocache/f;
+.method public final invoke()Lcom/danikula/videocache/HttpProxyCacheServer;
     .locals 3
 
     .line 2
-    new-instance v0, Lcom/danikula/videocache/f$b;
+    new-instance v0, Lcom/danikula/videocache/HttpProxyCacheServer$b;
 
-    sget-object v1, Lcom/vk/core/util/i;->a:Landroid/content/Context;
+    sget-object v1, Lcom/vk/core/util/AppContextHolder;->a:Landroid/content/Context;
 
-    invoke-direct {v0, v1}, Lcom/danikula/videocache/f$b;-><init>(Landroid/content/Context;)V
+    invoke-direct {v0, v1}, Lcom/danikula/videocache/HttpProxyCacheServer$b;-><init>(Landroid/content/Context;)V
 
     .line 3
     iget-object v1, p0, Lcom/vk/mediastore/legacy/ProxyVideoCache$cacheProvider$1;->this$0:Lcom/vk/mediastore/legacy/ProxyVideoCache;
@@ -70,20 +70,20 @@
 
     move-result-object v1
 
-    invoke-virtual {v0, v1}, Lcom/danikula/videocache/f$b;->a(Ljava/io/File;)Lcom/danikula/videocache/f$b;
+    invoke-virtual {v0, v1}, Lcom/danikula/videocache/HttpProxyCacheServer$b;->a(Ljava/io/File;)Lcom/danikula/videocache/HttpProxyCacheServer$b;
 
     .line 4
     iget v1, p0, Lcom/vk/mediastore/legacy/ProxyVideoCache$cacheProvider$1;->$cacheEntrySize:I
 
-    invoke-virtual {v0, v1}, Lcom/danikula/videocache/f$b;->a(I)Lcom/danikula/videocache/f$b;
+    invoke-virtual {v0, v1}, Lcom/danikula/videocache/HttpProxyCacheServer$b;->a(I)Lcom/danikula/videocache/HttpProxyCacheServer$b;
 
     .line 5
     iget-wide v1, p0, Lcom/vk/mediastore/legacy/ProxyVideoCache$cacheProvider$1;->$cacheByteSize:J
 
-    invoke-virtual {v0, v1, v2}, Lcom/danikula/videocache/f$b;->a(J)Lcom/danikula/videocache/f$b;
+    invoke-virtual {v0, v1, v2}, Lcom/danikula/videocache/HttpProxyCacheServer$b;->a(J)Lcom/danikula/videocache/HttpProxyCacheServer$b;
 
     .line 6
-    invoke-virtual {v0}, Lcom/danikula/videocache/f$b;->a()Lcom/danikula/videocache/f;
+    invoke-virtual {v0}, Lcom/danikula/videocache/HttpProxyCacheServer$b;->a()Lcom/danikula/videocache/HttpProxyCacheServer;
 
     move-result-object v0
 
@@ -94,7 +94,7 @@
     .locals 1
 
     .line 1
-    invoke-virtual {p0}, Lcom/vk/mediastore/legacy/ProxyVideoCache$cacheProvider$1;->invoke()Lcom/danikula/videocache/f;
+    invoke-virtual {p0}, Lcom/vk/mediastore/legacy/ProxyVideoCache$cacheProvider$1;->invoke()Lcom/danikula/videocache/HttpProxyCacheServer;
 
     move-result-object v0
 

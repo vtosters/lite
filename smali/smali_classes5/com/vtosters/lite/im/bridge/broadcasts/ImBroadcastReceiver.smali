@@ -19,7 +19,7 @@
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, v1}, Lcom/vtosters/lite/im/bridge/broadcasts/ImBroadcastReceiver$a;-><init>(Lkotlin/jvm/internal/i;)V
+    invoke-direct {v0, v1}, Lcom/vtosters/lite/im/bridge/broadcasts/ImBroadcastReceiver$a;-><init>(Lkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     return-void
 .end method
@@ -111,11 +111,11 @@
     invoke-virtual {p1}, Lcom/vtosters/lite/im/bridge/contentprovider/ImCompanionHelper;->b()V
 
     .line 6
-    sget-object p1, Lcom/vk/pushes/g;->e:Lcom/vk/pushes/g;
+    sget-object p1, Lcom/vk/pushes/PushSubscriber;->e:Lcom/vk/pushes/PushSubscriber;
 
     const/4 p2, 0x1
 
-    invoke-virtual {p1, p2}, Lcom/vk/pushes/g;->a(Z)V
+    invoke-virtual {p1, p2}, Lcom/vk/pushes/PushSubscriber;->a(Z)V
 
     :cond_4
     :goto_1

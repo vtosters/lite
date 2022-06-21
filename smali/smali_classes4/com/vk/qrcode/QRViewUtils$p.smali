@@ -3,12 +3,12 @@
 .source "QRViewUtils.kt"
 
 # interfaces
-.implements Lcom/vk/core/dialogs/bottomsheet/h$e;
+.implements Lcom/vk/core/dialogs/bottomsheet/ModalDialogInterface$e;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/qrcode/QRViewUtils;->a(Landroid/app/Activity;Lcom/vk/qrcode/QRParser;Lcom/vk/qrcode/n;)V
+    value = Lcom/vk/qrcode/QRViewUtils;->a(Landroid/app/Activity;Lcom/vk/qrcode/QRParser;Lcom/vk/qrcode/QRTypes4;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -22,11 +22,11 @@
 
 .field final synthetic b:Ljava/lang/String;
 
-.field final synthetic c:Lkotlin/jvm/b/a;
+.field final synthetic c:Lkotlin/jvm/b/Functions;
 
 
 # direct methods
-.method constructor <init>(Lcom/vk/qrcode/QRViewUtils$forText$1;Ljava/lang/String;Lkotlin/jvm/b/a;)V
+.method constructor <init>(Lcom/vk/qrcode/QRViewUtils$forText$1;Ljava/lang/String;Lkotlin/jvm/b/Functions;)V
     .locals 0
 
     .line 1
@@ -34,7 +34,7 @@
 
     iput-object p2, p0, Lcom/vk/qrcode/QRViewUtils$p;->b:Ljava/lang/String;
 
-    iput-object p3, p0, Lcom/vk/qrcode/QRViewUtils$p;->c:Lkotlin/jvm/b/a;
+    iput-object p3, p0, Lcom/vk/qrcode/QRViewUtils$p;->c:Lkotlin/jvm/b/Functions;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -69,7 +69,7 @@
     goto :goto_0
 
     :cond_1
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     const/4 p1, 0x0
 
@@ -77,9 +77,9 @@
 
     .line 2
     :cond_2
-    iget-object p1, p0, Lcom/vk/qrcode/QRViewUtils$p;->c:Lkotlin/jvm/b/a;
+    iget-object p1, p0, Lcom/vk/qrcode/QRViewUtils$p;->c:Lkotlin/jvm/b/Functions;
 
-    invoke-interface {p1}, Lkotlin/jvm/b/a;->invoke()Ljava/lang/Object;
+    invoke-interface {p1}, Lkotlin/jvm/b/Functions;->invoke()Ljava/lang/Object;
 
     :goto_0
     return-void

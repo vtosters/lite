@@ -28,11 +28,11 @@
     new-instance v0, Landroidx/browser/customtabs/CustomTabsServiceConnection$1;
 
     .line 2
-    invoke-static {p2}, La/a/a/b$a;->asInterface(Landroid/os/IBinder;)La/a/a/b;
+    invoke-static {p2}, Landroid/support/customtabs/ICustomTabsService$a;->asInterface(Landroid/os/IBinder;)Landroid/support/customtabs/ICustomTabsService;
 
     move-result-object p2
 
-    invoke-direct {v0, p0, p2, p1}, Landroidx/browser/customtabs/CustomTabsServiceConnection$1;-><init>(Landroidx/browser/customtabs/CustomTabsServiceConnection;La/a/a/b;Landroid/content/ComponentName;)V
+    invoke-direct {v0, p0, p2, p1}, Landroidx/browser/customtabs/CustomTabsServiceConnection$1;-><init>(Landroidx/browser/customtabs/CustomTabsServiceConnection;Landroid/support/customtabs/ICustomTabsService;Landroid/content/ComponentName;)V
 
     .line 3
     invoke-virtual {p0, p1, v0}, Landroidx/browser/customtabs/CustomTabsServiceConnection;->onCustomTabsServiceConnected(Landroid/content/ComponentName;Landroidx/browser/customtabs/CustomTabsClient;)V

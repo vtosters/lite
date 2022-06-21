@@ -3,7 +3,7 @@
 .source "UserPresenter.kt"
 
 # interfaces
-.implements Lcom/vk/core/ui/n;
+.implements Lcom/vk/core/ui/MilkshakeProvider;
 
 
 # annotations
@@ -41,11 +41,11 @@
     .line 1
     iget-object v0, p0, Lcom/vk/profile/presenter/UserPresenter$l;->a:Lcom/vk/profile/presenter/UserPresenter;
 
-    invoke-static {v0}, Lcom/vk/profile/presenter/UserPresenter;->a(Lcom/vk/profile/presenter/UserPresenter;)Lcom/vk/profile/adapter/a;
+    invoke-static {v0}, Lcom/vk/profile/presenter/UserPresenter;->a(Lcom/vk/profile/presenter/UserPresenter;)Lcom/vk/profile/adapter/InfoItemsAdapter;
 
     move-result-object v0
 
-    invoke-virtual {v0, p1}, Lcom/vk/lists/i0;->k(I)Ljava/lang/Object;
+    invoke-virtual {v0, p1}, Lcom/vk/lists/SimpleAdapter;->k(I)Ljava/lang/Object;
 
     move-result-object p1
 

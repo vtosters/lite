@@ -4,13 +4,13 @@
 
 
 # static fields
-.field static final synthetic a:[Lkotlin/u/j;
+.field static final synthetic a:[Lkotlin/u/KProperty5;
 
 .field private static final b:Ljava/util/concurrent/atomic/AtomicInteger;
 
-.field private static final c:Lkotlin/e;
+.field private static final c:Lkotlin/Lazy2;
 
-.field private static final d:Lkotlin/e;
+.field private static final d:Lkotlin/Lazy2;
 
 .field public static final e:Lcom/vk/api/sdk/VKScheduler;
 
@@ -23,11 +23,11 @@
 
     const/4 v1, 0x2
 
-    new-array v1, v1, [Lkotlin/u/j;
+    new-array v1, v1, [Lkotlin/u/KProperty5;
 
     new-instance v2, Lkotlin/jvm/internal/PropertyReference1Impl;
 
-    invoke-static {v0}, Lkotlin/jvm/internal/o;->a(Ljava/lang/Class;)Lkotlin/u/c;
+    invoke-static {v0}, Lkotlin/jvm/internal/Reflection;->a(Ljava/lang/Class;)Lkotlin/u/KClass;
 
     move-result-object v3
 
@@ -35,9 +35,9 @@
 
     const-string v5, "getHandler()Landroid/os/Handler;"
 
-    invoke-direct {v2, v3, v4, v5}, Lkotlin/jvm/internal/PropertyReference1Impl;-><init>(Lkotlin/u/e;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-direct {v2, v3, v4, v5}, Lkotlin/jvm/internal/PropertyReference1Impl;-><init>(Lkotlin/u/KDeclarationContainer;Ljava/lang/String;Ljava/lang/String;)V
 
-    invoke-static {v2}, Lkotlin/jvm/internal/o;->a(Lkotlin/jvm/internal/PropertyReference1;)Lkotlin/u/l;
+    invoke-static {v2}, Lkotlin/jvm/internal/Reflection;->a(Lkotlin/jvm/internal/PropertyReference1;)Lkotlin/u/KProperty2;
 
     const/4 v3, 0x0
 
@@ -45,7 +45,7 @@
 
     new-instance v2, Lkotlin/jvm/internal/PropertyReference1Impl;
 
-    invoke-static {v0}, Lkotlin/jvm/internal/o;->a(Ljava/lang/Class;)Lkotlin/u/c;
+    invoke-static {v0}, Lkotlin/jvm/internal/Reflection;->a(Ljava/lang/Class;)Lkotlin/u/KClass;
 
     move-result-object v0
 
@@ -53,15 +53,15 @@
 
     const-string v4, "getNetworkExecutor()Ljava/util/concurrent/ExecutorService;"
 
-    invoke-direct {v2, v0, v3, v4}, Lkotlin/jvm/internal/PropertyReference1Impl;-><init>(Lkotlin/u/e;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-direct {v2, v0, v3, v4}, Lkotlin/jvm/internal/PropertyReference1Impl;-><init>(Lkotlin/u/KDeclarationContainer;Ljava/lang/String;Ljava/lang/String;)V
 
-    invoke-static {v2}, Lkotlin/jvm/internal/o;->a(Lkotlin/jvm/internal/PropertyReference1;)Lkotlin/u/l;
+    invoke-static {v2}, Lkotlin/jvm/internal/Reflection;->a(Lkotlin/jvm/internal/PropertyReference1;)Lkotlin/u/KProperty2;
 
     const/4 v0, 0x1
 
     aput-object v2, v1, v0
 
-    sput-object v1, Lcom/vk/api/sdk/VKScheduler;->a:[Lkotlin/u/j;
+    sput-object v1, Lcom/vk/api/sdk/VKScheduler;->a:[Lkotlin/u/KProperty5;
 
     .line 1
     new-instance v0, Lcom/vk/api/sdk/VKScheduler;
@@ -80,20 +80,20 @@
     .line 3
     sget-object v0, Lcom/vk/api/sdk/VKScheduler$handler$2;->a:Lcom/vk/api/sdk/VKScheduler$handler$2;
 
-    invoke-static {v0}, Lkotlin/g;->a(Lkotlin/jvm/b/a;)Lkotlin/e;
+    invoke-static {v0}, Lkotlin/g;->a(Lkotlin/jvm/b/Functions;)Lkotlin/Lazy2;
 
     move-result-object v0
 
-    sput-object v0, Lcom/vk/api/sdk/VKScheduler;->c:Lkotlin/e;
+    sput-object v0, Lcom/vk/api/sdk/VKScheduler;->c:Lkotlin/Lazy2;
 
     .line 4
     sget-object v0, Lcom/vk/api/sdk/VKScheduler$networkExecutor$2;->a:Lcom/vk/api/sdk/VKScheduler$networkExecutor$2;
 
-    invoke-static {v0}, Lkotlin/g;->a(Lkotlin/jvm/b/a;)Lkotlin/e;
+    invoke-static {v0}, Lkotlin/g;->a(Lkotlin/jvm/b/Functions;)Lkotlin/Lazy2;
 
     move-result-object v0
 
-    sput-object v0, Lcom/vk/api/sdk/VKScheduler;->d:Lkotlin/e;
+    sput-object v0, Lcom/vk/api/sdk/VKScheduler;->d:Lkotlin/Lazy2;
 
     return-void
 .end method
@@ -128,7 +128,7 @@
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v0
 
@@ -178,15 +178,15 @@
 .method private final b()Landroid/os/Handler;
     .locals 3
 
-    sget-object v0, Lcom/vk/api/sdk/VKScheduler;->c:Lkotlin/e;
+    sget-object v0, Lcom/vk/api/sdk/VKScheduler;->c:Lkotlin/Lazy2;
 
-    sget-object v1, Lcom/vk/api/sdk/VKScheduler;->a:[Lkotlin/u/j;
+    sget-object v1, Lcom/vk/api/sdk/VKScheduler;->a:[Lkotlin/u/KProperty5;
 
     const/4 v2, 0x0
 
     aget-object v1, v1, v2
 
-    invoke-interface {v0}, Lkotlin/e;->getValue()Ljava/lang/Object;
+    invoke-interface {v0}, Lkotlin/Lazy2;->getValue()Ljava/lang/Object;
 
     move-result-object v0
 
@@ -200,15 +200,15 @@
 .method public final a()Ljava/util/concurrent/ExecutorService;
     .locals 3
 
-    sget-object v0, Lcom/vk/api/sdk/VKScheduler;->d:Lkotlin/e;
+    sget-object v0, Lcom/vk/api/sdk/VKScheduler;->d:Lkotlin/Lazy2;
 
-    sget-object v1, Lcom/vk/api/sdk/VKScheduler;->a:[Lkotlin/u/j;
+    sget-object v1, Lcom/vk/api/sdk/VKScheduler;->a:[Lkotlin/u/KProperty5;
 
     const/4 v2, 0x1
 
     aget-object v1, v1, v2
 
-    invoke-interface {v0}, Lkotlin/e;->getValue()Ljava/lang/Object;
+    invoke-interface {v0}, Lkotlin/Lazy2;->getValue()Ljava/lang/Object;
 
     move-result-object v0
 

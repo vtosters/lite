@@ -659,7 +659,7 @@
 
     .line 3
     :cond_1
-    invoke-static {p1, v0}, Lcom/vk/core/util/z;->a(Landroid/graphics/drawable/Drawable;Landroid/content/res/ColorStateList;)Landroid/graphics/drawable/Drawable;
+    invoke-static {p1, v0}, Lcom/vk/core/util/DrawableUtils;->a(Landroid/graphics/drawable/Drawable;Landroid/content/res/ColorStateList;)Landroid/graphics/drawable/Drawable;
 
     move-result-object p1
 
@@ -667,11 +667,11 @@
 
     .line 4
     :goto_0
-    new-instance p1, Lcom/vk/core/drawable/b;
+    new-instance p1, Lcom/vk/core/drawable/CenteredImageSpan;
 
     iget-object v0, p0, Lcom/vk/core/view/OverlayTextView;->b:Landroid/graphics/drawable/Drawable;
 
-    invoke-direct {p1, v0}, Lcom/vk/core/drawable/b;-><init>(Landroid/graphics/drawable/Drawable;)V
+    invoke-direct {p1, v0}, Lcom/vk/core/drawable/CenteredImageSpan;-><init>(Landroid/graphics/drawable/Drawable;)V
 
     iput-object p1, p0, Lcom/vk/core/view/OverlayTextView;->D:Landroid/text/style/ImageSpan;
 

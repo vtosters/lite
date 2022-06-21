@@ -47,27 +47,27 @@
     .locals 2
 
     .line 1
-    new-instance v0, Lcom/vk/webapp/fragments/j$a;
+    new-instance v0, Lcom/vk/webapp/fragments/ReportFragment$a;
 
-    invoke-direct {v0}, Lcom/vk/webapp/fragments/j$a;-><init>()V
+    invoke-direct {v0}, Lcom/vk/webapp/fragments/ReportFragment$a;-><init>()V
 
     const-string v1, "story"
 
     .line 2
-    invoke-virtual {v0, v1}, Lcom/vk/webapp/fragments/j$a;->a(Ljava/lang/String;)Lcom/vk/webapp/fragments/j$a;
+    invoke-virtual {v0, v1}, Lcom/vk/webapp/fragments/ReportFragment$a;->a(Ljava/lang/String;)Lcom/vk/webapp/fragments/ReportFragment$a;
 
     .line 3
-    invoke-virtual {v0, v1}, Lcom/vk/webapp/fragments/j$a;->b(Ljava/lang/String;)Lcom/vk/webapp/fragments/j$a;
+    invoke-virtual {v0, v1}, Lcom/vk/webapp/fragments/ReportFragment$a;->b(Ljava/lang/String;)Lcom/vk/webapp/fragments/ReportFragment$a;
 
     iget v1, p0, Lcom/vk/stories/view/StoryView$f0;->a:I
 
     .line 4
-    invoke-virtual {v0, v1}, Lcom/vk/webapp/fragments/j$a;->d(I)Lcom/vk/webapp/fragments/j$a;
+    invoke-virtual {v0, v1}, Lcom/vk/webapp/fragments/ReportFragment$a;->d(I)Lcom/vk/webapp/fragments/ReportFragment$a;
 
     iget v1, p0, Lcom/vk/stories/view/StoryView$f0;->b:I
 
     .line 5
-    invoke-virtual {v0, v1}, Lcom/vk/webapp/fragments/j$a;->e(I)Lcom/vk/webapp/fragments/j$a;
+    invoke-virtual {v0, v1}, Lcom/vk/webapp/fragments/ReportFragment$a;->e(I)Lcom/vk/webapp/fragments/ReportFragment$a;
 
     iget-object v1, p0, Lcom/vk/stories/view/StoryView$f0;->c:Lcom/vk/stories/view/StoryView;
 
@@ -76,14 +76,14 @@
 
     move-result-object v1
 
-    invoke-virtual {v0, v1}, Lcom/vk/navigation/o;->a(Landroid/content/Context;)V
+    invoke-virtual {v0, v1}, Lcom/vk/navigation/Navigator;->a(Landroid/content/Context;)V
 
     .line 7
     iget-object v0, p0, Lcom/vk/stories/view/StoryView$f0;->c:Lcom/vk/stories/view/StoryView;
 
     sget-object v1, Lcom/vk/dto/stories/model/StoryViewAction;->CLAIM:Lcom/vk/dto/stories/model/StoryViewAction;
 
-    invoke-virtual {v0, v1}, Lcom/vk/stories/view/e1;->a(Lcom/vk/dto/stories/model/StoryViewAction;)V
+    invoke-virtual {v0, v1}, Lcom/vk/stories/view/BaseStoryView;->a(Lcom/vk/dto/stories/model/StoryViewAction;)V
 
     return-void
 .end method

@@ -12,10 +12,10 @@
 
 .field private d:Z
 
-.field private final e:Lkotlin/jvm/b/c;
+.field private final e:Lkotlin/jvm/b/Functions1;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Lkotlin/jvm/b/c<",
+            "Lkotlin/jvm/b/Functions1<",
             "Landroid/content/Context;",
             "Lcom/vtosters/lite/api/ExtendedUserProfile;",
             "Ljava/lang/String;",
@@ -24,10 +24,10 @@
     .end annotation
 .end field
 
-.field private final f:Lkotlin/jvm/b/b;
+.field private final f:Lkotlin/jvm/b/Functions2;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Lkotlin/jvm/b/b<",
+            "Lkotlin/jvm/b/Functions2<",
             "Lcom/vtosters/lite/api/ExtendedUserProfile;",
             "Ljava/lang/Integer;",
             ">;"
@@ -35,10 +35,10 @@
     .end annotation
 .end field
 
-.field private g:Lkotlin/jvm/b/c;
+.field private g:Lkotlin/jvm/b/Functions1;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Lkotlin/jvm/b/c<",
+            "Lkotlin/jvm/b/Functions1<",
             "-",
             "Landroid/content/Context;",
             "-",
@@ -49,10 +49,10 @@
     .end annotation
 .end field
 
-.field private h:Lkotlin/jvm/b/b;
+.field private h:Lkotlin/jvm/b/Functions2;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Lkotlin/jvm/b/b<",
+            "Lkotlin/jvm/b/Functions2<",
             "-",
             "Lcom/vtosters/lite/api/ExtendedUserProfile;",
             "Ljava/lang/Integer;",
@@ -120,24 +120,24 @@
 
     invoke-direct {p2, p0}, Lcom/vk/profile/data/CountersWrapper$defaultTitleCreator$1;-><init>(Lcom/vk/profile/data/CountersWrapper;)V
 
-    iput-object p2, p0, Lcom/vk/profile/data/CountersWrapper;->e:Lkotlin/jvm/b/c;
+    iput-object p2, p0, Lcom/vk/profile/data/CountersWrapper;->e:Lkotlin/jvm/b/Functions1;
 
     .line 6
     new-instance p2, Lcom/vk/profile/data/CountersWrapper$defaultCountCreator$1;
 
     invoke-direct {p2, p0}, Lcom/vk/profile/data/CountersWrapper$defaultCountCreator$1;-><init>(Lcom/vk/profile/data/CountersWrapper;)V
 
-    iput-object p2, p0, Lcom/vk/profile/data/CountersWrapper;->f:Lkotlin/jvm/b/b;
+    iput-object p2, p0, Lcom/vk/profile/data/CountersWrapper;->f:Lkotlin/jvm/b/Functions2;
 
     .line 7
-    iget-object p2, p0, Lcom/vk/profile/data/CountersWrapper;->e:Lkotlin/jvm/b/c;
+    iget-object p2, p0, Lcom/vk/profile/data/CountersWrapper;->e:Lkotlin/jvm/b/Functions1;
 
-    iput-object p2, p0, Lcom/vk/profile/data/CountersWrapper;->g:Lkotlin/jvm/b/c;
+    iput-object p2, p0, Lcom/vk/profile/data/CountersWrapper;->g:Lkotlin/jvm/b/Functions1;
 
     .line 8
-    iget-object p2, p0, Lcom/vk/profile/data/CountersWrapper;->f:Lkotlin/jvm/b/b;
+    iget-object p2, p0, Lcom/vk/profile/data/CountersWrapper;->f:Lkotlin/jvm/b/Functions2;
 
-    iput-object p2, p0, Lcom/vk/profile/data/CountersWrapper;->h:Lkotlin/jvm/b/b;
+    iput-object p2, p0, Lcom/vk/profile/data/CountersWrapper;->h:Lkotlin/jvm/b/Functions2;
 
     .line 9
     iput-boolean p1, p0, Lcom/vk/profile/data/CountersWrapper;->i:Z
@@ -145,7 +145,7 @@
     return-void
 .end method
 
-.method public synthetic constructor <init>(Ljava/lang/String;IIILkotlin/jvm/internal/i;)V
+.method public synthetic constructor <init>(Ljava/lang/String;IIILkotlin/jvm/internal/DefaultConstructorMarker;)V
     .locals 0
 
     and-int/lit8 p4, p4, 0x4
@@ -163,12 +163,12 @@
 
 
 # virtual methods
-.method public final a()Lkotlin/jvm/b/b;
+.method public final a()Lkotlin/jvm/b/Functions2;
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "()",
-            "Lkotlin/jvm/b/b<",
+            "Lkotlin/jvm/b/Functions2<",
             "Lcom/vtosters/lite/api/ExtendedUserProfile;",
             "Ljava/lang/Integer;",
             ">;"
@@ -176,7 +176,7 @@
     .end annotation
 
     .line 4
-    iget-object v0, p0, Lcom/vk/profile/data/CountersWrapper;->h:Lkotlin/jvm/b/b;
+    iget-object v0, p0, Lcom/vk/profile/data/CountersWrapper;->h:Lkotlin/jvm/b/Functions2;
 
     return-object v0
 .end method
@@ -190,12 +190,12 @@
     return-void
 .end method
 
-.method public final a(Lkotlin/jvm/b/b;)V
+.method public final a(Lkotlin/jvm/b/Functions2;)V
     .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lkotlin/jvm/b/b<",
+            "Lkotlin/jvm/b/Functions2<",
             "-",
             "Lcom/vtosters/lite/api/ExtendedUserProfile;",
             "Ljava/lang/Integer;",
@@ -204,17 +204,17 @@
     .end annotation
 
     .line 5
-    iput-object p1, p0, Lcom/vk/profile/data/CountersWrapper;->h:Lkotlin/jvm/b/b;
+    iput-object p1, p0, Lcom/vk/profile/data/CountersWrapper;->h:Lkotlin/jvm/b/Functions2;
 
     return-void
 .end method
 
-.method public final a(Lkotlin/jvm/b/c;)V
+.method public final a(Lkotlin/jvm/b/Functions1;)V
     .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lkotlin/jvm/b/c<",
+            "Lkotlin/jvm/b/Functions1<",
             "-",
             "Landroid/content/Context;",
             "-",
@@ -225,7 +225,7 @@
     .end annotation
 
     .line 3
-    iput-object p1, p0, Lcom/vk/profile/data/CountersWrapper;->g:Lkotlin/jvm/b/c;
+    iput-object p1, p0, Lcom/vk/profile/data/CountersWrapper;->g:Lkotlin/jvm/b/Functions1;
 
     return-void
 .end method
@@ -239,12 +239,12 @@
     return-void
 .end method
 
-.method public final b()Lkotlin/jvm/b/b;
+.method public final b()Lkotlin/jvm/b/Functions2;
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "()",
-            "Lkotlin/jvm/b/b<",
+            "Lkotlin/jvm/b/Functions2<",
             "Lcom/vtosters/lite/api/ExtendedUserProfile;",
             "Ljava/lang/Integer;",
             ">;"
@@ -252,7 +252,7 @@
     .end annotation
 
     .line 2
-    iget-object v0, p0, Lcom/vk/profile/data/CountersWrapper;->f:Lkotlin/jvm/b/b;
+    iget-object v0, p0, Lcom/vk/profile/data/CountersWrapper;->f:Lkotlin/jvm/b/Functions2;
 
     return-object v0
 .end method
@@ -338,12 +338,12 @@
     return-object v0
 .end method
 
-.method public final i()Lkotlin/jvm/b/c;
+.method public final i()Lkotlin/jvm/b/Functions1;
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "()",
-            "Lkotlin/jvm/b/c<",
+            "Lkotlin/jvm/b/Functions1<",
             "Landroid/content/Context;",
             "Lcom/vtosters/lite/api/ExtendedUserProfile;",
             "Ljava/lang/String;",
@@ -352,7 +352,7 @@
     .end annotation
 
     .line 1
-    iget-object v0, p0, Lcom/vk/profile/data/CountersWrapper;->g:Lkotlin/jvm/b/c;
+    iget-object v0, p0, Lcom/vk/profile/data/CountersWrapper;->g:Lkotlin/jvm/b/Functions1;
 
     return-object v0
 .end method

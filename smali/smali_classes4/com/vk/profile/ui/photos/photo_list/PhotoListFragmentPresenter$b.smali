@@ -3,7 +3,7 @@
 .source "PhotoListFragmentPresenter.kt"
 
 # interfaces
-.implements Lc/a/z/g;
+.implements Lio/reactivex/functions/Consumer;
 
 
 # annotations
@@ -22,7 +22,7 @@
         "Ljava/lang/Object;",
         ">",
         "Ljava/lang/Object;",
-        "Lc/a/z/g<",
+        "Lio/reactivex/functions/Consumer<",
         "Ljava/lang/Boolean;",
         ">;"
     }
@@ -50,7 +50,7 @@
     .locals 3
 
     .line 1
-    sget-object p1, Lcom/vk/core/util/i;->a:Landroid/content/Context;
+    sget-object p1, Lcom/vk/core/util/AppContextHolder;->a:Landroid/content/Context;
 
     new-instance v0, Landroid/content/Intent;
 

@@ -5,7 +5,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/fave/views/FaveAllPaginatedView;->i()Lcom/vk/lists/t$l;
+    value = Lcom/vk/fave/views/FaveAllPaginatedView;->i()Lcom/vk/lists/PaginationHelper$l;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -43,7 +43,7 @@
     .line 1
     iget-object v0, p0, Lcom/vk/fave/views/FaveAllPaginatedView$b;->b:Lcom/vk/fave/views/FaveAllPaginatedView;
 
-    invoke-static {v0}, Lcom/vk/fave/views/FaveAllPaginatedView;->a(Lcom/vk/fave/views/FaveAllPaginatedView;)Lcom/vk/lists/s;
+    invoke-static {v0}, Lcom/vk/fave/views/FaveAllPaginatedView;->a(Lcom/vk/fave/views/FaveAllPaginatedView;)Lcom/vk/lists/PaginatedRecyclerAdapter;
 
     move-result-object v0
 
@@ -51,7 +51,7 @@
 
     if-eqz v0, :cond_0
 
-    invoke-virtual {v0}, Lcom/vk/lists/s;->n()Landroidx/recyclerview/widget/RecyclerView$Adapter;
+    invoke-virtual {v0}, Lcom/vk/lists/PaginatedRecyclerAdapter;->n()Landroidx/recyclerview/widget/RecyclerView$Adapter;
 
     move-result-object v0
 
@@ -61,21 +61,21 @@
     move-object v0, v1
 
     :goto_0
-    instance-of v2, v0, Lcom/vk/fave/fragments/adapters/a;
+    instance-of v2, v0, Lcom/vk/fave/fragments/adapters/FaveAllMergeAdapter;
 
     if-nez v2, :cond_1
 
     move-object v0, v1
 
     :cond_1
-    check-cast v0, Lcom/vk/fave/fragments/adapters/a;
+    check-cast v0, Lcom/vk/fave/fragments/adapters/FaveAllMergeAdapter;
 
     const/4 v1, 0x1
 
     if-eqz v0, :cond_2
 
     .line 2
-    invoke-virtual {v0}, Lcom/vk/fave/fragments/adapters/a;->n1()Z
+    invoke-virtual {v0}, Lcom/vk/fave/fragments/adapters/FaveAllMergeAdapter;->n1()Z
 
     move-result v0
 

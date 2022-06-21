@@ -24,7 +24,7 @@
     return-void
 .end method
 
-.method public synthetic constructor <init>(Lkotlin/jvm/internal/i;)V
+.method public synthetic constructor <init>(Lkotlin/jvm/internal/DefaultConstructorMarker;)V
     .locals 0
 
     .line 2
@@ -35,24 +35,24 @@
 
 
 # virtual methods
-.method public final a(Ljava/lang/String;Lokhttp3/z;)Lcom/vk/core/network/metrics/traffic/TrafficItem$ContentType;
+.method public final a(Ljava/lang/String;Lokhttp3/Request;)Lcom/vk/core/network/metrics/traffic/TrafficItem$ContentType;
     .locals 3
 
     if-nez p1, :cond_2
 
     .line 1
-    invoke-virtual {p2}, Lokhttp3/z;->g()Lokhttp3/t;
+    invoke-virtual {p2}, Lokhttp3/Request;->g()Lokhttp3/HttpUrl;
 
     move-result-object p1
 
-    invoke-virtual {p1}, Lokhttp3/t;->g()Ljava/lang/String;
+    invoke-virtual {p1}, Lokhttp3/HttpUrl;->g()Ljava/lang/String;
 
     move-result-object p1
 
     const-string p2, "host"
 
     .line 2
-    invoke-static {p1, p2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, p2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     const/4 p2, 0x0
 
@@ -159,23 +159,23 @@
     return-object p1
 .end method
 
-.method public final a(Lokhttp3/z;)Lcom/vk/core/network/metrics/traffic/TrafficItem;
+.method public final a(Lokhttp3/Request;)Lcom/vk/core/network/metrics/traffic/TrafficItem;
     .locals 13
 
     .line 12
-    invoke-virtual {p1}, Lokhttp3/z;->e()Ljava/lang/String;
+    invoke-virtual {p1}, Lokhttp3/Request;->e()Ljava/lang/String;
 
     move-result-object v0
 
     const-string v1, "request.method()"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     sget-object v2, Ljava/util/Locale;->US:Ljava/util/Locale;
 
     const-string v3, "Locale.US"
 
-    invoke-static {v2, v3}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v2, v3}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     if-eqz v0, :cond_5
 
@@ -185,11 +185,11 @@
 
     const-string v2, "(this as java.lang.String).toUpperCase(locale)"
 
-    invoke-static {v0, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     const-string v2, "POST"
 
-    invoke-static {v2, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v2, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v0
 
@@ -199,13 +199,13 @@
 
     .line 13
     :try_start_0
-    invoke-virtual {p1}, Lokhttp3/z;->a()Lokhttp3/a0;
+    invoke-virtual {p1}, Lokhttp3/Request;->a()Lokhttp3/RequestBody;
 
     move-result-object v3
 
     if-eqz v3, :cond_0
 
-    invoke-virtual {v3}, Lokhttp3/a0;->a()J
+    invoke-virtual {v3}, Lokhttp3/RequestBody;->a()J
 
     move-result-wide v3
 
@@ -228,7 +228,7 @@
     goto :goto_1
 
     :cond_1
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
@@ -253,7 +253,7 @@
 
     .line 15
     :cond_3
-    invoke-static {p1}, Lcom/vk/core/network/utils/e;->a(Lokhttp3/z;)Z
+    invoke-static {p1}, Lcom/vk/core/network/utils/NetworkUtils;->a(Lokhttp3/Request;)Z
 
     move-result v0
 
@@ -265,7 +265,7 @@
 
     .line 16
     :cond_4
-    invoke-virtual {p0, v2, p1}, Lcom/vk/core/network/metrics/traffic/TrafficItem$a;->a(Ljava/lang/String;Lokhttp3/z;)Lcom/vk/core/network/metrics/traffic/TrafficItem$ContentType;
+    invoke-virtual {p0, v2, p1}, Lcom/vk/core/network/metrics/traffic/TrafficItem$a;->a(Ljava/lang/String;Lokhttp3/Request;)Lcom/vk/core/network/metrics/traffic/TrafficItem$ContentType;
 
     move-result-object v0
 
@@ -276,24 +276,24 @@
     new-instance v0, Lcom/vk/core/network/metrics/traffic/TrafficItem;
 
     .line 18
-    invoke-virtual {p1}, Lokhttp3/z;->e()Ljava/lang/String;
+    invoke-virtual {p1}, Lokhttp3/Request;->e()Ljava/lang/String;
 
     move-result-object v9
 
-    invoke-static {v9, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v9, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 19
-    invoke-virtual {p1}, Lokhttp3/z;->g()Lokhttp3/t;
+    invoke-virtual {p1}, Lokhttp3/Request;->g()Lokhttp3/HttpUrl;
 
     move-result-object p1
 
-    invoke-virtual {p1}, Lokhttp3/t;->toString()Ljava/lang/String;
+    invoke-virtual {p1}, Lokhttp3/HttpUrl;->toString()Ljava/lang/String;
 
     move-result-object v10
 
     const-string p1, "request.url().toString()"
 
-    invoke-static {v10, p1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v10, p1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 20
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J

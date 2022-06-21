@@ -40,13 +40,13 @@
     .line 1
     iget-object v0, p0, Lcom/vk/stories/view/question/StoryViewAskQuestionView$a;->a:Lcom/vk/stories/view/question/StoryViewAskQuestionView;
 
-    invoke-virtual {v0}, Lcom/vk/stories/view/question/StoryViewAskQuestionView;->getPresenter()Lcom/vk/stories/view/question/b;
+    invoke-virtual {v0}, Lcom/vk/stories/view/question/StoryViewAskQuestionView;->getPresenter()Lcom/vk/stories/view/question/StoryViewAskQuestionContract2;
 
     move-result-object v0
 
     if-eqz v0, :cond_0
 
-    invoke-interface {v0}, Lcom/vk/stories/view/question/b;->C0()V
+    invoke-interface {v0}, Lcom/vk/stories/view/question/StoryViewAskQuestionContract2;->C0()V
 
     :cond_0
     return-void

@@ -3,12 +3,12 @@
 .source "MsgStorageManager.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/b;
+.implements Lkotlin/jvm/b/Functions2;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/im/engine/internal/storage/delegates/messages/MsgStorageManager;->a(ILcom/vk/im/engine/models/q;Lcom/vk/im/engine/models/Direction;I)Ljava/util/List;
+    value = Lcom/vk/im/engine/internal/storage/delegates/messages/MsgStorageManager;->a(ILcom/vk/im/engine/models/Weight;Lcom/vk/im/engine/models/Direction;I)Ljava/util/List;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -19,8 +19,8 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/b<",
-        "Lcom/vk/im/engine/internal/storage/models/e;",
+        "Lkotlin/jvm/b/Functions2<",
+        "Lcom/vk/im/engine/internal/storage/models/MsgHistoryEntryStorageModel;",
         "Ljava/lang/Integer;",
         ">;"
     }
@@ -56,11 +56,11 @@
 
 
 # virtual methods
-.method public final a(Lcom/vk/im/engine/internal/storage/models/e;)I
+.method public final a(Lcom/vk/im/engine/internal/storage/models/MsgHistoryEntryStorageModel;)I
     .locals 0
 
     .line 1
-    invoke-virtual {p1}, Lcom/vk/im/engine/internal/storage/models/e;->c()I
+    invoke-virtual {p1}, Lcom/vk/im/engine/internal/storage/models/MsgHistoryEntryStorageModel;->c()I
 
     move-result p1
 
@@ -71,9 +71,9 @@
     .locals 0
 
     .line 1
-    check-cast p1, Lcom/vk/im/engine/internal/storage/models/e;
+    check-cast p1, Lcom/vk/im/engine/internal/storage/models/MsgHistoryEntryStorageModel;
 
-    invoke-virtual {p0, p1}, Lcom/vk/im/engine/internal/storage/delegates/messages/MsgStorageManager$getSenderListDistinct$msgLocalIds$1;->a(Lcom/vk/im/engine/internal/storage/models/e;)I
+    invoke-virtual {p0, p1}, Lcom/vk/im/engine/internal/storage/delegates/messages/MsgStorageManager$getSenderListDistinct$msgLocalIds$1;->a(Lcom/vk/im/engine/internal/storage/models/MsgHistoryEntryStorageModel;)I
 
     move-result p1
 

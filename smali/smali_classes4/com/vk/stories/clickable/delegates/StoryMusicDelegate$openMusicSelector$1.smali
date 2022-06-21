@@ -45,7 +45,7 @@
     .line 2
     iget-object v1, p0, Lcom/vk/stories/clickable/delegates/StoryMusicDelegate$openMusicSelector$1;->a:Lcom/vk/stories/clickable/delegates/StoryMusicDelegate;
 
-    invoke-virtual {v1}, Lcom/vk/stories/clickable/delegates/a;->e()Lcom/vk/attachpicker/stickers/StickersDrawingViewGroup;
+    invoke-virtual {v1}, Lcom/vk/stories/clickable/delegates/StoryBaseDialogDelegate;->e()Lcom/vk/attachpicker/stickers/StickersDrawingViewGroup;
 
     move-result-object v1
 
@@ -63,7 +63,7 @@
     invoke-direct {v3, p0}, Lcom/vk/stories/clickable/delegates/StoryMusicDelegate$openMusicSelector$1$a;-><init>(Lcom/vk/stories/clickable/delegates/StoryMusicDelegate$openMusicSelector$1;)V
 
     .line 4
-    invoke-virtual {v0, v1, v2, v3}, Lcom/vk/music/stories/MusicCatalogSelector;->a(Landroid/content/Context;Lkotlin/jvm/b/b;Landroid/content/DialogInterface$OnCancelListener;)V
+    invoke-virtual {v0, v1, v2, v3}, Lcom/vk/music/stories/MusicCatalogSelector;->a(Landroid/content/Context;Lkotlin/jvm/b/Functions2;Landroid/content/DialogInterface$OnCancelListener;)V
 
     return-void
 .end method

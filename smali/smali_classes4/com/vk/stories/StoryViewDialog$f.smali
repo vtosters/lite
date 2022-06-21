@@ -3,7 +3,7 @@
 .source "StoryViewDialog.java"
 
 # interfaces
-.implements Lkotlin/jvm/b/e;
+.implements Lkotlin/jvm/b/Functions3;
 
 
 # annotations
@@ -19,7 +19,7 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Ljava/lang/Object;",
-        "Lkotlin/jvm/b/e<",
+        "Lkotlin/jvm/b/Functions3<",
         "Landroidx/dynamicanimation/animation/DynamicAnimation<",
         "+",
         "Landroidx/dynamicanimation/animation/DynamicAnimation<",
@@ -27,7 +27,7 @@
         "Ljava/lang/Boolean;",
         "Ljava/lang/Float;",
         "Ljava/lang/Float;",
-        "Lkotlin/m;",
+        "Lkotlin/Unit;",
         ">;"
     }
 .end annotation
@@ -71,14 +71,14 @@
 
     check-cast p4, Ljava/lang/Float;
 
-    invoke-virtual {p0, p1, p2, p3, p4}, Lcom/vk/stories/StoryViewDialog$f;->a(Landroidx/dynamicanimation/animation/DynamicAnimation;Ljava/lang/Boolean;Ljava/lang/Float;Ljava/lang/Float;)Lkotlin/m;
+    invoke-virtual {p0, p1, p2, p3, p4}, Lcom/vk/stories/StoryViewDialog$f;->a(Landroidx/dynamicanimation/animation/DynamicAnimation;Ljava/lang/Boolean;Ljava/lang/Float;Ljava/lang/Float;)Lkotlin/Unit;
 
     move-result-object p1
 
     return-object p1
 .end method
 
-.method public a(Landroidx/dynamicanimation/animation/DynamicAnimation;Ljava/lang/Boolean;Ljava/lang/Float;Ljava/lang/Float;)Lkotlin/m;
+.method public a(Landroidx/dynamicanimation/animation/DynamicAnimation;Ljava/lang/Boolean;Ljava/lang/Float;Ljava/lang/Float;)Lkotlin/Unit;
     .locals 15
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -91,7 +91,7 @@
             "Ljava/lang/Float;",
             "Ljava/lang/Float;",
             ")",
-            "Lkotlin/m;"
+            "Lkotlin/Unit;"
         }
     .end annotation
 
@@ -107,7 +107,7 @@
     .line 3
     iget-object v1, v0, Lcom/vk/stories/StoryViewDialog$f;->c:Lcom/vk/stories/StoryViewDialog;
 
-    new-instance v14, Lcom/vk/stories/view/s1;
+    new-instance v14, Lcom/vk/stories/view/StoryViewContainer;
 
     invoke-static {v1}, Lcom/vk/stories/StoryViewDialog;->t(Lcom/vk/stories/StoryViewDialog;)Landroid/app/Activity;
 
@@ -140,13 +140,13 @@
 
     iget-object v2, v0, Lcom/vk/stories/StoryViewDialog$f;->c:Lcom/vk/stories/StoryViewDialog;
 
-    invoke-static {v2}, Lcom/vk/stories/StoryViewDialog;->g(Lcom/vk/stories/StoryViewDialog;)Lcom/vk/stories/view/p1;
+    invoke-static {v2}, Lcom/vk/stories/StoryViewDialog;->g(Lcom/vk/stories/StoryViewDialog;)Lcom/vk/stories/view/StorySettings;
 
     move-result-object v12
 
     iget-object v2, v0, Lcom/vk/stories/StoryViewDialog$f;->c:Lcom/vk/stories/StoryViewDialog;
 
-    invoke-static {v2}, Lcom/vk/stories/StoryViewDialog;->h(Lcom/vk/stories/StoryViewDialog;)Lcom/vk/core/ui/tracking/internal/b;
+    invoke-static {v2}, Lcom/vk/stories/StoryViewDialog;->h(Lcom/vk/stories/StoryViewDialog;)Lcom/vk/core/ui/tracking/internal/UiTrackingListener1;
 
     move-result-object v13
 
@@ -158,10 +158,10 @@
 
     move-object v2, v14
 
-    invoke-direct/range {v2 .. v13}, Lcom/vk/stories/view/s1;-><init>(Landroid/content/Context;Lcom/vk/stories/StoriesController$SourceType;Ljava/lang/String;ZLcom/vk/stories/view/s1$x;Ljava/util/ArrayList;Ljava/lang/String;Ljava/lang/String;Lcom/vk/narratives/entities/NarrativeInfo;Lcom/vk/stories/view/p1;Lcom/vk/core/ui/v/b;)V
+    invoke-direct/range {v2 .. v13}, Lcom/vk/stories/view/StoryViewContainer;-><init>(Landroid/content/Context;Lcom/vk/stories/StoriesController$SourceType;Ljava/lang/String;ZLcom/vk/stories/view/StoryViewContainer$x;Ljava/util/ArrayList;Ljava/lang/String;Ljava/lang/String;Lcom/vk/narratives/entities/NarrativeInfo;Lcom/vk/stories/view/StorySettings;Lcom/vk/core/ui/v/UiTrackingListeners1;)V
 
     .line 5
-    invoke-static {v1, v14}, Lcom/vk/stories/StoryViewDialog;->a(Lcom/vk/stories/StoryViewDialog;Lcom/vk/stories/view/s1;)Lcom/vk/stories/view/s1;
+    invoke-static {v1, v14}, Lcom/vk/stories/StoryViewDialog;->a(Lcom/vk/stories/StoryViewDialog;Lcom/vk/stories/view/StoryViewContainer;)Lcom/vk/stories/view/StoryViewContainer;
 
     .line 6
     iget-object v1, v0, Lcom/vk/stories/StoryViewDialog$f;->c:Lcom/vk/stories/StoryViewDialog;
@@ -181,7 +181,7 @@
 
     iget-object v2, v0, Lcom/vk/stories/StoryViewDialog$f;->c:Lcom/vk/stories/StoryViewDialog;
 
-    invoke-static {v2}, Lcom/vk/stories/StoryViewDialog;->b(Lcom/vk/stories/StoryViewDialog;)Lcom/vk/stories/view/s1;
+    invoke-static {v2}, Lcom/vk/stories/StoryViewDialog;->b(Lcom/vk/stories/StoryViewDialog;)Lcom/vk/stories/view/StoryViewContainer;
 
     move-result-object v2
 
@@ -190,7 +190,7 @@
     .line 8
     iget-object v1, v0, Lcom/vk/stories/StoryViewDialog$f;->c:Lcom/vk/stories/StoryViewDialog;
 
-    invoke-static {v1}, Lcom/vk/stories/StoryViewDialog;->b(Lcom/vk/stories/StoryViewDialog;)Lcom/vk/stories/view/s1;
+    invoke-static {v1}, Lcom/vk/stories/StoryViewDialog;->b(Lcom/vk/stories/StoryViewDialog;)Lcom/vk/stories/view/StoryViewContainer;
 
     move-result-object v1
 
@@ -200,16 +200,16 @@
 
     move-result-object v2
 
-    invoke-virtual {v1, v2}, Lcom/vk/stories/view/s1;->setWindow(Landroid/view/Window;)V
+    invoke-virtual {v1, v2}, Lcom/vk/stories/view/StoryViewContainer;->setWindow(Landroid/view/Window;)V
 
     .line 9
     iget-object v1, v0, Lcom/vk/stories/StoryViewDialog$f;->c:Lcom/vk/stories/StoryViewDialog;
 
-    invoke-static {v1}, Lcom/vk/stories/StoryViewDialog;->b(Lcom/vk/stories/StoryViewDialog;)Lcom/vk/stories/view/s1;
+    invoke-static {v1}, Lcom/vk/stories/StoryViewDialog;->b(Lcom/vk/stories/StoryViewDialog;)Lcom/vk/stories/view/StoryViewContainer;
 
     move-result-object v1
 
-    invoke-virtual {v1}, Lcom/vk/stories/view/s1;->i()V
+    invoke-virtual {v1}, Lcom/vk/stories/view/StoryViewContainer;->i()V
 
     .line 10
     iget-boolean v1, v0, Lcom/vk/stories/StoryViewDialog$f;->a:Z
@@ -244,11 +244,11 @@
     :cond_0
     iget-object v1, v0, Lcom/vk/stories/StoryViewDialog$f;->c:Lcom/vk/stories/StoryViewDialog;
 
-    invoke-static {v1}, Lcom/vk/stories/StoryViewDialog;->j(Lcom/vk/stories/StoryViewDialog;)Lcom/vk/core/util/j1;
+    invoke-static {v1}, Lcom/vk/stories/StoryViewDialog;->j(Lcom/vk/stories/StoryViewDialog;)Lcom/vk/core/util/TimeoutLock;
 
     move-result-object v1
 
-    invoke-virtual {v1}, Lcom/vk/core/util/j1;->c()V
+    invoke-virtual {v1}, Lcom/vk/core/util/TimeoutLock;->c()V
 
     .line 16
     iget-object v1, v0, Lcom/vk/stories/StoryViewDialog$f;->c:Lcom/vk/stories/StoryViewDialog;

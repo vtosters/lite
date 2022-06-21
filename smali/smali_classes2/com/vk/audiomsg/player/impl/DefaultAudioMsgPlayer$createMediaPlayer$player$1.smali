@@ -3,12 +3,12 @@
 .source "DefaultAudioMsgPlayer.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/a;
+.implements Lkotlin/jvm/b/Functions;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/audiomsg/player/impl/DefaultAudioMsgPlayer;->a(Lcom/vk/audiomsg/player/i/a;)Lcom/vk/audiomsg/player/j/a;
+    value = Lcom/vk/audiomsg/player/impl/DefaultAudioMsgPlayer;->a(Lcom/vk/audiomsg/player/i/FileLoader;)Lcom/vk/audiomsg/player/j/MediaPlayer;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -19,7 +19,7 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/a<",
+        "Lkotlin/jvm/b/Functions<",
         "Lcom/vk/audiomsg/player/trackplayer/oggtrackplayer/OggTrackPlayer;",
         ">;"
     }
@@ -27,14 +27,14 @@
 
 
 # instance fields
-.field final synthetic $fileLoader:Lcom/vk/audiomsg/player/i/a;
+.field final synthetic $fileLoader:Lcom/vk/audiomsg/player/i/FileLoader;
 
 
 # direct methods
-.method constructor <init>(Lcom/vk/audiomsg/player/i/a;)V
+.method constructor <init>(Lcom/vk/audiomsg/player/i/FileLoader;)V
     .locals 0
 
-    iput-object p1, p0, Lcom/vk/audiomsg/player/impl/DefaultAudioMsgPlayer$createMediaPlayer$player$1;->$fileLoader:Lcom/vk/audiomsg/player/i/a;
+    iput-object p1, p0, Lcom/vk/audiomsg/player/impl/DefaultAudioMsgPlayer$createMediaPlayer$player$1;->$fileLoader:Lcom/vk/audiomsg/player/i/FileLoader;
 
     const/4 p1, 0x0
 
@@ -51,9 +51,9 @@
     .line 2
     new-instance v0, Lcom/vk/audiomsg/player/trackplayer/oggtrackplayer/OggTrackPlayer;
 
-    iget-object v1, p0, Lcom/vk/audiomsg/player/impl/DefaultAudioMsgPlayer$createMediaPlayer$player$1;->$fileLoader:Lcom/vk/audiomsg/player/i/a;
+    iget-object v1, p0, Lcom/vk/audiomsg/player/impl/DefaultAudioMsgPlayer$createMediaPlayer$player$1;->$fileLoader:Lcom/vk/audiomsg/player/i/FileLoader;
 
-    invoke-direct {v0, v1}, Lcom/vk/audiomsg/player/trackplayer/oggtrackplayer/OggTrackPlayer;-><init>(Lcom/vk/audiomsg/player/i/a;)V
+    invoke-direct {v0, v1}, Lcom/vk/audiomsg/player/trackplayer/oggtrackplayer/OggTrackPlayer;-><init>(Lcom/vk/audiomsg/player/i/FileLoader;)V
 
     return-object v0
 .end method

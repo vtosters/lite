@@ -48,11 +48,11 @@
 
     move-result-object p1
 
-    invoke-virtual {p1}, Lcom/vk/profile/adapter/di/CommunityFragmentUiScope;->g()Lcom/vk/profile/ui/cover/b;
+    invoke-virtual {p1}, Lcom/vk/profile/adapter/di/CommunityFragmentUiScope;->g()Lcom/vk/profile/ui/cover/CoverViewController;
 
     move-result-object p1
 
-    invoke-virtual {p1}, Lcom/vk/profile/ui/cover/b;->a()V
+    invoke-virtual {p1}, Lcom/vk/profile/ui/cover/CoverViewController;->a()V
 
     return-void
 .end method

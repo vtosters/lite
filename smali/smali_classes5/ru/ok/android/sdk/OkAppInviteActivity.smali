@@ -137,7 +137,7 @@
     const-string v0, "error"
 
     .line 2
-    invoke-static {}, Lru/ok/android/sdk/a;->d()Lru/ok/android/sdk/a;
+    invoke-static {}, Lru/ok/android/sdk/Odnoklassniki;->d()Lru/ok/android/sdk/Odnoklassniki;
 
     move-result-object v1
 

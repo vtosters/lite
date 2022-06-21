@@ -3,12 +3,12 @@
 .source "CatalogSectionPresenter.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/b;
+.implements Lkotlin/jvm/b/Functions2;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/catalog2/core/presenters/CatalogSectionPresenter$subscribeToEvents$1;->a(Lcom/vk/catalog2/core/w/e/b;)V
+    value = Lcom/vk/catalog2/core/presenters/CatalogSectionPresenter$subscribeToEvents$1;->a(Lcom/vk/catalog2/core/w/e/CatalogCommand6;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -19,7 +19,7 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/b<",
+        "Lkotlin/jvm/b/Functions2<",
         "Lcom/vk/catalog2/core/blocks/UIBlock;",
         "Ljava/lang/Boolean;",
         ">;"
@@ -28,18 +28,18 @@
 
 
 # instance fields
-.field final synthetic $cmd$inlined:Lcom/vk/catalog2/core/w/e/b;
+.field final synthetic $cmd$inlined:Lcom/vk/catalog2/core/w/e/CatalogCommand6;
 
 .field final synthetic this$0:Lcom/vk/catalog2/core/presenters/CatalogSectionPresenter$subscribeToEvents$1;
 
 
 # direct methods
-.method constructor <init>(Lcom/vk/catalog2/core/presenters/CatalogSectionPresenter$subscribeToEvents$1;Lcom/vk/catalog2/core/w/e/b;)V
+.method constructor <init>(Lcom/vk/catalog2/core/presenters/CatalogSectionPresenter$subscribeToEvents$1;Lcom/vk/catalog2/core/w/e/CatalogCommand6;)V
     .locals 0
 
     iput-object p1, p0, Lcom/vk/catalog2/core/presenters/CatalogSectionPresenter$subscribeToEvents$1$$special$$inlined$let$lambda$6;->this$0:Lcom/vk/catalog2/core/presenters/CatalogSectionPresenter$subscribeToEvents$1;
 
-    iput-object p2, p0, Lcom/vk/catalog2/core/presenters/CatalogSectionPresenter$subscribeToEvents$1$$special$$inlined$let$lambda$6;->$cmd$inlined:Lcom/vk/catalog2/core/w/e/b;
+    iput-object p2, p0, Lcom/vk/catalog2/core/presenters/CatalogSectionPresenter$subscribeToEvents$1$$special$$inlined$let$lambda$6;->$cmd$inlined:Lcom/vk/catalog2/core/w/e/CatalogCommand6;
 
     const/4 p1, 0x1
 
@@ -58,15 +58,15 @@
 
     move-result-object p1
 
-    iget-object v0, p0, Lcom/vk/catalog2/core/presenters/CatalogSectionPresenter$subscribeToEvents$1$$special$$inlined$let$lambda$6;->$cmd$inlined:Lcom/vk/catalog2/core/w/e/b;
+    iget-object v0, p0, Lcom/vk/catalog2/core/presenters/CatalogSectionPresenter$subscribeToEvents$1$$special$$inlined$let$lambda$6;->$cmd$inlined:Lcom/vk/catalog2/core/w/e/CatalogCommand6;
 
-    check-cast v0, Lcom/vk/catalog2/core/w/e/l;
+    check-cast v0, Lcom/vk/catalog2/core/w/e/CatalogCommand7;
 
-    invoke-virtual {v0}, Lcom/vk/catalog2/core/w/e/l;->a()Ljava/lang/String;
+    invoke-virtual {v0}, Lcom/vk/catalog2/core/w/e/CatalogCommand7;->a()Ljava/lang/String;
 
     move-result-object v0
 
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result p1
 

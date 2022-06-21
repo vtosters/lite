@@ -55,7 +55,7 @@
 
     invoke-direct {v0, v1}, Lcom/vk/poll/fragments/PollEditorScreen$receiver$1$onReceive$1;-><init>(Lcom/vk/poll/fragments/PollEditorScreen;)V
 
-    invoke-virtual {p1, p2, v0}, Lcom/vk/poll/adapters/PollBackgroundAdapter;->a(Landroid/content/Intent;Lkotlin/jvm/b/a;)V
+    invoke-virtual {p1, p2, v0}, Lcom/vk/poll/adapters/PollBackgroundAdapter;->a(Landroid/content/Intent;Lkotlin/jvm/b/Functions;)V
 
     :cond_0
     return-void

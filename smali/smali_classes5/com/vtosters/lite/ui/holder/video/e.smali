@@ -3,20 +3,20 @@
 .source "lambda"
 
 # interfaces
-.implements Lkotlin/jvm/b/a;
+.implements Lkotlin/jvm/b/Functions;
 
 
 # instance fields
-.field private final synthetic a:Lcom/vtosters/lite/ui/holder/video/j;
+.field private final synthetic a:Lcom/vtosters/lite/ui/holder/video/VideoSimpleHolder;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lcom/vtosters/lite/ui/holder/video/j;)V
+.method public synthetic constructor <init>(Lcom/vtosters/lite/ui/holder/video/VideoSimpleHolder;)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lcom/vtosters/lite/ui/holder/video/e;->a:Lcom/vtosters/lite/ui/holder/video/j;
+    iput-object p1, p0, Lcom/vtosters/lite/ui/holder/video/e;->a:Lcom/vtosters/lite/ui/holder/video/VideoSimpleHolder;
 
     return-void
 .end method
@@ -26,9 +26,9 @@
 .method public final invoke()Ljava/lang/Object;
     .locals 1
 
-    iget-object v0, p0, Lcom/vtosters/lite/ui/holder/video/e;->a:Lcom/vtosters/lite/ui/holder/video/j;
+    iget-object v0, p0, Lcom/vtosters/lite/ui/holder/video/e;->a:Lcom/vtosters/lite/ui/holder/video/VideoSimpleHolder;
 
-    invoke-virtual {v0}, Lcom/vtosters/lite/ui/holder/video/j;->u0()Lkotlin/m;
+    invoke-virtual {v0}, Lcom/vtosters/lite/ui/holder/video/VideoSimpleHolder;->u0()Lkotlin/Unit;
 
     move-result-object v0
 

@@ -79,7 +79,7 @@
 
     const/16 v23, 0x0
 
-    invoke-direct/range {v1 .. v23}, Lcom/vk/voip/VoipStatManager$StatData;-><init>(ZLcom/vk/voip/VoipStatManager$StatData$FailReason;Ljava/lang/String;Lcom/vk/voip/VoipStatManager$StatData$ConnectionType;ZJJJLjava/lang/String;Ljava/lang/String;ZZZZJLjava/lang/String;ILkotlin/jvm/internal/i;)V
+    invoke-direct/range {v1 .. v23}, Lcom/vk/voip/VoipStatManager$StatData;-><init>(ZLcom/vk/voip/VoipStatManager$StatData$FailReason;Ljava/lang/String;Lcom/vk/voip/VoipStatManager$StatData$ConnectionType;ZJJJLjava/lang/String;Ljava/lang/String;ZZZZJLjava/lang/String;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     sput-object v0, Lcom/vk/voip/VoipStatManager;->a:Lcom/vk/voip/VoipStatManager$StatData;
 
@@ -338,7 +338,7 @@
 
     const/16 v25, 0x0
 
-    invoke-direct/range {v3 .. v25}, Lcom/vk/voip/VoipStatManager$StatData;-><init>(ZLcom/vk/voip/VoipStatManager$StatData$FailReason;Ljava/lang/String;Lcom/vk/voip/VoipStatManager$StatData$ConnectionType;ZJJJLjava/lang/String;Ljava/lang/String;ZZZZJLjava/lang/String;ILkotlin/jvm/internal/i;)V
+    invoke-direct/range {v3 .. v25}, Lcom/vk/voip/VoipStatManager$StatData;-><init>(ZLcom/vk/voip/VoipStatManager$StatData$FailReason;Ljava/lang/String;Lcom/vk/voip/VoipStatManager$StatData$ConnectionType;ZJJJLjava/lang/String;Ljava/lang/String;ZZZZJLjava/lang/String;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     sput-object v1, Lcom/vk/voip/VoipStatManager;->a:Lcom/vk/voip/VoipStatManager$StatData;
 
@@ -365,16 +365,16 @@
     invoke-virtual {v1, v3}, Lcom/vk/voip/VoipStatManager$StatData;->d(Z)V
 
     .line 45
-    sget-object v1, Lcom/vk/core/util/v;->b:Lcom/vk/core/util/v;
+    sget-object v1, Lcom/vk/core/util/DeviceState;->b:Lcom/vk/core/util/DeviceState;
 
-    invoke-virtual {v1}, Lcom/vk/core/util/v;->l()Ljava/lang/String;
+    invoke-virtual {v1}, Lcom/vk/core/util/DeviceState;->l()Ljava/lang/String;
 
     move-result-object v1
 
     .line 46
-    sget-object v3, Lcom/vk/core/util/v;->b:Lcom/vk/core/util/v;
+    sget-object v3, Lcom/vk/core/util/DeviceState;->b:Lcom/vk/core/util/DeviceState;
 
-    invoke-virtual {v3}, Lcom/vk/core/util/v;->i()Ljava/lang/String;
+    invoke-virtual {v3}, Lcom/vk/core/util/DeviceState;->i()Ljava/lang/String;
 
     move-result-object v3
 
@@ -441,20 +441,20 @@
     .locals 2
 
     .line 6
-    new-instance v0, Lcom/vk/libvideo/live/base/c;
+    new-instance v0, Lcom/vk/libvideo/live/base/CustomEvent;
 
     const-string v1, "calls_video_request_sent"
 
-    invoke-direct {v0, v1}, Lcom/vk/libvideo/live/base/c;-><init>(Ljava/lang/Object;)V
+    invoke-direct {v0, v1}, Lcom/vk/libvideo/live/base/CustomEvent;-><init>(Ljava/lang/Object;)V
 
     .line 7
-    invoke-virtual {v0, p1}, Lcom/vk/libvideo/live/base/c;->a(Ljava/lang/String;)Lcom/vk/libvideo/live/base/c;
+    invoke-virtual {v0, p1}, Lcom/vk/libvideo/live/base/CustomEvent;->a(Ljava/lang/String;)Lcom/vk/libvideo/live/base/CustomEvent;
 
     .line 8
-    invoke-virtual {v0, p2}, Lcom/vk/libvideo/live/base/c;->b(Ljava/lang/String;)Lcom/vk/libvideo/live/base/c;
+    invoke-virtual {v0, p2}, Lcom/vk/libvideo/live/base/CustomEvent;->b(Ljava/lang/String;)Lcom/vk/libvideo/live/base/CustomEvent;
 
     .line 9
-    invoke-virtual {v0}, Lcom/vk/libvideo/live/base/c;->a()Lcom/vk/libvideo/live/base/c;
+    invoke-virtual {v0}, Lcom/vk/libvideo/live/base/CustomEvent;->a()Lcom/vk/libvideo/live/base/CustomEvent;
 
     return-void
 .end method
@@ -504,7 +504,7 @@
 
     const-string v5, ","
 
-    invoke-static {v2, v5, v3, v4, v3}, Lcom/vk/core/extensions/c;->a(Ljava/util/Collection;Ljava/lang/String;Lkotlin/jvm/b/b;ILjava/lang/Object;)Ljava/lang/String;
+    invoke-static {v2, v5, v3, v4, v3}, Lcom/vk/core/extensions/CollectionExt;->a(Ljava/util/Collection;Ljava/lang/String;Lkotlin/jvm/b/Functions2;ILjava/lang/Object;)Ljava/lang/String;
 
     move-result-object v2
 
@@ -547,13 +547,13 @@
     .line 8
     sget-object v2, Lcom/vk/voip/VoipStatManager$processAndSendStat$1;->a:Lcom/vk/voip/VoipStatManager$processAndSendStat$1;
 
-    invoke-virtual {v0, v2}, Lcom/vk/voip/VoipStatManager$a;->a(Lkotlin/jvm/b/b;)I
+    invoke-virtual {v0, v2}, Lcom/vk/voip/VoipStatManager$a;->a(Lkotlin/jvm/b/Functions2;)I
 
     move-result v2
 
     sget-object v3, Lcom/vk/voip/VoipStatManager$processAndSendStat$2;->a:Lcom/vk/voip/VoipStatManager$processAndSendStat$2;
 
-    invoke-virtual {v0, v3}, Lcom/vk/voip/VoipStatManager$a;->a(Lkotlin/jvm/b/b;)I
+    invoke-virtual {v0, v3}, Lcom/vk/voip/VoipStatManager$a;->a(Lkotlin/jvm/b/Functions2;)I
 
     move-result v3
 
@@ -672,13 +672,13 @@
 
     sget-object v2, Lcom/vk/voip/VoipStatManager$processAndSendStat$3;->a:Lcom/vk/voip/VoipStatManager$processAndSendStat$3;
 
-    invoke-virtual {v0, v2}, Lcom/vk/voip/VoipStatManager$a;->a(Lkotlin/jvm/b/b;)I
+    invoke-virtual {v0, v2}, Lcom/vk/voip/VoipStatManager$a;->a(Lkotlin/jvm/b/Functions2;)I
 
     move-result v2
 
     sget-object v3, Lcom/vk/voip/VoipStatManager$processAndSendStat$4;->a:Lcom/vk/voip/VoipStatManager$processAndSendStat$4;
 
-    invoke-virtual {v0, v3}, Lcom/vk/voip/VoipStatManager$a;->a(Lkotlin/jvm/b/b;)I
+    invoke-virtual {v0, v3}, Lcom/vk/voip/VoipStatManager$a;->a(Lkotlin/jvm/b/Functions2;)I
 
     move-result v3
 
@@ -797,7 +797,7 @@
     const-string v0, "call_stat"
 
     .line 29
-    invoke-static {v0}, Lcom/vtosters/lite/data/n;->c(Ljava/lang/String;)Lcom/vtosters/lite/data/n$l;
+    invoke-static {v0}, Lcom/vtosters/lite/data/Analytics;->c(Ljava/lang/String;)Lcom/vtosters/lite/data/Analytics$l;
 
     move-result-object v0
 
@@ -808,7 +808,7 @@
 
     const-string v3, "type"
 
-    invoke-virtual {v0, v3, v2}, Lcom/vtosters/lite/data/n$l;->a(Ljava/lang/String;Ljava/lang/Object;)Lcom/vtosters/lite/data/n$l;
+    invoke-virtual {v0, v3, v2}, Lcom/vtosters/lite/data/Analytics$l;->a(Ljava/lang/String;Ljava/lang/Object;)Lcom/vtosters/lite/data/Analytics$l;
 
     .line 31
     invoke-virtual {v1}, Lcom/vk/voip/VoipStatManager$StatData;->k()Z
@@ -827,7 +827,7 @@
     :goto_2
     const-string v3, "result"
 
-    invoke-virtual {v0, v3, v2}, Lcom/vtosters/lite/data/n$l;->a(Ljava/lang/String;Ljava/lang/Object;)Lcom/vtosters/lite/data/n$l;
+    invoke-virtual {v0, v3, v2}, Lcom/vtosters/lite/data/Analytics$l;->a(Ljava/lang/String;Ljava/lang/Object;)Lcom/vtosters/lite/data/Analytics$l;
 
     .line 32
     invoke-virtual {v1}, Lcom/vk/voip/VoipStatManager$StatData;->g()Lcom/vk/voip/VoipStatManager$StatData$FailReason;
@@ -840,7 +840,7 @@
 
     const-string v3, "fail_reason"
 
-    invoke-virtual {v0, v3, v2}, Lcom/vtosters/lite/data/n$l;->a(Ljava/lang/String;Ljava/lang/Object;)Lcom/vtosters/lite/data/n$l;
+    invoke-virtual {v0, v3, v2}, Lcom/vtosters/lite/data/Analytics$l;->a(Ljava/lang/String;Ljava/lang/Object;)Lcom/vtosters/lite/data/Analytics$l;
 
     .line 33
     invoke-virtual {v1}, Lcom/vk/voip/VoipStatManager$StatData;->h()Ljava/lang/String;
@@ -849,7 +849,7 @@
 
     const-string v3, "network_type"
 
-    invoke-virtual {v0, v3, v2}, Lcom/vtosters/lite/data/n$l;->a(Ljava/lang/String;Ljava/lang/Object;)Lcom/vtosters/lite/data/n$l;
+    invoke-virtual {v0, v3, v2}, Lcom/vtosters/lite/data/Analytics$l;->a(Ljava/lang/String;Ljava/lang/Object;)Lcom/vtosters/lite/data/Analytics$l;
 
     .line 34
     invoke-virtual {v1}, Lcom/vk/voip/VoipStatManager$StatData;->f()Lcom/vk/voip/VoipStatManager$StatData$ConnectionType;
@@ -858,7 +858,7 @@
 
     const-string v3, "connection_type"
 
-    invoke-virtual {v0, v3, v2}, Lcom/vtosters/lite/data/n$l;->a(Ljava/lang/String;Ljava/lang/Object;)Lcom/vtosters/lite/data/n$l;
+    invoke-virtual {v0, v3, v2}, Lcom/vtosters/lite/data/Analytics$l;->a(Ljava/lang/String;Ljava/lang/Object;)Lcom/vtosters/lite/data/Analytics$l;
 
     .line 35
     invoke-virtual {v1}, Lcom/vk/voip/VoipStatManager$StatData;->d()Ljava/lang/String;
@@ -867,7 +867,7 @@
 
     const-string v3, "call_source"
 
-    invoke-virtual {v0, v3, v2}, Lcom/vtosters/lite/data/n$l;->a(Ljava/lang/String;Ljava/lang/Object;)Lcom/vtosters/lite/data/n$l;
+    invoke-virtual {v0, v3, v2}, Lcom/vtosters/lite/data/Analytics$l;->a(Ljava/lang/String;Ljava/lang/Object;)Lcom/vtosters/lite/data/Analytics$l;
 
     .line 36
     invoke-virtual {v1}, Lcom/vk/voip/VoipStatManager$StatData;->j()J
@@ -880,7 +880,7 @@
 
     const-string v3, "total_duration"
 
-    invoke-virtual {v0, v3, v2}, Lcom/vtosters/lite/data/n$l;->a(Ljava/lang/String;Ljava/lang/Object;)Lcom/vtosters/lite/data/n$l;
+    invoke-virtual {v0, v3, v2}, Lcom/vtosters/lite/data/Analytics$l;->a(Ljava/lang/String;Ljava/lang/Object;)Lcom/vtosters/lite/data/Analytics$l;
 
     .line 37
     invoke-virtual {v1}, Lcom/vk/voip/VoipStatManager$StatData;->i()Ljava/lang/String;
@@ -889,10 +889,10 @@
 
     const-string v3, "relay"
 
-    invoke-virtual {v0, v3, v2}, Lcom/vtosters/lite/data/n$l;->a(Ljava/lang/String;Ljava/lang/Object;)Lcom/vtosters/lite/data/n$l;
+    invoke-virtual {v0, v3, v2}, Lcom/vtosters/lite/data/Analytics$l;->a(Ljava/lang/String;Ljava/lang/Object;)Lcom/vtosters/lite/data/Analytics$l;
 
     .line 38
-    invoke-virtual {v0}, Lcom/vtosters/lite/data/n$l;->b()Lcom/vtosters/lite/data/n$l;
+    invoke-virtual {v0}, Lcom/vtosters/lite/data/Analytics$l;->b()Lcom/vtosters/lite/data/Analytics$l;
 
     .line 39
     invoke-virtual {v1}, Lcom/vk/voip/VoipStatManager$StatData;->a()Z
@@ -904,7 +904,7 @@
     const-string v0, "calls_voice_msg"
 
     .line 40
-    invoke-static {v0}, Lcom/vtosters/lite/data/n;->c(Ljava/lang/String;)Lcom/vtosters/lite/data/n$l;
+    invoke-static {v0}, Lcom/vtosters/lite/data/Analytics;->c(Ljava/lang/String;)Lcom/vtosters/lite/data/Analytics$l;
 
     move-result-object v0
 
@@ -915,7 +915,7 @@
 
     const-string v3, "call_type"
 
-    invoke-virtual {v0, v3, v2}, Lcom/vtosters/lite/data/n$l;->a(Ljava/lang/String;Ljava/lang/Object;)Lcom/vtosters/lite/data/n$l;
+    invoke-virtual {v0, v3, v2}, Lcom/vtosters/lite/data/Analytics$l;->a(Ljava/lang/String;Ljava/lang/Object;)Lcom/vtosters/lite/data/Analytics$l;
 
     .line 42
     invoke-virtual {v1}, Lcom/vk/voip/VoipStatManager$StatData;->c()Z
@@ -934,7 +934,7 @@
     :goto_3
     const-string v3, "status"
 
-    invoke-virtual {v0, v3, v2}, Lcom/vtosters/lite/data/n$l;->a(Ljava/lang/String;Ljava/lang/Object;)Lcom/vtosters/lite/data/n$l;
+    invoke-virtual {v0, v3, v2}, Lcom/vtosters/lite/data/Analytics$l;->a(Ljava/lang/String;Ljava/lang/Object;)Lcom/vtosters/lite/data/Analytics$l;
 
     .line 43
     invoke-virtual {v1}, Lcom/vk/voip/VoipStatManager$StatData;->g()Lcom/vk/voip/VoipStatManager$StatData$FailReason;
@@ -970,7 +970,7 @@
     const-string v3, "reason"
 
     .line 45
-    invoke-virtual {v0, v3, v2}, Lcom/vtosters/lite/data/n$l;->a(Ljava/lang/String;Ljava/lang/Object;)Lcom/vtosters/lite/data/n$l;
+    invoke-virtual {v0, v3, v2}, Lcom/vtosters/lite/data/Analytics$l;->a(Ljava/lang/String;Ljava/lang/Object;)Lcom/vtosters/lite/data/Analytics$l;
 
     .line 46
     invoke-virtual {v1}, Lcom/vk/voip/VoipStatManager$StatData;->b()J
@@ -983,10 +983,10 @@
 
     const-string v3, "duration"
 
-    invoke-virtual {v0, v3, v2}, Lcom/vtosters/lite/data/n$l;->a(Ljava/lang/String;Ljava/lang/Object;)Lcom/vtosters/lite/data/n$l;
+    invoke-virtual {v0, v3, v2}, Lcom/vtosters/lite/data/Analytics$l;->a(Ljava/lang/String;Ljava/lang/Object;)Lcom/vtosters/lite/data/Analytics$l;
 
     .line 47
-    invoke-virtual {v0}, Lcom/vtosters/lite/data/n$l;->b()Lcom/vtosters/lite/data/n$l;
+    invoke-virtual {v0}, Lcom/vtosters/lite/data/Analytics$l;->b()Lcom/vtosters/lite/data/Analytics$l;
 
     .line 48
     :cond_d
@@ -1210,27 +1210,27 @@
     .locals 2
 
     .line 3
-    sget-object v0, Lb/h/v/d;->c:Lb/h/v/d$a;
+    sget-object v0, Lb/h/v/RxBus;->c:Lb/h/v/RxBus$a;
 
-    invoke-virtual {v0}, Lb/h/v/d$a;->a()Lb/h/v/d;
+    invoke-virtual {v0}, Lb/h/v/RxBus$a;->a()Lb/h/v/RxBus;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lb/h/v/d;->a()Lc/a/m;
+    invoke-virtual {v0}, Lb/h/v/RxBus;->a()Lio/reactivex/Observable;
 
     move-result-object v0
 
     .line 4
     sget-object v1, Lcom/vk/voip/VoipStatManager$b;->a:Lcom/vk/voip/VoipStatManager$b;
 
-    invoke-virtual {v0, v1}, Lc/a/m;->a(Lc/a/z/l;)Lc/a/m;
+    invoke-virtual {v0, v1}, Lio/reactivex/Observable;->a(Lio/reactivex/functions/Predicate;)Lio/reactivex/Observable;
 
     move-result-object v0
 
     .line 5
     sget-object v1, Lcom/vk/voip/VoipStatManager$c;->a:Lcom/vk/voip/VoipStatManager$c;
 
-    invoke-virtual {v0, v1}, Lc/a/m;->f(Lc/a/z/g;)Lio/reactivex/disposables/b;
+    invoke-virtual {v0, v1}, Lio/reactivex/Observable;->f(Lio/reactivex/functions/Consumer;)Lio/reactivex/disposables/Disposable;
 
     return-void
 .end method

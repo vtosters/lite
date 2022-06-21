@@ -15,7 +15,7 @@
 
 
 # direct methods
-.method public static synthetic a(Lcom/vk/stories/util/ClickableStickerDelegate$a;Lcom/vk/dto/stories/model/StoryViewAction;Lkotlin/jvm/b/b;ILjava/lang/Object;)V
+.method public static synthetic a(Lcom/vk/stories/util/ClickableStickerDelegate$a;Lcom/vk/dto/stories/model/StoryViewAction;Lkotlin/jvm/b/Functions2;ILjava/lang/Object;)V
     .locals 0
 
     if-nez p4, :cond_1
@@ -28,7 +28,7 @@
 
     .line 1
     :cond_0
-    invoke-interface {p0, p1, p2}, Lcom/vk/stories/util/ClickableStickerDelegate$a;->a(Lcom/vk/dto/stories/model/StoryViewAction;Lkotlin/jvm/b/b;)V
+    invoke-interface {p0, p1, p2}, Lcom/vk/stories/util/ClickableStickerDelegate$a;->a(Lcom/vk/dto/stories/model/StoryViewAction;Lkotlin/jvm/b/Functions2;)V
 
     return-void
 

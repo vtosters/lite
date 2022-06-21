@@ -3,7 +3,7 @@
 .source "PostViewFragment.kt"
 
 # interfaces
-.implements Lcom/vk/newsfeed/j;
+.implements Lcom/vk/newsfeed/NewsEntryActionsAdapter3;
 
 
 # annotations
@@ -35,25 +35,25 @@
 
 
 # virtual methods
-.method public a(Lcom/vk/core/dialogs/actionspopup/a;I)V
+.method public a(Lcom/vk/core/dialogs/actionspopup/ActionsPopup;I)V
     .locals 1
 
     .line 1
     iget-object v0, p0, Lcom/vk/wall/post/PostViewFragment$h;->a:Lcom/vk/wall/post/PostViewFragment;
 
-    invoke-virtual {v0}, Lcom/vk/wall/post/PostViewFragment;->getPresenter()Lcom/vk/wall/post/b;
+    invoke-virtual {v0}, Lcom/vk/wall/post/PostViewFragment;->getPresenter()Lcom/vk/wall/post/PostViewContract1;
 
     move-result-object v0
 
     if-eqz v0, :cond_0
 
-    invoke-interface {v0, p2}, Lcom/vk/wall/post/b;->e(I)Z
+    invoke-interface {v0, p2}, Lcom/vk/wall/post/PostViewContract1;->e(I)Z
 
     :cond_0
     if-eqz p1, :cond_1
 
     .line 2
-    invoke-virtual {p1}, Lcom/vk/core/dialogs/actionspopup/a;->b()V
+    invoke-virtual {p1}, Lcom/vk/core/dialogs/actionspopup/ActionsPopup;->b()V
 
     :cond_1
     return-void

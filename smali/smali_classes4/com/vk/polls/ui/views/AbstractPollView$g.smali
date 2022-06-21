@@ -42,9 +42,9 @@
 
     if-eqz p1, :cond_0
 
-    check-cast p1, Lcom/vk/polls/ui/views/c;
+    check-cast p1, Lcom/vk/polls/ui/views/PollOptionView;
 
-    invoke-static {v0, p1}, Lcom/vk/polls/ui/views/AbstractPollView;->a(Lcom/vk/polls/ui/views/AbstractPollView;Lcom/vk/polls/ui/views/c;)V
+    invoke-static {v0, p1}, Lcom/vk/polls/ui/views/AbstractPollView;->a(Lcom/vk/polls/ui/views/AbstractPollView;Lcom/vk/polls/ui/views/PollOptionView;)V
 
     return-void
 

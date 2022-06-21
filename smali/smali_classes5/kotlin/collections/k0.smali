@@ -1,5 +1,5 @@
 .class public final Lkotlin/collections/k0;
-.super Lkotlin/collections/n0;
+.super Lkotlin/collections/_Sets;
 
 
 # direct methods
@@ -15,7 +15,7 @@
         }
     .end annotation
 
-    invoke-static {p0}, Lkotlin/collections/m0;->a([Ljava/lang/Object;)Ljava/util/HashSet;
+    invoke-static {p0}, Lkotlin/collections/Sets;->a([Ljava/lang/Object;)Ljava/util/HashSet;
 
     move-result-object p0
 
@@ -34,7 +34,7 @@
         }
     .end annotation
 
-    invoke-static {}, Lkotlin/collections/m0;->a()Ljava/util/Set;
+    invoke-static {}, Lkotlin/collections/Sets;->a()Ljava/util/Set;
 
     move-result-object v0
 
@@ -53,7 +53,7 @@
         }
     .end annotation
 
-    invoke-static {p0}, Lkotlin/collections/l0;->a(Ljava/lang/Object;)Ljava/util/Set;
+    invoke-static {p0}, Lkotlin/collections/SetsJVM;->a(Ljava/lang/Object;)Ljava/util/Set;
 
     move-result-object p0
 
@@ -74,7 +74,7 @@
         }
     .end annotation
 
-    invoke-static {p0}, Lkotlin/collections/m0;->a(Ljava/util/Set;)Ljava/util/Set;
+    invoke-static {p0}, Lkotlin/collections/Sets;->a(Ljava/util/Set;)Ljava/util/Set;
 
     move-result-object p0
 
@@ -93,7 +93,7 @@
         }
     .end annotation
 
-    invoke-static {p0}, Lkotlin/collections/m0;->b([Ljava/lang/Object;)Ljava/util/LinkedHashSet;
+    invoke-static {p0}, Lkotlin/collections/Sets;->b([Ljava/lang/Object;)Ljava/util/LinkedHashSet;
 
     move-result-object p0
 
@@ -112,7 +112,7 @@
         }
     .end annotation
 
-    invoke-static {p0}, Lkotlin/collections/m0;->c([Ljava/lang/Object;)Ljava/util/Set;
+    invoke-static {p0}, Lkotlin/collections/Sets;->c([Ljava/lang/Object;)Ljava/util/Set;
 
     move-result-object p0
 
@@ -131,7 +131,7 @@
         }
     .end annotation
 
-    invoke-static {p0}, Lkotlin/collections/m0;->d([Ljava/lang/Object;)Ljava/util/Set;
+    invoke-static {p0}, Lkotlin/collections/Sets;->d([Ljava/lang/Object;)Ljava/util/Set;
 
     move-result-object p0
 

@@ -3,12 +3,12 @@
 .source "QRViewUtils.kt"
 
 # interfaces
-.implements Lcom/vk/core/dialogs/bottomsheet/h$e;
+.implements Lcom/vk/core/dialogs/bottomsheet/ModalDialogInterface$e;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/qrcode/QRViewUtils;->a(Lcom/vk/qrcode/QRParser;Landroid/app/Activity;Landroid/graphics/drawable/Drawable;Ljava/lang/String;Ljava/lang/Integer;ZLkotlin/jvm/b/a;Landroid/graphics/drawable/Drawable;ZLjava/lang/CharSequence;Ljava/lang/CharSequence;ILandroid/view/View;Lkotlin/Pair;Lkotlin/Pair;Lcom/vk/qrcode/QRViewUtils$a;Lcom/vk/qrcode/QRViewUtils$a;Lkotlin/jvm/b/b;)V
+    value = Lcom/vk/qrcode/QRViewUtils;->a(Lcom/vk/qrcode/QRParser;Landroid/app/Activity;Landroid/graphics/drawable/Drawable;Ljava/lang/String;Ljava/lang/Integer;ZLkotlin/jvm/b/Functions;Landroid/graphics/drawable/Drawable;ZLjava/lang/CharSequence;Ljava/lang/CharSequence;ILandroid/view/View;Lkotlin/Pair;Lkotlin/Pair;Lcom/vk/qrcode/QRViewUtils$a;Lcom/vk/qrcode/QRViewUtils$a;Lkotlin/jvm/b/Functions2;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -84,15 +84,15 @@
 
     move-result-object p1
 
-    check-cast p1, Lkotlin/jvm/b/a;
+    check-cast p1, Lkotlin/jvm/b/Functions;
 
     if-eqz p1, :cond_1
 
-    invoke-interface {p1}, Lkotlin/jvm/b/a;->invoke()Ljava/lang/Object;
+    invoke-interface {p1}, Lkotlin/jvm/b/Functions;->invoke()Ljava/lang/Object;
 
     move-result-object p1
 
-    check-cast p1, Lkotlin/m;
+    check-cast p1, Lkotlin/Unit;
 
     .line 2
     :cond_1
@@ -119,15 +119,15 @@
 
     move-result-object p1
 
-    check-cast p1, Lkotlin/jvm/b/a;
+    check-cast p1, Lkotlin/jvm/b/Functions;
 
     if-eqz p1, :cond_3
 
-    invoke-interface {p1}, Lkotlin/jvm/b/a;->invoke()Ljava/lang/Object;
+    invoke-interface {p1}, Lkotlin/jvm/b/Functions;->invoke()Ljava/lang/Object;
 
     move-result-object p1
 
-    check-cast p1, Lkotlin/m;
+    check-cast p1, Lkotlin/Unit;
 
     .line 5
     :cond_3
@@ -150,17 +150,17 @@
 
     if-eqz p1, :cond_5
 
-    invoke-virtual {p1}, Lcom/vk/qrcode/QRViewUtils$a;->a()Lkotlin/jvm/b/a;
+    invoke-virtual {p1}, Lcom/vk/qrcode/QRViewUtils$a;->a()Lkotlin/jvm/b/Functions;
 
     move-result-object p1
 
     if-eqz p1, :cond_5
 
-    invoke-interface {p1}, Lkotlin/jvm/b/a;->invoke()Ljava/lang/Object;
+    invoke-interface {p1}, Lkotlin/jvm/b/Functions;->invoke()Ljava/lang/Object;
 
     move-result-object p1
 
-    check-cast p1, Lkotlin/m;
+    check-cast p1, Lkotlin/Unit;
 
     .line 8
     :cond_5
@@ -190,17 +190,17 @@
 
     if-eqz p1, :cond_8
 
-    invoke-virtual {p1}, Lcom/vk/qrcode/QRViewUtils$a;->a()Lkotlin/jvm/b/a;
+    invoke-virtual {p1}, Lcom/vk/qrcode/QRViewUtils$a;->a()Lkotlin/jvm/b/Functions;
 
     move-result-object p1
 
     if-eqz p1, :cond_8
 
-    invoke-interface {p1}, Lkotlin/jvm/b/a;->invoke()Ljava/lang/Object;
+    invoke-interface {p1}, Lkotlin/jvm/b/Functions;->invoke()Ljava/lang/Object;
 
     move-result-object p1
 
-    check-cast p1, Lkotlin/m;
+    check-cast p1, Lkotlin/Unit;
 
     .line 11
     :cond_8

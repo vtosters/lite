@@ -3,12 +3,12 @@
 .source "DialogHeaderVc.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/a;
+.implements Lkotlin/jvm/b/Functions;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/im/ui/components/dialog_header/DialogHeaderVc;-><init>(Lcom/vk/im/ui/components/dialog_header/info/DialogHeaderInfoComponent;Lcom/vk/im/ui/components/dialog_header/actions/DialogHeaderActionsComponent;Lcom/vk/im/ui/components/dialog_header/c/a;Landroid/view/View;Landroid/os/Bundle;)V
+    value = Lcom/vk/im/ui/components/dialog_header/DialogHeaderVc;-><init>(Lcom/vk/im/ui/components/dialog_header/info/DialogHeaderInfoComponent;Lcom/vk/im/ui/components/dialog_header/actions/DialogHeaderActionsComponent;Lcom/vk/im/ui/components/dialog_header/c/DialogHeaderEditComponent;Landroid/view/View;Landroid/os/Bundle;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -19,7 +19,7 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/a<",
+        "Lkotlin/jvm/b/Functions<",
         "Lcom/vk/im/ui/utils/animators/ViewAlphaAnimatorHelper;",
         ">;"
     }
@@ -57,7 +57,7 @@
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/vk/im/ui/q/c;->i()Landroid/view/View;
+    invoke-virtual {v0}, Lcom/vk/im/ui/q/Component;->i()Landroid/view/View;
 
     move-result-object v1
 
@@ -65,7 +65,7 @@
 
     const-string v0, "msgHeaderComponent.view!!"
 
-    invoke-static {v1, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v1, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-static {}, Lcom/vk/im/ui/components/dialog_header/DialogHeaderVc;->d()Lcom/vk/im/ui/components/dialog_header/DialogHeaderVc$a;
 
@@ -95,12 +95,12 @@
 
     move-object v0, v9
 
-    invoke-direct/range {v0 .. v8}, Lcom/vk/im/ui/utils/animators/ViewAlphaAnimatorHelper;-><init>(Landroid/view/View;Landroid/view/animation/Interpolator;Landroid/view/animation/Interpolator;JIILkotlin/jvm/internal/i;)V
+    invoke-direct/range {v0 .. v8}, Lcom/vk/im/ui/utils/animators/ViewAlphaAnimatorHelper;-><init>(Landroid/view/View;Landroid/view/animation/Interpolator;Landroid/view/animation/Interpolator;JIILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     return-object v9
 
     :cond_0
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     const/4 v0, 0x0
 

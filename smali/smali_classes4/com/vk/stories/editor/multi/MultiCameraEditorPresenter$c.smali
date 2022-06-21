@@ -3,7 +3,7 @@
 .source "MultiCameraEditorPresenter.kt"
 
 # interfaces
-.implements Lc/a/z/g;
+.implements Lio/reactivex/functions/Consumer;
 
 
 # annotations
@@ -22,7 +22,7 @@
         "Ljava/lang/Object;",
         ">",
         "Ljava/lang/Object;",
-        "Lc/a/z/g<",
+        "Lio/reactivex/functions/Consumer<",
         "Ljava/lang/Throwable;",
         ">;"
     }
@@ -52,11 +52,11 @@
     .line 1
     iget-object p1, p0, Lcom/vk/stories/editor/multi/MultiCameraEditorPresenter$c;->a:Lcom/vk/stories/editor/multi/MultiCameraEditorPresenter;
 
-    invoke-virtual {p1}, Lcom/vk/stories/editor/base/c0;->l()Lcom/vk/stories/editor/base/f0;
+    invoke-virtual {p1}, Lcom/vk/stories/editor/base/BaseCameraEditorPresenter;->l()Lcom/vk/stories/editor/base/CameraEditorContainer;
 
     move-result-object p1
 
-    invoke-interface {p1}, Lcom/vk/stories/editor/base/f0;->a()V
+    invoke-interface {p1}, Lcom/vk/stories/editor/base/CameraEditorContainer;->a()V
 
     return-void
 .end method

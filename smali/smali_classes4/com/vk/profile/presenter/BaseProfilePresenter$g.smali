@@ -3,7 +3,7 @@
 .source "BaseProfilePresenter.kt"
 
 # interfaces
-.implements Lc/a/z/g;
+.implements Lio/reactivex/functions/Consumer;
 
 
 # annotations
@@ -22,7 +22,7 @@
         "Ljava/lang/Object;",
         ">",
         "Ljava/lang/Object;",
-        "Lc/a/z/g<",
+        "Lio/reactivex/functions/Consumer<",
         "Lcom/vk/dto/common/data/VKList<",
         "Lcom/vk/dto/photo/Photo;",
         ">;>;"
@@ -74,7 +74,7 @@
     const/4 v2, 0x0
 
     .line 2
-    invoke-static {p1, v0, v1, v2}, Lcom/vk/core/util/k1;->a(IZILjava/lang/Object;)V
+    invoke-static {p1, v0, v1, v2}, Lcom/vk/core/util/ToastUtils;->a(IZILjava/lang/Object;)V
 
     return-void
 
@@ -82,13 +82,13 @@
     :cond_0
     iget-object v0, p0, Lcom/vk/profile/presenter/BaseProfilePresenter$g;->a:Lcom/vk/profile/presenter/BaseProfilePresenter;
 
-    invoke-virtual {v0}, Lcom/vk/newsfeed/presenters/i;->M()Lcom/vk/newsfeed/contracts/u;
+    invoke-virtual {v0}, Lcom/vk/newsfeed/presenters/NewsFeedProfilePresenter;->M()Lcom/vk/newsfeed/contracts/ProfileContract;
 
     move-result-object v0
 
     const-string v1, "photos"
 
-    invoke-static {p1, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     new-instance v1, Lcom/vk/profile/presenter/BaseProfilePresenter$a;
 
@@ -104,7 +104,7 @@
 
     invoke-direct {v1, v2, v3, v4}, Lcom/vk/profile/presenter/BaseProfilePresenter$a;-><init>(Lcom/vk/profile/presenter/BaseProfilePresenter;II)V
 
-    invoke-interface {v0, p1, v1}, Lcom/vk/newsfeed/contracts/u;->a(Lcom/vk/dto/common/data/VKList;Lcom/vk/profile/presenter/BaseProfilePresenter$a;)V
+    invoke-interface {v0, p1, v1}, Lcom/vk/newsfeed/contracts/ProfileContract;->a(Lcom/vk/dto/common/data/VKList;Lcom/vk/profile/presenter/BaseProfilePresenter$a;)V
 
     return-void
 .end method

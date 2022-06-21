@@ -3,7 +3,7 @@
 .source "StoryQuestionOptionsHelper.kt"
 
 # interfaces
-.implements Lc/a/z/g;
+.implements Lio/reactivex/functions/Consumer;
 
 
 # annotations
@@ -22,7 +22,7 @@
         "Ljava/lang/Object;",
         ">",
         "Ljava/lang/Object;",
-        "Lc/a/z/g<",
+        "Lio/reactivex/functions/Consumer<",
         "Ljava/lang/Boolean;",
         ">;"
     }
@@ -52,7 +52,7 @@
     const-string v0, "res"
 
     .line 1
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {p1}, Ljava/lang/Boolean;->booleanValue()Z
 
@@ -61,14 +61,14 @@
     if-eqz p1, :cond_3
 
     .line 2
-    sget-object p1, Lcom/vk/stories/clickable/a;->b:Lcom/vk/stories/clickable/a;
+    sget-object p1, Lcom/vk/stories/clickable/ClickableEventBus;->b:Lcom/vk/stories/clickable/ClickableEventBus;
 
-    invoke-virtual {p1}, Lcom/vk/stories/clickable/a;->a()Lb/h/v/d;
+    invoke-virtual {p1}, Lcom/vk/stories/clickable/ClickableEventBus;->a()Lb/h/v/RxBus;
 
     move-result-object p1
 
     .line 3
-    new-instance v0, Lcom/vk/stories/util/r;
+    new-instance v0, Lcom/vk/stories/util/StoryQuestionOptionsHelper2;
 
     .line 4
     iget-object v1, p0, Lcom/vk/stories/util/StoryQuestionOptionsHelper$l;->a:Lcom/vk/stories/util/StoryQuestionOptionsHelper;
@@ -118,10 +118,10 @@
     const/4 v4, 0x0
 
     .line 7
-    invoke-direct {v0, v1, v2, v3, v4}, Lcom/vk/stories/util/r;-><init>(IILjava/lang/Integer;Z)V
+    invoke-direct {v0, v1, v2, v3, v4}, Lcom/vk/stories/util/StoryQuestionOptionsHelper2;-><init>(IILjava/lang/Integer;Z)V
 
     .line 8
-    invoke-virtual {p1, v0}, Lb/h/v/d;->a(Ljava/lang/Object;)V
+    invoke-virtual {p1, v0}, Lb/h/v/RxBus;->a(Ljava/lang/Object;)V
 
     .line 9
     iget-object p1, p0, Lcom/vk/stories/util/StoryQuestionOptionsHelper$l;->a:Lcom/vk/stories/util/StoryQuestionOptionsHelper;
@@ -142,13 +142,13 @@
 
     .line 11
     :goto_1
-    invoke-static {v0}, Lcom/vk/core/util/y0;->f(I)Ljava/lang/String;
+    invoke-static {v0}, Lcom/vk/core/util/ResUtils;->f(I)Ljava/lang/String;
 
     move-result-object v0
 
     const-string v1, "ResUtils.str(\n          \u2026      }\n                )"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-static {p1, v0}, Lcom/vk/stories/util/StoryQuestionOptionsHelper;->a(Lcom/vk/stories/util/StoryQuestionOptionsHelper;Ljava/lang/String;)V
 

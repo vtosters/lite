@@ -3,12 +3,12 @@
 .source "LocationComponent.kt"
 
 # interfaces
-.implements Lc/a/z/j;
+.implements Lio/reactivex/functions/Function;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/im/ui/components/msg_send/picker/location/LocationComponent;->b(Ljava/lang/CharSequence;)Lc/a/m;
+    value = Lcom/vk/im/ui/components/msg_send/picker/location/LocationComponent;->b(Ljava/lang/CharSequence;)Lio/reactivex/Observable;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -24,9 +24,9 @@
         "Ljava/lang/Object;",
         ">",
         "Ljava/lang/Object;",
-        "Lc/a/z/j<",
+        "Lio/reactivex/functions/Function<",
         "TT;",
-        "Lc/a/p<",
+        "Lio/reactivex/ObservableSource<",
         "+TR;>;>;"
     }
 .end annotation
@@ -53,14 +53,14 @@
 
 
 # virtual methods
-.method public final a(Lcom/vk/dto/geo/GeoLocation;)Lc/a/m;
+.method public final a(Lcom/vk/dto/geo/GeoLocation;)Lio/reactivex/Observable;
     .locals 2
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
             "Lcom/vk/dto/geo/GeoLocation;",
             ")",
-            "Lc/a/m<",
+            "Lio/reactivex/Observable<",
             "Ljava/util/List<",
             "Lcom/vk/dto/geo/GeoLocation;",
             ">;>;"
@@ -72,7 +72,7 @@
 
     iget-object v1, p0, Lcom/vk/im/ui/components/msg_send/picker/location/LocationComponent$h;->b:Ljava/lang/CharSequence;
 
-    invoke-static {v0, p1, v1}, Lcom/vk/im/ui/components/msg_send/picker/location/LocationComponent;->a(Lcom/vk/im/ui/components/msg_send/picker/location/LocationComponent;Lcom/vk/dto/geo/GeoLocation;Ljava/lang/CharSequence;)Lc/a/m;
+    invoke-static {v0, p1, v1}, Lcom/vk/im/ui/components/msg_send/picker/location/LocationComponent;->a(Lcom/vk/im/ui/components/msg_send/picker/location/LocationComponent;Lcom/vk/dto/geo/GeoLocation;Ljava/lang/CharSequence;)Lio/reactivex/Observable;
 
     move-result-object p1
 
@@ -85,7 +85,7 @@
     .line 1
     check-cast p1, Lcom/vk/dto/geo/GeoLocation;
 
-    invoke-virtual {p0, p1}, Lcom/vk/im/ui/components/msg_send/picker/location/LocationComponent$h;->a(Lcom/vk/dto/geo/GeoLocation;)Lc/a/m;
+    invoke-virtual {p0, p1}, Lcom/vk/im/ui/components/msg_send/picker/location/LocationComponent$h;->a(Lcom/vk/dto/geo/GeoLocation;)Lio/reactivex/Observable;
 
     move-result-object p1
 

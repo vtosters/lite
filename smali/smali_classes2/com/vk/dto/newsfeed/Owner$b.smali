@@ -24,7 +24,7 @@
     return-void
 .end method
 
-.method public synthetic constructor <init>(Lkotlin/jvm/internal/i;)V
+.method public synthetic constructor <init>(Lkotlin/jvm/internal/DefaultConstructorMarker;)V
     .locals 0
 
     .line 2
@@ -152,7 +152,7 @@
 
     move-object v0, v9
 
-    invoke-direct/range {v0 .. v8}, Lcom/vk/dto/newsfeed/Owner;-><init>(ILjava/lang/String;Ljava/lang/String;Lcom/vk/dto/common/VerifyInfo;Lcom/vk/dto/common/Image;Ljava/lang/String;ILkotlin/jvm/internal/i;)V
+    invoke-direct/range {v0 .. v8}, Lcom/vk/dto/newsfeed/Owner;-><init>(ILjava/lang/String;Ljava/lang/String;Lcom/vk/dto/common/VerifyInfo;Lcom/vk/dto/common/Image;Ljava/lang/String;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     const-string v0, "id"
 
@@ -244,7 +244,7 @@
 
     move-object v0, v9
 
-    invoke-direct/range {v0 .. v8}, Lcom/vk/dto/newsfeed/Owner;-><init>(ILjava/lang/String;Ljava/lang/String;Lcom/vk/dto/common/VerifyInfo;Lcom/vk/dto/common/Image;Ljava/lang/String;ILkotlin/jvm/internal/i;)V
+    invoke-direct/range {v0 .. v8}, Lcom/vk/dto/newsfeed/Owner;-><init>(ILjava/lang/String;Ljava/lang/String;Lcom/vk/dto/common/VerifyInfo;Lcom/vk/dto/common/Image;Ljava/lang/String;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     const-string v0, "id"
 
@@ -285,13 +285,13 @@
     invoke-virtual {v9, v0}, Lcom/vk/dto/newsfeed/Owner;->a(Lcom/vk/dto/common/Image;)V
 
     .line 6
-    sget-object v0, Lb/h/h/a;->b:Lb/h/h/a$a;
+    sget-object v0, Lb/h/h/ModelConfig;->b:Lb/h/h/ModelConfig$a;
 
     const-string v1, "ModelConfig.callback"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    invoke-interface {v0}, Lb/h/h/a$a;->a()F
+    invoke-interface {v0}, Lb/h/h/ModelConfig$a;->a()F
 
     move-result v0
 
@@ -366,7 +366,7 @@
 
     const-string v3, "json.optString(\"deactivated\")"
 
-    invoke-static {v2, v3}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v2, v3}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-interface {v2}, Ljava/lang/CharSequence;->length()I
 
@@ -444,7 +444,7 @@
 
     move-object v0, v9
 
-    invoke-direct/range {v0 .. v8}, Lcom/vk/dto/newsfeed/Owner;-><init>(ILjava/lang/String;Ljava/lang/String;Lcom/vk/dto/common/VerifyInfo;Lcom/vk/dto/common/Image;Ljava/lang/String;ILkotlin/jvm/internal/i;)V
+    invoke-direct/range {v0 .. v8}, Lcom/vk/dto/newsfeed/Owner;-><init>(ILjava/lang/String;Ljava/lang/String;Lcom/vk/dto/common/VerifyInfo;Lcom/vk/dto/common/Image;Ljava/lang/String;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     const-string v0, "id"
 
@@ -523,13 +523,13 @@
     invoke-virtual {v9, v0}, Lcom/vk/dto/newsfeed/Owner;->a(Lcom/vk/dto/common/Image;)V
 
     .line 6
-    sget-object v0, Lb/h/h/a;->b:Lb/h/h/a$a;
+    sget-object v0, Lb/h/h/ModelConfig;->b:Lb/h/h/ModelConfig$a;
 
     const-string v1, "ModelConfig.callback"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    invoke-interface {v0}, Lb/h/h/a$a;->a()F
+    invoke-interface {v0}, Lb/h/h/ModelConfig$a;->a()F
 
     move-result v0
 

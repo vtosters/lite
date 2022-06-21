@@ -1,9 +1,9 @@
 .class public final Lcom/vk/search/fragment/DiscoverSearchFragment;
-.super Lcom/vk/core/fragments/b;
+.super Lcom/vk/core/fragments/BaseFragment1;
 .source "DiscoverSearchFragment.kt"
 
 # interfaces
-.implements Lcom/vk/navigation/r;
+.implements Lcom/vk/navigation/NewIntentFragment;
 
 
 # annotations
@@ -57,9 +57,9 @@
     .end annotation
 .end field
 
-.field private final T:Lcom/vk/core/ui/s;
+.field private final T:Lcom/vk/core/ui/TalkBackDrawable;
 
-.field private final U:Lcom/vk/core/ui/s;
+.field private final U:Lcom/vk/core/ui/TalkBackDrawable;
 
 
 # direct methods
@@ -70,7 +70,7 @@
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, v1}, Lcom/vk/search/fragment/DiscoverSearchFragment$b;-><init>(Lkotlin/jvm/internal/i;)V
+    invoke-direct {v0, v1}, Lcom/vk/search/fragment/DiscoverSearchFragment$b;-><init>(Lkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     return-void
 .end method
@@ -79,7 +79,7 @@
     .locals 15
 
     .line 1
-    invoke-direct {p0}, Lcom/vk/core/fragments/b;-><init>()V
+    invoke-direct {p0}, Lcom/vk/core/fragments/BaseFragment1;-><init>()V
 
     const/4 v0, 0x1
 
@@ -119,12 +119,12 @@
 
     move-object v1, v0
 
-    invoke-direct/range {v1 .. v8}, Lcom/vk/search/fragment/DiscoverSearchFragment$TabInfo;-><init>(Lcom/vk/stats/AppUseTime$Section;ILkotlin/jvm/b/a;Lkotlin/jvm/b/b;IILkotlin/jvm/internal/i;)V
+    invoke-direct/range {v1 .. v8}, Lcom/vk/search/fragment/DiscoverSearchFragment$TabInfo;-><init>(Lcom/vk/stats/AppUseTime$Section;ILkotlin/jvm/b/Functions;Lkotlin/jvm/b/Functions2;IILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     iput-object v0, p0, Lcom/vk/search/fragment/DiscoverSearchFragment;->R:Lcom/vk/search/fragment/DiscoverSearchFragment$TabInfo;
 
     .line 6
-    sget-object v9, Lcom/vk/core/ui/s;->a:Lcom/vk/core/ui/s$a;
+    sget-object v9, Lcom/vk/core/ui/TalkBackDrawable;->a:Lcom/vk/core/ui/TalkBackDrawable$a;
 
     const v10, 0x7f080599
 
@@ -136,14 +136,14 @@
 
     const/4 v14, 0x0
 
-    invoke-static/range {v9 .. v14}, Lcom/vk/core/ui/s$a;->a(Lcom/vk/core/ui/s$a;IIIILjava/lang/Object;)Lcom/vk/core/ui/s;
+    invoke-static/range {v9 .. v14}, Lcom/vk/core/ui/TalkBackDrawable$a;->a(Lcom/vk/core/ui/TalkBackDrawable$a;IIIILjava/lang/Object;)Lcom/vk/core/ui/TalkBackDrawable;
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/vk/search/fragment/DiscoverSearchFragment;->T:Lcom/vk/core/ui/s;
+    iput-object v0, p0, Lcom/vk/search/fragment/DiscoverSearchFragment;->T:Lcom/vk/core/ui/TalkBackDrawable;
 
     .line 7
-    sget-object v1, Lcom/vk/core/ui/s;->a:Lcom/vk/core/ui/s$a;
+    sget-object v1, Lcom/vk/core/ui/TalkBackDrawable;->a:Lcom/vk/core/ui/TalkBackDrawable$a;
 
     const v2, 0x7f08074c
 
@@ -155,11 +155,11 @@
 
     const/4 v6, 0x0
 
-    invoke-static/range {v1 .. v6}, Lcom/vk/core/ui/s$a;->a(Lcom/vk/core/ui/s$a;IIIILjava/lang/Object;)Lcom/vk/core/ui/s;
+    invoke-static/range {v1 .. v6}, Lcom/vk/core/ui/TalkBackDrawable$a;->a(Lcom/vk/core/ui/TalkBackDrawable$a;IIIILjava/lang/Object;)Lcom/vk/core/ui/TalkBackDrawable;
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/vk/search/fragment/DiscoverSearchFragment;->U:Lcom/vk/core/ui/s;
+    iput-object v0, p0, Lcom/vk/search/fragment/DiscoverSearchFragment;->U:Lcom/vk/core/ui/TalkBackDrawable;
 
     .line 8
     new-instance v0, Ljava/util/ArrayList;
@@ -202,7 +202,7 @@
 
     move-object v1, v7
 
-    invoke-direct/range {v1 .. v6}, Lcom/vk/search/fragment/DiscoverSearchFragment$TabInfo;-><init>(Lcom/vk/stats/AppUseTime$Section;ILkotlin/jvm/b/a;Lkotlin/jvm/b/b;I)V
+    invoke-direct/range {v1 .. v6}, Lcom/vk/search/fragment/DiscoverSearchFragment$TabInfo;-><init>(Lcom/vk/stats/AppUseTime$Section;ILkotlin/jvm/b/Functions;Lkotlin/jvm/b/Functions2;I)V
 
     invoke-virtual {v0, v7}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
@@ -229,7 +229,7 @@
 
     move-object v1, v7
 
-    invoke-direct/range {v1 .. v6}, Lcom/vk/search/fragment/DiscoverSearchFragment$TabInfo;-><init>(Lcom/vk/stats/AppUseTime$Section;ILkotlin/jvm/b/a;Lkotlin/jvm/b/b;I)V
+    invoke-direct/range {v1 .. v6}, Lcom/vk/search/fragment/DiscoverSearchFragment$TabInfo;-><init>(Lcom/vk/stats/AppUseTime$Section;ILkotlin/jvm/b/Functions;Lkotlin/jvm/b/Functions2;I)V
 
     invoke-virtual {v0, v7}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
@@ -265,7 +265,7 @@
 
     move-object v1, v9
 
-    invoke-direct/range {v1 .. v8}, Lcom/vk/search/fragment/DiscoverSearchFragment$TabInfo;-><init>(Lcom/vk/stats/AppUseTime$Section;ILkotlin/jvm/b/a;Lkotlin/jvm/b/b;IILkotlin/jvm/internal/i;)V
+    invoke-direct/range {v1 .. v8}, Lcom/vk/search/fragment/DiscoverSearchFragment$TabInfo;-><init>(Lcom/vk/stats/AppUseTime$Section;ILkotlin/jvm/b/Functions;Lkotlin/jvm/b/Functions2;IILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     invoke-virtual {v0, v9}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
@@ -302,7 +302,7 @@
 
     move-object v2, v10
 
-    invoke-direct/range {v2 .. v9}, Lcom/vk/search/fragment/DiscoverSearchFragment$TabInfo;-><init>(Lcom/vk/stats/AppUseTime$Section;ILkotlin/jvm/b/a;Lkotlin/jvm/b/b;IILkotlin/jvm/internal/i;)V
+    invoke-direct/range {v2 .. v9}, Lcom/vk/search/fragment/DiscoverSearchFragment$TabInfo;-><init>(Lcom/vk/stats/AppUseTime$Section;ILkotlin/jvm/b/Functions;Lkotlin/jvm/b/Functions2;IILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     invoke-virtual {v1, v10}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
@@ -338,7 +338,7 @@
 
     move-object v1, v9
 
-    invoke-direct/range {v1 .. v8}, Lcom/vk/search/fragment/DiscoverSearchFragment$TabInfo;-><init>(Lcom/vk/stats/AppUseTime$Section;ILkotlin/jvm/b/a;Lkotlin/jvm/b/b;IILkotlin/jvm/internal/i;)V
+    invoke-direct/range {v1 .. v8}, Lcom/vk/search/fragment/DiscoverSearchFragment$TabInfo;-><init>(Lcom/vk/stats/AppUseTime$Section;ILkotlin/jvm/b/Functions;Lkotlin/jvm/b/Functions2;IILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     invoke-virtual {v0, v9}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
@@ -366,7 +366,7 @@
 
     move-object v1, v9
 
-    invoke-direct/range {v1 .. v8}, Lcom/vk/search/fragment/DiscoverSearchFragment$TabInfo;-><init>(Lcom/vk/stats/AppUseTime$Section;ILkotlin/jvm/b/a;Lkotlin/jvm/b/b;IILkotlin/jvm/internal/i;)V
+    invoke-direct/range {v1 .. v8}, Lcom/vk/search/fragment/DiscoverSearchFragment$TabInfo;-><init>(Lcom/vk/stats/AppUseTime$Section;ILkotlin/jvm/b/Functions;Lkotlin/jvm/b/Functions2;IILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     invoke-virtual {v0, v9}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
@@ -381,7 +381,7 @@
 
     if-eqz v0, :cond_0
 
-    sget-object v1, Lcom/vk/core/ui/s;->a:Lcom/vk/core/ui/s$a;
+    sget-object v1, Lcom/vk/core/ui/TalkBackDrawable;->a:Lcom/vk/core/ui/TalkBackDrawable$a;
 
     const v2, 0x7f08070f
 
@@ -389,11 +389,11 @@
 
     const v4, 0x7f04024f
 
-    invoke-virtual {v1, v2, v3, v4}, Lcom/vk/core/ui/s$a;->a(III)Lcom/vk/core/ui/s;
+    invoke-virtual {v1, v2, v3, v4}, Lcom/vk/core/ui/TalkBackDrawable$a;->a(III)Lcom/vk/core/ui/TalkBackDrawable;
 
     move-result-object v1
 
-    invoke-virtual {v0, v1}, Lcom/vk/core/view/search/ModernSearchView;->a(Lcom/vk/core/ui/s;)V
+    invoke-virtual {v0, v1}, Lcom/vk/core/view/search/ModernSearchView;->a(Lcom/vk/core/ui/TalkBackDrawable;)V
 
     .line 2
     :cond_0
@@ -405,7 +405,7 @@
 
     invoke-direct {v1, p0}, Lcom/vk/search/fragment/DiscoverSearchFragment$createQRIcon$1;-><init>(Lcom/vk/search/fragment/DiscoverSearchFragment;)V
 
-    invoke-virtual {v0, v1}, Lcom/vk/core/view/search/ModernSearchView;->setThirdIconClickListener(Lkotlin/jvm/b/a;)V
+    invoke-virtual {v0, v1}, Lcom/vk/core/view/search/ModernSearchView;->setThirdIconClickListener(Lkotlin/jvm/b/Functions;)V
 
     :cond_1
     return-void
@@ -415,7 +415,7 @@
     .locals 8
 
     .line 1
-    invoke-static {}, Lcom/vk/core/ui/themes/d;->e()Z
+    invoke-static {}, Lcom/vk/core/ui/themes/MilkshakeHelper;->e()Z
 
     move-result v0
 
@@ -436,14 +436,14 @@
 
     const/4 v7, 0x0
 
-    invoke-static/range {v2 .. v7}, Lcom/vk/core/view/search/MilkshakeSearchView;->a(Lcom/vk/core/view/search/MilkshakeSearchView;JZILjava/lang/Object;)Lc/a/m;
+    invoke-static/range {v2 .. v7}, Lcom/vk/core/view/search/MilkshakeSearchView;->a(Lcom/vk/core/view/search/MilkshakeSearchView;JZILjava/lang/Object;)Lio/reactivex/Observable;
 
     move-result-object v0
 
     goto :goto_0
 
     :cond_0
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     throw v1
 
@@ -453,7 +453,7 @@
 
     if-eqz v0, :cond_3
 
-    invoke-virtual {v0}, Lcom/vk/core/view/search/ModernSearchView;->c()Lb/h/v/c;
+    invoke-virtual {v0}, Lcom/vk/core/view/search/ModernSearchView;->c()Lb/h/v/InitialValueObservable;
 
     move-result-object v0
 
@@ -461,17 +461,17 @@
 
     sget-object v3, Ljava/util/concurrent/TimeUnit;->MILLISECONDS:Ljava/util/concurrent/TimeUnit;
 
-    invoke-virtual {v0, v1, v2, v3}, Lc/a/m;->b(JLjava/util/concurrent/TimeUnit;)Lc/a/m;
+    invoke-virtual {v0, v1, v2, v3}, Lio/reactivex/Observable;->b(JLjava/util/concurrent/TimeUnit;)Lio/reactivex/Observable;
 
     move-result-object v0
 
     .line 4
     :goto_0
-    invoke-static {}, Lc/a/y/c/a;->a()Lc/a/s;
+    invoke-static {}, Lio/reactivex/schedulers/AndroidSchedulers;->a()Lio/reactivex/Scheduler;
 
     move-result-object v1
 
-    invoke-virtual {v0, v1}, Lc/a/m;->a(Lc/a/s;)Lc/a/m;
+    invoke-virtual {v0, v1}, Lio/reactivex/Observable;->a(Lio/reactivex/Scheduler;)Lio/reactivex/Observable;
 
     move-result-object v0
 
@@ -480,19 +480,19 @@
 
     invoke-direct {v1, p0}, Lcom/vk/search/fragment/DiscoverSearchFragment$g;-><init>(Lcom/vk/search/fragment/DiscoverSearchFragment;)V
 
-    invoke-virtual {v0, v1}, Lc/a/m;->f(Lc/a/z/g;)Lio/reactivex/disposables/b;
+    invoke-virtual {v0, v1}, Lio/reactivex/Observable;->f(Lio/reactivex/functions/Consumer;)Lio/reactivex/disposables/Disposable;
 
     move-result-object v0
 
     const-string v1, "observable\n            .\u2026toString())\n            }"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 6
-    invoke-static {v0, p0}, Lcom/vk/extensions/p;->a(Lio/reactivex/disposables/b;Lcom/vk/core/fragments/b;)Lio/reactivex/disposables/b;
+    invoke-static {v0, p0}, Lcom/vk/extensions/VKRxExt;->a(Lio/reactivex/disposables/Disposable;Lcom/vk/core/fragments/BaseFragment1;)Lio/reactivex/disposables/Disposable;
 
     .line 7
-    invoke-static {}, Lcom/vk/core/ui/themes/d;->e()Z
+    invoke-static {}, Lcom/vk/core/ui/themes/MilkshakeHelper;->e()Z
 
     move-result v0
 
@@ -512,7 +512,7 @@
 
     .line 10
     :cond_3
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     throw v1
 .end method
@@ -521,29 +521,29 @@
     .locals 3
 
     .line 1
-    sget-object v0, Lb/h/v/d;->c:Lb/h/v/d$a;
+    sget-object v0, Lb/h/v/RxBus;->c:Lb/h/v/RxBus$a;
 
-    invoke-virtual {v0}, Lb/h/v/d$a;->a()Lb/h/v/d;
+    invoke-virtual {v0}, Lb/h/v/RxBus$a;->a()Lb/h/v/RxBus;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lb/h/v/d;->a()Lc/a/m;
+    invoke-virtual {v0}, Lb/h/v/RxBus;->a()Lio/reactivex/Observable;
 
     move-result-object v0
 
     .line 2
     sget-object v1, Lcom/vk/search/fragment/DiscoverSearchFragment$i;->a:Lcom/vk/search/fragment/DiscoverSearchFragment$i;
 
-    invoke-virtual {v0, v1}, Lc/a/m;->a(Lc/a/z/l;)Lc/a/m;
+    invoke-virtual {v0, v1}, Lio/reactivex/Observable;->a(Lio/reactivex/functions/Predicate;)Lio/reactivex/Observable;
 
     move-result-object v0
 
     .line 3
-    invoke-static {}, Lc/a/y/c/a;->a()Lc/a/s;
+    invoke-static {}, Lio/reactivex/schedulers/AndroidSchedulers;->a()Lio/reactivex/Scheduler;
 
     move-result-object v1
 
-    invoke-virtual {v0, v1}, Lc/a/m;->a(Lc/a/s;)Lc/a/m;
+    invoke-virtual {v0, v1}, Lio/reactivex/Observable;->a(Lio/reactivex/Scheduler;)Lio/reactivex/Observable;
 
     move-result-object v0
 
@@ -552,41 +552,41 @@
 
     invoke-direct {v1, p0}, Lcom/vk/search/fragment/DiscoverSearchFragment$j;-><init>(Lcom/vk/search/fragment/DiscoverSearchFragment;)V
 
-    invoke-virtual {v0, v1}, Lc/a/m;->f(Lc/a/z/g;)Lio/reactivex/disposables/b;
+    invoke-virtual {v0, v1}, Lio/reactivex/Observable;->f(Lio/reactivex/functions/Consumer;)Lio/reactivex/disposables/Disposable;
 
     move-result-object v0
 
     const-string v1, "RxBus.instance.events\n  \u2026rchView?.hideKeyboard() }"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 5
-    invoke-static {v0, p0}, Lcom/vk/extensions/p;->a(Lio/reactivex/disposables/b;Lcom/vk/core/fragments/b;)Lio/reactivex/disposables/b;
+    invoke-static {v0, p0}, Lcom/vk/extensions/VKRxExt;->a(Lio/reactivex/disposables/Disposable;Lcom/vk/core/fragments/BaseFragment1;)Lio/reactivex/disposables/Disposable;
 
     .line 6
-    sget-object v0, Lb/h/v/d;->c:Lb/h/v/d$a;
+    sget-object v0, Lb/h/v/RxBus;->c:Lb/h/v/RxBus$a;
 
-    invoke-virtual {v0}, Lb/h/v/d$a;->a()Lb/h/v/d;
+    invoke-virtual {v0}, Lb/h/v/RxBus$a;->a()Lb/h/v/RxBus;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lb/h/v/d;->a()Lc/a/m;
+    invoke-virtual {v0}, Lb/h/v/RxBus;->a()Lio/reactivex/Observable;
 
     move-result-object v0
 
     .line 7
     sget-object v1, Lcom/vk/search/fragment/DiscoverSearchFragment$k;->a:Lcom/vk/search/fragment/DiscoverSearchFragment$k;
 
-    invoke-virtual {v0, v1}, Lc/a/m;->a(Lc/a/z/l;)Lc/a/m;
+    invoke-virtual {v0, v1}, Lio/reactivex/Observable;->a(Lio/reactivex/functions/Predicate;)Lio/reactivex/Observable;
 
     move-result-object v0
 
     .line 8
-    invoke-static {}, Lc/a/y/c/a;->a()Lc/a/s;
+    invoke-static {}, Lio/reactivex/schedulers/AndroidSchedulers;->a()Lio/reactivex/Scheduler;
 
     move-result-object v1
 
-    invoke-virtual {v0, v1}, Lc/a/m;->a(Lc/a/s;)Lc/a/m;
+    invoke-virtual {v0, v1}, Lio/reactivex/Observable;->a(Lio/reactivex/Scheduler;)Lio/reactivex/Observable;
 
     move-result-object v0
 
@@ -595,41 +595,41 @@
 
     invoke-direct {v1, p0}, Lcom/vk/search/fragment/DiscoverSearchFragment$l;-><init>(Lcom/vk/search/fragment/DiscoverSearchFragment;)V
 
-    invoke-virtual {v0, v1}, Lc/a/m;->f(Lc/a/z/g;)Lio/reactivex/disposables/b;
+    invoke-virtual {v0, v1}, Lio/reactivex/Observable;->f(Lio/reactivex/functions/Consumer;)Lio/reactivex/disposables/Disposable;
 
     move-result-object v0
 
     const-string v1, "RxBus.instance.events\n  \u2026tSetSearchQuery).query) }"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 10
-    invoke-static {v0, p0}, Lcom/vk/extensions/p;->a(Lio/reactivex/disposables/b;Lcom/vk/core/fragments/b;)Lio/reactivex/disposables/b;
+    invoke-static {v0, p0}, Lcom/vk/extensions/VKRxExt;->a(Lio/reactivex/disposables/Disposable;Lcom/vk/core/fragments/BaseFragment1;)Lio/reactivex/disposables/Disposable;
 
     .line 11
-    sget-object v0, Lb/h/v/d;->c:Lb/h/v/d$a;
+    sget-object v0, Lb/h/v/RxBus;->c:Lb/h/v/RxBus$a;
 
-    invoke-virtual {v0}, Lb/h/v/d$a;->a()Lb/h/v/d;
+    invoke-virtual {v0}, Lb/h/v/RxBus$a;->a()Lb/h/v/RxBus;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lb/h/v/d;->a()Lc/a/m;
+    invoke-virtual {v0}, Lb/h/v/RxBus;->a()Lio/reactivex/Observable;
 
     move-result-object v0
 
     .line 12
     sget-object v1, Lcom/vk/search/fragment/DiscoverSearchFragment$m;->a:Lcom/vk/search/fragment/DiscoverSearchFragment$m;
 
-    invoke-virtual {v0, v1}, Lc/a/m;->a(Lc/a/z/l;)Lc/a/m;
+    invoke-virtual {v0, v1}, Lio/reactivex/Observable;->a(Lio/reactivex/functions/Predicate;)Lio/reactivex/Observable;
 
     move-result-object v0
 
     .line 13
-    invoke-static {}, Lc/a/y/c/a;->a()Lc/a/s;
+    invoke-static {}, Lio/reactivex/schedulers/AndroidSchedulers;->a()Lio/reactivex/Scheduler;
 
     move-result-object v1
 
-    invoke-virtual {v0, v1}, Lc/a/m;->a(Lc/a/s;)Lc/a/m;
+    invoke-virtual {v0, v1}, Lio/reactivex/Observable;->a(Lio/reactivex/Scheduler;)Lio/reactivex/Observable;
 
     move-result-object v0
 
@@ -638,41 +638,41 @@
 
     invoke-direct {v1, p0}, Lcom/vk/search/fragment/DiscoverSearchFragment$n;-><init>(Lcom/vk/search/fragment/DiscoverSearchFragment;)V
 
-    invoke-virtual {v0, v1}, Lc/a/m;->f(Lc/a/z/g;)Lio/reactivex/disposables/b;
+    invoke-virtual {v0, v1}, Lio/reactivex/Observable;->f(Lio/reactivex/functions/Consumer;)Lio/reactivex/disposables/Disposable;
 
     move-result-object v0
 
     const-string v1, "RxBus.instance.events\n  \u2026sDefault())\n            }"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 15
-    invoke-static {v0, p0}, Lcom/vk/extensions/p;->a(Lio/reactivex/disposables/b;Lcom/vk/core/fragments/b;)Lio/reactivex/disposables/b;
+    invoke-static {v0, p0}, Lcom/vk/extensions/VKRxExt;->a(Lio/reactivex/disposables/Disposable;Lcom/vk/core/fragments/BaseFragment1;)Lio/reactivex/disposables/Disposable;
 
     .line 16
-    sget-object v0, Lb/h/v/d;->c:Lb/h/v/d$a;
+    sget-object v0, Lb/h/v/RxBus;->c:Lb/h/v/RxBus$a;
 
-    invoke-virtual {v0}, Lb/h/v/d$a;->a()Lb/h/v/d;
+    invoke-virtual {v0}, Lb/h/v/RxBus$a;->a()Lb/h/v/RxBus;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lb/h/v/d;->a()Lc/a/m;
+    invoke-virtual {v0}, Lb/h/v/RxBus;->a()Lio/reactivex/Observable;
 
     move-result-object v0
 
     .line 17
     sget-object v2, Lcom/vk/search/fragment/DiscoverSearchFragment$o;->a:Lcom/vk/search/fragment/DiscoverSearchFragment$o;
 
-    invoke-virtual {v0, v2}, Lc/a/m;->a(Lc/a/z/l;)Lc/a/m;
+    invoke-virtual {v0, v2}, Lio/reactivex/Observable;->a(Lio/reactivex/functions/Predicate;)Lio/reactivex/Observable;
 
     move-result-object v0
 
     .line 18
-    invoke-static {}, Lc/a/y/c/a;->a()Lc/a/s;
+    invoke-static {}, Lio/reactivex/schedulers/AndroidSchedulers;->a()Lio/reactivex/Scheduler;
 
     move-result-object v2
 
-    invoke-virtual {v0, v2}, Lc/a/m;->a(Lc/a/s;)Lc/a/m;
+    invoke-virtual {v0, v2}, Lio/reactivex/Observable;->a(Lio/reactivex/Scheduler;)Lio/reactivex/Observable;
 
     move-result-object v0
 
@@ -681,39 +681,39 @@
 
     invoke-direct {v2, p0}, Lcom/vk/search/fragment/DiscoverSearchFragment$p;-><init>(Lcom/vk/search/fragment/DiscoverSearchFragment;)V
 
-    invoke-virtual {v0, v2}, Lc/a/m;->f(Lc/a/z/g;)Lio/reactivex/disposables/b;
+    invoke-virtual {v0, v2}, Lio/reactivex/Observable;->f(Lio/reactivex/functions/Consumer;)Lio/reactivex/disposables/Disposable;
 
     move-result-object v0
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 20
-    invoke-static {v0, p0}, Lcom/vk/extensions/p;->a(Lio/reactivex/disposables/b;Lcom/vk/core/fragments/b;)Lio/reactivex/disposables/b;
+    invoke-static {v0, p0}, Lcom/vk/extensions/VKRxExt;->a(Lio/reactivex/disposables/Disposable;Lcom/vk/core/fragments/BaseFragment1;)Lio/reactivex/disposables/Disposable;
 
     .line 21
-    sget-object v0, Lb/h/v/d;->c:Lb/h/v/d$a;
+    sget-object v0, Lb/h/v/RxBus;->c:Lb/h/v/RxBus$a;
 
-    invoke-virtual {v0}, Lb/h/v/d$a;->a()Lb/h/v/d;
+    invoke-virtual {v0}, Lb/h/v/RxBus$a;->a()Lb/h/v/RxBus;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lb/h/v/d;->a()Lc/a/m;
+    invoke-virtual {v0}, Lb/h/v/RxBus;->a()Lio/reactivex/Observable;
 
     move-result-object v0
 
     .line 22
     sget-object v1, Lcom/vk/search/fragment/DiscoverSearchFragment$q;->a:Lcom/vk/search/fragment/DiscoverSearchFragment$q;
 
-    invoke-virtual {v0, v1}, Lc/a/m;->a(Lc/a/z/l;)Lc/a/m;
+    invoke-virtual {v0, v1}, Lio/reactivex/Observable;->a(Lio/reactivex/functions/Predicate;)Lio/reactivex/Observable;
 
     move-result-object v0
 
     .line 23
-    invoke-static {}, Lc/a/y/c/a;->a()Lc/a/s;
+    invoke-static {}, Lio/reactivex/schedulers/AndroidSchedulers;->a()Lio/reactivex/Scheduler;
 
     move-result-object v1
 
-    invoke-virtual {v0, v1}, Lc/a/m;->a(Lc/a/s;)Lc/a/m;
+    invoke-virtual {v0, v1}, Lio/reactivex/Observable;->a(Lio/reactivex/Scheduler;)Lio/reactivex/Observable;
 
     move-result-object v0
 
@@ -722,16 +722,16 @@
 
     invoke-direct {v1, p0}, Lcom/vk/search/fragment/DiscoverSearchFragment$h;-><init>(Lcom/vk/search/fragment/DiscoverSearchFragment;)V
 
-    invoke-virtual {v0, v1}, Lc/a/m;->f(Lc/a/z/g;)Lio/reactivex/disposables/b;
+    invoke-virtual {v0, v1}, Lio/reactivex/Observable;->f(Lio/reactivex/functions/Consumer;)Lio/reactivex/disposables/Disposable;
 
     move-result-object v0
 
     const-string v1, "RxBus.instance.events\n  \u2026etersView()\n            }"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 25
-    invoke-static {v0, p0}, Lcom/vk/extensions/p;->a(Lio/reactivex/disposables/b;Lcom/vk/core/fragments/b;)Lio/reactivex/disposables/b;
+    invoke-static {v0, p0}, Lcom/vk/extensions/VKRxExt;->a(Lio/reactivex/disposables/Disposable;Lcom/vk/core/fragments/BaseFragment1;)Lio/reactivex/disposables/Disposable;
 
     return-void
 .end method
@@ -740,29 +740,29 @@
     .locals 3
 
     .line 1
-    sget-object v0, Lb/h/v/d;->c:Lb/h/v/d$a;
+    sget-object v0, Lb/h/v/RxBus;->c:Lb/h/v/RxBus$a;
 
-    invoke-virtual {v0}, Lb/h/v/d$a;->a()Lb/h/v/d;
+    invoke-virtual {v0}, Lb/h/v/RxBus$a;->a()Lb/h/v/RxBus;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lb/h/v/d;->a()Lc/a/m;
+    invoke-virtual {v0}, Lb/h/v/RxBus;->a()Lio/reactivex/Observable;
 
     move-result-object v0
 
     .line 2
     sget-object v1, Lcom/vk/search/fragment/DiscoverSearchFragment$s;->a:Lcom/vk/search/fragment/DiscoverSearchFragment$s;
 
-    invoke-virtual {v0, v1}, Lc/a/m;->a(Lc/a/z/l;)Lc/a/m;
+    invoke-virtual {v0, v1}, Lio/reactivex/Observable;->a(Lio/reactivex/functions/Predicate;)Lio/reactivex/Observable;
 
     move-result-object v0
 
     .line 3
-    invoke-static {}, Lc/a/y/c/a;->a()Lc/a/s;
+    invoke-static {}, Lio/reactivex/schedulers/AndroidSchedulers;->a()Lio/reactivex/Scheduler;
 
     move-result-object v1
 
-    invoke-virtual {v0, v1}, Lc/a/m;->a(Lc/a/s;)Lc/a/m;
+    invoke-virtual {v0, v1}, Lio/reactivex/Observable;->a(Lio/reactivex/Scheduler;)Lio/reactivex/Observable;
 
     move-result-object v0
 
@@ -771,41 +771,41 @@
 
     invoke-direct {v1, p0}, Lcom/vk/search/fragment/DiscoverSearchFragment$t;-><init>(Lcom/vk/search/fragment/DiscoverSearchFragment;)V
 
-    invoke-virtual {v0, v1}, Lc/a/m;->f(Lc/a/z/g;)Lio/reactivex/disposables/b;
+    invoke-virtual {v0, v1}, Lio/reactivex/Observable;->f(Lio/reactivex/functions/Consumer;)Lio/reactivex/disposables/Disposable;
 
     move-result-object v0
 
     const-string v1, "RxBus.instance.events\n  \u2026lkShake?.hideKeyboard() }"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 5
-    invoke-static {v0, p0}, Lcom/vk/extensions/p;->a(Lio/reactivex/disposables/b;Lcom/vk/core/fragments/b;)Lio/reactivex/disposables/b;
+    invoke-static {v0, p0}, Lcom/vk/extensions/VKRxExt;->a(Lio/reactivex/disposables/Disposable;Lcom/vk/core/fragments/BaseFragment1;)Lio/reactivex/disposables/Disposable;
 
     .line 6
-    sget-object v0, Lb/h/v/d;->c:Lb/h/v/d$a;
+    sget-object v0, Lb/h/v/RxBus;->c:Lb/h/v/RxBus$a;
 
-    invoke-virtual {v0}, Lb/h/v/d$a;->a()Lb/h/v/d;
+    invoke-virtual {v0}, Lb/h/v/RxBus$a;->a()Lb/h/v/RxBus;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lb/h/v/d;->a()Lc/a/m;
+    invoke-virtual {v0}, Lb/h/v/RxBus;->a()Lio/reactivex/Observable;
 
     move-result-object v0
 
     .line 7
     sget-object v1, Lcom/vk/search/fragment/DiscoverSearchFragment$u;->a:Lcom/vk/search/fragment/DiscoverSearchFragment$u;
 
-    invoke-virtual {v0, v1}, Lc/a/m;->a(Lc/a/z/l;)Lc/a/m;
+    invoke-virtual {v0, v1}, Lio/reactivex/Observable;->a(Lio/reactivex/functions/Predicate;)Lio/reactivex/Observable;
 
     move-result-object v0
 
     .line 8
-    invoke-static {}, Lc/a/y/c/a;->a()Lc/a/s;
+    invoke-static {}, Lio/reactivex/schedulers/AndroidSchedulers;->a()Lio/reactivex/Scheduler;
 
     move-result-object v1
 
-    invoke-virtual {v0, v1}, Lc/a/m;->a(Lc/a/s;)Lc/a/m;
+    invoke-virtual {v0, v1}, Lio/reactivex/Observable;->a(Lio/reactivex/Scheduler;)Lio/reactivex/Observable;
 
     move-result-object v0
 
@@ -814,41 +814,41 @@
 
     invoke-direct {v1, p0}, Lcom/vk/search/fragment/DiscoverSearchFragment$v;-><init>(Lcom/vk/search/fragment/DiscoverSearchFragment;)V
 
-    invoke-virtual {v0, v1}, Lc/a/m;->f(Lc/a/z/g;)Lio/reactivex/disposables/b;
+    invoke-virtual {v0, v1}, Lio/reactivex/Observable;->f(Lio/reactivex/functions/Consumer;)Lio/reactivex/disposables/Disposable;
 
     move-result-object v0
 
     const-string v1, "RxBus.instance.events\n  \u2026tSetSearchQuery).query) }"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 10
-    invoke-static {v0, p0}, Lcom/vk/extensions/p;->a(Lio/reactivex/disposables/b;Lcom/vk/core/fragments/b;)Lio/reactivex/disposables/b;
+    invoke-static {v0, p0}, Lcom/vk/extensions/VKRxExt;->a(Lio/reactivex/disposables/Disposable;Lcom/vk/core/fragments/BaseFragment1;)Lio/reactivex/disposables/Disposable;
 
     .line 11
-    sget-object v0, Lb/h/v/d;->c:Lb/h/v/d$a;
+    sget-object v0, Lb/h/v/RxBus;->c:Lb/h/v/RxBus$a;
 
-    invoke-virtual {v0}, Lb/h/v/d$a;->a()Lb/h/v/d;
+    invoke-virtual {v0}, Lb/h/v/RxBus$a;->a()Lb/h/v/RxBus;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lb/h/v/d;->a()Lc/a/m;
+    invoke-virtual {v0}, Lb/h/v/RxBus;->a()Lio/reactivex/Observable;
 
     move-result-object v0
 
     .line 12
     sget-object v1, Lcom/vk/search/fragment/DiscoverSearchFragment$w;->a:Lcom/vk/search/fragment/DiscoverSearchFragment$w;
 
-    invoke-virtual {v0, v1}, Lc/a/m;->a(Lc/a/z/l;)Lc/a/m;
+    invoke-virtual {v0, v1}, Lio/reactivex/Observable;->a(Lio/reactivex/functions/Predicate;)Lio/reactivex/Observable;
 
     move-result-object v0
 
     .line 13
-    invoke-static {}, Lc/a/y/c/a;->a()Lc/a/s;
+    invoke-static {}, Lio/reactivex/schedulers/AndroidSchedulers;->a()Lio/reactivex/Scheduler;
 
     move-result-object v1
 
-    invoke-virtual {v0, v1}, Lc/a/m;->a(Lc/a/s;)Lc/a/m;
+    invoke-virtual {v0, v1}, Lio/reactivex/Observable;->a(Lio/reactivex/Scheduler;)Lio/reactivex/Observable;
 
     move-result-object v0
 
@@ -857,41 +857,41 @@
 
     invoke-direct {v1, p0}, Lcom/vk/search/fragment/DiscoverSearchFragment$x;-><init>(Lcom/vk/search/fragment/DiscoverSearchFragment;)V
 
-    invoke-virtual {v0, v1}, Lc/a/m;->f(Lc/a/z/g;)Lio/reactivex/disposables/b;
+    invoke-virtual {v0, v1}, Lio/reactivex/Observable;->f(Lio/reactivex/functions/Consumer;)Lio/reactivex/disposables/Disposable;
 
     move-result-object v0
 
     const-string v1, "RxBus.instance.events\n  \u2026sDefault())\n            }"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 15
-    invoke-static {v0, p0}, Lcom/vk/extensions/p;->a(Lio/reactivex/disposables/b;Lcom/vk/core/fragments/b;)Lio/reactivex/disposables/b;
+    invoke-static {v0, p0}, Lcom/vk/extensions/VKRxExt;->a(Lio/reactivex/disposables/Disposable;Lcom/vk/core/fragments/BaseFragment1;)Lio/reactivex/disposables/Disposable;
 
     .line 16
-    sget-object v0, Lb/h/v/d;->c:Lb/h/v/d$a;
+    sget-object v0, Lb/h/v/RxBus;->c:Lb/h/v/RxBus$a;
 
-    invoke-virtual {v0}, Lb/h/v/d$a;->a()Lb/h/v/d;
+    invoke-virtual {v0}, Lb/h/v/RxBus$a;->a()Lb/h/v/RxBus;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lb/h/v/d;->a()Lc/a/m;
+    invoke-virtual {v0}, Lb/h/v/RxBus;->a()Lio/reactivex/Observable;
 
     move-result-object v0
 
     .line 17
     sget-object v2, Lcom/vk/search/fragment/DiscoverSearchFragment$y;->a:Lcom/vk/search/fragment/DiscoverSearchFragment$y;
 
-    invoke-virtual {v0, v2}, Lc/a/m;->a(Lc/a/z/l;)Lc/a/m;
+    invoke-virtual {v0, v2}, Lio/reactivex/Observable;->a(Lio/reactivex/functions/Predicate;)Lio/reactivex/Observable;
 
     move-result-object v0
 
     .line 18
-    invoke-static {}, Lc/a/y/c/a;->a()Lc/a/s;
+    invoke-static {}, Lio/reactivex/schedulers/AndroidSchedulers;->a()Lio/reactivex/Scheduler;
 
     move-result-object v2
 
-    invoke-virtual {v0, v2}, Lc/a/m;->a(Lc/a/s;)Lc/a/m;
+    invoke-virtual {v0, v2}, Lio/reactivex/Observable;->a(Lio/reactivex/Scheduler;)Lio/reactivex/Observable;
 
     move-result-object v0
 
@@ -900,39 +900,39 @@
 
     invoke-direct {v2, p0}, Lcom/vk/search/fragment/DiscoverSearchFragment$z;-><init>(Lcom/vk/search/fragment/DiscoverSearchFragment;)V
 
-    invoke-virtual {v0, v2}, Lc/a/m;->f(Lc/a/z/g;)Lio/reactivex/disposables/b;
+    invoke-virtual {v0, v2}, Lio/reactivex/Observable;->f(Lio/reactivex/functions/Consumer;)Lio/reactivex/disposables/Disposable;
 
     move-result-object v0
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 20
-    invoke-static {v0, p0}, Lcom/vk/extensions/p;->a(Lio/reactivex/disposables/b;Lcom/vk/core/fragments/b;)Lio/reactivex/disposables/b;
+    invoke-static {v0, p0}, Lcom/vk/extensions/VKRxExt;->a(Lio/reactivex/disposables/Disposable;Lcom/vk/core/fragments/BaseFragment1;)Lio/reactivex/disposables/Disposable;
 
     .line 21
-    sget-object v0, Lb/h/v/d;->c:Lb/h/v/d$a;
+    sget-object v0, Lb/h/v/RxBus;->c:Lb/h/v/RxBus$a;
 
-    invoke-virtual {v0}, Lb/h/v/d$a;->a()Lb/h/v/d;
+    invoke-virtual {v0}, Lb/h/v/RxBus$a;->a()Lb/h/v/RxBus;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lb/h/v/d;->a()Lc/a/m;
+    invoke-virtual {v0}, Lb/h/v/RxBus;->a()Lio/reactivex/Observable;
 
     move-result-object v0
 
     .line 22
     sget-object v1, Lcom/vk/search/fragment/DiscoverSearchFragment$a0;->a:Lcom/vk/search/fragment/DiscoverSearchFragment$a0;
 
-    invoke-virtual {v0, v1}, Lc/a/m;->a(Lc/a/z/l;)Lc/a/m;
+    invoke-virtual {v0, v1}, Lio/reactivex/Observable;->a(Lio/reactivex/functions/Predicate;)Lio/reactivex/Observable;
 
     move-result-object v0
 
     .line 23
-    invoke-static {}, Lc/a/y/c/a;->a()Lc/a/s;
+    invoke-static {}, Lio/reactivex/schedulers/AndroidSchedulers;->a()Lio/reactivex/Scheduler;
 
     move-result-object v1
 
-    invoke-virtual {v0, v1}, Lc/a/m;->a(Lc/a/s;)Lc/a/m;
+    invoke-virtual {v0, v1}, Lio/reactivex/Observable;->a(Lio/reactivex/Scheduler;)Lio/reactivex/Observable;
 
     move-result-object v0
 
@@ -941,16 +941,16 @@
 
     invoke-direct {v1, p0}, Lcom/vk/search/fragment/DiscoverSearchFragment$r;-><init>(Lcom/vk/search/fragment/DiscoverSearchFragment;)V
 
-    invoke-virtual {v0, v1}, Lc/a/m;->f(Lc/a/z/g;)Lio/reactivex/disposables/b;
+    invoke-virtual {v0, v1}, Lio/reactivex/Observable;->f(Lio/reactivex/functions/Consumer;)Lio/reactivex/disposables/Disposable;
 
     move-result-object v0
 
     const-string v1, "RxBus.instance.events\n  \u2026etersView()\n            }"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 25
-    invoke-static {v0, p0}, Lcom/vk/extensions/p;->a(Lio/reactivex/disposables/b;Lcom/vk/core/fragments/b;)Lio/reactivex/disposables/b;
+    invoke-static {v0, p0}, Lcom/vk/extensions/VKRxExt;->a(Lio/reactivex/disposables/Disposable;Lcom/vk/core/fragments/BaseFragment1;)Lio/reactivex/disposables/Disposable;
 
     return-void
 .end method
@@ -1036,7 +1036,7 @@
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/vk/search/fragment/DiscoverSearchFragment$TabInfo;->b()Lkotlin/jvm/b/b;
+    invoke-virtual {v0}, Lcom/vk/search/fragment/DiscoverSearchFragment$TabInfo;->b()Lkotlin/jvm/b/Functions2;
 
     move-result-object v0
 
@@ -1048,9 +1048,9 @@
 
     const-string v2, "activity!!"
 
-    invoke-static {v1, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    invoke-interface {v0, v1}, Lkotlin/jvm/b/b;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v0, v1}, Lkotlin/jvm/b/Functions2;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v0
 
@@ -1064,14 +1064,14 @@
 
     const-string v2, "childFragmentManager"
 
-    invoke-static {v1, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {v0, v1}, Lcom/vk/search/SearchParamsDialogSheet;->a(Landroidx/fragment/app/FragmentManager;)V
 
     goto :goto_0
 
     :cond_1
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     const/4 v0, 0x0
 
@@ -1161,7 +1161,7 @@
     const-string v5, "animator"
 
     .line 9
-    invoke-static {v3, v5}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v3, v5}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     const-wide/16 v6, 0xc8
 
@@ -1179,7 +1179,7 @@
 
     invoke-direct {v8, v1, p1}, Lcom/vk/search/fragment/DiscoverSearchFragment$shiftQrWithSearchView$$inlined$also$lambda$2;-><init>(Landroid/widget/LinearLayout$LayoutParams;Landroid/view/View;)V
 
-    invoke-static {v3, v8}, Lcom/vk/core/extensions/AnimationExtKt;->a(Landroid/animation/ValueAnimator;Lkotlin/jvm/b/a;)Landroid/animation/ValueAnimator;
+    invoke-static {v3, v8}, Lcom/vk/core/extensions/AnimationExtKt;->a(Landroid/animation/ValueAnimator;Lkotlin/jvm/b/Functions;)Landroid/animation/ValueAnimator;
 
     new-array v1, v2, [I
 
@@ -1230,7 +1230,7 @@
     invoke-virtual {v1, v8}, Landroid/animation/ValueAnimator;->addUpdateListener(Landroid/animation/ValueAnimator$AnimatorUpdateListener;)V
 
     .line 16
-    invoke-static {v1, v5}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v1, v5}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {v1, v6, v7}, Landroid/animation/ValueAnimator;->setDuration(J)Landroid/animation/ValueAnimator;
 
@@ -1258,7 +1258,7 @@
     invoke-virtual {v6, v7}, Landroid/animation/ValueAnimator;->addUpdateListener(Landroid/animation/ValueAnimator$AnimatorUpdateListener;)V
 
     .line 20
-    invoke-static {v6, v5}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v6, v5}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     const-wide/16 v7, 0x50
 
@@ -1296,18 +1296,18 @@
 
     .line 25
     :cond_0
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     throw v9
 
     :cond_1
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     throw v9
 
     .line 26
     :cond_2
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     throw v9
 
@@ -1505,10 +1505,10 @@
 
     move-object v3, v2
 
-    check-cast v3, Lkotlin/collections/x;
+    check-cast v3, Lkotlin/collections/IndexedValue;
 
     .line 5
-    invoke-virtual {v3}, Lkotlin/collections/x;->d()Ljava/lang/Object;
+    invoke-virtual {v3}, Lkotlin/collections/IndexedValue;->d()Ljava/lang/Object;
 
     move-result-object v3
 
@@ -1534,11 +1534,11 @@
 
     .line 6
     :cond_4
-    check-cast v0, Lkotlin/collections/x;
+    check-cast v0, Lkotlin/collections/IndexedValue;
 
     if-eqz v0, :cond_5
 
-    invoke-virtual {v0}, Lkotlin/collections/x;->c()I
+    invoke-virtual {v0}, Lkotlin/collections/IndexedValue;->c()I
 
     move-result p1
 
@@ -1663,7 +1663,7 @@
     .locals 6
 
     .line 1
-    invoke-static {}, Lcom/vk/core/ui/themes/d;->e()Z
+    invoke-static {}, Lcom/vk/core/ui/themes/MilkshakeHelper;->e()Z
 
     move-result v0
 
@@ -1680,9 +1680,9 @@
 
     if-eqz p1, :cond_f
 
-    iget-object v0, p0, Lcom/vk/search/fragment/DiscoverSearchFragment;->T:Lcom/vk/core/ui/s;
+    iget-object v0, p0, Lcom/vk/search/fragment/DiscoverSearchFragment;->T:Lcom/vk/core/ui/TalkBackDrawable;
 
-    invoke-virtual {p1, v0}, Lcom/vk/core/view/search/MilkshakeSearchView;->a(Lcom/vk/core/ui/s;)V
+    invoke-virtual {p1, v0}, Lcom/vk/core/view/search/MilkshakeSearchView;->a(Lcom/vk/core/ui/TalkBackDrawable;)V
 
     goto/16 :goto_6
 
@@ -1694,9 +1694,9 @@
 
     if-eqz p1, :cond_f
 
-    iget-object v0, p0, Lcom/vk/search/fragment/DiscoverSearchFragment;->U:Lcom/vk/core/ui/s;
+    iget-object v0, p0, Lcom/vk/search/fragment/DiscoverSearchFragment;->U:Lcom/vk/core/ui/TalkBackDrawable;
 
-    invoke-virtual {p1, v0}, Lcom/vk/core/view/search/MilkshakeSearchView;->a(Lcom/vk/core/ui/s;)V
+    invoke-virtual {p1, v0}, Lcom/vk/core/view/search/MilkshakeSearchView;->a(Lcom/vk/core/ui/TalkBackDrawable;)V
 
     goto/16 :goto_6
 
@@ -1706,7 +1706,7 @@
 
     if-eqz p1, :cond_f
 
-    invoke-virtual {p1, v1}, Lcom/vk/core/view/search/MilkshakeSearchView;->a(Lcom/vk/core/ui/s;)V
+    invoke-virtual {p1, v1}, Lcom/vk/core/view/search/MilkshakeSearchView;->a(Lcom/vk/core/ui/TalkBackDrawable;)V
 
     goto/16 :goto_6
 
@@ -1714,13 +1714,13 @@
     if-nez p1, :cond_3
 
     .line 5
-    iget-object v0, p0, Lcom/vk/search/fragment/DiscoverSearchFragment;->T:Lcom/vk/core/ui/s;
+    iget-object v0, p0, Lcom/vk/search/fragment/DiscoverSearchFragment;->T:Lcom/vk/core/ui/TalkBackDrawable;
 
     iget-object v3, p0, Lcom/vk/search/fragment/DiscoverSearchFragment;->P:Lcom/vk/core/view/search/ModernSearchView;
 
     if-eqz v3, :cond_4
 
-    invoke-virtual {v3, v0}, Lcom/vk/core/view/search/ModernSearchView;->setParamsDrawable(Lcom/vk/core/ui/s;)V
+    invoke-virtual {v3, v0}, Lcom/vk/core/view/search/ModernSearchView;->setParamsDrawable(Lcom/vk/core/ui/TalkBackDrawable;)V
 
     goto :goto_0
 
@@ -1884,13 +1884,13 @@
     .locals 3
 
     .line 4
-    sget-object v0, Lcom/vk/navigation/o;->R0:Lcom/vk/navigation/o$b;
+    sget-object v0, Lcom/vk/navigation/Navigator;->R0:Lcom/vk/navigation/Navigator$b;
 
     invoke-virtual {p1}, Landroid/content/Intent;->getExtras()Landroid/os/Bundle;
 
     move-result-object p1
 
-    invoke-virtual {v0, p1}, Lcom/vk/navigation/o$b;->a(Landroid/os/Bundle;)Lcom/vk/core/fragments/FragmentEntry;
+    invoke-virtual {v0, p1}, Lcom/vk/navigation/Navigator$b;->a(Landroid/os/Bundle;)Lcom/vk/core/fragments/FragmentEntry;
 
     move-result-object p1
 
@@ -1918,7 +1918,7 @@
     if-eqz v0, :cond_2
 
     .line 6
-    invoke-static {}, Lcom/vk/core/ui/themes/d;->e()Z
+    invoke-static {}, Lcom/vk/core/ui/themes/MilkshakeHelper;->e()Z
 
     move-result v1
 
@@ -1931,7 +1931,7 @@
 
     if-eqz v1, :cond_2
 
-    invoke-static {v0, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {v1, v0}, Lcom/vk/core/view/search/MilkshakeSearchView;->setQuery(Ljava/lang/String;)V
 
@@ -1943,7 +1943,7 @@
 
     if-eqz v1, :cond_2
 
-    invoke-static {v0, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {v1, v0}, Lcom/vk/core/view/search/ModernSearchView;->setQuery(Ljava/lang/String;)V
 
@@ -1973,7 +1973,7 @@
     .locals 5
 
     .line 1
-    invoke-static {}, Lcom/vk/core/ui/themes/d;->e()Z
+    invoke-static {}, Lcom/vk/core/ui/themes/MilkshakeHelper;->e()Z
 
     move-result v0
 
@@ -2048,9 +2048,9 @@
 
     .line 6
     :cond_3
-    sget-object v0, Lb/h/v/d;->c:Lb/h/v/d$a;
+    sget-object v0, Lb/h/v/RxBus;->c:Lb/h/v/RxBus$a;
 
-    invoke-virtual {v0}, Lb/h/v/d$a;->a()Lb/h/v/d;
+    invoke-virtual {v0}, Lb/h/v/RxBus$a;->a()Lb/h/v/RxBus;
 
     move-result-object v0
 
@@ -2060,15 +2060,15 @@
 
     invoke-direct {v1, v2, v3}, Lcom/vk/search/view/PeopleSearchParamsView$a;-><init>(Lcom/vk/search/PeopleSearchParams;Z)V
 
-    invoke-virtual {v0, v1}, Lb/h/v/d;->a(Ljava/lang/Object;)V
+    invoke-virtual {v0, v1}, Lb/h/v/RxBus;->a(Ljava/lang/Object;)V
 
     goto/16 :goto_6
 
     .line 7
     :cond_4
-    sget-object v0, Lb/h/v/d;->c:Lb/h/v/d$a;
+    sget-object v0, Lb/h/v/RxBus;->c:Lb/h/v/RxBus$a;
 
-    invoke-virtual {v0}, Lb/h/v/d$a;->a()Lb/h/v/d;
+    invoke-virtual {v0}, Lb/h/v/RxBus$a;->a()Lb/h/v/RxBus;
 
     move-result-object v0
 
@@ -2078,7 +2078,7 @@
 
     invoke-direct {v1, v2, v4}, Lcom/vk/search/view/PeopleSearchParamsView$a;-><init>(Lcom/vk/search/PeopleSearchParams;Z)V
 
-    invoke-virtual {v0, v1}, Lb/h/v/d;->a(Ljava/lang/Object;)V
+    invoke-virtual {v0, v1}, Lb/h/v/RxBus;->a(Ljava/lang/Object;)V
 
     goto/16 :goto_6
 
@@ -2144,37 +2144,37 @@
 
     .line 12
     :cond_9
-    sget-object v0, Lb/h/v/d;->c:Lb/h/v/d$a;
+    sget-object v0, Lb/h/v/RxBus;->c:Lb/h/v/RxBus$a;
 
-    invoke-virtual {v0}, Lb/h/v/d$a;->a()Lb/h/v/d;
+    invoke-virtual {v0}, Lb/h/v/RxBus$a;->a()Lb/h/v/RxBus;
 
     move-result-object v0
 
-    new-instance v1, Lcom/vk/search/view/a$a;
+    new-instance v1, Lcom/vk/search/view/GroupsSearchParamsView$a;
 
     iget-object v2, p0, Lcom/vk/search/fragment/DiscoverSearchFragment;->K:Lcom/vk/search/GroupsSearchParams;
 
-    invoke-direct {v1, v2, v3}, Lcom/vk/search/view/a$a;-><init>(Lcom/vk/search/GroupsSearchParams;Z)V
+    invoke-direct {v1, v2, v3}, Lcom/vk/search/view/GroupsSearchParamsView$a;-><init>(Lcom/vk/search/GroupsSearchParams;Z)V
 
-    invoke-virtual {v0, v1}, Lb/h/v/d;->a(Ljava/lang/Object;)V
+    invoke-virtual {v0, v1}, Lb/h/v/RxBus;->a(Ljava/lang/Object;)V
 
     goto :goto_6
 
     .line 13
     :cond_a
-    sget-object v0, Lb/h/v/d;->c:Lb/h/v/d$a;
+    sget-object v0, Lb/h/v/RxBus;->c:Lb/h/v/RxBus$a;
 
-    invoke-virtual {v0}, Lb/h/v/d$a;->a()Lb/h/v/d;
+    invoke-virtual {v0}, Lb/h/v/RxBus$a;->a()Lb/h/v/RxBus;
 
     move-result-object v0
 
-    new-instance v1, Lcom/vk/search/view/a$a;
+    new-instance v1, Lcom/vk/search/view/GroupsSearchParamsView$a;
 
     iget-object v2, p0, Lcom/vk/search/fragment/DiscoverSearchFragment;->K:Lcom/vk/search/GroupsSearchParams;
 
-    invoke-direct {v1, v2, v4}, Lcom/vk/search/view/a$a;-><init>(Lcom/vk/search/GroupsSearchParams;Z)V
+    invoke-direct {v1, v2, v4}, Lcom/vk/search/view/GroupsSearchParamsView$a;-><init>(Lcom/vk/search/GroupsSearchParams;Z)V
 
-    invoke-virtual {v0, v1}, Lb/h/v/d;->a(Ljava/lang/Object;)V
+    invoke-virtual {v0, v1}, Lb/h/v/RxBus;->a(Ljava/lang/Object;)V
 
     goto :goto_6
 
@@ -2289,9 +2289,9 @@
 
     .line 20
     :cond_15
-    sget-object v0, Lb/h/v/d;->c:Lb/h/v/d$a;
+    sget-object v0, Lb/h/v/RxBus;->c:Lb/h/v/RxBus$a;
 
-    invoke-virtual {v0}, Lb/h/v/d$a;->a()Lb/h/v/d;
+    invoke-virtual {v0}, Lb/h/v/RxBus$a;->a()Lb/h/v/RxBus;
 
     move-result-object v0
 
@@ -2301,15 +2301,15 @@
 
     invoke-direct {v1, v2, v3}, Lcom/vk/search/view/PeopleSearchParamsView$a;-><init>(Lcom/vk/search/PeopleSearchParams;Z)V
 
-    invoke-virtual {v0, v1}, Lb/h/v/d;->a(Ljava/lang/Object;)V
+    invoke-virtual {v0, v1}, Lb/h/v/RxBus;->a(Ljava/lang/Object;)V
 
     goto/16 :goto_d
 
     .line 21
     :cond_16
-    sget-object v0, Lb/h/v/d;->c:Lb/h/v/d$a;
+    sget-object v0, Lb/h/v/RxBus;->c:Lb/h/v/RxBus$a;
 
-    invoke-virtual {v0}, Lb/h/v/d$a;->a()Lb/h/v/d;
+    invoke-virtual {v0}, Lb/h/v/RxBus$a;->a()Lb/h/v/RxBus;
 
     move-result-object v0
 
@@ -2319,7 +2319,7 @@
 
     invoke-direct {v1, v2, v4}, Lcom/vk/search/view/PeopleSearchParamsView$a;-><init>(Lcom/vk/search/PeopleSearchParams;Z)V
 
-    invoke-virtual {v0, v1}, Lb/h/v/d;->a(Ljava/lang/Object;)V
+    invoke-virtual {v0, v1}, Lb/h/v/RxBus;->a(Ljava/lang/Object;)V
 
     goto/16 :goto_d
 
@@ -2385,37 +2385,37 @@
 
     .line 26
     :cond_1b
-    sget-object v0, Lb/h/v/d;->c:Lb/h/v/d$a;
+    sget-object v0, Lb/h/v/RxBus;->c:Lb/h/v/RxBus$a;
 
-    invoke-virtual {v0}, Lb/h/v/d$a;->a()Lb/h/v/d;
+    invoke-virtual {v0}, Lb/h/v/RxBus$a;->a()Lb/h/v/RxBus;
 
     move-result-object v0
 
-    new-instance v1, Lcom/vk/search/view/a$a;
+    new-instance v1, Lcom/vk/search/view/GroupsSearchParamsView$a;
 
     iget-object v2, p0, Lcom/vk/search/fragment/DiscoverSearchFragment;->K:Lcom/vk/search/GroupsSearchParams;
 
-    invoke-direct {v1, v2, v3}, Lcom/vk/search/view/a$a;-><init>(Lcom/vk/search/GroupsSearchParams;Z)V
+    invoke-direct {v1, v2, v3}, Lcom/vk/search/view/GroupsSearchParamsView$a;-><init>(Lcom/vk/search/GroupsSearchParams;Z)V
 
-    invoke-virtual {v0, v1}, Lb/h/v/d;->a(Ljava/lang/Object;)V
+    invoke-virtual {v0, v1}, Lb/h/v/RxBus;->a(Ljava/lang/Object;)V
 
     goto :goto_d
 
     .line 27
     :cond_1c
-    sget-object v0, Lb/h/v/d;->c:Lb/h/v/d$a;
+    sget-object v0, Lb/h/v/RxBus;->c:Lb/h/v/RxBus$a;
 
-    invoke-virtual {v0}, Lb/h/v/d$a;->a()Lb/h/v/d;
+    invoke-virtual {v0}, Lb/h/v/RxBus$a;->a()Lb/h/v/RxBus;
 
     move-result-object v0
 
-    new-instance v1, Lcom/vk/search/view/a$a;
+    new-instance v1, Lcom/vk/search/view/GroupsSearchParamsView$a;
 
     iget-object v2, p0, Lcom/vk/search/fragment/DiscoverSearchFragment;->K:Lcom/vk/search/GroupsSearchParams;
 
-    invoke-direct {v1, v2, v4}, Lcom/vk/search/view/a$a;-><init>(Lcom/vk/search/GroupsSearchParams;Z)V
+    invoke-direct {v1, v2, v4}, Lcom/vk/search/view/GroupsSearchParamsView$a;-><init>(Lcom/vk/search/GroupsSearchParams;Z)V
 
-    invoke-virtual {v0, v1}, Lb/h/v/d;->a(Ljava/lang/Object;)V
+    invoke-virtual {v0, v1}, Lb/h/v/RxBus;->a(Ljava/lang/Object;)V
 
     goto :goto_d
 
@@ -2473,14 +2473,14 @@
     .locals 1
 
     .line 1
-    invoke-static {}, Lcom/vk/core/ui/themes/d;->e()Z
+    invoke-static {}, Lcom/vk/core/ui/themes/MilkshakeHelper;->e()Z
 
     move-result v0
 
     if-nez v0, :cond_1
 
     .line 2
-    invoke-static {p1, p2, p3}, Lcom/vk/core/utils/i;->a(IILandroid/content/Intent;)Ljava/lang/String;
+    invoke-static {p1, p2, p3}, Lcom/vk/core/utils/VoiceUtils;->a(IILandroid/content/Intent;)Ljava/lang/String;
 
     move-result-object p1
 
@@ -2489,7 +2489,7 @@
     const-string p2, "it"
 
     .line 3
-    invoke-static {p1, p2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, p2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-interface {p1}, Ljava/lang/CharSequence;->length()I
 
@@ -2522,7 +2522,7 @@
     .locals 1
 
     .line 1
-    invoke-super {p0, p1}, Lcom/vk/core/fragments/b;->onCreate(Landroid/os/Bundle;)V
+    invoke-super {p0, p1}, Lcom/vk/core/fragments/BaseFragment1;->onCreate(Landroid/os/Bundle;)V
 
     .line 2
     invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getArguments()Landroid/os/Bundle;
@@ -2567,7 +2567,7 @@
     .locals 6
 
     .line 1
-    invoke-static {}, Lcom/vk/core/ui/themes/d;->e()Z
+    invoke-static {}, Lcom/vk/core/ui/themes/MilkshakeHelper;->e()Z
 
     move-result p3
 
@@ -2596,7 +2596,7 @@
     const-string p2, "view"
 
     .line 4
-    invoke-static {p1, p2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, p2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     const p2, 0x7f0a0ee0
 
@@ -2604,7 +2604,7 @@
 
     const/4 v1, 0x0
 
-    invoke-static {p1, p2, v1, p3, v1}, Lcom/vk/extensions/ViewExtKt;->a(Landroid/view/View;ILkotlin/jvm/b/b;ILjava/lang/Object;)Landroid/view/View;
+    invoke-static {p1, p2, v1, p3, v1}, Lcom/vk/extensions/ViewExtKt;->a(Landroid/view/View;ILkotlin/jvm/b/Functions2;ILjava/lang/Object;)Landroid/view/View;
 
     move-result-object p2
 
@@ -2623,7 +2623,7 @@
 
     const-string v3, "activity!!"
 
-    invoke-static {v2, v3}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v2, v3}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {p0}, Lcom/vk/core/fragments/FragmentImpl;->E4()Lcom/vk/core/fragments/FragmentManagerImpl;
 
@@ -2672,7 +2672,7 @@
     const p2, 0x7f0a0d18
 
     .line 9
-    invoke-static {p1, p2, v1, p3, v1}, Lcom/vk/extensions/ViewExtKt;->a(Landroid/view/View;ILkotlin/jvm/b/b;ILjava/lang/Object;)Landroid/view/View;
+    invoke-static {p1, p2, v1, p3, v1}, Lcom/vk/extensions/ViewExtKt;->a(Landroid/view/View;ILkotlin/jvm/b/Functions2;ILjava/lang/Object;)Landroid/view/View;
 
     move-result-object p2
 
@@ -2705,14 +2705,14 @@
     const p2, 0x7f0a0bee
 
     .line 12
-    invoke-static {p1, p2, v1, p3, v1}, Lcom/vk/extensions/ViewExtKt;->a(Landroid/view/View;ILkotlin/jvm/b/b;ILjava/lang/Object;)Landroid/view/View;
+    invoke-static {p1, p2, v1, p3, v1}, Lcom/vk/extensions/ViewExtKt;->a(Landroid/view/View;ILkotlin/jvm/b/Functions2;ILjava/lang/Object;)Landroid/view/View;
 
     move-result-object p2
 
     check-cast p2, Lcom/vk/core/view/AppBarShadowView;
 
     .line 13
-    invoke-static {}, Lcom/vk/core/ui/themes/d;->e()Z
+    invoke-static {}, Lcom/vk/core/ui/themes/MilkshakeHelper;->e()Z
 
     move-result p2
 
@@ -2725,14 +2725,14 @@
     const p2, 0x7f0a0bbf
 
     .line 14
-    invoke-static {p1, p2, v1, p3, v1}, Lcom/vk/extensions/ViewExtKt;->a(Landroid/view/View;ILkotlin/jvm/b/b;ILjava/lang/Object;)Landroid/view/View;
+    invoke-static {p1, p2, v1, p3, v1}, Lcom/vk/extensions/ViewExtKt;->a(Landroid/view/View;ILkotlin/jvm/b/Functions2;ILjava/lang/Object;)Landroid/view/View;
 
     move-result-object p2
 
     iput-object p2, p0, Lcom/vk/search/fragment/DiscoverSearchFragment;->O:Landroid/view/View;
 
     .line 15
-    invoke-static {p1, v3, v1, p3, v1}, Lcom/vk/extensions/ViewExtKt;->a(Landroid/view/View;ILkotlin/jvm/b/b;ILjava/lang/Object;)Landroid/view/View;
+    invoke-static {p1, v3, v1, p3, v1}, Lcom/vk/extensions/ViewExtKt;->a(Landroid/view/View;ILkotlin/jvm/b/Functions2;ILjava/lang/Object;)Landroid/view/View;
 
     move-result-object p2
 
@@ -2796,7 +2796,7 @@
 
     invoke-direct {p3, p0}, Lcom/vk/search/fragment/DiscoverSearchFragment$onCreateView$$inlined$let$lambda$1;-><init>(Lcom/vk/search/fragment/DiscoverSearchFragment;)V
 
-    invoke-virtual {p2, p3}, Lcom/vk/core/view/search/MilkshakeSearchView;->setOnBackClickListener(Lkotlin/jvm/b/a;)V
+    invoke-virtual {p2, p3}, Lcom/vk/core/view/search/MilkshakeSearchView;->setOnBackClickListener(Lkotlin/jvm/b/Functions;)V
 
     .line 22
     invoke-virtual {p2, v3}, Lcom/vk/core/view/search/MilkshakeSearchView;->setVoiceInputEnabled(Z)V
@@ -2806,7 +2806,7 @@
 
     invoke-direct {p3, p2, p0}, Lcom/vk/search/fragment/DiscoverSearchFragment$onCreateView$$inlined$let$lambda$2;-><init>(Lcom/vk/core/view/search/MilkshakeSearchView;Lcom/vk/search/fragment/DiscoverSearchFragment;)V
 
-    invoke-virtual {p2, p3}, Lcom/vk/core/view/search/MilkshakeSearchView;->setSecondaryActionListener(Lkotlin/jvm/b/a;)V
+    invoke-virtual {p2, p3}, Lcom/vk/core/view/search/MilkshakeSearchView;->setSecondaryActionListener(Lkotlin/jvm/b/Functions;)V
 
     .line 24
     iget-object p3, p0, Lcom/vk/search/fragment/DiscoverSearchFragment;->H:Ljava/lang/Integer;
@@ -2839,7 +2839,7 @@
     goto :goto_2
 
     :cond_8
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     throw v1
 
@@ -2852,13 +2852,13 @@
 
     invoke-direct {p3, p2, p0}, Lcom/vk/search/fragment/DiscoverSearchFragment$onCreateView$$inlined$let$lambda$3;-><init>(Lcom/vk/core/view/search/MilkshakeSearchView;Lcom/vk/search/fragment/DiscoverSearchFragment;)V
 
-    invoke-virtual {p0, p3}, Lcom/vk/core/fragments/b;->e(Lkotlin/jvm/b/a;)V
+    invoke-virtual {p0, p3}, Lcom/vk/core/fragments/BaseFragment1;->e(Lkotlin/jvm/b/Functions;)V
 
     goto :goto_5
 
     .line 26
     :cond_a
-    invoke-static {p1, v3, v1, p3, v1}, Lcom/vk/extensions/ViewExtKt;->a(Landroid/view/View;ILkotlin/jvm/b/b;ILjava/lang/Object;)Landroid/view/View;
+    invoke-static {p1, v3, v1, p3, v1}, Lcom/vk/extensions/ViewExtKt;->a(Landroid/view/View;ILkotlin/jvm/b/Functions2;ILjava/lang/Object;)Landroid/view/View;
 
     move-result-object p2
 
@@ -2882,14 +2882,14 @@
     invoke-direct {v3, p0}, Lcom/vk/search/fragment/DiscoverSearchFragment$onCreateView$$inlined$let$lambda$5;-><init>(Lcom/vk/search/fragment/DiscoverSearchFragment;)V
 
     .line 30
-    invoke-virtual {p2, p3, v3}, Lcom/vk/core/view/search/ModernSearchView;->a(Lkotlin/jvm/b/a;Lkotlin/jvm/b/a;)V
+    invoke-virtual {p2, p3, v3}, Lcom/vk/core/view/search/ModernSearchView;->a(Lkotlin/jvm/b/Functions;Lkotlin/jvm/b/Functions;)V
 
     .line 31
     new-instance p3, Lcom/vk/search/fragment/DiscoverSearchFragment$onCreateView$$inlined$let$lambda$6;
 
     invoke-direct {p3, p0}, Lcom/vk/search/fragment/DiscoverSearchFragment$onCreateView$$inlined$let$lambda$6;-><init>(Lcom/vk/search/fragment/DiscoverSearchFragment;)V
 
-    invoke-virtual {p2, p3}, Lcom/vk/core/view/search/ModernSearchView;->setParamsClickListener(Lkotlin/jvm/b/a;)V
+    invoke-virtual {p2, p3}, Lcom/vk/core/view/search/ModernSearchView;->setParamsClickListener(Lkotlin/jvm/b/Functions;)V
 
     .line 32
     :cond_b
@@ -2923,7 +2923,7 @@
     goto :goto_4
 
     :cond_e
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     throw v1
 
@@ -2943,7 +2943,7 @@
 
     .line 35
     :cond_11
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     throw v1
 .end method
@@ -2952,14 +2952,14 @@
     .locals 2
 
     .line 1
-    invoke-super {p0}, Lcom/vk/core/fragments/b;->onPause()V
+    invoke-super {p0}, Lcom/vk/core/fragments/BaseFragment1;->onPause()V
 
     .line 2
     invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getActivity()Landroidx/fragment/app/FragmentActivity;
 
     move-result-object v0
 
-    invoke-static {v0}, Lcom/vk/core/util/l0;->a(Landroid/content/Context;)V
+    invoke-static {v0}, Lcom/vk/core/util/KeyboardUtils;->a(Landroid/content/Context;)V
 
     .line 3
     sget-object v0, Lcom/vk/stats/AppUseTime;->f:Lcom/vk/stats/AppUseTime;
@@ -2995,7 +2995,7 @@
     .locals 4
 
     .line 1
-    invoke-super {p0}, Lcom/vk/core/fragments/b;->onResume()V
+    invoke-super {p0}, Lcom/vk/core/fragments/BaseFragment1;->onResume()V
 
     .line 2
     iget-boolean v0, p0, Lcom/vk/search/fragment/DiscoverSearchFragment;->F:Z
@@ -3014,10 +3014,10 @@
 
     invoke-direct {v0, p0}, Lcom/vk/search/fragment/DiscoverSearchFragment$onResume$1;-><init>(Lcom/vk/search/fragment/DiscoverSearchFragment;)V
 
-    invoke-virtual {p0, v0}, Lcom/vk/core/fragments/b;->e(Lkotlin/jvm/b/a;)V
+    invoke-virtual {p0, v0}, Lcom/vk/core/fragments/BaseFragment1;->e(Lkotlin/jvm/b/Functions;)V
 
     .line 5
-    invoke-static {}, Lcom/vk/core/ui/themes/d;->e()Z
+    invoke-static {}, Lcom/vk/core/ui/themes/MilkshakeHelper;->e()Z
 
     move-result v0
 
@@ -3042,7 +3042,7 @@
     goto :goto_0
 
     :cond_0
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     throw v1
 
@@ -3052,7 +3052,7 @@
 
     invoke-direct {v0, p0}, Lcom/vk/search/fragment/DiscoverSearchFragment$onResume$2;-><init>(Lcom/vk/search/fragment/DiscoverSearchFragment;)V
 
-    invoke-virtual {p0, v0, v2, v3}, Lcom/vk/core/fragments/b;->b(Lkotlin/jvm/b/a;J)V
+    invoke-virtual {p0, v0, v2, v3}, Lcom/vk/core/fragments/BaseFragment1;->b(Lkotlin/jvm/b/Functions;J)V
 
     goto :goto_0
 
@@ -3074,7 +3074,7 @@
     goto :goto_0
 
     :cond_3
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     throw v1
 
@@ -3084,7 +3084,7 @@
 
     invoke-direct {v0, p0}, Lcom/vk/search/fragment/DiscoverSearchFragment$onResume$3;-><init>(Lcom/vk/search/fragment/DiscoverSearchFragment;)V
 
-    invoke-virtual {p0, v0, v2, v3}, Lcom/vk/core/fragments/b;->b(Lkotlin/jvm/b/a;J)V
+    invoke-virtual {p0, v0, v2, v3}, Lcom/vk/core/fragments/BaseFragment1;->b(Lkotlin/jvm/b/Functions;J)V
 
     goto :goto_0
 

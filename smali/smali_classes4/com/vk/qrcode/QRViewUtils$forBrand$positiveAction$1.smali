@@ -3,12 +3,12 @@
 .source "QRViewUtils.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/a;
+.implements Lkotlin/jvm/b/Functions;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/qrcode/QRViewUtils;->a(Landroid/app/Activity;Lcom/vk/qrcode/QRParser;Lcom/vk/qrcode/d;Ljava/lang/Object;)V
+    value = Lcom/vk/qrcode/QRViewUtils;->a(Landroid/app/Activity;Lcom/vk/qrcode/QRParser;Lcom/vk/qrcode/QRTypes9;Ljava/lang/Object;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -19,15 +19,15 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/a<",
-        "Lkotlin/m;",
+        "Lkotlin/jvm/b/Functions<",
+        "Lkotlin/Unit;",
         ">;"
     }
 .end annotation
 
 
 # instance fields
-.field final synthetic $action:Lcom/vk/qrcode/d;
+.field final synthetic $action:Lcom/vk/qrcode/QRTypes9;
 
 .field final synthetic $context:Landroid/app/Activity;
 
@@ -35,10 +35,10 @@
 
 
 # direct methods
-.method constructor <init>(Lcom/vk/qrcode/d;Ljava/lang/Object;Landroid/app/Activity;)V
+.method constructor <init>(Lcom/vk/qrcode/QRTypes9;Ljava/lang/Object;Landroid/app/Activity;)V
     .locals 0
 
-    iput-object p1, p0, Lcom/vk/qrcode/QRViewUtils$forBrand$positiveAction$1;->$action:Lcom/vk/qrcode/d;
+    iput-object p1, p0, Lcom/vk/qrcode/QRViewUtils$forBrand$positiveAction$1;->$action:Lcom/vk/qrcode/QRTypes9;
 
     iput-object p2, p0, Lcom/vk/qrcode/QRViewUtils$forBrand$positiveAction$1;->$obj:Ljava/lang/Object;
 
@@ -59,7 +59,7 @@
     .line 1
     invoke-virtual {p0}, Lcom/vk/qrcode/QRViewUtils$forBrand$positiveAction$1;->invoke()V
 
-    sget-object v0, Lkotlin/m;->a:Lkotlin/m;
+    sget-object v0, Lkotlin/Unit;->a:Lkotlin/Unit;
 
     return-object v0
 .end method
@@ -70,19 +70,19 @@
     move-object/from16 v0, p0
 
     .line 2
-    iget-object v1, v0, Lcom/vk/qrcode/QRViewUtils$forBrand$positiveAction$1;->$action:Lcom/vk/qrcode/d;
+    iget-object v1, v0, Lcom/vk/qrcode/QRViewUtils$forBrand$positiveAction$1;->$action:Lcom/vk/qrcode/QRTypes9;
 
-    invoke-virtual {v1}, Lcom/vk/qrcode/d;->p()Lkotlin/jvm/b/a;
+    invoke-virtual {v1}, Lcom/vk/qrcode/QRTypes9;->p()Lkotlin/jvm/b/Functions;
 
     move-result-object v1
 
     if-eqz v1, :cond_0
 
-    invoke-interface {v1}, Lkotlin/jvm/b/a;->invoke()Ljava/lang/Object;
+    invoke-interface {v1}, Lkotlin/jvm/b/Functions;->invoke()Ljava/lang/Object;
 
     move-result-object v1
 
-    check-cast v1, Lkotlin/m;
+    check-cast v1, Lkotlin/Unit;
 
     .line 3
     :cond_0
@@ -93,7 +93,7 @@
 
     if-eqz v2, :cond_1
 
-    invoke-static {}, Lcom/vk/bridges/j0;->a()Lcom/vk/bridges/i0;
+    invoke-static {}, Lcom/vk/bridges/UsersBridge1;->a()Lcom/vk/bridges/UsersBridge;
 
     move-result-object v3
 
@@ -117,7 +117,7 @@
 
     const/4 v11, 0x0
 
-    invoke-static/range {v3 .. v11}, Lcom/vk/bridges/i0$a;->a(Lcom/vk/bridges/i0;Landroid/content/Context;IZLjava/lang/String;Ljava/lang/String;Lcom/vk/dto/profile/HeaderCatchUpLink;ILjava/lang/Object;)V
+    invoke-static/range {v3 .. v11}, Lcom/vk/bridges/UsersBridge$a;->a(Lcom/vk/bridges/UsersBridge;Landroid/content/Context;IZLjava/lang/String;Ljava/lang/String;Lcom/vk/dto/profile/HeaderCatchUpLink;ILjava/lang/Object;)V
 
     goto :goto_0
 
@@ -127,7 +127,7 @@
 
     if-eqz v2, :cond_2
 
-    invoke-static {}, Lcom/vk/bridges/j0;->a()Lcom/vk/bridges/i0;
+    invoke-static {}, Lcom/vk/bridges/UsersBridge1;->a()Lcom/vk/bridges/UsersBridge;
 
     move-result-object v3
 
@@ -153,7 +153,7 @@
 
     const/4 v11, 0x0
 
-    invoke-static/range {v3 .. v11}, Lcom/vk/bridges/i0$a;->a(Lcom/vk/bridges/i0;Landroid/content/Context;IZLjava/lang/String;Ljava/lang/String;Lcom/vk/dto/profile/HeaderCatchUpLink;ILjava/lang/Object;)V
+    invoke-static/range {v3 .. v11}, Lcom/vk/bridges/UsersBridge$a;->a(Lcom/vk/bridges/UsersBridge;Landroid/content/Context;IZLjava/lang/String;Ljava/lang/String;Lcom/vk/dto/profile/HeaderCatchUpLink;ILjava/lang/Object;)V
 
     goto :goto_0
 
@@ -163,7 +163,7 @@
 
     if-eqz v2, :cond_3
 
-    invoke-static {}, Lcom/vk/bridges/x;->a()Lcom/vk/bridges/w;
+    invoke-static {}, Lcom/vk/bridges/PostsBridge1;->a()Lcom/vk/bridges/PostsBridge2;
 
     move-result-object v1
 
@@ -171,13 +171,13 @@
 
     check-cast v2, Lcom/vk/dto/newsfeed/entries/NewsEntry;
 
-    invoke-interface {v1, v2}, Lcom/vk/bridges/w;->a(Lcom/vk/dto/newsfeed/entries/NewsEntry;)Lcom/vk/bridges/y;
+    invoke-interface {v1, v2}, Lcom/vk/bridges/PostsBridge2;->a(Lcom/vk/dto/newsfeed/entries/NewsEntry;)Lcom/vk/bridges/PostsBridge;
 
     move-result-object v1
 
     iget-object v2, v0, Lcom/vk/qrcode/QRViewUtils$forBrand$positiveAction$1;->$context:Landroid/app/Activity;
 
-    invoke-virtual {v1, v2}, Lcom/vk/navigation/o;->a(Landroid/content/Context;)V
+    invoke-virtual {v1, v2}, Lcom/vk/navigation/Navigator;->a(Landroid/content/Context;)V
 
     goto :goto_0
 
@@ -211,13 +211,13 @@
 
     .line 8
     :cond_4
-    sget-object v11, Lcom/vk/common/links/c;->p:Lcom/vk/common/links/c$a;
+    sget-object v11, Lcom/vk/common/links/LinkProcessor;->p:Lcom/vk/common/links/LinkProcessor$a;
 
     iget-object v12, v0, Lcom/vk/qrcode/QRViewUtils$forBrand$positiveAction$1;->$context:Landroid/app/Activity;
 
-    iget-object v1, v0, Lcom/vk/qrcode/QRViewUtils$forBrand$positiveAction$1;->$action:Lcom/vk/qrcode/d;
+    iget-object v1, v0, Lcom/vk/qrcode/QRViewUtils$forBrand$positiveAction$1;->$action:Lcom/vk/qrcode/QRTypes9;
 
-    invoke-virtual {v1}, Lcom/vk/qrcode/i;->j()Ljava/lang/String;
+    invoke-virtual {v1}, Lcom/vk/qrcode/QRTypes7;->j()Ljava/lang/String;
 
     move-result-object v13
 
@@ -227,7 +227,7 @@
 
     const/16 v16, 0x0
 
-    invoke-static/range {v11 .. v16}, Lcom/vk/common/links/c$a;->a(Lcom/vk/common/links/c$a;Landroid/content/Context;Ljava/lang/String;Landroid/os/Bundle;ILjava/lang/Object;)V
+    invoke-static/range {v11 .. v16}, Lcom/vk/common/links/LinkProcessor$a;->a(Lcom/vk/common/links/LinkProcessor$a;Landroid/content/Context;Ljava/lang/String;Landroid/os/Bundle;ILjava/lang/Object;)V
 
     :goto_0
     return-void

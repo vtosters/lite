@@ -212,7 +212,7 @@
 
     const v2, 0x3ecccccd    # 0.4f
 
-    invoke-static {v1, v2}, Lcom/vk/core/util/p;->b(IF)I
+    invoke-static {v1, v2}, Lcom/vk/core/util/ColorUtils;->b(IF)I
 
     move-result v1
 
@@ -410,7 +410,7 @@
 
     const v1, 0x3ecccccd    # 0.4f
 
-    invoke-static {v0, v1}, Lcom/vk/core/util/p;->b(IF)I
+    invoke-static {v0, v1}, Lcom/vk/core/util/ColorUtils;->b(IF)I
 
     move-result v0
 

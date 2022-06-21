@@ -41,7 +41,7 @@
     .line 1
     iget-object v0, p0, Lcom/vk/stories/view/StoryView$v;->a:Lcom/vk/stories/view/StoryView;
 
-    iget-object v0, v0, Lcom/vk/stories/view/e1;->S:Landroid/os/Handler;
+    iget-object v0, v0, Lcom/vk/stories/view/BaseStoryView;->S:Landroid/os/Handler;
 
     const/4 v1, 0x0
 
@@ -61,7 +61,7 @@
     .line 3
     iget-object v0, p0, Lcom/vk/stories/view/StoryView$v;->a:Lcom/vk/stories/view/StoryView;
 
-    iget-object v1, v0, Lcom/vk/stories/view/e1;->D:Lcom/vk/dto/stories/model/StoryEntry;
+    iget-object v1, v0, Lcom/vk/stories/view/BaseStoryView;->D:Lcom/vk/dto/stories/model/StoryEntry;
 
     if-eqz v1, :cond_0
 
@@ -72,7 +72,7 @@
 
     iget-object v1, p0, Lcom/vk/stories/view/StoryView$v;->a:Lcom/vk/stories/view/StoryView;
 
-    iget-object v1, v1, Lcom/vk/stories/view/e1;->D:Lcom/vk/dto/stories/model/StoryEntry;
+    iget-object v1, v1, Lcom/vk/stories/view/BaseStoryView;->D:Lcom/vk/dto/stories/model/StoryEntry;
 
     invoke-virtual {v0, v1}, Lcom/vk/narratives/views/StoryNarrativeStubDelegate;->b(Lcom/vk/dto/stories/model/StoryEntry;)V
 

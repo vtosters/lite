@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/poll/adapters/RecyclerHolderSelection;-><init>(ILandroid/view/ViewGroup;Lkotlin/u/g;)V
+    value = Lcom/vk/poll/adapters/RecyclerHolderSelection;-><init>(ILandroid/view/ViewGroup;Lkotlin/u/KProperty;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -42,7 +42,7 @@
     .line 1
     iget-object p1, p0, Lcom/vk/poll/adapters/RecyclerHolderSelection$c;->a:Lcom/vk/poll/adapters/RecyclerHolderSelection;
 
-    invoke-virtual {p1}, Lcom/vk/poll/adapters/RecyclerHolderSelection;->h0()Lkotlin/u/g;
+    invoke-virtual {p1}, Lcom/vk/poll/adapters/RecyclerHolderSelection;->h0()Lkotlin/u/KProperty;
 
     move-result-object p1
 
@@ -54,7 +54,7 @@
 
     move-result-object p2
 
-    invoke-interface {p1, p2}, Lkotlin/u/g;->set(Ljava/lang/Object;)V
+    invoke-interface {p1, p2}, Lkotlin/u/KProperty;->set(Ljava/lang/Object;)V
 
     :cond_0
     return-void

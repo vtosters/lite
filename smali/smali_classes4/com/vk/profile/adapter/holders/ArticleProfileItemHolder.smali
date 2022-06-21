@@ -1,5 +1,5 @@
 .class public final Lcom/vk/profile/adapter/holders/ArticleProfileItemHolder;
-.super Lcom/vk/common/e/b;
+.super Lcom/vk/common/e/BaseItemHolder;
 .source "ArticleProfileItemHolder.kt"
 
 
@@ -12,15 +12,15 @@
 
 .annotation system Ldalvik/annotation/Signature;
     value = {
-        "Lcom/vk/common/e/b<",
-        "Lcom/vk/profile/adapter/items/a;",
+        "Lcom/vk/common/e/BaseItemHolder<",
+        "Lcom/vk/profile/adapter/items/ArticleProfileItem;",
         ">;"
     }
 .end annotation
 
 
 # static fields
-.field private static final g:Lcom/vk/imageloader/o/f;
+.field private static final g:Lcom/vk/imageloader/o/StoryPreviewPostProcessor;
 
 .field private static final h:Landroid/graphics/PorterDuffColorFilter;
 
@@ -43,18 +43,18 @@
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, v1}, Lcom/vk/profile/adapter/holders/ArticleProfileItemHolder$a;-><init>(Lkotlin/jvm/internal/i;)V
+    invoke-direct {v0, v1}, Lcom/vk/profile/adapter/holders/ArticleProfileItemHolder$a;-><init>(Lkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     .line 1
-    new-instance v0, Lcom/vk/imageloader/o/f;
+    new-instance v0, Lcom/vk/imageloader/o/StoryPreviewPostProcessor;
 
     const/16 v1, 0x14
 
     const/16 v2, 0xc8
 
-    invoke-direct {v0, v1, v2}, Lcom/vk/imageloader/o/f;-><init>(II)V
+    invoke-direct {v0, v1, v2}, Lcom/vk/imageloader/o/StoryPreviewPostProcessor;-><init>(II)V
 
-    sput-object v0, Lcom/vk/profile/adapter/holders/ArticleProfileItemHolder;->g:Lcom/vk/imageloader/o/f;
+    sput-object v0, Lcom/vk/profile/adapter/holders/ArticleProfileItemHolder;->g:Lcom/vk/imageloader/o/StoryPreviewPostProcessor;
 
     .line 2
     new-instance v0, Landroid/graphics/PorterDuffColorFilter;
@@ -74,12 +74,12 @@
     .locals 2
 
     .line 1
-    invoke-direct {p0, p2}, Lcom/vk/common/e/b;-><init>(Landroid/view/View;)V
+    invoke-direct {p0, p2}, Lcom/vk/common/e/BaseItemHolder;-><init>(Landroid/view/View;)V
 
     const p2, 0x7f0a0158
 
     .line 2
-    invoke-virtual {p0, p2}, Lcom/vk/common/e/b;->i(I)Landroid/view/View;
+    invoke-virtual {p0, p2}, Lcom/vk/common/e/BaseItemHolder;->i(I)Landroid/view/View;
 
     move-result-object p2
 
@@ -90,7 +90,7 @@
     const p2, 0x7f0a0d80
 
     .line 3
-    invoke-virtual {p0, p2}, Lcom/vk/common/e/b;->i(I)Landroid/view/View;
+    invoke-virtual {p0, p2}, Lcom/vk/common/e/BaseItemHolder;->i(I)Landroid/view/View;
 
     move-result-object p2
 
@@ -101,7 +101,7 @@
     const p2, 0x7f0a0cf2
 
     .line 4
-    invoke-virtual {p0, p2}, Lcom/vk/common/e/b;->i(I)Landroid/view/View;
+    invoke-virtual {p0, p2}, Lcom/vk/common/e/BaseItemHolder;->i(I)Landroid/view/View;
 
     move-result-object p2
 
@@ -114,7 +114,7 @@
 
     const-string v0, "itemView"
 
-    invoke-static {p2, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p2, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {p2}, Landroid/view/View;->getResources()Landroid/content/res/Resources;
 
@@ -133,7 +133,7 @@
 
     const v1, 0x7f080117
 
-    invoke-virtual {p2, v1}, Lcom/vk/imageloader/view/a;->setPlaceholderImage(I)V
+    invoke-virtual {p2, v1}, Lcom/vk/imageloader/view/GenericVKImageView;->setPlaceholderImage(I)V
 
     .line 7
     iget-object p2, p0, Lcom/vk/profile/adapter/holders/ArticleProfileItemHolder;->c:Lcom/vk/imageloader/view/VKImageView;
@@ -145,13 +145,13 @@
     .line 8
     iget-object p2, p0, Landroidx/recyclerview/widget/RecyclerView$ViewHolder;->itemView:Landroid/view/View;
 
-    invoke-static {p2, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p2, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     new-instance v0, Lcom/vk/profile/adapter/holders/ArticleProfileItemHolder$1;
 
     invoke-direct {v0, p0, p1}, Lcom/vk/profile/adapter/holders/ArticleProfileItemHolder$1;-><init>(Lcom/vk/profile/adapter/holders/ArticleProfileItemHolder;Lcom/vtosters/lite/api/ExtendedUserProfile;)V
 
-    invoke-static {p2, v0}, Lcom/vk/extensions/ViewExtKt;->e(Landroid/view/View;Lkotlin/jvm/b/b;)V
+    invoke-static {p2, v0}, Lcom/vk/extensions/ViewExtKt;->e(Landroid/view/View;Lkotlin/jvm/b/Functions2;)V
 
     return-void
 .end method
@@ -160,7 +160,7 @@
     .locals 0
 
     .line 1
-    invoke-virtual {p0}, Lcom/vk/common/e/b;->getContext()Landroid/content/Context;
+    invoke-virtual {p0}, Lcom/vk/common/e/BaseItemHolder;->getContext()Landroid/content/Context;
 
     move-result-object p0
 
@@ -182,7 +182,7 @@
     .line 12
     iget-object v0, p0, Lcom/vk/profile/adapter/holders/ArticleProfileItemHolder;->c:Lcom/vk/imageloader/view/VKImageView;
 
-    invoke-virtual {v0, v1}, Lcom/vk/imageloader/view/VKImageView;->setPostprocessor(Lcom/facebook/imagepipeline/request/a;)V
+    invoke-virtual {v0, v1}, Lcom/vk/imageloader/view/VKImageView;->setPostprocessor(Lcom/facebook/imagepipeline/request/BasePostprocessor;)V
 
     .line 13
     iget-object v0, p0, Lcom/vk/profile/adapter/holders/ArticleProfileItemHolder;->c:Lcom/vk/imageloader/view/VKImageView;
@@ -208,9 +208,9 @@
     .line 15
     iget-object v0, p0, Lcom/vk/profile/adapter/holders/ArticleProfileItemHolder;->c:Lcom/vk/imageloader/view/VKImageView;
 
-    sget-object v2, Lcom/vk/profile/adapter/holders/ArticleProfileItemHolder;->g:Lcom/vk/imageloader/o/f;
+    sget-object v2, Lcom/vk/profile/adapter/holders/ArticleProfileItemHolder;->g:Lcom/vk/imageloader/o/StoryPreviewPostProcessor;
 
-    invoke-virtual {v0, v2}, Lcom/vk/imageloader/view/VKImageView;->setPostprocessor(Lcom/facebook/imagepipeline/request/a;)V
+    invoke-virtual {v0, v2}, Lcom/vk/imageloader/view/VKImageView;->setPostprocessor(Lcom/facebook/imagepipeline/request/BasePostprocessor;)V
 
     .line 16
     iget-object v0, p0, Lcom/vk/profile/adapter/holders/ArticleProfileItemHolder;->c:Lcom/vk/imageloader/view/VKImageView;
@@ -242,26 +242,26 @@
     return-void
 .end method
 
-.method public static final synthetic b(Lcom/vk/profile/adapter/holders/ArticleProfileItemHolder;)Lcom/vk/profile/adapter/items/a;
+.method public static final synthetic b(Lcom/vk/profile/adapter/holders/ArticleProfileItemHolder;)Lcom/vk/profile/adapter/items/ArticleProfileItem;
     .locals 0
 
     .line 1
-    invoke-virtual {p0}, Lcom/vk/common/e/b;->d0()Lcom/vk/common/i/b;
+    invoke-virtual {p0}, Lcom/vk/common/e/BaseItemHolder;->d0()Lcom/vk/common/i/RecyclerItem;
 
     move-result-object p0
 
-    check-cast p0, Lcom/vk/profile/adapter/items/a;
+    check-cast p0, Lcom/vk/profile/adapter/items/ArticleProfileItem;
 
     return-object p0
 .end method
 
 
 # virtual methods
-.method protected a(Lcom/vk/profile/adapter/items/a;)V
+.method protected a(Lcom/vk/profile/adapter/items/ArticleProfileItem;)V
     .locals 8
 
     .line 2
-    invoke-virtual {p1}, Lcom/vk/profile/adapter/items/a;->c()Lcom/vk/dto/articles/Article;
+    invoke-virtual {p1}, Lcom/vk/profile/adapter/items/ArticleProfileItem;->c()Lcom/vk/dto/articles/Article;
 
     move-result-object p1
 
@@ -287,7 +287,7 @@
     if-lez v1, :cond_0
 
     .line 6
-    invoke-virtual {p0}, Lcom/vk/common/e/b;->e0()Landroid/content/res/Resources;
+    invoke-virtual {p0}, Lcom/vk/common/e/BaseItemHolder;->e0()Landroid/content/res/Resources;
 
     move-result-object v1
 
@@ -310,7 +310,7 @@
 
     int-to-long v6, p1
 
-    invoke-static {v6, v7}, Lcom/vk/core/util/b1;->a(J)Ljava/lang/CharSequence;
+    invoke-static {v6, v7}, Lcom/vk/core/util/StringUtils;->a(J)Ljava/lang/CharSequence;
 
     move-result-object p1
 
@@ -325,7 +325,7 @@
 
     .line 9
     :cond_0
-    invoke-virtual {p0}, Lcom/vk/common/e/b;->e0()Landroid/content/res/Resources;
+    invoke-virtual {p0}, Lcom/vk/common/e/BaseItemHolder;->e0()Landroid/content/res/Resources;
 
     move-result-object p1
 
@@ -342,13 +342,13 @@
     return-void
 .end method
 
-.method public bridge synthetic b(Lcom/vk/common/i/b;)V
+.method public bridge synthetic b(Lcom/vk/common/i/RecyclerItem;)V
     .locals 0
 
     .line 2
-    check-cast p1, Lcom/vk/profile/adapter/items/a;
+    check-cast p1, Lcom/vk/profile/adapter/items/ArticleProfileItem;
 
-    invoke-virtual {p0, p1}, Lcom/vk/profile/adapter/holders/ArticleProfileItemHolder;->a(Lcom/vk/profile/adapter/items/a;)V
+    invoke-virtual {p0, p1}, Lcom/vk/profile/adapter/holders/ArticleProfileItemHolder;->a(Lcom/vk/profile/adapter/items/ArticleProfileItem;)V
 
     return-void
 .end method

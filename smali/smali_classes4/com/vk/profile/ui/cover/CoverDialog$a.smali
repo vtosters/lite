@@ -3,7 +3,7 @@
 .source "CoverDialog.kt"
 
 # interfaces
-.implements Lcom/vk/core/ui/themes/f;
+.implements Lcom/vk/core/ui/themes/Themable;
 
 
 # annotations
@@ -46,7 +46,7 @@
 
     const-string p2, "context"
 
-    invoke-static {p1, p2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, p2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     const p2, 0x7f06004b
 
@@ -127,11 +127,11 @@
 
     iget-object v1, p0, Lcom/vk/profile/ui/cover/CoverDialog$a;->b:Lcom/vk/profile/ui/cover/CoverDialog;
 
-    invoke-virtual {v1}, Lcom/vk/profile/ui/cover/CoverDialog;->b()Lcom/vk/core/ui/themes/b;
+    invoke-virtual {v1}, Lcom/vk/profile/ui/cover/CoverDialog;->b()Lcom/vk/core/ui/themes/DynamicColorHolder;
 
     move-result-object v1
 
-    invoke-virtual {v1}, Lcom/vk/core/ui/themes/b;->a()I
+    invoke-virtual {v1}, Lcom/vk/core/ui/themes/DynamicColorHolder;->a()I
 
     move-result v1
 

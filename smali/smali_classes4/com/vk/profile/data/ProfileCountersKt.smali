@@ -124,14 +124,14 @@
     .line 9
     sget-object v2, Lcom/vk/profile/data/ProfileCountersKt$photos$1$1;->a:Lcom/vk/profile/data/ProfileCountersKt$photos$1$1;
 
-    invoke-virtual {v0, v2}, Lcom/vk/profile/data/CountersWrapper;->a(Lkotlin/jvm/b/c;)V
+    invoke-virtual {v0, v2}, Lcom/vk/profile/data/CountersWrapper;->a(Lkotlin/jvm/b/Functions1;)V
 
     .line 10
     new-instance v2, Lcom/vk/profile/data/ProfileCountersKt$photos$1$2;
 
     invoke-direct {v2, v0}, Lcom/vk/profile/data/ProfileCountersKt$photos$1$2;-><init>(Lcom/vk/profile/data/CountersWrapper;)V
 
-    invoke-virtual {v0, v2}, Lcom/vk/profile/data/CountersWrapper;->a(Lkotlin/jvm/b/b;)V
+    invoke-virtual {v0, v2}, Lcom/vk/profile/data/CountersWrapper;->a(Lkotlin/jvm/b/Functions2;)V
 
     .line 11
     sput-object v0, Lcom/vk/profile/data/ProfileCountersKt;->d:Lcom/vk/profile/data/CountersWrapper;
@@ -209,7 +209,7 @@
 
     move-object v6, v0
 
-    invoke-direct/range {v6 .. v11}, Lcom/vk/profile/data/CountersWrapper;-><init>(Ljava/lang/String;IIILkotlin/jvm/internal/i;)V
+    invoke-direct/range {v6 .. v11}, Lcom/vk/profile/data/CountersWrapper;-><init>(Ljava/lang/String;IIILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     const v6, 0x7f0806dd
 
@@ -244,7 +244,7 @@
 
     move-object v7, v0
 
-    invoke-direct/range {v7 .. v12}, Lcom/vk/profile/data/CountersWrapper;-><init>(Ljava/lang/String;IIILkotlin/jvm/internal/i;)V
+    invoke-direct/range {v7 .. v12}, Lcom/vk/profile/data/CountersWrapper;-><init>(Ljava/lang/String;IIILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     const v6, 0x7f080840
 
@@ -263,7 +263,7 @@
 
     move-object v7, v0
 
-    invoke-direct/range {v7 .. v12}, Lcom/vk/profile/data/CountersWrapper;-><init>(Ljava/lang/String;IIILkotlin/jvm/internal/i;)V
+    invoke-direct/range {v7 .. v12}, Lcom/vk/profile/data/CountersWrapper;-><init>(Ljava/lang/String;IIILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     .line 31
     invoke-virtual {v0, v6}, Lcom/vk/profile/data/CountersWrapper;->a(I)V
@@ -286,7 +286,7 @@
 
     move-object v13, v0
 
-    invoke-direct/range {v13 .. v18}, Lcom/vk/profile/data/CountersWrapper;-><init>(Ljava/lang/String;IIILkotlin/jvm/internal/i;)V
+    invoke-direct/range {v13 .. v18}, Lcom/vk/profile/data/CountersWrapper;-><init>(Ljava/lang/String;IIILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     const v7, 0x7f080428
 
@@ -321,7 +321,7 @@
 
     move-object v8, v0
 
-    invoke-direct/range {v8 .. v13}, Lcom/vk/profile/data/CountersWrapper;-><init>(Ljava/lang/String;IIILkotlin/jvm/internal/i;)V
+    invoke-direct/range {v8 .. v13}, Lcom/vk/profile/data/CountersWrapper;-><init>(Ljava/lang/String;IIILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     const v7, 0x7f0804dd
 
@@ -402,7 +402,7 @@
 
     move-object v12, v0
 
-    invoke-direct/range {v12 .. v17}, Lcom/vk/profile/data/CountersWrapper;-><init>(Ljava/lang/String;IIILkotlin/jvm/internal/i;)V
+    invoke-direct/range {v12 .. v17}, Lcom/vk/profile/data/CountersWrapper;-><init>(Ljava/lang/String;IIILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     const v11, 0x7f08060c
 
@@ -456,7 +456,7 @@
     .line 61
     sget-object v6, Lcom/vk/profile/data/ProfileCountersKt$events$1$1;->a:Lcom/vk/profile/data/ProfileCountersKt$events$1$1;
 
-    invoke-virtual {v0, v6}, Lcom/vk/profile/data/CountersWrapper;->a(Lkotlin/jvm/b/b;)V
+    invoke-virtual {v0, v6}, Lcom/vk/profile/data/CountersWrapper;->a(Lkotlin/jvm/b/Functions2;)V
 
     .line 62
     sput-object v0, Lcom/vk/profile/data/ProfileCountersKt;->p:Lcom/vk/profile/data/CountersWrapper;
@@ -486,7 +486,7 @@
     .line 67
     sget-object v6, Lcom/vk/profile/data/ProfileCountersKt$chats$1$1;->a:Lcom/vk/profile/data/ProfileCountersKt$chats$1$1;
 
-    invoke-virtual {v0, v6}, Lcom/vk/profile/data/CountersWrapper;->a(Lkotlin/jvm/b/b;)V
+    invoke-virtual {v0, v6}, Lcom/vk/profile/data/CountersWrapper;->a(Lkotlin/jvm/b/Functions2;)V
 
     .line 68
     sput-object v0, Lcom/vk/profile/data/ProfileCountersKt;->q:Lcom/vk/profile/data/CountersWrapper;
@@ -505,7 +505,7 @@
     .line 70
     sget-object v6, Lcom/vk/profile/data/ProfileCountersKt$narratives$1$1;->a:Lcom/vk/profile/data/ProfileCountersKt$narratives$1$1;
 
-    invoke-virtual {v0, v6}, Lcom/vk/profile/data/CountersWrapper;->a(Lkotlin/jvm/b/b;)V
+    invoke-virtual {v0, v6}, Lcom/vk/profile/data/CountersWrapper;->a(Lkotlin/jvm/b/Functions2;)V
 
     .line 71
     invoke-virtual {v0, v5}, Lcom/vk/profile/data/CountersWrapper;->b(Z)V
@@ -704,7 +704,7 @@
 
     move-result p0
 
-    invoke-static {p0, p1}, Lkotlin/jvm/internal/m;->a(II)I
+    invoke-static {p0, p1}, Lkotlin/jvm/internal/Intrinsics;->a(II)I
 
     move-result p0
 

@@ -52,7 +52,7 @@
 
     const-string p2, "findViewById(R.id.icon)"
 
-    invoke-static {p1, p2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, p2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     check-cast p1, Lcom/vk/profile/ui/community/StatusButtonView$NotificationImageView;
 
@@ -67,7 +67,7 @@
 
     const-string p2, "findViewById(R.id.text)"
 
-    invoke-static {p1, p2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, p2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     check-cast p1, Landroid/widget/TextView;
 
@@ -76,7 +76,7 @@
     return-void
 .end method
 
-.method public synthetic constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;IILkotlin/jvm/internal/i;)V
+.method public synthetic constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;IILkotlin/jvm/internal/DefaultConstructorMarker;)V
     .locals 0
 
     and-int/lit8 p5, p4, 0x2
@@ -129,7 +129,7 @@
 
     move-result v1
 
-    invoke-static {v0, v1}, Lcom/vk/extensions/l;->a(Landroid/widget/TextView;I)V
+    invoke-static {v0, v1}, Lcom/vk/extensions/TextViewExt;->a(Landroid/widget/TextView;I)V
 
     .line 3
     iget-object v0, p0, Lcom/vk/profile/ui/community/StatusButtonView;->a:Lcom/vk/profile/ui/community/StatusButtonView$NotificationImageView;
@@ -160,7 +160,7 @@
 
     const/4 v3, 0x2
 
-    invoke-static {v0, v1, v2, v3, v2}, Lcom/vk/extensions/e;->b(Landroid/widget/ImageView;ILandroid/graphics/PorterDuff$Mode;ILjava/lang/Object;)V
+    invoke-static {v0, v1, v2, v3, v2}, Lcom/vk/extensions/ImageViewExt;->b(Landroid/widget/ImageView;ILandroid/graphics/PorterDuff$Mode;ILjava/lang/Object;)V
 
     .line 6
     invoke-virtual {p1}, Lcom/vk/profile/ui/community/StatusButtonView$a;->e()I

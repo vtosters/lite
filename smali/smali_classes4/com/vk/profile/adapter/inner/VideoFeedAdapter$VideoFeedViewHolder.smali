@@ -1,5 +1,5 @@
 .class public final Lcom/vk/profile/adapter/inner/VideoFeedAdapter$VideoFeedViewHolder;
-.super Lcom/vtosters/lite/ui/b0/i;
+.super Lcom/vtosters/lite/ui/holder/RecyclerHolder;
 .source "VideoFeedAdapter.kt"
 
 # interfaces
@@ -18,7 +18,7 @@
 
 .annotation system Ldalvik/annotation/Signature;
     value = {
-        "Lcom/vtosters/lite/ui/b0/i<",
+        "Lcom/vtosters/lite/ui/holder/RecyclerHolder<",
         "Lcom/vk/dto/common/VideoFile;",
         ">;",
         "Lme/grishka/appkit/views/UsableRecyclerView$f;"
@@ -35,7 +35,7 @@
 
 .field private final f:Lcom/vk/libvideo/ui/VideoRestrictionView;
 
-.field private g:Lio/reactivex/disposables/b;
+.field private g:Lio/reactivex/disposables/Disposable;
 
 .field final synthetic h:Lcom/vk/profile/adapter/inner/VideoFeedAdapter;
 
@@ -61,7 +61,7 @@
 
     const p2, 0x7f0d04c7
 
-    invoke-direct {p0, p2, p1}, Lcom/vtosters/lite/ui/b0/i;-><init>(ILandroid/content/Context;)V
+    invoke-direct {p0, p2, p1}, Lcom/vtosters/lite/ui/holder/RecyclerHolder;-><init>(ILandroid/content/Context;)V
 
     .line 3
     iget-object p1, p0, Landroidx/recyclerview/widget/RecyclerView$ViewHolder;->itemView:Landroid/view/View;
@@ -74,7 +74,7 @@
 
     const-string p2, "itemView.findViewById(R.id.photo)"
 
-    invoke-static {p1, p2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, p2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     check-cast p1, Lcom/vk/imageloader/view/VKImageView;
 
@@ -91,7 +91,7 @@
 
     const-string p2, "itemView.findViewById(R.id.title)"
 
-    invoke-static {p1, p2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, p2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     check-cast p1, Landroid/widget/TextView;
 
@@ -108,7 +108,7 @@
 
     const-string p2, "itemView.findViewById(R.id.attach_duration)"
 
-    invoke-static {p1, p2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, p2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     check-cast p1, Landroid/widget/TextView;
 
@@ -125,7 +125,7 @@
 
     const-string p2, "itemView.findViewById(R.\u2026e_video_item_restriction)"
 
-    invoke-static {p1, p2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, p2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     check-cast p1, Lcom/vk/libvideo/ui/VideoRestrictionView;
 
@@ -147,7 +147,7 @@
 
     const-string p2, "itemView"
 
-    invoke-static {p1, p2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, p2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     new-instance p2, Landroidx/recyclerview/widget/RecyclerView$LayoutParams;
 
@@ -188,11 +188,11 @@
     return-void
 .end method
 
-.method public static final synthetic a(Lcom/vk/profile/adapter/inner/VideoFeedAdapter$VideoFeedViewHolder;Lio/reactivex/disposables/b;)V
+.method public static final synthetic a(Lcom/vk/profile/adapter/inner/VideoFeedAdapter$VideoFeedViewHolder;Lio/reactivex/disposables/Disposable;)V
     .locals 0
 
     .line 3
-    iput-object p1, p0, Lcom/vk/profile/adapter/inner/VideoFeedAdapter$VideoFeedViewHolder;->g:Lio/reactivex/disposables/b;
+    iput-object p1, p0, Lcom/vk/profile/adapter/inner/VideoFeedAdapter$VideoFeedViewHolder;->g:Lio/reactivex/disposables/Disposable;
 
     return-void
 .end method
@@ -201,7 +201,7 @@
     .locals 0
 
     .line 1
-    iget-object p0, p0, Lcom/vtosters/lite/ui/b0/i;->b:Ljava/lang/Object;
+    iget-object p0, p0, Lcom/vtosters/lite/ui/holder/RecyclerHolder;->b:Ljava/lang/Object;
 
     check-cast p0, Lcom/vk/dto/common/VideoFile;
 
@@ -243,7 +243,7 @@
     move-object v1, p1
 
     .line 8
-    invoke-static/range {v0 .. v10}, Lcom/vk/libvideo/ui/VideoRestrictionView$Companion;->a(Lcom/vk/libvideo/ui/VideoRestrictionView$Companion;Lcom/vk/dto/common/VideoFile;Landroid/view/View;Lcom/vk/libvideo/ui/VideoRestrictionView;Lkotlin/jvm/b/b;Lkotlin/jvm/b/a;Lkotlin/jvm/b/b;Landroid/view/View;ZILjava/lang/Object;)V
+    invoke-static/range {v0 .. v10}, Lcom/vk/libvideo/ui/VideoRestrictionView$Companion;->a(Lcom/vk/libvideo/ui/VideoRestrictionView$Companion;Lcom/vk/dto/common/VideoFile;Landroid/view/View;Lcom/vk/libvideo/ui/VideoRestrictionView;Lkotlin/jvm/b/Functions2;Lkotlin/jvm/b/Functions;Lkotlin/jvm/b/Functions2;Landroid/view/View;ZILjava/lang/Object;)V
 
     return-void
 .end method
@@ -257,11 +257,11 @@
     return-object p0
 .end method
 
-.method public static final synthetic d(Lcom/vk/profile/adapter/inner/VideoFeedAdapter$VideoFeedViewHolder;)Lio/reactivex/disposables/b;
+.method public static final synthetic d(Lcom/vk/profile/adapter/inner/VideoFeedAdapter$VideoFeedViewHolder;)Lio/reactivex/disposables/Disposable;
     .locals 0
 
     .line 1
-    iget-object p0, p0, Lcom/vk/profile/adapter/inner/VideoFeedAdapter$VideoFeedViewHolder;->g:Lio/reactivex/disposables/b;
+    iget-object p0, p0, Lcom/vk/profile/adapter/inner/VideoFeedAdapter$VideoFeedViewHolder;->g:Lio/reactivex/disposables/Disposable;
 
     return-object p0
 .end method
@@ -296,7 +296,7 @@
     const v3, 0x7f12107e
 
     .line 8
-    invoke-virtual {p0, v3}, Lcom/vtosters/lite/ui/b0/i;->m(I)Ljava/lang/String;
+    invoke-virtual {p0, v3}, Lcom/vtosters/lite/ui/holder/RecyclerHolder;->m(I)Ljava/lang/String;
 
     move-result-object v3
 
@@ -308,13 +308,13 @@
     const v3, 0x7f12107b
 
     .line 9
-    invoke-virtual {p0, v3}, Lcom/vtosters/lite/ui/b0/i;->m(I)Ljava/lang/String;
+    invoke-virtual {p0, v3}, Lcom/vtosters/lite/ui/holder/RecyclerHolder;->m(I)Ljava/lang/String;
 
     move-result-object v3
 
     const-string v4, "getString(R.string.video_live)"
 
-    invoke-static {v3, v4}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v3, v4}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     if-eqz v3, :cond_1
 
@@ -324,7 +324,7 @@
 
     const-string v4, "(this as java.lang.String).toUpperCase()"
 
-    invoke-static {v3, v4}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v3, v4}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     goto :goto_0
 
@@ -341,7 +341,7 @@
     :cond_2
     iget v3, p1, Lcom/vk/dto/common/VideoFile;->d:I
 
-    invoke-static {v3}, Lcom/vk/libvideo/t;->c(I)Ljava/lang/String;
+    invoke-static {v3}, Lcom/vk/libvideo/VideoUtils;->c(I)Ljava/lang/String;
 
     move-result-object v3
 
@@ -403,19 +403,19 @@
     .locals 3
 
     .line 9
-    invoke-static {}, Lcom/vk/bridges/x;->a()Lcom/vk/bridges/w;
+    invoke-static {}, Lcom/vk/bridges/PostsBridge1;->a()Lcom/vk/bridges/PostsBridge2;
 
     move-result-object v0
 
-    iget-object v1, p0, Lcom/vtosters/lite/ui/b0/i;->b:Ljava/lang/Object;
+    iget-object v1, p0, Lcom/vtosters/lite/ui/holder/RecyclerHolder;->b:Ljava/lang/Object;
 
     const-string v2, "item"
 
-    invoke-static {v1, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     check-cast v1, Lcom/vk/dto/common/VideoFile;
 
-    invoke-interface {v0, v1}, Lcom/vk/bridges/w;->a(Lcom/vk/dto/common/VideoFile;)Lcom/vk/bridges/y;
+    invoke-interface {v0, v1}, Lcom/vk/bridges/PostsBridge2;->a(Lcom/vk/dto/common/VideoFile;)Lcom/vk/bridges/PostsBridge;
 
     move-result-object v0
 
@@ -425,26 +425,26 @@
 
     move-result-object v1
 
-    invoke-virtual {v1}, Lcom/vk/newsfeed/presenters/i;->v0()Ljava/lang/String;
+    invoke-virtual {v1}, Lcom/vk/newsfeed/presenters/NewsFeedProfilePresenter;->v0()Ljava/lang/String;
 
     move-result-object v1
 
-    invoke-virtual {v0, v1}, Lcom/vk/bridges/y;->c(Ljava/lang/String;)Lcom/vk/bridges/y;
+    invoke-virtual {v0, v1}, Lcom/vk/bridges/PostsBridge;->c(Ljava/lang/String;)Lcom/vk/bridges/PostsBridge;
 
     iget-object v1, p0, Landroidx/recyclerview/widget/RecyclerView$ViewHolder;->itemView:Landroid/view/View;
 
     const-string v2, "itemView"
 
-    invoke-static {v1, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {v1}, Landroid/view/View;->getContext()Landroid/content/Context;
 
     move-result-object v1
 
-    invoke-virtual {v0, v1}, Lcom/vk/navigation/o;->a(Landroid/content/Context;)V
+    invoke-virtual {v0, v1}, Lcom/vk/navigation/Navigator;->a(Landroid/content/Context;)V
 
     .line 10
-    new-instance v0, Lcom/vk/profile/e/b;
+    new-instance v0, Lcom/vk/profile/e/CommunityScreenTracker1;
 
     iget-object v1, p0, Lcom/vk/profile/adapter/inner/VideoFeedAdapter$VideoFeedViewHolder;->h:Lcom/vk/profile/adapter/inner/VideoFeedAdapter;
 
@@ -452,11 +452,11 @@
 
     move-result-object v1
 
-    invoke-virtual {v1}, Lcom/vk/newsfeed/presenters/i;->L()I
+    invoke-virtual {v1}, Lcom/vk/newsfeed/presenters/NewsFeedProfilePresenter;->L()I
 
     move-result v1
 
-    invoke-direct {v0, v1}, Lcom/vk/profile/e/b;-><init>(I)V
+    invoke-direct {v0, v1}, Lcom/vk/profile/e/CommunityScreenTracker1;-><init>(I)V
 
     .line 11
     invoke-static {}, Lcom/vk/profile/data/ProfileCountersKt;->r()Lcom/vk/profile/data/CountersWrapper;
@@ -467,19 +467,19 @@
 
     move-result v1
 
-    invoke-static {v1}, Lcom/vk/profile/e/c;->a(I)Ljava/lang/String;
+    invoke-static {v1}, Lcom/vk/profile/e/CommunityScreenTracker;->a(I)Ljava/lang/String;
 
     move-result-object v1
 
-    invoke-virtual {v0, v1}, Lcom/vk/profile/e/b;->a(Ljava/lang/String;)Lcom/vk/profile/e/b;
+    invoke-virtual {v0, v1}, Lcom/vk/profile/e/CommunityScreenTracker1;->a(Ljava/lang/String;)Lcom/vk/profile/e/CommunityScreenTracker1;
 
     const-string v1, "element"
 
     .line 12
-    invoke-virtual {v0, v1}, Lcom/vk/profile/e/b;->d(Ljava/lang/String;)Lcom/vk/profile/e/b;
+    invoke-virtual {v0, v1}, Lcom/vk/profile/e/CommunityScreenTracker1;->d(Ljava/lang/String;)Lcom/vk/profile/e/CommunityScreenTracker1;
 
     .line 13
-    iget-object v1, p0, Lcom/vtosters/lite/ui/b0/i;->b:Ljava/lang/Object;
+    iget-object v1, p0, Lcom/vtosters/lite/ui/holder/RecyclerHolder;->b:Ljava/lang/Object;
 
     check-cast v1, Lcom/vk/dto/common/VideoFile;
 
@@ -489,10 +489,10 @@
 
     move-result-object v1
 
-    invoke-virtual {v0, v1}, Lcom/vk/profile/e/b;->b(Ljava/lang/String;)Lcom/vk/profile/e/b;
+    invoke-virtual {v0, v1}, Lcom/vk/profile/e/CommunityScreenTracker1;->b(Ljava/lang/String;)Lcom/vk/profile/e/CommunityScreenTracker1;
 
     .line 14
-    invoke-virtual {v0}, Lcom/vk/profile/e/b;->a()V
+    invoke-virtual {v0}, Lcom/vk/profile/e/CommunityScreenTracker1;->a()V
 
     return-void
 .end method

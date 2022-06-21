@@ -3,12 +3,12 @@
 .source "UserPresenter.kt"
 
 # interfaces
-.implements Lc/a/z/g;
+.implements Lio/reactivex/functions/Consumer;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/profile/presenter/UserPresenter;->j1()Lc/a/m;
+    value = Lcom/vk/profile/presenter/UserPresenter;->j1()Lio/reactivex/Observable;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -22,7 +22,7 @@
         "Ljava/lang/Object;",
         ">",
         "Ljava/lang/Object;",
-        "Lc/a/z/g<",
+        "Lio/reactivex/functions/Consumer<",
         "Lcom/vtosters/lite/api/ExtendedUserProfile;",
         ">;"
     }
@@ -52,18 +52,18 @@
     .line 1
     iget-object v0, p0, Lcom/vk/profile/presenter/UserPresenter$i;->a:Lcom/vk/profile/presenter/UserPresenter;
 
-    invoke-virtual {v0}, Lcom/vk/profile/presenter/UserPresenter;->W()Lcom/vk/profile/data/d/c;
+    invoke-virtual {v0}, Lcom/vk/profile/presenter/UserPresenter;->W()Lcom/vk/profile/data/d/UserMainSectionStrategy;
 
     move-result-object v0
 
     const-string v1, "it"
 
-    invoke-static {p1, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    invoke-virtual {v0, p1}, Lcom/vk/profile/data/d/c;->a(Lcom/vtosters/lite/api/ExtendedUserProfile;)V
+    invoke-virtual {v0, p1}, Lcom/vk/profile/data/d/UserMainSectionStrategy;->a(Lcom/vtosters/lite/api/ExtendedUserProfile;)V
 
     .line 2
-    invoke-static {p1}, Lcom/vk/profile/utils/d;->g(Lcom/vtosters/lite/api/ExtendedUserProfile;)Lcom/vk/dto/user/UserProfile;
+    invoke-static {p1}, Lcom/vk/profile/utils/ProfileExt;->g(Lcom/vtosters/lite/api/ExtendedUserProfile;)Lcom/vk/dto/user/UserProfile;
 
     move-result-object p1
 

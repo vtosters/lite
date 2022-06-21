@@ -63,12 +63,12 @@
 
     const-string v2, "it.url"
 
-    invoke-static {v0, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    invoke-static {v1, v0}, Lcom/vk/profile/e/f;->d(ILjava/lang/String;)V
+    invoke-static {v1, v0}, Lcom/vk/profile/e/ProfileTracker1;->d(ILjava/lang/String;)V
 
     .line 3
-    sget-object v3, Lcom/vk/common/links/c;->p:Lcom/vk/common/links/c$a;
+    sget-object v3, Lcom/vk/common/links/LinkProcessor;->p:Lcom/vk/common/links/LinkProcessor$a;
 
     iget-object v0, p0, Lcom/vk/profile/adapter/factory/info_items/BaseInfoItemsFactory$customBadges$1$a;->b:Lcom/vk/profile/adapter/factory/info_items/BaseInfoItemsFactory$customBadges$1;
 
@@ -78,7 +78,7 @@
 
     iget-object v5, v0, Lcom/vtosters/lite/api/ExtendedUserProfile$d;->d:Ljava/lang/String;
 
-    invoke-static {v5, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v5, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     const/4 v6, 0x0
 
@@ -86,7 +86,7 @@
 
     const/4 v8, 0x0
 
-    invoke-static/range {v3 .. v8}, Lcom/vk/common/links/c$a;->a(Lcom/vk/common/links/c$a;Landroid/content/Context;Ljava/lang/String;Landroid/os/Bundle;ILjava/lang/Object;)V
+    invoke-static/range {v3 .. v8}, Lcom/vk/common/links/LinkProcessor$a;->a(Lcom/vk/common/links/LinkProcessor$a;Landroid/content/Context;Ljava/lang/String;Landroid/os/Bundle;ILjava/lang/Object;)V
 
     goto :goto_0
 
@@ -106,7 +106,7 @@
 
     const/4 v7, 0x0
 
-    invoke-static/range {v1 .. v7}, Lcom/vk/extensions/a;->a(Lcom/vk/dto/common/Action;Landroid/content/Context;Lcom/vk/dto/newsfeed/entries/NewsEntry;Ljava/lang/String;Ljava/lang/String;ILjava/lang/Object;)Z
+    invoke-static/range {v1 .. v7}, Lcom/vk/extensions/ActionExt;->a(Lcom/vk/dto/common/Action;Landroid/content/Context;Lcom/vk/dto/newsfeed/entries/NewsEntry;Ljava/lang/String;Ljava/lang/String;ILjava/lang/Object;)Z
 
     :goto_0
     return-void

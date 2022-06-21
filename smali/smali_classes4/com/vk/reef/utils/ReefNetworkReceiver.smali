@@ -16,12 +16,12 @@
 
 
 # instance fields
-.field private final a:Lkotlin/jvm/b/b;
+.field private final a:Lkotlin/jvm/b/Functions2;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Lkotlin/jvm/b/b<",
+            "Lkotlin/jvm/b/Functions2<",
             "Ljava/lang/Boolean;",
-            "Lkotlin/m;",
+            "Lkotlin/Unit;",
             ">;"
         }
     .end annotation
@@ -36,22 +36,22 @@
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, v1}, Lcom/vk/reef/utils/ReefNetworkReceiver$a;-><init>(Lkotlin/jvm/internal/i;)V
+    invoke-direct {v0, v1}, Lcom/vk/reef/utils/ReefNetworkReceiver$a;-><init>(Lkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     sput-object v0, Lcom/vk/reef/utils/ReefNetworkReceiver;->b:Lcom/vk/reef/utils/ReefNetworkReceiver$a;
 
     return-void
 .end method
 
-.method public constructor <init>(Lkotlin/jvm/b/b;)V
+.method public constructor <init>(Lkotlin/jvm/b/Functions2;)V
     .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lkotlin/jvm/b/b<",
+            "Lkotlin/jvm/b/Functions2<",
             "-",
             "Ljava/lang/Boolean;",
-            "Lkotlin/m;",
+            "Lkotlin/Unit;",
             ">;)V"
         }
     .end annotation
@@ -59,7 +59,7 @@
     .line 1
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
 
-    iput-object p1, p0, Lcom/vk/reef/utils/ReefNetworkReceiver;->a:Lkotlin/jvm/b/b;
+    iput-object p1, p0, Lcom/vk/reef/utils/ReefNetworkReceiver;->a:Lkotlin/jvm/b/Functions2;
 
     return-void
 .end method
@@ -86,7 +86,7 @@
 
     const-string v0, "android.net.conn.CONNECTIVITY_CHANGE"
 
-    invoke-static {v0, p1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v0, p1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result p1
 
@@ -104,13 +104,13 @@
     xor-int/lit8 p1, p1, 0x1
 
     .line 4
-    iget-object p2, p0, Lcom/vk/reef/utils/ReefNetworkReceiver;->a:Lkotlin/jvm/b/b;
+    iget-object p2, p0, Lcom/vk/reef/utils/ReefNetworkReceiver;->a:Lkotlin/jvm/b/Functions2;
 
     invoke-static {p1}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
 
     move-result-object p1
 
-    invoke-interface {p2, p1}, Lkotlin/jvm/b/b;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {p2, p1}, Lkotlin/jvm/b/Functions2;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
 
     :cond_1
     return-void

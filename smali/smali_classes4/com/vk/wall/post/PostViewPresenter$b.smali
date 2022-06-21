@@ -3,7 +3,7 @@
 .source "PostViewPresenter.kt"
 
 # interfaces
-.implements Lc/a/z/g;
+.implements Lio/reactivex/functions/Consumer;
 
 
 # annotations
@@ -22,7 +22,7 @@
         "Ljava/lang/Object;",
         ">",
         "Ljava/lang/Object;",
-        "Lc/a/z/g<",
+        "Lio/reactivex/functions/Consumer<",
         "Ljava/lang/Integer;",
         ">;"
     }
@@ -87,25 +87,25 @@
 
     const/4 v1, 0x0
 
-    invoke-static {p1, v3, v0, v1}, Lcom/vk/core/util/k1;->a(Ljava/lang/CharSequence;ZILjava/lang/Object;)V
+    invoke-static {p1, v3, v0, v1}, Lcom/vk/core/util/ToastUtils;->a(Ljava/lang/CharSequence;ZILjava/lang/Object;)V
 
     .line 3
-    new-instance p1, Lcom/vk/libvideo/y/l;
+    new-instance p1, Lcom/vk/libvideo/y/VideoEvents6;
 
     iget-object v0, p0, Lcom/vk/wall/post/PostViewPresenter$b;->a:Lcom/vk/dto/common/VideoFile;
 
-    invoke-direct {p1, v0}, Lcom/vk/libvideo/y/l;-><init>(Lcom/vk/dto/common/VideoFile;)V
+    invoke-direct {p1, v0}, Lcom/vk/libvideo/y/VideoEvents6;-><init>(Lcom/vk/dto/common/VideoFile;)V
 
-    invoke-static {p1}, Lcom/vk/libvideo/y/m;->a(Lcom/vk/libvideo/y/a;)V
+    invoke-static {p1}, Lcom/vk/libvideo/y/VideoEventBus;->a(Lcom/vk/libvideo/y/VideoEvents1;)V
 
     .line 4
-    new-instance p1, Lcom/vk/libvideo/y/b;
+    new-instance p1, Lcom/vk/libvideo/y/VideoEvents5;
 
     iget-object v0, p0, Lcom/vk/wall/post/PostViewPresenter$b;->a:Lcom/vk/dto/common/VideoFile;
 
-    invoke-direct {p1, v0}, Lcom/vk/libvideo/y/b;-><init>(Lcom/vk/dto/common/VideoFile;)V
+    invoke-direct {p1, v0}, Lcom/vk/libvideo/y/VideoEvents5;-><init>(Lcom/vk/dto/common/VideoFile;)V
 
-    invoke-static {p1}, Lcom/vk/libvideo/y/m;->a(Lcom/vk/libvideo/y/a;)V
+    invoke-static {p1}, Lcom/vk/libvideo/y/VideoEventBus;->a(Lcom/vk/libvideo/y/VideoEvents1;)V
 
     return-void
 .end method

@@ -24,7 +24,7 @@
     return-void
 .end method
 
-.method public synthetic constructor <init>(Lkotlin/jvm/internal/i;)V
+.method public synthetic constructor <init>(Lkotlin/jvm/internal/DefaultConstructorMarker;)V
     .locals 0
 
     .line 2
@@ -53,7 +53,7 @@
 
     move-object v4, p3
 
-    invoke-direct/range {v0 .. v5}, Lcom/vk/api/stories/StoriesGetUploadServer;-><init>(Ljava/lang/String;Lcom/vk/dto/stories/model/CommonUploadParams;Lcom/vk/dto/stories/model/StoryUploadParams;Ljava/lang/String;Lkotlin/jvm/internal/i;)V
+    invoke-direct/range {v0 .. v5}, Lcom/vk/api/stories/StoriesGetUploadServer;-><init>(Ljava/lang/String;Lcom/vk/dto/stories/model/CommonUploadParams;Lcom/vk/dto/stories/model/StoryUploadParams;Ljava/lang/String;Lkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     return-object v6
 .end method
@@ -76,7 +76,7 @@
 
     move-object v4, p3
 
-    invoke-direct/range {v0 .. v5}, Lcom/vk/api/stories/StoriesGetUploadServer;-><init>(Ljava/lang/String;Lcom/vk/dto/stories/model/CommonUploadParams;Lcom/vk/dto/stories/model/StoryUploadParams;Ljava/lang/String;Lkotlin/jvm/internal/i;)V
+    invoke-direct/range {v0 .. v5}, Lcom/vk/api/stories/StoriesGetUploadServer;-><init>(Ljava/lang/String;Lcom/vk/dto/stories/model/CommonUploadParams;Lcom/vk/dto/stories/model/StoryUploadParams;Ljava/lang/String;Lkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     return-object v6
 .end method

@@ -3,7 +3,7 @@
 .source "CommunityNotificationSettingsFragment.kt"
 
 # interfaces
-.implements Lc/a/z/g;
+.implements Lio/reactivex/functions/Consumer;
 
 
 # annotations
@@ -22,7 +22,7 @@
         "Ljava/lang/Object;",
         ">",
         "Ljava/lang/Object;",
-        "Lc/a/z/g<",
+        "Lio/reactivex/functions/Consumer<",
         "Ljava/lang/Boolean;",
         ">;"
     }
@@ -64,7 +64,7 @@
 
     invoke-direct {v0}, Landroid/content/Intent;-><init>()V
 
-    sget-object v1, Lcom/vk/navigation/q;->h:Ljava/lang/String;
+    sget-object v1, Lcom/vk/navigation/NavigatorKeys;->h:Ljava/lang/String;
 
     iget-object v2, p0, Lcom/vk/notifications/settings/CommunityNotificationSettingsFragment$DisableItem$DisableViewHolder$1$1$1;->a:Lcom/vk/notifications/settings/CommunityNotificationSettingsFragment$DisableItem$DisableViewHolder$1$1;
 
@@ -86,7 +86,7 @@
 
     const-string v1, "Intent().putExtra(NavigatorKeys.ID, gid)"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     const/4 v1, -0x1
 
@@ -114,7 +114,7 @@
 
     const-wide/16 v1, 0x40
 
-    invoke-virtual {p1, v0, v1, v2}, Lcom/vk/core/fragments/b;->b(Lkotlin/jvm/b/a;J)V
+    invoke-virtual {p1, v0, v1, v2}, Lcom/vk/core/fragments/BaseFragment1;->b(Lkotlin/jvm/b/Functions;J)V
 
     return-void
 .end method

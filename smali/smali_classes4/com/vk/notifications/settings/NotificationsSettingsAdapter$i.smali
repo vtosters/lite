@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/notifications/settings/NotificationsSettingsAdapter;->a(Lb/h/c/q/k$a;)V
+    value = Lcom/vk/notifications/settings/NotificationsSettingsAdapter;->a(Lcom/vk/api/notifications/NotificationsGetSettings$a;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -38,11 +38,11 @@
     .locals 1
 
     .line 1
-    new-instance p1, Lcom/vk/navigation/o;
+    new-instance p1, Lcom/vk/navigation/Navigator;
 
-    const-class v0, Lcom/vtosters/lite/fragments/a2;
+    const-class v0, Lcom/vtosters/lite/general/fragments/SettingsNotificationsFragment;
 
-    invoke-direct {p1, v0}, Lcom/vk/navigation/o;-><init>(Ljava/lang/Class;)V
+    invoke-direct {p1, v0}, Lcom/vk/navigation/Navigator;-><init>(Ljava/lang/Class;)V
 
     iget-object v0, p0, Lcom/vk/notifications/settings/NotificationsSettingsAdapter$i;->a:Lcom/vk/notifications/settings/NotificationsSettingsAdapter;
 
@@ -50,7 +50,7 @@
 
     move-result-object v0
 
-    invoke-virtual {p1, v0}, Lcom/vk/navigation/o;->a(Landroid/content/Context;)V
+    invoke-virtual {p1, v0}, Lcom/vk/navigation/Navigator;->a(Landroid/content/Context;)V
 
     return-void
 .end method

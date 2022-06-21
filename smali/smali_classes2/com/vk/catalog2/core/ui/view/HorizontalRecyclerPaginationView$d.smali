@@ -15,7 +15,7 @@
 
 
 # direct methods
-.method public constructor <init>(Landroid/view/View;Lcom/vk/lists/r;)V
+.method public constructor <init>(Landroid/view/View;Lcom/vk/lists/OnRetryClickListener;)V
     .locals 2
 
     .line 1
@@ -24,9 +24,9 @@
     .line 2
     move-object v0, p1
 
-    check-cast v0, Lcom/vk/lists/a;
+    check-cast v0, Lcom/vk/lists/AbstractErrorView;
 
-    invoke-virtual {v0, p2}, Lcom/vk/lists/a;->setRetryClickListener(Lcom/vk/lists/r;)V
+    invoke-virtual {v0, p2}, Lcom/vk/lists/AbstractErrorView;->setRetryClickListener(Lcom/vk/lists/OnRetryClickListener;)V
 
     .line 3
     new-instance p2, Landroidx/recyclerview/widget/RecyclerView$LayoutParams;

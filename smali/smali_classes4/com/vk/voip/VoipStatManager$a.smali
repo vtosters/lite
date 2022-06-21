@@ -71,12 +71,12 @@
 
 
 # virtual methods
-.method public final a(Lkotlin/jvm/b/b;)I
+.method public final a(Lkotlin/jvm/b/Functions2;)I
     .locals 2
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lkotlin/jvm/b/b<",
+            "Lkotlin/jvm/b/Functions2<",
             "-",
             "Lcom/vk/voip/VoipStatManager$VoipEvent;",
             "Ljava/lang/Boolean;",
@@ -109,7 +109,7 @@
 
     move-result-object v1
 
-    invoke-interface {p1, v1}, Lkotlin/jvm/b/b;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {p1, v1}, Lkotlin/jvm/b/Functions2;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v1
 
@@ -228,7 +228,7 @@
     .line 5
     iget-object v0, p0, Lcom/vk/voip/VoipStatManager$a;->a:Ljava/util/List;
 
-    invoke-static {v0, p1}, Lcom/vk/core/extensions/c;->a(Ljava/util/Collection;Ljava/util/Collection;)Z
+    invoke-static {v0, p1}, Lcom/vk/core/extensions/CollectionExt;->a(Ljava/util/Collection;Ljava/util/Collection;)Z
 
     move-result p1
 

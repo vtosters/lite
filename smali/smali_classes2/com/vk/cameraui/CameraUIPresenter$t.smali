@@ -3,7 +3,7 @@
 .source "CameraUIPresenter.kt"
 
 # interfaces
-.implements Lc/a/z/g;
+.implements Lio/reactivex/functions/Consumer;
 
 
 # annotations
@@ -22,9 +22,9 @@
         "Ljava/lang/Object;",
         ">",
         "Ljava/lang/Object;",
-        "Lc/a/z/g<",
+        "Lio/reactivex/functions/Consumer<",
         "Ljava/util/ArrayList<",
-        "Lcom/vk/mediastore/system/a;",
+        "Lcom/vk/mediastore/system/AlbumEntry;",
         ">;>;"
     }
 .end annotation
@@ -57,7 +57,7 @@
         value = {
             "(",
             "Ljava/util/ArrayList<",
-            "Lcom/vk/mediastore/system/a;",
+            "Lcom/vk/mediastore/system/AlbumEntry;",
             ">;)V"
         }
     .end annotation
@@ -81,11 +81,11 @@
 
     const-string v3, "it[0]"
 
-    invoke-static {v2, v3}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v2, v3}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    check-cast v2, Lcom/vk/mediastore/system/a;
+    check-cast v2, Lcom/vk/mediastore/system/AlbumEntry;
 
-    invoke-virtual {v2}, Lcom/vk/mediastore/system/a;->d()Lcom/vk/mediastore/system/MediaStoreEntry;
+    invoke-virtual {v2}, Lcom/vk/mediastore/system/AlbumEntry;->d()Lcom/vk/mediastore/system/MediaStoreEntry;
 
     move-result-object v2
 
@@ -98,11 +98,11 @@
 
     move-result-object p1
 
-    invoke-static {p1, v3}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v3}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    check-cast p1, Lcom/vk/mediastore/system/a;
+    check-cast p1, Lcom/vk/mediastore/system/AlbumEntry;
 
-    invoke-virtual {p1}, Lcom/vk/mediastore/system/a;->d()Lcom/vk/mediastore/system/MediaStoreEntry;
+    invoke-virtual {p1}, Lcom/vk/mediastore/system/AlbumEntry;->d()Lcom/vk/mediastore/system/MediaStoreEntry;
 
     move-result-object p1
 
@@ -128,7 +128,7 @@
 
     const-string v2, "path"
 
-    invoke-static {p1, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-interface {v1, p1}, Lcom/vk/cameraui/CameraUI$e;->a(Landroid/net/Uri;)V
 
@@ -172,7 +172,7 @@
     :goto_0
     iget-object p1, p0, Lcom/vk/cameraui/CameraUIPresenter$t;->a:Lcom/vk/cameraui/CameraUIPresenter;
 
-    invoke-static {p1, v0}, Lcom/vk/cameraui/CameraUIPresenter;->d(Lcom/vk/cameraui/CameraUIPresenter;Lio/reactivex/disposables/b;)V
+    invoke-static {p1, v0}, Lcom/vk/cameraui/CameraUIPresenter;->d(Lcom/vk/cameraui/CameraUIPresenter;Lio/reactivex/disposables/Disposable;)V
 
     return-void
 .end method

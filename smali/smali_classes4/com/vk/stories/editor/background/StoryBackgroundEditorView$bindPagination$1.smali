@@ -3,12 +3,12 @@
 .source "StoryBackgroundEditorView.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/b;
+.implements Lkotlin/jvm/b/Functions2;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/stories/editor/background/StoryBackgroundEditorView;->a(Lcom/vk/lists/o;Lcom/vk/lists/t$k;)Lcom/vk/lists/t;
+    value = Lcom/vk/stories/editor/background/StoryBackgroundEditorView;->a(Lcom/vk/lists/ListDataSet;Lcom/vk/lists/PaginationHelper$k;)Lcom/vk/lists/PaginationHelper;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -19,9 +19,9 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/b<",
-        "Lcom/vk/stories/editor/background/g/c;",
-        "Lkotlin/m;",
+        "Lkotlin/jvm/b/Functions2<",
+        "Lcom/vk/stories/editor/background/g/StoryBackgroundItem;",
+        "Lkotlin/Unit;",
         ">;"
     }
 .end annotation
@@ -46,13 +46,13 @@
 
 
 # virtual methods
-.method public final a(Lcom/vk/stories/editor/background/g/c;)V
+.method public final a(Lcom/vk/stories/editor/background/g/StoryBackgroundItem;)V
     .locals 4
 
     .line 1
     iget-object v0, p0, Lcom/vk/stories/editor/background/StoryBackgroundEditorView$bindPagination$1;->this$0:Lcom/vk/stories/editor/background/StoryBackgroundEditorView;
 
-    invoke-virtual {v0}, Lcom/vk/stories/editor/background/StoryBackgroundEditorView;->getPresenter()Lcom/vk/stories/editor/background/b;
+    invoke-virtual {v0}, Lcom/vk/stories/editor/background/StoryBackgroundEditorView;->getPresenter()Lcom/vk/stories/editor/background/StoryBackgroundEditorContract2;
 
     move-result-object v0
 
@@ -64,7 +64,7 @@
 
     const/4 v3, 0x0
 
-    invoke-static {v0, p1, v1, v2, v3}, Lcom/vk/stories/editor/background/b$a;->a(Lcom/vk/stories/editor/background/b;Lcom/vk/stories/editor/background/g/c;ZILjava/lang/Object;)V
+    invoke-static {v0, p1, v1, v2, v3}, Lcom/vk/stories/editor/background/StoryBackgroundEditorContract$a;->a(Lcom/vk/stories/editor/background/StoryBackgroundEditorContract2;Lcom/vk/stories/editor/background/g/StoryBackgroundItem;ZILjava/lang/Object;)V
 
     :cond_0
     return-void
@@ -74,11 +74,11 @@
     .locals 0
 
     .line 1
-    check-cast p1, Lcom/vk/stories/editor/background/g/c;
+    check-cast p1, Lcom/vk/stories/editor/background/g/StoryBackgroundItem;
 
-    invoke-virtual {p0, p1}, Lcom/vk/stories/editor/background/StoryBackgroundEditorView$bindPagination$1;->a(Lcom/vk/stories/editor/background/g/c;)V
+    invoke-virtual {p0, p1}, Lcom/vk/stories/editor/background/StoryBackgroundEditorView$bindPagination$1;->a(Lcom/vk/stories/editor/background/g/StoryBackgroundItem;)V
 
-    sget-object p1, Lkotlin/m;->a:Lkotlin/m;
+    sget-object p1, Lkotlin/Unit;->a:Lkotlin/Unit;
 
     return-object p1
 .end method

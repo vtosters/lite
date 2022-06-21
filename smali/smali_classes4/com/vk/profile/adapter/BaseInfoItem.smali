@@ -24,7 +24,7 @@
 
 .field private f:I
 
-.field private g:Lcom/vk/libvideo/autoplay/a;
+.field private g:Lcom/vk/libvideo/autoplay/AutoPlay;
 
 .field private h:Ljava/lang/Object;
 
@@ -41,11 +41,11 @@
 
 
 # virtual methods
-.method public final F()Lcom/vk/libvideo/autoplay/a;
+.method public final F()Lcom/vk/libvideo/autoplay/AutoPlay;
     .locals 1
 
     .line 1
-    iget-object v0, p0, Lcom/vk/profile/adapter/BaseInfoItem;->g:Lcom/vk/libvideo/autoplay/a;
+    iget-object v0, p0, Lcom/vk/profile/adapter/BaseInfoItem;->g:Lcom/vk/libvideo/autoplay/AutoPlay;
 
     return-object v0
 .end method
@@ -124,13 +124,13 @@
 .method public abstract O()I
 .end method
 
-.method public abstract a(Landroid/view/ViewGroup;)Lcom/vtosters/lite/ui/b0/i;
+.method public abstract a(Landroid/view/ViewGroup;)Lcom/vtosters/lite/ui/holder/RecyclerHolder;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
             "Landroid/view/ViewGroup;",
             ")",
-            "Lcom/vtosters/lite/ui/b0/i<",
+            "Lcom/vtosters/lite/ui/holder/RecyclerHolder<",
             "+",
             "Lcom/vk/profile/adapter/BaseInfoItem;",
             ">;"

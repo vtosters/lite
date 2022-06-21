@@ -37,7 +37,7 @@
 .method public synthetic d(Ljava/lang/String;)V
     .locals 0
 
-    invoke-static {p0, p1}, Lcom/vk/stories/x0;->a(Lcom/vk/stories/StoryViewDialog$l;Ljava/lang/String;)V
+    invoke-static {p0, p1}, Lcom/vk/stories/StoryViewDialog1;->a(Lcom/vk/stories/StoryViewDialog$l;Ljava/lang/String;)V
 
     return-void
 .end method

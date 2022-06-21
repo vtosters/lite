@@ -3,7 +3,7 @@
 .source "QRViewUtils.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/b;
+.implements Lkotlin/jvm/b/Functions2;
 
 
 # annotations
@@ -19,9 +19,9 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/b<",
+        "Lkotlin/jvm/b/Functions2<",
         "Landroid/view/View;",
-        "Lkotlin/m;",
+        "Lkotlin/Unit;",
         ">;"
     }
 .end annotation
@@ -70,11 +70,11 @@
 
     iget-object p1, p1, Lkotlin/jvm/internal/Ref$ObjectRef;->element:Ljava/lang/Object;
 
-    check-cast p1, Lcom/vk/core/dialogs/bottomsheet/e;
+    check-cast p1, Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet;
 
     if-eqz p1, :cond_0
 
-    invoke-virtual {p1}, Lcom/vk/core/dialogs/bottomsheet/e;->D4()Landroid/widget/TextView;
+    invoke-virtual {p1}, Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet;->D4()Landroid/widget/TextView;
 
     move-result-object p1
 
@@ -113,7 +113,7 @@
 
     invoke-virtual {p0, p1}, Lcom/vk/qrcode/QRViewUtils$forAddressBook$$inlined$apply$lambda$2;->a(Landroid/view/View;)V
 
-    sget-object p1, Lkotlin/m;->a:Lkotlin/m;
+    sget-object p1, Lkotlin/Unit;->a:Lkotlin/Unit;
 
     return-object p1
 .end method

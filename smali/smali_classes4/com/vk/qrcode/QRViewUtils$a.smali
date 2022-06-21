@@ -17,11 +17,11 @@
 # instance fields
 .field private final a:Ljava/lang/String;
 
-.field private final b:Lkotlin/jvm/b/a;
+.field private final b:Lkotlin/jvm/b/Functions;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Lkotlin/jvm/b/a<",
-            "Lkotlin/m;",
+            "Lkotlin/jvm/b/Functions<",
+            "Lkotlin/Unit;",
             ">;"
         }
     .end annotation
@@ -31,14 +31,14 @@
 
 
 # direct methods
-.method public constructor <init>(Ljava/lang/String;Lkotlin/jvm/b/a;Z)V
+.method public constructor <init>(Ljava/lang/String;Lkotlin/jvm/b/Functions;Z)V
     .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
             "Ljava/lang/String;",
-            "Lkotlin/jvm/b/a<",
-            "Lkotlin/m;",
+            "Lkotlin/jvm/b/Functions<",
+            "Lkotlin/Unit;",
             ">;Z)V"
         }
     .end annotation
@@ -48,7 +48,7 @@
 
     iput-object p1, p0, Lcom/vk/qrcode/QRViewUtils$a;->a:Ljava/lang/String;
 
-    iput-object p2, p0, Lcom/vk/qrcode/QRViewUtils$a;->b:Lkotlin/jvm/b/a;
+    iput-object p2, p0, Lcom/vk/qrcode/QRViewUtils$a;->b:Lkotlin/jvm/b/Functions;
 
     iput-boolean p3, p0, Lcom/vk/qrcode/QRViewUtils$a;->c:Z
 
@@ -57,19 +57,19 @@
 
 
 # virtual methods
-.method public final a()Lkotlin/jvm/b/a;
+.method public final a()Lkotlin/jvm/b/Functions;
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "()",
-            "Lkotlin/jvm/b/a<",
-            "Lkotlin/m;",
+            "Lkotlin/jvm/b/Functions<",
+            "Lkotlin/Unit;",
             ">;"
         }
     .end annotation
 
     .line 1
-    iget-object v0, p0, Lcom/vk/qrcode/QRViewUtils$a;->b:Lkotlin/jvm/b/a;
+    iget-object v0, p0, Lcom/vk/qrcode/QRViewUtils$a;->b:Lkotlin/jvm/b/Functions;
 
     return-object v0
 .end method
@@ -107,17 +107,17 @@
 
     iget-object v1, p1, Lcom/vk/qrcode/QRViewUtils$a;->a:Ljava/lang/String;
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    iget-object v0, p0, Lcom/vk/qrcode/QRViewUtils$a;->b:Lkotlin/jvm/b/a;
+    iget-object v0, p0, Lcom/vk/qrcode/QRViewUtils$a;->b:Lkotlin/jvm/b/Functions;
 
-    iget-object v1, p1, Lcom/vk/qrcode/QRViewUtils$a;->b:Lkotlin/jvm/b/a;
+    iget-object v1, p1, Lcom/vk/qrcode/QRViewUtils$a;->b:Lkotlin/jvm/b/Functions;
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v0
 
@@ -164,7 +164,7 @@
     :goto_0
     mul-int/lit8 v0, v0, 0x1f
 
-    iget-object v2, p0, Lcom/vk/qrcode/QRViewUtils$a;->b:Lkotlin/jvm/b/a;
+    iget-object v2, p0, Lcom/vk/qrcode/QRViewUtils$a;->b:Lkotlin/jvm/b/Functions;
 
     if-eqz v2, :cond_1
 
@@ -208,7 +208,7 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget-object v1, p0, Lcom/vk/qrcode/QRViewUtils$a;->b:Lkotlin/jvm/b/a;
+    iget-object v1, p0, Lcom/vk/qrcode/QRViewUtils$a;->b:Lkotlin/jvm/b/Functions;
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 

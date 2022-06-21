@@ -21,12 +21,12 @@
 
 
 # instance fields
-.field private final B:Lkotlin/jvm/b/b;
+.field private final B:Lkotlin/jvm/b/Functions2;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Lkotlin/jvm/b/b<",
+            "Lkotlin/jvm/b/Functions2<",
             "Lcom/vk/profile/ui/header/BaseHeaderView;",
-            "Lkotlin/m;",
+            "Lkotlin/Unit;",
             ">;"
         }
     .end annotation
@@ -36,15 +36,15 @@
 
 
 # direct methods
-.method public constructor <init>(Lcom/vk/profile/ui/user/AdministratorProfileFragment;Lkotlin/jvm/b/b;)V
+.method public constructor <init>(Lcom/vk/profile/ui/user/AdministratorProfileFragment;Lkotlin/jvm/b/Functions2;)V
     .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lkotlin/jvm/b/b<",
+            "Lkotlin/jvm/b/Functions2<",
             "-",
             "Lcom/vk/profile/ui/header/BaseHeaderView;",
-            "Lkotlin/m;",
+            "Lkotlin/Unit;",
             ">;)V"
         }
     .end annotation
@@ -54,7 +54,7 @@
 
     invoke-direct {p0}, Lcom/vk/profile/adapter/BaseInfoItem;-><init>()V
 
-    iput-object p2, p0, Lcom/vk/profile/ui/user/AdministratorProfileFragment$a;->B:Lkotlin/jvm/b/b;
+    iput-object p2, p0, Lcom/vk/profile/ui/user/AdministratorProfileFragment$a;->B:Lkotlin/jvm/b/Functions2;
 
     return-void
 .end method
@@ -71,7 +71,7 @@
 
     const-string v1, "parent.context"
 
-    invoke-static {p1, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {v0, p1}, Lcom/vk/profile/ui/header/UserHeaderView$a;->a(Landroid/content/Context;)Lcom/vk/profile/ui/header/UserHeaderView;
 
@@ -89,9 +89,9 @@
     invoke-virtual {p1, v0}, Landroid/widget/LinearLayout;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
 
     .line 3
-    iget-object v0, p0, Lcom/vk/profile/ui/user/AdministratorProfileFragment$a;->B:Lkotlin/jvm/b/b;
+    iget-object v0, p0, Lcom/vk/profile/ui/user/AdministratorProfileFragment$a;->B:Lkotlin/jvm/b/Functions2;
 
-    invoke-interface {v0, p1}, Lkotlin/jvm/b/b;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v0, p1}, Lkotlin/jvm/b/Functions2;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
 
     return-object p1
 .end method
@@ -102,7 +102,7 @@
     .locals 1
 
     .line 1
-    sget v0, Lcom/vk/profile/ui/c;->W0:I
+    sget v0, Lcom/vk/profile/ui/BaseProfileFragment;->W0:I
 
     if-nez v0, :cond_0
 
@@ -132,7 +132,7 @@
     return-object v0
 .end method
 
-.method public bridge synthetic a(Landroid/view/ViewGroup;)Lcom/vtosters/lite/ui/b0/i;
+.method public bridge synthetic a(Landroid/view/ViewGroup;)Lcom/vtosters/lite/ui/holder/RecyclerHolder;
     .locals 0
 
     .line 1

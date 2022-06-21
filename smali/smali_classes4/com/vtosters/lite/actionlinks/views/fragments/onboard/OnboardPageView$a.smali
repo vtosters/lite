@@ -3,7 +3,7 @@
 .source "OnboardPageView.kt"
 
 # interfaces
-.implements Lc/a/z/g;
+.implements Lio/reactivex/functions/Consumer;
 
 
 # annotations
@@ -22,7 +22,7 @@
         "Ljava/lang/Object;",
         ">",
         "Ljava/lang/Object;",
-        "Lc/a/z/g<",
+        "Lio/reactivex/functions/Consumer<",
         "Landroid/graphics/Bitmap;",
         ">;"
     }
@@ -54,7 +54,7 @@
 
     const/4 v1, 0x0
 
-    invoke-virtual {v0, v1}, Lcom/vtosters/lite/actionlinks/views/fragments/onboard/OnboardPageView;->d(Lio/reactivex/disposables/b;)V
+    invoke-virtual {v0, v1}, Lcom/vtosters/lite/actionlinks/views/fragments/onboard/OnboardPageView;->d(Lio/reactivex/disposables/Disposable;)V
 
     .line 2
     iget-object v0, p0, Lcom/vtosters/lite/actionlinks/views/fragments/onboard/OnboardPageView$a;->a:Lcom/vtosters/lite/actionlinks/views/fragments/onboard/OnboardPageView;

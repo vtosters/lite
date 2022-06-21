@@ -3,12 +3,12 @@
 .source "QRViewUtils.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/a;
+.implements Lkotlin/jvm/b/Functions;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/qrcode/QRViewUtils;->a(Landroid/app/Activity;Lcom/vk/qrcode/QRParser;Lcom/vk/qrcode/m;)V
+    value = Lcom/vk/qrcode/QRViewUtils;->a(Landroid/app/Activity;Lcom/vk/qrcode/QRParser;Lcom/vk/qrcode/QRTypes5;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -19,15 +19,15 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/a<",
-        "Lkotlin/m;",
+        "Lkotlin/jvm/b/Functions<",
+        "Lkotlin/Unit;",
         ">;"
     }
 .end annotation
 
 
 # instance fields
-.field final synthetic $action:Lcom/vk/qrcode/m;
+.field final synthetic $action:Lcom/vk/qrcode/QRTypes5;
 
 .field final synthetic $context:Landroid/app/Activity;
 
@@ -35,10 +35,10 @@
 
 
 # direct methods
-.method constructor <init>(Lcom/vk/qrcode/m;Landroid/app/Activity;Lcom/vk/qrcode/QRParser;)V
+.method constructor <init>(Lcom/vk/qrcode/QRTypes5;Landroid/app/Activity;Lcom/vk/qrcode/QRParser;)V
     .locals 0
 
-    iput-object p1, p0, Lcom/vk/qrcode/QRViewUtils$forTel$addToPhoneAction$1;->$action:Lcom/vk/qrcode/m;
+    iput-object p1, p0, Lcom/vk/qrcode/QRViewUtils$forTel$addToPhoneAction$1;->$action:Lcom/vk/qrcode/QRTypes5;
 
     iput-object p2, p0, Lcom/vk/qrcode/QRViewUtils$forTel$addToPhoneAction$1;->$context:Landroid/app/Activity;
 
@@ -59,7 +59,7 @@
     .line 1
     invoke-virtual {p0}, Lcom/vk/qrcode/QRViewUtils$forTel$addToPhoneAction$1;->invoke()V
 
-    sget-object v0, Lkotlin/m;->a:Lkotlin/m;
+    sget-object v0, Lkotlin/Unit;->a:Lkotlin/Unit;
 
     return-object v0
 .end method
@@ -80,9 +80,9 @@
     invoke-virtual {v0, v1}, Landroid/content/Intent;->setType(Ljava/lang/String;)Landroid/content/Intent;
 
     .line 4
-    iget-object v1, p0, Lcom/vk/qrcode/QRViewUtils$forTel$addToPhoneAction$1;->$action:Lcom/vk/qrcode/m;
+    iget-object v1, p0, Lcom/vk/qrcode/QRViewUtils$forTel$addToPhoneAction$1;->$action:Lcom/vk/qrcode/QRTypes5;
 
-    invoke-virtual {v1}, Lcom/vk/qrcode/m;->j()Lcom/google/zxing/client/result/TelParsedResult;
+    invoke-virtual {v1}, Lcom/vk/qrcode/QRTypes5;->j()Lcom/google/zxing/client/result/TelParsedResult;
 
     move-result-object v1
 

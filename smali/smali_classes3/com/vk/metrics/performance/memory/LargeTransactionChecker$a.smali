@@ -48,7 +48,7 @@
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, v1}, Lcom/vk/metrics/performance/memory/LargeTransactionChecker$a$a;-><init>(Lkotlin/jvm/internal/i;)V
+    invoke-direct {v0, v1}, Lcom/vk/metrics/performance/memory/LargeTransactionChecker$a$a;-><init>(Lkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     sput-object v0, Lcom/vk/metrics/performance/memory/LargeTransactionChecker$a;->c:Lcom/vk/metrics/performance/memory/LargeTransactionChecker$a$a;
 
@@ -79,7 +79,7 @@
     return-void
 .end method
 
-.method public synthetic constructor <init>(IILkotlin/jvm/internal/i;)V
+.method public synthetic constructor <init>(IILkotlin/jvm/internal/DefaultConstructorMarker;)V
     .locals 0
 
     and-int/lit8 p2, p2, 0x1
@@ -219,7 +219,7 @@
 
     const-string v0, "result.toString()"
 
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     return-object p1
 .end method

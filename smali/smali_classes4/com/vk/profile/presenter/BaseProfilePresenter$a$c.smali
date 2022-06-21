@@ -3,7 +3,7 @@
 .source "BaseProfilePresenter.kt"
 
 # interfaces
-.implements Lc/a/z/g;
+.implements Lio/reactivex/functions/Consumer;
 
 
 # annotations
@@ -22,7 +22,7 @@
         "Ljava/lang/Object;",
         ">",
         "Ljava/lang/Object;",
-        "Lc/a/z/g<",
+        "Lio/reactivex/functions/Consumer<",
         "Lcom/vk/dto/common/data/VKList<",
         "Lcom/vk/dto/photo/Photo;",
         ">;>;"
@@ -85,7 +85,7 @@
     .line 3
     iget-object v0, p0, Lcom/vk/profile/presenter/BaseProfilePresenter$a$c;->a:Lcom/vk/profile/presenter/BaseProfilePresenter$a;
 
-    invoke-virtual {v0}, Lcom/vk/profile/presenter/BaseProfilePresenter$a;->h()Lcom/vk/bridges/p$d;
+    invoke-virtual {v0}, Lcom/vk/profile/presenter/BaseProfilePresenter$a;->h()Lcom/vk/bridges/ImageViewer$d;
 
     move-result-object v0
 
@@ -93,9 +93,9 @@
 
     const-string v1, "it"
 
-    invoke-static {p1, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    invoke-interface {v0, p1}, Lcom/vk/bridges/p$d;->a(Ljava/util/List;)V
+    invoke-interface {v0, p1}, Lcom/vk/bridges/ImageViewer$d;->a(Ljava/util/List;)V
 
     :cond_0
     return-void

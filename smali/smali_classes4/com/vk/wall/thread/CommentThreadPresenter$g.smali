@@ -3,12 +3,12 @@
 .source "CommentThreadPresenter.kt"
 
 # interfaces
-.implements Lc/a/z/g;
+.implements Lio/reactivex/functions/Consumer;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/wall/thread/CommentThreadPresenter;->a(Lc/a/m;Lcom/vk/lists/t;)V
+    value = Lcom/vk/wall/thread/CommentThreadPresenter;->a(Lio/reactivex/Observable;Lcom/vk/lists/PaginationHelper;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -22,7 +22,7 @@
         "Ljava/lang/Object;",
         ">",
         "Ljava/lang/Object;",
-        "Lc/a/z/g<",
+        "Lio/reactivex/functions/Consumer<",
         "Ljava/lang/Throwable;",
         ">;"
     }
@@ -52,11 +52,11 @@
     .line 1
     iget-object v0, p0, Lcom/vk/wall/thread/CommentThreadPresenter$g;->a:Lcom/vk/wall/thread/CommentThreadPresenter;
 
-    invoke-virtual {v0}, Lcom/vk/wall/thread/CommentThreadPresenter;->G()Lcom/vk/wall/f;
+    invoke-virtual {v0}, Lcom/vk/wall/thread/CommentThreadPresenter;->G()Lcom/vk/wall/CommentsListContract2;
 
     move-result-object v0
 
-    invoke-interface {v0}, Lcom/vk/wall/f;->J2()V
+    invoke-interface {v0}, Lcom/vk/wall/CommentsListContract2;->J2()V
 
     .line 2
     instance-of v0, p1, Lcom/vk/api/sdk/exceptions/VKApiExecutionException;
@@ -76,11 +76,11 @@
     .line 3
     iget-object p1, p0, Lcom/vk/wall/thread/CommentThreadPresenter$g;->a:Lcom/vk/wall/thread/CommentThreadPresenter;
 
-    invoke-virtual {p1}, Lcom/vk/wall/thread/CommentThreadPresenter;->G()Lcom/vk/wall/f;
+    invoke-virtual {p1}, Lcom/vk/wall/thread/CommentThreadPresenter;->G()Lcom/vk/wall/CommentsListContract2;
 
     move-result-object p1
 
-    invoke-interface {p1}, Lcom/vk/wall/f;->k3()V
+    invoke-interface {p1}, Lcom/vk/wall/CommentsListContract2;->k3()V
 
     :cond_0
     return-void

@@ -103,7 +103,7 @@
 
     iget-object v1, p1, Lcom/vk/im/ui/views/dialog_actions/DialogActionsListView$b$a;->a:Lcom/vk/im/ui/components/common/DialogAction;
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v0
 

@@ -1,5 +1,5 @@
 .class public final Lcom/vk/superapp/holders/SuperAppWidgetPromoHolder;
-.super Lcom/vk/common/e/b;
+.super Lcom/vk/common/e/BaseItemHolder;
 .source "SuperAppWidgetPromoHolder.kt"
 
 
@@ -15,8 +15,8 @@
 
 .annotation system Ldalvik/annotation/Signature;
     value = {
-        "Lcom/vk/common/e/b<",
-        "Lcom/vk/superapp/g/l;",
+        "Lcom/vk/common/e/BaseItemHolder<",
+        "Lcom/vk/superapp/g/SuperAppWidgetPromoItem;",
         ">;"
     }
 .end annotation
@@ -29,7 +29,7 @@
 # instance fields
 .field private final c:Landroidx/recyclerview/widget/RecyclerView;
 
-.field private final d:Lcom/vk/superapp/holders/b;
+.field private final d:Lcom/vk/superapp/holders/SuperAppClickListener;
 
 
 # direct methods
@@ -40,7 +40,7 @@
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, v1}, Lcom/vk/superapp/holders/SuperAppWidgetPromoHolder$c;-><init>(Lkotlin/jvm/internal/i;)V
+    invoke-direct {v0, v1}, Lcom/vk/superapp/holders/SuperAppWidgetPromoHolder$c;-><init>(Lkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     const/16 v0, 0x2c
 
@@ -54,18 +54,18 @@
     return-void
 .end method
 
-.method public constructor <init>(Landroid/view/View;Lcom/vk/superapp/holders/b;)V
+.method public constructor <init>(Landroid/view/View;Lcom/vk/superapp/holders/SuperAppClickListener;)V
     .locals 0
 
     .line 1
-    invoke-direct {p0, p1}, Lcom/vk/common/e/b;-><init>(Landroid/view/View;)V
+    invoke-direct {p0, p1}, Lcom/vk/common/e/BaseItemHolder;-><init>(Landroid/view/View;)V
 
-    iput-object p2, p0, Lcom/vk/superapp/holders/SuperAppWidgetPromoHolder;->d:Lcom/vk/superapp/holders/b;
+    iput-object p2, p0, Lcom/vk/superapp/holders/SuperAppWidgetPromoHolder;->d:Lcom/vk/superapp/holders/SuperAppClickListener;
 
     const p1, 0x7f0a0af8
 
     .line 2
-    invoke-virtual {p0, p1}, Lcom/vk/common/e/b;->i(I)Landroid/view/View;
+    invoke-virtual {p0, p1}, Lcom/vk/common/e/BaseItemHolder;->i(I)Landroid/view/View;
 
     move-result-object p1
 
@@ -76,7 +76,7 @@
     const p1, 0x7f0a01eb
 
     .line 3
-    invoke-virtual {p0, p1}, Lcom/vk/common/e/b;->i(I)Landroid/view/View;
+    invoke-virtual {p0, p1}, Lcom/vk/common/e/BaseItemHolder;->i(I)Landroid/view/View;
 
     move-result-object p1
 
@@ -90,11 +90,11 @@
     return-void
 .end method
 
-.method public static final synthetic a(Lcom/vk/superapp/holders/SuperAppWidgetPromoHolder;)Lcom/vk/superapp/holders/b;
+.method public static final synthetic a(Lcom/vk/superapp/holders/SuperAppWidgetPromoHolder;)Lcom/vk/superapp/holders/SuperAppClickListener;
     .locals 0
 
     .line 1
-    iget-object p0, p0, Lcom/vk/superapp/holders/SuperAppWidgetPromoHolder;->d:Lcom/vk/superapp/holders/b;
+    iget-object p0, p0, Lcom/vk/superapp/holders/SuperAppWidgetPromoHolder;->d:Lcom/vk/superapp/holders/SuperAppClickListener;
 
     return-object p0
 .end method
@@ -122,7 +122,7 @@
 
     if-eqz v0, :cond_4
 
-    invoke-virtual {v0}, Lcom/vk/lists/i0;->f()Ljava/util/List;
+    invoke-virtual {v0}, Lcom/vk/lists/SimpleAdapter;->f()Ljava/util/List;
 
     move-result-object v0
 
@@ -152,23 +152,23 @@
 
     if-ltz v6, :cond_3
 
-    check-cast v1, Lcom/vk/common/i/b;
+    check-cast v1, Lcom/vk/common/i/RecyclerItem;
 
     .line 27
-    invoke-static {v1, p1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v1, p1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v1
 
     if-eqz v1, :cond_2
 
     .line 28
-    iget-object v3, p0, Lcom/vk/superapp/holders/SuperAppWidgetPromoHolder;->d:Lcom/vk/superapp/holders/b;
+    iget-object v3, p0, Lcom/vk/superapp/holders/SuperAppWidgetPromoHolder;->d:Lcom/vk/superapp/holders/SuperAppClickListener;
 
-    invoke-virtual {p0}, Lcom/vk/common/e/b;->getContext()Landroid/content/Context;
+    invoke-virtual {p0}, Lcom/vk/common/e/BaseItemHolder;->getContext()Landroid/content/Context;
 
     move-result-object v4
 
-    invoke-virtual {p0}, Lcom/vk/core/ui/v/j/h/f/a;->c0()Ljava/lang/Object;
+    invoke-virtual {p0}, Lcom/vk/core/ui/v/j/h/f/UiViewTimeRecyclerHolder;->c0()Ljava/lang/Object;
 
     move-result-object v1
 
@@ -176,7 +176,7 @@
 
     move-object v5, v1
 
-    check-cast v5, Lcom/vk/superapp/g/a;
+    check-cast v5, Lcom/vk/superapp/g/SuperAppItems;
 
     const/4 v8, 0x0
 
@@ -188,12 +188,12 @@
 
     move-object v7, p2
 
-    invoke-static/range {v3 .. v11}, Lcom/vk/superapp/holders/b$a;->a(Lcom/vk/superapp/holders/b;Landroid/content/Context;Lcom/vk/superapp/g/a;ILcom/vk/dto/common/data/ApiApplication;Ljava/lang/String;Lcom/vk/superapp/holders/SuperAppRequestCodes;ILjava/lang/Object;)V
+    invoke-static/range {v3 .. v11}, Lcom/vk/superapp/holders/SuperAppClickListener$a;->a(Lcom/vk/superapp/holders/SuperAppClickListener;Landroid/content/Context;Lcom/vk/superapp/g/SuperAppItems;ILcom/vk/dto/common/data/ApiApplication;Ljava/lang/String;Lcom/vk/superapp/holders/SuperAppRequestCodes;ILjava/lang/Object;)V
 
     goto :goto_1
 
     :cond_1
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     throw v2
 
@@ -226,19 +226,19 @@
     .locals 0
 
     .line 1
-    invoke-virtual {p0}, Lcom/vk/common/e/b;->getContext()Landroid/content/Context;
+    invoke-virtual {p0}, Lcom/vk/common/e/BaseItemHolder;->getContext()Landroid/content/Context;
 
     move-result-object p0
 
     return-object p0
 .end method
 
-.method private final b(Lcom/vk/superapp/g/l;)Ljava/util/List;
+.method private final b(Lcom/vk/superapp/g/SuperAppWidgetPromoItem;)Ljava/util/List;
     .locals 7
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lcom/vk/superapp/g/l;",
+            "Lcom/vk/superapp/g/SuperAppWidgetPromoItem;",
             ")",
             "Ljava/util/List<",
             "Lcom/vk/superapp/holders/SuperAppWidgetPromoHolder$e;",
@@ -247,7 +247,7 @@
     .end annotation
 
     .line 3
-    invoke-virtual {p1}, Lcom/vk/superapp/g/l;->f()Lcom/vk/dto/menu/widgets/SuperAppWidgetPromo;
+    invoke-virtual {p1}, Lcom/vk/superapp/g/SuperAppWidgetPromoItem;->f()Lcom/vk/dto/menu/widgets/SuperAppWidgetPromo;
 
     move-result-object v0
 
@@ -286,7 +286,7 @@
     check-cast v2, Lcom/vk/dto/menu/widgets/WidgetAppItem;
 
     .line 7
-    invoke-virtual {p1}, Lcom/vk/superapp/g/l;->e()Ljava/util/List;
+    invoke-virtual {p1}, Lcom/vk/superapp/g/SuperAppWidgetPromoItem;->e()Ljava/util/List;
 
     move-result-object v3
 
@@ -348,15 +348,15 @@
     return-object v1
 .end method
 
-.method public static final synthetic c(Lcom/vk/superapp/holders/SuperAppWidgetPromoHolder;)Lcom/vk/superapp/g/l;
+.method public static final synthetic c(Lcom/vk/superapp/holders/SuperAppWidgetPromoHolder;)Lcom/vk/superapp/g/SuperAppWidgetPromoItem;
     .locals 0
 
     .line 1
-    invoke-virtual {p0}, Lcom/vk/common/e/b;->d0()Lcom/vk/common/i/b;
+    invoke-virtual {p0}, Lcom/vk/common/e/BaseItemHolder;->d0()Lcom/vk/common/i/RecyclerItem;
 
     move-result-object p0
 
-    check-cast p0, Lcom/vk/superapp/g/l;
+    check-cast p0, Lcom/vk/superapp/g/SuperAppWidgetPromoItem;
 
     return-object p0
 .end method
@@ -372,11 +372,11 @@
 
 
 # virtual methods
-.method protected a(Lcom/vk/superapp/g/l;)V
+.method protected a(Lcom/vk/superapp/g/SuperAppWidgetPromoItem;)V
     .locals 8
 
     .line 3
-    invoke-virtual {p1}, Lcom/vk/superapp/g/l;->f()Lcom/vk/dto/menu/widgets/SuperAppWidgetPromo;
+    invoke-virtual {p1}, Lcom/vk/superapp/g/SuperAppWidgetPromoItem;->f()Lcom/vk/dto/menu/widgets/SuperAppWidgetPromo;
 
     move-result-object v0
 
@@ -411,14 +411,14 @@
 
     invoke-direct {v6, p0}, Lcom/vk/superapp/holders/SuperAppWidgetPromoHolder$bindData$adapter$1;-><init>(Lcom/vk/superapp/holders/SuperAppWidgetPromoHolder;)V
 
-    invoke-direct {v1, v5, v6}, Lcom/vk/superapp/holders/SuperAppWidgetPromoHolder$b;-><init>(ZLkotlin/jvm/b/c;)V
+    invoke-direct {v1, v5, v6}, Lcom/vk/superapp/holders/SuperAppWidgetPromoHolder$b;-><init>(ZLkotlin/jvm/b/Functions1;)V
 
     .line 5
-    invoke-direct {p0, p1}, Lcom/vk/superapp/holders/SuperAppWidgetPromoHolder;->b(Lcom/vk/superapp/g/l;)Ljava/util/List;
+    invoke-direct {p0, p1}, Lcom/vk/superapp/holders/SuperAppWidgetPromoHolder;->b(Lcom/vk/superapp/g/SuperAppWidgetPromoItem;)Ljava/util/List;
 
     move-result-object v5
 
-    invoke-virtual {v1, v5}, Lcom/vk/lists/i0;->setItems(Ljava/util/List;)V
+    invoke-virtual {v1, v5}, Lcom/vk/lists/SimpleAdapter;->setItems(Ljava/util/List;)V
 
     .line 6
     iget-object v5, p0, Lcom/vk/superapp/holders/SuperAppWidgetPromoHolder;->c:Landroidx/recyclerview/widget/RecyclerView;
@@ -428,14 +428,14 @@
     const v1, 0x7f0a01e4
 
     .line 7
-    invoke-virtual {p0, v1}, Lcom/vk/common/e/b;->i(I)Landroid/view/View;
+    invoke-virtual {p0, v1}, Lcom/vk/common/e/BaseItemHolder;->i(I)Landroid/view/View;
 
     move-result-object v1
 
     check-cast v1, Lcom/vk/core/view/TintTextView;
 
     .line 8
-    invoke-virtual {p1}, Lcom/vk/superapp/g/l;->f()Lcom/vk/dto/menu/widgets/SuperAppWidgetPromo;
+    invoke-virtual {p1}, Lcom/vk/superapp/g/SuperAppWidgetPromoItem;->f()Lcom/vk/dto/menu/widgets/SuperAppWidgetPromo;
 
     move-result-object p1
 
@@ -452,14 +452,14 @@
     const p1, 0x7f0a01eb
 
     .line 9
-    invoke-virtual {p0, p1}, Lcom/vk/common/e/b;->i(I)Landroid/view/View;
+    invoke-virtual {p0, p1}, Lcom/vk/common/e/BaseItemHolder;->i(I)Landroid/view/View;
 
     move-result-object p1
 
     const v5, 0x7f0a0bea
 
     .line 10
-    invoke-virtual {p0, v5}, Lcom/vk/common/e/b;->i(I)Landroid/view/View;
+    invoke-virtual {p0, v5}, Lcom/vk/common/e/BaseItemHolder;->i(I)Landroid/view/View;
 
     move-result-object v5
 
@@ -470,7 +470,7 @@
     const v0, 0x7f08075a
 
     .line 11
-    invoke-static {v1, v0}, Lcom/vk/core/extensions/a0;->b(Landroid/widget/TextView;I)V
+    invoke-static {v1, v0}, Lcom/vk/core/extensions/TextViewExt;->b(Landroid/widget/TextView;I)V
 
     const/16 v0, 0x8
 
@@ -503,7 +503,7 @@
     const v7, 0x7f0803d2
 
     .line 17
-    invoke-static {v1, v7}, Lcom/vk/core/extensions/a0;->a(Landroid/widget/TextView;I)V
+    invoke-static {v1, v7}, Lcom/vk/core/extensions/TextViewExt;->a(Landroid/widget/TextView;I)V
 
     const/4 v7, 0x4
 
@@ -541,7 +541,7 @@
 
     iget-object v2, p0, Landroidx/recyclerview/widget/RecyclerView$ViewHolder;->itemView:Landroid/view/View;
 
-    invoke-static {v2, p1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v2, p1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {v2}, Landroid/view/View;->getContext()Landroid/content/Context;
 
@@ -561,7 +561,7 @@
 
     iget-object v5, p0, Landroidx/recyclerview/widget/RecyclerView$ViewHolder;->itemView:Landroid/view/View;
 
-    invoke-static {v5, p1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v5, p1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {v5}, Landroid/view/View;->getContext()Landroid/content/Context;
 
@@ -575,13 +575,13 @@
     return-void
 .end method
 
-.method public bridge synthetic b(Lcom/vk/common/i/b;)V
+.method public bridge synthetic b(Lcom/vk/common/i/RecyclerItem;)V
     .locals 0
 
     .line 2
-    check-cast p1, Lcom/vk/superapp/g/l;
+    check-cast p1, Lcom/vk/superapp/g/SuperAppWidgetPromoItem;
 
-    invoke-virtual {p0, p1}, Lcom/vk/superapp/holders/SuperAppWidgetPromoHolder;->a(Lcom/vk/superapp/g/l;)V
+    invoke-virtual {p0, p1}, Lcom/vk/superapp/holders/SuperAppWidgetPromoHolder;->a(Lcom/vk/superapp/g/SuperAppWidgetPromoItem;)V
 
     return-void
 .end method

@@ -3,7 +3,7 @@
 .source "BannerController.kt"
 
 # interfaces
-.implements Lcom/vk/im/ui/components/dialog_business_notify/b;
+.implements Lcom/vk/im/ui/components/dialog_business_notify/DialogBusinessNotifyComponentCallback;
 
 
 # annotations

@@ -1,5 +1,5 @@
 .class public final Lcom/vk/im/ui/components/attaches_history/attaches/adapter/delegates/VideoAttachViewTypeDelegate;
-.super Lcom/vk/im/ui/views/adapter_delegate/f;
+.super Lcom/vk/im/ui/views/adapter_delegate/ViewTypeDelegate;
 .source "VideoAttachViewTypeDelegate.kt"
 
 
@@ -12,7 +12,7 @@
 
 .annotation system Ldalvik/annotation/Signature;
     value = {
-        "Lcom/vk/im/ui/views/adapter_delegate/f<",
+        "Lcom/vk/im/ui/views/adapter_delegate/ViewTypeDelegate<",
         "Lcom/vk/im/ui/components/attaches_history/attaches/model/simple/SimpleAttachListItem;",
         ">;"
     }
@@ -20,7 +20,7 @@
 
 
 # instance fields
-.field private a:Lcom/vk/im/ui/components/attaches_history/attaches/adapter/delegates/g;
+.field private a:Lcom/vk/im/ui/components/attaches_history/attaches/adapter/delegates/VideoAttachCallback;
 
 
 # direct methods
@@ -28,30 +28,30 @@
     .locals 0
 
     .line 1
-    invoke-direct {p0}, Lcom/vk/im/ui/views/adapter_delegate/f;-><init>()V
+    invoke-direct {p0}, Lcom/vk/im/ui/views/adapter_delegate/ViewTypeDelegate;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a()Lcom/vk/im/ui/components/attaches_history/attaches/adapter/delegates/g;
+.method public final a()Lcom/vk/im/ui/components/attaches_history/attaches/adapter/delegates/VideoAttachCallback;
     .locals 1
 
     .line 1
-    iget-object v0, p0, Lcom/vk/im/ui/components/attaches_history/attaches/adapter/delegates/VideoAttachViewTypeDelegate;->a:Lcom/vk/im/ui/components/attaches_history/attaches/adapter/delegates/g;
+    iget-object v0, p0, Lcom/vk/im/ui/components/attaches_history/attaches/adapter/delegates/VideoAttachViewTypeDelegate;->a:Lcom/vk/im/ui/components/attaches_history/attaches/adapter/delegates/VideoAttachCallback;
 
     return-object v0
 .end method
 
-.method public a(Landroid/view/ViewGroup;)Lcom/vk/im/ui/views/adapter_delegate/d;
+.method public a(Landroid/view/ViewGroup;)Lcom/vk/im/ui/views/adapter_delegate/ListItemViewHolder;
     .locals 5
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
             "Landroid/view/ViewGroup;",
             ")",
-            "Lcom/vk/im/ui/views/adapter_delegate/d<",
+            "Lcom/vk/im/ui/views/adapter_delegate/ListItemViewHolder<",
             "Lcom/vk/im/ui/components/attaches_history/attaches/model/simple/SimpleAttachListItem;",
             ">;"
         }
@@ -77,16 +77,16 @@
     return-object v0
 .end method
 
-.method public final a(Lcom/vk/im/ui/components/attaches_history/attaches/adapter/delegates/g;)V
+.method public final a(Lcom/vk/im/ui/components/attaches_history/attaches/adapter/delegates/VideoAttachCallback;)V
     .locals 0
 
     .line 2
-    iput-object p1, p0, Lcom/vk/im/ui/components/attaches_history/attaches/adapter/delegates/VideoAttachViewTypeDelegate;->a:Lcom/vk/im/ui/components/attaches_history/attaches/adapter/delegates/g;
+    iput-object p1, p0, Lcom/vk/im/ui/components/attaches_history/attaches/adapter/delegates/VideoAttachViewTypeDelegate;->a:Lcom/vk/im/ui/components/attaches_history/attaches/adapter/delegates/VideoAttachCallback;
 
     return-void
 .end method
 
-.method public a(Lcom/vk/im/ui/views/adapter_delegate/c;)Z
+.method public a(Lcom/vk/im/ui/views/adapter_delegate/ListItem;)Z
     .locals 1
 
     .line 3

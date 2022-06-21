@@ -3,12 +3,12 @@
 .source "CameraReplyDelegate.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/b;
+.implements Lkotlin/jvm/b/Functions2;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/stories/editor/multi/CameraReplyDelegate;->a(Lcom/vk/cameraui/entities/d;)V
+    value = Lcom/vk/stories/editor/multi/CameraReplyDelegate;->a(Lcom/vk/cameraui/entities/StoryRawData3;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -19,27 +19,27 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/b<",
+        "Lkotlin/jvm/b/Functions2<",
         "Landroid/graphics/Bitmap;",
-        "Lkotlin/m;",
+        "Lkotlin/Unit;",
         ">;"
     }
 .end annotation
 
 
 # instance fields
-.field final synthetic $sticker:Lcom/vk/attachpicker/stickers/reply/a;
+.field final synthetic $sticker:Lcom/vk/attachpicker/stickers/reply/ReplySticker;
 
 .field final synthetic this$0:Lcom/vk/stories/editor/multi/CameraReplyDelegate;
 
 
 # direct methods
-.method constructor <init>(Lcom/vk/stories/editor/multi/CameraReplyDelegate;Lcom/vk/attachpicker/stickers/reply/a;)V
+.method constructor <init>(Lcom/vk/stories/editor/multi/CameraReplyDelegate;Lcom/vk/attachpicker/stickers/reply/ReplySticker;)V
     .locals 0
 
     iput-object p1, p0, Lcom/vk/stories/editor/multi/CameraReplyDelegate$bind$2;->this$0:Lcom/vk/stories/editor/multi/CameraReplyDelegate;
 
-    iput-object p2, p0, Lcom/vk/stories/editor/multi/CameraReplyDelegate$bind$2;->$sticker:Lcom/vk/attachpicker/stickers/reply/a;
+    iput-object p2, p0, Lcom/vk/stories/editor/multi/CameraReplyDelegate$bind$2;->$sticker:Lcom/vk/attachpicker/stickers/reply/ReplySticker;
 
     const/4 p1, 0x1
 
@@ -54,7 +54,7 @@
     .locals 1
 
     .line 1
-    iget-object v0, p0, Lcom/vk/stories/editor/multi/CameraReplyDelegate$bind$2;->$sticker:Lcom/vk/attachpicker/stickers/reply/a;
+    iget-object v0, p0, Lcom/vk/stories/editor/multi/CameraReplyDelegate$bind$2;->$sticker:Lcom/vk/attachpicker/stickers/reply/ReplySticker;
 
     check-cast v0, Lcom/vk/attachpicker/stickers/reply/ReplyImageViewSticker;
 
@@ -63,9 +63,9 @@
     .line 2
     iget-object p1, p0, Lcom/vk/stories/editor/multi/CameraReplyDelegate$bind$2;->this$0:Lcom/vk/stories/editor/multi/CameraReplyDelegate;
 
-    iget-object v0, p0, Lcom/vk/stories/editor/multi/CameraReplyDelegate$bind$2;->$sticker:Lcom/vk/attachpicker/stickers/reply/a;
+    iget-object v0, p0, Lcom/vk/stories/editor/multi/CameraReplyDelegate$bind$2;->$sticker:Lcom/vk/attachpicker/stickers/reply/ReplySticker;
 
-    invoke-static {p1, v0}, Lcom/vk/stories/editor/multi/CameraReplyDelegate;->a(Lcom/vk/stories/editor/multi/CameraReplyDelegate;Lcom/vk/attachpicker/stickers/reply/a;)V
+    invoke-static {p1, v0}, Lcom/vk/stories/editor/multi/CameraReplyDelegate;->a(Lcom/vk/stories/editor/multi/CameraReplyDelegate;Lcom/vk/attachpicker/stickers/reply/ReplySticker;)V
 
     return-void
 .end method
@@ -78,7 +78,7 @@
 
     invoke-virtual {p0, p1}, Lcom/vk/stories/editor/multi/CameraReplyDelegate$bind$2;->a(Landroid/graphics/Bitmap;)V
 
-    sget-object p1, Lkotlin/m;->a:Lkotlin/m;
+    sget-object p1, Lkotlin/Unit;->a:Lkotlin/Unit;
 
     return-object p1
 .end method

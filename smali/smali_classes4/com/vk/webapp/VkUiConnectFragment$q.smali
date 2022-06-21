@@ -3,7 +3,7 @@
 .source "VkUiConnectFragment.kt"
 
 # interfaces
-.implements Lc/a/z/g;
+.implements Lio/reactivex/functions/Consumer;
 
 
 # annotations
@@ -22,7 +22,7 @@
         "Ljava/lang/Object;",
         ">",
         "Ljava/lang/Object;",
-        "Lc/a/z/g<",
+        "Lio/reactivex/functions/Consumer<",
         "Ljava/lang/Boolean;",
         ">;"
     }
@@ -52,22 +52,22 @@
     .line 1
     iget-object p1, p0, Lcom/vk/webapp/VkUiConnectFragment$q;->a:Lcom/vk/webapp/VkUiConnectFragment;
 
-    invoke-virtual {p1}, Lcom/vk/webapp/VkUiConnectFragment;->a5()Lcom/vk/webapp/o/b;
+    invoke-virtual {p1}, Lcom/vk/webapp/VkUiConnectFragment;->a5()Lcom/vk/webapp/o/VkUiConnectFragmentDelegate;
 
     move-result-object p1
 
     const/4 v0, 0x1
 
-    invoke-interface {p1, v0}, Lcom/vk/webapp/o/b;->c(Z)V
+    invoke-interface {p1, v0}, Lcom/vk/webapp/o/VkUiConnectFragmentDelegate;->c(Z)V
 
     .line 2
     iget-object p1, p0, Lcom/vk/webapp/VkUiConnectFragment$q;->a:Lcom/vk/webapp/VkUiConnectFragment;
 
-    invoke-virtual {p1}, Lcom/vk/webapp/VkUiConnectFragment;->a5()Lcom/vk/webapp/o/b;
+    invoke-virtual {p1}, Lcom/vk/webapp/VkUiConnectFragment;->a5()Lcom/vk/webapp/o/VkUiConnectFragmentDelegate;
 
     move-result-object p1
 
-    invoke-interface {p1}, Lcom/vk/webapp/o/b;->l()Lcom/vk/dto/common/data/ApiApplication;
+    invoke-interface {p1}, Lcom/vk/webapp/o/VkUiConnectFragmentDelegate;->l()Lcom/vk/dto/common/data/ApiApplication;
 
     move-result-object p1
 

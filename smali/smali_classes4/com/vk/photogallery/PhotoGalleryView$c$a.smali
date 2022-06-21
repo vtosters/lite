@@ -15,15 +15,15 @@
 
 
 # instance fields
-.field private final b:Lkotlin/jvm/b/b;
+.field private final b:Lkotlin/jvm/b/Functions2;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Lkotlin/jvm/b/b<",
+            "Lkotlin/jvm/b/Functions2<",
             "Ljava/util/List<",
             "+",
-            "Lcom/vk/photogallery/dto/c;",
+            "Lcom/vk/photogallery/dto/GalleryState2;",
             ">;",
-            "Lkotlin/m;",
+            "Lkotlin/Unit;",
             ">;"
         }
     .end annotation
@@ -31,18 +31,18 @@
 
 
 # direct methods
-.method public constructor <init>(Lkotlin/jvm/b/b;)V
+.method public constructor <init>(Lkotlin/jvm/b/Functions2;)V
     .locals 2
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lkotlin/jvm/b/b<",
+            "Lkotlin/jvm/b/Functions2<",
             "-",
             "Ljava/util/List<",
             "+",
-            "Lcom/vk/photogallery/dto/c;",
+            "Lcom/vk/photogallery/dto/GalleryState2;",
             ">;",
-            "Lkotlin/m;",
+            "Lkotlin/Unit;",
             ">;)V"
         }
     .end annotation
@@ -52,32 +52,32 @@
     const/4 v1, 0x0
 
     .line 1
-    invoke-direct {p0, v0, v1}, Lcom/vk/photogallery/PhotoGalleryView$c;-><init>(ZLkotlin/jvm/internal/i;)V
+    invoke-direct {p0, v0, v1}, Lcom/vk/photogallery/PhotoGalleryView$c;-><init>(ZLkotlin/jvm/internal/DefaultConstructorMarker;)V
 
-    iput-object p1, p0, Lcom/vk/photogallery/PhotoGalleryView$c$a;->b:Lkotlin/jvm/b/b;
+    iput-object p1, p0, Lcom/vk/photogallery/PhotoGalleryView$c$a;->b:Lkotlin/jvm/b/Functions2;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final b()Lkotlin/jvm/b/b;
+.method public final b()Lkotlin/jvm/b/Functions2;
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "()",
-            "Lkotlin/jvm/b/b<",
+            "Lkotlin/jvm/b/Functions2<",
             "Ljava/util/List<",
             "+",
-            "Lcom/vk/photogallery/dto/c;",
+            "Lcom/vk/photogallery/dto/GalleryState2;",
             ">;",
-            "Lkotlin/m;",
+            "Lkotlin/Unit;",
             ">;"
         }
     .end annotation
 
     .line 1
-    iget-object v0, p0, Lcom/vk/photogallery/PhotoGalleryView$c$a;->b:Lkotlin/jvm/b/b;
+    iget-object v0, p0, Lcom/vk/photogallery/PhotoGalleryView$c$a;->b:Lkotlin/jvm/b/Functions2;
 
     return-object v0
 .end method

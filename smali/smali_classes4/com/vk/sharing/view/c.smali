@@ -7,16 +7,16 @@
 
 
 # instance fields
-.field private final synthetic a:Lcom/vk/sharing/view/k;
+.field private final synthetic a:Lcom/vk/sharing/view/SharingView;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lcom/vk/sharing/view/k;)V
+.method public synthetic constructor <init>(Lcom/vk/sharing/view/SharingView;)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lcom/vk/sharing/view/c;->a:Lcom/vk/sharing/view/k;
+    iput-object p1, p0, Lcom/vk/sharing/view/c;->a:Lcom/vk/sharing/view/SharingView;
 
     return-void
 .end method
@@ -26,9 +26,9 @@
 .method public final run()V
     .locals 1
 
-    iget-object v0, p0, Lcom/vk/sharing/view/c;->a:Lcom/vk/sharing/view/k;
+    iget-object v0, p0, Lcom/vk/sharing/view/c;->a:Lcom/vk/sharing/view/SharingView;
 
-    invoke-virtual {v0}, Lcom/vk/sharing/view/k;->r()V
+    invoke-virtual {v0}, Lcom/vk/sharing/view/SharingView;->r()V
 
     return-void
 .end method

@@ -3,12 +3,12 @@
 .source "MusicSearchContainer.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/a;
+.implements Lkotlin/jvm/b/Functions;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/music/search/MusicSearchContainer;-><init>(Lcom/vk/core/fragments/FragmentImpl;Lcom/vk/music/search/c;)V
+    value = Lcom/vk/music/search/MusicSearchContainer;-><init>(Lcom/vk/core/fragments/FragmentImpl;Lcom/vk/music/search/MusicSearchModelImpl;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -19,8 +19,8 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/a<",
-        "Lkotlin/m;",
+        "Lkotlin/jvm/b/Functions<",
+        "Lkotlin/Unit;",
         ">;"
     }
 .end annotation
@@ -55,7 +55,7 @@
     .line 1
     invoke-virtual {p0}, Lcom/vk/music/search/MusicSearchContainer$voiceButtonAction$1;->invoke()V
 
-    sget-object v0, Lkotlin/m;->a:Lkotlin/m;
+    sget-object v0, Lkotlin/Unit;->a:Lkotlin/Unit;
 
     return-object v0
 .end method
@@ -68,11 +68,11 @@
 
     iget-object v1, p0, Lcom/vk/music/search/MusicSearchContainer$voiceButtonAction$1;->$lifecycleListener:Lcom/vk/music/search/MusicSearchContainer$c;
 
-    invoke-virtual {v1}, Lcom/vk/core/widget/a;->b()Ljava/lang/String;
+    invoke-virtual {v1}, Lcom/vk/core/widget/LifecycleListener;->b()Ljava/lang/String;
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Lcom/vk/core/utils/i;->a(Lcom/vk/core/widget/LifecycleHandler;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/vk/core/utils/VoiceUtils;->a(Lcom/vk/core/widget/LifecycleHandler;Ljava/lang/String;)V
 
     return-void
 .end method

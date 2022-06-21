@@ -49,7 +49,7 @@
 
     .line 4
     :try_start_2
-    invoke-static {v0}, Lb/h/g/m/d$b;->a(Ljava/io/Closeable;)V
+    invoke-static {v0}, Lb/h/g/m/FileUtils$b;->a(Ljava/io/Closeable;)V
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_1
 
@@ -80,7 +80,7 @@
     invoke-virtual {v1, v2}, Landroid/app/DownloadManager$Query;->setFilterById([J)Landroid/app/DownloadManager$Query;
 
     .line 7
-    invoke-static {p1}, Lcom/vtosters/lite/audio/utils/e;->b(Landroid/content/Context;)Landroid/app/DownloadManager;
+    invoke-static {p1}, Lcom/vtosters/lite/audio/utils/Utils;->b(Landroid/content/Context;)Landroid/app/DownloadManager;
 
     move-result-object p2
 
@@ -122,7 +122,7 @@
     if-ne p2, v3, :cond_1
 
     .line 11
-    sget-object p2, Lcom/vk/core/util/y;->a:Ljava/util/HashSet;
+    sget-object p2, Lcom/vk/core/util/DownloadUtils;->a:Ljava/util/HashSet;
 
     invoke-static {v1, v2}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
@@ -135,7 +135,7 @@
     if-eqz p2, :cond_1
 
     .line 12
-    sget-object p2, Lcom/vk/core/util/y;->a:Ljava/util/HashSet;
+    sget-object p2, Lcom/vk/core/util/DownloadUtils;->a:Ljava/util/HashSet;
 
     invoke-static {v1, v2}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
@@ -155,21 +155,21 @@
     move-result-object p2
 
     .line 14
-    invoke-static {p1, p2}, Lcom/vk/core/util/y;->a(Landroid/content/Context;Ljava/lang/String;)Z
+    invoke-static {p1, p2}, Lcom/vk/core/util/DownloadUtils;->a(Landroid/content/Context;Ljava/lang/String;)Z
     :try_end_3
     .catchall {:try_start_3 .. :try_end_3} :catchall_0
 
     .line 15
     :cond_1
     :try_start_4
-    invoke-static {v0}, Lb/h/g/m/d$b;->a(Ljava/io/Closeable;)V
+    invoke-static {v0}, Lb/h/g/m/FileUtils$b;->a(Ljava/io/Closeable;)V
 
     goto :goto_0
 
     :catchall_0
     move-exception p1
 
-    invoke-static {v0}, Lb/h/g/m/d$b;->a(Ljava/io/Closeable;)V
+    invoke-static {v0}, Lb/h/g/m/FileUtils$b;->a(Ljava/io/Closeable;)V
 
     .line 16
     throw p1

@@ -44,7 +44,7 @@
     .line 1
     iget-object v0, p0, Lcom/vk/profile/adapter/factory/info_items/UserDetailsItemsFactory$b;->a:Lcom/vk/profile/adapter/factory/info_items/UserDetailsItemsFactory;
 
-    invoke-virtual {v0}, Lcom/vk/profile/adapter/b/a;->a()Landroid/content/Context;
+    invoke-virtual {v0}, Lcom/vk/profile/adapter/b/BaseItemsFactory;->a()Landroid/content/Context;
 
     move-result-object v0
 
@@ -58,9 +58,9 @@
 
     const-string v3, "currentStatus"
 
-    invoke-static {v2, v3}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v2, v3}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    invoke-static {v0, v1, v2}, Lcom/vk/profile/ui/f/b;->a(Landroid/content/Context;Lcom/vk/profile/presenter/BaseProfilePresenter;Ljava/lang/CharSequence;)V
+    invoke-static {v0, v1, v2}, Lcom/vk/profile/ui/f/OpenDialogUtils;->a(Landroid/content/Context;Lcom/vk/profile/presenter/BaseProfilePresenter;Ljava/lang/CharSequence;)V
 
     return-void
 .end method

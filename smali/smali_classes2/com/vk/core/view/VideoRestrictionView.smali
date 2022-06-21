@@ -29,7 +29,7 @@
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, v1}, Lcom/vk/core/view/VideoRestrictionView$a;-><init>(Lkotlin/jvm/internal/i;)V
+    invoke-direct {v0, v1}, Lcom/vk/core/view/VideoRestrictionView$a;-><init>(Lkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     sput-object v0, Lcom/vk/core/view/VideoRestrictionView;->c:Lcom/vk/core/view/VideoRestrictionView$a;
 
@@ -51,7 +51,7 @@
 
     move-object v1, p1
 
-    invoke-direct/range {v0 .. v5}, Lcom/vk/core/view/VideoRestrictionView;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;IILkotlin/jvm/internal/i;)V
+    invoke-direct/range {v0 .. v5}, Lcom/vk/core/view/VideoRestrictionView;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;IILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     return-void
 .end method
@@ -71,7 +71,7 @@
 
     move-object v2, p2
 
-    invoke-direct/range {v0 .. v5}, Lcom/vk/core/view/VideoRestrictionView;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;IILkotlin/jvm/internal/i;)V
+    invoke-direct/range {v0 .. v5}, Lcom/vk/core/view/VideoRestrictionView;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;IILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     return-void
 .end method
@@ -94,12 +94,12 @@
 
     move-result p3
 
-    invoke-static {p2, p3}, Lcom/vk/core/extensions/a0;->d(Landroid/widget/TextView;I)V
+    invoke-static {p2, p3}, Lcom/vk/core/extensions/TextViewExt;->d(Landroid/widget/TextView;I)V
 
     .line 4
     sget p3, Lb/h/z/b;->text_placeholder:I
 
-    invoke-static {p2, p3}, Lcom/vk/extensions/l;->a(Landroid/widget/TextView;I)V
+    invoke-static {p2, p3}, Lcom/vk/extensions/TextViewExt;->a(Landroid/widget/TextView;I)V
 
     .line 5
     invoke-virtual {p2}, Landroid/widget/TextView;->getContext()Landroid/content/Context;
@@ -136,7 +136,7 @@
 
     move-result-object p1
 
-    invoke-virtual {p2, p1}, Lcom/vk/imageloader/view/a;->setPlaceholderImage(Landroid/graphics/drawable/Drawable;)V
+    invoke-virtual {p2, p1}, Lcom/vk/imageloader/view/GenericVKImageView;->setPlaceholderImage(Landroid/graphics/drawable/Drawable;)V
 
     .line 10
     iput-object p2, p0, Lcom/vk/core/view/VideoRestrictionView;->b:Lcom/vk/imageloader/view/VKImageView;
@@ -167,7 +167,7 @@
     return-void
 .end method
 
-.method public synthetic constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;IILkotlin/jvm/internal/i;)V
+.method public synthetic constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;IILkotlin/jvm/internal/DefaultConstructorMarker;)V
     .locals 0
 
     and-int/lit8 p5, p4, 0x2

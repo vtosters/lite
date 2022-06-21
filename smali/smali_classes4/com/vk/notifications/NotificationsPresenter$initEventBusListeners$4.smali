@@ -3,7 +3,7 @@
 .source "NotificationsPresenter.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/b;
+.implements Lkotlin/jvm/b/Functions2;
 
 
 # annotations
@@ -19,9 +19,9 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/b<",
+        "Lkotlin/jvm/b/Functions2<",
         "Ljava/lang/Object;",
-        "Lkotlin/m;",
+        "Lkotlin/Unit;",
         ">;"
     }
 .end annotation
@@ -52,7 +52,7 @@
     .line 1
     invoke-virtual {p0, p1}, Lcom/vk/notifications/NotificationsPresenter$initEventBusListeners$4;->invoke(Ljava/lang/Object;)V
 
-    sget-object p1, Lkotlin/m;->a:Lkotlin/m;
+    sget-object p1, Lkotlin/Unit;->a:Lkotlin/Unit;
 
     return-object p1
 .end method
@@ -114,11 +114,11 @@
     .line 5
     iget-object p1, p0, Lcom/vk/notifications/NotificationsPresenter$initEventBusListeners$4;->this$0:Lcom/vk/notifications/NotificationsPresenter;
 
-    invoke-virtual {p1}, Lcom/vk/notifications/NotificationsPresenter;->a()Lcom/vk/notifications/l;
+    invoke-virtual {p1}, Lcom/vk/notifications/NotificationsPresenter;->a()Lcom/vk/notifications/NotificationsContract1;
 
     move-result-object p1
 
-    invoke-interface {p1}, Lcom/vk/notifications/l;->a3()Z
+    invoke-interface {p1}, Lcom/vk/notifications/NotificationsContract1;->a3()Z
 
     move-result p1
 
@@ -157,13 +157,13 @@
     :cond_4
     iget-object p1, p0, Lcom/vk/notifications/NotificationsPresenter$initEventBusListeners$4;->this$0:Lcom/vk/notifications/NotificationsPresenter;
 
-    invoke-static {p1}, Lcom/vk/notifications/NotificationsPresenter;->d(Lcom/vk/notifications/NotificationsPresenter;)Lcom/vk/lists/t;
+    invoke-static {p1}, Lcom/vk/notifications/NotificationsPresenter;->d(Lcom/vk/notifications/NotificationsPresenter;)Lcom/vk/lists/PaginationHelper;
 
     move-result-object p1
 
     if-eqz p1, :cond_5
 
-    invoke-virtual {p1}, Lcom/vk/lists/t;->h()V
+    invoke-virtual {p1}, Lcom/vk/lists/PaginationHelper;->h()V
 
     :cond_5
     :goto_1

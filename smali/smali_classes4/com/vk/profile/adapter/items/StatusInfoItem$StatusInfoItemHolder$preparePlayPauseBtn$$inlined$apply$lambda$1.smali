@@ -3,7 +3,7 @@
 .source "StatusInfoItem.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/b;
+.implements Lkotlin/jvm/b/Functions2;
 
 
 # annotations
@@ -19,16 +19,16 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/b<",
+        "Lkotlin/jvm/b/Functions2<",
         "Landroid/view/View;",
-        "Lkotlin/m;",
+        "Lkotlin/Unit;",
         ">;"
     }
 .end annotation
 
 
 # instance fields
-.field final synthetic $playerModel:Lcom/vk/music/player/d;
+.field final synthetic $playerModel:Lcom/vk/music/player/PlayerModel;
 
 .field final synthetic $this_apply:Landroidx/appcompat/widget/AppCompatImageView;
 
@@ -36,12 +36,12 @@
 
 
 # direct methods
-.method constructor <init>(Landroidx/appcompat/widget/AppCompatImageView;Lcom/vk/music/player/d;Lcom/vk/dto/music/MusicTrack;)V
+.method constructor <init>(Landroidx/appcompat/widget/AppCompatImageView;Lcom/vk/music/player/PlayerModel;Lcom/vk/dto/music/MusicTrack;)V
     .locals 0
 
     iput-object p1, p0, Lcom/vk/profile/adapter/items/StatusInfoItem$StatusInfoItemHolder$preparePlayPauseBtn$$inlined$apply$lambda$1;->$this_apply:Landroidx/appcompat/widget/AppCompatImageView;
 
-    iput-object p2, p0, Lcom/vk/profile/adapter/items/StatusInfoItem$StatusInfoItemHolder$preparePlayPauseBtn$$inlined$apply$lambda$1;->$playerModel:Lcom/vk/music/player/d;
+    iput-object p2, p0, Lcom/vk/profile/adapter/items/StatusInfoItem$StatusInfoItemHolder$preparePlayPauseBtn$$inlined$apply$lambda$1;->$playerModel:Lcom/vk/music/player/PlayerModel;
 
     iput-object p3, p0, Lcom/vk/profile/adapter/items/StatusInfoItem$StatusInfoItemHolder$preparePlayPauseBtn$$inlined$apply$lambda$1;->$track$inlined:Lcom/vk/dto/music/MusicTrack;
 
@@ -58,9 +58,9 @@
     .locals 3
 
     .line 1
-    iget-object p1, p0, Lcom/vk/profile/adapter/items/StatusInfoItem$StatusInfoItemHolder$preparePlayPauseBtn$$inlined$apply$lambda$1;->$playerModel:Lcom/vk/music/player/d;
+    iget-object p1, p0, Lcom/vk/profile/adapter/items/StatusInfoItem$StatusInfoItemHolder$preparePlayPauseBtn$$inlined$apply$lambda$1;->$playerModel:Lcom/vk/music/player/PlayerModel;
 
-    invoke-interface {p1}, Lcom/vk/music/player/d;->A0()Z
+    invoke-interface {p1}, Lcom/vk/music/player/PlayerModel;->A0()Z
 
     move-result p1
 
@@ -68,13 +68,13 @@
 
     iget-object p1, p0, Lcom/vk/profile/adapter/items/StatusInfoItem$StatusInfoItemHolder$preparePlayPauseBtn$$inlined$apply$lambda$1;->$track$inlined:Lcom/vk/dto/music/MusicTrack;
 
-    iget-object v0, p0, Lcom/vk/profile/adapter/items/StatusInfoItem$StatusInfoItemHolder$preparePlayPauseBtn$$inlined$apply$lambda$1;->$playerModel:Lcom/vk/music/player/d;
+    iget-object v0, p0, Lcom/vk/profile/adapter/items/StatusInfoItem$StatusInfoItemHolder$preparePlayPauseBtn$$inlined$apply$lambda$1;->$playerModel:Lcom/vk/music/player/PlayerModel;
 
-    invoke-interface {v0}, Lcom/vk/music/player/d;->S()Lcom/vk/dto/music/MusicTrack;
+    invoke-interface {v0}, Lcom/vk/music/player/PlayerModel;->S()Lcom/vk/dto/music/MusicTrack;
 
     move-result-object v0
 
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result p1
 
@@ -103,9 +103,9 @@
     invoke-virtual {p1, v0}, Landroid/widget/ImageView;->setContentDescription(Ljava/lang/CharSequence;)V
 
     .line 4
-    iget-object p1, p0, Lcom/vk/profile/adapter/items/StatusInfoItem$StatusInfoItemHolder$preparePlayPauseBtn$$inlined$apply$lambda$1;->$playerModel:Lcom/vk/music/player/d;
+    iget-object p1, p0, Lcom/vk/profile/adapter/items/StatusInfoItem$StatusInfoItemHolder$preparePlayPauseBtn$$inlined$apply$lambda$1;->$playerModel:Lcom/vk/music/player/PlayerModel;
 
-    invoke-interface {p1}, Lcom/vk/music/player/d;->e()V
+    invoke-interface {p1}, Lcom/vk/music/player/PlayerModel;->e()V
 
     goto :goto_0
 
@@ -113,13 +113,13 @@
     :cond_0
     iget-object p1, p0, Lcom/vk/profile/adapter/items/StatusInfoItem$StatusInfoItemHolder$preparePlayPauseBtn$$inlined$apply$lambda$1;->$track$inlined:Lcom/vk/dto/music/MusicTrack;
 
-    iget-object v0, p0, Lcom/vk/profile/adapter/items/StatusInfoItem$StatusInfoItemHolder$preparePlayPauseBtn$$inlined$apply$lambda$1;->$playerModel:Lcom/vk/music/player/d;
+    iget-object v0, p0, Lcom/vk/profile/adapter/items/StatusInfoItem$StatusInfoItemHolder$preparePlayPauseBtn$$inlined$apply$lambda$1;->$playerModel:Lcom/vk/music/player/PlayerModel;
 
-    invoke-interface {v0}, Lcom/vk/music/player/d;->S()Lcom/vk/dto/music/MusicTrack;
+    invoke-interface {v0}, Lcom/vk/music/player/PlayerModel;->S()Lcom/vk/dto/music/MusicTrack;
 
     move-result-object v0
 
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result p1
 
@@ -130,7 +130,7 @@
     if-eqz p1, :cond_1
 
     .line 6
-    iget-object p1, p0, Lcom/vk/profile/adapter/items/StatusInfoItem$StatusInfoItemHolder$preparePlayPauseBtn$$inlined$apply$lambda$1;->$playerModel:Lcom/vk/music/player/d;
+    iget-object p1, p0, Lcom/vk/profile/adapter/items/StatusInfoItem$StatusInfoItemHolder$preparePlayPauseBtn$$inlined$apply$lambda$1;->$playerModel:Lcom/vk/music/player/PlayerModel;
 
     iget-object v1, p0, Lcom/vk/profile/adapter/items/StatusInfoItem$StatusInfoItemHolder$preparePlayPauseBtn$$inlined$apply$lambda$1;->$track$inlined:Lcom/vk/dto/music/MusicTrack;
 
@@ -146,7 +146,7 @@
 
     sget-object v2, Lcom/vk/music/common/MusicPlaybackLaunchContext;->C:Lcom/vk/music/common/MusicPlaybackLaunchContext;
 
-    invoke-interface {p1, v1, v0, v2}, Lcom/vk/music/player/d;->a(Lcom/vk/dto/music/MusicTrack;Ljava/util/List;Lcom/vk/music/common/MusicPlaybackLaunchContext;)V
+    invoke-interface {p1, v1, v0, v2}, Lcom/vk/music/player/PlayerModel;->a(Lcom/vk/dto/music/MusicTrack;Ljava/util/List;Lcom/vk/music/common/MusicPlaybackLaunchContext;)V
 
     .line 7
     :cond_1
@@ -172,9 +172,9 @@
     invoke-virtual {p1, v0}, Landroid/widget/ImageView;->setContentDescription(Ljava/lang/CharSequence;)V
 
     .line 9
-    iget-object p1, p0, Lcom/vk/profile/adapter/items/StatusInfoItem$StatusInfoItemHolder$preparePlayPauseBtn$$inlined$apply$lambda$1;->$playerModel:Lcom/vk/music/player/d;
+    iget-object p1, p0, Lcom/vk/profile/adapter/items/StatusInfoItem$StatusInfoItemHolder$preparePlayPauseBtn$$inlined$apply$lambda$1;->$playerModel:Lcom/vk/music/player/PlayerModel;
 
-    invoke-interface {p1}, Lcom/vk/music/player/d;->t()V
+    invoke-interface {p1}, Lcom/vk/music/player/PlayerModel;->t()V
 
     :goto_0
     return-void
@@ -188,7 +188,7 @@
 
     invoke-virtual {p0, p1}, Lcom/vk/profile/adapter/items/StatusInfoItem$StatusInfoItemHolder$preparePlayPauseBtn$$inlined$apply$lambda$1;->a(Landroid/view/View;)V
 
-    sget-object p1, Lkotlin/m;->a:Lkotlin/m;
+    sget-object p1, Lkotlin/Unit;->a:Lkotlin/Unit;
 
     return-object p1
 .end method

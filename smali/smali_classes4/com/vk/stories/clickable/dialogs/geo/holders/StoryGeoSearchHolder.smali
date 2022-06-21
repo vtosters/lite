@@ -1,5 +1,5 @@
 .class public final Lcom/vk/stories/clickable/dialogs/geo/holders/StoryGeoSearchHolder;
-.super Lcom/vk/common/e/b;
+.super Lcom/vk/common/e/BaseItemHolder;
 .source "StoryGeoSearchHolder.kt"
 
 
@@ -12,8 +12,8 @@
 
 .annotation system Ldalvik/annotation/Signature;
     value = {
-        "Lcom/vk/common/e/b<",
-        "Lcom/vk/stories/clickable/models/geo/c;",
+        "Lcom/vk/common/e/BaseItemHolder<",
+        "Lcom/vk/stories/clickable/models/geo/StoryGeoSearchItem;",
         ">;"
     }
 .end annotation
@@ -22,7 +22,7 @@
 # instance fields
 .field private final c:Lcom/vk/core/view/search/RoundedSearchView;
 
-.field private d:Lio/reactivex/disposables/b;
+.field private d:Lio/reactivex/disposables/Disposable;
 
 .field private final e:Lcom/vk/stories/clickable/dialogs/geo/holders/StoryGeoSearchHolder$c;
 
@@ -32,7 +32,7 @@
     .locals 1
 
     .line 1
-    invoke-direct {p0, p1}, Lcom/vk/common/e/b;-><init>(Landroid/view/View;)V
+    invoke-direct {p0, p1}, Lcom/vk/common/e/BaseItemHolder;-><init>(Landroid/view/View;)V
 
     iput-object p2, p0, Lcom/vk/stories/clickable/dialogs/geo/holders/StoryGeoSearchHolder;->e:Lcom/vk/stories/clickable/dialogs/geo/holders/StoryGeoSearchHolder$c;
 
@@ -45,7 +45,7 @@
 
     const-string v0, "itemView.findViewById(R.id.search_view)"
 
-    invoke-static {p2, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p2, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     check-cast p2, Lcom/vk/core/view/search/RoundedSearchView;
 
@@ -61,7 +61,7 @@
     .line 4
     iget-object p2, p0, Lcom/vk/stories/clickable/dialogs/geo/holders/StoryGeoSearchHolder;->c:Lcom/vk/core/view/search/RoundedSearchView;
 
-    invoke-static {}, Lcom/vk/core/utils/i;->b()Z
+    invoke-static {}, Lcom/vk/core/utils/VoiceUtils;->b()Z
 
     move-result v0
 
@@ -77,7 +77,7 @@
     const/4 v0, 0x0
 
     :goto_0
-    invoke-virtual {p2, v0}, Lcom/vk/core/view/search/RoundedSearchView;->setEditMode(Lkotlin/jvm/b/a;)V
+    invoke-virtual {p2, v0}, Lcom/vk/core/view/search/RoundedSearchView;->setEditMode(Lkotlin/jvm/b/Functions;)V
 
     .line 5
     iget-object p2, p0, Lcom/vk/stories/clickable/dialogs/geo/holders/StoryGeoSearchHolder;->c:Lcom/vk/core/view/search/RoundedSearchView;
@@ -91,7 +91,7 @@
 
     invoke-direct {v0, p0}, Lcom/vk/stories/clickable/dialogs/geo/holders/StoryGeoSearchHolder$2;-><init>(Lcom/vk/stories/clickable/dialogs/geo/holders/StoryGeoSearchHolder;)V
 
-    invoke-virtual {p2, v0}, Lcom/vk/core/view/search/RoundedSearchView;->setOnActionSearchListener(Lkotlin/jvm/b/b;)V
+    invoke-virtual {p2, v0}, Lcom/vk/core/view/search/RoundedSearchView;->setOnActionSearchListener(Lkotlin/jvm/b/Functions2;)V
 
     .line 7
     iget-object p2, p0, Lcom/vk/stories/clickable/dialogs/geo/holders/StoryGeoSearchHolder;->c:Lcom/vk/core/view/search/RoundedSearchView;
@@ -121,20 +121,20 @@
     return-object p0
 .end method
 
-.method public static final synthetic a(Lcom/vk/stories/clickable/dialogs/geo/holders/StoryGeoSearchHolder;Lio/reactivex/disposables/b;)V
+.method public static final synthetic a(Lcom/vk/stories/clickable/dialogs/geo/holders/StoryGeoSearchHolder;Lio/reactivex/disposables/Disposable;)V
     .locals 0
 
     .line 2
-    iput-object p1, p0, Lcom/vk/stories/clickable/dialogs/geo/holders/StoryGeoSearchHolder;->d:Lio/reactivex/disposables/b;
+    iput-object p1, p0, Lcom/vk/stories/clickable/dialogs/geo/holders/StoryGeoSearchHolder;->d:Lio/reactivex/disposables/Disposable;
 
     return-void
 .end method
 
-.method public static final synthetic b(Lcom/vk/stories/clickable/dialogs/geo/holders/StoryGeoSearchHolder;)Lio/reactivex/disposables/b;
+.method public static final synthetic b(Lcom/vk/stories/clickable/dialogs/geo/holders/StoryGeoSearchHolder;)Lio/reactivex/disposables/Disposable;
     .locals 0
 
     .line 1
-    iget-object p0, p0, Lcom/vk/stories/clickable/dialogs/geo/holders/StoryGeoSearchHolder;->d:Lio/reactivex/disposables/b;
+    iget-object p0, p0, Lcom/vk/stories/clickable/dialogs/geo/holders/StoryGeoSearchHolder;->d:Lio/reactivex/disposables/Disposable;
 
     return-object p0
 .end method
@@ -170,19 +170,19 @@
 
 
 # virtual methods
-.method protected a(Lcom/vk/stories/clickable/models/geo/c;)V
+.method protected a(Lcom/vk/stories/clickable/models/geo/StoryGeoSearchItem;)V
     .locals 0
 
     return-void
 .end method
 
-.method public bridge synthetic b(Lcom/vk/common/i/b;)V
+.method public bridge synthetic b(Lcom/vk/common/i/RecyclerItem;)V
     .locals 0
 
     .line 2
-    check-cast p1, Lcom/vk/stories/clickable/models/geo/c;
+    check-cast p1, Lcom/vk/stories/clickable/models/geo/StoryGeoSearchItem;
 
-    invoke-virtual {p0, p1}, Lcom/vk/stories/clickable/dialogs/geo/holders/StoryGeoSearchHolder;->a(Lcom/vk/stories/clickable/models/geo/c;)V
+    invoke-virtual {p0, p1}, Lcom/vk/stories/clickable/dialogs/geo/holders/StoryGeoSearchHolder;->a(Lcom/vk/stories/clickable/models/geo/StoryGeoSearchItem;)V
 
     return-void
 .end method

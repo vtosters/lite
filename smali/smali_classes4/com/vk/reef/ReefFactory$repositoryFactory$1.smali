@@ -3,12 +3,12 @@
 .source "ReefFactory.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/a;
+.implements Lkotlin/jvm/b/Functions;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/reef/ReefFactory;-><init>(Landroid/app/Application;Lcom/vk/reef/utils/a;)V
+    value = Lcom/vk/reef/ReefFactory;-><init>(Landroid/app/Application;Lcom/vk/reef/utils/ReefApplicationSettings;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -19,8 +19,8 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/a<",
-        "Lcom/vk/reef/j/b;",
+        "Lkotlin/jvm/b/Functions<",
+        "Lcom/vk/reef/j/ReefInMemoryRepo;",
         ">;"
     }
 .end annotation
@@ -55,17 +55,17 @@
 
 
 # virtual methods
-.method public final invoke()Lcom/vk/reef/j/b;
+.method public final invoke()Lcom/vk/reef/j/ReefInMemoryRepo;
     .locals 3
 
     .line 2
-    new-instance v0, Lcom/vk/reef/j/b;
+    new-instance v0, Lcom/vk/reef/j/ReefInMemoryRepo;
 
     const/4 v1, 0x0
 
     const/4 v2, 0x1
 
-    invoke-direct {v0, v1, v2, v1}, Lcom/vk/reef/j/b;-><init>(Lcom/vk/reef/j/a;ILkotlin/jvm/internal/i;)V
+    invoke-direct {v0, v1, v2, v1}, Lcom/vk/reef/j/ReefInMemoryRepo;-><init>(Lcom/vk/reef/j/ReefEvictingQueue;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     return-object v0
 .end method
@@ -74,7 +74,7 @@
     .locals 1
 
     .line 1
-    invoke-virtual {p0}, Lcom/vk/reef/ReefFactory$repositoryFactory$1;->invoke()Lcom/vk/reef/j/b;
+    invoke-virtual {p0}, Lcom/vk/reef/ReefFactory$repositoryFactory$1;->invoke()Lcom/vk/reef/j/ReefInMemoryRepo;
 
     move-result-object v0
 

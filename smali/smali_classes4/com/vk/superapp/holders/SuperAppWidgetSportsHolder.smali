@@ -1,5 +1,5 @@
 .class public final Lcom/vk/superapp/holders/SuperAppWidgetSportsHolder;
-.super Lcom/vk/common/e/b;
+.super Lcom/vk/common/e/BaseItemHolder;
 .source "SuperAppWidgetSportsHolder.kt"
 
 
@@ -14,8 +14,8 @@
 
 .annotation system Ldalvik/annotation/Signature;
     value = {
-        "Lcom/vk/common/e/b<",
-        "Lcom/vk/superapp/g/m;",
+        "Lcom/vk/common/e/BaseItemHolder<",
+        "Lcom/vk/superapp/g/SuperAppWidgetSportsItem;",
         ">;"
     }
 .end annotation
@@ -26,22 +26,22 @@
 
 .field private d:Lcom/vk/dto/common/data/ApiApplication;
 
-.field private final e:Lcom/vk/superapp/holders/b;
+.field private final e:Lcom/vk/superapp/holders/SuperAppClickListener;
 
 
 # direct methods
-.method public constructor <init>(Landroid/view/View;Lcom/vk/superapp/holders/b;)V
+.method public constructor <init>(Landroid/view/View;Lcom/vk/superapp/holders/SuperAppClickListener;)V
     .locals 0
 
     .line 1
-    invoke-direct {p0, p1}, Lcom/vk/common/e/b;-><init>(Landroid/view/View;)V
+    invoke-direct {p0, p1}, Lcom/vk/common/e/BaseItemHolder;-><init>(Landroid/view/View;)V
 
-    iput-object p2, p0, Lcom/vk/superapp/holders/SuperAppWidgetSportsHolder;->e:Lcom/vk/superapp/holders/b;
+    iput-object p2, p0, Lcom/vk/superapp/holders/SuperAppWidgetSportsHolder;->e:Lcom/vk/superapp/holders/SuperAppClickListener;
 
     const p1, 0x7f0a07b1
 
     .line 2
-    invoke-virtual {p0, p1}, Lcom/vk/common/e/b;->i(I)Landroid/view/View;
+    invoke-virtual {p0, p1}, Lcom/vk/common/e/BaseItemHolder;->i(I)Landroid/view/View;
 
     move-result-object p1
 
@@ -52,7 +52,7 @@
     const p1, 0x7f0a0511
 
     .line 3
-    invoke-virtual {p0, p1}, Lcom/vk/common/e/b;->i(I)Landroid/view/View;
+    invoke-virtual {p0, p1}, Lcom/vk/common/e/BaseItemHolder;->i(I)Landroid/view/View;
 
     move-result-object p1
 
@@ -66,7 +66,7 @@
     const p1, 0x7f0a0513
 
     .line 5
-    invoke-virtual {p0, p1}, Lcom/vk/common/e/b;->i(I)Landroid/view/View;
+    invoke-virtual {p0, p1}, Lcom/vk/common/e/BaseItemHolder;->i(I)Landroid/view/View;
 
     move-result-object p1
 
@@ -80,11 +80,11 @@
     return-void
 .end method
 
-.method public static final synthetic a(Lcom/vk/superapp/holders/SuperAppWidgetSportsHolder;)Lcom/vk/superapp/holders/b;
+.method public static final synthetic a(Lcom/vk/superapp/holders/SuperAppWidgetSportsHolder;)Lcom/vk/superapp/holders/SuperAppClickListener;
     .locals 0
 
     .line 1
-    iget-object p0, p0, Lcom/vk/superapp/holders/SuperAppWidgetSportsHolder;->e:Lcom/vk/superapp/holders/b;
+    iget-object p0, p0, Lcom/vk/superapp/holders/SuperAppWidgetSportsHolder;->e:Lcom/vk/superapp/holders/SuperAppClickListener;
 
     return-object p0
 .end method
@@ -157,7 +157,7 @@
     const v0, 0x7f0a054d
 
     .line 16
-    invoke-virtual {p0, v0}, Lcom/vk/common/e/b;->i(I)Landroid/view/View;
+    invoke-virtual {p0, v0}, Lcom/vk/common/e/BaseItemHolder;->i(I)Landroid/view/View;
 
     move-result-object v0
 
@@ -201,7 +201,7 @@
     const v0, 0x7f0a054e
 
     .line 18
-    invoke-virtual {p0, v0}, Lcom/vk/common/e/b;->i(I)Landroid/view/View;
+    invoke-virtual {p0, v0}, Lcom/vk/common/e/BaseItemHolder;->i(I)Landroid/view/View;
 
     move-result-object v0
 
@@ -236,7 +236,7 @@
     const v0, 0x7f0a08e5
 
     .line 20
-    invoke-virtual {p0, v0}, Lcom/vk/common/e/b;->i(I)Landroid/view/View;
+    invoke-virtual {p0, v0}, Lcom/vk/common/e/BaseItemHolder;->i(I)Landroid/view/View;
 
     move-result-object v0
 
@@ -256,7 +256,7 @@
     const v0, 0x7f0a0b92
 
     .line 22
-    invoke-virtual {p0, v0}, Lcom/vk/common/e/b;->i(I)Landroid/view/View;
+    invoke-virtual {p0, v0}, Lcom/vk/common/e/BaseItemHolder;->i(I)Landroid/view/View;
 
     move-result-object v0
 
@@ -276,7 +276,7 @@
     const v0, 0x7f0a08e6
 
     .line 24
-    invoke-virtual {p0, v0}, Lcom/vk/common/e/b;->i(I)Landroid/view/View;
+    invoke-virtual {p0, v0}, Lcom/vk/common/e/BaseItemHolder;->i(I)Landroid/view/View;
 
     move-result-object v0
 
@@ -296,7 +296,7 @@
     const v0, 0x7f0a0b93
 
     .line 26
-    invoke-virtual {p0, v0}, Lcom/vk/common/e/b;->i(I)Landroid/view/View;
+    invoke-virtual {p0, v0}, Lcom/vk/common/e/BaseItemHolder;->i(I)Landroid/view/View;
 
     move-result-object v0
 
@@ -316,7 +316,7 @@
     const v0, 0x7f0a032b
 
     .line 28
-    invoke-virtual {p0, v0}, Lcom/vk/common/e/b;->i(I)Landroid/view/View;
+    invoke-virtual {p0, v0}, Lcom/vk/common/e/BaseItemHolder;->i(I)Landroid/view/View;
 
     move-result-object v0
 
@@ -338,7 +338,7 @@
     const v0, 0x7f0a0c3b
 
     .line 30
-    invoke-virtual {p0, v0}, Lcom/vk/common/e/b;->i(I)Landroid/view/View;
+    invoke-virtual {p0, v0}, Lcom/vk/common/e/BaseItemHolder;->i(I)Landroid/view/View;
 
     move-result-object v0
 
@@ -348,7 +348,7 @@
     const v0, 0x7f0a0860
 
     .line 32
-    invoke-virtual {p0, v0}, Lcom/vk/common/e/b;->i(I)Landroid/view/View;
+    invoke-virtual {p0, v0}, Lcom/vk/common/e/BaseItemHolder;->i(I)Landroid/view/View;
 
     move-result-object v0
 
@@ -360,7 +360,7 @@
 
     new-instance v1, Landroidx/recyclerview/widget/LinearLayoutManager;
 
-    invoke-virtual {p0}, Lcom/vk/common/e/b;->getContext()Landroid/content/Context;
+    invoke-virtual {p0}, Lcom/vk/common/e/BaseItemHolder;->getContext()Landroid/content/Context;
 
     move-result-object v2
 
@@ -379,7 +379,7 @@
 
     invoke-direct {v1, p0}, Lcom/vk/superapp/holders/SuperAppWidgetSportsHolder$fillMultiMatchInfo$adapter$1;-><init>(Lcom/vk/superapp/holders/SuperAppWidgetSportsHolder;)V
 
-    invoke-direct {v0, v1}, Lcom/vk/superapp/holders/SuperAppWidgetSportsHolder$b;-><init>(Lkotlin/jvm/b/d;)V
+    invoke-direct {v0, v1}, Lcom/vk/superapp/holders/SuperAppWidgetSportsHolder$b;-><init>(Lkotlin/jvm/b/Functions4;)V
 
     .line 36
     iget-object v1, p0, Lcom/vk/superapp/holders/SuperAppWidgetSportsHolder;->c:Landroidx/recyclerview/widget/RecyclerView;
@@ -393,12 +393,12 @@
 
     move-result-object v1
 
-    invoke-virtual {v0, v1}, Lcom/vk/lists/i0;->setItems(Ljava/util/List;)V
+    invoke-virtual {v0, v1}, Lcom/vk/lists/SimpleAdapter;->setItems(Ljava/util/List;)V
 
     const v0, 0x7f0a07b0
 
     .line 38
-    invoke-virtual {p0, v0}, Lcom/vk/common/e/b;->i(I)Landroid/view/View;
+    invoke-virtual {p0, v0}, Lcom/vk/common/e/BaseItemHolder;->i(I)Landroid/view/View;
 
     move-result-object v0
 
@@ -454,7 +454,7 @@
 
     if-eqz v1, :cond_4
 
-    invoke-virtual {v1}, Lcom/vk/lists/i0;->f()Ljava/util/List;
+    invoke-virtual {v1}, Lcom/vk/lists/SimpleAdapter;->f()Ljava/util/List;
 
     move-result-object v1
 
@@ -484,25 +484,25 @@
 
     if-ltz v7, :cond_3
 
-    check-cast v2, Lcom/vk/common/i/b;
+    check-cast v2, Lcom/vk/common/i/RecyclerItem;
 
     move-object/from16 v14, p1
 
     .line 13
-    invoke-static {v2, v14}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v2, v14}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v2
 
     if-eqz v2, :cond_2
 
     .line 14
-    iget-object v4, v0, Lcom/vk/superapp/holders/SuperAppWidgetSportsHolder;->e:Lcom/vk/superapp/holders/b;
+    iget-object v4, v0, Lcom/vk/superapp/holders/SuperAppWidgetSportsHolder;->e:Lcom/vk/superapp/holders/SuperAppClickListener;
 
-    invoke-virtual {p0}, Lcom/vk/common/e/b;->getContext()Landroid/content/Context;
+    invoke-virtual {p0}, Lcom/vk/common/e/BaseItemHolder;->getContext()Landroid/content/Context;
 
     move-result-object v5
 
-    invoke-virtual {p0}, Lcom/vk/core/ui/v/j/h/f/a;->c0()Ljava/lang/Object;
+    invoke-virtual {p0}, Lcom/vk/core/ui/v/j/h/f/UiViewTimeRecyclerHolder;->c0()Ljava/lang/Object;
 
     move-result-object v2
 
@@ -510,7 +510,7 @@
 
     move-object v6, v2
 
-    check-cast v6, Lcom/vk/superapp/g/a;
+    check-cast v6, Lcom/vk/superapp/g/SuperAppItems;
 
     const/4 v10, 0x0
 
@@ -522,12 +522,12 @@
 
     move-object/from16 v9, p3
 
-    invoke-static/range {v4 .. v12}, Lcom/vk/superapp/holders/b$a;->a(Lcom/vk/superapp/holders/b;Landroid/content/Context;Lcom/vk/superapp/g/a;ILcom/vk/dto/common/data/ApiApplication;Ljava/lang/String;Lcom/vk/superapp/holders/SuperAppRequestCodes;ILjava/lang/Object;)V
+    invoke-static/range {v4 .. v12}, Lcom/vk/superapp/holders/SuperAppClickListener$a;->a(Lcom/vk/superapp/holders/SuperAppClickListener;Landroid/content/Context;Lcom/vk/superapp/g/SuperAppItems;ILcom/vk/dto/common/data/ApiApplication;Ljava/lang/String;Lcom/vk/superapp/holders/SuperAppRequestCodes;ILjava/lang/Object;)V
 
     goto :goto_1
 
     :cond_1
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     throw v3
 
@@ -562,7 +562,7 @@
     const v0, 0x7f0a0c3b
 
     .line 3
-    invoke-virtual {p0, v0}, Lcom/vk/common/e/b;->i(I)Landroid/view/View;
+    invoke-virtual {p0, v0}, Lcom/vk/common/e/BaseItemHolder;->i(I)Landroid/view/View;
 
     move-result-object v0
 
@@ -572,7 +572,7 @@
     const v1, 0x7f0a0860
 
     .line 5
-    invoke-virtual {p0, v1}, Lcom/vk/common/e/b;->i(I)Landroid/view/View;
+    invoke-virtual {p0, v1}, Lcom/vk/common/e/BaseItemHolder;->i(I)Landroid/view/View;
 
     move-result-object v1
 
@@ -585,7 +585,7 @@
     const v1, 0x7f0a0329
 
     .line 8
-    invoke-virtual {p0, v1}, Lcom/vk/common/e/b;->i(I)Landroid/view/View;
+    invoke-virtual {p0, v1}, Lcom/vk/common/e/BaseItemHolder;->i(I)Landroid/view/View;
 
     move-result-object v1
 
@@ -605,7 +605,7 @@
     const v1, 0x7f0a032a
 
     .line 10
-    invoke-virtual {p0, v1}, Lcom/vk/common/e/b;->i(I)Landroid/view/View;
+    invoke-virtual {p0, v1}, Lcom/vk/common/e/BaseItemHolder;->i(I)Landroid/view/View;
 
     move-result-object v1
 
@@ -656,13 +656,13 @@
     if-eqz v4, :cond_1
 
     .line 2
-    iget-object v0, p0, Lcom/vk/superapp/holders/SuperAppWidgetSportsHolder;->e:Lcom/vk/superapp/holders/b;
+    iget-object v0, p0, Lcom/vk/superapp/holders/SuperAppWidgetSportsHolder;->e:Lcom/vk/superapp/holders/SuperAppClickListener;
 
     iget-object v1, p0, Landroidx/recyclerview/widget/RecyclerView$ViewHolder;->itemView:Landroid/view/View;
 
     const-string v2, "itemView"
 
-    invoke-static {v1, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {v1}, Landroid/view/View;->getContext()Landroid/content/Context;
 
@@ -670,15 +670,15 @@
 
     const-string v2, "itemView.context"
 
-    invoke-static {v1, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    invoke-virtual {p0}, Lcom/vk/core/ui/v/j/h/f/a;->c0()Ljava/lang/Object;
+    invoke-virtual {p0}, Lcom/vk/core/ui/v/j/h/f/UiViewTimeRecyclerHolder;->c0()Ljava/lang/Object;
 
     move-result-object v2
 
     if-eqz v2, :cond_0
 
-    check-cast v2, Lcom/vk/superapp/g/a;
+    check-cast v2, Lcom/vk/superapp/g/SuperAppItems;
 
     const/4 v3, 0x0
 
@@ -686,12 +686,12 @@
 
     sget-object v6, Lcom/vk/superapp/holders/SuperAppRequestCodes;->SPORT_APP_REQUEST_CODE:Lcom/vk/superapp/holders/SuperAppRequestCodes;
 
-    invoke-interface/range {v0 .. v6}, Lcom/vk/superapp/holders/b;->a(Landroid/content/Context;Lcom/vk/superapp/g/a;ILcom/vk/dto/common/data/ApiApplication;Ljava/lang/String;Lcom/vk/superapp/holders/SuperAppRequestCodes;)V
+    invoke-interface/range {v0 .. v6}, Lcom/vk/superapp/holders/SuperAppClickListener;->a(Landroid/content/Context;Lcom/vk/superapp/g/SuperAppItems;ILcom/vk/dto/common/data/ApiApplication;Ljava/lang/String;Lcom/vk/superapp/holders/SuperAppRequestCodes;)V
 
     goto :goto_0
 
     :cond_0
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     const/4 v0, 0x0
 
@@ -704,11 +704,11 @@
 
 
 # virtual methods
-.method protected a(Lcom/vk/superapp/g/m;)V
+.method protected a(Lcom/vk/superapp/g/SuperAppWidgetSportsItem;)V
     .locals 6
 
     .line 3
-    invoke-virtual {p1}, Lcom/vk/superapp/g/m;->f()Ljava/util/List;
+    invoke-virtual {p1}, Lcom/vk/superapp/g/SuperAppWidgetSportsItem;->f()Ljava/util/List;
 
     move-result-object v0
 
@@ -737,7 +737,7 @@
 
     iget v4, v4, Lcom/vk/dto/common/data/ApiApplication;->a:I
 
-    invoke-virtual {p1}, Lcom/vk/superapp/g/m;->g()Lcom/vk/dto/menu/widgets/SuperAppWidgetSports;
+    invoke-virtual {p1}, Lcom/vk/superapp/g/SuperAppWidgetSportsItem;->g()Lcom/vk/dto/menu/widgets/SuperAppWidgetSports;
 
     move-result-object v5
 
@@ -772,14 +772,14 @@
 
     .line 5
     :cond_3
-    invoke-virtual {p1}, Lcom/vk/superapp/g/m;->g()Lcom/vk/dto/menu/widgets/SuperAppWidgetSports;
+    invoke-virtual {p1}, Lcom/vk/superapp/g/SuperAppWidgetSportsItem;->g()Lcom/vk/dto/menu/widgets/SuperAppWidgetSports;
 
     move-result-object p1
 
     const v0, 0x7f0a0517
 
     .line 6
-    invoke-virtual {p0, v0}, Lcom/vk/common/e/b;->i(I)Landroid/view/View;
+    invoke-virtual {p0, v0}, Lcom/vk/common/e/BaseItemHolder;->i(I)Landroid/view/View;
 
     move-result-object v0
 
@@ -826,13 +826,13 @@
     return-void
 .end method
 
-.method public bridge synthetic b(Lcom/vk/common/i/b;)V
+.method public bridge synthetic b(Lcom/vk/common/i/RecyclerItem;)V
     .locals 0
 
     .line 2
-    check-cast p1, Lcom/vk/superapp/g/m;
+    check-cast p1, Lcom/vk/superapp/g/SuperAppWidgetSportsItem;
 
-    invoke-virtual {p0, p1}, Lcom/vk/superapp/holders/SuperAppWidgetSportsHolder;->a(Lcom/vk/superapp/g/m;)V
+    invoke-virtual {p0, p1}, Lcom/vk/superapp/holders/SuperAppWidgetSportsHolder;->a(Lcom/vk/superapp/g/SuperAppWidgetSportsItem;)V
 
     return-void
 .end method

@@ -46,7 +46,7 @@
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, v1}, Lcom/vk/media/ext/VideoEncoderSettings$b;-><init>(Lkotlin/jvm/internal/i;)V
+    invoke-direct {v0, v1}, Lcom/vk/media/ext/VideoEncoderSettings$b;-><init>(Lkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     sput-object v0, Lcom/vk/media/ext/VideoEncoderSettings;->e:Lcom/vk/media/ext/VideoEncoderSettings$b;
 
@@ -64,9 +64,9 @@
     .line 2
     new-instance v0, Lcom/vk/media/ext/VideoEncoderSettings;
 
-    sget-object v1, Lb/h/p/c;->b:Lb/h/p/c$a;
+    sget-object v1, Lb/h/p/MediaUtils;->b:Lb/h/p/MediaUtils$a;
 
-    invoke-virtual {v1}, Lb/h/p/c$a;->c()I
+    invoke-virtual {v1}, Lb/h/p/MediaUtils$a;->c()I
 
     move-result v1
 

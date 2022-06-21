@@ -24,7 +24,7 @@
     return-void
 .end method
 
-.method public synthetic constructor <init>(Lkotlin/jvm/internal/i;)V
+.method public synthetic constructor <init>(Lkotlin/jvm/internal/DefaultConstructorMarker;)V
     .locals 0
 
     .line 2
@@ -116,7 +116,7 @@
 
     move-object v5, v1
 
-    invoke-direct/range {v5 .. v12}, Lcom/vk/dto/stories/model/web/Transform;-><init>(IFFLjava/lang/Float;Ljava/lang/String;ILkotlin/jvm/internal/i;)V
+    invoke-direct/range {v5 .. v12}, Lcom/vk/dto/stories/model/web/Transform;-><init>(IFFLjava/lang/Float;Ljava/lang/String;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     :goto_0
     const-string v1, "clickable_zones"
@@ -251,7 +251,7 @@
     const-string p1, "contentType"
 
     .line 15
-    invoke-static {v2, p1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v2, p1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     if-eqz v1, :cond_8
 

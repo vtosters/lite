@@ -31,7 +31,7 @@
 
 .field private final e:Landroid/content/Context;
 
-.field private final f:Lcom/vk/im/ui/components/viewcontrollers/popup/f;
+.field private final f:Lcom/vk/im/ui/components/viewcontrollers/popup/PopupScheduler;
 
 
 # direct methods
@@ -42,7 +42,7 @@
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, v1}, Lcom/vk/im/ui/components/viewcontrollers/popup/DelegatePinnedMsg$a;-><init>(Lkotlin/jvm/internal/i;)V
+    invoke-direct {v0, v1}, Lcom/vk/im/ui/components/viewcontrollers/popup/DelegatePinnedMsg$a;-><init>(Lkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     .line 1
     new-instance v0, Ljava/lang/Object;
@@ -61,7 +61,7 @@
     return-void
 .end method
 
-.method public constructor <init>(Landroid/content/Context;Lcom/vk/im/ui/components/viewcontrollers/popup/f;)V
+.method public constructor <init>(Landroid/content/Context;Lcom/vk/im/ui/components/viewcontrollers/popup/PopupScheduler;)V
     .locals 0
 
     .line 1
@@ -69,7 +69,7 @@
 
     iput-object p1, p0, Lcom/vk/im/ui/components/viewcontrollers/popup/DelegatePinnedMsg;->e:Landroid/content/Context;
 
-    iput-object p2, p0, Lcom/vk/im/ui/components/viewcontrollers/popup/DelegatePinnedMsg;->f:Lcom/vk/im/ui/components/viewcontrollers/popup/f;
+    iput-object p2, p0, Lcom/vk/im/ui/components/viewcontrollers/popup/DelegatePinnedMsg;->f:Lcom/vk/im/ui/components/viewcontrollers/popup/PopupScheduler;
 
     return-void
 .end method
@@ -83,16 +83,16 @@
     return-void
 .end method
 
-.method public static final synthetic a(Lcom/vk/im/ui/components/viewcontrollers/popup/DelegatePinnedMsg;Lkotlin/jvm/b/a;)V
+.method public static final synthetic a(Lcom/vk/im/ui/components/viewcontrollers/popup/DelegatePinnedMsg;Lkotlin/jvm/b/Functions;)V
     .locals 0
 
     .line 2
-    invoke-direct {p0, p1}, Lcom/vk/im/ui/components/viewcontrollers/popup/DelegatePinnedMsg;->b(Lkotlin/jvm/b/a;)V
+    invoke-direct {p0, p1}, Lcom/vk/im/ui/components/viewcontrollers/popup/DelegatePinnedMsg;->b(Lkotlin/jvm/b/Functions;)V
 
     return-void
 .end method
 
-.method public static synthetic a(Lcom/vk/im/ui/components/viewcontrollers/popup/DelegatePinnedMsg;Lkotlin/jvm/b/a;Lkotlin/jvm/b/a;ILjava/lang/Object;)V
+.method public static synthetic a(Lcom/vk/im/ui/components/viewcontrollers/popup/DelegatePinnedMsg;Lkotlin/jvm/b/Functions;Lkotlin/jvm/b/Functions;ILjava/lang/Object;)V
     .locals 1
 
     and-int/lit8 p4, p3, 0x1
@@ -112,7 +112,7 @@
 
     .line 18
     :cond_1
-    invoke-virtual {p0, p1, p2}, Lcom/vk/im/ui/components/viewcontrollers/popup/DelegatePinnedMsg;->a(Lkotlin/jvm/b/a;Lkotlin/jvm/b/a;)V
+    invoke-virtual {p0, p1, p2}, Lcom/vk/im/ui/components/viewcontrollers/popup/DelegatePinnedMsg;->a(Lkotlin/jvm/b/Functions;Lkotlin/jvm/b/Functions;)V
 
     return-void
 .end method
@@ -126,22 +126,22 @@
     return-void
 .end method
 
-.method public static final synthetic b(Lcom/vk/im/ui/components/viewcontrollers/popup/DelegatePinnedMsg;Lkotlin/jvm/b/a;)V
+.method public static final synthetic b(Lcom/vk/im/ui/components/viewcontrollers/popup/DelegatePinnedMsg;Lkotlin/jvm/b/Functions;)V
     .locals 0
 
     .line 2
-    invoke-direct {p0, p1}, Lcom/vk/im/ui/components/viewcontrollers/popup/DelegatePinnedMsg;->c(Lkotlin/jvm/b/a;)V
+    invoke-direct {p0, p1}, Lcom/vk/im/ui/components/viewcontrollers/popup/DelegatePinnedMsg;->c(Lkotlin/jvm/b/Functions;)V
 
     return-void
 .end method
 
-.method private final b(Lkotlin/jvm/b/a;)V
+.method private final b(Lkotlin/jvm/b/Functions;)V
     .locals 9
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lkotlin/jvm/b/a<",
-            "Lkotlin/m;",
+            "Lkotlin/jvm/b/Functions<",
+            "Lkotlin/Unit;",
             ">;)V"
         }
     .end annotation
@@ -170,7 +170,7 @@
     move-object v5, p1
 
     .line 6
-    invoke-static/range {v0 .. v8}, Lcom/vk/im/ui/components/viewcontrollers/popup/g;->a(Landroid/content/Context;ILjava/lang/CharSequence;ILjava/lang/CharSequence;Lkotlin/jvm/b/a;Lkotlin/jvm/b/a;ILjava/lang/Object;)Lb/h/g/k/a;
+    invoke-static/range {v0 .. v8}, Lcom/vk/im/ui/components/viewcontrollers/popup/PopupUtils;->a(Landroid/content/Context;ILjava/lang/CharSequence;ILjava/lang/CharSequence;Lkotlin/jvm/b/Functions;Lkotlin/jvm/b/Functions;ILjava/lang/Object;)Lb/h/g/k/VKProgressDialog;
 
     move-result-object p1
 
@@ -191,13 +191,13 @@
     return-void
 .end method
 
-.method private final c(Lkotlin/jvm/b/a;)V
+.method private final c(Lkotlin/jvm/b/Functions;)V
     .locals 9
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lkotlin/jvm/b/a<",
-            "Lkotlin/m;",
+            "Lkotlin/jvm/b/Functions<",
+            "Lkotlin/Unit;",
             ">;)V"
         }
     .end annotation
@@ -226,7 +226,7 @@
     move-object v5, p1
 
     .line 6
-    invoke-static/range {v0 .. v8}, Lcom/vk/im/ui/components/viewcontrollers/popup/g;->a(Landroid/content/Context;ILjava/lang/CharSequence;ILjava/lang/CharSequence;Lkotlin/jvm/b/a;Lkotlin/jvm/b/a;ILjava/lang/Object;)Lb/h/g/k/a;
+    invoke-static/range {v0 .. v8}, Lcom/vk/im/ui/components/viewcontrollers/popup/PopupUtils;->a(Landroid/content/Context;ILjava/lang/CharSequence;ILjava/lang/CharSequence;Lkotlin/jvm/b/Functions;Lkotlin/jvm/b/Functions;ILjava/lang/Object;)Lb/h/g/k/VKProgressDialog;
 
     move-result-object p1
 
@@ -267,13 +267,13 @@
     return-void
 .end method
 
-.method public final a(Lkotlin/jvm/b/a;)V
+.method public final a(Lkotlin/jvm/b/Functions;)V
     .locals 18
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lkotlin/jvm/b/a<",
-            "Lkotlin/m;",
+            "Lkotlin/jvm/b/Functions<",
+            "Lkotlin/Unit;",
             ">;)V"
         }
     .end annotation
@@ -331,7 +331,7 @@
     move-object/from16 v12, p1
 
     .line 10
-    invoke-static/range {v2 .. v17}, Lcom/vk/im/ui/components/viewcontrollers/popup/g;->a(Landroid/content/Context;ILjava/lang/CharSequence;ILjava/lang/CharSequence;ILjava/lang/CharSequence;ILjava/lang/CharSequence;ZLkotlin/jvm/b/a;Lkotlin/jvm/b/a;Lkotlin/jvm/b/a;Lkotlin/jvm/b/a;ILjava/lang/Object;)Landroidx/appcompat/app/AlertDialog$Builder;
+    invoke-static/range {v2 .. v17}, Lcom/vk/im/ui/components/viewcontrollers/popup/PopupUtils;->a(Landroid/content/Context;ILjava/lang/CharSequence;ILjava/lang/CharSequence;ILjava/lang/CharSequence;ILjava/lang/CharSequence;ZLkotlin/jvm/b/Functions;Lkotlin/jvm/b/Functions;Lkotlin/jvm/b/Functions;Lkotlin/jvm/b/Functions;ILjava/lang/Object;)Landroidx/appcompat/app/AlertDialog$Builder;
 
     move-result-object v1
 
@@ -345,16 +345,16 @@
     return-void
 .end method
 
-.method public final a(Lkotlin/jvm/b/a;Lkotlin/jvm/b/a;)V
+.method public final a(Lkotlin/jvm/b/Functions;Lkotlin/jvm/b/Functions;)V
     .locals 18
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lkotlin/jvm/b/a<",
-            "Lkotlin/m;",
+            "Lkotlin/jvm/b/Functions<",
+            "Lkotlin/Unit;",
             ">;",
-            "Lkotlin/jvm/b/a<",
-            "Lkotlin/m;",
+            "Lkotlin/jvm/b/Functions<",
+            "Lkotlin/Unit;",
             ">;)V"
         }
     .end annotation
@@ -412,7 +412,7 @@
     move-object/from16 v14, p2
 
     .line 26
-    invoke-static/range {v2 .. v17}, Lcom/vk/im/ui/components/viewcontrollers/popup/g;->a(Landroid/content/Context;ILjava/lang/CharSequence;ILjava/lang/CharSequence;ILjava/lang/CharSequence;ILjava/lang/CharSequence;ZLkotlin/jvm/b/a;Lkotlin/jvm/b/a;Lkotlin/jvm/b/a;Lkotlin/jvm/b/a;ILjava/lang/Object;)Landroidx/appcompat/app/AlertDialog$Builder;
+    invoke-static/range {v2 .. v17}, Lcom/vk/im/ui/components/viewcontrollers/popup/PopupUtils;->a(Landroid/content/Context;ILjava/lang/CharSequence;ILjava/lang/CharSequence;ILjava/lang/CharSequence;ILjava/lang/CharSequence;ZLkotlin/jvm/b/Functions;Lkotlin/jvm/b/Functions;Lkotlin/jvm/b/Functions;Lkotlin/jvm/b/Functions;ILjava/lang/Object;)Landroidx/appcompat/app/AlertDialog$Builder;
 
     move-result-object v1
 
@@ -426,13 +426,13 @@
     return-void
 .end method
 
-.method public final a(Lkotlin/jvm/b/a;Z)V
+.method public final a(Lkotlin/jvm/b/Functions;Z)V
     .locals 2
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lkotlin/jvm/b/a<",
-            "Lkotlin/m;",
+            "Lkotlin/jvm/b/Functions<",
+            "Lkotlin/Unit;",
             ">;Z)V"
         }
     .end annotation
@@ -448,25 +448,25 @@
 
     .line 13
     :cond_0
-    iget-object v0, p0, Lcom/vk/im/ui/components/viewcontrollers/popup/DelegatePinnedMsg;->f:Lcom/vk/im/ui/components/viewcontrollers/popup/f;
+    iget-object v0, p0, Lcom/vk/im/ui/components/viewcontrollers/popup/DelegatePinnedMsg;->f:Lcom/vk/im/ui/components/viewcontrollers/popup/PopupScheduler;
 
     sget-object v1, Lcom/vk/im/ui/components/viewcontrollers/popup/DelegatePinnedMsg;->g:Ljava/lang/Object;
 
-    invoke-virtual {v0, v1}, Lcom/vk/im/ui/components/viewcontrollers/popup/f;->a(Ljava/lang/Object;)V
+    invoke-virtual {v0, v1}, Lcom/vk/im/ui/components/viewcontrollers/popup/PopupScheduler;->a(Ljava/lang/Object;)V
 
     .line 14
-    iget-object v0, p0, Lcom/vk/im/ui/components/viewcontrollers/popup/DelegatePinnedMsg;->f:Lcom/vk/im/ui/components/viewcontrollers/popup/f;
+    iget-object v0, p0, Lcom/vk/im/ui/components/viewcontrollers/popup/DelegatePinnedMsg;->f:Lcom/vk/im/ui/components/viewcontrollers/popup/PopupScheduler;
 
     .line 15
     new-instance v1, Lcom/vk/im/ui/components/viewcontrollers/popup/DelegatePinnedMsg$showAttachProgress$1;
 
-    invoke-direct {v1, p0, p1}, Lcom/vk/im/ui/components/viewcontrollers/popup/DelegatePinnedMsg$showAttachProgress$1;-><init>(Lcom/vk/im/ui/components/viewcontrollers/popup/DelegatePinnedMsg;Lkotlin/jvm/b/a;)V
+    invoke-direct {v1, p0, p1}, Lcom/vk/im/ui/components/viewcontrollers/popup/DelegatePinnedMsg$showAttachProgress$1;-><init>(Lcom/vk/im/ui/components/viewcontrollers/popup/DelegatePinnedMsg;Lkotlin/jvm/b/Functions;)V
 
     .line 16
     sget-object p1, Lcom/vk/im/ui/components/viewcontrollers/popup/DelegatePinnedMsg;->g:Ljava/lang/Object;
 
     .line 17
-    invoke-virtual {v0, v1, p1, p2}, Lcom/vk/im/ui/components/viewcontrollers/popup/f;->a(Lkotlin/jvm/b/a;Ljava/lang/Object;Z)V
+    invoke-virtual {v0, v1, p1, p2}, Lcom/vk/im/ui/components/viewcontrollers/popup/PopupScheduler;->a(Lkotlin/jvm/b/Functions;Ljava/lang/Object;Z)V
 
     return-void
 .end method
@@ -475,11 +475,11 @@
     .locals 2
 
     .line 8
-    iget-object v0, p0, Lcom/vk/im/ui/components/viewcontrollers/popup/DelegatePinnedMsg;->f:Lcom/vk/im/ui/components/viewcontrollers/popup/f;
+    iget-object v0, p0, Lcom/vk/im/ui/components/viewcontrollers/popup/DelegatePinnedMsg;->f:Lcom/vk/im/ui/components/viewcontrollers/popup/PopupScheduler;
 
     sget-object v1, Lcom/vk/im/ui/components/viewcontrollers/popup/DelegatePinnedMsg;->g:Ljava/lang/Object;
 
-    invoke-virtual {v0, v1}, Lcom/vk/im/ui/components/viewcontrollers/popup/f;->a(Ljava/lang/Object;)V
+    invoke-virtual {v0, v1}, Lcom/vk/im/ui/components/viewcontrollers/popup/PopupScheduler;->a(Ljava/lang/Object;)V
 
     .line 9
     iget-object v0, p0, Lcom/vk/im/ui/components/viewcontrollers/popup/DelegatePinnedMsg;->b:Landroid/app/Dialog;
@@ -492,13 +492,13 @@
     return-void
 .end method
 
-.method public final b(Lkotlin/jvm/b/a;Z)V
+.method public final b(Lkotlin/jvm/b/Functions;Z)V
     .locals 2
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lkotlin/jvm/b/a<",
-            "Lkotlin/m;",
+            "Lkotlin/jvm/b/Functions<",
+            "Lkotlin/Unit;",
             ">;Z)V"
         }
     .end annotation
@@ -514,25 +514,25 @@
 
     .line 11
     :cond_0
-    iget-object v0, p0, Lcom/vk/im/ui/components/viewcontrollers/popup/DelegatePinnedMsg;->f:Lcom/vk/im/ui/components/viewcontrollers/popup/f;
+    iget-object v0, p0, Lcom/vk/im/ui/components/viewcontrollers/popup/DelegatePinnedMsg;->f:Lcom/vk/im/ui/components/viewcontrollers/popup/PopupScheduler;
 
     sget-object v1, Lcom/vk/im/ui/components/viewcontrollers/popup/DelegatePinnedMsg;->h:Ljava/lang/Object;
 
-    invoke-virtual {v0, v1}, Lcom/vk/im/ui/components/viewcontrollers/popup/f;->a(Ljava/lang/Object;)V
+    invoke-virtual {v0, v1}, Lcom/vk/im/ui/components/viewcontrollers/popup/PopupScheduler;->a(Ljava/lang/Object;)V
 
     .line 12
-    iget-object v0, p0, Lcom/vk/im/ui/components/viewcontrollers/popup/DelegatePinnedMsg;->f:Lcom/vk/im/ui/components/viewcontrollers/popup/f;
+    iget-object v0, p0, Lcom/vk/im/ui/components/viewcontrollers/popup/DelegatePinnedMsg;->f:Lcom/vk/im/ui/components/viewcontrollers/popup/PopupScheduler;
 
     .line 13
     new-instance v1, Lcom/vk/im/ui/components/viewcontrollers/popup/DelegatePinnedMsg$showDetachProgress$1;
 
-    invoke-direct {v1, p0, p1}, Lcom/vk/im/ui/components/viewcontrollers/popup/DelegatePinnedMsg$showDetachProgress$1;-><init>(Lcom/vk/im/ui/components/viewcontrollers/popup/DelegatePinnedMsg;Lkotlin/jvm/b/a;)V
+    invoke-direct {v1, p0, p1}, Lcom/vk/im/ui/components/viewcontrollers/popup/DelegatePinnedMsg$showDetachProgress$1;-><init>(Lcom/vk/im/ui/components/viewcontrollers/popup/DelegatePinnedMsg;Lkotlin/jvm/b/Functions;)V
 
     .line 14
     sget-object p1, Lcom/vk/im/ui/components/viewcontrollers/popup/DelegatePinnedMsg;->h:Ljava/lang/Object;
 
     .line 15
-    invoke-virtual {v0, v1, p1, p2}, Lcom/vk/im/ui/components/viewcontrollers/popup/f;->a(Lkotlin/jvm/b/a;Ljava/lang/Object;Z)V
+    invoke-virtual {v0, v1, p1, p2}, Lcom/vk/im/ui/components/viewcontrollers/popup/PopupScheduler;->a(Lkotlin/jvm/b/Functions;Ljava/lang/Object;Z)V
 
     return-void
 .end method
@@ -555,11 +555,11 @@
     .locals 2
 
     .line 2
-    iget-object v0, p0, Lcom/vk/im/ui/components/viewcontrollers/popup/DelegatePinnedMsg;->f:Lcom/vk/im/ui/components/viewcontrollers/popup/f;
+    iget-object v0, p0, Lcom/vk/im/ui/components/viewcontrollers/popup/DelegatePinnedMsg;->f:Lcom/vk/im/ui/components/viewcontrollers/popup/PopupScheduler;
 
     sget-object v1, Lcom/vk/im/ui/components/viewcontrollers/popup/DelegatePinnedMsg;->h:Ljava/lang/Object;
 
-    invoke-virtual {v0, v1}, Lcom/vk/im/ui/components/viewcontrollers/popup/f;->a(Ljava/lang/Object;)V
+    invoke-virtual {v0, v1}, Lcom/vk/im/ui/components/viewcontrollers/popup/PopupScheduler;->a(Ljava/lang/Object;)V
 
     .line 3
     iget-object v0, p0, Lcom/vk/im/ui/components/viewcontrollers/popup/DelegatePinnedMsg;->d:Landroid/app/Dialog;
@@ -592,7 +592,7 @@
     .line 1
     iget-object v0, p0, Lcom/vk/im/ui/components/viewcontrollers/popup/DelegatePinnedMsg;->b:Landroid/app/Dialog;
 
-    invoke-static {v0}, Lcom/vk/core/extensions/e;->a(Landroid/app/Dialog;)Z
+    invoke-static {v0}, Lcom/vk/core/extensions/DIalogExt;->a(Landroid/app/Dialog;)Z
 
     move-result v0
 
@@ -605,7 +605,7 @@
     .line 1
     iget-object v0, p0, Lcom/vk/im/ui/components/viewcontrollers/popup/DelegatePinnedMsg;->a:Landroid/app/Dialog;
 
-    invoke-static {v0}, Lcom/vk/core/extensions/e;->a(Landroid/app/Dialog;)Z
+    invoke-static {v0}, Lcom/vk/core/extensions/DIalogExt;->a(Landroid/app/Dialog;)Z
 
     move-result v0
 
@@ -618,7 +618,7 @@
     .line 1
     iget-object v0, p0, Lcom/vk/im/ui/components/viewcontrollers/popup/DelegatePinnedMsg;->d:Landroid/app/Dialog;
 
-    invoke-static {v0}, Lcom/vk/core/extensions/e;->a(Landroid/app/Dialog;)Z
+    invoke-static {v0}, Lcom/vk/core/extensions/DIalogExt;->a(Landroid/app/Dialog;)Z
 
     move-result v0
 
@@ -631,7 +631,7 @@
     .line 1
     iget-object v0, p0, Lcom/vk/im/ui/components/viewcontrollers/popup/DelegatePinnedMsg;->c:Landroid/app/Dialog;
 
-    invoke-static {v0}, Lcom/vk/core/extensions/e;->a(Landroid/app/Dialog;)Z
+    invoke-static {v0}, Lcom/vk/core/extensions/DIalogExt;->a(Landroid/app/Dialog;)Z
 
     move-result v0
 

@@ -3,7 +3,7 @@
 .source "AutoSuggestStickersPopupWindow.kt"
 
 # interfaces
-.implements Lc/a/z/g;
+.implements Lio/reactivex/functions/Consumer;
 
 
 # annotations
@@ -22,7 +22,7 @@
         "Ljava/lang/Object;",
         ">",
         "Ljava/lang/Object;",
-        "Lc/a/z/g<",
+        "Lio/reactivex/functions/Consumer<",
         "Ljava/util/List<",
         "+",
         "Ljava/lang/Integer;",
@@ -68,7 +68,7 @@
 
     iget-object v0, v0, Lcom/vk/stickers/AutoSuggestStickersPopupWindow$b;->a:Lcom/vk/stickers/AutoSuggestStickersPopupWindow;
 
-    invoke-static {v0}, Lcom/vk/stickers/AutoSuggestStickersPopupWindow;->g(Lcom/vk/stickers/AutoSuggestStickersPopupWindow;)Lcom/vk/stickers/r;
+    invoke-static {v0}, Lcom/vk/stickers/AutoSuggestStickersPopupWindow;->g(Lcom/vk/stickers/AutoSuggestStickersPopupWindow;)Lcom/vk/stickers/StickerLongtapWindow;
 
     move-result-object v0
 
@@ -88,7 +88,7 @@
 
     const-string v3, "it"
 
-    invoke-static {p1, v3}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v3}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     iget-object v3, p0, Lcom/vk/stickers/AutoSuggestStickersPopupWindow$b$a;->a:Lcom/vk/stickers/AutoSuggestStickersPopupWindow$b;
 
@@ -110,7 +110,7 @@
     const/4 v3, 0x0
 
     :goto_0
-    invoke-virtual {v0, v1, v2, p1, v3}, Lcom/vk/stickers/r;->a(Ljava/util/List;ILjava/util/List;Landroid/view/View;)V
+    invoke-virtual {v0, v1, v2, p1, v3}, Lcom/vk/stickers/StickerLongtapWindow;->a(Ljava/util/List;ILjava/util/List;Landroid/view/View;)V
 
     return-void
 .end method

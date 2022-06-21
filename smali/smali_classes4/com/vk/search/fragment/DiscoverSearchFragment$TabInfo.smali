@@ -19,20 +19,20 @@
 
 .field private final b:I
 
-.field private final c:Lkotlin/jvm/b/a;
+.field private final c:Lkotlin/jvm/b/Functions;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Lkotlin/jvm/b/a<",
+            "Lkotlin/jvm/b/Functions<",
             "Lcom/vk/core/fragments/FragmentImpl;",
             ">;"
         }
     .end annotation
 .end field
 
-.field private final d:Lkotlin/jvm/b/b;
+.field private final d:Lkotlin/jvm/b/Functions2;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Lkotlin/jvm/b/b<",
+            "Lkotlin/jvm/b/Functions2<",
             "Landroid/app/Activity;",
             "Lcom/vk/search/SearchParamsDialogSheet;",
             ">;"
@@ -44,7 +44,7 @@
 
 
 # direct methods
-.method public constructor <init>(Lcom/vk/stats/AppUseTime$Section;ILkotlin/jvm/b/a;Lkotlin/jvm/b/b;I)V
+.method public constructor <init>(Lcom/vk/stats/AppUseTime$Section;ILkotlin/jvm/b/Functions;Lkotlin/jvm/b/Functions2;I)V
     .locals 0
     .param p2    # I
         .annotation build Landroidx/annotation/StringRes;
@@ -55,11 +55,11 @@
             "(",
             "Lcom/vk/stats/AppUseTime$Section;",
             "I",
-            "Lkotlin/jvm/b/a<",
+            "Lkotlin/jvm/b/Functions<",
             "+",
             "Lcom/vk/core/fragments/FragmentImpl;",
             ">;",
-            "Lkotlin/jvm/b/b<",
+            "Lkotlin/jvm/b/Functions2<",
             "-",
             "Landroid/app/Activity;",
             "Lcom/vk/search/SearchParamsDialogSheet;",
@@ -74,16 +74,16 @@
 
     iput p2, p0, Lcom/vk/search/fragment/DiscoverSearchFragment$TabInfo;->b:I
 
-    iput-object p3, p0, Lcom/vk/search/fragment/DiscoverSearchFragment$TabInfo;->c:Lkotlin/jvm/b/a;
+    iput-object p3, p0, Lcom/vk/search/fragment/DiscoverSearchFragment$TabInfo;->c:Lkotlin/jvm/b/Functions;
 
-    iput-object p4, p0, Lcom/vk/search/fragment/DiscoverSearchFragment$TabInfo;->d:Lkotlin/jvm/b/b;
+    iput-object p4, p0, Lcom/vk/search/fragment/DiscoverSearchFragment$TabInfo;->d:Lkotlin/jvm/b/Functions2;
 
     iput p5, p0, Lcom/vk/search/fragment/DiscoverSearchFragment$TabInfo;->e:I
 
     return-void
 .end method
 
-.method public synthetic constructor <init>(Lcom/vk/stats/AppUseTime$Section;ILkotlin/jvm/b/a;Lkotlin/jvm/b/b;IILkotlin/jvm/internal/i;)V
+.method public synthetic constructor <init>(Lcom/vk/stats/AppUseTime$Section;ILkotlin/jvm/b/Functions;Lkotlin/jvm/b/Functions2;IILkotlin/jvm/internal/DefaultConstructorMarker;)V
     .locals 6
 
     and-int/lit8 p6, p6, 0x8
@@ -106,36 +106,36 @@
 
     move v5, p5
 
-    invoke-direct/range {v0 .. v5}, Lcom/vk/search/fragment/DiscoverSearchFragment$TabInfo;-><init>(Lcom/vk/stats/AppUseTime$Section;ILkotlin/jvm/b/a;Lkotlin/jvm/b/b;I)V
+    invoke-direct/range {v0 .. v5}, Lcom/vk/search/fragment/DiscoverSearchFragment$TabInfo;-><init>(Lcom/vk/stats/AppUseTime$Section;ILkotlin/jvm/b/Functions;Lkotlin/jvm/b/Functions2;I)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a()Lkotlin/jvm/b/a;
+.method public final a()Lkotlin/jvm/b/Functions;
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "()",
-            "Lkotlin/jvm/b/a<",
+            "Lkotlin/jvm/b/Functions<",
             "Lcom/vk/core/fragments/FragmentImpl;",
             ">;"
         }
     .end annotation
 
     .line 1
-    iget-object v0, p0, Lcom/vk/search/fragment/DiscoverSearchFragment$TabInfo;->c:Lkotlin/jvm/b/a;
+    iget-object v0, p0, Lcom/vk/search/fragment/DiscoverSearchFragment$TabInfo;->c:Lkotlin/jvm/b/Functions;
 
     return-object v0
 .end method
 
-.method public final b()Lkotlin/jvm/b/b;
+.method public final b()Lkotlin/jvm/b/Functions2;
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "()",
-            "Lkotlin/jvm/b/b<",
+            "Lkotlin/jvm/b/Functions2<",
             "Landroid/app/Activity;",
             "Lcom/vk/search/SearchParamsDialogSheet;",
             ">;"
@@ -143,7 +143,7 @@
     .end annotation
 
     .line 1
-    iget-object v0, p0, Lcom/vk/search/fragment/DiscoverSearchFragment$TabInfo;->d:Lkotlin/jvm/b/b;
+    iget-object v0, p0, Lcom/vk/search/fragment/DiscoverSearchFragment$TabInfo;->d:Lkotlin/jvm/b/Functions2;
 
     return-object v0
 .end method
@@ -190,7 +190,7 @@
 
     iget-object v1, p1, Lcom/vk/search/fragment/DiscoverSearchFragment$TabInfo;->a:Lcom/vk/stats/AppUseTime$Section;
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v0
 
@@ -202,21 +202,21 @@
 
     if-ne v0, v1, :cond_0
 
-    iget-object v0, p0, Lcom/vk/search/fragment/DiscoverSearchFragment$TabInfo;->c:Lkotlin/jvm/b/a;
+    iget-object v0, p0, Lcom/vk/search/fragment/DiscoverSearchFragment$TabInfo;->c:Lkotlin/jvm/b/Functions;
 
-    iget-object v1, p1, Lcom/vk/search/fragment/DiscoverSearchFragment$TabInfo;->c:Lkotlin/jvm/b/a;
+    iget-object v1, p1, Lcom/vk/search/fragment/DiscoverSearchFragment$TabInfo;->c:Lkotlin/jvm/b/Functions;
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    iget-object v0, p0, Lcom/vk/search/fragment/DiscoverSearchFragment$TabInfo;->d:Lkotlin/jvm/b/b;
+    iget-object v0, p0, Lcom/vk/search/fragment/DiscoverSearchFragment$TabInfo;->d:Lkotlin/jvm/b/Functions2;
 
-    iget-object v1, p1, Lcom/vk/search/fragment/DiscoverSearchFragment$TabInfo;->d:Lkotlin/jvm/b/b;
+    iget-object v1, p1, Lcom/vk/search/fragment/DiscoverSearchFragment$TabInfo;->d:Lkotlin/jvm/b/Functions2;
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v0
 
@@ -269,7 +269,7 @@
 
     mul-int/lit8 v0, v0, 0x1f
 
-    iget-object v2, p0, Lcom/vk/search/fragment/DiscoverSearchFragment$TabInfo;->c:Lkotlin/jvm/b/a;
+    iget-object v2, p0, Lcom/vk/search/fragment/DiscoverSearchFragment$TabInfo;->c:Lkotlin/jvm/b/Functions;
 
     if-eqz v2, :cond_1
 
@@ -287,7 +287,7 @@
 
     mul-int/lit8 v0, v0, 0x1f
 
-    iget-object v2, p0, Lcom/vk/search/fragment/DiscoverSearchFragment$TabInfo;->d:Lkotlin/jvm/b/b;
+    iget-object v2, p0, Lcom/vk/search/fragment/DiscoverSearchFragment$TabInfo;->d:Lkotlin/jvm/b/Functions2;
 
     if-eqz v2, :cond_2
 
@@ -334,7 +334,7 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget-object v1, p0, Lcom/vk/search/fragment/DiscoverSearchFragment$TabInfo;->c:Lkotlin/jvm/b/a;
+    iget-object v1, p0, Lcom/vk/search/fragment/DiscoverSearchFragment$TabInfo;->c:Lkotlin/jvm/b/Functions;
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
@@ -342,7 +342,7 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget-object v1, p0, Lcom/vk/search/fragment/DiscoverSearchFragment$TabInfo;->d:Lkotlin/jvm/b/b;
+    iget-object v1, p0, Lcom/vk/search/fragment/DiscoverSearchFragment$TabInfo;->d:Lkotlin/jvm/b/Functions2;
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 

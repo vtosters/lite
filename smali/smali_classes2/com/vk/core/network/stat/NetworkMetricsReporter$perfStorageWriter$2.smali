@@ -3,12 +3,12 @@
 .source "NetworkMetricsReporter.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/a;
+.implements Lkotlin/jvm/b/Functions;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/core/network/stat/NetworkMetricsReporter;-><init>(Lkotlin/jvm/b/b;)V
+    value = Lcom/vk/core/network/stat/NetworkMetricsReporter;-><init>(Lkotlin/jvm/b/Functions2;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -19,8 +19,8 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/a<",
-        "Lcom/vk/core/network/stat/e;",
+        "Lkotlin/jvm/b/Functions<",
+        "Lcom/vk/core/network/stat/PeriodicalPerfStorageWriter;",
         ">;"
     }
 .end annotation
@@ -55,15 +55,15 @@
 
 
 # virtual methods
-.method public final invoke()Lcom/vk/core/network/stat/e;
+.method public final invoke()Lcom/vk/core/network/stat/PeriodicalPerfStorageWriter;
     .locals 7
 
     .line 2
-    new-instance v6, Lcom/vk/core/network/stat/e;
+    new-instance v6, Lcom/vk/core/network/stat/PeriodicalPerfStorageWriter;
 
-    sget-object v0, Lcom/vk/metrics/reporters/a;->j:Lcom/vk/metrics/reporters/a;
+    sget-object v0, Lcom/vk/metrics/reporters/PerformanceReporter;->j:Lcom/vk/metrics/reporters/PerformanceReporter;
 
-    invoke-virtual {v0}, Lcom/vk/metrics/reporters/a;->c()Lb/h/q/c/c/c;
+    invoke-virtual {v0}, Lcom/vk/metrics/reporters/PerformanceReporter;->c()Lb/h/q/c/c/PerformanceStorage;
 
     move-result-object v1
 
@@ -75,7 +75,7 @@
 
     move-object v0, v6
 
-    invoke-direct/range {v0 .. v5}, Lcom/vk/core/network/stat/e;-><init>(Lb/h/q/c/c/c;JILkotlin/jvm/internal/i;)V
+    invoke-direct/range {v0 .. v5}, Lcom/vk/core/network/stat/PeriodicalPerfStorageWriter;-><init>(Lb/h/q/c/c/PerformanceStorage;JILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     return-object v6
 .end method
@@ -84,7 +84,7 @@
     .locals 1
 
     .line 1
-    invoke-virtual {p0}, Lcom/vk/core/network/stat/NetworkMetricsReporter$perfStorageWriter$2;->invoke()Lcom/vk/core/network/stat/e;
+    invoke-virtual {p0}, Lcom/vk/core/network/stat/NetworkMetricsReporter$perfStorageWriter$2;->invoke()Lcom/vk/core/network/stat/PeriodicalPerfStorageWriter;
 
     move-result-object v0
 

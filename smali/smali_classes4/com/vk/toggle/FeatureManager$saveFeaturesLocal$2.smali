@@ -3,7 +3,7 @@
 .source "FeatureManager.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/b;
+.implements Lkotlin/jvm/b/Functions2;
 
 
 # annotations
@@ -19,9 +19,9 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/b<",
-        "Lcom/vk/toggle/b$c;",
-        "Lkotlin/m;",
+        "Lkotlin/jvm/b/Functions2<",
+        "Lcom/vk/toggle/FeatureStorage$c;",
+        "Lkotlin/Unit;",
         ">;"
     }
 .end annotation
@@ -46,11 +46,11 @@
 
 
 # virtual methods
-.method public final a(Lcom/vk/toggle/b$c;)V
+.method public final a(Lcom/vk/toggle/FeatureStorage$c;)V
     .locals 1
 
     .line 1
-    invoke-virtual {p1}, Lcom/vk/toggle/b$c;->a()Ljava/lang/String;
+    invoke-virtual {p1}, Lcom/vk/toggle/FeatureStorage$c;->a()Ljava/lang/String;
 
     move-result-object p1
 
@@ -85,11 +85,11 @@
     .locals 0
 
     .line 1
-    check-cast p1, Lcom/vk/toggle/b$c;
+    check-cast p1, Lcom/vk/toggle/FeatureStorage$c;
 
-    invoke-virtual {p0, p1}, Lcom/vk/toggle/FeatureManager$saveFeaturesLocal$2;->a(Lcom/vk/toggle/b$c;)V
+    invoke-virtual {p0, p1}, Lcom/vk/toggle/FeatureManager$saveFeaturesLocal$2;->a(Lcom/vk/toggle/FeatureStorage$c;)V
 
-    sget-object p1, Lkotlin/m;->a:Lkotlin/m;
+    sget-object p1, Lkotlin/Unit;->a:Lkotlin/Unit;
 
     return-object p1
 .end method

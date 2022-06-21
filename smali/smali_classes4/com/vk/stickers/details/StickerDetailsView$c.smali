@@ -3,7 +3,7 @@
 .source "StickerDetailsView.kt"
 
 # interfaces
-.implements Lcom/vk/stickers/n;
+.implements Lcom/vk/stickers/StickerChecker;
 
 
 # annotations

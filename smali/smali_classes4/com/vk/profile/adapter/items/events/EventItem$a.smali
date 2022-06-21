@@ -24,7 +24,7 @@
     return-void
 .end method
 
-.method public synthetic constructor <init>(Lkotlin/jvm/internal/i;)V
+.method public synthetic constructor <init>(Lkotlin/jvm/internal/DefaultConstructorMarker;)V
     .locals 0
 
     .line 2
@@ -45,20 +45,20 @@
 
     const/4 v2, 0x1
 
-    invoke-static {v0, v1, v2}, Lcom/vk/core/util/i1;->a(IZZ)Ljava/lang/String;
+    invoke-static {v0, v1, v2}, Lcom/vk/core/util/TimeUtils;->a(IZZ)Ljava/lang/String;
 
     move-result-object v0
 
     const-string v2, "TimeUtils.langDate(group.startTime, false, true)"
 
-    invoke-static {v0, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-static {v0}, Lkotlin/text/l;->d(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
     .line 2
-    invoke-static {}, Lcom/vk/core/util/i1;->c()Ljava/util/Calendar;
+    invoke-static {}, Lcom/vk/core/util/TimeUtils;->c()Ljava/util/Calendar;
 
     move-result-object v2
 
@@ -85,7 +85,7 @@
     const-string v3, "c"
 
     .line 7
-    invoke-static {v2, v3}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v2, v3}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {v2}, Ljava/util/Calendar;->getTimeInMillis()J
 

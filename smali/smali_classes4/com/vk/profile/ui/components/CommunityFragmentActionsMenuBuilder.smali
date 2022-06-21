@@ -1,22 +1,22 @@
 .class public abstract Lcom/vk/profile/ui/components/CommunityFragmentActionsMenuBuilder;
-.super Lcom/vk/profile/ui/components/a;
+.super Lcom/vk/profile/ui/components/BaseProfileFragmentActionsMenuBuilder;
 .source "CommunityFragmentActionsMenuBuilder.kt"
 
 
 # instance fields
-.field private final b:Lcom/vtosters/lite/api/i;
+.field private final b:Lcom/vtosters/lite/api/ExtendedCommunityProfile;
 
 .field private final c:I
 
 
 # direct methods
-.method public constructor <init>(Landroid/view/View;Lcom/vtosters/lite/api/i;I)V
+.method public constructor <init>(Landroid/view/View;Lcom/vtosters/lite/api/ExtendedCommunityProfile;I)V
     .locals 0
 
     .line 1
-    invoke-direct {p0, p1, p2}, Lcom/vk/profile/ui/components/a;-><init>(Landroid/view/View;Lcom/vtosters/lite/api/ExtendedUserProfile;)V
+    invoke-direct {p0, p1, p2}, Lcom/vk/profile/ui/components/BaseProfileFragmentActionsMenuBuilder;-><init>(Landroid/view/View;Lcom/vtosters/lite/api/ExtendedUserProfile;)V
 
-    iput-object p2, p0, Lcom/vk/profile/ui/components/CommunityFragmentActionsMenuBuilder;->b:Lcom/vtosters/lite/api/i;
+    iput-object p2, p0, Lcom/vk/profile/ui/components/CommunityFragmentActionsMenuBuilder;->b:Lcom/vtosters/lite/api/ExtendedCommunityProfile;
 
     iput p3, p0, Lcom/vk/profile/ui/components/CommunityFragmentActionsMenuBuilder;->c:I
 
@@ -34,20 +34,20 @@
     .end annotation
 
     .line 1
-    invoke-virtual {p0}, Lcom/vk/profile/ui/components/a;->a()Lcom/vk/core/dialogs/actionspopup/a$b;
+    invoke-virtual {p0}, Lcom/vk/profile/ui/components/BaseProfileFragmentActionsMenuBuilder;->a()Lcom/vk/core/dialogs/actionspopup/ActionsPopup$b;
 
     move-result-object v7
 
     .line 2
-    iget-object v0, p0, Lcom/vk/profile/ui/components/CommunityFragmentActionsMenuBuilder;->b:Lcom/vtosters/lite/api/i;
+    iget-object v0, p0, Lcom/vk/profile/ui/components/CommunityFragmentActionsMenuBuilder;->b:Lcom/vtosters/lite/api/ExtendedCommunityProfile;
 
-    invoke-static {v0}, Lcom/vk/profile/utils/b;->a(Lcom/vtosters/lite/api/i;)Z
+    invoke-static {v0}, Lcom/vk/profile/utils/CommunityExt;->a(Lcom/vtosters/lite/api/ExtendedCommunityProfile;)Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    iget-object v0, p0, Lcom/vk/profile/ui/components/CommunityFragmentActionsMenuBuilder;->b:Lcom/vtosters/lite/api/i;
+    iget-object v0, p0, Lcom/vk/profile/ui/components/CommunityFragmentActionsMenuBuilder;->b:Lcom/vtosters/lite/api/ExtendedCommunityProfile;
 
     invoke-virtual {v0}, Lcom/vtosters/lite/api/ExtendedUserProfile;->d()Z
 
@@ -72,18 +72,18 @@
 
     move-object v0, v7
 
-    invoke-static/range {v0 .. v6}, Lcom/vk/core/dialogs/actionspopup/a$b;->a(Lcom/vk/core/dialogs/actionspopup/a$b;ILandroid/graphics/drawable/Drawable;ZLkotlin/jvm/b/a;ILjava/lang/Object;)Lcom/vk/core/dialogs/actionspopup/a$b;
+    invoke-static/range {v0 .. v6}, Lcom/vk/core/dialogs/actionspopup/ActionsPopup$b;->a(Lcom/vk/core/dialogs/actionspopup/ActionsPopup$b;ILandroid/graphics/drawable/Drawable;ZLkotlin/jvm/b/Functions;ILjava/lang/Object;)Lcom/vk/core/dialogs/actionspopup/ActionsPopup$b;
 
     .line 4
     :cond_0
-    iget-object v0, p0, Lcom/vk/profile/ui/components/CommunityFragmentActionsMenuBuilder;->b:Lcom/vtosters/lite/api/i;
+    iget-object v0, p0, Lcom/vk/profile/ui/components/CommunityFragmentActionsMenuBuilder;->b:Lcom/vtosters/lite/api/ExtendedCommunityProfile;
 
     iget-boolean v1, v0, Lcom/vtosters/lite/api/ExtendedUserProfile;->U:Z
 
     if-eqz v1, :cond_2
 
     .line 5
-    invoke-virtual {v0}, Lcom/vtosters/lite/api/i;->h()Z
+    invoke-virtual {v0}, Lcom/vtosters/lite/api/ExtendedCommunityProfile;->h()Z
 
     move-result v0
 
@@ -117,15 +117,15 @@
     move-object v0, v7
 
     .line 7
-    invoke-static/range {v0 .. v6}, Lcom/vk/core/dialogs/actionspopup/a$b;->a(Lcom/vk/core/dialogs/actionspopup/a$b;ILandroid/graphics/drawable/Drawable;ZLkotlin/jvm/b/a;ILjava/lang/Object;)Lcom/vk/core/dialogs/actionspopup/a$b;
+    invoke-static/range {v0 .. v6}, Lcom/vk/core/dialogs/actionspopup/ActionsPopup$b;->a(Lcom/vk/core/dialogs/actionspopup/ActionsPopup$b;ILandroid/graphics/drawable/Drawable;ZLkotlin/jvm/b/Functions;ILjava/lang/Object;)Lcom/vk/core/dialogs/actionspopup/ActionsPopup$b;
 
     .line 8
     :cond_2
-    invoke-static {}, Lcom/vtosters/lite/i0/c;->d()Lb/h/h/d/c;
+    invoke-static {}, Lcom/vtosters/lite/auth/VKAccountManager;->d()Lcom/vk/auth/api/VKAccount;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lb/h/h/d/c;->D0()I
+    invoke-virtual {v0}, Lcom/vk/auth/api/VKAccount;->D0()I
 
     move-result v0
 
@@ -133,7 +133,7 @@
 
     if-eq v0, v1, :cond_4
 
-    iget-object v0, p0, Lcom/vk/profile/ui/components/CommunityFragmentActionsMenuBuilder;->b:Lcom/vtosters/lite/api/i;
+    iget-object v0, p0, Lcom/vk/profile/ui/components/CommunityFragmentActionsMenuBuilder;->b:Lcom/vtosters/lite/api/ExtendedCommunityProfile;
 
     invoke-virtual {v0}, Lcom/vtosters/lite/api/ExtendedUserProfile;->d()Z
 
@@ -142,7 +142,7 @@
     if-nez v0, :cond_4
 
     .line 9
-    iget-object v0, p0, Lcom/vk/profile/ui/components/CommunityFragmentActionsMenuBuilder;->b:Lcom/vtosters/lite/api/i;
+    iget-object v0, p0, Lcom/vk/profile/ui/components/CommunityFragmentActionsMenuBuilder;->b:Lcom/vtosters/lite/api/ExtendedCommunityProfile;
 
     iget-boolean v0, v0, Lcom/vtosters/lite/api/ExtendedUserProfile;->o:Z
 
@@ -176,11 +176,11 @@
     move-object v0, v7
 
     .line 11
-    invoke-static/range {v0 .. v6}, Lcom/vk/core/dialogs/actionspopup/a$b;->a(Lcom/vk/core/dialogs/actionspopup/a$b;ILandroid/graphics/drawable/Drawable;ZLkotlin/jvm/b/a;ILjava/lang/Object;)Lcom/vk/core/dialogs/actionspopup/a$b;
+    invoke-static/range {v0 .. v6}, Lcom/vk/core/dialogs/actionspopup/ActionsPopup$b;->a(Lcom/vk/core/dialogs/actionspopup/ActionsPopup$b;ILandroid/graphics/drawable/Drawable;ZLkotlin/jvm/b/Functions;ILjava/lang/Object;)Lcom/vk/core/dialogs/actionspopup/ActionsPopup$b;
 
     .line 12
     :cond_4
-    iget-object v0, p0, Lcom/vk/profile/ui/components/CommunityFragmentActionsMenuBuilder;->b:Lcom/vtosters/lite/api/i;
+    iget-object v0, p0, Lcom/vk/profile/ui/components/CommunityFragmentActionsMenuBuilder;->b:Lcom/vtosters/lite/api/ExtendedCommunityProfile;
 
     invoke-virtual {v0}, Lcom/vtosters/lite/api/ExtendedUserProfile;->d()Z
 
@@ -188,7 +188,7 @@
 
     if-eqz v0, :cond_5
 
-    iget-object v0, p0, Lcom/vk/profile/ui/components/CommunityFragmentActionsMenuBuilder;->b:Lcom/vtosters/lite/api/i;
+    iget-object v0, p0, Lcom/vk/profile/ui/components/CommunityFragmentActionsMenuBuilder;->b:Lcom/vtosters/lite/api/ExtendedCommunityProfile;
 
     iget v0, v0, Lcom/vtosters/lite/api/ExtendedUserProfile;->R0:I
 
@@ -213,18 +213,18 @@
 
     move-object v0, v7
 
-    invoke-static/range {v0 .. v6}, Lcom/vk/core/dialogs/actionspopup/a$b;->a(Lcom/vk/core/dialogs/actionspopup/a$b;ILandroid/graphics/drawable/Drawable;ZLkotlin/jvm/b/a;ILjava/lang/Object;)Lcom/vk/core/dialogs/actionspopup/a$b;
+    invoke-static/range {v0 .. v6}, Lcom/vk/core/dialogs/actionspopup/ActionsPopup$b;->a(Lcom/vk/core/dialogs/actionspopup/ActionsPopup$b;ILandroid/graphics/drawable/Drawable;ZLkotlin/jvm/b/Functions;ILjava/lang/Object;)Lcom/vk/core/dialogs/actionspopup/ActionsPopup$b;
 
     .line 14
     :cond_5
-    invoke-static {}, Lcom/vk/core/ui/themes/d;->e()Z
+    invoke-static {}, Lcom/vk/core/ui/themes/MilkshakeHelper;->e()Z
 
     move-result v0
 
     if-nez v0, :cond_b
 
     .line 15
-    iget-object v0, p0, Lcom/vk/profile/ui/components/CommunityFragmentActionsMenuBuilder;->b:Lcom/vtosters/lite/api/i;
+    iget-object v0, p0, Lcom/vk/profile/ui/components/CommunityFragmentActionsMenuBuilder;->b:Lcom/vtosters/lite/api/ExtendedCommunityProfile;
 
     iget-boolean v1, v0, Lcom/vtosters/lite/api/ExtendedUserProfile;->F1:Z
 
@@ -263,11 +263,11 @@
     move-object v0, v7
 
     .line 18
-    invoke-static/range {v0 .. v6}, Lcom/vk/core/dialogs/actionspopup/a$b;->a(Lcom/vk/core/dialogs/actionspopup/a$b;ILandroid/graphics/drawable/Drawable;ZLkotlin/jvm/b/a;ILjava/lang/Object;)Lcom/vk/core/dialogs/actionspopup/a$b;
+    invoke-static/range {v0 .. v6}, Lcom/vk/core/dialogs/actionspopup/ActionsPopup$b;->a(Lcom/vk/core/dialogs/actionspopup/ActionsPopup$b;ILandroid/graphics/drawable/Drawable;ZLkotlin/jvm/b/Functions;ILjava/lang/Object;)Lcom/vk/core/dialogs/actionspopup/ActionsPopup$b;
 
     .line 19
     :cond_7
-    iget-object v0, p0, Lcom/vk/profile/ui/components/CommunityFragmentActionsMenuBuilder;->b:Lcom/vtosters/lite/api/i;
+    iget-object v0, p0, Lcom/vk/profile/ui/components/CommunityFragmentActionsMenuBuilder;->b:Lcom/vtosters/lite/api/ExtendedCommunityProfile;
 
     iget-boolean v1, v0, Lcom/vtosters/lite/api/ExtendedUserProfile;->S0:Z
 
@@ -306,11 +306,11 @@
     move-object v0, v7
 
     .line 22
-    invoke-static/range {v0 .. v6}, Lcom/vk/core/dialogs/actionspopup/a$b;->a(Lcom/vk/core/dialogs/actionspopup/a$b;ILandroid/graphics/drawable/Drawable;ZLkotlin/jvm/b/a;ILjava/lang/Object;)Lcom/vk/core/dialogs/actionspopup/a$b;
+    invoke-static/range {v0 .. v6}, Lcom/vk/core/dialogs/actionspopup/ActionsPopup$b;->a(Lcom/vk/core/dialogs/actionspopup/ActionsPopup$b;ILandroid/graphics/drawable/Drawable;ZLkotlin/jvm/b/Functions;ILjava/lang/Object;)Lcom/vk/core/dialogs/actionspopup/ActionsPopup$b;
 
     .line 23
     :cond_9
-    iget-object v0, p0, Lcom/vk/profile/ui/components/CommunityFragmentActionsMenuBuilder;->b:Lcom/vtosters/lite/api/i;
+    iget-object v0, p0, Lcom/vk/profile/ui/components/CommunityFragmentActionsMenuBuilder;->b:Lcom/vtosters/lite/api/ExtendedCommunityProfile;
 
     iget-boolean v0, v0, Lcom/vtosters/lite/api/ExtendedUserProfile;->W0:Z
 
@@ -344,7 +344,7 @@
     move-object v0, v7
 
     .line 25
-    invoke-static/range {v0 .. v6}, Lcom/vk/core/dialogs/actionspopup/a$b;->a(Lcom/vk/core/dialogs/actionspopup/a$b;ILandroid/graphics/drawable/Drawable;ZLkotlin/jvm/b/a;ILjava/lang/Object;)Lcom/vk/core/dialogs/actionspopup/a$b;
+    invoke-static/range {v0 .. v6}, Lcom/vk/core/dialogs/actionspopup/ActionsPopup$b;->a(Lcom/vk/core/dialogs/actionspopup/ActionsPopup$b;ILandroid/graphics/drawable/Drawable;ZLkotlin/jvm/b/Functions;ILjava/lang/Object;)Lcom/vk/core/dialogs/actionspopup/ActionsPopup$b;
 
     :cond_b
     const v1, 0x7f12028b
@@ -364,7 +364,7 @@
 
     move-object v0, v7
 
-    invoke-static/range {v0 .. v6}, Lcom/vk/core/dialogs/actionspopup/a$b;->a(Lcom/vk/core/dialogs/actionspopup/a$b;ILandroid/graphics/drawable/Drawable;ZLkotlin/jvm/b/a;ILjava/lang/Object;)Lcom/vk/core/dialogs/actionspopup/a$b;
+    invoke-static/range {v0 .. v6}, Lcom/vk/core/dialogs/actionspopup/ActionsPopup$b;->a(Lcom/vk/core/dialogs/actionspopup/ActionsPopup$b;ILandroid/graphics/drawable/Drawable;ZLkotlin/jvm/b/Functions;ILjava/lang/Object;)Lcom/vk/core/dialogs/actionspopup/ActionsPopup$b;
 
     const v1, 0x7f1209ce
 
@@ -373,10 +373,10 @@
 
     invoke-direct {v4, p0}, Lcom/vk/profile/ui/components/CommunityFragmentActionsMenuBuilder$inflateActions$$inlined$apply$lambda$9;-><init>(Lcom/vk/profile/ui/components/CommunityFragmentActionsMenuBuilder;)V
 
-    invoke-static/range {v0 .. v6}, Lcom/vk/core/dialogs/actionspopup/a$b;->a(Lcom/vk/core/dialogs/actionspopup/a$b;ILandroid/graphics/drawable/Drawable;ZLkotlin/jvm/b/a;ILjava/lang/Object;)Lcom/vk/core/dialogs/actionspopup/a$b;
+    invoke-static/range {v0 .. v6}, Lcom/vk/core/dialogs/actionspopup/ActionsPopup$b;->a(Lcom/vk/core/dialogs/actionspopup/ActionsPopup$b;ILandroid/graphics/drawable/Drawable;ZLkotlin/jvm/b/Functions;ILjava/lang/Object;)Lcom/vk/core/dialogs/actionspopup/ActionsPopup$b;
 
     .line 28
-    invoke-static {}, Lcom/vk/core/ui/themes/d;->e()Z
+    invoke-static {}, Lcom/vk/core/ui/themes/MilkshakeHelper;->e()Z
 
     move-result v0
 
@@ -399,13 +399,13 @@
 
     move-object v0, v7
 
-    invoke-static/range {v0 .. v6}, Lcom/vk/core/dialogs/actionspopup/a$b;->a(Lcom/vk/core/dialogs/actionspopup/a$b;ILandroid/graphics/drawable/Drawable;ZLkotlin/jvm/b/a;ILjava/lang/Object;)Lcom/vk/core/dialogs/actionspopup/a$b;
+    invoke-static/range {v0 .. v6}, Lcom/vk/core/dialogs/actionspopup/ActionsPopup$b;->a(Lcom/vk/core/dialogs/actionspopup/ActionsPopup$b;ILandroid/graphics/drawable/Drawable;ZLkotlin/jvm/b/Functions;ILjava/lang/Object;)Lcom/vk/core/dialogs/actionspopup/ActionsPopup$b;
 
     .line 30
     :cond_c
-    iget-object v0, p0, Lcom/vk/profile/ui/components/CommunityFragmentActionsMenuBuilder;->b:Lcom/vtosters/lite/api/i;
+    iget-object v0, p0, Lcom/vk/profile/ui/components/CommunityFragmentActionsMenuBuilder;->b:Lcom/vtosters/lite/api/ExtendedCommunityProfile;
 
-    invoke-static {v0}, Lcom/vk/profile/utils/b;->c(Lcom/vtosters/lite/api/i;)Z
+    invoke-static {v0}, Lcom/vk/profile/utils/CommunityExt;->c(Lcom/vtosters/lite/api/ExtendedCommunityProfile;)Z
 
     move-result v0
 
@@ -428,7 +428,7 @@
 
     move-object v0, v7
 
-    invoke-static/range {v0 .. v6}, Lcom/vk/core/dialogs/actionspopup/a$b;->a(Lcom/vk/core/dialogs/actionspopup/a$b;ILandroid/graphics/drawable/Drawable;ZLkotlin/jvm/b/a;ILjava/lang/Object;)Lcom/vk/core/dialogs/actionspopup/a$b;
+    invoke-static/range {v0 .. v6}, Lcom/vk/core/dialogs/actionspopup/ActionsPopup$b;->a(Lcom/vk/core/dialogs/actionspopup/ActionsPopup$b;ILandroid/graphics/drawable/Drawable;ZLkotlin/jvm/b/Functions;ILjava/lang/Object;)Lcom/vk/core/dialogs/actionspopup/ActionsPopup$b;
 
     :cond_d
     const v1, 0x7f120c01
@@ -448,12 +448,12 @@
 
     move-object v0, v7
 
-    invoke-static/range {v0 .. v6}, Lcom/vk/core/dialogs/actionspopup/a$b;->a(Lcom/vk/core/dialogs/actionspopup/a$b;ILandroid/graphics/drawable/Drawable;ZLkotlin/jvm/b/a;ILjava/lang/Object;)Lcom/vk/core/dialogs/actionspopup/a$b;
+    invoke-static/range {v0 .. v6}, Lcom/vk/core/dialogs/actionspopup/ActionsPopup$b;->a(Lcom/vk/core/dialogs/actionspopup/ActionsPopup$b;ILandroid/graphics/drawable/Drawable;ZLkotlin/jvm/b/Functions;ILjava/lang/Object;)Lcom/vk/core/dialogs/actionspopup/ActionsPopup$b;
 
     .line 33
-    iget-object v0, p0, Lcom/vk/profile/ui/components/CommunityFragmentActionsMenuBuilder;->b:Lcom/vtosters/lite/api/i;
+    iget-object v0, p0, Lcom/vk/profile/ui/components/CommunityFragmentActionsMenuBuilder;->b:Lcom/vtosters/lite/api/ExtendedCommunityProfile;
 
-    invoke-virtual {v0}, Lcom/vtosters/lite/api/i;->l()Z
+    invoke-virtual {v0}, Lcom/vtosters/lite/api/ExtendedCommunityProfile;->l()Z
 
     move-result v0
 
@@ -476,7 +476,7 @@
 
     move-object v0, v7
 
-    invoke-static/range {v0 .. v6}, Lcom/vk/core/dialogs/actionspopup/a$b;->a(Lcom/vk/core/dialogs/actionspopup/a$b;ILandroid/graphics/drawable/Drawable;ZLkotlin/jvm/b/a;ILjava/lang/Object;)Lcom/vk/core/dialogs/actionspopup/a$b;
+    invoke-static/range {v0 .. v6}, Lcom/vk/core/dialogs/actionspopup/ActionsPopup$b;->a(Lcom/vk/core/dialogs/actionspopup/ActionsPopup$b;ILandroid/graphics/drawable/Drawable;ZLkotlin/jvm/b/Functions;ILjava/lang/Object;)Lcom/vk/core/dialogs/actionspopup/ActionsPopup$b;
 
     :cond_e
     return-void

@@ -59,7 +59,7 @@
     const-string v0, "onReceive >>>"
 
     .line 3
-    invoke-static {p1, v0}, Le/c/a/a;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Le/c/a/Log;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 4
     iget-object p1, p0, Lorg/webrtc/voiceengine/Bluetooth$2;->this$0:Lorg/webrtc/voiceengine/Bluetooth;
@@ -153,7 +153,7 @@
     const-string p2, "voe_bluetooth"
 
     .line 13
-    invoke-static {p2, p1}, Le/c/a/a;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {p2, p1}, Le/c/a/Log;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     goto :goto_1
 

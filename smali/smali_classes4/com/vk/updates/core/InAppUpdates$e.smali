@@ -3,12 +3,12 @@
 .source "InAppUpdates.kt"
 
 # interfaces
-.implements Lc/a/z/g;
+.implements Lio/reactivex/functions/Consumer;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/updates/core/InAppUpdates;->a()Lio/reactivex/disposables/b;
+    value = Lcom/vk/updates/core/InAppUpdates;->a()Lio/reactivex/disposables/Disposable;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -22,7 +22,7 @@
         "Ljava/lang/Object;",
         ">",
         "Ljava/lang/Object;",
-        "Lc/a/z/g<",
+        "Lio/reactivex/functions/Consumer<",
         "Lkotlin/Pair<",
         "+",
         "Ljava/lang/Boolean;",
@@ -103,11 +103,11 @@
     .line 4
     iget-object v0, p0, Lcom/vk/updates/core/InAppUpdates$e;->a:Lcom/vk/updates/core/InAppUpdates;
 
-    invoke-virtual {v0}, Lcom/vk/updates/core/InAppUpdates;->d()Lcom/vk/updates/core/a;
+    invoke-virtual {v0}, Lcom/vk/updates/core/InAppUpdates;->d()Lcom/vk/updates/core/InAppUpdatesCallbacks;
 
     move-result-object v0
 
-    invoke-interface {v0, p1}, Lcom/vk/updates/core/a;->a(I)V
+    invoke-interface {v0, p1}, Lcom/vk/updates/core/InAppUpdatesCallbacks;->a(I)V
 
     goto/16 :goto_0
 
@@ -162,15 +162,15 @@
     .line 10
     iget-object p1, p0, Lcom/vk/updates/core/InAppUpdates$e;->a:Lcom/vk/updates/core/InAppUpdates;
 
-    invoke-virtual {p1}, Lcom/vk/updates/core/InAppUpdates;->d()Lcom/vk/updates/core/a;
+    invoke-virtual {p1}, Lcom/vk/updates/core/InAppUpdates;->d()Lcom/vk/updates/core/InAppUpdatesCallbacks;
 
     move-result-object p1
 
-    new-instance v0, Lcom/vk/updates/core/a$a;
+    new-instance v0, Lcom/vk/updates/core/InAppUpdatesCallbacks$a;
 
-    invoke-direct {v0}, Lcom/vk/updates/core/a$a;-><init>()V
+    invoke-direct {v0}, Lcom/vk/updates/core/InAppUpdatesCallbacks$a;-><init>()V
 
-    invoke-interface {p1, v0}, Lcom/vk/updates/core/a;->a(Lcom/vk/updates/core/a$a;)V
+    invoke-interface {p1, v0}, Lcom/vk/updates/core/InAppUpdatesCallbacks;->a(Lcom/vk/updates/core/InAppUpdatesCallbacks$a;)V
 
     goto :goto_0
 

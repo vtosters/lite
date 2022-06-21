@@ -30,11 +30,11 @@
     .locals 0
 
     .line 1
-    new-instance p1, Lcom/vk/stickers/d0/b;
+    new-instance p1, Lcom/vk/stickers/d0/StickerEvent3;
 
-    invoke-direct {p1}, Lcom/vk/stickers/d0/b;-><init>()V
+    invoke-direct {p1}, Lcom/vk/stickers/d0/StickerEvent3;-><init>()V
 
-    invoke-static {p1}, Lcom/vk/stickers/d0/h;->a(Lcom/vk/stickers/d0/f;)V
+    invoke-static {p1}, Lcom/vk/stickers/d0/StickersEventBus;->a(Lcom/vk/stickers/d0/StickerEvent6;)V
 
     return-void
 .end method

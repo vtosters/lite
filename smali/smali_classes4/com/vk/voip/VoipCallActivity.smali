@@ -20,7 +20,7 @@
 
 .field private I:Z
 
-.field private J:Lcom/vk/voip/m;
+.field private J:Lcom/vk/voip/VoipBottomSheetDialog;
 
 
 # direct methods
@@ -120,7 +120,7 @@
     .locals 3
 
     .line 1
-    iget-object v0, p0, Lcom/vk/voip/VoipCallActivity;->J:Lcom/vk/voip/m;
+    iget-object v0, p0, Lcom/vk/voip/VoipCallActivity;->J:Lcom/vk/voip/VoipBottomSheetDialog;
 
     if-eqz v0, :cond_2
 
@@ -133,7 +133,7 @@
     if-nez v0, :cond_2
 
     .line 2
-    iget-object v0, p0, Lcom/vk/voip/VoipCallActivity;->J:Lcom/vk/voip/m;
+    iget-object v0, p0, Lcom/vk/voip/VoipCallActivity;->J:Lcom/vk/voip/VoipBottomSheetDialog;
 
     const/4 v1, 0x0
 
@@ -141,29 +141,29 @@
 
     sget-object v2, Lcom/vk/voip/VoipCallActivity$respondToCallStateChanged$1;->a:Lcom/vk/voip/VoipCallActivity$respondToCallStateChanged$1;
 
-    invoke-virtual {v0, v2}, Lcom/vk/voip/m;->e(Lkotlin/jvm/b/a;)V
+    invoke-virtual {v0, v2}, Lcom/vk/voip/VoipBottomSheetDialog;->e(Lkotlin/jvm/b/Functions;)V
 
     .line 3
-    iget-object v0, p0, Lcom/vk/voip/VoipCallActivity;->J:Lcom/vk/voip/m;
+    iget-object v0, p0, Lcom/vk/voip/VoipCallActivity;->J:Lcom/vk/voip/VoipBottomSheetDialog;
 
     if-eqz v0, :cond_0
 
     invoke-virtual {v0}, Landroidx/fragment/app/DialogFragment;->dismissAllowingStateLoss()V
 
     .line 4
-    iput-object v1, p0, Lcom/vk/voip/VoipCallActivity;->J:Lcom/vk/voip/m;
+    iput-object v1, p0, Lcom/vk/voip/VoipCallActivity;->J:Lcom/vk/voip/VoipBottomSheetDialog;
 
     goto :goto_0
 
     .line 5
     :cond_0
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     throw v1
 
     .line 6
     :cond_1
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     throw v1
 
@@ -180,7 +180,7 @@
 
     if-eqz v0, :cond_9
 
-    iget-object v0, p0, Lcom/vk/voip/VoipCallActivity;->J:Lcom/vk/voip/m;
+    iget-object v0, p0, Lcom/vk/voip/VoipCallActivity;->J:Lcom/vk/voip/VoipBottomSheetDialog;
 
     if-nez v0, :cond_9
 
@@ -190,9 +190,9 @@
     move-result p1
 
     .line 5
-    sget-object v0, Lb/h/c/d0/d;->I:Lb/h/c/d0/d$a;
+    sget-object v0, Lcom/vk/api/voip/VoipMessageSend;->I:Lcom/vk/api/voip/VoipMessageSend$a;
 
-    invoke-virtual {v0}, Lb/h/c/d0/d$a;->a()I
+    invoke-virtual {v0}, Lcom/vk/api/voip/VoipMessageSend$a;->a()I
 
     move-result v0
 
@@ -203,16 +203,16 @@
     if-ne p1, v0, :cond_2
 
     .line 6
-    sget-object p1, Lcom/vk/voip/m;->c:Lcom/vk/voip/m$a;
+    sget-object p1, Lcom/vk/voip/VoipBottomSheetDialog;->c:Lcom/vk/voip/VoipBottomSheetDialog$a;
 
-    invoke-virtual {p1, p2, p0}, Lcom/vk/voip/m$a;->a(Lcom/vk/dto/user/UserProfile;Landroid/content/Context;)Lcom/vk/voip/m;
+    invoke-virtual {p1, p2, p0}, Lcom/vk/voip/VoipBottomSheetDialog$a;->a(Lcom/vk/dto/user/UserProfile;Landroid/content/Context;)Lcom/vk/voip/VoipBottomSheetDialog;
 
     move-result-object p1
 
-    iput-object p1, p0, Lcom/vk/voip/VoipCallActivity;->J:Lcom/vk/voip/m;
+    iput-object p1, p0, Lcom/vk/voip/VoipCallActivity;->J:Lcom/vk/voip/VoipBottomSheetDialog;
 
     .line 7
-    iget-object p1, p0, Lcom/vk/voip/VoipCallActivity;->J:Lcom/vk/voip/m;
+    iget-object p1, p0, Lcom/vk/voip/VoipCallActivity;->J:Lcom/vk/voip/VoipBottomSheetDialog;
 
     if-eqz p1, :cond_1
 
@@ -220,10 +220,10 @@
 
     invoke-direct {p2, p0}, Lcom/vk/voip/VoipCallActivity$respondToSendVoipMessageError$1;-><init>(Lcom/vk/voip/VoipCallActivity;)V
 
-    invoke-virtual {p1, p2}, Lcom/vk/voip/m;->e(Lkotlin/jvm/b/a;)V
+    invoke-virtual {p1, p2}, Lcom/vk/voip/VoipBottomSheetDialog;->e(Lkotlin/jvm/b/Functions;)V
 
     .line 8
-    iget-object p1, p0, Lcom/vk/voip/VoipCallActivity;->J:Lcom/vk/voip/m;
+    iget-object p1, p0, Lcom/vk/voip/VoipCallActivity;->J:Lcom/vk/voip/VoipBottomSheetDialog;
 
     if-eqz p1, :cond_0
 
@@ -236,37 +236,37 @@
     goto/16 :goto_0
 
     :cond_0
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     throw v2
 
     .line 9
     :cond_1
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     throw v2
 
     .line 10
     :cond_2
-    sget-object v0, Lb/h/c/d0/d;->I:Lb/h/c/d0/d$a;
+    sget-object v0, Lcom/vk/api/voip/VoipMessageSend;->I:Lcom/vk/api/voip/VoipMessageSend$a;
 
-    invoke-virtual {v0}, Lb/h/c/d0/d$a;->c()I
+    invoke-virtual {v0}, Lcom/vk/api/voip/VoipMessageSend$a;->c()I
 
     move-result v0
 
     if-ne p1, v0, :cond_5
 
     .line 11
-    sget-object p1, Lcom/vk/voip/m;->c:Lcom/vk/voip/m$a;
+    sget-object p1, Lcom/vk/voip/VoipBottomSheetDialog;->c:Lcom/vk/voip/VoipBottomSheetDialog$a;
 
-    invoke-virtual {p1, p2, p0}, Lcom/vk/voip/m$a;->b(Lcom/vk/dto/user/UserProfile;Landroid/content/Context;)Lcom/vk/voip/m;
+    invoke-virtual {p1, p2, p0}, Lcom/vk/voip/VoipBottomSheetDialog$a;->b(Lcom/vk/dto/user/UserProfile;Landroid/content/Context;)Lcom/vk/voip/VoipBottomSheetDialog;
 
     move-result-object p1
 
-    iput-object p1, p0, Lcom/vk/voip/VoipCallActivity;->J:Lcom/vk/voip/m;
+    iput-object p1, p0, Lcom/vk/voip/VoipCallActivity;->J:Lcom/vk/voip/VoipBottomSheetDialog;
 
     .line 12
-    iget-object p1, p0, Lcom/vk/voip/VoipCallActivity;->J:Lcom/vk/voip/m;
+    iget-object p1, p0, Lcom/vk/voip/VoipCallActivity;->J:Lcom/vk/voip/VoipBottomSheetDialog;
 
     if-eqz p1, :cond_4
 
@@ -274,10 +274,10 @@
 
     invoke-direct {p2, p0}, Lcom/vk/voip/VoipCallActivity$respondToSendVoipMessageError$2;-><init>(Lcom/vk/voip/VoipCallActivity;)V
 
-    invoke-virtual {p1, p2}, Lcom/vk/voip/m;->e(Lkotlin/jvm/b/a;)V
+    invoke-virtual {p1, p2}, Lcom/vk/voip/VoipBottomSheetDialog;->e(Lkotlin/jvm/b/Functions;)V
 
     .line 13
-    iget-object p1, p0, Lcom/vk/voip/VoipCallActivity;->J:Lcom/vk/voip/m;
+    iget-object p1, p0, Lcom/vk/voip/VoipCallActivity;->J:Lcom/vk/voip/VoipBottomSheetDialog;
 
     if-eqz p1, :cond_3
 
@@ -290,37 +290,37 @@
     goto :goto_0
 
     :cond_3
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     throw v2
 
     .line 14
     :cond_4
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     throw v2
 
     .line 15
     :cond_5
-    sget-object v0, Lb/h/c/d0/d;->I:Lb/h/c/d0/d$a;
+    sget-object v0, Lcom/vk/api/voip/VoipMessageSend;->I:Lcom/vk/api/voip/VoipMessageSend$a;
 
-    invoke-virtual {v0}, Lb/h/c/d0/d$a;->b()I
+    invoke-virtual {v0}, Lcom/vk/api/voip/VoipMessageSend$a;->b()I
 
     move-result v0
 
     if-ne p1, v0, :cond_8
 
     .line 16
-    sget-object p1, Lcom/vk/voip/m;->c:Lcom/vk/voip/m$a;
+    sget-object p1, Lcom/vk/voip/VoipBottomSheetDialog;->c:Lcom/vk/voip/VoipBottomSheetDialog$a;
 
-    invoke-virtual {p1, p2, p0}, Lcom/vk/voip/m$a;->c(Lcom/vk/dto/user/UserProfile;Landroid/content/Context;)Lcom/vk/voip/m;
+    invoke-virtual {p1, p2, p0}, Lcom/vk/voip/VoipBottomSheetDialog$a;->c(Lcom/vk/dto/user/UserProfile;Landroid/content/Context;)Lcom/vk/voip/VoipBottomSheetDialog;
 
     move-result-object p1
 
-    iput-object p1, p0, Lcom/vk/voip/VoipCallActivity;->J:Lcom/vk/voip/m;
+    iput-object p1, p0, Lcom/vk/voip/VoipCallActivity;->J:Lcom/vk/voip/VoipBottomSheetDialog;
 
     .line 17
-    iget-object p1, p0, Lcom/vk/voip/VoipCallActivity;->J:Lcom/vk/voip/m;
+    iget-object p1, p0, Lcom/vk/voip/VoipCallActivity;->J:Lcom/vk/voip/VoipBottomSheetDialog;
 
     if-eqz p1, :cond_7
 
@@ -328,10 +328,10 @@
 
     invoke-direct {p2, p0}, Lcom/vk/voip/VoipCallActivity$respondToSendVoipMessageError$3;-><init>(Lcom/vk/voip/VoipCallActivity;)V
 
-    invoke-virtual {p1, p2}, Lcom/vk/voip/m;->e(Lkotlin/jvm/b/a;)V
+    invoke-virtual {p1, p2}, Lcom/vk/voip/VoipBottomSheetDialog;->e(Lkotlin/jvm/b/Functions;)V
 
     .line 18
-    iget-object p1, p0, Lcom/vk/voip/VoipCallActivity;->J:Lcom/vk/voip/m;
+    iget-object p1, p0, Lcom/vk/voip/VoipCallActivity;->J:Lcom/vk/voip/VoipBottomSheetDialog;
 
     if-eqz p1, :cond_6
 
@@ -344,13 +344,13 @@
     goto :goto_0
 
     :cond_6
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     throw v2
 
     .line 19
     :cond_7
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     throw v2
 
@@ -369,7 +369,7 @@
     const/4 v0, 0x2
 
     .line 21
-    invoke-static {p1, p2, v0, v2}, Lcom/vk/core/util/k1;->a(IZILjava/lang/Object;)V
+    invoke-static {p1, p2, v0, v2}, Lcom/vk/core/util/ToastUtils;->a(IZILjava/lang/Object;)V
 
     :cond_9
     :goto_0
@@ -467,7 +467,7 @@
     move-object v4, p0
 
     .line 7
-    invoke-virtual/range {v3 .. v9}, Lcom/vk/permission/PermissionHelper;->a(Landroid/app/Activity;[Ljava/lang/String;IILkotlin/jvm/b/a;Lkotlin/jvm/b/b;)Z
+    invoke-virtual/range {v3 .. v9}, Lcom/vk/permission/PermissionHelper;->a(Landroid/app/Activity;[Ljava/lang/String;IILkotlin/jvm/b/Functions;Lkotlin/jvm/b/Functions2;)Z
 
     return-void
 .end method
@@ -488,7 +488,7 @@
     const/4 v0, 0x0
 
     .line 3
-    iput-object v0, p0, Lcom/vk/voip/VoipCallActivity;->J:Lcom/vk/voip/m;
+    iput-object v0, p0, Lcom/vk/voip/VoipCallActivity;->J:Lcom/vk/voip/VoipBottomSheetDialog;
 
     return-void
 .end method
@@ -557,9 +557,9 @@
 
     .line 8
     :cond_0
-    sget-object p3, Lb/h/v/d;->c:Lb/h/v/d$a;
+    sget-object p3, Lb/h/v/RxBus;->c:Lb/h/v/RxBus$a;
 
-    invoke-virtual {p3}, Lb/h/v/d$a;->a()Lb/h/v/d;
+    invoke-virtual {p3}, Lb/h/v/RxBus$a;->a()Lb/h/v/RxBus;
 
     move-result-object p3
 
@@ -567,7 +567,7 @@
 
     invoke-direct {v0}, Lcom/vk/voip/VoipCallActivity$c;-><init>()V
 
-    invoke-virtual {p3, v0}, Lb/h/v/d;->a(Ljava/lang/Object;)V
+    invoke-virtual {p3, v0}, Lb/h/v/RxBus;->a(Ljava/lang/Object;)V
 
     .line 9
     iget-object p3, p0, Lcom/vk/voip/VoipCallActivity;->H:Lcom/vk/voip/VoipCallView;
@@ -610,13 +610,13 @@
     goto :goto_0
 
     :cond_1
-    invoke-static {v0}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v0}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v1
 
     .line 13
     :cond_2
-    invoke-static {v0}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v0}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v1
 
@@ -649,7 +649,7 @@
     const-string v0, "voipCallView"
 
     .line 3
-    invoke-static {v0}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v0}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     const/4 v0, 0x0
 
@@ -695,7 +695,7 @@
 
     const-string v0, "window"
 
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {p1}, Landroid/view/Window;->getDecorView()Landroid/view/View;
 
@@ -703,7 +703,7 @@
 
     const-string v0, "window.decorView"
 
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     const/16 v0, 0x500
 
@@ -738,7 +738,7 @@
 
     invoke-direct {v2, p0}, Lcom/vk/voip/VoipCallActivity$onCreate$1;-><init>(Lcom/vk/voip/VoipCallActivity;)V
 
-    invoke-virtual {p1, v2}, Lcom/vk/voip/VoipCallView;->setCloseCallback(Lkotlin/jvm/b/a;)V
+    invoke-virtual {p1, v2}, Lcom/vk/voip/VoipCallView;->setCloseCallback(Lkotlin/jvm/b/Functions;)V
 
     .line 8
     iget-object p1, p0, Lcom/vk/voip/VoipCallActivity;->H:Lcom/vk/voip/VoipCallView;
@@ -749,7 +749,7 @@
 
     invoke-direct {v2, p0}, Lcom/vk/voip/VoipCallActivity$onCreate$2;-><init>(Lcom/vk/voip/VoipCallActivity;)V
 
-    invoke-virtual {p1, v2}, Lcom/vk/voip/VoipCallView;->setPipCallback(Lkotlin/jvm/b/a;)V
+    invoke-virtual {p1, v2}, Lcom/vk/voip/VoipCallView;->setPipCallback(Lkotlin/jvm/b/Functions;)V
 
     .line 9
     iget-object p1, p0, Lcom/vk/voip/VoipCallActivity;->H:Lcom/vk/voip/VoipCallView;
@@ -760,7 +760,7 @@
 
     invoke-direct {v2, p0}, Lcom/vk/voip/VoipCallActivity$onCreate$3;-><init>(Lcom/vk/voip/VoipCallActivity;)V
 
-    invoke-virtual {p1, v2}, Lcom/vk/voip/VoipCallView;->setShowShieldCallback(Lkotlin/jvm/b/b;)V
+    invoke-virtual {p1, v2}, Lcom/vk/voip/VoipCallView;->setShowShieldCallback(Lkotlin/jvm/b/Functions2;)V
 
     .line 10
     iget-object p1, p0, Lcom/vk/voip/VoipCallActivity;->H:Lcom/vk/voip/VoipCallView;
@@ -771,7 +771,7 @@
 
     invoke-direct {v2, p0}, Lcom/vk/voip/VoipCallActivity$onCreate$4;-><init>(Lcom/vk/voip/VoipCallActivity;)V
 
-    invoke-virtual {p1, v2}, Lcom/vk/voip/VoipCallView;->setEnsureMasksPermissionsCallback(Lkotlin/jvm/b/b;)V
+    invoke-virtual {p1, v2}, Lcom/vk/voip/VoipCallView;->setEnsureMasksPermissionsCallback(Lkotlin/jvm/b/Functions2;)V
 
     .line 11
     iget-object p1, p0, Lcom/vk/voip/VoipCallActivity;->H:Lcom/vk/voip/VoipCallView;
@@ -811,29 +811,29 @@
     invoke-direct {p0}, Lcom/vk/voip/VoipCallActivity;->x1()V
 
     .line 16
-    sget-object p1, Lb/h/v/d;->c:Lb/h/v/d$a;
+    sget-object p1, Lb/h/v/RxBus;->c:Lb/h/v/RxBus$a;
 
-    invoke-virtual {p1}, Lb/h/v/d$a;->a()Lb/h/v/d;
+    invoke-virtual {p1}, Lb/h/v/RxBus$a;->a()Lb/h/v/RxBus;
 
     move-result-object p1
 
-    invoke-virtual {p1}, Lb/h/v/d;->a()Lc/a/m;
+    invoke-virtual {p1}, Lb/h/v/RxBus;->a()Lio/reactivex/Observable;
 
     move-result-object p1
 
     .line 17
     sget-object v0, Lcom/vk/voip/VoipCallActivity$f;->a:Lcom/vk/voip/VoipCallActivity$f;
 
-    invoke-virtual {p1, v0}, Lc/a/m;->a(Lc/a/z/l;)Lc/a/m;
+    invoke-virtual {p1, v0}, Lio/reactivex/Observable;->a(Lio/reactivex/functions/Predicate;)Lio/reactivex/Observable;
 
     move-result-object p1
 
     .line 18
-    invoke-static {}, Lc/a/y/c/a;->a()Lc/a/s;
+    invoke-static {}, Lio/reactivex/schedulers/AndroidSchedulers;->a()Lio/reactivex/Scheduler;
 
     move-result-object v0
 
-    invoke-virtual {p1, v0}, Lc/a/m;->a(Lc/a/s;)Lc/a/m;
+    invoke-virtual {p1, v0}, Lio/reactivex/Observable;->a(Lio/reactivex/Scheduler;)Lio/reactivex/Observable;
 
     move-result-object p1
 
@@ -842,16 +842,16 @@
 
     invoke-direct {v0, p0}, Lcom/vk/voip/VoipCallActivity$g;-><init>(Lcom/vk/voip/VoipCallActivity;)V
 
-    invoke-virtual {p1, v0}, Lc/a/m;->f(Lc/a/z/g;)Lio/reactivex/disposables/b;
+    invoke-virtual {p1, v0}, Lio/reactivex/Observable;->f(Lio/reactivex/functions/Consumer;)Lio/reactivex/disposables/Disposable;
 
     move-result-object p1
 
     const-string v0, "RxBus.instance.events\n  \u2026      }\n                }"
 
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 20
-    invoke-static {p1, p0}, Lcom/vk/extensions/p;->a(Lio/reactivex/disposables/b;Lcom/vtosters/lite/VKActivity;)Lio/reactivex/disposables/b;
+    invoke-static {p1, p0}, Lcom/vk/extensions/VKRxExt;->a(Lio/reactivex/disposables/Disposable;Lcom/vtosters/lite/VKActivity;)Lio/reactivex/disposables/Disposable;
 
     .line 21
     sget-object p1, Lcom/vk/voip/VoipViewModel;->Z:Lcom/vk/voip/VoipViewModel;
@@ -870,31 +870,31 @@
 
     .line 23
     :cond_1
-    invoke-static {v1}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v1}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v0
 
     .line 24
     :cond_2
-    invoke-static {v1}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v1}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v0
 
     .line 25
     :cond_3
-    invoke-static {v1}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v1}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v0
 
     .line 26
     :cond_4
-    invoke-static {v1}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v1}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v0
 
     .line 27
     :cond_5
-    invoke-static {v1}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v1}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v0
 .end method
@@ -987,9 +987,9 @@
     iput-boolean v1, p0, Lcom/vk/voip/VoipCallActivity;->I:Z
 
     .line 4
-    sget-object v0, Lb/h/v/d;->c:Lb/h/v/d$a;
+    sget-object v0, Lb/h/v/RxBus;->c:Lb/h/v/RxBus$a;
 
-    invoke-virtual {v0}, Lb/h/v/d$a;->a()Lb/h/v/d;
+    invoke-virtual {v0}, Lb/h/v/RxBus$a;->a()Lb/h/v/RxBus;
 
     move-result-object v0
 
@@ -997,7 +997,7 @@
 
     invoke-direct {v2, v1}, Lcom/vk/voip/VoipCallActivity$a;-><init>(Z)V
 
-    invoke-virtual {v0, v2}, Lb/h/v/d;->a(Ljava/lang/Object;)V
+    invoke-virtual {v0, v2}, Lb/h/v/RxBus;->a(Ljava/lang/Object;)V
 
     return-void
 .end method
@@ -1031,9 +1031,9 @@
     iput-boolean v1, p0, Lcom/vk/voip/VoipCallActivity;->I:Z
 
     .line 4
-    sget-object v0, Lb/h/v/d;->c:Lb/h/v/d$a;
+    sget-object v0, Lb/h/v/RxBus;->c:Lb/h/v/RxBus$a;
 
-    invoke-virtual {v0}, Lb/h/v/d$a;->a()Lb/h/v/d;
+    invoke-virtual {v0}, Lb/h/v/RxBus$a;->a()Lb/h/v/RxBus;
 
     move-result-object v0
 
@@ -1041,7 +1041,7 @@
 
     invoke-direct {v2, v1}, Lcom/vk/voip/VoipCallActivity$a;-><init>(Z)V
 
-    invoke-virtual {v0, v2}, Lb/h/v/d;->a(Ljava/lang/Object;)V
+    invoke-virtual {v0, v2}, Lb/h/v/RxBus;->a(Ljava/lang/Object;)V
 
     return-void
 .end method
@@ -1072,9 +1072,9 @@
     invoke-super {p0}, Lcom/vtosters/lite/VKActivity;->onStart()V
 
     .line 3
-    sget-object v0, Lb/h/v/d;->c:Lb/h/v/d$a;
+    sget-object v0, Lb/h/v/RxBus;->c:Lb/h/v/RxBus$a;
 
-    invoke-virtual {v0}, Lb/h/v/d$a;->a()Lb/h/v/d;
+    invoke-virtual {v0}, Lb/h/v/RxBus$a;->a()Lb/h/v/RxBus;
 
     move-result-object v0
 
@@ -1082,7 +1082,7 @@
 
     invoke-direct {v2, v1}, Lcom/vk/voip/VoipCallActivity$b;-><init>(Z)V
 
-    invoke-virtual {v0, v2}, Lb/h/v/d;->a(Ljava/lang/Object;)V
+    invoke-virtual {v0, v2}, Lb/h/v/RxBus;->a(Ljava/lang/Object;)V
 
     .line 4
     sget-object v0, Lcom/vk/voip/VoipViewModel;->Z:Lcom/vk/voip/VoipViewModel;
@@ -1126,9 +1126,9 @@
     invoke-super {p0}, Lcom/vtosters/lite/VKActivity;->onStop()V
 
     .line 3
-    sget-object v0, Lb/h/v/d;->c:Lb/h/v/d$a;
+    sget-object v0, Lb/h/v/RxBus;->c:Lb/h/v/RxBus$a;
 
-    invoke-virtual {v0}, Lb/h/v/d$a;->a()Lb/h/v/d;
+    invoke-virtual {v0}, Lb/h/v/RxBus$a;->a()Lb/h/v/RxBus;
 
     move-result-object v0
 
@@ -1136,10 +1136,10 @@
 
     invoke-direct {v2, v1}, Lcom/vk/voip/VoipCallActivity$b;-><init>(Z)V
 
-    invoke-virtual {v0, v2}, Lb/h/v/d;->a(Ljava/lang/Object;)V
+    invoke-virtual {v0, v2}, Lb/h/v/RxBus;->a(Ljava/lang/Object;)V
 
     .line 4
-    iget-object v0, p0, Lcom/vk/voip/VoipCallActivity;->J:Lcom/vk/voip/m;
+    iget-object v0, p0, Lcom/vk/voip/VoipCallActivity;->J:Lcom/vk/voip/VoipBottomSheetDialog;
 
     if-eqz v0, :cond_0
 

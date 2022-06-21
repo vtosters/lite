@@ -1,9 +1,9 @@
 .class final Lcom/vk/navigation/right/RightMenu$b;
-.super Lcom/vk/lists/i0;
+.super Lcom/vk/lists/SimpleAdapter;
 .source "RightMenu.kt"
 
 # interfaces
-.implements Lcom/vk/menu/c$a;
+.implements Lcom/vk/menu/MenuUtils$a;
 
 
 # annotations
@@ -18,11 +18,11 @@
 
 .annotation system Ldalvik/annotation/Signature;
     value = {
-        "Lcom/vk/lists/i0<",
-        "Lcom/vk/navigation/right/b;",
-        "Lcom/vk/navigation/right/a;",
+        "Lcom/vk/lists/SimpleAdapter<",
+        "Lcom/vk/navigation/right/RightMenuItem;",
+        "Lcom/vk/navigation/right/RightMenuHolder;",
         ">;",
-        "Lcom/vk/menu/c$a;"
+        "Lcom/vk/menu/MenuUtils$a;"
     }
 .end annotation
 
@@ -37,7 +37,7 @@
     .end annotation
 
     .line 1
-    invoke-direct {p0}, Lcom/vk/lists/i0;-><init>()V
+    invoke-direct {p0}, Lcom/vk/lists/SimpleAdapter;-><init>()V
 
     const/4 p1, 0x1
 
@@ -53,7 +53,7 @@
     .locals 3
 
     .line 1
-    invoke-virtual {p0}, Lcom/vk/lists/i0;->getItemCount()I
+    invoke-virtual {p0}, Lcom/vk/lists/SimpleAdapter;->getItemCount()I
 
     move-result v0
 
@@ -63,13 +63,13 @@
     if-ge v1, v0, :cond_1
 
     .line 2
-    invoke-virtual {p0, v1}, Lcom/vk/lists/i0;->k(I)Ljava/lang/Object;
+    invoke-virtual {p0, v1}, Lcom/vk/lists/SimpleAdapter;->k(I)Ljava/lang/Object;
 
     move-result-object v2
 
-    check-cast v2, Lcom/vk/navigation/right/b;
+    check-cast v2, Lcom/vk/navigation/right/RightMenuItem;
 
-    invoke-virtual {v2}, Lcom/vk/navigation/right/b;->c()Landroid/view/MenuItem;
+    invoke-virtual {v2}, Lcom/vk/navigation/right/RightMenuItem;->c()Landroid/view/MenuItem;
 
     move-result-object v2
 
@@ -94,15 +94,15 @@
     return p1
 .end method
 
-.method public a(Lcom/vk/navigation/right/a;I)V
+.method public a(Lcom/vk/navigation/right/RightMenuHolder;I)V
     .locals 0
 
     .line 1
-    invoke-virtual {p0, p2}, Lcom/vk/lists/i0;->k(I)Ljava/lang/Object;
+    invoke-virtual {p0, p2}, Lcom/vk/lists/SimpleAdapter;->k(I)Ljava/lang/Object;
 
     move-result-object p2
 
-    invoke-virtual {p1, p2}, Lcom/vtosters/lite/ui/b0/i;->a(Ljava/lang/Object;)V
+    invoke-virtual {p1, p2}, Lcom/vtosters/lite/ui/holder/RecyclerHolder;->a(Ljava/lang/Object;)V
 
     return-void
 .end method
@@ -111,17 +111,17 @@
     .locals 2
 
     .line 1
-    invoke-virtual {p0, p1}, Lcom/vk/lists/i0;->k(I)Ljava/lang/Object;
+    invoke-virtual {p0, p1}, Lcom/vk/lists/SimpleAdapter;->k(I)Ljava/lang/Object;
 
     move-result-object p1
 
     const-string v0, "getItemAt(position)"
 
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    check-cast p1, Lcom/vk/navigation/right/b;
+    check-cast p1, Lcom/vk/navigation/right/RightMenuItem;
 
-    invoke-virtual {p1}, Lcom/vk/navigation/right/b;->a()J
+    invoke-virtual {p1}, Lcom/vk/navigation/right/RightMenuItem;->a()J
 
     move-result-wide v0
 
@@ -132,9 +132,9 @@
     .locals 0
 
     .line 1
-    check-cast p1, Lcom/vk/navigation/right/a;
+    check-cast p1, Lcom/vk/navigation/right/RightMenuHolder;
 
-    invoke-virtual {p0, p1, p2}, Lcom/vk/navigation/right/RightMenu$b;->a(Lcom/vk/navigation/right/a;I)V
+    invoke-virtual {p0, p1, p2}, Lcom/vk/navigation/right/RightMenu$b;->a(Lcom/vk/navigation/right/RightMenuHolder;I)V
 
     return-void
 .end method
@@ -143,20 +143,20 @@
     .locals 0
 
     .line 1
-    invoke-virtual {p0, p1, p2}, Lcom/vk/navigation/right/RightMenu$b;->onCreateViewHolder(Landroid/view/ViewGroup;I)Lcom/vk/navigation/right/a;
+    invoke-virtual {p0, p1, p2}, Lcom/vk/navigation/right/RightMenu$b;->onCreateViewHolder(Landroid/view/ViewGroup;I)Lcom/vk/navigation/right/RightMenuHolder;
 
     move-result-object p1
 
     return-object p1
 .end method
 
-.method public onCreateViewHolder(Landroid/view/ViewGroup;I)Lcom/vk/navigation/right/a;
+.method public onCreateViewHolder(Landroid/view/ViewGroup;I)Lcom/vk/navigation/right/RightMenuHolder;
     .locals 0
 
     .line 2
-    new-instance p2, Lcom/vk/navigation/right/a;
+    new-instance p2, Lcom/vk/navigation/right/RightMenuHolder;
 
-    invoke-direct {p2, p1}, Lcom/vk/navigation/right/a;-><init>(Landroid/view/ViewGroup;)V
+    invoke-direct {p2, p1}, Lcom/vk/navigation/right/RightMenuHolder;-><init>(Landroid/view/ViewGroup;)V
 
     return-object p2
 .end method

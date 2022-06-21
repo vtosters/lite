@@ -4,11 +4,11 @@
 
 
 # static fields
-.field static final synthetic a:[Lkotlin/u/j;
+.field static final synthetic a:[Lkotlin/u/KProperty5;
 
 .field private static final b:I
 
-.field private static final c:Lcom/vk/core/util/d1;
+.field private static final c:Lcom/vk/core/util/ThreadLocalDelegate;
 
 .field public static final d:Lcom/vtosters/lite/im/ImCompat;
 
@@ -19,13 +19,13 @@
 
     const/4 v0, 0x1
 
-    new-array v0, v0, [Lkotlin/u/j;
+    new-array v0, v0, [Lkotlin/u/KProperty5;
 
     new-instance v1, Lkotlin/jvm/internal/PropertyReference1Impl;
 
     const-class v2, Lcom/vtosters/lite/im/ImCompat;
 
-    invoke-static {v2}, Lkotlin/jvm/internal/o;->a(Ljava/lang/Class;)Lkotlin/u/c;
+    invoke-static {v2}, Lkotlin/jvm/internal/Reflection;->a(Ljava/lang/Class;)Lkotlin/u/KClass;
 
     move-result-object v2
 
@@ -33,15 +33,15 @@
 
     const-string v4, "getFormatter()Lcom/vk/im/ui/formatters/DisplayNameFormatter;"
 
-    invoke-direct {v1, v2, v3, v4}, Lkotlin/jvm/internal/PropertyReference1Impl;-><init>(Lkotlin/u/e;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-direct {v1, v2, v3, v4}, Lkotlin/jvm/internal/PropertyReference1Impl;-><init>(Lkotlin/u/KDeclarationContainer;Ljava/lang/String;Ljava/lang/String;)V
 
-    invoke-static {v1}, Lkotlin/jvm/internal/o;->a(Lkotlin/jvm/internal/PropertyReference1;)Lkotlin/u/l;
+    invoke-static {v1}, Lkotlin/jvm/internal/Reflection;->a(Lkotlin/jvm/internal/PropertyReference1;)Lkotlin/u/KProperty2;
 
     const/4 v2, 0x0
 
     aput-object v1, v0, v2
 
-    sput-object v0, Lcom/vtosters/lite/im/ImCompat;->a:[Lkotlin/u/j;
+    sput-object v0, Lcom/vtosters/lite/im/ImCompat;->a:[Lkotlin/u/KProperty5;
 
     .line 1
     new-instance v0, Lcom/vtosters/lite/im/ImCompat;
@@ -62,11 +62,11 @@
     .line 3
     sget-object v0, Lcom/vtosters/lite/im/ImCompat$formatter$2;->a:Lcom/vtosters/lite/im/ImCompat$formatter$2;
 
-    invoke-static {v0}, Lcom/vk/core/util/f1;->a(Lkotlin/jvm/b/a;)Lcom/vk/core/util/d1;
+    invoke-static {v0}, Lcom/vk/core/util/ThreadLocalDelegate1;->a(Lkotlin/jvm/b/Functions;)Lcom/vk/core/util/ThreadLocalDelegate;
 
     move-result-object v0
 
-    sput-object v0, Lcom/vtosters/lite/im/ImCompat;->c:Lcom/vk/core/util/d1;
+    sput-object v0, Lcom/vtosters/lite/im/ImCompat;->c:Lcom/vk/core/util/ThreadLocalDelegate;
 
     return-void
 .end method
@@ -136,7 +136,7 @@
 
     const-string p2, "builder.toString()"
 
-    invoke-static {p1, p2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, p2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     return-object p1
 .end method
@@ -213,9 +213,9 @@
 
     move-result-object p1
 
-    check-cast p1, Lcom/vk/im/engine/models/j;
+    check-cast p1, Lcom/vk/im/engine/models/Profile;
 
-    invoke-direct {p0, p1}, Lcom/vtosters/lite/im/ImCompat;->c(Lcom/vk/im/engine/models/j;)Ljava/lang/String;
+    invoke-direct {p0, p1}, Lcom/vtosters/lite/im/ImCompat;->c(Lcom/vk/im/engine/models/Profile;)Ljava/lang/String;
 
     move-result-object p1
 
@@ -235,9 +235,9 @@
 
     move-result-object p1
 
-    check-cast p1, Lcom/vk/im/engine/models/j;
+    check-cast p1, Lcom/vk/im/engine/models/Profile;
 
-    invoke-direct {p0, p1}, Lcom/vtosters/lite/im/ImCompat;->c(Lcom/vk/im/engine/models/j;)Ljava/lang/String;
+    invoke-direct {p0, p1}, Lcom/vtosters/lite/im/ImCompat;->c(Lcom/vk/im/engine/models/Profile;)Ljava/lang/String;
 
     move-result-object p1
 
@@ -257,9 +257,9 @@
 
     move-result-object p1
 
-    check-cast p1, Lcom/vk/im/engine/models/j;
+    check-cast p1, Lcom/vk/im/engine/models/Profile;
 
-    invoke-direct {p0, p1}, Lcom/vtosters/lite/im/ImCompat;->c(Lcom/vk/im/engine/models/j;)Ljava/lang/String;
+    invoke-direct {p0, p1}, Lcom/vtosters/lite/im/ImCompat;->c(Lcom/vk/im/engine/models/Profile;)Ljava/lang/String;
 
     move-result-object p1
 
@@ -404,7 +404,7 @@
 
     const-string p2, "builder.toString()"
 
-    invoke-static {p1, p2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, p2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     return-object p1
 .end method
@@ -415,11 +415,11 @@
     .line 1
     sget-object v0, Lcom/vtosters/lite/im/ImCompat;->d:Lcom/vtosters/lite/im/ImCompat;
 
-    invoke-direct {v0}, Lcom/vtosters/lite/im/ImCompat;->c()Lcom/vk/im/ui/formatters/d;
+    invoke-direct {v0}, Lcom/vtosters/lite/im/ImCompat;->c()Lcom/vk/im/ui/formatters/DisplayNameFormatter;
 
     move-result-object v0
 
-    invoke-virtual {v0, p0, p1}, Lcom/vk/im/ui/formatters/d;->a(Lcom/vk/im/engine/models/dialogs/Dialog;Lcom/vk/im/engine/models/ProfilesInfo;)Ljava/lang/String;
+    invoke-virtual {v0, p0, p1}, Lcom/vk/im/ui/formatters/DisplayNameFormatter;->a(Lcom/vk/im/engine/models/dialogs/Dialog;Lcom/vk/im/engine/models/ProfilesInfo;)Ljava/lang/String;
 
     move-result-object p0
 
@@ -443,11 +443,11 @@
 
     move-result p0
 
-    invoke-virtual {p1, p0}, Lcom/vk/im/engine/models/ProfilesSimpleInfo;->get(I)Lcom/vk/im/engine/models/j;
+    invoke-virtual {p1, p0}, Lcom/vk/im/engine/models/ProfilesSimpleInfo;->get(I)Lcom/vk/im/engine/models/Profile;
 
     move-result-object p0
 
-    invoke-direct {v0, p0}, Lcom/vtosters/lite/im/ImCompat;->c(Lcom/vk/im/engine/models/j;)Ljava/lang/String;
+    invoke-direct {v0, p0}, Lcom/vtosters/lite/im/ImCompat;->c(Lcom/vk/im/engine/models/Profile;)Ljava/lang/String;
 
     move-result-object p0
 
@@ -497,7 +497,7 @@
     if-nez v1, :cond_5
 
     .line 7
-    invoke-static {}, Lcom/vk/core/ui/themes/d;->e()Z
+    invoke-static {}, Lcom/vk/core/ui/themes/MilkshakeHelper;->e()Z
 
     move-result v1
 
@@ -565,44 +565,44 @@
     .line 1
     sget-object v0, Lcom/vtosters/lite/im/ImCompat;->d:Lcom/vtosters/lite/im/ImCompat;
 
-    invoke-direct {v0}, Lcom/vtosters/lite/im/ImCompat;->c()Lcom/vk/im/ui/formatters/d;
+    invoke-direct {v0}, Lcom/vtosters/lite/im/ImCompat;->c()Lcom/vk/im/ui/formatters/DisplayNameFormatter;
 
     move-result-object v0
 
-    invoke-virtual {v0, p0, p1}, Lcom/vk/im/ui/formatters/d;->a(Lcom/vk/im/engine/models/dialogs/Dialog;Lcom/vk/im/engine/models/ProfilesSimpleInfo;)Ljava/lang/String;
+    invoke-virtual {v0, p0, p1}, Lcom/vk/im/ui/formatters/DisplayNameFormatter;->a(Lcom/vk/im/engine/models/dialogs/Dialog;Lcom/vk/im/engine/models/ProfilesSimpleInfo;)Ljava/lang/String;
 
     move-result-object p0
 
     return-object p0
 .end method
 
-.method private final c()Lcom/vk/im/ui/formatters/d;
+.method private final c()Lcom/vk/im/ui/formatters/DisplayNameFormatter;
     .locals 3
 
-    sget-object v0, Lcom/vtosters/lite/im/ImCompat;->c:Lcom/vk/core/util/d1;
+    sget-object v0, Lcom/vtosters/lite/im/ImCompat;->c:Lcom/vk/core/util/ThreadLocalDelegate;
 
-    sget-object v1, Lcom/vtosters/lite/im/ImCompat;->a:[Lkotlin/u/j;
+    sget-object v1, Lcom/vtosters/lite/im/ImCompat;->a:[Lkotlin/u/KProperty5;
 
     const/4 v2, 0x0
 
     aget-object v1, v1, v2
 
-    invoke-static {v0, p0, v1}, Lcom/vk/core/util/f1;->a(Lcom/vk/core/util/d1;Ljava/lang/Object;Lkotlin/u/j;)Ljava/lang/Object;
+    invoke-static {v0, p0, v1}, Lcom/vk/core/util/ThreadLocalDelegate1;->a(Lcom/vk/core/util/ThreadLocalDelegate;Ljava/lang/Object;Lkotlin/u/KProperty5;)Ljava/lang/Object;
 
     move-result-object v0
 
-    check-cast v0, Lcom/vk/im/ui/formatters/d;
+    check-cast v0, Lcom/vk/im/ui/formatters/DisplayNameFormatter;
 
     return-object v0
 .end method
 
-.method private final c(Lcom/vk/im/engine/models/j;)Ljava/lang/String;
+.method private final c(Lcom/vk/im/engine/models/Profile;)Ljava/lang/String;
     .locals 1
 
     if-eqz p1, :cond_0
 
     .line 1
-    invoke-interface {p1}, Lcom/vk/im/engine/models/j;->g0()Lcom/vk/im/engine/models/ImageList;
+    invoke-interface {p1}, Lcom/vk/im/engine/models/Profile;->g0()Lcom/vk/im/engine/models/ImageList;
 
     move-result-object p1
 
@@ -633,7 +633,7 @@
 
 
 # virtual methods
-.method public final a(Lcom/vk/im/engine/models/j;)Lcom/vk/im/engine/models/dialogs/DialogExt;
+.method public final a(Lcom/vk/im/engine/models/Profile;)Lcom/vk/im/engine/models/dialogs/DialogExt;
     .locals 2
 
     .line 36
@@ -642,7 +642,7 @@
     invoke-direct {v0}, Lcom/vk/im/engine/models/dialogs/Dialog;-><init>()V
 
     .line 37
-    invoke-interface {p1}, Lcom/vk/im/engine/models/j;->f0()I
+    invoke-interface {p1}, Lcom/vk/im/engine/models/Profile;->f0()I
 
     move-result v1
 
@@ -665,7 +665,7 @@
     return-object p1
 .end method
 
-.method public final b(Lcom/vk/im/engine/models/j;)Lcom/vk/dto/user/UserProfile;
+.method public final b(Lcom/vk/im/engine/models/Profile;)Lcom/vk/dto/user/UserProfile;
     .locals 3
 
     .line 2
@@ -674,7 +674,7 @@
     invoke-direct {v0}, Lcom/vk/dto/user/UserProfile;-><init>()V
 
     .line 3
-    invoke-interface {p1}, Lcom/vk/im/engine/models/j;->f0()I
+    invoke-interface {p1}, Lcom/vk/im/engine/models/Profile;->f0()I
 
     move-result v1
 
@@ -683,7 +683,7 @@
     .line 4
     sget-object v1, Lcom/vk/im/engine/models/users/UserNameCase;->NOM:Lcom/vk/im/engine/models/users/UserNameCase;
 
-    invoke-interface {p1, v1}, Lcom/vk/im/engine/models/j;->c(Lcom/vk/im/engine/models/users/UserNameCase;)Ljava/lang/String;
+    invoke-interface {p1, v1}, Lcom/vk/im/engine/models/Profile;->c(Lcom/vk/im/engine/models/users/UserNameCase;)Ljava/lang/String;
 
     move-result-object v1
 
@@ -692,21 +692,21 @@
     .line 5
     sget-object v1, Lcom/vk/im/engine/models/users/UserNameCase;->NOM:Lcom/vk/im/engine/models/users/UserNameCase;
 
-    invoke-interface {p1, v1}, Lcom/vk/im/engine/models/j;->b(Lcom/vk/im/engine/models/users/UserNameCase;)Ljava/lang/String;
+    invoke-interface {p1, v1}, Lcom/vk/im/engine/models/Profile;->b(Lcom/vk/im/engine/models/users/UserNameCase;)Ljava/lang/String;
 
     move-result-object v1
 
     iput-object v1, v0, Lcom/vk/dto/user/UserProfile;->e:Ljava/lang/String;
 
     .line 6
-    invoke-interface {p1}, Lcom/vk/im/engine/models/j;->name()Ljava/lang/String;
+    invoke-interface {p1}, Lcom/vk/im/engine/models/Profile;->name()Ljava/lang/String;
 
     move-result-object v1
 
     iput-object v1, v0, Lcom/vk/dto/user/UserProfile;->d:Ljava/lang/String;
 
     .line 7
-    invoke-interface {p1}, Lcom/vk/im/engine/models/j;->g0()Lcom/vk/im/engine/models/ImageList;
+    invoke-interface {p1}, Lcom/vk/im/engine/models/Profile;->g0()Lcom/vk/im/engine/models/ImageList;
 
     move-result-object p1
 

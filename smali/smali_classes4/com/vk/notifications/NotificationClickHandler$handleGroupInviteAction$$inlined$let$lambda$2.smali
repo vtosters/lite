@@ -3,12 +3,12 @@
 .source "NotificationClickHandler.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/a;
+.implements Lkotlin/jvm/b/Functions;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/notifications/NotificationClickHandler;->b(Landroid/content/Context;Lcom/vk/dto/notifications/NotificationItem;Lcom/vk/dto/notifications/NotificationAction;Lcom/vk/notifications/i;Landroid/view/View;)V
+    value = Lcom/vk/notifications/NotificationClickHandler;->b(Landroid/content/Context;Lcom/vk/dto/notifications/NotificationItem;Lcom/vk/dto/notifications/NotificationAction;Lcom/vk/notifications/NotificationsContainer;Landroid/view/View;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -19,8 +19,8 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/a<",
-        "Lkotlin/m;",
+        "Lkotlin/jvm/b/Functions<",
+        "Lkotlin/Unit;",
         ">;"
     }
 .end annotation
@@ -31,7 +31,7 @@
 
 .field final synthetic $clickView$inlined:Landroid/view/View;
 
-.field final synthetic $container$inlined:Lcom/vk/notifications/i;
+.field final synthetic $container$inlined:Lcom/vk/notifications/NotificationsContainer;
 
 .field final synthetic $context$inlined:Landroid/content/Context;
 
@@ -41,7 +41,7 @@
 
 
 # direct methods
-.method constructor <init>(Lcom/vk/dto/group/Group;Lcom/vk/dto/notifications/NotificationAction;Landroid/view/View;Landroid/content/Context;Lcom/vk/dto/notifications/NotificationItem;Lcom/vk/notifications/i;)V
+.method constructor <init>(Lcom/vk/dto/group/Group;Lcom/vk/dto/notifications/NotificationAction;Landroid/view/View;Landroid/content/Context;Lcom/vk/dto/notifications/NotificationItem;Lcom/vk/notifications/NotificationsContainer;)V
     .locals 0
 
     iput-object p1, p0, Lcom/vk/notifications/NotificationClickHandler$handleGroupInviteAction$$inlined$let$lambda$2;->$it:Lcom/vk/dto/group/Group;
@@ -54,7 +54,7 @@
 
     iput-object p5, p0, Lcom/vk/notifications/NotificationClickHandler$handleGroupInviteAction$$inlined$let$lambda$2;->$parentNotification$inlined:Lcom/vk/dto/notifications/NotificationItem;
 
-    iput-object p6, p0, Lcom/vk/notifications/NotificationClickHandler$handleGroupInviteAction$$inlined$let$lambda$2;->$container$inlined:Lcom/vk/notifications/i;
+    iput-object p6, p0, Lcom/vk/notifications/NotificationClickHandler$handleGroupInviteAction$$inlined$let$lambda$2;->$container$inlined:Lcom/vk/notifications/NotificationsContainer;
 
     const/4 p1, 0x0
 
@@ -71,7 +71,7 @@
     .line 1
     invoke-virtual {p0}, Lcom/vk/notifications/NotificationClickHandler$handleGroupInviteAction$$inlined$let$lambda$2;->invoke()V
 
-    sget-object v0, Lkotlin/m;->a:Lkotlin/m;
+    sget-object v0, Lkotlin/Unit;->a:Lkotlin/Unit;
 
     return-object v0
 .end method
@@ -86,13 +86,13 @@
 
     iget-object v2, p0, Lcom/vk/notifications/NotificationClickHandler$handleGroupInviteAction$$inlined$let$lambda$2;->$parentNotification$inlined:Lcom/vk/dto/notifications/NotificationItem;
 
-    iget-object v3, p0, Lcom/vk/notifications/NotificationClickHandler$handleGroupInviteAction$$inlined$let$lambda$2;->$container$inlined:Lcom/vk/notifications/i;
+    iget-object v3, p0, Lcom/vk/notifications/NotificationClickHandler$handleGroupInviteAction$$inlined$let$lambda$2;->$container$inlined:Lcom/vk/notifications/NotificationsContainer;
 
     iget-object v4, p0, Lcom/vk/notifications/NotificationClickHandler$handleGroupInviteAction$$inlined$let$lambda$2;->$it:Lcom/vk/dto/group/Group;
 
     sget-object v5, Lcom/vtosters/lite/data/Groups$JoinType;->UNSURE:Lcom/vtosters/lite/data/Groups$JoinType;
 
-    invoke-static/range {v0 .. v5}, Lcom/vk/notifications/NotificationClickHandler;->a(Lcom/vk/notifications/NotificationClickHandler;Landroid/content/Context;Lcom/vk/dto/notifications/NotificationItem;Lcom/vk/notifications/i;Lcom/vk/dto/group/Group;Lcom/vtosters/lite/data/Groups$JoinType;)V
+    invoke-static/range {v0 .. v5}, Lcom/vk/notifications/NotificationClickHandler;->a(Lcom/vk/notifications/NotificationClickHandler;Landroid/content/Context;Lcom/vk/dto/notifications/NotificationItem;Lcom/vk/notifications/NotificationsContainer;Lcom/vk/dto/group/Group;Lcom/vtosters/lite/data/Groups$JoinType;)V
 
     return-void
 .end method

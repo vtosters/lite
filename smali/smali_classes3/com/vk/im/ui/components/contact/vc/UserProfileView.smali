@@ -1,5 +1,5 @@
 .class public final Lcom/vk/im/ui/components/contact/vc/UserProfileView;
-.super Lcom/vk/im/ui/views/a;
+.super Lcom/vk/im/ui/views/ContactHeaderView;
 .source "UserProfileView.kt"
 
 
@@ -37,7 +37,7 @@
 
     move-object v1, p1
 
-    invoke-direct/range {v0 .. v5}, Lcom/vk/im/ui/components/contact/vc/UserProfileView;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;IILkotlin/jvm/internal/i;)V
+    invoke-direct/range {v0 .. v5}, Lcom/vk/im/ui/components/contact/vc/UserProfileView;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;IILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     return-void
 .end method
@@ -57,7 +57,7 @@
 
     move-object v2, p2
 
-    invoke-direct/range {v0 .. v5}, Lcom/vk/im/ui/components/contact/vc/UserProfileView;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;IILkotlin/jvm/internal/i;)V
+    invoke-direct/range {v0 .. v5}, Lcom/vk/im/ui/components/contact/vc/UserProfileView;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;IILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     return-void
 .end method
@@ -66,7 +66,7 @@
     .locals 0
 
     .line 2
-    invoke-direct {p0, p1, p2, p3}, Lcom/vk/im/ui/views/a;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
+    invoke-direct {p0, p1, p2, p3}, Lcom/vk/im/ui/views/ContactHeaderView;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
 
     .line 3
     sget p1, Lcom/vk/im/ui/h;->im_message:I
@@ -77,7 +77,7 @@
 
     const-string p2, "findViewById(R.id.im_message)"
 
-    invoke-static {p1, p2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, p2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     check-cast p1, Lcom/vk/im/ui/views/buttons/TextImageButton;
 
@@ -92,7 +92,7 @@
 
     const-string p2, "findViewById(R.id.im_phone)"
 
-    invoke-static {p1, p2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, p2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     check-cast p1, Lcom/vk/im/ui/views/buttons/TextImageButton;
 
@@ -107,7 +107,7 @@
 
     const-string p2, "findViewById(R.id.im_video)"
 
-    invoke-static {p1, p2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, p2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     check-cast p1, Lcom/vk/im/ui/views/buttons/TextImageButton;
 
@@ -120,7 +120,7 @@
 
     invoke-direct {p2, p0}, Lcom/vk/im/ui/components/contact/vc/UserProfileView$1;-><init>(Lcom/vk/im/ui/components/contact/vc/UserProfileView;)V
 
-    invoke-static {p1, p2}, Lcom/vk/extensions/ViewExtKt;->e(Landroid/view/View;Lkotlin/jvm/b/b;)V
+    invoke-static {p1, p2}, Lcom/vk/extensions/ViewExtKt;->e(Landroid/view/View;Lkotlin/jvm/b/Functions2;)V
 
     .line 7
     iget-object p1, p0, Lcom/vk/im/ui/components/contact/vc/UserProfileView;->R:Lcom/vk/im/ui/views/buttons/TextImageButton;
@@ -129,7 +129,7 @@
 
     invoke-direct {p2, p0}, Lcom/vk/im/ui/components/contact/vc/UserProfileView$2;-><init>(Lcom/vk/im/ui/components/contact/vc/UserProfileView;)V
 
-    invoke-static {p1, p2}, Lcom/vk/extensions/ViewExtKt;->e(Landroid/view/View;Lkotlin/jvm/b/b;)V
+    invoke-static {p1, p2}, Lcom/vk/extensions/ViewExtKt;->e(Landroid/view/View;Lkotlin/jvm/b/Functions2;)V
 
     .line 8
     iget-object p1, p0, Lcom/vk/im/ui/components/contact/vc/UserProfileView;->S:Lcom/vk/im/ui/views/buttons/TextImageButton;
@@ -138,10 +138,10 @@
 
     invoke-direct {p2, p0}, Lcom/vk/im/ui/components/contact/vc/UserProfileView$3;-><init>(Lcom/vk/im/ui/components/contact/vc/UserProfileView;)V
 
-    invoke-static {p1, p2}, Lcom/vk/extensions/ViewExtKt;->e(Landroid/view/View;Lkotlin/jvm/b/b;)V
+    invoke-static {p1, p2}, Lcom/vk/extensions/ViewExtKt;->e(Landroid/view/View;Lkotlin/jvm/b/Functions2;)V
 
     .line 9
-    invoke-virtual {p0}, Lcom/vk/im/ui/views/a;->getAvatarView()Lcom/vk/im/ui/views/avatars/AvatarView;
+    invoke-virtual {p0}, Lcom/vk/im/ui/views/ContactHeaderView;->getAvatarView()Lcom/vk/im/ui/views/avatars/AvatarView;
 
     move-result-object p1
 
@@ -149,12 +149,12 @@
 
     invoke-direct {p2, p0}, Lcom/vk/im/ui/components/contact/vc/UserProfileView$4;-><init>(Lcom/vk/im/ui/components/contact/vc/UserProfileView;)V
 
-    invoke-static {p1, p2}, Lcom/vk/extensions/ViewExtKt;->e(Landroid/view/View;Lkotlin/jvm/b/b;)V
+    invoke-static {p1, p2}, Lcom/vk/extensions/ViewExtKt;->e(Landroid/view/View;Lkotlin/jvm/b/Functions2;)V
 
     return-void
 .end method
 
-.method public synthetic constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;IILkotlin/jvm/internal/i;)V
+.method public synthetic constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;IILkotlin/jvm/internal/DefaultConstructorMarker;)V
     .locals 0
 
     and-int/lit8 p5, p4, 0x2

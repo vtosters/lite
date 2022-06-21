@@ -7,7 +7,7 @@
 
 
 # instance fields
-.field private final synthetic a:Lcom/vk/media/render/e;
+.field private final synthetic a:Lcom/vk/media/render/RenderVideo;
 
 .field private final synthetic b:I
 
@@ -17,12 +17,12 @@
 
 
 # direct methods
-.method public synthetic constructor <init>(Lcom/vk/media/render/e;IILandroid/graphics/SurfaceTexture;)V
+.method public synthetic constructor <init>(Lcom/vk/media/render/RenderVideo;IILandroid/graphics/SurfaceTexture;)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lcom/vk/media/render/c;->a:Lcom/vk/media/render/e;
+    iput-object p1, p0, Lcom/vk/media/render/c;->a:Lcom/vk/media/render/RenderVideo;
 
     iput p2, p0, Lcom/vk/media/render/c;->b:I
 
@@ -38,7 +38,7 @@
 .method public final run()V
     .locals 4
 
-    iget-object v0, p0, Lcom/vk/media/render/c;->a:Lcom/vk/media/render/e;
+    iget-object v0, p0, Lcom/vk/media/render/c;->a:Lcom/vk/media/render/RenderVideo;
 
     iget v1, p0, Lcom/vk/media/render/c;->b:I
 
@@ -46,7 +46,7 @@
 
     iget-object v3, p0, Lcom/vk/media/render/c;->d:Landroid/graphics/SurfaceTexture;
 
-    invoke-virtual {v0, v1, v2, v3}, Lcom/vk/media/render/e;->a(IILandroid/graphics/SurfaceTexture;)V
+    invoke-virtual {v0, v1, v2, v3}, Lcom/vk/media/render/RenderVideo;->a(IILandroid/graphics/SurfaceTexture;)V
 
     return-void
 .end method

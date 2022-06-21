@@ -3,7 +3,7 @@
 .source "CommunitiesCatalogFragment.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/a;
+.implements Lkotlin/jvm/b/Functions;
 
 
 # annotations
@@ -19,7 +19,7 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/a<",
+        "Lkotlin/jvm/b/Functions<",
         "Ljava/lang/Integer;",
         ">;"
     }
@@ -57,7 +57,7 @@
 
     if-eqz v0, :cond_0
 
-    sget-object v1, Lcom/vk/navigation/q;->T:Ljava/lang/String;
+    sget-object v1, Lcom/vk/navigation/NavigatorKeys;->T:Ljava/lang/String;
 
     invoke-virtual {v0, v1}, Landroid/os/Bundle;->getInt(Ljava/lang/String;)I
 
@@ -66,11 +66,11 @@
     goto :goto_0
 
     :cond_0
-    invoke-static {}, Lcom/vk/bridges/g;->a()Lcom/vk/bridges/f;
+    invoke-static {}, Lcom/vk/bridges/AuthBridge;->a()Lcom/vk/bridges/AuthBridge3;
 
     move-result-object v0
 
-    invoke-interface {v0}, Lcom/vk/bridges/f;->b()I
+    invoke-interface {v0}, Lcom/vk/bridges/AuthBridge3;->b()I
 
     move-result v0
 

@@ -3,7 +3,7 @@
 .source "AlbumsListFragmentPresenter.kt"
 
 # interfaces
-.implements Lb/h/r/c;
+.implements Lb/h/r/BaseScreenContract;
 
 
 # annotations
@@ -84,9 +84,9 @@
     new-instance v0, Lcom/vk/api/photos/PhotosGetAlbums$a;
 
     .line 5
-    sget-object v1, Lcom/vk/core/util/v;->b:Lcom/vk/core/util/v;
+    sget-object v1, Lcom/vk/core/util/DeviceState;->b:Lcom/vk/core/util/DeviceState;
 
-    invoke-virtual {v1}, Lcom/vk/core/util/v;->y()Z
+    invoke-virtual {v1}, Lcom/vk/core/util/DeviceState;->y()Z
 
     move-result v1
 
@@ -111,7 +111,7 @@
     const/4 v0, 0x0
 
     .line 8
-    invoke-static {v1, v0, v3, v0}, Lcom/vk/api/base/d;->d(Lcom/vk/api/base/d;Lcom/vk/api/base/e;ILjava/lang/Object;)Lc/a/m;
+    invoke-static {v1, v0, v3, v0}, Lcom/vk/api/base/ApiRequest;->d(Lcom/vk/api/base/ApiRequest;Lcom/vk/api/base/ApiThreadHolder;ILjava/lang/Object;)Lio/reactivex/Observable;
 
     move-result-object v0
 
@@ -126,7 +126,7 @@
     invoke-direct {v2, p0, p1}, Lcom/vk/profile/ui/photos/album_list/AlbumsListFragmentPresenter$c;-><init>(Lcom/vk/profile/ui/photos/album_list/AlbumsListFragmentPresenter;Z)V
 
     .line 11
-    invoke-virtual {v0, v1, v2}, Lc/a/m;->a(Lc/a/z/g;Lc/a/z/g;)Lio/reactivex/disposables/b;
+    invoke-virtual {v0, v1, v2}, Lio/reactivex/Observable;->a(Lio/reactivex/functions/Consumer;Lio/reactivex/functions/Consumer;)Lio/reactivex/disposables/Disposable;
 
     return-void
 .end method
@@ -174,7 +174,7 @@
     invoke-virtual {v0, v1}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
     .line 7
-    sget-object v1, Lcom/vk/core/util/i;->a:Landroid/content/Context;
+    sget-object v1, Lcom/vk/core/util/AppContextHolder;->a:Landroid/content/Context;
 
     iget-object v2, p0, Lcom/vk/profile/ui/photos/album_list/AlbumsListFragmentPresenter;->b:Lcom/vk/profile/ui/photos/album_list/AlbumsListFragmentPresenter$receiver$1;
 
@@ -191,7 +191,7 @@
     .locals 1
 
     .line 1
-    invoke-static {p0}, Lb/h/r/c$a;->a(Lb/h/r/c;)Z
+    invoke-static {p0}, Lb/h/r/BaseScreenContract$a;->a(Lb/h/r/BaseScreenContract;)Z
 
     move-result v0
 
@@ -202,10 +202,10 @@
     .locals 2
 
     .line 1
-    invoke-static {p0}, Lb/h/r/c$a;->b(Lb/h/r/c;)V
+    invoke-static {p0}, Lb/h/r/BaseScreenContract$a;->b(Lb/h/r/BaseScreenContract;)V
 
     .line 2
-    sget-object v0, Lcom/vk/core/util/i;->a:Landroid/content/Context;
+    sget-object v0, Lcom/vk/core/util/AppContextHolder;->a:Landroid/content/Context;
 
     iget-object v1, p0, Lcom/vk/profile/ui/photos/album_list/AlbumsListFragmentPresenter;->b:Lcom/vk/profile/ui/photos/album_list/AlbumsListFragmentPresenter$receiver$1;
 
@@ -218,7 +218,7 @@
     .locals 0
 
     .line 1
-    invoke-static {p0}, Lb/h/r/c$a;->c(Lb/h/r/c;)V
+    invoke-static {p0}, Lb/h/r/BaseScreenContract$a;->c(Lb/h/r/BaseScreenContract;)V
 
     return-void
 .end method
@@ -227,7 +227,7 @@
     .locals 0
 
     .line 1
-    invoke-static {p0}, Lb/h/r/c$a;->d(Lb/h/r/c;)V
+    invoke-static {p0}, Lb/h/r/BaseScreenContract$a;->d(Lb/h/r/BaseScreenContract;)V
 
     return-void
 .end method
@@ -236,7 +236,7 @@
     .locals 0
 
     .line 1
-    invoke-static {p0}, Lb/h/r/c$a;->e(Lb/h/r/c;)V
+    invoke-static {p0}, Lb/h/r/BaseScreenContract$a;->e(Lb/h/r/BaseScreenContract;)V
 
     return-void
 .end method
@@ -245,7 +245,7 @@
     .locals 0
 
     .line 1
-    invoke-static {p0}, Lb/h/r/c$a;->f(Lb/h/r/c;)V
+    invoke-static {p0}, Lb/h/r/BaseScreenContract$a;->f(Lb/h/r/BaseScreenContract;)V
 
     return-void
 .end method
@@ -254,7 +254,7 @@
     .locals 0
 
     .line 1
-    invoke-static {p0}, Lb/h/r/c$a;->g(Lb/h/r/c;)V
+    invoke-static {p0}, Lb/h/r/BaseScreenContract$a;->g(Lb/h/r/BaseScreenContract;)V
 
     return-void
 .end method
@@ -263,7 +263,7 @@
     .locals 0
 
     .line 1
-    invoke-static {p0}, Lb/h/r/c$a;->h(Lb/h/r/c;)V
+    invoke-static {p0}, Lb/h/r/BaseScreenContract$a;->h(Lb/h/r/BaseScreenContract;)V
 
     return-void
 .end method

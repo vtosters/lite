@@ -38,9 +38,9 @@
     .locals 0
 
     .line 1
-    sget-object p1, Lcom/vk/pushes/j/b;->d:Lcom/vk/pushes/j/b;
+    sget-object p1, Lcom/vk/pushes/j/DndHelper;->d:Lcom/vk/pushes/j/DndHelper;
 
-    invoke-virtual {p1}, Lcom/vk/pushes/j/b;->a()V
+    invoke-virtual {p1}, Lcom/vk/pushes/j/DndHelper;->a()V
 
     .line 2
     iget-object p1, p0, Lcom/vk/notifications/settings/NotificationsSettingsAdapter$e;->a:Lcom/vk/notifications/settings/NotificationsSettingsAdapter;

@@ -46,7 +46,7 @@
 
     iget p1, p0, Lcom/vk/voip/VoipCallView$l;->a:F
 
-    invoke-static {p1}, Ld/a/a/c/e;->a(F)I
+    invoke-static {p1}, Lme/grishka/appkit/utils/V;->a(F)I
 
     move-result p1
 

@@ -3,7 +3,7 @@
 .source "ArticleHolder.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/b;
+.implements Lkotlin/jvm/b/Functions2;
 
 
 # annotations
@@ -19,9 +19,9 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/b<",
-        "Lb/h/h/f/a;",
-        "Lkotlin/m;",
+        "Lkotlin/jvm/b/Functions2<",
+        "Lb/h/h/f/Favable;",
+        "Lkotlin/Unit;",
         ">;"
     }
 .end annotation
@@ -46,18 +46,18 @@
 
 
 # virtual methods
-.method public final a(Lb/h/h/f/a;)V
+.method public final a(Lb/h/h/f/Favable;)V
     .locals 1
 
     .line 1
     iget-object v0, p0, Lcom/vk/newsfeed/holders/attachments/ArticleHolder$onFaveClick$2;->this$0:Lcom/vk/newsfeed/holders/attachments/ArticleHolder;
 
-    invoke-virtual {v0}, Lcom/vk/newsfeed/holders/attachments/k;->o0()Lcom/vk/dto/common/Attachment;
+    invoke-virtual {v0}, Lcom/vk/newsfeed/holders/attachments/BaseAttachmentHolder;->o0()Lcom/vk/dto/common/Attachment;
 
     move-result-object v0
 
     .line 2
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result p1
 
@@ -75,11 +75,11 @@
     .locals 0
 
     .line 1
-    check-cast p1, Lb/h/h/f/a;
+    check-cast p1, Lb/h/h/f/Favable;
 
-    invoke-virtual {p0, p1}, Lcom/vk/newsfeed/holders/attachments/ArticleHolder$onFaveClick$2;->a(Lb/h/h/f/a;)V
+    invoke-virtual {p0, p1}, Lcom/vk/newsfeed/holders/attachments/ArticleHolder$onFaveClick$2;->a(Lb/h/h/f/Favable;)V
 
-    sget-object p1, Lkotlin/m;->a:Lkotlin/m;
+    sget-object p1, Lkotlin/Unit;->a:Lkotlin/Unit;
 
     return-object p1
 .end method

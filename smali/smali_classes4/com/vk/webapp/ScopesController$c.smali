@@ -3,12 +3,12 @@
 .source "ScopesController.kt"
 
 # interfaces
-.implements Lcom/vk/core/dialogs/bottomsheet/h$e;
+.implements Lcom/vk/core/dialogs/bottomsheet/ModalDialogInterface$e;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/webapp/ScopesController;->a(Landroid/app/Activity;Lkotlin/jvm/b/b;Lkotlin/jvm/b/a;Ljava/util/List;Ljava/util/List;)V
+    value = Lcom/vk/webapp/ScopesController;->a(Landroid/app/Activity;Lkotlin/jvm/b/Functions2;Lkotlin/jvm/b/Functions;Ljava/util/List;Ljava/util/List;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,17 +18,17 @@
 
 
 # instance fields
-.field final synthetic a:Lkotlin/jvm/b/b;
+.field final synthetic a:Lkotlin/jvm/b/Functions2;
 
 .field final synthetic b:Lcom/vk/core/dialogs/adapter/ModalAdapter;
 
 
 # direct methods
-.method constructor <init>(Lkotlin/jvm/b/b;Lcom/vk/core/dialogs/adapter/ModalAdapter;)V
+.method constructor <init>(Lkotlin/jvm/b/Functions2;Lcom/vk/core/dialogs/adapter/ModalAdapter;)V
     .locals 0
 
     .line 1
-    iput-object p1, p0, Lcom/vk/webapp/ScopesController$c;->a:Lkotlin/jvm/b/b;
+    iput-object p1, p0, Lcom/vk/webapp/ScopesController$c;->a:Lkotlin/jvm/b/Functions2;
 
     iput-object p2, p0, Lcom/vk/webapp/ScopesController$c;->b:Lcom/vk/core/dialogs/adapter/ModalAdapter;
 
@@ -43,7 +43,7 @@
     .locals 2
 
     .line 1
-    iget-object p1, p0, Lcom/vk/webapp/ScopesController$c;->a:Lkotlin/jvm/b/b;
+    iget-object p1, p0, Lcom/vk/webapp/ScopesController$c;->a:Lkotlin/jvm/b/Functions2;
 
     invoke-static {}, Lcom/vk/webapp/ScopesController;->b()Lcom/vk/webapp/ScopesController$Companion;
 
@@ -59,7 +59,7 @@
 
     move-result-object v0
 
-    invoke-interface {p1, v0}, Lkotlin/jvm/b/b;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {p1, v0}, Lkotlin/jvm/b/Functions2;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
 
     return-void
 .end method

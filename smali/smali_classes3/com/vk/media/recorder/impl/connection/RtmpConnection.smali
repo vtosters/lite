@@ -1,5 +1,5 @@
 .class Lcom/vk/media/recorder/impl/connection/RtmpConnection;
-.super Lcom/vk/media/recorder/impl/connection/a;
+.super Lcom/vk/media/recorder/impl/connection/BaseConnection;
 .source "RtmpConnection.java"
 
 
@@ -23,14 +23,14 @@
 
 .field E:Z
 
-.field F:Lcom/vk/media/recorder/impl/connection/e;
+.field F:Lcom/vk/media/recorder/impl/connection/RtmpChunkStream;
 
 .field G:Ljava/util/HashMap;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/util/HashMap<",
             "Ljava/lang/Integer;",
-            "Lcom/vk/media/recorder/impl/connection/e;",
+            "Lcom/vk/media/recorder/impl/connection/RtmpChunkStream;",
             ">;"
         }
     .end annotation
@@ -42,15 +42,15 @@
 
 .field J:J
 
-.field K:Lcom/vk/media/recorder/impl/connection/h$b;
+.field K:Lcom/vk/media/recorder/impl/connection/StreamBuffer$b;
 
-.field L:Lcom/vk/media/recorder/impl/connection/h$a;
+.field L:Lcom/vk/media/recorder/impl/connection/StreamBuffer$a;
 
-.field M:Lcom/vk/media/recorder/impl/connection/f;
+.field M:Lcom/vk/media/recorder/impl/connection/RtmpPublisherChunkStreamInfo;
 
-.field N:Lcom/vk/media/recorder/impl/connection/f;
+.field N:Lcom/vk/media/recorder/impl/connection/RtmpPublisherChunkStreamInfo;
 
-.field O:Lcom/vk/media/recorder/impl/connection/f;
+.field O:Lcom/vk/media/recorder/impl/connection/RtmpPublisherChunkStreamInfo;
 
 .field P:I
 
@@ -82,7 +82,7 @@
 
 
 # direct methods
-.method constructor <init>(Lcom/vk/media/recorder/impl/connection/d;ILcom/vk/media/recorder/impl/Streamer$MODE;Lcom/vk/media/recorder/impl/Streamer$a;Ljava/lang/String;Ljava/lang/String;ILjava/lang/String;Ljava/lang/String;)V
+.method constructor <init>(Lcom/vk/media/recorder/impl/connection/ConnectionManager;ILcom/vk/media/recorder/impl/Streamer$MODE;Lcom/vk/media/recorder/impl/Streamer$a;Ljava/lang/String;Ljava/lang/String;ILjava/lang/String;Ljava/lang/String;)V
     .locals 8
     .annotation system Ldalvik/annotation/Throws;
         value = {
@@ -107,7 +107,7 @@
     move v5, p7
 
     .line 1
-    invoke-direct/range {v0 .. v6}, Lcom/vk/media/recorder/impl/connection/a;-><init>(Lcom/vk/media/recorder/impl/connection/d;ILcom/vk/media/recorder/impl/Streamer$MODE;Ljava/lang/String;II)V
+    invoke-direct/range {v0 .. v6}, Lcom/vk/media/recorder/impl/connection/BaseConnection;-><init>(Lcom/vk/media/recorder/impl/connection/ConnectionManager;ILcom/vk/media/recorder/impl/Streamer$MODE;Ljava/lang/String;II)V
 
     const v0, 0xffff
 
@@ -179,29 +179,29 @@
     iput-wide v3, v7, Lcom/vk/media/recorder/impl/connection/RtmpConnection;->J:J
 
     .line 15
-    new-instance v5, Lcom/vk/media/recorder/impl/connection/f;
+    new-instance v5, Lcom/vk/media/recorder/impl/connection/RtmpPublisherChunkStreamInfo;
 
     const/16 v6, 0x12
 
-    invoke-direct {v5, v6}, Lcom/vk/media/recorder/impl/connection/f;-><init>(B)V
+    invoke-direct {v5, v6}, Lcom/vk/media/recorder/impl/connection/RtmpPublisherChunkStreamInfo;-><init>(B)V
 
-    iput-object v5, v7, Lcom/vk/media/recorder/impl/connection/RtmpConnection;->M:Lcom/vk/media/recorder/impl/connection/f;
+    iput-object v5, v7, Lcom/vk/media/recorder/impl/connection/RtmpConnection;->M:Lcom/vk/media/recorder/impl/connection/RtmpPublisherChunkStreamInfo;
 
     .line 16
-    new-instance v5, Lcom/vk/media/recorder/impl/connection/f;
+    new-instance v5, Lcom/vk/media/recorder/impl/connection/RtmpPublisherChunkStreamInfo;
 
     const/16 v6, 0x8
 
-    invoke-direct {v5, v6}, Lcom/vk/media/recorder/impl/connection/f;-><init>(B)V
+    invoke-direct {v5, v6}, Lcom/vk/media/recorder/impl/connection/RtmpPublisherChunkStreamInfo;-><init>(B)V
 
-    iput-object v5, v7, Lcom/vk/media/recorder/impl/connection/RtmpConnection;->N:Lcom/vk/media/recorder/impl/connection/f;
+    iput-object v5, v7, Lcom/vk/media/recorder/impl/connection/RtmpConnection;->N:Lcom/vk/media/recorder/impl/connection/RtmpPublisherChunkStreamInfo;
 
     .line 17
-    new-instance v5, Lcom/vk/media/recorder/impl/connection/f;
+    new-instance v5, Lcom/vk/media/recorder/impl/connection/RtmpPublisherChunkStreamInfo;
 
-    invoke-direct {v5, v1}, Lcom/vk/media/recorder/impl/connection/f;-><init>(B)V
+    invoke-direct {v5, v1}, Lcom/vk/media/recorder/impl/connection/RtmpPublisherChunkStreamInfo;-><init>(B)V
 
-    iput-object v5, v7, Lcom/vk/media/recorder/impl/connection/RtmpConnection;->O:Lcom/vk/media/recorder/impl/connection/f;
+    iput-object v5, v7, Lcom/vk/media/recorder/impl/connection/RtmpConnection;->O:Lcom/vk/media/recorder/impl/connection/RtmpPublisherChunkStreamInfo;
 
     .line 18
     iput v0, v7, Lcom/vk/media/recorder/impl/connection/RtmpConnection;->P:I
@@ -218,7 +218,7 @@
     move v0, p2
 
     .line 22
-    iput v0, v7, Lcom/vk/media/recorder/impl/connection/a;->d:I
+    iput v0, v7, Lcom/vk/media/recorder/impl/connection/BaseConnection;->d:I
 
     move-object/from16 v0, p8
 
@@ -299,7 +299,7 @@
 
     move-result-object p1
 
-    invoke-virtual {p0, p1, p2, v0}, Lcom/vk/media/recorder/impl/connection/a;->a([BII)V
+    invoke-virtual {p0, p1, p2, v0}, Lcom/vk/media/recorder/impl/connection/BaseConnection;->a([BII)V
 
     const/4 p1, 0x1
 
@@ -312,7 +312,7 @@
     aput-byte v1, p1, p2
 
     .line 49
-    invoke-virtual {p0, p1}, Lcom/vk/media/recorder/impl/connection/a;->b([B)V
+    invoke-virtual {p0, p1}, Lcom/vk/media/recorder/impl/connection/BaseConnection;->b([B)V
 
     goto :goto_1
 
@@ -322,7 +322,7 @@
 
     move-result-object p1
 
-    invoke-virtual {p0, p1, p2, v1}, Lcom/vk/media/recorder/impl/connection/a;->b([BII)V
+    invoke-virtual {p0, p1, p2, v1}, Lcom/vk/media/recorder/impl/connection/BaseConnection;->b([BII)V
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
@@ -436,7 +436,7 @@
 
     sget-object v0, Lcom/vk/media/recorder/impl/Streamer$STATUS;->SUCCESS:Lcom/vk/media/recorder/impl/Streamer$STATUS;
 
-    invoke-virtual {p0, p1, v0}, Lcom/vk/media/recorder/impl/connection/a;->a(Lcom/vk/media/recorder/impl/Streamer$CONNECTION_STATE;Lcom/vk/media/recorder/impl/Streamer$STATUS;)V
+    invoke-virtual {p0, p1, v0}, Lcom/vk/media/recorder/impl/connection/BaseConnection;->a(Lcom/vk/media/recorder/impl/Streamer$CONNECTION_STATE;Lcom/vk/media/recorder/impl/Streamer$STATUS;)V
 
     .line 34
     invoke-virtual {p0}, Lcom/vk/media/recorder/impl/connection/RtmpConnection;->u()V
@@ -460,7 +460,7 @@
 
     sget-object v0, Lcom/vk/media/recorder/impl/Streamer$STATUS;->SUCCESS:Lcom/vk/media/recorder/impl/Streamer$STATUS;
 
-    invoke-virtual {p0, p1, v0}, Lcom/vk/media/recorder/impl/connection/a;->a(Lcom/vk/media/recorder/impl/Streamer$CONNECTION_STATE;Lcom/vk/media/recorder/impl/Streamer$STATUS;)V
+    invoke-virtual {p0, p1, v0}, Lcom/vk/media/recorder/impl/connection/BaseConnection;->a(Lcom/vk/media/recorder/impl/Streamer$CONNECTION_STATE;Lcom/vk/media/recorder/impl/Streamer$STATUS;)V
 
     .line 38
     invoke-virtual {p0}, Lcom/vk/media/recorder/impl/connection/RtmpConnection;->v()V
@@ -984,13 +984,13 @@
     if-ne v0, v1, :cond_0
 
     .line 4
-    iget-object v0, p0, Lcom/vk/media/recorder/impl/connection/a;->c:Lcom/vk/media/recorder/impl/connection/d;
+    iget-object v0, p0, Lcom/vk/media/recorder/impl/connection/BaseConnection;->c:Lcom/vk/media/recorder/impl/connection/ConnectionManager;
 
-    iget v1, p0, Lcom/vk/media/recorder/impl/connection/a;->d:I
+    iget v1, p0, Lcom/vk/media/recorder/impl/connection/BaseConnection;->d:I
 
     iget-object v2, p0, Lcom/vk/media/recorder/impl/connection/RtmpConnection;->s:Ljava/lang/String;
 
-    invoke-virtual {v0, v1, v2}, Lcom/vk/media/recorder/impl/connection/d;->a(ILjava/lang/String;)V
+    invoke-virtual {v0, v1, v2}, Lcom/vk/media/recorder/impl/connection/ConnectionManager;->a(ILjava/lang/String;)V
 
     .line 5
     :cond_0
@@ -999,14 +999,14 @@
     iput-object v0, p0, Lcom/vk/media/recorder/impl/connection/RtmpConnection;->x:Lcom/vk/media/recorder/impl/connection/RtmpConnection$RTMP_CONNECTION_STATE;
 
     .line 6
-    invoke-super {p0}, Lcom/vk/media/recorder/impl/connection/a;->b()V
+    invoke-super {p0}, Lcom/vk/media/recorder/impl/connection/BaseConnection;->b()V
 
     .line 7
     sget-object v0, Lcom/vk/media/recorder/impl/Streamer$CONNECTION_STATE;->DISCONNECTED:Lcom/vk/media/recorder/impl/Streamer$CONNECTION_STATE;
 
     iget-object v1, p0, Lcom/vk/media/recorder/impl/connection/RtmpConnection;->y:Lcom/vk/media/recorder/impl/Streamer$STATUS;
 
-    invoke-virtual {p0, v0, v1}, Lcom/vk/media/recorder/impl/connection/a;->a(Lcom/vk/media/recorder/impl/Streamer$CONNECTION_STATE;Lcom/vk/media/recorder/impl/Streamer$STATUS;)V
+    invoke-virtual {p0, v0, v1}, Lcom/vk/media/recorder/impl/connection/BaseConnection;->a(Lcom/vk/media/recorder/impl/Streamer$CONNECTION_STATE;Lcom/vk/media/recorder/impl/Streamer$STATUS;)V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
@@ -1147,21 +1147,21 @@
 
     move-result-object v3
 
-    check-cast v3, Lcom/vk/media/recorder/impl/connection/e;
+    check-cast v3, Lcom/vk/media/recorder/impl/connection/RtmpChunkStream;
 
-    iput-object v3, p0, Lcom/vk/media/recorder/impl/connection/RtmpConnection;->F:Lcom/vk/media/recorder/impl/connection/e;
+    iput-object v3, p0, Lcom/vk/media/recorder/impl/connection/RtmpConnection;->F:Lcom/vk/media/recorder/impl/connection/RtmpChunkStream;
 
     .line 19
-    iget-object v3, p0, Lcom/vk/media/recorder/impl/connection/RtmpConnection;->F:Lcom/vk/media/recorder/impl/connection/e;
+    iget-object v3, p0, Lcom/vk/media/recorder/impl/connection/RtmpConnection;->F:Lcom/vk/media/recorder/impl/connection/RtmpChunkStream;
 
     if-nez v3, :cond_5
 
     .line 20
-    new-instance v3, Lcom/vk/media/recorder/impl/connection/e;
+    new-instance v3, Lcom/vk/media/recorder/impl/connection/RtmpChunkStream;
 
-    invoke-direct {v3, p0, v1}, Lcom/vk/media/recorder/impl/connection/e;-><init>(Lcom/vk/media/recorder/impl/connection/RtmpConnection;I)V
+    invoke-direct {v3, p0, v1}, Lcom/vk/media/recorder/impl/connection/RtmpChunkStream;-><init>(Lcom/vk/media/recorder/impl/connection/RtmpConnection;I)V
 
-    iput-object v3, p0, Lcom/vk/media/recorder/impl/connection/RtmpConnection;->F:Lcom/vk/media/recorder/impl/connection/e;
+    iput-object v3, p0, Lcom/vk/media/recorder/impl/connection/RtmpConnection;->F:Lcom/vk/media/recorder/impl/connection/RtmpChunkStream;
 
     .line 21
     iget-object v3, p0, Lcom/vk/media/recorder/impl/connection/RtmpConnection;->G:Ljava/util/HashMap;
@@ -1170,15 +1170,15 @@
 
     move-result-object v1
 
-    iget-object v4, p0, Lcom/vk/media/recorder/impl/connection/RtmpConnection;->F:Lcom/vk/media/recorder/impl/connection/e;
+    iget-object v4, p0, Lcom/vk/media/recorder/impl/connection/RtmpConnection;->F:Lcom/vk/media/recorder/impl/connection/RtmpChunkStream;
 
     invoke-virtual {v3, v1, v4}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     .line 22
     :cond_5
-    iget-object v1, p0, Lcom/vk/media/recorder/impl/connection/RtmpConnection;->F:Lcom/vk/media/recorder/impl/connection/e;
+    iget-object v1, p0, Lcom/vk/media/recorder/impl/connection/RtmpConnection;->F:Lcom/vk/media/recorder/impl/connection/RtmpChunkStream;
 
-    invoke-virtual {v1, p1}, Lcom/vk/media/recorder/impl/connection/e;->a(Ljava/nio/ByteBuffer;)I
+    invoke-virtual {v1, p1}, Lcom/vk/media/recorder/impl/connection/RtmpChunkStream;->a(Ljava/nio/ByteBuffer;)I
 
     move-result v1
 
@@ -1230,9 +1230,9 @@
     :cond_9
     iget v1, p0, Lcom/vk/media/recorder/impl/connection/RtmpConnection;->H:I
 
-    iget-object v2, p0, Lcom/vk/media/recorder/impl/connection/RtmpConnection;->F:Lcom/vk/media/recorder/impl/connection/e;
+    iget-object v2, p0, Lcom/vk/media/recorder/impl/connection/RtmpConnection;->F:Lcom/vk/media/recorder/impl/connection/RtmpChunkStream;
 
-    invoke-virtual {v2}, Lcom/vk/media/recorder/impl/connection/e;->a()I
+    invoke-virtual {v2}, Lcom/vk/media/recorder/impl/connection/RtmpChunkStream;->a()I
 
     move-result v2
 
@@ -1409,10 +1409,10 @@
 
     .line 43
     :try_start_0
-    invoke-virtual {p0, v0}, Lcom/vk/media/recorder/impl/connection/a;->a([B)V
+    invoke-virtual {p0, v0}, Lcom/vk/media/recorder/impl/connection/BaseConnection;->a([B)V
 
     .line 44
-    invoke-virtual {p0, v3}, Lcom/vk/media/recorder/impl/connection/a;->b([B)V
+    invoke-virtual {p0, v3}, Lcom/vk/media/recorder/impl/connection/BaseConnection;->b([B)V
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
@@ -1486,10 +1486,10 @@
     aput-byte p1, v3, v1
 
     .line 4
-    invoke-virtual {p0, v0}, Lcom/vk/media/recorder/impl/connection/a;->a([B)V
+    invoke-virtual {p0, v0}, Lcom/vk/media/recorder/impl/connection/BaseConnection;->a([B)V
 
     .line 5
-    invoke-virtual {p0, v3}, Lcom/vk/media/recorder/impl/connection/a;->b([B)V
+    invoke-virtual {p0, v3}, Lcom/vk/media/recorder/impl/connection/BaseConnection;->b([B)V
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
@@ -1545,7 +1545,7 @@
     move-result-wide v3
 
     .line 10
-    iget-object p1, p0, Lcom/vk/media/recorder/impl/connection/RtmpConnection;->N:Lcom/vk/media/recorder/impl/connection/f;
+    iget-object p1, p0, Lcom/vk/media/recorder/impl/connection/RtmpConnection;->N:Lcom/vk/media/recorder/impl/connection/RtmpPublisherChunkStreamInfo;
 
     iget-object v5, p0, Lcom/vk/media/recorder/impl/connection/RtmpConnection;->u:[B
 
@@ -1557,29 +1557,29 @@
 
     long-to-int v4, v3
 
-    invoke-virtual {p1, v5, v6, v4}, Lcom/vk/media/recorder/impl/connection/f;->a([BII)I
+    invoke-virtual {p1, v5, v6, v4}, Lcom/vk/media/recorder/impl/connection/RtmpPublisherChunkStreamInfo;->a([BII)I
 
     move-result p1
 
     .line 11
     iget-object v3, p0, Lcom/vk/media/recorder/impl/connection/RtmpConnection;->u:[B
 
-    invoke-virtual {p0, v3, v2, p1}, Lcom/vk/media/recorder/impl/connection/a;->a([BII)V
+    invoke-virtual {p0, v3, v2, p1}, Lcom/vk/media/recorder/impl/connection/BaseConnection;->a([BII)V
 
     .line 12
-    invoke-virtual {p0, v0}, Lcom/vk/media/recorder/impl/connection/a;->a([B)V
+    invoke-virtual {p0, v0}, Lcom/vk/media/recorder/impl/connection/BaseConnection;->a([B)V
 
     .line 13
-    invoke-virtual {p0, v1}, Lcom/vk/media/recorder/impl/connection/a;->b([B)V
+    invoke-virtual {p0, v1}, Lcom/vk/media/recorder/impl/connection/BaseConnection;->b([B)V
 
     .line 14
-    iget-wide v0, p0, Lcom/vk/media/recorder/impl/connection/a;->l:J
+    iget-wide v0, p0, Lcom/vk/media/recorder/impl/connection/BaseConnection;->l:J
 
     const-wide/16 v2, 0x1
 
     add-long/2addr v0, v2
 
-    iput-wide v0, p0, Lcom/vk/media/recorder/impl/connection/a;->l:J
+    iput-wide v0, p0, Lcom/vk/media/recorder/impl/connection/BaseConnection;->l:J
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
@@ -1613,7 +1613,7 @@
 
     .line 1
     :try_start_0
-    invoke-virtual {p0, p1, v0, v1}, Lcom/vk/media/recorder/impl/connection/a;->b([BII)V
+    invoke-virtual {p0, p1, v0, v1}, Lcom/vk/media/recorder/impl/connection/BaseConnection;->b([BII)V
     :try_end_0
     .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_0
 
@@ -1715,7 +1715,7 @@
     aput-byte p1, v5, v6
 
     .line 5
-    iget-object p1, p0, Lcom/vk/media/recorder/impl/connection/RtmpConnection;->O:Lcom/vk/media/recorder/impl/connection/f;
+    iget-object p1, p0, Lcom/vk/media/recorder/impl/connection/RtmpConnection;->O:Lcom/vk/media/recorder/impl/connection/RtmpPublisherChunkStreamInfo;
 
     iget-object v3, p0, Lcom/vk/media/recorder/impl/connection/RtmpConnection;->u:[B
 
@@ -1729,17 +1729,17 @@
 
     long-to-int v1, v0
 
-    invoke-virtual {p1, v3, v4, v1}, Lcom/vk/media/recorder/impl/connection/f;->a([BII)I
+    invoke-virtual {p1, v3, v4, v1}, Lcom/vk/media/recorder/impl/connection/RtmpPublisherChunkStreamInfo;->a([BII)I
 
     move-result p1
 
     .line 6
     iget-object v0, p0, Lcom/vk/media/recorder/impl/connection/RtmpConnection;->u:[B
 
-    invoke-virtual {p0, v0, v7, p1}, Lcom/vk/media/recorder/impl/connection/a;->a([BII)V
+    invoke-virtual {p0, v0, v7, p1}, Lcom/vk/media/recorder/impl/connection/BaseConnection;->a([BII)V
 
     .line 7
-    invoke-virtual {p0, v5}, Lcom/vk/media/recorder/impl/connection/a;->a([B)V
+    invoke-virtual {p0, v5}, Lcom/vk/media/recorder/impl/connection/BaseConnection;->a([B)V
 
     .line 8
     array-length p1, v2
@@ -1749,7 +1749,7 @@
     move-result-object p1
 
     .line 9
-    invoke-virtual {p0, p1}, Lcom/vk/media/recorder/impl/connection/a;->a([B)V
+    invoke-virtual {p0, p1}, Lcom/vk/media/recorder/impl/connection/BaseConnection;->a([B)V
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
@@ -1796,7 +1796,7 @@
 
     sget-object v1, Lcom/vk/media/recorder/impl/Streamer$STATUS;->SUCCESS:Lcom/vk/media/recorder/impl/Streamer$STATUS;
 
-    invoke-virtual {p0, v0, v1}, Lcom/vk/media/recorder/impl/connection/a;->a(Lcom/vk/media/recorder/impl/Streamer$CONNECTION_STATE;Lcom/vk/media/recorder/impl/Streamer$STATUS;)V
+    invoke-virtual {p0, v0, v1}, Lcom/vk/media/recorder/impl/connection/BaseConnection;->a(Lcom/vk/media/recorder/impl/Streamer$CONNECTION_STATE;Lcom/vk/media/recorder/impl/Streamer$STATUS;)V
 
     .line 3
     invoke-virtual {p0}, Lcom/vk/media/recorder/impl/connection/RtmpConnection;->s()V
@@ -1907,7 +1907,7 @@
     iput v1, p0, Lcom/vk/media/recorder/impl/connection/RtmpConnection;->P:I
 
     .line 11
-    invoke-virtual {p0}, Lcom/vk/media/recorder/impl/connection/a;->h()I
+    invoke-virtual {p0}, Lcom/vk/media/recorder/impl/connection/BaseConnection;->h()I
 
     move-result v0
 
@@ -1958,20 +1958,20 @@
     aput-byte v3, v1, v2
 
     .line 1
-    iget-object v2, p0, Lcom/vk/media/recorder/impl/connection/a;->c:Lcom/vk/media/recorder/impl/connection/d;
+    iget-object v2, p0, Lcom/vk/media/recorder/impl/connection/BaseConnection;->c:Lcom/vk/media/recorder/impl/connection/ConnectionManager;
 
-    invoke-virtual {v2}, Lcom/vk/media/recorder/impl/connection/d;->d()Lcom/vk/media/recorder/impl/connection/h;
-
-    move-result-object v2
-
-    invoke-virtual {v2}, Lcom/vk/media/recorder/impl/connection/h;->a()Lcom/vk/media/recorder/impl/connection/h$a;
+    invoke-virtual {v2}, Lcom/vk/media/recorder/impl/connection/ConnectionManager;->d()Lcom/vk/media/recorder/impl/connection/StreamBuffer;
 
     move-result-object v2
 
-    iput-object v2, p0, Lcom/vk/media/recorder/impl/connection/RtmpConnection;->L:Lcom/vk/media/recorder/impl/connection/h$a;
+    invoke-virtual {v2}, Lcom/vk/media/recorder/impl/connection/StreamBuffer;->a()Lcom/vk/media/recorder/impl/connection/StreamBuffer$a;
+
+    move-result-object v2
+
+    iput-object v2, p0, Lcom/vk/media/recorder/impl/connection/RtmpConnection;->L:Lcom/vk/media/recorder/impl/connection/StreamBuffer$a;
 
     .line 2
-    iget-object v2, p0, Lcom/vk/media/recorder/impl/connection/RtmpConnection;->L:Lcom/vk/media/recorder/impl/connection/h$a;
+    iget-object v2, p0, Lcom/vk/media/recorder/impl/connection/RtmpConnection;->L:Lcom/vk/media/recorder/impl/connection/StreamBuffer$a;
 
     if-nez v2, :cond_0
 
@@ -1987,40 +1987,40 @@
 
     .line 5
     :cond_0
-    iget-object v2, p0, Lcom/vk/media/recorder/impl/connection/RtmpConnection;->N:Lcom/vk/media/recorder/impl/connection/f;
+    iget-object v2, p0, Lcom/vk/media/recorder/impl/connection/RtmpConnection;->N:Lcom/vk/media/recorder/impl/connection/RtmpPublisherChunkStreamInfo;
 
     iget-object v4, p0, Lcom/vk/media/recorder/impl/connection/RtmpConnection;->u:[B
 
     array-length v5, v1
 
-    iget-object v6, p0, Lcom/vk/media/recorder/impl/connection/RtmpConnection;->L:Lcom/vk/media/recorder/impl/connection/h$a;
+    iget-object v6, p0, Lcom/vk/media/recorder/impl/connection/RtmpConnection;->L:Lcom/vk/media/recorder/impl/connection/StreamBuffer$a;
 
-    iget v6, v6, Lcom/vk/media/recorder/impl/connection/h$a;->b:I
+    iget v6, v6, Lcom/vk/media/recorder/impl/connection/StreamBuffer$a;->b:I
 
     add-int/2addr v5, v6
 
-    invoke-virtual {v2, v4, v5, v3}, Lcom/vk/media/recorder/impl/connection/f;->a([BII)I
+    invoke-virtual {v2, v4, v5, v3}, Lcom/vk/media/recorder/impl/connection/RtmpPublisherChunkStreamInfo;->a([BII)I
 
     move-result v2
 
     .line 6
     iget-object v4, p0, Lcom/vk/media/recorder/impl/connection/RtmpConnection;->u:[B
 
-    invoke-virtual {p0, v4, v3, v2}, Lcom/vk/media/recorder/impl/connection/a;->a([BII)V
+    invoke-virtual {p0, v4, v3, v2}, Lcom/vk/media/recorder/impl/connection/BaseConnection;->a([BII)V
 
     .line 7
-    invoke-virtual {p0, v1}, Lcom/vk/media/recorder/impl/connection/a;->a([B)V
+    invoke-virtual {p0, v1}, Lcom/vk/media/recorder/impl/connection/BaseConnection;->a([B)V
 
     .line 8
-    iget-object v1, p0, Lcom/vk/media/recorder/impl/connection/RtmpConnection;->L:Lcom/vk/media/recorder/impl/connection/h$a;
+    iget-object v1, p0, Lcom/vk/media/recorder/impl/connection/RtmpConnection;->L:Lcom/vk/media/recorder/impl/connection/StreamBuffer$a;
 
-    iget-object v1, v1, Lcom/vk/media/recorder/impl/connection/h$a;->a:[B
+    iget-object v1, v1, Lcom/vk/media/recorder/impl/connection/StreamBuffer$a;->a:[B
 
-    iget-object v2, p0, Lcom/vk/media/recorder/impl/connection/RtmpConnection;->L:Lcom/vk/media/recorder/impl/connection/h$a;
+    iget-object v2, p0, Lcom/vk/media/recorder/impl/connection/RtmpConnection;->L:Lcom/vk/media/recorder/impl/connection/StreamBuffer$a;
 
-    iget v2, v2, Lcom/vk/media/recorder/impl/connection/h$a;->b:I
+    iget v2, v2, Lcom/vk/media/recorder/impl/connection/StreamBuffer$a;->b:I
 
-    invoke-virtual {p0, v1, v3, v2}, Lcom/vk/media/recorder/impl/connection/a;->b([BII)V
+    invoke-virtual {p0, v1, v3, v2}, Lcom/vk/media/recorder/impl/connection/BaseConnection;->b([BII)V
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
@@ -2074,27 +2074,27 @@
     aput-byte v2, v0, v1
 
     .line 1
-    iget-object v1, p0, Lcom/vk/media/recorder/impl/connection/a;->c:Lcom/vk/media/recorder/impl/connection/d;
+    iget-object v1, p0, Lcom/vk/media/recorder/impl/connection/BaseConnection;->c:Lcom/vk/media/recorder/impl/connection/ConnectionManager;
 
-    invoke-virtual {v1}, Lcom/vk/media/recorder/impl/connection/d;->d()Lcom/vk/media/recorder/impl/connection/h;
+    invoke-virtual {v1}, Lcom/vk/media/recorder/impl/connection/ConnectionManager;->d()Lcom/vk/media/recorder/impl/connection/StreamBuffer;
 
     move-result-object v1
 
-    invoke-virtual {v1}, Lcom/vk/media/recorder/impl/connection/h;->c()Lcom/vk/media/recorder/impl/connection/h$b;
+    invoke-virtual {v1}, Lcom/vk/media/recorder/impl/connection/StreamBuffer;->c()Lcom/vk/media/recorder/impl/connection/StreamBuffer$b;
 
     move-result-object v1
 
     .line 2
-    iget-object v3, v1, Lcom/vk/media/recorder/impl/connection/h$b;->a:[B
+    iget-object v3, v1, Lcom/vk/media/recorder/impl/connection/StreamBuffer$b;->a:[B
 
-    iget-object v1, v1, Lcom/vk/media/recorder/impl/connection/h$b;->c:[B
+    iget-object v1, v1, Lcom/vk/media/recorder/impl/connection/StreamBuffer$b;->c:[B
 
     invoke-virtual {p0, v3, v1}, Lcom/vk/media/recorder/impl/connection/RtmpConnection;->a([B[B)Ljava/nio/ByteBuffer;
 
     move-result-object v1
 
     .line 3
-    iget-object v3, p0, Lcom/vk/media/recorder/impl/connection/RtmpConnection;->O:Lcom/vk/media/recorder/impl/connection/f;
+    iget-object v3, p0, Lcom/vk/media/recorder/impl/connection/RtmpConnection;->O:Lcom/vk/media/recorder/impl/connection/RtmpPublisherChunkStreamInfo;
 
     iget-object v4, p0, Lcom/vk/media/recorder/impl/connection/RtmpConnection;->u:[B
 
@@ -2106,17 +2106,17 @@
 
     add-int/2addr v5, v6
 
-    invoke-virtual {v3, v4, v5, v2}, Lcom/vk/media/recorder/impl/connection/f;->a([BII)I
+    invoke-virtual {v3, v4, v5, v2}, Lcom/vk/media/recorder/impl/connection/RtmpPublisherChunkStreamInfo;->a([BII)I
 
     move-result v3
 
     .line 4
     iget-object v4, p0, Lcom/vk/media/recorder/impl/connection/RtmpConnection;->u:[B
 
-    invoke-virtual {p0, v4, v2, v3}, Lcom/vk/media/recorder/impl/connection/a;->a([BII)V
+    invoke-virtual {p0, v4, v2, v3}, Lcom/vk/media/recorder/impl/connection/BaseConnection;->a([BII)V
 
     .line 5
-    invoke-virtual {p0, v0}, Lcom/vk/media/recorder/impl/connection/a;->a([B)V
+    invoke-virtual {p0, v0}, Lcom/vk/media/recorder/impl/connection/BaseConnection;->a([B)V
 
     .line 6
     invoke-virtual {v1}, Ljava/nio/ByteBuffer;->array()[B
@@ -2127,7 +2127,7 @@
 
     move-result v1
 
-    invoke-virtual {p0, v0, v2, v1}, Lcom/vk/media/recorder/impl/connection/a;->b([BII)V
+    invoke-virtual {p0, v0, v2, v1}, Lcom/vk/media/recorder/impl/connection/BaseConnection;->b([BII)V
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
@@ -2254,7 +2254,7 @@
     move-result-object v6
 
     .line 10
-    invoke-static {v6}, Lcom/vk/media/recorder/impl/utils/d;->a(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v6}, Lcom/vk/media/recorder/impl/utils/Utils;->a(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v6
 
@@ -2280,7 +2280,7 @@
     move-result-object v7
 
     .line 12
-    invoke-static {v7}, Lcom/vk/media/recorder/impl/utils/d;->a(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v7}, Lcom/vk/media/recorder/impl/utils/Utils;->a(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v7
 
@@ -2320,7 +2320,7 @@
     move-result-object v6
 
     .line 14
-    invoke-static {v6}, Lcom/vk/media/recorder/impl/utils/d;->a(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v6}, Lcom/vk/media/recorder/impl/utils/Utils;->a(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v6
 
@@ -2430,13 +2430,13 @@
 
     invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget-object v4, p0, Lcom/vk/media/recorder/impl/connection/a;->e:Ljava/lang/String;
+    iget-object v4, p0, Lcom/vk/media/recorder/impl/connection/BaseConnection;->e:Ljava/lang/String;
 
     invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     invoke-virtual {v3, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget v4, p0, Lcom/vk/media/recorder/impl/connection/a;->f:I
+    iget v4, p0, Lcom/vk/media/recorder/impl/connection/BaseConnection;->f:I
 
     invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
@@ -2469,9 +2469,9 @@
 
     invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget-object v4, p0, Lcom/vk/media/recorder/impl/connection/a;->c:Lcom/vk/media/recorder/impl/connection/d;
+    iget-object v4, p0, Lcom/vk/media/recorder/impl/connection/BaseConnection;->c:Lcom/vk/media/recorder/impl/connection/ConnectionManager;
 
-    invoke-virtual {v4}, Lcom/vk/media/recorder/impl/connection/d;->e()Ljava/lang/String;
+    invoke-virtual {v4}, Lcom/vk/media/recorder/impl/connection/ConnectionManager;->e()Ljava/lang/String;
 
     move-result-object v4
 
@@ -2580,7 +2580,7 @@
     aput-byte v4, v1, v2
 
     .line 37
-    invoke-virtual {p0, v1}, Lcom/vk/media/recorder/impl/connection/a;->b([B)V
+    invoke-virtual {p0, v1}, Lcom/vk/media/recorder/impl/connection/BaseConnection;->b([B)V
 
     .line 38
     invoke-virtual {v0}, Ljava/nio/ByteBuffer;->array()[B
@@ -2591,7 +2591,7 @@
 
     move-result v0
 
-    invoke-virtual {p0, v1, v3, v0}, Lcom/vk/media/recorder/impl/connection/a;->b([BII)V
+    invoke-virtual {p0, v1, v3, v0}, Lcom/vk/media/recorder/impl/connection/BaseConnection;->b([BII)V
     :try_end_2
     .catch Ljava/lang/Exception; {:try_start_2 .. :try_end_2} :catch_0
 
@@ -2676,7 +2676,7 @@
     aput-byte v4, v1, v2
 
     .line 6
-    invoke-virtual {p0, v1}, Lcom/vk/media/recorder/impl/connection/a;->a([B)V
+    invoke-virtual {p0, v1}, Lcom/vk/media/recorder/impl/connection/BaseConnection;->a([B)V
 
     .line 7
     invoke-virtual {v0}, Ljava/nio/ByteBuffer;->array()[B
@@ -2687,7 +2687,7 @@
 
     move-result v0
 
-    invoke-virtual {p0, v1, v3, v0}, Lcom/vk/media/recorder/impl/connection/a;->b([BII)V
+    invoke-virtual {p0, v1, v3, v0}, Lcom/vk/media/recorder/impl/connection/BaseConnection;->b([BII)V
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
@@ -2883,7 +2883,7 @@
 
     move-result-object v0
 
-    invoke-virtual {p0, v0}, Lcom/vk/media/recorder/impl/connection/a;->b([B)V
+    invoke-virtual {p0, v0}, Lcom/vk/media/recorder/impl/connection/BaseConnection;->b([B)V
     :try_end_0
     .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_0
 
@@ -2935,7 +2935,7 @@
     invoke-static {v1}, Lcom/vk/media/recorder/impl/connection/RtmpHelper;->d(Ljava/nio/ByteBuffer;)V
 
     .line 5
-    iget-object v2, p0, Lcom/vk/media/recorder/impl/connection/a;->b:Lcom/vk/media/recorder/impl/Streamer$MODE;
+    iget-object v2, p0, Lcom/vk/media/recorder/impl/connection/BaseConnection;->b:Lcom/vk/media/recorder/impl/Streamer$MODE;
 
     sget-object v3, Lcom/vk/media/recorder/impl/Streamer$MODE;->VIDEO_ONLY:Lcom/vk/media/recorder/impl/Streamer$MODE;
 
@@ -2943,7 +2943,7 @@
 
     if-eq v2, v3, :cond_0
 
-    iget-object v2, p0, Lcom/vk/media/recorder/impl/connection/a;->b:Lcom/vk/media/recorder/impl/Streamer$MODE;
+    iget-object v2, p0, Lcom/vk/media/recorder/impl/connection/BaseConnection;->b:Lcom/vk/media/recorder/impl/Streamer$MODE;
 
     sget-object v3, Lcom/vk/media/recorder/impl/Streamer$MODE;->AUDIO_VIDEO:Lcom/vk/media/recorder/impl/Streamer$MODE;
 
@@ -2951,20 +2951,20 @@
 
     .line 6
     :cond_0
-    iget-object v2, p0, Lcom/vk/media/recorder/impl/connection/a;->c:Lcom/vk/media/recorder/impl/connection/d;
+    iget-object v2, p0, Lcom/vk/media/recorder/impl/connection/BaseConnection;->c:Lcom/vk/media/recorder/impl/connection/ConnectionManager;
 
-    invoke-virtual {v2}, Lcom/vk/media/recorder/impl/connection/d;->d()Lcom/vk/media/recorder/impl/connection/h;
-
-    move-result-object v2
-
-    invoke-virtual {v2}, Lcom/vk/media/recorder/impl/connection/h;->c()Lcom/vk/media/recorder/impl/connection/h$b;
+    invoke-virtual {v2}, Lcom/vk/media/recorder/impl/connection/ConnectionManager;->d()Lcom/vk/media/recorder/impl/connection/StreamBuffer;
 
     move-result-object v2
 
-    iput-object v2, p0, Lcom/vk/media/recorder/impl/connection/RtmpConnection;->K:Lcom/vk/media/recorder/impl/connection/h$b;
+    invoke-virtual {v2}, Lcom/vk/media/recorder/impl/connection/StreamBuffer;->c()Lcom/vk/media/recorder/impl/connection/StreamBuffer$b;
+
+    move-result-object v2
+
+    iput-object v2, p0, Lcom/vk/media/recorder/impl/connection/RtmpConnection;->K:Lcom/vk/media/recorder/impl/connection/StreamBuffer$b;
 
     .line 7
-    iget-object v2, p0, Lcom/vk/media/recorder/impl/connection/RtmpConnection;->K:Lcom/vk/media/recorder/impl/connection/h$b;
+    iget-object v2, p0, Lcom/vk/media/recorder/impl/connection/RtmpConnection;->K:Lcom/vk/media/recorder/impl/connection/StreamBuffer$b;
 
     if-nez v2, :cond_1
 
@@ -2980,15 +2980,15 @@
 
     .line 10
     :cond_1
-    iget-object v2, p0, Lcom/vk/media/recorder/impl/connection/RtmpConnection;->K:Lcom/vk/media/recorder/impl/connection/h$b;
+    iget-object v2, p0, Lcom/vk/media/recorder/impl/connection/RtmpConnection;->K:Lcom/vk/media/recorder/impl/connection/StreamBuffer$b;
 
-    iget-object v2, v2, Lcom/vk/media/recorder/impl/connection/h$b;->a:[B
+    iget-object v2, v2, Lcom/vk/media/recorder/impl/connection/StreamBuffer$b;->a:[B
 
-    iget-object v3, p0, Lcom/vk/media/recorder/impl/connection/RtmpConnection;->K:Lcom/vk/media/recorder/impl/connection/h$b;
+    iget-object v3, p0, Lcom/vk/media/recorder/impl/connection/RtmpConnection;->K:Lcom/vk/media/recorder/impl/connection/StreamBuffer$b;
 
-    iget v3, v3, Lcom/vk/media/recorder/impl/connection/h$b;->b:I
+    iget v3, v3, Lcom/vk/media/recorder/impl/connection/StreamBuffer$b;->b:I
 
-    invoke-static {v2, v3}, Lcom/vk/media/recorder/impl/utils/c;->a([BI)Lcom/vk/media/recorder/impl/utils/c;
+    invoke-static {v2, v3}, Lcom/vk/media/recorder/impl/utils/H264SpsInfo;->a([BI)Lcom/vk/media/recorder/impl/utils/H264SpsInfo;
 
     move-result-object v2
 
@@ -3014,7 +3014,7 @@
 
     invoke-virtual {v3, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget v6, v2, Lcom/vk/media/recorder/impl/utils/c;->a:I
+    iget v6, v2, Lcom/vk/media/recorder/impl/utils/H264SpsInfo;->a:I
 
     invoke-virtual {v3, v6}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
@@ -3022,7 +3022,7 @@
 
     invoke-virtual {v3, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget v6, v2, Lcom/vk/media/recorder/impl/utils/c;->b:I
+    iget v6, v2, Lcom/vk/media/recorder/impl/utils/H264SpsInfo;->b:I
 
     invoke-virtual {v3, v6}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
@@ -3034,7 +3034,7 @@
     invoke-static {v1, v3}, Lcom/vk/media/recorder/impl/connection/RtmpHelper;->a(Ljava/nio/ByteBuffer;Ljava/lang/String;)V
 
     .line 15
-    iget v3, v2, Lcom/vk/media/recorder/impl/utils/c;->a:I
+    iget v3, v2, Lcom/vk/media/recorder/impl/utils/H264SpsInfo;->a:I
 
     int-to-double v6, v3
 
@@ -3046,7 +3046,7 @@
     invoke-static {v1, v3}, Lcom/vk/media/recorder/impl/connection/RtmpHelper;->a(Ljava/nio/ByteBuffer;Ljava/lang/String;)V
 
     .line 17
-    iget v2, v2, Lcom/vk/media/recorder/impl/utils/c;->b:I
+    iget v2, v2, Lcom/vk/media/recorder/impl/utils/H264SpsInfo;->b:I
 
     int-to-double v2, v2
 
@@ -3058,13 +3058,13 @@
     invoke-static {v1, v2}, Lcom/vk/media/recorder/impl/connection/RtmpHelper;->a(Ljava/nio/ByteBuffer;Ljava/lang/String;)V
 
     .line 19
-    iget-object v2, p0, Lcom/vk/media/recorder/impl/connection/a;->c:Lcom/vk/media/recorder/impl/connection/d;
+    iget-object v2, p0, Lcom/vk/media/recorder/impl/connection/BaseConnection;->c:Lcom/vk/media/recorder/impl/connection/ConnectionManager;
 
-    invoke-virtual {v2}, Lcom/vk/media/recorder/impl/connection/d;->f()Lcom/vk/media/recorder/impl/utils/b;
+    invoke-virtual {v2}, Lcom/vk/media/recorder/impl/connection/ConnectionManager;->f()Lcom/vk/media/recorder/impl/utils/Configs1;
 
     move-result-object v2
 
-    iget v2, v2, Lcom/vk/media/recorder/impl/utils/b;->a:I
+    iget v2, v2, Lcom/vk/media/recorder/impl/utils/Configs1;->a:I
 
     int-to-double v2, v2
 
@@ -3084,7 +3084,7 @@
 
     .line 22
     :cond_3
-    iget-object v2, p0, Lcom/vk/media/recorder/impl/connection/a;->b:Lcom/vk/media/recorder/impl/Streamer$MODE;
+    iget-object v2, p0, Lcom/vk/media/recorder/impl/connection/BaseConnection;->b:Lcom/vk/media/recorder/impl/Streamer$MODE;
 
     sget-object v3, Lcom/vk/media/recorder/impl/Streamer$MODE;->AUDIO_ONLY:Lcom/vk/media/recorder/impl/Streamer$MODE;
 
@@ -3092,7 +3092,7 @@
 
     if-eq v2, v3, :cond_4
 
-    iget-object v2, p0, Lcom/vk/media/recorder/impl/connection/a;->b:Lcom/vk/media/recorder/impl/Streamer$MODE;
+    iget-object v2, p0, Lcom/vk/media/recorder/impl/connection/BaseConnection;->b:Lcom/vk/media/recorder/impl/Streamer$MODE;
 
     sget-object v3, Lcom/vk/media/recorder/impl/Streamer$MODE;->AUDIO_VIDEO:Lcom/vk/media/recorder/impl/Streamer$MODE;
 
@@ -3105,13 +3105,13 @@
     invoke-static {v1, v2}, Lcom/vk/media/recorder/impl/connection/RtmpHelper;->a(Ljava/nio/ByteBuffer;Ljava/lang/String;)V
 
     .line 24
-    iget-object v2, p0, Lcom/vk/media/recorder/impl/connection/a;->c:Lcom/vk/media/recorder/impl/connection/d;
+    iget-object v2, p0, Lcom/vk/media/recorder/impl/connection/BaseConnection;->c:Lcom/vk/media/recorder/impl/connection/ConnectionManager;
 
-    invoke-virtual {v2}, Lcom/vk/media/recorder/impl/connection/d;->a()Lcom/vk/media/recorder/impl/utils/a;
+    invoke-virtual {v2}, Lcom/vk/media/recorder/impl/connection/ConnectionManager;->a()Lcom/vk/media/recorder/impl/utils/Configs;
 
     move-result-object v2
 
-    iget v2, v2, Lcom/vk/media/recorder/impl/utils/a;->c:I
+    iget v2, v2, Lcom/vk/media/recorder/impl/utils/Configs;->c:I
 
     int-to-double v2, v2
 
@@ -3123,13 +3123,13 @@
     invoke-static {v1, v2}, Lcom/vk/media/recorder/impl/connection/RtmpHelper;->a(Ljava/nio/ByteBuffer;Ljava/lang/String;)V
 
     .line 26
-    iget-object v2, p0, Lcom/vk/media/recorder/impl/connection/a;->c:Lcom/vk/media/recorder/impl/connection/d;
+    iget-object v2, p0, Lcom/vk/media/recorder/impl/connection/BaseConnection;->c:Lcom/vk/media/recorder/impl/connection/ConnectionManager;
 
-    invoke-virtual {v2}, Lcom/vk/media/recorder/impl/connection/d;->a()Lcom/vk/media/recorder/impl/utils/a;
+    invoke-virtual {v2}, Lcom/vk/media/recorder/impl/connection/ConnectionManager;->a()Lcom/vk/media/recorder/impl/utils/Configs;
 
     move-result-object v2
 
-    iget v2, v2, Lcom/vk/media/recorder/impl/utils/a;->d:I
+    iget v2, v2, Lcom/vk/media/recorder/impl/utils/Configs;->d:I
 
     int-to-double v2, v2
 
@@ -3153,13 +3153,13 @@
     invoke-static {v1, v2}, Lcom/vk/media/recorder/impl/connection/RtmpHelper;->a(Ljava/nio/ByteBuffer;Ljava/lang/String;)V
 
     .line 30
-    iget-object v2, p0, Lcom/vk/media/recorder/impl/connection/a;->c:Lcom/vk/media/recorder/impl/connection/d;
+    iget-object v2, p0, Lcom/vk/media/recorder/impl/connection/BaseConnection;->c:Lcom/vk/media/recorder/impl/connection/ConnectionManager;
 
-    invoke-virtual {v2}, Lcom/vk/media/recorder/impl/connection/d;->a()Lcom/vk/media/recorder/impl/utils/a;
+    invoke-virtual {v2}, Lcom/vk/media/recorder/impl/connection/ConnectionManager;->a()Lcom/vk/media/recorder/impl/utils/Configs;
 
     move-result-object v2
 
-    iget v2, v2, Lcom/vk/media/recorder/impl/utils/a;->b:I
+    iget v2, v2, Lcom/vk/media/recorder/impl/utils/Configs;->b:I
 
     const/4 v3, 0x1
 
@@ -3191,7 +3191,7 @@
     invoke-static {v1}, Lcom/vk/media/recorder/impl/connection/RtmpHelper;->c(Ljava/nio/ByteBuffer;)V
 
     .line 35
-    iget-object v2, p0, Lcom/vk/media/recorder/impl/connection/RtmpConnection;->M:Lcom/vk/media/recorder/impl/connection/f;
+    iget-object v2, p0, Lcom/vk/media/recorder/impl/connection/RtmpConnection;->M:Lcom/vk/media/recorder/impl/connection/RtmpPublisherChunkStreamInfo;
 
     iget-object v3, p0, Lcom/vk/media/recorder/impl/connection/RtmpConnection;->u:[B
 
@@ -3199,14 +3199,14 @@
 
     move-result v4
 
-    invoke-virtual {v2, v3, v4, v6}, Lcom/vk/media/recorder/impl/connection/f;->a([BII)I
+    invoke-virtual {v2, v3, v4, v6}, Lcom/vk/media/recorder/impl/connection/RtmpPublisherChunkStreamInfo;->a([BII)I
 
     move-result v2
 
     .line 36
     iget-object v3, p0, Lcom/vk/media/recorder/impl/connection/RtmpConnection;->u:[B
 
-    invoke-virtual {p0, v3, v6, v2}, Lcom/vk/media/recorder/impl/connection/a;->a([BII)V
+    invoke-virtual {p0, v3, v6, v2}, Lcom/vk/media/recorder/impl/connection/BaseConnection;->a([BII)V
 
     .line 37
     invoke-virtual {v1}, Ljava/nio/ByteBuffer;->array()[B
@@ -3217,7 +3217,7 @@
 
     move-result v1
 
-    invoke-virtual {p0, v2, v6, v1}, Lcom/vk/media/recorder/impl/connection/a;->b([BII)V
+    invoke-virtual {p0, v2, v6, v1}, Lcom/vk/media/recorder/impl/connection/BaseConnection;->b([BII)V
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
@@ -3246,22 +3246,22 @@
     .line 1
     :cond_0
     :goto_0
-    invoke-virtual {p0}, Lcom/vk/media/recorder/impl/connection/a;->h()I
+    invoke-virtual {p0}, Lcom/vk/media/recorder/impl/connection/BaseConnection;->h()I
 
     move-result v0
 
     if-gtz v0, :cond_13
 
     .line 2
-    iget-object v0, p0, Lcom/vk/media/recorder/impl/connection/a;->c:Lcom/vk/media/recorder/impl/connection/d;
+    iget-object v0, p0, Lcom/vk/media/recorder/impl/connection/BaseConnection;->c:Lcom/vk/media/recorder/impl/connection/ConnectionManager;
 
-    invoke-virtual {v0}, Lcom/vk/media/recorder/impl/connection/d;->d()Lcom/vk/media/recorder/impl/connection/h;
+    invoke-virtual {v0}, Lcom/vk/media/recorder/impl/connection/ConnectionManager;->d()Lcom/vk/media/recorder/impl/connection/StreamBuffer;
 
     move-result-object v0
 
     iget-wide v1, p0, Lcom/vk/media/recorder/impl/connection/RtmpConnection;->R:J
 
-    invoke-virtual {v0, v1, v2}, Lcom/vk/media/recorder/impl/connection/h;->a(J)Lcom/vk/media/recorder/impl/BufferItem;
+    invoke-virtual {v0, v1, v2}, Lcom/vk/media/recorder/impl/connection/StreamBuffer;->a(J)Lcom/vk/media/recorder/impl/BufferItem;
 
     move-result-object v0
 
@@ -3342,7 +3342,7 @@
 
     .line 7
     :cond_2
-    iget-object v0, p0, Lcom/vk/media/recorder/impl/connection/a;->b:Lcom/vk/media/recorder/impl/Streamer$MODE;
+    iget-object v0, p0, Lcom/vk/media/recorder/impl/connection/BaseConnection;->b:Lcom/vk/media/recorder/impl/Streamer$MODE;
 
     sget-object v1, Lcom/vk/media/recorder/impl/Streamer$MODE;->AUDIO_VIDEO:Lcom/vk/media/recorder/impl/Streamer$MODE;
 
@@ -3358,7 +3358,7 @@
     :cond_3
     iget-object v0, p0, Lcom/vk/media/recorder/impl/connection/RtmpConnection;->Q:Lcom/vk/media/recorder/impl/BufferItem;
 
-    invoke-virtual {p0, v0}, Lcom/vk/media/recorder/impl/connection/a;->a(Lcom/vk/media/recorder/impl/BufferItem;)V
+    invoke-virtual {p0, v0}, Lcom/vk/media/recorder/impl/connection/BaseConnection;->a(Lcom/vk/media/recorder/impl/BufferItem;)V
 
     .line 9
     iget-boolean v0, p0, Lcom/vk/media/recorder/impl/connection/RtmpConnection;->S:Z
@@ -3381,7 +3381,7 @@
     invoke-virtual {p0}, Lcom/vk/media/recorder/impl/connection/RtmpConnection;->o()V
 
     .line 13
-    iget-object v0, p0, Lcom/vk/media/recorder/impl/connection/a;->b:Lcom/vk/media/recorder/impl/Streamer$MODE;
+    iget-object v0, p0, Lcom/vk/media/recorder/impl/connection/BaseConnection;->b:Lcom/vk/media/recorder/impl/Streamer$MODE;
 
     sget-object v1, Lcom/vk/media/recorder/impl/Streamer$MODE;->AUDIO_VIDEO:Lcom/vk/media/recorder/impl/Streamer$MODE;
 
@@ -3410,28 +3410,28 @@
 
     .line 16
     :cond_5
-    iget-object v0, p0, Lcom/vk/media/recorder/impl/connection/RtmpConnection;->L:Lcom/vk/media/recorder/impl/connection/h$a;
+    iget-object v0, p0, Lcom/vk/media/recorder/impl/connection/RtmpConnection;->L:Lcom/vk/media/recorder/impl/connection/StreamBuffer$a;
 
-    iget-object v1, p0, Lcom/vk/media/recorder/impl/connection/a;->c:Lcom/vk/media/recorder/impl/connection/d;
+    iget-object v1, p0, Lcom/vk/media/recorder/impl/connection/BaseConnection;->c:Lcom/vk/media/recorder/impl/connection/ConnectionManager;
 
-    invoke-virtual {v1}, Lcom/vk/media/recorder/impl/connection/d;->d()Lcom/vk/media/recorder/impl/connection/h;
+    invoke-virtual {v1}, Lcom/vk/media/recorder/impl/connection/ConnectionManager;->d()Lcom/vk/media/recorder/impl/connection/StreamBuffer;
 
     move-result-object v1
 
-    invoke-virtual {v1}, Lcom/vk/media/recorder/impl/connection/h;->a()Lcom/vk/media/recorder/impl/connection/h$a;
+    invoke-virtual {v1}, Lcom/vk/media/recorder/impl/connection/StreamBuffer;->a()Lcom/vk/media/recorder/impl/connection/StreamBuffer$a;
 
     move-result-object v1
 
     if-eq v0, v1, :cond_7
 
     .line 17
-    iget-object v0, p0, Lcom/vk/media/recorder/impl/connection/a;->c:Lcom/vk/media/recorder/impl/connection/d;
+    iget-object v0, p0, Lcom/vk/media/recorder/impl/connection/BaseConnection;->c:Lcom/vk/media/recorder/impl/connection/ConnectionManager;
 
-    invoke-virtual {v0}, Lcom/vk/media/recorder/impl/connection/d;->d()Lcom/vk/media/recorder/impl/connection/h;
+    invoke-virtual {v0}, Lcom/vk/media/recorder/impl/connection/ConnectionManager;->d()Lcom/vk/media/recorder/impl/connection/StreamBuffer;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/vk/media/recorder/impl/connection/h;->a()Lcom/vk/media/recorder/impl/connection/h$a;
+    invoke-virtual {v0}, Lcom/vk/media/recorder/impl/connection/StreamBuffer;->a()Lcom/vk/media/recorder/impl/connection/StreamBuffer$a;
 
     move-result-object v0
 
@@ -3441,11 +3441,11 @@
 
     .line 18
     :cond_6
-    iget-object v1, p0, Lcom/vk/media/recorder/impl/connection/RtmpConnection;->L:Lcom/vk/media/recorder/impl/connection/h$a;
+    iget-object v1, p0, Lcom/vk/media/recorder/impl/connection/RtmpConnection;->L:Lcom/vk/media/recorder/impl/connection/StreamBuffer$a;
 
     if-eqz v1, :cond_7
 
-    invoke-virtual {v1, v0}, Lcom/vk/media/recorder/impl/connection/h$a;->equals(Ljava/lang/Object;)Z
+    invoke-virtual {v1, v0}, Lcom/vk/media/recorder/impl/connection/StreamBuffer$a;->equals(Ljava/lang/Object;)Z
 
     move-result v0
 
@@ -3464,7 +3464,7 @@
 
     .line 21
     :cond_8
-    iget-object v0, p0, Lcom/vk/media/recorder/impl/connection/a;->b:Lcom/vk/media/recorder/impl/Streamer$MODE;
+    iget-object v0, p0, Lcom/vk/media/recorder/impl/connection/BaseConnection;->b:Lcom/vk/media/recorder/impl/Streamer$MODE;
 
     sget-object v1, Lcom/vk/media/recorder/impl/Streamer$MODE;->AUDIO_VIDEO:Lcom/vk/media/recorder/impl/Streamer$MODE;
 
@@ -3483,7 +3483,7 @@
 
     if-nez v0, :cond_a
 
-    iget-wide v0, p0, Lcom/vk/media/recorder/impl/connection/a;->n:J
+    iget-wide v0, p0, Lcom/vk/media/recorder/impl/connection/BaseConnection;->n:J
 
     cmp-long v8, v0, v6
 
@@ -3495,7 +3495,7 @@
 
     move-result-wide v0
 
-    iget-wide v8, p0, Lcom/vk/media/recorder/impl/connection/a;->q:J
+    iget-wide v8, p0, Lcom/vk/media/recorder/impl/connection/BaseConnection;->q:J
 
     sub-long/2addr v0, v8
 
@@ -3509,7 +3509,7 @@
     :cond_a
     iget-object v0, p0, Lcom/vk/media/recorder/impl/connection/RtmpConnection;->Q:Lcom/vk/media/recorder/impl/BufferItem;
 
-    invoke-virtual {p0, v0}, Lcom/vk/media/recorder/impl/connection/a;->b(Lcom/vk/media/recorder/impl/BufferItem;)V
+    invoke-virtual {p0, v0}, Lcom/vk/media/recorder/impl/connection/BaseConnection;->b(Lcom/vk/media/recorder/impl/BufferItem;)V
 
     .line 23
     iget-boolean v0, p0, Lcom/vk/media/recorder/impl/connection/RtmpConnection;->S:Z
@@ -3532,7 +3532,7 @@
     invoke-virtual {p0}, Lcom/vk/media/recorder/impl/connection/RtmpConnection;->p()V
 
     .line 27
-    iget-object v0, p0, Lcom/vk/media/recorder/impl/connection/a;->b:Lcom/vk/media/recorder/impl/Streamer$MODE;
+    iget-object v0, p0, Lcom/vk/media/recorder/impl/connection/BaseConnection;->b:Lcom/vk/media/recorder/impl/Streamer$MODE;
 
     sget-object v1, Lcom/vk/media/recorder/impl/Streamer$MODE;->AUDIO_VIDEO:Lcom/vk/media/recorder/impl/Streamer$MODE;
 
@@ -3561,28 +3561,28 @@
 
     .line 30
     :cond_c
-    iget-object v0, p0, Lcom/vk/media/recorder/impl/connection/RtmpConnection;->K:Lcom/vk/media/recorder/impl/connection/h$b;
+    iget-object v0, p0, Lcom/vk/media/recorder/impl/connection/RtmpConnection;->K:Lcom/vk/media/recorder/impl/connection/StreamBuffer$b;
 
-    iget-object v1, p0, Lcom/vk/media/recorder/impl/connection/a;->c:Lcom/vk/media/recorder/impl/connection/d;
+    iget-object v1, p0, Lcom/vk/media/recorder/impl/connection/BaseConnection;->c:Lcom/vk/media/recorder/impl/connection/ConnectionManager;
 
-    invoke-virtual {v1}, Lcom/vk/media/recorder/impl/connection/d;->d()Lcom/vk/media/recorder/impl/connection/h;
+    invoke-virtual {v1}, Lcom/vk/media/recorder/impl/connection/ConnectionManager;->d()Lcom/vk/media/recorder/impl/connection/StreamBuffer;
 
     move-result-object v1
 
-    invoke-virtual {v1}, Lcom/vk/media/recorder/impl/connection/h;->c()Lcom/vk/media/recorder/impl/connection/h$b;
+    invoke-virtual {v1}, Lcom/vk/media/recorder/impl/connection/StreamBuffer;->c()Lcom/vk/media/recorder/impl/connection/StreamBuffer$b;
 
     move-result-object v1
 
     if-eq v0, v1, :cond_f
 
     .line 31
-    iget-object v0, p0, Lcom/vk/media/recorder/impl/connection/a;->c:Lcom/vk/media/recorder/impl/connection/d;
+    iget-object v0, p0, Lcom/vk/media/recorder/impl/connection/BaseConnection;->c:Lcom/vk/media/recorder/impl/connection/ConnectionManager;
 
-    invoke-virtual {v0}, Lcom/vk/media/recorder/impl/connection/d;->d()Lcom/vk/media/recorder/impl/connection/h;
+    invoke-virtual {v0}, Lcom/vk/media/recorder/impl/connection/ConnectionManager;->d()Lcom/vk/media/recorder/impl/connection/StreamBuffer;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/vk/media/recorder/impl/connection/h;->c()Lcom/vk/media/recorder/impl/connection/h$b;
+    invoke-virtual {v0}, Lcom/vk/media/recorder/impl/connection/StreamBuffer;->c()Lcom/vk/media/recorder/impl/connection/StreamBuffer$b;
 
     move-result-object v0
 
@@ -3592,11 +3592,11 @@
 
     .line 32
     :cond_d
-    iget-object v1, p0, Lcom/vk/media/recorder/impl/connection/RtmpConnection;->K:Lcom/vk/media/recorder/impl/connection/h$b;
+    iget-object v1, p0, Lcom/vk/media/recorder/impl/connection/RtmpConnection;->K:Lcom/vk/media/recorder/impl/connection/StreamBuffer$b;
 
     if-eqz v1, :cond_f
 
-    invoke-virtual {v1, v0}, Lcom/vk/media/recorder/impl/connection/h$b;->equals(Ljava/lang/Object;)Z
+    invoke-virtual {v1, v0}, Lcom/vk/media/recorder/impl/connection/StreamBuffer$b;->equals(Ljava/lang/Object;)Z
 
     move-result v1
 
@@ -3615,7 +3615,7 @@
 
     .line 34
     :cond_e
-    iput-object v0, p0, Lcom/vk/media/recorder/impl/connection/RtmpConnection;->K:Lcom/vk/media/recorder/impl/connection/h$b;
+    iput-object v0, p0, Lcom/vk/media/recorder/impl/connection/RtmpConnection;->K:Lcom/vk/media/recorder/impl/connection/StreamBuffer$b;
 
     .line 35
     invoke-virtual {p0}, Lcom/vk/media/recorder/impl/connection/RtmpConnection;->p()V
@@ -3649,11 +3649,11 @@
     if-lt v0, v1, :cond_11
 
     .line 40
-    iget-wide v0, p0, Lcom/vk/media/recorder/impl/connection/a;->n:J
+    iget-wide v0, p0, Lcom/vk/media/recorder/impl/connection/BaseConnection;->n:J
 
     add-long/2addr v0, v2
 
-    iput-wide v0, p0, Lcom/vk/media/recorder/impl/connection/a;->n:J
+    iput-wide v0, p0, Lcom/vk/media/recorder/impl/connection/BaseConnection;->n:J
 
     .line 41
     sget-object v0, Lcom/vk/media/recorder/impl/connection/RtmpConnection$RTMP_CONNECTION_STATE;->SEND_NEXT_ITEM:Lcom/vk/media/recorder/impl/connection/RtmpConnection$RTMP_CONNECTION_STATE;
@@ -3690,7 +3690,7 @@
     iput v1, p0, Lcom/vk/media/recorder/impl/connection/RtmpConnection;->P:I
 
     .line 45
-    invoke-virtual {p0}, Lcom/vk/media/recorder/impl/connection/a;->h()I
+    invoke-virtual {p0}, Lcom/vk/media/recorder/impl/connection/BaseConnection;->h()I
 
     move-result v0
 
@@ -3793,19 +3793,19 @@
     double-to-int v1, v4
 
     .line 15
-    iget-object v4, p0, Lcom/vk/media/recorder/impl/connection/RtmpConnection;->M:Lcom/vk/media/recorder/impl/connection/f;
+    iget-object v4, p0, Lcom/vk/media/recorder/impl/connection/RtmpConnection;->M:Lcom/vk/media/recorder/impl/connection/RtmpPublisherChunkStreamInfo;
 
-    invoke-virtual {v4, v1}, Lcom/vk/media/recorder/impl/connection/f;->a(I)V
+    invoke-virtual {v4, v1}, Lcom/vk/media/recorder/impl/connection/RtmpPublisherChunkStreamInfo;->a(I)V
 
     .line 16
-    iget-object v4, p0, Lcom/vk/media/recorder/impl/connection/RtmpConnection;->O:Lcom/vk/media/recorder/impl/connection/f;
+    iget-object v4, p0, Lcom/vk/media/recorder/impl/connection/RtmpConnection;->O:Lcom/vk/media/recorder/impl/connection/RtmpPublisherChunkStreamInfo;
 
-    invoke-virtual {v4, v1}, Lcom/vk/media/recorder/impl/connection/f;->a(I)V
+    invoke-virtual {v4, v1}, Lcom/vk/media/recorder/impl/connection/RtmpPublisherChunkStreamInfo;->a(I)V
 
     .line 17
-    iget-object v4, p0, Lcom/vk/media/recorder/impl/connection/RtmpConnection;->N:Lcom/vk/media/recorder/impl/connection/f;
+    iget-object v4, p0, Lcom/vk/media/recorder/impl/connection/RtmpConnection;->N:Lcom/vk/media/recorder/impl/connection/RtmpPublisherChunkStreamInfo;
 
-    invoke-virtual {v4, v1}, Lcom/vk/media/recorder/impl/connection/f;->a(I)V
+    invoke-virtual {v4, v1}, Lcom/vk/media/recorder/impl/connection/RtmpPublisherChunkStreamInfo;->a(I)V
 
     int-to-byte v4, v1
 
@@ -3848,7 +3848,7 @@
 
     move-result v0
 
-    invoke-virtual {p0, v1, v2, v0}, Lcom/vk/media/recorder/impl/connection/a;->b([BII)V
+    invoke-virtual {p0, v1, v2, v0}, Lcom/vk/media/recorder/impl/connection/BaseConnection;->b([BII)V
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 

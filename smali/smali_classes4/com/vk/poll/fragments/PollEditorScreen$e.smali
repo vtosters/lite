@@ -3,7 +3,7 @@
 .source "PollEditorFragment.kt"
 
 # interfaces
-.implements Lc/a/z/g;
+.implements Lio/reactivex/functions/Consumer;
 
 
 # annotations
@@ -22,7 +22,7 @@
         "Ljava/lang/Object;",
         ">",
         "Ljava/lang/Object;",
-        "Lc/a/z/g<",
+        "Lio/reactivex/functions/Consumer<",
         "Lcom/vtosters/lite/attachments/PollAttachment;",
         ">;"
     }
@@ -102,11 +102,11 @@
 
     .line 2
     :goto_1
-    sget-object v2, Lb/h/t/k/b;->a:Lb/h/t/k/b;
+    sget-object v2, Lb/h/t/k/PollController;->a:Lb/h/t/k/PollController;
 
     const-string v3, "it"
 
-    invoke-static {p1, v3}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v3}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {p1}, Lcom/vtosters/lite/attachments/PollAttachment;->x1()Lcom/vk/dto/polls/Poll;
 
@@ -114,9 +114,9 @@
 
     const-string v4, "it.poll"
 
-    invoke-static {v3, v4}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v3, v4}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    invoke-virtual {v2, v3}, Lb/h/t/k/b;->a(Lcom/vk/dto/polls/Poll;)V
+    invoke-virtual {v2, v3}, Lb/h/t/k/PollController;->a(Lcom/vk/dto/polls/Poll;)V
 
     .line 3
     invoke-virtual {p1}, Lcom/vtosters/lite/attachments/PollAttachment;->x1()Lcom/vk/dto/polls/Poll;
@@ -163,14 +163,14 @@
     move-result-object v0
 
     .line 7
-    instance-of v2, v0, Lb/h/s/a/a;
+    instance-of v2, v0, Lb/h/s/a/PollCustomBackground;
 
     if-eqz v2, :cond_5
 
     .line 8
-    check-cast v0, Lb/h/s/a/a;
+    check-cast v0, Lb/h/s/a/PollCustomBackground;
 
-    invoke-virtual {v0}, Lb/h/s/a/a;->b()Ljava/lang/String;
+    invoke-virtual {v0}, Lb/h/s/a/PollCustomBackground;->b()Ljava/lang/String;
 
     move-result-object v1
 
@@ -178,17 +178,17 @@
     :cond_5
     iget-object v0, p0, Lcom/vk/poll/fragments/PollEditorScreen$e;->a:Lcom/vk/poll/fragments/PollEditorScreen;
 
-    invoke-virtual {v0}, Lcom/vk/poll/fragments/PollEditorScreen;->b()Lkotlin/jvm/b/c;
+    invoke-virtual {v0}, Lcom/vk/poll/fragments/PollEditorScreen;->b()Lkotlin/jvm/b/Functions1;
 
     move-result-object v0
 
     if-eqz v0, :cond_7
 
-    invoke-interface {v0, p1, v1}, Lkotlin/jvm/b/c;->a(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v0, p1, v1}, Lkotlin/jvm/b/Functions1;->a(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p1
 
-    check-cast p1, Lkotlin/m;
+    check-cast p1, Lkotlin/Unit;
 
     goto :goto_2
 

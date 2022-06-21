@@ -1,12 +1,12 @@
 .class public final Lcom/vk/music/playlist/modern/adapters/MusicPlaylistScreenAdapter;
-.super Lcom/vk/lists/p;
+.super Lcom/vk/lists/MergedAdapter;
 .source "MusicPlaylistScreenAdapter.kt"
 
 # interfaces
-.implements Lcom/vk/core/ui/k;
-.implements Lcom/vk/music/playlist/modern/h/h;
-.implements Lcom/vk/music/playlist/modern/h/g;
-.implements Lcom/vk/lists/t$l;
+.implements Lcom/vk/core/ui/IdClickListener;
+.implements Lcom/vk/music/playlist/modern/h/OnConfigChangedListener1;
+.implements Lcom/vk/music/playlist/modern/h/OnConfigChangedListener;
+.implements Lcom/vk/lists/PaginationHelper$l;
 
 
 # annotations
@@ -18,13 +18,13 @@
 
 .annotation system Ldalvik/annotation/Signature;
     value = {
-        "Lcom/vk/lists/p;",
-        "Lcom/vk/core/ui/k<",
+        "Lcom/vk/lists/MergedAdapter;",
+        "Lcom/vk/core/ui/IdClickListener<",
         "Lcom/vk/dto/music/MusicTrack;",
         ">;",
-        "Lcom/vk/music/playlist/modern/h/h;",
-        "Lcom/vk/music/playlist/modern/h/g;",
-        "Lcom/vk/lists/t$l;"
+        "Lcom/vk/music/playlist/modern/h/OnConfigChangedListener1;",
+        "Lcom/vk/music/playlist/modern/h/OnConfigChangedListener;",
+        "Lcom/vk/lists/PaginationHelper$l;"
     }
 .end annotation
 
@@ -45,102 +45,102 @@
 
 
 # instance fields
-.field private final B:Lcom/vk/music/ui/common/f;
+.field private final B:Lcom/vk/music/ui/common/MusicExpandableDescriptionAdapter1;
 
-.field private final C:Lcom/vk/music/ui/common/l;
+.field private final C:Lcom/vk/music/ui/common/MusicSingleItemAdapter;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Lcom/vk/music/ui/common/l<",
+            "Lcom/vk/music/ui/common/MusicSingleItemAdapter<",
             "Lcom/vk/dto/music/Playlist;",
-            "Lcom/vk/music/playlist/modern/h/d;",
+            "Lcom/vk/music/playlist/modern/h/MusicPlaylistEmptyOwnPlaylistHolder;",
             ">;"
         }
     .end annotation
 .end field
 
-.field private final D:Lcom/vk/music/ui/common/l;
+.field private final D:Lcom/vk/music/ui/common/MusicSingleItemAdapter;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Lcom/vk/music/ui/common/l<",
+            "Lcom/vk/music/ui/common/MusicSingleItemAdapter<",
             "Lkotlin/Pair<",
             "Lcom/vk/dto/music/Playlist;",
             "Ljava/util/List<",
             "Lcom/vk/dto/music/MusicTrack;",
             ">;>;",
-            "Lcom/vk/music/playlist/modern/h/e;",
+            "Lcom/vk/music/playlist/modern/h/MusicPlaylistFooterViewHolder;",
             ">;"
         }
     .end annotation
 .end field
 
-.field private final E:Lcom/vk/music/ui/common/l;
+.field private final E:Lcom/vk/music/ui/common/MusicSingleItemAdapter;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Lcom/vk/music/ui/common/l<",
+            "Lcom/vk/music/ui/common/MusicSingleItemAdapter<",
             "Lcom/vk/dto/music/MusicDynamicRestriction;",
-            "Lcom/vk/music/playlist/modern/h/c;",
+            "Lcom/vk/music/playlist/modern/h/MusicPlaylistBlockedInfoViewHolder;",
             ">;"
         }
     .end annotation
 .end field
 
-.field private final F:Lcom/vk/music/ui/common/l;
+.field private final F:Lcom/vk/music/ui/common/MusicSingleItemAdapter;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Lcom/vk/music/ui/common/l<",
-            "Lcom/vk/music/playlist/modern/h/a$a;",
-            "Lcom/vk/music/playlist/modern/h/a;",
+            "Lcom/vk/music/ui/common/MusicSingleItemAdapter<",
+            "Lcom/vk/music/playlist/modern/h/MusicErrorViewHolder$a;",
+            "Lcom/vk/music/playlist/modern/h/MusicErrorViewHolder;",
             ">;"
         }
     .end annotation
 .end field
 
-.field private final G:Lcom/vk/music/ui/common/l;
+.field private final G:Lcom/vk/music/ui/common/MusicSingleItemAdapter;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Lcom/vk/music/ui/common/l<",
-            "Lcom/vk/music/playlist/modern/g;",
-            "Lcom/vk/music/playlist/modern/holders/header/a;",
+            "Lcom/vk/music/ui/common/MusicSingleItemAdapter<",
+            "Lcom/vk/music/playlist/modern/PlaylistScreenData;",
+            "Lcom/vk/music/playlist/modern/holders/header/MusicPlaylistTabletHeaderViewHolder;",
             ">;"
         }
     .end annotation
 .end field
 
-.field private final H:Lcom/vk/music/ui/common/l;
+.field private final H:Lcom/vk/music/ui/common/MusicSingleItemAdapter;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Lcom/vk/music/ui/common/l<",
-            "Lcom/vk/music/playlist/modern/g;",
+            "Lcom/vk/music/ui/common/MusicSingleItemAdapter<",
+            "Lcom/vk/music/playlist/modern/PlaylistScreenData;",
             "Lcom/vk/music/playlist/modern/holders/buttons/MusicPlaylistButtonsHolder;",
             ">;"
         }
     .end annotation
 .end field
 
-.field private final I:Lcom/vk/music/ui/common/j;
+.field private final I:Lcom/vk/music/ui/common/MusicProgressAdapter;
 
-.field private final J:Lcom/vk/music/ui/common/k;
+.field private final J:Lcom/vk/music/ui/common/MusicSeparatorAdapter;
 
 .field private final K:Z
 
-.field private final L:Lkotlin/jvm/b/a;
+.field private final L:Lkotlin/jvm/b/Functions;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Lkotlin/jvm/b/a<",
+            "Lkotlin/jvm/b/Functions<",
             "Lcom/vk/dto/music/Playlist;",
             ">;"
         }
     .end annotation
 .end field
 
-.field private final M:Lcom/vk/music/playlist/b;
+.field private final M:Lcom/vk/music/playlist/ModernPlaylistModel;
 
-.field private final N:Lcom/vk/music/player/d;
+.field private final N:Lcom/vk/music/player/PlayerModel;
 
-.field private final O:Lcom/vk/core/ui/k;
+.field private final O:Lcom/vk/core/ui/IdClickListener;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Lcom/vk/core/ui/k<",
+            "Lcom/vk/core/ui/IdClickListener<",
             "Lcom/vk/dto/music/MusicTrack;",
             ">;"
         }
@@ -151,16 +151,16 @@
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/util/Set<",
-            "Lcom/vk/music/playlist/modern/h/g;",
+            "Lcom/vk/music/playlist/modern/h/OnConfigChangedListener;",
             ">;"
         }
     .end annotation
 .end field
 
-.field private g:Lcom/vk/music/ui/common/l;
+.field private g:Lcom/vk/music/ui/common/MusicSingleItemAdapter;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Lcom/vk/music/ui/common/l<",
+            "Lcom/vk/music/ui/common/MusicSingleItemAdapter<",
             "Lcom/vk/music/ui/common/MusicActionBtnViewHolder$a;",
             "Lcom/vk/music/ui/common/MusicActionBtnViewHolder;",
             ">;"
@@ -179,7 +179,7 @@
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, v1}, Lcom/vk/music/playlist/modern/adapters/MusicPlaylistScreenAdapter$a;-><init>(Lkotlin/jvm/internal/i;)V
+    invoke-direct {v0, v1}, Lcom/vk/music/playlist/modern/adapters/MusicPlaylistScreenAdapter$a;-><init>(Lkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     sput-object v0, Lcom/vk/music/playlist/modern/adapters/MusicPlaylistScreenAdapter;->T:Lcom/vk/music/playlist/modern/adapters/MusicPlaylistScreenAdapter$a;
 
@@ -209,34 +209,34 @@
     return-void
 .end method
 
-.method public constructor <init>(ZLkotlin/jvm/b/a;Lcom/vk/music/playlist/b;Lcom/vk/music/player/d;Lcom/vk/core/ui/k;)V
+.method public constructor <init>(ZLkotlin/jvm/b/Functions;Lcom/vk/music/playlist/ModernPlaylistModel;Lcom/vk/music/player/PlayerModel;Lcom/vk/core/ui/IdClickListener;)V
     .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(Z",
-            "Lkotlin/jvm/b/a<",
+            "Lkotlin/jvm/b/Functions<",
             "Lcom/vk/dto/music/Playlist;",
             ">;",
-            "Lcom/vk/music/playlist/b;",
-            "Lcom/vk/music/player/d;",
-            "Lcom/vk/core/ui/k<",
+            "Lcom/vk/music/playlist/ModernPlaylistModel;",
+            "Lcom/vk/music/player/PlayerModel;",
+            "Lcom/vk/core/ui/IdClickListener<",
             "Lcom/vk/dto/music/MusicTrack;",
             ">;)V"
         }
     .end annotation
 
     .line 1
-    invoke-direct {p0}, Lcom/vk/lists/p;-><init>()V
+    invoke-direct {p0}, Lcom/vk/lists/MergedAdapter;-><init>()V
 
     iput-boolean p1, p0, Lcom/vk/music/playlist/modern/adapters/MusicPlaylistScreenAdapter;->K:Z
 
-    iput-object p2, p0, Lcom/vk/music/playlist/modern/adapters/MusicPlaylistScreenAdapter;->L:Lkotlin/jvm/b/a;
+    iput-object p2, p0, Lcom/vk/music/playlist/modern/adapters/MusicPlaylistScreenAdapter;->L:Lkotlin/jvm/b/Functions;
 
-    iput-object p3, p0, Lcom/vk/music/playlist/modern/adapters/MusicPlaylistScreenAdapter;->M:Lcom/vk/music/playlist/b;
+    iput-object p3, p0, Lcom/vk/music/playlist/modern/adapters/MusicPlaylistScreenAdapter;->M:Lcom/vk/music/playlist/ModernPlaylistModel;
 
-    iput-object p4, p0, Lcom/vk/music/playlist/modern/adapters/MusicPlaylistScreenAdapter;->N:Lcom/vk/music/player/d;
+    iput-object p4, p0, Lcom/vk/music/playlist/modern/adapters/MusicPlaylistScreenAdapter;->N:Lcom/vk/music/player/PlayerModel;
 
-    iput-object p5, p0, Lcom/vk/music/playlist/modern/adapters/MusicPlaylistScreenAdapter;->O:Lcom/vk/core/ui/k;
+    iput-object p5, p0, Lcom/vk/music/playlist/modern/adapters/MusicPlaylistScreenAdapter;->O:Lcom/vk/core/ui/IdClickListener;
 
     .line 2
     new-instance p1, Ljava/util/LinkedHashSet;
@@ -246,14 +246,14 @@
     iput-object p1, p0, Lcom/vk/music/playlist/modern/adapters/MusicPlaylistScreenAdapter;->f:Ljava/util/Set;
 
     .line 3
-    new-instance p1, Lcom/vk/music/ui/common/f;
+    new-instance p1, Lcom/vk/music/ui/common/MusicExpandableDescriptionAdapter1;
 
-    invoke-direct {p1}, Lcom/vk/music/ui/common/f;-><init>()V
+    invoke-direct {p1}, Lcom/vk/music/ui/common/MusicExpandableDescriptionAdapter1;-><init>()V
 
-    iput-object p1, p0, Lcom/vk/music/playlist/modern/adapters/MusicPlaylistScreenAdapter;->B:Lcom/vk/music/ui/common/f;
+    iput-object p1, p0, Lcom/vk/music/playlist/modern/adapters/MusicPlaylistScreenAdapter;->B:Lcom/vk/music/ui/common/MusicExpandableDescriptionAdapter1;
 
     .line 4
-    sget-object p1, Lcom/vk/music/ui/common/l;->b:Lcom/vk/music/ui/common/l$a;
+    sget-object p1, Lcom/vk/music/ui/common/MusicSingleItemAdapter;->b:Lcom/vk/music/ui/common/MusicSingleItemAdapter$a;
 
     new-instance p2, Lcom/vk/music/playlist/modern/adapters/MusicPlaylistScreenAdapter$emptyOwnPlaylist$1;
 
@@ -262,91 +262,91 @@
     const/4 p3, 0x0
 
     .line 5
-    invoke-virtual {p1, p2, p3}, Lcom/vk/music/ui/common/l$a;->a(Lkotlin/jvm/b/b;Ljava/lang/String;)Lcom/vk/music/ui/common/l;
+    invoke-virtual {p1, p2, p3}, Lcom/vk/music/ui/common/MusicSingleItemAdapter$a;->a(Lkotlin/jvm/b/Functions2;Ljava/lang/String;)Lcom/vk/music/ui/common/MusicSingleItemAdapter;
 
     move-result-object p1
 
-    iput-object p1, p0, Lcom/vk/music/playlist/modern/adapters/MusicPlaylistScreenAdapter;->C:Lcom/vk/music/ui/common/l;
+    iput-object p1, p0, Lcom/vk/music/playlist/modern/adapters/MusicPlaylistScreenAdapter;->C:Lcom/vk/music/ui/common/MusicSingleItemAdapter;
 
     .line 6
-    sget-object p1, Lcom/vk/music/ui/common/l;->b:Lcom/vk/music/ui/common/l$a;
+    sget-object p1, Lcom/vk/music/ui/common/MusicSingleItemAdapter;->b:Lcom/vk/music/ui/common/MusicSingleItemAdapter$a;
 
     sget-object p2, Lcom/vk/music/playlist/modern/adapters/MusicPlaylistScreenAdapter$footer$1;->a:Lcom/vk/music/playlist/modern/adapters/MusicPlaylistScreenAdapter$footer$1;
 
     .line 7
-    invoke-virtual {p1, p2, p3}, Lcom/vk/music/ui/common/l$a;->a(Lkotlin/jvm/b/b;Ljava/lang/String;)Lcom/vk/music/ui/common/l;
+    invoke-virtual {p1, p2, p3}, Lcom/vk/music/ui/common/MusicSingleItemAdapter$a;->a(Lkotlin/jvm/b/Functions2;Ljava/lang/String;)Lcom/vk/music/ui/common/MusicSingleItemAdapter;
 
     move-result-object p1
 
-    iput-object p1, p0, Lcom/vk/music/playlist/modern/adapters/MusicPlaylistScreenAdapter;->D:Lcom/vk/music/ui/common/l;
+    iput-object p1, p0, Lcom/vk/music/playlist/modern/adapters/MusicPlaylistScreenAdapter;->D:Lcom/vk/music/ui/common/MusicSingleItemAdapter;
 
     .line 8
-    sget-object p1, Lcom/vk/music/ui/common/l;->b:Lcom/vk/music/ui/common/l$a;
+    sget-object p1, Lcom/vk/music/ui/common/MusicSingleItemAdapter;->b:Lcom/vk/music/ui/common/MusicSingleItemAdapter$a;
 
     sget-object p2, Lcom/vk/music/playlist/modern/adapters/MusicPlaylistScreenAdapter$blockedAdapter$1;->a:Lcom/vk/music/playlist/modern/adapters/MusicPlaylistScreenAdapter$blockedAdapter$1;
 
     .line 9
-    invoke-virtual {p1, p2, p3}, Lcom/vk/music/ui/common/l$a;->a(Lkotlin/jvm/b/b;Ljava/lang/String;)Lcom/vk/music/ui/common/l;
+    invoke-virtual {p1, p2, p3}, Lcom/vk/music/ui/common/MusicSingleItemAdapter$a;->a(Lkotlin/jvm/b/Functions2;Ljava/lang/String;)Lcom/vk/music/ui/common/MusicSingleItemAdapter;
 
     move-result-object p1
 
-    iput-object p1, p0, Lcom/vk/music/playlist/modern/adapters/MusicPlaylistScreenAdapter;->E:Lcom/vk/music/ui/common/l;
+    iput-object p1, p0, Lcom/vk/music/playlist/modern/adapters/MusicPlaylistScreenAdapter;->E:Lcom/vk/music/ui/common/MusicSingleItemAdapter;
 
     .line 10
-    sget-object p1, Lcom/vk/music/ui/common/l;->b:Lcom/vk/music/ui/common/l$a;
+    sget-object p1, Lcom/vk/music/ui/common/MusicSingleItemAdapter;->b:Lcom/vk/music/ui/common/MusicSingleItemAdapter$a;
 
     new-instance p2, Lcom/vk/music/playlist/modern/adapters/MusicPlaylistScreenAdapter$errorViewAdapter$1;
 
     invoke-direct {p2, p0}, Lcom/vk/music/playlist/modern/adapters/MusicPlaylistScreenAdapter$errorViewAdapter$1;-><init>(Lcom/vk/music/playlist/modern/adapters/MusicPlaylistScreenAdapter;)V
 
     .line 11
-    invoke-virtual {p1, p2, p3}, Lcom/vk/music/ui/common/l$a;->a(Lkotlin/jvm/b/b;Ljava/lang/String;)Lcom/vk/music/ui/common/l;
+    invoke-virtual {p1, p2, p3}, Lcom/vk/music/ui/common/MusicSingleItemAdapter$a;->a(Lkotlin/jvm/b/Functions2;Ljava/lang/String;)Lcom/vk/music/ui/common/MusicSingleItemAdapter;
 
     move-result-object p1
 
-    iput-object p1, p0, Lcom/vk/music/playlist/modern/adapters/MusicPlaylistScreenAdapter;->F:Lcom/vk/music/ui/common/l;
+    iput-object p1, p0, Lcom/vk/music/playlist/modern/adapters/MusicPlaylistScreenAdapter;->F:Lcom/vk/music/ui/common/MusicSingleItemAdapter;
 
     .line 12
-    sget-object p1, Lcom/vk/music/ui/common/l;->b:Lcom/vk/music/ui/common/l$a;
+    sget-object p1, Lcom/vk/music/ui/common/MusicSingleItemAdapter;->b:Lcom/vk/music/ui/common/MusicSingleItemAdapter$a;
 
     new-instance p2, Lcom/vk/music/playlist/modern/adapters/MusicPlaylistScreenAdapter$tabletHeaderAdapter$1;
 
     invoke-direct {p2, p0}, Lcom/vk/music/playlist/modern/adapters/MusicPlaylistScreenAdapter$tabletHeaderAdapter$1;-><init>(Lcom/vk/music/playlist/modern/adapters/MusicPlaylistScreenAdapter;)V
 
     .line 13
-    invoke-virtual {p1, p2, p3}, Lcom/vk/music/ui/common/l$a;->a(Lkotlin/jvm/b/b;Ljava/lang/String;)Lcom/vk/music/ui/common/l;
+    invoke-virtual {p1, p2, p3}, Lcom/vk/music/ui/common/MusicSingleItemAdapter$a;->a(Lkotlin/jvm/b/Functions2;Ljava/lang/String;)Lcom/vk/music/ui/common/MusicSingleItemAdapter;
 
     move-result-object p1
 
-    iput-object p1, p0, Lcom/vk/music/playlist/modern/adapters/MusicPlaylistScreenAdapter;->G:Lcom/vk/music/ui/common/l;
+    iput-object p1, p0, Lcom/vk/music/playlist/modern/adapters/MusicPlaylistScreenAdapter;->G:Lcom/vk/music/ui/common/MusicSingleItemAdapter;
 
     .line 14
-    sget-object p1, Lcom/vk/music/ui/common/l;->b:Lcom/vk/music/ui/common/l$a;
+    sget-object p1, Lcom/vk/music/ui/common/MusicSingleItemAdapter;->b:Lcom/vk/music/ui/common/MusicSingleItemAdapter$a;
 
     new-instance p2, Lcom/vk/music/playlist/modern/adapters/MusicPlaylistScreenAdapter$buttons$1;
 
     invoke-direct {p2, p0}, Lcom/vk/music/playlist/modern/adapters/MusicPlaylistScreenAdapter$buttons$1;-><init>(Lcom/vk/music/playlist/modern/adapters/MusicPlaylistScreenAdapter;)V
 
     .line 15
-    invoke-virtual {p1, p2, p3}, Lcom/vk/music/ui/common/l$a;->a(Lkotlin/jvm/b/b;Ljava/lang/String;)Lcom/vk/music/ui/common/l;
+    invoke-virtual {p1, p2, p3}, Lcom/vk/music/ui/common/MusicSingleItemAdapter$a;->a(Lkotlin/jvm/b/Functions2;Ljava/lang/String;)Lcom/vk/music/ui/common/MusicSingleItemAdapter;
 
     move-result-object p1
 
-    iput-object p1, p0, Lcom/vk/music/playlist/modern/adapters/MusicPlaylistScreenAdapter;->H:Lcom/vk/music/ui/common/l;
+    iput-object p1, p0, Lcom/vk/music/playlist/modern/adapters/MusicPlaylistScreenAdapter;->H:Lcom/vk/music/ui/common/MusicSingleItemAdapter;
 
     .line 16
-    new-instance p1, Lcom/vk/music/ui/common/j;
+    new-instance p1, Lcom/vk/music/ui/common/MusicProgressAdapter;
 
-    invoke-direct {p1}, Lcom/vk/music/ui/common/j;-><init>()V
+    invoke-direct {p1}, Lcom/vk/music/ui/common/MusicProgressAdapter;-><init>()V
 
-    iput-object p1, p0, Lcom/vk/music/playlist/modern/adapters/MusicPlaylistScreenAdapter;->I:Lcom/vk/music/ui/common/j;
+    iput-object p1, p0, Lcom/vk/music/playlist/modern/adapters/MusicPlaylistScreenAdapter;->I:Lcom/vk/music/ui/common/MusicProgressAdapter;
 
     .line 17
-    new-instance p1, Lcom/vk/music/ui/common/k;
+    new-instance p1, Lcom/vk/music/ui/common/MusicSeparatorAdapter;
 
-    invoke-direct {p1}, Lcom/vk/music/ui/common/k;-><init>()V
+    invoke-direct {p1}, Lcom/vk/music/ui/common/MusicSeparatorAdapter;-><init>()V
 
-    iput-object p1, p0, Lcom/vk/music/playlist/modern/adapters/MusicPlaylistScreenAdapter;->J:Lcom/vk/music/ui/common/k;
+    iput-object p1, p0, Lcom/vk/music/playlist/modern/adapters/MusicPlaylistScreenAdapter;->J:Lcom/vk/music/ui/common/MusicSeparatorAdapter;
 
     return-void
 .end method
@@ -355,13 +355,13 @@
     .locals 1
 
     .line 1
-    iget-object v0, p0, Lcom/vk/music/playlist/modern/adapters/MusicPlaylistScreenAdapter;->C:Lcom/vk/music/ui/common/l;
+    iget-object v0, p0, Lcom/vk/music/playlist/modern/adapters/MusicPlaylistScreenAdapter;->C:Lcom/vk/music/ui/common/MusicSingleItemAdapter;
 
     if-nez p1, :cond_0
 
-    iget-object p1, p0, Lcom/vk/music/playlist/modern/adapters/MusicPlaylistScreenAdapter;->L:Lkotlin/jvm/b/a;
+    iget-object p1, p0, Lcom/vk/music/playlist/modern/adapters/MusicPlaylistScreenAdapter;->L:Lkotlin/jvm/b/Functions;
 
-    invoke-interface {p1}, Lkotlin/jvm/b/a;->invoke()Ljava/lang/Object;
+    invoke-interface {p1}, Lkotlin/jvm/b/Functions;->invoke()Ljava/lang/Object;
 
     move-result-object p1
 
@@ -373,7 +373,7 @@
     :goto_0
     check-cast p1, Lcom/vk/dto/music/Playlist;
 
-    invoke-virtual {v0, p1}, Lcom/vk/lists/j0;->d(Ljava/lang/Object;)V
+    invoke-virtual {v0, p1}, Lcom/vk/lists/SingleAdapter;->d(Ljava/lang/Object;)V
 
     return-void
 .end method
@@ -384,11 +384,11 @@
     if-nez p1, :cond_0
 
     .line 1
-    iget-object p1, p0, Lcom/vk/music/playlist/modern/adapters/MusicPlaylistScreenAdapter;->D:Lcom/vk/music/ui/common/l;
+    iget-object p1, p0, Lcom/vk/music/playlist/modern/adapters/MusicPlaylistScreenAdapter;->D:Lcom/vk/music/ui/common/MusicSingleItemAdapter;
 
     sget-object v0, Lcom/vk/music/playlist/modern/adapters/MusicPlaylistScreenAdapter;->Q:Ljava/lang/Void;
 
-    invoke-virtual {p1, v0}, Lcom/vk/lists/j0;->d(Ljava/lang/Object;)V
+    invoke-virtual {p1, v0}, Lcom/vk/lists/SingleAdapter;->d(Ljava/lang/Object;)V
 
     :cond_0
     return-void
@@ -398,7 +398,7 @@
     .locals 2
 
     .line 1
-    iget-object v0, p0, Lcom/vk/music/playlist/modern/adapters/MusicPlaylistScreenAdapter;->g:Lcom/vk/music/ui/common/l;
+    iget-object v0, p0, Lcom/vk/music/playlist/modern/adapters/MusicPlaylistScreenAdapter;->g:Lcom/vk/music/ui/common/MusicSingleItemAdapter;
 
     if-eqz v0, :cond_1
 
@@ -416,26 +416,26 @@
     check-cast p1, Lcom/vk/music/ui/common/MusicActionBtnViewHolder$a;
 
     :goto_0
-    invoke-virtual {v0, p1}, Lcom/vk/lists/j0;->d(Ljava/lang/Object;)V
+    invoke-virtual {v0, p1}, Lcom/vk/lists/SingleAdapter;->d(Ljava/lang/Object;)V
 
     :cond_1
     return-void
 .end method
 
-.method public static final synthetic a(Lcom/vk/music/playlist/modern/adapters/MusicPlaylistScreenAdapter;)Lcom/vk/core/ui/k;
+.method public static final synthetic a(Lcom/vk/music/playlist/modern/adapters/MusicPlaylistScreenAdapter;)Lcom/vk/core/ui/IdClickListener;
     .locals 0
 
     .line 1
-    iget-object p0, p0, Lcom/vk/music/playlist/modern/adapters/MusicPlaylistScreenAdapter;->O:Lcom/vk/core/ui/k;
+    iget-object p0, p0, Lcom/vk/music/playlist/modern/adapters/MusicPlaylistScreenAdapter;->O:Lcom/vk/core/ui/IdClickListener;
 
     return-object p0
 .end method
 
-.method public static final synthetic b(Lcom/vk/music/playlist/modern/adapters/MusicPlaylistScreenAdapter;)Lcom/vk/music/player/d;
+.method public static final synthetic b(Lcom/vk/music/playlist/modern/adapters/MusicPlaylistScreenAdapter;)Lcom/vk/music/player/PlayerModel;
     .locals 0
 
     .line 1
-    iget-object p0, p0, Lcom/vk/music/playlist/modern/adapters/MusicPlaylistScreenAdapter;->N:Lcom/vk/music/player/d;
+    iget-object p0, p0, Lcom/vk/music/playlist/modern/adapters/MusicPlaylistScreenAdapter;->N:Lcom/vk/music/player/PlayerModel;
 
     return-object p0
 .end method
@@ -444,7 +444,7 @@
     .locals 1
 
     .line 2
-    iget-object v0, p0, Lcom/vk/music/playlist/modern/adapters/MusicPlaylistScreenAdapter;->I:Lcom/vk/music/ui/common/j;
+    iget-object v0, p0, Lcom/vk/music/playlist/modern/adapters/MusicPlaylistScreenAdapter;->I:Lcom/vk/music/ui/common/MusicProgressAdapter;
 
     if-eqz p1, :cond_0
 
@@ -458,16 +458,16 @@
     check-cast p1, Lcom/vk/music/ui/common/MusicActionBtnViewHolder$a;
 
     :goto_0
-    invoke-virtual {v0, p1}, Lcom/vk/lists/j0;->d(Ljava/lang/Object;)V
+    invoke-virtual {v0, p1}, Lcom/vk/lists/SingleAdapter;->d(Ljava/lang/Object;)V
 
     return-void
 .end method
 
-.method public static final synthetic c(Lcom/vk/music/playlist/modern/adapters/MusicPlaylistScreenAdapter;)Lkotlin/jvm/b/a;
+.method public static final synthetic c(Lcom/vk/music/playlist/modern/adapters/MusicPlaylistScreenAdapter;)Lkotlin/jvm/b/Functions;
     .locals 0
 
     .line 1
-    iget-object p0, p0, Lcom/vk/music/playlist/modern/adapters/MusicPlaylistScreenAdapter;->L:Lkotlin/jvm/b/a;
+    iget-object p0, p0, Lcom/vk/music/playlist/modern/adapters/MusicPlaylistScreenAdapter;->L:Lkotlin/jvm/b/Functions;
 
     return-object p0
 .end method
@@ -519,7 +519,7 @@
 
     if-eqz v0, :cond_0
 
-    invoke-virtual {v0}, Lcom/vk/lists/p;->getItemCount()I
+    invoke-virtual {v0}, Lcom/vk/lists/MergedAdapter;->getItemCount()I
 
     move-result v0
 
@@ -548,21 +548,21 @@
     if-ne p1, p2, :cond_0
 
     .line 49
-    iget-object p2, p0, Lcom/vk/music/playlist/modern/adapters/MusicPlaylistScreenAdapter;->F:Lcom/vk/music/ui/common/l;
+    iget-object p2, p0, Lcom/vk/music/playlist/modern/adapters/MusicPlaylistScreenAdapter;->F:Lcom/vk/music/ui/common/MusicSingleItemAdapter;
 
     sget-object v0, Lcom/vk/music/playlist/modern/adapters/MusicPlaylistScreenAdapter;->Q:Ljava/lang/Void;
 
-    invoke-virtual {p2, v0}, Lcom/vk/lists/j0;->d(Ljava/lang/Object;)V
+    invoke-virtual {p2, v0}, Lcom/vk/lists/SingleAdapter;->d(Ljava/lang/Object;)V
 
     .line 50
     :cond_0
-    iget-object p2, p0, Lcom/vk/music/playlist/modern/adapters/MusicPlaylistScreenAdapter;->O:Lcom/vk/core/ui/k;
+    iget-object p2, p0, Lcom/vk/music/playlist/modern/adapters/MusicPlaylistScreenAdapter;->O:Lcom/vk/core/ui/IdClickListener;
 
     const/4 v0, 0x2
 
     const/4 v1, 0x0
 
-    invoke-static {p2, p1, v1, v0, v1}, Lcom/vk/core/ui/k$b;->a(Lcom/vk/core/ui/k;ILjava/lang/Object;ILjava/lang/Object;)V
+    invoke-static {p2, p1, v1, v0, v1}, Lcom/vk/core/ui/IdClickListener$b;->a(Lcom/vk/core/ui/IdClickListener;ILjava/lang/Object;ILjava/lang/Object;)V
 
     return-void
 .end method
@@ -626,64 +626,64 @@
     return-void
 .end method
 
-.method public final a(Lcom/vk/music/playlist/modern/g;Lcom/vk/music/player/d;)V
+.method public final a(Lcom/vk/music/playlist/modern/PlaylistScreenData;Lcom/vk/music/player/PlayerModel;)V
     .locals 3
 
     .line 3
-    iget-object v0, p0, Lcom/vk/music/playlist/modern/adapters/MusicPlaylistScreenAdapter;->g:Lcom/vk/music/ui/common/l;
+    iget-object v0, p0, Lcom/vk/music/playlist/modern/adapters/MusicPlaylistScreenAdapter;->g:Lcom/vk/music/ui/common/MusicSingleItemAdapter;
 
     if-nez v0, :cond_1
 
     .line 4
-    sget-object v0, Lcom/vk/music/ui/common/l;->b:Lcom/vk/music/ui/common/l$a;
+    sget-object v0, Lcom/vk/music/ui/common/MusicSingleItemAdapter;->b:Lcom/vk/music/ui/common/MusicSingleItemAdapter$a;
 
     new-instance v1, Lcom/vk/music/playlist/modern/adapters/MusicPlaylistScreenAdapter$onPlaylistLoaded$1;
 
-    invoke-direct {v1, p0, p1}, Lcom/vk/music/playlist/modern/adapters/MusicPlaylistScreenAdapter$onPlaylistLoaded$1;-><init>(Lcom/vk/music/playlist/modern/adapters/MusicPlaylistScreenAdapter;Lcom/vk/music/playlist/modern/g;)V
+    invoke-direct {v1, p0, p1}, Lcom/vk/music/playlist/modern/adapters/MusicPlaylistScreenAdapter$onPlaylistLoaded$1;-><init>(Lcom/vk/music/playlist/modern/adapters/MusicPlaylistScreenAdapter;Lcom/vk/music/playlist/modern/PlaylistScreenData;)V
 
     const/4 v2, 0x0
 
     .line 5
-    invoke-virtual {v0, v1, v2}, Lcom/vk/music/ui/common/l$a;->a(Lkotlin/jvm/b/b;Ljava/lang/String;)Lcom/vk/music/ui/common/l;
+    invoke-virtual {v0, v1, v2}, Lcom/vk/music/ui/common/MusicSingleItemAdapter$a;->a(Lkotlin/jvm/b/Functions2;Ljava/lang/String;)Lcom/vk/music/ui/common/MusicSingleItemAdapter;
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/vk/music/playlist/modern/adapters/MusicPlaylistScreenAdapter;->g:Lcom/vk/music/ui/common/l;
+    iput-object v0, p0, Lcom/vk/music/playlist/modern/adapters/MusicPlaylistScreenAdapter;->g:Lcom/vk/music/ui/common/MusicSingleItemAdapter;
 
     .line 6
     iget-boolean v0, p0, Lcom/vk/music/playlist/modern/adapters/MusicPlaylistScreenAdapter;->K:Z
 
     if-nez v0, :cond_0
 
-    iget-object v0, p0, Lcom/vk/music/playlist/modern/adapters/MusicPlaylistScreenAdapter;->H:Lcom/vk/music/ui/common/l;
+    iget-object v0, p0, Lcom/vk/music/playlist/modern/adapters/MusicPlaylistScreenAdapter;->H:Lcom/vk/music/ui/common/MusicSingleItemAdapter;
 
-    invoke-virtual {p0, v0}, Lcom/vk/lists/p;->a(Landroidx/recyclerview/widget/RecyclerView$Adapter;)V
+    invoke-virtual {p0, v0}, Lcom/vk/lists/MergedAdapter;->a(Landroidx/recyclerview/widget/RecyclerView$Adapter;)V
 
     .line 7
     :cond_0
-    iget-object v0, p0, Lcom/vk/music/playlist/modern/adapters/MusicPlaylistScreenAdapter;->B:Lcom/vk/music/ui/common/f;
+    iget-object v0, p0, Lcom/vk/music/playlist/modern/adapters/MusicPlaylistScreenAdapter;->B:Lcom/vk/music/ui/common/MusicExpandableDescriptionAdapter1;
 
-    invoke-virtual {p0, v0}, Lcom/vk/lists/p;->a(Landroidx/recyclerview/widget/RecyclerView$Adapter;)V
+    invoke-virtual {p0, v0}, Lcom/vk/lists/MergedAdapter;->a(Landroidx/recyclerview/widget/RecyclerView$Adapter;)V
 
     .line 8
-    iget-object v0, p0, Lcom/vk/music/playlist/modern/adapters/MusicPlaylistScreenAdapter;->J:Lcom/vk/music/ui/common/k;
+    iget-object v0, p0, Lcom/vk/music/playlist/modern/adapters/MusicPlaylistScreenAdapter;->J:Lcom/vk/music/ui/common/MusicSeparatorAdapter;
 
-    invoke-virtual {p0, v0}, Lcom/vk/lists/p;->a(Landroidx/recyclerview/widget/RecyclerView$Adapter;)V
+    invoke-virtual {p0, v0}, Lcom/vk/lists/MergedAdapter;->a(Landroidx/recyclerview/widget/RecyclerView$Adapter;)V
 
     .line 9
-    iget-object v0, p0, Lcom/vk/music/playlist/modern/adapters/MusicPlaylistScreenAdapter;->C:Lcom/vk/music/ui/common/l;
+    iget-object v0, p0, Lcom/vk/music/playlist/modern/adapters/MusicPlaylistScreenAdapter;->C:Lcom/vk/music/ui/common/MusicSingleItemAdapter;
 
-    invoke-virtual {p0, v0}, Lcom/vk/lists/p;->a(Landroidx/recyclerview/widget/RecyclerView$Adapter;)V
+    invoke-virtual {p0, v0}, Lcom/vk/lists/MergedAdapter;->a(Landroidx/recyclerview/widget/RecyclerView$Adapter;)V
 
     .line 10
-    iget-object v0, p0, Lcom/vk/music/playlist/modern/adapters/MusicPlaylistScreenAdapter;->g:Lcom/vk/music/ui/common/l;
+    iget-object v0, p0, Lcom/vk/music/playlist/modern/adapters/MusicPlaylistScreenAdapter;->g:Lcom/vk/music/ui/common/MusicSingleItemAdapter;
 
-    invoke-virtual {p0, v0}, Lcom/vk/lists/p;->a(Landroidx/recyclerview/widget/RecyclerView$Adapter;)V
+    invoke-virtual {p0, v0}, Lcom/vk/lists/MergedAdapter;->a(Landroidx/recyclerview/widget/RecyclerView$Adapter;)V
 
     .line 11
-    iget-object v0, p0, Lcom/vk/music/playlist/modern/adapters/MusicPlaylistScreenAdapter;->E:Lcom/vk/music/ui/common/l;
+    iget-object v0, p0, Lcom/vk/music/playlist/modern/adapters/MusicPlaylistScreenAdapter;->E:Lcom/vk/music/ui/common/MusicSingleItemAdapter;
 
-    invoke-virtual {p0, v0}, Lcom/vk/lists/p;->a(Landroidx/recyclerview/widget/RecyclerView$Adapter;)V
+    invoke-virtual {p0, v0}, Lcom/vk/lists/MergedAdapter;->a(Landroidx/recyclerview/widget/RecyclerView$Adapter;)V
 
     .line 12
     :cond_1
@@ -694,69 +694,69 @@
     .line 13
     new-instance v0, Lcom/vk/music/playlist/modern/adapters/MultiPartTracksMergedAdapter;
 
-    iget-object v1, p0, Lcom/vk/music/playlist/modern/adapters/MusicPlaylistScreenAdapter;->O:Lcom/vk/core/ui/k;
+    iget-object v1, p0, Lcom/vk/music/playlist/modern/adapters/MusicPlaylistScreenAdapter;->O:Lcom/vk/core/ui/IdClickListener;
 
-    invoke-direct {v0, v1}, Lcom/vk/music/playlist/modern/adapters/MultiPartTracksMergedAdapter;-><init>(Lcom/vk/core/ui/k;)V
+    invoke-direct {v0, v1}, Lcom/vk/music/playlist/modern/adapters/MultiPartTracksMergedAdapter;-><init>(Lcom/vk/core/ui/IdClickListener;)V
 
     iput-object v0, p0, Lcom/vk/music/playlist/modern/adapters/MusicPlaylistScreenAdapter;->h:Lcom/vk/music/playlist/modern/adapters/MultiPartTracksMergedAdapter;
 
     .line 14
     iget-object v0, p0, Lcom/vk/music/playlist/modern/adapters/MusicPlaylistScreenAdapter;->h:Lcom/vk/music/playlist/modern/adapters/MultiPartTracksMergedAdapter;
 
-    invoke-virtual {p0, v0}, Lcom/vk/lists/p;->a(Landroidx/recyclerview/widget/RecyclerView$Adapter;)V
+    invoke-virtual {p0, v0}, Lcom/vk/lists/MergedAdapter;->a(Landroidx/recyclerview/widget/RecyclerView$Adapter;)V
 
     .line 15
-    iget-object v0, p0, Lcom/vk/music/playlist/modern/adapters/MusicPlaylistScreenAdapter;->D:Lcom/vk/music/ui/common/l;
+    iget-object v0, p0, Lcom/vk/music/playlist/modern/adapters/MusicPlaylistScreenAdapter;->D:Lcom/vk/music/ui/common/MusicSingleItemAdapter;
 
     sget-object v1, Lcom/vk/music/playlist/modern/adapters/MusicPlaylistScreenAdapter;->Q:Ljava/lang/Void;
 
-    invoke-virtual {v0, v1}, Lcom/vk/lists/j0;->d(Ljava/lang/Object;)V
+    invoke-virtual {v0, v1}, Lcom/vk/lists/SingleAdapter;->d(Ljava/lang/Object;)V
 
-    invoke-virtual {p0, v0}, Lcom/vk/lists/p;->a(Landroidx/recyclerview/widget/RecyclerView$Adapter;)V
+    invoke-virtual {p0, v0}, Lcom/vk/lists/MergedAdapter;->a(Landroidx/recyclerview/widget/RecyclerView$Adapter;)V
 
     .line 16
     :cond_2
-    iget-object v0, p0, Lcom/vk/music/playlist/modern/adapters/MusicPlaylistScreenAdapter;->H:Lcom/vk/music/ui/common/l;
+    iget-object v0, p0, Lcom/vk/music/playlist/modern/adapters/MusicPlaylistScreenAdapter;->H:Lcom/vk/music/ui/common/MusicSingleItemAdapter;
 
-    invoke-virtual {v0, p1}, Lcom/vk/lists/j0;->d(Ljava/lang/Object;)V
+    invoke-virtual {v0, p1}, Lcom/vk/lists/SingleAdapter;->d(Ljava/lang/Object;)V
 
     .line 17
     iget-object v0, p0, Lcom/vk/music/playlist/modern/adapters/MusicPlaylistScreenAdapter;->h:Lcom/vk/music/playlist/modern/adapters/MultiPartTracksMergedAdapter;
 
     if-eqz v0, :cond_3
 
-    invoke-virtual {p1}, Lcom/vk/music/playlist/modern/g;->b()Lcom/vk/dto/music/Playlist;
+    invoke-virtual {p1}, Lcom/vk/music/playlist/modern/PlaylistScreenData;->b()Lcom/vk/dto/music/Playlist;
 
     move-result-object v1
 
     iget-object v1, v1, Lcom/vk/dto/music/Playlist;->d:Ljava/lang/String;
 
-    invoke-virtual {v0, v1, p2}, Lcom/vk/music/playlist/modern/adapters/MultiPartTracksMergedAdapter;->a(Ljava/lang/String;Lcom/vk/music/player/d;)V
+    invoke-virtual {v0, v1, p2}, Lcom/vk/music/playlist/modern/adapters/MultiPartTracksMergedAdapter;->a(Ljava/lang/String;Lcom/vk/music/player/PlayerModel;)V
 
     .line 18
     :cond_3
-    iget-object p2, p0, Lcom/vk/music/playlist/modern/adapters/MusicPlaylistScreenAdapter;->E:Lcom/vk/music/ui/common/l;
+    iget-object p2, p0, Lcom/vk/music/playlist/modern/adapters/MusicPlaylistScreenAdapter;->E:Lcom/vk/music/ui/common/MusicSingleItemAdapter;
 
-    invoke-virtual {p1}, Lcom/vk/music/playlist/modern/g;->b()Lcom/vk/dto/music/Playlist;
+    invoke-virtual {p1}, Lcom/vk/music/playlist/modern/PlaylistScreenData;->b()Lcom/vk/dto/music/Playlist;
 
     move-result-object v0
 
     iget-object v0, v0, Lcom/vk/dto/music/Playlist;->S:Lcom/vk/dto/music/MusicDynamicRestriction;
 
-    invoke-virtual {p2, v0}, Lcom/vk/lists/j0;->d(Ljava/lang/Object;)V
+    invoke-virtual {p2, v0}, Lcom/vk/lists/SingleAdapter;->d(Ljava/lang/Object;)V
 
     .line 19
     iget-boolean p2, p0, Lcom/vk/music/playlist/modern/adapters/MusicPlaylistScreenAdapter;->K:Z
 
     if-eqz p2, :cond_4
 
-    iget-object p2, p0, Lcom/vk/music/playlist/modern/adapters/MusicPlaylistScreenAdapter;->G:Lcom/vk/music/ui/common/l;
+    iget-object p2, p0, Lcom/vk/music/playlist/modern/adapters/MusicPlaylistScreenAdapter;->G:Lcom/vk/music/ui/common/MusicSingleItemAdapter;
 
-    invoke-virtual {p2, p1}, Lcom/vk/lists/j0;->d(Ljava/lang/Object;)V
+    invoke-virtual {p2, p1}, Lcom/vk/lists/SingleAdapter;->d(Ljava/lang/Object;)V
 
     .line 20
     :cond_4
-    invoke-virtual {p1}, Lcom/vk/music/playlist/modern/g;->b()Lcom/vk/dto/music/Playlist;
+    invoke-virtual {p1}, Lcom/vk/music/playlist/modern/PlaylistScreenData;->b()Lcom/vk/dto/music/Playlist;
 
     move-result-object p1
 
@@ -773,7 +773,7 @@
     return-void
 .end method
 
-.method public a(Lcom/vk/music/playlist/modern/h/g;)V
+.method public a(Lcom/vk/music/playlist/modern/h/OnConfigChangedListener;)V
     .locals 1
 
     .line 48
@@ -784,7 +784,7 @@
     return-void
 .end method
 
-.method public final a(Ljava/lang/Throwable;Lcom/vk/lists/i;)V
+.method public final a(Ljava/lang/Throwable;Lcom/vk/lists/ErrorViewConfiguration;)V
     .locals 47
 
     move-object/from16 v0, p0
@@ -794,7 +794,7 @@
     move-object/from16 v2, p2
 
     .line 35
-    invoke-virtual/range {p0 .. p0}, Lcom/vk/lists/p;->j()I
+    invoke-virtual/range {p0 .. p0}, Lcom/vk/lists/MergedAdapter;->j()I
 
     move-result v3
 
@@ -804,20 +804,20 @@
     if-ge v4, v3, :cond_1
 
     .line 36
-    invoke-virtual {v0, v4}, Lcom/vk/lists/p;->H(I)Landroidx/recyclerview/widget/RecyclerView$Adapter;
+    invoke-virtual {v0, v4}, Lcom/vk/lists/MergedAdapter;->H(I)Landroidx/recyclerview/widget/RecyclerView$Adapter;
 
     move-result-object v5
 
     .line 37
-    instance-of v6, v5, Lcom/vk/music/ui/common/l;
+    instance-of v6, v5, Lcom/vk/music/ui/common/MusicSingleItemAdapter;
 
     if-eqz v6, :cond_0
 
-    check-cast v5, Lcom/vk/music/ui/common/l;
+    check-cast v5, Lcom/vk/music/ui/common/MusicSingleItemAdapter;
 
     sget-object v6, Lcom/vk/music/playlist/modern/adapters/MusicPlaylistScreenAdapter;->Q:Ljava/lang/Void;
 
-    invoke-virtual {v5, v6}, Lcom/vk/lists/j0;->d(Ljava/lang/Object;)V
+    invoke-virtual {v5, v6}, Lcom/vk/lists/SingleAdapter;->d(Ljava/lang/Object;)V
 
     :cond_0
     add-int/lit8 v4, v4, 0x1
@@ -830,9 +830,9 @@
 
     if-eqz v3, :cond_2
 
-    iget-object v3, v0, Lcom/vk/music/playlist/modern/adapters/MusicPlaylistScreenAdapter;->G:Lcom/vk/music/ui/common/l;
+    iget-object v3, v0, Lcom/vk/music/playlist/modern/adapters/MusicPlaylistScreenAdapter;->G:Lcom/vk/music/ui/common/MusicSingleItemAdapter;
 
-    new-instance v15, Lcom/vk/music/playlist/modern/g;
+    new-instance v15, Lcom/vk/music/playlist/modern/PlaylistScreenData;
 
     new-instance v5, Lcom/vk/dto/music/Playlist;
 
@@ -896,7 +896,7 @@
 
     const/16 v46, 0x0
 
-    invoke-direct/range {v16 .. v46}, Lcom/vk/dto/music/Playlist;-><init>(IIILjava/lang/String;Lcom/vk/dto/music/PlaylistLink;Lcom/vk/dto/music/PlaylistLink;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;ZZILcom/vk/dto/music/Thumb;Ljava/util/List;Ljava/lang/String;Ljava/util/List;Lcom/vk/dto/music/PlaylistOwner;Ljava/util/List;Ljava/util/List;ZIIJLjava/lang/String;Ljava/util/List;Lcom/vk/dto/music/MusicDynamicRestriction;Lcom/vk/dto/music/PlaylistMeta;ILkotlin/jvm/internal/i;)V
+    invoke-direct/range {v16 .. v46}, Lcom/vk/dto/music/Playlist;-><init>(IIILjava/lang/String;Lcom/vk/dto/music/PlaylistLink;Lcom/vk/dto/music/PlaylistLink;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;ZZILcom/vk/dto/music/Thumb;Ljava/util/List;Ljava/lang/String;Ljava/util/List;Lcom/vk/dto/music/PlaylistOwner;Ljava/util/List;Ljava/util/List;ZIIJLjava/lang/String;Ljava/util/List;Lcom/vk/dto/music/MusicDynamicRestriction;Lcom/vk/dto/music/PlaylistMeta;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     const/4 v6, 0x0
 
@@ -918,44 +918,44 @@
 
     move-object v4, v15
 
-    invoke-direct/range {v4 .. v14}, Lcom/vk/music/playlist/modern/g;-><init>(Lcom/vk/dto/music/Playlist;ZZZZZZLjava/lang/Integer;ILkotlin/jvm/internal/i;)V
+    invoke-direct/range {v4 .. v14}, Lcom/vk/music/playlist/modern/PlaylistScreenData;-><init>(Lcom/vk/dto/music/Playlist;ZZZZZZLjava/lang/Integer;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
-    invoke-virtual {v3, v15}, Lcom/vk/lists/j0;->d(Ljava/lang/Object;)V
+    invoke-virtual {v3, v15}, Lcom/vk/lists/SingleAdapter;->d(Ljava/lang/Object;)V
 
     .line 39
     :cond_2
-    iget-object v3, v0, Lcom/vk/music/playlist/modern/adapters/MusicPlaylistScreenAdapter;->F:Lcom/vk/music/ui/common/l;
+    iget-object v3, v0, Lcom/vk/music/playlist/modern/adapters/MusicPlaylistScreenAdapter;->F:Lcom/vk/music/ui/common/MusicSingleItemAdapter;
 
     if-eqz v2, :cond_3
 
     .line 40
-    new-instance v4, Lcom/vk/music/playlist/modern/h/a$a;
+    new-instance v4, Lcom/vk/music/playlist/modern/h/MusicErrorViewHolder$a;
 
-    invoke-interface {v2, v1}, Lcom/vk/lists/i;->a(Ljava/lang/Throwable;)Ljava/lang/CharSequence;
+    invoke-interface {v2, v1}, Lcom/vk/lists/ErrorViewConfiguration;->a(Ljava/lang/Throwable;)Ljava/lang/CharSequence;
 
     move-result-object v5
 
-    invoke-interface {v2, v1}, Lcom/vk/lists/i;->b(Ljava/lang/Throwable;)Z
+    invoke-interface {v2, v1}, Lcom/vk/lists/ErrorViewConfiguration;->b(Ljava/lang/Throwable;)Z
 
     move-result v1
 
-    invoke-direct {v4, v5, v1}, Lcom/vk/music/playlist/modern/h/a$a;-><init>(Ljava/lang/CharSequence;Z)V
+    invoke-direct {v4, v5, v1}, Lcom/vk/music/playlist/modern/h/MusicErrorViewHolder$a;-><init>(Ljava/lang/CharSequence;Z)V
 
     goto :goto_1
 
     .line 41
     :cond_3
-    new-instance v4, Lcom/vk/music/playlist/modern/h/a$a;
+    new-instance v4, Lcom/vk/music/playlist/modern/h/MusicErrorViewHolder$a;
 
     const/4 v1, 0x0
 
     const/4 v2, 0x1
 
-    invoke-direct {v4, v1, v2}, Lcom/vk/music/playlist/modern/h/a$a;-><init>(Ljava/lang/CharSequence;Z)V
+    invoke-direct {v4, v1, v2}, Lcom/vk/music/playlist/modern/h/MusicErrorViewHolder$a;-><init>(Ljava/lang/CharSequence;Z)V
 
     .line 42
     :goto_1
-    invoke-virtual {v3, v4}, Lcom/vk/lists/j0;->d(Ljava/lang/Object;)V
+    invoke-virtual {v3, v4}, Lcom/vk/lists/SingleAdapter;->d(Ljava/lang/Object;)V
 
     return-void
 .end method
@@ -972,9 +972,9 @@
     .end annotation
 
     .line 22
-    iget-object v0, p0, Lcom/vk/music/playlist/modern/adapters/MusicPlaylistScreenAdapter;->M:Lcom/vk/music/playlist/b;
+    iget-object v0, p0, Lcom/vk/music/playlist/modern/adapters/MusicPlaylistScreenAdapter;->M:Lcom/vk/music/playlist/ModernPlaylistModel;
 
-    invoke-virtual {v0}, Lcom/vk/music/playlist/b;->L()Ljava/util/List;
+    invoke-virtual {v0}, Lcom/vk/music/playlist/ModernPlaylistModel;->L()Ljava/util/List;
 
     move-result-object v0
 
@@ -995,9 +995,9 @@
     invoke-direct {p0, v0}, Lcom/vk/music/playlist/modern/adapters/MusicPlaylistScreenAdapter;->M(I)V
 
     .line 23
-    iget-object v0, p0, Lcom/vk/music/playlist/modern/adapters/MusicPlaylistScreenAdapter;->M:Lcom/vk/music/playlist/b;
+    iget-object v0, p0, Lcom/vk/music/playlist/modern/adapters/MusicPlaylistScreenAdapter;->M:Lcom/vk/music/playlist/ModernPlaylistModel;
 
-    invoke-virtual {v0}, Lcom/vk/music/playlist/b;->L()Ljava/util/List;
+    invoke-virtual {v0}, Lcom/vk/music/playlist/ModernPlaylistModel;->L()Ljava/util/List;
 
     move-result-object v0
 
@@ -1019,9 +1019,9 @@
     invoke-direct {p0, v1}, Lcom/vk/music/playlist/modern/adapters/MusicPlaylistScreenAdapter;->b(Z)V
 
     .line 25
-    iget-object v0, p0, Lcom/vk/music/playlist/modern/adapters/MusicPlaylistScreenAdapter;->L:Lkotlin/jvm/b/a;
+    iget-object v0, p0, Lcom/vk/music/playlist/modern/adapters/MusicPlaylistScreenAdapter;->L:Lkotlin/jvm/b/Functions;
 
-    invoke-interface {v0}, Lkotlin/jvm/b/a;->invoke()Ljava/lang/Object;
+    invoke-interface {v0}, Lkotlin/jvm/b/Functions;->invoke()Ljava/lang/Object;
 
     move-result-object v0
 
@@ -1052,7 +1052,7 @@
 
     .line 26
     :cond_4
-    iget-object v0, p0, Lcom/vk/music/playlist/modern/adapters/MusicPlaylistScreenAdapter;->B:Lcom/vk/music/ui/common/f;
+    iget-object v0, p0, Lcom/vk/music/playlist/modern/adapters/MusicPlaylistScreenAdapter;->B:Lcom/vk/music/ui/common/MusicExpandableDescriptionAdapter1;
 
     if-eqz v1, :cond_5
 
@@ -1063,9 +1063,9 @@
     goto :goto_3
 
     :cond_5
-    iget-object v3, p0, Lcom/vk/music/playlist/modern/adapters/MusicPlaylistScreenAdapter;->L:Lkotlin/jvm/b/a;
+    iget-object v3, p0, Lcom/vk/music/playlist/modern/adapters/MusicPlaylistScreenAdapter;->L:Lkotlin/jvm/b/Functions;
 
-    invoke-interface {v3}, Lkotlin/jvm/b/a;->invoke()Ljava/lang/Object;
+    invoke-interface {v3}, Lkotlin/jvm/b/Functions;->invoke()Ljava/lang/Object;
 
     move-result-object v3
 
@@ -1077,37 +1077,37 @@
 
     :cond_6
     :goto_3
-    invoke-virtual {v0, v2}, Lcom/vk/lists/j0;->d(Ljava/lang/Object;)V
+    invoke-virtual {v0, v2}, Lcom/vk/lists/SingleAdapter;->d(Ljava/lang/Object;)V
 
     .line 27
-    iget-object v0, p0, Lcom/vk/music/playlist/modern/adapters/MusicPlaylistScreenAdapter;->J:Lcom/vk/music/ui/common/k;
+    iget-object v0, p0, Lcom/vk/music/playlist/modern/adapters/MusicPlaylistScreenAdapter;->J:Lcom/vk/music/ui/common/MusicSeparatorAdapter;
 
     if-eqz v1, :cond_7
 
-    sget-object v1, Lcom/vk/music/ui/common/g;->f:Lcom/vk/music/ui/common/g$a;
+    sget-object v1, Lcom/vk/music/ui/common/MusicJustInflateAdapter;->f:Lcom/vk/music/ui/common/MusicJustInflateAdapter$a;
 
-    invoke-virtual {v1}, Lcom/vk/music/ui/common/g$a;->a()Ljava/lang/Void;
+    invoke-virtual {v1}, Lcom/vk/music/ui/common/MusicJustInflateAdapter$a;->a()Ljava/lang/Void;
 
     move-result-object v1
 
     goto :goto_4
 
     :cond_7
-    sget-object v1, Lcom/vk/music/ui/common/g;->f:Lcom/vk/music/ui/common/g$a;
+    sget-object v1, Lcom/vk/music/ui/common/MusicJustInflateAdapter;->f:Lcom/vk/music/ui/common/MusicJustInflateAdapter$a;
 
-    invoke-virtual {v1}, Lcom/vk/music/ui/common/g$a;->b()Ljava/lang/Object;
+    invoke-virtual {v1}, Lcom/vk/music/ui/common/MusicJustInflateAdapter$a;->b()Ljava/lang/Object;
 
     move-result-object v1
 
     :goto_4
-    invoke-virtual {v0, v1}, Lcom/vk/lists/j0;->d(Ljava/lang/Object;)V
+    invoke-virtual {v0, v1}, Lcom/vk/lists/SingleAdapter;->d(Ljava/lang/Object;)V
 
     .line 28
-    iget-object v0, p0, Lcom/vk/music/playlist/modern/adapters/MusicPlaylistScreenAdapter;->F:Lcom/vk/music/ui/common/l;
+    iget-object v0, p0, Lcom/vk/music/playlist/modern/adapters/MusicPlaylistScreenAdapter;->F:Lcom/vk/music/ui/common/MusicSingleItemAdapter;
 
     sget-object v1, Lcom/vk/music/playlist/modern/adapters/MusicPlaylistScreenAdapter;->Q:Ljava/lang/Void;
 
-    invoke-virtual {v0, v1}, Lcom/vk/lists/j0;->d(Ljava/lang/Object;)V
+    invoke-virtual {v0, v1}, Lcom/vk/lists/SingleAdapter;->d(Ljava/lang/Object;)V
 
     .line 29
     iget-object v0, p0, Lcom/vk/music/playlist/modern/adapters/MusicPlaylistScreenAdapter;->h:Lcom/vk/music/playlist/modern/adapters/MultiPartTracksMergedAdapter;
@@ -1120,9 +1120,9 @@
     if-eqz p2, :cond_9
 
     .line 30
-    iget-object p1, p0, Lcom/vk/music/playlist/modern/adapters/MusicPlaylistScreenAdapter;->M:Lcom/vk/music/playlist/b;
+    iget-object p1, p0, Lcom/vk/music/playlist/modern/adapters/MusicPlaylistScreenAdapter;->M:Lcom/vk/music/playlist/ModernPlaylistModel;
 
-    invoke-virtual {p1}, Lcom/vk/music/playlist/b;->L()Ljava/util/List;
+    invoke-virtual {p1}, Lcom/vk/music/playlist/ModernPlaylistModel;->L()Ljava/util/List;
 
     move-result-object p1
 
@@ -1135,9 +1135,9 @@
     if-nez p1, :cond_9
 
     .line 31
-    iget-object p1, p0, Lcom/vk/music/playlist/modern/adapters/MusicPlaylistScreenAdapter;->L:Lkotlin/jvm/b/a;
+    iget-object p1, p0, Lcom/vk/music/playlist/modern/adapters/MusicPlaylistScreenAdapter;->L:Lkotlin/jvm/b/Functions;
 
-    invoke-interface {p1}, Lkotlin/jvm/b/a;->invoke()Ljava/lang/Object;
+    invoke-interface {p1}, Lkotlin/jvm/b/Functions;->invoke()Ljava/lang/Object;
 
     move-result-object p1
 
@@ -1151,27 +1151,27 @@
     check-cast p1, Lcom/vk/dto/music/Playlist;
 
     .line 33
-    iget-object p3, p0, Lcom/vk/music/playlist/modern/adapters/MusicPlaylistScreenAdapter;->D:Lcom/vk/music/ui/common/l;
+    iget-object p3, p0, Lcom/vk/music/playlist/modern/adapters/MusicPlaylistScreenAdapter;->D:Lcom/vk/music/ui/common/MusicSingleItemAdapter;
 
     invoke-virtual {p2}, Lcom/vk/music/playlist/modern/adapters/MultiPartTracksMergedAdapter;->l()Ljava/util/ArrayList;
 
     move-result-object p2
 
-    invoke-static {p1, p2}, Lkotlin/k;->a(Ljava/lang/Object;Ljava/lang/Object;)Lkotlin/Pair;
+    invoke-static {p1, p2}, Lkotlin/Tuples;->a(Ljava/lang/Object;Ljava/lang/Object;)Lkotlin/Pair;
 
     move-result-object p1
 
-    invoke-virtual {p3, p1}, Lcom/vk/lists/j0;->d(Ljava/lang/Object;)V
+    invoke-virtual {p3, p1}, Lcom/vk/lists/SingleAdapter;->d(Ljava/lang/Object;)V
 
     goto :goto_5
 
     .line 34
     :cond_9
-    iget-object p1, p0, Lcom/vk/music/playlist/modern/adapters/MusicPlaylistScreenAdapter;->D:Lcom/vk/music/ui/common/l;
+    iget-object p1, p0, Lcom/vk/music/playlist/modern/adapters/MusicPlaylistScreenAdapter;->D:Lcom/vk/music/ui/common/MusicSingleItemAdapter;
 
     sget-object p2, Lcom/vk/music/playlist/modern/adapters/MusicPlaylistScreenAdapter;->Q:Ljava/lang/Void;
 
-    invoke-virtual {p1, p2}, Lcom/vk/lists/j0;->d(Ljava/lang/Object;)V
+    invoke-virtual {p1, p2}, Lcom/vk/lists/SingleAdapter;->d(Ljava/lang/Object;)V
 
     :cond_a
     :goto_5
@@ -1186,20 +1186,20 @@
 
     if-eqz v0, :cond_0
 
-    iget-object v0, p0, Lcom/vk/music/playlist/modern/adapters/MusicPlaylistScreenAdapter;->G:Lcom/vk/music/ui/common/l;
+    iget-object v0, p0, Lcom/vk/music/playlist/modern/adapters/MusicPlaylistScreenAdapter;->G:Lcom/vk/music/ui/common/MusicSingleItemAdapter;
 
-    invoke-virtual {p0, v0}, Lcom/vk/lists/p;->a(Landroidx/recyclerview/widget/RecyclerView$Adapter;)V
+    invoke-virtual {p0, v0}, Lcom/vk/lists/MergedAdapter;->a(Landroidx/recyclerview/widget/RecyclerView$Adapter;)V
 
     .line 2
     :cond_0
-    iget-object v0, p0, Lcom/vk/music/playlist/modern/adapters/MusicPlaylistScreenAdapter;->F:Lcom/vk/music/ui/common/l;
+    iget-object v0, p0, Lcom/vk/music/playlist/modern/adapters/MusicPlaylistScreenAdapter;->F:Lcom/vk/music/ui/common/MusicSingleItemAdapter;
 
-    invoke-virtual {p0, v0}, Lcom/vk/lists/p;->a(Landroidx/recyclerview/widget/RecyclerView$Adapter;)V
+    invoke-virtual {p0, v0}, Lcom/vk/lists/MergedAdapter;->a(Landroidx/recyclerview/widget/RecyclerView$Adapter;)V
 
     .line 3
-    iget-object v0, p0, Lcom/vk/music/playlist/modern/adapters/MusicPlaylistScreenAdapter;->I:Lcom/vk/music/ui/common/j;
+    iget-object v0, p0, Lcom/vk/music/playlist/modern/adapters/MusicPlaylistScreenAdapter;->I:Lcom/vk/music/ui/common/MusicProgressAdapter;
 
-    invoke-virtual {p0, v0}, Lcom/vk/lists/p;->a(Landroidx/recyclerview/widget/RecyclerView$Adapter;)V
+    invoke-virtual {p0, v0}, Lcom/vk/lists/MergedAdapter;->a(Landroidx/recyclerview/widget/RecyclerView$Adapter;)V
 
     return-void
 .end method
@@ -1277,49 +1277,49 @@
     invoke-direct {p0, v0}, Lcom/vk/music/playlist/modern/adapters/MusicPlaylistScreenAdapter;->b(Z)V
 
     .line 2
-    iget-object v0, p0, Lcom/vk/music/playlist/modern/adapters/MusicPlaylistScreenAdapter;->g:Lcom/vk/music/ui/common/l;
+    iget-object v0, p0, Lcom/vk/music/playlist/modern/adapters/MusicPlaylistScreenAdapter;->g:Lcom/vk/music/ui/common/MusicSingleItemAdapter;
 
     if-eqz v0, :cond_0
 
     sget-object v1, Lcom/vk/music/playlist/modern/adapters/MusicPlaylistScreenAdapter;->Q:Ljava/lang/Void;
 
-    invoke-virtual {v0, v1}, Lcom/vk/lists/j0;->d(Ljava/lang/Object;)V
+    invoke-virtual {v0, v1}, Lcom/vk/lists/SingleAdapter;->d(Ljava/lang/Object;)V
 
     .line 3
     :cond_0
-    iget-object v0, p0, Lcom/vk/music/playlist/modern/adapters/MusicPlaylistScreenAdapter;->B:Lcom/vk/music/ui/common/f;
+    iget-object v0, p0, Lcom/vk/music/playlist/modern/adapters/MusicPlaylistScreenAdapter;->B:Lcom/vk/music/ui/common/MusicExpandableDescriptionAdapter1;
 
     sget-object v1, Lcom/vk/music/playlist/modern/adapters/MusicPlaylistScreenAdapter;->Q:Ljava/lang/Void;
 
-    invoke-virtual {v0, v1}, Lcom/vk/lists/j0;->d(Ljava/lang/Object;)V
+    invoke-virtual {v0, v1}, Lcom/vk/lists/SingleAdapter;->d(Ljava/lang/Object;)V
 
     .line 4
-    iget-object v0, p0, Lcom/vk/music/playlist/modern/adapters/MusicPlaylistScreenAdapter;->J:Lcom/vk/music/ui/common/k;
+    iget-object v0, p0, Lcom/vk/music/playlist/modern/adapters/MusicPlaylistScreenAdapter;->J:Lcom/vk/music/ui/common/MusicSeparatorAdapter;
 
     sget-object v1, Lcom/vk/music/playlist/modern/adapters/MusicPlaylistScreenAdapter;->Q:Ljava/lang/Void;
 
-    invoke-virtual {v0, v1}, Lcom/vk/lists/j0;->d(Ljava/lang/Object;)V
+    invoke-virtual {v0, v1}, Lcom/vk/lists/SingleAdapter;->d(Ljava/lang/Object;)V
 
     .line 5
-    iget-object v0, p0, Lcom/vk/music/playlist/modern/adapters/MusicPlaylistScreenAdapter;->C:Lcom/vk/music/ui/common/l;
+    iget-object v0, p0, Lcom/vk/music/playlist/modern/adapters/MusicPlaylistScreenAdapter;->C:Lcom/vk/music/ui/common/MusicSingleItemAdapter;
 
     sget-object v1, Lcom/vk/music/playlist/modern/adapters/MusicPlaylistScreenAdapter;->Q:Ljava/lang/Void;
 
-    invoke-virtual {v0, v1}, Lcom/vk/lists/j0;->d(Ljava/lang/Object;)V
+    invoke-virtual {v0, v1}, Lcom/vk/lists/SingleAdapter;->d(Ljava/lang/Object;)V
 
     .line 6
-    iget-object v0, p0, Lcom/vk/music/playlist/modern/adapters/MusicPlaylistScreenAdapter;->E:Lcom/vk/music/ui/common/l;
+    iget-object v0, p0, Lcom/vk/music/playlist/modern/adapters/MusicPlaylistScreenAdapter;->E:Lcom/vk/music/ui/common/MusicSingleItemAdapter;
 
     sget-object v1, Lcom/vk/music/playlist/modern/adapters/MusicPlaylistScreenAdapter;->Q:Ljava/lang/Void;
 
-    invoke-virtual {v0, v1}, Lcom/vk/lists/j0;->d(Ljava/lang/Object;)V
+    invoke-virtual {v0, v1}, Lcom/vk/lists/SingleAdapter;->d(Ljava/lang/Object;)V
 
     .line 7
-    iget-object v0, p0, Lcom/vk/music/playlist/modern/adapters/MusicPlaylistScreenAdapter;->D:Lcom/vk/music/ui/common/l;
+    iget-object v0, p0, Lcom/vk/music/playlist/modern/adapters/MusicPlaylistScreenAdapter;->D:Lcom/vk/music/ui/common/MusicSingleItemAdapter;
 
     sget-object v1, Lcom/vk/music/playlist/modern/adapters/MusicPlaylistScreenAdapter;->Q:Ljava/lang/Void;
 
-    invoke-virtual {v0, v1}, Lcom/vk/lists/j0;->d(Ljava/lang/Object;)V
+    invoke-virtual {v0, v1}, Lcom/vk/lists/SingleAdapter;->d(Ljava/lang/Object;)V
 
     return-void
 .end method
@@ -1336,7 +1336,7 @@
     .locals 0
 
     .line 1
-    invoke-static {p0, p1}, Lcom/vk/core/ui/k$b;->a(Lcom/vk/core/ui/k;Landroid/view/View;)V
+    invoke-static {p0, p1}, Lcom/vk/core/ui/IdClickListener$b;->a(Lcom/vk/core/ui/IdClickListener;Landroid/view/View;)V
 
     return-void
 .end method
@@ -1363,10 +1363,10 @@
 
     move-result-object v1
 
-    check-cast v1, Lcom/vk/music/playlist/modern/h/g;
+    check-cast v1, Lcom/vk/music/playlist/modern/h/OnConfigChangedListener;
 
     .line 3
-    invoke-interface {v1, p1}, Lcom/vk/music/playlist/modern/h/g;->onConfigurationChanged(Landroid/content/res/Configuration;)V
+    invoke-interface {v1, p1}, Lcom/vk/music/playlist/modern/h/OnConfigChangedListener;->onConfigurationChanged(Landroid/content/res/Configuration;)V
 
     goto :goto_0
 
@@ -1378,7 +1378,7 @@
     .locals 0
 
     .line 1
-    invoke-static {p0, p1}, Lcom/vk/core/ui/k$b;->a(Lcom/vk/core/ui/k;Landroid/view/MenuItem;)Z
+    invoke-static {p0, p1}, Lcom/vk/core/ui/IdClickListener$b;->a(Lcom/vk/core/ui/IdClickListener;Landroid/view/MenuItem;)Z
 
     move-result p1
 
@@ -1389,18 +1389,18 @@
     .locals 1
 
     .line 1
-    instance-of v0, p1, Lcom/vk/music/playlist/modern/holders/header/a;
+    instance-of v0, p1, Lcom/vk/music/playlist/modern/holders/header/MusicPlaylistTabletHeaderViewHolder;
 
     if-nez v0, :cond_0
 
     const/4 p1, 0x0
 
     :cond_0
-    check-cast p1, Lcom/vk/music/playlist/modern/holders/header/a;
+    check-cast p1, Lcom/vk/music/playlist/modern/holders/header/MusicPlaylistTabletHeaderViewHolder;
 
     if-eqz p1, :cond_1
 
-    invoke-virtual {p1}, Lcom/vk/music/playlist/modern/holders/header/a;->e0()V
+    invoke-virtual {p1}, Lcom/vk/music/playlist/modern/holders/header/MusicPlaylistTabletHeaderViewHolder;->e0()V
 
     :cond_1
     return-void
@@ -1410,18 +1410,18 @@
     .locals 1
 
     .line 1
-    instance-of v0, p1, Lcom/vk/music/playlist/modern/holders/header/a;
+    instance-of v0, p1, Lcom/vk/music/playlist/modern/holders/header/MusicPlaylistTabletHeaderViewHolder;
 
     if-nez v0, :cond_0
 
     const/4 p1, 0x0
 
     :cond_0
-    check-cast p1, Lcom/vk/music/playlist/modern/holders/header/a;
+    check-cast p1, Lcom/vk/music/playlist/modern/holders/header/MusicPlaylistTabletHeaderViewHolder;
 
     if-eqz p1, :cond_1
 
-    invoke-virtual {p1}, Lcom/vk/music/playlist/modern/holders/header/a;->f0()V
+    invoke-virtual {p1}, Lcom/vk/music/playlist/modern/holders/header/MusicPlaylistTabletHeaderViewHolder;->f0()V
 
     :cond_1
     return-void

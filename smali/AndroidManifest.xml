@@ -400,7 +400,7 @@
         <receiver android:exported="true" android:name="com.vtosters.lite.im.bridge.broadcasts.ImBroadcastReceiver" android:permission="com.vtosters.lite.permission.ACCESS_DATA"/>
         <provider android:authorities="com.vtosters.lite.providers.audio" android:exported="true" android:name="com.vtosters.lite.audio.contentprovider.AudioContentProvider"/>
         <provider android:authorities="com.vtosters.lite.providers.im" android:exported="true" android:name="com.vtosters.lite.im.bridge.contentprovider.ImContentProvider" android:permission="com.vtosters.lite.permission.ACCESS_DATA"/>
-        <provider android:authorities="com.vtosters.lite.common.VKFileProvider" android:exported="false" android:grantUriPermissions="true" android:name="androidx.core.content.FileProvider">
+        <provider android:authorities="com.vk.common.VKFileProvider" android:exported="false" android:grantUriPermissions="true" android:name="androidx.core.content.FileProvider">
             <meta-data android:name="android.support.FILE_PROVIDER_PATHS" android:resource="@xml/provider_paths"/>
         </provider>
         <uses-library android:name="com.sec.android.app.multiwindow" android:required="false"/>

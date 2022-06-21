@@ -3,12 +3,12 @@
 .source "OpenFunctions.kt"
 
 # interfaces
-.implements Lc/a/z/g;
+.implements Lio/reactivex/functions/Consumer;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/common/links/OpenFunctionsKt;->a(Landroid/content/Context;Lcom/vk/api/base/d;Ljava/lang/String;Lcom/vk/common/links/f;)Z
+    value = Lcom/vk/common/links/OpenFunctionsKt;->a(Landroid/content/Context;Lcom/vk/api/base/ApiRequest;Ljava/lang/String;Lcom/vk/common/links/OpenCallback;)Z
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -22,7 +22,7 @@
         "Ljava/lang/Object;",
         ">",
         "Ljava/lang/Object;",
-        "Lc/a/z/g<",
+        "Lio/reactivex/functions/Consumer<",
         "Ljava/lang/Throwable;",
         ">;"
     }
@@ -34,18 +34,18 @@
 
 .field final synthetic b:Ljava/lang/String;
 
-.field final synthetic c:Lcom/vk/common/links/f;
+.field final synthetic c:Lcom/vk/common/links/OpenCallback;
 
 
 # direct methods
-.method constructor <init>(Landroid/content/Context;Ljava/lang/String;Lcom/vk/common/links/f;)V
+.method constructor <init>(Landroid/content/Context;Ljava/lang/String;Lcom/vk/common/links/OpenCallback;)V
     .locals 0
 
     iput-object p1, p0, Lcom/vk/common/links/OpenFunctionsKt$l0;->a:Landroid/content/Context;
 
     iput-object p2, p0, Lcom/vk/common/links/OpenFunctionsKt$l0;->b:Ljava/lang/String;
 
-    iput-object p3, p0, Lcom/vk/common/links/OpenFunctionsKt$l0;->c:Lcom/vk/common/links/f;
+    iput-object p3, p0, Lcom/vk/common/links/OpenFunctionsKt$l0;->c:Lcom/vk/common/links/OpenCallback;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -62,11 +62,11 @@
 
     iget-object v0, p0, Lcom/vk/common/links/OpenFunctionsKt$l0;->b:Ljava/lang/String;
 
-    iget-object v1, p0, Lcom/vk/common/links/OpenFunctionsKt$l0;->c:Lcom/vk/common/links/f;
+    iget-object v1, p0, Lcom/vk/common/links/OpenFunctionsKt$l0;->c:Lcom/vk/common/links/OpenCallback;
 
     const/4 v2, 0x0
 
-    invoke-static {p1, v2, v0, v1}, Lcom/vk/common/links/OpenFunctionsKt;->a(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;Lcom/vk/common/links/f;)Z
+    invoke-static {p1, v2, v0, v1}, Lcom/vk/common/links/OpenFunctionsKt;->a(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;Lcom/vk/common/links/OpenCallback;)Z
 
     return-void
 .end method

@@ -3,7 +3,7 @@
 .source "FacebookAuthPresenter.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/a;
+.implements Lkotlin/jvm/b/Functions;
 
 
 # annotations
@@ -19,8 +19,8 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/a<",
-        "Lcom/vk/auth/main/f$a;",
+        "Lkotlin/jvm/b/Functions<",
+        "Lcom/vk/auth/main/AuthModel$a;",
         ">;"
     }
 .end annotation
@@ -45,17 +45,17 @@
 
 
 # virtual methods
-.method public final invoke()Lcom/vk/auth/main/f$a;
+.method public final invoke()Lcom/vk/auth/main/AuthModel$a;
     .locals 1
 
     .line 2
     iget-object v0, p0, Lcom/vk/auth/base/FacebookAuthPresenter$facebookModel$2;->this$0:Lcom/vk/auth/base/FacebookAuthPresenter;
 
-    invoke-virtual {v0}, Lcom/vk/auth/base/BaseAuthPresenter;->f()Lcom/vk/auth/main/f;
+    invoke-virtual {v0}, Lcom/vk/auth/base/BaseAuthPresenter;->f()Lcom/vk/auth/main/AuthModel;
 
     move-result-object v0
 
-    invoke-interface {v0}, Lcom/vk/auth/main/f;->e()Lcom/vk/auth/main/f$a;
+    invoke-interface {v0}, Lcom/vk/auth/main/AuthModel;->e()Lcom/vk/auth/main/AuthModel$a;
 
     move-result-object v0
 
@@ -66,7 +66,7 @@
     .locals 1
 
     .line 1
-    invoke-virtual {p0}, Lcom/vk/auth/base/FacebookAuthPresenter$facebookModel$2;->invoke()Lcom/vk/auth/main/f$a;
+    invoke-virtual {p0}, Lcom/vk/auth/base/FacebookAuthPresenter$facebookModel$2;->invoke()Lcom/vk/auth/main/AuthModel$a;
 
     move-result-object v0
 

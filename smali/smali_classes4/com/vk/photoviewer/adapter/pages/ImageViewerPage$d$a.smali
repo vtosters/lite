@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/photoviewer/adapter/pages/ImageViewerPage$d;->a(Ljava/lang/String;Lcom/facebook/x/g/f;Landroid/graphics/drawable/Animatable;)V
+    value = Lcom/vk/photoviewer/adapter/pages/ImageViewerPage$d;->a(Ljava/lang/String;Lcom/facebook/x/g/ImageInfo;Landroid/graphics/drawable/Animatable;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -20,16 +20,16 @@
 # instance fields
 .field final synthetic a:Lcom/vk/photoviewer/adapter/pages/ImageViewerPage$d;
 
-.field final synthetic b:Lcom/facebook/x/g/f;
+.field final synthetic b:Lcom/facebook/x/g/ImageInfo;
 
 
 # direct methods
-.method constructor <init>(Lcom/vk/photoviewer/adapter/pages/ImageViewerPage$d;Lcom/facebook/x/g/f;)V
+.method constructor <init>(Lcom/vk/photoviewer/adapter/pages/ImageViewerPage$d;Lcom/facebook/x/g/ImageInfo;)V
     .locals 0
 
     iput-object p1, p0, Lcom/vk/photoviewer/adapter/pages/ImageViewerPage$d$a;->a:Lcom/vk/photoviewer/adapter/pages/ImageViewerPage$d;
 
-    iput-object p2, p0, Lcom/vk/photoviewer/adapter/pages/ImageViewerPage$d$a;->b:Lcom/facebook/x/g/f;
+    iput-object p2, p0, Lcom/vk/photoviewer/adapter/pages/ImageViewerPage$d$a;->b:Lcom/facebook/x/g/ImageInfo;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -46,25 +46,25 @@
 
     iget-object v0, v0, Lcom/vk/photoviewer/adapter/pages/ImageViewerPage$d;->a:Lcom/vk/photoviewer/adapter/pages/ImageViewerPage;
 
-    invoke-static {v0}, Lcom/vk/photoviewer/adapter/pages/ImageViewerPage;->a(Lcom/vk/photoviewer/adapter/pages/ImageViewerPage;)Lcom/vk/imageloader/view/c;
+    invoke-static {v0}, Lcom/vk/photoviewer/adapter/pages/ImageViewerPage;->a(Lcom/vk/photoviewer/adapter/pages/ImageViewerPage;)Lcom/vk/imageloader/view/VKZoomableImageView;
 
     move-result-object v0
 
-    iget-object v1, p0, Lcom/vk/photoviewer/adapter/pages/ImageViewerPage$d$a;->b:Lcom/facebook/x/g/f;
+    iget-object v1, p0, Lcom/vk/photoviewer/adapter/pages/ImageViewerPage$d$a;->b:Lcom/facebook/x/g/ImageInfo;
 
     if-eqz v1, :cond_1
 
-    invoke-interface {v1}, Lcom/facebook/x/g/f;->getWidth()I
+    invoke-interface {v1}, Lcom/facebook/x/g/ImageInfo;->getWidth()I
 
     move-result v1
 
-    iget-object v2, p0, Lcom/vk/photoviewer/adapter/pages/ImageViewerPage$d$a;->b:Lcom/facebook/x/g/f;
+    iget-object v2, p0, Lcom/vk/photoviewer/adapter/pages/ImageViewerPage$d$a;->b:Lcom/facebook/x/g/ImageInfo;
 
-    invoke-interface {v2}, Lcom/facebook/x/g/f;->getHeight()I
+    invoke-interface {v2}, Lcom/facebook/x/g/ImageInfo;->getHeight()I
 
     move-result v2
 
-    invoke-virtual {v0, v1, v2}, Lcom/vk/imageloader/view/c;->b(II)V
+    invoke-virtual {v0, v1, v2}, Lcom/vk/imageloader/view/VKZoomableImageView;->b(II)V
 
     .line 2
     iget-object v0, p0, Lcom/vk/photoviewer/adapter/pages/ImageViewerPage$d$a;->a:Lcom/vk/photoviewer/adapter/pages/ImageViewerPage$d;
@@ -116,7 +116,7 @@
 
     .line 5
     :cond_1
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     const/4 v0, 0x0
 

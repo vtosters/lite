@@ -1,5 +1,5 @@
 .class public final Lcom/vk/profile/ui/community/CommunityChatsFragment$a;
-.super Lcom/vk/navigation/o;
+.super Lcom/vk/navigation/Navigator;
 .source "CommunityChatsFragment.kt"
 
 
@@ -21,19 +21,19 @@
     .line 1
     const-class v0, Lcom/vk/profile/ui/community/CommunityChatsFragment;
 
-    invoke-direct {p0, v0}, Lcom/vk/navigation/o;-><init>(Ljava/lang/Class;)V
+    invoke-direct {p0, v0}, Lcom/vk/navigation/Navigator;-><init>(Ljava/lang/Class;)V
 
     .line 2
-    iget-object v0, p0, Lcom/vk/navigation/o;->O0:Landroid/os/Bundle;
+    iget-object v0, p0, Lcom/vk/navigation/Navigator;->O0:Landroid/os/Bundle;
 
-    sget-object v1, Lcom/vk/navigation/q;->G:Ljava/lang/String;
+    sget-object v1, Lcom/vk/navigation/NavigatorKeys;->G:Ljava/lang/String;
 
     invoke-virtual {v0, v1, p1}, Landroid/os/Bundle;->putInt(Ljava/lang/String;I)V
 
     .line 3
-    iget-object p1, p0, Lcom/vk/navigation/o;->O0:Landroid/os/Bundle;
+    iget-object p1, p0, Lcom/vk/navigation/Navigator;->O0:Landroid/os/Bundle;
 
-    sget-object v0, Lcom/vk/navigation/q;->P:Ljava/lang/String;
+    sget-object v0, Lcom/vk/navigation/NavigatorKeys;->P:Ljava/lang/String;
 
     const/4 v1, 0x3
 

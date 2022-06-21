@@ -80,13 +80,13 @@
     :cond_0
     iget-object p1, p0, Lcom/vk/promo/music/MusicPromoSlide2ViewController$f;->a:Lcom/vk/promo/music/MusicPromoSlide2ViewController;
 
-    invoke-static {p1}, Lcom/vk/promo/music/MusicPromoSlide2ViewController;->c(Lcom/vk/promo/music/MusicPromoSlide2ViewController;)Lcom/vk/promo/f;
+    invoke-static {p1}, Lcom/vk/promo/music/MusicPromoSlide2ViewController;->c(Lcom/vk/promo/music/MusicPromoSlide2ViewController;)Lcom/vk/promo/PromoNavigator;
 
     move-result-object p1
 
     if-eqz p1, :cond_1
 
-    invoke-interface {p1}, Lcom/vk/promo/f;->close()V
+    invoke-interface {p1}, Lcom/vk/promo/PromoNavigator;->close()V
 
     :cond_1
     return-void

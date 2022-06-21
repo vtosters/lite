@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/instantjobs/impl/InstantJobNotifier;->a(Lkotlin/jvm/b/a;)Ljava/util/concurrent/Future;
+    value = Lcom/vk/instantjobs/impl/InstantJobNotifier;->a(Lkotlin/jvm/b/Functions;)Ljava/util/concurrent/Future;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -20,18 +20,18 @@
 # instance fields
 .field final synthetic a:Lcom/vk/instantjobs/impl/InstantJobNotifier;
 
-.field final synthetic b:Lkotlin/jvm/b/a;
+.field final synthetic b:Lkotlin/jvm/b/Functions;
 
 .field final synthetic c:Ljava/util/concurrent/CountDownLatch;
 
 
 # direct methods
-.method constructor <init>(Lcom/vk/instantjobs/impl/InstantJobNotifier;Lkotlin/jvm/b/a;Ljava/util/concurrent/CountDownLatch;)V
+.method constructor <init>(Lcom/vk/instantjobs/impl/InstantJobNotifier;Lkotlin/jvm/b/Functions;Ljava/util/concurrent/CountDownLatch;)V
     .locals 0
 
     iput-object p1, p0, Lcom/vk/instantjobs/impl/InstantJobNotifier$c;->a:Lcom/vk/instantjobs/impl/InstantJobNotifier;
 
-    iput-object p2, p0, Lcom/vk/instantjobs/impl/InstantJobNotifier$c;->b:Lkotlin/jvm/b/a;
+    iput-object p2, p0, Lcom/vk/instantjobs/impl/InstantJobNotifier$c;->b:Lkotlin/jvm/b/Functions;
 
     iput-object p3, p0, Lcom/vk/instantjobs/impl/InstantJobNotifier$c;->c:Ljava/util/concurrent/CountDownLatch;
 
@@ -47,9 +47,9 @@
 
     .line 1
     :try_start_0
-    iget-object v0, p0, Lcom/vk/instantjobs/impl/InstantJobNotifier$c;->b:Lkotlin/jvm/b/a;
+    iget-object v0, p0, Lcom/vk/instantjobs/impl/InstantJobNotifier$c;->b:Lkotlin/jvm/b/Functions;
 
-    invoke-interface {v0}, Lkotlin/jvm/b/a;->invoke()Ljava/lang/Object;
+    invoke-interface {v0}, Lkotlin/jvm/b/Functions;->invoke()Ljava/lang/Object;
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 

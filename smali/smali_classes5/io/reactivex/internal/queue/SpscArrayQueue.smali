@@ -3,7 +3,7 @@
 .source "SpscArrayQueue.java"
 
 # interfaces
-.implements Lc/a/a0/b/j;
+.implements Lc/a/a0/b/SimplePlainQueue;
 
 
 # annotations
@@ -14,7 +14,7 @@
         ">",
         "Ljava/util/concurrent/atomic/AtomicReferenceArray<",
         "TE;>;",
-        "Lc/a/a0/b/j<",
+        "Lc/a/a0/b/SimplePlainQueue<",
         "TE;>;"
     }
 .end annotation
@@ -60,7 +60,7 @@
     .locals 1
 
     .line 1
-    invoke-static {p1}, Lio/reactivex/internal/util/i;->a(I)I
+    invoke-static {p1}, Lio/reactivex/internal/util/Pow2;->a(I)I
 
     move-result v0
 

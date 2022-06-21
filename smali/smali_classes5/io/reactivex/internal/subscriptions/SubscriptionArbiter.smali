@@ -3,7 +3,7 @@
 .source "SubscriptionArbiter.java"
 
 # interfaces
-.implements Le/b/d;
+.implements Le/b/Subscription;
 
 
 # static fields
@@ -11,7 +11,7 @@
 
 
 # instance fields
-.field actual:Le/b/d;
+.field actual:Le/b/Subscription;
 
 .field final cancelOnReplace:Z
 
@@ -25,7 +25,7 @@
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/util/concurrent/atomic/AtomicReference<",
-            "Le/b/d;",
+            "Le/b/Subscription;",
             ">;"
         }
     .end annotation
@@ -136,7 +136,7 @@
     if-eqz v0, :cond_1
 
     .line 5
-    invoke-static {v2, v3, p1, p2}, Lio/reactivex/internal/util/b;->a(JJ)J
+    invoke-static {v2, v3, p1, p2}, Lio/reactivex/internal/util/BackpressureHelper;->a(JJ)J
 
     move-result-wide v2
 
@@ -152,7 +152,7 @@
 
     .line 8
     :cond_1
-    iget-object v0, p0, Lio/reactivex/internal/subscriptions/SubscriptionArbiter;->actual:Le/b/d;
+    iget-object v0, p0, Lio/reactivex/internal/subscriptions/SubscriptionArbiter;->actual:Le/b/Subscription;
 
     .line 9
     invoke-virtual {p0}, Ljava/util/concurrent/atomic/AtomicInteger;->decrementAndGet()I
@@ -168,7 +168,7 @@
     if-eqz v0, :cond_3
 
     .line 11
-    invoke-interface {v0, p1, p2}, Le/b/d;->a(J)V
+    invoke-interface {v0, p1, p2}, Le/b/Subscription;->a(J)V
 
     :cond_3
     return-void
@@ -177,7 +177,7 @@
     :cond_4
     iget-object v0, p0, Lio/reactivex/internal/subscriptions/SubscriptionArbiter;->missedRequested:Ljava/util/concurrent/atomic/AtomicLong;
 
-    invoke-static {v0, p1, p2}, Lio/reactivex/internal/util/b;->a(Ljava/util/concurrent/atomic/AtomicLong;J)J
+    invoke-static {v0, p1, p2}, Lio/reactivex/internal/util/BackpressureHelper;->a(Ljava/util/concurrent/atomic/AtomicLong;J)J
 
     .line 13
     invoke-virtual {p0}, Lio/reactivex/internal/subscriptions/SubscriptionArbiter;->a()V
@@ -263,7 +263,7 @@
     :cond_4
     iget-object v0, p0, Lio/reactivex/internal/subscriptions/SubscriptionArbiter;->missedProduced:Ljava/util/concurrent/atomic/AtomicLong;
 
-    invoke-static {v0, p1, p2}, Lio/reactivex/internal/util/b;->a(Ljava/util/concurrent/atomic/AtomicLong;J)J
+    invoke-static {v0, p1, p2}, Lio/reactivex/internal/util/BackpressureHelper;->a(Ljava/util/concurrent/atomic/AtomicLong;J)J
 
     .line 25
     invoke-virtual {p0}, Lio/reactivex/internal/subscriptions/SubscriptionArbiter;->a()V
@@ -271,7 +271,7 @@
     return-void
 .end method
 
-.method public final b(Le/b/d;)V
+.method public final b(Le/b/Subscription;)V
     .locals 5
 
     .line 1
@@ -280,7 +280,7 @@
     if-eqz v0, :cond_0
 
     .line 2
-    invoke-interface {p1}, Le/b/d;->cancel()V
+    invoke-interface {p1}, Le/b/Subscription;->cancel()V
 
     return-void
 
@@ -288,7 +288,7 @@
     const-string v0, "s is null"
 
     .line 3
-    invoke-static {p1, v0}, Lc/a/a0/a/b;->a(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
+    invoke-static {p1, v0}, Lc/a/a0/a/ObjectHelper;->a(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
     .line 4
     invoke-virtual {p0}, Ljava/util/concurrent/atomic/AtomicInteger;->get()I
@@ -308,7 +308,7 @@
     if-eqz v0, :cond_4
 
     .line 5
-    iget-object v0, p0, Lio/reactivex/internal/subscriptions/SubscriptionArbiter;->actual:Le/b/d;
+    iget-object v0, p0, Lio/reactivex/internal/subscriptions/SubscriptionArbiter;->actual:Le/b/Subscription;
 
     if-eqz v0, :cond_1
 
@@ -318,11 +318,11 @@
     if-eqz v1, :cond_1
 
     .line 7
-    invoke-interface {v0}, Le/b/d;->cancel()V
+    invoke-interface {v0}, Le/b/Subscription;->cancel()V
 
     .line 8
     :cond_1
-    iput-object p1, p0, Lio/reactivex/internal/subscriptions/SubscriptionArbiter;->actual:Le/b/d;
+    iput-object p1, p0, Lio/reactivex/internal/subscriptions/SubscriptionArbiter;->actual:Le/b/Subscription;
 
     .line 9
     iget-wide v0, p0, Lio/reactivex/internal/subscriptions/SubscriptionArbiter;->requested:J
@@ -345,7 +345,7 @@
     if-eqz v4, :cond_3
 
     .line 12
-    invoke-interface {p1, v0, v1}, Le/b/d;->a(J)V
+    invoke-interface {p1, v0, v1}, Le/b/Subscription;->a(J)V
 
     :cond_3
     return-void
@@ -358,7 +358,7 @@
 
     move-result-object p1
 
-    check-cast p1, Le/b/d;
+    check-cast p1, Le/b/Subscription;
 
     if-eqz p1, :cond_5
 
@@ -368,7 +368,7 @@
     if-eqz v0, :cond_5
 
     .line 15
-    invoke-interface {p1}, Le/b/d;->cancel()V
+    invoke-interface {p1}, Le/b/Subscription;->cancel()V
 
     .line 16
     :cond_5
@@ -402,7 +402,7 @@
 
     move-result-object v8
 
-    check-cast v8, Le/b/d;
+    check-cast v8, Le/b/Subscription;
 
     if-eqz v8, :cond_1
 
@@ -413,7 +413,7 @@
 
     move-result-object v8
 
-    check-cast v8, Le/b/d;
+    check-cast v8, Le/b/Subscription;
 
     .line 3
     :cond_1
@@ -455,7 +455,7 @@
 
     .line 7
     :cond_3
-    iget-object v13, v0, Lio/reactivex/internal/subscriptions/SubscriptionArbiter;->actual:Le/b/d;
+    iget-object v13, v0, Lio/reactivex/internal/subscriptions/SubscriptionArbiter;->actual:Le/b/Subscription;
 
     .line 8
     iget-boolean v14, v0, Lio/reactivex/internal/subscriptions/SubscriptionArbiter;->cancelled:Z
@@ -465,16 +465,16 @@
     if-eqz v13, :cond_4
 
     .line 9
-    invoke-interface {v13}, Le/b/d;->cancel()V
+    invoke-interface {v13}, Le/b/Subscription;->cancel()V
 
     .line 10
-    iput-object v1, v0, Lio/reactivex/internal/subscriptions/SubscriptionArbiter;->actual:Le/b/d;
+    iput-object v1, v0, Lio/reactivex/internal/subscriptions/SubscriptionArbiter;->actual:Le/b/Subscription;
 
     :cond_4
     if-eqz v8, :cond_b
 
     .line 11
-    invoke-interface {v8}, Le/b/d;->cancel()V
+    invoke-interface {v8}, Le/b/Subscription;->cancel()V
 
     goto :goto_0
 
@@ -489,7 +489,7 @@
     if-eqz v18, :cond_8
 
     .line 13
-    invoke-static {v14, v15, v9, v10}, Lio/reactivex/internal/util/b;->a(JJ)J
+    invoke-static {v14, v15, v9, v10}, Lio/reactivex/internal/util/BackpressureHelper;->a(JJ)J
 
     move-result-wide v14
 
@@ -526,18 +526,18 @@
     if-eqz v9, :cond_9
 
     .line 17
-    invoke-interface {v13}, Le/b/d;->cancel()V
+    invoke-interface {v13}, Le/b/Subscription;->cancel()V
 
     .line 18
     :cond_9
-    iput-object v8, v0, Lio/reactivex/internal/subscriptions/SubscriptionArbiter;->actual:Le/b/d;
+    iput-object v8, v0, Lio/reactivex/internal/subscriptions/SubscriptionArbiter;->actual:Le/b/Subscription;
 
     cmp-long v9, v14, v2
 
     if-eqz v9, :cond_b
 
     .line 19
-    invoke-static {v4, v5, v14, v15}, Lio/reactivex/internal/util/b;->a(JJ)J
+    invoke-static {v4, v5, v14, v15}, Lio/reactivex/internal/util/BackpressureHelper;->a(JJ)J
 
     move-result-wide v4
 
@@ -553,7 +553,7 @@
     if-eqz v8, :cond_b
 
     .line 20
-    invoke-static {v4, v5, v9, v10}, Lio/reactivex/internal/util/b;->a(JJ)J
+    invoke-static {v4, v5, v9, v10}, Lio/reactivex/internal/util/BackpressureHelper;->a(JJ)J
 
     move-result-wide v4
 
@@ -575,7 +575,7 @@
     if-eqz v1, :cond_c
 
     .line 22
-    invoke-interface {v7, v4, v5}, Le/b/d;->a(J)V
+    invoke-interface {v7, v4, v5}, Le/b/Subscription;->a(J)V
 
     :cond_c
     return-void

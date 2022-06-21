@@ -433,7 +433,7 @@
     const-string v1, "clearFocusAndMetering: setParameters -- failed"
 
     .line 7
-    invoke-static {v0, v1}, Le/c/a/a;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Le/c/a/Log;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     :cond_3
     :goto_0
@@ -635,7 +635,7 @@
 
     const-string p2, "vie@cap:focus_control"
 
-    invoke-static {p2, p1}, Le/c/a/a;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {p2, p1}, Le/c/a/Log;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 9
     new-instance p1, Landroid/graphics/Rect;
@@ -667,7 +667,7 @@
 
     const-string v1, "vie@cap:focus_control"
 
-    invoke-static {v1, v0}, Le/c/a/a;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, v0}, Le/c/a/Log;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 2
     iget-object v0, p0, Lorg/webrtc/videoengine/FocusControl;->_flashModeBeforeAutoFocus:Ljava/lang/String;
@@ -721,7 +721,7 @@
 
     move-result-object v0
 
-    invoke-static {v1, v0}, Le/c/a/a;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, v0}, Le/c/a/Log;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     :cond_1
     :goto_0
@@ -761,7 +761,7 @@
 
     const-string v1, "vie@cap:focus_control"
 
-    invoke-static {v1, v0}, Le/c/a/a;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, v0}, Le/c/a/Log;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 2
     iget v0, p0, Lorg/webrtc/videoengine/FocusControl;->_focusMode:I
@@ -771,7 +771,7 @@
     const-string p1, "SetFocusMode -- SKIP!"
 
     .line 3
-    invoke-static {v1, p1}, Le/c/a/a;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, p1}, Le/c/a/Log;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     return-void
 
@@ -831,7 +831,7 @@
     const-string p1, "SetFocusMode -- SKIP, parameters == null!!!!"
 
     .line 6
-    invoke-static {v1, p1}, Le/c/a/a;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, p1}, Le/c/a/Log;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     return-void
 
@@ -894,7 +894,7 @@
 
     move-result-object p1
 
-    invoke-static {v1, p1}, Le/c/a/a;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, p1}, Le/c/a/Log;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     goto :goto_1
 
@@ -918,7 +918,7 @@
 
     move-result-object p1
 
-    invoke-static {v1, p1}, Le/c/a/a;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, p1}, Le/c/a/Log;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     :goto_1
     return-void
@@ -1046,7 +1046,7 @@
 
     const-string v1, "vie@cap:focus_control"
 
-    invoke-static {v1, v0}, Le/c/a/a;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, v0}, Le/c/a/Log;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 2
     iget-object v0, p0, Lorg/webrtc/videoengine/FocusControl;->_focusAtPoint:Landroid/graphics/PointF;
@@ -1165,7 +1165,7 @@
     const-string p1, "FocusControl.onMoveFocus: _camera.setParameters -- failed!"
 
     .line 16
-    invoke-static {v1, p1}, Le/c/a/a;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, p1}, Le/c/a/Log;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 17
     :goto_0
@@ -1213,7 +1213,7 @@
 
     const-string v1, "vie@cap:focus_control"
 
-    invoke-static {v1, v0}, Le/c/a/a;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, v0}, Le/c/a/Log;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 2
     iput p1, p0, Lorg/webrtc/videoengine/FocusControl;->_rotationAngle:I
@@ -1243,7 +1243,7 @@
 
     const-string v1, "vie@cap:focus_control"
 
-    invoke-static {v1, v0}, Le/c/a/a;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, v0}, Le/c/a/Log;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 2
     iget-boolean v0, p0, Lorg/webrtc/videoengine/FocusControl;->_started:Z
@@ -1303,7 +1303,7 @@
 
     const-string v1, "vie@cap:focus_control"
 
-    invoke-static {v1, v0}, Le/c/a/a;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, v0}, Le/c/a/Log;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 2
     iget-boolean v0, p0, Lorg/webrtc/videoengine/FocusControl;->_started:Z

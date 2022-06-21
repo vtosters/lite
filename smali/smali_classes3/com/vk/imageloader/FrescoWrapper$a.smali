@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/imageloader/FrescoWrapper;->a(Lcom/facebook/x/d/h;)V
+    value = Lcom/vk/imageloader/FrescoWrapper;->a(Lcom/facebook/x/d/ImagePipelineConfig;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;

@@ -3,12 +3,12 @@
 .source "GroupedStoriesSettingsPresenter.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/b;
+.implements Lkotlin/jvm/b/Functions2;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/stories/settings/GroupedStoriesSettingsPresenter;->a(Lcom/vk/lists/o;I)I
+    value = Lcom/vk/stories/settings/GroupedStoriesSettingsPresenter;->a(Lcom/vk/lists/ListDataSet;I)I
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -19,8 +19,8 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/b<",
-        "Lcom/vk/common/i/b;",
+        "Lkotlin/jvm/b/Functions2<",
+        "Lcom/vk/common/i/RecyclerItem;",
         "Ljava/lang/Boolean;",
         ">;"
     }
@@ -46,11 +46,11 @@
 
 
 # virtual methods
-.method public final a(Lcom/vk/common/i/b;)Z
+.method public final a(Lcom/vk/common/i/RecyclerItem;)Z
     .locals 3
 
     .line 1
-    instance-of v0, p1, Lcom/vk/stories/settings/g;
+    instance-of v0, p1, Lcom/vk/stories/settings/StoriesGroupedSettingsRecyclerItem;
 
     const/4 v1, 0x0
 
@@ -59,14 +59,14 @@
     move-object p1, v1
 
     :cond_0
-    check-cast p1, Lcom/vk/stories/settings/g;
+    check-cast p1, Lcom/vk/stories/settings/StoriesGroupedSettingsRecyclerItem;
 
     const/4 v0, 0x0
 
     if-eqz p1, :cond_2
 
     .line 2
-    invoke-virtual {p1}, Lcom/vk/stories/settings/g;->c()Ljava/lang/Object;
+    invoke-virtual {p1}, Lcom/vk/stories/settings/StoriesGroupedSettingsRecyclerItem;->c()Ljava/lang/Object;
 
     move-result-object p1
 
@@ -100,9 +100,9 @@
     .locals 0
 
     .line 1
-    check-cast p1, Lcom/vk/common/i/b;
+    check-cast p1, Lcom/vk/common/i/RecyclerItem;
 
-    invoke-virtual {p0, p1}, Lcom/vk/stories/settings/GroupedStoriesSettingsPresenter$indexOfOwner$1;->a(Lcom/vk/common/i/b;)Z
+    invoke-virtual {p0, p1}, Lcom/vk/stories/settings/GroupedStoriesSettingsPresenter$indexOfOwner$1;->a(Lcom/vk/common/i/RecyclerItem;)Z
 
     move-result p1
 

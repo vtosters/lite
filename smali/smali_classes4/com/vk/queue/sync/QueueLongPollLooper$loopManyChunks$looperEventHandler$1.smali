@@ -3,12 +3,12 @@
 .source "QueueLongPollLooper.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/b;
+.implements Lkotlin/jvm/b/Functions2;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/queue/sync/QueueLongPollLooper;->b(Ljava/util/Collection;Lkotlin/jvm/b/b;Lkotlin/jvm/b/b;)V
+    value = Lcom/vk/queue/sync/QueueLongPollLooper;->b(Ljava/util/Collection;Lkotlin/jvm/b/Functions2;Lkotlin/jvm/b/Functions2;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -19,15 +19,15 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/b<",
+        "Lkotlin/jvm/b/Functions2<",
         "Ljava/util/Map<",
-        "Lcom/vk/queue/sync/models/b;",
+        "Lcom/vk/queue/sync/models/QueueAccessParams;",
         "+",
         "Ljava/util/List<",
         "+",
         "Lorg/json/JSONObject;",
         ">;>;",
-        "Lkotlin/m;",
+        "Lkotlin/Unit;",
         ">;"
     }
 .end annotation
@@ -62,7 +62,7 @@
         value = {
             "(",
             "Ljava/util/Map<",
-            "Lcom/vk/queue/sync/models/b;",
+            "Lcom/vk/queue/sync/models/QueueAccessParams;",
             "+",
             "Ljava/util/List<",
             "+",
@@ -88,7 +88,7 @@
     invoke-virtual {p1}, Ljava/lang/Object;->notify()V
 
     .line 4
-    sget-object p1, Lkotlin/m;->a:Lkotlin/m;
+    sget-object p1, Lkotlin/Unit;->a:Lkotlin/Unit;
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
@@ -113,7 +113,7 @@
 
     invoke-virtual {p0, p1}, Lcom/vk/queue/sync/QueueLongPollLooper$loopManyChunks$looperEventHandler$1;->a(Ljava/util/Map;)V
 
-    sget-object p1, Lkotlin/m;->a:Lkotlin/m;
+    sget-object p1, Lkotlin/Unit;->a:Lkotlin/Unit;
 
     return-object p1
 .end method

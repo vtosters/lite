@@ -8,7 +8,7 @@
 
 .field private b:I
 
-.field private final c:Lcom/vk/ui/photoviewer/h;
+.field private final c:Lcom/vk/ui/photoviewer/TagsOverlayView;
 
 .field private final d:Lcom/vk/ui/photoviewer/GoodsOverlayView;
 
@@ -21,19 +21,19 @@
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 2
-    new-instance v0, Lcom/vk/ui/photoviewer/h;
+    new-instance v0, Lcom/vk/ui/photoviewer/TagsOverlayView;
 
-    invoke-direct {v0, p1}, Lcom/vk/ui/photoviewer/h;-><init>(Landroid/content/Context;)V
+    invoke-direct {v0, p1}, Lcom/vk/ui/photoviewer/TagsOverlayView;-><init>(Landroid/content/Context;)V
 
     .line 3
     new-instance v1, Lcom/vk/ui/photoviewer/OverlayViewController$$special$$inlined$apply$lambda$1;
 
     invoke-direct {v1, p1}, Lcom/vk/ui/photoviewer/OverlayViewController$$special$$inlined$apply$lambda$1;-><init>(Landroid/content/Context;)V
 
-    invoke-virtual {v0, v1}, Lcom/vk/ui/photoviewer/h;->setOnTagClickListener(Lkotlin/jvm/b/b;)V
+    invoke-virtual {v0, v1}, Lcom/vk/ui/photoviewer/TagsOverlayView;->setOnTagClickListener(Lkotlin/jvm/b/Functions2;)V
 
     .line 4
-    iput-object v0, p0, Lcom/vk/ui/photoviewer/OverlayViewController;->c:Lcom/vk/ui/photoviewer/h;
+    iput-object v0, p0, Lcom/vk/ui/photoviewer/OverlayViewController;->c:Lcom/vk/ui/photoviewer/TagsOverlayView;
 
     .line 5
     new-instance v0, Lcom/vk/ui/photoviewer/GoodsOverlayView;
@@ -50,7 +50,7 @@
 
     move-object v3, p1
 
-    invoke-direct/range {v2 .. v7}, Lcom/vk/ui/photoviewer/GoodsOverlayView;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;IILkotlin/jvm/internal/i;)V
+    invoke-direct/range {v2 .. v7}, Lcom/vk/ui/photoviewer/GoodsOverlayView;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;IILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     const/16 p1, 0x8
 
@@ -83,13 +83,13 @@
     if-eq v0, p1, :cond_0
 
     .line 3
-    iget-object v0, p0, Lcom/vk/ui/photoviewer/OverlayViewController;->c:Lcom/vk/ui/photoviewer/h;
+    iget-object v0, p0, Lcom/vk/ui/photoviewer/OverlayViewController;->c:Lcom/vk/ui/photoviewer/TagsOverlayView;
 
     invoke-static {}, Lkotlin/collections/l;->a()Ljava/util/List;
 
     move-result-object v1
 
-    invoke-virtual {v0, v1}, Lcom/vk/ui/photoviewer/h;->setPhotoTags(Ljava/util/List;)V
+    invoke-virtual {v0, v1}, Lcom/vk/ui/photoviewer/TagsOverlayView;->setPhotoTags(Ljava/util/List;)V
 
     .line 4
     :cond_0
@@ -130,7 +130,7 @@
     if-eqz v1, :cond_0
 
     .line 6
-    iget-object v2, v0, Lcom/vk/ui/photoviewer/OverlayViewController;->c:Lcom/vk/ui/photoviewer/h;
+    iget-object v2, v0, Lcom/vk/ui/photoviewer/OverlayViewController;->c:Lcom/vk/ui/photoviewer/TagsOverlayView;
 
     const-wide/16 v3, 0x96
 
@@ -185,7 +185,7 @@
     if-eqz v1, :cond_2
 
     .line 10
-    iget-object v2, v0, Lcom/vk/ui/photoviewer/OverlayViewController;->c:Lcom/vk/ui/photoviewer/h;
+    iget-object v2, v0, Lcom/vk/ui/photoviewer/OverlayViewController;->c:Lcom/vk/ui/photoviewer/TagsOverlayView;
 
     const-wide/16 v3, 0x96
 
@@ -241,24 +241,24 @@
             "(",
             "Ljava/util/List<",
             "+",
-            "Lcom/vk/dto/photo/a;",
+            "Lcom/vk/dto/photo/PhotoTag;",
             ">;)V"
         }
     .end annotation
 
     .line 2
-    iget-object v0, p0, Lcom/vk/ui/photoviewer/OverlayViewController;->c:Lcom/vk/ui/photoviewer/h;
+    iget-object v0, p0, Lcom/vk/ui/photoviewer/OverlayViewController;->c:Lcom/vk/ui/photoviewer/TagsOverlayView;
 
-    invoke-virtual {v0, p1}, Lcom/vk/ui/photoviewer/h;->setPhotoTags(Ljava/util/List;)V
+    invoke-virtual {v0, p1}, Lcom/vk/ui/photoviewer/TagsOverlayView;->setPhotoTags(Ljava/util/List;)V
 
     return-void
 .end method
 
-.method public final c()Lcom/vk/ui/photoviewer/h;
+.method public final c()Lcom/vk/ui/photoviewer/TagsOverlayView;
     .locals 1
 
     .line 1
-    iget-object v0, p0, Lcom/vk/ui/photoviewer/OverlayViewController;->c:Lcom/vk/ui/photoviewer/h;
+    iget-object v0, p0, Lcom/vk/ui/photoviewer/OverlayViewController;->c:Lcom/vk/ui/photoviewer/TagsOverlayView;
 
     return-object v0
 .end method
@@ -267,7 +267,7 @@
     .locals 9
 
     .line 1
-    iget-object v0, p0, Lcom/vk/ui/photoviewer/OverlayViewController;->c:Lcom/vk/ui/photoviewer/h;
+    iget-object v0, p0, Lcom/vk/ui/photoviewer/OverlayViewController;->c:Lcom/vk/ui/photoviewer/TagsOverlayView;
 
     const-wide/16 v1, 0x96
 

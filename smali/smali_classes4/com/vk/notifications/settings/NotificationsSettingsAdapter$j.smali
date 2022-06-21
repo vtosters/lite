@@ -38,9 +38,9 @@
     .locals 2
 
     .line 1
-    sget-object p1, Lcom/vk/pushes/j/b;->d:Lcom/vk/pushes/j/b;
+    sget-object p1, Lcom/vk/pushes/j/DndHelper;->d:Lcom/vk/pushes/j/DndHelper;
 
-    invoke-virtual {p1}, Lcom/vk/pushes/j/b;->b()Ljava/util/List;
+    invoke-virtual {p1}, Lcom/vk/pushes/j/DndHelper;->b()Ljava/util/List;
 
     move-result-object p1
 

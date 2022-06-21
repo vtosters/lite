@@ -20,7 +20,7 @@
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Landroid/util/SparseArray<",
-            "Lcom/vk/webapp/commands/c;",
+            "Lcom/vk/webapp/commands/VkUiBaseCommand;",
             ">;"
         }
     .end annotation
@@ -40,7 +40,7 @@
 
 .field private final d:Lcom/vk/core/fragments/FragmentImpl;
 
-.field private final e:Lio/reactivex/disposables/a;
+.field private final e:Lio/reactivex/disposables/CompositeDisposable;
 
 .field private final f:Lcom/vk/webapp/bridges/UiFragmentAndroidBridge;
 
@@ -53,12 +53,12 @@
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, v1}, Lcom/vk/webapp/commands/VkUiCommandsController$a;-><init>(Lkotlin/jvm/internal/i;)V
+    invoke-direct {v0, v1}, Lcom/vk/webapp/commands/VkUiCommandsController$a;-><init>(Lkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     return-void
 .end method
 
-.method public constructor <init>(Lcom/vk/core/fragments/FragmentImpl;Lio/reactivex/disposables/a;Lcom/vk/webapp/bridges/UiFragmentAndroidBridge;)V
+.method public constructor <init>(Lcom/vk/core/fragments/FragmentImpl;Lio/reactivex/disposables/CompositeDisposable;Lcom/vk/webapp/bridges/UiFragmentAndroidBridge;)V
     .locals 4
 
     .line 1
@@ -66,7 +66,7 @@
 
     iput-object p1, p0, Lcom/vk/webapp/commands/VkUiCommandsController;->d:Lcom/vk/core/fragments/FragmentImpl;
 
-    iput-object p2, p0, Lcom/vk/webapp/commands/VkUiCommandsController;->e:Lio/reactivex/disposables/a;
+    iput-object p2, p0, Lcom/vk/webapp/commands/VkUiCommandsController;->e:Lio/reactivex/disposables/CompositeDisposable;
 
     iput-object p3, p0, Lcom/vk/webapp/commands/VkUiCommandsController;->f:Lcom/vk/webapp/bridges/UiFragmentAndroidBridge;
 
@@ -108,9 +108,9 @@
 
     move-result p2
 
-    new-instance p3, Lcom/vk/webapp/commands/g;
+    new-instance p3, Lcom/vk/webapp/commands/VkUiGetPhoneNumberCommand;
 
-    invoke-direct {p3}, Lcom/vk/webapp/commands/g;-><init>()V
+    invoke-direct {p3}, Lcom/vk/webapp/commands/VkUiGetPhoneNumberCommand;-><init>()V
 
     invoke-virtual {p1, p2, p3}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
@@ -123,9 +123,9 @@
 
     move-result p2
 
-    new-instance p3, Lcom/vk/webapp/commands/f;
+    new-instance p3, Lcom/vk/webapp/commands/VkUiGetEmailCommand;
 
-    invoke-direct {p3}, Lcom/vk/webapp/commands/f;-><init>()V
+    invoke-direct {p3}, Lcom/vk/webapp/commands/VkUiGetEmailCommand;-><init>()V
 
     invoke-virtual {p1, p2, p3}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
@@ -138,9 +138,9 @@
 
     move-result p2
 
-    new-instance p3, Lcom/vk/webapp/commands/a;
+    new-instance p3, Lcom/vk/webapp/commands/VkUiAllowMessagesFromGroupCommand;
 
-    invoke-direct {p3}, Lcom/vk/webapp/commands/a;-><init>()V
+    invoke-direct {p3}, Lcom/vk/webapp/commands/VkUiAllowMessagesFromGroupCommand;-><init>()V
 
     invoke-virtual {p1, p2, p3}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
@@ -153,9 +153,9 @@
 
     move-result p2
 
-    new-instance p3, Lcom/vk/webapp/commands/h;
+    new-instance p3, Lcom/vk/webapp/commands/VkUiJoinGroupCommand;
 
-    invoke-direct {p3}, Lcom/vk/webapp/commands/h;-><init>()V
+    invoke-direct {p3}, Lcom/vk/webapp/commands/VkUiJoinGroupCommand;-><init>()V
 
     invoke-virtual {p1, p2, p3}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
@@ -202,9 +202,9 @@
 
     move-result p2
 
-    new-instance p3, Lcom/vk/webapp/commands/e;
+    new-instance p3, Lcom/vk/webapp/commands/VkUiFriendsSearchCommand;
 
-    invoke-direct {p3}, Lcom/vk/webapp/commands/e;-><init>()V
+    invoke-direct {p3}, Lcom/vk/webapp/commands/VkUiFriendsSearchCommand;-><init>()V
 
     invoke-virtual {p1, p2, p3}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
@@ -232,9 +232,9 @@
 
     move-result p2
 
-    new-instance p3, Lcom/vk/webapp/commands/k;
+    new-instance p3, Lcom/vk/webapp/commands/VkUiStorageGetKeysCommand;
 
-    invoke-direct {p3}, Lcom/vk/webapp/commands/k;-><init>()V
+    invoke-direct {p3}, Lcom/vk/webapp/commands/VkUiStorageGetKeysCommand;-><init>()V
 
     invoke-virtual {p1, p2, p3}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
@@ -247,9 +247,9 @@
 
     move-result p2
 
-    new-instance p3, Lcom/vk/webapp/commands/j;
+    new-instance p3, Lcom/vk/webapp/commands/VkUiStorageGetCommand;
 
-    invoke-direct {p3}, Lcom/vk/webapp/commands/j;-><init>()V
+    invoke-direct {p3}, Lcom/vk/webapp/commands/VkUiStorageGetCommand;-><init>()V
 
     invoke-virtual {p1, p2, p3}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
@@ -262,9 +262,9 @@
 
     move-result p2
 
-    new-instance p3, Lcom/vk/webapp/commands/l;
+    new-instance p3, Lcom/vk/webapp/commands/VkUiStorageSetCommand;
 
-    invoke-direct {p3}, Lcom/vk/webapp/commands/l;-><init>()V
+    invoke-direct {p3}, Lcom/vk/webapp/commands/VkUiStorageSetCommand;-><init>()V
 
     invoke-virtual {p1, p2, p3}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
@@ -277,9 +277,9 @@
 
     move-result p2
 
-    new-instance p3, Lcom/vk/webapp/commands/i;
+    new-instance p3, Lcom/vk/webapp/commands/VkUiShowCommunityWidgetCommand;
 
-    invoke-direct {p3}, Lcom/vk/webapp/commands/i;-><init>()V
+    invoke-direct {p3}, Lcom/vk/webapp/commands/VkUiShowCommunityWidgetCommand;-><init>()V
 
     invoke-virtual {p1, p2, p3}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
@@ -292,9 +292,9 @@
 
     move-result p2
 
-    new-instance p3, Lcom/vk/webapp/commands/d;
+    new-instance p3, Lcom/vk/webapp/commands/VkUiCopyTextCommand;
 
-    invoke-direct {p3}, Lcom/vk/webapp/commands/d;-><init>()V
+    invoke-direct {p3}, Lcom/vk/webapp/commands/VkUiCopyTextCommand;-><init>()V
 
     invoke-virtual {p1, p2, p3}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
@@ -307,9 +307,9 @@
 
     move-result p2
 
-    new-instance p3, Lcom/vk/webapp/commands/b;
+    new-instance p3, Lcom/vk/webapp/commands/VkUiAppInstallCommand;
 
-    invoke-direct {p3}, Lcom/vk/webapp/commands/b;-><init>()V
+    invoke-direct {p3}, Lcom/vk/webapp/commands/VkUiAppInstallCommand;-><init>()V
 
     invoke-virtual {p1, p2, p3}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
@@ -329,16 +329,16 @@
 
     move-result-object p3
 
-    check-cast p3, Lcom/vk/webapp/commands/c;
+    check-cast p3, Lcom/vk/webapp/commands/VkUiBaseCommand;
 
     .line 22
     iget-object v1, p0, Lcom/vk/webapp/commands/VkUiCommandsController;->d:Lcom/vk/core/fragments/FragmentImpl;
 
-    iget-object v2, p0, Lcom/vk/webapp/commands/VkUiCommandsController;->e:Lio/reactivex/disposables/a;
+    iget-object v2, p0, Lcom/vk/webapp/commands/VkUiCommandsController;->e:Lio/reactivex/disposables/CompositeDisposable;
 
     iget-object v3, p0, Lcom/vk/webapp/commands/VkUiCommandsController;->f:Lcom/vk/webapp/bridges/UiFragmentAndroidBridge;
 
-    invoke-virtual {p3, v1, v2, v3, p0}, Lcom/vk/webapp/commands/c;->a(Lcom/vk/core/fragments/FragmentImpl;Lio/reactivex/disposables/a;Lcom/vk/webapp/bridges/UiFragmentAndroidBridge;Lcom/vk/webapp/commands/VkUiPermissionsHandler;)V
+    invoke-virtual {p3, v1, v2, v3, p0}, Lcom/vk/webapp/commands/VkUiBaseCommand;->a(Lcom/vk/core/fragments/FragmentImpl;Lio/reactivex/disposables/CompositeDisposable;Lcom/vk/webapp/bridges/UiFragmentAndroidBridge;Lcom/vk/webapp/commands/VkUiPermissionsHandler;)V
 
     add-int/lit8 v0, v0, 0x1
 
@@ -361,20 +361,20 @@
     .locals 4
 
     .line 2
-    iget-object v0, p0, Lcom/vk/webapp/commands/VkUiCommandsController;->e:Lio/reactivex/disposables/a;
+    iget-object v0, p0, Lcom/vk/webapp/commands/VkUiCommandsController;->e:Lio/reactivex/disposables/CompositeDisposable;
 
-    new-instance v1, Lcom/vk/api/apps/l;
+    new-instance v1, Lcom/vk/api/apps/AppsGetDevicePermissions;
 
     iget v2, p0, Lcom/vk/webapp/commands/VkUiCommandsController;->c:I
 
-    invoke-direct {v1, v2}, Lcom/vk/api/apps/l;-><init>(I)V
+    invoke-direct {v1, v2}, Lcom/vk/api/apps/AppsGetDevicePermissions;-><init>(I)V
 
     const/4 v2, 0x0
 
     const/4 v3, 0x1
 
     .line 3
-    invoke-static {v1, v2, v3, v2}, Lcom/vk/api/base/d;->d(Lcom/vk/api/base/d;Lcom/vk/api/base/e;ILjava/lang/Object;)Lc/a/m;
+    invoke-static {v1, v2, v3, v2}, Lcom/vk/api/base/ApiRequest;->d(Lcom/vk/api/base/ApiRequest;Lcom/vk/api/base/ApiThreadHolder;ILjava/lang/Object;)Lio/reactivex/Observable;
 
     move-result-object v1
 
@@ -383,12 +383,12 @@
 
     invoke-direct {v2, p0}, Lcom/vk/webapp/commands/VkUiCommandsController$d;-><init>(Lcom/vk/webapp/commands/VkUiCommandsController;)V
 
-    invoke-virtual {v1, v2}, Lc/a/m;->f(Lc/a/z/g;)Lio/reactivex/disposables/b;
+    invoke-virtual {v1, v2}, Lio/reactivex/Observable;->f(Lio/reactivex/functions/Consumer;)Lio/reactivex/disposables/Disposable;
 
     move-result-object v1
 
     .line 5
-    invoke-virtual {v0, v1}, Lio/reactivex/disposables/a;->b(Lio/reactivex/disposables/b;)Z
+    invoke-virtual {v0, v1}, Lio/reactivex/disposables/CompositeDisposable;->b(Lio/reactivex/disposables/Disposable;)Z
 
     return-void
 .end method
@@ -401,7 +401,7 @@
         value = {
             "()",
             "Landroid/util/SparseArray<",
-            "Lcom/vk/webapp/commands/c;",
+            "Lcom/vk/webapp/commands/VkUiBaseCommand;",
             ">;"
         }
     .end annotation
@@ -412,7 +412,7 @@
     return-object v0
 .end method
 
-.method public final a(Lcom/vk/webapp/commands/VkUiCommandsController$Commands;)Lcom/vk/webapp/commands/c;
+.method public final a(Lcom/vk/webapp/commands/VkUiCommandsController$Commands;)Lcom/vk/webapp/commands/VkUiBaseCommand;
     .locals 1
 
     .line 3
@@ -426,7 +426,7 @@
 
     move-result-object p1
 
-    check-cast p1, Lcom/vk/webapp/commands/c;
+    check-cast p1, Lcom/vk/webapp/commands/VkUiBaseCommand;
 
     return-object p1
 .end method
@@ -447,9 +447,9 @@
     .locals 8
 
     .line 10
-    iget-object v0, p0, Lcom/vk/webapp/commands/VkUiCommandsController;->e:Lio/reactivex/disposables/a;
+    iget-object v0, p0, Lcom/vk/webapp/commands/VkUiCommandsController;->e:Lio/reactivex/disposables/CompositeDisposable;
 
-    new-instance v7, Lcom/vk/api/apps/c0;
+    new-instance v7, Lcom/vk/api/apps/AppsSetDevicePermissions;
 
     iget v2, p0, Lcom/vk/webapp/commands/VkUiCommandsController;->c:I
 
@@ -465,14 +465,14 @@
 
     move-object v1, v7
 
-    invoke-direct/range {v1 .. v6}, Lcom/vk/api/apps/c0;-><init>(ILjava/lang/String;ZILkotlin/jvm/internal/i;)V
+    invoke-direct/range {v1 .. v6}, Lcom/vk/api/apps/AppsSetDevicePermissions;-><init>(ILjava/lang/String;ZILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     const/4 v1, 0x0
 
     const/4 v2, 0x1
 
     .line 11
-    invoke-static {v7, v1, v2, v1}, Lcom/vk/api/base/d;->d(Lcom/vk/api/base/d;Lcom/vk/api/base/e;ILjava/lang/Object;)Lc/a/m;
+    invoke-static {v7, v1, v2, v1}, Lcom/vk/api/base/ApiRequest;->d(Lcom/vk/api/base/ApiRequest;Lcom/vk/api/base/ApiThreadHolder;ILjava/lang/Object;)Lio/reactivex/Observable;
 
     move-result-object v1
 
@@ -485,17 +485,17 @@
     sget-object p1, Lcom/vk/webapp/commands/VkUiCommandsController$c;->a:Lcom/vk/webapp/commands/VkUiCommandsController$c;
 
     .line 14
-    invoke-virtual {v1, v2, p1}, Lc/a/m;->a(Lc/a/z/g;Lc/a/z/g;)Lio/reactivex/disposables/b;
+    invoke-virtual {v1, v2, p1}, Lio/reactivex/Observable;->a(Lio/reactivex/functions/Consumer;Lio/reactivex/functions/Consumer;)Lio/reactivex/disposables/Disposable;
 
     move-result-object p1
 
     .line 15
-    invoke-virtual {v0, p1}, Lio/reactivex/disposables/a;->b(Lio/reactivex/disposables/b;)Z
+    invoke-virtual {v0, p1}, Lio/reactivex/disposables/CompositeDisposable;->b(Lio/reactivex/disposables/Disposable;)Z
 
     return-void
 .end method
 
-.method public final a(Lcom/vk/webapp/helpers/b;)V
+.method public final a(Lcom/vk/webapp/helpers/VkAppsAnalytics;)V
     .locals 4
 
     .line 4
@@ -516,10 +516,10 @@
 
     move-result-object v3
 
-    check-cast v3, Lcom/vk/webapp/commands/c;
+    check-cast v3, Lcom/vk/webapp/commands/VkUiBaseCommand;
 
     .line 7
-    invoke-virtual {v3, p1}, Lcom/vk/webapp/commands/c;->a(Lcom/vk/webapp/helpers/b;)V
+    invoke-virtual {v3, p1}, Lcom/vk/webapp/commands/VkUiBaseCommand;->a(Lcom/vk/webapp/helpers/VkAppsAnalytics;)V
 
     add-int/lit8 v2, v2, 0x1
 

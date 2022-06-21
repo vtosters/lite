@@ -3,7 +3,7 @@
 .source "VKStickerCachedImageView.java"
 
 # interfaces
-.implements Lc/a/z/g;
+.implements Lio/reactivex/functions/Consumer;
 
 
 # annotations
@@ -19,7 +19,7 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Ljava/lang/Object;",
-        "Lc/a/z/g<",
+        "Lio/reactivex/functions/Consumer<",
         "Ljava/lang/Object;",
         ">;"
     }
@@ -69,14 +69,14 @@
 
     const/4 v1, 0x0
 
-    invoke-virtual {v0, v1}, Lcom/vk/imageloader/view/VKImageView;->setOnLoadCallback(Lcom/vk/imageloader/g;)V
+    invoke-virtual {v0, v1}, Lcom/vk/imageloader/view/VKImageView;->setOnLoadCallback(Lcom/vk/imageloader/OnLoadCallback;)V
 
     .line 4
     iget-object v0, p0, Lcom/vk/stickers/views/VKStickerCachedImageView$b;->b:Lcom/vk/stickers/views/VKStickerCachedImageView;
 
     iget v1, p0, Lcom/vk/stickers/views/VKStickerCachedImageView$b;->a:I
 
-    sget v2, Lcom/vk/stickers/v;->d:I
+    sget v2, Lcom/vk/stickers/StickersConfig;->d:I
 
     invoke-virtual {p1, v1, v2}, Lcom/vk/dto/stickers/StickerStockItem;->a(II)Ljava/lang/String;
 
@@ -85,9 +85,9 @@
     invoke-virtual {v0, v1}, Lcom/vk/imageloader/view/VKImageView;->b(Ljava/lang/String;)V
 
     .line 5
-    sget-object v0, Lcom/vk/stickers/t;->l:Lcom/vk/stickers/t;
+    sget-object v0, Lcom/vk/stickers/Stickers;->l:Lcom/vk/stickers/Stickers;
 
-    invoke-virtual {v0, p1}, Lcom/vk/stickers/t;->c(Lcom/vk/dto/stickers/StickerStockItem;)V
+    invoke-virtual {v0, p1}, Lcom/vk/stickers/Stickers;->c(Lcom/vk/dto/stickers/StickerStockItem;)V
 
     :cond_0
     return-void

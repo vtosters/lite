@@ -3,7 +3,7 @@
 .source "SharingService.java"
 
 # interfaces
-.implements Lcom/vk/api/base/a;
+.implements Lcom/vk/api/base/ApiCallback;
 
 
 # annotations
@@ -19,7 +19,7 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Ljava/lang/Object;",
-        "Lcom/vk/api/base/a<",
+        "Lcom/vk/api/base/ApiCallback<",
         "Lcom/vk/dto/newsfeed/entries/NewsEntry;",
         ">;"
     }
@@ -86,15 +86,15 @@
     check-cast p1, Lcom/vk/dto/newsfeed/entries/Post;
 
     .line 4
-    sget-object v0, Lcom/vk/newsfeed/controllers/a;->e:Lcom/vk/newsfeed/controllers/a;
+    sget-object v0, Lcom/vk/newsfeed/controllers/NewsfeedController;->e:Lcom/vk/newsfeed/controllers/NewsfeedController;
 
-    invoke-virtual {v0}, Lcom/vk/newsfeed/controllers/a;->n()Lb/h/g/l/d;
+    invoke-virtual {v0}, Lcom/vk/newsfeed/controllers/NewsfeedController;->n()Lb/h/g/l/NotificationCenter;
 
     move-result-object v0
 
     const/16 v1, 0x6b
 
-    new-instance v9, Lb/h/g/l/b;
+    new-instance v9, Lb/h/g/l/EventWallPostReposted;
 
     .line 5
     invoke-virtual {p1}, Lcom/vk/dto/newsfeed/entries/Post;->P1()I
@@ -129,10 +129,10 @@
 
     move-object v2, v9
 
-    invoke-direct/range {v2 .. v8}, Lb/h/g/l/b;-><init>(IIIIZZ)V
+    invoke-direct/range {v2 .. v8}, Lb/h/g/l/EventWallPostReposted;-><init>(IIIIZZ)V
 
     .line 8
-    invoke-virtual {v0, v1, v9}, Lb/h/g/l/d;->a(ILjava/lang/Object;)V
+    invoke-virtual {v0, v1, v9}, Lb/h/g/l/NotificationCenter;->a(ILjava/lang/Object;)V
 
     return-void
 .end method

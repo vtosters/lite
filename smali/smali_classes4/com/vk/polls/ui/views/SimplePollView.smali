@@ -3,13 +3,13 @@
 .source "SimplePollView.kt"
 
 # interfaces
-.implements Lb/h/t/k/a$a;
+.implements Lb/h/t/k/DefaultPollVoteController$a;
 
 
 # instance fields
-.field private q0:Lb/h/t/k/a;
+.field private q0:Lb/h/t/k/DefaultPollVoteController;
 
-.field private r0:Lb/h/t/k/d;
+.field private r0:Lb/h/t/k/PollVoteController1;
 
 
 # direct methods
@@ -20,16 +20,16 @@
     invoke-direct {p0, p1}, Lcom/vk/polls/ui/views/AbstractPollView;-><init>(Landroid/content/Context;)V
 
     .line 2
-    new-instance p1, Lb/h/t/k/a;
+    new-instance p1, Lb/h/t/k/DefaultPollVoteController;
 
-    invoke-direct {p1}, Lb/h/t/k/a;-><init>()V
+    invoke-direct {p1}, Lb/h/t/k/DefaultPollVoteController;-><init>()V
 
-    iput-object p1, p0, Lcom/vk/polls/ui/views/SimplePollView;->q0:Lb/h/t/k/a;
+    iput-object p1, p0, Lcom/vk/polls/ui/views/SimplePollView;->q0:Lb/h/t/k/DefaultPollVoteController;
 
     .line 3
-    iget-object p1, p0, Lcom/vk/polls/ui/views/SimplePollView;->q0:Lb/h/t/k/a;
+    iget-object p1, p0, Lcom/vk/polls/ui/views/SimplePollView;->q0:Lb/h/t/k/DefaultPollVoteController;
 
-    iput-object p1, p0, Lcom/vk/polls/ui/views/SimplePollView;->r0:Lb/h/t/k/d;
+    iput-object p1, p0, Lcom/vk/polls/ui/views/SimplePollView;->r0:Lb/h/t/k/PollVoteController1;
 
     .line 4
     new-instance p1, Lcom/vk/polls/ui/views/SimplePollView$a;
@@ -48,16 +48,16 @@
     invoke-direct {p0, p1, p2}, Lcom/vk/polls/ui/views/AbstractPollView;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
 
     .line 6
-    new-instance p1, Lb/h/t/k/a;
+    new-instance p1, Lb/h/t/k/DefaultPollVoteController;
 
-    invoke-direct {p1}, Lb/h/t/k/a;-><init>()V
+    invoke-direct {p1}, Lb/h/t/k/DefaultPollVoteController;-><init>()V
 
-    iput-object p1, p0, Lcom/vk/polls/ui/views/SimplePollView;->q0:Lb/h/t/k/a;
+    iput-object p1, p0, Lcom/vk/polls/ui/views/SimplePollView;->q0:Lb/h/t/k/DefaultPollVoteController;
 
     .line 7
-    iget-object p1, p0, Lcom/vk/polls/ui/views/SimplePollView;->q0:Lb/h/t/k/a;
+    iget-object p1, p0, Lcom/vk/polls/ui/views/SimplePollView;->q0:Lb/h/t/k/DefaultPollVoteController;
 
-    iput-object p1, p0, Lcom/vk/polls/ui/views/SimplePollView;->r0:Lb/h/t/k/d;
+    iput-object p1, p0, Lcom/vk/polls/ui/views/SimplePollView;->r0:Lb/h/t/k/PollVoteController1;
 
     .line 8
     new-instance p1, Lcom/vk/polls/ui/views/SimplePollView$a;
@@ -76,16 +76,16 @@
     invoke-direct {p0, p1, p2, p3}, Lcom/vk/polls/ui/views/AbstractPollView;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
 
     .line 10
-    new-instance p1, Lb/h/t/k/a;
+    new-instance p1, Lb/h/t/k/DefaultPollVoteController;
 
-    invoke-direct {p1}, Lb/h/t/k/a;-><init>()V
+    invoke-direct {p1}, Lb/h/t/k/DefaultPollVoteController;-><init>()V
 
-    iput-object p1, p0, Lcom/vk/polls/ui/views/SimplePollView;->q0:Lb/h/t/k/a;
+    iput-object p1, p0, Lcom/vk/polls/ui/views/SimplePollView;->q0:Lb/h/t/k/DefaultPollVoteController;
 
     .line 11
-    iget-object p1, p0, Lcom/vk/polls/ui/views/SimplePollView;->q0:Lb/h/t/k/a;
+    iget-object p1, p0, Lcom/vk/polls/ui/views/SimplePollView;->q0:Lb/h/t/k/DefaultPollVoteController;
 
-    iput-object p1, p0, Lcom/vk/polls/ui/views/SimplePollView;->r0:Lb/h/t/k/d;
+    iput-object p1, p0, Lcom/vk/polls/ui/views/SimplePollView;->r0:Lb/h/t/k/PollVoteController1;
 
     .line 12
     new-instance p1, Lcom/vk/polls/ui/views/SimplePollView$a;
@@ -97,27 +97,27 @@
     return-void
 .end method
 
-.method public static final synthetic a(Lcom/vk/polls/ui/views/SimplePollView;)Lb/h/t/k/a;
+.method public static final synthetic a(Lcom/vk/polls/ui/views/SimplePollView;)Lb/h/t/k/DefaultPollVoteController;
     .locals 0
 
     .line 1
-    iget-object p0, p0, Lcom/vk/polls/ui/views/SimplePollView;->q0:Lb/h/t/k/a;
+    iget-object p0, p0, Lcom/vk/polls/ui/views/SimplePollView;->q0:Lb/h/t/k/DefaultPollVoteController;
 
     return-object p0
 .end method
 
 
 # virtual methods
-.method public a(Lc/a/m;)Lc/a/m;
+.method public a(Lio/reactivex/Observable;)Lio/reactivex/Observable;
     .locals 9
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "<T:",
             "Ljava/lang/Object;",
             ">(",
-            "Lc/a/m<",
+            "Lio/reactivex/Observable<",
             "TT;>;)",
-            "Lc/a/m<",
+            "Lio/reactivex/Observable<",
             "TT;>;"
         }
     .end annotation
@@ -141,7 +141,7 @@
 
     move-object v0, p1
 
-    invoke-static/range {v0 .. v8}, Lcom/vk/core/extensions/RxExtKt;->a(Lc/a/m;Landroid/content/Context;JIZZILjava/lang/Object;)Lc/a/m;
+    invoke-static/range {v0 .. v8}, Lcom/vk/core/extensions/RxExtKt;->a(Lio/reactivex/Observable;Landroid/content/Context;JIZZILjava/lang/Object;)Lio/reactivex/Observable;
 
     move-result-object p1
 
@@ -217,20 +217,20 @@
     return-object v0
 .end method
 
-.method public getPollVoteController()Lb/h/t/k/d;
+.method public getPollVoteController()Lb/h/t/k/PollVoteController1;
     .locals 1
 
     .line 1
-    iget-object v0, p0, Lcom/vk/polls/ui/views/SimplePollView;->r0:Lb/h/t/k/d;
+    iget-object v0, p0, Lcom/vk/polls/ui/views/SimplePollView;->r0:Lb/h/t/k/PollVoteController1;
 
     return-object v0
 .end method
 
-.method public setPollVoteController(Lb/h/t/k/d;)V
+.method public setPollVoteController(Lb/h/t/k/PollVoteController1;)V
     .locals 0
 
     .line 1
-    iput-object p1, p0, Lcom/vk/polls/ui/views/SimplePollView;->r0:Lb/h/t/k/d;
+    iput-object p1, p0, Lcom/vk/polls/ui/views/SimplePollView;->r0:Lb/h/t/k/PollVoteController1;
 
     return-void
 .end method

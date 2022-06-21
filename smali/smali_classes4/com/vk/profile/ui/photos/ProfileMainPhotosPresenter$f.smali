@@ -3,12 +3,12 @@
 .source "ProfileMainPhotosPresenter.kt"
 
 # interfaces
-.implements Lc/a/z/j;
+.implements Lio/reactivex/functions/Function;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/profile/ui/photos/ProfileMainPhotosPresenter;->k()Lc/a/m;
+    value = Lcom/vk/profile/ui/photos/ProfileMainPhotosPresenter;->k()Lio/reactivex/Observable;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -24,10 +24,10 @@
         "Ljava/lang/Object;",
         ">",
         "Ljava/lang/Object;",
-        "Lc/a/z/j<",
+        "Lio/reactivex/functions/Function<",
         "Ljava/lang/Throwable;",
-        "Lcom/vk/core/util/q0<",
-        "Lcom/vk/api/photos/p$a;",
+        "Lcom/vk/core/util/Optional<",
+        "Lcom/vk/api/photos/PhotosGetNewTags$a;",
         ">;>;"
     }
 .end annotation
@@ -60,23 +60,23 @@
 
 
 # virtual methods
-.method public final a(Ljava/lang/Throwable;)Lcom/vk/core/util/q0;
+.method public final a(Ljava/lang/Throwable;)Lcom/vk/core/util/Optional;
     .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
             "Ljava/lang/Throwable;",
             ")",
-            "Lcom/vk/core/util/q0<",
-            "Lcom/vk/api/photos/p$a;",
+            "Lcom/vk/core/util/Optional<",
+            "Lcom/vk/api/photos/PhotosGetNewTags$a;",
             ">;"
         }
     .end annotation
 
     .line 1
-    sget-object p1, Lcom/vk/core/util/q0;->b:Lcom/vk/core/util/q0$a;
+    sget-object p1, Lcom/vk/core/util/Optional;->b:Lcom/vk/core/util/Optional$a;
 
-    invoke-virtual {p1}, Lcom/vk/core/util/q0$a;->a()Lcom/vk/core/util/q0;
+    invoke-virtual {p1}, Lcom/vk/core/util/Optional$a;->a()Lcom/vk/core/util/Optional;
 
     move-result-object p1
 
@@ -89,7 +89,7 @@
     .line 1
     check-cast p1, Ljava/lang/Throwable;
 
-    invoke-virtual {p0, p1}, Lcom/vk/profile/ui/photos/ProfileMainPhotosPresenter$f;->a(Ljava/lang/Throwable;)Lcom/vk/core/util/q0;
+    invoke-virtual {p0, p1}, Lcom/vk/profile/ui/photos/ProfileMainPhotosPresenter$f;->a(Ljava/lang/Throwable;)Lcom/vk/core/util/Optional;
 
     move-result-object p1
 

@@ -5,7 +5,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/qrcode/QRViewUtils;->a(Lkotlin/jvm/b/a;)Landroid/text/style/ClickableSpan;
+    value = Lcom/vk/qrcode/QRViewUtils;->a(Lkotlin/jvm/b/Functions;)Landroid/text/style/ClickableSpan;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -17,17 +17,17 @@
 # instance fields
 .field final synthetic a:I
 
-.field final synthetic b:Lkotlin/jvm/b/a;
+.field final synthetic b:Lkotlin/jvm/b/Functions;
 
 
 # direct methods
-.method constructor <init>(ILkotlin/jvm/b/a;)V
+.method constructor <init>(ILkotlin/jvm/b/Functions;)V
     .locals 0
 
     .line 1
     iput p1, p0, Lcom/vk/qrcode/QRViewUtils$b;->a:I
 
-    iput-object p2, p0, Lcom/vk/qrcode/QRViewUtils$b;->b:Lkotlin/jvm/b/a;
+    iput-object p2, p0, Lcom/vk/qrcode/QRViewUtils$b;->b:Lkotlin/jvm/b/Functions;
 
     invoke-direct {p0}, Landroid/text/style/ClickableSpan;-><init>()V
 
@@ -40,9 +40,9 @@
     .locals 0
 
     .line 1
-    iget-object p1, p0, Lcom/vk/qrcode/QRViewUtils$b;->b:Lkotlin/jvm/b/a;
+    iget-object p1, p0, Lcom/vk/qrcode/QRViewUtils$b;->b:Lkotlin/jvm/b/Functions;
 
-    invoke-interface {p1}, Lkotlin/jvm/b/a;->invoke()Ljava/lang/Object;
+    invoke-interface {p1}, Lkotlin/jvm/b/Functions;->invoke()Ljava/lang/Object;
 
     return-void
 .end method

@@ -37,7 +37,7 @@
     invoke-direct {p0, p2, p5}, Lcom/vk/webapp/VkUiFragment$a;-><init>(Ljava/lang/String;Ljava/lang/Class;)V
 
     .line 4
-    iget-object p2, p0, Lcom/vk/navigation/o;->O0:Landroid/os/Bundle;
+    iget-object p2, p0, Lcom/vk/navigation/Navigator;->O0:Landroid/os/Bundle;
 
     .line 5
     iget-object p5, p1, Lcom/vk/dto/common/data/ApiApplication;->b:Ljava/lang/String;
@@ -85,7 +85,7 @@
     return-void
 .end method
 
-.method public synthetic constructor <init>(Lcom/vk/dto/common/data/ApiApplication;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Class;Ljava/lang/Integer;ILkotlin/jvm/internal/i;)V
+.method public synthetic constructor <init>(Lcom/vk/dto/common/data/ApiApplication;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Class;Ljava/lang/Integer;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
     .locals 7
 
     and-int/lit8 p8, p7, 0x2

@@ -24,7 +24,7 @@
     return-void
 .end method
 
-.method public synthetic constructor <init>(Lkotlin/jvm/internal/i;)V
+.method public synthetic constructor <init>(Lkotlin/jvm/internal/DefaultConstructorMarker;)V
     .locals 0
 
     .line 2
@@ -33,7 +33,7 @@
     return-void
 .end method
 
-.method private final a(Landroid/content/Context;Lcom/vk/dto/music/Artist;Lcom/vk/music/stats/c;)V
+.method private final a(Landroid/content/Context;Lcom/vk/dto/music/Artist;Lcom/vk/music/stats/MusicStatsRefer;)V
     .locals 1
 
     .line 15
@@ -44,26 +44,26 @@
     if-eqz v0, :cond_0
 
     .line 16
-    new-instance v0, Lcom/vk/music/fragment/k$g;
+    new-instance v0, Lcom/vk/music/fragment/MusicFragment$g;
 
-    invoke-direct {v0}, Lcom/vk/music/fragment/k$g;-><init>()V
+    invoke-direct {v0}, Lcom/vk/music/fragment/MusicFragment$g;-><init>()V
 
     .line 17
     invoke-virtual {p2}, Lcom/vk/dto/music/Artist;->getId()Ljava/lang/String;
 
     move-result-object p2
 
-    invoke-virtual {v0, p2}, Lcom/vk/music/fragment/k$g;->a(Ljava/lang/String;)Lcom/vk/music/fragment/k$g;
+    invoke-virtual {v0, p2}, Lcom/vk/music/fragment/MusicFragment$g;->a(Ljava/lang/String;)Lcom/vk/music/fragment/MusicFragment$g;
 
     .line 18
-    invoke-interface {p3}, Lcom/vk/music/stats/c;->v0()Ljava/lang/String;
+    invoke-interface {p3}, Lcom/vk/music/stats/MusicStatsRefer;->v0()Ljava/lang/String;
 
     move-result-object p2
 
-    invoke-virtual {v0, p2}, Lcom/vk/music/fragment/k$g;->b(Ljava/lang/String;)Lcom/vk/music/fragment/k$g;
+    invoke-virtual {v0, p2}, Lcom/vk/music/fragment/MusicFragment$g;->b(Ljava/lang/String;)Lcom/vk/music/fragment/MusicFragment$g;
 
     .line 19
-    invoke-virtual {v0, p1}, Lcom/vk/navigation/o;->a(Landroid/content/Context;)V
+    invoke-virtual {v0, p1}, Lcom/vk/navigation/Navigator;->a(Landroid/content/Context;)V
 
     goto :goto_0
 
@@ -83,24 +83,24 @@
     .locals 1
 
     .line 21
-    new-instance v0, Lcom/vk/music/search/a$a;
+    new-instance v0, Lcom/vk/music/search/MusicSearchFragment$a;
 
-    invoke-direct {v0}, Lcom/vk/music/search/a$a;-><init>()V
+    invoke-direct {v0}, Lcom/vk/music/search/MusicSearchFragment$a;-><init>()V
 
     .line 22
-    invoke-virtual {v0, p2}, Lcom/vk/music/search/a$a;->b(Ljava/lang/String;)Lcom/vk/music/search/a$a;
+    invoke-virtual {v0, p2}, Lcom/vk/music/search/MusicSearchFragment$a;->b(Ljava/lang/String;)Lcom/vk/music/search/MusicSearchFragment$a;
 
     .line 23
-    invoke-virtual {v0, p1}, Lcom/vk/navigation/o;->a(Landroid/content/Context;)V
+    invoke-virtual {v0, p1}, Lcom/vk/navigation/Navigator;->a(Landroid/content/Context;)V
 
     return-void
 .end method
 
-.method public static final synthetic a(Lcom/vk/music/artists/chooser/MusicArtistSelector$Companion;Landroid/content/Context;Lcom/vk/dto/music/Artist;Lcom/vk/music/stats/c;)V
+.method public static final synthetic a(Lcom/vk/music/artists/chooser/MusicArtistSelector$Companion;Landroid/content/Context;Lcom/vk/dto/music/Artist;Lcom/vk/music/stats/MusicStatsRefer;)V
     .locals 0
 
     .line 1
-    invoke-direct {p0, p1, p2, p3}, Lcom/vk/music/artists/chooser/MusicArtistSelector$Companion;->a(Landroid/content/Context;Lcom/vk/dto/music/Artist;Lcom/vk/music/stats/c;)V
+    invoke-direct {p0, p1, p2, p3}, Lcom/vk/music/artists/chooser/MusicArtistSelector$Companion;->a(Landroid/content/Context;Lcom/vk/dto/music/Artist;Lcom/vk/music/stats/MusicStatsRefer;)V
 
     return-void
 .end method
@@ -118,7 +118,7 @@
     return-object v0
 .end method
 
-.method public final a(Landroid/app/Activity;Lcom/vk/dto/common/VideoFile;Lcom/vk/music/stats/c;)V
+.method public final a(Landroid/app/Activity;Lcom/vk/dto/common/VideoFile;Lcom/vk/music/stats/MusicStatsRefer;)V
     .locals 1
 
     if-eqz p2, :cond_1
@@ -148,13 +148,13 @@
     const/4 p2, 0x0
 
     .line 10
-    invoke-virtual {p0, p1, v0, p2, p3}, Lcom/vk/music/artists/chooser/MusicArtistSelector$Companion;->a(Landroid/app/Activity;Ljava/util/List;Ljava/lang/String;Lcom/vk/music/stats/c;)V
+    invoke-virtual {p0, p1, v0, p2, p3}, Lcom/vk/music/artists/chooser/MusicArtistSelector$Companion;->a(Landroid/app/Activity;Ljava/util/List;Ljava/lang/String;Lcom/vk/music/stats/MusicStatsRefer;)V
 
     :cond_1
     return-void
 .end method
 
-.method public final a(Landroid/app/Activity;Lcom/vk/dto/music/MusicTrack;Lcom/vk/music/stats/c;)V
+.method public final a(Landroid/app/Activity;Lcom/vk/dto/music/MusicTrack;Lcom/vk/music/stats/MusicStatsRefer;)V
     .locals 2
 
     if-eqz p2, :cond_2
@@ -197,13 +197,13 @@
     .line 6
     iget-object p2, p2, Lcom/vk/dto/music/MusicTrack;->C:Ljava/lang/String;
 
-    invoke-virtual {p0, p1, v0, p2, p3}, Lcom/vk/music/artists/chooser/MusicArtistSelector$Companion;->a(Landroid/app/Activity;Ljava/util/List;Ljava/lang/String;Lcom/vk/music/stats/c;)V
+    invoke-virtual {p0, p1, v0, p2, p3}, Lcom/vk/music/artists/chooser/MusicArtistSelector$Companion;->a(Landroid/app/Activity;Ljava/util/List;Ljava/lang/String;Lcom/vk/music/stats/MusicStatsRefer;)V
 
     :cond_2
     return-void
 .end method
 
-.method public final a(Landroid/app/Activity;Lcom/vk/dto/music/Playlist;Lcom/vk/music/stats/c;)V
+.method public final a(Landroid/app/Activity;Lcom/vk/dto/music/Playlist;Lcom/vk/music/stats/MusicStatsRefer;)V
     .locals 2
 
     if-eqz p2, :cond_2
@@ -246,13 +246,13 @@
     .line 14
     iget-object p2, p2, Lcom/vk/dto/music/Playlist;->H:Ljava/lang/String;
 
-    invoke-virtual {p0, p1, v0, p2, p3}, Lcom/vk/music/artists/chooser/MusicArtistSelector$Companion;->a(Landroid/app/Activity;Ljava/util/List;Ljava/lang/String;Lcom/vk/music/stats/c;)V
+    invoke-virtual {p0, p1, v0, p2, p3}, Lcom/vk/music/artists/chooser/MusicArtistSelector$Companion;->a(Landroid/app/Activity;Ljava/util/List;Ljava/lang/String;Lcom/vk/music/stats/MusicStatsRefer;)V
 
     :cond_2
     return-void
 .end method
 
-.method public final a(Landroid/app/Activity;Ljava/util/List;Ljava/lang/String;Lcom/vk/music/stats/c;)V
+.method public final a(Landroid/app/Activity;Ljava/util/List;Ljava/lang/String;Lcom/vk/music/stats/MusicStatsRefer;)V
     .locals 7
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -262,7 +262,7 @@
             "Lcom/vk/dto/music/Artist;",
             ">;",
             "Ljava/lang/String;",
-            "Lcom/vk/music/stats/c;",
+            "Lcom/vk/music/stats/MusicStatsRefer;",
             ")V"
         }
     .end annotation
@@ -359,7 +359,7 @@
 
     sget-object v0, Lcom/vk/music/artists/chooser/MusicArtistSelector$Companion$show$1;->a:Lcom/vk/music/artists/chooser/MusicArtistSelector$Companion$show$1;
 
-    invoke-direct {p2, p3, v0}, Lcom/vk/music/artists/chooser/ListItemSelectorBottomSheet$Builder;-><init>(Ljava/lang/String;Lkotlin/jvm/b/a;)V
+    invoke-direct {p2, p3, v0}, Lcom/vk/music/artists/chooser/ListItemSelectorBottomSheet$Builder;-><init>(Ljava/lang/String;Lkotlin/jvm/b/Functions;)V
 
     .line 30
     invoke-virtual {p2, v3}, Lcom/vk/music/artists/chooser/ListItemSelectorBottomSheet$Builder;->a(Ljava/util/List;)Lcom/vk/music/artists/chooser/ListItemSelectorBottomSheet$Builder;
@@ -367,9 +367,9 @@
     .line 31
     new-instance p3, Lcom/vk/music/artists/chooser/MusicArtistSelector$Companion$show$2;
 
-    invoke-direct {p3, p1, p4}, Lcom/vk/music/artists/chooser/MusicArtistSelector$Companion$show$2;-><init>(Landroid/app/Activity;Lcom/vk/music/stats/c;)V
+    invoke-direct {p3, p1, p4}, Lcom/vk/music/artists/chooser/MusicArtistSelector$Companion$show$2;-><init>(Landroid/app/Activity;Lcom/vk/music/stats/MusicStatsRefer;)V
 
-    invoke-virtual {p2, p3}, Lcom/vk/music/artists/chooser/ListItemSelectorBottomSheet$Builder;->a(Lkotlin/jvm/b/b;)Lcom/vk/music/artists/chooser/ListItemSelectorBottomSheet$Builder;
+    invoke-virtual {p2, p3}, Lcom/vk/music/artists/chooser/ListItemSelectorBottomSheet$Builder;->a(Lkotlin/jvm/b/Functions2;)Lcom/vk/music/artists/chooser/ListItemSelectorBottomSheet$Builder;
 
     .line 32
     check-cast p1, Landroidx/appcompat/app/AppCompatActivity;
@@ -396,7 +396,7 @@
 
     check-cast p2, Lcom/vk/dto/music/Artist;
 
-    invoke-direct {p0, p1, p2, p4}, Lcom/vk/music/artists/chooser/MusicArtistSelector$Companion;->a(Landroid/content/Context;Lcom/vk/dto/music/Artist;Lcom/vk/music/stats/c;)V
+    invoke-direct {p0, p1, p2, p4}, Lcom/vk/music/artists/chooser/MusicArtistSelector$Companion;->a(Landroid/content/Context;Lcom/vk/dto/music/Artist;Lcom/vk/music/stats/MusicStatsRefer;)V
 
     goto :goto_4
 
@@ -430,14 +430,14 @@
     const/4 p2, 0x2
 
     .line 35
-    invoke-static {p1, v1, p2, v0}, Lcom/vk/core/util/k1;->a(IZILjava/lang/Object;)V
+    invoke-static {p1, v1, p2, v0}, Lcom/vk/core/util/ToastUtils;->a(IZILjava/lang/Object;)V
 
     :cond_9
     :goto_4
     return-void
 .end method
 
-.method public final b(Landroid/app/Activity;Lcom/vk/dto/common/VideoFile;Lcom/vk/music/stats/c;)V
+.method public final b(Landroid/app/Activity;Lcom/vk/dto/common/VideoFile;Lcom/vk/music/stats/MusicStatsRefer;)V
     .locals 2
 
     if-eqz p2, :cond_2
@@ -491,7 +491,7 @@
     const/4 p2, 0x0
 
     .line 5
-    invoke-virtual {p0, p1, v0, p2, p3}, Lcom/vk/music/artists/chooser/MusicArtistSelector$Companion;->a(Landroid/app/Activity;Ljava/util/List;Ljava/lang/String;Lcom/vk/music/stats/c;)V
+    invoke-virtual {p0, p1, v0, p2, p3}, Lcom/vk/music/artists/chooser/MusicArtistSelector$Companion;->a(Landroid/app/Activity;Ljava/util/List;Ljava/lang/String;Lcom/vk/music/stats/MusicStatsRefer;)V
 
     :cond_2
     return-void

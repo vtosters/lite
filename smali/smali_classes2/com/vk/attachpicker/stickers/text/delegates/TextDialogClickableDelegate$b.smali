@@ -3,12 +3,12 @@
 .source "TextDialogClickableDelegate.kt"
 
 # interfaces
-.implements Lc/a/z/g;
+.implements Lio/reactivex/functions/Consumer;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/attachpicker/stickers/text/delegates/TextDialogClickableDelegate;-><init>(Lcom/vk/attachpicker/stickers/text/i;)V
+    value = Lcom/vk/attachpicker/stickers/text/delegates/TextDialogClickableDelegate;-><init>(Lcom/vk/attachpicker/stickers/text/TextStickerDialog;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -22,7 +22,7 @@
         "Ljava/lang/Object;",
         ">",
         "Ljava/lang/Object;",
-        "Lc/a/z/g<",
+        "Lio/reactivex/functions/Consumer<",
         "Lcom/vk/stories/clickable/models/StoryHashtagSearchResult;",
         ">;"
     }
@@ -75,11 +75,11 @@
     :cond_0
     iget-object v0, p0, Lcom/vk/attachpicker/stickers/text/delegates/TextDialogClickableDelegate$b;->a:Lcom/vk/attachpicker/stickers/text/delegates/TextDialogClickableDelegate;
 
-    invoke-static {v0}, Lcom/vk/attachpicker/stickers/text/delegates/TextDialogClickableDelegate;->e(Lcom/vk/attachpicker/stickers/text/delegates/TextDialogClickableDelegate;)Lcom/vk/attachpicker/stickers/text/i;
+    invoke-static {v0}, Lcom/vk/attachpicker/stickers/text/delegates/TextDialogClickableDelegate;->e(Lcom/vk/attachpicker/stickers/text/delegates/TextDialogClickableDelegate;)Lcom/vk/attachpicker/stickers/text/TextStickerDialog;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/vk/attachpicker/stickers/text/i;->a()V
+    invoke-virtual {v0}, Lcom/vk/attachpicker/stickers/text/TextStickerDialog;->a()V
 
     .line 4
     iget-object v0, p0, Lcom/vk/attachpicker/stickers/text/delegates/TextDialogClickableDelegate$b;->a:Lcom/vk/attachpicker/stickers/text/delegates/TextDialogClickableDelegate;
@@ -97,7 +97,7 @@
     const-string v2, "it"
 
     .line 5
-    invoke-static {p1, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     const/4 v2, 0x2
 
@@ -114,7 +114,7 @@
 
     const-string v5, "colorSelectorView"
 
-    invoke-static {v4, v5}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v4, v5}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     aput-object v4, v2, v3
 
@@ -127,7 +127,7 @@
 
     const-string v4, "pageIndicatorView"
 
-    invoke-static {v3, v4}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v3, v4}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     aput-object v3, v2, v1
 

@@ -3,7 +3,7 @@
 .source "OverlayViewController.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/b;
+.implements Lkotlin/jvm/b/Functions2;
 
 
 # annotations
@@ -19,9 +19,9 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/b<",
-        "Lcom/vk/dto/photo/a;",
-        "Lkotlin/m;",
+        "Lkotlin/jvm/b/Functions2<",
+        "Lcom/vk/dto/photo/PhotoTag;",
+        "Lkotlin/Unit;",
         ">;"
     }
 .end annotation
@@ -46,22 +46,22 @@
 
 
 # virtual methods
-.method public final a(Lcom/vk/dto/photo/a;)V
+.method public final a(Lcom/vk/dto/photo/PhotoTag;)V
     .locals 10
 
     .line 1
-    iget v0, p1, Lcom/vk/dto/photo/a;->b:I
+    iget v0, p1, Lcom/vk/dto/photo/PhotoTag;->b:I
 
     if-eqz v0, :cond_0
 
     .line 2
-    invoke-static {}, Lcom/vk/bridges/j0;->a()Lcom/vk/bridges/i0;
+    invoke-static {}, Lcom/vk/bridges/UsersBridge1;->a()Lcom/vk/bridges/UsersBridge;
 
     move-result-object v1
 
     iget-object v2, p0, Lcom/vk/ui/photoviewer/OverlayViewController$$special$$inlined$apply$lambda$1;->$context$inlined:Landroid/content/Context;
 
-    iget v3, p1, Lcom/vk/dto/photo/a;->b:I
+    iget v3, p1, Lcom/vk/dto/photo/PhotoTag;->b:I
 
     const/4 v4, 0x0
 
@@ -75,7 +75,7 @@
 
     const/4 v9, 0x0
 
-    invoke-static/range {v1 .. v9}, Lcom/vk/bridges/i0$a;->a(Lcom/vk/bridges/i0;Landroid/content/Context;IZLjava/lang/String;Ljava/lang/String;Lcom/vk/dto/profile/HeaderCatchUpLink;ILjava/lang/Object;)V
+    invoke-static/range {v1 .. v9}, Lcom/vk/bridges/UsersBridge$a;->a(Lcom/vk/bridges/UsersBridge;Landroid/content/Context;IZLjava/lang/String;Ljava/lang/String;Lcom/vk/dto/profile/HeaderCatchUpLink;ILjava/lang/Object;)V
 
     :cond_0
     return-void
@@ -85,11 +85,11 @@
     .locals 0
 
     .line 1
-    check-cast p1, Lcom/vk/dto/photo/a;
+    check-cast p1, Lcom/vk/dto/photo/PhotoTag;
 
-    invoke-virtual {p0, p1}, Lcom/vk/ui/photoviewer/OverlayViewController$$special$$inlined$apply$lambda$1;->a(Lcom/vk/dto/photo/a;)V
+    invoke-virtual {p0, p1}, Lcom/vk/ui/photoviewer/OverlayViewController$$special$$inlined$apply$lambda$1;->a(Lcom/vk/dto/photo/PhotoTag;)V
 
-    sget-object p1, Lkotlin/m;->a:Lkotlin/m;
+    sget-object p1, Lkotlin/Unit;->a:Lkotlin/Unit;
 
     return-object p1
 .end method

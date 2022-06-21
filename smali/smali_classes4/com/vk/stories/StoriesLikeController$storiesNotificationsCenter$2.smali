@@ -3,7 +3,7 @@
 .source "StoriesLikeController.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/a;
+.implements Lkotlin/jvm/b/Functions;
 
 
 # annotations
@@ -19,8 +19,8 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/a<",
-        "Lb/h/g/l/d;",
+        "Lkotlin/jvm/b/Functions<",
+        "Lb/h/g/l/NotificationCenter;",
         ">;"
     }
 .end annotation
@@ -55,11 +55,11 @@
 
 
 # virtual methods
-.method public final invoke()Lb/h/g/l/d;
+.method public final invoke()Lb/h/g/l/NotificationCenter;
     .locals 1
 
     .line 2
-    invoke-static {}, Lcom/vk/stories/StoriesController;->H()Lb/h/g/l/d;
+    invoke-static {}, Lcom/vk/stories/StoriesController;->H()Lb/h/g/l/NotificationCenter;
 
     move-result-object v0
 
@@ -70,7 +70,7 @@
     .locals 1
 
     .line 1
-    invoke-virtual {p0}, Lcom/vk/stories/StoriesLikeController$storiesNotificationsCenter$2;->invoke()Lb/h/g/l/d;
+    invoke-virtual {p0}, Lcom/vk/stories/StoriesLikeController$storiesNotificationsCenter$2;->invoke()Lb/h/g/l/NotificationCenter;
 
     move-result-object v0
 

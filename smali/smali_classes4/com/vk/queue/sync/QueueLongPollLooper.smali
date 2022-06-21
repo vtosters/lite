@@ -16,11 +16,11 @@
 
 
 # instance fields
-.field private final a:Lcom/vk/queue/sync/api/a;
+.field private final a:Lcom/vk/queue/sync/api/QueueApiManager;
 
 .field private final b:Ljava/util/concurrent/ExecutorService;
 
-.field private final c:Lb/h/u/c/a;
+.field private final c:Lb/h/u/c/QueueLogger;
 
 
 # direct methods
@@ -31,7 +31,7 @@
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, v1}, Lcom/vk/queue/sync/QueueLongPollLooper$a;-><init>(Lkotlin/jvm/internal/i;)V
+    invoke-direct {v0, v1}, Lcom/vk/queue/sync/QueueLongPollLooper$a;-><init>(Lkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     .line 1
     sget-object v0, Ljava/util/concurrent/TimeUnit;->SECONDS:Ljava/util/concurrent/TimeUnit;
@@ -47,36 +47,36 @@
     return-void
 .end method
 
-.method public constructor <init>(Lcom/vk/queue/sync/api/a;Ljava/util/concurrent/ExecutorService;Lb/h/u/c/a;)V
+.method public constructor <init>(Lcom/vk/queue/sync/api/QueueApiManager;Ljava/util/concurrent/ExecutorService;Lb/h/u/c/QueueLogger;)V
     .locals 0
 
     .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lcom/vk/queue/sync/QueueLongPollLooper;->a:Lcom/vk/queue/sync/api/a;
+    iput-object p1, p0, Lcom/vk/queue/sync/QueueLongPollLooper;->a:Lcom/vk/queue/sync/api/QueueApiManager;
 
     iput-object p2, p0, Lcom/vk/queue/sync/QueueLongPollLooper;->b:Ljava/util/concurrent/ExecutorService;
 
-    iput-object p3, p0, Lcom/vk/queue/sync/QueueLongPollLooper;->c:Lb/h/u/c/a;
+    iput-object p3, p0, Lcom/vk/queue/sync/QueueLongPollLooper;->c:Lb/h/u/c/QueueLogger;
 
     return-void
 .end method
 
-.method private final a(Ljava/lang/String;Ljava/util/Collection;)Lcom/vk/queue/sync/models/c;
+.method private final a(Ljava/lang/String;Ljava/util/Collection;)Lcom/vk/queue/sync/models/QueueCheckResponse;
     .locals 7
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
             "Ljava/lang/String;",
             "Ljava/util/Collection<",
-            "Lcom/vk/queue/sync/models/b;",
+            "Lcom/vk/queue/sync/models/QueueAccessParams;",
             ">;)",
-            "Lcom/vk/queue/sync/models/c;"
+            "Lcom/vk/queue/sync/models/QueueCheckResponse;"
         }
     .end annotation
 
     .line 27
-    iget-object v0, p0, Lcom/vk/queue/sync/QueueLongPollLooper;->a:Lcom/vk/queue/sync/api/a;
+    iget-object v0, p0, Lcom/vk/queue/sync/QueueLongPollLooper;->a:Lcom/vk/queue/sync/api/QueueApiManager;
 
     .line 28
     sget-wide v3, Lcom/vk/queue/sync/QueueLongPollLooper;->d:J
@@ -90,7 +90,7 @@
     move-object v2, p2
 
     .line 29
-    invoke-virtual/range {v0 .. v6}, Lcom/vk/queue/sync/api/a;->a(Ljava/lang/String;Ljava/util/Collection;JIZ)Lcom/vk/queue/sync/models/c;
+    invoke-virtual/range {v0 .. v6}, Lcom/vk/queue/sync/api/QueueApiManager;->a(Ljava/lang/String;Ljava/util/Collection;JIZ)Lcom/vk/queue/sync/models/QueueCheckResponse;
 
     move-result-object p1
 
@@ -129,11 +129,11 @@
     return-object p0
 .end method
 
-.method public static final synthetic a(Lcom/vk/queue/sync/QueueLongPollLooper;Ljava/lang/String;Lcom/vk/queue/sync/e/a;Lkotlin/jvm/b/b;Lkotlin/jvm/b/b;)V
+.method public static final synthetic a(Lcom/vk/queue/sync/QueueLongPollLooper;Ljava/lang/String;Lcom/vk/queue/sync/e/Chunk;Lkotlin/jvm/b/Functions2;Lkotlin/jvm/b/Functions2;)V
     .locals 0
 
     .line 3
-    invoke-direct {p0, p1, p2, p3, p4}, Lcom/vk/queue/sync/QueueLongPollLooper;->a(Ljava/lang/String;Lcom/vk/queue/sync/e/a;Lkotlin/jvm/b/b;Lkotlin/jvm/b/b;)V
+    invoke-direct {p0, p1, p2, p3, p4}, Lcom/vk/queue/sync/QueueLongPollLooper;->a(Ljava/lang/String;Lcom/vk/queue/sync/e/Chunk;Lkotlin/jvm/b/Functions2;Lkotlin/jvm/b/Functions2;)V
 
     const/4 p0, 0x0
 
@@ -149,30 +149,30 @@
     return-void
 .end method
 
-.method private final a(Lcom/vk/queue/sync/e/a;Lkotlin/jvm/b/b;Lkotlin/jvm/b/b;)V
+.method private final a(Lcom/vk/queue/sync/e/Chunk;Lkotlin/jvm/b/Functions2;Lkotlin/jvm/b/Functions2;)V
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lcom/vk/queue/sync/e/a;",
-            "Lkotlin/jvm/b/b<",
+            "Lcom/vk/queue/sync/e/Chunk;",
+            "Lkotlin/jvm/b/Functions2<",
             "-",
             "Ljava/util/Map<",
-            "Lcom/vk/queue/sync/models/b;",
+            "Lcom/vk/queue/sync/models/QueueAccessParams;",
             "+",
             "Ljava/util/List<",
             "+",
             "Lorg/json/JSONObject;",
             ">;>;",
-            "Lkotlin/m;",
+            "Lkotlin/Unit;",
             ">;",
-            "Lkotlin/jvm/b/b<",
+            "Lkotlin/jvm/b/Functions2<",
             "-",
             "Ljava/util/Map<",
-            "Lcom/vk/queue/sync/models/b;",
-            "Lcom/vk/queue/sync/models/b;",
+            "Lcom/vk/queue/sync/models/QueueAccessParams;",
+            "Lcom/vk/queue/sync/models/QueueAccessParams;",
             ">;",
-            "Lkotlin/m;",
+            "Lkotlin/Unit;",
             ">;)V"
         }
     .end annotation
@@ -185,38 +185,38 @@
     move-result-object v0
 
     .line 15
-    invoke-direct {p0, v0, p1, p2, p3}, Lcom/vk/queue/sync/QueueLongPollLooper;->a(Ljava/lang/String;Lcom/vk/queue/sync/e/a;Lkotlin/jvm/b/b;Lkotlin/jvm/b/b;)V
+    invoke-direct {p0, v0, p1, p2, p3}, Lcom/vk/queue/sync/QueueLongPollLooper;->a(Ljava/lang/String;Lcom/vk/queue/sync/e/Chunk;Lkotlin/jvm/b/Functions2;Lkotlin/jvm/b/Functions2;)V
 
     const/4 p1, 0x0
 
     throw p1
 .end method
 
-.method private final a(Ljava/lang/String;Lcom/vk/queue/sync/e/a;Lkotlin/jvm/b/b;Lkotlin/jvm/b/b;)V
+.method private final a(Ljava/lang/String;Lcom/vk/queue/sync/e/Chunk;Lkotlin/jvm/b/Functions2;Lkotlin/jvm/b/Functions2;)V
     .locals 4
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
             "Ljava/lang/String;",
-            "Lcom/vk/queue/sync/e/a;",
-            "Lkotlin/jvm/b/b<",
+            "Lcom/vk/queue/sync/e/Chunk;",
+            "Lkotlin/jvm/b/Functions2<",
             "-",
             "Ljava/util/Map<",
-            "Lcom/vk/queue/sync/models/b;",
+            "Lcom/vk/queue/sync/models/QueueAccessParams;",
             "+",
             "Ljava/util/List<",
             "+",
             "Lorg/json/JSONObject;",
             ">;>;",
-            "Lkotlin/m;",
+            "Lkotlin/Unit;",
             ">;",
-            "Lkotlin/jvm/b/b<",
+            "Lkotlin/jvm/b/Functions2<",
             "-",
             "Ljava/util/Map<",
-            "Lcom/vk/queue/sync/models/b;",
-            "Lcom/vk/queue/sync/models/b;",
+            "Lcom/vk/queue/sync/models/QueueAccessParams;",
+            "Lcom/vk/queue/sync/models/QueueAccessParams;",
             ">;",
-            "Lkotlin/m;",
+            "Lkotlin/Unit;",
             ">;)V"
         }
     .end annotation
@@ -225,7 +225,7 @@
 
     .line 16
     :try_start_0
-    iget-object v1, p0, Lcom/vk/queue/sync/QueueLongPollLooper;->c:Lb/h/u/c/a;
+    iget-object v1, p0, Lcom/vk/queue/sync/QueueLongPollLooper;->c:Lb/h/u/c/QueueLogger;
 
     new-instance v2, Ljava/lang/StringBuilder;
 
@@ -243,25 +243,25 @@
 
     move-result-object v2
 
-    invoke-virtual {v1, v2}, Lb/h/u/c/a;->a(Ljava/lang/String;)V
+    invoke-virtual {v1, v2}, Lb/h/u/c/QueueLogger;->a(Ljava/lang/String;)V
 
     .line 17
-    invoke-virtual {p2}, Lcom/vk/queue/sync/e/a;->a()Ljava/util/Collection;
+    invoke-virtual {p2}, Lcom/vk/queue/sync/e/Chunk;->a()Ljava/util/Collection;
 
     move-result-object v1
 
     .line 18
     :goto_0
-    invoke-virtual {p2}, Lcom/vk/queue/sync/e/a;->b()Ljava/lang/String;
+    invoke-virtual {p2}, Lcom/vk/queue/sync/e/Chunk;->b()Ljava/lang/String;
 
     move-result-object v2
 
-    invoke-direct {p0, v2, v1}, Lcom/vk/queue/sync/QueueLongPollLooper;->a(Ljava/lang/String;Ljava/util/Collection;)Lcom/vk/queue/sync/models/c;
+    invoke-direct {p0, v2, v1}, Lcom/vk/queue/sync/QueueLongPollLooper;->a(Ljava/lang/String;Ljava/util/Collection;)Lcom/vk/queue/sync/models/QueueCheckResponse;
 
     move-result-object v1
 
     .line 19
-    invoke-virtual {v1}, Lcom/vk/queue/sync/models/c;->a()Ljava/util/Map;
+    invoke-virtual {v1}, Lcom/vk/queue/sync/models/QueueCheckResponse;->a()Ljava/util/Map;
 
     move-result-object v2
 
@@ -274,7 +274,7 @@
     if-nez v2, :cond_1
 
     .line 20
-    invoke-virtual {v1}, Lcom/vk/queue/sync/models/c;->b()Ljava/util/Map;
+    invoke-virtual {v1}, Lcom/vk/queue/sync/models/QueueCheckResponse;->b()Ljava/util/Map;
 
     move-result-object v2
 
@@ -287,22 +287,22 @@
     if-eqz v2, :cond_0
 
     .line 21
-    invoke-virtual {v1}, Lcom/vk/queue/sync/models/c;->b()Ljava/util/Map;
+    invoke-virtual {v1}, Lcom/vk/queue/sync/models/QueueCheckResponse;->b()Ljava/util/Map;
 
     move-result-object v2
 
-    invoke-interface {p3, v2}, Lkotlin/jvm/b/b;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {p3, v2}, Lkotlin/jvm/b/Functions2;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
 
     .line 22
     :cond_0
-    invoke-virtual {v1}, Lcom/vk/queue/sync/models/c;->c()Ljava/util/Map;
+    invoke-virtual {v1}, Lcom/vk/queue/sync/models/QueueCheckResponse;->c()Ljava/util/Map;
 
     move-result-object v2
 
-    invoke-interface {p4, v2}, Lkotlin/jvm/b/b;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {p4, v2}, Lkotlin/jvm/b/Functions2;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
 
     .line 23
-    invoke-virtual {v1}, Lcom/vk/queue/sync/models/c;->c()Ljava/util/Map;
+    invoke-virtual {v1}, Lcom/vk/queue/sync/models/QueueCheckResponse;->c()Ljava/util/Map;
 
     move-result-object v1
 
@@ -316,7 +316,7 @@
     :cond_1
     new-instance p2, Lcom/vk/queue/sync/models/QueueAccessException;
 
-    invoke-virtual {v1}, Lcom/vk/queue/sync/models/c;->a()Ljava/util/Map;
+    invoke-virtual {v1}, Lcom/vk/queue/sync/models/QueueCheckResponse;->a()Ljava/util/Map;
 
     move-result-object p3
 
@@ -330,7 +330,7 @@
     move-exception p2
 
     .line 25
-    iget-object p3, p0, Lcom/vk/queue/sync/QueueLongPollLooper;->c:Lb/h/u/c/a;
+    iget-object p3, p0, Lcom/vk/queue/sync/QueueLongPollLooper;->c:Lb/h/u/c/QueueLogger;
 
     new-instance p4, Ljava/lang/StringBuilder;
 
@@ -350,7 +350,7 @@
 
     move-result-object p1
 
-    invoke-virtual {p3, p1}, Lb/h/u/c/a;->a(Ljava/lang/String;)V
+    invoke-virtual {p3, p1}, Lb/h/u/c/QueueLogger;->a(Ljava/lang/String;)V
 
     .line 26
     throw p2
@@ -386,32 +386,32 @@
     goto :goto_0
 .end method
 
-.method private final b(Ljava/util/Collection;Lkotlin/jvm/b/b;Lkotlin/jvm/b/b;)V
+.method private final b(Ljava/util/Collection;Lkotlin/jvm/b/Functions2;Lkotlin/jvm/b/Functions2;)V
     .locals 21
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
             "Ljava/util/Collection<",
-            "Lcom/vk/queue/sync/e/a;",
+            "Lcom/vk/queue/sync/e/Chunk;",
             ">;",
-            "Lkotlin/jvm/b/b<",
+            "Lkotlin/jvm/b/Functions2<",
             "-",
             "Ljava/util/Map<",
-            "Lcom/vk/queue/sync/models/b;",
+            "Lcom/vk/queue/sync/models/QueueAccessParams;",
             "+",
             "Ljava/util/List<",
             "+",
             "Lorg/json/JSONObject;",
             ">;>;",
-            "Lkotlin/m;",
+            "Lkotlin/Unit;",
             ">;",
-            "Lkotlin/jvm/b/b<",
+            "Lkotlin/jvm/b/Functions2<",
             "-",
             "Ljava/util/Map<",
-            "Lcom/vk/queue/sync/models/b;",
-            "Lcom/vk/queue/sync/models/b;",
+            "Lcom/vk/queue/sync/models/QueueAccessParams;",
+            "Lcom/vk/queue/sync/models/QueueAccessParams;",
             ">;",
-            "Lkotlin/m;",
+            "Lkotlin/Unit;",
             ">;)V"
         }
     .end annotation
@@ -504,7 +504,7 @@
     .line 11
     move-object v3, v1
 
-    check-cast v3, Lcom/vk/queue/sync/e/a;
+    check-cast v3, Lcom/vk/queue/sync/e/Chunk;
 
     .line 12
     new-instance v5, Lcom/vk/queue/sync/QueueLongPollLooper$b;
@@ -533,7 +533,7 @@
 
     move-object v8, v15
 
-    invoke-direct/range {v1 .. v8}, Lcom/vk/queue/sync/QueueLongPollLooper$b;-><init>(ILcom/vk/queue/sync/e/a;Lcom/vk/queue/sync/QueueLongPollLooper;Lkotlin/jvm/b/b;Lkotlin/jvm/b/b;Ljava/util/concurrent/CountDownLatch;Lkotlin/jvm/b/b;)V
+    invoke-direct/range {v1 .. v8}, Lcom/vk/queue/sync/QueueLongPollLooper$b;-><init>(ILcom/vk/queue/sync/e/Chunk;Lcom/vk/queue/sync/QueueLongPollLooper;Lkotlin/jvm/b/Functions2;Lkotlin/jvm/b/Functions2;Ljava/util/concurrent/CountDownLatch;Lkotlin/jvm/b/Functions2;)V
 
     .line 13
     invoke-interface {v0, v13}, Ljava/util/Collection;->add(Ljava/lang/Object;)Z
@@ -570,7 +570,7 @@
     .line 15
     iget-object v1, v9, Lcom/vk/queue/sync/QueueLongPollLooper;->b:Ljava/util/concurrent/ExecutorService;
 
-    invoke-static {v1, v0}, Lcom/vk/core/concurrent/a;->a(Ljava/util/concurrent/ExecutorService;Ljava/util/Collection;)Ljava/util/List;
+    invoke-static {v1, v0}, Lcom/vk/core/concurrent/ConcurrentExt;->a(Ljava/util/concurrent/ExecutorService;Ljava/util/Collection;)Ljava/util/List;
 
     move-result-object v0
 
@@ -686,7 +686,7 @@
     .line 31
     :goto_5
     :try_start_2
-    sget-object v13, Lkotlin/m;->a:Lkotlin/m;
+    sget-object v13, Lkotlin/Unit;->a:Lkotlin/Unit;
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_2
 
@@ -724,7 +724,7 @@
 
     move-object/from16 v7, p2
 
-    invoke-interface {v7, v2}, Lkotlin/jvm/b/b;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v7, v2}, Lkotlin/jvm/b/Functions2;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
 
     goto :goto_7
 
@@ -743,7 +743,7 @@
 
     move-object/from16 v6, p3
 
-    invoke-interface {v6, v4}, Lkotlin/jvm/b/b;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v6, v4}, Lkotlin/jvm/b/Functions2;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
     :try_end_3
     .catchall {:try_start_3 .. :try_end_3} :catchall_1
 
@@ -768,14 +768,14 @@
     move-exception v0
 
     .line 39
-    invoke-interface {v1}, Lkotlin/jvm/b/a;->invoke()Ljava/lang/Object;
+    invoke-interface {v1}, Lkotlin/jvm/b/Functions;->invoke()Ljava/lang/Object;
 
     .line 40
     throw v0
 
     .line 41
     :cond_8
-    invoke-interface {v1}, Lkotlin/jvm/b/a;->invoke()Ljava/lang/Object;
+    invoke-interface {v1}, Lkotlin/jvm/b/Functions;->invoke()Ljava/lang/Object;
 
     const/4 v1, 0x0
 
@@ -790,7 +790,7 @@
 
     .line 43
     :cond_9
-    invoke-interface {v1}, Lkotlin/jvm/b/a;->invoke()Ljava/lang/Object;
+    invoke-interface {v1}, Lkotlin/jvm/b/Functions;->invoke()Ljava/lang/Object;
 
     .line 44
     throw v0
@@ -806,7 +806,7 @@
 
 
 # virtual methods
-.method public final a(Ljava/util/Collection;Lkotlin/jvm/b/b;Lkotlin/jvm/b/b;)V
+.method public final a(Ljava/util/Collection;Lkotlin/jvm/b/Functions2;Lkotlin/jvm/b/Functions2;)V
     .locals 4
     .annotation build Landroidx/annotation/WorkerThread;
     .end annotation
@@ -815,26 +815,26 @@
         value = {
             "(",
             "Ljava/util/Collection<",
-            "Lcom/vk/queue/sync/models/b;",
+            "Lcom/vk/queue/sync/models/QueueAccessParams;",
             ">;",
-            "Lkotlin/jvm/b/b<",
+            "Lkotlin/jvm/b/Functions2<",
             "-",
             "Ljava/util/Map<",
-            "Lcom/vk/queue/sync/models/b;",
+            "Lcom/vk/queue/sync/models/QueueAccessParams;",
             "+",
             "Ljava/util/List<",
             "+",
             "Lorg/json/JSONObject;",
             ">;>;",
-            "Lkotlin/m;",
+            "Lkotlin/Unit;",
             ">;",
-            "Lkotlin/jvm/b/b<",
+            "Lkotlin/jvm/b/Functions2<",
             "-",
             "Ljava/util/Map<",
-            "Lcom/vk/queue/sync/models/b;",
-            "Lcom/vk/queue/sync/models/b;",
+            "Lcom/vk/queue/sync/models/QueueAccessParams;",
+            "Lcom/vk/queue/sync/models/QueueAccessParams;",
             ">;",
-            "Lkotlin/m;",
+            "Lkotlin/Unit;",
             ">;)V"
         }
     .end annotation
@@ -850,7 +850,7 @@
 
     .line 5
     :cond_0
-    iget-object v0, p0, Lcom/vk/queue/sync/QueueLongPollLooper;->c:Lb/h/u/c/a;
+    iget-object v0, p0, Lcom/vk/queue/sync/QueueLongPollLooper;->c:Lb/h/u/c/QueueLogger;
 
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -874,17 +874,17 @@
 
     move-result-object v1
 
-    invoke-virtual {v0, v1}, Lb/h/u/c/a;->a(Ljava/lang/String;)V
+    invoke-virtual {v0, v1}, Lb/h/u/c/QueueLogger;->a(Ljava/lang/String;)V
 
     .line 6
-    sget-object v0, Lcom/vk/queue/sync/e/a;->c:Lcom/vk/queue/sync/e/a$a;
+    sget-object v0, Lcom/vk/queue/sync/e/Chunk;->c:Lcom/vk/queue/sync/e/Chunk$a;
 
-    invoke-virtual {v0, p1}, Lcom/vk/queue/sync/e/a$a;->a(Ljava/util/Collection;)Ljava/util/List;
+    invoke-virtual {v0, p1}, Lcom/vk/queue/sync/e/Chunk$a;->a(Ljava/util/Collection;)Ljava/util/List;
 
     move-result-object p1
 
     .line 7
-    iget-object v0, p0, Lcom/vk/queue/sync/QueueLongPollLooper;->c:Lb/h/u/c/a;
+    iget-object v0, p0, Lcom/vk/queue/sync/QueueLongPollLooper;->c:Lb/h/u/c/QueueLogger;
 
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -908,7 +908,7 @@
 
     move-result-object v1
 
-    invoke-virtual {v0, v1}, Lb/h/u/c/a;->a(Ljava/lang/String;)V
+    invoke-virtual {v0, v1}, Lb/h/u/c/QueueLogger;->a(Ljava/lang/String;)V
 
     .line 8
     invoke-interface {p1}, Ljava/util/List;->size()I
@@ -924,7 +924,7 @@
     if-eq v0, v1, :cond_1
 
     .line 9
-    iget-object v0, p0, Lcom/vk/queue/sync/QueueLongPollLooper;->c:Lb/h/u/c/a;
+    iget-object v0, p0, Lcom/vk/queue/sync/QueueLongPollLooper;->c:Lb/h/u/c/QueueLogger;
 
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -948,20 +948,20 @@
 
     move-result-object v1
 
-    invoke-virtual {v0, v1}, Lb/h/u/c/a;->a(Ljava/lang/String;)V
+    invoke-virtual {v0, v1}, Lb/h/u/c/QueueLogger;->a(Ljava/lang/String;)V
 
     .line 10
-    invoke-direct {p0, p1, p2, p3}, Lcom/vk/queue/sync/QueueLongPollLooper;->b(Ljava/util/Collection;Lkotlin/jvm/b/b;Lkotlin/jvm/b/b;)V
+    invoke-direct {p0, p1, p2, p3}, Lcom/vk/queue/sync/QueueLongPollLooper;->b(Ljava/util/Collection;Lkotlin/jvm/b/Functions2;Lkotlin/jvm/b/Functions2;)V
 
     throw v2
 
     .line 11
     :cond_1
-    iget-object v0, p0, Lcom/vk/queue/sync/QueueLongPollLooper;->c:Lb/h/u/c/a;
+    iget-object v0, p0, Lcom/vk/queue/sync/QueueLongPollLooper;->c:Lb/h/u/c/QueueLogger;
 
     const-string v1, "Chunks number is 1. Run sync loop on current thread"
 
-    invoke-virtual {v0, v1}, Lb/h/u/c/a;->a(Ljava/lang/String;)V
+    invoke-virtual {v0, v1}, Lb/h/u/c/QueueLogger;->a(Ljava/lang/String;)V
 
     const/4 v0, 0x0
 
@@ -970,9 +970,9 @@
 
     move-result-object p1
 
-    check-cast p1, Lcom/vk/queue/sync/e/a;
+    check-cast p1, Lcom/vk/queue/sync/e/Chunk;
 
-    invoke-direct {p0, p1, p2, p3}, Lcom/vk/queue/sync/QueueLongPollLooper;->a(Lcom/vk/queue/sync/e/a;Lkotlin/jvm/b/b;Lkotlin/jvm/b/b;)V
+    invoke-direct {p0, p1, p2, p3}, Lcom/vk/queue/sync/QueueLongPollLooper;->a(Lcom/vk/queue/sync/e/Chunk;Lkotlin/jvm/b/Functions2;Lkotlin/jvm/b/Functions2;)V
 
     throw v2
 

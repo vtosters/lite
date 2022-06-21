@@ -3,7 +3,7 @@
 .source "AbstractPollView.kt"
 
 # interfaces
-.implements Lcom/vk/polls/ui/views/c$b;
+.implements Lcom/vk/polls/ui/views/PollOptionView$b;
 
 
 # annotations
@@ -89,7 +89,7 @@
     invoke-direct {p1}, Landroid/transition/Fade;-><init>()V
 
     .line 4
-    sget-object p2, Lcom/vk/core/util/h;->f:Landroidx/interpolator/view/animation/LinearOutSlowInInterpolator;
+    sget-object p2, Lcom/vk/core/util/AnimationUtils;->f:Landroidx/interpolator/view/animation/LinearOutSlowInInterpolator;
 
     invoke-virtual {p1, p2}, Landroid/transition/Fade;->setInterpolator(Landroid/animation/TimeInterpolator;)Landroid/transition/Transition;
 

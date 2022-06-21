@@ -44,7 +44,7 @@
 
     const-string v1, "pager"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {v0}, Landroidx/viewpager/widget/ViewPager;->getCurrentItem()I
 
@@ -101,7 +101,7 @@
     .line 1
     iget-object p3, p0, Lcom/vk/newsfeed/HomeFragment$m;->b:Lcom/vk/newsfeed/HomeFragment;
 
-    invoke-static {p3}, Lcom/vk/newsfeed/HomeFragment;->d(Lcom/vk/newsfeed/HomeFragment;)Lcom/vk/newsfeed/h;
+    invoke-static {p3}, Lcom/vk/newsfeed/HomeFragment;->d(Lcom/vk/newsfeed/HomeFragment;)Lcom/vk/newsfeed/MilkshakeNewsHeaderDrawable;
 
     move-result-object p3
 
@@ -117,7 +117,7 @@
 
     sub-float/2addr v0, p2
 
-    invoke-virtual {p3, v0}, Lcom/vk/newsfeed/h;->b(F)V
+    invoke-virtual {p3, v0}, Lcom/vk/newsfeed/MilkshakeNewsHeaderDrawable;->b(F)V
 
     :cond_0
     return-void

@@ -30,9 +30,9 @@
     .locals 0
 
     .line 1
-    sget-object p1, Lb/h/v/d;->c:Lb/h/v/d$a;
+    sget-object p1, Lb/h/v/RxBus;->c:Lb/h/v/RxBus$a;
 
-    invoke-virtual {p1}, Lb/h/v/d$a;->a()Lb/h/v/d;
+    invoke-virtual {p1}, Lb/h/v/RxBus$a;->a()Lb/h/v/RxBus;
 
     move-result-object p1
 
@@ -40,7 +40,7 @@
 
     invoke-direct {p2}, Lcom/vk/voip/HeadsetTracker$a;-><init>()V
 
-    invoke-virtual {p1, p2}, Lb/h/v/d;->a(Ljava/lang/Object;)V
+    invoke-virtual {p1, p2}, Lb/h/v/RxBus;->a(Ljava/lang/Object;)V
 
     return-void
 .end method

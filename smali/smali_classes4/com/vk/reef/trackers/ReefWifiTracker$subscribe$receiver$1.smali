@@ -3,7 +3,7 @@
 .source "ReefWifiTracker.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/b;
+.implements Lkotlin/jvm/b/Functions2;
 
 
 # annotations
@@ -19,12 +19,12 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/b<",
+        "Lkotlin/jvm/b/Functions2<",
         "Ljava/util/List<",
         "+",
         "Landroid/net/wifi/ScanResult;",
         ">;",
-        "Lkotlin/m;",
+        "Lkotlin/Unit;",
         ">;"
     }
 .end annotation
@@ -64,7 +64,7 @@
     .line 1
     iget-object v0, p0, Lcom/vk/reef/trackers/ReefWifiTracker$subscribe$receiver$1;->this$0:Lcom/vk/reef/trackers/ReefWifiTracker;
 
-    invoke-static {v0}, Lcom/vk/reef/trackers/ReefWifiTracker;->a(Lcom/vk/reef/trackers/ReefWifiTracker;)Lcom/vk/reef/utils/c;
+    invoke-static {v0}, Lcom/vk/reef/trackers/ReefWifiTracker;->a(Lcom/vk/reef/trackers/ReefWifiTracker;)Lcom/vk/reef/utils/ReefLogger;
 
     move-result-object v0
 
@@ -102,7 +102,7 @@
 
     move-result-object v1
 
-    invoke-interface {v0, v1}, Lcom/vk/reef/utils/c;->log(Ljava/lang/String;)V
+    invoke-interface {v0, v1}, Lcom/vk/reef/utils/ReefLogger;->log(Ljava/lang/String;)V
 
     .line 2
     iget-object v0, p0, Lcom/vk/reef/trackers/ReefWifiTracker$subscribe$receiver$1;->this$0:Lcom/vk/reef/trackers/ReefWifiTracker;
@@ -133,7 +133,7 @@
 
     invoke-virtual {p0, p1}, Lcom/vk/reef/trackers/ReefWifiTracker$subscribe$receiver$1;->a(Ljava/util/List;)V
 
-    sget-object p1, Lkotlin/m;->a:Lkotlin/m;
+    sget-object p1, Lkotlin/Unit;->a:Lkotlin/Unit;
 
     return-object p1
 .end method

@@ -1,5 +1,5 @@
 .class public final Lcom/vk/audioipc/player/AudioPlayerFilterWrapper;
-.super Lcom/vk/audioipc/core/g;
+.super Lcom/vk/audioipc/core/AudioPlayerWrapper;
 .source "AudioPlayerFilterWrapper.kt"
 
 
@@ -24,7 +24,7 @@
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/util/Set<",
-            "Lcom/vk/audioipc/core/e;",
+            "Lcom/vk/audioipc/core/AudioPlayerListener;",
             ">;"
         }
     .end annotation
@@ -36,11 +36,11 @@
 
 
 # direct methods
-.method public constructor <init>(Lcom/vk/audioipc/core/d;)V
+.method public constructor <init>(Lcom/vk/audioipc/core/AudioPlayer;)V
     .locals 2
 
     .line 1
-    invoke-direct {p0, p1}, Lcom/vk/audioipc/core/g;-><init>(Lcom/vk/audioipc/core/d;)V
+    invoke-direct {p0, p1}, Lcom/vk/audioipc/core/AudioPlayerWrapper;-><init>(Lcom/vk/audioipc/core/AudioPlayer;)V
 
     .line 2
     new-instance p1, Ljava/util/HashSet;
@@ -74,7 +74,7 @@
 
     iget-object v1, p0, Lcom/vk/audioipc/player/AudioPlayerFilterWrapper;->d:Ljava/util/Set;
 
-    invoke-direct {p1, v0, p0, v1}, Lcom/vk/audioipc/communication/notifier/AudioPlayerListenersNotifyManager;-><init>(Landroid/os/Handler;Lcom/vk/audioipc/core/d;Ljava/util/Set;)V
+    invoke-direct {p1, v0, p0, v1}, Lcom/vk/audioipc/communication/notifier/AudioPlayerListenersNotifyManager;-><init>(Landroid/os/Handler;Lcom/vk/audioipc/core/AudioPlayer;Ljava/util/Set;)V
 
     iput-object p1, p0, Lcom/vk/audioipc/player/AudioPlayerFilterWrapper;->e:Lcom/vk/audioipc/communication/notifier/AudioPlayerListenersNotifyManager;
 
@@ -183,7 +183,7 @@
     .line 2
     :cond_0
     :try_start_1
-    invoke-super {p0}, Lcom/vk/audioipc/core/g;->a()V
+    invoke-super {p0}, Lcom/vk/audioipc/core/AudioPlayerWrapper;->a()V
 
     const/4 v0, 0x1
 
@@ -215,7 +215,7 @@
     throw v0
 .end method
 
-.method public a(Lcom/vk/audioipc/core/e;)V
+.method public a(Lcom/vk/audioipc/core/AudioPlayerListener;)V
     .locals 1
 
     .line 10
@@ -224,7 +224,7 @@
     invoke-interface {v0, p1}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
 
     .line 11
-    invoke-super {p0, p1}, Lcom/vk/audioipc/core/g;->a(Lcom/vk/audioipc/core/e;)V
+    invoke-super {p0, p1}, Lcom/vk/audioipc/core/AudioPlayerWrapper;->a(Lcom/vk/audioipc/core/AudioPlayerListener;)V
 
     return-void
 .end method
@@ -249,7 +249,7 @@
     move-result-object p1
 
     .line 8
-    invoke-super {p0, p1}, Lcom/vk/audioipc/core/g;->a(Ljava/util/List;)V
+    invoke-super {p0, p1}, Lcom/vk/audioipc/core/AudioPlayerWrapper;->a(Ljava/util/List;)V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
@@ -266,7 +266,7 @@
     throw p1
 .end method
 
-.method public b(Lcom/vk/audioipc/core/e;)V
+.method public b(Lcom/vk/audioipc/core/AudioPlayerListener;)V
     .locals 1
 
     .line 12
@@ -275,7 +275,7 @@
     invoke-interface {v0, p1}, Ljava/util/Set;->remove(Ljava/lang/Object;)Z
 
     .line 13
-    invoke-super {p0, p1}, Lcom/vk/audioipc/core/g;->b(Lcom/vk/audioipc/core/e;)V
+    invoke-super {p0, p1}, Lcom/vk/audioipc/core/AudioPlayerWrapper;->b(Lcom/vk/audioipc/core/AudioPlayerListener;)V
 
     return-void
 .end method
@@ -309,7 +309,7 @@
     invoke-virtual {p2, v0}, Lcom/vk/audioipc/communication/notifier/AudioPlayerListenersNotifyManager;->a(Ljava/lang/Throwable;)V
 
     .line 7
-    invoke-super {p0}, Lcom/vk/audioipc/core/g;->stop()V
+    invoke-super {p0}, Lcom/vk/audioipc/core/AudioPlayerWrapper;->stop()V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
@@ -326,7 +326,7 @@
     move-result p2
 
     .line 10
-    invoke-super {p0, p1, p2}, Lcom/vk/audioipc/core/g;->b(Lcom/vk/dto/music/MusicTrack;I)V
+    invoke-super {p0, p1, p2}, Lcom/vk/audioipc/core/AudioPlayerWrapper;->b(Lcom/vk/dto/music/MusicTrack;I)V
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
@@ -368,7 +368,7 @@
     move-result-object p1
 
     .line 3
-    invoke-super {p0, p1}, Lcom/vk/audioipc/core/g;->b(Ljava/util/List;)V
+    invoke-super {p0, p1}, Lcom/vk/audioipc/core/AudioPlayerWrapper;->b(Ljava/util/List;)V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
@@ -402,7 +402,7 @@
     move-result-object p1
 
     .line 2
-    invoke-super {p0, p1}, Lcom/vk/audioipc/core/g;->c(Ljava/util/List;)V
+    invoke-super {p0, p1}, Lcom/vk/audioipc/core/AudioPlayerWrapper;->c(Ljava/util/List;)V
 
     return-void
 .end method
@@ -414,19 +414,19 @@
 
     .line 1
     :try_start_0
-    invoke-super {p0}, Lcom/vk/audioipc/core/g;->V()Ljava/util/List;
+    invoke-super {p0}, Lcom/vk/audioipc/core/AudioPlayerWrapper;->V()Ljava/util/List;
 
     move-result-object v0
 
     .line 2
-    invoke-static {v0}, Lkotlin/collections/l;->d(Ljava/lang/Iterable;)Lkotlin/sequences/j;
+    invoke-static {v0}, Lkotlin/collections/l;->d(Ljava/lang/Iterable;)Lkotlin/sequences/Sequence;
 
     move-result-object v0
 
     .line 3
     sget-object v1, Lcom/vk/audioipc/player/AudioPlayerFilterWrapper$findNewPositionInFilteredTracks$1;->a:Lcom/vk/audioipc/player/AudioPlayerFilterWrapper$findNewPositionInFilteredTracks$1;
 
-    invoke-static {v0, v1}, Lkotlin/sequences/m;->a(Lkotlin/sequences/j;Lkotlin/jvm/b/c;)Lkotlin/sequences/j;
+    invoke-static {v0, v1}, Lkotlin/sequences/m;->a(Lkotlin/sequences/Sequence;Lkotlin/jvm/b/Functions1;)Lkotlin/sequences/Sequence;
 
     move-result-object v0
 
@@ -435,12 +435,12 @@
 
     invoke-direct {v1, p1}, Lcom/vk/audioipc/player/AudioPlayerFilterWrapper$findNewPositionInFilteredTracks$2;-><init>(Lcom/vk/dto/music/MusicTrack;)V
 
-    invoke-static {v0, v1}, Lkotlin/sequences/m;->b(Lkotlin/sequences/j;Lkotlin/jvm/b/b;)Lkotlin/sequences/j;
+    invoke-static {v0, v1}, Lkotlin/sequences/m;->b(Lkotlin/sequences/Sequence;Lkotlin/jvm/b/Functions2;)Lkotlin/sequences/Sequence;
 
     move-result-object p1
 
     .line 5
-    invoke-interface {p1}, Lkotlin/sequences/j;->iterator()Ljava/util/Iterator;
+    invoke-interface {p1}, Lkotlin/sequences/Sequence;->iterator()Ljava/util/Iterator;
 
     move-result-object p1
 

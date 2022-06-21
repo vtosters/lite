@@ -35,7 +35,7 @@
             "Ljava/lang/Class<",
             "TT;>;)",
             "Ljava/util/List<",
-            "Lcom/vk/stories/clickable/c<",
+            "Lcom/vk/stories/clickable/SpannableMeasureHelper1<",
             "TT;>;>;"
         }
     .end annotation
@@ -77,9 +77,9 @@
     const-string v4, "spans"
 
     .line 4
-    invoke-static {v3, v4}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v3, v4}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    invoke-static {v3}, Lkotlin/collections/f;->c([Ljava/lang/Object;)Lkotlin/sequences/j;
+    invoke-static {v3}, Lkotlin/collections/f;->c([Ljava/lang/Object;)Lkotlin/sequences/Sequence;
 
     move-result-object v3
 
@@ -87,12 +87,12 @@
 
     invoke-direct {v4, v0, v1, p1, p0}, Lcom/vk/stories/clickable/SpannableMeasureHelper$extractPositionOfSpannable$$inlined$let$lambda$1;-><init>(Landroid/text/Spanned;Landroid/graphics/Rect;Ljava/lang/Class;Landroid/text/Layout;)V
 
-    invoke-static {v3, v4}, Lkotlin/sequences/m;->d(Lkotlin/sequences/j;Lkotlin/jvm/b/b;)Lkotlin/sequences/j;
+    invoke-static {v3, v4}, Lkotlin/sequences/m;->d(Lkotlin/sequences/Sequence;Lkotlin/jvm/b/Functions2;)Lkotlin/sequences/Sequence;
 
     move-result-object p0
 
     .line 5
-    invoke-static {p0}, Lkotlin/sequences/m;->l(Lkotlin/sequences/j;)Ljava/util/List;
+    invoke-static {p0}, Lkotlin/sequences/m;->l(Lkotlin/sequences/Sequence;)Ljava/util/List;
 
     move-result-object p0
 

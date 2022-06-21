@@ -71,11 +71,11 @@
 
     move-result-object p1
 
-    invoke-virtual {p1}, Lcom/vk/newsfeed/presenters/i;->M()Lcom/vk/newsfeed/contracts/u;
+    invoke-virtual {p1}, Lcom/vk/newsfeed/presenters/NewsFeedProfilePresenter;->M()Lcom/vk/newsfeed/contracts/ProfileContract;
 
     move-result-object p1
 
-    invoke-interface {p1}, Lcom/vk/newsfeed/contracts/u;->i2()Lcom/vk/profile/ui/header/BaseHeaderView;
+    invoke-interface {p1}, Lcom/vk/newsfeed/contracts/ProfileContract;->i2()Lcom/vk/profile/ui/header/BaseHeaderView;
 
     move-result-object p1
 

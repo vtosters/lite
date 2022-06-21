@@ -3,7 +3,7 @@
 .source "StoryViewDialog.java"
 
 # interfaces
-.implements Lkotlin/jvm/b/e;
+.implements Lkotlin/jvm/b/Functions3;
 
 
 # annotations
@@ -19,7 +19,7 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Ljava/lang/Object;",
-        "Lkotlin/jvm/b/e<",
+        "Lkotlin/jvm/b/Functions3<",
         "Landroidx/dynamicanimation/animation/DynamicAnimation<",
         "+",
         "Landroidx/dynamicanimation/animation/DynamicAnimation<",
@@ -27,7 +27,7 @@
         "Ljava/lang/Boolean;",
         "Ljava/lang/Float;",
         "Ljava/lang/Float;",
-        "Lkotlin/m;",
+        "Lkotlin/Unit;",
         ">;"
     }
 .end annotation
@@ -67,14 +67,14 @@
 
     check-cast p4, Ljava/lang/Float;
 
-    invoke-virtual {p0, p1, p2, p3, p4}, Lcom/vk/stories/StoryViewDialog$i;->a(Landroidx/dynamicanimation/animation/DynamicAnimation;Ljava/lang/Boolean;Ljava/lang/Float;Ljava/lang/Float;)Lkotlin/m;
+    invoke-virtual {p0, p1, p2, p3, p4}, Lcom/vk/stories/StoryViewDialog$i;->a(Landroidx/dynamicanimation/animation/DynamicAnimation;Ljava/lang/Boolean;Ljava/lang/Float;Ljava/lang/Float;)Lkotlin/Unit;
 
     move-result-object p1
 
     return-object p1
 .end method
 
-.method public a(Landroidx/dynamicanimation/animation/DynamicAnimation;Ljava/lang/Boolean;Ljava/lang/Float;Ljava/lang/Float;)Lkotlin/m;
+.method public a(Landroidx/dynamicanimation/animation/DynamicAnimation;Ljava/lang/Boolean;Ljava/lang/Float;Ljava/lang/Float;)Lkotlin/Unit;
     .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -87,7 +87,7 @@
             "Ljava/lang/Float;",
             "Ljava/lang/Float;",
             ")",
-            "Lkotlin/m;"
+            "Lkotlin/Unit;"
         }
     .end annotation
 

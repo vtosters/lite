@@ -3,12 +3,12 @@
 .source "NotificationsFragment.kt"
 
 # interfaces
-.implements Lcom/vk/core/ui/n;
+.implements Lcom/vk/core/ui/MilkshakeProvider;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/notifications/NotificationsFragment;->a(Lcom/vk/notifications/NotificationsDataSet;Lcom/vk/lists/t$k;)Lcom/vk/lists/t;
+    value = Lcom/vk/notifications/NotificationsFragment;->a(Lcom/vk/notifications/NotificationsDataSet;Lcom/vk/lists/PaginationHelper$k;)Lcom/vk/lists/PaginationHelper;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -62,7 +62,7 @@
     if-eqz v0, :cond_0
 
     .line 3
-    invoke-virtual {v0, p1}, Lcom/vk/lists/i0;->k(I)Ljava/lang/Object;
+    invoke-virtual {v0, p1}, Lcom/vk/lists/SimpleAdapter;->k(I)Ljava/lang/Object;
 
     move-result-object v0
 

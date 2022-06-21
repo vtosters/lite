@@ -3,7 +3,7 @@
 .source "GroupedNotificationsFragment.kt"
 
 # interfaces
-.implements Lcom/vk/notifications/m;
+.implements Lcom/vk/notifications/OnCreateViewHolderListener;
 
 
 # annotations

@@ -49,7 +49,7 @@
 
     iget-object v2, v2, Lcom/vk/stories/view/question/StoryViewAskQuestionView$showAnonymousTooltipRunnable$2;->this$0:Lcom/vk/stories/view/question/StoryViewAskQuestionView;
 
-    invoke-static {v2}, Lcom/vk/stories/view/question/StoryViewAskQuestionView;->b(Lcom/vk/stories/view/question/StoryViewAskQuestionView;)Lcom/vtosters/lite/k0/b;
+    invoke-static {v2}, Lcom/vk/stories/view/question/StoryViewAskQuestionView;->b(Lcom/vk/stories/view/question/StoryViewAskQuestionView;)Lcom/vtosters/lite/k0/VKBottomSheetDialog;
 
     move-result-object v2
 
@@ -99,14 +99,14 @@
     const v1, 0x7f0702c6
 
     .line 7
-    invoke-static {v1}, Lcom/vk/core/util/y0;->c(I)I
+    invoke-static {v1}, Lcom/vk/core/util/ResUtils;->c(I)I
 
     move-result v1
 
     const v4, 0x7f0702c7
 
     .line 8
-    invoke-static {v4}, Lcom/vk/core/util/y0;->c(I)I
+    invoke-static {v4}, Lcom/vk/core/util/ResUtils;->c(I)I
 
     move-result v4
 
@@ -139,11 +139,11 @@
 
     iget-object v1, v1, Lcom/vk/stories/view/question/StoryViewAskQuestionView$showAnonymousTooltipRunnable$2;->this$0:Lcom/vk/stories/view/question/StoryViewAskQuestionView;
 
-    invoke-static {v1}, Lcom/vk/stories/view/question/StoryViewAskQuestionView;->c(Lcom/vk/stories/view/question/StoryViewAskQuestionView;)Lcom/vk/stories/view/t1;
+    invoke-static {v1}, Lcom/vk/stories/view/question/StoryViewAskQuestionView;->c(Lcom/vk/stories/view/question/StoryViewAskQuestionView;)Lcom/vk/stories/view/BaseStoryViewContract1;
 
     move-result-object v1
 
-    invoke-interface {v1}, Lcom/vk/stories/view/f1;->getCtx()Landroid/content/Context;
+    invoke-interface {v1}, Lcom/vk/stories/view/BaseStoryViewContract;->getCtx()Landroid/content/Context;
 
     move-result-object v1
 
@@ -211,14 +211,14 @@
     move-object v4, v1
 
     .line 15
-    invoke-static/range {v3 .. v22}, Lcom/vk/core/tips/TipTextWindow$a;->a(Lcom/vk/core/tips/TipTextWindow$a;Landroid/content/Context;Ljava/lang/CharSequence;Ljava/lang/CharSequence;Landroid/graphics/RectF;ZLandroid/view/View$OnClickListener;IILandroid/graphics/drawable/Drawable;FZZZZILkotlin/jvm/b/a;Lcom/vk/core/tips/b$a;ILjava/lang/Object;)Landroidx/appcompat/app/AlertDialog;
+    invoke-static/range {v3 .. v22}, Lcom/vk/core/tips/TipTextWindow$a;->a(Lcom/vk/core/tips/TipTextWindow$a;Landroid/content/Context;Ljava/lang/CharSequence;Ljava/lang/CharSequence;Landroid/graphics/RectF;ZLandroid/view/View$OnClickListener;IILandroid/graphics/drawable/Drawable;FZZZZILkotlin/jvm/b/Functions;Lcom/vk/core/tips/WindowBackground$a;ILjava/lang/Object;)Landroidx/appcompat/app/AlertDialog;
 
     move-result-object v3
 
     invoke-static {v2, v3}, Lcom/vk/stories/view/question/StoryViewAskQuestionView;->a(Lcom/vk/stories/view/question/StoryViewAskQuestionView;Landroid/app/Dialog;)V
 
     .line 16
-    invoke-static {v1}, Lcom/vk/core/extensions/a;->a(Landroid/app/Activity;)V
+    invoke-static {v1}, Lcom/vk/core/extensions/ActivityExt;->a(Landroid/app/Activity;)V
 
     :cond_1
     return-void

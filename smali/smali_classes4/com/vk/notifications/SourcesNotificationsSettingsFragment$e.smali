@@ -3,12 +3,12 @@
 .source "SourcesNotificationsSettingsFragment.kt"
 
 # interfaces
-.implements Lc/a/z/j;
+.implements Lio/reactivex/functions/Function;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/notifications/SourcesNotificationsSettingsFragment;->a(ILcom/vk/lists/t;)Lc/a/m;
+    value = Lcom/vk/notifications/SourcesNotificationsSettingsFragment;->a(ILcom/vk/lists/PaginationHelper;)Lio/reactivex/Observable;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -24,7 +24,7 @@
         "Ljava/lang/Object;",
         ">",
         "Ljava/lang/Object;",
-        "Lc/a/z/j<",
+        "Lio/reactivex/functions/Function<",
         "TT;TR;>;"
     }
 .end annotation
@@ -66,7 +66,7 @@
             "Lcom/vk/dto/user/UserProfile;",
             ">;)",
             "Lcom/vk/dto/common/data/VKList<",
-            "Lcom/vk/common/i/b;",
+            "Lcom/vk/common/i/RecyclerItem;",
             ">;"
         }
     .end annotation
@@ -121,7 +121,7 @@
 
     const-string v3, "it"
 
-    invoke-static {v1, v3}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v1, v3}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-direct {v2, v1}, Lcom/vk/notifications/SourcesNotificationsSettingsFragment$d;-><init>(Lcom/vk/dto/user/UserProfile;)V
 

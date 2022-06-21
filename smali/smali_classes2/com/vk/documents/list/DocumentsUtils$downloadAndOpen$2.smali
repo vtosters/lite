@@ -3,12 +3,12 @@
 .source "DocumentsUtils.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/b;
+.implements Lkotlin/jvm/b/Functions2;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/documents/list/DocumentsUtils;->a(Landroid/net/Uri;Ljava/lang/String;Ljava/lang/String;Landroid/content/Context;Lkotlin/jvm/b/a;)V
+    value = Lcom/vk/documents/list/DocumentsUtils;->a(Landroid/net/Uri;Ljava/lang/String;Ljava/lang/String;Landroid/content/Context;Lkotlin/jvm/b/Functions;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -19,12 +19,12 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/b<",
+        "Lkotlin/jvm/b/Functions2<",
         "Ljava/util/List<",
         "+",
         "Ljava/lang/String;",
         ">;",
-        "Lkotlin/m;",
+        "Lkotlin/Unit;",
         ">;"
     }
 .end annotation
@@ -33,16 +33,16 @@
 # instance fields
 .field final synthetic $context:Landroid/content/Context;
 
-.field final synthetic $finishCallback:Lkotlin/jvm/b/a;
+.field final synthetic $finishCallback:Lkotlin/jvm/b/Functions;
 
 
 # direct methods
-.method constructor <init>(Landroid/content/Context;Lkotlin/jvm/b/a;)V
+.method constructor <init>(Landroid/content/Context;Lkotlin/jvm/b/Functions;)V
     .locals 0
 
     iput-object p1, p0, Lcom/vk/documents/list/DocumentsUtils$downloadAndOpen$2;->$context:Landroid/content/Context;
 
-    iput-object p2, p0, Lcom/vk/documents/list/DocumentsUtils$downloadAndOpen$2;->$finishCallback:Lkotlin/jvm/b/a;
+    iput-object p2, p0, Lcom/vk/documents/list/DocumentsUtils$downloadAndOpen$2;->$finishCallback:Lkotlin/jvm/b/Functions;
 
     const/4 p1, 0x1
 
@@ -71,18 +71,18 @@
 
     const/4 v1, 0x0
 
-    invoke-static {p1, v0, v1}, Lcom/vk/core/util/ContextExtKt;->e(Landroid/content/Context;II)Lkotlin/m;
+    invoke-static {p1, v0, v1}, Lcom/vk/core/util/ContextExtKt;->e(Landroid/content/Context;II)Lkotlin/Unit;
 
     .line 2
-    iget-object p1, p0, Lcom/vk/documents/list/DocumentsUtils$downloadAndOpen$2;->$finishCallback:Lkotlin/jvm/b/a;
+    iget-object p1, p0, Lcom/vk/documents/list/DocumentsUtils$downloadAndOpen$2;->$finishCallback:Lkotlin/jvm/b/Functions;
 
     if-eqz p1, :cond_0
 
-    invoke-interface {p1}, Lkotlin/jvm/b/a;->invoke()Ljava/lang/Object;
+    invoke-interface {p1}, Lkotlin/jvm/b/Functions;->invoke()Ljava/lang/Object;
 
     move-result-object p1
 
-    check-cast p1, Lkotlin/m;
+    check-cast p1, Lkotlin/Unit;
 
     :cond_0
     return-void
@@ -96,7 +96,7 @@
 
     invoke-virtual {p0, p1}, Lcom/vk/documents/list/DocumentsUtils$downloadAndOpen$2;->a(Ljava/util/List;)V
 
-    sget-object p1, Lkotlin/m;->a:Lkotlin/m;
+    sget-object p1, Lkotlin/Unit;->a:Lkotlin/Unit;
 
     return-object p1
 .end method

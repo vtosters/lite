@@ -1,13 +1,13 @@
 .class public final Lcom/vk/stories/geo/holders/GeoNewsPlaceHolder;
-.super Lcom/vk/common/e/b;
+.super Lcom/vk/common/e/BaseItemHolder;
 .source "GeoNewsPlaceHolder.kt"
 
 
 # annotations
 .annotation system Ldalvik/annotation/Signature;
     value = {
-        "Lcom/vk/common/e/b<",
-        "Lcom/vk/stories/geo/e/b;",
+        "Lcom/vk/common/e/BaseItemHolder<",
+        "Lcom/vk/stories/geo/e/GeoNewsPlaceItem;",
         ">;"
     }
 .end annotation
@@ -28,12 +28,12 @@
     .locals 1
 
     .line 1
-    invoke-direct {p0, p1}, Lcom/vk/common/e/b;-><init>(Landroid/view/View;)V
+    invoke-direct {p0, p1}, Lcom/vk/common/e/BaseItemHolder;-><init>(Landroid/view/View;)V
 
     const p1, 0x7f0a079a
 
     .line 2
-    invoke-virtual {p0, p1}, Lcom/vk/common/e/b;->i(I)Landroid/view/View;
+    invoke-virtual {p0, p1}, Lcom/vk/common/e/BaseItemHolder;->i(I)Landroid/view/View;
 
     move-result-object p1
 
@@ -42,7 +42,7 @@
     const p1, 0x7f0a079c
 
     .line 3
-    invoke-virtual {p0, p1}, Lcom/vk/common/e/b;->i(I)Landroid/view/View;
+    invoke-virtual {p0, p1}, Lcom/vk/common/e/BaseItemHolder;->i(I)Landroid/view/View;
 
     move-result-object p1
 
@@ -53,7 +53,7 @@
     const p1, 0x7f0a0362
 
     .line 4
-    invoke-virtual {p0, p1}, Lcom/vk/common/e/b;->i(I)Landroid/view/View;
+    invoke-virtual {p0, p1}, Lcom/vk/common/e/BaseItemHolder;->i(I)Landroid/view/View;
 
     move-result-object p1
 
@@ -64,7 +64,7 @@
     const p1, 0x7f0a007e
 
     .line 5
-    invoke-virtual {p0, p1}, Lcom/vk/common/e/b;->i(I)Landroid/view/View;
+    invoke-virtual {p0, p1}, Lcom/vk/common/e/BaseItemHolder;->i(I)Landroid/view/View;
 
     move-result-object p1
 
@@ -88,7 +88,7 @@
 
     invoke-direct {v0, p0}, Lcom/vk/stories/geo/holders/GeoNewsPlaceHolder$1;-><init>(Lcom/vk/stories/geo/holders/GeoNewsPlaceHolder;)V
 
-    invoke-static {p1, v0}, Lcom/vk/extensions/ViewExtKt;->e(Landroid/view/View;Lkotlin/jvm/b/b;)V
+    invoke-static {p1, v0}, Lcom/vk/extensions/ViewExtKt;->e(Landroid/view/View;Lkotlin/jvm/b/Functions2;)V
 
     .line 8
     iget-object p1, p0, Lcom/vk/stories/geo/holders/GeoNewsPlaceHolder;->f:Landroid/widget/TextView;
@@ -102,7 +102,7 @@
     .line 9
     sget-object p1, Lcom/vk/location/LocationUtils;->b:Lcom/vk/location/LocationUtils;
 
-    invoke-virtual {p0}, Lcom/vk/common/e/b;->getContext()Landroid/content/Context;
+    invoke-virtual {p0}, Lcom/vk/common/e/BaseItemHolder;->getContext()Landroid/content/Context;
 
     move-result-object v0
 
@@ -136,7 +136,7 @@
     .locals 8
 
     .line 1
-    invoke-virtual {p0}, Lcom/vk/common/e/b;->getContext()Landroid/content/Context;
+    invoke-virtual {p0}, Lcom/vk/common/e/BaseItemHolder;->getContext()Landroid/content/Context;
 
     move-result-object v0
 
@@ -145,7 +145,7 @@
     move-result-object v0
 
     .line 2
-    new-instance v7, Lcom/vk/core/drawable/j;
+    new-instance v7, Lcom/vk/core/drawable/SectionBackground;
 
     const v4, 0x7f0801e9
 
@@ -159,7 +159,7 @@
 
     move-object v2, v0
 
-    invoke-direct/range {v1 .. v6}, Lcom/vk/core/drawable/j;-><init>(Landroid/content/Context;IIII)V
+    invoke-direct/range {v1 .. v6}, Lcom/vk/core/drawable/SectionBackground;-><init>(Landroid/content/Context;IIII)V
 
     const v1, 0x7f06030c
 
@@ -175,7 +175,7 @@
     const/4 v0, 0x0
 
     .line 4
-    invoke-virtual {v7, v0}, Lcom/vk/core/drawable/j;->a(Z)V
+    invoke-virtual {v7, v0}, Lcom/vk/core/drawable/SectionBackground;->a(Z)V
 
     return-object v7
 .end method
@@ -184,13 +184,13 @@
     .locals 9
 
     .line 1
-    invoke-virtual {p0}, Lcom/vk/common/e/b;->d0()Lcom/vk/common/i/b;
+    invoke-virtual {p0}, Lcom/vk/common/e/BaseItemHolder;->d0()Lcom/vk/common/i/RecyclerItem;
 
     move-result-object v0
 
-    check-cast v0, Lcom/vk/stories/geo/e/b;
+    check-cast v0, Lcom/vk/stories/geo/e/GeoNewsPlaceItem;
 
-    invoke-virtual {v0}, Lcom/vk/stories/geo/e/b;->c()Lcom/vk/dto/geo/GeoLocation;
+    invoke-virtual {v0}, Lcom/vk/stories/geo/e/GeoNewsPlaceItem;->c()Lcom/vk/dto/geo/GeoLocation;
 
     move-result-object v0
 
@@ -199,13 +199,13 @@
     move-result-wide v0
 
     .line 2
-    invoke-virtual {p0}, Lcom/vk/common/e/b;->d0()Lcom/vk/common/i/b;
+    invoke-virtual {p0}, Lcom/vk/common/e/BaseItemHolder;->d0()Lcom/vk/common/i/RecyclerItem;
 
     move-result-object v2
 
-    check-cast v2, Lcom/vk/stories/geo/e/b;
+    check-cast v2, Lcom/vk/stories/geo/e/GeoNewsPlaceItem;
 
-    invoke-virtual {v2}, Lcom/vk/stories/geo/e/b;->c()Lcom/vk/dto/geo/GeoLocation;
+    invoke-virtual {v2}, Lcom/vk/stories/geo/e/GeoNewsPlaceItem;->c()Lcom/vk/dto/geo/GeoLocation;
 
     move-result-object v2
 
@@ -256,7 +256,7 @@
     invoke-direct {v4, v5, v0}, Landroid/content/Intent;-><init>(Ljava/lang/String;Landroid/net/Uri;)V
 
     .line 4
-    invoke-virtual {p0}, Lcom/vk/common/e/b;->getContext()Landroid/content/Context;
+    invoke-virtual {p0}, Lcom/vk/common/e/BaseItemHolder;->getContext()Landroid/content/Context;
 
     move-result-object v0
 
@@ -270,7 +270,7 @@
     nop
 
     .line 5
-    invoke-virtual {p0}, Lcom/vk/common/e/b;->getContext()Landroid/content/Context;
+    invoke-virtual {p0}, Lcom/vk/common/e/BaseItemHolder;->getContext()Landroid/content/Context;
 
     move-result-object v0
 
@@ -279,17 +279,17 @@
     if-eqz v0, :cond_0
 
     .line 6
-    invoke-virtual {p0}, Lcom/vk/common/e/b;->getContext()Landroid/content/Context;
+    invoke-virtual {p0}, Lcom/vk/common/e/BaseItemHolder;->getContext()Landroid/content/Context;
 
     move-result-object v0
 
-    invoke-static {v0}, Lcom/vtosters/lite/utils/l;->a(Landroid/content/Context;)Landroid/app/Activity;
+    invoke-static {v0}, Lcom/vtosters/lite/utils/Utils;->a(Landroid/content/Context;)Landroid/app/Activity;
 
     move-result-object v0
 
     const/4 v1, 0x0
 
-    invoke-static {v0, v1}, Lcom/vtosters/lite/n;->a(Landroid/app/Activity;Z)Z
+    invoke-static {v0, v1}, Lcom/vtosters/lite/ActivityUtils;->a(Landroid/app/Activity;Z)Z
 
     :cond_0
     :goto_0
@@ -298,11 +298,11 @@
 
 
 # virtual methods
-.method protected a(Lcom/vk/stories/geo/e/b;)V
+.method protected a(Lcom/vk/stories/geo/e/GeoNewsPlaceItem;)V
     .locals 6
 
     .line 2
-    invoke-virtual {p1}, Lcom/vk/stories/geo/e/b;->c()Lcom/vk/dto/geo/GeoLocation;
+    invoke-virtual {p1}, Lcom/vk/stories/geo/e/GeoNewsPlaceItem;->c()Lcom/vk/dto/geo/GeoLocation;
 
     move-result-object v0
 
@@ -328,7 +328,7 @@
 
     if-eqz v2, :cond_0
 
-    invoke-static {v2}, Lcom/vk/core/extensions/z;->d(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v2}, Lcom/vk/core/extensions/StringExt;->d(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v2
 
@@ -338,14 +338,14 @@
     const/4 v2, 0x0
 
     :goto_0
-    invoke-static {v1, v2}, Lcom/vk/core/extensions/a0;->a(Landroid/widget/TextView;Ljava/lang/CharSequence;)V
+    invoke-static {v1, v2}, Lcom/vk/core/extensions/TextViewExt;->a(Landroid/widget/TextView;Ljava/lang/CharSequence;)V
 
     .line 5
     invoke-static {}, Lcom/google/android/gms/common/c;->a()Lcom/google/android/gms/common/c;
 
     move-result-object v1
 
-    invoke-virtual {p0}, Lcom/vk/common/e/b;->getContext()Landroid/content/Context;
+    invoke-virtual {p0}, Lcom/vk/common/e/BaseItemHolder;->getContext()Landroid/content/Context;
 
     move-result-object v2
 
@@ -368,7 +368,7 @@
 
     .line 6
     :goto_1
-    invoke-virtual {p1}, Lcom/vk/stories/geo/e/b;->d()Ljava/lang/String;
+    invoke-virtual {p1}, Lcom/vk/stories/geo/e/GeoNewsPlaceItem;->d()Ljava/lang/String;
 
     move-result-object v4
 
@@ -397,7 +397,7 @@
     :cond_4
     iget-object v0, p0, Lcom/vk/stories/geo/holders/GeoNewsPlaceHolder;->e:Landroid/widget/TextView;
 
-    invoke-virtual {p1}, Lcom/vk/stories/geo/e/b;->d()Ljava/lang/String;
+    invoke-virtual {p1}, Lcom/vk/stories/geo/e/GeoNewsPlaceItem;->d()Ljava/lang/String;
 
     move-result-object p1
 
@@ -442,13 +442,13 @@
     return-void
 .end method
 
-.method public bridge synthetic b(Lcom/vk/common/i/b;)V
+.method public bridge synthetic b(Lcom/vk/common/i/RecyclerItem;)V
     .locals 0
 
     .line 1
-    check-cast p1, Lcom/vk/stories/geo/e/b;
+    check-cast p1, Lcom/vk/stories/geo/e/GeoNewsPlaceItem;
 
-    invoke-virtual {p0, p1}, Lcom/vk/stories/geo/holders/GeoNewsPlaceHolder;->a(Lcom/vk/stories/geo/e/b;)V
+    invoke-virtual {p0, p1}, Lcom/vk/stories/geo/holders/GeoNewsPlaceHolder;->a(Lcom/vk/stories/geo/e/GeoNewsPlaceItem;)V
 
     return-void
 .end method

@@ -1,5 +1,5 @@
 .class public Lcom/vtosters/lite/TabletDialogActivity$b;
-.super Lcom/vk/navigation/o$a;
+.super Lcom/vk/navigation/Navigator$a;
 .source "TabletDialogActivity.java"
 
 
@@ -43,7 +43,7 @@
     .end annotation
 
     .line 1
-    invoke-direct {p0, p1}, Lcom/vk/navigation/o$a;-><init>(Ljava/lang/Class;)V
+    invoke-direct {p0, p1}, Lcom/vk/navigation/Navigator$a;-><init>(Ljava/lang/Class;)V
 
     return-void
 .end method
@@ -54,7 +54,7 @@
     .locals 2
 
     .line 1
-    iget-object v0, p0, Lcom/vk/navigation/o$a;->b:Landroid/os/Bundle;
+    iget-object v0, p0, Lcom/vk/navigation/Navigator$a;->b:Landroid/os/Bundle;
 
     const-string v1, "elevation"
 
@@ -67,7 +67,7 @@
     .locals 3
 
     .line 2
-    iget-object v0, p0, Lcom/vk/navigation/o$a;->b:Landroid/os/Bundle;
+    iget-object v0, p0, Lcom/vk/navigation/Navigator$a;->b:Landroid/os/Bundle;
 
     const-string v1, "withoutAdjustResize"
 
@@ -82,7 +82,7 @@
     .locals 2
 
     .line 1
-    iget-object v0, p0, Lcom/vk/navigation/o$a;->b:Landroid/os/Bundle;
+    iget-object v0, p0, Lcom/vk/navigation/Navigator$a;->b:Landroid/os/Bundle;
 
     const-string v1, "gravity"
 
@@ -95,7 +95,7 @@
     .locals 3
 
     .line 2
-    iget-object v0, p0, Lcom/vk/navigation/o$a;->b:Landroid/os/Bundle;
+    iget-object v0, p0, Lcom/vk/navigation/Navigator$a;->b:Landroid/os/Bundle;
 
     const-string v1, "closeOnTouchOutside"
 
@@ -110,7 +110,7 @@
     .locals 2
 
     .line 1
-    iget-object v0, p0, Lcom/vk/navigation/o$a;->b:Landroid/os/Bundle;
+    iget-object v0, p0, Lcom/vk/navigation/Navigator$a;->b:Landroid/os/Bundle;
 
     const-string v1, "input_mode"
 
@@ -123,7 +123,7 @@
     .locals 2
 
     .line 1
-    iget-object v0, p0, Lcom/vk/navigation/o$a;->b:Landroid/os/Bundle;
+    iget-object v0, p0, Lcom/vk/navigation/Navigator$a;->b:Landroid/os/Bundle;
 
     const-string v1, "max_width"
 
@@ -136,7 +136,7 @@
     .locals 2
 
     .line 1
-    iget-object v0, p0, Lcom/vk/navigation/o$a;->b:Landroid/os/Bundle;
+    iget-object v0, p0, Lcom/vk/navigation/Navigator$a;->b:Landroid/os/Bundle;
 
     const-string v1, "min_spacing"
 
@@ -149,7 +149,7 @@
     .locals 2
 
     .line 1
-    iget-object v0, p0, Lcom/vk/navigation/o$a;->b:Landroid/os/Bundle;
+    iget-object v0, p0, Lcom/vk/navigation/Navigator$a;->b:Landroid/os/Bundle;
 
     const-string v1, "preferred_height"
 
@@ -166,7 +166,7 @@
     .end param
 
     .line 1
-    iget-object v0, p0, Lcom/vk/navigation/o$a;->b:Landroid/os/Bundle;
+    iget-object v0, p0, Lcom/vk/navigation/Navigator$a;->b:Landroid/os/Bundle;
 
     const-string v1, "window_animation"
 
@@ -183,7 +183,7 @@
     .end param
 
     .line 1
-    iget-object v0, p0, Lcom/vk/navigation/o$a;->b:Landroid/os/Bundle;
+    iget-object v0, p0, Lcom/vk/navigation/Navigator$a;->b:Landroid/os/Bundle;
 
     const-string v1, "window_background_resource"
 

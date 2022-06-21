@@ -40,7 +40,7 @@
     .end annotation
 
     .line 22
-    new-instance v0, Lcom/vk/api/stories/f;
+    new-instance v0, Lcom/vk/api/stories/StoriesBanQuestionAuthor;
 
     .line 23
     iget-object v1, p0, Lcom/vk/stories/util/StoryQuestionOptionsHelper;->b:Lcom/vk/dto/stories/model/StoryEntry;
@@ -58,14 +58,14 @@
     move-result v3
 
     .line 26
-    invoke-direct {v0, v2, v1, v3, p1}, Lcom/vk/api/stories/f;-><init>(IIILcom/vk/api/stories/StoriesBanQuestionReason;)V
+    invoke-direct {v0, v2, v1, v3, p1}, Lcom/vk/api/stories/StoriesBanQuestionAuthor;-><init>(IIILcom/vk/api/stories/StoriesBanQuestionReason;)V
 
     const/4 p1, 0x0
 
     const/4 v1, 0x1
 
     .line 27
-    invoke-static {v0, p1, v1, p1}, Lcom/vk/api/base/d;->d(Lcom/vk/api/base/d;Lcom/vk/api/base/e;ILjava/lang/Object;)Lc/a/m;
+    invoke-static {v0, p1, v1, p1}, Lcom/vk/api/base/ApiRequest;->d(Lcom/vk/api/base/ApiRequest;Lcom/vk/api/base/ApiThreadHolder;ILjava/lang/Object;)Lio/reactivex/Observable;
 
     move-result-object p1
 
@@ -79,7 +79,7 @@
     invoke-direct {v1, p0}, Lcom/vk/stories/util/StoryQuestionOptionsHelper$b;-><init>(Lcom/vk/stories/util/StoryQuestionOptionsHelper;)V
 
     .line 29
-    invoke-virtual {p1, v0, v1}, Lc/a/m;->a(Lc/a/z/g;Lc/a/z/g;)Lio/reactivex/disposables/b;
+    invoke-virtual {p1, v0, v1}, Lio/reactivex/Observable;->a(Lio/reactivex/functions/Consumer;Lio/reactivex/functions/Consumer;)Lio/reactivex/disposables/Disposable;
 
     return-void
 .end method
@@ -113,13 +113,13 @@
     .line 38
     iget-object v0, p0, Lcom/vk/stories/util/StoryQuestionOptionsHelper;->c:Lcom/vk/stories/view/StoryView;
 
-    invoke-virtual {v0}, Lcom/vk/stories/view/StoryView;->getAnalyticsParams()Lcom/vk/stories/analytics/c;
+    invoke-virtual {v0}, Lcom/vk/stories/view/StoryView;->getAnalyticsParams()Lcom/vk/stories/analytics/StoryViewAnalyticsParams;
 
     move-result-object v0
 
     const-string v1, "storyView.analyticsParams"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 39
     sget-object v1, Lcom/vk/attachpicker/fragment/StoryReporter;->a:Lcom/vk/attachpicker/fragment/StoryReporter;
@@ -128,7 +128,7 @@
     iget-object v2, p0, Lcom/vk/stories/util/StoryQuestionOptionsHelper;->d:Lcom/vk/dto/stories/model/StoryQuestionEntry;
 
     .line 41
-    invoke-virtual {v1, p1, v2, v0}, Lcom/vk/attachpicker/fragment/StoryReporter;->a(Lcom/vk/dto/stories/model/StoryViewAction;Lcom/vk/dto/stories/model/StoryQuestionEntry;Lcom/vk/stories/analytics/c;)V
+    invoke-virtual {v1, p1, v2, v0}, Lcom/vk/attachpicker/fragment/StoryReporter;->a(Lcom/vk/dto/stories/model/StoryViewAction;Lcom/vk/dto/stories/model/StoryQuestionEntry;Lcom/vk/stories/analytics/StoryViewAnalyticsParams;)V
 
     return-void
 .end method
@@ -183,7 +183,7 @@
 
     const/4 v4, 0x0
 
-    invoke-direct {v0, v1, v2, v3, v4}, Lcom/vk/core/dialogs/snackbar/VkSnackbar$a;-><init>(Landroid/content/Context;ZILkotlin/jvm/internal/i;)V
+    invoke-direct {v0, v1, v2, v3, v4}, Lcom/vk/core/dialogs/snackbar/VkSnackbar$a;-><init>(Landroid/content/Context;ZILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     const/16 v1, 0x8
 
@@ -226,13 +226,13 @@
     .end annotation
 
     .line 2
-    sget-object v0, Lcom/vk/stories/clickable/a;->b:Lcom/vk/stories/clickable/a;
+    sget-object v0, Lcom/vk/stories/clickable/ClickableEventBus;->b:Lcom/vk/stories/clickable/ClickableEventBus;
 
-    invoke-virtual {v0}, Lcom/vk/stories/clickable/a;->a()Lb/h/v/d;
+    invoke-virtual {v0}, Lcom/vk/stories/clickable/ClickableEventBus;->a()Lb/h/v/RxBus;
 
     move-result-object v0
 
-    new-instance v1, Lcom/vk/stories/util/i;
+    new-instance v1, Lcom/vk/stories/util/StoryQuestionOptionsHelper3;
 
     iget-object v2, p0, Lcom/vk/stories/util/StoryQuestionOptionsHelper;->b:Lcom/vk/dto/stories/model/StoryEntry;
 
@@ -244,12 +244,12 @@
 
     move-result v3
 
-    invoke-direct {v1, v2, v3}, Lcom/vk/stories/util/i;-><init>(II)V
+    invoke-direct {v1, v2, v3}, Lcom/vk/stories/util/StoryQuestionOptionsHelper3;-><init>(II)V
 
-    invoke-virtual {v0, v1}, Lb/h/v/d;->a(Ljava/lang/Object;)V
+    invoke-virtual {v0, v1}, Lb/h/v/RxBus;->a(Ljava/lang/Object;)V
 
     .line 3
-    new-instance v0, Lcom/vk/api/stories/k;
+    new-instance v0, Lcom/vk/api/stories/StoriesDeleteQuestion;
 
     .line 4
     iget-object v1, p0, Lcom/vk/stories/util/StoryQuestionOptionsHelper;->b:Lcom/vk/dto/stories/model/StoryEntry;
@@ -267,14 +267,14 @@
     move-result v3
 
     .line 7
-    invoke-direct {v0, v2, v1, v3}, Lcom/vk/api/stories/k;-><init>(III)V
+    invoke-direct {v0, v2, v1, v3}, Lcom/vk/api/stories/StoriesDeleteQuestion;-><init>(III)V
 
     const/4 v1, 0x0
 
     const/4 v2, 0x1
 
     .line 8
-    invoke-static {v0, v1, v2, v1}, Lcom/vk/api/base/d;->d(Lcom/vk/api/base/d;Lcom/vk/api/base/e;ILjava/lang/Object;)Lc/a/m;
+    invoke-static {v0, v1, v2, v1}, Lcom/vk/api/base/ApiRequest;->d(Lcom/vk/api/base/ApiRequest;Lcom/vk/api/base/ApiThreadHolder;ILjava/lang/Object;)Lio/reactivex/Observable;
 
     move-result-object v0
 
@@ -288,7 +288,7 @@
     invoke-direct {v2, p0}, Lcom/vk/stories/util/StoryQuestionOptionsHelper$j;-><init>(Lcom/vk/stories/util/StoryQuestionOptionsHelper;)V
 
     .line 10
-    invoke-virtual {v0, v1, v2}, Lc/a/m;->a(Lc/a/z/g;Lc/a/z/g;)Lio/reactivex/disposables/b;
+    invoke-virtual {v0, v1, v2}, Lio/reactivex/Observable;->a(Lio/reactivex/functions/Consumer;Lio/reactivex/functions/Consumer;)Lio/reactivex/disposables/Disposable;
 
     return-void
 .end method
@@ -299,7 +299,7 @@
     .line 2
     iget-object v0, p0, Lcom/vk/stories/util/StoryQuestionOptionsHelper;->c:Lcom/vk/stories/view/StoryView;
 
-    invoke-virtual {v0}, Lcom/vk/stories/view/e1;->getCurrentDialog()Landroid/app/Dialog;
+    invoke-virtual {v0}, Lcom/vk/stories/view/BaseStoryView;->getCurrentDialog()Landroid/app/Dialog;
 
     move-result-object v0
 
@@ -348,7 +348,7 @@
     .locals 2
 
     .line 2
-    new-instance v0, Lcom/vk/profile/ui/c$z;
+    new-instance v0, Lcom/vk/profile/ui/BaseProfileFragment$z;
 
     iget-object v1, p0, Lcom/vk/stories/util/StoryQuestionOptionsHelper;->d:Lcom/vk/dto/stories/model/StoryQuestionEntry;
 
@@ -362,11 +362,11 @@
 
     move-result v1
 
-    invoke-direct {v0, v1}, Lcom/vk/profile/ui/c$z;-><init>(I)V
+    invoke-direct {v0, v1}, Lcom/vk/profile/ui/BaseProfileFragment$z;-><init>(I)V
 
     iget-object v1, p0, Lcom/vk/stories/util/StoryQuestionOptionsHelper;->a:Landroid/content/Context;
 
-    invoke-virtual {v0, v1}, Lcom/vk/navigation/o;->a(Landroid/content/Context;)V
+    invoke-virtual {v0, v1}, Lcom/vk/navigation/Navigator;->a(Landroid/content/Context;)V
 
     .line 3
     sget-object v0, Lcom/vk/dto/stories/model/StoryViewAction;->QUESTION_GO_TO_AUTHOR:Lcom/vk/dto/stories/model/StoryViewAction;
@@ -377,7 +377,7 @@
 
     .line 4
     :cond_0
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     const/4 v0, 0x0
 
@@ -453,13 +453,13 @@
     const v0, 0x7f1206fd
 
     .line 2
-    invoke-static {v0}, Lcom/vk/core/util/y0;->f(I)Ljava/lang/String;
+    invoke-static {v0}, Lcom/vk/core/util/ResUtils;->f(I)Ljava/lang/String;
 
     move-result-object v0
 
     const-string v1, "ResUtils.str(R.string.messages_sent)"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-direct {p0, v0}, Lcom/vk/stories/util/StoryQuestionOptionsHelper;->a(Ljava/lang/String;)V
 
@@ -469,14 +469,14 @@
     .line 4
     sget-object v1, Lcom/vk/stat/scheme/SchemeStat$EventScreen;->STORY_VIEWER:Lcom/vk/stat/scheme/SchemeStat$EventScreen;
 
-    invoke-static {v1}, Lcom/vk/stat/scheme/f;->a(Lcom/vk/stat/scheme/SchemeStat$EventScreen;)Ljava/lang/String;
+    invoke-static {v1}, Lcom/vk/stat/scheme/SchemeStatEx;->a(Lcom/vk/stat/scheme/SchemeStat$EventScreen;)Ljava/lang/String;
 
     move-result-object v1
 
     .line 5
     sget-object v2, Lcom/vk/stat/scheme/SchemeStat$EventScreen;->STORY_VIEWER:Lcom/vk/stat/scheme/SchemeStat$EventScreen;
 
-    invoke-static {v2}, Lcom/vk/stat/scheme/f;->a(Lcom/vk/stat/scheme/SchemeStat$EventScreen;)Ljava/lang/String;
+    invoke-static {v2}, Lcom/vk/stat/scheme/SchemeStatEx;->a(Lcom/vk/stat/scheme/SchemeStat$EventScreen;)Ljava/lang/String;
 
     move-result-object v2
 
@@ -504,21 +504,21 @@
     .locals 2
 
     .line 2
-    new-instance v0, Lcom/vk/webapp/fragments/j$a;
+    new-instance v0, Lcom/vk/webapp/fragments/ReportFragment$a;
 
-    invoke-direct {v0}, Lcom/vk/webapp/fragments/j$a;-><init>()V
+    invoke-direct {v0}, Lcom/vk/webapp/fragments/ReportFragment$a;-><init>()V
 
     const-string v1, "story_question"
 
     .line 3
-    invoke-virtual {v0, v1}, Lcom/vk/webapp/fragments/j$a;->b(Ljava/lang/String;)Lcom/vk/webapp/fragments/j$a;
+    invoke-virtual {v0, v1}, Lcom/vk/webapp/fragments/ReportFragment$a;->b(Ljava/lang/String;)Lcom/vk/webapp/fragments/ReportFragment$a;
 
     .line 4
     iget-object v1, p0, Lcom/vk/stories/util/StoryQuestionOptionsHelper;->b:Lcom/vk/dto/stories/model/StoryEntry;
 
     iget v1, v1, Lcom/vk/dto/stories/model/StoryEntry;->c:I
 
-    invoke-virtual {v0, v1}, Lcom/vk/webapp/fragments/j$a;->e(I)Lcom/vk/webapp/fragments/j$a;
+    invoke-virtual {v0, v1}, Lcom/vk/webapp/fragments/ReportFragment$a;->e(I)Lcom/vk/webapp/fragments/ReportFragment$a;
 
     .line 5
     iget-object v1, p0, Lcom/vk/stories/util/StoryQuestionOptionsHelper;->d:Lcom/vk/dto/stories/model/StoryQuestionEntry;
@@ -527,12 +527,12 @@
 
     move-result v1
 
-    invoke-virtual {v0, v1}, Lcom/vk/webapp/fragments/j$a;->d(I)Lcom/vk/webapp/fragments/j$a;
+    invoke-virtual {v0, v1}, Lcom/vk/webapp/fragments/ReportFragment$a;->d(I)Lcom/vk/webapp/fragments/ReportFragment$a;
 
     .line 6
     iget-object v1, p0, Lcom/vk/stories/util/StoryQuestionOptionsHelper;->a:Landroid/content/Context;
 
-    invoke-virtual {v0, v1}, Lcom/vk/navigation/o;->a(Landroid/content/Context;)V
+    invoke-virtual {v0, v1}, Lcom/vk/navigation/Navigator;->a(Landroid/content/Context;)V
 
     return-void
 .end method
@@ -550,7 +550,7 @@
     .locals 6
 
     .line 2
-    sget-object v0, Lcom/vk/stories/clickable/e;->i:Lcom/vk/stories/clickable/e;
+    sget-object v0, Lcom/vk/stories/clickable/StoryClickableController;->i:Lcom/vk/stories/clickable/StoryClickableController;
 
     .line 3
     iget-object v1, p0, Lcom/vk/stories/util/StoryQuestionOptionsHelper;->a:Landroid/content/Context;
@@ -564,18 +564,18 @@
     .line 6
     iget-object v2, p0, Lcom/vk/stories/util/StoryQuestionOptionsHelper;->c:Lcom/vk/stories/view/StoryView;
 
-    invoke-virtual {v2}, Lcom/vk/stories/view/StoryView;->getAnalyticsParams()Lcom/vk/stories/analytics/c;
+    invoke-virtual {v2}, Lcom/vk/stories/view/StoryView;->getAnalyticsParams()Lcom/vk/stories/analytics/StoryViewAnalyticsParams;
 
     move-result-object v5
 
     const-string v2, "storyView.analyticsParams"
 
-    invoke-static {v5, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v5, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     const/4 v2, 0x0
 
     .line 7
-    invoke-virtual/range {v0 .. v5}, Lcom/vk/stories/clickable/e;->a(Landroid/content/Context;Ljava/lang/String;Lcom/vk/dto/stories/model/StoryEntry;Lcom/vk/dto/stories/model/StoryQuestionEntry;Lcom/vk/stories/analytics/c;)V
+    invoke-virtual/range {v0 .. v5}, Lcom/vk/stories/clickable/StoryClickableController;->a(Landroid/content/Context;Ljava/lang/String;Lcom/vk/dto/stories/model/StoryEntry;Lcom/vk/dto/stories/model/StoryQuestionEntry;Lcom/vk/stories/analytics/StoryViewAnalyticsParams;)V
 
     return-void
 .end method
@@ -609,7 +609,7 @@
     const v1, 0x7f120f1f
 
     .line 4
-    invoke-static {v1}, Lcom/vk/core/util/y0;->f(I)Ljava/lang/String;
+    invoke-static {v1}, Lcom/vk/core/util/ResUtils;->f(I)Ljava/lang/String;
 
     move-result-object v1
 
@@ -642,7 +642,7 @@
     aput-object v4, v2, v3
 
     .line 6
-    invoke-static {v1, v2}, Lcom/vk/core/util/y0;->a(I[Ljava/lang/Object;)Ljava/lang/String;
+    invoke-static {v1, v2}, Lcom/vk/core/util/ResUtils;->a(I[Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object v1
 
@@ -695,7 +695,7 @@
 
     const/4 v4, 0x0
 
-    invoke-direct {v0, v1, v2, v3, v4}, Lcom/vk/core/dialogs/snackbar/VkSnackbar$a;-><init>(Landroid/content/Context;ZILkotlin/jvm/internal/i;)V
+    invoke-direct {v0, v1, v2, v3, v4}, Lcom/vk/core/dialogs/snackbar/VkSnackbar$a;-><init>(Landroid/content/Context;ZILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     const/16 v1, 0x8
 
@@ -743,7 +743,7 @@
 
     invoke-direct {v0, v1, v2}, Lcom/vk/stories/util/StoryQuestionMessageDialog$a;-><init>(Lcom/vk/dto/stories/model/StoryEntry;Lcom/vk/dto/stories/model/StoryQuestionEntry;)V
 
-    invoke-virtual {v0}, Lcom/vk/navigation/o;->a()Lcom/vk/core/fragments/FragmentImpl;
+    invoke-virtual {v0}, Lcom/vk/navigation/Navigator;->a()Lcom/vk/core/fragments/FragmentImpl;
 
     move-result-object v0
 
@@ -756,7 +756,7 @@
 
     invoke-direct {v1, p0}, Lcom/vk/stories/util/StoryQuestionOptionsHelper$showMessageDialog$1;-><init>(Lcom/vk/stories/util/StoryQuestionOptionsHelper;)V
 
-    invoke-virtual {v0, v1}, Lcom/vk/stories/util/StoryQuestionMessageDialog;->f(Lkotlin/jvm/b/a;)V
+    invoke-virtual {v0, v1}, Lcom/vk/stories/util/StoryQuestionMessageDialog;->f(Lkotlin/jvm/b/Functions;)V
 
     .line 4
     iget-object v1, p0, Lcom/vk/stories/util/StoryQuestionOptionsHelper;->a:Landroid/content/Context;
@@ -768,21 +768,21 @@
     if-eqz v1, :cond_1
 
     .line 5
-    instance-of v2, v1, Lcom/vk/core/fragments/e;
+    instance-of v2, v1, Lcom/vk/core/fragments/FragmentManagerImplProvider;
 
     const-string v3, "story_message_dialog"
 
     if-eqz v2, :cond_0
 
     .line 6
-    check-cast v1, Lcom/vk/core/fragments/e;
+    check-cast v1, Lcom/vk/core/fragments/FragmentManagerImplProvider;
 
-    invoke-interface {v1}, Lcom/vk/core/fragments/e;->a1()Lcom/vk/core/fragments/FragmentManagerImpl;
+    invoke-interface {v1}, Lcom/vk/core/fragments/FragmentManagerImplProvider;->a1()Lcom/vk/core/fragments/FragmentManagerImpl;
 
     move-result-object v1
 
     .line 7
-    invoke-virtual {v0, v1, v3}, Lcom/vk/core/fragments/j/b/a;->a(Lcom/vk/core/fragments/FragmentManagerImpl;Ljava/lang/String;)V
+    invoke-virtual {v0, v1, v3}, Lcom/vk/core/fragments/j/b/ParentSupportFragment;->a(Lcom/vk/core/fragments/FragmentManagerImpl;Ljava/lang/String;)V
 
     goto :goto_0
 
@@ -802,7 +802,7 @@
     const-string v2, "manager"
 
     .line 10
-    invoke-static {v1, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {v0, v1, v3}, Landroidx/fragment/app/HackSupportFragment;->show(Landroidx/fragment/app/FragmentManager;Ljava/lang/String;)V
 
@@ -839,7 +839,7 @@
     .end annotation
 
     .line 2
-    new-instance v0, Lcom/vk/api/stories/g0;
+    new-instance v0, Lcom/vk/api/stories/StoriesUnbanQuestionAuthor;
 
     .line 3
     iget-object v1, p0, Lcom/vk/stories/util/StoryQuestionOptionsHelper;->b:Lcom/vk/dto/stories/model/StoryEntry;
@@ -857,14 +857,14 @@
     move-result v3
 
     .line 6
-    invoke-direct {v0, v2, v1, v3}, Lcom/vk/api/stories/g0;-><init>(III)V
+    invoke-direct {v0, v2, v1, v3}, Lcom/vk/api/stories/StoriesUnbanQuestionAuthor;-><init>(III)V
 
     const/4 v1, 0x0
 
     const/4 v2, 0x1
 
     .line 7
-    invoke-static {v0, v1, v2, v1}, Lcom/vk/api/base/d;->d(Lcom/vk/api/base/d;Lcom/vk/api/base/e;ILjava/lang/Object;)Lc/a/m;
+    invoke-static {v0, v1, v2, v1}, Lcom/vk/api/base/ApiRequest;->d(Lcom/vk/api/base/ApiRequest;Lcom/vk/api/base/ApiThreadHolder;ILjava/lang/Object;)Lio/reactivex/Observable;
 
     move-result-object v0
 
@@ -878,7 +878,7 @@
     invoke-direct {v2, p0}, Lcom/vk/stories/util/StoryQuestionOptionsHelper$m;-><init>(Lcom/vk/stories/util/StoryQuestionOptionsHelper;)V
 
     .line 9
-    invoke-virtual {v0, v1, v2}, Lc/a/m;->a(Lc/a/z/g;Lc/a/z/g;)Lio/reactivex/disposables/b;
+    invoke-virtual {v0, v1, v2}, Lio/reactivex/Observable;->a(Lio/reactivex/functions/Consumer;Lio/reactivex/functions/Consumer;)Lio/reactivex/disposables/Disposable;
 
     return-void
 .end method
@@ -940,7 +940,7 @@
     :goto_1
     iget-object v2, p0, Lcom/vk/stories/util/StoryQuestionOptionsHelper;->a:Landroid/content/Context;
 
-    invoke-static {v2}, Lcom/vk/core/util/c;->a(Landroid/content/Context;)Lcom/vk/core/util/c$b;
+    invoke-static {v2}, Lcom/vk/core/util/AlertDialogs;->a(Landroid/content/Context;)Lcom/vk/core/util/AlertDialogs$b;
 
     move-result-object v2
 
@@ -951,7 +951,7 @@
 
     invoke-direct {v6, p0}, Lcom/vk/stories/util/StoryQuestionOptionsHelper$c;-><init>(Lcom/vk/stories/util/StoryQuestionOptionsHelper;)V
 
-    invoke-virtual {v2, v5, v6}, Lcom/vk/core/util/c$b;->a(ILjava/lang/Runnable;)Lcom/vk/core/util/c$b;
+    invoke-virtual {v2, v5, v6}, Lcom/vk/core/util/AlertDialogs$b;->a(ILjava/lang/Runnable;)Lcom/vk/core/util/AlertDialogs$b;
 
     if-nez v0, :cond_5
 
@@ -971,7 +971,7 @@
 
     invoke-direct {v5, p0}, Lcom/vk/stories/util/StoryQuestionOptionsHelper$d;-><init>(Lcom/vk/stories/util/StoryQuestionOptionsHelper;)V
 
-    invoke-virtual {v2, v0, v5}, Lcom/vk/core/util/c$b;->a(ILjava/lang/Runnable;)Lcom/vk/core/util/c$b;
+    invoke-virtual {v2, v0, v5}, Lcom/vk/core/util/AlertDialogs$b;->a(ILjava/lang/Runnable;)Lcom/vk/core/util/AlertDialogs$b;
 
     :cond_2
     const v0, 0x7f120f24
@@ -1009,7 +1009,7 @@
     aput-object v5, v4, v3
 
     .line 12
-    invoke-static {v0, v4}, Lcom/vk/core/util/y0;->a(I[Ljava/lang/Object;)Ljava/lang/String;
+    invoke-static {v0, v4}, Lcom/vk/core/util/ResUtils;->a(I[Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object v0
 
@@ -1019,7 +1019,7 @@
     invoke-direct {v3, p0}, Lcom/vk/stories/util/StoryQuestionOptionsHelper$e;-><init>(Lcom/vk/stories/util/StoryQuestionOptionsHelper;)V
 
     .line 14
-    invoke-virtual {v2, v0, v3}, Lcom/vk/core/util/c$b;->a(Ljava/lang/String;Ljava/lang/Runnable;)Lcom/vk/core/util/c$b;
+    invoke-virtual {v2, v0, v3}, Lcom/vk/core/util/AlertDialogs$b;->a(Ljava/lang/String;Ljava/lang/Runnable;)Lcom/vk/core/util/AlertDialogs$b;
 
     :cond_5
     if-nez v1, :cond_7
@@ -1031,7 +1031,7 @@
 
     invoke-direct {v1, p0}, Lcom/vk/stories/util/StoryQuestionOptionsHelper$f;-><init>(Lcom/vk/stories/util/StoryQuestionOptionsHelper;)V
 
-    invoke-virtual {v2, v0, v1}, Lcom/vk/core/util/c$b;->a(ILjava/lang/Runnable;)Lcom/vk/core/util/c$b;
+    invoke-virtual {v2, v0, v1}, Lcom/vk/core/util/AlertDialogs$b;->a(ILjava/lang/Runnable;)Lcom/vk/core/util/AlertDialogs$b;
 
     .line 16
     iget-object v0, p0, Lcom/vk/stories/util/StoryQuestionOptionsHelper;->d:Lcom/vk/dto/stories/model/StoryQuestionEntry;
@@ -1056,7 +1056,7 @@
     invoke-direct {v3, p0, v0}, Lcom/vk/stories/util/StoryQuestionOptionsHelper$g;-><init>(Lcom/vk/stories/util/StoryQuestionOptionsHelper;Z)V
 
     .line 18
-    invoke-virtual {v2, v1, v3}, Lcom/vk/core/util/c$b;->a(ILjava/lang/Runnable;)Lcom/vk/core/util/c$b;
+    invoke-virtual {v2, v1, v3}, Lcom/vk/core/util/AlertDialogs$b;->a(ILjava/lang/Runnable;)Lcom/vk/core/util/AlertDialogs$b;
 
     :cond_7
     const v0, 0x7f120f22
@@ -1066,13 +1066,13 @@
 
     invoke-direct {v1, p0}, Lcom/vk/stories/util/StoryQuestionOptionsHelper$h;-><init>(Lcom/vk/stories/util/StoryQuestionOptionsHelper;)V
 
-    invoke-virtual {v2, v0, v1}, Lcom/vk/core/util/c$b;->a(ILjava/lang/Runnable;)Lcom/vk/core/util/c$b;
+    invoke-virtual {v2, v0, v1}, Lcom/vk/core/util/AlertDialogs$b;->a(ILjava/lang/Runnable;)Lcom/vk/core/util/AlertDialogs$b;
 
     .line 20
     invoke-static {}, Lcom/vk/attachpicker/fragment/StoryReporter;->b()V
 
     .line 21
-    invoke-virtual {v2}, Lcom/vk/core/util/c$b;->a()Lcom/vk/core/dialogs/alert/VkAlertDialog$Builder;
+    invoke-virtual {v2}, Lcom/vk/core/util/AlertDialogs$b;->a()Lcom/vk/core/dialogs/alert/VkAlertDialog$Builder;
 
     move-result-object v0
 

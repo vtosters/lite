@@ -3,12 +3,12 @@
 .source "MentionsStorage.kt"
 
 # interfaces
-.implements Lc/a/z/g;
+.implements Lio/reactivex/functions/Consumer;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/newsfeed/MentionsStorage$a;->a(Ljava/util/List;)Lc/a/m;
+    value = Lcom/vk/newsfeed/MentionsStorage$a;->a(Ljava/util/List;)Lio/reactivex/Observable;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -22,8 +22,8 @@
         "Ljava/lang/Object;",
         ">",
         "Ljava/lang/Object;",
-        "Lc/a/z/g<",
-        "Lcom/vk/mentions/h;",
+        "Lio/reactivex/functions/Consumer<",
+        "Lcom/vk/mentions/MentionModels2;",
         ">;"
     }
 .end annotation
@@ -56,7 +56,7 @@
 
 
 # virtual methods
-.method public final a(Lcom/vk/mentions/h;)V
+.method public final a(Lcom/vk/mentions/MentionModels2;)V
     .locals 2
 
     .line 1
@@ -64,9 +64,9 @@
 
     const-string v1, "it"
 
-    invoke-static {p1, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    invoke-virtual {v0, p1}, Lcom/vk/newsfeed/MentionsStorage;->a(Lcom/vk/mentions/h;)V
+    invoke-virtual {v0, p1}, Lcom/vk/newsfeed/MentionsStorage;->a(Lcom/vk/mentions/MentionModels2;)V
 
     return-void
 .end method
@@ -75,9 +75,9 @@
     .locals 0
 
     .line 1
-    check-cast p1, Lcom/vk/mentions/h;
+    check-cast p1, Lcom/vk/mentions/MentionModels2;
 
-    invoke-virtual {p0, p1}, Lcom/vk/newsfeed/MentionsStorage$a$b;->a(Lcom/vk/mentions/h;)V
+    invoke-virtual {p0, p1}, Lcom/vk/newsfeed/MentionsStorage$a$b;->a(Lcom/vk/mentions/MentionModels2;)V
 
     return-void
 .end method

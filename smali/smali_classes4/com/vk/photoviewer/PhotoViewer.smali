@@ -4,8 +4,8 @@
 
 # interfaces
 .implements Landroidx/viewpager/widget/ViewPager$OnPageChangeListener;
-.implements Lcom/vk/photoviewer/s/a$e;
-.implements Lcom/vk/photoviewer/f$b;
+.implements Lcom/vk/photoviewer/s/PhotoAdapter$e;
+.implements Lcom/vk/photoviewer/OrientationHelper$b;
 
 
 # annotations
@@ -32,23 +32,23 @@
 # instance fields
 .field private final B:J
 
-.field private final C:Lkotlin/jvm/b/b;
+.field private final C:Lkotlin/jvm/b/Functions2;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Lkotlin/jvm/b/b<",
-            "Lcom/vk/photoviewer/i;",
-            "Lcom/vk/photoviewer/i;",
+            "Lkotlin/jvm/b/Functions2<",
+            "Lcom/vk/photoviewer/Properties;",
+            "Lcom/vk/photoviewer/Properties;",
             ">;"
         }
     .end annotation
 .end field
 
-.field private final D:Lkotlin/jvm/b/b;
+.field private final D:Lkotlin/jvm/b/Functions2;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Lkotlin/jvm/b/b<",
-            "Lcom/vk/photoviewer/i;",
-            "Lcom/vk/photoviewer/i;",
+            "Lkotlin/jvm/b/Functions2<",
+            "Lcom/vk/photoviewer/Properties;",
+            "Lcom/vk/photoviewer/Properties;",
             ">;"
         }
     .end annotation
@@ -64,7 +64,7 @@
     .end annotation
 .end field
 
-.field private final F:Lcom/vk/photoviewer/s/a;
+.field private final F:Lcom/vk/photoviewer/s/PhotoAdapter;
 
 .field private G:I
 
@@ -122,7 +122,7 @@
 
 .field private b0:Z
 
-.field private final c:Lcom/vk/photoviewer/f;
+.field private final c:Lcom/vk/photoviewer/OrientationHelper;
 
 .field private final c0:Landroid/content/Context;
 
@@ -134,7 +134,7 @@
 
 .field private f:Ljava/lang/Object;
 
-.field private g:Lcom/vk/photoviewer/e;
+.field private g:Lcom/vk/photoviewer/CubicBezierInterpolator;
 
 .field private final h:J
 
@@ -147,7 +147,7 @@
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, v1}, Lcom/vk/photoviewer/PhotoViewer$f;-><init>(Lkotlin/jvm/internal/i;)V
+    invoke-direct {v0, v1}, Lcom/vk/photoviewer/PhotoViewer$f;-><init>(Lkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     sput-object v0, Lcom/vk/photoviewer/PhotoViewer;->f0:Lcom/vk/photoviewer/PhotoViewer$f;
 
@@ -189,13 +189,13 @@
     iput-boolean p3, p0, Lcom/vk/photoviewer/PhotoViewer;->a:Z
 
     .line 3
-    new-instance p4, Lcom/vk/photoviewer/f;
+    new-instance p4, Lcom/vk/photoviewer/OrientationHelper;
 
     iget-object v0, p0, Lcom/vk/photoviewer/PhotoViewer;->c0:Landroid/content/Context;
 
-    invoke-direct {p4, v0, p0}, Lcom/vk/photoviewer/f;-><init>(Landroid/content/Context;Lcom/vk/photoviewer/f$b;)V
+    invoke-direct {p4, v0, p0}, Lcom/vk/photoviewer/OrientationHelper;-><init>(Landroid/content/Context;Lcom/vk/photoviewer/OrientationHelper$b;)V
 
-    iput-object p4, p0, Lcom/vk/photoviewer/PhotoViewer;->c:Lcom/vk/photoviewer/f;
+    iput-object p4, p0, Lcom/vk/photoviewer/PhotoViewer;->c:Lcom/vk/photoviewer/OrientationHelper;
 
     .line 4
     new-instance p4, Landroid/os/Handler;
@@ -209,7 +209,7 @@
     iput-object p4, p0, Lcom/vk/photoviewer/PhotoViewer;->e:Landroid/os/Handler;
 
     .line 5
-    new-instance p4, Lcom/vk/photoviewer/e;
+    new-instance p4, Lcom/vk/photoviewer/CubicBezierInterpolator;
 
     const-wide v2, 0x3fe28f5c28f5c28fL    # 0.58
 
@@ -221,9 +221,9 @@
 
     move-object v1, p4
 
-    invoke-direct/range {v1 .. v9}, Lcom/vk/photoviewer/e;-><init>(DDDD)V
+    invoke-direct/range {v1 .. v9}, Lcom/vk/photoviewer/CubicBezierInterpolator;-><init>(DDDD)V
 
-    iput-object p4, p0, Lcom/vk/photoviewer/PhotoViewer;->g:Lcom/vk/photoviewer/e;
+    iput-object p4, p0, Lcom/vk/photoviewer/PhotoViewer;->g:Lcom/vk/photoviewer/CubicBezierInterpolator;
 
     const-wide/16 v0, 0xfa
 
@@ -238,12 +238,12 @@
     .line 8
     sget-object p4, Lcom/vk/photoviewer/PhotoViewer$plainProperties$1;->a:Lcom/vk/photoviewer/PhotoViewer$plainProperties$1;
 
-    iput-object p4, p0, Lcom/vk/photoviewer/PhotoViewer;->C:Lkotlin/jvm/b/b;
+    iput-object p4, p0, Lcom/vk/photoviewer/PhotoViewer;->C:Lkotlin/jvm/b/Functions2;
 
     .line 9
     sget-object p4, Lcom/vk/photoviewer/PhotoViewer$reversedProperties$1;->a:Lcom/vk/photoviewer/PhotoViewer$reversedProperties$1;
 
-    iput-object p4, p0, Lcom/vk/photoviewer/PhotoViewer;->D:Lkotlin/jvm/b/b;
+    iput-object p4, p0, Lcom/vk/photoviewer/PhotoViewer;->D:Lkotlin/jvm/b/Functions2;
 
     .line 10
     iput p1, p0, Lcom/vk/photoviewer/PhotoViewer;->G:I
@@ -321,9 +321,9 @@
     iput-object p4, p0, Lcom/vk/photoviewer/PhotoViewer;->d:Ljava/lang/Integer;
 
     .line 17
-    iget-object p4, p0, Lcom/vk/photoviewer/PhotoViewer;->c:Lcom/vk/photoviewer/f;
+    iget-object p4, p0, Lcom/vk/photoviewer/PhotoViewer;->c:Lcom/vk/photoviewer/OrientationHelper;
 
-    invoke-virtual {p4}, Lcom/vk/photoviewer/f;->b()V
+    invoke-virtual {p4}, Lcom/vk/photoviewer/OrientationHelper;->b()V
 
     .line 18
     iget-object p4, p0, Lcom/vk/photoviewer/PhotoViewer;->c0:Landroid/content/Context;
@@ -364,7 +364,7 @@
 
     const-string v0, "view.findViewById(R.id.pv_dim)"
 
-    invoke-static {p4, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p4, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     iput-object p4, p0, Lcom/vk/photoviewer/PhotoViewer;->M:Landroid/view/View;
 
@@ -379,7 +379,7 @@
 
     const-string v0, "view.findViewById(R.id.pv_content_scrim)"
 
-    invoke-static {p4, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p4, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     iput-object p4, p0, Lcom/vk/photoviewer/PhotoViewer;->N:Landroid/view/View;
 
@@ -394,7 +394,7 @@
 
     const-string v0, "view.findViewById(R.id.pv_bottom_nav_scrim)"
 
-    invoke-static {p4, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p4, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     iput-object p4, p0, Lcom/vk/photoviewer/PhotoViewer;->O:Landroid/view/View;
 
@@ -409,7 +409,7 @@
 
     const-string v0, "view.findViewById(R.id.pv_left_nav_scrim)"
 
-    invoke-static {p4, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p4, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     iput-object p4, p0, Lcom/vk/photoviewer/PhotoViewer;->P:Landroid/view/View;
 
@@ -424,7 +424,7 @@
 
     const-string v0, "view.findViewById(R.id.pv_right_nav_scrim)"
 
-    invoke-static {p4, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p4, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     iput-object p4, p0, Lcom/vk/photoviewer/PhotoViewer;->Q:Landroid/view/View;
 
@@ -439,7 +439,7 @@
 
     const-string v0, "view.findViewById(R.id.pv_toolbar)"
 
-    invoke-static {p4, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p4, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     check-cast p4, Landroidx/appcompat/widget/Toolbar;
 
@@ -456,7 +456,7 @@
 
     const-string v0, "view.findViewById(R.id.pv_title)"
 
-    invoke-static {p4, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p4, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     check-cast p4, Landroid/widget/TextView;
 
@@ -473,7 +473,7 @@
 
     const-string v0, "view.findViewById(R.id.pv_view_pager)"
 
-    invoke-static {p4, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p4, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     check-cast p4, Lcom/vk/photoviewer/PhotoViewPager;
 
@@ -550,7 +550,7 @@
 
     const-string v0, "view.findViewById(R.id.pick_position_overlay)"
 
-    invoke-static {p4, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p4, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     check-cast p4, Lcom/vk/photoviewer/PickPositionOverlayView;
 
@@ -567,7 +567,7 @@
 
     const-string v0, "view.findViewById(R.id.attach_prompt)"
 
-    invoke-static {p4, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p4, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     check-cast p4, Landroid/widget/TextView;
 
@@ -663,7 +663,7 @@
     :cond_3
     iget-object p4, p0, Lcom/vk/photoviewer/PhotoViewer;->L:Lcom/vk/photoviewer/PhotoViewerLayout;
 
-    invoke-static {p4}, Lcom/vk/photoviewer/q;->b(Landroid/view/View;)V
+    invoke-static {p4}, Lcom/vk/photoviewer/ViewExt;->b(Landroid/view/View;)V
 
     .line 41
     iget-object p4, p0, Lcom/vk/photoviewer/PhotoViewer;->L:Lcom/vk/photoviewer/PhotoViewerLayout;
@@ -690,7 +690,7 @@
 
     invoke-direct {v0, p0}, Lcom/vk/photoviewer/PhotoViewer$3;-><init>(Lcom/vk/photoviewer/PhotoViewer;)V
 
-    invoke-static {p4, v0}, Lcom/vk/photoviewer/q;->a(Landroid/view/View;Lkotlin/jvm/b/a;)V
+    invoke-static {p4, v0}, Lcom/vk/photoviewer/ViewExt;->a(Landroid/view/View;Lkotlin/jvm/b/Functions;)V
 
     .line 44
     iget-object p4, p0, Lcom/vk/photoviewer/PhotoViewer;->L:Lcom/vk/photoviewer/PhotoViewerLayout;
@@ -717,7 +717,7 @@
     invoke-virtual {p3, p4}, Landroidx/appcompat/widget/Toolbar;->setNavigationOnClickListener(Landroid/view/View$OnClickListener;)V
 
     .line 48
-    new-instance p3, Lcom/vk/photoviewer/s/a;
+    new-instance p3, Lcom/vk/photoviewer/s/PhotoAdapter;
 
     iget-object v3, p0, Lcom/vk/photoviewer/PhotoViewer;->W:Landroid/view/View;
 
@@ -731,9 +731,9 @@
 
     move-object v7, p0
 
-    invoke-direct/range {v1 .. v7}, Lcom/vk/photoviewer/s/a;-><init>(Ljava/util/List;Landroid/view/View;Landroid/view/View;Landroid/view/LayoutInflater;Lcom/vk/photoviewer/PhotoViewer$e;Lcom/vk/photoviewer/s/a$e;)V
+    invoke-direct/range {v1 .. v7}, Lcom/vk/photoviewer/s/PhotoAdapter;-><init>(Ljava/util/List;Landroid/view/View;Landroid/view/View;Landroid/view/LayoutInflater;Lcom/vk/photoviewer/PhotoViewer$e;Lcom/vk/photoviewer/s/PhotoAdapter$e;)V
 
-    iput-object p3, p0, Lcom/vk/photoviewer/PhotoViewer;->F:Lcom/vk/photoviewer/s/a;
+    iput-object p3, p0, Lcom/vk/photoviewer/PhotoViewer;->F:Lcom/vk/photoviewer/s/PhotoAdapter;
 
     .line 49
     iget-object p2, p0, Lcom/vk/photoviewer/PhotoViewer;->R:Lcom/vk/photoviewer/PhotoViewPager;
@@ -750,7 +750,7 @@
 
     const-string v0, "activity.resources"
 
-    invoke-static {p4, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p4, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {p4}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
 
@@ -767,7 +767,7 @@
     .line 50
     iget-object p2, p0, Lcom/vk/photoviewer/PhotoViewer;->R:Lcom/vk/photoviewer/PhotoViewPager;
 
-    iget-object p3, p0, Lcom/vk/photoviewer/PhotoViewer;->F:Lcom/vk/photoviewer/s/a;
+    iget-object p3, p0, Lcom/vk/photoviewer/PhotoViewer;->F:Lcom/vk/photoviewer/s/PhotoAdapter;
 
     invoke-virtual {p2, p3}, Landroidx/viewpager/widget/ViewPager;->setAdapter(Landroidx/viewpager/widget/PagerAdapter;)V
 
@@ -804,7 +804,7 @@
 
     invoke-direct {p4, v0}, Lcom/vk/photoviewer/ContextMenuDelegate;-><init>(Landroid/content/Context;)V
 
-    invoke-virtual {p3, p4}, Lcom/vk/photoviewer/PhotoViewerLayout;->setContextMenuCreator(Lcom/vk/photoviewer/d;)V
+    invoke-virtual {p3, p4}, Lcom/vk/photoviewer/PhotoViewerLayout;->setContextMenuCreator(Lcom/vk/photoviewer/ContextMenuListener;)V
 
     .line 56
     iget-object p3, p0, Lcom/vk/photoviewer/PhotoViewer;->L:Lcom/vk/photoviewer/PhotoViewerLayout;
@@ -826,7 +826,7 @@
 
     invoke-direct {p2, p0}, Lcom/vk/photoviewer/PhotoViewer$5;-><init>(Lcom/vk/photoviewer/PhotoViewer;)V
 
-    invoke-virtual {p1, p2}, Lcom/vk/photoviewer/PickPositionOverlayView;->setMarkerFractionPositionListener(Lkotlin/jvm/b/c;)V
+    invoke-virtual {p1, p2}, Lcom/vk/photoviewer/PickPositionOverlayView;->setMarkerFractionPositionListener(Lkotlin/jvm/b/Functions1;)V
 
     return-void
 
@@ -927,7 +927,7 @@
 
     const-string v0, "context.baseContext"
 
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     goto :goto_0
 
@@ -946,11 +946,11 @@
     return-object p1
 .end method
 
-.method public static final synthetic a(Lcom/vk/photoviewer/PhotoViewer;)Lcom/vk/photoviewer/s/a;
+.method public static final synthetic a(Lcom/vk/photoviewer/PhotoViewer;)Lcom/vk/photoviewer/s/PhotoAdapter;
     .locals 0
 
     .line 3
-    iget-object p0, p0, Lcom/vk/photoviewer/PhotoViewer;->F:Lcom/vk/photoviewer/s/a;
+    iget-object p0, p0, Lcom/vk/photoviewer/PhotoViewer;->F:Lcom/vk/photoviewer/s/PhotoAdapter;
 
     return-object p0
 .end method
@@ -979,19 +979,19 @@
     return-void
 .end method
 
-.method private final a(Lcom/vk/photoviewer/ClippingImageView;Lcom/vk/photoviewer/i;JLkotlin/jvm/b/a;Lkotlin/jvm/b/a;)V
+.method private final a(Lcom/vk/photoviewer/ClippingImageView;Lcom/vk/photoviewer/Properties;JLkotlin/jvm/b/Functions;Lkotlin/jvm/b/Functions;)V
     .locals 18
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
             "Lcom/vk/photoviewer/ClippingImageView;",
-            "Lcom/vk/photoviewer/i;",
+            "Lcom/vk/photoviewer/Properties;",
             "J",
-            "Lkotlin/jvm/b/a<",
-            "Lkotlin/m;",
+            "Lkotlin/jvm/b/Functions<",
+            "Lkotlin/Unit;",
             ">;",
-            "Lkotlin/jvm/b/a<",
-            "Lkotlin/m;",
+            "Lkotlin/jvm/b/Functions<",
+            "Lkotlin/Unit;",
             ">;)V"
         }
     .end annotation
@@ -1077,13 +1077,13 @@
 
     new-array v7, v7, [F
 
-    invoke-virtual/range {p2 .. p2}, Lcom/vk/photoviewer/i;->a()F
+    invoke-virtual/range {p2 .. p2}, Lcom/vk/photoviewer/Properties;->a()F
 
     move-result v9
 
     aput v9, v7, v2
 
-    invoke-virtual/range {p2 .. p2}, Lcom/vk/photoviewer/i;->k()F
+    invoke-virtual/range {p2 .. p2}, Lcom/vk/photoviewer/Properties;->k()F
 
     move-result v9
 
@@ -1122,13 +1122,13 @@
 
     new-array v5, v7, [F
 
-    invoke-virtual/range {p2 .. p2}, Lcom/vk/photoviewer/i;->g()F
+    invoke-virtual/range {p2 .. p2}, Lcom/vk/photoviewer/Properties;->g()F
 
     move-result v8
 
     aput v8, v5, v2
 
-    invoke-virtual/range {p2 .. p2}, Lcom/vk/photoviewer/i;->q()F
+    invoke-virtual/range {p2 .. p2}, Lcom/vk/photoviewer/Properties;->q()F
 
     move-result v8
 
@@ -1143,13 +1143,13 @@
 
     new-array v8, v7, [F
 
-    invoke-virtual/range {p2 .. p2}, Lcom/vk/photoviewer/i;->h()F
+    invoke-virtual/range {p2 .. p2}, Lcom/vk/photoviewer/Properties;->h()F
 
     move-result v9
 
     aput v9, v8, v2
 
-    invoke-virtual/range {p2 .. p2}, Lcom/vk/photoviewer/i;->r()F
+    invoke-virtual/range {p2 .. p2}, Lcom/vk/photoviewer/Properties;->r()F
 
     move-result v9
 
@@ -1164,13 +1164,13 @@
 
     new-array v9, v7, [F
 
-    invoke-virtual/range {p2 .. p2}, Lcom/vk/photoviewer/i;->f()F
+    invoke-virtual/range {p2 .. p2}, Lcom/vk/photoviewer/Properties;->f()F
 
     move-result v10
 
     aput v10, v9, v2
 
-    invoke-virtual/range {p2 .. p2}, Lcom/vk/photoviewer/i;->p()F
+    invoke-virtual/range {p2 .. p2}, Lcom/vk/photoviewer/Properties;->p()F
 
     move-result v10
 
@@ -1185,13 +1185,13 @@
 
     new-array v10, v7, [F
 
-    invoke-virtual/range {p2 .. p2}, Lcom/vk/photoviewer/i;->f()F
+    invoke-virtual/range {p2 .. p2}, Lcom/vk/photoviewer/Properties;->f()F
 
     move-result v11
 
     aput v11, v10, v2
 
-    invoke-virtual/range {p2 .. p2}, Lcom/vk/photoviewer/i;->p()F
+    invoke-virtual/range {p2 .. p2}, Lcom/vk/photoviewer/Properties;->p()F
 
     move-result v11
 
@@ -1204,13 +1204,13 @@
     new-array v1, v7, [I
 
     .line 45
-    invoke-virtual/range {p2 .. p2}, Lcom/vk/photoviewer/i;->d()I
+    invoke-virtual/range {p2 .. p2}, Lcom/vk/photoviewer/Properties;->d()I
 
     move-result v11
 
     aput v11, v1, v2
 
-    invoke-virtual/range {p2 .. p2}, Lcom/vk/photoviewer/i;->n()I
+    invoke-virtual/range {p2 .. p2}, Lcom/vk/photoviewer/Properties;->n()I
 
     move-result v11
 
@@ -1225,13 +1225,13 @@
     new-array v1, v7, [I
 
     .line 46
-    invoke-virtual/range {p2 .. p2}, Lcom/vk/photoviewer/i;->c()I
+    invoke-virtual/range {p2 .. p2}, Lcom/vk/photoviewer/Properties;->c()I
 
     move-result v12
 
     aput v12, v1, v2
 
-    invoke-virtual/range {p2 .. p2}, Lcom/vk/photoviewer/i;->m()I
+    invoke-virtual/range {p2 .. p2}, Lcom/vk/photoviewer/Properties;->m()I
 
     move-result v12
 
@@ -1246,13 +1246,13 @@
     new-array v1, v7, [I
 
     .line 47
-    invoke-virtual/range {p2 .. p2}, Lcom/vk/photoviewer/i;->b()I
+    invoke-virtual/range {p2 .. p2}, Lcom/vk/photoviewer/Properties;->b()I
 
     move-result v13
 
     aput v13, v1, v2
 
-    invoke-virtual/range {p2 .. p2}, Lcom/vk/photoviewer/i;->l()I
+    invoke-virtual/range {p2 .. p2}, Lcom/vk/photoviewer/Properties;->l()I
 
     move-result v13
 
@@ -1267,13 +1267,13 @@
     new-array v1, v7, [F
 
     .line 48
-    invoke-virtual/range {p2 .. p2}, Lcom/vk/photoviewer/i;->e()F
+    invoke-virtual/range {p2 .. p2}, Lcom/vk/photoviewer/Properties;->e()F
 
     move-result v7
 
     aput v7, v1, v2
 
-    invoke-virtual/range {p2 .. p2}, Lcom/vk/photoviewer/i;->o()F
+    invoke-virtual/range {p2 .. p2}, Lcom/vk/photoviewer/Properties;->o()F
 
     move-result v2
 
@@ -1330,7 +1330,7 @@
     invoke-virtual {v7, v0}, Landroid/animation/AnimatorSet;->playTogether(Ljava/util/Collection;)V
 
     .line 51
-    iget-object v0, v15, Lcom/vk/photoviewer/PhotoViewer;->g:Lcom/vk/photoviewer/e;
+    iget-object v0, v15, Lcom/vk/photoviewer/PhotoViewer;->g:Lcom/vk/photoviewer/CubicBezierInterpolator;
 
     invoke-virtual {v7, v0}, Landroid/animation/AnimatorSet;->setInterpolator(Landroid/animation/TimeInterpolator;)V
 
@@ -1388,7 +1388,7 @@
 
     move-object/from16 v15, p5
 
-    invoke-direct/range {v0 .. v15}, Lcom/vk/photoviewer/PhotoViewer$l;-><init>(Lcom/vk/photoviewer/PhotoViewer;Ljava/util/List;Landroid/animation/ObjectAnimator;Landroid/animation/ObjectAnimator;Landroid/animation/ObjectAnimator;Landroid/animation/ObjectAnimator;Landroid/animation/ObjectAnimator;Landroid/animation/ObjectAnimator;Landroid/animation/ObjectAnimator;Landroid/animation/ObjectAnimator;Landroid/animation/ObjectAnimator;JLkotlin/jvm/b/a;Lkotlin/jvm/b/a;)V
+    invoke-direct/range {v0 .. v15}, Lcom/vk/photoviewer/PhotoViewer$l;-><init>(Lcom/vk/photoviewer/PhotoViewer;Ljava/util/List;Landroid/animation/ObjectAnimator;Landroid/animation/ObjectAnimator;Landroid/animation/ObjectAnimator;Landroid/animation/ObjectAnimator;Landroid/animation/ObjectAnimator;Landroid/animation/ObjectAnimator;Landroid/animation/ObjectAnimator;Landroid/animation/ObjectAnimator;Landroid/animation/ObjectAnimator;JLkotlin/jvm/b/Functions;Lkotlin/jvm/b/Functions;)V
 
     move-object/from16 v1, v16
 
@@ -1400,7 +1400,7 @@
     invoke-virtual {v0}, Landroid/animation/AnimatorSet;->start()V
 
     .line 55
-    invoke-interface/range {p5 .. p5}, Lkotlin/jvm/b/a;->invoke()Ljava/lang/Object;
+    invoke-interface/range {p5 .. p5}, Lkotlin/jvm/b/Functions;->invoke()Ljava/lang/Object;
 
     move-object/from16 v1, p0
 
@@ -1419,11 +1419,11 @@
     return-void
 .end method
 
-.method public static final synthetic a(Lcom/vk/photoviewer/PhotoViewer;Lcom/vk/photoviewer/ClippingImageView;Lcom/vk/photoviewer/i;JLkotlin/jvm/b/a;Lkotlin/jvm/b/a;)V
+.method public static final synthetic a(Lcom/vk/photoviewer/PhotoViewer;Lcom/vk/photoviewer/ClippingImageView;Lcom/vk/photoviewer/Properties;JLkotlin/jvm/b/Functions;Lkotlin/jvm/b/Functions;)V
     .locals 0
 
     .line 2
-    invoke-direct/range {p0 .. p6}, Lcom/vk/photoviewer/PhotoViewer;->a(Lcom/vk/photoviewer/ClippingImageView;Lcom/vk/photoviewer/i;JLkotlin/jvm/b/a;Lkotlin/jvm/b/a;)V
+    invoke-direct/range {p0 .. p6}, Lcom/vk/photoviewer/PhotoViewer;->a(Lcom/vk/photoviewer/ClippingImageView;Lcom/vk/photoviewer/Properties;JLkotlin/jvm/b/Functions;Lkotlin/jvm/b/Functions;)V
 
     return-void
 .end method
@@ -1437,16 +1437,16 @@
     return-void
 .end method
 
-.method public static final synthetic a(Lcom/vk/photoviewer/PhotoViewer;Lkotlin/jvm/b/b;Lkotlin/jvm/b/a;Lkotlin/jvm/b/a;)V
+.method public static final synthetic a(Lcom/vk/photoviewer/PhotoViewer;Lkotlin/jvm/b/Functions2;Lkotlin/jvm/b/Functions;Lkotlin/jvm/b/Functions;)V
     .locals 0
 
     .line 1
-    invoke-direct {p0, p1, p2, p3}, Lcom/vk/photoviewer/PhotoViewer;->a(Lkotlin/jvm/b/b;Lkotlin/jvm/b/a;Lkotlin/jvm/b/a;)V
+    invoke-direct {p0, p1, p2, p3}, Lcom/vk/photoviewer/PhotoViewer;->a(Lkotlin/jvm/b/Functions2;Lkotlin/jvm/b/Functions;Lkotlin/jvm/b/Functions;)V
 
     return-void
 .end method
 
-.method static synthetic a(Lcom/vk/photoviewer/PhotoViewer;Lkotlin/jvm/b/b;Lkotlin/jvm/b/a;Lkotlin/jvm/b/a;ILjava/lang/Object;)V
+.method static synthetic a(Lcom/vk/photoviewer/PhotoViewer;Lkotlin/jvm/b/Functions2;Lkotlin/jvm/b/Functions;Lkotlin/jvm/b/Functions;ILjava/lang/Object;)V
     .locals 0
 
     and-int/lit8 p5, p4, 0x2
@@ -1465,7 +1465,7 @@
     sget-object p3, Lcom/vk/photoviewer/PhotoViewer$animate$2;->a:Lcom/vk/photoviewer/PhotoViewer$animate$2;
 
     :cond_1
-    invoke-direct {p0, p1, p2, p3}, Lcom/vk/photoviewer/PhotoViewer;->a(Lkotlin/jvm/b/b;Lkotlin/jvm/b/a;Lkotlin/jvm/b/a;)V
+    invoke-direct {p0, p1, p2, p3}, Lcom/vk/photoviewer/PhotoViewer;->a(Lkotlin/jvm/b/Functions2;Lkotlin/jvm/b/Functions;Lkotlin/jvm/b/Functions;)V
 
     return-void
 .end method
@@ -1497,13 +1497,13 @@
     return-void
 .end method
 
-.method private final a(Lkotlin/jvm/b/a;)V
+.method private final a(Lkotlin/jvm/b/Functions;)V
     .locals 2
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lkotlin/jvm/b/a<",
-            "Lkotlin/m;",
+            "Lkotlin/jvm/b/Functions<",
+            "Lkotlin/Unit;",
             ">;)V"
         }
     .end annotation
@@ -1529,28 +1529,28 @@
 
     new-instance v1, Lcom/vk/photoviewer/PhotoViewer$p;
 
-    invoke-direct {v1, p1}, Lcom/vk/photoviewer/PhotoViewer$p;-><init>(Lkotlin/jvm/b/a;)V
+    invoke-direct {v1, p1}, Lcom/vk/photoviewer/PhotoViewer$p;-><init>(Lkotlin/jvm/b/Functions;)V
 
     invoke-virtual {v0, v1}, Landroidx/appcompat/widget/Toolbar;->setOnMenuItemClickListener(Landroidx/appcompat/widget/Toolbar$OnMenuItemClickListener;)V
 
     return-void
 .end method
 
-.method private final a(Lkotlin/jvm/b/b;Lkotlin/jvm/b/a;Lkotlin/jvm/b/a;)V
+.method private final a(Lkotlin/jvm/b/Functions2;Lkotlin/jvm/b/Functions;Lkotlin/jvm/b/Functions;)V
     .locals 15
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lkotlin/jvm/b/b<",
+            "Lkotlin/jvm/b/Functions2<",
             "-",
-            "Lcom/vk/photoviewer/i;",
-            "Lcom/vk/photoviewer/i;",
+            "Lcom/vk/photoviewer/Properties;",
+            "Lcom/vk/photoviewer/Properties;",
             ">;",
-            "Lkotlin/jvm/b/a<",
-            "Lkotlin/m;",
+            "Lkotlin/jvm/b/Functions<",
+            "Lkotlin/Unit;",
             ">;",
-            "Lkotlin/jvm/b/a<",
-            "Lkotlin/m;",
+            "Lkotlin/jvm/b/Functions<",
+            "Lkotlin/Unit;",
             ">;)V"
         }
     .end annotation
@@ -1565,16 +1565,16 @@
     move-result v13
 
     .line 23
-    iget-object v0, v7, Lcom/vk/photoviewer/PhotoViewer;->F:Lcom/vk/photoviewer/s/a;
+    iget-object v0, v7, Lcom/vk/photoviewer/PhotoViewer;->F:Lcom/vk/photoviewer/s/PhotoAdapter;
 
     iget v1, v7, Lcom/vk/photoviewer/PhotoViewer;->G:I
 
-    invoke-virtual {v0, v1}, Lcom/vk/photoviewer/s/a;->c(I)Landroid/graphics/Matrix;
+    invoke-virtual {v0, v1}, Lcom/vk/photoviewer/s/PhotoAdapter;->c(I)Landroid/graphics/Matrix;
 
     move-result-object v14
 
     .line 24
-    sget-object v8, Lcom/vk/photoviewer/a;->a:Lcom/vk/photoviewer/a;
+    sget-object v8, Lcom/vk/photoviewer/AnimationCalculator;->a:Lcom/vk/photoviewer/AnimationCalculator;
 
     iget-object v9, v7, Lcom/vk/photoviewer/PhotoViewer;->d0:Lcom/vk/photoviewer/PhotoViewer$e;
 
@@ -1584,31 +1584,31 @@
 
     iget-object v12, v7, Lcom/vk/photoviewer/PhotoViewer;->R:Lcom/vk/photoviewer/PhotoViewPager;
 
-    invoke-virtual/range {v8 .. v14}, Lcom/vk/photoviewer/a;->a(Lcom/vk/photoviewer/PhotoViewer$e;ILcom/vk/photoviewer/PhotoViewer$j;Landroid/view/View;FLandroid/graphics/Matrix;)Lcom/vk/photoviewer/i;
+    invoke-virtual/range {v8 .. v14}, Lcom/vk/photoviewer/AnimationCalculator;->a(Lcom/vk/photoviewer/PhotoViewer$e;ILcom/vk/photoviewer/PhotoViewer$j;Landroid/view/View;FLandroid/graphics/Matrix;)Lcom/vk/photoviewer/Properties;
 
     move-result-object v4
 
     .line 25
-    iget-object v0, v7, Lcom/vk/photoviewer/PhotoViewer;->F:Lcom/vk/photoviewer/s/a;
+    iget-object v0, v7, Lcom/vk/photoviewer/PhotoViewer;->F:Lcom/vk/photoviewer/s/PhotoAdapter;
 
     iget v1, v7, Lcom/vk/photoviewer/PhotoViewer;->G:I
 
-    invoke-virtual {v0, v1}, Lcom/vk/photoviewer/s/a;->b(I)Lcom/vk/photoviewer/ClippingImageView;
+    invoke-virtual {v0, v1}, Lcom/vk/photoviewer/s/PhotoAdapter;->b(I)Lcom/vk/photoviewer/ClippingImageView;
 
     move-result-object v8
 
     if-eqz v8, :cond_0
 
     .line 26
-    invoke-virtual {v4}, Lcom/vk/photoviewer/i;->j()I
+    invoke-virtual {v4}, Lcom/vk/photoviewer/Properties;->j()I
 
     move-result v0
 
-    invoke-virtual {v4}, Lcom/vk/photoviewer/i;->i()I
+    invoke-virtual {v4}, Lcom/vk/photoviewer/Properties;->i()I
 
     move-result v1
 
-    invoke-static {v8, v0, v1}, Lcom/vk/photoviewer/q;->a(Landroid/view/View;II)V
+    invoke-static {v8, v0, v1}, Lcom/vk/photoviewer/ViewExt;->a(Landroid/view/View;II)V
 
     .line 27
     new-instance v9, Lcom/vk/photoviewer/PhotoViewer$animate$3;
@@ -1625,9 +1625,9 @@
 
     move-object/from16 v6, p3
 
-    invoke-direct/range {v0 .. v6}, Lcom/vk/photoviewer/PhotoViewer$animate$3;-><init>(Lcom/vk/photoviewer/PhotoViewer;Lcom/vk/photoviewer/ClippingImageView;Lkotlin/jvm/b/b;Lcom/vk/photoviewer/i;Lkotlin/jvm/b/a;Lkotlin/jvm/b/a;)V
+    invoke-direct/range {v0 .. v6}, Lcom/vk/photoviewer/PhotoViewer$animate$3;-><init>(Lcom/vk/photoviewer/PhotoViewer;Lcom/vk/photoviewer/ClippingImageView;Lkotlin/jvm/b/Functions2;Lcom/vk/photoviewer/Properties;Lkotlin/jvm/b/Functions;Lkotlin/jvm/b/Functions;)V
 
-    invoke-static {v8, v9}, Lcom/vk/photoviewer/q;->c(Landroid/view/View;Lkotlin/jvm/b/a;)V
+    invoke-static {v8, v9}, Lcom/vk/photoviewer/ViewExt;->c(Landroid/view/View;Lkotlin/jvm/b/Functions;)V
 
     :cond_0
     return-void
@@ -1826,7 +1826,7 @@
     .line 2
     iget-object v0, p0, Lcom/vk/photoviewer/PhotoViewer;->L:Lcom/vk/photoviewer/PhotoViewerLayout;
 
-    invoke-static {v0}, Lcom/vk/photoviewer/q;->a(Landroid/view/View;)V
+    invoke-static {v0}, Lcom/vk/photoviewer/ViewExt;->a(Landroid/view/View;)V
 
     return-void
 .end method
@@ -1917,7 +1917,7 @@
 
     const-string v4, "toolbar.menu"
 
-    invoke-static {v3, v4}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v3, v4}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-interface {v0, v1, v2, v3}, Lcom/vk/photoviewer/PhotoViewer$e;->a(Lcom/vk/photoviewer/PhotoViewer$j;ILandroid/view/Menu;)V
 
@@ -1938,9 +1938,9 @@
     .locals 2
 
     .line 2
-    iget-object v0, p0, Lcom/vk/photoviewer/PhotoViewer;->c:Lcom/vk/photoviewer/f;
+    iget-object v0, p0, Lcom/vk/photoviewer/PhotoViewer;->c:Lcom/vk/photoviewer/OrientationHelper;
 
-    invoke-virtual {v0}, Lcom/vk/photoviewer/f;->a()V
+    invoke-virtual {v0}, Lcom/vk/photoviewer/OrientationHelper;->a()V
 
     .line 3
     iget-object v0, p0, Lcom/vk/photoviewer/PhotoViewer;->d:Ljava/lang/Integer;
@@ -1964,11 +1964,11 @@
 
     .line 5
     :cond_0
-    iget-object v0, p0, Lcom/vk/photoviewer/PhotoViewer;->F:Lcom/vk/photoviewer/s/a;
+    iget-object v0, p0, Lcom/vk/photoviewer/PhotoViewer;->F:Lcom/vk/photoviewer/s/PhotoAdapter;
 
     iget v1, p0, Lcom/vk/photoviewer/PhotoViewer;->G:I
 
-    invoke-virtual {v0, v1}, Lcom/vk/photoviewer/s/a;->g(I)V
+    invoke-virtual {v0, v1}, Lcom/vk/photoviewer/s/PhotoAdapter;->g(I)V
 
     .line 6
     iget-object v0, p0, Lcom/vk/photoviewer/PhotoViewer;->L:Lcom/vk/photoviewer/PhotoViewerLayout;
@@ -2047,7 +2047,7 @@
     .line 5
     iget-object v0, p0, Lcom/vk/photoviewer/PhotoViewer;->L:Lcom/vk/photoviewer/PhotoViewerLayout;
 
-    invoke-static {v0}, Lcom/vk/photoviewer/q;->b(Landroid/view/View;)V
+    invoke-static {v0}, Lcom/vk/photoviewer/ViewExt;->b(Landroid/view/View;)V
 
     goto :goto_0
 
@@ -2055,7 +2055,7 @@
     :cond_1
     iget-object v0, p0, Lcom/vk/photoviewer/PhotoViewer;->L:Lcom/vk/photoviewer/PhotoViewerLayout;
 
-    invoke-static {v0}, Lcom/vk/photoviewer/q;->a(Landroid/view/View;)V
+    invoke-static {v0}, Lcom/vk/photoviewer/ViewExt;->a(Landroid/view/View;)V
 
     :goto_0
     return-void
@@ -2111,16 +2111,16 @@
     .line 2
     iget-object v0, p0, Lcom/vk/photoviewer/PhotoViewer;->L:Lcom/vk/photoviewer/PhotoViewerLayout;
 
-    invoke-static {v0}, Lcom/vk/photoviewer/q;->b(Landroid/view/View;)V
+    invoke-static {v0}, Lcom/vk/photoviewer/ViewExt;->b(Landroid/view/View;)V
 
     return-void
 .end method
 
-.method public static final synthetic p(Lcom/vk/photoviewer/PhotoViewer;)Lkotlin/jvm/b/b;
+.method public static final synthetic p(Lcom/vk/photoviewer/PhotoViewer;)Lkotlin/jvm/b/Functions2;
     .locals 0
 
     .line 1
-    iget-object p0, p0, Lcom/vk/photoviewer/PhotoViewer;->C:Lkotlin/jvm/b/b;
+    iget-object p0, p0, Lcom/vk/photoviewer/PhotoViewer;->C:Lkotlin/jvm/b/Functions2;
 
     return-object p0
 .end method
@@ -2217,16 +2217,16 @@
 
 
 # virtual methods
-.method public final a(Ljava/lang/CharSequence;Lkotlin/jvm/b/b;)V
+.method public final a(Ljava/lang/CharSequence;Lkotlin/jvm/b/Functions2;)V
     .locals 3
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
             "Ljava/lang/CharSequence;",
-            "Lkotlin/jvm/b/b<",
+            "Lkotlin/jvm/b/Functions2<",
             "-",
-            "Lcom/vk/photoviewer/p;",
-            "Lkotlin/m;",
+            "Lcom/vk/photoviewer/PhotoViewer1;",
+            "Lkotlin/Unit;",
             ">;)V"
         }
     .end annotation
@@ -2273,9 +2273,9 @@
     .line 76
     new-instance v1, Lcom/vk/photoviewer/PhotoViewer$showPickerOverlay$1;
 
-    invoke-direct {v1, p0, p2}, Lcom/vk/photoviewer/PhotoViewer$showPickerOverlay$1;-><init>(Lcom/vk/photoviewer/PhotoViewer;Lkotlin/jvm/b/b;)V
+    invoke-direct {v1, p0, p2}, Lcom/vk/photoviewer/PhotoViewer$showPickerOverlay$1;-><init>(Lcom/vk/photoviewer/PhotoViewer;Lkotlin/jvm/b/Functions2;)V
 
-    invoke-direct {p0, v1}, Lcom/vk/photoviewer/PhotoViewer;->a(Lkotlin/jvm/b/a;)V
+    invoke-direct {p0, v1}, Lcom/vk/photoviewer/PhotoViewer;->a(Lkotlin/jvm/b/Functions;)V
 
     .line 77
     iget-object p2, p0, Lcom/vk/photoviewer/PhotoViewer;->V:Landroid/widget/TextView;
@@ -2308,9 +2308,9 @@
     invoke-interface {v0, p1}, Ljava/util/List;->addAll(Ljava/util/Collection;)Z
 
     .line 18
-    iget-object v0, p0, Lcom/vk/photoviewer/PhotoViewer;->F:Lcom/vk/photoviewer/s/a;
+    iget-object v0, p0, Lcom/vk/photoviewer/PhotoViewer;->F:Lcom/vk/photoviewer/s/PhotoAdapter;
 
-    invoke-virtual {v0, p1}, Lcom/vk/photoviewer/s/a;->a(Ljava/util/List;)V
+    invoke-virtual {v0, p1}, Lcom/vk/photoviewer/s/PhotoAdapter;->a(Ljava/util/List;)V
 
     .line 19
     iget p1, p0, Lcom/vk/photoviewer/PhotoViewer;->G:I
@@ -2320,12 +2320,12 @@
     return-void
 .end method
 
-.method public final a(Lkotlin/jvm/b/b;)V
+.method public final a(Lkotlin/jvm/b/Functions2;)V
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lkotlin/jvm/b/b<",
+            "Lkotlin/jvm/b/Functions2<",
             "-",
             "Landroid/view/View;",
             "+",
@@ -2353,7 +2353,7 @@
     :cond_0
     iget-object v0, p0, Lcom/vk/photoviewer/PhotoViewer;->L:Lcom/vk/photoviewer/PhotoViewerLayout;
 
-    invoke-interface {p1, v0}, Lkotlin/jvm/b/b;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {p1, v0}, Lkotlin/jvm/b/Functions2;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p1
 
@@ -2408,7 +2408,7 @@
     if-eqz p1, :cond_1
 
     .line 9
-    iget-object v1, v6, Lcom/vk/photoviewer/PhotoViewer;->D:Lkotlin/jvm/b/b;
+    iget-object v1, v6, Lcom/vk/photoviewer/PhotoViewer;->D:Lkotlin/jvm/b/Functions2;
 
     const/4 v2, 0x0
 
@@ -2422,7 +2422,7 @@
 
     move-object v0, p0
 
-    invoke-static/range {v0 .. v5}, Lcom/vk/photoviewer/PhotoViewer;->a(Lcom/vk/photoviewer/PhotoViewer;Lkotlin/jvm/b/b;Lkotlin/jvm/b/a;Lkotlin/jvm/b/a;ILjava/lang/Object;)V
+    invoke-static/range {v0 .. v5}, Lcom/vk/photoviewer/PhotoViewer;->a(Lcom/vk/photoviewer/PhotoViewer;Lkotlin/jvm/b/Functions2;Lkotlin/jvm/b/Functions;Lkotlin/jvm/b/Functions;ILjava/lang/Object;)V
 
     goto :goto_0
 
@@ -2451,7 +2451,7 @@
 
     const/4 v14, 0x0
 
-    invoke-static/range {v7 .. v14}, Lcom/vk/photoviewer/q;->a(Landroid/view/View;FFFFFILjava/lang/Object;)V
+    invoke-static/range {v7 .. v14}, Lcom/vk/photoviewer/ViewExt;->a(Landroid/view/View;FFFFFILjava/lang/Object;)V
 
     :cond_2
     :goto_1
@@ -2484,7 +2484,7 @@
     .line 62
     iget-object v0, p0, Lcom/vk/photoviewer/PhotoViewer;->Y:Ljava/util/List;
 
-    invoke-static {v0}, Lkotlin/collections/l;->d(Ljava/lang/Iterable;)Lkotlin/sequences/j;
+    invoke-static {v0}, Lkotlin/collections/l;->d(Ljava/lang/Iterable;)Lkotlin/sequences/Sequence;
 
     move-result-object v0
 
@@ -2493,7 +2493,7 @@
 
     invoke-direct {v1, p0}, Lcom/vk/photoviewer/PhotoViewer$hideFadeViews$1;-><init>(Lcom/vk/photoviewer/PhotoViewer;)V
 
-    invoke-static {v0, v1}, Lkotlin/sequences/m;->c(Lkotlin/sequences/j;Lkotlin/jvm/b/b;)Lkotlin/sequences/j;
+    invoke-static {v0, v1}, Lkotlin/sequences/m;->c(Lkotlin/sequences/Sequence;Lkotlin/jvm/b/Functions2;)Lkotlin/sequences/Sequence;
 
     move-result-object v0
 
@@ -2502,7 +2502,7 @@
 
     invoke-direct {v1, p0, p1}, Lcom/vk/photoviewer/PhotoViewer$hideFadeViews$2;-><init>(Lcom/vk/photoviewer/PhotoViewer;Z)V
 
-    invoke-static {v0, v1}, Lkotlin/sequences/m;->c(Lkotlin/sequences/j;Lkotlin/jvm/b/b;)Lkotlin/sequences/j;
+    invoke-static {v0, v1}, Lkotlin/sequences/m;->c(Lkotlin/sequences/Sequence;Lkotlin/jvm/b/Functions2;)Lkotlin/sequences/Sequence;
 
     move-result-object p1
 
@@ -2511,12 +2511,12 @@
 
     invoke-direct {v0, p0, p2}, Lcom/vk/photoviewer/PhotoViewer$hideFadeViews$3;-><init>(Lcom/vk/photoviewer/PhotoViewer;Z)V
 
-    invoke-static {p1, v0}, Lkotlin/sequences/m;->c(Lkotlin/sequences/j;Lkotlin/jvm/b/b;)Lkotlin/sequences/j;
+    invoke-static {p1, v0}, Lkotlin/sequences/m;->c(Lkotlin/sequences/Sequence;Lkotlin/jvm/b/Functions2;)Lkotlin/sequences/Sequence;
 
     move-result-object p1
 
     .line 66
-    invoke-interface {p1}, Lkotlin/sequences/j;->iterator()Ljava/util/Iterator;
+    invoke-interface {p1}, Lkotlin/sequences/Sequence;->iterator()Ljava/util/Iterator;
 
     move-result-object p1
 
@@ -2544,7 +2544,7 @@
     const/4 v6, 0x0
 
     .line 67
-    invoke-static/range {v0 .. v6}, Lcom/vk/photoviewer/q;->a(Landroid/view/View;JJILjava/lang/Object;)Landroid/view/ViewPropertyAnimator;
+    invoke-static/range {v0 .. v6}, Lcom/vk/photoviewer/ViewExt;->a(Landroid/view/View;JJILjava/lang/Object;)Landroid/view/ViewPropertyAnimator;
 
     goto :goto_0
 
@@ -2683,7 +2683,7 @@
     .line 9
     :cond_2
     :goto_0
-    invoke-static {v0, v1}, Lcom/vk/extensions/b;->a(Landroid/app/Activity;I)V
+    invoke-static {v0, v1}, Lcom/vk/extensions/ActivityExt;->a(Landroid/app/Activity;I)V
 
     :cond_3
     return-void
@@ -2770,7 +2770,7 @@
 
     invoke-direct {v1, p0}, Lcom/vk/photoviewer/PhotoViewer$show$1;-><init>(Lcom/vk/photoviewer/PhotoViewer;)V
 
-    invoke-static {v0, v1}, Lcom/vk/photoviewer/q;->c(Landroid/view/View;Lkotlin/jvm/b/a;)V
+    invoke-static {v0, v1}, Lcom/vk/photoviewer/ViewExt;->c(Landroid/view/View;Lkotlin/jvm/b/Functions;)V
 
     return-void
 .end method
@@ -2830,7 +2830,7 @@
     .line 8
     iget-object v4, p0, Lcom/vk/photoviewer/PhotoViewer;->M:Landroid/view/View;
 
-    invoke-static {v3, v4}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v3, v4}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v3
 
@@ -2872,7 +2872,7 @@
     const/4 v9, 0x0
 
     .line 10
-    invoke-static/range {v2 .. v9}, Lcom/vk/photoviewer/q;->a(Landroid/view/View;JJLandroid/animation/Animator$AnimatorListener;ILjava/lang/Object;)Landroid/view/ViewPropertyAnimator;
+    invoke-static/range {v2 .. v9}, Lcom/vk/photoviewer/ViewExt;->a(Landroid/view/View;JJLandroid/animation/Animator$AnimatorListener;ILjava/lang/Object;)Landroid/view/ViewPropertyAnimator;
 
     goto :goto_1
 
@@ -2901,9 +2901,9 @@
     if-eq p1, v0, :cond_0
 
     .line 2
-    iget-object v0, p0, Lcom/vk/photoviewer/PhotoViewer;->F:Lcom/vk/photoviewer/s/a;
+    iget-object v0, p0, Lcom/vk/photoviewer/PhotoViewer;->F:Lcom/vk/photoviewer/s/PhotoAdapter;
 
-    invoke-virtual {v0, p1}, Lcom/vk/photoviewer/s/a;->k(I)V
+    invoke-virtual {v0, p1}, Lcom/vk/photoviewer/s/PhotoAdapter;->k(I)V
 
     .line 3
     iget p1, p0, Lcom/vk/photoviewer/PhotoViewer;->G:I
@@ -3099,11 +3099,11 @@
     invoke-direct {v0, p0, p1}, Lcom/vk/photoviewer/PhotoViewer$r;-><init>(Lcom/vk/photoviewer/PhotoViewer;I)V
 
     .line 12
-    iget-object v1, p0, Lcom/vk/photoviewer/PhotoViewer;->F:Lcom/vk/photoviewer/s/a;
+    iget-object v1, p0, Lcom/vk/photoviewer/PhotoViewer;->F:Lcom/vk/photoviewer/s/PhotoAdapter;
 
     iget v2, p0, Lcom/vk/photoviewer/PhotoViewer;->G:I
 
-    invoke-virtual {v1, v2}, Lcom/vk/photoviewer/s/a;->f(I)Z
+    invoke-virtual {v1, v2}, Lcom/vk/photoviewer/s/PhotoAdapter;->f(I)Z
 
     move-result v1
 
@@ -3133,21 +3133,21 @@
     invoke-direct {p0, v1, v2}, Lcom/vk/photoviewer/PhotoViewer;->a(IF)V
 
     .line 16
-    iget-object v1, p0, Lcom/vk/photoviewer/PhotoViewer;->F:Lcom/vk/photoviewer/s/a;
+    iget-object v1, p0, Lcom/vk/photoviewer/PhotoViewer;->F:Lcom/vk/photoviewer/s/PhotoAdapter;
 
     iget v2, p0, Lcom/vk/photoviewer/PhotoViewer;->I:I
 
-    invoke-virtual {v1, v2}, Lcom/vk/photoviewer/s/a;->i(I)V
+    invoke-virtual {v1, v2}, Lcom/vk/photoviewer/s/PhotoAdapter;->i(I)V
 
     .line 17
-    iget-object v1, p0, Lcom/vk/photoviewer/PhotoViewer;->F:Lcom/vk/photoviewer/s/a;
+    iget-object v1, p0, Lcom/vk/photoviewer/PhotoViewer;->F:Lcom/vk/photoviewer/s/PhotoAdapter;
 
-    invoke-virtual {v1, p1}, Lcom/vk/photoviewer/s/a;->j(I)V
+    invoke-virtual {v1, p1}, Lcom/vk/photoviewer/s/PhotoAdapter;->j(I)V
 
     .line 18
-    iget-object v1, p0, Lcom/vk/photoviewer/PhotoViewer;->F:Lcom/vk/photoviewer/s/a;
+    iget-object v1, p0, Lcom/vk/photoviewer/PhotoViewer;->F:Lcom/vk/photoviewer/s/PhotoAdapter;
 
-    invoke-virtual {v1, v0}, Lcom/vk/photoviewer/s/a;->a(Lcom/vk/photoviewer/PhotoViewer$g;)V
+    invoke-virtual {v1, v0}, Lcom/vk/photoviewer/s/PhotoAdapter;->a(Lcom/vk/photoviewer/PhotoViewer$g;)V
 
     .line 19
     iget-object v1, p0, Lcom/vk/photoviewer/PhotoViewer;->d0:Lcom/vk/photoviewer/PhotoViewer$e;

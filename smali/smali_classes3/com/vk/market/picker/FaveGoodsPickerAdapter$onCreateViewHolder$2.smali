@@ -3,7 +3,7 @@
 .source "GoodsPickerAdapter.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/b;
+.implements Lkotlin/jvm/b/Functions2;
 
 
 # annotations
@@ -19,9 +19,9 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/b<",
+        "Lkotlin/jvm/b/Functions2<",
         "Ljava/lang/Integer;",
-        "Lkotlin/m;",
+        "Lkotlin/Unit;",
         ">;"
     }
 .end annotation
@@ -59,7 +59,7 @@
     .line 2
     iget-object v0, p0, Lcom/vk/market/picker/FaveGoodsPickerAdapter$onCreateViewHolder$2;->this$0:Lcom/vk/market/picker/FaveGoodsPickerAdapter;
 
-    invoke-static {v0}, Lcom/vk/market/picker/FaveGoodsPickerAdapter;->a(Lcom/vk/market/picker/FaveGoodsPickerAdapter;)Lkotlin/jvm/b/b;
+    invoke-static {v0}, Lcom/vk/market/picker/FaveGoodsPickerAdapter;->a(Lcom/vk/market/picker/FaveGoodsPickerAdapter;)Lkotlin/jvm/b/Functions2;
 
     move-result-object v0
 
@@ -73,7 +73,7 @@
 
     move-result-object p1
 
-    invoke-interface {v0, p1}, Lkotlin/jvm/b/b;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v0, p1}, Lkotlin/jvm/b/Functions2;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
 
     return-void
 .end method
@@ -90,7 +90,7 @@
 
     invoke-virtual {p0, p1}, Lcom/vk/market/picker/FaveGoodsPickerAdapter$onCreateViewHolder$2;->a(I)V
 
-    sget-object p1, Lkotlin/m;->a:Lkotlin/m;
+    sget-object p1, Lkotlin/Unit;->a:Lkotlin/Unit;
 
     return-object p1
 .end method

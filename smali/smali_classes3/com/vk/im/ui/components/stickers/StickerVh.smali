@@ -1,5 +1,5 @@
 .class public final Lcom/vk/im/ui/components/stickers/StickerVh;
-.super Lcom/vk/im/ui/views/adapter_delegate/d;
+.super Lcom/vk/im/ui/views/adapter_delegate/ListItemViewHolder;
 .source "StickerAdapterItems.kt"
 
 
@@ -12,8 +12,8 @@
 
 .annotation system Ldalvik/annotation/Signature;
     value = {
-        "Lcom/vk/im/ui/views/adapter_delegate/d<",
-        "Lcom/vk/im/ui/components/stickers/b;",
+        "Lcom/vk/im/ui/views/adapter_delegate/ListItemViewHolder<",
+        "Lcom/vk/im/ui/components/stickers/StickerAdapterItems;",
         ">;"
     }
 .end annotation
@@ -41,7 +41,7 @@
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, v1}, Lcom/vk/im/ui/components/stickers/StickerVh$a;-><init>(Lkotlin/jvm/internal/i;)V
+    invoke-direct {v0, v1}, Lcom/vk/im/ui/components/stickers/StickerVh$a;-><init>(Lkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     sput-object v0, Lcom/vk/im/ui/components/stickers/StickerVh;->e:Lcom/vk/im/ui/components/stickers/StickerVh$a;
 
@@ -52,7 +52,7 @@
     .locals 0
 
     .line 1
-    invoke-direct {p0, p1}, Lcom/vk/im/ui/views/adapter_delegate/d;-><init>(Landroid/view/View;)V
+    invoke-direct {p0, p1}, Lcom/vk/im/ui/views/adapter_delegate/ListItemViewHolder;-><init>(Landroid/view/View;)V
 
     iput-object p2, p0, Lcom/vk/im/ui/components/stickers/StickerVh;->d:Lcom/vk/im/ui/components/stickers/StickersAdapter$a;
 
@@ -83,26 +83,26 @@
 
     const-string p2, "imageSticker"
 
-    invoke-static {p1, p2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, p2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     new-instance p2, Lcom/vk/im/ui/components/stickers/StickerVh$1;
 
     invoke-direct {p2, p0}, Lcom/vk/im/ui/components/stickers/StickerVh$1;-><init>(Lcom/vk/im/ui/components/stickers/StickerVh;)V
 
-    invoke-static {p1, p2}, Lcom/vk/extensions/ViewExtKt;->e(Landroid/view/View;Lkotlin/jvm/b/b;)V
+    invoke-static {p1, p2}, Lcom/vk/extensions/ViewExtKt;->e(Landroid/view/View;Lkotlin/jvm/b/Functions2;)V
 
     .line 5
     iget-object p1, p0, Lcom/vk/im/ui/components/stickers/StickerVh;->b:Lcom/vk/stickers/views/animation/VKAnimationView;
 
     const-string p2, "animatedSticker"
 
-    invoke-static {p1, p2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, p2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     new-instance p2, Lcom/vk/im/ui/components/stickers/StickerVh$2;
 
     invoke-direct {p2, p0}, Lcom/vk/im/ui/components/stickers/StickerVh$2;-><init>(Lcom/vk/im/ui/components/stickers/StickerVh;)V
 
-    invoke-static {p1, p2}, Lcom/vk/extensions/ViewExtKt;->e(Landroid/view/View;Lkotlin/jvm/b/b;)V
+    invoke-static {p1, p2}, Lcom/vk/extensions/ViewExtKt;->e(Landroid/view/View;Lkotlin/jvm/b/Functions2;)V
 
     return-void
 .end method
@@ -120,7 +120,7 @@
     :cond_0
     const-string p0, "stickerItem"
 
-    invoke-static {p0}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {p0}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     const/4 p0, 0x0
 
@@ -129,11 +129,11 @@
 
 
 # virtual methods
-.method public a(Lcom/vk/im/ui/components/stickers/b;)V
+.method public a(Lcom/vk/im/ui/components/stickers/StickerAdapterItems;)V
     .locals 8
 
     .line 3
-    invoke-virtual {p1}, Lcom/vk/im/ui/components/stickers/b;->b()Lcom/vk/dto/stickers/StickerItem;
+    invoke-virtual {p1}, Lcom/vk/im/ui/components/stickers/StickerAdapterItems;->b()Lcom/vk/dto/stickers/StickerItem;
 
     move-result-object v0
 
@@ -186,7 +186,7 @@
 
     if-nez v3, :cond_2
 
-    invoke-virtual {p1}, Lcom/vk/im/ui/components/stickers/b;->a()Z
+    invoke-virtual {p1}, Lcom/vk/im/ui/components/stickers/StickerAdapterItems;->a()Z
 
     move-result p1
 
@@ -198,14 +198,14 @@
     :cond_0
     iget-object p1, p0, Lcom/vk/im/ui/components/stickers/StickerVh;->a:Lcom/vk/stickers/views/VKStickerImageView;
 
-    invoke-static {p1, v7}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v7}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {p1, v4}, Landroid/widget/ImageView;->setVisibility(I)V
 
     .line 8
     iget-object p1, p0, Lcom/vk/im/ui/components/stickers/StickerVh;->b:Lcom/vk/stickers/views/animation/VKAnimationView;
 
-    invoke-static {p1, v5}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v5}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {p1, v6}, Landroid/widget/ImageView;->setVisibility(I)V
 
@@ -227,7 +227,7 @@
     goto :goto_1
 
     :cond_1
-    invoke-static {v2}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v2}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v1
 
@@ -236,14 +236,14 @@
     :goto_0
     iget-object p1, p0, Lcom/vk/im/ui/components/stickers/StickerVh;->a:Lcom/vk/stickers/views/VKStickerImageView;
 
-    invoke-static {p1, v7}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v7}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {p1, v6}, Landroid/widget/ImageView;->setVisibility(I)V
 
     .line 11
     iget-object p1, p0, Lcom/vk/im/ui/components/stickers/StickerVh;->b:Lcom/vk/stickers/views/animation/VKAnimationView;
 
-    invoke-static {p1, v5}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v5}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {p1, v4}, Landroid/widget/ImageView;->setVisibility(I)V
 
@@ -254,7 +254,7 @@
 
     if-eqz v0, :cond_4
 
-    sget v3, Lcom/vk/stickers/v;->g:I
+    sget v3, Lcom/vk/stickers/StickersConfig;->g:I
 
     invoke-virtual {v0, v3}, Lcom/vk/dto/stickers/StickerItem;->h(I)Ljava/lang/String;
 
@@ -274,35 +274,35 @@
     return-void
 
     :cond_3
-    invoke-static {v2}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v2}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v1
 
     :cond_4
-    invoke-static {v2}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v2}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v1
 
     .line 13
     :cond_5
-    invoke-static {v2}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v2}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v1
 
     .line 14
     :cond_6
-    invoke-static {v2}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v2}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v1
 .end method
 
-.method public bridge synthetic a(Lcom/vk/im/ui/views/adapter_delegate/c;)V
+.method public bridge synthetic a(Lcom/vk/im/ui/views/adapter_delegate/ListItem;)V
     .locals 0
 
     .line 2
-    check-cast p1, Lcom/vk/im/ui/components/stickers/b;
+    check-cast p1, Lcom/vk/im/ui/components/stickers/StickerAdapterItems;
 
-    invoke-virtual {p0, p1}, Lcom/vk/im/ui/components/stickers/StickerVh;->a(Lcom/vk/im/ui/components/stickers/b;)V
+    invoke-virtual {p0, p1}, Lcom/vk/im/ui/components/stickers/StickerVh;->a(Lcom/vk/im/ui/components/stickers/StickerAdapterItems;)V
 
     return-void
 .end method

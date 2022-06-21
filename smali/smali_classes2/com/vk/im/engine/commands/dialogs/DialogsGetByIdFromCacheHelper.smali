@@ -50,11 +50,11 @@
 
     move-result-object p2
 
-    check-cast p2, Lcom/vk/im/engine/internal/storage/models/a;
+    check-cast p2, Lcom/vk/im/engine/internal/storage/models/DialogStorageModel;
 
     if-eqz p2, :cond_0
 
-    invoke-virtual {p2}, Lcom/vk/im/engine/internal/storage/models/a;->s()I
+    invoke-virtual {p2}, Lcom/vk/im/engine/internal/storage/models/DialogStorageModel;->s()I
 
     move-result p2
 
@@ -93,19 +93,19 @@
     return p0
 .end method
 
-.method private final b(Lcom/vk/im/engine/d;Lcom/vk/im/engine/utils/collection/d;)Lcom/vk/im/engine/commands/dialogs/DialogsGetByIdFromCacheHelper$a;
+.method private final b(Lcom/vk/im/engine/ImEnvironment;Lcom/vk/im/engine/utils/collection/IntCollection;)Lcom/vk/im/engine/commands/dialogs/DialogsGetByIdFromCacheHelper$a;
     .locals 1
 
     .line 3
-    invoke-interface {p1}, Lcom/vk/im/engine/d;->a0()Lcom/vk/im/engine/internal/storage/StorageManager;
+    invoke-interface {p1}, Lcom/vk/im/engine/ImEnvironment;->a0()Lcom/vk/im/engine/internal/storage/StorageManager;
 
     move-result-object p1
 
     new-instance v0, Lcom/vk/im/engine/commands/dialogs/DialogsGetByIdFromCacheHelper$loadCacheInfo$1;
 
-    invoke-direct {v0, p2}, Lcom/vk/im/engine/commands/dialogs/DialogsGetByIdFromCacheHelper$loadCacheInfo$1;-><init>(Lcom/vk/im/engine/utils/collection/d;)V
+    invoke-direct {v0, p2}, Lcom/vk/im/engine/commands/dialogs/DialogsGetByIdFromCacheHelper$loadCacheInfo$1;-><init>(Lcom/vk/im/engine/utils/collection/IntCollection;)V
 
-    invoke-virtual {p1, v0}, Lcom/vk/im/engine/internal/storage/StorageManager;->a(Lkotlin/jvm/b/b;)Ljava/lang/Object;
+    invoke-virtual {p1, v0}, Lcom/vk/im/engine/internal/storage/StorageManager;->a(Lkotlin/jvm/b/Functions2;)Ljava/lang/Object;
 
     move-result-object p1
 
@@ -122,7 +122,7 @@
 
     move-result-object p1
 
-    invoke-static {p1, p2}, Lcom/vk/core/extensions/x;->a(Landroid/util/SparseArray;I)Z
+    invoke-static {p1, p2}, Lcom/vk/core/extensions/SparseArrayExt1;->a(Landroid/util/SparseArray;I)Z
 
     move-result p1
 
@@ -144,28 +144,28 @@
 
 
 # virtual methods
-.method public final a(Lcom/vk/im/engine/d;Lcom/vk/im/engine/utils/collection/d;)Lcom/vk/im/engine/models/a;
+.method public final a(Lcom/vk/im/engine/ImEnvironment;Lcom/vk/im/engine/utils/collection/IntCollection;)Lcom/vk/im/engine/models/EntityIntMap;
     .locals 3
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lcom/vk/im/engine/d;",
-            "Lcom/vk/im/engine/utils/collection/d;",
+            "Lcom/vk/im/engine/ImEnvironment;",
+            "Lcom/vk/im/engine/utils/collection/IntCollection;",
             ")",
-            "Lcom/vk/im/engine/models/a<",
+            "Lcom/vk/im/engine/models/EntityIntMap<",
             "Lcom/vk/im/engine/models/dialogs/Dialog;",
             ">;"
         }
     .end annotation
 
     .line 2
-    invoke-interface {p2}, Lcom/vk/im/engine/utils/collection/d;->isEmpty()Z
+    invoke-interface {p2}, Lcom/vk/im/engine/utils/collection/IntCollection;->isEmpty()Z
 
     move-result v0
 
     if-nez v0, :cond_1
 
-    invoke-interface {p1}, Lcom/vk/im/engine/d;->Z()Lcom/vk/im/engine/models/Member;
+    invoke-interface {p1}, Lcom/vk/im/engine/ImEnvironment;->Z()Lcom/vk/im/engine/models/Member;
 
     move-result-object v0
 
@@ -179,49 +179,49 @@
 
     .line 3
     :cond_0
-    invoke-interface {p1}, Lcom/vk/im/engine/d;->a0()Lcom/vk/im/engine/internal/storage/StorageManager;
+    invoke-interface {p1}, Lcom/vk/im/engine/ImEnvironment;->a0()Lcom/vk/im/engine/internal/storage/StorageManager;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/vk/im/engine/internal/storage/StorageManager;->o()Lcom/vk/im/engine/internal/storage/delegates/dialogs/d;
+    invoke-virtual {v0}, Lcom/vk/im/engine/internal/storage/StorageManager;->o()Lcom/vk/im/engine/internal/storage/delegates/dialogs/DialogThemeStorage;
 
     move-result-object v0
 
     .line 4
-    invoke-direct {p0, p1, p2}, Lcom/vk/im/engine/commands/dialogs/DialogsGetByIdFromCacheHelper;->b(Lcom/vk/im/engine/d;Lcom/vk/im/engine/utils/collection/d;)Lcom/vk/im/engine/commands/dialogs/DialogsGetByIdFromCacheHelper$a;
+    invoke-direct {p0, p1, p2}, Lcom/vk/im/engine/commands/dialogs/DialogsGetByIdFromCacheHelper;->b(Lcom/vk/im/engine/ImEnvironment;Lcom/vk/im/engine/utils/collection/IntCollection;)Lcom/vk/im/engine/commands/dialogs/DialogsGetByIdFromCacheHelper$a;
 
     move-result-object p1
 
     .line 5
-    new-instance v1, Lcom/vk/im/engine/models/a;
+    new-instance v1, Lcom/vk/im/engine/models/EntityIntMap;
 
-    invoke-interface {p2}, Lcom/vk/im/engine/utils/collection/d;->size()I
+    invoke-interface {p2}, Lcom/vk/im/engine/utils/collection/IntCollection;->size()I
 
     move-result v2
 
-    invoke-direct {v1, v2}, Lcom/vk/im/engine/models/a;-><init>(I)V
+    invoke-direct {v1, v2}, Lcom/vk/im/engine/models/EntityIntMap;-><init>(I)V
 
     .line 6
     new-instance v2, Lcom/vk/im/engine/commands/dialogs/DialogsGetByIdFromCacheHelper$b;
 
-    invoke-direct {v2, p1, v1, v0}, Lcom/vk/im/engine/commands/dialogs/DialogsGetByIdFromCacheHelper$b;-><init>(Lcom/vk/im/engine/commands/dialogs/DialogsGetByIdFromCacheHelper$a;Lcom/vk/im/engine/models/a;Lcom/vk/im/engine/internal/storage/delegates/dialogs/d;)V
+    invoke-direct {v2, p1, v1, v0}, Lcom/vk/im/engine/commands/dialogs/DialogsGetByIdFromCacheHelper$b;-><init>(Lcom/vk/im/engine/commands/dialogs/DialogsGetByIdFromCacheHelper$a;Lcom/vk/im/engine/models/EntityIntMap;Lcom/vk/im/engine/internal/storage/delegates/dialogs/DialogThemeStorage;)V
 
-    invoke-interface {p2, v2}, Lcom/vk/im/engine/utils/collection/d;->a(Lcom/vk/im/engine/utils/collection/d$a;)V
+    invoke-interface {p2, v2}, Lcom/vk/im/engine/utils/collection/IntCollection;->a(Lcom/vk/im/engine/utils/collection/IntCollection$a;)V
 
     return-object v1
 
     .line 7
     :cond_1
     :goto_0
-    new-instance p1, Lcom/vk/im/engine/models/a;
+    new-instance p1, Lcom/vk/im/engine/models/EntityIntMap;
 
     const/4 v0, 0x0
 
-    invoke-direct {p1, v0}, Lcom/vk/im/engine/models/a;-><init>(I)V
+    invoke-direct {p1, v0}, Lcom/vk/im/engine/models/EntityIntMap;-><init>(I)V
 
-    iget-object v0, p1, Lcom/vk/im/engine/models/a;->a:Lcom/vk/im/engine/utils/collection/h;
+    iget-object v0, p1, Lcom/vk/im/engine/models/EntityIntMap;->a:Lcom/vk/im/engine/utils/collection/IntSet;
 
-    invoke-interface {v0, p2}, Lcom/vk/im/engine/utils/collection/d;->a(Lcom/vk/im/engine/utils/collection/d;)V
+    invoke-interface {v0, p2}, Lcom/vk/im/engine/utils/collection/IntCollection;->a(Lcom/vk/im/engine/utils/collection/IntCollection;)V
 
     return-object p1
 .end method

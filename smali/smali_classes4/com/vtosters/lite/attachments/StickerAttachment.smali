@@ -3,7 +3,7 @@
 .source "StickerAttachment.java"
 
 # interfaces
-.implements Lcom/vk/dto/attachments/b;
+.implements Lcom/vk/dto/attachments/ImageAttachment;
 
 
 # static fields
@@ -99,9 +99,9 @@
     iput p5, p0, Lcom/vtosters/lite/attachments/StickerAttachment;->h:I
 
     .line 11
-    sget-object p1, Lcom/vk/stickers/t;->l:Lcom/vk/stickers/t;
+    sget-object p1, Lcom/vk/stickers/Stickers;->l:Lcom/vk/stickers/Stickers;
 
-    invoke-virtual {p1}, Lcom/vk/stickers/t;->n()Z
+    invoke-virtual {p1}, Lcom/vk/stickers/Stickers;->n()Z
 
     move-result p1
 
@@ -190,9 +190,9 @@
     iput-object p1, p0, Lcom/vtosters/lite/attachments/StickerAttachment;->C:Lcom/vk/dto/stickers/StickerAnimation;
 
     .line 20
-    sget-object p1, Lcom/vk/stickers/t;->l:Lcom/vk/stickers/t;
+    sget-object p1, Lcom/vk/stickers/Stickers;->l:Lcom/vk/stickers/Stickers;
 
-    invoke-virtual {p1}, Lcom/vk/stickers/t;->n()Z
+    invoke-virtual {p1}, Lcom/vk/stickers/Stickers;->n()Z
 
     move-result p1
 
@@ -218,7 +218,7 @@
     if-eqz v0, :cond_0
 
     .line 2
-    sget v1, Lcom/vk/stickers/v;->d:I
+    sget v1, Lcom/vk/stickers/StickersConfig;->d:I
 
     invoke-virtual {v0, v1}, Lcom/vk/dto/common/NotificationImage;->i(I)Ljava/lang/String;
 
@@ -233,7 +233,7 @@
     if-eqz v0, :cond_1
 
     .line 4
-    sget v1, Lcom/vk/stickers/v;->d:I
+    sget v1, Lcom/vk/stickers/StickersConfig;->d:I
 
     invoke-virtual {v0, v1}, Lcom/vk/dto/common/NotificationImage;->i(I)Ljava/lang/String;
 
@@ -243,11 +243,11 @@
 
     .line 5
     :cond_1
-    sget-object v0, Lcom/vk/stickers/t;->l:Lcom/vk/stickers/t;
+    sget-object v0, Lcom/vk/stickers/Stickers;->l:Lcom/vk/stickers/Stickers;
 
     iget v1, p0, Lcom/vtosters/lite/attachments/StickerAttachment;->h:I
 
-    invoke-virtual {v0, v1}, Lcom/vk/stickers/t;->a(I)Lcom/vk/dto/stickers/StickerStockItem;
+    invoke-virtual {v0, v1}, Lcom/vk/stickers/Stickers;->a(I)Lcom/vk/dto/stickers/StickerStockItem;
 
     move-result-object v0
 
@@ -256,7 +256,7 @@
     .line 6
     iget v1, p0, Lcom/vtosters/lite/attachments/StickerAttachment;->e:I
 
-    sget v2, Lcom/vk/stickers/v;->d:I
+    sget v2, Lcom/vk/stickers/StickersConfig;->d:I
 
     invoke-virtual {v0, v1, v2}, Lcom/vk/dto/stickers/StickerStockItem;->a(II)Ljava/lang/String;
 
@@ -328,7 +328,7 @@
     .locals 2
 
     .line 1
-    sget-object v0, Lcom/vk/core/util/i;->a:Landroid/content/Context;
+    sget-object v0, Lcom/vk/core/util/AppContextHolder;->a:Landroid/content/Context;
 
     const v1, 0x7f120e21
 
@@ -372,11 +372,11 @@
     if-eqz v2, :cond_1
 
     .line 4
-    sget-object v2, Lcom/vk/stickers/t;->l:Lcom/vk/stickers/t;
+    sget-object v2, Lcom/vk/stickers/Stickers;->l:Lcom/vk/stickers/Stickers;
 
     iget v3, p0, Lcom/vtosters/lite/attachments/StickerAttachment;->h:I
 
-    invoke-virtual {v2, v3}, Lcom/vk/stickers/t;->a(I)Lcom/vk/dto/stickers/StickerStockItem;
+    invoke-virtual {v2, v3}, Lcom/vk/stickers/Stickers;->a(I)Lcom/vk/dto/stickers/StickerStockItem;
 
     move-result-object v2
 
@@ -402,9 +402,9 @@
     .locals 1
 
     .line 1
-    sget-object v0, Lcom/vk/stickers/t;->l:Lcom/vk/stickers/t;
+    sget-object v0, Lcom/vk/stickers/Stickers;->l:Lcom/vk/stickers/Stickers;
 
-    invoke-virtual {v0}, Lcom/vk/stickers/t;->p()Z
+    invoke-virtual {v0}, Lcom/vk/stickers/Stickers;->p()Z
 
     move-result v0
 

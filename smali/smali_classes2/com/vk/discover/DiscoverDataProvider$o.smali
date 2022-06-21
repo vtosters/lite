@@ -3,12 +3,12 @@
 .source "DiscoverDataProvider.kt"
 
 # interfaces
-.implements Lc/a/z/g;
+.implements Lio/reactivex/functions/Consumer;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/discover/DiscoverDataProvider;->a(Lc/a/m;Z)Lc/a/m;
+    value = Lcom/vk/discover/DiscoverDataProvider;->a(Lio/reactivex/Observable;Z)Lio/reactivex/Observable;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -22,7 +22,7 @@
         "Ljava/lang/Object;",
         ">",
         "Ljava/lang/Object;",
-        "Lc/a/z/g<",
+        "Lio/reactivex/functions/Consumer<",
         "Lcom/vk/discover/DiscoverCategoriesContainer;",
         ">;"
     }
@@ -96,7 +96,7 @@
 
     sget-object v2, Lcom/vk/dto/discover/DiscoverIntent;->PRELOAD:Lcom/vk/dto/discover/DiscoverIntent;
 
-    invoke-static {v0, p1, v1, v2}, Lcom/vk/discover/DiscoverDataProvider;->a(Lcom/vk/discover/DiscoverDataProvider;Lcom/vk/discover/DiscoverDataProvider$DiscoverId;ZLcom/vk/dto/discover/DiscoverIntent;)Lc/a/m;
+    invoke-static {v0, p1, v1, v2}, Lcom/vk/discover/DiscoverDataProvider;->a(Lcom/vk/discover/DiscoverDataProvider;Lcom/vk/discover/DiscoverDataProvider$DiscoverId;ZLcom/vk/dto/discover/DiscoverIntent;)Lio/reactivex/Observable;
 
     move-result-object v0
 
@@ -105,7 +105,7 @@
 
     invoke-direct {v1, p1}, Lcom/vk/discover/DiscoverDataProvider$o$a;-><init>(Lcom/vk/discover/DiscoverDataProvider$DiscoverId;)V
 
-    invoke-virtual {v0, v1}, Lc/a/m;->d(Lc/a/z/g;)Lc/a/m;
+    invoke-virtual {v0, v1}, Lio/reactivex/Observable;->d(Lio/reactivex/functions/Consumer;)Lio/reactivex/Observable;
 
     :cond_1
     return-void

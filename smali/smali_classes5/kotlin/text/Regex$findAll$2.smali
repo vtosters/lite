@@ -3,12 +3,12 @@
 .source "Regex.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/b;
+.implements Lkotlin/jvm/b/Functions2;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lkotlin/text/Regex;->b(Ljava/lang/CharSequence;I)Lkotlin/sequences/j;
+    value = Lkotlin/text/Regex;->b(Ljava/lang/CharSequence;I)Lkotlin/sequences/Sequence;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -19,9 +19,9 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/FunctionReference;",
-        "Lkotlin/jvm/b/b<",
-        "Lkotlin/text/j;",
-        "Lkotlin/text/j;",
+        "Lkotlin/jvm/b/Functions2<",
+        "Lkotlin/text/MatchResult2;",
+        "Lkotlin/text/MatchResult2;",
         ">;"
     }
 .end annotation
@@ -56,11 +56,11 @@
 
 
 # virtual methods
-.method public final a(Lkotlin/text/j;)Lkotlin/text/j;
+.method public final a(Lkotlin/text/MatchResult2;)Lkotlin/text/MatchResult2;
     .locals 0
 
     .line 1
-    invoke-interface {p1}, Lkotlin/text/j;->next()Lkotlin/text/j;
+    invoke-interface {p1}, Lkotlin/text/MatchResult2;->next()Lkotlin/text/MatchResult2;
 
     move-result-object p1
 
@@ -75,12 +75,12 @@
     return-object v0
 .end method
 
-.method public final f()Lkotlin/u/e;
+.method public final f()Lkotlin/u/KDeclarationContainer;
     .locals 1
 
-    const-class v0, Lkotlin/text/j;
+    const-class v0, Lkotlin/text/MatchResult2;
 
-    invoke-static {v0}, Lkotlin/jvm/internal/o;->a(Ljava/lang/Class;)Lkotlin/u/c;
+    invoke-static {v0}, Lkotlin/jvm/internal/Reflection;->a(Ljava/lang/Class;)Lkotlin/u/KClass;
 
     move-result-object v0
 
@@ -99,9 +99,9 @@
     .locals 0
 
     .line 1
-    check-cast p1, Lkotlin/text/j;
+    check-cast p1, Lkotlin/text/MatchResult2;
 
-    invoke-virtual {p0, p1}, Lkotlin/text/Regex$findAll$2;->a(Lkotlin/text/j;)Lkotlin/text/j;
+    invoke-virtual {p0, p1}, Lkotlin/text/Regex$findAll$2;->a(Lkotlin/text/MatchResult2;)Lkotlin/text/MatchResult2;
 
     move-result-object p1
 

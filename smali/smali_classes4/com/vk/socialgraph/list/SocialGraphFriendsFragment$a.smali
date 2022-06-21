@@ -24,7 +24,7 @@
     return-void
 .end method
 
-.method public synthetic constructor <init>(Lkotlin/jvm/internal/i;)V
+.method public synthetic constructor <init>(Lkotlin/jvm/internal/DefaultConstructorMarker;)V
     .locals 0
 
     .line 2
@@ -33,7 +33,7 @@
     return-void
 .end method
 
-.method private final a(Landroid/os/Bundle;)Lcom/twitter/sdk/android/core/t;
+.method private final a(Landroid/os/Bundle;)Lcom/twitter/sdk/android/core/TwitterSession;
     .locals 2
 
     .line 2
@@ -47,7 +47,7 @@
 
     move-result-object p1
 
-    const-class v1, Lcom/twitter/sdk/android/core/t;
+    const-class v1, Lcom/twitter/sdk/android/core/TwitterSession;
 
     invoke-virtual {v0, p1, v1}, Lcom/google/gson/e;->a(Ljava/lang/String;Ljava/lang/Class;)Ljava/lang/Object;
 
@@ -55,18 +55,18 @@
 
     const-string v0, "Gson().fromJson(bundle.g\u2026itterSession::class.java)"
 
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    check-cast p1, Lcom/twitter/sdk/android/core/t;
+    check-cast p1, Lcom/twitter/sdk/android/core/TwitterSession;
 
     return-object p1
 .end method
 
-.method public static final synthetic a(Lcom/vk/socialgraph/list/SocialGraphFriendsFragment$a;Landroid/os/Bundle;)Lcom/twitter/sdk/android/core/t;
+.method public static final synthetic a(Lcom/vk/socialgraph/list/SocialGraphFriendsFragment$a;Landroid/os/Bundle;)Lcom/twitter/sdk/android/core/TwitterSession;
     .locals 0
 
     .line 1
-    invoke-direct {p0, p1}, Lcom/vk/socialgraph/list/SocialGraphFriendsFragment$a;->a(Landroid/os/Bundle;)Lcom/twitter/sdk/android/core/t;
+    invoke-direct {p0, p1}, Lcom/vk/socialgraph/list/SocialGraphFriendsFragment$a;->a(Landroid/os/Bundle;)Lcom/twitter/sdk/android/core/TwitterSession;
 
     move-result-object p0
 
@@ -120,7 +120,7 @@
     return-object v0
 .end method
 
-.method public final a(Lcom/twitter/sdk/android/core/t;)Landroid/os/Bundle;
+.method public final a(Lcom/twitter/sdk/android/core/TwitterSession;)Landroid/os/Bundle;
     .locals 3
 
     .line 6

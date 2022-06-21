@@ -3,12 +3,12 @@
 .source "DiscoverDataProvider.kt"
 
 # interfaces
-.implements Lc/a/z/g;
+.implements Lio/reactivex/functions/Consumer;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/discover/DiscoverDataProvider$TemporaryCache;->u1()Lio/reactivex/disposables/b;
+    value = Lcom/vk/discover/DiscoverDataProvider$TemporaryCache;->u1()Lio/reactivex/disposables/Disposable;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -22,7 +22,7 @@
         "Ljava/lang/Object;",
         ">",
         "Ljava/lang/Object;",
-        "Lc/a/z/g<",
+        "Lio/reactivex/functions/Consumer<",
         "Lcom/vk/discover/DiscoverDataProvider$TemporaryCache;",
         ">;"
     }

@@ -3,7 +3,7 @@
 .source "DiscoverSearchFragment.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/a;
+.implements Lkotlin/jvm/b/Functions;
 
 
 # annotations
@@ -19,7 +19,7 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/a<",
+        "Lkotlin/jvm/b/Functions<",
         "Lcom/vk/core/fragments/FragmentImpl;",
         ">;"
     }
@@ -53,9 +53,9 @@
 
     if-eqz v0, :cond_0
 
-    new-instance v0, Lcom/vk/music/fragment/i;
+    new-instance v0, Lcom/vk/music/fragment/MusicDiscoverSearchCatalogFragment;
 
-    invoke-direct {v0}, Lcom/vk/music/fragment/i;-><init>()V
+    invoke-direct {v0}, Lcom/vk/music/fragment/MusicDiscoverSearchCatalogFragment;-><init>()V
 
     goto :goto_0
 

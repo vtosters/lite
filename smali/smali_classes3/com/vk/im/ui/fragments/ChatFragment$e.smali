@@ -3,7 +3,7 @@
 .source "ChatFragment.kt"
 
 # interfaces
-.implements Lcom/vk/im/ui/components/dialog_header/a;
+.implements Lcom/vk/im/ui/components/dialog_header/DialogHeaderCallback;
 
 
 # annotations
@@ -94,11 +94,11 @@
     .line 2
     iget-object v0, p0, Lcom/vk/im/ui/fragments/ChatFragment$e;->a:Lcom/vk/im/ui/fragments/ChatFragment;
 
-    invoke-static {v0}, Lcom/vk/im/ui/fragments/ChatFragment;->l(Lcom/vk/im/ui/fragments/ChatFragment;)Lcom/vk/im/ui/q/h/f/a;
+    invoke-static {v0}, Lcom/vk/im/ui/fragments/ChatFragment;->l(Lcom/vk/im/ui/fragments/ChatFragment;)Lcom/vk/im/ui/q/h/f/IMsgSendVc;
 
     move-result-object v0
 
-    invoke-interface {v0}, Lcom/vk/im/ui/q/h/f/a;->d()V
+    invoke-interface {v0}, Lcom/vk/im/ui/q/h/f/IMsgSendVc;->d()V
 
     return-void
 .end method
@@ -109,11 +109,11 @@
     .line 1
     iget-object v0, p0, Lcom/vk/im/ui/fragments/ChatFragment$e;->a:Lcom/vk/im/ui/fragments/ChatFragment;
 
-    invoke-static {v0}, Lcom/vk/im/ui/fragments/ChatFragment;->d(Lcom/vk/im/ui/fragments/ChatFragment;)Lcom/vk/im/ui/p/b;
+    invoke-static {v0}, Lcom/vk/im/ui/fragments/ChatFragment;->d(Lcom/vk/im/ui/fragments/ChatFragment;)Lcom/vk/im/ui/p/ImBridge8;
 
     move-result-object v0
 
-    invoke-interface {v0}, Lcom/vk/im/ui/p/b;->b()Lcom/vk/im/ui/p/e;
+    invoke-interface {v0}, Lcom/vk/im/ui/p/ImBridge8;->b()Lcom/vk/im/ui/p/ImBridge11;
 
     move-result-object v1
 
@@ -125,7 +125,7 @@
 
     const-string v0, "requireActivity()"
 
-    invoke-static {v2, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v2, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     const/4 v4, 0x0
 
@@ -135,18 +135,18 @@
 
     move-object v3, p1
 
-    invoke-static/range {v1 .. v6}, Lcom/vk/im/ui/p/e$b;->a(Lcom/vk/im/ui/p/e;Landroid/content/Context;Lcom/vk/im/engine/models/dialogs/DialogExt;Ljava/lang/String;ILjava/lang/Object;)V
+    invoke-static/range {v1 .. v6}, Lcom/vk/im/ui/p/ImBridge$b1;->a(Lcom/vk/im/ui/p/ImBridge11;Landroid/content/Context;Lcom/vk/im/engine/models/dialogs/DialogExt;Ljava/lang/String;ILjava/lang/Object;)V
 
     return-void
 .end method
 
-.method public a(Lcom/vk/im/engine/models/dialogs/e;)V
+.method public a(Lcom/vk/im/engine/models/dialogs/DialogMembersListExt;)V
     .locals 1
 
     .line 2
     iget-object v0, p0, Lcom/vk/im/ui/fragments/ChatFragment$e;->a:Lcom/vk/im/ui/fragments/ChatFragment;
 
-    invoke-static {v0, p1}, Lcom/vk/im/ui/fragments/ChatFragment;->a(Lcom/vk/im/ui/fragments/ChatFragment;Lcom/vk/im/engine/models/dialogs/e;)V
+    invoke-static {v0, p1}, Lcom/vk/im/ui/fragments/ChatFragment;->a(Lcom/vk/im/ui/fragments/ChatFragment;Lcom/vk/im/engine/models/dialogs/DialogMembersListExt;)V
 
     return-void
 .end method
@@ -157,11 +157,11 @@
     .line 3
     iget-object v0, p0, Lcom/vk/im/ui/fragments/ChatFragment$e;->a:Lcom/vk/im/ui/fragments/ChatFragment;
 
-    invoke-static {v0}, Lcom/vk/im/ui/fragments/ChatFragment;->l(Lcom/vk/im/ui/fragments/ChatFragment;)Lcom/vk/im/ui/q/h/f/a;
+    invoke-static {v0}, Lcom/vk/im/ui/fragments/ChatFragment;->l(Lcom/vk/im/ui/fragments/ChatFragment;)Lcom/vk/im/ui/q/h/f/IMsgSendVc;
 
     move-result-object v0
 
-    invoke-interface {v0, p1}, Lcom/vk/im/ui/q/h/f/a;->a(Lcom/vk/im/engine/models/messages/Msg;)V
+    invoke-interface {v0, p1}, Lcom/vk/im/ui/q/h/f/IMsgSendVc;->a(Lcom/vk/im/engine/models/messages/Msg;)V
 
     return-void
 .end method

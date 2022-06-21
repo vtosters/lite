@@ -24,7 +24,7 @@
     return-void
 .end method
 
-.method public synthetic constructor <init>(Lkotlin/jvm/internal/i;)V
+.method public synthetic constructor <init>(Lkotlin/jvm/internal/DefaultConstructorMarker;)V
     .locals 0
 
     .line 2
@@ -35,7 +35,7 @@
 
 
 # virtual methods
-.method public final a(Landroid/app/Activity;Lcom/vk/core/fragments/FragmentImpl;Landroid/widget/FrameLayout;III[Ljava/lang/String;[Ljava/lang/String;Lkotlin/jvm/b/a;Z)Lcom/vk/permission/RequiredPermissionHelper;
+.method public final a(Landroid/app/Activity;Lcom/vk/core/fragments/FragmentImpl;Landroid/widget/FrameLayout;III[Ljava/lang/String;[Ljava/lang/String;Lkotlin/jvm/b/Functions;Z)Lcom/vk/permission/RequiredPermissionHelper;
     .locals 16
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -47,8 +47,8 @@
             "Ljava/lang/String;",
             "[",
             "Ljava/lang/String;",
-            "Lkotlin/jvm/b/a<",
-            "Lkotlin/m;",
+            "Lkotlin/jvm/b/Functions<",
+            "Lkotlin/Unit;",
             ">;Z)",
             "Lcom/vk/permission/RequiredPermissionHelper;"
         }
@@ -92,12 +92,12 @@
     move/from16 v10, p10
 
     .line 6
-    invoke-direct/range {v0 .. v14}, Lcom/vk/permission/RequiredPermissionHelper;-><init>(Landroid/app/Activity;Lcom/vk/core/fragments/FragmentImpl;Landroid/widget/FrameLayout;III[Ljava/lang/String;[Ljava/lang/String;Lkotlin/jvm/b/a;ZIIII)V
+    invoke-direct/range {v0 .. v14}, Lcom/vk/permission/RequiredPermissionHelper;-><init>(Landroid/app/Activity;Lcom/vk/core/fragments/FragmentImpl;Landroid/widget/FrameLayout;III[Ljava/lang/String;[Ljava/lang/String;Lkotlin/jvm/b/Functions;ZIIII)V
 
     return-object v15
 .end method
 
-.method public final b(Landroid/app/Activity;Lcom/vk/core/fragments/FragmentImpl;Landroid/widget/FrameLayout;III[Ljava/lang/String;[Ljava/lang/String;Lkotlin/jvm/b/a;Z)Lcom/vk/permission/RequiredPermissionHelper;
+.method public final b(Landroid/app/Activity;Lcom/vk/core/fragments/FragmentImpl;Landroid/widget/FrameLayout;III[Ljava/lang/String;[Ljava/lang/String;Lkotlin/jvm/b/Functions;Z)Lcom/vk/permission/RequiredPermissionHelper;
     .locals 16
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -109,8 +109,8 @@
             "Ljava/lang/String;",
             "[",
             "Ljava/lang/String;",
-            "Lkotlin/jvm/b/a<",
-            "Lkotlin/m;",
+            "Lkotlin/jvm/b/Functions<",
+            "Lkotlin/Unit;",
             ">;Z)",
             "Lcom/vk/permission/RequiredPermissionHelper;"
         }
@@ -166,7 +166,7 @@
     move/from16 v10, p10
 
     .line 6
-    invoke-direct/range {v0 .. v14}, Lcom/vk/permission/RequiredPermissionHelper;-><init>(Landroid/app/Activity;Lcom/vk/core/fragments/FragmentImpl;Landroid/widget/FrameLayout;III[Ljava/lang/String;[Ljava/lang/String;Lkotlin/jvm/b/a;ZIIII)V
+    invoke-direct/range {v0 .. v14}, Lcom/vk/permission/RequiredPermissionHelper;-><init>(Landroid/app/Activity;Lcom/vk/core/fragments/FragmentImpl;Landroid/widget/FrameLayout;III[Ljava/lang/String;[Ljava/lang/String;Lkotlin/jvm/b/Functions;ZIIII)V
 
     return-object v15
 .end method

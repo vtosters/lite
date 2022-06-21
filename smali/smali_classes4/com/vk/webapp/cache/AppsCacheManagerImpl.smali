@@ -3,7 +3,7 @@
 .source "AppsCacheManagerImpl.kt"
 
 # interfaces
-.implements Lcom/vk/webapp/cache/c;
+.implements Lcom/vk/webapp/cache/AppsCacheManager;
 
 
 # annotations
@@ -24,8 +24,8 @@
         value = {
             "Landroid/util/SparseArray<",
             "Ljava/util/Collection<",
-            "Lkotlin/jvm/b/a<",
-            "Lkotlin/m;",
+            "Lkotlin/jvm/b/Functions<",
+            "Lkotlin/Unit;",
             ">;>;>;"
         }
     .end annotation
@@ -33,7 +33,7 @@
 
 .field private final e:Lcom/vk/webapp/cache/AppsCacheManagerImpl$appsRemoveWebViewListener$1;
 
-.field private final f:Lcom/vk/webapp/cache/d;
+.field private final f:Lcom/vk/webapp/cache/AppsLruCache;
 
 .field private final g:Lcom/vk/webapp/cache/AppsCacheManagerImpl$b;
 
@@ -48,7 +48,7 @@
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, v1}, Lcom/vk/webapp/cache/AppsCacheManagerImpl$a;-><init>(Lkotlin/jvm/internal/i;)V
+    invoke-direct {v0, v1}, Lcom/vk/webapp/cache/AppsCacheManagerImpl$a;-><init>(Lkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     return-void
 .end method
@@ -96,13 +96,13 @@
     iput-object p1, p0, Lcom/vk/webapp/cache/AppsCacheManagerImpl;->e:Lcom/vk/webapp/cache/AppsCacheManagerImpl$appsRemoveWebViewListener$1;
 
     .line 6
-    new-instance p1, Lcom/vk/webapp/cache/d;
+    new-instance p1, Lcom/vk/webapp/cache/AppsLruCache;
 
     iget-object v1, p0, Lcom/vk/webapp/cache/AppsCacheManagerImpl;->e:Lcom/vk/webapp/cache/AppsCacheManagerImpl$appsRemoveWebViewListener$1;
 
-    invoke-direct {p1, v0, v1}, Lcom/vk/webapp/cache/d;-><init>(ILcom/vk/webapp/cache/b;)V
+    invoke-direct {p1, v0, v1}, Lcom/vk/webapp/cache/AppsLruCache;-><init>(ILcom/vk/webapp/cache/AppsCacheChangeListener;)V
 
-    iput-object p1, p0, Lcom/vk/webapp/cache/AppsCacheManagerImpl;->f:Lcom/vk/webapp/cache/d;
+    iput-object p1, p0, Lcom/vk/webapp/cache/AppsCacheManagerImpl;->f:Lcom/vk/webapp/cache/AppsLruCache;
 
     .line 7
     new-instance p1, Lcom/vk/webapp/cache/AppsCacheManagerImpl$b;
@@ -189,38 +189,38 @@
 
 
 # virtual methods
-.method public a(ILcom/vk/webapp/cache/a$a;)Lcom/vk/webapp/cache/a$a;
+.method public a(ILcom/vk/webapp/cache/AppsCache$a;)Lcom/vk/webapp/cache/AppsCache$a;
     .locals 1
 
     .line 3
-    iget-object v0, p0, Lcom/vk/webapp/cache/AppsCacheManagerImpl;->f:Lcom/vk/webapp/cache/d;
+    iget-object v0, p0, Lcom/vk/webapp/cache/AppsCacheManagerImpl;->f:Lcom/vk/webapp/cache/AppsLruCache;
 
-    invoke-virtual {v0, p1, p2}, Lcom/vk/webapp/cache/d;->a(ILcom/vk/webapp/cache/a$a;)Lcom/vk/webapp/cache/a$a;
+    invoke-virtual {v0, p1, p2}, Lcom/vk/webapp/cache/AppsLruCache;->a(ILcom/vk/webapp/cache/AppsCache$a;)Lcom/vk/webapp/cache/AppsCache$a;
 
     move-result-object p1
 
     return-object p1
 .end method
 
-.method public a(ILkotlin/jvm/b/b;)Lkotlin/Pair;
+.method public a(ILkotlin/jvm/b/Functions2;)Lkotlin/Pair;
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(I",
-            "Lkotlin/jvm/b/b<",
+            "Lkotlin/jvm/b/Functions2<",
             "-",
             "Ljava/lang/String;",
-            "Lcom/vk/webapp/cache/a$a;",
+            "Lcom/vk/webapp/cache/AppsCache$a;",
             ">;)",
             "Lkotlin/Pair<",
-            "Lcom/vk/webapp/cache/a$a;",
+            "Lcom/vk/webapp/cache/AppsCache$a;",
             "Ljava/lang/Boolean;",
             ">;"
         }
     .end annotation
 
     .line 8
-    invoke-virtual {p0, p1}, Lcom/vk/webapp/cache/AppsCacheManagerImpl;->c(I)Lcom/vk/webapp/cache/a$a;
+    invoke-virtual {p0, p1}, Lcom/vk/webapp/cache/AppsCacheManagerImpl;->c(I)Lcom/vk/webapp/cache/AppsCache$a;
 
     move-result-object p1
 
@@ -233,7 +233,7 @@
 
     move-result-object v0
 
-    invoke-static {p1, v0}, Lkotlin/k;->a(Ljava/lang/Object;Ljava/lang/Object;)Lkotlin/Pair;
+    invoke-static {p1, v0}, Lkotlin/Tuples;->a(Ljava/lang/Object;Ljava/lang/Object;)Lkotlin/Pair;
 
     move-result-object p1
 
@@ -251,9 +251,9 @@
 
     const-string v0, "cacheDir.absolutePath"
 
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    invoke-interface {p2, p1}, Lkotlin/jvm/b/b;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {p2, p1}, Lkotlin/jvm/b/Functions2;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p1
 
@@ -263,7 +263,7 @@
 
     move-result-object p2
 
-    invoke-static {p1, p2}, Lkotlin/k;->a(Ljava/lang/Object;Ljava/lang/Object;)Lkotlin/Pair;
+    invoke-static {p1, p2}, Lkotlin/Tuples;->a(Ljava/lang/Object;Ljava/lang/Object;)Lkotlin/Pair;
 
     move-result-object p1
 
@@ -275,9 +275,9 @@
     .locals 2
 
     .line 6
-    iget-object v0, p0, Lcom/vk/webapp/cache/AppsCacheManagerImpl;->f:Lcom/vk/webapp/cache/d;
+    iget-object v0, p0, Lcom/vk/webapp/cache/AppsCacheManagerImpl;->f:Lcom/vk/webapp/cache/AppsLruCache;
 
-    invoke-virtual {v0}, Lcom/vk/webapp/cache/d;->a()V
+    invoke-virtual {v0}, Lcom/vk/webapp/cache/AppsLruCache;->a()V
 
     .line 7
     iget-object v0, p0, Lcom/vk/webapp/cache/AppsCacheManagerImpl;->g:Lcom/vk/webapp/cache/AppsCacheManagerImpl$b;
@@ -331,7 +331,7 @@
     if-nez v0, :cond_3
 
     .line 4
-    invoke-virtual {p0, p1}, Lcom/vk/webapp/cache/AppsCacheManagerImpl;->c(I)Lcom/vk/webapp/cache/a$a;
+    invoke-virtual {p0, p1}, Lcom/vk/webapp/cache/AppsCacheManagerImpl;->c(I)Lcom/vk/webapp/cache/AppsCache$a;
 
     move-result-object v0
 
@@ -340,14 +340,14 @@
     if-eqz v0, :cond_1
 
     .line 5
-    invoke-virtual {v0}, Lcom/vk/webapp/cache/a$a;->a()Lcom/vk/webapp/n/a/a;
+    invoke-virtual {v0}, Lcom/vk/webapp/cache/AppsCache$a;->a()Lcom/vk/webapp/n/a/WebAppBridge;
 
     move-result-object v2
 
-    invoke-interface {v2}, Lcom/vk/webapp/n/a/a;->a()V
+    invoke-interface {v2}, Lcom/vk/webapp/n/a/WebAppBridge;->a()V
 
     .line 6
-    invoke-virtual {v0}, Lcom/vk/webapp/cache/a$a;->g()Landroid/webkit/WebView;
+    invoke-virtual {v0}, Lcom/vk/webapp/cache/AppsCache$a;->g()Landroid/webkit/WebView;
 
     move-result-object v0
 
@@ -397,10 +397,10 @@
 
     move-result-object v2
 
-    check-cast v2, Lkotlin/jvm/b/a;
+    check-cast v2, Lkotlin/jvm/b/Functions;
 
     .line 12
-    invoke-interface {v2}, Lkotlin/jvm/b/a;->invoke()Ljava/lang/Object;
+    invoke-interface {v2}, Lkotlin/jvm/b/Functions;->invoke()Ljava/lang/Object;
 
     goto :goto_0
 
@@ -432,26 +432,26 @@
     return-void
 .end method
 
-.method public c(I)Lcom/vk/webapp/cache/a$a;
+.method public c(I)Lcom/vk/webapp/cache/AppsCache$a;
     .locals 1
 
     .line 1
-    iget-object v0, p0, Lcom/vk/webapp/cache/AppsCacheManagerImpl;->f:Lcom/vk/webapp/cache/d;
+    iget-object v0, p0, Lcom/vk/webapp/cache/AppsCacheManagerImpl;->f:Lcom/vk/webapp/cache/AppsLruCache;
 
-    invoke-virtual {v0, p1}, Lcom/vk/webapp/cache/d;->a(I)Lcom/vk/webapp/cache/a$a;
+    invoke-virtual {v0, p1}, Lcom/vk/webapp/cache/AppsLruCache;->a(I)Lcom/vk/webapp/cache/AppsCache$a;
 
     move-result-object p1
 
     return-object p1
 .end method
 
-.method public remove(I)Lcom/vk/webapp/cache/a$a;
+.method public remove(I)Lcom/vk/webapp/cache/AppsCache$a;
     .locals 1
 
     .line 1
-    iget-object v0, p0, Lcom/vk/webapp/cache/AppsCacheManagerImpl;->f:Lcom/vk/webapp/cache/d;
+    iget-object v0, p0, Lcom/vk/webapp/cache/AppsCacheManagerImpl;->f:Lcom/vk/webapp/cache/AppsLruCache;
 
-    invoke-virtual {v0, p1}, Lcom/vk/webapp/cache/d;->remove(I)Lcom/vk/webapp/cache/a$a;
+    invoke-virtual {v0, p1}, Lcom/vk/webapp/cache/AppsLruCache;->remove(I)Lcom/vk/webapp/cache/AppsCache$a;
 
     move-result-object p1
 

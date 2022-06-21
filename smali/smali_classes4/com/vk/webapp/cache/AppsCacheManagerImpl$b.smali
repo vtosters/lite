@@ -69,7 +69,7 @@
 
     iget-object v0, p0, Lcom/vk/webapp/cache/AppsCacheManagerImpl$b;->a:Lcom/vk/webapp/cache/AppsCacheManagerImpl;
 
-    invoke-virtual {v0, p1}, Lcom/vk/webapp/cache/AppsCacheManagerImpl;->remove(I)Lcom/vk/webapp/cache/a$a;
+    invoke-virtual {v0, p1}, Lcom/vk/webapp/cache/AppsCacheManagerImpl;->remove(I)Lcom/vk/webapp/cache/AppsCache$a;
 
     :cond_1
     return-void

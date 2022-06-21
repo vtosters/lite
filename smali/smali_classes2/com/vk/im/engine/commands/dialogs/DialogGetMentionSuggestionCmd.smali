@@ -1,13 +1,13 @@
 .class public final Lcom/vk/im/engine/commands/dialogs/DialogGetMentionSuggestionCmd;
-.super Lcom/vk/im/engine/i/a;
+.super Lcom/vk/im/engine/i/BaseImEngineCmd;
 .source "DialogGetMentionSuggestionCmd.kt"
 
 
 # annotations
 .annotation system Ldalvik/annotation/Signature;
     value = {
-        "Lcom/vk/im/engine/i/a<",
-        "Lcom/vk/im/engine/models/p;",
+        "Lcom/vk/im/engine/i/BaseImEngineCmd<",
+        "Lcom/vk/im/engine/models/Suggestion;",
         ">;"
     }
 .end annotation
@@ -30,7 +30,7 @@
     .locals 0
 
     .line 1
-    invoke-direct {p0}, Lcom/vk/im/engine/i/a;-><init>()V
+    invoke-direct {p0}, Lcom/vk/im/engine/i/BaseImEngineCmd;-><init>()V
 
     iput p1, p0, Lcom/vk/im/engine/commands/dialogs/DialogGetMentionSuggestionCmd;->b:I
 
@@ -45,12 +45,12 @@
     return-void
 .end method
 
-.method private final a(Lcom/vk/im/engine/d;Ljava/util/Collection;Lcom/vk/im/engine/models/Source;ZLjava/lang/Object;)Lcom/vk/im/engine/models/ProfilesInfo;
+.method private final a(Lcom/vk/im/engine/ImEnvironment;Ljava/util/Collection;Lcom/vk/im/engine/models/Source;ZLjava/lang/Object;)Lcom/vk/im/engine/models/ProfilesInfo;
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lcom/vk/im/engine/d;",
+            "Lcom/vk/im/engine/ImEnvironment;",
             "Ljava/util/Collection<",
             "Lcom/vk/im/engine/models/Member;",
             ">;",
@@ -63,40 +63,40 @@
     .end annotation
 
     .line 53
-    new-instance v0, Lcom/vk/im/engine/commands/etc/g$a;
+    new-instance v0, Lcom/vk/im/engine/commands/etc/ProfilesInfoGetArgs$a;
 
-    invoke-direct {v0}, Lcom/vk/im/engine/commands/etc/g$a;-><init>()V
+    invoke-direct {v0}, Lcom/vk/im/engine/commands/etc/ProfilesInfoGetArgs$a;-><init>()V
 
     .line 54
-    invoke-virtual {v0, p2}, Lcom/vk/im/engine/commands/etc/g$a;->a(Ljava/util/Collection;)Lcom/vk/im/engine/commands/etc/g$a;
+    invoke-virtual {v0, p2}, Lcom/vk/im/engine/commands/etc/ProfilesInfoGetArgs$a;->a(Ljava/util/Collection;)Lcom/vk/im/engine/commands/etc/ProfilesInfoGetArgs$a;
 
     .line 55
-    invoke-virtual {v0, p3}, Lcom/vk/im/engine/commands/etc/g$a;->a(Lcom/vk/im/engine/models/Source;)Lcom/vk/im/engine/commands/etc/g$a;
+    invoke-virtual {v0, p3}, Lcom/vk/im/engine/commands/etc/ProfilesInfoGetArgs$a;->a(Lcom/vk/im/engine/models/Source;)Lcom/vk/im/engine/commands/etc/ProfilesInfoGetArgs$a;
 
     .line 56
-    invoke-virtual {v0, p4}, Lcom/vk/im/engine/commands/etc/g$a;->a(Z)Lcom/vk/im/engine/commands/etc/g$a;
+    invoke-virtual {v0, p4}, Lcom/vk/im/engine/commands/etc/ProfilesInfoGetArgs$a;->a(Z)Lcom/vk/im/engine/commands/etc/ProfilesInfoGetArgs$a;
 
     .line 57
-    invoke-virtual {v0, p5}, Lcom/vk/im/engine/commands/etc/g$a;->a(Ljava/lang/Object;)Lcom/vk/im/engine/commands/etc/g$a;
+    invoke-virtual {v0, p5}, Lcom/vk/im/engine/commands/etc/ProfilesInfoGetArgs$a;->a(Ljava/lang/Object;)Lcom/vk/im/engine/commands/etc/ProfilesInfoGetArgs$a;
 
     .line 58
-    invoke-virtual {v0}, Lcom/vk/im/engine/commands/etc/g$a;->a()Lcom/vk/im/engine/commands/etc/g;
+    invoke-virtual {v0}, Lcom/vk/im/engine/commands/etc/ProfilesInfoGetArgs$a;->a()Lcom/vk/im/engine/commands/etc/ProfilesInfoGetArgs;
 
     move-result-object p2
 
     .line 59
-    new-instance p3, Lcom/vk/im/engine/commands/etc/e;
+    new-instance p3, Lcom/vk/im/engine/commands/etc/ProfilesGetCmd;
 
-    invoke-direct {p3, p2}, Lcom/vk/im/engine/commands/etc/e;-><init>(Lcom/vk/im/engine/commands/etc/g;)V
+    invoke-direct {p3, p2}, Lcom/vk/im/engine/commands/etc/ProfilesGetCmd;-><init>(Lcom/vk/im/engine/commands/etc/ProfilesInfoGetArgs;)V
 
     .line 60
-    invoke-interface {p1, p0, p3}, Lcom/vk/im/engine/d;->a(Ljava/lang/Object;Lcom/vk/im/engine/i/c;)Ljava/lang/Object;
+    invoke-interface {p1, p0, p3}, Lcom/vk/im/engine/ImEnvironment;->a(Ljava/lang/Object;Lcom/vk/im/engine/i/ImEngineCmd;)Ljava/lang/Object;
 
     move-result-object p1
 
     const-string p2, "env.submitCommandDirect(this, cmd)"
 
-    invoke-static {p1, p2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, p2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     check-cast p1, Lcom/vk/im/engine/models/ProfilesInfo;
 
@@ -206,12 +206,12 @@
     return-object p1
 .end method
 
-.method private final a(Lcom/vk/im/engine/d;I)Ljava/util/Collection;
+.method private final a(Lcom/vk/im/engine/ImEnvironment;I)Ljava/util/Collection;
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lcom/vk/im/engine/d;",
+            "Lcom/vk/im/engine/ImEnvironment;",
             "I)",
             "Ljava/util/Collection<",
             "Lcom/vk/im/engine/models/Member;",
@@ -220,22 +220,22 @@
     .end annotation
 
     .line 32
-    invoke-interface {p1}, Lcom/vk/im/engine/d;->a0()Lcom/vk/im/engine/internal/storage/StorageManager;
+    invoke-interface {p1}, Lcom/vk/im/engine/ImEnvironment;->a0()Lcom/vk/im/engine/internal/storage/StorageManager;
 
     move-result-object p1
 
     .line 33
-    invoke-virtual {p1}, Lcom/vk/im/engine/internal/storage/StorageManager;->f()Lcom/vk/im/engine/internal/storage/delegates/dialogs/g;
+    invoke-virtual {p1}, Lcom/vk/im/engine/internal/storage/StorageManager;->f()Lcom/vk/im/engine/internal/storage/delegates/dialogs/DialogsStorageManager;
 
     move-result-object p1
 
     .line 34
-    invoke-virtual {p1}, Lcom/vk/im/engine/internal/storage/delegates/dialogs/g;->b()Lcom/vk/im/engine/internal/storage/delegates/dialogs/DialogsEntryStorageManager;
+    invoke-virtual {p1}, Lcom/vk/im/engine/internal/storage/delegates/dialogs/DialogsStorageManager;->b()Lcom/vk/im/engine/internal/storage/delegates/dialogs/DialogsEntryStorageManager;
 
     move-result-object p1
 
     .line 35
-    invoke-virtual {p1, p2}, Lcom/vk/im/engine/internal/storage/delegates/dialogs/DialogsEntryStorageManager;->d(I)Lcom/vk/im/engine/models/dialogs/d;
+    invoke-virtual {p1, p2}, Lcom/vk/im/engine/internal/storage/delegates/dialogs/DialogsEntryStorageManager;->d(I)Lcom/vk/im/engine/models/dialogs/DialogMembersList;
 
     move-result-object p1
 
@@ -282,12 +282,12 @@
     return-object p2
 .end method
 
-.method private final a(Lcom/vk/im/engine/d;ILjava/lang/String;)Ljava/util/Collection;
+.method private final a(Lcom/vk/im/engine/ImEnvironment;ILjava/lang/String;)Ljava/util/Collection;
     .locals 4
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lcom/vk/im/engine/d;",
+            "Lcom/vk/im/engine/ImEnvironment;",
             "I",
             "Ljava/lang/String;",
             ")",
@@ -336,18 +336,18 @@
     new-array v0, v0, [Ljava/lang/String;
 
     .line 43
-    sget-object v3, Lb/h/g/p/a;->a:Lb/h/g/p/a;
+    sget-object v3, Lb/h/g/p/Transliteration;->a:Lb/h/g/p/Transliteration;
 
-    invoke-virtual {v3, p3}, Lb/h/g/p/a;->a(Ljava/lang/String;)Ljava/lang/String;
+    invoke-virtual {v3, p3}, Lb/h/g/p/Transliteration;->a(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v3
 
     aput-object v3, v0, v2
 
     .line 44
-    sget-object v2, Lb/h/g/p/a;->a:Lb/h/g/p/a;
+    sget-object v2, Lb/h/g/p/Transliteration;->a:Lb/h/g/p/Transliteration;
 
-    invoke-virtual {v2, p3}, Lb/h/g/p/a;->b(Ljava/lang/String;)Ljava/lang/String;
+    invoke-virtual {v2, p3}, Lb/h/g/p/Transliteration;->b(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p3
 
@@ -382,7 +382,7 @@
     check-cast v1, Ljava/lang/String;
 
     .line 48
-    invoke-interface {p1}, Lcom/vk/im/engine/d;->a0()Lcom/vk/im/engine/internal/storage/StorageManager;
+    invoke-interface {p1}, Lcom/vk/im/engine/ImEnvironment;->a0()Lcom/vk/im/engine/internal/storage/StorageManager;
 
     move-result-object v2
 
@@ -429,7 +429,7 @@
     return-object v0
 .end method
 
-.method private final a(Lcom/vk/im/engine/d;ILcom/vk/im/engine/models/Source;ZLjava/lang/Object;)V
+.method private final a(Lcom/vk/im/engine/ImEnvironment;ILcom/vk/im/engine/models/Source;ZLjava/lang/Object;)V
     .locals 1
 
     .line 30
@@ -438,17 +438,17 @@
     invoke-direct {v0, p2, p3, p4, p5}, Lcom/vk/im/engine/commands/dialogs/DialogGetMembersCmd;-><init>(ILcom/vk/im/engine/models/Source;ZLjava/lang/Object;)V
 
     .line 31
-    invoke-interface {p1, p0, v0}, Lcom/vk/im/engine/d;->a(Ljava/lang/Object;Lcom/vk/im/engine/i/c;)Ljava/lang/Object;
+    invoke-interface {p1, p0, v0}, Lcom/vk/im/engine/ImEnvironment;->a(Ljava/lang/Object;Lcom/vk/im/engine/i/ImEngineCmd;)Ljava/lang/Object;
 
     return-void
 .end method
 
-.method private final b(Lcom/vk/im/engine/d;I)Ljava/util/List;
+.method private final b(Lcom/vk/im/engine/ImEnvironment;I)Ljava/util/List;
     .locals 3
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lcom/vk/im/engine/d;",
+            "Lcom/vk/im/engine/ImEnvironment;",
             "I)",
             "Ljava/util/List<",
             "Lcom/vk/im/engine/models/Member;",
@@ -457,7 +457,7 @@
     .end annotation
 
     .line 1
-    invoke-interface {p1}, Lcom/vk/im/engine/d;->a0()Lcom/vk/im/engine/internal/storage/StorageManager;
+    invoke-interface {p1}, Lcom/vk/im/engine/ImEnvironment;->a0()Lcom/vk/im/engine/internal/storage/StorageManager;
 
     move-result-object p1
 
@@ -467,9 +467,9 @@
     move-result-object p1
 
     .line 3
-    sget-object v0, Lcom/vk/im/engine/models/q;->d:Lcom/vk/im/engine/models/q$a;
+    sget-object v0, Lcom/vk/im/engine/models/Weight;->d:Lcom/vk/im/engine/models/Weight$a;
 
-    invoke-virtual {v0}, Lcom/vk/im/engine/models/q$a;->c()Lcom/vk/im/engine/models/q;
+    invoke-virtual {v0}, Lcom/vk/im/engine/models/Weight$a;->c()Lcom/vk/im/engine/models/Weight;
 
     move-result-object v0
 
@@ -477,7 +477,7 @@
 
     const/16 v2, 0x64
 
-    invoke-virtual {p1, p2, v0, v1, v2}, Lcom/vk/im/engine/internal/storage/delegates/messages/MsgStorageManager;->a(ILcom/vk/im/engine/models/q;Lcom/vk/im/engine/models/Direction;I)Ljava/util/List;
+    invoke-virtual {p1, p2, v0, v1, v2}, Lcom/vk/im/engine/internal/storage/delegates/messages/MsgStorageManager;->a(ILcom/vk/im/engine/models/Weight;Lcom/vk/im/engine/models/Direction;I)Ljava/util/List;
 
     move-result-object p1
 
@@ -486,13 +486,13 @@
 
 
 # virtual methods
-.method public a(Lcom/vk/im/engine/d;)Lcom/vk/im/engine/models/p;
+.method public a(Lcom/vk/im/engine/ImEnvironment;)Lcom/vk/im/engine/models/Suggestion;
     .locals 14
 
     .line 2
     iget v0, p0, Lcom/vk/im/engine/commands/dialogs/DialogGetMentionSuggestionCmd;->b:I
 
-    invoke-static {v0}, Lcom/vk/im/engine/utils/e;->d(I)Lcom/vk/im/engine/models/PeerType;
+    invoke-static {v0}, Lcom/vk/im/engine/utils/ImDialogsUtils;->d(I)Lcom/vk/im/engine/models/PeerType;
 
     move-result-object v0
 
@@ -506,43 +506,43 @@
     if-eq v0, v1, :cond_0
 
     .line 4
-    new-instance p1, Lcom/vk/im/engine/models/p;
+    new-instance p1, Lcom/vk/im/engine/models/Suggestion;
 
-    invoke-direct {p1, v3, v3, v2, v3}, Lcom/vk/im/engine/models/p;-><init>(Lcom/vk/im/engine/models/b;Lcom/vk/im/engine/models/ProfilesInfo;ILkotlin/jvm/internal/i;)V
+    invoke-direct {p1, v3, v3, v2, v3}, Lcom/vk/im/engine/models/Suggestion;-><init>(Lcom/vk/im/engine/models/EntityValue;Lcom/vk/im/engine/models/ProfilesInfo;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     return-object p1
 
     .line 5
     :cond_0
-    invoke-interface {p1}, Lcom/vk/im/engine/d;->Z()Lcom/vk/im/engine/models/Member;
+    invoke-interface {p1}, Lcom/vk/im/engine/ImEnvironment;->Z()Lcom/vk/im/engine/models/Member;
 
     move-result-object v0
 
     .line 6
-    invoke-interface {p1}, Lcom/vk/im/engine/d;->a0()Lcom/vk/im/engine/internal/storage/StorageManager;
+    invoke-interface {p1}, Lcom/vk/im/engine/ImEnvironment;->a0()Lcom/vk/im/engine/internal/storage/StorageManager;
 
     move-result-object v1
 
-    invoke-virtual {v1}, Lcom/vk/im/engine/internal/storage/StorageManager;->n()Lcom/vk/im/engine/internal/storage/f/c/a;
+    invoke-virtual {v1}, Lcom/vk/im/engine/internal/storage/StorageManager;->n()Lcom/vk/im/engine/internal/storage/f/c/SystemStorageManager;
 
     move-result-object v1
 
-    invoke-virtual {v1}, Lcom/vk/im/engine/internal/storage/f/c/a;->d()I
+    invoke-virtual {v1}, Lcom/vk/im/engine/internal/storage/f/c/SystemStorageManager;->d()I
 
     move-result v1
 
     .line 7
-    invoke-interface {p1}, Lcom/vk/im/engine/d;->a0()Lcom/vk/im/engine/internal/storage/StorageManager;
+    invoke-interface {p1}, Lcom/vk/im/engine/ImEnvironment;->a0()Lcom/vk/im/engine/internal/storage/StorageManager;
 
     move-result-object v4
 
     .line 8
-    invoke-virtual {v4}, Lcom/vk/im/engine/internal/storage/StorageManager;->f()Lcom/vk/im/engine/internal/storage/delegates/dialogs/g;
+    invoke-virtual {v4}, Lcom/vk/im/engine/internal/storage/StorageManager;->f()Lcom/vk/im/engine/internal/storage/delegates/dialogs/DialogsStorageManager;
 
     move-result-object v4
 
     .line 9
-    invoke-virtual {v4}, Lcom/vk/im/engine/internal/storage/delegates/dialogs/g;->b()Lcom/vk/im/engine/internal/storage/delegates/dialogs/DialogsEntryStorageManager;
+    invoke-virtual {v4}, Lcom/vk/im/engine/internal/storage/delegates/dialogs/DialogsStorageManager;->b()Lcom/vk/im/engine/internal/storage/delegates/dialogs/DialogsEntryStorageManager;
 
     move-result-object v4
 
@@ -644,7 +644,7 @@
 
     move-object v9, p1
 
-    invoke-direct/range {v8 .. v13}, Lcom/vk/im/engine/commands/dialogs/DialogGetMentionSuggestionCmd;->a(Lcom/vk/im/engine/d;ILcom/vk/im/engine/models/Source;ZLjava/lang/Object;)V
+    invoke-direct/range {v8 .. v13}, Lcom/vk/im/engine/commands/dialogs/DialogGetMentionSuggestionCmd;->a(Lcom/vk/im/engine/ImEnvironment;ILcom/vk/im/engine/models/Source;ZLjava/lang/Object;)V
 
     const/4 v1, 0x0
 
@@ -654,7 +654,7 @@
     :cond_8
     iget v8, p0, Lcom/vk/im/engine/commands/dialogs/DialogGetMentionSuggestionCmd;->b:I
 
-    invoke-direct {p0, p1, v8}, Lcom/vk/im/engine/commands/dialogs/DialogGetMentionSuggestionCmd;->b(Lcom/vk/im/engine/d;I)Ljava/util/List;
+    invoke-direct {p0, p1, v8}, Lcom/vk/im/engine/commands/dialogs/DialogGetMentionSuggestionCmd;->b(Lcom/vk/im/engine/ImEnvironment;I)Ljava/util/List;
 
     move-result-object v8
 
@@ -675,7 +675,7 @@
     .line 16
     iget v6, p0, Lcom/vk/im/engine/commands/dialogs/DialogGetMentionSuggestionCmd;->b:I
 
-    invoke-direct {p0, p1, v6}, Lcom/vk/im/engine/commands/dialogs/DialogGetMentionSuggestionCmd;->a(Lcom/vk/im/engine/d;I)Ljava/util/Collection;
+    invoke-direct {p0, p1, v6}, Lcom/vk/im/engine/commands/dialogs/DialogGetMentionSuggestionCmd;->a(Lcom/vk/im/engine/ImEnvironment;I)Ljava/util/Collection;
 
     move-result-object v6
 
@@ -689,13 +689,13 @@
 
     iget-object v9, p0, Lcom/vk/im/engine/commands/dialogs/DialogGetMentionSuggestionCmd;->c:Ljava/lang/String;
 
-    invoke-direct {p0, p1, v6, v9}, Lcom/vk/im/engine/commands/dialogs/DialogGetMentionSuggestionCmd;->a(Lcom/vk/im/engine/d;ILjava/lang/String;)Ljava/util/Collection;
+    invoke-direct {p0, p1, v6, v9}, Lcom/vk/im/engine/commands/dialogs/DialogGetMentionSuggestionCmd;->a(Lcom/vk/im/engine/ImEnvironment;ILjava/lang/String;)Ljava/util/Collection;
 
     move-result-object v6
 
     .line 18
     :goto_7
-    invoke-static {v6}, Lkotlin/collections/l;->d(Ljava/lang/Iterable;)Lkotlin/sequences/j;
+    invoke-static {v6}, Lkotlin/collections/l;->d(Ljava/lang/Iterable;)Lkotlin/sequences/Sequence;
 
     move-result-object v6
 
@@ -704,7 +704,7 @@
 
     invoke-direct {v9, v0}, Lcom/vk/im/engine/commands/dialogs/DialogGetMentionSuggestionCmd$onExecute$members$1;-><init>(Lcom/vk/im/engine/models/Member;)V
 
-    invoke-static {v6, v9}, Lkotlin/sequences/m;->b(Lkotlin/sequences/j;Lkotlin/jvm/b/b;)Lkotlin/sequences/j;
+    invoke-static {v6, v9}, Lkotlin/sequences/m;->b(Lkotlin/sequences/Sequence;Lkotlin/jvm/b/Functions2;)Lkotlin/sequences/Sequence;
 
     move-result-object v0
 
@@ -713,17 +713,17 @@
 
     move-result-object v6
 
-    invoke-static {v0, v6}, Lkotlin/sequences/m;->a(Lkotlin/sequences/j;Ljava/util/Comparator;)Lkotlin/sequences/j;
+    invoke-static {v0, v6}, Lkotlin/sequences/m;->a(Lkotlin/sequences/Sequence;Ljava/util/Comparator;)Lkotlin/sequences/Sequence;
 
     move-result-object v0
 
     .line 21
-    invoke-static {v0}, Lkotlin/sequences/m;->l(Lkotlin/sequences/j;)Ljava/util/List;
+    invoke-static {v0}, Lkotlin/sequences/m;->l(Lkotlin/sequences/Sequence;)Ljava/util/List;
 
     move-result-object v10
 
     .line 22
-    new-instance v0, Lcom/vk/im/engine/models/b;
+    new-instance v0, Lcom/vk/im/engine/models/EntityValue;
 
     if-eqz v7, :cond_b
 
@@ -733,7 +733,7 @@
     move-object v3, v10
 
     :goto_8
-    invoke-direct {v0, v3, v1}, Lcom/vk/im/engine/models/b;-><init>(Ljava/lang/Object;Z)V
+    invoke-direct {v0, v3, v1}, Lcom/vk/im/engine/models/EntityValue;-><init>(Ljava/lang/Object;Z)V
 
     .line 23
     iget-object v1, p0, Lcom/vk/im/engine/commands/dialogs/DialogGetMentionSuggestionCmd;->d:Lcom/vk/im/engine/models/Source;
@@ -795,14 +795,14 @@
 
     move-object v9, p1
 
-    invoke-direct/range {v8 .. v13}, Lcom/vk/im/engine/commands/dialogs/DialogGetMentionSuggestionCmd;->a(Lcom/vk/im/engine/d;Ljava/util/Collection;Lcom/vk/im/engine/models/Source;ZLjava/lang/Object;)Lcom/vk/im/engine/models/ProfilesInfo;
+    invoke-direct/range {v8 .. v13}, Lcom/vk/im/engine/commands/dialogs/DialogGetMentionSuggestionCmd;->a(Lcom/vk/im/engine/ImEnvironment;Ljava/util/Collection;Lcom/vk/im/engine/models/Source;ZLjava/lang/Object;)Lcom/vk/im/engine/models/ProfilesInfo;
 
     move-result-object p1
 
     .line 28
-    new-instance v1, Lcom/vk/im/engine/models/p;
+    new-instance v1, Lcom/vk/im/engine/models/Suggestion;
 
-    invoke-direct {v1, v0, p1}, Lcom/vk/im/engine/models/p;-><init>(Lcom/vk/im/engine/models/b;Lcom/vk/im/engine/models/ProfilesInfo;)V
+    invoke-direct {v1, v0, p1}, Lcom/vk/im/engine/models/Suggestion;-><init>(Lcom/vk/im/engine/models/EntityValue;Lcom/vk/im/engine/models/ProfilesInfo;)V
 
     return-object v1
 
@@ -815,11 +815,11 @@
     throw p1
 .end method
 
-.method public bridge synthetic a(Lcom/vk/im/engine/d;)Ljava/lang/Object;
+.method public bridge synthetic a(Lcom/vk/im/engine/ImEnvironment;)Ljava/lang/Object;
     .locals 0
 
     .line 1
-    invoke-virtual {p0, p1}, Lcom/vk/im/engine/commands/dialogs/DialogGetMentionSuggestionCmd;->a(Lcom/vk/im/engine/d;)Lcom/vk/im/engine/models/p;
+    invoke-virtual {p0, p1}, Lcom/vk/im/engine/commands/dialogs/DialogGetMentionSuggestionCmd;->a(Lcom/vk/im/engine/ImEnvironment;)Lcom/vk/im/engine/models/Suggestion;
 
     move-result-object p1
 
@@ -847,7 +847,7 @@
 
     iget-object v1, p1, Lcom/vk/im/engine/commands/dialogs/DialogGetMentionSuggestionCmd;->c:Ljava/lang/String;
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v0
 
@@ -857,7 +857,7 @@
 
     iget-object v1, p1, Lcom/vk/im/engine/commands/dialogs/DialogGetMentionSuggestionCmd;->d:Lcom/vk/im/engine/models/Source;
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v0
 
@@ -873,7 +873,7 @@
 
     iget-object p1, p1, Lcom/vk/im/engine/commands/dialogs/DialogGetMentionSuggestionCmd;->f:Ljava/lang/Object;
 
-    invoke-static {v0, p1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v0, p1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result p1
 

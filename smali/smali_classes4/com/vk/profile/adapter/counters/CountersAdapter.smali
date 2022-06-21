@@ -31,7 +31,7 @@
 
 
 # instance fields
-.field private final a:Lcom/vk/profile/adapter/counters/e;
+.field private final a:Lcom/vk/profile/adapter/counters/CountersCacheManager;
 
 .field private final b:Ljava/util/ArrayList;
     .annotation system Ldalvik/annotation/Signature;
@@ -73,7 +73,7 @@
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, v1}, Lcom/vk/profile/adapter/counters/CountersAdapter$d;-><init>(Lkotlin/jvm/internal/i;)V
+    invoke-direct {v0, v1}, Lcom/vk/profile/adapter/counters/CountersAdapter$d;-><init>(Lkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     const/4 v0, 0x2
 
@@ -115,11 +115,11 @@
     .line 2
     iget-object p1, p0, Lcom/vk/profile/adapter/counters/CountersAdapter;->e:Lcom/vk/profile/presenter/BaseProfilePresenter;
 
-    invoke-virtual {p1}, Lcom/vk/newsfeed/presenters/i;->F()Lcom/vk/profile/adapter/counters/e;
+    invoke-virtual {p1}, Lcom/vk/newsfeed/presenters/NewsFeedProfilePresenter;->F()Lcom/vk/profile/adapter/counters/CountersCacheManager;
 
     move-result-object p1
 
-    iput-object p1, p0, Lcom/vk/profile/adapter/counters/CountersAdapter;->a:Lcom/vk/profile/adapter/counters/e;
+    iput-object p1, p0, Lcom/vk/profile/adapter/counters/CountersAdapter;->a:Lcom/vk/profile/adapter/counters/CountersCacheManager;
 
     .line 3
     new-instance p1, Ljava/util/ArrayList;
@@ -143,16 +143,16 @@
 
     const/4 v5, 0x0
 
-    invoke-static/range {v0 .. v5}, Lcom/vk/profile/adapter/factory/sections/BaseProfileSectionsFactory;->a(Lcom/vk/profile/adapter/factory/sections/BaseProfileSectionsFactory;Lcom/vtosters/lite/api/ExtendedUserProfile;ZLkotlin/jvm/b/b;ILjava/lang/Object;)V
+    invoke-static/range {v0 .. v5}, Lcom/vk/profile/adapter/factory/sections/BaseProfileSectionsFactory;->a(Lcom/vk/profile/adapter/factory/sections/BaseProfileSectionsFactory;Lcom/vtosters/lite/api/ExtendedUserProfile;ZLkotlin/jvm/b/Functions2;ILjava/lang/Object;)V
 
     .line 5
-    iget-object p1, p0, Lcom/vk/profile/adapter/counters/CountersAdapter;->a:Lcom/vk/profile/adapter/counters/e;
+    iget-object p1, p0, Lcom/vk/profile/adapter/counters/CountersAdapter;->a:Lcom/vk/profile/adapter/counters/CountersCacheManager;
 
     iget-object p2, p0, Lcom/vk/profile/adapter/counters/CountersAdapter;->d:Lcom/vtosters/lite/api/ExtendedUserProfile;
 
     iget-object p3, p0, Lcom/vk/profile/adapter/counters/CountersAdapter;->b:Ljava/util/ArrayList;
 
-    invoke-virtual {p1, p2, p3}, Lcom/vk/profile/adapter/counters/e;->a(Lcom/vtosters/lite/api/ExtendedUserProfile;Ljava/util/ArrayList;)V
+    invoke-virtual {p1, p2, p3}, Lcom/vk/profile/adapter/counters/CountersCacheManager;->a(Lcom/vtosters/lite/api/ExtendedUserProfile;Ljava/util/ArrayList;)V
 
     return-void
 .end method
@@ -187,12 +187,12 @@
 
     const-string v0, "items[position]"
 
-    invoke-static {p2, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p2, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     check-cast p2, Lcom/vk/profile/data/CountersWrapper;
 
     .line 2
-    invoke-virtual {p1, p2}, Lcom/vtosters/lite/ui/b0/i;->a(Ljava/lang/Object;)V
+    invoke-virtual {p1, p2}, Lcom/vtosters/lite/ui/holder/RecyclerHolder;->a(Ljava/lang/Object;)V
 
     .line 3
     invoke-virtual {p2}, Lcom/vk/profile/data/CountersWrapper;->h()Ljava/lang/String;
@@ -202,7 +202,7 @@
     const-string v0, "stories"
 
     .line 4
-    invoke-static {p2, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {p2, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v0
 
@@ -221,7 +221,7 @@
     const-string v0, "photos"
 
     .line 6
-    invoke-static {p2, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {p2, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v0
 
@@ -229,7 +229,7 @@
 
     iget-object v0, p0, Lcom/vk/profile/adapter/counters/CountersAdapter;->d:Lcom/vtosters/lite/api/ExtendedUserProfile;
 
-    invoke-static {v0}, Lcom/vk/profile/utils/d;->f(Lcom/vtosters/lite/api/ExtendedUserProfile;)Z
+    invoke-static {v0}, Lcom/vk/profile/utils/ProfileExt;->f(Lcom/vtosters/lite/api/ExtendedUserProfile;)Z
 
     move-result v0
 
@@ -253,7 +253,7 @@
     if-ne p2, v0, :cond_2
 
     .line 8
-    new-instance p2, Lcom/vk/profile/adapter/counters/e$a;
+    new-instance p2, Lcom/vk/profile/adapter/counters/CountersCacheManager$a;
 
     iget-object v1, p0, Lcom/vk/profile/adapter/counters/CountersAdapter;->d:Lcom/vtosters/lite/api/ExtendedUserProfile;
 
@@ -300,7 +300,7 @@
 
     const-string v1, "profile.photos[0].getIma\u20262) 200 else 130 else 130)"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {v0}, Lcom/vk/dto/common/ImageSize;->v1()Ljava/lang/String;
 
@@ -320,12 +320,12 @@
 
     move-object v1, p2
 
-    invoke-direct/range {v1 .. v8}, Lcom/vk/profile/adapter/counters/e$a;-><init>(Ljava/lang/String;ILjava/lang/String;Lcom/facebook/imagepipeline/request/a;Landroid/graphics/ColorFilter;ILkotlin/jvm/internal/i;)V
+    invoke-direct/range {v1 .. v8}, Lcom/vk/profile/adapter/counters/CountersCacheManager$a;-><init>(Ljava/lang/String;ILjava/lang/String;Lcom/facebook/imagepipeline/request/BasePostprocessor;Landroid/graphics/ColorFilter;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     .line 9
     check-cast p1, Lcom/vk/profile/adapter/counters/CountersAdapter$a;
 
-    invoke-virtual {p1, p2}, Lcom/vk/profile/adapter/counters/CountersAdapter$a;->a(Lcom/vk/profile/adapter/counters/e$a;)V
+    invoke-virtual {p1, p2}, Lcom/vk/profile/adapter/counters/CountersAdapter$a;->a(Lcom/vk/profile/adapter/counters/CountersCacheManager$a;)V
 
     :cond_2
     return-void
@@ -337,11 +337,11 @@
     invoke-direct {v0, p1}, Ljava/lang/ref/WeakReference;-><init>(Ljava/lang/Object;)V
 
     .line 11
-    iget-object p1, p0, Lcom/vk/profile/adapter/counters/CountersAdapter;->a:Lcom/vk/profile/adapter/counters/e;
+    iget-object p1, p0, Lcom/vk/profile/adapter/counters/CountersAdapter;->a:Lcom/vk/profile/adapter/counters/CountersCacheManager;
 
     iget-object v1, p0, Lcom/vk/profile/adapter/counters/CountersAdapter;->d:Lcom/vtosters/lite/api/ExtendedUserProfile;
 
-    invoke-virtual {p1, v1, p2}, Lcom/vk/profile/adapter/counters/e;->a(Lcom/vtosters/lite/api/ExtendedUserProfile;Ljava/lang/String;)Lc/a/m;
+    invoke-virtual {p1, v1, p2}, Lcom/vk/profile/adapter/counters/CountersCacheManager;->a(Lcom/vtosters/lite/api/ExtendedUserProfile;Ljava/lang/String;)Lio/reactivex/Observable;
 
     move-result-object p1
 
@@ -356,7 +356,7 @@
     sget-object v0, Lcom/vk/profile/adapter/counters/CountersAdapter$j;->a:Lcom/vk/profile/adapter/counters/CountersAdapter$j;
 
     .line 14
-    invoke-virtual {p1, p2, v0}, Lc/a/m;->a(Lc/a/z/g;Lc/a/z/g;)Lio/reactivex/disposables/b;
+    invoke-virtual {p1, p2, v0}, Lio/reactivex/Observable;->a(Lio/reactivex/functions/Consumer;Lio/reactivex/functions/Consumer;)Lio/reactivex/disposables/Disposable;
 
     :cond_4
     return-void

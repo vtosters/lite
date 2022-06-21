@@ -42,7 +42,7 @@
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, v1}, Lcom/vk/promo/QRCodePromoViewController$b;-><init>(Lkotlin/jvm/internal/i;)V
+    invoke-direct {v0, v1}, Lcom/vk/promo/QRCodePromoViewController$b;-><init>(Lkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     .line 1
     new-instance v0, Lcom/vk/promo/QRCodePromoViewController$a;
@@ -109,11 +109,11 @@
 
 
 # virtual methods
-.method public a(Landroid/view/LayoutInflater;Landroid/view/ViewGroup;Lcom/vk/promo/f;)Landroid/view/View;
+.method public a(Landroid/view/LayoutInflater;Landroid/view/ViewGroup;Lcom/vk/promo/PromoNavigator;)Landroid/view/View;
     .locals 3
 
     .line 5
-    invoke-super {p0, p1, p2, p3}, Lcom/vk/promo/PromoDefaultSlideViewController;->a(Landroid/view/LayoutInflater;Landroid/view/ViewGroup;Lcom/vk/promo/f;)Landroid/view/View;
+    invoke-super {p0, p1, p2, p3}, Lcom/vk/promo/PromoDefaultSlideViewController;->a(Landroid/view/LayoutInflater;Landroid/view/ViewGroup;Lcom/vk/promo/PromoNavigator;)Landroid/view/View;
 
     move-result-object p2
 

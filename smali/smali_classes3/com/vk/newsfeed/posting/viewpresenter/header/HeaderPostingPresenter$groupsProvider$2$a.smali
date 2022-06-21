@@ -3,7 +3,7 @@
 .source "HeaderPostingPresenter.kt"
 
 # interfaces
-.implements Lcom/vk/lists/t$o;
+.implements Lcom/vk/lists/PaginationHelper$o;
 
 
 # annotations
@@ -19,7 +19,7 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Ljava/lang/Object;",
-        "Lcom/vk/lists/t$o<",
+        "Lcom/vk/lists/PaginationHelper$o<",
         "Lcom/vk/dto/common/data/VKList<",
         "Lcom/vk/dto/group/Group;",
         ">;>;"
@@ -50,14 +50,14 @@
 
 
 # virtual methods
-.method public a(ILcom/vk/lists/t;)Lc/a/m;
+.method public a(ILcom/vk/lists/PaginationHelper;)Lio/reactivex/Observable;
     .locals 2
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(I",
-            "Lcom/vk/lists/t;",
+            "Lcom/vk/lists/PaginationHelper;",
             ")",
-            "Lc/a/m<",
+            "Lio/reactivex/Observable<",
             "Lcom/vk/dto/common/data/VKList<",
             "Lcom/vk/dto/group/Group;",
             ">;>;"
@@ -83,7 +83,7 @@
 
     if-eqz p2, :cond_0
 
-    invoke-virtual {p2}, Lcom/vk/lists/t;->c()I
+    invoke-virtual {p2}, Lcom/vk/lists/PaginationHelper;->c()I
 
     move-result p2
 
@@ -95,21 +95,21 @@
     const/16 p2, 0x14
 
     :goto_0
-    invoke-virtual {v0, p1, p2}, Lcom/vk/newsfeed/posting/PostingInteractor;->a(II)Lc/a/m;
+    invoke-virtual {v0, p1, p2}, Lcom/vk/newsfeed/posting/PostingInteractor;->a(II)Lio/reactivex/Observable;
 
     move-result-object p1
 
     return-object p1
 .end method
 
-.method public a(Lcom/vk/lists/t;Z)Lc/a/m;
+.method public a(Lcom/vk/lists/PaginationHelper;Z)Lio/reactivex/Observable;
     .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lcom/vk/lists/t;",
+            "Lcom/vk/lists/PaginationHelper;",
             "Z)",
-            "Lc/a/m<",
+            "Lio/reactivex/Observable<",
             "Lcom/vk/dto/common/data/VKList<",
             "Lcom/vk/dto/group/Group;",
             ">;>;"
@@ -119,23 +119,23 @@
     const/4 p2, 0x0
 
     .line 1
-    invoke-virtual {p0, p2, p1}, Lcom/vk/newsfeed/posting/viewpresenter/header/HeaderPostingPresenter$groupsProvider$2$a;->a(ILcom/vk/lists/t;)Lc/a/m;
+    invoke-virtual {p0, p2, p1}, Lcom/vk/newsfeed/posting/viewpresenter/header/HeaderPostingPresenter$groupsProvider$2$a;->a(ILcom/vk/lists/PaginationHelper;)Lio/reactivex/Observable;
 
     move-result-object p1
 
     return-object p1
 .end method
 
-.method public a(Lc/a/m;ZLcom/vk/lists/t;)V
+.method public a(Lio/reactivex/Observable;ZLcom/vk/lists/PaginationHelper;)V
     .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lc/a/m<",
+            "Lio/reactivex/Observable<",
             "Lcom/vk/dto/common/data/VKList<",
             "Lcom/vk/dto/group/Group;",
             ">;>;Z",
-            "Lcom/vk/lists/t;",
+            "Lcom/vk/lists/PaginationHelper;",
             ")V"
         }
     .end annotation
@@ -153,7 +153,7 @@
     invoke-direct {p2, p0}, Lcom/vk/newsfeed/posting/viewpresenter/header/HeaderPostingPresenter$groupsProvider$2$a$b;-><init>(Lcom/vk/newsfeed/posting/viewpresenter/header/HeaderPostingPresenter$groupsProvider$2$a;)V
 
     .line 5
-    invoke-virtual {p1, p3, p2}, Lc/a/m;->a(Lc/a/z/g;Lc/a/z/g;)Lio/reactivex/disposables/b;
+    invoke-virtual {p1, p3, p2}, Lio/reactivex/Observable;->a(Lio/reactivex/functions/Consumer;Lio/reactivex/functions/Consumer;)Lio/reactivex/disposables/Disposable;
 
     move-result-object p1
 
@@ -164,11 +164,11 @@
 
     iget-object p2, p2, Lcom/vk/newsfeed/posting/viewpresenter/header/HeaderPostingPresenter$groupsProvider$2;->this$0:Lcom/vk/newsfeed/posting/viewpresenter/header/HeaderPostingPresenter;
 
-    invoke-static {p2}, Lcom/vk/newsfeed/posting/viewpresenter/header/HeaderPostingPresenter;->c(Lcom/vk/newsfeed/posting/viewpresenter/header/HeaderPostingPresenter;)Lcom/vk/newsfeed/posting/j;
+    invoke-static {p2}, Lcom/vk/newsfeed/posting/viewpresenter/header/HeaderPostingPresenter;->c(Lcom/vk/newsfeed/posting/viewpresenter/header/HeaderPostingPresenter;)Lcom/vk/newsfeed/posting/PostingContracts14;
 
     move-result-object p2
 
-    invoke-interface {p2, p1}, Lcom/vk/newsfeed/posting/j;->a(Lio/reactivex/disposables/b;)V
+    invoke-interface {p2, p1}, Lcom/vk/newsfeed/posting/PostingContracts14;->a(Lio/reactivex/disposables/Disposable;)V
 
     :cond_0
     return-void

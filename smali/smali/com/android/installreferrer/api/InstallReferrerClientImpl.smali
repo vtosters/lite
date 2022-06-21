@@ -29,7 +29,7 @@
 
 .field private mClientState:I
 
-.field private mService:Lb/d/a/b/a/a;
+.field private mService:Lb/d/a/b/a/IGetInstallReferrerService;
 
 .field private mServiceConnection:Landroid/content/ServiceConnection;
 
@@ -60,11 +60,11 @@
     return-void
 .end method
 
-.method static synthetic access$102(Lcom/android/installreferrer/api/InstallReferrerClientImpl;Lb/d/a/b/a/a;)Lb/d/a/b/a/a;
+.method static synthetic access$102(Lcom/android/installreferrer/api/InstallReferrerClientImpl;Lb/d/a/b/a/IGetInstallReferrerService;)Lb/d/a/b/a/IGetInstallReferrerService;
     .locals 0
 
     .line 1
-    iput-object p1, p0, Lcom/android/installreferrer/api/InstallReferrerClientImpl;->mService:Lb/d/a/b/a/a;
+    iput-object p1, p0, Lcom/android/installreferrer/api/InstallReferrerClientImpl;->mService:Lb/d/a/b/a/IGetInstallReferrerService;
 
     return-object p1
 .end method
@@ -152,7 +152,7 @@
 
     .line 6
     :cond_0
-    iput-object v1, p0, Lcom/android/installreferrer/api/InstallReferrerClientImpl;->mService:Lb/d/a/b/a/a;
+    iput-object v1, p0, Lcom/android/installreferrer/api/InstallReferrerClientImpl;->mService:Lb/d/a/b/a/IGetInstallReferrerService;
 
     return-void
 .end method
@@ -192,10 +192,10 @@
     :try_start_0
     new-instance v1, Lcom/android/installreferrer/api/ReferrerDetails;
 
-    iget-object v2, p0, Lcom/android/installreferrer/api/InstallReferrerClientImpl;->mService:Lb/d/a/b/a/a;
+    iget-object v2, p0, Lcom/android/installreferrer/api/InstallReferrerClientImpl;->mService:Lb/d/a/b/a/IGetInstallReferrerService;
 
     .line 5
-    invoke-interface {v2, v0}, Lb/d/a/b/a/a;->c(Landroid/os/Bundle;)Landroid/os/Bundle;
+    invoke-interface {v2, v0}, Lb/d/a/b/a/IGetInstallReferrerService;->c(Landroid/os/Bundle;)Landroid/os/Bundle;
 
     move-result-object v0
 
@@ -244,7 +244,7 @@
 
     if-ne v0, v1, :cond_0
 
-    iget-object v0, p0, Lcom/android/installreferrer/api/InstallReferrerClientImpl;->mService:Lb/d/a/b/a/a;
+    iget-object v0, p0, Lcom/android/installreferrer/api/InstallReferrerClientImpl;->mService:Lb/d/a/b/a/IGetInstallReferrerService;
 
     if-eqz v0, :cond_0
 

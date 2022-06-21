@@ -3,11 +3,11 @@
 .source "DefaultVkAudioPlayerServiceProvider.kt"
 
 # interfaces
-.implements Lcom/vk/audioipc/core/f;
+.implements Lcom/vk/audioipc/core/AudioPlayerProvider;
 
 
 # instance fields
-.field private a:Lcom/vtosters/lite/audio/player/c0/a;
+.field private a:Lcom/vtosters/lite/audio/player/c0/AudioPlayerServiceBuilder;
 
 
 # direct methods
@@ -33,24 +33,24 @@
     .locals 8
 
     .line 1
-    sget-object v0, Lcom/vk/music/common/c$a;->j:Lcom/vk/music/common/c$a;
+    sget-object v0, Lcom/vk/music/common/Music$a;->j:Lcom/vk/music/common/Music$a;
 
-    invoke-virtual {v0}, Lcom/vk/music/common/c$a;->g()Lcom/vk/music/restriction/i/a;
+    invoke-virtual {v0}, Lcom/vk/music/common/Music$a;->g()Lcom/vk/music/restriction/i/MusicRestrictionModel;
 
     move-result-object v5
 
     .line 2
-    sget-object v0, Lcom/vk/music/common/c$a;->j:Lcom/vk/music/common/c$a;
+    sget-object v0, Lcom/vk/music/common/Music$a;->j:Lcom/vk/music/common/Music$a;
 
-    invoke-virtual {v0}, Lcom/vk/music/common/c$a;->h()Lcom/vk/music/stats/d;
+    invoke-virtual {v0}, Lcom/vk/music/common/Music$a;->h()Lcom/vk/music/stats/MusicStatsTracker;
 
     move-result-object v6
 
     .line 3
-    sget-object v2, Lcom/vk/core/util/i;->a:Landroid/content/Context;
+    sget-object v2, Lcom/vk/core/util/AppContextHolder;->a:Landroid/content/Context;
 
     .line 4
-    new-instance v0, Lcom/vtosters/lite/audio/player/u;
+    new-instance v0, Lcom/vtosters/lite/audio/player/Player;
 
     sget-object v4, Lcom/vtosters/lite/audio/player/MediaPlayerHelperI$Type;->exoPlayerCached:Lcom/vtosters/lite/audio/player/MediaPlayerHelperI$Type;
 
@@ -60,38 +60,38 @@
 
     move-object v1, v0
 
-    invoke-direct/range {v1 .. v7}, Lcom/vtosters/lite/audio/player/u;-><init>(Landroid/content/Context;Lcom/vtosters/lite/audio/player/u$h;Lcom/vtosters/lite/audio/player/MediaPlayerHelperI$Type;Lcom/vk/music/restriction/i/a;Lcom/vk/music/stats/d;Z)V
+    invoke-direct/range {v1 .. v7}, Lcom/vtosters/lite/audio/player/Player;-><init>(Landroid/content/Context;Lcom/vtosters/lite/audio/player/Player$h;Lcom/vtosters/lite/audio/player/MediaPlayerHelperI$Type;Lcom/vk/music/restriction/i/MusicRestrictionModel;Lcom/vk/music/stats/MusicStatsTracker;Z)V
 
     .line 5
     new-instance v1, Lcom/vtosters/lite/audio/player/PlayerAdapter;
 
-    invoke-direct {v1, v0}, Lcom/vtosters/lite/audio/player/PlayerAdapter;-><init>(Lcom/vtosters/lite/audio/player/u;)V
+    invoke-direct {v1, v0}, Lcom/vtosters/lite/audio/player/PlayerAdapter;-><init>(Lcom/vtosters/lite/audio/player/Player;)V
 
     .line 6
-    iget-object v2, p0, Lcom/vk/music/providers/DefaultVkAudioPlayerServiceProvider;->a:Lcom/vtosters/lite/audio/player/c0/a;
+    iget-object v2, p0, Lcom/vk/music/providers/DefaultVkAudioPlayerServiceProvider;->a:Lcom/vtosters/lite/audio/player/c0/AudioPlayerServiceBuilder;
 
     if-eqz v2, :cond_0
 
-    invoke-virtual {v2}, Lcom/vtosters/lite/audio/player/c0/a;->b()Lcom/vk/audioipc/player/f;
+    invoke-virtual {v2}, Lcom/vtosters/lite/audio/player/c0/AudioPlayerServiceBuilder;->b()Lcom/vk/audioipc/player/AudioPlayerReinitWrapper;
 
     move-result-object v2
 
     if-eqz v2, :cond_0
 
-    invoke-virtual {v2, v1}, Lcom/vk/audioipc/player/f;->b(Lcom/vk/audioipc/core/d;)V
+    invoke-virtual {v2, v1}, Lcom/vk/audioipc/player/AudioPlayerReinitWrapper;->b(Lcom/vk/audioipc/core/AudioPlayer;)V
 
     .line 7
     :cond_0
-    new-instance v2, Lcom/vk/audioipc/communication/c;
+    new-instance v2, Lcom/vk/audioipc/communication/AvailableProviderImpl;
 
     sget-object v3, Lcom/vk/music/providers/DefaultVkAudioPlayerServiceProvider$reinitPlayerOnMainThread$2;->a:Lcom/vk/music/providers/DefaultVkAudioPlayerServiceProvider$reinitPlayerOnMainThread$2;
 
-    invoke-direct {v2, v1, v3}, Lcom/vk/audioipc/communication/c;-><init>(Lcom/vk/audioipc/core/d;Lkotlin/jvm/b/a;)V
+    invoke-direct {v2, v1, v3}, Lcom/vk/audioipc/communication/AvailableProviderImpl;-><init>(Lcom/vk/audioipc/core/AudioPlayer;Lkotlin/jvm/b/Functions;)V
 
-    invoke-virtual {v0, v2}, Lcom/vtosters/lite/audio/player/u;->a(Lcom/vk/music/h/a$d;)V
+    invoke-virtual {v0, v2}, Lcom/vtosters/lite/audio/player/Player;->a(Lcom/vk/music/h/MediaSessionHelper$d;)V
 
     .line 8
-    invoke-virtual {v0}, Lcom/vtosters/lite/audio/player/u;->h()Landroid/support/v4/media/session/MediaSessionCompat;
+    invoke-virtual {v0}, Lcom/vtosters/lite/audio/player/Player;->h()Landroid/support/v4/media/session/MediaSessionCompat;
 
     move-result-object v0
 
@@ -99,14 +99,14 @@
 
     const-string v1, "oldPlayer.mediaSession!!"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    invoke-static {v0}, Lcom/vk/audioipc/communication/y/a;->a(Landroid/support/v4/media/session/MediaSessionCompat;)Lcom/vk/audioipc/communication/y/a;
+    invoke-static {v0}, Lcom/vk/audioipc/communication/y/AudioServiceHelper;->a(Landroid/support/v4/media/session/MediaSessionCompat;)Lcom/vk/audioipc/communication/y/AudioServiceHelper;
 
     return-void
 
     :cond_1
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     const/4 v0, 0x0
 
@@ -115,28 +115,28 @@
 
 
 # virtual methods
-.method public a()Lcom/vk/audioipc/core/d;
+.method public a()Lcom/vk/audioipc/core/AudioPlayer;
     .locals 9
 
     .line 1
-    sget-object v0, Lcom/vk/music/common/c$a;->j:Lcom/vk/music/common/c$a;
+    sget-object v0, Lcom/vk/music/common/Music$a;->j:Lcom/vk/music/common/Music$a;
 
-    invoke-virtual {v0}, Lcom/vk/music/common/c$a;->g()Lcom/vk/music/restriction/i/a;
+    invoke-virtual {v0}, Lcom/vk/music/common/Music$a;->g()Lcom/vk/music/restriction/i/MusicRestrictionModel;
 
     move-result-object v5
 
     .line 2
-    sget-object v0, Lcom/vk/music/common/c$a;->j:Lcom/vk/music/common/c$a;
+    sget-object v0, Lcom/vk/music/common/Music$a;->j:Lcom/vk/music/common/Music$a;
 
-    invoke-virtual {v0}, Lcom/vk/music/common/c$a;->h()Lcom/vk/music/stats/d;
+    invoke-virtual {v0}, Lcom/vk/music/common/Music$a;->h()Lcom/vk/music/stats/MusicStatsTracker;
 
     move-result-object v6
 
     .line 3
-    sget-object v0, Lcom/vk/core/util/i;->a:Landroid/content/Context;
+    sget-object v0, Lcom/vk/core/util/AppContextHolder;->a:Landroid/content/Context;
 
     .line 4
-    new-instance v8, Lcom/vtosters/lite/audio/player/u;
+    new-instance v8, Lcom/vtosters/lite/audio/player/Player;
 
     sget-object v4, Lcom/vtosters/lite/audio/player/MediaPlayerHelperI$Type;->exoPlayerCached:Lcom/vtosters/lite/audio/player/MediaPlayerHelperI$Type;
 
@@ -148,7 +148,7 @@
 
     move-object v2, v0
 
-    invoke-direct/range {v1 .. v7}, Lcom/vtosters/lite/audio/player/u;-><init>(Landroid/content/Context;Lcom/vtosters/lite/audio/player/u$h;Lcom/vtosters/lite/audio/player/MediaPlayerHelperI$Type;Lcom/vk/music/restriction/i/a;Lcom/vk/music/stats/d;Z)V
+    invoke-direct/range {v1 .. v7}, Lcom/vtosters/lite/audio/player/Player;-><init>(Landroid/content/Context;Lcom/vtosters/lite/audio/player/Player$h;Lcom/vtosters/lite/audio/player/MediaPlayerHelperI$Type;Lcom/vk/music/restriction/i/MusicRestrictionModel;Lcom/vk/music/stats/MusicStatsTracker;Z)V
 
     const-string v1, "connectivity"
 
@@ -162,62 +162,62 @@
     check-cast v1, Landroid/net/ConnectivityManager;
 
     .line 6
-    invoke-static {v0}, Lcom/vk/core/util/u;->d(Landroid/content/Context;)Ljava/lang/String;
+    invoke-static {v0}, Lcom/vk/core/util/DeviceIdProvider;->d(Landroid/content/Context;)Ljava/lang/String;
 
     move-result-object v2
 
     const-string v3, "DeviceIdProvider.getDeviceId(context)"
 
-    invoke-static {v2, v3}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v2, v3}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 7
-    new-instance v3, Lcom/vtosters/lite/audio/player/c0/a;
+    new-instance v3, Lcom/vtosters/lite/audio/player/c0/AudioPlayerServiceBuilder;
 
     const-string v4, "context"
 
-    invoke-static {v0, v4}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v4}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    invoke-direct {v3, v0, v8}, Lcom/vtosters/lite/audio/player/c0/a;-><init>(Landroid/content/Context;Lcom/vtosters/lite/audio/player/u;)V
+    invoke-direct {v3, v0, v8}, Lcom/vtosters/lite/audio/player/c0/AudioPlayerServiceBuilder;-><init>(Landroid/content/Context;Lcom/vtosters/lite/audio/player/Player;)V
 
-    iput-object v3, p0, Lcom/vk/music/providers/DefaultVkAudioPlayerServiceProvider;->a:Lcom/vtosters/lite/audio/player/c0/a;
+    iput-object v3, p0, Lcom/vk/music/providers/DefaultVkAudioPlayerServiceProvider;->a:Lcom/vtosters/lite/audio/player/c0/AudioPlayerServiceBuilder;
 
     .line 8
-    iget-object v0, p0, Lcom/vk/music/providers/DefaultVkAudioPlayerServiceProvider;->a:Lcom/vtosters/lite/audio/player/c0/a;
+    iget-object v0, p0, Lcom/vk/music/providers/DefaultVkAudioPlayerServiceProvider;->a:Lcom/vtosters/lite/audio/player/c0/AudioPlayerServiceBuilder;
 
     const/4 v3, 0x0
 
     if-eqz v0, :cond_1
 
     .line 9
-    invoke-virtual {v0, v1}, Lcom/vtosters/lite/audio/player/c0/a;->a(Landroid/net/ConnectivityManager;)Lcom/vtosters/lite/audio/player/c0/a;
+    invoke-virtual {v0, v1}, Lcom/vtosters/lite/audio/player/c0/AudioPlayerServiceBuilder;->a(Landroid/net/ConnectivityManager;)Lcom/vtosters/lite/audio/player/c0/AudioPlayerServiceBuilder;
 
     .line 10
-    invoke-virtual {v0, v2}, Lcom/vtosters/lite/audio/player/c0/a;->a(Ljava/lang/String;)Lcom/vtosters/lite/audio/player/c0/a;
+    invoke-virtual {v0, v2}, Lcom/vtosters/lite/audio/player/c0/AudioPlayerServiceBuilder;->a(Ljava/lang/String;)Lcom/vtosters/lite/audio/player/c0/AudioPlayerServiceBuilder;
 
     const/4 v1, 0x1
 
     .line 11
-    invoke-virtual {v0, v1}, Lcom/vtosters/lite/audio/player/c0/a;->a(Z)Lcom/vtosters/lite/audio/player/c0/a;
+    invoke-virtual {v0, v1}, Lcom/vtosters/lite/audio/player/c0/AudioPlayerServiceBuilder;->a(Z)Lcom/vtosters/lite/audio/player/c0/AudioPlayerServiceBuilder;
 
     .line 12
-    invoke-virtual {v0, v1}, Lcom/vtosters/lite/audio/player/c0/a;->b(Z)Lcom/vtosters/lite/audio/player/c0/a;
+    invoke-virtual {v0, v1}, Lcom/vtosters/lite/audio/player/c0/AudioPlayerServiceBuilder;->b(Z)Lcom/vtosters/lite/audio/player/c0/AudioPlayerServiceBuilder;
 
     .line 13
-    invoke-virtual {v0}, Lcom/vtosters/lite/audio/player/c0/a;->a()Lcom/vk/audioipc/core/d;
+    invoke-virtual {v0}, Lcom/vtosters/lite/audio/player/c0/AudioPlayerServiceBuilder;->a()Lcom/vk/audioipc/core/AudioPlayer;
 
     move-result-object v0
 
     .line 14
-    new-instance v1, Lcom/vk/audioipc/communication/c;
+    new-instance v1, Lcom/vk/audioipc/communication/AvailableProviderImpl;
 
     sget-object v2, Lcom/vk/music/providers/DefaultVkAudioPlayerServiceProvider$getPlayer$1;->a:Lcom/vk/music/providers/DefaultVkAudioPlayerServiceProvider$getPlayer$1;
 
-    invoke-direct {v1, v0, v2}, Lcom/vk/audioipc/communication/c;-><init>(Lcom/vk/audioipc/core/d;Lkotlin/jvm/b/a;)V
+    invoke-direct {v1, v0, v2}, Lcom/vk/audioipc/communication/AvailableProviderImpl;-><init>(Lcom/vk/audioipc/core/AudioPlayer;Lkotlin/jvm/b/Functions;)V
 
-    invoke-virtual {v8, v1}, Lcom/vtosters/lite/audio/player/u;->a(Lcom/vk/music/h/a$d;)V
+    invoke-virtual {v8, v1}, Lcom/vtosters/lite/audio/player/Player;->a(Lcom/vk/music/h/MediaSessionHelper$d;)V
 
     .line 15
-    invoke-virtual {v8}, Lcom/vtosters/lite/audio/player/u;->h()Landroid/support/v4/media/session/MediaSessionCompat;
+    invoke-virtual {v8}, Lcom/vtosters/lite/audio/player/Player;->h()Landroid/support/v4/media/session/MediaSessionCompat;
 
     move-result-object v1
 
@@ -225,20 +225,20 @@
 
     const-string v2, "oldPlayer.mediaSession!!"
 
-    invoke-static {v1, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    invoke-static {v1}, Lcom/vk/audioipc/communication/y/a;->a(Landroid/support/v4/media/session/MediaSessionCompat;)Lcom/vk/audioipc/communication/y/a;
+    invoke-static {v1}, Lcom/vk/audioipc/communication/y/AudioServiceHelper;->a(Landroid/support/v4/media/session/MediaSessionCompat;)Lcom/vk/audioipc/communication/y/AudioServiceHelper;
 
     return-object v0
 
     :cond_0
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     throw v3
 
     .line 16
     :cond_1
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     throw v3
 

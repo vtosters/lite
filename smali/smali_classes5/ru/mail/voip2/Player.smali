@@ -250,7 +250,7 @@
 
     const-string v0, "system_player"
 
-    invoke-static {v0, p0}, Le/c/a/a;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, p0}, Le/c/a/Log;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     return-void
 .end method
@@ -313,7 +313,7 @@
 
     move-result-object v0
 
-    invoke-static {v2, v0}, Le/c/a/a;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v2, v0}, Le/c/a/Log;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     goto :goto_1
 
@@ -363,7 +363,7 @@
 
     move-result-object v0
 
-    invoke-static {v2, v0}, Le/c/a/a;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v2, v0}, Le/c/a/Log;->a(Ljava/lang/String;Ljava/lang/String;)V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
@@ -373,7 +373,7 @@
     const-string v0, "failed to read current ZEN mode"
 
     .line 10
-    invoke-static {v2, v0}, Le/c/a/a;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v2, v0}, Le/c/a/Log;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     :cond_3
     :goto_2
@@ -463,7 +463,7 @@
 
     const-string v1, "system_player"
 
-    invoke-static {v1, v0}, Le/c/a/a;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, v0}, Le/c/a/Log;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     :cond_1
     return-void
@@ -585,7 +585,7 @@
 
     const-string v1, "system_player"
 
-    invoke-static {v1, v0}, Le/c/a/a;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, v0}, Le/c/a/Log;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     const/4 v0, 0x1
 

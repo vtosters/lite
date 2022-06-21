@@ -39,16 +39,16 @@
 
 
 # virtual methods
-.method public a(Lcom/vk/core/util/a0;I)Lc/a/m;
+.method public a(Lcom/vk/core/util/Either;I)Lio/reactivex/Observable;
     .locals 10
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lcom/vk/core/util/a0<",
+            "Lcom/vk/core/util/Either<",
             "Ljava/lang/Integer;",
             "Ljava/lang/String;",
             ">;I)",
-            "Lc/a/m<",
+            "Lio/reactivex/Observable<",
             "Lcom/vk/dto/common/data/VKList<",
             "Lcom/vk/dto/photo/Photo;",
             ">;>;"
@@ -56,7 +56,7 @@
     .end annotation
 
     .line 1
-    instance-of v0, p1, Lcom/vk/core/util/a0$a;
+    instance-of v0, p1, Lcom/vk/core/util/Either$a;
 
     if-eqz v0, :cond_1
 
@@ -76,15 +76,15 @@
     if-ne v0, v1, :cond_0
 
     .line 3
-    new-instance v0, Lcom/vk/api/photos/u;
+    new-instance v0, Lcom/vk/api/photos/PhotosGetUserPhotos;
 
     invoke-virtual {p0}, Lcom/vk/profile/ui/photos/photo_list/PhotoListFragmentPresenter;->e()I
 
     move-result v1
 
-    check-cast p1, Lcom/vk/core/util/a0$a;
+    check-cast p1, Lcom/vk/core/util/Either$a;
 
-    invoke-virtual {p1}, Lcom/vk/core/util/a0$a;->a()Ljava/lang/Object;
+    invoke-virtual {p1}, Lcom/vk/core/util/Either$a;->a()Ljava/lang/Object;
 
     move-result-object p1
 
@@ -94,9 +94,9 @@
 
     move-result p1
 
-    invoke-direct {v0, v1, p1, p2}, Lcom/vk/api/photos/u;-><init>(III)V
+    invoke-direct {v0, v1, p1, p2}, Lcom/vk/api/photos/PhotosGetUserPhotos;-><init>(III)V
 
-    invoke-static {v0, v3, v2, v3}, Lcom/vk/api/base/d;->d(Lcom/vk/api/base/d;Lcom/vk/api/base/e;ILjava/lang/Object;)Lc/a/m;
+    invoke-static {v0, v3, v2, v3}, Lcom/vk/api/base/ApiRequest;->d(Lcom/vk/api/base/ApiRequest;Lcom/vk/api/base/ApiThreadHolder;ILjava/lang/Object;)Lio/reactivex/Observable;
 
     move-result-object p1
 
@@ -104,7 +104,7 @@
 
     .line 4
     :cond_0
-    new-instance v0, Lcom/vk/api/photos/j;
+    new-instance v0, Lcom/vk/api/photos/PhotosGet;
 
     invoke-virtual {p0}, Lcom/vk/profile/ui/photos/photo_list/PhotoListFragmentPresenter;->e()I
 
@@ -116,9 +116,9 @@
 
     iget v6, v1, Lcom/vk/dto/photo/PhotoAlbum;->a:I
 
-    check-cast p1, Lcom/vk/core/util/a0$a;
+    check-cast p1, Lcom/vk/core/util/Either$a;
 
-    invoke-virtual {p1}, Lcom/vk/core/util/a0$a;->a()Ljava/lang/Object;
+    invoke-virtual {p1}, Lcom/vk/core/util/Either$a;->a()Ljava/lang/Object;
 
     move-result-object p1
 
@@ -138,9 +138,9 @@
 
     move v8, p2
 
-    invoke-direct/range {v4 .. v9}, Lcom/vk/api/photos/j;-><init>(IIIIZ)V
+    invoke-direct/range {v4 .. v9}, Lcom/vk/api/photos/PhotosGet;-><init>(IIIIZ)V
 
-    invoke-static {v0, v3, v2, v3}, Lcom/vk/api/base/d;->d(Lcom/vk/api/base/d;Lcom/vk/api/base/e;ILjava/lang/Object;)Lc/a/m;
+    invoke-static {v0, v3, v2, v3}, Lcom/vk/api/base/ApiRequest;->d(Lcom/vk/api/base/ApiRequest;Lcom/vk/api/base/ApiThreadHolder;ILjava/lang/Object;)Lio/reactivex/Observable;
 
     move-result-object p1
 
@@ -150,13 +150,13 @@
 
     invoke-direct {p2, p0}, Lcom/vk/profile/ui/photos/photo_list/PhotoAlbumFragment$c$a;-><init>(Lcom/vk/profile/ui/photos/photo_list/PhotoAlbumFragment$c;)V
 
-    invoke-virtual {p1, p2}, Lc/a/m;->d(Lc/a/z/g;)Lc/a/m;
+    invoke-virtual {p1, p2}, Lio/reactivex/Observable;->d(Lio/reactivex/functions/Consumer;)Lio/reactivex/Observable;
 
     move-result-object p1
 
     const-string p2, "(if (album.id == -9000) \u2026          }\n            }"
 
-    invoke-static {p1, p2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, p2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     return-object p1
 

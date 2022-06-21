@@ -1,9 +1,9 @@
 .class public final Lcom/vk/fave/fragments/FaveTabFragment;
-.super Lcom/vk/core/fragments/b;
+.super Lcom/vk/core/fragments/BaseFragment1;
 .source "FaveTabFragment.kt"
 
 # interfaces
-.implements Lcom/vk/navigation/v;
+.implements Lcom/vk/navigation/ScrolledToTop;
 
 
 # annotations
@@ -41,7 +41,7 @@
 
 .field private M:Landroidx/appcompat/widget/Toolbar;
 
-.field private N:Lcom/vtosters/lite/ui/x;
+.field private N:Lcom/vtosters/lite/ui/SearchViewWrapper;
 
 .field private O:Landroid/widget/ProgressBar;
 
@@ -59,22 +59,22 @@
 
 .field private V:Z
 
-.field private final W:Lio/reactivex/disposables/a;
+.field private final W:Lio/reactivex/disposables/CompositeDisposable;
 
-.field private final X:Lb/h/g/l/e;
+.field private final X:Lb/h/g/l/NotificationListener;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Lb/h/g/l/e<",
+            "Lb/h/g/l/NotificationListener<",
             "Lcom/vk/fave/entities/FaveTag;",
             ">;"
         }
     .end annotation
 .end field
 
-.field private final Y:Lb/h/g/l/e;
+.field private final Y:Lb/h/g/l/NotificationListener;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Lb/h/g/l/e<",
+            "Lb/h/g/l/NotificationListener<",
             "Lcom/vk/fave/FaveLoadState;",
             ">;"
         }
@@ -83,7 +83,7 @@
 
 .field private final Z:Landroid/view/View$OnClickListener;
 
-.field private final a0:Lcom/vtosters/lite/ui/x$i;
+.field private final a0:Lcom/vtosters/lite/ui/SearchViewWrapper$i;
 
 
 # direct methods
@@ -94,7 +94,7 @@
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, v1}, Lcom/vk/fave/fragments/FaveTabFragment$b;-><init>(Lkotlin/jvm/internal/i;)V
+    invoke-direct {v0, v1}, Lcom/vk/fave/fragments/FaveTabFragment$b;-><init>(Lkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     sput-object v0, Lcom/vk/fave/fragments/FaveTabFragment;->d0:Lcom/vk/fave/fragments/FaveTabFragment$b;
 
@@ -123,7 +123,7 @@
     .locals 1
 
     .line 1
-    invoke-direct {p0}, Lcom/vk/core/fragments/b;-><init>()V
+    invoke-direct {p0}, Lcom/vk/core/fragments/BaseFragment1;-><init>()V
 
     .line 2
     sget-object v0, Lcom/vk/fave/FaveLoadState;->PROGRESS:Lcom/vk/fave/FaveLoadState;
@@ -141,25 +141,25 @@
     iput-object v0, p0, Lcom/vk/fave/fragments/FaveTabFragment;->U:Lcom/vk/fave/entities/FaveSource;
 
     .line 5
-    new-instance v0, Lio/reactivex/disposables/a;
+    new-instance v0, Lio/reactivex/disposables/CompositeDisposable;
 
-    invoke-direct {v0}, Lio/reactivex/disposables/a;-><init>()V
+    invoke-direct {v0}, Lio/reactivex/disposables/CompositeDisposable;-><init>()V
 
-    iput-object v0, p0, Lcom/vk/fave/fragments/FaveTabFragment;->W:Lio/reactivex/disposables/a;
+    iput-object v0, p0, Lcom/vk/fave/fragments/FaveTabFragment;->W:Lio/reactivex/disposables/CompositeDisposable;
 
     .line 6
     new-instance v0, Lcom/vk/fave/fragments/FaveTabFragment$h;
 
     invoke-direct {v0, p0}, Lcom/vk/fave/fragments/FaveTabFragment$h;-><init>(Lcom/vk/fave/fragments/FaveTabFragment;)V
 
-    iput-object v0, p0, Lcom/vk/fave/fragments/FaveTabFragment;->X:Lb/h/g/l/e;
+    iput-object v0, p0, Lcom/vk/fave/fragments/FaveTabFragment;->X:Lb/h/g/l/NotificationListener;
 
     .line 7
     new-instance v0, Lcom/vk/fave/fragments/FaveTabFragment$g;
 
     invoke-direct {v0, p0}, Lcom/vk/fave/fragments/FaveTabFragment$g;-><init>(Lcom/vk/fave/fragments/FaveTabFragment;)V
 
-    iput-object v0, p0, Lcom/vk/fave/fragments/FaveTabFragment;->Y:Lb/h/g/l/e;
+    iput-object v0, p0, Lcom/vk/fave/fragments/FaveTabFragment;->Y:Lb/h/g/l/NotificationListener;
 
     .line 8
     new-instance v0, Lcom/vk/fave/fragments/FaveTabFragment$c;
@@ -173,7 +173,7 @@
 
     invoke-direct {v0, p0}, Lcom/vk/fave/fragments/FaveTabFragment$d;-><init>(Lcom/vk/fave/fragments/FaveTabFragment;)V
 
-    iput-object v0, p0, Lcom/vk/fave/fragments/FaveTabFragment;->a0:Lcom/vtosters/lite/ui/x$i;
+    iput-object v0, p0, Lcom/vk/fave/fragments/FaveTabFragment;->a0:Lcom/vtosters/lite/ui/SearchViewWrapper$i;
 
     return-void
 .end method
@@ -202,7 +202,7 @@
 
     const-string v2, "it"
 
-    invoke-static {v0, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     iget-object v2, p0, Lcom/vk/fave/fragments/FaveTabFragment;->K:Lcom/vk/fave/entities/FaveTag;
 
@@ -223,20 +223,20 @@
     .locals 3
 
     .line 1
-    new-instance v0, Lcom/vtosters/lite/ui/x;
+    new-instance v0, Lcom/vtosters/lite/ui/SearchViewWrapper;
 
     invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getActivity()Landroidx/fragment/app/FragmentActivity;
 
     move-result-object v1
 
-    iget-object v2, p0, Lcom/vk/fave/fragments/FaveTabFragment;->a0:Lcom/vtosters/lite/ui/x$i;
+    iget-object v2, p0, Lcom/vk/fave/fragments/FaveTabFragment;->a0:Lcom/vtosters/lite/ui/SearchViewWrapper$i;
 
-    invoke-direct {v0, v1, v2}, Lcom/vtosters/lite/ui/x;-><init>(Landroid/app/Activity;Lcom/vtosters/lite/ui/x$i;)V
+    invoke-direct {v0, v1, v2}, Lcom/vtosters/lite/ui/SearchViewWrapper;-><init>(Landroid/app/Activity;Lcom/vtosters/lite/ui/SearchViewWrapper$i;)V
 
-    iput-object v0, p0, Lcom/vk/fave/fragments/FaveTabFragment;->N:Lcom/vtosters/lite/ui/x;
+    iput-object v0, p0, Lcom/vk/fave/fragments/FaveTabFragment;->N:Lcom/vtosters/lite/ui/SearchViewWrapper;
 
     .line 2
-    iget-object v0, p0, Lcom/vk/fave/fragments/FaveTabFragment;->N:Lcom/vtosters/lite/ui/x;
+    iget-object v0, p0, Lcom/vk/fave/fragments/FaveTabFragment;->N:Lcom/vtosters/lite/ui/SearchViewWrapper;
 
     if-eqz v0, :cond_0
 
@@ -244,11 +244,11 @@
 
     invoke-direct {v1, p0}, Lcom/vk/fave/fragments/FaveTabFragment$setupToolbar$1;-><init>(Lcom/vk/fave/fragments/FaveTabFragment;)V
 
-    new-instance v2, Lcom/vk/fave/fragments/b;
+    new-instance v2, Lcom/vk/fave/fragments/FaveTabFragment2;
 
-    invoke-direct {v2, v1}, Lcom/vk/fave/fragments/b;-><init>(Lkotlin/jvm/b/b;)V
+    invoke-direct {v2, v1}, Lcom/vk/fave/fragments/FaveTabFragment2;-><init>(Lkotlin/jvm/b/Functions2;)V
 
-    invoke-virtual {v0, v2}, Lcom/vtosters/lite/ui/x;->a(Lcom/vtosters/lite/ui/x$j;)V
+    invoke-virtual {v0, v2}, Lcom/vtosters/lite/ui/SearchViewWrapper;->a(Lcom/vtosters/lite/ui/SearchViewWrapper$j;)V
 
     .line 3
     :cond_0
@@ -288,7 +288,7 @@
     goto :goto_0
 
     :cond_1
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     const/4 v0, 0x0
 
@@ -299,7 +299,7 @@
     :goto_0
     iget-object v1, p0, Lcom/vk/fave/fragments/FaveTabFragment;->M:Landroidx/appcompat/widget/Toolbar;
 
-    invoke-static {p0, v1}, Lcom/vtosters/lite/f0;->a(Lcom/vk/core/fragments/FragmentImpl;Landroidx/appcompat/widget/Toolbar;)V
+    invoke-static {p0, v1}, Lcom/vtosters/lite/ViewUtils;->a(Lcom/vk/core/fragments/FragmentImpl;Landroidx/appcompat/widget/Toolbar;)V
 
     .line 8
     new-instance v1, Lcom/vk/fave/fragments/FaveTabFragment$e;
@@ -313,9 +313,9 @@
 
     invoke-direct {v1, p0}, Lcom/vk/fave/fragments/FaveTabFragment$setupToolbar$2$2;-><init>(Lcom/vk/fave/fragments/FaveTabFragment;)V
 
-    new-instance v2, Lcom/vk/fave/fragments/c;
+    new-instance v2, Lcom/vk/fave/fragments/FaveTabFragment1;
 
-    invoke-direct {v2, v1}, Lcom/vk/fave/fragments/c;-><init>(Lkotlin/jvm/b/b;)V
+    invoke-direct {v2, v1}, Lcom/vk/fave/fragments/FaveTabFragment1;-><init>(Lkotlin/jvm/b/Functions2;)V
 
     invoke-virtual {v0, v2}, Landroidx/appcompat/widget/Toolbar;->setOnMenuItemClickListener(Landroidx/appcompat/widget/Toolbar$OnMenuItemClickListener;)V
 
@@ -324,7 +324,7 @@
 
     invoke-direct {v1, p0}, Lcom/vk/fave/fragments/FaveTabFragment$setupToolbar$$inlined$let$lambda$2;-><init>(Lcom/vk/fave/fragments/FaveTabFragment;)V
 
-    invoke-static {v0, v1}, Lcom/vk/core/extensions/ViewGroupExtKt;->a(Landroid/view/View;Lkotlin/jvm/b/b;)V
+    invoke-static {v0, v1}, Lcom/vk/core/extensions/ViewGroupExtKt;->a(Landroid/view/View;Lkotlin/jvm/b/Functions2;)V
 
     .line 11
     :cond_3
@@ -362,7 +362,7 @@
 
     const v2, 0x7f080542
 
-    invoke-static {v0, v2, v1}, Lcom/vk/extensions/e;->a(Landroid/widget/ImageView;II)V
+    invoke-static {v0, v2, v1}, Lcom/vk/extensions/ImageViewExt;->a(Landroid/widget/ImageView;II)V
 
     .line 14
     :cond_6
@@ -372,7 +372,7 @@
 
     const v2, 0x7f080541
 
-    invoke-static {v0, v2, v1}, Lcom/vk/extensions/e;->a(Landroid/widget/ImageView;II)V
+    invoke-static {v0, v2, v1}, Lcom/vk/extensions/ImageViewExt;->a(Landroid/widget/ImageView;II)V
 
     .line 15
     :cond_7
@@ -647,7 +647,7 @@
 
     .line 2
     :goto_0
-    invoke-static {}, Lcom/vk/core/ui/themes/d;->e()Z
+    invoke-static {}, Lcom/vk/core/ui/themes/MilkshakeHelper;->e()Z
 
     move-result v3
 
@@ -807,7 +807,7 @@
 
     if-eqz v0, :cond_11
 
-    invoke-static {v1}, Lcom/vk/core/util/y0;->f(I)Ljava/lang/String;
+    invoke-static {v1}, Lcom/vk/core/util/ResUtils;->f(I)Ljava/lang/String;
 
     move-result-object v2
 
@@ -819,7 +819,7 @@
 
     if-eqz v0, :cond_12
 
-    invoke-static {v1}, Lcom/vk/core/util/y0;->f(I)Ljava/lang/String;
+    invoke-static {v1}, Lcom/vk/core/util/ResUtils;->f(I)Ljava/lang/String;
 
     move-result-object v1
 
@@ -905,7 +905,7 @@
     move-result-object v0
 
     :cond_2
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result p1
 
@@ -925,7 +925,7 @@
 
     if-eqz p1, :cond_6
 
-    invoke-static {p1, p3}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {p1, p3}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result p1
 
@@ -1107,14 +1107,14 @@
 
     .line 2
     :goto_0
-    instance-of v1, v0, Lcom/vk/navigation/v;
+    instance-of v1, v0, Lcom/vk/navigation/ScrolledToTop;
 
     if-eqz v1, :cond_1
 
     .line 3
-    check-cast v0, Lcom/vk/navigation/v;
+    check-cast v0, Lcom/vk/navigation/ScrolledToTop;
 
-    invoke-interface {v0}, Lcom/vk/navigation/v;->F()Z
+    invoke-interface {v0}, Lcom/vk/navigation/ScrolledToTop;->F()Z
 
     :cond_1
     const/4 v0, 0x1
@@ -1130,7 +1130,7 @@
 
     if-nez v0, :cond_0
 
-    invoke-super {p0}, Lcom/vk/core/fragments/b;->o()Z
+    invoke-super {p0}, Lcom/vk/core/fragments/BaseFragment1;->o()Z
 
     move-result v0
 
@@ -1231,7 +1231,7 @@
     iput-boolean v0, p0, Lcom/vk/fave/fragments/FaveTabFragment;->V:Z
 
     .line 6
-    invoke-super {p0, p1}, Lcom/vk/core/fragments/b;->onCreate(Landroid/os/Bundle;)V
+    invoke-super {p0, p1}, Lcom/vk/core/fragments/BaseFragment1;->onCreate(Landroid/os/Bundle;)V
 
     return-void
 .end method
@@ -1260,11 +1260,11 @@
     instance-of v0, v0, Lcom/vk/fave/fragments/FaveSearchFragment;
 
     .line 3
-    iget-object v1, p0, Lcom/vk/fave/fragments/FaveTabFragment;->N:Lcom/vtosters/lite/ui/x;
+    iget-object v1, p0, Lcom/vk/fave/fragments/FaveTabFragment;->N:Lcom/vtosters/lite/ui/SearchViewWrapper;
 
     if-eqz v1, :cond_1
 
-    invoke-virtual {v1, p1, p2}, Lcom/vtosters/lite/ui/x;->a(Landroid/view/Menu;Landroid/view/MenuInflater;)V
+    invoke-virtual {v1, p1, p2}, Lcom/vtosters/lite/ui/SearchViewWrapper;->a(Landroid/view/Menu;Landroid/view/MenuInflater;)V
 
     :cond_1
     const v1, 0x7f0e0010
@@ -1302,7 +1302,7 @@
     const-string p2, "view"
 
     .line 2
-    invoke-static {p1, p2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, p2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     const/4 p2, 0x2
 
@@ -1310,7 +1310,7 @@
 
     const v1, 0x7f0a0ee4
 
-    invoke-static {p1, v1, v0, p2, v0}, Lcom/vk/extensions/ViewExtKt;->a(Landroid/view/View;ILkotlin/jvm/b/b;ILjava/lang/Object;)Landroid/view/View;
+    invoke-static {p1, v1, v0, p2, v0}, Lcom/vk/extensions/ViewExtKt;->a(Landroid/view/View;ILkotlin/jvm/b/Functions2;ILjava/lang/Object;)Landroid/view/View;
 
     move-result-object v1
 
@@ -1321,7 +1321,7 @@
     const v1, 0x7f0a0d9d
 
     .line 3
-    invoke-static {p1, v1, v0, p2, v0}, Lcom/vk/extensions/ViewExtKt;->a(Landroid/view/View;ILkotlin/jvm/b/b;ILjava/lang/Object;)Landroid/view/View;
+    invoke-static {p1, v1, v0, p2, v0}, Lcom/vk/extensions/ViewExtKt;->a(Landroid/view/View;ILkotlin/jvm/b/Functions2;ILjava/lang/Object;)Landroid/view/View;
 
     move-result-object v1
 
@@ -1332,7 +1332,7 @@
     const v1, 0x7f0a0ee0
 
     .line 4
-    invoke-static {p1, v1, v0, p2, v0}, Lcom/vk/extensions/ViewExtKt;->a(Landroid/view/View;ILkotlin/jvm/b/b;ILjava/lang/Object;)Landroid/view/View;
+    invoke-static {p1, v1, v0, p2, v0}, Lcom/vk/extensions/ViewExtKt;->a(Landroid/view/View;ILkotlin/jvm/b/Functions2;ILjava/lang/Object;)Landroid/view/View;
 
     move-result-object v1
 
@@ -1343,7 +1343,7 @@
     const v1, 0x7f0a0d18
 
     .line 5
-    invoke-static {p1, v1, v0, p2, v0}, Lcom/vk/extensions/ViewExtKt;->a(Landroid/view/View;ILkotlin/jvm/b/b;ILjava/lang/Object;)Landroid/view/View;
+    invoke-static {p1, v1, v0, p2, v0}, Lcom/vk/extensions/ViewExtKt;->a(Landroid/view/View;ILkotlin/jvm/b/Functions2;ILjava/lang/Object;)Landroid/view/View;
 
     move-result-object v1
 
@@ -1354,7 +1354,7 @@
     const v1, 0x7f0a0d80
 
     .line 6
-    invoke-static {p1, v1, v0, p2, v0}, Lcom/vk/extensions/ViewExtKt;->a(Landroid/view/View;ILkotlin/jvm/b/b;ILjava/lang/Object;)Landroid/view/View;
+    invoke-static {p1, v1, v0, p2, v0}, Lcom/vk/extensions/ViewExtKt;->a(Landroid/view/View;ILkotlin/jvm/b/Functions2;ILjava/lang/Object;)Landroid/view/View;
 
     move-result-object v1
 
@@ -1365,7 +1365,7 @@
     const v1, 0x7f0a0798
 
     .line 7
-    invoke-static {p1, v1, v0, p2, v0}, Lcom/vk/extensions/ViewExtKt;->a(Landroid/view/View;ILkotlin/jvm/b/b;ILjava/lang/Object;)Landroid/view/View;
+    invoke-static {p1, v1, v0, p2, v0}, Lcom/vk/extensions/ViewExtKt;->a(Landroid/view/View;ILkotlin/jvm/b/Functions2;ILjava/lang/Object;)Landroid/view/View;
 
     move-result-object v1
 
@@ -1376,7 +1376,7 @@
     const v1, 0x7f0a0cf2
 
     .line 8
-    invoke-static {p1, v1, v0, p2, v0}, Lcom/vk/extensions/ViewExtKt;->a(Landroid/view/View;ILkotlin/jvm/b/b;ILjava/lang/Object;)Landroid/view/View;
+    invoke-static {p1, v1, v0, p2, v0}, Lcom/vk/extensions/ViewExtKt;->a(Landroid/view/View;ILkotlin/jvm/b/Functions2;ILjava/lang/Object;)Landroid/view/View;
 
     move-result-object v1
 
@@ -1387,7 +1387,7 @@
     const v1, 0x7f0a097c
 
     .line 9
-    invoke-static {p1, v1, v0, p2, v0}, Lcom/vk/extensions/ViewExtKt;->a(Landroid/view/View;ILkotlin/jvm/b/b;ILjava/lang/Object;)Landroid/view/View;
+    invoke-static {p1, v1, v0, p2, v0}, Lcom/vk/extensions/ViewExtKt;->a(Landroid/view/View;ILkotlin/jvm/b/Functions2;ILjava/lang/Object;)Landroid/view/View;
 
     move-result-object v1
 
@@ -1398,7 +1398,7 @@
     const v1, 0x7f0a05ff
 
     .line 10
-    invoke-static {p1, v1, v0, p2, v0}, Lcom/vk/extensions/ViewExtKt;->a(Landroid/view/View;ILkotlin/jvm/b/b;ILjava/lang/Object;)Landroid/view/View;
+    invoke-static {p1, v1, v0, p2, v0}, Lcom/vk/extensions/ViewExtKt;->a(Landroid/view/View;ILkotlin/jvm/b/Functions2;ILjava/lang/Object;)Landroid/view/View;
 
     move-result-object v1
 
@@ -1409,7 +1409,7 @@
     const v1, 0x7f0a05fe
 
     .line 11
-    invoke-static {p1, v1, v0, p2, v0}, Lcom/vk/extensions/ViewExtKt;->a(Landroid/view/View;ILkotlin/jvm/b/b;ILjava/lang/Object;)Landroid/view/View;
+    invoke-static {p1, v1, v0, p2, v0}, Lcom/vk/extensions/ViewExtKt;->a(Landroid/view/View;ILkotlin/jvm/b/Functions2;ILjava/lang/Object;)Landroid/view/View;
 
     move-result-object p2
 
@@ -1433,48 +1433,48 @@
     invoke-direct {p0}, Lcom/vk/fave/fragments/FaveTabFragment;->U4()V
 
     .line 16
-    invoke-static {}, Lb/h/g/l/d;->a()Lb/h/g/l/d;
+    invoke-static {}, Lb/h/g/l/NotificationCenter;->a()Lb/h/g/l/NotificationCenter;
 
     move-result-object p2
 
     const/16 p3, 0x4b1
 
-    iget-object v0, p0, Lcom/vk/fave/fragments/FaveTabFragment;->X:Lb/h/g/l/e;
+    iget-object v0, p0, Lcom/vk/fave/fragments/FaveTabFragment;->X:Lb/h/g/l/NotificationListener;
 
-    invoke-virtual {p2, p3, v0}, Lb/h/g/l/d;->a(ILb/h/g/l/e;)V
+    invoke-virtual {p2, p3, v0}, Lb/h/g/l/NotificationCenter;->a(ILb/h/g/l/NotificationListener;)V
 
     .line 17
-    invoke-static {}, Lb/h/g/l/d;->a()Lb/h/g/l/d;
+    invoke-static {}, Lb/h/g/l/NotificationCenter;->a()Lb/h/g/l/NotificationCenter;
 
     move-result-object p2
 
     const/16 p3, 0x4b4
 
-    iget-object v0, p0, Lcom/vk/fave/fragments/FaveTabFragment;->X:Lb/h/g/l/e;
+    iget-object v0, p0, Lcom/vk/fave/fragments/FaveTabFragment;->X:Lb/h/g/l/NotificationListener;
 
-    invoke-virtual {p2, p3, v0}, Lb/h/g/l/d;->a(ILb/h/g/l/e;)V
+    invoke-virtual {p2, p3, v0}, Lb/h/g/l/NotificationCenter;->a(ILb/h/g/l/NotificationListener;)V
 
     .line 18
-    invoke-static {}, Lb/h/g/l/d;->a()Lb/h/g/l/d;
+    invoke-static {}, Lb/h/g/l/NotificationCenter;->a()Lb/h/g/l/NotificationCenter;
 
     move-result-object p2
 
     const/16 p3, 0x4b5
 
-    iget-object v0, p0, Lcom/vk/fave/fragments/FaveTabFragment;->X:Lb/h/g/l/e;
+    iget-object v0, p0, Lcom/vk/fave/fragments/FaveTabFragment;->X:Lb/h/g/l/NotificationListener;
 
-    invoke-virtual {p2, p3, v0}, Lb/h/g/l/d;->a(ILb/h/g/l/e;)V
+    invoke-virtual {p2, p3, v0}, Lb/h/g/l/NotificationCenter;->a(ILb/h/g/l/NotificationListener;)V
 
     .line 19
-    invoke-static {}, Lb/h/g/l/d;->a()Lb/h/g/l/d;
+    invoke-static {}, Lb/h/g/l/NotificationCenter;->a()Lb/h/g/l/NotificationCenter;
 
     move-result-object p2
 
     const/16 p3, 0x4b3
 
-    iget-object v0, p0, Lcom/vk/fave/fragments/FaveTabFragment;->Y:Lb/h/g/l/e;
+    iget-object v0, p0, Lcom/vk/fave/fragments/FaveTabFragment;->Y:Lb/h/g/l/NotificationListener;
 
-    invoke-virtual {p2, p3, v0}, Lb/h/g/l/d;->a(ILb/h/g/l/e;)V
+    invoke-virtual {p2, p3, v0}, Lb/h/g/l/NotificationCenter;->a(ILb/h/g/l/NotificationListener;)V
 
     return-object p1
 .end method
@@ -1483,12 +1483,12 @@
     .locals 1
 
     .line 1
-    iget-object v0, p0, Lcom/vk/fave/fragments/FaveTabFragment;->W:Lio/reactivex/disposables/a;
+    iget-object v0, p0, Lcom/vk/fave/fragments/FaveTabFragment;->W:Lio/reactivex/disposables/CompositeDisposable;
 
-    invoke-virtual {v0}, Lio/reactivex/disposables/a;->a()V
+    invoke-virtual {v0}, Lio/reactivex/disposables/CompositeDisposable;->a()V
 
     .line 2
-    invoke-super {p0}, Lcom/vk/core/fragments/b;->onDestroy()V
+    invoke-super {p0}, Lcom/vk/core/fragments/BaseFragment1;->onDestroy()V
 
     return-void
 .end method
@@ -1529,22 +1529,22 @@
     iput-object v0, p0, Lcom/vk/fave/fragments/FaveTabFragment;->Q:Landroid/widget/ImageView;
 
     .line 11
-    invoke-static {}, Lb/h/g/l/d;->a()Lb/h/g/l/d;
+    invoke-static {}, Lb/h/g/l/NotificationCenter;->a()Lb/h/g/l/NotificationCenter;
 
     move-result-object v0
 
-    iget-object v1, p0, Lcom/vk/fave/fragments/FaveTabFragment;->X:Lb/h/g/l/e;
+    iget-object v1, p0, Lcom/vk/fave/fragments/FaveTabFragment;->X:Lb/h/g/l/NotificationListener;
 
-    invoke-virtual {v0, v1}, Lb/h/g/l/d;->a(Lb/h/g/l/e;)V
+    invoke-virtual {v0, v1}, Lb/h/g/l/NotificationCenter;->a(Lb/h/g/l/NotificationListener;)V
 
     .line 12
-    invoke-static {}, Lb/h/g/l/d;->a()Lb/h/g/l/d;
+    invoke-static {}, Lb/h/g/l/NotificationCenter;->a()Lb/h/g/l/NotificationCenter;
 
     move-result-object v0
 
-    iget-object v1, p0, Lcom/vk/fave/fragments/FaveTabFragment;->Y:Lb/h/g/l/e;
+    iget-object v1, p0, Lcom/vk/fave/fragments/FaveTabFragment;->Y:Lb/h/g/l/NotificationListener;
 
-    invoke-virtual {v0, v1}, Lb/h/g/l/d;->a(Lb/h/g/l/e;)V
+    invoke-virtual {v0, v1}, Lb/h/g/l/NotificationCenter;->a(Lb/h/g/l/NotificationListener;)V
 
     .line 13
     invoke-super {p0}, Landroidx/fragment/app/DialogFragment;->onDestroyView()V
@@ -1563,7 +1563,7 @@
     invoke-virtual {v0, v1, p0}, Lcom/vk/stats/AppUseTime;->a(Lcom/vk/stats/AppUseTime$Section;Lcom/vk/core/fragments/FragmentImpl;)V
 
     .line 2
-    invoke-super {p0}, Lcom/vk/core/fragments/b;->onPause()V
+    invoke-super {p0}, Lcom/vk/core/fragments/BaseFragment1;->onPause()V
 
     .line 3
     iget-object v0, p0, Lcom/vk/fave/fragments/FaveTabFragment;->S:Lcom/vk/fave/fragments/FaveTabFragment$FaveTabAdapter;
@@ -1581,14 +1581,14 @@
 
     .line 4
     :goto_0
-    instance-of v1, v0, Lcom/vk/navigation/b0/c;
+    instance-of v1, v0, Lcom/vk/navigation/b0/FragmentWithAutoPlay;
 
     if-eqz v1, :cond_1
 
     .line 5
-    check-cast v0, Lcom/vk/navigation/b0/c;
+    check-cast v0, Lcom/vk/navigation/b0/FragmentWithAutoPlay;
 
-    invoke-interface {v0}, Lcom/vk/navigation/b0/c;->q()V
+    invoke-interface {v0}, Lcom/vk/navigation/b0/FragmentWithAutoPlay;->q()V
 
     :cond_1
     return-void
@@ -1598,7 +1598,7 @@
     .locals 2
 
     .line 1
-    invoke-super {p0}, Lcom/vk/core/fragments/b;->onResume()V
+    invoke-super {p0}, Lcom/vk/core/fragments/BaseFragment1;->onResume()V
 
     .line 2
     sget-object v0, Lcom/vk/stats/AppUseTime;->f:Lcom/vk/stats/AppUseTime;
@@ -1623,14 +1623,14 @@
 
     .line 4
     :goto_0
-    instance-of v1, v0, Lcom/vk/navigation/b0/c;
+    instance-of v1, v0, Lcom/vk/navigation/b0/FragmentWithAutoPlay;
 
     if-eqz v1, :cond_1
 
     .line 5
-    check-cast v0, Lcom/vk/navigation/b0/c;
+    check-cast v0, Lcom/vk/navigation/b0/FragmentWithAutoPlay;
 
-    invoke-interface {v0}, Lcom/vk/navigation/b0/c;->p()V
+    invoke-interface {v0}, Lcom/vk/navigation/b0/FragmentWithAutoPlay;->p()V
 
     :cond_1
     return-void

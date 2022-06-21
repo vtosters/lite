@@ -33,15 +33,15 @@
     return-object p0
 .end method
 
-.method public static a(Lcom/vk/photoviewer/PhotoViewer$e;Landroid/view/ViewGroup;Lkotlin/jvm/b/a;)Landroid/view/View;
+.method public static a(Lcom/vk/photoviewer/PhotoViewer$e;Landroid/view/ViewGroup;Lkotlin/jvm/b/Functions;)Landroid/view/View;
     .locals 2
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
             "Lcom/vk/photoviewer/PhotoViewer$e;",
             "Landroid/view/ViewGroup;",
-            "Lkotlin/jvm/b/a<",
-            "Lkotlin/m;",
+            "Lkotlin/jvm/b/Functions<",
+            "Lkotlin/Unit;",
             ">;)",
             "Landroid/view/View;"
         }
@@ -73,7 +73,7 @@
 
     new-instance v0, Lcom/vk/photoviewer/PhotoViewer$e$a$a;
 
-    invoke-direct {v0, p2}, Lcom/vk/photoviewer/PhotoViewer$e$a$a;-><init>(Lkotlin/jvm/b/a;)V
+    invoke-direct {v0, p2}, Lcom/vk/photoviewer/PhotoViewer$e$a$a;-><init>(Lkotlin/jvm/b/Functions;)V
 
     invoke-virtual {p1, v0}, Landroid/view/View;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
@@ -98,7 +98,7 @@
 
     int-to-float p0, p0
 
-    invoke-static {p1}, Lcom/vk/photoviewer/q;->a(Landroid/content/Context;)F
+    invoke-static {p1}, Lcom/vk/photoviewer/ViewExt;->a(Landroid/content/Context;)F
 
     move-result v0
 
@@ -107,7 +107,7 @@
     if-lez p0, :cond_0
 
     .line 7
-    invoke-static {p1}, Lcom/vk/photoviewer/q;->a(Landroid/content/Context;)F
+    invoke-static {p1}, Lcom/vk/photoviewer/ViewExt;->a(Landroid/content/Context;)F
 
     move-result p0
 
@@ -150,7 +150,7 @@
 
     mul-int p0, p0, p3
 
-    invoke-static {p1, p0}, Lcom/facebook/imagepipeline/common/d;->a(II)Lcom/facebook/imagepipeline/common/d;
+    invoke-static {p1, p0}, Lcom/facebook/imagepipeline/common/ResizeOptions;->a(II)Lcom/facebook/imagepipeline/common/ResizeOptions;
 
     move-result-object p0
 
@@ -164,7 +164,7 @@
     move-result-object p1
 
     .line 10
-    invoke-virtual {p1, p0}, Lcom/facebook/imagepipeline/request/ImageRequestBuilder;->a(Lcom/facebook/imagepipeline/common/d;)Lcom/facebook/imagepipeline/request/ImageRequestBuilder;
+    invoke-virtual {p1, p0}, Lcom/facebook/imagepipeline/request/ImageRequestBuilder;->a(Lcom/facebook/imagepipeline/common/ResizeOptions;)Lcom/facebook/imagepipeline/request/ImageRequestBuilder;
 
     .line 11
     invoke-virtual {p1}, Lcom/facebook/imagepipeline/request/ImageRequestBuilder;->a()Lcom/facebook/imagepipeline/request/ImageRequest;
@@ -173,7 +173,7 @@
 
     const-string p1, "ImageRequestBuilder.newB\u2026                 .build()"
 
-    invoke-static {p0, p1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p0, p1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     return-object p0
 .end method
@@ -320,13 +320,13 @@
     .locals 3
 
     .line 1
-    sget-object p0, Lkotlin/jvm/internal/r;->a:Lkotlin/jvm/internal/r;
+    sget-object p0, Lkotlin/jvm/internal/PrimitiveCompanionObjects1;->a:Lkotlin/jvm/internal/PrimitiveCompanionObjects1;
 
     sget-object p0, Ljava/util/Locale;->ENGLISH:Ljava/util/Locale;
 
     const-string v0, "Locale.ENGLISH"
 
-    invoke-static {p0, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p0, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     const/4 v0, 0x2
 
@@ -364,7 +364,7 @@
 
     const-string p1, "java.lang.String.format(locale, format, *args)"
 
-    invoke-static {p0, p1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p0, p1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     return-object p0
 .end method

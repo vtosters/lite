@@ -20,13 +20,13 @@
 # instance fields
 .field private final a:Landroidx/recyclerview/widget/RecyclerView;
 
-.field private final b:Lcom/vk/stickers/details/a;
+.field private final b:Lcom/vk/stickers/details/StickerDetailsAdapter;
 
-.field private final c:Lcom/vk/stickers/r;
+.field private final c:Lcom/vk/stickers/StickerLongtapWindow;
 
 
 # direct methods
-.method public constructor <init>(Landroidx/recyclerview/widget/RecyclerView;Lcom/vk/stickers/details/a;Lcom/vk/stickers/r;)V
+.method public constructor <init>(Landroidx/recyclerview/widget/RecyclerView;Lcom/vk/stickers/details/StickerDetailsAdapter;Lcom/vk/stickers/StickerLongtapWindow;)V
     .locals 0
 
     .line 1
@@ -34,9 +34,9 @@
 
     iput-object p1, p0, Lcom/vk/stickers/details/StickerDetailsView$a;->a:Landroidx/recyclerview/widget/RecyclerView;
 
-    iput-object p2, p0, Lcom/vk/stickers/details/StickerDetailsView$a;->b:Lcom/vk/stickers/details/a;
+    iput-object p2, p0, Lcom/vk/stickers/details/StickerDetailsView$a;->b:Lcom/vk/stickers/details/StickerDetailsAdapter;
 
-    iput-object p3, p0, Lcom/vk/stickers/details/StickerDetailsView$a;->c:Lcom/vk/stickers/r;
+    iput-object p3, p0, Lcom/vk/stickers/details/StickerDetailsView$a;->c:Lcom/vk/stickers/StickerLongtapWindow;
 
     return-void
 .end method
@@ -47,9 +47,9 @@
     .locals 1
 
     .line 4
-    iget-object v0, p0, Lcom/vk/stickers/details/StickerDetailsView$a;->c:Lcom/vk/stickers/r;
+    iget-object v0, p0, Lcom/vk/stickers/details/StickerDetailsView$a;->c:Lcom/vk/stickers/StickerLongtapWindow;
 
-    invoke-virtual {v0}, Lcom/vk/stickers/r;->a()V
+    invoke-virtual {v0}, Lcom/vk/stickers/StickerLongtapWindow;->a()V
 
     return-void
 .end method
@@ -65,26 +65,26 @@
     move-result v0
 
     .line 2
-    iget-object v1, p0, Lcom/vk/stickers/details/StickerDetailsView$a;->b:Lcom/vk/stickers/details/a;
+    iget-object v1, p0, Lcom/vk/stickers/details/StickerDetailsView$a;->b:Lcom/vk/stickers/details/StickerDetailsAdapter;
 
-    invoke-virtual {v1, v0}, Lcom/vk/stickers/details/a;->I(I)Z
+    invoke-virtual {v1, v0}, Lcom/vk/stickers/details/StickerDetailsAdapter;->I(I)Z
 
     move-result v1
 
     if-eqz v1, :cond_0
 
     .line 3
-    iget-object v2, p0, Lcom/vk/stickers/details/StickerDetailsView$a;->c:Lcom/vk/stickers/r;
+    iget-object v2, p0, Lcom/vk/stickers/details/StickerDetailsView$a;->c:Lcom/vk/stickers/StickerLongtapWindow;
 
-    iget-object v1, p0, Lcom/vk/stickers/details/StickerDetailsView$a;->b:Lcom/vk/stickers/details/a;
+    iget-object v1, p0, Lcom/vk/stickers/details/StickerDetailsView$a;->b:Lcom/vk/stickers/details/StickerDetailsAdapter;
 
-    invoke-virtual {v1}, Lcom/vk/stickers/details/a;->n()Ljava/util/List;
+    invoke-virtual {v1}, Lcom/vk/stickers/details/StickerDetailsAdapter;->n()Ljava/util/List;
 
     move-result-object v3
 
-    iget-object v1, p0, Lcom/vk/stickers/details/StickerDetailsView$a;->b:Lcom/vk/stickers/details/a;
+    iget-object v1, p0, Lcom/vk/stickers/details/StickerDetailsView$a;->b:Lcom/vk/stickers/details/StickerDetailsAdapter;
 
-    invoke-virtual {v1, v0}, Lcom/vk/stickers/details/a;->H(I)I
+    invoke-virtual {v1, v0}, Lcom/vk/stickers/details/StickerDetailsAdapter;->H(I)I
 
     move-result v4
 
@@ -96,7 +96,7 @@
 
     move-object v6, p1
 
-    invoke-static/range {v2 .. v8}, Lcom/vk/stickers/r;->a(Lcom/vk/stickers/r;Ljava/util/List;ILjava/util/List;Landroid/view/View;ILjava/lang/Object;)V
+    invoke-static/range {v2 .. v8}, Lcom/vk/stickers/StickerLongtapWindow;->a(Lcom/vk/stickers/StickerLongtapWindow;Ljava/util/List;ILjava/util/List;Landroid/view/View;ILjava/lang/Object;)V
 
     :cond_0
     return-void
@@ -106,7 +106,7 @@
     .locals 4
 
     .line 1
-    iget-object v0, p0, Lcom/vk/stickers/details/StickerDetailsView$a;->c:Lcom/vk/stickers/r;
+    iget-object v0, p0, Lcom/vk/stickers/details/StickerDetailsView$a;->c:Lcom/vk/stickers/StickerLongtapWindow;
 
     const/4 v1, 0x0
 
@@ -114,7 +114,7 @@
 
     const/4 v3, 0x0
 
-    invoke-static {v0, v1, v2, v3}, Lcom/vk/stickers/r;->a(Lcom/vk/stickers/r;ZILjava/lang/Object;)V
+    invoke-static {v0, v1, v2, v3}, Lcom/vk/stickers/StickerLongtapWindow;->a(Lcom/vk/stickers/StickerLongtapWindow;ZILjava/lang/Object;)V
 
     return-void
 .end method

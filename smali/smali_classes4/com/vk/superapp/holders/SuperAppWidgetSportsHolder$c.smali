@@ -1,5 +1,5 @@
 .class public final Lcom/vk/superapp/holders/SuperAppWidgetSportsHolder$c;
-.super Lcom/vk/common/e/b;
+.super Lcom/vk/common/e/BaseItemHolder;
 .source "SuperAppWidgetSportsHolder.kt"
 
 
@@ -15,7 +15,7 @@
 
 .annotation system Ldalvik/annotation/Signature;
     value = {
-        "Lcom/vk/common/e/b<",
+        "Lcom/vk/common/e/BaseItemHolder<",
         "Lcom/vk/superapp/holders/SuperAppWidgetSportsHolder$d;",
         ">;"
     }
@@ -23,14 +23,14 @@
 
 
 # instance fields
-.field private final c:Lkotlin/jvm/b/d;
+.field private final c:Lkotlin/jvm/b/Functions4;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Lkotlin/jvm/b/d<",
+            "Lkotlin/jvm/b/Functions4<",
             "Lcom/vk/superapp/holders/SuperAppWidgetSportsHolder$d;",
             "Lcom/vk/dto/common/data/ApiApplication;",
             "Ljava/lang/String;",
-            "Lkotlin/m;",
+            "Lkotlin/Unit;",
             ">;"
         }
     .end annotation
@@ -38,37 +38,37 @@
 
 
 # direct methods
-.method public constructor <init>(Landroid/view/View;Lkotlin/jvm/b/d;)V
+.method public constructor <init>(Landroid/view/View;Lkotlin/jvm/b/Functions4;)V
     .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
             "Landroid/view/View;",
-            "Lkotlin/jvm/b/d<",
+            "Lkotlin/jvm/b/Functions4<",
             "-",
             "Lcom/vk/superapp/holders/SuperAppWidgetSportsHolder$d;",
             "-",
             "Lcom/vk/dto/common/data/ApiApplication;",
             "-",
             "Ljava/lang/String;",
-            "Lkotlin/m;",
+            "Lkotlin/Unit;",
             ">;)V"
         }
     .end annotation
 
     .line 1
-    invoke-direct {p0, p1}, Lcom/vk/common/e/b;-><init>(Landroid/view/View;)V
+    invoke-direct {p0, p1}, Lcom/vk/common/e/BaseItemHolder;-><init>(Landroid/view/View;)V
 
-    iput-object p2, p0, Lcom/vk/superapp/holders/SuperAppWidgetSportsHolder$c;->c:Lkotlin/jvm/b/d;
+    iput-object p2, p0, Lcom/vk/superapp/holders/SuperAppWidgetSportsHolder$c;->c:Lkotlin/jvm/b/Functions4;
 
     return-void
 .end method
 
-.method public static final synthetic a(Lcom/vk/superapp/holders/SuperAppWidgetSportsHolder$c;)Lkotlin/jvm/b/d;
+.method public static final synthetic a(Lcom/vk/superapp/holders/SuperAppWidgetSportsHolder$c;)Lkotlin/jvm/b/Functions4;
     .locals 0
 
     .line 1
-    iget-object p0, p0, Lcom/vk/superapp/holders/SuperAppWidgetSportsHolder$c;->c:Lkotlin/jvm/b/d;
+    iget-object p0, p0, Lcom/vk/superapp/holders/SuperAppWidgetSportsHolder$c;->c:Lkotlin/jvm/b/Functions4;
 
     return-object p0
 .end method
@@ -86,7 +86,7 @@
     const v1, 0x7f0a054d
 
     .line 3
-    invoke-virtual {p0, v1}, Lcom/vk/common/e/b;->i(I)Landroid/view/View;
+    invoke-virtual {p0, v1}, Lcom/vk/common/e/BaseItemHolder;->i(I)Landroid/view/View;
 
     move-result-object v1
 
@@ -130,7 +130,7 @@
     const v1, 0x7f0a054e
 
     .line 5
-    invoke-virtual {p0, v1}, Lcom/vk/common/e/b;->i(I)Landroid/view/View;
+    invoke-virtual {p0, v1}, Lcom/vk/common/e/BaseItemHolder;->i(I)Landroid/view/View;
 
     move-result-object v1
 
@@ -165,7 +165,7 @@
     const v1, 0x7f0a08e5
 
     .line 7
-    invoke-virtual {p0, v1}, Lcom/vk/common/e/b;->i(I)Landroid/view/View;
+    invoke-virtual {p0, v1}, Lcom/vk/common/e/BaseItemHolder;->i(I)Landroid/view/View;
 
     move-result-object v1
 
@@ -185,7 +185,7 @@
     const v1, 0x7f0a0b92
 
     .line 9
-    invoke-virtual {p0, v1}, Lcom/vk/common/e/b;->i(I)Landroid/view/View;
+    invoke-virtual {p0, v1}, Lcom/vk/common/e/BaseItemHolder;->i(I)Landroid/view/View;
 
     move-result-object v1
 
@@ -205,7 +205,7 @@
     const v1, 0x7f0a08e6
 
     .line 11
-    invoke-virtual {p0, v1}, Lcom/vk/common/e/b;->i(I)Landroid/view/View;
+    invoke-virtual {p0, v1}, Lcom/vk/common/e/BaseItemHolder;->i(I)Landroid/view/View;
 
     move-result-object v1
 
@@ -225,7 +225,7 @@
     const v1, 0x7f0a0b93
 
     .line 13
-    invoke-virtual {p0, v1}, Lcom/vk/common/e/b;->i(I)Landroid/view/View;
+    invoke-virtual {p0, v1}, Lcom/vk/common/e/BaseItemHolder;->i(I)Landroid/view/View;
 
     move-result-object v1
 
@@ -245,7 +245,7 @@
     const v1, 0x7f0a032b
 
     .line 15
-    invoke-virtual {p0, v1}, Lcom/vk/common/e/b;->i(I)Landroid/view/View;
+    invoke-virtual {p0, v1}, Lcom/vk/common/e/BaseItemHolder;->i(I)Landroid/view/View;
 
     move-result-object v1
 
@@ -315,7 +315,7 @@
     return-void
 .end method
 
-.method public bridge synthetic b(Lcom/vk/common/i/b;)V
+.method public bridge synthetic b(Lcom/vk/common/i/RecyclerItem;)V
     .locals 0
 
     .line 1

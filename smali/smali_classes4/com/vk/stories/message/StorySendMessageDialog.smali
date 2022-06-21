@@ -3,19 +3,19 @@
 .source "StorySendMessageDialog.kt"
 
 # interfaces
-.implements Lcom/vk/stories/message/h;
+.implements Lcom/vk/stories/message/StorySendMessageContract4;
 .implements Landroid/view/View$OnClickListener;
-.implements Lcom/vk/stories/message/i$a;
+.implements Lcom/vk/stories/message/StorySendMessageKeyboardDelegate$a;
 
 
 # instance fields
-.field private final B:Lcom/vk/emoji/b;
+.field private final B:Lcom/vk/emoji/Emoji;
 
-.field private final C:Lcom/vk/stories/message/a;
+.field private final C:Lcom/vk/stories/message/StorySendMessageDialog1;
 
-.field private D:Lcom/vk/stories/message/i;
+.field private D:Lcom/vk/stories/message/StorySendMessageKeyboardDelegate;
 
-.field private E:Lcom/vk/stories/message/f;
+.field private E:Lcom/vk/stories/message/StorySendMessageContract5;
 
 .field private final F:Lcom/vk/stories/view/StoryView;
 
@@ -37,7 +37,7 @@
 
 
 # direct methods
-.method public constructor <init>(Landroid/content/Context;Lcom/vk/stories/message/f;Lcom/vk/stories/view/StoryView;)V
+.method public constructor <init>(Landroid/content/Context;Lcom/vk/stories/message/StorySendMessageContract5;Lcom/vk/stories/view/StoryView;)V
     .locals 9
 
     .line 1
@@ -74,7 +74,7 @@
 
     const-string v0, "LayoutInflater.from(cont\u2026ialog_send_message, null)"
 
-    invoke-static {p3, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p3, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     iput-object p3, p0, Lcom/vk/stories/message/StorySendMessageDialog;->a:Landroid/view/View;
 
@@ -89,7 +89,7 @@
 
     const-string v0, "rootView.findViewById(R.id.et_send_message)"
 
-    invoke-static {p3, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p3, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     check-cast p3, Lcom/vk/attachpicker/widget/BackPressEditText;
 
@@ -106,7 +106,7 @@
 
     const-string v0, "rootView.findViewById(R.id.iv_send)"
 
-    invoke-static {p3, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p3, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     iput-object p3, p0, Lcom/vk/stories/message/StorySendMessageDialog;->c:Landroid/view/View;
 
@@ -121,7 +121,7 @@
 
     const-string v0, "rootView.findViewById(R.\u2026end_message_voice_button)"
 
-    invoke-static {p3, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p3, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     iput-object p3, p0, Lcom/vk/stories/message/StorySendMessageDialog;->d:Landroid/view/View;
 
@@ -136,7 +136,7 @@
 
     const-string v0, "rootView.findViewById(R.id.stickers_keyboard)"
 
-    invoke-static {p3, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p3, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     check-cast p3, Landroid/widget/ImageView;
 
@@ -153,7 +153,7 @@
 
     const-string v0, "rootView.findViewById(R.id.fast_stickers_layout)"
 
-    invoke-static {p3, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p3, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     iput-object p3, p0, Lcom/vk/stories/message/StorySendMessageDialog;->f:Landroid/view/View;
 
@@ -168,7 +168,7 @@
 
     const-string v0, "rootView.findViewById(R.id.stickers_first_row)"
 
-    invoke-static {p3, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p3, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     check-cast p3, Landroid/widget/LinearLayout;
 
@@ -185,21 +185,21 @@
 
     const-string v0, "rootView.findViewById(R.id.stickers_second_row)"
 
-    invoke-static {p3, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p3, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     check-cast p3, Landroid/widget/LinearLayout;
 
     iput-object p3, p0, Lcom/vk/stories/message/StorySendMessageDialog;->h:Landroid/widget/LinearLayout;
 
     .line 10
-    invoke-static {}, Lcom/vk/emoji/b;->g()Lcom/vk/emoji/b;
+    invoke-static {}, Lcom/vk/emoji/Emoji;->g()Lcom/vk/emoji/Emoji;
 
     move-result-object p3
 
-    iput-object p3, p0, Lcom/vk/stories/message/StorySendMessageDialog;->B:Lcom/vk/emoji/b;
+    iput-object p3, p0, Lcom/vk/stories/message/StorySendMessageDialog;->B:Lcom/vk/emoji/Emoji;
 
     .line 11
-    new-instance p3, Lcom/vk/stories/message/a;
+    new-instance p3, Lcom/vk/stories/message/StorySendMessageDialog1;
 
     iget-object v3, p0, Lcom/vk/stories/message/StorySendMessageDialog;->b:Lcom/vk/attachpicker/widget/BackPressEditText;
 
@@ -213,19 +213,19 @@
 
     move-object v2, p3
 
-    invoke-direct/range {v2 .. v7}, Lcom/vk/stories/message/a;-><init>(Lcom/vk/attachpicker/widget/BackPressEditText;Landroid/view/View;Landroid/view/View;Landroid/view/View;Landroid/view/View;)V
+    invoke-direct/range {v2 .. v7}, Lcom/vk/stories/message/StorySendMessageDialog1;-><init>(Lcom/vk/attachpicker/widget/BackPressEditText;Landroid/view/View;Landroid/view/View;Landroid/view/View;Landroid/view/View;)V
 
-    iput-object p3, p0, Lcom/vk/stories/message/StorySendMessageDialog;->C:Lcom/vk/stories/message/a;
+    iput-object p3, p0, Lcom/vk/stories/message/StorySendMessageDialog;->C:Lcom/vk/stories/message/StorySendMessageDialog1;
 
     .line 12
-    iput-object p2, p0, Lcom/vk/stories/message/StorySendMessageDialog;->E:Lcom/vk/stories/message/f;
+    iput-object p2, p0, Lcom/vk/stories/message/StorySendMessageDialog;->E:Lcom/vk/stories/message/StorySendMessageContract5;
 
     .line 13
     invoke-virtual {p0}, Landroid/app/Dialog;->getWindow()Landroid/view/Window;
 
     move-result-object p2
 
-    invoke-static {p2}, Lcom/vk/core/util/l0;->a(Landroid/view/Window;)V
+    invoke-static {p2}, Lcom/vk/core/util/KeyboardUtils;->a(Landroid/view/Window;)V
 
     .line 14
     invoke-virtual {p0}, Landroid/app/Dialog;->getWindow()Landroid/view/Window;
@@ -259,7 +259,7 @@
     if-eqz p2, :cond_3
 
     .line 18
-    new-instance p2, Lcom/vk/stories/message/i;
+    new-instance p2, Lcom/vk/stories/message/StorySendMessageKeyboardDelegate;
 
     .line 19
     invoke-static {p1}, Lcom/vk/core/util/ContextExtKt;->f(Landroid/content/Context;)Landroid/app/Activity;
@@ -275,7 +275,7 @@
 
     const-string v0, "window!!"
 
-    invoke-static {v4, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v4, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 21
     iget-object v5, p0, Lcom/vk/stories/message/StorySendMessageDialog;->a:Landroid/view/View;
@@ -291,9 +291,9 @@
     move-object v8, p0
 
     .line 24
-    invoke-direct/range {v2 .. v8}, Lcom/vk/stories/message/i;-><init>(Landroid/app/Activity;Landroid/view/Window;Landroid/view/View;Landroid/widget/EditText;Landroid/widget/ImageView;Lcom/vk/stories/message/i$a;)V
+    invoke-direct/range {v2 .. v8}, Lcom/vk/stories/message/StorySendMessageKeyboardDelegate;-><init>(Landroid/app/Activity;Landroid/view/Window;Landroid/view/View;Landroid/widget/EditText;Landroid/widget/ImageView;Lcom/vk/stories/message/StorySendMessageKeyboardDelegate$a;)V
 
-    iput-object p2, p0, Lcom/vk/stories/message/StorySendMessageDialog;->D:Lcom/vk/stories/message/i;
+    iput-object p2, p0, Lcom/vk/stories/message/StorySendMessageDialog;->D:Lcom/vk/stories/message/StorySendMessageKeyboardDelegate;
 
     .line 25
     iget-object p2, p0, Lcom/vk/stories/message/StorySendMessageDialog;->e:Landroid/widget/ImageView;
@@ -304,7 +304,7 @@
 
     .line 26
     :cond_2
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     throw v1
 
@@ -346,7 +346,7 @@
 
     invoke-direct {v0, p2, p0}, Lcom/vk/stories/message/StorySendMessageDialog$$special$$inlined$let$lambda$5;-><init>(Lcom/vk/attachpicker/widget/BackPressEditText;Lcom/vk/stories/message/StorySendMessageDialog;)V
 
-    invoke-static {p2, v0}, Lcom/vk/extensions/ViewExtKt;->g(Landroid/view/View;Lkotlin/jvm/b/a;)Ljava/lang/Object;
+    invoke-static {p2, v0}, Lcom/vk/extensions/ViewExtKt;->g(Landroid/view/View;Lkotlin/jvm/b/Functions;)Ljava/lang/Object;
 
     const/4 v0, 0x0
 
@@ -387,7 +387,7 @@
 
     invoke-direct {p3, p0}, Lcom/vk/stories/message/StorySendMessageDialog$4;-><init>(Lcom/vk/stories/message/StorySendMessageDialog;)V
 
-    invoke-static {p2, p3}, Lcom/vk/extensions/ViewExtKt;->e(Landroid/view/View;Lkotlin/jvm/b/b;)V
+    invoke-static {p2, p3}, Lcom/vk/extensions/ViewExtKt;->e(Landroid/view/View;Lkotlin/jvm/b/Functions2;)V
 
     .line 42
     iget-object p2, p0, Lcom/vk/stories/message/StorySendMessageDialog;->a:Landroid/view/View;
@@ -409,7 +409,7 @@
     invoke-direct {v0, p0, p1}, Lcom/vk/stories/message/StorySendMessageDialog$b;-><init>(Lcom/vk/stories/message/StorySendMessageDialog;Landroid/content/Context;)V
 
     .line 45
-    new-instance v1, Lcom/vk/core/widget/e;
+    new-instance v1, Lcom/vk/core/widget/OnSwipeTouchListener;
 
     const/16 v2, 0x1e
 
@@ -417,16 +417,16 @@
 
     move-result v2
 
-    invoke-direct {v1, p1, v2, p3}, Lcom/vk/core/widget/e;-><init>(Landroid/content/Context;ILcom/vk/core/widget/f$b;)V
+    invoke-direct {v1, p1, v2, p3}, Lcom/vk/core/widget/OnSwipeTouchListener;-><init>(Landroid/content/Context;ILcom/vk/core/widget/OnTouchDownListener$b;)V
 
     .line 46
-    invoke-virtual {v1, v0}, Lcom/vk/core/widget/e;->a(Lcom/vk/core/widget/e$c;)V
+    invoke-virtual {v1, v0}, Lcom/vk/core/widget/OnSwipeTouchListener;->a(Lcom/vk/core/widget/OnSwipeTouchListener$c;)V
 
     .line 47
     invoke-virtual {p2, v1}, Landroid/view/View;->setOnTouchListener(Landroid/view/View$OnTouchListener;)V
 
     .line 48
-    invoke-virtual {p0}, Lcom/vk/stories/message/StorySendMessageDialog;->getPresenter()Lcom/vk/stories/message/f;
+    invoke-virtual {p0}, Lcom/vk/stories/message/StorySendMessageDialog;->getPresenter()Lcom/vk/stories/message/StorySendMessageContract5;
 
     move-result-object p1
 
@@ -438,22 +438,22 @@
     invoke-virtual {p2, p1}, Lcom/vk/core/vc/KeyboardController;->a(Lcom/vk/core/vc/KeyboardController$a;)Z
 
     .line 50
-    iget-object p2, p0, Lcom/vk/stories/message/StorySendMessageDialog;->C:Lcom/vk/stories/message/a;
+    iget-object p2, p0, Lcom/vk/stories/message/StorySendMessageDialog;->C:Lcom/vk/stories/message/StorySendMessageDialog1;
 
-    invoke-interface {p1, p2}, Lcom/vk/stories/message/f;->a(Lcom/vk/stories/message/d;)V
+    invoke-interface {p1, p2}, Lcom/vk/stories/message/StorySendMessageContract5;->a(Lcom/vk/stories/message/StorySendMessageContract3;)V
 
     .line 51
-    invoke-interface {p1}, Lb/h/r/a;->onResume()V
+    invoke-interface {p1}, Lb/h/r/BaseContract;->onResume()V
 
     :cond_4
     return-void
 .end method
 
-.method public static final synthetic a(Lcom/vk/stories/message/StorySendMessageDialog;)Lcom/vk/stories/message/a;
+.method public static final synthetic a(Lcom/vk/stories/message/StorySendMessageDialog;)Lcom/vk/stories/message/StorySendMessageDialog1;
     .locals 0
 
     .line 2
-    iget-object p0, p0, Lcom/vk/stories/message/StorySendMessageDialog;->C:Lcom/vk/stories/message/a;
+    iget-object p0, p0, Lcom/vk/stories/message/StorySendMessageDialog;->C:Lcom/vk/stories/message/StorySendMessageDialog1;
 
     return-object p0
 .end method
@@ -465,7 +465,7 @@
             "(",
             "Landroid/widget/LinearLayout;",
             "Ljava/util/List<",
-            "Lcom/vk/stories/message/k;",
+            "Lcom/vk/stories/message/StoryStickerItem;",
             ">;)V"
         }
     .end annotation
@@ -546,10 +546,10 @@
 
     move-result-object v0
 
-    check-cast v0, Lcom/vk/stories/message/k;
+    check-cast v0, Lcom/vk/stories/message/StoryStickerItem;
 
     .line 11
-    invoke-virtual {v1, v0}, Lcom/vk/stories/message/StorySendMessageDialog$addFastStickersViews$1;->a(Lcom/vk/stories/message/k;)Landroid/view/View;
+    invoke-virtual {v1, v0}, Lcom/vk/stories/message/StorySendMessageDialog$addFastStickersViews$1;->a(Lcom/vk/stories/message/StoryStickerItem;)Landroid/view/View;
 
     move-result-object v0
 
@@ -574,11 +574,11 @@
     return-void
 .end method
 
-.method public static final synthetic b(Lcom/vk/stories/message/StorySendMessageDialog;)Lcom/vk/emoji/b;
+.method public static final synthetic b(Lcom/vk/stories/message/StorySendMessageDialog;)Lcom/vk/emoji/Emoji;
     .locals 0
 
     .line 1
-    iget-object p0, p0, Lcom/vk/stories/message/StorySendMessageDialog;->B:Lcom/vk/emoji/b;
+    iget-object p0, p0, Lcom/vk/stories/message/StorySendMessageDialog;->B:Lcom/vk/emoji/Emoji;
 
     return-object p0
 .end method
@@ -592,11 +592,11 @@
     return-object p0
 .end method
 
-.method public static final synthetic d(Lcom/vk/stories/message/StorySendMessageDialog;)Lcom/vk/stories/message/i;
+.method public static final synthetic d(Lcom/vk/stories/message/StorySendMessageDialog;)Lcom/vk/stories/message/StorySendMessageKeyboardDelegate;
     .locals 0
 
     .line 1
-    iget-object p0, p0, Lcom/vk/stories/message/StorySendMessageDialog;->D:Lcom/vk/stories/message/i;
+    iget-object p0, p0, Lcom/vk/stories/message/StorySendMessageDialog;->D:Lcom/vk/stories/message/StorySendMessageKeyboardDelegate;
 
     return-object p0
 .end method
@@ -636,7 +636,7 @@
     .line 1
     iget-object v0, p0, Lcom/vk/stories/message/StorySendMessageDialog;->b:Lcom/vk/attachpicker/widget/BackPressEditText;
 
-    invoke-static {v0}, Lcom/vk/core/util/l0;->a(Landroid/view/View;)V
+    invoke-static {v0}, Lcom/vk/core/util/KeyboardUtils;->a(Landroid/view/View;)V
 
     return-void
 .end method
@@ -645,7 +645,7 @@
     .locals 2
 
     .line 1
-    invoke-virtual {p0}, Lcom/vk/stories/message/StorySendMessageDialog;->getPresenter()Lcom/vk/stories/message/f;
+    invoke-virtual {p0}, Lcom/vk/stories/message/StorySendMessageDialog;->getPresenter()Lcom/vk/stories/message/StorySendMessageContract5;
 
     move-result-object v0
 
@@ -653,7 +653,7 @@
 
     if-eqz v0, :cond_0
 
-    invoke-interface {v0}, Lcom/vk/stories/message/f;->O()I
+    invoke-interface {v0}, Lcom/vk/stories/message/StorySendMessageContract5;->O()I
 
     move-result v0
 
@@ -665,13 +665,13 @@
     :goto_0
     if-lez v0, :cond_2
 
-    invoke-virtual {p0}, Lcom/vk/stories/message/StorySendMessageDialog;->getPresenter()Lcom/vk/stories/message/f;
+    invoke-virtual {p0}, Lcom/vk/stories/message/StorySendMessageDialog;->getPresenter()Lcom/vk/stories/message/StorySendMessageContract5;
 
     move-result-object v0
 
     if-eqz v0, :cond_1
 
-    invoke-interface {v0}, Lcom/vk/stories/message/f;->O()I
+    invoke-interface {v0}, Lcom/vk/stories/message/StorySendMessageContract5;->O()I
 
     move-result v0
 
@@ -699,13 +699,13 @@
     .locals 1
 
     .line 3
-    invoke-virtual {p0}, Lcom/vk/stories/message/StorySendMessageDialog;->getPresenter()Lcom/vk/stories/message/f;
+    invoke-virtual {p0}, Lcom/vk/stories/message/StorySendMessageDialog;->getPresenter()Lcom/vk/stories/message/StorySendMessageContract5;
 
     move-result-object v0
 
     if-eqz v0, :cond_0
 
-    invoke-interface {v0}, Lb/h/r/a;->onPause()V
+    invoke-interface {v0}, Lb/h/r/BaseContract;->onPause()V
 
     :cond_0
     return-void
@@ -715,7 +715,7 @@
     .locals 6
 
     .line 12
-    invoke-virtual {p0}, Lcom/vk/stories/message/StorySendMessageDialog;->getPresenter()Lcom/vk/stories/message/f;
+    invoke-virtual {p0}, Lcom/vk/stories/message/StorySendMessageDialog;->getPresenter()Lcom/vk/stories/message/StorySendMessageContract5;
 
     move-result-object v0
 
@@ -731,7 +731,7 @@
 
     move-object v5, p5
 
-    invoke-interface/range {v0 .. v5}, Lcom/vk/stories/message/f;->a(ILcom/vk/dto/stickers/StickerItem;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-interface/range {v0 .. v5}, Lcom/vk/stories/message/StorySendMessageContract5;->a(ILcom/vk/dto/stickers/StickerItem;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
 
     :cond_0
     return-void
@@ -743,20 +743,20 @@
         value = {
             "(",
             "Ljava/util/List<",
-            "Lcom/vk/stories/message/k;",
+            "Lcom/vk/stories/message/StoryStickerItem;",
             ">;",
             "Ljava/util/List<",
-            "Lcom/vk/stories/message/k;",
+            "Lcom/vk/stories/message/StoryStickerItem;",
             ">;)V"
         }
     .end annotation
 
     .line 4
-    iget-object v0, p0, Lcom/vk/stories/message/StorySendMessageDialog;->C:Lcom/vk/stories/message/a;
+    iget-object v0, p0, Lcom/vk/stories/message/StorySendMessageDialog;->C:Lcom/vk/stories/message/StorySendMessageDialog1;
 
     const/4 v1, 0x1
 
-    invoke-virtual {v0, v1}, Lcom/vk/stories/message/a;->f(Z)V
+    invoke-virtual {v0, v1}, Lcom/vk/stories/message/StorySendMessageDialog1;->f(Z)V
 
     .line 5
     iget-object v0, p0, Lcom/vk/stories/message/StorySendMessageDialog;->b:Lcom/vk/attachpicker/widget/BackPressEditText;
@@ -778,7 +778,7 @@
     .line 4
     iget-object v0, p0, Lcom/vk/stories/message/StorySendMessageDialog;->b:Lcom/vk/attachpicker/widget/BackPressEditText;
 
-    invoke-static {v0}, Lcom/vk/core/util/l0;->b(Landroid/view/View;)V
+    invoke-static {v0}, Lcom/vk/core/util/KeyboardUtils;->b(Landroid/view/View;)V
 
     return-void
 .end method
@@ -824,21 +824,21 @@
     invoke-virtual {v0, v1, v2, v3}, Landroid/widget/FrameLayout;->postDelayed(Ljava/lang/Runnable;J)Z
 
     .line 2
-    invoke-virtual {p0}, Lcom/vk/stories/message/StorySendMessageDialog;->getPresenter()Lcom/vk/stories/message/f;
+    invoke-virtual {p0}, Lcom/vk/stories/message/StorySendMessageDialog;->getPresenter()Lcom/vk/stories/message/StorySendMessageContract5;
 
     move-result-object v0
 
     if-eqz v0, :cond_0
 
-    invoke-interface {v0}, Lb/h/r/a;->onDestroy()V
+    invoke-interface {v0}, Lb/h/r/BaseContract;->onDestroy()V
 
     .line 3
     :cond_0
-    iget-object v0, p0, Lcom/vk/stories/message/StorySendMessageDialog;->D:Lcom/vk/stories/message/i;
+    iget-object v0, p0, Lcom/vk/stories/message/StorySendMessageDialog;->D:Lcom/vk/stories/message/StorySendMessageKeyboardDelegate;
 
     if-eqz v0, :cond_1
 
-    invoke-virtual {v0}, Lcom/vk/stories/message/i;->b()V
+    invoke-virtual {v0}, Lcom/vk/stories/message/StorySendMessageKeyboardDelegate;->b()V
 
     .line 4
     :cond_1
@@ -847,11 +847,11 @@
     return-void
 .end method
 
-.method public getPresenter()Lcom/vk/stories/message/f;
+.method public getPresenter()Lcom/vk/stories/message/StorySendMessageContract5;
     .locals 1
 
     .line 1
-    iget-object v0, p0, Lcom/vk/stories/message/StorySendMessageDialog;->E:Lcom/vk/stories/message/f;
+    iget-object v0, p0, Lcom/vk/stories/message/StorySendMessageDialog;->E:Lcom/vk/stories/message/StorySendMessageContract5;
 
     return-object v0
 .end method
@@ -868,7 +868,7 @@
 
     const-string v1, "editText.text"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     return-object v0
 .end method
@@ -885,7 +885,7 @@
     const/4 v3, 0x0
 
     .line 1
-    invoke-static {v0, v1, v2, v3}, Lcom/vk/core/util/k1;->a(IZILjava/lang/Object;)V
+    invoke-static {v0, v1, v2, v3}, Lcom/vk/core/util/ToastUtils;->a(IZILjava/lang/Object;)V
 
     return-void
 .end method
@@ -946,13 +946,13 @@
 
     if-ne p1, v0, :cond_2
 
-    invoke-virtual {p0}, Lcom/vk/stories/message/StorySendMessageDialog;->getPresenter()Lcom/vk/stories/message/f;
+    invoke-virtual {p0}, Lcom/vk/stories/message/StorySendMessageDialog;->getPresenter()Lcom/vk/stories/message/StorySendMessageContract5;
 
     move-result-object p1
 
     if-eqz p1, :cond_2
 
-    invoke-interface {p1}, Lcom/vk/stories/message/f;->K0()V
+    invoke-interface {p1}, Lcom/vk/stories/message/StorySendMessageContract5;->K0()V
 
     :cond_2
     :goto_1

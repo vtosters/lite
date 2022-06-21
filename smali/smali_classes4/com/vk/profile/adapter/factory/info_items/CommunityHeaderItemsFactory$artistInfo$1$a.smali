@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/profile/adapter/factory/info_items/CommunityHeaderItemsFactory$artistInfo$1;->a(Lcom/vtosters/lite/api/i;)Lcom/vk/profile/adapter/items/w;
+    value = Lcom/vk/profile/adapter/factory/info_items/CommunityHeaderItemsFactory$artistInfo$1;->a(Lcom/vtosters/lite/api/ExtendedCommunityProfile;)Lcom/vk/profile/adapter/items/OverviewInfoItem;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -20,16 +20,16 @@
 # instance fields
 .field final synthetic a:Lcom/vk/profile/adapter/factory/info_items/CommunityHeaderItemsFactory$artistInfo$1;
 
-.field final synthetic b:Lcom/vtosters/lite/api/i;
+.field final synthetic b:Lcom/vtosters/lite/api/ExtendedCommunityProfile;
 
 
 # direct methods
-.method constructor <init>(Lcom/vk/profile/adapter/factory/info_items/CommunityHeaderItemsFactory$artistInfo$1;Lcom/vtosters/lite/api/i;)V
+.method constructor <init>(Lcom/vk/profile/adapter/factory/info_items/CommunityHeaderItemsFactory$artistInfo$1;Lcom/vtosters/lite/api/ExtendedCommunityProfile;)V
     .locals 0
 
     iput-object p1, p0, Lcom/vk/profile/adapter/factory/info_items/CommunityHeaderItemsFactory$artistInfo$1$a;->a:Lcom/vk/profile/adapter/factory/info_items/CommunityHeaderItemsFactory$artistInfo$1;
 
-    iput-object p2, p0, Lcom/vk/profile/adapter/factory/info_items/CommunityHeaderItemsFactory$artistInfo$1$a;->b:Lcom/vtosters/lite/api/i;
+    iput-object p2, p0, Lcom/vk/profile/adapter/factory/info_items/CommunityHeaderItemsFactory$artistInfo$1$a;->b:Lcom/vtosters/lite/api/ExtendedCommunityProfile;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -56,45 +56,45 @@
 
     move-result v0
 
-    invoke-static {v0}, Lcom/vk/profile/e/f;->b(I)V
+    invoke-static {v0}, Lcom/vk/profile/e/ProfileTracker1;->b(I)V
 
     .line 2
-    new-instance v0, Lcom/vk/music/fragment/k$g;
+    new-instance v0, Lcom/vk/music/fragment/MusicFragment$g;
 
-    invoke-direct {v0}, Lcom/vk/music/fragment/k$g;-><init>()V
+    invoke-direct {v0}, Lcom/vk/music/fragment/MusicFragment$g;-><init>()V
 
     .line 3
     sget-object v1, Lcom/vk/music/common/MusicPlaybackLaunchContext;->M:Lcom/vk/music/common/MusicPlaybackLaunchContext;
 
     const-string v2, "MusicPlaybackLaunchContext.GROUP_WALL"
 
-    invoke-static {v1, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {v1}, Lcom/vk/music/common/MusicPlaybackLaunchContext;->v0()Ljava/lang/String;
 
     move-result-object v1
 
-    invoke-virtual {v0, v1}, Lcom/vk/music/fragment/k$g;->b(Ljava/lang/String;)Lcom/vk/music/fragment/k$g;
+    invoke-virtual {v0, v1}, Lcom/vk/music/fragment/MusicFragment$g;->b(Ljava/lang/String;)Lcom/vk/music/fragment/MusicFragment$g;
 
     .line 4
-    iget-object v1, p0, Lcom/vk/profile/adapter/factory/info_items/CommunityHeaderItemsFactory$artistInfo$1$a;->b:Lcom/vtosters/lite/api/i;
+    iget-object v1, p0, Lcom/vk/profile/adapter/factory/info_items/CommunityHeaderItemsFactory$artistInfo$1$a;->b:Lcom/vtosters/lite/api/ExtendedCommunityProfile;
 
     iget-object v1, v1, Lcom/vtosters/lite/api/ExtendedUserProfile;->S:Ljava/lang/String;
 
-    invoke-virtual {v0, v1}, Lcom/vk/music/fragment/k$g;->a(Ljava/lang/String;)Lcom/vk/music/fragment/k$g;
+    invoke-virtual {v0, v1}, Lcom/vk/music/fragment/MusicFragment$g;->a(Ljava/lang/String;)Lcom/vk/music/fragment/MusicFragment$g;
 
     .line 5
     iget-object v1, p0, Lcom/vk/profile/adapter/factory/info_items/CommunityHeaderItemsFactory$artistInfo$1$a;->a:Lcom/vk/profile/adapter/factory/info_items/CommunityHeaderItemsFactory$artistInfo$1;
 
     iget-object v1, v1, Lcom/vk/profile/adapter/factory/info_items/CommunityHeaderItemsFactory$artistInfo$1;->$context:Landroid/content/Context;
 
-    invoke-virtual {v0, v1}, Lcom/vk/navigation/o;->a(Landroid/content/Context;)V
+    invoke-virtual {v0, v1}, Lcom/vk/navigation/Navigator;->a(Landroid/content/Context;)V
 
     return-void
 
     .line 6
     :cond_0
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     const/4 v0, 0x0
 

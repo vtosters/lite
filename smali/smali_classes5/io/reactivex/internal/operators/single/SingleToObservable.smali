@@ -1,5 +1,5 @@
 .class public final Lio/reactivex/internal/operators/single/SingleToObservable;
-.super Lc/a/m;
+.super Lio/reactivex/Observable;
 .source "SingleToObservable.java"
 
 
@@ -15,17 +15,17 @@
         "<T:",
         "Ljava/lang/Object;",
         ">",
-        "Lc/a/m<",
+        "Lio/reactivex/Observable<",
         "TT;>;"
     }
 .end annotation
 
 
 # instance fields
-.field final a:Lc/a/x;
+.field final a:Lio/reactivex/SingleSource;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Lc/a/x<",
+            "Lio/reactivex/SingleSource<",
             "+TT;>;"
         }
     .end annotation
@@ -33,35 +33,35 @@
 
 
 # direct methods
-.method public constructor <init>(Lc/a/x;)V
+.method public constructor <init>(Lio/reactivex/SingleSource;)V
     .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lc/a/x<",
+            "Lio/reactivex/SingleSource<",
             "+TT;>;)V"
         }
     .end annotation
 
     .line 1
-    invoke-direct {p0}, Lc/a/m;-><init>()V
+    invoke-direct {p0}, Lio/reactivex/Observable;-><init>()V
 
     .line 2
-    iput-object p1, p0, Lio/reactivex/internal/operators/single/SingleToObservable;->a:Lc/a/x;
+    iput-object p1, p0, Lio/reactivex/internal/operators/single/SingleToObservable;->a:Lio/reactivex/SingleSource;
 
     return-void
 .end method
 
-.method public static d(Lc/a/r;)Lc/a/v;
+.method public static d(Lio/reactivex/Observer;)Lio/reactivex/SingleObserver;
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "<T:",
             "Ljava/lang/Object;",
             ">(",
-            "Lc/a/r<",
+            "Lio/reactivex/Observer<",
             "-TT;>;)",
-            "Lc/a/v<",
+            "Lio/reactivex/SingleObserver<",
             "TT;>;"
         }
     .end annotation
@@ -69,31 +69,31 @@
     .line 1
     new-instance v0, Lio/reactivex/internal/operators/single/SingleToObservable$SingleToObservableObserver;
 
-    invoke-direct {v0, p0}, Lio/reactivex/internal/operators/single/SingleToObservable$SingleToObservableObserver;-><init>(Lc/a/r;)V
+    invoke-direct {v0, p0}, Lio/reactivex/internal/operators/single/SingleToObservable$SingleToObservableObserver;-><init>(Lio/reactivex/Observer;)V
 
     return-object v0
 .end method
 
 
 # virtual methods
-.method public b(Lc/a/r;)V
+.method public b(Lio/reactivex/Observer;)V
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lc/a/r<",
+            "Lio/reactivex/Observer<",
             "-TT;>;)V"
         }
     .end annotation
 
     .line 1
-    iget-object v0, p0, Lio/reactivex/internal/operators/single/SingleToObservable;->a:Lc/a/x;
+    iget-object v0, p0, Lio/reactivex/internal/operators/single/SingleToObservable;->a:Lio/reactivex/SingleSource;
 
-    invoke-static {p1}, Lio/reactivex/internal/operators/single/SingleToObservable;->d(Lc/a/r;)Lc/a/v;
+    invoke-static {p1}, Lio/reactivex/internal/operators/single/SingleToObservable;->d(Lio/reactivex/Observer;)Lio/reactivex/SingleObserver;
 
     move-result-object p1
 
-    invoke-interface {v0, p1}, Lc/a/x;->a(Lc/a/v;)V
+    invoke-interface {v0, p1}, Lio/reactivex/SingleSource;->a(Lio/reactivex/SingleObserver;)V
 
     return-void
 .end method

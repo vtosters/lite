@@ -32,11 +32,11 @@
     if-eqz p1, :cond_0
 
     .line 11
-    check-cast p1, Lcom/vk/common/widget/d;
+    check-cast p1, Lcom/vk/common/widget/HeaderHolder;
 
     const p2, 0x7f120983
 
-    invoke-virtual {p1, p2}, Lcom/vk/common/widget/d;->i(I)V
+    invoke-virtual {p1, p2}, Lcom/vk/common/widget/HeaderHolder;->i(I)V
 
     return-void
 

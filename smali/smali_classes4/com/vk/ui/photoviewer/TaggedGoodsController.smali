@@ -30,7 +30,7 @@
     .end annotation
 .end field
 
-.field private final f:Lio/reactivex/disposables/a;
+.field private final f:Lio/reactivex/disposables/CompositeDisposable;
 
 .field private g:Lcom/vk/dto/photo/Photo;
 
@@ -38,12 +38,12 @@
 
 .field private final i:Landroid/content/Context;
 
-.field private final j:Lkotlin/jvm/b/b;
+.field private final j:Lkotlin/jvm/b/Functions2;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Lkotlin/jvm/b/b<",
+            "Lkotlin/jvm/b/Functions2<",
             "Lcom/vk/dto/photo/Photo;",
-            "Lkotlin/m;",
+            "Lkotlin/Unit;",
             ">;"
         }
     .end annotation
@@ -58,21 +58,21 @@
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, v1}, Lcom/vk/ui/photoviewer/TaggedGoodsController$a;-><init>(Lkotlin/jvm/internal/i;)V
+    invoke-direct {v0, v1}, Lcom/vk/ui/photoviewer/TaggedGoodsController$a;-><init>(Lkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     return-void
 .end method
 
-.method public constructor <init>(Landroid/content/Context;Lkotlin/jvm/b/b;)V
+.method public constructor <init>(Landroid/content/Context;Lkotlin/jvm/b/Functions2;)V
     .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
             "Landroid/content/Context;",
-            "Lkotlin/jvm/b/b<",
+            "Lkotlin/jvm/b/Functions2<",
             "-",
             "Lcom/vk/dto/photo/Photo;",
-            "Lkotlin/m;",
+            "Lkotlin/Unit;",
             ">;)V"
         }
     .end annotation
@@ -82,7 +82,7 @@
 
     iput-object p1, p0, Lcom/vk/ui/photoviewer/TaggedGoodsController;->i:Landroid/content/Context;
 
-    iput-object p2, p0, Lcom/vk/ui/photoviewer/TaggedGoodsController;->j:Lkotlin/jvm/b/b;
+    iput-object p2, p0, Lcom/vk/ui/photoviewer/TaggedGoodsController;->j:Lkotlin/jvm/b/Functions2;
 
     .line 2
     new-instance p1, Ljava/util/ArrayList;
@@ -92,11 +92,11 @@
     iput-object p1, p0, Lcom/vk/ui/photoviewer/TaggedGoodsController;->e:Ljava/util/List;
 
     .line 3
-    new-instance p1, Lio/reactivex/disposables/a;
+    new-instance p1, Lio/reactivex/disposables/CompositeDisposable;
 
-    invoke-direct {p1}, Lio/reactivex/disposables/a;-><init>()V
+    invoke-direct {p1}, Lio/reactivex/disposables/CompositeDisposable;-><init>()V
 
-    iput-object p1, p0, Lcom/vk/ui/photoviewer/TaggedGoodsController;->f:Lio/reactivex/disposables/a;
+    iput-object p1, p0, Lcom/vk/ui/photoviewer/TaggedGoodsController;->f:Lio/reactivex/disposables/CompositeDisposable;
 
     return-void
 .end method
@@ -176,7 +176,7 @@
     goto :goto_0
 
     :cond_2
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     const/4 p1, 0x0
 
@@ -226,7 +226,7 @@
 
     const-string v0, "context.getString(R.stri\u2026ttach_good_prompt, title)"
 
-    invoke-static {p2, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p2, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 32
     iget-object v0, p0, Lcom/vk/ui/photoviewer/TaggedGoodsController;->a:Lcom/vk/photoviewer/PhotoViewer;
@@ -237,7 +237,7 @@
 
     invoke-direct {v1, p0, p1, v2}, Lcom/vk/ui/photoviewer/TaggedGoodsController$onGoodPicked$1;-><init>(Lcom/vk/ui/photoviewer/TaggedGoodsController;Lcom/vk/dto/photo/Photo;Ljava/lang/String;)V
 
-    invoke-virtual {v0, p2, v1}, Lcom/vk/photoviewer/PhotoViewer;->a(Ljava/lang/CharSequence;Lkotlin/jvm/b/b;)V
+    invoke-virtual {v0, p2, v1}, Lcom/vk/photoviewer/PhotoViewer;->a(Ljava/lang/CharSequence;Lkotlin/jvm/b/Functions2;)V
 
     :cond_6
     return-void
@@ -265,7 +265,7 @@
 
     move-result-object p1
 
-    invoke-static {v0, v1, p1}, Lcom/vk/common/links/e;->a(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1, p1}, Lcom/vk/common/links/LinkUtils;->a(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)V
 
     return-void
 .end method
@@ -358,7 +358,7 @@
     const-string v1, "oldTags"
 
     .line 11
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-static {v0, p2}, Lkotlin/collections/l;->c(Ljava/lang/Iterable;Ljava/lang/Object;)Ljava/util/List;
 
@@ -372,7 +372,7 @@
 
     const-string v2, "photo.taggedGoods"
 
-    invoke-static {v1, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-interface {v1}, Ljava/util/Collection;->isEmpty()Z
 
@@ -385,12 +385,12 @@
     iput-boolean v1, p1, Lcom/vk/dto/photo/Photo;->I:Z
 
     .line 14
-    iget-object v1, p0, Lcom/vk/ui/photoviewer/TaggedGoodsController;->j:Lkotlin/jvm/b/b;
+    iget-object v1, p0, Lcom/vk/ui/photoviewer/TaggedGoodsController;->j:Lkotlin/jvm/b/Functions2;
 
-    invoke-interface {v1, p1}, Lkotlin/jvm/b/b;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v1, p1}, Lkotlin/jvm/b/Functions2;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
 
     .line 15
-    new-instance v1, Lb/h/c/b0/b;
+    new-instance v1, Lcom/vk/api/tags/TagsDelete;
 
     invoke-virtual {p2}, Lcom/vk/dto/tags/Tag;->b()I
 
@@ -410,12 +410,12 @@
 
     move-object v3, v1
 
-    invoke-direct/range {v3 .. v8}, Lb/h/c/b0/b;-><init>(IILjava/lang/String;Lcom/vk/dto/tags/Tag$ContentType;I)V
+    invoke-direct/range {v3 .. v8}, Lcom/vk/api/tags/TagsDelete;-><init>(IILjava/lang/String;Lcom/vk/dto/tags/Tag$ContentType;I)V
 
     const/4 p2, 0x0
 
     .line 16
-    invoke-static {v1, p2, v2, p2}, Lcom/vk/api/base/d;->d(Lcom/vk/api/base/d;Lcom/vk/api/base/e;ILjava/lang/Object;)Lc/a/m;
+    invoke-static {v1, p2, v2, p2}, Lcom/vk/api/base/ApiRequest;->d(Lcom/vk/api/base/ApiRequest;Lcom/vk/api/base/ApiThreadHolder;ILjava/lang/Object;)Lio/reactivex/Observable;
 
     move-result-object v3
 
@@ -434,7 +434,7 @@
 
     const/4 v11, 0x0
 
-    invoke-static/range {v3 .. v11}, Lcom/vk/core/extensions/RxExtKt;->a(Lc/a/m;Landroid/content/Context;JIZZILjava/lang/Object;)Lc/a/m;
+    invoke-static/range {v3 .. v11}, Lcom/vk/core/extensions/RxExtKt;->a(Lio/reactivex/Observable;Landroid/content/Context;JIZZILjava/lang/Object;)Lio/reactivex/Observable;
 
     move-result-object p2
 
@@ -443,7 +443,7 @@
 
     invoke-direct {v1, p1, v0}, Lcom/vk/ui/photoviewer/TaggedGoodsController$b;-><init>(Lcom/vk/dto/photo/Photo;Ljava/util/List;)V
 
-    invoke-virtual {p2, v1}, Lc/a/m;->d(Lc/a/z/g;)Lc/a/m;
+    invoke-virtual {p2, v1}, Lio/reactivex/Observable;->d(Lio/reactivex/functions/Consumer;)Lio/reactivex/Observable;
 
     move-result-object p2
 
@@ -452,7 +452,7 @@
 
     invoke-direct {v1, p1, v0}, Lcom/vk/ui/photoviewer/TaggedGoodsController$c;-><init>(Lcom/vk/dto/photo/Photo;Ljava/util/List;)V
 
-    invoke-virtual {p2, v1}, Lc/a/m;->c(Lc/a/z/g;)Lc/a/m;
+    invoke-virtual {p2, v1}, Lio/reactivex/Observable;->c(Lio/reactivex/functions/Consumer;)Lio/reactivex/Observable;
 
     move-result-object p2
 
@@ -461,29 +461,29 @@
 
     invoke-direct {v0, p0, p1}, Lcom/vk/ui/photoviewer/TaggedGoodsController$d;-><init>(Lcom/vk/ui/photoviewer/TaggedGoodsController;Lcom/vk/dto/photo/Photo;)V
 
-    invoke-virtual {p2, v0}, Lc/a/m;->e(Lc/a/z/a;)Lc/a/m;
+    invoke-virtual {p2, v0}, Lio/reactivex/Observable;->e(Lio/reactivex/functions/Action;)Lio/reactivex/Observable;
 
     move-result-object p1
 
     .line 21
-    invoke-static {}, Lcom/vk/core/util/z0;->b()Lc/a/z/g;
+    invoke-static {}, Lcom/vk/core/util/RxUtil;->b()Lio/reactivex/functions/Consumer;
 
     move-result-object p2
 
     sget-object v0, Lcom/vk/ui/photoviewer/TaggedGoodsController$e;->a:Lcom/vk/ui/photoviewer/TaggedGoodsController$e;
 
-    invoke-virtual {p1, p2, v0}, Lc/a/m;->a(Lc/a/z/g;Lc/a/z/g;)Lio/reactivex/disposables/b;
+    invoke-virtual {p1, p2, v0}, Lio/reactivex/Observable;->a(Lio/reactivex/functions/Consumer;Lio/reactivex/functions/Consumer;)Lio/reactivex/disposables/Disposable;
 
     move-result-object p1
 
     const-string p2, "TagsDelete(tag.ownerId, \u2026 { it.showToastError() })"
 
-    invoke-static {p1, p2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, p2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 22
-    iget-object p2, p0, Lcom/vk/ui/photoviewer/TaggedGoodsController;->f:Lio/reactivex/disposables/a;
+    iget-object p2, p0, Lcom/vk/ui/photoviewer/TaggedGoodsController;->f:Lio/reactivex/disposables/CompositeDisposable;
 
-    invoke-static {p1, p2}, Lcom/vk/core/extensions/RxExtKt;->a(Lio/reactivex/disposables/b;Lio/reactivex/disposables/a;)Lio/reactivex/disposables/b;
+    invoke-static {p1, p2}, Lcom/vk/core/extensions/RxExtKt;->a(Lio/reactivex/disposables/Disposable;Lio/reactivex/disposables/CompositeDisposable;)Lio/reactivex/disposables/Disposable;
 
     return-void
 .end method
@@ -512,9 +512,9 @@
 
     .line 5
     :cond_0
-    sget-object p2, Lcom/vk/ui/photoviewer/g;->a:Lcom/vk/ui/photoviewer/g;
+    sget-object p2, Lcom/vk/ui/photoviewer/TaggedGoodsGetter;->a:Lcom/vk/ui/photoviewer/TaggedGoodsGetter;
 
-    invoke-virtual {p2, p1}, Lcom/vk/ui/photoviewer/g;->a(Lcom/vk/dto/photo/Photo;)Lc/a/m;
+    invoke-virtual {p2, p1}, Lcom/vk/ui/photoviewer/TaggedGoodsGetter;->a(Lcom/vk/dto/photo/Photo;)Lio/reactivex/Observable;
 
     move-result-object p2
 
@@ -523,7 +523,7 @@
 
     invoke-direct {v0, p0, p1}, Lcom/vk/ui/photoviewer/TaggedGoodsController$f;-><init>(Lcom/vk/ui/photoviewer/TaggedGoodsController;Lcom/vk/dto/photo/Photo;)V
 
-    invoke-virtual {p2, v0}, Lc/a/m;->e(Lc/a/z/g;)Lc/a/m;
+    invoke-virtual {p2, v0}, Lio/reactivex/Observable;->e(Lio/reactivex/functions/Consumer;)Lio/reactivex/Observable;
 
     move-result-object p2
 
@@ -532,7 +532,7 @@
 
     invoke-direct {v0, p0, p1}, Lcom/vk/ui/photoviewer/TaggedGoodsController$g;-><init>(Lcom/vk/ui/photoviewer/TaggedGoodsController;Lcom/vk/dto/photo/Photo;)V
 
-    invoke-virtual {p2, v0}, Lc/a/m;->e(Lc/a/z/a;)Lc/a/m;
+    invoke-virtual {p2, v0}, Lio/reactivex/Observable;->e(Lio/reactivex/functions/Action;)Lio/reactivex/Observable;
 
     move-result-object p2
 
@@ -541,18 +541,18 @@
 
     invoke-direct {v0, p0, p1}, Lcom/vk/ui/photoviewer/TaggedGoodsController$h;-><init>(Lcom/vk/ui/photoviewer/TaggedGoodsController;Lcom/vk/dto/photo/Photo;)V
 
-    invoke-virtual {p2, v0}, Lc/a/m;->f(Lc/a/z/g;)Lio/reactivex/disposables/b;
+    invoke-virtual {p2, v0}, Lio/reactivex/Observable;->f(Lio/reactivex/functions/Consumer;)Lio/reactivex/disposables/Disposable;
 
     move-result-object p1
 
     const-string p2, "TaggedGoodsGetter.tagged\u2026      }\n                }"
 
-    invoke-static {p1, p2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, p2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 9
-    iget-object p2, p0, Lcom/vk/ui/photoviewer/TaggedGoodsController;->f:Lio/reactivex/disposables/a;
+    iget-object p2, p0, Lcom/vk/ui/photoviewer/TaggedGoodsController;->f:Lio/reactivex/disposables/CompositeDisposable;
 
-    invoke-static {p1, p2}, Lcom/vk/core/extensions/RxExtKt;->a(Lio/reactivex/disposables/b;Lio/reactivex/disposables/a;)Lio/reactivex/disposables/b;
+    invoke-static {p1, p2}, Lcom/vk/core/extensions/RxExtKt;->a(Lio/reactivex/disposables/Disposable;Lio/reactivex/disposables/CompositeDisposable;)Lio/reactivex/disposables/Disposable;
 
     return-void
 .end method
@@ -577,11 +577,11 @@
     .locals 2
 
     .line 23
-    invoke-static {}, Lcom/vk/bridges/g;->a()Lcom/vk/bridges/f;
+    invoke-static {}, Lcom/vk/bridges/AuthBridge;->a()Lcom/vk/bridges/AuthBridge3;
 
     move-result-object v0
 
-    invoke-interface {v0}, Lcom/vk/bridges/f;->b()I
+    invoke-interface {v0}, Lcom/vk/bridges/AuthBridge3;->b()I
 
     move-result v0
 
@@ -654,11 +654,11 @@
     return-void
 .end method
 
-.method public static final synthetic d(Lcom/vk/ui/photoviewer/TaggedGoodsController;)Lkotlin/jvm/b/b;
+.method public static final synthetic d(Lcom/vk/ui/photoviewer/TaggedGoodsController;)Lkotlin/jvm/b/Functions2;
     .locals 0
 
     .line 1
-    iget-object p0, p0, Lcom/vk/ui/photoviewer/TaggedGoodsController;->j:Lkotlin/jvm/b/b;
+    iget-object p0, p0, Lcom/vk/ui/photoviewer/TaggedGoodsController;->j:Lkotlin/jvm/b/Functions2;
 
     return-object p0
 .end method
@@ -788,7 +788,7 @@
     const/4 v1, 0x0
 
     .line 22
-    invoke-static {p1, p2, v0, v1}, Lcom/vk/core/util/k1;->a(IZILjava/lang/Object;)V
+    invoke-static {p1, p2, v0, v1}, Lcom/vk/core/util/ToastUtils;->a(IZILjava/lang/Object;)V
 
     return-void
 
@@ -820,7 +820,7 @@
 
     move v6, p2
 
-    invoke-static/range {v2 .. v11}, Lcom/vk/market/picker/GoodsPickerHelper;->a(Lcom/vk/market/picker/GoodsPickerHelper;Landroid/content/Context;Lkotlin/jvm/b/b;Lkotlin/jvm/b/a;ZILkotlin/jvm/b/a;Lkotlin/jvm/b/a;ILjava/lang/Object;)Lcom/vk/core/dialogs/bottomsheet/e;
+    invoke-static/range {v2 .. v11}, Lcom/vk/market/picker/GoodsPickerHelper;->a(Lcom/vk/market/picker/GoodsPickerHelper;Landroid/content/Context;Lkotlin/jvm/b/Functions2;Lkotlin/jvm/b/Functions;ZILkotlin/jvm/b/Functions;Lkotlin/jvm/b/Functions;ILjava/lang/Object;)Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet;
 
     return-void
 .end method
@@ -902,9 +902,9 @@
     iput-object v0, p0, Lcom/vk/ui/photoviewer/TaggedGoodsController;->a:Lcom/vk/photoviewer/PhotoViewer;
 
     .line 3
-    iget-object v0, p0, Lcom/vk/ui/photoviewer/TaggedGoodsController;->f:Lio/reactivex/disposables/a;
+    iget-object v0, p0, Lcom/vk/ui/photoviewer/TaggedGoodsController;->f:Lio/reactivex/disposables/CompositeDisposable;
 
-    invoke-virtual {v0}, Lio/reactivex/disposables/a;->o()V
+    invoke-virtual {v0}, Lio/reactivex/disposables/CompositeDisposable;->o()V
 
     return-void
 .end method

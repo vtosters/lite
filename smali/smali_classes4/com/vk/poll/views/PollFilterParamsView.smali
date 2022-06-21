@@ -32,17 +32,17 @@
 
 .field private I:Landroid/widget/TextView;
 
-.field private final J:Lcom/vk/dto/polls/c;
+.field private final J:Lcom/vk/dto/polls/PollVotersCriteria1;
 
 
 # direct methods
-.method public constructor <init>(Lcom/vk/dto/polls/c;Lcom/vk/dto/polls/PollFilterParams;Landroid/app/Activity;)V
+.method public constructor <init>(Lcom/vk/dto/polls/PollVotersCriteria1;Lcom/vk/dto/polls/PollFilterParams;Landroid/app/Activity;)V
     .locals 0
 
     .line 1
     invoke-direct {p0, p2, p3}, Lcom/vk/search/view/BaseSearchParamsView;-><init>(Lcom/vk/dto/common/SearchParams;Landroid/app/Activity;)V
 
-    iput-object p1, p0, Lcom/vk/poll/views/PollFilterParamsView;->J:Lcom/vk/dto/polls/c;
+    iput-object p1, p0, Lcom/vk/poll/views/PollFilterParamsView;->J:Lcom/vk/dto/polls/PollVotersCriteria1;
 
     .line 2
     invoke-virtual {p0}, Lcom/vk/search/view/BaseSearchParamsView;->b()V
@@ -443,12 +443,12 @@
     move-result-object v0
 
     .line 2
-    iget-object v1, p0, Lcom/vk/poll/views/PollFilterParamsView;->J:Lcom/vk/dto/polls/c;
+    iget-object v1, p0, Lcom/vk/poll/views/PollFilterParamsView;->J:Lcom/vk/dto/polls/PollVotersCriteria1;
 
     if-eqz v1, :cond_3
 
     .line 3
-    invoke-virtual {v1}, Lcom/vk/dto/polls/c;->a()Ljava/util/List;
+    invoke-virtual {v1}, Lcom/vk/dto/polls/PollVotersCriteria1;->a()Ljava/util/List;
 
     move-result-object v1
 
@@ -469,9 +469,9 @@
 
     move-object v3, v2
 
-    check-cast v3, Lcom/vk/dto/polls/a;
+    check-cast v3, Lcom/vk/dto/polls/PollVotersCriteria;
 
-    invoke-virtual {v3}, Lcom/vk/dto/polls/a;->b()I
+    invoke-virtual {v3}, Lcom/vk/dto/polls/PollVotersCriteria;->b()I
 
     move-result v3
 
@@ -503,12 +503,12 @@
     const/4 v2, 0x0
 
     :goto_1
-    check-cast v2, Lcom/vk/dto/polls/a;
+    check-cast v2, Lcom/vk/dto/polls/PollVotersCriteria;
 
     if-eqz v2, :cond_3
 
     .line 4
-    invoke-virtual {v2}, Lcom/vk/dto/polls/a;->a()Ljava/util/ArrayList;
+    invoke-virtual {v2}, Lcom/vk/dto/polls/PollVotersCriteria;->a()Ljava/util/ArrayList;
 
     move-result-object v1
 
@@ -532,7 +532,7 @@
     .end annotation
 
     .line 1
-    iget-object v0, p0, Lcom/vk/poll/views/PollFilterParamsView;->J:Lcom/vk/dto/polls/c;
+    iget-object v0, p0, Lcom/vk/poll/views/PollFilterParamsView;->J:Lcom/vk/dto/polls/PollVotersCriteria1;
 
     if-eqz v0, :cond_0
 
@@ -546,14 +546,14 @@
 
     invoke-direct {v2, p0}, Lcom/vk/poll/views/PollFilterParamsView$getCountries$$inlined$let$lambda$1;-><init>(Lcom/vk/poll/views/PollFilterParamsView;)V
 
-    invoke-interface {v2}, Lkotlin/jvm/b/a;->invoke()Ljava/lang/Object;
+    invoke-interface {v2}, Lkotlin/jvm/b/Functions;->invoke()Ljava/lang/Object;
 
     move-result-object v2
 
     invoke-interface {v1, v2}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
     .line 4
-    invoke-virtual {v0}, Lcom/vk/dto/polls/c;->a()Ljava/util/List;
+    invoke-virtual {v0}, Lcom/vk/dto/polls/PollVotersCriteria1;->a()Ljava/util/List;
 
     move-result-object v0
 
@@ -573,7 +573,7 @@
 
     move-result-object v2
 
-    check-cast v2, Lcom/vk/dto/polls/a;
+    check-cast v2, Lcom/vk/dto/polls/PollVotersCriteria;
 
     .line 6
     new-instance v3, Lcom/vk/dto/common/Country;
@@ -581,14 +581,14 @@
     invoke-direct {v3}, Lcom/vk/dto/common/Country;-><init>()V
 
     .line 7
-    invoke-virtual {v2}, Lcom/vk/dto/polls/a;->b()I
+    invoke-virtual {v2}, Lcom/vk/dto/polls/PollVotersCriteria;->b()I
 
     move-result v4
 
     iput v4, v3, Lcom/vk/dto/common/Country;->a:I
 
     .line 8
-    invoke-virtual {v2}, Lcom/vk/dto/polls/a;->c()Ljava/lang/String;
+    invoke-virtual {v2}, Lcom/vk/dto/polls/PollVotersCriteria;->c()Ljava/lang/String;
 
     move-result-object v2
 
@@ -616,14 +616,14 @@
     invoke-super {p0, p1}, Lcom/vk/search/view/BaseSearchParamsView;->setSelectedCountry(Lcom/vk/dto/common/Country;)V
 
     .line 2
-    iget-object v0, p0, Lcom/vk/poll/views/PollFilterParamsView;->J:Lcom/vk/dto/polls/c;
+    iget-object v0, p0, Lcom/vk/poll/views/PollFilterParamsView;->J:Lcom/vk/dto/polls/PollVotersCriteria1;
 
     if-eqz v0, :cond_3
 
     if-eqz p1, :cond_3
 
     .line 3
-    invoke-virtual {v0}, Lcom/vk/dto/polls/c;->a()Ljava/util/List;
+    invoke-virtual {v0}, Lcom/vk/dto/polls/PollVotersCriteria1;->a()Ljava/util/List;
 
     move-result-object v0
 
@@ -646,9 +646,9 @@
 
     move-object v3, v1
 
-    check-cast v3, Lcom/vk/dto/polls/a;
+    check-cast v3, Lcom/vk/dto/polls/PollVotersCriteria;
 
-    invoke-virtual {v3}, Lcom/vk/dto/polls/a;->b()I
+    invoke-virtual {v3}, Lcom/vk/dto/polls/PollVotersCriteria;->b()I
 
     move-result v3
 
@@ -672,12 +672,12 @@
     const/4 v1, 0x0
 
     :goto_1
-    check-cast v1, Lcom/vk/dto/polls/a;
+    check-cast v1, Lcom/vk/dto/polls/PollVotersCriteria;
 
     if-eqz v1, :cond_3
 
     .line 4
-    invoke-virtual {v1}, Lcom/vk/dto/polls/a;->a()Ljava/util/ArrayList;
+    invoke-virtual {v1}, Lcom/vk/dto/polls/PollVotersCriteria;->a()Ljava/util/ArrayList;
 
     move-result-object p1
 

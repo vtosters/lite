@@ -3,12 +3,12 @@
 .source "CommentThreadPresenter.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/b;
+.implements Lkotlin/jvm/b/Functions2;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/wall/thread/CommentThreadPresenter$onPreviousDataLoaded$1;->a(Lcom/vtosters/lite/api/wall/a;)V
+    value = Lcom/vk/wall/thread/CommentThreadPresenter$onPreviousDataLoaded$1;->a(Lcom/vtosters/lite/api/wall/GetCommentsResult;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -19,8 +19,8 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/b<",
-        "Lcom/vk/wall/b;",
+        "Lkotlin/jvm/b/Functions2<",
+        "Lcom/vk/wall/CommentDisplayItem;",
         "Ljava/lang/Boolean;",
         ">;"
     }
@@ -56,17 +56,17 @@
 
 
 # virtual methods
-.method public final a(Lcom/vk/wall/b;)Z
+.method public final a(Lcom/vk/wall/CommentDisplayItem;)Z
     .locals 1
 
     .line 1
-    invoke-virtual {p1}, Lcom/vk/wall/b;->d()I
+    invoke-virtual {p1}, Lcom/vk/wall/CommentDisplayItem;->d()I
 
     move-result p1
 
-    sget-object v0, Lcom/vtosters/lite/o0/a;->H:Lcom/vtosters/lite/o0/a$a;
+    sget-object v0, Lcom/vtosters/lite/o0/CommentsAdapter;->H:Lcom/vtosters/lite/o0/CommentsAdapter$a;
 
-    invoke-virtual {v0}, Lcom/vtosters/lite/o0/a$a;->g()I
+    invoke-virtual {v0}, Lcom/vtosters/lite/o0/CommentsAdapter$a;->g()I
 
     move-result v0
 
@@ -87,9 +87,9 @@
     .locals 0
 
     .line 1
-    check-cast p1, Lcom/vk/wall/b;
+    check-cast p1, Lcom/vk/wall/CommentDisplayItem;
 
-    invoke-virtual {p0, p1}, Lcom/vk/wall/thread/CommentThreadPresenter$onPreviousDataLoaded$1$showMorePosition$1;->a(Lcom/vk/wall/b;)Z
+    invoke-virtual {p0, p1}, Lcom/vk/wall/thread/CommentThreadPresenter$onPreviousDataLoaded$1$showMorePosition$1;->a(Lcom/vk/wall/CommentDisplayItem;)Z
 
     move-result p1
 

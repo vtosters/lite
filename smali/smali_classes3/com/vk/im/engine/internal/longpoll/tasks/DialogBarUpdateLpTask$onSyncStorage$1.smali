@@ -3,12 +3,12 @@
 .source "DialogBarUpdateLpTask.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/b;
+.implements Lkotlin/jvm/b/Functions2;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/im/engine/internal/longpoll/tasks/DialogBarUpdateLpTask;->b(Lcom/vk/im/engine/internal/longpoll/d;)V
+    value = Lcom/vk/im/engine/internal/longpoll/tasks/DialogBarUpdateLpTask;->b(Lcom/vk/im/engine/internal/longpoll/LongPollEntityInfo;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -19,29 +19,29 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/b<",
+        "Lkotlin/jvm/b/Functions2<",
         "Lcom/vk/im/engine/internal/storage/StorageManager;",
         "Ljava/util/List<",
         "+",
-        "Lcom/vk/im/engine/internal/storage/models/a;",
+        "Lcom/vk/im/engine/internal/storage/models/DialogStorageModel;",
         ">;>;"
     }
 .end annotation
 
 
 # instance fields
-.field final synthetic $dialog:Lcom/vk/im/engine/models/dialogs/c;
+.field final synthetic $dialog:Lcom/vk/im/engine/models/dialogs/DialogApiModel;
 
 .field final synthetic this$0:Lcom/vk/im/engine/internal/longpoll/tasks/DialogBarUpdateLpTask;
 
 
 # direct methods
-.method constructor <init>(Lcom/vk/im/engine/internal/longpoll/tasks/DialogBarUpdateLpTask;Lcom/vk/im/engine/models/dialogs/c;)V
+.method constructor <init>(Lcom/vk/im/engine/internal/longpoll/tasks/DialogBarUpdateLpTask;Lcom/vk/im/engine/models/dialogs/DialogApiModel;)V
     .locals 0
 
     iput-object p1, p0, Lcom/vk/im/engine/internal/longpoll/tasks/DialogBarUpdateLpTask$onSyncStorage$1;->this$0:Lcom/vk/im/engine/internal/longpoll/tasks/DialogBarUpdateLpTask;
 
-    iput-object p2, p0, Lcom/vk/im/engine/internal/longpoll/tasks/DialogBarUpdateLpTask$onSyncStorage$1;->$dialog:Lcom/vk/im/engine/models/dialogs/c;
+    iput-object p2, p0, Lcom/vk/im/engine/internal/longpoll/tasks/DialogBarUpdateLpTask$onSyncStorage$1;->$dialog:Lcom/vk/im/engine/models/dialogs/DialogApiModel;
 
     const/4 p1, 0x1
 
@@ -60,7 +60,7 @@
             "Lcom/vk/im/engine/internal/storage/StorageManager;",
             ")",
             "Ljava/util/List<",
-            "Lcom/vk/im/engine/internal/storage/models/a;",
+            "Lcom/vk/im/engine/internal/storage/models/DialogStorageModel;",
             ">;"
         }
     .end annotation
@@ -68,17 +68,17 @@
     .line 1
     new-instance p1, Lcom/vk/im/engine/internal/merge/dialogs/DialogInfoMergeTask;
 
-    iget-object v0, p0, Lcom/vk/im/engine/internal/longpoll/tasks/DialogBarUpdateLpTask$onSyncStorage$1;->$dialog:Lcom/vk/im/engine/models/dialogs/c;
+    iget-object v0, p0, Lcom/vk/im/engine/internal/longpoll/tasks/DialogBarUpdateLpTask$onSyncStorage$1;->$dialog:Lcom/vk/im/engine/models/dialogs/DialogApiModel;
 
-    invoke-direct {p1, v0}, Lcom/vk/im/engine/internal/merge/dialogs/DialogInfoMergeTask;-><init>(Lcom/vk/im/engine/models/dialogs/c;)V
+    invoke-direct {p1, v0}, Lcom/vk/im/engine/internal/merge/dialogs/DialogInfoMergeTask;-><init>(Lcom/vk/im/engine/models/dialogs/DialogApiModel;)V
 
     iget-object v0, p0, Lcom/vk/im/engine/internal/longpoll/tasks/DialogBarUpdateLpTask$onSyncStorage$1;->this$0:Lcom/vk/im/engine/internal/longpoll/tasks/DialogBarUpdateLpTask;
 
-    invoke-static {v0}, Lcom/vk/im/engine/internal/longpoll/tasks/DialogBarUpdateLpTask;->a(Lcom/vk/im/engine/internal/longpoll/tasks/DialogBarUpdateLpTask;)Lcom/vk/im/engine/d;
+    invoke-static {v0}, Lcom/vk/im/engine/internal/longpoll/tasks/DialogBarUpdateLpTask;->a(Lcom/vk/im/engine/internal/longpoll/tasks/DialogBarUpdateLpTask;)Lcom/vk/im/engine/ImEnvironment;
 
     move-result-object v0
 
-    invoke-virtual {p1, v0}, Lcom/vk/im/engine/internal/k/a;->a(Lcom/vk/im/engine/d;)Ljava/lang/Object;
+    invoke-virtual {p1, v0}, Lcom/vk/im/engine/internal/k/MergeTask;->a(Lcom/vk/im/engine/ImEnvironment;)Ljava/lang/Object;
 
     move-result-object p1
 

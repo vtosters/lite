@@ -101,19 +101,19 @@
     .line 3
     iget-object p1, p0, Lcom/vk/profile/ui/community/adresses/CommunityAddressesFragment$a;->b:Lcom/vk/profile/ui/community/adresses/CommunityAddressesFragment;
 
-    invoke-static {p1}, Lcom/vk/profile/ui/community/adresses/CommunityAddressesFragment;->t(Lcom/vk/profile/ui/community/adresses/CommunityAddressesFragment;)Lb/d/b/a/f/a;
+    invoke-static {p1}, Lcom/vk/profile/ui/community/adresses/CommunityAddressesFragment;->t(Lcom/vk/profile/ui/community/adresses/CommunityAddressesFragment;)Lb/d/b/a/f/Cluster;
 
     move-result-object p1
 
     if-eqz p1, :cond_0
 
-    invoke-interface {p1}, Lb/d/b/a/f/a;->getPosition()Lcom/google/android/gms/maps/model/LatLng;
+    invoke-interface {p1}, Lb/d/b/a/f/Cluster;->getPosition()Lcom/google/android/gms/maps/model/LatLng;
 
     move-result-object p1
 
     if-eqz p1, :cond_0
 
-    invoke-static {p1, p2}, Lcom/vk/profile/ui/community/adresses/d;->a(Lcom/google/android/gms/maps/model/LatLng;Lcom/vk/dto/profile/PlainAddress;)Z
+    invoke-static {p1, p2}, Lcom/vk/profile/ui/community/adresses/CommunityAddressesFragment1;->a(Lcom/google/android/gms/maps/model/LatLng;Lcom/vk/dto/profile/PlainAddress;)Z
 
     move-result p1
 
@@ -123,7 +123,7 @@
 
     const/4 v0, 0x0
 
-    invoke-static {p1, v0}, Lcom/vk/profile/ui/community/adresses/CommunityAddressesFragment;->a(Lcom/vk/profile/ui/community/adresses/CommunityAddressesFragment;Lb/d/b/a/f/a;)V
+    invoke-static {p1, v0}, Lcom/vk/profile/ui/community/adresses/CommunityAddressesFragment;->a(Lcom/vk/profile/ui/community/adresses/CommunityAddressesFragment;Lb/d/b/a/f/Cluster;)V
 
     .line 4
     :cond_0

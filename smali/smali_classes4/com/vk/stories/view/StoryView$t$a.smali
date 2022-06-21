@@ -3,7 +3,7 @@
 .source "StoryView.java"
 
 # interfaces
-.implements Lcom/vk/api/base/a;
+.implements Lcom/vk/api/base/ApiCallback;
 
 
 # annotations
@@ -19,7 +19,7 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Ljava/lang/Object;",
-        "Lcom/vk/api/base/a<",
+        "Lcom/vk/api/base/ApiCallback<",
         "Lcom/vk/dto/stories/model/GetStoriesResponse;",
         ">;"
     }
@@ -54,7 +54,7 @@
     .line 4
     iget-object p1, p0, Lcom/vk/stories/view/StoryView$t$a;->a:Landroid/app/Dialog;
 
-    invoke-static {p1}, Lcom/vk/attachpicker/widget/j;->a(Landroid/app/Dialog;)V
+    invoke-static {p1}, Lcom/vk/attachpicker/widget/LoadingDialog;->a(Landroid/app/Dialog;)V
 
     return-void
 .end method
@@ -81,12 +81,12 @@
     const p1, 0x7f120eb8
 
     :goto_0
-    invoke-static {p1}, Lcom/vk/core/util/k1;->a(I)V
+    invoke-static {p1}, Lcom/vk/core/util/ToastUtils;->a(I)V
 
     .line 3
     iget-object p1, p0, Lcom/vk/stories/view/StoryView$t$a;->a:Landroid/app/Dialog;
 
-    invoke-static {p1}, Lcom/vk/attachpicker/widget/j;->a(Landroid/app/Dialog;)V
+    invoke-static {p1}, Lcom/vk/attachpicker/widget/LoadingDialog;->a(Landroid/app/Dialog;)V
 
     return-void
 .end method

@@ -3,12 +3,12 @@
 .source "UserHeaderItemsFactory.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/b;
+.implements Lkotlin/jvm/b/Functions2;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/profile/adapter/factory/info_items/UserHeaderItemsFactory;-><init>(Landroid/content/Context;Lcom/vk/profile/presenter/UserPresenter;Lcom/vk/newsfeed/k0/b/b/i;Ljava/util/ArrayList;Landroid/view/View$OnClickListener;Lkotlin/jvm/b/b;)V
+    value = Lcom/vk/profile/adapter/factory/info_items/UserHeaderItemsFactory;-><init>(Landroid/content/Context;Lcom/vk/profile/presenter/UserPresenter;Lcom/vk/newsfeed/k0/b/b/PostingItemPresenter;Ljava/util/ArrayList;Landroid/view/View$OnClickListener;Lkotlin/jvm/b/Functions2;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -19,9 +19,9 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/b<",
+        "Lkotlin/jvm/b/Functions2<",
         "Lcom/vtosters/lite/api/ExtendedUserProfile;",
-        "Lcom/vk/profile/adapter/items/y;",
+        "Lcom/vk/profile/adapter/items/UserHeaderItem;",
         ">;"
     }
 .end annotation
@@ -50,11 +50,11 @@
 
 
 # virtual methods
-.method public final a(Lcom/vtosters/lite/api/ExtendedUserProfile;)Lcom/vk/profile/adapter/items/y;
+.method public final a(Lcom/vtosters/lite/api/ExtendedUserProfile;)Lcom/vk/profile/adapter/items/UserHeaderItem;
     .locals 3
 
     .line 1
-    new-instance v0, Lcom/vk/profile/adapter/items/y;
+    new-instance v0, Lcom/vk/profile/adapter/items/UserHeaderItem;
 
     iget-object v1, p0, Lcom/vk/profile/adapter/factory/info_items/UserHeaderItemsFactory$header$1;->$presenter:Lcom/vk/profile/presenter/UserPresenter;
 
@@ -64,16 +64,16 @@
 
     move-result-object v2
 
-    invoke-direct {v0, p1, v1, v2}, Lcom/vk/profile/adapter/items/y;-><init>(Lcom/vtosters/lite/api/ExtendedUserProfile;Lcom/vk/profile/presenter/UserPresenter;Landroid/view/View$OnClickListener;)V
+    invoke-direct {v0, p1, v1, v2}, Lcom/vk/profile/adapter/items/UserHeaderItem;-><init>(Lcom/vtosters/lite/api/ExtendedUserProfile;Lcom/vk/profile/presenter/UserPresenter;Landroid/view/View$OnClickListener;)V
 
     .line 2
     iget-object p1, p0, Lcom/vk/profile/adapter/factory/info_items/UserHeaderItemsFactory$header$1;->this$0:Lcom/vk/profile/adapter/factory/info_items/UserHeaderItemsFactory;
 
-    invoke-static {p1}, Lcom/vk/profile/adapter/factory/info_items/UserHeaderItemsFactory;->h(Lcom/vk/profile/adapter/factory/info_items/UserHeaderItemsFactory;)Lkotlin/jvm/b/b;
+    invoke-static {p1}, Lcom/vk/profile/adapter/factory/info_items/UserHeaderItemsFactory;->h(Lcom/vk/profile/adapter/factory/info_items/UserHeaderItemsFactory;)Lkotlin/jvm/b/Functions2;
 
     move-result-object p1
 
-    invoke-virtual {v0, p1}, Lcom/vk/profile/adapter/items/y;->a(Lkotlin/jvm/b/b;)V
+    invoke-virtual {v0, p1}, Lcom/vk/profile/adapter/items/UserHeaderItem;->a(Lkotlin/jvm/b/Functions2;)V
 
     return-object v0
 .end method
@@ -84,7 +84,7 @@
     .line 1
     check-cast p1, Lcom/vtosters/lite/api/ExtendedUserProfile;
 
-    invoke-virtual {p0, p1}, Lcom/vk/profile/adapter/factory/info_items/UserHeaderItemsFactory$header$1;->a(Lcom/vtosters/lite/api/ExtendedUserProfile;)Lcom/vk/profile/adapter/items/y;
+    invoke-virtual {p0, p1}, Lcom/vk/profile/adapter/factory/info_items/UserHeaderItemsFactory$header$1;->a(Lcom/vtosters/lite/api/ExtendedUserProfile;)Lcom/vk/profile/adapter/items/UserHeaderItem;
 
     move-result-object p1
 

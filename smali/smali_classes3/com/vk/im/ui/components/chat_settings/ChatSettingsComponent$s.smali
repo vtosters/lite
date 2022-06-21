@@ -3,7 +3,7 @@
 .source "ChatSettingsComponent.kt"
 
 # interfaces
-.implements Lc/a/z/g;
+.implements Lio/reactivex/functions/Consumer;
 
 
 # annotations
@@ -22,8 +22,8 @@
         "Ljava/lang/Object;",
         ">",
         "Ljava/lang/Object;",
-        "Lc/a/z/g<",
-        "Lcom/vk/im/engine/models/dialogs/a;",
+        "Lio/reactivex/functions/Consumer<",
+        "Lcom/vk/im/engine/models/dialogs/ChatInviteResult;",
         ">;"
     }
 .end annotation
@@ -46,7 +46,7 @@
 
 
 # virtual methods
-.method public final a(Lcom/vk/im/engine/models/dialogs/a;)V
+.method public final a(Lcom/vk/im/engine/models/dialogs/ChatInviteResult;)V
     .locals 1
 
     .line 1
@@ -55,7 +55,7 @@
     invoke-virtual {v0}, Lcom/vk/im/ui/components/chat_settings/ChatSettingsComponent;->Y()V
 
     .line 2
-    invoke-virtual {p1}, Lcom/vk/im/engine/models/dialogs/a;->a()Lcom/vk/im/engine/exceptions/ChatInvitationException;
+    invoke-virtual {p1}, Lcom/vk/im/engine/models/dialogs/ChatInviteResult;->a()Lcom/vk/im/engine/exceptions/ChatInvitationException;
 
     move-result-object p1
 
@@ -79,9 +79,9 @@
     .locals 0
 
     .line 1
-    check-cast p1, Lcom/vk/im/engine/models/dialogs/a;
+    check-cast p1, Lcom/vk/im/engine/models/dialogs/ChatInviteResult;
 
-    invoke-virtual {p0, p1}, Lcom/vk/im/ui/components/chat_settings/ChatSettingsComponent$s;->a(Lcom/vk/im/engine/models/dialogs/a;)V
+    invoke-virtual {p0, p1}, Lcom/vk/im/ui/components/chat_settings/ChatSettingsComponent$s;->a(Lcom/vk/im/engine/models/dialogs/ChatInviteResult;)V
 
     return-void
 .end method

@@ -85,7 +85,7 @@
     const-string v2, "image"
 
     .line 4
-    invoke-static {p1, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {p1, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v2
 
@@ -93,7 +93,7 @@
 
     const-string v2, "video"
 
-    invoke-static {p1, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {p1, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v2
 
@@ -253,7 +253,7 @@
 
     const-string v8, "gif"
 
-    invoke-static {v5, v8}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v5, v8}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v5
 
@@ -345,7 +345,7 @@
     move-result v0
 
     .line 21
-    invoke-static {v1}, Lcom/vk/stories/clickable/e;->b(Lcom/vk/dto/stories/model/StickerType;)Z
+    invoke-static {v1}, Lcom/vk/stories/clickable/StoryClickableController;->b(Lcom/vk/dto/stories/model/StickerType;)Z
 
     move-result v2
 
@@ -374,7 +374,7 @@
 
     .line 23
     :cond_7
-    invoke-static {v1}, Lcom/vk/stories/clickable/e;->a(Lcom/vk/dto/stories/model/StickerType;)I
+    invoke-static {v1}, Lcom/vk/stories/clickable/StoryClickableController;->a(Lcom/vk/dto/stories/model/StickerType;)I
 
     move-result v2
 

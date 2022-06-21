@@ -88,7 +88,7 @@
 
     move-result-object v1
 
-    invoke-static {v1, v0}, Lcom/vk/core/extensions/a0;->c(Landroid/widget/TextView;I)V
+    invoke-static {v1, v0}, Lcom/vk/core/extensions/TextViewExt;->c(Landroid/widget/TextView;I)V
 
     .line 13
     invoke-virtual {p0}, Lcom/vk/profile/ui/header/BaseHeaderView;->getLabel()Landroid/widget/TextView;
@@ -99,7 +99,7 @@
 
     if-eqz v1, :cond_0
 
-    invoke-static {v1, v2}, Lcom/vk/core/extensions/a0;->c(Landroid/widget/TextView;I)V
+    invoke-static {v1, v2}, Lcom/vk/core/extensions/TextViewExt;->c(Landroid/widget/TextView;I)V
 
     .line 14
     :cond_0
@@ -109,7 +109,7 @@
 
     if-eqz v1, :cond_1
 
-    invoke-static {v1, v2}, Lcom/vk/core/extensions/a0;->c(Landroid/widget/TextView;I)V
+    invoke-static {v1, v2}, Lcom/vk/core/extensions/TextViewExt;->c(Landroid/widget/TextView;I)V
 
     .line 15
     :cond_1

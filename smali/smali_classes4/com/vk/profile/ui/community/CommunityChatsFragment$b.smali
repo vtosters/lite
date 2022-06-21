@@ -3,7 +3,7 @@
 .source "CommunityChatsFragment.kt"
 
 # interfaces
-.implements Lc/a/z/g;
+.implements Lio/reactivex/functions/Consumer;
 
 
 # annotations
@@ -19,8 +19,8 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Ljava/lang/Object;",
-        "Lc/a/z/g<",
-        "Lcom/vk/im/engine/events/a;",
+        "Lio/reactivex/functions/Consumer<",
+        "Lcom/vk/im/engine/events/Event;",
         ">;"
     }
 .end annotation
@@ -49,11 +49,11 @@
 
 
 # virtual methods
-.method public a(Lcom/vk/im/engine/events/a;)V
+.method public a(Lcom/vk/im/engine/events/Event;)V
     .locals 1
 
     .line 1
-    instance-of v0, p1, Lcom/vk/im/engine/events/z;
+    instance-of v0, p1, Lcom/vk/im/engine/events/OnMsgAddEvent;
 
     if-eqz v0, :cond_0
 
@@ -65,9 +65,9 @@
 
     if-eqz v0, :cond_1
 
-    check-cast p1, Lcom/vk/im/engine/events/z;
+    check-cast p1, Lcom/vk/im/engine/events/OnMsgAddEvent;
 
-    iget p1, p1, Lcom/vk/im/engine/events/z;->c:I
+    iget p1, p1, Lcom/vk/im/engine/events/OnMsgAddEvent;->c:I
 
     invoke-virtual {v0, p1}, Lcom/vk/profile/adapter/CommunityChatsAdapter;->H(I)V
 
@@ -75,7 +75,7 @@
 
     .line 2
     :cond_0
-    instance-of v0, p1, Lcom/vk/im/engine/events/g0;
+    instance-of v0, p1, Lcom/vk/im/engine/events/OnMsgSendEvent;
 
     if-eqz v0, :cond_1
 
@@ -87,9 +87,9 @@
 
     if-eqz v0, :cond_1
 
-    check-cast p1, Lcom/vk/im/engine/events/g0;
+    check-cast p1, Lcom/vk/im/engine/events/OnMsgSendEvent;
 
-    invoke-virtual {p1}, Lcom/vk/im/engine/events/g0;->c()I
+    invoke-virtual {p1}, Lcom/vk/im/engine/events/OnMsgSendEvent;->c()I
 
     move-result p1
 
@@ -104,9 +104,9 @@
     .locals 0
 
     .line 1
-    check-cast p1, Lcom/vk/im/engine/events/a;
+    check-cast p1, Lcom/vk/im/engine/events/Event;
 
-    invoke-virtual {p0, p1}, Lcom/vk/profile/ui/community/CommunityChatsFragment$b;->a(Lcom/vk/im/engine/events/a;)V
+    invoke-virtual {p0, p1}, Lcom/vk/profile/ui/community/CommunityChatsFragment$b;->a(Lcom/vk/im/engine/events/Event;)V
 
     return-void
 .end method

@@ -24,7 +24,7 @@
     return-void
 .end method
 
-.method public synthetic constructor <init>(Lkotlin/jvm/internal/i;)V
+.method public synthetic constructor <init>(Lkotlin/jvm/internal/DefaultConstructorMarker;)V
     .locals 0
 
     .line 2
@@ -35,15 +35,15 @@
 
 
 # virtual methods
-.method public final a(Landroid/view/View;Lkotlin/jvm/b/b;)Lcom/vk/market/picker/GoodsTabController;
+.method public final a(Landroid/view/View;Lkotlin/jvm/b/Functions2;)Lcom/vk/market/picker/GoodsTabController;
     .locals 6
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
             "Landroid/view/View;",
-            "Lkotlin/jvm/b/b<",
+            "Lkotlin/jvm/b/Functions2<",
             "Ljava/lang/Object;",
-            "Lkotlin/m;",
+            "Lkotlin/Unit;",
             ">;)",
             "Lcom/vk/market/picker/GoodsTabController;"
         }
@@ -52,7 +52,7 @@
     .line 1
     new-instance v1, Lcom/vk/market/picker/GoodsTabController$Companion$instance$wrappedListener$1;
 
-    invoke-direct {v1, p2}, Lcom/vk/market/picker/GoodsTabController$Companion$instance$wrappedListener$1;-><init>(Lkotlin/jvm/b/b;)V
+    invoke-direct {v1, p2}, Lcom/vk/market/picker/GoodsTabController$Companion$instance$wrappedListener$1;-><init>(Lkotlin/jvm/b/Functions2;)V
 
     .line 2
     new-instance p2, Lcom/vk/market/picker/FaveGoodsPickerAdapter;
@@ -67,23 +67,23 @@
 
     move-object v0, p2
 
-    invoke-direct/range {v0 .. v5}, Lcom/vk/market/picker/FaveGoodsPickerAdapter;-><init>(Lkotlin/jvm/b/b;Lkotlin/jvm/b/a;ZILkotlin/jvm/internal/i;)V
+    invoke-direct/range {v0 .. v5}, Lcom/vk/market/picker/FaveGoodsPickerAdapter;-><init>(Lkotlin/jvm/b/Functions2;Lkotlin/jvm/b/Functions;ZILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     .line 3
-    sget-object v0, Lcom/vk/market/picker/f;->a:Lcom/vk/market/picker/f;
+    sget-object v0, Lcom/vk/market/picker/GoodsDataProviders1;->a:Lcom/vk/market/picker/GoodsDataProviders1;
 
-    new-instance v1, Lcom/vk/market/common/a;
+    new-instance v1, Lcom/vk/market/common/AdapterDataConsumer;
 
-    invoke-direct {v1, p2}, Lcom/vk/market/common/a;-><init>(Lcom/vk/market/common/g;)V
+    invoke-direct {v1, p2}, Lcom/vk/market/common/AdapterDataConsumer;-><init>(Lcom/vk/market/common/GoodsAdapter1;)V
 
-    invoke-virtual {v0, v1}, Lcom/vk/market/picker/f;->a(Lcom/vk/market/common/d;)Lcom/vk/market/common/e;
+    invoke-virtual {v0, v1}, Lcom/vk/market/picker/GoodsDataProviders1;->a(Lcom/vk/market/common/GoodsDataProviders1;)Lcom/vk/market/common/GoodsDataProviders;
 
     move-result-object v0
 
     .line 4
     new-instance v1, Lcom/vk/market/picker/GoodsTabController;
 
-    invoke-direct {v1, p1, p2, v0}, Lcom/vk/market/picker/GoodsTabController;-><init>(Landroid/view/View;Lcom/vk/market/picker/FaveGoodsPickerAdapter;Lcom/vk/market/common/e;)V
+    invoke-direct {v1, p1, p2, v0}, Lcom/vk/market/picker/GoodsTabController;-><init>(Landroid/view/View;Lcom/vk/market/picker/FaveGoodsPickerAdapter;Lcom/vk/market/common/GoodsDataProviders;)V
 
     return-object v1
 .end method

@@ -3,12 +3,12 @@
 .source "DeliveryInfo.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/c;
+.implements Lkotlin/jvm/b/Functions1;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/market/orders/checkout/DeliveryInfo;->a(Ljava/lang/String;Lkotlin/jvm/b/b;)V
+    value = Lcom/vk/market/orders/checkout/DeliveryInfo;->a(Ljava/lang/String;Lkotlin/jvm/b/Functions2;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -19,33 +19,33 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/c<",
+        "Lkotlin/jvm/b/Functions1<",
         "Ljava/lang/String;",
         "Ljava/util/List<",
         "+",
-        "Lcom/vk/market/orders/checkout/l;",
+        "Lcom/vk/market/orders/checkout/DeliveryInfo8;",
         ">;",
         "Ljava/util/List<",
         "+",
-        "Lcom/vk/market/orders/checkout/l;",
+        "Lcom/vk/market/orders/checkout/DeliveryInfo8;",
         ">;>;"
     }
 .end annotation
 
 
 # instance fields
-.field final synthetic $idMatches:Lkotlin/jvm/b/b;
+.field final synthetic $idMatches:Lkotlin/jvm/b/Functions2;
 
-.field final synthetic $mutator:Lkotlin/jvm/b/b;
+.field final synthetic $mutator:Lkotlin/jvm/b/Functions2;
 
 
 # direct methods
-.method constructor <init>(Lkotlin/jvm/b/b;Lkotlin/jvm/b/b;)V
+.method constructor <init>(Lkotlin/jvm/b/Functions2;Lkotlin/jvm/b/Functions2;)V
     .locals 0
 
-    iput-object p1, p0, Lcom/vk/market/orders/checkout/DeliveryInfo$updateField$1;->$idMatches:Lkotlin/jvm/b/b;
+    iput-object p1, p0, Lcom/vk/market/orders/checkout/DeliveryInfo$updateField$1;->$idMatches:Lkotlin/jvm/b/Functions2;
 
-    iput-object p2, p0, Lcom/vk/market/orders/checkout/DeliveryInfo$updateField$1;->$mutator:Lkotlin/jvm/b/b;
+    iput-object p2, p0, Lcom/vk/market/orders/checkout/DeliveryInfo$updateField$1;->$mutator:Lkotlin/jvm/b/Functions2;
 
     const/4 p1, 0x2
 
@@ -78,18 +78,18 @@
             "(",
             "Ljava/lang/String;",
             "Ljava/util/List<",
-            "Lcom/vk/market/orders/checkout/l;",
+            "Lcom/vk/market/orders/checkout/DeliveryInfo8;",
             ">;)",
             "Ljava/util/List<",
-            "Lcom/vk/market/orders/checkout/l;",
+            "Lcom/vk/market/orders/checkout/DeliveryInfo8;",
             ">;"
         }
     .end annotation
 
     .line 2
-    iget-object p1, p0, Lcom/vk/market/orders/checkout/DeliveryInfo$updateField$1;->$idMatches:Lkotlin/jvm/b/b;
+    iget-object p1, p0, Lcom/vk/market/orders/checkout/DeliveryInfo$updateField$1;->$idMatches:Lkotlin/jvm/b/Functions2;
 
-    iget-object v0, p0, Lcom/vk/market/orders/checkout/DeliveryInfo$updateField$1;->$mutator:Lkotlin/jvm/b/b;
+    iget-object v0, p0, Lcom/vk/market/orders/checkout/DeliveryInfo$updateField$1;->$mutator:Lkotlin/jvm/b/Functions2;
 
     .line 3
     new-instance v1, Ljava/util/ArrayList;
@@ -119,7 +119,7 @@
     move-result-object v2
 
     .line 5
-    invoke-interface {p1, v2}, Lkotlin/jvm/b/b;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {p1, v2}, Lkotlin/jvm/b/Functions2;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v3
 
@@ -132,7 +132,7 @@
     if-eqz v3, :cond_0
 
     .line 6
-    invoke-interface {v0, v2}, Lkotlin/jvm/b/b;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v0, v2}, Lkotlin/jvm/b/Functions2;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v2
 

@@ -25,7 +25,7 @@
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, v1}, Lcom/vk/pushes/receivers/NotificationActionsReceiver$a;-><init>(Lkotlin/jvm/internal/i;)V
+    invoke-direct {v0, v1}, Lcom/vk/pushes/receivers/NotificationActionsReceiver$a;-><init>(Lkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     sput-object v0, Lcom/vk/pushes/receivers/NotificationActionsReceiver;->b:Lcom/vk/pushes/receivers/NotificationActionsReceiver$a;
 
@@ -67,11 +67,11 @@
     .locals 4
 
     .line 1
-    invoke-static {}, Lcom/vk/bridges/g;->a()Lcom/vk/bridges/f;
+    invoke-static {}, Lcom/vk/bridges/AuthBridge;->a()Lcom/vk/bridges/AuthBridge3;
 
     move-result-object v0
 
-    invoke-interface {v0}, Lcom/vk/bridges/f;->a()Z
+    invoke-interface {v0}, Lcom/vk/bridges/AuthBridge3;->a()Z
 
     move-result v0
 
@@ -86,9 +86,9 @@
     move-result-object v0
 
     .line 3
-    sget-object v1, Lcom/vk/core/network/interceptors/d;->f:Lcom/vk/core/network/interceptors/d;
+    sget-object v1, Lcom/vk/core/network/interceptors/UndesirableBackgroundTrafficInterceptor;->f:Lcom/vk/core/network/interceptors/UndesirableBackgroundTrafficInterceptor;
 
-    invoke-virtual {v1}, Lcom/vk/core/network/interceptors/d;->a()V
+    invoke-virtual {v1}, Lcom/vk/core/network/interceptors/UndesirableBackgroundTrafficInterceptor;->a()V
 
     .line 4
     sget-object v1, Lcom/vk/pushes/receivers/NotificationActionsReceiver;->b:Lcom/vk/pushes/receivers/NotificationActionsReceiver$a;

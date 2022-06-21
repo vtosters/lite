@@ -3,12 +3,12 @@
 .source "Regex.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/a;
+.implements Lkotlin/jvm/b/Functions;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lkotlin/text/Regex;->b(Ljava/lang/CharSequence;I)Lkotlin/sequences/j;
+    value = Lkotlin/text/Regex;->b(Ljava/lang/CharSequence;I)Lkotlin/sequences/Sequence;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -19,8 +19,8 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/a<",
-        "Lkotlin/text/j;",
+        "Lkotlin/jvm/b/Functions<",
+        "Lkotlin/text/MatchResult2;",
         ">;"
     }
 .end annotation
@@ -57,14 +57,14 @@
     .locals 1
 
     .line 1
-    invoke-virtual {p0}, Lkotlin/text/Regex$findAll$1;->invoke()Lkotlin/text/j;
+    invoke-virtual {p0}, Lkotlin/text/Regex$findAll$1;->invoke()Lkotlin/text/MatchResult2;
 
     move-result-object v0
 
     return-object v0
 .end method
 
-.method public final invoke()Lkotlin/text/j;
+.method public final invoke()Lkotlin/text/MatchResult2;
     .locals 3
 
     .line 2
@@ -74,7 +74,7 @@
 
     iget v2, p0, Lkotlin/text/Regex$findAll$1;->$startIndex:I
 
-    invoke-virtual {v0, v1, v2}, Lkotlin/text/Regex;->a(Ljava/lang/CharSequence;I)Lkotlin/text/j;
+    invoke-virtual {v0, v1, v2}, Lkotlin/text/Regex;->a(Ljava/lang/CharSequence;I)Lkotlin/text/MatchResult2;
 
     move-result-object v0
 

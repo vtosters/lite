@@ -41,7 +41,7 @@
     return-void
 .end method
 
-.method public static synthetic a(Lcom/vtosters/lite/actionlinks/views/selection/Selection$Companion;Landroid/content/Context;Lcom/vtosters/lite/actionlinks/AL$d;ILcom/vtosters/lite/actionlinks/AL$SourceType;Lcom/vk/navigation/k;ILjava/lang/Object;)Lcom/vtosters/lite/actionlinks/views/selection/Selection$a;
+.method public static synthetic a(Lcom/vtosters/lite/actionlinks/views/selection/Selection$Companion;Landroid/content/Context;Lcom/vtosters/lite/actionlinks/AL$d;ILcom/vtosters/lite/actionlinks/AL$SourceType;Lcom/vk/navigation/ModalDialogCallback;ILjava/lang/Object;)Lcom/vtosters/lite/actionlinks/views/selection/Selection$a;
     .locals 6
 
     and-int/lit8 p6, p6, 0x10
@@ -64,30 +64,30 @@
     move-object v4, p4
 
     .line 2
-    invoke-virtual/range {v0 .. v5}, Lcom/vtosters/lite/actionlinks/views/selection/Selection$Companion;->a(Landroid/content/Context;Lcom/vtosters/lite/actionlinks/AL$d;ILcom/vtosters/lite/actionlinks/AL$SourceType;Lcom/vk/navigation/k;)Lcom/vtosters/lite/actionlinks/views/selection/Selection$a;
+    invoke-virtual/range {v0 .. v5}, Lcom/vtosters/lite/actionlinks/views/selection/Selection$Companion;->a(Landroid/content/Context;Lcom/vtosters/lite/actionlinks/AL$d;ILcom/vtosters/lite/actionlinks/AL$SourceType;Lcom/vk/navigation/ModalDialogCallback;)Lcom/vtosters/lite/actionlinks/views/selection/Selection$a;
 
     move-result-object p0
 
     return-object p0
 .end method
 
-.method public static final synthetic a(Lcom/vtosters/lite/actionlinks/views/selection/Selection$Companion;Lcom/vtosters/lite/actionlinks/views/selection/Selection$b;Lcom/vtosters/lite/actionlinks/AL$d;Landroid/content/Context;Lcom/vk/navigation/k;)V
+.method public static final synthetic a(Lcom/vtosters/lite/actionlinks/views/selection/Selection$Companion;Lcom/vtosters/lite/actionlinks/views/selection/Selection$b;Lcom/vtosters/lite/actionlinks/AL$d;Landroid/content/Context;Lcom/vk/navigation/ModalDialogCallback;)V
     .locals 0
 
     .line 1
-    invoke-direct {p0, p1, p2, p3, p4}, Lcom/vtosters/lite/actionlinks/views/selection/Selection$Companion;->a(Lcom/vtosters/lite/actionlinks/views/selection/Selection$b;Lcom/vtosters/lite/actionlinks/AL$d;Landroid/content/Context;Lcom/vk/navigation/k;)V
+    invoke-direct {p0, p1, p2, p3, p4}, Lcom/vtosters/lite/actionlinks/views/selection/Selection$Companion;->a(Lcom/vtosters/lite/actionlinks/views/selection/Selection$b;Lcom/vtosters/lite/actionlinks/AL$d;Landroid/content/Context;Lcom/vk/navigation/ModalDialogCallback;)V
 
     return-void
 .end method
 
-.method private final a(Lcom/vtosters/lite/actionlinks/views/selection/Selection$b;Lcom/vtosters/lite/actionlinks/AL$d;Landroid/content/Context;Lcom/vk/navigation/k;)V
+.method private final a(Lcom/vtosters/lite/actionlinks/views/selection/Selection$b;Lcom/vtosters/lite/actionlinks/AL$d;Landroid/content/Context;Lcom/vk/navigation/ModalDialogCallback;)V
     .locals 10
 
     .line 21
     sget-object v0, Lcom/vk/market/picker/GoodsPickerHelper;->b:Lcom/vk/market/picker/GoodsPickerHelper;
 
     .line 22
-    invoke-interface {p1}, Lcom/vk/cameraui/i/b;->getContext()Landroid/content/Context;
+    invoke-interface {p1}, Lcom/vk/cameraui/i/BaseView;->getContext()Landroid/content/Context;
 
     move-result-object v1
 
@@ -99,12 +99,12 @@
     .line 24
     new-instance v7, Lcom/vtosters/lite/actionlinks/views/selection/Selection$Companion$openGoodsPicker$2;
 
-    invoke-direct {v7, p4}, Lcom/vtosters/lite/actionlinks/views/selection/Selection$Companion$openGoodsPicker$2;-><init>(Lcom/vk/navigation/k;)V
+    invoke-direct {v7, p4}, Lcom/vtosters/lite/actionlinks/views/selection/Selection$Companion$openGoodsPicker$2;-><init>(Lcom/vk/navigation/ModalDialogCallback;)V
 
     .line 25
     new-instance v6, Lcom/vtosters/lite/actionlinks/views/selection/Selection$Companion$openGoodsPicker$3;
 
-    invoke-direct {v6, p4}, Lcom/vtosters/lite/actionlinks/views/selection/Selection$Companion$openGoodsPicker$3;-><init>(Lcom/vk/navigation/k;)V
+    invoke-direct {v6, p4}, Lcom/vtosters/lite/actionlinks/views/selection/Selection$Companion$openGoodsPicker$3;-><init>(Lcom/vk/navigation/ModalDialogCallback;)V
 
     .line 26
     new-instance v3, Lcom/vtosters/lite/actionlinks/views/selection/Selection$Companion$openGoodsPicker$4;
@@ -120,14 +120,14 @@
     const/4 v9, 0x0
 
     .line 27
-    invoke-static/range {v0 .. v9}, Lcom/vk/market/picker/GoodsPickerHelper;->a(Lcom/vk/market/picker/GoodsPickerHelper;Landroid/content/Context;Lkotlin/jvm/b/b;Lkotlin/jvm/b/a;ZILkotlin/jvm/b/a;Lkotlin/jvm/b/a;ILjava/lang/Object;)Lcom/vk/core/dialogs/bottomsheet/e;
+    invoke-static/range {v0 .. v9}, Lcom/vk/market/picker/GoodsPickerHelper;->a(Lcom/vk/market/picker/GoodsPickerHelper;Landroid/content/Context;Lkotlin/jvm/b/Functions2;Lkotlin/jvm/b/Functions;ZILkotlin/jvm/b/Functions;Lkotlin/jvm/b/Functions;ILjava/lang/Object;)Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a(Landroid/content/Context;Lcom/vtosters/lite/actionlinks/AL$d;ILcom/vtosters/lite/actionlinks/AL$SourceType;Lcom/vk/navigation/k;)Lcom/vtosters/lite/actionlinks/views/selection/Selection$a;
+.method public final a(Landroid/content/Context;Lcom/vtosters/lite/actionlinks/AL$d;ILcom/vtosters/lite/actionlinks/AL$SourceType;Lcom/vk/navigation/ModalDialogCallback;)Lcom/vtosters/lite/actionlinks/views/selection/Selection$a;
     .locals 21
 
     move/from16 v8, p3
@@ -135,25 +135,25 @@
     move-object/from16 v9, p5
 
     .line 3
-    new-instance v10, Lcom/vtosters/lite/actionlinks/views/selection/c;
+    new-instance v10, Lcom/vtosters/lite/actionlinks/views/selection/SelectionPresenter;
 
-    invoke-direct {v10}, Lcom/vtosters/lite/actionlinks/views/selection/c;-><init>()V
+    invoke-direct {v10}, Lcom/vtosters/lite/actionlinks/views/selection/SelectionPresenter;-><init>()V
 
     .line 4
-    invoke-virtual {v10, v8}, Lcom/vtosters/lite/actionlinks/views/selection/c;->a(I)V
+    invoke-virtual {v10, v8}, Lcom/vtosters/lite/actionlinks/views/selection/SelectionPresenter;->a(I)V
 
     .line 5
-    new-instance v11, Lcom/vtosters/lite/actionlinks/views/selection/d;
+    new-instance v11, Lcom/vtosters/lite/actionlinks/views/selection/SelectionView;
 
     move-object/from16 v7, p1
 
-    invoke-direct {v11, v7, v9}, Lcom/vtosters/lite/actionlinks/views/selection/d;-><init>(Landroid/content/Context;Lcom/vk/navigation/k;)V
+    invoke-direct {v11, v7, v9}, Lcom/vtosters/lite/actionlinks/views/selection/SelectionView;-><init>(Landroid/content/Context;Lcom/vk/navigation/ModalDialogCallback;)V
 
     .line 6
-    invoke-virtual {v11, v10}, Lcom/vtosters/lite/actionlinks/views/selection/d;->a(Lcom/vtosters/lite/actionlinks/views/selection/Selection$a;)V
+    invoke-virtual {v11, v10}, Lcom/vtosters/lite/actionlinks/views/selection/SelectionView;->a(Lcom/vtosters/lite/actionlinks/views/selection/Selection$a;)V
 
     .line 7
-    invoke-interface {v10, v11}, Lcom/vk/cameraui/i/a;->a(Ljava/lang/Object;)V
+    invoke-interface {v10, v11}, Lcom/vk/cameraui/i/BasePresenter;->a(Ljava/lang/Object;)V
 
     const/4 v0, 0x4
 
@@ -177,7 +177,7 @@
 
     move-object/from16 v5, p5
 
-    invoke-direct/range {v0 .. v5}, Lcom/vtosters/lite/actionlinks/views/selection/Selection$Companion$showAddSelection$1;-><init>(Lcom/vtosters/lite/actionlinks/views/selection/Selection$b;Lcom/vtosters/lite/actionlinks/AL$d;ILcom/vtosters/lite/actionlinks/AL$SourceType;Lcom/vk/navigation/k;)V
+    invoke-direct/range {v0 .. v5}, Lcom/vtosters/lite/actionlinks/views/selection/Selection$Companion$showAddSelection$1;-><init>(Lcom/vtosters/lite/actionlinks/views/selection/Selection$b;Lcom/vtosters/lite/actionlinks/AL$d;ILcom/vtosters/lite/actionlinks/AL$SourceType;Lcom/vk/navigation/ModalDialogCallback;)V
 
     const v1, 0x7f080528
 
@@ -196,7 +196,7 @@
     move-object v6, v14
 
     .line 10
-    invoke-direct/range {v0 .. v6}, Lcom/vtosters/lite/actionlinks/views/selection/Selection$Action;-><init>(IIZLkotlin/jvm/b/a;ILkotlin/jvm/internal/i;)V
+    invoke-direct/range {v0 .. v6}, Lcom/vtosters/lite/actionlinks/views/selection/Selection$Action;-><init>(IIZLkotlin/jvm/b/Functions;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     const/4 v0, 0x0
 
@@ -220,7 +220,7 @@
 
     move-object/from16 v5, p5
 
-    invoke-direct/range {v0 .. v5}, Lcom/vtosters/lite/actionlinks/views/selection/Selection$Companion$showAddSelection$2;-><init>(Lcom/vtosters/lite/actionlinks/views/selection/Selection$b;Lcom/vtosters/lite/actionlinks/AL$d;ILcom/vtosters/lite/actionlinks/AL$SourceType;Lcom/vk/navigation/k;)V
+    invoke-direct/range {v0 .. v5}, Lcom/vtosters/lite/actionlinks/views/selection/Selection$Companion$showAddSelection$2;-><init>(Lcom/vtosters/lite/actionlinks/views/selection/Selection$b;Lcom/vtosters/lite/actionlinks/AL$d;ILcom/vtosters/lite/actionlinks/AL$SourceType;Lcom/vk/navigation/ModalDialogCallback;)V
 
     const v15, 0x7f08060f
 
@@ -235,7 +235,7 @@
     move-object v14, v6
 
     .line 13
-    invoke-direct/range {v14 .. v20}, Lcom/vtosters/lite/actionlinks/views/selection/Selection$Action;-><init>(IIZLkotlin/jvm/b/a;ILkotlin/jvm/internal/i;)V
+    invoke-direct/range {v14 .. v20}, Lcom/vtosters/lite/actionlinks/views/selection/Selection$Action;-><init>(IIZLkotlin/jvm/b/Functions;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     const/4 v0, 0x1
 
@@ -261,7 +261,7 @@
 
     move-object/from16 v6, p5
 
-    invoke-direct/range {v0 .. v7}, Lcom/vtosters/lite/actionlinks/views/selection/Selection$Companion$showAddSelection$3;-><init>(Lcom/vtosters/lite/actionlinks/views/selection/Selection$Companion;Lcom/vtosters/lite/actionlinks/AL$SourceType;Lcom/vtosters/lite/actionlinks/views/selection/Selection$b;Lcom/vtosters/lite/actionlinks/AL$d;ILcom/vk/navigation/k;Landroid/content/Context;)V
+    invoke-direct/range {v0 .. v7}, Lcom/vtosters/lite/actionlinks/views/selection/Selection$Companion$showAddSelection$3;-><init>(Lcom/vtosters/lite/actionlinks/views/selection/Selection$Companion;Lcom/vtosters/lite/actionlinks/AL$SourceType;Lcom/vtosters/lite/actionlinks/views/selection/Selection$b;Lcom/vtosters/lite/actionlinks/AL$d;ILcom/vk/navigation/ModalDialogCallback;Landroid/content/Context;)V
 
     const v14, 0x7f080580
 
@@ -276,7 +276,7 @@
     move-object/from16 v13, v20
 
     .line 16
-    invoke-direct/range {v13 .. v19}, Lcom/vtosters/lite/actionlinks/views/selection/Selection$Action;-><init>(IIZLkotlin/jvm/b/a;ILkotlin/jvm/internal/i;)V
+    invoke-direct/range {v13 .. v19}, Lcom/vtosters/lite/actionlinks/views/selection/Selection$Action;-><init>(IIZLkotlin/jvm/b/Functions;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     const/4 v0, 0x2
 
@@ -290,7 +290,7 @@
 
     move-object/from16 v1, p2
 
-    invoke-direct {v5, v11, v1, v8, v9}, Lcom/vtosters/lite/actionlinks/views/selection/Selection$Companion$showAddSelection$4;-><init>(Lcom/vtosters/lite/actionlinks/views/selection/Selection$b;Lcom/vtosters/lite/actionlinks/AL$d;ILcom/vk/navigation/k;)V
+    invoke-direct {v5, v11, v1, v8, v9}, Lcom/vtosters/lite/actionlinks/views/selection/Selection$Companion$showAddSelection$4;-><init>(Lcom/vtosters/lite/actionlinks/views/selection/Selection$b;Lcom/vtosters/lite/actionlinks/AL$d;ILcom/vk/navigation/ModalDialogCallback;)V
 
     const v2, 0x7f0806e9
 
@@ -305,7 +305,7 @@
     move-object v1, v0
 
     .line 19
-    invoke-direct/range {v1 .. v7}, Lcom/vtosters/lite/actionlinks/views/selection/Selection$Action;-><init>(IIZLkotlin/jvm/b/a;ILkotlin/jvm/internal/i;)V
+    invoke-direct/range {v1 .. v7}, Lcom/vtosters/lite/actionlinks/views/selection/Selection$Action;-><init>(IIZLkotlin/jvm/b/Functions;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     const/4 v1, 0x3
 

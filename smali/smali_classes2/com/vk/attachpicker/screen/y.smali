@@ -3,7 +3,7 @@
 .source "lambda"
 
 # interfaces
-.implements Lcom/vk/attachpicker/screen/h0$i;
+.implements Lcom/vk/attachpicker/screen/ViewerScreen$i;
 
 
 # instance fields
@@ -28,7 +28,7 @@
 
     iget v0, p0, Lcom/vk/attachpicker/screen/y;->a:I
 
-    invoke-static {v0, p1}, Lcom/vk/attachpicker/screen/h0;->a(ILandroid/view/View;)V
+    invoke-static {v0, p1}, Lcom/vk/attachpicker/screen/ViewerScreen1;->a(ILandroid/view/View;)V
 
     return-void
 .end method

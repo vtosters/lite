@@ -13,7 +13,7 @@
 
 
 # instance fields
-.field private final a:Lcom/vk/audio/a;
+.field private final a:Lcom/vk/audio/AudioMessageUtils;
 
 .field private b:Lio/reactivex/subjects/PublishSubject;
     .annotation system Ldalvik/annotation/Signature;
@@ -48,11 +48,11 @@
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 2
-    invoke-static {}, Lcom/vk/audio/a;->m()Lcom/vk/audio/a;
+    invoke-static {}, Lcom/vk/audio/AudioMessageUtils;->m()Lcom/vk/audio/AudioMessageUtils;
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/vk/audio/AudioRecorder;->a:Lcom/vk/audio/a;
+    iput-object v0, p0, Lcom/vk/audio/AudioRecorder;->a:Lcom/vk/audio/AudioMessageUtils;
 
     .line 3
     invoke-static {}, Lio/reactivex/subjects/PublishSubject;->p()Lio/reactivex/subjects/PublishSubject;
@@ -61,7 +61,7 @@
 
     const-string v1, "PublishSubject.create<Int>()"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     iput-object v0, p0, Lcom/vk/audio/AudioRecorder;->b:Lio/reactivex/subjects/PublishSubject;
 
@@ -72,7 +72,7 @@
 
     const-string v1, "PublishSubject.create<Result>()"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     iput-object v0, p0, Lcom/vk/audio/AudioRecorder;->c:Lio/reactivex/subjects/PublishSubject;
 
@@ -84,7 +84,7 @@
     return-void
 .end method
 
-.method public static synthetic a(Lcom/vk/audio/AudioRecorder;Ljava/lang/String;ZILjava/lang/Object;)Lc/a/m;
+.method public static synthetic a(Lcom/vk/audio/AudioRecorder;Ljava/lang/String;ZILjava/lang/Object;)Lio/reactivex/Observable;
     .locals 0
 
     and-int/lit8 p3, p3, 0x2
@@ -95,7 +95,7 @@
 
     .line 4
     :cond_0
-    invoke-virtual {p0, p1, p2}, Lcom/vk/audio/AudioRecorder;->a(Ljava/lang/String;Z)Lc/a/m;
+    invoke-virtual {p0, p1, p2}, Lcom/vk/audio/AudioRecorder;->a(Ljava/lang/String;Z)Lio/reactivex/Observable;
 
     move-result-object p0
 
@@ -152,11 +152,11 @@
     return-void
 .end method
 
-.method public static final synthetic b(Lcom/vk/audio/AudioRecorder;)Lcom/vk/audio/a;
+.method public static final synthetic b(Lcom/vk/audio/AudioRecorder;)Lcom/vk/audio/AudioMessageUtils;
     .locals 0
 
     .line 1
-    iget-object p0, p0, Lcom/vk/audio/AudioRecorder;->a:Lcom/vk/audio/a;
+    iget-object p0, p0, Lcom/vk/audio/AudioRecorder;->a:Lcom/vk/audio/AudioMessageUtils;
 
     return-object p0
 .end method
@@ -174,13 +174,13 @@
     .locals 2
 
     .line 2
-    iget-object v0, p0, Lcom/vk/audio/AudioRecorder;->a:Lcom/vk/audio/a;
+    iget-object v0, p0, Lcom/vk/audio/AudioRecorder;->a:Lcom/vk/audio/AudioMessageUtils;
 
     const-string v1, "delegate"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    invoke-virtual {v0}, Lcom/vk/audio/a;->f()Z
+    invoke-virtual {v0}, Lcom/vk/audio/AudioMessageUtils;->f()Z
 
     move-result v0
 
@@ -273,14 +273,14 @@
 
 
 # virtual methods
-.method public final a(JLjava/util/concurrent/TimeUnit;)Lc/a/m;
+.method public final a(JLjava/util/concurrent/TimeUnit;)Lio/reactivex/Observable;
     .locals 2
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(J",
             "Ljava/util/concurrent/TimeUnit;",
             ")",
-            "Lc/a/m<",
+            "Lio/reactivex/Observable<",
             "Ljava/lang/Integer;",
             ">;"
         }
@@ -293,7 +293,7 @@
 
     const-string v1, "PublishSubject.create<Int>()"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     iput-object v0, p0, Lcom/vk/audio/AudioRecorder;->b:Lio/reactivex/subjects/PublishSubject;
 
@@ -303,25 +303,25 @@
     .line 24
     sget-object v1, Lcom/vk/audio/AudioRecorder$observeAmplitude$1;->a:Lcom/vk/audio/AudioRecorder$observeAmplitude$1;
 
-    invoke-static {v0, p1, p2, p3, v1}, Lcom/vk/core/extensions/RxExtKt;->a(Lc/a/m;JLjava/util/concurrent/TimeUnit;Lkotlin/jvm/b/c;)Lc/a/m;
+    invoke-static {v0, p1, p2, p3, v1}, Lcom/vk/core/extensions/RxExtKt;->a(Lio/reactivex/Observable;JLjava/util/concurrent/TimeUnit;Lkotlin/jvm/b/Functions1;)Lio/reactivex/Observable;
 
     move-result-object p1
 
     .line 25
     sget-object p2, Lcom/vk/audio/AudioRecorder$c;->a:Lcom/vk/audio/AudioRecorder$c;
 
-    invoke-virtual {p1, p2}, Lc/a/m;->e(Lc/a/z/j;)Lc/a/m;
+    invoke-virtual {p1, p2}, Lio/reactivex/Observable;->e(Lio/reactivex/functions/Function;)Lio/reactivex/Observable;
 
     move-result-object p1
 
     const-string p2, "amplitudeSubject\n       \u2026      .map { it.toInt() }"
 
-    invoke-static {p1, p2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, p2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     return-object p1
 .end method
 
-.method public final a(Ljava/lang/String;Z)Lc/a/m;
+.method public final a(Ljava/lang/String;Z)Lio/reactivex/Observable;
     .locals 2
     .annotation build Landroidx/annotation/MainThread;
     .end annotation
@@ -331,7 +331,7 @@
             "(",
             "Ljava/lang/String;",
             "Z)",
-            "Lc/a/m<",
+            "Lio/reactivex/Observable<",
             "Lcom/vk/audio/AudioRecorder$b;",
             ">;"
         }
@@ -371,38 +371,38 @@
 
     invoke-direct {p1, p0}, Lcom/vk/audio/AudioRecorder$a;-><init>(Lcom/vk/audio/AudioRecorder;)V
 
-    invoke-static {p1}, Lcom/vk/audio/c$b;->a(Lcom/vk/audio/c;)Lcom/vk/audio/c;
+    invoke-static {p1}, Lcom/vk/audio/AudioRecordObserver$b;->a(Lcom/vk/audio/AudioRecordObserver;)Lcom/vk/audio/AudioRecordObserver;
 
     move-result-object p1
 
     .line 9
-    iget-object v0, p0, Lcom/vk/audio/AudioRecorder;->a:Lcom/vk/audio/a;
+    iget-object v0, p0, Lcom/vk/audio/AudioRecorder;->a:Lcom/vk/audio/AudioMessageUtils;
 
-    invoke-virtual {v0, p1}, Lcom/vk/audio/a;->a(Lcom/vk/audio/c;)V
+    invoke-virtual {v0, p1}, Lcom/vk/audio/AudioMessageUtils;->a(Lcom/vk/audio/AudioRecordObserver;)V
 
     .line 10
-    iget-object p1, p0, Lcom/vk/audio/AudioRecorder;->a:Lcom/vk/audio/a;
+    iget-object p1, p0, Lcom/vk/audio/AudioRecorder;->a:Lcom/vk/audio/AudioMessageUtils;
 
     iget-object v0, p0, Lcom/vk/audio/AudioRecorder;->d:Ljava/lang/String;
 
     const/4 v1, 0x0
 
-    invoke-virtual {p1, v0, v1, p2}, Lcom/vk/audio/a;->a(Ljava/lang/String;ZZ)V
+    invoke-virtual {p1, v0, v1, p2}, Lcom/vk/audio/AudioMessageUtils;->a(Ljava/lang/String;ZZ)V
 
     .line 11
     iget-object p1, p0, Lcom/vk/audio/AudioRecorder;->c:Lio/reactivex/subjects/PublishSubject;
 
-    invoke-static {}, Lc/a/y/c/a;->a()Lc/a/s;
+    invoke-static {}, Lio/reactivex/schedulers/AndroidSchedulers;->a()Lio/reactivex/Scheduler;
 
     move-result-object p2
 
-    invoke-virtual {p1, p2}, Lc/a/m;->a(Lc/a/s;)Lc/a/m;
+    invoke-virtual {p1, p2}, Lio/reactivex/Observable;->a(Lio/reactivex/Scheduler;)Lio/reactivex/Observable;
 
     move-result-object p1
 
     const-string p2, "resultSubject.observeOn(\u2026dSchedulers.mainThread())"
 
-    invoke-static {p1, p2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, p2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     return-object p1
 .end method
@@ -441,9 +441,9 @@
     invoke-direct {p0}, Lcom/vk/audio/AudioRecorder;->e()V
 
     .line 21
-    iget-object v0, p0, Lcom/vk/audio/AudioRecorder;->a:Lcom/vk/audio/a;
+    iget-object v0, p0, Lcom/vk/audio/AudioRecorder;->a:Lcom/vk/audio/AudioMessageUtils;
 
-    invoke-virtual {v0}, Lcom/vk/audio/a;->a()V
+    invoke-virtual {v0}, Lcom/vk/audio/AudioMessageUtils;->a()V
 
     return-void
 .end method
@@ -487,17 +487,17 @@
     if-eqz p2, :cond_0
 
     .line 16
-    iget-object p2, p0, Lcom/vk/audio/AudioRecorder;->a:Lcom/vk/audio/a;
+    iget-object p2, p0, Lcom/vk/audio/AudioRecorder;->a:Lcom/vk/audio/AudioMessageUtils;
 
-    invoke-virtual {p2, p1, p3}, Lcom/vk/audio/a;->a(ZZ)V
+    invoke-virtual {p2, p1, p3}, Lcom/vk/audio/AudioMessageUtils;->a(ZZ)V
 
     goto :goto_0
 
     .line 17
     :cond_0
-    iget-object p1, p0, Lcom/vk/audio/AudioRecorder;->a:Lcom/vk/audio/a;
+    iget-object p1, p0, Lcom/vk/audio/AudioRecorder;->a:Lcom/vk/audio/AudioMessageUtils;
 
-    invoke-virtual {p1}, Lcom/vk/audio/a;->g()V
+    invoke-virtual {p1}, Lcom/vk/audio/AudioMessageUtils;->g()V
 
     .line 18
     :goto_0
@@ -514,13 +514,13 @@
     .end annotation
 
     .line 2
-    iget-object v0, p0, Lcom/vk/audio/AudioRecorder;->a:Lcom/vk/audio/a;
+    iget-object v0, p0, Lcom/vk/audio/AudioRecorder;->a:Lcom/vk/audio/AudioMessageUtils;
 
     const-string v1, "delegate"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    invoke-virtual {v0}, Lcom/vk/audio/a;->f()Z
+    invoke-virtual {v0}, Lcom/vk/audio/AudioMessageUtils;->f()Z
 
     move-result v0
 

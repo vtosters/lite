@@ -48,13 +48,13 @@
 
     const-string v0, "itemView"
 
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {p1}, Landroid/view/View;->getContext()Landroid/content/Context;
 
     move-result-object p1
 
-    invoke-static {p1}, Lcom/vk/core/util/c;->a(Landroid/content/Context;)Lcom/vk/core/util/c$b;
+    invoke-static {p1}, Lcom/vk/core/util/AlertDialogs;->a(Landroid/content/Context;)Lcom/vk/core/util/AlertDialogs$b;
 
     move-result-object p1
 
@@ -72,7 +72,7 @@
 
     iget-object v1, v1, Landroidx/recyclerview/widget/RecyclerView$ViewHolder;->itemView:Landroid/view/View;
 
-    invoke-static {v1, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v1, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {v1}, Landroid/view/View;->getContext()Landroid/content/Context;
 
@@ -88,7 +88,7 @@
 
     invoke-direct {v2, p0}, Lcom/vk/profile/adapter/items/details/DetailsInfoItem$ViewHolder$b$a;-><init>(Lcom/vk/profile/adapter/items/details/DetailsInfoItem$ViewHolder$b;)V
 
-    invoke-virtual {p1, v1, v2}, Lcom/vk/core/util/c$b;->a(Ljava/lang/String;Ljava/lang/Runnable;)Lcom/vk/core/util/c$b;
+    invoke-virtual {p1, v1, v2}, Lcom/vk/core/util/AlertDialogs$b;->a(Ljava/lang/String;Ljava/lang/Runnable;)Lcom/vk/core/util/AlertDialogs$b;
 
     .line 4
     :cond_0
@@ -96,7 +96,7 @@
 
     iget-object v1, v1, Landroidx/recyclerview/widget/RecyclerView$ViewHolder;->itemView:Landroid/view/View;
 
-    invoke-static {v1, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v1, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {v1}, Landroid/view/View;->getContext()Landroid/content/Context;
 
@@ -112,7 +112,7 @@
 
     invoke-direct {v2, p0}, Lcom/vk/profile/adapter/items/details/DetailsInfoItem$ViewHolder$b$b;-><init>(Lcom/vk/profile/adapter/items/details/DetailsInfoItem$ViewHolder$b;)V
 
-    invoke-virtual {p1, v1, v2}, Lcom/vk/core/util/c$b;->a(Ljava/lang/String;Ljava/lang/Runnable;)Lcom/vk/core/util/c$b;
+    invoke-virtual {p1, v1, v2}, Lcom/vk/core/util/AlertDialogs$b;->a(Ljava/lang/String;Ljava/lang/Runnable;)Lcom/vk/core/util/AlertDialogs$b;
 
     .line 5
     iget-object v1, p0, Lcom/vk/profile/adapter/items/details/DetailsInfoItem$ViewHolder$b;->b:Lcom/vk/profile/adapter/items/details/DetailsInfoItem;
@@ -123,7 +123,7 @@
 
     if-eqz v1, :cond_2
 
-    invoke-static {v1}, Lcom/vk/common/links/b;->a(Ljava/lang/String;)Z
+    invoke-static {v1}, Lcom/vk/common/links/LinkParser;->a(Ljava/lang/String;)Z
 
     move-result v1
 
@@ -134,7 +134,7 @@
 
     iget-object v1, v1, Landroidx/recyclerview/widget/RecyclerView$ViewHolder;->itemView:Landroid/view/View;
 
-    invoke-static {v1, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v1, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {v1}, Landroid/view/View;->getContext()Landroid/content/Context;
 
@@ -150,11 +150,11 @@
 
     invoke-direct {v1, p0}, Lcom/vk/profile/adapter/items/details/DetailsInfoItem$ViewHolder$b$c;-><init>(Lcom/vk/profile/adapter/items/details/DetailsInfoItem$ViewHolder$b;)V
 
-    invoke-virtual {p1, v0, v1}, Lcom/vk/core/util/c$b;->a(Ljava/lang/String;Ljava/lang/Runnable;)Lcom/vk/core/util/c$b;
+    invoke-virtual {p1, v0, v1}, Lcom/vk/core/util/AlertDialogs$b;->a(Ljava/lang/String;Ljava/lang/Runnable;)Lcom/vk/core/util/AlertDialogs$b;
 
     .line 7
     :cond_1
-    invoke-virtual {p1}, Lcom/vk/core/util/c$b;->a()Lcom/vk/core/dialogs/alert/VkAlertDialog$Builder;
+    invoke-virtual {p1}, Lcom/vk/core/util/AlertDialogs$b;->a()Lcom/vk/core/dialogs/alert/VkAlertDialog$Builder;
 
     move-result-object p1
 
@@ -176,7 +176,7 @@
 
     .line 10
     :cond_2
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     const/4 p1, 0x0
 

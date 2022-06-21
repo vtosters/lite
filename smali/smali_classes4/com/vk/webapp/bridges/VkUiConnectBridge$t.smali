@@ -42,39 +42,39 @@
     .locals 3
 
     .line 1
-    new-instance v0, Lcom/vk/newsfeed/postpreview/d;
+    new-instance v0, Lcom/vk/newsfeed/postpreview/PostPreviewFragmentBuilder;
 
-    invoke-direct {v0}, Lcom/vk/newsfeed/postpreview/d;-><init>()V
+    invoke-direct {v0}, Lcom/vk/newsfeed/postpreview/PostPreviewFragmentBuilder;-><init>()V
 
     .line 2
     iget-object v1, p0, Lcom/vk/webapp/bridges/VkUiConnectBridge$t;->a:Lcom/vk/webapp/bridges/VkUiConnectBridge;
 
-    invoke-static {v1}, Lcom/vk/webapp/bridges/VkUiConnectBridge;->a(Lcom/vk/webapp/bridges/VkUiConnectBridge;)Lcom/vk/webapp/o/b;
+    invoke-static {v1}, Lcom/vk/webapp/bridges/VkUiConnectBridge;->a(Lcom/vk/webapp/bridges/VkUiConnectBridge;)Lcom/vk/webapp/o/VkUiConnectFragmentDelegate;
 
     move-result-object v1
 
-    invoke-interface {v1}, Lcom/vk/webapp/o/c;->F()I
+    invoke-interface {v1}, Lcom/vk/webapp/o/VkUiFragmentDelegate;->F()I
 
     move-result v1
 
     iget-object v2, p0, Lcom/vk/webapp/bridges/VkUiConnectBridge$t;->b:Ljava/lang/String;
 
-    invoke-virtual {v0, v1, v2}, Lcom/vk/newsfeed/postpreview/d;->a(ILjava/lang/String;)Lcom/vk/newsfeed/postpreview/d;
+    invoke-virtual {v0, v1, v2}, Lcom/vk/newsfeed/postpreview/PostPreviewFragmentBuilder;->a(ILjava/lang/String;)Lcom/vk/newsfeed/postpreview/PostPreviewFragmentBuilder;
 
     .line 3
     iget-object v1, p0, Lcom/vk/webapp/bridges/VkUiConnectBridge$t;->a:Lcom/vk/webapp/bridges/VkUiConnectBridge;
 
-    invoke-static {v1}, Lcom/vk/webapp/bridges/VkUiConnectBridge;->a(Lcom/vk/webapp/bridges/VkUiConnectBridge;)Lcom/vk/webapp/o/b;
+    invoke-static {v1}, Lcom/vk/webapp/bridges/VkUiConnectBridge;->a(Lcom/vk/webapp/bridges/VkUiConnectBridge;)Lcom/vk/webapp/o/VkUiConnectFragmentDelegate;
 
     move-result-object v1
 
-    invoke-interface {v1}, Lcom/vk/webapp/o/c;->e()Lcom/vk/webapp/VkUiFragment;
+    invoke-interface {v1}, Lcom/vk/webapp/o/VkUiFragmentDelegate;->e()Lcom/vk/webapp/VkUiFragment;
 
     move-result-object v1
 
     const/16 v2, 0x69
 
-    invoke-virtual {v0, v1, v2}, Lcom/vk/navigation/o;->a(Lcom/vk/core/fragments/FragmentImpl;I)V
+    invoke-virtual {v0, v1, v2}, Lcom/vk/navigation/Navigator;->a(Lcom/vk/core/fragments/FragmentImpl;I)V
 
     return-void
 .end method

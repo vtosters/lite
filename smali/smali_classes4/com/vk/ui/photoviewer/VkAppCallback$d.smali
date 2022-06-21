@@ -1,11 +1,11 @@
 .class public final Lcom/vk/ui/photoviewer/VkAppCallback$d;
-.super Lb/h/n/b;
+.super Lb/h/n/ActivityLifecycleListenerAdapter;
 .source "VkAppCallback.kt"
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/ui/photoviewer/VkAppCallback;-><init>(Ljava/util/List;Lcom/vk/photoviewer/PhotoViewer$d;Lcom/vk/bridges/p$a;Landroid/app/Activity;)V
+    value = Lcom/vk/ui/photoviewer/VkAppCallback;-><init>(Ljava/util/List;Lcom/vk/photoviewer/PhotoViewer$d;Lcom/vk/bridges/ImageViewer$a;Landroid/app/Activity;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -30,7 +30,7 @@
     .line 1
     iput-object p1, p0, Lcom/vk/ui/photoviewer/VkAppCallback$d;->a:Lcom/vk/ui/photoviewer/VkAppCallback;
 
-    invoke-direct {p0}, Lb/h/n/b;-><init>()V
+    invoke-direct {p0}, Lb/h/n/ActivityLifecycleListenerAdapter;-><init>()V
 
     return-void
 .end method
@@ -41,7 +41,7 @@
     .locals 1
 
     .line 1
-    invoke-super {p0, p1}, Lb/h/n/b;->onActivityResumed(Landroid/app/Activity;)V
+    invoke-super {p0, p1}, Lb/h/n/ActivityLifecycleListenerAdapter;->onActivityResumed(Landroid/app/Activity;)V
 
     .line 2
     iget-object v0, p0, Lcom/vk/ui/photoviewer/VkAppCallback$d;->a:Lcom/vk/ui/photoviewer/VkAppCallback;
@@ -50,7 +50,7 @@
 
     move-result-object v0
 
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result p1
 

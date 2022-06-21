@@ -3,7 +3,7 @@
 .source "MpscLinkedQueue.java"
 
 # interfaces
-.implements Lc/a/a0/b/j;
+.implements Lc/a/a0/b/SimplePlainQueue;
 
 
 # annotations
@@ -19,7 +19,7 @@
         "Ljava/lang/Object;",
         ">",
         "Ljava/lang/Object;",
-        "Lc/a/a0/b/j<",
+        "Lc/a/a0/b/SimplePlainQueue<",
         "TT;>;"
     }
 .end annotation

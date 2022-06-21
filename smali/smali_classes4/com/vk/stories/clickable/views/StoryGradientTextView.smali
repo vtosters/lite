@@ -4,9 +4,9 @@
 
 
 # instance fields
-.field private F:Lcom/vk/stories/clickable/models/a;
+.field private F:Lcom/vk/stories/clickable/models/StoryHashtagTypeParams1;
 
-.field private G:Lcom/vk/stories/clickable/models/a;
+.field private G:Lcom/vk/stories/clickable/models/StoryHashtagTypeParams1;
 
 
 # direct methods
@@ -26,7 +26,7 @@
     move-object v1, p1
 
     .line 1
-    invoke-direct/range {v0 .. v5}, Lcom/vk/core/view/TintTextView;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;IILkotlin/jvm/internal/i;)V
+    invoke-direct/range {v0 .. v5}, Lcom/vk/core/view/TintTextView;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;IILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     const/4 p1, 0x0
 
@@ -51,7 +51,7 @@
     move-object v2, p2
 
     .line 2
-    invoke-direct/range {v0 .. v5}, Lcom/vk/core/view/TintTextView;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;IILkotlin/jvm/internal/i;)V
+    invoke-direct/range {v0 .. v5}, Lcom/vk/core/view/TintTextView;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;IILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     invoke-virtual {p0, p2}, Lcom/vk/stories/clickable/views/StoryGradientTextView;->a(Landroid/util/AttributeSet;)V
 
@@ -123,11 +123,11 @@
     move-result v1
 
     .line 8
-    new-instance v2, Lcom/vk/stories/clickable/models/a;
+    new-instance v2, Lcom/vk/stories/clickable/models/StoryHashtagTypeParams1;
 
-    invoke-direct {v2, v0, v1}, Lcom/vk/stories/clickable/models/a;-><init>(II)V
+    invoke-direct {v2, v0, v1}, Lcom/vk/stories/clickable/models/StoryHashtagTypeParams1;-><init>(II)V
 
-    invoke-virtual {p0, v2}, Lcom/vk/stories/clickable/views/StoryGradientTextView;->setGradient(Lcom/vk/stories/clickable/models/a;)V
+    invoke-virtual {p0, v2}, Lcom/vk/stories/clickable/views/StoryGradientTextView;->setGradient(Lcom/vk/stories/clickable/models/StoryHashtagTypeParams1;)V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
@@ -144,11 +144,11 @@
     throw v0
 .end method
 
-.method public final getGradient()Lcom/vk/stories/clickable/models/a;
+.method public final getGradient()Lcom/vk/stories/clickable/models/StoryHashtagTypeParams1;
     .locals 1
 
     .line 1
-    iget-object v0, p0, Lcom/vk/stories/clickable/views/StoryGradientTextView;->G:Lcom/vk/stories/clickable/models/a;
+    iget-object v0, p0, Lcom/vk/stories/clickable/views/StoryGradientTextView;->G:Lcom/vk/stories/clickable/models/StoryHashtagTypeParams1;
 
     return-object v0
 .end method
@@ -162,11 +162,11 @@
     if-nez p1, :cond_0
 
     .line 2
-    iget-object p1, p0, Lcom/vk/stories/clickable/views/StoryGradientTextView;->F:Lcom/vk/stories/clickable/models/a;
+    iget-object p1, p0, Lcom/vk/stories/clickable/views/StoryGradientTextView;->F:Lcom/vk/stories/clickable/models/StoryHashtagTypeParams1;
 
-    iget-object p2, p0, Lcom/vk/stories/clickable/views/StoryGradientTextView;->G:Lcom/vk/stories/clickable/models/a;
+    iget-object p2, p0, Lcom/vk/stories/clickable/views/StoryGradientTextView;->G:Lcom/vk/stories/clickable/models/StoryHashtagTypeParams1;
 
-    invoke-static {p1, p2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {p1, p2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result p1
 
@@ -176,7 +176,7 @@
 
     .line 3
     :cond_0
-    iget-object p1, p0, Lcom/vk/stories/clickable/views/StoryGradientTextView;->G:Lcom/vk/stories/clickable/models/a;
+    iget-object p1, p0, Lcom/vk/stories/clickable/views/StoryGradientTextView;->G:Lcom/vk/stories/clickable/models/StoryHashtagTypeParams1;
 
     .line 4
     invoke-virtual {p0}, Landroid/widget/TextView;->getPaint()Landroid/text/TextPaint;
@@ -185,11 +185,11 @@
 
     const-string p3, "paint"
 
-    invoke-static {p2, p3}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p2, p3}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     if-eqz p1, :cond_1
 
-    sget-object p3, Lcom/vk/stories/clickable/g;->a:Lcom/vk/stories/clickable/g;
+    sget-object p3, Lcom/vk/stories/clickable/StoryGradientUtils;->a:Lcom/vk/stories/clickable/StoryGradientUtils;
 
     invoke-virtual {p0}, Landroid/widget/TextView;->getWidth()I
 
@@ -199,7 +199,7 @@
 
     move-result p5
 
-    invoke-virtual {p3, p1, p4, p5}, Lcom/vk/stories/clickable/g;->a(Lcom/vk/stories/clickable/models/a;II)Landroid/graphics/LinearGradient;
+    invoke-virtual {p3, p1, p4, p5}, Lcom/vk/stories/clickable/StoryGradientUtils;->a(Lcom/vk/stories/clickable/models/StoryHashtagTypeParams1;II)Landroid/graphics/LinearGradient;
 
     move-result-object p1
 
@@ -212,24 +212,24 @@
     invoke-virtual {p2, p1}, Landroid/text/TextPaint;->setShader(Landroid/graphics/Shader;)Landroid/graphics/Shader;
 
     .line 5
-    iget-object p1, p0, Lcom/vk/stories/clickable/views/StoryGradientTextView;->G:Lcom/vk/stories/clickable/models/a;
+    iget-object p1, p0, Lcom/vk/stories/clickable/views/StoryGradientTextView;->G:Lcom/vk/stories/clickable/models/StoryHashtagTypeParams1;
 
-    iput-object p1, p0, Lcom/vk/stories/clickable/views/StoryGradientTextView;->F:Lcom/vk/stories/clickable/models/a;
+    iput-object p1, p0, Lcom/vk/stories/clickable/views/StoryGradientTextView;->F:Lcom/vk/stories/clickable/models/StoryHashtagTypeParams1;
 
     :cond_2
     return-void
 .end method
 
-.method public final setGradient(Lcom/vk/stories/clickable/models/a;)V
+.method public final setGradient(Lcom/vk/stories/clickable/models/StoryHashtagTypeParams1;)V
     .locals 1
 
     .line 1
-    iget-object v0, p0, Lcom/vk/stories/clickable/views/StoryGradientTextView;->G:Lcom/vk/stories/clickable/models/a;
+    iget-object v0, p0, Lcom/vk/stories/clickable/views/StoryGradientTextView;->G:Lcom/vk/stories/clickable/models/StoryHashtagTypeParams1;
 
-    iput-object v0, p0, Lcom/vk/stories/clickable/views/StoryGradientTextView;->F:Lcom/vk/stories/clickable/models/a;
+    iput-object v0, p0, Lcom/vk/stories/clickable/views/StoryGradientTextView;->F:Lcom/vk/stories/clickable/models/StoryHashtagTypeParams1;
 
     .line 2
-    iput-object p1, p0, Lcom/vk/stories/clickable/views/StoryGradientTextView;->G:Lcom/vk/stories/clickable/models/a;
+    iput-object p1, p0, Lcom/vk/stories/clickable/views/StoryGradientTextView;->G:Lcom/vk/stories/clickable/models/StoryHashtagTypeParams1;
 
     return-void
 .end method

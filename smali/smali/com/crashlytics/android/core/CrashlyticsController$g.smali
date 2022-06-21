@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/crashlytics/android/core/CrashlyticsController;->a(Lcom/crashlytics/android/core/m;)Z
+    value = Lcom/crashlytics/android/core/CrashlyticsController;->a(Lcom/crashlytics/android/core/CrashlyticsNdkData;)Z
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -27,19 +27,19 @@
 
 
 # instance fields
-.field final synthetic a:Lcom/crashlytics/android/core/m;
+.field final synthetic a:Lcom/crashlytics/android/core/CrashlyticsNdkData;
 
 .field final synthetic b:Lcom/crashlytics/android/core/CrashlyticsController;
 
 
 # direct methods
-.method constructor <init>(Lcom/crashlytics/android/core/CrashlyticsController;Lcom/crashlytics/android/core/m;)V
+.method constructor <init>(Lcom/crashlytics/android/core/CrashlyticsController;Lcom/crashlytics/android/core/CrashlyticsNdkData;)V
     .locals 0
 
     .line 1
     iput-object p1, p0, Lcom/crashlytics/android/core/CrashlyticsController$g;->b:Lcom/crashlytics/android/core/CrashlyticsController;
 
-    iput-object p2, p0, Lcom/crashlytics/android/core/CrashlyticsController$g;->a:Lcom/crashlytics/android/core/m;
+    iput-object p2, p0, Lcom/crashlytics/android/core/CrashlyticsController$g;->a:Lcom/crashlytics/android/core/CrashlyticsNdkData;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -57,9 +57,9 @@
     .end annotation
 
     .line 2
-    iget-object v0, p0, Lcom/crashlytics/android/core/CrashlyticsController$g;->a:Lcom/crashlytics/android/core/m;
+    iget-object v0, p0, Lcom/crashlytics/android/core/CrashlyticsController$g;->a:Lcom/crashlytics/android/core/CrashlyticsNdkData;
 
-    iget-object v0, v0, Lcom/crashlytics/android/core/m;->a:Ljava/util/TreeSet;
+    iget-object v0, v0, Lcom/crashlytics/android/core/CrashlyticsNdkData;->a:Ljava/util/TreeSet;
 
     .line 3
     iget-object v1, p0, Lcom/crashlytics/android/core/CrashlyticsController$g;->b:Lcom/crashlytics/android/core/CrashlyticsController;
@@ -89,11 +89,11 @@
     .line 6
     iget-object v3, p0, Lcom/crashlytics/android/core/CrashlyticsController$g;->b:Lcom/crashlytics/android/core/CrashlyticsController;
 
-    invoke-static {v3}, Lcom/crashlytics/android/core/CrashlyticsController;->f(Lcom/crashlytics/android/core/CrashlyticsController;)Lcom/crashlytics/android/core/j;
+    invoke-static {v3}, Lcom/crashlytics/android/core/CrashlyticsController;->f(Lcom/crashlytics/android/core/CrashlyticsController;)Lcom/crashlytics/android/core/CrashlyticsCore;
 
     move-result-object v4
 
-    invoke-virtual {v4}, Lio/fabric/sdk/android/h;->d()Landroid/content/Context;
+    invoke-virtual {v4}, Lio/fabric/sdk/android/Kit;->d()Landroid/content/Context;
 
     move-result-object v4
 

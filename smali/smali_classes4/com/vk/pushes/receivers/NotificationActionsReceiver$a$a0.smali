@@ -3,7 +3,7 @@
 .source "NotificationActionsReceiver.kt"
 
 # interfaces
-.implements Lcom/vk/common/links/f;
+.implements Lcom/vk/common/links/OpenCallback;
 
 
 # annotations
@@ -58,11 +58,11 @@
     invoke-static/range {v0 .. v5}, Lcom/vk/pushes/receivers/NotificationActionsReceiver$a;->a(Lcom/vk/pushes/receivers/NotificationActionsReceiver$a;Landroid/content/Context;Landroid/content/Intent;ZILjava/lang/Object;)V
 
     .line 4
-    sget-object v0, Lcom/vk/pushes/j/e;->a:Lcom/vk/pushes/j/e;
+    sget-object v0, Lcom/vk/pushes/j/NotificationHelper;->a:Lcom/vk/pushes/j/NotificationHelper;
 
     iget-object v1, p0, Lcom/vk/pushes/receivers/NotificationActionsReceiver$a$a0;->a:Landroid/content/Context;
 
-    invoke-virtual {v0, v1}, Lcom/vk/pushes/j/e;->c(Landroid/content/Context;)V
+    invoke-virtual {v0, v1}, Lcom/vk/pushes/j/NotificationHelper;->c(Landroid/content/Context;)V
 
     return-void
 .end method
@@ -86,7 +86,7 @@
     .locals 0
 
     .line 1
-    invoke-static {p0, p1}, Lcom/vk/common/links/f$a;->a(Lcom/vk/common/links/f;Z)V
+    invoke-static {p0, p1}, Lcom/vk/common/links/OpenCallback$a;->a(Lcom/vk/common/links/OpenCallback;Z)V
 
     return-void
 .end method

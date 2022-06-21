@@ -19,7 +19,7 @@
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Landroid/util/SparseArray<",
-            "Lcom/vk/im/engine/internal/storage/models/a;",
+            "Lcom/vk/im/engine/internal/storage/models/DialogStorageModel;",
             ">;"
         }
     .end annotation
@@ -29,7 +29,7 @@
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Landroid/util/SparseArray<",
-            "Lcom/vk/im/engine/models/q;",
+            "Lcom/vk/im/engine/models/Weight;",
             ">;"
         }
     .end annotation
@@ -45,10 +45,10 @@
         value = {
             "(",
             "Landroid/util/SparseArray<",
-            "Lcom/vk/im/engine/internal/storage/models/a;",
+            "Lcom/vk/im/engine/internal/storage/models/DialogStorageModel;",
             ">;",
             "Landroid/util/SparseArray<",
-            "Lcom/vk/im/engine/models/q;",
+            "Lcom/vk/im/engine/models/Weight;",
             ">;I)V"
         }
     .end annotation
@@ -73,7 +73,7 @@
         value = {
             "()",
             "Landroid/util/SparseArray<",
-            "Lcom/vk/im/engine/internal/storage/models/a;",
+            "Lcom/vk/im/engine/internal/storage/models/DialogStorageModel;",
             ">;"
         }
     .end annotation
@@ -99,7 +99,7 @@
         value = {
             "()",
             "Landroid/util/SparseArray<",
-            "Lcom/vk/im/engine/models/q;",
+            "Lcom/vk/im/engine/models/Weight;",
             ">;"
         }
     .end annotation
@@ -125,7 +125,7 @@
 
     iget-object v1, p1, Lcom/vk/im/engine/commands/dialogs/DialogsGetByIdFromCacheHelper$a;->a:Landroid/util/SparseArray;
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v0
 
@@ -135,7 +135,7 @@
 
     iget-object v1, p1, Lcom/vk/im/engine/commands/dialogs/DialogsGetByIdFromCacheHelper$a;->b:Landroid/util/SparseArray;
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v0
 

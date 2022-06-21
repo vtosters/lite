@@ -3,12 +3,12 @@
 .source "ImageUploader.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/b;
+.implements Lkotlin/jvm/b/Functions2;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/im/engine/internal/upload/ImageUploader;->a(Lcom/vk/im/engine/models/attaches/h/h;Landroid/net/Uri;)Lcom/vk/im/engine/models/attaches/h/e;
+    value = Lcom/vk/im/engine/internal/upload/ImageUploader;->a(Lcom/vk/im/engine/models/attaches/h/ImageUploadModels2;Landroid/net/Uri;)Lcom/vk/im/engine/models/attaches/h/ImageUploadModels1;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -19,9 +19,9 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/b<",
+        "Lkotlin/jvm/b/Functions2<",
         "Ljava/lang/String;",
-        "Lcom/vk/api/internal/c;",
+        "Lcom/vk/api/internal/HttpPostCall;",
         ">;"
     }
 .end annotation
@@ -50,7 +50,7 @@
 
 
 # virtual methods
-.method public final a(Ljava/lang/String;)Lcom/vk/api/internal/c;
+.method public final a(Ljava/lang/String;)Lcom/vk/api/internal/HttpPostCall;
     .locals 2
 
     .line 1
@@ -58,7 +58,7 @@
 
     iget-object v1, p0, Lcom/vk/im/engine/internal/upload/ImageUploader$upload$uploadHelper$1;->$file:Landroid/net/Uri;
 
-    invoke-static {v0, p1, v1}, Lcom/vk/im/engine/internal/upload/ImageUploader;->a(Lcom/vk/im/engine/internal/upload/ImageUploader;Ljava/lang/String;Landroid/net/Uri;)Lcom/vk/api/internal/c;
+    invoke-static {v0, p1, v1}, Lcom/vk/im/engine/internal/upload/ImageUploader;->a(Lcom/vk/im/engine/internal/upload/ImageUploader;Ljava/lang/String;Landroid/net/Uri;)Lcom/vk/api/internal/HttpPostCall;
 
     move-result-object p1
 
@@ -71,7 +71,7 @@
     .line 1
     check-cast p1, Ljava/lang/String;
 
-    invoke-virtual {p0, p1}, Lcom/vk/im/engine/internal/upload/ImageUploader$upload$uploadHelper$1;->a(Ljava/lang/String;)Lcom/vk/api/internal/c;
+    invoke-virtual {p0, p1}, Lcom/vk/im/engine/internal/upload/ImageUploader$upload$uploadHelper$1;->a(Ljava/lang/String;)Lcom/vk/api/internal/HttpPostCall;
 
     move-result-object p1
 

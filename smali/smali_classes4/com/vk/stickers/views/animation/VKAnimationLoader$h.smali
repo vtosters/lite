@@ -3,7 +3,7 @@
 .source "VKAnimationLoader.kt"
 
 # interfaces
-.implements Lc/a/z/j;
+.implements Lio/reactivex/functions/Function;
 
 
 # annotations
@@ -24,7 +24,7 @@
         "Ljava/lang/Object;",
         ">",
         "Ljava/lang/Object;",
-        "Lc/a/z/j<",
+        "Lio/reactivex/functions/Function<",
         "TT;TR;>;"
     }
 .end annotation
@@ -58,7 +58,7 @@
     invoke-direct {v0, v1, p1}, Lcom/vk/dto/stickers/AnimatedStickerContent;-><init>(Ljava/lang/String;[B)V
 
     .line 2
-    sget-object p1, Lcom/vk/common/j/a;->c:Lcom/vk/common/j/a;
+    sget-object p1, Lcom/vk/common/cache/SerializerCache;->c:Lcom/vk/common/cache/SerializerCache;
 
     sget-object v1, Lcom/vk/stickers/views/animation/VKAnimationLoader;->d:Lcom/vk/stickers/views/animation/VKAnimationLoader;
 
@@ -68,7 +68,7 @@
 
     move-result-object v1
 
-    invoke-virtual {p1, v1, v0}, Lcom/vk/common/j/a;->b(Ljava/lang/String;Lcom/vk/core/serialize/Serializer$StreamParcelable;)V
+    invoke-virtual {p1, v1, v0}, Lcom/vk/common/cache/SerializerCache;->b(Ljava/lang/String;Lcom/vk/core/serialize/Serializer$StreamParcelable;)V
 
     return-void
 .end method
@@ -81,7 +81,7 @@
 
     invoke-virtual {p0, p1}, Lcom/vk/stickers/views/animation/VKAnimationLoader$h;->a([B)V
 
-    sget-object p1, Lkotlin/m;->a:Lkotlin/m;
+    sget-object p1, Lkotlin/Unit;->a:Lkotlin/Unit;
 
     return-object p1
 .end method

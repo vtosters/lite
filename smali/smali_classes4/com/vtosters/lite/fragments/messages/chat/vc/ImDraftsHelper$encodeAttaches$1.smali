@@ -3,7 +3,7 @@
 .source "ImDraftsHelper.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/a;
+.implements Lkotlin/jvm/b/Functions;
 
 
 # annotations
@@ -19,7 +19,7 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/a<",
+        "Lkotlin/jvm/b/Functions<",
         "Ljava/lang/String;",
         ">;"
     }
@@ -119,7 +119,7 @@
     check-cast v4, Lcom/vk/dto/common/Attachment;
 
     .line 8
-    invoke-static {v2, v4}, Lcom/vtosters/lite/attachments/a;->a(Ljava/io/DataOutputStream;Lcom/vk/dto/common/Attachment;)V
+    invoke-static {v2, v4}, Lcom/vtosters/lite/attachments/AttachmentUtils;->a(Ljava/io/DataOutputStream;Lcom/vk/dto/common/Attachment;)V
 
     goto :goto_0
 
@@ -133,7 +133,7 @@
 
     const-string v4, "baos.toByteArray()"
 
-    invoke-static {v3, v4}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v3, v4}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-static {v2, v3}, Lcom/vtosters/lite/fragments/messages/chat/vc/ImDraftsHelper;->a(Lcom/vtosters/lite/fragments/messages/chat/vc/ImDraftsHelper;[B)Ljava/lang/String;
 
@@ -141,7 +141,7 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    invoke-static {v0, v1}, Lkotlin/io/b;->a(Ljava/io/Closeable;Ljava/lang/Throwable;)V
+    invoke-static {v0, v1}, Lkotlin/io/Closeable;->a(Ljava/io/Closeable;Ljava/lang/Throwable;)V
 
     return-object v2
 
@@ -157,7 +157,7 @@
     :catchall_1
     move-exception v2
 
-    invoke-static {v0, v1}, Lkotlin/io/b;->a(Ljava/io/Closeable;Ljava/lang/Throwable;)V
+    invoke-static {v0, v1}, Lkotlin/io/Closeable;->a(Ljava/io/Closeable;Ljava/lang/Throwable;)V
 
     throw v2
 .end method

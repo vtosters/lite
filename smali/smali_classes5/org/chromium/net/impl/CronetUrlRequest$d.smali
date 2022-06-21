@@ -79,7 +79,7 @@
     :try_start_1
     iget-object v0, p0, Lorg/chromium/net/impl/CronetUrlRequest$d;->a:Lorg/chromium/net/impl/CronetUrlRequest;
 
-    invoke-static {v0}, Lorg/chromium/net/impl/CronetUrlRequest;->g(Lorg/chromium/net/impl/CronetUrlRequest;)Lorg/chromium/net/impl/s;
+    invoke-static {v0}, Lorg/chromium/net/impl/CronetUrlRequest;->g(Lorg/chromium/net/impl/CronetUrlRequest;)Lorg/chromium/net/impl/VersionSafeCallbacks5;
 
     move-result-object v0
 
@@ -87,11 +87,11 @@
 
     iget-object v3, p0, Lorg/chromium/net/impl/CronetUrlRequest$d;->a:Lorg/chromium/net/impl/CronetUrlRequest;
 
-    invoke-static {v3}, Lorg/chromium/net/impl/CronetUrlRequest;->f(Lorg/chromium/net/impl/CronetUrlRequest;)Lorg/chromium/net/impl/k;
+    invoke-static {v3}, Lorg/chromium/net/impl/CronetUrlRequest;->f(Lorg/chromium/net/impl/CronetUrlRequest;)Lorg/chromium/net/impl/UrlResponseInfoImpl;
 
     move-result-object v3
 
-    invoke-virtual {v0, v1, v3}, Lorg/chromium/net/impl/s;->c(Lorg/chromium/net/w;Lorg/chromium/net/x;)V
+    invoke-virtual {v0, v1, v3}, Lorg/chromium/net/impl/VersionSafeCallbacks5;->c(Lorg/chromium/net/UrlRequest;Lorg/chromium/net/UrlResponseInfo;)V
 
     .line 7
     iget-object v0, p0, Lorg/chromium/net/impl/CronetUrlRequest$d;->a:Lorg/chromium/net/impl/CronetUrlRequest;
@@ -116,7 +116,7 @@
 
     const-string v0, "Exception in onSucceeded method"
 
-    invoke-static {v1, v0, v3}, Lorg/chromium/base/e;->a(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v1, v0, v3}, Lorg/chromium/base/Log;->a(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     :goto_0
     return-void

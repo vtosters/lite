@@ -3,7 +3,7 @@
 .source "TaskDisposable.kt"
 
 # interfaces
-.implements Lio/reactivex/disposables/b;
+.implements Lio/reactivex/disposables/Disposable;
 
 
 # annotations
@@ -12,7 +12,7 @@
         "Ljava/util/concurrent/atomic/AtomicReference<",
         "Lcom/google/android/play/core/tasks/b<",
         "*>;>;",
-        "Lio/reactivex/disposables/b;"
+        "Lio/reactivex/disposables/Disposable;"
     }
 .end annotation
 

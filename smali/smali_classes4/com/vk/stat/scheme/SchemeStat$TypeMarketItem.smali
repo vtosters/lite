@@ -39,7 +39,7 @@
     return-void
 .end method
 
-.method public synthetic constructor <init>(Lcom/vk/stat/scheme/SchemeStat$TypeMarketItem$Subtype;Ljava/lang/Integer;ILkotlin/jvm/internal/i;)V
+.method public synthetic constructor <init>(Lcom/vk/stat/scheme/SchemeStat$TypeMarketItem$Subtype;Ljava/lang/Integer;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
     .locals 0
 
     and-int/lit8 p3, p3, 0x2
@@ -72,7 +72,7 @@
 
     iget-object v1, p1, Lcom/vk/stat/scheme/SchemeStat$TypeMarketItem;->a:Lcom/vk/stat/scheme/SchemeStat$TypeMarketItem$Subtype;
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v0
 
@@ -82,7 +82,7 @@
 
     iget-object p1, p1, Lcom/vk/stat/scheme/SchemeStat$TypeMarketItem;->b:Ljava/lang/Integer;
 
-    invoke-static {v0, p1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v0, p1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result p1
 

@@ -3,7 +3,7 @@
 .source "QRViewUtils.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/b;
+.implements Lkotlin/jvm/b/Functions2;
 
 
 # annotations
@@ -19,9 +19,9 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/b<",
+        "Lkotlin/jvm/b/Functions2<",
         "Ljava/lang/Integer;",
-        "Lkotlin/m;",
+        "Lkotlin/Unit;",
         ">;"
     }
 .end annotation
@@ -56,7 +56,7 @@
     .line 1
     sget-object p1, Lcom/vk/qrcode/QRViewUtils;->m:Lcom/vk/qrcode/QRViewUtils;
 
-    invoke-virtual {p1}, Lcom/vk/qrcode/QRViewUtils;->a()Lcom/vk/core/dialogs/bottomsheet/e;
+    invoke-virtual {p1}, Lcom/vk/qrcode/QRViewUtils;->a()Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet;
 
     move-result-object p1
 
@@ -64,7 +64,7 @@
 
     const/4 v0, -0x2
 
-    invoke-virtual {p1, v0}, Lcom/vk/core/dialogs/bottomsheet/e;->o0(I)V
+    invoke-virtual {p1, v0}, Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet;->o0(I)V
 
     .line 2
     :cond_0
@@ -91,7 +91,7 @@
 
     invoke-virtual {p0, p1}, Lcom/vk/qrcode/QRViewUtils$forPost$1$$special$$inlined$let$lambda$3$1;->a(I)V
 
-    sget-object p1, Lkotlin/m;->a:Lkotlin/m;
+    sget-object p1, Lkotlin/Unit;->a:Lkotlin/Unit;
 
     return-object p1
 .end method

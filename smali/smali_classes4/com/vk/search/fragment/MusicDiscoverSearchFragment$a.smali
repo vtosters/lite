@@ -3,7 +3,7 @@
 .source "MusicDiscoverSearchFragment.kt"
 
 # interfaces
-.implements Lcom/vk/music/search/b$a;
+.implements Lcom/vk/music/search/MusicSearchModel$a;
 
 
 # annotations
@@ -53,9 +53,9 @@
     if-eqz v0, :cond_0
 
     .line 2
-    sget-object v0, Lb/h/v/d;->c:Lb/h/v/d$a;
+    sget-object v0, Lb/h/v/RxBus;->c:Lb/h/v/RxBus$a;
 
-    invoke-virtual {v0}, Lb/h/v/d$a;->a()Lb/h/v/d;
+    invoke-virtual {v0}, Lb/h/v/RxBus$a;->a()Lb/h/v/RxBus;
 
     move-result-object v0
 
@@ -63,7 +63,7 @@
 
     invoke-direct {v1}, Lcom/vk/search/fragment/DiscoverSearchFragment$c;-><init>()V
 
-    invoke-virtual {v0, v1}, Lb/h/v/d;->a(Ljava/lang/Object;)V
+    invoke-virtual {v0, v1}, Lb/h/v/RxBus;->a(Ljava/lang/Object;)V
 
     :cond_0
     return-void
@@ -75,11 +75,11 @@
     .line 3
     iget-object v0, p0, Lcom/vk/search/fragment/MusicDiscoverSearchFragment$a;->a:Lcom/vk/search/fragment/MusicDiscoverSearchFragment;
 
-    invoke-static {v0}, Lcom/vk/search/fragment/MusicDiscoverSearchFragment;->a(Lcom/vk/search/fragment/MusicDiscoverSearchFragment;)Lkotlin/jvm/b/b;
+    invoke-static {v0}, Lcom/vk/search/fragment/MusicDiscoverSearchFragment;->a(Lcom/vk/search/fragment/MusicDiscoverSearchFragment;)Lkotlin/jvm/b/Functions2;
 
     move-result-object v0
 
-    invoke-interface {v0, p1}, Lkotlin/jvm/b/b;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v0, p1}, Lkotlin/jvm/b/Functions2;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
 
     return-void
 .end method

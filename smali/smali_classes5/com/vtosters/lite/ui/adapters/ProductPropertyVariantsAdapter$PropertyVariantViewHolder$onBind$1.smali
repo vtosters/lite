@@ -3,12 +3,12 @@
 .source "ProductPropertyVariantsAdapter.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/b;
+.implements Lkotlin/jvm/b/Functions2;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vtosters/lite/ui/adapters/ProductPropertyVariantsAdapter$PropertyVariantViewHolder;->a(Lcom/vtosters/lite/ui/holder/market/properties/e;)V
+    value = Lcom/vtosters/lite/ui/adapters/ProductPropertyVariantsAdapter$PropertyVariantViewHolder;->a(Lcom/vtosters/lite/ui/holder/market/properties/ProductPropertyItem;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -19,27 +19,27 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/b<",
+        "Lkotlin/jvm/b/Functions2<",
         "Landroid/view/View;",
-        "Lkotlin/m;",
+        "Lkotlin/Unit;",
         ">;"
     }
 .end annotation
 
 
 # instance fields
-.field final synthetic $item:Lcom/vtosters/lite/ui/holder/market/properties/e;
+.field final synthetic $item:Lcom/vtosters/lite/ui/holder/market/properties/ProductPropertyItem;
 
 .field final synthetic this$0:Lcom/vtosters/lite/ui/adapters/ProductPropertyVariantsAdapter$PropertyVariantViewHolder;
 
 
 # direct methods
-.method constructor <init>(Lcom/vtosters/lite/ui/adapters/ProductPropertyVariantsAdapter$PropertyVariantViewHolder;Lcom/vtosters/lite/ui/holder/market/properties/e;)V
+.method constructor <init>(Lcom/vtosters/lite/ui/adapters/ProductPropertyVariantsAdapter$PropertyVariantViewHolder;Lcom/vtosters/lite/ui/holder/market/properties/ProductPropertyItem;)V
     .locals 0
 
     iput-object p1, p0, Lcom/vtosters/lite/ui/adapters/ProductPropertyVariantsAdapter$PropertyVariantViewHolder$onBind$1;->this$0:Lcom/vtosters/lite/ui/adapters/ProductPropertyVariantsAdapter$PropertyVariantViewHolder;
 
-    iput-object p2, p0, Lcom/vtosters/lite/ui/adapters/ProductPropertyVariantsAdapter$PropertyVariantViewHolder$onBind$1;->$item:Lcom/vtosters/lite/ui/holder/market/properties/e;
+    iput-object p2, p0, Lcom/vtosters/lite/ui/adapters/ProductPropertyVariantsAdapter$PropertyVariantViewHolder$onBind$1;->$item:Lcom/vtosters/lite/ui/holder/market/properties/ProductPropertyItem;
 
     const/4 p1, 0x1
 
@@ -56,13 +56,13 @@
     .line 1
     iget-object p1, p0, Lcom/vtosters/lite/ui/adapters/ProductPropertyVariantsAdapter$PropertyVariantViewHolder$onBind$1;->this$0:Lcom/vtosters/lite/ui/adapters/ProductPropertyVariantsAdapter$PropertyVariantViewHolder;
 
-    invoke-virtual {p1}, Lcom/vtosters/lite/ui/adapters/ProductPropertyVariantsAdapter$PropertyVariantViewHolder;->h0()Lcom/vtosters/lite/ui/holder/market/properties/b;
+    invoke-virtual {p1}, Lcom/vtosters/lite/ui/adapters/ProductPropertyVariantsAdapter$PropertyVariantViewHolder;->h0()Lcom/vtosters/lite/ui/holder/market/properties/OnPropertyVariantClickListener;
 
     move-result-object p1
 
-    iget-object v0, p0, Lcom/vtosters/lite/ui/adapters/ProductPropertyVariantsAdapter$PropertyVariantViewHolder$onBind$1;->$item:Lcom/vtosters/lite/ui/holder/market/properties/e;
+    iget-object v0, p0, Lcom/vtosters/lite/ui/adapters/ProductPropertyVariantsAdapter$PropertyVariantViewHolder$onBind$1;->$item:Lcom/vtosters/lite/ui/holder/market/properties/ProductPropertyItem;
 
-    invoke-interface {p1, v0}, Lcom/vtosters/lite/ui/holder/market/properties/b;->a(Lcom/vtosters/lite/ui/holder/market/properties/e;)V
+    invoke-interface {p1, v0}, Lcom/vtosters/lite/ui/holder/market/properties/OnPropertyVariantClickListener;->a(Lcom/vtosters/lite/ui/holder/market/properties/ProductPropertyItem;)V
 
     return-void
 .end method
@@ -75,7 +75,7 @@
 
     invoke-virtual {p0, p1}, Lcom/vtosters/lite/ui/adapters/ProductPropertyVariantsAdapter$PropertyVariantViewHolder$onBind$1;->a(Landroid/view/View;)V
 
-    sget-object p1, Lkotlin/m;->a:Lkotlin/m;
+    sget-object p1, Lkotlin/Unit;->a:Lkotlin/Unit;
 
     return-object p1
 .end method

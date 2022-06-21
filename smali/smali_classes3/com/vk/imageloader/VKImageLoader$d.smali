@@ -3,12 +3,12 @@
 .source "VKImageLoader.java"
 
 # interfaces
-.implements Lc/a/z/j;
+.implements Lio/reactivex/functions/Function;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/imageloader/VKImageLoader;->b(Ljava/lang/String;)Lc/a/m;
+    value = Lcom/vk/imageloader/VKImageLoader;->b(Ljava/lang/String;)Lio/reactivex/Observable;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -19,7 +19,7 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Ljava/lang/Object;",
-        "Lc/a/z/j<",
+        "Lio/reactivex/functions/Function<",
         "Landroid/graphics/Bitmap;",
         "Landroid/graphics/Bitmap;",
         ">;"
@@ -48,7 +48,7 @@
     .end annotation
 
     .line 1
-    invoke-static {p1}, Lcom/vk/imageloader/d;->a(Landroid/graphics/Bitmap;)Landroid/graphics/Bitmap;
+    invoke-static {p1}, Lcom/vk/imageloader/ImageLoaderUtils;->a(Landroid/graphics/Bitmap;)Landroid/graphics/Bitmap;
 
     move-result-object p1
 

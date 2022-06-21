@@ -3,12 +3,12 @@
 .source "GroupedNotificationsFragment.kt"
 
 # interfaces
-.implements Lc/a/z/g;
+.implements Lio/reactivex/functions/Consumer;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/notifications/GroupedNotificationsFragment;->a(Lc/a/m;ZLcom/vk/lists/t;)V
+    value = Lcom/vk/notifications/GroupedNotificationsFragment;->a(Lio/reactivex/Observable;ZLcom/vk/lists/PaginationHelper;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -22,8 +22,8 @@
         "Ljava/lang/Object;",
         ">",
         "Ljava/lang/Object;",
-        "Lc/a/z/g<",
-        "Lcom/vk/dto/notifications/b;",
+        "Lio/reactivex/functions/Consumer<",
+        "Lcom/vk/dto/notifications/NotificationsGetGroupedResponse;",
         ">;"
     }
 .end annotation
@@ -32,16 +32,16 @@
 # instance fields
 .field final synthetic a:Lcom/vk/notifications/GroupedNotificationsFragment;
 
-.field final synthetic b:Lcom/vk/lists/t;
+.field final synthetic b:Lcom/vk/lists/PaginationHelper;
 
 
 # direct methods
-.method constructor <init>(Lcom/vk/notifications/GroupedNotificationsFragment;Lcom/vk/lists/t;)V
+.method constructor <init>(Lcom/vk/notifications/GroupedNotificationsFragment;Lcom/vk/lists/PaginationHelper;)V
     .locals 0
 
     iput-object p1, p0, Lcom/vk/notifications/GroupedNotificationsFragment$h;->a:Lcom/vk/notifications/GroupedNotificationsFragment;
 
-    iput-object p2, p0, Lcom/vk/notifications/GroupedNotificationsFragment$h;->b:Lcom/vk/lists/t;
+    iput-object p2, p0, Lcom/vk/notifications/GroupedNotificationsFragment$h;->b:Lcom/vk/lists/PaginationHelper;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -50,13 +50,13 @@
 
 
 # virtual methods
-.method public final a(Lcom/vk/dto/notifications/b;)V
+.method public final a(Lcom/vk/dto/notifications/NotificationsGetGroupedResponse;)V
     .locals 5
 
     .line 1
-    iget-object v0, p0, Lcom/vk/notifications/GroupedNotificationsFragment$h;->b:Lcom/vk/lists/t;
+    iget-object v0, p0, Lcom/vk/notifications/GroupedNotificationsFragment$h;->b:Lcom/vk/lists/PaginationHelper;
 
-    invoke-virtual {v0}, Lcom/vk/lists/t;->b()Ljava/lang/String;
+    invoke-virtual {v0}, Lcom/vk/lists/PaginationHelper;->b()Ljava/lang/String;
 
     move-result-object v0
 
@@ -75,7 +75,7 @@
     .line 2
     iget-object v0, p0, Lcom/vk/notifications/GroupedNotificationsFragment$h;->a:Lcom/vk/notifications/GroupedNotificationsFragment;
 
-    invoke-virtual {p1}, Lcom/vk/dto/notifications/b;->b()I
+    invoke-virtual {p1}, Lcom/vk/dto/notifications/NotificationsGetGroupedResponse;->b()I
 
     move-result v3
 
@@ -108,7 +108,7 @@
 
     if-eqz v0, :cond_2
 
-    invoke-virtual {p1}, Lcom/vk/dto/notifications/b;->d()I
+    invoke-virtual {p1}, Lcom/vk/dto/notifications/NotificationsGetGroupedResponse;->d()I
 
     move-result v3
 
@@ -130,7 +130,7 @@
 
     move-result v3
 
-    invoke-virtual {p1}, Lcom/vk/dto/notifications/b;->d()I
+    invoke-virtual {p1}, Lcom/vk/dto/notifications/NotificationsGetGroupedResponse;->d()I
 
     move-result v4
 
@@ -151,7 +151,7 @@
 
     iget-object v3, p0, Lcom/vk/notifications/GroupedNotificationsFragment$h;->a:Lcom/vk/notifications/GroupedNotificationsFragment;
 
-    invoke-virtual {p1}, Lcom/vk/dto/notifications/b;->a()Ljava/util/ArrayList;
+    invoke-virtual {p1}, Lcom/vk/dto/notifications/NotificationsGetGroupedResponse;->a()Ljava/util/ArrayList;
 
     move-result-object v4
 
@@ -161,18 +161,18 @@
 
     .line 7
     :cond_3
-    iget-object v0, p0, Lcom/vk/notifications/GroupedNotificationsFragment$h;->b:Lcom/vk/lists/t;
+    iget-object v0, p0, Lcom/vk/notifications/GroupedNotificationsFragment$h;->b:Lcom/vk/lists/PaginationHelper;
 
-    invoke-virtual {p1}, Lcom/vk/dto/notifications/b;->c()Ljava/lang/String;
+    invoke-virtual {p1}, Lcom/vk/dto/notifications/NotificationsGetGroupedResponse;->c()Ljava/lang/String;
 
     move-result-object v3
 
-    invoke-virtual {v0, v3}, Lcom/vk/lists/t;->a(Ljava/lang/String;)V
+    invoke-virtual {v0, v3}, Lcom/vk/lists/PaginationHelper;->a(Ljava/lang/String;)V
 
     .line 8
-    iget-object v0, p0, Lcom/vk/notifications/GroupedNotificationsFragment$h;->b:Lcom/vk/lists/t;
+    iget-object v0, p0, Lcom/vk/notifications/GroupedNotificationsFragment$h;->b:Lcom/vk/lists/PaginationHelper;
 
-    invoke-virtual {p1}, Lcom/vk/dto/notifications/b;->c()Ljava/lang/String;
+    invoke-virtual {p1}, Lcom/vk/dto/notifications/NotificationsGetGroupedResponse;->c()Ljava/lang/String;
 
     move-result-object v3
 
@@ -200,11 +200,11 @@
     :goto_2
     if-nez v3, :cond_6
 
-    invoke-virtual {p1}, Lcom/vk/dto/notifications/b;->c()Ljava/lang/String;
+    invoke-virtual {p1}, Lcom/vk/dto/notifications/NotificationsGetGroupedResponse;->c()Ljava/lang/String;
 
     move-result-object p1
 
-    invoke-static {p1, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {p1, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result p1
 
@@ -218,7 +218,7 @@
     const/4 v2, 0x0
 
     :goto_3
-    invoke-virtual {v0, v2}, Lcom/vk/lists/t;->b(Z)V
+    invoke-virtual {v0, v2}, Lcom/vk/lists/PaginationHelper;->b(Z)V
 
     return-void
 .end method
@@ -227,9 +227,9 @@
     .locals 0
 
     .line 1
-    check-cast p1, Lcom/vk/dto/notifications/b;
+    check-cast p1, Lcom/vk/dto/notifications/NotificationsGetGroupedResponse;
 
-    invoke-virtual {p0, p1}, Lcom/vk/notifications/GroupedNotificationsFragment$h;->a(Lcom/vk/dto/notifications/b;)V
+    invoke-virtual {p0, p1}, Lcom/vk/notifications/GroupedNotificationsFragment$h;->a(Lcom/vk/dto/notifications/NotificationsGetGroupedResponse;)V
 
     return-void
 .end method

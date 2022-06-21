@@ -3,12 +3,12 @@
 .source "CommentThreadPresenter.kt"
 
 # interfaces
-.implements Lc/a/z/g;
+.implements Lio/reactivex/functions/Consumer;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/wall/thread/CommentThreadPresenter;->f(Lcom/vtosters/lite/q;)V
+    value = Lcom/vk/wall/thread/CommentThreadPresenter;->f(Lcom/vtosters/lite/Comment;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -22,7 +22,7 @@
         "Ljava/lang/Object;",
         ">",
         "Ljava/lang/Object;",
-        "Lc/a/z/g<",
+        "Lio/reactivex/functions/Consumer<",
         "Ljava/lang/Boolean;",
         ">;"
     }
@@ -34,18 +34,18 @@
 
 .field final synthetic b:I
 
-.field final synthetic c:Lcom/vtosters/lite/q;
+.field final synthetic c:Lcom/vtosters/lite/Comment;
 
 
 # direct methods
-.method constructor <init>(Lcom/vk/wall/thread/CommentThreadPresenter;ILcom/vtosters/lite/q;)V
+.method constructor <init>(Lcom/vk/wall/thread/CommentThreadPresenter;ILcom/vtosters/lite/Comment;)V
     .locals 0
 
     iput-object p1, p0, Lcom/vk/wall/thread/CommentThreadPresenter$c;->a:Lcom/vk/wall/thread/CommentThreadPresenter;
 
     iput p2, p0, Lcom/vk/wall/thread/CommentThreadPresenter$c;->b:I
 
-    iput-object p3, p0, Lcom/vk/wall/thread/CommentThreadPresenter$c;->c:Lcom/vtosters/lite/q;
+    iput-object p3, p0, Lcom/vk/wall/thread/CommentThreadPresenter$c;->c:Lcom/vtosters/lite/Comment;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -60,11 +60,11 @@
     .line 1
     iget-object p1, p0, Lcom/vk/wall/thread/CommentThreadPresenter$c;->a:Lcom/vk/wall/thread/CommentThreadPresenter;
 
-    invoke-virtual {p1}, Lcom/vk/wall/thread/CommentThreadPresenter;->r()Lcom/vk/lists/o;
+    invoke-virtual {p1}, Lcom/vk/wall/thread/CommentThreadPresenter;->r()Lcom/vk/lists/ListDataSet;
 
     move-result-object p1
 
-    invoke-virtual {p1}, Lcom/vk/lists/o;->size()I
+    invoke-virtual {p1}, Lcom/vk/lists/ListDataSet;->size()I
 
     move-result p1
 
@@ -76,20 +76,20 @@
     .line 2
     iget-object v1, p0, Lcom/vk/wall/thread/CommentThreadPresenter$c;->a:Lcom/vk/wall/thread/CommentThreadPresenter;
 
-    invoke-virtual {v1}, Lcom/vk/wall/thread/CommentThreadPresenter;->r()Lcom/vk/lists/o;
+    invoke-virtual {v1}, Lcom/vk/wall/thread/CommentThreadPresenter;->r()Lcom/vk/lists/ListDataSet;
 
     move-result-object v1
 
-    invoke-virtual {v1, v0}, Lcom/vk/lists/o;->k(I)Ljava/lang/Object;
+    invoke-virtual {v1, v0}, Lcom/vk/lists/ListDataSet;->k(I)Ljava/lang/Object;
 
     move-result-object v1
 
-    check-cast v1, Lcom/vk/wall/b;
+    check-cast v1, Lcom/vk/wall/CommentDisplayItem;
 
     if-eqz v1, :cond_1
 
     .line 3
-    invoke-virtual {v1}, Lcom/vk/wall/b;->a()Lcom/vtosters/lite/q;
+    invoke-virtual {v1}, Lcom/vk/wall/CommentDisplayItem;->a()Lcom/vtosters/lite/Comment;
 
     move-result-object v1
 
@@ -131,26 +131,26 @@
     :goto_1
     iget-object p1, p0, Lcom/vk/wall/thread/CommentThreadPresenter$c;->a:Lcom/vk/wall/thread/CommentThreadPresenter;
 
-    invoke-virtual {p1}, Lcom/vk/wall/thread/CommentThreadPresenter;->y()Lcom/vk/wall/g/b;
+    invoke-virtual {p1}, Lcom/vk/wall/thread/CommentThreadPresenter;->y()Lcom/vk/wall/g/PaginationDelegate;
 
     move-result-object p1
 
     if-eqz p1, :cond_3
 
-    invoke-interface {p1}, Lcom/vk/wall/g/b;->c()V
+    invoke-interface {p1}, Lcom/vk/wall/g/PaginationDelegate;->c()V
 
     .line 8
     iget-object p1, p0, Lcom/vk/wall/thread/CommentThreadPresenter$c;->a:Lcom/vk/wall/thread/CommentThreadPresenter;
 
-    iget-object v0, p0, Lcom/vk/wall/thread/CommentThreadPresenter$c;->c:Lcom/vtosters/lite/q;
+    iget-object v0, p0, Lcom/vk/wall/thread/CommentThreadPresenter$c;->c:Lcom/vtosters/lite/Comment;
 
-    invoke-virtual {p1, v0}, Lcom/vk/wall/thread/CommentThreadPresenter;->j(Lcom/vtosters/lite/q;)V
+    invoke-virtual {p1, v0}, Lcom/vk/wall/thread/CommentThreadPresenter;->j(Lcom/vtosters/lite/Comment;)V
 
     return-void
 
     .line 9
     :cond_3
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     const/4 p1, 0x0
 

@@ -38,11 +38,11 @@
     .locals 8
 
     .line 1
-    invoke-static {}, Lcom/vk/stickers/bridge/l;->a()Lcom/vk/stickers/bridge/k;
+    invoke-static {}, Lcom/vk/stickers/bridge/StickersBridge4;->a()Lcom/vk/stickers/bridge/StickersBridge;
 
     move-result-object p1
 
-    invoke-interface {p1}, Lcom/vk/stickers/bridge/k;->b()Lcom/vk/stickers/bridge/j;
+    invoke-interface {p1}, Lcom/vk/stickers/bridge/StickersBridge;->b()Lcom/vk/stickers/bridge/StickersBridge7;
 
     move-result-object p1
 
@@ -52,15 +52,15 @@
 
     move-result-object v0
 
-    invoke-static {}, Lcom/vk/stickers/bridge/l;->a()Lcom/vk/stickers/bridge/k;
+    invoke-static {}, Lcom/vk/stickers/bridge/StickersBridge4;->a()Lcom/vk/stickers/bridge/StickersBridge;
 
     move-result-object v1
 
-    invoke-interface {v1}, Lcom/vk/stickers/bridge/k;->b()Lcom/vk/stickers/bridge/j;
+    invoke-interface {v1}, Lcom/vk/stickers/bridge/StickersBridge;->b()Lcom/vk/stickers/bridge/StickersBridge7;
 
     move-result-object v1
 
-    invoke-interface {v1}, Lcom/vk/stickers/bridge/j;->b()Ljava/lang/String;
+    invoke-interface {v1}, Lcom/vk/stickers/bridge/StickersBridge7;->b()Ljava/lang/String;
 
     move-result-object v1
 
@@ -70,10 +70,10 @@
 
     const/4 v1, 0x1
 
-    invoke-interface {p1, v0, v1}, Lcom/vk/stickers/bridge/j;->a(ZZ)V
+    invoke-interface {p1, v0, v1}, Lcom/vk/stickers/bridge/StickersBridge7;->a(ZZ)V
 
     .line 2
-    sget-object v2, Lcom/vk/core/util/h0;->a:Lcom/vk/core/util/h0;
+    sget-object v2, Lcom/vk/core/util/GooglePlayUtils;->a:Lcom/vk/core/util/GooglePlayUtils;
 
     iget-object p1, p0, Lcom/vk/stickers/details/BuyPackController$c;->a:Lcom/vk/stickers/details/BuyPackController$b;
 
@@ -81,15 +81,15 @@
 
     move-result-object v3
 
-    invoke-static {}, Lcom/vk/stickers/bridge/l;->a()Lcom/vk/stickers/bridge/k;
+    invoke-static {}, Lcom/vk/stickers/bridge/StickersBridge4;->a()Lcom/vk/stickers/bridge/StickersBridge;
 
     move-result-object p1
 
-    invoke-interface {p1}, Lcom/vk/stickers/bridge/k;->b()Lcom/vk/stickers/bridge/j;
+    invoke-interface {p1}, Lcom/vk/stickers/bridge/StickersBridge;->b()Lcom/vk/stickers/bridge/StickersBridge7;
 
     move-result-object p1
 
-    invoke-interface {p1}, Lcom/vk/stickers/bridge/j;->b()Ljava/lang/String;
+    invoke-interface {p1}, Lcom/vk/stickers/bridge/StickersBridge7;->b()Ljava/lang/String;
 
     move-result-object v4
 
@@ -99,7 +99,7 @@
 
     const/4 v7, 0x0
 
-    invoke-static/range {v2 .. v7}, Lcom/vk/core/util/h0;->a(Lcom/vk/core/util/h0;Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;ILjava/lang/Object;)V
+    invoke-static/range {v2 .. v7}, Lcom/vk/core/util/GooglePlayUtils;->a(Lcom/vk/core/util/GooglePlayUtils;Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;ILjava/lang/Object;)V
 
     return-void
 .end method

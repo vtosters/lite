@@ -3,12 +3,12 @@
 .source "MsgFailAudioTranscriptWithDelayJob.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/b;
+.implements Lkotlin/jvm/b/Functions2;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/im/engine/internal/jobs/msg/MsgFailAudioTranscriptWithDelayJob;->a(Lcom/vk/im/engine/d;Lcom/vk/instantjobs/InstantJob$b;)V
+    value = Lcom/vk/im/engine/internal/jobs/msg/MsgFailAudioTranscriptWithDelayJob;->a(Lcom/vk/im/engine/ImEnvironment;Lcom/vk/instantjobs/InstantJob$b;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -19,9 +19,9 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/b<",
+        "Lkotlin/jvm/b/Functions2<",
         "Lcom/vk/im/engine/internal/storage/StorageManager;",
-        "Lkotlin/m;",
+        "Lkotlin/Unit;",
         ">;"
     }
 .end annotation
@@ -32,18 +32,18 @@
 
 .field final synthetic $dialogId:Lkotlin/jvm/internal/Ref$IntRef;
 
-.field final synthetic $env:Lcom/vk/im/engine/d;
+.field final synthetic $env:Lcom/vk/im/engine/ImEnvironment;
 
 .field final synthetic this$0:Lcom/vk/im/engine/internal/jobs/msg/MsgFailAudioTranscriptWithDelayJob;
 
 
 # direct methods
-.method constructor <init>(Lcom/vk/im/engine/internal/jobs/msg/MsgFailAudioTranscriptWithDelayJob;Lcom/vk/im/engine/d;Lkotlin/jvm/internal/Ref$BooleanRef;Lkotlin/jvm/internal/Ref$IntRef;)V
+.method constructor <init>(Lcom/vk/im/engine/internal/jobs/msg/MsgFailAudioTranscriptWithDelayJob;Lcom/vk/im/engine/ImEnvironment;Lkotlin/jvm/internal/Ref$BooleanRef;Lkotlin/jvm/internal/Ref$IntRef;)V
     .locals 0
 
     iput-object p1, p0, Lcom/vk/im/engine/internal/jobs/msg/MsgFailAudioTranscriptWithDelayJob$onExecute$1;->this$0:Lcom/vk/im/engine/internal/jobs/msg/MsgFailAudioTranscriptWithDelayJob;
 
-    iput-object p2, p0, Lcom/vk/im/engine/internal/jobs/msg/MsgFailAudioTranscriptWithDelayJob$onExecute$1;->$env:Lcom/vk/im/engine/d;
+    iput-object p2, p0, Lcom/vk/im/engine/internal/jobs/msg/MsgFailAudioTranscriptWithDelayJob$onExecute$1;->$env:Lcom/vk/im/engine/ImEnvironment;
 
     iput-object p3, p0, Lcom/vk/im/engine/internal/jobs/msg/MsgFailAudioTranscriptWithDelayJob$onExecute$1;->$attachChanged:Lkotlin/jvm/internal/Ref$BooleanRef;
 
@@ -62,9 +62,9 @@
     .locals 5
 
     .line 1
-    iget-object p1, p0, Lcom/vk/im/engine/internal/jobs/msg/MsgFailAudioTranscriptWithDelayJob$onExecute$1;->$env:Lcom/vk/im/engine/d;
+    iget-object p1, p0, Lcom/vk/im/engine/internal/jobs/msg/MsgFailAudioTranscriptWithDelayJob$onExecute$1;->$env:Lcom/vk/im/engine/ImEnvironment;
 
-    invoke-interface {p1}, Lcom/vk/im/engine/d;->a0()Lcom/vk/im/engine/internal/storage/StorageManager;
+    invoke-interface {p1}, Lcom/vk/im/engine/ImEnvironment;->a0()Lcom/vk/im/engine/internal/storage/StorageManager;
 
     move-result-object p1
 
@@ -115,7 +115,7 @@
 
     const/4 v2, 0x1
 
-    invoke-virtual {v0, v1, v2}, Lcom/vk/im/engine/models/messages/MsgFromUser;->a(Lkotlin/jvm/b/b;Z)Lcom/vk/im/engine/models/attaches/Attach;
+    invoke-virtual {v0, v1, v2}, Lcom/vk/im/engine/models/messages/MsgFromUser;->a(Lkotlin/jvm/b/Functions2;Z)Lcom/vk/im/engine/models/attaches/Attach;
 
     move-result-object v0
 
@@ -155,9 +155,9 @@
     invoke-virtual {v1, v4}, Lcom/vk/im/engine/models/attaches/AttachAudioMsg;->e(I)V
 
     .line 8
-    iget-object p1, p0, Lcom/vk/im/engine/internal/jobs/msg/MsgFailAudioTranscriptWithDelayJob$onExecute$1;->$env:Lcom/vk/im/engine/d;
+    iget-object p1, p0, Lcom/vk/im/engine/internal/jobs/msg/MsgFailAudioTranscriptWithDelayJob$onExecute$1;->$env:Lcom/vk/im/engine/ImEnvironment;
 
-    invoke-interface {p1}, Lcom/vk/im/engine/d;->a0()Lcom/vk/im/engine/internal/storage/StorageManager;
+    invoke-interface {p1}, Lcom/vk/im/engine/ImEnvironment;->a0()Lcom/vk/im/engine/internal/storage/StorageManager;
 
     move-result-object p1
 
@@ -180,7 +180,7 @@
 
     invoke-virtual {p0, p1}, Lcom/vk/im/engine/internal/jobs/msg/MsgFailAudioTranscriptWithDelayJob$onExecute$1;->a(Lcom/vk/im/engine/internal/storage/StorageManager;)V
 
-    sget-object p1, Lkotlin/m;->a:Lkotlin/m;
+    sget-object p1, Lkotlin/Unit;->a:Lkotlin/Unit;
 
     return-object p1
 .end method

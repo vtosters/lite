@@ -3,7 +3,7 @@
 .source "StoryRepliesAndViewersView.kt"
 
 # interfaces
-.implements Lc/a/z/g;
+.implements Lio/reactivex/functions/Consumer;
 
 
 # annotations
@@ -22,7 +22,7 @@
         "Ljava/lang/Object;",
         ">",
         "Ljava/lang/Object;",
-        "Lc/a/z/g<",
+        "Lio/reactivex/functions/Consumer<",
         "Ljava/lang/Object;",
         ">;"
     }
@@ -50,13 +50,13 @@
     .locals 5
 
     .line 1
-    instance-of v0, p1, Lcom/vk/stories/util/g;
+    instance-of v0, p1, Lcom/vk/stories/util/StoryQuestionOptionsHelper1;
 
     if-eqz v0, :cond_1
 
-    check-cast p1, Lcom/vk/stories/util/g;
+    check-cast p1, Lcom/vk/stories/util/StoryQuestionOptionsHelper1;
 
-    invoke-interface {p1}, Lcom/vk/stories/util/g;->a()I
+    invoke-interface {p1}, Lcom/vk/stories/util/StoryQuestionOptionsHelper1;->a()I
 
     move-result v0
 
@@ -73,13 +73,13 @@
     .line 2
     iget-object v0, p0, Lcom/vk/stories/StoryRepliesAndViewersView$e$a;->a:Lcom/vk/stories/StoryRepliesAndViewersView$e;
 
-    invoke-virtual {v0}, Lcom/vk/lists/i0;->f()Ljava/util/List;
+    invoke-virtual {v0}, Lcom/vk/lists/SimpleAdapter;->f()Ljava/util/List;
 
     move-result-object v0
 
     const-string v1, "list"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     const/4 v2, 0x0
 
@@ -97,7 +97,7 @@
     move-result-object v3
 
     .line 4
-    invoke-interface {p1, v3}, Lcom/vk/stories/util/g;->a(Ljava/util/List;)Ljava/util/List;
+    invoke-interface {p1, v3}, Lcom/vk/stories/util/StoryQuestionOptionsHelper1;->a(Ljava/util/List;)Ljava/util/List;
 
     move-result-object p1
 
@@ -114,7 +114,7 @@
 
     move-result-object v0
 
-    invoke-virtual {p1, v0}, Lcom/vk/lists/i0;->setItems(Ljava/util/List;)V
+    invoke-virtual {p1, v0}, Lcom/vk/lists/SimpleAdapter;->setItems(Ljava/util/List;)V
 
     goto :goto_0
 
@@ -131,17 +131,17 @@
     .line 7
     iget-object v0, p0, Lcom/vk/stories/StoryRepliesAndViewersView$e$a;->a:Lcom/vk/stories/StoryRepliesAndViewersView$e;
 
-    invoke-virtual {v0}, Lcom/vk/lists/i0;->f()Ljava/util/List;
+    invoke-virtual {v0}, Lcom/vk/lists/SimpleAdapter;->f()Ljava/util/List;
 
     move-result-object v0
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-static {p1}, Lkotlin/collections/l;->a(Ljava/lang/Object;)Ljava/util/List;
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Lcom/vk/core/extensions/c;->b(Ljava/util/Collection;Ljava/util/Collection;)V
+    invoke-static {v0, v1}, Lcom/vk/core/extensions/CollectionExt;->b(Ljava/util/Collection;Ljava/util/Collection;)V
 
     .line 8
     iget-object v0, p0, Lcom/vk/stories/StoryRepliesAndViewersView$e$a;->a:Lcom/vk/stories/StoryRepliesAndViewersView$e;

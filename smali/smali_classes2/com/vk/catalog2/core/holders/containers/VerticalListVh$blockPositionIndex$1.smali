@@ -3,12 +3,12 @@
 .source "VerticalListVh.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/b;
+.implements Lkotlin/jvm/b/Functions2;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/catalog2/core/holders/containers/VerticalListVh;-><init>(Lcom/vk/catalog2/core/a;Lcom/vk/lists/t$k;Lcom/vk/catalog2/core/presenters/c;Lcom/vk/catalog2/core/e;ZI)V
+    value = Lcom/vk/catalog2/core/holders/containers/VerticalListVh;-><init>(Lcom/vk/catalog2/core/CatalogConfiguration;Lcom/vk/lists/PaginationHelper$k;Lcom/vk/catalog2/core/presenters/CatalogPaginationListPresenter;Lcom/vk/catalog2/core/CatalogEntryPointParams;ZI)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -19,7 +19,7 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/FunctionReference;",
-        "Lkotlin/jvm/b/b<",
+        "Lkotlin/jvm/b/Functions2<",
         "Lcom/vk/catalog2/core/blocks/UIBlock;",
         "Ljava/lang/Integer;",
         ">;"
@@ -28,7 +28,7 @@
 
 
 # direct methods
-.method constructor <init>(Lcom/vk/catalog2/core/a;)V
+.method constructor <init>(Lcom/vk/catalog2/core/CatalogConfiguration;)V
     .locals 1
 
     const/4 v0, 0x1
@@ -45,10 +45,10 @@
 
     iget-object v0, p0, Lkotlin/jvm/internal/CallableReference;->receiver:Ljava/lang/Object;
 
-    check-cast v0, Lcom/vk/catalog2/core/a;
+    check-cast v0, Lcom/vk/catalog2/core/CatalogConfiguration;
 
     .line 1
-    invoke-interface {v0, p1}, Lcom/vk/catalog2/core/a;->b(Lcom/vk/catalog2/core/blocks/UIBlock;)I
+    invoke-interface {v0, p1}, Lcom/vk/catalog2/core/CatalogConfiguration;->b(Lcom/vk/catalog2/core/blocks/UIBlock;)I
 
     move-result p1
 
@@ -63,12 +63,12 @@
     return-object v0
 .end method
 
-.method public final f()Lkotlin/u/e;
+.method public final f()Lkotlin/u/KDeclarationContainer;
     .locals 1
 
-    const-class v0, Lcom/vk/catalog2/core/a;
+    const-class v0, Lcom/vk/catalog2/core/CatalogConfiguration;
 
-    invoke-static {v0}, Lkotlin/jvm/internal/o;->a(Ljava/lang/Class;)Lkotlin/u/c;
+    invoke-static {v0}, Lkotlin/jvm/internal/Reflection;->a(Ljava/lang/Class;)Lkotlin/u/KClass;
 
     move-result-object v0
 

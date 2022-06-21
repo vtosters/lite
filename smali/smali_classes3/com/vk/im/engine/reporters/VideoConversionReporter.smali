@@ -60,16 +60,16 @@
     .locals 4
 
     .line 23
-    sget-object v0, Lcom/vk/core/util/v;->b:Lcom/vk/core/util/v;
+    sget-object v0, Lcom/vk/core/util/DeviceState;->b:Lcom/vk/core/util/DeviceState;
 
-    invoke-virtual {v0}, Lcom/vk/core/util/v;->l()Ljava/lang/String;
+    invoke-virtual {v0}, Lcom/vk/core/util/DeviceState;->l()Ljava/lang/String;
 
     move-result-object v0
 
     .line 24
-    sget-object v1, Lcom/vk/core/util/v;->b:Lcom/vk/core/util/v;
+    sget-object v1, Lcom/vk/core/util/DeviceState;->b:Lcom/vk/core/util/DeviceState;
 
-    invoke-virtual {v1}, Lcom/vk/core/util/v;->i()Ljava/lang/String;
+    invoke-virtual {v1}, Lcom/vk/core/util/DeviceState;->i()Ljava/lang/String;
 
     move-result-object v1
 
@@ -157,7 +157,7 @@
 
     move-wide/from16 v16, p2
 
-    invoke-direct/range {v2 .. v19}, Lcom/vk/im/engine/reporters/VideoConversionReporter$a$a;-><init>(Lcom/vk/im/engine/reporters/VideoConversionReporter$CallContext;Ljava/lang/String;JJIIIIIJJILkotlin/jvm/internal/i;)V
+    invoke-direct/range {v2 .. v19}, Lcom/vk/im/engine/reporters/VideoConversionReporter$a$a;-><init>(Lcom/vk/im/engine/reporters/VideoConversionReporter$CallContext;Ljava/lang/String;JJIIIIIJJILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     .line 2
     sget-object v2, Lcom/vk/im/engine/reporters/VideoConversionReporter;->a:Landroid/util/SparseArray;
@@ -181,7 +181,7 @@
     throw v0
 .end method
 
-.method public static final declared-synchronized a(Lcom/vk/im/engine/d;ILcom/vk/im/engine/reporters/VideoConversionReporter$CallContext;JJIIII)V
+.method public static final declared-synchronized a(Lcom/vk/im/engine/ImEnvironment;ILcom/vk/im/engine/reporters/VideoConversionReporter$CallContext;JJIIII)V
     .locals 18
 
     move/from16 v0, p1
@@ -329,14 +329,14 @@
     .line 17
     sget-object v0, Lcom/vk/metrics/formatter/EventNameFormatters;->c:Lcom/vk/metrics/formatter/EventNameFormatters;
 
-    invoke-virtual {v0}, Lcom/vk/metrics/formatter/EventNameFormatters;->a()Lkotlin/jvm/b/b;
+    invoke-virtual {v0}, Lcom/vk/metrics/formatter/EventNameFormatters;->a()Lkotlin/jvm/b/Functions2;
 
     move-result-object v0
 
     const-string v1, "FabricTracker"
 
     .line 18
-    invoke-virtual {p1, v0, v1}, Lcom/vk/im/engine/reporters/VideoConversionReporter$a;->a(Lkotlin/jvm/b/b;Ljava/lang/String;)Lcom/vk/metrics/eventtracking/Event;
+    invoke-virtual {p1, v0, v1}, Lcom/vk/im/engine/reporters/VideoConversionReporter$a;->a(Lkotlin/jvm/b/Functions2;Ljava/lang/String;)Lcom/vk/metrics/eventtracking/Event;
 
     move-result-object v0
 
@@ -348,14 +348,14 @@
     .line 20
     sget-object v0, Lcom/vk/metrics/formatter/EventNameFormatters;->c:Lcom/vk/metrics/formatter/EventNameFormatters;
 
-    invoke-virtual {v0}, Lcom/vk/metrics/formatter/EventNameFormatters;->b()Lkotlin/jvm/b/b;
+    invoke-virtual {v0}, Lcom/vk/metrics/formatter/EventNameFormatters;->b()Lkotlin/jvm/b/Functions2;
 
     move-result-object v0
 
     const-string v1, "StatlogTracker"
 
     .line 21
-    invoke-virtual {p1, v0, v1}, Lcom/vk/im/engine/reporters/VideoConversionReporter$a;->a(Lkotlin/jvm/b/b;Ljava/lang/String;)Lcom/vk/metrics/eventtracking/Event;
+    invoke-virtual {p1, v0, v1}, Lcom/vk/im/engine/reporters/VideoConversionReporter$a;->a(Lkotlin/jvm/b/Functions2;Ljava/lang/String;)Lcom/vk/metrics/eventtracking/Event;
 
     move-result-object p1
 

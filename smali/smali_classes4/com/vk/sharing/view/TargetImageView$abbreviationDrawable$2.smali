@@ -3,7 +3,7 @@
 .source "TargetImageView.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/a;
+.implements Lkotlin/jvm/b/Functions;
 
 
 # annotations
@@ -19,7 +19,7 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/a<",
+        "Lkotlin/jvm/b/Functions<",
         "Lcom/vk/im/ui/views/avatars/AbbreviationAvatarDrawable;",
         ">;"
     }
@@ -57,7 +57,7 @@
 
     const/4 v3, 0x2
 
-    invoke-direct {v0, v1, v2, v3, v2}, Lcom/vk/im/ui/views/avatars/AbbreviationAvatarDrawable;-><init>(Landroid/content/Context;Landroid/graphics/Typeface;ILkotlin/jvm/internal/i;)V
+    invoke-direct {v0, v1, v2, v3, v2}, Lcom/vk/im/ui/views/avatars/AbbreviationAvatarDrawable;-><init>(Landroid/content/Context;Landroid/graphics/Typeface;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     return-object v0
 .end method

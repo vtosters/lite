@@ -55,9 +55,9 @@
     invoke-static {v0, v1}, Lcom/vk/voip/VoipViewModel;->c(Lcom/vk/voip/VoipViewModel;Z)V
 
     .line 2
-    sget-object v0, Lb/h/v/d;->c:Lb/h/v/d$a;
+    sget-object v0, Lb/h/v/RxBus;->c:Lb/h/v/RxBus$a;
 
-    invoke-virtual {v0}, Lb/h/v/d$a;->a()Lb/h/v/d;
+    invoke-virtual {v0}, Lb/h/v/RxBus$a;->a()Lb/h/v/RxBus;
 
     move-result-object v0
 
@@ -65,16 +65,16 @@
 
     invoke-direct {v1}, Lcom/vk/voip/VoipViewModel$d;-><init>()V
 
-    invoke-virtual {v0, v1}, Lb/h/v/d;->a(Ljava/lang/Object;)V
+    invoke-virtual {v0, v1}, Lb/h/v/RxBus;->a(Ljava/lang/Object;)V
 
     .line 3
     sget-object v0, Lcom/vk/voip/VoipViewModel;->Z:Lcom/vk/voip/VoipViewModel;
 
-    invoke-virtual {v0}, Lcom/vk/voip/VoipViewModel;->o()Lkotlin/jvm/b/a;
+    invoke-virtual {v0}, Lcom/vk/voip/VoipViewModel;->o()Lkotlin/jvm/b/Functions;
 
     move-result-object v1
 
-    invoke-interface {v1}, Lkotlin/jvm/b/a;->invoke()Ljava/lang/Object;
+    invoke-interface {v1}, Lkotlin/jvm/b/Functions;->invoke()Ljava/lang/Object;
 
     move-result-object v1
 
@@ -88,7 +88,7 @@
 
     const-string v2, "getContext().getString(R\u2026deo_request_is_cancelled)"
 
-    invoke-static {v1, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-static {v0, v1}, Lcom/vk/voip/VoipViewModel;->b(Lcom/vk/voip/VoipViewModel;Ljava/lang/String;)V
 

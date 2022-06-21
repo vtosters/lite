@@ -3,7 +3,7 @@
 .source "PostingPresenter.kt"
 
 # interfaces
-.implements Lc/a/z/g;
+.implements Lio/reactivex/functions/Consumer;
 
 
 # annotations
@@ -22,7 +22,7 @@
         "Ljava/lang/Object;",
         ">",
         "Ljava/lang/Object;",
-        "Lc/a/z/g<",
+        "Lio/reactivex/functions/Consumer<",
         "Ljava/lang/Object;",
         ">;"
     }
@@ -52,7 +52,7 @@
     .line 1
     iget-object p1, p0, Lcom/vk/newsfeed/posting/PostingPresenter$q;->a:Lcom/vk/newsfeed/posting/PostingPresenter;
 
-    invoke-static {p1}, Lcom/vk/newsfeed/posting/PostingPresenter;->h(Lcom/vk/newsfeed/posting/PostingPresenter;)Lcom/vk/newsfeed/posting/helpers/c;
+    invoke-static {p1}, Lcom/vk/newsfeed/posting/PostingPresenter;->h(Lcom/vk/newsfeed/posting/PostingPresenter;)Lcom/vk/newsfeed/posting/helpers/PostingPostResponseHelper;
 
     move-result-object p1
 
@@ -64,7 +64,7 @@
 
     if-eqz v0, :cond_0
 
-    invoke-virtual {p1, v0}, Lcom/vk/newsfeed/posting/helpers/c;->a(Lcom/vk/api/board/BoardComment;)V
+    invoke-virtual {p1, v0}, Lcom/vk/newsfeed/posting/helpers/PostingPostResponseHelper;->a(Lcom/vk/api/board/BoardComment;)V
 
     :cond_0
     return-void

@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/qrcode/QRViewUtils;->a(Landroid/content/Context;Lcom/vk/qrcode/QRParser;Lcom/vk/qrcode/l;)V
+    value = Lcom/vk/qrcode/QRViewUtils;->a(Landroid/content/Context;Lcom/vk/qrcode/QRParser;Lcom/vk/qrcode/QRTypes6;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -47,7 +47,7 @@
 
     const/4 v0, 0x0
 
-    invoke-virtual {p1, v0}, Lcom/vk/qrcode/QRViewUtils;->a(Lcom/vk/core/dialogs/bottomsheet/e;)V
+    invoke-virtual {p1, v0}, Lcom/vk/qrcode/QRViewUtils;->a(Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet;)V
 
     return-void
 .end method

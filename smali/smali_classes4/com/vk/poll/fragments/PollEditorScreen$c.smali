@@ -1,5 +1,5 @@
 .class public final Lcom/vk/poll/fragments/PollEditorScreen$c;
-.super Lcom/vk/core/util/c1;
+.super Lcom/vk/core/util/TextWatcherAdapter;
 .source "PollEditorFragment.kt"
 
 
@@ -30,7 +30,7 @@
     .line 1
     iput-object p1, p0, Lcom/vk/poll/fragments/PollEditorScreen$c;->a:Lcom/vk/poll/fragments/PollEditorScreen;
 
-    invoke-direct {p0}, Lcom/vk/core/util/c1;-><init>()V
+    invoke-direct {p0}, Lcom/vk/core/util/TextWatcherAdapter;-><init>()V
 
     return-void
 .end method
@@ -47,7 +47,7 @@
 
     move-result-object p1
 
-    sget-object v0, Lkotlin/m;->a:Lkotlin/m;
+    sget-object v0, Lkotlin/Unit;->a:Lkotlin/Unit;
 
     invoke-virtual {p1, v0}, Lio/reactivex/subjects/PublishSubject;->b(Ljava/lang/Object;)V
 

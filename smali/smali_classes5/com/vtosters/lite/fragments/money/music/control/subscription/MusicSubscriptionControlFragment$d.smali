@@ -40,7 +40,7 @@
     .line 1
     iget-object p1, p0, Lcom/vtosters/lite/fragments/money/music/control/subscription/MusicSubscriptionControlFragment$d;->a:Lcom/vtosters/lite/fragments/money/music/control/subscription/MusicSubscriptionControlFragment;
 
-    invoke-static {p1}, Lcom/vtosters/lite/m0/a;->b(Lcom/vk/core/fragments/FragmentImpl;)V
+    invoke-static {p1}, Lcom/vtosters/lite/m0/ToolbarHelper;->b(Lcom/vk/core/fragments/FragmentImpl;)V
 
     return-void
 .end method

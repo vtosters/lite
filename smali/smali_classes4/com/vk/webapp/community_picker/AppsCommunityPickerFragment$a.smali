@@ -3,7 +3,7 @@
 .source "AppsCommunityPickerFragment.kt"
 
 # interfaces
-.implements Lcom/vk/lists/c;
+.implements Lcom/vk/lists/Clearable;
 
 
 # annotations
@@ -21,7 +21,7 @@
         "Landroidx/recyclerview/widget/RecyclerView$Adapter<",
         "Lcom/vk/webapp/community_picker/AppsCommunityPickerFragment$GroupHolder;",
         ">;",
-        "Lcom/vk/lists/c;"
+        "Lcom/vk/lists/Clearable;"
     }
 .end annotation
 
@@ -76,7 +76,7 @@
 
     move-result-object p2
 
-    invoke-virtual {p1, p2}, Lcom/vtosters/lite/ui/b0/i;->a(Ljava/lang/Object;)V
+    invoke-virtual {p1, p2}, Lcom/vtosters/lite/ui/holder/RecyclerHolder;->a(Ljava/lang/Object;)V
 
     return-void
 .end method

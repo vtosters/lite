@@ -333,13 +333,13 @@
 
     move-object/from16 v27, v35
 
-    invoke-direct/range {v1 .. v34}, Lcom/vk/cameraui/builder/CameraParams;-><init>(Ljava/lang/String;Ljava/lang/String;Lcom/vk/cameraui/CameraUI$States;Ljava/util/List;Lcom/vk/dto/stories/entities/StorySharingInfo;ILjava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;ZZLcom/vk/dto/stories/model/StoryEntryExtended;ILjava/lang/String;ILjava/lang/String;Ljava/lang/String;Lcom/vk/dto/stories/model/StoryAnswer;Lcom/vk/dto/stories/model/web/StoryBox;Lcom/vk/dto/stories/StoryPostInfo;Lcom/vk/dto/polls/Poll;Ljava/lang/Integer;ZZLjava/util/List;ZZLcom/vk/dto/photo/Photo;Ljava/lang/String;Lcom/vk/stories/clickable/models/StoryMusicInfo;Ljava/lang/String;Lkotlin/jvm/internal/i;)V
+    invoke-direct/range {v1 .. v34}, Lcom/vk/cameraui/builder/CameraParams;-><init>(Ljava/lang/String;Ljava/lang/String;Lcom/vk/cameraui/CameraUI$States;Ljava/util/List;Lcom/vk/dto/stories/entities/StorySharingInfo;ILjava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;ZZLcom/vk/dto/stories/model/StoryEntryExtended;ILjava/lang/String;ILjava/lang/String;Ljava/lang/String;Lcom/vk/dto/stories/model/StoryAnswer;Lcom/vk/dto/stories/model/web/StoryBox;Lcom/vk/dto/stories/StoryPostInfo;Lcom/vk/dto/polls/Poll;Ljava/lang/Integer;ZZLjava/util/List;ZZLcom/vk/dto/photo/Photo;Ljava/lang/String;Lcom/vk/stories/clickable/models/StoryMusicInfo;Ljava/lang/String;Lkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     return-object v0
 
     .line 36
     :cond_1
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     const/4 v0, 0x0
 
@@ -349,7 +349,7 @@
     const/4 v0, 0x0
 
     .line 37
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     throw v0
 
@@ -357,7 +357,7 @@
     const/4 v0, 0x0
 
     .line 38
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     throw v0
 
@@ -365,7 +365,7 @@
     const/4 v0, 0x0
 
     .line 39
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     throw v0
 .end method

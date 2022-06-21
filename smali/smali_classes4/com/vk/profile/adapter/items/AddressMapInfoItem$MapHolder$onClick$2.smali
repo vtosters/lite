@@ -3,7 +3,7 @@
 .source "AddressMapInfoItem.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/b;
+.implements Lkotlin/jvm/b/Functions2;
 
 
 # annotations
@@ -19,12 +19,12 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/b<",
+        "Lkotlin/jvm/b/Functions2<",
         "Ljava/util/List<",
         "+",
         "Ljava/lang/String;",
         ">;",
-        "Lkotlin/m;",
+        "Lkotlin/Unit;",
         ">;"
     }
 .end annotation
@@ -73,7 +73,7 @@
     const/4 p1, 0x0
 
     .line 1
-    invoke-static {p1}, Lcom/vk/profile/e/f;->a(Z)V
+    invoke-static {p1}, Lcom/vk/profile/e/ProfileTracker1;->a(Z)V
 
     return-void
 .end method
@@ -86,7 +86,7 @@
 
     invoke-virtual {p0, p1}, Lcom/vk/profile/adapter/items/AddressMapInfoItem$MapHolder$onClick$2;->a(Ljava/util/List;)V
 
-    sget-object p1, Lkotlin/m;->a:Lkotlin/m;
+    sget-object p1, Lkotlin/Unit;->a:Lkotlin/Unit;
 
     return-object p1
 .end method

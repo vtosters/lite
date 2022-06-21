@@ -24,7 +24,7 @@
     return-void
 .end method
 
-.method public synthetic constructor <init>(Lkotlin/jvm/internal/i;)V
+.method public synthetic constructor <init>(Lkotlin/jvm/internal/DefaultConstructorMarker;)V
     .locals 0
 
     .line 2
@@ -91,7 +91,7 @@
 
     const/4 v2, 0x0
 
-    invoke-direct {p1, v1, v0, v2}, Lcom/vk/dto/common/data/MerchantRestriction;-><init>(Ljava/util/Map;Ljava/lang/String;Lkotlin/jvm/internal/i;)V
+    invoke-direct {p1, v1, v0, v2}, Lcom/vk/dto/common/data/MerchantRestriction;-><init>(Ljava/util/Map;Ljava/lang/String;Lkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     return-object p1
 .end method
@@ -197,11 +197,11 @@
 
     const-string v2, "jo.optString(\"text\")"
 
-    invoke-static {p1, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     const/4 v2, 0x0
 
-    invoke-direct {v1, v0, p1, v2}, Lcom/vk/dto/common/data/MerchantRestriction;-><init>(Ljava/util/Map;Ljava/lang/String;Lkotlin/jvm/internal/i;)V
+    invoke-direct {v1, v0, p1, v2}, Lcom/vk/dto/common/data/MerchantRestriction;-><init>(Ljava/util/Map;Ljava/lang/String;Lkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     return-object v1
 .end method

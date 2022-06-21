@@ -129,7 +129,7 @@
 
     const-string v1, "intent.getStringExtra(\"new_cover_url\")"
 
-    invoke-static {p2, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p2, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 9
     invoke-interface {p1, v0, p2}, Lcom/vk/profile/ui/photos/ProfileMainPhotosPresenter$a;->b(ILjava/lang/String;)V
@@ -147,7 +147,7 @@
     if-eqz p1, :cond_4
 
     .line 11
-    sget-object p1, Lcom/vk/navigation/q;->S:Ljava/lang/String;
+    sget-object p1, Lcom/vk/navigation/NavigatorKeys;->S:Ljava/lang/String;
 
     invoke-virtual {p2, p1}, Landroid/content/Intent;->getParcelableExtra(Ljava/lang/String;)Landroid/os/Parcelable;
 
@@ -164,7 +164,7 @@
 
     const-string v0, "album"
 
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-interface {p2, p1}, Lcom/vk/profile/ui/photos/ProfileMainPhotosPresenter$a;->a(Lcom/vk/dto/photo/PhotoAlbum;)V
 

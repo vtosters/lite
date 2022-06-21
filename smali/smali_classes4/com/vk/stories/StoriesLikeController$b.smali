@@ -3,12 +3,12 @@
 .source "StoriesLikeController.kt"
 
 # interfaces
-.implements Lc/a/z/g;
+.implements Lio/reactivex/functions/Consumer;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/stories/StoriesLikeController;->a(ZLcom/vk/dto/stories/model/StoryEntry;Lcom/vk/utils/f/d/a;)V
+    value = Lcom/vk/stories/StoriesLikeController;->a(ZLcom/vk/dto/stories/model/StoryEntry;Lcom/vk/utils/f/d/Disposer;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -22,7 +22,7 @@
         "Ljava/lang/Object;",
         ">",
         "Ljava/lang/Object;",
-        "Lc/a/z/g<",
+        "Lio/reactivex/functions/Consumer<",
         "Ljava/lang/Boolean;",
         ">;"
     }
@@ -52,7 +52,7 @@
     .line 1
     sget-object p1, Lcom/vk/stories/StoriesLikeController;->c:Lcom/vk/stories/StoriesLikeController;
 
-    invoke-static {p1}, Lcom/vk/stories/StoriesLikeController;->a(Lcom/vk/stories/StoriesLikeController;)Lb/h/g/l/d;
+    invoke-static {p1}, Lcom/vk/stories/StoriesLikeController;->a(Lcom/vk/stories/StoriesLikeController;)Lb/h/g/l/NotificationCenter;
 
     move-result-object p1
 
@@ -60,7 +60,7 @@
 
     const/16 v1, 0x74
 
-    invoke-virtual {p1, v1, v0}, Lb/h/g/l/d;->a(ILjava/lang/Object;)V
+    invoke-virtual {p1, v1, v0}, Lb/h/g/l/NotificationCenter;->a(ILjava/lang/Object;)V
 
     return-void
 .end method

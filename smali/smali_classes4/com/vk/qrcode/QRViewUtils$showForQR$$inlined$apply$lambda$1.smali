@@ -3,12 +3,12 @@
 .source "QRViewUtils.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/a;
+.implements Lkotlin/jvm/b/Functions;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/qrcode/QRViewUtils;->a(Lcom/vk/qrcode/QRParser;Landroid/app/Activity;Landroid/graphics/drawable/Drawable;Ljava/lang/String;Ljava/lang/Integer;ZLkotlin/jvm/b/a;Landroid/graphics/drawable/Drawable;ZLjava/lang/CharSequence;Ljava/lang/CharSequence;ILandroid/view/View;Lkotlin/Pair;Lkotlin/Pair;Lcom/vk/qrcode/QRViewUtils$a;Lcom/vk/qrcode/QRViewUtils$a;Lkotlin/jvm/b/b;)V
+    value = Lcom/vk/qrcode/QRViewUtils;->a(Lcom/vk/qrcode/QRParser;Landroid/app/Activity;Landroid/graphics/drawable/Drawable;Ljava/lang/String;Ljava/lang/Integer;ZLkotlin/jvm/b/Functions;Landroid/graphics/drawable/Drawable;ZLjava/lang/CharSequence;Ljava/lang/CharSequence;ILandroid/view/View;Lkotlin/Pair;Lkotlin/Pair;Lcom/vk/qrcode/QRViewUtils$a;Lcom/vk/qrcode/QRViewUtils$a;Lkotlin/jvm/b/Functions2;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -19,8 +19,8 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/a<",
-        "Lkotlin/m;",
+        "Lkotlin/jvm/b/Functions<",
+        "Lkotlin/Unit;",
         ">;"
     }
 .end annotation
@@ -39,13 +39,13 @@
 
 .field final synthetic $negativeButton$inlined:Lkotlin/Pair;
 
-.field final synthetic $onShowListener$inlined:Lkotlin/jvm/b/b;
+.field final synthetic $onShowListener$inlined:Lkotlin/jvm/b/Functions2;
 
 .field final synthetic $parser$inlined:Lcom/vk/qrcode/QRParser;
 
 .field final synthetic $photo$inlined:Ljava/lang/String;
 
-.field final synthetic $photoClickListener$inlined:Lkotlin/jvm/b/a;
+.field final synthetic $photoClickListener$inlined:Lkotlin/jvm/b/Functions;
 
 .field final synthetic $photoIndicator$inlined:Landroid/graphics/drawable/Drawable;
 
@@ -65,7 +65,7 @@
 
 
 # direct methods
-.method constructor <init>(Landroid/graphics/drawable/Drawable;Lkotlin/jvm/b/a;Lcom/vk/qrcode/QRParser;Ljava/lang/String;Ljava/lang/Integer;ZLandroid/graphics/drawable/Drawable;Ljava/lang/CharSequence;Ljava/lang/CharSequence;ILandroid/view/View;Lkotlin/Pair;Lcom/vk/qrcode/QRViewUtils$x;Lcom/vk/qrcode/QRViewUtils$a;Lkotlin/Pair;Lcom/vk/qrcode/QRViewUtils$a;Lkotlin/jvm/b/b;Z)V
+.method constructor <init>(Landroid/graphics/drawable/Drawable;Lkotlin/jvm/b/Functions;Lcom/vk/qrcode/QRParser;Ljava/lang/String;Ljava/lang/Integer;ZLandroid/graphics/drawable/Drawable;Ljava/lang/CharSequence;Ljava/lang/CharSequence;ILandroid/view/View;Lkotlin/Pair;Lcom/vk/qrcode/QRViewUtils$x;Lcom/vk/qrcode/QRViewUtils$a;Lkotlin/Pair;Lcom/vk/qrcode/QRViewUtils$a;Lkotlin/jvm/b/Functions2;Z)V
     .locals 2
 
     move-object v0, p0
@@ -76,7 +76,7 @@
 
     move-object v1, p2
 
-    iput-object v1, v0, Lcom/vk/qrcode/QRViewUtils$showForQR$$inlined$apply$lambda$1;->$photoClickListener$inlined:Lkotlin/jvm/b/a;
+    iput-object v1, v0, Lcom/vk/qrcode/QRViewUtils$showForQR$$inlined$apply$lambda$1;->$photoClickListener$inlined:Lkotlin/jvm/b/Functions;
 
     move-object v1, p3
 
@@ -136,7 +136,7 @@
 
     move-object/from16 v1, p17
 
-    iput-object v1, v0, Lcom/vk/qrcode/QRViewUtils$showForQR$$inlined$apply$lambda$1;->$onShowListener$inlined:Lkotlin/jvm/b/b;
+    iput-object v1, v0, Lcom/vk/qrcode/QRViewUtils$showForQR$$inlined$apply$lambda$1;->$onShowListener$inlined:Lkotlin/jvm/b/Functions2;
 
     move/from16 v1, p18
 
@@ -155,23 +155,23 @@
     .locals 1
 
     .line 1
-    invoke-virtual {p0}, Lcom/vk/qrcode/QRViewUtils$showForQR$$inlined$apply$lambda$1;->invoke()Lkotlin/m;
+    invoke-virtual {p0}, Lcom/vk/qrcode/QRViewUtils$showForQR$$inlined$apply$lambda$1;->invoke()Lkotlin/Unit;
 
     move-result-object v0
 
     return-object v0
 .end method
 
-.method public final invoke()Lkotlin/m;
+.method public final invoke()Lkotlin/Unit;
     .locals 2
 
     .line 2
-    iget-object v0, p0, Lcom/vk/qrcode/QRViewUtils$showForQR$$inlined$apply$lambda$1;->$photoClickListener$inlined:Lkotlin/jvm/b/a;
+    iget-object v0, p0, Lcom/vk/qrcode/QRViewUtils$showForQR$$inlined$apply$lambda$1;->$photoClickListener$inlined:Lkotlin/jvm/b/Functions;
 
     if-eqz v0, :cond_0
 
     .line 3
-    invoke-interface {v0}, Lkotlin/jvm/b/a;->invoke()Ljava/lang/Object;
+    invoke-interface {v0}, Lkotlin/jvm/b/Functions;->invoke()Ljava/lang/Object;
 
     .line 4
     sget-object v0, Lcom/vk/qrcode/QRViewUtils;->m:Lcom/vk/qrcode/QRViewUtils;
@@ -188,7 +188,7 @@
     invoke-virtual {v0, v1}, Lcom/vk/qrcode/QRStatsTracker;->a(Lcom/vk/qrcode/QRStatsTracker$Action;)V
 
     .line 6
-    sget-object v0, Lkotlin/m;->a:Lkotlin/m;
+    sget-object v0, Lkotlin/Unit;->a:Lkotlin/Unit;
 
     goto :goto_0
 

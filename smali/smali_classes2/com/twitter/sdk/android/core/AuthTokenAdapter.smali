@@ -12,10 +12,10 @@
     value = {
         "Ljava/lang/Object;",
         "Lcom/google/gson/q<",
-        "Lcom/twitter/sdk/android/core/a;",
+        "Lcom/twitter/sdk/android/core/AuthToken;",
         ">;",
         "Lcom/google/gson/j<",
-        "Lcom/twitter/sdk/android/core/a;",
+        "Lcom/twitter/sdk/android/core/AuthToken;",
         ">;"
     }
 .end annotation
@@ -29,7 +29,7 @@
             "Ljava/lang/String;",
             "Ljava/lang/Class<",
             "+",
-            "Lcom/twitter/sdk/android/core/a;",
+            "Lcom/twitter/sdk/android/core/AuthToken;",
             ">;>;"
         }
     .end annotation
@@ -104,7 +104,7 @@
             "(",
             "Ljava/lang/Class<",
             "+",
-            "Lcom/twitter/sdk/android/core/a;",
+            "Lcom/twitter/sdk/android/core/AuthToken;",
             ">;)",
             "Ljava/lang/String;"
         }
@@ -164,7 +164,7 @@
 
 
 # virtual methods
-.method public a(Lcom/twitter/sdk/android/core/a;Ljava/lang/reflect/Type;Lcom/google/gson/p;)Lcom/google/gson/k;
+.method public a(Lcom/twitter/sdk/android/core/AuthToken;Ljava/lang/reflect/Type;Lcom/google/gson/p;)Lcom/google/gson/k;
     .locals 1
 
     .line 3
@@ -203,16 +203,16 @@
     .locals 0
 
     .line 2
-    check-cast p1, Lcom/twitter/sdk/android/core/a;
+    check-cast p1, Lcom/twitter/sdk/android/core/AuthToken;
 
-    invoke-virtual {p0, p1, p2, p3}, Lcom/twitter/sdk/android/core/AuthTokenAdapter;->a(Lcom/twitter/sdk/android/core/a;Ljava/lang/reflect/Type;Lcom/google/gson/p;)Lcom/google/gson/k;
+    invoke-virtual {p0, p1, p2, p3}, Lcom/twitter/sdk/android/core/AuthTokenAdapter;->a(Lcom/twitter/sdk/android/core/AuthToken;Ljava/lang/reflect/Type;Lcom/google/gson/p;)Lcom/google/gson/k;
 
     move-result-object p1
 
     return-object p1
 .end method
 
-.method public a(Lcom/google/gson/k;Ljava/lang/reflect/Type;Lcom/google/gson/i;)Lcom/twitter/sdk/android/core/a;
+.method public a(Lcom/google/gson/k;Ljava/lang/reflect/Type;Lcom/google/gson/i;)Lcom/twitter/sdk/android/core/AuthToken;
     .locals 1
     .annotation system Ldalvik/annotation/Throws;
         value = {
@@ -259,7 +259,7 @@
 
     move-result-object p1
 
-    check-cast p1, Lcom/twitter/sdk/android/core/a;
+    check-cast p1, Lcom/twitter/sdk/android/core/AuthToken;
 
     return-object p1
 .end method
@@ -273,7 +273,7 @@
     .end annotation
 
     .line 1
-    invoke-virtual {p0, p1, p2, p3}, Lcom/twitter/sdk/android/core/AuthTokenAdapter;->a(Lcom/google/gson/k;Ljava/lang/reflect/Type;Lcom/google/gson/i;)Lcom/twitter/sdk/android/core/a;
+    invoke-virtual {p0, p1, p2, p3}, Lcom/twitter/sdk/android/core/AuthTokenAdapter;->a(Lcom/google/gson/k;Ljava/lang/reflect/Type;Lcom/google/gson/i;)Lcom/twitter/sdk/android/core/AuthToken;
 
     move-result-object p1
 

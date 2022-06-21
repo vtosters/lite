@@ -3,12 +3,12 @@
 .source "MultiCameraEditorPresenter.kt"
 
 # interfaces
-.implements Lc/a/z/g;
+.implements Lio/reactivex/functions/Consumer;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/stories/editor/multi/MultiCameraEditorPresenter;->a(Ljava/util/List;ILcom/vk/cameraui/entities/d;)V
+    value = Lcom/vk/stories/editor/multi/MultiCameraEditorPresenter;->a(Ljava/util/List;ILcom/vk/cameraui/entities/StoryRawData3;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -22,8 +22,8 @@
         "Ljava/lang/Object;",
         ">",
         "Ljava/lang/Object;",
-        "Lc/a/z/g<",
-        "Lio/reactivex/disposables/b;",
+        "Lio/reactivex/functions/Consumer<",
+        "Lio/reactivex/disposables/Disposable;",
         ">;"
     }
 .end annotation
@@ -46,13 +46,13 @@
 
 
 # virtual methods
-.method public final a(Lio/reactivex/disposables/b;)V
+.method public final a(Lio/reactivex/disposables/Disposable;)V
     .locals 2
 
     .line 1
     iget-object p1, p0, Lcom/vk/stories/editor/multi/MultiCameraEditorPresenter$g;->a:Lcom/vk/stories/editor/multi/MultiCameraEditorPresenter;
 
-    invoke-static {p1}, Lcom/vk/stories/editor/multi/MultiCameraEditorPresenter;->p(Lcom/vk/stories/editor/multi/MultiCameraEditorPresenter;)Lcom/vk/stories/editor/multi/h;
+    invoke-static {p1}, Lcom/vk/stories/editor/multi/MultiCameraEditorPresenter;->p(Lcom/vk/stories/editor/multi/MultiCameraEditorPresenter;)Lcom/vk/stories/editor/multi/MultiCameraEditorContract1;
 
     move-result-object p1
 
@@ -67,9 +67,9 @@
     .locals 0
 
     .line 1
-    check-cast p1, Lio/reactivex/disposables/b;
+    check-cast p1, Lio/reactivex/disposables/Disposable;
 
-    invoke-virtual {p0, p1}, Lcom/vk/stories/editor/multi/MultiCameraEditorPresenter$g;->a(Lio/reactivex/disposables/b;)V
+    invoke-virtual {p0, p1}, Lcom/vk/stories/editor/multi/MultiCameraEditorPresenter$g;->a(Lio/reactivex/disposables/Disposable;)V
 
     return-void
 .end method

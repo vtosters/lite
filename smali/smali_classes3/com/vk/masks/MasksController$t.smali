@@ -3,12 +3,12 @@
 .source "MasksController.java"
 
 # interfaces
-.implements Lc/a/z/j;
+.implements Lio/reactivex/functions/Function;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/masks/MasksController;->b(Lcom/vk/dto/masks/Mask;)Lc/a/m;
+    value = Lcom/vk/masks/MasksController;->b(Lcom/vk/dto/masks/Mask;)Lio/reactivex/Observable;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -19,8 +19,8 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Ljava/lang/Object;",
-        "Lc/a/z/j<",
-        "Lcom/vk/api/masks/f;",
+        "Lio/reactivex/functions/Function<",
+        "Lcom/vk/api/masks/MasksResponse;",
         "Lcom/vk/dto/masks/Mask;",
         ">;"
     }
@@ -39,7 +39,7 @@
 
 
 # virtual methods
-.method public a(Lcom/vk/api/masks/f;)Lcom/vk/dto/masks/Mask;
+.method public a(Lcom/vk/api/masks/MasksResponse;)Lcom/vk/dto/masks/Mask;
     .locals 1
     .annotation system Ldalvik/annotation/Throws;
         value = {
@@ -48,7 +48,7 @@
     .end annotation
 
     .line 1
-    iget-object p1, p1, Lcom/vk/api/masks/f;->a:Lcom/vk/dto/common/data/VKList;
+    iget-object p1, p1, Lcom/vk/api/masks/MasksResponse;->a:Lcom/vk/dto/common/data/VKList;
 
     const/4 v0, 0x0
 
@@ -70,9 +70,9 @@
     .end annotation
 
     .line 1
-    check-cast p1, Lcom/vk/api/masks/f;
+    check-cast p1, Lcom/vk/api/masks/MasksResponse;
 
-    invoke-virtual {p0, p1}, Lcom/vk/masks/MasksController$t;->a(Lcom/vk/api/masks/f;)Lcom/vk/dto/masks/Mask;
+    invoke-virtual {p0, p1}, Lcom/vk/masks/MasksController$t;->a(Lcom/vk/api/masks/MasksResponse;)Lcom/vk/dto/masks/Mask;
 
     move-result-object p1
 

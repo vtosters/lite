@@ -40,11 +40,11 @@
     .line 1
     iget-object v0, p0, Lcom/vk/stories/view/question/StoryViewAskQuestionPresenter$a;->a:Lcom/vk/stories/view/question/StoryViewAskQuestionPresenter;
 
-    invoke-static {v0}, Lcom/vk/stories/view/question/StoryViewAskQuestionPresenter;->b(Lcom/vk/stories/view/question/StoryViewAskQuestionPresenter;)Lcom/vk/stories/view/question/c;
+    invoke-static {v0}, Lcom/vk/stories/view/question/StoryViewAskQuestionPresenter;->b(Lcom/vk/stories/view/question/StoryViewAskQuestionPresenter;)Lcom/vk/stories/view/question/StoryViewAskQuestionContract1;
 
     move-result-object v0
 
-    invoke-interface {v0}, Lcom/vk/stories/view/question/c;->dismiss()V
+    invoke-interface {v0}, Lcom/vk/stories/view/question/StoryViewAskQuestionContract1;->dismiss()V
 
     return-void
 .end method

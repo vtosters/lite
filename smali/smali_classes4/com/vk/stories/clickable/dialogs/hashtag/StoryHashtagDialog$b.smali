@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/stories/clickable/dialogs/hashtag/StoryHashtagDialog;-><init>(Landroid/content/Context;ZLcom/vk/stories/clickable/models/d;Lcom/vk/stories/clickable/dialogs/hashtag/a;Ljava/util/List;I)V
+    value = Lcom/vk/stories/clickable/dialogs/hashtag/StoryHashtagDialog;-><init>(Landroid/content/Context;ZLcom/vk/stories/clickable/models/StoryHashtagTypeParams5;Lcom/vk/stories/clickable/dialogs/hashtag/StoryHashtagDialog1;Ljava/util/List;I)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -40,13 +40,13 @@
     .line 1
     iget-object p1, p0, Lcom/vk/stories/clickable/dialogs/hashtag/StoryHashtagDialog$b;->a:Lcom/vk/stories/clickable/dialogs/hashtag/StoryHashtagDialog;
 
-    invoke-virtual {p1}, Lcom/vk/stories/clickable/dialogs/hashtag/StoryHashtagDialog;->getPresenter()Lcom/vk/stories/clickable/dialogs/hashtag/b;
+    invoke-virtual {p1}, Lcom/vk/stories/clickable/dialogs/hashtag/StoryHashtagDialog;->getPresenter()Lcom/vk/stories/clickable/dialogs/hashtag/StoryHashtagDialogContract1;
 
     move-result-object p1
 
     if-eqz p1, :cond_0
 
-    invoke-interface {p1}, Lcom/vk/stories/clickable/i;->d()V
+    invoke-interface {p1}, Lcom/vk/stories/clickable/StoryPrivacyHint;->d()V
 
     :cond_0
     return-void

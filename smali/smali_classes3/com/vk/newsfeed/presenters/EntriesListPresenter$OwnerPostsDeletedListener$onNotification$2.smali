@@ -3,7 +3,7 @@
 .source "EntriesListPresenter.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/b;
+.implements Lkotlin/jvm/b/Functions2;
 
 
 # annotations
@@ -19,8 +19,8 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/b<",
-        "Lcom/vtosters/lite/ui/f0/b;",
+        "Lkotlin/jvm/b/Functions2<",
+        "Lcom/vtosters/lite/ui/f0/PostDisplayItem;",
         "Ljava/lang/Boolean;",
         ">;"
     }
@@ -46,13 +46,13 @@
 
 
 # virtual methods
-.method public final a(Lcom/vtosters/lite/ui/f0/b;)Z
+.method public final a(Lcom/vtosters/lite/ui/f0/PostDisplayItem;)Z
     .locals 4
 
     .line 1
-    iget-object v0, p1, Lcom/vtosters/lite/ui/f0/b;->b:Lcom/vk/dto/newsfeed/entries/NewsEntry;
+    iget-object v0, p1, Lcom/vtosters/lite/ui/f0/PostDisplayItem;->b:Lcom/vk/dto/newsfeed/entries/NewsEntry;
 
-    instance-of v1, v0, Lcom/vk/dto/newsfeed/d;
+    instance-of v1, v0, Lcom/vk/dto/newsfeed/Ownable;
 
     const/4 v2, 0x0
 
@@ -60,9 +60,9 @@
 
     if-eqz v1, :cond_1
 
-    check-cast v0, Lcom/vk/dto/newsfeed/d;
+    check-cast v0, Lcom/vk/dto/newsfeed/Ownable;
 
-    invoke-interface {v0}, Lcom/vk/dto/newsfeed/d;->L0()Lcom/vk/dto/newsfeed/Owner;
+    invoke-interface {v0}, Lcom/vk/dto/newsfeed/Ownable;->L0()Lcom/vk/dto/newsfeed/Owner;
 
     move-result-object v0
 
@@ -84,7 +84,7 @@
     :goto_0
     iget-object v1, p0, Lcom/vk/newsfeed/presenters/EntriesListPresenter$OwnerPostsDeletedListener$onNotification$2;->$sourceId:Ljava/lang/Integer;
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v0
 
@@ -94,15 +94,15 @@
 
     .line 2
     :cond_1
-    iget-object v0, p1, Lcom/vtosters/lite/ui/f0/b;->a:Lcom/vk/dto/newsfeed/entries/NewsEntry;
+    iget-object v0, p1, Lcom/vtosters/lite/ui/f0/PostDisplayItem;->a:Lcom/vk/dto/newsfeed/entries/NewsEntry;
 
-    instance-of v1, v0, Lcom/vk/dto/newsfeed/d;
+    instance-of v1, v0, Lcom/vk/dto/newsfeed/Ownable;
 
     if-eqz v1, :cond_3
 
-    check-cast v0, Lcom/vk/dto/newsfeed/d;
+    check-cast v0, Lcom/vk/dto/newsfeed/Ownable;
 
-    invoke-interface {v0}, Lcom/vk/dto/newsfeed/d;->L0()Lcom/vk/dto/newsfeed/Owner;
+    invoke-interface {v0}, Lcom/vk/dto/newsfeed/Ownable;->L0()Lcom/vk/dto/newsfeed/Owner;
 
     move-result-object v0
 
@@ -124,7 +124,7 @@
     :goto_1
     iget-object v1, p0, Lcom/vk/newsfeed/presenters/EntriesListPresenter$OwnerPostsDeletedListener$onNotification$2;->$sourceId:Ljava/lang/Integer;
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v0
 
@@ -134,7 +134,7 @@
 
     .line 3
     :cond_3
-    iget-object v0, p1, Lcom/vtosters/lite/ui/f0/b;->b:Lcom/vk/dto/newsfeed/entries/NewsEntry;
+    iget-object v0, p1, Lcom/vtosters/lite/ui/f0/PostDisplayItem;->b:Lcom/vk/dto/newsfeed/entries/NewsEntry;
 
     instance-of v1, v0, Lcom/vk/dto/newsfeed/entries/Post;
 
@@ -164,7 +164,7 @@
     .line 4
     :cond_5
     :goto_2
-    iget-object v0, p1, Lcom/vtosters/lite/ui/f0/b;->b:Lcom/vk/dto/newsfeed/entries/NewsEntry;
+    iget-object v0, p1, Lcom/vtosters/lite/ui/f0/PostDisplayItem;->b:Lcom/vk/dto/newsfeed/entries/NewsEntry;
 
     instance-of v1, v0, Lcom/vk/dto/newsfeed/entries/Post;
 
@@ -200,7 +200,7 @@
     :goto_3
     iget-object v1, p0, Lcom/vk/newsfeed/presenters/EntriesListPresenter$OwnerPostsDeletedListener$onNotification$2;->$sourceId:Ljava/lang/Integer;
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v0
 
@@ -210,7 +210,7 @@
 
     .line 5
     :cond_7
-    iget-object p1, p1, Lcom/vtosters/lite/ui/f0/b;->b:Lcom/vk/dto/newsfeed/entries/NewsEntry;
+    iget-object p1, p1, Lcom/vtosters/lite/ui/f0/PostDisplayItem;->b:Lcom/vk/dto/newsfeed/entries/NewsEntry;
 
     instance-of v0, p1, Lcom/vk/dto/newsfeed/entries/Post;
 
@@ -235,7 +235,7 @@
     :cond_8
     iget-object p1, p0, Lcom/vk/newsfeed/presenters/EntriesListPresenter$OwnerPostsDeletedListener$onNotification$2;->$sourceId:Ljava/lang/Integer;
 
-    invoke-static {v2, p1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v2, p1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result p1
 
@@ -254,9 +254,9 @@
     .locals 0
 
     .line 1
-    check-cast p1, Lcom/vtosters/lite/ui/f0/b;
+    check-cast p1, Lcom/vtosters/lite/ui/f0/PostDisplayItem;
 
-    invoke-virtual {p0, p1}, Lcom/vk/newsfeed/presenters/EntriesListPresenter$OwnerPostsDeletedListener$onNotification$2;->a(Lcom/vtosters/lite/ui/f0/b;)Z
+    invoke-virtual {p0, p1}, Lcom/vk/newsfeed/presenters/EntriesListPresenter$OwnerPostsDeletedListener$onNotification$2;->a(Lcom/vtosters/lite/ui/f0/PostDisplayItem;)Z
 
     move-result p1
 

@@ -3,8 +3,8 @@
 .source "NotificationsPresenter.kt"
 
 # interfaces
-.implements Lcom/vk/notifications/k;
-.implements Lcom/vk/lists/t$p;
+.implements Lcom/vk/notifications/NotificationsContract;
+.implements Lcom/vk/lists/PaginationHelper$p;
 
 
 # annotations
@@ -17,8 +17,8 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Ljava/lang/Object;",
-        "Lcom/vk/notifications/k;",
-        "Lcom/vk/lists/t$p<",
+        "Lcom/vk/notifications/NotificationsContract;",
+        "Lcom/vk/lists/PaginationHelper$p<",
         "Lcom/vk/dto/notifications/NotificationsGetResponse;",
         ">;"
     }
@@ -32,13 +32,13 @@
 
 .field private D:Ljava/lang/Integer;
 
-.field private final E:Lcom/vk/notifications/l;
+.field private final E:Lcom/vk/notifications/NotificationsContract1;
 
-.field private final a:Lio/reactivex/disposables/a;
+.field private final a:Lio/reactivex/disposables/CompositeDisposable;
 
-.field private final b:Lcom/vk/core/util/j1;
+.field private final b:Lcom/vk/core/util/TimeoutLock;
 
-.field private final c:Lcom/vk/notifications/h;
+.field private final c:Lcom/vk/notifications/NotificationsAnalytics;
 
 .field private final d:Lcom/vk/notifications/NotificationsDataSet;
 
@@ -48,40 +48,40 @@
 
 .field private final g:Lcom/vk/notifications/NotificationsPresenter$receiver$1;
 
-.field private h:Lcom/vk/lists/t;
+.field private h:Lcom/vk/lists/PaginationHelper;
 
 
 # direct methods
-.method public constructor <init>(Lcom/vk/notifications/l;)V
+.method public constructor <init>(Lcom/vk/notifications/NotificationsContract1;)V
     .locals 2
 
     .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lcom/vk/notifications/NotificationsPresenter;->E:Lcom/vk/notifications/l;
+    iput-object p1, p0, Lcom/vk/notifications/NotificationsPresenter;->E:Lcom/vk/notifications/NotificationsContract1;
 
     .line 2
-    new-instance p1, Lio/reactivex/disposables/a;
+    new-instance p1, Lio/reactivex/disposables/CompositeDisposable;
 
-    invoke-direct {p1}, Lio/reactivex/disposables/a;-><init>()V
+    invoke-direct {p1}, Lio/reactivex/disposables/CompositeDisposable;-><init>()V
 
-    iput-object p1, p0, Lcom/vk/notifications/NotificationsPresenter;->a:Lio/reactivex/disposables/a;
+    iput-object p1, p0, Lcom/vk/notifications/NotificationsPresenter;->a:Lio/reactivex/disposables/CompositeDisposable;
 
     .line 3
-    new-instance p1, Lcom/vk/core/util/j1;
+    new-instance p1, Lcom/vk/core/util/TimeoutLock;
 
     const-wide/16 v0, 0x64
 
-    invoke-direct {p1, v0, v1}, Lcom/vk/core/util/j1;-><init>(J)V
+    invoke-direct {p1, v0, v1}, Lcom/vk/core/util/TimeoutLock;-><init>(J)V
 
-    iput-object p1, p0, Lcom/vk/notifications/NotificationsPresenter;->b:Lcom/vk/core/util/j1;
+    iput-object p1, p0, Lcom/vk/notifications/NotificationsPresenter;->b:Lcom/vk/core/util/TimeoutLock;
 
     .line 4
-    new-instance p1, Lcom/vk/notifications/h;
+    new-instance p1, Lcom/vk/notifications/NotificationsAnalytics;
 
-    invoke-direct {p1}, Lcom/vk/notifications/h;-><init>()V
+    invoke-direct {p1}, Lcom/vk/notifications/NotificationsAnalytics;-><init>()V
 
-    iput-object p1, p0, Lcom/vk/notifications/NotificationsPresenter;->c:Lcom/vk/notifications/h;
+    iput-object p1, p0, Lcom/vk/notifications/NotificationsPresenter;->c:Lcom/vk/notifications/NotificationsAnalytics;
 
     .line 5
     new-instance p1, Lcom/vk/notifications/NotificationsDataSet;
@@ -114,7 +114,7 @@
     return-void
 .end method
 
-.method private final a(ILjava/lang/String;IZLjava/lang/Integer;)Lc/a/m;
+.method private final a(ILjava/lang/String;IZLjava/lang/Integer;)Lio/reactivex/Observable;
     .locals 7
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -123,14 +123,14 @@
             "IZ",
             "Ljava/lang/Integer;",
             ")",
-            "Lc/a/m<",
+            "Lio/reactivex/Observable<",
             "Lcom/vk/dto/notifications/NotificationsGetResponse;",
             ">;"
         }
     .end annotation
 
     .line 9
-    new-instance v6, Lb/h/c/q/g;
+    new-instance v6, Lcom/vk/api/notifications/NotificationsGet;
 
     move-object v0, v6
 
@@ -144,29 +144,29 @@
 
     move-object v5, p5
 
-    invoke-direct/range {v0 .. v5}, Lb/h/c/q/g;-><init>(Ljava/lang/String;IIZLjava/lang/Integer;)V
+    invoke-direct/range {v0 .. v5}, Lcom/vk/api/notifications/NotificationsGet;-><init>(Ljava/lang/String;IIZLjava/lang/Integer;)V
 
     const/4 p1, 0x0
 
     const/4 p2, 0x1
 
     .line 10
-    invoke-static {v6, p1, p2, p1}, Lcom/vk/api/base/d;->d(Lcom/vk/api/base/d;Lcom/vk/api/base/e;ILjava/lang/Object;)Lc/a/m;
+    invoke-static {v6, p1, p2, p1}, Lcom/vk/api/base/ApiRequest;->d(Lcom/vk/api/base/ApiRequest;Lcom/vk/api/base/ApiThreadHolder;ILjava/lang/Object;)Lio/reactivex/Observable;
 
     move-result-object p1
 
     .line 11
-    invoke-static {}, Lc/a/y/c/a;->a()Lc/a/s;
+    invoke-static {}, Lio/reactivex/schedulers/AndroidSchedulers;->a()Lio/reactivex/Scheduler;
 
     move-result-object p2
 
-    invoke-virtual {p1, p2}, Lc/a/m;->a(Lc/a/s;)Lc/a/m;
+    invoke-virtual {p1, p2}, Lio/reactivex/Observable;->a(Lio/reactivex/Scheduler;)Lio/reactivex/Observable;
 
     move-result-object p1
 
     const-string p2, "NotificationsGet(nextFro\u2026dSchedulers.mainThread())"
 
-    invoke-static {p1, p2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, p2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     return-object p1
 .end method
@@ -256,18 +256,18 @@
 
     move-result v4
 
-    const-class v6, Lcom/vtosters/lite/t;
+    const-class v6, Lcom/vtosters/lite/ExpandTextSpan;
 
     invoke-interface {v5, v1, v4, v6}, Landroid/text/Spannable;->getSpans(IILjava/lang/Class;)[Ljava/lang/Object;
 
     move-result-object v4
 
-    check-cast v4, [Lcom/vtosters/lite/t;
+    check-cast v4, [Lcom/vtosters/lite/ExpandTextSpan;
 
     const-string v5, "spans"
 
     .line 41
-    invoke-static {v4, v5}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v4, v5}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     array-length v5, v4
 
@@ -294,7 +294,7 @@
 
     invoke-direct {v5, p0, v3}, Lcom/vk/notifications/NotificationsPresenter$b;-><init>(Lcom/vk/notifications/NotificationsPresenter;Lcom/vk/dto/notifications/NotificationItem;)V
 
-    invoke-virtual {v4, v5}, Lcom/vtosters/lite/t;->a(Landroid/view/View$OnClickListener;)V
+    invoke-virtual {v4, v5}, Lcom/vtosters/lite/ExpandTextSpan;->a(Landroid/view/View$OnClickListener;)V
 
     :cond_2
     add-int/lit8 v2, v2, 0x1
@@ -320,7 +320,7 @@
     move-result v0
 
     .line 31
-    invoke-static {v0}, Lcom/vtosters/lite/w;->k(I)V
+    invoke-static {v0}, Lcom/vtosters/lite/MenuCountersState;->k(I)V
 
     .line 32
     :cond_0
@@ -335,7 +335,7 @@
     move-result v0
 
     .line 33
-    invoke-static {v0}, Lcom/vtosters/lite/w;->e(I)V
+    invoke-static {v0}, Lcom/vtosters/lite/MenuCountersState;->e(I)V
 
     .line 34
     :cond_1
@@ -400,13 +400,13 @@
     return-void
 .end method
 
-.method private final a(Lio/reactivex/disposables/b;)V
+.method private final a(Lio/reactivex/disposables/Disposable;)V
     .locals 1
 
     .line 43
-    iget-object v0, p0, Lcom/vk/notifications/NotificationsPresenter;->a:Lio/reactivex/disposables/a;
+    iget-object v0, p0, Lcom/vk/notifications/NotificationsPresenter;->a:Lio/reactivex/disposables/CompositeDisposable;
 
-    invoke-virtual {v0, p1}, Lio/reactivex/disposables/a;->b(Lio/reactivex/disposables/b;)Z
+    invoke-virtual {v0, p1}, Lio/reactivex/disposables/CompositeDisposable;->b(Lio/reactivex/disposables/Disposable;)Z
 
     return-void
 .end method
@@ -415,9 +415,9 @@
     .locals 7
 
     .line 12
-    iget-object v0, p0, Lcom/vk/notifications/NotificationsPresenter;->b:Lcom/vk/core/util/j1;
+    iget-object v0, p0, Lcom/vk/notifications/NotificationsPresenter;->b:Lcom/vk/core/util/TimeoutLock;
 
-    invoke-virtual {v0}, Lcom/vk/core/util/j1;->a()Z
+    invoke-virtual {v0}, Lcom/vk/core/util/TimeoutLock;->a()Z
 
     move-result v0
 
@@ -429,7 +429,7 @@
     :cond_0
     iget-object v0, p0, Lcom/vk/notifications/NotificationsPresenter;->d:Lcom/vk/notifications/NotificationsDataSet;
 
-    invoke-virtual {v0}, Lcom/vk/lists/o;->size()I
+    invoke-virtual {v0}, Lcom/vk/lists/ListDataSet;->size()I
 
     move-result v0
 
@@ -441,7 +441,7 @@
     if-eqz v6, :cond_2
 
     .line 15
-    iget-object v0, p0, Lcom/vk/notifications/NotificationsPresenter;->h:Lcom/vk/lists/t;
+    iget-object v0, p0, Lcom/vk/notifications/NotificationsPresenter;->h:Lcom/vk/lists/PaginationHelper;
 
     if-eqz v0, :cond_1
 
@@ -455,13 +455,13 @@
 
     move v5, p1
 
-    invoke-direct/range {v1 .. v6}, Lcom/vk/notifications/NotificationsPresenter;->a(ILjava/lang/String;IZLjava/lang/Integer;)Lc/a/m;
+    invoke-direct/range {v1 .. v6}, Lcom/vk/notifications/NotificationsPresenter;->a(ILjava/lang/String;IZLjava/lang/Integer;)Lio/reactivex/Observable;
 
     move-result-object v1
 
     const/4 v2, 0x1
 
-    invoke-virtual {v0, v1, v2}, Lcom/vk/lists/t;->a(Lc/a/m;Z)Lc/a/m;
+    invoke-virtual {v0, v1, v2}, Lcom/vk/lists/PaginationHelper;->a(Lio/reactivex/Observable;Z)Lio/reactivex/Observable;
 
     move-result-object v0
 
@@ -482,24 +482,24 @@
     sget-object p1, Lcom/vk/notifications/NotificationsPresenter$i;->a:Lcom/vk/notifications/NotificationsPresenter$i;
 
     .line 18
-    invoke-virtual {v0, v1, p1}, Lc/a/m;->a(Lc/a/z/g;Lc/a/z/g;)Lio/reactivex/disposables/b;
+    invoke-virtual {v0, v1, p1}, Lio/reactivex/Observable;->a(Lio/reactivex/functions/Consumer;Lio/reactivex/functions/Consumer;)Lio/reactivex/disposables/Disposable;
 
     move-result-object p1
 
     if-eqz p1, :cond_3
 
     .line 19
-    invoke-direct {p0, p1}, Lcom/vk/notifications/NotificationsPresenter;->a(Lio/reactivex/disposables/b;)V
+    invoke-direct {p0, p1}, Lcom/vk/notifications/NotificationsPresenter;->a(Lio/reactivex/disposables/Disposable;)V
 
     goto :goto_1
 
     .line 20
     :cond_2
-    iget-object p1, p0, Lcom/vk/notifications/NotificationsPresenter;->h:Lcom/vk/lists/t;
+    iget-object p1, p0, Lcom/vk/notifications/NotificationsPresenter;->h:Lcom/vk/lists/PaginationHelper;
 
     if-eqz p1, :cond_3
 
-    invoke-virtual {p1}, Lcom/vk/lists/t;->h()V
+    invoke-virtual {p1}, Lcom/vk/lists/PaginationHelper;->h()V
 
     :cond_3
     :goto_1
@@ -534,9 +534,9 @@
     invoke-virtual {v0, v1}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
     .line 5
-    iget-object v1, p0, Lcom/vk/notifications/NotificationsPresenter;->E:Lcom/vk/notifications/l;
+    iget-object v1, p0, Lcom/vk/notifications/NotificationsPresenter;->E:Lcom/vk/notifications/NotificationsContract1;
 
-    invoke-interface {v1}, Lb/h/r/d;->getContext()Landroid/app/Activity;
+    invoke-interface {v1}, Lb/h/r/BaseScreenContract1;->getContext()Landroid/app/Activity;
 
     move-result-object v1
 
@@ -573,16 +573,16 @@
 
     invoke-direct {v1, p0}, Lcom/vk/notifications/NotificationsPresenter$c;-><init>(Lcom/vk/notifications/NotificationsPresenter;)V
 
-    invoke-virtual {v0, v1}, Lcom/vk/lists/b;->a(Landroidx/recyclerview/widget/RecyclerView$AdapterDataObserver;)V
+    invoke-virtual {v0, v1}, Lcom/vk/lists/BaseListDataSet;->a(Landroidx/recyclerview/widget/RecyclerView$AdapterDataObserver;)V
 
     return-void
 .end method
 
-.method public static final synthetic d(Lcom/vk/notifications/NotificationsPresenter;)Lcom/vk/lists/t;
+.method public static final synthetic d(Lcom/vk/notifications/NotificationsPresenter;)Lcom/vk/lists/PaginationHelper;
     .locals 0
 
     .line 1
-    iget-object p0, p0, Lcom/vk/notifications/NotificationsPresenter;->h:Lcom/vk/lists/t;
+    iget-object p0, p0, Lcom/vk/notifications/NotificationsPresenter;->h:Lcom/vk/lists/PaginationHelper;
 
     return-object p0
 .end method
@@ -591,140 +591,140 @@
     .locals 2
 
     .line 2
-    sget-object v0, Lb/h/v/d;->c:Lb/h/v/d$a;
+    sget-object v0, Lb/h/v/RxBus;->c:Lb/h/v/RxBus$a;
 
-    invoke-virtual {v0}, Lb/h/v/d$a;->a()Lb/h/v/d;
+    invoke-virtual {v0}, Lb/h/v/RxBus$a;->a()Lb/h/v/RxBus;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lb/h/v/d;->a()Lc/a/m;
+    invoke-virtual {v0}, Lb/h/v/RxBus;->a()Lio/reactivex/Observable;
 
     move-result-object v0
 
     .line 3
     sget-object v1, Lcom/vk/notifications/NotificationsPresenter$d;->a:Lcom/vk/notifications/NotificationsPresenter$d;
 
-    invoke-virtual {v0, v1}, Lc/a/m;->a(Lc/a/z/l;)Lc/a/m;
+    invoke-virtual {v0, v1}, Lio/reactivex/Observable;->a(Lio/reactivex/functions/Predicate;)Lio/reactivex/Observable;
 
     move-result-object v0
 
     const-string v1, "RxBus.instance.events\n  \u2026aymentNotificationEvent }"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 4
     new-instance v1, Lcom/vk/notifications/NotificationsPresenter$initEventBusListeners$2;
 
     invoke-direct {v1, p0}, Lcom/vk/notifications/NotificationsPresenter$initEventBusListeners$2;-><init>(Lcom/vk/notifications/NotificationsPresenter;)V
 
-    invoke-static {v0, v1}, Lcom/vk/core/extensions/RxExtKt;->a(Lc/a/m;Lkotlin/jvm/b/b;)Lio/reactivex/disposables/b;
+    invoke-static {v0, v1}, Lcom/vk/core/extensions/RxExtKt;->a(Lio/reactivex/Observable;Lkotlin/jvm/b/Functions2;)Lio/reactivex/disposables/Disposable;
 
     move-result-object v0
 
     .line 5
-    invoke-direct {p0, v0}, Lcom/vk/notifications/NotificationsPresenter;->a(Lio/reactivex/disposables/b;)V
+    invoke-direct {p0, v0}, Lcom/vk/notifications/NotificationsPresenter;->a(Lio/reactivex/disposables/Disposable;)V
 
     .line 6
-    sget-object v0, Lb/h/v/d;->c:Lb/h/v/d$a;
+    sget-object v0, Lb/h/v/RxBus;->c:Lb/h/v/RxBus$a;
 
-    invoke-virtual {v0}, Lb/h/v/d$a;->a()Lb/h/v/d;
+    invoke-virtual {v0}, Lb/h/v/RxBus$a;->a()Lb/h/v/RxBus;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lb/h/v/d;->a()Lc/a/m;
+    invoke-virtual {v0}, Lb/h/v/RxBus;->a()Lio/reactivex/Observable;
 
     move-result-object v0
 
     .line 7
     sget-object v1, Lcom/vk/notifications/NotificationsPresenter$e;->a:Lcom/vk/notifications/NotificationsPresenter$e;
 
-    invoke-virtual {v0, v1}, Lc/a/m;->a(Lc/a/z/l;)Lc/a/m;
+    invoke-virtual {v0, v1}, Lio/reactivex/Observable;->a(Lio/reactivex/functions/Predicate;)Lio/reactivex/Observable;
 
     move-result-object v0
 
     const-string v1, "RxBus.instance.events\n  \u2026otificationsReloadEvent }"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 8
     new-instance v1, Lcom/vk/notifications/NotificationsPresenter$initEventBusListeners$4;
 
     invoke-direct {v1, p0}, Lcom/vk/notifications/NotificationsPresenter$initEventBusListeners$4;-><init>(Lcom/vk/notifications/NotificationsPresenter;)V
 
-    invoke-static {v0, v1}, Lcom/vk/core/extensions/RxExtKt;->a(Lc/a/m;Lkotlin/jvm/b/b;)Lio/reactivex/disposables/b;
+    invoke-static {v0, v1}, Lcom/vk/core/extensions/RxExtKt;->a(Lio/reactivex/Observable;Lkotlin/jvm/b/Functions2;)Lio/reactivex/disposables/Disposable;
 
     move-result-object v0
 
     .line 9
-    invoke-direct {p0, v0}, Lcom/vk/notifications/NotificationsPresenter;->a(Lio/reactivex/disposables/b;)V
+    invoke-direct {p0, v0}, Lcom/vk/notifications/NotificationsPresenter;->a(Lio/reactivex/disposables/Disposable;)V
 
     .line 10
-    sget-object v0, Lb/h/v/d;->c:Lb/h/v/d$a;
+    sget-object v0, Lb/h/v/RxBus;->c:Lb/h/v/RxBus$a;
 
-    invoke-virtual {v0}, Lb/h/v/d$a;->a()Lb/h/v/d;
+    invoke-virtual {v0}, Lb/h/v/RxBus$a;->a()Lb/h/v/RxBus;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lb/h/v/d;->a()Lc/a/m;
+    invoke-virtual {v0}, Lb/h/v/RxBus;->a()Lio/reactivex/Observable;
 
     move-result-object v0
 
     .line 11
     sget-object v1, Lcom/vk/notifications/NotificationsPresenter$f;->a:Lcom/vk/notifications/NotificationsPresenter$f;
 
-    invoke-virtual {v0, v1}, Lc/a/m;->a(Lc/a/z/l;)Lc/a/m;
+    invoke-virtual {v0, v1}, Lio/reactivex/Observable;->a(Lio/reactivex/functions/Predicate;)Lio/reactivex/Observable;
 
     move-result-object v0
 
     const-string v1, "RxBus.instance.events\n  \u2026tificationsPreloadEvent }"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 12
     new-instance v1, Lcom/vk/notifications/NotificationsPresenter$initEventBusListeners$6;
 
     invoke-direct {v1, p0}, Lcom/vk/notifications/NotificationsPresenter$initEventBusListeners$6;-><init>(Lcom/vk/notifications/NotificationsPresenter;)V
 
-    invoke-static {v0, v1}, Lcom/vk/core/extensions/RxExtKt;->a(Lc/a/m;Lkotlin/jvm/b/b;)Lio/reactivex/disposables/b;
+    invoke-static {v0, v1}, Lcom/vk/core/extensions/RxExtKt;->a(Lio/reactivex/Observable;Lkotlin/jvm/b/Functions2;)Lio/reactivex/disposables/Disposable;
 
     move-result-object v0
 
     .line 13
-    invoke-direct {p0, v0}, Lcom/vk/notifications/NotificationsPresenter;->a(Lio/reactivex/disposables/b;)V
+    invoke-direct {p0, v0}, Lcom/vk/notifications/NotificationsPresenter;->a(Lio/reactivex/disposables/Disposable;)V
 
     .line 14
-    sget-object v0, Lb/h/v/d;->c:Lb/h/v/d$a;
+    sget-object v0, Lb/h/v/RxBus;->c:Lb/h/v/RxBus$a;
 
-    invoke-virtual {v0}, Lb/h/v/d$a;->a()Lb/h/v/d;
+    invoke-virtual {v0}, Lb/h/v/RxBus$a;->a()Lb/h/v/RxBus;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lb/h/v/d;->a()Lc/a/m;
+    invoke-virtual {v0}, Lb/h/v/RxBus;->a()Lio/reactivex/Observable;
 
     move-result-object v0
 
     .line 15
     sget-object v1, Lcom/vk/notifications/NotificationsPresenter$g;->a:Lcom/vk/notifications/NotificationsPresenter$g;
 
-    invoke-virtual {v0, v1}, Lc/a/m;->a(Lc/a/z/l;)Lc/a/m;
+    invoke-virtual {v0, v1}, Lio/reactivex/Observable;->a(Lio/reactivex/functions/Predicate;)Lio/reactivex/Observable;
 
     move-result-object v0
 
     const-string v1, "RxBus.instance.events\n  \u2026icationsInvalidateEvent }"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 16
     new-instance v1, Lcom/vk/notifications/NotificationsPresenter$initEventBusListeners$8;
 
     invoke-direct {v1, p0}, Lcom/vk/notifications/NotificationsPresenter$initEventBusListeners$8;-><init>(Lcom/vk/notifications/NotificationsPresenter;)V
 
-    invoke-static {v0, v1}, Lcom/vk/core/extensions/RxExtKt;->a(Lc/a/m;Lkotlin/jvm/b/b;)Lio/reactivex/disposables/b;
+    invoke-static {v0, v1}, Lcom/vk/core/extensions/RxExtKt;->a(Lio/reactivex/Observable;Lkotlin/jvm/b/Functions2;)Lio/reactivex/disposables/Disposable;
 
     move-result-object v0
 
     .line 17
-    invoke-direct {p0, v0}, Lcom/vk/notifications/NotificationsPresenter;->a(Lio/reactivex/disposables/b;)V
+    invoke-direct {p0, v0}, Lcom/vk/notifications/NotificationsPresenter;->a(Lio/reactivex/disposables/Disposable;)V
 
     return-void
 .end method
@@ -750,15 +750,15 @@
     if-lez v0, :cond_1
 
     .line 3
-    new-instance v1, Lb/h/c/q/m;
+    new-instance v1, Lcom/vk/api/notifications/NotificationsMarkAsRead;
 
-    invoke-direct {v1, v0}, Lb/h/c/q/m;-><init>(I)V
+    invoke-direct {v1, v0}, Lcom/vk/api/notifications/NotificationsMarkAsRead;-><init>(I)V
 
     const/4 v0, 0x1
 
     const/4 v2, 0x0
 
-    invoke-static {v1, v2, v0, v2}, Lcom/vk/api/base/d;->d(Lcom/vk/api/base/d;Lcom/vk/api/base/e;ILjava/lang/Object;)Lc/a/m;
+    invoke-static {v1, v2, v0, v2}, Lcom/vk/api/base/ApiRequest;->d(Lcom/vk/api/base/ApiRequest;Lcom/vk/api/base/ApiThreadHolder;ILjava/lang/Object;)Lio/reactivex/Observable;
 
     move-result-object v0
 
@@ -770,7 +770,7 @@
     sget-object v2, Lcom/vk/notifications/NotificationsPresenter$n;->a:Lcom/vk/notifications/NotificationsPresenter$n;
 
     .line 5
-    invoke-virtual {v0, v1, v2}, Lc/a/m;->a(Lc/a/z/g;Lc/a/z/g;)Lio/reactivex/disposables/b;
+    invoke-virtual {v0, v1, v2}, Lio/reactivex/Observable;->a(Lio/reactivex/functions/Consumer;Lio/reactivex/functions/Consumer;)Lio/reactivex/disposables/Disposable;
 
     :cond_1
     return-void
@@ -789,9 +789,9 @@
     .locals 1
 
     .line 3
-    iget-object v0, p0, Lcom/vk/notifications/NotificationsPresenter;->c:Lcom/vk/notifications/h;
+    iget-object v0, p0, Lcom/vk/notifications/NotificationsPresenter;->c:Lcom/vk/notifications/NotificationsAnalytics;
 
-    invoke-virtual {v0}, Lcom/vk/notifications/h;->a()V
+    invoke-virtual {v0}, Lcom/vk/notifications/NotificationsAnalytics;->a()V
 
     return-void
 .end method
@@ -816,7 +816,7 @@
     if-nez v0, :cond_0
 
     .line 3
-    iget-object v0, p0, Lcom/vk/notifications/NotificationsPresenter;->E:Lcom/vk/notifications/l;
+    iget-object v0, p0, Lcom/vk/notifications/NotificationsPresenter;->E:Lcom/vk/notifications/NotificationsContract1;
 
     const v2, 0x7fffffff
 
@@ -828,7 +828,7 @@
 
     move-result-object v1
 
-    invoke-interface {v0, v2, v1}, Lcom/vk/notifications/l;->a(Ljava/lang/Integer;Ljava/lang/Integer;)V
+    invoke-interface {v0, v2, v1}, Lcom/vk/notifications/NotificationsContract1;->a(Ljava/lang/Integer;Ljava/lang/Integer;)V
 
     return-void
 
@@ -836,7 +836,7 @@
     :cond_0
     iget-object v2, p0, Lcom/vk/notifications/NotificationsPresenter;->d:Lcom/vk/notifications/NotificationsDataSet;
 
-    iget-object v2, v2, Lcom/vk/lists/o;->c:Ljava/util/ArrayList;
+    iget-object v2, v2, Lcom/vk/lists/ListDataSet;->c:Ljava/util/ArrayList;
 
     invoke-virtual {v2}, Ljava/util/ArrayList;->size()I
 
@@ -850,7 +850,7 @@
     .line 5
     iget-object v4, p0, Lcom/vk/notifications/NotificationsPresenter;->d:Lcom/vk/notifications/NotificationsDataSet;
 
-    iget-object v4, v4, Lcom/vk/lists/o;->c:Ljava/util/ArrayList;
+    iget-object v4, v4, Lcom/vk/lists/ListDataSet;->c:Ljava/util/ArrayList;
 
     invoke-virtual {v4, v1}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
 
@@ -875,7 +875,7 @@
 
     move-result v5
 
-    invoke-static {v4, v5}, Lkotlin/jvm/internal/m;->a(II)I
+    invoke-static {v4, v5}, Lkotlin/jvm/internal/Intrinsics;->a(II)I
 
     move-result v4
 
@@ -890,13 +890,13 @@
 
     .line 7
     :cond_2
-    iget-object v1, p0, Lcom/vk/notifications/NotificationsPresenter;->E:Lcom/vk/notifications/l;
+    iget-object v1, p0, Lcom/vk/notifications/NotificationsPresenter;->E:Lcom/vk/notifications/NotificationsContract1;
 
     invoke-static {v3}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v2
 
-    invoke-interface {v1, v0, v2}, Lcom/vk/notifications/l;->a(Ljava/lang/Integer;Ljava/lang/Integer;)V
+    invoke-interface {v1, v0, v2}, Lcom/vk/notifications/NotificationsContract1;->a(Ljava/lang/Integer;Ljava/lang/Integer;)V
 
     return-void
 .end method
@@ -912,23 +912,23 @@
 
 
 # virtual methods
-.method public a(Lcom/vk/lists/t;Z)Lc/a/m;
+.method public a(Lcom/vk/lists/PaginationHelper;Z)Lio/reactivex/Observable;
     .locals 7
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lcom/vk/lists/t;",
+            "Lcom/vk/lists/PaginationHelper;",
             "Z)",
-            "Lc/a/m<",
+            "Lio/reactivex/Observable<",
             "Lcom/vk/dto/notifications/NotificationsGetResponse;",
             ">;"
         }
     .end annotation
 
     .line 21
-    iget-object p2, p0, Lcom/vk/notifications/NotificationsPresenter;->E:Lcom/vk/notifications/l;
+    iget-object p2, p0, Lcom/vk/notifications/NotificationsPresenter;->E:Lcom/vk/notifications/NotificationsContract1;
 
-    invoke-interface {p2}, Lcom/vk/notifications/l;->m3()Z
+    invoke-interface {p2}, Lcom/vk/notifications/NotificationsContract1;->m3()Z
 
     move-result p2
 
@@ -954,14 +954,14 @@
 
     .line 23
     :goto_0
-    iget-object p2, p0, Lcom/vk/notifications/NotificationsPresenter;->E:Lcom/vk/notifications/l;
+    iget-object p2, p0, Lcom/vk/notifications/NotificationsPresenter;->E:Lcom/vk/notifications/NotificationsContract1;
 
-    invoke-interface {p2}, Lcom/vk/notifications/l;->m3()Z
+    invoke-interface {p2}, Lcom/vk/notifications/NotificationsContract1;->m3()Z
 
     move-result v5
 
     .line 24
-    invoke-virtual {p1}, Lcom/vk/lists/t;->c()I
+    invoke-virtual {p1}, Lcom/vk/lists/PaginationHelper;->c()I
 
     move-result v2
 
@@ -971,29 +971,29 @@
 
     move-object v1, p0
 
-    invoke-direct/range {v1 .. v6}, Lcom/vk/notifications/NotificationsPresenter;->a(ILjava/lang/String;IZLjava/lang/Integer;)Lc/a/m;
+    invoke-direct/range {v1 .. v6}, Lcom/vk/notifications/NotificationsPresenter;->a(ILjava/lang/String;IZLjava/lang/Integer;)Lio/reactivex/Observable;
 
     move-result-object p1
 
     return-object p1
 .end method
 
-.method public a(Ljava/lang/String;Lcom/vk/lists/t;)Lc/a/m;
+.method public a(Ljava/lang/String;Lcom/vk/lists/PaginationHelper;)Lio/reactivex/Observable;
     .locals 6
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
             "Ljava/lang/String;",
-            "Lcom/vk/lists/t;",
+            "Lcom/vk/lists/PaginationHelper;",
             ")",
-            "Lc/a/m<",
+            "Lio/reactivex/Observable<",
             "Lcom/vk/dto/notifications/NotificationsGetResponse;",
             ">;"
         }
     .end annotation
 
     .line 25
-    invoke-virtual {p2}, Lcom/vk/lists/t;->c()I
+    invoke-virtual {p2}, Lcom/vk/lists/PaginationHelper;->c()I
 
     move-result v1
 
@@ -1007,31 +1007,31 @@
 
     move-object v2, p1
 
-    invoke-direct/range {v0 .. v5}, Lcom/vk/notifications/NotificationsPresenter;->a(ILjava/lang/String;IZLjava/lang/Integer;)Lc/a/m;
+    invoke-direct/range {v0 .. v5}, Lcom/vk/notifications/NotificationsPresenter;->a(ILjava/lang/String;IZLjava/lang/Integer;)Lio/reactivex/Observable;
 
     move-result-object p1
 
     return-object p1
 .end method
 
-.method public final a()Lcom/vk/notifications/l;
+.method public final a()Lcom/vk/notifications/NotificationsContract1;
     .locals 1
 
     .line 8
-    iget-object v0, p0, Lcom/vk/notifications/NotificationsPresenter;->E:Lcom/vk/notifications/l;
+    iget-object v0, p0, Lcom/vk/notifications/NotificationsPresenter;->E:Lcom/vk/notifications/NotificationsContract1;
 
     return-object v0
 .end method
 
-.method public a(Lc/a/m;ZLcom/vk/lists/t;)V
+.method public a(Lio/reactivex/Observable;ZLcom/vk/lists/PaginationHelper;)V
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lc/a/m<",
+            "Lio/reactivex/Observable<",
             "Lcom/vk/dto/notifications/NotificationsGetResponse;",
             ">;Z",
-            "Lcom/vk/lists/t;",
+            "Lcom/vk/lists/PaginationHelper;",
             ")V"
         }
     .end annotation
@@ -1039,22 +1039,22 @@
     .line 26
     new-instance v0, Lcom/vk/notifications/NotificationsPresenter$j;
 
-    invoke-direct {v0, p0, p2, p3}, Lcom/vk/notifications/NotificationsPresenter$j;-><init>(Lcom/vk/notifications/NotificationsPresenter;ZLcom/vk/lists/t;)V
+    invoke-direct {v0, p0, p2, p3}, Lcom/vk/notifications/NotificationsPresenter$j;-><init>(Lcom/vk/notifications/NotificationsPresenter;ZLcom/vk/lists/PaginationHelper;)V
 
     .line 27
     sget-object p2, Lcom/vk/notifications/NotificationsPresenter$k;->a:Lcom/vk/notifications/NotificationsPresenter$k;
 
     .line 28
-    invoke-virtual {p1, v0, p2}, Lc/a/m;->a(Lc/a/z/g;Lc/a/z/g;)Lio/reactivex/disposables/b;
+    invoke-virtual {p1, v0, p2}, Lio/reactivex/Observable;->a(Lio/reactivex/functions/Consumer;Lio/reactivex/functions/Consumer;)Lio/reactivex/disposables/Disposable;
 
     move-result-object p1
 
     const-string p2, "observable.subscribe(\n  \u2026L.e(e)\n                })"
 
-    invoke-static {p1, p2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, p2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 29
-    invoke-direct {p0, p1}, Lcom/vk/notifications/NotificationsPresenter;->a(Lio/reactivex/disposables/b;)V
+    invoke-direct {p0, p1}, Lcom/vk/notifications/NotificationsPresenter;->a(Lio/reactivex/disposables/Disposable;)V
 
     return-void
 .end method
@@ -1063,9 +1063,9 @@
     .locals 1
 
     .line 2
-    iget-object v0, p0, Lcom/vk/notifications/NotificationsPresenter;->c:Lcom/vk/notifications/h;
+    iget-object v0, p0, Lcom/vk/notifications/NotificationsPresenter;->c:Lcom/vk/notifications/NotificationsAnalytics;
 
-    invoke-virtual {v0, p1}, Lcom/vk/notifications/h;->a(Ljava/lang/String;)V
+    invoke-virtual {v0, p1}, Lcom/vk/notifications/NotificationsAnalytics;->a(Ljava/lang/String;)V
 
     return-void
 .end method
@@ -1074,7 +1074,7 @@
     .locals 1
 
     .line 1
-    invoke-static {p0}, Lcom/vk/notifications/k$a;->a(Lcom/vk/notifications/k;)Z
+    invoke-static {p0}, Lcom/vk/notifications/NotificationsContract$a;->a(Lcom/vk/notifications/NotificationsContract;)Z
 
     move-result v0
 
@@ -1085,20 +1085,20 @@
     .locals 2
 
     .line 1
-    iget-object v0, p0, Lcom/vk/notifications/NotificationsPresenter;->a:Lio/reactivex/disposables/a;
+    iget-object v0, p0, Lcom/vk/notifications/NotificationsPresenter;->a:Lio/reactivex/disposables/CompositeDisposable;
 
-    invoke-virtual {v0}, Lio/reactivex/disposables/a;->o()V
+    invoke-virtual {v0}, Lio/reactivex/disposables/CompositeDisposable;->o()V
 
     .line 2
-    iget-object v0, p0, Lcom/vk/notifications/NotificationsPresenter;->a:Lio/reactivex/disposables/a;
+    iget-object v0, p0, Lcom/vk/notifications/NotificationsPresenter;->a:Lio/reactivex/disposables/CompositeDisposable;
 
-    invoke-virtual {v0}, Lio/reactivex/disposables/a;->a()V
+    invoke-virtual {v0}, Lio/reactivex/disposables/CompositeDisposable;->a()V
 
     .line 3
     :try_start_0
-    iget-object v0, p0, Lcom/vk/notifications/NotificationsPresenter;->E:Lcom/vk/notifications/l;
+    iget-object v0, p0, Lcom/vk/notifications/NotificationsPresenter;->E:Lcom/vk/notifications/NotificationsContract1;
 
-    invoke-interface {v0}, Lb/h/r/d;->getContext()Landroid/app/Activity;
+    invoke-interface {v0}, Lb/h/r/BaseScreenContract1;->getContext()Landroid/app/Activity;
 
     move-result-object v0
 
@@ -1119,17 +1119,17 @@
     .locals 1
 
     .line 1
-    iget-object v0, p0, Lcom/vk/notifications/NotificationsPresenter;->h:Lcom/vk/lists/t;
+    iget-object v0, p0, Lcom/vk/notifications/NotificationsPresenter;->h:Lcom/vk/lists/PaginationHelper;
 
     if-eqz v0, :cond_0
 
-    invoke-virtual {v0}, Lcom/vk/lists/t;->j()V
+    invoke-virtual {v0}, Lcom/vk/lists/PaginationHelper;->j()V
 
     :cond_0
     const/4 v0, 0x0
 
     .line 2
-    iput-object v0, p0, Lcom/vk/notifications/NotificationsPresenter;->h:Lcom/vk/lists/t;
+    iput-object v0, p0, Lcom/vk/notifications/NotificationsPresenter;->h:Lcom/vk/lists/PaginationHelper;
 
     return-void
 .end method
@@ -1143,9 +1143,9 @@
     iput-boolean v0, p0, Lcom/vk/notifications/NotificationsPresenter;->e:Z
 
     .line 2
-    iget-object v0, p0, Lcom/vk/notifications/NotificationsPresenter;->E:Lcom/vk/notifications/l;
+    iget-object v0, p0, Lcom/vk/notifications/NotificationsPresenter;->E:Lcom/vk/notifications/NotificationsContract1;
 
-    invoke-interface {v0}, Lcom/vk/notifications/l;->m3()Z
+    invoke-interface {v0}, Lcom/vk/notifications/NotificationsContract1;->m3()Z
 
     move-result v0
 
@@ -1159,7 +1159,7 @@
     invoke-direct {p0}, Lcom/vk/notifications/NotificationsPresenter;->f()V
 
     .line 5
-    invoke-static {p0}, Lcom/vk/notifications/k$a;->b(Lcom/vk/notifications/k;)V
+    invoke-static {p0}, Lcom/vk/notifications/NotificationsContract$a;->b(Lcom/vk/notifications/NotificationsContract;)V
 
     return-void
 .end method
@@ -1168,12 +1168,12 @@
     .locals 6
 
     .line 1
-    invoke-static {p0}, Lcom/vk/notifications/k$a;->c(Lcom/vk/notifications/k;)V
+    invoke-static {p0}, Lcom/vk/notifications/NotificationsContract$a;->c(Lcom/vk/notifications/NotificationsContract;)V
 
     .line 2
-    iget-object v0, p0, Lcom/vk/notifications/NotificationsPresenter;->E:Lcom/vk/notifications/l;
+    iget-object v0, p0, Lcom/vk/notifications/NotificationsPresenter;->E:Lcom/vk/notifications/NotificationsContract1;
 
-    invoke-interface {v0}, Lcom/vk/notifications/l;->m3()Z
+    invoke-interface {v0}, Lcom/vk/notifications/NotificationsContract1;->m3()Z
 
     move-result v0
 
@@ -1182,9 +1182,9 @@
     if-eqz v0, :cond_1
 
     .line 3
-    iget-object v0, p0, Lcom/vk/notifications/NotificationsPresenter;->E:Lcom/vk/notifications/l;
+    iget-object v0, p0, Lcom/vk/notifications/NotificationsPresenter;->E:Lcom/vk/notifications/NotificationsContract1;
 
-    invoke-interface {v0}, Lcom/vk/notifications/l;->c1()V
+    invoke-interface {v0}, Lcom/vk/notifications/NotificationsContract1;->c1()V
 
     .line 4
     iget-object v0, p0, Lcom/vk/notifications/NotificationsPresenter;->C:Ljava/lang/Long;
@@ -1205,11 +1205,11 @@
     if-ltz v0, :cond_0
 
     .line 6
-    iget-object v0, p0, Lcom/vk/notifications/NotificationsPresenter;->h:Lcom/vk/lists/t;
+    iget-object v0, p0, Lcom/vk/notifications/NotificationsPresenter;->h:Lcom/vk/lists/PaginationHelper;
 
     if-eqz v0, :cond_1
 
-    invoke-virtual {v0}, Lcom/vk/lists/t;->h()V
+    invoke-virtual {v0}, Lcom/vk/lists/PaginationHelper;->h()V
 
     goto :goto_0
 
@@ -1229,7 +1229,7 @@
     .locals 0
 
     .line 1
-    invoke-static {p0}, Lcom/vk/notifications/k$a;->d(Lcom/vk/notifications/k;)V
+    invoke-static {p0}, Lcom/vk/notifications/NotificationsContract$a;->d(Lcom/vk/notifications/NotificationsContract;)V
 
     return-void
 .end method
@@ -1238,7 +1238,7 @@
     .locals 0
 
     .line 1
-    invoke-static {p0}, Lcom/vk/notifications/k$a;->e(Lcom/vk/notifications/k;)V
+    invoke-static {p0}, Lcom/vk/notifications/NotificationsContract$a;->e(Lcom/vk/notifications/NotificationsContract;)V
 
     return-void
 .end method
@@ -1247,7 +1247,7 @@
     .locals 4
 
     .line 1
-    invoke-static {p0}, Lcom/vk/lists/t;->a(Lcom/vk/lists/t$p;)Lcom/vk/lists/t$k;
+    invoke-static {p0}, Lcom/vk/lists/PaginationHelper;->a(Lcom/vk/lists/PaginationHelper$p;)Lcom/vk/lists/PaginationHelper$k;
 
     move-result-object v0
 
@@ -1256,23 +1256,23 @@
 
     invoke-direct {v1, p0}, Lcom/vk/notifications/NotificationsPresenter$l;-><init>(Lcom/vk/notifications/NotificationsPresenter;)V
 
-    invoke-virtual {v0, v1}, Lcom/vk/lists/t$k;->a(Lcom/vk/lists/y;)Lcom/vk/lists/t$k;
+    invoke-virtual {v0, v1}, Lcom/vk/lists/PaginationHelper$k;->a(Lcom/vk/lists/PreloadCallback;)Lcom/vk/lists/PaginationHelper$k;
 
     .line 3
-    iget-object v1, p0, Lcom/vk/notifications/NotificationsPresenter;->E:Lcom/vk/notifications/l;
+    iget-object v1, p0, Lcom/vk/notifications/NotificationsPresenter;->E:Lcom/vk/notifications/NotificationsContract1;
 
     iget-object v2, p0, Lcom/vk/notifications/NotificationsPresenter;->d:Lcom/vk/notifications/NotificationsDataSet;
 
     const-string v3, "it"
 
-    invoke-static {v0, v3}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v3}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    invoke-interface {v1, v2, v0}, Lcom/vk/notifications/l;->a(Lcom/vk/notifications/NotificationsDataSet;Lcom/vk/lists/t$k;)Lcom/vk/lists/t;
+    invoke-interface {v1, v2, v0}, Lcom/vk/notifications/NotificationsContract1;->a(Lcom/vk/notifications/NotificationsDataSet;Lcom/vk/lists/PaginationHelper$k;)Lcom/vk/lists/PaginationHelper;
 
     move-result-object v0
 
     .line 4
-    iput-object v0, p0, Lcom/vk/notifications/NotificationsPresenter;->h:Lcom/vk/lists/t;
+    iput-object v0, p0, Lcom/vk/notifications/NotificationsPresenter;->h:Lcom/vk/lists/PaginationHelper;
 
     return-void
 .end method

@@ -50,11 +50,11 @@
     .line 2
     iget-object p1, p0, Lcom/vk/wall/post/PostViewFragment$e;->a:Lcom/vk/wall/post/PostViewFragment;
 
-    invoke-static {p1}, Lcom/vk/wall/post/PostViewFragment;->b(Lcom/vk/wall/post/PostViewFragment;)Lcom/vk/wall/e;
+    invoke-static {p1}, Lcom/vk/wall/post/PostViewFragment;->b(Lcom/vk/wall/post/PostViewFragment;)Lcom/vk/wall/CommentsListContract;
 
     move-result-object p1
 
-    invoke-interface {p1}, Lcom/vk/wall/e;->j()V
+    invoke-interface {p1}, Lcom/vk/wall/CommentsListContract;->j()V
 
     :cond_0
     const/4 p1, 0x1

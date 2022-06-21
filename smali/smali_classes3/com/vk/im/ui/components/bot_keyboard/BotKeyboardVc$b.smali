@@ -5,7 +5,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/im/ui/components/bot_keyboard/BotKeyboardVc;->a(Landroid/view/View;JLkotlin/jvm/b/a;)V
+    value = Lcom/vk/im/ui/components/bot_keyboard/BotKeyboardVc;->a(Landroid/view/View;JLkotlin/jvm/b/Functions;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -17,17 +17,17 @@
 # instance fields
 .field final synthetic a:Landroid/view/View;
 
-.field final synthetic b:Lkotlin/jvm/b/a;
+.field final synthetic b:Lkotlin/jvm/b/Functions;
 
 
 # direct methods
-.method constructor <init>(Landroid/view/View;Lkotlin/jvm/b/a;)V
+.method constructor <init>(Landroid/view/View;Lkotlin/jvm/b/Functions;)V
     .locals 0
 
     .line 1
     iput-object p1, p0, Lcom/vk/im/ui/components/bot_keyboard/BotKeyboardVc$b;->a:Landroid/view/View;
 
-    iput-object p2, p0, Lcom/vk/im/ui/components/bot_keyboard/BotKeyboardVc$b;->b:Lkotlin/jvm/b/a;
+    iput-object p2, p0, Lcom/vk/im/ui/components/bot_keyboard/BotKeyboardVc$b;->b:Lkotlin/jvm/b/Functions;
 
     invoke-direct {p0}, Landroid/animation/AnimatorListenerAdapter;-><init>()V
 
@@ -51,9 +51,9 @@
     invoke-virtual {p1, v0}, Landroid/view/ViewPropertyAnimator;->setListener(Landroid/animation/Animator$AnimatorListener;)Landroid/view/ViewPropertyAnimator;
 
     .line 2
-    iget-object p1, p0, Lcom/vk/im/ui/components/bot_keyboard/BotKeyboardVc$b;->b:Lkotlin/jvm/b/a;
+    iget-object p1, p0, Lcom/vk/im/ui/components/bot_keyboard/BotKeyboardVc$b;->b:Lkotlin/jvm/b/Functions;
 
-    invoke-interface {p1}, Lkotlin/jvm/b/a;->invoke()Ljava/lang/Object;
+    invoke-interface {p1}, Lkotlin/jvm/b/Functions;->invoke()Ljava/lang/Object;
 
     return-void
 .end method

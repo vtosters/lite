@@ -46,7 +46,7 @@
     .line 1
     iget-object v0, p0, Lcom/vk/stories/view/CommunityGroupedStoryView$openStories$1;->a:Lcom/vk/stories/view/CommunityGroupedStoryView;
 
-    invoke-static {v0}, Lcom/vk/stories/view/CommunityGroupedStoryView;->b(Lcom/vk/stories/view/CommunityGroupedStoryView;)Lcom/vk/stories/view/z1/a;
+    invoke-static {v0}, Lcom/vk/stories/view/CommunityGroupedStoryView;->b(Lcom/vk/stories/view/CommunityGroupedStoryView;)Lcom/vk/stories/view/z1/GroupedStoriesAdapter;
 
     move-result-object v0
 
@@ -56,7 +56,7 @@
 
     invoke-direct {v1, p1}, Lcom/vk/stories/view/CommunityGroupedStoryView$openStories$1$scrollStoriesListToUniqueId$position$1;-><init>(Ljava/lang/String;)V
 
-    invoke-virtual {v0, v1}, Lcom/vk/lists/i0;->d(Lkotlin/jvm/b/b;)I
+    invoke-virtual {v0, v1}, Lcom/vk/lists/SimpleAdapter;->d(Lkotlin/jvm/b/Functions2;)I
 
     move-result p1
 
@@ -119,7 +119,7 @@
     .line 1
     iget-object v0, p0, Lcom/vk/stories/view/CommunityGroupedStoryView$openStories$1;->a:Lcom/vk/stories/view/CommunityGroupedStoryView;
 
-    invoke-static {v0}, Lcom/vk/stories/view/CommunityGroupedStoryView;->b(Lcom/vk/stories/view/CommunityGroupedStoryView;)Lcom/vk/stories/view/z1/a;
+    invoke-static {v0}, Lcom/vk/stories/view/CommunityGroupedStoryView;->b(Lcom/vk/stories/view/CommunityGroupedStoryView;)Lcom/vk/stories/view/z1/GroupedStoriesAdapter;
 
     move-result-object v0
 
@@ -129,7 +129,7 @@
 
     invoke-direct {v1, p1}, Lcom/vk/stories/view/CommunityGroupedStoryView$openStories$1$getAnimationTargetView$position$1;-><init>(Ljava/lang/String;)V
 
-    invoke-virtual {v0, v1}, Lcom/vk/lists/i0;->d(Lkotlin/jvm/b/b;)I
+    invoke-virtual {v0, v1}, Lcom/vk/lists/SimpleAdapter;->d(Lkotlin/jvm/b/Functions2;)I
 
     move-result p1
 

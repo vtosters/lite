@@ -1,5 +1,5 @@
 .class public final Lcom/vk/webapp/fragments/VkPayFragment$a;
-.super Lcom/vk/navigation/o;
+.super Lcom/vk/navigation/Navigator;
 .source "VKPayFragment.kt"
 
 
@@ -21,10 +21,10 @@
     .line 1
     const-class v0, Lcom/vk/webapp/fragments/VkPayFragment;
 
-    invoke-direct {p0, v0}, Lcom/vk/navigation/o;-><init>(Ljava/lang/Class;)V
+    invoke-direct {p0, v0}, Lcom/vk/navigation/Navigator;-><init>(Ljava/lang/Class;)V
 
     .line 2
-    iget-object v0, p0, Lcom/vk/navigation/o;->O0:Landroid/os/Bundle;
+    iget-object v0, p0, Lcom/vk/navigation/Navigator;->O0:Landroid/os/Bundle;
 
     invoke-direct {p0, p1}, Lcom/vk/webapp/fragments/VkPayFragment$a;->a(Ljava/lang/String;)Ljava/lang/String;
 
@@ -35,7 +35,7 @@
     invoke-virtual {v0, v1, p1}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 3
-    iget-object p1, p0, Lcom/vk/navigation/o;->O0:Landroid/os/Bundle;
+    iget-object p1, p0, Lcom/vk/navigation/Navigator;->O0:Landroid/os/Bundle;
 
     sget-object v0, Lcom/vk/webapp/fragments/VkPayFragment;->E0:Lcom/vk/webapp/fragments/VkPayFragment$b;
 
@@ -71,15 +71,15 @@
     if-eqz v0, :cond_1
 
     .line 2
-    invoke-static {}, Lcom/vk/bridges/g;->a()Lcom/vk/bridges/f;
+    invoke-static {}, Lcom/vk/bridges/AuthBridge;->a()Lcom/vk/bridges/AuthBridge3;
 
     move-result-object v0
 
-    invoke-interface {v0}, Lcom/vk/bridges/f;->c()Lcom/vk/bridges/a;
+    invoke-interface {v0}, Lcom/vk/bridges/AuthBridge3;->c()Lcom/vk/bridges/AuthBridge1;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/vk/bridges/a;->v()Ljava/lang/String;
+    invoke-virtual {v0}, Lcom/vk/bridges/AuthBridge1;->v()Ljava/lang/String;
 
     move-result-object v0
 
@@ -90,22 +90,22 @@
     const-string v1, "queryUri"
 
     .line 3
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {v0}, Landroid/net/Uri;->getQueryParameterNames()Ljava/util/Set;
 
     move-result-object v1
 
     .line 4
-    invoke-static {}, Lcom/vk/bridges/g;->a()Lcom/vk/bridges/f;
+    invoke-static {}, Lcom/vk/bridges/AuthBridge;->a()Lcom/vk/bridges/AuthBridge3;
 
     move-result-object v2
 
-    invoke-interface {v2}, Lcom/vk/bridges/f;->c()Lcom/vk/bridges/a;
+    invoke-interface {v2}, Lcom/vk/bridges/AuthBridge3;->c()Lcom/vk/bridges/AuthBridge1;
 
     move-result-object v2
 
-    invoke-virtual {v2}, Lcom/vk/bridges/a;->v()Ljava/lang/String;
+    invoke-virtual {v2}, Lcom/vk/bridges/AuthBridge1;->v()Ljava/lang/String;
 
     move-result-object v2
 
@@ -127,7 +127,7 @@
 
     const-string v2, "Uri.parse(authBridge.set\u2026).clearQuery().toString()"
 
-    invoke-static {v5, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v5, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     const/4 v6, 0x0
 
@@ -187,22 +187,22 @@
 
     const-string v0, "Uri.parse(url.replaceFir\u2026             }.toString()"
 
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     :cond_1
     return-object p1
 
     .line 9
     :cond_2
-    invoke-static {}, Lcom/vk/bridges/g;->a()Lcom/vk/bridges/f;
+    invoke-static {}, Lcom/vk/bridges/AuthBridge;->a()Lcom/vk/bridges/AuthBridge3;
 
     move-result-object p1
 
-    invoke-interface {p1}, Lcom/vk/bridges/f;->c()Lcom/vk/bridges/a;
+    invoke-interface {p1}, Lcom/vk/bridges/AuthBridge3;->c()Lcom/vk/bridges/AuthBridge1;
 
     move-result-object p1
 
-    invoke-virtual {p1}, Lcom/vk/bridges/a;->v()Ljava/lang/String;
+    invoke-virtual {p1}, Lcom/vk/bridges/AuthBridge1;->v()Ljava/lang/String;
 
     move-result-object p1
 

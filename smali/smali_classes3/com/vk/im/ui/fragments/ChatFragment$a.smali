@@ -3,7 +3,7 @@
 .source "ChatFragment.kt"
 
 # interfaces
-.implements Lcom/vk/im/ui/components/viewcontrollers/dialog_extra_controllers/banner/b;
+.implements Lcom/vk/im/ui/components/viewcontrollers/dialog_extra_controllers/banner/BannerControllerDelegate;
 
 
 # annotations
@@ -55,13 +55,13 @@
     return-void
 .end method
 
-.method public a(Lcom/vk/im/engine/models/attaches/a;)V
+.method public a(Lcom/vk/im/engine/models/attaches/AttachRelatedEntities;)V
     .locals 1
 
     .line 2
     iget-object v0, p0, Lcom/vk/im/ui/fragments/ChatFragment$a;->a:Lcom/vk/im/ui/fragments/ChatFragment;
 
-    invoke-static {v0, p1}, Lcom/vk/im/ui/fragments/ChatFragment;->a(Lcom/vk/im/ui/fragments/ChatFragment;Lcom/vk/im/engine/models/attaches/a;)V
+    invoke-static {v0, p1}, Lcom/vk/im/ui/fragments/ChatFragment;->a(Lcom/vk/im/ui/fragments/ChatFragment;Lcom/vk/im/engine/models/attaches/AttachRelatedEntities;)V
 
     return-void
 .end method

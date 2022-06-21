@@ -3,7 +3,7 @@
 .source "VkHtmlGameFragment.kt"
 
 # interfaces
-.implements Lc/a/z/g;
+.implements Lio/reactivex/functions/Consumer;
 
 
 # annotations
@@ -22,8 +22,8 @@
         "Ljava/lang/Object;",
         ">",
         "Ljava/lang/Object;",
-        "Lc/a/z/g<",
-        "Lcom/vk/api/apps/a$a;",
+        "Lio/reactivex/functions/Consumer<",
+        "Lcom/vk/api/apps/AppGetWithUser$a;",
         ">;"
     }
 .end annotation
@@ -54,17 +54,17 @@
 
 
 # virtual methods
-.method public final a(Lcom/vk/api/apps/a$a;)V
+.method public final a(Lcom/vk/api/apps/AppGetWithUser$a;)V
     .locals 3
 
     .line 1
     iget-object v0, p0, Lcom/vk/webapp/fragments/VkHtmlGameFragment$n;->a:Lcom/vk/webapp/fragments/VkHtmlGameFragment;
 
-    iget-object p1, p1, Lcom/vk/api/apps/a$a;->a:Lcom/vk/dto/user/UserProfile;
+    iget-object p1, p1, Lcom/vk/api/apps/AppGetWithUser$a;->a:Lcom/vk/dto/user/UserProfile;
 
     const-string v1, "it.user"
 
-    invoke-static {p1, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     iget-object v1, p0, Lcom/vk/webapp/fragments/VkHtmlGameFragment$n;->b:Ljava/lang/String;
 
@@ -79,9 +79,9 @@
     .locals 0
 
     .line 1
-    check-cast p1, Lcom/vk/api/apps/a$a;
+    check-cast p1, Lcom/vk/api/apps/AppGetWithUser$a;
 
-    invoke-virtual {p0, p1}, Lcom/vk/webapp/fragments/VkHtmlGameFragment$n;->a(Lcom/vk/api/apps/a$a;)V
+    invoke-virtual {p0, p1}, Lcom/vk/webapp/fragments/VkHtmlGameFragment$n;->a(Lcom/vk/api/apps/AppGetWithUser$a;)V
 
     return-void
 .end method

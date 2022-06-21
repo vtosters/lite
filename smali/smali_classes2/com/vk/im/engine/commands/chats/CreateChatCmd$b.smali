@@ -3,12 +3,12 @@
 .source "CreateChatCmd.kt"
 
 # interfaces
-.implements Lcom/vk/api/sdk/h;
+.implements Lcom/vk/api/sdk/VKApiResponseParser;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/im/engine/commands/chats/CreateChatCmd;->a(Lcom/vk/im/engine/d;)Lcom/vk/im/engine/commands/chats/CreateChatCmd$a;
+    value = Lcom/vk/im/engine/commands/chats/CreateChatCmd;->a(Lcom/vk/im/engine/ImEnvironment;)Lcom/vk/im/engine/commands/chats/CreateChatCmd$a;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -22,7 +22,7 @@
         "Ljava/lang/Object;",
         ">",
         "Ljava/lang/Object;",
-        "Lcom/vk/api/sdk/h<",
+        "Lcom/vk/api/sdk/VKApiResponseParser<",
         "Ljava/lang/Integer;",
         ">;"
     }

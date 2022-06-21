@@ -52,7 +52,7 @@
 
     move-result-object v1
 
-    invoke-static {v1}, Lcom/my/tracker/b;->a(Ljava/lang/String;)V
+    invoke-static {v1}, Lcom/my/tracker/Tracer;->a(Ljava/lang/String;)V
 
     .line 4
     :try_start_0
@@ -80,7 +80,7 @@
 
     move-result-object p1
 
-    invoke-static {p1}, Lcom/my/tracker/b;->a(Ljava/lang/String;)V
+    invoke-static {p1}, Lcom/my/tracker/Tracer;->a(Ljava/lang/String;)V
 
     :cond_1
     return-void

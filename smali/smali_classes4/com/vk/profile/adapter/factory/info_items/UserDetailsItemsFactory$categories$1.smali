@@ -3,7 +3,7 @@
 .source "UserDetailsItemsFactory.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/b;
+.implements Lkotlin/jvm/b/Functions2;
 
 
 # annotations
@@ -19,7 +19,7 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/b<",
+        "Lkotlin/jvm/b/Functions2<",
         "Lcom/vtosters/lite/api/ExtendedUserProfile;",
         "Ljava/util/ArrayList<",
         "Lcom/vk/profile/adapter/BaseInfoItem;",
@@ -76,7 +76,7 @@
     const-string v3, "friends"
 
     .line 2
-    invoke-static {v1, v3}, Lcom/vk/profile/utils/d;->a(Lcom/vtosters/lite/api/ExtendedUserProfile;Ljava/lang/String;)Z
+    invoke-static {v1, v3}, Lcom/vk/profile/utils/ProfileExt;->a(Lcom/vtosters/lite/api/ExtendedUserProfile;Ljava/lang/String;)Z
 
     move-result v4
 
@@ -117,7 +117,7 @@
 
     .line 5
     :goto_0
-    invoke-static {v3}, Lcom/vk/core/util/b1;->c(I)Ljava/lang/String;
+    invoke-static {v3}, Lcom/vk/core/util/StringUtils;->c(I)Ljava/lang/String;
 
     move-result-object v3
 
@@ -136,7 +136,7 @@
 
     const v3, 0x7f100023
 
-    invoke-static {v4, v3}, Lcom/vk/core/util/b1;->a(II)Ljava/lang/String;
+    invoke-static {v4, v3}, Lcom/vk/core/util/StringUtils;->a(II)Ljava/lang/String;
 
     move-result-object v3
 
@@ -154,13 +154,13 @@
     move-object v9, v3
 
     .line 7
-    new-instance v3, Lcom/vk/profile/adapter/items/p;
+    new-instance v3, Lcom/vk/profile/adapter/items/DetailsUserCategoryItem;
 
     const v7, 0x7f08083c
 
     iget-object v6, v0, Lcom/vk/profile/adapter/factory/info_items/UserDetailsItemsFactory$categories$1;->this$0:Lcom/vk/profile/adapter/factory/info_items/UserDetailsItemsFactory;
 
-    invoke-virtual {v6}, Lcom/vk/profile/adapter/b/a;->b()Landroid/content/res/Resources;
+    invoke-virtual {v6}, Lcom/vk/profile/adapter/b/BaseItemsFactory;->b()Landroid/content/res/Resources;
 
     move-result-object v6
 
@@ -172,7 +172,7 @@
 
     const-string v6, "resources.getString(R.string.friends)"
 
-    invoke-static {v8, v6}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v8, v6}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     const/4 v10, 0x0
 
@@ -184,10 +184,10 @@
 
     move-object v6, v3
 
-    invoke-direct/range {v6 .. v13}, Lcom/vk/profile/adapter/items/p;-><init>(ILjava/lang/String;Ljava/lang/String;Ljava/lang/Runnable;IILkotlin/jvm/internal/i;)V
+    invoke-direct/range {v6 .. v13}, Lcom/vk/profile/adapter/items/DetailsUserCategoryItem;-><init>(ILjava/lang/String;Ljava/lang/String;Ljava/lang/Runnable;IILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     .line 8
-    invoke-static/range {p1 .. p1}, Lcom/vk/profile/utils/d;->b(Lcom/vtosters/lite/api/ExtendedUserProfile;)Z
+    invoke-static/range {p1 .. p1}, Lcom/vk/profile/utils/ProfileExt;->b(Lcom/vtosters/lite/api/ExtendedUserProfile;)Z
 
     move-result v6
 
@@ -201,7 +201,7 @@
 
     invoke-direct {v4, v0, v1}, Lcom/vk/profile/adapter/factory/info_items/UserDetailsItemsFactory$categories$1$a;-><init>(Lcom/vk/profile/adapter/factory/info_items/UserDetailsItemsFactory$categories$1;Lcom/vtosters/lite/api/ExtendedUserProfile;)V
 
-    invoke-virtual {v3, v4}, Lcom/vk/profile/adapter/items/p;->a(Ljava/lang/Runnable;)V
+    invoke-virtual {v3, v4}, Lcom/vk/profile/adapter/items/DetailsUserCategoryItem;->a(Ljava/lang/Runnable;)V
 
     .line 10
     :cond_3
@@ -225,13 +225,13 @@
     move-result v3
 
     .line 13
-    new-instance v4, Lcom/vk/profile/adapter/items/p;
+    new-instance v4, Lcom/vk/profile/adapter/items/DetailsUserCategoryItem;
 
     const v8, 0x7f080842
 
     iget-object v7, v0, Lcom/vk/profile/adapter/factory/info_items/UserDetailsItemsFactory$categories$1;->this$0:Lcom/vk/profile/adapter/factory/info_items/UserDetailsItemsFactory;
 
-    invoke-virtual {v7}, Lcom/vk/profile/adapter/b/a;->b()Landroid/content/res/Resources;
+    invoke-virtual {v7}, Lcom/vk/profile/adapter/b/BaseItemsFactory;->b()Landroid/content/res/Resources;
 
     move-result-object v7
 
@@ -243,14 +243,14 @@
 
     const-string v7, "resources.getString(R.st\u2026ng.profile_subscriptions)"
 
-    invoke-static {v9, v7}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v9, v7}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    invoke-static {v3}, Lcom/vk/core/util/b1;->c(I)Ljava/lang/String;
+    invoke-static {v3}, Lcom/vk/core/util/StringUtils;->c(I)Ljava/lang/String;
 
     move-result-object v10
 
     .line 14
-    invoke-static/range {p1 .. p1}, Lcom/vk/profile/utils/d;->b(Lcom/vtosters/lite/api/ExtendedUserProfile;)Z
+    invoke-static/range {p1 .. p1}, Lcom/vk/profile/utils/ProfileExt;->b(Lcom/vtosters/lite/api/ExtendedUserProfile;)Z
 
     move-result v3
 
@@ -277,7 +277,7 @@
     move-object v7, v4
 
     .line 15
-    invoke-direct/range {v7 .. v14}, Lcom/vk/profile/adapter/items/p;-><init>(ILjava/lang/String;Ljava/lang/String;Ljava/lang/Runnable;IILkotlin/jvm/internal/i;)V
+    invoke-direct/range {v7 .. v14}, Lcom/vk/profile/adapter/items/DetailsUserCategoryItem;-><init>(ILjava/lang/String;Ljava/lang/String;Ljava/lang/Runnable;IILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     invoke-virtual {v2, v4}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
@@ -297,13 +297,13 @@
     move-result v3
 
     .line 18
-    new-instance v4, Lcom/vk/profile/adapter/items/p;
+    new-instance v4, Lcom/vk/profile/adapter/items/DetailsUserCategoryItem;
 
     const v8, 0x7f080a5d
 
     iget-object v7, v0, Lcom/vk/profile/adapter/factory/info_items/UserDetailsItemsFactory$categories$1;->this$0:Lcom/vk/profile/adapter/factory/info_items/UserDetailsItemsFactory;
 
-    invoke-virtual {v7}, Lcom/vk/profile/adapter/b/a;->b()Landroid/content/res/Resources;
+    invoke-virtual {v7}, Lcom/vk/profile/adapter/b/BaseItemsFactory;->b()Landroid/content/res/Resources;
 
     move-result-object v7
 
@@ -315,14 +315,14 @@
 
     const-string v7, "resources.getString(R.string.groups)"
 
-    invoke-static {v9, v7}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v9, v7}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    invoke-static {v3}, Lcom/vk/core/util/b1;->c(I)Ljava/lang/String;
+    invoke-static {v3}, Lcom/vk/core/util/StringUtils;->c(I)Ljava/lang/String;
 
     move-result-object v10
 
     .line 19
-    invoke-static/range {p1 .. p1}, Lcom/vk/profile/utils/d;->b(Lcom/vtosters/lite/api/ExtendedUserProfile;)Z
+    invoke-static/range {p1 .. p1}, Lcom/vk/profile/utils/ProfileExt;->b(Lcom/vtosters/lite/api/ExtendedUserProfile;)Z
 
     move-result v3
 
@@ -349,7 +349,7 @@
     move-object v7, v4
 
     .line 20
-    invoke-direct/range {v7 .. v14}, Lcom/vk/profile/adapter/items/p;-><init>(ILjava/lang/String;Ljava/lang/String;Ljava/lang/Runnable;IILkotlin/jvm/internal/i;)V
+    invoke-direct/range {v7 .. v14}, Lcom/vk/profile/adapter/items/DetailsUserCategoryItem;-><init>(ILjava/lang/String;Ljava/lang/String;Ljava/lang/Runnable;IILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     invoke-virtual {v2, v4}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
@@ -363,7 +363,7 @@
 
     if-lez v4, :cond_9
 
-    invoke-static/range {p1 .. p1}, Lcom/vk/profile/utils/d;->b(Lcom/vtosters/lite/api/ExtendedUserProfile;)Z
+    invoke-static/range {p1 .. p1}, Lcom/vk/profile/utils/ProfileExt;->b(Lcom/vtosters/lite/api/ExtendedUserProfile;)Z
 
     move-result v4
 
@@ -375,13 +375,13 @@
     move-result v3
 
     .line 23
-    new-instance v4, Lcom/vk/profile/adapter/items/p;
+    new-instance v4, Lcom/vk/profile/adapter/items/DetailsUserCategoryItem;
 
     const v8, 0x7f08060f
 
     iget-object v7, v0, Lcom/vk/profile/adapter/factory/info_items/UserDetailsItemsFactory$categories$1;->this$0:Lcom/vk/profile/adapter/factory/info_items/UserDetailsItemsFactory;
 
-    invoke-virtual {v7}, Lcom/vk/profile/adapter/b/a;->b()Landroid/content/res/Resources;
+    invoke-virtual {v7}, Lcom/vk/profile/adapter/b/BaseItemsFactory;->b()Landroid/content/res/Resources;
 
     move-result-object v7
 
@@ -393,9 +393,9 @@
 
     const-string v7, "resources.getString(R.string.posts)"
 
-    invoke-static {v9, v7}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v9, v7}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    invoke-static {v3}, Lcom/vk/core/util/b1;->c(I)Ljava/lang/String;
+    invoke-static {v3}, Lcom/vk/core/util/StringUtils;->c(I)Ljava/lang/String;
 
     move-result-object v10
 
@@ -409,7 +409,7 @@
 
     move-object v7, v4
 
-    invoke-direct/range {v7 .. v14}, Lcom/vk/profile/adapter/items/p;-><init>(ILjava/lang/String;Ljava/lang/String;Ljava/lang/Runnable;IILkotlin/jvm/internal/i;)V
+    invoke-direct/range {v7 .. v14}, Lcom/vk/profile/adapter/items/DetailsUserCategoryItem;-><init>(ILjava/lang/String;Ljava/lang/String;Ljava/lang/Runnable;IILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     invoke-virtual {v2, v4}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
@@ -429,13 +429,13 @@
     move-result v3
 
     .line 26
-    new-instance v4, Lcom/vk/profile/adapter/items/p;
+    new-instance v4, Lcom/vk/profile/adapter/items/DetailsUserCategoryItem;
 
     const v8, 0x7f08034e
 
     iget-object v7, v0, Lcom/vk/profile/adapter/factory/info_items/UserDetailsItemsFactory$categories$1;->this$0:Lcom/vk/profile/adapter/factory/info_items/UserDetailsItemsFactory;
 
-    invoke-virtual {v7}, Lcom/vk/profile/adapter/b/a;->b()Landroid/content/res/Resources;
+    invoke-virtual {v7}, Lcom/vk/profile/adapter/b/BaseItemsFactory;->b()Landroid/content/res/Resources;
 
     move-result-object v7
 
@@ -447,14 +447,14 @@
 
     const-string v7, "resources.getString(R.string.articles)"
 
-    invoke-static {v9, v7}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v9, v7}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    invoke-static {v3}, Lcom/vk/core/util/b1;->c(I)Ljava/lang/String;
+    invoke-static {v3}, Lcom/vk/core/util/StringUtils;->c(I)Ljava/lang/String;
 
     move-result-object v10
 
     .line 27
-    invoke-static/range {p1 .. p1}, Lcom/vk/profile/utils/d;->b(Lcom/vtosters/lite/api/ExtendedUserProfile;)Z
+    invoke-static/range {p1 .. p1}, Lcom/vk/profile/utils/ProfileExt;->b(Lcom/vtosters/lite/api/ExtendedUserProfile;)Z
 
     move-result v3
 
@@ -476,7 +476,7 @@
     move-object v7, v4
 
     .line 28
-    invoke-direct/range {v7 .. v14}, Lcom/vk/profile/adapter/items/p;-><init>(ILjava/lang/String;Ljava/lang/String;Ljava/lang/Runnable;IILkotlin/jvm/internal/i;)V
+    invoke-direct/range {v7 .. v14}, Lcom/vk/profile/adapter/items/DetailsUserCategoryItem;-><init>(ILjava/lang/String;Ljava/lang/String;Ljava/lang/Runnable;IILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     invoke-virtual {v2, v4}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
@@ -496,13 +496,13 @@
     move-result v3
 
     .line 31
-    new-instance v4, Lcom/vk/profile/adapter/items/p;
+    new-instance v4, Lcom/vk/profile/adapter/items/DetailsUserCategoryItem;
 
     const v7, 0x7f0805f5
 
     iget-object v6, v0, Lcom/vk/profile/adapter/factory/info_items/UserDetailsItemsFactory$categories$1;->this$0:Lcom/vk/profile/adapter/factory/info_items/UserDetailsItemsFactory;
 
-    invoke-virtual {v6}, Lcom/vk/profile/adapter/b/a;->b()Landroid/content/res/Resources;
+    invoke-virtual {v6}, Lcom/vk/profile/adapter/b/BaseItemsFactory;->b()Landroid/content/res/Resources;
 
     move-result-object v6
 
@@ -514,9 +514,9 @@
 
     const-string v6, "resources.getString(R.string.music)"
 
-    invoke-static {v8, v6}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v8, v6}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    invoke-static {v3}, Lcom/vk/core/util/b1;->c(I)Ljava/lang/String;
+    invoke-static {v3}, Lcom/vk/core/util/StringUtils;->c(I)Ljava/lang/String;
 
     move-result-object v9
 
@@ -532,7 +532,7 @@
 
     move-object v6, v4
 
-    invoke-direct/range {v6 .. v13}, Lcom/vk/profile/adapter/items/p;-><init>(ILjava/lang/String;Ljava/lang/String;Ljava/lang/Runnable;IILkotlin/jvm/internal/i;)V
+    invoke-direct/range {v6 .. v13}, Lcom/vk/profile/adapter/items/DetailsUserCategoryItem;-><init>(ILjava/lang/String;Ljava/lang/String;Ljava/lang/Runnable;IILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     invoke-virtual {v2, v4}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
@@ -552,13 +552,13 @@
     move-result v3
 
     .line 34
-    new-instance v4, Lcom/vk/profile/adapter/items/p;
+    new-instance v4, Lcom/vk/profile/adapter/items/DetailsUserCategoryItem;
 
     const v7, 0x7f08084c
 
     iget-object v6, v0, Lcom/vk/profile/adapter/factory/info_items/UserDetailsItemsFactory$categories$1;->this$0:Lcom/vk/profile/adapter/factory/info_items/UserDetailsItemsFactory;
 
-    invoke-virtual {v6}, Lcom/vk/profile/adapter/b/a;->b()Landroid/content/res/Resources;
+    invoke-virtual {v6}, Lcom/vk/profile/adapter/b/BaseItemsFactory;->b()Landroid/content/res/Resources;
 
     move-result-object v6
 
@@ -570,9 +570,9 @@
 
     const-string v6, "resources.getString(R.string.videos)"
 
-    invoke-static {v8, v6}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v8, v6}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    invoke-static {v3}, Lcom/vk/core/util/b1;->c(I)Ljava/lang/String;
+    invoke-static {v3}, Lcom/vk/core/util/StringUtils;->c(I)Ljava/lang/String;
 
     move-result-object v9
 
@@ -588,13 +588,13 @@
 
     move-object v6, v4
 
-    invoke-direct/range {v6 .. v13}, Lcom/vk/profile/adapter/items/p;-><init>(ILjava/lang/String;Ljava/lang/String;Ljava/lang/Runnable;IILkotlin/jvm/internal/i;)V
+    invoke-direct/range {v6 .. v13}, Lcom/vk/profile/adapter/items/DetailsUserCategoryItem;-><init>(ILjava/lang/String;Ljava/lang/String;Ljava/lang/Runnable;IILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     invoke-virtual {v2, v4}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
     .line 35
     :cond_d
-    invoke-static {}, Lcom/vk/bridges/g;->a()Lcom/vk/bridges/f;
+    invoke-static {}, Lcom/vk/bridges/AuthBridge;->a()Lcom/vk/bridges/AuthBridge3;
 
     move-result-object v3
 
@@ -602,7 +602,7 @@
 
     iget v4, v4, Lcom/vk/dto/user/UserProfile;->b:I
 
-    invoke-interface {v3, v4}, Lcom/vk/bridges/f;->b(I)Z
+    invoke-interface {v3, v4}, Lcom/vk/bridges/AuthBridge3;->b(I)Z
 
     move-result v3
 
@@ -661,13 +661,13 @@
     move-result v3
 
     .line 41
-    new-instance v4, Lcom/vk/profile/adapter/items/p;
+    new-instance v4, Lcom/vk/profile/adapter/items/DetailsUserCategoryItem;
 
     const v10, 0x7f08052c
 
     iget-object v6, v0, Lcom/vk/profile/adapter/factory/info_items/UserDetailsItemsFactory$categories$1;->this$0:Lcom/vk/profile/adapter/factory/info_items/UserDetailsItemsFactory;
 
-    invoke-virtual {v6}, Lcom/vk/profile/adapter/b/a;->b()Landroid/content/res/Resources;
+    invoke-virtual {v6}, Lcom/vk/profile/adapter/b/BaseItemsFactory;->b()Landroid/content/res/Resources;
 
     move-result-object v6
 
@@ -679,9 +679,9 @@
 
     const-string v6, "resources.getString(R.string.wishlist)"
 
-    invoke-static {v11, v6}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v11, v6}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    invoke-static {v3}, Lcom/vk/core/util/b1;->c(I)Ljava/lang/String;
+    invoke-static {v3}, Lcom/vk/core/util/StringUtils;->c(I)Ljava/lang/String;
 
     move-result-object v12
 
@@ -697,7 +697,7 @@
 
     move-object v9, v4
 
-    invoke-direct/range {v9 .. v16}, Lcom/vk/profile/adapter/items/p;-><init>(ILjava/lang/String;Ljava/lang/String;Ljava/lang/Runnable;IILkotlin/jvm/internal/i;)V
+    invoke-direct/range {v9 .. v16}, Lcom/vk/profile/adapter/items/DetailsUserCategoryItem;-><init>(ILjava/lang/String;Ljava/lang/String;Ljava/lang/Runnable;IILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     invoke-virtual {v2, v4}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 

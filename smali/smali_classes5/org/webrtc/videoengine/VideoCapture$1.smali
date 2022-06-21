@@ -47,7 +47,7 @@
 
     const-string v1, "prepareHandlerThread --> latched, setting parentFrame, context!"
 
-    invoke-static {v0, v1}, Le/c/a/a;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Le/c/a/Log;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 2
     invoke-static {}, Lorg/webrtc/videoengine/VideoCapture;->access$2800()Ljava/lang/ref/WeakReference;

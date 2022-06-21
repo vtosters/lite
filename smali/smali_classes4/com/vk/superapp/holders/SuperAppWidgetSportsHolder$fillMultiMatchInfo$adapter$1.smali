@@ -3,7 +3,7 @@
 .source "SuperAppWidgetSportsHolder.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/d;
+.implements Lkotlin/jvm/b/Functions4;
 
 
 # annotations
@@ -19,11 +19,11 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/FunctionReference;",
-        "Lkotlin/jvm/b/d<",
+        "Lkotlin/jvm/b/Functions4<",
         "Lcom/vk/superapp/holders/SuperAppWidgetSportsHolder$d;",
         "Lcom/vk/dto/common/data/ApiApplication;",
         "Ljava/lang/String;",
-        "Lkotlin/m;",
+        "Lkotlin/Unit;",
         ">;"
     }
 .end annotation
@@ -54,7 +54,7 @@
 
     invoke-virtual {p0, p1, p2, p3}, Lcom/vk/superapp/holders/SuperAppWidgetSportsHolder$fillMultiMatchInfo$adapter$1;->a(Lcom/vk/superapp/holders/SuperAppWidgetSportsHolder$d;Lcom/vk/dto/common/data/ApiApplication;Ljava/lang/String;)V
 
-    sget-object p1, Lkotlin/m;->a:Lkotlin/m;
+    sget-object p1, Lkotlin/Unit;->a:Lkotlin/Unit;
 
     return-object p1
 .end method
@@ -80,12 +80,12 @@
     return-object v0
 .end method
 
-.method public final f()Lkotlin/u/e;
+.method public final f()Lkotlin/u/KDeclarationContainer;
     .locals 1
 
     const-class v0, Lcom/vk/superapp/holders/SuperAppWidgetSportsHolder;
 
-    invoke-static {v0}, Lkotlin/jvm/internal/o;->a(Ljava/lang/Class;)Lkotlin/u/c;
+    invoke-static {v0}, Lkotlin/jvm/internal/Reflection;->a(Ljava/lang/Class;)Lkotlin/u/KClass;
 
     move-result-object v0
 

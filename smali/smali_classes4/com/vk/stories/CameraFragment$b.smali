@@ -24,7 +24,7 @@
     return-void
 .end method
 
-.method public synthetic constructor <init>(Lkotlin/jvm/internal/i;)V
+.method public synthetic constructor <init>(Lkotlin/jvm/internal/DefaultConstructorMarker;)V
     .locals 0
 
     .line 2
@@ -68,11 +68,11 @@
     new-instance v0, Lcom/vk/stories/CameraFragment$a;
 
     .line 3
-    new-instance v1, Lcom/vk/cameraui/builder/a;
+    new-instance v1, Lcom/vk/cameraui/builder/CameraBuilder;
 
     const-string v2, ""
 
-    invoke-direct {v1, v2, v2}, Lcom/vk/cameraui/builder/a;-><init>(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-direct {v1, v2, v2}, Lcom/vk/cameraui/builder/CameraBuilder;-><init>(Ljava/lang/String;Ljava/lang/String;)V
 
     const/4 v2, 0x1
 

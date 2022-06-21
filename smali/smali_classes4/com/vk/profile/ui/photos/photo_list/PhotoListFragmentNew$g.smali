@@ -43,7 +43,7 @@
     .line 2
     iget-object v0, p0, Lcom/vk/profile/ui/photos/photo_list/PhotoListFragmentNew$g;->a:Lcom/vk/profile/ui/photos/photo_list/PhotoListFragmentNew;
 
-    invoke-virtual {v0}, Lcom/vk/profile/ui/photos/photo_list/PhotoListFragmentNew;->V4()Ld/a/a/c/b;
+    invoke-virtual {v0}, Lcom/vk/profile/ui/photos/photo_list/PhotoListFragmentNew;->V4()Lme/grishka/appkit/utils/MergeRecyclerAdapter;
 
     move-result-object v0
 
@@ -53,11 +53,11 @@
 
     iget-object v2, p0, Lcom/vk/profile/ui/photos/photo_list/PhotoListFragmentNew$g;->a:Lcom/vk/profile/ui/photos/photo_list/PhotoListFragmentNew;
 
-    invoke-virtual {v2}, Lcom/vk/profile/ui/photos/photo_list/PhotoListFragmentNew;->Z4()Lcom/vk/profile/ui/photos/a;
+    invoke-virtual {v2}, Lcom/vk/profile/ui/photos/photo_list/PhotoListFragmentNew;->Z4()Lcom/vk/profile/ui/photos/PhotoListAdapter;
 
     move-result-object v2
 
-    invoke-virtual {v0, v2}, Ld/a/a/c/b;->b(Landroidx/recyclerview/widget/RecyclerView$Adapter;)I
+    invoke-virtual {v0, v2}, Lme/grishka/appkit/utils/MergeRecyclerAdapter;->b(Landroidx/recyclerview/widget/RecyclerView$Adapter;)I
 
     move-result v0
 
@@ -69,13 +69,13 @@
     .line 3
     iget-object v3, p0, Lcom/vk/profile/ui/photos/photo_list/PhotoListFragmentNew$g;->a:Lcom/vk/profile/ui/photos/photo_list/PhotoListFragmentNew;
 
-    invoke-virtual {v3}, Lcom/vk/profile/ui/photos/photo_list/PhotoListFragmentNew;->V4()Ld/a/a/c/b;
+    invoke-virtual {v3}, Lcom/vk/profile/ui/photos/photo_list/PhotoListFragmentNew;->V4()Lme/grishka/appkit/utils/MergeRecyclerAdapter;
 
     move-result-object v3
 
     if-eqz v3, :cond_1
 
-    invoke-virtual {v3, v2}, Ld/a/a/c/b;->H(I)Landroidx/recyclerview/widget/RecyclerView$Adapter;
+    invoke-virtual {v3, v2}, Lme/grishka/appkit/utils/MergeRecyclerAdapter;->H(I)Landroidx/recyclerview/widget/RecyclerView$Adapter;
 
     move-result-object v3
 
@@ -92,12 +92,12 @@
     goto :goto_0
 
     :cond_0
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     throw v1
 
     :cond_1
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     throw v1
 
@@ -115,7 +115,7 @@
 
     const-string v2, "recyclerView.recyclerView"
 
-    invoke-static {v0, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {v0}, Landroidx/recyclerview/widget/RecyclerView;->getLayoutManager()Landroidx/recyclerview/widget/RecyclerView$LayoutManager;
 
@@ -148,7 +148,7 @@
 
     .line 6
     :cond_5
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     throw v1
 .end method
@@ -200,7 +200,7 @@
     goto :goto_0
 
     :cond_0
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     throw v2
 
@@ -211,7 +211,7 @@
     return p1
 
     :cond_2
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     throw v2
 .end method
@@ -233,11 +233,11 @@
     .line 2
     iget-object v0, p0, Lcom/vk/profile/ui/photos/photo_list/PhotoListFragmentNew$g;->a:Lcom/vk/profile/ui/photos/photo_list/PhotoListFragmentNew;
 
-    invoke-virtual {v0}, Lcom/vk/profile/ui/photos/photo_list/PhotoListFragmentNew;->Z4()Lcom/vk/profile/ui/photos/a;
+    invoke-virtual {v0}, Lcom/vk/profile/ui/photos/photo_list/PhotoListFragmentNew;->Z4()Lcom/vk/profile/ui/photos/PhotoListAdapter;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/vk/profile/ui/photos/a;->k()Ljava/util/ArrayList;
+    invoke-virtual {v0}, Lcom/vk/profile/ui/photos/PhotoListAdapter;->k()Ljava/util/ArrayList;
 
     move-result-object v0
 
@@ -255,11 +255,11 @@
     :cond_0
     iget-object v0, p0, Lcom/vk/profile/ui/photos/photo_list/PhotoListFragmentNew$g;->a:Lcom/vk/profile/ui/photos/photo_list/PhotoListFragmentNew;
 
-    invoke-virtual {v0}, Lcom/vk/profile/ui/photos/photo_list/PhotoListFragmentNew;->Z4()Lcom/vk/profile/ui/photos/a;
+    invoke-virtual {v0}, Lcom/vk/profile/ui/photos/photo_list/PhotoListFragmentNew;->Z4()Lcom/vk/profile/ui/photos/PhotoListAdapter;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/vk/profile/ui/photos/a;->k()Ljava/util/ArrayList;
+    invoke-virtual {v0}, Lcom/vk/profile/ui/photos/PhotoListAdapter;->k()Ljava/util/ArrayList;
 
     move-result-object v0
 
@@ -269,7 +269,7 @@
 
     const-string v0, "photosAdapter.photos[pos]"
 
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     check-cast p1, Lcom/vk/dto/photo/Photo;
 
@@ -286,7 +286,7 @@
 
     const-string v2, "recyclerView.recyclerView"
 
-    invoke-static {v0, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     const/4 v2, 0x0
 
@@ -305,14 +305,14 @@
 
     const-string v4, "getChildAt(i)"
 
-    invoke-static {v3, v4}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v3, v4}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 7
     invoke-virtual {v3}, Landroid/view/View;->getTag()Ljava/lang/Object;
 
     move-result-object v4
 
-    invoke-static {v4, p1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v4, p1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v4
 
@@ -376,7 +376,7 @@
 
     const-string v1, "recyclerView.recyclerView"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-static {v0}, Lcom/vk/extensions/ViewExtKt;->e(Landroid/view/View;)Landroid/graphics/Rect;
 
@@ -400,13 +400,13 @@
     .line 2
     iget-object v0, p0, Lcom/vk/profile/ui/photos/photo_list/PhotoListFragmentNew$g;->a:Lcom/vk/profile/ui/photos/photo_list/PhotoListFragmentNew;
 
-    invoke-virtual {v0}, Lcom/vk/profile/ui/photos/photo_list/PhotoListFragmentNew;->W4()Lcom/vk/lists/t;
+    invoke-virtual {v0}, Lcom/vk/profile/ui/photos/photo_list/PhotoListFragmentNew;->W4()Lcom/vk/lists/PaginationHelper;
 
     move-result-object v0
 
     if-eqz v0, :cond_0
 
-    invoke-virtual {v0}, Lcom/vk/lists/t;->g()V
+    invoke-virtual {v0}, Lcom/vk/lists/PaginationHelper;->g()V
 
     :cond_0
     return-void
@@ -420,7 +420,7 @@
 
     const/4 v1, 0x0
 
-    invoke-virtual {v0, v1}, Lcom/vk/profile/ui/photos/photo_list/PhotoListFragmentNew;->a(Lcom/vk/bridges/p$d;)V
+    invoke-virtual {v0, v1}, Lcom/vk/profile/ui/photos/photo_list/PhotoListFragmentNew;->a(Lcom/vk/bridges/ImageViewer$d;)V
 
     return-void
 .end method

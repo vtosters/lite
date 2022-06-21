@@ -3,12 +3,12 @@
 .source "CatalogSectionPresenter.kt"
 
 # interfaces
-.implements Lc/a/z/a;
+.implements Lio/reactivex/functions/Action;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/catalog2/core/presenters/CatalogSectionPresenter;->a(Lc/a/m;ZLcom/vk/lists/t;)V
+    value = Lcom/vk/catalog2/core/presenters/CatalogSectionPresenter;->a(Lio/reactivex/Observable;ZLcom/vk/lists/PaginationHelper;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;

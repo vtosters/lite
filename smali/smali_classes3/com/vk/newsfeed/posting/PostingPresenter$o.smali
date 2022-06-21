@@ -3,7 +3,7 @@
 .source "PostingPresenter.kt"
 
 # interfaces
-.implements Lc/a/z/g;
+.implements Lio/reactivex/functions/Consumer;
 
 
 # annotations
@@ -22,7 +22,7 @@
         "Ljava/lang/Object;",
         ">",
         "Ljava/lang/Object;",
-        "Lc/a/z/g<",
+        "Lio/reactivex/functions/Consumer<",
         "Lcom/vk/dto/newsfeed/entries/NewsEntry;",
         ">;"
     }
@@ -59,11 +59,11 @@
     .line 2
     iget-object v0, p0, Lcom/vk/newsfeed/posting/PostingPresenter$o;->a:Lcom/vk/newsfeed/posting/PostingPresenter;
 
-    invoke-static {v0}, Lcom/vk/newsfeed/posting/PostingPresenter;->e(Lcom/vk/newsfeed/posting/PostingPresenter;)Lcom/vk/newsfeed/posting/helpers/b;
+    invoke-static {v0}, Lcom/vk/newsfeed/posting/PostingPresenter;->e(Lcom/vk/newsfeed/posting/PostingPresenter;)Lcom/vk/newsfeed/posting/helpers/PostingDraftHelper;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/vk/newsfeed/posting/helpers/b;->c()J
+    invoke-virtual {v0}, Lcom/vk/newsfeed/posting/helpers/PostingDraftHelper;->c()J
 
     move-result-wide v0
 
@@ -74,48 +74,48 @@
     if-lez v4, :cond_0
 
     .line 3
-    sget-object v2, Lcom/vk/newsfeed/i0/a;->b:Lcom/vk/newsfeed/i0/a;
+    sget-object v2, Lcom/vk/newsfeed/i0/PostingDraftInteractor;->b:Lcom/vk/newsfeed/i0/PostingDraftInteractor;
 
-    invoke-virtual {v2, v0, v1}, Lcom/vk/newsfeed/i0/a;->b(J)V
+    invoke-virtual {v2, v0, v1}, Lcom/vk/newsfeed/i0/PostingDraftInteractor;->b(J)V
 
     .line 4
     :cond_0
     iget-object v0, p0, Lcom/vk/newsfeed/posting/PostingPresenter$o;->a:Lcom/vk/newsfeed/posting/PostingPresenter;
 
-    invoke-static {v0}, Lcom/vk/newsfeed/posting/PostingPresenter;->b(Lcom/vk/newsfeed/posting/PostingPresenter;)Lcom/vk/newsfeed/posting/helpers/a;
+    invoke-static {v0}, Lcom/vk/newsfeed/posting/PostingPresenter;->b(Lcom/vk/newsfeed/posting/PostingPresenter;)Lcom/vk/newsfeed/posting/helpers/PostingArgumentsHelper;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/vk/newsfeed/posting/helpers/a;->e()Ljava/lang/Long;
+    invoke-virtual {v0}, Lcom/vk/newsfeed/posting/helpers/PostingArgumentsHelper;->e()Ljava/lang/Long;
 
     move-result-object v0
 
     if-eqz v0, :cond_1
 
     .line 5
-    sget-object v0, Lcom/vk/newsfeed/i0/a;->b:Lcom/vk/newsfeed/i0/a;
+    sget-object v0, Lcom/vk/newsfeed/i0/PostingDraftInteractor;->b:Lcom/vk/newsfeed/i0/PostingDraftInteractor;
 
-    invoke-virtual {v0}, Lcom/vk/newsfeed/i0/a;->c()V
+    invoke-virtual {v0}, Lcom/vk/newsfeed/i0/PostingDraftInteractor;->c()V
 
     .line 6
     :cond_1
     iget-object v0, p0, Lcom/vk/newsfeed/posting/PostingPresenter$o;->a:Lcom/vk/newsfeed/posting/PostingPresenter;
 
-    invoke-static {v0}, Lcom/vk/newsfeed/posting/PostingPresenter;->h(Lcom/vk/newsfeed/posting/PostingPresenter;)Lcom/vk/newsfeed/posting/helpers/c;
+    invoke-static {v0}, Lcom/vk/newsfeed/posting/PostingPresenter;->h(Lcom/vk/newsfeed/posting/PostingPresenter;)Lcom/vk/newsfeed/posting/helpers/PostingPostResponseHelper;
 
     move-result-object v0
 
     const-string v1, "it"
 
-    invoke-static {p1, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     iget-object v1, p0, Lcom/vk/newsfeed/posting/PostingPresenter$o;->a:Lcom/vk/newsfeed/posting/PostingPresenter;
 
-    invoke-static {v1}, Lcom/vk/newsfeed/posting/PostingPresenter;->b(Lcom/vk/newsfeed/posting/PostingPresenter;)Lcom/vk/newsfeed/posting/helpers/a;
+    invoke-static {v1}, Lcom/vk/newsfeed/posting/PostingPresenter;->b(Lcom/vk/newsfeed/posting/PostingPresenter;)Lcom/vk/newsfeed/posting/helpers/PostingArgumentsHelper;
 
     move-result-object v1
 
-    invoke-virtual {v0, p1, v1}, Lcom/vk/newsfeed/posting/helpers/c;->a(Lcom/vk/dto/newsfeed/entries/NewsEntry;Lcom/vk/newsfeed/posting/helpers/a;)V
+    invoke-virtual {v0, p1, v1}, Lcom/vk/newsfeed/posting/helpers/PostingPostResponseHelper;->a(Lcom/vk/dto/newsfeed/entries/NewsEntry;Lcom/vk/newsfeed/posting/helpers/PostingArgumentsHelper;)V
 
     .line 7
     iget-object p1, p0, Lcom/vk/newsfeed/posting/PostingPresenter$o;->a:Lcom/vk/newsfeed/posting/PostingPresenter;

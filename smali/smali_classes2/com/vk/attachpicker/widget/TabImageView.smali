@@ -3,7 +3,7 @@
 .source "TabImageView.java"
 
 # interfaces
-.implements Lcom/vk/core/ui/themes/f;
+.implements Lcom/vk/core/ui/themes/Themable;
 
 
 # instance fields
@@ -192,7 +192,7 @@
 
     iget p3, p0, Lcom/vk/attachpicker/widget/TabImageView;->g:F
 
-    invoke-static {p1, p2, p3}, Lcom/vk/attachpicker/util/f;->b(IIF)I
+    invoke-static {p1, p2, p3}, Lcom/vk/attachpicker/util/Utils;->b(IIF)I
 
     move-result p1
 
@@ -272,7 +272,7 @@
 
     const/4 v2, 0x0
 
-    invoke-static {v2, v1, v3}, Lcom/vk/attachpicker/util/f;->a(IIF)I
+    invoke-static {v2, v1, v3}, Lcom/vk/attachpicker/util/Utils;->a(IIF)I
 
     move-result v1
 
@@ -285,7 +285,7 @@
 
     iget v3, p0, Lcom/vk/attachpicker/widget/TabImageView;->g:F
 
-    invoke-static {v1, v2, v3}, Lcom/vk/attachpicker/util/f;->b(IIF)I
+    invoke-static {v1, v2, v3}, Lcom/vk/attachpicker/util/Utils;->b(IIF)I
 
     move-result v1
 

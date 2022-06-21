@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/facebook/login/LoginManager;->a(Lcom/facebook/login/e;Lcom/facebook/login/LoginClient$Request;)V
+    value = Lcom/facebook/login/LoginManager;->a(Lcom/facebook/login/StartActivityDelegate;Lcom/facebook/login/LoginClient$Request;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;

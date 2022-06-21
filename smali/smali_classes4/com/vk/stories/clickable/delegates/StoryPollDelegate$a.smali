@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/stories/clickable/delegates/StoryPollDelegate;->a(Lcom/vk/stories/clickable/stickers/e;)V
+    value = Lcom/vk/stories/clickable/delegates/StoryPollDelegate;->a(Lcom/vk/stories/clickable/stickers/StoryPollSticker;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -22,20 +22,20 @@
 
 .field final synthetic b:Lcom/vk/poll/fragments/PollEditorScreen;
 
-.field final synthetic c:Lcom/vk/stories/clickable/stickers/e;
+.field final synthetic c:Lcom/vk/stories/clickable/stickers/StoryPollSticker;
 
 .field final synthetic d:Lkotlin/jvm/internal/Ref$BooleanRef;
 
 
 # direct methods
-.method constructor <init>(Lcom/vk/stories/clickable/delegates/StoryPollDelegate;Lcom/vk/poll/fragments/PollEditorScreen;Lcom/vk/stories/clickable/stickers/e;Lkotlin/jvm/internal/Ref$BooleanRef;)V
+.method constructor <init>(Lcom/vk/stories/clickable/delegates/StoryPollDelegate;Lcom/vk/poll/fragments/PollEditorScreen;Lcom/vk/stories/clickable/stickers/StoryPollSticker;Lkotlin/jvm/internal/Ref$BooleanRef;)V
     .locals 0
 
     iput-object p1, p0, Lcom/vk/stories/clickable/delegates/StoryPollDelegate$a;->a:Lcom/vk/stories/clickable/delegates/StoryPollDelegate;
 
     iput-object p2, p0, Lcom/vk/stories/clickable/delegates/StoryPollDelegate$a;->b:Lcom/vk/poll/fragments/PollEditorScreen;
 
-    iput-object p3, p0, Lcom/vk/stories/clickable/delegates/StoryPollDelegate$a;->c:Lcom/vk/stories/clickable/stickers/e;
+    iput-object p3, p0, Lcom/vk/stories/clickable/delegates/StoryPollDelegate$a;->c:Lcom/vk/stories/clickable/stickers/StoryPollSticker;
 
     iput-object p4, p0, Lcom/vk/stories/clickable/delegates/StoryPollDelegate$a;->d:Lkotlin/jvm/internal/Ref$BooleanRef;
 
@@ -55,13 +55,13 @@
     invoke-virtual {p1}, Lcom/vk/poll/fragments/PollEditorScreen;->h()V
 
     .line 2
-    iget-object p1, p0, Lcom/vk/stories/clickable/delegates/StoryPollDelegate$a;->c:Lcom/vk/stories/clickable/stickers/e;
+    iget-object p1, p0, Lcom/vk/stories/clickable/delegates/StoryPollDelegate$a;->c:Lcom/vk/stories/clickable/stickers/StoryPollSticker;
 
     const/4 v0, 0x0
 
     if-eqz p1, :cond_0
 
-    invoke-virtual {p1, v0}, Lcom/vk/attachpicker/stickers/y;->setInEditMode(Z)V
+    invoke-virtual {p1, v0}, Lcom/vk/attachpicker/stickers/CanvasSticker;->setInEditMode(Z)V
 
     .line 3
     :cond_0
@@ -71,7 +71,7 @@
 
     move-result-object p1
 
-    iget-object v1, p0, Lcom/vk/stories/clickable/delegates/StoryPollDelegate$a;->c:Lcom/vk/stories/clickable/stickers/e;
+    iget-object v1, p0, Lcom/vk/stories/clickable/delegates/StoryPollDelegate$a;->c:Lcom/vk/stories/clickable/stickers/StoryPollSticker;
 
     if-nez v1, :cond_1
 

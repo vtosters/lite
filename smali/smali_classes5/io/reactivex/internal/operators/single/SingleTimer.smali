@@ -1,5 +1,5 @@
 .class public final Lio/reactivex/internal/operators/single/SingleTimer;
-.super Lc/a/t;
+.super Lio/reactivex/Single;
 .source "SingleTimer.java"
 
 
@@ -12,7 +12,7 @@
 
 .annotation system Ldalvik/annotation/Signature;
     value = {
-        "Lc/a/t<",
+        "Lio/reactivex/Single<",
         "Ljava/lang/Long;",
         ">;"
     }
@@ -24,15 +24,15 @@
 
 .field final b:Ljava/util/concurrent/TimeUnit;
 
-.field final c:Lc/a/s;
+.field final c:Lio/reactivex/Scheduler;
 
 
 # direct methods
-.method public constructor <init>(JLjava/util/concurrent/TimeUnit;Lc/a/s;)V
+.method public constructor <init>(JLjava/util/concurrent/TimeUnit;Lio/reactivex/Scheduler;)V
     .locals 0
 
     .line 1
-    invoke-direct {p0}, Lc/a/t;-><init>()V
+    invoke-direct {p0}, Lio/reactivex/Single;-><init>()V
 
     .line 2
     iput-wide p1, p0, Lio/reactivex/internal/operators/single/SingleTimer;->a:J
@@ -41,19 +41,19 @@
     iput-object p3, p0, Lio/reactivex/internal/operators/single/SingleTimer;->b:Ljava/util/concurrent/TimeUnit;
 
     .line 4
-    iput-object p4, p0, Lio/reactivex/internal/operators/single/SingleTimer;->c:Lc/a/s;
+    iput-object p4, p0, Lio/reactivex/internal/operators/single/SingleTimer;->c:Lio/reactivex/Scheduler;
 
     return-void
 .end method
 
 
 # virtual methods
-.method protected b(Lc/a/v;)V
+.method protected b(Lio/reactivex/SingleObserver;)V
     .locals 4
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lc/a/v<",
+            "Lio/reactivex/SingleObserver<",
             "-",
             "Ljava/lang/Long;",
             ">;)V"
@@ -63,23 +63,23 @@
     .line 1
     new-instance v0, Lio/reactivex/internal/operators/single/SingleTimer$TimerDisposable;
 
-    invoke-direct {v0, p1}, Lio/reactivex/internal/operators/single/SingleTimer$TimerDisposable;-><init>(Lc/a/v;)V
+    invoke-direct {v0, p1}, Lio/reactivex/internal/operators/single/SingleTimer$TimerDisposable;-><init>(Lio/reactivex/SingleObserver;)V
 
     .line 2
-    invoke-interface {p1, v0}, Lc/a/v;->a(Lio/reactivex/disposables/b;)V
+    invoke-interface {p1, v0}, Lio/reactivex/SingleObserver;->a(Lio/reactivex/disposables/Disposable;)V
 
     .line 3
-    iget-object p1, p0, Lio/reactivex/internal/operators/single/SingleTimer;->c:Lc/a/s;
+    iget-object p1, p0, Lio/reactivex/internal/operators/single/SingleTimer;->c:Lio/reactivex/Scheduler;
 
     iget-wide v1, p0, Lio/reactivex/internal/operators/single/SingleTimer;->a:J
 
     iget-object v3, p0, Lio/reactivex/internal/operators/single/SingleTimer;->b:Ljava/util/concurrent/TimeUnit;
 
-    invoke-virtual {p1, v0, v1, v2, v3}, Lc/a/s;->a(Ljava/lang/Runnable;JLjava/util/concurrent/TimeUnit;)Lio/reactivex/disposables/b;
+    invoke-virtual {p1, v0, v1, v2, v3}, Lio/reactivex/Scheduler;->a(Ljava/lang/Runnable;JLjava/util/concurrent/TimeUnit;)Lio/reactivex/disposables/Disposable;
 
     move-result-object p1
 
-    invoke-virtual {v0, p1}, Lio/reactivex/internal/operators/single/SingleTimer$TimerDisposable;->a(Lio/reactivex/disposables/b;)V
+    invoke-virtual {v0, p1}, Lio/reactivex/internal/operators/single/SingleTimer$TimerDisposable;->a(Lio/reactivex/disposables/Disposable;)V
 
     return-void
 .end method

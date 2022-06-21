@@ -335,11 +335,11 @@
     aput-object p1, v3, v2
 
     .line 19
-    invoke-virtual {p3}, Lcom/google/android/search/verification/client/SearchActionVerificationClientService$a;->a()Lb/d/a/e/a/a/a;
+    invoke-virtual {p3}, Lcom/google/android/search/verification/client/SearchActionVerificationClientService$a;->a()Lb/d/a/e/a/a/ISearchActionVerificationService;
 
     move-result-object p1
 
-    invoke-interface {p1}, Lb/d/a/e/a/a/a;->getVersion()I
+    invoke-interface {p1}, Lb/d/a/e/a/a/ISearchActionVerificationService;->getVersion()I
 
     move-result p1
 

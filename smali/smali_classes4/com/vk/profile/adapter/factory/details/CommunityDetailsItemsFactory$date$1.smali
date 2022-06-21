@@ -3,7 +3,7 @@
 .source "CommunityDetailsItemsFactory.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/b;
+.implements Lkotlin/jvm/b/Functions2;
 
 
 # annotations
@@ -19,8 +19,8 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/b<",
-        "Lcom/vtosters/lite/api/i;",
+        "Lkotlin/jvm/b/Functions2<",
+        "Lcom/vtosters/lite/api/ExtendedCommunityProfile;",
         "Lcom/vk/profile/adapter/items/details/DetailsInfoItem;",
         ">;"
     }
@@ -46,11 +46,11 @@
 
 
 # virtual methods
-.method public final a(Lcom/vtosters/lite/api/i;)Lcom/vk/profile/adapter/items/details/DetailsInfoItem;
+.method public final a(Lcom/vtosters/lite/api/ExtendedCommunityProfile;)Lcom/vk/profile/adapter/items/details/DetailsInfoItem;
     .locals 7
 
     .line 1
-    invoke-static {p1}, Lcom/vk/profile/utils/b;->i(Lcom/vtosters/lite/api/i;)Z
+    invoke-static {p1}, Lcom/vk/profile/utils/CommunityExt;->i(Lcom/vtosters/lite/api/ExtendedCommunityProfile;)Z
 
     move-result v0
 
@@ -68,7 +68,7 @@
     .line 3
     iget v1, p1, Lcom/vtosters/lite/api/ExtendedUserProfile;->K:I
 
-    invoke-static {}, Lcom/vk/core/util/i1;->b()I
+    invoke-static {}, Lcom/vk/core/util/TimeUtils;->b()I
 
     move-result v2
 
@@ -87,7 +87,7 @@
     if-lez v2, :cond_0
 
     .line 6
-    invoke-static {v2}, Lcom/vk/core/util/i1;->b(I)Ljava/lang/String;
+    invoke-static {v2}, Lcom/vk/core/util/TimeUtils;->b(I)Ljava/lang/String;
 
     move-result-object v2
 
@@ -107,7 +107,7 @@
     .line 9
     iget v2, p1, Lcom/vtosters/lite/api/ExtendedUserProfile;->L:I
 
-    invoke-static {v2}, Lcom/vk/core/util/i1;->b(I)Ljava/lang/String;
+    invoke-static {v2}, Lcom/vk/core/util/TimeUtils;->b(I)Ljava/lang/String;
 
     move-result-object v2
 
@@ -117,7 +117,7 @@
     :cond_1
     new-instance v2, Lcom/vk/profile/adapter/factory/details/CommunityDetailsItemsFactory$date$1$a;
 
-    invoke-direct {v2, p0, p1}, Lcom/vk/profile/adapter/factory/details/CommunityDetailsItemsFactory$date$1$a;-><init>(Lcom/vk/profile/adapter/factory/details/CommunityDetailsItemsFactory$date$1;Lcom/vtosters/lite/api/i;)V
+    invoke-direct {v2, p0, p1}, Lcom/vk/profile/adapter/factory/details/CommunityDetailsItemsFactory$date$1$a;-><init>(Lcom/vk/profile/adapter/factory/details/CommunityDetailsItemsFactory$date$1;Lcom/vtosters/lite/api/ExtendedCommunityProfile;)V
 
     invoke-virtual {v0, v2}, Lcom/vk/profile/adapter/items/details/DetailsInfoItem;->a(Landroid/view/View$OnClickListener;)V
 
@@ -140,7 +140,7 @@
 
     iget v6, p1, Lcom/vtosters/lite/api/ExtendedUserProfile;->K:I
 
-    invoke-static {v6}, Lcom/vk/core/util/i1;->b(I)Ljava/lang/String;
+    invoke-static {v6}, Lcom/vk/core/util/TimeUtils;->b(I)Ljava/lang/String;
 
     move-result-object v6
 
@@ -191,9 +191,9 @@
     .locals 0
 
     .line 1
-    check-cast p1, Lcom/vtosters/lite/api/i;
+    check-cast p1, Lcom/vtosters/lite/api/ExtendedCommunityProfile;
 
-    invoke-virtual {p0, p1}, Lcom/vk/profile/adapter/factory/details/CommunityDetailsItemsFactory$date$1;->a(Lcom/vtosters/lite/api/i;)Lcom/vk/profile/adapter/items/details/DetailsInfoItem;
+    invoke-virtual {p0, p1}, Lcom/vk/profile/adapter/factory/details/CommunityDetailsItemsFactory$date$1;->a(Lcom/vtosters/lite/api/ExtendedCommunityProfile;)Lcom/vk/profile/adapter/items/details/DetailsInfoItem;
 
     move-result-object p1
 

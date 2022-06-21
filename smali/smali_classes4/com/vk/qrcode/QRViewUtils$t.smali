@@ -3,12 +3,12 @@
 .source "QRViewUtils.kt"
 
 # interfaces
-.implements Lc/a/z/g;
+.implements Lio/reactivex/functions/Consumer;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/qrcode/QRViewUtils;->a(Lcom/vk/qrcode/i;Landroid/app/Activity;Lcom/vk/qrcode/QRParser;)V
+    value = Lcom/vk/qrcode/QRViewUtils;->a(Lcom/vk/qrcode/QRTypes7;Landroid/app/Activity;Lcom/vk/qrcode/QRParser;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -22,8 +22,8 @@
         "Ljava/lang/Object;",
         ">",
         "Ljava/lang/Object;",
-        "Lc/a/z/g<",
-        "Lcom/vk/api/execute/e$b;",
+        "Lio/reactivex/functions/Consumer<",
+        "Lcom/vk/api/execute/ExecuteResolveScreenName$b;",
         ">;"
     }
 .end annotation
@@ -34,18 +34,18 @@
 
 .field final synthetic b:Lcom/vk/qrcode/QRParser;
 
-.field final synthetic c:Lcom/vk/qrcode/i;
+.field final synthetic c:Lcom/vk/qrcode/QRTypes7;
 
 
 # direct methods
-.method constructor <init>(Landroid/app/Activity;Lcom/vk/qrcode/QRParser;Lcom/vk/qrcode/i;)V
+.method constructor <init>(Landroid/app/Activity;Lcom/vk/qrcode/QRParser;Lcom/vk/qrcode/QRTypes7;)V
     .locals 0
 
     iput-object p1, p0, Lcom/vk/qrcode/QRViewUtils$t;->a:Landroid/app/Activity;
 
     iput-object p2, p0, Lcom/vk/qrcode/QRViewUtils$t;->b:Lcom/vk/qrcode/QRParser;
 
-    iput-object p3, p0, Lcom/vk/qrcode/QRViewUtils$t;->c:Lcom/vk/qrcode/i;
+    iput-object p3, p0, Lcom/vk/qrcode/QRViewUtils$t;->c:Lcom/vk/qrcode/QRTypes7;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -54,11 +54,11 @@
 
 
 # virtual methods
-.method public final a(Lcom/vk/api/execute/e$b;)V
+.method public final a(Lcom/vk/api/execute/ExecuteResolveScreenName$b;)V
     .locals 5
 
     .line 1
-    invoke-virtual {p1}, Lcom/vk/api/execute/e$b;->f()Ljava/lang/String;
+    invoke-virtual {p1}, Lcom/vk/api/execute/ExecuteResolveScreenName$b;->f()Ljava/lang/String;
 
     move-result-object v0
 
@@ -98,20 +98,20 @@
 
     iget-object v2, p0, Lcom/vk/qrcode/QRViewUtils$t;->b:Lcom/vk/qrcode/QRParser;
 
-    iget-object v4, p0, Lcom/vk/qrcode/QRViewUtils$t;->c:Lcom/vk/qrcode/i;
+    iget-object v4, p0, Lcom/vk/qrcode/QRViewUtils$t;->c:Lcom/vk/qrcode/QRTypes7;
 
-    invoke-virtual {p1}, Lcom/vk/api/execute/e$b;->d()Lcom/vk/dto/group/Group;
+    invoke-virtual {p1}, Lcom/vk/api/execute/ExecuteResolveScreenName$b;->d()Lcom/vk/dto/group/Group;
 
     move-result-object p1
 
     if-eqz p1, :cond_1
 
-    invoke-static {v0, v1, v2, v4, p1}, Lcom/vk/qrcode/QRViewUtils;->a(Lcom/vk/qrcode/QRViewUtils;Landroid/app/Activity;Lcom/vk/qrcode/QRParser;Lcom/vk/qrcode/i;Lcom/vk/dto/group/Group;)V
+    invoke-static {v0, v1, v2, v4, p1}, Lcom/vk/qrcode/QRViewUtils;->a(Lcom/vk/qrcode/QRViewUtils;Landroid/app/Activity;Lcom/vk/qrcode/QRParser;Lcom/vk/qrcode/QRTypes7;Lcom/vk/dto/group/Group;)V
 
     goto :goto_1
 
     :cond_1
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     throw v3
 
@@ -131,20 +131,20 @@
 
     iget-object v2, p0, Lcom/vk/qrcode/QRViewUtils$t;->b:Lcom/vk/qrcode/QRParser;
 
-    iget-object v4, p0, Lcom/vk/qrcode/QRViewUtils$t;->c:Lcom/vk/qrcode/i;
+    iget-object v4, p0, Lcom/vk/qrcode/QRViewUtils$t;->c:Lcom/vk/qrcode/QRTypes7;
 
-    invoke-virtual {p1}, Lcom/vk/api/execute/e$b;->g()Lcom/vk/dto/user/UserProfile;
+    invoke-virtual {p1}, Lcom/vk/api/execute/ExecuteResolveScreenName$b;->g()Lcom/vk/dto/user/UserProfile;
 
     move-result-object p1
 
     if-eqz p1, :cond_3
 
-    invoke-static {v0, v1, v2, v4, p1}, Lcom/vk/qrcode/QRViewUtils;->b(Lcom/vk/qrcode/QRViewUtils;Landroid/app/Activity;Lcom/vk/qrcode/QRParser;Lcom/vk/qrcode/i;Lcom/vk/dto/user/UserProfile;)V
+    invoke-static {v0, v1, v2, v4, p1}, Lcom/vk/qrcode/QRViewUtils;->b(Lcom/vk/qrcode/QRViewUtils;Landroid/app/Activity;Lcom/vk/qrcode/QRParser;Lcom/vk/qrcode/QRTypes7;Lcom/vk/dto/user/UserProfile;)V
 
     goto :goto_1
 
     :cond_3
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     throw v3
 
@@ -164,20 +164,20 @@
 
     iget-object v2, p0, Lcom/vk/qrcode/QRViewUtils$t;->b:Lcom/vk/qrcode/QRParser;
 
-    iget-object v4, p0, Lcom/vk/qrcode/QRViewUtils$t;->c:Lcom/vk/qrcode/i;
+    iget-object v4, p0, Lcom/vk/qrcode/QRViewUtils$t;->c:Lcom/vk/qrcode/QRTypes7;
 
-    invoke-virtual {p1}, Lcom/vk/api/execute/e$b;->a()Lcom/vk/dto/common/data/ApiApplication;
+    invoke-virtual {p1}, Lcom/vk/api/execute/ExecuteResolveScreenName$b;->a()Lcom/vk/dto/common/data/ApiApplication;
 
     move-result-object p1
 
     if-eqz p1, :cond_5
 
-    invoke-static {v0, v1, v2, v4, p1}, Lcom/vk/qrcode/QRViewUtils;->a(Lcom/vk/qrcode/QRViewUtils;Landroid/app/Activity;Lcom/vk/qrcode/QRParser;Lcom/vk/qrcode/i;Lcom/vk/dto/common/data/ApiApplication;)V
+    invoke-static {v0, v1, v2, v4, p1}, Lcom/vk/qrcode/QRViewUtils;->a(Lcom/vk/qrcode/QRViewUtils;Landroid/app/Activity;Lcom/vk/qrcode/QRParser;Lcom/vk/qrcode/QRTypes7;Lcom/vk/dto/common/data/ApiApplication;)V
 
     goto :goto_1
 
     :cond_5
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     throw v3
 
@@ -190,9 +190,9 @@
 
     iget-object v1, p0, Lcom/vk/qrcode/QRViewUtils$t;->b:Lcom/vk/qrcode/QRParser;
 
-    iget-object v2, p0, Lcom/vk/qrcode/QRViewUtils$t;->c:Lcom/vk/qrcode/i;
+    iget-object v2, p0, Lcom/vk/qrcode/QRViewUtils$t;->c:Lcom/vk/qrcode/QRTypes7;
 
-    invoke-static {p1, v0, v1, v2}, Lcom/vk/qrcode/QRViewUtils;->a(Lcom/vk/qrcode/QRViewUtils;Landroid/app/Activity;Lcom/vk/qrcode/QRParser;Lcom/vk/qrcode/i;)V
+    invoke-static {p1, v0, v1, v2}, Lcom/vk/qrcode/QRViewUtils;->a(Lcom/vk/qrcode/QRViewUtils;Landroid/app/Activity;Lcom/vk/qrcode/QRParser;Lcom/vk/qrcode/QRTypes7;)V
 
     :goto_1
     return-void
@@ -202,9 +202,9 @@
     .locals 0
 
     .line 1
-    check-cast p1, Lcom/vk/api/execute/e$b;
+    check-cast p1, Lcom/vk/api/execute/ExecuteResolveScreenName$b;
 
-    invoke-virtual {p0, p1}, Lcom/vk/qrcode/QRViewUtils$t;->a(Lcom/vk/api/execute/e$b;)V
+    invoke-virtual {p0, p1}, Lcom/vk/qrcode/QRViewUtils$t;->a(Lcom/vk/api/execute/ExecuteResolveScreenName$b;)V
 
     return-void
 .end method

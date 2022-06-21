@@ -58,7 +58,7 @@
     const-string v1, "v"
 
     .line 3
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {v0}, Landroid/view/View;->getTop()I
 
@@ -96,11 +96,11 @@
     .line 6
     iget-object v1, p0, Lcom/vk/notifications/NotificationsFragment$g;->a:Lcom/vk/notifications/NotificationsFragment;
 
-    invoke-virtual {v1}, Lcom/vk/core/fragments/c;->getPresenter()Lb/h/r/c;
+    invoke-virtual {v1}, Lcom/vk/core/fragments/BaseMvpFragment;->getPresenter()Lb/h/r/BaseScreenContract;
 
     move-result-object v1
 
-    check-cast v1, Lcom/vk/notifications/k;
+    check-cast v1, Lcom/vk/notifications/NotificationsContract;
 
     if-eqz v1, :cond_1
 
@@ -108,7 +108,7 @@
 
     move-result-object v0
 
-    invoke-interface {v1, v0}, Lcom/vk/notifications/k;->f(Ljava/lang/String;)V
+    invoke-interface {v1, v0}, Lcom/vk/notifications/NotificationsContract;->f(Ljava/lang/String;)V
 
     goto :goto_1
 

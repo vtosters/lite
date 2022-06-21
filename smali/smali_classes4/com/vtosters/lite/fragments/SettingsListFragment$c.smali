@@ -1,5 +1,5 @@
 .class public Lcom/vtosters/lite/fragments/SettingsListFragment$c;
-.super Lcom/vtosters/lite/ui/b0/n/i$a;
+.super Lcom/vtosters/lite/ui/b0/n/PreferenceIconItemHolder$a;
 .source "SettingsListFragment.java"
 
 
@@ -26,13 +26,13 @@
     .end annotation
 .end field
 
-.field public e:Lcom/vk/navigation/o;
+.field public e:Lcom/vk/navigation/Navigator;
 
 .field public f:Ljava/lang/Runnable;
 
 
 # direct methods
-.method public constructor <init>(IILjava/lang/Object;Lcom/vk/navigation/o;)V
+.method public constructor <init>(IILjava/lang/Object;Lcom/vk/navigation/Navigator;)V
     .locals 0
     .param p1    # I
         .annotation build Landroidx/annotation/DrawableRes;
@@ -44,10 +44,10 @@
     .end param
 
     .line 3
-    invoke-direct {p0, p1, p2, p3}, Lcom/vtosters/lite/ui/b0/n/i$a;-><init>(IILjava/lang/Object;)V
+    invoke-direct {p0, p1, p2, p3}, Lcom/vtosters/lite/ui/b0/n/PreferenceIconItemHolder$a;-><init>(IILjava/lang/Object;)V
 
     .line 4
-    iput-object p4, p0, Lcom/vtosters/lite/fragments/SettingsListFragment$c;->e:Lcom/vk/navigation/o;
+    iput-object p4, p0, Lcom/vtosters/lite/fragments/SettingsListFragment$c;->e:Lcom/vk/navigation/Navigator;
 
     return-void
 .end method
@@ -74,7 +74,7 @@
     .end annotation
 
     .line 1
-    invoke-direct {p0, p1, p2, p3}, Lcom/vtosters/lite/ui/b0/n/i$a;-><init>(IILjava/lang/Object;)V
+    invoke-direct {p0, p1, p2, p3}, Lcom/vtosters/lite/ui/b0/n/PreferenceIconItemHolder$a;-><init>(IILjava/lang/Object;)V
 
     .line 2
     iput-object p4, p0, Lcom/vtosters/lite/fragments/SettingsListFragment$c;->d:Ljava/lang/Class;
@@ -94,7 +94,7 @@
     .end param
 
     .line 5
-    invoke-direct {p0, p1, p2, p3}, Lcom/vtosters/lite/ui/b0/n/i$a;-><init>(IILjava/lang/Object;)V
+    invoke-direct {p0, p1, p2, p3}, Lcom/vtosters/lite/ui/b0/n/PreferenceIconItemHolder$a;-><init>(IILjava/lang/Object;)V
 
     .line 6
     iput-object p4, p0, Lcom/vtosters/lite/fragments/SettingsListFragment$c;->f:Ljava/lang/Runnable;

@@ -3,7 +3,7 @@
 .source "MediaMetricsVideo.kt"
 
 # interfaces
-.implements Lcom/vigo/metrics/listeners/a;
+.implements Lcom/vigo/metrics/listeners/VigoHeartbeatDataProvider;
 
 
 # annotations

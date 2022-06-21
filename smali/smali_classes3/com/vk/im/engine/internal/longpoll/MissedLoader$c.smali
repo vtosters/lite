@@ -3,12 +3,12 @@
 .source "MissedLoader.kt"
 
 # interfaces
-.implements Lcom/vk/im/engine/utils/collection/d$a;
+.implements Lcom/vk/im/engine/utils/collection/IntCollection$a;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/im/engine/internal/longpoll/MissedLoader;->a(Lcom/vk/api/internal/ApiManager;Lcom/vk/im/engine/utils/collection/d;)Lcom/vk/im/engine/internal/longpoll/MissedLoader$a;
+    value = Lcom/vk/im/engine/internal/longpoll/MissedLoader;->a(Lcom/vk/api/internal/ApiManager;Lcom/vk/im/engine/utils/collection/IntCollection;)Lcom/vk/im/engine/internal/longpoll/MissedLoader$a;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -90,18 +90,18 @@
     .line 7
     iget-object v0, p0, Lcom/vk/im/engine/internal/longpoll/MissedLoader$c;->b:Lcom/vk/api/internal/ApiManager;
 
-    invoke-virtual {v0, p1}, Lcom/vk/api/internal/ApiManager;->a(Lcom/vk/api/sdk/internal/a;)Ljava/lang/Object;
+    invoke-virtual {v0, p1}, Lcom/vk/api/internal/ApiManager;->a(Lcom/vk/api/sdk/internal/ApiCommand;)Ljava/lang/Object;
 
     move-result-object p1
 
     check-cast p1, Lcom/vk/im/engine/internal/api_commands/messages/MessagesGetHistoryApiCmd$e;
 
     .line 8
-    invoke-virtual {p1}, Lcom/vk/im/engine/internal/api_commands/messages/MessagesGetHistoryApiCmd$e;->a()Lcom/vk/im/engine/models/dialogs/c;
+    invoke-virtual {p1}, Lcom/vk/im/engine/internal/api_commands/messages/MessagesGetHistoryApiCmd$e;->a()Lcom/vk/im/engine/models/dialogs/DialogApiModel;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/vk/im/engine/models/dialogs/c;->j()I
+    invoke-virtual {v0}, Lcom/vk/im/engine/models/dialogs/DialogApiModel;->j()I
 
     move-result v0
 
@@ -119,11 +119,11 @@
     .line 10
     iget-object v2, p0, Lcom/vk/im/engine/internal/longpoll/MissedLoader$c;->c:Landroid/util/SparseArray;
 
-    invoke-virtual {p1}, Lcom/vk/im/engine/internal/api_commands/messages/MessagesGetHistoryApiCmd$e;->a()Lcom/vk/im/engine/models/dialogs/c;
+    invoke-virtual {p1}, Lcom/vk/im/engine/internal/api_commands/messages/MessagesGetHistoryApiCmd$e;->a()Lcom/vk/im/engine/models/dialogs/DialogApiModel;
 
     move-result-object v3
 
-    invoke-static {v2, v0, v3}, Lcom/vk/core/extensions/x;->a(Landroid/util/SparseArray;ILjava/lang/Object;)V
+    invoke-static {v2, v0, v3}, Lcom/vk/core/extensions/SparseArrayExt1;->a(Landroid/util/SparseArray;ILjava/lang/Object;)V
 
     if-eqz v1, :cond_0
 

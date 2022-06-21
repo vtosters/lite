@@ -43,7 +43,7 @@
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, v1}, Lcom/vk/stories/clickable/models/StoryMusicInfo$b;-><init>(Lkotlin/jvm/internal/i;)V
+    invoke-direct {v0, v1}, Lcom/vk/stories/clickable/models/StoryMusicInfo$b;-><init>(Lkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     .line 1
     new-instance v0, Lcom/vk/stories/clickable/models/StoryMusicInfo$a;
@@ -75,7 +75,7 @@
     return-void
 .end method
 
-.method public synthetic constructor <init>(Lcom/vk/dto/music/MusicTrack;Ljava/lang/String;IILjava/lang/String;ILkotlin/jvm/internal/i;)V
+.method public synthetic constructor <init>(Lcom/vk/dto/music/MusicTrack;Ljava/lang/String;IILjava/lang/String;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
     .locals 6
 
     and-int/lit8 p6, p6, 0x10
@@ -238,7 +238,7 @@
 
     iget-object v1, p1, Lcom/vk/stories/clickable/models/StoryMusicInfo;->a:Lcom/vk/dto/music/MusicTrack;
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v0
 
@@ -248,7 +248,7 @@
 
     iget-object v1, p1, Lcom/vk/stories/clickable/models/StoryMusicInfo;->b:Ljava/lang/String;
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v0
 
@@ -270,7 +270,7 @@
 
     iget-object p1, p1, Lcom/vk/stories/clickable/models/StoryMusicInfo;->e:Ljava/lang/String;
 
-    invoke-static {v0, p1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v0, p1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result p1
 

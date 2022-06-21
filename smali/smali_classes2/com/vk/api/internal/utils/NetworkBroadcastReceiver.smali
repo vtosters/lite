@@ -64,7 +64,7 @@
 
     const-string v1, "Collections.newSetFromMa\u2026shMap<Object, Boolean>())"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     sput-object v0, Lcom/vk/api/internal/utils/NetworkBroadcastReceiver;->b:Ljava/util/Set;
 
@@ -253,7 +253,7 @@
     invoke-virtual {v2}, Ljava/lang/Object;->notifyAll()V
 
     .line 5
-    sget-object v3, Lkotlin/m;->a:Lkotlin/m;
+    sget-object v3, Lkotlin/Unit;->a:Lkotlin/Unit;
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
@@ -272,7 +272,7 @@
 
     .line 7
     :cond_0
-    sget-object v1, Lkotlin/m;->a:Lkotlin/m;
+    sget-object v1, Lkotlin/Unit;->a:Lkotlin/Unit;
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_1
 
@@ -312,7 +312,7 @@
 
     const-string v2, "context.applicationContext"
 
-    invoke-static {v1, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     sput-object v1, Lcom/vk/api/internal/utils/NetworkBroadcastReceiver;->c:Landroid/content/Context;
 
@@ -361,7 +361,7 @@
 
     .line 9
     :cond_1
-    sget-object p1, Lkotlin/m;->a:Lkotlin/m;
+    sget-object p1, Lkotlin/Unit;->a:Lkotlin/Unit;
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
@@ -415,7 +415,7 @@
     const-string v0, "context"
 
     .line 16
-    invoke-static {v0}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v0}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     const/4 v0, 0x0
 

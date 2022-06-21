@@ -43,7 +43,7 @@
     invoke-virtual {p1}, Lcom/vk/voip/VoipViewModel;->n0()V
 
     .line 2
-    sget-object p1, Lcom/vk/voip/j;->b:Lcom/vk/voip/j;
+    sget-object p1, Lcom/vk/voip/VoipAnimatorHelper;->b:Lcom/vk/voip/VoipAnimatorHelper;
 
     iget-object v0, p0, Lcom/vk/voip/VoipCallView$a;->a:Lcom/vk/voip/VoipCallView;
 
@@ -77,7 +77,7 @@
 
     const-wide/16 v2, 0x1f4
 
-    invoke-virtual {p1, v0, v2, v3, v1}, Lcom/vk/voip/j;->a(FJ[Landroid/view/View;)V
+    invoke-virtual {p1, v0, v2, v3, v1}, Lcom/vk/voip/VoipAnimatorHelper;->a(FJ[Landroid/view/View;)V
 
     return-void
 .end method

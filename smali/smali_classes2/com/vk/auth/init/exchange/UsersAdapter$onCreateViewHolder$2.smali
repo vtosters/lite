@@ -3,7 +3,7 @@
 .source "UsersAdapter.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/b;
+.implements Lkotlin/jvm/b/Functions2;
 
 
 # annotations
@@ -19,9 +19,9 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/b<",
-        "Lcom/vk/auth/init/exchange/c;",
-        "Lkotlin/m;",
+        "Lkotlin/jvm/b/Functions2<",
+        "Lcom/vk/auth/init/exchange/UserItem;",
+        "Lkotlin/Unit;",
         ">;"
     }
 .end annotation
@@ -46,20 +46,20 @@
 
 
 # virtual methods
-.method public final a(Lcom/vk/auth/init/exchange/c;)V
+.method public final a(Lcom/vk/auth/init/exchange/UserItem;)V
     .locals 2
 
     .line 1
     iget-object v0, p0, Lcom/vk/auth/init/exchange/UsersAdapter$onCreateViewHolder$2;->this$0:Lcom/vk/auth/init/exchange/UsersAdapter;
 
-    invoke-static {v0, p1}, Lcom/vk/auth/init/exchange/UsersAdapter;->a(Lcom/vk/auth/init/exchange/UsersAdapter;Lcom/vk/auth/init/exchange/c;)I
+    invoke-static {v0, p1}, Lcom/vk/auth/init/exchange/UsersAdapter;->a(Lcom/vk/auth/init/exchange/UsersAdapter;Lcom/vk/auth/init/exchange/UserItem;)I
 
     move-result p1
 
     .line 2
     iget-object v0, p0, Lcom/vk/auth/init/exchange/UsersAdapter$onCreateViewHolder$2;->this$0:Lcom/vk/auth/init/exchange/UsersAdapter;
 
-    invoke-static {v0}, Lcom/vk/auth/init/exchange/UsersAdapter;->a(Lcom/vk/auth/init/exchange/UsersAdapter;)Lkotlin/jvm/b/c;
+    invoke-static {v0}, Lcom/vk/auth/init/exchange/UsersAdapter;->a(Lcom/vk/auth/init/exchange/UsersAdapter;)Lkotlin/jvm/b/Functions1;
 
     move-result-object v0
 
@@ -73,7 +73,7 @@
 
     move-result-object p1
 
-    invoke-interface {v0, v1, p1}, Lkotlin/jvm/b/c;->a(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v0, v1, p1}, Lkotlin/jvm/b/Functions1;->a(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     return-void
 .end method
@@ -82,11 +82,11 @@
     .locals 0
 
     .line 1
-    check-cast p1, Lcom/vk/auth/init/exchange/c;
+    check-cast p1, Lcom/vk/auth/init/exchange/UserItem;
 
-    invoke-virtual {p0, p1}, Lcom/vk/auth/init/exchange/UsersAdapter$onCreateViewHolder$2;->a(Lcom/vk/auth/init/exchange/c;)V
+    invoke-virtual {p0, p1}, Lcom/vk/auth/init/exchange/UsersAdapter$onCreateViewHolder$2;->a(Lcom/vk/auth/init/exchange/UserItem;)V
 
-    sget-object p1, Lkotlin/m;->a:Lkotlin/m;
+    sget-object p1, Lkotlin/Unit;->a:Lkotlin/Unit;
 
     return-object p1
 .end method

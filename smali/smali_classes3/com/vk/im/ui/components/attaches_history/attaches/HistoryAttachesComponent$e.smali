@@ -3,12 +3,12 @@
 .source "HistoryAttachesComponent.kt"
 
 # interfaces
-.implements Lc/a/z/g;
+.implements Lio/reactivex/functions/Consumer;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/im/ui/components/attaches_history/attaches/HistoryAttachesComponent;->a(ILjava/lang/String;)Lc/a/t;
+    value = Lcom/vk/im/ui/components/attaches_history/attaches/HistoryAttachesComponent;->a(ILjava/lang/String;)Lio/reactivex/Single;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -22,8 +22,8 @@
         "Ljava/lang/Object;",
         ">",
         "Ljava/lang/Object;",
-        "Lc/a/z/g<",
-        "Lcom/vk/im/engine/models/attaches/b;",
+        "Lio/reactivex/functions/Consumer<",
+        "Lcom/vk/im/engine/models/attaches/HistoryAttachesResponse;",
         ">;"
     }
 .end annotation
@@ -46,13 +46,13 @@
 
 
 # virtual methods
-.method public final a(Lcom/vk/im/engine/models/attaches/b;)V
+.method public final a(Lcom/vk/im/engine/models/attaches/HistoryAttachesResponse;)V
     .locals 1
 
     .line 1
     iget-object v0, p0, Lcom/vk/im/ui/components/attaches_history/attaches/HistoryAttachesComponent$e;->a:Lcom/vk/im/ui/components/attaches_history/attaches/HistoryAttachesComponent;
 
-    invoke-virtual {p1}, Lcom/vk/im/engine/models/attaches/b;->b()Ljava/lang/String;
+    invoke-virtual {p1}, Lcom/vk/im/engine/models/attaches/HistoryAttachesResponse;->b()Ljava/lang/String;
 
     move-result-object p1
 
@@ -65,9 +65,9 @@
     .locals 0
 
     .line 1
-    check-cast p1, Lcom/vk/im/engine/models/attaches/b;
+    check-cast p1, Lcom/vk/im/engine/models/attaches/HistoryAttachesResponse;
 
-    invoke-virtual {p0, p1}, Lcom/vk/im/ui/components/attaches_history/attaches/HistoryAttachesComponent$e;->a(Lcom/vk/im/engine/models/attaches/b;)V
+    invoke-virtual {p0, p1}, Lcom/vk/im/ui/components/attaches_history/attaches/HistoryAttachesComponent$e;->a(Lcom/vk/im/engine/models/attaches/HistoryAttachesResponse;)V
 
     return-void
 .end method

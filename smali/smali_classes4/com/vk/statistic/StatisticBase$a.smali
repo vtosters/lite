@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/statistic/StatisticBase;->a(Lcom/vk/statistic/b;)V
+    value = Lcom/vk/statistic/StatisticBase;->a(Lcom/vk/statistic/StatisticSender;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,19 +18,19 @@
 
 
 # instance fields
-.field final synthetic a:Lcom/vk/statistic/b;
+.field final synthetic a:Lcom/vk/statistic/StatisticSender;
 
 .field final synthetic b:Lcom/vk/statistic/StatisticBase;
 
 
 # direct methods
-.method constructor <init>(Lcom/vk/statistic/StatisticBase;Lcom/vk/statistic/b;)V
+.method constructor <init>(Lcom/vk/statistic/StatisticBase;Lcom/vk/statistic/StatisticSender;)V
     .locals 0
 
     .line 1
     iput-object p1, p0, Lcom/vk/statistic/StatisticBase$a;->b:Lcom/vk/statistic/StatisticBase;
 
-    iput-object p2, p0, Lcom/vk/statistic/StatisticBase$a;->a:Lcom/vk/statistic/b;
+    iput-object p2, p0, Lcom/vk/statistic/StatisticBase$a;->a:Lcom/vk/statistic/StatisticSender;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -43,7 +43,7 @@
     .locals 1
 
     .line 1
-    invoke-static {}, Lcom/vk/statistic/a;->b()V
+    invoke-static {}, Lcom/vk/statistic/SentTable;->b()V
 
     .line 2
     new-instance v0, Lcom/vk/statistic/StatisticBase$a$a;

@@ -3,7 +3,7 @@
 .source "ArticleCompositeWebInterface.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/a;
+.implements Lkotlin/jvm/b/Functions;
 
 
 # annotations
@@ -19,8 +19,8 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/a<",
-        "Lkotlin/m;",
+        "Lkotlin/jvm/b/Functions<",
+        "Lkotlin/Unit;",
         ">;"
     }
 .end annotation
@@ -55,7 +55,7 @@
     .line 1
     invoke-virtual {p0}, Lcom/vk/articles/webinterfaces/ArticleCompositeWebInterface$report$1;->invoke()V
 
-    sget-object v0, Lkotlin/m;->a:Lkotlin/m;
+    sget-object v0, Lkotlin/Unit;->a:Lkotlin/Unit;
 
     return-object v0
 .end method
@@ -92,11 +92,11 @@
     move-result v0
 
     .line 6
-    invoke-static {}, Lcom/vk/im/ui/p/c;->a()Lcom/vk/im/ui/p/b;
+    invoke-static {}, Lcom/vk/im/ui/p/ImBridge7;->a()Lcom/vk/im/ui/p/ImBridge8;
 
     move-result-object v4
 
-    invoke-interface {v4}, Lcom/vk/im/ui/p/b;->p()Lcom/vk/im/ui/p/k;
+    invoke-interface {v4}, Lcom/vk/im/ui/p/ImBridge8;->p()Lcom/vk/im/ui/p/ImBridge2;
 
     move-result-object v4
 
@@ -112,11 +112,11 @@
 
     const-string v6, "articleWebView.context"
 
-    invoke-static {v5, v6}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v5, v6}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    invoke-static {v2, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v2, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    invoke-interface {v4, v5, v2, v3, v0}, Lcom/vk/im/ui/p/k;->a(Landroid/content/Context;Ljava/lang/String;II)V
+    invoke-interface {v4, v5, v2, v3, v0}, Lcom/vk/im/ui/p/ImBridge2;->a(Landroid/content/Context;Ljava/lang/String;II)V
 
     return-void
 .end method

@@ -1,9 +1,9 @@
 .class public Lcom/vk/api/market/MarketGetMarketPage;
-.super Lcom/vk/api/base/d;
+.super Lcom/vk/api/base/ApiRequest;
 .source "MarketGetMarketPage.java"
 
 # interfaces
-.implements Lcom/vk/dto/common/data/h;
+.implements Lcom/vk/dto/common/data/ServerKeys;
 
 
 # annotations
@@ -16,10 +16,10 @@
 
 .annotation system Ldalvik/annotation/Signature;
     value = {
-        "Lcom/vk/api/base/d<",
+        "Lcom/vk/api/base/ApiRequest<",
         "Lcom/vk/api/market/MarketGetMarketPage$Response;",
         ">;",
-        "Lcom/vk/dto/common/data/h;"
+        "Lcom/vk/dto/common/data/ServerKeys;"
     }
 .end annotation
 
@@ -38,7 +38,7 @@
     const/4 p2, 0x2
 
     .line 4
-    invoke-virtual {p0, p1, p2}, Lcom/vk/api/base/d;->b(Ljava/lang/String;I)Lcom/vk/api/base/d;
+    invoke-virtual {p0, p1, p2}, Lcom/vk/api/base/ApiRequest;->b(Ljava/lang/String;I)Lcom/vk/api/base/ApiRequest;
 
     return-void
 .end method
@@ -47,26 +47,26 @@
     .locals 0
 
     .line 1
-    invoke-direct {p0, p1}, Lcom/vk/api/base/d;-><init>(Ljava/lang/String;)V
+    invoke-direct {p0, p1}, Lcom/vk/api/base/ApiRequest;-><init>(Ljava/lang/String;)V
 
     const-string p1, "owner_id"
 
     .line 2
-    invoke-virtual {p0, p1, p2}, Lcom/vk/api/base/d;->b(Ljava/lang/String;I)Lcom/vk/api/base/d;
+    invoke-virtual {p0, p1, p2}, Lcom/vk/api/base/ApiRequest;->b(Ljava/lang/String;I)Lcom/vk/api/base/ApiRequest;
 
     const-string p1, "count"
 
-    invoke-virtual {p0, p1, p3}, Lcom/vk/api/base/d;->b(Ljava/lang/String;I)Lcom/vk/api/base/d;
+    invoke-virtual {p0, p1, p3}, Lcom/vk/api/base/ApiRequest;->b(Ljava/lang/String;I)Lcom/vk/api/base/ApiRequest;
 
     const-string p1, "offset"
 
-    invoke-virtual {p0, p1, p4}, Lcom/vk/api/base/d;->b(Ljava/lang/String;I)Lcom/vk/api/base/d;
+    invoke-virtual {p0, p1, p4}, Lcom/vk/api/base/ApiRequest;->b(Ljava/lang/String;I)Lcom/vk/api/base/ApiRequest;
 
     const-string p1, "extended"
 
     const/4 p2, 0x1
 
-    invoke-virtual {p0, p1, p2}, Lcom/vk/api/base/d;->b(Ljava/lang/String;I)Lcom/vk/api/base/d;
+    invoke-virtual {p0, p1, p2}, Lcom/vk/api/base/ApiRequest;->b(Ljava/lang/String;I)Lcom/vk/api/base/ApiRequest;
 
     return-void
 .end method
@@ -79,7 +79,7 @@
 
     sget-object v1, Lcom/vk/api/base/ApiConfig;->d:Lcom/vk/api/base/ApiConfig$a;
 
-    invoke-interface {v1}, Lb/h/h/a$a;->c()I
+    invoke-interface {v1}, Lb/h/h/ModelConfig$a;->c()I
 
     move-result v1
 
@@ -92,7 +92,7 @@
     const/4 p1, 0x1
 
     .line 2
-    invoke-virtual {v0, p0, p1}, Lcom/vk/api/base/d;->b(Ljava/lang/String;I)Lcom/vk/api/base/d;
+    invoke-virtual {v0, p0, p1}, Lcom/vk/api/base/ApiRequest;->b(Ljava/lang/String;I)Lcom/vk/api/base/ApiRequest;
 
     return-object v0
 .end method
@@ -117,9 +117,9 @@
     .line 7
     new-instance v0, Lcom/vk/api/market/MarketGetMarketPage$Response;
 
-    sget-object v1, Lcom/vk/dto/common/Good;->c0:Lcom/vk/dto/common/data/c;
+    sget-object v1, Lcom/vk/dto/common/Good;->c0:Lcom/vk/dto/common/data/JsonParser;
 
-    invoke-direct {v0, p1, v1}, Lcom/vk/api/market/MarketGetMarketPage$Response;-><init>(Lorg/json/JSONObject;Lcom/vk/dto/common/data/c;)V
+    invoke-direct {v0, p1, v1}, Lcom/vk/api/market/MarketGetMarketPage$Response;-><init>(Lorg/json/JSONObject;Lcom/vk/dto/common/data/JsonParser;)V
 
     const-string v1, "albums"
 
@@ -143,9 +143,9 @@
 
     move-result-object v1
 
-    sget-object v3, Lcom/vk/dto/common/GoodAlbum;->g:Lcom/vk/dto/common/data/c;
+    sget-object v3, Lcom/vk/dto/common/GoodAlbum;->g:Lcom/vk/dto/common/data/JsonParser;
 
-    invoke-direct {v2, v1, v3}, Lcom/vk/dto/common/data/VKList;-><init>(Lorg/json/JSONObject;Lcom/vk/dto/common/data/c;)V
+    invoke-direct {v2, v1, v3}, Lcom/vk/dto/common/data/VKList;-><init>(Lorg/json/JSONObject;Lcom/vk/dto/common/data/JsonParser;)V
 
     iput-object v2, v0, Lcom/vk/api/market/MarketGetMarketPage$Response;->albums:Lcom/vk/dto/common/data/VKList;
 
@@ -340,11 +340,11 @@
     const-string v0, "albums_count"
 
     .line 2
-    invoke-virtual {p0, v0, p1}, Lcom/vk/api/base/d;->b(Ljava/lang/String;I)Lcom/vk/api/base/d;
+    invoke-virtual {p0, v0, p1}, Lcom/vk/api/base/ApiRequest;->b(Ljava/lang/String;I)Lcom/vk/api/base/ApiRequest;
 
     const-string p1, "albums_offset"
 
-    invoke-virtual {p0, p1, p2}, Lcom/vk/api/base/d;->b(Ljava/lang/String;I)Lcom/vk/api/base/d;
+    invoke-virtual {p0, p1, p2}, Lcom/vk/api/base/ApiRequest;->b(Ljava/lang/String;I)Lcom/vk/api/base/ApiRequest;
 
     return-void
 .end method
@@ -359,14 +359,14 @@
     const-string v2, "price_from"
 
     .line 4
-    invoke-virtual {p0, v2, p1, p2}, Lcom/vk/api/base/d;->a(Ljava/lang/String;J)Lcom/vk/api/base/d;
+    invoke-virtual {p0, v2, p1, p2}, Lcom/vk/api/base/ApiRequest;->a(Ljava/lang/String;J)Lcom/vk/api/base/ApiRequest;
 
     mul-long p3, p3, v0
 
     const-string p1, "price_to"
 
     .line 5
-    invoke-virtual {p0, p1, p3, p4}, Lcom/vk/api/base/d;->a(Ljava/lang/String;J)Lcom/vk/api/base/d;
+    invoke-virtual {p0, p1, p3, p4}, Lcom/vk/api/base/ApiRequest;->a(Ljava/lang/String;J)Lcom/vk/api/base/ApiRequest;
 
     return-void
 .end method
@@ -381,7 +381,7 @@
 
     const-string v0, "sort_type"
 
-    invoke-virtual {p0, v0, p1}, Lcom/vk/api/base/d;->b(Ljava/lang/String;I)Lcom/vk/api/base/d;
+    invoke-virtual {p0, v0, p1}, Lcom/vk/api/base/ApiRequest;->b(Ljava/lang/String;I)Lcom/vk/api/base/ApiRequest;
 
     return-void
 .end method
@@ -392,7 +392,7 @@
     const-string v0, "album_id"
 
     .line 3
-    invoke-virtual {p0, v0, p1}, Lcom/vk/api/base/d;->b(Ljava/lang/String;I)Lcom/vk/api/base/d;
+    invoke-virtual {p0, v0, p1}, Lcom/vk/api/base/ApiRequest;->b(Ljava/lang/String;I)Lcom/vk/api/base/ApiRequest;
 
     return-void
 .end method
@@ -403,7 +403,7 @@
     const-string v0, "query"
 
     .line 1
-    invoke-virtual {p0, v0, p1}, Lcom/vk/api/base/d;->c(Ljava/lang/String;Ljava/lang/String;)Lcom/vk/api/base/d;
+    invoke-virtual {p0, v0, p1}, Lcom/vk/api/base/ApiRequest;->c(Ljava/lang/String;Ljava/lang/String;)Lcom/vk/api/base/ApiRequest;
 
     return-void
 .end method
@@ -416,7 +416,7 @@
     const/4 v1, 0x1
 
     .line 1
-    invoke-virtual {p0, v0, v1}, Lcom/vk/api/base/d;->b(Ljava/lang/String;I)Lcom/vk/api/base/d;
+    invoke-virtual {p0, v0, v1}, Lcom/vk/api/base/ApiRequest;->b(Ljava/lang/String;I)Lcom/vk/api/base/ApiRequest;
 
     return-void
 .end method

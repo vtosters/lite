@@ -49,17 +49,17 @@
 
     iget-object p1, p1, Lcom/vk/poll/fragments/PollEditorScreen$closeChangesDialog$2;->this$0:Lcom/vk/poll/fragments/PollEditorScreen;
 
-    invoke-virtual {p1}, Lcom/vk/poll/fragments/PollEditorScreen;->a()Lkotlin/jvm/b/a;
+    invoke-virtual {p1}, Lcom/vk/poll/fragments/PollEditorScreen;->a()Lkotlin/jvm/b/Functions;
 
     move-result-object p1
 
     if-eqz p1, :cond_0
 
-    invoke-interface {p1}, Lkotlin/jvm/b/a;->invoke()Ljava/lang/Object;
+    invoke-interface {p1}, Lkotlin/jvm/b/Functions;->invoke()Ljava/lang/Object;
 
     move-result-object p1
 
-    check-cast p1, Lkotlin/m;
+    check-cast p1, Lkotlin/Unit;
 
     :cond_0
     return-void

@@ -36,13 +36,13 @@
 # instance fields
 .field private final a:Landroid/view/View;
 
-.field private b:Lkotlin/jvm/b/b;
+.field private b:Lkotlin/jvm/b/Functions2;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Lkotlin/jvm/b/b<",
+            "Lkotlin/jvm/b/Functions2<",
             "-",
             "Ljava/lang/Boolean;",
-            "Lkotlin/m;",
+            "Lkotlin/Unit;",
             ">;"
         }
     .end annotation
@@ -50,10 +50,10 @@
 
 .field private final c:Landroid/view/ViewGroup;
 
-.field private final d:Lcom/vk/attachpicker/base/f;
+.field private final d:Lcom/vk/attachpicker/base/StreamParcelableSelection;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Lcom/vk/attachpicker/base/f<",
+            "Lcom/vk/attachpicker/base/StreamParcelableSelection<",
             "TT;>;"
         }
     .end annotation
@@ -68,14 +68,14 @@
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, v1}, Lcom/vk/attachpicker/base/BaseAttachPickerFragment$c$a;-><init>(Lkotlin/jvm/internal/i;)V
+    invoke-direct {v0, v1}, Lcom/vk/attachpicker/base/BaseAttachPickerFragment$c$a;-><init>(Lkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     .line 1
-    sget-object v0, Lcom/vk/core/util/i;->a:Landroid/content/Context;
+    sget-object v0, Lcom/vk/core/util/AppContextHolder;->a:Landroid/content/Context;
 
     const-string v1, "AppContextHolder.context"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     const v1, 0x106000d
 
@@ -88,13 +88,13 @@
     return-void
 .end method
 
-.method public constructor <init>(Landroid/view/ViewGroup;Lcom/vk/attachpicker/base/f;)V
+.method public constructor <init>(Landroid/view/ViewGroup;Lcom/vk/attachpicker/base/StreamParcelableSelection;)V
     .locals 2
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
             "Landroid/view/ViewGroup;",
-            "Lcom/vk/attachpicker/base/f<",
+            "Lcom/vk/attachpicker/base/StreamParcelableSelection<",
             "TT;>;)V"
         }
     .end annotation
@@ -104,7 +104,7 @@
 
     iput-object p1, p0, Lcom/vk/attachpicker/base/BaseAttachPickerFragment$c;->c:Landroid/view/ViewGroup;
 
-    iput-object p2, p0, Lcom/vk/attachpicker/base/BaseAttachPickerFragment$c;->d:Lcom/vk/attachpicker/base/f;
+    iput-object p2, p0, Lcom/vk/attachpicker/base/BaseAttachPickerFragment$c;->d:Lcom/vk/attachpicker/base/StreamParcelableSelection;
 
     .line 2
     iget-object p1, p0, Lcom/vk/attachpicker/base/BaseAttachPickerFragment$c;->c:Landroid/view/ViewGroup;
@@ -130,7 +130,7 @@
 
     const-string p2, "LayoutInflater.from(root\u2026ew, rootViewGroup, false)"
 
-    invoke-static {p1, p2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, p2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     iput-object p1, p0, Lcom/vk/attachpicker/base/BaseAttachPickerFragment$c;->a:Landroid/view/View;
 
@@ -160,11 +160,11 @@
 
     .line 2
     :cond_0
-    iget-object v0, p0, Lcom/vk/attachpicker/base/BaseAttachPickerFragment$c;->d:Lcom/vk/attachpicker/base/f;
+    iget-object v0, p0, Lcom/vk/attachpicker/base/BaseAttachPickerFragment$c;->d:Lcom/vk/attachpicker/base/StreamParcelableSelection;
 
     if-eqz v0, :cond_1
 
-    invoke-virtual {v0, p1}, Lcom/vk/attachpicker/base/f;->b(Lcom/vk/core/serialize/Serializer$StreamParcelable;)Z
+    invoke-virtual {v0, p1}, Lcom/vk/attachpicker/base/StreamParcelableSelection;->b(Lcom/vk/core/serialize/Serializer$StreamParcelable;)Z
 
     move-result p1
 
@@ -202,7 +202,7 @@
     invoke-static {v0, p1}, Lcom/vk/extensions/ViewExtKt;->b(Landroid/view/View;Z)V
 
     .line 8
-    iget-object v0, p0, Lcom/vk/attachpicker/base/BaseAttachPickerFragment$c;->b:Lkotlin/jvm/b/b;
+    iget-object v0, p0, Lcom/vk/attachpicker/base/BaseAttachPickerFragment$c;->b:Lkotlin/jvm/b/Functions2;
 
     if-eqz v0, :cond_3
 
@@ -210,31 +210,31 @@
 
     move-result-object p1
 
-    invoke-interface {v0, p1}, Lkotlin/jvm/b/b;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v0, p1}, Lkotlin/jvm/b/Functions2;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p1
 
-    check-cast p1, Lkotlin/m;
+    check-cast p1, Lkotlin/Unit;
 
     :cond_3
     return-void
 .end method
 
-.method public final a(Lkotlin/jvm/b/b;)V
+.method public final a(Lkotlin/jvm/b/Functions2;)V
     .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lkotlin/jvm/b/b<",
+            "Lkotlin/jvm/b/Functions2<",
             "-",
             "Ljava/lang/Boolean;",
-            "Lkotlin/m;",
+            "Lkotlin/Unit;",
             ">;)V"
         }
     .end annotation
 
     .line 1
-    iput-object p1, p0, Lcom/vk/attachpicker/base/BaseAttachPickerFragment$c;->b:Lkotlin/jvm/b/b;
+    iput-object p1, p0, Lcom/vk/attachpicker/base/BaseAttachPickerFragment$c;->b:Lkotlin/jvm/b/Functions2;
 
     return-void
 .end method

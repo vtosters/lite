@@ -3,13 +3,13 @@
 .source "SpectatorsInlineView.java"
 
 # interfaces
-.implements Lcom/vk/libvideo/live/views/spectators/c;
+.implements Lcom/vk/libvideo/live/views/spectators/SpectatorsContract;
 
 
 # instance fields
 .field private final a:Landroid/widget/TextView;
 
-.field private b:Lcom/vk/libvideo/live/views/spectators/b;
+.field private b:Lcom/vk/libvideo/live/views/spectators/SpectatorsContract1;
 
 
 # direct methods
@@ -88,12 +88,12 @@
     .locals 1
 
     .line 1
-    iget-object v0, p0, Lcom/vk/libvideo/live/views/spectators/SpectatorsInlineView;->b:Lcom/vk/libvideo/live/views/spectators/b;
+    iget-object v0, p0, Lcom/vk/libvideo/live/views/spectators/SpectatorsInlineView;->b:Lcom/vk/libvideo/live/views/spectators/SpectatorsContract1;
 
     if-eqz v0, :cond_0
 
     .line 2
-    invoke-interface {v0}, Lcom/vk/libvideo/live/base/a;->a()V
+    invoke-interface {v0}, Lcom/vk/libvideo/live/base/BasePresenter;->a()V
 
     :cond_0
     return-void
@@ -121,12 +121,12 @@
     .locals 1
 
     .line 1
-    iget-object v0, p0, Lcom/vk/libvideo/live/views/spectators/SpectatorsInlineView;->b:Lcom/vk/libvideo/live/views/spectators/b;
+    iget-object v0, p0, Lcom/vk/libvideo/live/views/spectators/SpectatorsInlineView;->b:Lcom/vk/libvideo/live/views/spectators/SpectatorsContract1;
 
     if-eqz v0, :cond_0
 
     .line 2
-    invoke-interface {v0}, Lcom/vk/libvideo/live/base/a;->e()V
+    invoke-interface {v0}, Lcom/vk/libvideo/live/base/BasePresenter;->e()V
 
     :cond_0
     return-void
@@ -138,11 +138,11 @@
     return-void
 .end method
 
-.method public getPresenter()Lcom/vk/libvideo/live/views/spectators/b;
+.method public getPresenter()Lcom/vk/libvideo/live/views/spectators/SpectatorsContract1;
     .locals 1
 
     .line 2
-    iget-object v0, p0, Lcom/vk/libvideo/live/views/spectators/SpectatorsInlineView;->b:Lcom/vk/libvideo/live/views/spectators/b;
+    iget-object v0, p0, Lcom/vk/libvideo/live/views/spectators/SpectatorsInlineView;->b:Lcom/vk/libvideo/live/views/spectators/SpectatorsContract1;
 
     return-object v0
 .end method
@@ -151,7 +151,7 @@
     .locals 1
 
     .line 1
-    invoke-virtual {p0}, Lcom/vk/libvideo/live/views/spectators/SpectatorsInlineView;->getPresenter()Lcom/vk/libvideo/live/views/spectators/b;
+    invoke-virtual {p0}, Lcom/vk/libvideo/live/views/spectators/SpectatorsInlineView;->getPresenter()Lcom/vk/libvideo/live/views/spectators/SpectatorsContract1;
 
     move-result-object v0
 
@@ -164,7 +164,7 @@
     .line 1
     iget-object v0, p0, Lcom/vk/libvideo/live/views/spectators/SpectatorsInlineView;->a:Landroid/widget/TextView;
 
-    invoke-static {p1}, Lcom/vk/libvideo/live/base/d;->a(I)Ljava/lang/String;
+    invoke-static {p1}, Lcom/vk/libvideo/live/base/DelimiterDigits;->a(I)Ljava/lang/String;
 
     move-result-object p1
 
@@ -181,11 +181,11 @@
     return-void
 .end method
 
-.method public setPresenter(Lcom/vk/libvideo/live/views/spectators/b;)V
+.method public setPresenter(Lcom/vk/libvideo/live/views/spectators/SpectatorsContract1;)V
     .locals 0
 
     .line 2
-    iput-object p1, p0, Lcom/vk/libvideo/live/views/spectators/SpectatorsInlineView;->b:Lcom/vk/libvideo/live/views/spectators/b;
+    iput-object p1, p0, Lcom/vk/libvideo/live/views/spectators/SpectatorsInlineView;->b:Lcom/vk/libvideo/live/views/spectators/SpectatorsContract1;
 
     return-void
 .end method
@@ -194,9 +194,9 @@
     .locals 0
 
     .line 1
-    check-cast p1, Lcom/vk/libvideo/live/views/spectators/b;
+    check-cast p1, Lcom/vk/libvideo/live/views/spectators/SpectatorsContract1;
 
-    invoke-virtual {p0, p1}, Lcom/vk/libvideo/live/views/spectators/SpectatorsInlineView;->setPresenter(Lcom/vk/libvideo/live/views/spectators/b;)V
+    invoke-virtual {p0, p1}, Lcom/vk/libvideo/live/views/spectators/SpectatorsInlineView;->setPresenter(Lcom/vk/libvideo/live/views/spectators/SpectatorsContract1;)V
 
     return-void
 .end method
@@ -211,12 +211,12 @@
     .locals 1
 
     .line 1
-    iget-object v0, p0, Lcom/vk/libvideo/live/views/spectators/SpectatorsInlineView;->b:Lcom/vk/libvideo/live/views/spectators/b;
+    iget-object v0, p0, Lcom/vk/libvideo/live/views/spectators/SpectatorsInlineView;->b:Lcom/vk/libvideo/live/views/spectators/SpectatorsContract1;
 
     if-eqz v0, :cond_0
 
     .line 2
-    invoke-interface {v0}, Lcom/vk/libvideo/live/base/a;->t()V
+    invoke-interface {v0}, Lcom/vk/libvideo/live/base/BasePresenter;->t()V
 
     :cond_0
     return-void

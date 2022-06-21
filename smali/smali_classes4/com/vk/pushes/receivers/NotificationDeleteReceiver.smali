@@ -23,7 +23,7 @@
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, v1}, Lcom/vk/pushes/receivers/NotificationDeleteReceiver$a;-><init>(Lkotlin/jvm/internal/i;)V
+    invoke-direct {v0, v1}, Lcom/vk/pushes/receivers/NotificationDeleteReceiver$a;-><init>(Lkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     sput-object v0, Lcom/vk/pushes/receivers/NotificationDeleteReceiver;->a:Lcom/vk/pushes/receivers/NotificationDeleteReceiver$a;
 
@@ -117,9 +117,9 @@
     if-eqz p2, :cond_5
 
     .line 7
-    sget-object p2, Lcom/vk/pushes/i/a;->a:Lcom/vk/pushes/i/a;
+    sget-object p2, Lcom/vk/pushes/i/BusinessNotifyNotificationCache;->a:Lcom/vk/pushes/i/BusinessNotifyNotificationCache;
 
-    invoke-virtual {p2, p1}, Lcom/vk/pushes/i/a;->c(I)V
+    invoke-virtual {p2, p1}, Lcom/vk/pushes/i/BusinessNotifyNotificationCache;->c(I)V
 
     goto :goto_0
 
@@ -134,9 +134,9 @@
     if-eqz p2, :cond_5
 
     .line 9
-    sget-object p2, Lcom/vk/pushes/i/b;->a:Lcom/vk/pushes/i/b;
+    sget-object p2, Lcom/vk/pushes/i/MessageNotificationCache;->a:Lcom/vk/pushes/i/MessageNotificationCache;
 
-    invoke-virtual {p2, p1}, Lcom/vk/pushes/i/b;->c(I)V
+    invoke-virtual {p2, p1}, Lcom/vk/pushes/i/MessageNotificationCache;->c(I)V
 
     :cond_5
     :goto_0

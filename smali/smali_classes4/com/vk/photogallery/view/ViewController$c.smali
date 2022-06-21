@@ -3,12 +3,12 @@
 .source "ViewController.kt"
 
 # interfaces
-.implements Lc/a/z/j;
+.implements Lio/reactivex/functions/Function;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/photogallery/view/ViewController;->a(Lcom/vk/photogallery/dto/a;I)V
+    value = Lcom/vk/photogallery/view/ViewController;->a(Lcom/vk/photogallery/dto/GalleryState;I)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -24,9 +24,9 @@
         "Ljava/lang/Object;",
         ">",
         "Ljava/lang/Object;",
-        "Lc/a/z/j<",
+        "Lio/reactivex/functions/Function<",
         "TT;",
-        "Lc/a/p<",
+        "Lio/reactivex/ObservableSource<",
         "+TR;>;>;"
     }
 .end annotation
@@ -53,15 +53,15 @@
 
 
 # virtual methods
-.method public final a(Lcom/vk/photogallery/dto/a;)Lc/a/m;
+.method public final a(Lcom/vk/photogallery/dto/GalleryState;)Lio/reactivex/Observable;
     .locals 3
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lcom/vk/photogallery/dto/a;",
+            "Lcom/vk/photogallery/dto/GalleryState;",
             ")",
-            "Lc/a/m<",
-            "Lcom/vk/photogallery/dto/m;",
+            "Lio/reactivex/Observable<",
+            "Lcom/vk/photogallery/dto/GalleryState1;",
             ">;"
         }
     .end annotation
@@ -69,11 +69,11 @@
     .line 1
     iget-object p1, p0, Lcom/vk/photogallery/view/ViewController$c;->a:Lcom/vk/photogallery/view/ViewController;
 
-    invoke-static {p1}, Lcom/vk/photogallery/view/ViewController;->a(Lcom/vk/photogallery/view/ViewController;)Lcom/vk/photogallery/dto/d;
+    invoke-static {p1}, Lcom/vk/photogallery/view/ViewController;->a(Lcom/vk/photogallery/view/ViewController;)Lcom/vk/photogallery/dto/GalleryState4;
 
     move-result-object p1
 
-    invoke-virtual {p1}, Lcom/vk/photogallery/dto/d;->b()Lcom/vk/photogallery/dto/a;
+    invoke-virtual {p1}, Lcom/vk/photogallery/dto/GalleryState4;->b()Lcom/vk/photogallery/dto/GalleryState;
 
     move-result-object p1
 
@@ -82,7 +82,7 @@
     .line 2
     iget-object v0, p0, Lcom/vk/photogallery/view/ViewController$c;->a:Lcom/vk/photogallery/view/ViewController;
 
-    invoke-virtual {v0}, Lcom/vk/photogallery/view/ViewController;->c()Lcom/vk/photogallery/a;
+    invoke-virtual {v0}, Lcom/vk/photogallery/view/ViewController;->c()Lcom/vk/photogallery/GalleryProvider;
 
     move-result-object v0
 
@@ -94,7 +94,7 @@
 
     move-result v2
 
-    invoke-interface {v0, p1, v1, v2}, Lcom/vk/photogallery/a;->loadEntries(Lcom/vk/photogallery/dto/a;II)Lc/a/m;
+    invoke-interface {v0, p1, v1, v2}, Lcom/vk/photogallery/GalleryProvider;->loadEntries(Lcom/vk/photogallery/dto/GalleryState;II)Lio/reactivex/Observable;
 
     move-result-object p1
 
@@ -104,7 +104,7 @@
 
     .line 3
     :cond_0
-    invoke-static {}, Lc/a/m;->l()Lc/a/m;
+    invoke-static {}, Lio/reactivex/Observable;->l()Lio/reactivex/Observable;
 
     move-result-object p1
 
@@ -116,9 +116,9 @@
     .locals 0
 
     .line 1
-    check-cast p1, Lcom/vk/photogallery/dto/a;
+    check-cast p1, Lcom/vk/photogallery/dto/GalleryState;
 
-    invoke-virtual {p0, p1}, Lcom/vk/photogallery/view/ViewController$c;->a(Lcom/vk/photogallery/dto/a;)Lc/a/m;
+    invoke-virtual {p0, p1}, Lcom/vk/photogallery/view/ViewController$c;->a(Lcom/vk/photogallery/dto/GalleryState;)Lio/reactivex/Observable;
 
     move-result-object p1
 

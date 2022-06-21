@@ -27,17 +27,17 @@
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/lang/ref/WeakReference<",
-            "Lcom/vk/profile/ui/cover/c;",
+            "Lcom/vk/profile/ui/cover/CoverViewItem;",
             ">;"
         }
     .end annotation
 .end field
 
-.field private c:Lkotlin/jvm/b/a;
+.field private c:Lkotlin/jvm/b/Functions;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Lkotlin/jvm/b/a<",
-            "Lkotlin/m;",
+            "Lkotlin/jvm/b/Functions<",
+            "Lkotlin/Unit;",
             ">;"
         }
     .end annotation
@@ -62,7 +62,7 @@
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, v1}, Lcom/vk/profile/data/cover/model/CommunityCoverModel$b$a;-><init>(Lkotlin/jvm/internal/i;)V
+    invoke-direct {v0, v1}, Lcom/vk/profile/data/cover/model/CommunityCoverModel$b$a;-><init>(Lkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     return-void
 .end method
@@ -229,31 +229,31 @@
     return-void
 .end method
 
-.method public a(Lcom/vk/profile/ui/cover/c;)V
+.method public a(Lcom/vk/profile/ui/cover/CoverViewItem;)V
     .locals 0
 
     return-void
 .end method
 
-.method public a(Lcom/vk/profile/ui/cover/c;IIZLjava/lang/Runnable;)V
+.method public a(Lcom/vk/profile/ui/cover/CoverViewItem;IIZLjava/lang/Runnable;)V
     .locals 0
 
     return-void
 .end method
 
-.method public final a(Lkotlin/jvm/b/a;)V
+.method public final a(Lkotlin/jvm/b/Functions;)V
     .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lkotlin/jvm/b/a<",
-            "Lkotlin/m;",
+            "Lkotlin/jvm/b/Functions<",
+            "Lkotlin/Unit;",
             ">;)V"
         }
     .end annotation
 
     .line 3
-    iput-object p1, p0, Lcom/vk/profile/data/cover/model/CommunityCoverModel$b;->c:Lkotlin/jvm/b/a;
+    iput-object p1, p0, Lcom/vk/profile/data/cover/model/CommunityCoverModel$b;->c:Lkotlin/jvm/b/Functions;
 
     return-void
 .end method
@@ -305,7 +305,7 @@
 
     move-result v4
 
-    invoke-static {v0, v2, v3, v4}, Lcom/vk/profile/e/d;->a(Ljava/lang/String;III)V
+    invoke-static {v0, v2, v3, v4}, Lcom/vk/profile/e/LiveCoversTracker;->a(Ljava/lang/String;III)V
 
     .line 3
     iput-boolean v1, p0, Lcom/vk/profile/data/cover/model/CommunityCoverModel$b;->d:Z
@@ -314,7 +314,7 @@
 
     .line 4
     :cond_0
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     const/4 v0, 0x0
 
@@ -379,11 +379,11 @@
 
     move-result-object p1
 
-    check-cast p1, Lcom/vk/profile/ui/cover/c;
+    check-cast p1, Lcom/vk/profile/ui/cover/CoverViewItem;
 
     if-eqz p1, :cond_4
 
-    invoke-virtual {p1}, Lcom/vk/profile/ui/cover/c;->a()V
+    invoke-virtual {p1}, Lcom/vk/profile/ui/cover/CoverViewItem;->a()V
 
     goto :goto_0
 
@@ -409,7 +409,7 @@
 
     move-result v0
 
-    invoke-static {p1, v0}, Lcom/vk/profile/e/d;->a(Ljava/lang/String;I)V
+    invoke-static {p1, v0}, Lcom/vk/profile/e/LiveCoversTracker;->a(Ljava/lang/String;I)V
 
     .line 10
     iget-object p1, p0, Lcom/vk/profile/data/cover/model/CommunityCoverModel$b;->b:Ljava/lang/ref/WeakReference;
@@ -420,17 +420,17 @@
 
     move-result-object p1
 
-    check-cast p1, Lcom/vk/profile/ui/cover/c;
+    check-cast p1, Lcom/vk/profile/ui/cover/CoverViewItem;
 
     if-eqz p1, :cond_4
 
-    invoke-virtual {p1}, Lcom/vk/profile/ui/cover/c;->b()V
+    invoke-virtual {p1}, Lcom/vk/profile/ui/cover/CoverViewItem;->b()V
 
     goto :goto_0
 
     .line 11
     :cond_2
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     const/4 p1, 0x0
 
@@ -446,18 +446,18 @@
 
     move-result-object p1
 
-    check-cast p1, Lcom/vk/profile/ui/cover/c;
+    check-cast p1, Lcom/vk/profile/ui/cover/CoverViewItem;
 
     if-eqz p1, :cond_4
 
-    invoke-virtual {p1}, Lcom/vk/profile/ui/cover/c;->c()V
+    invoke-virtual {p1}, Lcom/vk/profile/ui/cover/CoverViewItem;->c()V
 
     :cond_4
     :goto_0
     return-void
 .end method
 
-.method public b(Lcom/vk/profile/ui/cover/c;)V
+.method public b(Lcom/vk/profile/ui/cover/CoverViewItem;)V
     .locals 0
 
     return-void
@@ -466,7 +466,7 @@
 .method public abstract c()I
 .end method
 
-.method public c(Lcom/vk/profile/ui/cover/c;)V
+.method public c(Lcom/vk/profile/ui/cover/CoverViewItem;)V
     .locals 2
 
     .line 1
@@ -506,19 +506,19 @@
     return-object v0
 .end method
 
-.method public final f()Lkotlin/jvm/b/a;
+.method public final f()Lkotlin/jvm/b/Functions;
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "()",
-            "Lkotlin/jvm/b/a<",
-            "Lkotlin/m;",
+            "Lkotlin/jvm/b/Functions<",
+            "Lkotlin/Unit;",
             ">;"
         }
     .end annotation
 
     .line 1
-    iget-object v0, p0, Lcom/vk/profile/data/cover/model/CommunityCoverModel$b;->c:Lkotlin/jvm/b/a;
+    iget-object v0, p0, Lcom/vk/profile/data/cover/model/CommunityCoverModel$b;->c:Lkotlin/jvm/b/Functions;
 
     return-object v0
 .end method
@@ -553,7 +553,7 @@
         value = {
             "()",
             "Ljava/lang/ref/WeakReference<",
-            "Lcom/vk/profile/ui/cover/c;",
+            "Lcom/vk/profile/ui/cover/CoverViewItem;",
             ">;"
         }
     .end annotation
@@ -586,7 +586,7 @@
 
     check-cast v0, Lcom/vk/profile/data/cover/model/CommunityCoverModel$b;
 
-    invoke-static {v0, p0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v0, p0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v0
 
@@ -635,7 +635,7 @@
 
     move-result v1
 
-    invoke-static {v0, v1}, Lcom/vk/profile/e/d;->b(Ljava/lang/String;I)V
+    invoke-static {v0, v1}, Lcom/vk/profile/e/LiveCoversTracker;->b(Ljava/lang/String;I)V
 
     const/4 v0, 0x1
 
@@ -646,7 +646,7 @@
 
     .line 4
     :cond_0
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     const/4 v0, 0x0
 

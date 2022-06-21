@@ -1,16 +1,16 @@
 .class final Lcom/vk/market/attached/TaggedGoodsDataProvider;
-.super Lcom/vk/market/common/e;
+.super Lcom/vk/market/common/GoodsDataProviders;
 .source "TaggedGoodsDataProviders.kt"
 
 
 # annotations
 .annotation system Ldalvik/annotation/Signature;
     value = {
-        "Lcom/vk/market/common/e<",
+        "Lcom/vk/market/common/GoodsDataProviders<",
         "Lcom/vk/dto/common/data/VKList<",
         "Lcom/vk/dto/tags/Tag;",
         ">;",
-        "Lcom/vk/market/attached/c;",
+        "Lcom/vk/market/attached/TaggedGoodsAdapter;",
         ">;"
     }
 .end annotation
@@ -27,21 +27,21 @@
 
 
 # direct methods
-.method public constructor <init>(IILjava/lang/String;Lcom/vk/dto/tags/Tag$ContentType;Lcom/vk/market/common/d;)V
+.method public constructor <init>(IILjava/lang/String;Lcom/vk/dto/tags/Tag$ContentType;Lcom/vk/market/common/GoodsDataProviders1;)V
     .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(II",
             "Ljava/lang/String;",
             "Lcom/vk/dto/tags/Tag$ContentType;",
-            "Lcom/vk/market/common/d<",
-            "Lcom/vk/market/attached/c;",
+            "Lcom/vk/market/common/GoodsDataProviders1<",
+            "Lcom/vk/market/attached/TaggedGoodsAdapter;",
             ">;)V"
         }
     .end annotation
 
     .line 1
-    invoke-direct {p0, p5}, Lcom/vk/market/common/e;-><init>(Lcom/vk/market/common/d;)V
+    invoke-direct {p0, p5}, Lcom/vk/market/common/GoodsDataProviders;-><init>(Lcom/vk/market/common/GoodsDataProviders1;)V
 
     iput p1, p0, Lcom/vk/market/attached/TaggedGoodsDataProvider;->b:I
 
@@ -56,14 +56,14 @@
 
 
 # virtual methods
-.method public a(ILcom/vk/lists/t;)Lc/a/m;
+.method public a(ILcom/vk/lists/PaginationHelper;)Lio/reactivex/Observable;
     .locals 3
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(I",
-            "Lcom/vk/lists/t;",
+            "Lcom/vk/lists/PaginationHelper;",
             ")",
-            "Lc/a/m<",
+            "Lio/reactivex/Observable<",
             "Lcom/vk/dto/common/data/VKList<",
             "Lcom/vk/dto/tags/Tag;",
             ">;>;"
@@ -71,7 +71,7 @@
     .end annotation
 
     .line 3
-    new-instance p1, Lb/h/c/b0/c;
+    new-instance p1, Lcom/vk/api/tags/TagsGetList;
 
     iget p2, p0, Lcom/vk/market/attached/TaggedGoodsDataProvider;->b:I
 
@@ -81,13 +81,13 @@
 
     iget-object v2, p0, Lcom/vk/market/attached/TaggedGoodsDataProvider;->e:Lcom/vk/dto/tags/Tag$ContentType;
 
-    invoke-direct {p1, p2, v0, v1, v2}, Lb/h/c/b0/c;-><init>(IILjava/lang/String;Lcom/vk/dto/tags/Tag$ContentType;)V
+    invoke-direct {p1, p2, v0, v1, v2}, Lcom/vk/api/tags/TagsGetList;-><init>(IILjava/lang/String;Lcom/vk/dto/tags/Tag$ContentType;)V
 
     const/4 p2, 0x0
 
     const/4 v0, 0x1
 
-    invoke-static {p1, p2, v0, p2}, Lcom/vk/api/base/d;->d(Lcom/vk/api/base/d;Lcom/vk/api/base/e;ILjava/lang/Object;)Lc/a/m;
+    invoke-static {p1, p2, v0, p2}, Lcom/vk/api/base/ApiRequest;->d(Lcom/vk/api/base/ApiRequest;Lcom/vk/api/base/ApiThreadHolder;ILjava/lang/Object;)Lio/reactivex/Observable;
 
     move-result-object p1
 
@@ -103,30 +103,30 @@
             "Lcom/vk/dto/tags/Tag;",
             ">;)",
             "Ljava/util/List<",
-            "Lcom/vk/market/attached/c;",
+            "Lcom/vk/market/attached/TaggedGoodsAdapter;",
             ">;"
         }
     .end annotation
 
     .line 5
-    invoke-static {p1}, Lkotlin/collections/l;->d(Ljava/lang/Iterable;)Lkotlin/sequences/j;
+    invoke-static {p1}, Lkotlin/collections/l;->d(Ljava/lang/Iterable;)Lkotlin/sequences/Sequence;
 
     move-result-object p1
 
     .line 6
     sget-object v0, Lcom/vk/market/attached/TaggedGoodsDataProvider$convertToViewModel$1;->c:Lcom/vk/market/attached/TaggedGoodsDataProvider$convertToViewModel$1;
 
-    invoke-static {p1, v0}, Lkotlin/sequences/m;->e(Lkotlin/sequences/j;Lkotlin/jvm/b/b;)Lkotlin/sequences/j;
+    invoke-static {p1, v0}, Lkotlin/sequences/m;->e(Lkotlin/sequences/Sequence;Lkotlin/jvm/b/Functions2;)Lkotlin/sequences/Sequence;
 
     move-result-object p1
 
     .line 7
-    invoke-static {p1}, Lkotlin/sequences/m;->g(Lkotlin/sequences/j;)Lkotlin/sequences/j;
+    invoke-static {p1}, Lkotlin/sequences/m;->g(Lkotlin/sequences/Sequence;)Lkotlin/sequences/Sequence;
 
     move-result-object p1
 
     .line 8
-    invoke-static {p1}, Lkotlin/sequences/m;->l(Lkotlin/sequences/j;)Ljava/util/List;
+    invoke-static {p1}, Lkotlin/sequences/m;->l(Lkotlin/sequences/Sequence;)Ljava/util/List;
 
     move-result-object p1
 

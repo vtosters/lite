@@ -1,5 +1,5 @@
 .class public Lcom/twitter/sdk/android/core/TwitterAuthToken;
-.super Lcom/twitter/sdk/android/core/a;
+.super Lcom/twitter/sdk/android/core/AuthToken;
 .source "TwitterAuthToken.java"
 
 # interfaces
@@ -50,7 +50,7 @@
     .locals 1
 
     .line 5
-    invoke-direct {p0}, Lcom/twitter/sdk/android/core/a;-><init>()V
+    invoke-direct {p0}, Lcom/twitter/sdk/android/core/AuthToken;-><init>()V
 
     .line 6
     invoke-virtual {p1}, Landroid/os/Parcel;->readString()Ljava/lang/String;
@@ -82,7 +82,7 @@
     .locals 0
 
     .line 2
-    invoke-direct {p0}, Lcom/twitter/sdk/android/core/a;-><init>()V
+    invoke-direct {p0}, Lcom/twitter/sdk/android/core/AuthToken;-><init>()V
 
     .line 3
     iput-object p1, p0, Lcom/twitter/sdk/android/core/TwitterAuthToken;->b:Ljava/lang/String;

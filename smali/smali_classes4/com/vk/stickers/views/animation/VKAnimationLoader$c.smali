@@ -3,12 +3,12 @@
 .source "VKAnimationLoader.kt"
 
 # interfaces
-.implements Lc/a/z/j;
+.implements Lio/reactivex/functions/Function;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/stickers/views/animation/VKAnimationLoader;->b(Ljava/lang/String;Ljava/lang/String;)Lc/a/m;
+    value = Lcom/vk/stickers/views/animation/VKAnimationLoader;->b(Ljava/lang/String;Ljava/lang/String;)Lio/reactivex/Observable;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -24,7 +24,7 @@
         "Ljava/lang/Object;",
         ">",
         "Ljava/lang/Object;",
-        "Lc/a/z/j<",
+        "Lio/reactivex/functions/Function<",
         "TT;TR;>;"
     }
 .end annotation
@@ -47,22 +47,22 @@
 
 
 # virtual methods
-.method public final a(Ljava/lang/String;)Lcom/airbnb/lottie/d;
+.method public final a(Ljava/lang/String;)Lcom/airbnb/lottie/LottieComposition;
     .locals 2
 
     .line 1
     iget-object v0, p0, Lcom/vk/stickers/views/animation/VKAnimationLoader$c;->a:Ljava/lang/String;
 
-    invoke-static {p1, v0}, Lcom/airbnb/lottie/e;->a(Ljava/lang/String;Ljava/lang/String;)Lcom/airbnb/lottie/l;
+    invoke-static {p1, v0}, Lcom/airbnb/lottie/LottieCompositionFactory;->a(Ljava/lang/String;Ljava/lang/String;)Lcom/airbnb/lottie/LottieResult;
 
     move-result-object p1
 
     const-string v0, "result"
 
     .line 2
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    invoke-virtual {p1}, Lcom/airbnb/lottie/l;->a()Ljava/lang/Throwable;
+    invoke-virtual {p1}, Lcom/airbnb/lottie/LottieResult;->a()Ljava/lang/Throwable;
 
     move-result-object v0
 
@@ -71,13 +71,13 @@
     if-eqz v0, :cond_1
 
     .line 3
-    invoke-virtual {p1}, Lcom/airbnb/lottie/l;->a()Ljava/lang/Throwable;
+    invoke-virtual {p1}, Lcom/airbnb/lottie/LottieResult;->a()Ljava/lang/Throwable;
 
     move-result-object p1
 
     if-nez p1, :cond_0
 
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     throw v1
 
@@ -86,18 +86,18 @@
 
     .line 4
     :cond_1
-    invoke-virtual {p1}, Lcom/airbnb/lottie/l;->b()Ljava/lang/Object;
+    invoke-virtual {p1}, Lcom/airbnb/lottie/LottieResult;->b()Ljava/lang/Object;
 
     move-result-object p1
 
     if-eqz p1, :cond_2
 
-    check-cast p1, Lcom/airbnb/lottie/d;
+    check-cast p1, Lcom/airbnb/lottie/LottieComposition;
 
     return-object p1
 
     :cond_2
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     throw v1
 .end method
@@ -108,7 +108,7 @@
     .line 1
     check-cast p1, Ljava/lang/String;
 
-    invoke-virtual {p0, p1}, Lcom/vk/stickers/views/animation/VKAnimationLoader$c;->a(Ljava/lang/String;)Lcom/airbnb/lottie/d;
+    invoke-virtual {p0, p1}, Lcom/vk/stickers/views/animation/VKAnimationLoader$c;->a(Ljava/lang/String;)Lcom/airbnb/lottie/LottieComposition;
 
     move-result-object p1
 

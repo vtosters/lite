@@ -41,7 +41,7 @@
     .line 2
     iget-object p1, p0, Lcom/vk/stories/view/StoryView$y;->a:Lcom/vk/stories/view/StoryView;
 
-    invoke-static {p1}, Lcom/vk/stories/view/StoryView;->i(Lcom/vk/stories/view/StoryView;)Lcom/vk/libvideo/live/views/liveswipe/f;
+    invoke-static {p1}, Lcom/vk/stories/view/StoryView;->i(Lcom/vk/stories/view/StoryView;)Lcom/vk/libvideo/live/views/liveswipe/SwipeToolTip;
 
     move-result-object v0
 
@@ -52,7 +52,7 @@
 
     const/4 v0, 0x0
 
-    invoke-static {p1, v0}, Lcom/vk/stories/view/StoryView;->a(Lcom/vk/stories/view/StoryView;Lcom/vk/libvideo/live/views/liveswipe/f;)Lcom/vk/libvideo/live/views/liveswipe/f;
+    invoke-static {p1, v0}, Lcom/vk/stories/view/StoryView;->a(Lcom/vk/stories/view/StoryView;Lcom/vk/libvideo/live/views/liveswipe/SwipeToolTip;)Lcom/vk/libvideo/live/views/liveswipe/SwipeToolTip;
 
     return-void
 .end method

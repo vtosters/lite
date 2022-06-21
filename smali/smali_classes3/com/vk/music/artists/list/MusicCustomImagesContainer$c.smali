@@ -4,13 +4,13 @@
 
 # interfaces
 .implements Landroid/view/View$OnClickListener;
-.implements Lcom/vk/music/view/q$a;
+.implements Lcom/vk/music/view/LastReachedScrollListener$a;
 .implements Landroidx/swiperefreshlayout/widget/SwipeRefreshLayout$OnRefreshListener;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/music/artists/list/MusicCustomImagesContainer;-><init>(Lcom/vk/core/fragments/FragmentImpl;Lcom/vk/music/artists/list/b;ZLjava/lang/String;)V
+    value = Lcom/vk/music/artists/list/MusicCustomImagesContainer;-><init>(Lcom/vk/core/fragments/FragmentImpl;Lcom/vk/music/artists/list/MusicCustomImagesModel;ZLjava/lang/String;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -48,11 +48,11 @@
     .line 1
     iget-object v0, p0, Lcom/vk/music/artists/list/MusicCustomImagesContainer$c;->a:Lcom/vk/music/artists/list/MusicCustomImagesContainer;
 
-    invoke-static {v0}, Lcom/vk/music/artists/list/MusicCustomImagesContainer;->g(Lcom/vk/music/artists/list/MusicCustomImagesContainer;)Lcom/vk/music/artists/list/b;
+    invoke-static {v0}, Lcom/vk/music/artists/list/MusicCustomImagesContainer;->g(Lcom/vk/music/artists/list/MusicCustomImagesContainer;)Lcom/vk/music/artists/list/MusicCustomImagesModel;
 
     move-result-object v0
 
-    invoke-interface {v0}, Lcom/vk/music/artists/list/b;->m()Z
+    invoke-interface {v0}, Lcom/vk/music/artists/list/MusicCustomImagesModel;->m()Z
 
     move-result v0
 
@@ -61,11 +61,11 @@
     .line 2
     iget-object v0, p0, Lcom/vk/music/artists/list/MusicCustomImagesContainer$c;->a:Lcom/vk/music/artists/list/MusicCustomImagesContainer;
 
-    invoke-static {v0}, Lcom/vk/music/artists/list/MusicCustomImagesContainer;->g(Lcom/vk/music/artists/list/MusicCustomImagesContainer;)Lcom/vk/music/artists/list/b;
+    invoke-static {v0}, Lcom/vk/music/artists/list/MusicCustomImagesContainer;->g(Lcom/vk/music/artists/list/MusicCustomImagesContainer;)Lcom/vk/music/artists/list/MusicCustomImagesModel;
 
     move-result-object v0
 
-    invoke-interface {v0}, Lcom/vk/music/artists/list/b;->l()V
+    invoke-interface {v0}, Lcom/vk/music/artists/list/MusicCustomImagesModel;->l()V
 
     :cond_0
     return-void
@@ -103,11 +103,11 @@
     .line 1
     iget-object v0, p0, Lcom/vk/music/artists/list/MusicCustomImagesContainer$c;->a:Lcom/vk/music/artists/list/MusicCustomImagesContainer;
 
-    invoke-static {v0}, Lcom/vk/music/artists/list/MusicCustomImagesContainer;->g(Lcom/vk/music/artists/list/MusicCustomImagesContainer;)Lcom/vk/music/artists/list/b;
+    invoke-static {v0}, Lcom/vk/music/artists/list/MusicCustomImagesContainer;->g(Lcom/vk/music/artists/list/MusicCustomImagesContainer;)Lcom/vk/music/artists/list/MusicCustomImagesModel;
 
     move-result-object v0
 
-    invoke-interface {v0}, Lcom/vk/music/artists/list/b;->C()V
+    invoke-interface {v0}, Lcom/vk/music/artists/list/MusicCustomImagesModel;->C()V
 
     return-void
 .end method

@@ -13,7 +13,7 @@
 
 
 # static fields
-.field private static final c:Lkotlin/e;
+.field private static final c:Lkotlin/Lazy2;
 
 .field public static final d:Lcom/vk/stories/holders/StoryInfoHolder$a;
 
@@ -32,18 +32,18 @@
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, v1}, Lcom/vk/stories/holders/StoryInfoHolder$a;-><init>(Lkotlin/jvm/internal/i;)V
+    invoke-direct {v0, v1}, Lcom/vk/stories/holders/StoryInfoHolder$a;-><init>(Lkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     sput-object v0, Lcom/vk/stories/holders/StoryInfoHolder;->d:Lcom/vk/stories/holders/StoryInfoHolder$a;
 
     .line 1
     sget-object v0, Lcom/vk/stories/holders/StoryInfoHolder$Companion$experiment$2;->a:Lcom/vk/stories/holders/StoryInfoHolder$Companion$experiment$2;
 
-    invoke-static {v0}, Lkotlin/g;->a(Lkotlin/jvm/b/a;)Lkotlin/e;
+    invoke-static {v0}, Lkotlin/g;->a(Lkotlin/jvm/b/Functions;)Lkotlin/Lazy2;
 
     move-result-object v0
 
-    sput-object v0, Lcom/vk/stories/holders/StoryInfoHolder;->c:Lkotlin/e;
+    sput-object v0, Lcom/vk/stories/holders/StoryInfoHolder;->c:Lkotlin/Lazy2;
 
     return-void
 .end method
@@ -61,7 +61,7 @@
     return-void
 .end method
 
-.method public synthetic constructor <init>(Lcom/vk/stories/holders/StoryInfoHolder$ViewType;ZLkotlin/jvm/internal/i;)V
+.method public synthetic constructor <init>(Lcom/vk/stories/holders/StoryInfoHolder$ViewType;ZLkotlin/jvm/internal/DefaultConstructorMarker;)V
     .locals 0
 
     .line 2
@@ -70,11 +70,11 @@
     return-void
 .end method
 
-.method public static final synthetic c()Lkotlin/e;
+.method public static final synthetic c()Lkotlin/Lazy2;
     .locals 1
 
     .line 1
-    sget-object v0, Lcom/vk/stories/holders/StoryInfoHolder;->c:Lkotlin/e;
+    sget-object v0, Lcom/vk/stories/holders/StoryInfoHolder;->c:Lkotlin/Lazy2;
 
     return-object v0
 .end method

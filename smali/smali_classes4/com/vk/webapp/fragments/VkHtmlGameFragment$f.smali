@@ -3,12 +3,12 @@
 .source "VkHtmlGameFragment.kt"
 
 # interfaces
-.implements Lc/a/z/g;
+.implements Lio/reactivex/functions/Consumer;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/webapp/fragments/VkHtmlGameFragment;->a(Ljava/lang/String;Ljava/lang/String;IILkotlin/jvm/b/b;Lkotlin/jvm/b/a;)V
+    value = Lcom/vk/webapp/fragments/VkHtmlGameFragment;->a(Ljava/lang/String;Ljava/lang/String;IILkotlin/jvm/b/Functions2;Lkotlin/jvm/b/Functions;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -22,7 +22,7 @@
         "Ljava/lang/Object;",
         ">",
         "Ljava/lang/Object;",
-        "Lc/a/z/g<",
+        "Lio/reactivex/functions/Consumer<",
         "Ljava/lang/Throwable;",
         ">;"
     }
@@ -30,14 +30,14 @@
 
 
 # instance fields
-.field final synthetic a:Lkotlin/jvm/b/a;
+.field final synthetic a:Lkotlin/jvm/b/Functions;
 
 
 # direct methods
-.method constructor <init>(Lkotlin/jvm/b/a;)V
+.method constructor <init>(Lkotlin/jvm/b/Functions;)V
     .locals 0
 
-    iput-object p1, p0, Lcom/vk/webapp/fragments/VkHtmlGameFragment$f;->a:Lkotlin/jvm/b/a;
+    iput-object p1, p0, Lcom/vk/webapp/fragments/VkHtmlGameFragment$f;->a:Lkotlin/jvm/b/Functions;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -50,9 +50,9 @@
     .locals 0
 
     .line 1
-    iget-object p1, p0, Lcom/vk/webapp/fragments/VkHtmlGameFragment$f;->a:Lkotlin/jvm/b/a;
+    iget-object p1, p0, Lcom/vk/webapp/fragments/VkHtmlGameFragment$f;->a:Lkotlin/jvm/b/Functions;
 
-    invoke-interface {p1}, Lkotlin/jvm/b/a;->invoke()Ljava/lang/Object;
+    invoke-interface {p1}, Lkotlin/jvm/b/Functions;->invoke()Ljava/lang/Object;
 
     return-void
 .end method

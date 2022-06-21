@@ -18,7 +18,7 @@
 
 
 # instance fields
-.field final synthetic a:Lorg/chromium/net/impl/k;
+.field final synthetic a:Lorg/chromium/net/impl/UrlResponseInfoImpl;
 
 .field final synthetic b:Ljava/lang/String;
 
@@ -26,13 +26,13 @@
 
 
 # direct methods
-.method constructor <init>(Lorg/chromium/net/impl/CronetUrlRequest;Lorg/chromium/net/impl/k;Ljava/lang/String;)V
+.method constructor <init>(Lorg/chromium/net/impl/CronetUrlRequest;Lorg/chromium/net/impl/UrlResponseInfoImpl;Ljava/lang/String;)V
     .locals 0
 
     .line 1
     iput-object p1, p0, Lorg/chromium/net/impl/CronetUrlRequest$b;->c:Lorg/chromium/net/impl/CronetUrlRequest;
 
-    iput-object p2, p0, Lorg/chromium/net/impl/CronetUrlRequest$b;->a:Lorg/chromium/net/impl/k;
+    iput-object p2, p0, Lorg/chromium/net/impl/CronetUrlRequest$b;->a:Lorg/chromium/net/impl/UrlResponseInfoImpl;
 
     iput-object p3, p0, Lorg/chromium/net/impl/CronetUrlRequest$b;->b:Ljava/lang/String;
 
@@ -92,17 +92,17 @@
     :try_start_1
     iget-object v0, p0, Lorg/chromium/net/impl/CronetUrlRequest$b;->c:Lorg/chromium/net/impl/CronetUrlRequest;
 
-    invoke-static {v0}, Lorg/chromium/net/impl/CronetUrlRequest;->g(Lorg/chromium/net/impl/CronetUrlRequest;)Lorg/chromium/net/impl/s;
+    invoke-static {v0}, Lorg/chromium/net/impl/CronetUrlRequest;->g(Lorg/chromium/net/impl/CronetUrlRequest;)Lorg/chromium/net/impl/VersionSafeCallbacks5;
 
     move-result-object v0
 
     iget-object v1, p0, Lorg/chromium/net/impl/CronetUrlRequest$b;->c:Lorg/chromium/net/impl/CronetUrlRequest;
 
-    iget-object v2, p0, Lorg/chromium/net/impl/CronetUrlRequest$b;->a:Lorg/chromium/net/impl/k;
+    iget-object v2, p0, Lorg/chromium/net/impl/CronetUrlRequest$b;->a:Lorg/chromium/net/impl/UrlResponseInfoImpl;
 
     iget-object v3, p0, Lorg/chromium/net/impl/CronetUrlRequest$b;->b:Ljava/lang/String;
 
-    invoke-virtual {v0, v1, v2, v3}, Lorg/chromium/net/impl/s;->a(Lorg/chromium/net/w;Lorg/chromium/net/x;Ljava/lang/String;)V
+    invoke-virtual {v0, v1, v2, v3}, Lorg/chromium/net/impl/VersionSafeCallbacks5;->a(Lorg/chromium/net/UrlRequest;Lorg/chromium/net/UrlResponseInfo;Ljava/lang/String;)V
     :try_end_1
     .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_0
 

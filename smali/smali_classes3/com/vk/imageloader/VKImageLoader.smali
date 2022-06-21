@@ -33,7 +33,7 @@
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Landroidx/collection/LruCache<",
-            "Lcom/facebook/cache/common/b;",
+            "Lcom/facebook/cache/common/CacheKey;",
             "Lcom/vk/imageloader/VKImageLoader$CacheFileStatus;",
             ">;"
         }
@@ -46,7 +46,7 @@
 
 .field private static final g:Ljava/util/concurrent/locks/Condition;
 
-.field private static final h:Lcom/vk/imageloader/n;
+.field private static final h:Lcom/vk/imageloader/VKMemoryTrimmable;
 
 
 # direct methods
@@ -88,11 +88,11 @@
     sput-object v0, Lcom/vk/imageloader/VKImageLoader;->g:Ljava/util/concurrent/locks/Condition;
 
     .line 5
-    new-instance v0, Lcom/vk/imageloader/n;
+    new-instance v0, Lcom/vk/imageloader/VKMemoryTrimmable;
 
-    invoke-direct {v0}, Lcom/vk/imageloader/n;-><init>()V
+    invoke-direct {v0}, Lcom/vk/imageloader/VKMemoryTrimmable;-><init>()V
 
-    sput-object v0, Lcom/vk/imageloader/VKImageLoader;->h:Lcom/vk/imageloader/n;
+    sput-object v0, Lcom/vk/imageloader/VKImageLoader;->h:Lcom/vk/imageloader/VKMemoryTrimmable;
 
     return-void
 .end method
@@ -106,11 +106,11 @@
     return-void
 .end method
 
-.method static synthetic a(Landroid/net/Uri;IIILcom/vk/imageloader/m;Lcom/vk/imageloader/l;Lcom/facebook/imagepipeline/request/c;Z)Landroid/graphics/Bitmap;
+.method static synthetic a(Landroid/net/Uri;IIILcom/vk/imageloader/VKImageRequestWrapper;Lcom/vk/imageloader/VKImageRequestProgress;Lcom/facebook/imagepipeline/request/Postprocessor;Z)Landroid/graphics/Bitmap;
     .locals 0
 
     .line 1
-    invoke-static/range {p0 .. p7}, Lcom/vk/imageloader/VKImageLoader;->c(Landroid/net/Uri;IIILcom/vk/imageloader/m;Lcom/vk/imageloader/l;Lcom/facebook/imagepipeline/request/c;Z)Landroid/graphics/Bitmap;
+    invoke-static/range {p0 .. p7}, Lcom/vk/imageloader/VKImageLoader;->c(Landroid/net/Uri;IIILcom/vk/imageloader/VKImageRequestWrapper;Lcom/vk/imageloader/VKImageRequestProgress;Lcom/facebook/imagepipeline/request/Postprocessor;Z)Landroid/graphics/Bitmap;
 
     move-result-object p0
 
@@ -142,7 +142,7 @@
 
     .line 27
     :cond_1
-    invoke-static {}, Lcom/vk/imageloader/k;->a()Lcom/vk/imageloader/k;
+    invoke-static {}, Lcom/vk/imageloader/VKCacheKeyFactory;->a()Lcom/vk/imageloader/VKCacheKeyFactory;
 
     move-result-object v1
 
@@ -150,29 +150,29 @@
 
     move-result-object p0
 
-    invoke-virtual {v1, p0}, Lcom/vk/imageloader/k;->a(Landroid/net/Uri;)Landroid/net/Uri;
+    invoke-virtual {v1, p0}, Lcom/vk/imageloader/VKCacheKeyFactory;->a(Landroid/net/Uri;)Landroid/net/Uri;
 
     move-result-object p0
 
     .line 28
     sget-object v1, Lcom/vk/imageloader/FrescoWrapper;->c:Lcom/vk/imageloader/FrescoWrapper;
 
-    invoke-virtual {v1}, Lcom/vk/imageloader/FrescoWrapper;->b()Lcom/facebook/x/d/g;
+    invoke-virtual {v1}, Lcom/vk/imageloader/FrescoWrapper;->b()Lcom/facebook/x/d/ImagePipeline;
 
     move-result-object v1
 
-    invoke-virtual {v1, p0}, Lcom/facebook/x/d/g;->a(Landroid/net/Uri;)Z
+    invoke-virtual {v1, p0}, Lcom/facebook/x/d/ImagePipeline;->a(Landroid/net/Uri;)Z
 
     move-result v1
 
     if-eqz v1, :cond_2
 
     .line 29
-    invoke-static {p0}, Lcom/vk/imageloader/VKImageLoader;->a(Landroid/net/Uri;)Lc/a/m;
+    invoke-static {p0}, Lcom/vk/imageloader/VKImageLoader;->a(Landroid/net/Uri;)Lio/reactivex/Observable;
 
     move-result-object p0
 
-    invoke-static {p0}, Lcom/vk/core/util/z0;->a(Lc/a/m;)Ljava/lang/Object;
+    invoke-static {p0}, Lcom/vk/core/util/RxUtil;->a(Lio/reactivex/Observable;)Ljava/lang/Object;
 
     move-result-object p0
 
@@ -184,7 +184,7 @@
     return-object v0
 .end method
 
-.method public static a(ILandroid/content/res/Resources;)Lc/a/m;
+.method public static a(ILandroid/content/res/Resources;)Lio/reactivex/Observable;
     .locals 2
     .param p0    # I
         .annotation build Landroidx/annotation/DrawableRes;
@@ -195,7 +195,7 @@
             "(I",
             "Landroid/content/res/Resources;",
             ")",
-            "Lc/a/m<",
+            "Lio/reactivex/Observable<",
             "Landroid/graphics/Bitmap;",
             ">;"
         }
@@ -246,21 +246,21 @@
     move-result-object p0
 
     .line 47
-    invoke-static {p0}, Lcom/vk/imageloader/VKImageLoader;->a(Landroid/net/Uri;)Lc/a/m;
+    invoke-static {p0}, Lcom/vk/imageloader/VKImageLoader;->a(Landroid/net/Uri;)Lio/reactivex/Observable;
 
     move-result-object p0
 
     return-object p0
 .end method
 
-.method public static a(Landroid/net/Uri;)Lc/a/m;
+.method public static a(Landroid/net/Uri;)Lio/reactivex/Observable;
     .locals 7
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
             "Landroid/net/Uri;",
             ")",
-            "Lc/a/m<",
+            "Lio/reactivex/Observable<",
             "Landroid/graphics/Bitmap;",
             ">;"
         }
@@ -281,25 +281,25 @@
     move-object v0, p0
 
     .line 48
-    invoke-static/range {v0 .. v6}, Lcom/vk/imageloader/VKImageLoader;->a(Landroid/net/Uri;IIILcom/vk/imageloader/m;Lcom/vk/imageloader/l;Lcom/facebook/imagepipeline/request/c;)Lc/a/m;
+    invoke-static/range {v0 .. v6}, Lcom/vk/imageloader/VKImageLoader;->a(Landroid/net/Uri;IIILcom/vk/imageloader/VKImageRequestWrapper;Lcom/vk/imageloader/VKImageRequestProgress;Lcom/facebook/imagepipeline/request/Postprocessor;)Lio/reactivex/Observable;
 
     move-result-object p0
 
     return-object p0
 .end method
 
-.method public static a(Landroid/net/Uri;IIILcom/vk/imageloader/m;Lcom/vk/imageloader/l;Lcom/facebook/imagepipeline/request/c;)Lc/a/m;
+.method public static a(Landroid/net/Uri;IIILcom/vk/imageloader/VKImageRequestWrapper;Lcom/vk/imageloader/VKImageRequestProgress;Lcom/facebook/imagepipeline/request/Postprocessor;)Lio/reactivex/Observable;
     .locals 8
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
             "Landroid/net/Uri;",
             "III",
-            "Lcom/vk/imageloader/m;",
-            "Lcom/vk/imageloader/l;",
-            "Lcom/facebook/imagepipeline/request/c;",
+            "Lcom/vk/imageloader/VKImageRequestWrapper;",
+            "Lcom/vk/imageloader/VKImageRequestProgress;",
+            "Lcom/facebook/imagepipeline/request/Postprocessor;",
             ")",
-            "Lc/a/m<",
+            "Lio/reactivex/Observable<",
             "Landroid/graphics/Bitmap;",
             ">;"
         }
@@ -322,22 +322,22 @@
     move-object v6, p6
 
     .line 51
-    invoke-static/range {v0 .. v7}, Lcom/vk/imageloader/VKImageLoader;->b(Landroid/net/Uri;IIILcom/vk/imageloader/m;Lcom/vk/imageloader/l;Lcom/facebook/imagepipeline/request/c;Z)Lc/a/m;
+    invoke-static/range {v0 .. v7}, Lcom/vk/imageloader/VKImageLoader;->b(Landroid/net/Uri;IIILcom/vk/imageloader/VKImageRequestWrapper;Lcom/vk/imageloader/VKImageRequestProgress;Lcom/facebook/imagepipeline/request/Postprocessor;Z)Lio/reactivex/Observable;
 
     move-result-object p0
 
     return-object p0
 .end method
 
-.method public static a(Landroid/net/Uri;Lcom/facebook/imagepipeline/request/c;)Lc/a/m;
+.method public static a(Landroid/net/Uri;Lcom/facebook/imagepipeline/request/Postprocessor;)Lio/reactivex/Observable;
     .locals 7
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
             "Landroid/net/Uri;",
-            "Lcom/facebook/imagepipeline/request/c;",
+            "Lcom/facebook/imagepipeline/request/Postprocessor;",
             ")",
-            "Lc/a/m<",
+            "Lio/reactivex/Observable<",
             "Landroid/graphics/Bitmap;",
             ">;"
         }
@@ -358,14 +358,14 @@
     move-object v6, p1
 
     .line 49
-    invoke-static/range {v0 .. v6}, Lcom/vk/imageloader/VKImageLoader;->a(Landroid/net/Uri;IIILcom/vk/imageloader/m;Lcom/vk/imageloader/l;Lcom/facebook/imagepipeline/request/c;)Lc/a/m;
+    invoke-static/range {v0 .. v6}, Lcom/vk/imageloader/VKImageLoader;->a(Landroid/net/Uri;IIILcom/vk/imageloader/VKImageRequestWrapper;Lcom/vk/imageloader/VKImageRequestProgress;Lcom/facebook/imagepipeline/request/Postprocessor;)Lio/reactivex/Observable;
 
     move-result-object p0
 
     return-object p0
 .end method
 
-.method public static a(Landroid/net/Uri;Lcom/vk/imageloader/ImageScreenSize;)Lc/a/m;
+.method public static a(Landroid/net/Uri;Lcom/vk/imageloader/ImageScreenSize;)Lio/reactivex/Observable;
     .locals 7
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -373,7 +373,7 @@
             "Landroid/net/Uri;",
             "Lcom/vk/imageloader/ImageScreenSize;",
             ")",
-            "Lc/a/m<",
+            "Lio/reactivex/Observable<",
             "Landroid/graphics/Bitmap;",
             ">;"
         }
@@ -398,22 +398,22 @@
 
     move-object v0, p0
 
-    invoke-static/range {v0 .. v6}, Lcom/vk/imageloader/VKImageLoader;->a(Landroid/net/Uri;IIILcom/vk/imageloader/m;Lcom/vk/imageloader/l;Lcom/facebook/imagepipeline/request/c;)Lc/a/m;
+    invoke-static/range {v0 .. v6}, Lcom/vk/imageloader/VKImageLoader;->a(Landroid/net/Uri;IIILcom/vk/imageloader/VKImageRequestWrapper;Lcom/vk/imageloader/VKImageRequestProgress;Lcom/facebook/imagepipeline/request/Postprocessor;)Lio/reactivex/Observable;
 
     move-result-object p0
 
     return-object p0
 .end method
 
-.method private static a(Lc/a/m;)Lc/a/m;
+.method private static a(Lio/reactivex/Observable;)Lio/reactivex/Observable;
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lc/a/m<",
+            "Lio/reactivex/Observable<",
             "Lcom/vk/imageloader/VKImageLoader$k;",
             ">;)",
-            "Lc/a/m<",
+            "Lio/reactivex/Observable<",
             "Landroid/graphics/Bitmap;",
             ">;"
         }
@@ -424,14 +424,14 @@
 
     invoke-direct {v0}, Lcom/vk/imageloader/VKImageLoader$i;-><init>()V
 
-    invoke-virtual {p0, v0}, Lc/a/m;->e(Lc/a/z/j;)Lc/a/m;
+    invoke-virtual {p0, v0}, Lio/reactivex/Observable;->e(Lio/reactivex/functions/Function;)Lio/reactivex/Observable;
 
     move-result-object p0
 
     return-object p0
 .end method
 
-.method public static a(Ljava/lang/String;I)Lc/a/m;
+.method public static a(Ljava/lang/String;I)Lio/reactivex/Observable;
     .locals 1
     .param p1    # I
         .annotation build Landroidx/annotation/Px;
@@ -442,7 +442,7 @@
             "(",
             "Ljava/lang/String;",
             "I)",
-            "Lc/a/m<",
+            "Lio/reactivex/Observable<",
             "Landroid/graphics/Bitmap;",
             ">;"
         }
@@ -457,7 +457,7 @@
 
     invoke-direct {p0, p1}, Ljava/lang/IllegalAccessException;-><init>(Ljava/lang/String;)V
 
-    invoke-static {p0}, Lc/a/m;->b(Ljava/lang/Throwable;)Lc/a/m;
+    invoke-static {p0}, Lio/reactivex/Observable;->b(Ljava/lang/Throwable;)Lio/reactivex/Observable;
 
     move-result-object p0
 
@@ -469,7 +469,7 @@
 
     move-result-object p0
 
-    invoke-static {p0}, Lcom/vk/imageloader/VKImageLoader;->a(Landroid/net/Uri;)Lc/a/m;
+    invoke-static {p0}, Lcom/vk/imageloader/VKImageLoader;->a(Landroid/net/Uri;)Lio/reactivex/Observable;
 
     move-result-object p0
 
@@ -478,14 +478,14 @@
     invoke-direct {v0, p1}, Lcom/vk/imageloader/VKImageLoader$e;-><init>(I)V
 
     .line 40
-    invoke-virtual {p0, v0}, Lc/a/m;->e(Lc/a/z/j;)Lc/a/m;
+    invoke-virtual {p0, v0}, Lio/reactivex/Observable;->e(Lio/reactivex/functions/Function;)Lio/reactivex/Observable;
 
     move-result-object p0
 
     return-object p0
 .end method
 
-.method public static a(Landroid/net/Uri;Lcom/facebook/imagepipeline/request/ImageRequest$CacheChoice;)Lcom/facebook/x/g/e;
+.method public static a(Landroid/net/Uri;Lcom/facebook/imagepipeline/request/ImageRequest$CacheChoice;)Lcom/facebook/x/g/EncodedImage;
     .locals 3
     .annotation build Landroidx/annotation/Nullable;
     .end annotation
@@ -506,23 +506,23 @@
     .line 21
     sget-object p1, Lcom/vk/imageloader/FrescoWrapper;->c:Lcom/vk/imageloader/FrescoWrapper;
 
-    invoke-virtual {p1}, Lcom/vk/imageloader/FrescoWrapper;->b()Lcom/facebook/x/d/g;
+    invoke-virtual {p1}, Lcom/vk/imageloader/FrescoWrapper;->b()Lcom/facebook/x/d/ImagePipeline;
 
     move-result-object p1
 
-    invoke-virtual {p1}, Lcom/facebook/x/d/g;->f()Lcom/facebook/x/c/f;
+    invoke-virtual {p1}, Lcom/facebook/x/d/ImagePipeline;->f()Lcom/facebook/x/c/CacheKeyFactory;
 
     move-result-object p1
 
     const/4 v0, 0x0
 
-    invoke-interface {p1, p0, v0}, Lcom/facebook/x/c/f;->c(Lcom/facebook/imagepipeline/request/ImageRequest;Ljava/lang/Object;)Lcom/facebook/cache/common/b;
+    invoke-interface {p1, p0, v0}, Lcom/facebook/x/c/CacheKeyFactory;->c(Lcom/facebook/imagepipeline/request/ImageRequest;Ljava/lang/Object;)Lcom/facebook/cache/common/CacheKey;
 
     move-result-object p0
 
     .line 22
     :try_start_0
-    invoke-static {}, Lcom/vk/imageloader/VKImageLoader;->g()Lcom/facebook/x/c/e;
+    invoke-static {}, Lcom/vk/imageloader/VKImageLoader;->g()Lcom/facebook/x/c/BufferedDiskCache;
 
     move-result-object p1
 
@@ -532,19 +532,19 @@
 
     invoke-direct {v1, v2}, Ljava/util/concurrent/atomic/AtomicBoolean;-><init>(Z)V
 
-    invoke-virtual {p1, p0, v1}, Lcom/facebook/x/c/e;->a(Lcom/facebook/cache/common/b;Ljava/util/concurrent/atomic/AtomicBoolean;)Lbolts/e;
+    invoke-virtual {p1, p0, v1}, Lcom/facebook/x/c/BufferedDiskCache;->a(Lcom/facebook/cache/common/CacheKey;Ljava/util/concurrent/atomic/AtomicBoolean;)Lbolts/Task;
 
     move-result-object p0
 
     .line 23
-    invoke-virtual {p0}, Lbolts/e;->g()V
+    invoke-virtual {p0}, Lbolts/Task;->g()V
 
     .line 24
-    invoke-virtual {p0}, Lbolts/e;->b()Ljava/lang/Object;
+    invoke-virtual {p0}, Lbolts/Task;->b()Ljava/lang/Object;
 
     move-result-object p0
 
-    check-cast p0, Lcom/facebook/x/g/e;
+    check-cast p0, Lcom/facebook/x/g/EncodedImage;
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
@@ -584,63 +584,63 @@
     .locals 1
 
     .line 25
-    sget-object v0, Lcom/vk/imageloader/VKImageLoader;->h:Lcom/vk/imageloader/n;
+    sget-object v0, Lcom/vk/imageloader/VKImageLoader;->h:Lcom/vk/imageloader/VKMemoryTrimmable;
 
-    invoke-virtual {v0, p0}, Lcom/vk/imageloader/n;->a(I)V
+    invoke-virtual {v0, p0}, Lcom/vk/imageloader/VKMemoryTrimmable;->a(I)V
 
     return-void
 .end method
 
-.method public static a(Landroid/content/Context;Lcom/vk/imageloader/f$c;)V
+.method public static a(Landroid/content/Context;Lcom/vk/imageloader/OkHttpNetworkFetcher$c;)V
     .locals 4
 
     .line 3
-    new-instance v0, Lcom/vk/imageloader/f;
+    new-instance v0, Lcom/vk/imageloader/OkHttpNetworkFetcher;
 
-    invoke-direct {v0}, Lcom/vk/imageloader/f;-><init>()V
+    invoke-direct {v0}, Lcom/vk/imageloader/OkHttpNetworkFetcher;-><init>()V
 
     .line 4
-    invoke-virtual {v0, p1}, Lcom/vk/imageloader/f;->a(Lcom/vk/imageloader/f$c;)V
+    invoke-virtual {v0, p1}, Lcom/vk/imageloader/OkHttpNetworkFetcher;->a(Lcom/vk/imageloader/OkHttpNetworkFetcher$c;)V
 
     .line 5
-    invoke-static {p0}, Lcom/facebook/x/d/h;->b(Landroid/content/Context;)Lcom/facebook/x/d/h$b;
+    invoke-static {p0}, Lcom/facebook/x/d/ImagePipelineConfig;->b(Landroid/content/Context;)Lcom/facebook/x/d/ImagePipelineConfig$b;
 
     move-result-object p1
 
     const/4 v1, 0x1
 
     .line 6
-    invoke-virtual {p1, v1}, Lcom/facebook/x/d/h$b;->a(Z)Lcom/facebook/x/d/h$b;
+    invoke-virtual {p1, v1}, Lcom/facebook/x/d/ImagePipelineConfig$b;->a(Z)Lcom/facebook/x/d/ImagePipelineConfig$b;
 
     .line 7
-    invoke-virtual {p1, v0}, Lcom/facebook/x/d/h$b;->a(Lcom/facebook/imagepipeline/producers/e0;)Lcom/facebook/x/d/h$b;
+    invoke-virtual {p1, v0}, Lcom/facebook/x/d/ImagePipelineConfig$b;->a(Lcom/facebook/imagepipeline/producers/NetworkFetcher;)Lcom/facebook/x/d/ImagePipelineConfig$b;
 
     .line 8
-    invoke-static {}, Lcom/vk/imageloader/k;->a()Lcom/vk/imageloader/k;
+    invoke-static {}, Lcom/vk/imageloader/VKCacheKeyFactory;->a()Lcom/vk/imageloader/VKCacheKeyFactory;
 
     move-result-object v0
 
-    invoke-virtual {p1, v0}, Lcom/facebook/x/d/h$b;->a(Lcom/facebook/x/c/f;)Lcom/facebook/x/d/h$b;
+    invoke-virtual {p1, v0}, Lcom/facebook/x/d/ImagePipelineConfig$b;->a(Lcom/facebook/x/c/CacheKeyFactory;)Lcom/facebook/x/d/ImagePipelineConfig$b;
 
     .line 9
-    sget-object v0, Lcom/vk/imageloader/VKImageLoader;->h:Lcom/vk/imageloader/n;
+    sget-object v0, Lcom/vk/imageloader/VKImageLoader;->h:Lcom/vk/imageloader/VKMemoryTrimmable;
 
-    invoke-virtual {p1, v0}, Lcom/facebook/x/d/h$b;->a(Lcom/facebook/common/memory/c;)Lcom/facebook/x/d/h$b;
+    invoke-virtual {p1, v0}, Lcom/facebook/x/d/ImagePipelineConfig$b;->a(Lcom/facebook/common/memory/MemoryTrimmableRegistry;)Lcom/facebook/x/d/ImagePipelineConfig$b;
 
     .line 10
     new-instance v0, Lcom/vk/imageloader/VKImageBitmapPool;
 
-    invoke-static {}, Lcom/facebook/imagepipeline/memory/b0;->m()Lcom/facebook/imagepipeline/memory/b0$b;
+    invoke-static {}, Lcom/facebook/imagepipeline/memory/PoolConfig;->m()Lcom/facebook/imagepipeline/memory/PoolConfig$b;
 
     move-result-object v1
 
-    invoke-virtual {v1}, Lcom/facebook/imagepipeline/memory/b0$b;->a()Lcom/facebook/imagepipeline/memory/b0;
+    invoke-virtual {v1}, Lcom/facebook/imagepipeline/memory/PoolConfig$b;->a()Lcom/facebook/imagepipeline/memory/PoolConfig;
 
     move-result-object v1
 
-    invoke-direct {v0, p0, v1}, Lcom/vk/imageloader/VKImageBitmapPool;-><init>(Landroid/content/Context;Lcom/facebook/imagepipeline/memory/b0;)V
+    invoke-direct {v0, p0, v1}, Lcom/vk/imageloader/VKImageBitmapPool;-><init>(Landroid/content/Context;Lcom/facebook/imagepipeline/memory/PoolConfig;)V
 
-    invoke-virtual {p1, v0}, Lcom/facebook/x/d/h$b;->a(Lcom/facebook/imagepipeline/memory/c0;)Lcom/facebook/x/d/h$b;
+    invoke-virtual {p1, v0}, Lcom/facebook/x/d/ImagePipelineConfig$b;->a(Lcom/facebook/imagepipeline/memory/PoolFactory;)Lcom/facebook/x/d/ImagePipelineConfig$b;
 
     .line 11
     invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
@@ -648,7 +648,7 @@
     move-result-wide v0
 
     .line 12
-    invoke-static {p1, p0}, Lcom/vk/imageloader/VKImageLoader;->a(Lcom/facebook/x/d/h$b;Landroid/content/Context;)V
+    invoke-static {p1, p0}, Lcom/vk/imageloader/VKImageLoader;->a(Lcom/facebook/x/d/ImagePipelineConfig$b;Landroid/content/Context;)V
 
     .line 13
     new-instance p0, Ljava/lang/StringBuilder;
@@ -672,11 +672,11 @@
     .line 14
     sget-object p0, Lcom/vk/imageloader/FrescoWrapper;->c:Lcom/vk/imageloader/FrescoWrapper;
 
-    invoke-virtual {p1}, Lcom/facebook/x/d/h$b;->a()Lcom/facebook/x/d/h;
+    invoke-virtual {p1}, Lcom/facebook/x/d/ImagePipelineConfig$b;->a()Lcom/facebook/x/d/ImagePipelineConfig;
 
     move-result-object p1
 
-    invoke-virtual {p0, p1}, Lcom/vk/imageloader/FrescoWrapper;->a(Lcom/facebook/x/d/h;)V
+    invoke-virtual {p0, p1}, Lcom/vk/imageloader/FrescoWrapper;->a(Lcom/facebook/x/d/ImagePipelineConfig;)V
 
     .line 15
     new-instance p0, Ljava/lang/StringBuilder;
@@ -715,12 +715,12 @@
     const/4 v0, 0x0
 
     .line 32
-    invoke-static {p0, p1, v0}, Lcom/vk/imageloader/VKImageLoader;->a(Landroid/net/Uri;ILcom/facebook/imagepipeline/request/c;)V
+    invoke-static {p0, p1, v0}, Lcom/vk/imageloader/VKImageLoader;->a(Landroid/net/Uri;ILcom/facebook/imagepipeline/request/Postprocessor;)V
 
     return-void
 .end method
 
-.method public static a(Landroid/net/Uri;ILcom/facebook/imagepipeline/request/c;)V
+.method public static a(Landroid/net/Uri;ILcom/facebook/imagepipeline/request/Postprocessor;)V
     .locals 0
 
     if-eqz p0, :cond_2
@@ -733,28 +733,28 @@
     if-eqz p2, :cond_0
 
     .line 34
-    invoke-virtual {p0, p2}, Lcom/facebook/imagepipeline/request/ImageRequestBuilder;->a(Lcom/facebook/imagepipeline/request/c;)Lcom/facebook/imagepipeline/request/ImageRequestBuilder;
+    invoke-virtual {p0, p2}, Lcom/facebook/imagepipeline/request/ImageRequestBuilder;->a(Lcom/facebook/imagepipeline/request/Postprocessor;)Lcom/facebook/imagepipeline/request/ImageRequestBuilder;
 
     .line 35
     :cond_0
-    sget-object p2, Lcom/vk/imageloader/view/VKImageView;->Q:Lcom/facebook/imagepipeline/common/e;
+    sget-object p2, Lcom/vk/imageloader/view/VKImageView;->Q:Lcom/facebook/imagepipeline/common/RotationOptions;
 
-    invoke-virtual {p0, p2}, Lcom/facebook/imagepipeline/request/ImageRequestBuilder;->a(Lcom/facebook/imagepipeline/common/e;)Lcom/facebook/imagepipeline/request/ImageRequestBuilder;
+    invoke-virtual {p0, p2}, Lcom/facebook/imagepipeline/request/ImageRequestBuilder;->a(Lcom/facebook/imagepipeline/common/RotationOptions;)Lcom/facebook/imagepipeline/request/ImageRequestBuilder;
 
     if-eqz p1, :cond_1
 
     .line 36
-    new-instance p2, Lcom/facebook/imagepipeline/common/d;
+    new-instance p2, Lcom/facebook/imagepipeline/common/ResizeOptions;
 
-    invoke-direct {p2, p1, p1}, Lcom/facebook/imagepipeline/common/d;-><init>(II)V
+    invoke-direct {p2, p1, p1}, Lcom/facebook/imagepipeline/common/ResizeOptions;-><init>(II)V
 
-    invoke-virtual {p0, p2}, Lcom/facebook/imagepipeline/request/ImageRequestBuilder;->a(Lcom/facebook/imagepipeline/common/d;)Lcom/facebook/imagepipeline/request/ImageRequestBuilder;
+    invoke-virtual {p0, p2}, Lcom/facebook/imagepipeline/request/ImageRequestBuilder;->a(Lcom/facebook/imagepipeline/common/ResizeOptions;)Lcom/facebook/imagepipeline/request/ImageRequestBuilder;
 
     .line 37
     :cond_1
     sget-object p1, Lcom/vk/imageloader/FrescoWrapper;->c:Lcom/vk/imageloader/FrescoWrapper;
 
-    invoke-virtual {p1}, Lcom/vk/imageloader/FrescoWrapper;->b()Lcom/facebook/x/d/g;
+    invoke-virtual {p1}, Lcom/vk/imageloader/FrescoWrapper;->b()Lcom/facebook/x/d/ImagePipeline;
 
     move-result-object p1
 
@@ -764,13 +764,13 @@
 
     const/4 p2, 0x0
 
-    invoke-virtual {p1, p0, p2}, Lcom/facebook/x/d/g;->b(Lcom/facebook/imagepipeline/request/ImageRequest;Ljava/lang/Object;)Lcom/facebook/datasource/b;
+    invoke-virtual {p1, p0, p2}, Lcom/facebook/x/d/ImagePipeline;->b(Lcom/facebook/imagepipeline/request/ImageRequest;Ljava/lang/Object;)Lcom/facebook/datasource/DataSource;
 
     :cond_2
     return-void
 .end method
 
-.method public static a(Landroid/net/Uri;Lcom/vk/imageloader/ImageScreenSize;Lcom/facebook/imagepipeline/request/c;)V
+.method public static a(Landroid/net/Uri;Lcom/vk/imageloader/ImageScreenSize;Lcom/facebook/imagepipeline/request/Postprocessor;)V
     .locals 0
 
     if-eqz p0, :cond_1
@@ -788,17 +788,17 @@
     const/4 p1, 0x0
 
     :goto_0
-    invoke-static {p0, p1, p2}, Lcom/vk/imageloader/VKImageLoader;->a(Landroid/net/Uri;ILcom/facebook/imagepipeline/request/c;)V
+    invoke-static {p0, p1, p2}, Lcom/vk/imageloader/VKImageLoader;->a(Landroid/net/Uri;ILcom/facebook/imagepipeline/request/Postprocessor;)V
 
     :cond_1
     return-void
 .end method
 
-.method private static a(Lcom/facebook/x/d/h$b;Landroid/content/Context;)V
+.method private static a(Lcom/facebook/x/d/ImagePipelineConfig$b;Landroid/content/Context;)V
     .locals 3
 
     .line 53
-    invoke-static {p1}, Lcom/facebook/cache/disk/b;->a(Landroid/content/Context;)Lcom/facebook/cache/disk/b$b;
+    invoke-static {p1}, Lcom/facebook/cache/disk/DiskCacheConfig;->a(Landroid/content/Context;)Lcom/facebook/cache/disk/DiskCacheConfig$b;
 
     move-result-object v0
 
@@ -807,33 +807,33 @@
     invoke-direct {v1, p1}, Lcom/vk/imageloader/VKImageLoader$b;-><init>(Landroid/content/Context;)V
 
     .line 54
-    invoke-virtual {v0, v1}, Lcom/facebook/cache/disk/b$b;->a(Lcom/facebook/common/internal/j;)Lcom/facebook/cache/disk/b$b;
+    invoke-virtual {v0, v1}, Lcom/facebook/cache/disk/DiskCacheConfig$b;->a(Lcom/facebook/common/internal/Supplier;)Lcom/facebook/cache/disk/DiskCacheConfig$b;
 
     const-string v1, "fresco_cache"
 
     .line 55
-    invoke-virtual {v0, v1}, Lcom/facebook/cache/disk/b$b;->a(Ljava/lang/String;)Lcom/facebook/cache/disk/b$b;
+    invoke-virtual {v0, v1}, Lcom/facebook/cache/disk/DiskCacheConfig$b;->a(Ljava/lang/String;)Lcom/facebook/cache/disk/DiskCacheConfig$b;
 
     const-wide/32 v1, 0x6400000
 
     .line 56
-    invoke-virtual {v0, v1, v2}, Lcom/facebook/cache/disk/b$b;->a(J)Lcom/facebook/cache/disk/b$b;
+    invoke-virtual {v0, v1, v2}, Lcom/facebook/cache/disk/DiskCacheConfig$b;->a(J)Lcom/facebook/cache/disk/DiskCacheConfig$b;
 
     sget-object v1, Lcom/vk/imageloader/VKImageLoader;->e:Lcom/facebook/cache/common/CacheEventListener;
 
     .line 57
-    invoke-virtual {v0, v1}, Lcom/facebook/cache/disk/b$b;->a(Lcom/facebook/cache/common/CacheEventListener;)Lcom/facebook/cache/disk/b$b;
+    invoke-virtual {v0, v1}, Lcom/facebook/cache/disk/DiskCacheConfig$b;->a(Lcom/facebook/cache/common/CacheEventListener;)Lcom/facebook/cache/disk/DiskCacheConfig$b;
 
     .line 58
-    invoke-virtual {v0}, Lcom/facebook/cache/disk/b$b;->a()Lcom/facebook/cache/disk/b;
+    invoke-virtual {v0}, Lcom/facebook/cache/disk/DiskCacheConfig$b;->a()Lcom/facebook/cache/disk/DiskCacheConfig;
 
     move-result-object v0
 
     .line 59
-    invoke-virtual {p0, v0}, Lcom/facebook/x/d/h$b;->a(Lcom/facebook/cache/disk/b;)Lcom/facebook/x/d/h$b;
+    invoke-virtual {p0, v0}, Lcom/facebook/x/d/ImagePipelineConfig$b;->a(Lcom/facebook/cache/disk/DiskCacheConfig;)Lcom/facebook/x/d/ImagePipelineConfig$b;
 
     .line 60
-    invoke-static {p1}, Lcom/facebook/cache/disk/b;->a(Landroid/content/Context;)Lcom/facebook/cache/disk/b$b;
+    invoke-static {p1}, Lcom/facebook/cache/disk/DiskCacheConfig;->a(Landroid/content/Context;)Lcom/facebook/cache/disk/DiskCacheConfig$b;
 
     move-result-object v0
 
@@ -842,30 +842,30 @@
     invoke-direct {v1, p1}, Lcom/vk/imageloader/VKImageLoader$a;-><init>(Landroid/content/Context;)V
 
     .line 61
-    invoke-virtual {v0, v1}, Lcom/facebook/cache/disk/b$b;->a(Lcom/facebook/common/internal/j;)Lcom/facebook/cache/disk/b$b;
+    invoke-virtual {v0, v1}, Lcom/facebook/cache/disk/DiskCacheConfig$b;->a(Lcom/facebook/common/internal/Supplier;)Lcom/facebook/cache/disk/DiskCacheConfig$b;
 
     const-string p1, "fresco_sticker_cache"
 
     .line 62
-    invoke-virtual {v0, p1}, Lcom/facebook/cache/disk/b$b;->a(Ljava/lang/String;)Lcom/facebook/cache/disk/b$b;
+    invoke-virtual {v0, p1}, Lcom/facebook/cache/disk/DiskCacheConfig$b;->a(Ljava/lang/String;)Lcom/facebook/cache/disk/DiskCacheConfig$b;
 
     const-wide/32 v1, 0xfa00000
 
     .line 63
-    invoke-virtual {v0, v1, v2}, Lcom/facebook/cache/disk/b$b;->a(J)Lcom/facebook/cache/disk/b$b;
+    invoke-virtual {v0, v1, v2}, Lcom/facebook/cache/disk/DiskCacheConfig$b;->a(J)Lcom/facebook/cache/disk/DiskCacheConfig$b;
 
     sget-object p1, Lcom/vk/imageloader/VKImageLoader;->e:Lcom/facebook/cache/common/CacheEventListener;
 
     .line 64
-    invoke-virtual {v0, p1}, Lcom/facebook/cache/disk/b$b;->a(Lcom/facebook/cache/common/CacheEventListener;)Lcom/facebook/cache/disk/b$b;
+    invoke-virtual {v0, p1}, Lcom/facebook/cache/disk/DiskCacheConfig$b;->a(Lcom/facebook/cache/common/CacheEventListener;)Lcom/facebook/cache/disk/DiskCacheConfig$b;
 
     .line 65
-    invoke-virtual {v0}, Lcom/facebook/cache/disk/b$b;->a()Lcom/facebook/cache/disk/b;
+    invoke-virtual {v0}, Lcom/facebook/cache/disk/DiskCacheConfig$b;->a()Lcom/facebook/cache/disk/DiskCacheConfig;
 
     move-result-object p1
 
     .line 66
-    invoke-virtual {p0, p1}, Lcom/facebook/x/d/h$b;->b(Lcom/facebook/cache/disk/b;)Lcom/facebook/x/d/h$b;
+    invoke-virtual {p0, p1}, Lcom/facebook/x/d/ImagePipelineConfig$b;->b(Lcom/facebook/cache/disk/DiskCacheConfig;)Lcom/facebook/x/d/ImagePipelineConfig$b;
 
     return-void
 .end method
@@ -886,16 +886,16 @@
     return-void
 .end method
 
-.method public static b(Landroid/net/Uri;)Lc/a/m;
+.method public static b(Landroid/net/Uri;)Lio/reactivex/Observable;
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
             "Landroid/net/Uri;",
             ")",
-            "Lc/a/m<",
-            "Lcom/facebook/common/references/a<",
-            "Lcom/facebook/x/g/c;",
+            "Lio/reactivex/Observable<",
+            "Lcom/facebook/common/references/CloseableReference<",
+            "Lcom/facebook/x/g/CloseableImage;",
             ">;>;"
         }
     .end annotation
@@ -905,25 +905,25 @@
 
     invoke-direct {v0, p0}, Lcom/vk/imageloader/VKImageLoader$h;-><init>(Landroid/net/Uri;)V
 
-    invoke-static {v0}, Lc/a/m;->a(Lc/a/o;)Lc/a/m;
+    invoke-static {v0}, Lio/reactivex/Observable;->a(Lio/reactivex/ObservableOnSubscribe;)Lio/reactivex/Observable;
 
     move-result-object p0
 
     return-object p0
 .end method
 
-.method public static b(Landroid/net/Uri;IIILcom/vk/imageloader/m;Lcom/vk/imageloader/l;Lcom/facebook/imagepipeline/request/c;Z)Lc/a/m;
+.method public static b(Landroid/net/Uri;IIILcom/vk/imageloader/VKImageRequestWrapper;Lcom/vk/imageloader/VKImageRequestProgress;Lcom/facebook/imagepipeline/request/Postprocessor;Z)Lio/reactivex/Observable;
     .locals 10
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
             "Landroid/net/Uri;",
             "III",
-            "Lcom/vk/imageloader/m;",
-            "Lcom/vk/imageloader/l;",
-            "Lcom/facebook/imagepipeline/request/c;",
+            "Lcom/vk/imageloader/VKImageRequestWrapper;",
+            "Lcom/vk/imageloader/VKImageRequestProgress;",
+            "Lcom/facebook/imagepipeline/request/Postprocessor;",
             "Z)",
-            "Lc/a/m<",
+            "Lio/reactivex/Observable<",
             "Landroid/graphics/Bitmap;",
             ">;"
         }
@@ -950,27 +950,27 @@
 
     move/from16 v8, p7
 
-    invoke-direct/range {v0 .. v8}, Lcom/vk/imageloader/VKImageLoader$f;-><init>(Landroid/net/Uri;IIILcom/vk/imageloader/m;Lcom/vk/imageloader/l;Lcom/facebook/imagepipeline/request/c;Z)V
+    invoke-direct/range {v0 .. v8}, Lcom/vk/imageloader/VKImageLoader$f;-><init>(Landroid/net/Uri;IIILcom/vk/imageloader/VKImageRequestWrapper;Lcom/vk/imageloader/VKImageRequestProgress;Lcom/facebook/imagepipeline/request/Postprocessor;Z)V
 
-    invoke-static {v9}, Lc/a/m;->c(Ljava/util/concurrent/Callable;)Lc/a/m;
+    invoke-static {v9}, Lio/reactivex/Observable;->c(Ljava/util/concurrent/Callable;)Lio/reactivex/Observable;
 
     move-result-object v0
 
-    invoke-static {v0}, Lcom/vk/imageloader/VKImageLoader;->a(Lc/a/m;)Lc/a/m;
+    invoke-static {v0}, Lcom/vk/imageloader/VKImageLoader;->a(Lio/reactivex/Observable;)Lio/reactivex/Observable;
 
     move-result-object v0
 
     return-object v0
 .end method
 
-.method public static b(Ljava/lang/String;)Lc/a/m;
+.method public static b(Ljava/lang/String;)Lio/reactivex/Observable;
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
             "Ljava/lang/String;",
             ")",
-            "Lc/a/m<",
+            "Lio/reactivex/Observable<",
             "Landroid/graphics/Bitmap;",
             ">;"
         }
@@ -985,7 +985,7 @@
 
     invoke-direct {p0, v0}, Ljava/lang/IllegalAccessException;-><init>(Ljava/lang/String;)V
 
-    invoke-static {p0}, Lc/a/m;->b(Ljava/lang/Throwable;)Lc/a/m;
+    invoke-static {p0}, Lio/reactivex/Observable;->b(Ljava/lang/Throwable;)Lio/reactivex/Observable;
 
     move-result-object p0
 
@@ -997,7 +997,7 @@
 
     move-result-object p0
 
-    invoke-static {p0}, Lcom/vk/imageloader/VKImageLoader;->a(Landroid/net/Uri;)Lc/a/m;
+    invoke-static {p0}, Lcom/vk/imageloader/VKImageLoader;->a(Landroid/net/Uri;)Lio/reactivex/Observable;
 
     move-result-object p0
 
@@ -1006,7 +1006,7 @@
     invoke-direct {v0}, Lcom/vk/imageloader/VKImageLoader$d;-><init>()V
 
     .line 5
-    invoke-virtual {p0, v0}, Lc/a/m;->e(Lc/a/z/j;)Lc/a/m;
+    invoke-virtual {p0, v0}, Lio/reactivex/Observable;->e(Lio/reactivex/functions/Function;)Lio/reactivex/Observable;
 
     move-result-object p0
 
@@ -1028,12 +1028,12 @@
     const/4 v0, 0x0
 
     .line 2
-    invoke-static {p0, p1, v0}, Lcom/vk/imageloader/VKImageLoader;->a(Landroid/net/Uri;Lcom/vk/imageloader/ImageScreenSize;Lcom/facebook/imagepipeline/request/c;)V
+    invoke-static {p0, p1, v0}, Lcom/vk/imageloader/VKImageLoader;->a(Landroid/net/Uri;Lcom/vk/imageloader/ImageScreenSize;Lcom/facebook/imagepipeline/request/Postprocessor;)V
 
     return-void
 .end method
 
-.method private static c(Landroid/net/Uri;IIILcom/vk/imageloader/m;Lcom/vk/imageloader/l;Lcom/facebook/imagepipeline/request/c;Z)Landroid/graphics/Bitmap;
+.method private static c(Landroid/net/Uri;IIILcom/vk/imageloader/VKImageRequestWrapper;Lcom/vk/imageloader/VKImageRequestProgress;Lcom/facebook/imagepipeline/request/Postprocessor;Z)Landroid/graphics/Bitmap;
     .locals 3
 
     const/4 v0, 0x0
@@ -1077,7 +1077,7 @@
     if-eqz v1, :cond_2
 
     .line 6
-    invoke-static {p0}, Lcom/vk/imageloader/a;->a(Landroid/net/Uri;)Lcom/vk/imageloader/a;
+    invoke-static {p0}, Lcom/vk/imageloader/AvatarDataSource;->a(Landroid/net/Uri;)Lcom/vk/imageloader/AvatarDataSource;
 
     move-result-object p1
 
@@ -1094,21 +1094,21 @@
     if-ne p3, v2, :cond_3
 
     .line 8
-    invoke-static {}, Lcom/facebook/imagepipeline/common/e;->e()Lcom/facebook/imagepipeline/common/e;
+    invoke-static {}, Lcom/facebook/imagepipeline/common/RotationOptions;->e()Lcom/facebook/imagepipeline/common/RotationOptions;
 
     move-result-object p3
 
-    invoke-virtual {v1, p3}, Lcom/facebook/imagepipeline/request/ImageRequestBuilder;->a(Lcom/facebook/imagepipeline/common/e;)Lcom/facebook/imagepipeline/request/ImageRequestBuilder;
+    invoke-virtual {v1, p3}, Lcom/facebook/imagepipeline/request/ImageRequestBuilder;->a(Lcom/facebook/imagepipeline/common/RotationOptions;)Lcom/facebook/imagepipeline/request/ImageRequestBuilder;
 
     goto :goto_0
 
     .line 9
     :cond_3
-    invoke-static {p3}, Lcom/facebook/imagepipeline/common/e;->a(I)Lcom/facebook/imagepipeline/common/e;
+    invoke-static {p3}, Lcom/facebook/imagepipeline/common/RotationOptions;->a(I)Lcom/facebook/imagepipeline/common/RotationOptions;
 
     move-result-object p3
 
-    invoke-virtual {v1, p3}, Lcom/facebook/imagepipeline/request/ImageRequestBuilder;->a(Lcom/facebook/imagepipeline/common/e;)Lcom/facebook/imagepipeline/request/ImageRequestBuilder;
+    invoke-virtual {v1, p3}, Lcom/facebook/imagepipeline/request/ImageRequestBuilder;->a(Lcom/facebook/imagepipeline/common/RotationOptions;)Lcom/facebook/imagepipeline/request/ImageRequestBuilder;
 
     :goto_0
     if-lez p1, :cond_4
@@ -1116,23 +1116,23 @@
     if-lez p2, :cond_4
 
     .line 10
-    new-instance p3, Lcom/facebook/imagepipeline/common/d;
+    new-instance p3, Lcom/facebook/imagepipeline/common/ResizeOptions;
 
-    invoke-direct {p3, p1, p2}, Lcom/facebook/imagepipeline/common/d;-><init>(II)V
+    invoke-direct {p3, p1, p2}, Lcom/facebook/imagepipeline/common/ResizeOptions;-><init>(II)V
 
-    invoke-virtual {v1, p3}, Lcom/facebook/imagepipeline/request/ImageRequestBuilder;->a(Lcom/facebook/imagepipeline/common/d;)Lcom/facebook/imagepipeline/request/ImageRequestBuilder;
+    invoke-virtual {v1, p3}, Lcom/facebook/imagepipeline/request/ImageRequestBuilder;->a(Lcom/facebook/imagepipeline/common/ResizeOptions;)Lcom/facebook/imagepipeline/request/ImageRequestBuilder;
 
     :cond_4
     if-eqz p6, :cond_5
 
     .line 11
-    invoke-virtual {v1, p6}, Lcom/facebook/imagepipeline/request/ImageRequestBuilder;->a(Lcom/facebook/imagepipeline/request/c;)Lcom/facebook/imagepipeline/request/ImageRequestBuilder;
+    invoke-virtual {v1, p6}, Lcom/facebook/imagepipeline/request/ImageRequestBuilder;->a(Lcom/facebook/imagepipeline/request/Postprocessor;)Lcom/facebook/imagepipeline/request/ImageRequestBuilder;
 
     .line 12
     :cond_5
     sget-object p1, Lcom/vk/imageloader/FrescoWrapper;->c:Lcom/vk/imageloader/FrescoWrapper;
 
-    invoke-virtual {p1}, Lcom/vk/imageloader/FrescoWrapper;->b()Lcom/facebook/x/d/g;
+    invoke-virtual {p1}, Lcom/vk/imageloader/FrescoWrapper;->b()Lcom/facebook/x/d/ImagePipeline;
 
     move-result-object p1
 
@@ -1140,7 +1140,7 @@
 
     move-result-object p2
 
-    invoke-virtual {p1, p2, v0}, Lcom/facebook/x/d/g;->a(Lcom/facebook/imagepipeline/request/ImageRequest;Ljava/lang/Object;)Lcom/facebook/datasource/b;
+    invoke-virtual {p1, p2, v0}, Lcom/facebook/x/d/ImagePipeline;->a(Lcom/facebook/imagepipeline/request/ImageRequest;Ljava/lang/Object;)Lcom/facebook/datasource/DataSource;
 
     move-result-object p1
 
@@ -1167,15 +1167,15 @@
     .line 16
     new-instance p4, Lcom/vk/imageloader/VKImageLoader$j;
 
-    invoke-direct {p4, p2, p3, p6, p5}, Lcom/vk/imageloader/VKImageLoader$j;-><init>(Ljava/util/concurrent/atomic/AtomicReference;Ljava/lang/Object;Ljava/util/concurrent/atomic/AtomicBoolean;Lcom/vk/imageloader/l;)V
+    invoke-direct {p4, p2, p3, p6, p5}, Lcom/vk/imageloader/VKImageLoader$j;-><init>(Ljava/util/concurrent/atomic/AtomicReference;Ljava/lang/Object;Ljava/util/concurrent/atomic/AtomicBoolean;Lcom/vk/imageloader/VKImageRequestProgress;)V
 
     .line 17
-    invoke-static {}, Lcom/facebook/common/g/a;->a()Lcom/facebook/common/g/a;
+    invoke-static {}, Lcom/facebook/common/g/CallerThreadExecutor;->a()Lcom/facebook/common/g/CallerThreadExecutor;
 
     move-result-object p5
 
     .line 18
-    invoke-interface {p1, p4, p5}, Lcom/facebook/datasource/b;->a(Lcom/facebook/datasource/d;Ljava/util/concurrent/Executor;)V
+    invoke-interface {p1, p4, p5}, Lcom/facebook/datasource/DataSource;->a(Lcom/facebook/datasource/DataSubscriber;Ljava/util/concurrent/Executor;)V
 
     .line 19
     invoke-virtual {p6}, Ljava/util/concurrent/atomic/AtomicBoolean;->get()Z
@@ -1250,7 +1250,7 @@
 
     .line 26
     :cond_8
-    invoke-virtual {p4, p1}, Lcom/vk/imageloader/m;->a(Lcom/facebook/datasource/b;)V
+    invoke-virtual {p4, p1}, Lcom/vk/imageloader/VKImageRequestWrapper;->a(Lcom/facebook/datasource/DataSource;)V
 
     throw v0
 .end method
@@ -1264,14 +1264,14 @@
     return-object v0
 .end method
 
-.method public static c(Ljava/lang/String;)Lc/a/m;
+.method public static c(Ljava/lang/String;)Lio/reactivex/Observable;
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
             "Ljava/lang/String;",
             ")",
-            "Lc/a/m<",
+            "Lio/reactivex/Observable<",
             "Landroid/graphics/Bitmap;",
             ">;"
         }
@@ -1284,14 +1284,14 @@
 
     move-result v0
 
-    invoke-static {p0, v0}, Lcom/vk/imageloader/VKImageLoader;->a(Ljava/lang/String;I)Lc/a/m;
+    invoke-static {p0, v0}, Lcom/vk/imageloader/VKImageLoader;->a(Ljava/lang/String;I)Lio/reactivex/Observable;
 
     move-result-object p0
 
     return-object p0
 .end method
 
-.method public static c(Landroid/net/Uri;)Lcom/facebook/x/g/e;
+.method public static c(Landroid/net/Uri;)Lcom/facebook/x/g/EncodedImage;
     .locals 1
     .annotation build Landroidx/annotation/Nullable;
     .end annotation
@@ -1299,21 +1299,21 @@
     .line 2
     sget-object v0, Lcom/facebook/imagepipeline/request/ImageRequest$CacheChoice;->DEFAULT:Lcom/facebook/imagepipeline/request/ImageRequest$CacheChoice;
 
-    invoke-static {p0, v0}, Lcom/vk/imageloader/VKImageLoader;->a(Landroid/net/Uri;Lcom/facebook/imagepipeline/request/ImageRequest$CacheChoice;)Lcom/facebook/x/g/e;
+    invoke-static {p0, v0}, Lcom/vk/imageloader/VKImageLoader;->a(Landroid/net/Uri;Lcom/facebook/imagepipeline/request/ImageRequest$CacheChoice;)Lcom/facebook/x/g/EncodedImage;
 
     move-result-object p0
 
     return-object p0
 .end method
 
-.method public static d(Landroid/net/Uri;)Lc/a/m;
+.method public static d(Landroid/net/Uri;)Lio/reactivex/Observable;
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
             "Landroid/net/Uri;",
             ")",
-            "Lc/a/m<",
+            "Lio/reactivex/Observable<",
             "Ljava/lang/Boolean;",
             ">;"
         }
@@ -1324,7 +1324,7 @@
 
     invoke-direct {v0, p0}, Lcom/vk/imageloader/VKImageLoader$g;-><init>(Landroid/net/Uri;)V
 
-    invoke-static {v0}, Lc/a/m;->a(Lc/a/o;)Lc/a/m;
+    invoke-static {v0}, Lio/reactivex/Observable;->a(Lio/reactivex/ObservableOnSubscribe;)Lio/reactivex/Observable;
 
     move-result-object p0
 
@@ -1351,7 +1351,7 @@
 
     .line 2
     :cond_0
-    invoke-static {}, Lcom/vk/imageloader/k;->a()Lcom/vk/imageloader/k;
+    invoke-static {}, Lcom/vk/imageloader/VKCacheKeyFactory;->a()Lcom/vk/imageloader/VKCacheKeyFactory;
 
     move-result-object v1
 
@@ -1359,7 +1359,7 @@
 
     move-result-object v2
 
-    invoke-virtual {v1, v2}, Lcom/vk/imageloader/k;->a(Landroid/net/Uri;)Landroid/net/Uri;
+    invoke-virtual {v1, v2}, Lcom/vk/imageloader/VKCacheKeyFactory;->a(Landroid/net/Uri;)Landroid/net/Uri;
 
     move-result-object v1
 
@@ -1372,11 +1372,11 @@
 
     sget-object p0, Lcom/vk/imageloader/FrescoWrapper;->c:Lcom/vk/imageloader/FrescoWrapper;
 
-    invoke-virtual {p0}, Lcom/vk/imageloader/FrescoWrapper;->b()Lcom/facebook/x/d/g;
+    invoke-virtual {p0}, Lcom/vk/imageloader/FrescoWrapper;->b()Lcom/facebook/x/d/ImagePipeline;
 
     move-result-object p0
 
-    invoke-virtual {p0, v1}, Lcom/facebook/x/d/g;->c(Landroid/net/Uri;)Z
+    invoke-virtual {p0, v1}, Lcom/facebook/x/d/ImagePipeline;->c(Landroid/net/Uri;)Z
 
     move-result p0
 
@@ -1389,14 +1389,14 @@
     return v0
 .end method
 
-.method public static e(Landroid/net/Uri;)Lcom/facebook/datasource/b;
+.method public static e(Landroid/net/Uri;)Lcom/facebook/datasource/DataSource;
     .locals 2
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
             "Landroid/net/Uri;",
             ")",
-            "Lcom/facebook/datasource/b<",
+            "Lcom/facebook/datasource/DataSource<",
             "Ljava/lang/Void;",
             ">;"
         }
@@ -1405,7 +1405,7 @@
     .line 5
     sget-object v0, Lcom/vk/imageloader/FrescoWrapper;->c:Lcom/vk/imageloader/FrescoWrapper;
 
-    invoke-virtual {v0}, Lcom/vk/imageloader/FrescoWrapper;->b()Lcom/facebook/x/d/g;
+    invoke-virtual {v0}, Lcom/vk/imageloader/FrescoWrapper;->b()Lcom/facebook/x/d/ImagePipeline;
 
     move-result-object v0
 
@@ -1415,7 +1415,7 @@
 
     const/4 v1, 0x0
 
-    invoke-virtual {v0, p0, v1}, Lcom/facebook/x/d/g;->c(Lcom/facebook/imagepipeline/request/ImageRequest;Ljava/lang/Object;)Lcom/facebook/datasource/b;
+    invoke-virtual {v0, p0, v1}, Lcom/facebook/x/d/ImagePipeline;->c(Lcom/facebook/imagepipeline/request/ImageRequest;Ljava/lang/Object;)Lcom/facebook/datasource/DataSource;
 
     move-result-object p0
 
@@ -1431,11 +1431,11 @@
     .line 2
     sget-object v0, Lcom/vk/imageloader/FrescoWrapper;->c:Lcom/vk/imageloader/FrescoWrapper;
 
-    invoke-virtual {v0}, Lcom/vk/imageloader/FrescoWrapper;->b()Lcom/facebook/x/d/g;
+    invoke-virtual {v0}, Lcom/vk/imageloader/FrescoWrapper;->b()Lcom/facebook/x/d/ImagePipeline;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/facebook/x/d/g;->a()V
+    invoke-virtual {v0}, Lcom/facebook/x/d/ImagePipeline;->a()V
 
     return-void
 .end method
@@ -1451,7 +1451,7 @@
 
     .line 3
     :cond_0
-    invoke-static {}, Lcom/vk/imageloader/k;->a()Lcom/vk/imageloader/k;
+    invoke-static {}, Lcom/vk/imageloader/VKCacheKeyFactory;->a()Lcom/vk/imageloader/VKCacheKeyFactory;
 
     move-result-object v1
 
@@ -1459,7 +1459,7 @@
 
     move-result-object v2
 
-    invoke-virtual {v1, v2}, Lcom/vk/imageloader/k;->a(Landroid/net/Uri;)Landroid/net/Uri;
+    invoke-virtual {v1, v2}, Lcom/vk/imageloader/VKCacheKeyFactory;->a(Landroid/net/Uri;)Landroid/net/Uri;
 
     move-result-object v1
 
@@ -1474,11 +1474,11 @@
 
     sget-object p0, Lcom/vk/imageloader/FrescoWrapper;->c:Lcom/vk/imageloader/FrescoWrapper;
 
-    invoke-virtual {p0}, Lcom/vk/imageloader/FrescoWrapper;->b()Lcom/facebook/x/d/g;
+    invoke-virtual {p0}, Lcom/vk/imageloader/FrescoWrapper;->b()Lcom/facebook/x/d/ImagePipeline;
 
     move-result-object p0
 
-    invoke-virtual {p0, v1}, Lcom/facebook/x/d/g;->a(Landroid/net/Uri;)Z
+    invoke-virtual {p0, v1}, Lcom/facebook/x/d/ImagePipeline;->a(Landroid/net/Uri;)Z
 
     move-result p0
 
@@ -1497,11 +1497,11 @@
     .line 1
     sget-object v0, Lcom/vk/imageloader/FrescoWrapper;->c:Lcom/vk/imageloader/FrescoWrapper;
 
-    invoke-virtual {v0}, Lcom/vk/imageloader/FrescoWrapper;->b()Lcom/facebook/x/d/g;
+    invoke-virtual {v0}, Lcom/vk/imageloader/FrescoWrapper;->b()Lcom/facebook/x/d/ImagePipeline;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/facebook/x/d/g;->c()V
+    invoke-virtual {v0}, Lcom/facebook/x/d/ImagePipeline;->c()V
 
     .line 2
     sget-object v0, Lcom/vk/imageloader/VKImageLoader;->c:Landroidx/collection/LruCache;
@@ -1543,7 +1543,7 @@
     return-void
 .end method
 
-.method private static declared-synchronized g()Lcom/facebook/x/c/e;
+.method private static declared-synchronized g()Lcom/facebook/x/c/BufferedDiskCache;
     .locals 3
 
     const-class v0, Lcom/vk/imageloader/VKImageLoader;
@@ -1557,7 +1557,7 @@
     if-nez v1, :cond_0
 
     .line 5
-    const-class v1, Lcom/facebook/x/d/g;
+    const-class v1, Lcom/facebook/x/d/ImagePipeline;
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
@@ -1584,7 +1584,7 @@
 
     sget-object v2, Lcom/vk/imageloader/FrescoWrapper;->c:Lcom/vk/imageloader/FrescoWrapper;
 
-    invoke-virtual {v2}, Lcom/vk/imageloader/FrescoWrapper;->b()Lcom/facebook/x/d/g;
+    invoke-virtual {v2}, Lcom/vk/imageloader/FrescoWrapper;->b()Lcom/facebook/x/d/ImagePipeline;
 
     move-result-object v2
 
@@ -1592,7 +1592,7 @@
 
     move-result-object v1
 
-    check-cast v1, Lcom/facebook/x/c/e;
+    check-cast v1, Lcom/facebook/x/c/BufferedDiskCache;
     :try_end_1
     .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_0
     .catchall {:try_start_1 .. :try_end_1} :catchall_0

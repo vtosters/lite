@@ -3,12 +3,12 @@
 .source "ScopesController.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/b;
+.implements Lkotlin/jvm/b/Functions2;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/webapp/ScopesController$Companion;->a(Ljava/util/Map;)Lkotlin/jvm/b/b;
+    value = Lcom/vk/webapp/ScopesController$Companion;->a(Ljava/util/Map;)Lkotlin/jvm/b/Functions2;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -19,7 +19,7 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/b<",
+        "Lkotlin/jvm/b/Functions2<",
         "Ljava/lang/String;",
         "Lcom/vk/webapp/ScopesController$b;",
         ">;"

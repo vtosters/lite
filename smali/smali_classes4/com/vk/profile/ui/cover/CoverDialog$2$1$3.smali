@@ -3,7 +3,7 @@
 .source "CoverDialog.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/a;
+.implements Lkotlin/jvm/b/Functions;
 
 
 # annotations
@@ -19,8 +19,8 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/a<",
-        "Lkotlin/m;",
+        "Lkotlin/jvm/b/Functions<",
+        "Lkotlin/Unit;",
         ">;"
     }
 .end annotation
@@ -51,7 +51,7 @@
     .line 1
     invoke-virtual {p0}, Lcom/vk/profile/ui/cover/CoverDialog$2$1$3;->invoke()V
 
-    sget-object v0, Lkotlin/m;->a:Lkotlin/m;
+    sget-object v0, Lkotlin/Unit;->a:Lkotlin/Unit;
 
     return-object v0
 .end method
@@ -118,7 +118,7 @@
     goto :goto_0
 
     :cond_0
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     throw v0
 
@@ -152,7 +152,7 @@
 
     invoke-direct {v2, p0}, Lcom/vk/profile/ui/cover/CoverDialog$2$1$3$1;-><init>(Lcom/vk/profile/ui/cover/CoverDialog$2$1$3;)V
 
-    invoke-virtual {v1, v2}, Lcom/vk/profile/ui/cover/CoverViewPager;->setTapListener(Lkotlin/jvm/b/a;)V
+    invoke-virtual {v1, v2}, Lcom/vk/profile/ui/cover/CoverViewPager;->setTapListener(Lkotlin/jvm/b/Functions;)V
 
     .line 6
     iget-object v1, p0, Lcom/vk/profile/ui/cover/CoverDialog$2$1$3;->this$0:Lcom/vk/profile/ui/cover/CoverDialog$2$1;
@@ -161,7 +161,7 @@
 
     iget-object v1, v1, Lcom/vk/profile/ui/cover/CoverDialog$2;->this$0:Lcom/vk/profile/ui/cover/CoverDialog;
 
-    invoke-virtual {v1}, Lcom/vk/profile/ui/cover/CoverDialog;->a()Lcom/vk/profile/ui/cover/a;
+    invoke-virtual {v1}, Lcom/vk/profile/ui/cover/CoverDialog;->a()Lcom/vk/profile/ui/cover/CoverDialogAnimator;
 
     move-result-object v1
 
@@ -214,13 +214,13 @@
     if-eqz v5, :cond_2
 
     .line 9
-    invoke-virtual {v1, v2, v3, v4, v5}, Lcom/vk/profile/ui/cover/a;->a(Lcom/vk/profile/ui/cover/CoverViewPager;Landroid/view/View;Landroid/view/View;Lcom/vk/profile/ui/community/CommunityParallax;)V
+    invoke-virtual {v1, v2, v3, v4, v5}, Lcom/vk/profile/ui/cover/CoverDialogAnimator;->a(Lcom/vk/profile/ui/cover/CoverViewPager;Landroid/view/View;Landroid/view/View;Lcom/vk/profile/ui/community/CommunityParallax;)V
 
     return-void
 
     .line 10
     :cond_2
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     throw v0
 .end method

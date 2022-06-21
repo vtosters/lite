@@ -1,5 +1,5 @@
 .class public final Lcom/vk/reef/dto/ContentState;
-.super Lcom/vk/reef/dto/g;
+.super Lcom/vk/reef/dto/ReefState;
 .source "ReefState.kt"
 
 
@@ -33,7 +33,7 @@
     const/4 v0, 0x0
 
     .line 1
-    invoke-direct {p0, v0}, Lcom/vk/reef/dto/g;-><init>(Lkotlin/jvm/internal/i;)V
+    invoke-direct {p0, v0}, Lcom/vk/reef/dto/ReefState;-><init>(Lkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     iput-object p1, p0, Lcom/vk/reef/dto/ContentState;->a:Lcom/vk/reef/dto/ContentState$Type;
 
@@ -212,7 +212,7 @@
 
     iget-object v1, p1, Lcom/vk/reef/dto/ContentState;->a:Lcom/vk/reef/dto/ContentState$Type;
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v0
 
@@ -222,7 +222,7 @@
 
     iget-object v1, p1, Lcom/vk/reef/dto/ContentState;->b:Ljava/lang/String;
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v0
 
@@ -232,7 +232,7 @@
 
     iget-object v1, p1, Lcom/vk/reef/dto/ContentState;->c:Ljava/lang/String;
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v0
 
@@ -242,7 +242,7 @@
 
     iget-object v1, p1, Lcom/vk/reef/dto/ContentState;->d:Ljava/lang/Long;
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v0
 
@@ -252,7 +252,7 @@
 
     iget-object v1, p1, Lcom/vk/reef/dto/ContentState;->e:Ljava/lang/Integer;
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v0
 
@@ -262,7 +262,7 @@
 
     iget-object p1, p1, Lcom/vk/reef/dto/ContentState;->f:Lcom/vk/reef/dto/ContentState$Quality;
 
-    invoke-static {v0, p1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v0, p1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result p1
 

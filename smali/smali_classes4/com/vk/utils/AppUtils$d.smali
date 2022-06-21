@@ -3,7 +3,7 @@
 .source "AppUtils.kt"
 
 # interfaces
-.implements Lcom/vk/log/d/a$a;
+.implements Lcom/vk/log/d/Archive$a;
 
 
 # annotations
@@ -18,17 +18,17 @@
 
 
 # instance fields
-.field final synthetic a:Lcom/vk/log/d/b;
+.field final synthetic a:Lcom/vk/log/d/FileRemover;
 
 .field final synthetic b:Z
 
 
 # direct methods
-.method constructor <init>(Lcom/vk/log/d/b;Z)V
+.method constructor <init>(Lcom/vk/log/d/FileRemover;Z)V
     .locals 0
 
     .line 1
-    iput-object p1, p0, Lcom/vk/utils/AppUtils$d;->a:Lcom/vk/log/d/b;
+    iput-object p1, p0, Lcom/vk/utils/AppUtils$d;->a:Lcom/vk/log/d/FileRemover;
 
     iput-boolean p2, p0, Lcom/vk/utils/AppUtils$d;->b:Z
 
@@ -45,11 +45,11 @@
     if-eqz p2, :cond_5
 
     .line 1
-    invoke-static {}, Lcom/vk/bridges/g;->a()Lcom/vk/bridges/f;
+    invoke-static {}, Lcom/vk/bridges/AuthBridge;->a()Lcom/vk/bridges/AuthBridge3;
 
     move-result-object p2
 
-    invoke-interface {p2}, Lcom/vk/bridges/f;->a()Z
+    invoke-interface {p2}, Lcom/vk/bridges/AuthBridge3;->a()Z
 
     move-result p2
 
@@ -59,9 +59,9 @@
 
     .line 2
     :cond_0
-    iget-object p2, p0, Lcom/vk/utils/AppUtils$d;->a:Lcom/vk/log/d/b;
+    iget-object p2, p0, Lcom/vk/utils/AppUtils$d;->a:Lcom/vk/log/d/FileRemover;
 
-    invoke-virtual {p2}, Lcom/vk/log/d/b;->a()V
+    invoke-virtual {p2}, Lcom/vk/log/d/FileRemover;->a()V
 
     .line 3
     sget-object p2, Lcom/vk/utils/AppUtils$initLogger$2;->a:Lcom/vk/utils/AppUtils$initLogger$2;
@@ -81,13 +81,13 @@
     if-nez p2, :cond_2
 
     .line 5
-    new-instance p2, Lcom/vtosters/lite/upload/l/g;
+    new-instance p2, Lcom/vtosters/lite/upload/l/DocumentUploadTask;
 
-    invoke-static {}, Lcom/vk/bridges/g;->a()Lcom/vk/bridges/f;
+    invoke-static {}, Lcom/vk/bridges/AuthBridge;->a()Lcom/vk/bridges/AuthBridge3;
 
     move-result-object v0
 
-    invoke-interface {v0}, Lcom/vk/bridges/f;->b()I
+    invoke-interface {v0}, Lcom/vk/bridges/AuthBridge3;->b()I
 
     move-result v2
 
@@ -103,9 +103,9 @@
 
     move-object v1, p1
 
-    invoke-direct/range {v0 .. v6}, Lcom/vtosters/lite/upload/l/g;-><init>(Ljava/lang/String;IZZILkotlin/jvm/internal/i;)V
+    invoke-direct/range {v0 .. v6}, Lcom/vtosters/lite/upload/l/DocumentUploadTask;-><init>(Ljava/lang/String;IZZILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
-    invoke-static {p2}, Lcom/vtosters/lite/upload/Upload;->c(Lcom/vtosters/lite/upload/j;)I
+    invoke-static {p2}, Lcom/vtosters/lite/upload/Upload;->c(Lcom/vtosters/lite/upload/UploadTask;)I
 
     goto :goto_1
 
@@ -130,7 +130,7 @@
 
     .line 7
     :cond_4
-    sget-object p2, Lcom/vk/core/util/i;->a:Landroid/content/Context;
+    sget-object p2, Lcom/vk/core/util/AppContextHolder;->a:Landroid/content/Context;
 
     :goto_0
     if-eqz p2, :cond_5
@@ -149,7 +149,7 @@
     iput-object p1, v0, Lcom/vk/api/base/Document;->E:Ljava/lang/String;
 
     .line 11
-    invoke-static {}, Lcom/vk/bridges/a0;->a()Lcom/vk/bridges/z;
+    invoke-static {}, Lcom/vk/bridges/SharingBridge;->a()Lcom/vk/bridges/SharingBridge1;
 
     move-result-object p1
 
@@ -157,7 +157,7 @@
 
     invoke-direct {v1, v0}, Lcom/vtosters/lite/attachments/PendingDocumentAttachment;-><init>(Lcom/vk/api/base/Document;)V
 
-    invoke-interface {p1, p2, v1}, Lcom/vk/bridges/z;->a(Landroid/content/Context;Ljava/lang/Object;)V
+    invoke-interface {p1, p2, v1}, Lcom/vk/bridges/SharingBridge1;->a(Landroid/content/Context;Ljava/lang/Object;)V
 
     :cond_5
     :goto_1

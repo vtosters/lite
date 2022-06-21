@@ -24,7 +24,7 @@
     return-void
 .end method
 
-.method public synthetic constructor <init>(Lkotlin/jvm/internal/i;)V
+.method public synthetic constructor <init>(Lkotlin/jvm/internal/DefaultConstructorMarker;)V
     .locals 0
 
     .line 2
@@ -35,7 +35,7 @@
 
 
 # virtual methods
-.method public final a(Landroid/os/Bundle;)Lcom/twitter/sdk/android/core/t;
+.method public final a(Landroid/os/Bundle;)Lcom/twitter/sdk/android/core/TwitterSession;
     .locals 2
 
     .line 1
@@ -49,7 +49,7 @@
 
     move-result-object p1
 
-    const-class v1, Lcom/twitter/sdk/android/core/t;
+    const-class v1, Lcom/twitter/sdk/android/core/TwitterSession;
 
     invoke-virtual {v0, p1, v1}, Lcom/google/gson/e;->a(Ljava/lang/String;Ljava/lang/Class;)Ljava/lang/Object;
 
@@ -57,9 +57,9 @@
 
     const-string v0, "Gson().fromJson(bundle.g\u2026itterSession::class.java)"
 
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    check-cast p1, Lcom/twitter/sdk/android/core/t;
+    check-cast p1, Lcom/twitter/sdk/android/core/TwitterSession;
 
     return-object p1
 .end method

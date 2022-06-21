@@ -3,7 +3,7 @@
 .source "SearchMenuPresenter.kt"
 
 # interfaces
-.implements Lcom/vk/api/base/a;
+.implements Lcom/vk/api/base/ApiCallback;
 
 
 # annotations
@@ -19,8 +19,8 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Ljava/lang/Object;",
-        "Lcom/vk/api/base/a<",
-        "Lb/h/c/p/k;",
+        "Lcom/vk/api/base/ApiCallback<",
+        "Lcom/vk/api/money/MoneyGetWalletStatus;",
         ">;"
     }
 .end annotation
@@ -60,29 +60,29 @@
     .line 10
     iget-object v0, p0, Lcom/vk/menu/SearchMenuPresenter$loadVkPayAndCommerce$1;->b:Lcom/vk/menu/SearchMenuPresenter;
 
-    invoke-virtual {v0}, Lcom/vk/menu/SearchMenuPresenter;->a()Lcom/vk/menu/f;
+    invoke-virtual {v0}, Lcom/vk/menu/SearchMenuPresenter;->a()Lcom/vk/menu/SearchMenuContract1;
 
     move-result-object v0
 
     const/4 v1, 0x1
 
-    invoke-interface {v0, v1}, Lcom/vk/menu/f;->x(I)V
+    invoke-interface {v0, v1}, Lcom/vk/menu/SearchMenuContract1;->x(I)V
 
     .line 11
     iget-object v0, p0, Lcom/vk/menu/SearchMenuPresenter$loadVkPayAndCommerce$1;->b:Lcom/vk/menu/SearchMenuPresenter;
 
-    invoke-virtual {v0}, Lcom/vk/menu/SearchMenuPresenter;->a()Lcom/vk/menu/f;
+    invoke-virtual {v0}, Lcom/vk/menu/SearchMenuPresenter;->a()Lcom/vk/menu/SearchMenuContract1;
 
     move-result-object v0
 
     const/4 v2, 0x3
 
-    invoke-interface {v0, v2}, Lcom/vk/menu/f;->x(I)V
+    invoke-interface {v0, v2}, Lcom/vk/menu/SearchMenuContract1;->x(I)V
 
     .line 12
     iget-object v0, p0, Lcom/vk/menu/SearchMenuPresenter$loadVkPayAndCommerce$1;->b:Lcom/vk/menu/SearchMenuPresenter;
 
-    invoke-virtual {v0}, Lcom/vk/menu/SearchMenuPresenter;->a()Lcom/vk/menu/f;
+    invoke-virtual {v0}, Lcom/vk/menu/SearchMenuPresenter;->a()Lcom/vk/menu/SearchMenuContract1;
 
     move-result-object v0
 
@@ -94,7 +94,7 @@
 
     move-result-object v2
 
-    invoke-interface {v0, v1, v2}, Lcom/vk/menu/f;->d(ILjava/util/List;)V
+    invoke-interface {v0, v1, v2}, Lcom/vk/menu/SearchMenuContract1;->d(ILjava/util/List;)V
 
     return-void
 .end method
@@ -105,35 +105,35 @@
     .line 13
     iget-object v0, p0, Lcom/vk/menu/SearchMenuPresenter$loadVkPayAndCommerce$1;->b:Lcom/vk/menu/SearchMenuPresenter;
 
-    invoke-virtual {v0}, Lcom/vk/menu/SearchMenuPresenter;->a()Lcom/vk/menu/f;
+    invoke-virtual {v0}, Lcom/vk/menu/SearchMenuPresenter;->a()Lcom/vk/menu/SearchMenuContract1;
 
     move-result-object v0
 
     const/4 v1, 0x1
 
-    invoke-interface {v0, v1}, Lcom/vk/menu/f;->x(I)V
+    invoke-interface {v0, v1}, Lcom/vk/menu/SearchMenuContract1;->x(I)V
 
     .line 14
     iget-object v0, p0, Lcom/vk/menu/SearchMenuPresenter$loadVkPayAndCommerce$1;->b:Lcom/vk/menu/SearchMenuPresenter;
 
-    invoke-virtual {v0}, Lcom/vk/menu/SearchMenuPresenter;->a()Lcom/vk/menu/f;
+    invoke-virtual {v0}, Lcom/vk/menu/SearchMenuPresenter;->a()Lcom/vk/menu/SearchMenuContract1;
 
     move-result-object v0
 
     const/4 v1, 0x3
 
-    invoke-interface {v0, v1}, Lcom/vk/menu/f;->x(I)V
+    invoke-interface {v0, v1}, Lcom/vk/menu/SearchMenuContract1;->x(I)V
 
     .line 15
     iget-object v0, p0, Lcom/vk/menu/SearchMenuPresenter$loadVkPayAndCommerce$1;->b:Lcom/vk/menu/SearchMenuPresenter;
 
-    invoke-virtual {v0}, Lcom/vk/menu/SearchMenuPresenter;->a()Lcom/vk/menu/f;
+    invoke-virtual {v0}, Lcom/vk/menu/SearchMenuPresenter;->a()Lcom/vk/menu/SearchMenuContract1;
 
     move-result-object v0
 
-    new-instance v2, Lcom/vk/menu/g/e;
+    new-instance v2, Lcom/vk/menu/g/SearchMenuVkPayItem;
 
-    invoke-direct {v2, p1, p2}, Lcom/vk/menu/g/e;-><init>(J)V
+    invoke-direct {v2, p1, p2}, Lcom/vk/menu/g/SearchMenuVkPayItem;-><init>(J)V
 
     invoke-static {v2}, Ljava/util/Collections;->singletonList(Ljava/lang/Object;)Ljava/util/List;
 
@@ -141,9 +141,9 @@
 
     const-string p2, "Collections.singletonList(SearchMenuVkPayItem(it))"
 
-    invoke-static {p1, p2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, p2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    invoke-interface {v0, v1, p1}, Lcom/vk/menu/f;->d(ILjava/util/List;)V
+    invoke-interface {v0, v1, p1}, Lcom/vk/menu/SearchMenuContract1;->d(ILjava/util/List;)V
 
     return-void
 .end method
@@ -170,19 +170,19 @@
     .locals 6
 
     .line 3
-    sget-object v0, Lb/h/u/a;->f:Lb/h/u/a;
+    sget-object v0, Lb/h/u/VkQueueSyncManager;->f:Lb/h/u/VkQueueSyncManager;
 
-    new-instance v1, Lb/h/u/b/e;
+    new-instance v1, Lb/h/u/b/VkPayBalanceQueueEvent;
 
-    invoke-static {}, Lcom/vtosters/lite/i0/c;->d()Lb/h/h/d/c;
+    invoke-static {}, Lcom/vtosters/lite/auth/VKAccountManager;->d()Lcom/vk/auth/api/VKAccount;
 
     move-result-object v2
 
-    invoke-virtual {v2}, Lb/h/h/d/c;->D0()I
+    invoke-virtual {v2}, Lcom/vk/auth/api/VKAccount;->D0()I
 
     move-result v2
 
-    invoke-direct {v1, v2}, Lb/h/u/b/e;-><init>(I)V
+    invoke-direct {v1, v2}, Lb/h/u/b/VkPayBalanceQueueEvent;-><init>(I)V
 
     .line 4
     iget-object v2, p0, Lcom/vk/menu/SearchMenuPresenter$loadVkPayAndCommerce$1;->a:Ljava/lang/String;
@@ -201,7 +201,7 @@
     invoke-direct {v5, p0}, Lcom/vk/menu/SearchMenuPresenter$loadVkPayAndCommerce$1$subscribeForWidgetUpdates$3;-><init>(Lcom/vk/menu/SearchMenuPresenter$loadVkPayAndCommerce$1;)V
 
     .line 8
-    invoke-virtual/range {v0 .. v5}, Lb/h/u/a;->a(Lb/h/u/b/c;Ljava/lang/Object;Lkotlin/jvm/b/a;Lkotlin/jvm/b/b;Lkotlin/jvm/b/b;)Lcom/vk/queue/sync/a;
+    invoke-virtual/range {v0 .. v5}, Lb/h/u/VkQueueSyncManager;->a(Lb/h/u/b/QueueEvent;Ljava/lang/Object;Lkotlin/jvm/b/Functions;Lkotlin/jvm/b/Functions2;Lkotlin/jvm/b/Functions2;)Lcom/vk/queue/sync/CancellationSignal;
 
     return-void
 .end method
@@ -212,24 +212,24 @@
     .line 9
     iget-object v0, p0, Lcom/vk/menu/SearchMenuPresenter$loadVkPayAndCommerce$1;->b:Lcom/vk/menu/SearchMenuPresenter;
 
-    invoke-virtual {v0}, Lcom/vk/menu/SearchMenuPresenter;->a()Lcom/vk/menu/f;
+    invoke-virtual {v0}, Lcom/vk/menu/SearchMenuPresenter;->a()Lcom/vk/menu/SearchMenuContract1;
 
     move-result-object v0
 
     const/4 v1, 0x1
 
-    invoke-interface {v0, v1}, Lcom/vk/menu/f;->x(I)V
+    invoke-interface {v0, v1}, Lcom/vk/menu/SearchMenuContract1;->x(I)V
 
     .line 10
     iget-object v0, p0, Lcom/vk/menu/SearchMenuPresenter$loadVkPayAndCommerce$1;->b:Lcom/vk/menu/SearchMenuPresenter;
 
-    invoke-virtual {v0}, Lcom/vk/menu/SearchMenuPresenter;->a()Lcom/vk/menu/f;
+    invoke-virtual {v0}, Lcom/vk/menu/SearchMenuPresenter;->a()Lcom/vk/menu/SearchMenuContract1;
 
     move-result-object v0
 
-    new-instance v1, Lcom/vk/menu/g/e;
+    new-instance v1, Lcom/vk/menu/g/SearchMenuVkPayItem;
 
-    invoke-direct {v1, p1, p2}, Lcom/vk/menu/g/e;-><init>(J)V
+    invoke-direct {v1, p1, p2}, Lcom/vk/menu/g/SearchMenuVkPayItem;-><init>(J)V
 
     invoke-static {v1}, Ljava/util/Collections;->singletonList(Ljava/lang/Object;)Ljava/util/List;
 
@@ -237,11 +237,11 @@
 
     const-string p2, "Collections.singletonList(SearchMenuVkPayItem(it))"
 
-    invoke-static {p1, p2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, p2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     const/4 p2, 0x3
 
-    invoke-interface {v0, p2, p1}, Lcom/vk/menu/f;->c(ILjava/util/List;)V
+    invoke-interface {v0, p2, p1}, Lcom/vk/menu/SearchMenuContract1;->c(ILjava/util/List;)V
 
     return-void
 .end method
@@ -268,11 +268,11 @@
     .locals 2
 
     .line 2
-    sget-object v0, Lb/h/u/a;->f:Lb/h/u/a;
+    sget-object v0, Lb/h/u/VkQueueSyncManager;->f:Lb/h/u/VkQueueSyncManager;
 
     iget-object v1, p0, Lcom/vk/menu/SearchMenuPresenter$loadVkPayAndCommerce$1;->a:Ljava/lang/String;
 
-    invoke-virtual {v0, v1}, Lb/h/u/a;->a(Ljava/lang/Object;)V
+    invoke-virtual {v0, v1}, Lb/h/u/VkQueueSyncManager;->a(Ljava/lang/Object;)V
 
     return-void
 .end method
@@ -288,11 +288,11 @@
 
 
 # virtual methods
-.method public a(Lb/h/c/p/k;)V
+.method public a(Lcom/vk/api/money/MoneyGetWalletStatus;)V
     .locals 2
 
     .line 4
-    invoke-virtual {p1}, Lb/h/c/p/k;->b()Z
+    invoke-virtual {p1}, Lcom/vk/api/money/MoneyGetWalletStatus;->b()Z
 
     move-result v0
 
@@ -305,7 +305,7 @@
 
     .line 6
     :cond_0
-    invoke-virtual {p1}, Lb/h/c/p/k;->a()Ljava/lang/Long;
+    invoke-virtual {p1}, Lcom/vk/api/money/MoneyGetWalletStatus;->a()Ljava/lang/Long;
 
     move-result-object p1
 
@@ -323,13 +323,13 @@
     invoke-direct {p0}, Lcom/vk/menu/SearchMenuPresenter$loadVkPayAndCommerce$1;->b()V
 
     .line 9
-    sget-object p1, Lb/h/n/c;->h:Lb/h/n/c;
+    sget-object p1, Lb/h/n/AppLifecycleDispatcher;->h:Lb/h/n/AppLifecycleDispatcher;
 
     new-instance v0, Lcom/vk/menu/SearchMenuPresenter$loadVkPayAndCommerce$1$a;
 
     invoke-direct {v0, p0}, Lcom/vk/menu/SearchMenuPresenter$loadVkPayAndCommerce$1$a;-><init>(Lcom/vk/menu/SearchMenuPresenter$loadVkPayAndCommerce$1;)V
 
-    invoke-virtual {p1, v0}, Lb/h/n/c;->a(Lb/h/n/c$a;)V
+    invoke-virtual {p1, v0}, Lb/h/n/AppLifecycleDispatcher;->a(Lb/h/n/AppLifecycleDispatcher$a;)V
 
     return-void
 .end method
@@ -352,9 +352,9 @@
     .locals 0
 
     .line 3
-    check-cast p1, Lb/h/c/p/k;
+    check-cast p1, Lcom/vk/api/money/MoneyGetWalletStatus;
 
-    invoke-virtual {p0, p1}, Lcom/vk/menu/SearchMenuPresenter$loadVkPayAndCommerce$1;->a(Lb/h/c/p/k;)V
+    invoke-virtual {p0, p1}, Lcom/vk/menu/SearchMenuPresenter$loadVkPayAndCommerce$1;->a(Lcom/vk/api/money/MoneyGetWalletStatus;)V
 
     return-void
 .end method

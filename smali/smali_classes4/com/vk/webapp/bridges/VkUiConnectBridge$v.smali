@@ -3,12 +3,12 @@
 .source "VkUiConnectBridge.kt"
 
 # interfaces
-.implements Lc/a/z/g;
+.implements Lio/reactivex/functions/Consumer;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/webapp/bridges/VkUiConnectBridge;->a(ILjava/util/List;Lcom/vk/webapp/internal/data/c;I)V
+    value = Lcom/vk/webapp/bridges/VkUiConnectBridge;->a(ILjava/util/List;Lcom/vk/webapp/internal/data/JsApiMethodType1;I)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -22,7 +22,7 @@
         "Ljava/lang/Object;",
         ">",
         "Ljava/lang/Object;",
-        "Lc/a/z/g<",
+        "Lio/reactivex/functions/Consumer<",
         "Lcom/vk/dto/group/Group;",
         ">;"
     }
@@ -36,13 +36,13 @@
 
 .field final synthetic c:Ljava/util/List;
 
-.field final synthetic d:Lcom/vk/webapp/internal/data/c;
+.field final synthetic d:Lcom/vk/webapp/internal/data/JsApiMethodType1;
 
 .field final synthetic e:I
 
 
 # direct methods
-.method constructor <init>(Lcom/vk/webapp/bridges/VkUiConnectBridge;ILjava/util/List;Lcom/vk/webapp/internal/data/c;I)V
+.method constructor <init>(Lcom/vk/webapp/bridges/VkUiConnectBridge;ILjava/util/List;Lcom/vk/webapp/internal/data/JsApiMethodType1;I)V
     .locals 0
 
     iput-object p1, p0, Lcom/vk/webapp/bridges/VkUiConnectBridge$v;->a:Lcom/vk/webapp/bridges/VkUiConnectBridge;
@@ -51,7 +51,7 @@
 
     iput-object p3, p0, Lcom/vk/webapp/bridges/VkUiConnectBridge$v;->c:Ljava/util/List;
 
-    iput-object p4, p0, Lcom/vk/webapp/bridges/VkUiConnectBridge$v;->d:Lcom/vk/webapp/internal/data/c;
+    iput-object p4, p0, Lcom/vk/webapp/bridges/VkUiConnectBridge$v;->d:Lcom/vk/webapp/internal/data/JsApiMethodType1;
 
     iput p5, p0, Lcom/vk/webapp/bridges/VkUiConnectBridge$v;->e:I
 
@@ -78,11 +78,11 @@
 
     iget-object v0, p0, Lcom/vk/webapp/bridges/VkUiConnectBridge$v;->a:Lcom/vk/webapp/bridges/VkUiConnectBridge;
 
-    invoke-static {v0}, Lcom/vk/webapp/bridges/VkUiConnectBridge;->a(Lcom/vk/webapp/bridges/VkUiConnectBridge;)Lcom/vk/webapp/o/b;
+    invoke-static {v0}, Lcom/vk/webapp/bridges/VkUiConnectBridge;->a(Lcom/vk/webapp/bridges/VkUiConnectBridge;)Lcom/vk/webapp/o/VkUiConnectFragmentDelegate;
 
     move-result-object v0
 
-    invoke-interface {v0}, Lcom/vk/webapp/o/b;->p()Z
+    invoke-interface {v0}, Lcom/vk/webapp/o/VkUiConnectFragmentDelegate;->p()Z
 
     move-result v0
 
@@ -93,23 +93,23 @@
 
     new-instance v2, Lcom/vk/webapp/ScopesController;
 
-    invoke-static {v0}, Lcom/vk/webapp/bridges/VkUiConnectBridge;->a(Lcom/vk/webapp/bridges/VkUiConnectBridge;)Lcom/vk/webapp/o/b;
+    invoke-static {v0}, Lcom/vk/webapp/bridges/VkUiConnectBridge;->a(Lcom/vk/webapp/bridges/VkUiConnectBridge;)Lcom/vk/webapp/o/VkUiConnectFragmentDelegate;
 
     move-result-object v3
 
-    invoke-interface {v3}, Lcom/vk/webapp/o/b;->l()Lcom/vk/dto/common/data/ApiApplication;
+    invoke-interface {v3}, Lcom/vk/webapp/o/VkUiConnectFragmentDelegate;->l()Lcom/vk/dto/common/data/ApiApplication;
 
     move-result-object v3
 
-    new-instance v4, Lcom/vk/webapp/internal/data/b;
+    new-instance v4, Lcom/vk/webapp/internal/data/ScopeType;
 
     iget-object p1, p1, Lcom/vk/dto/group/Group;->c:Ljava/lang/String;
 
-    invoke-static {p1, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    invoke-direct {v4, p1}, Lcom/vk/webapp/internal/data/b;-><init>(Ljava/lang/String;)V
+    invoke-direct {v4, p1}, Lcom/vk/webapp/internal/data/ScopeType;-><init>(Ljava/lang/String;)V
 
-    invoke-direct {v2, v3, v4}, Lcom/vk/webapp/ScopesController;-><init>(Lcom/vk/dto/common/data/ApiApplication;Lcom/vk/webapp/internal/data/d;)V
+    invoke-direct {v2, v3, v4}, Lcom/vk/webapp/ScopesController;-><init>(Lcom/vk/dto/common/data/ApiApplication;Lcom/vk/webapp/internal/data/ScopeType2;)V
 
     invoke-static {v0, v2}, Lcom/vk/webapp/bridges/VkUiConnectBridge;->a(Lcom/vk/webapp/bridges/VkUiConnectBridge;Lcom/vk/webapp/ScopesController;)V
 
@@ -125,7 +125,7 @@
 
     if-eqz v0, :cond_1
 
-    invoke-virtual {v0}, Lcom/vk/webapp/ScopesController;->a()Lcom/vk/webapp/internal/data/d;
+    invoke-virtual {v0}, Lcom/vk/webapp/ScopesController;->a()Lcom/vk/webapp/internal/data/ScopeType2;
 
     move-result-object v0
 
@@ -137,15 +137,15 @@
     :goto_0
     if-eqz v0, :cond_4
 
-    check-cast v0, Lcom/vk/webapp/internal/data/b;
+    check-cast v0, Lcom/vk/webapp/internal/data/ScopeType;
 
     if-eqz v0, :cond_2
 
     iget-object p1, p1, Lcom/vk/dto/group/Group;->c:Ljava/lang/String;
 
-    invoke-static {p1, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    invoke-virtual {v0, p1}, Lcom/vk/webapp/internal/data/b;->a(Ljava/lang/String;)V
+    invoke-virtual {v0, p1}, Lcom/vk/webapp/internal/data/ScopeType;->a(Ljava/lang/String;)V
 
     .line 4
     :cond_2
@@ -165,7 +165,7 @@
 
     iget-object v3, p0, Lcom/vk/webapp/bridges/VkUiConnectBridge$v;->c:Ljava/util/List;
 
-    iget-object v4, p0, Lcom/vk/webapp/bridges/VkUiConnectBridge$v;->d:Lcom/vk/webapp/internal/data/c;
+    iget-object v4, p0, Lcom/vk/webapp/bridges/VkUiConnectBridge$v;->d:Lcom/vk/webapp/internal/data/JsApiMethodType1;
 
     iget p1, p0, Lcom/vk/webapp/bridges/VkUiConnectBridge$v;->e:I
 
@@ -173,7 +173,7 @@
 
     move-result-object v5
 
-    invoke-static/range {v0 .. v5}, Lcom/vk/webapp/bridges/VkUiConnectBridge;->a(Lcom/vk/webapp/bridges/VkUiConnectBridge;Lcom/vk/webapp/ScopesController;ILjava/util/List;Lcom/vk/webapp/internal/data/c;Ljava/lang/Integer;)V
+    invoke-static/range {v0 .. v5}, Lcom/vk/webapp/bridges/VkUiConnectBridge;->a(Lcom/vk/webapp/bridges/VkUiConnectBridge;Lcom/vk/webapp/ScopesController;ILjava/util/List;Lcom/vk/webapp/internal/data/JsApiMethodType1;Ljava/lang/Integer;)V
 
     :cond_3
     return-void

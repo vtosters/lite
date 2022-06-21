@@ -12,7 +12,7 @@
 
 
 # static fields
-.field static final synthetic j:[Lkotlin/u/j;
+.field static final synthetic j:[Lkotlin/u/KProperty5;
 
 .field private static final k:J
 
@@ -22,7 +22,7 @@
 
 
 # instance fields
-.field private final a:Lkotlin/e;
+.field private final a:Lkotlin/Lazy2;
 
 .field private b:Z
 
@@ -34,9 +34,9 @@
 
 .field private final f:Landroid/app/Activity;
 
-.field private final g:Lcom/vk/updates/core/a;
+.field private final g:Lcom/vk/updates/core/InAppUpdatesCallbacks;
 
-.field private final h:Lc/a/s;
+.field private final h:Lio/reactivex/Scheduler;
 
 .field private final i:J
 
@@ -47,13 +47,13 @@
 
     const/4 v0, 0x1
 
-    new-array v0, v0, [Lkotlin/u/j;
+    new-array v0, v0, [Lkotlin/u/KProperty5;
 
     new-instance v1, Lkotlin/jvm/internal/PropertyReference1Impl;
 
     const-class v2, Lcom/vk/updates/core/InAppUpdates;
 
-    invoke-static {v2}, Lkotlin/jvm/internal/o;->a(Ljava/lang/Class;)Lkotlin/u/c;
+    invoke-static {v2}, Lkotlin/jvm/internal/Reflection;->a(Ljava/lang/Class;)Lkotlin/u/KClass;
 
     move-result-object v2
 
@@ -61,21 +61,21 @@
 
     const-string v4, "getUpdateManager()Lcom/google/android/play/core/appupdate/AppUpdateManager;"
 
-    invoke-direct {v1, v2, v3, v4}, Lkotlin/jvm/internal/PropertyReference1Impl;-><init>(Lkotlin/u/e;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-direct {v1, v2, v3, v4}, Lkotlin/jvm/internal/PropertyReference1Impl;-><init>(Lkotlin/u/KDeclarationContainer;Ljava/lang/String;Ljava/lang/String;)V
 
-    invoke-static {v1}, Lkotlin/jvm/internal/o;->a(Lkotlin/jvm/internal/PropertyReference1;)Lkotlin/u/l;
+    invoke-static {v1}, Lkotlin/jvm/internal/Reflection;->a(Lkotlin/jvm/internal/PropertyReference1;)Lkotlin/u/KProperty2;
 
     const/4 v2, 0x0
 
     aput-object v1, v0, v2
 
-    sput-object v0, Lcom/vk/updates/core/InAppUpdates;->j:[Lkotlin/u/j;
+    sput-object v0, Lcom/vk/updates/core/InAppUpdates;->j:[Lkotlin/u/KProperty5;
 
     new-instance v0, Lcom/vk/updates/core/InAppUpdates$a;
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, v1}, Lcom/vk/updates/core/InAppUpdates$a;-><init>(Lkotlin/jvm/internal/i;)V
+    invoke-direct {v0, v1}, Lcom/vk/updates/core/InAppUpdates$a;-><init>(Lkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     sput-object v0, Lcom/vk/updates/core/InAppUpdates;->m:Lcom/vk/updates/core/InAppUpdates$a;
 
@@ -104,7 +104,7 @@
     return-void
 .end method
 
-.method public constructor <init>(Landroid/app/Activity;Lcom/vk/updates/core/a;Lc/a/s;JZ)V
+.method public constructor <init>(Landroid/app/Activity;Lcom/vk/updates/core/InAppUpdatesCallbacks;Lio/reactivex/Scheduler;JZ)V
     .locals 0
 
     .line 1
@@ -112,9 +112,9 @@
 
     iput-object p1, p0, Lcom/vk/updates/core/InAppUpdates;->f:Landroid/app/Activity;
 
-    iput-object p2, p0, Lcom/vk/updates/core/InAppUpdates;->g:Lcom/vk/updates/core/a;
+    iput-object p2, p0, Lcom/vk/updates/core/InAppUpdates;->g:Lcom/vk/updates/core/InAppUpdatesCallbacks;
 
-    iput-object p3, p0, Lcom/vk/updates/core/InAppUpdates;->h:Lc/a/s;
+    iput-object p3, p0, Lcom/vk/updates/core/InAppUpdates;->h:Lio/reactivex/Scheduler;
 
     iput-wide p4, p0, Lcom/vk/updates/core/InAppUpdates;->i:J
 
@@ -123,11 +123,11 @@
 
     invoke-direct {p1, p0, p6}, Lcom/vk/updates/core/InAppUpdates$updateManager$2;-><init>(Lcom/vk/updates/core/InAppUpdates;Z)V
 
-    invoke-static {p1}, Lkotlin/g;->a(Lkotlin/jvm/b/a;)Lkotlin/e;
+    invoke-static {p1}, Lkotlin/g;->a(Lkotlin/jvm/b/Functions;)Lkotlin/Lazy2;
 
     move-result-object p1
 
-    iput-object p1, p0, Lcom/vk/updates/core/InAppUpdates;->a:Lkotlin/e;
+    iput-object p1, p0, Lcom/vk/updates/core/InAppUpdates;->a:Lkotlin/Lazy2;
 
     .line 3
     new-instance p1, Lcom/vk/updates/core/InAppUpdates$j;
@@ -164,7 +164,7 @@
 
     const-string p2, "AppUpdateManagerFactory.create(activity)"
 
-    invoke-static {p1, p2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, p2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     return-object p1
 .end method
@@ -391,9 +391,9 @@
     .locals 2
 
     .line 1
-    iget-object v0, p0, Lcom/vk/updates/core/InAppUpdates;->g:Lcom/vk/updates/core/a;
+    iget-object v0, p0, Lcom/vk/updates/core/InAppUpdates;->g:Lcom/vk/updates/core/InAppUpdatesCallbacks;
 
-    invoke-interface {v0}, Lcom/vk/updates/core/a;->a()J
+    invoke-interface {v0}, Lcom/vk/updates/core/InAppUpdatesCallbacks;->a()J
 
     move-result-wide v0
 
@@ -403,15 +403,15 @@
 .method private final k()Lb/d/a/d/a/a/b;
     .locals 3
 
-    iget-object v0, p0, Lcom/vk/updates/core/InAppUpdates;->a:Lkotlin/e;
+    iget-object v0, p0, Lcom/vk/updates/core/InAppUpdates;->a:Lkotlin/Lazy2;
 
-    sget-object v1, Lcom/vk/updates/core/InAppUpdates;->j:[Lkotlin/u/j;
+    sget-object v1, Lcom/vk/updates/core/InAppUpdates;->j:[Lkotlin/u/KProperty5;
 
     const/4 v2, 0x0
 
     aget-object v1, v1, v2
 
-    invoke-interface {v0}, Lkotlin/e;->getValue()Ljava/lang/Object;
+    invoke-interface {v0}, Lkotlin/Lazy2;->getValue()Ljava/lang/Object;
 
     move-result-object v0
 
@@ -447,17 +447,17 @@
 
 
 # virtual methods
-.method public final a()Lio/reactivex/disposables/b;
+.method public final a()Lio/reactivex/disposables/Disposable;
     .locals 4
 
     .line 6
-    sget-object v0, Lcom/vk/updates/task/a;->a:Lcom/vk/updates/task/a$a;
+    sget-object v0, Lcom/vk/updates/task/SingleTask;->a:Lcom/vk/updates/task/SingleTask$a;
 
     new-instance v1, Lcom/vk/updates/core/InAppUpdates$checkForUpdate$1;
 
     invoke-direct {v1, p0}, Lcom/vk/updates/core/InAppUpdates$checkForUpdate$1;-><init>(Lcom/vk/updates/core/InAppUpdates;)V
 
-    invoke-virtual {v0, v1}, Lcom/vk/updates/task/a$a;->a(Lkotlin/jvm/b/a;)Lc/a/m;
+    invoke-virtual {v0, v1}, Lcom/vk/updates/task/SingleTask$a;->a(Lkotlin/jvm/b/Functions;)Lio/reactivex/Observable;
 
     move-result-object v0
 
@@ -466,7 +466,7 @@
 
     invoke-direct {v1, p0}, Lcom/vk/updates/core/InAppUpdates$b;-><init>(Lcom/vk/updates/core/InAppUpdates;)V
 
-    invoke-virtual {v0, v1}, Lc/a/m;->e(Lc/a/z/g;)Lc/a/m;
+    invoke-virtual {v0, v1}, Lio/reactivex/Observable;->e(Lio/reactivex/functions/Consumer;)Lio/reactivex/Observable;
 
     move-result-object v0
 
@@ -475,23 +475,23 @@
 
     sget-object v3, Ljava/util/concurrent/TimeUnit;->MILLISECONDS:Ljava/util/concurrent/TimeUnit;
 
-    invoke-virtual {v0, v1, v2, v3}, Lc/a/m;->d(JLjava/util/concurrent/TimeUnit;)Lc/a/m;
+    invoke-virtual {v0, v1, v2, v3}, Lio/reactivex/Observable;->d(JLjava/util/concurrent/TimeUnit;)Lio/reactivex/Observable;
 
     move-result-object v0
 
     .line 9
-    iget-object v1, p0, Lcom/vk/updates/core/InAppUpdates;->h:Lc/a/s;
+    iget-object v1, p0, Lcom/vk/updates/core/InAppUpdates;->h:Lio/reactivex/Scheduler;
 
-    invoke-virtual {v0, v1}, Lc/a/m;->b(Lc/a/s;)Lc/a/m;
+    invoke-virtual {v0, v1}, Lio/reactivex/Observable;->b(Lio/reactivex/Scheduler;)Lio/reactivex/Observable;
 
     move-result-object v0
 
     .line 10
-    invoke-static {}, Lc/a/y/c/a;->a()Lc/a/s;
+    invoke-static {}, Lio/reactivex/schedulers/AndroidSchedulers;->a()Lio/reactivex/Scheduler;
 
     move-result-object v1
 
-    invoke-virtual {v0, v1}, Lc/a/m;->a(Lc/a/s;)Lc/a/m;
+    invoke-virtual {v0, v1}, Lio/reactivex/Observable;->a(Lio/reactivex/Scheduler;)Lio/reactivex/Observable;
 
     move-result-object v0
 
@@ -500,7 +500,7 @@
 
     invoke-direct {v1, p0}, Lcom/vk/updates/core/InAppUpdates$c;-><init>(Lcom/vk/updates/core/InAppUpdates;)V
 
-    invoke-virtual {v0, v1}, Lc/a/m;->e(Lc/a/z/j;)Lc/a/m;
+    invoke-virtual {v0, v1}, Lio/reactivex/Observable;->e(Lio/reactivex/functions/Function;)Lio/reactivex/Observable;
 
     move-result-object v0
 
@@ -509,7 +509,7 @@
 
     invoke-direct {v1, p0}, Lcom/vk/updates/core/InAppUpdates$d;-><init>(Lcom/vk/updates/core/InAppUpdates;)V
 
-    invoke-virtual {v0, v1}, Lc/a/m;->d(Lc/a/z/g;)Lc/a/m;
+    invoke-virtual {v0, v1}, Lio/reactivex/Observable;->d(Lio/reactivex/functions/Consumer;)Lio/reactivex/Observable;
 
     move-result-object v0
 
@@ -524,7 +524,7 @@
     invoke-direct {v2, p0}, Lcom/vk/updates/core/InAppUpdates$f;-><init>(Lcom/vk/updates/core/InAppUpdates;)V
 
     .line 15
-    invoke-virtual {v0, v1, v2}, Lc/a/m;->a(Lc/a/z/g;Lc/a/z/g;)Lio/reactivex/disposables/b;
+    invoke-virtual {v0, v1, v2}, Lio/reactivex/Observable;->a(Lio/reactivex/functions/Consumer;Lio/reactivex/functions/Consumer;)Lio/reactivex/disposables/Disposable;
 
     move-result-object v0
 
@@ -533,7 +533,7 @@
     return-object v0
 
     :cond_0
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     const/4 v0, 0x0
 
@@ -576,13 +576,13 @@
     .locals 3
 
     .line 7
-    sget-object v0, Lcom/vk/updates/task/a;->a:Lcom/vk/updates/task/a$a;
+    sget-object v0, Lcom/vk/updates/task/SingleTask;->a:Lcom/vk/updates/task/SingleTask$a;
 
     new-instance v1, Lcom/vk/updates/core/InAppUpdates$completeUpdate$1;
 
     invoke-direct {v1, p0}, Lcom/vk/updates/core/InAppUpdates$completeUpdate$1;-><init>(Lcom/vk/updates/core/InAppUpdates;)V
 
-    invoke-virtual {v0, v1}, Lcom/vk/updates/task/a$a;->a(Lkotlin/jvm/b/a;)Lc/a/m;
+    invoke-virtual {v0, v1}, Lcom/vk/updates/task/SingleTask$a;->a(Lkotlin/jvm/b/Functions;)Lio/reactivex/Observable;
 
     move-result-object v0
 
@@ -591,7 +591,7 @@
 
     invoke-direct {v1, p0}, Lcom/vk/updates/core/InAppUpdates$g;-><init>(Lcom/vk/updates/core/InAppUpdates;)V
 
-    invoke-virtual {v0, v1}, Lc/a/m;->e(Lc/a/z/g;)Lc/a/m;
+    invoke-virtual {v0, v1}, Lio/reactivex/Observable;->e(Lio/reactivex/functions/Consumer;)Lio/reactivex/Observable;
 
     move-result-object v0
 
@@ -606,7 +606,7 @@
     invoke-direct {v2, p0}, Lcom/vk/updates/core/InAppUpdates$i;-><init>(Lcom/vk/updates/core/InAppUpdates;)V
 
     .line 11
-    invoke-virtual {v0, v1, v2}, Lc/a/m;->a(Lc/a/z/g;Lc/a/z/g;)Lio/reactivex/disposables/b;
+    invoke-virtual {v0, v1, v2}, Lio/reactivex/Observable;->a(Lio/reactivex/functions/Consumer;Lio/reactivex/functions/Consumer;)Lio/reactivex/disposables/Disposable;
 
     move-result-object v0
 
@@ -615,7 +615,7 @@
     return-void
 
     :cond_0
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     const/4 v0, 0x0
 
@@ -679,11 +679,11 @@
     return-object v0
 .end method
 
-.method public final d()Lcom/vk/updates/core/a;
+.method public final d()Lcom/vk/updates/core/InAppUpdatesCallbacks;
     .locals 1
 
     .line 2
-    iget-object v0, p0, Lcom/vk/updates/core/InAppUpdates;->g:Lcom/vk/updates/core/a;
+    iget-object v0, p0, Lcom/vk/updates/core/InAppUpdates;->g:Lcom/vk/updates/core/InAppUpdatesCallbacks;
 
     return-object v0
 .end method

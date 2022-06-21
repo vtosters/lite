@@ -19,7 +19,7 @@
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Landroid/util/SparseArray<",
-            "Lcom/vk/stories/w0;",
+            "Lcom/vk/stories/StoryRenderingLayer;",
             ">;"
         }
     .end annotation
@@ -45,7 +45,7 @@
 
 
 # virtual methods
-.method public a(Lcom/vk/stories/w0;)I
+.method public a(Lcom/vk/stories/StoryRenderingLayer;)I
     .locals 2
 
     .line 1
@@ -69,18 +69,18 @@
     .locals 1
 
     .line 3
-    invoke-virtual {p0, p1}, Lcom/vk/stories/StoriesController$h;->c(I)Lcom/vk/stories/w0;
+    invoke-virtual {p0, p1}, Lcom/vk/stories/StoriesController$h;->c(I)Lcom/vk/stories/StoryRenderingLayer;
 
     move-result-object v0
 
     if-eqz v0, :cond_0
 
     .line 4
-    invoke-virtual {p0, p1}, Lcom/vk/stories/StoriesController$h;->c(I)Lcom/vk/stories/w0;
+    invoke-virtual {p0, p1}, Lcom/vk/stories/StoriesController$h;->c(I)Lcom/vk/stories/StoryRenderingLayer;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/vk/stories/w0;->c()V
+    invoke-virtual {v0}, Lcom/vk/stories/StoryRenderingLayer;->c()V
 
     .line 5
     iget-object v0, p0, Lcom/vk/stories/StoriesController$h;->a:Landroid/util/SparseArray;
@@ -95,24 +95,24 @@
     .locals 1
 
     .line 1
-    invoke-virtual {p0, p1}, Lcom/vk/stories/StoriesController$h;->c(I)Lcom/vk/stories/w0;
+    invoke-virtual {p0, p1}, Lcom/vk/stories/StoriesController$h;->c(I)Lcom/vk/stories/StoryRenderingLayer;
 
     move-result-object v0
 
     if-eqz v0, :cond_0
 
     .line 2
-    invoke-virtual {p0, p1}, Lcom/vk/stories/StoriesController$h;->c(I)Lcom/vk/stories/w0;
+    invoke-virtual {p0, p1}, Lcom/vk/stories/StoriesController$h;->c(I)Lcom/vk/stories/StoryRenderingLayer;
 
     move-result-object p1
 
-    invoke-virtual {p1}, Lcom/vk/stories/w0;->c()V
+    invoke-virtual {p1}, Lcom/vk/stories/StoryRenderingLayer;->c()V
 
     :cond_0
     return-void
 .end method
 
-.method public c(I)Lcom/vk/stories/w0;
+.method public c(I)Lcom/vk/stories/StoryRenderingLayer;
     .locals 1
 
     .line 1
@@ -122,7 +122,7 @@
 
     move-result-object p1
 
-    check-cast p1, Lcom/vk/stories/w0;
+    check-cast p1, Lcom/vk/stories/StoryRenderingLayer;
 
     return-object p1
 .end method
@@ -131,18 +131,18 @@
     .locals 1
 
     .line 1
-    invoke-virtual {p0, p1}, Lcom/vk/stories/StoriesController$h;->c(I)Lcom/vk/stories/w0;
+    invoke-virtual {p0, p1}, Lcom/vk/stories/StoriesController$h;->c(I)Lcom/vk/stories/StoryRenderingLayer;
 
     move-result-object v0
 
     if-eqz v0, :cond_0
 
     .line 2
-    invoke-virtual {p0, p1}, Lcom/vk/stories/StoriesController$h;->c(I)Lcom/vk/stories/w0;
+    invoke-virtual {p0, p1}, Lcom/vk/stories/StoriesController$h;->c(I)Lcom/vk/stories/StoryRenderingLayer;
 
     move-result-object p1
 
-    invoke-virtual {p1}, Lcom/vk/stories/w0;->e()V
+    invoke-virtual {p1}, Lcom/vk/stories/StoryRenderingLayer;->e()V
 
     :cond_0
     return-void

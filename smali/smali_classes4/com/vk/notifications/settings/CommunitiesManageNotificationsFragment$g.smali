@@ -48,11 +48,11 @@
     .line 2
     iget-object p3, p0, Lcom/vk/notifications/settings/CommunitiesManageNotificationsFragment$g;->a:Lcom/vk/notifications/settings/CommunitiesManageNotificationsFragment;
 
-    invoke-virtual {p3}, Lcom/vk/notifications/settings/CommunitiesManageNotificationsFragment;->P4()Lcom/vtosters/lite/ui/adapters/a;
+    invoke-virtual {p3}, Lcom/vk/notifications/settings/CommunitiesManageNotificationsFragment;->P4()Lcom/vtosters/lite/ui/adapters/CardMergeAdapter;
 
     move-result-object p3
 
-    invoke-virtual {p3, p2}, Ld/a/a/c/b;->J(I)Landroidx/recyclerview/widget/RecyclerView$Adapter;
+    invoke-virtual {p3, p2}, Lme/grishka/appkit/utils/MergeRecyclerAdapter;->J(I)Landroidx/recyclerview/widget/RecyclerView$Adapter;
 
     move-result-object p3
 
@@ -67,11 +67,11 @@
     .line 5
     iget-object p4, p0, Lcom/vk/notifications/settings/CommunitiesManageNotificationsFragment$g;->a:Lcom/vk/notifications/settings/CommunitiesManageNotificationsFragment;
 
-    invoke-virtual {p4}, Lcom/vk/notifications/settings/CommunitiesManageNotificationsFragment;->P4()Lcom/vtosters/lite/ui/adapters/a;
+    invoke-virtual {p4}, Lcom/vk/notifications/settings/CommunitiesManageNotificationsFragment;->P4()Lcom/vtosters/lite/ui/adapters/CardMergeAdapter;
 
     move-result-object p4
 
-    invoke-virtual {p4, p2}, Ld/a/a/c/b;->K(I)I
+    invoke-virtual {p4, p2}, Lme/grishka/appkit/utils/MergeRecyclerAdapter;->K(I)I
 
     move-result p4
 
@@ -84,11 +84,11 @@
     .line 6
     iget-object p4, p0, Lcom/vk/notifications/settings/CommunitiesManageNotificationsFragment$g;->a:Lcom/vk/notifications/settings/CommunitiesManageNotificationsFragment;
 
-    invoke-virtual {p4}, Lcom/vk/notifications/settings/CommunitiesManageNotificationsFragment;->P4()Lcom/vtosters/lite/ui/adapters/a;
+    invoke-virtual {p4}, Lcom/vk/notifications/settings/CommunitiesManageNotificationsFragment;->P4()Lcom/vtosters/lite/ui/adapters/CardMergeAdapter;
 
     move-result-object p4
 
-    invoke-virtual {p4, p2}, Ld/a/a/c/b;->K(I)I
+    invoke-virtual {p4, p2}, Lme/grishka/appkit/utils/MergeRecyclerAdapter;->K(I)I
 
     move-result p2
 

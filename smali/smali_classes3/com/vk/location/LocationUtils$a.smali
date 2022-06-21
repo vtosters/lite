@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/location/LocationUtils;->d(Landroid/content/Context;)Lc/a/m;
+    value = Lcom/vk/location/LocationUtils;->d(Landroid/content/Context;)Lio/reactivex/Observable;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;

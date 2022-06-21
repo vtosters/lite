@@ -40,13 +40,13 @@
     .line 1
     iget-object v0, p0, Lcom/vk/music/stories/MusicCatalogSelector$f;->a:Lcom/vk/music/stories/MusicCatalogSelector;
 
-    invoke-static {v0}, Lcom/vk/music/stories/MusicCatalogSelector;->e(Lcom/vk/music/stories/MusicCatalogSelector;)Lcom/vk/core/dialogs/bottomsheet/k/a;
+    invoke-static {v0}, Lcom/vk/music/stories/MusicCatalogSelector;->e(Lcom/vk/music/stories/MusicCatalogSelector;)Lcom/vk/core/dialogs/bottomsheet/k/CustomisableModalBottomSheet;
 
     move-result-object v0
 
     if-eqz v0, :cond_0
 
-    invoke-interface {v0}, Lcom/vk/core/dialogs/bottomsheet/k/a;->c4()V
+    invoke-interface {v0}, Lcom/vk/core/dialogs/bottomsheet/k/CustomisableModalBottomSheet;->c4()V
 
     :cond_0
     return-void

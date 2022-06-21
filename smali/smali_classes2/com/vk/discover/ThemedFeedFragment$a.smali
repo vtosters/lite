@@ -1,5 +1,5 @@
 .class public Lcom/vk/discover/ThemedFeedFragment$a;
-.super Lcom/vk/navigation/o;
+.super Lcom/vk/navigation/Navigator;
 .source "ThemedFeedFragment.kt"
 
 
@@ -28,12 +28,12 @@
     .end annotation
 
     .line 1
-    invoke-direct {p0, p1}, Lcom/vk/navigation/o;-><init>(Ljava/lang/Class;)V
+    invoke-direct {p0, p1}, Lcom/vk/navigation/Navigator;-><init>(Ljava/lang/Class;)V
 
     return-void
 .end method
 
-.method public synthetic constructor <init>(Ljava/lang/Class;ILkotlin/jvm/internal/i;)V
+.method public synthetic constructor <init>(Ljava/lang/Class;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
     .locals 0
 
     and-int/lit8 p2, p2, 0x1
@@ -57,7 +57,7 @@
     .line 1
     new-instance v0, Landroid/os/Bundle;
 
-    iget-object v1, p0, Lcom/vk/navigation/o;->O0:Landroid/os/Bundle;
+    iget-object v1, p0, Lcom/vk/navigation/Navigator;->O0:Landroid/os/Bundle;
 
     invoke-direct {v0, v1}, Landroid/os/Bundle;-><init>(Landroid/os/Bundle;)V
 
@@ -68,7 +68,7 @@
     .locals 3
 
     .line 1
-    iget-object v0, p0, Lcom/vk/navigation/o;->O0:Landroid/os/Bundle;
+    iget-object v0, p0, Lcom/vk/navigation/Navigator;->O0:Landroid/os/Bundle;
 
     const-string v1, "arg_tab_mode"
 
@@ -83,7 +83,7 @@
     .locals 3
 
     .line 1
-    iget-object v0, p0, Lcom/vk/navigation/o;->O0:Landroid/os/Bundle;
+    iget-object v0, p0, Lcom/vk/navigation/Navigator;->O0:Landroid/os/Bundle;
 
     const-string v1, "arg_toolbar"
 

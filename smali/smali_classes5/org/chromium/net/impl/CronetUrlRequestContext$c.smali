@@ -18,7 +18,7 @@
 
 
 # instance fields
-.field final synthetic a:Lorg/chromium/net/impl/p;
+.field final synthetic a:Lorg/chromium/net/impl/VersionSafeCallbacks;
 
 .field final synthetic b:I
 
@@ -28,11 +28,11 @@
 
 
 # direct methods
-.method constructor <init>(Lorg/chromium/net/impl/CronetUrlRequestContext;Lorg/chromium/net/impl/p;IJI)V
+.method constructor <init>(Lorg/chromium/net/impl/CronetUrlRequestContext;Lorg/chromium/net/impl/VersionSafeCallbacks;IJI)V
     .locals 0
 
     .line 1
-    iput-object p2, p0, Lorg/chromium/net/impl/CronetUrlRequestContext$c;->a:Lorg/chromium/net/impl/p;
+    iput-object p2, p0, Lorg/chromium/net/impl/CronetUrlRequestContext$c;->a:Lorg/chromium/net/impl/VersionSafeCallbacks;
 
     iput p3, p0, Lorg/chromium/net/impl/CronetUrlRequestContext$c;->b:I
 
@@ -51,7 +51,7 @@
     .locals 5
 
     .line 1
-    iget-object v0, p0, Lorg/chromium/net/impl/CronetUrlRequestContext$c;->a:Lorg/chromium/net/impl/p;
+    iget-object v0, p0, Lorg/chromium/net/impl/CronetUrlRequestContext$c;->a:Lorg/chromium/net/impl/VersionSafeCallbacks;
 
     iget v1, p0, Lorg/chromium/net/impl/CronetUrlRequestContext$c;->b:I
 
@@ -59,7 +59,7 @@
 
     iget v4, p0, Lorg/chromium/net/impl/CronetUrlRequestContext$c;->d:I
 
-    invoke-virtual {v0, v1, v2, v3, v4}, Lorg/chromium/net/impl/p;->a(IJI)V
+    invoke-virtual {v0, v1, v2, v3, v4}, Lorg/chromium/net/impl/VersionSafeCallbacks;->a(IJI)V
 
     return-void
 .end method

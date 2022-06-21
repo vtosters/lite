@@ -3,7 +3,7 @@
 .source "DocAttachViewTypeDelegate.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/b;
+.implements Lkotlin/jvm/b/Functions2;
 
 
 # annotations
@@ -19,9 +19,9 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/b<",
+        "Lkotlin/jvm/b/Functions2<",
         "Landroid/view/View;",
-        "Lkotlin/m;",
+        "Lkotlin/Unit;",
         ">;"
     }
 .end annotation
@@ -58,7 +58,7 @@
 
     iget-object v0, v0, Lcom/vk/im/ui/components/attaches_history/attaches/adapter/delegates/DocAttachViewTypeDelegate$DocAttachViewHolder;->g:Lcom/vk/im/ui/components/attaches_history/attaches/adapter/delegates/DocAttachViewTypeDelegate;
 
-    invoke-virtual {v0}, Lcom/vk/im/ui/components/attaches_history/attaches/adapter/delegates/DocAttachViewTypeDelegate;->a()Lcom/vk/im/ui/components/attaches_history/attaches/adapter/delegates/c;
+    invoke-virtual {v0}, Lcom/vk/im/ui/components/attaches_history/attaches/adapter/delegates/DocAttachViewTypeDelegate;->a()Lcom/vk/im/ui/components/attaches_history/attaches/adapter/delegates/DocAttachCallback;
 
     move-result-object v0
 
@@ -70,7 +70,7 @@
 
     move-result-object v1
 
-    invoke-interface {v0, p1, v1}, Lcom/vk/im/ui/components/attaches_history/attaches/adapter/delegates/c;->a(Landroid/view/View;Lcom/vk/im/engine/models/attaches/HistoryAttach;)V
+    invoke-interface {v0, p1, v1}, Lcom/vk/im/ui/components/attaches_history/attaches/adapter/delegates/DocAttachCallback;->a(Landroid/view/View;Lcom/vk/im/engine/models/attaches/HistoryAttach;)V
 
     :cond_0
     return-void
@@ -84,7 +84,7 @@
 
     invoke-virtual {p0, p1}, Lcom/vk/im/ui/components/attaches_history/attaches/adapter/delegates/DocAttachViewTypeDelegate$DocAttachViewHolder$bind$2;->a(Landroid/view/View;)V
 
-    sget-object p1, Lkotlin/m;->a:Lkotlin/m;
+    sget-object p1, Lkotlin/Unit;->a:Lkotlin/Unit;
 
     return-object p1
 .end method

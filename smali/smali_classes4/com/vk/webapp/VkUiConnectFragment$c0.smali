@@ -3,7 +3,7 @@
 .source "VkUiConnectFragment.kt"
 
 # interfaces
-.implements Lcom/vk/common/view/j/c$a;
+.implements Lcom/vk/common/view/j/ConfirmationBottomSheetDialog$a;
 
 
 # annotations
@@ -64,16 +64,16 @@
 
     const-string v3, "VKWebAppAllowNotificationsFailed"
 
-    invoke-virtual {v0, v1, v3, v2}, Lcom/vk/webapp/bridges/a;->a(Lcom/vk/webapp/internal/data/JsApiMethodType;Ljava/lang/String;Lorg/json/JSONObject;)V
+    invoke-virtual {v0, v1, v3, v2}, Lcom/vk/webapp/bridges/AndroidBridge;->a(Lcom/vk/webapp/internal/data/JsApiMethodType;Ljava/lang/String;Lorg/json/JSONObject;)V
 
     .line 2
     iget-object v0, p0, Lcom/vk/webapp/VkUiConnectFragment$c0;->a:Lcom/vk/webapp/VkUiConnectFragment;
 
-    invoke-virtual {v0}, Lcom/vk/webapp/VkUiConnectFragment;->a5()Lcom/vk/webapp/o/b;
+    invoke-virtual {v0}, Lcom/vk/webapp/VkUiConnectFragment;->a5()Lcom/vk/webapp/o/VkUiConnectFragmentDelegate;
 
     move-result-object v0
 
-    invoke-interface {v0}, Lcom/vk/webapp/o/b;->w()Lcom/vk/webapp/helpers/b;
+    invoke-interface {v0}, Lcom/vk/webapp/o/VkUiConnectFragmentDelegate;->w()Lcom/vk/webapp/helpers/VkAppsAnalytics;
 
     move-result-object v0
 
@@ -81,7 +81,7 @@
 
     const-string v2, "deny"
 
-    invoke-virtual {v0, v1, v2}, Lcom/vk/webapp/helpers/b;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-virtual {v0, v1, v2}, Lcom/vk/webapp/helpers/VkAppsAnalytics;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     return-void
 .end method
@@ -97,11 +97,11 @@
     .line 2
     iget-object v0, p0, Lcom/vk/webapp/VkUiConnectFragment$c0;->a:Lcom/vk/webapp/VkUiConnectFragment;
 
-    invoke-virtual {v0}, Lcom/vk/webapp/VkUiConnectFragment;->a5()Lcom/vk/webapp/o/b;
+    invoke-virtual {v0}, Lcom/vk/webapp/VkUiConnectFragment;->a5()Lcom/vk/webapp/o/VkUiConnectFragmentDelegate;
 
     move-result-object v0
 
-    invoke-interface {v0}, Lcom/vk/webapp/o/b;->w()Lcom/vk/webapp/helpers/b;
+    invoke-interface {v0}, Lcom/vk/webapp/o/VkUiConnectFragmentDelegate;->w()Lcom/vk/webapp/helpers/VkAppsAnalytics;
 
     move-result-object v0
 
@@ -109,7 +109,7 @@
 
     const-string v2, "allow"
 
-    invoke-virtual {v0, v1, v2}, Lcom/vk/webapp/helpers/b;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-virtual {v0, v1, v2}, Lcom/vk/webapp/helpers/VkAppsAnalytics;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     return-void
 .end method
@@ -138,16 +138,16 @@
 
     const-string v3, "VKWebAppAllowNotificationsFailed"
 
-    invoke-virtual {v0, v1, v3, v2}, Lcom/vk/webapp/bridges/a;->a(Lcom/vk/webapp/internal/data/JsApiMethodType;Ljava/lang/String;Lorg/json/JSONObject;)V
+    invoke-virtual {v0, v1, v3, v2}, Lcom/vk/webapp/bridges/AndroidBridge;->a(Lcom/vk/webapp/internal/data/JsApiMethodType;Ljava/lang/String;Lorg/json/JSONObject;)V
 
     .line 2
     iget-object v0, p0, Lcom/vk/webapp/VkUiConnectFragment$c0;->a:Lcom/vk/webapp/VkUiConnectFragment;
 
-    invoke-virtual {v0}, Lcom/vk/webapp/VkUiConnectFragment;->a5()Lcom/vk/webapp/o/b;
+    invoke-virtual {v0}, Lcom/vk/webapp/VkUiConnectFragment;->a5()Lcom/vk/webapp/o/VkUiConnectFragmentDelegate;
 
     move-result-object v0
 
-    invoke-interface {v0}, Lcom/vk/webapp/o/b;->w()Lcom/vk/webapp/helpers/b;
+    invoke-interface {v0}, Lcom/vk/webapp/o/VkUiConnectFragmentDelegate;->w()Lcom/vk/webapp/helpers/VkAppsAnalytics;
 
     move-result-object v0
 
@@ -155,7 +155,7 @@
 
     const-string v2, "deny"
 
-    invoke-virtual {v0, v1, v2}, Lcom/vk/webapp/helpers/b;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-virtual {v0, v1, v2}, Lcom/vk/webapp/helpers/VkAppsAnalytics;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     return-void
 .end method

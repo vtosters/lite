@@ -3,15 +3,15 @@
 .source "StoryViewActivity.java"
 
 # interfaces
-.implements Lcom/vk/stories/view/s1$x;
-.implements Lcom/vk/libvideo/live/base/f$a;
-.implements Lcom/vk/navigation/u;
+.implements Lcom/vk/stories/view/StoryViewContainer$x;
+.implements Lcom/vk/libvideo/live/base/FullscreenKeyboardHelper$a;
+.implements Lcom/vk/navigation/ResulterProvider;
 
 
 # instance fields
-.field private G:Lcom/vk/stories/view/s1;
+.field private G:Lcom/vk/stories/view/StoryViewContainer;
 
-.field private H:Lcom/vk/libvideo/live/base/f;
+.field private H:Lcom/vk/libvideo/live/base/FullscreenKeyboardHelper;
 
 .field private I:Lcom/vk/stories/StoriesController$SourceType;
 
@@ -21,13 +21,13 @@
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/util/List<",
-            "Lcom/vk/navigation/c;",
+            "Lcom/vk/navigation/ActivityResulter;",
             ">;"
         }
     .end annotation
 .end field
 
-.field private L:Lcom/vk/core/ui/tracking/internal/b;
+.field private L:Lcom/vk/core/ui/tracking/internal/UiTrackingListener1;
 
 .field private M:Landroid/view/ViewTreeObserver$OnGlobalLayoutListener;
     .annotation build Landroidx/annotation/Nullable;
@@ -53,22 +53,22 @@
     iput-object v0, p0, Lcom/vk/stories/StoryViewActivity;->J:Ljava/lang/String;
 
     .line 4
-    new-instance v0, Lcom/vk/core/ui/tracking/internal/b;
+    new-instance v0, Lcom/vk/core/ui/tracking/internal/UiTrackingListener1;
 
-    new-instance v1, Lcom/vk/core/ui/tracking/internal/a;
+    new-instance v1, Lcom/vk/core/ui/tracking/internal/UiTrackingListener;
 
-    sget-object v2, Lcom/vk/core/ui/v/a;->g:Lcom/vk/core/ui/v/a;
+    sget-object v2, Lcom/vk/core/ui/v/UiTracker;->g:Lcom/vk/core/ui/v/UiTracker;
 
     .line 5
-    invoke-virtual {v2}, Lcom/vk/core/ui/v/a;->e()Lcom/vk/core/ui/tracking/internal/f;
+    invoke-virtual {v2}, Lcom/vk/core/ui/v/UiTracker;->e()Lcom/vk/core/ui/tracking/internal/UiTrackingListener2;
 
     move-result-object v2
 
-    invoke-direct {v1, v2}, Lcom/vk/core/ui/tracking/internal/a;-><init>(Lcom/vk/core/ui/v/b;)V
+    invoke-direct {v1, v2}, Lcom/vk/core/ui/tracking/internal/UiTrackingListener;-><init>(Lcom/vk/core/ui/v/UiTrackingListeners1;)V
 
-    invoke-direct {v0, v1}, Lcom/vk/core/ui/tracking/internal/b;-><init>(Lcom/vk/core/ui/v/b;)V
+    invoke-direct {v0, v1}, Lcom/vk/core/ui/tracking/internal/UiTrackingListener1;-><init>(Lcom/vk/core/ui/v/UiTrackingListeners1;)V
 
-    iput-object v0, p0, Lcom/vk/stories/StoryViewActivity;->L:Lcom/vk/core/ui/tracking/internal/b;
+    iput-object v0, p0, Lcom/vk/stories/StoryViewActivity;->L:Lcom/vk/core/ui/tracking/internal/UiTrackingListener1;
 
     return-void
 .end method
@@ -127,42 +127,42 @@
     .locals 2
 
     .line 1
-    iget-object v0, p0, Lcom/vk/stories/StoryViewActivity;->G:Lcom/vk/stories/view/s1;
+    iget-object v0, p0, Lcom/vk/stories/StoryViewActivity;->G:Lcom/vk/stories/view/StoryViewContainer;
 
     const/4 v1, 0x1
 
     if-eqz v0, :cond_0
 
-    invoke-virtual {v0}, Lcom/vk/stories/view/s1;->getSelectedStoryView()Lcom/vk/stories/view/f1;
+    invoke-virtual {v0}, Lcom/vk/stories/view/StoryViewContainer;->getSelectedStoryView()Lcom/vk/stories/view/BaseStoryViewContract;
 
     move-result-object v0
 
     if-eqz v0, :cond_0
 
-    iget-object v0, p0, Lcom/vk/stories/StoryViewActivity;->G:Lcom/vk/stories/view/s1;
+    iget-object v0, p0, Lcom/vk/stories/StoryViewActivity;->G:Lcom/vk/stories/view/StoryViewContainer;
 
-    invoke-virtual {v0}, Lcom/vk/stories/view/s1;->getSelectedStoryView()Lcom/vk/stories/view/f1;
+    invoke-virtual {v0}, Lcom/vk/stories/view/StoryViewContainer;->getSelectedStoryView()Lcom/vk/stories/view/BaseStoryViewContract;
 
     move-result-object v0
 
-    invoke-interface {v0}, Lcom/vk/stories/view/f1;->getStoriesContainer()Lcom/vk/dto/stories/model/StoriesContainer;
+    invoke-interface {v0}, Lcom/vk/stories/view/BaseStoryViewContract;->getStoriesContainer()Lcom/vk/dto/stories/model/StoriesContainer;
 
     move-result-object v0
 
     if-eqz v0, :cond_0
 
     .line 2
-    iget-object v0, p0, Lcom/vk/stories/StoryViewActivity;->G:Lcom/vk/stories/view/s1;
+    iget-object v0, p0, Lcom/vk/stories/StoryViewActivity;->G:Lcom/vk/stories/view/StoryViewContainer;
 
-    invoke-virtual {v0}, Lcom/vk/stories/view/s1;->getSelectedStoryView()Lcom/vk/stories/view/f1;
-
-    move-result-object v0
-
-    invoke-interface {v0}, Lcom/vk/stories/view/f1;->getStoriesContainer()Lcom/vk/dto/stories/model/StoriesContainer;
+    invoke-virtual {v0}, Lcom/vk/stories/view/StoryViewContainer;->getSelectedStoryView()Lcom/vk/stories/view/BaseStoryViewContract;
 
     move-result-object v0
 
-    invoke-static {v0}, Lcom/vk/dto/stories/d/a;->c(Lcom/vk/dto/stories/model/StoriesContainer;)Z
+    invoke-interface {v0}, Lcom/vk/stories/view/BaseStoryViewContract;->getStoriesContainer()Lcom/vk/dto/stories/model/StoriesContainer;
+
+    move-result-object v0
+
+    invoke-static {v0}, Lcom/vk/dto/stories/d/StoriesContainerExt;->c(Lcom/vk/dto/stories/model/StoriesContainer;)Z
 
     move-result v0
 
@@ -181,7 +181,7 @@
     return-void
 .end method
 
-.method public a(Lcom/vk/navigation/c;)V
+.method public a(Lcom/vk/navigation/ActivityResulter;)V
     .locals 1
 
     .line 2
@@ -196,7 +196,7 @@
     return-void
 .end method
 
-.method public b(Lcom/vk/navigation/c;)V
+.method public b(Lcom/vk/navigation/ActivityResulter;)V
     .locals 1
 
     .line 1
@@ -220,11 +220,11 @@
     return-void
 .end method
 
-.method public c()Lcom/vk/navigation/a;
+.method public c()Lcom/vk/navigation/ActivityLauncher;
     .locals 1
 
     .line 1
-    invoke-static {p0}, Lcom/vk/navigation/b;->a(Landroid/app/Activity;)Lcom/vk/navigation/a;
+    invoke-static {p0}, Lcom/vk/navigation/ActivityLauncher1;->a(Landroid/app/Activity;)Lcom/vk/navigation/ActivityLauncher;
 
     move-result-object v0
 
@@ -241,9 +241,9 @@
     .locals 1
 
     .line 1
-    iget-object v0, p0, Lcom/vk/stories/StoryViewActivity;->G:Lcom/vk/stories/view/s1;
+    iget-object v0, p0, Lcom/vk/stories/StoryViewActivity;->G:Lcom/vk/stories/view/StoryViewContainer;
 
-    invoke-virtual {v0, p1}, Lcom/vk/stories/view/s1;->a(Landroid/view/KeyEvent;)Z
+    invoke-virtual {v0, p1}, Lcom/vk/stories/view/StoryViewContainer;->a(Landroid/view/KeyEvent;)Z
 
     move-result v0
 
@@ -274,9 +274,9 @@
     .locals 2
 
     .line 1
-    iget-object v0, p0, Lcom/vk/stories/StoryViewActivity;->G:Lcom/vk/stories/view/s1;
+    iget-object v0, p0, Lcom/vk/stories/StoryViewActivity;->G:Lcom/vk/stories/view/StoryViewContainer;
 
-    invoke-virtual {v0, p1, p2, p3}, Lcom/vk/stories/view/s1;->a(IILandroid/content/Intent;)V
+    invoke-virtual {v0, p1, p2, p3}, Lcom/vk/stories/view/StoryViewContainer;->a(IILandroid/content/Intent;)V
 
     .line 2
     iget-object v0, p0, Lcom/vk/stories/StoryViewActivity;->K:Ljava/util/List;
@@ -299,10 +299,10 @@
 
     move-result-object v1
 
-    check-cast v1, Lcom/vk/navigation/c;
+    check-cast v1, Lcom/vk/navigation/ActivityResulter;
 
     .line 4
-    invoke-interface {v1, p1, p2, p3}, Lcom/vk/navigation/c;->onActivityResult(IILandroid/content/Intent;)V
+    invoke-interface {v1, p1, p2, p3}, Lcom/vk/navigation/ActivityResulter;->onActivityResult(IILandroid/content/Intent;)V
 
     goto :goto_0
 
@@ -314,28 +314,28 @@
     .locals 6
 
     .line 1
-    iget-object v0, p0, Lcom/vk/stories/StoryViewActivity;->G:Lcom/vk/stories/view/s1;
+    iget-object v0, p0, Lcom/vk/stories/StoryViewActivity;->G:Lcom/vk/stories/view/StoryViewContainer;
 
-    invoke-virtual {v0}, Lcom/vk/stories/view/s1;->getSelectedStoryView()Lcom/vk/stories/view/f1;
+    invoke-virtual {v0}, Lcom/vk/stories/view/StoryViewContainer;->getSelectedStoryView()Lcom/vk/stories/view/BaseStoryViewContract;
 
     move-result-object v0
 
     if-eqz v0, :cond_0
 
     .line 2
-    invoke-interface {v0}, Lcom/vk/stories/view/f1;->getCurrentTime()J
+    invoke-interface {v0}, Lcom/vk/stories/view/BaseStoryViewContract;->getCurrentTime()J
 
     move-result-wide v1
 
     .line 3
-    iget-object v3, p0, Lcom/vk/stories/StoryViewActivity;->G:Lcom/vk/stories/view/s1;
+    iget-object v3, p0, Lcom/vk/stories/StoryViewActivity;->G:Lcom/vk/stories/view/StoryViewContainer;
 
-    invoke-virtual {v3}, Lcom/vk/stories/view/s1;->getCurrentStoryEntry()Lcom/vk/dto/stories/model/StoryEntry;
+    invoke-virtual {v3}, Lcom/vk/stories/view/StoryViewContainer;->getCurrentStoryEntry()Lcom/vk/dto/stories/model/StoryEntry;
 
     move-result-object v3
 
     .line 4
-    invoke-interface {v0}, Lcom/vk/stories/view/f1;->getStoriesContainer()Lcom/vk/dto/stories/model/StoriesContainer;
+    invoke-interface {v0}, Lcom/vk/stories/view/BaseStoryViewContract;->getStoriesContainer()Lcom/vk/dto/stories/model/StoriesContainer;
 
     move-result-object v0
 
@@ -349,13 +349,13 @@
     .line 6
     sget-object v5, Lcom/vk/dto/stories/model/StoryViewAction;->CLOSE_BACK_BUTTON:Lcom/vk/dto/stories/model/StoryViewAction;
 
-    invoke-static {v1, v2, v0, v3}, Lcom/vk/stories/analytics/b;->a(JLcom/vk/dto/stories/model/StoriesContainer;Lcom/vk/dto/stories/model/StoryEntry;)Lcom/vk/stories/analytics/b;
+    invoke-static {v1, v2, v0, v3}, Lcom/vk/stories/analytics/StoryPositionInfo;->a(JLcom/vk/dto/stories/model/StoriesContainer;Lcom/vk/dto/stories/model/StoryEntry;)Lcom/vk/stories/analytics/StoryPositionInfo;
 
     move-result-object v0
 
     iget-object v1, p0, Lcom/vk/stories/StoryViewActivity;->J:Ljava/lang/String;
 
-    invoke-static {v5, v4, v3, v0, v1}, Lcom/vk/attachpicker/fragment/StoryReporter;->a(Lcom/vk/dto/stories/model/StoryViewAction;Lcom/vk/stories/StoriesController$SourceType;Lcom/vk/dto/stories/model/StoryEntry;Lcom/vk/stories/analytics/b;Ljava/lang/String;)V
+    invoke-static {v5, v4, v3, v0, v1}, Lcom/vk/attachpicker/fragment/StoryReporter;->a(Lcom/vk/dto/stories/model/StoryViewAction;Lcom/vk/stories/StoriesController$SourceType;Lcom/vk/dto/stories/model/StoryEntry;Lcom/vk/stories/analytics/StoryPositionInfo;Ljava/lang/String;)V
 
     .line 7
     :cond_0
@@ -378,9 +378,9 @@
     invoke-super {p0, p1}, Lcom/vtosters/lite/VKActivity;->onCreate(Landroid/os/Bundle;)V
 
     .line 3
-    iget-object p1, p0, Lcom/vk/stories/StoryViewActivity;->L:Lcom/vk/core/ui/tracking/internal/b;
+    iget-object p1, p0, Lcom/vk/stories/StoryViewActivity;->L:Lcom/vk/core/ui/tracking/internal/UiTrackingListener1;
 
-    invoke-virtual {p1}, Lcom/vk/core/ui/tracking/internal/b;->a()V
+    invoke-virtual {p1}, Lcom/vk/core/ui/tracking/internal/UiTrackingListener1;->a()V
 
     .line 4
     invoke-virtual {p0}, Landroid/app/Activity;->getIntent()Landroid/content/Intent;
@@ -472,7 +472,7 @@
     iput-object v2, p0, Lcom/vk/stories/StoryViewActivity;->J:Ljava/lang/String;
 
     .line 14
-    new-instance v13, Lcom/vk/stories/view/s1;
+    new-instance v13, Lcom/vk/stories/view/StoryViewContainer;
 
     iget-object v3, p0, Lcom/vk/stories/StoryViewActivity;->I:Lcom/vk/stories/StoriesController$SourceType;
 
@@ -481,16 +481,16 @@
     const/4 v5, 0x1
 
     .line 15
-    invoke-static {v1}, Lcom/vk/dto/stories/d/a;->b(I)Ljava/lang/String;
+    invoke-static {v1}, Lcom/vk/dto/stories/d/StoriesContainerExt;->b(I)Ljava/lang/String;
 
     move-result-object v8
 
     .line 16
-    invoke-static {p1}, Lcom/vk/stories/view/p1;->a(Landroid/content/Intent;)Lcom/vk/stories/view/p1;
+    invoke-static {p1}, Lcom/vk/stories/view/StorySettings;->a(Landroid/content/Intent;)Lcom/vk/stories/view/StorySettings;
 
     move-result-object v11
 
-    iget-object v12, p0, Lcom/vk/stories/StoryViewActivity;->L:Lcom/vk/core/ui/tracking/internal/b;
+    iget-object v12, p0, Lcom/vk/stories/StoryViewActivity;->L:Lcom/vk/core/ui/tracking/internal/UiTrackingListener1;
 
     move-object v1, v13
 
@@ -498,12 +498,12 @@
 
     move-object v6, p0
 
-    invoke-direct/range {v1 .. v12}, Lcom/vk/stories/view/s1;-><init>(Landroid/content/Context;Lcom/vk/stories/StoriesController$SourceType;Ljava/lang/String;ZLcom/vk/stories/view/s1$x;Ljava/util/ArrayList;Ljava/lang/String;Ljava/lang/String;Lcom/vk/narratives/entities/NarrativeInfo;Lcom/vk/stories/view/p1;Lcom/vk/core/ui/v/b;)V
+    invoke-direct/range {v1 .. v12}, Lcom/vk/stories/view/StoryViewContainer;-><init>(Landroid/content/Context;Lcom/vk/stories/StoriesController$SourceType;Ljava/lang/String;ZLcom/vk/stories/view/StoryViewContainer$x;Ljava/util/ArrayList;Ljava/lang/String;Ljava/lang/String;Lcom/vk/narratives/entities/NarrativeInfo;Lcom/vk/stories/view/StorySettings;Lcom/vk/core/ui/v/UiTrackingListeners1;)V
 
-    iput-object v13, p0, Lcom/vk/stories/StoryViewActivity;->G:Lcom/vk/stories/view/s1;
+    iput-object v13, p0, Lcom/vk/stories/StoryViewActivity;->G:Lcom/vk/stories/view/StoryViewContainer;
 
     .line 17
-    iget-object p1, p0, Lcom/vk/stories/StoryViewActivity;->G:Lcom/vk/stories/view/s1;
+    iget-object p1, p0, Lcom/vk/stories/StoryViewActivity;->G:Lcom/vk/stories/view/StoryViewContainer;
 
     invoke-virtual {p0, p1}, Landroidx/appcompat/app/AppCompatActivity;->setContentView(Landroid/view/View;)V
 
@@ -514,7 +514,7 @@
 
     move-result-object p1
 
-    invoke-static {p0, p1}, Lcom/vk/libvideo/a0/a;->a(Landroid/app/Activity;Landroid/view/Window;)Landroid/view/ViewTreeObserver$OnGlobalLayoutListener;
+    invoke-static {p0, p1}, Lcom/vk/libvideo/a0/KeyboardControllerHelper;->a(Landroid/app/Activity;Landroid/view/Window;)Landroid/view/ViewTreeObserver$OnGlobalLayoutListener;
 
     move-result-object p1
 
@@ -524,7 +524,7 @@
 
     .line 19
     :cond_2
-    new-instance p1, Lcom/vk/libvideo/live/base/f;
+    new-instance p1, Lcom/vk/libvideo/live/base/FullscreenKeyboardHelper;
 
     invoke-virtual {p0}, Landroid/app/Activity;->getWindow()Landroid/view/Window;
 
@@ -540,14 +540,14 @@
 
     check-cast v1, Landroid/view/ViewGroup;
 
-    invoke-direct {p1, p0, v0, v1}, Lcom/vk/libvideo/live/base/f;-><init>(Landroid/app/Activity;Landroid/view/Window;Landroid/view/View;)V
+    invoke-direct {p1, p0, v0, v1}, Lcom/vk/libvideo/live/base/FullscreenKeyboardHelper;-><init>(Landroid/app/Activity;Landroid/view/Window;Landroid/view/View;)V
 
-    iput-object p1, p0, Lcom/vk/stories/StoryViewActivity;->H:Lcom/vk/libvideo/live/base/f;
+    iput-object p1, p0, Lcom/vk/stories/StoryViewActivity;->H:Lcom/vk/libvideo/live/base/FullscreenKeyboardHelper;
 
     .line 20
-    iget-object p1, p0, Lcom/vk/stories/StoryViewActivity;->H:Lcom/vk/libvideo/live/base/f;
+    iget-object p1, p0, Lcom/vk/stories/StoryViewActivity;->H:Lcom/vk/libvideo/live/base/FullscreenKeyboardHelper;
 
-    invoke-virtual {p1, p0}, Lcom/vk/libvideo/live/base/f;->a(Lcom/vk/libvideo/live/base/f$a;)V
+    invoke-virtual {p1, p0}, Lcom/vk/libvideo/live/base/FullscreenKeyboardHelper;->a(Lcom/vk/libvideo/live/base/FullscreenKeyboardHelper$a;)V
 
     :goto_1
     const p1, 0x7f060035
@@ -557,7 +557,7 @@
 
     move-result p1
 
-    invoke-static {p0, p1}, Lcom/vk/core/extensions/a;->a(Landroid/app/Activity;I)V
+    invoke-static {p0, p1}, Lcom/vk/core/extensions/ActivityExt;->a(Landroid/app/Activity;I)V
 
     return-void
 .end method
@@ -566,14 +566,14 @@
     .locals 1
 
     .line 1
-    iget-object v0, p0, Lcom/vk/stories/StoryViewActivity;->G:Lcom/vk/stories/view/s1;
+    iget-object v0, p0, Lcom/vk/stories/StoryViewActivity;->G:Lcom/vk/stories/view/StoryViewContainer;
 
-    invoke-virtual {v0}, Lcom/vk/stories/view/s1;->g()V
+    invoke-virtual {v0}, Lcom/vk/stories/view/StoryViewContainer;->g()V
 
     .line 2
-    iget-object v0, p0, Lcom/vk/stories/StoryViewActivity;->L:Lcom/vk/core/ui/tracking/internal/b;
+    iget-object v0, p0, Lcom/vk/stories/StoryViewActivity;->L:Lcom/vk/core/ui/tracking/internal/UiTrackingListener1;
 
-    invoke-virtual {v0}, Lcom/vk/core/ui/tracking/internal/b;->b()V
+    invoke-virtual {v0}, Lcom/vk/core/ui/tracking/internal/UiTrackingListener1;->b()V
 
     .line 3
     invoke-super {p0}, Lcom/vtosters/lite/VKActivity;->onDestroy()V
@@ -585,9 +585,9 @@
     .locals 2
 
     .line 1
-    iget-object v0, p0, Lcom/vk/stories/StoryViewActivity;->G:Lcom/vk/stories/view/s1;
+    iget-object v0, p0, Lcom/vk/stories/StoryViewActivity;->G:Lcom/vk/stories/view/StoryViewContainer;
 
-    invoke-virtual {v0}, Lcom/vk/stories/view/s1;->h()V
+    invoke-virtual {v0}, Lcom/vk/stories/view/StoryViewContainer;->h()V
 
     .line 2
     invoke-virtual {p0}, Landroid/app/Activity;->getWindow()Landroid/view/Window;
@@ -612,7 +612,7 @@
 
     .line 5
     :cond_0
-    iget-object v1, p0, Lcom/vk/stories/StoryViewActivity;->H:Lcom/vk/libvideo/live/base/f;
+    iget-object v1, p0, Lcom/vk/stories/StoryViewActivity;->H:Lcom/vk/libvideo/live/base/FullscreenKeyboardHelper;
 
     if-eqz v1, :cond_1
 
@@ -633,9 +633,9 @@
     invoke-super {p0}, Lcom/vtosters/lite/VKActivity;->onResume()V
 
     .line 2
-    iget-object v0, p0, Lcom/vk/stories/StoryViewActivity;->G:Lcom/vk/stories/view/s1;
+    iget-object v0, p0, Lcom/vk/stories/StoryViewActivity;->G:Lcom/vk/stories/view/StoryViewContainer;
 
-    invoke-virtual {v0}, Lcom/vk/stories/view/s1;->i()V
+    invoke-virtual {v0}, Lcom/vk/stories/view/StoryViewContainer;->i()V
 
     .line 3
     invoke-virtual {p0}, Landroid/app/Activity;->getWindow()Landroid/view/Window;
@@ -660,7 +660,7 @@
 
     .line 6
     :cond_0
-    iget-object v1, p0, Lcom/vk/stories/StoryViewActivity;->H:Lcom/vk/libvideo/live/base/f;
+    iget-object v1, p0, Lcom/vk/stories/StoryViewActivity;->H:Lcom/vk/libvideo/live/base/FullscreenKeyboardHelper;
 
     if-eqz v1, :cond_1
 

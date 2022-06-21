@@ -249,11 +249,11 @@
     .line 16
     iget-object p1, p0, Lcom/vk/stories/StoryParentView;->d:Lcom/vk/imageloader/view/VKImageView;
 
-    invoke-virtual {p1}, Lcom/vk/imageloader/view/VKDraweeView;->getHierarchy()Lcom/facebook/u/e/b;
+    invoke-virtual {p1}, Lcom/vk/imageloader/view/VKDraweeView;->getHierarchy()Lcom/facebook/u/e/DraweeHierarchy;
 
     move-result-object p1
 
-    check-cast p1, Lcom/facebook/drawee/generic/a;
+    check-cast p1, Lcom/facebook/drawee/generic/GenericDraweeHierarchy;
 
     new-instance v0, Landroid/graphics/drawable/ColorDrawable;
 
@@ -261,7 +261,7 @@
 
     invoke-direct {v0, v1}, Landroid/graphics/drawable/ColorDrawable;-><init>(I)V
 
-    invoke-virtual {p1, v0}, Lcom/facebook/drawee/generic/a;->b(Landroid/graphics/drawable/Drawable;)V
+    invoke-virtual {p1, v0}, Lcom/facebook/drawee/generic/GenericDraweeHierarchy;->b(Landroid/graphics/drawable/Drawable;)V
 
     .line 17
     iget-object p1, p0, Lcom/vk/stories/StoryParentView;->d:Lcom/vk/imageloader/view/VKImageView;
@@ -270,7 +270,7 @@
 
     invoke-direct {v0, p0}, Lcom/vk/stories/StoryParentView$b;-><init>(Lcom/vk/stories/StoryParentView;)V
 
-    invoke-virtual {p1, v0}, Lcom/vk/imageloader/view/VKImageView;->setOnLoadCallback(Lcom/vk/imageloader/g;)V
+    invoke-virtual {p1, v0}, Lcom/vk/imageloader/view/VKImageView;->setOnLoadCallback(Lcom/vk/imageloader/OnLoadCallback;)V
 
     const p1, 0x7f0a04d2
 
@@ -439,7 +439,7 @@
     invoke-direct {p0, v1}, Lcom/vk/stories/StoryParentView;->setFetchParentStoryState(Lcom/vk/stories/StoryParentView$State;)V
 
     .line 12
-    invoke-static {}, Lcom/vk/stories/n0;->a()Lcom/vk/stories/n0;
+    invoke-static {}, Lcom/vk/stories/ParentStoriesLoader;->a()Lcom/vk/stories/ParentStoriesLoader;
 
     move-result-object v1
 
@@ -449,7 +449,7 @@
 
     invoke-direct {v3, p0, v0, p1}, Lcom/vk/stories/StoryParentView$d;-><init>(Lcom/vk/stories/StoryParentView;Lcom/vk/dto/stories/model/StoryEntry;Z)V
 
-    invoke-virtual {v1, v2, v3}, Lcom/vk/stories/n0;->a(Lcom/vk/dto/stories/model/StoryEntry;Lcom/vk/stories/n0$c;)V
+    invoke-virtual {v1, v2, v3}, Lcom/vk/stories/ParentStoriesLoader;->a(Lcom/vk/dto/stories/model/StoryEntry;Lcom/vk/stories/ParentStoriesLoader$c;)V
 
     goto :goto_1
 
@@ -485,13 +485,13 @@
 
     if-eqz v0, :cond_0
 
-    iget-object v1, v0, Lcom/vk/stories/view/e1;->b:Lcom/vk/stories/StoriesController$SourceType;
+    iget-object v1, v0, Lcom/vk/stories/view/BaseStoryView;->b:Lcom/vk/stories/StoriesController$SourceType;
 
     sget-object v2, Lcom/vk/stories/StoriesController$SourceType;->REPLIES_LIST:Lcom/vk/stories/StoriesController$SourceType;
 
     if-ne v1, v2, :cond_0
 
-    iget-object v0, v0, Lcom/vk/stories/view/e1;->a:Lcom/vk/stories/view/StoryView$u0;
+    iget-object v0, v0, Lcom/vk/stories/view/BaseStoryView;->a:Lcom/vk/stories/view/StoryView$u0;
 
     if-eqz v0, :cond_0
 
@@ -552,7 +552,7 @@
     .line 10
     iget-object v1, p0, Lcom/vk/stories/StoryParentView;->B:Lcom/vk/stories/view/StoryView;
 
-    invoke-virtual {v1}, Lcom/vk/stories/view/e1;->getStoriesContainer()Lcom/vk/dto/stories/model/StoriesContainer;
+    invoke-virtual {v1}, Lcom/vk/stories/view/BaseStoryView;->getStoriesContainer()Lcom/vk/dto/stories/model/StoriesContainer;
 
     move-result-object v1
 
@@ -563,26 +563,26 @@
 
     iget-object v4, p0, Lcom/vk/stories/StoryParentView;->B:Lcom/vk/stories/view/StoryView;
 
-    iget-object v5, v4, Lcom/vk/stories/view/e1;->b:Lcom/vk/stories/StoriesController$SourceType;
+    iget-object v5, v4, Lcom/vk/stories/view/BaseStoryView;->b:Lcom/vk/stories/StoriesController$SourceType;
 
     .line 12
     invoke-virtual {v4}, Lcom/vk/stories/view/StoryView;->getCurrentTime()J
 
     move-result-wide v6
 
-    invoke-static {v6, v7, v1, v0}, Lcom/vk/stories/analytics/b;->a(JLcom/vk/dto/stories/model/StoriesContainer;Lcom/vk/dto/stories/model/StoryEntry;)Lcom/vk/stories/analytics/b;
+    invoke-static {v6, v7, v1, v0}, Lcom/vk/stories/analytics/StoryPositionInfo;->a(JLcom/vk/dto/stories/model/StoriesContainer;Lcom/vk/dto/stories/model/StoryEntry;)Lcom/vk/stories/analytics/StoryPositionInfo;
 
     move-result-object v1
 
     sget-object v4, Lcom/vk/stat/scheme/SchemeStat$EventScreen;->STORY_VIEWER:Lcom/vk/stat/scheme/SchemeStat$EventScreen;
 
     .line 13
-    invoke-static {v4}, Lcom/vk/stat/scheme/f;->a(Lcom/vk/stat/scheme/SchemeStat$EventScreen;)Ljava/lang/String;
+    invoke-static {v4}, Lcom/vk/stat/scheme/SchemeStatEx;->a(Lcom/vk/stat/scheme/SchemeStat$EventScreen;)Ljava/lang/String;
 
     move-result-object v4
 
     .line 14
-    invoke-static {v3, v5, v0, v1, v4}, Lcom/vk/attachpicker/fragment/StoryReporter;->a(Lcom/vk/dto/stories/model/StoryViewAction;Lcom/vk/stories/StoriesController$SourceType;Lcom/vk/dto/stories/model/StoryEntry;Lcom/vk/stories/analytics/b;Ljava/lang/String;)V
+    invoke-static {v3, v5, v0, v1, v4}, Lcom/vk/attachpicker/fragment/StoryReporter;->a(Lcom/vk/dto/stories/model/StoryViewAction;Lcom/vk/stories/StoriesController$SourceType;Lcom/vk/dto/stories/model/StoryEntry;Lcom/vk/stories/analytics/StoryPositionInfo;Ljava/lang/String;)V
 
     .line 15
     :cond_3
@@ -608,7 +608,7 @@
 
     move-result v1
 
-    invoke-static {v1}, Lcom/vk/dto/stories/d/a;->b(I)Ljava/lang/String;
+    invoke-static {v1}, Lcom/vk/dto/stories/d/StoriesContainerExt;->b(I)Ljava/lang/String;
 
     move-result-object v4
 
@@ -621,7 +621,7 @@
     sget-object v1, Lcom/vk/stat/scheme/SchemeStat$EventScreen;->STORY_VIEWER:Lcom/vk/stat/scheme/SchemeStat$EventScreen;
 
     .line 18
-    invoke-static {v1}, Lcom/vk/stat/scheme/f;->a(Lcom/vk/stat/scheme/SchemeStat$EventScreen;)Ljava/lang/String;
+    invoke-static {v1}, Lcom/vk/stat/scheme/SchemeStatEx;->a(Lcom/vk/stat/scheme/SchemeStat$EventScreen;)Ljava/lang/String;
 
     move-result-object v7
 

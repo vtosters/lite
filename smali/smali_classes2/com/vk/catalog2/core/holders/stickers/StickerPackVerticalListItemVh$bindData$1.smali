@@ -3,7 +3,7 @@
 .source "StickerPackVerticalListItemVh.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/b;
+.implements Lkotlin/jvm/b/Functions2;
 
 
 # annotations
@@ -19,9 +19,9 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/b<",
+        "Lkotlin/jvm/b/Functions2<",
         "Landroid/view/View;",
-        "Lkotlin/m;",
+        "Lkotlin/Unit;",
         ">;"
     }
 .end annotation
@@ -65,13 +65,13 @@
     .line 2
     iget-object p1, p0, Lcom/vk/catalog2/core/holders/stickers/StickerPackVerticalListItemVh$bindData$1;->this$0:Lcom/vk/catalog2/core/holders/stickers/StickerPackVerticalListItemVh;
 
-    invoke-static {p1}, Lcom/vk/catalog2/core/holders/stickers/StickerPackVerticalListItemVh;->a(Lcom/vk/catalog2/core/holders/stickers/StickerPackVerticalListItemVh;)Lkotlin/jvm/b/b;
+    invoke-static {p1}, Lcom/vk/catalog2/core/holders/stickers/StickerPackVerticalListItemVh;->a(Lcom/vk/catalog2/core/holders/stickers/StickerPackVerticalListItemVh;)Lkotlin/jvm/b/Functions2;
 
     move-result-object p1
 
     iget-object v0, p0, Lcom/vk/catalog2/core/holders/stickers/StickerPackVerticalListItemVh$bindData$1;->$pack:Lcom/vk/dto/stickers/StickerStockItem;
 
-    invoke-interface {p1, v0}, Lkotlin/jvm/b/b;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {p1, v0}, Lkotlin/jvm/b/Functions2;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
 
     goto/16 :goto_6
 
@@ -143,7 +143,7 @@
     const-string v7, "titleView"
 
     .line 9
-    invoke-static {v0, v7}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v7}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     const-string v7, ""
 
@@ -166,7 +166,7 @@
     const-string v0, "messageView"
 
     .line 10
-    invoke-static {v3, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v3, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     if-eqz v6, :cond_2
 
@@ -218,7 +218,7 @@
 
     .line 12
     :cond_5
-    invoke-static {v4, v3}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v4, v3}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {v6}, Lcom/vk/dto/stickers/PurchaseDetails;->t1()Lcom/vk/dto/stickers/PurchaseDetailsButton;
 
@@ -250,7 +250,7 @@
     .line 14
     :cond_7
     :goto_4
-    invoke-static {v4, v3}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v4, v3}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-static {v4, v1}, Lcom/vk/extensions/ViewExtKt;->b(Landroid/view/View;Z)V
 
@@ -274,7 +274,7 @@
     const-string v1, "dialogView"
 
     .line 17
-    invoke-static {p1, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {v0, p1}, Lcom/vk/core/dialogs/alert/VkAlertDialog$Builder;->setView(Landroid/view/View;)Lcom/vk/core/dialogs/alert/VkAlertDialog$Builder;
 
@@ -309,7 +309,7 @@
 
     invoke-virtual {p0, p1}, Lcom/vk/catalog2/core/holders/stickers/StickerPackVerticalListItemVh$bindData$1;->a(Landroid/view/View;)V
 
-    sget-object p1, Lkotlin/m;->a:Lkotlin/m;
+    sget-object p1, Lkotlin/Unit;->a:Lkotlin/Unit;
 
     return-object p1
 .end method

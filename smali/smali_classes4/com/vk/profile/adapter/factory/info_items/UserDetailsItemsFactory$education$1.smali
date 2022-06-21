@@ -3,7 +3,7 @@
 .source "UserDetailsItemsFactory.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/b;
+.implements Lkotlin/jvm/b/Functions2;
 
 
 # annotations
@@ -19,7 +19,7 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/b<",
+        "Lkotlin/jvm/b/Functions2<",
         "Lcom/vtosters/lite/api/ExtendedUserProfile;",
         "Ljava/util/ArrayList<",
         "Lcom/vk/profile/adapter/BaseInfoItem;",
@@ -136,7 +136,7 @@
 
     invoke-virtual {v12, v7}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    sget-object v7, Lkotlin/jvm/internal/r;->a:Lkotlin/jvm/internal/r;
+    sget-object v7, Lkotlin/jvm/internal/PrimitiveCompanionObjects1;->a:Lkotlin/jvm/internal/PrimitiveCompanionObjects1;
 
     new-array v7, v10, [Ljava/lang/Object;
 
@@ -160,7 +160,7 @@
 
     move-result-object v6
 
-    invoke-static {v6, v5}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v6, v5}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {v12, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -192,7 +192,7 @@
     if-lez v6, :cond_6
 
     :cond_4
-    invoke-static {v5, v7}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v5, v7}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-interface {v5}, Ljava/lang/CharSequence;->length()I
 
@@ -329,7 +329,7 @@
 
     .line 17
     :cond_a
-    invoke-static {v5, v7}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v5, v7}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 18
     invoke-interface {v5}, Ljava/lang/CharSequence;->length()I
@@ -459,7 +459,7 @@
 
     .line 26
     :cond_13
-    new-instance v2, Lcom/vk/profile/adapter/items/o;
+    new-instance v2, Lcom/vk/profile/adapter/items/DetailsTextInfoItem;
 
     const v3, 0x7f120bdd
 
@@ -477,7 +477,7 @@
 
     move-result-object v4
 
-    invoke-direct {v2, v3, v4}, Lcom/vk/profile/adapter/items/o;-><init>(ILjava/lang/CharSequence;)V
+    invoke-direct {v2, v3, v4}, Lcom/vk/profile/adapter/items/DetailsTextInfoItem;-><init>(ILjava/lang/CharSequence;)V
 
     invoke-virtual {v0, v2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
@@ -521,7 +521,7 @@
 
     invoke-virtual {v11, v7}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    sget-object v2, Lkotlin/jvm/internal/r;->a:Lkotlin/jvm/internal/r;
+    sget-object v2, Lkotlin/jvm/internal/PrimitiveCompanionObjects1;->a:Lkotlin/jvm/internal/PrimitiveCompanionObjects1;
 
     new-array v2, v10, [Ljava/lang/Object;
 
@@ -545,7 +545,7 @@
 
     move-result-object v2
 
-    invoke-static {v2, v5}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v2, v5}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {v11, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -633,7 +633,7 @@
 
     .line 37
     :cond_19
-    new-instance v1, Lcom/vk/profile/adapter/items/o;
+    new-instance v1, Lcom/vk/profile/adapter/items/DetailsTextInfoItem;
 
     const v12, 0x7f120be8
 
@@ -651,7 +651,7 @@
 
     move-result-object v2
 
-    invoke-direct {v1, v12, v2}, Lcom/vk/profile/adapter/items/o;-><init>(ILjava/lang/CharSequence;)V
+    invoke-direct {v1, v12, v2}, Lcom/vk/profile/adapter/items/DetailsTextInfoItem;-><init>(ILjava/lang/CharSequence;)V
 
     invoke-virtual {v0, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
@@ -668,7 +668,7 @@
     if-eqz p1, :cond_1b
 
     .line 39
-    new-instance p1, Lcom/vk/profile/adapter/items/n;
+    new-instance p1, Lcom/vk/profile/adapter/items/DetailsHeaderItem;
 
     const v2, 0x7f120bc0
 
@@ -682,7 +682,7 @@
 
     move-object v1, p1
 
-    invoke-direct/range {v1 .. v6}, Lcom/vk/profile/adapter/items/n;-><init>(ILjava/lang/String;Ljava/lang/Runnable;ILkotlin/jvm/internal/i;)V
+    invoke-direct/range {v1 .. v6}, Lcom/vk/profile/adapter/items/DetailsHeaderItem;-><init>(ILjava/lang/String;Ljava/lang/Runnable;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     invoke-virtual {v0, v9, p1}, Ljava/util/ArrayList;->add(ILjava/lang/Object;)V
 

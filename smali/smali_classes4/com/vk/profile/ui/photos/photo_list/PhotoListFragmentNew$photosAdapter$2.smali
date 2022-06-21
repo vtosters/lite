@@ -3,7 +3,7 @@
 .source "PhotoListFragmentNew.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/b;
+.implements Lkotlin/jvm/b/Functions2;
 
 
 # annotations
@@ -19,12 +19,12 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/b<",
+        "Lkotlin/jvm/b/Functions2<",
         "Ljava/util/List<",
         "+",
         "Lcom/vk/dto/photo/Photo;",
         ">;",
-        "Lkotlin/m;",
+        "Lkotlin/Unit;",
         ">;"
     }
 .end annotation
@@ -64,13 +64,13 @@
     .line 1
     iget-object v0, p0, Lcom/vk/profile/ui/photos/photo_list/PhotoListFragmentNew$photosAdapter$2;->this$0:Lcom/vk/profile/ui/photos/photo_list/PhotoListFragmentNew;
 
-    invoke-virtual {v0}, Lcom/vk/profile/ui/photos/photo_list/PhotoListFragmentNew;->Y4()Lcom/vk/bridges/p$d;
+    invoke-virtual {v0}, Lcom/vk/profile/ui/photos/photo_list/PhotoListFragmentNew;->Y4()Lcom/vk/bridges/ImageViewer$d;
 
     move-result-object v0
 
     if-eqz v0, :cond_0
 
-    invoke-interface {v0, p1}, Lcom/vk/bridges/p$d;->a(Ljava/util/List;)V
+    invoke-interface {v0, p1}, Lcom/vk/bridges/ImageViewer$d;->a(Ljava/util/List;)V
 
     :cond_0
     return-void
@@ -84,7 +84,7 @@
 
     invoke-virtual {p0, p1}, Lcom/vk/profile/ui/photos/photo_list/PhotoListFragmentNew$photosAdapter$2;->a(Ljava/util/List;)V
 
-    sget-object p1, Lkotlin/m;->a:Lkotlin/m;
+    sget-object p1, Lkotlin/Unit;->a:Lkotlin/Unit;
 
     return-object p1
 .end method

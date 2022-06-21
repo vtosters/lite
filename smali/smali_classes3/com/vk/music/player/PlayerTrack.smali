@@ -39,7 +39,7 @@
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, v1}, Lcom/vk/music/player/PlayerTrack$b;-><init>(Lkotlin/jvm/internal/i;)V
+    invoke-direct {v0, v1}, Lcom/vk/music/player/PlayerTrack$b;-><init>(Lkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     .line 1
     new-instance v0, Lcom/vk/music/player/PlayerTrack$a;
@@ -66,7 +66,7 @@
 
     const-string v1, "UUID.randomUUID().toString()"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 4
     invoke-direct {p0, p1, v0, p2}, Lcom/vk/music/player/PlayerTrack;-><init>(ILjava/lang/String;Lcom/vk/dto/music/MusicTrack;)V
@@ -89,7 +89,7 @@
     return-void
 .end method
 
-.method public synthetic constructor <init>(ILjava/lang/String;Lcom/vk/dto/music/MusicTrack;ILkotlin/jvm/internal/i;)V
+.method public synthetic constructor <init>(ILjava/lang/String;Lcom/vk/dto/music/MusicTrack;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
     .locals 0
 
     and-int/lit8 p4, p4, 0x1
@@ -132,7 +132,7 @@
 
     .line 11
     :cond_0
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     const/4 p1, 0x0
 
@@ -153,7 +153,7 @@
 
     const-string v0, "UUID.randomUUID().toString()"
 
-    invoke-static {v3, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v3, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     const/4 v2, 0x0
 
@@ -166,7 +166,7 @@
     move-object v4, p1
 
     .line 6
-    invoke-direct/range {v1 .. v6}, Lcom/vk/music/player/PlayerTrack;-><init>(ILjava/lang/String;Lcom/vk/dto/music/MusicTrack;ILkotlin/jvm/internal/i;)V
+    invoke-direct/range {v1 .. v6}, Lcom/vk/music/player/PlayerTrack;-><init>(ILjava/lang/String;Lcom/vk/dto/music/MusicTrack;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     return-void
 .end method
@@ -265,7 +265,7 @@
 
     iget-object v1, p1, Lcom/vk/music/player/PlayerTrack;->b:Ljava/lang/String;
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v0
 
@@ -275,7 +275,7 @@
 
     iget-object p1, p1, Lcom/vk/music/player/PlayerTrack;->c:Lcom/vk/dto/music/MusicTrack;
 
-    invoke-static {v0, p1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v0, p1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result p1
 

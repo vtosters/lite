@@ -129,7 +129,7 @@
     .line 3
     check-cast v0, Lcom/facebook/share/model/ShareLinkContent;
 
-    invoke-static {v0}, Lcom/facebook/share/internal/c;->a(Lcom/facebook/share/model/ShareLinkContent;)Landroid/os/Bundle;
+    invoke-static {v0}, Lcom/facebook/share/internal/WebDialogParameters;->a(Lcom/facebook/share/model/ShareLinkContent;)Landroid/os/Bundle;
 
     move-result-object v0
 
@@ -144,7 +144,7 @@
     .line 5
     check-cast v0, Lcom/facebook/share/model/ShareOpenGraphContent;
 
-    invoke-static {v0}, Lcom/facebook/share/internal/c;->a(Lcom/facebook/share/model/ShareOpenGraphContent;)Landroid/os/Bundle;
+    invoke-static {v0}, Lcom/facebook/share/internal/WebDialogParameters;->a(Lcom/facebook/share/model/ShareOpenGraphContent;)Landroid/os/Bundle;
 
     move-result-object v0
 
@@ -191,7 +191,7 @@
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
-    invoke-static {}, Lcom/facebook/internal/s;->a()Ljava/lang/String;
+    invoke-static {}, Lcom/facebook/internal/Validate;->a()Ljava/lang/String;
 
     move-result-object v1
 
@@ -201,7 +201,7 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-static {}, Lcom/facebook/internal/s;->b()Ljava/lang/String;
+    invoke-static {}, Lcom/facebook/internal/Validate;->b()Ljava/lang/String;
 
     move-result-object v1
 
@@ -217,7 +217,7 @@
     invoke-virtual {v3, v1, v0}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 6
-    invoke-static {}, Lcom/facebook/s/a/a;->a()Ljava/lang/String;
+    invoke-static {}, Lcom/facebook/s/a/DeviceRequestsHelper;->a()Ljava/lang/String;
 
     move-result-object v0
 
@@ -244,7 +244,7 @@
     invoke-direct/range {v0 .. v5}, Lcom/facebook/GraphRequest;-><init>(Lcom/facebook/AccessToken;Ljava/lang/String;Landroid/os/Bundle;Lcom/facebook/HttpMethod;Lcom/facebook/GraphRequest$f;)V
 
     .line 9
-    invoke-virtual {v6}, Lcom/facebook/GraphRequest;->b()Lcom/facebook/g;
+    invoke-virtual {v6}, Lcom/facebook/GraphRequest;->b()Lcom/facebook/GraphRequestAsyncTask;
 
     return-void
 .end method
@@ -370,7 +370,7 @@
 
     move-result-object v0
 
-    invoke-static {v0}, Lcom/facebook/s/a/a;->a(Ljava/lang/String;)V
+    invoke-static {v0}, Lcom/facebook/s/a/DeviceRequestsHelper;->a(Ljava/lang/String;)V
 
     :cond_0
     const-string v0, "error"

@@ -24,7 +24,7 @@
     return-void
 .end method
 
-.method public synthetic constructor <init>(Lkotlin/jvm/internal/i;)V
+.method public synthetic constructor <init>(Lkotlin/jvm/internal/DefaultConstructorMarker;)V
     .locals 0
 
     .line 2
@@ -42,7 +42,7 @@
             "(I)",
             "Ljava/lang/Class<",
             "+",
-            "Lcom/vk/superapp/g/e;",
+            "Lcom/vk/superapp/g/SuperAppItems3;",
             ">;"
         }
     .end annotation

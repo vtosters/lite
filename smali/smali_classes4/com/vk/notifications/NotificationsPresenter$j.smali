@@ -3,12 +3,12 @@
 .source "NotificationsPresenter.kt"
 
 # interfaces
-.implements Lc/a/z/g;
+.implements Lio/reactivex/functions/Consumer;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/notifications/NotificationsPresenter;->a(Lc/a/m;ZLcom/vk/lists/t;)V
+    value = Lcom/vk/notifications/NotificationsPresenter;->a(Lio/reactivex/Observable;ZLcom/vk/lists/PaginationHelper;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -22,7 +22,7 @@
         "Ljava/lang/Object;",
         ">",
         "Ljava/lang/Object;",
-        "Lc/a/z/g<",
+        "Lio/reactivex/functions/Consumer<",
         "Lcom/vk/dto/notifications/NotificationsGetResponse;",
         ">;"
     }
@@ -34,18 +34,18 @@
 
 .field final synthetic b:Z
 
-.field final synthetic c:Lcom/vk/lists/t;
+.field final synthetic c:Lcom/vk/lists/PaginationHelper;
 
 
 # direct methods
-.method constructor <init>(Lcom/vk/notifications/NotificationsPresenter;ZLcom/vk/lists/t;)V
+.method constructor <init>(Lcom/vk/notifications/NotificationsPresenter;ZLcom/vk/lists/PaginationHelper;)V
     .locals 0
 
     iput-object p1, p0, Lcom/vk/notifications/NotificationsPresenter$j;->a:Lcom/vk/notifications/NotificationsPresenter;
 
     iput-boolean p2, p0, Lcom/vk/notifications/NotificationsPresenter$j;->b:Z
 
-    iput-object p3, p0, Lcom/vk/notifications/NotificationsPresenter$j;->c:Lcom/vk/lists/t;
+    iput-object p3, p0, Lcom/vk/notifications/NotificationsPresenter$j;->c:Lcom/vk/lists/PaginationHelper;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -67,7 +67,7 @@
 
     const-string v1, "response"
 
-    invoke-static {p1, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-static {v0, p1}, Lcom/vk/notifications/NotificationsPresenter;->a(Lcom/vk/notifications/NotificationsPresenter;Lcom/vk/dto/notifications/NotificationsGetResponse;)V
 
@@ -128,20 +128,20 @@
     .line 5
     iget-object v0, p0, Lcom/vk/notifications/NotificationsPresenter$j;->a:Lcom/vk/notifications/NotificationsPresenter;
 
-    invoke-virtual {v0}, Lcom/vk/notifications/NotificationsPresenter;->a()Lcom/vk/notifications/l;
+    invoke-virtual {v0}, Lcom/vk/notifications/NotificationsPresenter;->a()Lcom/vk/notifications/NotificationsContract1;
 
     move-result-object v0
 
-    invoke-interface {v0}, Lcom/vk/notifications/l;->F()Z
+    invoke-interface {v0}, Lcom/vk/notifications/NotificationsContract1;->F()Z
 
     .line 6
     iget-object v0, p0, Lcom/vk/notifications/NotificationsPresenter$j;->a:Lcom/vk/notifications/NotificationsPresenter;
 
-    invoke-virtual {v0}, Lcom/vk/notifications/NotificationsPresenter;->a()Lcom/vk/notifications/l;
+    invoke-virtual {v0}, Lcom/vk/notifications/NotificationsPresenter;->a()Lcom/vk/notifications/NotificationsContract1;
 
     move-result-object v0
 
-    invoke-interface {v0}, Lcom/vk/notifications/l;->m3()Z
+    invoke-interface {v0}, Lcom/vk/notifications/NotificationsContract1;->m3()Z
 
     move-result v0
 
@@ -150,7 +150,7 @@
     const/4 v0, 0x0
 
     .line 7
-    invoke-static {v0}, Lcom/vtosters/lite/w;->k(I)V
+    invoke-static {v0}, Lcom/vtosters/lite/MenuCountersState;->k(I)V
 
     .line 8
     :cond_1
@@ -180,13 +180,13 @@
 
     .line 10
     :goto_1
-    iget-object v0, p0, Lcom/vk/notifications/NotificationsPresenter$j;->c:Lcom/vk/lists/t;
+    iget-object v0, p0, Lcom/vk/notifications/NotificationsPresenter$j;->c:Lcom/vk/lists/PaginationHelper;
 
     invoke-virtual {p1}, Lcom/vk/dto/notifications/NotificationsGetResponse;->x1()Ljava/lang/String;
 
     move-result-object p1
 
-    invoke-virtual {v0, p1}, Lcom/vk/lists/t;->a(Ljava/lang/String;)V
+    invoke-virtual {v0, p1}, Lcom/vk/lists/PaginationHelper;->a(Ljava/lang/String;)V
 
     return-void
 .end method

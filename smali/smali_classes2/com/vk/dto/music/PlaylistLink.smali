@@ -3,7 +3,7 @@
 .source "PlaylistLink.kt"
 
 # interfaces
-.implements Lcom/vk/core/serialize/a;
+.implements Lcom/vk/core/serialize/JSONSerialize;
 
 
 # annotations
@@ -42,7 +42,7 @@
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, v1}, Lcom/vk/dto/music/PlaylistLink$b;-><init>(Lkotlin/jvm/internal/i;)V
+    invoke-direct {v0, v1}, Lcom/vk/dto/music/PlaylistLink$b;-><init>(Lkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     .line 1
     new-instance v0, Lcom/vk/dto/music/PlaylistLink$a;
@@ -70,7 +70,7 @@
 
     move v2, p2
 
-    invoke-direct/range {v0 .. v5}, Lcom/vk/dto/music/PlaylistLink;-><init>(IILjava/lang/String;ILkotlin/jvm/internal/i;)V
+    invoke-direct/range {v0 .. v5}, Lcom/vk/dto/music/PlaylistLink;-><init>(IILjava/lang/String;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     return-void
 .end method
@@ -90,7 +90,7 @@
     return-void
 .end method
 
-.method public synthetic constructor <init>(IILjava/lang/String;ILkotlin/jvm/internal/i;)V
+.method public synthetic constructor <init>(IILjava/lang/String;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
     .locals 0
 
     and-int/lit8 p4, p4, 0x4
@@ -170,7 +170,7 @@
 
     invoke-direct {v0, p0}, Lcom/vk/dto/music/PlaylistLink$toJSONObject$1;-><init>(Lcom/vk/dto/music/PlaylistLink;)V
 
-    invoke-static {v0}, Lcom/vk/dto/common/data/b;->a(Lkotlin/jvm/b/b;)Lorg/json/JSONObject;
+    invoke-static {v0}, Lcom/vk/dto/common/data/JsonObj1;->a(Lkotlin/jvm/b/Functions2;)Lorg/json/JSONObject;
 
     move-result-object v0
 
@@ -234,7 +234,7 @@
 
     iget-object p1, p1, Lcom/vk/dto/music/PlaylistLink;->c:Ljava/lang/String;
 
-    invoke-static {v0, p1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v0, p1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result p1
 

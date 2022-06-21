@@ -56,7 +56,7 @@
 
     const-string v1, "storyView.context"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     iget-object v1, p0, Lcom/vk/stories/util/ClickableStickerDelegate$f;->c:Lcom/vk/dto/stories/model/clickable/ClickableHashtag;
 

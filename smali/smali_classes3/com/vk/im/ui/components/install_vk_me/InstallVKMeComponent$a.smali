@@ -46,7 +46,7 @@
     .line 1
     iget-object v0, p0, Lcom/vk/im/ui/components/install_vk_me/InstallVKMeComponent$a;->a:Lcom/vk/im/ui/components/install_vk_me/InstallVKMeComponent;
 
-    invoke-static {v0}, Lcom/vk/im/ui/components/install_vk_me/InstallVKMeComponent;->b(Lcom/vk/im/ui/components/install_vk_me/InstallVKMeComponent;)Lcom/vk/im/ui/p/a;
+    invoke-static {v0}, Lcom/vk/im/ui/components/install_vk_me/InstallVKMeComponent;->b(Lcom/vk/im/ui/components/install_vk_me/InstallVKMeComponent;)Lcom/vk/im/ui/p/ImBridge1;
 
     move-result-object v0
 
@@ -58,7 +58,7 @@
 
     const-string v2, "hardcore"
 
-    invoke-interface {v0, v1, v2}, Lcom/vk/im/ui/p/a;->b(Landroid/content/Context;Ljava/lang/String;)V
+    invoke-interface {v0, v1, v2}, Lcom/vk/im/ui/p/ImBridge1;->b(Landroid/content/Context;Ljava/lang/String;)V
 
     return-void
 .end method

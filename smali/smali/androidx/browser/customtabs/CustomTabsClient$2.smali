@@ -1,5 +1,5 @@
 .class Landroidx/browser/customtabs/CustomTabsClient$2;
-.super La/a/a/a$a;
+.super Landroid/support/customtabs/ICustomTabsCallback$a;
 .source "CustomTabsClient.java"
 
 
@@ -31,7 +31,7 @@
 
     iput-object p2, p0, Landroidx/browser/customtabs/CustomTabsClient$2;->val$callback:Landroidx/browser/customtabs/CustomTabsCallback;
 
-    invoke-direct {p0}, La/a/a/a$a;-><init>()V
+    invoke-direct {p0}, Landroid/support/customtabs/ICustomTabsCallback$a;-><init>()V
 
     .line 2
     new-instance p1, Landroid/os/Handler;

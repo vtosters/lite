@@ -3,12 +3,12 @@
 .source "NotificationClickHandler.kt"
 
 # interfaces
-.implements Lc/a/z/g;
+.implements Lio/reactivex/functions/Consumer;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/notifications/NotificationClickHandler$handleApiCall$runnable$1;->invoke()Lio/reactivex/disposables/b;
+    value = Lcom/vk/notifications/NotificationClickHandler$handleApiCall$runnable$1;->invoke()Lio/reactivex/disposables/Disposable;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -22,7 +22,7 @@
         "Ljava/lang/Object;",
         ">",
         "Ljava/lang/Object;",
-        "Lc/a/z/g<",
+        "Lio/reactivex/functions/Consumer<",
         "Ljava/lang/Boolean;",
         ">;"
     }
@@ -60,7 +60,7 @@
     const-string v0, "it"
 
     .line 1
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {p1}, Ljava/lang/Boolean;->booleanValue()Z
 
@@ -112,17 +112,17 @@
     const/4 v2, 0x0
 
     .line 6
-    invoke-static {p1, v0, v1, v2}, Lcom/vk/core/util/k1;->a(IZILjava/lang/Object;)V
+    invoke-static {p1, v0, v1, v2}, Lcom/vk/core/util/ToastUtils;->a(IZILjava/lang/Object;)V
 
     .line 7
     :goto_1
     iget-object p1, p0, Lcom/vk/notifications/NotificationClickHandler$handleApiCall$runnable$1$a;->c:Lcom/vk/notifications/NotificationClickHandler$handleApiCall$runnable$1;
 
-    iget-object v0, p1, Lcom/vk/notifications/NotificationClickHandler$handleApiCall$runnable$1;->$container:Lcom/vk/notifications/i;
+    iget-object v0, p1, Lcom/vk/notifications/NotificationClickHandler$handleApiCall$runnable$1;->$container:Lcom/vk/notifications/NotificationsContainer;
 
     iget-object p1, p1, Lcom/vk/notifications/NotificationClickHandler$handleApiCall$runnable$1;->$parentNotification:Lcom/vk/dto/notifications/NotificationItem;
 
-    invoke-interface {v0, p1}, Lcom/vk/notifications/i;->a(Lcom/vk/dto/notifications/NotificationItem;)V
+    invoke-interface {v0, p1}, Lcom/vk/notifications/NotificationsContainer;->a(Lcom/vk/dto/notifications/NotificationItem;)V
 
     return-void
 .end method

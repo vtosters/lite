@@ -3,12 +3,12 @@
 .source "SelectionState.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/b;
+.implements Lkotlin/jvm/b/Functions2;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/photogallery/dto/SelectionState;->c(Lcom/vk/photogallery/dto/c;)V
+    value = Lcom/vk/photogallery/dto/SelectionState;->c(Lcom/vk/photogallery/dto/GalleryState2;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -19,8 +19,8 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/b<",
-        "Lcom/vk/photogallery/dto/n;",
+        "Lkotlin/jvm/b/Functions2<",
+        "Lcom/vk/photogallery/dto/SelectionState1;",
         "Ljava/lang/Boolean;",
         ">;"
     }
@@ -28,14 +28,14 @@
 
 
 # instance fields
-.field final synthetic $media:Lcom/vk/photogallery/dto/c;
+.field final synthetic $media:Lcom/vk/photogallery/dto/GalleryState2;
 
 
 # direct methods
-.method constructor <init>(Lcom/vk/photogallery/dto/c;)V
+.method constructor <init>(Lcom/vk/photogallery/dto/GalleryState2;)V
     .locals 0
 
-    iput-object p1, p0, Lcom/vk/photogallery/dto/SelectionState$removeFromSelection$1;->$media:Lcom/vk/photogallery/dto/c;
+    iput-object p1, p0, Lcom/vk/photogallery/dto/SelectionState$removeFromSelection$1;->$media:Lcom/vk/photogallery/dto/GalleryState2;
 
     const/4 p1, 0x1
 
@@ -46,17 +46,17 @@
 
 
 # virtual methods
-.method public final a(Lcom/vk/photogallery/dto/n;)Z
+.method public final a(Lcom/vk/photogallery/dto/SelectionState1;)Z
     .locals 1
 
     .line 1
-    invoke-virtual {p1}, Lcom/vk/photogallery/dto/n;->b()Lcom/vk/photogallery/dto/c;
+    invoke-virtual {p1}, Lcom/vk/photogallery/dto/SelectionState1;->b()Lcom/vk/photogallery/dto/GalleryState2;
 
     move-result-object p1
 
-    iget-object v0, p0, Lcom/vk/photogallery/dto/SelectionState$removeFromSelection$1;->$media:Lcom/vk/photogallery/dto/c;
+    iget-object v0, p0, Lcom/vk/photogallery/dto/SelectionState$removeFromSelection$1;->$media:Lcom/vk/photogallery/dto/GalleryState2;
 
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result p1
 
@@ -67,9 +67,9 @@
     .locals 0
 
     .line 1
-    check-cast p1, Lcom/vk/photogallery/dto/n;
+    check-cast p1, Lcom/vk/photogallery/dto/SelectionState1;
 
-    invoke-virtual {p0, p1}, Lcom/vk/photogallery/dto/SelectionState$removeFromSelection$1;->a(Lcom/vk/photogallery/dto/n;)Z
+    invoke-virtual {p0, p1}, Lcom/vk/photogallery/dto/SelectionState$removeFromSelection$1;->a(Lcom/vk/photogallery/dto/SelectionState1;)Z
 
     move-result p1
 

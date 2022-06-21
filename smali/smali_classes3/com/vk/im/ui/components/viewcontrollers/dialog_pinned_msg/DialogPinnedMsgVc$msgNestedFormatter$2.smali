@@ -3,7 +3,7 @@
 .source "DialogPinnedMsgVc.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/a;
+.implements Lkotlin/jvm/b/Functions;
 
 
 # annotations
@@ -19,8 +19,8 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/a<",
-        "Lcom/vk/im/ui/formatters/n;",
+        "Lkotlin/jvm/b/Functions<",
+        "Lcom/vk/im/ui/formatters/MsgNestedFormatter;",
         ">;"
     }
 .end annotation
@@ -45,11 +45,11 @@
 
 
 # virtual methods
-.method public final invoke()Lcom/vk/im/ui/formatters/n;
+.method public final invoke()Lcom/vk/im/ui/formatters/MsgNestedFormatter;
     .locals 3
 
     .line 2
-    new-instance v0, Lcom/vk/im/ui/formatters/n;
+    new-instance v0, Lcom/vk/im/ui/formatters/MsgNestedFormatter;
 
     iget-object v1, p0, Lcom/vk/im/ui/components/viewcontrollers/dialog_pinned_msg/DialogPinnedMsgVc$msgNestedFormatter$2;->this$0:Lcom/vk/im/ui/components/viewcontrollers/dialog_pinned_msg/DialogPinnedMsgVc;
 
@@ -59,9 +59,9 @@
 
     const-string v2, "context"
 
-    invoke-static {v1, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    invoke-direct {v0, v1}, Lcom/vk/im/ui/formatters/n;-><init>(Landroid/content/Context;)V
+    invoke-direct {v0, v1}, Lcom/vk/im/ui/formatters/MsgNestedFormatter;-><init>(Landroid/content/Context;)V
 
     return-object v0
 .end method
@@ -70,7 +70,7 @@
     .locals 1
 
     .line 1
-    invoke-virtual {p0}, Lcom/vk/im/ui/components/viewcontrollers/dialog_pinned_msg/DialogPinnedMsgVc$msgNestedFormatter$2;->invoke()Lcom/vk/im/ui/formatters/n;
+    invoke-virtual {p0}, Lcom/vk/im/ui/components/viewcontrollers/dialog_pinned_msg/DialogPinnedMsgVc$msgNestedFormatter$2;->invoke()Lcom/vk/im/ui/formatters/MsgNestedFormatter;
 
     move-result-object v0
 

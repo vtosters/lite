@@ -3,12 +3,12 @@
 .source "StoryUploader.kt"
 
 # interfaces
-.implements Lcom/vk/api/sdk/h;
+.implements Lcom/vk/api/sdk/VKApiResponseParser;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/im/engine/internal/upload/StoryUploader;->f()Lcom/vk/im/engine/models/upload/a;
+    value = Lcom/vk/im/engine/internal/upload/StoryUploader;->f()Lcom/vk/im/engine/models/upload/UploadServer;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -22,8 +22,8 @@
         "Ljava/lang/Object;",
         ">",
         "Ljava/lang/Object;",
-        "Lcom/vk/api/sdk/h<",
-        "Lcom/vk/im/engine/models/upload/a;",
+        "Lcom/vk/api/sdk/VKApiResponseParser<",
+        "Lcom/vk/im/engine/models/upload/UploadServer;",
         ">;"
     }
 .end annotation
@@ -56,11 +56,11 @@
 
 
 # virtual methods
-.method public final a(Ljava/lang/String;)Lcom/vk/im/engine/models/upload/a;
+.method public final a(Ljava/lang/String;)Lcom/vk/im/engine/models/upload/UploadServer;
     .locals 2
 
     .line 2
-    sget-object v0, Lcom/vk/im/engine/models/upload/a;->c:Lcom/vk/im/engine/models/upload/a$a;
+    sget-object v0, Lcom/vk/im/engine/models/upload/UploadServer;->c:Lcom/vk/im/engine/models/upload/UploadServer$a;
 
     new-instance v1, Lorg/json/JSONObject;
 
@@ -74,9 +74,9 @@
 
     const-string v1, "JSONObject(it).getJSONObject(\"response\")"
 
-    invoke-static {p1, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    invoke-virtual {v0, p1}, Lcom/vk/im/engine/models/upload/a$a;->a(Lorg/json/JSONObject;)Lcom/vk/im/engine/models/upload/a;
+    invoke-virtual {v0, p1}, Lcom/vk/im/engine/models/upload/UploadServer$a;->a(Lorg/json/JSONObject;)Lcom/vk/im/engine/models/upload/UploadServer;
 
     move-result-object p1
 
@@ -87,7 +87,7 @@
     .locals 0
 
     .line 1
-    invoke-virtual {p0, p1}, Lcom/vk/im/engine/internal/upload/StoryUploader$a;->a(Ljava/lang/String;)Lcom/vk/im/engine/models/upload/a;
+    invoke-virtual {p0, p1}, Lcom/vk/im/engine/internal/upload/StoryUploader$a;->a(Ljava/lang/String;)Lcom/vk/im/engine/models/upload/UploadServer;
 
     move-result-object p1
 

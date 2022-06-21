@@ -3,7 +3,7 @@
 .source "StoryChooseReceiversActivity.java"
 
 # interfaces
-.implements Lc/a/z/g;
+.implements Lio/reactivex/functions/Consumer;
 
 
 # annotations
@@ -19,7 +19,7 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Ljava/lang/Object;",
-        "Lc/a/z/g<",
+        "Lio/reactivex/functions/Consumer<",
         "Ljava/lang/String;",
         ">;"
     }
@@ -50,11 +50,11 @@
     .line 1
     iget-object p1, p0, Lcom/vk/stories/StoryChooseReceiversActivity$l;->a:Lcom/vk/stories/StoryChooseReceiversActivity;
 
-    invoke-static {p1}, Lcom/vk/stories/StoryChooseReceiversActivity;->q(Lcom/vk/stories/StoryChooseReceiversActivity;)Lcom/vk/lists/t;
+    invoke-static {p1}, Lcom/vk/stories/StoryChooseReceiversActivity;->q(Lcom/vk/stories/StoryChooseReceiversActivity;)Lcom/vk/lists/PaginationHelper;
 
     move-result-object p1
 
-    invoke-virtual {p1}, Lcom/vk/lists/t;->h()V
+    invoke-virtual {p1}, Lcom/vk/lists/PaginationHelper;->h()V
 
     return-void
 .end method

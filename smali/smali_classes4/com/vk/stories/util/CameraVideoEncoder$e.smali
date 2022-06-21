@@ -119,17 +119,17 @@
 
     .line 5
     :goto_1
-    invoke-static {p1, v3}, Lb/h/p/f/d$a;->a(IZ)Lb/h/p/c$b;
+    invoke-static {p1, v3}, Lb/h/p/f/FrameUtils$a;->a(IZ)Lb/h/p/MediaUtils$b;
 
     move-result-object p1
 
     .line 6
-    invoke-virtual {p1}, Lb/h/p/c$b;->c()I
+    invoke-virtual {p1}, Lb/h/p/MediaUtils$b;->c()I
 
     move-result v0
 
     .line 7
-    invoke-virtual {p1}, Lb/h/p/c$b;->a()I
+    invoke-virtual {p1}, Lb/h/p/MediaUtils$b;->a()I
 
     move-result p1
 
@@ -148,7 +148,7 @@
     :goto_2
     iget-object v3, p0, Lcom/vk/stories/util/CameraVideoEncoder$e;->a:Landroid/graphics/Bitmap;
 
-    invoke-static {v3, p1, v0, v2}, Lcom/vk/core/util/m;->a(Landroid/graphics/Bitmap;IIZ)Landroid/graphics/Bitmap;
+    invoke-static {v3, p1, v0, v2}, Lcom/vk/core/util/BitmapUtils;->a(Landroid/graphics/Bitmap;IIZ)Landroid/graphics/Bitmap;
 
     move-result-object v3
 

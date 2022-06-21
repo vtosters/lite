@@ -3,7 +3,7 @@
 .source "MusicDynamicRestriction.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/b;
+.implements Lkotlin/jvm/b/Functions2;
 
 
 # annotations
@@ -19,9 +19,9 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/b<",
-        "Lcom/vk/dto/common/data/a;",
-        "Lkotlin/m;",
+        "Lkotlin/jvm/b/Functions2<",
+        "Lcom/vk/dto/common/data/JsonObj;",
+        "Lkotlin/Unit;",
         ">;"
     }
 .end annotation
@@ -46,7 +46,7 @@
 
 
 # virtual methods
-.method public final a(Lcom/vk/dto/common/data/a;)V
+.method public final a(Lcom/vk/dto/common/data/JsonObj;)V
     .locals 3
 
     .line 1
@@ -58,7 +58,7 @@
 
     const-string v1, "title"
 
-    invoke-virtual {p1, v1, v0}, Lcom/vk/dto/common/data/a;->a(Ljava/lang/String;Ljava/lang/Object;)V
+    invoke-virtual {p1, v1, v0}, Lcom/vk/dto/common/data/JsonObj;->a(Ljava/lang/String;Ljava/lang/Object;)V
 
     .line 2
     iget-object v0, p0, Lcom/vk/dto/music/MusicDynamicRestriction$toJSONObject$1;->this$0:Lcom/vk/dto/music/MusicDynamicRestriction;
@@ -69,7 +69,7 @@
 
     const-string v1, "text"
 
-    invoke-virtual {p1, v1, v0}, Lcom/vk/dto/common/data/a;->a(Ljava/lang/String;Ljava/lang/Object;)V
+    invoke-virtual {p1, v1, v0}, Lcom/vk/dto/common/data/JsonObj;->a(Ljava/lang/String;Ljava/lang/Object;)V
 
     .line 3
     iget-object v0, p0, Lcom/vk/dto/music/MusicDynamicRestriction$toJSONObject$1;->this$0:Lcom/vk/dto/music/MusicDynamicRestriction;
@@ -84,7 +84,7 @@
 
     const-string v2, "icons"
 
-    invoke-virtual {p1, v2, v0}, Lcom/vk/dto/common/data/a;->a(Ljava/lang/String;Ljava/lang/Object;)V
+    invoke-virtual {p1, v2, v0}, Lcom/vk/dto/common/data/JsonObj;->a(Ljava/lang/String;Ljava/lang/Object;)V
 
     .line 4
     iget-object v0, p0, Lcom/vk/dto/music/MusicDynamicRestriction$toJSONObject$1;->this$0:Lcom/vk/dto/music/MusicDynamicRestriction;
@@ -93,20 +93,20 @@
 
     move-result-object v0
 
-    invoke-virtual {p1, v1, v0}, Lcom/vk/dto/common/data/a;->a(Ljava/lang/String;Ljava/lang/Object;)V
+    invoke-virtual {p1, v1, v0}, Lcom/vk/dto/common/data/JsonObj;->a(Ljava/lang/String;Ljava/lang/Object;)V
 
     .line 5
     new-instance v0, Lcom/vk/dto/music/MusicDynamicRestriction$toJSONObject$1$1;
 
     invoke-direct {v0, p0}, Lcom/vk/dto/music/MusicDynamicRestriction$toJSONObject$1$1;-><init>(Lcom/vk/dto/music/MusicDynamicRestriction$toJSONObject$1;)V
 
-    invoke-static {v0}, Lcom/vk/dto/common/data/b;->a(Lkotlin/jvm/b/b;)Lorg/json/JSONObject;
+    invoke-static {v0}, Lcom/vk/dto/common/data/JsonObj1;->a(Lkotlin/jvm/b/Functions2;)Lorg/json/JSONObject;
 
     move-result-object v0
 
     const-string v1, "button"
 
-    invoke-virtual {p1, v1, v0}, Lcom/vk/dto/common/data/a;->a(Ljava/lang/String;Ljava/lang/Object;)V
+    invoke-virtual {p1, v1, v0}, Lcom/vk/dto/common/data/JsonObj;->a(Ljava/lang/String;Ljava/lang/Object;)V
 
     return-void
 .end method
@@ -115,11 +115,11 @@
     .locals 0
 
     .line 1
-    check-cast p1, Lcom/vk/dto/common/data/a;
+    check-cast p1, Lcom/vk/dto/common/data/JsonObj;
 
-    invoke-virtual {p0, p1}, Lcom/vk/dto/music/MusicDynamicRestriction$toJSONObject$1;->a(Lcom/vk/dto/common/data/a;)V
+    invoke-virtual {p0, p1}, Lcom/vk/dto/music/MusicDynamicRestriction$toJSONObject$1;->a(Lcom/vk/dto/common/data/JsonObj;)V
 
-    sget-object p1, Lkotlin/m;->a:Lkotlin/m;
+    sget-object p1, Lkotlin/Unit;->a:Lkotlin/Unit;
 
     return-object p1
 .end method

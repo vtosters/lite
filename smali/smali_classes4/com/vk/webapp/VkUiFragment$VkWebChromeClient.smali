@@ -1,5 +1,5 @@
 .class public Lcom/vk/webapp/VkUiFragment$VkWebChromeClient;
-.super Lcom/vk/webapp/helpers/f;
+.super Lcom/vk/webapp/helpers/WebClients4;
 .source "VkUiFragment.kt"
 
 
@@ -30,7 +30,7 @@
     .line 1
     iput-object p1, p0, Lcom/vk/webapp/VkUiFragment$VkWebChromeClient;->f:Lcom/vk/webapp/VkUiFragment;
 
-    invoke-direct {p0}, Lcom/vk/webapp/helpers/f;-><init>()V
+    invoke-direct {p0}, Lcom/vk/webapp/helpers/WebClients4;-><init>()V
 
     return-void
 .end method
@@ -60,7 +60,7 @@
 
     const-string v0, "getActivity()!!"
 
-    invoke-static {v2, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v2, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {v2}, Landroid/app/Activity;->getPackageManager()Landroid/content/pm/PackageManager;
 
@@ -74,14 +74,14 @@
 
     .line 3
     :try_start_0
-    invoke-static {}, Lb/h/g/m/d;->p()Ljava/io/File;
+    invoke-static {}, Lb/h/g/m/FileUtils;->p()Ljava/io/File;
 
     move-result-object v0
 
     .line 4
     iget-object v2, p0, Lcom/vk/webapp/VkUiFragment$VkWebChromeClient;->f:Lcom/vk/webapp/VkUiFragment;
 
-    invoke-static {v0}, Lb/h/g/m/d;->n(Ljava/io/File;)Landroid/net/Uri;
+    invoke-static {v0}, Lb/h/g/m/FileUtils;->n(Ljava/io/File;)Landroid/net/Uri;
 
     move-result-object v0
 
@@ -116,7 +116,7 @@
 
     .line 7
     :cond_1
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     throw v0
 
@@ -238,7 +238,7 @@
     invoke-direct {v8, p0}, Lcom/vk/webapp/VkUiFragment$VkWebChromeClient$handleFileChoose$2;-><init>(Lcom/vk/webapp/VkUiFragment$VkWebChromeClient;)V
 
     .line 20
-    invoke-virtual/range {v2 .. v8}, Lcom/vk/permission/PermissionHelper;->a(Landroid/app/Activity;[Ljava/lang/String;IILkotlin/jvm/b/a;Lkotlin/jvm/b/b;)Z
+    invoke-virtual/range {v2 .. v8}, Lcom/vk/permission/PermissionHelper;->a(Landroid/app/Activity;[Ljava/lang/String;IILkotlin/jvm/b/Functions;Lkotlin/jvm/b/Functions2;)Z
 
     return-void
 .end method
@@ -271,7 +271,7 @@
 
     const-string v3, "consoleMessage.message()"
 
-    invoke-static {v2, v3}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v2, v3}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     aput-object v2, v0, v1
 
@@ -295,7 +295,7 @@
 
     const-string v3, "consoleMessage.sourceId()"
 
-    invoke-static {v2, v3}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v2, v3}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     aput-object v2, v0, v1
 
@@ -326,7 +326,7 @@
     .end annotation
 
     .line 1
-    invoke-super {p0, p1, p2, p3}, Lcom/vk/webapp/helpers/f;->onShowFileChooser(Landroid/webkit/WebView;Landroid/webkit/ValueCallback;Landroid/webkit/WebChromeClient$FileChooserParams;)Z
+    invoke-super {p0, p1, p2, p3}, Lcom/vk/webapp/helpers/WebClients4;->onShowFileChooser(Landroid/webkit/WebView;Landroid/webkit/ValueCallback;Landroid/webkit/WebChromeClient$FileChooserParams;)Z
 
     const/4 p1, 0x1
 
@@ -384,7 +384,7 @@
 
     const-string v1, "fileChooserParams!!.acceptTypes[0]"
 
-    invoke-static {p2, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p2, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-static {v0, p2}, Lcom/vk/webapp/VkUiFragment$b;->a(Lcom/vk/webapp/VkUiFragment$b;Ljava/lang/String;)[Ljava/lang/String;
 
@@ -393,7 +393,7 @@
     goto :goto_1
 
     :cond_2
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
@@ -568,7 +568,7 @@
 
     const-string p2, "camera"
 
-    invoke-static {p2, p3}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {p2, p3}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result p2
 

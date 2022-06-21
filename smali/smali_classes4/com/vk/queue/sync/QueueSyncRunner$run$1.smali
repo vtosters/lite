@@ -3,7 +3,7 @@
 .source "QueueSyncRunner.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/a;
+.implements Lkotlin/jvm/b/Functions;
 
 
 # annotations
@@ -19,8 +19,8 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/a<",
-        "Lkotlin/m;",
+        "Lkotlin/jvm/b/Functions<",
+        "Lkotlin/Unit;",
         ">;"
     }
 .end annotation
@@ -29,18 +29,18 @@
 # instance fields
 .field final synthetic $queueIdsToRelease:Landroidx/collection/ArraySet;
 
-.field final synthetic $releaser:Lcom/vk/queue/sync/b;
+.field final synthetic $releaser:Lcom/vk/queue/sync/QueueReleaser;
 
 .field final synthetic this$0:Lcom/vk/queue/sync/QueueSyncRunner;
 
 
 # direct methods
-.method constructor <init>(Lcom/vk/queue/sync/QueueSyncRunner;Lcom/vk/queue/sync/b;Landroidx/collection/ArraySet;)V
+.method constructor <init>(Lcom/vk/queue/sync/QueueSyncRunner;Lcom/vk/queue/sync/QueueReleaser;Landroidx/collection/ArraySet;)V
     .locals 0
 
     iput-object p1, p0, Lcom/vk/queue/sync/QueueSyncRunner$run$1;->this$0:Lcom/vk/queue/sync/QueueSyncRunner;
 
-    iput-object p2, p0, Lcom/vk/queue/sync/QueueSyncRunner$run$1;->$releaser:Lcom/vk/queue/sync/b;
+    iput-object p2, p0, Lcom/vk/queue/sync/QueueSyncRunner$run$1;->$releaser:Lcom/vk/queue/sync/QueueReleaser;
 
     iput-object p3, p0, Lcom/vk/queue/sync/QueueSyncRunner$run$1;->$queueIdsToRelease:Landroidx/collection/ArraySet;
 
@@ -59,7 +59,7 @@
     .line 1
     invoke-virtual {p0}, Lcom/vk/queue/sync/QueueSyncRunner$run$1;->invoke()V
 
-    sget-object v0, Lkotlin/m;->a:Lkotlin/m;
+    sget-object v0, Lkotlin/Unit;->a:Lkotlin/Unit;
 
     return-object v0
 .end method
@@ -68,7 +68,7 @@
     .locals 4
 
     .line 2
-    iget-object v0, p0, Lcom/vk/queue/sync/QueueSyncRunner$run$1;->$releaser:Lcom/vk/queue/sync/b;
+    iget-object v0, p0, Lcom/vk/queue/sync/QueueSyncRunner$run$1;->$releaser:Lcom/vk/queue/sync/QueueReleaser;
 
     iget-object v1, p0, Lcom/vk/queue/sync/QueueSyncRunner$run$1;->$queueIdsToRelease:Landroidx/collection/ArraySet;
 
@@ -78,7 +78,7 @@
 
     invoke-direct {v2, v3}, Lcom/vk/queue/sync/QueueSyncRunner$run$1$1;-><init>(Lcom/vk/queue/sync/QueueSyncRunner;)V
 
-    invoke-virtual {v0, v1, v2}, Lcom/vk/queue/sync/b;->a(Ljava/util/Collection;Lkotlin/jvm/b/b;)V
+    invoke-virtual {v0, v1, v2}, Lcom/vk/queue/sync/QueueReleaser;->a(Ljava/util/Collection;Lkotlin/jvm/b/Functions2;)V
 
     return-void
 .end method

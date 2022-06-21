@@ -3,12 +3,12 @@
 .source "MusicPlayerAuthorizationManager.kt"
 
 # interfaces
-.implements Lc/a/z/j;
+.implements Lio/reactivex/functions/Function;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/audioipc/communication/MusicPlayerAuthorizationManager;->a(I)Lc/a/t;
+    value = Lcom/vk/audioipc/communication/MusicPlayerAuthorizationManager;->a(I)Lio/reactivex/Single;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -24,9 +24,9 @@
         "Ljava/lang/Object;",
         ">",
         "Ljava/lang/Object;",
-        "Lc/a/z/j<",
+        "Lio/reactivex/functions/Function<",
         "TT;",
-        "Lc/a/x<",
+        "Lio/reactivex/SingleSource<",
         "+TR;>;>;"
     }
 .end annotation
@@ -49,15 +49,15 @@
 
 
 # virtual methods
-.method public final a(Lcom/vk/audioipc/player/libaudioipc_sensitive_data_provider/b;)Lc/a/t;
+.method public final a(Lcom/vk/audioipc/player/libaudioipc_sensitive_data_provider/SensitiveData;)Lio/reactivex/Single;
     .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lcom/vk/audioipc/player/libaudioipc_sensitive_data_provider/b;",
+            "Lcom/vk/audioipc/player/libaudioipc_sensitive_data_provider/SensitiveData;",
             ")",
-            "Lc/a/t<",
-            "Lkotlin/m;",
+            "Lio/reactivex/Single<",
+            "Lkotlin/Unit;",
             ">;"
         }
     .end annotation
@@ -65,7 +65,7 @@
     .line 1
     iget-object p1, p0, Lcom/vk/audioipc/communication/MusicPlayerAuthorizationManager$c;->a:Lcom/vk/audioipc/communication/MusicPlayerAuthorizationManager;
 
-    invoke-static {p1}, Lcom/vk/audioipc/communication/MusicPlayerAuthorizationManager;->d(Lcom/vk/audioipc/communication/MusicPlayerAuthorizationManager;)Lc/a/t;
+    invoke-static {p1}, Lcom/vk/audioipc/communication/MusicPlayerAuthorizationManager;->d(Lcom/vk/audioipc/communication/MusicPlayerAuthorizationManager;)Lio/reactivex/Single;
 
     move-result-object p1
 
@@ -76,9 +76,9 @@
     .locals 0
 
     .line 1
-    check-cast p1, Lcom/vk/audioipc/player/libaudioipc_sensitive_data_provider/b;
+    check-cast p1, Lcom/vk/audioipc/player/libaudioipc_sensitive_data_provider/SensitiveData;
 
-    invoke-virtual {p0, p1}, Lcom/vk/audioipc/communication/MusicPlayerAuthorizationManager$c;->a(Lcom/vk/audioipc/player/libaudioipc_sensitive_data_provider/b;)Lc/a/t;
+    invoke-virtual {p0, p1}, Lcom/vk/audioipc/communication/MusicPlayerAuthorizationManager$c;->a(Lcom/vk/audioipc/player/libaudioipc_sensitive_data_provider/SensitiveData;)Lio/reactivex/Single;
 
     move-result-object p1
 

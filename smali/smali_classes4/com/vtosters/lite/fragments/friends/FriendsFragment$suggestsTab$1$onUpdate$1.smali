@@ -3,12 +3,12 @@
 .source "FriendsFragment.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/b;
+.implements Lkotlin/jvm/b/Functions2;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vtosters/lite/fragments/friends/FriendsFragment$suggestsTab$1;->invoke()Lcom/vtosters/lite/fragments/friends/e;
+    value = Lcom/vtosters/lite/fragments/friends/FriendsFragment$suggestsTab$1;->invoke()Lcom/vtosters/lite/fragments/friends/FriendsTab;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -19,8 +19,8 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/b<",
-        "Lcom/vtosters/lite/fragments/friends/presenter/b;",
+        "Lkotlin/jvm/b/Functions2<",
+        "Lcom/vtosters/lite/fragments/friends/presenter/FriendsViewModel;",
         "Ljava/lang/Integer;",
         ">;"
     }
@@ -28,14 +28,14 @@
 
 
 # instance fields
-.field final synthetic $f:Lcom/vtosters/lite/fragments/friends/c;
+.field final synthetic $f:Lcom/vtosters/lite/fragments/friends/FriendRequestsTabFragment;
 
 
 # direct methods
-.method constructor <init>(Lcom/vtosters/lite/fragments/friends/c;)V
+.method constructor <init>(Lcom/vtosters/lite/fragments/friends/FriendRequestsTabFragment;)V
     .locals 0
 
-    iput-object p1, p0, Lcom/vtosters/lite/fragments/friends/FriendsFragment$suggestsTab$1$onUpdate$1;->$f:Lcom/vtosters/lite/fragments/friends/c;
+    iput-object p1, p0, Lcom/vtosters/lite/fragments/friends/FriendsFragment$suggestsTab$1$onUpdate$1;->$f:Lcom/vtosters/lite/fragments/friends/FriendRequestsTabFragment;
 
     const/4 p1, 0x1
 
@@ -46,20 +46,20 @@
 
 
 # virtual methods
-.method public final a(Lcom/vtosters/lite/fragments/friends/presenter/b;)I
+.method public final a(Lcom/vtosters/lite/fragments/friends/presenter/FriendsViewModel;)I
     .locals 2
 
     .line 1
-    iget-object v0, p0, Lcom/vtosters/lite/fragments/friends/FriendsFragment$suggestsTab$1$onUpdate$1;->$f:Lcom/vtosters/lite/fragments/friends/c;
+    iget-object v0, p0, Lcom/vtosters/lite/fragments/friends/FriendsFragment$suggestsTab$1$onUpdate$1;->$f:Lcom/vtosters/lite/fragments/friends/FriendRequestsTabFragment;
 
-    invoke-virtual {p1}, Lcom/vtosters/lite/fragments/friends/presenter/b;->i()I
+    invoke-virtual {p1}, Lcom/vtosters/lite/fragments/friends/presenter/FriendsViewModel;->i()I
 
     move-result v1
 
-    invoke-virtual {v0, v1}, Lcom/vtosters/lite/fragments/friends/c;->u0(I)V
+    invoke-virtual {v0, v1}, Lcom/vtosters/lite/fragments/friends/FriendRequestsTabFragment;->u0(I)V
 
     .line 2
-    invoke-virtual {p1}, Lcom/vtosters/lite/fragments/friends/presenter/b;->i()I
+    invoke-virtual {p1}, Lcom/vtosters/lite/fragments/friends/presenter/FriendsViewModel;->i()I
 
     move-result p1
 
@@ -70,9 +70,9 @@
     .locals 0
 
     .line 1
-    check-cast p1, Lcom/vtosters/lite/fragments/friends/presenter/b;
+    check-cast p1, Lcom/vtosters/lite/fragments/friends/presenter/FriendsViewModel;
 
-    invoke-virtual {p0, p1}, Lcom/vtosters/lite/fragments/friends/FriendsFragment$suggestsTab$1$onUpdate$1;->a(Lcom/vtosters/lite/fragments/friends/presenter/b;)I
+    invoke-virtual {p0, p1}, Lcom/vtosters/lite/fragments/friends/FriendsFragment$suggestsTab$1$onUpdate$1;->a(Lcom/vtosters/lite/fragments/friends/presenter/FriendsViewModel;)I
 
     move-result p1
 

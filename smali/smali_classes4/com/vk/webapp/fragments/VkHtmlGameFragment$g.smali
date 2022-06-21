@@ -3,7 +3,7 @@
 .source "VkHtmlGameFragment.kt"
 
 # interfaces
-.implements Lcom/vtosters/lite/fragments/m1$f;
+.implements Lcom/vtosters/lite/general/fragments/LeaderboardFragment$f;
 
 
 # annotations
@@ -59,7 +59,7 @@
     .line 2
     iget-object v1, p0, Lcom/vk/webapp/fragments/VkHtmlGameFragment$g;->a:Lcom/vk/webapp/fragments/VkHtmlGameFragment;
 
-    invoke-static {v1}, Lcom/vk/webapp/fragments/VkHtmlGameFragment;->b(Lcom/vk/webapp/fragments/VkHtmlGameFragment;)Lcom/vk/webapp/bridges/c;
+    invoke-static {v1}, Lcom/vk/webapp/fragments/VkHtmlGameFragment;->b(Lcom/vk/webapp/fragments/VkHtmlGameFragment;)Lcom/vk/webapp/bridges/VkHtmlGameBridge;
 
     move-result-object v1
 
@@ -67,11 +67,11 @@
 
     const-string v3, "result"
 
-    invoke-static {v0, v3}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v3}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     const-string v3, "VKWebAppShowLeaderBoardBoxResult"
 
-    invoke-virtual {v1, v2, v3, v0}, Lcom/vk/webapp/bridges/a;->a(Lcom/vk/webapp/internal/data/JsApiMethodType;Ljava/lang/String;Lorg/json/JSONObject;)V
+    invoke-virtual {v1, v2, v3, v0}, Lcom/vk/webapp/bridges/AndroidBridge;->a(Lcom/vk/webapp/internal/data/JsApiMethodType;Ljava/lang/String;Lorg/json/JSONObject;)V
 
     return-void
 .end method

@@ -3,7 +3,7 @@
 .source "EditorEventsTracker.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/b;
+.implements Lkotlin/jvm/b/Functions2;
 
 
 # annotations
@@ -19,7 +19,7 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/b<",
+        "Lkotlin/jvm/b/Functions2<",
         "Lcom/vk/attachpicker/stickers/ISticker;",
         "Ljava/lang/Boolean;",
         ">;"
@@ -60,7 +60,7 @@
     .locals 0
 
     .line 1
-    instance-of p1, p1, Lcom/vk/attachpicker/stickers/text/h;
+    instance-of p1, p1, Lcom/vk/attachpicker/stickers/text/TextSticker;
 
     return p1
 .end method

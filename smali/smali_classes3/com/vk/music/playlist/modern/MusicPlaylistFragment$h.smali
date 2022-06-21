@@ -3,7 +3,7 @@
 .source "MusicPlaylistFragment.kt"
 
 # interfaces
-.implements Lcom/vk/lists/t$q;
+.implements Lcom/vk/lists/PaginationHelper$q;
 
 
 # annotations
@@ -58,13 +58,13 @@
     :cond_0
     iget-object v0, p0, Lcom/vk/music/playlist/modern/MusicPlaylistFragment$h;->a:Lcom/vk/music/playlist/modern/MusicPlaylistFragment;
 
-    invoke-static {v0}, Lcom/vk/music/playlist/modern/MusicPlaylistFragment;->d(Lcom/vk/music/playlist/modern/MusicPlaylistFragment;)Lcom/vk/lists/s;
+    invoke-static {v0}, Lcom/vk/music/playlist/modern/MusicPlaylistFragment;->d(Lcom/vk/music/playlist/modern/MusicPlaylistFragment;)Lcom/vk/lists/PaginatedRecyclerAdapter;
 
     move-result-object v0
 
     if-eqz v0, :cond_1
 
-    invoke-virtual {v0}, Lcom/vk/lists/s;->v()V
+    invoke-virtual {v0}, Lcom/vk/lists/PaginatedRecyclerAdapter;->v()V
 
     :cond_1
     return-void
@@ -76,13 +76,13 @@
     .line 1
     iget-object v0, p0, Lcom/vk/music/playlist/modern/MusicPlaylistFragment$h;->a:Lcom/vk/music/playlist/modern/MusicPlaylistFragment;
 
-    invoke-static {v0}, Lcom/vk/music/playlist/modern/MusicPlaylistFragment;->d(Lcom/vk/music/playlist/modern/MusicPlaylistFragment;)Lcom/vk/lists/s;
+    invoke-static {v0}, Lcom/vk/music/playlist/modern/MusicPlaylistFragment;->d(Lcom/vk/music/playlist/modern/MusicPlaylistFragment;)Lcom/vk/lists/PaginatedRecyclerAdapter;
 
     move-result-object v0
 
     if-eqz v0, :cond_0
 
-    invoke-virtual {v0}, Lcom/vk/lists/s;->k()V
+    invoke-virtual {v0}, Lcom/vk/lists/PaginatedRecyclerAdapter;->k()V
 
     :cond_0
     return-void
@@ -120,37 +120,37 @@
     .line 1
     iget-object v0, p0, Lcom/vk/music/playlist/modern/MusicPlaylistFragment$h;->a:Lcom/vk/music/playlist/modern/MusicPlaylistFragment;
 
-    invoke-static {v0}, Lcom/vk/music/playlist/modern/MusicPlaylistFragment;->d(Lcom/vk/music/playlist/modern/MusicPlaylistFragment;)Lcom/vk/lists/s;
+    invoke-static {v0}, Lcom/vk/music/playlist/modern/MusicPlaylistFragment;->d(Lcom/vk/music/playlist/modern/MusicPlaylistFragment;)Lcom/vk/lists/PaginatedRecyclerAdapter;
 
     move-result-object v0
 
     if-eqz v0, :cond_0
 
-    invoke-virtual {v0}, Lcom/vk/lists/s;->j()V
+    invoke-virtual {v0}, Lcom/vk/lists/PaginatedRecyclerAdapter;->j()V
 
     :cond_0
     return-void
 .end method
 
-.method public a(Lcom/vk/lists/h;)V
+.method public a(Lcom/vk/lists/EmptyViewConfiguration;)V
     .locals 0
 
     .line 3
     iget-object p1, p0, Lcom/vk/music/playlist/modern/MusicPlaylistFragment$h;->a:Lcom/vk/music/playlist/modern/MusicPlaylistFragment;
 
-    invoke-static {p1}, Lcom/vk/music/playlist/modern/MusicPlaylistFragment;->d(Lcom/vk/music/playlist/modern/MusicPlaylistFragment;)Lcom/vk/lists/s;
+    invoke-static {p1}, Lcom/vk/music/playlist/modern/MusicPlaylistFragment;->d(Lcom/vk/music/playlist/modern/MusicPlaylistFragment;)Lcom/vk/lists/PaginatedRecyclerAdapter;
 
     move-result-object p1
 
     if-eqz p1, :cond_0
 
-    invoke-virtual {p1}, Lcom/vk/lists/s;->v()V
+    invoke-virtual {p1}, Lcom/vk/lists/PaginatedRecyclerAdapter;->v()V
 
     :cond_0
     return-void
 .end method
 
-.method public a(Lcom/vk/lists/w;)V
+.method public a(Lcom/vk/lists/PagingOnScrollListener;)V
     .locals 2
 
     .line 4
@@ -162,9 +162,9 @@
 
     if-eqz v0, :cond_0
 
-    new-instance v1, Lcom/vk/lists/x;
+    new-instance v1, Lcom/vk/lists/PagingOnScrollListenerWrapper;
 
-    invoke-direct {v1, p1}, Lcom/vk/lists/x;-><init>(Lcom/vk/lists/w;)V
+    invoke-direct {v1, p1}, Lcom/vk/lists/PagingOnScrollListenerWrapper;-><init>(Lcom/vk/lists/PagingOnScrollListener;)V
 
     invoke-virtual {v0, v1}, Landroidx/recyclerview/widget/RecyclerView;->removeOnScrollListener(Landroidx/recyclerview/widget/RecyclerView$OnScrollListener;)V
 
@@ -172,7 +172,7 @@
     return-void
 .end method
 
-.method public a(Ljava/lang/Throwable;Lcom/vk/lists/i;)V
+.method public a(Ljava/lang/Throwable;Lcom/vk/lists/ErrorViewConfiguration;)V
     .locals 1
 
     .line 1
@@ -184,19 +184,19 @@
 
     if-eqz v0, :cond_0
 
-    invoke-virtual {v0, p1, p2}, Lcom/vk/music/playlist/modern/adapters/MusicPlaylistScreenAdapter;->a(Ljava/lang/Throwable;Lcom/vk/lists/i;)V
+    invoke-virtual {v0, p1, p2}, Lcom/vk/music/playlist/modern/adapters/MusicPlaylistScreenAdapter;->a(Ljava/lang/Throwable;Lcom/vk/lists/ErrorViewConfiguration;)V
 
     .line 2
     :cond_0
     iget-object p1, p0, Lcom/vk/music/playlist/modern/MusicPlaylistFragment$h;->a:Lcom/vk/music/playlist/modern/MusicPlaylistFragment;
 
-    invoke-static {p1}, Lcom/vk/music/playlist/modern/MusicPlaylistFragment;->d(Lcom/vk/music/playlist/modern/MusicPlaylistFragment;)Lcom/vk/lists/s;
+    invoke-static {p1}, Lcom/vk/music/playlist/modern/MusicPlaylistFragment;->d(Lcom/vk/music/playlist/modern/MusicPlaylistFragment;)Lcom/vk/lists/PaginatedRecyclerAdapter;
 
     move-result-object p1
 
     if-eqz p1, :cond_1
 
-    invoke-virtual {p1}, Lcom/vk/lists/s;->v()V
+    invoke-virtual {p1}, Lcom/vk/lists/PaginatedRecyclerAdapter;->v()V
 
     :cond_1
     return-void
@@ -208,19 +208,19 @@
     .line 1
     iget-object v0, p0, Lcom/vk/music/playlist/modern/MusicPlaylistFragment$h;->a:Lcom/vk/music/playlist/modern/MusicPlaylistFragment;
 
-    invoke-static {v0}, Lcom/vk/music/playlist/modern/MusicPlaylistFragment;->d(Lcom/vk/music/playlist/modern/MusicPlaylistFragment;)Lcom/vk/lists/s;
+    invoke-static {v0}, Lcom/vk/music/playlist/modern/MusicPlaylistFragment;->d(Lcom/vk/music/playlist/modern/MusicPlaylistFragment;)Lcom/vk/lists/PaginatedRecyclerAdapter;
 
     move-result-object v0
 
     if-eqz v0, :cond_0
 
-    invoke-virtual {v0}, Lcom/vk/lists/s;->v()V
+    invoke-virtual {v0}, Lcom/vk/lists/PaginatedRecyclerAdapter;->v()V
 
     :cond_0
     return-void
 .end method
 
-.method public b(Lcom/vk/lists/w;)V
+.method public b(Lcom/vk/lists/PagingOnScrollListener;)V
     .locals 2
 
     .line 1
@@ -232,9 +232,9 @@
 
     if-eqz v0, :cond_0
 
-    new-instance v1, Lcom/vk/lists/x;
+    new-instance v1, Lcom/vk/lists/PagingOnScrollListenerWrapper;
 
-    invoke-direct {v1, p1}, Lcom/vk/lists/x;-><init>(Lcom/vk/lists/w;)V
+    invoke-direct {v1, p1}, Lcom/vk/lists/PagingOnScrollListenerWrapper;-><init>(Lcom/vk/lists/PagingOnScrollListener;)V
 
     invoke-virtual {v0, v1}, Landroidx/recyclerview/widget/RecyclerView;->addOnScrollListener(Landroidx/recyclerview/widget/RecyclerView$OnScrollListener;)V
 
@@ -248,25 +248,25 @@
     .line 1
     iget-object v0, p0, Lcom/vk/music/playlist/modern/MusicPlaylistFragment$h;->a:Lcom/vk/music/playlist/modern/MusicPlaylistFragment;
 
-    invoke-static {v0}, Lcom/vk/music/playlist/modern/MusicPlaylistFragment;->d(Lcom/vk/music/playlist/modern/MusicPlaylistFragment;)Lcom/vk/lists/s;
+    invoke-static {v0}, Lcom/vk/music/playlist/modern/MusicPlaylistFragment;->d(Lcom/vk/music/playlist/modern/MusicPlaylistFragment;)Lcom/vk/lists/PaginatedRecyclerAdapter;
 
     move-result-object v0
 
     if-eqz v0, :cond_0
 
-    invoke-virtual {v0}, Lcom/vk/lists/s;->l()V
+    invoke-virtual {v0}, Lcom/vk/lists/PaginatedRecyclerAdapter;->l()V
 
     :cond_0
     return-void
 .end method
 
-.method public setDataObserver(Lkotlin/jvm/b/a;)V
+.method public setDataObserver(Lkotlin/jvm/b/Functions;)V
     .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lkotlin/jvm/b/a<",
-            "Lkotlin/m;",
+            "Lkotlin/jvm/b/Functions<",
+            "Lkotlin/Unit;",
             ">;)V"
         }
     .end annotation
@@ -274,13 +274,13 @@
     return-void
 .end method
 
-.method public setOnLoadNextRetryClickListener(Lkotlin/jvm/b/a;)V
+.method public setOnLoadNextRetryClickListener(Lkotlin/jvm/b/Functions;)V
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lkotlin/jvm/b/a<",
-            "Lkotlin/m;",
+            "Lkotlin/jvm/b/Functions<",
+            "Lkotlin/Unit;",
             ">;)V"
         }
     .end annotation
@@ -288,18 +288,18 @@
     .line 1
     iget-object v0, p0, Lcom/vk/music/playlist/modern/MusicPlaylistFragment$h;->a:Lcom/vk/music/playlist/modern/MusicPlaylistFragment;
 
-    invoke-static {v0, p1}, Lcom/vk/music/playlist/modern/MusicPlaylistFragment;->a(Lcom/vk/music/playlist/modern/MusicPlaylistFragment;Lkotlin/jvm/b/a;)V
+    invoke-static {v0, p1}, Lcom/vk/music/playlist/modern/MusicPlaylistFragment;->a(Lcom/vk/music/playlist/modern/MusicPlaylistFragment;Lkotlin/jvm/b/Functions;)V
 
     return-void
 .end method
 
-.method public setOnRefreshListener(Lkotlin/jvm/b/a;)V
+.method public setOnRefreshListener(Lkotlin/jvm/b/Functions;)V
     .locals 2
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lkotlin/jvm/b/a<",
-            "Lkotlin/m;",
+            "Lkotlin/jvm/b/Functions<",
+            "Lkotlin/Unit;",
             ">;)V"
         }
     .end annotation
@@ -315,9 +315,9 @@
 
     if-eqz p1, :cond_0
 
-    new-instance v1, Lcom/vk/music/playlist/modern/f;
+    new-instance v1, Lcom/vk/music/playlist/modern/MusicPlaylistFragment1;
 
-    invoke-direct {v1, p1}, Lcom/vk/music/playlist/modern/f;-><init>(Lkotlin/jvm/b/a;)V
+    invoke-direct {v1, p1}, Lcom/vk/music/playlist/modern/MusicPlaylistFragment1;-><init>(Lkotlin/jvm/b/Functions;)V
 
     move-object p1, v1
 
@@ -330,13 +330,13 @@
     return-void
 .end method
 
-.method public setOnReloadRetryClickListener(Lkotlin/jvm/b/a;)V
+.method public setOnReloadRetryClickListener(Lkotlin/jvm/b/Functions;)V
     .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lkotlin/jvm/b/a<",
-            "Lkotlin/m;",
+            "Lkotlin/jvm/b/Functions<",
+            "Lkotlin/Unit;",
             ">;)V"
         }
     .end annotation

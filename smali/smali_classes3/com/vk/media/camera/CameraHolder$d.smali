@@ -15,5 +15,5 @@
 
 
 # virtual methods
-.method public abstract a(Lcom/vk/media/camera/d$c;)V
+.method public abstract a(Lcom/vk/media/camera/CameraManager$c;)V
 .end method

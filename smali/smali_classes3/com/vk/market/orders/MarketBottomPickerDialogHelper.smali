@@ -30,17 +30,17 @@
     return-void
 .end method
 
-.method private final a(Landroid/content/Context;Lkotlin/jvm/b/a;)Lcom/vk/core/dialogs/adapter/ModalAdapter;
+.method private final a(Landroid/content/Context;Lkotlin/jvm/b/Functions;)Lcom/vk/core/dialogs/adapter/ModalAdapter;
     .locals 2
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
             "Landroid/content/Context;",
-            "Lkotlin/jvm/b/a<",
-            "Lkotlin/m;",
+            "Lkotlin/jvm/b/Functions<",
+            "Lkotlin/Unit;",
             ">;)",
             "Lcom/vk/core/dialogs/adapter/ModalAdapter<",
-            "Lcom/vk/market/orders/a;",
+            "Lcom/vk/market/orders/MarketBottomPickerDialogHelper1;",
             ">;"
         }
     .end annotation
@@ -64,12 +64,12 @@
 
     invoke-direct {p1}, Lcom/vk/market/orders/MarketBottomPickerDialogHelper$createVariantsAdapter$1;-><init>()V
 
-    invoke-virtual {v0, p1}, Lcom/vk/core/dialogs/adapter/ModalAdapter$a;->a(Lcom/vk/core/dialogs/adapter/a;)Lcom/vk/core/dialogs/adapter/ModalAdapter$a;
+    invoke-virtual {v0, p1}, Lcom/vk/core/dialogs/adapter/ModalAdapter$a;->a(Lcom/vk/core/dialogs/adapter/ModalAdapter1;)Lcom/vk/core/dialogs/adapter/ModalAdapter$a;
 
     .line 34
     new-instance p1, Lcom/vk/market/orders/MarketBottomPickerDialogHelper$a;
 
-    invoke-direct {p1, p2}, Lcom/vk/market/orders/MarketBottomPickerDialogHelper$a;-><init>(Lkotlin/jvm/b/a;)V
+    invoke-direct {p1, p2}, Lcom/vk/market/orders/MarketBottomPickerDialogHelper$a;-><init>(Lkotlin/jvm/b/Functions;)V
 
     invoke-virtual {v0, p1}, Lcom/vk/core/dialogs/adapter/ModalAdapter$a;->a(Lcom/vk/core/dialogs/adapter/ModalAdapter$b;)Lcom/vk/core/dialogs/adapter/ModalAdapter$a;
 
@@ -81,7 +81,7 @@
     return-object p1
 .end method
 
-.method public static synthetic a(Lcom/vk/market/orders/MarketBottomPickerDialogHelper;Landroid/content/Context;Ljava/util/List;Ljava/lang/String;Ljava/lang/String;Lkotlin/jvm/b/a;ILjava/lang/Object;)V
+.method public static synthetic a(Lcom/vk/market/orders/MarketBottomPickerDialogHelper;Landroid/content/Context;Ljava/util/List;Ljava/lang/String;Ljava/lang/String;Lkotlin/jvm/b/Functions;ILjava/lang/Object;)V
     .locals 7
 
     and-int/lit8 p7, p6, 0x8
@@ -119,41 +119,41 @@
     move-object v4, p3
 
     .line 1
-    invoke-virtual/range {v1 .. v6}, Lcom/vk/market/orders/MarketBottomPickerDialogHelper;->a(Landroid/content/Context;Ljava/util/List;Ljava/lang/String;Ljava/lang/String;Lkotlin/jvm/b/a;)V
+    invoke-virtual/range {v1 .. v6}, Lcom/vk/market/orders/MarketBottomPickerDialogHelper;->a(Landroid/content/Context;Ljava/util/List;Ljava/lang/String;Ljava/lang/String;Lkotlin/jvm/b/Functions;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a(Landroid/content/Context;Ljava/util/List;Ljava/lang/String;Ljava/lang/String;Lkotlin/jvm/b/a;)V
+.method public final a(Landroid/content/Context;Ljava/util/List;Ljava/lang/String;Ljava/lang/String;Lkotlin/jvm/b/Functions;)V
     .locals 5
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
             "Landroid/content/Context;",
             "Ljava/util/List<",
-            "Lcom/vk/market/orders/a;",
+            "Lcom/vk/market/orders/MarketBottomPickerDialogHelper1;",
             ">;",
             "Ljava/lang/String;",
             "Ljava/lang/String;",
-            "Lkotlin/jvm/b/a<",
-            "Lkotlin/m;",
+            "Lkotlin/jvm/b/Functions<",
+            "Lkotlin/Unit;",
             ">;)V"
         }
     .end annotation
 
     .line 2
-    new-instance v0, Lcom/vk/market/orders/b;
+    new-instance v0, Lcom/vk/market/orders/MarketBottomPickerDialogHelper2;
 
-    invoke-direct {v0}, Lcom/vk/market/orders/b;-><init>()V
+    invoke-direct {v0}, Lcom/vk/market/orders/MarketBottomPickerDialogHelper2;-><init>()V
 
     .line 3
     new-instance v1, Lcom/vk/market/orders/MarketBottomPickerDialogHelper$showDialog$adapter$1;
 
-    invoke-direct {v1, v0}, Lcom/vk/market/orders/MarketBottomPickerDialogHelper$showDialog$adapter$1;-><init>(Lcom/vk/market/orders/b;)V
+    invoke-direct {v1, v0}, Lcom/vk/market/orders/MarketBottomPickerDialogHelper$showDialog$adapter$1;-><init>(Lcom/vk/market/orders/MarketBottomPickerDialogHelper2;)V
 
-    invoke-direct {p0, p1, v1}, Lcom/vk/market/orders/MarketBottomPickerDialogHelper;->a(Landroid/content/Context;Lkotlin/jvm/b/a;)Lcom/vk/core/dialogs/adapter/ModalAdapter;
+    invoke-direct {p0, p1, v1}, Lcom/vk/market/orders/MarketBottomPickerDialogHelper;->a(Landroid/content/Context;Lkotlin/jvm/b/Functions;)Lcom/vk/core/dialogs/adapter/ModalAdapter;
 
     move-result-object v1
 
@@ -161,16 +161,16 @@
     invoke-virtual {v1, p2}, Lcom/vk/core/dialogs/adapter/ModalAdapter;->setItems(Ljava/util/List;)V
 
     .line 5
-    new-instance p2, Lcom/vk/core/dialogs/bottomsheet/c;
+    new-instance p2, Lcom/vk/core/dialogs/bottomsheet/ContentSnapStrategy1;
 
     const/4 v2, 0x0
 
-    invoke-direct {p2, v2}, Lcom/vk/core/dialogs/bottomsheet/c;-><init>(Z)V
+    invoke-direct {p2, v2}, Lcom/vk/core/dialogs/bottomsheet/ContentSnapStrategy1;-><init>(Z)V
 
     const v3, 0x3dcccccd    # 0.1f
 
     .line 6
-    invoke-virtual {p2, v3}, Lcom/vk/core/dialogs/bottomsheet/c;->a(F)V
+    invoke-virtual {p2, v3}, Lcom/vk/core/dialogs/bottomsheet/ContentSnapStrategy1;->a(F)V
 
     .line 7
     new-instance v3, Landroidx/recyclerview/widget/RecyclerView;
@@ -201,12 +201,12 @@
     invoke-direct {v1}, Lcom/vk/market/orders/MarketBottomPickerDialogHelper$b;-><init>()V
 
     .line 13
-    new-instance v4, Lcom/vk/core/ui/m;
+    new-instance v4, Lcom/vk/core/ui/MilkshakeDecoration;
 
-    invoke-direct {v4}, Lcom/vk/core/ui/m;-><init>()V
+    invoke-direct {v4}, Lcom/vk/core/ui/MilkshakeDecoration;-><init>()V
 
     .line 14
-    invoke-virtual {v4, v1}, Lcom/vk/core/ui/m;->a(Lcom/vk/core/ui/n;)Lcom/vk/core/ui/m;
+    invoke-virtual {v4, v1}, Lcom/vk/core/ui/MilkshakeDecoration;->a(Lcom/vk/core/ui/MilkshakeProvider;)Lcom/vk/core/ui/MilkshakeDecoration;
 
     const/16 v1, 0x18
 
@@ -215,37 +215,37 @@
 
     move-result v1
 
-    invoke-virtual {v4, v1}, Lcom/vk/core/ui/m;->a(I)Lcom/vk/core/ui/m;
+    invoke-virtual {v4, v1}, Lcom/vk/core/ui/MilkshakeDecoration;->a(I)Lcom/vk/core/ui/MilkshakeDecoration;
 
     .line 16
     invoke-virtual {v3, v4}, Landroidx/recyclerview/widget/RecyclerView;->addItemDecoration(Landroidx/recyclerview/widget/RecyclerView$ItemDecoration;)V
 
     .line 17
-    new-instance v1, Lcom/vk/core/dialogs/bottomsheet/e$a;
+    new-instance v1, Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet$a;
 
-    invoke-direct {v1, p1}, Lcom/vk/core/dialogs/bottomsheet/e$a;-><init>(Landroid/content/Context;)V
+    invoke-direct {v1, p1}, Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet$a;-><init>(Landroid/content/Context;)V
 
     .line 18
-    invoke-virtual {v1, p3}, Lcom/vk/core/dialogs/bottomsheet/e$a;->d(Ljava/lang/CharSequence;)Lcom/vk/core/dialogs/bottomsheet/e$a;
+    invoke-virtual {v1, p3}, Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet$a;->d(Ljava/lang/CharSequence;)Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet$a;
 
     const p1, 0x7f040095
 
     .line 19
-    invoke-virtual {v1, p1}, Lcom/vk/core/dialogs/bottomsheet/e$a;->c(I)Lcom/vk/core/dialogs/bottomsheet/e$a;
+    invoke-virtual {v1, p1}, Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet$a;->c(I)Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet$a;
 
     .line 20
-    invoke-virtual {v1, v3}, Lcom/vk/core/dialogs/bottomsheet/e$a;->d(Landroid/view/View;)Lcom/vk/core/dialogs/bottomsheet/e$a;
+    invoke-virtual {v1, v3}, Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet$a;->d(Landroid/view/View;)Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet$a;
 
     .line 21
-    invoke-virtual {v1, p2}, Lcom/vk/core/dialogs/bottomsheet/e$a;->a(Lcom/vk/core/dialogs/bottomsheet/b;)Lcom/vk/core/dialogs/bottomsheet/e$a;
+    invoke-virtual {v1, p2}, Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet$a;->a(Lcom/vk/core/dialogs/bottomsheet/ContentSnapStrategy2;)Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet$a;
 
     const/4 p1, 0x1
 
     .line 22
-    invoke-virtual {v1, p1}, Lcom/vk/core/dialogs/bottomsheet/e$a;->h(Z)Lcom/vk/core/dialogs/bottomsheet/e$a;
+    invoke-virtual {v1, p1}, Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet$a;->h(Z)Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet$a;
 
     .line 23
-    invoke-virtual {v1}, Lcom/vk/core/dialogs/bottomsheet/e$a;->c()Lcom/vk/core/dialogs/bottomsheet/e$a;
+    invoke-virtual {v1}, Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet$a;->c()Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet$a;
 
     if-eqz p4, :cond_0
 
@@ -278,24 +278,24 @@
     invoke-virtual {p2, p3, v2, p4, v3}, Landroid/text/SpannableStringBuilder;->setSpan(Ljava/lang/Object;III)V
 
     .line 28
-    invoke-virtual {v1, p2}, Lcom/vk/core/dialogs/bottomsheet/e$a;->b(Ljava/lang/CharSequence;)Lcom/vk/core/dialogs/bottomsheet/e$a;
+    invoke-virtual {v1, p2}, Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet$a;->b(Ljava/lang/CharSequence;)Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet$a;
 
     .line 29
     new-instance p2, Lcom/vk/market/orders/MarketBottomPickerDialogHelper$showDialog$1;
 
-    invoke-direct {p2, v0, p5}, Lcom/vk/market/orders/MarketBottomPickerDialogHelper$showDialog$1;-><init>(Lcom/vk/market/orders/b;Lkotlin/jvm/b/a;)V
+    invoke-direct {p2, v0, p5}, Lcom/vk/market/orders/MarketBottomPickerDialogHelper$showDialog$1;-><init>(Lcom/vk/market/orders/MarketBottomPickerDialogHelper2;Lkotlin/jvm/b/Functions;)V
 
-    invoke-virtual {v1, p2}, Lcom/vk/core/dialogs/bottomsheet/e$a;->a(Lkotlin/jvm/b/b;)Lcom/vk/core/dialogs/bottomsheet/e$a;
+    invoke-virtual {v1, p2}, Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet$a;->a(Lkotlin/jvm/b/Functions2;)Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet$a;
 
     :cond_0
     const/4 p2, 0x0
 
     .line 30
-    invoke-static {v1, p2, p1, p2}, Lcom/vk/core/dialogs/bottomsheet/e$a;->a(Lcom/vk/core/dialogs/bottomsheet/e$a;Ljava/lang/String;ILjava/lang/Object;)Lcom/vk/core/dialogs/bottomsheet/e;
+    invoke-static {v1, p2, p1, p2}, Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet$a;->a(Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet$a;Ljava/lang/String;ILjava/lang/Object;)Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet;
 
     move-result-object p1
 
-    invoke-virtual {v0, p1}, Lcom/vk/market/orders/b;->a(Lcom/vk/core/dialogs/bottomsheet/e;)V
+    invoke-virtual {v0, p1}, Lcom/vk/market/orders/MarketBottomPickerDialogHelper2;->a(Lcom/vk/core/dialogs/bottomsheet/ModalBottomSheet;)V
 
     return-void
 .end method

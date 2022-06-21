@@ -4,7 +4,7 @@
 
 
 # virtual methods
-.method public abstract getParams()Lcom/my/tracker/c;
+.method public abstract getParams()Lcom/my/tracker/TrackerParams;
 .end method
 
 .method public abstract init()V

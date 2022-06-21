@@ -3,7 +3,7 @@
 .source "StickersArrangers.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/d;
+.implements Lkotlin/jvm/b/Functions4;
 
 
 # annotations
@@ -19,11 +19,11 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/d<",
+        "Lkotlin/jvm/b/Functions4<",
         "Ljava/lang/Integer;",
         "Ljava/lang/Integer;",
         "Lcom/vk/attachpicker/stickers/ISticker;",
-        "Lkotlin/m;",
+        "Lkotlin/Unit;",
         ">;"
     }
 .end annotation
@@ -77,7 +77,7 @@
 
     invoke-virtual {p0, p1, p2, p3}, Lcom/vk/stories/clickable/StickersArrangersKt$CENTER$1;->a(IILcom/vk/attachpicker/stickers/ISticker;)V
 
-    sget-object p1, Lkotlin/m;->a:Lkotlin/m;
+    sget-object p1, Lkotlin/Unit;->a:Lkotlin/Unit;
 
     return-object p1
 .end method

@@ -3,12 +3,12 @@
 .source "BaseCheckSignUpPresenter.kt"
 
 # interfaces
-.implements Lc/a/z/a;
+.implements Lio/reactivex/functions/Action;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/auth/verification/base/BaseCheckSignUpPresenter;->a(Lc/a/m;)V
+    value = Lcom/vk/auth/verification/base/BaseCheckSignUpPresenter;->a(Lio/reactivex/Observable;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;

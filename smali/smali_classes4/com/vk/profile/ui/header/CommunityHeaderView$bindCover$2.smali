@@ -3,12 +3,12 @@
 .source "CommunityHeaderView.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/b;
+.implements Lkotlin/jvm/b/Functions2;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/profile/ui/header/CommunityHeaderView;->a(Lcom/vtosters/lite/api/i;Lcom/vk/profile/presenter/CommunityPresenter;)V
+    value = Lcom/vk/profile/ui/header/CommunityHeaderView;->a(Lcom/vtosters/lite/api/ExtendedCommunityProfile;Lcom/vk/profile/presenter/CommunityPresenter;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -19,27 +19,27 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/b<",
+        "Lkotlin/jvm/b/Functions2<",
         "Landroid/view/View;",
-        "Lkotlin/m;",
+        "Lkotlin/Unit;",
         ">;"
     }
 .end annotation
 
 
 # instance fields
-.field final synthetic $profile:Lcom/vtosters/lite/api/i;
+.field final synthetic $profile:Lcom/vtosters/lite/api/ExtendedCommunityProfile;
 
 .field final synthetic this$0:Lcom/vk/profile/ui/header/CommunityHeaderView;
 
 
 # direct methods
-.method constructor <init>(Lcom/vk/profile/ui/header/CommunityHeaderView;Lcom/vtosters/lite/api/i;)V
+.method constructor <init>(Lcom/vk/profile/ui/header/CommunityHeaderView;Lcom/vtosters/lite/api/ExtendedCommunityProfile;)V
     .locals 0
 
     iput-object p1, p0, Lcom/vk/profile/ui/header/CommunityHeaderView$bindCover$2;->this$0:Lcom/vk/profile/ui/header/CommunityHeaderView;
 
-    iput-object p2, p0, Lcom/vk/profile/ui/header/CommunityHeaderView$bindCover$2;->$profile:Lcom/vtosters/lite/api/i;
+    iput-object p2, p0, Lcom/vk/profile/ui/header/CommunityHeaderView$bindCover$2;->$profile:Lcom/vtosters/lite/api/ExtendedCommunityProfile;
 
     const/4 p1, 0x1
 
@@ -54,7 +54,7 @@
     .locals 1
 
     .line 1
-    iget-object v0, p0, Lcom/vk/profile/ui/header/CommunityHeaderView$bindCover$2;->$profile:Lcom/vtosters/lite/api/i;
+    iget-object v0, p0, Lcom/vk/profile/ui/header/CommunityHeaderView$bindCover$2;->$profile:Lcom/vtosters/lite/api/ExtendedCommunityProfile;
 
     iget-object v0, v0, Lcom/vtosters/lite/api/ExtendedUserProfile;->z:Lcom/vk/dto/photo/Photo;
 
@@ -68,7 +68,7 @@
 
     const-string v0, "profile.coverPhoto.getIm\u2026ByWidth(it.measuredWidth)"
 
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {p1}, Lcom/vk/dto/common/ImageSize;->v1()Ljava/lang/String;
 
@@ -107,7 +107,7 @@
 
     invoke-virtual {p0, p1}, Lcom/vk/profile/ui/header/CommunityHeaderView$bindCover$2;->a(Landroid/view/View;)V
 
-    sget-object p1, Lkotlin/m;->a:Lkotlin/m;
+    sget-object p1, Lkotlin/Unit;->a:Lkotlin/Unit;
 
     return-object p1
 .end method

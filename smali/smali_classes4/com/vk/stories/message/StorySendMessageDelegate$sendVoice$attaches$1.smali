@@ -3,12 +3,12 @@
 .source "StorySendMessageDelegate.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/b;
+.implements Lkotlin/jvm/b/Functions2;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/stories/message/StorySendMessageDelegate;->a(Lcom/vk/im/engine/models/attaches/AttachAudioMsg;Lcom/vk/stories/message/b;)Z
+    value = Lcom/vk/stories/message/StorySendMessageDelegate;->a(Lcom/vk/im/engine/models/attaches/AttachAudioMsg;Lcom/vk/stories/message/StorySendMessagePresenter;)Z
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -19,7 +19,7 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/b<",
+        "Lkotlin/jvm/b/Functions2<",
         "Lcom/vk/dto/common/Attachment;",
         "Lcom/vk/im/engine/models/attaches/Attach;",
         ">;"
@@ -60,9 +60,9 @@
     .locals 1
 
     .line 1
-    sget-object v0, Lcom/vtosters/lite/im/a;->a:Lcom/vtosters/lite/im/a;
+    sget-object v0, Lcom/vtosters/lite/im/AppAttachToImAttachConverter;->a:Lcom/vtosters/lite/im/AppAttachToImAttachConverter;
 
-    invoke-virtual {v0, p1}, Lcom/vtosters/lite/im/a;->a(Lcom/vk/dto/common/Attachment;)Lcom/vk/im/engine/models/attaches/Attach;
+    invoke-virtual {v0, p1}, Lcom/vtosters/lite/im/AppAttachToImAttachConverter;->a(Lcom/vk/dto/common/Attachment;)Lcom/vk/im/engine/models/attaches/Attach;
 
     move-result-object p1
 

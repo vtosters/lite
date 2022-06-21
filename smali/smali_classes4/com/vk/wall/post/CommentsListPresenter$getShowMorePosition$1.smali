@@ -3,7 +3,7 @@
 .source "CommentsListPresenter.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/b;
+.implements Lkotlin/jvm/b/Functions2;
 
 
 # annotations
@@ -19,8 +19,8 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/b<",
-        "Lcom/vk/wall/b;",
+        "Lkotlin/jvm/b/Functions2<",
+        "Lcom/vk/wall/CommentDisplayItem;",
         "Ljava/lang/Boolean;",
         ">;"
     }
@@ -46,29 +46,29 @@
 
 
 # virtual methods
-.method public final a(Lcom/vk/wall/b;)Z
+.method public final a(Lcom/vk/wall/CommentDisplayItem;)Z
     .locals 2
 
     .line 1
-    invoke-virtual {p1}, Lcom/vk/wall/b;->d()I
+    invoke-virtual {p1}, Lcom/vk/wall/CommentDisplayItem;->d()I
 
     move-result v0
 
-    sget-object v1, Lcom/vtosters/lite/o0/a;->H:Lcom/vtosters/lite/o0/a$a;
+    sget-object v1, Lcom/vtosters/lite/o0/CommentsAdapter;->H:Lcom/vtosters/lite/o0/CommentsAdapter$a;
 
-    invoke-virtual {v1}, Lcom/vtosters/lite/o0/a$a;->h()I
+    invoke-virtual {v1}, Lcom/vtosters/lite/o0/CommentsAdapter$a;->h()I
 
     move-result v1
 
     if-ne v0, v1, :cond_0
 
-    invoke-virtual {p1}, Lcom/vk/wall/b;->a()Lcom/vtosters/lite/q;
+    invoke-virtual {p1}, Lcom/vk/wall/CommentDisplayItem;->a()Lcom/vtosters/lite/Comment;
 
     move-result-object p1
 
     iget-object v0, p0, Lcom/vk/wall/post/CommentsListPresenter$getShowMorePosition$1;->$comment:Lcom/vtosters/lite/NewsComment;
 
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result p1
 
@@ -89,9 +89,9 @@
     .locals 0
 
     .line 1
-    check-cast p1, Lcom/vk/wall/b;
+    check-cast p1, Lcom/vk/wall/CommentDisplayItem;
 
-    invoke-virtual {p0, p1}, Lcom/vk/wall/post/CommentsListPresenter$getShowMorePosition$1;->a(Lcom/vk/wall/b;)Z
+    invoke-virtual {p0, p1}, Lcom/vk/wall/post/CommentsListPresenter$getShowMorePosition$1;->a(Lcom/vk/wall/CommentDisplayItem;)Z
 
     move-result p1
 

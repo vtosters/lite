@@ -3,7 +3,7 @@
 .source "ArticleProfileItemHolder.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/b;
+.implements Lkotlin/jvm/b/Functions2;
 
 
 # annotations
@@ -19,9 +19,9 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/b<",
+        "Lkotlin/jvm/b/Functions2<",
         "Landroid/view/View;",
-        "Lkotlin/m;",
+        "Lkotlin/Unit;",
         ">;"
     }
 .end annotation
@@ -64,11 +64,11 @@
 
     iget-object p1, p0, Lcom/vk/profile/adapter/holders/ArticleProfileItemHolder$1;->this$0:Lcom/vk/profile/adapter/holders/ArticleProfileItemHolder;
 
-    invoke-static {p1}, Lcom/vk/profile/adapter/holders/ArticleProfileItemHolder;->b(Lcom/vk/profile/adapter/holders/ArticleProfileItemHolder;)Lcom/vk/profile/adapter/items/a;
+    invoke-static {p1}, Lcom/vk/profile/adapter/holders/ArticleProfileItemHolder;->b(Lcom/vk/profile/adapter/holders/ArticleProfileItemHolder;)Lcom/vk/profile/adapter/items/ArticleProfileItem;
 
     move-result-object p1
 
-    invoke-virtual {p1}, Lcom/vk/profile/adapter/items/a;->c()Lcom/vk/dto/articles/Article;
+    invoke-virtual {p1}, Lcom/vk/profile/adapter/items/ArticleProfileItem;->c()Lcom/vk/dto/articles/Article;
 
     move-result-object v2
 
@@ -85,7 +85,7 @@
     invoke-static/range {v0 .. v7}, Lcom/vk/articles/ArticleFragment$a;->a(Lcom/vk/articles/ArticleFragment$a;Landroid/content/Context;Lcom/vk/dto/articles/Article;Lcom/vk/dto/attachments/SnippetAttachment;Lcom/vk/articles/preload/QueryParameters;Ljava/lang/String;ILjava/lang/Object;)V
 
     .line 2
-    new-instance p1, Lcom/vk/profile/e/b;
+    new-instance p1, Lcom/vk/profile/e/CommunityScreenTracker1;
 
     iget-object v0, p0, Lcom/vk/profile/adapter/holders/ArticleProfileItemHolder$1;->$profile:Lcom/vtosters/lite/api/ExtendedUserProfile;
 
@@ -93,7 +93,7 @@
 
     iget v0, v0, Lcom/vk/dto/user/UserProfile;->b:I
 
-    invoke-direct {p1, v0}, Lcom/vk/profile/e/b;-><init>(I)V
+    invoke-direct {p1, v0}, Lcom/vk/profile/e/CommunityScreenTracker1;-><init>(I)V
 
     .line 3
     invoke-static {}, Lcom/vk/profile/data/ProfileCountersKt;->c()Lcom/vk/profile/data/CountersWrapper;
@@ -104,25 +104,25 @@
 
     move-result v0
 
-    invoke-static {v0}, Lcom/vk/profile/e/c;->a(I)Ljava/lang/String;
+    invoke-static {v0}, Lcom/vk/profile/e/CommunityScreenTracker;->a(I)Ljava/lang/String;
 
     move-result-object v0
 
-    invoke-virtual {p1, v0}, Lcom/vk/profile/e/b;->a(Ljava/lang/String;)Lcom/vk/profile/e/b;
+    invoke-virtual {p1, v0}, Lcom/vk/profile/e/CommunityScreenTracker1;->a(Ljava/lang/String;)Lcom/vk/profile/e/CommunityScreenTracker1;
 
     const-string v0, "element"
 
     .line 4
-    invoke-virtual {p1, v0}, Lcom/vk/profile/e/b;->d(Ljava/lang/String;)Lcom/vk/profile/e/b;
+    invoke-virtual {p1, v0}, Lcom/vk/profile/e/CommunityScreenTracker1;->d(Ljava/lang/String;)Lcom/vk/profile/e/CommunityScreenTracker1;
 
     .line 5
     iget-object v0, p0, Lcom/vk/profile/adapter/holders/ArticleProfileItemHolder$1;->this$0:Lcom/vk/profile/adapter/holders/ArticleProfileItemHolder;
 
-    invoke-static {v0}, Lcom/vk/profile/adapter/holders/ArticleProfileItemHolder;->b(Lcom/vk/profile/adapter/holders/ArticleProfileItemHolder;)Lcom/vk/profile/adapter/items/a;
+    invoke-static {v0}, Lcom/vk/profile/adapter/holders/ArticleProfileItemHolder;->b(Lcom/vk/profile/adapter/holders/ArticleProfileItemHolder;)Lcom/vk/profile/adapter/items/ArticleProfileItem;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/vk/profile/adapter/items/a;->c()Lcom/vk/dto/articles/Article;
+    invoke-virtual {v0}, Lcom/vk/profile/adapter/items/ArticleProfileItem;->c()Lcom/vk/dto/articles/Article;
 
     move-result-object v0
 
@@ -134,10 +134,10 @@
 
     move-result-object v0
 
-    invoke-virtual {p1, v0}, Lcom/vk/profile/e/b;->b(Ljava/lang/String;)Lcom/vk/profile/e/b;
+    invoke-virtual {p1, v0}, Lcom/vk/profile/e/CommunityScreenTracker1;->b(Ljava/lang/String;)Lcom/vk/profile/e/CommunityScreenTracker1;
 
     .line 6
-    invoke-virtual {p1}, Lcom/vk/profile/e/b;->a()V
+    invoke-virtual {p1}, Lcom/vk/profile/e/CommunityScreenTracker1;->a()V
 
     return-void
 .end method
@@ -150,7 +150,7 @@
 
     invoke-virtual {p0, p1}, Lcom/vk/profile/adapter/holders/ArticleProfileItemHolder$1;->a(Landroid/view/View;)V
 
-    sget-object p1, Lkotlin/m;->a:Lkotlin/m;
+    sget-object p1, Lkotlin/Unit;->a:Lkotlin/Unit;
 
     return-object p1
 .end method

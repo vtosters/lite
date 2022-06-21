@@ -12,7 +12,7 @@
 
 
 # static fields
-.field static final synthetic a:[Lkotlin/u/j;
+.field static final synthetic a:[Lkotlin/u/KProperty5;
 
 .field private static b:Lcom/vk/stat/Stat$a;
 
@@ -26,7 +26,7 @@
     .end annotation
 .end field
 
-.field private static d:Lcom/vk/stat/storage/b;
+.field private static d:Lcom/vk/stat/storage/StateStorage;
 
 .field public static volatile e:Ljava/util/concurrent/atomic/AtomicReference;
     .annotation system Ldalvik/annotation/Signature;
@@ -38,17 +38,17 @@
     .end annotation
 .end field
 
-.field private static f:Lcom/vk/stat/storage/b;
+.field private static f:Lcom/vk/stat/storage/StateStorage;
 
-.field private static final g:Lkotlin/e;
+.field private static final g:Lkotlin/Lazy2;
 
-.field private static final h:Lcom/vk/stat/utils/c;
+.field private static final h:Lcom/vk/stat/utils/EventGenerator;
 
-.field private static i:Lcom/vk/stat/c/c;
+.field private static i:Lcom/vk/stat/c/SendDaemon;
 
-.field private static j:Lcom/vk/stat/storage/c;
+.field private static j:Lcom/vk/stat/storage/Storage;
 
-.field private static volatile k:Lcom/vk/stat/utils/b;
+.field private static volatile k:Lcom/vk/stat/utils/EventFilter;
 
 .field public static final l:Lcom/vk/stat/Stat;
 
@@ -59,13 +59,13 @@
 
     const/4 v0, 0x1
 
-    new-array v1, v0, [Lkotlin/u/j;
+    new-array v1, v0, [Lkotlin/u/KProperty5;
 
     new-instance v2, Lkotlin/jvm/internal/PropertyReference1Impl;
 
     const-class v3, Lcom/vk/stat/Stat;
 
-    invoke-static {v3}, Lkotlin/jvm/internal/o;->a(Ljava/lang/Class;)Lkotlin/u/c;
+    invoke-static {v3}, Lkotlin/jvm/internal/Reflection;->a(Ljava/lang/Class;)Lkotlin/u/KClass;
 
     move-result-object v3
 
@@ -73,15 +73,15 @@
 
     const-string v5, "getActionThread()Ljava/util/concurrent/ExecutorService;"
 
-    invoke-direct {v2, v3, v4, v5}, Lkotlin/jvm/internal/PropertyReference1Impl;-><init>(Lkotlin/u/e;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-direct {v2, v3, v4, v5}, Lkotlin/jvm/internal/PropertyReference1Impl;-><init>(Lkotlin/u/KDeclarationContainer;Ljava/lang/String;Ljava/lang/String;)V
 
-    invoke-static {v2}, Lkotlin/jvm/internal/o;->a(Lkotlin/jvm/internal/PropertyReference1;)Lkotlin/u/l;
+    invoke-static {v2}, Lkotlin/jvm/internal/Reflection;->a(Lkotlin/jvm/internal/PropertyReference1;)Lkotlin/u/KProperty2;
 
     const/4 v3, 0x0
 
     aput-object v2, v1, v3
 
-    sput-object v1, Lcom/vk/stat/Stat;->a:[Lkotlin/u/j;
+    sput-object v1, Lcom/vk/stat/Stat;->a:[Lkotlin/u/KProperty5;
 
     .line 1
     new-instance v1, Lcom/vk/stat/Stat;
@@ -93,27 +93,27 @@
     .line 2
     sget-object v1, Lcom/vk/stat/Stat$actionThread$2;->a:Lcom/vk/stat/Stat$actionThread$2;
 
-    invoke-static {v1}, Lkotlin/g;->a(Lkotlin/jvm/b/a;)Lkotlin/e;
+    invoke-static {v1}, Lkotlin/g;->a(Lkotlin/jvm/b/Functions;)Lkotlin/Lazy2;
 
     move-result-object v1
 
-    sput-object v1, Lcom/vk/stat/Stat;->g:Lkotlin/e;
+    sput-object v1, Lcom/vk/stat/Stat;->g:Lkotlin/Lazy2;
 
     .line 3
-    new-instance v1, Lcom/vk/stat/utils/c;
+    new-instance v1, Lcom/vk/stat/utils/EventGenerator;
 
-    invoke-direct {v1}, Lcom/vk/stat/utils/c;-><init>()V
+    invoke-direct {v1}, Lcom/vk/stat/utils/EventGenerator;-><init>()V
 
-    sput-object v1, Lcom/vk/stat/Stat;->h:Lcom/vk/stat/utils/c;
+    sput-object v1, Lcom/vk/stat/Stat;->h:Lcom/vk/stat/utils/EventGenerator;
 
     .line 4
-    new-instance v1, Lcom/vk/stat/utils/b;
+    new-instance v1, Lcom/vk/stat/utils/EventFilter;
 
     const/4 v2, 0x0
 
-    invoke-direct {v1, v2, v0, v2}, Lcom/vk/stat/utils/b;-><init>(Ljava/util/List;ILkotlin/jvm/internal/i;)V
+    invoke-direct {v1, v2, v0, v2}, Lcom/vk/stat/utils/EventFilter;-><init>(Ljava/util/List;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
-    sput-object v1, Lcom/vk/stat/Stat;->k:Lcom/vk/stat/utils/b;
+    sput-object v1, Lcom/vk/stat/Stat;->k:Lcom/vk/stat/utils/EventFilter;
 
     return-void
 .end method
@@ -127,16 +127,16 @@
     return-void
 .end method
 
-.method public static final synthetic a(Lcom/vk/stat/Stat;)Lcom/vk/stat/utils/b;
+.method public static final synthetic a(Lcom/vk/stat/Stat;)Lcom/vk/stat/utils/EventFilter;
     .locals 0
 
     .line 1
-    sget-object p0, Lcom/vk/stat/Stat;->k:Lcom/vk/stat/utils/b;
+    sget-object p0, Lcom/vk/stat/Stat;->k:Lcom/vk/stat/utils/EventFilter;
 
     return-object p0
 .end method
 
-.method public static synthetic a(Lcom/vk/stat/Stat;Lcom/vk/stat/a/d;ZZLjava/lang/Long;ILjava/lang/Object;)V
+.method public static synthetic a(Lcom/vk/stat/Stat;Lcom/vk/stat/a/StatEvent5;ZZLjava/lang/Long;ILjava/lang/Object;)V
     .locals 0
 
     and-int/lit8 p6, p5, 0x4
@@ -154,7 +154,7 @@
 
     .line 19
     :cond_1
-    invoke-virtual {p0, p1, p2, p3, p4}, Lcom/vk/stat/Stat;->a(Lcom/vk/stat/a/d;ZZLjava/lang/Long;)V
+    invoke-virtual {p0, p1, p2, p3, p4}, Lcom/vk/stat/Stat;->a(Lcom/vk/stat/a/StatEvent5;ZZLjava/lang/Long;)V
 
     return-void
 .end method
@@ -187,7 +187,7 @@
     return-void
 .end method
 
-.method private final a(Lcom/vk/stat/a/d;)Z
+.method private final a(Lcom/vk/stat/a/StatEvent5;)Z
     .locals 1
 
     .line 37
@@ -203,9 +203,9 @@
 
     .line 38
     :cond_0
-    sget-object v0, Lcom/vk/stat/Stat;->k:Lcom/vk/stat/utils/b;
+    sget-object v0, Lcom/vk/stat/Stat;->k:Lcom/vk/stat/utils/EventFilter;
 
-    invoke-virtual {v0, p1}, Lcom/vk/stat/utils/b;->a(Lcom/vk/stat/a/d;)Z
+    invoke-virtual {v0, p1}, Lcom/vk/stat/utils/EventFilter;->a(Lcom/vk/stat/a/StatEvent5;)Z
 
     move-result p1
 
@@ -221,11 +221,11 @@
     return-object p0
 .end method
 
-.method public static final synthetic c(Lcom/vk/stat/Stat;)Lcom/vk/stat/storage/c;
+.method public static final synthetic c(Lcom/vk/stat/Stat;)Lcom/vk/stat/storage/Storage;
     .locals 0
 
     .line 1
-    sget-object p0, Lcom/vk/stat/Stat;->j:Lcom/vk/stat/storage/c;
+    sget-object p0, Lcom/vk/stat/Stat;->j:Lcom/vk/stat/storage/Storage;
 
     return-object p0
 .end method
@@ -233,15 +233,15 @@
 .method private final j()Ljava/util/concurrent/ExecutorService;
     .locals 3
 
-    sget-object v0, Lcom/vk/stat/Stat;->g:Lkotlin/e;
+    sget-object v0, Lcom/vk/stat/Stat;->g:Lkotlin/Lazy2;
 
-    sget-object v1, Lcom/vk/stat/Stat;->a:[Lkotlin/u/j;
+    sget-object v1, Lcom/vk/stat/Stat;->a:[Lkotlin/u/KProperty5;
 
     const/4 v2, 0x0
 
     aget-object v1, v1, v2
 
-    invoke-interface {v0}, Lkotlin/e;->getValue()Ljava/lang/Object;
+    invoke-interface {v0}, Lkotlin/Lazy2;->getValue()Ljava/lang/Object;
 
     move-result-object v0
 
@@ -262,11 +262,11 @@
 
     if-eqz v0, :cond_0
 
-    sget-object v0, Lcom/vk/stat/Stat;->i:Lcom/vk/stat/c/c;
+    sget-object v0, Lcom/vk/stat/Stat;->i:Lcom/vk/stat/c/SendDaemon;
 
     if-eqz v0, :cond_0
 
-    invoke-interface {v0}, Lcom/vk/stat/c/c;->start()V
+    invoke-interface {v0}, Lcom/vk/stat/c/SendDaemon;->start()V
 
     :cond_0
     return-void
@@ -284,11 +284,11 @@
 
     if-eqz v0, :cond_0
 
-    sget-object v0, Lcom/vk/stat/Stat;->i:Lcom/vk/stat/c/c;
+    sget-object v0, Lcom/vk/stat/Stat;->i:Lcom/vk/stat/c/SendDaemon;
 
     if-eqz v0, :cond_0
 
-    invoke-interface {v0}, Lcom/vk/stat/c/c;->stop()V
+    invoke-interface {v0}, Lcom/vk/stat/c/SendDaemon;->stop()V
 
     :cond_0
     return-void
@@ -296,11 +296,11 @@
 
 
 # virtual methods
-.method public final a()Lcom/vk/stat/a/i/a;
+.method public final a()Lcom/vk/stat/a/i/AppStartsEventBuilder;
     .locals 4
 
     .line 18
-    new-instance v0, Lcom/vk/stat/a/i/a;
+    new-instance v0, Lcom/vk/stat/a/i/AppStartsEventBuilder;
 
     const/4 v1, 0x0
 
@@ -308,7 +308,7 @@
 
     const/4 v3, 0x0
 
-    invoke-direct {v0, v1, v2, v3}, Lcom/vk/stat/a/i/a;-><init>(ZILkotlin/jvm/internal/i;)V
+    invoke-direct {v0, v1, v2, v3}, Lcom/vk/stat/a/i/AppStartsEventBuilder;-><init>(ZILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     return-object v0
 .end method
@@ -317,29 +317,29 @@
     .locals 5
 
     .line 2
-    new-instance v0, Lcom/vk/stat/storage/b;
+    new-instance v0, Lcom/vk/stat/storage/StateStorage;
 
     const-string v1, "product"
 
-    invoke-direct {v0, p1, v1}, Lcom/vk/stat/storage/b;-><init>(Landroid/content/Context;Ljava/lang/String;)V
+    invoke-direct {v0, p1, v1}, Lcom/vk/stat/storage/StateStorage;-><init>(Landroid/content/Context;Ljava/lang/String;)V
 
-    sput-object v0, Lcom/vk/stat/Stat;->d:Lcom/vk/stat/storage/b;
+    sput-object v0, Lcom/vk/stat/Stat;->d:Lcom/vk/stat/storage/StateStorage;
 
     .line 3
-    new-instance v0, Lcom/vk/stat/storage/b;
+    new-instance v0, Lcom/vk/stat/storage/StateStorage;
 
     const-string v1, "benchmark"
 
-    invoke-direct {v0, p1, v1}, Lcom/vk/stat/storage/b;-><init>(Landroid/content/Context;Ljava/lang/String;)V
+    invoke-direct {v0, p1, v1}, Lcom/vk/stat/storage/StateStorage;-><init>(Landroid/content/Context;Ljava/lang/String;)V
 
-    sput-object v0, Lcom/vk/stat/Stat;->f:Lcom/vk/stat/storage/b;
+    sput-object v0, Lcom/vk/stat/Stat;->f:Lcom/vk/stat/storage/StateStorage;
 
     .line 4
-    new-instance v0, Lcom/vk/stat/storage/a;
+    new-instance v0, Lcom/vk/stat/storage/DatabaseStorage;
 
-    invoke-direct {v0, p1}, Lcom/vk/stat/storage/a;-><init>(Landroid/content/Context;)V
+    invoke-direct {v0, p1}, Lcom/vk/stat/storage/DatabaseStorage;-><init>(Landroid/content/Context;)V
 
-    sput-object v0, Lcom/vk/stat/Stat;->j:Lcom/vk/stat/storage/c;
+    sput-object v0, Lcom/vk/stat/Stat;->j:Lcom/vk/stat/storage/Storage;
 
     .line 5
     sput-object p2, Lcom/vk/stat/Stat;->b:Lcom/vk/stat/Stat$a;
@@ -355,9 +355,9 @@
     invoke-virtual {p0}, Lcom/vk/stat/Stat;->g()V
 
     .line 8
-    new-instance p1, Lcom/vk/stat/c/c$a;
+    new-instance p1, Lcom/vk/stat/c/SendDaemon$a;
 
-    invoke-direct {p1}, Lcom/vk/stat/c/c$a;-><init>()V
+    invoke-direct {p1}, Lcom/vk/stat/c/SendDaemon$a;-><init>()V
 
     goto :goto_0
 
@@ -377,7 +377,7 @@
     invoke-direct {p1}, Ljava/util/ArrayList;-><init>()V
 
     .line 11
-    new-instance v0, Lcom/vk/stat/c/b$a;
+    new-instance v0, Lcom/vk/stat/c/RealSendDaemon$a;
 
     invoke-virtual {p2}, Lcom/vk/stat/Stat$a;->c()J
 
@@ -389,12 +389,12 @@
 
     const/4 v4, 0x0
 
-    invoke-direct {v0, v4, v1, v2, v3}, Lcom/vk/stat/c/b$a;-><init>(ZJLkotlin/jvm/b/b;)V
+    invoke-direct {v0, v4, v1, v2, v3}, Lcom/vk/stat/c/RealSendDaemon$a;-><init>(ZJLkotlin/jvm/b/Functions2;)V
 
     invoke-virtual {p1, v0}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
     .line 12
-    new-instance v0, Lcom/vk/stat/c/b$a;
+    new-instance v0, Lcom/vk/stat/c/RealSendDaemon$a;
 
     invoke-virtual {p2}, Lcom/vk/stat/Stat$a;->b()J
 
@@ -404,29 +404,29 @@
 
     invoke-direct {p2, p0}, Lcom/vk/stat/Stat$initialize$3;-><init>(Lcom/vk/stat/Stat;)V
 
-    invoke-direct {v0, v4, v1, v2, p2}, Lcom/vk/stat/c/b$a;-><init>(ZJLkotlin/jvm/b/b;)V
+    invoke-direct {v0, v4, v1, v2, p2}, Lcom/vk/stat/c/RealSendDaemon$a;-><init>(ZJLkotlin/jvm/b/Functions2;)V
 
     invoke-virtual {p1, v0}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
     .line 13
-    new-instance p2, Lcom/vk/stat/c/b;
+    new-instance p2, Lcom/vk/stat/c/RealSendDaemon;
 
-    invoke-direct {p2, p1}, Lcom/vk/stat/c/b;-><init>(Ljava/util/ArrayList;)V
+    invoke-direct {p2, p1}, Lcom/vk/stat/c/RealSendDaemon;-><init>(Ljava/util/ArrayList;)V
 
     move-object p1, p2
 
     .line 14
     :goto_0
-    sput-object p1, Lcom/vk/stat/Stat;->i:Lcom/vk/stat/c/c;
+    sput-object p1, Lcom/vk/stat/Stat;->i:Lcom/vk/stat/c/SendDaemon;
 
     return-void
 .end method
 
-.method public final a(Lcom/vk/stat/a/d;ZZLjava/lang/Long;)V
+.method public final a(Lcom/vk/stat/a/StatEvent5;ZZLjava/lang/Long;)V
     .locals 5
 
     .line 20
-    invoke-direct {p0, p1}, Lcom/vk/stat/Stat;->a(Lcom/vk/stat/a/d;)Z
+    invoke-direct {p0, p1}, Lcom/vk/stat/Stat;->a(Lcom/vk/stat/a/StatEvent5;)Z
 
     move-result v0
 
@@ -436,7 +436,7 @@
 
     .line 21
     :cond_0
-    invoke-static {p1}, Lcom/vk/stat/a/e;->b(Lcom/vk/stat/a/d;)Z
+    invoke-static {p1}, Lcom/vk/stat/a/StatEvent4;->b(Lcom/vk/stat/a/StatEvent5;)Z
 
     move-result v0
 
@@ -456,11 +456,11 @@
 
     if-eqz p4, :cond_9
 
-    invoke-virtual {p4}, Lcom/vk/stat/Stat$a;->d()Lcom/vk/stat/d/b;
+    invoke-virtual {p4}, Lcom/vk/stat/Stat$a;->d()Lcom/vk/stat/d/TimeProvider;
 
     move-result-object p4
 
-    invoke-interface {p4}, Lcom/vk/stat/d/b;->a()J
+    invoke-interface {p4}, Lcom/vk/stat/d/TimeProvider;->a()J
 
     move-result-wide v2
 
@@ -477,7 +477,7 @@
     goto :goto_1
 
     :cond_2
-    invoke-static {p4}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {p4}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v1
 
@@ -494,11 +494,11 @@
     check-cast v1, Lcom/vk/stat/utils/EventState;
 
     .line 24
-    sget-object v4, Lcom/vk/stat/Stat;->h:Lcom/vk/stat/utils/c;
+    sget-object v4, Lcom/vk/stat/Stat;->h:Lcom/vk/stat/utils/EventGenerator;
 
-    invoke-static {v1, p4}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v1, p4}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    invoke-virtual {v4, v2, v3, p1, v1}, Lcom/vk/stat/utils/c;->a(JLcom/vk/stat/a/d;Lcom/vk/stat/utils/EventState;)Ljava/lang/String;
+    invoke-virtual {v4, v2, v3, p1, v1}, Lcom/vk/stat/utils/EventGenerator;->a(JLcom/vk/stat/a/StatEvent5;Lcom/vk/stat/utils/EventState;)Ljava/lang/String;
 
     move-result-object p4
 
@@ -537,7 +537,7 @@
     move-result-object p2
 
     .line 28
-    invoke-virtual {p1}, Lcom/vk/stat/a/d;->a()Z
+    invoke-virtual {p1}, Lcom/vk/stat/a/StatEvent5;->a()Z
 
     move-result p1
 
@@ -572,25 +572,25 @@
     const-string p1, "stateBenchmark"
 
     .line 31
-    invoke-static {p1}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {p1}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v1
 
     .line 32
     :cond_9
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     throw v1
 .end method
 
-.method public final a(Lcom/vk/stat/utils/b;)V
+.method public final a(Lcom/vk/stat/utils/EventFilter;)V
     .locals 0
 
     .line 15
-    sput-object p1, Lcom/vk/stat/Stat;->k:Lcom/vk/stat/utils/b;
+    sput-object p1, Lcom/vk/stat/Stat;->k:Lcom/vk/stat/utils/EventFilter;
 
     .line 16
-    invoke-virtual {p1}, Lcom/vk/stat/utils/b;->d()Z
+    invoke-virtual {p1}, Lcom/vk/stat/utils/EventFilter;->d()Z
 
     move-result p1
 
@@ -620,9 +620,9 @@
     .locals 1
 
     .line 2
-    sget-object v0, Lcom/vk/stat/Stat;->k:Lcom/vk/stat/utils/b;
+    sget-object v0, Lcom/vk/stat/Stat;->k:Lcom/vk/stat/utils/EventFilter;
 
-    invoke-virtual {v0}, Lcom/vk/stat/utils/b;->a()V
+    invoke-virtual {v0}, Lcom/vk/stat/utils/EventFilter;->a()V
 
     return-void
 .end method
@@ -640,11 +640,11 @@
     return-void
 .end method
 
-.method public final c()Lcom/vk/stat/a/i/b;
+.method public final c()Lcom/vk/stat/a/i/ClickEventBuilder;
     .locals 4
 
     .line 2
-    new-instance v0, Lcom/vk/stat/a/i/b;
+    new-instance v0, Lcom/vk/stat/a/i/ClickEventBuilder;
 
     const/4 v1, 0x0
 
@@ -652,7 +652,7 @@
 
     const/4 v3, 0x0
 
-    invoke-direct {v0, v1, v2, v3}, Lcom/vk/stat/a/i/b;-><init>(ZILkotlin/jvm/internal/i;)V
+    invoke-direct {v0, v1, v2, v3}, Lcom/vk/stat/a/i/ClickEventBuilder;-><init>(ZILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     return-object v0
 .end method
@@ -676,11 +676,11 @@
     return v0
 .end method
 
-.method public final e()Lcom/vk/stat/a/i/c;
+.method public final e()Lcom/vk/stat/a/i/NavigationEventBuilder;
     .locals 4
 
     .line 1
-    new-instance v0, Lcom/vk/stat/a/i/c;
+    new-instance v0, Lcom/vk/stat/a/i/NavigationEventBuilder;
 
     const/4 v1, 0x0
 
@@ -688,16 +688,16 @@
 
     const/4 v3, 0x0
 
-    invoke-direct {v0, v1, v2, v3}, Lcom/vk/stat/a/i/c;-><init>(ZILkotlin/jvm/internal/i;)V
+    invoke-direct {v0, v1, v2, v3}, Lcom/vk/stat/a/i/NavigationEventBuilder;-><init>(ZILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     return-object v0
 .end method
 
-.method public final f()Lcom/vk/stat/a/i/d;
+.method public final f()Lcom/vk/stat/a/i/NetworkEventBuilder;
     .locals 4
 
     .line 1
-    new-instance v0, Lcom/vk/stat/a/i/d;
+    new-instance v0, Lcom/vk/stat/a/i/NetworkEventBuilder;
 
     const/4 v1, 0x0
 
@@ -705,7 +705,7 @@
 
     const/4 v3, 0x0
 
-    invoke-direct {v0, v1, v2, v3}, Lcom/vk/stat/a/i/d;-><init>(ZILkotlin/jvm/internal/i;)V
+    invoke-direct {v0, v1, v2, v3}, Lcom/vk/stat/a/i/NetworkEventBuilder;-><init>(ZILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     return-object v0
 .end method
@@ -719,11 +719,11 @@
 
     .line 1
     :try_start_0
-    sget-object v1, Lcom/vk/stat/Stat;->d:Lcom/vk/stat/storage/b;
+    sget-object v1, Lcom/vk/stat/Stat;->d:Lcom/vk/stat/storage/StateStorage;
 
     if-eqz v1, :cond_0
 
-    invoke-virtual {v1}, Lcom/vk/stat/storage/b;->a()Lokio/ByteString;
+    invoke-virtual {v1}, Lcom/vk/stat/storage/StateStorage;->a()Lokio/ByteString;
 
     move-result-object v1
 
@@ -779,11 +779,11 @@
 
     .line 8
     :try_start_1
-    sget-object v1, Lcom/vk/stat/Stat;->f:Lcom/vk/stat/storage/b;
+    sget-object v1, Lcom/vk/stat/Stat;->f:Lcom/vk/stat/storage/StateStorage;
 
     if-eqz v1, :cond_1
 
-    invoke-virtual {v1}, Lcom/vk/stat/storage/b;->a()Lokio/ByteString;
+    invoke-virtual {v1}, Lcom/vk/stat/storage/StateStorage;->a()Lokio/ByteString;
 
     move-result-object v1
 
@@ -851,7 +851,7 @@
 
     .line 1
     :try_start_0
-    sget-object v2, Lcom/vk/stat/Stat;->d:Lcom/vk/stat/storage/b;
+    sget-object v2, Lcom/vk/stat/Stat;->d:Lcom/vk/stat/storage/StateStorage;
 
     if-eqz v2, :cond_1
 
@@ -867,7 +867,7 @@
 
     const-string v5, "state.get()"
 
-    invoke-static {v4, v5}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v4, v5}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     check-cast v4, Lcom/vk/stat/utils/EventState;
 
@@ -875,14 +875,14 @@
 
     move-result-object v3
 
-    invoke-virtual {v2, v3}, Lcom/vk/stat/storage/b;->a(Lokio/ByteString;)V
+    invoke-virtual {v2, v3}, Lcom/vk/stat/storage/StateStorage;->a(Lokio/ByteString;)V
 
     goto :goto_0
 
     :cond_0
     const-string v2, "state"
 
-    invoke-static {v2}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v2}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
@@ -900,7 +900,7 @@
     :cond_1
     :goto_0
     :try_start_1
-    sget-object v2, Lcom/vk/stat/Stat;->f:Lcom/vk/stat/storage/b;
+    sget-object v2, Lcom/vk/stat/Stat;->f:Lcom/vk/stat/storage/StateStorage;
 
     if-eqz v2, :cond_3
 
@@ -916,7 +916,7 @@
 
     const-string v4, "stateBenchmark.get()"
 
-    invoke-static {v0, v4}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v4}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     check-cast v0, Lcom/vk/stat/utils/EventState;
 
@@ -924,14 +924,14 @@
 
     move-result-object v0
 
-    invoke-virtual {v2, v0}, Lcom/vk/stat/storage/b;->a(Lokio/ByteString;)V
+    invoke-virtual {v2, v0}, Lcom/vk/stat/storage/StateStorage;->a(Lokio/ByteString;)V
 
     goto :goto_1
 
     :cond_2
     const-string v2, "stateBenchmark"
 
-    invoke-static {v2}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v2}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_1
 
@@ -950,11 +950,11 @@
     return-void
 .end method
 
-.method public final i()Lcom/vk/stat/a/i/e;
+.method public final i()Lcom/vk/stat/a/i/ViewEventBuilder;
     .locals 4
 
     .line 1
-    new-instance v0, Lcom/vk/stat/a/i/e;
+    new-instance v0, Lcom/vk/stat/a/i/ViewEventBuilder;
 
     const/4 v1, 0x0
 
@@ -962,7 +962,7 @@
 
     const/4 v3, 0x0
 
-    invoke-direct {v0, v1, v2, v3}, Lcom/vk/stat/a/i/e;-><init>(ZILkotlin/jvm/internal/i;)V
+    invoke-direct {v0, v1, v2, v3}, Lcom/vk/stat/a/i/ViewEventBuilder;-><init>(ZILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     return-object v0
 .end method

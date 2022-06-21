@@ -41,13 +41,13 @@
     .line 1
     iget-object v0, p0, Lcom/vk/newsfeed/posting/viewpresenter/poster/PosterPostingView$a;->a:Lcom/vk/newsfeed/posting/viewpresenter/poster/PosterPostingView;
 
-    invoke-virtual {v0}, Lcom/vk/newsfeed/posting/viewpresenter/poster/PosterPostingView;->getPresenter()Lcom/vk/newsfeed/posting/h;
+    invoke-virtual {v0}, Lcom/vk/newsfeed/posting/viewpresenter/poster/PosterPostingView;->getPresenter()Lcom/vk/newsfeed/posting/PostingContracts11;
 
     move-result-object v0
 
     if-eqz v0, :cond_0
 
-    invoke-interface {v0, p1}, Lcom/vk/newsfeed/posting/h;->a(Landroid/text/Editable;)V
+    invoke-interface {v0, p1}, Lcom/vk/newsfeed/posting/PostingContracts11;->a(Landroid/text/Editable;)V
 
     :cond_0
     return-void
@@ -59,13 +59,13 @@
     .line 1
     iget-object v0, p0, Lcom/vk/newsfeed/posting/viewpresenter/poster/PosterPostingView$a;->a:Lcom/vk/newsfeed/posting/viewpresenter/poster/PosterPostingView;
 
-    invoke-virtual {v0}, Lcom/vk/newsfeed/posting/viewpresenter/poster/PosterPostingView;->getPresenter()Lcom/vk/newsfeed/posting/h;
+    invoke-virtual {v0}, Lcom/vk/newsfeed/posting/viewpresenter/poster/PosterPostingView;->getPresenter()Lcom/vk/newsfeed/posting/PostingContracts11;
 
     move-result-object v0
 
     if-eqz v0, :cond_0
 
-    invoke-interface {v0, p1, p2, p3, p4}, Lcom/vk/newsfeed/posting/h;->a(Ljava/lang/CharSequence;III)V
+    invoke-interface {v0, p1, p2, p3, p4}, Lcom/vk/newsfeed/posting/PostingContracts11;->a(Ljava/lang/CharSequence;III)V
 
     :cond_0
     return-void
@@ -77,13 +77,13 @@
     .line 1
     iget-object v0, p0, Lcom/vk/newsfeed/posting/viewpresenter/poster/PosterPostingView$a;->a:Lcom/vk/newsfeed/posting/viewpresenter/poster/PosterPostingView;
 
-    invoke-virtual {v0}, Lcom/vk/newsfeed/posting/viewpresenter/poster/PosterPostingView;->getPresenter()Lcom/vk/newsfeed/posting/h;
+    invoke-virtual {v0}, Lcom/vk/newsfeed/posting/viewpresenter/poster/PosterPostingView;->getPresenter()Lcom/vk/newsfeed/posting/PostingContracts11;
 
     move-result-object v0
 
     if-eqz v0, :cond_0
 
-    invoke-interface {v0, p1, p2, p3, p4}, Lcom/vk/newsfeed/posting/h;->onTextChanged(Ljava/lang/CharSequence;III)V
+    invoke-interface {v0, p1, p2, p3, p4}, Lcom/vk/newsfeed/posting/PostingContracts11;->onTextChanged(Ljava/lang/CharSequence;III)V
 
     :cond_0
     return-void

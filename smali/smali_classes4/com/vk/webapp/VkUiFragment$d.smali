@@ -3,7 +3,7 @@
 .source "VkUiFragment.kt"
 
 # interfaces
-.implements Lcom/vk/webapp/p/a/a$b;
+.implements Lcom/vk/webapp/p/a/StatusNavBarController$b1;
 
 
 # annotations
@@ -35,13 +35,13 @@
 
 
 # virtual methods
-.method public a(Lcom/vk/webapp/q/a/a;)V
+.method public a(Lcom/vk/webapp/q/a/StatusNavBarConfig;)V
     .locals 1
 
     .line 1
     iget-object v0, p0, Lcom/vk/webapp/VkUiFragment$d;->a:Lcom/vk/webapp/VkUiFragment;
 
-    invoke-virtual {v0, p1}, Lcom/vk/webapp/VkUiFragment;->a(Lcom/vk/webapp/q/a/a;)V
+    invoke-virtual {v0, p1}, Lcom/vk/webapp/VkUiFragment;->a(Lcom/vk/webapp/q/a/StatusNavBarConfig;)V
 
     return-void
 .end method

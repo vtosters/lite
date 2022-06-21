@@ -1,5 +1,5 @@
 .class public final Lcom/vk/stories/receivers/adapters/StoryChooserAdapter;
-.super Lcom/vk/lists/i0;
+.super Lcom/vk/lists/SimpleAdapter;
 .source "StoryChooserAdapter.kt"
 
 
@@ -13,7 +13,7 @@
 
 .annotation system Ldalvik/annotation/Signature;
     value = {
-        "Lcom/vk/lists/i0<",
+        "Lcom/vk/lists/SimpleAdapter<",
         "Ljava/lang/Object;",
         "Landroidx/recyclerview/widget/RecyclerView$ViewHolder;",
         ">;"
@@ -22,7 +22,7 @@
 
 
 # instance fields
-.field private final c:Lcom/vk/stories/receivers/views/a;
+.field private final c:Lcom/vk/stories/receivers/views/IStoryChooseView;
 
 
 # direct methods
@@ -33,18 +33,18 @@
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, v1}, Lcom/vk/stories/receivers/adapters/StoryChooserAdapter$a;-><init>(Lkotlin/jvm/internal/i;)V
+    invoke-direct {v0, v1}, Lcom/vk/stories/receivers/adapters/StoryChooserAdapter$a;-><init>(Lkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     return-void
 .end method
 
-.method public constructor <init>(Lcom/vk/stories/receivers/views/a;)V
+.method public constructor <init>(Lcom/vk/stories/receivers/views/IStoryChooseView;)V
     .locals 0
 
     .line 1
-    invoke-direct {p0}, Lcom/vk/lists/i0;-><init>()V
+    invoke-direct {p0}, Lcom/vk/lists/SimpleAdapter;-><init>()V
 
-    iput-object p1, p0, Lcom/vk/stories/receivers/adapters/StoryChooserAdapter;->c:Lcom/vk/stories/receivers/views/a;
+    iput-object p1, p0, Lcom/vk/stories/receivers/adapters/StoryChooserAdapter;->c:Lcom/vk/stories/receivers/views/IStoryChooseView;
 
     const/4 p1, 0x1
 
@@ -60,12 +60,12 @@
     .locals 3
 
     .line 1
-    invoke-virtual {p0, p1}, Lcom/vk/lists/i0;->k(I)Ljava/lang/Object;
+    invoke-virtual {p0, p1}, Lcom/vk/lists/SimpleAdapter;->k(I)Ljava/lang/Object;
 
     move-result-object p1
 
     .line 2
-    instance-of v0, p1, Lcom/vk/stories/d1/b;
+    instance-of v0, p1, Lcom/vk/stories/d1/StoryMyItem;
 
     if-eqz v0, :cond_0
 
@@ -75,13 +75,13 @@
 
     .line 3
     :cond_0
-    instance-of v0, p1, Lcom/vk/stories/d1/a;
+    instance-of v0, p1, Lcom/vk/stories/d1/StoryDialogItem;
 
     if-eqz v0, :cond_1
 
-    check-cast p1, Lcom/vk/stories/d1/a;
+    check-cast p1, Lcom/vk/stories/d1/StoryDialogItem;
 
-    invoke-virtual {p1}, Lcom/vk/stories/d1/a;->b()I
+    invoke-virtual {p1}, Lcom/vk/stories/d1/StoryDialogItem;->b()I
 
     move-result p1
 
@@ -127,12 +127,12 @@
     .locals 3
 
     .line 1
-    invoke-virtual {p0, p1}, Lcom/vk/lists/i0;->k(I)Ljava/lang/Object;
+    invoke-virtual {p0, p1}, Lcom/vk/lists/SimpleAdapter;->k(I)Ljava/lang/Object;
 
     move-result-object p1
 
     .line 2
-    instance-of v0, p1, Lcom/vk/stories/d1/b;
+    instance-of v0, p1, Lcom/vk/stories/d1/StoryMyItem;
 
     if-eqz v0, :cond_0
 
@@ -142,7 +142,7 @@
 
     .line 3
     :cond_0
-    instance-of v0, p1, Lcom/vk/stories/d1/a;
+    instance-of v0, p1, Lcom/vk/stories/d1/StoryDialogItem;
 
     if-eqz v0, :cond_1
 
@@ -184,11 +184,11 @@
     throw v0
 .end method
 
-.method public final j()Lcom/vk/stories/receivers/views/a;
+.method public final j()Lcom/vk/stories/receivers/views/IStoryChooseView;
     .locals 1
 
     .line 1
-    iget-object v0, p0, Lcom/vk/stories/receivers/adapters/StoryChooserAdapter;->c:Lcom/vk/stories/receivers/views/a;
+    iget-object v0, p0, Lcom/vk/stories/receivers/adapters/StoryChooserAdapter;->c:Lcom/vk/stories/receivers/views/IStoryChooseView;
 
     return-object v0
 .end method
@@ -197,9 +197,9 @@
     .locals 3
 
     .line 1
-    iget-object v0, p0, Lcom/vk/lists/i0;->a:Lcom/vk/lists/b;
+    iget-object v0, p0, Lcom/vk/lists/SimpleAdapter;->a:Lcom/vk/lists/BaseListDataSet;
 
-    invoke-interface {v0, p2}, Lcom/vk/lists/d;->k(I)Ljava/lang/Object;
+    invoke-interface {v0, p2}, Lcom/vk/lists/DataSet;->k(I)Ljava/lang/Object;
 
     move-result-object p2
 
@@ -210,36 +210,36 @@
 
     if-eqz v0, :cond_1
 
-    instance-of v0, p2, Lcom/vk/stories/d1/a;
+    instance-of v0, p2, Lcom/vk/stories/d1/StoryDialogItem;
 
     if-eqz v0, :cond_1
 
     .line 3
     move-object v0, p2
 
-    check-cast v0, Lcom/vk/stories/d1/a;
+    check-cast v0, Lcom/vk/stories/d1/StoryDialogItem;
 
-    iget-object v2, p0, Lcom/vk/stories/receivers/adapters/StoryChooserAdapter;->c:Lcom/vk/stories/receivers/views/a;
+    iget-object v2, p0, Lcom/vk/stories/receivers/adapters/StoryChooserAdapter;->c:Lcom/vk/stories/receivers/views/IStoryChooseView;
 
-    invoke-interface {v2}, Lb/h/r/b;->getPresenter()Lb/h/r/a;
+    invoke-interface {v2}, Lb/h/r/BaseContract1;->getPresenter()Lb/h/r/BaseContract;
 
     move-result-object v2
 
-    check-cast v2, Lcom/vk/stories/receivers/presenters/a;
+    check-cast v2, Lcom/vk/stories/receivers/presenters/IStoryChoosePresenter;
 
     if-eqz v2, :cond_0
 
-    invoke-interface {v2, v0}, Lcom/vk/stories/receivers/presenters/a;->a(Lcom/vk/stories/d1/a;)Z
+    invoke-interface {v2, v0}, Lcom/vk/stories/receivers/presenters/IStoryChoosePresenter;->a(Lcom/vk/stories/d1/StoryDialogItem;)Z
 
     move-result v1
 
     :cond_0
-    invoke-virtual {v0, v1}, Lcom/vk/stories/d1/a;->a(Z)V
+    invoke-virtual {v0, v1}, Lcom/vk/stories/d1/StoryDialogItem;->a(Z)V
 
     .line 4
     check-cast p1, Lcom/vk/stories/holders/StoriesDialogHolder2;
 
-    invoke-virtual {p1, p2}, Lcom/vtosters/lite/ui/b0/i;->a(Ljava/lang/Object;)V
+    invoke-virtual {p1, p2}, Lcom/vtosters/lite/ui/holder/RecyclerHolder;->a(Ljava/lang/Object;)V
 
     goto :goto_1
 
@@ -252,7 +252,7 @@
     .line 6
     check-cast p1, Lcom/vk/stories/receivers/adapters/StoryChooserAdapter$b;
 
-    invoke-virtual {p0}, Lcom/vk/lists/i0;->getItemCount()I
+    invoke-virtual {p0}, Lcom/vk/lists/SimpleAdapter;->getItemCount()I
 
     move-result p2
 
@@ -292,7 +292,7 @@
     :cond_4
     check-cast p2, Ljava/util/List;
 
-    invoke-virtual {p1, p2}, Lcom/vtosters/lite/ui/b0/i;->a(Ljava/lang/Object;)V
+    invoke-virtual {p1, p2}, Lcom/vtosters/lite/ui/holder/RecyclerHolder;->a(Ljava/lang/Object;)V
 
     :goto_1
     return-void
@@ -356,26 +356,26 @@
     .line 3
     new-instance v0, Lcom/vk/stories/receivers/adapters/StoryChooserAdapter$onCreateViewHolder$2;
 
-    iget-object v1, p0, Lcom/vk/stories/receivers/adapters/StoryChooserAdapter;->c:Lcom/vk/stories/receivers/views/a;
+    iget-object v1, p0, Lcom/vk/stories/receivers/adapters/StoryChooserAdapter;->c:Lcom/vk/stories/receivers/views/IStoryChooseView;
 
-    invoke-interface {v1}, Lb/h/r/b;->getPresenter()Lb/h/r/a;
+    invoke-interface {v1}, Lb/h/r/BaseContract1;->getPresenter()Lb/h/r/BaseContract;
 
     move-result-object v1
 
     if-eqz v1, :cond_0
 
-    check-cast v1, Lcom/vk/stories/receivers/presenters/a;
+    check-cast v1, Lcom/vk/stories/receivers/presenters/IStoryChoosePresenter;
 
-    invoke-direct {v0, v1}, Lcom/vk/stories/receivers/adapters/StoryChooserAdapter$onCreateViewHolder$2;-><init>(Lcom/vk/stories/receivers/presenters/a;)V
+    invoke-direct {v0, v1}, Lcom/vk/stories/receivers/adapters/StoryChooserAdapter$onCreateViewHolder$2;-><init>(Lcom/vk/stories/receivers/presenters/IStoryChoosePresenter;)V
 
     .line 4
-    invoke-direct {p2, p1, v0}, Lcom/vk/stories/holders/StoriesBlockAuthorsHolder;-><init>(Landroid/view/ViewGroup;Lkotlin/jvm/b/b;)V
+    invoke-direct {p2, p1, v0}, Lcom/vk/stories/holders/StoriesBlockAuthorsHolder;-><init>(Landroid/view/ViewGroup;Lkotlin/jvm/b/Functions2;)V
 
     goto :goto_0
 
     .line 5
     :cond_0
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     const/4 p1, 0x0
 
@@ -411,7 +411,7 @@
 
     invoke-direct {v0, p0}, Lcom/vk/stories/receivers/adapters/StoryChooserAdapter$onCreateViewHolder$1;-><init>(Lcom/vk/stories/receivers/adapters/StoryChooserAdapter;)V
 
-    invoke-direct {p2, p1, v0}, Lcom/vk/stories/holders/StoriesDialogHolder2;-><init>(Landroid/view/ViewGroup;Lkotlin/jvm/b/d;)V
+    invoke-direct {p2, p1, v0}, Lcom/vk/stories/holders/StoriesDialogHolder2;-><init>(Landroid/view/ViewGroup;Lkotlin/jvm/b/Functions4;)V
 
     goto :goto_0
 

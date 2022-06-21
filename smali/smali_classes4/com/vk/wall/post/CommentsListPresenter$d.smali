@@ -3,12 +3,12 @@
 .source "CommentsListPresenter.kt"
 
 # interfaces
-.implements Lc/a/z/g;
+.implements Lio/reactivex/functions/Consumer;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/wall/post/CommentsListPresenter;->a(Lc/a/m;Lcom/vk/lists/t;)V
+    value = Lcom/vk/wall/post/CommentsListPresenter;->a(Lio/reactivex/Observable;Lcom/vk/lists/PaginationHelper;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -22,8 +22,8 @@
         "Ljava/lang/Object;",
         ">",
         "Ljava/lang/Object;",
-        "Lc/a/z/g<",
-        "Lcom/vtosters/lite/api/wall/a;",
+        "Lio/reactivex/functions/Consumer<",
+        "Lcom/vtosters/lite/api/wall/GetCommentsResult;",
         ">;"
     }
 .end annotation
@@ -46,7 +46,7 @@
 
 
 # virtual methods
-.method public final a(Lcom/vtosters/lite/api/wall/a;)V
+.method public final a(Lcom/vtosters/lite/api/wall/GetCommentsResult;)V
     .locals 2
 
     .line 1
@@ -54,9 +54,9 @@
 
     const-string v1, "result"
 
-    invoke-static {p1, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    invoke-static {v0, p1}, Lcom/vk/wall/post/CommentsListPresenter;->a(Lcom/vk/wall/post/CommentsListPresenter;Lcom/vtosters/lite/api/wall/a;)V
+    invoke-static {v0, p1}, Lcom/vk/wall/post/CommentsListPresenter;->a(Lcom/vk/wall/post/CommentsListPresenter;Lcom/vtosters/lite/api/wall/GetCommentsResult;)V
 
     return-void
 .end method
@@ -65,9 +65,9 @@
     .locals 0
 
     .line 1
-    check-cast p1, Lcom/vtosters/lite/api/wall/a;
+    check-cast p1, Lcom/vtosters/lite/api/wall/GetCommentsResult;
 
-    invoke-virtual {p0, p1}, Lcom/vk/wall/post/CommentsListPresenter$d;->a(Lcom/vtosters/lite/api/wall/a;)V
+    invoke-virtual {p0, p1}, Lcom/vk/wall/post/CommentsListPresenter$d;->a(Lcom/vtosters/lite/api/wall/GetCommentsResult;)V
 
     return-void
 .end method

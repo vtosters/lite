@@ -1,5 +1,5 @@
 .class public final Lcom/vk/webapp/commands/VkUiContactsCommand;
-.super Lcom/vk/webapp/commands/c;
+.super Lcom/vk/webapp/commands/VkUiBaseCommand;
 .source "VkUiContactsCommand.kt"
 
 
@@ -19,7 +19,7 @@
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, v1}, Lcom/vk/webapp/commands/VkUiContactsCommand$a;-><init>(Lkotlin/jvm/internal/i;)V
+    invoke-direct {v0, v1}, Lcom/vk/webapp/commands/VkUiContactsCommand$a;-><init>(Lkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     return-void
 .end method
@@ -28,7 +28,7 @@
     .locals 0
 
     .line 1
-    invoke-direct {p0}, Lcom/vk/webapp/commands/c;-><init>()V
+    invoke-direct {p0}, Lcom/vk/webapp/commands/VkUiBaseCommand;-><init>()V
 
     return-void
 .end method
@@ -37,7 +37,7 @@
     .locals 8
 
     .line 21
-    invoke-virtual {p0}, Lcom/vk/webapp/commands/c;->c()Landroid/content/Context;
+    invoke-virtual {p0}, Lcom/vk/webapp/commands/VkUiBaseCommand;->c()Landroid/content/Context;
 
     move-result-object v0
 
@@ -104,7 +104,7 @@
     :catchall_1
     move-exception v1
 
-    invoke-static {p1, v0}, Lkotlin/io/b;->a(Ljava/io/Closeable;Ljava/lang/Throwable;)V
+    invoke-static {p1, v0}, Lkotlin/io/Closeable;->a(Ljava/io/Closeable;Ljava/lang/Throwable;)V
 
     throw v1
 
@@ -112,13 +112,13 @@
     move-object v0, v1
 
     :goto_0
-    invoke-static {p1, v1}, Lkotlin/io/b;->a(Ljava/io/Closeable;Ljava/lang/Throwable;)V
+    invoke-static {p1, v1}, Lkotlin/io/Closeable;->a(Ljava/io/Closeable;Ljava/lang/Throwable;)V
 
     return-object v0
 
     .line 27
     :cond_1
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     throw v1
 .end method
@@ -161,7 +161,7 @@
 
     const-string v0, "data.data ?: return"
 
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 5
     invoke-direct {p0, p1}, Lcom/vk/webapp/commands/VkUiContactsCommand;->a(Landroid/net/Uri;)Ljava/lang/String;
@@ -190,7 +190,7 @@
     aput-object p1, v6, v1
 
     .line 7
-    invoke-virtual {p0}, Lcom/vk/webapp/commands/c;->c()Landroid/content/Context;
+    invoke-virtual {p0}, Lcom/vk/webapp/commands/VkUiBaseCommand;->c()Landroid/content/Context;
 
     move-result-object p1
 
@@ -280,14 +280,14 @@
 
     .line 13
     :cond_2
-    invoke-static {v3, v2}, Lkotlin/k;->a(Ljava/lang/Object;Ljava/lang/Object;)Lkotlin/Pair;
+    invoke-static {v3, v2}, Lkotlin/Tuples;->a(Ljava/lang/Object;Ljava/lang/Object;)Lkotlin/Pair;
 
     move-result-object v2
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
     .line 14
-    invoke-static {p1, v1}, Lkotlin/io/b;->a(Ljava/io/Closeable;Ljava/lang/Throwable;)V
+    invoke-static {p1, v1}, Lkotlin/io/Closeable;->a(Ljava/io/Closeable;Ljava/lang/Throwable;)V
 
     invoke-virtual {v2}, Lkotlin/Pair;->a()Ljava/lang/Object;
 
@@ -308,7 +308,7 @@
     invoke-direct {p0, v0, p1, v2}, Lcom/vk/webapp/commands/VkUiContactsCommand;->b(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
 
     .line 17
-    sget-object v1, Lkotlin/m;->a:Lkotlin/m;
+    sget-object v1, Lkotlin/Unit;->a:Lkotlin/Unit;
 
     :cond_3
     if-eqz v1, :cond_5
@@ -325,19 +325,19 @@
     :catchall_1
     move-exception v1
 
-    invoke-static {p1, v0}, Lkotlin/io/b;->a(Ljava/io/Closeable;Ljava/lang/Throwable;)V
+    invoke-static {p1, v0}, Lkotlin/io/Closeable;->a(Ljava/io/Closeable;Ljava/lang/Throwable;)V
 
     throw v1
 
     .line 19
     :cond_4
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     throw v1
 
     .line 20
     :cond_5
-    invoke-virtual {p0}, Lcom/vk/webapp/commands/c;->b()Lcom/vk/webapp/bridges/UiFragmentAndroidBridge;
+    invoke-virtual {p0}, Lcom/vk/webapp/commands/VkUiBaseCommand;->b()Lcom/vk/webapp/bridges/UiFragmentAndroidBridge;
 
     move-result-object p1
 
@@ -351,9 +351,9 @@
 
     const-string v2, "VKWebAppContactsDone"
 
-    invoke-virtual {p1, v0, v2, v1}, Lcom/vk/webapp/bridges/a;->a(Lcom/vk/webapp/internal/data/JsApiMethodType;Ljava/lang/String;Lorg/json/JSONObject;)V
+    invoke-virtual {p1, v0, v2, v1}, Lcom/vk/webapp/bridges/AndroidBridge;->a(Lcom/vk/webapp/internal/data/JsApiMethodType;Ljava/lang/String;Lorg/json/JSONObject;)V
 
-    sget-object p1, Lkotlin/m;->a:Lkotlin/m;
+    sget-object p1, Lkotlin/Unit;->a:Lkotlin/Unit;
 
     :cond_6
     :goto_3
@@ -364,7 +364,7 @@
     .locals 8
 
     .line 1
-    invoke-virtual {p0}, Lcom/vk/webapp/commands/c;->c()Landroid/content/Context;
+    invoke-virtual {p0}, Lcom/vk/webapp/commands/VkUiBaseCommand;->c()Landroid/content/Context;
 
     move-result-object v0
 
@@ -429,7 +429,7 @@
     :catchall_1
     move-exception v1
 
-    invoke-static {p1, v0}, Lkotlin/io/b;->a(Ljava/io/Closeable;Ljava/lang/Throwable;)V
+    invoke-static {p1, v0}, Lkotlin/io/Closeable;->a(Ljava/io/Closeable;Ljava/lang/Throwable;)V
 
     throw v1
 
@@ -450,7 +450,7 @@
     goto :goto_1
 
     :cond_1
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_2
 
@@ -461,13 +461,13 @@
 
     .line 8
     :goto_1
-    invoke-static {p1, v1}, Lkotlin/io/b;->a(Ljava/io/Closeable;Ljava/lang/Throwable;)V
+    invoke-static {p1, v1}, Lkotlin/io/Closeable;->a(Ljava/io/Closeable;Ljava/lang/Throwable;)V
 
     return-object v0
 
     .line 9
     :cond_2
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     throw v1
 .end method
@@ -476,7 +476,7 @@
     .locals 2
 
     .line 10
-    invoke-virtual {p0}, Lcom/vk/webapp/commands/c;->b()Lcom/vk/webapp/bridges/UiFragmentAndroidBridge;
+    invoke-virtual {p0}, Lcom/vk/webapp/commands/VkUiBaseCommand;->b()Lcom/vk/webapp/bridges/UiFragmentAndroidBridge;
 
     move-result-object v0
 
@@ -490,7 +490,7 @@
 
     const-string p2, "VKWebAppContactsDone"
 
-    invoke-virtual {v0, v1, p2, p1}, Lcom/vk/webapp/bridges/a;->a(Lcom/vk/webapp/internal/data/JsApiMethodType;Ljava/lang/String;Lorg/json/JSONObject;)V
+    invoke-virtual {v0, v1, p2, p1}, Lcom/vk/webapp/bridges/AndroidBridge;->a(Lcom/vk/webapp/internal/data/JsApiMethodType;Ljava/lang/String;Lorg/json/JSONObject;)V
 
     :cond_0
     return-void
@@ -500,7 +500,7 @@
     .locals 8
 
     .line 1
-    invoke-virtual {p0}, Lcom/vk/webapp/commands/c;->c()Landroid/content/Context;
+    invoke-virtual {p0}, Lcom/vk/webapp/commands/VkUiBaseCommand;->c()Landroid/content/Context;
 
     move-result-object v0
 
@@ -515,7 +515,7 @@
     sget-object v1, Lcom/vk/permission/PermissionHelper;->r:Lcom/vk/permission/PermissionHelper;
 
     .line 3
-    invoke-virtual {p0}, Lcom/vk/webapp/commands/c;->c()Landroid/content/Context;
+    invoke-virtual {p0}, Lcom/vk/webapp/commands/VkUiBaseCommand;->c()Landroid/content/Context;
 
     move-result-object v2
 
@@ -543,13 +543,13 @@
     invoke-direct {v7, p0}, Lcom/vk/webapp/commands/VkUiContactsCommand$requestContacts$2;-><init>(Lcom/vk/webapp/commands/VkUiContactsCommand;)V
 
     .line 7
-    invoke-virtual/range {v1 .. v7}, Lcom/vk/permission/PermissionHelper;->a(Landroid/content/Context;[Ljava/lang/String;IILkotlin/jvm/b/a;Lkotlin/jvm/b/b;)Z
+    invoke-virtual/range {v1 .. v7}, Lcom/vk/permission/PermissionHelper;->a(Landroid/content/Context;[Ljava/lang/String;IILkotlin/jvm/b/Functions;Lkotlin/jvm/b/Functions2;)Z
 
     return-void
 
     .line 8
     :cond_1
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     const/4 v0, 0x0
 
@@ -578,7 +578,7 @@
 
     .line 3
     :cond_0
-    invoke-virtual {p0}, Lcom/vk/webapp/commands/c;->b()Lcom/vk/webapp/bridges/UiFragmentAndroidBridge;
+    invoke-virtual {p0}, Lcom/vk/webapp/commands/VkUiBaseCommand;->b()Lcom/vk/webapp/bridges/UiFragmentAndroidBridge;
 
     move-result-object p1
 
@@ -592,7 +592,7 @@
 
     const-string v0, "VKWebAppContactsClosed"
 
-    invoke-virtual {p1, p2, v0, p3}, Lcom/vk/webapp/bridges/a;->a(Lcom/vk/webapp/internal/data/JsApiMethodType;Ljava/lang/String;Lorg/json/JSONObject;)V
+    invoke-virtual {p1, p2, v0, p3}, Lcom/vk/webapp/bridges/AndroidBridge;->a(Lcom/vk/webapp/internal/data/JsApiMethodType;Ljava/lang/String;Lorg/json/JSONObject;)V
 
     :cond_1
     :goto_0

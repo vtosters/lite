@@ -19,7 +19,7 @@
 
     move-object v1, p1
 
-    invoke-direct/range {v0 .. v5}, Lcom/vk/profile/ui/photos/modal/AddPhotoContentFrameLayout;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;IILkotlin/jvm/internal/i;)V
+    invoke-direct/range {v0 .. v5}, Lcom/vk/profile/ui/photos/modal/AddPhotoContentFrameLayout;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;IILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     return-void
 .end method
@@ -39,7 +39,7 @@
 
     move-object v2, p2
 
-    invoke-direct/range {v0 .. v5}, Lcom/vk/profile/ui/photos/modal/AddPhotoContentFrameLayout;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;IILkotlin/jvm/internal/i;)V
+    invoke-direct/range {v0 .. v5}, Lcom/vk/profile/ui/photos/modal/AddPhotoContentFrameLayout;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;IILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     return-void
 .end method
@@ -53,7 +53,7 @@
     return-void
 .end method
 
-.method public synthetic constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;IILkotlin/jvm/internal/i;)V
+.method public synthetic constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;IILkotlin/jvm/internal/DefaultConstructorMarker;)V
     .locals 0
 
     and-int/lit8 p5, p4, 0x2
@@ -89,9 +89,9 @@
     int-to-float p2, p2
 
     .line 2
-    sget-object v0, Lcom/vk/profile/ui/photos/modal/a;->c:Lcom/vk/profile/ui/photos/modal/a$a;
+    sget-object v0, Lcom/vk/profile/ui/photos/modal/AddPhotoSnapStrategy;->c:Lcom/vk/profile/ui/photos/modal/AddPhotoSnapStrategy$a;
 
-    invoke-virtual {v0}, Lcom/vk/profile/ui/photos/modal/a$a;->a()F
+    invoke-virtual {v0}, Lcom/vk/profile/ui/photos/modal/AddPhotoSnapStrategy$a;->a()F
 
     move-result v0
 

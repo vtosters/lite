@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/qrcode/QRUtils;->c(Landroid/content/Context;Lcom/vk/qrcode/QRUtils$b;)Lc/a/m;
+    value = Lcom/vk/qrcode/QRUtils;->c(Landroid/content/Context;Lcom/vk/qrcode/QRUtils$b;)Lio/reactivex/Observable;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;

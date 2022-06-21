@@ -1,5 +1,5 @@
 .class public final Lcom/vk/im/engine/internal/jobs/requests/MsgRequestChangeStatusJob;
-.super Lcom/vk/im/engine/internal/j/a;
+.super Lcom/vk/im/engine/internal/j/ImInstantJob;
 .source "MsgRequestChangeStatusJob.kt"
 
 
@@ -30,7 +30,7 @@
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, v1}, Lcom/vk/im/engine/internal/jobs/requests/MsgRequestChangeStatusJob$a;-><init>(Lkotlin/jvm/internal/i;)V
+    invoke-direct {v0, v1}, Lcom/vk/im/engine/internal/jobs/requests/MsgRequestChangeStatusJob$a;-><init>(Lkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     .line 1
     const-class v0, Lcom/vk/im/engine/internal/jobs/requests/MsgRequestChangeStatusJob;
@@ -41,7 +41,7 @@
 
     const-string v1, "MsgRequestChangeStatusJob::class.java.simpleName"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     sput-object v0, Lcom/vk/im/engine/internal/jobs/requests/MsgRequestChangeStatusJob;->d:Ljava/lang/String;
 
@@ -52,7 +52,7 @@
     .locals 1
 
     .line 1
-    invoke-direct {p0}, Lcom/vk/im/engine/internal/j/a;-><init>()V
+    invoke-direct {p0}, Lcom/vk/im/engine/internal/j/ImInstantJob;-><init>()V
 
     iput p1, p0, Lcom/vk/im/engine/internal/jobs/requests/MsgRequestChangeStatusJob;->b:I
 
@@ -114,21 +114,21 @@
     throw p1
 .end method
 
-.method private final e(Lcom/vk/im/engine/d;)V
+.method private final e(Lcom/vk/im/engine/ImEnvironment;)V
     .locals 3
 
     .line 1
-    invoke-interface {p1}, Lcom/vk/im/engine/d;->a0()Lcom/vk/im/engine/internal/storage/StorageManager;
+    invoke-interface {p1}, Lcom/vk/im/engine/ImEnvironment;->a0()Lcom/vk/im/engine/internal/storage/StorageManager;
 
     move-result-object v0
 
     .line 2
-    invoke-virtual {v0}, Lcom/vk/im/engine/internal/storage/StorageManager;->f()Lcom/vk/im/engine/internal/storage/delegates/dialogs/g;
+    invoke-virtual {v0}, Lcom/vk/im/engine/internal/storage/StorageManager;->f()Lcom/vk/im/engine/internal/storage/delegates/dialogs/DialogsStorageManager;
 
     move-result-object v0
 
     .line 3
-    invoke-virtual {v0}, Lcom/vk/im/engine/internal/storage/delegates/dialogs/g;->b()Lcom/vk/im/engine/internal/storage/delegates/dialogs/DialogsEntryStorageManager;
+    invoke-virtual {v0}, Lcom/vk/im/engine/internal/storage/delegates/dialogs/DialogsStorageManager;->b()Lcom/vk/im/engine/internal/storage/delegates/dialogs/DialogsEntryStorageManager;
 
     move-result-object v0
 
@@ -140,7 +140,7 @@
     invoke-virtual {v0, v1, v2}, Lcom/vk/im/engine/internal/storage/delegates/dialogs/DialogsEntryStorageManager;->b(ILcom/vk/im/engine/models/MsgRequestStatus;)V
 
     .line 5
-    invoke-interface {p1}, Lcom/vk/im/engine/d;->n0()Lcom/vk/im/engine/internal/c;
+    invoke-interface {p1}, Lcom/vk/im/engine/ImEnvironment;->n0()Lcom/vk/im/engine/internal/EventHelper;
 
     move-result-object p1
 
@@ -148,7 +148,7 @@
 
     iget v1, p0, Lcom/vk/im/engine/internal/jobs/requests/MsgRequestChangeStatusJob;->b:I
 
-    invoke-virtual {p1, v0, v1}, Lcom/vk/im/engine/internal/c;->a(Ljava/lang/Object;I)V
+    invoke-virtual {p1, v0, v1}, Lcom/vk/im/engine/internal/EventHelper;->a(Ljava/lang/Object;I)V
 
     return-void
 .end method
@@ -163,7 +163,7 @@
     return-wide v0
 .end method
 
-.method public a(Lcom/vk/im/engine/d;Lcom/vk/instantjobs/InstantJob$b;)V
+.method public a(Lcom/vk/im/engine/ImEnvironment;Lcom/vk/instantjobs/InstantJob$b;)V
     .locals 2
 
     .line 1
@@ -186,11 +186,11 @@
     if-ne p2, v1, :cond_0
 
     .line 2
-    new-instance p2, Lcom/vk/im/engine/internal/api_commands/messages/w;
+    new-instance p2, Lcom/vk/im/engine/internal/api_commands/messages/MessagesRejectMessageRequestApiCmd;
 
     iget v1, p0, Lcom/vk/im/engine/internal/jobs/requests/MsgRequestChangeStatusJob;->b:I
 
-    invoke-direct {p2, v1, v0}, Lcom/vk/im/engine/internal/api_commands/messages/w;-><init>(IZ)V
+    invoke-direct {p2, v1, v0}, Lcom/vk/im/engine/internal/api_commands/messages/MessagesRejectMessageRequestApiCmd;-><init>(IZ)V
 
     goto :goto_0
 
@@ -220,22 +220,22 @@
 
     .line 4
     :cond_1
-    new-instance p2, Lcom/vk/im/engine/internal/api_commands/messages/b;
+    new-instance p2, Lcom/vk/im/engine/internal/api_commands/messages/MessagesAcceptMessageRequestApiCmd;
 
     iget v1, p0, Lcom/vk/im/engine/internal/jobs/requests/MsgRequestChangeStatusJob;->b:I
 
-    invoke-direct {p2, v1, v0}, Lcom/vk/im/engine/internal/api_commands/messages/b;-><init>(IZ)V
+    invoke-direct {p2, v1, v0}, Lcom/vk/im/engine/internal/api_commands/messages/MessagesAcceptMessageRequestApiCmd;-><init>(IZ)V
 
     .line 5
     :goto_0
-    invoke-interface {p1}, Lcom/vk/im/engine/d;->k0()Lcom/vk/api/internal/ApiManager;
+    invoke-interface {p1}, Lcom/vk/im/engine/ImEnvironment;->k0()Lcom/vk/api/internal/ApiManager;
 
     move-result-object v0
 
-    invoke-virtual {v0, p2}, Lcom/vk/api/internal/ApiManager;->a(Lcom/vk/api/sdk/internal/a;)Ljava/lang/Object;
+    invoke-virtual {v0, p2}, Lcom/vk/api/internal/ApiManager;->a(Lcom/vk/api/sdk/internal/ApiCommand;)Ljava/lang/Object;
 
     .line 6
-    invoke-interface {p1}, Lcom/vk/im/engine/d;->a0()Lcom/vk/im/engine/internal/storage/StorageManager;
+    invoke-interface {p1}, Lcom/vk/im/engine/ImEnvironment;->a0()Lcom/vk/im/engine/internal/storage/StorageManager;
 
     move-result-object p2
 
@@ -243,10 +243,10 @@
 
     invoke-direct {v0, p0}, Lcom/vk/im/engine/internal/jobs/requests/MsgRequestChangeStatusJob$onExecute$1;-><init>(Lcom/vk/im/engine/internal/jobs/requests/MsgRequestChangeStatusJob;)V
 
-    invoke-virtual {p2, v0}, Lcom/vk/im/engine/internal/storage/StorageManager;->a(Lkotlin/jvm/b/b;)Ljava/lang/Object;
+    invoke-virtual {p2, v0}, Lcom/vk/im/engine/internal/storage/StorageManager;->a(Lkotlin/jvm/b/Functions2;)Ljava/lang/Object;
 
     .line 7
-    invoke-interface {p1}, Lcom/vk/im/engine/d;->n0()Lcom/vk/im/engine/internal/c;
+    invoke-interface {p1}, Lcom/vk/im/engine/ImEnvironment;->n0()Lcom/vk/im/engine/internal/EventHelper;
 
     move-result-object p1
 
@@ -254,16 +254,16 @@
 
     iget v0, p0, Lcom/vk/im/engine/internal/jobs/requests/MsgRequestChangeStatusJob;->b:I
 
-    invoke-virtual {p1, p2, v0}, Lcom/vk/im/engine/internal/c;->a(Ljava/lang/Object;I)V
+    invoke-virtual {p1, p2, v0}, Lcom/vk/im/engine/internal/EventHelper;->a(Ljava/lang/Object;I)V
 
     return-void
 .end method
 
-.method public a(Lcom/vk/im/engine/d;Ljava/lang/Throwable;)V
+.method public a(Lcom/vk/im/engine/ImEnvironment;Ljava/lang/Throwable;)V
     .locals 0
 
     .line 8
-    invoke-direct {p0, p1}, Lcom/vk/im/engine/internal/jobs/requests/MsgRequestChangeStatusJob;->e(Lcom/vk/im/engine/d;)V
+    invoke-direct {p0, p1}, Lcom/vk/im/engine/internal/jobs/requests/MsgRequestChangeStatusJob;->e(Lcom/vk/im/engine/ImEnvironment;)V
 
     return-void
 .end method
@@ -277,11 +277,11 @@
     return-object v0
 .end method
 
-.method public d(Lcom/vk/im/engine/d;)V
+.method public d(Lcom/vk/im/engine/ImEnvironment;)V
     .locals 0
 
     .line 1
-    invoke-direct {p0, p1}, Lcom/vk/im/engine/internal/jobs/requests/MsgRequestChangeStatusJob;->e(Lcom/vk/im/engine/d;)V
+    invoke-direct {p0, p1}, Lcom/vk/im/engine/internal/jobs/requests/MsgRequestChangeStatusJob;->e(Lcom/vk/im/engine/ImEnvironment;)V
 
     return-void
 .end method
@@ -299,13 +299,13 @@
     .locals 2
 
     .line 1
-    invoke-static {}, Lcom/vk/im/engine/internal/d;->i()Ljava/lang/String;
+    invoke-static {}, Lcom/vk/im/engine/internal/QueueNames;->i()Ljava/lang/String;
 
     move-result-object v0
 
     const-string v1, "QueueNames.forMsgRequestStatusChangeJob()"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     return-object v0
 .end method

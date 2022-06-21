@@ -3,7 +3,7 @@
 .source "FriendsImportFragment.kt"
 
 # interfaces
-.implements Lcom/vk/common/g/j;
+.implements Lcom/vk/common/g/VoidF2Int;
 
 
 # annotations
@@ -24,7 +24,7 @@
         "Ljava/lang/Object;",
         ">",
         "Ljava/lang/Object;",
-        "Lcom/vk/common/g/j<",
+        "Lcom/vk/common/g/VoidF2Int<",
         "Lcom/vk/dto/user/RequestUserProfile;",
         "Ljava/lang/Boolean;",
         ">;"
@@ -115,7 +115,7 @@
     if-eqz v1, :cond_2
 
     .line 7
-    sget-object p1, Lcom/vk/core/util/i;->a:Landroid/content/Context;
+    sget-object p1, Lcom/vk/core/util/AppContextHolder;->a:Landroid/content/Context;
 
     const v1, 0x7f120469
 
@@ -156,7 +156,7 @@
 
     const-string v0, "request"
 
-    invoke-static {p1, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     if-eqz p2, :cond_4
 
@@ -170,7 +170,7 @@
     return-void
 
     :cond_4
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     const/4 p1, 0x0
 

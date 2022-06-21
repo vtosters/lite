@@ -29,15 +29,15 @@
     .end annotation
 .end field
 
-.field private static final b:Lcom/vk/core/network/utils/d;
+.field private static final b:Lcom/vk/core/network/utils/NetworkUserAgent;
 
 .field private static final c:Lcom/vk/core/network/proxy/NetworkProxy;
 
-.field private static final d:Lkotlin/e;
+.field private static final d:Lkotlin/Lazy2;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Lkotlin/e<",
-            "Lcom/vk/core/network/b/a;",
+            "Lkotlin/Lazy2<",
+            "Lcom/vk/core/network/b/NetworkTrafficMeter;",
             ">;"
         }
     .end annotation
@@ -45,13 +45,13 @@
 
 .field private static e:Lcom/vk/core/network/security/NetworkKeyStore;
 
-.field private static f:Lcom/vk/core/network/a/a;
+.field private static f:Lcom/vk/core/network/a/PersistentCookieJar;
 
 .field private static final g:J
 
-.field private static final h:Lokhttp3/j;
+.field private static final h:Lokhttp3/ConnectionPool;
 
-.field private static final i:Lokhttp3/n;
+.field private static final i:Lokhttp3/Dispatcher;
 
 .field private static j:Z
 
@@ -83,11 +83,11 @@
     sput-object v0, Lcom/vk/core/network/Network;->a:Ljava/util/List;
 
     .line 3
-    new-instance v0, Lcom/vk/core/network/utils/d;
+    new-instance v0, Lcom/vk/core/network/utils/NetworkUserAgent;
 
-    invoke-direct {v0}, Lcom/vk/core/network/utils/d;-><init>()V
+    invoke-direct {v0}, Lcom/vk/core/network/utils/NetworkUserAgent;-><init>()V
 
-    sput-object v0, Lcom/vk/core/network/Network;->b:Lcom/vk/core/network/utils/d;
+    sput-object v0, Lcom/vk/core/network/Network;->b:Lcom/vk/core/network/utils/NetworkUserAgent;
 
     .line 4
     new-instance v0, Lcom/vk/core/network/proxy/NetworkProxy;
@@ -99,11 +99,11 @@
     .line 5
     sget-object v0, Lcom/vk/core/network/Network$trafficMeter$1;->a:Lcom/vk/core/network/Network$trafficMeter$1;
 
-    invoke-static {v0}, Lkotlin/g;->a(Lkotlin/jvm/b/a;)Lkotlin/e;
+    invoke-static {v0}, Lkotlin/g;->a(Lkotlin/jvm/b/Functions;)Lkotlin/Lazy2;
 
     move-result-object v0
 
-    sput-object v0, Lcom/vk/core/network/Network;->d:Lkotlin/e;
+    sput-object v0, Lcom/vk/core/network/Network;->d:Lkotlin/Lazy2;
 
     .line 6
     sget-object v0, Ljava/util/concurrent/TimeUnit;->SECONDS:Ljava/util/concurrent/TimeUnit;
@@ -117,7 +117,7 @@
     sput-wide v0, Lcom/vk/core/network/Network;->g:J
 
     .line 7
-    new-instance v0, Lokhttp3/j;
+    new-instance v0, Lokhttp3/ConnectionPool;
 
     sget-object v1, Ljava/util/concurrent/TimeUnit;->MINUTES:Ljava/util/concurrent/TimeUnit;
 
@@ -125,12 +125,12 @@
 
     const-wide/16 v3, 0x3
 
-    invoke-direct {v0, v2, v3, v4, v1}, Lokhttp3/j;-><init>(IJLjava/util/concurrent/TimeUnit;)V
+    invoke-direct {v0, v2, v3, v4, v1}, Lokhttp3/ConnectionPool;-><init>(IJLjava/util/concurrent/TimeUnit;)V
 
-    sput-object v0, Lcom/vk/core/network/Network;->h:Lokhttp3/j;
+    sput-object v0, Lcom/vk/core/network/Network;->h:Lokhttp3/ConnectionPool;
 
     .line 8
-    new-instance v0, Lokhttp3/n;
+    new-instance v0, Lokhttp3/Dispatcher;
 
     sget-object v1, Lcom/vk/core/concurrent/VkExecutors;->x:Lcom/vk/core/concurrent/VkExecutors;
 
@@ -138,12 +138,12 @@
 
     move-result-object v1
 
-    invoke-direct {v0, v1}, Lokhttp3/n;-><init>(Ljava/util/concurrent/ExecutorService;)V
+    invoke-direct {v0, v1}, Lokhttp3/Dispatcher;-><init>(Ljava/util/concurrent/ExecutorService;)V
 
-    sput-object v0, Lcom/vk/core/network/Network;->i:Lokhttp3/n;
+    sput-object v0, Lcom/vk/core/network/Network;->i:Lokhttp3/Dispatcher;
 
     .line 9
-    invoke-static {}, Lb/h/g/g/b;->l()Z
+    invoke-static {}, Lb/h/g/g/BuildInfo;->l()Z
 
     move-result v0
 
@@ -204,11 +204,11 @@
 
     sget-object v2, Lcom/vk/core/network/Network;->c:Lcom/vk/core/network/proxy/NetworkProxy;
 
-    invoke-virtual {v2}, Lcom/vk/core/network/proxy/NetworkProxy;->a()Lcom/vk/core/network/proxy/c;
+    invoke-virtual {v2}, Lcom/vk/core/network/proxy/NetworkProxy;->a()Lcom/vk/core/network/proxy/ProxyHost;
 
     move-result-object v2
 
-    invoke-virtual {v2}, Lcom/vk/core/network/proxy/c;->e()Ljava/lang/String;
+    invoke-virtual {v2}, Lcom/vk/core/network/proxy/ProxyHost;->e()Ljava/lang/String;
 
     move-result-object v2
 
@@ -235,7 +235,7 @@
 
     const-string v1, "Host"
 
-    invoke-static {v1, p0}, Lkotlin/k;->a(Ljava/lang/Object;Ljava/lang/Object;)Lkotlin/Pair;
+    invoke-static {v1, p0}, Lkotlin/Tuples;->a(Ljava/lang/Object;Ljava/lang/Object;)Lkotlin/Pair;
 
     move-result-object p0
 
@@ -243,15 +243,15 @@
 
     const/4 p0, 0x1
 
-    sget-object v1, Lcom/vk/core/network/Network;->b:Lcom/vk/core/network/utils/d;
+    sget-object v1, Lcom/vk/core/network/Network;->b:Lcom/vk/core/network/utils/NetworkUserAgent;
 
-    invoke-virtual {v1}, Lcom/vk/core/network/utils/d;->a()Ljava/lang/String;
+    invoke-virtual {v1}, Lcom/vk/core/network/utils/NetworkUserAgent;->a()Ljava/lang/String;
 
     move-result-object v1
 
     const-string v3, "User-Agent"
 
-    invoke-static {v3, v1}, Lkotlin/k;->a(Ljava/lang/Object;Ljava/lang/Object;)Lkotlin/Pair;
+    invoke-static {v3, v1}, Lkotlin/Tuples;->a(Ljava/lang/Object;Ljava/lang/Object;)Lkotlin/Pair;
 
     move-result-object v1
 
@@ -262,7 +262,7 @@
     move-result-object p0
 
     .line 35
-    invoke-static {v0, p0}, Lkotlin/k;->a(Ljava/lang/Object;Ljava/lang/Object;)Lkotlin/Pair;
+    invoke-static {v0, p0}, Lkotlin/Tuples;->a(Ljava/lang/Object;Ljava/lang/Object;)Lkotlin/Pair;
 
     move-result-object v1
 
@@ -270,7 +270,7 @@
 
     .line 36
     :cond_0
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     throw v1
 
@@ -279,7 +279,7 @@
     return-object v1
 .end method
 
-.method public static final a(Lcom/vk/core/network/Network$ClientType;)Lokhttp3/x$b;
+.method public static final a(Lcom/vk/core/network/Network$ClientType;)Lokhttp3/OkHttpClient$b;
     .locals 1
     .annotation build Landroidx/annotation/WorkerThread;
     .end annotation
@@ -297,14 +297,14 @@
 
     check-cast p0, Lcom/vk/core/network/Network$a;
 
-    invoke-virtual {p0}, Lcom/vk/core/network/Network$a;->a()Lokhttp3/x$b;
+    invoke-virtual {p0}, Lcom/vk/core/network/Network$a;->a()Lokhttp3/OkHttpClient$b;
 
     move-result-object p0
 
     return-object p0
 .end method
 
-.method public static final a(Lcom/vk/core/network/Network$ClientType;Lokhttp3/x$b;)Lokhttp3/x;
+.method public static final a(Lcom/vk/core/network/Network$ClientType;Lokhttp3/OkHttpClient$b;)Lokhttp3/OkHttpClient;
     .locals 1
     .annotation build Landroidx/annotation/WorkerThread;
     .end annotation
@@ -322,18 +322,18 @@
 
     check-cast p0, Lcom/vk/core/network/Network$a;
 
-    invoke-virtual {p0, p1}, Lcom/vk/core/network/Network$a;->a(Lokhttp3/x$b;)Lokhttp3/x;
+    invoke-virtual {p0, p1}, Lcom/vk/core/network/Network$a;->a(Lokhttp3/OkHttpClient$b;)Lokhttp3/OkHttpClient;
 
     move-result-object p0
 
     return-object p0
 .end method
 
-.method public static final synthetic a(Lcom/vk/core/network/Network;Lokhttp3/x$b;)V
+.method public static final synthetic a(Lcom/vk/core/network/Network;Lokhttp3/OkHttpClient$b;)V
     .locals 0
 
     .line 1
-    invoke-direct {p0, p1}, Lcom/vk/core/network/Network;->a(Lokhttp3/x$b;)V
+    invoke-direct {p0, p1}, Lcom/vk/core/network/Network;->a(Lokhttp3/OkHttpClient$b;)V
 
     return-void
 .end method
@@ -344,11 +344,11 @@
     .line 29
     sget-object v0, Lcom/vk/core/network/Network;->l:Lcom/vk/core/network/Network;
 
-    invoke-direct {v0}, Lcom/vk/core/network/Network;->i()Lokhttp3/x$b;
+    invoke-direct {v0}, Lcom/vk/core/network/Network;->i()Lokhttp3/OkHttpClient$b;
 
     move-result-object v1
 
-    invoke-direct {v0, v1}, Lcom/vk/core/network/Network;->c(Lokhttp3/x$b;)Z
+    invoke-direct {v0, v1}, Lcom/vk/core/network/Network;->c(Lokhttp3/OkHttpClient$b;)Z
 
     move-result v0
 
@@ -367,7 +367,7 @@
     return-void
 .end method
 
-.method private final declared-synchronized a(Lokhttp3/x$b;)V
+.method private final declared-synchronized a(Lokhttp3/OkHttpClient$b;)V
     .locals 3
 
     monitor-enter p0
@@ -376,7 +376,7 @@
 
     .line 37
     :try_start_0
-    invoke-direct {p0, p1}, Lcom/vk/core/network/Network;->c(Lokhttp3/x$b;)Z
+    invoke-direct {p0, p1}, Lcom/vk/core/network/Network;->c(Lokhttp3/OkHttpClient$b;)Z
 
     move-result v0
 
@@ -386,43 +386,43 @@
 
     .line 38
     :cond_0
-    invoke-virtual {p1}, Lokhttp3/x$b;->b()Ljava/util/List;
+    invoke-virtual {p1}, Lokhttp3/OkHttpClient$b;->b()Ljava/util/List;
 
     move-result-object v0
 
     sget-object v1, Lcom/vk/core/network/Network;->c:Lcom/vk/core/network/proxy/NetworkProxy;
 
-    invoke-virtual {v1}, Lcom/vk/core/network/proxy/NetworkProxy;->a()Lcom/vk/core/network/proxy/c;
+    invoke-virtual {v1}, Lcom/vk/core/network/proxy/NetworkProxy;->a()Lcom/vk/core/network/proxy/ProxyHost;
 
     move-result-object v1
 
-    invoke-virtual {v1}, Lcom/vk/core/network/proxy/c;->b()Lcom/vk/core/network/proxy/f;
+    invoke-virtual {v1}, Lcom/vk/core/network/proxy/ProxyHost;->b()Lcom/vk/core/network/proxy/ProxyInterceptor;
 
     move-result-object v1
 
     invoke-interface {v0, v1}, Ljava/util/List;->remove(Ljava/lang/Object;)Z
 
     .line 39
-    sget-object v0, Lokhttp3/f0/k/d;->a:Lokhttp3/f0/k/d;
+    sget-object v0, Lokhttp3/f0/k/OkHostnameVerifier;->a:Lokhttp3/f0/k/OkHostnameVerifier;
 
-    invoke-virtual {p1, v0}, Lokhttp3/x$b;->a(Ljavax/net/ssl/HostnameVerifier;)Lokhttp3/x$b;
+    invoke-virtual {p1, v0}, Lokhttp3/OkHttpClient$b;->a(Ljavax/net/ssl/HostnameVerifier;)Lokhttp3/OkHttpClient$b;
 
     .line 40
-    sget-object v0, Lcom/vk/core/network/security/a;->d:Lcom/vk/core/network/security/a$a;
+    sget-object v0, Lcom/vk/core/network/security/NetworkTrustManager;->d:Lcom/vk/core/network/security/NetworkTrustManager$a;
 
     const/4 v1, 0x2
 
     const/4 v2, 0x0
 
-    invoke-static {v0, p1, v2, v1, v2}, Lcom/vk/core/network/security/a$a;->a(Lcom/vk/core/network/security/a$a;Lokhttp3/x$b;Lcom/vk/core/network/security/a;ILjava/lang/Object;)V
+    invoke-static {v0, p1, v2, v1, v2}, Lcom/vk/core/network/security/NetworkTrustManager$a;->a(Lcom/vk/core/network/security/NetworkTrustManager$a;Lokhttp3/OkHttpClient$b;Lcom/vk/core/network/security/NetworkTrustManager;ILjava/lang/Object;)V
 
     const/4 v0, 0x1
 
     .line 41
-    invoke-virtual {p1, v0}, Lokhttp3/x$b;->a(Z)Lokhttp3/x$b;
+    invoke-virtual {p1, v0}, Lokhttp3/OkHttpClient$b;->a(Z)Lokhttp3/OkHttpClient$b;
 
     .line 42
-    invoke-virtual {p1, v0}, Lokhttp3/x$b;->b(Z)Lokhttp3/x$b;
+    invoke-virtual {p1, v0}, Lokhttp3/OkHttpClient$b;->b(Z)Lokhttp3/OkHttpClient$b;
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
@@ -479,7 +479,7 @@
 
     move-object v0, p0
 
-    invoke-static/range {v0 .. v5}, Lcom/vk/core/network/Network;->a(Ljava/lang/String;Ljava/util/Map;ZLokhttp3/x;ILjava/lang/Object;)[B
+    invoke-static/range {v0 .. v5}, Lcom/vk/core/network/Network;->a(Ljava/lang/String;Ljava/util/Map;ZLokhttp3/OkHttpClient;ILjava/lang/Object;)[B
 
     move-result-object p0
 
@@ -514,14 +514,14 @@
 
     move v2, p2
 
-    invoke-static/range {v0 .. v5}, Lcom/vk/core/network/Network;->a(Ljava/lang/String;Ljava/util/Map;ZLokhttp3/x;ILjava/lang/Object;)[B
+    invoke-static/range {v0 .. v5}, Lcom/vk/core/network/Network;->a(Ljava/lang/String;Ljava/util/Map;ZLokhttp3/OkHttpClient;ILjava/lang/Object;)[B
 
     move-result-object p0
 
     return-object p0
 .end method
 
-.method public static final a(Ljava/lang/String;Ljava/util/Map;ZLokhttp3/x;)[B
+.method public static final a(Ljava/lang/String;Ljava/util/Map;ZLokhttp3/OkHttpClient;)[B
     .locals 5
     .annotation build Landroidx/annotation/WorkerThread;
     .end annotation
@@ -534,7 +534,7 @@
             "Ljava/lang/String;",
             "Ljava/lang/String;",
             ">;Z",
-            "Lokhttp3/x;",
+            "Lokhttp3/OkHttpClient;",
             ")[B"
         }
     .end annotation
@@ -545,11 +545,11 @@
 
     .line 5
     :try_start_0
-    new-instance v2, Lokhttp3/z$a;
+    new-instance v2, Lokhttp3/Request$a;
 
-    invoke-direct {v2}, Lokhttp3/z$a;-><init>()V
+    invoke-direct {v2}, Lokhttp3/Request$a;-><init>()V
 
-    invoke-virtual {v2, p0}, Lokhttp3/z$a;->b(Ljava/lang/String;)Lokhttp3/z$a;
+    invoke-virtual {v2, p0}, Lokhttp3/Request$a;->b(Ljava/lang/String;)Lokhttp3/Request$a;
 
     if-eqz p1, :cond_0
 
@@ -597,7 +597,7 @@
     check-cast p1, Ljava/lang/String;
 
     .line 8
-    invoke-virtual {v2, v3, p1}, Lokhttp3/z$a;->a(Ljava/lang/String;Ljava/lang/String;)Lokhttp3/z$a;
+    invoke-virtual {v2, v3, p1}, Lokhttp3/Request$a;->a(Ljava/lang/String;Ljava/lang/String;)Lokhttp3/Request$a;
 
     goto :goto_0
 
@@ -607,31 +607,31 @@
     const-string p0, ""
 
     .line 9
-    invoke-static {v1, p0}, Lokhttp3/a0;->a(Lokhttp3/v;Ljava/lang/String;)Lokhttp3/a0;
+    invoke-static {v1, p0}, Lokhttp3/RequestBody;->a(Lokhttp3/MediaType;Ljava/lang/String;)Lokhttp3/RequestBody;
 
     move-result-object p0
 
-    invoke-virtual {v2, p0}, Lokhttp3/z$a;->a(Lokhttp3/a0;)Lokhttp3/z$a;
+    invoke-virtual {v2, p0}, Lokhttp3/Request$a;->a(Lokhttp3/RequestBody;)Lokhttp3/Request$a;
 
     .line 10
     :cond_1
-    invoke-virtual {v2}, Lokhttp3/z$a;->a()Lokhttp3/z;
+    invoke-virtual {v2}, Lokhttp3/Request$a;->a()Lokhttp3/Request;
 
     move-result-object p0
 
     .line 11
-    invoke-virtual {p3, p0}, Lokhttp3/x;->a(Lokhttp3/z;)Lokhttp3/e;
+    invoke-virtual {p3, p0}, Lokhttp3/OkHttpClient;->a(Lokhttp3/Request;)Lokhttp3/Call;
 
     move-result-object p0
 
-    invoke-interface {p0}, Lokhttp3/e;->execute()Lokhttp3/b0;
+    invoke-interface {p0}, Lokhttp3/Call;->execute()Lokhttp3/Response;
 
     move-result-object p0
 
     if-eqz p0, :cond_3
 
     .line 12
-    invoke-virtual {p0}, Lokhttp3/b0;->a()Lokhttp3/c0;
+    invoke-virtual {p0}, Lokhttp3/Response;->a()Lokhttp3/ResponseBody;
 
     move-result-object p0
     :try_end_0
@@ -642,7 +642,7 @@
 
     .line 13
     :try_start_1
-    invoke-virtual {p0}, Lokhttp3/c0;->b()[B
+    invoke-virtual {p0}, Lokhttp3/ResponseBody;->b()[B
 
     move-result-object v1
     :try_end_1
@@ -676,7 +676,7 @@
     if-eqz p0, :cond_4
 
     .line 14
-    invoke-virtual {p0}, Lokhttp3/c0;->close()V
+    invoke-virtual {p0}, Lokhttp3/ResponseBody;->close()V
 
     goto :goto_3
 
@@ -715,7 +715,7 @@
     if-eqz p1, :cond_4
 
     .line 16
-    invoke-virtual {p1}, Lokhttp3/c0;->close()V
+    invoke-virtual {p1}, Lokhttp3/ResponseBody;->close()V
 
     :cond_4
     :goto_3
@@ -729,13 +729,13 @@
     :goto_4
     if-eqz v1, :cond_5
 
-    invoke-virtual {v1}, Lokhttp3/c0;->close()V
+    invoke-virtual {v1}, Lokhttp3/ResponseBody;->close()V
 
     :cond_5
     throw p0
 .end method
 
-.method public static synthetic a(Ljava/lang/String;Ljava/util/Map;ZLokhttp3/x;ILjava/lang/Object;)[B
+.method public static synthetic a(Ljava/lang/String;Ljava/util/Map;ZLokhttp3/OkHttpClient;ILjava/lang/Object;)[B
     .locals 0
 
     and-int/lit8 p5, p4, 0x2
@@ -757,19 +757,19 @@
     if-eqz p4, :cond_2
 
     .line 4
-    invoke-static {}, Lcom/vk/core/network/Network;->j()Lokhttp3/x;
+    invoke-static {}, Lcom/vk/core/network/Network;->j()Lokhttp3/OkHttpClient;
 
     move-result-object p3
 
     :cond_2
-    invoke-static {p0, p1, p2, p3}, Lcom/vk/core/network/Network;->a(Ljava/lang/String;Ljava/util/Map;ZLokhttp3/x;)[B
+    invoke-static {p0, p1, p2, p3}, Lcom/vk/core/network/Network;->a(Ljava/lang/String;Ljava/util/Map;ZLokhttp3/OkHttpClient;)[B
 
     move-result-object p0
 
     return-object p0
 .end method
 
-.method public static final b(Lcom/vk/core/network/Network$ClientType;)Lokhttp3/x;
+.method public static final b(Lcom/vk/core/network/Network$ClientType;)Lokhttp3/OkHttpClient;
     .locals 1
     .annotation build Landroidx/annotation/WorkerThread;
     .end annotation
@@ -787,30 +787,30 @@
 
     check-cast p0, Lcom/vk/core/network/Network$a;
 
-    invoke-virtual {p0}, Lcom/vk/core/network/Network$a;->b()Lokhttp3/x;
+    invoke-virtual {p0}, Lcom/vk/core/network/Network$a;->b()Lokhttp3/OkHttpClient;
 
     move-result-object p0
 
     return-object p0
 .end method
 
-.method public static final synthetic b(Lcom/vk/core/network/Network;Lokhttp3/x$b;)V
+.method public static final synthetic b(Lcom/vk/core/network/Network;Lokhttp3/OkHttpClient$b;)V
     .locals 0
 
     .line 1
-    invoke-direct {p0, p1}, Lcom/vk/core/network/Network;->b(Lokhttp3/x$b;)V
+    invoke-direct {p0, p1}, Lcom/vk/core/network/Network;->b(Lokhttp3/OkHttpClient$b;)V
 
     return-void
 .end method
 
-.method private final declared-synchronized b(Lokhttp3/x$b;)V
+.method private final declared-synchronized b(Lokhttp3/OkHttpClient$b;)V
     .locals 2
 
     monitor-enter p0
 
     .line 12
     :try_start_0
-    invoke-direct {p0, p1}, Lcom/vk/core/network/Network;->c(Lokhttp3/x$b;)Z
+    invoke-direct {p0, p1}, Lcom/vk/core/network/Network;->c(Lokhttp3/OkHttpClient$b;)Z
 
     move-result v0
     :try_end_0
@@ -828,51 +828,51 @@
     :try_start_1
     sget-object v0, Lcom/vk/core/network/Network;->c:Lcom/vk/core/network/proxy/NetworkProxy;
 
-    invoke-virtual {v0}, Lcom/vk/core/network/proxy/NetworkProxy;->a()Lcom/vk/core/network/proxy/c;
+    invoke-virtual {v0}, Lcom/vk/core/network/proxy/NetworkProxy;->a()Lcom/vk/core/network/proxy/ProxyHost;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/vk/core/network/proxy/c;->b()Lcom/vk/core/network/proxy/f;
+    invoke-virtual {v0}, Lcom/vk/core/network/proxy/ProxyHost;->b()Lcom/vk/core/network/proxy/ProxyInterceptor;
 
     move-result-object v0
 
-    invoke-virtual {p1, v0}, Lokhttp3/x$b;->a(Lokhttp3/u;)Lokhttp3/x$b;
+    invoke-virtual {p1, v0}, Lokhttp3/OkHttpClient$b;->a(Lokhttp3/Interceptor;)Lokhttp3/OkHttpClient$b;
 
     .line 15
     sget-object v0, Lcom/vk/core/network/Network;->c:Lcom/vk/core/network/proxy/NetworkProxy;
 
-    invoke-virtual {v0}, Lcom/vk/core/network/proxy/NetworkProxy;->a()Lcom/vk/core/network/proxy/c;
+    invoke-virtual {v0}, Lcom/vk/core/network/proxy/NetworkProxy;->a()Lcom/vk/core/network/proxy/ProxyHost;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/vk/core/network/proxy/c;->a()Ljavax/net/ssl/HostnameVerifier;
+    invoke-virtual {v0}, Lcom/vk/core/network/proxy/ProxyHost;->a()Ljavax/net/ssl/HostnameVerifier;
 
     move-result-object v0
 
-    invoke-virtual {p1, v0}, Lokhttp3/x$b;->a(Ljavax/net/ssl/HostnameVerifier;)Lokhttp3/x$b;
+    invoke-virtual {p1, v0}, Lokhttp3/OkHttpClient$b;->a(Ljavax/net/ssl/HostnameVerifier;)Lokhttp3/OkHttpClient$b;
 
     .line 16
-    sget-object v0, Lcom/vk/core/network/security/a;->d:Lcom/vk/core/network/security/a$a;
+    sget-object v0, Lcom/vk/core/network/security/NetworkTrustManager;->d:Lcom/vk/core/network/security/NetworkTrustManager$a;
 
     sget-object v1, Lcom/vk/core/network/Network;->c:Lcom/vk/core/network/proxy/NetworkProxy;
 
-    invoke-virtual {v1}, Lcom/vk/core/network/proxy/NetworkProxy;->a()Lcom/vk/core/network/proxy/c;
+    invoke-virtual {v1}, Lcom/vk/core/network/proxy/NetworkProxy;->a()Lcom/vk/core/network/proxy/ProxyHost;
 
     move-result-object v1
 
-    invoke-virtual {v1}, Lcom/vk/core/network/proxy/c;->c()Lcom/vk/core/network/security/a;
+    invoke-virtual {v1}, Lcom/vk/core/network/proxy/ProxyHost;->c()Lcom/vk/core/network/security/NetworkTrustManager;
 
     move-result-object v1
 
-    invoke-virtual {v0, p1, v1}, Lcom/vk/core/network/security/a$a;->a(Lokhttp3/x$b;Lcom/vk/core/network/security/a;)V
+    invoke-virtual {v0, p1, v1}, Lcom/vk/core/network/security/NetworkTrustManager$a;->a(Lokhttp3/OkHttpClient$b;Lcom/vk/core/network/security/NetworkTrustManager;)V
 
     const/4 v0, 0x0
 
     .line 17
-    invoke-virtual {p1, v0}, Lokhttp3/x$b;->a(Z)Lokhttp3/x$b;
+    invoke-virtual {p1, v0}, Lokhttp3/OkHttpClient$b;->a(Z)Lokhttp3/OkHttpClient$b;
 
     .line 18
-    invoke-virtual {p1, v0}, Lokhttp3/x$b;->b(Z)Lokhttp3/x$b;
+    invoke-virtual {p1, v0}, Lokhttp3/OkHttpClient$b;->b(Z)Lokhttp3/OkHttpClient$b;
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
@@ -929,11 +929,11 @@
     .line 4
     sget-object v0, Lcom/vk/core/network/Network;->c:Lcom/vk/core/network/proxy/NetworkProxy;
 
-    invoke-virtual {v0}, Lcom/vk/core/network/proxy/NetworkProxy;->a()Lcom/vk/core/network/proxy/c;
+    invoke-virtual {v0}, Lcom/vk/core/network/proxy/NetworkProxy;->a()Lcom/vk/core/network/proxy/ProxyHost;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/vk/core/network/proxy/c;->d()Z
+    invoke-virtual {v0}, Lcom/vk/core/network/proxy/ProxyHost;->d()Z
 
     move-result v0
 
@@ -947,11 +947,11 @@
     :cond_0
     sget-object v0, Lcom/vk/core/network/Network;->l:Lcom/vk/core/network/Network;
 
-    invoke-direct {v0}, Lcom/vk/core/network/Network;->i()Lokhttp3/x$b;
+    invoke-direct {v0}, Lcom/vk/core/network/Network;->i()Lokhttp3/OkHttpClient$b;
 
     move-result-object v1
 
-    invoke-direct {v0, v1}, Lcom/vk/core/network/Network;->c(Lokhttp3/x$b;)Z
+    invoke-direct {v0, v1}, Lcom/vk/core/network/Network;->c(Lokhttp3/OkHttpClient$b;)Z
 
     move-result v0
 
@@ -970,23 +970,23 @@
     return v0
 .end method
 
-.method private final c(Lokhttp3/x$b;)Z
+.method private final c(Lokhttp3/OkHttpClient$b;)Z
     .locals 1
 
     if-eqz p1, :cond_0
 
     .line 2
-    invoke-virtual {p1}, Lokhttp3/x$b;->b()Ljava/util/List;
+    invoke-virtual {p1}, Lokhttp3/OkHttpClient$b;->b()Ljava/util/List;
 
     move-result-object p1
 
     sget-object v0, Lcom/vk/core/network/Network;->c:Lcom/vk/core/network/proxy/NetworkProxy;
 
-    invoke-virtual {v0}, Lcom/vk/core/network/proxy/NetworkProxy;->a()Lcom/vk/core/network/proxy/c;
+    invoke-virtual {v0}, Lcom/vk/core/network/proxy/NetworkProxy;->a()Lcom/vk/core/network/proxy/ProxyHost;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/vk/core/network/proxy/c;->b()Lcom/vk/core/network/proxy/f;
+    invoke-virtual {v0}, Lcom/vk/core/network/proxy/ProxyHost;->b()Lcom/vk/core/network/proxy/ProxyInterceptor;
 
     move-result-object v0
 
@@ -1011,29 +1011,29 @@
     .locals 1
 
     .line 1
-    sget-object v0, Lcom/vk/core/network/Network;->f:Lcom/vk/core/network/a/a;
+    sget-object v0, Lcom/vk/core/network/Network;->f:Lcom/vk/core/network/a/PersistentCookieJar;
 
     if-eqz v0, :cond_0
 
-    invoke-virtual {v0}, Lcom/vk/core/network/a/a;->a()V
+    invoke-virtual {v0}, Lcom/vk/core/network/a/PersistentCookieJar;->a()V
 
     :cond_0
     return-void
 .end method
 
-.method private final f()Lokhttp3/x$b;
+.method private final f()Lokhttp3/OkHttpClient$b;
     .locals 6
 
     .line 1
     invoke-direct {p0}, Lcom/vk/core/network/Network;->k()V
 
     .line 2
-    new-instance v0, Lokhttp3/x$b;
+    new-instance v0, Lokhttp3/OkHttpClient$b;
 
-    invoke-direct {v0}, Lokhttp3/x$b;-><init>()V
+    invoke-direct {v0}, Lokhttp3/OkHttpClient$b;-><init>()V
 
     .line 3
-    new-instance v1, Lcom/vk/core/network/utils/a;
+    new-instance v1, Lcom/vk/core/network/utils/NetworkEventListener;
 
     sget-object v2, Lcom/vk/core/network/Network;->k:Lcom/vk/core/network/stat/NetworkMetricsReporter;
 
@@ -1041,80 +1041,80 @@
 
     if-eqz v2, :cond_1
 
-    invoke-direct {v1, v2}, Lcom/vk/core/network/utils/a;-><init>(Lcom/vk/core/network/stat/NetworkMetricsReporter;)V
+    invoke-direct {v1, v2}, Lcom/vk/core/network/utils/NetworkEventListener;-><init>(Lcom/vk/core/network/stat/NetworkMetricsReporter;)V
 
     .line 4
     sget-wide v4, Lcom/vk/core/network/Network;->g:J
 
     sget-object v2, Ljava/util/concurrent/TimeUnit;->MILLISECONDS:Ljava/util/concurrent/TimeUnit;
 
-    invoke-virtual {v0, v4, v5, v2}, Lokhttp3/x$b;->a(JLjava/util/concurrent/TimeUnit;)Lokhttp3/x$b;
+    invoke-virtual {v0, v4, v5, v2}, Lokhttp3/OkHttpClient$b;->a(JLjava/util/concurrent/TimeUnit;)Lokhttp3/OkHttpClient$b;
 
     .line 5
     sget-wide v4, Lcom/vk/core/network/Network;->g:J
 
     sget-object v2, Ljava/util/concurrent/TimeUnit;->MILLISECONDS:Ljava/util/concurrent/TimeUnit;
 
-    invoke-virtual {v0, v4, v5, v2}, Lokhttp3/x$b;->b(JLjava/util/concurrent/TimeUnit;)Lokhttp3/x$b;
+    invoke-virtual {v0, v4, v5, v2}, Lokhttp3/OkHttpClient$b;->b(JLjava/util/concurrent/TimeUnit;)Lokhttp3/OkHttpClient$b;
 
     .line 6
     sget-wide v4, Lcom/vk/core/network/Network;->g:J
 
     sget-object v2, Ljava/util/concurrent/TimeUnit;->MILLISECONDS:Ljava/util/concurrent/TimeUnit;
 
-    invoke-virtual {v0, v4, v5, v2}, Lokhttp3/x$b;->c(JLjava/util/concurrent/TimeUnit;)Lokhttp3/x$b;
+    invoke-virtual {v0, v4, v5, v2}, Lokhttp3/OkHttpClient$b;->c(JLjava/util/concurrent/TimeUnit;)Lokhttp3/OkHttpClient$b;
 
     .line 7
-    sget-object v2, Lcom/vk/core/network/Network;->h:Lokhttp3/j;
+    sget-object v2, Lcom/vk/core/network/Network;->h:Lokhttp3/ConnectionPool;
 
-    invoke-virtual {v0, v2}, Lokhttp3/x$b;->a(Lokhttp3/j;)Lokhttp3/x$b;
+    invoke-virtual {v0, v2}, Lokhttp3/OkHttpClient$b;->a(Lokhttp3/ConnectionPool;)Lokhttp3/OkHttpClient$b;
 
     .line 8
-    sget-object v2, Lcom/vk/core/network/Network;->i:Lokhttp3/n;
+    sget-object v2, Lcom/vk/core/network/Network;->i:Lokhttp3/Dispatcher;
 
-    invoke-virtual {v0, v2}, Lokhttp3/x$b;->a(Lokhttp3/n;)Lokhttp3/x$b;
+    invoke-virtual {v0, v2}, Lokhttp3/OkHttpClient$b;->a(Lokhttp3/Dispatcher;)Lokhttp3/OkHttpClient$b;
 
     .line 9
-    invoke-virtual {v0, v1}, Lokhttp3/x$b;->a(Lokhttp3/p;)Lokhttp3/x$b;
+    invoke-virtual {v0, v1}, Lokhttp3/OkHttpClient$b;->a(Lokhttp3/EventListener;)Lokhttp3/OkHttpClient$b;
 
     .line 10
-    new-instance v2, Lcom/vk/core/network/interceptors/f;
+    new-instance v2, Lcom/vk/core/network/interceptors/UserAgentInterceptor;
 
-    sget-object v4, Lcom/vk/core/network/Network;->b:Lcom/vk/core/network/utils/d;
+    sget-object v4, Lcom/vk/core/network/Network;->b:Lcom/vk/core/network/utils/NetworkUserAgent;
 
-    invoke-virtual {v4}, Lcom/vk/core/network/utils/d;->a()Ljava/lang/String;
+    invoke-virtual {v4}, Lcom/vk/core/network/utils/NetworkUserAgent;->a()Ljava/lang/String;
 
     move-result-object v4
 
     const-string v5, "userAgent.userAgent()"
 
-    invoke-static {v4, v5}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v4, v5}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    invoke-direct {v2, v4}, Lcom/vk/core/network/interceptors/f;-><init>(Ljava/lang/String;)V
+    invoke-direct {v2, v4}, Lcom/vk/core/network/interceptors/UserAgentInterceptor;-><init>(Ljava/lang/String;)V
 
-    invoke-virtual {v0, v2}, Lokhttp3/x$b;->a(Lokhttp3/u;)Lokhttp3/x$b;
+    invoke-virtual {v0, v2}, Lokhttp3/OkHttpClient$b;->a(Lokhttp3/Interceptor;)Lokhttp3/OkHttpClient$b;
 
     .line 11
-    sget-object v2, Lcom/vk/core/network/interceptors/e;->a:Lcom/vk/core/network/interceptors/e;
+    sget-object v2, Lcom/vk/core/network/interceptors/UnexpectedTlsInterceptorFix;->a:Lcom/vk/core/network/interceptors/UnexpectedTlsInterceptorFix;
 
-    invoke-virtual {v0, v2}, Lokhttp3/x$b;->a(Lokhttp3/u;)Lokhttp3/x$b;
+    invoke-virtual {v0, v2}, Lokhttp3/OkHttpClient$b;->a(Lokhttp3/Interceptor;)Lokhttp3/OkHttpClient$b;
 
     .line 12
-    sget-object v2, Lcom/vk/core/network/interceptors/a;->a:Lcom/vk/core/network/interceptors/a;
+    sget-object v2, Lcom/vk/core/network/interceptors/HandshakeNPEInterceptorFix;->a:Lcom/vk/core/network/interceptors/HandshakeNPEInterceptorFix;
 
-    invoke-virtual {v0, v2}, Lokhttp3/x$b;->a(Lokhttp3/u;)Lokhttp3/x$b;
+    invoke-virtual {v0, v2}, Lokhttp3/OkHttpClient$b;->a(Lokhttp3/Interceptor;)Lokhttp3/OkHttpClient$b;
 
     .line 13
-    sget-object v2, Lcom/vk/core/network/interceptors/b;->a:Lcom/vk/core/network/interceptors/b;
+    sget-object v2, Lcom/vk/core/network/interceptors/ProxyCookieInterceptor;->a:Lcom/vk/core/network/interceptors/ProxyCookieInterceptor;
 
-    invoke-virtual {v0, v2}, Lokhttp3/x$b;->a(Lokhttp3/u;)Lokhttp3/x$b;
+    invoke-virtual {v0, v2}, Lokhttp3/OkHttpClient$b;->a(Lokhttp3/Interceptor;)Lokhttp3/OkHttpClient$b;
 
     .line 14
-    new-instance v2, Lcom/vk/core/network/interceptors/c;
+    new-instance v2, Lcom/vk/core/network/interceptors/SocketTimeoutInterceptor;
 
-    invoke-direct {v2}, Lcom/vk/core/network/interceptors/c;-><init>()V
+    invoke-direct {v2}, Lcom/vk/core/network/interceptors/SocketTimeoutInterceptor;-><init>()V
 
-    invoke-virtual {v0, v2}, Lokhttp3/x$b;->b(Lokhttp3/u;)Lokhttp3/x$b;
+    invoke-virtual {v0, v2}, Lokhttp3/OkHttpClient$b;->b(Lokhttp3/Interceptor;)Lokhttp3/OkHttpClient$b;
 
     .line 15
     invoke-static {}, Lcom/vk/core/preference/Preference;->a()Landroid/content/SharedPreferences;
@@ -1135,10 +1135,10 @@
     sget-object v2, Lcom/vk/core/network/interceptors/ConnectTimeoutInterceptor;->e:Lcom/vk/core/network/interceptors/ConnectTimeoutInterceptor;
 
     .line 17
-    invoke-virtual {v0, v2}, Lokhttp3/x$b;->b(Lokhttp3/u;)Lokhttp3/x$b;
+    invoke-virtual {v0, v2}, Lokhttp3/OkHttpClient$b;->b(Lokhttp3/Interceptor;)Lokhttp3/OkHttpClient$b;
 
     .line 18
-    invoke-virtual {v1, v2}, Lcom/vk/core/network/utils/a;->a(Lcom/vk/core/network/utils/a$a;)Z
+    invoke-virtual {v1, v2}, Lcom/vk/core/network/utils/NetworkEventListener;->a(Lcom/vk/core/network/utils/NetworkEventListener$a;)Z
 
     goto :goto_0
 
@@ -1150,43 +1150,43 @@
     .line 19
     sget-object v4, Ljava/util/concurrent/TimeUnit;->MILLISECONDS:Ljava/util/concurrent/TimeUnit;
 
-    invoke-virtual {v0, v1, v2, v4}, Lokhttp3/x$b;->a(JLjava/util/concurrent/TimeUnit;)Lokhttp3/x$b;
+    invoke-virtual {v0, v1, v2, v4}, Lokhttp3/OkHttpClient$b;->a(JLjava/util/concurrent/TimeUnit;)Lokhttp3/OkHttpClient$b;
 
     .line 20
     :goto_0
-    sget-object v1, Lcom/vk/core/network/interceptors/d;->f:Lcom/vk/core/network/interceptors/d;
+    sget-object v1, Lcom/vk/core/network/interceptors/UndesirableBackgroundTrafficInterceptor;->f:Lcom/vk/core/network/interceptors/UndesirableBackgroundTrafficInterceptor;
 
-    invoke-virtual {v0, v1}, Lokhttp3/x$b;->a(Lokhttp3/u;)Lokhttp3/x$b;
+    invoke-virtual {v0, v1}, Lokhttp3/OkHttpClient$b;->a(Lokhttp3/Interceptor;)Lokhttp3/OkHttpClient$b;
 
     .line 21
-    sget-object v1, Lcom/vk/core/network/Network;->f:Lcom/vk/core/network/a/a;
+    sget-object v1, Lcom/vk/core/network/Network;->f:Lcom/vk/core/network/a/PersistentCookieJar;
 
-    invoke-virtual {v0, v1}, Lokhttp3/x$b;->a(Lokhttp3/m;)Lokhttp3/x$b;
+    invoke-virtual {v0, v1}, Lokhttp3/OkHttpClient$b;->a(Lokhttp3/CookieJar;)Lokhttp3/OkHttpClient$b;
 
     .line 22
-    sget-object v1, Lcom/vk/core/network/security/a;->d:Lcom/vk/core/network/security/a$a;
+    sget-object v1, Lcom/vk/core/network/security/NetworkTrustManager;->d:Lcom/vk/core/network/security/NetworkTrustManager$a;
 
     const/4 v2, 0x2
 
-    invoke-static {v1, v0, v3, v2, v3}, Lcom/vk/core/network/security/a$a;->a(Lcom/vk/core/network/security/a$a;Lokhttp3/x$b;Lcom/vk/core/network/security/a;ILjava/lang/Object;)V
+    invoke-static {v1, v0, v3, v2, v3}, Lcom/vk/core/network/security/NetworkTrustManager$a;->a(Lcom/vk/core/network/security/NetworkTrustManager$a;Lokhttp3/OkHttpClient$b;Lcom/vk/core/network/security/NetworkTrustManager;ILjava/lang/Object;)V
 
     .line 23
-    new-instance v1, Lcom/vk/core/network/utils/b;
+    new-instance v1, Lcom/vk/core/network/utils/NetworkHostVerifier;
 
-    invoke-direct {v1}, Lcom/vk/core/network/utils/b;-><init>()V
+    invoke-direct {v1}, Lcom/vk/core/network/utils/NetworkHostVerifier;-><init>()V
 
-    invoke-virtual {v0, v1}, Lokhttp3/x$b;->a(Ljavax/net/ssl/HostnameVerifier;)Lokhttp3/x$b;
+    invoke-virtual {v0, v1}, Lokhttp3/OkHttpClient$b;->a(Ljavax/net/ssl/HostnameVerifier;)Lokhttp3/OkHttpClient$b;
 
     .line 24
-    invoke-static {v0}, Lcom/vk/core/util/q;->a(Lokhttp3/x$b;)V
+    invoke-static {v0}, Lcom/vk/core/util/DebugUtils;->a(Lokhttp3/OkHttpClient$b;)V
 
     const/4 v1, 0x1
 
     .line 25
-    invoke-virtual {v0, v1}, Lokhttp3/x$b;->a(Z)Lokhttp3/x$b;
+    invoke-virtual {v0, v1}, Lokhttp3/OkHttpClient$b;->a(Z)Lokhttp3/OkHttpClient$b;
 
     .line 26
-    invoke-virtual {v0, v1}, Lokhttp3/x$b;->b(Z)Lokhttp3/x$b;
+    invoke-virtual {v0, v1}, Lokhttp3/OkHttpClient$b;->b(Z)Lokhttp3/OkHttpClient$b;
 
     return-object v0
 
@@ -1194,7 +1194,7 @@
     const-string v0, "networkMetricsReporter"
 
     .line 27
-    invoke-static {v0}, Lkotlin/jvm/internal/m;->b(Ljava/lang/String;)V
+    invoke-static {v0}, Lkotlin/jvm/internal/Intrinsics;->b(Ljava/lang/String;)V
 
     throw v3
 .end method
@@ -1203,9 +1203,9 @@
     .locals 1
 
     .line 1
-    sget-object v0, Lcom/vk/core/network/Network;->h:Lokhttp3/j;
+    sget-object v0, Lcom/vk/core/network/Network;->h:Lokhttp3/ConnectionPool;
 
-    invoke-virtual {v0}, Lokhttp3/j;->a()V
+    invoke-virtual {v0}, Lokhttp3/ConnectionPool;->a()V
 
     return-void
 .end method
@@ -1223,7 +1223,7 @@
     return-object v0
 .end method
 
-.method private final i()Lokhttp3/x$b;
+.method private final i()Lokhttp3/OkHttpClient$b;
     .locals 3
 
     .line 1
@@ -1263,7 +1263,7 @@
 
     if-nez v1, :cond_1
 
-    invoke-virtual {v0}, Lcom/vk/core/network/Network$a;->a()Lokhttp3/x$b;
+    invoke-virtual {v0}, Lcom/vk/core/network/Network$a;->a()Lokhttp3/OkHttpClient$b;
 
     move-result-object v2
 
@@ -1271,7 +1271,7 @@
     return-object v2
 .end method
 
-.method public static final j()Lokhttp3/x;
+.method public static final j()Lokhttp3/OkHttpClient;
     .locals 1
     .annotation build Landroidx/annotation/WorkerThread;
     .end annotation
@@ -1279,7 +1279,7 @@
     .line 1
     sget-object v0, Lcom/vk/core/network/Network$ClientType;->CLIENT_DEFAULT:Lcom/vk/core/network/Network$ClientType;
 
-    invoke-static {v0}, Lcom/vk/core/network/Network;->b(Lcom/vk/core/network/Network$ClientType;)Lokhttp3/x;
+    invoke-static {v0}, Lcom/vk/core/network/Network;->b(Lcom/vk/core/network/Network$ClientType;)Lokhttp3/OkHttpClient;
 
     move-result-object v0
 
@@ -1290,7 +1290,7 @@
     .locals 4
 
     .line 1
-    sget-object v0, Lcom/vk/core/network/Network;->f:Lcom/vk/core/network/a/a;
+    sget-object v0, Lcom/vk/core/network/Network;->f:Lcom/vk/core/network/a/PersistentCookieJar;
 
     if-eqz v0, :cond_0
 
@@ -1321,26 +1321,26 @@
     invoke-static {v1}, Lcom/vk/log/L;->d([Ljava/lang/Object;)V
 
     .line 4
-    sget-object v1, Lcom/vk/core/network/Network;->f:Lcom/vk/core/network/a/a;
+    sget-object v1, Lcom/vk/core/network/Network;->f:Lcom/vk/core/network/a/PersistentCookieJar;
 
     if-nez v1, :cond_1
 
     .line 5
-    new-instance v1, Lcom/vk/core/network/a/a;
+    new-instance v1, Lcom/vk/core/network/a/PersistentCookieJar;
 
-    new-instance v2, Lcom/vk/core/network/a/b/c;
+    new-instance v2, Lcom/vk/core/network/a/b/SetCookieCache;
 
-    invoke-direct {v2}, Lcom/vk/core/network/a/b/c;-><init>()V
+    invoke-direct {v2}, Lcom/vk/core/network/a/b/SetCookieCache;-><init>()V
 
     .line 6
-    new-instance v3, Lcom/vk/core/network/cookies/persistence/b;
+    new-instance v3, Lcom/vk/core/network/cookies/persistence/SharedPrefsCookiePersistor;
 
-    invoke-direct {v3}, Lcom/vk/core/network/cookies/persistence/b;-><init>()V
+    invoke-direct {v3}, Lcom/vk/core/network/cookies/persistence/SharedPrefsCookiePersistor;-><init>()V
 
     .line 7
-    invoke-direct {v1, v2, v3}, Lcom/vk/core/network/a/a;-><init>(Lcom/vk/core/network/a/b/a;Lcom/vk/core/network/cookies/persistence/a;)V
+    invoke-direct {v1, v2, v3}, Lcom/vk/core/network/a/PersistentCookieJar;-><init>(Lcom/vk/core/network/a/b/CookieCache;Lcom/vk/core/network/cookies/persistence/CookiePersistor;)V
 
-    sput-object v1, Lcom/vk/core/network/Network;->f:Lcom/vk/core/network/a/a;
+    sput-object v1, Lcom/vk/core/network/Network;->f:Lcom/vk/core/network/a/PersistentCookieJar;
 
     .line 8
     :cond_1
@@ -1351,11 +1351,11 @@
     .line 9
     new-instance v1, Lcom/vk/core/network/security/NetworkKeyStore;
 
-    sget-object v2, Lcom/vk/core/util/i;->a:Landroid/content/Context;
+    sget-object v2, Lcom/vk/core/util/AppContextHolder;->a:Landroid/content/Context;
 
     const-string v3, "AppContextHolder.context"
 
-    invoke-static {v2, v3}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v2, v3}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     sget-boolean v3, Lcom/vk/core/network/Network;->j:Z
 
@@ -1365,7 +1365,7 @@
 
     .line 10
     :cond_2
-    sget-object v1, Lkotlin/m;->a:Lkotlin/m;
+    sget-object v1, Lkotlin/Unit;->a:Lkotlin/Unit;
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
@@ -1382,13 +1382,13 @@
     throw v1
 .end method
 
-.method public static final l()Lokhttp3/x$b;
+.method public static final l()Lokhttp3/OkHttpClient$b;
     .locals 2
 
     .line 1
     sget-object v0, Lcom/vk/core/network/Network;->l:Lcom/vk/core/network/Network;
 
-    invoke-direct {v0}, Lcom/vk/core/network/Network;->f()Lokhttp3/x$b;
+    invoke-direct {v0}, Lcom/vk/core/network/Network;->f()Lokhttp3/OkHttpClient$b;
 
     move-result-object v0
 
@@ -1404,23 +1404,23 @@
     .line 3
     sget-object v1, Lcom/vk/core/network/Network;->l:Lcom/vk/core/network/Network;
 
-    invoke-direct {v1, v0}, Lcom/vk/core/network/Network;->b(Lokhttp3/x$b;)V
+    invoke-direct {v1, v0}, Lcom/vk/core/network/Network;->b(Lokhttp3/OkHttpClient$b;)V
 
     :cond_0
     return-object v0
 .end method
 
-.method public static final m()Lcom/vk/core/network/b/a;
+.method public static final m()Lcom/vk/core/network/b/NetworkTrafficMeter;
     .locals 1
 
     .line 1
-    sget-object v0, Lcom/vk/core/network/Network;->d:Lkotlin/e;
+    sget-object v0, Lcom/vk/core/network/Network;->d:Lkotlin/Lazy2;
 
-    invoke-interface {v0}, Lkotlin/e;->getValue()Ljava/lang/Object;
+    invoke-interface {v0}, Lkotlin/Lazy2;->getValue()Ljava/lang/Object;
 
     move-result-object v0
 
-    check-cast v0, Lcom/vk/core/network/b/a;
+    check-cast v0, Lcom/vk/core/network/b/NetworkTrafficMeter;
 
     return-object v0
 .end method
@@ -1436,12 +1436,12 @@
     return-wide v0
 .end method
 
-.method public final a(ZZLkotlin/jvm/b/b;)V
+.method public final a(ZZLkotlin/jvm/b/Functions2;)V
     .locals 6
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(ZZ",
-            "Lkotlin/jvm/b/b<",
+            "Lkotlin/jvm/b/Functions2<",
             "-",
             "Ljava/lang/String;",
             "Ljava/lang/Boolean;",
@@ -1452,7 +1452,7 @@
     .line 17
     new-instance v0, Lcom/vk/core/network/stat/NetworkMetricsReporter;
 
-    invoke-direct {v0, p3}, Lcom/vk/core/network/stat/NetworkMetricsReporter;-><init>(Lkotlin/jvm/b/b;)V
+    invoke-direct {v0, p3}, Lcom/vk/core/network/stat/NetworkMetricsReporter;-><init>(Lkotlin/jvm/b/Functions2;)V
 
     sput-object v0, Lcom/vk/core/network/Network;->k:Lcom/vk/core/network/stat/NetworkMetricsReporter;
 
@@ -1506,7 +1506,7 @@
     invoke-interface {p1, p3}, Ljava/util/concurrent/ScheduledExecutorService;->submit(Ljava/lang/Runnable;)Ljava/util/concurrent/Future;
 
     .line 23
-    invoke-static {}, Lb/h/g/g/b;->l()Z
+    invoke-static {}, Lb/h/g/g/BuildInfo;->l()Z
 
     move-result p1
 
@@ -1515,7 +1515,7 @@
     if-eqz p2, :cond_1
 
     .line 24
-    sget-object v0, Lb/h/k/c;->b:Lb/h/k/c;
+    sget-object v0, Lb/h/k/IdleTaskHandler1;->b:Lb/h/k/IdleTaskHandler1;
 
     sget-object v1, Lcom/vk/core/network/Network$c;->a:Lcom/vk/core/network/Network$c;
 
@@ -1523,7 +1523,7 @@
 
     const-wide/16 v4, 0x3e8
 
-    invoke-virtual/range {v0 .. v5}, Lb/h/k/c;->a(Ljava/lang/Runnable;JJ)V
+    invoke-virtual/range {v0 .. v5}, Lb/h/k/IdleTaskHandler1;->a(Ljava/lang/Runnable;JJ)V
 
     :cond_1
     return-void
@@ -1538,11 +1538,11 @@
     return-object v0
 .end method
 
-.method public final c()Lcom/vk/core/network/utils/d;
+.method public final c()Lcom/vk/core/network/utils/NetworkUserAgent;
     .locals 1
 
     .line 1
-    sget-object v0, Lcom/vk/core/network/Network;->b:Lcom/vk/core/network/utils/d;
+    sget-object v0, Lcom/vk/core/network/Network;->b:Lcom/vk/core/network/utils/NetworkUserAgent;
 
     return-object v0
 .end method
@@ -1561,7 +1561,7 @@
     return-object v0
 
     :cond_0
-    invoke-static {}, Lkotlin/jvm/internal/m;->a()V
+    invoke-static {}, Lkotlin/jvm/internal/Intrinsics;->a()V
 
     const/4 v0, 0x0
 

@@ -3,7 +3,7 @@
 .source "VoipAppBindingFactory.kt"
 
 # interfaces
-.implements Lcom/vk/api/base/a;
+.implements Lcom/vk/api/base/ApiCallback;
 
 
 # annotations
@@ -19,7 +19,7 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Ljava/lang/Object;",
-        "Lcom/vk/api/base/a<",
+        "Lcom/vk/api/base/ApiCallback<",
         "Ljava/lang/String;",
         ">;"
     }
@@ -134,7 +134,7 @@
 
     .line 10
     :cond_0
-    new-instance v0, Lcom/vk/api/users/h;
+    new-instance v0, Lcom/vk/api/users/UsersGetUsersAndGroups;
 
     new-array v2, v3, [I
 
@@ -152,12 +152,12 @@
 
     move-result-object v2
 
-    invoke-direct {v0, v1, v2}, Lcom/vk/api/users/h;-><init>(Ljava/util/List;[Ljava/lang/String;)V
+    invoke-direct {v0, v1, v2}, Lcom/vk/api/users/UsersGetUsersAndGroups;-><init>(Ljava/util/List;[Ljava/lang/String;)V
 
     const/4 v1, 0x0
 
     .line 11
-    invoke-static {v0, v1, v3, v1}, Lcom/vk/api/base/d;->d(Lcom/vk/api/base/d;Lcom/vk/api/base/e;ILjava/lang/Object;)Lc/a/m;
+    invoke-static {v0, v1, v3, v1}, Lcom/vk/api/base/ApiRequest;->d(Lcom/vk/api/base/ApiRequest;Lcom/vk/api/base/ApiThreadHolder;ILjava/lang/Object;)Lio/reactivex/Observable;
 
     move-result-object v0
 
@@ -170,7 +170,7 @@
     sget-object p1, Lcom/vk/voip/VoipAppBindingFactory$b$b;->a:Lcom/vk/voip/VoipAppBindingFactory$b$b;
 
     .line 14
-    invoke-virtual {v0, v1, p1}, Lc/a/m;->a(Lc/a/z/g;Lc/a/z/g;)Lio/reactivex/disposables/b;
+    invoke-virtual {v0, v1, p1}, Lio/reactivex/Observable;->a(Lio/reactivex/functions/Consumer;Lio/reactivex/functions/Consumer;)Lio/reactivex/disposables/Disposable;
 
     return-void
 .end method

@@ -5,7 +5,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vtosters/lite/fragments/friends/presenter/CurrentUserFriendsPresenter;-><init>(Lcom/vtosters/lite/fragments/friends/presenter/a$a;)V
+    value = Lcom/vtosters/lite/fragments/friends/presenter/CurrentUserFriendsPresenter;-><init>(Lcom/vtosters/lite/fragments/friends/presenter/BaseFriendsFragmentPresenter$a;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -17,16 +17,16 @@
 # instance fields
 .field final synthetic a:Lcom/vtosters/lite/fragments/friends/presenter/CurrentUserFriendsPresenter;
 
-.field final synthetic b:Lcom/vtosters/lite/fragments/friends/presenter/a$a;
+.field final synthetic b:Lcom/vtosters/lite/fragments/friends/presenter/BaseFriendsFragmentPresenter$a;
 
 
 # direct methods
-.method constructor <init>(Lcom/vtosters/lite/fragments/friends/presenter/CurrentUserFriendsPresenter;Lcom/vtosters/lite/fragments/friends/presenter/a$a;)V
+.method constructor <init>(Lcom/vtosters/lite/fragments/friends/presenter/CurrentUserFriendsPresenter;Lcom/vtosters/lite/fragments/friends/presenter/BaseFriendsFragmentPresenter$a;)V
     .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lcom/vtosters/lite/fragments/friends/presenter/a$a;",
+            "Lcom/vtosters/lite/fragments/friends/presenter/BaseFriendsFragmentPresenter$a;",
             ")V"
         }
     .end annotation
@@ -34,7 +34,7 @@
     .line 1
     iput-object p1, p0, Lcom/vtosters/lite/fragments/friends/presenter/CurrentUserFriendsPresenter$receiver$1;->a:Lcom/vtosters/lite/fragments/friends/presenter/CurrentUserFriendsPresenter;
 
-    iput-object p2, p0, Lcom/vtosters/lite/fragments/friends/presenter/CurrentUserFriendsPresenter$receiver$1;->b:Lcom/vtosters/lite/fragments/friends/presenter/a$a;
+    iput-object p2, p0, Lcom/vtosters/lite/fragments/friends/presenter/CurrentUserFriendsPresenter$receiver$1;->b:Lcom/vtosters/lite/fragments/friends/presenter/BaseFriendsFragmentPresenter$a;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
 
@@ -102,22 +102,22 @@
     .line 5
     iget-object p1, p0, Lcom/vtosters/lite/fragments/friends/presenter/CurrentUserFriendsPresenter$receiver$1;->a:Lcom/vtosters/lite/fragments/friends/presenter/CurrentUserFriendsPresenter;
 
-    invoke-virtual {p1}, Lcom/vtosters/lite/fragments/friends/presenter/a;->e()Lcom/vtosters/lite/fragments/friends/presenter/b;
+    invoke-virtual {p1}, Lcom/vtosters/lite/fragments/friends/presenter/BaseFriendsFragmentPresenter;->e()Lcom/vtosters/lite/fragments/friends/presenter/FriendsViewModel;
 
     move-result-object p1
 
-    invoke-virtual {p1, p2}, Lcom/vtosters/lite/fragments/friends/presenter/b;->a(Landroid/content/Intent;)V
+    invoke-virtual {p1, p2}, Lcom/vtosters/lite/fragments/friends/presenter/FriendsViewModel;->a(Landroid/content/Intent;)V
 
     .line 6
-    iget-object p1, p0, Lcom/vtosters/lite/fragments/friends/presenter/CurrentUserFriendsPresenter$receiver$1;->b:Lcom/vtosters/lite/fragments/friends/presenter/a$a;
+    iget-object p1, p0, Lcom/vtosters/lite/fragments/friends/presenter/CurrentUserFriendsPresenter$receiver$1;->b:Lcom/vtosters/lite/fragments/friends/presenter/BaseFriendsFragmentPresenter$a;
 
     iget-object p2, p0, Lcom/vtosters/lite/fragments/friends/presenter/CurrentUserFriendsPresenter$receiver$1;->a:Lcom/vtosters/lite/fragments/friends/presenter/CurrentUserFriendsPresenter;
 
-    invoke-virtual {p2}, Lcom/vtosters/lite/fragments/friends/presenter/a;->e()Lcom/vtosters/lite/fragments/friends/presenter/b;
+    invoke-virtual {p2}, Lcom/vtosters/lite/fragments/friends/presenter/BaseFriendsFragmentPresenter;->e()Lcom/vtosters/lite/fragments/friends/presenter/FriendsViewModel;
 
     move-result-object p2
 
-    invoke-interface {p1, p2}, Lcom/vtosters/lite/fragments/friends/presenter/a$a;->a(Lcom/vtosters/lite/fragments/friends/presenter/b;)V
+    invoke-interface {p1, p2}, Lcom/vtosters/lite/fragments/friends/presenter/BaseFriendsFragmentPresenter$a;->a(Lcom/vtosters/lite/fragments/friends/presenter/FriendsViewModel;)V
 
     goto :goto_1
 
@@ -159,22 +159,22 @@
     .line 12
     iget-object p2, p0, Lcom/vtosters/lite/fragments/friends/presenter/CurrentUserFriendsPresenter$receiver$1;->a:Lcom/vtosters/lite/fragments/friends/presenter/CurrentUserFriendsPresenter;
 
-    invoke-virtual {p2}, Lcom/vtosters/lite/fragments/friends/presenter/a;->e()Lcom/vtosters/lite/fragments/friends/presenter/b;
+    invoke-virtual {p2}, Lcom/vtosters/lite/fragments/friends/presenter/BaseFriendsFragmentPresenter;->e()Lcom/vtosters/lite/fragments/friends/presenter/FriendsViewModel;
 
     move-result-object p2
 
-    invoke-virtual {p2, p1}, Lcom/vtosters/lite/fragments/friends/presenter/b;->a(Ljava/util/ArrayList;)V
+    invoke-virtual {p2, p1}, Lcom/vtosters/lite/fragments/friends/presenter/FriendsViewModel;->a(Ljava/util/ArrayList;)V
 
     .line 13
-    iget-object p1, p0, Lcom/vtosters/lite/fragments/friends/presenter/CurrentUserFriendsPresenter$receiver$1;->b:Lcom/vtosters/lite/fragments/friends/presenter/a$a;
+    iget-object p1, p0, Lcom/vtosters/lite/fragments/friends/presenter/CurrentUserFriendsPresenter$receiver$1;->b:Lcom/vtosters/lite/fragments/friends/presenter/BaseFriendsFragmentPresenter$a;
 
     iget-object p2, p0, Lcom/vtosters/lite/fragments/friends/presenter/CurrentUserFriendsPresenter$receiver$1;->a:Lcom/vtosters/lite/fragments/friends/presenter/CurrentUserFriendsPresenter;
 
-    invoke-virtual {p2}, Lcom/vtosters/lite/fragments/friends/presenter/a;->e()Lcom/vtosters/lite/fragments/friends/presenter/b;
+    invoke-virtual {p2}, Lcom/vtosters/lite/fragments/friends/presenter/BaseFriendsFragmentPresenter;->e()Lcom/vtosters/lite/fragments/friends/presenter/FriendsViewModel;
 
     move-result-object p2
 
-    invoke-interface {p1, p2}, Lcom/vtosters/lite/fragments/friends/presenter/a$a;->a(Lcom/vtosters/lite/fragments/friends/presenter/b;)V
+    invoke-interface {p1, p2}, Lcom/vtosters/lite/fragments/friends/presenter/BaseFriendsFragmentPresenter$a;->a(Lcom/vtosters/lite/fragments/friends/presenter/FriendsViewModel;)V
 
     :cond_2
     :goto_1

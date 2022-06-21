@@ -32,7 +32,7 @@
     return-void
 .end method
 
-.method public synthetic constructor <init>(Ljava/lang/Integer;Ljava/lang/Boolean;ILkotlin/jvm/internal/i;)V
+.method public synthetic constructor <init>(Ljava/lang/Integer;Ljava/lang/Boolean;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
     .locals 1
 
     and-int/lit8 p4, p3, 0x1
@@ -63,7 +63,7 @@
     .locals 1
 
     .line 1
-    iget-object v0, p0, Lcom/vk/navigation/o;->O0:Landroid/os/Bundle;
+    iget-object v0, p0, Lcom/vk/navigation/Navigator;->O0:Landroid/os/Bundle;
 
     invoke-virtual {p1, v0}, Landroid/os/Bundle;->putAll(Landroid/os/Bundle;)V
 

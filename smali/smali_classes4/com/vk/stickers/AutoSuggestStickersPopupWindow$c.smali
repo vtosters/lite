@@ -3,12 +3,12 @@
 .source "AutoSuggestStickersPopupWindow.kt"
 
 # interfaces
-.implements Lcom/vk/stickers/q$b;
+.implements Lcom/vk/stickers/StickerLongtapView$b;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/stickers/AutoSuggestStickersPopupWindow;-><init>(Landroid/content/Context;Landroid/widget/EditText;Landroid/view/View;Lcom/vk/stickers/b0$k;)V
+    value = Lcom/vk/stickers/AutoSuggestStickersPopupWindow;-><init>(Landroid/content/Context;Landroid/widget/EditText;Landroid/view/View;Lcom/vk/stickers/StickersView$k;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -46,13 +46,13 @@
     .line 1
     iget-object v0, p0, Lcom/vk/stickers/AutoSuggestStickersPopupWindow$c;->a:Lcom/vk/stickers/AutoSuggestStickersPopupWindow;
 
-    invoke-static {v0}, Lcom/vk/stickers/AutoSuggestStickersPopupWindow;->g(Lcom/vk/stickers/AutoSuggestStickersPopupWindow;)Lcom/vk/stickers/r;
+    invoke-static {v0}, Lcom/vk/stickers/AutoSuggestStickersPopupWindow;->g(Lcom/vk/stickers/AutoSuggestStickersPopupWindow;)Lcom/vk/stickers/StickerLongtapWindow;
 
     move-result-object v0
 
     const/4 v1, 0x1
 
-    invoke-virtual {v0, v1}, Lcom/vk/stickers/r;->a(Z)V
+    invoke-virtual {v0, v1}, Lcom/vk/stickers/StickerLongtapWindow;->a(Z)V
 
     return-void
 .end method
@@ -63,18 +63,18 @@
     .line 2
     iget-object v0, p0, Lcom/vk/stickers/AutoSuggestStickersPopupWindow$c;->a:Lcom/vk/stickers/AutoSuggestStickersPopupWindow;
 
-    invoke-static {v0}, Lcom/vk/stickers/AutoSuggestStickersPopupWindow;->g(Lcom/vk/stickers/AutoSuggestStickersPopupWindow;)Lcom/vk/stickers/r;
+    invoke-static {v0}, Lcom/vk/stickers/AutoSuggestStickersPopupWindow;->g(Lcom/vk/stickers/AutoSuggestStickersPopupWindow;)Lcom/vk/stickers/StickerLongtapWindow;
 
     move-result-object v0
 
     const/4 v1, 0x1
 
-    invoke-virtual {v0, v1}, Lcom/vk/stickers/r;->a(Z)V
+    invoke-virtual {v0, v1}, Lcom/vk/stickers/StickerLongtapWindow;->a(Z)V
 
     .line 3
-    sget-object v0, Lcom/vk/stickers/a0;->a:Lcom/vk/stickers/a0;
+    sget-object v0, Lcom/vk/stickers/StickersTracker;->a:Lcom/vk/stickers/StickersTracker;
 
-    invoke-virtual {v0}, Lcom/vk/stickers/a0;->d()V
+    invoke-virtual {v0}, Lcom/vk/stickers/StickersTracker;->d()V
 
     .line 4
     iget-object v0, p0, Lcom/vk/stickers/AutoSuggestStickersPopupWindow$c;->a:Lcom/vk/stickers/AutoSuggestStickersPopupWindow;
@@ -137,7 +137,7 @@
 
     const-string v3, "stickersRecyclerView.context"
 
-    invoke-static {p1, v3}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v3}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {v2, v0, v1, p1}, Lcom/vk/stickers/AutoSuggestStickersPopupWindow$Adapter;->a(Lcom/vk/dto/stickers/StickerItem;ZLandroid/content/Context;)V
 
@@ -177,44 +177,44 @@
     .line 7
     iget-object v0, p0, Lcom/vk/stickers/AutoSuggestStickersPopupWindow$c;->a:Lcom/vk/stickers/AutoSuggestStickersPopupWindow;
 
-    invoke-static {v0}, Lcom/vk/stickers/AutoSuggestStickersPopupWindow;->g(Lcom/vk/stickers/AutoSuggestStickersPopupWindow;)Lcom/vk/stickers/r;
+    invoke-static {v0}, Lcom/vk/stickers/AutoSuggestStickersPopupWindow;->g(Lcom/vk/stickers/AutoSuggestStickersPopupWindow;)Lcom/vk/stickers/StickerLongtapWindow;
 
     move-result-object v0
 
     const/4 v1, 0x1
 
-    invoke-virtual {v0, v1}, Lcom/vk/stickers/r;->a(Z)V
+    invoke-virtual {v0, v1}, Lcom/vk/stickers/StickerLongtapWindow;->a(Z)V
 
     .line 8
-    sget-object v0, Lcom/vk/stickers/a0;->a:Lcom/vk/stickers/a0;
+    sget-object v0, Lcom/vk/stickers/StickersTracker;->a:Lcom/vk/stickers/StickersTracker;
 
-    invoke-virtual {v0}, Lcom/vk/stickers/a0;->b()V
+    invoke-virtual {v0}, Lcom/vk/stickers/StickersTracker;->b()V
 
     .line 9
-    sget-object v0, Lcom/vk/stickers/t;->l:Lcom/vk/stickers/t;
+    sget-object v0, Lcom/vk/stickers/Stickers;->l:Lcom/vk/stickers/Stickers;
 
     invoke-virtual {p1}, Lcom/vk/dto/stickers/StickerItem;->getId()I
 
     move-result v1
 
-    invoke-virtual {v0, v1}, Lcom/vk/stickers/t;->d(I)Z
+    invoke-virtual {v0, v1}, Lcom/vk/stickers/Stickers;->d(I)Z
 
     move-result v0
 
     if-nez v0, :cond_0
 
     .line 10
-    sget-object v0, Lcom/vk/stickers/t;->l:Lcom/vk/stickers/t;
+    sget-object v0, Lcom/vk/stickers/Stickers;->l:Lcom/vk/stickers/Stickers;
 
-    invoke-virtual {v0, p1}, Lcom/vk/stickers/t;->b(Lcom/vk/dto/stickers/StickerItem;)V
+    invoke-virtual {v0, p1}, Lcom/vk/stickers/Stickers;->b(Lcom/vk/dto/stickers/StickerItem;)V
 
     goto :goto_0
 
     .line 11
     :cond_0
-    sget-object v0, Lcom/vk/stickers/t;->l:Lcom/vk/stickers/t;
+    sget-object v0, Lcom/vk/stickers/Stickers;->l:Lcom/vk/stickers/Stickers;
 
-    invoke-virtual {v0, p1}, Lcom/vk/stickers/t;->c(Lcom/vk/dto/stickers/StickerItem;)V
+    invoke-virtual {v0, p1}, Lcom/vk/stickers/Stickers;->c(Lcom/vk/dto/stickers/StickerItem;)V
 
     :goto_0
     return-void
@@ -226,18 +226,18 @@
     .line 1
     iget-object v0, p0, Lcom/vk/stickers/AutoSuggestStickersPopupWindow$c;->a:Lcom/vk/stickers/AutoSuggestStickersPopupWindow;
 
-    invoke-static {v0}, Lcom/vk/stickers/AutoSuggestStickersPopupWindow;->g(Lcom/vk/stickers/AutoSuggestStickersPopupWindow;)Lcom/vk/stickers/r;
+    invoke-static {v0}, Lcom/vk/stickers/AutoSuggestStickersPopupWindow;->g(Lcom/vk/stickers/AutoSuggestStickersPopupWindow;)Lcom/vk/stickers/StickerLongtapWindow;
 
     move-result-object v0
 
     const/4 v1, 0x1
 
-    invoke-virtual {v0, v1}, Lcom/vk/stickers/r;->a(Z)V
+    invoke-virtual {v0, v1}, Lcom/vk/stickers/StickerLongtapWindow;->a(Z)V
 
     .line 2
-    sget-object v0, Lcom/vk/stickers/a0;->a:Lcom/vk/stickers/a0;
+    sget-object v0, Lcom/vk/stickers/StickersTracker;->a:Lcom/vk/stickers/StickersTracker;
 
-    invoke-virtual {v0}, Lcom/vk/stickers/a0;->c()V
+    invoke-virtual {v0}, Lcom/vk/stickers/StickersTracker;->c()V
 
     .line 3
     iget-object v0, p0, Lcom/vk/stickers/AutoSuggestStickersPopupWindow$c;->a:Lcom/vk/stickers/AutoSuggestStickersPopupWindow;

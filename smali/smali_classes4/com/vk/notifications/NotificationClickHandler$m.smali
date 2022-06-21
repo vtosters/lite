@@ -3,7 +3,7 @@
 .source "NotificationClickHandler.kt"
 
 # interfaces
-.implements Lc/a/z/g;
+.implements Lio/reactivex/functions/Consumer;
 
 
 # annotations
@@ -22,7 +22,7 @@
         "Ljava/lang/Object;",
         ">",
         "Ljava/lang/Object;",
-        "Lc/a/z/g<",
+        "Lio/reactivex/functions/Consumer<",
         "Lcom/vk/dto/group/Group;",
         ">;"
     }
@@ -62,9 +62,9 @@
     .locals 4
 
     .line 1
-    sget-object v0, Lcom/vk/newsfeed/posting/l;->T0:Lcom/vk/newsfeed/posting/l$a;
+    sget-object v0, Lcom/vk/newsfeed/posting/PostingFragmentBuilder;->T0:Lcom/vk/newsfeed/posting/PostingFragmentBuilder$a;
 
-    invoke-virtual {v0}, Lcom/vk/newsfeed/posting/l$a;->a()Lcom/vk/newsfeed/posting/l;
+    invoke-virtual {v0}, Lcom/vk/newsfeed/posting/PostingFragmentBuilder$a;->a()Lcom/vk/newsfeed/posting/PostingFragmentBuilder;
 
     move-result-object v0
 
@@ -74,15 +74,15 @@
 
     const-string v3, "text"
 
-    invoke-static {v2, v3}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v2, v3}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     iget-object v3, p0, Lcom/vk/notifications/NotificationClickHandler$m;->c:Ljava/util/ArrayList;
 
-    invoke-virtual {v0, v1, v2, v3, p1}, Lcom/vk/newsfeed/posting/l;->a(ILjava/lang/String;Ljava/util/List;Lcom/vk/dto/group/Group;)Lcom/vk/newsfeed/posting/l;
+    invoke-virtual {v0, v1, v2, v3, p1}, Lcom/vk/newsfeed/posting/PostingFragmentBuilder;->a(ILjava/lang/String;Ljava/util/List;Lcom/vk/dto/group/Group;)Lcom/vk/newsfeed/posting/PostingFragmentBuilder;
 
     iget-object p1, p0, Lcom/vk/notifications/NotificationClickHandler$m;->d:Landroid/content/Context;
 
-    invoke-virtual {v0, p1}, Lcom/vk/navigation/o;->a(Landroid/content/Context;)V
+    invoke-virtual {v0, p1}, Lcom/vk/navigation/Navigator;->a(Landroid/content/Context;)V
 
     return-void
 .end method

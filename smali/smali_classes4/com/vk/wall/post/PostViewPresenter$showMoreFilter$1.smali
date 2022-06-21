@@ -3,12 +3,12 @@
 .source "PostViewPresenter.kt"
 
 # interfaces
-.implements Lkotlin/jvm/b/b;
+.implements Lkotlin/jvm/b/Functions2;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/vk/wall/post/PostViewPresenter;-><init>(Lcom/vk/wall/post/c;)V
+    value = Lcom/vk/wall/post/PostViewPresenter;-><init>(Lcom/vk/wall/post/PostViewContract;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -19,8 +19,8 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Lkotlin/jvm/internal/Lambda;",
-        "Lkotlin/jvm/b/b<",
-        "Lcom/vtosters/lite/ui/f0/b;",
+        "Lkotlin/jvm/b/Functions2<",
+        "Lcom/vtosters/lite/ui/f0/PostDisplayItem;",
         "Ljava/lang/Boolean;",
         ">;"
     }
@@ -56,11 +56,11 @@
 
 
 # virtual methods
-.method public final a(Lcom/vtosters/lite/ui/f0/b;)Z
+.method public final a(Lcom/vtosters/lite/ui/f0/PostDisplayItem;)Z
     .locals 1
 
     .line 1
-    invoke-virtual {p1}, Lcom/vtosters/lite/ui/f0/b;->e()I
+    invoke-virtual {p1}, Lcom/vtosters/lite/ui/f0/PostDisplayItem;->e()I
 
     move-result p1
 
@@ -83,9 +83,9 @@
     .locals 0
 
     .line 1
-    check-cast p1, Lcom/vtosters/lite/ui/f0/b;
+    check-cast p1, Lcom/vtosters/lite/ui/f0/PostDisplayItem;
 
-    invoke-virtual {p0, p1}, Lcom/vk/wall/post/PostViewPresenter$showMoreFilter$1;->a(Lcom/vtosters/lite/ui/f0/b;)Z
+    invoke-virtual {p0, p1}, Lcom/vk/wall/post/PostViewPresenter$showMoreFilter$1;->a(Lcom/vtosters/lite/ui/f0/PostDisplayItem;)Z
 
     move-result p1
 

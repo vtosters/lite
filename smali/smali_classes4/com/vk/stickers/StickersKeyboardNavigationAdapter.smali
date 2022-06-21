@@ -1,5 +1,5 @@
 .class public final Lcom/vk/stickers/StickersKeyboardNavigationAdapter;
-.super Lcom/vk/lists/i0;
+.super Lcom/vk/lists/SimpleAdapter;
 .source "StickersKeyboardNavigationAdapter.kt"
 
 
@@ -13,8 +13,8 @@
 
 .annotation system Ldalvik/annotation/Signature;
     value = {
-        "Lcom/vk/lists/i0<",
-        "Lcom/vk/stickers/e0/d;",
+        "Lcom/vk/lists/SimpleAdapter<",
+        "Lcom/vk/stickers/e0/StickerNavigationRecyclerItem;",
         "Landroidx/recyclerview/widget/RecyclerView$ViewHolder;",
         ">;"
     }
@@ -44,7 +44,7 @@
     .locals 0
 
     .line 1
-    invoke-direct {p0}, Lcom/vk/lists/i0;-><init>()V
+    invoke-direct {p0}, Lcom/vk/lists/SimpleAdapter;-><init>()V
 
     iput-object p1, p0, Lcom/vk/stickers/StickersKeyboardNavigationAdapter;->B:Landroid/content/Context;
 
@@ -105,11 +105,11 @@
 
     invoke-direct {v0, p0}, Lcom/vk/stickers/StickersKeyboardNavigationAdapter$correctLastSelectedId$oldStickerSelected$1;-><init>(Lcom/vk/stickers/StickersKeyboardNavigationAdapter;)V
 
-    invoke-virtual {p0, v0}, Lcom/vk/lists/i0;->c(Lkotlin/jvm/b/b;)Ljava/lang/Object;
+    invoke-virtual {p0, v0}, Lcom/vk/lists/SimpleAdapter;->c(Lkotlin/jvm/b/Functions2;)Ljava/lang/Object;
 
     move-result-object v0
 
-    check-cast v0, Lcom/vk/stickers/e0/d;
+    check-cast v0, Lcom/vk/stickers/e0/StickerNavigationRecyclerItem;
 
     if-nez v0, :cond_1
 
@@ -154,29 +154,29 @@
     .line 1
     sget-object v0, Lcom/vk/stickers/StickersKeyboardNavigationAdapter$setSelected$oldStickerSelected$1;->a:Lcom/vk/stickers/StickersKeyboardNavigationAdapter$setSelected$oldStickerSelected$1;
 
-    invoke-virtual {p0, v0}, Lcom/vk/lists/i0;->c(Lkotlin/jvm/b/b;)Ljava/lang/Object;
+    invoke-virtual {p0, v0}, Lcom/vk/lists/SimpleAdapter;->c(Lkotlin/jvm/b/Functions2;)Ljava/lang/Object;
 
     move-result-object v0
 
-    check-cast v0, Lcom/vk/stickers/e0/d;
+    check-cast v0, Lcom/vk/stickers/e0/StickerNavigationRecyclerItem;
 
     .line 2
     new-instance v1, Lcom/vk/stickers/StickersKeyboardNavigationAdapter$setSelected$stickerSelected$1;
 
     invoke-direct {v1, p1}, Lcom/vk/stickers/StickersKeyboardNavigationAdapter$setSelected$stickerSelected$1;-><init>(I)V
 
-    invoke-virtual {p0, v1}, Lcom/vk/lists/i0;->c(Lkotlin/jvm/b/b;)Ljava/lang/Object;
+    invoke-virtual {p0, v1}, Lcom/vk/lists/SimpleAdapter;->c(Lkotlin/jvm/b/Functions2;)Ljava/lang/Object;
 
     move-result-object v1
 
-    check-cast v1, Lcom/vk/stickers/e0/d;
+    check-cast v1, Lcom/vk/stickers/e0/StickerNavigationRecyclerItem;
 
     const/4 v2, 0x0
 
     if-eqz v0, :cond_0
 
     .line 3
-    invoke-virtual {v0}, Lcom/vk/stickers/e0/d;->e()I
+    invoke-virtual {v0}, Lcom/vk/stickers/e0/StickerNavigationRecyclerItem;->e()I
 
     move-result v3
 
@@ -192,7 +192,7 @@
     :goto_0
     if-eqz v1, :cond_1
 
-    invoke-virtual {v1}, Lcom/vk/stickers/e0/d;->e()I
+    invoke-virtual {v1}, Lcom/vk/stickers/e0/StickerNavigationRecyclerItem;->e()I
 
     move-result v2
 
@@ -201,7 +201,7 @@
     move-result-object v2
 
     :cond_1
-    invoke-static {v3, v2}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v3, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v2
 
@@ -212,12 +212,12 @@
     .line 4
     sget-object v2, Lcom/vk/stickers/StickersKeyboardNavigationAdapter$setSelected$1;->a:Lcom/vk/stickers/StickersKeyboardNavigationAdapter$setSelected$1;
 
-    invoke-virtual {p0, v0, v2}, Lcom/vk/lists/i0;->a(Ljava/lang/Object;Lkotlin/jvm/b/b;)V
+    invoke-virtual {p0, v0, v2}, Lcom/vk/lists/SimpleAdapter;->a(Ljava/lang/Object;Lkotlin/jvm/b/Functions2;)V
 
     .line 5
     sget-object v0, Lcom/vk/stickers/StickersKeyboardNavigationAdapter$setSelected$2;->a:Lcom/vk/stickers/StickersKeyboardNavigationAdapter$setSelected$2;
 
-    invoke-virtual {p0, v1, v0}, Lcom/vk/lists/i0;->a(Ljava/lang/Object;Lkotlin/jvm/b/b;)V
+    invoke-virtual {p0, v1, v0}, Lcom/vk/lists/SimpleAdapter;->a(Ljava/lang/Object;Lkotlin/jvm/b/Functions2;)V
 
     .line 6
     iput p1, p0, Lcom/vk/stickers/StickersKeyboardNavigationAdapter;->c:I
@@ -234,7 +234,7 @@
 
     invoke-direct {v0, p1}, Lcom/vk/stickers/StickersKeyboardNavigationAdapter$moveToItem$stickerPosition$1;-><init>(I)V
 
-    invoke-virtual {p0, v0}, Lcom/vk/lists/i0;->d(Lkotlin/jvm/b/b;)I
+    invoke-virtual {p0, v0}, Lcom/vk/lists/SimpleAdapter;->d(Lkotlin/jvm/b/Functions2;)I
 
     move-result p1
 
@@ -243,7 +243,7 @@
 
     invoke-direct {v0, p0}, Lcom/vk/stickers/StickersKeyboardNavigationAdapter$moveToItem$lastPosition$1;-><init>(Lcom/vk/stickers/StickersKeyboardNavigationAdapter;)V
 
-    invoke-virtual {p0, v0}, Lcom/vk/lists/i0;->d(Lkotlin/jvm/b/b;)I
+    invoke-virtual {p0, v0}, Lcom/vk/lists/SimpleAdapter;->d(Lkotlin/jvm/b/Functions2;)I
 
     move-result v0
 
@@ -255,11 +255,11 @@
 
     .line 19
     :cond_0
-    iget-object p2, p0, Lcom/vk/lists/i0;->b:Landroidx/recyclerview/widget/RecyclerView;
+    iget-object p2, p0, Lcom/vk/lists/SimpleAdapter;->b:Landroidx/recyclerview/widget/RecyclerView;
 
     const-string v1, "recyclerView"
 
-    invoke-static {p2, v1}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p2, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {p2}, Landroidx/recyclerview/widget/RecyclerView;->getLayoutManager()Landroidx/recyclerview/widget/RecyclerView$LayoutManager;
 
@@ -385,7 +385,7 @@
     if-eqz p3, :cond_0
 
     .line 3
-    new-instance v10, Lcom/vk/stickers/e0/d;
+    new-instance v10, Lcom/vk/stickers/e0/StickerNavigationRecyclerItem;
 
     const/4 v4, 0x0
 
@@ -401,7 +401,7 @@
 
     move-object v3, v10
 
-    invoke-direct/range {v3 .. v9}, Lcom/vk/stickers/e0/d;-><init>(Ljava/lang/String;ILjava/lang/String;ZILkotlin/jvm/internal/i;)V
+    invoke-direct/range {v3 .. v9}, Lcom/vk/stickers/e0/StickerNavigationRecyclerItem;-><init>(Ljava/lang/String;ILjava/lang/String;ZILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     invoke-interface {v1, v10}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
@@ -417,7 +417,7 @@
     if-eqz p2, :cond_2
 
     .line 6
-    new-instance v3, Lcom/vk/stickers/e0/d;
+    new-instance v3, Lcom/vk/stickers/e0/StickerNavigationRecyclerItem;
 
     const/4 v5, 0x0
 
@@ -433,7 +433,7 @@
 
     move-object v4, v3
 
-    invoke-direct/range {v4 .. v10}, Lcom/vk/stickers/e0/d;-><init>(Ljava/lang/String;ILjava/lang/String;ZILkotlin/jvm/internal/i;)V
+    invoke-direct/range {v4 .. v10}, Lcom/vk/stickers/e0/StickerNavigationRecyclerItem;-><init>(Ljava/lang/String;ILjava/lang/String;ZILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     invoke-interface {v1, v3}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
@@ -504,9 +504,9 @@
     check-cast v3, Lcom/vk/dto/stickers/StickerStockItem;
 
     .line 12
-    new-instance v11, Lcom/vk/stickers/e0/d;
+    new-instance v11, Lcom/vk/stickers/e0/StickerNavigationRecyclerItem;
 
-    sget v4, Lcom/vk/stickers/v;->c:I
+    sget v4, Lcom/vk/stickers/StickersConfig;->c:I
 
     invoke-virtual {v3, v4}, Lcom/vk/dto/stickers/StickerStockItem;->j(I)Ljava/lang/String;
 
@@ -528,7 +528,7 @@
 
     move-object v4, v11
 
-    invoke-direct/range {v4 .. v10}, Lcom/vk/stickers/e0/d;-><init>(Ljava/lang/String;ILjava/lang/String;ZILkotlin/jvm/internal/i;)V
+    invoke-direct/range {v4 .. v10}, Lcom/vk/stickers/e0/StickerNavigationRecyclerItem;-><init>(Ljava/lang/String;ILjava/lang/String;ZILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     invoke-interface {v1, v11}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
@@ -536,7 +536,7 @@
 
     .line 13
     :cond_4
-    new-instance v2, Lcom/vk/stickers/e0/d;
+    new-instance v2, Lcom/vk/stickers/e0/StickerNavigationRecyclerItem;
 
     const/4 v13, 0x0
 
@@ -552,12 +552,12 @@
 
     move-object v12, v2
 
-    invoke-direct/range {v12 .. v18}, Lcom/vk/stickers/e0/d;-><init>(Ljava/lang/String;ILjava/lang/String;ZILkotlin/jvm/internal/i;)V
+    invoke-direct/range {v12 .. v18}, Lcom/vk/stickers/e0/StickerNavigationRecyclerItem;-><init>(Ljava/lang/String;ILjava/lang/String;ZILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     invoke-interface {v1, v2}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
     .line 14
-    invoke-virtual {v0, v1}, Lcom/vk/lists/i0;->setItems(Ljava/util/List;)V
+    invoke-virtual {v0, v1}, Lcom/vk/lists/SimpleAdapter;->setItems(Ljava/util/List;)V
 
     .line 15
     invoke-direct/range {p0 .. p0}, Lcom/vk/stickers/StickersKeyboardNavigationAdapter;->n()V
@@ -576,7 +576,7 @@
     if-eqz p1, :cond_0
 
     .line 2
-    new-instance v0, Lcom/vk/stickers/e0/d;
+    new-instance v0, Lcom/vk/stickers/e0/StickerNavigationRecyclerItem;
 
     const/4 v2, 0x0
 
@@ -592,9 +592,9 @@
 
     move-object v1, v0
 
-    invoke-direct/range {v1 .. v7}, Lcom/vk/stickers/e0/d;-><init>(Ljava/lang/String;ILjava/lang/String;ZILkotlin/jvm/internal/i;)V
+    invoke-direct/range {v1 .. v7}, Lcom/vk/stickers/e0/StickerNavigationRecyclerItem;-><init>(Ljava/lang/String;ILjava/lang/String;ZILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
-    invoke-virtual {p0, v0}, Lcom/vk/lists/i0;->c(Ljava/lang/Object;)V
+    invoke-virtual {p0, v0}, Lcom/vk/lists/SimpleAdapter;->c(Ljava/lang/Object;)V
 
     goto :goto_0
 
@@ -602,7 +602,7 @@
     const/4 v0, 0x0
 
     .line 3
-    invoke-virtual {p0, v0}, Lcom/vk/lists/i0;->j(I)V
+    invoke-virtual {p0, v0}, Lcom/vk/lists/SimpleAdapter;->j(I)V
 
     .line 4
     iget v0, p0, Lcom/vk/stickers/StickersKeyboardNavigationAdapter;->c:I
@@ -639,7 +639,7 @@
     if-eqz p1, :cond_0
 
     .line 2
-    new-instance v0, Lcom/vk/stickers/e0/d;
+    new-instance v0, Lcom/vk/stickers/e0/StickerNavigationRecyclerItem;
 
     const/4 v2, 0x0
 
@@ -655,9 +655,9 @@
 
     move-object v1, v0
 
-    invoke-direct/range {v1 .. v7}, Lcom/vk/stickers/e0/d;-><init>(Ljava/lang/String;ILjava/lang/String;ZILkotlin/jvm/internal/i;)V
+    invoke-direct/range {v1 .. v7}, Lcom/vk/stickers/e0/StickerNavigationRecyclerItem;-><init>(Ljava/lang/String;ILjava/lang/String;ZILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
-    invoke-virtual {p0, v0}, Lcom/vk/lists/i0;->c(Ljava/lang/Object;)V
+    invoke-virtual {p0, v0}, Lcom/vk/lists/SimpleAdapter;->c(Ljava/lang/Object;)V
 
     goto :goto_0
 
@@ -665,7 +665,7 @@
     const/4 v0, 0x0
 
     .line 3
-    invoke-virtual {p0, v0}, Lcom/vk/lists/i0;->j(I)V
+    invoke-virtual {p0, v0}, Lcom/vk/lists/SimpleAdapter;->j(I)V
 
     .line 4
     :goto_0
@@ -700,7 +700,7 @@
 
     invoke-direct {v0, p0}, Lcom/vk/stickers/StickersKeyboardNavigationAdapter$getSelectedPosition$1;-><init>(Lcom/vk/stickers/StickersKeyboardNavigationAdapter;)V
 
-    invoke-virtual {p0, v0}, Lcom/vk/lists/i0;->d(Lkotlin/jvm/b/b;)I
+    invoke-virtual {p0, v0}, Lcom/vk/lists/SimpleAdapter;->d(Lkotlin/jvm/b/Functions2;)I
 
     move-result v0
 
@@ -715,16 +715,16 @@
     .line 1
     sget-object v0, Lcom/vk/stickers/StickersKeyboardNavigationAdapter$removeSelection$oldStickerSelected$1;->a:Lcom/vk/stickers/StickersKeyboardNavigationAdapter$removeSelection$oldStickerSelected$1;
 
-    invoke-virtual {p0, v0}, Lcom/vk/lists/i0;->c(Lkotlin/jvm/b/b;)Ljava/lang/Object;
+    invoke-virtual {p0, v0}, Lcom/vk/lists/SimpleAdapter;->c(Lkotlin/jvm/b/Functions2;)Ljava/lang/Object;
 
     move-result-object v0
 
-    check-cast v0, Lcom/vk/stickers/e0/d;
+    check-cast v0, Lcom/vk/stickers/e0/StickerNavigationRecyclerItem;
 
     .line 2
     sget-object v1, Lcom/vk/stickers/StickersKeyboardNavigationAdapter$removeSelection$1;->a:Lcom/vk/stickers/StickersKeyboardNavigationAdapter$removeSelection$1;
 
-    invoke-virtual {p0, v0, v1}, Lcom/vk/lists/i0;->a(Ljava/lang/Object;Lkotlin/jvm/b/b;)V
+    invoke-virtual {p0, v0, v1}, Lcom/vk/lists/SimpleAdapter;->a(Ljava/lang/Object;Lkotlin/jvm/b/Functions2;)V
 
     return-void
 .end method
@@ -737,21 +737,21 @@
 
     invoke-direct {v0, p0}, Lcom/vk/stickers/StickersKeyboardNavigationAdapter$showLastSelection$stickerSelected$1;-><init>(Lcom/vk/stickers/StickersKeyboardNavigationAdapter;)V
 
-    invoke-virtual {p0, v0}, Lcom/vk/lists/i0;->c(Lkotlin/jvm/b/b;)Ljava/lang/Object;
+    invoke-virtual {p0, v0}, Lcom/vk/lists/SimpleAdapter;->c(Lkotlin/jvm/b/Functions2;)Ljava/lang/Object;
 
     move-result-object v0
 
-    check-cast v0, Lcom/vk/stickers/e0/d;
+    check-cast v0, Lcom/vk/stickers/e0/StickerNavigationRecyclerItem;
 
     if-eqz v0, :cond_0
 
     .line 2
     sget-object v1, Lcom/vk/stickers/StickersKeyboardNavigationAdapter$showLastSelection$1$1;->a:Lcom/vk/stickers/StickersKeyboardNavigationAdapter$showLastSelection$1$1;
 
-    invoke-virtual {p0, v0, v1}, Lcom/vk/lists/i0;->a(Ljava/lang/Object;Lkotlin/jvm/b/b;)V
+    invoke-virtual {p0, v0, v1}, Lcom/vk/lists/SimpleAdapter;->a(Ljava/lang/Object;Lkotlin/jvm/b/Functions2;)V
 
     .line 3
-    invoke-virtual {v0}, Lcom/vk/stickers/e0/d;->e()I
+    invoke-virtual {v0}, Lcom/vk/stickers/e0/StickerNavigationRecyclerItem;->e()I
 
     move-result v0
 
@@ -774,17 +774,17 @@
     check-cast p1, Lcom/vk/stickers/StickersKeyboardNavigationAdapter$StickersNavigationHolder;
 
     .line 2
-    invoke-virtual {p0, p2}, Lcom/vk/lists/i0;->k(I)Ljava/lang/Object;
+    invoke-virtual {p0, p2}, Lcom/vk/lists/SimpleAdapter;->k(I)Ljava/lang/Object;
 
     move-result-object p2
 
     const-string v0, "getItemAt(position)"
 
-    invoke-static {p2, v0}, Lkotlin/jvm/internal/m;->a(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p2, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    check-cast p2, Lcom/vk/stickers/e0/d;
+    check-cast p2, Lcom/vk/stickers/e0/StickerNavigationRecyclerItem;
 
-    invoke-virtual {p1, p2}, Lcom/vk/stickers/StickersKeyboardNavigationAdapter$StickersNavigationHolder;->a(Lcom/vk/stickers/e0/d;)V
+    invoke-virtual {p1, p2}, Lcom/vk/stickers/StickersKeyboardNavigationAdapter$StickersNavigationHolder;->a(Lcom/vk/stickers/e0/StickerNavigationRecyclerItem;)V
 
     return-void
 .end method
