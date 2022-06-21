@@ -14,7 +14,7 @@ import java.util.List;
 
 public class DNRInjector {
     public static void inject(Dialog dialog, List<DialogAction> list) {
-        int peerId = dialog.a();
+        int peerId = dialog.getId();
 
         if (isDnrEnabledFor(peerId)) {
             list.add(DialogAction.valueOf("DNR_OFF"));
@@ -38,7 +38,7 @@ public class DNRInjector {
     }
 
     public static boolean onClick(Dialog dialog, DialogAction action) {
-        var id = dialog.a();
+        var id = dialog.getId();
 
         if (action == DialogAction.valueOf("DNR_ON")) {
             setDnr(dialog, true);
@@ -60,11 +60,11 @@ public class DNRInjector {
     }
 
     public static void setDnr(Dialog dialog, boolean value) {
-        hookDNR(dialog.a());
+        hookDNR(dialog.getId());
     }
 
     public static void setDnt(Dialog dialog, boolean value) {
-        hookDNT(dialog.a());
+        hookDNT(dialog.getId());
     }
 }
 
