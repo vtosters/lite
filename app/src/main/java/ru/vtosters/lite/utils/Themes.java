@@ -38,6 +38,7 @@ import com.vk.core.ui.themes.VKThemeHelper;
 import com.vtosters.lite.R;
 import com.vtosters.lite.data.ThemeTracker;
 
+import java.lang.reflect.InvocationTargetException;
 import java.util.Arrays;
 import java.util.List;
 
@@ -61,7 +62,11 @@ public class Themes {
     }
 
     public static void setSelectedTheme(Activity paramActivity, VKTheme theme) {
-        invokeThemeChanging(paramActivity, theme);
+        try {
+            invokeMethod(VKThemeHelper.class, "a", VKThemeHelper.k, paramActivity, theme, getCenterScreenCoords());
+        } catch (NoSuchMethodException | InvocationTargetException | IllegalAccessException e) {
+            e.printStackTrace();
+        }
     }
 
     public static int getAccentColor() {

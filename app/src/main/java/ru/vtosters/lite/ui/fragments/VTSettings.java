@@ -40,12 +40,12 @@ import com.vk.notifications.settings.NotificationsSettingsFragment;
 import com.vk.webapp.fragments.BugtrackerFragment;
 import com.vk.webapp.fragments.PrivacyFragment;
 import com.vtosters.lite.auth.VKAccountManager;
-import com.vtosters.lite.fragments.MaterialPreferenceToolbarFragment;
-import com.vtosters.lite.fragments.SettingsAccountFragment;
-import com.vtosters.lite.fragments.SettingsGeneralFragment;
 import com.vtosters.lite.fragments.money.music.control.subscription.MusicSubscriptionControlFragment;
 import com.vtosters.lite.fragments.n2.SettingsDebugFragment;
 import com.vtosters.lite.fragments.w2.BlacklistFragment;
+import com.vtosters.lite.general.fragments.MaterialPreferenceToolbarFragment;
+import com.vtosters.lite.general.fragments.SettingsAccountFragment;
+import com.vtosters.lite.general.fragments.SettingsGeneralFragment;
 
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;

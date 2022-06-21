@@ -18,17 +18,17 @@ import com.vk.newsfeed.HomeFragment;
 import com.vk.newsfeed.NewsfeedFragment;
 import com.vk.notifications.NotificationsContainerFragment;
 import com.vk.search.fragment.GroupsSearchFragment;
-import com.vtosters.lite.fragments.GamesFragment;
-import com.vtosters.lite.fragments.PhotosFragment;
+import com.vtosters.lite.R;
 import com.vtosters.lite.fragments.ProfileFragment;
 import com.vtosters.lite.fragments.friends.FriendsFragment;
 import com.vtosters.lite.fragments.gifts.BirthdaysFragment;
 import com.vtosters.lite.fragments.lives.LivesPostListFragment;
 import com.vtosters.lite.fragments.money.MoneyTransfersFragment;
 import com.vtosters.lite.fragments.p2.DocumentsViewFragment;
-
 import com.vtosters.lite.fragments.t2.c.DialogsFragment;
 import com.vtosters.lite.fragments.y2.VideosFragment;
+import com.vtosters.lite.general.fragments.GamesFragment;
+import com.vtosters.lite.general.fragments.PhotosFragment;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -45,8 +45,6 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
-
-import com.vtosters.lite.R;
 
 public class DockBarManager {
     public static final int MIN_SELECTED_TABS_LIMIT = 3;
@@ -229,7 +227,7 @@ public class DockBarManager {
                 Collections.swap(list, i, i - 1);
             }
         }
-        adapter.b(fromPosition, toPosition);// notifyItemMoved
+        adapter.notifyItemMoved(fromPosition, toPosition);// notifyItemMoved
     }
 
     public void swapAndMigrate(DockBarAdapter adapter, int fromPosition, int toPosition) {
@@ -262,7 +260,7 @@ public class DockBarManager {
             mDisabledTabs.remove(tab);
             mSelectedTabs.add(tab);
         }
-        adapter.b(fromPosition, toPosition);// notifyItemMoved
+        adapter.notifyItemMoved(fromPosition, toPosition);// notifyItemMoved
     }
 
     public void move(DockBarAdapter adapter, int index) {
@@ -277,8 +275,8 @@ public class DockBarManager {
                 Collections.swap(mDisabledTabs, i, i - 1);
             }
 
-            adapter.e_(index); // notifyItemRemoved
-            adapter.d_(getItemCount() - mDisabledTabs.size()); // notifyItemInserted
+            adapter.notifyItemRemoved(index); // notifyItemRemoved
+            adapter.notifyItemInserted(getItemCount() - mDisabledTabs.size()); // notifyItemInserted
         }
     }
 
