@@ -42,16 +42,16 @@ public class DNRModule {
 
     public static boolean isDnrEnabledFor(Dialog dialog) {
         if (dialog == null) return false;
-        return isDnrEnabledFor(dialog.a());
+        return isDnrEnabledFor(dialog.getId());
     }
 
     public static boolean isDntEnabledFor(Dialog dialog) {
         if (dialog == null) return false;
-        return isDntEnabledFor(dialog.a());
+        return isDntEnabledFor(dialog.getId());
     }
 
     public static void hookRead(Dialog dialog) {
-        makeRequest("https://" + getApiCom() + "/method/messages.markAsRead?start_message_id=" + dialog.lastMsgVkId + "&peer_id=" + dialog.a() + "&v=5.91&access_token=" + getUserToken(), response -> {
+        makeRequest("https://" + getApiCom() + "/method/messages.markAsRead?start_message_id=" + dialog.F1() + "&peer_id=" + dialog.getId() + "&v=5.91&access_token=" + getUserToken(), response -> {
             ToastUtils.a("Чат помечен как прочитанный!");
         });
     }
