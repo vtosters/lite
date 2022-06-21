@@ -17,7 +17,7 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.vk.core.fragments.FragmentImpl.a;
-import com.vtosters.lite.fragments.MaterialPreferenceToolbarFragment;
+import com.vtosters.lite.general.fragments.MaterialPreferenceToolbarFragment;
 
 import me.grishka.appkit.fragments.ToolbarFragment;
 import ru.vtosters.lite.utils.Globals;

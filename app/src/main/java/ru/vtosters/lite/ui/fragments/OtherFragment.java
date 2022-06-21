@@ -24,7 +24,7 @@ import com.vk.imageloader.VKImageLoader;
 import com.vk.pushes.PushSubscriber;
 import com.vtosters.lite.R;
 import com.vtosters.lite.auth.VKAccountManager;
-import com.vtosters.lite.fragments.MaterialPreferenceToolbarFragment;
+import com.vtosters.lite.general.fragments.MaterialPreferenceToolbarFragment;
 import com.vtosters.lite.im.ImEngineProvider;
 
 import b.h.g.m.FileUtils;
