@@ -558,15 +558,12 @@
 .method public static final declared-synchronized b(Lcom/vk/toggle/Features$Type;)Z
     .locals 2
 
-    invoke-static {p0}, Lru/vtosters/lite/utils/Preferences;->redirect(Lcom/vk/toggle/Features$Type;)Z
+    ## invoke-static {p0}, Lru/vtosters/lite/utils/Toggles;->redirect(Lcom/vk/toggle/Features$Type;)Z
 
-    move-result v0
+    ## move-result v0
 
-    if-eqz v0, :cond_1
+    ## return v0
 
-    return v0
-
-    :cond_1
     const-class v0, Lcom/vk/toggle/FeatureManager;
 
     monitor-enter v0

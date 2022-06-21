@@ -5,11 +5,11 @@ import static ru.vtosters.lite.utils.Preferences.milkshake;
 import static ru.vtosters.lite.utils.Preferences.returnnorifs;
 import static ru.vtosters.lite.utils.Preferences.superapp;
 
+import com.vk.toggle.FeatureManager;
 import com.vk.toggle.Features;
 
 public class Toggles {
     public static boolean redirect(Features.Type feature){
-
         switch (feature) {
             case EXPERIMENT_NEWS_DISABLE_CACHE:
                 return feedcache();
@@ -19,9 +19,7 @@ public class Toggles {
                 return milkshake();
             case FEATURE_MILKSHAKE_NOTIFICATIONS_RETURN:
                 return returnnorifs();
-        }
 
-        switch (feature) {
             case FEATURE_SEAMLESS_CACHE:
             case FEATURE_APP_ABOUT_MOBILEHELP:
             case FEATURE_INAPP_UPDATES:
@@ -44,5 +42,9 @@ public class Toggles {
             default:
                 return true;
         }
+    }
+
+    public static FeatureManager.b redirectStrings(Features.Type feature){
+        return null;
     }
 }
