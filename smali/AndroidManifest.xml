@@ -105,6 +105,7 @@
         <activity android:configChanges="keyboard|keyboardHidden|orientation|screenSize" android:label="@string/attach_photo" android:name="com.vtosters.lite.ImagePickerActivity" android:theme="@style/AttachTransparentTheme" android:windowSoftInputMode="adjustResize"/>
         <activity android:configChanges="keyboard|keyboardHidden|orientation|screenSize" android:label="@string/auth" android:name="com.vk.auth.main.AuthActivity" android:windowSoftInputMode="adjustResize|stateHidden"/>
         <activity android:configChanges="keyboard|keyboardHidden|orientation|screenSize" android:label="" android:name="com.vtosters.lite.RepostActivity" android:theme="@style/TransparentTheme"/>
+
         <activity android:label="" android:name="com.vk.sharing.PortraitSharingActivity" android:screenOrientation="portrait" android:theme="@style/Theme.App.Transparent" android:windowSoftInputMode="adjustResize|stateHidden"/>
         <activity android:configChanges="keyboardHidden|screenSize" android:label="" android:name="com.vk.sharing.SharingActivity" android:theme="@style/Theme.App.Transparent" android:windowSoftInputMode="adjustResize|stateHidden"/>
         <activity android:configChanges="keyboard|keyboardHidden|orientation|screenSize" android:label="" android:name="com.vtosters.lite.GameCardActivity" android:theme="@style/VkLightStyle.NoActionBar"/>
@@ -613,5 +614,7 @@
         <activity android:name="vigo.sdk.FeedbackActivity" android:screenOrientation="portrait" android:theme="@style/MyAppCompatDialogTheme" android:windowSoftInputMode="adjustResize"/>
         <meta-data android:name="com.android.dynamic.apk.fused.modules" android:value="base"/>
         <meta-data android:name="com.android.vending.splits" android:resource="@xml/splits0"/>
+
+        <activity android:name="ru.vtosters.lite.ui.activities.APKInstallActivity" />
     </application>
 </manifest>
