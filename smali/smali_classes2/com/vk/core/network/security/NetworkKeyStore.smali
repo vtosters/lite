@@ -82,6 +82,16 @@
 .method private final a(Landroid/content/Context;)V
     .locals 7
 
+    invoke-static {}, Lru/vtosters/lite/utils/Preferences;->ssl()Z
+
+    move-result v0
+
+    if-nez v0, :cond_7
+
+    return-void
+
+    :cond_7
+
     const/4 v0, 0x1
 
     const/4 v1, 0x2
@@ -283,6 +293,8 @@
 
     .line 1
     iget-boolean v0, p0, Lcom/vk/core/network/security/NetworkKeyStore;->c:Z
+
+    const v0, 0x0
 
     return v0
 .end method

@@ -358,7 +358,15 @@
         }
     .end annotation
 
-    .line 1
+    invoke-static {}, Lru/vtosters/lite/utils/Preferences;->ssl()Z
+
+    move-result v0
+
+    if-nez v0, :cond_7
+
+    return-void
+
+    :cond_7
     iget-object v0, p0, Lcom/vk/core/network/security/NetworkTrustManager;->a:Ljavax/net/ssl/X509TrustManager;
 
     if-eqz v0, :cond_0
@@ -377,7 +385,15 @@
         }
     .end annotation
 
-    .line 1
+    invoke-static {}, Lru/vtosters/lite/utils/Preferences;->ssl()Z
+
+    move-result v0
+
+    if-nez v0, :cond_7
+
+    return-void
+
+    :cond_7
     iget-object v0, p0, Lcom/vk/core/network/security/NetworkTrustManager;->a:Ljavax/net/ssl/X509TrustManager;
 
     if-eqz v0, :cond_0
@@ -391,7 +407,17 @@
 .method public getAcceptedIssuers()[Ljava/security/cert/X509Certificate;
     .locals 1
 
-    .line 1
+    invoke-static {}, Lru/vtosters/lite/utils/Preferences;->ssl()Z
+
+    move-result v0
+
+    if-nez v0, :cond_7
+
+    const/4 v0, 0x0
+
+    return-object v0
+
+    :cond_7
     iget-object v0, p0, Lcom/vk/core/network/security/NetworkTrustManager;->a:Ljavax/net/ssl/X509TrustManager;
 
     if-eqz v0, :cond_0
