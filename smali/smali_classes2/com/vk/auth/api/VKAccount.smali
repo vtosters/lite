@@ -1537,6 +1537,21 @@
     return v0
 .end method
 
+.method public final isMusicSubs()Z
+    .locals 2
+
+    .line 1
+    sget-object v0, Lcom/vk/auth/api/VKAccount;->P:Lcom/vk/core/bundle/Fields4;
+
+    const/4 v1, 0x0
+
+    invoke-virtual {p0, v0, v1}, Lcom/vk/core/bundle/Container;->a(Lcom/vk/core/bundle/Fields4;Z)Z
+
+    move-result v0
+
+    return v0
+.end method
+
 .method public final F0()Z
     .locals 2
 
