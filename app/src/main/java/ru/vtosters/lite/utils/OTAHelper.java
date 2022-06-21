@@ -30,10 +30,11 @@ public class OTAHelper {
     }
 
     public void loadData() {
-        Request release = new Request.Builder()
-                .url(LATEST_RELEASE_URL)
-                .build();
-        mClient.newCall(release).a(new Callback() {
+        Request release = new Request.a()
+                .a(LATEST_RELEASE_URL)
+                .b().a();
+
+        mClient.a(release).a(new Callback() {
             @Override
             public void a(Call call, IOException e) {
                 Log.d("OTAHelper", "Error while getting latest release info: " + e);
@@ -53,13 +54,14 @@ public class OTAHelper {
     }
 
     void setData(Response response) throws IOException, JSONException {
-        mReleaseJson = new JSONObject(response.body().string());
+        mReleaseJson = new JSONObject(response.a().g());
 
         String tag = mReleaseJson.getString("tag_name");
-        Request commit = new Request.Builder()
-                .url(String.format(LATEST_RELEASE_COMMIT_URL, tag))
-                .build();
-        mClient.newCall(commit).a(new Callback() {
+        Request commit = new Request.a()
+                .a(String.format(LATEST_RELEASE_COMMIT_URL, tag))
+                .b().a();
+
+        mClient.a(commit).a(new Callback() {
             @Override
             public void a(Call call, IOException e) {
                 Log.d("OTAHelper", "Error while getting latest commit info: " + e);
@@ -69,7 +71,7 @@ public class OTAHelper {
             @Override
             public void a(Call call, Response response) throws IOException {
                 try {
-                    mCommitJson = new JSONObject(response.body().string());
+                    mCommitJson = new JSONObject(response.a().g());
                     if (isNewVersion())
                         mListener.onUpdateApplied();
                     else mListener.onUpdateCanceled();
