@@ -13,6 +13,7 @@ import static ru.vtosters.lite.utils.Preferences.navbar;
 import static ru.vtosters.lite.utils.Preferences.systemtheme;
 import static ru.vtosters.lite.utils.Preferences.vkme;
 import static ru.vtosters.lite.utils.Preferences.vksans;
+import static ru.vtosters.lite.utils.ReflectionUtils.*;
 
 import android.annotation.SuppressLint;
 import android.app.Activity;
@@ -60,7 +61,7 @@ public class Themes {
     }
 
     public static void setSelectedTheme(Activity paramActivity, VKTheme theme) {
-        VKThemeHelper.k.a(paramActivity, theme, getCenterScreenCoords());
+        invokeThemeChanging(paramActivity, theme);
     }
 
     public static int getAccentColor() {
