@@ -4,11 +4,11 @@
 
 
 # instance fields
-.field public final b:Lcom/vk/im/engine/ImEnvironment;
+.field private final b:Lcom/vk/im/engine/ImEnvironment;
 
-.field public final c:I
+.field private final c:I
 
-.field public final d:I
+.field private final d:I
 
 
 # direct methods
