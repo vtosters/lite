@@ -145,12 +145,8 @@ public class StickersFragment extends MaterialPreferenceToolbarFragment {
         final EditText editText = new EditText(getContext());
         editText.setHintTextColor(PreferencesUtil.getSTextColor(getContext()));
 
-        // Костыль для китката
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
-            editText.setBackgroundTintList(ColorStateList.valueOf(PreferencesUtil.getTextColor(getContext())));
-        } else {
-            ViewCompat.setBackgroundTintList(editText, ColorStateList.valueOf(PreferencesUtil.getTextColor(getContext())));
-        }
+
+        ViewCompat.setBackgroundTintList(editText, ColorStateList.valueOf(PreferencesUtil.getTextColor(getContext())));
 
         linearLayout.addView(editText);
         editText.getLayoutParams().width = ViewGroup.LayoutParams.MATCH_PARENT;
@@ -210,6 +206,7 @@ public class StickersFragment extends MaterialPreferenceToolbarFragment {
     @NonNull
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
+        super.onCreateView(inflater, container, savedInstanceState);
         grabber = new TelegramStickersGrabber(TGPref.getTGBotKey());
         stickersService = TelegramStickersService.getInstance(getContext());
 
