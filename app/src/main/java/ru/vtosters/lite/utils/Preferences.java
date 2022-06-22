@@ -5,7 +5,7 @@ import static java.lang.Long.MAX_VALUE;
 import static ru.vtosters.lite.f0x1d.VTVerifications.hasPrometheus;
 import static ru.vtosters.lite.f0x1d.VTVerifications.isVerified;
 import static ru.vtosters.lite.utils.CacheUtils.getInstance;
-import static ru.vtosters.lite.utils.DeletedMessagesHandler.reloadMessagesList;
+//import static ru.vtosters.lite.utils.DeletedMessagesHandler.reloadMessagesList;
 import static ru.vtosters.lite.utils.Globals.fixGapps;
 import static ru.vtosters.lite.utils.Globals.getContext;
 import static ru.vtosters.lite.utils.Globals.getIdentifier;
@@ -55,7 +55,7 @@ public class Preferences {
         setupFilters();
         fixGapps();
         setProxy();
-        reloadMessagesList();
+        //reloadMessagesList();
         registerActivities(application);
         if(dev()){
             LoadLibrary("vkopustest");
