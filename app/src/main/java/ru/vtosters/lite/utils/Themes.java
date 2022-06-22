@@ -3,10 +3,12 @@ package ru.vtosters.lite.utils;
 import static android.view.View.SYSTEM_UI_FLAG_LIGHT_NAVIGATION_BAR;
 import static ru.vtosters.lite.utils.Globals.edit;
 import static ru.vtosters.lite.utils.Globals.getCenterScreenCoords;
+import static ru.vtosters.lite.utils.Globals.getContext;
 import static ru.vtosters.lite.utils.Globals.getCurrentActivity;
 import static ru.vtosters.lite.utils.Globals.getIdentifier;
 import static ru.vtosters.lite.utils.Globals.getPrefsValue;
 import static ru.vtosters.lite.utils.Globals.getResources;
+import static ru.vtosters.lite.utils.Globals.sendToast;
 import static ru.vtosters.lite.utils.Preferences.color_grishka;
 import static ru.vtosters.lite.utils.Preferences.isBGStickersEnabled;
 import static ru.vtosters.lite.utils.Preferences.navbar;
@@ -34,6 +36,7 @@ import androidx.core.graphics.ColorUtils;
 
 import com.vk.articles.preload.WebCachePreloader;
 import com.vk.core.drawable.RecoloredDrawable;
+import com.vk.core.preference.Preference;
 import com.vk.core.ui.themes.MilkshakeHelper;
 import com.vk.core.ui.themes.VKTheme;
 import com.vk.core.ui.themes.VKThemeHelper;
@@ -50,11 +53,12 @@ public class Themes {
     );
 
     public static void applyTheme(VKTheme theme) {
-        setSelectedTheme(getCurrentActivity(), theme);
+        VKThemeHelper.theme(theme, getCurrentActivity(), getCenterScreenCoords());
     } // Apply VKTheme and ImTheme (hard applying without dynamic theme changing)
 
-    public static void setTheme(Activity activity) {
-        VKThemeHelper.b(activity, getCenterScreenCoords());
+    public static void setTheme(VKTheme theme, Activity activity) {
+        if(activity == null) activity = getCurrentActivity();
+        VKThemeHelper.theme(theme, activity, getCenterScreenCoords());
         ThemeTracker.a();
         isLoaded = false;
         new WebView(activity).clearCache(true);
@@ -63,14 +67,6 @@ public class Themes {
 
     public static boolean isDarkTheme() {
         return VKThemeHelper.r();
-    }
-
-    public static void setSelectedTheme(Activity paramActivity, VKTheme theme) {
-        try {
-            invokeMethod(VKThemeHelper.class, "a", VKThemeHelper.k, paramActivity, theme, getCenterScreenCoords());
-        } catch (NoSuchMethodException | InvocationTargetException | IllegalAccessException e) {
-            e.printStackTrace();
-        }
     }
 
     public static int getAccentColor() {
@@ -148,28 +144,14 @@ public class Themes {
             //case "amoled":
                 //return VKTheme.AMOLED;
             default:
-                return VKTheme.VKAPP_DARK;
+                return isMilkshake()? VKTheme.VKAPP_MILK_DARK : VKTheme.VKAPP_DARK;
         }
     } // Return needed theme for theme changer
 
     public static VKTheme getLightTheme() {
         switch (getPrefsValue("lighttheme")) {
             default:
-                return VKTheme.VKAPP_LIGHT;
-        }
-    } // Return needed theme for theme changer
-
-    public static VKTheme getDarkMilkTheme() {
-        switch (getPrefsValue("darktheme")) {
-            default:
-                return VKTheme.VKAPP_MILK_DARK;
-        }
-    } // Return needed theme for theme changer
-
-    public static VKTheme getLightMilkTheme() {
-        switch (getPrefsValue("lighttheme")) {
-            default:
-                return VKTheme.VKAPP_MILK_LIGHT;
+                return isMilkshake()? VKTheme.VKAPP_MILK_LIGHT : VKTheme.VKAPP_LIGHT;
         }
     } // Return needed theme for theme changer
 
@@ -380,10 +362,14 @@ public class Themes {
         return vkme()? VKME : Default;
     }
 
-    public static void systemThemeChanger() {
+    private void getCurrentThemeID(VKTheme paramVKTheme) {
+        Preference.b("vk_theme_helper", "current_theme", paramVKTheme.getId());
+    }
+
+    public static void systemThemeChanger(Activity activity) { // ded
         boolean isDarkTheme = isDarkTheme();
 
-        if (isDarkTheme){
+        if (!isDarkTheme){
             applyTheme(getDarkTheme());
         } else {
             applyTheme(getLightTheme());
@@ -399,11 +385,11 @@ public class Themes {
             case Configuration.UI_MODE_NIGHT_UNDEFINED:
             case Configuration.UI_MODE_NIGHT_NO:
                 edit().putBoolean("isdark", false).commit();
-                applyTheme(getLightTheme());
+                setTheme(getLightTheme(), activity);
                 break;
             case Configuration.UI_MODE_NIGHT_YES:
                 edit().putBoolean("isdark", true).commit();
-                applyTheme(getDarkTheme());
+                setTheme(getDarkTheme(), activity);
                 break;
         }
     }
