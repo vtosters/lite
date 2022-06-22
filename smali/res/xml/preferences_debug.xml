@@ -1,6 +1,114 @@
 <?xml version="1.0" encoding="utf-8"?>
 <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
     android:key="preferences_debug">
+    <Preference
+        android:enabled="false"
+        android:summary="@string/debug_warning_summary"
+        android:title="@string/debug_warning" />
+    <com.vtosters.lite.ui.MaterialSwitchPreference
+        android:defaultValue="false"
+        android:key="devmenu"
+        android:title="@string/debug_show_settings_item" />
+    <PreferenceCategory android:title="@string/debug_experimental">
+        <com.vtosters.lite.ui.SummaryListPreference
+            android:defaultValue="noanim"
+            android:dialogTitle="@string/selectfranimation"
+            android:entries="@array/animations"
+            android:entryValues="@array/animations_values"
+            android:key="anim_rtrn_type"
+            android:title="@string/franimation" />
+        <com.vtosters.lite.ui.MaterialSwitchPreference
+            android:defaultValue="true"
+            android:key="msgtails"
+            android:summary="@string/messages_interface_tails_summary"
+            android:title="@string/vtlmsgtails" />
+        <com.vtosters.lite.ui.MaterialSwitchPreference
+            android:defaultValue="false"
+            android:key="calls"
+            android:summary="@string/messages_interface_calls_summary"
+            android:title="@string/vtlcalls" />
+        <com.vtosters.lite.ui.MaterialSwitchPreference
+            android:defaultValue="true"
+            android:key="usevkui"
+            android:summary="@string/debug_experimental_usevkui"
+            android:title="@string/vtlusevkui" />
+        <com.vtosters.lite.ui.MaterialSwitchPreference
+            android:defaultValue="false"
+            android:key="unlockstats"
+            android:summary="@string/debug_experimental_page_stats_summary"
+            android:title="@string/debug_experimental_page_stats" />
+        <com.vtosters.lite.ui.MaterialSwitchPreference
+            android:defaultValue="false"
+            android:key="vksans"
+            android:title="@string/debug_experimental_vk_sans_font" />
+        <com.vtosters.lite.ui.MaterialSwitchPreference
+            android:defaultValue="false"
+            android:key="libverify"
+            android:summary="@string/debug_experimental_libverify_summary"
+            android:title="@string/debug_experimental_libverify" />
+        <com.vtosters.lite.ui.MaterialSwitchPreference
+            android:defaultValue="false"
+            android:key="msgflat"
+            android:title="@string/vtlmsgflat" />
+        <com.vtosters.lite.ui.MaterialSwitchPreference
+            android:defaultValue="true"
+            android:key="opusmodule"
+            android:title="@string/debug_experimental_opusmodule" />
+        <com.vtosters.lite.ui.SummaryListPreference
+            android:defaultValue="system"
+            android:dialogTitle="@string/debug_experimental_language_summary"
+            android:entries="@array/language"
+            android:entryValues="@array/lang_value"
+            android:key="lang_value"
+            android:title="@string/debug_experimental_language" />
+        <com.vtosters.lite.ui.MaterialSwitchPreference
+            android:defaultValue="true"
+            android:key="disableanimstickers"
+            android:title="Disable anim stickers + suggestions" />
+        <com.vtosters.lite.ui.MaterialSwitchPreference
+            android:defaultValue="true"
+            android:key="useNewSettings"
+            android:title="Use New Settings" />
+        <com.vtosters.lite.ui.MaterialSwitchPreference
+            android:defaultValue="false"
+            android:key="shakal"
+            android:title="shakalish pikchi da" />
+    </PreferenceCategory>
+    <PreferenceCategory android:title="@string/debug_developer_functions">
+        <com.vtosters.lite.ui.MaterialSwitchPreference
+            android:defaultValue="false"
+            android:key="dev"
+            android:summary="@string/debug_developer_mode_summary"
+            android:title="@string/debug_developer_mode" />
+        <com.vtosters.lite.ui.MaterialSwitchPreference
+            android:defaultValue="true"
+            android:key="ssl"
+            android:summary="@string/debug_developer_force_ssl_summary"
+            android:title="@string/debug_developer_force_ssl" />
+        <com.vtosters.lite.ui.MaterialSwitchPreference
+            android:defaultValue="true"
+            android:key="darkmode"
+            android:title="@string/debug_developer_dark_mode" />
+        <com.vtosters.lite.ui.MaterialSwitchPreference
+            android:defaultValue="true"
+            android:key="isMusicRestricted"
+            android:summary="@string/debug_developer_is_music_restricted_summary"
+            android:title="@string/debug_developer_is_music_restricted" />
+        <com.vtosters.lite.ui.MaterialSwitchPreference
+            android:defaultValue="true"
+            android:key="hasMusicSubscription"
+            android:summary="@string/debug_developer_has_music_subscription_summary"
+            android:title="@string/debug_developer_has_music_subscription" />
+        <com.vtosters.lite.ui.MaterialSwitchPreference
+            android:defaultValue="false"
+            android:key="oldabout"
+            android:title="@string/debug_developer_old_about" />
+        <EditTextPreference
+            android:defaultValue="https://vtsf.vknext.net"
+            android:key="ssfscustom"
+            android:title="@string/debug_developer_ssfs_custom" />
+        <com.vtosters.lite.ui.MaterialSectionDividerPreference />
+    </PreferenceCategory>
     <PreferenceCategory
         android:key="domains"
         android:title="Домены">
