@@ -143,7 +143,7 @@ public class VTSettings extends MaterialPreferenceToolbarFragment {
                 return false;
             });
 
-            PreferencesUtil.addMaterialSwitchPreference(this, "ssl", Globals.getString("debug_developer_force_ssl"), Globals.getString("debug_developer_force_ssl_summary"), "ic_globe_24", true, (preference, o) -> {
+            PreferencesUtil.addMaterialSwitchPreference(this, "ssl", Globals.getString("debug_developer_force_ssl"), Globals.getString("debug_developer_force_ssl_summary"), "ic_globe_20", true, (preference, o) -> {
                 boolean value = (boolean) o;
                 edit().putBoolean("ssl", value).commit();
                 return true;

@@ -187,7 +187,7 @@ public class Preferences {
     }
 
     public static boolean devmenu() {
-        return getBoolValue("devmenu", false);
+        return true; //getBoolValue("devmenu", false);
     }
 
     public static boolean dnr() {
