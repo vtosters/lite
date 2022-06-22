@@ -620,6 +620,8 @@
     .line 31
     invoke-virtual {p1, v0}, Landroid/view/Window;->setStatusBarColor(I)V
 
+    invoke-static {p1, v0}, Lru/vtosters/lite/utils/Themes;->setNavbarColor(Landroid/view/Window;I)V
+
     .line 32
     iget-boolean v0, p0, Lcom/vk/core/tips/TipTextWindow;->l:Z
 

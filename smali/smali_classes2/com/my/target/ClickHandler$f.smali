@@ -147,6 +147,8 @@
     .line 11
     invoke-virtual {p2, v0}, Landroid/view/Window;->setStatusBarColor(I)V
 
+    invoke-static {p2, v0}, Lru/vtosters/lite/utils/Themes;->setNavbarColor(Landroid/view/Window;I)V
+
     .line 12
     :cond_0
     new-instance p2, Lcom/my/target/WebViewBrowser;

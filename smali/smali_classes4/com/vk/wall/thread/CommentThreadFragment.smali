@@ -1165,6 +1165,8 @@
 
     invoke-virtual {v0, v1}, Landroid/view/Window;->setStatusBarColor(I)V
 
+    invoke-static {v0, v1}, Lru/vtosters/lite/utils/Themes;->setNavbarColor(Landroid/view/Window;I)V
+
     .line 4
     :cond_0
     iget-object v0, p0, Lcom/vk/wall/thread/CommentThreadFragment;->R:Lcom/vtosters/lite/o0/CommentsAdapter;

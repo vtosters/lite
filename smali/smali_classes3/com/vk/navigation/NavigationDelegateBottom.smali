@@ -2473,6 +2473,8 @@
     :goto_2
     invoke-virtual {v1, v3}, Landroid/view/Window;->setStatusBarColor(I)V
 
+    invoke-static {v1, v3}, Lru/vtosters/lite/utils/Themes;->setNavbarColor(Landroid/view/Window;I)V
+
     .line 46
     instance-of v1, p1, Lcom/vk/navigation/b0/FragmentWithCustomNavigationBar;
 

@@ -70,31 +70,31 @@ public class Themes {
     }
 
     public static int getAccentColor() {
-        return getColorFromAttr(R.attr.accent);
+        return getColorFromAttr(getAttrId("accent"));
     } // Color accent
 
     public static int getTextAttr() {
-        return getColorFromAttr(R.attr.text_primary);
+        return getColorFromAttr(getAttrId("text_primary"));
     } // Text Primary color
 
     public static int getSTextAttr() {
-        return getColorFromAttr(R.attr.text_secondary);
+        return getColorFromAttr(getAttrId("text_secondary"));
     } // Text Secondary color
 
     public static int getTabbarBackground() {
-        return getColorFromAttr(R.attr.tabbar_background);
+        return getColorFromAttr(getAttrId("tabbar_background"));
     } // Tabbar/Navbar background
 
     public static int getBackgroundContent() {
-        return getColorFromAttr(R.attr.background_content);
+        return getColorFromAttr(getAttrId("background_content"));
     } // Background color in app
 
     public static int getHeaderBackground() {
-        return getColorFromAttr(R.attr.header_background);
+        return getColorFromAttr(getAttrId("header_background"));
     } // Toolbar/Header background
 
     public static int getHeaderText() {
-        return getColorFromAttr(R.attr.header_text);
+        return getColorFromAttr(getAttrId("header_text"));
     } // Header/Toolbar color text
 
     public static int getAmoledTheme() {
@@ -185,10 +185,8 @@ public class Themes {
     } // Accent colors
 
     public static void themeMonetToolbar(ImageButton imageButton, Toolbar toolbar) {
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
-            imageButton.setImageTintList(ColorStateList.valueOf(getHeaderText()));
-            toolbar.setElevation(0.0f);
-        }
+        imageButton.setImageTintList(ColorStateList.valueOf(getHeaderText()));
+        toolbar.setElevation(0.0f);
     }
 
     public static Drawable recolorDrawable(Drawable drawable) {
@@ -306,10 +304,7 @@ public class Themes {
         if (isColorRefAccented(i) && isAndroidMonet()) {
             return getAccentColor();
         }
-        if (Build.VERSION.SDK_INT >= 23) {
-            return context.getColor(i);
-        }
-        return getResources().getColor(i);
+        return context.getColor(i);
     } // Android Support color injector + accent color checker
 
     public static int getColor2(int i) {
@@ -320,7 +315,7 @@ public class Themes {
     } // Android Support color injector + accent color checker
 
     public static void setNavbarColor(Window window, int i) {
-        if (navbar() && Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
+        if (navbar()) {
             window.setNavigationBarColor(getTabbarBackground());
             window.getDecorView().setSystemUiVisibility(getNeededColorNavbar());
         }
