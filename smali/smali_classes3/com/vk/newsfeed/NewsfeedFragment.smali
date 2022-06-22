@@ -3280,21 +3280,6 @@
 
     if-eqz p3, :cond_1
 
-    .line 6
-    sget-object v0, Lcom/vk/metrics/reporters/PerformanceReporter;->j:Lcom/vk/metrics/reporters/PerformanceReporter;
-
-    sget-object v1, Lcom/vk/metrics/performance/scroll/ScrollScreenType;->FEED:Lcom/vk/metrics/performance/scroll/ScrollScreenType;
-
-    invoke-virtual {p3}, Lcom/vk/lists/RecyclerPaginatedView;->getRecyclerView()Landroidx/recyclerview/widget/RecyclerView;
-
-    move-result-object v2
-
-    const-string v3, "it.recyclerView"
-
-    invoke-static {v2, v3}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
-
-    invoke-virtual {v0, v1, v2}, Lcom/vk/metrics/reporters/PerformanceReporter;->a(Lcom/vk/metrics/performance/scroll/ScrollScreenType;Landroidx/recyclerview/widget/RecyclerView;)V
-
     .line 7
     sget-object v0, Lcom/vk/newsfeed/j0/FreshNewsButtonHelper;->e:Lcom/vk/newsfeed/j0/FreshNewsButtonHelper$a;
 

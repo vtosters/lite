@@ -925,11 +925,6 @@
 
     invoke-static {v0}, Lcom/vtosters/lite/auth/VKAccountManager;->b(Lcom/vk/auth/api/VKAccount;)V
 
-    .line 4
-    sget-object v0, Lcom/vk/metrics/reporters/PerformanceReporter;->j:Lcom/vk/metrics/reporters/PerformanceReporter;
-
-    invoke-virtual {v0, p0}, Lcom/vk/metrics/reporters/PerformanceReporter;->a(Landroid/content/Context;)V
-
     return-void
 .end method
 
@@ -2564,15 +2559,6 @@
     :cond_1
     invoke-super {p0}, Landroid/app/Application;->onCreate()V
 
-    .line 7
-    sget-object v0, Lcom/vk/metrics/reporters/PerformanceReporter;->j:Lcom/vk/metrics/reporters/PerformanceReporter;
-
-    invoke-virtual {v0}, Lcom/vk/metrics/reporters/PerformanceReporter;->a()Lb/h/q/c/a/AppStartDurationChecker;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Lb/h/q/c/a/AppStartDurationChecker;->a()V
-
     .line 8
     new-instance v0, Lcom/vk/core/util/TimeLogger;
 
@@ -3023,15 +3009,6 @@
 
     :cond_3
     invoke-virtual {v1, v2}, Lcom/vk/utils/AppUtils$a;->a(Z)V
-
-    .line 47
-    sget-object v0, Lcom/vk/metrics/reporters/PerformanceReporter;->j:Lcom/vk/metrics/reporters/PerformanceReporter;
-
-    invoke-virtual {v0}, Lcom/vk/metrics/reporters/PerformanceReporter;->c()Lb/h/q/c/c/PerformanceStorage;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Lb/h/q/c/c/PerformanceStorage;->p()V
 
     .line 48
     sput-boolean v7, Lcom/vtosters/lite/VKApplication;->a:Z

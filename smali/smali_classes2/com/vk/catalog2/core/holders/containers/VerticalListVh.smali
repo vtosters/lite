@@ -389,24 +389,6 @@
 
     invoke-virtual {v1, v6}, Landroidx/recyclerview/widget/RecyclerView;->addOnScrollListener(Landroidx/recyclerview/widget/RecyclerView$OnScrollListener;)V
 
-    .line 14
-    iget-object v1, v0, Lcom/vk/catalog2/core/holders/containers/VerticalListVh;->H:Lcom/vk/metrics/performance/scroll/ScrollScreenType;
-
-    if-eqz v1, :cond_0
-
-    .line 15
-    sget-object v6, Lcom/vk/metrics/reporters/PerformanceReporter;->j:Lcom/vk/metrics/reporters/PerformanceReporter;
-
-    invoke-virtual {v4}, Lcom/vk/lists/RecyclerPaginatedView;->getRecyclerView()Landroidx/recyclerview/widget/RecyclerView;
-
-    move-result-object v8
-
-    invoke-static {v8, v5}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
-
-    invoke-virtual {v6, v1, v8}, Lcom/vk/metrics/reporters/PerformanceReporter;->a(Lcom/vk/metrics/performance/scroll/ScrollScreenType;Landroidx/recyclerview/widget/RecyclerView;)V
-
-    .line 16
-    :cond_0
     invoke-virtual {v4}, Lcom/vk/lists/RecyclerPaginatedView;->getRecyclerView()Landroidx/recyclerview/widget/RecyclerView;
 
     move-result-object v1

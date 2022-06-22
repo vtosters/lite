@@ -59,15 +59,6 @@
 .method public final a(Lcom/vk/im/engine/events/OnBgSyncStateUpdateEvent;)V
     .locals 0
 
-    .line 1
-    sget-object p1, Lcom/vk/metrics/reporters/PerformanceReporter;->j:Lcom/vk/metrics/reporters/PerformanceReporter;
-
-    invoke-virtual {p1}, Lcom/vk/metrics/reporters/PerformanceReporter;->c()Lb/h/q/c/c/PerformanceStorage;
-
-    move-result-object p1
-
-    invoke-virtual {p1}, Lb/h/q/c/c/PerformanceStorage;->s()V
-
     return-void
 .end method
 

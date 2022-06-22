@@ -213,26 +213,6 @@
 
     invoke-virtual {v0, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 6
-    sget-object v1, Lcom/vk/metrics/reporters/PerformanceReporter;->j:Lcom/vk/metrics/reporters/PerformanceReporter;
-
-    invoke-virtual {v1}, Lcom/vk/metrics/reporters/PerformanceReporter;->d()Z
-
-    move-result v1
-
-    if-eqz v1, :cond_1
-
-    .line 7
-    new-instance v1, Lcom/vk/metrics/performance/anr/ANR$ANRChecker;
-
-    const-wide/16 v2, 0x190
-
-    invoke-direct {v1, p0, v2, v3}, Lcom/vk/metrics/performance/anr/ANR$ANRChecker;-><init>(Lcom/vk/metrics/performance/anr/ANR;J)V
-
-    invoke-virtual {v0, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
-
-    .line 8
-    :cond_1
     new-instance v1, Lcom/vk/metrics/performance/anr/ANR$b;
 
     invoke-direct {v1, p0}, Lcom/vk/metrics/performance/anr/ANR$b;-><init>(Lcom/vk/metrics/performance/anr/ANR;)V
