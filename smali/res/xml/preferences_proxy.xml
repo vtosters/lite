@@ -12,7 +12,6 @@
             android:entryValues="@array/proxy_value"
             android:key="proxy"
             android:title="@string/useproxy" />
-        <com.vtosters.lite..MaterialSectionDividerPreference />
     </PreferenceCategory>
     <PreferenceCategory android:title="@string/proxyadvsettings">
         <EditTextPreference
