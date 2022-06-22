@@ -14,6 +14,7 @@ import static ru.vtosters.lite.utils.Preferences.systemtheme;
 import static ru.vtosters.lite.utils.Preferences.vkme;
 import static ru.vtosters.lite.utils.Preferences.vksans;
 import static ru.vtosters.lite.utils.ReflectionUtils.*;
+import static ru.vtosters.lite.utils.VKUIInjector.isLoaded;
 
 import android.annotation.SuppressLint;
 import android.app.Activity;
@@ -25,6 +26,7 @@ import android.graphics.drawable.Drawable;
 import android.os.Build;
 import android.view.View;
 import android.view.Window;
+import android.webkit.WebView;
 import android.widget.ImageButton;
 
 import androidx.appcompat.widget.Toolbar;
@@ -54,6 +56,8 @@ public class Themes {
     public static void setTheme(Activity activity) {
         VKThemeHelper.b(activity, getCenterScreenCoords());
         ThemeTracker.a();
+        isLoaded = false;
+        new WebView(activity).clearCache(true);
         WebCachePreloader.e();
     } // apply changed theme
 

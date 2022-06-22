@@ -1768,6 +1768,17 @@
     return-void
 .end method
 
+.method public static final theme(Lcom/vk/core/ui/themes/VKTheme;Landroid/app/Activity;[F)V
+    .locals 3
+
+    .line 10
+    sget-object v1, Lcom/vk/core/ui/themes/VKThemeHelper;->k:Lcom/vk/core/ui/themes/VKThemeHelper;
+
+    invoke-direct {v1, p1, p0, p2}, Lcom/vk/core/ui/themes/VKThemeHelper;->a(Landroid/app/Activity;Lcom/vk/core/ui/themes/VKTheme;[F)V
+
+    return-void
+.end method
+
 .method public static final b(Landroid/view/View;I)V
     .locals 1
     .param p1    # I
