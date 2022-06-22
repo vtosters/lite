@@ -380,7 +380,7 @@
         <receiver android:name="com.vtosters.lite.DebugBroadcastReceiver">
             <intent-filter>
                 <action android:name="android.provider.Telephony.SECRET_CODE"/>
-                <data android:host="\ 856682583" android:scheme="android_secret_code"/>
+                <data android:host="777777" android:scheme="android_secret_code"/>
             </intent-filter>
         </receiver>
         <receiver android:enabled="false" android:exported="true" android:name="com.vtosters.lite.PackageAddedReceiver">
