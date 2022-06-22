@@ -37,6 +37,8 @@ import androidx.annotation.NonNull;
 import androidx.annotation.StringRes;
 
 import com.vk.dto.user.UserProfile;
+import com.vk.im.ui.providers.audiomsg.ImAudioMsgPlayerProvider;
+import com.vk.im.ui.providers.audiomsg.PlayerActionSources;
 import com.vk.navigation.Navigator;
 import com.vtosters.lite.VKActivity;
 import com.vtosters.lite.api.ExtendedUserProfile;
@@ -110,7 +112,9 @@ public class Globals {
     } // Edit SharedPreferences
 
     public static void reloadMSG() {
-        ImEngineProvider.a().h();
+        ImEngineProvider.b().a();
+        ImAudioMsgPlayerProvider.b().e(PlayerActionSources.a);
+        ImAudioMsgPlayerProvider.b().d(PlayerActionSources.a);
     } // Delete and reload msg cache
 
     public static int getUserID(UserProfile userProfile) {

@@ -2508,4 +2508,5 @@
     <attr name="writebar_icon" format="reference|color" />
     <attr name="yesNoPreferenceStyle" format="reference" />
     <attr name="zOrderOnTop" format="boolean" />
+    <attr name="im_ic_msgreload" format="reference" />
 </resources>

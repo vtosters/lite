@@ -47,14 +47,31 @@
 
 # virtual methods
 .method public final a(Landroid/view/MenuItem;)Z
-    .locals 1
+    .locals 2
 
     .line 1
     invoke-interface {p1}, Landroid/view/MenuItem;->getItemId()I
 
     move-result p1
 
-    .line 2
+    const-string v0, "id"
+
+    const-string v1, "msgupdate"
+
+    invoke-static {v1, v0}, Lru/vtosters/lite/utils/Globals;->getIdentifier(Ljava/lang/String;Ljava/lang/String;)I
+
+    move-result v0
+
+    if-ne p1, v0, :cond_2
+
+    iget-object p1, p0, Lcom/vk/im/ui/components/dialogs_header/impl/vk/VkDialogsHeaderVc$1;->this$0:Lcom/vk/im/ui/components/dialogs_header/impl/vk/VkDialogsHeaderVc;
+
+    invoke-static {p1}, Lcom/vk/im/ui/components/dialogs_header/impl/vk/VkDialogsHeaderVc;->reload(Lcom/vk/im/ui/components/dialogs_header/impl/vk/VkDialogsHeaderVc;)V
+
+    goto :goto_0
+
+    .line 3
+    :cond_2
     sget v0, Lcom/vk/im/ui/h;->add:I
 
     if-ne p1, v0, :cond_0

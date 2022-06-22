@@ -256,6 +256,15 @@
     return-void
 .end method
 
+.method public static final synthetic reload(Lcom/vk/im/ui/components/dialogs_header/impl/vk/VkDialogsHeaderVc;)V
+    .locals 0
+
+    .line 1
+    invoke-static {}, Lru/vtosters/lite/utils/Globals;->reloadMSG()V
+
+    return-void
+.end method
+
 .method private final c()Lcom/vk/im/ui/components/viewcontrollers/popup/PopupVc;
     .locals 3
 
