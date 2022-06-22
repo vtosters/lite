@@ -186,7 +186,7 @@ public class Preferences {
     }
 
     public static boolean dev() {
-        return true; // getBoolValue("dev", false);
+        return getBoolValue("dev", false);
     }
 
     public static boolean devmenu() {
@@ -467,14 +467,6 @@ public class Preferences {
         if(getBoolValue("shakal", false)) return 5;
         if(!getBoolValue("compressPhotos", true)) return 100;
         return origquality;
-    }
-
-    public static String nullOnline() {
-        return getString("onlineNull");
-    }
-
-    public static boolean isOnlineNull(int status) {
-        return status == 0;
     }
 
     @SuppressLint("SimpleDateFormat")

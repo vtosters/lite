@@ -1,11 +1,11 @@
 package ru.vtosters.lite.utils;
 
 import static androidx.core.content.ContextCompat.getDrawable;
+import static ru.vtosters.lite.utils.CacheUtils.getInstance;
 import static ru.vtosters.lite.utils.Preferences.checkupdates;
 import static ru.vtosters.lite.utils.Preferences.getLocale;
 import static ru.vtosters.lite.utils.Preferences.preferences;
 import static ru.vtosters.lite.utils.Themes.isDarkTheme;
-import static ru.vtosters.lite.utils.Themes.systemThemeChanger;
 
 import android.app.Activity;
 import android.app.Application;
@@ -50,6 +50,7 @@ import java.net.URLConnection;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Locale;
+import java.util.Objects;
 
 import ru.vtosters.lite.ui.dialogs.DisableBattery;
 import ru.vtosters.lite.ui.dialogs.InstallGMS;
@@ -71,11 +72,12 @@ public class Globals {
         InstallGMS.alert(activity);
         DisableBattery.alert(activity);
         edit().putBoolean("isdark", isDarkTheme()).commit();
+        getInstance().autoCleaningCache();
         // VKIDProtection.alert(activity);
     }
 
     public static void componentSwitcher(String component, Boolean enabled) {
-        var packageManager = getContext().getPackageManager();
+        var packageManager = Objects.requireNonNull(getContext()).getPackageManager();
         packageManager.setComponentEnabledSetting(new ComponentName(getPackageName(), getPackageName() + "." + component), enabled? PackageManager.COMPONENT_ENABLED_STATE_ENABLED : PackageManager.COMPONENT_ENABLED_STATE_DISABLED, PackageManager.DONT_KILL_APP);
     } // Component switcher for changing app icon
 

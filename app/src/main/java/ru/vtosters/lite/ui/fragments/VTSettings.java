@@ -5,11 +5,9 @@ import static ru.vtosters.lite.f0x1d.VTVerifications.vtverif;
 import static ru.vtosters.lite.utils.About.getBuildNumber;
 import static ru.vtosters.lite.utils.About.getCommitLink;
 import static ru.vtosters.lite.utils.CacheUtils.humanReadableByteCountBin;
-import static ru.vtosters.lite.utils.Globals.drawableFromUrl;
 import static ru.vtosters.lite.utils.Globals.edit;
 import static ru.vtosters.lite.utils.Globals.getIdentifier;
 import static ru.vtosters.lite.utils.Globals.getPrefsValue;
-import static ru.vtosters.lite.utils.Globals.getUserId;
 import static ru.vtosters.lite.utils.Globals.isGmsInstalled;
 import static ru.vtosters.lite.utils.Preferences.ads;
 import static ru.vtosters.lite.utils.Preferences.devmenu;
@@ -19,14 +17,11 @@ import static ru.vtosters.lite.utils.Preferences.isValidSignature;
 import static ru.vtosters.lite.utils.Preferences.navbar;
 import static ru.vtosters.lite.utils.Preferences.offline;
 import static ru.vtosters.lite.utils.Preferences.oldicons;
-import static ru.vtosters.lite.utils.Preferences.preferences;
 import static ru.vtosters.lite.utils.Preferences.shortinfo;
 import static ru.vtosters.lite.utils.Preferences.vkme;
-import static ru.vtosters.lite.utils.Themes.applyTheme;
 import static ru.vtosters.lite.utils.Themes.getDarkTheme;
 import static ru.vtosters.lite.utils.Themes.getLightTheme;
 import static ru.vtosters.lite.utils.Themes.setTheme;
-import static ru.vtosters.lite.utils.VKUIInjector.isLoaded;
 
 import android.content.Context;
 import android.content.Intent;
@@ -34,11 +29,10 @@ import android.content.SharedPreferences;
 import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
-import android.webkit.WebView;
 
 import com.aefyr.tsg.g2.TelegramStickersService;
 import com.vk.about.AboutAppFragment;
-import com.vk.identity.fragments.IdentityListFragment;
+import com.vk.balance.BalanceFragment;
 import com.vk.navigation.Navigator;
 import com.vk.notifications.settings.NotificationsSettingsFragment;
 import com.vk.webapp.fragments.PrivacyFragment;
@@ -207,14 +201,12 @@ public class VTSettings extends MaterialPreferenceToolbarFragment {
             });
         }
 
-        if (VKAccountManager.d().N0()) {
-            PreferencesUtil.addPreference(this, "", Globals.getString("identity_title"), "", oldicons() ? "ic_services_24" : "ic_services_outline_28", preference -> {
-                Context context = getContext();
-                Intent a2 = new Navigator(IdentityListFragment.class).b(context);
-                context.startActivity(a2);
-                return false;
-            });
-        }
+        PreferencesUtil.addPreference(this, "", Globals.getString("votes"), "", oldicons() ? "ic_coins_24" : "ic_coins_outline_28", preference -> {
+            Context context = getContext();
+            Intent a2 = new Navigator(BalanceFragment.class).b(context);
+            context.startActivity(a2);
+            return false;
+        });
 
         PreferencesUtil.addPreferenceCategory(this,  Globals.getString("vtsettmod"));
 
