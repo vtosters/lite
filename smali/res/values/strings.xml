@@ -3423,7 +3423,7 @@ If you have any questions, please contact [https://vk.com/support|Support.]"</st
     <string name="sett_compress_photos">Compress photos</string>
     <string name="sett_compress_videos">Compress videos</string>
     <string name="sett_dark_mode">Dark mode</string>
-    <string name="sett_debug">Debug</string>
+    <string name="sett_debug">Debug menu</string>
     <string name="sett_dnd_8hours">Do not disturb for 8 hours</string>
     <string name="sett_dnd_cancel">Enable notifications</string>
     <string name="sett_dnd_desc">Notifications will be enabled automatically %s</string>

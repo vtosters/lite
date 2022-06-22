@@ -3266,7 +3266,7 @@
     <string name="sett_compress_photos">Стискати фотографії</string>
     <string name="sett_compress_videos">Стискати відео</string>
     <string name="sett_dark_mode">Темна тема</string>
-    <string name="sett_debug">Debug</string>
+    <string name="sett_debug">Для разработчиков</string>
     <string name="sett_dnd_8hours">Не турбувати 8 годин</string>
     <string name="sett_dnd_cancel">Увімкнути сповіщення</string>
     <string name="sett_dnd_desc">Сповіщення увімкнуться автоматично %s</string>
