@@ -300,6 +300,8 @@
 .method public onPageFinished(Landroid/webkit/WebView;Ljava/lang/String;)V
     .locals 3
 
+    invoke-static/range {p1 .. p1}, Lru/vtosters/lite/utils/VKUIInjector;->inject(Landroid/webkit/WebView;)V
+
     const/4 v0, 0x2
 
     new-array v0, v0, [Ljava/lang/Object;

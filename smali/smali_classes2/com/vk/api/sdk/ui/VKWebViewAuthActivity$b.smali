@@ -335,6 +335,8 @@
 .method public onPageFinished(Landroid/webkit/WebView;Ljava/lang/String;)V
     .locals 0
 
+    invoke-static/range {p1 .. p1}, Lru/vtosters/lite/utils/VKUIInjector;->inject(Landroid/webkit/WebView;)V
+
     .line 1
     invoke-super {p0, p1, p2}, Landroid/webkit/WebViewClient;->onPageFinished(Landroid/webkit/WebView;Ljava/lang/String;)V
 
