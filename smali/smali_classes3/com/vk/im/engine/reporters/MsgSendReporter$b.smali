@@ -45,52 +45,6 @@
 .method public final run()V
     .locals 4
 
-    .line 1
-    sget-object v0, Lcom/vk/metrics/eventtracking/VkTracker;->k:Lcom/vk/metrics/eventtracking/VkTracker;
-
-    iget-object v1, p0, Lcom/vk/im/engine/reporters/MsgSendReporter$b;->a:Lcom/vk/im/engine/reporters/MsgSendReporter$a;
-
-    sget-object v2, Lcom/vk/im/engine/reporters/MsgSendReporter;->g:Lcom/vk/im/engine/reporters/MsgSendReporter;
-
-    invoke-static {v2}, Lcom/vk/im/engine/reporters/MsgSendReporter;->f(Lcom/vk/im/engine/reporters/MsgSendReporter;)Ljava/util/List;
-
-    move-result-object v2
-
-    sget-object v3, Lcom/vk/metrics/formatter/EventNameFormatters;->c:Lcom/vk/metrics/formatter/EventNameFormatters;
-
-    invoke-virtual {v3}, Lcom/vk/metrics/formatter/EventNameFormatters;->a()Lkotlin/jvm/b/Functions2;
-
-    move-result-object v3
-
-    invoke-virtual {v1, v2, v3}, Lcom/vk/im/engine/reporters/MsgSendReporter$a;->a(Ljava/util/List;Lkotlin/jvm/b/Functions2;)Lcom/vk/metrics/eventtracking/Event;
-
-    move-result-object v1
-
-    invoke-virtual {v0, v1}, Lcom/vk/metrics/eventtracking/VkTracker;->a(Lcom/vk/metrics/eventtracking/Event;)V
-
-    .line 2
-    sget-object v0, Lcom/vk/metrics/eventtracking/VkTracker;->k:Lcom/vk/metrics/eventtracking/VkTracker;
-
-    iget-object v1, p0, Lcom/vk/im/engine/reporters/MsgSendReporter$b;->a:Lcom/vk/im/engine/reporters/MsgSendReporter$a;
-
-    sget-object v2, Lcom/vk/im/engine/reporters/MsgSendReporter;->g:Lcom/vk/im/engine/reporters/MsgSendReporter;
-
-    invoke-static {v2}, Lcom/vk/im/engine/reporters/MsgSendReporter;->d(Lcom/vk/im/engine/reporters/MsgSendReporter;)Ljava/util/List;
-
-    move-result-object v2
-
-    sget-object v3, Lcom/vk/metrics/formatter/EventNameFormatters;->c:Lcom/vk/metrics/formatter/EventNameFormatters;
-
-    invoke-virtual {v3}, Lcom/vk/metrics/formatter/EventNameFormatters;->b()Lkotlin/jvm/b/Functions2;
-
-    move-result-object v3
-
-    invoke-virtual {v1, v2, v3}, Lcom/vk/im/engine/reporters/MsgSendReporter$a;->a(Ljava/util/List;Lkotlin/jvm/b/Functions2;)Lcom/vk/metrics/eventtracking/Event;
-
-    move-result-object v1
-
-    invoke-virtual {v0, v1}, Lcom/vk/metrics/eventtracking/VkTracker;->a(Lcom/vk/metrics/eventtracking/Event;)V
-
     .line 3
     sget-object v0, Lcom/vk/im/engine/reporters/MsgSendReporter;->g:Lcom/vk/im/engine/reporters/MsgSendReporter;
 
