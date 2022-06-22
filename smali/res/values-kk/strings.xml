@@ -210,7 +210,8 @@
     <string name="already_registered">Аккаунтыңыз бар ма?</string>
     <string name="app_install">Орнату</string>
     <string name="app_launch">Іске қосу</string>
-    <string name="app_name">VK</string>
+    <string name="app_name">VTLite</string>
+    <string name="app_name_orig">VK</string>
     <string name="app_remove_confirm">Бұл ойынды шынымен де жойғыңыз келе ме?</string>
     <string name="apps_remove_action">Алып тастау</string>
     <string name="apps_remove_from_menu_message">«%s» мәзірден алып тастағыңыз келе ме?</string>

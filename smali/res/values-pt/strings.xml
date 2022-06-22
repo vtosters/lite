@@ -210,7 +210,8 @@
     <string name="already_registered">Já está no VK?</string>
     <string name="app_install">Instalar</string>
     <string name="app_launch">Lançar</string>
-    <string name="app_name">VK</string>
+    <string name="app_name">VTLite</string>
+    <string name="app_name_orig">VK</string>
     <string name="app_remove_confirm">Deseja realmente excluir este jogo?</string>
     <string name="apps_remove_action">Remover</string>
     <string name="apps_remove_from_menu_message">Deseja realmente remover \"%s\" do menu?</string>
