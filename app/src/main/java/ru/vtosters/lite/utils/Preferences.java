@@ -320,7 +320,7 @@ public class Preferences {
     }
 
     public static boolean ssl() {
-        return true; // getBoolValue("ssl", true) ||
+        return getBoolValue("ssl", true);
     }
 
     public static boolean stories() {
