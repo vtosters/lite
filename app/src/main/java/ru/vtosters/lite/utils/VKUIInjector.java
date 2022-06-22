@@ -4,7 +4,13 @@ import static android.util.Base64.encodeToString;
 import static ru.vtosters.lite.utils.Globals.getContext;
 import static ru.vtosters.lite.utils.Globals.getPrefsValue;
 import static ru.vtosters.lite.utils.Preferences.getBoolValue;
+import static ru.vtosters.lite.utils.Themes.getAccentColor;
+import static ru.vtosters.lite.utils.Themes.getBackgroundContent;
+import static ru.vtosters.lite.utils.Themes.getBackgroundPage;
 import static ru.vtosters.lite.utils.Themes.getColorFromAttr;
+import static ru.vtosters.lite.utils.Themes.getHeaderBackground;
+import static ru.vtosters.lite.utils.Themes.getHeaderText;
+import static ru.vtosters.lite.utils.Themes.getTextAttr;
 import static ru.vtosters.lite.utils.Themes.hex;
 
 import android.webkit.WebView;
@@ -18,7 +24,7 @@ import java.io.InputStreamReader;
 import java.nio.charset.StandardCharsets;
 
 public class VKUIInjector {
-    private static boolean isLoaded = false;
+    public static boolean isLoaded = false;
     private static String loadedCSS = "";
     private static String loadedCSSAmoled = "";
 
@@ -48,13 +54,12 @@ public class VKUIInjector {
 
     public static void load() {
         loadedCSS = load("vt_ui_accent.css")
-                .replace("%header_background%", hex(getColorFromAttr(R.attr.header_background)))
-                .replace("%background_content%", hex(getColorFromAttr(R.attr.background_content)))
-                .replace("%header_text%", hex(getColorFromAttr(R.attr.header_text)))
-                .replace("%accent%", hex(getColorFromAttr(R.attr.accent)))
-                .replace("%background_page%", hex(getColorFromAttr(R.attr.background_page)))
-                .replace("%background_content%", hex(getColorFromAttr(R.attr.background_content)))
-                .replace("%text_primary%", hex(getColorFromAttr(R.attr.text_primary)));
+                .replace("%header_background%", hex(getHeaderBackground()))
+                .replace("%background_content%", hex(getBackgroundContent()))
+                .replace("%header_text%", hex(getHeaderText()))
+                .replace("%accent%", hex(getAccentColor()))
+                .replace("%background_page%", hex(getBackgroundPage()))
+                .replace("%text_primary%", hex(getTextAttr()));
 
         loadedCSSAmoled = load("vt_ui_oled.css");
         isLoaded = true;

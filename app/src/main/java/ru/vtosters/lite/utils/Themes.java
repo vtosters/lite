@@ -89,6 +89,10 @@ public class Themes {
         return getColorFromAttr(getAttrId("background_content"));
     } // Background color in app
 
+    public static int getBackgroundPage() {
+        return getColorFromAttr(getAttrId("background_page"));
+    } // Background color in app
+
     public static int getHeaderBackground() {
         return getColorFromAttr(getAttrId("header_background"));
     } // Toolbar/Header background

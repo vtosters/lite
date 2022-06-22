@@ -26,6 +26,7 @@ import static ru.vtosters.lite.utils.Themes.applyTheme;
 import static ru.vtosters.lite.utils.Themes.getDarkTheme;
 import static ru.vtosters.lite.utils.Themes.getLightTheme;
 import static ru.vtosters.lite.utils.Themes.setTheme;
+import static ru.vtosters.lite.utils.VKUIInjector.isLoaded;
 
 import android.content.Context;
 import android.content.Intent;
@@ -33,13 +34,13 @@ import android.content.SharedPreferences;
 import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
+import android.webkit.WebView;
 
 import com.aefyr.tsg.g2.TelegramStickersService;
 import com.vk.about.AboutAppFragment;
 import com.vk.identity.fragments.IdentityListFragment;
 import com.vk.navigation.Navigator;
 import com.vk.notifications.settings.NotificationsSettingsFragment;
-import com.vk.webapp.fragments.BugtrackerFragment;
 import com.vk.webapp.fragments.PrivacyFragment;
 import com.vtosters.lite.auth.VKAccountManager;
 import com.vtosters.lite.fragments.money.music.control.subscription.MusicSubscriptionControlFragment;
@@ -91,8 +92,11 @@ public class VTSettings extends MaterialPreferenceToolbarFragment {
 
             edit().putBoolean("isdark", value).commit();
 
-            setTheme(this.getActivity());
+            isLoaded = false;
 
+            new WebView(getActivity()).clearCache(true);
+
+            setTheme(this.getActivity());
             return true;
         });
 
@@ -101,7 +105,6 @@ public class VTSettings extends MaterialPreferenceToolbarFragment {
                 boolean value = (boolean) o;
 
                 edit().putBoolean("systemtheme", value).commit();
-
                 return true;
             });
         }

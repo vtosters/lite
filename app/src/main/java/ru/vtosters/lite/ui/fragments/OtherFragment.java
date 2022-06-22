@@ -15,6 +15,7 @@ import android.content.ClipboardManager;
 import android.content.Context;
 import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.webkit.WebView;
 
 import androidx.preference.Preference;
 
@@ -80,6 +81,7 @@ public class OtherFragment extends MaterialPreferenceToolbarFragment {
             SharedPreferences prefs2 = getContext().getSharedPreferences("stickers_storage", Context.MODE_PRIVATE);
             prefs.edit().clear().commit();
             prefs2.edit().clear().commit();
+            new WebView(getActivity()).clearCache(true);
             VKImageLoader.e();
             ImEngineProvider.a().h();
             FileUtils.l();
