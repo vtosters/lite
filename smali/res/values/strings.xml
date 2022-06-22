@@ -5935,7 +5935,6 @@ May look like a fake leaving the online"</string>
     <string name="newversion">New version</string>
     <string name="changelog">Changelog</string>
     <string name="downloaderr">Download error</string>
-    <string name="onlineNull">Online is hidden</string>
 
     <string name="download_mp3">Download as mp3</string>
     <string name="remove_from_cache">Delete from cache</string>
