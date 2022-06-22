@@ -561,6 +561,8 @@
 
     invoke-virtual {p1, v0}, Landroid/view/Window;->setStatusBarColor(I)V
 
+    invoke-static {p1, v0}, Lru/vtosters/lite/utils/Themes;->setNavbarColor(Landroid/view/Window;I)V
+
     .line 14
     invoke-virtual {p0}, Landroid/app/Activity;->getWindow()Landroid/view/Window;
 

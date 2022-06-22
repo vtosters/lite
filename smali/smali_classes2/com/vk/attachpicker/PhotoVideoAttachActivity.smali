@@ -846,6 +846,8 @@
 
     invoke-virtual {v8, v4}, Landroid/view/Window;->setStatusBarColor(I)V
 
+    invoke-static {v8, v4}, Lru/vtosters/lite/utils/Themes;->setNavbarColor(Landroid/view/Window;I)V
+
     .line 37
     :cond_3
     iget-object v4, v0, Lcom/vk/attachpicker/PhotoVideoAttachActivity;->L:Lcom/vk/attachpicker/widget/AttachCounterView;
