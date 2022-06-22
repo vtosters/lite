@@ -1,5 +1,7 @@
 package ru.vtosters.lite.ui.fragments;
 
+import static ru.vtosters.lite.utils.Globals.getIdentifier;
+
 import android.os.Bundle;
 
 import com.vtosters.lite.R;
@@ -9,6 +11,6 @@ public class MusicFragment extends MaterialPreferenceToolbarFragment {
     @Override
     public void onCreate(Bundle bundle) {
         super.onCreate(bundle);
-        addPreferencesFromResource(R.xml.preferences_music);
+        addPreferencesFromResource(getIdentifier("preferences_music", "xml"));
     }
 }

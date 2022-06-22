@@ -1,6 +1,7 @@
 package ru.vtosters.lite.ui.fragments;
 
 import static ru.vtosters.lite.utils.CacheUtils.deleteCache;
+import static ru.vtosters.lite.utils.Globals.getIdentifier;
 import static ru.vtosters.lite.utils.Globals.restartApplicationWithTimer;
 
 import android.content.Context;
@@ -16,7 +17,7 @@ public class MessagesFragment extends MaterialPreferenceToolbarFragment {
     @Override
     public void onCreate(Bundle bundle) {
         super.onCreate(bundle);
-        addPreferencesFromResource(R.xml.preferences_messages);
+        addPreferencesFromResource(getIdentifier("preferences_messages", "xml"));
         prefs();
     }
 

@@ -3,6 +3,7 @@ package ru.vtosters.lite.ui.fragments;
 import static android.widget.Toast.LENGTH_SHORT;
 import static android.widget.Toast.makeText;
 import static ru.vtosters.lite.utils.CacheUtils.deleteCache;
+import static ru.vtosters.lite.utils.Globals.getIdentifier;
 import static ru.vtosters.lite.utils.Globals.getUserToken;
 import static ru.vtosters.lite.utils.Globals.restartApplication;
 import static ru.vtosters.lite.utils.SettBackup.backupSettings;
@@ -35,7 +36,7 @@ public class OtherFragment extends MaterialPreferenceToolbarFragment {
     @Override
     public void onCreate(Bundle bundle) {
         super.onCreate(bundle);
-        addPreferencesFromResource(R.xml.preferences_other);
+        addPreferencesFromResource(getIdentifier("preferences_other", "xml"));
         prefs();
     }
 

@@ -4,7 +4,6 @@ import static ru.vtosters.lite.utils.Preferences.getBoolValue;
 
 import android.content.Context;
 import android.content.SharedPreferences;
-import android.net.Uri;
 import android.util.Base64;
 import android.util.Log;
 import android.widget.Toast;
@@ -20,7 +19,6 @@ import java.nio.charset.StandardCharsets;
 import java.util.HashMap;
 import java.util.Map;
 
-import okhttp3.CacheControl;
 import okhttp3.Call;
 import okhttp3.Callback;
 import okhttp3.MediaType;
@@ -28,7 +26,6 @@ import okhttp3.OkHttpClient;
 import okhttp3.Request;
 import okhttp3.RequestBody;
 import okhttp3.Response;
-import ru.vtosters.lite.utils.Globals;
 
 public class VTVerifications {
     public static final HashMap<Integer, Boolean> sServiceAccountsMap = new HashMap<>();

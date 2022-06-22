@@ -16,7 +16,6 @@
             android:defaultValue="false"
             android:key="libvkx_integration"
             android:title="@string/vkx_integration" />
-        <com.vtosters.lite.ui.MaterialSectionDividerPreference />
     </PreferenceCategory>
     <PreferenceCategory android:title="@string/vk_fix_music_other">
         <com.vtosters.lite.ui.MaterialSwitchPreference

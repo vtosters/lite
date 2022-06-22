@@ -26,7 +26,6 @@
             android:key="copyright_post"
             android:summary="@string/feed_ads_sources_summary"
             android:title="@string/feed_ads_sources" />
-        <com.vtosters.lite.ui.MaterialSectionDividerPreference />
     </PreferenceCategory>
     <PreferenceCategory android:title="@string/vtlfilters">
         <Preference
@@ -57,7 +56,6 @@
             android:key="shitposting"
             android:summary="@string/shitpostingsummary"
             android:title="@string/shitposting" />
-        <com.vtosters.lite.ui.MaterialSectionDividerPreference />
     </PreferenceCategory>
     <PreferenceCategory android:title="@string/vtlrecommend">
         <com.vtosters.lite.ui.MaterialSwitchPreference
@@ -80,7 +78,6 @@
             android:key="captions"
             android:summary="@string/vtlrecommendmarksummary"
             android:title="@string/vtlrecommendmark" />
-        <com.vtosters.lite.ui.MaterialSectionDividerPreference />
     </PreferenceCategory>
     <PreferenceCategory android:title="@string/vtlfeedwork">
         <Preference

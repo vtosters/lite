@@ -9,7 +9,6 @@
             android:enabled="false"
             android:summary="GMS необходим для работы уведомлений, для работы музыки и ещё очень многих компонентов приложения"
             android:title="Зачем мне нужен GMS для VTosters?" />
-        <com.vtosters.lite.ui.MaterialSectionDividerPreference />
     </PreferenceCategory>
     <PreferenceCategory android:title="Как скачать?">
         <Preference
@@ -34,7 +33,6 @@
                 android:action="android.intent.action.VIEW"
                 android:data="https://microg.org" />
         </Preference>
-        <com.vtosters.lite.ui.MaterialSectionDividerPreference />
     </PreferenceCategory>
     <PreferenceCategory android:title="Что делать дальше?">
         <Preference

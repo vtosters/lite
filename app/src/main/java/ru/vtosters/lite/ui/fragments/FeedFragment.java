@@ -1,5 +1,7 @@
 package ru.vtosters.lite.ui.fragments;
 
+import static ru.vtosters.lite.utils.Globals.getIdentifier;
+
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
@@ -15,7 +17,7 @@ public class FeedFragment extends MaterialPreferenceToolbarFragment {
     @Override
     public void onCreate(Bundle bundle) {
         super.onCreate(bundle);
-        addPreferencesFromResource(R.xml.preferences_feed);
+        addPreferencesFromResource(getIdentifier("preferences_feed", "xml"));
         prefs();
     }
 
