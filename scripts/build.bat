@@ -18,7 +18,7 @@ call gradlew clean
 del app\src\main\assets\version.properties
 del smali\assets\version.properties
 call gradlew versionFile
-call gradlew assembleDebug
+call gradlew assembleRelease
 if "%ERRORLEVEL%" == "0" (
     echo %ESC%[92mSuccessful%ESC%[0m
 ) else (
@@ -56,7 +56,6 @@ if "%ERRORLEVEL%" == "0" (
     echo %ESC%[92mSuccessful%ESC%[0m
 ) else (
     echo %ESC%[31mFailed%ESC%[0m
-    exit /B 1
 )
 
 
