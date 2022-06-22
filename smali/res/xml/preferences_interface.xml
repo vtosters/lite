@@ -16,6 +16,20 @@
             android:key="swipe"
             android:title="@string/interfacenewsfeedswipe" />
     </PreferenceCategory>
+    <PreferenceCategory android:title="Молочный кок или почему я не осилил инжектнуть тогглы">
+        <com.vtosters.lite.ui.MaterialSwitchPreference
+            android:defaultValue="true"
+            android:key="milkshake"
+            android:title="milkshake" />
+        <com.vtosters.lite.ui.MaterialSwitchPreference
+            android:defaultValue="false"
+            android:key="returnnorifs"
+            android:title="returnnorifs" />
+        <com.vtosters.lite.ui.MaterialSwitchPreference
+            android:defaultValue="false"
+            android:key="superapp"
+            android:title="superapp" />
+    </PreferenceCategory>
     <PreferenceCategory android:title="@string/interfaceglobal">
         <com.vtosters.lite.ui.SummaryListPreference
             android:defaultValue="newsfeed"
