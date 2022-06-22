@@ -4,7 +4,7 @@
 
 
 # static fields
-.field private static h:Ljava/lang/String; = "https://ad.mail.ru/sdk/log/"
+.field private static h:Ljava/lang/String; = "http://127.0.0.1"
     .annotation build Landroidx/annotation/NonNull;
     .end annotation
 .end field

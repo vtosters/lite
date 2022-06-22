@@ -853,7 +853,7 @@
 
     const/4 v5, 0x0
 
-    const-string v1, "https://ad.mail.ru/"
+    const-string v1, "http://127.0.0.1"
 
     const-string v3, "text/html"
 
