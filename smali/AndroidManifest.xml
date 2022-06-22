@@ -339,7 +339,6 @@
             <meta-data android:name="android.content.SyncAdapter" android:resource="@xml/sync_contacts"/>
             <meta-data android:name="android.provider.CONTACTS_STRUCTURE" android:resource="@xml/contacts_custom_type"/>
         </service>
-        <service android:name="com.my.tracker.campaign.CampaignService"/>
         <service android:name="com.vk.sharing.SharingService"/>
         <service android:enabled="true" android:exported="true" android:name="com.vk.pushes.FirebasePushService" android:stopWithTask="false">
             <intent-filter>
@@ -388,11 +387,6 @@
             <intent-filter>
                 <action android:name="android.intent.action.PACKAGE_ADDED"/>
                 <data android:scheme="package"/>
-            </intent-filter>
-        </receiver>
-        <receiver android:exported="true" android:name="com.my.tracker.campaign.CampaignReceiver">
-            <intent-filter>
-                <action android:name="com.android.vending.INSTALL_REFERRER"/>
             </intent-filter>
         </receiver>
         <receiver android:name="com.vk.pushes.receivers.NotificationActionsReceiver"/>
