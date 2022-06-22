@@ -134,6 +134,15 @@
 
     iput-object p1, p0, Lcom/vk/core/network/stat/NetworkMetricsReporter;->d:Lcom/vk/core/network/stat/MetricsCollector;
 
+    .line 6
+    sget-object p1, Lcom/vk/core/network/stat/NetworkMetricsReporter$perfStorageWriter$2;->a:Lcom/vk/core/network/stat/NetworkMetricsReporter$perfStorageWriter$2;
+
+    invoke-static {p1}, Lkotlin/g;->a(Lkotlin/jvm/b/Functions;)Lkotlin/Lazy2;
+
+    move-result-object p1
+
+    iput-object p1, p0, Lcom/vk/core/network/stat/NetworkMetricsReporter;->e:Lkotlin/Lazy2;
+
     return-void
 .end method
 
