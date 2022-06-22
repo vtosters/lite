@@ -46,9 +46,6 @@ public class Preferences {
 
     public static String VERSIONNAME = "Beta";
 
-    public static Integer VKBUILD = 12116; // 3439 orig
-    public static String VKVER = "7.24"; // 5.29 orig
-
     static final boolean isDebug = Debug.isDebuggerConnected();
 
     public static void init(Application application) {
@@ -411,18 +408,6 @@ public class Preferences {
 
     public static boolean donaterecomm() {
         return getBoolValue("donaterecomm", false);
-    }
-
-    public static String VKVersion() {
-        return VKVER;
-    }
-
-    public static int VKVersionBuild() {
-        return VKBUILD;
-    }
-
-    public static long VKVersionBuildLong() {
-        return VKVersionBuild();
     }
 
     public static boolean hasVerification() {
