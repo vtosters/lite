@@ -126,7 +126,7 @@ public class Preferences {
     }
 
     public static boolean oldicons() {
-        return getBoolValue("oldicons", false);
+        return !milkshake();
     }
 
     public static boolean vkme() {
