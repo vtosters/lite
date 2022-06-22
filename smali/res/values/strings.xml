@@ -487,7 +487,7 @@ no results"</string>
     <string name="collection_link_limit">Link limit reached</string>
     <string name="collection_link_not_valid">URL not supported</string>
     <string name="collection_links_list">Link list</string>
-    <string name="com.crashlytics.android.build_id">11b1e7dc-3974-4ec4-8d5f-da161bcbc268</string>
+    <string name="com.crashlytics.android.build_id"></string>
     <string name="com_facebook_device_auth_instructions">Visit &lt;b>facebook.com/device&lt;/b> and enter the code shown above.</string>
     <string name="com_facebook_image_download_unknown_error">Unexpected error while downloading an image.</string>
     <string name="com_facebook_internet_permission_error_message">WebView login requires INTERNET permission</string>
