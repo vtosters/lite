@@ -5526,7 +5526,6 @@ Does not affect vk.cc links"</string>
     <string name="vtlmsgflat">Flat Messages</string>
     <string name="vtlupdmsg">Update</string>
     <string name="BGStickerssum">You need to clear the application cache after toggling this option</string>
-    <string name="app_name_orig">VK</string>
     <string name="addinf">Additional information</string>
     <string name="copyid">Copy ID</string>
     <string name="vtssfs">VT Features</string>
@@ -5543,7 +5542,7 @@ Does not affect vk.cc links"</string>
     <string name="act_cnv">For Conversations</string>
     <string name="act_pm">For Private messages</string>
     <string name="alteremoji">Alternative type of emoji menu</string>
-    <string name="alteremojisum">Alrernative selection of emojis and stickers in the miniature menu</string>
+    <string name="alteremojisum">Alternative selection of emojis and stickers in the miniature menu</string>
     <string name="altnewsfeed">Alternative design of newsfeed</string>
     <string name="altnewsfeedsum">Design with dynamic tabs in the feed</string>
     <string name="applicationrestart">Restart application</string>
