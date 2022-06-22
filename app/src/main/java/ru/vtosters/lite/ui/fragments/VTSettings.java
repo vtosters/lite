@@ -5,14 +5,19 @@ import static ru.vtosters.lite.f0x1d.VTVerifications.vtverif;
 import static ru.vtosters.lite.utils.About.getBuildNumber;
 import static ru.vtosters.lite.utils.About.getCommitLink;
 import static ru.vtosters.lite.utils.CacheUtils.humanReadableByteCountBin;
+import static ru.vtosters.lite.utils.Globals.drawableFromUrl;
 import static ru.vtosters.lite.utils.Globals.edit;
 import static ru.vtosters.lite.utils.Globals.getIdentifier;
 import static ru.vtosters.lite.utils.Globals.getPrefsValue;
+import static ru.vtosters.lite.utils.Globals.getUserPhoto;
+import static ru.vtosters.lite.utils.Globals.getUsername;
 import static ru.vtosters.lite.utils.Globals.isGmsInstalled;
+import static ru.vtosters.lite.utils.Globals.restartApplication;
 import static ru.vtosters.lite.utils.Preferences.ads;
 import static ru.vtosters.lite.utils.Preferences.devmenu;
 import static ru.vtosters.lite.utils.Preferences.disableSettingsSumms;
 import static ru.vtosters.lite.utils.Preferences.hasSpecialVerif;
+import static ru.vtosters.lite.utils.Preferences.hasVerification;
 import static ru.vtosters.lite.utils.Preferences.isValidSignature;
 import static ru.vtosters.lite.utils.Preferences.navbar;
 import static ru.vtosters.lite.utils.Preferences.offline;
@@ -33,6 +38,7 @@ import android.os.Bundle;
 import com.aefyr.tsg.g2.TelegramStickersService;
 import com.vk.about.AboutAppFragment;
 import com.vk.balance.BalanceFragment;
+import com.vk.bridges.AuthBridge;
 import com.vk.navigation.Navigator;
 import com.vk.notifications.settings.NotificationsSettingsFragment;
 import com.vk.webapp.fragments.PrivacyFragment;
@@ -43,9 +49,6 @@ import com.vtosters.lite.fragments.w2.BlacklistFragment;
 import com.vtosters.lite.general.fragments.MaterialPreferenceToolbarFragment;
 import com.vtosters.lite.general.fragments.SettingsAccountFragment;
 import com.vtosters.lite.general.fragments.SettingsGeneralFragment;
-
-import java.util.regex.Matcher;
-import java.util.regex.Pattern;
 
 import ru.vtosters.lite.ui.PreferencesUtil;
 import ru.vtosters.lite.ui.dialogs.OTADialog;
@@ -79,6 +82,12 @@ public class VTSettings extends MaterialPreferenceToolbarFragment {
         int vtosterXml = getIdentifier("empty", "xml");
         this.addPreferencesFromResource(vtosterXml);
 
+        PreferencesUtil.addPreferenceDrawable(this, "", "Аккаунты", getUsername() + (hasVerification()? Globals.getString("thanksfordonate") : Globals.getString("getdonate")), drawableFromUrl(getUserPhoto()), preference -> {
+            AuthBridge.logout();
+            restartApplication();
+            return false;
+        });
+
         PreferencesUtil.addPreferenceCategory(this, Globals.getString("vtsettdarktheme"));
 
         PreferencesUtil.addMaterialSwitchPreference(this, "isdark", Globals.getString("vtsettdarktheme"), "",  oldicons() ? "ic_palette_24" : "ic_palette_outline_28", false, (preference, o) -> {
@@ -94,7 +103,7 @@ public class VTSettings extends MaterialPreferenceToolbarFragment {
             return true;
         });
 
-        if (Build.VERSION.SDK_INT >= 28 && false) {
+        if (Build.VERSION.SDK_INT >= 28 && false) { // TODO refactoring systen theme
             PreferencesUtil.addMaterialSwitchPreference(this, "systemtheme", Globals.getString("appearance_theme_use_system"), Globals.getString("appearance_theme_use_system_summary"), oldicons() ? "ic_recent_24" : "ic_recent_outline_28", true, (preference, o) -> {
                 boolean value = (boolean) o;
 
@@ -373,14 +382,6 @@ public class VTSettings extends MaterialPreferenceToolbarFragment {
         return Globals.getContext().getSharedPreferences("pref_account_manager", Context.MODE_PRIVATE);
     }
 
-    public static String withRegex(String base, String regex, String def) {
-        Pattern pattern = Pattern.compile(regex);
-        Matcher matcher = pattern.matcher(base);
-        if (matcher.find()) {
-            return matcher.group(1);
-        }
-        return def;
-    }
 
     @Override
     public int T4() {

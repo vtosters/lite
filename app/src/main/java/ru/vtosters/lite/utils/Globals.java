@@ -97,6 +97,14 @@ public class Globals {
         return VKAccountManager.d().b();
     }
 
+    public static String getUsername() {
+        return VKAccountManager.d().Z();
+    }
+
+    public static String getUserPhoto() {
+        return VKAccountManager.d().d0();
+    }
+
     public static SharedPreferences.Editor edit() {
         return PreferenceManager.getDefaultSharedPreferences(getContext()).edit();
     } // Edit SharedPreferences
@@ -136,9 +144,9 @@ public class Globals {
             InputStream is = conn.getInputStream();
             Bitmap bmp = BitmapFactory.decodeStream(is);
 
-            return new BitmapDrawable(getResources(), Bitmap.createScaledBitmap(getBitmapClippedCircle(bmp), convertDpToPixel(48), convertDpToPixel(48), true));
+            return new BitmapDrawable(getResources(), Bitmap.createScaledBitmap(getBitmapClippedCircle(bmp), convertDpToPixel(256), convertDpToPixel(256), true));
         } catch (Exception e) {
-            return getDrawable(getContext(), com.vtosters.lite.R.drawable.libverify_ic_account_circle_white);
+            return getDrawable(getContext(), getIdentifier("ic_user_circle_outline_28", "drawable"));
         }
     }
 
