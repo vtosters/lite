@@ -112,39 +112,6 @@
         }
     .end annotation
 
-    .line 15
-    sget-object v0, Lcom/vk/metrics/eventtracking/VkTracker;->k:Lcom/vk/metrics/eventtracking/VkTracker;
-
-    sget-object v1, Lcom/vk/metrics/formatter/EventNameFormatters;->c:Lcom/vk/metrics/formatter/EventNameFormatters;
-
-    invoke-virtual {v1}, Lcom/vk/metrics/formatter/EventNameFormatters;->a()Lkotlin/jvm/b/Functions2;
-
-    move-result-object v1
-
-    const-string v2, "FabricTracker"
-
-    invoke-direct {p0, p1, p2, v1, v2}, Lcom/vk/im/engine/reporters/DialogsListReporter;->a(Ljava/lang/String;Ljava/util/Map;Lkotlin/jvm/b/Functions2;Ljava/lang/String;)Lcom/vk/metrics/eventtracking/Event;
-
-    move-result-object v1
-
-    invoke-virtual {v0, v1}, Lcom/vk/metrics/eventtracking/VkTracker;->a(Lcom/vk/metrics/eventtracking/Event;)V
-
-    .line 16
-    sget-object v0, Lcom/vk/metrics/eventtracking/VkTracker;->k:Lcom/vk/metrics/eventtracking/VkTracker;
-
-    sget-object v1, Lcom/vk/metrics/formatter/EventNameFormatters;->c:Lcom/vk/metrics/formatter/EventNameFormatters;
-
-    invoke-virtual {v1}, Lcom/vk/metrics/formatter/EventNameFormatters;->b()Lkotlin/jvm/b/Functions2;
-
-    move-result-object v1
-
-    const-string v2, "StatlogTracker"
-
-    invoke-direct {p0, p1, p2, v1, v2}, Lcom/vk/im/engine/reporters/DialogsListReporter;->a(Ljava/lang/String;Ljava/util/Map;Lkotlin/jvm/b/Functions2;Ljava/lang/String;)Lcom/vk/metrics/eventtracking/Event;
-
-    move-result-object p1
-
-    invoke-virtual {v0, p1}, Lcom/vk/metrics/eventtracking/VkTracker;->a(Lcom/vk/metrics/eventtracking/Event;)V
 
     return-void
 .end method

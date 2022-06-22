@@ -326,43 +326,5 @@
 .method private final a(Lcom/vk/im/engine/reporters/VideoConversionReporter$a;)V
     .locals 2
 
-    .line 17
-    sget-object v0, Lcom/vk/metrics/formatter/EventNameFormatters;->c:Lcom/vk/metrics/formatter/EventNameFormatters;
-
-    invoke-virtual {v0}, Lcom/vk/metrics/formatter/EventNameFormatters;->a()Lkotlin/jvm/b/Functions2;
-
-    move-result-object v0
-
-    const-string v1, "FabricTracker"
-
-    .line 18
-    invoke-virtual {p1, v0, v1}, Lcom/vk/im/engine/reporters/VideoConversionReporter$a;->a(Lkotlin/jvm/b/Functions2;Ljava/lang/String;)Lcom/vk/metrics/eventtracking/Event;
-
-    move-result-object v0
-
-    .line 19
-    sget-object v1, Lcom/vk/metrics/eventtracking/VkTracker;->k:Lcom/vk/metrics/eventtracking/VkTracker;
-
-    invoke-virtual {v1, v0}, Lcom/vk/metrics/eventtracking/VkTracker;->a(Lcom/vk/metrics/eventtracking/Event;)V
-
-    .line 20
-    sget-object v0, Lcom/vk/metrics/formatter/EventNameFormatters;->c:Lcom/vk/metrics/formatter/EventNameFormatters;
-
-    invoke-virtual {v0}, Lcom/vk/metrics/formatter/EventNameFormatters;->b()Lkotlin/jvm/b/Functions2;
-
-    move-result-object v0
-
-    const-string v1, "StatlogTracker"
-
-    .line 21
-    invoke-virtual {p1, v0, v1}, Lcom/vk/im/engine/reporters/VideoConversionReporter$a;->a(Lkotlin/jvm/b/Functions2;Ljava/lang/String;)Lcom/vk/metrics/eventtracking/Event;
-
-    move-result-object p1
-
-    .line 22
-    sget-object v0, Lcom/vk/metrics/eventtracking/VkTracker;->k:Lcom/vk/metrics/eventtracking/VkTracker;
-
-    invoke-virtual {v0, p1}, Lcom/vk/metrics/eventtracking/VkTracker;->a(Lcom/vk/metrics/eventtracking/Event;)V
-
     return-void
 .end method
