@@ -277,21 +277,23 @@ public class VTSettings extends MaterialPreferenceToolbarFragment {
             return false;
         });
 
-        PreferencesUtil.addPreference(this, "", Globals.getString("vtltgs"), tgssumm, "ic_telegram", preference -> {
+        //TODO: Add telegram icon
+        PreferencesUtil.addPreference(this, "", Globals.getString("vtltgs"), tgssumm, null, preference -> {
             Context context = getContext();
             Intent a2 = new Navigator(StickersFragment.class).b(context);
             context.startActivity(a2);
             return false;
         });
 
-        PreferencesUtil.addPreference(this, "", Globals.getString("vtlinterface"), interfacesumm, "ic_interface", preference -> {
+        //TODO: Add interface icon
+        PreferencesUtil.addPreference(this, "", Globals.getString("vtlinterface"), interfacesumm, null, preference -> {
             Context context = getContext();
             Intent a2 = new Navigator(InterfaceFragment.class).b(context);
             context.startActivity(a2);
             return false;
         });
 
-        PreferencesUtil.addPreference(this, "", Globals.getString("vtlproxy"), proxysumm, "ic_globe_24", preference -> {
+        PreferencesUtil.addPreference(this, "", Globals.getString("vtlproxy"), proxysumm, null, preference -> {
             Context context = getContext();
             Intent a2 = new Navigator(ProxySettingsFragment.class).b(context);
             context.startActivity(a2);
