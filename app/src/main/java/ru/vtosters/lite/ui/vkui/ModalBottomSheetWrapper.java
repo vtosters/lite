@@ -86,12 +86,12 @@ public class ModalBottomSheetWrapper {
     }
 
     public ModalBottomSheet show() {
-        return builder.c(null);
+        return builder.a("");
     }
 
     public ModalBottomSheet show(boolean isCancellable) {
-        var sheet = builder.c(null);
-        sheet.b(isCancellable);
+        var sheet = builder.a("");
+        sheet.setCancelable(isCancellable);
         return sheet;
     }
 }
