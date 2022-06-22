@@ -26,3 +26,6 @@ app/src/main/assets/version.properties
 smali2/build/resources.zip
 *.idsig
 /smali/VTLite.apk.cache/
+smali/build/resources.zip
+smali/assets/version.properties
+smali/assets/version.properties

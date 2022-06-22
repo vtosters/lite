@@ -435,7 +435,6 @@
             </intent-filter>
         </receiver>
         <service android:enabled="true" android:exported="false" android:name="com.vk.audiomsg.player.plugins.StopPrefetchBySystemRequestService" android:stopWithTask="true"/>
-        <meta-data android:name="io.fabric.ApiKey" android:value="fa4544c0ae024bad990428ea1b7c5c8451ee792a"/>
         <receiver android:name="receivers.TimeSyncRequestedReceiver"/>
         <service android:enabled="true" android:exported="false" android:name="com.vk.instantjobs.services.JobsBackgroundService" android:stopWithTask="false"/>
         <service android:enabled="true" android:exported="false" android:name="com.vk.instantjobs.services.JobsForegroundService" android:stopWithTask="false"/>
@@ -608,7 +607,6 @@
                 <action android:name="com.android.vending.INSTALL_REFERRER"/>
             </intent-filter>
         </receiver>
-        <provider android:authorities="com.vtosters.lite.crashlyticsinitprovider" android:exported="false" android:initOrder="100" android:name="com.crashlytics.android.CrashlyticsInitProvider"/>
         <activity android:enabled="false" android:exported="false" android:launchMode="singleInstance" android:name="com.google.android.play.core.missingsplits.PlayCoreMissingSplitsActivity" android:process=":playcore_missing_splits_activity" android:stateNotNeeded="true"/>
         <activity android:enabled="false" android:exported="false" android:name="com.google.android.play.core.common.PlayCoreDialogWrapperActivity" android:process=":playcore_dialog_wrapper_activity" android:stateNotNeeded="true" android:theme="@style/Theme.PlayCore.Transparent"/>
         <activity android:name="vigo.sdk.FeedbackActivity" android:screenOrientation="portrait" android:theme="@style/MyAppCompatDialogTheme" android:windowSoftInputMode="adjustResize"/>
