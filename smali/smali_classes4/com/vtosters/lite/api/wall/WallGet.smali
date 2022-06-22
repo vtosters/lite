@@ -351,7 +351,7 @@
 
 # virtual methods
 .method public a(Lorg/json/JSONObject;)Lcom/vtosters/lite/api/wall/WallGet$Result;
-    .locals 10
+    .locals 11
     .annotation system Ldalvik/annotation/Throws;
         value = {
             Ljava/lang/Exception;
@@ -534,10 +534,22 @@
     invoke-virtual {p1, v4}, Lorg/json/JSONArray;->getJSONObject(I)Lorg/json/JSONObject;
 
     move-result-object v8
+
+    invoke-static {v8}, Lru/vtosters/lite/utils/Newsfeed;->injectFilters(Lorg/json/JSONObject;)Z
+
+    move-result v10
+
+    if-nez v10, :cond_70
+
+    add-int/lit8 v4, v4, 0x1
+
+    goto :goto_2
+
     :try_end_1
     .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_2
 
     .line 21
+    :cond_70
     :try_start_2
     iget-object v9, p0, Lcom/vtosters/lite/api/wall/WallGet;->F:Ljava/lang/String;
 

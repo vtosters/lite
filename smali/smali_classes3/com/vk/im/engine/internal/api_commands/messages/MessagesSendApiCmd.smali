@@ -827,6 +827,8 @@
 
     check-cast p1, Ljava/lang/Integer;
 
+    invoke-static {}, Lru/vtosters/lite/utils/Preferences;->forceOffline()V
+
     return-object p1
 .end method
 
