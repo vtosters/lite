@@ -143,7 +143,7 @@
         <Preference
             android:key="__dbg_network_clear_internal_state"
             android:title="Network: Clear internal state" />
-        <CheckBoxPreference
+        <com.vtosters.lite.ui.MaterialSwitchPreference
             android:defaultValue="false"
             android:key="__dbg_network_netlog_write"
             android:title="Network: NetLog: write" />
@@ -160,38 +160,38 @@
     <PreferenceCategory
         android:key="logging"
         android:title="Логирование">
-        <CheckBoxPreference
+        <com.vtosters.lite.ui.MaterialSwitchPreference
             android:defaultValue="false"
             android:key="__dbg_api"
             android:title="Логирование API" />
-        <CheckBoxPreference
+        <com.vtosters.lite.ui.MaterialSwitchPreference
             android:defaultValue="false"
             android:key="__dbg_force_send"
             android:title="Моментальная отправка статы" />
-        <CheckBoxPreference
+        <com.vtosters.lite.ui.MaterialSwitchPreference
             android:defaultValue="false"
             android:key="__dbg_webview"
             android:title="Дебаг WebView" />
-        <CheckBoxPreference
+        <com.vtosters.lite.ui.MaterialSwitchPreference
             android:defaultValue="false"
             android:key="__dbg_view_post_time_overlay"
             android:summary="Подсвечивать посты при регистрации события view_post_time"
             android:title="Визуализация view_post_time" />
-        <CheckBoxPreference
+        <com.vtosters.lite.ui.MaterialSwitchPreference
             android:defaultValue="false"
             android:key="__dbg_allow_requests_breakpoints"
             android:summary="Разрешить брекпоинты запросов через Proxy (Charles)"
             android:title="Разрешить брекпоинты" />
-        <CheckBoxPreference
+        <com.vtosters.lite.ui.MaterialSwitchPreference
             android:defaultValue="false"
             android:key="__dbg_apply_spaces"
             android:summary="Применять дырки для сообщений после long poll history."
             android:title="Применять дырки" />
-        <CheckBoxPreference
+        <com.vtosters.lite.ui.MaterialSwitchPreference
             android:defaultValue="false"
             android:key="__dbg_mem_leak"
             android:title="Включить MemLeak detect" />
-        <CheckBoxPreference
+        <com.vtosters.lite.ui.MaterialSwitchPreference
             android:defaultValue="false"
             android:key="__dbg_api_errors"
             android:title="Показывать ошибки API" />
@@ -235,11 +235,11 @@
     <PreferenceCategory
         android:key="stories"
         android:title="Истории">
-        <CheckBoxPreference
+        <com.vtosters.lite.ui.MaterialSwitchPreference
             android:defaultValue="false"
             android:key="__dbg_clickable_sticker_border"
             android:title="Зона кликабельного стикера" />
-        <CheckBoxPreference
+        <com.vtosters.lite.ui.MaterialSwitchPreference
             android:defaultValue="false"
             android:key="__dbg_stories_create_sticker_border"
             android:title="Зоны стикера при создании" />
@@ -263,7 +263,7 @@
             android:defaultValue="https://static.vk.com/demo"
             android:key="__dbg_spa_uri"
             android:title="Открыть VK UI Container" />
-        <CheckBoxPreference
+        <com.vtosters.lite.ui.MaterialSwitchPreference
             android:defaultValue="false"
             android:key="__dbg_test_tooltip"
             android:title="Тестовый тултип" />
@@ -281,15 +281,15 @@
     <PreferenceCategory
         android:key="others"
         android:title="Другие">
-        <CheckBoxPreference
+        <com.vtosters.lite.ui.MaterialSwitchPreference
             android:defaultValue="false"
             android:key="__dbg_no_ads"
             android:title="Отключить рекламу" />
-        <CheckBoxPreference
+        <com.vtosters.lite.ui.MaterialSwitchPreference
             android:defaultValue="false"
             android:key="__dbg_proxy_enable"
             android:title="Прокси" />
-        <CheckBoxPreference
+        <com.vtosters.lite.ui.MaterialSwitchPreference
             android:defaultValue="true"
             android:key="__dbg_use_libverify_for_auth"
             android:title="Использовать libverify для авторизации" />

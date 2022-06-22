@@ -70,6 +70,7 @@ public class Globals {
         Start.alert(activity);
         InstallGMS.alert(activity);
         DisableBattery.alert(activity);
+        edit().putBoolean("isdark", isDarkTheme()).commit();
         // VKIDProtection.alert(activity);
     }
 
