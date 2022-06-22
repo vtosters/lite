@@ -92,10 +92,6 @@ public class VTSettings extends MaterialPreferenceToolbarFragment {
 
             edit().putBoolean("isdark", value).commit();
 
-            isLoaded = false;
-
-            new WebView(getActivity()).clearCache(true);
-
             setTheme(this.getActivity());
             return true;
         });
