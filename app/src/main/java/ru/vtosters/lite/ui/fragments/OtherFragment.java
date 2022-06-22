@@ -19,12 +19,12 @@ import android.webkit.WebView;
 
 import androidx.preference.Preference;
 
-import com.vk.audio.AudioMessageUtils;
 import com.vk.auth.api.VKAccount;
 import com.vk.core.util.ToastUtils;
+import com.vk.im.ui.providers.audiomsg.ImAudioMsgPlayerProvider;
+import com.vk.im.ui.providers.audiomsg.PlayerActionSources;
 import com.vk.imageloader.VKImageLoader;
 import com.vk.pushes.PushSubscriber;
-import com.vtosters.lite.R;
 import com.vtosters.lite.auth.VKAccountManager;
 import com.vtosters.lite.general.fragments.MaterialPreferenceToolbarFragment;
 import com.vtosters.lite.im.ImEngineProvider;
@@ -83,7 +83,9 @@ public class OtherFragment extends MaterialPreferenceToolbarFragment {
             prefs2.edit().clear().commit();
             new WebView(getActivity()).clearCache(true);
             VKImageLoader.e();
-            ImEngineProvider.a().h();
+            ImEngineProvider.b().a();
+            ImAudioMsgPlayerProvider.b().e(PlayerActionSources.a);
+            ImAudioMsgPlayerProvider.b().d(PlayerActionSources.a);
             FileUtils.l();
             deleteCache();
             ToastUtils.a(Globals.getString("cachecleaned"));

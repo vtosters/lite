@@ -2,6 +2,10 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto">
     <item
+        android:id="@id/msgupdate"
+        android:icon="?im_ic_msgreload"
+        app:showAsAction="always" />
+    <item
         android:id="@id/add"
         android:icon="?im_ic_write_msg"
         android:title="@string/vkim_write_msg"
