@@ -707,7 +707,7 @@
     return-object v0
 .end method
 
-.method public final D()Lio/requery/android/database/sqlite/SQLiteDatabase;
+.method private final D()Lio/requery/android/database/sqlite/SQLiteDatabase;
     .locals 3
 
     iget-object v0, p0, Lcom/vk/im/engine/internal/storage/StorageManager;->b:Lkotlin/Lazy2;
