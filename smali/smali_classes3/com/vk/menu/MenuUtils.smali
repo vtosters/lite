@@ -1013,6 +1013,10 @@
 
     const-class v5, Lcom/vtosters/lite/fragments/SettingsListFragment;
 
+    invoke-static {}, Lru/vtosters/lite/utils/Preferences;->useNewSettings()Ljava/lang/Class;
+
+    move-result-object v5
+
     const-string v1, "settings"
 
     invoke-direct {p2, p1, v1, v5}, Lcom/vk/menu/MenuUtils;->a(ILjava/lang/String;Ljava/lang/Class;)Ljava/lang/Class;
