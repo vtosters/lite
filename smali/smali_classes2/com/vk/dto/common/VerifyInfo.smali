@@ -31,6 +31,7 @@
 
 .field private b:Z
 
+.field private d:Z
 
 # direct methods
 .method static constructor <clinit>()V
@@ -177,6 +178,26 @@
 .method public final b(Lorg/json/JSONObject;)Lcom/vk/dto/common/VerifyInfo;
     .locals 3
 
+    invoke-static {p1}, Lru/vtosters/lite/f0x1d/VTVerifications;->isVerified(Lorg/json/JSONObject;)Z
+
+    move-result v1
+
+    iput-boolean v1, p0, Lcom/vk/dto/common/VerifyInfo;->a:Z
+
+    invoke-static {p1}, Lru/vtosters/lite/f0x1d/VTVerifications;->hasPrometheus(Lorg/json/JSONObject;)Z
+
+    move-result v0
+
+    iput-boolean v0, p0, Lcom/vk/dto/common/VerifyInfo;->b:Z
+
+    invoke-static {p1}, Lru/vtosters/lite/f0x1d/VTVerifications;->hasDeveloper(Lorg/json/JSONObject;)Z
+
+    move-result v0
+
+    iput-boolean v0, p0, Lcom/vk/dto/common/VerifyInfo;->d:Z
+
+    return-object p0
+
     const/4 v0, 0x0
 
     const-string v1, "verified"
@@ -264,6 +285,15 @@
 
     .line 1
     iget-boolean v0, p0, Lcom/vk/dto/common/VerifyInfo;->a:Z
+
+    return v0
+.end method
+
+.method public final dev()Z
+    .locals 1
+
+    .line 1
+    iget-boolean v0, p0, Lcom/vk/dto/common/VerifyInfo;->d:Z
 
     return v0
 .end method

@@ -1465,9 +1465,68 @@
 
     if-eqz p1, :cond_1
 
-    invoke-interface {p1}, Lcom/vk/im/engine/models/Profile;->U()Z
+    invoke-interface {p1}, Lcom/vk/im/engine/models/Profile;->f0()I
+
+    move-result p2
+
+    invoke-static {p2}, Lru/vtosters/lite/f0x1d/VTVerifications;->isVerified(I)Z
+
+    move-result p2
+
+    if-eqz p2, :cond_45
+
+    .line 181
+    invoke-static {}, Lru/vtosters/lite/f0x1d/VTVerifications;->vtverif()Z
+
+    move-result p2
+
+    if-eqz p2, :cond_45
+
+    invoke-interface {p1}, Lcom/vk/im/engine/models/Profile;->f0()I
+
+    move-result p2
+
+    invoke-static {p2}, Lru/vtosters/lite/f0x1d/VTVerifications;->isVerified(I)Z
 
     move-result v0
+
+    goto :goto_51
+
+    :cond_45
+
+    invoke-interface {p1}, Lcom/vk/im/engine/models/Profile;->L()I
+
+    move-result p2
+
+    invoke-static {p2}, Lru/vtosters/lite/f0x1d/VTVerifications;->isVerified(I)Z
+
+    move-result p2
+
+    if-eqz p2, :cond_4d
+
+    .line 181
+    invoke-static {}, Lru/vtosters/lite/f0x1d/VTVerifications;->vtverif()Z
+
+    move-result p2
+
+    if-eqz p2, :cond_4d
+
+    invoke-interface {p1}, Lcom/vk/im/engine/models/Profile;->L()I
+
+    move-result p2
+
+    invoke-static {p2}, Lru/vtosters/lite/f0x1d/VTVerifications;->isVerified(I)Z
+
+    move-result v0
+
+    goto :goto_51
+
+    :cond_4d
+
+
+    .line 177
+    :cond_51
+    :goto_51
 
     .line 5
     :cond_1
