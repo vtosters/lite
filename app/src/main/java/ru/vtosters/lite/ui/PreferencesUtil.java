@@ -39,7 +39,7 @@ public class PreferencesUtil {
     public static void addListPreference(MaterialPreferenceToolbarFragment fragment, String key, String def, CharSequence title, CharSequence[] entries, CharSequence[] entriesValue) {
         ListPreference preference = new ListPreference(getContext());
         preference.setEntries(entries);
-        preference.setEntries(entriesValue);
+        preference.setEntryValues(entriesValue);
         preference.setTitle(title); // setTitle
         preference.setDialogTitle(title); // setDialogTitle
         preference.setKey(key); // setKey
@@ -50,7 +50,7 @@ public class PreferencesUtil {
     public static void addListPreferenceIcon(MaterialPreferenceToolbarFragment fragment, String key, String def, CharSequence title, String icon, CharSequence summary, CharSequence[] entries, CharSequence[] entriesValue) {
         ListPreference preference = new ListPreference(getContext());
         preference.setEntries(entries);
-        preference.setEntries(entriesValue);
+        preference.setEntryValues(entriesValue);
         preference.setSummary(summary); // setSummary
         preference.setTitle(title); // setTitle
         preference.setDialogTitle(title); // setDialogTitle
