@@ -122,7 +122,15 @@ public class Newsfeed {
             JSONObject copyright = json.getJSONObject("copyright");
             String copyrightlink = copyright.getString("link");
 
-            return !copyrightlink.contains("vk.com") ||  !copyright_post(); // fuck you, it doesn't work to detect link value
+            return !copyrightlink.contains("vk.com") || !copyright_post(); // fuck you, it doesn't work to detect link value
+
+            // example of response
+            //"copyright": {
+                //"id": 251706814,
+                        //"link": "https://vk.com/wall251706814_9016",
+                        //"type": "owner",
+                        //"name": "Маргарита Буруня"
+            //}
 
         }
         return true;
