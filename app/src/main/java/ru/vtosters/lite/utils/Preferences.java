@@ -57,7 +57,7 @@ public class Preferences {
         if(dev()){
             LoadLibrary("vkopustest");
         }
-        // systemThemeChanger();
+        systemThemeChanger(null);
         getInstance().autoCleaningCache();
     } // VK Init
 
@@ -86,7 +86,7 @@ public class Preferences {
     }
 
     public static boolean systemtheme() {
-        return getBoolValue("systemtheme", true) && VERSION.SDK_INT >= 28;
+        return false; //getBoolValue("systemtheme", true) && VERSION.SDK_INT >= 28;
     }
 
     public static boolean authorsrecomm() {

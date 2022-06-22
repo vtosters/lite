@@ -5,6 +5,7 @@ import static ru.vtosters.lite.utils.Preferences.checkupdates;
 import static ru.vtosters.lite.utils.Preferences.getLocale;
 import static ru.vtosters.lite.utils.Preferences.preferences;
 import static ru.vtosters.lite.utils.Themes.isDarkTheme;
+import static ru.vtosters.lite.utils.Themes.systemThemeChanger;
 
 import android.app.Activity;
 import android.app.Application;

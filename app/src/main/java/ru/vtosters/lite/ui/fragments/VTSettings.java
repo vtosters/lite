@@ -90,13 +90,17 @@ public class VTSettings extends MaterialPreferenceToolbarFragment {
         PreferencesUtil.addMaterialSwitchPreference(this, "isdark", Globals.getString("vtsettdarktheme"), "",  oldicons() ? "ic_palette_24" : "ic_palette_outline_28", false, (preference, o) -> {
             boolean value = (boolean) o;
 
-            edit().putBoolean("isdark", value).commit();
+            if(!value){ // inverted
+                setTheme(getLightTheme(), this.getActivity());
+            } else {
+                setTheme(getDarkTheme(), this.getActivity());
+            }
 
-            setTheme(this.getActivity());
+            edit().putBoolean("isdark", value).commit();
             return true;
         });
 
-        if (Build.VERSION.SDK_INT >= 28) {
+        if (Build.VERSION.SDK_INT >= 28 && false) {
             PreferencesUtil.addMaterialSwitchPreference(this, "systemtheme", Globals.getString("appearance_theme_use_system"), Globals.getString("appearance_theme_use_system_summary"), oldicons() ? "ic_recent_24" : "ic_recent_outline_28", true, (preference, o) -> {
                 boolean value = (boolean) o;
 
