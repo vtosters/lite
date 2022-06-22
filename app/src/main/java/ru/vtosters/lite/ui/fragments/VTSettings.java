@@ -97,7 +97,7 @@ public class VTSettings extends MaterialPreferenceToolbarFragment {
         });
 
         if (Build.VERSION.SDK_INT >= 28) {
-            PreferencesUtil.addMaterialSwitchPreference(this, "systemtheme", Globals.getString("appearance_theme_use_system"), Globals.getString("appearance_theme_use_system_summary"), oldicons() ? "ic_recent_outline_24" : "ic_recent_24", true, (preference, o) -> {
+            PreferencesUtil.addMaterialSwitchPreference(this, "systemtheme", Globals.getString("appearance_theme_use_system"), Globals.getString("appearance_theme_use_system_summary"), oldicons() ? "ic_recent_24" : "ic_recent_outline_28", true, (preference, o) -> {
                 boolean value = (boolean) o;
 
                 edit().putBoolean("systemtheme", value).commit();
@@ -125,7 +125,7 @@ public class VTSettings extends MaterialPreferenceToolbarFragment {
                 return false;
             });
 
-            PreferencesUtil.addMaterialSwitchPreference(this, "ssl", Globals.getString("debug_developer_force_ssl"), Globals.getString("debug_developer_force_ssl_summary"), "ic_globe_20", true, (preference, o) -> {
+            PreferencesUtil.addMaterialSwitchPreference(this, "ssl", Globals.getString("debug_developer_force_ssl"), Globals.getString("debug_developer_force_ssl_summary"), oldicons() ? "ic_globe_20" : "ic_globe_outline_28", true, (preference, o) -> {
                 boolean value = (boolean) o;
                 edit().putBoolean("ssl", value).commit();
                 return true;
