@@ -92,11 +92,6 @@
             android:key="newsupdate"
             android:title="@string/feed_other_update" />
         <com.vtosters.lite.ui.MaterialSwitchPreference
-            android:defaultValue="false"
-            android:key="commentssorting"
-            android:summary="@string/feed_other_sort_comments_summary"
-            android:title="@string/feed_other_sort_comments" />
-        <com.vtosters.lite.ui.MaterialSwitchPreference
             android:defaultValue="true"
             android:key="feedcache"
             android:summary="@string/feed_other_cache_summary"

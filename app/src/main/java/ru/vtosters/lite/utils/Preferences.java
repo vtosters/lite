@@ -5,7 +5,7 @@ import static java.lang.Long.MAX_VALUE;
 import static ru.vtosters.lite.f0x1d.VTVerifications.hasPrometheus;
 import static ru.vtosters.lite.f0x1d.VTVerifications.isVerified;
 import static ru.vtosters.lite.utils.CacheUtils.getInstance;
-//import static ru.vtosters.lite.utils.DeletedMessagesHandler.reloadMessagesList;
+import static ru.vtosters.lite.utils.Globals.edit;
 import static ru.vtosters.lite.utils.Globals.fixGapps;
 import static ru.vtosters.lite.utils.Globals.getContext;
 import static ru.vtosters.lite.utils.Globals.getIdentifier;
@@ -18,6 +18,7 @@ import static ru.vtosters.lite.utils.Newsfeed.setupFilters;
 import static ru.vtosters.lite.utils.OpusLoader.LoadLibrary;
 import static ru.vtosters.lite.utils.Proxy.setProxy;
 import static ru.vtosters.lite.utils.SignatureChecker.validateAppSignature;
+import static ru.vtosters.lite.utils.Themes.isDarkTheme;
 import static ru.vtosters.lite.utils.Themes.systemThemeChanger;
 
 import android.annotation.SuppressLint;
@@ -64,6 +65,8 @@ public class Preferences {
     public static void forceOffline() {
         setupFilters();
         getInstance().autoCleaningCache();
+
+        edit().putBoolean("isdark", isDarkTheme()).commit();
 
         if (setoffline() && !offline()) {
             Users.a();
