@@ -77,25 +77,6 @@
 .method private final c(Landroid/content/Intent;Landroid/app/Activity;)V
     .locals 1
 
-    const-string v0, "push_type_key"
-
-    .line 2
-    invoke-virtual {p1, v0}, Landroid/content/Intent;->getStringExtra(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object p1
-
-    if-eqz p1, :cond_0
-
-    .line 3
-    sget-object v0, Lcom/vk/analytics/reporters/AppStartReporter$StartMethod;->PUSH:Lcom/vk/analytics/reporters/AppStartReporter$StartMethod;
-
-    .line 4
-    invoke-virtual {v0, p1}, Lcom/vk/analytics/reporters/AppStartReporter$StartMethod;->a(Ljava/lang/String;)V
-
-    .line 5
-    invoke-static {v0, p2}, Lcom/vk/analytics/reporters/AppStartReporter;->a(Lcom/vk/analytics/reporters/AppStartReporter$StartMethod;Landroid/app/Activity;)V
-
-    :cond_0
     return-void
 .end method
 

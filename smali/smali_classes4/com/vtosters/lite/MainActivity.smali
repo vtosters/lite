@@ -681,8 +681,6 @@
     invoke-virtual {v0}, Lcom/vk/updates/InAppUpdatesManager;->a()V
 
     .line 10
-    sget-object v0, Lcom/vk/analytics/reporters/AppStartReporter$StartMethod;->SPRINGBOARD:Lcom/vk/analytics/reporters/AppStartReporter$StartMethod;
-
     .line 11
     invoke-virtual {p0}, Landroid/app/Activity;->getIntent()Landroid/content/Intent;
 
@@ -699,16 +697,8 @@
 
     if-eqz v2, :cond_2
 
-    .line 13
-    sget-object v0, Lcom/vk/analytics/reporters/AppStartReporter$StartMethod;->COMPANION:Lcom/vk/analytics/reporters/AppStartReporter$StartMethod;
-
-    .line 14
-    invoke-virtual {v0, v1}, Lcom/vk/analytics/reporters/AppStartReporter$StartMethod;->a(Ljava/lang/String;)V
-
     .line 15
     :cond_2
-    invoke-static {v0, p0}, Lcom/vk/analytics/reporters/AppStartReporter;->a(Lcom/vk/analytics/reporters/AppStartReporter$StartMethod;Landroid/app/Activity;)V
-
     return-void
 .end method
 
