@@ -524,14 +524,6 @@
     .line 6
     invoke-virtual {v2}, Lcom/vtosters/lite/data/Analytics$l;->b()Lcom/vtosters/lite/data/Analytics$l;
 
-    .line 7
-    sget-object v0, Lcom/vk/metrics/reporters/PerformanceReporter;->j:Lcom/vk/metrics/reporters/PerformanceReporter;
-
-    invoke-virtual {v0}, Lcom/vk/metrics/reporters/PerformanceReporter;->c()Lb/h/q/c/c/PerformanceStorage;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Lb/h/q/c/c/PerformanceStorage;->r()V
 
     const/4 v0, 0x1
 

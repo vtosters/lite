@@ -337,15 +337,6 @@
 .method public onCreate()Z
     .locals 1
 
-    .line 1
-    sget-object v0, Lcom/vk/metrics/reporters/PerformanceReporter;->j:Lcom/vk/metrics/reporters/PerformanceReporter;
-
-    invoke-virtual {v0}, Lcom/vk/metrics/reporters/PerformanceReporter;->a()Lb/h/q/c/a/AppStartDurationChecker;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Lb/h/q/c/a/AppStartDurationChecker;->b()V
-
     .line 2
     invoke-direct {p0}, Lcom/vtosters/lite/im/bridge/contentprovider/ImContentProvider;->a()V
 
@@ -356,15 +347,6 @@
 
 .method public query(Landroid/net/Uri;[Ljava/lang/String;Ljava/lang/String;[Ljava/lang/String;Ljava/lang/String;)Landroid/database/Cursor;
     .locals 0
-
-    .line 1
-    sget-object p3, Lcom/vk/metrics/reporters/PerformanceReporter;->j:Lcom/vk/metrics/reporters/PerformanceReporter;
-
-    invoke-virtual {p3}, Lcom/vk/metrics/reporters/PerformanceReporter;->a()Lb/h/q/c/a/AppStartDurationChecker;
-
-    move-result-object p3
-
-    invoke-virtual {p3}, Lb/h/q/c/a/AppStartDurationChecker;->c()V
 
     .line 2
     sget-object p3, Lcom/vtosters/lite/im/bridge/contentprovider/ImContentProvider;->a:Landroid/content/UriMatcher;

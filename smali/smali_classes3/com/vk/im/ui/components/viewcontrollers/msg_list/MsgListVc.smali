@@ -687,17 +687,6 @@
 
     invoke-virtual {v1, v5}, Landroidx/recyclerview/widget/RecyclerView;->setItemAnimator(Landroidx/recyclerview/widget/RecyclerView$ItemAnimator;)V
 
-    .line 51
-    sget-object v1, Lcom/vk/metrics/reporters/PerformanceReporter;->j:Lcom/vk/metrics/reporters/PerformanceReporter;
-
-    sget-object v2, Lcom/vk/metrics/performance/scroll/ScrollScreenType;->DIALOG:Lcom/vk/metrics/performance/scroll/ScrollScreenType;
-
-    iget-object v4, v0, Lcom/vk/im/ui/components/viewcontrollers/msg_list/MsgListVc;->e:Landroidx/recyclerview/widget/RecyclerView;
-
-    invoke-static {v4, v7}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
-
-    invoke-virtual {v1, v2, v4}, Lcom/vk/metrics/reporters/PerformanceReporter;->a(Lcom/vk/metrics/performance/scroll/ScrollScreenType;Landroidx/recyclerview/widget/RecyclerView;)V
-
     .line 52
     iget-object v1, v0, Lcom/vk/im/ui/components/viewcontrollers/msg_list/MsgListVc;->n:Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/MsgListAdapter;
 

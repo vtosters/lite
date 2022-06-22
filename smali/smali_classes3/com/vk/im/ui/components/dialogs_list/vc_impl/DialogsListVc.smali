@@ -1061,15 +1061,6 @@
 
     invoke-virtual {v0, v1}, Landroidx/recyclerview/widget/RecyclerView;->setAdapter(Landroidx/recyclerview/widget/RecyclerView$Adapter;)V
 
-    .line 28
-    sget-object v0, Lcom/vk/metrics/reporters/PerformanceReporter;->j:Lcom/vk/metrics/reporters/PerformanceReporter;
-
-    sget-object v1, Lcom/vk/metrics/performance/scroll/ScrollScreenType;->DIALOGS:Lcom/vk/metrics/performance/scroll/ScrollScreenType;
-
-    iget-object v2, p0, Lcom/vk/im/ui/components/dialogs_list/vc_impl/DialogsListVc;->j:Landroidx/recyclerview/widget/RecyclerView;
-
-    invoke-virtual {v0, v1, v2}, Lcom/vk/metrics/reporters/PerformanceReporter;->a(Lcom/vk/metrics/performance/scroll/ScrollScreenType;Landroidx/recyclerview/widget/RecyclerView;)V
-
     .line 29
     iget-object v0, p0, Lcom/vk/im/ui/components/dialogs_list/vc_impl/DialogsListVc;->q:Lcom/vk/pullfromtopofrecycler/PullFromTopOfRecyclerController;
 

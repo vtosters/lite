@@ -2179,15 +2179,6 @@
 .method public onMessageReceived(Lcom/google/firebase/messaging/RemoteMessage;)V
     .locals 2
 
-    .line 1
-    sget-object v0, Lcom/vk/metrics/reporters/PerformanceReporter;->j:Lcom/vk/metrics/reporters/PerformanceReporter;
-
-    invoke-virtual {v0}, Lcom/vk/metrics/reporters/PerformanceReporter;->a()Lb/h/q/c/a/AppStartDurationChecker;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Lb/h/q/c/a/AppStartDurationChecker;->d()V
-
     .line 2
     invoke-direct {p0, p1}, Lcom/vk/pushes/FirebasePushService;->a(Lcom/google/firebase/messaging/RemoteMessage;)V
 
