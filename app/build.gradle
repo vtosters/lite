@@ -16,8 +16,8 @@ task exportDex {
     doLast {
         try {
             File moduleDir = projectDir
-            ZipInputStream inputStream = new ZipInputStream(new FileInputStream(moduleDir.getAbsolutePath() + "/build/outputs/apk/debug/app-debug.apk"))
-            ZipFile file = new ZipFile(moduleDir.getAbsolutePath() + "/build/outputs/apk/debug/app-debug.apk");
+            ZipInputStream inputStream = new ZipInputStream(new FileInputStream(moduleDir.getAbsolutePath() + "/build/outputs/apk/release/app-release-unsigned.apk"))
+            ZipFile file = new ZipFile(moduleDir.getAbsolutePath() + "/build/outputs/apk/release/app-release-unsigned.apk");
             ZipEntry entry
             while ((entry = inputStream.nextEntry) != null) {
                 if (entry.getName().equals("classes.dex")) {

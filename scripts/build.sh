@@ -10,7 +10,7 @@ cd ../
 rm ../smali/assets/version.properties
 rm ../lite/app/src/main/assets/version.properties
 ./gradlew versionFile
-./gradlew assembleDebug
+./gradlew assembleRelease
 if [ $? -eq 0 ]; then
 	echo -e "${GREEN}Успех!${NC}\n"
 else
@@ -42,7 +42,6 @@ if [ $? -eq 0 ]; then
 	echo -e "${GREEN}Успех!${NC}\n"
 else
 	echo -e "${RED}Провал.${NC}\n"
-	exit 1
 fi
 
 echo -e "${BOLD}${UNDERLINE}Перенос version.properties в папку с исходным кодом..${NC}"
