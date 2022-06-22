@@ -420,6 +420,8 @@
 .method private final a(Ljava/lang/String;Ljava/lang/String;)V
     .locals 2
 
+    return-void
+
     .line 64
     invoke-interface {p1}, Ljava/lang/CharSequence;->length()I
 

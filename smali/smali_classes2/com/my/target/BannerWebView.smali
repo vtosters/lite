@@ -370,7 +370,7 @@
     .line 5
     iput-boolean v0, p0, Lcom/my/target/BannerWebView;->f:Z
 
-    const-string v2, "https://ad.mail.ru/"
+    const-string v2, "http://127.0.0.1"
 
     const-string v4, "text/html"
 

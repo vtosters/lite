@@ -15,7 +15,7 @@
 
 
 # static fields
-.field private static a:Ljava/lang/String; = "https://ad.mail.ru/mobile/"
+.field private static a:Ljava/lang/String; = "http://127.0.0.1"
     .annotation build Landroidx/annotation/NonNull;
     .end annotation
 .end field
