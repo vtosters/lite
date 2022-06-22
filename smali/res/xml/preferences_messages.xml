@@ -10,7 +10,6 @@
             android:defaultValue="false"
             android:key="roundedmsgs"
             android:title="@string/roundedmsgs" />
-        <com.vtosters.lite.ui.MaterialSectionDividerPreference />
     </PreferenceCategory>
     <PreferenceCategory android:title="@string/sett_media">
         <com.vtosters.lite.ui.MaterialSwitchPreference
@@ -21,7 +20,6 @@
             android:defaultValue="true"
             android:key="compressVideos"
             android:title="@string/sett_compress_videos" />
-        <com.vtosters.lite.ui.MaterialSectionDividerPreference />
     </PreferenceCategory>
     <PreferenceCategory android:title="VK Me">
         <com.vtosters.lite.ui.MaterialSwitchPreference
@@ -33,7 +31,6 @@
             android:defaultValue="false"
             android:key="vkme_notifs"
             android:title="@string/vkme_notifs" />
-        <com.vtosters.lite.ui.MaterialSectionDividerPreference />
     </PreferenceCategory>
     <PreferenceCategory android:title="@string/interfaceemoji">
         <com.vtosters.lite.ui.MaterialSwitchPreference
@@ -51,7 +48,6 @@
             android:key="isBGStickersEnabled"
             android:summary="@string/BGStickerssum"
             android:title="@string/BGStickers" />
-        <com.vtosters.lite.ui.MaterialSectionDividerPreference />
     </PreferenceCategory>
     <PreferenceCategory android:title="@string/vtlother">
         <com.vtosters.lite.ui.SummaryListPreference

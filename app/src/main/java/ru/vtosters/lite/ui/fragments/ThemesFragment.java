@@ -1,6 +1,7 @@
 package ru.vtosters.lite.ui.fragments;
 
 import static ru.vtosters.lite.utils.Globals.componentSwitcher;
+import static ru.vtosters.lite.utils.Globals.getIdentifier;
 import static ru.vtosters.lite.utils.Globals.restartApplicationWithTimer;
 
 import android.os.Bundle;
@@ -19,12 +20,12 @@ public class ThemesFragment extends MaterialPreferenceToolbarFragment {
     @Override
     public void onCreate(Bundle bundle) {
         super.onCreate(bundle);
-        addPreferencesFromResource(R.xml.preferences_themes);
+        addPreferencesFromResource(getIdentifier("preferences_themes", "xml"));
         prefs();
     }
 
     public boolean apply(Preference preference, Object obj) {
-        if (((Boolean) obj).booleanValue()) {
+        if ((Boolean) obj) {
             componentSwitcher("VTIconDefault", false);
             componentSwitcher("VTIconVK", true);
         } else {

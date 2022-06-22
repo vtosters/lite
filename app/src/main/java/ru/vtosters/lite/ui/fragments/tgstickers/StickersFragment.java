@@ -129,7 +129,7 @@ public class StickersFragment extends MaterialPreferenceToolbarFragment {
         super.onCreateOptionsMenu(menu, menuInflater);
         MenuItem add = menu.add(0, 0, 0, "");
         add.setShowAsAction(MenuItem.SHOW_AS_ACTION_ALWAYS);
-        add.setIcon(getResources().getDrawable(com.vtosters.lite.R.drawable.ic_settings_24));
+        add.setIcon(getResources().getDrawable(getIdentifier("ic_settings_24", "drawable")));
     }
     
     
@@ -221,7 +221,7 @@ public class StickersFragment extends MaterialPreferenceToolbarFragment {
         recycler.setLayoutParams(new FrameLayout.LayoutParams(FrameLayout.LayoutParams.MATCH_PARENT, FrameLayout.LayoutParams.MATCH_PARENT));
 
         fab = new FloatingActionButton(container.getContext());
-        fab.setImageResource(R.drawable.ic_add_24);
+        fab.setImageResource(getIdentifier("ic_add_24", "drawable"));
         fab.setBackgroundTintList(ColorStateList.valueOf(getAccentColor()));
         fab.setOnClickListener(v2 -> fabClick());
         FrameLayout.LayoutParams params = new FrameLayout.LayoutParams(FrameLayout.LayoutParams.WRAP_CONTENT, FrameLayout.LayoutParams.WRAP_CONTENT);
@@ -344,19 +344,19 @@ public class StickersFragment extends MaterialPreferenceToolbarFragment {
                 if (f.exists()) {
                     holder.stickerImage.setImageURI(Uri.parse("file://" + f.getAbsolutePath()));
                 } else {
-                    holder.stickerImage.setImageDrawable(getResources().getDrawable(R.drawable.icon_vk_104));
+                    holder.stickerImage.setImageDrawable(getResources().getDrawable(getIdentifier("icon_vk_104", "drawable")));
                 }
             } catch (Exception e) {
                 e.printStackTrace();
             }
 
-            holder.updateButton.setImageDrawable(recolorDrawable(getResources().getDrawable(R.drawable.ic_camera_switch_48)));
+            holder.updateButton.setImageDrawable(recolorDrawable(getResources().getDrawable(getIdentifier("ic_camera_switch_48", "drawable"))));
             holder.updateButton.setOnClickListener(listener -> {
                 stickersService.setBotKey(TGPref.getTGBotKey());
                 stickersService.requestPackDownload(pack.id, new File(getContext().getFilesDir(), new File("VT-Stickers", pack.id).getAbsolutePath()));
             });
 
-            holder.deleteButton.setImageDrawable(recolorDrawable(getResources().getDrawable(R.drawable.vkim_ic_msg_delete)));
+            holder.deleteButton.setImageDrawable(recolorDrawable(getResources().getDrawable(getIdentifier("vkim_ic_msg_delete", "drawable"))));
             holder.deleteButton.setOnClickListener(listener -> {
                 stickersService.deletePack(pack);
                 notifyItemRemoved(position);

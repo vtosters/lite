@@ -12,7 +12,7 @@
             android:entryValues="@array/proxy_value"
             android:key="proxy"
             android:title="@string/useproxy" />
-        <com.vtosters.lite.ui.MaterialSectionDividerPreference />
+        <com.vtosters.lite..MaterialSectionDividerPreference />
     </PreferenceCategory>
     <PreferenceCategory android:title="@string/proxyadvsettings">
         <EditTextPreference
@@ -27,7 +27,6 @@
             android:defaultValue=""
             android:key="proxystatic"
             android:title="@string/proxystatic" />
-        <com.vtosters.lite.ui.MaterialSectionDividerPreference />
     </PreferenceCategory>
     <PreferenceCategory android:title="@string/proxyhttp">
         <EditTextPreference
@@ -48,7 +47,6 @@
             android:key="proxyPassHTTP"
             android:summary="@string/proxy_if"
             android:title="@string/proxy_password_title" />
-        <com.vtosters.lite.ui.MaterialSectionDividerPreference />
     </PreferenceCategory>
     <PreferenceCategory android:title="@string/proxyhttps">
         <EditTextPreference
@@ -69,7 +67,6 @@
             android:key="proxyPassHTTPS"
             android:summary="@string/proxy_if"
             android:title="@string/proxy_password_title" />
-        <com.vtosters.lite.ui.MaterialSectionDividerPreference />
     </PreferenceCategory>
     <PreferenceCategory android:title="@string/proxysocks">
         <EditTextPreference
@@ -80,7 +77,6 @@
             android:defaultValue=""
             android:key="proxyPortSocks"
             android:title="@string/proxyport" />
-        <com.vtosters.lite.ui.MaterialSectionDividerPreference />
     </PreferenceCategory>
     <PreferenceCategory android:title="@string/proxyowners">
         <Preference
@@ -105,7 +101,6 @@
                 android:action="android.intent.action.VIEW"
                 android:data="https://github.com/xtrafrancyz/vk-proxy" />
         </Preference>
-        <com.vtosters.lite.ui.MaterialSectionDividerPreference />
         <Preference
             android:persistent="false"
             android:summary="@string/proxyownerszbr"

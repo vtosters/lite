@@ -15,7 +15,6 @@
             android:defaultValue="true"
             android:key="swipe"
             android:title="@string/interfacenewsfeedswipe" />
-        <com.vtosters.lite.ui.MaterialSectionDividerPreference />
     </PreferenceCategory>
     <PreferenceCategory android:title="@string/interfaceglobal">
         <com.vtosters.lite.ui.SummaryListPreference
@@ -49,7 +48,6 @@
             android:key="shortpost"
             android:summary="@string/interfaceglobalpostsum"
             android:title="@string/interfaceglobalpost" />
-        <com.vtosters.lite.ui.MaterialSectionDividerPreference />
     </PreferenceCategory>
     <PreferenceCategory android:title="@string/interfacevideo">
         <com.vtosters.lite.ui.MaterialSwitchPreference
@@ -62,7 +60,6 @@
             android:key="__dbg_disable_video_feed"
             android:summary="@string/interfacevideorecsum"
             android:title="@string/interfacevideorec" />
-        <com.vtosters.lite.ui.MaterialSectionDividerPreference />
     </PreferenceCategory>
     <PreferenceCategory android:title="@string/vtlother">
         <com.vtosters.lite.ui.MaterialSwitchPreference

@@ -17,7 +17,6 @@
             android:defaultValue="true"
             android:key="color_grishka"
             android:title="@string/other_fix_dynamic_colors" />
-        <com.vtosters.lite.ui.MaterialSectionDividerPreference />
     </PreferenceCategory>
     <PreferenceCategory android:title="@string/vtsystem">
         <Preference
@@ -33,7 +32,6 @@
         <Preference
             android:key="tokencopy"
             android:title="@string/copytokenbtn" />
-        <com.vtosters.lite.ui.MaterialSectionDividerPreference />
     </PreferenceCategory>
     <!-- <PreferenceCategory android:title="Backup system">
         <Preference
@@ -45,7 +43,6 @@
         <Preference
             android:key="restoreprefs"
             android:title="Restore prefs" />
-        <com.vtosters.lite.ui.MaterialSectionDividerPreference />
     </PreferenceCategory> -->
     <PreferenceCategory android:title="@string/vtverify">
         <Preference

@@ -24,7 +24,6 @@
             android:key="oldicons"
             android:summary="@string/interface_global_old_icons_summary"
             android:title="@string/interface_global_old_icons" />
-        <com.vtosters.lite.ui.MaterialSectionDividerPreference />
     </PreferenceCategory>
     <PreferenceCategory android:title="@string/vticon">
         <com.vtosters.lite.ui.MaterialSwitchPreference
@@ -32,7 +31,6 @@
             android:key="iconvk"
             android:summary="@string/vticonsummary"
             android:title="@string/vticonbtn" />
-        <com.vtosters.lite.ui.MaterialSectionDividerPreference />
     </PreferenceCategory>
     <PreferenceCategory android:title="@string/vtlother">
         <com.vtosters.lite.ui.MaterialSwitchPreference

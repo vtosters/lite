@@ -13,7 +13,6 @@
             android:key="undeletemsg"
             android:summary="@string/activity_undel_attachments"
             android:title="@string/activity_undel_enable" />
-        <com.vtosters.lite.ui.MaterialSectionDividerPreference />
     </PreferenceCategory>
     <PreferenceCategory android:title="@string/online_vtl">
         <com.vtosters.lite.ui.MaterialSwitchPreference
@@ -26,7 +25,6 @@
             android:key="setoffline"
             android:summary="@string/vtloffline2summary"
             android:title="@string/vtloffline2" />
-        <com.vtosters.lite.ui.MaterialSectionDividerPreference />
     </PreferenceCategory>
     <PreferenceCategory android:title="@string/dnr">
         <Preference
@@ -49,7 +47,6 @@
             android:defaultValue="false"
             android:key="read_bot"
             android:title="@string/act_bot" />
-        <com.vtosters.lite.ui.MaterialSectionDividerPreference />
     </PreferenceCategory>
     <PreferenceCategory android:title="@string/dnw">
         <Preference
@@ -68,7 +65,6 @@
             android:defaultValue="false"
             android:key="write_bot"
             android:title="@string/act_bot" />
-        <com.vtosters.lite.ui.MaterialSectionDividerPreference />
     </PreferenceCategory>
     <PreferenceCategory android:title="@string/stories_vtl">
         <Preference
@@ -79,7 +75,6 @@
             android:defaultValue="true"
             android:key="dns"
             android:title="@string/dns" />
-        <com.vtosters.lite.ui.MaterialSectionDividerPreference />
     </PreferenceCategory>
     <PreferenceCategory android:title="@string/privacy_vtl">
         <com.vtosters.lite.ui.MaterialSwitchPreference
