@@ -4,7 +4,7 @@ import static java.lang.Long.MAX_VALUE;
 import static ru.vtosters.lite.ui.fragments.dockbar.DockBarManager.getInstance;
 import static ru.vtosters.lite.utils.Globals.getContext;
 import static ru.vtosters.lite.utils.Globals.getPrefsValue;
-import static ru.vtosters.lite.utils.Preferences.CommentsSort;
+import static ru.vtosters.lite.utils.Globals.sendToast;
 import static ru.vtosters.lite.utils.Preferences.adsgroup;
 import static ru.vtosters.lite.utils.Preferences.adsstories;
 import static ru.vtosters.lite.utils.Preferences.authorsrecomm;
@@ -38,6 +38,7 @@ import com.vtosters.lite.fragments.y2.VideosFragment;
 import com.vtosters.lite.general.fragments.GamesFragment;
 import com.vtosters.lite.general.fragments.PhotosFragment;
 
+import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
@@ -51,15 +52,15 @@ import java.util.List;
 public class Newsfeed {
     public static List<String> mFilters;
 
-    public static boolean isBlockedByFilter(String str) {
+    public static boolean isBlockedByFilter(String str){
         for (String str2 : mFilters) {
-            if (str.toLowerCase().contains(str2.toLowerCase())) return true;
+            if(str.toLowerCase().contains(str2.toLowerCase())) return true;
         }
         return false;
     }
 
-    public static void setupFilters() {
-        mFilters = new ArrayList();
+    public static void setupFilters(){
+        mFilters=new ArrayList();
 
         getFilter("refsfilter", "Referals.txt");
         getFilter("shortlinkfilter", "LinkShorter.txt");
@@ -68,19 +69,19 @@ public class Newsfeed {
 
         String customfilters = getPrefsValue("spamfilters");
 
-        if (!customfilters.isEmpty()) {
+        if(!customfilters.isEmpty()){
             mFilters.addAll(Arrays.asList(customfilters.split(", ")));
         }
 
     }
 
-    public static void getFilter(String boolname, String filename) {
-        if (getBoolValue(boolname, true)) {
+    public static void getFilter(String boolname, String filename){
+        if(getBoolValue(boolname, true)){
             try {
-                BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(getContext().getAssets().open(filename)));
+                BufferedReader bufferedReader=new BufferedReader(new InputStreamReader(getContext().getAssets().open(filename)));
                 while (true) {
-                    String readLine = bufferedReader.readLine();
-                    if (readLine != null) {
+                    String readLine=bufferedReader.readLine();
+                    if(readLine != null){
                         mFilters.add(readLine);
                     } else {
                         bufferedReader.close();
@@ -93,90 +94,115 @@ public class Newsfeed {
         }
     } // Get needed filter list from assets
 
-    public static boolean injectFilters(JSONObject jSONObject) {
-        String optString = jSONObject.optString(NavigatorKeys.e, "");
-        if (!ads(optString) && !checkCopyright(optString) && !authors_rec(optString) && !recomm(optString) && !friendrecomm(optString)) {
-            String optString2 = jSONObject.optString("post_type", "");
-            if (!ads(optString2) && !authors_rec(optString2) && !recomm(optString2) && !friendrecomm(optString2)) {
-                String optString3 = jSONObject.optString("filters", "");
-                if (ads(optString3) || authors_rec(optString3) || recomm(optString3) || friendrecomm(optString3) || isBlockedByFilter(jSONObject.optString(NavigatorKeys.h0, "")) || captions(jSONObject)) {
-                    return false;
-                }
-                return !AD(jSONObject);
+    public static boolean injectFilters(JSONObject obj) throws JSONException{
+        String optString = obj.optString("type", "");
+        if(isAds(optString) || isAuthorRecommendations(optString) || isPostRecommendations(optString) || isFriendsRecommendations(optString) || isRecomsGroup(optString) || isMusicBlock(optString) || isNewsBlock(optString)){
+            return false;
+        }
+        optString = obj.optString("post_type", "");
+        if(isAds(optString) || isAuthorRecommendations(optString) || isPostRecommendations(optString) || isFriendsRecommendations(optString) || isMusicBlock(optString) || isNewsBlock(optString)){
+            return false;
+        }
+        optString = obj.optString("filters", "");
+        if(isAds(optString) || isAuthorRecommendations(optString) || isPostRecommendations(optString) || isFriendsRecommendations(optString)) {
+            return false;
+        }
+
+        checkCopyright(obj);
+
+        optString = obj.optString("text", "");
+        if(isBadNew(optString)) return false;
+        if(checkCaption(obj)) return false;
+
+        return !isGroupAds(obj);
+    }
+
+    private static boolean checkCopyright(JSONObject json) throws JSONException{
+        if(json.opt("copyright") != null) {
+            JSONObject copyright = json.getJSONObject("copyright");
+            String copyrightlink = copyright.getString("link");
+
+            return !copyrightlink.contains("vk.com") ||  !copyright_post(); // fuck you, it doesn't work to detect link value
+
+        }
+        return true;
+    }
+
+    private static boolean isRecomsGroup(String src){
+        return src.equals("recommended_groups") && authorsrecomm();
+    }
+
+    private static boolean isMusicBlock(String src){
+        return (src.equals("recommended_audios") || src.equals("recommended_artists") || src.equals("recommended_playlists")) && authorsrecomm();
+    }
+
+    private static boolean isNewsBlock(String src){
+        return (src.equals("tags_suggestions")) && Preferences.ads();
+    }
+
+    public static String getAllFilters(){
+        return getPrefsValue("spamfilters");
+    }
+
+    public static boolean isBadNew(String text){
+        for (String filter : mFilters) {
+            if(text.toLowerCase().contains(filter.toLowerCase())){
+                return true;
             }
         }
         return false;
-    } // json newsfeed/posts injector to detect and delete posts
-
-    public static boolean authors_rec(String str) {
-        return str.equals("authors_rec") && authorsrecomm();
     }
 
-    public static boolean captions(JSONObject jSONObject) {
+    public static boolean checkCaption(JSONObject postJson){
         try {
-            JSONObject jSONObject2 = jSONObject.getJSONObject("caption");
-            if (Preferences.captions()) {
+            JSONObject captionJson = postJson.getJSONObject("caption");
+            if(Preferences.captions())
                 return true;
-            }
-            return (jSONObject2.getString(NavigatorKeys.e).equals("explorebait") && postsrecomm()) || ((jSONObject2.getString(NavigatorKeys.e).equals("shared") && postsrecomm()) || ((jSONObject.getString(NavigatorKeys.e).equals("digest") && postsrecomm()) || ((jSONObject2.getString(NavigatorKeys.e).equals("commented") && postsrecomm()) || (jSONObject2.getString(NavigatorKeys.e).equals("voted") && postsrecomm()))));
-        } catch (JSONException unused) {
+
+            boolean postAds = postsrecomm();
+            return (captionJson.getString("type").equals("explorebait") && postAds) || // Может быть интересно
+                            (captionJson.getString("type").equals("shared") && postAds) || // Поделился записью
+                            (postJson.getString("type").equals("digest") && postAds) || // Рекомедации
+                            (captionJson.getString("type").equals("commented") && postAds) || // Комментирует
+                            (captionJson.getString("type").equals("voted") && postAds); // Проголосовал в опросе
+
+        } catch (JSONException e) {
             return false;
         }
     }
 
-    public static boolean ads(String str) {
-        if ((str.equals("ads_easy_promote") || str.equals("promo_button") || str.equals("app_widget") || str.equals("ads")) && Preferences.ads()) {
-            return true;
-        }
-        return false;
+    public static boolean isAds(String optString){
+        return (optString.equals("ads_easy_promote") ||
+                optString.equals("promo_button") ||
+                optString.equals("app_widget") ||
+                optString.equals("ads")) && Preferences.ads();
     }
 
-    public static boolean recomm(String str) {
-        return (str.equals("user_rec") || str.equals("live_recommended") || str.equals("inline_user_rec")) && postsrecomm();
+    public static boolean isAuthorRecommendations(String optString){
+        return optString.equals("authors_rec") && authorsrecomm();
     }
 
-    public static boolean friendrecomm(String str) {
-        return str.equals("friends_recommendations") && friendsrecomm();
+    public static boolean isPostRecommendations(String optString){
+        return (optString.equals("live_recommended") ||
+                optString.equals("inline_user_rec")) && postsrecomm();
     }
 
-    public static boolean AD(JSONObject jSONObject) {
-        return jSONObject.optInt("marked_as_ads", 0) == 1 && adsgroup();
+    public static boolean isFriendsRecommendations(String optString){
+        return (optString.equals("user_rec") ||
+                optString.equals("friends_recommendations") ||
+                optString.equals("friends_recomm")) && friendsrecomm();
     }
 
-    public static boolean checkCopyright(String str) {
-        return str.equals("copyright") && copyright_post();
+    public static boolean isGroupAds(JSONObject obj){
+        return (obj.optInt("marked_as_ads", 0) == 1) && adsgroup();
     }
 
-    public static String friendsads() {
-        return postsrecomm() ? "null" : "user_rec";
-    }
-
-    public static String getFriendRecomm() {
-        return friendsrecomm() ? "null" : "friends_recommendations";
-    }
-
-    public static String authorsads() {
-        return authorsrecomm() ? "null" : "authors_rec";
-    }
-
-    public static String widgetads() {
-        return Preferences.ads() ? "null" : "app_widget";
-    }
-
-    public static String promoads() {
-        return Preferences.ads() ? "null" : "promo_button";
-    }
-
-    public static String storyads() {
+    public static String storyads(){
         return adsstories() ? "null" : "ads";
     }
 
-    public static String getCommentsSort(int value) {
-        return !CommentsSort() && value == 2 || value == 1 ? "desc" : "asc";
-    }
-
-    public static long getUpdateNewsfeed(boolean refresh_timeout) {
-        if (vkme()) {
+    public static long getUpdateNewsfeed(boolean refresh_timeout){
+        if(vkme()){
             return MAX_VALUE;
         }
         switch (getPrefsValue("newsupdate")) {
@@ -189,8 +215,8 @@ public class Newsfeed {
         }
     }
 
-    public static Class getStartFragment() {
-        if (vkme()) {
+    public static Class getStartFragment(){
+        if(vkme()){
             return DialogsFragment.class;
         }
         switch (getPrefsValue("start_values")) {

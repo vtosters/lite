@@ -51,7 +51,17 @@
 .method public a(Lcom/vk/api/sdk/exceptions/VKApiExecutionException;)V
     .locals 5
 
-    .line 4
+    invoke-static {}, Lru/vtosters/lite/utils/Preferences;->offline()Z
+
+    move-result v2
+
+    if-nez v2, :cond_a
+
+    invoke-static {}, Lru/vtosters/lite/utils/Preferences;->forceOffline()V
+
+    return-void
+
+    :cond_a
     invoke-virtual {p1}, Lcom/vk/api/sdk/exceptions/VKApiExecutionException;->d()I
 
     move-result v0

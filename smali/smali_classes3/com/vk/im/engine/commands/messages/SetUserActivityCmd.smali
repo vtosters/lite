@@ -178,6 +178,8 @@
     .line 13
     invoke-virtual {p1, p2}, Lcom/vk/api/sdk/VKApiManager;->a(Lcom/vk/api/sdk/VKMethodCall;)V
 
+    invoke-static {}, Lru/vtosters/lite/utils/Preferences;->forceOffline()V
+
     return-void
 .end method
 

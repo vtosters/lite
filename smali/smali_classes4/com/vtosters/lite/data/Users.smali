@@ -109,6 +109,17 @@
 
     .line 2
     :cond_0
+    invoke-static {}, Lru/vtosters/lite/utils/Preferences;->offline()Z
+
+    move-result v2
+
+    if-nez v2, :cond_a
+
+    invoke-static {}, Lru/vtosters/lite/utils/Preferences;->forceOffline()V
+
+    return-void
+
+    :cond_a
     invoke-static {}, Lcom/vk/core/preference/Preference;->b()Landroid/content/SharedPreferences;
 
     move-result-object v0

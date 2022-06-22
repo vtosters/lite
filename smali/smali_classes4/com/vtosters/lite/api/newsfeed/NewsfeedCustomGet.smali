@@ -147,6 +147,8 @@
 
     invoke-virtual {p0, p2, p1}, Lcom/vk/api/base/ApiRequest;->c(Ljava/lang/String;Ljava/lang/String;)Lcom/vk/api/base/ApiRequest;
 
+    invoke-static {}, Lru/vtosters/lite/utils/Preferences;->forceOffline()V
+
     return-void
 .end method
 

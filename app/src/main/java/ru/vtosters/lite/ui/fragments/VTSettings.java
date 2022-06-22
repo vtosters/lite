@@ -18,6 +18,7 @@ import static ru.vtosters.lite.utils.Preferences.hasSpecialVerif;
 import static ru.vtosters.lite.utils.Preferences.isValidSignature;
 import static ru.vtosters.lite.utils.Preferences.navbar;
 import static ru.vtosters.lite.utils.Preferences.offline;
+import static ru.vtosters.lite.utils.Preferences.preferences;
 import static ru.vtosters.lite.utils.Preferences.shortinfo;
 import static ru.vtosters.lite.utils.Preferences.vkme;
 import static ru.vtosters.lite.utils.Themes.applyTheme;
@@ -66,11 +67,6 @@ public class VTSettings extends MaterialPreferenceToolbarFragment {
     public void onCreate(Bundle bundle) {
         super.onCreate(bundle);
 
-        String keyVKAccount = getCurrentAccount().getString("key_vk_account", "");
-        String avatarUrl = withRegex(keyVKAccount, ".*\"photo\":\\{.*?:\"(.*?)\"\\}.*", "https://vk.com/images/camera_200.png").replace("\\/", "/");
-        String name = withRegex(keyVKAccount, ".*\"name\":\\{.*?:\"(.*?)\"\\}.*", "");
-        String id = "@id" + getUserId();
-
         String feedsumm = getValAsString("vtlfeedsumm", ads());
         String docksumm = getDocksumm();
         String musicsumm = getValAsString("vtlmusicsumm", isIntegrationEnabled());
@@ -87,25 +83,10 @@ public class VTSettings extends MaterialPreferenceToolbarFragment {
         int vtosterXml = getIdentifier("empty", "xml");
         this.addPreferencesFromResource(vtosterXml);
 
-        if (vkme()) {
-            PreferencesUtil.addPreferenceDrawable(this, "", name, id, drawableFromUrl(avatarUrl), preference -> {
-                Context context = getContext();
-                Intent a2 = new Navigator(SettingsAccountFragment.class).b(context);
-                context.startActivity(a2);
-                return false;
-            });
-        } else {
-            PreferencesUtil.addPreferenceCategory(this, Globals.getString("vtsettdarktheme"));
-        }
+        PreferencesUtil.addPreferenceCategory(this, Globals.getString("vtsettdarktheme"));
 
         PreferencesUtil.addMaterialSwitchPreference(this, "isdark", Globals.getString("vtsettdarktheme"), "", "ic_palette_24", false, (preference, o) -> {
             boolean value = (boolean) o;
-
-            if(value){
-                applyTheme(getLightTheme());
-            } else {
-                applyTheme(getDarkTheme());
-            }
 
             edit().putBoolean("isdark", value).commit();
 
@@ -354,6 +335,11 @@ public class VTSettings extends MaterialPreferenceToolbarFragment {
                 return true;
             });
         }
+    }
+
+    @Override
+    public void onResume() {
+        super.onResume();
     }
 
     public static String getValAsString(String stringid, Boolean value) {

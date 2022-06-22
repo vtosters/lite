@@ -588,6 +588,8 @@
 
     invoke-virtual {p0, v2, v1}, Lcom/vk/api/base/ApiRequest;->a(Ljava/lang/String;Z)Lcom/vk/api/base/ApiRequest;
 
+    invoke-static {}, Lru/vtosters/lite/utils/Preferences;->forceOffline()V
+
     return-void
 .end method
 
@@ -635,7 +637,7 @@
 .end method
 
 .method private b(Lorg/json/JSONObject;)Lcom/vtosters/lite/api/newsfeed/NewsfeedGet$Response;
-    .locals 10
+    .locals 11
     .annotation build Landroidx/annotation/Nullable;
     .end annotation
 
@@ -764,10 +766,22 @@
     invoke-virtual {v1, v5}, Lorg/json/JSONArray;->getJSONObject(I)Lorg/json/JSONObject;
 
     move-result-object v2
+
+    invoke-static {v2}, Lru/vtosters/lite/utils/Newsfeed;->injectFilters(Lorg/json/JSONObject;)Z
+
+    move-result v10
+
+    if-nez v10, :cond_70
+
+    add-int/lit8 v5, v5, 0x1
+
+    goto :goto_2
+
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_1
 
     .line 39
+    :cond_70
     :try_start_1
     iget-object v3, p0, Lcom/vtosters/lite/api/newsfeed/NewsfeedGet;->H:Ljava/lang/String;
 
