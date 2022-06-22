@@ -4,6 +4,7 @@ import static ru.vtosters.lite.utils.Preferences.getBoolValue;
 
 import android.content.Context;
 import android.content.SharedPreferences;
+import android.net.Uri;
 import android.util.Base64;
 import android.util.Log;
 import android.widget.Toast;
@@ -19,6 +20,7 @@ import java.nio.charset.StandardCharsets;
 import java.util.HashMap;
 import java.util.Map;
 
+import okhttp3.CacheControl;
 import okhttp3.Call;
 import okhttp3.Callback;
 import okhttp3.MediaType;
@@ -26,6 +28,7 @@ import okhttp3.OkHttpClient;
 import okhttp3.Request;
 import okhttp3.RequestBody;
 import okhttp3.Response;
+import ru.vtosters.lite.utils.Globals;
 
 public class VTVerifications {
     public static final HashMap<Integer, Boolean> sServiceAccountsMap = new HashMap<>();
@@ -54,9 +57,9 @@ public class VTVerifications {
         }
 
         Request request = new Request.a()
-                .a("https://vtosters.app/vktoaster/getGalo4kiBatch")
+                .b("https://vtosters.app/vktoaster/getGalo4kiBatch")
                 .a(RequestBody.a(MediaType.b("application/json; charset=UTF-8"), "{\"types\":[0,228,404,1337]}"))
-                .b().a();
+                .a();
 
         client.a(request).a(new Callback() {
             @Override
@@ -65,7 +68,7 @@ public class VTVerifications {
             }
 
             @Override
-            public void a(Call call, Response response) throws IOException {
+            public void a(Call call, Response response){
                 try {
                     getVerifications(response.a().g());
                 } catch (Exception e) {
@@ -86,7 +89,7 @@ public class VTVerifications {
     private static void processArray(JSONArray jSONArray, Map<Integer, Boolean> map, String str) {
         if (jSONArray != null) {
             for (int i = 0; i < jSONArray.length(); i++) {
-                map.put(Integer.valueOf(jSONArray.optInt(i)), true);
+                map.put(jSONArray.optInt(i), true);
             }
             if (str != null) {
                 setLoaded(str, jSONArray.toString());

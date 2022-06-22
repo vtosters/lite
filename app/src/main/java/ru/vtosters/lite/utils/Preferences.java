@@ -57,7 +57,7 @@ public class Preferences {
         if(dev()){
             LoadLibrary("vkopustest");
         }
-        systemThemeChanger();
+        // systemThemeChanger();
         getInstance().autoCleaningCache();
     } // VK Init
 

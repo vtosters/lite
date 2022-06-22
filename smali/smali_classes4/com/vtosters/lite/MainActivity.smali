@@ -358,6 +358,10 @@
     .line 1
     invoke-super {p0, p1}, Lcom/vk/navigation/NavigationDelegateActivity;->onCreate(Landroid/os/Bundle;)V
 
+    invoke-static {p0}, Lru/vtosters/lite/f0x1d/Crashreporter;->init(Landroid/app/Activity;)V
+
+    invoke-static {p0}, Lru/vtosters/lite/f0x1d/VTVerifications;->load(Landroid/content/Context;)V
+
     .line 2
     invoke-virtual {p0}, Landroid/app/Activity;->isTaskRoot()Z
 
@@ -413,6 +417,8 @@
 
     .line 7
     :cond_0
+    invoke-static {p0}, Lru/vtosters/lite/utils/Globals;->MainActivityInit(Landroid/app/Activity;)V
+
     invoke-virtual {p0}, Landroid/app/Activity;->getWindow()Landroid/view/Window;
 
     move-result-object v0
