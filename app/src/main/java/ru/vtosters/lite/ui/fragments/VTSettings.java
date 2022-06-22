@@ -136,7 +136,7 @@ public class VTSettings extends MaterialPreferenceToolbarFragment {
 
         PreferencesUtil.addPreference(this, "", Globals.getString("vkconnect"), "", oldicons() ? "ic_tags_24" : "ic_user_circle_outline_28", preference -> {
             Context context = getContext();
-            VKUIwrapper.setLink("https://id.vk.com/account");
+            VKUIwrapper.officalLinks("account");
             Intent a2 = new Navigator(VKUIwrapper.class).b(context);
             context.startActivity(a2);
             return false;
@@ -158,7 +158,8 @@ public class VTSettings extends MaterialPreferenceToolbarFragment {
 
         PreferencesUtil.addPreference(this, "", Globals.getString("bugs"), "", oldicons() ? "ic_bug_24" : "ic_bug_outline_28", preference -> {
             Context context = getContext();
-            Intent a2 = new Navigator(BugtrackerFragment.class).b(context);
+            VKUIwrapper.officalLinks("bugs");
+            Intent a2 = new Navigator(VKUIwrapper.class).b(context);
             context.startActivity(a2);
             return false;
         });
