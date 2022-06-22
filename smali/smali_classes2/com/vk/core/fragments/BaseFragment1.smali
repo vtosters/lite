@@ -177,17 +177,9 @@
     invoke-super {p0}, Landroidx/fragment/app/Fragment;->onPause()V
 
     .line 3
-    sget-object v0, Lcom/vk/metrics/reporters/UiScreenReporter;->b:Lcom/vk/metrics/reporters/UiScreenReporter;
-
     invoke-virtual {p0}, Lcom/vk/core/fragments/FragmentImpl;->O4()Ljava/lang/String;
 
-    move-result-object v1
-
     invoke-virtual {p0}, Lcom/vk/core/fragments/FragmentImpl;->N4()I
-
-    move-result v2
-
-    invoke-virtual {v0, v1, v2}, Lcom/vk/metrics/reporters/UiScreenReporter;->a(Ljava/lang/String;I)V
 
     return-void
 .end method
@@ -206,13 +198,7 @@
     invoke-super {p0}, Lcom/vk/core/fragments/FragmentImpl;->onResume()V
 
     .line 3
-    sget-object v0, Lcom/vk/metrics/reporters/UiScreenReporter;->b:Lcom/vk/metrics/reporters/UiScreenReporter;
-
     invoke-virtual {p0}, Lcom/vk/core/fragments/FragmentImpl;->N4()I
-
-    move-result v1
-
-    invoke-virtual {v0, v1}, Lcom/vk/metrics/reporters/UiScreenReporter;->a(I)V
 
     return-void
 .end method

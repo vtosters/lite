@@ -216,10 +216,6 @@
     move-exception v0
 
     .line 2
-    sget-object v1, Lcom/vk/metrics/reporters/UICrashReporter;->b:Lcom/vk/metrics/reporters/UICrashReporter;
-
-    invoke-virtual {v1, p0, v0, p1}, Lcom/vk/metrics/reporters/UICrashReporter;->a(Landroidx/appcompat/app/AppCompatActivity;Ljava/lang/Exception;Landroid/view/KeyEvent;)V
-
     const/4 p1, 0x0
 
     return p1
@@ -242,10 +238,6 @@
     move-exception v0
 
     .line 2
-    sget-object v1, Lcom/vk/metrics/reporters/UICrashReporter;->b:Lcom/vk/metrics/reporters/UICrashReporter;
-
-    invoke-virtual {v1, p0, v0, p1}, Lcom/vk/metrics/reporters/UICrashReporter;->a(Landroidx/appcompat/app/AppCompatActivity;Ljava/lang/Exception;Landroid/view/MotionEvent;)V
-
     const/4 p1, 0x0
 
     return p1
@@ -797,11 +789,6 @@
     move-exception p1
 
     .line 2
-    sget-object v0, Lcom/vk/metrics/reporters/UICrashReporter;->b:Lcom/vk/metrics/reporters/UICrashReporter;
-
-    const-string v1, "setRequestedOrientation"
-
-    invoke-virtual {v0, p0, p1, v1}, Lcom/vk/metrics/reporters/UICrashReporter;->a(Landroidx/appcompat/app/AppCompatActivity;Ljava/lang/Exception;Ljava/lang/String;)V
 
     :goto_0
     return-void
