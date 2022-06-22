@@ -211,7 +211,7 @@
     <string name="api_method_cant_be_empty">Метод api не может быть пустым или null</string>
     <string name="app_install">Установить</string>
     <string name="app_launch">Запустить</string>
-    <string name="app_name">ВТЛайт</string>
+    <string name="app_name">Лайт</string>
     <string name="app_name_orig">VK</string>
     <string name="app_remove_confirm">Вы действительно хотите удалить эту игру?</string>
     <string name="apps_remove_action">Убрать</string>
@@ -3310,7 +3310,7 @@
     <string name="sett_compress_photos">Сжимать фотографии</string>
     <string name="sett_compress_videos">Сжимать видео</string>
     <string name="sett_dark_mode">Тёмная тема</string>
-    <string name="sett_debug">Debug</string>
+    <string name="sett_debug">Для разработчиков</string>
     <string name="sett_dnd_8hours">Не беспокоить 8 часов</string>
     <string name="sett_dnd_cancel">Включить уведомления</string>
     <string name="sett_dnd_desc">Уведомления включатся автоматически %s</string>
@@ -5374,7 +5374,6 @@
     <string name="vtlmsgflat">Плоские сообщения</string>
     <string name="vtlupdmsg">Обновить</string>
     <string name="BGStickerssum">Для включения/отключения вам необходимо очистить кэш приложения</string>
-    <string name="app_name_orig">ВКонтакте</string>
     <string name="addinf">Дополнительная информация</string>
     <string name="copyid">Скопировать айди</string>
     <string name="vtssfs">VT Функции</string>
