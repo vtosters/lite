@@ -12,8 +12,8 @@ import com.vk.navigation.Navigator;
 
 import ru.vtosters.lite.utils.VKUIwrapper;
 
-public class VKIDProtection {
-    public static void alert(final Activity activity) {
+public class VKIDProtection{
+    public static void alert(final Activity activity){
         AlertDialog.Builder builder = new AlertDialog.Builder(activity);
         builder.setTitle(getString("debug_warning"));
         builder.setMessage(getString("vkidsumm"));
@@ -27,7 +27,7 @@ public class VKIDProtection {
             Intent a2 = new Navigator(VKUIwrapper.class).b(activity);
             activity.startActivity(a2);
         });
-        if (getBoolValue("showAlertVkId", true)) {
+        if(getBoolValue("showAlertVkId", true)){
             builder.show();
         }
     }

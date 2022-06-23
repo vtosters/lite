@@ -1,6 +1,6 @@
 package ru.vtosters.lite.utils;
 
-public class ProfileHide {
+public class ProfileHide{
 //    private static final OkHttpClient client = new OkHttpClient();
 //
 //    public static void injectMap(HashMap<Integer, AdministratorProfileFragment.a.a> hashMap) {

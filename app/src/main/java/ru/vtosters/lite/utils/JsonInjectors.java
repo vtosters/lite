@@ -8,8 +8,8 @@ import org.json.JSONObject;
 
 import java.util.Random;
 
-public class JsonInjectors {
-    public static JSONObject profileButton() throws JSONException {
+public class JsonInjectors{
+    public static JSONObject profileButton() throws JSONException{
         String pic = "https:\\/\\/sun1-18.userapi.com\\/NLd_rNpGuSaBnPV6O-j5mqCGZk8BK8drAMd2LQ\\/5R-DEF37PFs.png";
         String title = "Помоги проекту донатом и получи бонус!";
         String link = "https:\\/\\/vk.com\\/vtosters_official";
@@ -19,7 +19,7 @@ public class JsonInjectors {
         return jsonObj;
     }
 
-    public static JSONObject discoverBanner() throws JSONException {
+    public static JSONObject discoverBanner() throws JSONException{
         String smallimg = "https:\\/\\/sun1-25.userapi.com\\/3D4YtNHjgwoyxav3FksnYRINp_FhWULuDKYdcA\\/zfCUgKMS0O4.png";
         String background = "https:\\/\\/images.wsj.net\\/im-501403";
         String title = "Задонать";
@@ -30,21 +30,21 @@ public class JsonInjectors {
         return jsonObj;
     }
 
-    public static JSONObject discoverBannerButton() throws JSONException {
+    public static JSONObject discoverBannerButton() throws JSONException{
         String link = "vk.com\\/vtosters_official";
 
         JSONObject jsonObj = new JSONObject("{\"type\":\"open_url\",\"url\":\"" + link + "\",\"target\":\"internal\"}");
         return jsonObj;
     }
 
-    public static String haveDonateBanner() {
+    public static String haveDonateBanner(){
         Random random = new Random();
         int randomshower = random.nextInt(8);
 
         return hasVerification() || donaterecomm() || randomshower != 1 ? "null" : "info";
     }
 
-    public static String haveDonateButton() {
+    public static String haveDonateButton(){
         Random random = new Random();
         int randomshower = random.nextInt(10);
 

@@ -19,12 +19,12 @@ import java.io.FileOutputStream;
 import java.io.IOException;
 import java.nio.charset.StandardCharsets;
 
-public class LogWriterService extends Service {
-    public LogWriterService() {
+public class LogWriterService extends Service{
+    public LogWriterService(){
     }
 
     @Override
-    public int onStartCommand(Intent intent, int flags, int startId) {
+    public int onStartCommand(Intent intent, int flags, int startId){
         super.onStartCommand(intent, flags, startId);
 
         Log.d("LogWriterService", "The service has been started");
@@ -32,7 +32,7 @@ public class LogWriterService extends Service {
         try {
             var exists = file.createNewFile();
 
-            if (!exists) {
+            if(!exists){
                 file.delete();
                 file.createNewFile();
             }
@@ -50,7 +50,7 @@ public class LogWriterService extends Service {
         return START_NOT_STICKY;
     }
 
-    private void writeLog(Intent intent, File file) throws IOException {
+    private void writeLog(Intent intent, File file) throws IOException{
         FileOutputStream stream;
         stream = new FileOutputStream(file);
         stream.write(intent.getStringExtra("log").getBytes(StandardCharsets.UTF_8));
@@ -60,7 +60,7 @@ public class LogWriterService extends Service {
 
     @Nullable
     @Override
-    public IBinder onBind(Intent intent) {
+    public IBinder onBind(Intent intent){
         return null;
     }
 }

@@ -10,18 +10,17 @@ import android.os.Bundle;
 
 import androidx.preference.Preference;
 
-import com.vtosters.lite.R;
 import com.vtosters.lite.general.fragments.MaterialPreferenceToolbarFragment;
 
-public class MessagesFragment extends MaterialPreferenceToolbarFragment {
+public class MessagesFragment extends MaterialPreferenceToolbarFragment{
     @Override
-    public void onCreate(Bundle bundle) {
+    public void onCreate(Bundle bundle){
         super.onCreate(bundle);
         addPreferencesFromResource(getIdentifier("preferences_messages", "xml"));
         prefs();
     }
 
-    private void prefs() {
+    private void prefs(){
         findPreference("vkme").setOnPreferenceClickListener(new MessagesFragment.restart());
         findPreference("vkme_notifs").setOnPreferenceClickListener(new MessagesFragment.restart());
         findPreference("isBGStickersEnabled").setOnPreferenceClickListener(new MessagesFragment.clearCache());
@@ -29,22 +28,12 @@ public class MessagesFragment extends MaterialPreferenceToolbarFragment {
         findPreference("systememoji").setOnPreferenceClickListener(new MessagesFragment.restart());
     }
 
-    public boolean restart(Preference preference) {
+    public boolean restart(Preference preference){
         restartApplicationWithTimer();
         return true;
     }
 
-    public class restart implements Preference.OnPreferenceClickListener {
-        restart() {
-        }
-
-        @Override
-        public boolean onPreferenceClick(Preference preference) {
-            return MessagesFragment.this.restart(preference);
-        }
-    }
-
-    public boolean clearCache(Preference preference, Object obj) {
+    public boolean clearCache(Preference preference, Object obj){
         SharedPreferences prefs = getContext().getSharedPreferences("stickers", Context.MODE_PRIVATE);
         SharedPreferences prefs2 = getContext().getSharedPreferences("stickers_storage", Context.MODE_PRIVATE);
         prefs.edit().clear().commit();
@@ -54,12 +43,22 @@ public class MessagesFragment extends MaterialPreferenceToolbarFragment {
         return true;
     }
 
-    public class clearCache implements Preference.OnPreferenceClickListener {
-        clearCache() {
+    public class restart implements Preference.OnPreferenceClickListener{
+        restart(){
         }
 
         @Override
-        public boolean onPreferenceClick(Preference preference) {
+        public boolean onPreferenceClick(Preference preference){
+            return MessagesFragment.this.restart(preference);
+        }
+    }
+
+    public class clearCache implements Preference.OnPreferenceClickListener{
+        clearCache(){
+        }
+
+        @Override
+        public boolean onPreferenceClick(Preference preference){
             return MessagesFragment.this.restart(preference);
         }
     }

@@ -22,23 +22,23 @@ import java.io.StringWriter;
 
 import ru.vtosters.lite.deviceinfo.DeviceInfoCollector;
 
-public class Crashreporter {
+public class Crashreporter{
     protected static String logString;
 
-    public static String getStackTrace(Throwable th) {
+    public static String getStackTrace(Throwable th){
         StringWriter stringWriter = new StringWriter();
         th.printStackTrace(new PrintWriter(stringWriter));
         return stringWriter.toString();
     }
 
-    public static void init(Activity activity) {
+    public static void init(Activity activity){
         final var defaultUncaughtExceptionHandler = Thread.getDefaultUncaughtExceptionHandler();
         Thread.setDefaultUncaughtExceptionHandler((thread, th) -> Crashreporter.start(defaultUncaughtExceptionHandler, thread, th, activity));
     }
 
-    static void start(Thread.UncaughtExceptionHandler uncaughtExceptionHandler, Thread thread, Throwable th, Activity activity) {
+    static void start(Thread.UncaughtExceptionHandler uncaughtExceptionHandler, Thread thread, Throwable th, Activity activity){
         logString = getStackTrace(th) + "\n\n" + new DeviceInfoCollector().collect(getContext()).toDeviceName() + ", commit: " + getBuildNumber();
-        if (Build.VERSION.SDK_INT >= 26) {
+        if(Build.VERSION.SDK_INT >= 26){
             var notificationChannel = new NotificationChannel("crashes", "crash", NotificationManager.IMPORTANCE_DEFAULT);
             notificationChannel.enableVibration(true);
             notificationChannel.enableLights(true);
@@ -48,7 +48,7 @@ public class Crashreporter {
         var foxbinIntent = new Intent("com.f0x1d.dogbin.ACTION_UPLOAD_TO_FOXBIN");
         foxbinIntent.putExtra("android.intent.extra.TEXT", logString);
         foxbinIntent.setType("text/plain");
-        if (!isFoxbinInstalled()) {
+        if(!isFoxbinInstalled()){
             foxbinIntent = new Intent("android.intent.action.VIEW");
             foxbinIntent.setData(Uri.parse("https://play.google.com/store/apps/details?id=com.f0x1d.dogbin"));
             foxbinIntent.addFlags(Intent.FLAG_ACTIVITY_NO_USER_ACTION);
@@ -65,14 +65,14 @@ public class Crashreporter {
         builder.setContentText(logString);
         builder.setStyle(new Notification.BigTextStyle().bigText(logString));
         builder.setAutoCancel(true);
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.KITKAT_WATCH) {
+        if(Build.VERSION.SDK_INT >= Build.VERSION_CODES.KITKAT_WATCH){
             builder.addAction(new Notification.Action(0, getString("vtl_crash_upload"), PendingIntent.getActivity(getContext(), (int) (Math.random() * 100.0d), foxbinIntent, PendingIntent.FLAG_CANCEL_CURRENT)));
             builder.addAction(new Notification.Action(0, getString("vtl_crash_save"), psaveLogIntent));
         } else {
             builder.setContentIntent(PendingIntent.getActivity(activity, 0, foxbinIntent, PendingIntent.FLAG_ONE_SHOT));
         }
 
-        if (Build.VERSION.SDK_INT >= 26) {
+        if(Build.VERSION.SDK_INT >= 26){
             builder.setChannelId("crashes");
         }
 
@@ -82,7 +82,7 @@ public class Crashreporter {
         uncaughtExceptionHandler.uncaughtException(thread, th);
     }
 
-    private static boolean isFoxbinInstalled() {
+    private static boolean isFoxbinInstalled(){
         var pm = getContext().getPackageManager();
         try {
             pm.getPackageInfo("com.f0x1d.dogbin", 0);

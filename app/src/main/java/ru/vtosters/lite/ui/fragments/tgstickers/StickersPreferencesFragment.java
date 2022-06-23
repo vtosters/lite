@@ -13,10 +13,10 @@ import ru.vtosters.lite.tgs.TGRoot;
 import ru.vtosters.lite.ui.PreferencesUtil;
 import ru.vtosters.lite.utils.Globals;
 
-public class StickersPreferencesFragment extends MaterialPreferenceToolbarFragment {
+public class StickersPreferencesFragment extends MaterialPreferenceToolbarFragment{
 
     @Override
-    public void onCreate(Bundle bundle) {
+    public void onCreate(Bundle bundle){
         super.onCreate(bundle);
 
         int vtosterXml = getIdentifier("empty", "xml");
@@ -84,7 +84,7 @@ public class StickersPreferencesFragment extends MaterialPreferenceToolbarFragme
     }
 
     @Override
-    public int T4() {
+    public int T4(){
         return getIdentifier("vtltgs", "string");
     }
 }

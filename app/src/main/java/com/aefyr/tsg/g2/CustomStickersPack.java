@@ -7,7 +7,7 @@ import java.io.File;
 /**
  * Created by Aefyr on 20.05.2018.
  */
-public abstract class CustomStickersPack {
+public abstract class CustomStickersPack{
 
     public abstract File folder();
 

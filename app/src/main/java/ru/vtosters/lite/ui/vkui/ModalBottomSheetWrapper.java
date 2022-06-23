@@ -13,19 +13,19 @@ import com.vk.core.dialogs.bottomsheet.ModalBottomSheet;
 import ru.vtosters.lite.utils.Globals;
 import ru.vtosters.lite.utils.Themes;
 
-public class ModalBottomSheetWrapper {
+public class ModalBottomSheetWrapper{
     public final ModalBottomSheet.a builder;
 
-    public ModalBottomSheetWrapper(Activity activity) {
+    public ModalBottomSheetWrapper(Activity activity){
         builder = new ModalBottomSheet.a(activity);
     }
 
-    public ModalBottomSheetWrapper setTitle(String title) {
+    public ModalBottomSheetWrapper setTitle(String title){
         builder.b(title);
         return this;
     }
 
-    public ModalBottomSheetWrapper setUpdateInfoView(String version, String changelog) {
+    public ModalBottomSheetWrapper setUpdateInfoView(String version, String changelog){
         var context = Globals.getContext();
         var container = new LinearLayout(context);
         var title = new TextView(context);
@@ -54,15 +54,16 @@ public class ModalBottomSheetWrapper {
     // try to call a true function and you will understand my pain
     public ModalBottomSheetWrapper setMessage(
             String text
-    ) {
-        builder.a(text, listener -> {});
+    ){
+        builder.a(text, listener -> {
+        });
         return this;
     }
 
     public ModalBottomSheetWrapper setClickableMessage(
             String text,
             Runnable callback
-    ) {
+    ){
         builder.a(text, listener -> callback.run());
         return this;
     }
@@ -70,26 +71,26 @@ public class ModalBottomSheetWrapper {
     public ModalBottomSheetWrapper setPositiveButton(
             String text,
             Runnable callback
-    ) {
+    ){
         builder.a(text, kostil -> callback.run());
         return this;
     }
 
-    public ModalBottomSheetWrapper setSubtitle(String text) {
+    public ModalBottomSheetWrapper setSubtitle(String text){
         builder.b((CharSequence) text);
         return this;
     }
 
-    public ModalBottomSheetWrapper setView(View view) {
+    public ModalBottomSheetWrapper setView(View view){
         builder.a(view);
         return this;
     }
 
-    public ModalBottomSheet show() {
+    public ModalBottomSheet show(){
         return builder.a("");
     }
 
-    public ModalBottomSheet show(boolean isCancellable) {
+    public ModalBottomSheet show(boolean isCancellable){
         var sheet = builder.a("");
         sheet.setCancelable(isCancellable);
         return sheet;

@@ -46,7 +46,7 @@ import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
 
-public class DockBarManager {
+public class DockBarManager{
     public static final int MIN_SELECTED_TABS_LIMIT = 3;
     public static final int MAX_SELECTED_TABS_LIMIT = 9;
 
@@ -57,40 +57,42 @@ public class DockBarManager {
             getString("dockbar_selected_items"),
             getString("dockbar_unselected_items")
     );
-    public DockBarManager() {
+
+    public DockBarManager(){
         load();
     }
 
-    public static DockBarManager getInstance() {
-        if (sInstance == null)
+    public static DockBarManager getInstance(){
+        if(sInstance == null)
             sInstance = new DockBarManager();
         return sInstance;
     }
 
-    private static String readFully(InputStream is) throws IOException {
+    private static String readFully(InputStream is) throws IOException{
         ByteArrayOutputStream bos = new ByteArrayOutputStream();
         byte[] buffer = new byte[2048];
         int len;
-        while ((len = is.read(buffer)) > 0) {
+        while((len = is.read(buffer)) > 0) {
             bos.write(buffer, 0, len);
         }
         return bos.toString();
     }
 
-    private void load() {
+    private void load(){
         File dockbar = new File(getContext().getFilesDir(), "dockbar.json");
 
-        if (!dockbar.exists()) {
-            if(vkme()) {
+        if(!dockbar.exists()){
+            if(vkme()){
                 mSelectedTabs.add(new DockBarTab("tab_settings", R.drawable.ic_settings_24, R.string.menu_settings, R.id.menu_settings, useNewSettings()));
-                if(vkme_notifs()) mSelectedTabs.add(new DockBarTab("tab_feedback", oldicons() ? R.drawable.ic_notification_24 : R.drawable.ic_menu_notification_outline_28, R.string.feedback, R.id.tab_feedback, NotificationsContainerFragment.class));
+                if(vkme_notifs())
+                    mSelectedTabs.add(new DockBarTab("tab_feedback", oldicons() ? R.drawable.ic_notification_24 : R.drawable.ic_menu_notification_outline_28, R.string.feedback, R.id.tab_feedback, NotificationsContainerFragment.class));
                 mSelectedTabs.add(new DockBarTab("tab_messages", oldicons() ? R.drawable.ic_message_24 : R.drawable.ic_message_outline_24, R.string.messages, R.id.tab_messages, DialogsFragment.class));
                 mSelectedTabs.add(new DockBarTab("tab_profile", R.drawable.libverify_ic_account_circle_white, R.string.profile, R.id.profile, ProfileFragment.class));
                 return;
             }
 
             mSelectedTabs.add(new DockBarTab("tab_news", oldicons() ? R.drawable.ic_newsfeed_28 : R.drawable.ic_menu_newsfeed_outline_28, R.string.newsfeed, R.id.tab_news, newfeed() ? HomeFragment.class : NewsfeedFragment.class));
-            mSelectedTabs.add(new DockBarTab("tab_discover", oldicons() ? R.drawable.ic_menu_search_28 : R.drawable.ic_menu_search_outline_28, R.string.search, R.id.tab_discover, DiscoverFragment.class ));
+            mSelectedTabs.add(new DockBarTab("tab_discover", oldicons() ? R.drawable.ic_menu_search_28 : R.drawable.ic_menu_search_outline_28, R.string.search, R.id.tab_discover, DiscoverFragment.class));
             mSelectedTabs.add(new DockBarTab("tab_messages", oldicons() ? R.drawable.ic_message_24 : R.drawable.ic_message_outline_24, R.string.messages, R.id.tab_messages, DialogsFragment.class));
             mSelectedTabs.add(new DockBarTab("tab_feedback", oldicons() ? R.drawable.ic_notification_24 : R.drawable.ic_menu_notification_outline_28, R.string.feedback, R.id.tab_feedback, NotificationsContainerFragment.class));
             mSelectedTabs.add(new DockBarTab("tab_menu", oldicons() ? R.drawable.ic_menu_more_28 : R.drawable.ic_menu_more_outline_28, R.string.menu, R.id.tab_menu, MenuFragment.class));
@@ -116,7 +118,7 @@ public class DockBarManager {
                 JSONObject json = new JSONObject(readFully(new FileInputStream(dockbar)));
 
                 JSONArray selected = json.getJSONArray("selected");
-                for (int i = 0; i < selected.length(); i++) {
+                for(int i = 0; i < selected.length(); i++) {
                     JSONObject item = selected.getJSONObject(i);
                     DockBarTab tab = new DockBarTab(
                             item.getString("tag"),
@@ -125,16 +127,16 @@ public class DockBarManager {
                             item.getInt("id"),
                             Class.forName(item.getString("fragmentClass"))
                     );
-                    if (newfeed()) {
-                        if (tab.fragmentClass == NewsfeedFragment.class) {
+                    if(newfeed()){
+                        if(tab.fragmentClass == NewsfeedFragment.class){
                             tab.fragmentClass = HomeFragment.class;
-                        } else if (tab.fragmentClass == DiscoverFragment.class) {
+                        } else if(tab.fragmentClass == DiscoverFragment.class){
                             tab.fragmentClass = DiscoverFragment.class;
                         }
                     } else {
-                        if (tab.fragmentClass == HomeFragment.class) {
+                        if(tab.fragmentClass == HomeFragment.class){
                             tab.fragmentClass = NewsfeedFragment.class;
-                        } else if (tab.fragmentClass == DiscoverFragment.class) {
+                        } else if(tab.fragmentClass == DiscoverFragment.class){
                             tab.fragmentClass = DiscoverFragment.class;
                         }
                     }
@@ -142,7 +144,7 @@ public class DockBarManager {
                 }
 
                 JSONArray disabled = json.getJSONArray("disabled");
-                for (int i = 0; i < disabled.length(); i++) {
+                for(int i = 0; i < disabled.length(); i++) {
                     JSONObject item = disabled.getJSONObject(i);
                     DockBarTab tab = new DockBarTab(
                             item.getString("tag"),
@@ -151,16 +153,16 @@ public class DockBarManager {
                             item.getInt("id"),
                             Class.forName(item.getString("fragmentClass"))
                     );
-                    if (newfeed()) {
-                        if (tab.fragmentClass == NewsfeedFragment.class) {
+                    if(newfeed()){
+                        if(tab.fragmentClass == NewsfeedFragment.class){
                             tab.fragmentClass = HomeFragment.class;
-                        } else if (tab.fragmentClass == DiscoverFragment.class) {
+                        } else if(tab.fragmentClass == DiscoverFragment.class){
                             tab.fragmentClass = DiscoverFragment.class;
                         }
                     } else {
-                        if (tab.fragmentClass == HomeFragment.class) {
+                        if(tab.fragmentClass == HomeFragment.class){
                             tab.fragmentClass = NewsfeedFragment.class;
-                        } else if (tab.fragmentClass == DiscoverFragment.class) {
+                        } else if(tab.fragmentClass == DiscoverFragment.class){
                             tab.fragmentClass = DiscoverFragment.class;
                         }
                     }
@@ -173,17 +175,17 @@ public class DockBarManager {
         }
     }
 
-    public void delete() {
+    public void delete(){
         File dockbar = new File(getContext().getFilesDir(), "dockbar.json");
-        if (dockbar.exists()) dockbar.delete();
+        if(dockbar.exists()) dockbar.delete();
     }
 
-    public void save() {
+    public void save(){
         try {
             File dockbar = new File(getContext().getFilesDir(), "dockbar.json");
 
             JSONArray selected = new JSONArray();
-            for (DockBarTab tab : mSelectedTabs) {
+            for(DockBarTab tab : mSelectedTabs) {
 
                 JSONObject item = new JSONObject()
                         .put("tag", tab.tag)
@@ -195,7 +197,7 @@ public class DockBarManager {
             }
 
             JSONArray disabled = new JSONArray();
-            for (DockBarTab tab : mDisabledTabs) {
+            for(DockBarTab tab : mDisabledTabs) {
                 JSONObject item = new JSONObject()
                         .put("tag", tab.tag)
                         .put("iconID", tab.iconID)
@@ -215,28 +217,28 @@ public class DockBarManager {
         }
     }
 
-    public void swap(DockBarAdapter adapter, List<DockBarTab> list, int itemType, int fromPosition, int toPosition) {
+    public void swap(DockBarAdapter adapter, List<DockBarTab> list, int itemType, int fromPosition, int toPosition){
         int curr = adapter.getIndexByViewType(fromPosition, itemType);
         int target = adapter.getIndexByViewType(toPosition, itemType);
-        if (fromPosition < toPosition) {
-            for (int i = curr; i < target; i++) {
+        if(fromPosition < toPosition){
+            for(int i = curr; i < target; i++) {
                 Collections.swap(list, i, i + 1);
             }
         } else {
-            for (int i = curr; i > target; i--) {
+            for(int i = curr; i > target; i--) {
                 Collections.swap(list, i, i - 1);
             }
         }
         adapter.notifyItemMoved(fromPosition, toPosition);// notifyItemMoved
     }
 
-    public void swapAndMigrate(DockBarAdapter adapter, int fromPosition, int toPosition) {
+    public void swapAndMigrate(DockBarAdapter adapter, int fromPosition, int toPosition){
         int curr = adapter.getIndexByViewType(fromPosition, adapter.getItemType(fromPosition));
         int target = adapter.getIndexByViewType(toPosition, adapter.getItemType(toPosition));
-        if (fromPosition < toPosition) {
+        if(fromPosition < toPosition){
 
             if(!vkme()){
-                if (mSelectedTabs.size() <= MIN_SELECTED_TABS_LIMIT || mSelectedTabs.get(curr).tag.equals("tab_menu")){
+                if(mSelectedTabs.size() <= MIN_SELECTED_TABS_LIMIT || mSelectedTabs.get(curr).tag.equals("tab_menu")){
                     return;
                 }
             }
@@ -245,16 +247,16 @@ public class DockBarManager {
             mSelectedTabs.remove(tab);
             mDisabledTabs.add(tab);
 
-            for (int i = mDisabledTabs.size() - 1; i > target; i--) {
+            for(int i = mDisabledTabs.size() - 1; i > target; i--) {
                 Collections.swap(mDisabledTabs, i, i - 1);
             }
 
-            for (int i = 0; i < target; i++) {
+            for(int i = 0; i < target; i++) {
                 Collections.swap(mDisabledTabs, i, i + 1);
             }
         } else {
 
-            if (mSelectedTabs.size() >= MAX_SELECTED_TABS_LIMIT) return;
+            if(mSelectedTabs.size() >= MAX_SELECTED_TABS_LIMIT) return;
 
             DockBarTab tab = mDisabledTabs.get(curr);
             mDisabledTabs.remove(tab);
@@ -263,15 +265,15 @@ public class DockBarManager {
         adapter.notifyItemMoved(fromPosition, toPosition);// notifyItemMoved
     }
 
-    public void move(DockBarAdapter adapter, int index) {
-        if (getItemType(index) == 1) {
+    public void move(DockBarAdapter adapter, int index){
+        if(getItemType(index) == 1){
             DockBarTab item = mSelectedTabs.get(getIndexByViewType(index, 1));
 
             mSelectedTabs.remove(item);
 
             mDisabledTabs.add(item);
 
-            for (int i = mDisabledTabs.size() - 1; i > 0; i--) {
+            for(int i = mDisabledTabs.size() - 1; i > 0; i--) {
                 Collections.swap(mDisabledTabs, i, i - 1);
             }
 
@@ -280,52 +282,52 @@ public class DockBarManager {
         }
     }
 
-    public int getItemCount() {
+    public int getItemCount(){
         return mSelectedTabs.size() + mDisabledTabs.size() + mGroups.size();
     }
 
-    public int getIndexByViewType(int position, int viewType) {
-        if (viewType == DockBarAdapter.SELECTED_TAB_TYPE) {
+    public int getIndexByViewType(int position, int viewType){
+        if(viewType == DockBarAdapter.SELECTED_TAB_TYPE){
             return position - 1;
-        } else if (viewType == DockBarAdapter.DISABLED_TAB_TYPE) {
+        } else if(viewType == DockBarAdapter.DISABLED_TAB_TYPE){
             return position - mSelectedTabs.size() - mGroups.size();
         } else {
             return position != 0 ? 1 : 0;
         }
     }
 
-    public int getItemType(int position) {
-        if (position == 0 || position == mSelectedTabs.size() + 1) {
+    public int getItemType(int position){
+        if(position == 0 || position == mSelectedTabs.size() + 1){
             return DockBarAdapter.GROUP_TITLE_TYPE;
-        } else if (position - 1 < mSelectedTabs.size()) {
+        } else if(position - 1 < mSelectedTabs.size()){
             return DockBarAdapter.SELECTED_TAB_TYPE;
-        } else if (position - 1 >= mSelectedTabs.size()) {
+        } else if(position - 1 >= mSelectedTabs.size()){
             return DockBarAdapter.DISABLED_TAB_TYPE;
         }
         return -1;
     }
 
-    public DockBarTab getSelectedTab(int pos) {
+    public DockBarTab getSelectedTab(int pos){
         return mSelectedTabs.get(getIndexByViewType(pos, 1));
     }
 
-    public int getTabCount() {
+    public int getTabCount(){
         return mSelectedTabs.size();
     }
 
-    public DockBarTab getDisabledTab(int pos) {
+    public DockBarTab getDisabledTab(int pos){
         return mDisabledTabs.get(getIndexByViewType(pos, 2));
     }
 
-    public String getGroupTitle(int pos) {
+    public String getGroupTitle(int pos){
         return mGroups.get(getIndexByViewType(pos, -1));
     }
 
-    public List<DockBarTab> getSelectedTabs() {
+    public List<DockBarTab> getSelectedTabs(){
         return mSelectedTabs;
     }
 
-    public List<DockBarTab> getDisabledTabs() {
+    public List<DockBarTab> getDisabledTabs(){
         return mDisabledTabs;
     }
 }

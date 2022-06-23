@@ -16,18 +16,18 @@ import android.os.PowerManager;
 
 import ru.vtosters.lite.utils.OEMDetector;
 
-public class DisableBattery {
-    public static void alert(Activity activity) {
-        if (OEMDetector.isOEM() && Build.VERSION.SDK_INT >= 23 && getBoolValue("showDoze", true)) {
+public class DisableBattery{
+    public static void alert(Activity activity){
+        if(OEMDetector.isOEM() && Build.VERSION.SDK_INT >= 23 && getBoolValue("showDoze", true)){
             final Context context = getContext();
-            if (!((PowerManager) context.getSystemService(Context.POWER_SERVICE)).isIgnoringBatteryOptimizations(context.getPackageName())) {
+            if(!((PowerManager) context.getSystemService(Context.POWER_SERVICE)).isIgnoringBatteryOptimizations(context.getPackageName())){
                 AlertDialog.Builder builder = new AlertDialog.Builder(activity);
                 builder.setTitle(getString("batteryissuetitle"));
                 builder.setMessage(getString("batteryissuesumm"));
                 builder.setCancelable(false);
-                builder.setPositiveButton(getString("batteryissuebtn1"), new DialogInterface.OnClickListener() {
+                builder.setPositiveButton(getString("batteryissuebtn1"), new DialogInterface.OnClickListener(){
                     @Override // android.content.DialogInterface.OnClickListener
-                    public void onClick(DialogInterface dialogInterface, int i) {
+                    public void onClick(DialogInterface dialogInterface, int i){
                         Intent intent = new Intent("android.settings.REQUEST_IGNORE_BATTERY_OPTIMIZATIONS");
                         StringBuilder sb = new StringBuilder();
                         sb.append("package:");
@@ -36,9 +36,9 @@ public class DisableBattery {
                         context.startActivity(intent);
                     }
                 });
-                builder.setNeutralButton(getString("batteryissuebtn2"), new DialogInterface.OnClickListener() {
+                builder.setNeutralButton(getString("batteryissuebtn2"), new DialogInterface.OnClickListener(){
                     @Override // android.content.DialogInterface.OnClickListener
-                    public void onClick(DialogInterface dialogInterface, int i) {
+                    public void onClick(DialogInterface dialogInterface, int i){
                         edit().putBoolean("showDoze", false).apply();
                     }
                 });

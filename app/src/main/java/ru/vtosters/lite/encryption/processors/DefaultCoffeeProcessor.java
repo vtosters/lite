@@ -10,11 +10,11 @@ import javax.crypto.spec.SecretKeySpec;
 
 import ru.vtosters.lite.encryption.base.IMProcessor;
 
-public class DefaultCoffeeProcessor extends IMProcessor {
+public class DefaultCoffeeProcessor extends IMProcessor{
     private final static String KEY = "stupidUsersMustD";
     private static Cipher dCipher, eCipher;
 
-    static {
+    static{
         try {
             SecretKeySpec key = new SecretKeySpec(KEY.getBytes(), "AES");
 
@@ -28,26 +28,26 @@ public class DefaultCoffeeProcessor extends IMProcessor {
         }
     }
 
-    private String toHex(String text) {
+    private String toHex(String text){
         char[] chars = text.toCharArray();
         StringBuilder str = new StringBuilder();
-        for (char aChar : chars) {
+        for(char aChar : chars) {
             String s = Integer.toHexString(aChar);
-            if (s.length() < 2) s = "0" + s;
+            if(s.length() < 2) s = "0" + s;
             str.append(s.toUpperCase()).append(" ");
         }
 
         String string = str.toString();
-        return string.substring(0, string.length()-1);
+        return string.substring(0, string.length() - 1);
     }
 
-    private String fromHex(String text) {
+    private String fromHex(String text){
         text = text.replace(" ", "");
         char[] chars = text.toCharArray();
-        char[] chars2 = new char[chars.length/2];
-        for (int i = 0; i < chars.length; i+=2) {
+        char[] chars2 = new char[chars.length / 2];
+        for(int i = 0; i < chars.length; i += 2) {
             String c = String.valueOf(chars[i]) + chars[i + 1];
-            chars2[i/2] = (char) Integer.parseInt(c, 16);
+            chars2[i / 2] = (char) Integer.parseInt(c, 16);
         }
 
         return new String(chars2);
@@ -55,7 +55,7 @@ public class DefaultCoffeeProcessor extends IMProcessor {
 
     @NonNull
     @Override
-    protected String encodeInternal(@NonNull String source, @Nullable byte[] key) {
+    protected String encodeInternal(@NonNull String source, @Nullable byte[] key){
         try {
             return toHex(Base64.encodeToString(eCipher.doFinal(source.getBytes()), 0));
         } catch (Exception e) {
@@ -67,7 +67,7 @@ public class DefaultCoffeeProcessor extends IMProcessor {
 
     @NonNull
     @Override
-    protected String decodeInternal(@NonNull String source, @Nullable byte[] key) {
+    protected String decodeInternal(@NonNull String source, @Nullable byte[] key){
         try {
             return new String(dCipher.doFinal(Base64.decode(fromHex(source), 0)));
         } catch (Exception e) {
@@ -79,25 +79,25 @@ public class DefaultCoffeeProcessor extends IMProcessor {
 
     @Override
     @NonNull
-    public String startTag() {
+    public String startTag(){
         return "VK CO FF EE ";
     }
 
     @Override
     @NonNull
-    public String endTag() {
+    public String endTag(){
         return " VK CO FF EE";
     }
 
     @NonNull
     @Override
-    public String getUIName() {
+    public String getUIName(){
         return "VK Coffee [default]";
     }
 
     @NonNull
     @Override
-    public String getPrefKey() {
+    public String getPrefKey(){
         return "coffee_default";
     }
 }

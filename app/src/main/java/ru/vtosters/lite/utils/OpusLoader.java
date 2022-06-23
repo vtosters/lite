@@ -9,7 +9,7 @@ import com.vk.medianative.MediaNative;
 
 import java.nio.ByteBuffer;
 
-public class OpusLoader {
+public class OpusLoader{
     private static long timetracker;
     private static boolean inited;
 
@@ -23,8 +23,8 @@ public class OpusLoader {
         }
     }
 
-    public static long getLength() {
-        if (isReadyToUse()) {
+    public static long getLength(){
+        if(isReadyToUse()){
             long length = System.currentTimeMillis() - timetracker;
             timetracker = System.currentTimeMillis();
             return length;
@@ -32,8 +32,8 @@ public class OpusLoader {
         return 0L;
     }
 
-    public static int AudioStartRecordBridge(String str) {
-        if (isReadyToUse()) {
+    public static int AudioStartRecordBridge(String str){
+        if(isReadyToUse()){
             // Init custom AudioStartRecord
             timetracker = System.currentTimeMillis();
             return 1;
@@ -41,21 +41,21 @@ public class OpusLoader {
         return MediaNative.audioStartRecord(str);
     }
 
-    public static int AudioWriteFrameBridge(ByteBuffer buffer, int length) {
-        if (isReadyToUse()) {
+    public static int AudioWriteFrameBridge(ByteBuffer buffer, int length){
+        if(isReadyToUse()){
             // Init custom AudioWriteFrame
         }
         return MediaNative.audioWriteFrame(buffer, length);
     }
 
-    public static void AudioStopRecordBridge() {
-        if (isReadyToUse()) {
+    public static void AudioStopRecordBridge(){
+        if(isReadyToUse()){
             // Init custom AudioStopRecord
         }
         MediaNative.audioStopRecord();
     }
 
-    private static boolean isReadyToUse() {
+    private static boolean isReadyToUse(){
         return opusmodule() && inited;
     }
 }

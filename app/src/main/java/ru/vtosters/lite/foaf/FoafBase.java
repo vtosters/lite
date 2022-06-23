@@ -10,7 +10,6 @@ import static ru.vtosters.lite.utils.Proxy.proxy;
 import android.app.ProgressDialog;
 import android.content.Context;
 
-import androidx.appcompat.app.AlertDialog;
 import androidx.exifinterface.media.ExifInterface;
 
 import com.vk.core.dialogs.alert.VkAlertDialog;
@@ -27,31 +26,31 @@ import java.util.regex.Pattern;
 import okhttp3.OkHttpClient;
 import ru.vtosters.lite.net.Request;
 
-public class FoafBase {
+public class FoafBase{
     private static final Pattern FOAF_REGEX = Pattern.compile("<ya:created dc:date=\"(.+?)\"\\/>");
     private static final Pattern FOAF_REGEX_LAST_SEEN = Pattern.compile("<ya:lastLoggedIn dc:date=\"(.*)(((\\+|-)\\d\\d):(\\d\\d))\"\\/>");
     private static final Pattern FOAF_REGEX_LOGIN = Pattern.compile("<ya:created dc:date=\"(.+?)\"\\/>");
     private static final OkHttpClient client = new OkHttpClient();
 
-    public static int GetLastSeenInt(int i) throws ParseException, IOException {
+    public static int GetLastSeenInt(int i) throws ParseException, IOException{
         Matcher matcher = FOAF_REGEX_LAST_SEEN.matcher(
                 client.a(
                         new okhttp3.Request.a().a(getLink(i)).b().a()
                 ).execute().a().g());
-        if (!matcher.find()) {
+        if(!matcher.find()){
             return 0;
         }
         return (int) (new SimpleDateFormat("yyyy-MM-dd'T'kk:mm:ss", Locale.getDefault()).parse(matcher.group(1)).getTime() / 1000);
     }
 
-    public static long GetLastSeenLong(int i) throws ParseException, IOException {
+    public static long GetLastSeenLong(int i) throws ParseException, IOException{
         return GetLastSeenInt(i);
     }
 
-    private static String getLink(int i) {
+    private static String getLink(int i){
         String str;
         StringBuilder sb;
-        if (proxy()) {
+        if(proxy()){
             sb = new StringBuilder();
             str = "https://" + getApiCom() + "/_/vk.com/foaf.php?id=";
         } else {
@@ -63,17 +62,17 @@ public class FoafBase {
         return sb.toString();
     }
 
-    public static void loadAndShow(Context context, int i) {
+    public static void loadAndShow(Context context, int i){
         ProgressDialog progressDialog = new ProgressDialog(context);
         progressDialog.setMessage(getString("com_facebook_loading"));
         progressDialog.setCancelable(false);
         progressDialog.show();
 
-        Request.RequestCallback callback =str -> FoafBase.lambdaLoadAndShow(progressDialog, context, i, str);
+        Request.RequestCallback callback = str -> FoafBase.lambdaLoadAndShow(progressDialog, context, i, str);
         Request.makeRequest(getLink(i), callback);
     }
 
-    static void lambdaLoadAndShow(ProgressDialog progressDialog, Context context, int i, String str) {
+    static void lambdaLoadAndShow(ProgressDialog progressDialog, Context context, int i, String str){
         try {
             progressDialog.cancel();
             Matcher matcher = FOAF_REGEX.matcher(str);
@@ -90,7 +89,7 @@ public class FoafBase {
         }
     }
 
-    private static long daysPassedFromFoafDate(String str) {
+    private static long daysPassedFromFoafDate(String str){
         try {
             Date parse = new SimpleDateFormat("yyyy-MM-dd").parse(str.split(" ")[1]);
             return TimeUnit.DAYS.convert(new Date().getTime() - parse.getTime(), TimeUnit.MILLISECONDS);
@@ -100,7 +99,7 @@ public class FoafBase {
         }
     }
 
-    private static String getNormalHumanDate(String str) {
+    private static String getNormalHumanDate(String str){
         String[] split = str.split(ExifInterface.GPS_DIRECTION_TRUE);
         return split[1].split("\\+")[0] + " " + split[0];
     }

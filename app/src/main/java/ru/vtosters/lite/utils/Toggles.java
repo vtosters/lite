@@ -8,9 +8,9 @@ import static ru.vtosters.lite.utils.Preferences.superapp;
 import com.vk.toggle.FeatureManager;
 import com.vk.toggle.Features;
 
-public class Toggles {
+public class Toggles{
     public static boolean redirect(Features.Type feature){
-        switch (feature) {
+        switch(feature) {
             case EXPERIMENT_NEWS_DISABLE_CACHE:
                 return feedcache();
             case FEATURE_SUPERAPP_MENU:

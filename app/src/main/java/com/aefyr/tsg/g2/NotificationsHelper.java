@@ -18,7 +18,7 @@ import java.util.concurrent.atomic.AtomicLong;
 /**
  * Created by Aefyr on 20.05.2018.
  */
-public class NotificationsHelper {
+public class NotificationsHelper{
     private static final int NOTIFICATION_ID_BASE = 3921337;
     private static final String NOTIFICATION_CHANNEL_ID = "tgss_chan_v5";
     private static final int MAX_UPDATE_NOTIFICATIONS_PER_SECOND = 3;
@@ -26,23 +26,23 @@ public class NotificationsHelper {
     private final HashMap<TelegramStickersPack, Integer> downloadingPacksNotificationsIds;
     private final Context c;
     private final NotificationManagerCompat manager;
-    private int currentNotificationN = 0;
     private final AtomicLong lastNotificationTime = new AtomicLong(0);
+    private int currentNotificationN = 0;
 
-    public NotificationsHelper(Context c) {
+    public NotificationsHelper(Context c){
         this.c = c;
         manager = NotificationManagerCompat.from(c);
 
 
         downloadingPacksNotificationsIds = new HashMap<>();
 
-        if (oreo()) {
+        if(oreo()){
             NotificationChannel notificationChan = new NotificationChannel(NOTIFICATION_CHANNEL_ID, "Сервис стикеров Telegram в VTosters", NotificationManager.IMPORTANCE_HIGH);
             ((NotificationManager) c.getSystemService(Context.NOTIFICATION_SERVICE)).createNotificationChannel(notificationChan);
         }
     }
 
-    public void packStartedDownloading(TelegramStickersPack pack) {
+    public void packStartedDownloading(TelegramStickersPack pack){
         int notificationId = NOTIFICATION_ID_BASE + currentNotificationN++;
         downloadingPacksNotificationsIds.put(pack, notificationId);
 
@@ -54,8 +54,8 @@ public class NotificationsHelper {
         manager.notify(notificationId, builder.build());
     }
 
-    public void packDownloadUpdated(TelegramStickersPack pack, int downloadProgress) {
-        if (System.currentTimeMillis() - lastNotificationTime.get() < MIN_TIME_BETWEEN_UPDATE_NOTIFICATIONS)
+    public void packDownloadUpdated(TelegramStickersPack pack, int downloadProgress){
+        if(System.currentTimeMillis() - lastNotificationTime.get() < MIN_TIME_BETWEEN_UPDATE_NOTIFICATIONS)
             return;
 
         lastNotificationTime.set(System.currentTimeMillis());
@@ -67,23 +67,23 @@ public class NotificationsHelper {
         builder.setOngoing(true);
         builder.setOnlyAlertOnce(true);
 
-        if (downloadingPacksNotificationsIds.containsKey(pack))
+        if(downloadingPacksNotificationsIds.containsKey(pack))
             manager.notify(downloadingPacksNotificationsIds.get(pack), builder.build());
     }
 
-    public void packDoneDownloading(TelegramStickersPack pack, boolean success, boolean wasUpdate, @Nullable Exception e) {
+    public void packDoneDownloading(TelegramStickersPack pack, boolean success, boolean wasUpdate, @Nullable Exception e){
         Notification.Builder builder = commonBuilder();
         builder.setProgress(0, 0, false);
         builder.setOngoing(false);
         builder.setContentTitle("Сервис стикеров Telegram в VTosters");
 
         String text;
-        if (success)
+        if(success)
             text = wasUpdate ? pack.title + " успешно обновлен" : pack.title + " успешно загружен";
         else
             text = wasUpdate ? pack.title + ": ошибка при обновлении" : pack.title + ": ошибка при загрузке";
 
-        if (e instanceof TelegramStickersGrabber.TSGException) {
+        if(e instanceof TelegramStickersGrabber.TSGException){
             text = pack.title + ": " + e.getMessage();
         }
 
@@ -92,20 +92,20 @@ public class NotificationsHelper {
         manager.notify(downloadingPacksNotificationsIds.remove(pack), builder.build());
     }
 
-    public void removePackNotification(TelegramStickersPack pack) {
+    public void removePackNotification(TelegramStickersPack pack){
         manager.cancel(downloadingPacksNotificationsIds.remove(pack));
     }
 
-    private Notification.Builder commonBuilder() {
+    private Notification.Builder commonBuilder(){
         var builder = new Notification.Builder(c).setPriority(Notification.PRIORITY_MAX).setSmallIcon(com.vtosters.lite.R.drawable.icon_vk_104);
-        if (oreo()) {
+        if(oreo()){
             builder.setChannelId(NOTIFICATION_CHANNEL_ID);
         }
 
         return builder;
     }
 
-    private boolean oreo() {
+    private boolean oreo(){
         return Build.VERSION.SDK_INT >= Build.VERSION_CODES.O;
     }
 }

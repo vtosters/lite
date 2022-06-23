@@ -60,10 +60,45 @@ import ru.vtosters.lite.utils.Globals;
 import ru.vtosters.lite.utils.SSFS;
 import ru.vtosters.lite.utils.VKUIwrapper;
 
-public class VTSettings extends MaterialPreferenceToolbarFragment {
+public class VTSettings extends MaterialPreferenceToolbarFragment{
+
+    public static String getValAsString(String stringid, Boolean value){
+        if(disableSettingsSumms()) return "";
+
+        if(value){
+            return Globals.getString(stringid) + ": " + Globals.getString("vtlsettenabled");
+        }
+
+        return Globals.getString(stringid) + ": " + Globals.getString("vtlsettdisabled");
+    }
+
+    public static String getSSFSsumm(){
+        if(disableSettingsSumms()) return "";
+
+        if(hasSpecialVerif())
+            return Globals.getString("vtlssfssumm") + ": " + Globals.getString("vtlsettverifyes");
+
+        return Globals.getString("vtlssfssumm") + ": " + Globals.getString("vtlsettverifno");
+    }
+
+    public static String getDocksumm(){
+        if(disableSettingsSumms()) return "";
+
+        return Globals.getString("vtldocksumm") + ": " + DockBarManager.getInstance().getTabCount();
+    }
+
+    public static String getTGSsumm(){
+        if(disableSettingsSumms()) return "";
+
+        return Globals.getString("vtltgssumm") + ": " + TelegramStickersService.getInstance(Globals.getContext()).getPacksListReference().size();
+    }
+
+    public static SharedPreferences getCurrentAccount(){
+        return Globals.getContext().getSharedPreferences("pref_account_manager", Context.MODE_PRIVATE);
+    }
 
     @Override
-    public void onCreate(Bundle bundle) {
+    public void onCreate(Bundle bundle){
         super.onCreate(bundle);
 
         String feedsumm = getValAsString("vtlfeedsumm", ads());
@@ -82,7 +117,7 @@ public class VTSettings extends MaterialPreferenceToolbarFragment {
         int vtosterXml = getIdentifier("empty", "xml");
         this.addPreferencesFromResource(vtosterXml);
 
-        PreferencesUtil.addPreferenceDrawable(this, "", "Аккаунты", getUsername() + (hasVerification()? Globals.getString("thanksfordonate") : Globals.getString("getdonate")), drawableFromUrl(getUserPhoto()), preference -> {
+        PreferencesUtil.addPreferenceDrawable(this, "", "Аккаунты", getUsername() + (hasVerification() ? Globals.getString("thanksfordonate") : Globals.getString("getdonate")), drawableFromUrl(getUserPhoto()), preference -> {
             AuthBridge.logout();
             restartApplication();
             return false;
@@ -90,7 +125,7 @@ public class VTSettings extends MaterialPreferenceToolbarFragment {
 
         PreferencesUtil.addPreferenceCategory(this, Globals.getString("vtsettdarktheme"));
 
-        PreferencesUtil.addMaterialSwitchPreference(this, "isdark", Globals.getString("vtsettdarktheme"), "",  oldicons() ? "ic_palette_24" : "ic_palette_outline_28", false, (preference, o) -> {
+        PreferencesUtil.addMaterialSwitchPreference(this, "isdark", Globals.getString("vtsettdarktheme"), "", oldicons() ? "ic_palette_24" : "ic_palette_outline_28", false, (preference, o) -> {
             boolean value = (boolean) o;
 
             if(!value){ // inverted
@@ -103,7 +138,7 @@ public class VTSettings extends MaterialPreferenceToolbarFragment {
             return true;
         });
 
-        if (Build.VERSION.SDK_INT >= 28 && false) { // TODO refactoring systen theme
+        if(Build.VERSION.SDK_INT >= 28 && false){ // TODO refactoring systen theme
             PreferencesUtil.addMaterialSwitchPreference(this, "systemtheme", Globals.getString("appearance_theme_use_system"), Globals.getString("appearance_theme_use_system_summary"), oldicons() ? "ic_recent_24" : "ic_recent_outline_28", true, (preference, o) -> {
                 boolean value = (boolean) o;
 
@@ -112,7 +147,7 @@ public class VTSettings extends MaterialPreferenceToolbarFragment {
             });
         }
 
-        if (!isGmsInstalled()) {
+        if(!isGmsInstalled()){
             PreferencesUtil.addPreference(this, "", Globals.getString("installgms"), "", "ic_alert", preference -> {
                 Context context = getContext();
                 Intent a2 = new Navigator(InstallGMSFragment.class).b(context);
@@ -201,7 +236,7 @@ public class VTSettings extends MaterialPreferenceToolbarFragment {
             return false;
         });
 
-        if (VKAccountManager.d().isMusicSubs()) {
+        if(VKAccountManager.d().isMusicSubs()){
             PreferencesUtil.addPreference(this, "", Globals.getString("subscription_music"), "", oldicons() ? "ic_music_24" : "ic_music_outline_28", preference -> {
                 Context context = getContext();
                 Intent a2 = new Navigator(MusicSubscriptionControlFragment.class).b(context);
@@ -217,9 +252,9 @@ public class VTSettings extends MaterialPreferenceToolbarFragment {
             return false;
         });
 
-        PreferencesUtil.addPreferenceCategory(this,  Globals.getString("vtsettmod"));
+        PreferencesUtil.addPreferenceCategory(this, Globals.getString("vtsettmod"));
 
-        if (!vkme()) {
+        if(!vkme()){
             PreferencesUtil.addPreference(this, "", Globals.getString("vtlfeed"), feedsumm, oldicons() ? "ic_newsfeed_24" : "ic_newsfeed_outline_28", preference -> {
                 Context context = getContext();
                 Intent a2 = new Navigator(FeedFragment.class).b(context);
@@ -234,7 +269,7 @@ public class VTSettings extends MaterialPreferenceToolbarFragment {
                 return false;
             });
 
-            if (isValidSignature())
+            if(isValidSignature())
                 PreferencesUtil.addPreference(this, "", Globals.getString("vtlmusic"), musicsumm, oldicons() ? "ic_music_24" : "ic_music_outline_28", preference -> {
                     Context context = getContext();
                     Intent a2 = new Navigator(MusicFragment.class).b(context);
@@ -325,7 +360,7 @@ public class VTSettings extends MaterialPreferenceToolbarFragment {
             return false;
         });
 
-        if (isValidSignature()) {
+        if(isValidSignature()){
             PreferencesUtil.addPreferenceCategory(this, Globals.getString("updates"));
 
             PreferencesUtil.addPreference(this, "", Globals.getString("checkforupdates"), "", "ic_download_24", preference -> {
@@ -344,47 +379,12 @@ public class VTSettings extends MaterialPreferenceToolbarFragment {
     }
 
     @Override
-    public void onResume() {
+    public void onResume(){
         super.onResume();
     }
 
-    public static String getValAsString(String stringid, Boolean value) {
-        if(disableSettingsSumms()) return "";
-
-        if (value){
-            return Globals.getString(stringid) + ": " + Globals.getString("vtlsettenabled");
-        }
-
-        return Globals.getString(stringid) + ": " + Globals.getString("vtlsettdisabled");
-    }
-
-    public static String getSSFSsumm() {
-        if(disableSettingsSumms()) return "";
-
-        if(hasSpecialVerif()) return Globals.getString("vtlssfssumm") + ": " + Globals.getString("vtlsettverifyes");
-
-        return Globals.getString("vtlssfssumm") + ": " + Globals.getString("vtlsettverifno");
-    }
-
-    public static String getDocksumm() {
-        if(disableSettingsSumms()) return "";
-
-        return Globals.getString("vtldocksumm") + ": " + DockBarManager.getInstance().getTabCount();
-    }
-
-    public static String getTGSsumm() {
-        if(disableSettingsSumms()) return "";
-
-        return Globals.getString("vtltgssumm") + ": " + TelegramStickersService.getInstance(Globals.getContext()).getPacksListReference().size();
-    }
-
-    public static SharedPreferences getCurrentAccount() {
-        return Globals.getContext().getSharedPreferences("pref_account_manager", Context.MODE_PRIVATE);
-    }
-
-
     @Override
-    public int T4() {
+    public int T4(){
         return getIdentifier("notification_settings", "string");
     }
 }

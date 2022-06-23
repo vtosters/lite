@@ -20,7 +20,7 @@ import java.util.List;
 import ru.vtosters.lite.utils.Themes;
 
 public class DockBarAdapter extends RecyclerView.Adapter
-        implements IItemTouchHelper {
+        implements IItemTouchHelper{
 
     public static final int SELECTED_TAB_TYPE = 1;
     public static final int DISABLED_TAB_TYPE = 2;
@@ -30,8 +30,8 @@ public class DockBarAdapter extends RecyclerView.Adapter
     private final DockBarManager mDockBarManager = DockBarManager.getInstance();
 
     @Override
-    public RecyclerView.ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
-        if (viewType == GROUP_TITLE_TYPE) {
+    public RecyclerView.ViewHolder onCreateViewHolder(ViewGroup parent, int viewType){
+        if(viewType == GROUP_TITLE_TYPE){
             return new GroupViewHolder(createGroupTitle());
         } else {
             return new DockBarEditViewHolder(createTabItem());
@@ -39,12 +39,12 @@ public class DockBarAdapter extends RecyclerView.Adapter
     }
 
     @Override
-    public int getItemViewType(int i) {
+    public int getItemViewType(int i){
         return getItemType(i);
     }
 
     @SuppressLint("NewApi")
-    private View createTabItem() {
+    private View createTabItem(){
         LinearLayout container = new LinearLayout(getContext());
         container.setTag("tab_item_container");
         container.setGravity(Gravity.CENTER_VERTICAL);
@@ -78,7 +78,7 @@ public class DockBarAdapter extends RecyclerView.Adapter
         return container;
     }
 
-    private View createGroupTitle() {
+    private View createGroupTitle(){
         LinearLayout layout = new LinearLayout(getContext());
         layout.setLayoutParams(new LinearLayout.LayoutParams(-1, -2));
 
@@ -99,46 +99,46 @@ public class DockBarAdapter extends RecyclerView.Adapter
     }
 
     @Override
-    public void onBindViewHolder(RecyclerView.ViewHolder holder, int position) {
-        if (holder instanceof GroupViewHolder) {
+    public void onBindViewHolder(RecyclerView.ViewHolder holder, int position){
+        if(holder instanceof GroupViewHolder){
             ((GroupViewHolder) holder).bind(mDockBarManager.getGroupTitle(position));
         } else {
             int viewType = getItemType(position);
-            if (viewType == SELECTED_TAB_TYPE) {
+            if(viewType == SELECTED_TAB_TYPE){
                 ((DockBarEditViewHolder) holder).bind(mDockBarManager.getSelectedTab(position));
-            } else if (viewType == DISABLED_TAB_TYPE) {
+            } else if(viewType == DISABLED_TAB_TYPE){
                 ((DockBarEditViewHolder) holder).bind(mDockBarManager.getDisabledTab(position));
             }
         }
     }
 
     @Override
-    public int getItemCount() {
+    public int getItemCount(){
         return mDockBarManager.getItemCount();
     }
 
     @Override
-    public void onItemDismiss(int index) {
+    public void onItemDismiss(int index){
         mDockBarManager.move(this, index);
     }
 
     @Override
-    public boolean onItemMove(int fromPosition, int toPosition) {
+    public boolean onItemMove(int fromPosition, int toPosition){
         int fromViewType = getItemType(fromPosition);
         int toViewType = getItemType(toPosition);
 
-        if (fromPosition < toPosition) {
+        if(fromPosition < toPosition){
 
-            if (fromViewType != toViewType) {
+            if(fromViewType != toViewType){
                 mDockBarManager.swapAndMigrate(this, fromPosition, toPosition);
             } else {
                 List<DockBarTab> list = fromViewType == SELECTED_TAB_TYPE ? mDockBarManager.getSelectedTabs() : mDockBarManager.getDisabledTabs();
                 mDockBarManager.swap(this, list, fromViewType, fromPosition, toPosition);
             }
 
-        } else if (toPosition != 0) {
+        } else if(toPosition != 0){
 
-            if (fromViewType != toViewType) {
+            if(fromViewType != toViewType){
                 mDockBarManager.swapAndMigrate(this, fromPosition, toPosition);
             } else {
                 List<DockBarTab> list = fromViewType == SELECTED_TAB_TYPE ? mDockBarManager.getSelectedTabs() : mDockBarManager.getDisabledTabs();
@@ -150,43 +150,43 @@ public class DockBarAdapter extends RecyclerView.Adapter
         return true;
     }
 
-    public int getIndexByViewType(int position, int viewType) {
+    public int getIndexByViewType(int position, int viewType){
         return mDockBarManager.getIndexByViewType(position, viewType);
     }
 
-    public int getItemType(int position) {
+    public int getItemType(int position){
         return mDockBarManager.getItemType(position);
     }
 
-    static class DockBarEditViewHolder extends RecyclerView.ViewHolder {
+    static class DockBarEditViewHolder extends RecyclerView.ViewHolder{
 
         private final ImageView mIcon;
         private final TextView mTitle;
 
-        public DockBarEditViewHolder(View itemView) {
+        public DockBarEditViewHolder(View itemView){
             super(itemView);
 
             mIcon = itemView.findViewWithTag("icon");
             mTitle = itemView.findViewWithTag("title");
         }
 
-        public void bind(DockBarTab tab) {
+        public void bind(DockBarTab tab){
             mIcon.setImageResource(tab.iconID);
             mTitle.setText(tab.titleID);
         }
     }
 
-    static class GroupViewHolder extends RecyclerView.ViewHolder {
+    static class GroupViewHolder extends RecyclerView.ViewHolder{
 
         private final TextView mGroupTitle;
 
-        public GroupViewHolder(View view) {
+        public GroupViewHolder(View view){
             super(view);
 
             mGroupTitle = view.findViewWithTag("group_title");
         }
 
-        public void bind(String groupTitle) {
+        public void bind(String groupTitle){
             mGroupTitle.setText(groupTitle);
         }
     }

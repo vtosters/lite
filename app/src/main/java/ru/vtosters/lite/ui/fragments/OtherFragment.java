@@ -32,16 +32,16 @@ import com.vtosters.lite.im.ImEngineProvider;
 import b.h.g.m.FileUtils;
 import ru.vtosters.lite.utils.Globals;
 
-public class OtherFragment extends MaterialPreferenceToolbarFragment {
+public class OtherFragment extends MaterialPreferenceToolbarFragment{
 
     @Override
-    public void onCreate(Bundle bundle) {
+    public void onCreate(Bundle bundle){
         super.onCreate(bundle);
         addPreferencesFromResource(getIdentifier("preferences_other", "xml"));
         prefs();
     }
 
-    private void prefs() {
+    private void prefs(){
         findPreference("firebasefix").setOnPreferenceClickListener(new a());
         findPreference("applicationstop").setOnPreferenceClickListener(new b());
         findPreference("tokencopy").setOnPreferenceClickListener(new c());
@@ -54,29 +54,40 @@ public class OtherFragment extends MaterialPreferenceToolbarFragment {
         // a("restoreprefs").a((Preference.c) new restoreprefs());
     }
 
-    class c implements Preference.OnPreferenceClickListener {
-        c() {
+    public static class d implements Preference.OnPreferenceClickListener{
+        d(){
         }
 
-        public void copy(Context context, String str) {
+        @Override // android.support.v7.preference.Preference.c
+        public boolean onPreferenceClick(Preference preference){
+            restartApplication();
+            return true;
+        }
+    }
+
+    class c implements Preference.OnPreferenceClickListener{
+        c(){
+        }
+
+        public void copy(Context context, String str){
             ((ClipboardManager) context.getSystemService(Context.CLIPBOARD_SERVICE)).setPrimaryClip(ClipData.newPlainText("MBH-ST", str));
             makeText(context, Globals.getString("copybtn"), LENGTH_SHORT).show();
             ToastUtils.a(Globals.getString("tokenwarning"));
         }
 
         @Override // android.support.v7.preference.Preference.c
-        public boolean onPreferenceClick(Preference preference) {
+        public boolean onPreferenceClick(Preference preference){
             copy(getContext(), getUserToken());
             return true;
         }
     }
 
-    public class e implements Preference.OnPreferenceClickListener {
-        e() {
+    public class e implements Preference.OnPreferenceClickListener{
+        e(){
         }
 
         @Override // android.support.v7.preference.Preference.c
-        public boolean onPreferenceClick(Preference preference) {
+        public boolean onPreferenceClick(Preference preference){
             SharedPreferences prefs = getContext().getSharedPreferences("stickers", Context.MODE_PRIVATE);
             SharedPreferences prefs2 = getContext().getSharedPreferences("stickers_storage", Context.MODE_PRIVATE);
             prefs.edit().clear().commit();
@@ -93,34 +104,23 @@ public class OtherFragment extends MaterialPreferenceToolbarFragment {
         }
     }
 
-    public class b implements Preference.OnPreferenceClickListener {
-        b() {
+    public class b implements Preference.OnPreferenceClickListener{
+        b(){
         }
 
         @Override // android.support.v7.preference.Preference.c
-        public boolean onPreferenceClick(Preference preference) {
+        public boolean onPreferenceClick(Preference preference){
             System.exit(0);
             return true;
         }
     }
 
-    public static class d implements Preference.OnPreferenceClickListener {
-        d() {
+    public class a implements Preference.OnPreferenceClickListener{
+        a(){
         }
 
         @Override // android.support.v7.preference.Preference.c
-        public boolean onPreferenceClick(Preference preference) {
-            restartApplication();
-            return true;
-        }
-    }
-
-    public class a implements Preference.OnPreferenceClickListener {
-        a() {
-        }
-
-        @Override // android.support.v7.preference.Preference.c
-        public boolean onPreferenceClick(Preference preference) {
+        public boolean onPreferenceClick(Preference preference){
             VKAccount b = VKAccountManager.d();
             PushSubscriber.e.a();
             ToastUtils.a(Globals.getString("fcmtokenrem"));
@@ -134,12 +134,12 @@ public class OtherFragment extends MaterialPreferenceToolbarFragment {
         }
     }
 
-    public class f implements Preference.OnPreferenceClickListener {
-        f() {
+    public class f implements Preference.OnPreferenceClickListener{
+        f(){
         }
 
         @Override // android.support.v7.preference.Preference.c
-        public boolean onPreferenceClick(Preference preference) {
+        public boolean onPreferenceClick(Preference preference){
             SharedPreferences prefs = getContext().getSharedPreferences("stickers", Context.MODE_PRIVATE);
             SharedPreferences prefs2 = getContext().getSharedPreferences("stickers_storage", Context.MODE_PRIVATE);
             prefs.edit().clear().commit();
@@ -150,35 +150,35 @@ public class OtherFragment extends MaterialPreferenceToolbarFragment {
         }
     }
 
-    public class deleteprefs implements Preference.OnPreferenceClickListener {
-        deleteprefs() {
+    public class deleteprefs implements Preference.OnPreferenceClickListener{
+        deleteprefs(){
         }
 
         @Override // android.support.v7.preference.Preference.c
-        public boolean onPreferenceClick(Preference preference) {
+        public boolean onPreferenceClick(Preference preference){
             deletePrefs();
             restartApplication();
             return true;
         }
     }
 
-    public class saveprefs implements Preference.OnPreferenceClickListener {
-        saveprefs() {
+    public class saveprefs implements Preference.OnPreferenceClickListener{
+        saveprefs(){
         }
 
         @Override // android.support.v7.preference.Preference.c
-        public boolean onPreferenceClick(Preference preference) {
+        public boolean onPreferenceClick(Preference preference){
             backupSettings();
             return true;
         }
     }
 
-    public class restoreprefs implements Preference.OnPreferenceClickListener {
-        restoreprefs() {
+    public class restoreprefs implements Preference.OnPreferenceClickListener{
+        restoreprefs(){
         }
 
         @Override // android.support.v7.preference.Preference.c
-        public boolean onPreferenceClick(Preference preference) {
+        public boolean onPreferenceClick(Preference preference){
             restoreBackup();
             return true;
         }
