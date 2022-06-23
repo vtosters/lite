@@ -19,16 +19,16 @@ import java.util.Date;
 import java.util.Locale;
 import java.util.Map;
 
-public class SettBackup {
+public class SettBackup{
     static SharedPreferences prefs = getContext().getSharedPreferences("com.vtosters.lite_preferences", Context.MODE_PRIVATE);
 
-    public static void deletePrefs() {
+    public static void deletePrefs(){
         prefs.edit().clear().commit();
         File file = new File(new File(getContext().getFilesDir().getParent(), "shared_prefs"), "com.vtosters.lite_preferences");
-        if (file.exists()) file.delete();
+        if(file.exists()) file.delete();
     }
 
-    public static void backupSettings() {
+    public static void backupSettings(){
         SimpleDateFormat date = new SimpleDateFormat("yyyyMMdd_HHmmss", Locale.getDefault());
         String currentDateandTime = date.format(new Date());
         var directory = getExternalStoragePublicDirectory(DIRECTORY_DOWNLOADS + "/VTLBackups/") + "/Backup_" + currentDateandTime + ".txt";
@@ -36,7 +36,7 @@ public class SettBackup {
         try {
             var exists = file.createNewFile();
 
-            if (!exists) {
+            if(!exists){
                 file.delete();
                 file.createNewFile();
             }
@@ -56,13 +56,14 @@ public class SettBackup {
         }
     }
 
-    public static String getAllPrefs() {
+    public static String getAllPrefs(){
         Map<String, ?> allPrefs = prefs.getAll();
         return Base64.encodeToString(allPrefs.toString().getBytes(), 1);
     }
 
-    public static void restoreBackup() {
-        File dir = new File(getExternalStoragePublicDirectory(DIRECTORY_DOWNLOADS + "/VTLBackups/").getPath());;
+    public static void restoreBackup(){
+        File dir = new File(getExternalStoragePublicDirectory(DIRECTORY_DOWNLOADS + "/VTLBackups/").getPath());
+        ;
         // TODO Make restore backup from file list
     }
 }

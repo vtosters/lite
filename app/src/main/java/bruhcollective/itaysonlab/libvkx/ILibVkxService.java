@@ -5,7 +5,7 @@ package bruhcollective.itaysonlab.libvkx;
 
 // Works only with original signature of VT
 
-public interface ILibVkxService extends android.os.IInterface {
+public interface ILibVkxService extends android.os.IInterface{
     void play(java.util.List<String> audio_ids, int index, String playbackContext) throws android.os.RemoteException;
 
     int getUserId() throws android.os.RemoteException;
@@ -24,42 +24,42 @@ public interface ILibVkxService extends android.os.IInterface {
     /**
      * Default implementation for ILibVkxService.
      */
-    class Default implements ILibVkxService {
+    class Default implements ILibVkxService{
         // Starts playback. playbackContext can be "other" if you don't sure what it is
 
         @Override
-        public void play(java.util.List<String> audio_ids, int index, String playbackContext) throws android.os.RemoteException {
+        public void play(java.util.List<String> audio_ids, int index, String playbackContext) throws android.os.RemoteException{
         }
         // A UserID. CHECK FOR THIS TO BE EQUAL BEFORE SENDING ANYTHING TO SERVICE!
 
         @Override
-        public int getUserId() throws android.os.RemoteException {
+        public int getUserId() throws android.os.RemoteException{
             return 0;
         }
         // Cache add/remove
 
         @Override
-        public void addTrackToCache(int track_id, int owner_id, String access_key) throws android.os.RemoteException {
+        public void addTrackToCache(int track_id, int owner_id, String access_key) throws android.os.RemoteException{
         }
 
         @Override
-        public void deleteTrackFromCache(int track_id, int owner_id) throws android.os.RemoteException {
+        public void deleteTrackFromCache(int track_id, int owner_id) throws android.os.RemoteException{
         }
 
         @Override
-        public boolean isTrackCached(int track_id, int owner_id) throws android.os.RemoteException {
+        public boolean isTrackCached(int track_id, int owner_id) throws android.os.RemoteException{
             return false;
         }
         // Get a list of cached tracks. The response is close to VK's original response (an audio list)
         // Also, the items in the list are JSON ones.
 
         @Override
-        public java.util.List<String> getCache() throws android.os.RemoteException {
+        public java.util.List<String> getCache() throws android.os.RemoteException{
             return null;
         }
 
         @Override
-        public android.os.IBinder asBinder() {
+        public android.os.IBinder asBinder(){
             return null;
         }
     }
@@ -69,7 +69,7 @@ public interface ILibVkxService extends android.os.IInterface {
     /**
      * Local-side IPC implementation stub class.
      */
-    abstract class Stub extends android.os.Binder implements ILibVkxService {
+    abstract class Stub extends android.os.Binder implements ILibVkxService{
         static final int TRANSACTION_play = (android.os.IBinder.FIRST_CALL_TRANSACTION + 1);
         static final int TRANSACTION_getUserId = (android.os.IBinder.FIRST_CALL_TRANSACTION + 2);
         static final int TRANSACTION_addTrackToCache = (android.os.IBinder.FIRST_CALL_TRANSACTION + 3);
@@ -77,10 +77,11 @@ public interface ILibVkxService extends android.os.IInterface {
         static final int TRANSACTION_isTrackCached = (android.os.IBinder.FIRST_CALL_TRANSACTION + 5);
         static final int TRANSACTION_getCache = (android.os.IBinder.FIRST_CALL_TRANSACTION + 6);
         private static final String DESCRIPTOR = "bruhcollective.itaysonlab.libvkx.ILibVkxService";
+
         /**
          * Construct the stub at attach it to the interface.
          */
-        public Stub() {
+        public Stub(){
             this.attachInterface(this, DESCRIPTOR);
         }
 
@@ -88,38 +89,38 @@ public interface ILibVkxService extends android.os.IInterface {
          * Cast an IBinder object into an bruhcollective.itaysonlab.libvkx.ILibVkxService interface,
          * generating a proxy if needed.
          */
-        public static ILibVkxService asInterface(android.os.IBinder obj) {
-            if ((obj == null)) {
+        public static ILibVkxService asInterface(android.os.IBinder obj){
+            if((obj == null)){
                 return null;
             }
             android.os.IInterface iin = obj.queryLocalInterface(DESCRIPTOR);
-            if (((iin != null) && (iin instanceof ILibVkxService))) {
+            if(((iin != null) && (iin instanceof ILibVkxService))){
                 return ((ILibVkxService) iin);
             }
             return new Proxy(obj);
         }
 
-        public static boolean setDefaultImpl(ILibVkxService impl) {
-            if (Proxy.sDefaultImpl == null && impl != null) {
+        public static boolean setDefaultImpl(ILibVkxService impl){
+            if(Proxy.sDefaultImpl == null && impl != null){
                 Proxy.sDefaultImpl = impl;
                 return true;
             }
             return false;
         }
 
-        public static ILibVkxService getDefaultImpl() {
+        public static ILibVkxService getDefaultImpl(){
             return Proxy.sDefaultImpl;
         }
 
         @Override
-        public android.os.IBinder asBinder() {
+        public android.os.IBinder asBinder(){
             return this;
         }
 
         @Override
-        public boolean onTransact(int code, android.os.Parcel data, android.os.Parcel reply, int flags) throws android.os.RemoteException {
+        public boolean onTransact(int code, android.os.Parcel data, android.os.Parcel reply, int flags) throws android.os.RemoteException{
             String descriptor = DESCRIPTOR;
-            switch (code) {
+            switch(code) {
                 case INTERFACE_TRANSACTION: {
                     reply.writeString(descriptor);
                     return true;
@@ -189,27 +190,27 @@ public interface ILibVkxService extends android.os.IInterface {
             }
         }
 
-        private static class Proxy implements ILibVkxService {
+        private static class Proxy implements ILibVkxService{
             public static ILibVkxService sDefaultImpl;
             private final android.os.IBinder mRemote;
 
-            Proxy(android.os.IBinder remote) {
+            Proxy(android.os.IBinder remote){
                 mRemote = remote;
             }
 
             @Override
-            public android.os.IBinder asBinder() {
+            public android.os.IBinder asBinder(){
                 return mRemote;
             }
             // Starts playback. playbackContext can be "other" if you don't sure what it is
 
-            public String getInterfaceDescriptor() {
+            public String getInterfaceDescriptor(){
                 return DESCRIPTOR;
             }
             // A UserID. CHECK FOR THIS TO BE EQUAL BEFORE SENDING ANYTHING TO SERVICE!
 
             @Override
-            public void play(java.util.List<String> audio_ids, int index, String playbackContext) throws android.os.RemoteException {
+            public void play(java.util.List<String> audio_ids, int index, String playbackContext) throws android.os.RemoteException{
                 android.os.Parcel _data = android.os.Parcel.obtain();
                 android.os.Parcel _reply = android.os.Parcel.obtain();
                 try {
@@ -218,7 +219,7 @@ public interface ILibVkxService extends android.os.IInterface {
                     _data.writeInt(index);
                     _data.writeString(playbackContext);
                     boolean _status = mRemote.transact(Stub.TRANSACTION_play, _data, _reply, 0);
-                    if (!_status && getDefaultImpl() != null) {
+                    if(!_status && getDefaultImpl() != null){
                         getDefaultImpl().play(audio_ids, index, playbackContext);
                         return;
                     }
@@ -231,14 +232,14 @@ public interface ILibVkxService extends android.os.IInterface {
             // Cache add/remove
 
             @Override
-            public int getUserId() throws android.os.RemoteException {
+            public int getUserId() throws android.os.RemoteException{
                 android.os.Parcel _data = android.os.Parcel.obtain();
                 android.os.Parcel _reply = android.os.Parcel.obtain();
                 int _result;
                 try {
                     _data.writeInterfaceToken(DESCRIPTOR);
                     boolean _status = mRemote.transact(Stub.TRANSACTION_getUserId, _data, _reply, 0);
-                    if (!_status && getDefaultImpl() != null) {
+                    if(!_status && getDefaultImpl() != null){
                         return getDefaultImpl().getUserId();
                     }
                     _reply.readException();
@@ -251,7 +252,7 @@ public interface ILibVkxService extends android.os.IInterface {
             }
 
             @Override
-            public void addTrackToCache(int track_id, int owner_id, String access_key) throws android.os.RemoteException {
+            public void addTrackToCache(int track_id, int owner_id, String access_key) throws android.os.RemoteException{
                 android.os.Parcel _data = android.os.Parcel.obtain();
                 android.os.Parcel _reply = android.os.Parcel.obtain();
                 try {
@@ -260,7 +261,7 @@ public interface ILibVkxService extends android.os.IInterface {
                     _data.writeInt(owner_id);
                     _data.writeString(access_key);
                     boolean _status = mRemote.transact(Stub.TRANSACTION_addTrackToCache, _data, _reply, 0);
-                    if (!_status && getDefaultImpl() != null) {
+                    if(!_status && getDefaultImpl() != null){
                         getDefaultImpl().addTrackToCache(track_id, owner_id, access_key);
                         return;
                     }
@@ -272,7 +273,7 @@ public interface ILibVkxService extends android.os.IInterface {
             }
 
             @Override
-            public void deleteTrackFromCache(int track_id, int owner_id) throws android.os.RemoteException {
+            public void deleteTrackFromCache(int track_id, int owner_id) throws android.os.RemoteException{
                 android.os.Parcel _data = android.os.Parcel.obtain();
                 android.os.Parcel _reply = android.os.Parcel.obtain();
                 try {
@@ -280,7 +281,7 @@ public interface ILibVkxService extends android.os.IInterface {
                     _data.writeInt(track_id);
                     _data.writeInt(owner_id);
                     boolean _status = mRemote.transact(Stub.TRANSACTION_deleteTrackFromCache, _data, _reply, 0);
-                    if (!_status && getDefaultImpl() != null) {
+                    if(!_status && getDefaultImpl() != null){
                         getDefaultImpl().deleteTrackFromCache(track_id, owner_id);
                         return;
                     }
@@ -294,7 +295,7 @@ public interface ILibVkxService extends android.os.IInterface {
             // Also, the items in the list are JSON ones.
 
             @Override
-            public boolean isTrackCached(int track_id, int owner_id) throws android.os.RemoteException {
+            public boolean isTrackCached(int track_id, int owner_id) throws android.os.RemoteException{
                 android.os.Parcel _data = android.os.Parcel.obtain();
                 android.os.Parcel _reply = android.os.Parcel.obtain();
                 boolean _result;
@@ -303,7 +304,7 @@ public interface ILibVkxService extends android.os.IInterface {
                     _data.writeInt(track_id);
                     _data.writeInt(owner_id);
                     boolean _status = mRemote.transact(Stub.TRANSACTION_isTrackCached, _data, _reply, 0);
-                    if (!_status && getDefaultImpl() != null) {
+                    if(!_status && getDefaultImpl() != null){
                         return getDefaultImpl().isTrackCached(track_id, owner_id);
                     }
                     _reply.readException();
@@ -316,14 +317,14 @@ public interface ILibVkxService extends android.os.IInterface {
             }
 
             @Override
-            public java.util.List<String> getCache() throws android.os.RemoteException {
+            public java.util.List<String> getCache() throws android.os.RemoteException{
                 android.os.Parcel _data = android.os.Parcel.obtain();
                 android.os.Parcel _reply = android.os.Parcel.obtain();
                 java.util.List<String> _result;
                 try {
                     _data.writeInterfaceToken(DESCRIPTOR);
                     boolean _status = mRemote.transact(Stub.TRANSACTION_getCache, _data, _reply, 0);
-                    if (!_status && getDefaultImpl() != null) {
+                    if(!_status && getDefaultImpl() != null){
                         return getDefaultImpl().getCache();
                     }
                     _reply.readException();

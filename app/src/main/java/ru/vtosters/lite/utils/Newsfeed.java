@@ -4,7 +4,6 @@ import static java.lang.Long.MAX_VALUE;
 import static ru.vtosters.lite.ui.fragments.dockbar.DockBarManager.getInstance;
 import static ru.vtosters.lite.utils.Globals.getContext;
 import static ru.vtosters.lite.utils.Globals.getPrefsValue;
-import static ru.vtosters.lite.utils.Globals.sendToast;
 import static ru.vtosters.lite.utils.Preferences.adsgroup;
 import static ru.vtosters.lite.utils.Preferences.adsstories;
 import static ru.vtosters.lite.utils.Preferences.authorsrecomm;
@@ -22,7 +21,6 @@ import com.vk.discover.DiscoverFragment;
 import com.vk.fave.fragments.FaveTabFragment;
 import com.vk.menu.MenuFragment;
 import com.vk.music.fragment.MusicFragment;
-import com.vk.navigation.NavigatorKeys;
 import com.vk.newsfeed.HomeFragment;
 import com.vk.newsfeed.NewsfeedFragment;
 import com.vk.notifications.NotificationsContainerFragment;
@@ -38,7 +36,6 @@ import com.vtosters.lite.fragments.y2.VideosFragment;
 import com.vtosters.lite.general.fragments.GamesFragment;
 import com.vtosters.lite.general.fragments.PhotosFragment;
 
-import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
@@ -49,18 +46,11 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
-public class Newsfeed {
+public class Newsfeed{
     public static List<String> mFilters;
 
-    public static boolean isBlockedByFilter(String str){
-        for (String str2 : mFilters) {
-            if(str.toLowerCase().contains(str2.toLowerCase())) return true;
-        }
-        return false;
-    }
-
     public static void setupFilters(){
-        mFilters=new ArrayList();
+        mFilters = new ArrayList();
 
         getFilter("refsfilter", "Referals.txt");
         getFilter("shortlinkfilter", "LinkShorter.txt");
@@ -78,9 +68,9 @@ public class Newsfeed {
     public static void getFilter(String boolname, String filename){
         if(getBoolValue(boolname, true)){
             try {
-                BufferedReader bufferedReader=new BufferedReader(new InputStreamReader(getContext().getAssets().open(filename)));
-                while (true) {
-                    String readLine=bufferedReader.readLine();
+                BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(getContext().getAssets().open(filename)));
+                while(true) {
+                    String readLine = bufferedReader.readLine();
                     if(readLine != null){
                         mFilters.add(readLine);
                     } else {
@@ -104,7 +94,7 @@ public class Newsfeed {
             return false;
         }
         optString = obj.optString("filters", "");
-        if(isAds(optString) || isAuthorRecommendations(optString) || isPostRecommendations(optString) || isFriendsRecommendations(optString)) {
+        if(isAds(optString) || isAuthorRecommendations(optString) || isPostRecommendations(optString) || isFriendsRecommendations(optString)){
             return false;
         }
 
@@ -118,7 +108,7 @@ public class Newsfeed {
     }
 
     private static boolean checkCopyright(JSONObject json) throws JSONException{
-        if(json.opt("copyright") != null) {
+        if(json.opt("copyright") != null){
             JSONObject copyright = json.getJSONObject("copyright");
             String copyrightlink = copyright.getString("link");
 
@@ -126,10 +116,10 @@ public class Newsfeed {
 
             // example of response
             //"copyright": {
-                //"id": 251706814,
-                        //"link": "https://vk.com/wall251706814_9016",
-                        //"type": "owner",
-                        //"name": "Маргарита Буруня"
+            //"id": 251706814,
+            //"link": "https://vk.com/wall251706814_9016",
+            //"type": "owner",
+            //"name": "Маргарита Буруня"
             //}
 
         }
@@ -153,7 +143,7 @@ public class Newsfeed {
     }
 
     public static boolean isBadNew(String text){
-        for (String filter : mFilters) {
+        for(String filter : mFilters) {
             if(text.toLowerCase().contains(filter.toLowerCase())){
                 return true;
             }
@@ -169,10 +159,10 @@ public class Newsfeed {
 
             boolean postAds = postsrecomm();
             return (captionJson.getString("type").equals("explorebait") && postAds) || // Может быть интересно
-                            (captionJson.getString("type").equals("shared") && postAds) || // Поделился записью
-                            (postJson.getString("type").equals("digest") && postAds) || // Рекомедации
-                            (captionJson.getString("type").equals("commented") && postAds) || // Комментирует
-                            (captionJson.getString("type").equals("voted") && postAds); // Проголосовал в опросе
+                    (captionJson.getString("type").equals("shared") && postAds) || // Поделился записью
+                    (postJson.getString("type").equals("digest") && postAds) || // Рекомедации
+                    (captionJson.getString("type").equals("commented") && postAds) || // Комментирует
+                    (captionJson.getString("type").equals("voted") && postAds); // Проголосовал в опросе
 
         } catch (JSONException e) {
             return false;
@@ -213,7 +203,7 @@ public class Newsfeed {
         if(vkme()){
             return MAX_VALUE;
         }
-        switch (getPrefsValue("newsupdate")) {
+        switch(getPrefsValue("newsupdate")) {
             case "no_update":
                 return MAX_VALUE;
             case "imd_update":
@@ -227,7 +217,7 @@ public class Newsfeed {
         if(vkme()){
             return DialogsFragment.class;
         }
-        switch (getPrefsValue("start_values")) {
+        switch(getPrefsValue("start_values")) {
             case "newsfeed":
                 return newfeed() ? HomeFragment.class : NewsfeedFragment.class;
             case "messenger":

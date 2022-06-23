@@ -27,13 +27,13 @@ import java.util.concurrent.atomic.AtomicBoolean;
 
 import javax.net.ssl.HttpsURLConnection;
 
-public class GCMFix {
-    public static ArrayList<String> langs = new ArrayList<>();
+public class GCMFix{
     private static final String agent = String.format("Android-GCM/1.5 (%s %s)", Build.MODEL, Build.MODEL);
+    public static ArrayList<String> langs = new ArrayList<>();
     private static KeyPair pair;
     private static int rid = 0;
 
-    static {
+    static{
         genNewKey();
     }
 
@@ -48,7 +48,7 @@ public class GCMFix {
         return orig;
     }
 
-    public static String requestToken() {
+    public static String requestToken(){
         String xappide;
         try {
             String[] aidarr = {"3974055026275073921", "4418584909973341826", "4585634953328772978"};
@@ -63,7 +63,7 @@ public class GCMFix {
             } catch (NoSuchAlgorithmException e) {
                 xappide2 = "";
             }
-            if (xappide2 == null) {
+            if(xappide2 == null){
                 bytes[0] = (byte) (((bytes[0] & 15) + 112) & 255);
                 xappide = Base64.encodeToString(bytes, 2).substring(0, 11);
             } else {
@@ -77,11 +77,11 @@ public class GCMFix {
             Callback callback = str -> GCMFix.lambdaRequestToken(sb, wait, str);
 
             doRequest("https://android.clients.google.com/c2dm/register3", "POST", params, aid, callback);
-            while (!wait.get()) {
+            while(!wait.get()) {
                 Thread.sleep(100);
             }
             String token = sb.toString();
-            if (token.equals("REGISTRATION_ERROR")) {
+            if(token.equals("REGISTRATION_ERROR")){
                 return requestToken();
             }
             rid = 0;
@@ -98,18 +98,18 @@ public class GCMFix {
         }
     }
 
-    static void lambdaRequestToken(StringBuilder sb, AtomicBoolean wait, String s) {
+    static void lambdaRequestToken(StringBuilder sb, AtomicBoolean wait, String s){
         sb.append(s.substring(20));
         wait.set(true);
     }
 
-    static void lambda$requestToken$1(String str) {
+    static void lambda$requestToken$1(String str){
     }
 
-    private static void fillParams(List<String> params, String sig, String pub2, String xappid, long androidId, boolean del) {
+    private static void fillParams(List<String> params, String sig, String pub2, String xappid, long androidId, boolean del){
         rid++;
         params.add("X-subtype=841415684880");
-        if (del) {
+        if(del){
             params.add("X-delete=1");
             params.add("X-X-delete=1");
         } else {
@@ -128,13 +128,13 @@ public class GCMFix {
         sb.append("X-appid=");
         sb.append(xappid);
         params.add(sb.toString());
-        if (del) {
+        if(del){
             params.add("X-scope=GCM");
         } else {
             params.add("X-scope=*");
         }
         params.add("X-subscription=841415684880");
-        if (!del) {
+        if(!del){
             params.add("X-gmp_app_id=1:841415684880:android:632f429381141121");
         }
         params.add("X-app_ver_name=" + "5.56.1");
@@ -146,19 +146,19 @@ public class GCMFix {
         params.add("gcm_ver=11949470");
     }
 
-    private static String join(String chr, Iterable<String> arr) {
+    private static String join(String chr, Iterable<String> arr){
         String str = "";
-        for (String s : arr) {
+        for(String s : arr) {
             str = str.isEmpty() ? s : str + chr + s;
         }
         return str;
     }
 
-    private static String join(String chr, String[] arr) {
+    private static String join(String chr, String[] arr){
         return join(chr, Arrays.asList(arr));
     }
 
-    private static void doRequest(String url, String method, List<String> params, String aidlogin, Callback callback) throws IOException {
+    private static void doRequest(String url, String method, List<String> params, String aidlogin, Callback callback) throws IOException{
         HttpsURLConnection con = (HttpsURLConnection) new URL(url).openConnection();
         con.setRequestMethod(method);
         con.setRequestProperty("Authorization", aidlogin);
@@ -176,7 +176,7 @@ public class GCMFix {
         con.getInputStream().close();
     }
 
-    private static String genNewKey() {
+    private static String genNewKey(){
         try {
             KeyPairGenerator gen = KeyPairGenerator.getInstance("RSA");
             gen.initialize(2048);
@@ -187,7 +187,7 @@ public class GCMFix {
         return Base64.encodeToString(pair.getPublic().getEncoded(), 0);
     }
 
-    private static String getSig(String pub2) {
+    private static String getSig(String pub2){
         try {
             PrivateKey key = pair.getPrivate();
             Signature sign = Signature.getInstance(key instanceof RSAPrivateKey ? "SHA256withRSA" : "SHA256withECDSA");
@@ -200,7 +200,7 @@ public class GCMFix {
         }
     }
 
-    public interface Callback {
+    public interface Callback{
         void doCallback(String str);
     }
 }

@@ -24,7 +24,7 @@ import ru.vtosters.lite.ui.fragments.tgstickers.StickersFragment;
 /**
  * Created by Aefyr on 19.05.2018.
  */
-public class TelegramStickersService {
+public class TelegramStickersService{
     private static final String TAG = "TGStickersService";
     private static TelegramStickersService instance;
 
@@ -41,14 +41,12 @@ public class TelegramStickersService {
     private final TelegramStickersGrabber grabber;
 
     private final TelegramStickersDbHelper dbHelper;
-    private boolean ready = false;
     private final ArrayList<Runnable> queuedTasks;
-
     private final ThreadPoolExecutor executor;
-
     private final NotificationsHelper notificationsHelper;
+    private boolean ready = false;
 
-    private TelegramStickersService(Context context) {
+    private TelegramStickersService(Context context){
         instance = this;
 
         this.c = context.getApplicationContext();
@@ -69,138 +67,138 @@ public class TelegramStickersService {
         updatePacks(true);
     }
 
-    public static TelegramStickersService getInstance(Context c) {
+    public static TelegramStickersService getInstance(Context c){
         return instance == null ? new TelegramStickersService(c) : instance;
     }
 
-    private void updatePacks(final boolean notify) {
+    private void updatePacks(final boolean notify){
         packs.clear();
-        dbHelper.getAllPacks(new TelegramStickersDbHelper.PacksLoadingListener() {
+        dbHelper.getAllPacks(new TelegramStickersDbHelper.PacksLoadingListener(){
             @Override
-            public void onPackLoaded(final TelegramStickersPack pack) {
+            public void onPackLoaded(final TelegramStickersPack pack){
                 runOnUiThread(() -> {
                     packs.add(pack);
 
-                    if (pack.enabled)
+                    if(pack.enabled)
                         activePacks.add(pack);
                     else
                         inactivePacks.add(pack);
 
-                    if (notify) notifyPackAdded(pack, packs.size() - 1);
+                    if(notify) notifyPackAdded(pack, packs.size() - 1);
                 });
             }
 
             @Override
-            public void onAllPacksLoaded(ArrayList<TelegramStickersPack> packs) {
+            public void onAllPacksLoaded(ArrayList<TelegramStickersPack> packs){
                 ready = true;
 
-                if (notify) {
+                if(notify){
                     notifyActivePacksListChanged();
                     notifyInactivePacksListChanged();
                 }
 
                 Log.d(TAG, String.format("Packs list loaded, running %d queued tasks...", queuedTasks.size()));
-                while (!queuedTasks.isEmpty())
+                while(!queuedTasks.isEmpty())
                     queuedTasks.remove(0).run();
             }
         });
     }
 
-    public void addStickersEventsListener(StickersEventsListener listener) {
+    public void addStickersEventsListener(StickersEventsListener listener){
         listeners.add(listener);
     }
 
-    public void removeStickersEventsListener(StickersEventsListener listener) {
+    public void removeStickersEventsListener(StickersEventsListener listener){
         listeners.remove(listener);
     }
 
-    private void notifyPackAdded(TelegramStickersPack pack, int atIndex) {
+    private void notifyPackAdded(TelegramStickersPack pack, int atIndex){
         getContext().sendBroadcast(new Intent(StickersFragment.ACTION_RELOAD));
-        if (listeners.isEmpty())
+        if(listeners.isEmpty())
             return;
 
-        for (StickersEventsListener listener : listeners) {
+        for(StickersEventsListener listener : listeners) {
             listener.onPackAdded(pack, atIndex);
         }
     }
 
-    private void notifyPackChanged(TelegramStickersPack pack, int atIndex) {
+    private void notifyPackChanged(TelegramStickersPack pack, int atIndex){
         getContext().sendBroadcast(new Intent(StickersFragment.ACTION_RELOAD));
-        if (listeners.isEmpty())
+        if(listeners.isEmpty())
             return;
 
-        for (StickersEventsListener listener : listeners) {
+        for(StickersEventsListener listener : listeners) {
             listener.onPackChanged(pack, atIndex);
         }
     }
 
-    private void notifyPackRemoved(TelegramStickersPack pack, int atIndex) {
+    private void notifyPackRemoved(TelegramStickersPack pack, int atIndex){
         getContext().sendBroadcast(new Intent(StickersFragment.ACTION_RELOAD));
-        if (listeners.isEmpty())
+        if(listeners.isEmpty())
             return;
 
-        for (StickersEventsListener listener : listeners) {
+        for(StickersEventsListener listener : listeners) {
             listener.onPackRemoved(pack, atIndex);
         }
     }
 
-    private void notifyPackDownloadError(TelegramStickersPack pack, Exception error) {
+    private void notifyPackDownloadError(TelegramStickersPack pack, Exception error){
         getContext().sendBroadcast(new Intent(StickersFragment.ACTION_RELOAD));
-        if (listeners.isEmpty())
+        if(listeners.isEmpty())
             return;
 
-        for (StickersEventsListener listener : listeners) {
+        for(StickersEventsListener listener : listeners) {
             listener.onPackDownloadError(pack, error);
         }
     }
 
-    private void notifyActivePacksListChanged() {
+    private void notifyActivePacksListChanged(){
         getContext().sendBroadcast(new Intent(StickersFragment.ACTION_RELOAD));
-        if (listeners.isEmpty())
+        if(listeners.isEmpty())
             return;
 
-        for (StickersEventsListener listener : listeners) {
+        for(StickersEventsListener listener : listeners) {
             listener.onActivePacksListChanged();
         }
     }
 
-    private void notifyInactivePacksListChanged() {
+    private void notifyInactivePacksListChanged(){
         getContext().sendBroadcast(new Intent(StickersFragment.ACTION_RELOAD));
-        if (listeners.isEmpty())
+        if(listeners.isEmpty())
             return;
 
-        for (StickersEventsListener listener : listeners) {
+        for(StickersEventsListener listener : listeners) {
             listener.onInactivePacksListChanged();
         }
     }
 
-    public void setBotKey(String botKey) {
+    public void setBotKey(String botKey){
         grabber.setBotApiKey(botKey);
     }
 
-    public ArrayList<TelegramStickersPack> getPacksListReference() {
+    public ArrayList<TelegramStickersPack> getPacksListReference(){
         return packs;
     }
 
-    public ArrayList<TelegramStickersPack> getActivePacksListReference() {
+    public ArrayList<TelegramStickersPack> getActivePacksListReference(){
         return activePacks;
     }
 
-    public ArrayList<TelegramStickersPack> getInactivePacksListReference() {
+    public ArrayList<TelegramStickersPack> getInactivePacksListReference(){
         return inactivePacks;
     }
 
-    public boolean isDoneLoading() {
+    public boolean isDoneLoading(){
         return ready;
     }
 
-    public boolean requestPackDownload(final String id, File packFolder) {
-        if (currentlyDownloading.contains(id)) {
+    public boolean requestPackDownload(final String id, File packFolder){
+        if(currentlyDownloading.contains(id)){
             Log.e(TAG, String.format("Got request to download pack %s which is already downloading", id));
             return false;
         }
 
-        if (!ready) {
+        if(!ready){
             final File folder = packFolder;
             queuedTasks.add(() -> requestPackDownload(id, folder));
             return true;
@@ -210,7 +208,7 @@ public class TelegramStickersService {
         boolean update = false;
 
         int index = packs.indexOf(pack);
-        if (index != -1) {
+        if(index != -1){
             pack = packs.get(index);
             pack.state = TelegramStickersPack.UPDATING;
             update = true;
@@ -230,9 +228,9 @@ public class TelegramStickersService {
         notificationsHelper.packStartedDownloading(newPack);
 
         grabber.enableProxy();
-        grabber.grabPack(id, packFolder, pack.version, new TelegramStickersGrabber.PackDownloadListener() {
+        grabber.grabPack(id, packFolder, pack.version, new TelegramStickersGrabber.PackDownloadListener(){
             @Override
-            public void onPackDownloaded(TelegramStickersPackInfo packInfo, boolean newVersionFound) {
+            public void onPackDownloaded(TelegramStickersPackInfo packInfo, boolean newVersionFound){
 
                 runOnUiThread(() -> {
                     newPack.state = TelegramStickersPack.DOWNLOADED;
@@ -240,8 +238,8 @@ public class TelegramStickersService {
                     currentlyDownloading.remove(newPack.id.toLowerCase());
                     syncPack(newPack);
 
-                    if (isUpdate) {
-                        if (newPack.enabled)
+                    if(isUpdate){
+                        if(newPack.enabled)
                             notifyActivePacksListChanged();
                     } else {
                         activePacks.add(newPack);
@@ -252,12 +250,12 @@ public class TelegramStickersService {
             }
 
             @Override
-            public void onPackDownloadError(final Exception e) {
+            public void onPackDownloadError(final Exception e){
                 runOnUiThread(() -> {
                     Log.e(TAG, "Error while downloading pack " + newPack.id);
                     e.printStackTrace();
 
-                    if (!isUpdate) {
+                    if(!isUpdate){
                         int index = packs.indexOf(newPack);
                         packs.remove(index);
                         notifyPackRemoved(newPack, index);
@@ -273,7 +271,7 @@ public class TelegramStickersService {
             }
 
             @Override
-            public void onGotPackInfo(final TelegramStickersPackInfo packInfo) {
+            public void onGotPackInfo(final TelegramStickersPackInfo packInfo){
                 runOnUiThread(() -> {
                     newPack.title = packInfo.title;
                     newPack.stickersCount = packInfo.stickersCount;
@@ -285,11 +283,11 @@ public class TelegramStickersService {
             }
 
             @Override
-            public void onStickerDownloaded(String pack, File sticker, String boundEmoji, int stickerIndex, int downloadedStickersCount, int totalStickersCount) {
+            public void onStickerDownloaded(String pack, File sticker, String boundEmoji, int stickerIndex, int downloadedStickersCount, int totalStickersCount){
                 stickerIndex--;
 
                 List<Integer> list = newPack.emojis.get(boundEmoji);
-                if (list == null) list = new ArrayList<>();
+                if(list == null) list = new ArrayList<>();
                 list.add(stickerIndex);
                 newPack.emojis.put(boundEmoji, list);
 
@@ -300,34 +298,34 @@ public class TelegramStickersService {
         return true;
     }
 
-    public void setPackEnabled(final TelegramStickersPack pack, final boolean enabled, final boolean notify) {
-        if (!ready) {
+    public void setPackEnabled(final TelegramStickersPack pack, final boolean enabled, final boolean notify){
+        if(!ready){
             queuedTasks.add(() -> setPackEnabled(pack, enabled, notify));
             return;
         }
 
-        if (pack.enabled == enabled)
+        if(pack.enabled == enabled)
             return;
 
         pack.enabled = enabled;
         syncPack(pack);
-        if (notify) notifyPackChanged(pack, packs.indexOf(pack));
+        if(notify) notifyPackChanged(pack, packs.indexOf(pack));
 
-        if (pack.enabled) {
+        if(pack.enabled){
             inactivePacks.remove(pack);
             activePacks.add(pack);
         } else {
             activePacks.remove(pack);
             inactivePacks.add(pack);
         }
-        if (notify) {
+        if(notify){
             notifyActivePacksListChanged();
             notifyInactivePacksListChanged();
         }
     }
 
-    public void deletePack(final TelegramStickersPack pack) {
-        if (!ready) {
+    public void deletePack(final TelegramStickersPack pack){
+        if(!ready){
             queuedTasks.add(() -> deletePack(pack));
             return;
         }
@@ -340,7 +338,7 @@ public class TelegramStickersService {
         packs.remove(index);
         notifyPackRemoved(pack, index);
 
-        if (pack.enabled) {
+        if(pack.enabled){
             activePacks.remove(pack);
             notifyActivePacksListChanged();
         } else {
@@ -348,16 +346,16 @@ public class TelegramStickersService {
             notifyInactivePacksListChanged();
         }
 
-        if (d)
+        if(d)
             new PackDeletionTask(pack).executeOnExecutor(executor);
     }
 
-    private void runOnUiThread(Runnable r) {
+    private void runOnUiThread(Runnable r){
         uiThreadHandler.post(r);
     }
 
-    private void syncPack(final TelegramStickersPack pack) {
-        if (!ready) {
+    private void syncPack(final TelegramStickersPack pack){
+        if(!ready){
             queuedTasks.add(() -> syncPack(pack));
             return;
         }
@@ -365,7 +363,7 @@ public class TelegramStickersService {
         Log.d(TAG, "Sync=" + dbHelper.syncPack(pack));
     }
 
-    public void swap(TelegramStickersPack p1, TelegramStickersPack p2) {
+    public void swap(TelegramStickersPack p1, TelegramStickersPack p2){
         int i1 = p1.index;
         int i2 = p2.index;
         p1.index = i2;
@@ -373,7 +371,7 @@ public class TelegramStickersService {
         syncPack(p1);
         syncPack(p2);
 
-        if (getActivePacksListReference().contains(p1) && getActivePacksListReference().contains(p2) || getInactivePacksListReference().contains(p1) && getInactivePacksListReference().contains(p2)) {
+        if(getActivePacksListReference().contains(p1) && getActivePacksListReference().contains(p2) || getInactivePacksListReference().contains(p1) && getInactivePacksListReference().contains(p2)){
             int li1 = getActivePacksListReference().indexOf(p1);
             int li2 = getActivePacksListReference().indexOf(p2);
             getActivePacksListReference().set(li2, p1);
@@ -385,7 +383,7 @@ public class TelegramStickersService {
         getPacksListReference().set(li1, p2);
     }
 
-    interface StickersEventsListener {
+    interface StickersEventsListener{
         void onPackAdded(TelegramStickersPack pack, int atIndex);
 
         void onPackRemoved(TelegramStickersPack pack, int atIndex);

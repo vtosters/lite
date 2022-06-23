@@ -13,36 +13,33 @@ import okhttp3.OkHttpClient;
 import okhttp3.Request;
 import okhttp3.Response;
 
-public class OTAHelper {
+public class OTAHelper{
 
     private static final String LATEST_RELEASE_URL = "https://api.github.com/repositories/473685743/releases/latest";
     private static final String LATEST_RELEASE_COMMIT_URL = "https://api.github.com/repositories/473685743/git/ref/tags/%s";
-
-    private OTAListener mListener;
-
     private final OkHttpClient mClient = new OkHttpClient();
-
+    private OTAListener mListener;
     private JSONObject mReleaseJson;
     private JSONObject mCommitJson;
 
-    public OTAHelper(OTAListener listener) {
+    public OTAHelper(OTAListener listener){
         this.mListener = listener;
     }
 
-    public void loadData() {
+    public void loadData(){
         Request release = new Request.a()
                 .a(LATEST_RELEASE_URL)
                 .b().a();
 
-        mClient.a(release).a(new Callback() {
+        mClient.a(release).a(new Callback(){
             @Override
-            public void a(Call call, IOException e) {
+            public void a(Call call, IOException e){
                 Log.d("OTAHelper", "Error while getting latest release info: " + e);
                 mListener.onUpdateCanceled();
             }
 
             @Override
-            public void a(Call call, Response response) throws IOException {
+            public void a(Call call, Response response) throws IOException{
                 try {
                     setData(response);
                 } catch (JSONException | NullPointerException e) {
@@ -53,7 +50,7 @@ public class OTAHelper {
         });
     }
 
-    void setData(Response response) throws IOException, JSONException {
+    void setData(Response response) throws IOException, JSONException{
         mReleaseJson = new JSONObject(response.a().g());
 
         String tag = mReleaseJson.getString("tag_name");
@@ -61,18 +58,18 @@ public class OTAHelper {
                 .a(String.format(LATEST_RELEASE_COMMIT_URL, tag))
                 .b().a();
 
-        mClient.a(commit).a(new Callback() {
+        mClient.a(commit).a(new Callback(){
             @Override
-            public void a(Call call, IOException e) {
+            public void a(Call call, IOException e){
                 Log.d("OTAHelper", "Error while getting latest commit info: " + e);
                 mListener.onUpdateCanceled();
             }
 
             @Override
-            public void a(Call call, Response response) throws IOException {
+            public void a(Call call, Response response) throws IOException{
                 try {
                     mCommitJson = new JSONObject(response.a().g());
-                    if (isNewVersion())
+                    if(isNewVersion())
                         mListener.onUpdateApplied();
                     else mListener.onUpdateCanceled();
                 } catch (NullPointerException | JSONException e) {
@@ -83,7 +80,7 @@ public class OTAHelper {
         });
     }
 
-    public boolean isNewVersion() {
+    public boolean isNewVersion(){
         try {
             String commitSHA = mCommitJson.getJSONObject("object").getString("sha");
             return !commitSHA.startsWith(About.getBuildNumber());
@@ -92,7 +89,7 @@ public class OTAHelper {
         }
     }
 
-    public String getNewVersionName() {
+    public String getNewVersionName(){
         try {
             return mReleaseJson.getString("name");
         } catch (JSONException e) {
@@ -100,7 +97,7 @@ public class OTAHelper {
         }
     }
 
-    public String getUpdateDescription() {
+    public String getUpdateDescription(){
         try {
             return mReleaseJson.getString("body");
         } catch (JSONException e) {
@@ -108,7 +105,7 @@ public class OTAHelper {
         }
     }
 
-    public String getDownloadUrl() {
+    public String getDownloadUrl(){
         try {
             return mReleaseJson.getJSONArray("assets")
                     .getJSONObject(0)
@@ -118,7 +115,7 @@ public class OTAHelper {
         }
     }
 
-    public interface OTAListener {
+    public interface OTAListener{
 
         void onUpdateApplied();
 

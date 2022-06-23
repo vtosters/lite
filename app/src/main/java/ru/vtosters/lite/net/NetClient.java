@@ -4,18 +4,18 @@ import java.net.PasswordAuthentication;
 import java.net.Proxy;
 import java.util.concurrent.TimeUnit;
 
-public class NetClient {
+public class NetClient{
     private final long timeout;
     private final Proxy proxy;
     private final PasswordAuthentication authenticator;
 
-    protected NetClient(Builder b) {
+    protected NetClient(Builder b){
         timeout = b.timeout;
         proxy = b.proxy;
         authenticator = b.auth;
     }
 
-    public Builder newBuilder() {
+    public Builder newBuilder(){
         Builder b = new Builder();
         b.timeout = timeout;
         b.proxy = proxy;
@@ -23,30 +23,30 @@ public class NetClient {
         return b;
     }
 
-    public NetCall newCall(NetRequest req) {
+    public NetCall newCall(NetRequest req){
         return new NetCall(this, req);
     }
 
-    public PasswordAuthentication getAuthenticator() {
+    public PasswordAuthentication getAuthenticator(){
         return authenticator;
     }
 
-    public Proxy getProxy() {
+    public Proxy getProxy(){
         return proxy;
     }
 
-    public long getTimeout() {
+    public long getTimeout(){
         return timeout;
     }
 
-    public static final class Builder {
+    public static final class Builder{
         private long timeout;
         private Proxy proxy;
         private PasswordAuthentication auth;
 
-        public Builder connectTimeout(long l, TimeUnit unit) {
+        public Builder connectTimeout(long l, TimeUnit unit){
             int m;
-            switch (unit) {
+            switch(unit) {
                 case SECONDS:
                     m = 1000;
                     break;
@@ -70,17 +70,17 @@ public class NetClient {
             return this;
         }
 
-        public Builder proxyAuthenticator(PasswordAuthentication auth) {
+        public Builder proxyAuthenticator(PasswordAuthentication auth){
             this.auth = auth;
             return this;
         }
 
-        public Builder proxy(Proxy proxy) {
+        public Builder proxy(Proxy proxy){
             this.proxy = proxy;
             return this;
         }
 
-        public NetClient build() {
+        public NetClient build(){
             return new NetClient(this);
         }
     }

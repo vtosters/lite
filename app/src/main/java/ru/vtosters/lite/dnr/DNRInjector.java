@@ -12,24 +12,24 @@ import com.vk.im.ui.components.common.DialogAction;
 import java.util.LinkedHashMap;
 import java.util.List;
 
-public class DNRInjector {
-    public static void inject(Dialog dialog, List<DialogAction> list) {
+public class DNRInjector{
+    public static void inject(Dialog dialog, List<DialogAction> list){
         int peerId = dialog.getId();
 
-        if (isDnrEnabledFor(peerId)) {
+        if(isDnrEnabledFor(peerId)){
             list.add(DialogAction.valueOf("DNR_OFF"));
         } else {
             list.add(DialogAction.valueOf("DNR_ON"));
         }
 
-        if (isDntEnabledFor(peerId)) {
+        if(isDntEnabledFor(peerId)){
             list.add(DialogAction.valueOf("DNT_OFF"));
         } else {
             list.add(DialogAction.valueOf("DNT_ON"));
         }
     }
 
-    public static LinkedHashMap<DialogAction, Integer> injectToHashMap(LinkedHashMap<DialogAction, Integer> hashMap) {
+    public static LinkedHashMap<DialogAction, Integer> injectToHashMap(LinkedHashMap<DialogAction, Integer> hashMap){
         hashMap.put(DialogAction.valueOf("DNR_ON"), getIdentifier("DNR_ON", "string"));
         hashMap.put(DialogAction.valueOf("DNR_OFF"), getIdentifier("DNR_OFF", "string"));
         hashMap.put(DialogAction.valueOf("DNT_ON"), getIdentifier("DNT_ON", "string"));
@@ -37,21 +37,21 @@ public class DNRInjector {
         return hashMap;
     }
 
-    public static boolean onClick(Dialog dialog, DialogAction action) {
+    public static boolean onClick(Dialog dialog, DialogAction action){
         var id = dialog.getId();
 
-        if (action == DialogAction.valueOf("DNR_ON")) {
+        if(action == DialogAction.valueOf("DNR_ON")){
             setDnr(dialog, true);
             return true;
-        } else if (action == DialogAction.valueOf("DNR_OFF")) {
+        } else if(action == DialogAction.valueOf("DNR_OFF")){
             setDnr(dialog, false);
             return true;
         }
 
-        if (action == DialogAction.valueOf("DNT_ON")) {
+        if(action == DialogAction.valueOf("DNT_ON")){
             setDnt(dialog, true);
             return true;
-        } else if (action == DialogAction.valueOf("DNT_OFF")) {
+        } else if(action == DialogAction.valueOf("DNT_OFF")){
             setDnt(dialog, false);
             return true;
         }
@@ -59,11 +59,11 @@ public class DNRInjector {
         return false;
     }
 
-    public static void setDnr(Dialog dialog, boolean value) {
+    public static void setDnr(Dialog dialog, boolean value){
         hookDNR(dialog.getId());
     }
 
-    public static void setDnt(Dialog dialog, boolean value) {
+    public static void setDnt(Dialog dialog, boolean value){
         hookDNT(dialog.getId());
     }
 }

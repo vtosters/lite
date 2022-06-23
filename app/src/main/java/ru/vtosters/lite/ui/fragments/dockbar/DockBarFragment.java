@@ -16,20 +16,18 @@ import androidx.recyclerview.widget.ItemTouchHelper;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.vk.core.fragments.FragmentImpl.a;
 import com.vtosters.lite.general.fragments.MaterialPreferenceToolbarFragment;
 
-import me.grishka.appkit.fragments.ToolbarFragment;
 import ru.vtosters.lite.utils.Globals;
 
-public class DockBarFragment extends MaterialPreferenceToolbarFragment {
+public class DockBarFragment extends MaterialPreferenceToolbarFragment{
 
     private RecyclerView mRecyclerView;
     private DockBarAdapter mAdapter;
     private ItemTouchHelper mItemTouchHelper;
 
     @Override
-    public View onCreateView(LayoutInflater layoutInflater, ViewGroup viewGroup, Bundle bundle) {
+    public View onCreateView(LayoutInflater layoutInflater, ViewGroup viewGroup, Bundle bundle){
         super.onCreate(bundle);
 
         LinearLayout container = new LinearLayout(getContext());
@@ -84,7 +82,7 @@ public class DockBarFragment extends MaterialPreferenceToolbarFragment {
     }
 
     @Override
-    public void onViewCreated(View arg0, Bundle arg1) {
+    public void onViewCreated(View arg0, Bundle arg1){
         setHasOptionsMenu(true);
 
         super.onViewCreated(arg0, arg1);

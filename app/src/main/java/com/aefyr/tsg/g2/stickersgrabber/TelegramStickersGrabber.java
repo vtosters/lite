@@ -36,7 +36,7 @@ import ru.vtosters.lite.net.NetResponse;
 /**
  * Created by Aefyr on 11.05.2018.
  */
-public class TelegramStickersGrabber {
+public class TelegramStickersGrabber{
     private static final String TAG = "TSG";
     public static String REAL_TG_IP = null;
     public static String PROXY_IP = null;
@@ -51,7 +51,7 @@ public class TelegramStickersGrabber {
     private static String GET_FILE_URL;
     private static String BOT_API_BASE_FILE_URL;
 
-    static {
+    static{
         updateURLs();
     }
 
@@ -59,7 +59,8 @@ public class TelegramStickersGrabber {
     private final Handler uiThreadHandler;
     private String botApiKey = "";
     private NetClient httpClient;
-    public TelegramStickersGrabber(String botApiKey) {
+
+    public TelegramStickersGrabber(String botApiKey){
         this.botApiKey = botApiKey;
         httpClient = new NetClient.Builder().connectTimeout(5, TimeUnit.SECONDS).build();
         uiThreadHandler = new Handler(Looper.getMainLooper());
@@ -72,7 +73,7 @@ public class TelegramStickersGrabber {
         }
     }
 
-    public static void updateURLs() {
+    public static void updateURLs(){
         BOT_API_BASE_FILE_URL = "https://api.telegram.org/file/bot%s/%s";
 
 
@@ -81,14 +82,14 @@ public class TelegramStickersGrabber {
         GET_FILE_URL = BOT_API_BASE_URL + "getFile?file_id=%s";
     }
 
-    public static boolean isTelegramBlocked() {
+    public static boolean isTelegramBlocked(){
         NetClient client = new NetClient.Builder().connectTimeout(5, TimeUnit.SECONDS).build();
         try {
-            if (PROXY_IP != null) {
+            if(PROXY_IP != null){
                 Socket socket = new Socket(PROXY_IP, PROXY_PORT);
                 Proxy proxy = new Proxy(Proxy.Type.SOCKS, socket.getRemoteSocketAddress());
                 NetClient.Builder b = new NetClient.Builder().proxy(proxy);
-                if (PROXY_USER != null) {
+                if(PROXY_USER != null){
                     b = b.proxyAuthenticator(new PasswordAuthentication(PROXY_USER, PROXY_PASS.toCharArray()));
                 }
                 client = b.build();
@@ -103,7 +104,7 @@ public class TelegramStickersGrabber {
             NetResponse res = client.newCall(req).execute();
             String s = res.getDataString();
 
-            if (!s.equals("{\"ok\":false,\"error_code\":404,\"description\":\"Not Found\"}"))
+            if(!s.equals("{\"ok\":false,\"error_code\":404,\"description\":\"Not Found\"}"))
                 return true;
         } catch (Exception e) {
             return true;
@@ -111,21 +112,21 @@ public class TelegramStickersGrabber {
         return false;
     }
 
-    public void resetProxy() {
+    public void resetProxy(){
         httpClient = new NetClient.Builder().connectTimeout(5, TimeUnit.SECONDS).build();
     }
 
-    public void enableProxy() {
-        Thread kostil = new Thread() {
+    public void enableProxy(){
+        Thread kostil = new Thread(){
             @Override
-            public void run() {
+            public void run(){
                 try {
-                    if (PROXY_IP != null) {
+                    if(PROXY_IP != null){
                         Socket socket = new Socket(PROXY_IP, PROXY_PORT);
                         Proxy proxy = new Proxy(Proxy.Type.SOCKS, socket.getRemoteSocketAddress());
                         NetClient.Builder b = httpClient.newBuilder().proxy(proxy);
 
-                        if (PROXY_USER != null) {
+                        if(PROXY_USER != null){
                             httpClient = b.proxyAuthenticator(new PasswordAuthentication(PROXY_USER, PROXY_PASS.toCharArray())).build();
                         }
 
@@ -149,43 +150,43 @@ public class TelegramStickersGrabber {
         }
     }
 
-    public void grabPack(String id, File packFolder, String installedVersion, final PackDownloadListener listener) {
+    public void grabPack(String id, File packFolder, String installedVersion, final PackDownloadListener listener){
         getPackInfo(id, packFolder, installedVersion, listener);
     }
 
-    public void setBotApiKey(String key) {
+    public void setBotApiKey(String key){
         botApiKey = key;
     }
 
-    public void checkKey(final KeyCheckListener listener) {
+    public void checkKey(final KeyCheckListener listener){
         Log.d(TAG, "Checking key: " + botApiKey);
         NetRequest request = new NetRequest.Builder().get().url(String.format(BOT_API_BASE_URL + "getMe", botApiKey)).build();
-        httpClient.newCall(request).enqueue(new NetCallback() {
+        httpClient.newCall(request).enqueue(new NetCallback(){
             @Override
-            public void onFailure(NetCall call, IOException e) {
+            public void onFailure(NetCall call, IOException e){
                 e.printStackTrace();
                 runOnUiThread(listener::onNetError);
             }
 
             @Override
-            public void onResponse(NetCall call, final NetResponse response) throws IOException {
+            public void onResponse(NetCall call, final NetResponse response) throws IOException{
                 runOnUiThread(() -> listener.onKeyChecked(response.code() == 200));
             }
         });
     }
 
-    private void getPackInfo(final String packName, final File packFolder, final String installedVersion, final PackDownloadListener listener) {
+    private void getPackInfo(final String packName, final File packFolder, final String installedVersion, final PackDownloadListener listener){
         NetRequest packInfoRequest = new NetRequest.Builder().get().url(String.format(GET_STICKER_SET_URL, botApiKey, packName)).build();
-        httpClient.newCall(packInfoRequest).enqueue(new NetCallback() {
+        httpClient.newCall(packInfoRequest).enqueue(new NetCallback(){
             @Override
-            public void onFailure(NetCall call, IOException e) {
+            public void onFailure(NetCall call, IOException e){
                 listener.onPackDownloadError(e);
             }
 
             @Override
-            public void onResponse(NetCall call, NetResponse response) throws IOException {
-                if (!response.isSuccessful()) {
-                    if (response.getData() != null)
+            public void onResponse(NetCall call, NetResponse response) throws IOException{
+                if(!response.isSuccessful()){
+                    if(response.getData() != null)
                         listener.onPackDownloadError(new TSGException(response.getDataString() + "\nURL: " + call.request().url()));
                     else
                         listener.onPackDownloadError(new TSGException("Unknown Exception, no response body"));
@@ -198,19 +199,19 @@ public class TelegramStickersGrabber {
                     JSONObject jPackInfo = new JSONObject(response.getDataString()).getJSONObject("result");
                     String packVersion = new String(sha256.digest(jPackInfo.toString().getBytes(StandardCharsets.UTF_8)));
 
-                    if (packVersion.equals(installedVersion)) {
+                    if(packVersion.equals(installedVersion)){
                         listener.onPackDownloaded(null, false);
                         return;
                     }
 
                     JSONArray jStickers = jPackInfo.getJSONArray("stickers");
 
-                    if (jStickers.length() == 0) {
+                    if(jStickers.length() == 0){
                         listener.onPackDownloadError(new TSGException("No stickers in pack"));
                         return;
                     }
 
-                    if (jPackInfo.optBoolean("is_animated")) {
+                    if(jPackInfo.optBoolean("is_animated")){
                         listener.onPackDownloadError(new TSGException("Animated stickerpacks are not supported!"));
                         return;
                     }
@@ -219,7 +220,7 @@ public class TelegramStickersGrabber {
 
                     Log.d(TAG, String.format("Parsing stickers in pack %s", packName));
 
-                    for (int i = 0; i < jStickers.length(); i++) {
+                    for(int i = 0; i < jStickers.length(); i++) {
                         JSONObject jSticker = jStickers.getJSONObject(i);
                         stickers.add(new Sticker(jSticker.getString("file_id"), jSticker.getString("emoji")));
                     }
@@ -231,7 +232,7 @@ public class TelegramStickersGrabber {
                     return;
                 }
 
-                if (!packFolder.exists() && !packFolder.mkdirs()) {
+                if(!packFolder.exists() && !packFolder.mkdirs()){
                     listener.onPackDownloadError(new IOException("Can't create folder for the pack!"));
                     return;
                 }
@@ -245,7 +246,7 @@ public class TelegramStickersGrabber {
         });
     }
 
-    private void getPack(final StickerSet set, final File packFolder, final TelegramStickersPackInfo packInfo, final PackDownloadListener listener) {
+    private void getPack(final StickerSet set, final File packFolder, final TelegramStickersPackInfo packInfo, final PackDownloadListener listener){
         final GoalCounter downloadedStickers = new GoalCounter(set.stickers.size(), () -> {
             Log.d(TAG, String.format("Pack %s has been downloaded to %s", set.id, packFolder.getAbsolutePath()));
 
@@ -254,17 +255,17 @@ public class TelegramStickersGrabber {
         final Flag deathFlag = new Flag();
 
         AtomicInteger retryed = new AtomicInteger();
-        for (int i = 0; i < set.stickers.size(); i++) {
+        for(int i = 0; i < set.stickers.size(); i++) {
             final Sticker sticker = set.stickers.get(i);
             NetRequest fileInfoRequest = new NetRequest.Builder().get().url(String.format(GET_FILE_URL, botApiKey, sticker.fileId)).build();
 
             final int stickerIndex = i + 1;
 
             AtomicBoolean sync = new AtomicBoolean();
-            httpClient.newCall(fileInfoRequest).enqueue(new NetCallback() {
+            httpClient.newCall(fileInfoRequest).enqueue(new NetCallback(){
                 @Override
-                public void onFailure(NetCall call, IOException e) {
-                    if (deathFlag.up())
+                public void onFailure(NetCall call, IOException e){
+                    if(deathFlag.up())
                         return;
 
                     deathFlag.raise();
@@ -274,14 +275,14 @@ public class TelegramStickersGrabber {
                 }
 
                 @Override
-                public void onResponse(NetCall call, NetResponse response) throws IOException {
-                    if (deathFlag.up())
+                public void onResponse(NetCall call, NetResponse response) throws IOException{
+                    if(deathFlag.up())
                         return;
 
-                    if (response.code() != 200) {
+                    if(response.code() != 200){
                         retryed.incrementAndGet();
 
-                        if (retryed.get() > 5)
+                        if(retryed.get() > 5)
                             onFailure(call, new IOException());
                         else httpClient.newCall(fileInfoRequest)
                                 .enqueue(this);
@@ -300,14 +301,14 @@ public class TelegramStickersGrabber {
                         return;
                     }
 
-                    if (botApiKey == null) botApiKey = "";
+                    if(botApiKey == null) botApiKey = "";
 
                     NetRequest fileDownloadRequest = new NetRequest.Builder().get().url(String.format(BOT_API_BASE_FILE_URL, botApiKey, filePath)).build();
 
-                    httpClient.newCall(fileDownloadRequest).enqueue(new NetCallback() {
+                    httpClient.newCall(fileDownloadRequest).enqueue(new NetCallback(){
                         @Override
-                        public void onFailure(NetCall call, IOException e) {
-                            if (deathFlag.up())
+                        public void onFailure(NetCall call, IOException e){
+                            if(deathFlag.up())
                                 return;
 
                             deathFlag.raise();
@@ -317,14 +318,14 @@ public class TelegramStickersGrabber {
                         }
 
                         @Override
-                        public void onResponse(NetCall call, NetResponse response) throws IOException {
-                            if (deathFlag.up())
+                        public void onResponse(NetCall call, NetResponse response) throws IOException{
+                            if(deathFlag.up())
                                 return;
 
-                            if (response.code() != 200) {
+                            if(response.code() != 200){
                                 retryed.incrementAndGet();
 
-                                if (retryed.get() > 5)
+                                if(retryed.get() > 5)
                                     onFailure(call, new IOException());
                                 else httpClient.newCall(fileDownloadRequest)
                                         .enqueue(this);
@@ -332,7 +333,7 @@ public class TelegramStickersGrabber {
                                 return;
                             }
 
-                            if (response.getData() == null) {
+                            if(response.getData() == null){
                                 deathFlag.raise();
                                 listener.onPackDownloadError(new TSGException("Response body for a sticker is null :/"));
                                 sync.set(true);
@@ -354,7 +355,7 @@ public class TelegramStickersGrabber {
                                 return;
                             }
 
-                            if (stickerImage == null) {
+                            if(stickerImage == null){
                                 deathFlag.raise();
                                 listener.onPackDownloadError(new TSGException("Unable to decode sticker image"));
                                 sync.set(true);
@@ -375,7 +376,7 @@ public class TelegramStickersGrabber {
                                 return;
                             }
 
-                            if (!stickerImage.compress(Bitmap.CompressFormat.PNG, 100, fileOutputStream)) {
+                            if(!stickerImage.compress(Bitmap.CompressFormat.PNG, 100, fileOutputStream)){
                                 stickerImage.recycle();
                                 deathFlag.raise();
                                 listener.onPackDownloadError(new TSGException("Unable to compress sticker to a png file at path: " + stickerFile.getAbsolutePath()));
@@ -406,7 +407,7 @@ public class TelegramStickersGrabber {
                 }
             });
 
-            while (!sync.get())
+            while(!sync.get())
                 try {
                     Thread.sleep(100);
                 } catch (InterruptedException e1) {
@@ -414,11 +415,11 @@ public class TelegramStickersGrabber {
         }
     }
 
-    private void runOnUiThread(Runnable r) {
+    private void runOnUiThread(Runnable r){
         uiThreadHandler.post(r);
     }
 
-    public interface PackDownloadListener {
+    public interface PackDownloadListener{
         void onPackDownloaded(TelegramStickersPackInfo pack, boolean newVersionFound);
 
         void onPackDownloadError(Exception e);
@@ -428,27 +429,27 @@ public class TelegramStickersGrabber {
         void onStickerDownloaded(String pack, File sticker, String boundEmoji, int stickerIndex, int downloadedStickersCount, int totalStickerCount);
     }
 
-    public interface KeyCheckListener {
+    public interface KeyCheckListener{
         void onKeyChecked(boolean ok);
 
         void onNetError();
     }
 
-    public class TSGException extends Exception {
+    public class TSGException extends Exception{
         private static final long serialVersionUID = 7866915509988422944L;
 
-        private TSGException(String message) {
+        private TSGException(String message){
             super(message);
         }
     }
 
-    private class StickerSet {
+    private class StickerSet{
         String id;
         String name;
         String version;
         ArrayList<Sticker> stickers;
 
-        StickerSet(String id, String name, String version, ArrayList<Sticker> stickers) {
+        StickerSet(String id, String name, String version, ArrayList<Sticker> stickers){
             this.name = name;
             this.stickers = stickers;
             this.id = id;
@@ -456,22 +457,22 @@ public class TelegramStickersGrabber {
         }
     }
 
-    private class Sticker {
+    private class Sticker{
         String emoji;
         String fileId;
 
-        Sticker(String fileId, String emoji) {
+        Sticker(String fileId, String emoji){
             this.fileId = fileId;
             this.emoji = emoji;
         }
 
         @Override
-        public boolean equals(Object obj) {
+        public boolean equals(Object obj){
             return obj instanceof Sticker && ((Sticker) obj).fileId.equals(fileId);
         }
 
         @Override
-        public int hashCode() {
+        public int hashCode(){
             return (17 * emoji.hashCode()) << 32 + fileId.hashCode();
         }
     }

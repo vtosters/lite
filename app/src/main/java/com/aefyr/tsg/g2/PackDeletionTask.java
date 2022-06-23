@@ -8,20 +8,20 @@ import java.io.File;
 /**
  * Created by Aefyr on 20.05.2018.
  */
-class PackDeletionTask extends AsyncTask<Void, Void, Boolean> {
+class PackDeletionTask extends AsyncTask<Void, Void, Boolean>{
     private static final String TAG = "TGSSAnnihilator";
 
     private final TelegramStickersPack pack;
 
-    PackDeletionTask(TelegramStickersPack pack) {
+    PackDeletionTask(TelegramStickersPack pack){
         this.pack = pack;
     }
 
     @Override
-    protected Boolean doInBackground(Void... voids) {
+    protected Boolean doInBackground(Void... voids){
         boolean success = true;
 
-        for (File f : pack.folder.listFiles()) {
+        for(File f : pack.folder.listFiles()) {
             success = success && f.delete();
         }
 
@@ -31,7 +31,7 @@ class PackDeletionTask extends AsyncTask<Void, Void, Boolean> {
     }
 
     @Override
-    protected void onPostExecute(Boolean aBoolean) {
+    protected void onPostExecute(Boolean aBoolean){
         Log.d(TAG, String.format("Attempted deleting pack %s, success?%s", pack.id, aBoolean));
     }
 }

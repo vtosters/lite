@@ -13,7 +13,7 @@ import android.content.pm.Signature;
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
 
-public class SignatureChecker {
+public class SignatureChecker{
     private static final String APP_SIGNATURE = "QzNFQTI3Q0ExNEJENzJFM0U2QUUyMDM0OTdCNDQ0NUFEQUMxRjk0NQ==";
 
     public static String getSHA1(byte[] sig) throws NoSuchAlgorithmException{
@@ -28,7 +28,7 @@ public class SignatureChecker {
                 '9', 'A', 'B', 'C', 'D', 'E', 'F'};
         char[] hexChars = new char[bytes.length * 2];
         int v;
-        for (int j = 0; j < bytes.length; j++) {
+        for(int j = 0; j < bytes.length; j++) {
             v = bytes[j] & 0xFF;
             hexChars[j * 2] = hexArray[v >>> 4];
             hexChars[j * 2 + 1] = hexArray[v & 0x0F];
@@ -38,7 +38,7 @@ public class SignatureChecker {
 
     public static boolean validateAppSignature() throws NameNotFoundException, NoSuchAlgorithmException{
         @SuppressLint("PackageManagerGetSignatures") PackageInfo packageInfo = getContext().getPackageManager().getPackageInfo(getPackageName(), GET_SIGNATURES);
-        for (Signature signature : packageInfo.signatures) {
+        for(Signature signature : packageInfo.signatures) {
             String sha1 = getSHA1(signature.toByteArray());
             return decode(APP_SIGNATURE).equals(sha1);
         }

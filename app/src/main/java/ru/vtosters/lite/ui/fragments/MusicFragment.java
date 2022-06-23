@@ -4,12 +4,11 @@ import static ru.vtosters.lite.utils.Globals.getIdentifier;
 
 import android.os.Bundle;
 
-import com.vtosters.lite.R;
 import com.vtosters.lite.general.fragments.MaterialPreferenceToolbarFragment;
 
-public class MusicFragment extends MaterialPreferenceToolbarFragment {
+public class MusicFragment extends MaterialPreferenceToolbarFragment{
     @Override
-    public void onCreate(Bundle bundle) {
+    public void onCreate(Bundle bundle){
         super.onCreate(bundle);
         addPreferencesFromResource(getIdentifier("preferences_music", "xml"));
     }

@@ -7,18 +7,17 @@ import android.os.Bundle;
 
 import androidx.preference.Preference;
 
-import com.vtosters.lite.R;
 import com.vtosters.lite.general.fragments.MaterialPreferenceToolbarFragment;
 
-public class InterfaceFragment extends MaterialPreferenceToolbarFragment {
+public class InterfaceFragment extends MaterialPreferenceToolbarFragment{
     @Override
-    public void onCreate(Bundle bundle) {
+    public void onCreate(Bundle bundle){
         super.onCreate(bundle);
         addPreferencesFromResource(getIdentifier("preferences_interface", "xml"));
         prefs();
     }
 
-    private void prefs() {
+    private void prefs(){
         findPreference("newfeed").setOnPreferenceClickListener(new restart());
         findPreference("dateformat").setOnPreferenceClickListener(new restart());
         findPreference("stories").setOnPreferenceClickListener(new restart());
@@ -26,17 +25,17 @@ public class InterfaceFragment extends MaterialPreferenceToolbarFragment {
         findPreference("dockcounter").setOnPreferenceClickListener(new restart());
     }
 
-    public boolean restart(Preference preference) {
+    public boolean restart(Preference preference){
         restartApplicationWithTimer();
         return true;
     }
 
-    public class restart implements Preference.OnPreferenceClickListener {
-        restart() {
+    public class restart implements Preference.OnPreferenceClickListener{
+        restart(){
         }
 
         @Override
-        public boolean onPreferenceClick(Preference preference) {
+        public boolean onPreferenceClick(Preference preference){
             return InterfaceFragment.this.restart(preference);
         }
     }
