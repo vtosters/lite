@@ -2501,7 +2501,9 @@
 
     iput-boolean v2, v0, Lcom/vtosters/lite/api/ExtendedUserProfile;->u1:Z
 
-    const-string v2, "friends_recommendations"
+    ## useless recomms must die
+
+    const-string v2, "null"
 
     .line 192
     invoke-virtual {v1, v2}, Lorg/json/JSONObject;->optJSONObject(Ljava/lang/String;)Lorg/json/JSONObject;
