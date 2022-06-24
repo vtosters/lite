@@ -48,7 +48,7 @@ public class Preferences{
         setupFilters();
         fixGapps();
         setProxy();
-        //reloadMessagesList();
+        DeletedMessagesHandler.reloadMessagesList();
         registerActivities(application);
         if(dev()){
             LoadLibrary("vkopustest");
