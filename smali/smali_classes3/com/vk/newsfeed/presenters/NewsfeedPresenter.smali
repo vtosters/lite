@@ -1176,6 +1176,15 @@
 .method private final b(Lcom/vk/dto/stories/model/GetStoriesResponse;)V
     .locals 4
 
+    invoke-static {}, Lru/vtosters/lite/utils/Preferences;->stories()Z
+
+    move-result v0
+
+    if-nez v0, :cond_7
+
+    return-void
+
+    :cond_7
     if-eqz p1, :cond_0
 
     move-object v0, p1
