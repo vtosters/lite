@@ -1217,6 +1217,10 @@
 
     const-string v3, "static.vk.com"
 
+    invoke-static {v3}, Lru/vtosters/lite/utils/Proxy;->linkReplacer(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v3
+
     .line 1
     invoke-static {p1, v3, v2, v1, v0}, Lkotlin/text/l;->a(Ljava/lang/CharSequence;Ljava/lang/CharSequence;ZILjava/lang/Object;)Z
 
@@ -1964,7 +1968,7 @@
 
     move-result-object v1
 
-    invoke-static {}, Lru/vtosters/lite/utils/Proxy;->getApiCom()Ljava/lang/String;
+    invoke-static {v1}, Lru/vtosters/lite/utils/Proxy;->linkReplacer(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v1
 

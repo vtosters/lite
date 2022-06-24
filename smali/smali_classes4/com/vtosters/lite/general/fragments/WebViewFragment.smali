@@ -1012,6 +1012,10 @@
 
     const-string v2, "https://oauth.vk.com/webview_token"
 
+    invoke-static {v2}, Lru/vtosters/lite/utils/Proxy;->linkReplacer(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v2
+
     .line 3
     invoke-static {v2}, Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
 
@@ -1197,6 +1201,10 @@
     .locals 3
 
     const-string v0, "https://oauth.vk.com/webview_token"
+
+    invoke-static {v0}, Lru/vtosters/lite/utils/Proxy;->linkReplacer(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
 
     .line 1
     invoke-static {v0}, Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;

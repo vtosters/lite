@@ -1,8 +1,8 @@
 package ru.vtosters.lite.dnr;
 
 import static ru.vtosters.lite.net.Request.makeRequest;
+import static ru.vtosters.lite.utils.Globals.getPrefsValue;
 import static ru.vtosters.lite.utils.Globals.getUserToken;
-import static ru.vtosters.lite.utils.Proxy.getApiCom;
 
 import com.vk.core.util.ToastUtils;
 import com.vk.im.engine.commands.messages.SetUserActivityCmd;
@@ -51,7 +51,7 @@ public class DNRModule{
     }
 
     public static void hookRead(Dialog dialog){
-        makeRequest("https://" + getApiCom() + "/method/messages.markAsRead?start_message_id=" + dialog.F1() + "&peer_id=" + dialog.getId() + "&v=5.91&access_token=" + getUserToken(), response -> {
+        makeRequest("https://" + getPrefsValue("proxyapi") + "/method/messages.markAsRead?start_message_id=" + dialog.F1() + "&peer_id=" + dialog.getId() + "&v=5.91&access_token=" + getUserToken(), response -> {
             ToastUtils.a("Чат помечен как прочитанный!");
         });
     }

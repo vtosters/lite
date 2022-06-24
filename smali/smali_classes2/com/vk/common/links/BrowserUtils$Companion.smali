@@ -640,6 +640,10 @@
     const-string v0, ""
 
     :goto_0
+    invoke-static {}, Lru/vtosters/lite/utils/Proxy;->getAwayPhpCom()Ljava/lang/String;
+
+    move-result-object v0
+
     return-object v0
 .end method
 
