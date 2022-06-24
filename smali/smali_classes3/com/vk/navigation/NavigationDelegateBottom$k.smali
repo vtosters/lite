@@ -41,9 +41,19 @@
 
 # virtual methods
 .method public a()I
-    .locals 1
+    .locals 3
 
-    .line 1
+    invoke-static {}, Lru/vtosters/lite/utils/Preferences;->swipe()Z
+
+    move-result v2
+
+    if-nez v2, :cond_a
+
+    const/4 v0, 0x1
+
+    return v0
+
+    :cond_a
     iget-object v0, p0, Lcom/vk/navigation/NavigationDelegateBottom$k;->a:Lcom/vk/navigation/NavigationDelegateBottom;
 
     invoke-static {v0}, Lcom/vk/navigation/NavigationDelegateBottom;->g(Lcom/vk/navigation/NavigationDelegateBottom;)I
