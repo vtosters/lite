@@ -219,7 +219,15 @@
 .method private final a(ZJ)Ljava/lang/String;
     .locals 2
 
-    .line 8
+    invoke-static {p1, p2, p3}, Lru/vtosters/lite/utils/Preferences;->getFormattedDate(ZJ)Ljava/lang/String;
+
+    move-result-object v0
+
+    if-eqz v0, :cond_7
+
+    return-object v0
+
+    :cond_7
     invoke-direct {p0}, Lcom/vk/core/formatters/OnlineFormatter;->f()Ljava/lang/StringBuilder;
 
     move-result-object v0
