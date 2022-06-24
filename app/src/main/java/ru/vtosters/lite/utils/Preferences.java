@@ -353,10 +353,6 @@ public class Preferences{
         return getBoolValue("disableSettingsSumms", false);
     }
 
-    public static boolean donaterecomm(){
-        return getBoolValue("donaterecomm", false);
-    }
-
     public static boolean hasVerification(){
         return isVerified(getUserId());
     }
