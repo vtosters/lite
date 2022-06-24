@@ -60,6 +60,10 @@
 
     move-result-object p1
 
+    invoke-static {}, Lru/vtosters/lite/utils/About;->getAppVersion()Ljava/lang/String;
+
+    move-result-object p1
+
     invoke-virtual {v0, p1}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
     return-void
