@@ -5959,11 +5959,11 @@
 
     move-result v0
 
-    if-nez v0, :cond_1
+    if-nez v0, :cond_2
 
     return-void
 
-    :cond_1
+    :cond_2
     const/4 v0, 0x0
 
     if-eqz p1, :cond_1

@@ -208,6 +208,10 @@
 
     const-string v0, "api.vk.com"
 
+    invoke-static {}, Lru/vtosters/lite/utils/Proxy;->getApiCom()Ljava/lang/String;
+
+    move-result-object v0
+
     return-object v0
 .end method
 
@@ -300,6 +304,10 @@
     move-result-object v0
 
     const-string v3, "api.vk.com"
+
+    invoke-static {}, Lru/vtosters/lite/utils/Proxy;->getApiCom()Ljava/lang/String;
+
+    move-result-object v3
 
     invoke-static {v0, v3}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
