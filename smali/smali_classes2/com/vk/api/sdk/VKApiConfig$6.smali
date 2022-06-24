@@ -71,5 +71,9 @@
 
     const-string v0, "api.vk.com"
 
+    invoke-static {}, Lru/vtosters/lite/utils/Proxy;->getApiCom()Ljava/lang/String;
+
+    move-result-object v0
+
     return-object v0
 .end method

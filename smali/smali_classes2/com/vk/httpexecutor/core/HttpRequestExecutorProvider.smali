@@ -275,6 +275,10 @@
 
     const-string v3, "api.vk.com"
 
+    invoke-static {}, Lru/vtosters/lite/utils/Proxy;->getApiCom()Ljava/lang/String;
+
+    move-result-object v3
+
     .line 35
     invoke-static {v3, v7}, Lkotlin/Tuples;->a(Ljava/lang/Object;Ljava/lang/Object;)Lkotlin/Pair;
 

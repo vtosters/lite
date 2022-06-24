@@ -2010,6 +2010,10 @@
 
     const-string v1, "api.vk.com"
 
+    invoke-static {}, Lru/vtosters/lite/utils/Proxy;->getApiCom()Ljava/lang/String;
+
+    move-result-object v1
+
     const-string v2, "previous_apiHosts"
 
     invoke-direct {v0, p1, v1, v2}, Lcom/vtosters/lite/fragments/n2/SettingsDebugFragment$n;-><init>(Landroidx/preference/Preference;Ljava/lang/String;Ljava/lang/String;)V
