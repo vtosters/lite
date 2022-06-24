@@ -1,6 +1,5 @@
 package ru.vtosters.lite.utils;
 
-import static android.os.Build.VERSION;
 import static java.lang.Long.MAX_VALUE;
 import static ru.vtosters.lite.f0x1d.VTVerifications.hasPrometheus;
 import static ru.vtosters.lite.f0x1d.VTVerifications.isVerified;
@@ -225,10 +224,6 @@ public class Preferences{
         return getBoolValue("returnnorifs", false);
     }
 
-    public static boolean CommentsSort(){
-        return getBoolValue("commentssorting", false);
-    }
-
     public static boolean gcmfix(){
         return getBoolValue("gcmfix", true) && isValidSignature();
     }
@@ -251,14 +246,6 @@ public class Preferences{
 
     public static boolean isMusicRestricted(){
         return getBoolValue("isMusicRestricted", true);
-    }
-
-    public static boolean msgflat(){
-        return getBoolValue("msgflat", false);
-    }
-
-    public static boolean msgtails(){
-        return getBoolValue("msgtails", true);
     }
 
     public static boolean navbar(){
@@ -325,14 +312,6 @@ public class Preferences{
         return getBoolValue("systememoji", false);
     }
 
-    public static boolean unlockstats(){
-        return getBoolValue("unlockstats", false);
-    }
-
-    public static boolean usevkui(){
-        return getBoolValue("usevkui", true);
-    }
-
     public static boolean vksans(){
         return getBoolValue("vksans", false);
     }
@@ -341,26 +320,10 @@ public class Preferences{
         return getBoolValue("voice", true);
     }
 
-    public static boolean newvideo(){
-        return false;
-    }
-
     public static int getMsgCount(int orig){
         String customvalue = getPrefsValue("msgcount");
         return customvalue.isEmpty() ? orig : Integer.parseInt(customvalue);
     }
-
-    public static String MediacontentFix(){
-        return VERSION.SDK_INT >= 29 ? "date_modified DESC" : "datetaken DESC";
-    } // Fix photo picker for sdk 29+
-
-    public static String MediacontentFix2(){
-        return VERSION.SDK_INT >= 29 ? "date_modified" : "datetaken";
-    } // Fix photo picker for sdk 29+
-
-    public static String MediacontentFix3(){
-        return VERSION.SDK_INT >= 29 ? ", date_modified=" : ", dateTaken=";
-    } // Fix photo picker for sdk 29+
 
     public static boolean color_grishka(){
         return getBoolValue("color_grishka", true);
@@ -374,16 +337,8 @@ public class Preferences{
         return getBoolValue("vkme_notifs", false);
     }
 
-    public static boolean roundedmsgs(){
-        return getBoolValue("roundedmsgs", false);
-    }
-
     public static boolean checkupdates(){
         return getBoolValue("checkupdates", true) && isValidSignature();
-    }
-
-    public static boolean disableanimstickers(){
-        return getBoolValue("disableanimstickers", true);
     }
 
     public static boolean isValidSignature(){

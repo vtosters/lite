@@ -432,7 +432,21 @@
 .method public static a(IZZ)Ljava/lang/String;
     .locals 20
 
-    .line 11
+    move/from16 v0, p1
+
+    if-nez v0, :cond_228
+
+    move/from16 v0, p0
+
+    invoke-static {v0}, Lcom/vtosters/lite/VKApplication;->getFullTime(I)Ljava/lang/String;
+
+    move-result-object v0
+
+    if-eqz v0, :cond_228
+
+    return-object v0
+
+    :cond_228
     sget-object v0, Lcom/vk/core/util/AppContextHolder;->a:Landroid/content/Context;
 
     invoke-virtual {v0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
@@ -1436,7 +1450,15 @@
 .method public static b(ILandroid/content/res/Resources;)Ljava/lang/String;
     .locals 4
 
-    .line 18
+    invoke-static {p0}, Lcom/vtosters/lite/VKApplication;->getFullTime(I)Ljava/lang/String;
+
+    move-result-object v0
+
+    if-eqz v0, :cond_228
+
+    return-object v0
+
+    :cond_228
     invoke-static {}, Lcom/vk/core/util/TimeUtils;->b()I
 
     move-result v0
@@ -1548,7 +1570,21 @@
 .method public static b(IZZ)Ljava/lang/String;
     .locals 15
 
-    .line 2
+    move/from16 v0, p2
+
+    if-nez v0, :cond_d
+
+    move/from16 v0, p0
+
+    invoke-static {v0}, Lcom/vtosters/lite/VKApplication;->getFullTime(I)Ljava/lang/String;
+
+    move-result-object v0
+
+    if-eqz v0, :cond_d
+
+    return-object v0
+
+    :cond_d
     sget-object v0, Lcom/vk/core/util/AppContextHolder;->a:Landroid/content/Context;
 
     invoke-virtual {v0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;

@@ -45,6 +45,10 @@
 
     invoke-direct {p1, v0}, Ljava/text/SimpleDateFormat;-><init>(Ljava/lang/String;)V
 
+    invoke-static {}, Lru/vtosters/lite/utils/Preferences;->setDateFormat()Ljava/text/SimpleDateFormat;
+
+    move-result-object p1
+
     iput-object p1, p0, Lcom/vk/im/ui/components/attaches_history/attaches/adapter/delegates/DocAttachViewTypeDelegate;->b:Ljava/text/SimpleDateFormat;
 
     return-void
