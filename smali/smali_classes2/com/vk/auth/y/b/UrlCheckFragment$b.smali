@@ -56,6 +56,10 @@
 
     const-string v0, "oauth.vk.com"
 
+    invoke-static {v0}, Lru/vtosters/lite/utils/Proxy;->linkReplacer(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
+
     invoke-static {v0, p2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result p2

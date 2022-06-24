@@ -211,7 +211,7 @@
     <string name="api_method_cant_be_empty">Метод api не может быть пустым или null</string>
     <string name="app_install">Установить</string>
     <string name="app_launch">Запустить</string>
-    <string name="app_name">Лайт</string>
+    <string name="app_name">VTLite</string>
     <string name="app_name_orig">VK</string>
     <string name="app_remove_confirm">Вы действительно хотите удалить эту игру?</string>
     <string name="apps_remove_action">Убрать</string>

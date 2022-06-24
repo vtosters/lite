@@ -82,6 +82,10 @@
 
     .line 3
     :goto_0
+    invoke-static {v0}, Lru/vtosters/lite/utils/Proxy;->linkReplacer(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
+
     invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result p1
