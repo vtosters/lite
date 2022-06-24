@@ -55,7 +55,7 @@
 
     move-result v2
 
-    if-nez v2, :cond_a
+    if-eqz v2, :cond_a
 
     invoke-static {}, Lru/vtosters/lite/utils/Preferences;->forceOffline()V
 

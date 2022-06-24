@@ -105,7 +105,7 @@ public class VTSettings extends MaterialPreferenceToolbarFragment{
         String docksumm = getDocksumm();
         String musicsumm = getValAsString("vtlmusicsumm", isIntegrationEnabled());
         String msgsumm = getValAsString("vtlmsgsumm", vkme());
-        String activitysumm = getValAsString("vtlactivitysumm", !offline());
+        String activitysumm = getValAsString("vtlactivitysumm", offline());
         String themessumm = getValAsString("vtlthemessumm", navbar());
         String tgssumm = getTGSsumm();
         String interfacesumm = getValAsString("vtlinterfacesumm", shortinfo());
