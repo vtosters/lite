@@ -5,7 +5,7 @@ import static ru.vtosters.lite.f0x1d.VTVerifications.vtverif;
 import static ru.vtosters.lite.utils.About.getBuildNumber;
 import static ru.vtosters.lite.utils.About.getCommitLink;
 import static ru.vtosters.lite.utils.CacheUtils.humanReadableByteCountBin;
-import static ru.vtosters.lite.utils.Globals.drawableFromUrl;
+import static ru.vtosters.lite.utils.Globals.getAvatarDrawable;
 import static ru.vtosters.lite.utils.Globals.edit;
 import static ru.vtosters.lite.utils.Globals.getIdentifier;
 import static ru.vtosters.lite.utils.Globals.getPrefsValue;
@@ -117,7 +117,7 @@ public class VTSettings extends MaterialPreferenceToolbarFragment{
         int vtosterXml = getIdentifier("empty", "xml");
         this.addPreferencesFromResource(vtosterXml);
 
-        PreferencesUtil.addPreferenceDrawable(this, "", "Аккаунты", getUsername() + (hasVerification() ? Globals.getString("thanksfordonate") : Globals.getString("getdonate")), drawableFromUrl(getUserPhoto()), preference -> {
+        PreferencesUtil.addPreferenceDrawable(this, "", "Аккаунты", getUsername() + (hasVerification() ? Globals.getString("thanksfordonate") : Globals.getString("getdonate")), getAvatarDrawable(getUserPhoto()), preference -> {
             AuthBridge.logout();
             restartApplication();
             return false;
