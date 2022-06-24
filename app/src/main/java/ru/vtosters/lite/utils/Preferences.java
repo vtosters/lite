@@ -63,7 +63,7 @@ public class Preferences{
 
         edit().putBoolean("isdark", isDarkTheme()).commit();
 
-        if(setoffline() && !offline()){
+        if(setoffline() && offline()){
             Users.a();
         }
     }
@@ -193,7 +193,7 @@ public class Preferences{
     }
 
     public static boolean dns(){
-        return getBoolValue("dns", true);
+        return getBoolValue("dns", false);
     }
 
     public static boolean libverify(){
@@ -257,7 +257,7 @@ public class Preferences{
     }
 
     public static boolean offline(){
-        return getBoolValue("offline", true);
+        return getBoolValue("offline", false);
     }
 
     public static boolean oldabout(){
