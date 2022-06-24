@@ -309,7 +309,9 @@
 
     invoke-static {v5, v6, v2, v3}, Lcom/vk/dto/stories/model/GetStoriesResponse;->a(Lorg/json/JSONArray;Ljava/util/Collection;Landroid/util/SparseArray;Landroid/util/SparseArray;)V
 
-    const-string v5, "ads"
+    invoke-static {}, Lru/vtosters/lite/utils/Newsfeed;->storyads()Ljava/lang/String;
+
+    move-result-object v5
 
     .line 29
     invoke-virtual {p1, v5}, Lorg/json/JSONObject;->optJSONObject(Ljava/lang/String;)Lorg/json/JSONObject;
