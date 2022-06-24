@@ -138,8 +138,24 @@ public class Globals{
         return extendedUserProfile.a;
     }
 
+    public static Drawable getDrawableFromUrl(String url){
+        try {
+            URL aryURI = new URL(url);
+            StrictMode.ThreadPolicy policy = new StrictMode.ThreadPolicy.Builder().permitAll().build();
+            StrictMode.setThreadPolicy(policy);
+
+            URLConnection conn = aryURI.openConnection();
+            InputStream is = conn.getInputStream();
+            Bitmap bmp = BitmapFactory.decodeStream(is);
+
+            return new BitmapDrawable(getResources(), bmp);
+        } catch (Exception e) {
+            return null;
+        }
+    }
+
     @SuppressWarnings("deprecation")
-    public static Drawable drawableFromUrl(String url){
+    public static Drawable getAvatarDrawable(String url){
         try {
             URL aryURI = new URL(url);
             StrictMode.ThreadPolicy policy = new StrictMode.ThreadPolicy.Builder().permitAll().build();
