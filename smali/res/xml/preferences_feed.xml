@@ -59,7 +59,7 @@
         <com.vtosters.lite.ui.MaterialSwitchPreference
             android:defaultValue="false"
             android:key="blockvkcopyright"
-            android:summary="Блокировать посты с источником где есть ссылка на вк (группу, страницу)"
+            android:summary="Блокировать посты с источником где есть ссылка на вк (группу, страницу или посты)"
             android:title="Отключить посты с ссылкой на вк" />
         <EditTextPreference
             android:defaultValue=""
