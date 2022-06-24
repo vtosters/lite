@@ -53,7 +53,7 @@
 
     sput-object v0, Lb/h/g/g/BuildInfo;->c:Ljava/lang/String;
 
-    const/16 v0, 0x12e6
+    const/16 v0, 0x3032
 
     .line 5
     sput v0, Lb/h/g/g/BuildInfo;->d:I
