@@ -289,10 +289,6 @@ public class Preferences{
         return dnr() ? "messages.markAsRead" : "null";
     }
 
-    public static String copyrightfix(){
-        return copyright_post() ? "copyright" : "ads_easy_promote";
-    }
-
     public static boolean refsfilter(){
         return getBoolValue("refsfilter", false);
     }

@@ -98,10 +98,10 @@ public class Newsfeed{
             return false;
         }
 
-        checkCopyright(obj);
+        if(checkCopyright(obj)) return false;
 
-        optString = obj.optString("text", "");
-        if(isBadNew(optString)) return false;
+        if(isBadNew(obj.optString("text", ""))) return false;
+
         if(checkCaption(obj)) return false;
 
         return !isGroupAds(obj);
@@ -112,7 +112,7 @@ public class Newsfeed{
             JSONObject copyright = json.getJSONObject("copyright");
             String copyrightlink = copyright.getString("link");
 
-            return !copyrightlink.contains("vk.com") || !copyright_post(); // fuck you, it doesn't work to detect link value
+            return copyrightlink.contains("vk.com") || copyright_post(); // fuck you, it doesn't work to detect link value
 
             // example of response
             //"copyright": {
@@ -123,7 +123,7 @@ public class Newsfeed{
             //}
 
         }
-        return true;
+        return false;
     }
 
     private static boolean isRecomsGroup(String src){
