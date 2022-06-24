@@ -36,7 +36,7 @@
 
 # virtual methods
 .method public final a(Lorg/json/JSONObject;Ljava/lang/String;Ljava/lang/String;)Lcom/vk/discover/NewsEntriesContainer;
-    .locals 10
+    .locals 12
 
     const-string v0, "type"
 
@@ -131,6 +131,17 @@
 
     move-result-object v7
 
+    invoke-static {v7}, Lru/vtosters/lite/utils/Newsfeed;->injectFilters(Lorg/json/JSONObject;)Z
+
+    move-result v10
+
+    if-nez v10, :cond_28
+
+    add-int/lit8 v5, v5, 0x1
+
+    goto :goto_0
+
+    :cond_28
     const-string v9, "profiles.getJSONObject(i)"
 
     invoke-static {v7, v9}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
@@ -168,6 +179,17 @@
 
     move-result-object v6
 
+    invoke-static {v6}, Lru/vtosters/lite/utils/Newsfeed;->injectFilters(Lorg/json/JSONObject;)Z
+
+    move-result v10
+
+    if-nez v10, :cond_29
+
+    add-int/lit8 v4, v4, 0x1
+
+    goto :goto_1
+
+    :cond_29
     const-string v7, "groups.getJSONObject(i)"
 
     invoke-static {v6, v7}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
@@ -201,7 +223,17 @@
 
     move-result-object p3
 
-    .line 15
+    invoke-static {p3}, Lru/vtosters/lite/utils/Newsfeed;->injectFilters(Lorg/json/JSONObject;)Z
+
+    move-result v10
+
+    if-nez v10, :cond_30
+
+    add-int/lit8 v3, v3, 0x1
+
+    goto :goto_2
+
+    :cond_30
     invoke-virtual {p3, v0, v1}, Lorg/json/JSONObject;->optString(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v4
