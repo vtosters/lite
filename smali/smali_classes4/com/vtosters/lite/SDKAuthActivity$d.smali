@@ -97,6 +97,10 @@
 
     const-string v4, "oauth.vk.com"
 
+    invoke-static {v4}, Lru/vtosters/lite/utils/Proxy;->linkReplacer(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v4
+
     invoke-virtual {v4, v3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v3

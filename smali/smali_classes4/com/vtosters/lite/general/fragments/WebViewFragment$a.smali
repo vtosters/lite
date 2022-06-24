@@ -40,6 +40,10 @@
 
     const-string v1, "oauth.vk.com"
 
+    invoke-static {v1}, Lru/vtosters/lite/utils/Proxy;->linkReplacer(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v1
+
     invoke-virtual {v1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v0
@@ -177,6 +181,10 @@
     invoke-static {v0}, Lcom/vk/log/L;->a([Ljava/lang/Object;)V
 
     const-string v0, "https://oauth.vk.com/blank.html#state=webview_refresh_access_token"
+
+    invoke-static {v0}, Lru/vtosters/lite/utils/Proxy;->linkReplacer(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
 
     .line 2
     invoke-virtual {p2, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z

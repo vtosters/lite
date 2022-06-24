@@ -275,7 +275,7 @@
 
     const-string v3, "api.vk.com"
 
-    invoke-static {}, Lru/vtosters/lite/utils/Proxy;->getApiCom()Ljava/lang/String;
+    invoke-static {v3}, Lru/vtosters/lite/utils/Proxy;->linkReplacer(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v3
 

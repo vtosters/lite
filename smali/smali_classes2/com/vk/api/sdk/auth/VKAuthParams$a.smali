@@ -114,6 +114,10 @@
 
     const-string v3, "https://oauth.vk.com/blank.html"
 
+    invoke-static {v3}, Lru/vtosters/lite/utils/Proxy;->linkReplacer(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v3
+
     .line 7
     invoke-virtual {p1, v1, v3}, Landroid/os/Bundle;->getString(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
