@@ -1241,6 +1241,18 @@
 .method private final a(I)Ljava/lang/CharSequence;
     .locals 2
 
+    invoke-static {}, Lru/vtosters/lite/utils/Preferences;->dockcounter()Z
+
+    move-result v1
+
+    if-nez v1, :cond_228
+
+    const/4 p1, 0x0
+
+    return-object p1
+
+    :cond_228
+
     const/4 v0, 0x0
 
     packed-switch p1, :pswitch_data_0
