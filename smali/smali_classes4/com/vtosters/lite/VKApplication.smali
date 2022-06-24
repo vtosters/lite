@@ -1052,7 +1052,7 @@
 
     const-string v2, "arm"
 
-    const-string v3, "5.56.1"
+    const-string v3, "7.26"
 
     const/4 v4, 0x0
 
