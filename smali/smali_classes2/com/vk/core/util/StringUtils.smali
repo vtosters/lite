@@ -124,8 +124,35 @@
 .end method
 
 .method public static final a(I)Ljava/lang/String;
-    .locals 4
+    .locals 6
 
+    invoke-static {}, Lru/vtosters/lite/utils/Preferences;->shortinfo()Z
+
+    move-result v5
+
+    if-nez v5, :cond_228
+
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
+
+    invoke-static {p0}, Ljava/lang/String;->valueOf(I)Ljava/lang/String;
+
+    move-result-object p0
+
+    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string p0, ""
+
+    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p0
+
+    return-object p0
+
+    :cond_228
     const v0, 0xf4240
 
     if-lt p0, v0, :cond_0
@@ -263,7 +290,7 @@
 .end method
 
 .method public static final a(IIIZ)Ljava/lang/String;
-    .locals 5
+    .locals 6
     .param p1    # I
         .annotation build Landroidx/annotation/PluralsRes;
         .end annotation
@@ -273,7 +300,6 @@
         .end annotation
     .end param
 
-    .line 8
     sget-object v0, Lcom/vk/core/util/AppContextHolder;->a:Landroid/content/Context;
 
     const/4 v1, 0x0
@@ -402,6 +428,17 @@
     move-result-object p3
 
     :goto_0
+    invoke-static {}, Lru/vtosters/lite/utils/Preferences;->shortinfo()Z
+
+    move-result v5
+
+    if-nez v5, :cond_228
+
+    invoke-static {p0}, Ljava/lang/String;->valueOf(I)Ljava/lang/String;
+
+    move-result-object p3
+
+    :cond_228
     aput-object p3, v0, v1
 
     invoke-virtual {p2, p1, p0, v0}, Landroid/content/res/Resources;->getQuantityString(II[Ljava/lang/Object;)Ljava/lang/String;

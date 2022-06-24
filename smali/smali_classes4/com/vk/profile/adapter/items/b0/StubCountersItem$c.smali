@@ -73,7 +73,7 @@
 
 # virtual methods
 .method public a(Lcom/vk/profile/adapter/items/b0/StubCountersItem$a;)V
-    .locals 5
+    .locals 6
 
     .line 1
     invoke-static {}, Ljava/text/NumberFormat;->getIntegerInstance()Ljava/text/NumberFormat;
@@ -140,6 +140,33 @@
 
     if-le v1, v3, :cond_0
 
+    invoke-static {}, Lru/vtosters/lite/utils/Preferences;->shortinfo()Z
+
+    move-result v5
+
+    if-nez v5, :cond_228
+
+    new-instance v1, Ljava/lang/StringBuilder;
+
+    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
+
+    invoke-virtual {p1}, Lcom/vk/profile/adapter/items/b0/StubCountersItem$a;->a()I
+
+    move-result v3
+
+    int-to-long v3, v3
+
+    invoke-virtual {v0, v3, v4}, Ljava/text/NumberFormat;->format(J)Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v0, ""
+
+    goto :goto_0
+
+    :cond_228
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
