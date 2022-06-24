@@ -15,29 +15,29 @@ public class Proxy{
         String oauth = "oauth.vk.com";
         String vkstatic = "static.vk.com";
 
-        String proxiedvkapi = getPrefsValue("proxyapi");
-        String proxiedoauth = getPrefsValue("proxyoauth");
-        String proxedvkstatic = getPrefsValue("proxystatic");
+        String proxproxyapi = getPrefsValue("proxyapi");
+        String proxyoauth = getPrefsValue("proxyoauth");
+        String proxystatic = getPrefsValue("proxystatic");
 
         if(!proxy() || link.isEmpty()){
             return link;
         }
 
-        if(proxiedvkapi.isEmpty() || proxiedoauth.isEmpty() || proxedvkstatic.isEmpty()){
-            Log.d("VTLite", "Proxy is not set" + " " + proxiedvkapi + " " + proxiedoauth + " " + proxedvkstatic);
+        if(proxproxyapi.isEmpty() || proxyoauth.isEmpty() || proxystatic.isEmpty()){
+            Log.d("VTLite", "Proxy is not set" + " " + proxproxyapi + " " + proxyoauth + " " + proxystatic);
             return link;
         }
 
         if(link.contains(vkapi)){
-            return link.replace(proxiedvkapi, vkapi);
+            return link.replace(proxproxyapi, vkapi);
         }
 
         if(link.contains(oauth)){
-            return link.replace(proxiedoauth, oauth);
+            return link.replace(proxyoauth, oauth);
         }
 
         if(link.contains(vkstatic)){
-            return link.replace(proxedvkstatic, vkstatic);
+            return link.replace(proxystatic, vkstatic);
         }
 
         return link;
