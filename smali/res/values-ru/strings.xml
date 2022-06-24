@@ -5555,7 +5555,7 @@
     <string name="feed_ads_regular_summary">Обычные рекламные вставки в ленте между постами</string>
     <string name="feed_ads_carousel_summary">Реклама со списком (товаров)</string>
     <string name="feed_ads_stories_summary">Реклама при переходе между историями</string>
-    <string name="feed_ads_sources">Отключить посты с источником</string>
+    <string name="feed_ads_sources">Отключить все посты с источником</string>
     <string name="feed_ads_sources_summary">В большинстве случаев - рекламные посты с пометкой источника рекламодателя</string>
 
     <string name="feed_recommendations_friends_summary">Рекомендации возможных друзей</string>

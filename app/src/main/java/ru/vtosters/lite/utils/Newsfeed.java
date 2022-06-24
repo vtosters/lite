@@ -67,6 +67,10 @@ public class Newsfeed{
 
         String linkfilter = getPrefsValue("linkfilter");
 
+        if(getBoolValue("blockvkcopyright", false)){
+            mFiltersLinks.add("vk.com");
+        }
+
         if(!linkfilter.isEmpty()){
             mFiltersLinks.addAll(Arrays.asList(linkfilter.split(", ")));
         }
