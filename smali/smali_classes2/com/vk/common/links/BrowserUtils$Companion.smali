@@ -1086,7 +1086,15 @@
 .method public final a(Landroid/net/Uri;Landroid/os/Bundle;)Landroid/net/Uri;
     .locals 1
 
-    .line 79
+    invoke-static {}, Lru/vtosters/lite/utils/Preferences;->awayphp()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_1d
+
+    return-object p1
+
+    :cond_1d
     sget-object v0, Lcom/vk/core/network/Network;->l:Lcom/vk/core/network/Network;
 
     invoke-virtual {v0}, Lcom/vk/core/network/Network;->b()Lcom/vk/core/network/proxy/NetworkProxy;
@@ -1162,7 +1170,15 @@
         }
     .end annotation
 
-    .line 84
+    invoke-static {}, Lru/vtosters/lite/utils/Preferences;->awayphp()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_1d
+
+    return-object p1
+
+    :cond_1d
     sget-object v0, Lcom/vk/core/network/Network;->l:Lcom/vk/core/network/Network;
 
     invoke-virtual {v0}, Lcom/vk/core/network/Network;->b()Lcom/vk/core/network/proxy/NetworkProxy;
