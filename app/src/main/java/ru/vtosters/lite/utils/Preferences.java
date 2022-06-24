@@ -28,10 +28,8 @@ import android.content.SharedPreferences;
 import android.content.pm.PackageManager;
 import android.os.Debug;
 import android.preference.PreferenceManager;
-import android.util.Log;
 
 import com.vk.core.util.Screen;
-import com.vk.im.engine.models.users.UserSex;
 import com.vtosters.lite.data.Users;
 import com.vtosters.lite.fragments.SettingsListFragment;
 
@@ -215,7 +213,6 @@ public class Preferences{
         return getBoolValue("feedcache", true);
     }
 
-
     public static boolean superapp(){
         return getBoolValue("superapp", true);
     }
@@ -227,7 +224,6 @@ public class Preferences{
     public static boolean returnnorifs(){
         return getBoolValue("returnnorifs", false);
     }
-
 
     public static boolean CommentsSort(){
         return getBoolValue("commentssorting", false);
@@ -349,9 +345,9 @@ public class Preferences{
         return false;
     }
 
-    public static int getMsgCount(){
+    public static int getMsgCount(int orig){
         String customvalue = getPrefsValue("msgcount");
-        return customvalue.isEmpty() ? 30 : Integer.parseInt(customvalue);
+        return customvalue.isEmpty() ? orig : Integer.parseInt(customvalue);
     }
 
     public static String MediacontentFix(){
@@ -468,15 +464,14 @@ public class Preferences{
         return new SimpleDateFormat(getDateFormat());
     }
 
-    public static String getFormattedDate(UserSex type, long time){
+    public static String getFormattedDate(boolean isFemale, long time){
         SimpleDateFormat date = new SimpleDateFormat(getDateFormat(), Locale.getDefault());
 
         if(!fulltime()) return null;
 
         try {
-            return getStringDate(type == UserSex.FEMALE ? getIdentifier("last_seen_profile_f", "string") : getIdentifier("last_seen_profile_m", "string"), date.format(new Date(time)));
+            return getStringDate(isFemale ? getIdentifier("last_seen_profile_f", "string") : getIdentifier("last_seen_profile_m", "string"), date.format(new Date(time)));
         } catch (Throwable th) {
-            Log.d("VTLite", "Format data error, type " + type + " , time " + time);
             th.printStackTrace();
             return null;
         }
