@@ -21,11 +21,6 @@
             android:key="adsstories"
             android:summary="@string/feed_ads_stories_summary"
             android:title="@string/vtldas" />
-        <com.vtosters.lite.ui.MaterialSwitchPreference
-            android:defaultValue="false"
-            android:key="copyright_post"
-            android:summary="@string/feed_ads_sources_summary"
-            android:title="@string/feed_ads_sources" />
     </PreferenceCategory>
     <PreferenceCategory android:title="@string/vtlfilters">
         <Preference
@@ -56,6 +51,15 @@
             android:key="shitposting"
             android:summary="@string/shitpostingsummary"
             android:title="@string/shitposting" />
+        <com.vtosters.lite.ui.MaterialSwitchPreference
+            android:defaultValue="false"
+            android:key="copyright_post"
+            android:summary="@string/feed_ads_sources_summary"
+            android:title="@string/feed_ads_sources" />
+        <EditTextPreference
+            android:defaultValue=""
+            android:key="linkfilter"
+            android:title="Фильтр ссылок в источнике" />
     </PreferenceCategory>
     <PreferenceCategory android:title="@string/vtlrecommend">
         <com.vtosters.lite.ui.MaterialSwitchPreference

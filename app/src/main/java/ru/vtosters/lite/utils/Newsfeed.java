@@ -48,9 +48,11 @@ import java.util.List;
 
 public class Newsfeed{
     public static List<String> mFilters;
+    public static List<String> mFiltersLinks;
 
     public static void setupFilters(){
         mFilters = new ArrayList();
+        mFiltersLinks = new ArrayList();
 
         getFilter("refsfilter", "Referals.txt");
         getFilter("shortlinkfilter", "LinkShorter.txt");
@@ -63,6 +65,11 @@ public class Newsfeed{
             mFilters.addAll(Arrays.asList(customfilters.split(", ")));
         }
 
+        String linkfilter = getPrefsValue("linkfilter");
+
+        if(!linkfilter.isEmpty()){
+            mFiltersLinks.addAll(Arrays.asList(linkfilter.split(", ")));
+        }
     }
 
     public static void getFilter(String boolname, String filename){
@@ -108,19 +115,19 @@ public class Newsfeed{
     }
 
     private static boolean checkCopyright(JSONObject json) throws JSONException{
+        String linkfilter = getPrefsValue("linkfilter");
+
         if(json.opt("copyright") != null){
             JSONObject copyright = json.getJSONObject("copyright");
             String copyrightlink = copyright.getString("link");
 
-            return copyrightlink.contains("vk.com") || copyright_post(); // fuck you, it doesn't work to detect link value
+            for(String linkfilters : mFiltersLinks) {
+                if(copyrightlink.toLowerCase().contains(linkfilters.toLowerCase())){
+                    return true;
+                }
+            }
 
-            // example of response
-            //"copyright": {
-            //"id": 251706814,
-            //"link": "https://vk.com/wall251706814_9016",
-            //"type": "owner",
-            //"name": "Маргарита Буруня"
-            //}
+            return copyright_post();
 
         }
         return false;
