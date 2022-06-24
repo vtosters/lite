@@ -89,6 +89,10 @@
     :try_start_1
     sget-object p1, Landroid/graphics/Bitmap$CompressFormat;->JPEG:Landroid/graphics/Bitmap$CompressFormat;
 
+    invoke-static {p2}, Lru/vtosters/lite/utils/Preferences;->compress(I)I
+
+    move-result p2
+
     invoke-virtual {p0, p1, p2, v1}, Landroid/graphics/Bitmap;->compress(Landroid/graphics/Bitmap$CompressFormat;ILjava/io/OutputStream;)Z
 
     move-result p0
