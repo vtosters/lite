@@ -1606,7 +1606,15 @@
 .method public static a(Ljava/lang/CharSequence;ZF)Ljava/lang/CharSequence;
     .locals 8
 
-    .line 186
+    invoke-static {}, Lru/vtosters/lite/utils/Preferences;->shortpost()Z
+
+    move-result v0
+
+    if-nez v0, :cond_25
+
+    return-object p0
+
+    :cond_25
     invoke-static {p0}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result v0
