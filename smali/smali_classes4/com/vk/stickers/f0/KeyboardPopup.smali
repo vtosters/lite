@@ -162,6 +162,10 @@
 
     move-result v4
 
+    invoke-static {v4}, Lru/vtosters/lite/utils/Preferences;->alteremoji(Z)Z
+
+    move-result v4
+
     sget-object v5, Lcom/vk/stickers/f0/KeyboardPopup;->F:Lcom/vk/stickers/f0/KeyboardPopup$j;
 
     move-object v0, p0
@@ -198,6 +202,10 @@
 
     .line 25
     invoke-static {p1}, Lcom/vk/core/util/Screen;->l(Landroid/content/Context;)Z
+
+    move-result v5
+
+    invoke-static {v5}, Lru/vtosters/lite/utils/Preferences;->alteremoji(Z)Z
 
     move-result v5
 
@@ -408,6 +416,10 @@
 
     .line 27
     invoke-static {p1}, Lcom/vk/core/util/Screen;->l(Landroid/content/Context;)Z
+
+    move-result v4
+
+    invoke-static {v4}, Lru/vtosters/lite/utils/Preferences;->alteremoji(Z)Z
 
     move-result v4
 

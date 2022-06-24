@@ -28,7 +28,6 @@ import android.content.pm.PackageManager;
 import android.os.Debug;
 import android.preference.PreferenceManager;
 
-import com.vk.core.util.Screen;
 import com.vtosters.lite.data.Users;
 import com.vtosters.lite.fragments.SettingsListFragment;
 
@@ -139,8 +138,8 @@ public class Preferences{
         return getBoolValue("adsstories", false);
     }
 
-    public static boolean alteremoji(Context context){
-        return alteremojipref() ? alteremojipref() : Screen.l(context);
+    public static boolean alteremoji(boolean istablet){
+        return alteremojipref() ? alteremojipref() : istablet;
     }
 
     public static boolean alteremojipref(){
