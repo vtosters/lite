@@ -71,5 +71,9 @@
 
     const-string v0, "api.vk.com"
 
+    invoke-static {v0}, Lru/vtosters/lite/utils/Proxy;->linkReplacer(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
+
     return-object v0
 .end method

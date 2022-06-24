@@ -5,69 +5,52 @@ import static java.lang.System.getProperties;
 import static ru.vtosters.lite.utils.Globals.getPrefsValue;
 import static ru.vtosters.lite.utils.Preferences.getBoolValue;
 
+import android.util.Log;
+
 import java.util.Properties;
 
 public class Proxy{
-    public static String getOauthComAuth(){
-        return getOauthComHttps() + "/authorize";
-    }
+    public static String linkReplacer(String link){
+        String vkapi = "api.vk.com";
+        String oauth = "oauth.vk.com";
+        String vkstatic = "static.vk.com";
 
-    public static String getOauthComAuthClient(){
-        return getOauthComAuth() + "?client_id=";
-    }
+        String proxproxyapi = getPrefsValue("proxyapi");
+        String proxyoauth = getPrefsValue("proxyoauth");
+        String proxystatic = getPrefsValue("proxystatic");
 
-    public static String getOauthComBlank(){
-        return getOauthComHttps() + "/blank.html";
-    }
+        if(!proxy() || link.isEmpty()){
+            return link;
+        }
 
-    public static String getOauthComBlankRedirect(){
-        return "&redirect_uri=" + getOauthComBlank();
-    }
+        if(proxproxyapi.isEmpty() || proxyoauth.isEmpty() || proxystatic.isEmpty()){
+            Log.d("VTLite", "Proxy is not set" + " " + proxproxyapi + " " + proxyoauth + " " + proxystatic);
+            return link;
+        }
 
-    public static String getOauthComHttps(){
-        return "https://" + getOauthCom();
-    }
+        if(link.contains(vkapi)){
+            return link.replace(proxproxyapi, vkapi);
+        }
 
-    public static String getStaticComSupport(){
-        return getStaticCom() + "/support";
-    }
+        if(link.contains(oauth)){
+            return link.replace(proxyoauth, oauth);
+        }
 
-    public static String oauthFix(){
-        return "https://oauth.vk.com/blank.html";
-    }
+        if(link.contains(vkstatic)){
+            return link.replace(proxystatic, vkstatic);
+        }
 
-    public static String getApiCom(){
-        String string = getPrefsValue("proxyapi");
-        if(!proxy() & string.isEmpty()) return "api.vk.com";
-        return string;
+        return link;
     }
 
     public static String getAwayPhpCom(){
-        String string = getPrefsValue("proxyapi");
-        if(!proxy() & string.isEmpty()) return "m.vk.com";
-        return string;
-    }
+        String proxyapi = getPrefsValue("proxyapi");
 
-    public static String getOauthCom(){
-        String string = getPrefsValue("proxyoauth");
-        if(!proxy() & string.isEmpty()) return "oauth.vk.com";
-        return string;
-    }
+        if(!proxy() & proxyapi.isEmpty()){
+            return "m.vk.com";
+        }
 
-    public static String getStaticCom(){
-        String string = getPrefsValue("proxystatic");
-        if(!proxy() & string.isEmpty()) return "static.vk.com";
-        return string;
-    }
-
-    public static String staticFix(String str){
-        String str2;
-        String string = getPrefsValue("proxystatic");
-
-        if(!proxy() & string.isEmpty()) return str;
-
-        str2 = string;
-        return str.replace(str2, "static.vk.com");
+        return proxyapi;
     }
 
     public static void setProxy(){

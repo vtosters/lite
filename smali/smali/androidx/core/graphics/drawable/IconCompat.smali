@@ -2741,6 +2741,10 @@
 
     const/16 v2, 0x5a
 
+    invoke-static {v2}, Lru/vtosters/lite/utils/Preferences;->compress(I)I
+
+    move-result v2
+
     invoke-virtual {p1, v1, v2, v0}, Landroid/graphics/Bitmap;->compress(Landroid/graphics/Bitmap$CompressFormat;ILjava/io/OutputStream;)Z
 
     .line 9

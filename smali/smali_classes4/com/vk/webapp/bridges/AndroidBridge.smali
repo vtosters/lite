@@ -1471,6 +1471,8 @@
 
     const-string p1, "redirect_uri"
 
+    const-string p3, "https://oauth.vk.com/blank.html"
+
     .line 35
     invoke-static {p1, p3}, Lkotlin/Tuples;->a(Ljava/lang/Object;Ljava/lang/Object;)Lkotlin/Pair;
 
@@ -1486,6 +1488,10 @@
     if-eqz p1, :cond_0
 
     invoke-virtual {p1}, Landroid/webkit/WebView;->getUrl()Ljava/lang/String;
+
+    move-result-object p1
+
+    invoke-static {p1}, Lru/vtosters/lite/utils/Proxy;->linkReplacer(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p1
 
@@ -1578,6 +1584,10 @@
     move-result-object p1
 
     const-string p3, "https://oauth.vk.com/authorize"
+
+    invoke-static {p3}, Lru/vtosters/lite/utils/Proxy;->linkReplacer(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object p3
 
     .line 43
     invoke-static {p3}, Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;

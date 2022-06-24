@@ -2129,7 +2129,9 @@
 
     if-eqz v0, :cond_0
 
-    const/4 v0, 0x1
+    invoke-static {}, Lru/vtosters/lite/utils/Preferences;->voice()Z
+
+    move-result v0
 
     goto :goto_0
 
@@ -2154,7 +2156,9 @@
 
     if-eqz v4, :cond_1
 
-    const/4 v4, 0x1
+    invoke-static {}, Lru/vtosters/lite/utils/Preferences;->voice()Z
+
+    move-result v4
 
     goto :goto_1
 
@@ -5951,6 +5955,15 @@
     return-void
 
     :cond_0
+    invoke-static {}, Lru/vtosters/lite/utils/Preferences;->voice()Z
+
+    move-result v0
+
+    if-nez v0, :cond_2
+
+    return-void
+
+    :cond_2
     const/4 v0, 0x0
 
     if-eqz p1, :cond_1
