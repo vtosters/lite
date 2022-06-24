@@ -5706,7 +5706,7 @@ May look like a fake leaving the online"</string>
     <string name="feed_ads_regular_summary">Regular ads in feed between posts</string>
     <string name="feed_ads_carousel_summary">Ads with list (of goods)</string>
     <string name="feed_ads_stories_summary">Ads in stories</string>
-    <string name="feed_ads_sources">Disable posts with source</string>
+    <string name="feed_ads_sources">Disable all posts with source</string>
     <string name="feed_ads_sources_summary">More often posts ad posts with advertiser source tag</string>
 
     <string name="feed_recommendations_friends_summary">Recommend potential friends</string>

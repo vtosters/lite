@@ -56,6 +56,11 @@
             android:key="copyright_post"
             android:summary="@string/feed_ads_sources_summary"
             android:title="@string/feed_ads_sources" />
+        <com.vtosters.lite.ui.MaterialSwitchPreference
+            android:defaultValue="false"
+            android:key="blockvkcopyright"
+            android:summary="Блокировать посты с источником где есть ссылка на вк (группу, страницу)"
+            android:title="Отключить посты с ссылкой на вк" />
         <EditTextPreference
             android:defaultValue=""
             android:key="linkfilter"
