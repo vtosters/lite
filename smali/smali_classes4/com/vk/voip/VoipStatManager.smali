@@ -440,22 +440,6 @@
 .method private final a(Ljava/lang/String;Ljava/lang/String;)V
     .locals 2
 
-    .line 6
-    new-instance v0, Lcom/vk/libvideo/live/base/CustomEvent;
-
-    const-string v1, "calls_video_request_sent"
-
-    invoke-direct {v0, v1}, Lcom/vk/libvideo/live/base/CustomEvent;-><init>(Ljava/lang/Object;)V
-
-    .line 7
-    invoke-virtual {v0, p1}, Lcom/vk/libvideo/live/base/CustomEvent;->a(Ljava/lang/String;)Lcom/vk/libvideo/live/base/CustomEvent;
-
-    .line 8
-    invoke-virtual {v0, p2}, Lcom/vk/libvideo/live/base/CustomEvent;->b(Ljava/lang/String;)Lcom/vk/libvideo/live/base/CustomEvent;
-
-    .line 9
-    invoke-virtual {v0}, Lcom/vk/libvideo/live/base/CustomEvent;->a()Lcom/vk/libvideo/live/base/CustomEvent;
-
     return-void
 .end method
 

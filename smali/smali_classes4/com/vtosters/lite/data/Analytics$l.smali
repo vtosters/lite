@@ -128,6 +128,8 @@
 .method public a(Landroid/os/Bundle;)Lcom/vtosters/lite/data/Analytics$l;
     .locals 3
 
+    return-object p0
+
     .line 1
     invoke-virtual {p1}, Landroid/os/Bundle;->keySet()Ljava/util/Set;
 
@@ -165,6 +167,8 @@
 
 .method public a(Ljava/lang/String;Ljava/lang/Object;)Lcom/vtosters/lite/data/Analytics$l;
     .locals 5
+
+    return-object p0
 
     const-string v0, "/"
 
@@ -428,39 +432,12 @@
     .end annotation
 
     .line 20
-    invoke-virtual {p0}, Lcom/vtosters/lite/data/Analytics$l;->b()Lcom/vtosters/lite/data/Analytics$l;
-
     return-void
 .end method
 
 .method public b()Lcom/vtosters/lite/data/Analytics$l;
     .locals 2
 
-    .line 1
-    iget-boolean v0, p0, Lcom/vtosters/lite/data/Analytics$l;->b:Z
-
-    if-eqz v0, :cond_0
-
-    .line 2
-    invoke-static {}, Lcom/vtosters/lite/data/Analytics;->j()Lcom/vtosters/lite/data/Analytics;
-
-    move-result-object v0
-
-    invoke-static {v0}, Lcom/vtosters/lite/data/Analytics;->f(Lcom/vtosters/lite/data/Analytics;)V
-
-    goto :goto_0
-
-    .line 3
-    :cond_0
-    invoke-static {}, Lcom/vtosters/lite/data/Analytics;->j()Lcom/vtosters/lite/data/Analytics;
-
-    move-result-object v0
-
-    iget-object v1, p0, Lcom/vtosters/lite/data/Analytics$l;->a:Lorg/json/JSONObject;
-
-    invoke-static {v0, v1}, Lcom/vtosters/lite/data/Analytics;->a(Lcom/vtosters/lite/data/Analytics;Lorg/json/JSONObject;)V
-
-    :goto_0
     return-object p0
 .end method
 
@@ -478,14 +455,13 @@
 .method public d()Lcom/vtosters/lite/data/Analytics$l;
     .locals 0
 
-    .line 1
-    invoke-static {}, Lcom/vtosters/lite/data/Analytics;->m()V
-
     return-object p0
 .end method
 
 .method public e()Lcom/vtosters/lite/data/Analytics$l;
     .locals 6
+
+    return-object p0
 
     .line 1
     iget-object v0, p0, Lcom/vtosters/lite/data/Analytics$l;->d:Ljava/lang/String;

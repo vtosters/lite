@@ -192,6 +192,8 @@
 .method public final a()Lio/reactivex/disposables/Disposable;
     .locals 3
 
+    return-void
+
     .line 2
     new-instance v0, Lcom/vk/api/base/BooleanApiRequest;
 
@@ -229,6 +231,8 @@
 
 .method public a(I)V
     .locals 7
+
+    return-void
 
     .line 8
     iget v0, p0, Lcom/vk/webapp/helpers/VkAppsAnalytics;->d:I
@@ -326,6 +330,8 @@
 
 .method public b(I)V
     .locals 6
+
+    return-void
 
     .line 1
     iget v0, p0, Lcom/vk/webapp/helpers/VkAppsAnalytics;->d:I

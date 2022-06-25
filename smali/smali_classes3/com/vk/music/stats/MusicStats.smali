@@ -359,19 +359,6 @@
 
     invoke-virtual {p1, v2, v3}, Lcom/vk/music/j/MusicPrefs;->d(J)V
 
-    .line 29
-    new-instance p1, Lcom/vk/libvideo/live/base/CustomEvent;
-
-    const-string p2, "audio_played_in_bg_more_than_5_minutes"
-
-    invoke-direct {p1, p2}, Lcom/vk/libvideo/live/base/CustomEvent;-><init>(Ljava/lang/Object;)V
-
-    .line 30
-    invoke-virtual {p1, v1}, Lcom/vk/libvideo/live/base/CustomEvent;->a(Z)Lcom/vk/libvideo/live/base/CustomEvent;
-
-    .line 31
-    invoke-virtual {p1}, Lcom/vk/libvideo/live/base/CustomEvent;->a()Lcom/vk/libvideo/live/base/CustomEvent;
-
     :cond_0
     return-void
 .end method
@@ -422,52 +409,7 @@
 .method public a(Landroid/content/Intent;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
     .locals 0
 
-    .line 36
-    invoke-virtual {p1, p2}, Landroid/content/Intent;->hasExtra(Ljava/lang/String;)Z
-
-    move-result p1
-
-    if-nez p1, :cond_0
-
-    return-void
-
-    .line 37
-    :cond_0
-    new-instance p1, Lcom/vk/libvideo/live/base/CustomEvent;
-
-    invoke-direct {p1, p2}, Lcom/vk/libvideo/live/base/CustomEvent;-><init>(Ljava/lang/Object;)V
-
-    .line 38
-    invoke-virtual {p1, p4}, Lcom/vk/libvideo/live/base/CustomEvent;->a(Ljava/lang/String;)Lcom/vk/libvideo/live/base/CustomEvent;
-
-    .line 39
-    invoke-interface {p3}, Ljava/lang/CharSequence;->length()I
-
-    move-result p2
-
-    const/4 p4, 0x1
-
-    if-lez p2, :cond_1
-
-    const/4 p2, 0x1
-
-    goto :goto_0
-
-    :cond_1
-    const/4 p2, 0x0
-
-    :goto_0
-    if-eqz p2, :cond_2
-
-    invoke-virtual {p1, p3}, Lcom/vk/libvideo/live/base/CustomEvent;->b(Ljava/lang/String;)Lcom/vk/libvideo/live/base/CustomEvent;
-
-    .line 40
-    :cond_2
-    invoke-virtual {p1, p4}, Lcom/vk/libvideo/live/base/CustomEvent;->a(Z)Lcom/vk/libvideo/live/base/CustomEvent;
-
     .line 41
-    invoke-virtual {p1}, Lcom/vk/libvideo/live/base/CustomEvent;->a()Lcom/vk/libvideo/live/base/CustomEvent;
-
     return-void
 .end method
 

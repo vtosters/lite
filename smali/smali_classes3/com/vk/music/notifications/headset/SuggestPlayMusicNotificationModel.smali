@@ -35,18 +35,5 @@
 .method public final a(Ljava/lang/String;)V
     .locals 2
 
-    .line 1
-    new-instance v0, Lcom/vk/libvideo/live/base/CustomEvent;
-
-    const-string v1, "headphones_popup_action"
-
-    invoke-direct {v0, v1}, Lcom/vk/libvideo/live/base/CustomEvent;-><init>(Ljava/lang/Object;)V
-
-    .line 2
-    invoke-virtual {v0, p1}, Lcom/vk/libvideo/live/base/CustomEvent;->a(Ljava/lang/String;)Lcom/vk/libvideo/live/base/CustomEvent;
-
-    .line 3
-    invoke-virtual {v0}, Lcom/vk/libvideo/live/base/CustomEvent;->a()Lcom/vk/libvideo/live/base/CustomEvent;
-
     return-void
 .end method

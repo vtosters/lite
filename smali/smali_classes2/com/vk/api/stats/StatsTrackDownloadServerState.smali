@@ -11,6 +11,8 @@
         .end annotation
     .end param
 
+    return-void
+
     const-string v0, "stats.trackDownloadServerState"
 
     .line 1
