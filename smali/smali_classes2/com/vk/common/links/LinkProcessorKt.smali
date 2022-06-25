@@ -5528,6 +5528,576 @@
     :cond_78
     new-instance v12, Lkotlin/text/Regex;
 
+    const-string v11, "/vtosters?.*"
+
+    invoke-direct {v12, v11}, Lkotlin/text/Regex;-><init>(Ljava/lang/String;)V
+
+    const/4 v13, 0x0
+
+    const/4 v14, 0x0
+
+    const/4 v15, 0x0
+
+    const/16 v16, 0xe
+
+    const/16 v17, 0x0
+
+    move-object v11, v0
+
+    invoke-static/range {v11 .. v17}, Lcom/vk/common/links/UriWrapper;->a(Lcom/vk/common/links/UriWrapper;Lkotlin/text/Regex;Lkotlin/text/Regex;Lkotlin/text/Regex;IILjava/lang/Object;)Z
+
+    move-result v11
+
+    if-eqz v11, :cond_228
+
+    const/4 v3, 0x0
+
+    const-string v1, "vtosters_official"
+
+    move-object/from16 v0, p0
+
+    move-object/from16 v4, p2
+
+    move-object/from16 v5, p3
+
+    invoke-static/range {v0 .. v5}, Lcom/vk/common/links/OpenFunctionsKt;->a(Landroid/content/Context;Ljava/lang/String;Landroid/net/Uri;ILcom/vk/common/links/OpenCallback;Lcom/vk/common/links/LinkProcessor$b;)Z
+
+    goto/16 :goto_d
+
+    .line 187
+    :cond_228
+    new-instance v12, Lkotlin/text/Regex;
+
+    const-string v11, "/vknext?.*"
+
+    invoke-direct {v12, v11}, Lkotlin/text/Regex;-><init>(Ljava/lang/String;)V
+
+    const/4 v13, 0x0
+
+    const/4 v14, 0x0
+
+    const/4 v15, 0x0
+
+    const/16 v16, 0xe
+
+    const/16 v17, 0x0
+
+    move-object v11, v0
+
+    invoke-static/range {v11 .. v17}, Lcom/vk/common/links/UriWrapper;->a(Lcom/vk/common/links/UriWrapper;Lkotlin/text/Regex;Lkotlin/text/Regex;Lkotlin/text/Regex;IILjava/lang/Object;)Z
+
+    move-result v11
+
+    if-eqz v11, :cond_230
+
+    const/4 v3, 0x0
+
+    const-string v1, "vknext_official"
+
+    move-object/from16 v0, p0
+
+    move-object/from16 v4, p2
+
+    move-object/from16 v5, p3
+
+    invoke-static/range {v0 .. v5}, Lcom/vk/common/links/OpenFunctionsKt;->a(Landroid/content/Context;Ljava/lang/String;Landroid/net/Uri;ILcom/vk/common/links/OpenCallback;Lcom/vk/common/links/LinkProcessor$b;)Z
+
+    goto/16 :goto_d
+
+    .line 187
+    :cond_230
+    new-instance v12, Lkotlin/text/Regex;
+
+    const-string v11, "/gdlbo?.*"
+
+    invoke-direct {v12, v11}, Lkotlin/text/Regex;-><init>(Ljava/lang/String;)V
+
+    const/4 v13, 0x0
+
+    const/4 v14, 0x0
+
+    const/4 v15, 0x0
+
+    const/16 v16, 0xe
+
+    const/16 v17, 0x0
+
+    move-object v11, v0
+
+    invoke-static/range {v11 .. v17}, Lcom/vk/common/links/UriWrapper;->a(Lcom/vk/common/links/UriWrapper;Lkotlin/text/Regex;Lkotlin/text/Regex;Lkotlin/text/Regex;IILjava/lang/Object;)Z
+
+    move-result v11
+
+    if-eqz v11, :cond_229
+
+    const/4 v3, 0x0
+
+    const-string v1, "gdlbo"
+
+    move-object/from16 v0, p0
+
+    move-object/from16 v4, p2
+
+    move-object/from16 v5, p3
+
+    invoke-static/range {v0 .. v5}, Lcom/vk/common/links/OpenFunctionsKt;->a(Landroid/content/Context;Ljava/lang/String;Landroid/net/Uri;ILcom/vk/common/links/OpenCallback;Lcom/vk/common/links/LinkProcessor$b;)Z
+
+    goto/16 :goto_d
+
+    .line 187
+    :cond_229
+    new-instance v12, Lkotlin/text/Regex;
+
+    const-string v11, "/vt/feed?.*"
+
+    invoke-direct {v12, v11}, Lkotlin/text/Regex;-><init>(Ljava/lang/String;)V
+
+    const/4 v13, 0x0
+
+    const/4 v14, 0x0
+
+    const/4 v15, 0x0
+
+    const/16 v16, 0xe
+
+    const/16 v17, 0x0
+
+    move-object v11, v0
+
+    invoke-static/range {v11 .. v17}, Lcom/vk/common/links/UriWrapper;->a(Lcom/vk/common/links/UriWrapper;Lkotlin/text/Regex;Lkotlin/text/Regex;Lkotlin/text/Regex;IILjava/lang/Object;)Z
+
+    move-result v11
+
+    if-eqz v11, :cond_231
+
+    invoke-static {}, Lru/vtosters/lite/utils/Globals;->getContext()Landroid/content/Context;
+
+    move-result-object v1
+
+    new-instance v8, Lcom/vk/navigation/Navigator;
+
+    const-class v0, Lru/vtosters/lite/ui/fragments/FeedFragment;
+
+    invoke-direct {v8, v0}, Lcom/vk/navigation/Navigator;-><init>(Ljava/lang/Class;)V
+
+    invoke-virtual {v8, v1}, Lcom/vk/navigation/Navigator;->b(Landroid/content/Context;)Landroid/content/Intent;
+
+    move-result-object v8
+
+    const/high16 v0, 0x10000000
+
+    .line 15
+    invoke-virtual {v8, v0}, Landroid/content/Intent;->addFlags(I)Landroid/content/Intent;
+
+    .line 16
+    invoke-virtual {v1, v8}, Landroid/content/Context;->startActivity(Landroid/content/Intent;)V
+    
+    goto/16 :goto_d
+
+    .line 187
+    :cond_231
+    new-instance v12, Lkotlin/text/Regex;
+
+    const-string v11, "/vt/other?.*"
+
+    invoke-direct {v12, v11}, Lkotlin/text/Regex;-><init>(Ljava/lang/String;)V
+
+    const/4 v13, 0x0
+
+    const/4 v14, 0x0
+
+    const/4 v15, 0x0
+
+    const/16 v16, 0xe
+
+    const/16 v17, 0x0
+
+    move-object v11, v0
+
+    invoke-static/range {v11 .. v17}, Lcom/vk/common/links/UriWrapper;->a(Lcom/vk/common/links/UriWrapper;Lkotlin/text/Regex;Lkotlin/text/Regex;Lkotlin/text/Regex;IILjava/lang/Object;)Z
+
+    move-result v11
+
+    if-eqz v11, :cond_232
+
+    invoke-static {}, Lru/vtosters/lite/utils/Globals;->getContext()Landroid/content/Context;
+
+    move-result-object v1
+
+    new-instance v8, Lcom/vk/navigation/Navigator;
+
+    const-class v0, Lru/vtosters/lite/ui/fragments/OtherFragment;
+
+    invoke-direct {v8, v0}, Lcom/vk/navigation/Navigator;-><init>(Ljava/lang/Class;)V
+
+    invoke-virtual {v8, v1}, Lcom/vk/navigation/Navigator;->b(Landroid/content/Context;)Landroid/content/Intent;
+
+    move-result-object v8
+
+    const/high16 v0, 0x10000000
+
+    .line 15
+    invoke-virtual {v8, v0}, Landroid/content/Intent;->addFlags(I)Landroid/content/Intent;
+
+    .line 16
+    invoke-virtual {v1, v8}, Landroid/content/Context;->startActivity(Landroid/content/Intent;)V
+
+    goto/16 :goto_d
+
+    .line 187
+    :cond_232
+    new-instance v12, Lkotlin/text/Regex;
+
+    const-string v11, "/vt/msg?.*"
+
+    invoke-direct {v12, v11}, Lkotlin/text/Regex;-><init>(Ljava/lang/String;)V
+
+    const/4 v13, 0x0
+
+    const/4 v14, 0x0
+
+    const/4 v15, 0x0
+
+    const/16 v16, 0xe
+
+    const/16 v17, 0x0
+
+    move-object v11, v0
+
+    invoke-static/range {v11 .. v17}, Lcom/vk/common/links/UriWrapper;->a(Lcom/vk/common/links/UriWrapper;Lkotlin/text/Regex;Lkotlin/text/Regex;Lkotlin/text/Regex;IILjava/lang/Object;)Z
+
+    move-result v11
+
+    if-eqz v11, :cond_233
+
+    invoke-static {}, Lru/vtosters/lite/utils/Globals;->getContext()Landroid/content/Context;
+
+    move-result-object v1
+
+    new-instance v8, Lcom/vk/navigation/Navigator;
+
+    const-class v0, Lru/vtosters/lite/ui/fragments/MessagesFragment;
+
+    invoke-direct {v8, v0}, Lcom/vk/navigation/Navigator;-><init>(Ljava/lang/Class;)V
+
+    invoke-virtual {v8, v1}, Lcom/vk/navigation/Navigator;->b(Landroid/content/Context;)Landroid/content/Intent;
+
+    move-result-object v8
+
+    const/high16 v0, 0x10000000
+
+    .line 15
+    invoke-virtual {v8, v0}, Landroid/content/Intent;->addFlags(I)Landroid/content/Intent;
+
+    .line 16
+    invoke-virtual {v1, v8}, Landroid/content/Context;->startActivity(Landroid/content/Intent;)V
+
+    goto/16 :goto_d
+
+    .line 187
+    :cond_233
+    new-instance v12, Lkotlin/text/Regex;
+
+    const-string v11, "/vt/tgs?.*"
+
+    invoke-direct {v12, v11}, Lkotlin/text/Regex;-><init>(Ljava/lang/String;)V
+
+    const/4 v13, 0x0
+
+    const/4 v14, 0x0
+
+    const/4 v15, 0x0
+
+    const/16 v16, 0xe
+
+    const/16 v17, 0x0
+
+    move-object v11, v0
+
+    invoke-static/range {v11 .. v17}, Lcom/vk/common/links/UriWrapper;->a(Lcom/vk/common/links/UriWrapper;Lkotlin/text/Regex;Lkotlin/text/Regex;Lkotlin/text/Regex;IILjava/lang/Object;)Z
+
+    move-result v11
+
+    if-eqz v11, :cond_234
+
+    invoke-static {}, Lru/vtosters/lite/utils/Globals;->getContext()Landroid/content/Context;
+
+    move-result-object v1
+
+    new-instance v8, Lcom/vk/navigation/Navigator;
+
+    const-class v0, Lru/vtosters/lite/ui/fragments/tgstickers/StickersFragment;
+
+    invoke-direct {v8, v0}, Lcom/vk/navigation/Navigator;-><init>(Ljava/lang/Class;)V
+
+    invoke-virtual {v8, v1}, Lcom/vk/navigation/Navigator;->b(Landroid/content/Context;)Landroid/content/Intent;
+
+    move-result-object v8
+
+    const/high16 v0, 0x10000000
+
+    .line 15
+    invoke-virtual {v8, v0}, Landroid/content/Intent;->addFlags(I)Landroid/content/Intent;
+
+    .line 16
+    invoke-virtual {v1, v8}, Landroid/content/Context;->startActivity(Landroid/content/Intent;)V
+
+    goto/16 :goto_d
+
+    .line 187
+    :cond_234
+    new-instance v12, Lkotlin/text/Regex;
+
+    const-string v11, "/vt/music?.*"
+
+    invoke-direct {v12, v11}, Lkotlin/text/Regex;-><init>(Ljava/lang/String;)V
+
+    const/4 v13, 0x0
+
+    const/4 v14, 0x0
+
+    const/4 v15, 0x0
+
+    const/16 v16, 0xe
+
+    const/16 v17, 0x0
+
+    move-object v11, v0
+
+    invoke-static/range {v11 .. v17}, Lcom/vk/common/links/UriWrapper;->a(Lcom/vk/common/links/UriWrapper;Lkotlin/text/Regex;Lkotlin/text/Regex;Lkotlin/text/Regex;IILjava/lang/Object;)Z
+
+    move-result v11
+
+    if-eqz v11, :cond_235
+
+    invoke-static {}, Lru/vtosters/lite/utils/Globals;->getContext()Landroid/content/Context;
+
+    move-result-object v1
+
+    new-instance v8, Lcom/vk/navigation/Navigator;
+
+    const-class v0, Lru/vtosters/lite/ui/fragments/MusicFragment;
+
+    invoke-direct {v8, v0}, Lcom/vk/navigation/Navigator;-><init>(Ljava/lang/Class;)V
+
+    invoke-virtual {v8, v1}, Lcom/vk/navigation/Navigator;->b(Landroid/content/Context;)Landroid/content/Intent;
+
+    move-result-object v8
+
+    const/high16 v0, 0x10000000
+
+    .line 15
+    invoke-virtual {v8, v0}, Landroid/content/Intent;->addFlags(I)Landroid/content/Intent;
+
+    .line 16
+    invoke-virtual {v1, v8}, Landroid/content/Context;->startActivity(Landroid/content/Intent;)V
+
+    goto/16 :goto_d
+
+    .line 187
+    :cond_235
+    new-instance v12, Lkotlin/text/Regex;
+
+    const-string v11, "/vt/proxy?.*"
+
+    invoke-direct {v12, v11}, Lkotlin/text/Regex;-><init>(Ljava/lang/String;)V
+
+    const/4 v13, 0x0
+
+    const/4 v14, 0x0
+
+    const/4 v15, 0x0
+
+    const/16 v16, 0xe
+
+    const/16 v17, 0x0
+
+    move-object v11, v0
+
+    invoke-static/range {v11 .. v17}, Lcom/vk/common/links/UriWrapper;->a(Lcom/vk/common/links/UriWrapper;Lkotlin/text/Regex;Lkotlin/text/Regex;Lkotlin/text/Regex;IILjava/lang/Object;)Z
+
+    move-result v11
+
+    if-eqz v11, :cond_236
+
+    invoke-static {}, Lru/vtosters/lite/utils/Globals;->getContext()Landroid/content/Context;
+
+    move-result-object v1
+
+    new-instance v8, Lcom/vk/navigation/Navigator;
+
+    const-class v0, Lru/vtosters/lite/ui/fragments/ThemesFragment;
+
+    invoke-direct {v8, v0}, Lcom/vk/navigation/Navigator;-><init>(Ljava/lang/Class;)V
+
+    invoke-virtual {v8, v1}, Lcom/vk/navigation/Navigator;->b(Landroid/content/Context;)Landroid/content/Intent;
+
+    move-result-object v8
+
+    const/high16 v0, 0x10000000
+
+    .line 15
+    invoke-virtual {v8, v0}, Landroid/content/Intent;->addFlags(I)Landroid/content/Intent;
+
+    .line 16
+    invoke-virtual {v1, v8}, Landroid/content/Context;->startActivity(Landroid/content/Intent;)V
+
+    goto/16 :goto_d
+
+    .line 187
+    :cond_236
+    new-instance v12, Lkotlin/text/Regex;
+
+    const-string v11, "/vt/themes?.*"
+
+    invoke-direct {v12, v11}, Lkotlin/text/Regex;-><init>(Ljava/lang/String;)V
+
+    const/4 v13, 0x0
+
+    const/4 v14, 0x0
+
+    const/4 v15, 0x0
+
+    const/16 v16, 0xe
+
+    const/16 v17, 0x0
+
+    move-object v11, v0
+
+    invoke-static/range {v11 .. v17}, Lcom/vk/common/links/UriWrapper;->a(Lcom/vk/common/links/UriWrapper;Lkotlin/text/Regex;Lkotlin/text/Regex;Lkotlin/text/Regex;IILjava/lang/Object;)Z
+
+    move-result v11
+
+    if-eqz v11, :cond_237
+
+    invoke-static {}, Lru/vtosters/lite/utils/Globals;->getContext()Landroid/content/Context;
+
+    move-result-object v1
+
+    new-instance v8, Lcom/vk/navigation/Navigator;
+
+    const-class v0, Lru/vtosters/lite/ui/fragments/ThemesFragment;
+
+    invoke-direct {v8, v0}, Lcom/vk/navigation/Navigator;-><init>(Ljava/lang/Class;)V
+
+    invoke-virtual {v8, v1}, Lcom/vk/navigation/Navigator;->b(Landroid/content/Context;)Landroid/content/Intent;
+
+    move-result-object v8
+
+    const/high16 v0, 0x10000000
+
+    .line 15
+    invoke-virtual {v8, v0}, Landroid/content/Intent;->addFlags(I)Landroid/content/Intent;
+
+    .line 16
+    invoke-virtual {v1, v8}, Landroid/content/Context;->startActivity(Landroid/content/Intent;)V
+
+    goto/16 :goto_d
+
+    .line 187
+    :cond_237
+    new-instance v12, Lkotlin/text/Regex;
+
+    const-string v11, "/vt/interface?.*"
+
+    invoke-direct {v12, v11}, Lkotlin/text/Regex;-><init>(Ljava/lang/String;)V
+
+    const/4 v13, 0x0
+
+    const/4 v14, 0x0
+
+    const/4 v15, 0x0
+
+    const/16 v16, 0xe
+
+    const/16 v17, 0x0
+
+    move-object v11, v0
+
+    invoke-static/range {v11 .. v17}, Lcom/vk/common/links/UriWrapper;->a(Lcom/vk/common/links/UriWrapper;Lkotlin/text/Regex;Lkotlin/text/Regex;Lkotlin/text/Regex;IILjava/lang/Object;)Z
+
+    move-result v11
+
+    if-eqz v11, :cond_238
+
+    invoke-static {}, Lru/vtosters/lite/utils/Globals;->getContext()Landroid/content/Context;
+
+    move-result-object v1
+
+    new-instance v8, Lcom/vk/navigation/Navigator;
+
+    const-class v0, Lru/vtosters/lite/ui/fragments/InterfaceFragment;
+
+    invoke-direct {v8, v0}, Lcom/vk/navigation/Navigator;-><init>(Ljava/lang/Class;)V
+
+    invoke-virtual {v8, v1}, Lcom/vk/navigation/Navigator;->b(Landroid/content/Context;)Landroid/content/Intent;
+
+    move-result-object v8
+
+    const/high16 v0, 0x10000000
+
+    .line 15
+    invoke-virtual {v8, v0}, Landroid/content/Intent;->addFlags(I)Landroid/content/Intent;
+
+    .line 16
+    invoke-virtual {v1, v8}, Landroid/content/Context;->startActivity(Landroid/content/Intent;)V
+
+    goto/16 :goto_d
+
+    .line 187
+    :cond_238
+    new-instance v12, Lkotlin/text/Regex;
+
+    const-string v11, "/vt/?.*"
+
+    invoke-direct {v12, v11}, Lkotlin/text/Regex;-><init>(Ljava/lang/String;)V
+
+    const/4 v13, 0x0
+
+    const/4 v14, 0x0
+
+    const/4 v15, 0x0
+
+    const/16 v16, 0xe
+
+    const/16 v17, 0x0
+
+    move-object v11, v0
+
+    invoke-static/range {v11 .. v17}, Lcom/vk/common/links/UriWrapper;->a(Lcom/vk/common/links/UriWrapper;Lkotlin/text/Regex;Lkotlin/text/Regex;Lkotlin/text/Regex;IILjava/lang/Object;)Z
+
+    move-result v11
+
+    if-eqz v11, :cond_239
+
+    invoke-static {}, Lru/vtosters/lite/utils/Globals;->getContext()Landroid/content/Context;
+
+    move-result-object v1
+
+    new-instance v8, Lcom/vk/navigation/Navigator;
+
+    const-class v0, Lru/vtosters/lite/ui/fragments/VTSettings;
+
+    invoke-direct {v8, v0}, Lcom/vk/navigation/Navigator;-><init>(Ljava/lang/Class;)V
+
+    invoke-virtual {v8, v1}, Lcom/vk/navigation/Navigator;->b(Landroid/content/Context;)Landroid/content/Intent;
+
+    move-result-object v8
+
+    const/high16 v0, 0x10000000
+
+    .line 15
+    invoke-virtual {v8, v0}, Landroid/content/Intent;->addFlags(I)Landroid/content/Intent;
+
+    .line 16
+    invoke-virtual {v1, v8}, Landroid/content/Context;->startActivity(Landroid/content/Intent;)V
+
+    goto/16 :goto_d
+
+    .line 187
+    :cond_239
+    new-instance v12, Lkotlin/text/Regex;
+
     const-string v11, "/bug(tracker|s|\\d+)/?"
 
     invoke-direct {v12, v11}, Lkotlin/text/Regex;-><init>(Ljava/lang/String;)V
