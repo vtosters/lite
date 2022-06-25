@@ -70,8 +70,8 @@ public class Globals{
     }
 
     public static void MainActivityInit(Activity activity){
-        sendRequest();
         ServerDialog.activity = activity;
+        sendRequest();
         if(checkupdates()) OTADialog.checkUpdates(activity);
         Start.alert(activity);
         InstallGMS.alert(activity);
