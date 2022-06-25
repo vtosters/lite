@@ -28,8 +28,8 @@ public class OTAHelper{
 
     public void loadData(){
         Request release = new Request.a()
-                .a(LATEST_RELEASE_URL)
-                .b().a();
+                .b(LATEST_RELEASE_URL)
+                .a();
 
         mClient.a(release).a(new Callback(){
             @Override
@@ -55,8 +55,8 @@ public class OTAHelper{
 
         String tag = mReleaseJson.getString("tag_name");
         Request commit = new Request.a()
-                .a(String.format(LATEST_RELEASE_COMMIT_URL, tag))
-                .b().a();
+                .b(String.format(LATEST_RELEASE_COMMIT_URL, tag))
+                .a();
 
         mClient.a(commit).a(new Callback(){
             @Override
