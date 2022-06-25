@@ -336,6 +336,19 @@
     return v0
 .end method
 
+.method public final checkOnlineList()Ljava/lang/String;
+    .locals 2
+
+    .line 1
+    iget v1, p0, Lcom/vk/dto/user/VisibleStatus;->c:I
+
+    invoke-static {v1}, Lru/vtosters/lite/utils/OnlineFormatter;->getOnline(I)Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
+.end method
+
 .method public a(Lcom/vk/core/serialize/Serializer;)V
     .locals 2
 
