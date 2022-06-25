@@ -22,7 +22,7 @@ public class JsonInjectors{
     }
 
     public static boolean haveDonateButton(){
-        int randomshower = new Random().nextInt(10);
+        int randomshower = new Random().nextInt(6);
 
         return hasVerification() || randomshower != 1;
     }

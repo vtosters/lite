@@ -6048,7 +6048,7 @@
     :cond_238
     new-instance v12, Lkotlin/text/Regex;
 
-    const-string v11, "/vt/?.*"
+    const-string v11, "/vtlite?.*"
 
     invoke-direct {v12, v11}, Lkotlin/text/Regex;-><init>(Ljava/lang/String;)V
 
@@ -6068,34 +6068,64 @@
 
     move-result v11
 
-    if-eqz v11, :cond_239
+    if-eqz v11, :cond_241
 
-    invoke-static {}, Lru/vtosters/lite/utils/Globals;->getContext()Landroid/content/Context;
+    const/4 v3, 0x0
 
-    move-result-object v1
+    const-string v1, "vtosters_official"
 
-    new-instance v8, Lcom/vk/navigation/Navigator;
+    move-object/from16 v0, p0
 
-    const-class v0, Lru/vtosters/lite/ui/fragments/VTSettings;
+    move-object/from16 v4, p2
 
-    invoke-direct {v8, v0}, Lcom/vk/navigation/Navigator;-><init>(Ljava/lang/Class;)V
+    move-object/from16 v5, p3
 
-    invoke-virtual {v8, v1}, Lcom/vk/navigation/Navigator;->b(Landroid/content/Context;)Landroid/content/Intent;
-
-    move-result-object v8
-
-    const/high16 v0, 0x10000000
-
-    .line 15
-    invoke-virtual {v8, v0}, Landroid/content/Intent;->addFlags(I)Landroid/content/Intent;
-
-    .line 16
-    invoke-virtual {v1, v8}, Landroid/content/Context;->startActivity(Landroid/content/Intent;)V
+    invoke-static/range {v0 .. v5}, Lcom/vk/common/links/OpenFunctionsKt;->a(Landroid/content/Context;Ljava/lang/String;Landroid/net/Uri;ILcom/vk/common/links/OpenCallback;Lcom/vk/common/links/LinkProcessor$b;)Z
 
     goto/16 :goto_d
 
     .line 187
-    :cond_239
+    :cond_241
+    new-instance v12, Lkotlin/text/Regex;
+
+    const-string v11, "/vk_next?.*"
+
+    invoke-direct {v12, v11}, Lkotlin/text/Regex;-><init>(Ljava/lang/String;)V
+
+    const/4 v13, 0x0
+
+    const/4 v14, 0x0
+
+    const/4 v15, 0x0
+
+    const/16 v16, 0xe
+
+    const/16 v17, 0x0
+
+    move-object v11, v0
+
+    invoke-static/range {v11 .. v17}, Lcom/vk/common/links/UriWrapper;->a(Lcom/vk/common/links/UriWrapper;Lkotlin/text/Regex;Lkotlin/text/Regex;Lkotlin/text/Regex;IILjava/lang/Object;)Z
+
+    move-result v11
+
+    if-eqz v11, :cond_240
+
+    const/4 v3, 0x0
+
+    const-string v1, "vknext_official"
+
+    move-object/from16 v0, p0
+
+    move-object/from16 v4, p2
+
+    move-object/from16 v5, p3
+
+    invoke-static/range {v0 .. v5}, Lcom/vk/common/links/OpenFunctionsKt;->a(Landroid/content/Context;Ljava/lang/String;Landroid/net/Uri;ILcom/vk/common/links/OpenCallback;Lcom/vk/common/links/LinkProcessor$b;)Z
+
+    goto/16 :goto_d
+
+    .line 187
+    :cond_240
     new-instance v12, Lkotlin/text/Regex;
 
     const-string v11, "/bug(tracker|s|\\d+)/?"
