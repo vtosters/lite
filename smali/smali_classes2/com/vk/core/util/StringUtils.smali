@@ -312,7 +312,19 @@
 
     new-array p1, v2, [Ljava/lang/Object;
 
-    .line 9
+    invoke-static {}, Lru/vtosters/lite/utils/Preferences;->shortinfo()Z
+
+    move-result v5
+
+    if-nez v5, :cond_229
+
+    invoke-static {p0}, Ljava/lang/String;->valueOf(I)Ljava/lang/String;
+
+    move-result-object p3
+
+    return-object p3
+
+    :cond_229
     new-instance p3, Ljava/lang/StringBuilder;
 
     invoke-direct {p3}, Ljava/lang/StringBuilder;-><init>()V
@@ -358,6 +370,19 @@
 
     if-lt p0, v3, :cond_1
 
+    invoke-static {}, Lru/vtosters/lite/utils/Preferences;->shortinfo()Z
+
+    move-result v5
+
+    if-nez v5, :cond_228
+
+    invoke-static {p0}, Ljava/lang/String;->valueOf(I)Ljava/lang/String;
+
+    move-result-object p3
+
+    return-object p3
+
+    :cond_228
     new-array p1, v2, [Ljava/lang/Object;
 
     .line 10
@@ -428,17 +453,6 @@
     move-result-object p3
 
     :goto_0
-    invoke-static {}, Lru/vtosters/lite/utils/Preferences;->shortinfo()Z
-
-    move-result v5
-
-    if-nez v5, :cond_228
-
-    invoke-static {p0}, Ljava/lang/String;->valueOf(I)Ljava/lang/String;
-
-    move-result-object p3
-
-    :cond_228
     aput-object p3, v0, v1
 
     invoke-virtual {p2, p1, p0, v0}, Landroid/content/res/Resources;->getQuantityString(II[Ljava/lang/Object;)Ljava/lang/String;
