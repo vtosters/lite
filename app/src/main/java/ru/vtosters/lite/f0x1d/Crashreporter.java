@@ -2,6 +2,7 @@ package ru.vtosters.lite.f0x1d;
 
 import static ru.vtosters.lite.utils.About.getBuildNumber;
 import static ru.vtosters.lite.utils.Globals.getContext;
+import static ru.vtosters.lite.utils.Globals.getIdentifier;
 import static ru.vtosters.lite.utils.Globals.getString;
 
 import android.app.Activity;
@@ -14,8 +15,6 @@ import android.content.Intent;
 import android.net.Uri;
 import android.os.Build;
 import android.util.Log;
-
-import com.vtosters.lite.R;
 
 import java.io.PrintWriter;
 import java.io.StringWriter;
@@ -60,7 +59,7 @@ public class Crashreporter{
         var psaveLogIntent = PendingIntent.getService(getContext(), 0, saveLogIntent, PendingIntent.FLAG_CANCEL_CURRENT);
 
         var builder = new Notification.Builder(getContext());
-        builder.setSmallIcon(R.drawable.ic_bug_24);
+        builder.setSmallIcon(getIdentifier("ic_bug_24", "drawable"));
         builder.setContentTitle(getString("vtl_crashed"));
         builder.setContentText(logString);
         builder.setStyle(new Notification.BigTextStyle().bigText(logString));
