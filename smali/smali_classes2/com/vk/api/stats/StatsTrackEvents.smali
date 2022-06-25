@@ -17,6 +17,8 @@
 .method public constructor <init>(Ljava/lang/String;)V
     .locals 2
 
+    return-void
+
     const-string v0, "stats.trackEvents"
 
     .line 1

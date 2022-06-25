@@ -82,10 +82,5 @@
             android:key="awayphp"
             android:summary="@string/vtlawayphpsummary"
             android:title="@string/vtlawayphp" />
-        <com.vtosters.lite.ui.MaterialSwitchPreference
-            android:defaultValue="false"
-            android:key="benchmark"
-            android:summary="@string/benchapisummary"
-            android:title="@string/benchapi" />
     </PreferenceCategory>
 </PreferenceScreen>
