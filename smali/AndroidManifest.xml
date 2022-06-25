@@ -209,9 +209,16 @@
                 <data android:mimeType="vnd.android.cursor.item/vnd.com.vtosters.lite.voipcall"/>
             </intent-filter>
             <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
                 <action android:name="android.nfc.action.NDEF_DISCOVERED"/>
                 <category android:name="android.intent.category.DEFAULT"/>
                 <data android:host="m.vk.com" android:pathPattern="/.*" android:scheme="http"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+                <action android:name="android.nfc.action.NDEF_DISCOVERED"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <data android:host="m.vk.com" android:pathPattern="/.*" android:scheme="https"/>
             </intent-filter>
             <intent-filter>
                 <action android:name="android.intent.action.VIEW"/>
@@ -608,5 +615,10 @@
         <meta-data android:name="com.android.vending.splits" android:resource="@xml/splits0"/>
 
         <activity android:name="ru.vtosters.lite.ui.activities.APKInstallActivity" />
+        <service android:name="com.aefyr.tsg.g2.TelegramStickersService"/>
+        <activity android:label="@string/vtlproxy" android:launchMode="singleTop" android:name="ru.vtosters.lite.ui.fragments.ProxySettingsFragment" android:windowSoftInputMode="adjustPan"/>
+        <activity android:label="@string/vtlmusic" android:launchMode="singleTop" android:name="ru.vtosters.lite.ui.fragments.MusicFragment" android:windowSoftInputMode="adjustPan"/>
+        <service android:name="ru.vtosters.lite.f0x1d.LogWriterService" />
+
     </application>
 </manifest>
