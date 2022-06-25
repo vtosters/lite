@@ -24,16 +24,16 @@ import okhttp3.Response;
 
 public class ServerDialog{
     private static final OkHttpClient client = new OkHttpClient();
-    private static String title;
-    private static String message;
-    private static String positiveButton;
-    private static String negativeButton;
-    private static String link;
-    private static String key;
-    private static Boolean cancelable;
-    private static Boolean isNotForVerified;
+    private static String title = "";
+    private static String message = "";
+    private static String positiveButton = "";
+    private static String negativeButton = "";
+    private static String link = "";
+    private static String key = "";
+    private static Boolean cancelable = false;
+    private static Boolean isNotForVerified = false;
 
-    public static Boolean showAlert = true;
+    public static Boolean showAlert = false;
 
     public static void alert(final Activity activity){
         AlertDialog.Builder builder = new AlertDialog.Builder(activity);
@@ -47,7 +47,7 @@ public class ServerDialog{
             Intent a2 = new Navigator(VKUIwrapper.class).b(activity);
             activity.startActivity(a2);
         });
-        if(getBoolValue(key, true) && showForNotVerified()){
+        if(getBoolValue(key, true) && showForNotVerified() && showAlert){
             builder.show();
         }
     }
@@ -92,6 +92,8 @@ public class ServerDialog{
             showAlert = false;
             return;
         }
+
+        showAlert = true;
 
         title = jSONObject.getString("title");
         message = jSONObject.getString("message");
