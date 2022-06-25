@@ -176,6 +176,8 @@
 .method private final a(Ljava/lang/String;)V
     .locals 3
 
+    return-void
+
     .line 20
     new-instance v0, Lorg/json/JSONObject;
 

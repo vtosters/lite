@@ -1161,6 +1161,8 @@
         .end annotation
     .end param
 
+    return-void
+
     move-object v1, p0
 
     move-object v0, p1
