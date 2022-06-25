@@ -98,10 +98,6 @@ public class VTVerifications{
         return sVerificationsMap.get(i) != null ? sVerificationsMap.get(i) : false;
     }
 
-    public static boolean isVerifiedMSG(int i){
-        return sVerificationsMap.get(i) != null ? sVerificationsMap.get(i) : false;
-    }
-
     public static boolean hasPrometheus(int i){
         return sPrometheusMap.get(i) != null ? sPrometheusMap.get(i) : false;
     }
