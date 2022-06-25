@@ -817,7 +817,7 @@
 
     if-eqz v5, :cond_1
 
-    const/4 p0, 0x1
+    const/4 p0, 0x0
 
     goto :goto_1
 
@@ -842,7 +842,7 @@
     :goto_1
     if-eqz p0, :cond_4
 
-    const-string p0, "voip_arm64-v8a"
+    const-string p0, "voip_armv7-a-neon"
 
     goto :goto_2
 
