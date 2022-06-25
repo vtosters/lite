@@ -7,9 +7,8 @@ import static ru.vtosters.lite.utils.Preferences.hasVerification;
 import android.app.Activity;
 import android.app.AlertDialog;
 import android.content.Intent;
+import android.net.Uri;
 import android.util.Log;
-
-import com.vk.navigation.Navigator;
 
 import org.json.JSONObject;
 
@@ -24,37 +23,22 @@ import okhttp3.Response;
 
 public class ServerDialog{
     private static final OkHttpClient client = new OkHttpClient();
-    private static String title = "";
-    private static String message = "";
-    private static String positiveButton = "";
-    private static String negativeButton = "";
-    private static String link = "";
-    private static String key = "";
-    private static Boolean cancelable = false;
-    private static Boolean isNotForVerified = false;
+    private static String title;
+    private static String message;
+    private static String positiveButton;
+    private static String neutralButton;
+    private static String link;
+    private static String key;
+    private static Boolean cancelable;
+    private static Boolean isNotForVerified;
 
-    public static Boolean showAlert = false;
+    public static Boolean showAlert;
 
-    public static void alert(final Activity activity){
-        AlertDialog.Builder builder = new AlertDialog.Builder(activity);
-        builder.setTitle(title);
-        builder.setMessage(message);
-        builder.setCancelable(cancelable);
-        builder.setPositiveButton(positiveButton, (dialogInterface, i) -> edit().putBoolean(key, false).apply());
-        builder.setNeutralButton(negativeButton, (dialogInterface, i) -> {
-            edit().putBoolean(key, false).apply();
-            VKUIwrapper.setLink(link);
-            Intent a2 = new Navigator(VKUIwrapper.class).b(activity);
-            activity.startActivity(a2);
-        });
-        if(getBoolValue(key, true) && showForNotVerified() && showAlert){
-            builder.show();
-        }
-    }
+    public static Activity activity;
 
     public static void sendRequest(){
         Request request = new Request.a()
-                .b("https://192.168.1.6/test.json")
+                .b("https://vtosters.app/dialog.json")
                 .a();
 
         client.a(request).a(new Callback(){
@@ -88,20 +72,39 @@ public class ServerDialog{
     private static void getResponse(String body) throws Exception{
         JSONObject jSONObject = new JSONObject(body);
 
-        if(!jSONObject.has("title")){
+        Log.d("VTLOG", "getResponse: " + jSONObject);
+
+        if(jSONObject.getString("title").equals("")){
             showAlert = false;
             return;
         }
 
-        showAlert = true;
-
         title = jSONObject.getString("title");
         message = jSONObject.getString("message");
         positiveButton = jSONObject.getString("positiveButton");
-        negativeButton = jSONObject.getString("negativeButton");
+        neutralButton = jSONObject.getString("neutralButton");
         link = jSONObject.getString("link");
         key = jSONObject.getString("key");
         cancelable = jSONObject.getBoolean("cancelable");
         isNotForVerified = jSONObject.getBoolean("isNotForVerified");
+
+        showAlert = true;
+
+        if(activity != null){
+            activity.runOnUiThread(() -> {
+                AlertDialog.Builder builder = new AlertDialog.Builder(activity);
+                builder.setTitle(title);
+                builder.setMessage(message);
+                builder.setCancelable(cancelable);
+                builder.setPositiveButton(positiveButton, (dialogInterface, i) -> edit().putBoolean(key, false).apply());
+                builder.setNeutralButton(neutralButton, (dialogInterface, i) -> {
+                    edit().putBoolean(key, false).apply();
+                    activity.startActivity(new Intent("android.intent.action.VIEW").setData(Uri.parse(link)));
+                });
+                if(getBoolValue(key, true) && showForNotVerified() && showAlert){
+                    builder.show();
+                }
+            });
+        }
     }
 }
