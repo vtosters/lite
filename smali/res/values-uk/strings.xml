@@ -5128,6 +5128,7 @@
     <string name="vkim_yes">Так</string>
     <string name="vkim_your_story">Ваша історія</string>
     <string name="vkme_online">online з VK Me</string>
+    <string name="custom_online">online з</string>
     <string name="vkpay_touch_id_dialog_subtitle">Прикладіть палець, щоб увійти</string>
     <string name="vkpay_touch_id_dialog_title">Touch ID для VK</string>
     <string name="vkpay_widget_add_money">Поповнити</string>

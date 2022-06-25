@@ -5155,6 +5155,7 @@ en la barra de búsqueda"</string>
     <string name="vkim_yes">Sí</string>
     <string name="vkim_your_story">Tu historia</string>
     <string name="vkme_online">en línea usando VK Me</string>
+    <string name="custom_online">online utilizando</string>
     <string name="vkpay_touch_id_dialog_subtitle">Usa tu huella dactilar para iniciar sesión</string>
     <string name="vkpay_touch_id_dialog_title">Touch ID para VK</string>
     <string name="vkpay_widget_add_money">Recargar</string>
