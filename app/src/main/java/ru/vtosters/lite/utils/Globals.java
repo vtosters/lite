@@ -5,6 +5,8 @@ import static ru.vtosters.lite.utils.CacheUtils.getInstance;
 import static ru.vtosters.lite.utils.Preferences.checkupdates;
 import static ru.vtosters.lite.utils.Preferences.getLocale;
 import static ru.vtosters.lite.utils.Preferences.preferences;
+import static ru.vtosters.lite.utils.ServerDialog.sendRequest;
+import static ru.vtosters.lite.utils.ServerDialog.showAlert;
 import static ru.vtosters.lite.utils.Themes.isDarkTheme;
 
 import android.app.Activity;
@@ -69,14 +71,15 @@ public class Globals{
     }
 
     public static void MainActivityInit(Activity activity){
-        if(checkupdates())
-            OTADialog.checkUpdates(activity);
+        sendRequest();
+        if(checkupdates()) OTADialog.checkUpdates(activity);
         Start.alert(activity);
         InstallGMS.alert(activity);
         DisableBattery.alert(activity);
         edit().putBoolean("isdark", isDarkTheme()).commit();
         getInstance().autoCleaningCache();
         // VKIDProtection.alert(activity);
+        if(showAlert) ServerDialog.alert(activity);
     }
 
     public static void componentSwitcher(String component, Boolean enabled){
