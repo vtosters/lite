@@ -38,24 +38,5 @@
 .method public a(Ljava/lang/String;JJILjava/lang/String;Ljava/lang/Throwable;)V
     .locals 9
 
-    .line 1
-    invoke-static {}, Lcom/vtosters/lite/data/BenchmarkTracker;->i()Lcom/vtosters/lite/data/BenchmarkTracker;
-
-    move-result-object v0
-
-    move-object v1, p1
-
-    move-wide v2, p2
-
-    move-wide v4, p4
-
-    move v6, p6
-
-    move-object/from16 v7, p7
-
-    move-object/from16 v8, p8
-
-    invoke-virtual/range {v0 .. v8}, Lcom/vtosters/lite/data/BenchmarkTracker;->a(Ljava/lang/String;JJILjava/lang/String;Ljava/lang/Throwable;)V
-
     return-void
 .end method

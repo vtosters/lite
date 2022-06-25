@@ -194,13 +194,6 @@
     .line 12
     invoke-static {p1, v2}, Lcom/vtosters/lite/auth/VKSession;->a(Lcom/vtosters/lite/api/execute/GetWallInfo$a;Z)V
 
-    .line 13
-    invoke-static {}, Lcom/vtosters/lite/data/BenchmarkTracker;->i()Lcom/vtosters/lite/data/BenchmarkTracker;
-
-    move-result-object p0
-
-    invoke-virtual {p0}, Lcom/vtosters/lite/data/BenchmarkTracker;->e()V
-
     .line 14
     iget-object p0, p1, Lcom/vtosters/lite/api/execute/GetWallInfo$a;->e:Lcom/vk/auth/api/AccountPhoneVerify;
 
