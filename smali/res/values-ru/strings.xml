@@ -5176,6 +5176,7 @@
     <string name="vkim_yes">Да</string>
     <string name="vkim_your_story">Ваша история</string>
     <string name="vkme_online">online с VK Me</string>
+    <string name="custom_online">online с</string>
     <string name="vkpay_touch_id_dialog_subtitle">Приложите палец, чтобы войти</string>
     <string name="vkpay_touch_id_dialog_title">Touch ID для ВКонтакте</string>
     <string name="vkpay_widget_add_money">Пополнить</string>

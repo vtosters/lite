@@ -5324,6 +5324,7 @@ into the search bar"</string>
     <string name="vkim_yes">Yes</string>
     <string name="vkim_your_story">Your story</string>
     <string name="vkme_online">online using VK Me</string>
+    <string name="custom_online">online using</string>
     <string name="vkpay_touch_id_dialog_subtitle">Use your fingerprint to log in</string>
     <string name="vkpay_touch_id_dialog_title">Touch ID for VK</string>
     <string name="vkpay_widget_add_money">Top up</string>

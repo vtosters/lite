@@ -5121,6 +5121,7 @@ no campo da pesquisa"</string>
     <string name="vkim_yes">Sim</string>
     <string name="vkim_your_story">Sua história</string>
     <string name="vkme_online">online utilizando VK Me</string>
+    <string name="custom_online">online utilizando</string>
     <string name="vkpay_touch_id_dialog_subtitle">Utilize sua impressão digital para entrar</string>
     <string name="vkpay_touch_id_dialog_title">Touch ID para o VK</string>
     <string name="vkpay_widget_add_money">Adicionar fundos</string>
