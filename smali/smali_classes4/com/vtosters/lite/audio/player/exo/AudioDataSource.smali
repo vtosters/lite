@@ -212,23 +212,6 @@
 
     if-nez v0, :cond_0
 
-    .line 34
-    invoke-static {}, Lcom/vtosters/lite/data/BenchmarkTracker;->i()Lcom/vtosters/lite/data/BenchmarkTracker;
-
-    move-result-object v1
-
-    iget-wide v3, p0, Lcom/vtosters/lite/audio/player/exo/AudioDataSource;->k:J
-
-    iget-wide v5, p0, Lcom/vtosters/lite/audio/player/exo/AudioDataSource;->j:J
-
-    const/4 v7, 0x0
-
-    const/4 v8, 0x0
-
-    move-object v9, p1
-
-    invoke-virtual/range {v1 .. v9}, Lcom/vtosters/lite/data/BenchmarkTracker;->a(Ljava/lang/String;JJILjava/lang/String;Ljava/lang/Throwable;)V
-
     :cond_0
     return-void
 .end method

@@ -41,33 +41,6 @@
 .method public a(Lcom/vk/api/account/AccountGetPingUrl$a;)V
     .locals 4
 
-    .line 2
-    iget-boolean v0, p1, Lcom/vk/api/account/AccountGetPingUrl$a;->a:Z
-
-    if-eqz v0, :cond_0
-
-    .line 3
-    invoke-static {}, Lcom/vtosters/lite/data/BenchmarkTracker;->i()Lcom/vtosters/lite/data/BenchmarkTracker;
-
-    move-result-object v0
-
-    iget-object v1, p1, Lcom/vk/api/account/AccountGetPingUrl$a;->b:Ljava/lang/String;
-
-    iget-wide v2, p1, Lcom/vk/api/account/AccountGetPingUrl$a;->c:J
-
-    invoke-virtual {v0, v1, v2, v3}, Lcom/vtosters/lite/data/BenchmarkTracker;->a(Ljava/lang/String;J)V
-
-    goto :goto_0
-
-    .line 4
-    :cond_0
-    invoke-static {}, Lcom/vtosters/lite/data/BenchmarkTracker;->i()Lcom/vtosters/lite/data/BenchmarkTracker;
-
-    move-result-object p1
-
-    invoke-virtual {p1}, Lcom/vtosters/lite/data/BenchmarkTracker;->d()V
-
-    :goto_0
     return-void
 .end method
 

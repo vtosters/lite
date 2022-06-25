@@ -7,7 +7,6 @@
 
 
 # static fields
-.field private static final a:Lcom/vtosters/lite/data/BenchmarkTracker;
 
 .field public static final b:Lcom/vtosters/lite/media/VideoAnalytics;
 
@@ -22,13 +21,6 @@
     invoke-direct {v0}, Lcom/vtosters/lite/media/VideoAnalytics;-><init>()V
 
     sput-object v0, Lcom/vtosters/lite/media/VideoAnalytics;->b:Lcom/vtosters/lite/media/VideoAnalytics;
-
-    .line 2
-    invoke-static {}, Lcom/vtosters/lite/data/BenchmarkTracker;->i()Lcom/vtosters/lite/data/BenchmarkTracker;
-
-    move-result-object v0
-
-    sput-object v0, Lcom/vtosters/lite/media/VideoAnalytics;->a:Lcom/vtosters/lite/data/BenchmarkTracker;
 
     return-void
 .end method
@@ -176,23 +168,6 @@
 
 .method public a(Ljava/lang/String;JJILjava/lang/String;Ljava/lang/Exception;)V
     .locals 9
-
-    .line 1
-    sget-object v0, Lcom/vtosters/lite/media/VideoAnalytics;->a:Lcom/vtosters/lite/data/BenchmarkTracker;
-
-    move-object v1, p1
-
-    move-wide v2, p2
-
-    move-wide v4, p4
-
-    move v6, p6
-
-    move-object/from16 v7, p7
-
-    move-object/from16 v8, p8
-
-    invoke-virtual/range {v0 .. v8}, Lcom/vtosters/lite/data/BenchmarkTracker;->a(Ljava/lang/String;JJILjava/lang/String;Ljava/lang/Throwable;)V
 
     return-void
 .end method

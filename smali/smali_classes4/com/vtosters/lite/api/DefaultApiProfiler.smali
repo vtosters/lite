@@ -105,27 +105,11 @@
 .method public a()V
     .locals 1
 
-    .line 2
-    invoke-static {}, Lcom/vtosters/lite/data/BenchmarkTracker;->i()Lcom/vtosters/lite/data/BenchmarkTracker;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Lcom/vtosters/lite/data/BenchmarkTracker;->b()V
-
     return-void
 .end method
 
 .method public a(J)V
     .locals 1
-
-    .line 1
-    invoke-static {}, Lcom/vtosters/lite/data/BenchmarkTracker;->i()Lcom/vtosters/lite/data/BenchmarkTracker;
-
-    move-result-object v0
-
-    long-to-int p2, p1
-
-    invoke-virtual {v0, p2}, Lcom/vtosters/lite/data/BenchmarkTracker;->a(I)V
 
     return-void
 .end method
@@ -135,23 +119,6 @@
 
     .line 8
     invoke-virtual {p0, p4, p5}, Lcom/vtosters/lite/api/DefaultApiProfiler;->a(J)V
-
-    .line 9
-    invoke-static {}, Lcom/vtosters/lite/data/BenchmarkTracker;->i()Lcom/vtosters/lite/data/BenchmarkTracker;
-
-    move-result-object v0
-
-    long-to-int v2, p4
-
-    long-to-int v3, p2
-
-    move-object v1, p1
-
-    move-wide v4, p6
-
-    move-object v6, p8
-
-    invoke-virtual/range {v0 .. v6}, Lcom/vtosters/lite/data/BenchmarkTracker;->a(Ljava/lang/String;IIJLjava/lang/String;)V
 
     return-void
 .end method
@@ -192,17 +159,6 @@
 
     invoke-direct {p0, p1, v0}, Lcom/vtosters/lite/api/DefaultApiProfiler;->b(Ljava/lang/String;Ljava/lang/Throwable;)V
 
-    .line 7
-    invoke-static {}, Lcom/vtosters/lite/data/BenchmarkTracker;->i()Lcom/vtosters/lite/data/BenchmarkTracker;
-
-    move-result-object v0
-
-    long-to-int p5, p4
-
-    long-to-int p3, p2
-
-    invoke-virtual {v0, p1, p5, p3, p6}, Lcom/vtosters/lite/data/BenchmarkTracker;->a(Ljava/lang/String;IILjava/lang/String;)V
-
     return-void
 .end method
 
@@ -232,13 +188,6 @@
 
     .line 4
     invoke-virtual {p0}, Lcom/vtosters/lite/api/DefaultApiProfiler;->a()V
-
-    .line 5
-    invoke-static {}, Lcom/vtosters/lite/data/BenchmarkTracker;->i()Lcom/vtosters/lite/data/BenchmarkTracker;
-
-    move-result-object v0
-
-    invoke-virtual {v0, p1, p2}, Lcom/vtosters/lite/data/BenchmarkTracker;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     return-void
 .end method

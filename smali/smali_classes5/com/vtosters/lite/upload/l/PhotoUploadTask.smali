@@ -101,73 +101,18 @@
 .method protected a(Ljava/lang/String;I)V
     .locals 3
 
-    .line 3
-    iget-boolean v0, p0, Lcom/vtosters/lite/upload/l/PhotoUploadTask;->k:Z
-
-    if-eqz v0, :cond_0
-
-    .line 4
-    invoke-static {}, Lcom/vtosters/lite/data/BenchmarkTracker;->i()Lcom/vtosters/lite/data/BenchmarkTracker;
-
-    move-result-object v0
-
-    const/4 v1, 0x0
-
-    const-string v2, "photo.upload"
-
-    invoke-virtual {v0, v2, p2, v1, p1}, Lcom/vtosters/lite/data/BenchmarkTracker;->a(Ljava/lang/String;IILjava/lang/String;)V
-
-    :cond_0
     return-void
 .end method
 
 .method protected a(Ljava/lang/String;IJ)V
     .locals 8
 
-    .line 1
-    iget-boolean v0, p0, Lcom/vtosters/lite/upload/l/PhotoUploadTask;->k:Z
-
-    if-eqz v0, :cond_0
-
-    .line 2
-    invoke-static {}, Lcom/vtosters/lite/data/BenchmarkTracker;->i()Lcom/vtosters/lite/data/BenchmarkTracker;
-
-    move-result-object v1
-
-    const/4 v4, 0x0
-
-    const-string v2, "photo.upload"
-
-    move v3, p2
-
-    move-wide v5, p3
-
-    move-object v7, p1
-
-    invoke-virtual/range {v1 .. v7}, Lcom/vtosters/lite/data/BenchmarkTracker;->a(Ljava/lang/String;IIJLjava/lang/String;)V
-
-    :cond_0
     return-void
 .end method
 
 .method protected d(Ljava/lang/String;)V
     .locals 2
 
-    .line 1
-    iget-boolean v0, p0, Lcom/vtosters/lite/upload/l/PhotoUploadTask;->k:Z
-
-    if-eqz v0, :cond_0
-
-    .line 2
-    invoke-static {}, Lcom/vtosters/lite/data/BenchmarkTracker;->i()Lcom/vtosters/lite/data/BenchmarkTracker;
-
-    move-result-object v0
-
-    const-string v1, "photo.upload"
-
-    invoke-virtual {v0, v1, p1}, Lcom/vtosters/lite/data/BenchmarkTracker;->a(Ljava/lang/String;Ljava/lang/String;)V
-
-    :cond_0
     return-void
 .end method
 

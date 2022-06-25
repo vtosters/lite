@@ -192,8 +192,6 @@
 .method public final a()Lio/reactivex/disposables/Disposable;
     .locals 3
 
-    return-void
-
     .line 2
     new-instance v0, Lcom/vk/api/base/BooleanApiRequest;
 

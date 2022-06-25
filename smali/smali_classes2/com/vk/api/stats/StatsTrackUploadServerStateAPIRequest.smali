@@ -16,8 +16,6 @@
 .method public constructor <init>(Lcom/vk/api/stats/StatsTrackUploadServerStateAPIRequest$b;)V
     .locals 6
 
-    return-void
-
     const-string v0, "stats.trackUploadServerState"
 
     .line 1
