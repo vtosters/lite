@@ -6,7 +6,7 @@ public class OnlineFormatter {
     public static String getAppName(int appid){
         switch (appid) {
             case 2274003:
-                return "VK for Android";
+                return "Android";
             case 6328039:
             case 6328868:
             case 6820516:
