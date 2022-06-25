@@ -920,19 +920,13 @@
 
     if-eqz v0, :cond_1
 
-    invoke-virtual {p2}, Lcom/vk/dto/user/VisibleStatus;->C1()Z
+    invoke-virtual {p2}, Lcom/vk/dto/user/VisibleStatus;->checkOnlineList()Ljava/lang/String;
 
-    move-result v0
+    move-result-object v0
 
     if-eqz v0, :cond_1
 
-    iget-object p1, p0, Lcom/vk/core/formatters/OnlineFormatter;->g:Landroid/content/Context;
-
-    sget p2, Lb/h/z/k;->vkme_online:I
-
-    invoke-virtual {p1, p2}, Landroid/content/Context;->getString(I)Ljava/lang/String;
-
-    move-result-object p1
+    move-object p1, v0
 
     goto :goto_0
 
@@ -1112,18 +1106,13 @@
     if-gez v6, :cond_6
 
     .line 37
-    invoke-virtual {p2}, Lcom/vk/dto/user/VisibleStatus;->C1()Z
+    invoke-virtual {p2}, Lcom/vk/dto/user/VisibleStatus;->checkOnlineList()Ljava/lang/String;
 
-    move-result p1
+    move-result-object v2
 
-    if-eqz p1, :cond_5
+    if-eqz v2, :cond_5
 
-    .line 38
-    sget p1, Lb/h/z/k;->vkme_online:I
-
-    invoke-virtual {v0, p1}, Landroid/content/Context;->getString(I)Ljava/lang/String;
-
-    move-result-object p1
+    move-object p1, v2
 
     invoke-virtual {p3, p1}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
 
