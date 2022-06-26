@@ -4552,7 +4552,7 @@
     <string name="vkim_dialogs_header_filter_all">Всі повідомлення</string>
     <string name="vkim_dialogs_header_filter_unread">Непрочитані</string>
     <string name="vkim_dialogs_header_search">Пошук</string>
-    <string name="vkim_dialogs_header_title">Повідомлення</string>
+    <string name="vkim_dialogs_header_title">Чати</string>
     <string name="vkim_dialogs_list_clear_and_leave_progress_desc">Видалення історії та вихід</string>
     <string name="vkim_dialogs_list_clear_and_leave_submit_desc">Ви справді хочете видалити всі повідомлення в цьому діалозі і вийти з нього? Скасувати цю дію буде неможливо.</string>
     <string name="vkim_dialogs_list_clear_progress_desc">Видалення історії</string>

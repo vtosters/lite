@@ -4600,7 +4600,7 @@
     <string name="vkim_dialogs_header_filter_all">Все сообщения</string>
     <string name="vkim_dialogs_header_filter_unread">Непрочитанные</string>
     <string name="vkim_dialogs_header_search">Поиск</string>
-    <string name="vkim_dialogs_header_title">Сообщения</string>
+    <string name="vkim_dialogs_header_title">Чаты</string>
     <string name="vkim_dialogs_list_clear_and_leave_progress_desc">Удаление истории и выход</string>
     <string name="vkim_dialogs_list_clear_and_leave_submit_desc">Вы действительно хотите удалить все сообщения и выйти? Отменить это действие будет невозможно.</string>
     <string name="vkim_dialogs_list_clear_progress_desc">Удаление истории</string>

@@ -4747,7 +4747,7 @@ https://vk.me"</string>
     <string name="vkim_dialogs_header_filter_all">All messages</string>
     <string name="vkim_dialogs_header_filter_unread">Unread</string>
     <string name="vkim_dialogs_header_search">Search</string>
-    <string name="vkim_dialogs_header_title">Messages</string>
+    <string name="vkim_dialogs_header_title">Chats</string>
     <string name="vkim_dialogs_list_clear_and_leave_progress_desc">Clear history and leave</string>
     <string name="vkim_dialogs_list_clear_and_leave_submit_desc">Are you sure you want to clear the entire message history and leave the chat? This cannot be undone.</string>
     <string name="vkim_dialogs_list_clear_progress_desc">Clear history</string>

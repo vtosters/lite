@@ -4579,7 +4579,7 @@ https://vk.me"</string>
     <string name="vkim_dialogs_header_filter_all">Todos los mensajes</string>
     <string name="vkim_dialogs_header_filter_unread">No leídos</string>
     <string name="vkim_dialogs_header_search">Buscar</string>
-    <string name="vkim_dialogs_header_title">Mensajes</string>
+    <string name="vkim_dialogs_header_title">Chats</string>
     <string name="vkim_dialogs_list_clear_and_leave_progress_desc">Borrar historial y salir</string>
     <string name="vkim_dialogs_list_clear_and_leave_submit_desc">¿Seguro que quieres borrar todo el historial de mensajes y abandonar el chat? Esto no se puede deshacer.</string>
     <string name="vkim_dialogs_list_clear_progress_desc">Borrar historial</string>
