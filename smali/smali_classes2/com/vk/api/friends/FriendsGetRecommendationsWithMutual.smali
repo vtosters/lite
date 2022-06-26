@@ -48,7 +48,7 @@
 .method public constructor <init>(Lcom/vk/api/friends/FriendsGetRequestsNotificationsResponse$a;Ljava/lang/String;I)V
     .locals 1
 
-    const-string v0, "friends.getSuggestions"
+    const-string v0, "friends.getRecommendations"
 
     .line 1
     invoke-direct {p0, v0}, Lcom/vk/api/base/ApiRequest;-><init>(Ljava/lang/String;)V
