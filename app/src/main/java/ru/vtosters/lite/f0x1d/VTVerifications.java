@@ -4,136 +4,124 @@ import static ru.vtosters.lite.utils.Preferences.getBoolValue;
 
 import android.content.Context;
 import android.content.SharedPreferences;
-import android.util.Base64;
 import android.util.Log;
-import android.widget.Toast;
 
 import com.vk.dto.common.VerifyInfo;
 import com.vk.navigation.NavigatorKeys;
 
 import org.json.JSONArray;
+import org.json.JSONException;
 import org.json.JSONObject;
 
 import java.io.IOException;
-import java.nio.charset.StandardCharsets;
-import java.util.HashMap;
-import java.util.Map;
+import java.util.ArrayList;
+import java.util.List;
 
 import okhttp3.Call;
 import okhttp3.Callback;
 import okhttp3.MediaType;
 import okhttp3.OkHttpClient;
-import okhttp3.Request;
 import okhttp3.RequestBody;
 import okhttp3.Response;
+import ru.vtosters.lite.utils.Globals;
 
 public class VTVerifications {
-    public static final HashMap<Integer, Boolean> sServiceAccountsMap = new HashMap<>();
-    private static final String TAG = "VTVerifications";
-    private static final String DEVELOPERS_KEY = "VTNRS3";
-    private static final String PROMETHEUS_KEY = "VTNRS1";
-    private static final String SERVICE_ACCOUNTS_KEY = "VTNRS4";
-    private static final String VERIFICATIONS_KEY = "VTNRS0";
-    private static final HashMap<Integer, Boolean> sDevelopersMap = new HashMap<>();
-    private static final HashMap<Integer, Boolean> sPrometheusMap = new HashMap<>();
-    private static final HashMap<Integer, Boolean> sVerificationsMap = new HashMap<>();
-    private static SharedPreferences mVerificationsCache;
-    private static final OkHttpClient client = new OkHttpClient();
+    private static List<Integer> sVerifications = new ArrayList<>();
+    private static List<Integer> sPrometheuses = new ArrayList<>();
+    private static List<Integer> sDevelopers = new ArrayList<>();
+    private static List<Integer> sServiceAccounts = new ArrayList<>();
 
-    public static void load(Context context) {
-        mVerificationsCache = context.getSharedPreferences("vt_another_data", 0);
+    private static final OkHttpClient sClient = new OkHttpClient();
 
-        try {
-            processArray(new JSONArray(getLoaded(VERIFICATIONS_KEY)), sVerificationsMap, null);
-            processArray(new JSONArray(getLoaded(PROMETHEUS_KEY)), sPrometheusMap, null);
-            processArray(new JSONArray(getLoaded(DEVELOPERS_KEY)), sDevelopersMap, null);
-            processArray(new JSONArray(getLoaded(SERVICE_ACCOUNTS_KEY)), sServiceAccountsMap, null);
-        } catch (Exception e) {
-            e.printStackTrace();
-            Toast.makeText(context, e.getLocalizedMessage(), Toast.LENGTH_SHORT).show();
+    private static SharedPreferences sVerificationsPrefs;
+
+    public static void load(Context context){
+        sVerificationsPrefs = context.getSharedPreferences("vt_another_data", 0);
+
+        if (!Globals.isNetworkConnected() && sVerificationsPrefs.contains("ids")) {
+            parseJson(sVerificationsPrefs.getString("ids", "[]"));
+            return;
         }
 
-        Request request = new Request.Builder()
+        var request = new okhttp3.Request.Builder()
                 .url("https://vtosters.app/vktoaster/getGalo4kiBatch")
                 .a(RequestBody.a(MediaType.b("application/json; charset=UTF-8"), "{\"types\":[0,228,404,1337]}"))
                 .build();
 
-        client.newCall(request).a(new Callback() {
-            @Override
-            public void a(Call call, IOException e) {
-                Log.d(TAG, "" + e);
-            }
+        sClient.newCall(request).a(new Callback(){
 
             @Override
-            public void a(Call call, Response response) throws IOException {
+            public void a(Call call, Response response){
                 try {
-                    getVerifications(response.body().string());
+                    var payload = response.body().string();
+                    parseJson(payload);
+                    sVerificationsPrefs.edit().putString("ids", payload).apply();
                 } catch (Exception e) {
                     e.printStackTrace();
                 }
             }
+
+            @Override
+            public void a(Call call, IOException e) {
+                Log.d("VTVerifications", "" + e);
+            }
+
         });
     }
 
-    private static void getVerifications(String body) throws Exception {
-        JSONObject jSONObject = new JSONObject(body);
-        processArray(jSONObject.optJSONArray("0"), sVerificationsMap, VERIFICATIONS_KEY);
-        processArray(jSONObject.optJSONArray("228"), sPrometheusMap, PROMETHEUS_KEY);
-        processArray(jSONObject.optJSONArray("404"), sDevelopersMap, DEVELOPERS_KEY);
-        processArray(jSONObject.optJSONArray("1337"), sServiceAccountsMap, SERVICE_ACCOUNTS_KEY);
-    }
+    /**
+     * 0 - Verifications
+     * 228 - Prometheus
+     * 404 - Developer
+     * 1337 - Service account*/
+    private static void parseJson(String payload) {
+        try {
+            var json = new JSONObject(payload);
 
-    private static void processArray(JSONArray jSONArray, Map<Integer, Boolean> map, String str) {
-        if (jSONArray != null) {
-            for (int i = 0; i < jSONArray.length(); i++) {
-                map.put(Integer.valueOf(jSONArray.optInt(i)), true);
-            }
-            if (str != null) {
-                setLoaded(str, jSONArray.toString());
-            }
+            processIds(json.optJSONArray("0"), sVerifications);
+            processIds(json.optJSONArray("228"), sPrometheuses);
+            processIds(json.optJSONArray("404"), sDevelopers);
+            processIds(json.optJSONArray("1337"), sServiceAccounts);
+        } catch (JSONException e) {
+            e.printStackTrace();
         }
     }
 
-    public static boolean isVerified(int i) {
-        return sVerificationsMap.get(i) != null ? sVerificationsMap.get(i) : false;
+    private static void processIds(JSONArray jsonIds, List<Integer> member) {
+        if (jsonIds == null || jsonIds.length() == 0)
+            return;
+
+        for (int i = 0; i < jsonIds.length(); i++)
+            member.add(jsonIds.optInt(i));
     }
 
-    public static boolean isVerifiedMSG(int i) {
-        return sVerificationsMap.get(i) != null ? sVerificationsMap.get(i) : false;
+    public static boolean isVerified(int i){
+        return sVerifications.contains(i);
     }
 
-    public static boolean hasPrometheus(int i) {
-        return sPrometheusMap.get(i) != null ? sPrometheusMap.get(i) : false;
+    public static boolean isPrometheus(int i){
+        return sPrometheuses.contains(i);
     }
 
-    public static boolean isDeveloper(int i) {
-        return sDevelopersMap.get(i) != null ? sDevelopersMap.get(i) : false;
+    public static boolean isDeveloper(int i){
+        return sDevelopers.contains(i);
     }
 
-    public static boolean isServiceAccount(int i) {
-        return sServiceAccountsMap.get(i) != null ? sServiceAccountsMap.get(i) : false;
-
+    public static boolean isServiceAccount(int i){
+        return sServiceAccounts.contains(i);
     }
-
-    private static String getLoaded(String str) {
-        return decode(mVerificationsCache.getString(str, encode("[]")));
-    }
-
-    public static void setLoaded(String str, String str2) {
-        mVerificationsCache.edit().putString(str, encode(str2)).apply();
-    }
-
-    public static String decode(String str) {
-        return new String(Base64.decode(str, 1), StandardCharsets.UTF_8);
-    }
-
-    public static String encode(String str) {
-        return Base64.encodeToString(str.getBytes(), 1);
-    }
-
 
     public static boolean vtverif() {
         return getBoolValue("VT_Verification", true);
+    }
+
+    private static int getId(JSONObject json) {
+        var id = json.optInt("id", 0);
+        if (!json.optString(NavigatorKeys.ae).equals("group") && !json.optString(NavigatorKeys.ae).equals("page")
+                || json.optString(NavigatorKeys.ae) == null)
+            return id;
+        else
+            return -id;
     }
 
     public static boolean isVerified(JSONObject jSONObject) {
@@ -145,7 +133,7 @@ public class VTVerifications {
             return false;
         }
 
-        return isVerified((jSONObject.optString(NavigatorKeys.j) == null || (!jSONObject.optString(NavigatorKeys.j).equals("group") && !jSONObject.optString(NavigatorKeys.j).equals("page"))) ? jSONObject.optInt("id", 0) : -jSONObject.optInt("id", 0));
+        return isVerified(getId(jSONObject));
     }
 
     public static boolean hasPrometheus(JSONObject jSONObject) {
@@ -157,7 +145,7 @@ public class VTVerifications {
             return false;
         }
 
-        return hasPrometheus((jSONObject.optString(NavigatorKeys.j) == null || (!jSONObject.optString(NavigatorKeys.j).equals("group") && !jSONObject.optString(NavigatorKeys.j).equals("page"))) ? jSONObject.optInt("id", 0) : -jSONObject.optInt("id", 0));
+        return isPrometheus(getId(jSONObject));
     }
 
     public static boolean hasDeveloper(JSONObject jSONObject) {
@@ -165,7 +153,7 @@ public class VTVerifications {
             return false;
         }
 
-        return isDeveloper((jSONObject.optString(NavigatorKeys.j) == null || (!jSONObject.optString(NavigatorKeys.j).equals("group") && !jSONObject.optString(NavigatorKeys.j).equals("page"))) ? jSONObject.optInt("id", 0) : -jSONObject.optInt("id", 0));
+        return isDeveloper(getId(jSONObject));
     }
 
     public static VerifyInfo VerifyInfo(JSONObject jSONObject) {

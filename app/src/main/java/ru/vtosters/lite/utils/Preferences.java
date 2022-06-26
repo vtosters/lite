@@ -2,7 +2,7 @@ package ru.vtosters.lite.utils;
 
 import static android.os.Build.VERSION;
 import static java.lang.Long.MAX_VALUE;
-import static ru.vtosters.lite.f0x1d.VTVerifications.hasPrometheus;
+import static ru.vtosters.lite.f0x1d.VTVerifications.isPrometheus;
 import static ru.vtosters.lite.f0x1d.VTVerifications.isVerified;
 import static ru.vtosters.lite.ui.fragments.multiaccount.MultiAccountManager.migrate;
 import static ru.vtosters.lite.utils.CacheUtils.getInstance;
@@ -415,7 +415,7 @@ public class Preferences {
     }
 
     public static boolean hasSpecialVerif() {
-        return hasPrometheus(getUserId());
+        return isPrometheus(Globals.getUserId());
     }
 
     public static String getLocale() {

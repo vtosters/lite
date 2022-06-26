@@ -2,7 +2,6 @@ package ru.vtosters.lite.utils;
 
 import static android.content.pm.PackageManager.GET_SIGNATURES;
 import static android.content.pm.PackageManager.NameNotFoundException;
-import static ru.vtosters.lite.f0x1d.VTVerifications.decode;
 import static ru.vtosters.lite.utils.Globals.getContext;
 import static ru.vtosters.lite.utils.Globals.getPackageName;
 
@@ -40,7 +39,7 @@ public class SignatureChecker {
         @SuppressLint("PackageManagerGetSignatures") PackageInfo packageInfo = getContext().getPackageManager().getPackageInfo(getPackageName(), GET_SIGNATURES);
         for (Signature signature : packageInfo.signatures) {
             String sha1 = getSHA1(signature.toByteArray());
-            return decode(APP_SIGNATURE).equals(sha1);
+            return Base64Utils.decode(APP_SIGNATURE).equals(sha1);
         }
         return false;
     } // Sig check to detect actions builds and etc
