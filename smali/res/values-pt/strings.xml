@@ -4547,7 +4547,7 @@ Os participantes do bate-papo não verão sua informação até que você aceite
     <string name="vkim_dialogs_header_filter_all">Todas mensagens</string>
     <string name="vkim_dialogs_header_filter_unread">Não lidas</string>
     <string name="vkim_dialogs_header_search">Pesquisar</string>
-    <string name="vkim_dialogs_header_title">Mensagens</string>
+    <string name="vkim_dialogs_header_title">Chats</string>
     <string name="vkim_dialogs_list_clear_and_leave_progress_desc">Limpar histórico e deixar bate-papo</string>
     <string name="vkim_dialogs_list_clear_and_leave_submit_desc">Deseja realmente remover todas as mensagens e deixar o bate-papo? Esta ação não pode ser desfeita.</string>
     <string name="vkim_dialogs_list_clear_progress_desc">Limpar histórico</string>

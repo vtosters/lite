@@ -4529,7 +4529,7 @@ https://vk.me"</string>
     <string name="vkim_dialogs_header_filter_all">Барлық хабарламалар</string>
     <string name="vkim_dialogs_header_filter_unread">Оқылмаған</string>
     <string name="vkim_dialogs_header_search">Іздеу</string>
-    <string name="vkim_dialogs_header_title">Хабарлама</string>
+    <string name="vkim_dialogs_header_title">Chats</string>
     <string name="vkim_dialogs_list_clear_and_leave_progress_desc">Тарихты жойып шығу</string>
     <string name="vkim_dialogs_list_clear_and_leave_submit_desc">Барлық хабарламаларды жойып, шыққыңыз келе ме? Бұл әрекетті болдырмау мүмкін емес.</string>
     <string name="vkim_dialogs_list_clear_progress_desc">Тарихты жою</string>
