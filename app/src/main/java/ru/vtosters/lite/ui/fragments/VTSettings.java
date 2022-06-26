@@ -299,16 +299,14 @@ public class VTSettings extends MaterialPreferenceToolbarFragment{
             return false;
         });
 
-        //TODO: Add telegram icon
-        PreferencesUtil.addPreference(this, "", Globals.getString("vtltgs"), tgssumm, null, preference -> {
+        PreferencesUtil.addPreference(this, "", Globals.getString("vtltgs"), tgssumm, oldicons() ? "ic_telegram_24" : "ic_telegram_outline_28", preference -> {
             Context context = getContext();
             Intent a2 = new Navigator(StickersFragment.class).b(context);
             context.startActivity(a2);
             return false;
         });
 
-        //TODO: Add interface icon
-        PreferencesUtil.addPreference(this, "", Globals.getString("vtlinterface"), interfacesumm, null, preference -> {
+        PreferencesUtil.addPreference(this, "", Globals.getString("vtlinterface"), interfacesumm, oldicons() ? "ic_interface_24" : "ic_interface_outline_28", preference -> {
             Context context = getContext();
             Intent a2 = new Navigator(InterfaceFragment.class).b(context);
             context.startActivity(a2);
