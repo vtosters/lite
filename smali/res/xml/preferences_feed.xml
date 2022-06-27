@@ -53,18 +53,18 @@
             android:title="@string/shitposting" />
         <com.vtosters.lite.ui.MaterialSwitchPreference
             android:defaultValue="false"
-            android:key="copyright_post"
-            android:summary="@string/feed_ads_sources_summary"
-            android:title="@string/feed_ads_sources" />
-        <com.vtosters.lite.ui.MaterialSwitchPreference
-            android:defaultValue="false"
-            android:key="blockvkcopyright"
-            android:summary="Блокировать посты с источником где есть ссылка на вк (группу, страницу или посты)"
-            android:title="Отключить посты с ссылкой на вк" />
+            android:key="blockcringecopyright"
+            android:summary="Блокировать посты с источником где есть ссылка на вк/телеграм (группу, страницу или посты) или на другие возможные ресурсы"
+            android:title="Отключить посты с возможной рекламой" />
         <EditTextPreference
             android:defaultValue=""
             android:key="linkfilter"
             android:title="Фильтр ссылок в источнике" />
+        <com.vtosters.lite.ui.MaterialSwitchPreference
+            android:defaultValue="false"
+            android:key="copyright_post"
+            android:summary="@string/feed_ads_sources_summary"
+            android:title="@string/feed_ads_sources" />
     </PreferenceCategory>
     <PreferenceCategory android:title="@string/vtlrecommend">
         <com.vtosters.lite.ui.MaterialSwitchPreference

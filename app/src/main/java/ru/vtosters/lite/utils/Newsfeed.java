@@ -45,6 +45,7 @@ import java.io.InputStreamReader;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
+import java.util.Objects;
 
 public class Newsfeed{
     public static List<String> mFilters;
@@ -54,36 +55,31 @@ public class Newsfeed{
         mFilters = new ArrayList();
         mFiltersLinks = new ArrayList();
 
-        getFilter("refsfilter", "Referals.txt");
-        getFilter("shortlinkfilter", "LinkShorter.txt");
-        getFilter("default_ad_list", "StandartFilter.txt");
-        getFilter("shitposting", "IDontWantToReadIt.txt");
+        getFilter("refsfilter", "Referals.txt", mFilters);
+        getFilter("shortlinkfilter", "LinkShorter.txt", mFilters);
+        getFilter("default_ad_list", "StandartFilter.txt", mFilters);
+        getFilter("shitposting", "IDontWantToReadIt.txt", mFilters);
+        getFilter("blockcringecopyright", "CopyrightAds.txt", mFiltersLinks);
 
-        String customfilters = getPrefsValue("spamfilters");
-
+        var customfilters = getPrefsValue("spamfilters");
         if(!customfilters.isEmpty()){
             mFilters.addAll(Arrays.asList(customfilters.split(", ")));
         }
 
-        String linkfilter = getPrefsValue("linkfilter");
-
-        if(getBoolValue("blockvkcopyright", false)){
-            mFiltersLinks.add("vk.com");
-        }
-
+        var linkfilter = getPrefsValue("linkfilter");
         if(!linkfilter.isEmpty()){
             mFiltersLinks.addAll(Arrays.asList(linkfilter.split(", ")));
         }
     }
 
-    public static void getFilter(String boolname, String filename){
+    public static void getFilter(String boolname, String filename, List<String> list){
         if(getBoolValue(boolname, true)){
             try {
                 BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(getContext().getAssets().open(filename)));
                 while(true) {
                     String readLine = bufferedReader.readLine();
                     if(readLine != null){
-                        mFilters.add(readLine);
+                        list.add(readLine);
                     } else {
                         bufferedReader.close();
                         return;
@@ -96,7 +92,7 @@ public class Newsfeed{
     } // Get needed filter list from assets
 
     public static boolean injectFilters(JSONObject obj) throws JSONException{
-        String optString = obj.optString("type", "");
+        var optString = obj.optString("type", "");
         if(isAds(optString) || isAuthorRecommendations(optString) || isPostRecommendations(optString) || isFriendsRecommendations(optString) || isRecomsGroup(optString) || isMusicBlock(optString) || isNewsBlock(optString)){
             return false;
         }
@@ -115,15 +111,40 @@ public class Newsfeed{
 
         if(checkCaption(obj)) return false;
 
-        return !isGroupAds(obj);
+        if(isGroupAds(obj)) return false;
+
+        if(obj.optJSONArray("copy_history") != null){
+            return injectFiltersReposts(obj);
+        }
+
+        return true;
+    }
+
+    public static boolean injectFiltersReposts(JSONObject obj) throws JSONException{
+        var Array = Objects.requireNonNull(obj.optJSONArray("copy_history")).toString();
+
+        if(Array.isEmpty()) return true;
+
+        if(isAds(Array) || isAuthorRecommendations(Array) || isPostRecommendations(Array) || isFriendsRecommendations(Array) || isRecomsGroup(Array) || isMusicBlock(Array) || isNewsBlock(Array)){
+            return false;
+        }
+        if(isAds(Array) || isAuthorRecommendations(Array) || isPostRecommendations(Array) || isFriendsRecommendations(Array) || isMusicBlock(Array) || isNewsBlock(Array)){
+            return false;
+        }
+
+        if(isAds(Array) || isAuthorRecommendations(Array) || isPostRecommendations(Array) || isFriendsRecommendations(Array)){
+            return false;
+        }
+
+        return !isBadNew(Array);
     }
 
     private static boolean checkCopyright(JSONObject json) throws JSONException{
-        String linkfilter = getPrefsValue("linkfilter");
+        var linkfilter = getPrefsValue("linkfilter");
 
         if(json.opt("copyright") != null){
-            JSONObject copyright = json.getJSONObject("copyright");
-            String copyrightlink = copyright.getString("link");
+            var copyright = json.getJSONObject("copyright");
+            var copyrightlink = copyright.getString("link");
 
             for(String linkfilters : mFiltersLinks) {
                 if(copyrightlink.toLowerCase().contains(linkfilters.toLowerCase())){
@@ -164,7 +185,7 @@ public class Newsfeed{
 
     public static boolean checkCaption(JSONObject postJson){
         try {
-            JSONObject captionJson = postJson.getJSONObject("caption");
+            var captionJson = postJson.getJSONObject("caption");
             if(Preferences.captions())
                 return true;
 
