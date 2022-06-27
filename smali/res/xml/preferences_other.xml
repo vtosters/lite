@@ -65,5 +65,9 @@
             android:defaultValue="true"
             android:key="VT_Fire"
             android:title="@string/showvtfire" />
+        <com.vtosters.lite.ui.MaterialSwitchPreference
+            android:defaultValue="false"
+            android:key="dialogrecomm"
+            android:title="@string/dialogrecomm" />
     </PreferenceCategory>
 </PreferenceScreen>

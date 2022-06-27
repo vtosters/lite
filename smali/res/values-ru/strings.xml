@@ -5500,7 +5500,7 @@
     <string name="shitpostingsummary">Фильтр очистки постов с РФ и действиями связанными на Украине</string>
     <string name="showstories">Показывать истории</string>
     <string name="showstoriessum">Блок истории в верхней части ленты</string>
-    <string name="donaterecomm">Отключить рекомендации о донате</string>
+    <string name="dialogrecomm">Отключить рекомендации</string>
     <string name="showvtfire">Показывать специальные верификации</string>
     <string name="showvtverify">Показывать верификации</string>
     <string name="sprefsctype">Тип подключения</string>
