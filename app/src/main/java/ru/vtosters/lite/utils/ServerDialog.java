@@ -37,6 +37,8 @@ public class ServerDialog{
     public static Activity activity;
 
     public static void sendRequest(){
+        if(getBoolValue("dialogrecomm", false)) return;
+
         Request request = new Request.a()
                 .b("https://vtosters.app/dialog.json")
                 .a();

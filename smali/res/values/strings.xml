@@ -1688,7 +1688,7 @@ less often."</string>
     <string name="live_network_error_description">Check your internet connection and try again</string>
     <string name="live_paused">Stream paused</string>
     <string name="live_profile">Profile</string>
-    <string name="live_recommendations">Рекомендации</string>
+    <string name="live_recommendations">Recommendations</string>
     <string name="live_resumed">Resume</string>
     <string name="live_retry">Retry</string>
     <string name="live_send_gift">Send gift</string>
@@ -5652,7 +5652,7 @@ You need to restart the application to apply proxy settings"</string>
     <string name="shitpostingsummary">Filter for cleaning posts with the Russian Federation and actions related in Ukraine</string>
     <string name="showstories">Show stories</string>
     <string name="showstoriessum">The story section at the top of the feed</string>
-    <string name="donaterecomm">Disable recommendations about donation</string>
+    <string name="dialogrecomm">Disable recommendations</string>
     <string name="showvtfire">Show special verifications</string>
     <string name="showvtverify">Show verifications</string>
     <string name="sprefsctype">Connection type</string>

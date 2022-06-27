@@ -26722,7 +26722,7 @@ public final class R{
 
         public static final int reportbugsumm = 0x7f12159f;
 
-        public static final int donaterecomm = 0x7f1215a7;
+        public static final int dialogrecomm = 0x7f1215a7;
 
         public static final int officialnewssett = 0x7f1215e4;
 
