@@ -22,6 +22,7 @@ public class Toggles{
             case AB_GIFTS_FROM_KEYBOARD:
             case FEATURE_FEED_DEFAULT_LIST_ALWAYS:
             case EXPERIMENT_NEWS_VIDEO_LAYOUT_TEXT:
+            case FEATURE_MILKSHAKE_DISCOVER_IN_MENU:
             case FEATURE_DISCOVER_CATEGORIES:
             case FEATURE_FAVE_PERF_IMPROVE:
             case FEATURE_GROUP_ADMIN_MESSAGES:
@@ -44,7 +45,6 @@ public class Toggles{
             case FEATURE_MONEY_TRANSFERS_VKPAY:
             case FEATURE_MOZJPEG:
             case FEATURE_MUSIC_ARTIST_CATALOG:
-            case FEATURE_MUSIC_AUDIO_SERVICE:
             case FEATURE_MUSIC_NEW_CATALOG:
             case FEATURE_MUSIC_STOP_PLAYER_ON_TASK_REMOVAL:
             case FEATURE_MUS_PUSH_RES_COUNT:
