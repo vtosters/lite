@@ -2,7 +2,7 @@ package ru.vtosters.lite.utils;
 
 import static ru.vtosters.lite.utils.Preferences.feedcache;
 import static ru.vtosters.lite.utils.Preferences.milkshake;
-import static ru.vtosters.lite.utils.Preferences.returnnorifs;
+import static ru.vtosters.lite.utils.Preferences.musicnewcatalog;
 import static ru.vtosters.lite.utils.Preferences.superapp;
 
 import com.vk.toggle.FeatureManager;
@@ -36,12 +36,7 @@ public class Toggles{
             case FEATURE_MENU_GAMES_CAROUSEL:
             case FEATURE_MILKSHAKE:
             case FEATURE_MILKSHAKE_CHANGE_FEED_BY_TIMEOUT:
-            case FEATURE_MILKSHAKE_DISCOVER_IN_MENU:
-            case FEATURE_MILKSHAKE_FEED_BLUE_TITLE:
-            case FEATURE_MILKSHAKE_NEWS_HEADER_HIDE:
-            case FEATURE_MILKSHAKE_NEWS_HEADER_HIDE_SNAP:
             case FEATURE_MILKSHAKE_NEWS_SCROLL_ON_BACK:
-            case FEATURE_MILKSHAKE_NOTIFICATIONS_RETURN:
             case FEATURE_MILKSHAKE_SWITCH_THEME_ON_TAP:
             case FEATURE_ML_BRANDS:
             case FEATURE_ML_FEATURES:
@@ -50,7 +45,6 @@ public class Toggles{
             case FEATURE_MOZJPEG:
             case FEATURE_MUSIC_ARTIST_CATALOG:
             case FEATURE_MUSIC_AUDIO_SERVICE:
-            case FEATURE_MUSIC_LIKE_IN_PLAYER:
             case FEATURE_MUSIC_NEW_CATALOG:
             case FEATURE_MUSIC_STOP_PLAYER_ON_TASK_REMOVAL:
             case FEATURE_MUS_PUSH_RES_COUNT:
@@ -115,7 +109,6 @@ public class Toggles{
             case FEATURE_STORY_WITH_CONTEXT:
             case FEATURE_SUPERAPP_MENU:
             case FEATURE_TRAFFIC_SAVER:
-            case FEATURE_VKPAY_PAY_WITH_QR:
             case FEATURE_VKPAY_WIDGET:
             case FEATURE_VKUI_INTERNAL_TO_MINI_APPS:
             case FEATURE_VKUI_TOKEN_CACHE:
@@ -125,6 +118,8 @@ public class Toggles{
             case FEATURE_WEBVIEW_TOKEN_ACTIVE:
             case FEATURE_WISHLIST_ENTRY_POINT:
             case FEATURE_WISHLIST_MY_PROFILE:
+            case FEATURE_MILKSHAKE_FORCE_DISABLED:
+            case FEATURE_MILKSHAKE_ACTIVATION_DISABLED:
                 return true;
             default:
                 return false;
@@ -138,8 +133,11 @@ public class Toggles{
                 return superapp();
             case FEATURE_MILKSHAKE:
                 return milkshake();
-            case FEATURE_MILKSHAKE_NOTIFICATIONS_RETURN:
-                return returnnorifs();
+            case FEATURE_MILKSHAKE_FORCE_DISABLED:
+            case FEATURE_MILKSHAKE_ACTIVATION_DISABLED:
+                return !milkshake();
+            case FEATURE_MUSIC_NEW_CATALOG:
+                return musicnewcatalog();
             default:
                 return true;
         }
