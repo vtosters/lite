@@ -3,6 +3,7 @@ package ru.vtosters.lite.utils;
 import static ru.vtosters.lite.utils.Preferences.feedcache;
 import static ru.vtosters.lite.utils.Preferences.milkshake;
 import static ru.vtosters.lite.utils.Preferences.musicnewcatalog;
+import static ru.vtosters.lite.utils.Preferences.newvideolayout;
 import static ru.vtosters.lite.utils.Preferences.superapp;
 
 import com.vk.toggle.FeatureManager;
@@ -54,7 +55,6 @@ public class Toggles{
             case FEATURE_NEW_FORMAT_SHOW_WPB:
             case FEATURE_NOTIFICATION_ANIM:
             case FEATURE_PODCASTS_PAGE:
-            case FEATURE_PURCHASE_MANAGER_RETRIES_ENABLED:
             case FEATURE_QR_CREATE_QR:
             case FEATURE_QR_DYNAMIC_FRAME:
             case FEATURE_QR_SCAN_FROM_PHOTO:
@@ -113,7 +113,6 @@ public class Toggles{
             case FEATURE_VKUI_INTERNAL_TO_MINI_APPS:
             case FEATURE_VKUI_TOKEN_CACHE:
             case FEATURE_VK_APPS_SEARCH:
-            case FEATURE_VOIP_PREALLOCATE:
             case FEATURE_VOTES_BALANCE:
             case FEATURE_WEBVIEW_TOKEN_ACTIVE:
             case FEATURE_WISHLIST_ENTRY_POINT:
@@ -138,6 +137,8 @@ public class Toggles{
                 return !milkshake();
             case FEATURE_MUSIC_NEW_CATALOG:
                 return musicnewcatalog();
+            case AB_NEWS_VIDEO_LAYOUT_TEXT:
+                return newvideolayout();
             default:
                 return true;
         }

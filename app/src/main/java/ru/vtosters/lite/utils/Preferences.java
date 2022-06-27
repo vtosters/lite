@@ -223,6 +223,10 @@ public class Preferences{
         return getBoolValue("musicnewcatalog", true);
     }
 
+    public static boolean newvideolayout(){
+        return getBoolValue("newvideolayout", true);
+    }
+
     public static boolean returnnorifs(){
         return getBoolValue("returnnorifs", false);
     }

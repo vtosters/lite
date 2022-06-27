@@ -29,6 +29,10 @@
             android:defaultValue="true"
             android:key="musicnewcatalog"
             android:title="musicnewcatalog" />
+        <com.vtosters.lite.ui.MaterialSwitchPreference
+            android:defaultValue="true"
+            android:key="newvideolayout"
+            android:title="newvideolayout" />
     </PreferenceCategory>
     <PreferenceCategory android:title="@string/interfaceglobal">
         <com.vtosters.lite.ui.SummaryListPreference
