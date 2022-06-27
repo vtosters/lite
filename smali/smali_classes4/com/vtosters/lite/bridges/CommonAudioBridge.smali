@@ -342,6 +342,8 @@
 
     move-result v0
 
+    const v0, 0x0
+
     if-eqz v0, :cond_0
 
     .line 22
