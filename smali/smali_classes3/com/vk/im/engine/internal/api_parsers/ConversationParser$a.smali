@@ -622,10 +622,7 @@
 
     move-result-object v4
 
-    const-string v6, "conversation_bar"
-
-    .line 8
-    invoke-virtual {v1, v6}, Lorg/json/JSONObject;->optJSONObject(Ljava/lang/String;)Lorg/json/JSONObject;
+    invoke-static {v1}, Lru/vtosters/lite/utils/JsonInjectors;->convBar(Lorg/json/JSONObject;)Lorg/json/JSONObject;
 
     move-result-object v6
 
