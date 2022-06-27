@@ -64,7 +64,19 @@
 
 # virtual methods
 .method public a(Lcom/vk/im/engine/ImEnvironment;Lcom/vk/instantjobs/InstantJob$b;)V
-    .locals 3
+    .locals 4
+
+    iget v0, p0, Lcom/vk/im/engine/internal/jobs/msg/MsgMarkAsReadJob;->b:I
+
+    invoke-static {v0}, Lru/vtosters/lite/dnr/DNRModule;->isDnrEnabledFor(I)Z
+
+    move-result v3
+
+    if-eqz v3, :cond_9
+
+    return-void
+
+    :cond_9
 
     .line 1
     new-instance p2, Lcom/vk/im/engine/internal/api_commands/messages/MessagesMarkAsReadApiCmd;
@@ -84,6 +96,7 @@
 
     invoke-virtual {p1, p2}, Lcom/vk/api/internal/ApiManager;->a(Lcom/vk/api/sdk/internal/ApiCommand;)Ljava/lang/Object;
 
+    :cond_67
     return-void
 .end method
 
