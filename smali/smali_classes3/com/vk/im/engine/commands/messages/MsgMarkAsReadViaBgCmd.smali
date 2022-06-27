@@ -224,7 +224,17 @@
 .method public a(Lcom/vk/im/engine/ImEnvironment;)V
     .locals 4
 
-    .line 3
+    iget v0, p0, Lcom/vk/im/engine/commands/messages/MsgMarkAsReadViaBgCmd;->b:I
+
+    invoke-static {v0}, Lru/vtosters/lite/dnr/DNRModule;->isDnrEnabledFor(I)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_9
+
+    return-void
+
+    :cond_9
     invoke-direct {p0, p1}, Lcom/vk/im/engine/commands/messages/MsgMarkAsReadViaBgCmd;->b(Lcom/vk/im/engine/ImEnvironment;)V
 
     .line 4

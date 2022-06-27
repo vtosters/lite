@@ -40,7 +40,7 @@
 
 # virtual methods
 .method protected b(Lcom/vk/api/sdk/VKApiManager;)Ljava/lang/Boolean;
-    .locals 3
+    .locals 4
 
     .line 2
     new-instance v0, Lcom/vk/api/internal/MethodCall$a;
@@ -54,6 +54,12 @@
 
     .line 4
     iget v1, p0, Lcom/vk/im/engine/internal/api_commands/messages/MessagesMarkAsReadApiCmd;->a:I
+
+    invoke-static {v1}, Lru/vtosters/lite/dnr/DNRModule;->isDnrEnabledFor(I)Z
+
+    move-result v3
+
+    if-nez v3, :cond_20
 
     invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
@@ -88,6 +94,19 @@
     invoke-virtual {p1, v0}, Lcom/vk/api/sdk/VKApiManager;->a(Lcom/vk/api/sdk/VKMethodCall;)V
 
     const/4 p1, 0x1
+
+    .line 9
+    invoke-static {p1}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+
+    move-result-object p1
+
+    invoke-static {}, Lru/vtosters/lite/utils/Preferences;->forceOffline()V
+
+    return-object p1
+
+    :cond_20
+
+    const/4 p1, 0x0
 
     .line 9
     invoke-static {p1}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
