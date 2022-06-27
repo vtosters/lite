@@ -209,29 +209,6 @@
 
     if-lez v0, :cond_1
 
-    invoke-static {}, Lru/vtosters/lite/utils/Preferences;->shortinfo()Z
-
-    move-result v7
-
-    if-nez v7, :cond_228
-
-    new-instance v2, Ljava/lang/StringBuilder;
-
-    invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
-
-    int-to-long v5, v0
-
-    invoke-virtual {v1, v5, v6}, Ljava/text/NumberFormat;->format(J)Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const-string v0, ""
-
-    goto :goto_0
-
-    :cond_228
     .line 4
     new-instance v4, Ljava/lang/StringBuilder;
 

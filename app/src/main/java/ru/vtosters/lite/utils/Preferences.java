@@ -219,6 +219,10 @@ public class Preferences{
         return getBoolValue("milkshake", true);
     }
 
+    public static boolean musicnewcatalog(){
+        return getBoolValue("musicnewcatalog", true);
+    }
+
     public static boolean returnnorifs(){
         return getBoolValue("returnnorifs", false);
     }
