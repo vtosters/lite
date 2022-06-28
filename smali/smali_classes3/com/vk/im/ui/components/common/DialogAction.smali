@@ -70,12 +70,21 @@
 
 .field public static final enum VIDEO_BTN_VIDEO_CALL:Lcom/vk/im/ui/components/common/DialogAction;
 
+.field public static final enum DNR_OFF:Lcom/vk/im/ui/components/common/DialogAction;
+
+.field public static final enum DNR_ON:Lcom/vk/im/ui/components/common/DialogAction;
+
+.field public static final enum DNT_OFF:Lcom/vk/im/ui/components/common/DialogAction;
+
+.field public static final enum DNT_ON:Lcom/vk/im/ui/components/common/DialogAction;
+
+
 
 # direct methods
 .method static constructor <clinit>()V
     .locals 4
 
-    const/16 v0, 0x1b
+    const/16 v0, 0x1f
 
     new-array v0, v0, [Lcom/vk/im/ui/components/common/DialogAction;
 
@@ -424,6 +433,62 @@
     sput-object v1, Lcom/vk/im/ui/components/common/DialogAction;->VIDEO_BTN_AUDIO_CALL:Lcom/vk/im/ui/components/common/DialogAction;
 
     const/16 v2, 0x1a
+
+    aput-object v1, v0, v2
+
+    new-instance v1, Lcom/vk/im/ui/components/common/DialogAction;
+
+    const-string v2, "DNR_ON"
+
+    const/16 v3, 0x1b
+
+    invoke-direct {v1, v2, v3}, Lcom/vk/im/ui/components/common/DialogAction;-><init>(Ljava/lang/String;I)V
+
+    sput-object v1, Lcom/vk/im/ui/components/common/DialogAction;->DNR_ON:Lcom/vk/im/ui/components/common/DialogAction;
+
+    const/16 v2, 0x1b
+
+    aput-object v1, v0, v2
+
+    new-instance v1, Lcom/vk/im/ui/components/common/DialogAction;
+
+    const-string v2, "DNR_OFF"
+
+    const/16 v3, 0x1c
+
+    invoke-direct {v1, v2, v3}, Lcom/vk/im/ui/components/common/DialogAction;-><init>(Ljava/lang/String;I)V
+
+    sput-object v1, Lcom/vk/im/ui/components/common/DialogAction;->DNR_OFF:Lcom/vk/im/ui/components/common/DialogAction;
+
+    const/16 v2, 0x1c
+
+    aput-object v1, v0, v2
+
+    new-instance v1, Lcom/vk/im/ui/components/common/DialogAction;
+
+    const-string v2, "DNT_ON"
+
+    const/16 v3, 0x1d
+
+    invoke-direct {v1, v2, v3}, Lcom/vk/im/ui/components/common/DialogAction;-><init>(Ljava/lang/String;I)V
+
+    sput-object v1, Lcom/vk/im/ui/components/common/DialogAction;->DNT_ON:Lcom/vk/im/ui/components/common/DialogAction;
+
+    const/16 v2, 0x1d
+
+    aput-object v1, v0, v2
+
+    new-instance v1, Lcom/vk/im/ui/components/common/DialogAction;
+
+    const-string v2, "DNT_OFF"
+
+    const/16 v3, 0x1e
+
+    invoke-direct {v1, v2, v3}, Lcom/vk/im/ui/components/common/DialogAction;-><init>(Ljava/lang/String;I)V
+
+    sput-object v1, Lcom/vk/im/ui/components/common/DialogAction;->DNT_OFF:Lcom/vk/im/ui/components/common/DialogAction;
+
+    const/16 v2, 0x1e
 
     aput-object v1, v0, v2
 

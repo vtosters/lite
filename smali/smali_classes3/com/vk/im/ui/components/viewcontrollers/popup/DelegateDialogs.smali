@@ -409,6 +409,10 @@
 
     move-result-object v1
 
+    invoke-static {v1}, Lru/vtosters/lite/dnr/DNRInjector;->injectToHashMap(Ljava/util/LinkedHashMap;)Ljava/util/LinkedHashMap;
+
+    move-result-object v1
+
     sput-object v1, Lcom/vk/im/ui/components/viewcontrollers/popup/DelegateDialogs;->D:Ljava/util/LinkedHashMap;
 
     new-array v1, v5, [Lkotlin/Pair;
