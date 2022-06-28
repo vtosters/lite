@@ -85,6 +85,8 @@
 
     invoke-direct {v3}, Ljava/util/ArrayList;-><init>()V
 
+    invoke-static {p2, v3}, Lru/vtosters/lite/dnr/DNRInjector;->inject(Lcom/vk/im/engine/models/dialogs/Dialog;Ljava/util/List;)V
+
     .line 4
     sget-object v4, Lcom/vk/im/ui/components/common/DialogAction;->SEARCH:Lcom/vk/im/ui/components/common/DialogAction;
 
@@ -359,6 +361,8 @@
     new-instance v3, Ljava/util/ArrayList;
 
     invoke-direct {v3}, Ljava/util/ArrayList;-><init>()V
+
+    invoke-static {p1, v3}, Lru/vtosters/lite/dnr/DNRInjector;->inject(Lcom/vk/im/engine/models/dialogs/Dialog;Ljava/util/List;)V
 
     .line 33
     invoke-virtual {p1}, Lcom/vk/im/engine/models/dialogs/Dialog;->hasUnread()Z
