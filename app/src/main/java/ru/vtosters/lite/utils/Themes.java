@@ -8,7 +8,6 @@ import static ru.vtosters.lite.utils.Globals.getIdentifier;
 import static ru.vtosters.lite.utils.Globals.getPrefsValue;
 import static ru.vtosters.lite.utils.Globals.getResources;
 import static ru.vtosters.lite.utils.Preferences.color_grishka;
-import static ru.vtosters.lite.utils.Preferences.isBGStickersEnabled;
 import static ru.vtosters.lite.utils.Preferences.navbar;
 import static ru.vtosters.lite.utils.Preferences.systemtheme;
 import static ru.vtosters.lite.utils.Preferences.vkme;
@@ -337,13 +336,6 @@ public class Themes{
 
     public static int vk_sans_text_regular(){
         return vksans() ? R.font.vk_sans_text_regular : R.font.roboto_regular;
-    }
-
-    public static String getBackgroundStickers(){
-        if(isBGStickersEnabled()){
-            return "images_with_background";
-        }
-        return "images";
     }
 
     public static int getNavigationHeight(int Default){

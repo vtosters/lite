@@ -52,16 +52,6 @@
         android:title="@string/sett_media">
         <com.vtosters.lite.ui.MaterialSwitchPreference
             android:defaultValue="true"
-            android:key="compressPhotos"
-            android:title="@string/sett_compress_photos"
-            custom:singleLine="false" />
-        <com.vtosters.lite.ui.MaterialSwitchPreference
-            android:defaultValue="true"
-            android:key="compressVideos"
-            android:title="@string/sett_compress_videos"
-            custom:singleLine="false" />
-        <com.vtosters.lite.ui.MaterialSwitchPreference
-            android:defaultValue="true"
             android:key="saveProcessedImage"
             android:title="@string/sett_save_processed_image"
             custom:singleLine="false" />

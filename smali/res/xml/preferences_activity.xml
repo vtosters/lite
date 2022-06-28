@@ -16,7 +16,7 @@
     </PreferenceCategory>
     <PreferenceCategory android:title="@string/online_vtl">
         <com.vtosters.lite.ui.MaterialSwitchPreference
-            android:defaultValue="true"
+            android:defaultValue="false"
             android:key="offline"
             android:summary="@string/vtlofflinesummary"
             android:title="@string/vtloffline" />

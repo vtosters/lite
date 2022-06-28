@@ -31,8 +31,12 @@
             android:title="musicnewcatalog" />
         <com.vtosters.lite.ui.MaterialSwitchPreference
             android:defaultValue="true"
-            android:key="newvideolayout"
-            android:title="newvideolayout" />
+            android:key="postsredesign"
+            android:title="postsredesign" />
+        <com.vtosters.lite.ui.MaterialSwitchPreference
+            android:defaultValue="true"
+            android:key="quic"
+            android:title="quic" />
     </PreferenceCategory>
     <PreferenceCategory android:title="@string/interfaceglobal">
         <com.vtosters.lite.ui.SummaryListPreference

@@ -110,10 +110,6 @@ public class Preferences{
         return getBoolValue("friendsrecomm", false);
     }
 
-    public static boolean isBGStickersEnabled(){
-        return getBoolValue("isBGStickersEnabled", true);
-    }
-
     public static boolean ads(){
         return getBoolValue("__dbg_no_ads", false);
     }
@@ -223,8 +219,12 @@ public class Preferences{
         return getBoolValue("musicnewcatalog", true);
     }
 
-    public static boolean newvideolayout(){
-        return getBoolValue("newvideolayout", true);
+    public static boolean postsredesign(){
+        return getBoolValue("postsredesign", true);
+    }
+
+    public static boolean quic(){
+        return getBoolValue("quic", true);
     }
 
     public static boolean returnnorifs(){

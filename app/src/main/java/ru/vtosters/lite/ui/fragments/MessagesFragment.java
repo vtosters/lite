@@ -23,7 +23,6 @@ public class MessagesFragment extends MaterialPreferenceToolbarFragment{
     private void prefs(){
         findPreference("vkme").setOnPreferenceClickListener(new MessagesFragment.restart());
         findPreference("vkme_notifs").setOnPreferenceClickListener(new MessagesFragment.restart());
-        findPreference("isBGStickersEnabled").setOnPreferenceClickListener(new MessagesFragment.clearCache());
         findPreference("roundedmsgs").setOnPreferenceClickListener(new MessagesFragment.restart());
         findPreference("systememoji").setOnPreferenceClickListener(new MessagesFragment.restart());
     }
