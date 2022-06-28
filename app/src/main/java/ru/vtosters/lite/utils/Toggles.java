@@ -1,9 +1,11 @@
 package ru.vtosters.lite.utils;
 
 import static ru.vtosters.lite.utils.Preferences.feedcache;
+import static ru.vtosters.lite.utils.Preferences.getBoolValue;
 import static ru.vtosters.lite.utils.Preferences.milkshake;
 import static ru.vtosters.lite.utils.Preferences.musicnewcatalog;
-import static ru.vtosters.lite.utils.Preferences.newvideolayout;
+import static ru.vtosters.lite.utils.Preferences.postsredesign;
+import static ru.vtosters.lite.utils.Preferences.quic;
 import static ru.vtosters.lite.utils.Preferences.superapp;
 
 import com.vk.toggle.FeatureManager;
@@ -138,7 +140,14 @@ public class Toggles{
             case FEATURE_MUSIC_NEW_CATALOG:
                 return musicnewcatalog();
             case AB_NEWS_VIDEO_LAYOUT_TEXT:
-                return newvideolayout();
+            case AB_IM_LP_ATTACHES:
+            case FEATURE_COMPACT_REPOST:
+                return postsredesign();
+            case FEATURE_GQUIC_BETA_TEST:
+            case FEATURE_GQUIC_INTEGRATION:
+                return quic();
+            case FEATURE_IMAGE_QUALITY_UPGRADE:
+                return getBoolValue("compressPhotos", true);
             default:
                 return true;
         }

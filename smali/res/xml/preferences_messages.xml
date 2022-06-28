@@ -43,11 +43,6 @@
             android:key="systememoji"
             android:summary="@string/systememojisum"
             android:title="@string/systememoji" />
-        <com.vtosters.lite.ui.MaterialSwitchPreference
-            android:defaultValue="true"
-            android:key="isBGStickersEnabled"
-            android:summary="@string/BGStickerssum"
-            android:title="@string/BGStickers" />
     </PreferenceCategory>
     <PreferenceCategory android:title="@string/vtlother">
         <com.vtosters.lite.ui.SummaryListPreference

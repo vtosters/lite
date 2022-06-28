@@ -46,6 +46,10 @@ import com.vtosters.lite.api.ExtendedUserProfile;
 import com.vtosters.lite.auth.VKAccountManager;
 import com.vtosters.lite.im.ImEngineProvider;
 
+import java.io.ByteArrayOutputStream;
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.IOException;
 import java.io.InputStream;
 import java.lang.reflect.Method;
 import java.net.URL;
@@ -61,6 +65,8 @@ import ru.vtosters.lite.ui.dialogs.OTADialog;
 import ru.vtosters.lite.ui.dialogs.Start;
 
 public class Globals{
+    private static final int BUFFER_SIZE = 2048;
+
     private static final List<Activity> activities = new ArrayList<>();
 
     public static SharedPreferences getDefprefs(){
@@ -79,6 +85,21 @@ public class Globals{
         edit().putBoolean("isdark", isDarkTheme()).commit();
         getInstance().autoCleaningCache();
         // VKIDProtection.alert(activity);
+    }
+
+    public static byte[] readFileFully(File file) throws IOException {
+        return readFully(new FileInputStream(file));
+    }
+
+    public static byte[] readFully(InputStream is) throws IOException {
+        ByteArrayOutputStream bos = new ByteArrayOutputStream();
+
+        byte[] buffer = new byte[BUFFER_SIZE];
+        int len;
+        while((len = is.read(buffer)) > 0)
+            bos.write(buffer, 0, len);
+
+        return bos.toByteArray();
     }
 
     public static void componentSwitcher(String component, Boolean enabled){
