@@ -160,7 +160,7 @@
 
     if-ne v1, v0, :cond_0
 
-    const/4 v0, 0x0
+    const/4 v0, 0x1
 
     .line 20
     invoke-static {v0}, Lcom/vk/core/ui/themes/MilkshakeHelper;->c(Z)V
