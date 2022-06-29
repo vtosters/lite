@@ -8,12 +8,15 @@ import static ru.vtosters.lite.utils.Preferences.adsgroup;
 import static ru.vtosters.lite.utils.Preferences.adsstories;
 import static ru.vtosters.lite.utils.Preferences.authorsrecomm;
 import static ru.vtosters.lite.utils.Preferences.copyright_post;
+import static ru.vtosters.lite.utils.Preferences.dev;
 import static ru.vtosters.lite.utils.Preferences.friendsrecomm;
 import static ru.vtosters.lite.utils.Preferences.getBoolValue;
 import static ru.vtosters.lite.utils.Preferences.newfeed;
 import static ru.vtosters.lite.utils.Preferences.postsrecomm;
 import static ru.vtosters.lite.utils.Preferences.useNewSettings;
 import static ru.vtosters.lite.utils.Preferences.vkme;
+
+import android.util.Log;
 
 import com.vk.apps.AppsFragment;
 import com.vk.core.preference.Preference;
@@ -59,7 +62,7 @@ public class Newsfeed{
         getFilter("shortlinkfilter", "LinkShorter.txt", mFilters);
         getFilter("default_ad_list", "StandartFilter.txt", mFilters);
         getFilter("shitposting", "IDontWantToReadIt.txt", mFilters);
-        getFilter("blockcringecopyright", "CopyrightAds.txt", mFiltersLinks);
+        getFilter("cringecopyright", "CopyrightAds.txt", mFiltersLinks);
 
         var customfilters = getPrefsValue("spamfilters");
         if(!customfilters.isEmpty()){
@@ -113,30 +116,27 @@ public class Newsfeed{
 
         if(isGroupAds(obj)) return false;
 
-        if(obj.optJSONArray("copy_history") != null){
-            return injectFiltersReposts(obj);
-        }
+        if(injectFiltersReposts(obj)) return false;
 
         return true;
     }
 
-    public static boolean injectFiltersReposts(JSONObject obj) throws JSONException{
+    public static boolean injectFiltersReposts(JSONObject obj){
+        if(obj.optJSONArray("copy_history") == null) return false;
+
         var Array = Objects.requireNonNull(obj.optJSONArray("copy_history")).toString();
 
-        if(Array.isEmpty()) return true;
+        if(Array.isEmpty()) return false;
 
-        if(isAds(Array) || isAuthorRecommendations(Array) || isPostRecommendations(Array) || isFriendsRecommendations(Array) || isRecomsGroup(Array) || isMusicBlock(Array) || isNewsBlock(Array)){
-            return false;
-        }
-        if(isAds(Array) || isAuthorRecommendations(Array) || isPostRecommendations(Array) || isFriendsRecommendations(Array) || isMusicBlock(Array) || isNewsBlock(Array)){
-            return false;
-        }
-
-        if(isAds(Array) || isAuthorRecommendations(Array) || isPostRecommendations(Array) || isFriendsRecommendations(Array)){
-            return false;
+        if(getBoolValue("cringerepost", false)){
+            for(String linkfilters : mFiltersLinks) {
+                if(Array.toLowerCase().contains(linkfilters.toLowerCase())){
+                    return true;
+                }
+            }
         }
 
-        return !isBadNew(Array);
+        return isBadNew(Array);
     }
 
     private static boolean checkCopyright(JSONObject json) throws JSONException{
@@ -177,6 +177,7 @@ public class Newsfeed{
     public static boolean isBadNew(String text){
         for(String filter : mFilters) {
             if(text.toLowerCase().contains(filter.toLowerCase())){
+                if(dev()) Log.d("VTLite", text.toLowerCase());
                 return true;
             }
         }
