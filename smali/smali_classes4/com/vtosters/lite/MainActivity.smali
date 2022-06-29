@@ -121,9 +121,7 @@
 
     move-result-object p1
 
-    sget-object p2, Lcom/vk/newsfeed/Feed2049;->b:Lcom/vk/newsfeed/Feed2049;
-
-    invoke-virtual {p2}, Lcom/vk/newsfeed/Feed2049;->d()Ljava/lang/Class;
+    invoke-static {}, Lru/vtosters/lite/utils/Newsfeed;->getStartFragment()Ljava/lang/Class;
 
     move-result-object p2
 
@@ -641,9 +639,7 @@
 
     move-result-object v0
 
-    sget-object v1, Lcom/vk/newsfeed/Feed2049;->b:Lcom/vk/newsfeed/Feed2049;
-
-    invoke-virtual {v1}, Lcom/vk/newsfeed/Feed2049;->d()Ljava/lang/Class;
+    invoke-static {}, Lru/vtosters/lite/utils/Newsfeed;->getStartFragment()Ljava/lang/Class;
 
     move-result-object v1
 
