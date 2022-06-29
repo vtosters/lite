@@ -609,6 +609,11 @@
     <string-array name="lighttheme_value">
         <item>По умолчанию</item>
     </string-array>
+    <string-array name="newsupdate_value">
+        <item>По умолчанию</item>
+        <item>Не обновлять</item>
+        <item>Обновлять мгновенно</item>
+    </string-array>
     <string-array name="undel_value">
         <item>[Удалено]</item>
         <item>🗑</item>
