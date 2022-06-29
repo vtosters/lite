@@ -791,9 +791,7 @@
 
     move-result-object v2
 
-    invoke-virtual {v2}, Landroidx/recyclerview/widget/RecyclerView$Adapter;->getItemCount()I
-
-    move-result v2
+    const v2, 0x1
 
     const/4 v15, 0x1
 
