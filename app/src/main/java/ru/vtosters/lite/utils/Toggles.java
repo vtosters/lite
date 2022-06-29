@@ -16,7 +16,6 @@ public class Toggles{
         switch (feature) {
             case FEATURE_GQUIC_INTEGRATION:
             case FEATURE_GQUIC_BETA_TEST:
-            case AB_IM_LONGPOLL_MSG_BATCHING:
             case AB_IM_LP_ATTACHES:
             case AB_IM_VIEW_POOL:
             case AB_MULTI_GIFTS:
