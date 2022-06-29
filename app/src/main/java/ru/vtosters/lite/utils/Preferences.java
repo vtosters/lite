@@ -216,7 +216,7 @@ public class Preferences{
     }
 
     public static boolean milkshake(){
-        return getBoolValue("milkshake", false);
+        return getBoolValue("milkshake", true);
     }
 
     public static boolean musicnewcatalog(){
