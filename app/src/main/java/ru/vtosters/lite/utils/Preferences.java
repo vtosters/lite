@@ -134,6 +134,10 @@ public class Preferences{
         return getBoolValue("adsstories", false);
     }
 
+    public static boolean videofeed(){
+        return getBoolValue("__dbg_disable_video_feed", false);
+    }
+
     public static boolean alteremoji(boolean istablet){
         return alteremojipref() ? alteremojipref() : istablet;
     }

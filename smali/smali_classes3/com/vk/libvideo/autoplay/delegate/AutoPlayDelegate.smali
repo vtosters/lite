@@ -4385,6 +4385,12 @@
 
     if-eqz p2, :cond_5
 
+    invoke-static {}, Lru/vtosters/lite/utils/Preferences;->videofeed()Z
+
+    move-result v0
+
+    if-nez v0, :cond_5
+
     .line 13
     new-instance p2, Lcom/vk/libvideo/dialogs/VideoFeedDialog;
 
