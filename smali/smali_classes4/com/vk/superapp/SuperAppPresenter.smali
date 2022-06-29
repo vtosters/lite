@@ -1520,7 +1520,7 @@
     goto :goto_0
 
     :cond_0
-    const/4 v2, 0x0
+    const/4 v2, 0x1 // Force update superapp 0x0 -> 0x1
 
     goto :goto_1
 
