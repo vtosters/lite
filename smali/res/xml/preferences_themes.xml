@@ -19,11 +19,6 @@
             android:entryValues="@array/lighttheme"
             android:key="lighttheme"
             android:title="@string/appearance_theme_light_theme" />
-        <com.vtosters.lite.ui.MaterialSwitchPreference
-            android:defaultValue="false"
-            android:key="oldicons"
-            android:summary="@string/interface_global_old_icons_summary"
-            android:title="@string/interface_global_old_icons" />
     </PreferenceCategory>
     <PreferenceCategory android:title="@string/vticon">
         <com.vtosters.lite.ui.MaterialSwitchPreference

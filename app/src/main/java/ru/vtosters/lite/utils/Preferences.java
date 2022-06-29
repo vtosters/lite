@@ -118,10 +118,6 @@ public class Preferences{
         return getBoolValue("adsgroup", false);
     }
 
-    public static boolean oldicons(){
-        return !milkshake();
-    }
-
     public static boolean vkme(){
         return getBoolValue("vkme", false);
     }
