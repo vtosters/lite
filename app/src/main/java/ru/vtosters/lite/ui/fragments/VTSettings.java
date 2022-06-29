@@ -21,7 +21,6 @@ import static ru.vtosters.lite.utils.Preferences.hasVerification;
 import static ru.vtosters.lite.utils.Preferences.isValidSignature;
 import static ru.vtosters.lite.utils.Preferences.navbar;
 import static ru.vtosters.lite.utils.Preferences.offline;
-import static ru.vtosters.lite.utils.Preferences.oldicons;
 import static ru.vtosters.lite.utils.Preferences.shortinfo;
 import static ru.vtosters.lite.utils.Preferences.vkme;
 import static ru.vtosters.lite.utils.Themes.getDarkTheme;
@@ -125,7 +124,7 @@ public class VTSettings extends MaterialPreferenceToolbarFragment{
 
         PreferencesUtil.addPreferenceCategory(this, Globals.getString("vtsettdarktheme"));
 
-        PreferencesUtil.addMaterialSwitchPreference(this, "isdark", Globals.getString("vtsettdarktheme"), "", oldicons() ? "ic_palette_24" : "ic_palette_outline_28", false, (preference, o) -> {
+        PreferencesUtil.addMaterialSwitchPreference(this, "isdark", Globals.getString("vtsettdarktheme"), "", !milkshake() ? "ic_palette_24" : "ic_palette_outline_28", false, (preference, o) -> {
             boolean value = (boolean) o;
 
             if(!value){ // inverted
@@ -139,7 +138,7 @@ public class VTSettings extends MaterialPreferenceToolbarFragment{
         });
 
         if(Build.VERSION.SDK_INT >= 28 && false){ // TODO refactoring systen theme
-            PreferencesUtil.addMaterialSwitchPreference(this, "systemtheme", Globals.getString("appearance_theme_use_system"), Globals.getString("appearance_theme_use_system_summary"), oldicons() ? "ic_recent_24" : "ic_recent_outline_28", true, (preference, o) -> {
+            PreferencesUtil.addMaterialSwitchPreference(this, "systemtheme", Globals.getString("appearance_theme_use_system"), Globals.getString("appearance_theme_use_system_summary"), !milkshake() ? "ic_recent_24" : "ic_recent_outline_28", true, (preference, o) -> {
                 boolean value = (boolean) o;
 
                 edit().putBoolean("systemtheme", value).commit();
@@ -159,14 +158,14 @@ public class VTSettings extends MaterialPreferenceToolbarFragment{
         if(devmenu()){
             PreferencesUtil.addPreferenceCategory(this, Globals.getString("sett_debug"));
 
-            PreferencesUtil.addPreference(this, "", Globals.getString("sett_debug"), "", oldicons() ? "ic_bug_24" : "ic_bug_outline_28", preference -> {
+            PreferencesUtil.addPreference(this, "", Globals.getString("sett_debug"), "", !milkshake() ? "ic_bug_24" : "ic_bug_outline_28", preference -> {
                 Context context = getContext();
                 Intent a2 = new Navigator(SettingsDebugFragment.class).b(context);
                 context.startActivity(a2);
                 return false;
             });
 
-            PreferencesUtil.addMaterialSwitchPreference(this, "ssl", Globals.getString("debug_developer_force_ssl"), Globals.getString("debug_developer_force_ssl_summary"), oldicons() ? "ic_globe_20" : "ic_globe_outline_28", true, (preference, o) -> {
+            PreferencesUtil.addMaterialSwitchPreference(this, "ssl", Globals.getString("debug_developer_force_ssl"), Globals.getString("debug_developer_force_ssl_summary"), !milkshake() ? "ic_globe_20" : "ic_globe_outline_28", true, (preference, o) -> {
                 boolean value = (boolean) o;
                 edit().putBoolean("ssl", value).commit();
                 return true;
@@ -175,7 +174,7 @@ public class VTSettings extends MaterialPreferenceToolbarFragment{
 
         PreferencesUtil.addPreferenceCategory(this, Globals.getString("vtsettaccount"));
 
-        PreferencesUtil.addPreference(this, "", Globals.getString("vkconnect"), "", oldicons() ? "ic_tags_24" : "ic_user_circle_outline_28", preference -> {
+        PreferencesUtil.addPreference(this, "", Globals.getString("vkconnect"), "", !milkshake() ? "ic_tags_24" : "ic_user_circle_outline_28", preference -> {
             Context context = getContext();
             VKUIwrapper.officalLinks("account");
             Intent a2 = new Navigator(VKUIwrapper.class).b(context);
@@ -183,21 +182,21 @@ public class VTSettings extends MaterialPreferenceToolbarFragment{
             return false;
         });
 
-        PreferencesUtil.addPreference(this, "", Globals.getString("privacy_settings"), "", oldicons() ? "ic_privacy_24" : "ic_privacy_outline_28", preference -> {
+        PreferencesUtil.addPreference(this, "", Globals.getString("privacy_settings"), "", !milkshake() ? "ic_privacy_24" : "ic_privacy_outline_28", preference -> {
             Context context = getContext();
             Intent a2 = new Navigator(PrivacyFragment.class).b(context);
             context.startActivity(a2);
             return false;
         });
 
-        PreferencesUtil.addPreference(this, "", Globals.getString("sett_account"), "", oldicons() ? "ic_user_24" : "ic_user_outline_28", preference -> {
+        PreferencesUtil.addPreference(this, "", Globals.getString("sett_account"), "", !milkshake() ? "ic_user_24" : "ic_user_outline_28", preference -> {
             Context context = getContext();
             Intent a2 = new Navigator(SettingsAccountFragment.class).b(context);
             context.startActivity(a2);
             return false;
         });
 
-        PreferencesUtil.addPreference(this, "", Globals.getString("bugs"), "", oldicons() ? "ic_bug_24" : "ic_bug_outline_28", preference -> {
+        PreferencesUtil.addPreference(this, "", Globals.getString("bugs"), "", !milkshake() ? "ic_bug_24" : "ic_bug_outline_28", preference -> {
             Context context = getContext();
             VKUIwrapper.officalLinks("bugs");
             Intent a2 = new Navigator(VKUIwrapper.class).b(context);
@@ -205,7 +204,7 @@ public class VTSettings extends MaterialPreferenceToolbarFragment{
             return false;
         });
 
-        PreferencesUtil.addPreference(this, "", Globals.getString("vtssfs"), ssfs, oldicons() ? "ic_link_24" : "ic_link_circle_outline_28", preference -> {
+        PreferencesUtil.addPreference(this, "", Globals.getString("vtssfs"), ssfs, !milkshake() ? "ic_link_24" : "ic_link_circle_outline_28", preference -> {
             Context context = getContext();
             VKUIwrapper.setLink(SSFS.getSSFSLink());
             Intent a2 = new Navigator(VKUIwrapper.class).b(context);
@@ -215,21 +214,21 @@ public class VTSettings extends MaterialPreferenceToolbarFragment{
 
         PreferencesUtil.addPreferenceCategory(this, Globals.getString("notification_settings"));
 
-        PreferencesUtil.addPreference(this, "", Globals.getString("sett_general"), "", oldicons() ? "ic_settings_24" : "ic_settings_outline_28", preference -> {
+        PreferencesUtil.addPreference(this, "", Globals.getString("sett_general"), "", !milkshake() ? "ic_settings_24" : "ic_settings_outline_28", preference -> {
             Context context = getContext();
             Intent a2 = new Navigator(SettingsGeneralFragment.class).b(context);
             context.startActivity(a2);
             return false;
         });
 
-        PreferencesUtil.addPreference(this, "", Globals.getString("blacklist"), "", oldicons() ? "ic_users_24" : "ic_users_outline_28", preference -> {
+        PreferencesUtil.addPreference(this, "", Globals.getString("blacklist"), "", !milkshake() ? "ic_users_24" : "ic_users_outline_28", preference -> {
             Context context = getContext();
             Intent a2 = new Navigator(BlacklistFragment.class).b(context);
             context.startActivity(a2);
             return false;
         });
 
-        PreferencesUtil.addPreference(this, "", Globals.getString("sett_notifications"), "", oldicons() ? "ic_notification_24" : "ic_menu_notification_outline_28", preference -> {
+        PreferencesUtil.addPreference(this, "", Globals.getString("sett_notifications"), "", !milkshake() ? "ic_notification_24" : "ic_menu_notification_outline_28", preference -> {
             Context context = getContext();
             Intent a2 = new Navigator(NotificationsSettingsFragment.class).b(context);
             context.startActivity(a2);
@@ -237,7 +236,7 @@ public class VTSettings extends MaterialPreferenceToolbarFragment{
         });
 
         if(VKAccountManager.d().isMusicSubs()){
-            PreferencesUtil.addPreference(this, "", Globals.getString("subscription_music"), "", oldicons() ? "ic_music_24" : "ic_music_outline_28", preference -> {
+            PreferencesUtil.addPreference(this, "", Globals.getString("subscription_music"), "", !milkshake() ? "ic_music_24" : "ic_music_outline_28", preference -> {
                 Context context = getContext();
                 Intent a2 = new Navigator(MusicSubscriptionControlFragment.class).b(context);
                 context.startActivity(a2);
@@ -245,7 +244,7 @@ public class VTSettings extends MaterialPreferenceToolbarFragment{
             });
         }
 
-        PreferencesUtil.addPreference(this, "", Globals.getString("votes"), "", oldicons() ? "ic_coins_24" : "ic_coins_outline_28", preference -> {
+        PreferencesUtil.addPreference(this, "", Globals.getString("votes"), "", !milkshake() ? "ic_coins_24" : "ic_coins_outline_28", preference -> {
             Context context = getContext();
             Intent a2 = new Navigator(BalanceFragment.class).b(context);
             context.startActivity(a2);
@@ -255,14 +254,14 @@ public class VTSettings extends MaterialPreferenceToolbarFragment{
         PreferencesUtil.addPreferenceCategory(this, Globals.getString("vtsettmod"));
 
         if(!vkme()){
-            PreferencesUtil.addPreference(this, "", Globals.getString("vtlfeed"), feedsumm, oldicons() ? "ic_newsfeed_24" : "ic_newsfeed_outline_28", preference -> {
+            PreferencesUtil.addPreference(this, "", Globals.getString("vtlfeed"), feedsumm, !milkshake() ? "ic_newsfeed_24" : "ic_newsfeed_outline_28", preference -> {
                 Context context = getContext();
                 Intent a2 = new Navigator(FeedFragment.class).b(context);
                 context.startActivity(a2);
                 return false;
             });
 
-            PreferencesUtil.addPreference(this, "", Globals.getString("dockbar_editor"), docksumm, oldicons() ? "ic_list_24" : "ic_list_outline_28", preference -> {
+            PreferencesUtil.addPreference(this, "", Globals.getString("dockbar_editor"), docksumm, !milkshake() ? "ic_list_24" : "ic_list_outline_28", preference -> {
                 Context context = getContext();
                 Intent a2 = new Navigator(DockBarFragment.class).b(context);
                 context.startActivity(a2);
@@ -270,7 +269,7 @@ public class VTSettings extends MaterialPreferenceToolbarFragment{
             });
 
             if(isValidSignature())
-                PreferencesUtil.addPreference(this, "", Globals.getString("vtlmusic"), musicsumm, oldicons() ? "ic_music_24" : "ic_music_outline_28", preference -> {
+                PreferencesUtil.addPreference(this, "", Globals.getString("vtlmusic"), musicsumm, !milkshake() ? "ic_music_24" : "ic_music_outline_28", preference -> {
                     Context context = getContext();
                     Intent a2 = new Navigator(MusicFragment.class).b(context);
                     context.startActivity(a2);
@@ -278,56 +277,56 @@ public class VTSettings extends MaterialPreferenceToolbarFragment{
                 });
         }
 
-        PreferencesUtil.addPreference(this, "", Globals.getString("vtlmessages"), msgsumm, oldicons() ? "ic_message_24" : "ic_message_outline_28", preference -> {
+        PreferencesUtil.addPreference(this, "", Globals.getString("vtlmessages"), msgsumm, !milkshake() ? "ic_message_24" : "ic_message_outline_28", preference -> {
             Context context = getContext();
             Intent a2 = new Navigator(MessagesFragment.class).b(context);
             context.startActivity(a2);
             return false;
         });
 
-        PreferencesUtil.addPreference(this, "", Globals.getString("vtlactivity"), activitysumm, oldicons() ? "ic_write_24" : "ic_write_outline_28_new_accent", preference -> {
+        PreferencesUtil.addPreference(this, "", Globals.getString("vtlactivity"), activitysumm, !milkshake() ? "ic_write_24" : "ic_write_outline_28_new_accent", preference -> {
             Context context = getContext();
             Intent a2 = new Navigator(ActivityFragment.class).b(context);
             context.startActivity(a2);
             return false;
         });
 
-        PreferencesUtil.addPreference(this, "", Globals.getString("vtlthemes"), themessumm, oldicons() ? "ic_palette_24" : "ic_palette_outline_28", preference -> {
+        PreferencesUtil.addPreference(this, "", Globals.getString("vtlthemes"), themessumm, !milkshake() ? "ic_palette_24" : "ic_palette_outline_28", preference -> {
             Context context = getContext();
             Intent a2 = new Navigator(ThemesFragment.class).b(context);
             context.startActivity(a2);
             return false;
         });
 
-        PreferencesUtil.addPreference(this, "", Globals.getString("vtltgs"), tgssumm, oldicons() ? "ic_telegram_24" : "ic_telegram_outline_28", preference -> {
+        PreferencesUtil.addPreference(this, "", Globals.getString("vtltgs"), tgssumm, !milkshake() ? "ic_telegram_24" : "ic_telegram_outline_28", preference -> {
             Context context = getContext();
             Intent a2 = new Navigator(StickersFragment.class).b(context);
             context.startActivity(a2);
             return false;
         });
 
-        PreferencesUtil.addPreference(this, "", Globals.getString("vtlinterface"), interfacesumm, oldicons() ? "ic_interface_24" : "ic_interface_outline_28", preference -> {
+        PreferencesUtil.addPreference(this, "", Globals.getString("vtlinterface"), interfacesumm, !milkshake() ? "ic_interface_24" : "ic_interface_outline_28", preference -> {
             Context context = getContext();
             Intent a2 = new Navigator(InterfaceFragment.class).b(context);
             context.startActivity(a2);
             return false;
         });
 
-        PreferencesUtil.addPreference(this, "", Globals.getString("vtlproxy"), proxysumm, oldicons() ? "ic_globe_20" : "ic_globe_outline_28", preference -> {
+        PreferencesUtil.addPreference(this, "", Globals.getString("vtlproxy"), proxysumm, !milkshake() ? "ic_globe_20" : "ic_globe_outline_28", preference -> {
             Context context = getContext();
             Intent a2 = new Navigator(ProxySettingsFragment.class).b(context);
             context.startActivity(a2);
             return false;
         });
 
-        PreferencesUtil.addListPreferenceIcon(this, "clearcache", "Default", Globals.getString("autoclearcache"), oldicons() ? "ic_delete_24" : "ic_delete_outline_28", Globals.getString("autoclearcachesumm") + " " + humanReadableByteCountBin(CacheUtils.getInstance().size), new CharSequence[]{
+        PreferencesUtil.addListPreferenceIcon(this, "clearcache", "Default", Globals.getString("autoclearcache"), !milkshake() ? "ic_delete_24" : "ic_delete_outline_28", Globals.getString("autoclearcachesumm") + " " + humanReadableByteCountBin(CacheUtils.getInstance().size), new CharSequence[]{
                 Globals.getString("autoclearcachedisabled"), "100 MB", "500 MB", "1 GB", "2 GB", "5 GB"
         }, new String[]{
                 "Default", "100mb", "500mb", "1gb", "2gb", "5gb"
         });
 
 
-        PreferencesUtil.addPreference(this, "", Globals.getString("vtlother"), othersumm, oldicons() ? "ic_more_24" : "ic_more_horizontal_28", preference -> {
+        PreferencesUtil.addPreference(this, "", Globals.getString("vtlother"), othersumm, !milkshake() ? "ic_more_24" : "ic_more_horizontal_28", preference -> {
             Context context = getContext();
             Intent a2 = new Navigator(OtherFragment.class).b(context);
             context.startActivity(a2);
@@ -336,24 +335,24 @@ public class VTSettings extends MaterialPreferenceToolbarFragment{
 
         PreferencesUtil.addPreferenceCategory(this, Globals.getString("vtsettaboutmod"));
 
-        PreferencesUtil.addPreference(this, "", Globals.getString("menu_about"), about, oldicons() ? "ic_about_24" : "ic_about_outline_28", preference -> {
+        PreferencesUtil.addPreference(this, "", Globals.getString("menu_about"), about, !milkshake() ? "ic_about_24" : "ic_about_outline_28", preference -> {
             Context context = getContext();
             Intent a2 = new Navigator(AboutAppFragment.class).b(context);
             context.startActivity(a2);
             return false;
         });
 
-        PreferencesUtil.addPreference(this, "", Globals.getString("opencommit"), "", oldicons() ? "ic_link_24" : "ic_link_circle_outline_28", preference -> {
+        PreferencesUtil.addPreference(this, "", Globals.getString("opencommit"), "", !milkshake() ? "ic_link_24" : "ic_link_circle_outline_28", preference -> {
             getContext().startActivity(new Intent("android.intent.action.VIEW").setData(Uri.parse(getCommitLink())));
             return false;
         });
 
-        PreferencesUtil.addPreference(this, "", Globals.getString("vtfaq"), Globals.getString("vtfaqsumm"), oldicons() ? "ic_help_24" : "ic_help_outline_28", preference -> {
+        PreferencesUtil.addPreference(this, "", Globals.getString("vtfaq"), Globals.getString("vtfaqsumm"), !milkshake() ? "ic_help_24" : "ic_help_outline_28", preference -> {
             getContext().startActivity(new Intent("android.intent.action.VIEW").setData(Uri.parse("https://t.me/s/vtosters_faq")));
             return false;
         });
 
-        PreferencesUtil.addPreference(this, "", Globals.getString("reportbug"), Globals.getString("reportbugsumm"), oldicons() ? "ic_bug_24" : "ic_bug_outline_28", preference -> {
+        PreferencesUtil.addPreference(this, "", Globals.getString("reportbug"), Globals.getString("reportbugsumm"), !milkshake() ? "ic_bug_24" : "ic_bug_outline_28", preference -> {
             getContext().startActivity(new Intent("android.intent.action.VIEW").setData(Uri.parse("https://github.com/vtosters/lite/issues")));
             return false;
         });

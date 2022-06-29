@@ -3,7 +3,6 @@ package ru.vtosters.lite.ui.fragments.dockbar;
 import static ru.vtosters.lite.utils.Globals.getContext;
 import static ru.vtosters.lite.utils.Globals.getString;
 import static ru.vtosters.lite.utils.Preferences.newfeed;
-import static ru.vtosters.lite.utils.Preferences.oldicons;
 import static ru.vtosters.lite.utils.Preferences.useNewSettings;
 import static ru.vtosters.lite.utils.Preferences.vkme;
 import static ru.vtosters.lite.utils.Preferences.vkme_notifs;
@@ -85,17 +84,17 @@ public class DockBarManager{
             if(vkme()){
                 mSelectedTabs.add(new DockBarTab("tab_settings", R.drawable.ic_settings_24, R.string.menu_settings, R.id.menu_settings, useNewSettings()));
                 if(vkme_notifs())
-                    mSelectedTabs.add(new DockBarTab("tab_feedback", oldicons() ? R.drawable.ic_notification_24 : R.drawable.ic_menu_notification_outline_28, R.string.feedback, R.id.tab_feedback, NotificationsContainerFragment.class));
-                mSelectedTabs.add(new DockBarTab("tab_messages", oldicons() ? R.drawable.ic_message_24 : R.drawable.ic_message_outline_24, R.string.messages, R.id.tab_messages, DialogsFragment.class));
+                    mSelectedTabs.add(new DockBarTab("tab_feedback", !milkshake() ? R.drawable.ic_notification_24 : R.drawable.ic_menu_notification_outline_28, R.string.feedback, R.id.tab_feedback, NotificationsContainerFragment.class));
+                mSelectedTabs.add(new DockBarTab("tab_messages", !milkshake() ? R.drawable.ic_message_24 : R.drawable.ic_message_outline_24, R.string.messages, R.id.tab_messages, DialogsFragment.class));
                 mSelectedTabs.add(new DockBarTab("tab_profile", R.drawable.libverify_ic_account_circle_white, R.string.profile, R.id.profile, ProfileFragment.class));
                 return;
             }
 
-            mSelectedTabs.add(new DockBarTab("tab_news", oldicons() ? R.drawable.ic_newsfeed_28 : R.drawable.ic_menu_newsfeed_outline_28, R.string.newsfeed, R.id.tab_news, newfeed() ? HomeFragment.class : NewsfeedFragment.class));
-            mSelectedTabs.add(new DockBarTab("tab_discover", oldicons() ? R.drawable.ic_menu_search_28 : R.drawable.ic_menu_search_outline_28, R.string.search, R.id.tab_discover, DiscoverFragment.class));
-            mSelectedTabs.add(new DockBarTab("tab_messages", oldicons() ? R.drawable.ic_message_24 : R.drawable.ic_message_outline_24, R.string.messages, R.id.tab_messages, DialogsFragment.class));
-            mSelectedTabs.add(new DockBarTab("tab_feedback", oldicons() ? R.drawable.ic_notification_24 : R.drawable.ic_menu_notification_outline_28, R.string.feedback, R.id.tab_feedback, NotificationsContainerFragment.class));
-            mSelectedTabs.add(new DockBarTab("tab_menu", oldicons() ? R.drawable.ic_menu_more_28 : R.drawable.ic_menu_more_outline_28, R.string.menu, R.id.tab_menu, MenuFragment.class));
+            mSelectedTabs.add(new DockBarTab("tab_news", !milkshake() ? R.drawable.ic_newsfeed_28 : R.drawable.ic_menu_newsfeed_outline_28, R.string.newsfeed, R.id.tab_news, newfeed() ? HomeFragment.class : NewsfeedFragment.class));
+            mSelectedTabs.add(new DockBarTab("tab_discover", !milkshake() ? R.drawable.ic_menu_search_28 : R.drawable.ic_menu_search_outline_28, R.string.search, R.id.tab_discover, DiscoverFragment.class));
+            mSelectedTabs.add(new DockBarTab("tab_messages", !milkshake() ? R.drawable.ic_message_24 : R.drawable.ic_message_outline_24, R.string.messages, R.id.tab_messages, DialogsFragment.class));
+            mSelectedTabs.add(new DockBarTab("tab_feedback", !milkshake() ? R.drawable.ic_notification_24 : R.drawable.ic_menu_notification_outline_28, R.string.feedback, R.id.tab_feedback, NotificationsContainerFragment.class));
+            mSelectedTabs.add(new DockBarTab("tab_menu", !milkshake() ? R.drawable.ic_menu_more_28 : R.drawable.ic_menu_more_outline_28, R.string.menu, R.id.tab_menu, MenuFragment.class));
 
             mDisabledTabs.add(new DockBarTab("tab_friends", R.drawable.ic_user_24, R.string.friends, R.id.menu_friends, FriendsFragment.class));
             mDisabledTabs.add(new DockBarTab("tab_groups", R.drawable.ic_users_24, R.string.groups, R.id.menu_groups, GroupsSearchFragment.class));
