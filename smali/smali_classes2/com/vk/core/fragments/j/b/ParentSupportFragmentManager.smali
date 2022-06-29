@@ -188,6 +188,8 @@
 
     invoke-virtual {v0, p1, p2}, Landroidx/fragment/app/FragmentTransaction;->setCustomAnimations(II)Landroidx/fragment/app/FragmentTransaction;
 
+    invoke-static {v0}, Lru/vtosters/lite/utils/FragAnimationKit;->animateOpen(Landroidx/fragment/app/FragmentTransaction;)V
+
     :cond_0
     return-void
 .end method
@@ -348,6 +350,8 @@
     invoke-virtual {v0}, Landroidx/fragment/app/FragmentManager;->beginTransaction()Landroidx/fragment/app/FragmentTransaction;
 
     move-result-object v0
+
+    invoke-static {v0}, Lru/vtosters/lite/utils/FragAnimationKit;->animateClose(Landroidx/fragment/app/FragmentTransaction;)V
 
     iput-object v0, p0, Lcom/vk/core/fragments/j/b/ParentSupportFragmentManager;->b:Landroidx/fragment/app/FragmentTransaction;
 
