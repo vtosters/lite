@@ -95,6 +95,12 @@
 .method private final a(Lcom/vk/im/engine/models/dialogs/Dialog;Lcom/vk/im/engine/models/ProfilesSimpleInfo;Lcom/vk/im/ui/components/common/DialogAction;)V
     .locals 2
 
+    invoke-static {p1, p3}, Lru/vtosters/lite/dnr/DNRInjector;->onClick(Lcom/vk/im/engine/models/dialogs/Dialog;Lcom/vk/im/ui/components/common/DialogAction;)Z
+
+    move-result v0
+
+    if-nez v0, :cond_0
+
     .line 9
     sget-object v0, Lcom/vk/im/ui/components/dialogs_list/vc_impl/j;->$EnumSwitchMapping$0:[I
 
