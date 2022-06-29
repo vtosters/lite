@@ -316,6 +316,12 @@
 
     if-eqz v5, :cond_f
 
+    invoke-static {}, Lru/vtosters/lite/utils/Preferences;->showmenu()Z
+
+    move-result v7
+
+    if-nez v7, :cond_f
+
     .line 7
     sget-object v5, Lcom/vk/menu/MenuCache;->q:Lcom/vk/menu/MenuCache;
 
