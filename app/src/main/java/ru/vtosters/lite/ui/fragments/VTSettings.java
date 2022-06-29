@@ -19,6 +19,7 @@ import static ru.vtosters.lite.utils.Preferences.disableSettingsSumms;
 import static ru.vtosters.lite.utils.Preferences.hasSpecialVerif;
 import static ru.vtosters.lite.utils.Preferences.hasVerification;
 import static ru.vtosters.lite.utils.Preferences.isValidSignature;
+import static ru.vtosters.lite.utils.Preferences.milkshake;
 import static ru.vtosters.lite.utils.Preferences.navbar;
 import static ru.vtosters.lite.utils.Preferences.offline;
 import static ru.vtosters.lite.utils.Preferences.shortinfo;
