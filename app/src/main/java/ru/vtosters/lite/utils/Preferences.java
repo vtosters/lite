@@ -150,6 +150,10 @@ public class Preferences{
         return getBoolValue("musicFixNew", true);
     }
 
+    public static boolean foaf(){
+        return getBoolValue("foaf", false);
+    }
+
     public static Class useNewSettings(){
         boolean bool = getBoolValue("useNewSettings", true);
         return bool ? VTSettings.class : SettingsListFragment.class;

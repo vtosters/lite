@@ -25,6 +25,7 @@ import java.util.regex.Pattern;
 
 import okhttp3.OkHttpClient;
 import ru.vtosters.lite.net.Request;
+import ru.vtosters.lite.utils.Preferences;
 
 public class FoafBase{
     private static final Pattern FOAF_REGEX = Pattern.compile("<ya:created dc:date=\"(.+?)\"\\/>");
@@ -32,19 +33,17 @@ public class FoafBase{
     private static final Pattern FOAF_REGEX_LOGIN = Pattern.compile("<ya:created dc:date=\"(.+?)\"\\/>");
     private static final OkHttpClient client = new OkHttpClient();
 
-    public static int GetLastSeenInt(int i) throws ParseException, IOException{
+    public static long getLastSeen(long origtime, int id) throws ParseException, IOException{
+        if(!Preferences.foaf()) return origtime;
+
         Matcher matcher = FOAF_REGEX_LAST_SEEN.matcher(
                 client.a(
-                        new okhttp3.Request.a().a(getLink(i)).b().a()
+                        new okhttp3.Request.a().a(getLink(id)).b().a()
                 ).execute().a().g());
         if(!matcher.find()){
-            return 0;
+            return origtime;
         }
-        return (int) (new SimpleDateFormat("yyyy-MM-dd'T'kk:mm:ss", Locale.getDefault()).parse(matcher.group(1)).getTime() / 1000);
-    }
-
-    public static long GetLastSeenLong(int i) throws ParseException, IOException{
-        return GetLastSeenInt(i);
+        return new SimpleDateFormat("yyyy-MM-dd'T'kk:mm:ss", Locale.getDefault()).parse(matcher.group(1)).getTime() / 1000;
     }
 
     private static String getLink(int i){
