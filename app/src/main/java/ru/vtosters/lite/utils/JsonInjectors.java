@@ -43,6 +43,18 @@ public class JsonInjectors{
         return new JSONObject("{\"name\":\"group_admin_welcome\",\"text\":\"" + textverif + "\",\"buttons\":[],\"icon\":\"" + pic + "\"}");
     }
 
+    public static JSONObject menu(JSONObject orig) throws JSONException{
+        var Special = orig.optJSONArray("special");
+        var Main = orig.getJSONArray("main");
+        var Other = orig.optJSONArray("other");
+        
+        if(Special.optJSONObject(0) != null){
+            orig.remove("special");
+        }
+
+        return orig;
+    }
+
     public static boolean haveDonateButton(){
         int randomshower = new Random().nextInt(6);
 

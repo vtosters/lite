@@ -223,7 +223,7 @@
     goto/16 :goto_1
 
     :sswitch_c
-    const-string v0, "null"
+    const-string v0, "shopping"
 
     .line 16
     invoke-virtual {p0, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z

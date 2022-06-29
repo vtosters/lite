@@ -38,6 +38,10 @@
 .method public final a(Lorg/json/JSONObject;)Lcom/vk/dto/menu/MenuResponse;
     .locals 9
 
+    invoke-static {p1}, Lru/vtosters/lite/utils/JsonInjectors;->menu(Lorg/json/JSONObject;)Lorg/json/JSONObject;
+
+    move-result-object p1
+
     const-string v0, "main"
 
     .line 1
