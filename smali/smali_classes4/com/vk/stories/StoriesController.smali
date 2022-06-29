@@ -1941,6 +1941,15 @@
 
     .line 43
     :cond_0
+    invoke-static {}, Lru/vtosters/lite/utils/Preferences;->dns()Z
+
+    move-result v2
+
+    if-eqz v2, :cond_e
+
+    return-void
+
+    :cond_e
     invoke-virtual {p0}, Lcom/vk/dto/stories/model/StoriesContainer;->G1()Ljava/util/ArrayList;
 
     move-result-object p0
@@ -1990,6 +1999,15 @@
 .method public static a(Lcom/vk/dto/stories/model/StoriesContainer;Lcom/vk/dto/stories/model/StoryEntry;Lcom/vk/stories/StoriesController$SourceType;I)V
     .locals 15
 
+    invoke-static {}, Lru/vtosters/lite/utils/Preferences;->dns()Z
+
+    move-result v2
+
+    if-eqz v2, :cond_e
+
+    return-void
+
+    :cond_e
     move-object/from16 v0, p1
 
     move/from16 v1, p3
