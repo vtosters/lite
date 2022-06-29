@@ -5,7 +5,6 @@ import static ru.vtosters.lite.utils.Preferences.getBoolValue;
 import static ru.vtosters.lite.utils.Preferences.milkshake;
 import static ru.vtosters.lite.utils.Preferences.musicnewcatalog;
 import static ru.vtosters.lite.utils.Preferences.postsredesign;
-import static ru.vtosters.lite.utils.Preferences.quic;
 import static ru.vtosters.lite.utils.Preferences.superapp;
 
 import com.vk.toggle.FeatureManager;
@@ -14,8 +13,7 @@ import com.vk.toggle.Features;
 public class Toggles{
     public static boolean shouldPatch(Features.Type feature) {
         switch (feature) {
-            case FEATURE_GQUIC_INTEGRATION:
-            case FEATURE_GQUIC_BETA_TEST:
+            case AB_IM_LONGPOLL_MSG_BATCHING:
             case AB_IM_LP_ATTACHES:
             case AB_IM_VIEW_POOL:
             case AB_MULTI_GIFTS:
@@ -142,9 +140,6 @@ public class Toggles{
             case AB_IM_LP_ATTACHES:
             case FEATURE_COMPACT_REPOST:
                 return postsredesign();
-            case FEATURE_GQUIC_BETA_TEST:
-            case FEATURE_GQUIC_INTEGRATION:
-                return quic();
             case FEATURE_IMAGE_QUALITY_UPGRADE:
                 return getBoolValue("compressPhotos", true);
             default:
