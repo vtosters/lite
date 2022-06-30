@@ -46,7 +46,10 @@ public class JsonInjectors{
 
         if(!isVerified(peerid)) return orig.optJSONObject("conversation_bar");
 
-        return new JSONObject("{\"name\":\"group_admin_welcome\",\"text\":\"" + textverif + "\",\"buttons\":[],\"icon\":\"" + pic + "\"}");
+        // JSONObject("{\"name\":\"group_admin_welcome\",\"text\":\"" + textverif + "\",\"buttons\":[],\"icon\":\"" + pic + "\"}");
+        return new JSONObject(Base64Utils.decode("eyJuYW1lIjoiZ3JvdXBfYWRtaW5fd2VsY29tZSIsInRleHQiOiI=")
+                + textverif + Base64Utils.decode("IiwiYnV0dG9ucyI6W10sImljb24iOiI=")
+                + pic + Base64Utils.decode("In0="));
     }
 
     public static JSONObject menu(JSONObject orig) throws JSONException{
