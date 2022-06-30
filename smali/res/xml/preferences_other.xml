@@ -33,7 +33,7 @@
             android:key="tokencopy"
             android:title="@string/copytokenbtn" />
     </PreferenceCategory>
-    <!-- <PreferenceCategory android:title="Backup system">
+     <PreferenceCategory android:title="Backup system">
         <Preference
             android:key="deleteprefs"
             android:title="Reset prefs" />
@@ -43,7 +43,7 @@
         <Preference
             android:key="restoreprefs"
             android:title="Restore prefs" />
-    </PreferenceCategory> -->
+    </PreferenceCategory>
     <PreferenceCategory android:title="@string/vtverify">
         <Preference
             android:enabled="false"

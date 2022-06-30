@@ -1,5 +1,6 @@
 package ru.vtosters.lite.ui.fragments;
 
+import static android.widget.Toast.LENGTH_LONG;
 import static android.widget.Toast.LENGTH_SHORT;
 import static android.widget.Toast.makeText;
 import static ru.vtosters.lite.utils.CacheUtils.deleteCache;
@@ -16,6 +17,7 @@ import android.content.Context;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.webkit.WebView;
+import android.widget.Toast;
 
 import androidx.preference.Preference;
 
@@ -28,6 +30,8 @@ import com.vk.pushes.PushSubscriber;
 import com.vtosters.lite.auth.VKAccountManager;
 import com.vtosters.lite.general.fragments.MaterialPreferenceToolbarFragment;
 import com.vtosters.lite.im.ImEngineProvider;
+
+import java.io.IOException;
 
 import b.h.g.m.FileUtils;
 import ru.vtosters.lite.utils.Globals;
@@ -50,8 +54,8 @@ public class OtherFragment extends MaterialPreferenceToolbarFragment{
         findPreference("stickfix").setOnPreferenceClickListener(new f());
         findPreference("deleteprefs").setOnPreferenceClickListener(new deleteprefs());
 
-        // a("saveprefs").a((Preference.c) new saveprefs());
-        // a("restoreprefs").a((Preference.c) new restoreprefs());
+        findPreference("saveprefs").setOnPreferenceClickListener(new saveprefs());
+        findPreference("restoreprefs").setOnPreferenceClickListener(new restoreprefs());
     }
 
     public static class d implements Preference.OnPreferenceClickListener{
@@ -179,7 +183,13 @@ public class OtherFragment extends MaterialPreferenceToolbarFragment{
 
         @Override // android.support.v7.preference.Preference.c
         public boolean onPreferenceClick(Preference preference){
-            restoreBackup();
+            try {
+                restoreBackup();
+                Toast.makeText(getContext(), "Настройки восстановлены", LENGTH_LONG).show();
+            } catch (IOException e) {
+                e.printStackTrace();
+                Toast.makeText(getContext(), "Ошибка, Настройки не восстановлены", LENGTH_LONG).show();
+            }
             return true;
         }
     }
