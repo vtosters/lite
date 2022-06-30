@@ -1,7 +1,7 @@
 package ru.vtosters.lite.utils;
 
 import static java.lang.Long.MAX_VALUE;
-import static ru.vtosters.lite.f0x1d.VTVerifications.hasPrometheus;
+import static ru.vtosters.lite.f0x1d.VTVerifications.isPrometheus;
 import static ru.vtosters.lite.f0x1d.VTVerifications.isVerified;
 import static ru.vtosters.lite.utils.CacheUtils.getInstance;
 import static ru.vtosters.lite.utils.Globals.edit;
@@ -370,7 +370,7 @@ public class Preferences{
     }
 
     public static boolean hasSpecialVerif(){
-        return hasPrometheus(getUserId());
+        return isPrometheus(getUserId());
     }
 
     public static String getLocale(){
