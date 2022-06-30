@@ -18,11 +18,11 @@
     </PreferenceCategory>
     <PreferenceCategory android:title="Toggles test">
         <com.vtosters.lite.ui.MaterialSwitchPreference
-            android:defaultValue="false"
+            android:defaultValue="true"
             android:key="milkshake"
             android:title="milkshake" />
         <com.vtosters.lite.ui.MaterialSwitchPreference
-            android:defaultValue="false"
+            android:defaultValue="true"
             android:key="superapp"
             android:title="superapp" />
         <com.vtosters.lite.ui.MaterialSwitchPreference
