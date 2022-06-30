@@ -23,7 +23,8 @@ public class VTostersAESProcessor extends IMProcessor{
     private final static String CIPHER_INSTANCE = "AES/CBC/PKCS7Padding";
     private final static String KEY_METHOD = "AES";
 
-    private HashMap<byte[], Cipher> decodeMap = new HashMap<>(), encodeMap = new HashMap<>();
+    private final HashMap<byte[], Cipher> decodeMap = new HashMap<>();
+    private final HashMap<byte[], Cipher> encodeMap = new HashMap<>();
 
     public void free(byte[] key){
         decodeMap.remove(key);

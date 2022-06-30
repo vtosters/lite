@@ -87,11 +87,11 @@ public class Globals{
         // VKIDProtection.alert(activity);
     }
 
-    public static byte[] readFileFully(File file) throws IOException {
+    public static byte[] readFileFully(File file) throws IOException{
         return readFully(new FileInputStream(file));
     }
 
-    public static byte[] readFully(InputStream is) throws IOException {
+    public static byte[] readFully(InputStream is) throws IOException{
         ByteArrayOutputStream bos = new ByteArrayOutputStream();
 
         byte[] buffer = new byte[BUFFER_SIZE];

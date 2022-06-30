@@ -11,8 +11,8 @@ import com.vk.toggle.FeatureManager;
 import com.vk.toggle.Features;
 
 public class Toggles{
-    public static boolean shouldPatch(Features.Type feature) {
-        switch (feature) {
+    public static boolean shouldPatch(Features.Type feature){
+        switch(feature) {
             case AB_IM_LONGPOLL_MSG_BATCHING:
             case AB_IM_LP_ATTACHES:
             case AB_IM_VIEW_POOL:
@@ -123,6 +123,7 @@ public class Toggles{
                 return false;
         }
     }
+
     public static boolean redirect(Features.Type feature){
         switch(feature) {
             case EXPERIMENT_NEWS_DISABLE_CACHE:

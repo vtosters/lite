@@ -116,9 +116,7 @@ public class Newsfeed{
 
         if(isGroupAds(obj)) return false;
 
-        if(injectFiltersReposts(obj)) return false;
-
-        return true;
+        return !injectFiltersReposts(obj);
     }
 
     public static boolean injectFiltersReposts(JSONObject obj){

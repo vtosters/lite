@@ -3,7 +3,9 @@ package ru.vtosters.lite.utils;
 import static ru.vtosters.lite.f0x1d.VTVerifications.isPrometheus;
 import static ru.vtosters.lite.f0x1d.VTVerifications.isDeveloper;
 import static ru.vtosters.lite.f0x1d.VTVerifications.isVerified;
+import static ru.vtosters.lite.utils.Preferences.getBoolValue;
 import static ru.vtosters.lite.utils.Preferences.hasVerification;
+import static ru.vtosters.lite.utils.Preferences.preferences;
 
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -70,38 +72,12 @@ public class JsonInjectors{
         if(Items != null) {
             for(int i = 0; i < Items.length(); i++){
                 var items = Items.optJSONObject(i);
-                var types = items.optString("type");
+                var type = items.optString("type");
 
-                switch(types){
-                    case "promo":
-                        Items.remove(i);
-                    case "vkpay_slim":
-                        Items.remove(i);
-                    case "greeting":
-                        Items.remove(i);
-                    case "sport":
-                        Items.remove(i);
-                    case "games":
-                        Items.remove(i);
-                    case "miniapps":
-                        Items.remove(i);
-                    case "informer":
-                        Items.remove(i);
-                    case "holiday":
-                        Items.remove(i);
-                    case "vk_run":
-                        Items.remove(i);
-                    case "weather":
-                        Items.remove(i);
-                    case "food":
-                        Items.remove(i);
-                    case "event":
-                        Items.remove(i);
-                    case "birthdays":
-                        Items.remove(i);
-                    case "music":
-                        Items.remove(i);
+                if(getBoolValue("superapp_" + type, false)){
+                    Items.remove(i);
                 }
+
             }
         }
 
