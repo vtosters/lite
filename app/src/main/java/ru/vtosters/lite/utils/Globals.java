@@ -49,6 +49,7 @@ import com.vtosters.lite.im.ImEngineProvider;
 import java.io.ByteArrayOutputStream;
 import java.io.File;
 import java.io.FileInputStream;
+import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
 import java.lang.reflect.Method;
@@ -87,11 +88,11 @@ public class Globals{
         // VKIDProtection.alert(activity);
     }
 
-    public static byte[] readFileFully(File file) throws IOException{
+    public static byte[] readFileFully(File file) throws IOException {
         return readFully(new FileInputStream(file));
     }
 
-    public static byte[] readFully(InputStream is) throws IOException{
+    public static byte[] readFully(InputStream is) throws IOException {
         ByteArrayOutputStream bos = new ByteArrayOutputStream();
 
         byte[] buffer = new byte[BUFFER_SIZE];
@@ -100,6 +101,15 @@ public class Globals{
             bos.write(buffer, 0, len);
 
         return bos.toByteArray();
+    }
+
+    public static void writeToFile(File file, String content) throws IOException {
+        writeToFile(file, content.getBytes());
+    }
+
+    public static void writeToFile(File file, byte[] content) throws IOException {
+        FileOutputStream fos = new FileOutputStream(file);
+        fos.write(content);
     }
 
     public static void componentSwitcher(String component, Boolean enabled){
