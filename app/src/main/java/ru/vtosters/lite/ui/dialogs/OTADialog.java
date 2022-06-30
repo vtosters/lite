@@ -10,9 +10,9 @@ import ru.vtosters.lite.utils.OTAHelper;
 
 public class OTADialog implements OTAHelper.OTAListener{
 
-    private Activity mActivity;
+    private final Activity mActivity;
 
-    private OTAHelper mHelper;
+    private final OTAHelper mHelper;
 
     public OTADialog(Activity activity){
         mActivity = activity;

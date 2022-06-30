@@ -89,7 +89,7 @@ public class EncryptProvider{
 
         String msgBody = getBody(msg);
 
-        Log.d("EncryptProvider", "encryptMessage: msg = " + msg.toString());
+        Log.d("EncryptProvider", "encryptMessage: msg = " + msg);
         Log.d("EncryptProvider", "encryptMessage: body = " + msgBody);
         Log.d("EncryptProvider", "encryptMessage: peerId = " + getPeerId(msg));
 

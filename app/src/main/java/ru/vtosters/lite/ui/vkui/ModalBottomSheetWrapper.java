@@ -1,6 +1,7 @@
 package ru.vtosters.lite.ui.vkui;
 
 import static ru.vtosters.lite.utils.Globals.getString;
+import static ru.vtosters.lite.utils.Themes.getTextAttr;
 
 import android.app.Activity;
 import android.graphics.Typeface;
@@ -11,7 +12,6 @@ import android.widget.TextView;
 import com.vk.core.dialogs.bottomsheet.ModalBottomSheet;
 
 import ru.vtosters.lite.utils.Globals;
-import ru.vtosters.lite.utils.Themes;
 
 public class ModalBottomSheetWrapper{
     public final ModalBottomSheet.a builder;
@@ -37,13 +37,13 @@ public class ModalBottomSheetWrapper{
         title.setTypeface(title.getTypeface(), Typeface.BOLD);
         title.setSingleLine(true);
         title.setTextAlignment(View.TEXT_ALIGNMENT_CENTER);
-        title.setTextColor(Themes.getTextAttr());
+        title.setTextColor(getTextAttr());
         title.setTextSize(24.0f);
         container.addView(title, new LinearLayout.LayoutParams(-1, -2));
 
         changelogView.setPadding(0, Globals.convertDpToPixel(8), 0, 0);
         changelogView.setText(getString("changelog") + ": \n" + changelog);
-        changelogView.setTextColor(Themes.getTextAttr());
+        changelogView.setTextColor(getTextAttr());
         container.addView(changelogView, new LinearLayout.LayoutParams(-1, -2));
 
         builder.a(container);

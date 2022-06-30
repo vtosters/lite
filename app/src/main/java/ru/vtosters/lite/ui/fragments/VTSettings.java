@@ -2,11 +2,14 @@ package ru.vtosters.lite.ui.fragments;
 
 import static bruhcollective.itaysonlab.libvkx.client.LibVKXClient.isIntegrationEnabled;
 import static ru.vtosters.lite.f0x1d.VTVerifications.vtverif;
+import static ru.vtosters.lite.ui.vkui.VBListBuilder.VBListItem;
+import static ru.vtosters.lite.ui.vkui.VBListBuilder.buildListOf;
+import static ru.vtosters.lite.ui.vkui.VBottomSheetBuilder.VBSContent;
 import static ru.vtosters.lite.utils.About.getBuildNumber;
 import static ru.vtosters.lite.utils.About.getCommitLink;
 import static ru.vtosters.lite.utils.CacheUtils.humanReadableByteCountBin;
-import static ru.vtosters.lite.utils.Globals.getAvatarDrawable;
 import static ru.vtosters.lite.utils.Globals.edit;
+import static ru.vtosters.lite.utils.Globals.getAvatarDrawable;
 import static ru.vtosters.lite.utils.Globals.getIdentifier;
 import static ru.vtosters.lite.utils.Globals.getPrefsValue;
 import static ru.vtosters.lite.utils.Globals.getUserPhoto;
@@ -50,11 +53,15 @@ import com.vtosters.lite.general.fragments.MaterialPreferenceToolbarFragment;
 import com.vtosters.lite.general.fragments.SettingsAccountFragment;
 import com.vtosters.lite.general.fragments.SettingsGeneralFragment;
 
+import java.util.Arrays;
+import java.util.List;
+
 import ru.vtosters.lite.ui.PreferencesUtil;
 import ru.vtosters.lite.ui.dialogs.OTADialog;
 import ru.vtosters.lite.ui.fragments.dockbar.DockBarFragment;
 import ru.vtosters.lite.ui.fragments.dockbar.DockBarManager;
 import ru.vtosters.lite.ui.fragments.tgstickers.StickersFragment;
+import ru.vtosters.lite.ui.vkui.VBottomSheetBuilder;
 import ru.vtosters.lite.utils.CacheUtils;
 import ru.vtosters.lite.utils.Globals;
 import ru.vtosters.lite.utils.SSFS;
@@ -374,6 +381,44 @@ public class VTSettings extends MaterialPreferenceToolbarFragment{
                 return true;
             });
         }
+
+        PreferencesUtil.addPreference(this, "p1", "Настроить скрытие пунктов меню", null, null, (preference) -> {
+            callEditorPopup();
+            return true;
+        });
+    }
+
+    private void callEditorPopup(){
+        List<VBListItem> list = Arrays.asList(
+                new VBListItem("promo", "Mini Apps: промо"),
+                new VBListItem("miniapps", "Mini Apps: виджет"),
+                new VBListItem("vkpay_slim", "VK Pay"),
+                new VBListItem("greeting", "Приветствие"),
+                new VBListItem("holiday", "Дни рождения у друзей"),
+                new VBListItem("weather", "Погода"),
+                new VBListItem("sport", "Спортивные события"),
+                new VBListItem("games", "Игры"),
+                new VBListItem("informer", "Информер"),
+                new VBListItem("food", "Еда"),
+                new VBListItem("event", "Мероприятия"),
+                new VBListItem("music", "Музыка"),
+                new VBListItem("vk_run", "VK Run")
+        );
+
+        VBottomSheetBuilder.show(getActivity(), new VBSContent(
+                null,
+                null,
+                buildListOf(getActivity(), list),
+
+                new VBSContent.VBSButton(
+                        "Сохранить",
+                        () -> {
+                            for(VBListItem item : list) {
+                                edit().putBoolean("superapp_" + item.id, item.checked).commit();
+                            }
+                        }
+                )
+        ));
     }
 
     @Override

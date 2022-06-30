@@ -18,7 +18,7 @@ public class OTAHelper{
     private static final String LATEST_RELEASE_URL = "https://api.github.com/repositories/473685743/releases/latest";
     private static final String LATEST_RELEASE_COMMIT_URL = "https://api.github.com/repositories/473685743/git/ref/tags/%s";
     private final OkHttpClient mClient = new OkHttpClient();
-    private OTAListener mListener;
+    private final OTAListener mListener;
     private JSONObject mReleaseJson;
     private JSONObject mCommitJson;
 

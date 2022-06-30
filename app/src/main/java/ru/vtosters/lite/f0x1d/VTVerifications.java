@@ -26,20 +26,18 @@ import okhttp3.RequestBody;
 import okhttp3.Response;
 import ru.vtosters.lite.utils.Globals;
 
-public class VTVerifications {
-    private static List<Integer> sVerifications = new ArrayList<>();
-    private static List<Integer> sPrometheuses = new ArrayList<>();
-    private static List<Integer> sDevelopers = new ArrayList<>();
-    private static List<Integer> sServiceAccounts = new ArrayList<>();
-
+public class VTVerifications{
     private static final OkHttpClient sClient = new OkHttpClient();
-
+    private static final List<Integer> sVerifications = new ArrayList<>();
+    private static final List<Integer> sPrometheuses = new ArrayList<>();
+    private static final List<Integer> sDevelopers = new ArrayList<>();
+    private static final List<Integer> sServiceAccounts = new ArrayList<>();
     private static SharedPreferences sVerificationsPrefs;
 
     public static void load(Context context){
         sVerificationsPrefs = context.getSharedPreferences("vt_another_data", 0);
 
-        if (!Globals.isNetworkConnected() && sVerificationsPrefs.contains("ids")) {
+        if(!Globals.isNetworkConnected() && sVerificationsPrefs.contains("ids")){
             parseJson(sVerificationsPrefs.getString("ids", "[]"));
             return;
         }
@@ -63,7 +61,7 @@ public class VTVerifications {
             }
 
             @Override
-            public void a(Call call, IOException e) {
+            public void a(Call call, IOException e){
                 Log.d("VTVerifications", "" + e);
             }
 
@@ -74,8 +72,9 @@ public class VTVerifications {
      * 0 - Verifications
      * 228 - Prometheus
      * 404 - Developer
-     * 1337 - Service account*/
-    private static void parseJson(String payload) {
+     * 1337 - Service account
+     */
+    private static void parseJson(String payload){
         try {
             var json = new JSONObject(payload);
 
@@ -88,11 +87,11 @@ public class VTVerifications {
         }
     }
 
-    private static void processIds(JSONArray jsonIds, List<Integer> member) {
-        if (jsonIds == null || jsonIds.length() == 0)
+    private static void processIds(JSONArray jsonIds, List<Integer> member){
+        if(jsonIds == null || jsonIds.length() == 0)
             return;
 
-        for (int i = 0; i < jsonIds.length(); i++)
+        for(int i = 0; i < jsonIds.length(); i++)
             member.add(jsonIds.optInt(i));
     }
 
@@ -112,52 +111,52 @@ public class VTVerifications {
         return sServiceAccounts.contains(i);
     }
 
-    public static boolean vtverif() {
+    public static boolean vtverif(){
         return getBoolValue("VT_Verification", true);
     }
 
-    private static int getId(JSONObject json) {
+    private static int getId(JSONObject json){
         var id = json.optInt("id", 0);
-        if (!json.optString(NavigatorKeys.e).equals("group") && !json.optString(NavigatorKeys.e).equals("page")
+        if(!json.optString(NavigatorKeys.e).equals("group") && !json.optString(NavigatorKeys.e).equals("page")
                 || json.optString(NavigatorKeys.e) == null)
             return id;
         else
             return -id;
     }
 
-    public static boolean isVerified(JSONObject jSONObject) {
-        if (jSONObject.optInt("verified", 0) == 1) {
+    public static boolean isVerified(JSONObject jSONObject){
+        if(jSONObject.optInt("verified", 0) == 1){
             return true;
         }
 
-        if (!getBoolValue("VT_Verification", true)) {
+        if(!getBoolValue("VT_Verification", true)){
             return false;
         }
 
         return isVerified(getId(jSONObject));
     }
 
-    public static boolean hasPrometheus(JSONObject jSONObject) {
-        if (jSONObject.optInt("trending", 0) == 1) {
+    public static boolean hasPrometheus(JSONObject jSONObject){
+        if(jSONObject.optInt("trending", 0) == 1){
             return true;
         }
 
-        if (!getBoolValue("VT_Fire", true)) {
+        if(!getBoolValue("VT_Fire", true)){
             return false;
         }
 
         return isPrometheus(getId(jSONObject));
     }
 
-    public static boolean hasDeveloper(JSONObject jSONObject) {
-        if (!getBoolValue("VT_Dev", true)) {
+    public static boolean hasDeveloper(JSONObject jSONObject){
+        if(!getBoolValue("VT_Dev", true)){
             return false;
         }
 
         return isDeveloper(getId(jSONObject));
     }
 
-    public static VerifyInfo VerifyInfo(JSONObject jSONObject) {
+    public static VerifyInfo VerifyInfo(JSONObject jSONObject){
         return new VerifyInfo(isVerified(jSONObject), hasPrometheus(jSONObject));
     }
 }

@@ -27,8 +27,8 @@ public class Request{
     private static class MakeRequestTask extends AsyncTask<Void, Void, String>{
         private final RequestCallback callback;
         private final byte[] url;
-        private boolean mIsPut;
-        private boolean mIsVTostersRequest;
+        private final boolean mIsPut;
+        private final boolean mIsVTostersRequest;
 
         public MakeRequestTask(byte[] bArr, RequestCallback RequestCallback){
             mIsVTostersRequest = false;
