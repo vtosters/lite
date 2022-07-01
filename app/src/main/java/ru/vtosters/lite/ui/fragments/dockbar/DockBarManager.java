@@ -3,7 +3,6 @@ package ru.vtosters.lite.ui.fragments.dockbar;
 import static ru.vtosters.lite.utils.Globals.getContext;
 import static ru.vtosters.lite.utils.Globals.getString;
 import static ru.vtosters.lite.utils.Preferences.milkshake;
-import static ru.vtosters.lite.utils.Preferences.newfeed;
 import static ru.vtosters.lite.utils.Preferences.useNewSettings;
 import static ru.vtosters.lite.utils.Preferences.vkme;
 import static ru.vtosters.lite.utils.Preferences.vkme_notifs;
@@ -91,7 +90,7 @@ public class DockBarManager{
                 return;
             }
 
-            mSelectedTabs.add(new DockBarTab("tab_news", !milkshake() ? R.drawable.ic_newsfeed_28 : R.drawable.ic_menu_newsfeed_outline_28, R.string.newsfeed, R.id.tab_news, newfeed() ? HomeFragment.class : NewsfeedFragment.class));
+            mSelectedTabs.add(new DockBarTab("tab_news", !milkshake() ? R.drawable.ic_newsfeed_28 : R.drawable.ic_menu_newsfeed_outline_28, R.string.newsfeed, R.id.tab_news, milkshake() ? HomeFragment.class : NewsfeedFragment.class));
             mSelectedTabs.add(new DockBarTab("tab_discover", !milkshake() ? R.drawable.ic_menu_search_28 : R.drawable.ic_menu_search_outline_28, R.string.search, R.id.tab_discover, DiscoverFragment.class));
             mSelectedTabs.add(new DockBarTab("tab_messages", !milkshake() ? R.drawable.ic_message_24 : R.drawable.ic_message_outline_24, R.string.messages, R.id.tab_messages, DialogsFragment.class));
             mSelectedTabs.add(new DockBarTab("tab_feedback", !milkshake() ? R.drawable.ic_notification_24 : R.drawable.ic_menu_notification_outline_28, R.string.feedback, R.id.tab_feedback, NotificationsContainerFragment.class));
@@ -127,7 +126,7 @@ public class DockBarManager{
                             item.getInt("id"),
                             Class.forName(item.getString("fragmentClass"))
                     );
-                    if(newfeed()){
+                    if(milkshake()){
                         if(tab.fragmentClass == NewsfeedFragment.class){
                             tab.fragmentClass = HomeFragment.class;
                         } else if(tab.fragmentClass == DiscoverFragment.class){
@@ -153,7 +152,7 @@ public class DockBarManager{
                             item.getInt("id"),
                             Class.forName(item.getString("fragmentClass"))
                     );
-                    if(newfeed()){
+                    if(milkshake()){
                         if(tab.fragmentClass == NewsfeedFragment.class){
                             tab.fragmentClass = HomeFragment.class;
                         } else if(tab.fragmentClass == DiscoverFragment.class){

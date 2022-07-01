@@ -3016,7 +3016,7 @@
 
     new-instance v0, Ljava/text/SimpleDateFormat;
 
-    invoke-static {}, Lru/vtosters/lite/utils/Preferences;->getDateFormat()Ljava/lang/String;
+    invoke-static {}, Lru/vtosters/lite/utils/LocaleUtils;->getDateFormat()Ljava/lang/String;
 
     move-result-object v3
 
@@ -3032,7 +3032,7 @@
     .param p0, "s"  # I
 
     .line 17
-    invoke-static {}, Lru/vtosters/lite/utils/Preferences;->fulltime()Z
+    invoke-static {}, Lru/vtosters/lite/utils/LocaleUtils;->fulltime()Z
 
     move-result v0
 

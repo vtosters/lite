@@ -9,7 +9,7 @@ import static ru.vtosters.lite.utils.About.getBuildNumber;
 import static ru.vtosters.lite.utils.About.getCommitLink;
 import static ru.vtosters.lite.utils.CacheUtils.humanReadableByteCountBin;
 import static ru.vtosters.lite.utils.Globals.edit;
-import static ru.vtosters.lite.utils.Globals.getAvatarDrawable;
+import static ru.vtosters.lite.utils.Globals.getDrawableFromUrl;
 import static ru.vtosters.lite.utils.Globals.getIdentifier;
 import static ru.vtosters.lite.utils.Globals.getPrefsValue;
 import static ru.vtosters.lite.utils.Globals.getUserPhoto;
@@ -68,7 +68,6 @@ import ru.vtosters.lite.utils.SSFS;
 import ru.vtosters.lite.utils.VKUIwrapper;
 
 public class VTSettings extends MaterialPreferenceToolbarFragment{
-
     public static String getValAsString(String stringid, Boolean value){
         if(disableSettingsSumms()) return "";
 
@@ -124,7 +123,7 @@ public class VTSettings extends MaterialPreferenceToolbarFragment{
         int vtosterXml = getIdentifier("empty", "xml");
         this.addPreferencesFromResource(vtosterXml);
 
-        PreferencesUtil.addPreferenceDrawable(this, "", "Аккаунты", getUsername() + (hasVerification() ? Globals.getString("thanksfordonate") : Globals.getString("getdonate")), getAvatarDrawable(getUserPhoto()), preference -> {
+        PreferencesUtil.addPreferenceDrawable(this, "", "Аккаунты", getUsername() + (hasVerification() ? Globals.getString("thanksfordonate") : Globals.getString("getdonate")), getDrawableFromUrl(getUserPhoto(), "ic_user_circle_outline_28"), preference -> {
             AuthBridge.logout();
             restartApplication();
             return false;

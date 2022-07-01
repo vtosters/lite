@@ -3,11 +3,6 @@
     <PreferenceCategory android:title="@string/interfacenewsfeed">
         <com.vtosters.lite.ui.MaterialSwitchPreference
             android:defaultValue="true"
-            android:key="newfeed"
-            android:summary="@string/altnewsfeedsum"
-            android:title="@string/altnewsfeed" />
-        <com.vtosters.lite.ui.MaterialSwitchPreference
-            android:defaultValue="true"
             android:key="stories"
             android:summary="@string/showstoriessum"
             android:title="@string/showstories" />
@@ -15,24 +10,6 @@
             android:defaultValue="true"
             android:key="swipe"
             android:title="@string/interfacenewsfeedswipe" />
-    </PreferenceCategory>
-    <PreferenceCategory android:title="Toggles test">
-        <com.vtosters.lite.ui.MaterialSwitchPreference
-            android:defaultValue="true"
-            android:key="milkshake"
-            android:title="milkshake" />
-        <com.vtosters.lite.ui.MaterialSwitchPreference
-            android:defaultValue="true"
-            android:key="superapp"
-            android:title="superapp" />
-        <com.vtosters.lite.ui.MaterialSwitchPreference
-            android:defaultValue="true"
-            android:key="musicnewcatalog"
-            android:title="musicnewcatalog" />
-        <com.vtosters.lite.ui.MaterialSwitchPreference
-            android:defaultValue="true"
-            android:key="postsredesign"
-            android:title="postsredesign" />
     </PreferenceCategory>
     <PreferenceCategory android:title="@string/interfaceglobal">
         <com.vtosters.lite.ui.SummaryListPreference
@@ -80,6 +57,11 @@
             android:title="@string/interfacevideorec" />
     </PreferenceCategory>
     <PreferenceCategory android:title="@string/vtlother">
+        <com.vtosters.lite.ui.MaterialSwitchPreference
+            android:defaultValue="true"
+            android:key="superapp"
+            android:summary="Новый вид меню как в новых версиях ВКонтакте"
+            android:title="Супераппы" />
         <com.vtosters.lite.ui.MaterialSwitchPreference
             android:defaultValue="false"
             android:key="showmenu"

@@ -23,6 +23,8 @@ import okhttp3.Response;
 
 public class ServerDialog{
     private static final OkHttpClient client = new OkHttpClient();
+    public static Boolean showAlert;
+    public static Activity activity;
     private static String title;
     private static String message;
     private static String positiveButton;
@@ -31,10 +33,6 @@ public class ServerDialog{
     private static String key;
     private static Boolean cancelable;
     private static Boolean isNotForVerified;
-
-    public static Boolean showAlert;
-
-    public static Activity activity;
 
     public static void sendRequest(){
         if(getBoolValue("dialogrecomm", false)) return;

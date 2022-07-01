@@ -7,10 +7,7 @@ import static ru.vtosters.lite.utils.CacheUtils.getInstance;
 import static ru.vtosters.lite.utils.Globals.edit;
 import static ru.vtosters.lite.utils.Globals.fixGapps;
 import static ru.vtosters.lite.utils.Globals.getContext;
-import static ru.vtosters.lite.utils.Globals.getIdentifier;
 import static ru.vtosters.lite.utils.Globals.getPrefsValue;
-import static ru.vtosters.lite.utils.Globals.getString;
-import static ru.vtosters.lite.utils.Globals.getStringDate;
 import static ru.vtosters.lite.utils.Globals.getUserId;
 import static ru.vtosters.lite.utils.Globals.registerActivities;
 import static ru.vtosters.lite.utils.Newsfeed.setupFilters;
@@ -20,7 +17,6 @@ import static ru.vtosters.lite.utils.SignatureChecker.validateAppSignature;
 import static ru.vtosters.lite.utils.Themes.isDarkTheme;
 import static ru.vtosters.lite.utils.Themes.systemThemeChanger;
 
-import android.annotation.SuppressLint;
 import android.app.Application;
 import android.content.Context;
 import android.content.SharedPreferences;
@@ -32,9 +28,6 @@ import com.vtosters.lite.data.Users;
 import com.vtosters.lite.fragments.SettingsListFragment;
 
 import java.security.NoSuchAlgorithmException;
-import java.text.SimpleDateFormat;
-import java.util.Date;
-import java.util.Locale;
 
 import ru.vtosters.lite.ui.fragments.VTSettings;
 
@@ -163,20 +156,12 @@ public class Preferences{
         return getBoolValue("VKUI_INJ", true);
     }
 
-    public static boolean benchmark(){
-        return getBoolValue("benchmark", false);
-    }
-
     public static boolean calls(){
         return getBoolValue("calls", false);
     }
 
     public static boolean convUsersOnline(){
         return getBoolValue("convUsersOnline", false);
-    }
-
-    public static boolean darkmode(){
-        return getBoolValue("darkmode", true);
     }
 
     public static boolean dev(){
@@ -193,10 +178,6 @@ public class Preferences{
 
     public static boolean dns(){
         return getBoolValue("dns", false);
-    }
-
-    public static boolean libverify(){
-        return getBoolValue("libverify", false);
     }
 
     public static boolean dnt(){
@@ -251,20 +232,12 @@ public class Preferences{
         return getBoolValue("iconvk", false);
     }
 
-    public static boolean iconvkru(){
-        return getBoolValue("iconvkru", false);
-    }
-
     public static boolean isMusicRestricted(){
         return getBoolValue("isMusicRestricted", false);
     }
 
     public static boolean navbar(){
         return getBoolValue("navbar", true);
-    }
-
-    public static boolean newfeed(){
-        return getBoolValue("newfeed", true);
     }
 
     public static boolean offline(){
@@ -277,10 +250,6 @@ public class Preferences{
 
     public static boolean postsrecomm(){
         return getBoolValue("postsrecomm", false);
-    }
-
-    public static String readstatus(){
-        return dnr() ? "messages.markAsRead" : "null";
     }
 
     public static boolean refsfilter(){
@@ -340,10 +309,6 @@ public class Preferences{
         return getBoolValue("color_grishka", true);
     }
 
-    public static boolean vkme_msg(){
-        return getBoolValue("vkme_msg", false);
-    }
-
     public static boolean vkme_notifs(){
         return getBoolValue("vkme_notifs", false);
     }
@@ -373,31 +338,6 @@ public class Preferences{
         return isPrometheus(getUserId());
     }
 
-    public static String getLocale(){
-        String string = getPrefsValue("lang_value");
-
-        if(string.equals("system")){
-            return Locale.getDefault().getLanguage();
-        }
-
-        return string.isEmpty() ? Locale.getDefault().getLanguage() : string;
-    }
-
-    public static boolean fulltime(){
-        return getPrefsValue("dateformat").equals("noyear") || getPrefsValue("dateformat").equals("full") || getPrefsValue("dateformat").equals("noseconds");
-    }
-
-    public static String getDateFormat(){
-        switch(getPrefsValue("dateformat")) {
-            case "noyear":
-                return getString("fulltime2");
-            case "full":
-                return getString("fulltime");
-            default:
-                return getString("fulltime3");
-        }
-    }
-
     public static long getSizeForDelete(){
         switch(getPrefsValue("clearcache")) {
             case "100mb":
@@ -419,23 +359,5 @@ public class Preferences{
         if(getBoolValue("shakal", false)) return 5;
         if(!getBoolValue("compressPhotos", true)) return 100;
         return origquality;
-    }
-
-    @SuppressLint("SimpleDateFormat")
-    public static SimpleDateFormat setDateFormat(){
-        return new SimpleDateFormat(getDateFormat());
-    }
-
-    public static String getFormattedDate(boolean isFemale, long time){
-        SimpleDateFormat date = new SimpleDateFormat(getDateFormat(), Locale.getDefault());
-
-        if(!fulltime()) return null;
-
-        try {
-            return getStringDate(isFemale ? getIdentifier("last_seen_profile_f", "string") : getIdentifier("last_seen_profile_m", "string"), date.format(new Date(time)));
-        } catch (Throwable th) {
-            th.printStackTrace();
-            return null;
-        }
     }
 }
