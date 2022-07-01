@@ -2194,7 +2194,7 @@ in the BOOM app"</string>
 without limits"</string>
     <string name="music_subs_try_free">Try</string>
     <string name="music_subscription_agreement">Terms of Service</string>
-    <string name="music_subscription_exist">You already have a VK Music subscription</string>
+    <string name="music_subscription_exist">This track cannot be played without real music subscription</string>
     <string name="music_subscription_label_payment_type">Payment method</string>
     <string name="music_subscription_label_status">Subscription status</string>
     <string name="music_subscription_purchase_btn_title">Subscribe for %1$s a month</string>

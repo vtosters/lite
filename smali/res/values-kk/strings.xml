@@ -2064,7 +2064,6 @@
 музыка тыңдаңыз"</string>
     <string name="music_subs_try_free">Байқап көру</string>
     <string name="music_subscription_agreement">Пайдалану шарттары</string>
-    <string name="music_subscription_exist">Сізде музыкаға жазылым бар</string>
     <string name="music_subscription_label_payment_type">Төлеу әдісі</string>
     <string name="music_subscription_label_status">Жазылым жағдайы</string>
     <string name="music_subscription_purchase_btn_title">Айына %1$s құнына жазылу</string>
