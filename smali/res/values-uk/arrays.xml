@@ -327,9 +327,13 @@
         <item>24 години</item>
     </string-array>
     <string-array name="sett_font_size_options">
-        <item>Дрібний</item>
+        <item>Найменший</item>
+        <item>Ще меньше</item>
+        <item>Малий</item>
         <item>Звичайний</item>
         <item>Великий</item>
+        <item>Ще великий</item>
+        <item>Найбiльший</item>
     </string-array>
     <string-array name="sett_friends_order">
         <item>За іменем</item>

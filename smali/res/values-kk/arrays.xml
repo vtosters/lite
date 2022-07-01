@@ -326,11 +326,6 @@
         <item>8 сағат</item>
         <item>24 сағат</item>
     </string-array>
-    <string-array name="sett_font_size_options">
-        <item>Кіші</item>
-        <item>Орташа</item>
-        <item>Ірі</item>
-    </string-array>
     <string-array name="sett_friends_order">
         <item>Есімі бойынша</item>
         <item>Тегі бойынша</item>
