@@ -39,6 +39,10 @@
             android:key="systememoji"
             android:summary="@string/systememojisum"
             android:title="@string/systememoji" />
+        <com.vtosters.lite.ui.MaterialSwitchPreference
+            android:defaultValue="true"
+            android:key="loopedanimstickers"
+            android:title="Зацикливание анимированных стикеров" />
     </PreferenceCategory>
     <PreferenceCategory android:title="@string/vtlother">
         <com.vtosters.lite.ui.SummaryListPreference
