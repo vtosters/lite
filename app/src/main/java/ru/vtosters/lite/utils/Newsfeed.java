@@ -11,7 +11,7 @@ import static ru.vtosters.lite.utils.Preferences.copyright_post;
 import static ru.vtosters.lite.utils.Preferences.dev;
 import static ru.vtosters.lite.utils.Preferences.friendsrecomm;
 import static ru.vtosters.lite.utils.Preferences.getBoolValue;
-import static ru.vtosters.lite.utils.Preferences.newfeed;
+import static ru.vtosters.lite.utils.Preferences.milkshake;
 import static ru.vtosters.lite.utils.Preferences.postsrecomm;
 import static ru.vtosters.lite.utils.Preferences.useNewSettings;
 import static ru.vtosters.lite.utils.Preferences.vkme;
@@ -117,7 +117,7 @@ public class Newsfeed{
         if(isGroupAds(obj)) return false;
 
         return !injectFiltersReposts(obj);
-    }
+    } // inject our filters to newsfeed, getpost and discover
 
     public static boolean injectFiltersReposts(JSONObject obj){
         if(obj.optJSONArray("copy_history") == null) return false;
@@ -135,11 +135,9 @@ public class Newsfeed{
         }
 
         return isBadNew(Array);
-    }
+    } // get repost information and inject our text filters
 
     private static boolean checkCopyright(JSONObject json) throws JSONException{
-        var linkfilter = getPrefsValue("linkfilter");
-
         if(json.opt("copyright") != null){
             var copyright = json.getJSONObject("copyright");
             var copyrightlink = copyright.getString("link");
@@ -149,9 +147,7 @@ public class Newsfeed{
                     return true;
                 }
             }
-
             return copyright_post();
-
         }
         return false;
     }
@@ -250,7 +246,7 @@ public class Newsfeed{
         }
         switch(getPrefsValue("start_values")) {
             case "newsfeed":
-                return newfeed() ? HomeFragment.class : NewsfeedFragment.class;
+                return milkshake() ? HomeFragment.class : NewsfeedFragment.class;
             case "messenger":
                 return DialogsFragment.class;
             case "groups":

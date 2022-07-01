@@ -1,6 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
     <PreferenceCategory android:title="@string/vtlthemes">
+        <com.vtosters.lite.ui.MaterialSwitchPreference
+            android:defaultValue="true"
+            android:key="milkshake"
+            android:summary="Глобальный редизайн ВКонтакте"
+            android:title="milkshake" />
         <Preference
             android:enabled="false"
             android:summary="@string/appearance_theme_info_summary"

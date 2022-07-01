@@ -27,11 +27,6 @@
             android:key="vksans"
             android:title="@string/debug_experimental_vk_sans_font" />
         <com.vtosters.lite.ui.MaterialSwitchPreference
-            android:defaultValue="false"
-            android:key="libverify"
-            android:summary="@string/debug_experimental_libverify_summary"
-            android:title="@string/debug_experimental_libverify" />
-        <com.vtosters.lite.ui.MaterialSwitchPreference
             android:defaultValue="true"
             android:key="opusmodule"
             android:title="@string/debug_experimental_opusmodule" />

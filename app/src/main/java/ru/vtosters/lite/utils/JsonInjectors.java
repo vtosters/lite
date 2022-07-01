@@ -1,11 +1,10 @@
 package ru.vtosters.lite.utils;
 
-import static ru.vtosters.lite.f0x1d.VTVerifications.isPrometheus;
 import static ru.vtosters.lite.f0x1d.VTVerifications.isDeveloper;
+import static ru.vtosters.lite.f0x1d.VTVerifications.isPrometheus;
 import static ru.vtosters.lite.f0x1d.VTVerifications.isVerified;
 import static ru.vtosters.lite.utils.Preferences.getBoolValue;
 import static ru.vtosters.lite.utils.Preferences.hasVerification;
-import static ru.vtosters.lite.utils.Preferences.preferences;
 
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -69,8 +68,8 @@ public class JsonInjectors{
     public static JSONObject superapp(JSONObject orig) throws JSONException{
         var Items = orig.optJSONArray("items");
 
-        if(Items != null) {
-            for(int i = 0; i < Items.length(); i++){
+        if(Items != null){
+            for(int i = 0; i < Items.length(); i++) {
                 var items = Items.optJSONObject(i);
                 var type = items.optString("type");
 

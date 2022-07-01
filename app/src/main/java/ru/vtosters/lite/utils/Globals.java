@@ -2,8 +2,8 @@ package ru.vtosters.lite.utils;
 
 import static androidx.core.content.ContextCompat.getDrawable;
 import static ru.vtosters.lite.utils.CacheUtils.getInstance;
+import static ru.vtosters.lite.utils.LocaleUtils.getLocale;
 import static ru.vtosters.lite.utils.Preferences.checkupdates;
-import static ru.vtosters.lite.utils.Preferences.getLocale;
 import static ru.vtosters.lite.utils.Preferences.preferences;
 import static ru.vtosters.lite.utils.ServerDialog.sendRequest;
 import static ru.vtosters.lite.utils.Themes.isDarkTheme;
@@ -88,11 +88,11 @@ public class Globals{
         // VKIDProtection.alert(activity);
     }
 
-    public static byte[] readFileFully(File file) throws IOException {
+    public static byte[] readFileFully(File file) throws IOException{
         return readFully(new FileInputStream(file));
     }
 
-    public static byte[] readFully(InputStream is) throws IOException {
+    public static byte[] readFully(InputStream is) throws IOException{
         ByteArrayOutputStream bos = new ByteArrayOutputStream();
 
         byte[] buffer = new byte[BUFFER_SIZE];
@@ -103,11 +103,11 @@ public class Globals{
         return bos.toByteArray();
     }
 
-    public static void writeToFile(File file, String content) throws IOException {
+    public static void writeToFile(File file, String content) throws IOException{
         writeToFile(file, content.getBytes());
     }
 
-    public static void writeToFile(File file, byte[] content) throws IOException {
+    public static void writeToFile(File file, byte[] content) throws IOException{
         FileOutputStream fos = new FileOutputStream(file);
         fos.write(content);
     }
@@ -171,7 +171,7 @@ public class Globals{
         return extendedUserProfile.a;
     }
 
-    public static Drawable getDrawableFromUrl(String url){
+    public static Drawable getDrawableFromUrl(String url, String nopic){
         try {
             URL aryURI = new URL(url);
             StrictMode.ThreadPolicy policy = new StrictMode.ThreadPolicy.Builder().permitAll().build();
@@ -183,24 +183,7 @@ public class Globals{
 
             return new BitmapDrawable(getResources(), bmp);
         } catch (Exception e) {
-            return null;
-        }
-    }
-
-    @SuppressWarnings("deprecation")
-    public static Drawable getAvatarDrawable(String url){
-        try {
-            URL aryURI = new URL(url);
-            StrictMode.ThreadPolicy policy = new StrictMode.ThreadPolicy.Builder().permitAll().build();
-            StrictMode.setThreadPolicy(policy);
-
-            URLConnection conn = aryURI.openConnection();
-            InputStream is = conn.getInputStream();
-            Bitmap bmp = BitmapFactory.decodeStream(is);
-
-            return new BitmapDrawable(getResources(), Bitmap.createScaledBitmap(getBitmapClippedCircle(bmp), convertDpToPixel(256), convertDpToPixel(256), true));
-        } catch (Exception e) {
-            return getDrawable(getContext(), getIdentifier("ic_user_circle_outline_28", "drawable"));
+            return getDrawable(getContext(), getIdentifier(nopic, "drawable"));
         }
     }
 

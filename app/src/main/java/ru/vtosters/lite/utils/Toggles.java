@@ -118,6 +118,7 @@ public class Toggles{
             case FEATURE_WISHLIST_MY_PROFILE:
             case FEATURE_MILKSHAKE_FORCE_DISABLED:
             case FEATURE_MILKSHAKE_ACTIVATION_DISABLED:
+            case EXPERIMENT_NEWS_DISABLE_CACHE:
                 return true;
             default:
                 return false;
@@ -143,6 +144,8 @@ public class Toggles{
                 return postsredesign();
             case FEATURE_IMAGE_QUALITY_UPGRADE:
                 return getBoolValue("compressPhotos", true);
+            case FEATURE_MUSIC_STOP_PLAYER_ON_TASK_REMOVAL:
+                return getBoolValue("musictask", false);
             default:
                 return true;
         }

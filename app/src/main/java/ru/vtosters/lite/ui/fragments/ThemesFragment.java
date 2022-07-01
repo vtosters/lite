@@ -38,8 +38,6 @@ public class ThemesFragment extends MaterialPreferenceToolbarFragment{
 
     private void prefs(){
         findPreference("iconvk").setOnPreferenceChangeListener(new a());
-        findPreference("darktheme").setOnPreferenceClickListener(new restart());
-        findPreference("lighttheme").setOnPreferenceClickListener(new restart());
         findPreference("navbar").setOnPreferenceClickListener(new restart());
     }
 

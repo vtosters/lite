@@ -2,9 +2,9 @@ package ru.vtosters.lite.utils;
 
 import static ru.vtosters.lite.utils.Globals.getString;
 
-public class OnlineFormatter {
+public class OnlineFormatter{
     public static String getAppName(int appid){  // thanks to egormetlitsky (vk mp3 mod) for helping with online ids
-        switch (appid) {
+        switch(appid) {
             case 2274003:
                 return "Android";
             case 6328039:
@@ -86,7 +86,7 @@ public class OnlineFormatter {
     public static String getOnline(int appid){
         var appname = getAppName(appid);
 
-        if (appname == null) return null;
+        if(appname == null) return null;
 
         return getString("custom_online") + " " + appname;
     }

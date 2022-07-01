@@ -17,4 +17,14 @@
             android:key="libvkx_integration"
             android:title="@string/vkx_integration" />
     </PreferenceCategory>
+    <com.vtosters.lite.ui.MaterialSwitchPreference
+        android:defaultValue="false"
+        android:key="musictask"
+        android:summary="Останаливать музыку после остановки процесса приложения"
+        android:title="Остановка музыки" />
+    <com.vtosters.lite.ui.MaterialSwitchPreference
+        android:defaultValue="true"
+        android:key="musicnewcatalog"
+        android:summary="Новый каталог музыкального раздела с динамическим контентом. Возможны пропажи некоторорых существующих разделов тк каталоги ещё не доработаны"
+        android:title="Новый раздел музыки (beta)" />
 </PreferenceScreen>
