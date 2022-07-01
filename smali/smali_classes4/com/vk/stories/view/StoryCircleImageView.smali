@@ -575,6 +575,10 @@
 
     const/4 v0, -0x1
 
+    invoke-static {v0}, Lru/vtosters/lite/utils/Preferences;->loopedanimstickers(I)I
+
+    move-result v0
+
     invoke-virtual {p2, v0}, Lcom/airbnb/lottie/LottieDrawable;->d(I)V
 
     .line 50

@@ -83,6 +83,11 @@ public class Preferences{
         return getBoolValue("authorsrecomm", false);
     }
 
+    public static int loopedanimstickers(int orig){
+        if(!getBoolValue("authorsrecomm", true)) return 0;
+        return orig;
+    }
+
     public static boolean captions(){
         return getBoolValue("captions", false);
     }
