@@ -327,9 +327,13 @@
         <item>24 часа</item>
     </string-array>
     <string-array name="sett_font_size_options">
-        <item>Мелкий</item>
+        <item>Самый мелкий</item>
+        <item>Ещё меньше</item>
+        <item>Меньше</item>
         <item>Обычный</item>
-        <item>Крупный</item>
+        <item>Больше</item>
+        <item>Ещё больше</item>
+        <item>Самый большой</item>
     </string-array>
     <string-array name="sett_friends_order">
         <item>По имени</item>

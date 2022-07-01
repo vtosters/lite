@@ -326,11 +326,6 @@
         <item>8 horas</item>
         <item>24 horas</item>
     </string-array>
-    <string-array name="sett_font_size_options">
-        <item>Pequeno</item>
-        <item>Normal</item>
-        <item>Grande</item>
-    </string-array>
     <string-array name="sett_friends_order">
         <item>Por nome</item>
         <item>Por sobrenome</item>
