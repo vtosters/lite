@@ -84,7 +84,7 @@ public class Preferences{
     }
 
     public static int loopedanimstickers(int orig){
-        if(!getBoolValue("authorsrecomm", true)) return 0;
+        if(!getBoolValue("loopedanimstickers", true)) return 0;
         return orig;
     }
 
