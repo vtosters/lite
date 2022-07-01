@@ -2105,7 +2105,7 @@
 без ограничений"</string>
     <string name="music_subs_try_free">Попробовать</string>
     <string name="music_subscription_agreement">Условия использования</string>
-    <string name="music_subscription_exist">У Вас уже оформлена подписка на музыку</string>
+    <string name="music_subscription_exist">Данный трэк нельзя воспроизвести без настоящей подписки на музыку</string>
     <string name="music_subscription_label_payment_type">Cпособ оплаты</string>
     <string name="music_subscription_label_status">Статус подписки</string>
     <string name="music_subscription_purchase_btn_title">Оформить за %1$s в месяц</string>

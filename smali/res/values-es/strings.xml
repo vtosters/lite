@@ -2096,7 +2096,6 @@ en la app BOOM"</string>
     <string name="music_subs_title">Escuchar música sin límites</string>
     <string name="music_subs_try_free">Probar</string>
     <string name="music_subscription_agreement">Condiciones de uso</string>
-    <string name="music_subscription_exist">Ya tienes una suscripción a VK Music</string>
     <string name="music_subscription_label_payment_type">Forma de pago</string>
     <string name="music_subscription_label_status">Estado de la suscripción</string>
     <string name="music_subscription_purchase_btn_title">Suscribirse por %1$s por mes</string>

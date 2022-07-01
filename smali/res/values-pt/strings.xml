@@ -2067,7 +2067,6 @@ offline no aplicativo BOOM"</string>
 sem limites"</string>
     <string name="music_subs_try_free">Experimentar</string>
     <string name="music_subscription_agreement">Termos e Condições</string>
-    <string name="music_subscription_exist">Você já tem a assinatura de música</string>
     <string name="music_subscription_label_payment_type">Meio de pagamento</string>
     <string name="music_subscription_label_status">Status de assinatura</string>
     <string name="music_subscription_purchase_btn_title">Assinar por %1$s por mês</string>
