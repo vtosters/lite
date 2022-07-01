@@ -101,10 +101,6 @@
     .line 6
     iget-object p1, p0, Lcom/vk/stories/clickable/stickers/j/LottieAnimation;->b:Lcom/airbnb/lottie/LottieDrawable;
 
-    invoke-static {v0}, Lru/vtosters/lite/utils/Preferences;->loopedanimstickers(I)I
-
-    move-result v0
-
     invoke-virtual {p1, v0}, Lcom/airbnb/lottie/LottieDrawable;->d(I)V
 
     .line 7

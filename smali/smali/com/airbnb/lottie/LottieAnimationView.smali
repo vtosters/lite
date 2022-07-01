@@ -418,10 +418,6 @@
     .line 17
     iget-object v0, p0, Lcom/airbnb/lottie/LottieAnimationView;->c:Lcom/airbnb/lottie/LottieDrawable;
 
-    invoke-static {v3}, Lru/vtosters/lite/utils/Preferences;->loopedanimstickers(I)I
-
-    move-result v3
-
     invoke-virtual {v0, v3}, Lcom/airbnb/lottie/LottieDrawable;->d(I)V
 
     .line 18
@@ -988,10 +984,6 @@
     const/4 p1, 0x0
 
     :goto_0
-    invoke-static {p1}, Lru/vtosters/lite/utils/Preferences;->loopedanimstickers(I)I
-
-    move-result p1
-
     invoke-virtual {v0, p1}, Lcom/airbnb/lottie/LottieDrawable;->d(I)V
 
     return-void
@@ -2020,10 +2012,6 @@
 
     .line 1
     iget-object v0, p0, Lcom/airbnb/lottie/LottieAnimationView;->c:Lcom/airbnb/lottie/LottieDrawable;
-
-    invoke-static {p1}, Lru/vtosters/lite/utils/Preferences;->loopedanimstickers(I)I
-
-    move-result p1
 
     invoke-virtual {v0, p1}, Lcom/airbnb/lottie/LottieDrawable;->d(I)V
 
