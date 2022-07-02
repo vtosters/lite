@@ -1,5 +1,6 @@
 package ru.vtosters.lite.utils;
 
+import static android.graphics.Bitmap.*;
 import static androidx.core.content.ContextCompat.getDrawable;
 import static ru.vtosters.lite.utils.CacheUtils.getInstance;
 import static ru.vtosters.lite.utils.LocaleUtils.getLocale;
@@ -171,27 +172,32 @@ public class Globals{
         return extendedUserProfile.a;
     }
 
-    public static Drawable getDrawableFromUrl(String url, String nopic, Boolean rounded){
+    public static Drawable getDrawableFromUrl(String url, String def, Boolean rounded, Boolean scaled){
         try {
             URL aryURI = new URL(url);
             StrictMode.ThreadPolicy policy = new StrictMode.ThreadPolicy.Builder().permitAll().build();
-            StrictMode.setThreadPolicy(policy);
+            StrictMode.setThreadPolicy(policy); // fix get pic
 
             URLConnection conn = aryURI.openConnection();
             InputStream is = conn.getInputStream();
             Bitmap bmp = BitmapFactory.decodeStream(is);
 
+            bmp = rounded? getBitmapClippedCircle(bmp) : bmp; // rounding
 
-            return new BitmapDrawable(getResources(), rounded? Bitmap.createScaledBitmap(getBitmapClippedCircle(bmp), convertDpToPixel(256), convertDpToPixel(256), true) : bmp);
+            bmp = scaled? createScaledBitmap(bmp, convertDpToPixel(256), convertDpToPixel(256), true) : bmp; // scaling
+
+            return new BitmapDrawable(getResources(), bmp); // return our drawable
         } catch (Exception e) {
-            return getDrawable(getContext(), getIdentifier(nopic, "drawable"));
+            if(def == null) return null; // default pic can be null
+
+            return getDrawable(getContext(), getIdentifier(def, "drawable")); // get default drawable via res
         }
     }
 
     public static Bitmap getBitmapClippedCircle(Bitmap bitmap){
         final int width = bitmap.getWidth();
         final int height = bitmap.getHeight();
-        final Bitmap outputBitmap = Bitmap.createBitmap(width, height, Bitmap.Config.ARGB_8888);
+        final Bitmap outputBitmap = createBitmap(width, height, Config.ARGB_8888);
 
         final Path path = new Path();
         path.addCircle(
