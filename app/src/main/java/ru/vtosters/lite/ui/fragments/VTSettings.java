@@ -123,7 +123,7 @@ public class VTSettings extends MaterialPreferenceToolbarFragment{
         int vtosterXml = getIdentifier("empty", "xml");
         this.addPreferencesFromResource(vtosterXml);
 
-        PreferencesUtil.addPreferenceDrawable(this, "", "Аккаунты", getUsername() + (hasVerification() ? Globals.getString("thanksfordonate") : Globals.getString("getdonate")), getDrawableFromUrl(getUserPhoto(), "ic_user_circle_outline_28"), preference -> {
+        PreferencesUtil.addPreferenceDrawable(this, "", "Аккаунты", getUsername() + (hasVerification() ? Globals.getString("thanksfordonate") : Globals.getString("getdonate")), getDrawableFromUrl(getUserPhoto(), "ic_user_circle_outline_28", true), preference -> {
             AuthBridge.logout();
             restartApplication();
             return false;
