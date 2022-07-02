@@ -171,7 +171,7 @@ public class Globals{
         return extendedUserProfile.a;
     }
 
-    public static Drawable getDrawableFromUrl(String url, String nopic){
+    public static Drawable getDrawableFromUrl(String url, String nopic, Boolean rounded){
         try {
             URL aryURI = new URL(url);
             StrictMode.ThreadPolicy policy = new StrictMode.ThreadPolicy.Builder().permitAll().build();
@@ -181,7 +181,8 @@ public class Globals{
             InputStream is = conn.getInputStream();
             Bitmap bmp = BitmapFactory.decodeStream(is);
 
-            return new BitmapDrawable(getResources(), bmp);
+
+            return new BitmapDrawable(getResources(), rounded? Bitmap.createScaledBitmap(getBitmapClippedCircle(bmp), convertDpToPixel(256), convertDpToPixel(256), true) : bmp);
         } catch (Exception e) {
             return getDrawable(getContext(), getIdentifier(nopic, "drawable"));
         }
