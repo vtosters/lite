@@ -2,6 +2,7 @@ package ru.vtosters.lite.utils;
 
 import static java.lang.System.clearProperty;
 import static java.lang.System.getProperties;
+import static ru.vtosters.lite.utils.Globals.edit;
 import static ru.vtosters.lite.utils.Globals.getPrefsValue;
 import static ru.vtosters.lite.utils.Preferences.getBoolValue;
 
@@ -15,7 +16,7 @@ public class Proxy{
         String oauth = "oauth.vk.com";
         String vkstatic = "static.vk.com";
 
-        String proxproxyapi = getPrefsValue("proxyapi");
+        String proxyapi = getPrefsValue("proxyapi");
         String proxyoauth = getPrefsValue("proxyoauth");
         String proxystatic = getPrefsValue("proxystatic");
 
@@ -23,13 +24,13 @@ public class Proxy{
             return link;
         }
 
-        if(proxproxyapi.isEmpty() || proxyoauth.isEmpty() || proxystatic.isEmpty()){
-            Log.d("VTLite", "Proxy is not set" + " " + proxproxyapi + " " + proxyoauth + " " + proxystatic);
+        if(proxyapi.isEmpty() || proxyoauth.isEmpty() || proxystatic.isEmpty()){
+            Log.d("VTLite", "Proxy is not set" + " " + proxyapi + " " + proxyoauth + " " + proxystatic);
             return link;
         }
 
         if(link.contains(vkapi)){
-            return link.replace(proxproxyapi, vkapi);
+            return link.replace(proxyapi, vkapi);
         }
 
         if(link.contains(oauth)){
