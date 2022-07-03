@@ -115,7 +115,7 @@ public class VTSettings extends MaterialPreferenceToolbarFragment{
         String themessumm = getValAsString("vtlthemessumm", navbar());
         String tgssumm = getTGSsumm();
         String interfacesumm = getValAsString("vtlinterfacesumm", shortinfo());
-        String proxysumm = getValAsString("vtlproxysumm", !getPrefsValue("proxy").equals("noproxy"));
+        String proxysumm = getValAsString("vtlproxysumm", getPrefsValue("proxy").equals("noproxy"));
         String othersumm = getValAsString("vtlothersumm", vtverif());
         String ssfs = getSSFSsumm();
         String about = "Commit: " + getBuildNumber();
