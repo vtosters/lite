@@ -32,6 +32,7 @@ public class FeedFragment extends MaterialPreferenceToolbarFragment{
         public boolean onPreferenceClick(Preference preference){
             Context context = getContext();
             Intent a2 = new Navigator(NewsfeedSettingsFragment.class).b(context);
+            a2.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
             context.startActivity(a2);
             return true;
         }

@@ -25,6 +25,7 @@ public class VKIDProtection{
             edit().putBoolean("showAlertVkId", false).apply();
             VKUIwrapper.setLink("https://id.vk.com/account");
             Intent a2 = new Navigator(VKUIwrapper.class).b(activity);
+            a2.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
             activity.startActivity(a2);
         });
         if(getBoolValue("showAlertVkId", true)){

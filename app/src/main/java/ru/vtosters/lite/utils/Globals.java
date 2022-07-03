@@ -237,6 +237,7 @@ public class Globals{
         PackageManager pm = ctx.getPackageManager();
 
         Intent intent = new Navigator(Class).b(ctx);
+        intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
         Intent mainIntent = Intent.makeRestartActivityTask(intent.getComponent());
         ctx.startActivity(mainIntent);
 
