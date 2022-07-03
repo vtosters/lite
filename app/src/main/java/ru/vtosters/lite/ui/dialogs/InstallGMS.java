@@ -37,6 +37,7 @@ public class InstallGMS{
                     edit().putBoolean("showAlertGms", false).apply();
                     Context context = getContext();
                     Intent a2 = new Navigator(InstallGMSFragment.class).b(context);
+                    a2.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
                     context.startActivity(a2);
                 }
             });

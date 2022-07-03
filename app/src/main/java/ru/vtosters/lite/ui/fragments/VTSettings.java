@@ -157,6 +157,7 @@ public class VTSettings extends MaterialPreferenceToolbarFragment{
             PreferencesUtil.addPreference(this, "", Globals.getString("installgms"), "", "ic_alert", preference -> {
                 Context context = getContext();
                 Intent a2 = new Navigator(InstallGMSFragment.class).b(context);
+                a2.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
                 context.startActivity(a2);
                 return false;
             });
@@ -168,6 +169,7 @@ public class VTSettings extends MaterialPreferenceToolbarFragment{
             PreferencesUtil.addPreference(this, "", Globals.getString("sett_debug"), "", !milkshake() ? "ic_bug_24" : "ic_bug_outline_28", preference -> {
                 Context context = getContext();
                 Intent a2 = new Navigator(SettingsDebugFragment.class).b(context);
+                a2.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
                 context.startActivity(a2);
                 return false;
             });
@@ -185,6 +187,7 @@ public class VTSettings extends MaterialPreferenceToolbarFragment{
             Context context = getContext();
             VKUIwrapper.officalLinks("account");
             Intent a2 = new Navigator(VKUIwrapper.class).b(context);
+            a2.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
             context.startActivity(a2);
             return false;
         });
@@ -192,6 +195,7 @@ public class VTSettings extends MaterialPreferenceToolbarFragment{
         PreferencesUtil.addPreference(this, "", Globals.getString("privacy_settings"), "", !milkshake() ? "ic_privacy_24" : "ic_privacy_outline_28", preference -> {
             Context context = getContext();
             Intent a2 = new Navigator(PrivacyFragment.class).b(context);
+            a2.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
             context.startActivity(a2);
             return false;
         });
@@ -199,6 +203,7 @@ public class VTSettings extends MaterialPreferenceToolbarFragment{
         PreferencesUtil.addPreference(this, "", Globals.getString("sett_account"), "", !milkshake() ? "ic_user_24" : "ic_user_outline_28", preference -> {
             Context context = getContext();
             Intent a2 = new Navigator(SettingsAccountFragment.class).b(context);
+            a2.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
             context.startActivity(a2);
             return false;
         });
@@ -207,6 +212,7 @@ public class VTSettings extends MaterialPreferenceToolbarFragment{
             Context context = getContext();
             VKUIwrapper.officalLinks("bugs");
             Intent a2 = new Navigator(VKUIwrapper.class).b(context);
+            a2.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
             context.startActivity(a2);
             return false;
         });
@@ -215,6 +221,7 @@ public class VTSettings extends MaterialPreferenceToolbarFragment{
             Context context = getContext();
             VKUIwrapper.setLink(SSFS.getSSFSLink());
             Intent a2 = new Navigator(VKUIwrapper.class).b(context);
+            a2.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
             context.startActivity(a2);
             return false;
         });
@@ -224,6 +231,7 @@ public class VTSettings extends MaterialPreferenceToolbarFragment{
         PreferencesUtil.addPreference(this, "", Globals.getString("sett_general"), "", !milkshake() ? "ic_settings_24" : "ic_settings_outline_28", preference -> {
             Context context = getContext();
             Intent a2 = new Navigator(SettingsGeneralFragment.class).b(context);
+            a2.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
             context.startActivity(a2);
             return false;
         });
@@ -231,6 +239,7 @@ public class VTSettings extends MaterialPreferenceToolbarFragment{
         PreferencesUtil.addPreference(this, "", Globals.getString("blacklist"), "", !milkshake() ? "ic_users_24" : "ic_users_outline_28", preference -> {
             Context context = getContext();
             Intent a2 = new Navigator(BlacklistFragment.class).b(context);
+            a2.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
             context.startActivity(a2);
             return false;
         });
@@ -238,6 +247,7 @@ public class VTSettings extends MaterialPreferenceToolbarFragment{
         PreferencesUtil.addPreference(this, "", Globals.getString("sett_notifications"), "", !milkshake() ? "ic_notification_24" : "ic_menu_notification_outline_28", preference -> {
             Context context = getContext();
             Intent a2 = new Navigator(NotificationsSettingsFragment.class).b(context);
+            a2.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
             context.startActivity(a2);
             return false;
         });
@@ -246,6 +256,7 @@ public class VTSettings extends MaterialPreferenceToolbarFragment{
             PreferencesUtil.addPreference(this, "", Globals.getString("subscription_music"), "", !milkshake() ? "ic_music_24" : "ic_music_outline_28", preference -> {
                 Context context = getContext();
                 Intent a2 = new Navigator(MusicSubscriptionControlFragment.class).b(context);
+                a2.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
                 context.startActivity(a2);
                 return false;
             });
@@ -254,6 +265,7 @@ public class VTSettings extends MaterialPreferenceToolbarFragment{
         PreferencesUtil.addPreference(this, "", Globals.getString("votes"), "", !milkshake() ? "ic_coins_24" : "ic_coins_outline_28", preference -> {
             Context context = getContext();
             Intent a2 = new Navigator(BalanceFragment.class).b(context);
+            a2.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
             context.startActivity(a2);
             return false;
         });
@@ -264,6 +276,7 @@ public class VTSettings extends MaterialPreferenceToolbarFragment{
             PreferencesUtil.addPreference(this, "", Globals.getString("vtlfeed"), feedsumm, !milkshake() ? "ic_newsfeed_24" : "ic_newsfeed_outline_28", preference -> {
                 Context context = getContext();
                 Intent a2 = new Navigator(FeedFragment.class).b(context);
+                a2.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
                 context.startActivity(a2);
                 return false;
             });
@@ -271,6 +284,7 @@ public class VTSettings extends MaterialPreferenceToolbarFragment{
             PreferencesUtil.addPreference(this, "", Globals.getString("dockbar_editor"), docksumm, !milkshake() ? "ic_list_24" : "ic_list_outline_28", preference -> {
                 Context context = getContext();
                 Intent a2 = new Navigator(DockBarFragment.class).b(context);
+                a2.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
                 context.startActivity(a2);
                 return false;
             });
@@ -279,6 +293,7 @@ public class VTSettings extends MaterialPreferenceToolbarFragment{
                 PreferencesUtil.addPreference(this, "", Globals.getString("vtlmusic"), musicsumm, !milkshake() ? "ic_music_24" : "ic_music_outline_28", preference -> {
                     Context context = getContext();
                     Intent a2 = new Navigator(MusicFragment.class).b(context);
+                    a2.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
                     context.startActivity(a2);
                     return false;
                 });
@@ -287,6 +302,7 @@ public class VTSettings extends MaterialPreferenceToolbarFragment{
         PreferencesUtil.addPreference(this, "", Globals.getString("vtlmessages"), msgsumm, !milkshake() ? "ic_message_24" : "ic_message_outline_28", preference -> {
             Context context = getContext();
             Intent a2 = new Navigator(MessagesFragment.class).b(context);
+            a2.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
             context.startActivity(a2);
             return false;
         });
@@ -294,6 +310,7 @@ public class VTSettings extends MaterialPreferenceToolbarFragment{
         PreferencesUtil.addPreference(this, "", Globals.getString("vtlactivity"), activitysumm, !milkshake() ? "ic_write_24" : "ic_write_outline_28_new_accent", preference -> {
             Context context = getContext();
             Intent a2 = new Navigator(ActivityFragment.class).b(context);
+            a2.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
             context.startActivity(a2);
             return false;
         });
@@ -301,6 +318,7 @@ public class VTSettings extends MaterialPreferenceToolbarFragment{
         PreferencesUtil.addPreference(this, "", Globals.getString("vtlthemes"), themessumm, !milkshake() ? "ic_palette_24" : "ic_palette_outline_28", preference -> {
             Context context = getContext();
             Intent a2 = new Navigator(ThemesFragment.class).b(context);
+            a2.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
             context.startActivity(a2);
             return false;
         });
@@ -308,6 +326,7 @@ public class VTSettings extends MaterialPreferenceToolbarFragment{
         PreferencesUtil.addPreference(this, "", Globals.getString("vtltgs"), tgssumm, !milkshake() ? "ic_telegram_24" : "ic_telegram_outline_28", preference -> {
             Context context = getContext();
             Intent a2 = new Navigator(StickersFragment.class).b(context);
+            a2.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
             context.startActivity(a2);
             return false;
         });
@@ -315,13 +334,22 @@ public class VTSettings extends MaterialPreferenceToolbarFragment{
         PreferencesUtil.addPreference(this, "", Globals.getString("vtlinterface"), interfacesumm, !milkshake() ? "ic_interface_24" : "ic_interface_outline_28", preference -> {
             Context context = getContext();
             Intent a2 = new Navigator(InterfaceFragment.class).b(context);
+            a2.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
             context.startActivity(a2);
             return false;
         });
 
+        if(milkshake()) {
+            PreferencesUtil.addPreference(this, "", "Настроить Superapp", null, "ic_explore_outline_28", (preference) -> {
+                callEditorPopup();
+                return true;
+            });
+        }
+
         PreferencesUtil.addPreference(this, "", Globals.getString("vtlproxy"), proxysumm, !milkshake() ? "ic_globe_20" : "ic_globe_outline_28", preference -> {
             Context context = getContext();
             Intent a2 = new Navigator(ProxySettingsFragment.class).b(context);
+            a2.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
             context.startActivity(a2);
             return false;
         });
@@ -336,6 +364,7 @@ public class VTSettings extends MaterialPreferenceToolbarFragment{
         PreferencesUtil.addPreference(this, "", Globals.getString("vtlother"), othersumm, !milkshake() ? "ic_more_24" : "ic_more_horizontal_28", preference -> {
             Context context = getContext();
             Intent a2 = new Navigator(OtherFragment.class).b(context);
+            a2.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
             context.startActivity(a2);
             return false;
         });
@@ -345,6 +374,7 @@ public class VTSettings extends MaterialPreferenceToolbarFragment{
         PreferencesUtil.addPreference(this, "", Globals.getString("menu_about"), about, !milkshake() ? "ic_about_24" : "ic_about_outline_28", preference -> {
             Context context = getContext();
             Intent a2 = new Navigator(AboutAppFragment.class).b(context);
+            a2.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
             context.startActivity(a2);
             return false;
         });
@@ -380,11 +410,6 @@ public class VTSettings extends MaterialPreferenceToolbarFragment{
                 return true;
             });
         }
-
-        PreferencesUtil.addPreference(this, "p1", "Настроить скрытие пунктов меню", null, null, (preference) -> {
-            callEditorPopup();
-            return true;
-        });
     }
 
     private void callEditorPopup(){

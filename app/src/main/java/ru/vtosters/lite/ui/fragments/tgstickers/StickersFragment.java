@@ -121,6 +121,7 @@ public class StickersFragment extends MaterialPreferenceToolbarFragment{
             makeText(getContext(), toast, LENGTH_SHORT).show();
         }
         var intent = new Navigator(StickersPreferencesFragment.class, new Bundle()).b(getContext());
+        intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
         super.getContext().startActivity(intent);
     }
 
