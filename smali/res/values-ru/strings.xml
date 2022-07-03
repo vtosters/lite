@@ -5764,7 +5764,7 @@
     <string name="vtlthemessumm">Покраска навбара</string>
     <string name="vtltgssumm">Установлено паков</string>
     <string name="vtlinterfacesumm">Округление чисел</string>
-    <string name="vtlproxysumm">Проксирование</string>
+    <string name="vtlproxysumm">Тип проксирования</string>
     <string name="vtlothersumm">Отображение верификаций</string>
     <string name="vtlmultiaccsumm">Доступно аккаунтов</string>
     <string name="vtlhidesumm">Скрыть подписи в настройках</string>

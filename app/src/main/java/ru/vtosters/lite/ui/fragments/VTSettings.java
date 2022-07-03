@@ -8,6 +8,7 @@ import static ru.vtosters.lite.ui.vkui.VBottomSheetBuilder.VBSContent;
 import static ru.vtosters.lite.utils.About.getBuildNumber;
 import static ru.vtosters.lite.utils.About.getCommitLink;
 import static ru.vtosters.lite.utils.CacheUtils.humanReadableByteCountBin;
+import static ru.vtosters.lite.utils.Globals.*;
 import static ru.vtosters.lite.utils.Globals.edit;
 import static ru.vtosters.lite.utils.Globals.getDrawableFromUrl;
 import static ru.vtosters.lite.utils.Globals.getIdentifier;
@@ -19,6 +20,7 @@ import static ru.vtosters.lite.utils.Globals.restartApplication;
 import static ru.vtosters.lite.utils.Preferences.ads;
 import static ru.vtosters.lite.utils.Preferences.devmenu;
 import static ru.vtosters.lite.utils.Preferences.disableSettingsSumms;
+import static ru.vtosters.lite.utils.Preferences.getBoolValue;
 import static ru.vtosters.lite.utils.Preferences.hasSpecialVerif;
 import static ru.vtosters.lite.utils.Preferences.hasVerification;
 import static ru.vtosters.lite.utils.Preferences.isValidSignature;
@@ -27,6 +29,7 @@ import static ru.vtosters.lite.utils.Preferences.navbar;
 import static ru.vtosters.lite.utils.Preferences.offline;
 import static ru.vtosters.lite.utils.Preferences.shortinfo;
 import static ru.vtosters.lite.utils.Preferences.vkme;
+import static ru.vtosters.lite.utils.Proxy.*;
 import static ru.vtosters.lite.utils.Themes.getDarkTheme;
 import static ru.vtosters.lite.utils.Themes.getLightTheme;
 import static ru.vtosters.lite.utils.Themes.setTheme;
@@ -69,7 +72,7 @@ import ru.vtosters.lite.utils.VKUIwrapper;
 
 public class VTSettings extends MaterialPreferenceToolbarFragment{
     public static String getValAsString(String stringid, Boolean value){
-        if(disableSettingsSumms()) return "";
+        if(disableSettingsSumms()) return null;
 
         if(value){
             return Globals.getString(stringid) + ": " + Globals.getString("vtlsettenabled");
@@ -79,7 +82,7 @@ public class VTSettings extends MaterialPreferenceToolbarFragment{
     }
 
     public static String getSSFSsumm(){
-        if(disableSettingsSumms()) return "";
+        if(disableSettingsSumms()) return null;
 
         if(hasSpecialVerif())
             return Globals.getString("vtlssfssumm") + ": " + Globals.getString("vtlsettverifyes");
@@ -88,15 +91,25 @@ public class VTSettings extends MaterialPreferenceToolbarFragment{
     }
 
     public static String getDocksumm(){
-        if(disableSettingsSumms()) return "";
+        if(disableSettingsSumms()) return null;
 
         return Globals.getString("vtldocksumm") + ": " + DockBarManager.getInstance().getTabCount();
     }
 
     public static String getTGSsumm(){
-        if(disableSettingsSumms()) return "";
+        if(disableSettingsSumms()) return null;
 
         return Globals.getString("vtltgssumm") + ": " + TelegramStickersService.getInstance(Globals.getContext()).getPacksListReference().size();
+    }
+
+    public static String getProxysumm(){
+        var type = getPrefsValue("proxy");
+
+        if(disableSettingsSumms()) return null;
+
+        if(type.equals("noproxy")) type = Globals.getString("vtlsettdisabled");
+
+        return Globals.getString("vtlproxysumm") + ": " + type;
     }
 
     public static SharedPreferences getCurrentAccount(){
@@ -115,7 +128,7 @@ public class VTSettings extends MaterialPreferenceToolbarFragment{
         String themessumm = getValAsString("vtlthemessumm", navbar());
         String tgssumm = getTGSsumm();
         String interfacesumm = getValAsString("vtlinterfacesumm", shortinfo());
-        String proxysumm = getValAsString("vtlproxysumm", getPrefsValue("proxy").equals("noproxy"));
+        String proxysumm = getProxysumm();
         String othersumm = getValAsString("vtlothersumm", vtverif());
         String ssfs = getSSFSsumm();
         String about = "Commit: " + getBuildNumber();
