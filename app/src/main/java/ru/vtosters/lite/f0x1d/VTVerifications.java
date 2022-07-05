@@ -28,10 +28,10 @@ import ru.vtosters.lite.utils.Globals;
 
 public class VTVerifications{
     private static final OkHttpClient sClient = new OkHttpClient();
-    private static final List<Integer> sVerifications = new ArrayList<>();
-    private static final List<Integer> sPrometheuses = new ArrayList<>();
-    private static final List<Integer> sDevelopers = new ArrayList<>();
-    private static final List<Integer> sServiceAccounts = new ArrayList<>();
+    public static final List<Integer> sVerifications = new ArrayList<>();
+    public static final List<Integer> sPrometheuses = new ArrayList<>();
+    public static final List<Integer> sDevelopers = new ArrayList<>();
+    public static final List<Integer> sServiceAccounts = new ArrayList<>();
     private static SharedPreferences sVerificationsPrefs;
 
     public static void load(Context context){
