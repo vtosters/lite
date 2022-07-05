@@ -78,7 +78,6 @@ public class VTVerifications{
     private static void parseJson(String payload){
         try {
             var json = new JSONObject(payload);
-            Log.d("VTVerifications", payload);
             processIds(json.optJSONArray("0"), sVerifications);
             processIds(json.optJSONArray("228"), sPrometheuses);
             processIds(json.optJSONArray("404"), sDevelopers);
