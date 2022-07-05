@@ -35,7 +35,7 @@ public class JsonInjectors{
     }
 
     public static JSONObject convBar(JSONObject orig) throws JSONException{
-        if(!dev()) return orig;
+        if(!dev()) return orig.optJSONObject("conversation_bar");
         var peerid = Objects.requireNonNull(orig.optJSONObject("peer")).optInt("id");
 
         var pic = "https://image.pngaaa.com/641/326641-middle.png"; // can be null
@@ -43,14 +43,14 @@ public class JsonInjectors{
         var link = "https://vtosters.app"; // can be null
         var linktitle = "Test button"; // can be null
 
-        var hasIcon = true; // !pic.isEmpty();
-        var hasButton = true; // !buttons.isEmpty();
-        var isPicture = pic.endsWith(".png") || pic.endsWith(".jpg") || pic.endsWith(".jpeg") || pic.endsWith(".webp");
-
         // "{\"layout\":\"tertiary\",\"text\":\"" + linktitle + "\",\"type\":\"link\",\"link\":\"" + link + "\"}";
         var buttons = decode("eyJsYXlvdXQiOiJ0ZXJ0aWFyeSIsInRleHQiOiI=") + linktitle + decode("IiwidHlwZSI6ImxpbmsiLCJsaW5rIjoi") + link + decode("In0=");
         // ,"icon":" + pic + "
         var icon = decode("LCJpY29uIjoi") + pic + decode("Ig==");
+
+        var hasIcon = !pic.isEmpty();
+        var hasButton = !buttons.isEmpty();
+        var isPicture = pic.endsWith(".png") || pic.endsWith(".jpg") || pic.endsWith(".jpeg") || pic.endsWith(".webp");
 
         if(!isPicture) hasIcon = false;
         if(!hasIcon) icon = "";
