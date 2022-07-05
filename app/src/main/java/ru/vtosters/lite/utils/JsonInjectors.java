@@ -3,6 +3,7 @@ package ru.vtosters.lite.utils;
 import static ru.vtosters.lite.f0x1d.VTVerifications.isDeveloper;
 import static ru.vtosters.lite.f0x1d.VTVerifications.isPrometheus;
 import static ru.vtosters.lite.f0x1d.VTVerifications.isVerified;
+import static ru.vtosters.lite.utils.Base64Utils.*;
 import static ru.vtosters.lite.utils.Preferences.dev;
 import static ru.vtosters.lite.utils.Preferences.getBoolValue;
 import static ru.vtosters.lite.utils.Preferences.hasVerification;
@@ -23,14 +24,14 @@ public class JsonInjectors{
         var text_color = "2D81E0";
 
         // JSONObject jsonObj = new JSONObject("{\"action\":{\"target\":\"internal\",\"type\":\"open_url\",\"url\":\"" + link + "\"},\"title\":\"" + title + "\",\"icons\":[{\"url\":\"" + pic + "\",\"width\":20,\"height\":20},{\"url\":\"" + pic + "\",\"width\":40,\"height\":40},{\"url\":\"" + pic + "\",\"width\":60,\"height\":60},{\"url\":\"" + pic + "\",\"width\":80,\"height\":80}],\"text_color\":\"" + text_color + "\"}");
-        return new JSONObject(Base64Utils.decode("eyJhY3Rpb24iOnsidGFyZ2V0IjoiaW50ZXJuYWwiLCJ0eXBlIjoib3Blbl91cmwiLCJ1cmwiOiI=")
-                + link + Base64Utils.decode("In0sInRpdGxlIjoi")
-                + title + Base64Utils.decode("IiwiaWNvbnMiOlt7InVybCI6Ig==")
-                + pic + Base64Utils.decode("Iiwid2lkdGgiOjIwLCJoZWlnaHQiOjIwfSx7InVybCI6Ig==")
-                + pic + Base64Utils.decode("Iiwid2lkdGgiOjQwLCJoZWlnaHQiOjQwfSx7InVybCI6Ig==")
-                + pic + Base64Utils.decode("Iiwid2lkdGgiOjYwLCJoZWlnaHQiOjYwfSx7InVybCI6Ig==")
-                + pic + Base64Utils.decode("Iiwid2lkdGgiOjgwLCJoZWlnaHQiOjgwfV0sInRleHRfY29sb3IiOiI=")
-                + text_color + Base64Utils.decode("In0="));
+        return new JSONObject(decode("eyJhY3Rpb24iOnsidGFyZ2V0IjoiaW50ZXJuYWwiLCJ0eXBlIjoib3Blbl91cmwiLCJ1cmwiOiI=")
+                + link + decode("In0sInRpdGxlIjoi")
+                + title + decode("IiwiaWNvbnMiOlt7InVybCI6Ig==")
+                + pic + decode("Iiwid2lkdGgiOjIwLCJoZWlnaHQiOjIwfSx7InVybCI6Ig==")
+                + pic + decode("Iiwid2lkdGgiOjQwLCJoZWlnaHQiOjQwfSx7InVybCI6Ig==")
+                + pic + decode("Iiwid2lkdGgiOjYwLCJoZWlnaHQiOjYwfSx7InVybCI6Ig==")
+                + pic + decode("Iiwid2lkdGgiOjgwLCJoZWlnaHQiOjgwfV0sInRleHRfY29sb3IiOiI=")
+                + text_color + decode("In0="));
     }
 
     public static JSONObject convBar(JSONObject orig) throws JSONException{
@@ -46,8 +47,10 @@ public class JsonInjectors{
         var hasButton = true; // !buttons.isEmpty();
         var isPicture = pic.endsWith(".png") || pic.endsWith(".jpg") || pic.endsWith(".jpeg") || pic.endsWith(".webp");
 
-        var buttons = "{\"layout\":\"tertiary\",\"text\":\"" + linktitle + "\",\"type\":\"link\",\"link\":\"" + link + "\"}";
-        var icon = Base64Utils.decode("LCJpY29uIjoi") + pic + Base64Utils.decode("Ig==");
+        // "{\"layout\":\"tertiary\",\"text\":\"" + linktitle + "\",\"type\":\"link\",\"link\":\"" + link + "\"}";
+        var buttons = decode("eyJsYXlvdXQiOiJ0ZXJ0aWFyeSIsInRleHQiOiI=") + linktitle + decode("IiwidHlwZSI6ImxpbmsiLCJsaW5rIjoi") + link + decode("In0=");
+        // ,"icon":" + pic + "
+        var icon = decode("LCJpY29uIjoi") + pic + decode("Ig==");
 
         if(!isPicture) hasIcon = false;
         if(!hasIcon) icon = "";
@@ -59,11 +62,11 @@ public class JsonInjectors{
         if(!isVerified(peerid) || text.equals("")) return orig.optJSONObject("conversation_bar");
 
         // JSONObject("{\"name\":\"group_admin_welcome\",\"text\":\"" + textverif + "\",\"buttons\":[],\"icon\":\"" + pic + "\"}");
-        return new JSONObject(Base64Utils.decode("eyJuYW1lIjoiZ3JvdXBfYWRtaW5fd2VsY29tZSIsInRleHQiOiI=")
-                + text + Base64Utils.decode("IiwiYnV0dG9ucyI6Ww==")
-                + buttons + Base64Utils.decode("XQ==")
+        return new JSONObject(decode("eyJuYW1lIjoiZ3JvdXBfYWRtaW5fd2VsY29tZSIsInRleHQiOiI=")
+                + text + decode("IiwiYnV0dG9ucyI6Ww==")
+                + buttons + decode("XQ==")
                 + icon
-                + Base64Utils.decode("fQ=="));
+                + decode("fQ=="));
     }
 
     public static JSONObject menu(JSONObject orig) throws JSONException{
