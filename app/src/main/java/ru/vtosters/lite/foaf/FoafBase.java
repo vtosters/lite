@@ -5,7 +5,7 @@ import static android.widget.Toast.makeText;
 import static ru.vtosters.lite.utils.Globals.getIdentifier;
 import static ru.vtosters.lite.utils.Globals.getPrefsValue;
 import static ru.vtosters.lite.utils.Globals.getString;
-import static ru.vtosters.lite.utils.Proxy.proxy;
+import static ru.vtosters.lite.utils.Proxy.apiproxy;
 
 import android.app.ProgressDialog;
 import android.content.Context;
@@ -49,7 +49,7 @@ public class FoafBase{
     private static String getLink(int i){
         String str;
         StringBuilder sb;
-        if(proxy()){
+        if(apiproxy()){
             sb = new StringBuilder();
             str = "https://" + getPrefsValue("proxyapi") + "/_/vk.com/foaf.php?id=";
         } else {
