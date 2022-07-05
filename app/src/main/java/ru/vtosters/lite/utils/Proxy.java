@@ -16,7 +16,7 @@ public class Proxy{
         var proxyoauth = getPrefsValue("proxyoauth");
         var proxystatic = getPrefsValue("proxystatic");
 
-        if(!proxy() || link.isEmpty()){
+        if(!apiproxy() || link.isEmpty()){
             return link;
         }
 
@@ -43,7 +43,7 @@ public class Proxy{
     public static String getAwayPhpCom(){
         var proxyapi = getPrefsValue("proxyapi");
 
-        if(proxy() & !proxyapi.isEmpty()){
+        if(apiproxy() & !proxyapi.isEmpty()){
             return proxyapi;
         }
 
@@ -56,7 +56,7 @@ public class Proxy{
 
         resetProxy(type);
 
-        switch(type){
+        switch(type) {
             case "zaborona":
                 properties.setProperty("socksProxyHost", "socks.zaboronahelp.pp.ua");
                 properties.setProperty("socksProxyPort", "1488");
@@ -105,57 +105,57 @@ public class Proxy{
         clearProperty("socksPortHost");
     } // Reset proxy
 
-    public static String proxyHostHTTP(){
+    private static String proxyHostHTTP(){
         var string = getPrefsValue("proxyHostHTTP");
         return string.isEmpty() ? "192.168.0.1" : string;
     }
 
-    public static String proxyHostHTTPS(){
+    private static String proxyHostHTTPS(){
         var string = getPrefsValue("proxyHostHTTPS");
         return string.isEmpty() ? "192.168.0.1" : string;
     }
 
-    public static String proxyHostSocks(){
+    private static String proxyHostSocks(){
         var string = getPrefsValue("proxyHostSocks");
         return string.isEmpty() ? "192.168.0.1" : string;
     }
 
-    public static String proxyPortHTTP(){
+    private static String proxyPortHTTP(){
         var string = getPrefsValue("proxyPortHTTP");
         return string.isEmpty() ? "8888" : string;
     }
 
-    public static String proxyPortHTTPS(){
+    private static String proxyPortHTTPS(){
         var string = getPrefsValue("proxyPortHTTPS");
         return string.isEmpty() ? "8888" : string;
     }
 
-    public static String proxyPortSocks(){
+    private static String proxyPortSocks(){
         var string = getPrefsValue("proxyPortSocks");
         return string.isEmpty() ? "8888" : string;
     }
 
-    public static String proxyUserHTTP(){
+    private static String proxyUserHTTP(){
         var string = getPrefsValue("proxyUserHTTP");
         return string.isEmpty() ? "" : string;
     }
 
-    public static String proxyUserHTTPS(){
+    private static String proxyUserHTTPS(){
         var string = getPrefsValue("proxyUserHTTPS");
         return string.isEmpty() ? "" : string;
     }
 
-    public static String proxyPassHTTP(){
+    private static String proxyPassHTTP(){
         var string = getPrefsValue("proxyPassHTTP");
         return string.isEmpty() ? "" : string;
     }
 
-    public static String proxyPassHTTPS(){
+    private static String proxyPassHTTPS(){
         String string = getPrefsValue("proxyPassHTTPS");
         return string.isEmpty() ? "" : string;
     }
 
-    public static boolean proxy(){
+    public static boolean apiproxy(){
         return getPrefsValue("proxy").equals("apiproxy");
     }
 }

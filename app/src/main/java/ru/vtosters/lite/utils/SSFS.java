@@ -7,7 +7,7 @@ import static ru.vtosters.lite.utils.Globals.getUserToken;
 import static ru.vtosters.lite.utils.LocaleUtils.getLocale;
 import static ru.vtosters.lite.utils.Preferences.dev;
 import static ru.vtosters.lite.utils.Preferences.vksans;
-import static ru.vtosters.lite.utils.Proxy.proxy;
+import static ru.vtosters.lite.utils.Proxy.apiproxy;
 import static ru.vtosters.lite.utils.Themes.isDarkTheme;
 
 public class SSFS{
@@ -32,7 +32,7 @@ public class SSFS{
     }
 
     public static String getUserProxy(){
-        return proxy() ? "1" : "0";
+        return apiproxy() ? "1" : "0";
     }
 
     public static String isVKSansEnabled(){
