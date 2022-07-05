@@ -4,6 +4,7 @@ import static java.lang.Long.MAX_VALUE;
 import static ru.vtosters.lite.f0x1d.VTVerifications.isPrometheus;
 import static ru.vtosters.lite.f0x1d.VTVerifications.isVerified;
 import static ru.vtosters.lite.utils.CacheUtils.getInstance;
+import static ru.vtosters.lite.utils.DeletedMessagesHandler.*;
 import static ru.vtosters.lite.utils.Globals.edit;
 import static ru.vtosters.lite.utils.Globals.fixGapps;
 import static ru.vtosters.lite.utils.Globals.getContext;
@@ -32,7 +33,6 @@ import java.security.NoSuchAlgorithmException;
 import ru.vtosters.lite.ui.fragments.VTSettings;
 
 public class Preferences{
-    static final boolean isDebug = Debug.isDebuggerConnected();
     public static SharedPreferences preferences = getContext().getSharedPreferences("com.vtosters.lite_preferences", Context.MODE_PRIVATE);
     public static String VERSIONNAME = "Beta";
 
@@ -40,7 +40,7 @@ public class Preferences{
         setupFilters();
         fixGapps();
         setProxy();
-        DeletedMessagesHandler.reloadMessagesList();
+        reloadMessagesList();
         registerActivities(application);
         if(dev()){
             LoadLibrary("vkopustest");
@@ -52,7 +52,6 @@ public class Preferences{
     public static void forceOffline(){
         setupFilters();
         getInstance().autoCleaningCache();
-
         edit().putBoolean("isdark", isDarkTheme()).commit();
 
         if(setoffline() && offline()){
@@ -169,7 +168,7 @@ public class Preferences{
     }
 
     public static boolean devmenu(){
-        return true; //getBoolValue("devmenu", false);
+        return getBoolValue("devmenu", false);
     }
 
     public static boolean dnr(){
