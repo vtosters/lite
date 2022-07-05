@@ -146,6 +146,8 @@
 
     iput v4, v2, Lcom/vk/dto/user/UserProfile;->b:I
 
+    invoke-static {v0}, Lru/vtosters/lite/utils/ProfileHide;->fetchInfo(Lcom/vtosters/lite/api/ExtendedUserProfile;)V
+
     .line 3
     iget-object v2, v0, Lcom/vtosters/lite/api/ExtendedUserProfile;->a:Lcom/vk/dto/user/UserProfile;
 

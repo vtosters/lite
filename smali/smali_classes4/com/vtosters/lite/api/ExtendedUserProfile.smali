@@ -509,6 +509,7 @@
 
 .field public z1:Lcom/vk/dto/common/Model;
 
+.field public z2:Ljava/lang/String;
 
 # direct methods
 .method public constructor <init>()V
