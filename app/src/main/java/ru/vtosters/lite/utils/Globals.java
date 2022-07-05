@@ -1,6 +1,8 @@
 package ru.vtosters.lite.utils;
 
-import static android.graphics.Bitmap.*;
+import static android.graphics.Bitmap.Config;
+import static android.graphics.Bitmap.createBitmap;
+import static android.graphics.Bitmap.createScaledBitmap;
 import static androidx.core.content.ContextCompat.getDrawable;
 import static ru.vtosters.lite.utils.CacheUtils.getInstance;
 import static ru.vtosters.lite.utils.LocaleUtils.getLocale;
