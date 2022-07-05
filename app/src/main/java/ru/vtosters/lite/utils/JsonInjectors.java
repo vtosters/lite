@@ -8,6 +8,9 @@ import static ru.vtosters.lite.utils.Preferences.dev;
 import static ru.vtosters.lite.utils.Preferences.getBoolValue;
 import static ru.vtosters.lite.utils.Preferences.hasVerification;
 
+import android.util.Log;
+
+import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
@@ -81,22 +84,19 @@ public class JsonInjectors{
         return orig;
     }
 
-    public static JSONObject superapp(JSONObject orig) throws JSONException{
-        var Items = orig.optJSONArray("items");
-
-        if(Items != null){
-            for(int i = 0; i < Items.length(); i++) {
-                var items = Items.optJSONObject(i);
-                var type = items.optString("type");
-
-                if(getBoolValue("superapp_" + type, false)){
-                    Items.remove(i);
-                }
-
+    public static JSONObject superapp(JSONObject json) throws JSONException{
+        var oldItems = json.optJSONArray("items");
+        var newItems = new JSONArray();
+        if (oldItems != null) {
+            for (int i = 0; i < oldItems.length(); i++) {
+                var item = oldItems.optJSONObject(i);
+                var type = item.optString("type");
+                if (!getBoolValue("superapp_" + type, false))
+                    newItems.put(item);
             }
         }
 
-        return orig;
+        return json.putOpt("items", newItems);
     }
 
     public static boolean haveDonateButton(){
