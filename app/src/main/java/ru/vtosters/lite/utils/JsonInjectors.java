@@ -3,6 +3,7 @@ package ru.vtosters.lite.utils;
 import static ru.vtosters.lite.f0x1d.VTVerifications.isDeveloper;
 import static ru.vtosters.lite.f0x1d.VTVerifications.isPrometheus;
 import static ru.vtosters.lite.f0x1d.VTVerifications.isVerified;
+import static ru.vtosters.lite.utils.Preferences.dev;
 import static ru.vtosters.lite.utils.Preferences.getBoolValue;
 import static ru.vtosters.lite.utils.Preferences.hasVerification;
 
@@ -33,24 +34,36 @@ public class JsonInjectors{
     }
 
     public static JSONObject convBar(JSONObject orig) throws JSONException{
-        var pic = "https://nyaa.shikimori.one/system/users/x160/277870.png";
-
-        var textverif = "Я не загрузил данные (9(9((";
-
+        if(!dev()) return orig;
         var peerid = Objects.requireNonNull(orig.optJSONObject("peer")).optInt("id");
 
-        if(isVerified(peerid)) textverif = "Я купил VTosters Premium";
+        var pic = "https://image.pngaaa.com/641/326641-middle.png"; // can be null
+        var text = "Я не загрузил данные (9(9((";
+        var link = "https://vtosters.app"; // can be null
+        var linktitle = "Test button"; // can be null
 
-        if(isPrometheus(peerid)) textverif = "Я купил VTosters Premium Gold Prime Pro Plus";
+        var hasIcon = true; // !pic.isEmpty();
+        var hasButton = true; // !buttons.isEmpty();
+        var isPicture = pic.endsWith(".png") || pic.endsWith(".jpg") || pic.endsWith(".jpeg") || pic.endsWith(".webp");
 
-        if(isDeveloper(peerid)) textverif = "Я создал говно";
+        var buttons = "{\"layout\":\"tertiary\",\"text\":\"" + linktitle + "\",\"type\":\"link\",\"link\":\"" + link + "\"}";
+        var icon = Base64Utils.decode("LCJpY29uIjoi") + pic + Base64Utils.decode("Ig==");
 
-        if(!isVerified(peerid)) return orig.optJSONObject("conversation_bar");
+        if(!isPicture) hasIcon = false;
+        if(!hasIcon) icon = "";
+        if(!hasButton) buttons = "";
+
+        if(isVerified(peerid)) text = "Я купил VTosters Premium";
+        if(isPrometheus(peerid)) text = "Я купил VTosters Premium Gold Prime Pro Plus";
+        if(isDeveloper(peerid)) text = "Я создал говно";
+        if(!isVerified(peerid) || text.equals("")) return orig.optJSONObject("conversation_bar");
 
         // JSONObject("{\"name\":\"group_admin_welcome\",\"text\":\"" + textverif + "\",\"buttons\":[],\"icon\":\"" + pic + "\"}");
         return new JSONObject(Base64Utils.decode("eyJuYW1lIjoiZ3JvdXBfYWRtaW5fd2VsY29tZSIsInRleHQiOiI=")
-                + textverif + Base64Utils.decode("IiwiYnV0dG9ucyI6W10sImljb24iOiI=")
-                + pic + Base64Utils.decode("In0="));
+                + text + Base64Utils.decode("IiwiYnV0dG9ucyI6Ww==")
+                + buttons + Base64Utils.decode("XQ==")
+                + icon
+                + Base64Utils.decode("fQ=="));
     }
 
     public static JSONObject menu(JSONObject orig) throws JSONException{

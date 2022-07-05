@@ -154,7 +154,7 @@ public class VTSettings extends MaterialPreferenceToolbarFragment{
             return true;
         });
 
-        if(Build.VERSION.SDK_INT >= 28 && false){ // TODO refactoring systen theme
+        if(Build.VERSION.SDK_INT >= 28 && false){ // TODO refactoring system theme
             PreferencesUtil.addMaterialSwitchPreference(this, "systemtheme", Globals.getString("appearance_theme_use_system"), Globals.getString("appearance_theme_use_system_summary"), !milkshake() ? "ic_recent_24" : "ic_recent_outline_28", true, (preference, o) -> {
                 boolean value = (boolean) o;
 
