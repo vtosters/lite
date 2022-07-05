@@ -26,6 +26,7 @@ public class ProfileHide{
    public static void injectMap(HashMap<Integer, UserPresenter.a.a> hashMap) {
        for (int i = 0; VTVerifications.sServiceAccounts.get(i) < 0; i++) {
            boolean valueOf = VTVerifications.sServiceAccounts.equals(getUserId());
+           if (valueOf) {
                hashMap.put(100, new UserPresenter.a.a(getIdentifier("service_account_admin_100_info", "string"), getIdentifier("service_account_admin_100", "color"), getIdentifier("ic_custom_avatar_id100", "drawable")));
                hashMap.put(101, new UserPresenter.a.a(getIdentifier("service_account_admin_101_info", "string"), getIdentifier("service_account_admin_101", "color"), getIdentifier("ic_custom_avatar_id101", "drawable")));
                hashMap.put(333, new UserPresenter.a.a(getIdentifier("service_account_mobile_info", "string"), getIdentifier("service_account_admin_333", "color"), getIdentifier("ic_custom_avatar_id333", "drawable")));
