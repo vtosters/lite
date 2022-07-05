@@ -32,13 +32,12 @@ public class VTVerifications{
     public static final List<Integer> sPrometheuses = new ArrayList<>();
     public static final List<Integer> sDevelopers = new ArrayList<>();
     public static final List<Integer> sServiceAccounts = new ArrayList<>();
-    private static SharedPreferences sVerificationsPrefs;
 
     public static void load(Context context){
-        sVerificationsPrefs = context.getSharedPreferences("vt_another_data", 0);
+        var prefs = context.getSharedPreferences("vt_another_data", 0);
 
-        if(!Globals.isNetworkConnected() && sVerificationsPrefs.contains("ids")){
-            parseJson(sVerificationsPrefs.getString("ids", "[]"));
+        if(!Globals.isNetworkConnected() && prefs.contains("ids")){
+            parseJson(prefs.getString("ids", "[]"));
             return;
         }
 
@@ -54,7 +53,9 @@ public class VTVerifications{
                 try {
                     var payload = response.a().g();
                     parseJson(payload);
-                    sVerificationsPrefs.edit().putString("ids", payload).apply();
+                    prefs.edit()
+                            .putString("ids", payload)
+                            .apply();
                 } catch (Exception e) {
                     e.printStackTrace();
                 }
@@ -77,7 +78,7 @@ public class VTVerifications{
     private static void parseJson(String payload){
         try {
             var json = new JSONObject(payload);
-
+            Log.d("VTVerifications", payload);
             processIds(json.optJSONArray("0"), sVerifications);
             processIds(json.optJSONArray("228"), sPrometheuses);
             processIds(json.optJSONArray("404"), sDevelopers);
@@ -95,20 +96,20 @@ public class VTVerifications{
             member.add(jsonIds.optInt(i));
     }
 
-    public static boolean isVerified(int i){
-        return sVerifications.contains(i);
+    public static boolean isVerified(int id){
+        return sVerifications.contains(id);
     }
 
-    public static boolean isPrometheus(int i){
-        return sPrometheuses.contains(i);
+    public static boolean isPrometheus(int id){
+        return sPrometheuses.contains(id);
     }
 
-    public static boolean isDeveloper(int i){
-        return sDevelopers.contains(i);
+    public static boolean isDeveloper(int id){
+        return sDevelopers.contains(id);
     }
 
-    public static boolean isServiceAccount(int i){
-        return sServiceAccounts.contains(i);
+    public static boolean isServiceAccount(int id){
+        return sServiceAccounts.contains(id);
     }
 
     public static boolean vtverif(){
@@ -118,7 +119,7 @@ public class VTVerifications{
     private static int getId(JSONObject json){
         var id = json.optInt("id", 0);
         if(!json.optString(NavigatorKeys.e).equals("group") && !json.optString(NavigatorKeys.e).equals("page")
-                || json.optString(NavigatorKeys.e) == null)
+                || json.optString(NavigatorKeys.e).isEmpty())
             return id;
         else
             return -id;
