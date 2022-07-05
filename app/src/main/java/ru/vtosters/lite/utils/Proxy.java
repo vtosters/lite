@@ -43,11 +43,11 @@ public class Proxy{
     public static String getAwayPhpCom(){
         var proxyapi = getPrefsValue("proxyapi");
 
-        if(!proxy() & proxyapi.isEmpty()){
-            return "m.vk.com";
+        if(proxy() & !proxyapi.isEmpty()){
+            return proxyapi;
         }
 
-        return proxyapi;
+        return "m.vk.com";
     }
 
     public static void setProxy(){
