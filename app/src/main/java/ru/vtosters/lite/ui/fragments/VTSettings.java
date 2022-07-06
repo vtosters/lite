@@ -8,6 +8,7 @@ import static ru.vtosters.lite.ui.vkui.VBottomSheetBuilder.VBSContent;
 import static ru.vtosters.lite.utils.About.getBuildNumber;
 import static ru.vtosters.lite.utils.About.getCommitLink;
 import static ru.vtosters.lite.utils.CacheUtils.humanReadableByteCountBin;
+import static ru.vtosters.lite.utils.Globals.*;
 import static ru.vtosters.lite.utils.Globals.edit;
 import static ru.vtosters.lite.utils.Globals.getDrawableFromUrl;
 import static ru.vtosters.lite.utils.Globals.getIdentifier;
@@ -115,6 +116,18 @@ public class VTSettings extends MaterialPreferenceToolbarFragment{
         return Globals.getContext().getSharedPreferences("pref_account_manager", Context.MODE_PRIVATE);
     }
 
+    public static String getSuperappsumm(){
+        if(disableSettingsSumms()) return null;
+
+        return "Скрыто элементов" + ": " + preferences.getInt("superappitems", 0);
+    }
+
+    public static String getCachesumm(){
+        if(disableSettingsSumms()) return null;
+
+        return Globals.getString("autoclearcachesumm") + " " + humanReadableByteCountBin(CacheUtils.getInstance().size);
+    }
+
     @Override
     public void onCreate(Bundle bundle){
         super.onCreate(bundle);
@@ -126,7 +139,7 @@ public class VTSettings extends MaterialPreferenceToolbarFragment{
         String activitysumm = getValAsString("vtlactivitysumm", offline());
         String themessumm = getValAsString("vtlthemessumm", navbar());
         String tgssumm = getTGSsumm();
-        String superapp = "Скрыто элементов" + ": " + preferences.getInt("superappitems", 0);
+        String superapp = getSuperappsumm();
         String interfacesumm = getValAsString("vtlinterfacesumm", shortinfo());
         String proxysumm = getProxysumm();
         String othersumm = getValAsString("vtlothersumm", vtverif());
@@ -367,7 +380,7 @@ public class VTSettings extends MaterialPreferenceToolbarFragment{
             return false;
         });
 
-        PreferencesUtil.addListPreferenceIcon(this, "clearcache", "Default", Globals.getString("autoclearcache"), !milkshake() ? "ic_delete_24" : "ic_delete_outline_28", Globals.getString("autoclearcachesumm") + " " + humanReadableByteCountBin(CacheUtils.getInstance().size), new CharSequence[]{
+        PreferencesUtil.addListPreferenceIcon(this, "clearcache", "Default", Globals.getString("autoclearcache"), !milkshake() ? "ic_delete_24" : "ic_delete_outline_28", getCachesumm(), new CharSequence[]{
                 Globals.getString("autoclearcachedisabled"), "100 MB", "500 MB", "1 GB", "2 GB", "5 GB"
         }, new String[]{
                 "Default", "100mb", "500mb", "1gb", "2gb", "5gb"
