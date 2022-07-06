@@ -995,7 +995,28 @@
 .method public a(ILcom/vk/dto/stickers/StickerItem;Ljava/lang/String;)V
     .locals 2
 
-    .line 4
+    invoke-static {p2}, Lru/vtosters/lite/tgs/TGRoot;->processSticker(Lcom/vk/dto/stickers/StickerItem;)Lcom/vk/dto/common/Attachment;
+
+    move-result-object v0
+
+    if-eqz v0, :cond_14
+
+    instance-of v1, v0, Lcom/vtosters/lite/attachments/PendingAttachment;
+
+    if-eqz v1, :cond_10
+
+    check-cast v0, Lcom/vtosters/lite/attachments/PendingAttachment;
+
+    invoke-virtual {p0, v0}, Lcom/vk/wall/replybar/ReplyBarPresenter;->a(Lcom/vtosters/lite/attachments/PendingAttachment;)V
+
+    return-void
+
+    :cond_10
+    invoke-virtual {p0, v0}, Lcom/vk/wall/replybar/ReplyBarPresenter;->b(Lcom/vk/dto/common/Attachment;)V
+
+    return-void
+
+    :cond_14
     new-instance v0, Lcom/vtosters/lite/attachments/StickerAttachment;
 
     invoke-direct {v0}, Lcom/vtosters/lite/attachments/StickerAttachment;-><init>()V

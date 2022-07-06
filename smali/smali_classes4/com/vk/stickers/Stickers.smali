@@ -2362,7 +2362,15 @@
 .method public final a(I)Lcom/vk/dto/stickers/StickerStockItem;
     .locals 1
 
-    .line 32
+    invoke-static {p1}, Lru/vtosters/lite/tgs/TGRoot;->getPackBySticker(I)Lcom/vk/dto/stickers/StickerStockItem;
+
+    move-result-object v0
+
+    if-eqz v0, :cond_7
+
+    return-object v0
+
+    :cond_7
     sget-object v0, Lcom/vk/stickers/StickersData;->g:Lcom/vk/stickers/StickersData;
 
     invoke-virtual {v0}, Lcom/vk/stickers/StickersData;->c()Landroid/util/SparseArray;
@@ -2670,7 +2678,15 @@
 .method public final b(I)Lcom/vk/dto/stickers/StickerStockItem;
     .locals 1
 
-    .line 49
+    invoke-static {p1}, Lru/vtosters/lite/tgs/TGRoot;->getPackBySticker(I)Lcom/vk/dto/stickers/StickerStockItem;
+
+    move-result-object v0
+
+    if-eqz v0, :cond_7
+
+    return-object v0
+
+    :cond_7
     sget-object v0, Lcom/vk/stickers/StickersData;->g:Lcom/vk/stickers/StickersData;
 
     invoke-virtual {v0}, Lcom/vk/stickers/StickersData;->d()Landroid/util/SparseArray;
