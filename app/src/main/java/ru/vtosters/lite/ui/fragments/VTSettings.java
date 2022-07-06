@@ -25,6 +25,7 @@ import static ru.vtosters.lite.utils.Preferences.isValidSignature;
 import static ru.vtosters.lite.utils.Preferences.milkshake;
 import static ru.vtosters.lite.utils.Preferences.navbar;
 import static ru.vtosters.lite.utils.Preferences.offline;
+import static ru.vtosters.lite.utils.Preferences.preferences;
 import static ru.vtosters.lite.utils.Preferences.shortinfo;
 import static ru.vtosters.lite.utils.Preferences.vkme;
 import static ru.vtosters.lite.utils.Themes.getDarkTheme;
@@ -68,6 +69,7 @@ import ru.vtosters.lite.utils.SSFS;
 import ru.vtosters.lite.utils.VKUIwrapper;
 
 public class VTSettings extends MaterialPreferenceToolbarFragment{
+    public static int hideitems = 0;
     public static String getValAsString(String stringid, Boolean value){
         if(disableSettingsSumms()) return null;
 
@@ -124,6 +126,7 @@ public class VTSettings extends MaterialPreferenceToolbarFragment{
         String activitysumm = getValAsString("vtlactivitysumm", offline());
         String themessumm = getValAsString("vtlthemessumm", navbar());
         String tgssumm = getTGSsumm();
+        String superapp = "Скрыто элементов" + ": " + preferences.getInt("superappitems", 0);
         String interfacesumm = getValAsString("vtlinterfacesumm", shortinfo());
         String proxysumm = getProxysumm();
         String othersumm = getValAsString("vtlothersumm", vtverif());
@@ -350,7 +353,7 @@ public class VTSettings extends MaterialPreferenceToolbarFragment{
         });
 
         if(milkshake()) {
-            PreferencesUtil.addPreference(this, "", "Настроить Superapp", null, "ic_explore_outline_28", (preference) -> {
+            PreferencesUtil.addPreference(this, "", "Настроить Superapp", superapp, "ic_explore_outline_28", (preference) -> {
                 callEditorPopup();
                 return true;
             });
@@ -423,6 +426,8 @@ public class VTSettings extends MaterialPreferenceToolbarFragment{
     }
 
     private void callEditorPopup(){
+        hideitems = 0;
+
         List<VBListItem> list = Arrays.asList(
                 new VBListItem("promo", "Mini Apps: промо"),
                 new VBListItem("miniapps", "Mini Apps: виджет"),
@@ -449,6 +454,10 @@ public class VTSettings extends MaterialPreferenceToolbarFragment{
                         () -> {
                             for(VBListItem item : list) {
                                 edit().putBoolean("superapp_" + item.id, item.checked).commit();
+                                if(item.checked){
+                                    hideitems++;
+                                    edit().putInt("superappitems", hideitems).commit();
+                                }
                             }
                         }
                 )

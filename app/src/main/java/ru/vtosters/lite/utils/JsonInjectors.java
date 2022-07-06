@@ -3,12 +3,10 @@ package ru.vtosters.lite.utils;
 import static ru.vtosters.lite.f0x1d.VTVerifications.isDeveloper;
 import static ru.vtosters.lite.f0x1d.VTVerifications.isPrometheus;
 import static ru.vtosters.lite.f0x1d.VTVerifications.isVerified;
-import static ru.vtosters.lite.utils.Base64Utils.*;
+import static ru.vtosters.lite.utils.Base64Utils.decode;
 import static ru.vtosters.lite.utils.Preferences.dev;
 import static ru.vtosters.lite.utils.Preferences.getBoolValue;
 import static ru.vtosters.lite.utils.Preferences.hasVerification;
-
-import android.util.Log;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -87,11 +85,11 @@ public class JsonInjectors{
     public static JSONObject superapp(JSONObject json) throws JSONException{
         var oldItems = json.optJSONArray("items");
         var newItems = new JSONArray();
-        if (oldItems != null) {
-            for (int i = 0; i < oldItems.length(); i++) {
+        if(oldItems != null){
+            for(int i = 0; i < oldItems.length(); i++) {
                 var item = oldItems.optJSONObject(i);
                 var type = item.optString("type");
-                if (!getBoolValue("superapp_" + type, false))
+                if(!getBoolValue("superapp_" + type, false))
                     newItems.put(item);
             }
         }
