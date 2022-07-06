@@ -317,22 +317,12 @@ public class Globals{
     } // Network check
 
     public static void fixGapps(){
-        try {
-            if(Build.VERSION.SDK_INT >= 26){
-                NotificationManager notificationManager = (NotificationManager) getContext().getSystemService(Context.NOTIFICATION_SERVICE);
-                boolean hasMusicChannel = false;
+        if(Build.VERSION.SDK_INT >= 26){
+            NotificationManager notificationManager = (NotificationManager) getContext().getSystemService(Context.NOTIFICATION_SERVICE);
 
-                try {
-                    if(notificationManager.getNotificationChannel("audio_playback_channel") != null){
-                        hasMusicChannel = true;
-                    }
-                } catch (Exception ignored) {
-                }
-                if(!hasMusicChannel){
-                    notificationManager.createNotificationChannel(new NotificationChannel("audio_playback_channel", getResources().getString(getIdentifier("audio_message_play_error", "string")), NotificationManager.IMPORTANCE_LOW));
-                }
+            if(notificationManager.getNotificationChannel("audio_playback_channel") == null){
+                notificationManager.createNotificationChannel(new NotificationChannel("audio_playback_channel", getResources().getString(getIdentifier("audio_message_play_error", "string")), NotificationManager.IMPORTANCE_LOW));
             }
-        } catch (Exception ignored) {
         }
     } // Music channels fix
 
