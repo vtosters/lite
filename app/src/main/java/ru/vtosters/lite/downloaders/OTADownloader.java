@@ -23,8 +23,7 @@ public class OTADownloader{
         @Override
         public void onReceive(Context context, Intent intent){
             var extras = intent.getExtras();
-            if(extras == null
-                    || !intent.getAction().equals(DownloadManager.ACTION_DOWNLOAD_COMPLETE))
+            if(extras == null || !intent.getAction().equals(DownloadManager.ACTION_DOWNLOAD_COMPLETE))
                 return;
 
             var query = new DownloadManager.Query();

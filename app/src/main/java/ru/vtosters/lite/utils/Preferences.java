@@ -36,7 +36,7 @@ public class Preferences{
     public static SharedPreferences preferences = getContext().getSharedPreferences("com.vtosters.lite_preferences", Context.MODE_PRIVATE);
     public static String VERSIONNAME = "Beta";
 
-    public static void init(Application application){
+    public static void init(Application application) throws Exception{
         setupFilters();
         fixGapps();
         setProxy();
