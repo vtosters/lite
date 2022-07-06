@@ -917,6 +917,8 @@
 
     invoke-direct {v2, v3}, Ljava/util/ArrayList;-><init>(Ljava/util/Collection;)V
 
+    invoke-static {v2}, Lru/vtosters/lite/tgs/TGRoot;->injectStickers(Ljava/util/List;)V
+
     .line 9
     sget-object v3, Lcom/vk/stickers/Stickers;->l:Lcom/vk/stickers/Stickers;
 
