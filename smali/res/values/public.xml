@@ -10898,6 +10898,8 @@
     <public name="x_container" id="0x7f0a1003" type="id" />
     <public name="youtube" id="0x7f0a1004" type="id" />
     <public name="zhukov" id="0x7f0a1005" type="id" />
+    <public name="button_update" id="0x7f0a1006" type="id" />
+    <public name="choose_btn" id="0x7f0a1007" type="id" />
     <public name="abc_config_activityDefaultDur" id="0x7f0b0000" type="integer" />
     <public name="abc_config_activityShortDur" id="0x7f0b0001" type="integer" />
     <public name="angle_rtl_180" id="0x7f0b0002" type="integer" />
@@ -12706,6 +12708,7 @@
     <public name="write_bar_audio" id="0x7f0d06db" type="layout" />
     <public name="write_bar_waveform" id="0x7f0d06dc" type="layout" />
     <public name="year_label_text_view" id="0x7f0d06dd" type="layout" />
+    <public name="tgs_entry" id="0x7f0d06de" type="layout" />
     <public name="add" id="0x7f0e0000" type="menu" />
     <public name="attach_item" id="0x7f0e0001" type="menu" />
     <public name="audio" id="0x7f0e0002" type="menu" />
