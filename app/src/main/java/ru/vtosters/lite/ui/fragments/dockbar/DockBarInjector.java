@@ -64,16 +64,18 @@ public class DockBarInjector{
         for(DockBarTab tab : sManager.getSelectedTabs()) {
             MenuItem add = menu.add(0, tab.id, 0, tab.titleID);
             Drawable drawable = getResources().getDrawable(tab.iconID);
+
             ColorStateList dockcolors = new ColorStateList(
                     new int[][]{
                             new int[]{android.R.attr.state_checked},
                             new int[]{-android.R.attr.state_checked}
                     },
                     new int[]{
-                            getAccentColor(),
+                            Color.parseColor("#ff528bcc"),
                             Color.parseColor("#ffaaaeb3")
                     }
             );
+
             add.setIcon(new RecoloredDrawable(drawable, dockcolors));
             add.setShowAsAction(1);
             add.setCheckable(true);
