@@ -31,6 +31,7 @@ import androidx.annotation.Nullable;
 import androidx.core.view.ViewCompat;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
+import androidx.recyclerview.widget.StaggeredGridLayoutManager;
 
 import com.aefyr.tsg.g2.TelegramStickersService;
 import com.aefyr.tsg.g2.stickersgrabber.TelegramStickersGrabber;
@@ -139,7 +140,7 @@ public class StickersFragment extends MaterialPreferenceToolbarFragment {
         mAdapter = new StickerPackAdapter();
         mRecycler = new RecyclerView(getContext());
         mRecycler.setAdapter(mAdapter);
-        mRecycler.setLayoutManager(new LinearLayoutManager(getContext()));
+        mRecycler.setLayoutManager(new StaggeredGridLayoutManager(2, StaggeredGridLayoutManager.VERTICAL));
         layout.addView(mRecycler, new FrameLayout.LayoutParams(-1, -1));
 
         mAddStickerPack = new FloatingActionButton(getContext());
