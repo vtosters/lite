@@ -9,6 +9,8 @@ import android.graphics.drawable.Drawable;
 import android.view.Menu;
 import android.view.MenuItem;
 
+import androidx.core.util.Pools;
+
 import com.vk.apps.AppsFragment;
 import com.vk.core.drawable.RecoloredDrawable;
 import com.vk.core.fragments.FragmentImpl;
@@ -43,15 +45,13 @@ public class DockBarInjector{
         Menu menu = navigationView.getMenu();
         menu.clear();
         try {
-            Field field = BottomNavigationMenuView.class.getDeclaredField("h");
+            Field field = BottomNavigationMenuView.class.getDeclaredField("J");
             field.setAccessible(true);
 
             Object synchronizedPool = field.get(null);
 
-            Class<?> synchronisedPoolCls = Class.forName("android.support.v4.f.Pools$a");
-
-            Method acquire = synchronisedPoolCls.getDeclaredMethod("a");
-
+            Class<?> synchronisedPoolCls = Class.forName("androidx.core.util.Pools$SynchronizedPool");
+            Method acquire = synchronisedPoolCls.getDeclaredMethod("acquire");
             if(synchronizedPool != null){
                 do {
                 } while(acquire.invoke(synchronizedPool) != null);
