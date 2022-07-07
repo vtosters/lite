@@ -1,5 +1,7 @@
 package com.aefyr.tsg.g2;
 
+import static ru.vtosters.lite.utils.Globals.*;
+
 import android.app.Notification;
 import android.app.NotificationChannel;
 import android.app.NotificationManager;
@@ -13,6 +15,8 @@ import com.aefyr.tsg.g2.stickersgrabber.TelegramStickersGrabber;
 
 import java.util.HashMap;
 import java.util.concurrent.atomic.AtomicLong;
+
+import ru.vtosters.lite.utils.Globals;
 
 
 /**
@@ -97,7 +101,7 @@ public class NotificationsHelper{
     }
 
     private Notification.Builder commonBuilder(){
-        var builder = new Notification.Builder(c).setPriority(Notification.PRIORITY_MAX).setSmallIcon(com.vtosters.lite.R.drawable.icon_vk_104);
+        var builder = new Notification.Builder(c).setPriority(Notification.PRIORITY_MAX).setSmallIcon(getIdentifier("ic_download_24", "drawable"));
         if(oreo()){
             builder.setChannelId(NOTIFICATION_CHANNEL_ID);
         }
