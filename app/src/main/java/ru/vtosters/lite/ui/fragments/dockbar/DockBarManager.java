@@ -93,7 +93,7 @@ public class DockBarManager{
                 return;
             }
 
-            mSelectedTabs.add(new DockBarTab("tab_news", !milkshake() ? R.drawable.ic_newsfeed_28 : R.drawable.ic_menu_newsfeed_outline_28, R.string.newsfeed, R.id.tab_news, milkshake() ? HomeFragment.class : NewsfeedFragment.class));
+            mSelectedTabs.add(new DockBarTab("tab_news", !milkshake() ? R.drawable.ic_newsfeed_28 : R.drawable.ic_explore_outline_28, R.string.newsfeed, R.id.tab_news, milkshake() ? HomeFragment.class : NewsfeedFragment.class));
             mSelectedTabs.add(new DockBarTab("tab_superapps", !milkshake() ? R.drawable.ic_menu_search_28 : R.drawable.ic_superapp_dropdown_circle, R.string.super_app_title, R.id.tab_discover, SuperAppFragment.class));
             mSelectedTabs.add(new DockBarTab("tab_messages", !milkshake() ? R.drawable.ic_message_24 : R.drawable.ic_message_outline_24, R.string.messages, R.id.tab_messages, DialogsFragment.class));
             mSelectedTabs.add(new DockBarTab("tab_friends", !milkshake() ? R.drawable.ic_users_28 : R.drawable.ic_users_outline_28, R.string.friends, R.id.menu_friends, FriendsFragment.class));
