@@ -25,13 +25,6 @@
             android:key="lighttheme"
             android:title="@string/appearance_theme_light_theme" />
     </PreferenceCategory>
-    <PreferenceCategory android:title="@string/vticon">
-        <com.vtosters.lite.ui.MaterialSwitchPreference
-            android:defaultValue="false"
-            android:key="iconvk"
-            android:summary="@string/vticonsummary"
-            android:title="@string/vticonbtn" />
-    </PreferenceCategory>
     <PreferenceCategory android:title="@string/vtlother">
         <com.vtosters.lite.ui.MaterialSwitchPreference
             android:defaultValue="true"

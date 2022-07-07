@@ -58,10 +58,10 @@ public class IconManager{
 
         if(getCurrComponent == iconComponent + appNameComponent || availablecomponentsList.get(iconComponent + appNameComponent) == null) return; // check if current component is equal to custom value or if custom value is not exist
 
-        componentSwitcher("id." + getCurrComponent, false); // disable current component to prevent conflict with custom value
+        componentSwitcher("id" + getCurrComponent, false); // disable current component to prevent conflict with custom value
 
         edit().putInt("component_enabled", iconComponent + appNameComponent).commit(); // save custom value
 
-        componentSwitcher("id." + iconComponent + appNameComponent, true); // enable custom value
+        componentSwitcher("id" + iconComponent + appNameComponent, true); // enable custom value
     }
 }

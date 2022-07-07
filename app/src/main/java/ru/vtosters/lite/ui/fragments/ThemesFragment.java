@@ -23,21 +23,7 @@ public class ThemesFragment extends MaterialPreferenceToolbarFragment{
         prefs();
     }
 
-    public boolean apply(Preference preference, Object obj){
-        if((Boolean) obj){
-            componentSwitcher("VTIconDefault", false);
-            componentSwitcher("VTIconVK", true);
-        } else {
-            componentSwitcher("VTIconDefault", true);
-            componentSwitcher("VTIconVK", false);
-        }
-
-        ToastUtils.a(Globals.getString("iconapplying"));
-        return true;
-    }
-
     private void prefs(){
-        findPreference("iconvk").setOnPreferenceChangeListener(new a());
         findPreference("navbar").setOnPreferenceClickListener(new restart());
     }
 
@@ -46,13 +32,6 @@ public class ThemesFragment extends MaterialPreferenceToolbarFragment{
         public boolean onPreferenceClick(Preference preference){
             restartApplicationWithTimer();
             return true;
-        }
-    }
-
-    public class a implements Preference.OnPreferenceChangeListener{
-        @Override
-        public boolean onPreferenceChange(Preference preference, Object obj){
-            return ThemesFragment.this.apply(preference, obj);
         }
     }
 }
