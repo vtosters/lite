@@ -20,7 +20,6 @@ public class IconManager{
             "00", "01", "02", "03", "10", "11", "12" // 00 - standard standard, 01 - standard vt, 02 - standard vkontakte, 10 - vt standard, 11 - vt vt, 12 - vt vkontakte
     );
 
-
     public static List<String> iconsPlus = Arrays.asList(
             "standard", "vt", "dev" // available icons list for verified users
     );
@@ -30,7 +29,7 @@ public class IconManager{
     );
 
     public static List<String> availablecomponentsPlus = Arrays.asList(
-            "00", "01", "02", "03", "10", "11", "12" // 00 - standard standard, 01 - standard vt, 02 - standard vkontakte, 10 - vt standard, 11 - vt vt, 12 - vt vkontakte, 20 - dev standard, 21 - dev vt, 22 - dev vkontakte
+            "00", "01", "02", "03", "10", "11", "12", "20", "21", "22" // 00 - standard standard, 01 - standard vt, 02 - standard vkontakte, 10 - vt standard, 11 - vt vt, 12 - vt vkontakte, 20 - dev standard, 21 - dev vt, 22 - dev vkontakte
     );
 
     public static void iconSwitcher(String icon, String appname){
