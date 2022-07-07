@@ -2,7 +2,7 @@ package ru.vtosters.lite.ui.fragments.dockbar;
 
 import com.vk.core.fragments.FragmentImpl;
 
-public class DockBarTab{
+public class DockBarTab {
 
     public String tag;
     public int iconID;

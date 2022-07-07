@@ -295,6 +295,10 @@
 
     move-result-object v0
 
+    invoke-static {}, Lru/vtosters/lite/ui/fragments/dockbar/DockBarInjector;->injectMap()Ljava/util/Map;
+
+    move-result-object v0
+
     sput-object v0, Lcom/vk/navigation/NavigationDelegateBottom;->e0:Ljava/util/Map;
 
     return-void
@@ -2074,6 +2078,8 @@
     check-cast v3, Lcom/vtosters/lite/ui/bottomnavigation/BottomNavigationView;
 
     iput-object v3, p0, Lcom/vk/navigation/NavigationDelegateBottom;->H:Lcom/vtosters/lite/ui/bottomnavigation/BottomNavigationView;
+
+    invoke-static {v3}, Lru/vtosters/lite/ui/fragments/dockbar/DockBarInjector;->inject(Lcom/vtosters/lite/ui/bottomnavigation/BottomNavigationView;)V
 
     .line 11
     invoke-virtual {p0}, Lcom/vk/navigation/NavigationDelegate;->c()Landroid/app/Activity;
