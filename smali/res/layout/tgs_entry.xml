@@ -8,6 +8,7 @@
     android:layout_marginRight="5dp"
     android:gravity="center_vertical"
     android:orientation="vertical"
+    android:background="@drawable/tgs_entry_background">
     android:tag="linearLayout5">
     <ImageView
         android:tag="photo"
