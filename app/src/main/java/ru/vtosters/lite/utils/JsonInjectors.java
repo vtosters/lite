@@ -36,7 +36,7 @@ public class JsonInjectors{
     }
 
     public static JSONObject convBar(JSONObject orig) throws JSONException{
-        if(!dev()) return orig.optJSONObject("conversation_bar");
+        if(!dev()) return orig.optJSONObject("conversation_bar"); // TODO Make it server-side
         var peerid = Objects.requireNonNull(orig.optJSONObject("peer")).optInt("id");
 
         var pic = "https://image.pngaaa.com/641/326641-middle.png"; // can be null
