@@ -411,6 +411,10 @@
 
     const v0, 0x7f070067
 
+    invoke-static {v0}, Lru/vtosters/lite/utils/Themes;->getNavigationHeight(I)I
+
+    move-result v0
+
     invoke-virtual {p2, v0}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
     move-result p2
