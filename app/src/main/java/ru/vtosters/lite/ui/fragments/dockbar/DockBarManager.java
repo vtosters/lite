@@ -9,6 +9,7 @@ import static ru.vtosters.lite.utils.Preferences.vkme_notifs;
 
 import com.vk.apps.AppsFragment;
 import com.vk.discover.DiscoverFragment;
+import com.vk.discover.ThemedFeedFragment;
 import com.vk.fave.fragments.FaveTabFragment;
 import com.vk.feedlikes.d.FeedLikesFragment;
 import com.vk.friends.catalog.FriendsCatalogFragment;
@@ -95,7 +96,7 @@ public class DockBarManager{
             }
 
             mSelectedTabs.add(new DockBarTab("tab_news", R.drawable.ic_menu_newsfeed_outline_28, R.string.newsfeed, R.id.tab_news, milkshake() ? HomeFragment.class : NewsfeedFragment.class));
-            mSelectedTabs.add(new DockBarTab("tab_superapps", milkshake() ? R.drawable.ic_explore_outline_28 : R.drawable.ic_menu_search_outline_28, R.string.super_app_title, R.id.tab_discover, milkshake() ? SuperAppFragment.class : DiscoverFragment.class));
+            mSelectedTabs.add(new DockBarTab("tab_superapps", milkshake() ? R.drawable.ic_explore_outline_28 : R.drawable.ic_menu_search_outline_28, R.string.super_app_title, R.id.tab_discover, milkshake() ? SuperAppFragment.class : ThemedFeedFragment.class));
             mSelectedTabs.add(new DockBarTab("tab_messages", R.drawable.ic_message_outline_28, R.string.messages, R.id.tab_messages, DialogsFragment.class));
             mSelectedTabs.add(new DockBarTab("tab_friends", milkshake() ? R.drawable.ic_users_outline_28 : R.drawable.ic_menu_notification_outline_28, R.string.friends, R.id.tab_feedback, milkshake() ? FriendsCatalogFragment.class : NotificationsContainerFragment.class));
             mSelectedTabs.add(new DockBarTab("tab_profile", milkshake() ? R.drawable.ic_user_circle_outline_28 : R.drawable.ic_menu_more_outline_28, R.string.profile, R.id.tab_menu, milkshake() ? ProfileFragment.class : MenuFragment.class));
