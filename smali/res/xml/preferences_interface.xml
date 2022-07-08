@@ -55,6 +55,11 @@
             android:key="__dbg_disable_video_feed"
             android:summary="@string/interfacevideorecsum"
             android:title="@string/interfacevideorec" />
+        <com.vtosters.lite.ui.MaterialSwitchPreference
+            android:defaultValue="true"
+            android:key="postsredesign"
+            android:summary="Теперь текст к видео отображается под видео материалом"
+            android:title="Редизайн видеопостов" />
     </PreferenceCategory>
     <PreferenceCategory android:title="@string/vtlother">
         <com.vtosters.lite.ui.MaterialSwitchPreference

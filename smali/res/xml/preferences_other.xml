@@ -44,12 +44,6 @@
             android:key="restoreprefs"
             android:title="Restore prefs" />
     </PreferenceCategory>
-    <PreferenceCategory android:title="Toggles test">
-        <com.vtosters.lite.ui.MaterialSwitchPreference
-            android:defaultValue="true"
-            android:key="postsredesign"
-            android:title="postsredesign" />
-    </PreferenceCategory>
     <PreferenceCategory android:title="@string/vtverify">
         <Preference
             android:enabled="false"
