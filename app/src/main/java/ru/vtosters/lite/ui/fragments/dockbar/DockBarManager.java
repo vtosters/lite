@@ -13,6 +13,7 @@ import com.vk.fave.fragments.FaveTabFragment;
 import com.vk.feedlikes.d.FeedLikesFragment;
 import com.vk.friends.catalog.FriendsCatalogFragment;
 import com.vk.menu.MenuFragment;
+import com.vk.menu.SearchMenuFragment;
 import com.vk.music.fragment.MusicFragment;
 import com.vk.newsfeed.HomeFragment;
 import com.vk.newsfeed.NewsfeedFragment;
@@ -85,34 +86,34 @@ public class DockBarManager{
 
         if(!dockbar.exists()){
             if(vkme()){
-                mSelectedTabs.add(new DockBarTab("tab_settings", R.drawable.ic_settings_24, R.string.menu_settings, R.id.menu_settings, useNewSettings()));
+                mSelectedTabs.add(new DockBarTab("tab_settings", R.drawable.ic_settings_outline_28, R.string.menu_settings, R.id.menu_settings, useNewSettings()));
                 if(vkme_notifs())
-                    mSelectedTabs.add(new DockBarTab("tab_feedback", !milkshake() ? R.drawable.ic_notification_24 : R.drawable.ic_menu_notification_outline_28, R.string.feedback, R.id.tab_feedback, NotificationsContainerFragment.class));
-                mSelectedTabs.add(new DockBarTab("tab_messages", !milkshake() ? R.drawable.ic_message_24 : R.drawable.ic_message_outline_24, R.string.messages, R.id.tab_messages, DialogsFragment.class));
-                mSelectedTabs.add(new DockBarTab("tab_profile", R.drawable.libverify_ic_account_circle_white, R.string.profile, R.id.profile, ProfileFragment.class));
+                    mSelectedTabs.add(new DockBarTab("tab_feedback", R.drawable.ic_menu_notification_outline_28, R.string.feedback, R.id.tab_feedback, NotificationsContainerFragment.class));
+                mSelectedTabs.add(new DockBarTab("tab_messages", R.drawable.ic_message_outline_28, R.string.messages, R.id.tab_messages, DialogsFragment.class));
+                mSelectedTabs.add(new DockBarTab("tab_profile", R.drawable.ic_account_outline_28, R.string.profile, R.id.profile, ProfileFragment.class));
                 return;
             }
 
-            mSelectedTabs.add(new DockBarTab("tab_news", !milkshake() ? R.drawable.ic_newsfeed_28 : R.drawable.ic_explore_outline_28, R.string.newsfeed, R.id.tab_news, milkshake() ? HomeFragment.class : NewsfeedFragment.class));
-            mSelectedTabs.add(new DockBarTab("tab_superapps", !milkshake() ? R.drawable.ic_menu_search_28 : R.drawable.ic_superapp_dropdown_circle, R.string.super_app_title, R.id.tab_discover, SuperAppFragment.class));
-            mSelectedTabs.add(new DockBarTab("tab_messages", !milkshake() ? R.drawable.ic_message_24 : R.drawable.ic_message_outline_24, R.string.messages, R.id.tab_messages, DialogsFragment.class));
-            mSelectedTabs.add(new DockBarTab("tab_friends", !milkshake() ? R.drawable.ic_users_28 : R.drawable.ic_users_outline_28, R.string.friends, R.id.menu_friends, FriendsFragment.class));
-            mSelectedTabs.add(new DockBarTab("tab_profile", !milkshake() ? R.drawable.libverify_ic_account_circle_white : R.drawable.ic_account_outline_28, R.string.profile, R.id.profile, ProfileFragment.class));
+            mSelectedTabs.add(new DockBarTab("tab_news", R.drawable.ic_menu_newsfeed_outline_28, R.string.newsfeed, R.id.tab_news, milkshake() ? HomeFragment.class : NewsfeedFragment.class));
+            mSelectedTabs.add(new DockBarTab("tab_superapps", milkshake() ? R.drawable.ic_explore_outline_28 : R.drawable.ic_menu_search_outline_28, R.string.super_app_title, R.id.tab_discover, milkshake() ? SuperAppFragment.class : DiscoverFragment.class));
+            mSelectedTabs.add(new DockBarTab("tab_messages", R.drawable.ic_message_outline_28, R.string.messages, R.id.tab_messages, DialogsFragment.class));
+            mSelectedTabs.add(new DockBarTab("tab_friends", milkshake() ? R.drawable.ic_users_outline_28 : R.drawable.ic_menu_notification_outline_28, R.string.friends, R.id.tab_feedback, milkshake() ? FriendsCatalogFragment.class : NotificationsContainerFragment.class));
+            mSelectedTabs.add(new DockBarTab("tab_profile", milkshake() ? R.drawable.ic_user_circle_outline_28 : R.drawable.ic_menu_more_outline_28, R.string.profile, R.id.tab_menu, milkshake() ? ProfileFragment.class : MenuFragment.class));
 
-            mDisabledTabs.add(new DockBarTab("tab_feedback", !milkshake() ? R.drawable.ic_notification_24 : R.drawable.ic_menu_notification_outline_28, R.string.feedback, R.id.tab_feedback, NotificationsContainerFragment.class));
-            mDisabledTabs.add(new DockBarTab("tab_groups", R.drawable.ic_users_24, R.string.groups, R.id.menu_groups, GroupsSearchFragment.class));
-            mDisabledTabs.add(new DockBarTab("tab_photos", R.drawable.ic_camera_24, R.string.photos, R.id.menu_photos, PhotosFragment.class));
-            mDisabledTabs.add(new DockBarTab("tab_audios", R.drawable.ic_music_24, R.string.music, R.id.menu_audios, MusicFragment.class));
-            mDisabledTabs.add(new DockBarTab("tab_videos", R.drawable.ic_video_24, R.string.videos, R.id.menu_videos, VideosFragment.class));
-            mDisabledTabs.add(new DockBarTab("tab_lives", R.drawable.ic_live_filter_24dp, R.string.sett_live, R.id.menu_lives, LivesPostListFragment.class));
-            mDisabledTabs.add(new DockBarTab("tab_games", R.drawable.ic_games_24, R.string.games, R.id.menu_games, GamesFragment.class));
+            mDisabledTabs.add(new DockBarTab("tab_feedback", R.drawable.ic_menu_notification_outline_28, R.string.feedback, R.id.tab_feedback, NotificationsContainerFragment.class));
+            mDisabledTabs.add(new DockBarTab("tab_groups", R.drawable.ic_users_outline_28, R.string.groups, R.id.menu_groups, GroupsSearchFragment.class));
+            mDisabledTabs.add(new DockBarTab("tab_photos", R.drawable.ic_camera_outline_28, R.string.photos, R.id.menu_photos, PhotosFragment.class));
+            mDisabledTabs.add(new DockBarTab("tab_audios", R.drawable.ic_music_outline_28, R.string.music, R.id.menu_audios, MusicFragment.class));
+            mDisabledTabs.add(new DockBarTab("tab_videos", R.drawable.ic_video_outline_28, R.string.videos, R.id.menu_videos, VideosFragment.class));
+            mDisabledTabs.add(new DockBarTab("tab_lives", R.drawable.ic_live_outline_28, R.string.sett_live, R.id.menu_lives, LivesPostListFragment.class));
+            mDisabledTabs.add(new DockBarTab("tab_games", R.drawable.ic_games_outline_36, R.string.games, R.id.menu_games, GamesFragment.class));
             mDisabledTabs.add(new DockBarTab("tab_liked", R.drawable.ic_menu_like_24, R.string.sett_likes, R.id.menu_feed_likes, FeedLikesFragment.class));
-            mDisabledTabs.add(new DockBarTab("tab_fave", R.drawable.ic_favorite_24, R.string.video, R.id.menu_fave, FaveTabFragment.class));
-            mDisabledTabs.add(new DockBarTab("tab_documents", R.drawable.ic_document_24, R.string.docs, R.id.menu_documents, DocumentsViewFragment.class));
-            mDisabledTabs.add(new DockBarTab("tab_payments", R.drawable.ic_money_transfer_24, R.string.money_transfer_money_transfers, R.id.menu_payments, MoneyTransfersFragment.class));
-            mDisabledTabs.add(new DockBarTab("tab_vk_apps", R.drawable.ic_services_24, R.string.menu_apps, R.id.menu_vk_apps, AppsFragment.class));
-            mDisabledTabs.add(new DockBarTab("tab_settings", R.drawable.ic_settings_24, R.string.menu_settings, R.id.menu_settings, useNewSettings()));
-            mDisabledTabs.add(new DockBarTab("tab_menu", !milkshake() ? R.drawable.ic_menu_more_28 : R.drawable.ic_menu_more_outline_28, R.string.register, R.id.tab_menu, MenuFragment.class));
+            mDisabledTabs.add(new DockBarTab("tab_fave", R.drawable.ic_favorite_outline_28, R.string.video, R.id.menu_fave, FaveTabFragment.class));
+            mDisabledTabs.add(new DockBarTab("tab_documents", R.drawable.ic_document_outline_24, R.string.docs, R.id.menu_documents, DocumentsViewFragment.class));
+            mDisabledTabs.add(new DockBarTab("tab_payments", R.drawable.ic_money_transfer_outline_28, R.string.money_transfer_money_transfers, R.id.menu_payments, MoneyTransfersFragment.class));
+            mDisabledTabs.add(new DockBarTab("tab_vk_apps", R.drawable.ic_services_outline_28, R.string.menu_apps, R.id.menu_vk_apps, AppsFragment.class));
+            mDisabledTabs.add(new DockBarTab("tab_settings", R.drawable.ic_settings_outline_28, R.string.menu_settings, R.id.menu_settings, useNewSettings()));
+            mDisabledTabs.add(new DockBarTab("tab_menu", R.drawable.ic_menu_more_outline_28, R.string.register, R.id.tab_menu, MenuFragment.class));
             mDisabledTabs.add(new DockBarTab("tab_brtd", R.drawable.ic_menu_birthdays, R.string.birthdays_title, R.id.menu_birthdays, BirthdaysFragment.class));
 
         } else {
