@@ -74,6 +74,10 @@ public class Preferences{
         return getBoolValue("opusmodule", true);
     }
 
+    public static boolean DoNotUseOldIcons(){
+        return true;
+    }
+
     public static boolean systemtheme(){
         return false; //getBoolValue("systemtheme", true) && VERSION.SDK_INT >= 28;
     }
