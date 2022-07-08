@@ -1725,16 +1725,6 @@
 
     .line 63
     :cond_0
-    invoke-static {p1}, Lru/vtosters/lite/ui/fragments/dockbar/DockBarInjector;->interceptClick(I)Ljava/lang/Class;
-
-    move-result-object p1
-
-    const/4 v2, 0x0
-
-    const/4 v0, 0x0
-
-    goto :goto_1
-
     invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v0
@@ -1747,47 +1737,25 @@
 
     .line 64
     :pswitch_0
-    sget-object p1, Lcom/vk/newsfeed/Feed2049;->b:Lcom/vk/newsfeed/Feed2049;
-
-    invoke-virtual {p1}, Lcom/vk/newsfeed/Feed2049;->d()Ljava/lang/Class;
+    invoke-static {p1}, Lru/vtosters/lite/ui/fragments/dockbar/DockBarInjector;->interceptClick(I)Ljava/lang/Class;
 
     move-result-object p1
 
-    const-string v0, "news"
+    const/4 v2, 0x0
+
+    const/4 v0, 0x0
 
     goto :goto_1
 
     .line 65
     :pswitch_1
-    invoke-static {}, Lcom/vk/im/engine/ImEngine1;->a()Lcom/vk/im/engine/ImEngine;
+    invoke-static {p1}, Lru/vtosters/lite/ui/fragments/dockbar/DockBarInjector;->interceptClick(I)Ljava/lang/Class;
 
     move-result-object p1
 
-    invoke-virtual {p1}, Lcom/vk/im/engine/ImEngine;->g()Lcom/vk/im/engine/ImConfig;
+    const/4 v2, 0x0
 
-    move-result-object p1
-
-    invoke-virtual {p1}, Lcom/vk/im/engine/ImConfig;->r()Lcom/vk/im/engine/models/ImExperiments;
-
-    move-result-object p1
-
-    invoke-interface {p1}, Lcom/vk/im/engine/models/ImExperiments;->d()Z
-
-    move-result p1
-
-    if-eqz p1, :cond_1
-
-    .line 66
-    const-class p1, Lcom/vk/im/ui/fragments/InstallVKMeFragment;
-
-    goto :goto_0
-
-    .line 67
-    :cond_1
-    const-class p1, Lcom/vtosters/lite/fragments/t2/c/DialogsFragment;
-
-    :goto_0
-    const-string v0, "messages"
+    const/4 v0, 0x0
 
     goto :goto_1
 
@@ -1817,35 +1785,25 @@
 
     .line 71
     :pswitch_3
-    sget-object p1, Lcom/vk/newsfeed/Feed2049;->b:Lcom/vk/newsfeed/Feed2049;
-
-    invoke-virtual {p1}, Lcom/vk/newsfeed/Feed2049;->e()Ljava/lang/Class;
+    invoke-static {p1}, Lru/vtosters/lite/ui/fragments/dockbar/DockBarInjector;->interceptClick(I)Ljava/lang/Class;
 
     move-result-object p1
 
-    .line 72
-    sget-object v0, Lcom/vk/newsfeed/Feed2049;->b:Lcom/vk/newsfeed/Feed2049;
+    const/4 v2, 0x0
 
-    invoke-virtual {v0}, Lcom/vk/newsfeed/Feed2049;->f()Ljava/lang/String;
-
-    move-result-object v0
+    const/4 v0, 0x0
 
     goto :goto_1
 
     .line 73
     :pswitch_4
-    sget-object p1, Lcom/vk/newsfeed/Feed2049;->b:Lcom/vk/newsfeed/Feed2049;
-
-    invoke-virtual {p1}, Lcom/vk/newsfeed/Feed2049;->g()Ljava/lang/Class;
+    invoke-static {p1}, Lru/vtosters/lite/ui/fragments/dockbar/DockBarInjector;->interceptClick(I)Ljava/lang/Class;
 
     move-result-object p1
 
-    .line 74
-    sget-object v0, Lcom/vk/newsfeed/Feed2049;->b:Lcom/vk/newsfeed/Feed2049;
+    const/4 v2, 0x0
 
-    invoke-virtual {v0}, Lcom/vk/newsfeed/Feed2049;->h()Ljava/lang/String;
-
-    move-result-object v0
+    const/4 v0, 0x0
 
     .line 75
     :cond_2
