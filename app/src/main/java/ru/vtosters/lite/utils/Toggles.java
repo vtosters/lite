@@ -14,7 +14,6 @@ public class Toggles{
     public static boolean shouldPatch(Features.Type feature){
         switch(feature) {
             case AB_IM_LONGPOLL_MSG_BATCHING:
-            case AB_IM_LP_ATTACHES:
             case AB_IM_VIEW_POOL:
             case AB_MULTI_GIFTS:
             case AB_NEWS_VIDEO_LAYOUT_TEXT:
@@ -139,11 +138,11 @@ public class Toggles{
             case FEATURE_MUSIC_NEW_CATALOG:
                 return musicnewcatalog();
             case AB_NEWS_VIDEO_LAYOUT_TEXT:
-            case AB_IM_LP_ATTACHES:
             case FEATURE_COMPACT_REPOST:
+            case EXPERIMENT_NEWS_VIDEO_LAYOUT_TEXT:
                 return postsredesign();
             case FEATURE_IMAGE_QUALITY_UPGRADE:
-                return getBoolValue("compressPhotos", true);
+                return !getBoolValue("compressPhotos", true);
             case FEATURE_MUSIC_STOP_PLAYER_ON_TASK_REMOVAL:
                 return getBoolValue("musictask", false);
             default:
