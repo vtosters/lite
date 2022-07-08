@@ -91,7 +91,7 @@ public class DockBarManager{
                 if(vkme_notifs())
                     mSelectedTabs.add(new DockBarTab("tab_feedback", R.drawable.ic_menu_notification_outline_28, R.string.feedback, R.id.tab_feedback, NotificationsContainerFragment.class));
                 mSelectedTabs.add(new DockBarTab("tab_messages", R.drawable.ic_message_outline_28, R.string.messages, R.id.tab_messages, DialogsFragment.class));
-                mSelectedTabs.add(new DockBarTab("tab_profile", R.drawable.ic_account_outline_28, R.string.profile, R.id.profile, ProfileFragment.class));
+                mSelectedTabs.add(new DockBarTab("tab_profile", R.drawable.ic_account_outline_28, R.string.profile, R.id.tab_menu, ProfileFragment.class));
                 return;
             }
 

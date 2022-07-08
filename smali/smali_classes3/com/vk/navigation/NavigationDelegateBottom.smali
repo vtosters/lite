@@ -1725,6 +1725,16 @@
 
     .line 63
     :cond_0
+    invoke-static {p1}, Lru/vtosters/lite/ui/fragments/dockbar/DockBarInjector;->interceptClick(I)Ljava/lang/Class;
+
+    move-result-object p1
+
+    const/4 v2, 0x0
+
+    const/4 v0, 0x0
+
+    goto :goto_1
+
     invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v0
@@ -2823,7 +2833,17 @@
 .method private final f(Lcom/vk/core/fragments/FragmentImpl;)Z
     .locals 1
 
-    .line 2
+    invoke-static {p1}, Lru/vtosters/lite/ui/fragments/dockbar/DockBarInjector;->isDockOpenAllowed(Lcom/vk/core/fragments/FragmentImpl;)Z
+
+    move-result v0
+
+    if-nez v0, :cond_8
+
+    const/4 p1, 0x1
+
+    return p1
+
+    :cond_8
     sget-object v0, Lcom/vk/navigation/NavigationDelegateBottom;->e0:Ljava/util/Map;
 
     invoke-interface {v0}, Ljava/util/Map;->keySet()Ljava/util/Set;
@@ -3910,6 +3930,12 @@
 
 .method public a(Lcom/vk/core/fragments/FragmentImpl;)Z
     .locals 1
+
+    invoke-static {p1}, Lru/vtosters/lite/ui/fragments/dockbar/DockBarInjector;->isDockOpenAllowed(Lcom/vk/core/fragments/FragmentImpl;)Z
+
+    move-result p1
+
+    return p1
 
     .line 54
     iget-object v0, p0, Lcom/vk/navigation/NavigationDelegateBottom;->B:Lcom/vk/core/fragments/FragmentNavigationController;
