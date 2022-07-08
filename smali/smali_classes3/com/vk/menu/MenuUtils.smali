@@ -43,9 +43,17 @@
 .end method
 
 .method public static final a(Ljava/lang/String;)I
-    .locals 1
+    .locals 3
 
-    .line 3
+    invoke-static {p0}, Lru/vtosters/lite/ui/fragments/dockbar/DockBarInjector;->injectId(Ljava/lang/String;)I
+
+    move-result v0
+
+    if-eqz v0, :cond_7
+
+    return v0
+
+    :cond_7
     invoke-virtual {p0}, Ljava/lang/String;->hashCode()I
 
     move-result v0

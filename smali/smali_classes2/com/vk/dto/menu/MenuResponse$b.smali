@@ -55,7 +55,10 @@
 
     if-eqz v0, :cond_1
 
-    .line 2
+    invoke-static {v0}, Lru/vtosters/lite/ui/fragments/dockbar/DockBarInjector;->injectMenuJSON(Lorg/json/JSONArray;)Lorg/json/JSONArray;
+
+    move-result-object v0
+
     new-instance v3, Ljava/util/ArrayList;
 
     invoke-virtual {v0}, Lorg/json/JSONArray;->length()I
