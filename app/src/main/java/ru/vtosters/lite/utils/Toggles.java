@@ -127,7 +127,7 @@ public class Toggles{
     public static boolean redirect(Features.Type feature){
         switch(feature) {
             case EXPERIMENT_NEWS_DISABLE_CACHE:
-                return feedcache();
+                return !feedcache();
             case FEATURE_SUPERAPP_MENU:
                 return superapp();
             case FEATURE_MILKSHAKE:
