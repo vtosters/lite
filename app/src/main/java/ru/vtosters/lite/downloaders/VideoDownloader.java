@@ -81,6 +81,11 @@ public class VideoDownloader{
     }
 
     public static void parseVideoLink(String url, Context ctx){
+        if(url.contains("vk.com/story")){
+            ToastUtils.a("Не поддерживается загрузка историй");
+            return;
+        }
+
         if(!url.contains("vk.com/video")){
             ToastUtils.a("Неверная ссылка");
             return;
@@ -106,7 +111,7 @@ public class VideoDownloader{
                         downloadVideo(videoFile, ctx);
                     } catch (JSONException e) {
                         e.printStackTrace();
-                        Toast.makeText(ctx, "Видео нельзя скачать. Ошибка: " + e.getLocalizedMessage(), Toast.LENGTH_SHORT).show();
+                        Toast.makeText(ctx, "Видео нельзя скачать", Toast.LENGTH_SHORT).show();
                     }
                 });
     }
