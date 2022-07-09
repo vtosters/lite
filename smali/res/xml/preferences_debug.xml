@@ -69,7 +69,7 @@
             android:summary="@string/debug_developer_force_ssl_summary"
             android:title="@string/debug_developer_force_ssl" />
         <com.vtosters.lite.ui.MaterialSwitchPreference
-            android:defaultValue="false"
+            android:defaultValue="true"
             android:key="isMusicRestricted"
             android:summary="@string/debug_developer_is_music_restricted_summary"
             android:title="@string/debug_developer_is_music_restricted" />
