@@ -40,6 +40,16 @@ public class Proxy{
         return link;
     }
 
+    public static String getApi(){
+        var proxyapi = getPrefsValue("proxyapi");
+
+        if(apiproxy() & !proxyapi.isEmpty()){
+            return proxyapi;
+        }
+
+        return "api.vk.com";
+    }
+
     public static String getAwayPhpCom(){
         var proxyapi = getPrefsValue("proxyapi");
 

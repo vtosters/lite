@@ -3,9 +3,9 @@ package ru.vtosters.lite.foaf;
 import static android.widget.Toast.LENGTH_SHORT;
 import static android.widget.Toast.makeText;
 import static ru.vtosters.lite.utils.Globals.getIdentifier;
-import static ru.vtosters.lite.utils.Globals.getPrefsValue;
 import static ru.vtosters.lite.utils.Globals.getString;
 import static ru.vtosters.lite.utils.Proxy.apiproxy;
+import static ru.vtosters.lite.utils.Proxy.getApi;
 
 import android.app.ProgressDialog;
 import android.content.Context;
@@ -51,7 +51,7 @@ public class FoafBase{
         StringBuilder sb;
         if(apiproxy()){
             sb = new StringBuilder();
-            str = "https://" + getPrefsValue("proxyapi") + "/_/vk.com/foaf.php?id=";
+            str = "https://" + getApi() + "/_/vk.com/foaf.php?id=";
         } else {
             sb = new StringBuilder();
             str = "https://vk.com/foaf.php?id=";
