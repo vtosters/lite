@@ -81,7 +81,7 @@ public class VideoDownloader{
     }
 
     public static void parseVideoLink(String url, Context ctx){
-        if(!url.equals("vk.com/video")){
+        if(!url.contains("vk.com/video")){
             ToastUtils.a("Неверная ссылка");
             return;
         }
