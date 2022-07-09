@@ -27,12 +27,12 @@ public class StoryDownloader{
                 request.setTitle("photo" + story.E.a);
                 request.setDestinationInExternalPublicDir(Environment.DIRECTORY_DCIM, "/Stories/photo" + story.E.a + ".jpg");
                 ((DownloadManager) getContext().getSystemService(Context.DOWNLOAD_SERVICE)).enqueue(request);
+                return;
             }
 
             // if story is a video
             if(story.F != null){
                 downloadVideo(story.F, null);
-                return;
             }
         };
     }
