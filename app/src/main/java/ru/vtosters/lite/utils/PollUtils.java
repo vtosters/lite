@@ -11,8 +11,8 @@ import com.vk.polls.ui.views.PollOptionView;
 
 public class PollUtils{
     public static void show(PollOptionView view) {
-        if(getBoolValue("pollresults", false)) return;
-        
+        if(!getBoolValue("pollresults", false)) return;
+
         TextView resultsView = view.c;
 
         String text = PollOption.e.a(view.g.t1());
