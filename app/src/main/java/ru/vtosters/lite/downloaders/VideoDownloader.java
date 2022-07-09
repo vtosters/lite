@@ -1,15 +1,23 @@
 package ru.vtosters.lite.downloaders;
 
+import static ru.vtosters.lite.net.Request.makeRequest;
 import static ru.vtosters.lite.utils.Globals.getString;
+import static ru.vtosters.lite.utils.Globals.getUserToken;
 
 import android.app.AlertDialog;
 import android.app.DownloadManager;
+import android.app.ProgressDialog;
 import android.content.Context;
 import android.net.Uri;
 import android.os.Environment;
+import android.widget.Toast;
 
 import com.vk.core.util.ToastUtils;
 import com.vk.dto.common.VideoFile;
+
+import org.json.JSONArray;
+import org.json.JSONException;
+import org.json.JSONObject;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -70,5 +78,31 @@ public class VideoDownloader{
             ((DownloadManager) context.getSystemService(Context.DOWNLOAD_SERVICE)).enqueue(request);
         }));
         builder.show();
+    }
+
+    public static void parseVideoLink(String url, Context ctx){
+        String videoId = url.split("video")[1];
+        String ownerId = videoId.split("_")[0];
+
+        final ProgressDialog progressDialog = new ProgressDialog(ctx);
+        progressDialog.setMessage("Обработка видео");
+        progressDialog.show();
+
+        makeRequest("https://" + "api.vk.com" + "/method/video.get?owner_id=" + ownerId + "&videos=" + videoId + "&v=5.99&access_token=" + getUserToken(),
+                response -> {
+                    progressDialog.cancel();
+
+                    try {
+                        JSONObject mainJson = new JSONObject(response);
+                        JSONObject responseJson = mainJson.getJSONObject("response");
+                        JSONArray itemsJson = responseJson.getJSONArray("items");
+
+                        VideoFile videoFile = new VideoFile(itemsJson.getJSONObject(0));
+                        downloadVideo(videoFile, ctx);
+                    } catch (JSONException e) {
+                        e.printStackTrace();
+                        Toast.makeText(ctx, "Видео нельзя скачать. Ошибка: " + e.getLocalizedMessage(), Toast.LENGTH_SHORT).show();
+                    }
+                });
     }
 }

@@ -49,6 +49,9 @@
             android:title="Новый раздел музыки (beta)" />
     </PreferenceCategory>
     <PreferenceCategory android:title="Видео">
+        <Preference
+            android:key="download_video"
+            android:title="Скачать видео" />
         <com.vtosters.lite.ui.MaterialSwitchPreference
             android:defaultValue="false"
             android:key="isEnableExternalOpening"
@@ -59,9 +62,6 @@
             android:key="__dbg_disable_video_feed"
             android:summary="@string/interfacevideorecsum"
             android:title="@string/interfacevideorec" />
-        <Preference
-            android:key="download_video"
-            android:title="Скачать видео" />
     </PreferenceCategory>
     <PreferenceCategory android:title="@string/vkx_title">
         <Preference
