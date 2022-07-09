@@ -591,10 +591,6 @@
 
     invoke-virtual {p1, v0}, Lcom/vk/core/serialize/Serializer;->a(Ljava/lang/String;)V
 
-    iget-object v0, p0, Lcom/vk/dto/common/ImageSize;->url:Ljava/lang/String;
-
-    invoke-virtual {p1, v0}, Lcom/vk/core/serialize/Serializer;->a(Ljava/lang/String;)V
-
     .line 2
     iget v0, p0, Lcom/vk/dto/common/ImageSize;->c:I
 
