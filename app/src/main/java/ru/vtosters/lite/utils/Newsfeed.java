@@ -21,8 +21,10 @@ import android.util.Log;
 import com.vk.apps.AppsFragment;
 import com.vk.core.preference.Preference;
 import com.vk.discover.DiscoverFragment;
+import com.vk.discover.ThemedFeedFragment;
 import com.vk.fave.fragments.FaveTabFragment;
 import com.vk.menu.MenuFragment;
+import com.vk.music.fragment.MusicCatalogFragment1;
 import com.vk.music.fragment.MusicFragment;
 import com.vk.newsfeed.HomeFragment;
 import com.vk.newsfeed.NewsfeedFragment;
@@ -252,7 +254,7 @@ public class Newsfeed{
             case "groups":
                 return GroupsSearchFragment.class;
             case "music":
-                return MusicFragment.class;
+                return getBoolValue("musicnewcatalog", true) ? MusicCatalogFragment1.class : MusicFragment.class;
             case "friends":
                 return FriendsFragment.class;
             case "photos":
@@ -264,7 +266,7 @@ public class Newsfeed{
             case "apps":
                 return AppsFragment.class;
             case "discover":
-                return DiscoverFragment.class;
+                return ThemedFeedFragment.class;
             case "notifications":
                 return NotificationsContainerFragment.class;
             case "money":
