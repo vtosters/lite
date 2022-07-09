@@ -81,6 +81,11 @@ public class VideoDownloader{
     }
 
     public static void parseVideoLink(String url, Context ctx){
+        if(!url.equals("vk.com/video")){
+            ToastUtils.a("Неверная ссылка");
+            return;
+        }
+
         String videoId = url.split("video")[1];
         String ownerId = videoId.split("_")[0];
 
