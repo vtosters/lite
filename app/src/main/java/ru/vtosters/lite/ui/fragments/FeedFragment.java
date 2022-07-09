@@ -25,9 +25,6 @@ public class FeedFragment extends MaterialPreferenceToolbarFragment{
     }
 
     public class openofficialsett implements Preference.OnPreferenceClickListener{
-        openofficialsett(){
-        }
-
         @Override // android.support.v7.preference.Preference.c
         public boolean onPreferenceClick(Preference preference){
             Context context = getContext();

@@ -7,6 +7,7 @@ import static ru.vtosters.lite.utils.CacheUtils.deleteCache;
 import static ru.vtosters.lite.utils.Globals.getIdentifier;
 import static ru.vtosters.lite.utils.Globals.getUserToken;
 import static ru.vtosters.lite.utils.Globals.restartApplication;
+import static ru.vtosters.lite.utils.SettBackup.backupOnlines;
 import static ru.vtosters.lite.utils.SettBackup.backupSettings;
 import static ru.vtosters.lite.utils.SettBackup.deletePrefs;
 import static ru.vtosters.lite.utils.SettBackup.restoreBackup;
@@ -53,15 +54,13 @@ public class OtherFragment extends MaterialPreferenceToolbarFragment{
         findPreference("clearcache").setOnPreferenceClickListener(new e());
         findPreference("stickfix").setOnPreferenceClickListener(new f());
         findPreference("deleteprefs").setOnPreferenceClickListener(new deleteprefs());
+        findPreference("saveonlines").setOnPreferenceClickListener(new onlines());
 
         findPreference("saveprefs").setOnPreferenceClickListener(new saveprefs());
         findPreference("restoreprefs").setOnPreferenceClickListener(new restoreprefs());
     }
 
     public static class d implements Preference.OnPreferenceClickListener{
-        d(){
-        }
-
         @Override // android.support.v7.preference.Preference.c
         public boolean onPreferenceClick(Preference preference){
             restartApplication();
@@ -69,10 +68,15 @@ public class OtherFragment extends MaterialPreferenceToolbarFragment{
         }
     }
 
-    class c implements Preference.OnPreferenceClickListener{
-        c(){
+    public static class onlines implements Preference.OnPreferenceClickListener{
+        @Override // android.support.v7.preference.Preference.c
+        public boolean onPreferenceClick(Preference preference){
+            backupOnlines();
+            return true;
         }
+    }
 
+    class c implements Preference.OnPreferenceClickListener{
         public void copy(Context context, String str){
             ((ClipboardManager) context.getSystemService(Context.CLIPBOARD_SERVICE)).setPrimaryClip(ClipData.newPlainText("MBH-ST", str));
             makeText(context, Globals.getString("copybtn"), LENGTH_SHORT).show();
@@ -87,9 +91,6 @@ public class OtherFragment extends MaterialPreferenceToolbarFragment{
     }
 
     public class e implements Preference.OnPreferenceClickListener{
-        e(){
-        }
-
         @Override // android.support.v7.preference.Preference.c
         public boolean onPreferenceClick(Preference preference){
             SharedPreferences prefs = getContext().getSharedPreferences("stickers", Context.MODE_PRIVATE);
@@ -108,10 +109,7 @@ public class OtherFragment extends MaterialPreferenceToolbarFragment{
         }
     }
 
-    public class b implements Preference.OnPreferenceClickListener{
-        b(){
-        }
-
+    public static class b implements Preference.OnPreferenceClickListener{
         @Override // android.support.v7.preference.Preference.c
         public boolean onPreferenceClick(Preference preference){
             System.exit(0);
@@ -120,9 +118,6 @@ public class OtherFragment extends MaterialPreferenceToolbarFragment{
     }
 
     public class a implements Preference.OnPreferenceClickListener{
-        a(){
-        }
-
         @Override // android.support.v7.preference.Preference.c
         public boolean onPreferenceClick(Preference preference){
             VKAccount b = VKAccountManager.d();
@@ -139,9 +134,6 @@ public class OtherFragment extends MaterialPreferenceToolbarFragment{
     }
 
     public class f implements Preference.OnPreferenceClickListener{
-        f(){
-        }
-
         @Override // android.support.v7.preference.Preference.c
         public boolean onPreferenceClick(Preference preference){
             SharedPreferences prefs = getContext().getSharedPreferences("stickers", Context.MODE_PRIVATE);
@@ -154,10 +146,7 @@ public class OtherFragment extends MaterialPreferenceToolbarFragment{
         }
     }
 
-    public class deleteprefs implements Preference.OnPreferenceClickListener{
-        deleteprefs(){
-        }
-
+    public static class deleteprefs implements Preference.OnPreferenceClickListener{
         @Override // android.support.v7.preference.Preference.c
         public boolean onPreferenceClick(Preference preference){
             deletePrefs();
@@ -178,9 +167,6 @@ public class OtherFragment extends MaterialPreferenceToolbarFragment{
     }
 
     public class restoreprefs implements Preference.OnPreferenceClickListener{
-        restoreprefs(){
-        }
-
         @Override // android.support.v7.preference.Preference.c
         public boolean onPreferenceClick(Preference preference){
             try {

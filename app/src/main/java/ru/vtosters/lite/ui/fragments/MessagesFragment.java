@@ -42,9 +42,6 @@ public class MessagesFragment extends MaterialPreferenceToolbarFragment{
     }
 
     public class restart implements Preference.OnPreferenceClickListener{
-        restart(){
-        }
-
         @Override
         public boolean onPreferenceClick(Preference preference){
             return MessagesFragment.this.restart(preference);
@@ -52,9 +49,6 @@ public class MessagesFragment extends MaterialPreferenceToolbarFragment{
     }
 
     public class clearCache implements Preference.OnPreferenceClickListener{
-        clearCache(){
-        }
-
         @Override
         public boolean onPreferenceClick(Preference preference){
             return MessagesFragment.this.restart(preference);

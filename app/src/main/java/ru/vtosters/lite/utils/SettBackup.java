@@ -15,7 +15,10 @@ import android.widget.Toast;
 import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 import java.util.HashSet;
+import java.util.Locale;
 import java.util.Scanner;
 import java.util.Set;
 import java.util.regex.Matcher;
@@ -33,6 +36,22 @@ public class SettBackup{
         file.delete();
     }
 
+    public static void backupOnlines(){
+        SimpleDateFormat dateFormat = new SimpleDateFormat("yyyyMMdd_HHmmss", Locale.getDefault());
+        var dir = new File(getExternalStoragePublicDirectory(DIRECTORY_DOWNLOADS), "/VTLBackups/");
+        var file = new File(dir, "Onlines_" + dateFormat.format(new Date()) + ".xml");
+        try {
+            dir.mkdirs();
+            FileWriter out = new FileWriter(file);
+            out.write(getPrefContent("onlines.xml"));
+            out.close();
+            Toast.makeText(getContext(), "Сохранено в файл " + file.getAbsolutePath(), LENGTH_LONG).show();
+        } catch (IOException e) {
+            e.printStackTrace();
+            Toast.makeText(getContext(), "Не удалось сохранить файл", LENGTH_SHORT).show();
+        }
+    }
+
     public static void backupSettings(){
 //        SimpleDateFormat dateFormat = new SimpleDateFormat("yyyyMMdd_HHmmss", Locale.getDefault());
         var dir = new File(getExternalStoragePublicDirectory(DIRECTORY_DOWNLOADS), "/VTLBackups/");
@@ -43,8 +62,9 @@ public class SettBackup{
                         + ".xml");
         try {
             file.delete();
+            dir.mkdirs();
             FileWriter out = new FileWriter(file);
-            out.write(getPrefContent());
+            out.write(getPrefContent("com.vtosters.lite_preferences.xml"));
             out.close();
             Toast.makeText(getContext(), "Сохранено в файл " + file.getAbsolutePath(), LENGTH_LONG).show();
         } catch (IOException e) {
@@ -53,11 +73,11 @@ public class SettBackup{
         }
     }
 
-    public static String getPrefContent() throws IOException{
+    public static String getPrefContent(String filename) throws IOException{
         File prefsDir = new File(getContext().getFilesDir().getParentFile(), "shared_prefs");
         if(!prefsDir.exists())
             return null;
-        File pref = new File(prefsDir, "com.vtosters.lite_preferences.xml");
+        File pref = new File(prefsDir, filename);
         return new String(readFileFully(pref));
     }
 
