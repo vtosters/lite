@@ -3,7 +3,6 @@ package ru.vtosters.lite.f0x1d;
 import static ru.vtosters.lite.utils.Preferences.getBoolValue;
 
 import android.content.Context;
-import android.content.SharedPreferences;
 import android.util.Log;
 
 import com.vk.dto.common.VerifyInfo;

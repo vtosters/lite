@@ -20,7 +20,6 @@ import android.util.Log;
 
 import com.vk.apps.AppsFragment;
 import com.vk.core.preference.Preference;
-import com.vk.discover.DiscoverFragment;
 import com.vk.discover.ThemedFeedFragment;
 import com.vk.fave.fragments.FaveTabFragment;
 import com.vk.menu.MenuFragment;

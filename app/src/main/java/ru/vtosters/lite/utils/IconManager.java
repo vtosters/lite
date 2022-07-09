@@ -2,7 +2,8 @@ package ru.vtosters.lite.utils;
 import static ru.vtosters.lite.utils.Globals.componentSwitcher;
 import static ru.vtosters.lite.utils.Globals.edit;
 import static ru.vtosters.lite.utils.Globals.getPreferences;
-import static ru.vtosters.lite.utils.Preferences.*;
+import static ru.vtosters.lite.utils.Preferences.hasVerification;
+import static ru.vtosters.lite.utils.Preferences.isValidSignature;
 
 import java.util.Arrays;
 import java.util.List;
