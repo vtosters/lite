@@ -1,6 +1,5 @@
 package ru.vtosters.lite.ui.fragments;
 
-import static ru.vtosters.lite.utils.Globals.componentSwitcher;
 import static ru.vtosters.lite.utils.Globals.getIdentifier;
 import static ru.vtosters.lite.utils.Globals.restartApplicationWithTimer;
 
@@ -8,10 +7,7 @@ import android.os.Bundle;
 
 import androidx.preference.Preference;
 
-import com.vk.core.util.ToastUtils;
 import com.vtosters.lite.general.fragments.MaterialPreferenceToolbarFragment;
-
-import ru.vtosters.lite.utils.Globals;
 
 
 public class ThemesFragment extends MaterialPreferenceToolbarFragment{

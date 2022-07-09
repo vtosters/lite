@@ -11,7 +11,6 @@ import static ru.vtosters.lite.utils.Preferences.color_grishka;
 import static ru.vtosters.lite.utils.Preferences.navbar;
 import static ru.vtosters.lite.utils.Preferences.systemtheme;
 import static ru.vtosters.lite.utils.Preferences.vkme;
-import static ru.vtosters.lite.utils.Preferences.vksans;
 import static ru.vtosters.lite.utils.VKUIInjector.isLoaded;
 
 import android.annotation.SuppressLint;

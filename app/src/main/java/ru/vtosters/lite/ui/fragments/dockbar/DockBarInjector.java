@@ -1,15 +1,12 @@
 package ru.vtosters.lite.ui.fragments.dockbar;
 
 import static ru.vtosters.lite.utils.Globals.getResources;
-import static ru.vtosters.lite.utils.Themes.getAccentColor;
 
 import android.content.res.ColorStateList;
 import android.graphics.Color;
 import android.graphics.drawable.Drawable;
 import android.view.Menu;
 import android.view.MenuItem;
-
-import androidx.core.util.Pools;
 
 import com.vk.apps.AppsFragment;
 import com.vk.core.drawable.RecoloredDrawable;

@@ -1,5 +1,4 @@
 package ru.vtosters.lite.downloaders;
-import static com.vtosters.lite.R.string;
 import static ru.vtosters.lite.downloaders.VideoDownloader.downloadVideo;
 import static ru.vtosters.lite.utils.Globals.getContext;
 
@@ -7,9 +6,7 @@ import android.app.DownloadManager;
 import android.content.Context;
 import android.net.Uri;
 import android.os.Environment;
-import android.widget.Toast;
 
-import com.vk.core.util.AlertDialogs;
 import com.vk.dto.common.ImageSize;
 import com.vk.dto.stories.model.StoryEntry;
 

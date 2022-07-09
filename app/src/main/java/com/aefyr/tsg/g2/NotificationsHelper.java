@@ -1,6 +1,6 @@
 package com.aefyr.tsg.g2;
 
-import static ru.vtosters.lite.utils.Globals.*;
+import static ru.vtosters.lite.utils.Globals.getIdentifier;
 
 import android.app.Notification;
 import android.app.NotificationChannel;
@@ -15,8 +15,6 @@ import com.aefyr.tsg.g2.stickersgrabber.TelegramStickersGrabber;
 
 import java.util.HashMap;
 import java.util.concurrent.atomic.AtomicLong;
-
-import ru.vtosters.lite.utils.Globals;
 
 
 /**
