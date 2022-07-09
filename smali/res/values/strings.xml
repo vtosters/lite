@@ -5694,7 +5694,7 @@ You need to restart the application to apply proxy settings"</string>
     <string name="vtlawayphpsummary">Tracking the user to personalize ads. Also checking links to the blacklist from VKontakte and antivirus</string>
     <string name="vtloffline">Do not send online</string>
     <string name="vtloffline2">Force offline</string>
-    <string name="vtloffline2summary">"Works only when online status sending is enabled. Sends instantly offline after sending messages and other api methods that are sent online
+    <string name="vtloffline2summary">"Works only when offline status sending is enabled. Sends instantly offline after sending messages and other api methods that are sent online
 
 May look like a fake leaving the online"</string>
     <string name="vtlofflinesummary">Disabling online will allow you to stay offline</string>
