@@ -1,6 +1,7 @@
 package ru.vtosters.lite.downloaders;
 import static com.vtosters.lite.R.string;
 import static ru.vtosters.lite.downloaders.VideoDownloader.downloadVideo;
+import static ru.vtosters.lite.utils.Globals.getContext;
 
 import android.app.DownloadManager;
 import android.content.Context;
@@ -14,9 +15,8 @@ import com.vk.dto.stories.model.StoryEntry;
 import java.util.List;
 
 public class StoryDownloader{
-    public static void injectAction(AlertDialogs.b dialogBuilder, StoryEntry story){
-        Context ctx = dialogBuilder.a().show().getContext();
-        dialogBuilder.a(string.download, () -> {
+    public static Runnable injectButton(StoryEntry story){
+        return () -> {
             // if story is a pic
             if(story.T1()){
                 List<ImageSize> imageSizes = story.E.Q.t1();
@@ -25,13 +25,13 @@ public class StoryDownloader{
                 request.setNotificationVisibility(DownloadManager.Request.VISIBILITY_VISIBLE_NOTIFY_COMPLETED);
                 request.setTitle("photo" + story.E.a);
                 request.setDestinationInExternalPublicDir(Environment.DIRECTORY_DCIM, "/Stories/photo" + story.E.a + ".jpg");
-                ((DownloadManager) ctx.getSystemService(Context.DOWNLOAD_SERVICE)).enqueue(request);
+                ((DownloadManager) getContext().getSystemService(Context.DOWNLOAD_SERVICE)).enqueue(request);
                 return;
             }
             // if story is a video
             if(story.M1() && story.F != null){
-                downloadVideo(story.F, ctx); // dead
+                downloadVideo(story.F, getContext());
             }
-        });
+        };
     }
 }
