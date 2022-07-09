@@ -7,16 +7,6 @@
             android:summary="@string/vtlvoicesummary"
             android:title="@string/vtlvoice" />
     </PreferenceCategory>
-    <PreferenceCategory android:title="@string/sett_media">
-        <com.vtosters.lite.ui.MaterialSwitchPreference
-            android:defaultValue="true"
-            android:key="compressPhotos"
-            android:title="@string/sett_compress_photos" />
-        <com.vtosters.lite.ui.MaterialSwitchPreference
-            android:defaultValue="true"
-            android:key="compressVideos"
-            android:title="@string/sett_compress_videos" />
-    </PreferenceCategory>
     <PreferenceCategory android:title="VK Me">
         <com.vtosters.lite.ui.MaterialSwitchPreference
             android:defaultValue="false"

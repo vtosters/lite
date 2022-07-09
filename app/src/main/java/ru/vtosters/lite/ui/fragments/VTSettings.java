@@ -71,6 +71,7 @@ import ru.vtosters.lite.utils.VKUIwrapper;
 
 public class VTSettings extends MaterialPreferenceToolbarFragment{
     public static int hideitems = 0;
+
     public static String getValAsString(String stringid, Boolean value){
         if(disableSettingsSumms()) return null;
 
@@ -134,7 +135,7 @@ public class VTSettings extends MaterialPreferenceToolbarFragment{
 
         String feedsumm = getValAsString("vtlfeedsumm", ads());
         String docksumm = getDocksumm();
-        String musicsumm = getValAsString("vtlmusicsumm", isIntegrationEnabled());
+        String musicsumm = getValAsString("vtlmediasumm", isIntegrationEnabled());
         String msgsumm = getValAsString("vtlmsgsumm", vkme());
         String activitysumm = getValAsString("vtlactivitysumm", offline());
         String themessumm = getValAsString("vtlthemessumm", navbar());
@@ -314,16 +315,15 @@ public class VTSettings extends MaterialPreferenceToolbarFragment{
                 context.startActivity(a2);
                 return false;
             });
-
-            if(isValidSignature())
-                PreferencesUtil.addPreference(this, "", Globals.getString("vtlmusic"), musicsumm, !DoNotUseOldIcons() ? "ic_music_24" : "ic_music_outline_28", preference -> {
-                    Context context = getContext();
-                    Intent a2 = new Navigator(MusicFragment.class).b(context);
-                    a2.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-                    context.startActivity(a2);
-                    return false;
-                });
         }
+
+        PreferencesUtil.addPreference(this, "", Globals.getString("vtlmedia"), musicsumm, "ic_media_outline_28", preference -> {
+            Context context = getContext();
+            Intent a2 = new Navigator(MediaFragment.class).b(context);
+            a2.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+            context.startActivity(a2);
+            return false;
+        });
 
         PreferencesUtil.addPreference(this, "", Globals.getString("vtlmessages"), msgsumm, !DoNotUseOldIcons() ? "ic_message_24" : "ic_message_outline_28", preference -> {
             Context context = getContext();
@@ -365,7 +365,7 @@ public class VTSettings extends MaterialPreferenceToolbarFragment{
             return false;
         });
 
-        if(milkshake()) {
+        if(milkshake()){
             PreferencesUtil.addPreference(this, "", "Настроить Superapp", superapp, "ic_explore_outline_28", (preference) -> {
                 callEditorPopup();
                 return true;

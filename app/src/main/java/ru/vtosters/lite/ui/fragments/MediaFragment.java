@@ -6,10 +6,10 @@ import android.os.Bundle;
 
 import com.vtosters.lite.general.fragments.MaterialPreferenceToolbarFragment;
 
-public class MusicFragment extends MaterialPreferenceToolbarFragment{
+public class MediaFragment extends MaterialPreferenceToolbarFragment{
     @Override
     public void onCreate(Bundle bundle){
         super.onCreate(bundle);
-        addPreferencesFromResource(getIdentifier("preferences_music", "xml"));
+        addPreferencesFromResource(getIdentifier("preferences_media", "xml"));
     }
 }

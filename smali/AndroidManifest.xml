@@ -1502,8 +1502,8 @@
             android:launchMode="singleTop"
             android:windowSoftInputMode="adjustPan" />
         <activity
-            android:name="ru.vtosters.lite.ui.fragments.MusicFragment"
-            android:label="@string/vtlmusic"
+            android:name="ru.vtosters.lite.ui.fragments.MediaFragment"
+            android:label="@string/vtlmedia"
             android:launchMode="singleTop"
             android:windowSoftInputMode="adjustPan" />
 

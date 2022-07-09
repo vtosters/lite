@@ -5316,7 +5316,7 @@
 
     <string name="vtlfeed">Лента</string>
     <string name="vtlinterface">Интерфейс</string>
-    <string name="vtlmusic">Музыка</string>
+    <string name="vtlmedia">Медиа контент</string>
     <string name="vtlproxy">Прокси</string>
     <string name="vtlother">Другое</string>
     <string name="vtlactivity">Активность</string>
@@ -5758,7 +5758,7 @@
 
     <string name="vtlfeedsumm">Блокировать рекламу</string>
     <string name="vtldocksumm">Докбар элементов</string>
-    <string name="vtlmusicsumm">VKX интеграция</string>
+    <string name="vtlmediasumm">VKX интеграция</string>
     <string name="vtlmsgsumm">Режим VK Me</string>
     <string name="vtlactivitysumm">Офлайн режим</string>
     <string name="vtlthemessumm">Покраска навбара</string>

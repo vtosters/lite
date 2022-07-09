@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+    <PreferenceCategory android:title="@string/interfaceglobal">
+        <com.vtosters.lite.ui.SummaryListPreference
+            android:defaultValue="default"
+            android:dialogTitle="@string/dateformat"
+            android:entries="@array/dateformat_value"
+            android:entryValues="@array/dateformat"
+            android:key="dateformat"
+            android:title="@string/interfaceglobaldates" />
+        <com.vtosters.lite.ui.MaterialSwitchPreference
+            android:defaultValue="true"
+            android:key="shortinfo"
+            android:summary="@string/interfaceglobalnumsum"
+            android:title="@string/interfaceglobalnum" />
+        <com.vtosters.lite.ui.MaterialSwitchPreference
+            android:defaultValue="true"
+            android:key="shortpost"
+            android:summary="@string/interfaceglobalpostsum"
+            android:title="@string/interfaceglobalpost" />
+        <com.vtosters.lite.ui.MaterialSwitchPreference
+            android:defaultValue="false"
+            android:key="pollresults"
+            android:summary="Показывать результаты в опросах без участия в них"
+            android:title="Результаты опросов" />
+    </PreferenceCategory>
+    <PreferenceCategory android:title="@string/sett_media">
+        <com.vtosters.lite.ui.MaterialSwitchPreference
+            android:defaultValue="true"
+            android:key="compressPhotos"
+            android:summary="Отключение значительно улучшит качество загружаемых фотографий"
+            android:title="@string/sett_compress_photos" />
+        <com.vtosters.lite.ui.MaterialSwitchPreference
+            android:defaultValue="true"
+            android:key="compressVideos"
+            android:summary="Отключение значительно улучшит качество загружаемых видео"
+            android:title="@string/sett_compress_videos" />
+    </PreferenceCategory>
+    <PreferenceCategory android:title="Музыка">
+        <com.vtosters.lite.ui.MaterialSwitchPreference
+            android:defaultValue="false"
+            android:key="musictask"
+            android:summary="Останаливать музыку после остановки процесса приложения"
+            android:title="Остановка музыки" />
+        <com.vtosters.lite.ui.MaterialSwitchPreference
+            android:defaultValue="true"
+            android:key="musicnewcatalog"
+            android:summary="Новый каталог музыкального раздела с динамическим контентом. Возможны пропажи некоторорых существующих разделов тк каталоги ещё не доработаны"
+            android:title="Новый раздел музыки (beta)" />
+    </PreferenceCategory>
+    <PreferenceCategory android:title="Видео">
+        <com.vtosters.lite.ui.MaterialSwitchPreference
+            android:defaultValue="false"
+            android:key="isEnableExternalOpening"
+            android:summary="@string/interfacevideoextsum"
+            android:title="@string/interfacevideoext" />
+        <com.vtosters.lite.ui.MaterialSwitchPreference
+            android:defaultValue="false"
+            android:key="__dbg_disable_video_feed"
+            android:summary="@string/interfacevideorecsum"
+            android:title="@string/interfacevideorec" />
+        <Preference
+            android:key="download_video"
+            android:title="Скачать видео" />
+    </PreferenceCategory>
+    <PreferenceCategory android:title="@string/vkx_title">
+        <Preference
+            android:enabled="false"
+            android:summary="@string/vkx_why_summary"
+            android:title="@string/vkx_why" />
+        <Preference
+            android:persistent="false"
+            android:title="@string/vkx_download">
+            <intent
+                android:action="android.intent.action.VIEW"
+                android:data="https://vkx.app" />
+        </Preference>
+        <com.vtosters.lite.ui.MaterialSwitchPreference
+            android:defaultValue="false"
+            android:key="libvkx_integration"
+            android:title="@string/vkx_integration" />
+    </PreferenceCategory>
+</PreferenceScreen>
