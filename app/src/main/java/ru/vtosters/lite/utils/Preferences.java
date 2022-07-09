@@ -211,10 +211,6 @@ public class Preferences{
         return getBoolValue("postsredesign", true);
     }
 
-    public static boolean quic(){
-        return getBoolValue("quic", true);
-    }
-
     public static boolean returnnorifs(){
         return getBoolValue("returnnorifs", false);
     }
