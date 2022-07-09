@@ -14,6 +14,7 @@ import android.os.Environment;
 import android.util.Log;
 import android.widget.Toast;
 
+import com.vk.core.dialogs.bottomsheet.MenuBottomSheetAction;
 import com.vk.core.util.ToastUtils;
 import com.vk.dto.common.VideoFile;
 
@@ -26,6 +27,28 @@ import java.util.List;
 import java.util.Objects;
 
 public class VideoDownloader{
+    private static final int action_id = 1488;
+
+    public static boolean onClick(int id, VideoFile video, Context ctx) {
+        if (id == action_id) {
+            downloadVideo(video, ctx);
+            return true;
+        }
+        return false;
+    }
+
+    public static void injectAction(ArrayList<MenuBottomSheetAction> list, VideoFile video) {
+        if (!video.U && !video.I1()) {
+            MenuBottomSheetAction downloadAction = new MenuBottomSheetAction(
+                    action_id,
+                    com.vtosters.lite.R.drawable.ic_download_outline_24,
+                    com.vtosters.lite.R.string.download,
+                    9
+            );
+            list.add(downloadAction);
+        }
+    }
+
     public static void downloadVideo(VideoFile videoFile, Context context){
         final List<String> list = new ArrayList<>();
         final List<String> urls = new ArrayList<>();
