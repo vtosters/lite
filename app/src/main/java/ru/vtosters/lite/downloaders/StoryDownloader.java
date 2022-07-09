@@ -7,6 +7,7 @@ import android.app.DownloadManager;
 import android.content.Context;
 import android.net.Uri;
 import android.os.Environment;
+import android.widget.Toast;
 
 import com.vk.core.util.AlertDialogs;
 import com.vk.dto.common.ImageSize;
@@ -26,11 +27,12 @@ public class StoryDownloader{
                 request.setTitle("photo" + story.E.a);
                 request.setDestinationInExternalPublicDir(Environment.DIRECTORY_DCIM, "/Stories/photo" + story.E.a + ".jpg");
                 ((DownloadManager) getContext().getSystemService(Context.DOWNLOAD_SERVICE)).enqueue(request);
-                return;
             }
+
             // if story is a video
-            if(story.M1() && story.F != null){
-                downloadVideo(story.F, getContext());
+            if(story.F != null){
+                downloadVideo(story.F, null);
+                return;
             }
         };
     }

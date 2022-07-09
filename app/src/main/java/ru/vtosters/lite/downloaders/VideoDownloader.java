@@ -1,6 +1,7 @@
 package ru.vtosters.lite.downloaders;
 
 import static ru.vtosters.lite.net.Request.makeRequest;
+import static ru.vtosters.lite.utils.Globals.getContext;
 import static ru.vtosters.lite.utils.Globals.getString;
 import static ru.vtosters.lite.utils.Globals.getUserToken;
 
@@ -10,6 +11,7 @@ import android.app.ProgressDialog;
 import android.content.Context;
 import android.net.Uri;
 import android.os.Environment;
+import android.util.Log;
 import android.widget.Toast;
 
 import com.vk.core.util.ToastUtils;
@@ -66,6 +68,17 @@ public class VideoDownloader{
 
         for(int i = 0; i < list.size(); i++) {
             max[i] = list.get(i);
+        }
+
+        if(context == null){
+            var url = urls.get(urls.size() - 1);
+
+            DownloadManager.Request request = new DownloadManager.Request(Uri.parse(url));
+            request.setNotificationVisibility(DownloadManager.Request.VISIBILITY_VISIBLE_NOTIFY_COMPLETED);
+            request.setTitle(videoFile.toString());
+            request.setDestinationInExternalPublicDir(Environment.DIRECTORY_MOVIES, videoFile + ".mp4");
+            ((DownloadManager) getContext().getSystemService(Context.DOWNLOAD_SERVICE)).enqueue(request);
+            return;
         }
 
         var builder = new AlertDialog.Builder(context);
