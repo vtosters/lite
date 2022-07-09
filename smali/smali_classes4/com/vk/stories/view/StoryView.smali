@@ -5846,6 +5846,8 @@
 
     move-result-object v1
 
+    invoke-static {v1, v0}, Lru/vtosters/lite/downloaders/StoryDownloader;->injectAction(Lcom/vk/core/util/AlertDialogs$b;Lcom/vk/dto/stories/model/StoryEntry;)V
+
     .line 3
     iget v2, v0, Lcom/vk/dto/stories/model/StoryEntry;->c:I
 

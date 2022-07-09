@@ -38,6 +38,8 @@
 # instance fields
 .field private final a:Ljava/lang/String;
 
+.field public final url:Ljava/lang/String;
+
 .field private final b:I
 
 .field private final c:I
@@ -177,6 +179,8 @@
     .line 17
     iput-object p1, p0, Lcom/vk/dto/common/ImageSize;->a:Ljava/lang/String;
 
+    iput-object p1, p0, Lcom/vk/dto/common/ImageSize;->url:Ljava/lang/String;
+
     .line 18
     iput p2, p0, Lcom/vk/dto/common/ImageSize;->c:I
 
@@ -265,6 +269,8 @@
     move-result-object p2
 
     iput-object p2, p0, Lcom/vk/dto/common/ImageSize;->a:Ljava/lang/String;
+
+    iput-object p2, p0, Lcom/vk/dto/common/ImageSize;->url:Ljava/lang/String;
 
     const/16 p2, 0x87
 
@@ -582,6 +588,10 @@
 
     .line 1
     iget-object v0, p0, Lcom/vk/dto/common/ImageSize;->a:Ljava/lang/String;
+
+    invoke-virtual {p1, v0}, Lcom/vk/core/serialize/Serializer;->a(Ljava/lang/String;)V
+
+    iget-object v0, p0, Lcom/vk/dto/common/ImageSize;->url:Ljava/lang/String;
 
     invoke-virtual {p1, v0}, Lcom/vk/core/serialize/Serializer;->a(Ljava/lang/String;)V
 
