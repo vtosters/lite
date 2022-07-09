@@ -29,9 +29,6 @@ public class InterfaceFragment extends MaterialPreferenceToolbarFragment{
     }
 
     public class restart implements Preference.OnPreferenceClickListener{
-        restart(){
-        }
-
         @Override
         public boolean onPreferenceClick(Preference preference){
             return InterfaceFragment.this.restart(preference);

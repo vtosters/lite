@@ -34,6 +34,10 @@
             android:title="@string/copytokenbtn" />
     </PreferenceCategory>
      <PreferenceCategory android:title="Backup system">
+         <Preference
+             android:key="saveonlines"
+             android:summary="Сохранить список AppId и их названия в файл"
+             android:title="Сохранить список онлайнов" />
         <Preference
             android:key="deleteprefs"
             android:title="Reset prefs" />
