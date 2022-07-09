@@ -232,7 +232,7 @@ public class Preferences{
     }
 
     public static boolean isMusicRestricted(){
-        return getBoolValue("isMusicRestricted", false);
+        return getBoolValue("isMusicRestricted", true);
     }
 
     public static boolean navbar(){
