@@ -1,10 +1,29 @@
 package ru.vtosters.lite.utils;
 
+import static ru.vtosters.lite.net.Request.makeRequest;
 import static ru.vtosters.lite.utils.Globals.getString;
+import static ru.vtosters.lite.utils.Globals.getUserToken;
+import static ru.vtosters.lite.utils.Globals.sendToast;
+import static ru.vtosters.lite.utils.Preferences.dev;
+import static ru.vtosters.lite.utils.Preferences.getPrefsFromFile;
+import static ru.vtosters.lite.utils.Proxy.getApi;
+
+import org.json.JSONArray;
+import org.json.JSONException;
+import org.json.JSONObject;
 
 public class OnlineFormatter{
+    private static String AppName;
+
     public static String getAppName(int appid){  // thanks to egormetlitsky (vk mp3 mod) for helping with online ids
+        if(appid < 0) return "undefined";
+
         switch(appid) {
+            case 0:
+            case 1:
+            case 2:
+            case 3:
+                return null;
             case 2274003:
                 return "Android";
             case 6328039:
@@ -79,8 +98,34 @@ public class OnlineFormatter{
             case 6287487:
                 return "VK Web";
             default:
-                return null;
+                return getAppNameFromOnline(appid);
         }
+
+    }
+
+    public static String getAppNameFromOnline(int appid){
+        var appname = getPrefsFromFile("onlines").getString(String.valueOf(appid), null);
+
+        if(appname != null) return appname;
+
+        makeRequest("https://" + getApi() + "/method/apps.get?app_id=" + appid + "&v=5.99&access_token=" + getUserToken(),
+                response -> {
+                    try {
+                        JSONObject mainJson = new JSONObject(response);
+                        JSONObject responseJson = mainJson.getJSONObject("response");
+                        JSONArray itemsJson = responseJson.getJSONArray("items");
+
+                        AppName = itemsJson.getJSONObject(0).optString("title", "");
+
+                        getPrefsFromFile("onlines").edit().putString(String.valueOf(appid), AppName).apply();
+
+                        if(dev()) sendToast("AppName: " + AppName + " for appid: " + appid);
+                    } catch (JSONException e) {
+                        e.printStackTrace();
+                    }
+                });
+
+        return AppName;
     }
 
     public static String getOnline(int appid){
