@@ -19,19 +19,19 @@
 
 
 # instance fields
-.field private a:Lcom/vk/polls/ui/views/PollOptionView$b;
+.field public a:Lcom/vk/polls/ui/views/PollOptionView$b;
 
 .field private final b:Landroid/widget/TextView;
 
-.field private final c:Landroid/widget/TextView;
+.field public final c:Landroid/widget/TextView;
 
 .field private final d:Landroidx/appcompat/widget/AppCompatCheckBox;
 
 .field private final e:Landroid/widget/ProgressBar;
 
-.field private f:Lcom/vk/dto/polls/Poll;
+.field public f:Lcom/vk/dto/polls/Poll;
 
-.field private g:Lcom/vk/dto/polls/PollOption;
+.field public g:Lcom/vk/dto/polls/PollOption;
 
 
 # direct methods
@@ -755,6 +755,8 @@
 
     :goto_5
     invoke-virtual {v0, v2}, Landroid/widget/TextView;->setVisibility(I)V
+
+    invoke-static {p0}, Lru/vtosters/lite/utils/PollUtils;->show(Lcom/vk/polls/ui/views/PollOptionView;)V
 
     .line 18
     iget-object v0, p0, Lcom/vk/polls/ui/views/PollOptionView;->c:Landroid/widget/TextView;
