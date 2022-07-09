@@ -38,7 +38,7 @@ public class Preferences{
 
     public static void init(Application application) throws Exception{
         setupFilters();
-        fixGapps();
+        // fixGapps();
         setProxy();
         reloadMessagesList();
         registerActivities(application);
@@ -225,10 +225,6 @@ public class Preferences{
 
     public static boolean isEnableExternalOpening(){
         return getBoolValue("isEnableExternalOpening", false);
-    }
-
-    public static boolean iconvk(){
-        return getBoolValue("iconvk", false);
     }
 
     public static boolean isMusicRestricted(){
