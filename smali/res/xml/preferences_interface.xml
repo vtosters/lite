@@ -26,40 +26,8 @@
             android:entryValues="@array/animations_values2"
             android:key="anim_rtrn_type"
             android:title="@string/franimation" />
-        <com.vtosters.lite.ui.SummaryListPreference
-            android:defaultValue="default"
-            android:dialogTitle="@string/dateformat"
-            android:entries="@array/dateformat_value"
-            android:entryValues="@array/dateformat"
-            android:key="dateformat"
-            android:title="@string/interfaceglobaldates" />
-        <com.vtosters.lite.ui.MaterialSwitchPreference
-            android:defaultValue="true"
-            android:key="shortinfo"
-            android:summary="@string/interfaceglobalnumsum"
-            android:title="@string/interfaceglobalnum" />
-        <com.vtosters.lite.ui.MaterialSwitchPreference
-            android:defaultValue="true"
-            android:key="shortpost"
-            android:summary="@string/interfaceglobalpostsum"
-            android:title="@string/interfaceglobalpost" />
-        <com.vtosters.lite.ui.MaterialSwitchPreference
-            android:defaultValue="false"
-            android:key="pollresults"
-            android:summary="Показывать результаты в опросах без участия в них"
-            android:title="Результаты опросов" />
     </PreferenceCategory>
     <PreferenceCategory android:title="@string/interfacevideo">
-        <com.vtosters.lite.ui.MaterialSwitchPreference
-            android:defaultValue="false"
-            android:key="isEnableExternalOpening"
-            android:summary="@string/interfacevideoextsum"
-            android:title="@string/interfacevideoext" />
-        <com.vtosters.lite.ui.MaterialSwitchPreference
-            android:defaultValue="false"
-            android:key="__dbg_disable_video_feed"
-            android:summary="@string/interfacevideorecsum"
-            android:title="@string/interfacevideorec" />
         <com.vtosters.lite.ui.MaterialSwitchPreference
             android:defaultValue="true"
             android:key="postsredesign"

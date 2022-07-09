@@ -5466,7 +5466,7 @@ with video"</string>
 
     <string name="vtlfeed">Feed</string>
     <string name="vtlinterface">Interface</string>
-    <string name="vtlmusic">Music</string>
+    <string name="vtlmedia">Media content</string>
     <string name="vtlproxy">Proxy</string>
     <string name="vtlother">Other</string>
     <string name="vtlactivity">Activity</string>
@@ -5916,7 +5916,7 @@ May look like a fake leaving the online"</string>
 
     <string name="vtlfeedsumm">Block ads</string>
     <string name="vtldocksumm">Dockbar elements</string>
-    <string name="vtlmusicsumm">VKX Integration</string>
+    <string name="vtlmediasumm">VKX Integration</string>
     <string name="vtlmsgsumm">VK Me mode</string>
     <string name="vtlactivitysumm">Offline mode</string>
     <string name="vtlthemessumm">Navbar coloring</string>
