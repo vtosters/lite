@@ -30,6 +30,10 @@
 
 .field public static final enum VKAPP_MILK_DARK:Lcom/vk/core/ui/themes/VKTheme;
 
+.field public static final enum VKAPP_MILK_AMOLED:Lcom/vk/core/ui/themes/VKTheme;
+
+.field public static final enum VKAPP_AMOLED:Lcom/vk/core/ui/themes/VKTheme;
+
 .field public static final enum VKAPP_MILK_LIGHT:Lcom/vk/core/ui/themes/VKTheme;
 
 .field public static final enum VKME_DARK:Lcom/vk/core/ui/themes/VKTheme;
@@ -53,7 +57,7 @@
 .method static constructor <clinit>()V
     .locals 20
 
-    const/4 v0, 0x6
+    const/16 v0, 0x8
 
     new-array v0, v0, [Lcom/vk/core/ui/themes/VKTheme;
 
@@ -212,6 +216,53 @@
     sput-object v1, Lcom/vk/core/ui/themes/VKTheme;->VKAPP_MILK_DARK:Lcom/vk/core/ui/themes/VKTheme;
 
     const/4 v2, 0x5
+
+    aput-object v1, v0, v2
+
+
+    .line 6
+    sget v10, Lb/h/g/e;->VkMilkDarkStyle:I
+
+    const-string v4, "VKAPP_MILK_AMOLED"
+
+    const/4 v5, 0x6
+
+    const-wide/16 v6, 0x6
+
+    const/4 v8, 0x0
+
+    const-string v11, "space_gray"
+
+    move-object v3, v1
+
+    invoke-direct/range {v3 .. v11}, Lcom/vk/core/ui/themes/VKTheme;-><init>(Ljava/lang/String;IJZZILjava/lang/String;)V
+
+    sput-object v1, Lcom/vk/core/ui/themes/VKTheme;->VKAPP_MILK_AMOLED:Lcom/vk/core/ui/themes/VKTheme;
+
+    const/4 v2, 0x6
+
+    aput-object v1, v0, v2
+
+    .line 6
+    sget v10, Lb/h/g/e;->VkMilkDarkStyle:I
+
+    const-string v4, "VKAPP_AMOLED"
+
+    const/4 v5, 0x7
+
+    const-wide/16 v6, 0x7
+
+    const/4 v8, 0x0
+
+    const-string v11, "space_gray"
+
+    move-object v3, v1
+
+    invoke-direct/range {v3 .. v11}, Lcom/vk/core/ui/themes/VKTheme;-><init>(Ljava/lang/String;IJZZILjava/lang/String;)V
+
+    sput-object v1, Lcom/vk/core/ui/themes/VKTheme;->VKAPP_AMOLED:Lcom/vk/core/ui/themes/VKTheme;
+
+    const/4 v2, 0x7
 
     aput-object v1, v0, v2
 

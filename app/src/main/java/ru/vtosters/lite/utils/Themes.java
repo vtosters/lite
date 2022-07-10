@@ -135,8 +135,8 @@ public class Themes{
 
     public static VKTheme getDarkTheme(){
         switch(getPrefsValue("darktheme")) {
-            //case "amoled":
-            //return VKTheme.AMOLED;
+            case "amoled":
+                return isMilkshake() ? VKTheme.VKAPP_MILK_AMOLED : VKTheme.VKAPP_AMOLED;
             default:
                 return isMilkshake() ? VKTheme.VKAPP_MILK_DARK : VKTheme.VKAPP_DARK;
         }
@@ -215,7 +215,6 @@ public class Themes{
 
     @SuppressLint("UseCompatLoadingForColorStateLists")
     public static ColorStateList themeCSL(Context context, int color){
-
         if(isColorRefAccented(color) && isAndroidMonet()){
             return ColorStateList.valueOf(getAccentColor());
         }
@@ -308,34 +307,6 @@ public class Themes{
     public static String hex(int i){
         return String.format("#%06X", Integer.valueOf(i & 16777215));
     } // Get color as hex string
-
-//    public static int vk_sans_display_demibold(){
-//        return vksans() ? R.font.vk_sans_display_demibold : R.font.tt_commons_demi_bold;
-//    }
-//
-//    public static int vk_sans_text_black(){
-//        return vksans() ? R.font.vk_sans_display_bold : R.font.roboto_black;
-//    }
-//
-//    public static int vk_sans_text_bold(){
-//        return vksans() ? R.font.vk_sans_text_bold : R.font.roboto_bold;
-//    }
-//
-//    public static int vk_sans_text_demibold(){
-//        return vksans() ? R.font.vk_sans_text_demibold : R.font.roboto_bold_italic;
-//    }
-//
-//    public static int vk_sans_text_light(){
-//        return vksans() ? R.font.vk_sans_text_light : R.font.roboto_light;
-//    }
-//
-//    public static int vk_sans_text_medium(){
-//        return vksans() ? R.font.vk_sans_text_medium : R.font.roboto_medium;
-//    }
-//
-//    public static int vk_sans_text_regular(){
-//        return vksans() ? R.font.vk_sans_text_regular : R.font.roboto_regular;
-//    }
 
     public static int getNavigationHeight(int Default){
         int VKME = R.dimen.design_bottom_sheet_peek_height_min;
