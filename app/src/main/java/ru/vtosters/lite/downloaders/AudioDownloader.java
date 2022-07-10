@@ -21,8 +21,9 @@ public class AudioDownloader {
             ToastUtils.a("Не удалось найти ссылку на аудиозапись");
             return;
         }
-        Log.v("VTosters Lite", "Downloading audio " + track.D);
-        downloadAudioAsync(track, Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_MUSIC) + "/test", new Callback() {
+        downloadAudioAsync(track,
+                Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_MUSIC)
+                        .getAbsolutePath() + File.separator + track.f, new Callback() {
             @Override
             public void onProgress(int progress) {
                 ToastUtils.a("Загружено " + progress + "%");
@@ -47,7 +48,12 @@ public class AudioDownloader {
 
     private static void downloadAudioAsync(MusicTrack track, String path, Callback callback) {
         File outDir = new File(path);
-        if (!outDir.exists()) outDir.mkdirs();
+        if (!outDir.exists())
+            if (outDir.mkdir())
+                Log.i("AudioDownloader", "Directory created");
+            else
+                Log.e("AudioDownloader", "Directory creation failed");
+        Log.i("AudioDownloader", "Downloading audio to " + path);
         new M3UDownloader(track.D, outDir, callback).execute();
     }
 }
