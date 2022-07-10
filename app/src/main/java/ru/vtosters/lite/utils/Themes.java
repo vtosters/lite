@@ -129,27 +129,19 @@ public class Themes{
         return Build.VERSION.SDK_INT >= Build.VERSION_CODES.O ? isDarkTheme() ? SYSTEM_UI_FLAG_LIGHT_NAVIGATION_BAR : 0 : 0;
     }
 
-    public static String getDarkThemeRes(){
-        if("amoled".equals(getPrefsValue("darktheme"))){
-            return isMilkshake() ? "amoled milk" : "not milk but amoled";
+    public static int getDarkThemeRes(){
+        if(getPrefsValue("darktheme").equals("amoled")){
+            return isMilkshake() ? getIdentifier("VkMilkAmoledStyle", "style") : getIdentifier("VkAmoledStyle", "style");
         }
-        return isMilkshake() ? "dark milk" : "not milk";
+        return isMilkshake() ? R.style.VkMilkDarkStyle : R.style.VkDarkStyle;
     } // Return needed res theme
 
     public static VKTheme getDarkTheme(){
-        switch(getPrefsValue("darktheme")) {
-            case "amoled":
-                return VKTheme.VKAPP_MILK_AMOLED;
-            default:
-                return isMilkshake() ? VKTheme.VKAPP_MILK_DARK : VKTheme.VKAPP_DARK;
-        }
+        return isMilkshake() ? VKTheme.VKAPP_MILK_DARK : VKTheme.VKAPP_DARK;
     } // Return needed theme for theme changer
 
     public static VKTheme getLightTheme(){
-        switch(getPrefsValue("lighttheme")) {
-            default:
-                return isMilkshake() ? VKTheme.VKAPP_MILK_LIGHT : VKTheme.VKAPP_LIGHT;
-        }
+        return isMilkshake() ? VKTheme.VKAPP_MILK_LIGHT : VKTheme.VKAPP_LIGHT;
     } // Return needed theme for theme changer
 
     public static int getColorFromAttr(int attr){
