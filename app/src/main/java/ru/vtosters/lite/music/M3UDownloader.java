@@ -60,10 +60,13 @@ public class M3UDownloader {
                 String tsURL = parser.getBaseUrl() + ts.getName();
                 Log.d("M3UDownloader", "Downloading " + tsURL);
                 InputStream is = StreamUtils.openStream(tsURL);
-                String key = StreamUtils.readAllLines(StreamUtils.openStream(ts.getKeyURL()));
-                byte[] content = TransportStream.METHOD_AES128.equals(ts.getMethod())
-                        ? StreamUtils.decodeStream(is, key)
-                        : StreamUtils.readAllBytes(is);
+                byte[] content;
+                if (TransportStream.METHOD_AES128.equals(ts.getMethod())) {
+                    String key = StreamUtils.readAllLines(StreamUtils.openStream(ts.getKeyURL()));
+                    content = StreamUtils.decodeStream(is, key);
+                } else {
+                    content = StreamUtils.readAllBytes(is);
+                }
                 File tsDump = new File(mOutDir, ts.getName());
                 StreamUtils.writeToFile(tsDump, content);
                 mCallback.onSizeReceived((long) content.length * tses.size(), parser.getHeapSize());
