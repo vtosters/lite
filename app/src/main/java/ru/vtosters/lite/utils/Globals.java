@@ -184,9 +184,9 @@ public class Globals{
             InputStream is = conn.getInputStream();
             Bitmap bmp = BitmapFactory.decodeStream(is);
 
-            bmp = rounded? getBitmapClippedCircle(bmp) : bmp; // rounding
+            bmp = rounded ? getBitmapClippedCircle(bmp) : bmp; // rounding
 
-            bmp = scaled? createScaledBitmap(bmp, convertDpToPixel(256), convertDpToPixel(256), true) : bmp; // scaling
+            bmp = scaled ? createScaledBitmap(bmp, convertDpToPixel(256), convertDpToPixel(256), true) : bmp; // scaling
 
             return new BitmapDrawable(getResources(), bmp); // return our drawable
         } catch (Exception e) {
@@ -400,5 +400,15 @@ public class Globals{
         int centerWidth = width / 2;
         int centerHeight = height / 2;
         return new float[]{centerWidth, centerHeight};
+    }
+
+    int[] toIntArray(List<Integer> list){
+        int[] ret = new int[list.size()];
+        int i = 0;
+        for(Integer e : list) {
+            /*if (e < 2000000000)*/
+            ret[i++] = e;
+        }
+        return ret;
     }
 }
