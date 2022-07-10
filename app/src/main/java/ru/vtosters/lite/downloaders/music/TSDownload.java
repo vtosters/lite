@@ -99,7 +99,7 @@ public class TSDownload {
 
             this.bytes = bytes;
         } catch (Exception e) {
-            Log.w("vk_m3u8", e);
+            Log.w("VTosters Lite", e);
             return false;
         }
         return true;
