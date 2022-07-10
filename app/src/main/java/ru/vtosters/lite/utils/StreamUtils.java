@@ -28,10 +28,9 @@ public class StreamUtils {
         return readAllBytes(cip);
     }
 
-    public static Cipher getCipher(String keyURL) throws NoSuchPaddingException, NoSuchAlgorithmException, InvalidAlgorithmParameterException, InvalidKeyException, IOException {
-        String key = new String(readAllBytes(openStream(keyURL)));
+    public static Cipher getCipher(String key) throws NoSuchPaddingException, NoSuchAlgorithmException, InvalidAlgorithmParameterException, InvalidKeyException, IOException {
         Cipher cipher = Cipher.getInstance("AES/CBC/PKCS5Padding");
-        Key keySpec = new SecretKeySpec(key.getBytes(StandardCharsets.UTF_8), "AES");
+        Key keySpec = new SecretKeySpec(key.getBytes(), "AES");
         // bypassing ecb
         byte[] iv = new byte[16];
         Arrays.fill(iv, (byte) 0x0);
@@ -59,6 +58,7 @@ public class StreamUtils {
     }
 
     public static void writeToFile(File file, byte[] content) throws IOException {
+        if (!file.exists()) file.createNewFile();
         FileOutputStream fos = new FileOutputStream(file);
         fos.write(content);
     }
