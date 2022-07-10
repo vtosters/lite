@@ -1,6 +1,8 @@
 package ru.vtosters.lite.downloaders;
 
 import android.os.Environment;
+import android.os.Handler;
+import android.os.Looper;
 import android.provider.MediaStore;
 import android.util.Log;
 import android.widget.Toast;
@@ -20,7 +22,7 @@ public class AudioDownloader {
             return;
         }
         Log.v("VTosters Lite", "Downloading audio " + track.D);
-        downloadAudioAsync(track, Environment.DIRECTORY_MUSIC + File.pathSeparator + "test", new Callback() {
+        downloadAudioAsync(track, Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_MUSIC) + "/test", new Callback() {
             @Override
             public void onProgress(int progress) {
                 ToastUtils.a("Загружено " + progress + "%");
@@ -44,7 +46,8 @@ public class AudioDownloader {
     }
 
     private static void downloadAudioAsync(MusicTrack track, String path, Callback callback) {
-        var destTs = path + ".ts";
-        new M3UDownloader(track.D, new File(destTs), callback).execute();
+        File outDir = new File(path);
+        if (!outDir.exists()) outDir.mkdirs();
+        new M3UDownloader(track.D, outDir, callback).execute();
     }
 }
