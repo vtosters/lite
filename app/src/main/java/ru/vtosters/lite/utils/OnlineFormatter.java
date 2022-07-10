@@ -81,13 +81,15 @@ public class OnlineFormatter{
             case 7793118:
                 return "VK Звонки (Desktop)";
             case 6767438:
-                return "VK Музыка (Android)"; // TODO search ios app
+                return "VK Музыка (Android)";
             case 8113297:
                 return "VK Клипы (Android)";
             case 8106428:
                 return "VK Клипы (iPhone)";
             case 5044491:
                 return "Candy";
+            case 8114066:
+                return "VK Видео";
             case 4894723:
                 return "Phoenix Lite";
             case 4994316:
