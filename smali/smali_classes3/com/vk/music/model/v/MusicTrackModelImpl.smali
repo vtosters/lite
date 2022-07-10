@@ -211,6 +211,11 @@
     if-eqz v1, :cond_0
 
     .line 12
+
+    invoke-static {p1}, Lru/vtosters/lite/downloaders/AudioDownloader;->downloadAudio(Lcom/vk/dto/music/MusicTrack;)V
+
+    return-void
+
     iget-object v0, p0, Lcom/vk/music/model/v/MusicTrackModelImpl;->f:Lcom/vk/music/common/BoomModel;
 
     invoke-interface {v0, p2, p1, p4, p3}, Lcom/vk/music/common/BoomModel;->a(Landroid/content/Context;Lcom/vk/dto/music/MusicTrack;Lcom/vk/music/common/BoomModel$From;Lcom/vk/music/common/MusicPlaybackLaunchContext;)V
