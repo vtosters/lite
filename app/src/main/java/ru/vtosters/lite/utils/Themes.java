@@ -129,14 +129,17 @@ public class Themes{
         return Build.VERSION.SDK_INT >= Build.VERSION_CODES.O ? isDarkTheme() ? SYSTEM_UI_FLAG_LIGHT_NAVIGATION_BAR : 0 : 0;
     }
 
-    public static int getNeededColorStatusbarFix(){
-        return VKThemeHelper.r() ? 8192 : 0;
-    }
+    public static String getDarkThemeRes(){
+        if("amoled".equals(getPrefsValue("darktheme"))){
+            return isMilkshake() ? "amoled milk" : "not milk but amoled";
+        }
+        return isMilkshake() ? "dark milk" : "not milk";
+    } // Return needed res theme
 
     public static VKTheme getDarkTheme(){
         switch(getPrefsValue("darktheme")) {
             case "amoled":
-                return isMilkshake() ? VKTheme.VKAPP_MILK_AMOLED : VKTheme.VKAPP_AMOLED;
+                return VKTheme.VKAPP_MILK_AMOLED;
             default:
                 return isMilkshake() ? VKTheme.VKAPP_MILK_DARK : VKTheme.VKAPP_DARK;
         }
