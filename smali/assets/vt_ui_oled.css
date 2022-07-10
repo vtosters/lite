@@ -58,15 +58,15 @@ body[scheme=space_gray] {
     --counter_secondary_text: #000000 !important;
     --loader_background: #000000 !important;
     --overlay_status_background: #000000 !important;
-    --header_background: #19191a !important;
-    --header_alternate_background: #19191a !important;
+    --header_background: #000000 !important;
+    --header_alternate_background: #000000 !important;
     --separator_alternate: #000000 !important;
     --segmented_control_bar_background: #000000 !important;
     --search_bar_background: #000000 !important;
     /* background */
     --background_page: #000000 !important;
-    --header_background_before_blur: #19191a !important;
-    --header_background_before_blur_alternate: #19191a !important;
+    --header_background_before_blur: #000000 !important;
+    --header_background_before_blur_alternate: #000000 !important;
     /* lighter BG (text fields) */
     --attach_picker_tab_inactive_background: #121212 !important;
     --background_keyboard: #121212 !important;
