@@ -51,6 +51,8 @@
 
     move-result-object v7
 
+    invoke-static {p0, v7}, Lru/vtosters/lite/ui/vkui/MenuBuilder;->injectAP(Lcom/vk/profile/ui/components/ProfileFragmentActionsMenuBuilder;Lcom/vk/core/dialogs/actionspopup/ActionsPopup$b;)V
+
     .line 2
     invoke-direct {p0}, Lcom/vk/profile/ui/components/ProfileFragmentActionsMenuBuilder;->q()Z
 
