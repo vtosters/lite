@@ -16,14 +16,9 @@ public class OnlineFormatter{
     private static String AppName;
 
     public static String getAppName(int appid){  // thanks to egormetlitsky (vk mp3 mod) for helping with online ids
-        if(appid < 0) return "undefined";
+        if(appid <= 3) return null;
 
         switch(appid) {
-            case 0:
-            case 1:
-            case 2:
-            case 3:
-                return null;
             case 2274003:
                 return "Android";
             case 6328039:
@@ -132,7 +127,8 @@ public class OnlineFormatter{
     }
 
     public static String getAppNameFromOnline(int appid){
-        var appname = getPrefsFromFile("onlines").getString(String.valueOf(appid), null);
+        var prefs = getPrefsFromFile("onlines");
+        var appname = prefs.getString(String.valueOf(appid), null);
 
         if(appname != null) return appname;
 
@@ -145,7 +141,7 @@ public class OnlineFormatter{
 
                         AppName = itemsJson.getJSONObject(0).optString("title", "");
 
-                        getPrefsFromFile("onlines").edit().putString(String.valueOf(appid), AppName).apply();
+                        prefs.edit().putString(String.valueOf(appid), AppName).apply();
 
                         if(dev()) sendToast("AppName: " + AppName + " for appid: " + appid);
                     } catch (JSONException e) {
