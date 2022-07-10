@@ -38,6 +38,8 @@
 
     move-result-object v7
 
+    invoke-static {p0, v7}, Lru/vtosters/lite/ui/vkui/MenuBuilder;->injectAP(Lcom/vk/profile/ui/components/CommunityFragmentActionsMenuBuilder;Lcom/vk/core/dialogs/actionspopup/ActionsPopup$b;)V
+
     .line 2
     iget-object v0, p0, Lcom/vk/profile/ui/components/CommunityFragmentActionsMenuBuilder;->b:Lcom/vtosters/lite/api/ExtendedCommunityProfile;
 
