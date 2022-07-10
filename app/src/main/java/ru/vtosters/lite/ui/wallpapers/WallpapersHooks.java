@@ -74,11 +74,11 @@ public class WallpapersHooks{
         String radius = getPreferences().getString("msg_blur_radius", "disabled");
         switch(radius) {
             case "low":
-                return 15;
+                return 8;
             case "med":
-                return 25;
+                return 14;
             default:
-                return 50;
+                return 20;
         }
     }
 
@@ -88,11 +88,11 @@ public class WallpapersHooks{
             case "disabled":
                 return "Отключено";
             case "low":
-                return "Низкое (15px)";
+                return "Низкое";
             case "med":
-                return "Среднее (25px)";
+                return "Среднее";
             default:
-                return "Высокое (50px)";
+                return "Высокое";
         }
     }
 
