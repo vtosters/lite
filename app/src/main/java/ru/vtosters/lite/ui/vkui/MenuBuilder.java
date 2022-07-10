@@ -44,7 +44,7 @@ public class MenuBuilder{
             cfambObject = CommunityFragmentActionsMenuBuilder.class.getDeclaredField("b");
             cfambObject.setAccessible(true);
         } catch (NoSuchFieldException | NoSuchMethodException e) {
-            Log.e("VTLite", "Reflection failed");");
+            Log.e("VTLite", "Reflection failed");
             e.printStackTrace();
         }
     }
