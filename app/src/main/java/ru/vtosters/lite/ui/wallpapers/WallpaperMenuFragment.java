@@ -16,7 +16,6 @@ import androidx.preference.ListPreference;
 
 import com.vtosters.lite.general.fragments.MaterialPreferenceToolbarFragment;
 
-import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
@@ -27,6 +26,19 @@ import ru.vtosters.lite.ui.PreferencesUtil;
 public class WallpaperMenuFragment extends MaterialPreferenceToolbarFragment{
 
     private WallpaperPreferences mWPPreviewPref;
+
+    public static void copyStream(InputStream copyFrom, OutputStream copyTo) throws IOException{
+
+        byte[] buffer = new byte[1024];
+        int length;
+        while((length = copyFrom.read(buffer)) > 0) {
+            copyTo.write(buffer, 0, length);
+        }
+
+        copyTo.flush();
+        copyTo.close();
+        copyFrom.close();
+    }
 
     @Override
     public void onCreate(Bundle bundle){
@@ -113,19 +125,6 @@ public class WallpaperMenuFragment extends MaterialPreferenceToolbarFragment{
             e.printStackTrace();
             Toast.makeText(requireActivity(), e.getLocalizedMessage(), Toast.LENGTH_LONG).show();
         }
-    }
-
-    public static void copyStream(InputStream copyFrom, OutputStream copyTo) throws IOException{
-
-        byte[] buffer = new byte[1024];
-        int length;
-        while ((length = copyFrom.read(buffer)) > 0) {
-            copyTo.write(buffer, 0, length);
-        }
-
-        copyTo.flush();
-        copyTo.close();
-        copyFrom.close();
     }
 
     @Override
