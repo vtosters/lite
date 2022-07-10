@@ -73,7 +73,7 @@ android {
 
     defaultConfig {
         applicationId "ru.vtosters.lite.utils.lite"
-        minSdkVersion 23
+        minSdkVersion 24
         targetSdkVersion 31
         versionCode 1
         versionName "1.0"
@@ -93,5 +93,6 @@ dependencies {
     implementation 'com.google.android.material:material:1.6.1'
     implementation 'androidx.exifinterface:exifinterface:1.3.3'
     implementation 'androidx.preference:preference:1.2.0'
+    implementation fileTree(dir: 'libs', include: ['*.aar'])
     compileOnly fileTree(dir: 'libs', include: ['*.jar'])
 }
