@@ -1,6 +1,5 @@
 package ru.vtosters.lite.music;
 
-import android.os.Environment;
 import android.util.Log;
 
 import com.arthenica.ffmpegkit.FFmpegKit;
@@ -21,11 +20,11 @@ public class FFMpeg {
         try {
             String[] files = Globals.getContext().getAssets().list("ffmpeg");
             // log all files
-            Log.d("INIT", "files: " + Arrays.toString(files));
+            Log.d("FFMpeg", "files: " + Arrays.toString(files));
             for (String file : files) {
                 if (file.endsWith(".so")) {
                     InputStream in = Globals.getContext().getAssets().open("ffmpeg" + File.separator + file);
-                    FileOutputStream out = new FileOutputStream(Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_DOWNLOADS) + "/" + file);
+                    FileOutputStream out = new FileOutputStream(Globals.getContext().getFilesDir() + File.separator + file);
                     byte[] buffer = new byte[BUFFER_SIZE];
                     int read;
                     while ((read = in.read(buffer)) != -1) {
@@ -41,7 +40,7 @@ public class FFMpeg {
     }
 
     private static void checkFFMpegLibs() {
-        var lib = new File(Globals.getContext().getCacheDir(), "libffmpegkit_abidetect.so");
+        var lib = new File(Globals.getContext().getFilesDir(), "libffmpegkit_abidetect.so");
         if (!lib.exists()) {
             ToastUtils.a("Копирование библиотеки ffmpegkit");
             copyAssets();
@@ -60,7 +59,4 @@ public class FFMpeg {
             return false;
         }
     }
-
-
-
 }
