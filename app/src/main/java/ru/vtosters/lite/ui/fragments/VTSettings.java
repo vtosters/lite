@@ -5,6 +5,7 @@ import static ru.vtosters.lite.f0x1d.VTVerifications.vtverif;
 import static ru.vtosters.lite.ui.vkui.VBListBuilder.VBListItem;
 import static ru.vtosters.lite.ui.vkui.VBListBuilder.buildListOf;
 import static ru.vtosters.lite.ui.vkui.VBottomSheetBuilder.VBSContent;
+import static ru.vtosters.lite.ui.wallpapers.WallpapersHooks.getWallpaper;
 import static ru.vtosters.lite.utils.About.getBuildNumber;
 import static ru.vtosters.lite.utils.About.getCommitLink;
 import static ru.vtosters.lite.utils.CacheUtils.humanReadableByteCountBin;
@@ -64,6 +65,7 @@ import ru.vtosters.lite.ui.fragments.dockbar.DockBarFragment;
 import ru.vtosters.lite.ui.fragments.dockbar.DockBarManager;
 import ru.vtosters.lite.ui.fragments.tgstickers.StickersFragment;
 import ru.vtosters.lite.ui.vkui.VBottomSheetBuilder;
+import ru.vtosters.lite.ui.wallpapers.WallpaperMenuFragment;
 import ru.vtosters.lite.utils.CacheUtils;
 import ru.vtosters.lite.utils.Globals;
 import ru.vtosters.lite.utils.SSFS;
@@ -127,6 +129,18 @@ public class VTSettings extends MaterialPreferenceToolbarFragment{
         if(disableSettingsSumms()) return null;
 
         return Globals.getString("autoclearcachesumm") + " " + humanReadableByteCountBin(CacheUtils.getInstance().size);
+    }
+
+    public static String getWallpapersumm(){
+        if(disableSettingsSumms()) return null;
+
+        var hasWP = getWallpaper() != null;
+
+        if(hasWP){
+            return "Фон: " + "Установлен";
+        }
+
+        return "Фон: " + "Не установлен";
     }
 
     @Override
@@ -320,6 +334,14 @@ public class VTSettings extends MaterialPreferenceToolbarFragment{
         PreferencesUtil.addPreference(this, "", Globals.getString("vtlmedia"), musicsumm, "ic_media_outline_28", preference -> {
             Context context = getContext();
             Intent a2 = new Navigator(MediaFragment.class).b(context);
+            a2.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+            context.startActivity(a2);
+            return false;
+        });
+
+        PreferencesUtil.addPreference(this, "", "Обои в сообщениях", getWallpapersumm(), "ic_media_outline_28", preference -> {
+            Context context = getContext();
+            Intent a2 = new Navigator(WallpaperMenuFragment.class).b(context);
             a2.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
             context.startActivity(a2);
             return false;

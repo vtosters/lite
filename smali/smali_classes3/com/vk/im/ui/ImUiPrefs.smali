@@ -427,6 +427,12 @@
 .method public final c()Ljava/lang/String;
     .locals 3
 
+    invoke-static {}, Lru/vtosters/lite/ui/wallpapers/WallpapersHooks;->getWallpaperUrl()Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
+
     .line 1
     invoke-direct {p0}, Lcom/vk/im/ui/ImUiPrefs;->k()Landroid/content/SharedPreferences;
 

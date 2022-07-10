@@ -768,7 +768,9 @@
 .end method
 
 .method private final X4()V
-    .locals 7
+    .locals 8
+
+    return-void
 
     .line 1
     sget-object v0, Lcom/vk/im/ui/ImUiPrefs;->g:Lcom/vk/im/ui/ImUiPrefs;
@@ -5155,13 +5157,7 @@
 
     move-result-object v1
 
-    const-string v2, "view.findViewById(R.id.dialog_background)"
-
-    invoke-static {v1, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
-
-    check-cast v1, Lcom/vk/im/ui/views/FrescoImageView;
-
-    iput-object v1, v0, Lcom/vk/im/ui/fragments/ChatFragment;->k0:Lcom/vk/im/ui/views/FrescoImageView;
+    invoke-static {v1}, Lru/vtosters/lite/ui/wallpapers/WallpapersHooks;->setBg(Landroid/view/View;)V
 
     .line 69
     sget v1, Lcom/vk/im/ui/h;->sticker_bar_container_stub:I
