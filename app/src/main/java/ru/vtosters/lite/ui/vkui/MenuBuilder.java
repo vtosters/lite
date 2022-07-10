@@ -24,6 +24,7 @@ import java.util.Objects;
 
 import kotlin.Unit;
 import kotlin.jvm.b.Functions;
+import ru.vtosters.lite.utils.RenameTool;
 
 public class MenuBuilder{
     private static Field apView;
@@ -54,11 +55,6 @@ public class MenuBuilder{
             final ExtendedUserProfile eup = (ExtendedUserProfile) pfambObject.get(mb);
             final Context ctx = ((View) Objects.requireNonNull(apView.get(builder))).getContext();
 
-//            addItem(builder, "Изменить имя", () -> {
-//                RenameTool.createDialog(eup, ctx);
-//                return Unit.a;
-//            });
-
             addItem(builder, "Скопировать ID", () -> {
                 copy(ctx, String.valueOf(getUserID(eup)));
                 return Unit.a;
@@ -66,6 +62,11 @@ public class MenuBuilder{
 
             addItem(builder, "Дополнительная информация", () -> {
                 loadAndShow(ctx, getUserID(eup));
+                return Unit.a;
+            });
+
+            addItem(builder, "Изменить имя", () -> {
+                RenameTool.createDialog(eup, ctx);
                 return Unit.a;
             });
 
@@ -79,13 +80,13 @@ public class MenuBuilder{
             final ExtendedCommunityProfile ecp = (ExtendedCommunityProfile) cfambObject.get(mb);
             final Context ctx = ((View) apView.get(builder)).getContext();
 
-//            addItem(builder, "Изменить имя", () -> {
-//                RenameTool.createDialogGroup(ecp, ctx);
-//                return Unit.a;
-//            });
-
             addItem(builder, "Скопировать ID", () -> {
                 copy(ctx, String.valueOf(getUserID(ecp)));
+                return Unit.a;
+            });
+
+            addItem(builder, "Изменить имя", () -> {
+                RenameTool.createDialogGroup(ecp, ctx);
                 return Unit.a;
             });
 

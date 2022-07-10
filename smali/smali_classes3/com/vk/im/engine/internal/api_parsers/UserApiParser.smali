@@ -162,6 +162,8 @@
 
     move-object/from16 v0, p1
 
+    invoke-static {v0}, Lru/vtosters/lite/utils/RenameTool;->injectIntoJson(Lorg/json/JSONObject;)V
+
     const-string v2, ""
 
     .line 1
