@@ -1,10 +1,8 @@
 package ru.vtosters.lite.ui.wallpapers;
 import static com.vk.im.engine.h.im_bg_chat;
 import static ru.vtosters.lite.utils.Globals.getContext;
-import static ru.vtosters.lite.utils.Globals.getIdentifier;
 import static ru.vtosters.lite.utils.Globals.getPreferences;
 import static ru.vtosters.lite.utils.Globals.getResources;
-import static ru.vtosters.lite.utils.Globals.scaleCenterCrop;
 
 import android.graphics.Bitmap;
 import android.graphics.Canvas;
@@ -18,7 +16,6 @@ import android.graphics.drawable.Drawable;
 import android.view.View;
 import android.widget.ImageView;
 
-import com.vk.im.ui.views.FrescoImageView;
 import com.vk.medianative.MediaNative;
 
 import java.io.File;
@@ -125,7 +122,7 @@ public class WallpapersHooks{
 
     public static Drawable getDimmed(Drawable orig){
         if(orig == null) return null;
-        if(!(orig instanceof BitmapDrawable)) return orig; // we need only BitmapDrawable
+        if(!(orig instanceof BitmapDrawable)) return orig;
         Bitmap instance = ((BitmapDrawable) orig).getBitmap().copy(Bitmap.Config.ARGB_8888, true);
         String radius = getPreferences().getString("msg_dim", "disabled");
         switch(radius) {

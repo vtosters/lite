@@ -1,4 +1,5 @@
 package ru.vtosters.lite.ui.wallpapers;
+import static ru.vtosters.lite.ui.PreferencesUtil.*;
 import static ru.vtosters.lite.ui.wallpapers.WallpapersHooks.getWallpaper;
 import static ru.vtosters.lite.ui.wallpapers.WallpapersHooks.getWallpaperFile;
 import static ru.vtosters.lite.utils.Globals.convertDpToPixel;
@@ -27,7 +28,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import java.util.concurrent.Executor;
 import java.util.concurrent.Executors;
 
-import ru.vtosters.lite.ui.PreferencesUtil;
+import ru.vtosters.lite.utils.Themes;
 
 public class WallpaperPreferences extends Preference{
     private final Executor mExecutor = Executors.newSingleThreadExecutor();
@@ -54,13 +55,13 @@ public class WallpaperPreferences extends Preference{
 
     public static int getMsgInColor(Context ctx){
         TypedValue typedValue = new TypedValue();
-        ctx.getTheme().resolveAttribute(getIdentifier("im_bubble_incoming", "attr"), typedValue, true);
+        ctx.getTheme().resolveAttribute(com.vtosters.lite.R.attr.im_bubble_incoming, typedValue, true);
         return typedValue.data;
     }
 
     public static int getMsgOutColor(Context ctx){
         TypedValue typedValue = new TypedValue();
-        ctx.getTheme().resolveAttribute(getIdentifier("im_bubble_outgoing", "attr"), typedValue, true);
+        ctx.getTheme().resolveAttribute(com.vtosters.lite.R.attr.im_bubble_outgoing, typedValue, true);
         return typedValue.data;
     }
 
@@ -73,8 +74,6 @@ public class WallpaperPreferences extends Preference{
     @Override
     public void onBindViewHolder(PreferenceViewHolder preferenceViewHolder){
         super.onBindViewHolder(preferenceViewHolder);
-        preferenceViewHolder.itemView.setLayoutParams(new FrameLayout.LayoutParams(FrameLayout.LayoutParams.MATCH_PARENT, convertDpToPixel(220)));
-        preferenceViewHolder.itemView.setPadding(0, 0, 0, 0);
 
         preview = (RecyclerView) preferenceViewHolder.findViewById(getIdentifier("install_btn_container", "id"));
         preview.setPadding(0, convertDpToPixel(8), 0, 0);
@@ -131,16 +130,16 @@ public class WallpaperPreferences extends Preference{
             if(isOut[previewVH.getAdapterPosition()]){
                 params.addRule(RelativeLayout.ALIGN_PARENT_END);
                 bubble.setPadding(convertDpToPixel(16), convertDpToPixel(16), convertDpToPixel(24), 0);
-                bubble.setBackgroundResource(getIdentifier("vkim_msg_new_out_light_full", "drawable"));
+                bubble.setBackgroundResource(com.vtosters.lite.R.drawable.vkim_msg_new_out_light_full);
                 bubble.setBackgroundTintList(ColorStateList.valueOf(getMsgOutColor(previewVH.itemView.getContext())));
             } else {
                 params.addRule(RelativeLayout.ALIGN_PARENT_START);
                 bubble.setPadding(convertDpToPixel(24), convertDpToPixel(16), convertDpToPixel(16), 0);
-                bubble.setBackgroundResource(getIdentifier("vkim_msg_new_in_light_full", "drawable"));
+                bubble.setBackgroundResource(com.vtosters.lite.R.drawable.vkim_msg_new_in_light_full);
                 bubble.setBackgroundTintList(ColorStateList.valueOf(getMsgInColor(previewVH.itemView.getContext())));
             }
 
-            bubble.setTextColor(PreferencesUtil.getTextColor(previewVH.itemView.getContext()));
+            bubble.setTextColor(Themes.getTextAttr());
             bubble.setLayoutParams(params);
         }
 
@@ -150,9 +149,9 @@ public class WallpaperPreferences extends Preference{
             Context ctx = viewGroup.getContext();
 
             RelativeLayout root = new RelativeLayout(ctx);
-            root.setLayoutParams(new RecyclerView.LayoutParams(
-                    RecyclerView.LayoutParams.MATCH_PARENT,
-                    RecyclerView.LayoutParams.MATCH_PARENT));
+            root.setLayoutParams(new RelativeLayout.LayoutParams(
+                    RelativeLayout.LayoutParams.MATCH_PARENT,
+                    RelativeLayout.LayoutParams.MATCH_PARENT));
 
             TextView bubble = new TextView(ctx);
             bubble.setId(getIdentifier("author", "id"));
