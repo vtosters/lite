@@ -159,11 +159,15 @@ public class Globals{
     } // UserId Profile via userProfile
 
     public static String getUserFirstName(UserProfile userProfile){
-        return userProfile.d;
+        return userProfile.c;
     }
 
     public static String getUserLastName(UserProfile userProfile){
-        return userProfile.c;
+        return userProfile.e;
+    }
+
+    public static String getGroupName(UserProfile userProfile){
+        return userProfile.d;
     }
 
     public static int getUserID(ExtendedUserProfile extendedUserProfile){

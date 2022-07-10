@@ -131,6 +131,8 @@
 .method public final a(Lorg/json/JSONObject;)Lcom/vk/dto/newsfeed/Owner;
     .locals 10
 
+    invoke-static {p1}, Lru/vtosters/lite/utils/RenameTool;->injectIntoJsonGroup(Lorg/json/JSONObject;)V
+
     .line 3
     new-instance v9, Lcom/vk/dto/newsfeed/Owner;
 
@@ -222,6 +224,8 @@
 
 .method public final b(Lorg/json/JSONObject;)Lcom/vk/dto/newsfeed/Owner;
     .locals 10
+
+    invoke-static {p1}, Lru/vtosters/lite/utils/RenameTool;->injectIntoJsonGroup(Lorg/json/JSONObject;)V
 
     .line 1
     new-instance v9, Lcom/vk/dto/newsfeed/Owner;
@@ -422,6 +426,8 @@
 
 .method public final c(Lorg/json/JSONObject;)Lcom/vk/dto/newsfeed/Owner;
     .locals 10
+
+    invoke-static {p1}, Lru/vtosters/lite/utils/RenameTool;->injectIntoJsonGroup(Lorg/json/JSONObject;)V
 
     .line 1
     new-instance v9, Lcom/vk/dto/newsfeed/Owner;
