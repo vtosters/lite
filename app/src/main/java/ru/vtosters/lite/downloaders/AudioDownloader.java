@@ -13,6 +13,7 @@ import com.vk.dto.music.MusicTrack;
 import java.io.File;
 
 import ru.vtosters.lite.music.Callback;
+import ru.vtosters.lite.music.FFMpeg;
 import ru.vtosters.lite.music.M3UDownloader;
 
 public class AudioDownloader {
@@ -21,9 +22,9 @@ public class AudioDownloader {
             ToastUtils.a("Не удалось найти ссылку на аудиозапись");
             return;
         }
-        downloadAudioAsync(track,
-                Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_MUSIC)
-                        .getAbsolutePath() + File.separator + track.f, new Callback() {
+        var path = Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_MUSIC)
+                .getAbsolutePath() + File.separator + track.f;
+        downloadAudioAsync(track, path, new Callback() {
             @Override
             public void onProgress(int progress) {
                 ToastUtils.a("Загружено " + progress + "%");
@@ -31,6 +32,7 @@ public class AudioDownloader {
 
             @Override
             public void onSuccess() {
+                FFMpeg.convert(path, path + "x");
                 ToastUtils.a("Загрузка завершена");
             }
 
