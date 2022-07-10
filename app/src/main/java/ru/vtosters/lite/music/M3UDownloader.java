@@ -1,4 +1,4 @@
-package ru.vtosters.lite.downloaders.music;
+package ru.vtosters.lite.music;
 
 import android.util.Log;
 
@@ -12,8 +12,6 @@ import java.util.List;
 
 import javax.crypto.NoSuchPaddingException;
 
-import ru.vtosters.lite.music.TransportStream;
-import ru.vtosters.lite.music.VKM3UParser;
 import ru.vtosters.lite.utils.StreamUtils;
 
 public class M3UDownloader{
@@ -28,7 +26,7 @@ public class M3UDownloader{
         mCallback = callback;
     }
 
-    public void execute(){
+    public void execute() {
         VKM3UParser parser = new VKM3UParser(mURL);
         List<TransportStream> tses = parser.getTransportStreams();
         mCallback.onProgress(5);

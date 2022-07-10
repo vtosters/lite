@@ -1,4 +1,4 @@
-package ru.vtosters.lite.downloaders.music;
+package ru.vtosters.lite.music;
 
 public interface Callback{
     void onProgress(int progress);
