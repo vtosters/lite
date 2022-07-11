@@ -2,9 +2,11 @@ package ru.vtosters.lite.ui;
 
 import static ru.vtosters.lite.utils.Globals.convertDpToPixel;
 import static ru.vtosters.lite.utils.Globals.getContext;
+import static ru.vtosters.lite.utils.Themes.*;
 
 import android.app.AlertDialog;
 import android.content.Context;
+import android.content.DialogInterface;
 import android.content.res.ColorStateList;
 import android.graphics.PorterDuff;
 import android.graphics.drawable.Drawable;
@@ -32,7 +34,7 @@ import ru.vtosters.lite.utils.Themes;
 public class PreferencesUtil{
 
     public static Drawable setTint(Context ctx, Drawable d){
-        d.setColorFilter(Themes.getAccentColor(), PorterDuff.Mode.SRC_ATOP);
+        d.setColorFilter(getAccentColor(), PorterDuff.Mode.SRC_ATOP);
         return d;
     }
 
@@ -172,18 +174,15 @@ public class PreferencesUtil{
             editText.setHint(title);
             editText.setHintTextColor(PreferencesUtil.getSTextColor(getContext()));
 
-            if(Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP){
-                editText.setBackgroundTintList(ColorStateList.valueOf(PreferencesUtil.getTextColor(getContext())));
-            } else {
-                ViewCompat.setBackgroundTintList(editText, ColorStateList.valueOf(PreferencesUtil.getTextColor(getContext())));
-            }
+            editText.setBackgroundTintList(ColorStateList.valueOf(getAccentColor()));
+
             linearLayout.addView(editText);
             editText.getLayoutParams().width = ViewGroup.LayoutParams.MATCH_PARENT;
             ViewGroup.MarginLayoutParams margin = ((ViewGroup.MarginLayoutParams) editText.getLayoutParams());
-            margin.setMargins(convertDpToPixel(24f), 0, convertDpToPixel(24f), 0);
+            margin.setMargins(convertDpToPixel(20f), 0, convertDpToPixel(20f), 0);
             editText.setLayoutParams(margin);
 
-            AlertDialog.Builder builder = new AlertDialog.Builder(fragment.getContext());
+            AlertDialog.Builder builder = new AlertDialog.Builder(fragment.getContext(), com.vtosters.lite.R.style.Base_Theme_MaterialComponents_Dialog_Alert);
             builder.setTitle(title);
             builder.setView(linearLayout);
             builder.setPositiveButton("OK", (dialog, which) -> {
@@ -196,7 +195,10 @@ public class PreferencesUtil{
                         .putString(key, editText.getText().toString())
                         .apply();
             });
-            builder.show();
+
+            var alert = builder.create();
+            alert.show();
+            alert.getButton(DialogInterface.BUTTON_POSITIVE).setTextColor(getAccentColor());
             return false;
         }); // preference.setOnPreferenceClickListener(listener)
 
@@ -205,13 +207,13 @@ public class PreferencesUtil{
 
     public static int getTextColor(Context ctx){
         TypedValue typedValue = new TypedValue();
-        ctx.getTheme().resolveAttribute(Themes.getTextAttr(), typedValue, true);
+        ctx.getTheme().resolveAttribute(getTextAttr(), typedValue, true);
         return typedValue.data;
     }
 
     public static int getSTextColor(Context ctx){
         TypedValue typedValue = new TypedValue();
-        ctx.getTheme().resolveAttribute(Themes.getSTextAttr(), typedValue, true);
+        ctx.getTheme().resolveAttribute(getSTextAttr(), typedValue, true);
         return typedValue.data;
     }
 

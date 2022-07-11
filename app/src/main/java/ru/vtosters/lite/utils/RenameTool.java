@@ -5,6 +5,7 @@ import static ru.vtosters.lite.utils.Globals.convertDpToPixel;
 import static ru.vtosters.lite.utils.Globals.fromEup;
 import static ru.vtosters.lite.utils.Globals.getContext;
 import static ru.vtosters.lite.utils.Globals.getGroupName;
+import static ru.vtosters.lite.utils.Globals.getResources;
 import static ru.vtosters.lite.utils.Globals.getUserFirstName;
 import static ru.vtosters.lite.utils.Globals.getUserID;
 import static ru.vtosters.lite.utils.Globals.getUserId;
@@ -12,6 +13,7 @@ import static ru.vtosters.lite.utils.Globals.getUserLastName;
 import static ru.vtosters.lite.utils.Globals.sendToast;
 
 import android.content.Context;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.res.ColorStateList;
 import android.database.Cursor;
@@ -159,17 +161,17 @@ public class RenameTool{
         final EditText fn = new EditText(ctx);
         fn.setHint("Имя");
         fn.setHintTextColor(getSTextColor(ctx));
-        fn.setBackgroundTintList(ColorStateList.valueOf(getTextColor(ctx)));
+        fn.setBackgroundTintList(ColorStateList.valueOf(Themes.getAccentColor()));
         linearLayout.addView(fn);
         fn.getLayoutParams().width = ViewGroup.LayoutParams.MATCH_PARENT;
         ViewGroup.MarginLayoutParams margin = ((ViewGroup.MarginLayoutParams) fn.getLayoutParams());
-        margin.setMargins(convertDpToPixel(24f), 0, convertDpToPixel(24f), 0);
+        margin.setMargins(convertDpToPixel(20f), 0, convertDpToPixel(20f), 0);
         fn.setLayoutParams(margin);
 
         final EditText ln = new EditText(ctx);
         ln.setHint("Фамилия");
         ln.setHintTextColor(getSTextColor(ctx));
-        ln.setBackgroundTintList(ColorStateList.valueOf(getTextColor(ctx)));
+        ln.setBackgroundTintList(ColorStateList.valueOf(Themes.getAccentColor()));
         linearLayout.addView(ln);
         ln.getLayoutParams().width = ViewGroup.LayoutParams.MATCH_PARENT;
         ln.setLayoutParams(margin);
@@ -180,7 +182,7 @@ public class RenameTool{
 
         int id = getUserID(profile);
 
-        AlertDialog.Builder builder = new AlertDialog.Builder(ctx);
+        AlertDialog.Builder builder = new AlertDialog.Builder(ctx, com.vtosters.lite.R.style.Base_Theme_MaterialComponents_Dialog_Alert);
         builder.setTitle("Смена имени");
         builder.setMessage("Это локальное изменение, которое будет отображатся только в данном клиенте.");
         builder.setView(linearLayout);
@@ -214,7 +216,13 @@ public class RenameTool{
             ctx.sendBroadcast(new Intent("com.vkontakte.android.ACTION_PROFILE_UPDATED").putExtra("uid", id));
             sendToast("Пользователь успешно удален из базы данных!");
         });
-        builder.show();
+
+        var alert = builder.create();
+
+        alert.show();
+
+        alert.getButton(DialogInterface.BUTTON_POSITIVE).setTextColor(Themes.getAccentColor());
+        alert.getButton(DialogInterface.BUTTON_NEUTRAL).setTextColor(getResources().getColor(com.vtosters.lite.R.color.red));
     }
 
     public static void createDialogGroup(ExtendedCommunityProfile eup, final Context ctx){
@@ -224,11 +232,11 @@ public class RenameTool{
         final EditText fn = new EditText(ctx);
         fn.setHint("Имя");
         fn.setHintTextColor(getSTextColor(ctx));
-        fn.setBackgroundTintList(ColorStateList.valueOf(getTextColor(ctx)));
+        fn.setBackgroundTintList(ColorStateList.valueOf(Themes.getAccentColor()));
         linearLayout.addView(fn);
         fn.getLayoutParams().width = ViewGroup.LayoutParams.MATCH_PARENT;
         ViewGroup.MarginLayoutParams margin = ((ViewGroup.MarginLayoutParams) fn.getLayoutParams());
-        margin.setMargins(convertDpToPixel(24f), 0, convertDpToPixel(24f), 0);
+        margin.setMargins(convertDpToPixel(20f), 0, convertDpToPixel(20f), 0);
         fn.setLayoutParams(margin);
 
         final UserProfile profile = fromEup(eup);
@@ -239,7 +247,7 @@ public class RenameTool{
 
         final int id = fid;
 
-        AlertDialog.Builder builder = new AlertDialog.Builder(ctx);
+        AlertDialog.Builder builder = new AlertDialog.Builder(ctx, com.vtosters.lite.R.style.Base_Theme_MaterialComponents_Dialog_Alert);
         builder.setTitle("Смена имени");
         builder.setMessage("Это локальное изменение, которое будет отображатся только в данном клиенте");
         builder.setView(linearLayout);
@@ -263,7 +271,13 @@ public class RenameTool{
             updateRequested = true;
             sendToast("Сообщество успешно удалено из базы данных!");
         });
-        builder.show();
+
+        var alert = builder.create();
+
+        alert.show();
+
+        alert.getButton(DialogInterface.BUTTON_POSITIVE).setTextColor(Themes.getAccentColor());
+        alert.getButton(DialogInterface.BUTTON_NEUTRAL).setTextColor(getResources().getColor(com.vtosters.lite.R.color.red));
     }
 
     public static boolean isChangedName(int uid){
