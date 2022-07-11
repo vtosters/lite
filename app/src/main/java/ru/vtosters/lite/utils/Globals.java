@@ -10,6 +10,7 @@ import static ru.vtosters.lite.utils.Preferences.checkupdates;
 import static ru.vtosters.lite.utils.Preferences.preferences;
 import static ru.vtosters.lite.utils.ServerDialog.sendRequest;
 import static ru.vtosters.lite.utils.Themes.isDarkTheme;
+import static ru.vtosters.lite.utils.Themes.setNeededTheme;
 
 import android.app.Activity;
 import android.app.Application;
@@ -81,6 +82,7 @@ public class Globals{
     }
 
     public static void MainActivityInit(Activity activity){
+        setNeededTheme(activity);
         ServerDialog.activity = activity;
         sendRequest();
         if (checkupdates()) OTADialog.checkUpdates(activity);

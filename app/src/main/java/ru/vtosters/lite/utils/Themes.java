@@ -8,10 +8,13 @@ import static ru.vtosters.lite.utils.Globals.getCurrentActivity;
 import static ru.vtosters.lite.utils.Globals.getIdentifier;
 import static ru.vtosters.lite.utils.Globals.getPrefsValue;
 import static ru.vtosters.lite.utils.Globals.getResources;
+import static ru.vtosters.lite.utils.Globals.sendToast;
 import static ru.vtosters.lite.utils.Preferences.color_grishka;
+import static ru.vtosters.lite.utils.Preferences.milkshake;
 import static ru.vtosters.lite.utils.Preferences.navbar;
 import static ru.vtosters.lite.utils.Preferences.systemtheme;
 import static ru.vtosters.lite.utils.Preferences.vkme;
+import static ru.vtosters.lite.utils.ReflectionUtils.getField;
 import static ru.vtosters.lite.utils.VKUIInjector.isLoaded;
 
 import android.annotation.SuppressLint;
@@ -39,8 +42,14 @@ import com.vk.core.ui.themes.VKThemeHelper;
 import com.vtosters.lite.R;
 import com.vtosters.lite.data.ThemeTracker;
 
+import java.lang.ref.WeakReference;
+import java.lang.reflect.Field;
 import java.util.Arrays;
+import java.util.LinkedList;
 import java.util.List;
+import java.util.concurrent.CopyOnWriteArrayList;
+
+import kotlin.u.KProperty5;
 
 public class Themes{
     public static List<String> accentColors = Arrays.asList(
@@ -301,13 +310,37 @@ public class Themes{
     public static int getAlertStyle(){
         if (isDarkTheme()) return R.style.Theme_MaterialComponents_Dialog_Alert;
         return R.style.Theme_MaterialComponents_Light_Dialog_Alert;
-    } // Android Support color injector + accent color checker
+    }
 
     public static String getBackgroundStickers(){
         if (getWallpaper() != null) {
             return "images_with_background";
         }
         return "images";
+    }
+
+    public static VKTheme getCurrentTheme(){
+        return VKThemeHelper.l();
+    }
+
+    public static void setNeededTheme(Activity activity){
+        if (milkshake()) {
+            if (getCurrentTheme() == VKTheme.VKAPP_LIGHT){
+                setTheme(VKTheme.VKAPP_MILK_LIGHT, activity);
+            }
+
+            if (getCurrentTheme() == VKTheme.VKAPP_DARK){
+                setTheme(VKTheme.VKAPP_MILK_DARK, activity);
+            }
+        } else {
+            if (getCurrentTheme() == VKTheme.VKAPP_MILK_LIGHT){
+                setTheme(VKTheme.VKAPP_LIGHT, activity);
+            }
+
+            if (getCurrentTheme() == VKTheme.VKAPP_MILK_DARK){
+                setTheme(VKTheme.VKAPP_DARK, activity);
+            }
+        }
     }
 
     public static void setNavbarColor(Window window, int i){

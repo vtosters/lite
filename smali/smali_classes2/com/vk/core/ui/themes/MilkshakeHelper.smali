@@ -231,6 +231,12 @@
 .method public static final e()Z
     .locals 3
 
+    invoke-static {}, Lru/vtosters/lite/utils/Preferences;->milkshake()Z
+
+    move-result v0
+
+    return v0
+
     .line 1
     sget-object v0, Lcom/vk/core/ui/themes/MilkshakeHelper;->a:Ljava/lang/Boolean;
 
