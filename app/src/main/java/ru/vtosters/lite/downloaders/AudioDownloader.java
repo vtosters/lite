@@ -35,15 +35,17 @@ public class AudioDownloader {
             public void onSuccess() {
                 try {
                     var fileName = track.toString();
-                    FFMpeg.convert(downloadPath, musicPath + File.separator + fileName + ".mp3");
+                    var success = FFMpeg.convert(downloadPath, musicPath + File.separator + fileName + ".mp3");
+                    if (success)
+                        ToastUtils.a("Загрузка завершена");
+                    else
+                        onFailure();
                 }
                 catch (UnsatisfiedLinkError e) {
                     Log.e("AudioDownloader","Опять эти нативные либы");
                     Log.e("AudioDownloader", e.getMessage());
                     onFailure();
                 }
-
-                ToastUtils.a("Загрузка завершена");
             }
 
             @Override
