@@ -97,10 +97,22 @@ public class DockBarManager{
                     item.getInt("id"),
                     Class.forName(item.getString("fragmentClass"))
             );
-            if (milkshake() && NewsfeedFragment.class == tab.fragmentClass) {
-                tab.fragmentClass = HomeFragment.class;
-            } else if (!milkshake() && HomeFragment.class == tab.fragmentClass) {
-                tab.fragmentClass = NewsfeedFragment.class;
+            if (milkshake()) {
+                if (NewsfeedFragment.class == tab.fragmentClass)
+                    tab.fragmentClass = HomeFragment.class;
+                // fix menu visibility
+                if (MenuFragment.class == tab.fragmentClass) {
+                    tab.fragmentClass = ProfileFragment.class;
+                    tab.iconID = R.drawable.ic_user_circle_outline_28;
+                }
+            } else {
+                if (HomeFragment.class == tab.fragmentClass)
+                    tab.fragmentClass = NewsfeedFragment.class;
+                // fix menu visibility
+                if (ProfileFragment.class == tab.fragmentClass) {
+                    tab.iconID = R.drawable.ic_menu_more_outline_28;
+                    tab.fragmentClass = MenuFragment.class;
+                }
             }
             list.add(tab);
         }
