@@ -69,7 +69,7 @@ public class DockBarManager{
     private void init(){
         mConfig = new File(getContext().getFilesDir(), "dockbar.json");
 
-        if(mConfig.exists()){
+        if (mConfig.exists()) {
             readFromConfig();
         } else {
             fillDefault();
@@ -88,7 +88,7 @@ public class DockBarManager{
     }
 
     private void fillList(List<DockBarTab> list, JSONArray array) throws JSONException, ClassNotFoundException{
-        for(int i = 0; i < array.length(); i++) {
+        for (int i = 0; i < array.length(); i++) {
             JSONObject item = array.getJSONObject(i);
             DockBarTab tab = DockBarTab.valuesOf(
                     item.getString("tag"),
@@ -97,9 +97,9 @@ public class DockBarManager{
                     item.getInt("id"),
                     Class.forName(item.getString("fragmentClass"))
             );
-            if(milkshake() && NewsfeedFragment.class == tab.fragmentClass){
+            if (milkshake() && NewsfeedFragment.class == tab.fragmentClass) {
                 tab.fragmentClass = HomeFragment.class;
-            } else if(!milkshake() && HomeFragment.class == tab.fragmentClass){
+            } else if (!milkshake() && HomeFragment.class == tab.fragmentClass) {
                 tab.fragmentClass = NewsfeedFragment.class;
             }
             list.add(tab);
@@ -107,14 +107,14 @@ public class DockBarManager{
     }
 
     private void fillDefault(){
-        if(vkme()){
+        if (vkme()) {
             mSelectedTabs.add(DockBarTab.valuesOf(
                     "tab_settings",
                     R.drawable.ic_settings_outline_28,
                     R.string.menu_settings,
                     R.id.menu_settings,
                     useNewSettings()));
-            if(vkme_notifs())
+            if (vkme_notifs())
                 mSelectedTabs.add(DockBarTab.valuesOf(
                         "tab_feedback",
                         R.drawable.ic_menu_notification_outline_28,
@@ -279,7 +279,7 @@ public class DockBarManager{
 
     private JSONArray makeJsonArrayWithTabs(List<DockBarTab> list) throws JSONException{
         JSONArray array = new JSONArray();
-        for(DockBarTab tab : list) {
+        for (DockBarTab tab : list) {
             JSONObject item = new JSONObject()
                     .put("tag", tab.tag)
                     .put("iconID", tab.iconID)

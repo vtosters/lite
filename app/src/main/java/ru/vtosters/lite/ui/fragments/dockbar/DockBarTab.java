@@ -2,7 +2,7 @@ package ru.vtosters.lite.ui.fragments.dockbar;
 
 import com.vk.core.fragments.FragmentImpl;
 
-public class DockBarTab {
+public class DockBarTab{
 
     public String tag;
     public int iconID;
@@ -15,7 +15,7 @@ public class DockBarTab {
             int iconID,
             int titleID,
             int resID,
-            Class<?> fragmentClass) {
+            Class<?> fragmentClass){
         this.tag = tag;
         this.iconID = iconID;
         this.titleID = titleID;
@@ -28,7 +28,7 @@ public class DockBarTab {
             int iconID,
             int titleID,
             int resID,
-            Class<?> fragmentClass) {
+            Class<?> fragmentClass){
         return new DockBarTab(tag, iconID, titleID, resID, fragmentClass);
     }
 }

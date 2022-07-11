@@ -17,25 +17,23 @@ import android.widget.TextView;
 import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.Collections;
-import java.util.List;
-import java.util.stream.Collectors;
 
 import ru.vtosters.lite.utils.Themes;
 
 public class DockBarEditorAdapter extends RecyclerView.Adapter<DockBarEditorAdapter.ItemViewHolder>
-        implements IItemTouchHelper {
+        implements IItemTouchHelper{
 
     private final DockBarManager mDockBarManager = DockBarManager.getInstance();
 
     @Override
-    public ItemViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
+    public ItemViewHolder onCreateViewHolder(ViewGroup parent, int viewType){
         FrameLayout container = new FrameLayout(getContext());
         container.addView(newGroupTitle(), new FrameLayout.LayoutParams(-1, -2));
         container.addView(newTabItem(), new FrameLayout.LayoutParams(-1, -2));
         return new ItemViewHolder(container);
     }
 
-    private View newTabItem() {
+    private View newTabItem(){
         LinearLayout container = new LinearLayout(getContext());
         container.setTag("tab_container");
         container.setGravity(Gravity.CENTER_VERTICAL);
@@ -70,7 +68,7 @@ public class DockBarEditorAdapter extends RecyclerView.Adapter<DockBarEditorAdap
         return container;
     }
 
-    private View newGroupTitle() {
+    private View newGroupTitle(){
         LinearLayout container = new LinearLayout(getContext());
         container.setTag("category_title_container");
         container.setLayoutParams(new LinearLayout.LayoutParams(-1, -2));
@@ -93,22 +91,22 @@ public class DockBarEditorAdapter extends RecyclerView.Adapter<DockBarEditorAdap
     }
 
     @Override
-    public void onBindViewHolder(ItemViewHolder holder, int position) {
+    public void onBindViewHolder(ItemViewHolder holder, int position){
         holder.bind(position);
     }
 
     @Override
-    public int getItemCount() {
+    public int getItemCount(){
         return AdapterHelper.getItemCount();
     }
 
     @Override
-    public void onItemDismiss(int index) {
+    public void onItemDismiss(int index){
 
     }
 
     @Override
-    public boolean onItemMove(int fromPosition, int toPosition) {
+    public boolean onItemMove(int fromPosition, int toPosition){
         if (toPosition == 0)
             return false;
 
@@ -147,16 +145,16 @@ public class DockBarEditorAdapter extends RecyclerView.Adapter<DockBarEditorAdap
         return true;
     }
 
-    protected class ItemViewHolder extends RecyclerView.ViewHolder {
+    protected class ItemViewHolder extends RecyclerView.ViewHolder{
 
-        private LinearLayout mTabContainer;
-        private ImageView mTabIcon;
-        private TextView mTabName;
+        private final LinearLayout mTabContainer;
+        private final ImageView mTabIcon;
+        private final TextView mTabName;
 
-        private LinearLayout mCategoryTitleContainer;
-        private TextView mCategoryTitle;
+        private final LinearLayout mCategoryTitleContainer;
+        private final TextView mCategoryTitle;
 
-        public ItemViewHolder(View itemView) {
+        public ItemViewHolder(View itemView){
             super(itemView);
 
             mTabContainer = itemView.findViewWithTag("tab_container");
@@ -168,8 +166,8 @@ public class DockBarEditorAdapter extends RecyclerView.Adapter<DockBarEditorAdap
             mCategoryTitle = mCategoryTitleContainer.findViewWithTag("category_title");
         }
 
-        public void bind(int pos) {
-            Log.d("ItemViewHolder", pos+"");
+        public void bind(int pos){
+            Log.d("ItemViewHolder", pos + "");
             if (AdapterHelper.getItemViewType(pos) == AdapterHelper.TAB_TYPE) {
                 DockBarTab tab = AdapterHelper.getTabType(pos) == AdapterHelper.SELECTED
                         ? mDockBarManager.getSelectedTabs().get(pos - 1)

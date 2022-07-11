@@ -21,7 +21,7 @@ import com.vtosters.lite.general.fragments.MaterialPreferenceToolbarFragment;
 
 import ru.vtosters.lite.utils.Globals;
 
-public class DockBarEditorFragment extends MaterialPreferenceToolbarFragment {
+public class DockBarEditorFragment extends MaterialPreferenceToolbarFragment{
 
     private RecyclerView mRecycler;
     private DockBarEditorAdapter mAdapter;
@@ -29,7 +29,7 @@ public class DockBarEditorFragment extends MaterialPreferenceToolbarFragment {
     private ItemTouchHelper mItemTouchHelper;
 
     @Override
-    public View onCreateView(LayoutInflater layoutInflater, ViewGroup viewGroup, Bundle bundle) {
+    public View onCreateView(LayoutInflater layoutInflater, ViewGroup viewGroup, Bundle bundle){
         super.onCreateView(layoutInflater, viewGroup, bundle);
 
         LinearLayout container = new LinearLayout(getContext());
