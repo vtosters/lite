@@ -4,6 +4,8 @@ import android.os.Build;
 import android.os.Environment;
 import android.util.Log;
 import com.arthenica.smartexception.java.Exceptions;
+
+import java.util.Collections;
 import java.util.List;
 
 import ru.vtosters.lite.utils.Globals;
@@ -12,24 +14,23 @@ public class NativeLoader {
     static final String[] FFMPEG_LIBRARIES = {"avutil", "swscale", "swresample", "avcodec", "avformat", "avfilter", "avdevice"};
 
     private static void loadLibrary(String libraryName) {
-    	try {
-            String path = Globals.getContext().getFilesDir() + "/lib" + libraryName + ".so";
-            System.load(path);
-        } catch (UnsatisfiedLinkError e) {
-            throw new Error(String.format("FFmpegKit failed to start on %s.", getDeviceDebugInformation()), e);
-        }
+       String path = Globals.getContext().getFilesDir() + "/lib" + libraryName + ".so";
+       System.load(path);
     }
 
     private static List<String> loadExternalLibraries() {
-    	return Packages.getExternalLibraries();
+        // return Packages.getExternalLibraries();
+        return Collections.emptyList();
     }
 
     private static String loadNativeAbi() {
-    	return AbiDetect.getNativeAbi();
+    	// return AbiDetect.getNativeAbi();
+        return Abi.ABI_ARMV7A_NEON.getName();
     }
 
     static String loadAbi() {
-    	return AbiDetect.getAbi();
+    	// return AbiDetect.getAbi();
+        return Abi.ABI_ARMV7A_NEON.getName();
     }
 
     static String loadPackageName() {
@@ -63,30 +64,24 @@ public class NativeLoader {
     static boolean loadFFmpeg() {
         boolean nativeFFmpegLoaded = false;
         boolean nativeFFmpegTriedAndFailed = false;
-        if (Build.VERSION.SDK_INT < 21) {
-            List<String> externalLibrariesEnabled = loadExternalLibraries();
-            if (externalLibrariesEnabled.contains("tesseract") || externalLibrariesEnabled.contains("x265") || externalLibrariesEnabled.contains("snappy") || externalLibrariesEnabled.contains("openh264") || externalLibrariesEnabled.contains("rubberband")) {
-                loadLibrary("c++_shared");
-            }
-            if ("arm-v7a".equals(loadNativeAbi())) {
+
+            if (AbiDetect.ARM_V7A.equals(loadNativeAbi())) {
                 try {
-                    String[] strArr = FFMPEG_LIBRARIES;
-                    int length = strArr.length;
-                    for (int i = 0; i < length; i++) {
-                        loadLibrary(strArr[i] + "_neon");
+                    for (String ffmpegLibrary : FFMPEG_LIBRARIES) {
+                        loadLibrary(ffmpegLibrary + "_neon");
                     }
                     nativeFFmpegLoaded = true;
-                } catch (Error e) {
-                    Log.i("ffmpeg-kit", String.format("NEON supported armeabi-v7a ffmpeg library not found. Loading default armeabi-v7a library.%s", Exceptions.getStackTraceString(e)));
+                } catch (final Error e) {
+                    android.util.Log.i(FFmpegKitConfig.TAG, String.format("NEON supported armeabi-v7a ffmpeg library not found. Loading default armeabi-v7a library.%s", Exceptions.getStackTraceString(e)));
                     nativeFFmpegTriedAndFailed = true;
                 }
             }
+
             if (!nativeFFmpegLoaded) {
                 for (String ffmpegLibrary : FFMPEG_LIBRARIES) {
                     loadLibrary(ffmpegLibrary);
                 }
             }
-        }
         return nativeFFmpegTriedAndFailed;
     }
 
