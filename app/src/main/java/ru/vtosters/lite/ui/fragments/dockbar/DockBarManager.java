@@ -42,7 +42,7 @@ import java.util.List;
 
 import ru.vtosters.lite.utils.StreamUtils;
 
-public class DockBarManager {
+public class DockBarManager{
 
     public static final int MIN_SELECTED_TABS_LIMIT = 3;
     public static final int MAX_SELECTED_TABS_LIMIT = 9;
@@ -56,27 +56,27 @@ public class DockBarManager {
     );
     private File mConfig;
 
-    public DockBarManager() {
+    public DockBarManager(){
         init();
     }
 
-    public static DockBarManager getInstance() {
+    public static DockBarManager getInstance(){
         return sInstance == null
                 ? (sInstance = new DockBarManager())
                 : sInstance;
     }
 
-    private void init() {
+    private void init(){
         mConfig = new File(getContext().getFilesDir(), "dockbar.json");
 
-        if (mConfig.exists()) {
+        if(mConfig.exists()){
             readFromConfig();
         } else {
             fillDefault();
         }
     }
 
-    private void readFromConfig() {
+    private void readFromConfig(){
         try {
             JSONObject jsonObj = new JSONObject(StreamUtils.readAllLines(mConfig));
 
@@ -87,8 +87,8 @@ public class DockBarManager {
         }
     }
 
-    private void fillList(List<DockBarTab> list, JSONArray array) throws JSONException, ClassNotFoundException {
-        for (int i = 0; i < array.length(); i++) {
+    private void fillList(List<DockBarTab> list, JSONArray array) throws JSONException, ClassNotFoundException{
+        for(int i = 0; i < array.length(); i++) {
             JSONObject item = array.getJSONObject(i);
             DockBarTab tab = DockBarTab.valuesOf(
                     item.getString("tag"),
@@ -97,24 +97,24 @@ public class DockBarManager {
                     item.getInt("id"),
                     Class.forName(item.getString("fragmentClass"))
             );
-            if (milkshake() && NewsfeedFragment.class == tab.fragmentClass) {
+            if(milkshake() && NewsfeedFragment.class == tab.fragmentClass){
                 tab.fragmentClass = HomeFragment.class;
-            } else if (!milkshake() && HomeFragment.class == tab.fragmentClass) {
+            } else if(!milkshake() && HomeFragment.class == tab.fragmentClass){
                 tab.fragmentClass = NewsfeedFragment.class;
             }
             list.add(tab);
         }
     }
 
-    private void fillDefault() {
-        if (vkme()) {
+    private void fillDefault(){
+        if(vkme()){
             mSelectedTabs.add(DockBarTab.valuesOf(
                     "tab_settings",
                     R.drawable.ic_settings_outline_28,
                     R.string.menu_settings,
                     R.id.menu_settings,
                     useNewSettings()));
-            if (vkme_notifs())
+            if(vkme_notifs())
                 mSelectedTabs.add(DockBarTab.valuesOf(
                         "tab_feedback",
                         R.drawable.ic_menu_notification_outline_28,
@@ -261,7 +261,7 @@ public class DockBarManager {
                 BirthdaysFragment.class));
     }
 
-    public void save() {
+    public void save(){
         try {
             JSONObject jsonObj = new JSONObject()
                     .put("selected", makeJsonArrayWithTabs(mSelectedTabs))
@@ -273,13 +273,13 @@ public class DockBarManager {
         }
     }
 
-    public void reset() {
+    public void reset(){
         mConfig.deleteOnExit();
     }
 
-    private JSONArray makeJsonArrayWithTabs(List<DockBarTab> list) throws JSONException {
+    private JSONArray makeJsonArrayWithTabs(List<DockBarTab> list) throws JSONException{
         JSONArray array = new JSONArray();
-        for (DockBarTab tab : list) {
+        for(DockBarTab tab : list) {
             JSONObject item = new JSONObject()
                     .put("tag", tab.tag)
                     .put("iconID", tab.iconID)
@@ -291,15 +291,15 @@ public class DockBarManager {
         return array;
     }
 
-    public List<DockBarTab> getSelectedTabs() {
+    public List<DockBarTab> getSelectedTabs(){
         return mSelectedTabs;
     }
 
-    public List<DockBarTab> getDisabledTabs() {
+    public List<DockBarTab> getDisabledTabs(){
         return mDisabledTabs;
     }
 
-    public List<String> getCategoryTitles() {
+    public List<String> getCategoryTitles(){
         return mCategoryTitles;
     }
 }

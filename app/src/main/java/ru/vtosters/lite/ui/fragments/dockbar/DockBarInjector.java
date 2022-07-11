@@ -1,5 +1,6 @@
 package ru.vtosters.lite.ui.fragments.dockbar;
 
+import static com.vtosters.lite.R.id.*;
 import static ru.vtosters.lite.utils.Globals.getResources;
 
 import android.content.res.ColorStateList;
@@ -11,6 +12,8 @@ import android.view.MenuItem;
 import com.vk.apps.AppsFragment;
 import com.vk.core.drawable.RecoloredDrawable;
 import com.vk.core.fragments.FragmentImpl;
+import com.vk.navigation.NavigationDelegateBottom;
+import com.vk.navigation.right.RightMenu;
 import com.vtosters.lite.ui.bottomnavigation.BottomNavigationMenuView;
 import com.vtosters.lite.ui.bottomnavigation.BottomNavigationView;
 
@@ -95,16 +98,16 @@ public class DockBarInjector{
         menu.clear();
 
         for(DockBarTab tab : sManager.getSelectedTabs()) {
-            if(tab.id != com.vtosters.lite.R.id.tab_menu){
+            if(tab.id != tab_menu){
                 int itemId = tab.id;
-                if(tab.id == com.vtosters.lite.R.id.tab_news){
-                    itemId = com.vtosters.lite.R.id.menu_newsfeed;
-                } else if(tab.id == com.vtosters.lite.R.id.tab_discover){
-                    itemId = com.vtosters.lite.R.id.menu_search;
-                } else if(tab.id == com.vtosters.lite.R.id.tab_feedback){
-                    itemId = com.vtosters.lite.R.id.menu_feedback;
-                } else if(tab.id == com.vtosters.lite.R.id.tab_messages){
-                    itemId = com.vtosters.lite.R.id.menu_messages;
+                if(tab.id == tab_news){
+                    itemId = menu_newsfeed;
+                } else if(tab.id == tab_discover){
+                    itemId = menu_search;
+                } else if(tab.id == tab_feedback){
+                    itemId = menu_feedback;
+                } else if(tab.id == tab_messages){
+                    itemId = menu_messages;
                 }
 
                 MenuItem add = menu.add(0, itemId, 0, tab.titleID);
@@ -123,16 +126,16 @@ public class DockBarInjector{
             MenuItem menuItem = menu.getItem(i);
             for(DockBarTab tab : sManager.getSelectedTabs()) {
                 int itemId = menuItem.getItemId();
-                if(itemId == com.vtosters.lite.R.id.menu_newsfeed){
-                    itemId = com.vtosters.lite.R.id.tab_news;
-                } else if(itemId == com.vtosters.lite.R.id.menu_search){
-                    itemId = com.vtosters.lite.R.id.tab_discover;
-                } else if(itemId == com.vtosters.lite.R.id.menu_feedback){
-                    itemId = com.vtosters.lite.R.id.tab_feedback;
-                } else if(itemId == com.vtosters.lite.R.id.menu_messages){
-                    itemId = com.vtosters.lite.R.id.tab_messages;
+                if(itemId == menu_newsfeed){
+                    itemId = tab_news;
+                } else if(itemId == menu_search){
+                    itemId = tab_discover;
+                } else if(itemId == menu_feedback){
+                    itemId = tab_feedback;
+                } else if(itemId == menu_messages){
+                    itemId = tab_messages;
                 }
-                if(itemId == tab.id && tab.id != com.vtosters.lite.R.id.menu_vk_pay){
+                if(itemId == tab.id && tab.id != menu_vk_pay){
                     menuItems.add(menuItem);
                     break;
                 }
@@ -152,13 +155,13 @@ public class DockBarInjector{
                 "discover"
         ));
         for(DockBarTab tab : sManager.getSelectedTabs()) {
-            if(tab.id == com.vtosters.lite.R.id.tab_discover){
+            if(tab.id == tab_discover){
                 arrayList.remove("discover");
-            } else if(tab.id == com.vtosters.lite.R.id.tab_feedback){
+            } else if(tab.id == tab_feedback){
                 arrayList.remove("feedback");
-            } else if(tab.id == com.vtosters.lite.R.id.tab_messages){
+            } else if(tab.id == tab_messages){
                 arrayList.remove("messages");
-            } else if(tab.id == com.vtosters.lite.R.id.tab_news){
+            } else if(tab.id == tab_news){
                 arrayList.remove("news");
             }
         }
@@ -195,7 +198,11 @@ public class DockBarInjector{
         return false;
     }
 
-    public static Class<?> interceptClick(int id){
+    public static Class<?> interceptClick(int id, RightMenu rightMenu){
+        if(id == tab_menu){
+            rightMenu.a();
+        }
+
         for(DockBarTab tab : sManager.getSelectedTabs()) {
             if(id == tab.id)
                 return tab.fragmentClass;
@@ -204,6 +211,7 @@ public class DockBarInjector{
             if(id == tab.id)
                 return tab.fragmentClass;
         }
+
         return AppsFragment.class;
     }
 }
