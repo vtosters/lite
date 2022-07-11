@@ -24,6 +24,7 @@ import android.os.Build;
 import android.view.View;
 import android.view.Window;
 import android.webkit.WebView;
+import android.widget.EditText;
 import android.widget.ImageButton;
 
 import androidx.appcompat.widget.Toolbar;
@@ -35,8 +36,10 @@ import com.vk.core.preference.Preference;
 import com.vk.core.ui.themes.MilkshakeHelper;
 import com.vk.core.ui.themes.VKTheme;
 import com.vk.core.ui.themes.VKThemeHelper;
+import com.vk.im.ui.views.RichEditText;
 import com.vtosters.lite.R;
 import com.vtosters.lite.data.ThemeTracker;
+import com.vtosters.lite.ui.WriteBar;
 
 import java.util.Arrays;
 import java.util.List;
@@ -150,6 +153,11 @@ public class Themes{
 
     public static boolean isAndroidMonet(){
         return color_grishka() && Build.VERSION.SDK_INT >= 31;
+    }
+
+    public static void colorWriteBar(View view){
+        if(!navbar()) return;
+        view.setBackgroundColor(getTabbarBackground());
     }
 
     public static boolean isMilkshake(){
