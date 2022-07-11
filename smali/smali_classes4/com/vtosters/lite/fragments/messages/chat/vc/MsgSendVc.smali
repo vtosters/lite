@@ -5664,6 +5664,8 @@
 
     iput-object p1, p0, Lcom/vtosters/lite/fragments/messages/chat/vc/MsgSendVc;->D:Lcom/vk/im/ui/views/WriteBarDisabled;
 
+    invoke-static {p1}, Lru/vtosters/lite/utils/Themes;->colorWriteBar(Landroid/view/View;)V
+
     .line 15
     iget-object p1, p0, Lcom/vtosters/lite/fragments/messages/chat/vc/MsgSendVc;->C:Landroid/view/View;
 
@@ -5682,6 +5684,8 @@
     check-cast p1, Lcom/vtosters/lite/ui/WriteBar;
 
     iput-object p1, p0, Lcom/vtosters/lite/fragments/messages/chat/vc/MsgSendVc;->B:Lcom/vtosters/lite/ui/WriteBar;
+
+    invoke-static {p1}, Lru/vtosters/lite/utils/Themes;->colorWriteBar(Landroid/view/View;)V
 
     .line 16
     iget-object p1, p0, Lcom/vtosters/lite/fragments/messages/chat/vc/MsgSendVc;->B:Lcom/vtosters/lite/ui/WriteBar;
