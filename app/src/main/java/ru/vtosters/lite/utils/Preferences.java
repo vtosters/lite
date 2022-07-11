@@ -6,6 +6,7 @@ import static ru.vtosters.lite.f0x1d.VTVerifications.isVerified;
 import static ru.vtosters.lite.utils.CacheUtils.getInstance;
 import static ru.vtosters.lite.utils.DeletedMessagesHandler.reloadMessagesList;
 import static ru.vtosters.lite.utils.Globals.edit;
+import static ru.vtosters.lite.utils.Globals.fixGapps;
 import static ru.vtosters.lite.utils.Globals.getContext;
 import static ru.vtosters.lite.utils.Globals.getPrefsValue;
 import static ru.vtosters.lite.utils.Globals.getUserId;
@@ -36,7 +37,7 @@ public class Preferences{
 
     public static void init(Application application) throws Exception{
         setupFilters();
-        // fixGapps();
+        fixGapps();
         setProxy();
         reloadMessagesList();
         registerActivities(application);
