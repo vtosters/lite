@@ -19,8 +19,6 @@ public class FFMpeg {
     private static void copyAssets() {
         try {
             String[] files = Globals.getContext().getAssets().list("ffmpeg");
-            // log all files
-            Log.d("FFMpeg", "files: " + Arrays.toString(files));
             for (String file : files) {
                 if (file.endsWith(".so")) {
                     InputStream in = Globals.getContext().getAssets().open("ffmpeg" + File.separator + file);
@@ -49,7 +47,30 @@ public class FFMpeg {
 
     public static boolean convert(String in, String out) {
         checkFFMpegLibs();
-        var session = FFmpegKit.execute("-y -i " + in + " -c:a copy -f " + out);
+
+        // write the list of all .ts files to a txt file in "in" directory
+        var list = new File(in);
+        list.mkdirs();
+        var listFile = new File(list, "list.txt");
+        try {
+            listFile.createNewFile();
+            var writer = new java.io.FileWriter(listFile);
+            for (var file : list.listFiles()) {
+                if (file.getName().endsWith(".ts")) {
+                    writer.write("file " + file.getName() + "\n");
+                }
+            }
+            writer.close();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
+
+        // concatenate .ts files to a single .ts file
+        var concat = FFmpegKit.execute("-f concat -safe 0 -i " + in + "/list.txt -c copy " + in + "/all.ts");
+
+        // convert .ts file to .mp3 file via ffmpeg
+        var session = FFmpegKit.execute("-i " + in + "/all.ts -f mp3 -acodec mp3 -b 320 -y " + out);
         var rc = session.getReturnCode();
 
         if (ReturnCode.isSuccess(rc)) {
