@@ -345,9 +345,7 @@ public class Globals{
     } // Network check
 
     public static void fixGapps(){
-        if(isGmsInstalled()) return;
-        
-        if(Build.VERSION.SDK_INT >= 26){
+        if(Build.VERSION.SDK_INT >= 26 && !isGmsInstalled()){
             NotificationManager notificationManager = (NotificationManager) getContext().getSystemService(Context.NOTIFICATION_SERVICE);
 
             if(notificationManager.getNotificationChannel("audio_playback_channel") == null){
