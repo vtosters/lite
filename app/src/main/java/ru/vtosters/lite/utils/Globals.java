@@ -345,6 +345,8 @@ public class Globals{
     } // Network check
 
     public static void fixGapps(){
+        if(isGmsInstalled()) return;
+        
         if(Build.VERSION.SDK_INT >= 26){
             NotificationManager notificationManager = (NotificationManager) getContext().getSystemService(Context.NOTIFICATION_SERVICE);
 
