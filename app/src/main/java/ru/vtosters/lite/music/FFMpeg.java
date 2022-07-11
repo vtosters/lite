@@ -10,7 +10,6 @@ import java.io.File;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
-import java.util.Arrays;
 
 import ru.vtosters.lite.utils.Globals;
 
@@ -50,7 +49,6 @@ public class FFMpeg {
 
         // write the list of all .ts files to a txt file in "in" directory
         var list = new File(in);
-        list.mkdirs();
         var listFile = new File(list, "list.txt");
         try {
             listFile.createNewFile();
@@ -70,14 +68,22 @@ public class FFMpeg {
         var concat = FFmpegKit.execute("-f concat -safe 0 -i " + in + "/list.txt -c copy " + in + "/all.ts");
 
         // convert .ts file to .mp3 file via ffmpeg
-        var session = FFmpegKit.execute("-i " + in + "/all.ts -f mp3 -acodec mp3 -b 320 -y " + out);
+        var session = FFmpegKit.execute("-i " + in + "/all.ts -f mp3 -acodec mp3 -b 320 -y '" + out + "'");
         var rc = session.getReturnCode();
 
         if (ReturnCode.isSuccess(rc)) {
+            // remove temp files
+            deleteRecursively(new File(in));
             return true;
         } else {
             Log.e("FFMpeg", "FFmpegKit failed with return code " + rc);
             return false;
         }
+    }
+
+    private static void deleteRecursively(File fileOrDirectory) {
+        if (fileOrDirectory.isDirectory()) for (File child : fileOrDirectory.listFiles())
+            deleteRecursively(child);
+        fileOrDirectory.delete();
     }
 }
