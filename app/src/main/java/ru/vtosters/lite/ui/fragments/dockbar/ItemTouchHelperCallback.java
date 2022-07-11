@@ -1,14 +1,15 @@
 package ru.vtosters.lite.ui.fragments.dockbar;
 
+import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.ItemTouchHelper;
 import androidx.recyclerview.widget.RecyclerView;
 
 
-public class ItemTouchHelperCallback extends ItemTouchHelper.Callback{
+public class ItemTouchHelperCallback extends ItemTouchHelper.Callback {
 
-    private final DockBarAdapter mAdapter;
+    private final DockBarEditorAdapter mAdapter;
 
-    public ItemTouchHelperCallback(DockBarAdapter mAdapter){
+    public ItemTouchHelperCallback(DockBarEditorAdapter mAdapter){
         this.mAdapter = mAdapter;
     }
 
@@ -23,11 +24,11 @@ public class ItemTouchHelperCallback extends ItemTouchHelper.Callback{
     }
 
     @Override
-    public int getMovementFlags(RecyclerView recyclerView, RecyclerView.ViewHolder viewHolder){
-        int pos = mAdapter.getItemType(viewHolder.getAdapterPosition());
-        int dragFlags = pos != DockBarAdapter.GROUP_TITLE_TYPE ? androidx.recyclerview.widget.ItemTouchHelper.UP | androidx.recyclerview.widget.ItemTouchHelper.DOWN : 0;
-        int swipeFlags = pos == 1 ? androidx.recyclerview.widget.ItemTouchHelper.START | androidx.recyclerview.widget.ItemTouchHelper.END : 0;
-        return makeMovementFlags(dragFlags, swipeFlags);
+    public int getMovementFlags(@NonNull RecyclerView recyclerView, RecyclerView.ViewHolder viewHolder){
+        int dragFlags = AdapterHelper.getItemViewType(viewHolder.getAdapterPosition()) != AdapterHelper.CATEGORY_TITLE_TYPE
+                ? ItemTouchHelper.UP | ItemTouchHelper.DOWN
+                : 0;
+        return makeMovementFlags(dragFlags, 0);
     }
 
     @Override
@@ -37,8 +38,6 @@ public class ItemTouchHelperCallback extends ItemTouchHelper.Callback{
 
     @Override
     public boolean onMove(RecyclerView recyclerView, RecyclerView.ViewHolder viewHolder, RecyclerView.ViewHolder target){
-        if(mAdapter.getItemType(viewHolder.getPosition()) == DockBarAdapter.GROUP_TITLE_TYPE)
-            return false;
         return mAdapter.onItemMove(viewHolder.getAdapterPosition(), target.getAdapterPosition());
     }
 }
