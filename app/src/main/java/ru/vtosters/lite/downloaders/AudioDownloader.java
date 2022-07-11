@@ -11,6 +11,7 @@ import com.vk.core.util.ToastUtils;
 import com.vk.dto.music.MusicTrack;
 
 import java.io.File;
+import java.util.Random;
 
 import ru.vtosters.lite.music.Callback;
 import ru.vtosters.lite.music.FFMpeg;
@@ -22,17 +23,26 @@ public class AudioDownloader {
             ToastUtils.a("Не удалось найти ссылку на аудиозапись");
             return;
         }
-        var path = Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_MUSIC)
-                .getAbsolutePath() + File.separator + track.f;
-        downloadAudioAsync(track, path, new Callback() {
+        var musicPath = Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_MUSIC).getAbsolutePath();
+        var downloadPath = musicPath + File.separator + new Random().nextInt(100);
+
+        downloadAudioAsync(track, downloadPath, new Callback() {
             @Override
             public void onProgress(int progress) {
-                ToastUtils.a("Загружено " + progress + "%");
             }
 
             @Override
             public void onSuccess() {
-                FFMpeg.convert(path, path + "x");
+                try {
+                    var fileName = track.toString();
+                    FFMpeg.convert(downloadPath, musicPath + File.separator + fileName + ".mp3");
+                }
+                catch (UnsatisfiedLinkError e) {
+                    Log.e("AudioDownloader","Опять эти нативные либы");
+                    Log.e("AudioDownloader", e.getMessage());
+                    onFailure();
+                }
+
                 ToastUtils.a("Загрузка завершена");
             }
 
