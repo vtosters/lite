@@ -1729,15 +1729,15 @@
 
     .line 63
     :cond_0
-    invoke-static {p1}, Lru/vtosters/lite/ui/fragments/dockbar/DockBarInjector;->interceptClick(I)Ljava/lang/Class;
+    # invoke-static {p1}, Lru/vtosters/lite/ui/fragments/dockbar/DockBarInjector;->interceptClick(I)Ljava/lang/Class;
 
-    move-result-object p1
+    # move-result-object p1
 
-    const/4 v2, 0x0
+    # const/4 v2, 0x0
 
-    const/4 v0, 0x0
+    # const/4 v0, 0x0
 
-    goto :goto_1
+    # goto :goto_1
 
     invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
