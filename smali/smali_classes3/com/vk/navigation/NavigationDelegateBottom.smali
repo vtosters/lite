@@ -1676,7 +1676,7 @@
 .end method
 
 .method private final a(IZ)Z
-    .locals 4
+    .locals 6
 
     const v0, 0x7f0a0d14
 
@@ -1729,15 +1729,17 @@
 
     .line 63
     :cond_0
-    # invoke-static {p1}, Lru/vtosters/lite/ui/fragments/dockbar/DockBarInjector;->interceptClick(I)Ljava/lang/Class;
+    iget-object v5, p0, Lcom/vk/navigation/NavigationDelegateBottom;->U:Lcom/vk/navigation/right/RightMenu;
 
-    # move-result-object p1
+    invoke-static {p1, v5}, Lru/vtosters/lite/ui/fragments/dockbar/DockBarInjector;->interceptClick(ILcom/vk/navigation/right/RightMenu;)Ljava/lang/Class;
 
-    # const/4 v2, 0x0
+    move-result-object p1
 
-    # const/4 v0, 0x0
+    const/4 v2, 0x0
 
-    # goto :goto_1
+    const/4 v0, 0x0
+
+    goto :goto_1
 
     invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
