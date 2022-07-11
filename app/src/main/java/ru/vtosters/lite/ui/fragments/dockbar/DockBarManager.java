@@ -2,7 +2,9 @@ package ru.vtosters.lite.ui.fragments.dockbar;
 
 import static ru.vtosters.lite.utils.Globals.getContext;
 import static ru.vtosters.lite.utils.Globals.getString;
+import static ru.vtosters.lite.utils.Preferences.getBoolValue;
 import static ru.vtosters.lite.utils.Preferences.milkshake;
+import static ru.vtosters.lite.utils.Preferences.musicnewcatalog;
 import static ru.vtosters.lite.utils.Preferences.useNewSettings;
 import static ru.vtosters.lite.utils.Preferences.vkme;
 import static ru.vtosters.lite.utils.Preferences.vkme_notifs;
@@ -13,6 +15,7 @@ import com.vk.fave.fragments.FaveTabFragment;
 import com.vk.feedlikes.d.FeedLikesFragment;
 import com.vk.friends.catalog.FriendsCatalogFragment;
 import com.vk.menu.MenuFragment;
+import com.vk.music.fragment.MusicCatalogFragment1;
 import com.vk.music.fragment.MusicFragment;
 import com.vk.newsfeed.HomeFragment;
 import com.vk.newsfeed.NewsfeedFragment;
@@ -97,6 +100,12 @@ public class DockBarManager{
                     item.getInt("id"),
                     Class.forName(item.getString("fragmentClass"))
             );
+
+            if (musicnewcatalog() && MusicFragment.class == tab.fragmentClass)
+                tab.fragmentClass = MusicCatalogFragment1.class;
+            else if (MusicCatalogFragment1.class == tab.fragmentClass)
+                tab.fragmentClass = MusicFragment.class;
+
             if (milkshake()) {
                 if (NewsfeedFragment.class == tab.fragmentClass)
                     tab.fragmentClass = HomeFragment.class;
@@ -105,6 +114,17 @@ public class DockBarManager{
                     tab.fragmentClass = ProfileFragment.class;
                     tab.iconID = R.drawable.ic_user_circle_outline_28;
                 }
+
+                if (ThemedFeedFragment.class == tab.fragmentClass) {
+                    tab.fragmentClass = SuperAppFragment.class;
+                    tab.iconID = R.drawable.ic_explore_outline_28;
+                }
+
+                if (NotificationsContainerFragment.class == tab.fragmentClass) {
+                    tab.fragmentClass = FriendsCatalogFragment.class;
+                    tab.iconID = R.drawable.ic_users_outline_28;
+                }
+
             } else {
                 if (HomeFragment.class == tab.fragmentClass)
                     tab.fragmentClass = NewsfeedFragment.class;
@@ -112,6 +132,16 @@ public class DockBarManager{
                 if (ProfileFragment.class == tab.fragmentClass) {
                     tab.iconID = R.drawable.ic_menu_more_outline_28;
                     tab.fragmentClass = MenuFragment.class;
+                }
+
+                if (SuperAppFragment.class == tab.fragmentClass) {
+                    tab.iconID = R.drawable.ic_menu_search_outline_28;
+                    tab.fragmentClass = ThemedFeedFragment.class;
+                }
+
+                if (FriendsCatalogFragment.class == tab.fragmentClass) {
+                    tab.fragmentClass = NotificationsContainerFragment.class;
+                    tab.iconID = R.drawable.ic_menu_notification_outline_28;
                 }
             }
             list.add(tab);
@@ -204,7 +234,7 @@ public class DockBarManager{
                 R.drawable.ic_music_outline_28,
                 R.string.music,
                 R.id.menu_audios,
-                MusicFragment.class));
+                getBoolValue("musicnewcatalog", true) ? MusicCatalogFragment1.class : MusicFragment.class));
         mDisabledTabs.add(DockBarTab.valuesOf(
                 "tab_videos",
                 R.drawable.ic_video_outline_28,
