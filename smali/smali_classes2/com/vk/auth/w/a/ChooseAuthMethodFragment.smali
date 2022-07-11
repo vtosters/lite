@@ -210,6 +210,8 @@
 
     invoke-virtual {p2, v0}, Landroid/view/View;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
+    invoke-static {p2}, Lru/vtosters/lite/utils/ProxyHook;->hookAuth(Landroid/view/View;)V
+
     .line 7
     invoke-direct {p0}, Lcom/vk/auth/w/a/ChooseAuthMethodFragment;->K4()V
 

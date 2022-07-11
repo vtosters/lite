@@ -60,6 +60,10 @@ public class Proxy{
         return "m.vk.com";
     }
 
+    public static Boolean isZaboronaEnabled(){
+        return getPrefsValue("proxy").equals("zaborona");
+    }
+
     public static void setProxy(){
         var type = getPrefsValue("proxy");
         var properties = getProperties();
