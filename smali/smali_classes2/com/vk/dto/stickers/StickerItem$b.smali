@@ -47,6 +47,10 @@
 
     const-string v0, "images"
 
+    invoke-static {}, Lru/vtosters/lite/utils/Themes;->getBackgroundStickers()Ljava/lang/String;
+
+    move-result-object v0
+
     .line 2
     invoke-virtual {p1, v0}, Lorg/json/JSONObject;->optJSONArray(Ljava/lang/String;)Lorg/json/JSONArray;
 

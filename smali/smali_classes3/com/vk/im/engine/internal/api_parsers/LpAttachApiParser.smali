@@ -622,6 +622,10 @@
 
     const-string v4, "images"
 
+    invoke-static {}, Lru/vtosters/lite/utils/Themes;->getBackgroundStickers()Ljava/lang/String;
+
+    move-result-object v4
+
     invoke-virtual {p1, v4}, Lorg/json/JSONObject;->getJSONArray(Ljava/lang/String;)Lorg/json/JSONArray;
 
     move-result-object v4

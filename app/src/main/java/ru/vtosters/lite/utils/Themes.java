@@ -1,6 +1,7 @@
 package ru.vtosters.lite.utils;
 
 import static android.view.View.SYSTEM_UI_FLAG_LIGHT_NAVIGATION_BAR;
+import static ru.vtosters.lite.ui.wallpapers.WallpapersHooks.getWallpaper;
 import static ru.vtosters.lite.utils.Globals.edit;
 import static ru.vtosters.lite.utils.Globals.getCenterScreenCoords;
 import static ru.vtosters.lite.utils.Globals.getCurrentActivity;
@@ -302,6 +303,12 @@ public class Themes{
         return R.style.Theme_MaterialComponents_Light_Dialog_Alert;
     } // Android Support color injector + accent color checker
 
+    public static String getBackgroundStickers() {
+        if (getWallpaper() != null) {
+            return "images_with_background";
+        }
+        return "images";
+    }
 
     public static void setNavbarColor(Window window, int i){
         if(navbar()){

@@ -983,6 +983,10 @@
     :pswitch_8
     const-string v0, "images"
 
+    invoke-static {}, Lru/vtosters/lite/utils/Themes;->getBackgroundStickers()Ljava/lang/String;
+
+    move-result-object v0
+
     .line 31
     invoke-virtual {v7, v0}, Lorg/json/JSONObject;->optJSONArray(Ljava/lang/String;)Lorg/json/JSONArray;
 
