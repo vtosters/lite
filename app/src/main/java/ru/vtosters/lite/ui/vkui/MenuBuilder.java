@@ -1,6 +1,6 @@
 package ru.vtosters.lite.ui.vkui;
 
-import static ru.vtosters.lite.foaf.FoafBase.*;
+import static ru.vtosters.lite.foaf.FoafBase.loadAndShow;
 import static ru.vtosters.lite.utils.Globals.getUserID;
 
 import android.content.ClipData;

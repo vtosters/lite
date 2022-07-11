@@ -3,6 +3,10 @@ package ru.vtosters.lite.ui;
 import static ru.vtosters.lite.utils.Globals.convertDpToPixel;
 import static ru.vtosters.lite.utils.Globals.getContext;
 import static ru.vtosters.lite.utils.Themes.*;
+import static ru.vtosters.lite.utils.Themes.getAccentColor;
+import static ru.vtosters.lite.utils.Themes.getAlertStyle;
+import static ru.vtosters.lite.utils.Themes.getSTextAttr;
+import static ru.vtosters.lite.utils.Themes.getTextAttr;
 
 import android.app.AlertDialog;
 import android.content.Context;
@@ -10,7 +14,6 @@ import android.content.DialogInterface;
 import android.content.res.ColorStateList;
 import android.graphics.PorterDuff;
 import android.graphics.drawable.Drawable;
-import android.os.Build;
 import android.preference.PreferenceManager;
 import android.util.TypedValue;
 import android.view.ViewGroup;
@@ -19,7 +22,6 @@ import android.widget.LinearLayout;
 
 import androidx.annotation.Nullable;
 import androidx.core.content.ContextCompat;
-import androidx.core.view.ViewCompat;
 import androidx.preference.ListPreference;
 import androidx.preference.Preference;
 import androidx.preference.PreferenceCategory;
@@ -172,7 +174,8 @@ public class PreferencesUtil{
             final EditText editText = new EditText(getContext());
             editText.setText(PreferenceManager.getDefaultSharedPreferences(getContext()).getString(key, ""));
             editText.setHint(title);
-            editText.setHintTextColor(PreferencesUtil.getSTextColor(getContext()));
+            editText.setTextColor(getTextAttr());
+            editText.setHintTextColor(getSTextColor(getContext()));
 
             editText.setBackgroundTintList(ColorStateList.valueOf(getAccentColor()));
 
@@ -182,7 +185,7 @@ public class PreferencesUtil{
             margin.setMargins(convertDpToPixel(20f), 0, convertDpToPixel(20f), 0);
             editText.setLayoutParams(margin);
 
-            AlertDialog.Builder builder = new AlertDialog.Builder(fragment.getContext(), com.vtosters.lite.R.style.Base_Theme_MaterialComponents_Dialog_Alert);
+            AlertDialog.Builder builder = new AlertDialog.Builder(fragment.getContext(), getAlertStyle());
             builder.setTitle(title);
             builder.setView(linearLayout);
             builder.setPositiveButton("OK", (dialog, which) -> {

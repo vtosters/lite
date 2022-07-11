@@ -1,5 +1,4 @@
 package ru.vtosters.lite.ui.wallpapers;
-import static ru.vtosters.lite.ui.PreferencesUtil.*;
 import static ru.vtosters.lite.ui.wallpapers.WallpapersHooks.getWallpaper;
 import static ru.vtosters.lite.ui.wallpapers.WallpapersHooks.getWallpaperFile;
 import static ru.vtosters.lite.utils.Globals.convertDpToPixel;
@@ -14,7 +13,6 @@ import android.util.AttributeSet;
 import android.util.TypedValue;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.FrameLayout;
 import android.widget.ImageView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;

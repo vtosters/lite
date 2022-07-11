@@ -1,6 +1,5 @@
 package ru.vtosters.lite.utils;
 import static ru.vtosters.lite.ui.PreferencesUtil.getSTextColor;
-import static ru.vtosters.lite.ui.PreferencesUtil.getTextColor;
 import static ru.vtosters.lite.utils.Globals.convertDpToPixel;
 import static ru.vtosters.lite.utils.Globals.fromEup;
 import static ru.vtosters.lite.utils.Globals.getContext;
@@ -11,6 +10,8 @@ import static ru.vtosters.lite.utils.Globals.getUserID;
 import static ru.vtosters.lite.utils.Globals.getUserId;
 import static ru.vtosters.lite.utils.Globals.getUserLastName;
 import static ru.vtosters.lite.utils.Globals.sendToast;
+import static ru.vtosters.lite.utils.Themes.*;
+import static ru.vtosters.lite.utils.Themes.getAlertStyle;
 
 import android.content.Context;
 import android.content.DialogInterface;
@@ -160,8 +161,9 @@ public class RenameTool{
 
         final EditText fn = new EditText(ctx);
         fn.setHint("Имя");
+        fn.setTextColor(getTextAttr());
         fn.setHintTextColor(getSTextColor(ctx));
-        fn.setBackgroundTintList(ColorStateList.valueOf(Themes.getAccentColor()));
+        fn.setBackgroundTintList(ColorStateList.valueOf(getAccentColor()));
         linearLayout.addView(fn);
         fn.getLayoutParams().width = ViewGroup.LayoutParams.MATCH_PARENT;
         ViewGroup.MarginLayoutParams margin = ((ViewGroup.MarginLayoutParams) fn.getLayoutParams());
@@ -170,8 +172,9 @@ public class RenameTool{
 
         final EditText ln = new EditText(ctx);
         ln.setHint("Фамилия");
+        ln.setTextColor(getTextAttr());
         ln.setHintTextColor(getSTextColor(ctx));
-        ln.setBackgroundTintList(ColorStateList.valueOf(Themes.getAccentColor()));
+        ln.setBackgroundTintList(ColorStateList.valueOf(getAccentColor()));
         linearLayout.addView(ln);
         ln.getLayoutParams().width = ViewGroup.LayoutParams.MATCH_PARENT;
         ln.setLayoutParams(margin);
@@ -182,7 +185,7 @@ public class RenameTool{
 
         int id = getUserID(profile);
 
-        AlertDialog.Builder builder = new AlertDialog.Builder(ctx, com.vtosters.lite.R.style.Base_Theme_MaterialComponents_Dialog_Alert);
+        AlertDialog.Builder builder = new AlertDialog.Builder(ctx, getAlertStyle());
         builder.setTitle("Смена имени");
         builder.setMessage("Это локальное изменение, которое будет отображатся только в данном клиенте.");
         builder.setView(linearLayout);
@@ -221,7 +224,7 @@ public class RenameTool{
 
         alert.show();
 
-        alert.getButton(DialogInterface.BUTTON_POSITIVE).setTextColor(Themes.getAccentColor());
+        alert.getButton(DialogInterface.BUTTON_POSITIVE).setTextColor(getAccentColor());
         alert.getButton(DialogInterface.BUTTON_NEUTRAL).setTextColor(getResources().getColor(com.vtosters.lite.R.color.red));
     }
 
@@ -232,7 +235,8 @@ public class RenameTool{
         final EditText fn = new EditText(ctx);
         fn.setHint("Имя");
         fn.setHintTextColor(getSTextColor(ctx));
-        fn.setBackgroundTintList(ColorStateList.valueOf(Themes.getAccentColor()));
+        fn.setTextColor(getTextAttr());
+        fn.setBackgroundTintList(ColorStateList.valueOf(getAccentColor()));
         linearLayout.addView(fn);
         fn.getLayoutParams().width = ViewGroup.LayoutParams.MATCH_PARENT;
         ViewGroup.MarginLayoutParams margin = ((ViewGroup.MarginLayoutParams) fn.getLayoutParams());
@@ -247,7 +251,7 @@ public class RenameTool{
 
         final int id = fid;
 
-        AlertDialog.Builder builder = new AlertDialog.Builder(ctx, com.vtosters.lite.R.style.Base_Theme_MaterialComponents_Dialog_Alert);
+        AlertDialog.Builder builder = new AlertDialog.Builder(ctx, getAlertStyle());
         builder.setTitle("Смена имени");
         builder.setMessage("Это локальное изменение, которое будет отображатся только в данном клиенте");
         builder.setView(linearLayout);
@@ -276,7 +280,7 @@ public class RenameTool{
 
         alert.show();
 
-        alert.getButton(DialogInterface.BUTTON_POSITIVE).setTextColor(Themes.getAccentColor());
+        alert.getButton(DialogInterface.BUTTON_POSITIVE).setTextColor(getAccentColor());
         alert.getButton(DialogInterface.BUTTON_NEUTRAL).setTextColor(getResources().getColor(com.vtosters.lite.R.color.red));
     }
 
