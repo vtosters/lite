@@ -60,7 +60,8 @@ import java.util.List;
 
 import ru.vtosters.lite.ui.PreferencesUtil;
 import ru.vtosters.lite.ui.dialogs.OTADialog;
-import ru.vtosters.lite.ui.fragments.dockbar.DockBarFragment;
+import ru.vtosters.lite.ui.fragments.dockbar.AdapterHelper;
+import ru.vtosters.lite.ui.fragments.dockbar.DockBarEditorFragment;
 import ru.vtosters.lite.ui.fragments.dockbar.DockBarManager;
 import ru.vtosters.lite.ui.fragments.tgstickers.StickersFragment;
 import ru.vtosters.lite.ui.vkui.VBottomSheetBuilder;
@@ -94,7 +95,7 @@ public class VTSettings extends MaterialPreferenceToolbarFragment{
     public static String getDocksumm(){
         if(disableSettingsSumms()) return null;
 
-        return Globals.getString("vtldocksumm") + ": " + DockBarManager.getInstance().getTabCount();
+        return Globals.getString("vtldocksumm") + ": " + (AdapterHelper.getItemCount() - 2);
     }
 
     public static String getTGSsumm(){
@@ -310,7 +311,7 @@ public class VTSettings extends MaterialPreferenceToolbarFragment{
 
             PreferencesUtil.addPreference(this, "", Globals.getString("dockbar_editor"), docksumm, !DoNotUseOldIcons() ? "ic_list_24" : "ic_list_outline_28", preference -> {
                 Context context = getContext();
-                Intent a2 = new Navigator(DockBarFragment.class).b(context);
+                Intent a2 = new Navigator(DockBarEditorFragment.class).b(context);
                 a2.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
                 context.startActivity(a2);
                 return false;

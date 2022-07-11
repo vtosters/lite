@@ -5,6 +5,7 @@ import static ru.vtosters.lite.utils.Globals.restartApplication;
 
 import android.os.Bundle;
 import android.view.ContextThemeWrapper;
+import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -20,19 +21,20 @@ import com.vtosters.lite.general.fragments.MaterialPreferenceToolbarFragment;
 
 import ru.vtosters.lite.utils.Globals;
 
-public class DockBarFragment extends MaterialPreferenceToolbarFragment{
+public class DockBarEditorFragment extends MaterialPreferenceToolbarFragment {
 
-    private RecyclerView mRecyclerView;
-    private DockBarAdapter mAdapter;
+    private RecyclerView mRecycler;
+    private DockBarEditorAdapter mAdapter;
+    private ItemTouchHelperCallback mCallback;
     private ItemTouchHelper mItemTouchHelper;
 
     @Override
-    public View onCreateView(LayoutInflater layoutInflater, ViewGroup viewGroup, Bundle bundle){
-        super.onCreate(bundle);
+    public View onCreateView(LayoutInflater layoutInflater, ViewGroup viewGroup, Bundle bundle) {
+        super.onCreateView(layoutInflater, viewGroup, bundle);
 
         LinearLayout container = new LinearLayout(getContext());
-        container.setLayoutParams(new FrameLayout.LayoutParams(-1, -1));
         container.setOrientation(LinearLayout.VERTICAL);
+        container.setLayoutParams(new FrameLayout.LayoutParams(-1, -1));
 
         LinearLayout buttonsContainer = new LinearLayout(getContext());
         buttonsContainer.setPadding(
@@ -60,7 +62,7 @@ public class DockBarFragment extends MaterialPreferenceToolbarFragment{
         TextView reset = new TextView(new ContextThemeWrapper(getContext(), com.vtosters.lite.R.style.VKUIButton_Primary));
         reset.setText(Globals.getString("dockbar_reset"));
         reset.setOnClickListener(v -> {
-            DockBarManager.getInstance().delete();
+            DockBarManager.getInstance().reset();
             restartApplication();
         });
 
@@ -68,26 +70,19 @@ public class DockBarFragment extends MaterialPreferenceToolbarFragment{
         resetParams.weight = 1.0f;
         buttonsContainer.addView(reset, resetParams);
 
-        mRecyclerView = new RecyclerView(getContext());
-        mRecyclerView.setHasFixedSize(true);
-        mRecyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
-        mAdapter = new DockBarAdapter();
-        mRecyclerView.setAdapter(mAdapter);
-        container.addView(mRecyclerView, new LinearLayout.LayoutParams(-1, -1));
+        mRecycler = new RecyclerView(getContext());
+        mRecycler.setLayoutManager(new LinearLayoutManager(getContext()));
+        mRecycler.setAdapter((mAdapter = new DockBarEditorAdapter()));
+        mRecycler.setHasFixedSize(true);
+        var params = new LinearLayout.LayoutParams(-1, -1);
+        params.gravity = Gravity.CENTER;
+        container.addView(mRecycler, params);
 
-        mItemTouchHelper = new ItemTouchHelper(new ItemTouchHelperCallback(mAdapter));
-        mItemTouchHelper.attachToRecyclerView(mRecyclerView);
+        mCallback = new ItemTouchHelperCallback(mAdapter);
+
+        mItemTouchHelper = new ItemTouchHelper(mCallback);
+        mItemTouchHelper.attachToRecyclerView(mRecycler);
 
         return container;
-    }
-
-    @Override
-    public void onViewCreated(View arg0, Bundle arg1){
-        setHasOptionsMenu(true);
-
-        super.onViewCreated(arg0, arg1);
-
-        // TODO: хз что это
-        //a(getString("dockbar_editor"));
     }
 }

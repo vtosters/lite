@@ -10,11 +10,25 @@ public class DockBarTab {
     public int id;
     public Class<? extends FragmentImpl> fragmentClass;
 
-    public DockBarTab(String tag, int iconID, int titleID, int resID, Class<?> fragmentClass){
+    public DockBarTab(
+            String tag,
+            int iconID,
+            int titleID,
+            int resID,
+            Class<?> fragmentClass) {
         this.tag = tag;
         this.iconID = iconID;
         this.titleID = titleID;
         this.id = resID;
         this.fragmentClass = (Class<? extends FragmentImpl>) fragmentClass;
+    }
+
+    public static DockBarTab valuesOf(
+            String tag,
+            int iconID,
+            int titleID,
+            int resID,
+            Class<?> fragmentClass) {
+        return new DockBarTab(tag, iconID, titleID, resID, fragmentClass);
     }
 }
