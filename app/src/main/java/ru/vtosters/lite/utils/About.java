@@ -4,6 +4,7 @@ import static ru.vtosters.lite.utils.Globals.getApplicationName;
 import static ru.vtosters.lite.utils.Globals.getContext;
 import static ru.vtosters.lite.utils.Globals.getIdentifier;
 import static ru.vtosters.lite.utils.Preferences.VERSIONNAME;
+import static ru.vtosters.lite.utils.Preferences.isValidSignature;
 import static ru.vtosters.lite.utils.Preferences.oldabout;
 
 import android.content.Context;
@@ -67,6 +68,7 @@ public class About{
     }
 
     public static String getAppVersion() throws IOException{
-        return getApplicationName() + " " + VERSIONNAME + " | " + getBuildNumber();
+        var appver = isValidSignature() ? VERSIONNAME : "Dev";
+        return getApplicationName() + " " + appver + " | " + getBuildNumber();
     }
 }

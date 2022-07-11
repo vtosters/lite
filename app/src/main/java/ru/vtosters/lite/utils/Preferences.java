@@ -41,9 +41,6 @@ public class Preferences{
         setProxy();
         reloadMessagesList();
         registerActivities(application);
-        if(dev()){
-            LoadLibrary("vkopustest");
-        }
         systemThemeChanger(null);
         getInstance().autoCleaningCache();
     } // VK Init
