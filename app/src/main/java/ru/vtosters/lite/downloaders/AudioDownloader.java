@@ -1,11 +1,7 @@
 package ru.vtosters.lite.downloaders;
 
 import android.os.Environment;
-import android.os.Handler;
-import android.os.Looper;
-import android.provider.MediaStore;
 import android.util.Log;
-import android.widget.Toast;
 
 import com.vk.core.util.ToastUtils;
 import com.vk.dto.music.MusicTrack;

@@ -1,9 +1,10 @@
 package ru.vtosters.lite.utils;
 import static ru.vtosters.lite.utils.Globals.convertDpToPixel;
 import static ru.vtosters.lite.utils.Globals.edit;
-import static ru.vtosters.lite.utils.Globals.getResources;
 import static ru.vtosters.lite.utils.Globals.restartApplication;
 import static ru.vtosters.lite.utils.Proxy.isZaboronaEnabled;
+import static ru.vtosters.lite.utils.Themes.*;
+import static ru.vtosters.lite.utils.Themes.getAlertStyle;
 
 import android.annotation.SuppressLint;
 import android.content.Context;
@@ -45,15 +46,15 @@ public class ProxyHook{
         rg.setPadding(convertDpToPixel(18f), convertDpToPixel(12f), convertDpToPixel(18f), 0);
 
         rgDefault.setText("Отключить");
-        rgDefault.setTextColor(Themes.getTextAttr());
+        rgDefault.setTextColor(getTextAttr());
 
         rgProxy.setText("Включить (Zaborona)");
-        rgProxy.setTextColor(Themes.getTextAttr());
+        rgProxy.setTextColor(getTextAttr());
 
         rgProxy.setChecked(isZaboronaEnabled());
         rgDefault.setChecked(!isZaboronaEnabled());
 
-        AlertDialog.Builder builder = new AlertDialog.Builder(ctx, com.vtosters.lite.R.style.Base_Theme_MaterialComponents_Dialog_Alert);
+        AlertDialog.Builder builder = new AlertDialog.Builder(ctx, getAlertStyle());
         builder.setTitle("Прокси");
         builder.setMessage("Zaborona никак не связана с ВТостерс и мы не можем гарантировать её работу и безопасность");
         builder.setView(rg);
@@ -81,7 +82,7 @@ public class ProxyHook{
 
         alert.show();
 
-        alert.getButton(DialogInterface.BUTTON_POSITIVE).setTextColor(Themes.getAccentColor());
-        alert.getButton(DialogInterface.BUTTON_NEUTRAL).setTextColor(Themes.getAccentColor());
+        alert.getButton(DialogInterface.BUTTON_POSITIVE).setTextColor(getAccentColor());
+        alert.getButton(DialogInterface.BUTTON_NEUTRAL).setTextColor(getAccentColor());
     }
 }

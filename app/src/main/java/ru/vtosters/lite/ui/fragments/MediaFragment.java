@@ -1,13 +1,13 @@
 package ru.vtosters.lite.ui.fragments;
 
-import static ru.vtosters.lite.utils.Globals.convertDpToPixel;
 import static ru.vtosters.lite.utils.Globals.getIdentifier;
+import static ru.vtosters.lite.utils.Themes.*;
+import static ru.vtosters.lite.utils.Themes.getAlertStyle;
 
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.res.ColorStateList;
 import android.os.Bundle;
-import android.widget.Button;
 import android.widget.EditText;
 import android.widget.LinearLayout;
 
@@ -21,7 +21,7 @@ import ru.vtosters.lite.utils.Themes;
 
 public class MediaFragment extends MaterialPreferenceToolbarFragment{
     public static void download(Context ctx){
-        AlertDialog.Builder alertDialog = new AlertDialog.Builder(ctx, com.vtosters.lite.R.style.Base_Theme_MaterialComponents_Dialog_Alert);
+        AlertDialog.Builder alertDialog = new AlertDialog.Builder(ctx, getAlertStyle());
         alertDialog.setTitle("Введите ссылку на видео");
 
         final EditText input = new EditText(ctx);
@@ -31,7 +31,9 @@ public class MediaFragment extends MaterialPreferenceToolbarFragment{
 
         input.setLayoutParams(lp);
 
-        input.setBackgroundTintList(ColorStateList.valueOf(Themes.getAccentColor()));
+        input.setTextColor(getTextAttr());
+
+        input.setBackgroundTintList(ColorStateList.valueOf(getAccentColor()));
 
         alertDialog.setView(input);
 
@@ -41,7 +43,7 @@ public class MediaFragment extends MaterialPreferenceToolbarFragment{
 
         alert.show();
 
-        alert.getButton(DialogInterface.BUTTON_POSITIVE).setTextColor(Themes.getAccentColor());
+        alert.getButton(DialogInterface.BUTTON_POSITIVE).setTextColor(getAccentColor());
     }
 
     @Override

@@ -1,16 +1,18 @@
 package ru.vtosters.lite.ui.fragments;
 
-import static ru.vtosters.lite.utils.CacheUtils.deleteCache;
 import static ru.vtosters.lite.utils.Globals.getIdentifier;
 import static ru.vtosters.lite.utils.Globals.restartApplicationWithTimer;
 
 import android.content.Context;
-import android.content.SharedPreferences;
+import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.preference.Preference;
 
+import com.vk.navigation.Navigator;
 import com.vtosters.lite.general.fragments.MaterialPreferenceToolbarFragment;
+
+import ru.vtosters.lite.ui.wallpapers.WallpaperMenuFragment;
 
 public class MessagesFragment extends MaterialPreferenceToolbarFragment{
     @Override
@@ -24,19 +26,10 @@ public class MessagesFragment extends MaterialPreferenceToolbarFragment{
         findPreference("vkme").setOnPreferenceClickListener(new MessagesFragment.restart());
         findPreference("vkme_notifs").setOnPreferenceClickListener(new MessagesFragment.restart());
         findPreference("systememoji").setOnPreferenceClickListener(new MessagesFragment.restart());
+        findPreference("wallpapers").setOnPreferenceClickListener(new MessagesFragment.openwp());
     }
 
     public boolean restart(Preference preference){
-        restartApplicationWithTimer();
-        return true;
-    }
-
-    public boolean clearCache(Preference preference, Object obj){
-        SharedPreferences prefs = getContext().getSharedPreferences("stickers", Context.MODE_PRIVATE);
-        SharedPreferences prefs2 = getContext().getSharedPreferences("stickers_storage", Context.MODE_PRIVATE);
-        prefs.edit().clear().commit();
-        prefs2.edit().clear().commit();
-        deleteCache();
         restartApplicationWithTimer();
         return true;
     }
@@ -52,6 +45,17 @@ public class MessagesFragment extends MaterialPreferenceToolbarFragment{
         @Override
         public boolean onPreferenceClick(Preference preference){
             return MessagesFragment.this.restart(preference);
+        }
+    }
+
+    public class openwp implements Preference.OnPreferenceClickListener{
+        @Override
+        public boolean onPreferenceClick(Preference preference){
+            Context context = getContext();
+            Intent a2 = new Navigator(WallpaperMenuFragment.class).b(context);
+            a2.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+            context.startActivity(a2);
+            return true;
         }
     }
 }

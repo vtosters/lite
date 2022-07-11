@@ -2,7 +2,6 @@ package ru.vtosters.lite.utils;
 
 import static ru.vtosters.lite.utils.Globals.getIdentifier;
 import static ru.vtosters.lite.utils.Globals.getPrefsValue;
-import static ru.vtosters.lite.utils.Globals.sendToast;
 
 import android.content.res.Resources;
 
