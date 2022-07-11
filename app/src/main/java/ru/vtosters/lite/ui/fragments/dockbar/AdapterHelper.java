@@ -1,6 +1,6 @@
 package ru.vtosters.lite.ui.fragments.dockbar;
 
-public class AdapterHelper {
+public class AdapterHelper{
 
     // Adapter item types
     public static final int TAB_TYPE = 1;
@@ -12,19 +12,19 @@ public class AdapterHelper {
 
     private static final DockBarManager sManager = DockBarManager.getInstance();
 
-    public static int getItemViewType(int i) {
+    public static int getItemViewType(int i){
         return i == 0 || sManager.getSelectedTabs().size() + 1 == i ? CATEGORY_TITLE_TYPE : TAB_TYPE;
     }
 
-    public static int getTabType(int i) {
+    public static int getTabType(int i){
         return i <= sManager.getSelectedTabs().size() ? SELECTED : DISABLED;
     }
 
-    public static boolean needTransfer(int from, int to) {
+    public static boolean needTransfer(int from, int to){
         return getItemViewType(from) == TAB_TYPE && getItemViewType(to) == CATEGORY_TITLE_TYPE;
     }
 
-    public static int getItemCount() {
+    public static int getItemCount(){
         return sManager.getCategoryTitles().size()
                 + sManager.getSelectedTabs().size()
                 + sManager.getDisabledTabs().size();
