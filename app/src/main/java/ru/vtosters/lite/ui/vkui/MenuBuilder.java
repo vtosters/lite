@@ -2,6 +2,7 @@ package ru.vtosters.lite.ui.vkui;
 
 import static ru.vtosters.lite.foaf.FoafBase.loadAndShow;
 import static ru.vtosters.lite.utils.Globals.getUserID;
+import static ru.vtosters.lite.utils.Globals.sendToast;
 
 import android.content.ClipData;
 import android.content.ClipboardManager;
@@ -100,7 +101,7 @@ public class MenuBuilder{
         ClipData clip = ClipData.newPlainText("MBH-ST", txt);
         clipboard.setPrimaryClip(clip);
 
-        Toast.makeText(ctx, "Скопировано!", Toast.LENGTH_SHORT).show();
+        sendToast("Скопировано!");
     }
 
     public static void addItem(final ActionsPopup.b builder, final String title, final Functions onClick) throws InvocationTargetException, IllegalAccessException{
