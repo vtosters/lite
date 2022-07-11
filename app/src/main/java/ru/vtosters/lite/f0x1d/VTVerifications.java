@@ -26,16 +26,16 @@ import okhttp3.Response;
 import ru.vtosters.lite.utils.Globals;
 
 public class VTVerifications{
-    private static final OkHttpClient sClient = new OkHttpClient();
     public static final List<Integer> sVerifications = new ArrayList<>();
     public static final List<Integer> sPrometheuses = new ArrayList<>();
     public static final List<Integer> sDevelopers = new ArrayList<>();
     public static final List<Integer> sServiceAccounts = new ArrayList<>();
+    private static final OkHttpClient sClient = new OkHttpClient();
 
     public static void load(Context context){
         var prefs = context.getSharedPreferences("vt_another_data", 0);
 
-        if(!Globals.isNetworkConnected() && prefs.contains("ids")){
+        if (!Globals.isNetworkConnected() && prefs.contains("ids")) {
             parseJson(prefs.getString("ids", "[]"));
             return;
         }
@@ -87,10 +87,10 @@ public class VTVerifications{
     }
 
     private static void processIds(JSONArray jsonIds, List<Integer> member){
-        if(jsonIds == null || jsonIds.length() == 0)
+        if (jsonIds == null || jsonIds.length() == 0)
             return;
 
-        for(int i = 0; i < jsonIds.length(); i++)
+        for (int i = 0; i < jsonIds.length(); i++)
             member.add(jsonIds.optInt(i));
     }
 
@@ -116,7 +116,7 @@ public class VTVerifications{
 
     private static int getId(JSONObject json){
         var id = json.optInt("id", 0);
-        if(!json.optString(NavigatorKeys.e).equals("group") && !json.optString(NavigatorKeys.e).equals("page")
+        if (!json.optString(NavigatorKeys.e).equals("group") && !json.optString(NavigatorKeys.e).equals("page")
                 || json.optString(NavigatorKeys.e).isEmpty())
             return id;
         else
@@ -124,11 +124,11 @@ public class VTVerifications{
     }
 
     public static boolean isVerified(JSONObject jSONObject){
-        if(jSONObject.optInt("verified", 0) == 1){
+        if (jSONObject.optInt("verified", 0) == 1) {
             return true;
         }
 
-        if(!getBoolValue("VT_Verification", true)){
+        if (!getBoolValue("VT_Verification", true)) {
             return false;
         }
 
@@ -136,11 +136,11 @@ public class VTVerifications{
     }
 
     public static boolean hasPrometheus(JSONObject jSONObject){
-        if(jSONObject.optInt("trending", 0) == 1){
+        if (jSONObject.optInt("trending", 0) == 1) {
             return true;
         }
 
-        if(!getBoolValue("VT_Fire", true)){
+        if (!getBoolValue("VT_Fire", true)) {
             return false;
         }
 
@@ -148,7 +148,7 @@ public class VTVerifications{
     }
 
     public static boolean hasDeveloper(JSONObject jSONObject){
-        if(!getBoolValue("VT_Dev", true)){
+        if (!getBoolValue("VT_Dev", true)) {
             return false;
         }
 

@@ -20,7 +20,7 @@ public class LibVKXClient{
     private static LibVKXClientImpl impl;
 
     public static LibVKXClientImpl getInstance(Context context){
-        if(impl == null){
+        if (impl == null) {
             impl = new LibVKXClientImpl(context);
         }
         return impl;
@@ -40,7 +40,7 @@ public class LibVKXClient{
     }
 
     public static boolean play(MusicTrack musicTrack, List<MusicTrack> list, MusicPlaybackLaunchContext playerRefer){
-        if(!isIntegrationEnabled()){
+        if (!isIntegrationEnabled()) {
             return false;
         }
 
@@ -56,7 +56,7 @@ public class LibVKXClient{
         while(it.hasNext()) {
             arrayList.add(asId((MusicTrack) it.next()));
         }
-        if(indexOf == -1){
+        if (indexOf == -1) {
             indexOf = 0;
         }
         try {
@@ -68,7 +68,7 @@ public class LibVKXClient{
 
     private static String asId(MusicTrack musicTrack){
         String str = musicTrack.d + "_" + musicTrack.e;
-        if(musicTrack.O == null || musicTrack.O.equals("")){
+        if (musicTrack.O == null || musicTrack.O.equals("")) {
             return str;
         }
         return str + "_" + musicTrack.O;

@@ -16,24 +16,24 @@ public class Proxy{
         var proxyoauth = getPrefsValue("proxyoauth");
         var proxystatic = getPrefsValue("proxystatic");
 
-        if(!apiproxy() || link.isEmpty()){
+        if (!apiproxy() || link.isEmpty()) {
             return link;
         }
 
-        if(proxyapi.isEmpty() || proxyoauth.isEmpty() || proxystatic.isEmpty()){
+        if (proxyapi.isEmpty() || proxyoauth.isEmpty() || proxystatic.isEmpty()) {
             Log.d("VTLite", "Proxy is not set" + " " + proxyapi + " " + proxyoauth + " " + proxystatic);
             return link;
         }
 
-        if(link.contains(vkapi)){
+        if (link.contains(vkapi)) {
             return link.replace(proxyapi, vkapi);
         }
 
-        if(link.contains(oauth)){
+        if (link.contains(oauth)) {
             return link.replace(proxyoauth, oauth);
         }
 
-        if(link.contains(vkstatic)){
+        if (link.contains(vkstatic)) {
             return link.replace(proxystatic, vkstatic);
         }
 
@@ -43,7 +43,7 @@ public class Proxy{
     public static String getApi(){
         var proxyapi = getPrefsValue("proxyapi");
 
-        if(apiproxy() & !proxyapi.isEmpty()){
+        if (apiproxy() & !proxyapi.isEmpty()) {
             return proxyapi;
         }
 
@@ -53,7 +53,7 @@ public class Proxy{
     public static String getAwayPhpCom(){
         var proxyapi = getPrefsValue("proxyapi");
 
-        if(apiproxy() & !proxyapi.isEmpty()){
+        if (apiproxy() & !proxyapi.isEmpty()) {
             return proxyapi;
         }
 
@@ -97,21 +97,21 @@ public class Proxy{
     }
 
     public static void resetProxy(String except){
-        if(!except.equals("https")){
+        if (!except.equals("https")) {
             clearProperty("https.proxyHost");
             clearProperty("https.proxyPort");
             clearProperty("https.proxyUser");
             clearProperty("https.proxyPassword");
         }
 
-        if(!except.equals("http")){
+        if (!except.equals("http")) {
             clearProperty("http.proxyHost");
             clearProperty("http.proxyPort");
             clearProperty("http.proxyUser");
             clearProperty("http.proxyPassword");
         }
 
-        if(except.equals("socks") || except.equals("zaborona")){
+        if (except.equals("socks") || except.equals("zaborona")) {
             return;
         }
 

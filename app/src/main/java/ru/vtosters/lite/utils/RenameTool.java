@@ -10,8 +10,9 @@ import static ru.vtosters.lite.utils.Globals.getUserID;
 import static ru.vtosters.lite.utils.Globals.getUserId;
 import static ru.vtosters.lite.utils.Globals.getUserLastName;
 import static ru.vtosters.lite.utils.Globals.sendToast;
-import static ru.vtosters.lite.utils.Themes.*;
+import static ru.vtosters.lite.utils.Themes.getAccentColor;
 import static ru.vtosters.lite.utils.Themes.getAlertStyle;
+import static ru.vtosters.lite.utils.Themes.getTextAttr;
 
 import android.content.Context;
 import android.content.DialogInterface;
@@ -56,7 +57,7 @@ public class RenameTool{
     private static boolean updateRequested = true;
 
     protected static RenameTool.DbHelper getHelper(){
-        if(helperInstance == null){
+        if (helperInstance == null) {
             helperInstance = new RenameTool.DbHelper(getContext());
         }
         return helperInstance;
@@ -64,7 +65,7 @@ public class RenameTool{
 
     public static String getCurrentModifiedUser(){
         Cursor rawQuery = getHelper().getReadableDatabase().rawQuery(String.format("SELECT * FROM %s WHERE %s=%s", TABLE_NAME, COLUMN_VKID, getCurrentUserID()), new String[0]);
-        if(rawQuery.moveToFirst()){
+        if (rawQuery.moveToFirst()) {
             try {
                 String decode = URLDecoder.decode(rawQuery.getString(rawQuery.getColumnIndexOrThrow(COLUMN_FIRSTNAME)), "UTF-8");
                 return decode + " " + URLDecoder.decode(rawQuery.getString(rawQuery.getColumnIndexOrThrow(COLUMN_LASTNAME)), "UTF-8");
@@ -83,24 +84,24 @@ public class RenameTool{
 
     public static void injectIntoJson(JSONObject obj) throws JSONException{
         int i = obj.getInt("id");
-        if(updateRequested){
+        if (updateRequested) {
             reloadDB();
         }
 
         Pair<String, String> user = renamedUsers.get(i);
-        if(user == null) return;
+        if (user == null) return;
         obj.put(COLUMN_FIRSTNAME, user.first).put(COLUMN_LASTNAME, user.second);
     }
 
     public static void injectIntoJsonGroup(JSONObject obj) throws JSONException{
         int i = obj.getInt("id");
 
-        if(updateRequested){
+        if (updateRequested) {
             reloadDB();
         }
 
         String user = renamedGroups.get(i);
-        if(user == null) return;
+        if (user == null) return;
         obj.put("name", user);
     }
 
@@ -134,12 +135,12 @@ public class RenameTool{
 
     public static void injectIntoChat(User u){
         int id = u.getId();
-        if(updateRequested){
+        if (updateRequested) {
             reloadDB();
         }
 
         Pair<String, String> user = renamedUsers.get(id);
-        if(user == null) return;
+        if (user == null) return;
 
         setObject(u, "I", user.first);
         setObject(u, "J", user.second);
@@ -194,13 +195,13 @@ public class RenameTool{
             String lastName = ln.getText().toString();
             SQLiteDatabase writableDatabase = getHelper().getWritableDatabase();
             try {
-                if(isChangedName(id)){
+                if (isChangedName(id)) {
                     writableDatabase.execSQL(String.format("UPDATE %s SET %s='%s', %s='%s' WHERE %s='%s'", TABLE_NAME, COLUMN_FIRSTNAME, URLEncoder.encode(firstName, "UTF-8"), COLUMN_LASTNAME, URLEncoder.encode(lastName, "UTF-8"), COLUMN_VKID, id));
                 } else {
                     writableDatabase.execSQL(String.format("INSERT INTO %s (%s, %s, %s) VALUES (%s, '%s', '%s')", TABLE_NAME, COLUMN_VKID, COLUMN_FIRSTNAME, COLUMN_LASTNAME, id, URLEncoder.encode(firstName, "UTF-8"), URLEncoder.encode(lastName, "UTF-8")));
                 }
                 updateRequested = true;
-                if(id == getCurrentUserID()){
+                if (id == getCurrentUserID()) {
                     ctx.sendBroadcast(new Intent("com.vkontakte.android.USER_NAME_CHANGED"));
                 }
                 ctx.sendBroadcast(new Intent("com.vkontakte.android.ACTION_PROFILE_UPDATED").putExtra("uid", id));
@@ -210,9 +211,9 @@ public class RenameTool{
                 e.printStackTrace();
             }
         });
-        if(isChangedName(id)) builder.setNeutralButton("Сбросить", (dialog, which) -> {
+        if (isChangedName(id)) builder.setNeutralButton("Сбросить", (dialog, which) -> {
             getHelper().getWritableDatabase().execSQL(String.format("DELETE FROM %s WHERE %s='%s'", TABLE_NAME, COLUMN_VKID, id));
-            if(id == getCurrentUserID()){
+            if (id == getCurrentUserID()) {
                 ctx.sendBroadcast(new Intent("com.vkontakte.android.USER_NAME_CHANGED"));
             }
             updateRequested = true;
@@ -247,7 +248,7 @@ public class RenameTool{
         fn.setText(getGroupName(profile));
 
         int fid = getUserID(profile);
-        if(fid < 0) fid = -fid;
+        if (fid < 0) fid = -fid;
 
         final int id = fid;
 
@@ -259,7 +260,7 @@ public class RenameTool{
             String firstName = fn.getText().toString();
             SQLiteDatabase writableDatabase = getHelper().getWritableDatabase();
             try {
-                if(isChangedNameGroup(id)){
+                if (isChangedNameGroup(id)) {
                     writableDatabase.execSQL(String.format("UPDATE %s SET %s='%s' WHERE %s='%s'", TABLE_NAME_GROUP, COLUMN_NAME, URLEncoder.encode(firstName, "UTF-8"), COLUMN_VKID, id));
                 } else {
                     writableDatabase.execSQL(String.format("INSERT INTO %s (%s, %s) VALUES (%s, '%s')", TABLE_NAME_GROUP, COLUMN_VKID, COLUMN_NAME, id, URLEncoder.encode(firstName, "UTF-8")));
@@ -270,7 +271,7 @@ public class RenameTool{
                 e.printStackTrace();
             }
         });
-        if(isChangedNameGroup(id)) builder.setNeutralButton("Сбросить", (dialog, which) -> {
+        if (isChangedNameGroup(id)) builder.setNeutralButton("Сбросить", (dialog, which) -> {
             getHelper().getWritableDatabase().execSQL(String.format("DELETE FROM %s WHERE %s='%s'", TABLE_NAME_GROUP, COLUMN_VKID, id));
             updateRequested = true;
             sendToast("Сообщество успешно удалено из базы данных!");
@@ -307,7 +308,7 @@ public class RenameTool{
         }
 
         public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion){
-            if(newVersion == 2){
+            if (newVersion == 2) {
                 db.execSQL(String.format("CREATE TABLE %s (%s INTEGER PRIMARY KEY AUTOINCREMENT, %s INTEGER, %s TEXT)", TABLE_NAME_GROUP, "_id", COLUMN_VKID, COLUMN_NAME));
             }
         }

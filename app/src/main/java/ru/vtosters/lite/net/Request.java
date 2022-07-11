@@ -42,10 +42,10 @@ public class Request{
                 HttpURLConnection httpURLConnection = (HttpURLConnection) new URL(new String(url)).openConnection();
                 httpURLConnection.setRequestMethod(mIsPut ? "PUT" : "GET");
 
-                if(mIsVTostersRequest){
+                if (mIsVTostersRequest) {
                     httpURLConnection.setRequestProperty("Token", getUserToken());
                 }
-                if(!mIsVTostersRequest){
+                if (!mIsVTostersRequest) {
                     httpURLConnection.setRequestProperty("User-Agent", Network.l.c().a());
                 }
 
@@ -55,7 +55,7 @@ public class Request{
                 StringBuffer stringBuffer = new StringBuffer();
                 while(true) {
                     String readLine = bufferedReader.readLine();
-                    if(readLine != null){
+                    if (readLine != null) {
                         stringBuffer.append(readLine);
                     } else {
                         bufferedReader.close();

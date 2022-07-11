@@ -21,7 +21,7 @@ class PackDeletionTask extends AsyncTask<Void, Void, Boolean>{
     protected Boolean doInBackground(Void... voids){
         boolean success = true;
 
-        for(File f : pack.folder.listFiles()) {
+        for (File f : pack.folder.listFiles()) {
             success = success && f.delete();
         }
 

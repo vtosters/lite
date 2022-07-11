@@ -31,7 +31,7 @@ public class WallpapersHooks{
     }
 
     public static void setBg(View view){
-        if(getWallpaper() != null){
+        if (getWallpaper() != null) {
             ((ImageView) view).setImageDrawable(getWallpaper()); // set picture to background
             return;
         }
@@ -40,20 +40,20 @@ public class WallpapersHooks{
     }
 
     public static String getWallpaperUrl(){
-        if(getWallpaperFile().exists())
+        if (getWallpaperFile().exists())
             return getWallpaperFile().getAbsolutePath();
         else
             return "default";
     }
 
     public static Drawable getWallpaper(){
-        if(mWallpaper == null || mUpdateWallpaperRequested){
-            if(!getPreferences().getString("msg_blur_radius", "disabled").equals("disabled")){
+        if (mWallpaper == null || mUpdateWallpaperRequested) {
+            if (!getPreferences().getString("msg_blur_radius", "disabled").equals("disabled")) {
                 mWallpaper = getBlurredWallpaper(Drawable.createFromPath(getWallpaperUrl()), getRadius());
             } else {
                 mWallpaper = Drawable.createFromPath(getWallpaperUrl());
             }
-            if(!getPreferences().getString("msg_dim", "off").equals("off")){
+            if (!getPreferences().getString("msg_dim", "off").equals("off")) {
                 mWallpaper = getDimmed(mWallpaper);
             }
 
@@ -109,8 +109,8 @@ public class WallpapersHooks{
 
     public static Drawable getBlurredWallpaper(Drawable orig, int radius){
         try {
-            if(orig == null) return null;
-            if(!(orig instanceof BitmapDrawable)) return orig; // we need only BitmapDrawable
+            if (orig == null) return null;
+            if (!(orig instanceof BitmapDrawable)) return orig; // we need only BitmapDrawable
             Bitmap instance = ((BitmapDrawable) orig).getBitmap().copy(Bitmap.Config.ARGB_8888, true);
             MediaNative.blurBitmap(instance, radius);
             return new BitmapDrawable(getResources(), instance);
@@ -121,8 +121,8 @@ public class WallpapersHooks{
     }
 
     public static Drawable getDimmed(Drawable orig){
-        if(orig == null) return null;
-        if(!(orig instanceof BitmapDrawable)) return orig;
+        if (orig == null) return null;
+        if (!(orig instanceof BitmapDrawable)) return orig;
         Bitmap instance = ((BitmapDrawable) orig).getBitmap().copy(Bitmap.Config.ARGB_8888, true);
         String radius = getPreferences().getString("msg_dim", "disabled");
         switch(radius) {

@@ -18,7 +18,7 @@ import ru.vtosters.lite.ui.fragments.InstallGMSFragment;
 
 public class InstallGMS{
     public static void alert(final Activity activity){
-        if(!isGmsInstalled()){
+        if (!isGmsInstalled()) {
             AlertDialog.Builder builder = new AlertDialog.Builder(activity);
             builder.setTitle(getString("debug_warning"));
             builder.setMessage(getString("gmsissuesumm"));
@@ -41,7 +41,7 @@ public class InstallGMS{
                     context.startActivity(a2);
                 }
             });
-            if(getBoolValue("showAlertGms", true)){
+            if (getBoolValue("showAlertGms", true)) {
                 builder.show();
             }
         }

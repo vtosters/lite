@@ -76,6 +76,23 @@ public class OtherFragment extends MaterialPreferenceToolbarFragment{
         }
     }
 
+    public static class b implements Preference.OnPreferenceClickListener{
+        @Override // android.support.v7.preference.Preference.c
+        public boolean onPreferenceClick(Preference preference){
+            System.exit(0);
+            return true;
+        }
+    }
+
+    public static class deleteprefs implements Preference.OnPreferenceClickListener{
+        @Override // android.support.v7.preference.Preference.c
+        public boolean onPreferenceClick(Preference preference){
+            deletePrefs();
+            restartApplication();
+            return true;
+        }
+    }
+
     class c implements Preference.OnPreferenceClickListener{
         public void copy(Context context, String str){
             ((ClipboardManager) context.getSystemService(Context.CLIPBOARD_SERVICE)).setPrimaryClip(ClipData.newPlainText("MBH-ST", str));
@@ -109,14 +126,6 @@ public class OtherFragment extends MaterialPreferenceToolbarFragment{
         }
     }
 
-    public static class b implements Preference.OnPreferenceClickListener{
-        @Override // android.support.v7.preference.Preference.c
-        public boolean onPreferenceClick(Preference preference){
-            System.exit(0);
-            return true;
-        }
-    }
-
     public class a implements Preference.OnPreferenceClickListener{
         @Override // android.support.v7.preference.Preference.c
         public boolean onPreferenceClick(Preference preference){
@@ -142,15 +151,6 @@ public class OtherFragment extends MaterialPreferenceToolbarFragment{
             prefs2.edit().clear().commit();
             deleteCache();
             ToastUtils.a(Globals.getString("cachecleaned"));
-            return true;
-        }
-    }
-
-    public static class deleteprefs implements Preference.OnPreferenceClickListener{
-        @Override // android.support.v7.preference.Preference.c
-        public boolean onPreferenceClick(Preference preference){
-            deletePrefs();
-            restartApplication();
             return true;
         }
     }

@@ -22,7 +22,7 @@ public class About{
         list.clear();
         list.add(new Items1());
 
-        if(!oldabout()){
+        if (!oldabout()) {
             list.add(new Items(21, getIdentifier("opencommit", "string")));
             list.add(new Items(8, getIdentifier("tgchannel", "string")));
             list.add(new Items(9, getIdentifier("tgchat", "string")));
@@ -57,7 +57,7 @@ public class About{
             Scanner scanner = new Scanner(context.getAssets().open(name));
             while(scanner.hasNextLine()) {
                 String line = scanner.findInLine("VERSION_BUILD=.+");
-                if(line != null)
+                if (line != null)
                     return line.replace("VERSION_BUILD=", "");
                 return "0000000";
             }

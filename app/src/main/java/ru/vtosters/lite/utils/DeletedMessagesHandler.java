@@ -33,7 +33,7 @@ public class DeletedMessagesHandler{
     private static DeletedMessagesDBHelper sVTDatabase;
 
     public static void reloadMessagesList(){
-        if(sVTDatabase == null){
+        if (sVTDatabase == null) {
             sVTDatabase = new DeletedMessagesDBHelper();
         }
         sDeletedMessagesList = new ArrayList<>(sVTDatabase.loadAllMessages());
@@ -48,12 +48,12 @@ public class DeletedMessagesHandler{
     }
 
     public static void setBodyDBParser(Msg msg){
-        if(!(msg instanceof MsgFromUser)) return;
+        if (!(msg instanceof MsgFromUser)) return;
 
-        for(Integer integer : sDeletedMessagesList) {
+        for (Integer integer : sDeletedMessagesList) {
             MsgFromUser msgFromUser = (MsgFromUser) msg;
             checkForNestedMsg(msgFromUser.w0());
-            if(integer == msg.C1()){
+            if (integer == msg.C1()) {
                 editTextOfMsg((MsgFromUser) msg);
                 break;
             }
@@ -61,15 +61,15 @@ public class DeletedMessagesHandler{
     }
 
     private static void checkForNestedMsg(List<NestedMsg> nestedMsgs){
-        for(NestedMsg nestedMsg : nestedMsgs) {
-            if(!nestedMsg.w0().isEmpty()) checkForNestedMsg(nestedMsg.w0());
+        for (NestedMsg nestedMsg : nestedMsgs) {
+            if (!nestedMsg.w0().isEmpty()) checkForNestedMsg(nestedMsg.w0());
 
             nestedMsg.d(EncryptProvider.decryptMessage(nestedMsg.f(), nestedMsg.getFrom().getId()));
         }
     }
 
     private static void editTextOfMsg(MsgFromUser msgFromUser){
-        if(!msgFromUser.f().startsWith(getPrefixUndelete())){
+        if (!msgFromUser.f().startsWith(getPrefixUndelete())) {
             msgFromUser.d(getPrefixUndelete() + EncryptProvider.decryptMessage(msgFromUser));
         }
     }
@@ -80,7 +80,7 @@ public class DeletedMessagesHandler{
 
     public static void updateDialog(MsgDeleteLpTask msgDeleteLpTask) throws NoSuchFieldException, IllegalAccessException{
         Cursor c = getMessageFromDatabaseById(ReflectionUtils.getObjectField(msgDeleteLpTask.getClass(), "d", msgDeleteLpTask));
-        if(c == null) return;
+        if (c == null) return;
 
         @SuppressLint("Range")
         int localId = c.getInt(c.getColumnIndex("local_id"));
@@ -92,16 +92,16 @@ public class DeletedMessagesHandler{
     }
 
     public static void hookDeletedMessageId(MsgDeleteLpTask msgDeleteLpTask) throws NoSuchFieldException, IllegalAccessException{
-        if(!hook()) return;
+        if (!hook()) return;
 
         var field = msgDeleteLpTask.getClass().getDeclaredField("c");
         field.setAccessible(true);
         var messageId = (int) field.get(msgDeleteLpTask);
 
         Cursor c = getMessageFromDatabaseById(messageId);
-        if(c == null) return;
-        if(sBodyIndex == -1) sBodyIndex = c.getColumnIndex("body");
-        if(TextUtils.isEmpty(c.getString(sBodyIndex))){
+        if (c == null) return;
+        if (sBodyIndex == -1) sBodyIndex = c.getColumnIndex("body");
+        if (TextUtils.isEmpty(c.getString(sBodyIndex))) {
             deleteMessageFromDB(messageId);
             return;
         }
@@ -113,7 +113,7 @@ public class DeletedMessagesHandler{
     public static Cursor getMessageFromDatabaseById(int messageId){
         String query = "SELECT * FROM messages WHERE vk_id = " + messageId;
         Cursor c = CustomSqliteExtensionsKt.a(sVKSQLiteDatabase, query);
-        if(!c.moveToFirst()) return null;
+        if (!c.moveToFirst()) return null;
         return c;
     }
 
@@ -150,7 +150,7 @@ public class DeletedMessagesHandler{
             List<Integer> msgIdsList = new ArrayList<>();
 
             Cursor cursor = getReadableDatabase().query("deleted_msgs", null, null, null, null, null, null);
-            if(cursor.moveToFirst()){
+            if (cursor.moveToFirst()) {
                 int msgIdIndex = cursor.getColumnIndex("msgId");
 
                 do {

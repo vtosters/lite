@@ -66,23 +66,23 @@ public class Newsfeed{
         getFilter("cringecopyright", "CopyrightAds.txt", mFiltersLinks);
 
         var customfilters = getPrefsValue("spamfilters");
-        if(!customfilters.isEmpty()){
+        if (!customfilters.isEmpty()) {
             mFilters.addAll(Arrays.asList(customfilters.split(", ")));
         }
 
         var linkfilter = getPrefsValue("linkfilter");
-        if(!linkfilter.isEmpty()){
+        if (!linkfilter.isEmpty()) {
             mFiltersLinks.addAll(Arrays.asList(linkfilter.split(", ")));
         }
     }
 
     public static void getFilter(String boolname, String filename, List<String> list){
-        if(getBoolValue(boolname, true)){
+        if (getBoolValue(boolname, true)) {
             try {
                 BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(getContext().getAssets().open(filename)));
                 while(true) {
                     String readLine = bufferedReader.readLine();
-                    if(readLine != null){
+                    if (readLine != null) {
                         list.add(readLine);
                     } else {
                         bufferedReader.close();
@@ -97,39 +97,39 @@ public class Newsfeed{
 
     public static boolean injectFilters(JSONObject obj) throws JSONException{
         var optString = obj.optString("type", "");
-        if(isAds(optString) || isAuthorRecommendations(optString) || isPostRecommendations(optString) || isFriendsRecommendations(optString) || isRecomsGroup(optString) || isMusicBlock(optString) || isNewsBlock(optString)){
+        if (isAds(optString) || isAuthorRecommendations(optString) || isPostRecommendations(optString) || isFriendsRecommendations(optString) || isRecomsGroup(optString) || isMusicBlock(optString) || isNewsBlock(optString)) {
             return false;
         }
         optString = obj.optString("post_type", "");
-        if(isAds(optString) || isAuthorRecommendations(optString) || isPostRecommendations(optString) || isFriendsRecommendations(optString) || isMusicBlock(optString) || isNewsBlock(optString)){
+        if (isAds(optString) || isAuthorRecommendations(optString) || isPostRecommendations(optString) || isFriendsRecommendations(optString) || isMusicBlock(optString) || isNewsBlock(optString)) {
             return false;
         }
         optString = obj.optString("filters", "");
-        if(isAds(optString) || isAuthorRecommendations(optString) || isPostRecommendations(optString) || isFriendsRecommendations(optString)){
+        if (isAds(optString) || isAuthorRecommendations(optString) || isPostRecommendations(optString) || isFriendsRecommendations(optString)) {
             return false;
         }
 
-        if(checkCopyright(obj)) return false;
+        if (checkCopyright(obj)) return false;
 
-        if(isBadNew(obj.optString("text", ""))) return false;
+        if (isBadNew(obj.optString("text", ""))) return false;
 
-        if(checkCaption(obj)) return false;
+        if (checkCaption(obj)) return false;
 
-        if(isGroupAds(obj)) return false;
+        if (isGroupAds(obj)) return false;
 
         return !injectFiltersReposts(obj);
     } // inject our filters to newsfeed, getpost and discover
 
     public static boolean injectFiltersReposts(JSONObject obj){
-        if(obj.optJSONArray("copy_history") == null) return false;
+        if (obj.optJSONArray("copy_history") == null) return false;
 
         var Array = Objects.requireNonNull(obj.optJSONArray("copy_history")).toString();
 
-        if(Array.isEmpty()) return false;
+        if (Array.isEmpty()) return false;
 
-        if(getBoolValue("cringerepost", false)){
-            for(String linkfilters : mFiltersLinks) {
-                if(Array.toLowerCase().contains(linkfilters.toLowerCase())){
+        if (getBoolValue("cringerepost", false)) {
+            for (String linkfilters : mFiltersLinks) {
+                if (Array.toLowerCase().contains(linkfilters.toLowerCase())) {
                     return true;
                 }
             }
@@ -139,12 +139,12 @@ public class Newsfeed{
     } // get repost information and inject our text filters
 
     private static boolean checkCopyright(JSONObject json) throws JSONException{
-        if(json.opt("copyright") != null){
+        if (json.opt("copyright") != null) {
             var copyright = json.getJSONObject("copyright");
             var copyrightlink = copyright.getString("link");
 
-            for(String linkfilters : mFiltersLinks) {
-                if(copyrightlink.toLowerCase().contains(linkfilters.toLowerCase())){
+            for (String linkfilters : mFiltersLinks) {
+                if (copyrightlink.toLowerCase().contains(linkfilters.toLowerCase())) {
                     return true;
                 }
             }
@@ -170,9 +170,9 @@ public class Newsfeed{
     }
 
     public static boolean isBadNew(String text){
-        for(String filter : mFilters) {
-            if(text.toLowerCase().contains(filter.toLowerCase())){
-                if(dev()) Log.d("VTLite", text.toLowerCase());
+        for (String filter : mFilters) {
+            if (text.toLowerCase().contains(filter.toLowerCase())) {
+                if (dev()) Log.d("VTLite", text.toLowerCase());
                 return true;
             }
         }
@@ -182,7 +182,7 @@ public class Newsfeed{
     public static boolean checkCaption(JSONObject postJson){
         try {
             var captionJson = postJson.getJSONObject("caption");
-            if(Preferences.captions())
+            if (Preferences.captions())
                 return true;
 
             boolean postAds = postsrecomm();
@@ -228,7 +228,7 @@ public class Newsfeed{
     }
 
     public static long getUpdateNewsfeed(boolean refresh_timeout){
-        if(vkme()){
+        if (vkme()) {
             return MAX_VALUE;
         }
         switch(getPrefsValue("newsupdate")) {
@@ -242,7 +242,7 @@ public class Newsfeed{
     }
 
     public static Class getStartFragment(){
-        if(vkme()){
+        if (vkme()) {
             return DialogsFragment.class;
         }
         switch(getPrefsValue("start_values")) {

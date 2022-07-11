@@ -30,7 +30,7 @@ public class ExternalLinkHandler{
     private static final Map<String, String> qualities = new HashMap<>();
 
     public static boolean parseVideoFile(VideoFile file, Context context){
-        if(checkYoutubeLink(file)){
+        if (checkYoutubeLink(file)) {
             try {
                 Intent intent = new Intent(Intent.ACTION_VIEW);
                 intent.setData(Uri.parse(file.G));
@@ -41,10 +41,10 @@ public class ExternalLinkHandler{
             }
         }
 
-        if(!isEnableExternalOpening()) return false;
+        if (!isEnableExternalOpening()) return false;
 
-        if(checkVkVideo(file)){
-            if(qualities.size() == 1){
+        if (checkVkVideo(file)) {
+            if (qualities.size() == 1) {
                 startExternalVideo((String) qualities.values().toArray()[0]);
             } else {
                 String[] titles = qualities.keySet().toArray(new String[0]);
@@ -59,9 +59,9 @@ public class ExternalLinkHandler{
     }
 
     private static boolean checkYoutubeLink(VideoFile file){
-        if(!isEmpty(file.G)){
-            for(String filter : filters) {
-                if(file.G.contains(filter))
+        if (!isEmpty(file.G)) {
+            for (String filter : filters) {
+                if (file.G.contains(filter))
                     return true;
             }
         }
@@ -78,25 +78,25 @@ public class ExternalLinkHandler{
      * this.D = var66.optString("mp4_2160");
      */
     public static boolean checkVkVideo(VideoFile videoFile){
-        if(!isEmpty(videoFile.e)){
+        if (!isEmpty(videoFile.e)) {
             qualities.put("240", videoFile.e);
         }
-        if(!isEmpty(videoFile.f)){
+        if (!isEmpty(videoFile.f)) {
             qualities.put("360", videoFile.f);
         }
-        if(!isEmpty(videoFile.g)){
+        if (!isEmpty(videoFile.g)) {
             qualities.put("480", videoFile.g);
         }
-        if(!isEmpty(videoFile.h)){
+        if (!isEmpty(videoFile.h)) {
             qualities.put("720", videoFile.h);
         }
-        if(!isEmpty(videoFile.B)){
+        if (!isEmpty(videoFile.B)) {
             qualities.put("1080", videoFile.B);
         }
-        if(!isEmpty(videoFile.C)){
+        if (!isEmpty(videoFile.C)) {
             qualities.put("1440", videoFile.C);
         }
-        if(!isEmpty(videoFile.D)){
+        if (!isEmpty(videoFile.D)) {
             qualities.put("2160", videoFile.D);
         }
 
@@ -111,7 +111,7 @@ public class ExternalLinkHandler{
             Intent intent = new Intent();
 
             String packageName = getMXPlayerPackageName();
-            if(!isEmpty(packageName)){
+            if (!isEmpty(packageName)) {
                 intent.setPackage(packageName);
                 intent.setDataAndType(uri, "application/mp4");
                 intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
@@ -119,7 +119,7 @@ public class ExternalLinkHandler{
                 intent.setAction(Intent.ACTION_VIEW);
                 intent.setDataAndType(uri, "video/mp4");
 
-                if(Build.VERSION.SDK_INT >= Build.VERSION_CODES.N)
+                if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N)
                     intent.addFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION);
             }
             getContext().startActivity(intent);
@@ -131,9 +131,9 @@ public class ExternalLinkHandler{
     }
 
     private static String getMXPlayerPackageName(){
-        for(ApplicationInfo info : getContext().getPackageManager().getInstalledApplications(0)) {
+        for (ApplicationInfo info : getContext().getPackageManager().getInstalledApplications(0)) {
             String packName = info.packageName;
-            if(packName.equals("com.mxtech.videoplayer.ad") || packName.equals("com.mxtech.videoplayer.pro"))
+            if (packName.equals("com.mxtech.videoplayer.ad") || packName.equals("com.mxtech.videoplayer.pro"))
                 return packName;
         }
         return null;

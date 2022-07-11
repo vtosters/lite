@@ -13,9 +13,10 @@ import java.io.InputStream;
 
 import ru.vtosters.lite.utils.Globals;
 
-public class FFMpeg {
+public class FFMpeg{
     private static final int BUFFER_SIZE = 2048;
-    private static void copyAssets() {
+
+    private static void copyAssets(){
         try {
             String[] files = Globals.getContext().getAssets().list("ffmpeg");
             for (String file : files) {
@@ -24,7 +25,7 @@ public class FFMpeg {
                     FileOutputStream out = new FileOutputStream(Globals.getContext().getFilesDir() + File.separator + file);
                     byte[] buffer = new byte[BUFFER_SIZE];
                     int read;
-                    while ((read = in.read(buffer)) != -1) {
+                    while((read = in.read(buffer)) != -1) {
                         out.write(buffer, 0, read);
                     }
                     in.close();
@@ -36,7 +37,7 @@ public class FFMpeg {
         }
     }
 
-    private static void checkFFMpegLibs() {
+    private static void checkFFMpegLibs(){
         var lib = new File(Globals.getContext().getFilesDir(), "libffmpegkit_abidetect.so");
         if (!lib.exists()) {
             ToastUtils.a("Копирование библиотеки ffmpegkit");
@@ -44,7 +45,7 @@ public class FFMpeg {
         }
     }
 
-    public static boolean convert(String in, String out) {
+    public static boolean convert(String in, String out){
         checkFFMpegLibs();
 
         // write the list of all .ts files to a txt file in "in" directory
@@ -81,7 +82,7 @@ public class FFMpeg {
         }
     }
 
-    private static void deleteRecursively(File fileOrDirectory) {
+    private static void deleteRecursively(File fileOrDirectory){
         if (fileOrDirectory.isDirectory()) for (File child : fileOrDirectory.listFiles())
             deleteRecursively(child);
         fileOrDirectory.delete();

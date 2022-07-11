@@ -17,14 +17,14 @@ public class GoalCounter{
     }
 
     public synchronized void increase(){
-        if(++i == goal)
+        if (++i == goal)
             listener.onGoalReached();
 
         Log.d("COUNTER", "G=" + goal + ", I=" + i);
     }
 
     public synchronized void increase(int delta){
-        if((i += delta) == goal)
+        if ((i += delta) == goal)
             listener.onGoalReached();
     }
 

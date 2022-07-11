@@ -69,7 +69,7 @@ public class OTAHelper{
             public void a(Call call, Response response) throws IOException{
                 try {
                     mCommitJson = new JSONObject(response.a().g());
-                    if(isNewVersion())
+                    if (isNewVersion())
                         mListener.onUpdateApplied();
                     else mListener.onUpdateCanceled();
                 } catch (NullPointerException | JSONException e) {

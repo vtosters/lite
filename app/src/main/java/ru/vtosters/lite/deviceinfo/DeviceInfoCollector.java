@@ -31,23 +31,23 @@ public class DeviceInfoCollector{
             Class<?> cls = Class.forName("android.os.SystemProperties");
             Method method = cls.getMethod("get", String.class);
             str = (String) method.invoke(cls, "gsm.sn1");
-            if(isInvalidSerial(str)){
+            if (isInvalidSerial(str)) {
                 str = (String) method.invoke(cls, "ril.serialnumber");
             }
-            if(isInvalidSerial(str)){
+            if (isInvalidSerial(str)) {
                 str = (String) method.invoke(cls, "ro.serialno");
             }
-            if(isInvalidSerial(str)){
+            if (isInvalidSerial(str)) {
                 str = (String) method.invoke(cls, "sys.serialnumber");
             }
-            if(isInvalidSerial(str)){
+            if (isInvalidSerial(str)) {
                 str = Build.SERIAL;
             }
         } catch (Exception e) {
             Log.d(TAG, "Serial ID obtaining failed: ", e);
         }
         str = null;
-        if(str != null){
+        if (str != null) {
             return str.toLowerCase();
         }
         return null;
@@ -59,16 +59,16 @@ public class DeviceInfoCollector{
 
     private String wifiMac(Context context){
         String wifiMacFromManager = wifiMacFromManager(context);
-        if(isInvalidMac(wifiMacFromManager)){
+        if (isInvalidMac(wifiMacFromManager)) {
             wifiMacFromManager = wifiMacFromNetworkInterfaces();
         }
-        if(isInvalidMac(wifiMacFromManager)){
+        if (isInvalidMac(wifiMacFromManager)) {
             wifiMacFromManager = wifiMacFromFileSystem();
         }
-        if(isInvalidMac(wifiMacFromManager)){
+        if (isInvalidMac(wifiMacFromManager)) {
             wifiMacFromManager = null;
         }
-        if(wifiMacFromManager != null){
+        if (wifiMacFromManager != null) {
             return wifiMacFromManager.toLowerCase();
         }
         return null;
@@ -78,7 +78,7 @@ public class DeviceInfoCollector{
         WifiInfo connectionInfo;
         try {
             WifiManager wifiManager = (WifiManager) context.getApplicationContext().getSystemService(Context.WIFI_SERVICE);
-            if(wifiManager == null || (connectionInfo = wifiManager.getConnectionInfo()) == null){
+            if (wifiManager == null || (connectionInfo = wifiManager.getConnectionInfo()) == null) {
                 return null;
             }
             return null;
@@ -90,18 +90,18 @@ public class DeviceInfoCollector{
 
     private String wifiMacFromNetworkInterfaces(){
         try {
-            for(NetworkInterface networkInterface : Collections.list(NetworkInterface.getNetworkInterfaces())) {
-                if("wlan0".equalsIgnoreCase(networkInterface.getName())){
+            for (NetworkInterface networkInterface : Collections.list(NetworkInterface.getNetworkInterfaces())) {
+                if ("wlan0".equalsIgnoreCase(networkInterface.getName())) {
                     byte[] hardwareAddress = networkInterface.getHardwareAddress();
-                    if(hardwareAddress == null){
+                    if (hardwareAddress == null) {
                         return null;
                     }
                     StringBuilder sb = new StringBuilder();
                     int length = hardwareAddress.length;
-                    for(int i = 0; i < length; i++) {
+                    for (int i = 0; i < length; i++) {
                         sb.append(String.format("%02X:", Byte.valueOf(hardwareAddress[i])));
                     }
-                    if(sb.length() > 0){
+                    if (sb.length() > 0) {
                         sb.deleteCharAt(sb.length() - 1);
                     }
                     return sb.toString();
@@ -139,13 +139,13 @@ public class DeviceInfoCollector{
 
     private String bluetoothMac(Context context){
         String bluetoothMacFromAdapter = bluetoothMacFromAdapter();
-        if(isInvalidMac(bluetoothMacFromAdapter)){
+        if (isInvalidMac(bluetoothMacFromAdapter)) {
             bluetoothMacFromAdapter = bluetoothMacFromContentResolver(context);
         }
-        if(isInvalidMac(bluetoothMacFromAdapter)){
+        if (isInvalidMac(bluetoothMacFromAdapter)) {
             bluetoothMacFromAdapter = null;
         }
-        if(bluetoothMacFromAdapter != null){
+        if (bluetoothMacFromAdapter != null) {
             return bluetoothMacFromAdapter.toLowerCase();
         }
         return null;
@@ -154,16 +154,16 @@ public class DeviceInfoCollector{
     private String bluetoothMacFromAdapter(){
         try {
             BluetoothAdapter defaultAdapter = BluetoothAdapter.getDefaultAdapter();
-            if(defaultAdapter == null){
+            if (defaultAdapter == null) {
                 return null;
             }
-            if(Build.VERSION.SDK_INT < 23){
+            if (Build.VERSION.SDK_INT < 23) {
                 return null;
             }
             Field declaredField = defaultAdapter.getClass().getDeclaredField("mService");
             declaredField.setAccessible(true);
             Object obj = declaredField.get(defaultAdapter);
-            if(obj != null){
+            if (obj != null) {
                 return (String) obj.getClass().getMethod("getAddress").invoke(obj, new Object[0]);
             }
             return null;

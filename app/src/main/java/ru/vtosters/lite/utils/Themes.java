@@ -52,7 +52,7 @@ public class Themes{
     } // Apply VKTheme and ImTheme (hard applying without dynamic theme changing)
 
     public static void setTheme(VKTheme theme, Activity activity){
-        if(activity == null) activity = getCurrentActivity();
+        if (activity == null) activity = getCurrentActivity();
         VKThemeHelper.theme(theme, activity, getCenterScreenCoords());
         ThemeTracker.a();
         isLoaded = false;
@@ -117,7 +117,7 @@ public class Themes{
     }
 
     public static void setBarTheme(View getview){
-        if(Build.VERSION.SDK_INT >= Build.VERSION_CODES.M){
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
             getview.setSystemUiVisibility(getNeededColorNavbar() | getNeededColorStatusbar());
         }
     } // Set white/dark statusbar/navbar icons
@@ -131,7 +131,7 @@ public class Themes{
     }
 
     public static int getDarkThemeRes(){
-        if(getPrefsValue("darktheme").equals("amoled")){
+        if (getPrefsValue("darktheme").equals("amoled")) {
             return isMilkshake() ? getIdentifier("VkMilkAmoledStyle", "style") : getIdentifier("VkAmoledStyle", "style");
         }
         return isMilkshake() ? R.style.VkMilkDarkStyle : R.style.VkDarkStyle;
@@ -154,7 +154,7 @@ public class Themes{
     }
 
     public static void colorWriteBar(View view){
-        if(!navbar()) return;
+        if (!navbar()) return;
         view.setBackgroundColor(getTabbarBackground());
     }
 
@@ -163,8 +163,8 @@ public class Themes{
     }
 
     public static boolean isColorRefAccented(int color){
-        for(int accent : new int[]{R.color.accent_blue, R.color.azure_A400, R.color.blue, R.color.blue_200, R.color.blue_200_muted, R.color.blue_300, R.color.blue_400, R.color.cool_blue, R.color.cornflower_blue, R.color.cornflower_blue_two, R.color.dot_unread, R.color.fave_promo_btn_pressed, R.color.header_blue, R.color.vkim_ripple_dark, R.color.colorAccent, R.color.light_blue, R.color.light_blue_gray, R.color.live_emoji_butt_hide, R.color.music_action_button_blue, R.color.name, R.color.picker_blue, R.color.picker_blue_pressed, R.color.picker_tab_bg_selected, R.color.picker_tab_text_selected, R.color.sharing_blue_btn_normal, R.color.sharing_blue_btn_pressed, R.color.sky_300, R.color.text_blue, R.color.tip_background, R.color.tw__blue_default, R.color.tw__blue_pressed, R.color.vkim_msg_sending_ic, R.color.vkim_playing_drawable_rect, R.color.white_blue32}) {
-            if(color == accent) return true;
+        for (int accent : new int[] {R.color.accent_blue, R.color.azure_A400, R.color.blue, R.color.blue_200, R.color.blue_200_muted, R.color.blue_300, R.color.blue_400, R.color.cool_blue, R.color.cornflower_blue, R.color.cornflower_blue_two, R.color.dot_unread, R.color.fave_promo_btn_pressed, R.color.header_blue, R.color.vkim_ripple_dark, R.color.colorAccent, R.color.light_blue, R.color.light_blue_gray, R.color.live_emoji_butt_hide, R.color.music_action_button_blue, R.color.name, R.color.picker_blue, R.color.picker_blue_pressed, R.color.picker_tab_bg_selected, R.color.picker_tab_text_selected, R.color.sharing_blue_btn_normal, R.color.sharing_blue_btn_pressed, R.color.sky_300, R.color.text_blue, R.color.tip_background, R.color.tw__blue_default, R.color.tw__blue_pressed, R.color.vkim_msg_sending_ic, R.color.vkim_playing_drawable_rect, R.color.white_blue32}) {
+            if (color == accent) return true;
         }
         return false;
     } // Accent colors
@@ -175,71 +175,71 @@ public class Themes{
     }
 
     public static Drawable recolorDrawable(Drawable drawable){
-        if(drawable == null) return null;
+        if (drawable == null) return null;
         return new RecoloredDrawable(drawable, getAccentColor());
     } // Recolor drawable to accent color
 
     public static Drawable recolorVKIconMenu(Drawable drawable){
         int accent = getHeaderText();
 
-        if(drawable == null) return null;
+        if (drawable == null) return null;
 
-        if(isAndroidMonet() || isDarkTheme()) accent = getAccentColor();
+        if (isAndroidMonet() || isDarkTheme()) accent = getAccentColor();
 
         return new RecoloredDrawable(drawable, accent);
     } // Recolor vk icon to accent color
 
 
     public static Drawable recolorDrawableToolbar(Drawable drawable){
-        if(drawable == null) return null;
+        if (drawable == null) return null;
 
-        if(!isAndroidMonet()) return drawable;
+        if (!isAndroidMonet()) return drawable;
 
         return new RecoloredDrawable(drawable, getHeaderText());
     } // Recolor toolbar drawable to accent color
 
     @SuppressLint("UseCompatLoadingForDrawables")
     public static Drawable recolorDrawableInt(int drawable){
-        if(!isAndroidMonet()) return getResources().getDrawable(drawable);
+        if (!isAndroidMonet()) return getResources().getDrawable(drawable);
 
         @SuppressLint("UseCompatLoadingForDrawables") Drawable res = getResources().getDrawable(drawable);
         return new RecoloredDrawable(res, getAccentColor());
     } // Get res drawable via id and coloring to accent
 
     public static ColorStateList recolorCSL(ColorStateList colorStateList){
-        if(colorStateList == null) return null;
+        if (colorStateList == null) return null;
 
-        if(!isAndroidMonet()) return colorStateList;
+        if (!isAndroidMonet()) return colorStateList;
 
         return ColorStateList.valueOf(getAccentColor());
     } // Recolor ColorStateList to accent color
 
     @SuppressLint("UseCompatLoadingForColorStateLists")
     public static ColorStateList themeCSL(Context context, int color){
-        if(isColorRefAccented(color) && isAndroidMonet()){
+        if (isColorRefAccented(color) && isAndroidMonet()) {
             return ColorStateList.valueOf(getAccentColor());
         }
 
         ColorStateList csl;
 
-        if(Build.VERSION.SDK_INT >= 23){
+        if (Build.VERSION.SDK_INT >= 23) {
             csl = context.getColorStateList(color);
         } else {
             csl = context.getResources().getColorStateList(color);
         }
 
         try {
-            int unsel = csl.getColorForState(new int[]{-android.R.attr.state_selected}, Color.BLACK);
-            int sel = csl.getColorForState(new int[]{android.R.attr.state_selected}, Color.BLACK);
+            int unsel = csl.getColorForState(new int[] {-android.R.attr.state_selected}, Color.BLACK);
+            int sel = csl.getColorForState(new int[] {android.R.attr.state_selected}, Color.BLACK);
 
             boolean isUnselAccent = isAccentedColor(unsel);
             boolean isSelAccent = isAccentedColor(sel);
 
-            if(isUnselAccent || isSelAccent){
+            if (isUnselAccent || isSelAccent) {
 
-                return new ColorStateList(new int[][]{
-                        new int[]{android.R.attr.state_selected}, new int[]{-android.R.attr.state_selected}
-                }, new int[]{isSelAccent ? getAccentColor() : sel, isUnselAccent ? getAccentColor() : unsel});
+                return new ColorStateList(new int[][] {
+                        new int[] {android.R.attr.state_selected}, new int[] {-android.R.attr.state_selected}
+                }, new int[] {isSelAccent ? getAccentColor() : sel, isUnselAccent ? getAccentColor() : unsel});
             }
 
             return csl;
@@ -266,7 +266,7 @@ public class Themes{
     }
 
     public static int fixTextColor(int resid){
-        if(resid == R.color.music_action_button_gray || resid == R.color.cool_grey || resid == R.color.accent_blue){
+        if (resid == R.color.music_action_button_gray || resid == R.color.cool_grey || resid == R.color.accent_blue) {
             return isDarkTheme() ? R.color.white : R.color.cool_grey;
         }
         return resid;
@@ -285,25 +285,25 @@ public class Themes{
     }
 
     public static int getColor(Context context, int i){
-        if(isColorRefAccented(i) && isAndroidMonet()){
+        if (isColorRefAccented(i) && isAndroidMonet()) {
             return getAccentColor();
         }
         return context.getColor(i);
     } // Android Support color injector + accent color checker
 
     public static int getColor2(int i){
-        if(isColorRefAccented(i) && isAndroidMonet()){
+        if (isColorRefAccented(i) && isAndroidMonet()) {
             return getAccentColor();
         }
         return getResources().getColor(i);
     } // Android Support color injector + accent color checker
 
     public static int getAlertStyle(){
-        if(isDarkTheme()) return R.style.Theme_MaterialComponents_Dialog_Alert;
+        if (isDarkTheme()) return R.style.Theme_MaterialComponents_Dialog_Alert;
         return R.style.Theme_MaterialComponents_Light_Dialog_Alert;
     } // Android Support color injector + accent color checker
 
-    public static String getBackgroundStickers() {
+    public static String getBackgroundStickers(){
         if (getWallpaper() != null) {
             return "images_with_background";
         }
@@ -311,7 +311,7 @@ public class Themes{
     }
 
     public static void setNavbarColor(Window window, int i){
-        if(navbar()){
+        if (navbar()) {
             window.setNavigationBarColor(getTabbarBackground());
             window.getDecorView().setSystemUiVisibility(getNeededColorNavbar());
         }
@@ -336,13 +336,13 @@ public class Themes{
     public static void systemThemeChanger(Activity activity){ // ded
         boolean isDarkTheme = isDarkTheme();
 
-        if(!isDarkTheme){
+        if (!isDarkTheme) {
             applyTheme(getDarkTheme());
         } else {
             applyTheme(getLightTheme());
         }
 
-        if(!systemtheme()){
+        if (!systemtheme()) {
             edit().putBoolean("isdark", isDarkTheme).commit();
             return;
         }

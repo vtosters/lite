@@ -8,9 +8,9 @@ public class DNRPrefs{
     }
 
     public static boolean getMarkAsReadWithoutExceptions(int peerId){
-        if(readPM(peerId))
+        if (readPM(peerId))
             return true;
-        if(readConversations(peerId))
+        if (readConversations(peerId))
             return true;
         return readBots(peerId);
     }
@@ -52,9 +52,9 @@ public class DNRPrefs{
     }
 
     public static boolean getActivityWithoutExceptions(int peerId){
-        if(writePM(peerId))
+        if (writePM(peerId))
             return true;
-        if(writeConversations(peerId))
+        if (writeConversations(peerId))
             return true;
         return writeBots(peerId);
     }

@@ -34,7 +34,7 @@ public class VKUIInjector{
 
             while(true) {
                 String readLine = bufferedReader.readLine();
-                if(readLine != null){
+                if (readLine != null) {
                     sb.append(readLine);
                 } else {
                     bufferedReader.close();
@@ -69,20 +69,20 @@ public class VKUIInjector{
     public static void inject(WebView webView){
         String string = getPrefsValue("darktheme");
 
-        if(getBoolValue("VKUI_INJ", true)){
+        if (getBoolValue("VKUI_INJ", true)) {
 
-            if(!isLoaded){
+            if (!isLoaded) {
                 load();
             }
 
             StringBuilder sb = new StringBuilder();
 
-            if(true/*Themes.isAccentedCache()*/){
+            if (true/*Themes.isAccentedCache()*/) {
                 sb.append("\n\n");
                 sb.append(loadedCSS);
             }
 
-            if(string.equals("amoled")){
+            if (string.equals("amoled")) {
                 sb.append("\n\n");
                 sb.append(loadedCSSAmoled);
             }

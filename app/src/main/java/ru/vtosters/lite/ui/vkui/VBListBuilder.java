@@ -18,7 +18,7 @@ public class VBListBuilder{
         mainView.setOrientation(LinearLayout.VERTICAL);
         mainView.setPadding(convertDpToPixel(8f), 0, convertDpToPixel(8f), 0);
 
-        for(VBListItem item : items) {
+        for (VBListItem item : items) {
             AppCompatCheckBox mcb = new AppCompatCheckBox(ctx, null);
             mcb.setPadding(0, convertDpToPixel(8f), 0, convertDpToPixel(8f));
 

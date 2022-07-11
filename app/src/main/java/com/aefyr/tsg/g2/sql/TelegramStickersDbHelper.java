@@ -38,7 +38,7 @@ public class TelegramStickersDbHelper extends SQLiteOpenHelper{
 
     @Override
     public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion){
-        if(oldVersion == 1 && newVersion == 2){
+        if (oldVersion == 1 && newVersion == 2) {
             db.execSQL(String.format("ALTER TABLE %s ADD COLUMN %s TEXT", TelegramStickersContract.StickersTableEntry.TABLE_NAME, TelegramStickersContract.StickersTableEntry.COLUMN_NAME_EMOJIS));
         }
     }
@@ -61,12 +61,12 @@ public class TelegramStickersDbHelper extends SQLiteOpenHelper{
         } catch (JSONException e) {
             e.printStackTrace();
         }
-        if(pack.index == -1) pack.index = getNewIndex();
+        if (pack.index == -1) pack.index = getNewIndex();
         sqlPack.put(TelegramStickersContract.StickersTableEntry.COLUMN_NAME_INDEX, pack.index);
 
         int s = writableDb.updateWithOnConflict(TelegramStickersContract.StickersTableEntry.TABLE_NAME, sqlPack, TelegramStickersContract.StickersTableEntry.COLUMN_NAME_ID + "='" + pack.id + "'", null, SQLiteDatabase.CONFLICT_IGNORE);
 
-        if(s == 0){
+        if (s == 0) {
             sqlPack.put(TelegramStickersContract.StickersTableEntry.COLUMN_NAME_INDEX, getNewIndex());
             Log.d("DB", "INSERTED!");
             return writableDb.insert(TelegramStickersContract.StickersTableEntry.TABLE_NAME, null, sqlPack) != -1;
@@ -115,7 +115,7 @@ public class TelegramStickersDbHelper extends SQLiteOpenHelper{
 
         @Override
         protected ArrayList<TelegramStickersPack> doInBackground(Void... voids){
-            if(readableDb == null)
+            if (readableDb == null)
                 loadDatabases();
 
             String sortOrder = TelegramStickersContract.StickersTableEntry.COLUMN_NAME_INDEX + " ASC";
@@ -145,7 +145,7 @@ public class TelegramStickersDbHelper extends SQLiteOpenHelper{
                 pack.version = version;
                 pack.index = index;
                 try {
-                    if(emojisEncoded != null) pack.loadEmojis(new JSONObject(emojisEncoded));
+                    if (emojisEncoded != null) pack.loadEmojis(new JSONObject(emojisEncoded));
                 } catch (JSONException e) {
                     e.printStackTrace();
                 }

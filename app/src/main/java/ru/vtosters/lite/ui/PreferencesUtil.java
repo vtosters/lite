@@ -2,7 +2,6 @@ package ru.vtosters.lite.ui;
 
 import static ru.vtosters.lite.utils.Globals.convertDpToPixel;
 import static ru.vtosters.lite.utils.Globals.getContext;
-import static ru.vtosters.lite.utils.Themes.*;
 import static ru.vtosters.lite.utils.Themes.getAccentColor;
 import static ru.vtosters.lite.utils.Themes.getAlertStyle;
 import static ru.vtosters.lite.utils.Themes.getSTextAttr;
@@ -31,8 +30,6 @@ import com.vtosters.lite.ui.MaterialSwitchPreference;
 
 import java.util.Objects;
 
-import ru.vtosters.lite.utils.Themes;
-
 public class PreferencesUtil{
 
     public static Drawable setTint(Context ctx, Drawable d){
@@ -60,7 +57,7 @@ public class PreferencesUtil{
         preference.setDialogTitle(title); // setDialogTitle
         preference.setKey(key); // setKey
         preference.setDefaultValue(def); // setDefaultValue
-        if(icon != null)
+        if (icon != null)
             preference.setIcon(setTint(getContext(), getDrawable(getContext(), icon))); // preference.setIcon
         fragment.getPreferenceScreen().addPreference(preference); // fragment.getPreferenceScreen().addPreference(preference)
     }
@@ -83,7 +80,7 @@ public class PreferencesUtil{
         materialSwitchPreference.setDefaultValue(defValue); // setDefaultValue
         materialSwitchPreference.setOnPreferenceChangeListener(listener); // setOnPreferenceClickListener
 
-        if(icon != 1)
+        if (icon != 1)
             materialSwitchPreference.setIcon(setTint(getContext(), Objects.requireNonNull(ContextCompat.getDrawable(getContext(), icon)))); // preference.setIcon
 
         fragment.getPreferenceScreen().addPreference(materialSwitchPreference); // fragment.getPreferenceScreen().addPreference(preference)
@@ -97,7 +94,7 @@ public class PreferencesUtil{
         materialSwitchPreference.setDefaultValue(defValue); // setDefaultValue
         fragment.getPreferenceScreen().addPreference(materialSwitchPreference); // materialPreferenceToolbarFragment.getPreferenceScreen().addPreference(preference)
 
-        if(icon != null)
+        if (icon != null)
             materialSwitchPreference.setIcon(setTint(getContext(), getDrawable(getContext(), icon))); // preference.setIcon
         materialSwitchPreference.setOnPreferenceChangeListener(listener); // setOnPreferenceClickListener(listener)
 
@@ -118,7 +115,7 @@ public class PreferencesUtil{
         preference.setSummary(summary); // setSummary
         preference.setTitle(title); // setTitle
 
-        if(icon != null)
+        if (icon != null)
             preference.setIcon(setTint(getContext(), getDrawable(getContext(), icon))); // preference.setIcon
         preference.setOnPreferenceClickListener(listener); // preference.setOnPreferenceClickListener(listener)
 
@@ -131,7 +128,7 @@ public class PreferencesUtil{
         preference.setTitle(title); // setTitle
         preference.setKey(key); // setKey
 
-        if(icon != null)
+        if (icon != null)
             preference.setIcon(setTint(getContext(), getDrawable(getContext(), icon))); // preference.setIcon
         preference.setOnPreferenceClickListener(listener); // preference.setOnPreferenceClickListener(listener)
 
@@ -144,7 +141,7 @@ public class PreferencesUtil{
         preference.setTitle(title); // setTitle
         preference.setKey(key); // setKey
 
-        if(icon != null)
+        if (icon != null)
             preference.setIcon(icon); // preference.setIcon
         preference.setOnPreferenceClickListener(listener); // preference.setOnPreferenceClickListener(listener)
 
@@ -190,7 +187,7 @@ public class PreferencesUtil{
             builder.setView(linearLayout);
             builder.setPositiveButton("OK", (dialog, which) -> {
                 boolean change = editTextPrefChangeListener.onChanged(preference, editText.getText().toString());
-                if(!change)
+                if (!change)
                     return;
 
                 PreferenceManager.getDefaultSharedPreferences(getContext())

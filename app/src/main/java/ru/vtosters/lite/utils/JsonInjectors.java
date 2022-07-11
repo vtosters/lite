@@ -17,7 +17,7 @@ import java.util.Random;
 
 public class JsonInjectors{
     public static JSONObject profileButton(JSONObject orig) throws JSONException{
-        if(haveDonateButton()) return orig;
+        if (haveDonateButton()) return orig;
 
         var pic = "https://sun1-18.userapi.com/NLd_rNpGuSaBnPV6O-j5mqCGZk8BK8drAMd2LQ/5R-DEF37PFs.png";
         var title = "Помоги проекту донатом и получи бонус!";
@@ -36,7 +36,7 @@ public class JsonInjectors{
     }
 
     public static JSONObject convBar(JSONObject orig) throws JSONException{
-        if(!dev()) return orig.optJSONObject("conversation_bar"); // TODO Make it server-side
+        if (!dev()) return orig.optJSONObject("conversation_bar"); // TODO Make it server-side
         var peerid = Objects.requireNonNull(orig.optJSONObject("peer")).optInt("id");
 
         var pic = "https://image.pngaaa.com/641/326641-middle.png"; // can be null
@@ -53,14 +53,14 @@ public class JsonInjectors{
         var hasButton = !buttons.isEmpty();
         var isPicture = pic.endsWith(".png") || pic.endsWith(".jpg") || pic.endsWith(".jpeg") || pic.endsWith(".webp");
 
-        if(!isPicture) hasIcon = false;
-        if(!hasIcon) icon = "";
-        if(!hasButton) buttons = "";
+        if (!isPicture) hasIcon = false;
+        if (!hasIcon) icon = "";
+        if (!hasButton) buttons = "";
 
-        if(isVerified(peerid)) text = "Я купил VTosters Premium";
-        if(isPrometheus(peerid)) text = "Я купил VTosters Premium Gold Prime Pro Plus";
-        if(isDeveloper(peerid)) text = "Я создал говно";
-        if(!isVerified(peerid) || text.equals("")) return orig.optJSONObject("conversation_bar");
+        if (isVerified(peerid)) text = "Я купил VTosters Premium";
+        if (isPrometheus(peerid)) text = "Я купил VTosters Premium Gold Prime Pro Plus";
+        if (isDeveloper(peerid)) text = "Я создал говно";
+        if (!isVerified(peerid) || text.equals("")) return orig.optJSONObject("conversation_bar");
 
         // JSONObject("{\"name\":\"group_admin_welcome\",\"text\":\"" + textverif + "\",\"buttons\":[],\"icon\":\"" + pic + "\"}");
         return new JSONObject(decode("eyJuYW1lIjoiZ3JvdXBfYWRtaW5fd2VsY29tZSIsInRleHQiOiI=")
@@ -75,7 +75,7 @@ public class JsonInjectors{
         var Main = orig.getJSONArray("main");
         var Other = orig.optJSONArray("other");
 
-        if(Special != null){
+        if (Special != null) {
             orig.remove("special");
         }
 
@@ -85,11 +85,11 @@ public class JsonInjectors{
     public static JSONObject superapp(JSONObject json) throws JSONException{
         var oldItems = json.optJSONArray("items");
         var newItems = new JSONArray();
-        if(oldItems != null){
-            for(int i = 0; i < oldItems.length(); i++) {
+        if (oldItems != null) {
+            for (int i = 0; i < oldItems.length(); i++) {
                 var item = oldItems.optJSONObject(i);
                 var type = item.optString("type");
-                if(!getBoolValue("superapp_" + type, false))
+                if (!getBoolValue("superapp_" + type, false))
                     newItems.put(item);
             }
         }

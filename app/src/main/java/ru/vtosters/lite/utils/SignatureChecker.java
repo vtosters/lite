@@ -27,7 +27,7 @@ public class SignatureChecker{
                 '9', 'A', 'B', 'C', 'D', 'E', 'F'};
         char[] hexChars = new char[bytes.length * 2];
         int v;
-        for(int j = 0; j < bytes.length; j++) {
+        for (int j = 0; j < bytes.length; j++) {
             v = bytes[j] & 0xFF;
             hexChars[j * 2] = hexArray[v >>> 4];
             hexChars[j * 2 + 1] = hexArray[v & 0x0F];
@@ -37,7 +37,7 @@ public class SignatureChecker{
 
     public static boolean validateAppSignature() throws NameNotFoundException, NoSuchAlgorithmException{
         @SuppressLint("PackageManagerGetSignatures") PackageInfo packageInfo = getContext().getPackageManager().getPackageInfo(getPackageName(), GET_SIGNATURES);
-        for(Signature signature : packageInfo.signatures) {
+        for (Signature signature : packageInfo.signatures) {
             String sha1 = getSHA1(signature.toByteArray());
             return Base64Utils.decode(APP_SIGNATURE).equals(sha1);
         }

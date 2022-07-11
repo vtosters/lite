@@ -75,7 +75,7 @@ public class Globals{
     private static final List<Activity> activities = new ArrayList<>();
 
     public static SharedPreferences getDefprefs(){
-        if(preferences == null)
+        if (preferences == null)
             preferences = PreferenceManager.getDefaultSharedPreferences(getContext());
         return preferences;
     }
@@ -83,7 +83,7 @@ public class Globals{
     public static void MainActivityInit(Activity activity){
         ServerDialog.activity = activity;
         sendRequest();
-        if(checkupdates()) OTADialog.checkUpdates(activity);
+        if (checkupdates()) OTADialog.checkUpdates(activity);
         Start.alert(activity);
         InstallGMS.alert(activity);
         DisableBattery.alert(activity);
@@ -159,7 +159,7 @@ public class Globals{
         return userProfile.b;
     } // UserId Profile via userProfile
 
-    public static Bitmap scaleCenterCrop(Bitmap source, int newHeight, int newWidth) {
+    public static Bitmap scaleCenterCrop(Bitmap source, int newHeight, int newWidth){
         int sourceWidth = source.getWidth();
         int sourceHeight = source.getHeight();
 
@@ -218,7 +218,7 @@ public class Globals{
 
             return new BitmapDrawable(getResources(), bmp); // return our drawable
         } catch (Exception e) {
-            if(def == null) return null; // default pic can be null
+            if (def == null) return null; // default pic can be null
 
             return getDrawable(getContext(), getIdentifier(def, "drawable")); // get default drawable via res
         }
@@ -345,10 +345,10 @@ public class Globals{
     } // Network check
 
     public static void fixGapps(){
-        if(Build.VERSION.SDK_INT >= 26 && !isGmsInstalled()){
+        if (Build.VERSION.SDK_INT >= 26 && !isGmsInstalled()) {
             NotificationManager notificationManager = (NotificationManager) getContext().getSystemService(Context.NOTIFICATION_SERVICE);
 
-            if(notificationManager.getNotificationChannel("audio_playback_channel") == null){
+            if (notificationManager.getNotificationChannel("audio_playback_channel") == null) {
                 notificationManager.createNotificationChannel(new NotificationChannel("audio_playback_channel", getResources().getString(getIdentifier("audio_message_play_error", "string")), NotificationManager.IMPORTANCE_LOW));
             }
         }
@@ -378,7 +378,7 @@ public class Globals{
 
             @Override // android.app.Application.ActivityLifecycleCallbacks
             public void onActivityCreated(Activity activity, Bundle bundle){
-                if(activity instanceof VKActivity){
+                if (activity instanceof VKActivity) {
                     activities.add(activity);
                 }
             }
@@ -391,7 +391,7 @@ public class Globals{
     }
 
     public static Activity getCurrentActivity(){
-        if(activities.size() == 0) return null;
+        if (activities.size() == 0) return null;
         else return activities.get(0);
     }
 
@@ -406,7 +406,7 @@ public class Globals{
         var resources = context.getResources();
         var configuration = resources.getConfiguration();
 
-        if(Build.VERSION.SDK_INT >= 24){
+        if (Build.VERSION.SDK_INT >= 24) {
             configuration.setLocale(locale);
             configuration.setLayoutDirection(locale);
             return context.createConfigurationContext(configuration);
@@ -427,13 +427,13 @@ public class Globals{
 
         int centerWidth = width / 2;
         int centerHeight = height / 2;
-        return new float[]{centerWidth, centerHeight};
+        return new float[] {centerWidth, centerHeight};
     }
 
     int[] toIntArray(List<Integer> list){
         int[] ret = new int[list.size()];
         int i = 0;
-        for(Integer e : list) {
+        for (Integer e : list) {
             /*if (e < 2000000000)*/
             ret[i++] = e;
         }

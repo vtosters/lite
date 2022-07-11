@@ -18,14 +18,13 @@ import okhttp3.Request;
 import okhttp3.Response;
 import ru.vtosters.lite.utils.StreamUtils;
 
-public class M3UDownloader {
-
-    private OkHttpClient mClient = new OkHttpClient();
-    private VKM3UParser mParser;
+public class M3UDownloader{
 
     private final String mURL;
     private final File mOutDir;
     private final Callback mCallback;
+    private OkHttpClient mClient = new OkHttpClient();
+    private VKM3UParser mParser;
 
     public M3UDownloader(String url, File outDir, Callback callback){
         mURL = url;
@@ -33,24 +32,24 @@ public class M3UDownloader {
         mCallback = callback;
     }
 
-    public void execute() {
+    public void execute(){
         var request = new Request.a()
                 .b(mURL)
                 .a();
-        mClient.a(request).a(new okhttp3.Callback() {
+        mClient.a(request).a(new okhttp3.Callback(){
             @Override
-            public void a(Call call, IOException e) {
+            public void a(Call call, IOException e){
 
             }
 
             @Override
-            public void a(Call call, Response response) throws IOException {
+            public void a(Call call, Response response) throws IOException{
                 parse(response.a().g());
             }
         });
     }
 
-    private void parse(String payload) {
+    private void parse(String payload){
         try {
             VKM3UParser parser = new VKM3UParser(payload);
             List<TransportStream> tses = parser.getTransportStreams();
@@ -71,7 +70,7 @@ public class M3UDownloader {
                 mCallback.onSizeReceived((long) content.length * tses.size(), parser.getHeapSize());
                 mCallback.onProgress(10 + Math.round(80.0f * tses.indexOf(ts) / tses.size()));
             }
-        }  catch (IOException | NoSuchPaddingException | NoSuchAlgorithmException | InvalidAlgorithmParameterException | InvalidKeyException e) {
+        } catch (IOException | NoSuchPaddingException | NoSuchAlgorithmException | InvalidAlgorithmParameterException | InvalidKeyException e) {
             e.printStackTrace();
             mCallback.onFailure();
             return;

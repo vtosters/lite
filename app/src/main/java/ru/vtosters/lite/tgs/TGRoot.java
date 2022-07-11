@@ -42,14 +42,14 @@ public class TGRoot{
 
     public static Attachment processSticker(StickerItem item){
         int id = item.getId();
-        if(id < N) return null;
+        if (id < N) return null;
 
         int index = (id - N) / 120;
         int stickerId = (id - N) % 120;
 
         TelegramStickersPack pack = null;
-        for(TelegramStickersPack p : TelegramStickersService.getInstance(getContext()).getActivePacksListReference()) {
-            if(p.index == index){
+        for (TelegramStickersPack p : TelegramStickersService.getInstance(getContext()).getActivePacksListReference()) {
+            if (p.index == index) {
                 pack = p;
                 break;
             }
@@ -70,7 +70,7 @@ public class TGRoot{
     public static void injectStickers(List<StickerStockItem> list){
         try {
             List<TelegramStickersPack> packs = TelegramStickersService.getInstance(getContext()).getActivePacksListReference();
-            for(int i = packs.size() - 1; i >= 0; i--)
+            for (int i = packs.size() - 1; i >= 0; i--)
                 list.add(0, toStickerPack(packs.get(i)));
         } catch (Exception e) {
             e.printStackTrace();
@@ -78,18 +78,18 @@ public class TGRoot{
     }
 
     public static StickerStockItem getPackBySticker(int stickerId){
-        if(stickerId < N) return null;
+        if (stickerId < N) return null;
         int index = (stickerId - N) / 120;
 
         TelegramStickersPack p = null;
-        for(TelegramStickersPack p_ : TelegramStickersService.getInstance(getContext())
+        for (TelegramStickersPack p_ : TelegramStickersService.getInstance(getContext())
                 .getActivePacksListReference()) {
-            if(p_.index == index){
+            if (p_.index == index) {
                 p = p_;
                 break;
             }
         }
-        if(p == null) return null;
+        if (p == null) return null;
 
         try {
             return toStickerPack(p);
@@ -102,7 +102,7 @@ public class TGRoot{
     private static StickerStockItem toStickerPack(TelegramStickersPack p) throws JSONException{
         JSONArray arr = new JSONArray();
 
-        for(int j = 0; j < p.stickersCount; j++)
+        for (int j = 0; j < p.stickersCount; j++)
             arr.put(new JSONObject().put("sticker_id", N + p.index * 120 + j)
                     .put("images", new JSONArray()
                             .put(new JSONObject()
@@ -144,7 +144,7 @@ public class TGRoot{
     }
 
     public static Attach modifyStickerIM(int i, StickerItem stickerItem, String str){
-        if(stickerItem.getId() < 76820000){
+        if (stickerItem.getId() < 76820000) {
             return AppAttachToImAttachConverter.a.a(i, stickerItem, str);
         }
         return AppAttachToImAttachConverter.a.a(processSticker(stickerItem));

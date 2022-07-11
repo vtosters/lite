@@ -16,7 +16,7 @@ public class StoryDownloader{
     public static Runnable injectButton(StoryEntry story){
         return () -> {
             // if story is a pic
-            if(story.T1()){
+            if (story.T1()) {
                 List<ImageSize> imageSizes = story.E.Q.t1();
                 String url = imageSizes.get(imageSizes.size() - 1).url;
                 DownloadManager.Request request = new DownloadManager.Request(Uri.parse(url));
@@ -28,7 +28,7 @@ public class StoryDownloader{
             }
 
             // if story is a video
-            if(story.F != null){
+            if (story.F != null) {
                 downloadVideo(story.F, null);
             }
         };

@@ -33,8 +33,8 @@ public class EncryptProvider{
 
     public static IMProcessor getProcessorFor(int peerId){
         IMProcessor enabled = null;
-        for(IMProcessor processor : EncryptProvider.processors) {
-            if(processor.isUsedToEncrypt(peerId)){
+        for (IMProcessor processor : EncryptProvider.processors) {
+            if (processor.isUsedToEncrypt(peerId)) {
                 enabled = processor;
             }
         }
@@ -56,8 +56,8 @@ public class EncryptProvider{
 
     public static String decryptMessage(String msgBody, int peer){
         try {
-            for(IMProcessor processor : processors) {
-                if((processor.isUsed() || !processor.isPublic()) && processor.isEncrypted(msgBody) && (processor.isPublic() || getKeyForProcessor(processor, peer) != null))
+            for (IMProcessor processor : processors) {
+                if ((processor.isUsed() || !processor.isPublic()) && processor.isEncrypted(msgBody) && (processor.isPublic() || getKeyForProcessor(processor, peer) != null))
                     return "\uD83D\uDD12 " + processor.decode(msgBody, getKeyForProcessor(processor, peer));
             }
         } catch (Exception e) {
@@ -67,9 +67,9 @@ public class EncryptProvider{
     }
 
     private static byte[] getKeyForProcessor(IMProcessor processor, int peer){
-        if(processor.isPublic()) return null;
+        if (processor.isPublic()) return null;
         String keyString = processor.getEncryptionKeyFor(peer);
-        if(keyString == null) return null;
+        if (keyString == null) return null;
 
         try {
             MessageDigest digest = MessageDigest.getInstance("SHA-256");
@@ -93,9 +93,9 @@ public class EncryptProvider{
         Log.d("EncryptProvider", "encryptMessage: body = " + msgBody);
         Log.d("EncryptProvider", "encryptMessage: peerId = " + getPeerId(msg));
 
-        for(IMProcessor processor : processors) {
+        for (IMProcessor processor : processors) {
             int peer = getPeerId(msg);
-            if(processor.isUsedToEncrypt(peer)){
+            if (processor.isUsedToEncrypt(peer)) {
                 return processor.encode(msgBody, getKeyForProcessor(processor, peer));
             }
         }
@@ -107,8 +107,8 @@ public class EncryptProvider{
     public static List<Pair<String, String>> getUserVisibleEncoders(){
         List<Pair<String, String>> theList = new ArrayList<>();
 
-        for(IMProcessor processor : processors) {
-            if(processor.isPublic())
+        for (IMProcessor processor : processors) {
+            if (processor.isPublic())
                 theList.add(new Pair<>("VT_IMDecode_" + processor.getPrefKey(), processor.getUIName()));
         }
 

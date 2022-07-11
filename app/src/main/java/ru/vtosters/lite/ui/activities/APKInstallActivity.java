@@ -32,14 +32,14 @@ public class APKInstallActivity extends AppCompatActivity{
         super.onCreate(savedInstanceState);
 
         Intent intent = getIntent();
-        if(intent == null){
+        if (intent == null) {
             Toast.makeText(this, "No intent", Toast.LENGTH_SHORT).show();
             finish();
             return;
         }
 
         mApkUri = intent.getParcelableExtra(EXTRA_APK_URI);
-        if(mApkUri == null){
+        if (mApkUri == null) {
             Toast.makeText(this, "No apk uri", Toast.LENGTH_SHORT).show();
             finish();
             return;
@@ -49,8 +49,8 @@ public class APKInstallActivity extends AppCompatActivity{
     }
 
     private void installApk(){
-        if(Build.VERSION.SDK_INT >= Build.VERSION_CODES.O){
-            if(!getPackageManager().canRequestPackageInstalls()){
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
+            if (!getPackageManager().canRequestPackageInstalls()) {
                 Intent permIntent = new Intent(Settings.ACTION_MANAGE_UNKNOWN_APP_SOURCES, Uri.parse("package:" + getPackageName()));
                 startActivityForResult(permIntent, REQUEST_INSTALL_PERMISSION);
                 return;
@@ -76,7 +76,7 @@ public class APKInstallActivity extends AppCompatActivity{
     public void onActivityResult(int requestCode, int resultCode, Intent data){
         super.onActivityResult(requestCode, resultCode, data);
 
-        if(requestCode == REQUEST_INSTALL_PERMISSION)
+        if (requestCode == REQUEST_INSTALL_PERMISSION)
             installApk();
     }
 }
