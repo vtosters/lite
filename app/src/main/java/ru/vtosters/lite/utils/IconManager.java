@@ -43,21 +43,22 @@ public class IconManager{
 
         var getCurrComponent = getPreferences().getInt("component_enabled", 11); // get current component value
 
-        if(hasVerification() && isValidSignature()){
+        if (hasVerification() && isValidSignature()) {
             iconsList = iconsPlus;
             appnamesList = appnamesPlus;
             availablecomponentsList = availablecomponentsPlus;
         }
 
-        if(iconsList.contains(icon)){ // check if icon is exist
+        if (iconsList.contains(icon)) { // check if icon is exist
             iconComponent = iconsList.indexOf(icon); // get icon index
         }
 
-        if(appnamesList.contains(appname)){ // check if appname is exist
+        if (appnamesList.contains(appname)) { // check if appname is exist
             appNameComponent = appnamesList.indexOf(appname); // get appname index
         }
 
-        if(getCurrComponent == iconComponent + appNameComponent || availablecomponentsList.get(iconComponent + appNameComponent) == null) return; // check if current component is equal to custom value or if custom value is not exist
+        if (getCurrComponent == iconComponent + appNameComponent || availablecomponentsList.get(iconComponent + appNameComponent) == null)
+            return; // check if current component is equal to custom value or if custom value is not exist
 
         componentSwitcher("id" + getCurrComponent, false); // disable current component to prevent conflict with custom value
 

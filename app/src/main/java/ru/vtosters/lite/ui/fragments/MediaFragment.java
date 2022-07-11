@@ -1,8 +1,9 @@
 package ru.vtosters.lite.ui.fragments;
 
 import static ru.vtosters.lite.utils.Globals.getIdentifier;
-import static ru.vtosters.lite.utils.Themes.*;
+import static ru.vtosters.lite.utils.Themes.getAccentColor;
 import static ru.vtosters.lite.utils.Themes.getAlertStyle;
+import static ru.vtosters.lite.utils.Themes.getTextAttr;
 
 import android.content.Context;
 import android.content.DialogInterface;
@@ -17,7 +18,6 @@ import androidx.preference.Preference;
 import com.vtosters.lite.general.fragments.MaterialPreferenceToolbarFragment;
 
 import ru.vtosters.lite.downloaders.VideoDownloader;
-import ru.vtosters.lite.utils.Themes;
 
 public class MediaFragment extends MaterialPreferenceToolbarFragment{
     public static void download(Context ctx){

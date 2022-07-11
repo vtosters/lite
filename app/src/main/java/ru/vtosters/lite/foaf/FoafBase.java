@@ -34,13 +34,13 @@ public class FoafBase{
     private static final OkHttpClient client = new OkHttpClient();
 
     public static long getLastSeen(long origtime, int id) throws ParseException, IOException{
-        if(!Preferences.foaf()) return origtime;
+        if (!Preferences.foaf()) return origtime;
 
         Matcher matcher = FOAF_REGEX_LAST_SEEN.matcher(
                 client.a(
                         new okhttp3.Request.a().a(getLink(id)).b().a()
                 ).execute().a().g());
-        if(!matcher.find()){
+        if (!matcher.find()) {
             return origtime;
         }
         return new SimpleDateFormat("yyyy-MM-dd'T'kk:mm:ss", Locale.getDefault()).parse(matcher.group(1)).getTime() / 1000;
@@ -49,7 +49,7 @@ public class FoafBase{
     private static String getLink(int i){
         String str;
         StringBuilder sb;
-        if(apiproxy()){
+        if (apiproxy()) {
             sb = new StringBuilder();
             str = "https://" + getApi() + "/_/vk.com/foaf.php?id=";
         } else {

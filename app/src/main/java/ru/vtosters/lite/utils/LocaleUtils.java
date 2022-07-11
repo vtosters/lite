@@ -14,7 +14,7 @@ public class LocaleUtils{
     public static String getLocale(){
         String string = getPrefsValue("lang_value");
 
-        if(string.equals("system")){
+        if (string.equals("system")) {
             return Locale.getDefault().getLanguage();
         }
 
@@ -44,7 +44,7 @@ public class LocaleUtils{
     public static String getFormattedDate(boolean isFemale, long time){
         SimpleDateFormat date = new SimpleDateFormat(getDateFormat(), Locale.getDefault());
 
-        if(!fulltime()) return null;
+        if (!fulltime()) return null;
 
         try {
             return getStringDate(isFemale ? getIdentifier("last_seen_profile_f", "string") : getIdentifier("last_seen_profile_m", "string"), date.format(new Date(time)));

@@ -44,13 +44,13 @@ import java.util.Set;
  * @author Taner Sener
  * @since 0.1.0
  */
-public class Exceptions {
+public class Exceptions{
 
-    static {
-        AbstractExceptions.setStackTraceElementSerializer(new StackTraceElementSerializer() {
+    static{
+        AbstractExceptions.setStackTraceElementSerializer(new StackTraceElementSerializer(){
 
             @Override
-            public String toString(StackTraceElement stackTraceElement) {
+            public String toString(StackTraceElement stackTraceElement){
                 final StringBuilder stringBuilder = new StringBuilder();
 
                 stringBuilder.append(stackTraceElement.getClassName());
@@ -75,17 +75,17 @@ public class Exceptions {
             }
 
             @Override
-            public String getModuleName(StackTraceElement stackTraceElement) {
+            public String getModuleName(StackTraceElement stackTraceElement){
                 return "";
             }
 
             @Override
-            public String getNativeMethodDefinition() {
+            public String getNativeMethodDefinition(){
                 return "(Native Method)";
             }
 
             @Override
-            public String getUnknownSourceDefinition() {
+            public String getUnknownSourceDefinition(){
                 return "(Unknown Source)";
             }
         });
@@ -96,14 +96,14 @@ public class Exceptions {
      *
      * @param packageString root package name to register
      */
-    public static void registerRootPackage(final String packageString) {
+    public static void registerRootPackage(final String packageString){
         AbstractExceptions.registerRootPackage(packageString);
     }
 
     /**
      * <p>Clears previously registered root packages.
      */
-    public static void clearRootPackages() {
+    public static void clearRootPackages(){
         AbstractExceptions.clearRootPackages();
     }
 
@@ -112,14 +112,14 @@ public class Exceptions {
      *
      * @param packageString group package name to register
      */
-    public static void registerGroupPackage(final String packageString) {
+    public static void registerGroupPackage(final String packageString){
         AbstractExceptions.registerGroupPackage(packageString);
     }
 
     /**
      * <p>Clears previously registered group packages.
      */
-    public static void clearGroupPackages() {
+    public static void clearGroupPackages(){
         AbstractExceptions.clearGroupPackages();
     }
 
@@ -129,7 +129,7 @@ public class Exceptions {
      *
      * @return current stack trace serializer implementation
      */
-    public static StackTraceElementSerializer getStackTraceElementSerializer() {
+    public static StackTraceElementSerializer getStackTraceElementSerializer(){
         return AbstractExceptions.getStackTraceElementSerializer();
     }
 
@@ -139,7 +139,7 @@ public class Exceptions {
      *
      * @param stackTraceElementSerializer new stack trace serializer implementation
      */
-    public static void setStackTraceElementSerializer(final StackTraceElementSerializer stackTraceElementSerializer) {
+    public static void setStackTraceElementSerializer(final StackTraceElementSerializer stackTraceElementSerializer){
         AbstractExceptions.setStackTraceElementSerializer(stackTraceElementSerializer);
     }
 
@@ -149,14 +149,14 @@ public class Exceptions {
      * @param packageString      ignore package name to register
      * @param ignoreCauseClasses ignore cause classes from this package too
      */
-    public static void registerIgnorePackage(final String packageString, final boolean ignoreCauseClasses) {
+    public static void registerIgnorePackage(final String packageString, final boolean ignoreCauseClasses){
         AbstractExceptions.registerIgnorePackage(packageString, ignoreCauseClasses);
     }
 
     /**
      * <p>Clears previously registered ignore packages.
      */
-    public static void clearIgnorePackages() {
+    public static void clearIgnorePackages(){
         AbstractExceptions.clearIgnorePackages();
     }
 
@@ -167,7 +167,7 @@ public class Exceptions {
      * converted to string will not include causes. If value is false causes will be appended to the stack trace of
      * the main throwable.
      */
-    public static boolean getIgnoreAllCauses() {
+    public static boolean getIgnoreAllCauses(){
         return AbstractExceptions.getIgnoreAllCauses();
     }
 
@@ -178,7 +178,7 @@ public class Exceptions {
      *                        or converted to string will not include causes. If value is false causes will be appended to the stack trace of
      *                        the main throwable.
      */
-    public static void setIgnoreAllCauses(final boolean ignoreAllCauses) {
+    public static void setIgnoreAllCauses(final boolean ignoreAllCauses){
         AbstractExceptions.setIgnoreAllCauses(ignoreAllCauses);
     }
 
@@ -192,7 +192,7 @@ public class Exceptions {
      * @param throwable parent throwable
      * @return a string containing the smart stack trace for the given <code>throwable</code>
      */
-    public static String getStackTraceString(final Throwable throwable) {
+    public static String getStackTraceString(final Throwable throwable){
         return AbstractExceptions.getStackTraceString(throwable);
     }
 
@@ -207,7 +207,7 @@ public class Exceptions {
      * @param ignoreAllCauses ignore all causes in the exception chain
      * @return a string containing the smart stack trace for the given <code>throwable</code>
      */
-    public static String getStackTraceString(final Throwable throwable, final boolean ignoreAllCauses) {
+    public static String getStackTraceString(final Throwable throwable, final boolean ignoreAllCauses){
         return AbstractExceptions.getStackTraceString(throwable, ignoreAllCauses);
     }
 
@@ -220,7 +220,7 @@ public class Exceptions {
      * @param ignorePackageSet ignore packages to use for building the stack trace
      * @return a string containing the smart stack trace for the given <code>throwable</code>
      */
-    public static String getStackTraceString(final Throwable throwable, final Set<String> rootPackageSet, final Set<String> groupPackageSet, final Set<String> ignorePackageSet) {
+    public static String getStackTraceString(final Throwable throwable, final Set<String> rootPackageSet, final Set<String> groupPackageSet, final Set<String> ignorePackageSet){
         return AbstractExceptions.getStackTraceString(throwable, rootPackageSet, groupPackageSet, ignorePackageSet);
     }
 
@@ -234,7 +234,7 @@ public class Exceptions {
      * @param ignoreAllCauses  ignore all causes in the exception chain
      * @return a string containing the smart stack trace for the given <code>throwable</code>
      */
-    public static String getStackTraceString(final Throwable throwable, final Set<String> rootPackageSet, final Set<String> groupPackageSet, final Set<String> ignorePackageSet, final boolean ignoreAllCauses) {
+    public static String getStackTraceString(final Throwable throwable, final Set<String> rootPackageSet, final Set<String> groupPackageSet, final Set<String> ignorePackageSet, final boolean ignoreAllCauses){
         return AbstractExceptions.getStackTraceString(throwable, rootPackageSet, groupPackageSet, ignorePackageSet, ignoreAllCauses);
     }
 
@@ -245,7 +245,7 @@ public class Exceptions {
      * @param rootPackage root package to use for building the stack trace
      * @return a string containing the smart stack trace for the given <code>throwable</code>
      */
-    public static String getStackTraceString(final Throwable throwable, final String rootPackage) {
+    public static String getStackTraceString(final Throwable throwable, final String rootPackage){
         return AbstractExceptions.getStackTraceString(throwable, rootPackage);
     }
 
@@ -257,7 +257,7 @@ public class Exceptions {
      * @param groupPackage group package to use for building the stack trace
      * @return a string containing the smart stack trace for the given <code>throwable</code>
      */
-    public static String getStackTraceString(final Throwable throwable, final String rootPackage, final String groupPackage) {
+    public static String getStackTraceString(final Throwable throwable, final String rootPackage, final String groupPackage){
         return AbstractExceptions.getStackTraceString(throwable, rootPackage, groupPackage);
     }
 
@@ -268,7 +268,7 @@ public class Exceptions {
      * @param maxDepth  max depth in exception chain that will be used
      * @return a string containing the smart stack trace for the given <code>throwable</code>
      */
-    public static String getStackTraceString(final Throwable throwable, final int maxDepth) {
+    public static String getStackTraceString(final Throwable throwable, final int maxDepth){
         return AbstractExceptions.getStackTraceString(throwable, maxDepth);
     }
 
@@ -280,7 +280,7 @@ public class Exceptions {
      * @param ignoreAllCauses ignore all causes in the exception chain
      * @return a string containing the smart stack trace for the given <code>throwable</code>
      */
-    public static String getStackTraceString(final Throwable throwable, final int maxDepth, final boolean ignoreAllCauses) {
+    public static String getStackTraceString(final Throwable throwable, final int maxDepth, final boolean ignoreAllCauses){
         return AbstractExceptions.getStackTraceString(throwable, maxDepth, ignoreAllCauses);
     }
 
@@ -290,7 +290,7 @@ public class Exceptions {
      * @param throwable parent throwable
      * @return a string containing all messages found in the exception chain
      */
-    public static String getAllMessages(final Throwable throwable) {
+    public static String getAllMessages(final Throwable throwable){
         return AbstractExceptions.getAllMessages(throwable);
     }
 
@@ -306,7 +306,7 @@ public class Exceptions {
      * @return true if the given cause class is found in the exception chain of the <code>throwable</code>, false
      * otherwise
      */
-    public static boolean containsCause(final Throwable throwable, final Class<?> causeClass) {
+    public static boolean containsCause(final Throwable throwable, final Class<?> causeClass){
         return AbstractExceptions.containsCause(throwable, causeClass);
     }
 
@@ -324,7 +324,7 @@ public class Exceptions {
      * @return true if the given cause class and cause message is found in the exception chain of the
      * <code>throwable</code>, false otherwise
      */
-    public static boolean containsCause(final Throwable throwable, final Class<?> causeClass, final String causeMessage) {
+    public static boolean containsCause(final Throwable throwable, final Class<?> causeClass, final String causeMessage){
         return AbstractExceptions.containsCause(throwable, causeClass, causeMessage);
     }
 
@@ -334,7 +334,7 @@ public class Exceptions {
      * @param throwable parent throwable
      * @return the cause of the <code>throwable</code> found or null if <code>throwable</code> does not have a cause
      */
-    public static Throwable getCause(final Throwable throwable) {
+    public static Throwable getCause(final Throwable throwable){
         return AbstractExceptions.getCause(throwable);
     }
 
@@ -350,7 +350,7 @@ public class Exceptions {
      * @return the cause of the <code>throwable</code> found until <code>maxDepth</code> is reached in the exception
      * chain or null if <code>throwable</code> does not have a cause
      */
-    public static Throwable getCause(final Throwable throwable, final int maxDepth) {
+    public static Throwable getCause(final Throwable throwable, final int maxDepth){
         return AbstractExceptions.getCause(throwable, maxDepth);
     }
 
@@ -365,7 +365,7 @@ public class Exceptions {
      * @param causeClass class to search for
      * @return the <code>throwable</code> found or null if no class in exception chain matches the given cause class
      */
-    public static Throwable searchCause(final Throwable throwable, final Class<?> causeClass) {
+    public static Throwable searchCause(final Throwable throwable, final Class<?> causeClass){
         return AbstractExceptions.searchCause(throwable, causeClass);
     }
 
@@ -382,7 +382,7 @@ public class Exceptions {
      * @return the <code>throwable</code> found or null if no class in exception chain matches the given cause class
      * and cause message
      */
-    public static Throwable searchCause(final Throwable throwable, final Class<?> causeClass, final String causeMessage) {
+    public static Throwable searchCause(final Throwable throwable, final Class<?> causeClass, final String causeMessage){
         return AbstractExceptions.searchCause(throwable, causeClass, causeMessage);
     }
 
@@ -400,7 +400,7 @@ public class Exceptions {
      * @return the <code>throwable</code> found or null if no class in exception chain matches the given cause class
      * and cause message
      */
-    public static Throwable searchCause(final Throwable throwable, final Class<?> causeClass, final String causeMessage, final int maxDepth) {
+    public static Throwable searchCause(final Throwable throwable, final Class<?> causeClass, final String causeMessage, final int maxDepth){
         return AbstractExceptions.searchCause(throwable, causeClass, causeMessage, maxDepth);
     }
 
@@ -416,7 +416,7 @@ public class Exceptions {
      * @param maxDepth   max depth in exception chain that will be searched
      * @return the <code>throwable</code> found or null if no class in exception chain matches the given cause class
      */
-    public static Throwable searchCause(final Throwable throwable, final Class<?> causeClass, final int maxDepth) {
+    public static Throwable searchCause(final Throwable throwable, final Class<?> causeClass, final int maxDepth){
         return AbstractExceptions.searchCause(throwable, causeClass, maxDepth);
     }
 

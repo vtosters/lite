@@ -56,11 +56,11 @@ public class StickerPackAdapter extends RecyclerView.Adapter<StickerPackAdapter.
     }
 
     @Override
-    public int getItemCount() {
+    public int getItemCount(){
         return sService.getPacksListReference().size();
     }
 
-    public class StickerPackViewHolder extends RecyclerView.ViewHolder {
+    public class StickerPackViewHolder extends RecyclerView.ViewHolder{
         private LinearLayout mContainer;
         private ImageView mStickerPreview;
         private ImageView mUpdateButton;
@@ -70,7 +70,7 @@ public class StickerPackAdapter extends RecyclerView.Adapter<StickerPackAdapter.
         private SwitchCompat mSwitch;
 
 
-        public StickerPackViewHolder(@NonNull View view) {
+        public StickerPackViewHolder(@NonNull View view){
             super(view);
 
             mContainer = (LinearLayout) view;
@@ -82,7 +82,7 @@ public class StickerPackAdapter extends RecyclerView.Adapter<StickerPackAdapter.
             mStickersCount = view.findViewWithTag("vkim_cancel_label_text");
         }
 
-        public void bind(int position) {
+        public void bind(int position){
             final TelegramStickersPack pack = sService.getPacksListReference().get(position);
             if (pack.state != TelegramStickersPack.DOWNLOADED) return;
 

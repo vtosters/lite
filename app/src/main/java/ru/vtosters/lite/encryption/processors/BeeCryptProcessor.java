@@ -18,10 +18,10 @@ public class BeeCryptProcessor extends IMProcessor{
         try {
             String a = Base64.encodeToString(source.getBytes(StandardCharsets.UTF_8), 2);
             StringBuilder res = new StringBuilder();
-            for(int i = 0; i < a.length(); i++) {
+            for (int i = 0; i < a.length(); i++) {
                 StringBuilder bintxt = new StringBuilder();
                 int c = a.charAt(i);
-                for(int j = 0; j < 4; j++) {
+                for (int j = 0; j < 4; j++) {
                     bintxt.insert(0, BC_CHARSET.charAt(c % 4));
                     c /= 4;
                 }
@@ -48,7 +48,7 @@ public class BeeCryptProcessor extends IMProcessor{
             try {
                 String bintxt = source.substring(i, i + 4);
                 int c = 0;
-                for(int j = 0; j < 4; j++) {
+                for (int j = 0; j < 4; j++) {
                     c = (c * 4) + Math.max(0, BC_CHARSET.indexOf(bintxt.charAt(j)));
                 }
                 b64.append((char) c);

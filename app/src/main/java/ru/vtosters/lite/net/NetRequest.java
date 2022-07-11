@@ -56,7 +56,7 @@ public class NetRequest{
         }
 
         public Builder param(String param, String value){
-            if(params == null) params = new TreeMap<>();
+            if (params == null) params = new TreeMap<>();
             params.put(param, value);
             return this;
         }

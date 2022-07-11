@@ -41,12 +41,12 @@ public class DNRModule{
     }
 
     public static boolean isDnrEnabledFor(Dialog dialog){
-        if(dialog == null) return false;
+        if (dialog == null) return false;
         return isDnrEnabledFor(dialog.getId());
     }
 
     public static boolean isDntEnabledFor(Dialog dialog){
-        if(dialog == null) return false;
+        if (dialog == null) return false;
         return isDntEnabledFor(dialog.getId());
     }
 

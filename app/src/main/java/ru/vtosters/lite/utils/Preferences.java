@@ -49,13 +49,13 @@ public class Preferences{
         getInstance().autoCleaningCache();
         edit().putBoolean("isdark", isDarkTheme()).commit();
 
-        if(setoffline() && offline()){
+        if (setoffline() && offline()) {
             Users.a();
         }
     }
 
     public static boolean getBoolValue(String key, Boolean value){
-        if(preferences == null){
+        if (preferences == null) {
             preferences = PreferenceManager.getDefaultSharedPreferences(getContext());
         }
         return preferences.getBoolean(key, value);
@@ -346,8 +346,8 @@ public class Preferences{
     }
 
     public static int compress(int origquality){
-        if(getBoolValue("shakal", false)) return 5;
-        if(!getBoolValue("compressPhotos", true)) return 100;
+        if (getBoolValue("shakal", false)) return 5;
+        if (!getBoolValue("compressPhotos", true)) return 100;
         return origquality;
     }
 }

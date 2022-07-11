@@ -74,15 +74,15 @@ public class WallpaperMenuFragment extends MaterialPreferenceToolbarFragment{
 
         PreferencesUtil.addPreferenceCategory(this, "Параметры");
 
-        PreferencesUtil.addListPreference(this, "msg_blur_radius", "disabled", "Размытие фона сообщений", new CharSequence[]{
+        PreferencesUtil.addListPreference(this, "msg_blur_radius", "disabled", "Размытие фона сообщений", new CharSequence[] {
                 "Отключено", "Низкое (15px)", "Среднее (25px)", "Высокое (50px)"
-        }, new String[]{
+        }, new String[] {
                 "disabled", "low", "med", "high"
         });
 
-        PreferencesUtil.addListPreference(this, "msg_dim", "off", "Затемнение изображения", new CharSequence[]{
+        PreferencesUtil.addListPreference(this, "msg_dim", "off", "Затемнение изображения", new CharSequence[] {
                 "Отключено", "Затемнить", "Осветлить"
-        }, new String[]{
+        }, new String[] {
                 "off", "dim_black", "dim_white"
         });
 
@@ -113,7 +113,7 @@ public class WallpaperMenuFragment extends MaterialPreferenceToolbarFragment{
     public void onActivityResult(int i, int i1, @Nullable Intent intent){
         super.onActivityResult(i, i1, intent);
 
-        if(intent == null || intent.getData() == null)
+        if (intent == null || intent.getData() == null)
             return;
 
         try {
@@ -124,7 +124,7 @@ public class WallpaperMenuFragment extends MaterialPreferenceToolbarFragment{
 
             requestUpdateWallpaper();
 
-            if(i == 1488){
+            if (i == 1488) {
                 mWPPreviewPref.redraw();
             }
         } catch (Exception e) {

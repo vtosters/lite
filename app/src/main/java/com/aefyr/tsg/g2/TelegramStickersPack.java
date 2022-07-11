@@ -42,9 +42,9 @@ public class TelegramStickersPack extends CustomStickersPack{
 
     public JSONObject encodeEmojis() throws JSONException{
         JSONObject obj = new JSONObject();
-        for(HashMap.Entry<String, List<Integer>> en : emojis.entrySet()) {
+        for (HashMap.Entry<String, List<Integer>> en : emojis.entrySet()) {
             JSONArray arr = new JSONArray();
-            for(int i : en.getValue()) arr.put(i);
+            for (int i : en.getValue()) arr.put(i);
             obj.put(en.getKey(), arr);
         }
 
@@ -57,16 +57,16 @@ public class TelegramStickersPack extends CustomStickersPack{
             String key = it.next();
             //emojis.put(key, obj.getInt(key));
             List<Integer> list = emojis.get(key);
-            if(list == null) list = new ArrayList<>();
+            if (list == null) list = new ArrayList<>();
             JSONArray arr = obj.getJSONArray(key);
-            for(int i = 0; i < arr.length(); i++)
+            for (int i = 0; i < arr.length(); i++)
                 list.add(arr.getInt(i));
             emojis.put(key, list);
         }
     }
 
     public Bitmap getIcon(int targetMaxSideSize){
-        if(state != DOWNLOADED && state != UPDATING)
+        if (state != DOWNLOADED && state != UPDATING)
             throw new IllegalStateException("Unable to get an icon of a pack that hasn't been downloaded yet");
 
         File icon = new File(folder, "001.png");
@@ -85,7 +85,7 @@ public class TelegramStickersPack extends CustomStickersPack{
 
         int maxSideSize = op.outWidth > op.outHeight ? op.outWidth : op.outHeight;
 
-        if(maxSideSize > targetMaxSideSize){
+        if (maxSideSize > targetMaxSideSize) {
             op.inScaled = true;
             op.inDensity = maxSideSize;
             op.inTargetDensity = targetMaxSideSize;

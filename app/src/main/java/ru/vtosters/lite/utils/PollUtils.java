@@ -10,8 +10,8 @@ import com.vk.dto.polls.PollOption;
 import com.vk.polls.ui.views.PollOptionView;
 
 public class PollUtils{
-    public static void show(PollOptionView view) {
-        if(!getBoolValue("pollresults", false)) return;
+    public static void show(PollOptionView view){
+        if (!getBoolValue("pollresults", false)) return;
 
         TextView resultsView = view.c;
 

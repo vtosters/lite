@@ -33,7 +33,7 @@ public class VTostersAESProcessor extends IMProcessor{
 
     @NonNull
     private Cipher wrapEncoder(byte[] key) throws InvalidAlgorithmParameterException, InvalidKeyException, NoSuchAlgorithmException, NoSuchPaddingException{
-        if(encodeMap.containsKey(key)) return encodeMap.get(key);
+        if (encodeMap.containsKey(key)) return encodeMap.get(key);
 
         Triple<Cipher, SecretKeySpec, IvParameterSpec> encodeCipher = getBaseCipher(key);
         encodeCipher.first.init(Cipher.ENCRYPT_MODE, encodeCipher.second, encodeCipher.third);
@@ -44,7 +44,7 @@ public class VTostersAESProcessor extends IMProcessor{
 
     @NonNull
     private Cipher wrapDecoder(byte[] key) throws InvalidAlgorithmParameterException, InvalidKeyException, NoSuchAlgorithmException, NoSuchPaddingException{
-        if(decodeMap.containsKey(key)) return decodeMap.get(key);
+        if (decodeMap.containsKey(key)) return decodeMap.get(key);
 
         Triple<Cipher, SecretKeySpec, IvParameterSpec> decodeCipher = getBaseCipher(key);
         decodeCipher.first.init(Cipher.DECRYPT_MODE, decodeCipher.second, decodeCipher.third);

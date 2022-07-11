@@ -42,7 +42,7 @@ public class FragAnimationKit{
     }
 
     public static void setAnimations(FragmentTransaction transaction){
-        if(transaction != null && !getPrefsValue("anim_rtrn_type").equals("noanim")){
+        if (transaction != null && !getPrefsValue("anim_rtrn_type").equals("noanim")) {
             switch(getPrefsValue("anim_rtrn_type")) {
                 case "q":
                     transaction.setCustomAnimations(

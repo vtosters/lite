@@ -62,7 +62,6 @@ import ru.vtosters.lite.ui.PreferencesUtil;
 import ru.vtosters.lite.ui.dialogs.OTADialog;
 import ru.vtosters.lite.ui.fragments.dockbar.AdapterHelper;
 import ru.vtosters.lite.ui.fragments.dockbar.DockBarEditorFragment;
-import ru.vtosters.lite.ui.fragments.dockbar.DockBarManager;
 import ru.vtosters.lite.ui.fragments.tgstickers.StickersFragment;
 import ru.vtosters.lite.ui.vkui.VBottomSheetBuilder;
 import ru.vtosters.lite.utils.CacheUtils;
@@ -74,9 +73,9 @@ public class VTSettings extends MaterialPreferenceToolbarFragment{
     public static int hideitems = 0;
 
     public static String getValAsString(String stringid, Boolean value){
-        if(disableSettingsSumms()) return null;
+        if (disableSettingsSumms()) return null;
 
-        if(value){
+        if (value) {
             return Globals.getString(stringid) + ": " + Globals.getString("vtlsettenabled");
         }
 
@@ -84,22 +83,22 @@ public class VTSettings extends MaterialPreferenceToolbarFragment{
     }
 
     public static String getSSFSsumm(){
-        if(disableSettingsSumms()) return null;
+        if (disableSettingsSumms()) return null;
 
-        if(hasSpecialVerif())
+        if (hasSpecialVerif())
             return Globals.getString("vtlssfssumm") + ": " + Globals.getString("vtlsettverifyes");
 
         return Globals.getString("vtlssfssumm") + ": " + Globals.getString("vtlsettverifno");
     }
 
     public static String getDocksumm(){
-        if(disableSettingsSumms()) return null;
+        if (disableSettingsSumms()) return null;
 
         return Globals.getString("vtldocksumm") + ": " + (AdapterHelper.getItemCount() - 2);
     }
 
     public static String getTGSsumm(){
-        if(disableSettingsSumms()) return null;
+        if (disableSettingsSumms()) return null;
 
         return Globals.getString("vtltgssumm") + ": " + TelegramStickersService.getInstance(Globals.getContext()).getPacksListReference().size();
     }
@@ -107,9 +106,9 @@ public class VTSettings extends MaterialPreferenceToolbarFragment{
     public static String getProxysumm(){
         var type = getPrefsValue("proxy");
 
-        if(disableSettingsSumms()) return null;
+        if (disableSettingsSumms()) return null;
 
-        if(type.equals("noproxy") || type.isEmpty()) type = Globals.getString("vtlsettdisabled");
+        if (type.equals("noproxy") || type.isEmpty()) type = Globals.getString("vtlsettdisabled");
 
         return Globals.getString("vtlproxysumm") + ": " + type;
     }
@@ -119,13 +118,13 @@ public class VTSettings extends MaterialPreferenceToolbarFragment{
     }
 
     public static String getSuperappsumm(){
-        if(disableSettingsSumms()) return null;
+        if (disableSettingsSumms()) return null;
 
         return "Скрыто элементов" + ": " + preferences.getInt("superappitems", 0);
     }
 
     public static String getCachesumm(){
-        if(disableSettingsSumms()) return null;
+        if (disableSettingsSumms()) return null;
 
         return Globals.getString("autoclearcachesumm") + " " + humanReadableByteCountBin(CacheUtils.getInstance().size);
     }
@@ -162,7 +161,7 @@ public class VTSettings extends MaterialPreferenceToolbarFragment{
         PreferencesUtil.addMaterialSwitchPreference(this, "isdark", Globals.getString("vtsettdarktheme"), "", !DoNotUseOldIcons() ? "ic_palette_24" : "ic_palette_outline_28", false, (preference, o) -> {
             boolean value = (boolean) o;
 
-            if(!value){ // inverted
+            if (!value) { // inverted
                 setTheme(getLightTheme(), this.getActivity());
             } else {
                 setTheme(getDarkTheme(), this.getActivity());
@@ -172,7 +171,7 @@ public class VTSettings extends MaterialPreferenceToolbarFragment{
             return true;
         });
 
-        if(Build.VERSION.SDK_INT >= 28 && false){ // TODO refactoring system theme
+        if (Build.VERSION.SDK_INT >= 28 && false) { // TODO refactoring system theme
             PreferencesUtil.addMaterialSwitchPreference(this, "systemtheme", Globals.getString("appearance_theme_use_system"), Globals.getString("appearance_theme_use_system_summary"), !DoNotUseOldIcons() ? "ic_recent_24" : "ic_recent_outline_28", true, (preference, o) -> {
                 boolean value = (boolean) o;
 
@@ -181,7 +180,7 @@ public class VTSettings extends MaterialPreferenceToolbarFragment{
             });
         }
 
-        if(!isGmsInstalled()){
+        if (!isGmsInstalled()) {
             PreferencesUtil.addPreference(this, "", Globals.getString("installgms"), "", "ic_warning_24", preference -> {
                 Context context = getContext();
                 Intent a2 = new Navigator(InstallGMSFragment.class).b(context);
@@ -191,7 +190,7 @@ public class VTSettings extends MaterialPreferenceToolbarFragment{
             });
         }
 
-        if(devmenu()){
+        if (devmenu()) {
             PreferencesUtil.addPreferenceCategory(this, Globals.getString("sett_debug"));
 
             PreferencesUtil.addPreference(this, "", Globals.getString("sett_debug"), "", !DoNotUseOldIcons() ? "ic_bug_24" : "ic_bug_outline_28", preference -> {
@@ -280,7 +279,7 @@ public class VTSettings extends MaterialPreferenceToolbarFragment{
             return false;
         });
 
-        if(VKAccountManager.d().isMusicSubs()){
+        if (VKAccountManager.d().isMusicSubs()) {
             PreferencesUtil.addPreference(this, "", Globals.getString("subscription_music"), "", !DoNotUseOldIcons() ? "ic_music_24" : "ic_music_outline_28", preference -> {
                 Context context = getContext();
                 Intent a2 = new Navigator(MusicSubscriptionControlFragment.class).b(context);
@@ -300,7 +299,7 @@ public class VTSettings extends MaterialPreferenceToolbarFragment{
 
         PreferencesUtil.addPreferenceCategory(this, Globals.getString("vtsettmod"));
 
-        if(!vkme()){
+        if (!vkme()) {
             PreferencesUtil.addPreference(this, "", Globals.getString("vtlfeed"), feedsumm, !DoNotUseOldIcons() ? "ic_newsfeed_24" : "ic_newsfeed_outline_28", preference -> {
                 Context context = getContext();
                 Intent a2 = new Navigator(FeedFragment.class).b(context);
@@ -366,7 +365,7 @@ public class VTSettings extends MaterialPreferenceToolbarFragment{
             return false;
         });
 
-        if(milkshake()){
+        if (milkshake()) {
             PreferencesUtil.addPreference(this, "", "Настроить Superapp", superapp, "ic_explore_outline_28", (preference) -> {
                 callEditorPopup();
                 return true;
@@ -381,9 +380,9 @@ public class VTSettings extends MaterialPreferenceToolbarFragment{
             return false;
         });
 
-        PreferencesUtil.addListPreferenceIcon(this, "clearcache", "Default", Globals.getString("autoclearcache"), !DoNotUseOldIcons() ? "ic_delete_24" : "ic_delete_outline_28", getCachesumm(), new CharSequence[]{
+        PreferencesUtil.addListPreferenceIcon(this, "clearcache", "Default", Globals.getString("autoclearcache"), !DoNotUseOldIcons() ? "ic_delete_24" : "ic_delete_outline_28", getCachesumm(), new CharSequence[] {
                 Globals.getString("autoclearcachedisabled"), "100 MB", "500 MB", "1 GB", "2 GB", "5 GB"
-        }, new String[]{
+        }, new String[] {
                 "Default", "100mb", "500mb", "1gb", "2gb", "5gb"
         });
 
@@ -421,7 +420,7 @@ public class VTSettings extends MaterialPreferenceToolbarFragment{
             return false;
         });
 
-        if(isValidSignature()){
+        if (isValidSignature()) {
             PreferencesUtil.addPreferenceCategory(this, Globals.getString("updates"));
 
             PreferencesUtil.addPreference(this, "", Globals.getString("checkforupdates"), "", "ic_download_outline_24", preference -> {
@@ -466,9 +465,9 @@ public class VTSettings extends MaterialPreferenceToolbarFragment{
                 new VBSContent.VBSButton(
                         "Сохранить",
                         () -> {
-                            for(VBListItem item : list) {
+                            for (VBListItem item : list) {
                                 edit().putBoolean("superapp_" + item.id, item.checked).commit();
-                                if(item.checked){
+                                if (item.checked) {
                                     hideitems++;
                                     edit().putInt("superappitems", hideitems).commit();
                                 }

@@ -18,13 +18,13 @@ public class OpusLoader{
             System.loadLibrary(libname);
             inited = true;
         } catch (UnsatisfiedLinkError unused2) {
-            if(dev()) Log.d("VTLite", "Failed to load " + libname);
+            if (dev()) Log.d("VTLite", "Failed to load " + libname);
             inited = false;
         }
     }
 
     public static long getLength(){
-        if(isReadyToUse()){
+        if (isReadyToUse()) {
             long length = System.currentTimeMillis() - timetracker;
             timetracker = System.currentTimeMillis();
             return length;
@@ -33,7 +33,7 @@ public class OpusLoader{
     }
 
     public static int AudioStartRecordBridge(String str){
-        if(isReadyToUse()){
+        if (isReadyToUse()) {
             // Init custom AudioStartRecord
             timetracker = System.currentTimeMillis();
             return 1;
@@ -42,14 +42,14 @@ public class OpusLoader{
     }
 
     public static int AudioWriteFrameBridge(ByteBuffer buffer, int length){
-        if(isReadyToUse()){
+        if (isReadyToUse()) {
             // Init custom AudioWriteFrame
         }
         return MediaNative.audioWriteFrame(buffer, length);
     }
 
     public static void AudioStopRecordBridge(){
-        if(isReadyToUse()){
+        if (isReadyToUse()) {
             // Init custom AudioStopRecord
         }
         MediaNative.audioStopRecord();

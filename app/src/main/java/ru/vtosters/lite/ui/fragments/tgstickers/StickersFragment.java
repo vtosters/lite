@@ -44,29 +44,26 @@ import ru.vtosters.lite.tgs.TGPref;
 import ru.vtosters.lite.ui.PreferencesUtil;
 import ru.vtosters.lite.utils.Globals;
 
-public class StickersFragment extends MaterialPreferenceToolbarFragment {
+public class StickersFragment extends MaterialPreferenceToolbarFragment{
 
     public final static String ACTION_RELOAD = "com.vtosters.lite.action.RELOAD_TGS_LIST";
 
     private final static int TYPE_DIRECT = 0, TYPE_SOCKS = 2;
-
+    public int from;
+    public int to;
     private TelegramStickersGrabber mGrabber;
     private TelegramStickersService mService;
-
     private FloatingActionButton mAddStickerPack;
     private RecyclerView mRecycler;
     private StickerPackAdapter mAdapter;
-
     private boolean movePending = false;
-    public int from;
-    public int to;
     private final BroadcastReceiver mReceiver = new BroadcastReceiver(){
         @Override
         public void onReceive(Context context, Intent intent){
-            if(intent.getAction().equals(ACTION_RELOAD)){
-                if(mAdapter != null){
+            if (intent.getAction().equals(ACTION_RELOAD)) {
+                if (mAdapter != null) {
                     try {
-                        if(movePending){
+                        if (movePending) {
                             movePending = false;
                             mAdapter.notifyItemMoved(from, to);
                             from = -1;
@@ -97,7 +94,7 @@ public class StickersFragment extends MaterialPreferenceToolbarFragment {
     }
 
     private void openMenu(String toast){
-        if(toast != null){
+        if (toast != null) {
             makeText(getContext(), toast, LENGTH_SHORT).show();
         }
         var intent = new Navigator(StickersPreferencesFragment.class, new Bundle()).b(getContext());
@@ -164,7 +161,7 @@ public class StickersFragment extends MaterialPreferenceToolbarFragment {
 
         initGrabber();
         if (method == TYPE_SOCKS) {
-            if(TGPref.getTGProxyIP() == null){
+            if (TGPref.getTGProxyIP() == null) {
                 openMenu(Globals.getString("stickersproxy1"));
             }
         } else if (method == TYPE_DIRECT) {
@@ -175,7 +172,7 @@ public class StickersFragment extends MaterialPreferenceToolbarFragment {
                 editText.setHintTextColor(PreferencesUtil.getSTextColor(getContext()));
 
                 // Костыль для китката
-                if(Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP){
+                if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
                     editText.setBackgroundTintList(ColorStateList.valueOf(PreferencesUtil.getTextColor(getContext())));
                 } else {
                     ViewCompat.setBackgroundTintList(editText, ColorStateList.valueOf(PreferencesUtil.getTextColor(getContext())));
@@ -206,11 +203,11 @@ public class StickersFragment extends MaterialPreferenceToolbarFragment {
             TelegramStickersGrabber.USE_PROXY = false;
             mGrabber.resetProxy();
         } else if (method == TYPE_SOCKS) {
-            if(TGPref.getTGProxyIP() != null){
+            if (TGPref.getTGProxyIP() != null) {
                 TelegramStickersGrabber.USE_PROXY = true;
                 TelegramStickersGrabber.PROXY_IP = TGPref.getTGProxyIP();
                 TelegramStickersGrabber.PROXY_PORT = TGPref.getTGProxyPort();
-                if(TGPref.isTGProxyPassEnabled()){
+                if (TGPref.isTGProxyPassEnabled()) {
                     TelegramStickersGrabber.HAS_PASS = true;
                     TelegramStickersGrabber.PROXY_USER = TGPref.getTGProxyUser();
                     TelegramStickersGrabber.PROXY_PASS = TGPref.getTGProxyPass();
@@ -247,7 +244,7 @@ public class StickersFragment extends MaterialPreferenceToolbarFragment {
                 .setView(linearLayout)
                 .setPositiveButton(android.R.string.ok, (dialog, which) -> {
                     TGPref.setTGBotKey(editText.getText().toString());
-                    if(r != null) r.run();
+                    if (r != null) r.run();
                 })
                 .setNegativeButton(android.R.string.cancel, null)
                 .setNeutralButton(Globals.getString("stickersapi7"),
@@ -270,13 +267,13 @@ public class StickersFragment extends MaterialPreferenceToolbarFragment {
             @Override
             public void onKeyChecked(boolean ok){
                 progressDialog.dismiss();
-                if(!ok){
+                if (!ok) {
                     makeText(context, Globals.getString("stickersapi2"), LENGTH_SHORT).show();
                     return;
                 }
                 mService.setBotKey(TGPref.getTGBotKey());
 
-                if(callback != null) callback.run();
+                if (callback != null) callback.run();
             }
 
             @Override
@@ -293,9 +290,9 @@ public class StickersFragment extends MaterialPreferenceToolbarFragment {
     }
 
     private String parsePack(String pack){
-        if(pack.startsWith("https://t.me/addstickers/")){
+        if (pack.startsWith("https://t.me/addstickers/")) {
             pack = pack.substring(25);
-        } else if(pack.startsWith("https://telegram.me/addstickers/")){
+        } else if (pack.startsWith("https://telegram.me/addstickers/")) {
             pack = pack.substring(32);
         }
         return pack;

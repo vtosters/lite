@@ -91,7 +91,7 @@ public class WallpaperPreferences extends Preference{
             final Drawable drawable = getWallpaper();
 
             mUIHandler.post(() -> {
-                if(drawable != null && getWallpaperFile().exists())
+                if (drawable != null && getWallpaperFile().exists())
                     bg.setImageDrawable(drawable);
                 else
                     bg.setImageDrawable(null);
@@ -105,11 +105,11 @@ public class WallpaperPreferences extends Preference{
     }
 
     private static class PreviewAdapter extends RecyclerView.Adapter<PreviewAdapter.PreviewVH>{
-        private final CharSequence[] previews = new CharSequence[]{
+        private final CharSequence[] previews = new CharSequence[] {
                 " Привет ", " Привет ", " Ты кто? "
         };
 
-        private final boolean[] isOut = new boolean[]{
+        private final boolean[] isOut = new boolean[] {
                 false, true, false
         };
 
@@ -125,7 +125,7 @@ public class WallpaperPreferences extends Preference{
             bubble.setText(previews[previewVH.getAdapterPosition()]);
 
             RelativeLayout.LayoutParams params = new RelativeLayout.LayoutParams(RelativeLayout.LayoutParams.WRAP_CONTENT, RelativeLayout.LayoutParams.WRAP_CONTENT);
-            if(isOut[previewVH.getAdapterPosition()]){
+            if (isOut[previewVH.getAdapterPosition()]) {
                 params.addRule(RelativeLayout.ALIGN_PARENT_END);
                 bubble.setPadding(convertDpToPixel(16), convertDpToPixel(16), convertDpToPixel(24), 0);
                 bubble.setBackgroundResource(com.vtosters.lite.R.drawable.vkim_msg_new_out_light_full);

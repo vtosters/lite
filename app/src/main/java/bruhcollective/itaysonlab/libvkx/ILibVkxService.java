@@ -90,18 +90,18 @@ public interface ILibVkxService extends android.os.IInterface{
          * generating a proxy if needed.
          */
         public static ILibVkxService asInterface(android.os.IBinder obj){
-            if((obj == null)){
+            if ((obj == null)) {
                 return null;
             }
             android.os.IInterface iin = obj.queryLocalInterface(DESCRIPTOR);
-            if(((iin != null) && (iin instanceof ILibVkxService))){
+            if (((iin != null) && (iin instanceof ILibVkxService))) {
                 return ((ILibVkxService) iin);
             }
             return new Proxy(obj);
         }
 
         public static boolean setDefaultImpl(ILibVkxService impl){
-            if(Proxy.sDefaultImpl == null && impl != null){
+            if (Proxy.sDefaultImpl == null && impl != null) {
                 Proxy.sDefaultImpl = impl;
                 return true;
             }
@@ -219,7 +219,7 @@ public interface ILibVkxService extends android.os.IInterface{
                     _data.writeInt(index);
                     _data.writeString(playbackContext);
                     boolean _status = mRemote.transact(Stub.TRANSACTION_play, _data, _reply, 0);
-                    if(!_status && getDefaultImpl() != null){
+                    if (!_status && getDefaultImpl() != null) {
                         getDefaultImpl().play(audio_ids, index, playbackContext);
                         return;
                     }
@@ -239,7 +239,7 @@ public interface ILibVkxService extends android.os.IInterface{
                 try {
                     _data.writeInterfaceToken(DESCRIPTOR);
                     boolean _status = mRemote.transact(Stub.TRANSACTION_getUserId, _data, _reply, 0);
-                    if(!_status && getDefaultImpl() != null){
+                    if (!_status && getDefaultImpl() != null) {
                         return getDefaultImpl().getUserId();
                     }
                     _reply.readException();
@@ -261,7 +261,7 @@ public interface ILibVkxService extends android.os.IInterface{
                     _data.writeInt(owner_id);
                     _data.writeString(access_key);
                     boolean _status = mRemote.transact(Stub.TRANSACTION_addTrackToCache, _data, _reply, 0);
-                    if(!_status && getDefaultImpl() != null){
+                    if (!_status && getDefaultImpl() != null) {
                         getDefaultImpl().addTrackToCache(track_id, owner_id, access_key);
                         return;
                     }
@@ -281,7 +281,7 @@ public interface ILibVkxService extends android.os.IInterface{
                     _data.writeInt(track_id);
                     _data.writeInt(owner_id);
                     boolean _status = mRemote.transact(Stub.TRANSACTION_deleteTrackFromCache, _data, _reply, 0);
-                    if(!_status && getDefaultImpl() != null){
+                    if (!_status && getDefaultImpl() != null) {
                         getDefaultImpl().deleteTrackFromCache(track_id, owner_id);
                         return;
                     }
@@ -304,7 +304,7 @@ public interface ILibVkxService extends android.os.IInterface{
                     _data.writeInt(track_id);
                     _data.writeInt(owner_id);
                     boolean _status = mRemote.transact(Stub.TRANSACTION_isTrackCached, _data, _reply, 0);
-                    if(!_status && getDefaultImpl() != null){
+                    if (!_status && getDefaultImpl() != null) {
                         return getDefaultImpl().isTrackCached(track_id, owner_id);
                     }
                     _reply.readException();
@@ -324,7 +324,7 @@ public interface ILibVkxService extends android.os.IInterface{
                 try {
                     _data.writeInterfaceToken(DESCRIPTOR);
                     boolean _status = mRemote.transact(Stub.TRANSACTION_getCache, _data, _reply, 0);
-                    if(!_status && getDefaultImpl() != null){
+                    if (!_status && getDefaultImpl() != null) {
                         return getDefaultImpl().getCache();
                     }
                     _reply.readException();

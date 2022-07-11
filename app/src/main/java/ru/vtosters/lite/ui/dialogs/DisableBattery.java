@@ -18,9 +18,9 @@ import ru.vtosters.lite.utils.OEMDetector;
 
 public class DisableBattery{
     public static void alert(Activity activity){
-        if(OEMDetector.isOEM() && Build.VERSION.SDK_INT >= 23 && getBoolValue("showDoze", true)){
+        if (OEMDetector.isOEM() && Build.VERSION.SDK_INT >= 23 && getBoolValue("showDoze", true)) {
             final Context context = getContext();
-            if(!((PowerManager) context.getSystemService(Context.POWER_SERVICE)).isIgnoringBatteryOptimizations(context.getPackageName())){
+            if (!((PowerManager) context.getSystemService(Context.POWER_SERVICE)).isIgnoringBatteryOptimizations(context.getPackageName())) {
                 AlertDialog.Builder builder = new AlertDialog.Builder(activity);
                 builder.setTitle(getString("batteryissuetitle"));
                 builder.setMessage(getString("batteryissuesumm"));

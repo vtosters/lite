@@ -31,9 +31,9 @@ public class DefaultCoffeeProcessor extends IMProcessor{
     private String toHex(String text){
         char[] chars = text.toCharArray();
         StringBuilder str = new StringBuilder();
-        for(char aChar : chars) {
+        for (char aChar : chars) {
             String s = Integer.toHexString(aChar);
-            if(s.length() < 2) s = "0" + s;
+            if (s.length() < 2) s = "0" + s;
             str.append(s.toUpperCase()).append(" ");
         }
 
@@ -45,7 +45,7 @@ public class DefaultCoffeeProcessor extends IMProcessor{
         text = text.replace(" ", "");
         char[] chars = text.toCharArray();
         char[] chars2 = new char[chars.length / 2];
-        for(int i = 0; i < chars.length; i += 2) {
+        for (int i = 0; i < chars.length; i += 2) {
             String c = String.valueOf(chars[i]) + chars[i + 1];
             chars2[i / 2] = (char) Integer.parseInt(c, 16);
         }

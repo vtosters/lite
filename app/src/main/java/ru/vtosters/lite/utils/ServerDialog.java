@@ -35,7 +35,7 @@ public class ServerDialog{
     private static Boolean isNotForVerified;
 
     public static void sendRequest(){
-        if(getBoolValue("dialogrecomm", false)) return;
+        if (getBoolValue("dialogrecomm", false)) return;
 
         Request request = new Request.a()
                 .b("https://vtosters.app/dialog.json")
@@ -62,7 +62,7 @@ public class ServerDialog{
     private static Boolean showForNotVerified(){
         int random = new Random().nextInt(6);
 
-        if(isNotForVerified){
+        if (isNotForVerified) {
             return !hasVerification() && random != 0;
         }
 
@@ -74,7 +74,7 @@ public class ServerDialog{
 
         Log.d("VTLOG", "getResponse: " + jSONObject);
 
-        if(jSONObject.getString("title").equals("")){
+        if (jSONObject.getString("title").equals("")) {
             showAlert = false;
             return;
         }
@@ -90,7 +90,7 @@ public class ServerDialog{
 
         showAlert = true;
 
-        if(activity != null){
+        if (activity != null) {
             activity.runOnUiThread(() -> {
                 AlertDialog.Builder builder = new AlertDialog.Builder(activity);
                 builder.setTitle(title);
@@ -101,7 +101,7 @@ public class ServerDialog{
                     edit().putBoolean(key, false).apply();
                     activity.startActivity(new Intent("android.intent.action.VIEW").setData(Uri.parse(link)));
                 });
-                if(getBoolValue(key, true) && showForNotVerified() && showAlert){
+                if (getBoolValue(key, true) && showForNotVerified() && showAlert) {
                     builder.show();
                 }
             });

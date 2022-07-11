@@ -38,13 +38,13 @@ public class GCMFix{
     }
 
     public static String requestTokenV2(String orig){
-        if(musicFixNew()) return "null"; // TODO FIX TOKENMOD v2 cyz vk shit
+        if (musicFixNew()) return "null"; // TODO FIX TOKENMOD v2 cyz vk shit
         return orig;
     }
 
     public static String requestToken(String orig){
-        if(musicFixNew()) return "{null}"; // TODO FIX TOKENMOD v2 cyz vk shit
-        if(orig.equals("")) return requestToken();
+        if (musicFixNew()) return "{null}"; // TODO FIX TOKENMOD v2 cyz vk shit
+        if (orig.equals("")) return requestToken();
         return orig;
     }
 
@@ -53,7 +53,7 @@ public class GCMFix{
         try {
             String[] aidarr = {"3974055026275073921", "4418584909973341826", "4585634953328772978"};
             int r = new Random().nextInt(aidarr.length - 1);
-            String aid = "AidLogin " + aidarr[r] + ":" + new String[]{"1932960345884890854", "6594645578425092292", "1792344590975444730"}[r];
+            String aid = "AidLogin " + aidarr[r] + ":" + new String[] {"1932960345884890854", "6594645578425092292", "1792344590975444730"}[r];
             String pub2 = genNewKey();
             String sig = getSig(pub2);
             String xappide2 = null;
@@ -63,7 +63,7 @@ public class GCMFix{
             } catch (NoSuchAlgorithmException e) {
                 xappide2 = "";
             }
-            if(xappide2 == null){
+            if (xappide2 == null) {
                 bytes[0] = (byte) (((bytes[0] & 15) + 112) & 255);
                 xappide = Base64.encodeToString(bytes, 2).substring(0, 11);
             } else {
@@ -81,7 +81,7 @@ public class GCMFix{
                 Thread.sleep(100);
             }
             String token = sb.toString();
-            if(token.equals("REGISTRATION_ERROR")){
+            if (token.equals("REGISTRATION_ERROR")) {
                 return requestToken();
             }
             rid = 0;
@@ -109,7 +109,7 @@ public class GCMFix{
     private static void fillParams(List<String> params, String sig, String pub2, String xappid, long androidId, boolean del){
         rid++;
         params.add("X-subtype=841415684880");
-        if(del){
+        if (del) {
             params.add("X-delete=1");
             params.add("X-X-delete=1");
         } else {
@@ -128,13 +128,13 @@ public class GCMFix{
         sb.append("X-appid=");
         sb.append(xappid);
         params.add(sb.toString());
-        if(del){
+        if (del) {
             params.add("X-scope=GCM");
         } else {
             params.add("X-scope=*");
         }
         params.add("X-subscription=841415684880");
-        if(!del){
+        if (!del) {
             params.add("X-gmp_app_id=1:841415684880:android:632f429381141121");
         }
         params.add("X-app_ver_name=" + "5.56.1");
@@ -148,7 +148,7 @@ public class GCMFix{
 
     private static String join(String chr, Iterable<String> arr){
         String str = "";
-        for(String s : arr) {
+        for (String s : arr) {
             str = str.isEmpty() ? s : str + chr + s;
         }
         return str;
@@ -192,7 +192,7 @@ public class GCMFix{
             PrivateKey key = pair.getPrivate();
             Signature sign = Signature.getInstance(key instanceof RSAPrivateKey ? "SHA256withRSA" : "SHA256withECDSA");
             sign.initSign(key);
-            sign.update(join("\n", new String[]{"com.vkontakte.android", pub2}).getBytes(StandardCharsets.UTF_8));
+            sign.update(join("\n", new String[] {"com.vkontakte.android", pub2}).getBytes(StandardCharsets.UTF_8));
             return Base64.encodeToString(sign.sign(), 0);
         } catch (Exception e) {
             e.printStackTrace();

@@ -24,12 +24,12 @@ public class VKM3UParser{
         while(scanner.hasNext()) {
             String line = scanner.nextLine();
             mHeapSize += line.getBytes().length;
-            if(line.startsWith("#EXT-X-TARGETDURATION")){
+            if (line.startsWith("#EXT-X-TARGETDURATION")) {
                 mDuration = Integer.parseInt(getDirectiveValue(line));
-            } else if(line.startsWith("#EXT-X-KEY")){
+            } else if (line.startsWith("#EXT-X-KEY")) {
                 String base = getDirectiveValue(line);
                 final TransportStream ts;
-                if(!base.startsWith("METHOD=NONE")){
+                if (!base.startsWith("METHOD=NONE")) {
                     String keyURL = base.substring(base.indexOf("\"") + 1, base.lastIndexOf("\""));
                     mBaseURL = keyURL.substring(0, keyURL.lastIndexOf("/") + 1);
                     ts = new TransportStream(TransportStream.METHOD_AES128, keyURL);
@@ -37,10 +37,10 @@ public class VKM3UParser{
                     ts = new TransportStream();
                 }
                 mTransportStreams.add(ts);
-            } else if(line.startsWith("#EXTINF")){
-                if(mTransportStreams.size() == i)
+            } else if (line.startsWith("#EXTINF")) {
+                if (mTransportStreams.size() == i)
                     mTransportStreams.add(new TransportStream());
-            } else if(line.endsWith(".ts") || line.endsWith(".tp") || line.endsWith(".mpeg-ts") || line.endsWith(".m2ts")){
+            } else if (line.endsWith(".ts") || line.endsWith(".tp") || line.endsWith(".mpeg-ts") || line.endsWith(".m2ts")) {
                 mTransportStreams.get(i).setName(line);
                 ++i;
             }

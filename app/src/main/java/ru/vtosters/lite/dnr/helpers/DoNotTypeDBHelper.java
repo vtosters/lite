@@ -31,12 +31,12 @@ public class DoNotTypeDBHelper extends SQLiteOpenHelper{
         ArrayList<Integer> rs = new ArrayList<>();
 
         try (Cursor c = getReadableDatabase().query("dnt", null, null, null, null, null, null)) {
-            if(c.moveToFirst()){
+            if (c.moveToFirst()) {
                 int peerIdIndex = c.getColumnIndex("peerId");
                 int enabledIndex = c.getColumnIndex("enabled");
 
                 do {
-                    if(c.getInt(enabledIndex) == 1){
+                    if (c.getInt(enabledIndex) == 1) {
                         rs.add(c.getInt(peerIdIndex));
                     }
                 } while(c.moveToNext());
@@ -50,12 +50,12 @@ public class DoNotTypeDBHelper extends SQLiteOpenHelper{
 
     public boolean isEnabledForPeerId(int peerId){
         try (Cursor c = getReadableDatabase().query("dnt", null, null, null, null, null, null)) {
-            if(c.moveToFirst()){
+            if (c.moveToFirst()) {
                 int peerIdIndex = c.getColumnIndex("peerId");
                 int enabledIndex = c.getColumnIndex("enabled");
 
                 do {
-                    if(c.getInt(peerIdIndex) == peerId)
+                    if (c.getInt(peerIdIndex) == peerId)
                         return c.getInt(enabledIndex) == 1;
                 } while(c.moveToNext());
             }
@@ -71,7 +71,7 @@ public class DoNotTypeDBHelper extends SQLiteOpenHelper{
         cv.put("enabled", enabled ? 1 : 0);
 
         int i = getWritableDatabase().update("dnt", cv, "peerId = " + peerId, null);
-        if(i == 0){
+        if (i == 0) {
             cv.put("peerId", peerId);
             getWritableDatabase().insert("dnt", null, cv);
         }

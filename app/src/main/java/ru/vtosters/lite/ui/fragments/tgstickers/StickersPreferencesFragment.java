@@ -30,9 +30,9 @@ public class StickersPreferencesFragment extends MaterialPreferenceToolbarFragme
         });
 
         PreferencesUtil.addPreferenceCategory(this, Globals.getString("sprefsnetwork"));
-        PreferencesUtil.addListPreference(this, "VTGS:CM", "0", Globals.getString("sprefsctype"), new CharSequence[]{
+        PreferencesUtil.addListPreference(this, "VTGS:CM", "0", Globals.getString("sprefsctype"), new CharSequence[] {
                 Globals.getString("ctypedirect"), Globals.getString("ctypesocks")
-        }, new String[]{
+        }, new String[] {
                 "0", "2"
         });
 

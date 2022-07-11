@@ -32,7 +32,7 @@ public class LogWriterService extends Service{
         try {
             var exists = file.createNewFile();
 
-            if(!exists){
+            if (!exists) {
                 file.delete();
                 file.createNewFile();
             }

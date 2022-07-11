@@ -75,7 +75,7 @@ public class SettBackup{
 
     public static String getPrefContent(String filename) throws IOException{
         File prefsDir = new File(getContext().getFilesDir().getParentFile(), "shared_prefs");
-        if(!prefsDir.exists())
+        if (!prefsDir.exists())
             return null;
         File pref = new File(prefsDir, filename);
         return new String(readFileFully(pref));
@@ -88,12 +88,12 @@ public class SettBackup{
         Scanner scanner = new Scanner(new String(readFileFully(pref)));
         while(scanner.hasNextLine()) {
             String line = scanner.nextLine().trim();
-            if(line.contains("<?xml") || line.contains("<map>") || line.contains("</map>"))
+            if (line.contains("<?xml") || line.contains("<map>") || line.contains("</map>"))
                 continue;
-            if(line.startsWith("<set")){
+            if (line.startsWith("<set")) {
                 Pattern pattern = Pattern.compile("<set.+name=\"(.+)\">");
                 Matcher matcher = pattern.matcher(line);
-                if(!matcher.find()) continue;
+                if (!matcher.find()) continue;
                 String name = matcher.group(1);
                 Set<String> set = new HashSet<>();
                 String _line;
@@ -102,50 +102,50 @@ public class SettBackup{
                 }
                 editor.putStringSet(name, set)
                         .commit();
-                if(!Preferences.dev()) continue;
+                if (!Preferences.dev()) continue;
                 Log.d("Prefs", "Append " + name + " : " + set);
-            } else if(line.startsWith("<")){
+            } else if (line.startsWith("<")) {
                 Pattern pattern = Pattern.compile("^<(.+) name=\"(.+)\">(.+)</.+>$");
                 Matcher matcher = pattern.matcher(line);
                 String type = "", name = "", value = "";
-                if(!matcher.find()){
+                if (!matcher.find()) {
                     pattern = Pattern.compile("^<(.+) name=\"(.+?)\" value=\"(.+?)\" />$");
                     matcher = pattern.matcher(line);
-                    if(!matcher.find()) continue;
+                    if (!matcher.find()) continue;
                 }
                 type = matcher.group(1);
                 name = matcher.group(2);
                 value = matcher.group(3);
-                if(type.equals("string"))
+                if (type.equals("string"))
                     editor.putString(
                             name,
                             value
                     ).commit();
-                else if(type.equals("boolean"))
+                else if (type.equals("boolean"))
                     editor.putBoolean(
                             name,
                             Boolean.parseBoolean(value)
                     ).commit();
-                else if(type.equals("float"))
+                else if (type.equals("float"))
                     editor.putFloat(
                             name,
                             Float.parseFloat(value)
                     ).commit();
-                else if(type.equals("int"))
+                else if (type.equals("int"))
                     editor.putInt(
                             name,
                             Integer.parseInt(value)
                     ).commit();
-                else if(type.equals("long"))
+                else if (type.equals("long"))
                     editor.putLong(
                             name,
                             Long.parseLong(value)
                     ).commit();
-                if(!Preferences.dev()) continue;
+                if (!Preferences.dev()) continue;
                 Log.d("Prefs", "Append " + name + " : " + value);
             }
         }
-        if(!Preferences.dev()) return;
+        if (!Preferences.dev()) return;
         File prefsDir = new File(getContext().getFilesDir().getParentFile(), "shared_prefs");
         File file = new File(prefsDir, "com.vtosters.lite_preferences.xml");
         Log.d("TAG", new String(readFileFully(file)));

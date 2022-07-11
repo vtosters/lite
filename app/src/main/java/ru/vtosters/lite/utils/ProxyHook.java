@@ -3,8 +3,9 @@ import static ru.vtosters.lite.utils.Globals.convertDpToPixel;
 import static ru.vtosters.lite.utils.Globals.edit;
 import static ru.vtosters.lite.utils.Globals.restartApplication;
 import static ru.vtosters.lite.utils.Proxy.isZaboronaEnabled;
-import static ru.vtosters.lite.utils.Themes.*;
+import static ru.vtosters.lite.utils.Themes.getAccentColor;
 import static ru.vtosters.lite.utils.Themes.getAlertStyle;
+import static ru.vtosters.lite.utils.Themes.getTextAttr;
 
 import android.annotation.SuppressLint;
 import android.content.Context;
@@ -24,14 +25,14 @@ import com.vk.navigation.Navigator;
 import ru.vtosters.lite.ui.fragments.ProxySettingsFragment;
 
 public class ProxyHook{
-    public static void hookAuth(View v) {
+    public static void hookAuth(View v){
         VkAuthTextView button = (VkAuthTextView) v;
         button.setText("Настроить прокси");
         button.setOnClickListener(v1 -> callProxyDialog(v1.getContext()));
     }
 
     @SuppressLint("SetTextI18n")
-    public static void callProxyDialog(Context ctx) {
+    public static void callProxyDialog(Context ctx){
         RadioGroup rg = new RadioGroup(ctx);
 
         RadioButton rgDefault = new RadioButton(new ContextThemeWrapper(ctx, com.vtosters.lite.R.style.Widget_AppCompat_CompoundButton_RadioButton));
@@ -59,24 +60,24 @@ public class ProxyHook{
         builder.setMessage("Zaborona никак не связана с ВТостерс и мы не можем гарантировать её работу и безопасность");
         builder.setView(rg);
         builder.setPositiveButton("Применить", ((dialog, which) -> {
-                    if (rgProxy.isChecked()){
-                        edit().putString("proxy", "zaborona").commit();
-                        restartApplication();
-                    } else {
-                        if(isZaboronaEnabled()){
-                            edit().putString("proxy", "noproxy").commit();
-                            restartApplication();
-                        }
+            if (rgProxy.isChecked()) {
+                edit().putString("proxy", "zaborona").commit();
+                restartApplication();
+            } else {
+                if (isZaboronaEnabled()) {
+                    edit().putString("proxy", "noproxy").commit();
+                    restartApplication();
+                }
 
-                        edit().putString("proxy", "noproxy").commit();
-                    }
-                }));
+                edit().putString("proxy", "noproxy").commit();
+            }
+        }));
 
         builder.setNeutralButton("Настройки прокси", ((dialog, which) -> {
-                    Intent a2 = new Navigator(ProxySettingsFragment.class).b(ctx);
-                    a2.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-                    ctx.startActivity(a2);
-                }));
+            Intent a2 = new Navigator(ProxySettingsFragment.class).b(ctx);
+            a2.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+            ctx.startActivity(a2);
+        }));
 
         var alert = builder.create();
 

@@ -32,7 +32,7 @@ public class LibVKXClientImpl{
     }
 
     public void finish(){
-        if(cn != null){
+        if (cn != null) {
             ctx.unbindService(cn);
         }
 
@@ -40,7 +40,7 @@ public class LibVKXClientImpl{
     }
 
     public <T> T runOnServiceSync(LibVKXActionGeneric<T> action){
-        if(serviceInstance != null){
+        if (serviceInstance != null) {
             return action.run(serviceInstance);
         } else {
             return action.defaultValue();
@@ -50,9 +50,9 @@ public class LibVKXClientImpl{
     // true - action is ran
     // false - action is failed, should fallback to default UI/UX
     public boolean runOnService(LibVKXAction action){
-        if(serviceInstance != null){
+        if (serviceInstance != null) {
             try {
-                if(serviceInstance.getUserId() != getUserId()) return false;
+                if (serviceInstance.getUserId() != getUserId()) return false;
                 action.run(serviceInstance);
                 return true;
             } catch (RemoteException e) {
@@ -65,18 +65,18 @@ public class LibVKXClientImpl{
     }
 
     private boolean requestServiceInit(LibVKXAction runAfterBind){
-        if(!verifyBindActuality()) return false;
+        if (!verifyBindActuality()) return false;
 
         cn = new ServiceConnection(){
             @Override
             public void onServiceConnected(ComponentName name, IBinder service){
                 serviceInstance = ILibVkxService.Stub.asInterface(service);
-                if(serviceInstance == null){
+                if (serviceInstance == null) {
                     // op mycopok...
                     isBindFailed = true;
                 } else {
                     try {
-                        if(serviceInstance.getUserId() != getUserId()) return;
+                        if (serviceInstance.getUserId() != getUserId()) return;
                         runAfterBind.run(serviceInstance);
                     } catch (RemoteException e) {
                         e.printStackTrace();
@@ -95,7 +95,7 @@ public class LibVKXClientImpl{
     }
 
     private boolean verifyBindActuality(){
-        if(!checkIfAppExists()) return false; // no need
+        if (!checkIfAppExists()) return false; // no need
         return !isBindFailed;
     }
 
@@ -105,10 +105,10 @@ public class LibVKXClientImpl{
 
     private boolean checkIfAppExists(){
         List<ResolveInfo> resolveInfos = pm.queryIntentServices(getIntent(), 0);
-        if(resolveInfos == null || resolveInfos.isEmpty()) return false;
+        if (resolveInfos == null || resolveInfos.isEmpty()) return false;
 
-        for(ResolveInfo rs : resolveInfos) {
-            if(rs.serviceInfo.packageName.equals(ClientConstants.PACKAGE)) return true;
+        for (ResolveInfo rs : resolveInfos) {
+            if (rs.serviceInfo.packageName.equals(ClientConstants.PACKAGE)) return true;
         }
 
         return false;

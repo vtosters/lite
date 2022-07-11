@@ -12,7 +12,7 @@ public class ReflectionUtils{
      * Supports smali type (Lpackage/Class;)
      */
     public static Class<?> getClass(String name) throws ClassNotFoundException{
-        if(name.contains(";"))
+        if (name.contains(";"))
             name = name.substring(1, name.length() - 1).replace("/", ".");
         return Class.forName(name);
     }
@@ -117,7 +117,7 @@ public class ReflectionUtils{
             field = clz.getDeclaredField(fieldName);
         }
 
-        if(!Modifier.isFinal(field.getModifiers())) return;
+        if (!Modifier.isFinal(field.getModifiers())) return;
 
         unlockField(field);
         field.set(instance, value);
@@ -131,7 +131,7 @@ public class ReflectionUtils{
             field = getDeclaredField(className, fieldName);
         }
 
-        if(!Modifier.isFinal(field.getModifiers())) return;
+        if (!Modifier.isFinal(field.getModifiers())) return;
 
         unlockField(field);
         field.set(instance, value);
@@ -171,7 +171,7 @@ public class ReflectionUtils{
             field = clz.getDeclaredField(fieldName);
         }
 
-        if(!Modifier.isFinal(field.getModifiers())) return;
+        if (!Modifier.isFinal(field.getModifiers())) return;
 
         unlockField(field);
         field.set(null, value);
@@ -185,7 +185,7 @@ public class ReflectionUtils{
             field = getDeclaredField(className, fieldName);
         }
 
-        if(!Modifier.isFinal(field.getModifiers())) return;
+        if (!Modifier.isFinal(field.getModifiers())) return;
 
         unlockField(field);
         field.set(null, value);
@@ -221,7 +221,7 @@ public class ReflectionUtils{
 
     public static Method getMethod(Class<?> clz, String methodName, Object... parameters) throws NoSuchMethodException{
         Class<?>[] parameterTypes = new Class<?>[parameters.length];
-        for(int i = 0; i < parameters.length; i++) {
+        for (int i = 0; i < parameters.length; i++) {
             parameterTypes[i] = parameters[i].getClass();
         }
         Method method = getMethod(clz, methodName, parameterTypes);
@@ -231,7 +231,7 @@ public class ReflectionUtils{
 
     public static Method getMethod(String className, String methodName, Object... parameters) throws ClassNotFoundException, NoSuchMethodException{
         Class<?>[] parameterTypes = new Class<?>[parameters.length];
-        for(int i = 0; i < parameters.length; i++) {
+        for (int i = 0; i < parameters.length; i++) {
             parameterTypes[i] = parameters[i].getClass();
         }
         Method method = getMethod(className, methodName, parameterTypes);
@@ -256,7 +256,7 @@ public class ReflectionUtils{
 
     public static Method getDeclaredMethod(Class<?> clz, String methodName, Object... parameters) throws NoSuchMethodException{
         Class<?>[] parameterTypes = new Class<?>[parameters.length];
-        for(int i = 0; i < parameters.length; i++) {
+        for (int i = 0; i < parameters.length; i++) {
             parameterTypes[i] = parameters[i].getClass();
         }
         Method method = getDeclaredMethod(clz, methodName, parameterTypes);
@@ -266,7 +266,7 @@ public class ReflectionUtils{
 
     public static Method getDeclaredMethod(String className, String methodName, Object... parameters) throws ClassNotFoundException, NoSuchMethodException{
         Class<?>[] parameterTypes = new Class<?>[parameters.length];
-        for(int i = 0; i < parameters.length; i++) {
+        for (int i = 0; i < parameters.length; i++) {
             parameterTypes[i] = parameters[i].getClass();
         }
         Method method = getDeclaredMethod(className, methodName, parameterTypes);
@@ -299,7 +299,7 @@ public class ReflectionUtils{
 
     public static <T> T invokeMethod(Class<?> clz, String methodName, Object instance, Object... parameters) throws NoSuchMethodException, InvocationTargetException, IllegalAccessException{
         Class<?>[] parameterTypes = new Class<?>[parameters.length];
-        for(int i = 0; i < parameters.length; i++) {
+        for (int i = 0; i < parameters.length; i++) {
             parameterTypes[i] = parameters[i].getClass();
         }
         Method method;
@@ -313,7 +313,7 @@ public class ReflectionUtils{
 
     public static <T> T invokeMethod(String className, String methodName, Object instance, Object... parameters) throws NoSuchMethodException, InvocationTargetException, IllegalAccessException, ClassNotFoundException{
         Class<?>[] parameterTypes = new Class<?>[parameters.length];
-        for(int i = 0; i < parameters.length; i++) {
+        for (int i = 0; i < parameters.length; i++) {
             parameterTypes[i] = parameters[i].getClass();
         }
         Method method;
@@ -350,7 +350,7 @@ public class ReflectionUtils{
 
     public static <T> T invokeStaticMethod(Class<?> clz, String methodName, Object... parameters) throws NoSuchMethodException, InvocationTargetException, IllegalAccessException{
         Class<?>[] parameterTypes = new Class<?>[parameters.length];
-        for(int i = 0; i < parameters.length; i++) {
+        for (int i = 0; i < parameters.length; i++) {
             parameterTypes[i] = parameters[i].getClass();
         }
         Method method;
@@ -364,7 +364,7 @@ public class ReflectionUtils{
 
     public static <T> T invokeStaticMethod(String className, String methodName, Object... parameters) throws NoSuchMethodException, InvocationTargetException, IllegalAccessException, ClassNotFoundException{
         Class<?>[] parameterTypes = new Class<?>[parameters.length];
-        for(int i = 0; i < parameters.length; i++) {
+        for (int i = 0; i < parameters.length; i++) {
             parameterTypes[i] = parameters[i].getClass();
         }
         Method method;

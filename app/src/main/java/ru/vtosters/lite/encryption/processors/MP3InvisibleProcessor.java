@@ -21,7 +21,7 @@ public class MP3InvisibleProcessor extends IMProcessor{
 
     private static int toNum(String a, String cc){
         int n = 0;
-        for(int i = 0; i < a.length(); i++) {
+        for (int i = 0; i < a.length(); i++) {
             int start = (a.length() - i) - 1;
             n = (int) (((double) n) + (((double) cc.indexOf(a.substring(start, start + 1))) * Math.pow(cc.length(), i)));
         }
@@ -34,7 +34,7 @@ public class MP3InvisibleProcessor extends IMProcessor{
         try {
             byte[] bytes = source.getBytes(StandardCharsets.UTF_8);
             java.lang.String[] plainText = new String[bytes.length];
-            for(int i = 0; i < plainText.length; i++) {
+            for (int i = 0; i < plainText.length; i++) {
                 plainText[i] = toStr(bytes[i] & 255, " ​‌‏ ⁪⁫⁬⁭⁮⁯");
             }
             return "  " + TextUtils.join(" ", plainText);
@@ -50,7 +50,7 @@ public class MP3InvisibleProcessor extends IMProcessor{
         try {
             java.lang.String[] t = source.replaceAll("^" + "  ", "").split(" ");
             byte[] plainText = new byte[t.length];
-            for(int i = 0; i < plainText.length; i++) {
+            for (int i = 0; i < plainText.length; i++) {
                 plainText[i] = (byte) toNum(t[i], " ​‌‏ ⁪⁫⁬⁭⁮⁯");
             }
             return new String(plainText, StandardCharsets.UTF_8);

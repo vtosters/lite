@@ -75,7 +75,7 @@ public abstract class IMProcessor{
     }
 
     public void setEncryptionKeyFor(int id, @Nullable String key){
-        if(key == null || key.isEmpty()) key = "VTAesDefault";
+        if (key == null || key.isEmpty()) key = "VTAesDefault";
         Globals.getDefprefs().edit().putString("VT_IMEncodeKey_" + getPrefKey() + "_" + id, key).apply();
     }
 

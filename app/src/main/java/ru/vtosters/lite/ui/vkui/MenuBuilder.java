@@ -10,7 +10,6 @@ import android.content.Context;
 import android.graphics.drawable.Drawable;
 import android.util.Log;
 import android.view.View;
-import android.widget.Toast;
 
 import com.vk.core.dialogs.actionspopup.ActionsPopup;
 import com.vk.profile.ui.components.CommunityFragmentActionsMenuBuilder;

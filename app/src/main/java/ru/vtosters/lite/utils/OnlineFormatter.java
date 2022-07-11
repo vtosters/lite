@@ -16,7 +16,7 @@ public class OnlineFormatter{
     private static String AppName;
 
     public static String getAppName(int appid){  // thanks to egormetlitsky (vk mp3 mod) for helping with online ids
-        if(appid <= 3) return null;
+        if (appid <= 3) return null;
 
         switch(appid) {
             case 2274003:
@@ -130,7 +130,7 @@ public class OnlineFormatter{
         var prefs = getPrefsFromFile("onlines");
         var appname = prefs.getString(String.valueOf(appid), null);
 
-        if(appname != null) return appname;
+        if (appname != null) return appname;
 
         makeRequest("https://" + getApi() + "/method/apps.get?app_id=" + appid + "&v=5.99&access_token=" + getUserToken(),
                 response -> {
@@ -143,7 +143,7 @@ public class OnlineFormatter{
 
                         prefs.edit().putString(String.valueOf(appid), AppName).apply();
 
-                        if(dev()) sendToast("AppName: " + AppName + " for appid: " + appid);
+                        if (dev()) sendToast("AppName: " + AppName + " for appid: " + appid);
                     } catch (JSONException e) {
                         e.printStackTrace();
                     }
@@ -155,7 +155,7 @@ public class OnlineFormatter{
     public static String getOnline(int appid){
         var appname = getAppName(appid);
 
-        if(appname == null) return null;
+        if (appname == null) return null;
 
         return getString("custom_online") + " " + appname;
     }

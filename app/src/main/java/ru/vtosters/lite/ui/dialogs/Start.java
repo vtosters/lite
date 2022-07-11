@@ -15,8 +15,8 @@ import ru.vtosters.lite.utils.OEMDetector;
 
 public class Start{
     public static void alert(final Activity activity){
-        if(Build.VERSION.SDK_INT >= 23){
-            activity.requestPermissions(new String[]{"android.permission.WRITE_EXTERNAL_STORAGE"}, 228);
+        if (Build.VERSION.SDK_INT >= 23) {
+            activity.requestPermissions(new String[] {"android.permission.WRITE_EXTERNAL_STORAGE"}, 228);
         }
         AlertDialog.Builder builder = new AlertDialog.Builder(activity);
         builder.setTitle(getString("debug_warning"));
@@ -37,7 +37,7 @@ public class Start{
                 activity.startActivity(new Intent("android.intent.action.VIEW").setData(Uri.parse("https://t.me/vtosters")));
             }
         });
-        if(getBoolValue("showAlert", true)){
+        if (getBoolValue("showAlert", true)) {
             builder.show();
         }
     }
@@ -45,7 +45,7 @@ public class Start{
     private static String getWelcome(){
         String Default = getString("startsumm1");
 
-        if(OEMDetector.isOEM()){
+        if (OEMDetector.isOEM()) {
             return Default + getString("startsumm2");
         }
 

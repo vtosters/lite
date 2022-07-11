@@ -1,7 +1,5 @@
 package ru.vtosters.lite.downloaders;
 
-import android.app.NotificationChannel;
-import android.app.NotificationManager;
 import android.os.Environment;
 import android.util.Log;
 
@@ -19,10 +17,10 @@ import ru.vtosters.lite.music.FFMpeg;
 import ru.vtosters.lite.music.M3UDownloader;
 import ru.vtosters.lite.utils.Globals;
 
-public class AudioDownloader {
+public class AudioDownloader{
     private static NotificationManagerCompat notificationManager = NotificationManagerCompat.from(Globals.getContext());
 
-    public static void downloadAudio(MusicTrack track) {
+    public static void downloadAudio(MusicTrack track){
         if (track.D == null) {
             ToastUtils.a("Не удалось найти ссылку на аудиозапись");
             return;
@@ -32,15 +30,15 @@ public class AudioDownloader {
         var downloadPath = musicPath + File.separator + tempId;
         var notification = buildDownloadNotification(track, tempId);
 
-        downloadM3U8(track, downloadPath, new Callback() {
+        downloadM3U8(track, downloadPath, new Callback(){
             @Override
-            public void onProgress(int progress) {
+            public void onProgress(int progress){
                 notification.setProgress(100, progress, false);
                 notificationManager.notify(tempId, notification.build());
             }
 
             @Override
-            public void onSuccess() {
+            public void onSuccess(){
                 try {
                     var fileName = track.toString();
                     var success = FFMpeg.convert(downloadPath, musicPath + File.separator + fileName + ".mp3");
@@ -53,28 +51,27 @@ public class AudioDownloader {
                     } else {
                         onFailure();
                     }
-                }
-                catch (UnsatisfiedLinkError e) {
-                    Log.e("AudioDownloader","Опять эти нативные либы");
+                } catch (UnsatisfiedLinkError e) {
+                    Log.e("AudioDownloader", "Опять эти нативные либы");
                     Log.e("AudioDownloader", e.getMessage());
                     onFailure();
                 }
             }
 
             @Override
-            public void onFailure() {
+            public void onFailure(){
                 notification.setContentText("Не удалось загрузить аудиозапись").setProgress(0, 0, false);
                 notificationManager.notify(tempId, notification.build());
             }
 
             @Override
-            public void onSizeReceived(long size, long header) {
+            public void onSizeReceived(long size, long header){
 
             }
         });
     }
 
-    private static void downloadM3U8(MusicTrack track, String path, Callback callback) {
+    private static void downloadM3U8(MusicTrack track, String path, Callback callback){
         File outDir = new File(path);
         if (!outDir.exists())
             if (outDir.mkdir())
@@ -85,7 +82,7 @@ public class AudioDownloader {
         new M3UDownloader(track.D, outDir, callback).execute();
     }
 
-    private static NotificationCompat.Builder buildDownloadNotification(MusicTrack track, int id) {
+    private static NotificationCompat.Builder buildDownloadNotification(MusicTrack track, int id){
         var notificationBuilder = new NotificationCompat.Builder(Globals.getContext(), "music_downloads")
                 .setSmallIcon(android.R.drawable.stat_sys_download)
                 .setContentTitle("Загрузка аудиозаписи")

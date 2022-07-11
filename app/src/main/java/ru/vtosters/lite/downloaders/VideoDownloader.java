@@ -29,7 +29,7 @@ public class VideoDownloader{
     private static final int action_id = 1488;
 
     public static boolean onClick(int id, VideoFile video, Context ctx){
-        if(id == action_id){
+        if (id == action_id) {
             downloadVideo(video, ctx);
             return true;
         }
@@ -37,7 +37,7 @@ public class VideoDownloader{
     }
 
     public static void injectAction(ArrayList<MenuBottomSheetAction> list, VideoFile video){
-        if(!video.U && !video.I1()){
+        if (!video.U && !video.I1()) {
             MenuBottomSheetAction downloadAction = new MenuBottomSheetAction(
                     action_id,
                     com.vtosters.lite.R.drawable.ic_download_outline_24,
@@ -52,47 +52,47 @@ public class VideoDownloader{
         final List<String> list = new ArrayList<>();
         final List<String> urls = new ArrayList<>();
 
-        if(!Objects.equals(videoFile.e, "")){
+        if (!Objects.equals(videoFile.e, "")) {
             list.add("240p");
             urls.add(videoFile.e);
         }
-        if(!Objects.equals(videoFile.f, "")){
+        if (!Objects.equals(videoFile.f, "")) {
             list.add("360p");
             urls.add(videoFile.f);
         }
-        if(!Objects.equals(videoFile.g, "")){
+        if (!Objects.equals(videoFile.g, "")) {
             list.add("480p");
             urls.add(videoFile.g);
         }
-        if(!Objects.equals(videoFile.h, "")){
+        if (!Objects.equals(videoFile.h, "")) {
             list.add("720p");
             urls.add(videoFile.h);
         }
-        if(!Objects.equals(videoFile.B, "")){
+        if (!Objects.equals(videoFile.B, "")) {
             list.add("1080p");
             urls.add(videoFile.B);
         }
-        if(!Objects.equals(videoFile.C, "")){
+        if (!Objects.equals(videoFile.C, "")) {
             list.add("1440p");
             urls.add(videoFile.C);
         }
-        if(!Objects.equals(videoFile.D, "")){
+        if (!Objects.equals(videoFile.D, "")) {
             list.add("2160p");
             urls.add(videoFile.D);
         }
 
-        if(list.isEmpty()){
+        if (list.isEmpty()) {
             ToastUtils.a(getString("videodownloaderr"));
             return;
         }
 
         var max = new String[list.size()];
 
-        for(int i = 0; i < list.size(); i++) {
+        for (int i = 0; i < list.size(); i++) {
             max[i] = list.get(i);
         }
 
-        if(context == null){
+        if (context == null) {
             var url = urls.get(urls.size() - 1);
 
             DownloadManager.Request request = new DownloadManager.Request(Uri.parse(url));
@@ -116,12 +116,12 @@ public class VideoDownloader{
     }
 
     public static void parseVideoLink(String url, Context ctx){
-        if(url.contains("vk.com/story")){
+        if (url.contains("vk.com/story")) {
             ToastUtils.a("Не поддерживается загрузка историй");
             return;
         }
 
-        if(!url.contains("vk.com/video")){
+        if (!url.contains("vk.com/video")) {
             ToastUtils.a("Неверная ссылка");
             return;
         }

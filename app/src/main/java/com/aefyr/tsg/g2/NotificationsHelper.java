@@ -38,7 +38,7 @@ public class NotificationsHelper{
 
         downloadingPacksNotificationsIds = new HashMap<>();
 
-        if(oreo()){
+        if (oreo()) {
             NotificationChannel notificationChan = new NotificationChannel(NOTIFICATION_CHANNEL_ID, "Сервис стикеров Telegram в VTosters", NotificationManager.IMPORTANCE_HIGH);
             ((NotificationManager) c.getSystemService(Context.NOTIFICATION_SERVICE)).createNotificationChannel(notificationChan);
         }
@@ -57,7 +57,7 @@ public class NotificationsHelper{
     }
 
     public void packDownloadUpdated(TelegramStickersPack pack, int downloadProgress){
-        if(System.currentTimeMillis() - lastNotificationTime.get() < MIN_TIME_BETWEEN_UPDATE_NOTIFICATIONS)
+        if (System.currentTimeMillis() - lastNotificationTime.get() < MIN_TIME_BETWEEN_UPDATE_NOTIFICATIONS)
             return;
 
         lastNotificationTime.set(System.currentTimeMillis());
@@ -69,7 +69,7 @@ public class NotificationsHelper{
         builder.setOngoing(true);
         builder.setOnlyAlertOnce(true);
 
-        if(downloadingPacksNotificationsIds.containsKey(pack))
+        if (downloadingPacksNotificationsIds.containsKey(pack))
             manager.notify(downloadingPacksNotificationsIds.get(pack), builder.build());
     }
 
@@ -80,12 +80,12 @@ public class NotificationsHelper{
         builder.setContentTitle("Сервис стикеров Telegram в VTosters");
 
         String text;
-        if(success)
+        if (success)
             text = wasUpdate ? pack.title + " успешно обновлен" : pack.title + " успешно загружен";
         else
             text = wasUpdate ? pack.title + ": ошибка при обновлении" : pack.title + ": ошибка при загрузке";
 
-        if(e instanceof TelegramStickersGrabber.TSGException){
+        if (e instanceof TelegramStickersGrabber.TSGException) {
             text = pack.title + ": " + e.getMessage();
         }
 
@@ -100,7 +100,7 @@ public class NotificationsHelper{
 
     private Notification.Builder commonBuilder(){
         var builder = new Notification.Builder(c).setPriority(Notification.PRIORITY_MAX).setSmallIcon(getIdentifier("ic_download_24", "drawable"));
-        if(oreo()){
+        if (oreo()) {
             builder.setChannelId(NOTIFICATION_CHANNEL_ID);
         }
 

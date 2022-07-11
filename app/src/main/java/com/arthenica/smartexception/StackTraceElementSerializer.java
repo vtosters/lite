@@ -38,7 +38,7 @@ package com.arthenica.smartexception;
  * @author Taner Sener
  * @since 0.1.0
  */
-public interface StackTraceElementSerializer {
+public interface StackTraceElementSerializer{
 
     /**
      * <p>Converts the given <code>stackTraceElement</code> into a string.

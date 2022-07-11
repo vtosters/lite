@@ -28,7 +28,7 @@ public class VKIDProtection{
             a2.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
             activity.startActivity(a2);
         });
-        if(getBoolValue("showAlertVkId", true)){
+        if (getBoolValue("showAlertVkId", true)) {
             builder.show();
         }
     }
