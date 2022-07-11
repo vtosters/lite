@@ -4,10 +4,13 @@ import static ru.vtosters.lite.ui.wallpapers.WallpapersHooks.getRadiusSummary;
 import static ru.vtosters.lite.ui.wallpapers.WallpapersHooks.getWallpaperFile;
 import static ru.vtosters.lite.ui.wallpapers.WallpapersHooks.removeWallpaper;
 import static ru.vtosters.lite.ui.wallpapers.WallpapersHooks.requestUpdateWallpaper;
+import static ru.vtosters.lite.utils.CacheUtils.deleteCache;
 import static ru.vtosters.lite.utils.Globals.edit;
 import static ru.vtosters.lite.utils.Globals.getIdentifier;
 
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.widget.Toast;
 
@@ -15,6 +18,7 @@ import androidx.annotation.Nullable;
 import androidx.preference.ListPreference;
 
 import com.vtosters.lite.general.fragments.MaterialPreferenceToolbarFragment;
+import com.vtosters.lite.im.ImEngineProvider;
 
 import java.io.FileOutputStream;
 import java.io.IOException;
@@ -56,6 +60,7 @@ public class WallpaperMenuFragment extends MaterialPreferenceToolbarFragment{
 
         PreferencesUtil.addPreference(this, "wp_set", "Выбрать обои", "из галереи", "ic_picture_outline_28", preference -> {
             startActivityForResult(new Intent(Intent.ACTION_PICK, android.provider.MediaStore.Images.Media.EXTERNAL_CONTENT_URI), 1488);
+            removeStickCache();
             return true;
         });
 
@@ -63,6 +68,7 @@ public class WallpaperMenuFragment extends MaterialPreferenceToolbarFragment{
             removeWallpaper();
             requestUpdateWallpaper();
             mWPPreviewPref.redraw();
+            removeStickCache();
             return true;
         });
 
@@ -125,6 +131,15 @@ public class WallpaperMenuFragment extends MaterialPreferenceToolbarFragment{
             e.printStackTrace();
             Toast.makeText(requireActivity(), e.getLocalizedMessage(), Toast.LENGTH_LONG).show();
         }
+    }
+
+    private static void removeStickCache(){
+        SharedPreferences prefs = getContext().getSharedPreferences("stickers", Context.MODE_PRIVATE);
+        SharedPreferences prefs2 = getContext().getSharedPreferences("stickers_storage", Context.MODE_PRIVATE);
+        prefs.edit().clear().commit();
+        prefs2.edit().clear().commit();
+        deleteCache();
+        ImEngineProvider.b().a();
     }
 
     @Override
