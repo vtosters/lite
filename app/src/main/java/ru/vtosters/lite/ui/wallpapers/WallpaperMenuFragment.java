@@ -8,8 +8,6 @@ import static ru.vtosters.lite.ui.wallpapers.WallpapersHooks.requestUpdateWallpa
 import static ru.vtosters.lite.utils.CacheUtils.deleteCache;
 import static ru.vtosters.lite.utils.Globals.edit;
 import static ru.vtosters.lite.utils.Globals.getIdentifier;
-import static ru.vtosters.lite.utils.Globals.getPreferences;
-import static ru.vtosters.lite.utils.Preferences.DoNotUseOldIcons;
 
 import android.content.Context;
 import android.content.Intent;
@@ -29,7 +27,6 @@ import java.io.InputStream;
 import java.io.OutputStream;
 
 import ru.vtosters.lite.ui.PreferencesUtil;
-import ru.vtosters.lite.utils.Globals;
 
 public class WallpaperMenuFragment extends MaterialPreferenceToolbarFragment{
 
