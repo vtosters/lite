@@ -61,6 +61,10 @@ public class WallpapersHooks{
                 mWallpaper = getMosaic(mWallpaper);
             }
 
+            if (getPreferences().getBoolean("msg_monochrome", false)) {
+                mWallpaper = getMonochrome(mWallpaper);
+            }
+
             mUpdateWallpaperRequested = false;
         }
 
@@ -173,6 +177,27 @@ public class WallpapersHooks{
                 instance = lighten(instance);
         }
         return new BitmapDrawable(getResources(), instance);
+    }
+
+    public static Drawable getMonochrome(Drawable orig){
+        if (orig == null) return null;
+        if (!(orig instanceof BitmapDrawable)) return orig;
+        Bitmap instance = ((BitmapDrawable) orig).getBitmap().copy(Bitmap.Config.ARGB_8888, true);
+
+        Bitmap bwBitmap = Bitmap.createBitmap( instance.getWidth(), instance.getHeight(), Bitmap.Config.RGB_565 );
+        float[] hsv = new float[ 3 ];
+        for( int col = 0; col < instance.getWidth(); col++ ) {
+            for( int row = 0; row < instance.getHeight(); row++ ) {
+                Color.colorToHSV( instance.getPixel( col, row ), hsv );
+                if( hsv[ 2 ] > 0.5f ) {
+                    bwBitmap.setPixel( col, row, 0xffffffff );
+                } else {
+                    bwBitmap.setPixel( col, row, 0xff000000 );
+                }
+            }
+        }
+
+        return new BitmapDrawable(getResources(), bwBitmap);
     }
 
     private static Bitmap darken(Bitmap bm){

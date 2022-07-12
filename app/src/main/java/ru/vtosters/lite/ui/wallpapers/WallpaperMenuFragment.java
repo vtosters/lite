@@ -8,6 +8,8 @@ import static ru.vtosters.lite.ui.wallpapers.WallpapersHooks.requestUpdateWallpa
 import static ru.vtosters.lite.utils.CacheUtils.deleteCache;
 import static ru.vtosters.lite.utils.Globals.edit;
 import static ru.vtosters.lite.utils.Globals.getIdentifier;
+import static ru.vtosters.lite.utils.Globals.getPreferences;
+import static ru.vtosters.lite.utils.Preferences.DoNotUseOldIcons;
 
 import android.content.Context;
 import android.content.Intent;
@@ -27,6 +29,7 @@ import java.io.InputStream;
 import java.io.OutputStream;
 
 import ru.vtosters.lite.ui.PreferencesUtil;
+import ru.vtosters.lite.utils.Globals;
 
 public class WallpaperMenuFragment extends MaterialPreferenceToolbarFragment{
 
@@ -91,6 +94,14 @@ public class WallpaperMenuFragment extends MaterialPreferenceToolbarFragment{
                 "Отключено", "Низкое", "Среднее", "Высокое"
         }, new String[] {
                 "disabled", "low", "med", "high"
+        });
+
+        PreferencesUtil.addMaterialSwitchPreference(this, "msg_monochrome", "Черно-белый фон", "", null, false, (preference, o) -> {
+            boolean value = (boolean) o;
+            edit().putBoolean("msg_monochrome", value).commit();
+            requestUpdateWallpaper();
+            mWPPreviewPref.redraw();
+            return true;
         });
 
         ListPreference blur = (ListPreference) findPreference("msg_blur_radius");
