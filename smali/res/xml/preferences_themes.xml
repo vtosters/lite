@@ -5,7 +5,7 @@
             android:defaultValue="false"
             android:key="milkshake"
             android:summary="Глобальный редизайн ВКонтакте"
-            android:title="milkshake" />
+            android:title="Milkshake тема" />
         <Preference
             android:enabled="false"
             android:summary="@string/appearance_theme_info_summary"
