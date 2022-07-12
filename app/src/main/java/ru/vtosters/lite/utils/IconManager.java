@@ -23,7 +23,7 @@ public class IconManager {
 
     // available labels list
     public static List<String> sLabels = Arrays.asList(
-            "standard", "vt", "vkontakte"
+            "standard", "vt"
     );
 
     // available icons list for verified users
