@@ -207,9 +207,15 @@ public class Globals{
     }
 
     public static Drawable getDrawableFromUrl(String url, String def, Boolean rounded, Boolean scaled){
-        if (!isNetworkConnected()) return getDrawable(getContext(), getIdentifier(def, "drawable"));
+        if (!isNetworkConnected()) {
+            if (def == null) return null;
+            return getDrawable(getContext(), getIdentifier(def, "drawable"));
+        }
 
-        if (isNetworkIsSlow()) return getDrawable(getContext(), getIdentifier(def, "drawable"));
+        if (isNetworkIsSlow()) {
+            if (def == null) return null;
+            return getDrawable(getContext(), getIdentifier(def, "drawable"));
+        }
 
         try {
             URL aryURI = new URL(url);
