@@ -3385,9 +3385,9 @@
     invoke-virtual {p2, v0}, Landroid/view/View;->setVisibility(I)V
 
     .line 59
-    new-instance p2, Lcom/vtosters/lite/general/fragments/ProfileFragment1;
+    new-instance p2, Lcom/vtosters/lite/fragments/ProfileFragment$1;
 
-    invoke-direct {p2, p0}, Lcom/vtosters/lite/general/fragments/ProfileFragment1;-><init>(Lcom/vtosters/lite/fragments/ProfileFragment;)V
+    invoke-direct {p2, p0}, Lcom/vtosters/lite/fragments/ProfileFragment$1;-><init>(Lcom/vtosters/lite/fragments/ProfileFragment;)V
 
     const/4 v0, 0x1
 
