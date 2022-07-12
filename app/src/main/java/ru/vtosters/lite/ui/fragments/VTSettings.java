@@ -16,6 +16,7 @@ import static ru.vtosters.lite.utils.Globals.getUserPhoto;
 import static ru.vtosters.lite.utils.Globals.getUsername;
 import static ru.vtosters.lite.utils.Globals.isGmsInstalled;
 import static ru.vtosters.lite.utils.Globals.restartApplication;
+import static ru.vtosters.lite.utils.IconManager.icons;
 import static ru.vtosters.lite.utils.IconManager.iconsValues;
 import static ru.vtosters.lite.utils.Preferences.DoNotUseOldIcons;
 import static ru.vtosters.lite.utils.Preferences.ads;
