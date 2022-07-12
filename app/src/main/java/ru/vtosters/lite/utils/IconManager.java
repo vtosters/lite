@@ -21,9 +21,17 @@ public class IconManager {
             "standard", "vt"
     );
 
+    public static List<String> sIconsNames = Arrays.asList(
+            "VK", "VTLite"
+    );
+
     // available labels list
     public static List<String> sLabels = Arrays.asList(
             "standard", "vt"
+    );
+
+    public static List<String> sLabelsNames = Arrays.asList(
+            "VK", "VTLite"
     );
 
     // available icons list for verified users
@@ -31,17 +39,33 @@ public class IconManager {
             "standard", "vt", "navy", "tiger", "spring", "sea", "sakura", "party", "paint", "flamingo"
     );
 
+    public static List<String> sIconsPlusNames = Arrays.asList(
+            "VK", "VTLite", "Navy", "Tiger", "Spring", "Sea", "Sakura", "Party", "Paint", "Flamingo"
+    );
+
     // available labels list for verified users
     public static List<String> sLabelsPlus = Arrays.asList(
             "standard", "vt", "vkontakte"
     );
 
+    public static List<String> sLabelsPlusNames = Arrays.asList(
+            "VK", "VTLite", "VKontakte"
+    );
+
     public static CharSequence[] icons() {
-        return (hasVerification() && isValidSignature() ? sIconsPlus : sIcons).toArray(new CharSequence[0]);
+        return (hasVerification() && isValidSignature() ? sIconsPlusNames : sIconsNames).toArray(new CharSequence[0]);
     }
 
     public static CharSequence[] iconsValues() {
         return (hasVerification() && isValidSignature() ? sIconsPlus : sIcons).toArray(new CharSequence[0]);
+    }
+
+    public static CharSequence[] appname() {
+        return (hasVerification() && isValidSignature() ? sLabelsPlusNames : sLabelsNames).toArray(new CharSequence[0]);
+    }
+
+    public static CharSequence[] appnameValues() {
+        return (hasVerification() && isValidSignature() ? sLabelsPlus : sLabels).toArray(new CharSequence[0]);
     }
 
     public static void switchComponent(String icon, String appName) {
