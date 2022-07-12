@@ -11,6 +11,7 @@ import static ru.vtosters.lite.utils.SettBackup.backupOnlines;
 import static ru.vtosters.lite.utils.SettBackup.backupSettings;
 import static ru.vtosters.lite.utils.SettBackup.deletePrefs;
 import static ru.vtosters.lite.utils.SettBackup.restoreBackup;
+import static ru.vtosters.lite.utils.Themes.getAlertStyle;
 
 import android.content.ClipData;
 import android.content.ClipboardManager;
@@ -75,7 +76,11 @@ public class OtherFragment extends MaterialPreferenceToolbarFragment{
     public static class onlines implements Preference.OnPreferenceClickListener{
         @Override // android.support.v7.preference.Preference.c
         public boolean onPreferenceClick(Preference preference){
-            backupOnlines();
+            try {
+                backupOnlines();
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
             return true;
         }
     }
@@ -171,7 +176,7 @@ public class OtherFragment extends MaterialPreferenceToolbarFragment{
         public boolean onPreferenceClick(Preference preference){
             var arr = SettBackup.getBackupsNames();
             var adapter = new ArrayAdapter(getContext(), android.R.layout.simple_list_item_1, arr);
-            new AlertDialog.Builder(getContext())
+            new AlertDialog.Builder(getContext(), getAlertStyle())
                     .setTitle("Выберите бэкап")
                     .setAdapter(adapter, (dialog, which) -> {
                         try {
