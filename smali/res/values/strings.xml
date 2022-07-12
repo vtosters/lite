@@ -5943,6 +5943,8 @@ May look like a fake leaving the online"</string>
     <string name="thanksfordonate">, thank you for supporting the project!</string>
     <string name="getdonate">, support the project with a donation and get rewards</string>
 
+    <string name="wallpapers">Wallpapers</string>
+
     <string name="vkiddisable">Disable protection</string>
     <string name="vkidsumm">VK has started blocking the use of third-party applications, so for the stable operation of all parts of the application, it is necessary to disable Protection from suspicious applications \n\nVK ID -> Security and Login -> Protection from suspicious applications</string>
 </resources>

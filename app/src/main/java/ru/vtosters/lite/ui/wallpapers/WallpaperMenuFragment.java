@@ -215,6 +215,6 @@ public class WallpaperMenuFragment extends MaterialPreferenceToolbarFragment{
 
     @Override
     public int T4(){
-        return getIdentifier("vtltgs", "string");
+        return getIdentifier("wallpapers", "string");
     }
 }

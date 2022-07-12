@@ -71,15 +71,15 @@ public class IconManager{
             appNameComponent = appnamesList.indexOf(appname); // get appname index
         }
 
-        var oldint = getPreferences().getInt("component_enabled", 11);
-        var newint = Integer.parseInt(iconComponent + "" + appNameComponent);
+        String oldint = getPreferences().getString("components_enabled", "11");
+        String newint = iconComponent + "" + appNameComponent;
 
         if (oldint == newint)
             return; // check if current component is equal to custom value or if custom value is not exist
 
         componentSwitcher("id" + oldint, false); // disable current component to prevent conflict with custom value
 
-        edit().putInt("component_enabled", newint).commit(); // save custom value
+        edit().putString("components_enabled", newint).commit(); // save custom value
 
         componentSwitcher("id" + newint, true); // enable custom value
     }
