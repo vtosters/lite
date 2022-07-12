@@ -15,11 +15,14 @@ import static ru.vtosters.lite.utils.SettBackup.restoreBackup;
 import android.content.ClipData;
 import android.content.ClipboardManager;
 import android.content.Context;
+import android.content.DialogInterface;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.webkit.WebView;
+import android.widget.ArrayAdapter;
 import android.widget.Toast;
 
+import androidx.appcompat.app.AlertDialog;
 import androidx.preference.Preference;
 
 import com.vk.auth.api.VKAccount;
@@ -36,6 +39,7 @@ import java.io.IOException;
 
 import b.h.g.m.FileUtils;
 import ru.vtosters.lite.utils.Globals;
+import ru.vtosters.lite.utils.SettBackup;
 
 public class OtherFragment extends MaterialPreferenceToolbarFragment{
 
@@ -165,13 +169,19 @@ public class OtherFragment extends MaterialPreferenceToolbarFragment{
     public class restoreprefs implements Preference.OnPreferenceClickListener{
         @Override // android.support.v7.preference.Preference.c
         public boolean onPreferenceClick(Preference preference){
-            try {
-                restoreBackup();
-                Toast.makeText(getContext(), "Настройки восстановлены", LENGTH_LONG).show();
-            } catch (IOException e) {
-                e.printStackTrace();
-                Toast.makeText(getContext(), "Ошибка, Настройки не восстановлены", LENGTH_LONG).show();
-            }
+            var arr = SettBackup.getBackupsNames();
+            var adapter = new ArrayAdapter(getContext(), android.R.layout.simple_list_item_1, arr);
+            new AlertDialog.Builder(getContext())
+                    .setTitle("Выберите бэкап")
+                    .setAdapter(adapter, (dialog, which) -> {
+                        try {
+                            restoreBackup(arr[which]);
+                            Toast.makeText(getContext(), "Настройки восстановлены", LENGTH_LONG).show();
+                        } catch (IOException e) {
+                            e.printStackTrace();
+                            Toast.makeText(getContext(), "Ошибка, Настройки не восстановлены", LENGTH_LONG).show();
+                        }
+                    }).create().show();
             return true;
         }
     }

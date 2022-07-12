@@ -16,6 +16,7 @@ import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.text.SimpleDateFormat;
+import java.util.Arrays;
 import java.util.Date;
 import java.util.HashSet;
 import java.util.Locale;
@@ -25,6 +26,8 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 public class SettBackup{
+
+    static File sBackupDir = new File(getExternalStoragePublicDirectory(DIRECTORY_DOWNLOADS), "/VTLBackups/");
 
     private static SharedPreferences getPrefs(){
         return getContext().getSharedPreferences("com.vtosters.lite_preferences", Context.MODE_PRIVATE);
@@ -53,16 +56,14 @@ public class SettBackup{
     }
 
     public static void backupSettings(){
-//        SimpleDateFormat dateFormat = new SimpleDateFormat("yyyyMMdd_HHmmss", Locale.getDefault());
-        var dir = new File(getExternalStoragePublicDirectory(DIRECTORY_DOWNLOADS), "/VTLBackups/");
-        var file = new File(dir,
+        SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd:HH-mm-ss", Locale.getDefault());
+        var file = new File(sBackupDir,
                 "Backup_"
-//                + dateFormat.format(new Date())
-                        + "test"
+                + dateFormat.format(new Date())
                         + ".xml");
         try {
             file.delete();
-            dir.mkdirs();
+            sBackupDir.mkdirs();
             FileWriter out = new FileWriter(file);
             out.write(getPrefContent("com.vtosters.lite_preferences.xml"));
             out.close();
@@ -73,6 +74,15 @@ public class SettBackup{
         }
     }
 
+    public static String[] getBackupsNames() {
+        var arr = sBackupDir.list((dir, name) -> {return name.endsWith(".xml");});
+        if (arr == null) return new String[0];
+        for (int i = 0; i < arr.length; i++) {
+            arr[i] = arr[i].replace(".xml", "");
+        }
+        return arr;
+    }
+
     public static String getPrefContent(String filename) throws IOException{
         File prefsDir = new File(getContext().getFilesDir().getParentFile(), "shared_prefs");
         if (!prefsDir.exists())
@@ -81,10 +91,9 @@ public class SettBackup{
         return new String(readFileFully(pref));
     }
 
-    public static void restoreBackup() throws IOException{
+    public static void restoreBackup(String backupName) throws IOException{
         SharedPreferences.Editor editor = getPrefs().edit();
-        File dir = new File(getExternalStoragePublicDirectory(DIRECTORY_DOWNLOADS + "/VTLBackups/").getPath());
-        File pref = new File(dir, "Backup_test.xml");
+        File pref = new File(sBackupDir, backupName + ".xml");
         Scanner scanner = new Scanner(new String(readFileFully(pref)));
         while(scanner.hasNextLine()) {
             String line = scanner.nextLine().trim();
