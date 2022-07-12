@@ -73,7 +73,7 @@ public class WallpaperMenuFragment extends MaterialPreferenceToolbarFragment{
             return true;
         });
 
-        PreferencesUtil.addPreferenceCategory(this, "Параметры");
+        PreferencesUtil.addPreferenceCategory(this, "Фильтры");
 
         PreferencesUtil.addListPreference(this, "msg_blur_radius", "disabled", "Размытие фона сообщений", new CharSequence[] {
                 "Отключено", "Низкое (15px)", "Среднее (25px)", "Высокое (50px)"
@@ -96,6 +96,54 @@ public class WallpaperMenuFragment extends MaterialPreferenceToolbarFragment{
         PreferencesUtil.addMaterialSwitchPreference(this, "msg_monochrome", "Черно-белый фон", "", null, false, (preference, o) -> {
             boolean value = (boolean) o;
             edit().putBoolean("msg_monochrome", value).commit();
+            requestUpdateWallpaper();
+            mWPPreviewPref.redraw();
+            return true;
+        });
+
+        PreferencesUtil.addMaterialSwitchPreference(this, "msg_invert", "Инвертировать цвета", "", null, false, (preference, o) -> {
+            boolean value = (boolean) o;
+            edit().putBoolean("msg_invert", value).commit();
+            requestUpdateWallpaper();
+            mWPPreviewPref.redraw();
+            return true;
+        });
+
+        PreferencesUtil.addMaterialSwitchPreference(this, "msg_sepia", "Эффект сепии", "Возможна нагрузка на устройство", null, false, (preference, o) -> {
+            boolean value = (boolean) o;
+            edit().putBoolean("msg_sepia", value).commit();
+            requestUpdateWallpaper();
+            mWPPreviewPref.redraw();
+            return true;
+        });
+
+        PreferencesUtil.addMaterialSwitchPreference(this, "msg_emboss", "Emboss фильтр", "Возможна нагрузка на устройство", null, false, (preference, o) -> {
+            boolean value = (boolean) o;
+            edit().putBoolean("msg_emboss", value).commit();
+            requestUpdateWallpaper();
+            mWPPreviewPref.redraw();
+            return true;
+        });
+
+        PreferencesUtil.addMaterialSwitchPreference(this, "msg_engrave", "Engrave фильтр", "", null, false, (preference, o) -> {
+            boolean value = (boolean) o;
+            edit().putBoolean("msg_engrave", value).commit();
+            requestUpdateWallpaper();
+            mWPPreviewPref.redraw();
+            return true;
+        });
+
+        PreferencesUtil.addMaterialSwitchPreference(this, "msg_flea", "Flea фильтр", "", null, false, (preference, o) -> {
+            boolean value = (boolean) o;
+            edit().putBoolean("msg_flea", value).commit();
+            requestUpdateWallpaper();
+            mWPPreviewPref.redraw();
+            return true;
+        });
+
+        PreferencesUtil.addMaterialSwitchPreference(this, "msg_snow", "Эффект снега", "", null, false, (preference, o) -> {
+            boolean value = (boolean) o;
+            edit().putBoolean("msg_snow", value).commit();
             requestUpdateWallpaper();
             mWPPreviewPref.redraw();
             return true;

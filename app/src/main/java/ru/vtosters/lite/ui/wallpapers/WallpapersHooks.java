@@ -2,6 +2,7 @@ package ru.vtosters.lite.ui.wallpapers;
 import static com.vk.im.engine.h.im_bg_chat;
 import static ru.vtosters.lite.ui.wallpapers.ImageFilters.getBlurredWallpaper;
 import static ru.vtosters.lite.ui.wallpapers.ImageFilters.getDimmed;
+import static ru.vtosters.lite.ui.wallpapers.ImageFilters.getFilteredDrawable;
 import static ru.vtosters.lite.ui.wallpapers.ImageFilters.getMonochrome;
 import static ru.vtosters.lite.ui.wallpapers.ImageFilters.getMosaic;
 import static ru.vtosters.lite.utils.Globals.getContext;
@@ -57,6 +58,8 @@ public class WallpapersHooks{
             if (getPreferences().getBoolean("msg_monochrome", false)) {
                 mWallpaper = getMonochrome(mWallpaper);
             }
+
+            mWallpaper = getFilteredDrawable(mWallpaper);
 
             mUpdateWallpaperRequested = false;
         }
