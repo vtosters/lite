@@ -22,6 +22,7 @@ import com.vk.music.fragment.MusicFragment;
 import com.vk.newsfeed.HomeFragment;
 import com.vk.newsfeed.NewsfeedFragment;
 import com.vk.notifications.NotificationsContainerFragment;
+import com.vk.profile.catalog.CommunitiesCatalogFragment;
 import com.vk.search.fragment.GroupsSearchFragment;
 import com.vk.superapp.SuperAppFragment;
 import com.vtosters.lite.R;
@@ -132,6 +133,10 @@ public class DockBarManager{
                     tab.iconID = R.drawable.ic_users_outline_28;
                 }
 
+                if (milkshake() && GroupsFragment1.class == tab.fragmentClass) {
+                    tab.fragmentClass = CommunitiesCatalogFragment.class;
+                }
+
             } else {
                 if (HomeFragment.class == tab.fragmentClass)
                     tab.fragmentClass = NewsfeedFragment.class;
@@ -144,6 +149,14 @@ public class DockBarManager{
                 if (SuperAppFragment.class == tab.fragmentClass) {
                     tab.iconID = R.drawable.ic_menu_search_outline_28;
                     tab.fragmentClass = ThemedFeedFragment.class;
+                }
+
+                if (SearchMenuFragment.class == tab.fragmentClass) {
+                    tab.fragmentClass = ThemedFeedFragment.class;
+                }
+
+                if (CommunitiesCatalogFragment.class == tab.fragmentClass) {
+                    tab.fragmentClass = GroupsFragment1.class;
                 }
 
                 if (FriendsCatalogFragment.class == tab.fragmentClass) {
@@ -229,7 +242,7 @@ public class DockBarManager{
                 R.drawable.ic_users_outline_28,
                 R.string.groups,
                 R.id.menu_groups,
-                GroupsFragment1.class));
+                milkshake() ? CommunitiesCatalogFragment.class : GroupsFragment1.class));
         mDisabledTabs.add(DockBarTab.valuesOf(
                 "tab_photos",
                 R.drawable.ic_camera_outline_28,
