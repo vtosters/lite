@@ -5,6 +5,7 @@ import static ru.vtosters.lite.utils.Globals.getString;
 import static ru.vtosters.lite.utils.Preferences.getBoolValue;
 import static ru.vtosters.lite.utils.Preferences.milkshake;
 import static ru.vtosters.lite.utils.Preferences.musicnewcatalog;
+import static ru.vtosters.lite.utils.Preferences.superapp;
 import static ru.vtosters.lite.utils.Preferences.useNewSettings;
 import static ru.vtosters.lite.utils.Preferences.vkme;
 import static ru.vtosters.lite.utils.Preferences.vkme_notifs;
@@ -15,6 +16,7 @@ import com.vk.fave.fragments.FaveTabFragment;
 import com.vk.feedlikes.d.FeedLikesFragment;
 import com.vk.friends.catalog.FriendsCatalogFragment;
 import com.vk.menu.MenuFragment;
+import com.vk.menu.SearchMenuFragment;
 import com.vk.music.fragment.MusicCatalogFragment1;
 import com.vk.music.fragment.MusicFragment;
 import com.vk.newsfeed.HomeFragment;
@@ -121,6 +123,10 @@ public class DockBarManager{
                     tab.iconID = R.drawable.ic_explore_outline_28;
                 }
 
+                if (!superapp() && SuperAppFragment.class == tab.fragmentClass) {
+                    tab.fragmentClass = SearchMenuFragment.class;
+                }
+
                 if (NotificationsContainerFragment.class == tab.fragmentClass) {
                     tab.fragmentClass = FriendsCatalogFragment.class;
                     tab.iconID = R.drawable.ic_users_outline_28;
@@ -191,7 +197,7 @@ public class DockBarManager{
                 milkshake() ? R.drawable.ic_explore_outline_28 : R.drawable.ic_menu_search_outline_28,
                 R.string.super_app_title,
                 R.id.tab_discover,
-                milkshake() ? SuperAppFragment.class : ThemedFeedFragment.class));
+                milkshake() ? (superapp() ? SuperAppFragment.class : SearchMenuFragment.class) : ThemedFeedFragment.class));
         mSelectedTabs.add(DockBarTab.valuesOf(
                 "tab_messages",
                 R.drawable.ic_message_outline_28,

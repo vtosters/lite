@@ -13,6 +13,7 @@ import static ru.vtosters.lite.utils.Preferences.friendsrecomm;
 import static ru.vtosters.lite.utils.Preferences.getBoolValue;
 import static ru.vtosters.lite.utils.Preferences.milkshake;
 import static ru.vtosters.lite.utils.Preferences.postsrecomm;
+import static ru.vtosters.lite.utils.Preferences.superapp;
 import static ru.vtosters.lite.utils.Preferences.useNewSettings;
 import static ru.vtosters.lite.utils.Preferences.vkme;
 
@@ -23,6 +24,7 @@ import com.vk.core.preference.Preference;
 import com.vk.discover.ThemedFeedFragment;
 import com.vk.fave.fragments.FaveTabFragment;
 import com.vk.menu.MenuFragment;
+import com.vk.menu.SearchMenuFragment;
 import com.vk.music.fragment.MusicCatalogFragment1;
 import com.vk.music.fragment.MusicFragment;
 import com.vk.newsfeed.HomeFragment;
@@ -277,7 +279,7 @@ public class Newsfeed{
             case "liked":
                 return FaveTabFragment.class;
             case "menu":
-                return milkshake() ? SuperAppFragment.class : MenuFragment.class;
+                return milkshake() ? (superapp() ? SuperAppFragment.class : SearchMenuFragment.class) : MenuFragment.class;
             case "profile":
                 return ProfileFragment.class;
             case "lives":
