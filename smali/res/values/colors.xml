@@ -685,4 +685,5 @@
     <color name="yellow">#ffffc107</color>
     <color name="yellow_light">#ffffd54f</color>
     <color name="yellow_sunflower">#fffece00</color>
+    <color name="iclauncher">#fffcfcfc</color>
 </resources>
