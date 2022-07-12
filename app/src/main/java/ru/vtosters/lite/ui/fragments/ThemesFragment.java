@@ -21,6 +21,7 @@ public class ThemesFragment extends MaterialPreferenceToolbarFragment{
 
     private void prefs(){
         findPreference("navbar").setOnPreferenceClickListener(new restart());
+        findPreference("milkshake").setOnPreferenceClickListener(new restart());
     }
 
     public static class restart implements Preference.OnPreferenceClickListener{
