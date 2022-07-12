@@ -29,12 +29,14 @@ import com.vk.newsfeed.HomeFragment;
 import com.vk.newsfeed.NewsfeedFragment;
 import com.vk.notifications.NotificationsContainerFragment;
 import com.vk.search.fragment.GroupsSearchFragment;
+import com.vk.superapp.SuperAppFragment;
 import com.vtosters.lite.fragments.ProfileFragment;
 import com.vtosters.lite.fragments.friends.FriendsFragment;
 import com.vtosters.lite.fragments.gifts.BirthdaysFragment;
 import com.vtosters.lite.fragments.lives.LivesTabsFragment;
 import com.vtosters.lite.fragments.money.MoneyTransfersFragment;
 import com.vtosters.lite.fragments.p2.DocumentsViewFragment;
+import com.vtosters.lite.fragments.s2.GroupsFragment1;
 import com.vtosters.lite.fragments.t2.c.DialogsFragment;
 import com.vtosters.lite.fragments.y2.VideosFragment;
 import com.vtosters.lite.general.fragments.GamesFragment;
@@ -251,7 +253,7 @@ public class Newsfeed{
             case "messenger":
                 return DialogsFragment.class;
             case "groups":
-                return GroupsSearchFragment.class;
+                return GroupsFragment1.class;
             case "music":
                 return getBoolValue("musicnewcatalog", true) ? MusicCatalogFragment1.class : MusicFragment.class;
             case "friends":
@@ -275,7 +277,7 @@ public class Newsfeed{
             case "liked":
                 return FaveTabFragment.class;
             case "menu":
-                return MenuFragment.class;
+                return milkshake() ? SuperAppFragment.class : MenuFragment.class;
             case "profile":
                 return ProfileFragment.class;
             case "lives":
