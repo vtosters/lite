@@ -30,6 +30,7 @@ import com.vk.music.fragment.MusicFragment;
 import com.vk.newsfeed.HomeFragment;
 import com.vk.newsfeed.NewsfeedFragment;
 import com.vk.notifications.NotificationsContainerFragment;
+import com.vk.profile.catalog.CommunitiesCatalogFragment;
 import com.vk.search.fragment.GroupsSearchFragment;
 import com.vk.superapp.SuperAppFragment;
 import com.vtosters.lite.fragments.ProfileFragment;
@@ -255,7 +256,7 @@ public class Newsfeed{
             case "messenger":
                 return DialogsFragment.class;
             case "groups":
-                return GroupsFragment1.class;
+                return milkshake() ? CommunitiesCatalogFragment.class : GroupsFragment1.class;
             case "music":
                 return getBoolValue("musicnewcatalog", true) ? MusicCatalogFragment1.class : MusicFragment.class;
             case "friends":
