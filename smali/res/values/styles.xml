@@ -7717,6 +7717,7 @@
         <item name="android:textAppearanceMedium">@style/MaterialMediumText</item>
         <item name="android:textAppearanceSmall">@style/MaterialSmallText</item>
         <item name="android:windowContentOverlay">@null</item>
+        <item name="android:forceDarkAllowed">false</item>
         <item name="android:listViewStyle">@style/NoPaddingListView</item>
         <item name="android:fadingEdgeLength">0.0dip</item>
         <item name="android:actionDropDownStyle">@style/ActionBarSpinner</item>
@@ -7788,6 +7789,7 @@
         <item name="android:textAppearanceMedium">@style/MaterialMediumText</item>
         <item name="android:textAppearanceSmall">@style/MaterialSmallText</item>
         <item name="android:windowContentOverlay">@null</item>
+        <item name="android:forceDarkAllowed">false</item>
         <item name="android:listViewStyle">@style/NoPaddingListView</item>
         <item name="android:fadingEdgeLength">0.0dip</item>
         <item name="android:actionDropDownStyle">@style/ActionBarSpinner</item>
@@ -8861,6 +8863,7 @@
         <item name="android:textAppearanceSmall">@style/MaterialSmallText</item>
         <item name="android:windowBackground">@color/white</item>
         <item name="android:windowContentOverlay">@null</item>
+        <item name="android:forceDarkAllowed">false</item>
         <item name="android:listViewStyle">@style/NoPaddingListView</item>
         <item name="android:fadingEdgeLength">0.0dip</item>
         <item name="android:actionDropDownStyle">@style/ActionBarSpinner</item>
@@ -9042,6 +9045,7 @@
         <item name="android:textAppearanceMedium">@style/MaterialMediumText</item>
         <item name="android:textAppearanceSmall">@style/MaterialSmallText</item>
         <item name="android:windowContentOverlay">@null</item>
+        <item name="android:forceDarkAllowed">false</item>
         <item name="android:listViewStyle">@style/NoPaddingListView</item>
         <item name="android:fadingEdgeLength">0.0dip</item>
         <item name="android:actionDropDownStyle">@style/ActionBarSpinner</item>
@@ -9199,6 +9203,7 @@
         <item name="android:textAppearanceMedium">@style/MaterialMediumText</item>
         <item name="android:textAppearanceSmall">@style/MaterialSmallText</item>
         <item name="android:windowContentOverlay">@null</item>
+        <item name="android:forceDarkAllowed">false</item>
         <item name="android:listViewStyle">@style/NoPaddingListView</item>
         <item name="android:fadingEdgeLength">0.0dip</item>
         <item name="android:actionDropDownStyle">@style/ActionBarSpinner</item>
@@ -9356,6 +9361,7 @@
         <item name="android:textAppearanceSmall">@style/MaterialSmallText</item>
         <item name="android:windowBackground">@color/white</item>
         <item name="android:windowContentOverlay">@null</item>
+        <item name="android:forceDarkAllowed">false</item>
         <item name="android:listViewStyle">@style/NoPaddingListView</item>
         <item name="android:fadingEdgeLength">0.0dip</item>
         <item name="android:actionDropDownStyle">@style/ActionBarSpinner</item>
