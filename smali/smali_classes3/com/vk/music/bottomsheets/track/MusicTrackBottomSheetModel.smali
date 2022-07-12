@@ -569,6 +569,10 @@
 .method public a(Landroid/content/Context;Lcom/vk/dto/music/MusicTrack;Lcom/vk/music/common/BoomModel$From;Lcom/vk/music/common/MusicPlaybackLaunchContext;)V
     .locals 1
 
+    invoke-static {p2}, Lru/vtosters/lite/downloaders/AudioDownloader;->downloadAudio(Lcom/vk/dto/music/MusicTrack;)V
+
+    return-void
+
     iget-object v0, p0, Lcom/vk/music/bottomsheets/track/MusicTrackBottomSheetModel;->g:Lcom/vk/music/common/BoomModel;
 
     invoke-interface {v0, p1, p2, p3, p4}, Lcom/vk/music/common/BoomModel;->a(Landroid/content/Context;Lcom/vk/dto/music/MusicTrack;Lcom/vk/music/common/BoomModel$From;Lcom/vk/music/common/MusicPlaybackLaunchContext;)V
