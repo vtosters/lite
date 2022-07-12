@@ -26,7 +26,7 @@ public class AudioDownloader{
             return;
         }
         var musicPath = Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_MUSIC).getAbsolutePath();
-        var tempId = new Random().nextInt(100);
+        var tempId = track.d;
         var downloadPath = musicPath + File.separator + tempId;
         var notification = buildDownloadNotification(track, tempId);
 
