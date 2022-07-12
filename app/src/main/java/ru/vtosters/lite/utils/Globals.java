@@ -30,12 +30,14 @@ import android.graphics.RectF;
 import android.graphics.drawable.BitmapDrawable;
 import android.graphics.drawable.Drawable;
 import android.net.ConnectivityManager;
+import android.net.NetworkCapabilities;
 import android.net.NetworkInfo;
 import android.os.Build;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.StrictMode;
 import android.preference.PreferenceManager;
+import android.telephony.TelephonyManager;
 import android.util.Log;
 import android.widget.Toast;
 
@@ -205,6 +207,10 @@ public class Globals{
     }
 
     public static Drawable getDrawableFromUrl(String url, String def, Boolean rounded, Boolean scaled){
+        if (!isNetworkConnected()) return getDrawable(getContext(), getIdentifier(def, "drawable"));
+
+        if (isNetworkIsSlow()) return getDrawable(getContext(), getIdentifier(def, "drawable"));
+
         try {
             URL aryURI = new URL(url);
             StrictMode.ThreadPolicy policy = new StrictMode.ThreadPolicy.Builder().permitAll().build();
@@ -344,6 +350,19 @@ public class Globals{
         ConnectivityManager cm = (ConnectivityManager) getContext().getSystemService(Context.CONNECTIVITY_SERVICE);
         NetworkInfo activeNetwork = cm.getActiveNetworkInfo();
         return activeNetwork != null && activeNetwork.isConnectedOrConnecting();
+    } // Network check
+
+    public static boolean isNetworkIsSlow(){
+        var isConnectionSucks = false;
+        ConnectivityManager cm = (ConnectivityManager) getContext().getSystemService(Context.CONNECTIVITY_SERVICE);
+        NetworkCapabilities nc = cm.getNetworkCapabilities(cm.getActiveNetwork());
+        int downSpeed = nc.getLinkDownstreamBandwidthKbps();
+
+        if (downSpeed < 2000) {
+            isConnectionSucks = true;
+        }
+
+        return isConnectionSucks;
     } // Network check
 
     public static void fixGapps(){
