@@ -4,6 +4,7 @@ import static android.widget.Toast.LENGTH_LONG;
 import static android.widget.Toast.LENGTH_SHORT;
 import static android.widget.Toast.makeText;
 import static ru.vtosters.lite.utils.CacheUtils.deleteCache;
+import static ru.vtosters.lite.utils.Globals.getContext;
 import static ru.vtosters.lite.utils.Globals.getIdentifier;
 import static ru.vtosters.lite.utils.Globals.getUserToken;
 import static ru.vtosters.lite.utils.Globals.restartApplication;
@@ -73,13 +74,13 @@ public class OtherFragment extends MaterialPreferenceToolbarFragment{
         }
     }
 
-    public static class onlines implements Preference.OnPreferenceClickListener{
+    public class onlines implements Preference.OnPreferenceClickListener{
         @Override // android.support.v7.preference.Preference.c
         public boolean onPreferenceClick(Preference preference){
             try {
                 backupOnlines();
             } catch (IOException e) {
-                e.printStackTrace();
+                Toast.makeText(getContext(), "Нет данных для резервного копирования", LENGTH_SHORT).show();
             }
             return true;
         }
