@@ -110,9 +110,7 @@ public class OtherFragment extends MaterialPreferenceToolbarFragment{
     public class e implements Preference.OnPreferenceClickListener{
         @Override // android.support.v7.preference.Preference.c
         public boolean onPreferenceClick(Preference preference){
-            SharedPreferences prefs = getContext().getSharedPreferences("stickers", Context.MODE_PRIVATE);
             SharedPreferences prefs2 = getContext().getSharedPreferences("stickers_storage", Context.MODE_PRIVATE);
-            prefs.edit().clear().commit();
             prefs2.edit().clear().commit();
             new WebView(getActivity()).clearCache(true);
             VKImageLoader.e();
@@ -145,9 +143,7 @@ public class OtherFragment extends MaterialPreferenceToolbarFragment{
     public class f implements Preference.OnPreferenceClickListener{
         @Override // android.support.v7.preference.Preference.c
         public boolean onPreferenceClick(Preference preference){
-            SharedPreferences prefs = getContext().getSharedPreferences("stickers", Context.MODE_PRIVATE);
             SharedPreferences prefs2 = getContext().getSharedPreferences("stickers_storage", Context.MODE_PRIVATE);
-            prefs.edit().clear().commit();
             prefs2.edit().clear().commit();
             deleteCache();
             ToastUtils.a(Globals.getString("cachecleaned"));
