@@ -9,10 +9,6 @@
             android:key="stickfix"
             android:summary="@string/other_clear_stickers_cache_summary"
             android:title="@string/other_clear_stickers_cache" />
-        <Preference
-            android:key="deleteprefs"
-            android:summary="@string/other_reset_settings_summary"
-            android:title="@string/other_reset_settings" />
         <com.vtosters.lite.ui.MaterialSwitchPreference
             android:defaultValue="true"
             android:key="color_grishka"
@@ -33,20 +29,21 @@
             android:key="tokencopy"
             android:title="@string/copytokenbtn" />
     </PreferenceCategory>
-     <PreferenceCategory android:title="Backup system">
+     <PreferenceCategory android:title="Бэкапы">
          <Preference
              android:key="saveonlines"
              android:summary="Сохранить список AppId и их названия в файл"
              android:title="Сохранить список онлайнов" />
-        <Preference
-            android:key="deleteprefs"
-            android:title="Reset prefs" />
+         <Preference
+             android:key="deleteprefs"
+             android:summary="@string/other_reset_settings_summary"
+             android:title="@string/other_reset_settings" />
         <Preference
             android:key="saveprefs"
-            android:title="Save prefs to file" />
+            android:title="Сохранить настройки" />
         <Preference
             android:key="restoreprefs"
-            android:title="Restore prefs" />
+            android:title="Восстановить настройки" />
     </PreferenceCategory>
     <PreferenceCategory android:title="@string/vtverify">
         <Preference

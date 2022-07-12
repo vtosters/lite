@@ -39,7 +39,12 @@ public class SettBackup{
         file.delete();
     }
 
-    public static void backupOnlines(){
+    public static void backupOnlines() throws IOException{
+        if (getPrefContent("onlines.xml") == null) {
+            Toast.makeText(getContext(), "Нет данных для резервного копирования", LENGTH_SHORT).show();
+            return;
+        }
+
         SimpleDateFormat dateFormat = new SimpleDateFormat("yyyyMMdd_HHmmss", Locale.getDefault());
         var dir = new File(getExternalStoragePublicDirectory(DIRECTORY_DOWNLOADS), "/VTLBackups/");
         var file = new File(dir, "Onlines_" + dateFormat.format(new Date()) + ".xml");
@@ -58,9 +63,7 @@ public class SettBackup{
     public static void backupSettings(){
         SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd:HH-mm-ss", Locale.getDefault());
         var file = new File(sBackupDir,
-                "Backup_"
-                + dateFormat.format(new Date())
-                        + ".xml");
+                "Backup_" + dateFormat.format(new Date()) + ".xml");
         try {
             file.delete();
             sBackupDir.mkdirs();
