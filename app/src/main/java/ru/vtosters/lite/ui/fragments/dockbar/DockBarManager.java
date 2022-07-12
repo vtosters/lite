@@ -55,6 +55,7 @@ public class DockBarManager{
     public static final int MAX_SELECTED_TABS_LIMIT = 9;
 
     private static DockBarManager sInstance = new DockBarManager();
+
     private final List<DockBarTab> mSelectedTabs = new ArrayList<>();
     private final List<DockBarTab> mDisabledTabs = new ArrayList<>();
     private final List<String> mCategoryTitles = Arrays.asList(
@@ -76,6 +77,34 @@ public class DockBarManager{
     private void init(){
         mConfig = new File(getContext().getFilesDir(), "dockbar.json");
 
+        if (vkme()) {
+            mSelectedTabs.add(DockBarTab.valuesOf(
+                    "tab_settings",
+                    R.drawable.ic_settings_outline_28,
+                    R.string.menu_settings,
+                    R.id.menu_settings,
+                    useNewSettings()));
+            if (vkme_notifs())
+                mSelectedTabs.add(DockBarTab.valuesOf(
+                        "tab_feedback",
+                        R.drawable.ic_menu_notification_outline_28,
+                        R.string.feedback,
+                        R.id.tab_feedback,
+                        NotificationsContainerFragment.class));
+            mSelectedTabs.add(DockBarTab.valuesOf(
+                    "tab_messages",
+                    R.drawable.ic_message_outline_28,
+                    R.string.messages,
+                    R.id.tab_messages,
+                    DialogsFragment.class));
+            mSelectedTabs.add(DockBarTab.valuesOf(
+                    "tab_profile",
+                    milkshake() ? R.drawable.ic_user_circle_outline_28 : R.drawable.ic_account_outline_28,
+                    R.string.profile,
+                    R.id.tab_menu,
+                    milkshake() ? ProfileFragment.class : MenuFragment.class));
+            return;
+        }
         if (mConfig.exists()) {
             readFromConfig();
         } else {
@@ -169,35 +198,6 @@ public class DockBarManager{
     }
 
     private void fillDefault(){
-        if (vkme()) {
-            mSelectedTabs.add(DockBarTab.valuesOf(
-                    "tab_settings",
-                    R.drawable.ic_settings_outline_28,
-                    R.string.menu_settings,
-                    R.id.menu_settings,
-                    useNewSettings()));
-            if (vkme_notifs())
-                mSelectedTabs.add(DockBarTab.valuesOf(
-                        "tab_feedback",
-                        R.drawable.ic_menu_notification_outline_28,
-                        R.string.feedback,
-                        R.id.tab_feedback,
-                        NotificationsContainerFragment.class));
-            mSelectedTabs.add(DockBarTab.valuesOf(
-                    "tab_messages",
-                    R.drawable.ic_message_outline_28,
-                    R.string.messages,
-                    R.id.tab_messages,
-                    DialogsFragment.class));
-            mSelectedTabs.add(DockBarTab.valuesOf(
-                    "tab_profile",
-                    R.drawable.ic_account_outline_28,
-                    R.string.profile,
-                    R.id.tab_menu,
-                    ProfileFragment.class));
-            return;
-        }
-
         // fill selected tabs list
         mSelectedTabs.add(DockBarTab.valuesOf(
                 "tab_news",
