@@ -16,9 +16,6 @@ import static ru.vtosters.lite.utils.Globals.getUserPhoto;
 import static ru.vtosters.lite.utils.Globals.getUsername;
 import static ru.vtosters.lite.utils.Globals.isGmsInstalled;
 import static ru.vtosters.lite.utils.Globals.restartApplication;
-import static ru.vtosters.lite.utils.IconManager.iconSwitcher;
-import static ru.vtosters.lite.utils.IconManager.icons;
-import static ru.vtosters.lite.utils.IconManager.iconsPlus;
 import static ru.vtosters.lite.utils.IconManager.iconsValues;
 import static ru.vtosters.lite.utils.Preferences.DoNotUseOldIcons;
 import static ru.vtosters.lite.utils.Preferences.ads;
@@ -70,6 +67,7 @@ import ru.vtosters.lite.ui.fragments.tgstickers.StickersFragment;
 import ru.vtosters.lite.ui.vkui.VBottomSheetBuilder;
 import ru.vtosters.lite.utils.CacheUtils;
 import ru.vtosters.lite.utils.Globals;
+import ru.vtosters.lite.utils.IconManager;
 import ru.vtosters.lite.utils.SSFS;
 import ru.vtosters.lite.utils.VKUIwrapper;
 
@@ -187,7 +185,7 @@ public class VTSettings extends MaterialPreferenceToolbarFragment{
         if (Build.VERSION.SDK_INT >= 26) {
             PreferencesUtil.addListPreferenceIcon(this, "selectedicon", "vt", "Icons", "ic_vk_logo_48", "", icons(), iconsValues(), (preference, o) -> {
                 edit().putString("selectedicon", o.toString()).apply();
-                iconSwitcher(o.toString(), "standard");
+                IconManager.switchComponent(o.toString(), "standard");
                 return false;
             });
         }
