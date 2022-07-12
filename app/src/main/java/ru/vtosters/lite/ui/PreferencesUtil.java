@@ -48,7 +48,7 @@ public class PreferencesUtil{
         fragment.getPreferenceScreen().addPreference(preference); // fragment.getPreferenceScreen().addPreference(preference)
     }
 
-    public static void addListPreferenceIcon(MaterialPreferenceToolbarFragment fragment, String key, String def, CharSequence title, String icon, CharSequence summary, CharSequence[] entries, CharSequence[] entriesValue){
+    public static void addListPreferenceIcon(MaterialPreferenceToolbarFragment fragment, String key, String def, CharSequence title, String icon, CharSequence summary, CharSequence[] entries, CharSequence[] entriesValue, Preference.OnPreferenceChangeListener listener){
         ListPreference preference = new ListPreference(getContext());
         preference.setEntries(entries);
         preference.setEntryValues(entriesValue);
@@ -57,6 +57,8 @@ public class PreferencesUtil{
         preference.setDialogTitle(title); // setDialogTitle
         preference.setKey(key); // setKey
         preference.setDefaultValue(def); // setDefaultValue
+        preference.setOnPreferenceChangeListener(listener);
+
         if (icon != null)
             preference.setIcon(setTint(getContext(), getDrawable(getContext(), icon))); // preference.setIcon
         fragment.getPreferenceScreen().addPreference(preference); // fragment.getPreferenceScreen().addPreference(preference)

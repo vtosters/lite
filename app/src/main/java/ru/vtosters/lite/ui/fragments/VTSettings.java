@@ -16,6 +16,10 @@ import static ru.vtosters.lite.utils.Globals.getUserPhoto;
 import static ru.vtosters.lite.utils.Globals.getUsername;
 import static ru.vtosters.lite.utils.Globals.isGmsInstalled;
 import static ru.vtosters.lite.utils.Globals.restartApplication;
+import static ru.vtosters.lite.utils.IconManager.iconSwitcher;
+import static ru.vtosters.lite.utils.IconManager.icons;
+import static ru.vtosters.lite.utils.IconManager.iconsPlus;
+import static ru.vtosters.lite.utils.IconManager.iconsValues;
 import static ru.vtosters.lite.utils.Preferences.DoNotUseOldIcons;
 import static ru.vtosters.lite.utils.Preferences.ads;
 import static ru.vtosters.lite.utils.Preferences.devmenu;
@@ -177,6 +181,14 @@ public class VTSettings extends MaterialPreferenceToolbarFragment{
 
                 edit().putBoolean("systemtheme", value).commit();
                 return true;
+            });
+        }
+
+        if (Build.VERSION.SDK_INT >= 26) {
+            PreferencesUtil.addListPreferenceIcon(this, "selectedicon", "vt", "Icons", "ic_vk_logo_48", "", icons(), iconsValues(), (preference, o) -> {
+                edit().putString("selectedicon", o.toString()).apply();
+                iconSwitcher(o.toString(), "standard");
+                return false;
             });
         }
 
@@ -384,8 +396,7 @@ public class VTSettings extends MaterialPreferenceToolbarFragment{
                 Globals.getString("autoclearcachedisabled"), "100 MB", "500 MB", "1 GB", "2 GB", "5 GB"
         }, new String[] {
                 "Default", "100mb", "500mb", "1gb", "2gb", "5gb"
-        });
-
+        }, null);
 
         PreferencesUtil.addPreference(this, "", Globals.getString("vtlother"), othersumm, !DoNotUseOldIcons() ? "ic_more_24" : "ic_more_horizontal_28", preference -> {
             Context context = getContext();
