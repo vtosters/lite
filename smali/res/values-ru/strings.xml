@@ -213,6 +213,7 @@
     <string name="app_launch">Запустить</string>
     <string name="app_name">VTLite</string>
     <string name="app_name_orig">VK</string>
+    <string name="app_name_alter">ВКонтакте</string>
     <string name="app_remove_confirm">Вы действительно хотите удалить эту игру?</string>
     <string name="apps_remove_action">Убрать</string>
     <string name="apps_remove_from_menu_message">Вы действительно хотите убрать «%s» из меню?</string>

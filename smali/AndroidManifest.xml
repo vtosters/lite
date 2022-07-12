@@ -226,7 +226,7 @@
             </intent-filter>
         </activity-alias>
         <activity-alias
-            android:label="01"
+            android:label="@string/app_name"
             android:icon="@mipmap/mp_launcher"
             android:name=".id01"
             android:enabled="false"
@@ -238,7 +238,7 @@
             </intent-filter>
         </activity-alias>
         <activity-alias
-            android:label="02"
+            android:label="@string/app_name_alter"
             android:icon="@mipmap/mp_launcher"
             android:name=".id02"
             android:enabled="false"
@@ -250,7 +250,7 @@
             </intent-filter>
         </activity-alias>
         <activity-alias
-            android:label="10"
+            android:label="@string/app_name_orig"
             android:icon="@mipmap/mp_launcher"
             android:name=".id10"
             android:enabled="false"
@@ -262,7 +262,7 @@
             </intent-filter>
         </activity-alias>
         <activity-alias
-            android:label="12"
+            android:label="@string/app_name_alter"
             android:icon="@mipmap/mp_launcher"
             android:name=".id12"
             android:enabled="false"
@@ -274,7 +274,7 @@
             </intent-filter>
         </activity-alias>
         <activity-alias
-            android:label="20"
+            android:label="@string/app_name_orig"
             android:icon="@mipmap/mp_launcher_navy"
             android:name=".id20"
             android:enabled="false"
@@ -286,7 +286,7 @@
             </intent-filter>
         </activity-alias>
         <activity-alias
-            android:label="21"
+            android:label="@string/app_name"
             android:icon="@mipmap/mp_launcher_navy"
             android:name=".id21"
             android:enabled="false"
@@ -298,7 +298,7 @@
             </intent-filter>
         </activity-alias>
         <activity-alias
-            android:label="22"
+            android:label="@string/app_name_alter"
             android:icon="@mipmap/mp_launcher_navy"
             android:name=".id22"
             android:enabled="false"
@@ -310,7 +310,7 @@
             </intent-filter>
         </activity-alias>
         <activity-alias
-            android:label="30"
+            android:label="@string/app_name_orig"
             android:icon="@mipmap/mp_launcher_tiger"
             android:name=".id30"
             android:enabled="false"
@@ -322,7 +322,7 @@
             </intent-filter>
         </activity-alias>
         <activity-alias
-            android:label="31"
+            android:label="@string/app_name"
             android:icon="@mipmap/mp_launcher_tiger"
             android:name=".id31"
             android:enabled="false"
@@ -334,7 +334,7 @@
             </intent-filter>
         </activity-alias>
         <activity-alias
-            android:label="32"
+            android:label="@string/app_name_alter"
             android:icon="@mipmap/mp_launcher_tiger"
             android:name=".id32"
             android:enabled="false"
@@ -346,7 +346,7 @@
             </intent-filter>
         </activity-alias>
         <activity-alias
-            android:label="40"
+            android:label="@string/app_name_orig"
             android:icon="@mipmap/mp_launcher_spring"
             android:name=".id40"
             android:enabled="false"
@@ -358,7 +358,7 @@
             </intent-filter>
         </activity-alias>
         <activity-alias
-            android:label="41"
+            android:label="@string/app_name"
             android:icon="@mipmap/mp_launcher_spring"
             android:name=".id41"
             android:enabled="false"
@@ -370,7 +370,7 @@
             </intent-filter>
         </activity-alias>
         <activity-alias
-            android:label="42"
+            android:label="@string/app_name_alter"
             android:icon="@mipmap/mp_launcher_spring"
             android:name=".id42"
             android:enabled="false"
@@ -382,7 +382,7 @@
             </intent-filter>
         </activity-alias>
         <activity-alias
-            android:label="50"
+            android:label="@string/app_name_orig"
             android:icon="@mipmap/mp_launcher_sea"
             android:name=".id50"
             android:enabled="false"
@@ -394,7 +394,7 @@
             </intent-filter>
         </activity-alias>
         <activity-alias
-            android:label="51"
+            android:label="@string/app_name"
             android:icon="@mipmap/mp_launcher_sea"
             android:name=".id51"
             android:enabled="false"
@@ -406,7 +406,7 @@
             </intent-filter>
         </activity-alias>
         <activity-alias
-            android:label="52"
+            android:label="@string/app_name_alter"
             android:icon="@mipmap/mp_launcher_sea"
             android:name=".id52"
             android:enabled="false"
@@ -418,7 +418,7 @@
             </intent-filter>
         </activity-alias>
         <activity-alias
-            android:label="60"
+            android:label="@string/app_name_orig"
             android:icon="@mipmap/mp_launcher_sakura"
             android:name=".id60"
             android:enabled="false"
@@ -430,7 +430,7 @@
             </intent-filter>
         </activity-alias>
         <activity-alias
-            android:label="61"
+            android:label="@string/app_name"
             android:icon="@mipmap/mp_launcher_sakura"
             android:name=".id61"
             android:enabled="false"
@@ -442,7 +442,7 @@
             </intent-filter>
         </activity-alias>
         <activity-alias
-            android:label="62"
+            android:label="@string/app_name_alter"
             android:icon="@mipmap/mp_launcher_sakura"
             android:name=".id62"
             android:enabled="false"
@@ -454,7 +454,7 @@
             </intent-filter>
         </activity-alias>
         <activity-alias
-            android:label="70"
+            android:label="@string/app_name_orig"
             android:icon="@mipmap/mp_launcher_party"
             android:name=".id70"
             android:enabled="false"
@@ -466,7 +466,7 @@
             </intent-filter>
         </activity-alias>
         <activity-alias
-            android:label="71"
+            android:label="@string/app_name"
             android:icon="@mipmap/mp_launcher_party"
             android:name=".id71"
             android:enabled="false"
@@ -478,7 +478,7 @@
             </intent-filter>
         </activity-alias>
         <activity-alias
-            android:label="72"
+            android:label="@string/app_name_alter"
             android:icon="@mipmap/mp_launcher_party"
             android:name=".id72"
             android:enabled="false"
@@ -490,7 +490,7 @@
             </intent-filter>
         </activity-alias>
         <activity-alias
-            android:label="80"
+            android:label="@string/app_name_orig"
             android:icon="@mipmap/mp_launcher_paint"
             android:name=".id80"
             android:enabled="false"
@@ -502,7 +502,7 @@
             </intent-filter>
         </activity-alias>
         <activity-alias
-            android:label="81"
+            android:label="@string/app_name"
             android:icon="@mipmap/mp_launcher_paint"
             android:name=".id81"
             android:enabled="false"
@@ -514,7 +514,7 @@
             </intent-filter>
         </activity-alias>
         <activity-alias
-            android:label="82"
+            android:label="@string/app_name_alter"
             android:icon="@mipmap/mp_launcher_paint"
             android:name=".id82"
             android:enabled="false"
@@ -526,7 +526,7 @@
             </intent-filter>
         </activity-alias>
         <activity-alias
-            android:label="90"
+            android:label="@string/app_name_orig"
             android:icon="@mipmap/mp_launcher_flamingo"
             android:name=".id90"
             android:enabled="false"
@@ -538,7 +538,7 @@
             </intent-filter>
         </activity-alias>
         <activity-alias
-            android:label="91"
+            android:label="@string/app_name"
             android:icon="@mipmap/mp_launcher_flamingo"
             android:name=".id91"
             android:enabled="false"
@@ -550,7 +550,7 @@
             </intent-filter>
         </activity-alias>
         <activity-alias
-            android:label="92"
+            android:label="@string/app_name_alter"
             android:icon="@mipmap/mp_launcher_flamingo"
             android:name=".id92"
             android:enabled="false"
