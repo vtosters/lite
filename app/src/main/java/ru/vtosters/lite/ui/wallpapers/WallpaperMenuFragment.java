@@ -109,7 +109,7 @@ public class WallpaperMenuFragment extends MaterialPreferenceToolbarFragment{
             return true;
         });
 
-        PreferencesUtil.addMaterialSwitchPreference(this, "msg_sepia", "Эффект сепии", "Возможна нагрузка на устройство", null, false, (preference, o) -> {
+        PreferencesUtil.addMaterialSwitchPreference(this, "msg_sepia", "Эффект сепии", "", null, false, (preference, o) -> {
             boolean value = (boolean) o;
             edit().putBoolean("msg_sepia", value).commit();
             requestUpdateWallpaper();
@@ -125,7 +125,7 @@ public class WallpaperMenuFragment extends MaterialPreferenceToolbarFragment{
             return true;
         });
 
-        PreferencesUtil.addMaterialSwitchPreference(this, "msg_engrave", "Engrave фильтр", "", null, false, (preference, o) -> {
+        PreferencesUtil.addMaterialSwitchPreference(this, "msg_engrave", "Engrave фильтр", "Возможна нагрузка на устройство", null, false, (preference, o) -> {
             boolean value = (boolean) o;
             edit().putBoolean("msg_engrave", value).commit();
             requestUpdateWallpaper();
