@@ -57,6 +57,10 @@ public class WallpapersHooks{
                 mWallpaper = getDimmed(mWallpaper);
             }
 
+            if (!getPreferences().getString("msg_mosaic", "disabled").equals("disabled")) {
+                mWallpaper = getMosaic(mWallpaper);
+            }
+
             mUpdateWallpaperRequested = false;
         }
 
@@ -82,28 +86,40 @@ public class WallpapersHooks{
     public static String getRadiusSummary(){
         String radius = getPreferences().getString("msg_blur_radius", "disabled");
         switch(radius) {
-            case "disabled":
-                return "Отключено";
             case "low":
                 return "Низкое";
             case "med":
                 return "Среднее";
-            default:
+            case "high":
                 return "Высокое";
+            default:
+                return "Отключено";
         }
     }
 
     public static String getDimmingSummary(){
         String radius = getPreferences().getString("msg_dim", "disabled");
         switch(radius) {
-            case "off":
-                return "Отключено";
             case "dim_black":
                 return "Затемнить";
             case "dim_white":
                 return "Осветлить";
             default:
-                return "OwO";
+                return "Отключено";
+        }
+    }
+
+    public static String getMosaicSummary(){
+        String radius = getPreferences().getString("msg_mosaic", "disabled");
+        switch(radius) {
+            case "low":
+                return "Низкое";
+            case "med":
+                return "Среднее";
+            case "high":
+                return "Высокое";
+            default:
+                return "Отключено";
         }
     }
 
@@ -118,6 +134,31 @@ public class WallpapersHooks{
             e.printStackTrace();
             return orig;
         }
+    }
+
+    public static Drawable getMosaic(Drawable orig){
+        int scale = 100;
+
+        if (orig == null) return null;
+        if (!(orig instanceof BitmapDrawable)) return orig;
+        Bitmap instance = ((BitmapDrawable) orig).getBitmap().copy(Bitmap.Config.ARGB_8888, true);
+        String radius = getPreferences().getString("msg_mosaic", "disabled");
+
+        switch(radius) {
+            case "high":
+                scale = 25;
+                break;
+            case "med":
+                scale = 50;
+                break;
+            case "low":
+                scale = 75;
+        }
+
+        Bitmap temp = Bitmap.createScaledBitmap(instance, scale, scale, false);
+        Bitmap mosaicBitmap = Bitmap.createScaledBitmap(temp, instance.getWidth(), instance.getHeight(), false);
+
+        return new BitmapDrawable(getResources(), mosaicBitmap);
     }
 
     public static Drawable getDimmed(Drawable orig){

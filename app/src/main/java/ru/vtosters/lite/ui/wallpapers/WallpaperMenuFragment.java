@@ -1,5 +1,6 @@
 package ru.vtosters.lite.ui.wallpapers;
 import static ru.vtosters.lite.ui.wallpapers.WallpapersHooks.getDimmingSummary;
+import static ru.vtosters.lite.ui.wallpapers.WallpapersHooks.getMosaicSummary;
 import static ru.vtosters.lite.ui.wallpapers.WallpapersHooks.getRadiusSummary;
 import static ru.vtosters.lite.ui.wallpapers.WallpapersHooks.getWallpaperFile;
 import static ru.vtosters.lite.ui.wallpapers.WallpapersHooks.removeWallpaper;
@@ -86,11 +87,19 @@ public class WallpaperMenuFragment extends MaterialPreferenceToolbarFragment{
                 "off", "dim_black", "dim_white"
         });
 
+        PreferencesUtil.addListPreference(this, "msg_mosaic", "disabled", "Мозаика", new CharSequence[] {
+                "Отключено", "Низкое", "Среднее", "Высокое"
+        }, new String[] {
+                "disabled", "low", "med", "high"
+        });
+
         ListPreference blur = (ListPreference) findPreference("msg_blur_radius");
         ListPreference dim = (ListPreference) findPreference("msg_dim");
+        ListPreference mosaic = (ListPreference) findPreference("msg_mosaic");
 
         blur.setSummary(getRadiusSummary());
         dim.setSummary(getDimmingSummary());
+        mosaic.setSummary(getMosaicSummary());
 
         blur.setOnPreferenceChangeListener((preference, o) -> {
             edit().putString("msg_blur_radius", (String) o).apply();
@@ -103,6 +112,14 @@ public class WallpaperMenuFragment extends MaterialPreferenceToolbarFragment{
         dim.setOnPreferenceChangeListener((preference, o) -> {
             edit().putString("msg_dim", (String) o).apply();
             preference.setSummary(getDimmingSummary());
+            requestUpdateWallpaper();
+            mWPPreviewPref.redraw();
+            return true;
+        });
+
+        mosaic.setOnPreferenceChangeListener((preference, o) -> {
+            edit().putString("msg_mosaic", (String) o).apply();
+            preference.setSummary(getMosaicSummary());
             requestUpdateWallpaper();
             mWPPreviewPref.redraw();
             return true;
