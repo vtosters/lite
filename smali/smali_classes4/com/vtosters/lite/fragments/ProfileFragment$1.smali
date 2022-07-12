@@ -1,4 +1,4 @@
-.class Lcom/vtosters/lite/general/fragments/ProfileFragment1;
+.class Lcom/vtosters/lite/fragments/ProfileFragment$1;
 .super Ljava/lang/Object;
 .source "ProfileFragment.java"
 
@@ -15,7 +15,7 @@
     .locals 0
 
     .line 1
-    iput-object p1, p0, Lcom/vtosters/lite/general/fragments/ProfileFragment1;->a:Lcom/vtosters/lite/fragments/ProfileFragment;
+    iput-object p1, p0, Lcom/vtosters/lite/fragments/ProfileFragment$1;->a:Lcom/vtosters/lite/fragments/ProfileFragment;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -46,7 +46,7 @@
 
     .line 2
     :cond_0
-    iget-object p2, p0, Lcom/vtosters/lite/general/fragments/ProfileFragment1;->a:Lcom/vtosters/lite/fragments/ProfileFragment;
+    iget-object p2, p0, Lcom/vtosters/lite/fragments/ProfileFragment$1;->a:Lcom/vtosters/lite/fragments/ProfileFragment;
 
     invoke-static {p2}, Lcom/vtosters/lite/fragments/ProfileFragment;->d(Lcom/vtosters/lite/fragments/ProfileFragment;)V
 
@@ -54,7 +54,7 @@
 
     .line 3
     :cond_1
-    iget-object p2, p0, Lcom/vtosters/lite/general/fragments/ProfileFragment1;->a:Lcom/vtosters/lite/fragments/ProfileFragment;
+    iget-object p2, p0, Lcom/vtosters/lite/fragments/ProfileFragment$1;->a:Lcom/vtosters/lite/fragments/ProfileFragment;
 
     invoke-static {p2}, Lcom/vtosters/lite/fragments/ProfileFragment;->R0(Lcom/vtosters/lite/fragments/ProfileFragment;)V
 
@@ -88,14 +88,14 @@
     .locals 1
 
     .line 1
-    iget-object p1, p0, Lcom/vtosters/lite/general/fragments/ProfileFragment1;->a:Lcom/vtosters/lite/fragments/ProfileFragment;
+    iget-object p1, p0, Lcom/vtosters/lite/fragments/ProfileFragment$1;->a:Lcom/vtosters/lite/fragments/ProfileFragment;
 
     const/4 v0, 0x0
 
     invoke-static {p1, v0}, Lcom/vtosters/lite/fragments/ProfileFragment;->a(Lcom/vtosters/lite/fragments/ProfileFragment;Landroid/view/ActionMode;)Landroid/view/ActionMode;
 
     .line 2
-    iget-object p1, p0, Lcom/vtosters/lite/general/fragments/ProfileFragment1;->a:Lcom/vtosters/lite/fragments/ProfileFragment;
+    iget-object p1, p0, Lcom/vtosters/lite/fragments/ProfileFragment$1;->a:Lcom/vtosters/lite/fragments/ProfileFragment;
 
     invoke-static {p1}, Lcom/vtosters/lite/fragments/ProfileFragment;->e(Lcom/vtosters/lite/fragments/ProfileFragment;)Landroid/view/View;
 

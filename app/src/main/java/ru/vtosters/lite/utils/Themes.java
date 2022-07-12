@@ -69,6 +69,15 @@ public class Themes{
         WebCachePreloader.e();
     } // apply changed theme
 
+    public static void setThemeFL(VKTheme theme, Activity activity, float[] fl){
+        if (activity == null) activity = getCurrentActivity();
+        VKThemeHelper.theme(theme, activity, fl);
+        ThemeTracker.a();
+        isLoaded = false;
+        new WebView(activity).clearCache(true);
+        WebCachePreloader.e();
+    }
+
     public static boolean isDarkTheme(){
         return VKThemeHelper.r();
     }
