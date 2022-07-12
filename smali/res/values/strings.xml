@@ -226,6 +226,7 @@
     <string name="app_launch">Launch</string>
     <string name="app_name">VTLite</string>
     <string name="app_name_orig">VK</string>
+    <string name="app_name_alter">VKontakte</string>
     <string name="app_remove_confirm">Are you sure you want to remove this game?</string>
     <string name="appbar_scrolling_view_behavior">com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior</string>
     <string name="apps_remove_action">Remove</string>
