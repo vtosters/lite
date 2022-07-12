@@ -1985,7 +1985,7 @@
 
     .line 34
     :cond_11
-    instance-of v2, v0, Lcom/vk/webapp/fragments/VkPayFragment;
+    instance-of v2, v0, Lru/vtosters/lite/ui/fragments/VKPayFragment;
 
     if-eqz v2, :cond_12
 

@@ -853,7 +853,7 @@
     .line 72
     sget-object p2, Lcom/vk/menu/MenuUtils;->c:Lcom/vk/menu/MenuUtils;
 
-    const-class v5, Lcom/vk/webapp/fragments/VkPayFragment;
+    const-class v5, Lru/vtosters/lite/ui/fragments/VKPayFragment;
 
     const-string v1, "vk_pay"
 
@@ -2543,7 +2543,7 @@
     invoke-virtual {v0, p1, v1}, Landroid/os/Bundle;->putInt(Ljava/lang/String;I)V
 
     .line 27
-    const-class p1, Lcom/vk/webapp/fragments/VkPayFragment;
+    const-class p1, Lru/vtosters/lite/ui/fragments/VKPayFragment;
 
     invoke-static {v0, p1}, Lkotlin/Tuples;->a(Ljava/lang/Object;Ljava/lang/Object;)Lkotlin/Pair;
 
@@ -2833,6 +2833,30 @@
     move-result v0
 
     if-eqz v0, :cond_0
+
+    invoke-static {}, Lru/vtosters/lite/utils/Globals;->getContext()Landroid/content/Context;
+
+    move-result-object v1
+
+    new-instance v8, Lcom/vk/navigation/Navigator;
+
+    const-class v0, Lru/vtosters/lite/ui/fragments/VKPayFragment;
+
+    invoke-direct {v8, v0}, Lcom/vk/navigation/Navigator;-><init>(Ljava/lang/Class;)V
+
+    invoke-virtual {v8, v1}, Lcom/vk/navigation/Navigator;->b(Landroid/content/Context;)Landroid/content/Intent;
+
+    move-result-object v8
+
+    const/high16 v0, 0x10000000
+
+    .line 15
+    invoke-virtual {v8, v0}, Landroid/content/Intent;->addFlags(I)Landroid/content/Intent;
+
+    return-void
+
+    .line 16
+    invoke-virtual {v1, v8}, Landroid/content/Context;->startActivity(Landroid/content/Intent;)V
 
     .line 13
     sget-object v1, Lcom/vk/webapp/bridges/VkUiConnectBridge;->n:Lcom/vk/webapp/bridges/VkUiConnectBridge$a;

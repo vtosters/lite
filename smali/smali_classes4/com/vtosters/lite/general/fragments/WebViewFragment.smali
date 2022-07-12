@@ -312,7 +312,7 @@
 .end method
 
 .method private T(Ljava/lang/String;)V
-    .locals 1
+    .locals 9
 
     .line 1
     invoke-static {p1}, Lcom/vk/webapp/fragments/VkPayFragment;->P(Ljava/lang/String;)Z
@@ -339,14 +339,27 @@
 
     if-eqz v0, :cond_1
 
-    .line 3
-    new-instance v0, Lcom/vk/webapp/fragments/VkPayFragment$a;
+    invoke-static {}, Lru/vtosters/lite/utils/Globals;->getContext()Landroid/content/Context;
 
-    invoke-direct {v0, p1}, Lcom/vk/webapp/fragments/VkPayFragment$a;-><init>(Ljava/lang/String;)V
+    move-result-object v1
 
-    const/16 p1, 0x66
+    new-instance v8, Lcom/vk/navigation/Navigator;
 
-    invoke-virtual {v0, p0, p1}, Lcom/vk/navigation/Navigator;->a(Lcom/vk/core/fragments/FragmentImpl;I)V
+    const-class v0, Lru/vtosters/lite/ui/fragments/VKPayFragment;
+
+    invoke-direct {v8, v0}, Lcom/vk/navigation/Navigator;-><init>(Ljava/lang/Class;)V
+
+    invoke-virtual {v8, v1}, Lcom/vk/navigation/Navigator;->b(Landroid/content/Context;)Landroid/content/Intent;
+
+    move-result-object v8
+
+    const/high16 v0, 0x10000000
+
+    .line 15
+    invoke-virtual {v8, v0}, Landroid/content/Intent;->addFlags(I)Landroid/content/Intent;
+
+    .line 16
+    invoke-virtual {v1, v8}, Landroid/content/Context;->startActivity(Landroid/content/Intent;)V
 
     :cond_1
     return-void
