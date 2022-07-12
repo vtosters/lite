@@ -23,7 +23,6 @@ import com.vk.newsfeed.HomeFragment;
 import com.vk.newsfeed.NewsfeedFragment;
 import com.vk.notifications.NotificationsContainerFragment;
 import com.vk.profile.catalog.CommunitiesCatalogFragment;
-import com.vk.search.fragment.GroupsSearchFragment;
 import com.vk.superapp.SuperAppFragment;
 import com.vtosters.lite.R;
 import com.vtosters.lite.fragments.ProfileFragment;

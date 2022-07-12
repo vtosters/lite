@@ -24,7 +24,6 @@ public class M3UDownloader{
     private final File mOutDir;
     private final Callback mCallback;
     private OkHttpClient mClient = new OkHttpClient();
-    private VKM3UParser mParser;
 
     public M3UDownloader(String url, File outDir, Callback callback){
         mURL = url;
