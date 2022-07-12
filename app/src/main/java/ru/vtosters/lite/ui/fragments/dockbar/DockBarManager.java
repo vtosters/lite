@@ -28,6 +28,7 @@ import com.vtosters.lite.fragments.gifts.BirthdaysFragment;
 import com.vtosters.lite.fragments.lives.LivesPostListFragment;
 import com.vtosters.lite.fragments.money.MoneyTransfersFragment;
 import com.vtosters.lite.fragments.p2.DocumentsViewFragment;
+import com.vtosters.lite.fragments.s2.GroupsFragment1;
 import com.vtosters.lite.fragments.t2.c.DialogsFragment;
 import com.vtosters.lite.fragments.y2.VideosFragment;
 import com.vtosters.lite.general.fragments.GamesFragment;
@@ -222,7 +223,7 @@ public class DockBarManager{
                 R.drawable.ic_users_outline_28,
                 R.string.groups,
                 R.id.menu_groups,
-                GroupsSearchFragment.class));
+                GroupsFragment1.class));
         mDisabledTabs.add(DockBarTab.valuesOf(
                 "tab_photos",
                 R.drawable.ic_camera_outline_28,
