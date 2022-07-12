@@ -64,6 +64,7 @@ import ru.vtosters.lite.ui.PreferencesUtil;
 import ru.vtosters.lite.ui.dialogs.OTADialog;
 import ru.vtosters.lite.ui.fragments.dockbar.AdapterHelper;
 import ru.vtosters.lite.ui.fragments.dockbar.DockBarEditorFragment;
+import ru.vtosters.lite.ui.fragments.dockbar.DockBarManager;
 import ru.vtosters.lite.ui.fragments.tgstickers.StickersFragment;
 import ru.vtosters.lite.ui.vkui.VBottomSheetBuilder;
 import ru.vtosters.lite.utils.CacheUtils;
@@ -97,7 +98,7 @@ public class VTSettings extends MaterialPreferenceToolbarFragment{
     public static String getDocksumm(){
         if (disableSettingsSumms()) return null;
 
-        return Globals.getString("vtldocksumm") + ": " + (AdapterHelper.getItemCount() - 2);
+        return Globals.getString("vtldocksumm") + ": " + DockBarManager.getInstance().getSelectedTabs().size();
     }
 
     public static String getTGSsumm(){
