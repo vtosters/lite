@@ -9,6 +9,7 @@ import static ru.vtosters.lite.utils.Preferences.isValidSignature;
 
 import android.content.ComponentName;
 import android.content.pm.PackageManager;
+import android.os.Build;
 import android.util.Log;
 
 import java.util.Arrays;
@@ -53,11 +54,11 @@ public class IconManager {
     );
 
     public static List<String> icons() {
-        return hasVerification() && isValidSignature() ? sIconsPlusNames : sIconsNames;
+        return hasVerification() && isValidSignature() && Build.VERSION.SDK_INT >= 26 ? sIconsPlusNames : sIconsNames; // delete later sdk check
     }
 
     public static List<String> iconsValues() {
-        return hasVerification() && isValidSignature() ? sIconsPlus : sIcons;
+        return hasVerification() && isValidSignature() && Build.VERSION.SDK_INT >= 26 ? sIconsPlus : sIcons; // delete later sdk check
     }
 
     public static void switchComponent(String icon, String appName, String oldIcon, String oldAppName) {
