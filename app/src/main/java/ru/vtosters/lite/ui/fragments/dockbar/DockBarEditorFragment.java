@@ -32,7 +32,7 @@ public class DockBarEditorFragment extends MaterialPreferenceToolbarFragment{
 
     @Override
     public int T4(){
-        return getIdentifier("vtltgs", "string");
+        return getIdentifier("dockbar_editor", "string");
     }
 
     @Override
