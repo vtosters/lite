@@ -12,6 +12,7 @@ import static ru.vtosters.lite.utils.Globals.restartApplication;
 import static ru.vtosters.lite.utils.Globals.sendToast;
 import static ru.vtosters.lite.utils.IconManager.*;
 import static ru.vtosters.lite.utils.Preferences.DoNotUseOldIcons;
+import static ru.vtosters.lite.utils.Preferences.getBoolValue;
 import static ru.vtosters.lite.utils.Preferences.hasVerification;
 import static ru.vtosters.lite.utils.Preferences.preferences;
 import static ru.vtosters.lite.utils.Proxy.isZaboronaEnabled;
@@ -50,7 +51,7 @@ public class IconsFragment extends MaterialPreferenceToolbarFragment{
         int vtosterXml = getIdentifier("empty", "xml");
         this.addPreferencesFromResource(vtosterXml);
 
-        if (!hasVerification()) {
+        if (!hasVerification() && !getBoolValue("dialogrecomm", false)) {
             PreferencesUtil.addPreference(this, "", "Доступны не все иконки!", "Для разблокировки необходимо сделать пожертование от 99р", "ic_about_outline_28", preference -> {
                 getContext().startActivity(new Intent("android.intent.action.VIEW").setData(Uri.parse("https://vtosters.app")));
                 return false;
