@@ -6,6 +6,7 @@ import static ru.vtosters.lite.utils.Globals.convertDpToPixel;
 import static ru.vtosters.lite.utils.Globals.getIdentifier;
 import static ru.vtosters.lite.utils.Themes.getAccentColor;
 
+import android.annotation.SuppressLint;
 import android.app.AlertDialog;
 import android.app.ProgressDialog;
 import android.content.BroadcastReceiver;
@@ -17,8 +18,6 @@ import android.os.Build;
 import android.os.Bundle;
 import android.view.Gravity;
 import android.view.LayoutInflater;
-import android.view.Menu;
-import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
@@ -28,6 +27,7 @@ import android.widget.LinearLayout;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+import androidx.appcompat.widget.Toolbar;
 import androidx.core.view.ViewCompat;
 import androidx.recyclerview.widget.RecyclerView;
 import androidx.recyclerview.widget.StaggeredGridLayoutManager;
@@ -36,6 +36,7 @@ import com.aefyr.tsg.g2.TelegramStickersService;
 import com.aefyr.tsg.g2.stickersgrabber.TelegramStickersGrabber;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.vk.navigation.Navigator;
+import com.vtosters.lite.R;
 import com.vtosters.lite.general.fragments.MaterialPreferenceToolbarFragment;
 
 import java.io.File;
@@ -80,14 +81,6 @@ public class StickersFragment extends MaterialPreferenceToolbarFragment{
     };
 
     @Override
-    public void onCreateOptionsMenu(Menu menu, MenuInflater menuInflater){
-        super.onCreateOptionsMenu(menu, menuInflater);
-        MenuItem add = menu.add(0, 0, 0, "");
-        add.setShowAsAction(MenuItem.SHOW_AS_ACTION_ALWAYS);
-        add.setIcon(getResources().getDrawable(getIdentifier("ic_settings_24", "drawable")));
-    }
-
-    @Override
     public boolean onOptionsItemSelected(MenuItem arg0){
         openMenu(null);
         return true;
@@ -107,37 +100,35 @@ public class StickersFragment extends MaterialPreferenceToolbarFragment{
     public void onCreate(@Nullable Bundle savedInstanceState){
         super.onCreate(savedInstanceState);
         getContext().registerReceiver(mReceiver, new IntentFilter(ACTION_RELOAD));
+
+        mGrabber = new TelegramStickersGrabber(TGPref.getTGBotKey());
+        mService = TelegramStickersService.getInstance(getContext());
     }
 
     @Override
-    public void onViewCreated(View arg0, Bundle arg1){
-        setMenuVisibility(true);
-        super.onViewCreated(arg0, arg1);
+    public int T4(){
+        return getIdentifier("vtltgs", "string");
     }
 
-    @Override
-    public void onDestroyView(){
-        super.onDestroyView();
-        getContext().unregisterReceiver(mReceiver);
-    }
-
+    @SuppressLint("RestrictedApi")
     @SuppressWarnings("rawtypes")
     @NonNull
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState){
-        super.onCreateView(inflater, container, savedInstanceState);
+        View root =  super.onCreateView(inflater, container, savedInstanceState);
 
-        mGrabber = new TelegramStickersGrabber(TGPref.getTGBotKey());
-        mService = TelegramStickersService.getInstance(getContext());
+        FrameLayout layout = root.findViewById(R.id.appkit_content);
 
-        FrameLayout layout = new FrameLayout(getContext());
-        layout.setLayoutParams(new FrameLayout.LayoutParams(-1, -1));
+        Toolbar toolbar = root.findViewById(R.id.toolbar);
+        var item = toolbar.getMenu().add(0, 0, 0, "");
+        item.setShowAsAction(MenuItem.SHOW_AS_ACTION_ALWAYS);
+        item.setIcon(getResources().getDrawable(getIdentifier("ic_settings_24", "drawable")));
 
         mAdapter = new StickerPackAdapter();
         mRecycler = new RecyclerView(getContext());
         mRecycler.setAdapter(mAdapter);
         mRecycler.setLayoutManager(new StaggeredGridLayoutManager(2, StaggeredGridLayoutManager.VERTICAL));
-        layout.addView(mRecycler, new FrameLayout.LayoutParams(-1, -1));
+        layout.addView(mRecycler, new ViewGroup.LayoutParams(-1, -1));
 
         mAddStickerPack = new FloatingActionButton(getContext());
         mAddStickerPack.setImageResource(getIdentifier("ic_add_24", "drawable"));
@@ -149,7 +140,19 @@ public class StickersFragment extends MaterialPreferenceToolbarFragment{
         params.setMargins(0, 0, 0, convertDpToPixel(12f));
         layout.addView(mAddStickerPack, params);
 
-        return layout;
+        return root;
+    }
+
+    @Override
+    public void onViewCreated(View arg0, Bundle arg1){
+        setHasOptionsMenu(true);
+        super.onViewCreated(arg0, arg1);
+    }
+
+    @Override
+    public void onDestroyView(){
+        super.onDestroyView();
+        getContext().unregisterReceiver(mReceiver);
     }
 
     private void fabClick(){
