@@ -355,6 +355,8 @@ public class Globals{
     } // Network check
 
     public static boolean isNetworkIsSlow(){
+        if (!isNetworkConnected()) return true;
+
         var isConnectionSucks = false;
         var cm = (ConnectivityManager) getContext().getSystemService(Context.CONNECTIVITY_SERVICE);
         var nc = cm.getNetworkCapabilities(cm.getActiveNetwork());

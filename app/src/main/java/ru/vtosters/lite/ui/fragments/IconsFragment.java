@@ -23,6 +23,7 @@ import android.annotation.SuppressLint;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.util.TypedValue;
 import android.widget.RadioButton;
@@ -49,6 +50,13 @@ public class IconsFragment extends MaterialPreferenceToolbarFragment{
         int vtosterXml = getIdentifier("empty", "xml");
         this.addPreferencesFromResource(vtosterXml);
 
+        if (!hasVerification()) {
+            PreferencesUtil.addPreference(this, "", "Доступны не все иконки!", "Для разблокировки необходимо сделать пожертование от 99р", "ic_about_outline_28", preference -> {
+                getContext().startActivity(new Intent("android.intent.action.VIEW").setData(Uri.parse("https://vtosters.app")));
+                return false;
+            });
+        }
+
         PreferencesUtil.addPreferenceCategory(this, "Иконочки");
 
         for (var i = 0; i < icons().size(); i++) {
@@ -58,8 +66,6 @@ public class IconsFragment extends MaterialPreferenceToolbarFragment{
             String icon = iconsValues().get(i);
 
             PreferencesUtil.addPreference(this, icon, iconname, "", "ic_bug_outline_28", preference -> {
-                sendToast(icon);
-
                 callSelectDialog(this.getContext(), icon);
                 return false;
             });
@@ -76,7 +82,10 @@ public class IconsFragment extends MaterialPreferenceToolbarFragment{
 
         rg.addView(rgDefault);
         rg.addView(rgVK);
-        rg.addView(rgVKontakte);
+
+        if (hasVerification()) {
+            rg.addView(rgVKontakte);
+        }
 
         rgDefault.setTextSize(TypedValue.COMPLEX_UNIT_PX, convertDpToPixel(14f));
         rgVK.setTextSize(TypedValue.COMPLEX_UNIT_PX, convertDpToPixel(14f));
