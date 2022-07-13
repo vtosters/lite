@@ -1,6 +1,7 @@
 package ru.vtosters.lite.ui.fragments.dockbar;
 
 import static ru.vtosters.lite.utils.Globals.convertDpToPixel;
+import static ru.vtosters.lite.utils.Globals.getIdentifier;
 import static ru.vtosters.lite.utils.Globals.restartApplication;
 
 import android.os.Bundle;
@@ -19,6 +20,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.vtosters.lite.general.fragments.MaterialPreferenceToolbarFragment;
 
+import com.vtosters.lite.R;
 import ru.vtosters.lite.utils.Globals;
 
 public class DockBarEditorFragment extends MaterialPreferenceToolbarFragment{
@@ -29,12 +31,19 @@ public class DockBarEditorFragment extends MaterialPreferenceToolbarFragment{
     private ItemTouchHelper mItemTouchHelper;
 
     @Override
+    public int T4(){
+        return getIdentifier("vtltgs", "string");
+    }
+
+    @Override
     public View onCreateView(LayoutInflater layoutInflater, ViewGroup viewGroup, Bundle bundle){
-        super.onCreateView(layoutInflater, viewGroup, bundle);
+        View root = super.onCreateView(layoutInflater, viewGroup, bundle);
+
+        FrameLayout content = root.findViewById(R.id.appkit_content);
 
         LinearLayout container = new LinearLayout(getContext());
         container.setOrientation(LinearLayout.VERTICAL);
-        container.setLayoutParams(new FrameLayout.LayoutParams(-1, -1));
+        content.addView(container, new FrameLayout.LayoutParams(-1, -1));
 
         LinearLayout buttonsContainer = new LinearLayout(getContext());
         buttonsContainer.setPadding(
@@ -83,6 +92,6 @@ public class DockBarEditorFragment extends MaterialPreferenceToolbarFragment{
         mItemTouchHelper = new ItemTouchHelper(mCallback);
         mItemTouchHelper.attachToRecyclerView(mRecycler);
 
-        return container;
+        return root;
     }
 }
