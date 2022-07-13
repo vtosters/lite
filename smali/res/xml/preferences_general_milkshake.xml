@@ -38,11 +38,6 @@
             android:title="@string/sett_mytracker_apps" />
         <com.vtosters.lite.ui.MaterialSwitchPreference
             android:defaultValue="false"
-            android:key="useProxyServer"
-            android:title="@string/sett_use_proxy"
-            android:visibility="gone" />
-        <com.vtosters.lite.ui.MaterialSwitchPreference
-            android:defaultValue="false"
             android:key="isRoamingState"
             android:summary="@string/sett_roaming_state_submit"
             android:title="@string/sett_roaming_state" />

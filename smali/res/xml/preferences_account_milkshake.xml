@@ -22,13 +22,6 @@
             android:persistent="false"
             android:title="@string/page_address" />
     </PreferenceCategory>
-    <PreferenceCategory android:title="@string/sett_purchases">
-        <Preference
-            android:key="restorePurchases"
-            android:layout="@layout/preference_with_value"
-            android:persistent="false"
-            android:title="@string/sett_restore_purchases" />
-    </PreferenceCategory>
     <PreferenceCategory android:title="@string/sett_posts">
         <com.vtosters.lite.ui.SummaryListPreference
             android:entries="@array/sett_posts_default_items"
@@ -54,10 +47,6 @@
             android:title="@string/account_settings_comment_order" />
     </PreferenceCategory>
     <PreferenceCategory android:title="@string/sett_other">
-        <Preference
-            android:key="sync"
-            android:summary=""
-            android:title="@string/sett_sync" />
         <Preference
             android:key="newsBanned"
             android:summary="@string/sett_news_banned_summary"
