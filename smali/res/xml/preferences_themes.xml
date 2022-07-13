@@ -28,6 +28,7 @@
     <PreferenceCategory android:title="@string/vtlother">
         <Preference
             android:key="iconmanager"
+            android:summary="Большой выбор иконок для приложения"
             android:title="Выбрать иконку приложения" />
         <com.vtosters.lite.ui.MaterialSwitchPreference
             android:defaultValue="true"
