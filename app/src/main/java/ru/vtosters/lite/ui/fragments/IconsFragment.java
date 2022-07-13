@@ -24,6 +24,7 @@ import android.annotation.SuppressLint;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.graphics.drawable.Drawable;
 import android.net.Uri;
 import android.os.Bundle;
 import android.util.TypedValue;
@@ -32,6 +33,7 @@ import android.widget.RadioGroup;
 
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.view.ContextThemeWrapper;
+import androidx.core.content.res.ResourcesCompat;
 
 import com.vk.bridges.AuthBridge;
 import com.vk.navigation.Navigator;
@@ -65,6 +67,20 @@ public class IconsFragment extends MaterialPreferenceToolbarFragment{
 
             String iconname = icons().get(i);
             String icon = iconsValues().get(i);
+
+//            String icondrawable;
+//
+//            if (icon.contains("vt")) {
+//                icondrawable = "vt_launcher_round";
+//            } else if (icon.contains("standard")) {
+//                icondrawable = "ic_launcher_round";
+//            } else {
+//                icondrawable = "ic_launcher_" + icon;
+//            }
+//
+//            Drawable drawable = ResourcesCompat.getDrawable(getResources(), getIdentifier(icondrawable, "mipmap"), null);
+//
+//            PreferencesUtil.addPreferenceDrawable(this, icon, iconname, "", drawable, preference -> {
 
             PreferencesUtil.addPreference(this, icon, iconname, "", "ic_bug_outline_28", preference -> {
                 callSelectDialog(this.getContext(), icon);
