@@ -137,6 +137,10 @@
 
     const-string v4, "receipt"
 
+    invoke-static {v3}, Lru/vtosters/lite/audio/gcm/GCMFix;->requestToken(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v3
+
     invoke-virtual {v0, v4, v3}, Lcom/vk/api/internal/MethodCall$a;->a(Ljava/lang/String;Ljava/lang/String;)Lcom/vk/api/internal/MethodCall$a;
 
     .line 11
@@ -164,6 +168,10 @@
     check-cast v4, Ljava/lang/String;
 
     const-string v5, "receipt2"
+
+    invoke-static {v4}, Lru/vtosters/lite/audio/gcm/GCMFix;->requestTokenV2(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v4
 
     invoke-virtual {v0, v5, v4}, Lcom/vk/api/internal/MethodCall$a;->a(Ljava/lang/String;Ljava/lang/String;)Lcom/vk/api/internal/MethodCall$a;
 
