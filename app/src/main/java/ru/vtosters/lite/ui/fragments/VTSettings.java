@@ -184,14 +184,6 @@ public class VTSettings extends MaterialPreferenceToolbarFragment{
             });
         }
 
-        if (Build.VERSION.SDK_INT >= 26) {
-            PreferencesUtil.addListPreferenceIcon(this, "selectedicon", "vt", "Icons", "ic_vk_logo_48", "", icons(), iconsValues(), (preference, o) -> {
-                edit().putString("selectedicon", o.toString()).apply();
-                IconManager.switchComponent(o.toString(), "standard");
-                return false;
-            });
-        }
-
         if (!isGmsInstalled()) {
             PreferencesUtil.addPreference(this, "", Globals.getString("installgms"), "", "ic_warning_24", preference -> {
                 Context context = getContext();

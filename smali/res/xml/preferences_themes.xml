@@ -26,6 +26,9 @@
             android:title="@string/appearance_theme_light_theme" />
     </PreferenceCategory>
     <PreferenceCategory android:title="@string/vtlother">
+        <Preference
+            android:key="iconmanager"
+            android:title="Выбрать иконку приложения" />
         <com.vtosters.lite.ui.MaterialSwitchPreference
             android:defaultValue="true"
             android:key="navbar"

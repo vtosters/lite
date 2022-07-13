@@ -4,11 +4,16 @@ import static ru.vtosters.lite.utils.Globals.edit;
 import static ru.vtosters.lite.utils.Globals.getIdentifier;
 import static ru.vtosters.lite.utils.Globals.restartApplicationWithTimer;
 
+import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.preference.Preference;
 
+import com.vk.navigation.Navigator;
 import com.vtosters.lite.general.fragments.MaterialPreferenceToolbarFragment;
+
+import ru.vtosters.lite.ui.wallpapers.WallpaperMenuFragment;
 
 
 public class ThemesFragment extends MaterialPreferenceToolbarFragment{
@@ -25,6 +30,18 @@ public class ThemesFragment extends MaterialPreferenceToolbarFragment{
         findPreference("milkshake").setOnPreferenceClickListener(new restart());
         findPreference("darktheme").setOnPreferenceChangeListener(new restartdark());
         findPreference("lighttheme").setOnPreferenceChangeListener(new restartlight());
+        findPreference("iconmanager").setOnPreferenceClickListener(new openicons());
+    }
+
+    public class openicons implements Preference.OnPreferenceClickListener{
+        @Override
+        public boolean onPreferenceClick(Preference preference){
+            Context context = getContext();
+            Intent a2 = new Navigator(IconsFragment.class).b(context);
+            a2.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+            context.startActivity(a2);
+            return true;
+        }
     }
 
     public static class restart implements Preference.OnPreferenceClickListener{
