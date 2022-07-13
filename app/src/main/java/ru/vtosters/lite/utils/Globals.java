@@ -362,7 +362,7 @@ public class Globals{
         var info = cm.getActiveNetworkInfo();
 
         if (info.getType() == ConnectivityManager.TYPE_MOBILE) {
-            switch (info.getSubtype()) {
+            switch(info.getSubtype()) {
                 case TelephonyManager.NETWORK_TYPE_1xRTT:
                 case TelephonyManager.NETWORK_TYPE_EDGE:
                 case TelephonyManager.NETWORK_TYPE_CDMA:
@@ -373,16 +373,17 @@ public class Globals{
                 case TelephonyManager.NETWORK_TYPE_UMTS:
                 case TelephonyManager.NETWORK_TYPE_EHRPD:
                     return true;
+            }
         }
-
+        
         if (downSpeed < 2500) {
             isConnectionSucks = true;
         }
 
         return isConnectionSucks;
-    } // Network check
+    }
 
-    public static void fixGapps(){
+    public static void fixGapps() {
         if (Build.VERSION.SDK_INT >= 26 && !isGmsInstalled()) {
             NotificationManager notificationManager = (NotificationManager) getContext().getSystemService(Context.NOTIFICATION_SERVICE);
 
