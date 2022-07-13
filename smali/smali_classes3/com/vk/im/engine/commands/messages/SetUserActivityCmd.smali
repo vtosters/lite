@@ -157,6 +157,15 @@
     .line 10
     iget v1, p0, Lcom/vk/im/engine/commands/messages/SetUserActivityCmd;->b:I
 
+    invoke-static {v1}, Lru/vtosters/lite/dnr/DNRModule;->isDntEnabledFor(I)Z
+
+    move-result v2
+
+    if-eqz v2, :cond_9
+
+    return-void
+
+    :cond_9
     invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v1
