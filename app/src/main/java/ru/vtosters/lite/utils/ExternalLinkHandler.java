@@ -31,10 +31,10 @@ public class ExternalLinkHandler{
     private static final Map<String, String> qualities = new HashMap<>();
 
     public static boolean parseVideoFile(VideoFile file) {
-        return parseVideoFile(file, getContext());
+        return parseVideoFile(file, getContext(), isEnableExternalOpening());
     }
 
-    public static boolean parseVideoFile(VideoFile file, Context context) {
+    public static boolean parseVideoFile(VideoFile file, Context context, Boolean isEnabled) {
         if (checkYoutubeLink(file)) {
             try {
                 Intent intent = new Intent(Intent.ACTION_VIEW);
@@ -47,7 +47,7 @@ public class ExternalLinkHandler{
             }
         }
 
-        if (!isEnableExternalOpening()) return false;
+        if (!isEnabled) return false;
 
         if (checkVkVideo(file)) {
             if (qualities.size() == 1) {
