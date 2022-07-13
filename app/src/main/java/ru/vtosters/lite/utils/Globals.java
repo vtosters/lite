@@ -11,6 +11,7 @@ import static ru.vtosters.lite.utils.Preferences.preferences;
 import static ru.vtosters.lite.utils.ServerDialog.sendRequest;
 import static ru.vtosters.lite.utils.Themes.isDarkTheme;
 import static ru.vtosters.lite.utils.Themes.setNeededTheme;
+import static ru.vtosters.lite.utils.VKUIInjector.isLoaded;
 
 import android.app.Activity;
 import android.app.Application;
@@ -38,11 +39,13 @@ import android.os.StrictMode;
 import android.preference.PreferenceManager;
 import android.telephony.TelephonyManager;
 import android.util.Log;
+import android.webkit.WebView;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.StringRes;
 
+import com.vk.articles.preload.WebCachePreloader;
 import com.vk.dto.user.UserProfile;
 import com.vk.im.ui.providers.audiomsg.ImAudioMsgPlayerProvider;
 import com.vk.im.ui.providers.audiomsg.PlayerActionSources;
@@ -50,6 +53,7 @@ import com.vk.navigation.Navigator;
 import com.vtosters.lite.VKActivity;
 import com.vtosters.lite.api.ExtendedUserProfile;
 import com.vtosters.lite.auth.VKAccountManager;
+import com.vtosters.lite.data.ThemeTracker;
 import com.vtosters.lite.im.ImEngineProvider;
 
 import java.io.ByteArrayOutputStream;
@@ -327,6 +331,13 @@ public class Globals{
 
     public static String getPackageName(){
         return getContext().getPackageName();
+    }
+
+    public static void clearWebCache(){
+        ThemeTracker.a();
+        isLoaded = false;
+        new WebView(getContext()).clearCache(true);
+        WebCachePreloader.e();
     }
 
     public static int convertDpToPixel(float f){
