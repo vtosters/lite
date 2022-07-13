@@ -51,23 +51,15 @@ public class GCMFix{
     public static String requestToken(){
         String xappide;
         try {
-            String[] aidarr = {"3974055026275073921", "4418584909973341826", "4585634953328772978"};
-            int r = new Random().nextInt(aidarr.length - 1);
-            String aid = "AidLogin " + aidarr[r] + ":" + new String[] {"1932960345884890854", "6594645578425092292", "1792344590975444730"}[r];
+            String aid = getRandomAid();
             String pub2 = genNewKey();
             String sig = getSig(pub2);
-            String xappide2 = null;
-            byte[] bytes = pair.getPublic().getEncoded();
             try {
-                bytes = MessageDigest.getInstance("SHA1").digest(bytes);
-            } catch (NoSuchAlgorithmException e) {
-                xappide2 = "";
-            }
-            if (xappide2 == null) {
+                byte[] bytes = MessageDigest.getInstance("SHA1").digest(pair.getPublic().getEncoded());
                 bytes[0] = (byte) (((bytes[0] & 15) + 112) & 255);
                 xappide = Base64.encodeToString(bytes, 2).substring(0, 11);
-            } else {
-                xappide = xappide2;
+            } catch (NoSuchAlgorithmException e) {
+               xappide = "";
             }
             AtomicBoolean wait = new AtomicBoolean(false);
             StringBuilder sb = new StringBuilder();
@@ -174,6 +166,13 @@ public class GCMFix{
         out.close();
         callback.doCallback(new BufferedReader(new InputStreamReader(con.getInputStream())).readLine());
         con.getInputStream().close();
+    }
+
+    private static String getRandomAid() {
+        var arr1 = new String[]{ "3974055026275073921", "4418584909973341826", "4585634953328772978" };
+        var arr2 = new String[]{ "1932960345884890854", "6594645578425092292", "1792344590975444730" };
+        int r = new Random().nextInt(2);
+        return "AidLogin " + arr1[r] + ":" + arr2[r];
     }
 
     private static String genNewKey(){
