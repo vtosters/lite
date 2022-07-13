@@ -377,6 +377,15 @@
 
     move-result-object v1
 
+    invoke-static/range {v1 .. v1}, Lru/vtosters/lite/utils/ExternalLinkHandler;->parseVideoFile(Lcom/vk/dto/common/VideoFile;)Z
+
+    move-result v4
+
+    if-eqz v4, :cond_custom
+
+    return-void
+
+    :cond_custom
     const-string v2, "video"
 
     .line 5
