@@ -25,6 +25,7 @@
 
     <style name="SplashTheme" parent="@style/VkLightStyle">
         <item name="android:windowBackground">@drawable/bg_splash</item>
+        <item name="android:navigationBarColor">@color/gray_20</item>
         <item name="android:windowLightStatusBar">true</item>
         <item name="android:windowLightNavigationBar">true</item>
     </style>
