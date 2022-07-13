@@ -8,6 +8,7 @@ import static ru.vtosters.lite.ui.wallpapers.WallpapersHooks.requestUpdateWallpa
 import static ru.vtosters.lite.utils.CacheUtils.deleteCache;
 import static ru.vtosters.lite.utils.Globals.edit;
 import static ru.vtosters.lite.utils.Globals.getIdentifier;
+import static ru.vtosters.lite.utils.Preferences.getBoolValue;
 import static ru.vtosters.lite.utils.Preferences.hasVerification;
 
 import android.content.Context;
@@ -77,7 +78,7 @@ public class WallpaperMenuFragment extends MaterialPreferenceToolbarFragment{
 
         PreferencesUtil.addPreferenceCategory(this, "Фильтры");
 
-        if (!hasVerification()) {
+        if (!hasVerification() && !getBoolValue("dialogrecomm", false)) {
             PreferencesUtil.addPreference(this, "", "Доступны не все фильтры!", "Для разблокировки необходимо сделать пожертование от 99р", null, preference -> {
                 getContext().startActivity(new Intent("android.intent.action.VIEW").setData(Uri.parse("https://vtosters.app")));
                 return false;
