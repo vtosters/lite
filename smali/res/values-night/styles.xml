@@ -1,6 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
+    <style name="SplashTheme" parent="@style/VkDarkStyle">
+        <item name="android:windowBackground">@drawable/bg_splash</item>
+        <item name="android:navigationBarColor">@color/gray_850</item>
+    </style>
+
     <style name="Theme.AppCompat.DayNight" parent="@style/Theme.AppCompat" />
 
     <style name="Theme.AppCompat.DayNight.DarkActionBar" parent="@style/Theme.AppCompat" />
