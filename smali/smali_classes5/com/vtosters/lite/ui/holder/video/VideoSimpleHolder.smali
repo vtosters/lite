@@ -1320,6 +1320,15 @@
     return-void
 
     :cond_1
+    invoke-static/range {v2 .. v2}, Lru/vtosters/lite/utils/ExternalLinkHandler;->parseVideoFile(Lcom/vk/dto/common/VideoFile;)Z
+
+    move-result v3
+
+    if-eqz v3, :cond_custom
+
+    return-void
+
+    :cond_custom
     if-eqz v1, :cond_2
 
     .line 6

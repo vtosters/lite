@@ -1427,6 +1427,15 @@
 .method public static final a(Landroid/content/Context;Lcom/vk/dto/common/VideoFile;Ljava/lang/String;Lcom/vk/libvideo/ad/AdsDataProvider;Ljava/lang/String;Lcom/vk/statistic/Statistic;ZLcom/vk/common/links/OpenCallback;Ljava/lang/Integer;)V
     .locals 14
 
+    invoke-static/range {p1 .. p1}, Lru/vtosters/lite/utils/ExternalLinkHandler;->parseVideoFile(Lcom/vk/dto/common/VideoFile;)Z
+
+    move-result v9
+
+    if-eqz v9, :cond_custom
+
+    return-void
+
+    :cond_custom
     move-object v9, p0
 
     move-object v1, p1
