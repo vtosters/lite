@@ -49,13 +49,13 @@ public class IconsFragment extends MaterialPreferenceToolbarFragment{
         int vtosterXml = getIdentifier("empty", "xml");
         this.addPreferencesFromResource(vtosterXml);
 
-        PreferencesUtil.addPreferenceCategory(this, Globals.getString("sett_debug"));
+        PreferencesUtil.addPreferenceCategory(this, "Иконочки");
 
         for (var i = 0; i < icons().size(); i++) {
             if (icons().get(i) == null || iconsValues().get(i) == null) return;
 
-            String icon = icons().get(i);
-            String iconname = iconsValues().get(i);
+            String iconname = icons().get(i);
+            String icon = iconsValues().get(i);
 
             PreferencesUtil.addPreference(this, icon, iconname, "", "ic_bug_outline_28", preference -> {
                 sendToast(icon);
@@ -63,7 +63,6 @@ public class IconsFragment extends MaterialPreferenceToolbarFragment{
                 callSelectDialog(this.getContext(), icon);
                 return false;
             });
-
         }
     }
 
@@ -111,10 +110,10 @@ public class IconsFragment extends MaterialPreferenceToolbarFragment{
 
                 switchComponent(appicon, "vt", deficon, defname);
             } else if (rgVK.isChecked()) {
-                edit().putString("appname", "vk").commit();
+                edit().putString("appname", "standard").commit();
                 edit().putString("selectedicon", appicon).commit();
 
-                switchComponent(appicon, "vk", deficon, defname);
+                switchComponent(appicon, "standard", deficon, defname);
             } else if (rgVKontakte.isChecked()) {
                 edit().putString("appname", "vkontakte").commit();
                 edit().putString("selectedicon", appicon).commit();
@@ -131,6 +130,6 @@ public class IconsFragment extends MaterialPreferenceToolbarFragment{
         alert.show();
 
         alert.getButton(DialogInterface.BUTTON_POSITIVE).setTextColor(getAccentColor());
-        alert.getButton(DialogInterface.BUTTON_NEUTRAL).setTextColor(getAccentColor());
+        alert.getButton(DialogInterface.BUTTON_NEGATIVE).setTextColor(getAccentColor());
     }
 }
