@@ -45,6 +45,10 @@ public class IconsFragment extends MaterialPreferenceToolbarFragment{
     @Override
     public void onCreate(Bundle bundle){
         super.onCreate(bundle);
+
+        int vtosterXml = getIdentifier("empty", "xml");
+        this.addPreferencesFromResource(vtosterXml);
+
         PreferencesUtil.addPreferenceCategory(this, Globals.getString("sett_debug"));
 
         for (var i = 0; i < icons().size(); i++) {
