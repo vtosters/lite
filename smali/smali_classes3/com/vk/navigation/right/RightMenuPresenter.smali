@@ -244,11 +244,7 @@
     .line 6
     invoke-static {v0, p1}, Lcom/vk/core/ui/themes/VKThemeHelper;->b(Landroid/app/Activity;[F)V
 
-    .line 7
-    invoke-static {}, Lcom/vtosters/lite/data/ThemeTracker;->a()V
-
-    .line 8
-    invoke-static {}, Lcom/vk/articles/preload/WebCachePreloader;->e()V
+    invoke-static {}, Lru/vtosters/lite/utils/Globals;->clearWebCache()V
 
     :cond_0
     return-void
