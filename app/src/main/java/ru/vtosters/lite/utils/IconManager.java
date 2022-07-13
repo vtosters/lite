@@ -52,27 +52,24 @@ public class IconManager {
             "VK", "VTLite", "VKontakte"
     );
 
-    public static CharSequence[] icons() {
-        return (hasVerification() && isValidSignature() ? sIconsPlusNames : sIconsNames).toArray(new CharSequence[0]);
+    public static List<String> icons() {
+        return hasVerification() && isValidSignature() ? sIconsPlusNames : sIconsNames;
     }
 
-    public static CharSequence[] iconsValues() {
-        return (hasVerification() && isValidSignature() ? sIconsPlus : sIcons).toArray(new CharSequence[0]);
+    public static List<String> iconsValues() {
+        return hasVerification() && isValidSignature() ? sIconsPlus : sIcons;
     }
 
-    public static CharSequence[] appname() {
-        return (hasVerification() && isValidSignature() ? sLabelsPlusNames : sLabelsNames).toArray(new CharSequence[0]);
-    }
+    public static void switchComponent(String icon, String appName, String oldIcon, String oldAppName) {
 
-    public static CharSequence[] appnameValues() {
-        return (hasVerification() && isValidSignature() ? sLabelsPlus : sLabels).toArray(new CharSequence[0]);
-    }
-
-    public static void switchComponent(String icon, String appName) {
         // def value for standard icon
         var iconIndex = 1;
         // def value for standard label
         var labelIndex = 1;
+
+        var oldIconIndex = -1;
+
+        var oldLabelIndex = -1;
 
         Log.d("IconManager", "iconSwitcher: icon = " + icon + ", appname = " + appName);
 
@@ -87,6 +84,11 @@ public class IconManager {
             labelsList = sLabels;
         }
 
+        if (oldIcon != null && oldAppName != null) {
+            oldIconIndex = iconsList.indexOf(oldIcon);
+            oldLabelIndex = labelsList.indexOf(oldAppName);
+        }
+
         // check if icon is exist
         if (iconsList.contains(icon))
             // get icon index
@@ -98,6 +100,11 @@ public class IconManager {
             labelIndex = labelsList.indexOf(appName);
 
         String currentState = getPreferences().getString("components_enabled", "11");
+
+        if (oldIconIndex != -1 && oldLabelIndex != -1) {
+            currentState = oldIconIndex + "" + oldLabelIndex;
+        }
+
         String newState = iconIndex + "" + labelIndex;
 
         // check if current component is equal to custom value or if custom value is not exist
