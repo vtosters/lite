@@ -16,7 +16,6 @@ import android.app.Activity;
 import android.app.Application;
 import android.app.NotificationChannel;
 import android.app.NotificationManager;
-import android.content.ComponentName;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
@@ -65,7 +64,6 @@ import java.net.URLConnection;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Locale;
-import java.util.Objects;
 
 import ru.vtosters.lite.ui.dialogs.DisableBattery;
 import ru.vtosters.lite.ui.dialogs.InstallGMS;
@@ -349,17 +347,35 @@ public class Globals{
 
     public static boolean isNetworkConnected(){
         ConnectivityManager cm = (ConnectivityManager) getContext().getSystemService(Context.CONNECTIVITY_SERVICE);
-        NetworkInfo activeNetwork = cm.getActiveNetworkInfo();
-        return activeNetwork != null && activeNetwork.isConnectedOrConnecting();
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
+            return cm.getActiveNetwork() != null && cm.getNetworkCapabilities(cm.getActiveNetwork()) != null;
+        } else {
+            return cm.getActiveNetworkInfo() != null && cm.getActiveNetworkInfo().isConnectedOrConnecting();
+        }
     } // Network check
 
     public static boolean isNetworkIsSlow(){
         var isConnectionSucks = false;
-        ConnectivityManager cm = (ConnectivityManager) getContext().getSystemService(Context.CONNECTIVITY_SERVICE);
-        NetworkCapabilities nc = cm.getNetworkCapabilities(cm.getActiveNetwork());
-        int downSpeed = nc.getLinkDownstreamBandwidthKbps();
+        var cm = (ConnectivityManager) getContext().getSystemService(Context.CONNECTIVITY_SERVICE);
+        var nc = cm.getNetworkCapabilities(cm.getActiveNetwork());
+        var downSpeed = nc.getLinkDownstreamBandwidthKbps();
+        var info = cm.getActiveNetworkInfo();
 
-        if (downSpeed < 2000) {
+        if (info.getType() == ConnectivityManager.TYPE_MOBILE) {
+            switch (info.getSubtype()) {
+                case TelephonyManager.NETWORK_TYPE_1xRTT:
+                case TelephonyManager.NETWORK_TYPE_EDGE:
+                case TelephonyManager.NETWORK_TYPE_CDMA:
+                case TelephonyManager.NETWORK_TYPE_EVDO_0:
+                case TelephonyManager.NETWORK_TYPE_EVDO_A:
+                case TelephonyManager.NETWORK_TYPE_GPRS:
+                case TelephonyManager.NETWORK_TYPE_HSDPA:
+                case TelephonyManager.NETWORK_TYPE_UMTS:
+                case TelephonyManager.NETWORK_TYPE_EHRPD:
+                    return true;
+        }
+
+        if (downSpeed < 2500) {
             isConnectionSucks = true;
         }
 
