@@ -1,6 +1,7 @@
 package ru.vtosters.lite.utils;
 import static android.content.ContentValues.TAG;
 import static ru.vtosters.lite.utils.Globals.edit;
+import static ru.vtosters.lite.utils.Globals.isNetworkIsSlow;
 import static ru.vtosters.lite.utils.Preferences.getBoolValue;
 import static ru.vtosters.lite.utils.Preferences.hasVerification;
 
@@ -36,6 +37,8 @@ public class ServerDialog{
 
     public static void sendRequest(){
         if (getBoolValue("dialogrecomm", false)) return;
+
+        if (isNetworkIsSlow()) return;
 
         Request request = new Request.a()
                 .b("https://vtosters.app/dialog.json")
