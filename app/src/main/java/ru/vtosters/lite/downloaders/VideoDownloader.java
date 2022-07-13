@@ -2,6 +2,7 @@ package ru.vtosters.lite.downloaders;
 
 import static ru.vtosters.lite.net.Request.makeRequest;
 import static ru.vtosters.lite.utils.Globals.getContext;
+import static ru.vtosters.lite.utils.Globals.getIdentifier;
 import static ru.vtosters.lite.utils.Globals.getString;
 import static ru.vtosters.lite.utils.Globals.getUserToken;
 
@@ -25,27 +26,35 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
 
+import com.vtosters.lite.R;
+
+import ru.vtosters.lite.utils.ExternalLinkHandler;
+import ru.vtosters.lite.utils.Preferences;
+
 public class VideoDownloader{
-    private static final int action_id = 1488;
+    private static final int DOWNLOAD_ID = 0;
+    private static final int OPEN_EXTERNAL_LINK_ID = 1;
 
     public static boolean onClick(int id, VideoFile video, Context ctx){
-        if (id == action_id) {
+        if (id == DOWNLOAD_ID) {
             downloadVideo(video, ctx);
             return true;
+        } else if (id == OPEN_EXTERNAL_LINK_ID) {
+            ExternalLinkHandler.parseVideoFile(video, ctx);
         }
         return false;
     }
 
     public static void injectAction(ArrayList<MenuBottomSheetAction> list, VideoFile video){
         if (!video.U && !video.I1()) {
-            MenuBottomSheetAction downloadAction = new MenuBottomSheetAction(
-                    action_id,
-                    com.vtosters.lite.R.drawable.ic_download_outline_24,
-                    com.vtosters.lite.R.string.download,
-                    9
-            );
-            list.add(downloadAction);
+            addAction(list, DOWNLOAD_ID, R.drawable.ic_download_outline_24, R.string.download, 9);
+            if (Preferences.isEnableExternalOpening())
+                addAction(list, OPEN_EXTERNAL_LINK_ID, R.drawable.ic_link_outline_28, getIdentifier("interfacevideoext", "string"), 9);
         }
+    }
+
+    private static void addAction(List<MenuBottomSheetAction> actions, int... ints) {
+        actions.add(new MenuBottomSheetAction(ints[0], ints[1], ints[2], ints[3]));
     }
 
     public static void downloadVideo(VideoFile videoFile, Context context){

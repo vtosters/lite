@@ -1,6 +1,7 @@
 package ru.vtosters.lite.utils;
 
 import static ru.vtosters.lite.utils.Globals.getContext;
+import static ru.vtosters.lite.utils.Globals.getCurrentActivity;
 import static ru.vtosters.lite.utils.Globals.isEmpty;
 import static ru.vtosters.lite.utils.Preferences.isEnableExternalOpening;
 
@@ -29,8 +30,11 @@ public class ExternalLinkHandler{
     );
     private static final Map<String, String> qualities = new HashMap<>();
 
-    public static boolean parseVideoFile(VideoFile file){
-        var context = getContext();
+    public static boolean parseVideoFile(VideoFile file) {
+        return parseVideoFile(file, getContext());
+    }
+
+    public static boolean parseVideoFile(VideoFile file, Context context) {
         if (checkYoutubeLink(file)) {
             try {
                 Intent intent = new Intent(Intent.ACTION_VIEW);
