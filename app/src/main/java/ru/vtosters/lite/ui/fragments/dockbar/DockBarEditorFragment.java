@@ -9,21 +9,20 @@ import android.view.ContextThemeWrapper;
 import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
-import android.view.ViewGroup;
 import android.widget.FrameLayout;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 import androidx.recyclerview.widget.ItemTouchHelper;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.vtosters.lite.general.fragments.MaterialPreferenceToolbarFragment;
-
-import com.vtosters.lite.R;
+import ru.vtosters.lite.ui.fragments.BaseToolbarFragment;
 import ru.vtosters.lite.utils.Globals;
 
-public class DockBarEditorFragment extends MaterialPreferenceToolbarFragment{
+public class DockBarEditorFragment extends BaseToolbarFragment {
 
     private RecyclerView mRecycler;
     private DockBarEditorAdapter mAdapter;
@@ -31,15 +30,10 @@ public class DockBarEditorFragment extends MaterialPreferenceToolbarFragment{
     private ItemTouchHelper mItemTouchHelper;
 
     @Override
-    public int T4(){
-        return getIdentifier("dockbar_editor", "string");
-    }
+    public View onCreateContent(@NonNull LayoutInflater inflater, @Nullable Bundle bundle) {
+        setTitle(getIdentifier("dockbar_editor", "string"));
 
-    @Override
-    public View onCreateView(LayoutInflater layoutInflater, ViewGroup viewGroup, Bundle bundle){
-        View root = super.onCreateView(layoutInflater, viewGroup, bundle);
-
-        FrameLayout content = root.findViewById(R.id.appkit_content);
+        FrameLayout content = new FrameLayout(getContext());
 
         LinearLayout container = new LinearLayout(getContext());
         container.setOrientation(LinearLayout.VERTICAL);
@@ -92,6 +86,6 @@ public class DockBarEditorFragment extends MaterialPreferenceToolbarFragment{
         mItemTouchHelper = new ItemTouchHelper(mCallback);
         mItemTouchHelper.attachToRecyclerView(mRecycler);
 
-        return root;
+        return content;
     }
 }
