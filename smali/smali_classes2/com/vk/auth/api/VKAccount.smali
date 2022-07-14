@@ -1930,6 +1930,10 @@
 
     move-result v0
 
+    invoke-static {}, Lru/vtosters/lite/utils/Preferences;->miniapps()Z
+
+    move-result v0
+
     return v0
 .end method
 

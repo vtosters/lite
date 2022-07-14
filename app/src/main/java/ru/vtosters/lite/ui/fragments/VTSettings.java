@@ -18,6 +18,7 @@ import static ru.vtosters.lite.utils.Globals.isGmsInstalled;
 import static ru.vtosters.lite.utils.Globals.restartApplication;
 import static ru.vtosters.lite.utils.IconManager.icons;
 import static ru.vtosters.lite.utils.IconManager.iconsValues;
+import static ru.vtosters.lite.utils.Preferences.*;
 import static ru.vtosters.lite.utils.Preferences.DoNotUseOldIcons;
 import static ru.vtosters.lite.utils.Preferences.ads;
 import static ru.vtosters.lite.utils.Preferences.devmenu;
@@ -70,6 +71,7 @@ import ru.vtosters.lite.ui.vkui.VBottomSheetBuilder;
 import ru.vtosters.lite.utils.CacheUtils;
 import ru.vtosters.lite.utils.Globals;
 import ru.vtosters.lite.utils.IconManager;
+import ru.vtosters.lite.utils.Preferences;
 import ru.vtosters.lite.utils.SSFS;
 import ru.vtosters.lite.utils.VKUIwrapper;
 
@@ -369,7 +371,7 @@ public class VTSettings extends MaterialPreferenceToolbarFragment{
             return false;
         });
 
-        if (milkshake()) {
+        if (milkshake() && superapp()) {
             PreferencesUtil.addPreference(this, "", "Настроить Superapp", superapp, "ic_explore_outline_28", (preference) -> {
                 callEditorPopup();
                 return true;

@@ -37,6 +37,11 @@
     <PreferenceCategory android:title="@string/vtlother">
         <com.vtosters.lite.ui.MaterialSwitchPreference
             android:defaultValue="true"
+            android:key="miniapps"
+            android:summary="Показывать Miniapps в меню"
+            android:title="Блок миниаппов" />
+        <com.vtosters.lite.ui.MaterialSwitchPreference
+            android:defaultValue="true"
             android:key="superapp"
             android:summary="Новый вид меню как в новых версиях ВКонтакте"
             android:title="Супераппы" />
