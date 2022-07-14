@@ -42,6 +42,11 @@
             android:title="Супераппы" />
         <com.vtosters.lite.ui.MaterialSwitchPreference
             android:defaultValue="false"
+            android:key="friendsblock"
+            android:summary="Скрыть блок рекомендаций друзей в друзьях"
+            android:title="Блок друзей" />
+        <com.vtosters.lite.ui.MaterialSwitchPreference
+            android:defaultValue="false"
             android:key="showmenu"
             android:summary="@string/menucuttersum"
             android:title="@string/menucutter" />

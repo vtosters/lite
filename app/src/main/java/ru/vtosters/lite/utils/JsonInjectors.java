@@ -4,7 +4,9 @@ import static ru.vtosters.lite.f0x1d.VTVerifications.isDeveloper;
 import static ru.vtosters.lite.f0x1d.VTVerifications.isPrometheus;
 import static ru.vtosters.lite.f0x1d.VTVerifications.isVerified;
 import static ru.vtosters.lite.utils.Base64Utils.decode;
+import static ru.vtosters.lite.utils.Globals.sendToast;
 import static ru.vtosters.lite.utils.Preferences.dev;
+import static ru.vtosters.lite.utils.Preferences.friendsblock;
 import static ru.vtosters.lite.utils.Preferences.getBoolValue;
 import static ru.vtosters.lite.utils.Preferences.hasVerification;
 
@@ -96,6 +98,63 @@ public class JsonInjectors{
 
         return json.putOpt("items", newItems);
     }
+
+    public static JSONObject friends(JSONObject json) throws JSONException{
+        JSONObject catalog = json;
+        Boolean sectionexecute = true;
+
+        if (json.optJSONObject("catalog") != null) {
+            catalog = json.optJSONObject("catalog");
+            sectionexecute = false;
+        }
+
+        JSONArray section = null;
+        JSONObject sections = null;
+
+        if (sectionexecute) {
+            sections = catalog.optJSONObject("section");
+        } else {
+            section = catalog.optJSONArray("sections");
+        }
+
+        JSONArray oldItems;
+
+        if (sectionexecute) {
+            oldItems = sections.optJSONArray("blocks");
+        } else {
+            oldItems = section.optJSONObject(0).optJSONArray("blocks");
+        }
+
+        var newItems = new JSONArray();
+        if (oldItems != null) {
+            for (int i = 0; i < oldItems.length(); i++) {
+                var type = oldItems.optJSONObject(i);
+                var name = type.optJSONObject("layout").optString("name");
+                var buttons = "";
+                var skip = false;
+                if (type.optJSONArray("buttons") != null) {
+                    buttons = type.optJSONArray("buttons").optJSONObject(0).optString("ref_layout_name");
+                }
+                if (name.contains("list_friend_suggests") || buttons.contains("list_friend_suggests") || name.contains("separator")) {
+                    skip = friendsblock();
+                }
+
+                if (!skip) {
+                    newItems.put(type);
+                }
+
+            }
+        }
+
+        if (sectionexecute) {
+            sections.putOpt("blocks", newItems);
+        } else {
+            section.optJSONObject(0).putOpt("blocks", newItems);
+        }
+
+        return json;
+    }
+
 
     public static boolean haveDonateButton(){
         int randomshower = new Random().nextInt(6);
