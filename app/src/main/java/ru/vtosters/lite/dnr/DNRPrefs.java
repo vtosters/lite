@@ -7,6 +7,10 @@ public class DNRPrefs{
         return getBoolValue("read_s", false);
     }
 
+    public static boolean getVoiceListened(){
+        return getBoolValue("listen_v", false);
+    }
+
     public static boolean getMarkAsReadWithoutExceptions(int peerId){
         if (readPM(peerId))
             return true;

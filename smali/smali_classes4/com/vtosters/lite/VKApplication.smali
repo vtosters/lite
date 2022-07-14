@@ -827,9 +827,9 @@
 
     invoke-direct {v2, v0, v3}, Lcom/vk/music/n/BoomModelImpl;-><init>(Lcom/vk/music/player/PlayerModel;Lcom/vk/music/restriction/MusicRestrictionManager;)V
 
-    invoke-static {v1, v3}, Lbruhcollective/itaysonlab/libvkx/client/LibVKXBoomModelProvider;->createModel(Lcom/vk/music/player/PlayerModel;Lcom/vk/music/restriction/MusicRestrictionManager;)Lcom/vk/music/common/BoomModel;
+    # invoke-static {v1, v3}, Lbruhcollective/itaysonlab/libvkx/client/LibVKXBoomModelProvider;->createModel(Lcom/vk/music/player/PlayerModel;Lcom/vk/music/restriction/MusicRestrictionManager;)Lcom/vk/music/common/BoomModel;
 
-    move-result-object v2
+    # move-result-object v2
 
     invoke-virtual {v1, v2}, Lcom/vk/music/common/Music$a;->a(Lcom/vk/music/common/BoomModel;)V
 

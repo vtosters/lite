@@ -73,8 +73,18 @@
             android:title="@string/activity_what_is_it" />
         <com.vtosters.lite.ui.MaterialSwitchPreference
             android:defaultValue="false"
-            android:key="dns"
+            android:key="read_s"
             android:title="@string/dns" />
+    </PreferenceCategory>
+    <PreferenceCategory android:title="Голосовые сообщения">
+        <Preference
+            android:enabled="false"
+            android:summary="Функция позволяет вам не отправлять статус прослушивания вами голосовых сообщений собеседника"
+            android:title="@string/activity_what_is_it" />
+        <com.vtosters.lite.ui.MaterialSwitchPreference
+            android:defaultValue="false"
+            android:key="listen_v"
+            android:title="Отключить статус прослушивания" />
     </PreferenceCategory>
     <PreferenceCategory android:title="@string/privacy_vtl">
         <com.vtosters.lite.ui.MaterialSwitchPreference

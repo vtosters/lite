@@ -96,7 +96,15 @@
 .method public a(Lcom/vk/im/engine/ImEnvironment;Lcom/vk/instantjobs/InstantJob$b;)V
     .locals 2
 
-    .line 1
+    invoke-static {}, Lru/vtosters/lite/dnr/DNRPrefs;->getVoiceListened()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    return-void
+
+    :cond_0
     invoke-interface {p1}, Lcom/vk/im/engine/ImEnvironment;->a0()Lcom/vk/im/engine/internal/storage/StorageManager;
 
     move-result-object p2
