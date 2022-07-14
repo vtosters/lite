@@ -1,9 +1,11 @@
 package bruhcollective.itaysonlab.libvkx.client;
 
 import static ru.vtosters.lite.utils.Globals.getContext;
+import static ru.vtosters.lite.utils.Globals.sendToast;
 import static ru.vtosters.lite.utils.Preferences.getBoolValue;
 
 import android.content.Context;
+import android.os.Build;
 import android.os.RemoteException;
 
 import com.vk.dto.music.MusicTrack;
@@ -32,8 +34,13 @@ public class LibVKXClient{
     }
 
     public static boolean isVkxInstalled(){
-        return PackageManagerHelper.a(ClientConstants.PACKAGE, 128) != null;
-    }
+        try {
+            getContext().getPackageManager().getPackageInfo("ua.itaysonlab.vkx", 0);
+            return true;
+        } catch (Exception unused) {
+            return false;
+        }
+    } // VKX check
 
     public static boolean isIntegrationEnabled(){
         return getBoolValue("libvkx_integration", false) && isVkxInstalled();
@@ -41,6 +48,11 @@ public class LibVKXClient{
 
     public static boolean play(MusicTrack musicTrack, List<MusicTrack> list, MusicPlaybackLaunchContext playerRefer){
         if (!isIntegrationEnabled()) {
+            return false;
+        }
+
+        if (Build.VERSION.SDK_INT >= 31) {
+            sendToast("Интеграция не поддерживается на версии Android >= 12");
             return false;
         }
 

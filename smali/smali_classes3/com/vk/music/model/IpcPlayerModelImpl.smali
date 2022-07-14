@@ -1926,16 +1926,6 @@
         }
     .end annotation
 
-    .line 10
-    invoke-static {p1, p2, p3}, Lbruhcollective/itaysonlab/libvkx/client/LibVKXClient;->play(Lcom/vk/dto/music/MusicTrack;Ljava/util/List;Lcom/vk/music/common/MusicPlaybackLaunchContext;)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_b
-
-    return-void
-
-    :cond_b
     invoke-static {p0}, Lcom/vk/music/model/IpcPlayerModelImpl;->a(Lcom/vk/music/model/IpcPlayerModelImpl;)Lcom/vk/audioipc/core/AudioPlayer;
 
     move-result-object v0

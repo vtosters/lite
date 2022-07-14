@@ -49,7 +49,7 @@
             android:defaultValue="false"
             android:key="friendsblock"
             android:summary="Скрыть блок рекомендаций друзей в друзьях"
-            android:title="Блок друзей" />
+            android:title="Скрыть друзей" />
         <com.vtosters.lite.ui.MaterialSwitchPreference
             android:defaultValue="false"
             android:key="showmenu"
