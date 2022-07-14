@@ -9,3 +9,4 @@ bitmain
 cents-apps
 cent-app
 centapp
+/?a=
