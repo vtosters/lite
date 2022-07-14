@@ -5,7 +5,6 @@ import static ru.vtosters.lite.utils.Globals.getContext;
 
 import android.content.res.ColorStateList;
 import android.graphics.Typeface;
-import android.util.Log;
 import android.view.Gravity;
 import android.view.View;
 import android.view.ViewGroup;
@@ -167,7 +166,6 @@ public class DockBarEditorAdapter extends RecyclerView.Adapter<DockBarEditorAdap
         }
 
         public void bind(int pos){
-            Log.d("ItemViewHolder", pos + "");
             if (AdapterHelper.getItemViewType(pos) == AdapterHelper.TAB_TYPE) {
                 DockBarTab tab = AdapterHelper.getTabType(pos) == AdapterHelper.SELECTED
                         ? mDockBarManager.getSelectedTabs().get(pos - 1)
@@ -177,7 +175,7 @@ public class DockBarEditorAdapter extends RecyclerView.Adapter<DockBarEditorAdap
                 mTabContainer.setVisibility(View.VISIBLE);
                 mCategoryTitleContainer.setVisibility(View.INVISIBLE);
             } else {
-                mCategoryTitle.setText(mDockBarManager.getCategoryTitles().get(pos == 0 ? 0 : 1));
+                mCategoryTitle.setText(mDockBarManager.getCategoryTitles()[pos == 0 ? 0 : 1]);
                 mCategoryTitleContainer.setVisibility(View.VISIBLE);
                 mTabContainer.setVisibility(View.INVISIBLE);
             }

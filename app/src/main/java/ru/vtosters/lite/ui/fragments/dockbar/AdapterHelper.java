@@ -25,8 +25,6 @@ public class AdapterHelper{
     }
 
     public static int getItemCount(){
-        return sManager.getCategoryTitles().size()
-                + sManager.getSelectedTabs().size()
-                + sManager.getDisabledTabs().size();
+        return sManager.getSelectedTabs().size() + sManager.getDisabledTabs().size() + 2;
     }
 }

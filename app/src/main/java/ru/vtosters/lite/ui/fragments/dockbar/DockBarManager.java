@@ -4,7 +4,6 @@ import static ru.vtosters.lite.utils.Globals.getContext;
 import static ru.vtosters.lite.utils.Globals.getString;
 import static ru.vtosters.lite.utils.Preferences.getBoolValue;
 import static ru.vtosters.lite.utils.Preferences.milkshake;
-import static ru.vtosters.lite.utils.Preferences.musicnewcatalog;
 import static ru.vtosters.lite.utils.Preferences.superapp;
 import static ru.vtosters.lite.utils.Preferences.useNewSettings;
 import static ru.vtosters.lite.utils.Preferences.vkme;
@@ -36,17 +35,13 @@ import com.vtosters.lite.fragments.y2.VideosFragment;
 import com.vtosters.lite.general.fragments.GamesFragment;
 import com.vtosters.lite.general.fragments.PhotosFragment;
 
-import org.json.JSONArray;
-import org.json.JSONException;
-import org.json.JSONObject;
-
 import java.io.File;
-import java.io.IOException;
 import java.util.ArrayList;
-import java.util.Arrays;
+import java.util.HashSet;
 import java.util.List;
+import java.util.Set;
 
-import ru.vtosters.lite.utils.StreamUtils;
+import ru.vtosters.lite.utils.Globals;
 
 public class DockBarManager{
 
@@ -57,15 +52,11 @@ public class DockBarManager{
 
     private final List<DockBarTab> mSelectedTabs = new ArrayList<>();
     private final List<DockBarTab> mDisabledTabs = new ArrayList<>();
-    private final List<String> mCategoryTitles = Arrays.asList(
+    private final String[] mCategoryTitles = {
             getString("dockbar_selected_items"),
             getString("dockbar_unselected_items")
-    );
-    private File mConfig;
-
-    public DockBarManager(){
-        init();
-    }
+    };
+    private Set<String> mSelectedTabsSet;
 
     public static DockBarManager getInstance(){
         return sInstance == null
@@ -73,283 +64,79 @@ public class DockBarManager{
                 : sInstance;
     }
 
-    private void init(){
-        mConfig = new File(getContext().getFilesDir(), "dockbar.json");
+    public DockBarManager(){
+        init();
+    }
 
+    private void init() {
         if (vkme()) {
-            mSelectedTabs.add(DockBarTab.valuesOf(
-                    "tab_settings",
-                    R.drawable.ic_settings_outline_28,
-                    R.string.menu_settings,
-                    R.id.menu_settings,
-                    useNewSettings()));
+            mSelectedTabs.add(getTabByTag("tab_settings"));
             if (vkme_notifs())
-                mSelectedTabs.add(DockBarTab.valuesOf(
-                        "tab_feedback",
-                        R.drawable.ic_menu_notification_outline_28,
-                        R.string.feedback,
-                        R.id.tab_feedback,
-                        NotificationsContainerFragment.class));
-            mSelectedTabs.add(DockBarTab.valuesOf(
-                    "tab_messages",
-                    R.drawable.ic_message_outline_28,
-                    R.string.messages,
-                    R.id.tab_messages,
-                    DialogsFragment.class));
-            mSelectedTabs.add(DockBarTab.valuesOf(
-                    "tab_profile",
-                    milkshake() ? R.drawable.ic_user_circle_outline_28 : R.drawable.ic_account_outline_28,
-                    R.string.profile,
-                    R.id.tab_menu,
-                    milkshake() ? ProfileFragment.class : MenuFragment.class));
+                mSelectedTabs.add(getTabByTag("tab_feedback"));
+            mSelectedTabs.add(getTabByTag("tab_messages"));
+            mSelectedTabs.add(getTabByTag("tab_profile"));
             return;
         }
-        if (mConfig.exists()) {
-            readFromConfig();
-        } else {
+
+        checkOldConfig();
+
+        mSelectedTabsSet = Globals.getPreferences().getStringSet("selected_dockbar_tabs", new HashSet<>());
+        if (mSelectedTabsSet.size() > 0)
+            parseSelectedTabs();
+        else
             fillDefault();
+    }
+
+    private void checkOldConfig() {
+        File config = new File(getContext().getFilesDir(), "dockbar.json");
+        if (config.exists()) config.deleteOnExit();
+    }
+
+    private void parseSelectedTabs() {
+        String[] tags = { "tab_news", "tab_superapps", "tab_messages", "tab_feedback", "tab_profile",
+                "tab_friends", "tab_groups", "tab_photos", "tab_audios", "tab_videos", "tab_lives", "tab_games", "tab_liked",
+                "tab_fave", "tab_documents", "tab_payments", "tab_vk_apps", "tab_settings", "tab_menu", "tab_brtd" };
+        for (String tag : tags) {
+            DockBarTab tab = getTabByTag(tag);
+            if (mSelectedTabsSet.contains(tag))
+                mSelectedTabs.add(tab);
+            else
+                mDisabledTabs.add(tab);
         }
     }
 
-    private void readFromConfig(){
-        try {
-            JSONObject jsonObj = new JSONObject(StreamUtils.readAllLines(mConfig));
+    private void fillDefault() {
+        mSelectedTabs.add(getTabByTag("tab_news"));
+        mSelectedTabs.add(getTabByTag("tab_superapps"));
+        mSelectedTabs.add(getTabByTag("tab_messages"));
+        mSelectedTabs.add(getTabByTag("tab_feedback"));
+        mSelectedTabs.add(getTabByTag("tab_profile"));
 
-            fillList(mSelectedTabs, jsonObj.getJSONArray("selected"));
-            fillList(mDisabledTabs, jsonObj.getJSONArray("disabled"));
-        } catch (JSONException | IOException | ClassNotFoundException e) {
-            e.printStackTrace();
-        }
-    }
-
-    private void fillList(List<DockBarTab> list, JSONArray array) throws JSONException, ClassNotFoundException{
-        for (int i = 0; i < array.length(); i++) {
-            JSONObject item = array.getJSONObject(i);
-            DockBarTab tab = DockBarTab.valuesOf(
-                    item.getString("tag"),
-                    item.getInt("iconID"),
-                    item.getInt("titleID"),
-                    item.getInt("id"),
-                    Class.forName(item.getString("fragmentClass"))
-            );
-
-            if (musicnewcatalog() && MusicFragment.class == tab.fragmentClass)
-                tab.fragmentClass = MusicCatalogFragment1.class;
-            else if (MusicCatalogFragment1.class == tab.fragmentClass)
-                tab.fragmentClass = MusicFragment.class;
-
-            if (milkshake()) {
-                if (NewsfeedFragment.class == tab.fragmentClass)
-                    tab.fragmentClass = HomeFragment.class;
-                // fix menu visibility
-                if (MenuFragment.class == tab.fragmentClass) {
-                    tab.fragmentClass = ProfileFragment.class;
-                    tab.iconID = R.drawable.ic_user_circle_outline_28;
-                }
-
-                if (ThemedFeedFragment.class == tab.fragmentClass) {
-                    tab.fragmentClass = SuperAppFragment.class;
-                    tab.iconID = R.drawable.ic_explore_outline_28;
-                }
-
-                if (!superapp() && SuperAppFragment.class == tab.fragmentClass) {
-                    tab.fragmentClass = SearchMenuFragment.class;
-                }
-
-                if (NotificationsContainerFragment.class == tab.fragmentClass) {
-                    tab.fragmentClass = FriendsCatalogFragment.class;
-                    tab.iconID = R.drawable.ic_users_outline_28;
-                }
-
-                if (milkshake() && GroupsFragment1.class == tab.fragmentClass) {
-                    tab.fragmentClass = CommunitiesCatalogFragment.class;
-                }
-
-            } else {
-                if (HomeFragment.class == tab.fragmentClass)
-                    tab.fragmentClass = NewsfeedFragment.class;
-                // fix menu visibility
-                if (ProfileFragment.class == tab.fragmentClass) {
-                    tab.iconID = R.drawable.ic_menu_more_outline_28;
-                    tab.fragmentClass = MenuFragment.class;
-                }
-
-                if (SuperAppFragment.class == tab.fragmentClass) {
-                    tab.iconID = R.drawable.ic_menu_search_outline_28;
-                    tab.fragmentClass = ThemedFeedFragment.class;
-                }
-
-                if (SearchMenuFragment.class == tab.fragmentClass) {
-                    tab.fragmentClass = ThemedFeedFragment.class;
-                }
-
-                if (CommunitiesCatalogFragment.class == tab.fragmentClass) {
-                    tab.fragmentClass = GroupsFragment1.class;
-                }
-
-                if (FriendsCatalogFragment.class == tab.fragmentClass) {
-                    tab.fragmentClass = NotificationsContainerFragment.class;
-                    tab.iconID = R.drawable.ic_menu_notification_outline_28;
-                }
-            }
-            list.add(tab);
-        }
-    }
-
-    private void fillDefault(){
-        // fill selected tabs list
-        mSelectedTabs.add(DockBarTab.valuesOf(
-                "tab_news",
-                R.drawable.ic_menu_newsfeed_outline_28,
-                R.string.newsfeed,
-                R.id.tab_news,
-                milkshake() ? HomeFragment.class : NewsfeedFragment.class));
-        mSelectedTabs.add(DockBarTab.valuesOf(
-                "tab_superapps",
-                milkshake() ? R.drawable.ic_explore_outline_28 : R.drawable.ic_menu_search_outline_28,
-                R.string.super_app_title,
-                R.id.tab_discover,
-                milkshake() ? (superapp() ? SuperAppFragment.class : SearchMenuFragment.class) : ThemedFeedFragment.class));
-        mSelectedTabs.add(DockBarTab.valuesOf(
-                "tab_messages",
-                R.drawable.ic_message_outline_28,
-                R.string.messages,
-                R.id.tab_messages,
-                DialogsFragment.class));
-        mSelectedTabs.add(DockBarTab.valuesOf(
-                "tab_friends",
-                milkshake() ? R.drawable.ic_users_outline_28 : R.drawable.ic_menu_notification_outline_28,
-                R.string.friends,
-                R.id.tab_feedback,
-                milkshake() ? FriendsCatalogFragment.class : NotificationsContainerFragment.class));
-        mSelectedTabs.add(DockBarTab.valuesOf(
-                "tab_profile",
-                milkshake() ? R.drawable.ic_user_circle_outline_28 : R.drawable.ic_menu_more_outline_28,
-                R.string.profile,
-                R.id.tab_menu,
-                milkshake() ? ProfileFragment.class : MenuFragment.class));
-
-        // fill disabled tabs list
-        mDisabledTabs.add(DockBarTab.valuesOf(
-                "tab_feedback",
-                R.drawable.ic_menu_notification_outline_28,
-                R.string.feedback,
-                R.id.tab_feedback,
-                NotificationsContainerFragment.class));
-        mDisabledTabs.add(DockBarTab.valuesOf(
-                "tab_groups",
-                R.drawable.ic_users_outline_28,
-                R.string.groups,
-                R.id.menu_groups,
-                milkshake() ? CommunitiesCatalogFragment.class : GroupsFragment1.class));
-        mDisabledTabs.add(DockBarTab.valuesOf(
-                "tab_photos",
-                R.drawable.ic_camera_outline_28,
-                R.string.photos,
-                R.id.menu_photos,
-                PhotosFragment.class));
-        mDisabledTabs.add(DockBarTab.valuesOf(
-                "tab_audios",
-                R.drawable.ic_music_outline_28,
-                R.string.music,
-                R.id.menu_audios,
-                getBoolValue("musicnewcatalog", true) ? MusicCatalogFragment1.class : MusicFragment.class));
-        mDisabledTabs.add(DockBarTab.valuesOf(
-                "tab_videos",
-                R.drawable.ic_video_outline_28,
-                R.string.videos,
-                R.id.menu_videos,
-                VideosFragment.class));
-        mDisabledTabs.add(DockBarTab.valuesOf(
-                "tab_lives",
-                R.drawable.ic_live_outline_28,
-                R.string.sett_live,
-                R.id.menu_lives,
-                LivesPostListFragment.class));
-        mDisabledTabs.add(DockBarTab.valuesOf(
-                "tab_games",
-                R.drawable.ic_games_outline_36,
-                R.string.games,
-                R.id.menu_games,
-                GamesFragment.class));
-        mDisabledTabs.add(DockBarTab.valuesOf(
-                "tab_liked",
-                R.drawable.ic_menu_like_24,
-                R.string.sett_likes,
-                R.id.menu_feed_likes,
-                FeedLikesFragment.class));
-        mDisabledTabs.add(DockBarTab.valuesOf(
-                "tab_fave",
-                R.drawable.ic_favorite_outline_28,
-                R.string.video,
-                R.id.menu_fave,
-                FaveTabFragment.class));
-        mDisabledTabs.add(DockBarTab.valuesOf(
-                "tab_documents",
-                R.drawable.ic_document_outline_24,
-                R.string.docs,
-                R.id.menu_documents,
-                DocumentsViewFragment.class));
-        mDisabledTabs.add(DockBarTab.valuesOf(
-                "tab_payments",
-                R.drawable.ic_money_transfer_outline_28,
-                R.string.money_transfer_money_transfers,
-                R.id.menu_payments,
-                MoneyTransfersFragment.class));
-        mDisabledTabs.add(DockBarTab.valuesOf(
-                "tab_vk_apps",
-                R.drawable.ic_services_outline_28,
-                R.string.menu_apps,
-                R.id.menu_vk_apps,
-                AppsFragment.class));
-        mDisabledTabs.add(DockBarTab.valuesOf(
-                "tab_settings",
-                R.drawable.ic_settings_outline_28,
-                R.string.menu_settings,
-                R.id.menu_settings,
-                useNewSettings()));
-        mDisabledTabs.add(DockBarTab.valuesOf(
-                "tab_menu",
-                R.drawable.ic_menu_more_outline_28,
-                R.string.register,
-                R.id.tab_menu,
-                MenuFragment.class));
-        mDisabledTabs.add(DockBarTab.valuesOf(
-                "tab_brtd",
-                R.drawable.ic_menu_birthdays,
-                R.string.birthdays_title,
-                R.id.menu_birthdays,
-                BirthdaysFragment.class));
+        mDisabledTabs.add(getTabByTag("tab_friends"));
+        mDisabledTabs.add(getTabByTag("tab_groups"));
+        mDisabledTabs.add(getTabByTag("tab_photos"));
+        mDisabledTabs.add(getTabByTag("tab_audios"));
+        mDisabledTabs.add(getTabByTag("tab_videos"));
+        mDisabledTabs.add(getTabByTag("tab_lives"));
+        mDisabledTabs.add(getTabByTag("tab_games"));
+        mDisabledTabs.add(getTabByTag("tab_liked"));
+        mDisabledTabs.add(getTabByTag("tab_fave"));
+        mDisabledTabs.add(getTabByTag("tab_documents"));
+        mDisabledTabs.add(getTabByTag("tab_payments"));
+        mDisabledTabs.add(getTabByTag("tab_vk_apps"));
+        mDisabledTabs.add(getTabByTag("tab_settings"));
+        mDisabledTabs.add(getTabByTag("tab_menu"));
+        mDisabledTabs.add(getTabByTag("tab_brtd"));
     }
 
     public void save(){
-        try {
-            JSONObject jsonObj = new JSONObject()
-                    .put("selected", makeJsonArrayWithTabs(mSelectedTabs))
-                    .put("disabled", makeJsonArrayWithTabs(mDisabledTabs));
-
-            StreamUtils.writeToFile(mConfig, jsonObj.toString());
-        } catch (JSONException | IOException e) {
-            e.printStackTrace();
-        }
+        mSelectedTabsSet = new HashSet<>();
+        mSelectedTabs.forEach(tab -> mSelectedTabsSet.add(tab.tag));
+        Globals.getPreferences().edit().putStringSet("selected_dockbar_tabs", mSelectedTabsSet).commit();
     }
 
     public void reset(){
-        mConfig.deleteOnExit();
-    }
-
-    private JSONArray makeJsonArrayWithTabs(List<DockBarTab> list) throws JSONException{
-        JSONArray array = new JSONArray();
-        for (DockBarTab tab : list) {
-            JSONObject item = new JSONObject()
-                    .put("tag", tab.tag)
-                    .put("iconID", tab.iconID)
-                    .put("titleID", tab.titleID)
-                    .put("id", tab.id)
-                    .put("fragmentClass", tab.fragmentClass.getName());
-            array.put(item);
-        }
-        return array;
+        Globals.getPreferences().edit().putStringSet("selected_dockbar_tabs", null).commit();
     }
 
     public List<DockBarTab> getSelectedTabs(){
@@ -360,7 +147,154 @@ public class DockBarManager{
         return mDisabledTabs;
     }
 
-    public List<String> getCategoryTitles(){
+    public String[] getCategoryTitles(){
         return mCategoryTitles;
+    }
+
+    private DockBarTab getTabByTag(String tag) {
+        switch (tag) {
+            case "tab_news":
+                return DockBarTab.valuesOf(
+                        "tab_news",
+                        R.drawable.ic_menu_newsfeed_outline_28,
+                        R.string.newsfeed,
+                        R.id.tab_news,
+                        milkshake() ? HomeFragment.class : NewsfeedFragment.class);
+            case "tab_superapps":
+                return DockBarTab.valuesOf(
+                        "tab_superapps",
+                        milkshake() ? R.drawable.ic_explore_outline_28 : R.drawable.ic_menu_search_outline_28,
+                        R.string.super_app_title,
+                        R.id.tab_discover,
+                        milkshake() ? (superapp() ? SuperAppFragment.class : SearchMenuFragment.class) : ThemedFeedFragment.class);
+            case "tab_messages":
+                return DockBarTab.valuesOf(
+                        "tab_messages",
+                        R.drawable.ic_message_outline_28,
+                        R.string.messages,
+                        R.id.tab_messages,
+                        DialogsFragment.class);
+            case "tab_feedback":
+                return DockBarTab.valuesOf(
+                        "tab_feedback",
+                        R.drawable.ic_menu_notification_outline_28,
+                        R.string.feedback,
+                        R.id.tab_feedback,
+                        NotificationsContainerFragment.class);
+            case "tab_profile":
+                return DockBarTab.valuesOf(
+                        "tab_profile",
+                        milkshake() ? R.drawable.ic_user_circle_outline_28 : R.drawable.ic_menu_more_outline_28,
+                        R.string.profile,
+                        R.id.tab_menu,
+                        milkshake() ? ProfileFragment.class : MenuFragment.class);
+            case "tab_friends":
+                return DockBarTab.valuesOf(
+                        "tab_friends",
+                        R.drawable.ic_user_outline_28,
+                        R.string.friends,
+                        R.id.menu_friends,
+                        FriendsCatalogFragment.class);
+            case "tab_groups":
+                return DockBarTab.valuesOf(
+                        "tab_groups",
+                        R.drawable.ic_users_outline_28,
+                        R.string.groups,
+                        R.id.menu_groups,
+                        milkshake() ? CommunitiesCatalogFragment.class : GroupsFragment1.class);
+            case "tab_photos":
+                return DockBarTab.valuesOf(
+                        "tab_photos",
+                        R.drawable.ic_camera_outline_28,
+                        R.string.photos,
+                        R.id.menu_photos,
+                        PhotosFragment.class);
+            case "tab_audios":
+                return DockBarTab.valuesOf(
+                        "tab_audios",
+                        R.drawable.ic_music_outline_28,
+                        R.string.music,
+                        R.id.menu_audios,
+                        getBoolValue("musicnewcatalog", true) ? MusicCatalogFragment1.class : MusicFragment.class);
+            case "tab_videos":
+                return DockBarTab.valuesOf(
+                        "tab_videos",
+                        R.drawable.ic_video_outline_28,
+                        R.string.videos,
+                        R.id.menu_videos,
+                        VideosFragment.class);
+            case "tab_lives":
+                return DockBarTab.valuesOf(
+                        "tab_lives",
+                        R.drawable.ic_live_outline_28,
+                        R.string.sett_live,
+                        R.id.menu_lives,
+                        LivesPostListFragment.class);
+            case "tab_games":
+                return DockBarTab.valuesOf(
+                        "tab_games",
+                        R.drawable.ic_games_outline_36,
+                        R.string.games,
+                        R.id.menu_games,
+                        GamesFragment.class);
+            case "tab_liked":
+                return DockBarTab.valuesOf(
+                        "tab_liked",
+                        R.drawable.ic_like_outline_28,
+                        R.string.sett_likes,
+                        R.id.menu_feed_likes,
+                        FeedLikesFragment.class);
+            case "tab_fave":
+                return DockBarTab.valuesOf(
+                        "tab_fave",
+                        R.drawable.ic_favorite_outline_28,
+                        R.string.fave_title,
+                        R.id.menu_fave,
+                        FaveTabFragment.class);
+            case "tab_documents":
+                return DockBarTab.valuesOf(
+                        "tab_documents",
+                        R.drawable.ic_document_outline_28,
+                        R.string.docs,
+                        R.id.menu_documents,
+                        DocumentsViewFragment.class);
+            case "tab_payments":
+                return DockBarTab.valuesOf(
+                        "tab_payments",
+                        R.drawable.ic_money_transfer_outline_28,
+                        R.string.money_transfer_money_transfers,
+                        R.id.menu_payments,
+                        MoneyTransfersFragment.class);
+            case "tab_vk_apps":
+                return DockBarTab.valuesOf(
+                        "tab_vk_apps",
+                        R.drawable.ic_services_outline_28,
+                        R.string.menu_apps,
+                        R.id.menu_vk_apps,
+                        AppsFragment.class);
+            case "tab_settings":
+                return DockBarTab.valuesOf(
+                        "tab_settings",
+                        R.drawable.ic_settings_outline_28,
+                        R.string.menu_settings,
+                        R.id.menu_settings,
+                        useNewSettings());
+            case "tab_menu":
+                return DockBarTab.valuesOf(
+                        "tab_menu",
+                        R.drawable.ic_menu_more_outline_28,
+                        R.string.menu,
+                        R.id.tab_menu,
+                        MenuFragment.class);
+            case "tab_brtd":
+                return DockBarTab.valuesOf(
+                        "tab_brtd",
+                        R.drawable.ic_menu_birthdays,
+                        R.string.birthdays_title,
+                        R.id.menu_birthdays,
+                        BirthdaysFragment.class);
+            default:
+                return null;
+        }
     }
 }
