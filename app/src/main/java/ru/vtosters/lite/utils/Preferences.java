@@ -194,6 +194,10 @@ public class Preferences{
         return getBoolValue("superapp", true);
     }
 
+    public static boolean miniapps(){
+        return getBoolValue("miniapps", true);
+    }
+
     public static boolean friendsblock(){
         return getBoolValue("friendsblock", false);
     }
