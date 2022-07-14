@@ -5,11 +5,13 @@ import static android.widget.Toast.makeText;
 import static ru.vtosters.lite.utils.Globals.convertDpToPixel;
 import static ru.vtosters.lite.utils.Globals.getIdentifier;
 import static ru.vtosters.lite.utils.Themes.getAccentColor;
+import static ru.vtosters.lite.utils.Themes.getAlertStyle;
 
 import android.app.AlertDialog;
 import android.app.ProgressDialog;
 import android.content.BroadcastReceiver;
 import android.content.Context;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.IntentFilter;
 import android.content.res.ColorStateList;
@@ -43,7 +45,7 @@ import ru.vtosters.lite.ui.PreferencesUtil;
 import ru.vtosters.lite.ui.fragments.BaseToolbarFragment;
 import ru.vtosters.lite.utils.Globals;
 
-public class StickersFragment extends BaseToolbarFragment {
+public class StickersFragment extends BaseToolbarFragment{
 
     public final static String ACTION_RELOAD = "com.vtosters.lite.action.RELOAD_TGS_LIST";
 
@@ -56,9 +58,9 @@ public class StickersFragment extends BaseToolbarFragment {
     private RecyclerView mRecycler;
     private StickerPackAdapter mAdapter;
     private boolean movePending = false;
-    private final BroadcastReceiver mReceiver = new BroadcastReceiver() {
+    private final BroadcastReceiver mReceiver = new BroadcastReceiver(){
         @Override
-        public void onReceive(Context context, Intent intent) {
+        public void onReceive(Context context, Intent intent){
             if (intent.getAction().equals(ACTION_RELOAD)) {
                 if (mAdapter != null) {
                     try {
@@ -79,7 +81,7 @@ public class StickersFragment extends BaseToolbarFragment {
     };
 
     @Override
-    protected void onCreateMenu(Menu menu) {
+    protected void onCreateMenu(Menu menu){
         var item = menu.add(0, 0, 0, "");
         item.setShowAsAction(MenuItem.SHOW_AS_ACTION_ALWAYS);
         item.setIcon(getResources().getDrawable(getIdentifier("ic_settings_24", "drawable")));
@@ -88,12 +90,12 @@ public class StickersFragment extends BaseToolbarFragment {
     }
 
     @Override
-    public boolean onOptionsItemSelected(MenuItem arg0) {
+    public boolean onOptionsItemSelected(MenuItem arg0){
         openMenu(null);
         return true;
     }
 
-    private void openMenu(String toast) {
+    private void openMenu(String toast){
         if (toast != null) {
             makeText(getContext(), toast, LENGTH_SHORT).show();
         }
@@ -103,7 +105,7 @@ public class StickersFragment extends BaseToolbarFragment {
     }
 
     @Override
-    public void onCreate(@Nullable Bundle savedInstanceState) {
+    public void onCreate(@Nullable Bundle savedInstanceState){
         super.onCreate(savedInstanceState);
         getContext().registerReceiver(mReceiver, new IntentFilter(ACTION_RELOAD));
 
@@ -112,7 +114,7 @@ public class StickersFragment extends BaseToolbarFragment {
     }
 
     @Override
-    public View onCreateContent(@NonNull LayoutInflater inflater, @Nullable Bundle bundle) {
+    public View onCreateContent(@NonNull LayoutInflater inflater, @Nullable Bundle bundle){
         setTitle(getIdentifier("vtltgs", "string"));
 
         FrameLayout layout = new FrameLayout(getContext());
@@ -138,17 +140,17 @@ public class StickersFragment extends BaseToolbarFragment {
 
 
     @Override
-    public void onViewCreated(View arg0, Bundle arg1) {
+    public void onViewCreated(View arg0, Bundle arg1){
         super.onViewCreated(arg0, arg1);
     }
 
     @Override
-    public void onDestroyView() {
+    public void onDestroyView(){
         super.onDestroyView();
         getContext().unregisterReceiver(mReceiver);
     }
 
-    private void fabClick() {
+    private void fabClick(){
         int method = TGPref.getTGConnectMethod();
         if (method == -1) {
             openMenu(Globals.getString("stickersconnection"));
@@ -166,6 +168,7 @@ public class StickersFragment extends BaseToolbarFragment {
 
                 final EditText editText = new EditText(getContext());
                 editText.setHintTextColor(PreferencesUtil.getSTextColor(getContext()));
+                editText.setBackgroundTintList(ColorStateList.valueOf(getAccentColor()));
 
                 // Костыль для китката
                 if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
@@ -179,21 +182,29 @@ public class StickersFragment extends BaseToolbarFragment {
                 margin.setMargins(convertDpToPixel(24f), 0, convertDpToPixel(24f), 0);
                 editText.setLayoutParams(margin);
 
-                new AlertDialog.Builder(getContext()).setTitle(Globals.getString("stickershelp1"))
-                        .setMessage(Globals.getString("stickershelp2"))
-                        .setView(linearLayout)
-                        .setPositiveButton(android.R.string.ok, (dialog, which) -> {
-                            String pack = editText.getText().toString();
-                            pack = parsePack(pack);
-                            mService.requestPackDownload(pack, new File(getContext().getFilesDir(), new File("VT-Stickers", pack).getAbsolutePath()));
-                        }).setNeutralButton(android.R.string.cancel, null).create().show();
+                var dlg = new AlertDialog.Builder(getContext(), getAlertStyle());
+                dlg.setTitle(Globals.getString("stickershelp1"));
+                dlg.setMessage(Globals.getString("stickershelp2"));
+                dlg.setView(linearLayout);
+                dlg.setPositiveButton(android.R.string.ok, (dialog, which) -> {
+                    String pack = editText.getText().toString();
+                    pack = parsePack(pack);
+                    mService.requestPackDownload(pack, new File(getContext().getFilesDir(), new File("VT-Stickers", pack).getAbsolutePath()));
+                });
+                dlg.setNeutralButton(android.R.string.cancel, null);
+                var alert = dlg.create();
+
+                alert.show();
+
+                alert.getButton(DialogInterface.BUTTON_POSITIVE).setTextColor(getAccentColor());
+                alert.getButton(DialogInterface.BUTTON_NEUTRAL).setTextColor(getAccentColor());
             };
             if (TGPref.getTGBotKey() == null) enterBotKey(() -> checkApiKey(callback));
             else checkApiKey(callback);
         }
     }
 
-    private void initGrabber() {
+    private void initGrabber(){
         int method = TGPref.getTGConnectMethod();
         if (method == TYPE_DIRECT) {
             TelegramStickersGrabber.USE_PROXY = false;
@@ -214,13 +225,12 @@ public class StickersFragment extends BaseToolbarFragment {
         TelegramStickersGrabber.updateURLs();
     }
 
-    private void enterBotKey(Runnable r) {
+    private void enterBotKey(Runnable r){
         LinearLayout linearLayout = new LinearLayout(getContext());
 
         final EditText editText = new EditText(getContext());
         editText.setHintTextColor(PreferencesUtil.getSTextColor(getContext()));
-
-        ViewCompat.setBackgroundTintList(editText, ColorStateList.valueOf(PreferencesUtil.getTextColor(getContext())));
+        editText.setBackgroundTintList(ColorStateList.valueOf(getAccentColor()));
 
         linearLayout.addView(editText);
         editText.getLayoutParams().width = ViewGroup.LayoutParams.MATCH_PARENT;
@@ -234,22 +244,27 @@ public class StickersFragment extends BaseToolbarFragment {
                         Globals.getString("stickersapi10")).setPositiveButton(android.R.string.ok, null)
                 .create();
 
-        new AlertDialog.Builder(getContext())
-                .setTitle(Globals.getString("stickersapi5"))
-                .setMessage(Globals.getString("stickersapi6"))
-                .setView(linearLayout)
-                .setPositiveButton(android.R.string.ok, (dialog, which) -> {
-                    TGPref.setTGBotKey(editText.getText().toString());
-                    if (r != null) r.run();
-                })
-                .setNegativeButton(android.R.string.cancel, null)
+        var dlg = new AlertDialog.Builder(getContext());
+        dlg.setTitle(Globals.getString("stickersapi5"));
+        dlg.setMessage(Globals.getString("stickersapi6"));
+        dlg.setView(linearLayout);
+        dlg.setPositiveButton(android.R.string.ok, (dialog, which) -> {
+            TGPref.setTGBotKey(editText.getText().toString());
+            if (r != null) r.run();
+        });
+        dlg.setNegativeButton(android.R.string.cancel, null)
                 .setNeutralButton(Globals.getString("stickersapi7"),
-                        (dialog, which) -> alert.show())
-                .create()
-                .show();
+                        (dialog, which) -> alert.show());
+        var alerts = dlg.create();
+
+        alerts.show();
+
+        alerts.getButton(DialogInterface.BUTTON_POSITIVE).setTextColor(getAccentColor());
+        alerts.getButton(DialogInterface.BUTTON_NEUTRAL).setTextColor(getAccentColor());
+        alerts.getButton(DialogInterface.BUTTON_NEGATIVE).setTextColor(getAccentColor());
     }
 
-    private void checkApiKey(Runnable callback) {
+    private void checkApiKey(Runnable callback){
         mGrabber.setBotApiKey(TGPref.getTGBotKey());
 
         var context = getContext();
@@ -259,9 +274,9 @@ public class StickersFragment extends BaseToolbarFragment {
         progressDialog.setMessage(Globals.getString("stickersapi1"));
         progressDialog.show();
 
-        mGrabber.checkKey(new TelegramStickersGrabber.KeyCheckListener() {
+        mGrabber.checkKey(new TelegramStickersGrabber.KeyCheckListener(){
             @Override
-            public void onKeyChecked(boolean ok) {
+            public void onKeyChecked(boolean ok){
                 progressDialog.dismiss();
                 if (!ok) {
                     makeText(context, Globals.getString("stickersapi2"), LENGTH_SHORT).show();
@@ -273,7 +288,7 @@ public class StickersFragment extends BaseToolbarFragment {
             }
 
             @Override
-            public void onNetError() {
+            public void onNetError(){
                 progressDialog.dismiss();
                 new AlertDialog.Builder(context)
                         .setMessage(Globals.getString("stickersapi3"))
@@ -285,7 +300,7 @@ public class StickersFragment extends BaseToolbarFragment {
         });
     }
 
-    private String parsePack(String pack) {
+    private String parsePack(String pack){
         if (pack.startsWith("https://t.me/addstickers/")) {
             pack = pack.substring(25);
         } else if (pack.startsWith("https://telegram.me/addstickers/")) {

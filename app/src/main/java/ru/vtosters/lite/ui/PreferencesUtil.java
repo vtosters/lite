@@ -184,7 +184,7 @@ public class PreferencesUtil{
             margin.setMargins(convertDpToPixel(20f), 0, convertDpToPixel(20f), 0);
             editText.setLayoutParams(margin);
 
-            AlertDialog.Builder builder = new AlertDialog.Builder(fragment.getContext(), getAlertStyle());
+            AlertDialog.Builder builder = new AlertDialog.Builder(fragment.getContext());
             builder.setTitle(title);
             builder.setView(linearLayout);
             builder.setPositiveButton("OK", (dialog, which) -> {
