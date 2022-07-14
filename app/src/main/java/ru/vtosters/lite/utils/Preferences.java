@@ -174,10 +174,6 @@ public class Preferences{
         return getBoolValue("dnr", true);
     }
 
-    public static boolean dns(){
-        return getBoolValue("dns", false);
-    }
-
     public static boolean dnt(){
         return getBoolValue("dnt", true);
     }
