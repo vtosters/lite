@@ -1,6 +1,8 @@
 package ru.vtosters.lite.ui.fragments;
 
+import static ru.vtosters.lite.utils.Globals.edit;
 import static ru.vtosters.lite.utils.Globals.getIdentifier;
+import static ru.vtosters.lite.utils.Globals.restartApplicationWithTimer;
 import static ru.vtosters.lite.utils.Themes.getAccentColor;
 import static ru.vtosters.lite.utils.Themes.getAlertStyle;
 import static ru.vtosters.lite.utils.Themes.getTextAttr;
@@ -55,6 +57,7 @@ public class MediaFragment extends MaterialPreferenceToolbarFragment{
 
     private void prefs(){
         findPreference("download_video").setOnPreferenceClickListener(new MediaFragment.download());
+        findPreference("dateformat").setOnPreferenceChangeListener(new MediaFragment.restart());
     }
 
     public class download implements Preference.OnPreferenceClickListener{
@@ -62,6 +65,15 @@ public class MediaFragment extends MaterialPreferenceToolbarFragment{
         public boolean onPreferenceClick(Preference preference){
             download(getActivity());
             return true;
+        }
+    }
+
+    public static class restart implements Preference.OnPreferenceChangeListener{
+        @Override
+        public boolean onPreferenceChange(Preference preference, Object o){
+            edit().putString("dateformat", o.toString()).commit();
+            restartApplicationWithTimer();
+            return false;
         }
     }
 }
