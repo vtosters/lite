@@ -1,12 +1,11 @@
 package bruhcollective.itaysonlab.libvkx.client;
 
 import static ru.vtosters.lite.utils.Globals.getContext;
-import static ru.vtosters.lite.utils.Globals.sendToast;
 import static ru.vtosters.lite.utils.Preferences.getBoolValue;
 
 import android.content.Context;
-import android.os.Build;
 import android.os.RemoteException;
+import android.util.Log;
 
 import com.vk.dto.music.MusicTrack;
 import com.vk.music.common.MusicPlaybackLaunchContext;
@@ -15,7 +14,6 @@ import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
 
-import b.h.g.g.PackageManagerHelper;
 import bruhcollective.itaysonlab.libvkx.ILibVkxService;
 
 public class LibVKXClient{
@@ -51,35 +49,32 @@ public class LibVKXClient{
             return false;
         }
 
-        if (Build.VERSION.SDK_INT >= 31) {
-            sendToast("Интеграция не поддерживается на версии Android >= 12");
-            return false;
-        }
+        Log.d("LibVKXClient", "playing: " + musicTrack.toString());
 
-        LibVKXClientImpl.LibVKXAction action = iLibVkxService -> LibVKXClient.lambdaplay(list, musicTrack, playerRefer, iLibVkxService);
+        LibVKXClientImpl.LibVKXAction action = iLibVkxService -> LibVKXClient.lambdaplay(list, musicTrack, iLibVkxService);
 
         return getInstance().runOnService(action);
     }
 
-    public static void lambdaplay(List list, MusicTrack musicTrack, MusicPlaybackLaunchContext playerRefer, ILibVkxService iLibVkxService){
+    public static void lambdaplay(List<MusicTrack> list, MusicTrack musicTrack, ILibVkxService iLibVkxService){
         int indexOf = list.indexOf(musicTrack);
-        ArrayList arrayList = new ArrayList();
-        Iterator it = list.iterator();
-        while(it.hasNext()) {
-            arrayList.add(asId((MusicTrack) it.next()));
+        var ids = new ArrayList<String>();
+        for (var track : list) {
+            ids.add(asId(track));
         }
         if (indexOf == -1) {
             indexOf = 0;
         }
+        Log.d("LibVKXClient", "tracks: " + ids.toString());
         try {
-            iLibVkxService.play(arrayList, indexOf, "");
+            iLibVkxService.play(ids, indexOf, "");
         } catch (RemoteException e) {
             e.printStackTrace();
         }
     }
 
     private static String asId(MusicTrack musicTrack){
-        String str = musicTrack.d + "_" + musicTrack.e;
+        String str = musicTrack.e + "_" + musicTrack.d;
         if (musicTrack.O == null || musicTrack.O.equals("")) {
             return str;
         }
