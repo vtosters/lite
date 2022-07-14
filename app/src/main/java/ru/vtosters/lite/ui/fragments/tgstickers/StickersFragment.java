@@ -6,7 +6,6 @@ import static ru.vtosters.lite.utils.Globals.convertDpToPixel;
 import static ru.vtosters.lite.utils.Globals.getIdentifier;
 import static ru.vtosters.lite.utils.Themes.getAccentColor;
 
-import android.annotation.SuppressLint;
 import android.app.AlertDialog;
 import android.app.ProgressDialog;
 import android.content.BroadcastReceiver;
@@ -18,6 +17,7 @@ import android.os.Build;
 import android.os.Bundle;
 import android.view.Gravity;
 import android.view.LayoutInflater;
+import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
@@ -27,7 +27,6 @@ import android.widget.LinearLayout;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
-import androidx.appcompat.widget.Toolbar;
 import androidx.core.view.ViewCompat;
 import androidx.recyclerview.widget.RecyclerView;
 import androidx.recyclerview.widget.StaggeredGridLayoutManager;
@@ -36,16 +35,15 @@ import com.aefyr.tsg.g2.TelegramStickersService;
 import com.aefyr.tsg.g2.stickersgrabber.TelegramStickersGrabber;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.vk.navigation.Navigator;
-import com.vtosters.lite.R;
-import com.vtosters.lite.general.fragments.MaterialPreferenceToolbarFragment;
 
 import java.io.File;
 
 import ru.vtosters.lite.tgs.TGPref;
 import ru.vtosters.lite.ui.PreferencesUtil;
+import ru.vtosters.lite.ui.fragments.BaseToolbarFragment;
 import ru.vtosters.lite.utils.Globals;
 
-public class StickersFragment extends MaterialPreferenceToolbarFragment{
+public class StickersFragment extends BaseToolbarFragment {
 
     public final static String ACTION_RELOAD = "com.vtosters.lite.action.RELOAD_TGS_LIST";
 
@@ -58,9 +56,9 @@ public class StickersFragment extends MaterialPreferenceToolbarFragment{
     private RecyclerView mRecycler;
     private StickerPackAdapter mAdapter;
     private boolean movePending = false;
-    private final BroadcastReceiver mReceiver = new BroadcastReceiver(){
+    private final BroadcastReceiver mReceiver = new BroadcastReceiver() {
         @Override
-        public void onReceive(Context context, Intent intent){
+        public void onReceive(Context context, Intent intent) {
             if (intent.getAction().equals(ACTION_RELOAD)) {
                 if (mAdapter != null) {
                     try {
@@ -81,12 +79,21 @@ public class StickersFragment extends MaterialPreferenceToolbarFragment{
     };
 
     @Override
-    public boolean onOptionsItemSelected(MenuItem arg0){
+    protected void onCreateMenu(Menu menu) {
+        var item = menu.add(0, 0, 0, "");
+        item.setShowAsAction(MenuItem.SHOW_AS_ACTION_ALWAYS);
+        item.setIcon(getResources().getDrawable(getIdentifier("ic_settings_24", "drawable")));
+
+        super.onCreateMenu(menu);
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem arg0) {
         openMenu(null);
         return true;
     }
 
-    private void openMenu(String toast){
+    private void openMenu(String toast) {
         if (toast != null) {
             makeText(getContext(), toast, LENGTH_SHORT).show();
         }
@@ -95,9 +102,8 @@ public class StickersFragment extends MaterialPreferenceToolbarFragment{
         super.getContext().startActivity(intent);
     }
 
-
     @Override
-    public void onCreate(@Nullable Bundle savedInstanceState){
+    public void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         getContext().registerReceiver(mReceiver, new IntentFilter(ACTION_RELOAD));
 
@@ -106,23 +112,10 @@ public class StickersFragment extends MaterialPreferenceToolbarFragment{
     }
 
     @Override
-    public int T4(){
-        return getIdentifier("vtltgs", "string");
-    }
+    public View onCreateContent(@NonNull LayoutInflater inflater, @Nullable Bundle bundle) {
+        setTitle(getIdentifier("vtltgs", "string"));
 
-    @SuppressLint("RestrictedApi")
-    @SuppressWarnings("rawtypes")
-    @NonNull
-    @Override
-    public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState){
-        View root =  super.onCreateView(inflater, container, savedInstanceState);
-
-        FrameLayout layout = root.findViewById(R.id.appkit_content);
-
-        Toolbar toolbar = root.findViewById(R.id.toolbar);
-        var item = toolbar.getMenu().add(0, 0, 0, "");
-        item.setShowAsAction(MenuItem.SHOW_AS_ACTION_ALWAYS);
-        item.setIcon(getResources().getDrawable(getIdentifier("ic_settings_24", "drawable")));
+        FrameLayout layout = new FrameLayout(getContext());
 
         mAdapter = new StickerPackAdapter();
         mRecycler = new RecyclerView(getContext());
@@ -140,22 +133,22 @@ public class StickersFragment extends MaterialPreferenceToolbarFragment{
         params.setMargins(0, 0, 0, convertDpToPixel(12f));
         layout.addView(mAddStickerPack, params);
 
-        return root;
+        return layout;
     }
 
+
     @Override
-    public void onViewCreated(View arg0, Bundle arg1){
-        setHasOptionsMenu(true);
+    public void onViewCreated(View arg0, Bundle arg1) {
         super.onViewCreated(arg0, arg1);
     }
 
     @Override
-    public void onDestroyView(){
+    public void onDestroyView() {
         super.onDestroyView();
         getContext().unregisterReceiver(mReceiver);
     }
 
-    private void fabClick(){
+    private void fabClick() {
         int method = TGPref.getTGConnectMethod();
         if (method == -1) {
             openMenu(Globals.getString("stickersconnection"));
@@ -200,7 +193,7 @@ public class StickersFragment extends MaterialPreferenceToolbarFragment{
         }
     }
 
-    private void initGrabber(){
+    private void initGrabber() {
         int method = TGPref.getTGConnectMethod();
         if (method == TYPE_DIRECT) {
             TelegramStickersGrabber.USE_PROXY = false;
@@ -221,7 +214,7 @@ public class StickersFragment extends MaterialPreferenceToolbarFragment{
         TelegramStickersGrabber.updateURLs();
     }
 
-    private void enterBotKey(Runnable r){
+    private void enterBotKey(Runnable r) {
         LinearLayout linearLayout = new LinearLayout(getContext());
 
         final EditText editText = new EditText(getContext());
@@ -256,7 +249,7 @@ public class StickersFragment extends MaterialPreferenceToolbarFragment{
                 .show();
     }
 
-    private void checkApiKey(Runnable callback){
+    private void checkApiKey(Runnable callback) {
         mGrabber.setBotApiKey(TGPref.getTGBotKey());
 
         var context = getContext();
@@ -266,9 +259,9 @@ public class StickersFragment extends MaterialPreferenceToolbarFragment{
         progressDialog.setMessage(Globals.getString("stickersapi1"));
         progressDialog.show();
 
-        mGrabber.checkKey(new TelegramStickersGrabber.KeyCheckListener(){
+        mGrabber.checkKey(new TelegramStickersGrabber.KeyCheckListener() {
             @Override
-            public void onKeyChecked(boolean ok){
+            public void onKeyChecked(boolean ok) {
                 progressDialog.dismiss();
                 if (!ok) {
                     makeText(context, Globals.getString("stickersapi2"), LENGTH_SHORT).show();
@@ -280,7 +273,7 @@ public class StickersFragment extends MaterialPreferenceToolbarFragment{
             }
 
             @Override
-            public void onNetError(){
+            public void onNetError() {
                 progressDialog.dismiss();
                 new AlertDialog.Builder(context)
                         .setMessage(Globals.getString("stickersapi3"))
@@ -292,7 +285,7 @@ public class StickersFragment extends MaterialPreferenceToolbarFragment{
         });
     }
 
-    private String parsePack(String pack){
+    private String parsePack(String pack) {
         if (pack.startsWith("https://t.me/addstickers/")) {
             pack = pack.substring(25);
         } else if (pack.startsWith("https://telegram.me/addstickers/")) {
@@ -301,4 +294,3 @@ public class StickersFragment extends MaterialPreferenceToolbarFragment{
         return pack;
     }
 }
-
