@@ -1,4 +1,4 @@
-package ru.vtosters.lite.utils;
+package ru.vtosters.lite.hooks;
 import static ru.vtosters.lite.utils.Globals.getIdentifier;
 import static ru.vtosters.lite.utils.Globals.getPrefsValue;
 import static ru.vtosters.lite.utils.Globals.getString;
@@ -10,17 +10,7 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.Locale;
 
-public class LocaleUtils{
-    public static String getLocale(){
-        String string = getPrefsValue("lang_value");
-
-        if (string.equals("system")) {
-            return Locale.getDefault().getLanguage();
-        }
-
-        return string.isEmpty() ? Locale.getDefault().getLanguage() : string;
-    }
-
+public class DateHook{
     public static boolean fulltime(){
         return getPrefsValue("dateformat").equals("noyear") || getPrefsValue("dateformat").equals("full") || getPrefsValue("dateformat").equals("noseconds");
     }
@@ -52,5 +42,15 @@ public class LocaleUtils{
             th.printStackTrace();
             return null;
         }
+    }
+
+    public static String getLocale(){
+        String string = getPrefsValue("lang_value");
+
+        if (string.equals("system")) {
+            return Locale.getDefault().getLanguage();
+        }
+
+        return string.isEmpty() ? Locale.getDefault().getLanguage() : string;
     }
 }

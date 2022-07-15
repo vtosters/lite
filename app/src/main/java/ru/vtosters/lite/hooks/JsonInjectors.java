@@ -1,4 +1,4 @@
-package ru.vtosters.lite.utils;
+package ru.vtosters.lite.hooks;
 
 import static ru.vtosters.lite.f0x1d.VTVerifications.isDeveloper;
 import static ru.vtosters.lite.f0x1d.VTVerifications.isPrometheus;

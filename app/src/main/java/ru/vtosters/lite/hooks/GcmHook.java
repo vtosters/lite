@@ -1,4 +1,4 @@
-package ru.vtosters.lite.audio.gcm;
+package ru.vtosters.lite.hooks;
 
 import static ru.vtosters.lite.utils.Preferences.musicFixNew;
 
@@ -27,7 +27,7 @@ import java.util.concurrent.atomic.AtomicBoolean;
 
 import javax.net.ssl.HttpsURLConnection;
 
-public class GCMFix{
+public class GcmHook{
     private static final String agent = String.format("Android-GCM/1.5 (%s %s)", Build.MODEL, Build.MODEL);
     public static ArrayList<String> langs = new ArrayList<>();
     private static KeyPair pair;
@@ -38,12 +38,12 @@ public class GCMFix{
     }
 
     public static String requestTokenV2(String orig){
-        if (musicFixNew()) return "null"; // TODO FIX TOKENMOD v2 cyz vk shit
+        if (musicFixNew()) return "null";
         return orig;
     }
 
     public static String requestToken(String orig){
-        if (musicFixNew()) return "{null}"; // TODO FIX TOKENMOD v2 cyz vk shit
+        if (musicFixNew()) return "{null}";
         if (orig.equals("")) return requestToken();
         return orig;
     }
@@ -66,7 +66,7 @@ public class GCMFix{
             List<String> params = new ArrayList<>();
             fillParams(params, sig, pub2, xappide, Long.parseLong(aid.split(" ")[1].split(":")[0]), false);
 
-            Callback callback = str -> GCMFix.lambdaRequestToken(sb, wait, str);
+            Callback callback = str -> GcmHook.lambdaRequestToken(sb, wait, str);
 
             doRequest("https://android.clients.google.com/c2dm/register3", "POST", params, aid, callback);
             while(!wait.get()) {
@@ -81,7 +81,7 @@ public class GCMFix{
             String sig2 = getSig(pub22);
             params.clear();
             fillParams(params, sig2, pub22, xappide, Long.parseLong(aid.split(" ")[1].split(":")[0]), true);
-            doRequest("https://android.clients.google.com/c2dm/register3", "POST", params, aid, GCMFix::lambda$requestToken$1);
+            doRequest("https://android.clients.google.com/c2dm/register3", "POST", params, aid, GcmHook::lambda$requestToken$1);
             return token;
         } catch (FileNotFoundException e2) {
             return requestToken();

@@ -1,7 +1,9 @@
-package ru.vtosters.lite.utils;
+package ru.vtosters.lite.hooks;
 import static ru.vtosters.lite.utils.Globals.convertDpToPixel;
 import static ru.vtosters.lite.utils.Globals.edit;
+import static ru.vtosters.lite.utils.Globals.getPrefsValue;
 import static ru.vtosters.lite.utils.Globals.restartApplication;
+import static ru.vtosters.lite.utils.Proxy.apiproxy;
 import static ru.vtosters.lite.utils.Proxy.isZaboronaEnabled;
 import static ru.vtosters.lite.utils.Themes.getAccentColor;
 import static ru.vtosters.lite.utils.Themes.getAlertStyle;
@@ -11,6 +13,7 @@ import android.annotation.SuppressLint;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.util.Log;
 import android.util.TypedValue;
 import android.view.View;
 import android.widget.RadioButton;
@@ -85,5 +88,48 @@ public class ProxyHook{
 
         alert.getButton(DialogInterface.BUTTON_POSITIVE).setTextColor(getAccentColor());
         alert.getButton(DialogInterface.BUTTON_NEUTRAL).setTextColor(getAccentColor());
+    }
+
+    public static String linkReplacer(String link){
+        var vkapi = "api.vk.com";
+        var oauth = "oauth.vk.com";
+        var vkstatic = "static.vk.com";
+
+        var proxyapi = getPrefsValue("proxyapi");
+        var proxyoauth = getPrefsValue("proxyoauth");
+        var proxystatic = getPrefsValue("proxystatic");
+
+        if (!apiproxy() || link.isEmpty()) {
+            return link;
+        }
+
+        if (proxyapi.isEmpty() || proxyoauth.isEmpty() || proxystatic.isEmpty()) {
+            Log.d("VTLite", "Proxy is not set" + " " + proxyapi + " " + proxyoauth + " " + proxystatic);
+            return link;
+        }
+
+        if (link.contains(vkapi)) {
+            return link.replace(proxyapi, vkapi);
+        }
+
+        if (link.contains(oauth)) {
+            return link.replace(proxyoauth, oauth);
+        }
+
+        if (link.contains(vkstatic)) {
+            return link.replace(proxystatic, vkstatic);
+        }
+
+        return link;
+    }
+
+    public static String getAwayPhpCom(){
+        var proxyapi = getPrefsValue("proxyapi");
+
+        if (apiproxy() & !proxyapi.isEmpty()) {
+            return proxyapi;
+        }
+
+        return "m.vk.com";
     }
 }

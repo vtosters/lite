@@ -79,7 +79,7 @@
 
     move-result-object p1
 
-    invoke-static {p1}, Lru/vtosters/lite/utils/JsonInjectors;->friends(Lorg/json/JSONObject;)Lorg/json/JSONObject;
+    invoke-static {p1}, Lru/vtosters/lite/hooks/JsonInjectors;->friends(Lorg/json/JSONObject;)Lorg/json/JSONObject;
 
     move-result-object p1
 

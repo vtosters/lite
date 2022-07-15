@@ -131,7 +131,7 @@
 
     move-result-object v7
 
-    invoke-static {v7}, Lru/vtosters/lite/utils/Newsfeed;->injectFilters(Lorg/json/JSONObject;)Z
+    invoke-static {v7}, Lru/vtosters/lite/hooks/NewsfeedHook;->injectFilters(Lorg/json/JSONObject;)Z
 
     move-result v10
 
@@ -179,7 +179,7 @@
 
     move-result-object v6
 
-    invoke-static {v6}, Lru/vtosters/lite/utils/Newsfeed;->injectFilters(Lorg/json/JSONObject;)Z
+    invoke-static {v6}, Lru/vtosters/lite/hooks/NewsfeedHook;->injectFilters(Lorg/json/JSONObject;)Z
 
     move-result v10
 
@@ -223,7 +223,7 @@
 
     move-result-object p3
 
-    invoke-static {p3}, Lru/vtosters/lite/utils/Newsfeed;->injectFilters(Lorg/json/JSONObject;)Z
+    invoke-static {p3}, Lru/vtosters/lite/hooks/NewsfeedHook;->injectFilters(Lorg/json/JSONObject;)Z
 
     move-result v10
 

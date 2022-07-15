@@ -137,7 +137,7 @@
 
     const-string v4, "receipt"
 
-    invoke-static {v3}, Lru/vtosters/lite/audio/gcm/GCMFix;->requestToken(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v3}, Lru/vtosters/lite/hooks/GcmHook;->requestToken(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v3
 
@@ -169,7 +169,7 @@
 
     const-string v5, "receipt2"
 
-    invoke-static {v4}, Lru/vtosters/lite/audio/gcm/GCMFix;->requestTokenV2(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v4}, Lru/vtosters/lite/hooks/GcmHook;->requestTokenV2(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v4
 

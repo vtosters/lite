@@ -1,6 +1,7 @@
 package ru.vtosters.lite.utils;
 
 import static android.view.View.SYSTEM_UI_FLAG_LIGHT_NAVIGATION_BAR;
+import static ru.vtosters.lite.hooks.VKUIHook.isLoaded;
 import static ru.vtosters.lite.ui.wallpapers.WallpapersHooks.getWallpaper;
 import static ru.vtosters.lite.utils.Globals.edit;
 import static ru.vtosters.lite.utils.Globals.getCenterScreenCoords;
@@ -8,14 +9,11 @@ import static ru.vtosters.lite.utils.Globals.getCurrentActivity;
 import static ru.vtosters.lite.utils.Globals.getIdentifier;
 import static ru.vtosters.lite.utils.Globals.getPrefsValue;
 import static ru.vtosters.lite.utils.Globals.getResources;
-import static ru.vtosters.lite.utils.Globals.sendToast;
 import static ru.vtosters.lite.utils.Preferences.color_grishka;
 import static ru.vtosters.lite.utils.Preferences.milkshake;
 import static ru.vtosters.lite.utils.Preferences.navbar;
 import static ru.vtosters.lite.utils.Preferences.systemtheme;
 import static ru.vtosters.lite.utils.Preferences.vkme;
-import static ru.vtosters.lite.utils.ReflectionUtils.getField;
-import static ru.vtosters.lite.utils.VKUIInjector.isLoaded;
 
 import android.annotation.SuppressLint;
 import android.app.Activity;
@@ -50,6 +48,7 @@ import java.util.List;
 import java.util.concurrent.CopyOnWriteArrayList;
 
 import kotlin.u.KProperty5;
+import ru.vtosters.lite.hooks.VKUIHook;
 
 public class Themes{
     public static List<String> accentColors = Arrays.asList(

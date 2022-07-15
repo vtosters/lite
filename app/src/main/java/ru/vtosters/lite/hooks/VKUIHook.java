@@ -1,5 +1,4 @@
-package ru.vtosters.lite.utils;
-
+package ru.vtosters.lite.hooks;
 import static android.util.Base64.encodeToString;
 import static ru.vtosters.lite.utils.Globals.getContext;
 import static ru.vtosters.lite.utils.Globals.getPrefsValue;
@@ -14,13 +13,16 @@ import static ru.vtosters.lite.utils.Themes.hex;
 
 import android.webkit.WebView;
 
+import com.vk.articles.preload.WebCachePreloader;
+import com.vtosters.lite.data.ThemeTracker;
+
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.nio.charset.StandardCharsets;
 
-public class VKUIInjector{
+public class VKUIHook{
     public static boolean isLoaded = false;
     private static String loadedCSS = "";
     private static String loadedCSSAmoled = "";
@@ -89,5 +91,12 @@ public class VKUIInjector{
 
             inject(webView, encodeToString(sb.toString().getBytes(), 2));
         }
+    }
+
+    public static void clearWebCache(){
+        ThemeTracker.a();
+        isLoaded = false;
+        new WebView(getContext()).clearCache(true);
+        WebCachePreloader.e();
     }
 }

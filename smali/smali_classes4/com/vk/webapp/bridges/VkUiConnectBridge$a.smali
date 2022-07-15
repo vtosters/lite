@@ -240,7 +240,7 @@
 
     move-result-object p3
 
-    invoke-static {p3}, Lru/vtosters/lite/utils/Proxy;->linkReplacer(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {p3}, Lru/vtosters/lite/hooks/ProxyHook;->linkReplacer(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p3
 

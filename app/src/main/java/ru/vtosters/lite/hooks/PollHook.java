@@ -1,4 +1,4 @@
-package ru.vtosters.lite.utils;
+package ru.vtosters.lite.hooks;
 
 import static ru.vtosters.lite.utils.Preferences.getBoolValue;
 
@@ -9,7 +9,7 @@ import android.widget.TextView;
 import com.vk.dto.polls.PollOption;
 import com.vk.polls.ui.views.PollOptionView;
 
-public class PollUtils{
+public class PollHook{
     public static void show(PollOptionView view){
         if (!getBoolValue("pollresults", false)) return;
 

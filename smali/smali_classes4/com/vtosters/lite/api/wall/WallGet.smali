@@ -535,7 +535,7 @@
 
     move-result-object v8
 
-    invoke-static {v8}, Lru/vtosters/lite/utils/Newsfeed;->injectFilters(Lorg/json/JSONObject;)Z
+    invoke-static {v8}, Lru/vtosters/lite/hooks/NewsfeedHook;->injectFilters(Lorg/json/JSONObject;)Z
 
     move-result v10
 
