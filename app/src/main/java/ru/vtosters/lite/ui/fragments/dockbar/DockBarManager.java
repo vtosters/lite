@@ -1,6 +1,7 @@
 package ru.vtosters.lite.ui.fragments.dockbar;
 
 import static ru.vtosters.lite.utils.Globals.getContext;
+import static ru.vtosters.lite.utils.Globals.getPreferences;
 import static ru.vtosters.lite.utils.Globals.getString;
 import static ru.vtosters.lite.utils.Preferences.getBoolValue;
 import static ru.vtosters.lite.utils.Preferences.milkshake;
@@ -37,13 +38,13 @@ import com.vtosters.lite.general.fragments.PhotosFragment;
 
 import java.io.File;
 import java.util.ArrayList;
-import java.util.HashSet;
+import java.util.Arrays;
 import java.util.List;
-import java.util.Set;
+import java.util.stream.Collectors;
 
 import ru.vtosters.lite.utils.Globals;
 
-public class DockBarManager{
+public class DockBarManager {
 
     public static final int MIN_SELECTED_TABS_LIMIT = 3;
     public static final int MAX_SELECTED_TABS_LIMIT = 9;
@@ -56,15 +57,15 @@ public class DockBarManager{
             getString("dockbar_selected_items"),
             getString("dockbar_unselected_items")
     };
-    private Set<String> mSelectedTabsSet;
 
-    public static DockBarManager getInstance(){
+
+    public static DockBarManager getInstance() {
         return sInstance == null
                 ? (sInstance = new DockBarManager())
                 : sInstance;
     }
 
-    public DockBarManager(){
+    public DockBarManager() {
         init();
     }
 
@@ -80,11 +81,9 @@ public class DockBarManager{
 
         checkOldConfig();
 
-        mSelectedTabsSet = Globals.getPreferences().getStringSet("selected_dockbar_tabs", new HashSet<>());
-        if (mSelectedTabsSet.size() > 0)
-            parseSelectedTabs();
-        else
-            fillDefault();
+        String[] selectedTabsTags = getPreferences().getString("dockbar_tabs", "tab_news,tab_superapps,tab_messages,tab_friends,tab_profile")
+                .split(",");
+        parseSelectedTabs(selectedTabsTags);
     }
 
     private void checkOldConfig() {
@@ -92,62 +91,35 @@ public class DockBarManager{
         if (config.exists()) config.deleteOnExit();
     }
 
-    private void parseSelectedTabs() {
-        String[] tags = { "tab_news", "tab_superapps", "tab_messages", "tab_feedback", "tab_profile",
+    private void parseSelectedTabs(String[] selectedTabsTags) {
+        List<String> allTags = new ArrayList<>(Arrays.asList( "tab_news", "tab_superapps", "tab_messages", "tab_feedback", "tab_profile",
                 "tab_friends", "tab_groups", "tab_photos", "tab_audios", "tab_videos", "tab_lives", "tab_games", "tab_liked",
-                "tab_fave", "tab_documents", "tab_payments", "tab_vk_apps", "tab_settings", "tab_menu", "tab_brtd" };
-        for (String tag : tags) {
-            DockBarTab tab = getTabByTag(tag);
-            if (mSelectedTabsSet.contains(tag))
-                mSelectedTabs.add(tab);
-            else
-                mDisabledTabs.add(tab);
+                "tab_fave", "tab_documents", "tab_payments", "tab_vk_apps", "tab_settings", "tab_menu", "tab_brtd" ));
+        for (String tag : selectedTabsTags) {
+            mSelectedTabs.add(getTabByTag(tag));
+            allTags.remove(tag);
         }
+        allTags.forEach(tag -> mDisabledTabs.add(getTabByTag(tag)));
     }
 
-    private void fillDefault() {
-        mSelectedTabs.add(getTabByTag("tab_news"));
-        mSelectedTabs.add(getTabByTag("tab_superapps"));
-        mSelectedTabs.add(getTabByTag("tab_messages"));
-        mSelectedTabs.add(getTabByTag("tab_feedback"));
-        mSelectedTabs.add(getTabByTag("tab_profile"));
-
-        mDisabledTabs.add(getTabByTag("tab_friends"));
-        mDisabledTabs.add(getTabByTag("tab_groups"));
-        mDisabledTabs.add(getTabByTag("tab_photos"));
-        mDisabledTabs.add(getTabByTag("tab_audios"));
-        mDisabledTabs.add(getTabByTag("tab_videos"));
-        mDisabledTabs.add(getTabByTag("tab_lives"));
-        mDisabledTabs.add(getTabByTag("tab_games"));
-        mDisabledTabs.add(getTabByTag("tab_liked"));
-        mDisabledTabs.add(getTabByTag("tab_fave"));
-        mDisabledTabs.add(getTabByTag("tab_documents"));
-        mDisabledTabs.add(getTabByTag("tab_payments"));
-        mDisabledTabs.add(getTabByTag("tab_vk_apps"));
-        mDisabledTabs.add(getTabByTag("tab_settings"));
-        mDisabledTabs.add(getTabByTag("tab_menu"));
-        mDisabledTabs.add(getTabByTag("tab_brtd"));
+    public void save() {
+        Globals.getPreferences().edit().putString("dockbar_tabs", mSelectedTabs.stream().map(tab -> tab.tag)
+                .collect(Collectors.joining(","))).commit();
     }
 
-    public void save(){
-        mSelectedTabsSet = new HashSet<>();
-        mSelectedTabs.forEach(tab -> mSelectedTabsSet.add(tab.tag));
-        Globals.getPreferences().edit().putStringSet("selected_dockbar_tabs", mSelectedTabsSet).commit();
+    public void reset() {
+        Globals.getPreferences().edit().putString("dockbar_tabs", "tab_news,tab_superapps,tab_messages,tab_friends,tab_profile").commit();
     }
 
-    public void reset(){
-        Globals.getPreferences().edit().putStringSet("selected_dockbar_tabs", null).commit();
-    }
-
-    public List<DockBarTab> getSelectedTabs(){
+    public List<DockBarTab> getSelectedTabs() {
         return mSelectedTabs;
     }
 
-    public List<DockBarTab> getDisabledTabs(){
+    public List<DockBarTab> getDisabledTabs() {
         return mDisabledTabs;
     }
 
-    public String[] getCategoryTitles(){
+    public String[] getCategoryTitles() {
         return mCategoryTitles;
     }
 
@@ -191,10 +163,10 @@ public class DockBarManager{
             case "tab_friends":
                 return DockBarTab.valuesOf(
                         "tab_friends",
-                        R.drawable.ic_user_outline_28,
+                        milkshake() ? R.drawable.ic_users_outline_28 : R.drawable.ic_menu_notification_outline_28,
                         R.string.friends,
                         R.id.menu_friends,
-                        FriendsCatalogFragment.class);
+                        milkshake() ? FriendsCatalogFragment.class : NotificationsContainerFragment.class);
             case "tab_groups":
                 return DockBarTab.valuesOf(
                         "tab_groups",

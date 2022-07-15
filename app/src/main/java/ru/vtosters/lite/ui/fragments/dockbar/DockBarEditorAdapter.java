@@ -115,8 +115,9 @@ public class DockBarEditorAdapter extends RecyclerView.Adapter<DockBarEditorAdap
         DockBarTab curr;
         if (AdapterHelper.getTabType(fromPosition) == AdapterHelper.SELECTED) {
             curr = selectedTabs.get(fromPosition - 1);
+            var min = selectedTabs.size() == DockBarManager.MIN_SELECTED_TABS_LIMIT;
             if (AdapterHelper.getItemViewType(toPosition) == AdapterHelper.CATEGORY_TITLE_TYPE) {
-                if (selectedTabs.size() == DockBarManager.MIN_SELECTED_TABS_LIMIT)
+                if (min)
                     return false;
                 selectedTabs.remove(fromPosition - 1);
                 disabledTabs.add(curr);
@@ -125,16 +126,21 @@ public class DockBarEditorAdapter extends RecyclerView.Adapter<DockBarEditorAdap
                     disabledTabs.set(i + 1, disabledTabs.get(i));
                     disabledTabs.set(i, tmp);
                 }
+            } else if (AdapterHelper.getTabType(toPosition) == AdapterHelper.DISABLED && min) {
+                return false;
             } else {
                 Collections.swap(selectedTabs, fromPosition - 1, toPosition - 1);
             }
         } else if (AdapterHelper.getTabType(fromPosition) == AdapterHelper.DISABLED) {
             curr = disabledTabs.get(fromPosition - selectedTabs.size() - 2);
+            var max = selectedTabs.size() == DockBarManager.MAX_SELECTED_TABS_LIMIT;
             if (AdapterHelper.getItemViewType(toPosition) == AdapterHelper.CATEGORY_TITLE_TYPE) {
-                if (selectedTabs.size() == DockBarManager.MAX_SELECTED_TABS_LIMIT)
+                if (max)
                     return false;
                 disabledTabs.remove(0);
                 selectedTabs.add(curr);
+            } else if (AdapterHelper.getTabType(toPosition) == AdapterHelper.SELECTED && max) {
+                return false;
             } else {
                 Collections.swap(disabledTabs, fromPosition - selectedTabs.size() - 2, toPosition - selectedTabs.size() - 2);
             }
