@@ -1,5 +1,4 @@
-package ru.vtosters.lite.utils;
-
+package ru.vtosters.lite.hooks;
 import static ru.vtosters.lite.net.Request.makeRequest;
 import static ru.vtosters.lite.utils.Globals.getString;
 import static ru.vtosters.lite.utils.Globals.getUserToken;
@@ -12,7 +11,7 @@ import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
-public class OnlineFormatter{
+public class OnlineFormatterHook{
     private static String AppName;
 
     public static String getAppName(int appid){  // thanks to egormetlitsky (vk mp3 mod) for helping with online ids
@@ -160,3 +159,4 @@ public class OnlineFormatter{
         return getString("custom_online") + " " + appname;
     }
 }
+

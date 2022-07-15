@@ -558,13 +558,13 @@
 .method public static final declared-synchronized b(Lcom/vk/toggle/Features$Type;)Z
     .locals 2
 
-    invoke-static {p0}, Lru/vtosters/lite/utils/Toggles;->shouldPatch(Lcom/vk/toggle/Features$Type;)Z
+    invoke-static {p0}, Lru/vtosters/lite/hooks/TogglesHook;->shouldPatch(Lcom/vk/toggle/Features$Type;)Z
 
     move-result v0
 
     if-eqz v0, :cond_b
 
-    invoke-static {p0}, Lru/vtosters/lite/utils/Toggles;->redirect(Lcom/vk/toggle/Features$Type;)Z
+    invoke-static {p0}, Lru/vtosters/lite/hooks/TogglesHook;->redirect(Lcom/vk/toggle/Features$Type;)Z
 
     move-result p0
 

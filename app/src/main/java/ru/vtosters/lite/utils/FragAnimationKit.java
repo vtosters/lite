@@ -31,16 +31,6 @@ public class FragAnimationKit{
     private static final int SSTactCloseEnter = resources.getIdentifier("task_close_enter", "anim", "android");
     private static final int SSTactCloseExit = resources.getIdentifier("task_close_exit", "anim", "android");
 
-    public static boolean animateOpen(FragmentTransaction transaction){
-        setAnimations(transaction);
-
-        return getPrefsValue("anim_rtrn_type").equals("noanim") || getPrefsValue("anim_rtrn_type").isEmpty();
-    }
-
-    public static void animateClose(FragmentTransaction transaction){
-        setAnimations(transaction);
-    }
-
     public static void setAnimations(FragmentTransaction transaction){
         if (transaction != null && !getPrefsValue("anim_rtrn_type").equals("noanim")) {
             switch(getPrefsValue("anim_rtrn_type")) {

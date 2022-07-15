@@ -121,7 +121,7 @@
 
     move-result-object p1
 
-    invoke-static {}, Lru/vtosters/lite/utils/Newsfeed;->getStartFragment()Ljava/lang/Class;
+    invoke-static {}, Lru/vtosters/lite/hooks/StartFragmentHook;->getStartFragment()Ljava/lang/Class;
 
     move-result-object p2
 
@@ -639,7 +639,7 @@
 
     move-result-object v0
 
-    invoke-static {}, Lru/vtosters/lite/utils/Newsfeed;->getStartFragment()Ljava/lang/Class;
+    invoke-static {}, Lru/vtosters/lite/hooks/StartFragmentHook;->getStartFragment()Ljava/lang/Class;
 
     move-result-object v1
 

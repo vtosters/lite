@@ -1986,7 +1986,7 @@
 
     const-string v1, "static.vk.com"
 
-    invoke-static {v1}, Lru/vtosters/lite/utils/Proxy;->linkReplacer(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v1}, Lru/vtosters/lite/hooks/ProxyHook;->linkReplacer(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v1
 
@@ -2004,7 +2004,7 @@
 
     const-string v2, "previous_oauth"
 
-    invoke-static {v1}, Lru/vtosters/lite/utils/Proxy;->linkReplacer(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v1}, Lru/vtosters/lite/hooks/ProxyHook;->linkReplacer(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v1
 
@@ -2018,7 +2018,7 @@
 
     const-string v1, "api.vk.com"
 
-    invoke-static {v1}, Lru/vtosters/lite/utils/Proxy;->linkReplacer(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v1}, Lru/vtosters/lite/hooks/ProxyHook;->linkReplacer(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v1
 

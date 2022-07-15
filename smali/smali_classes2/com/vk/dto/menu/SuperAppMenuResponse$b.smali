@@ -181,7 +181,7 @@
 .method public final a(Lorg/json/JSONObject;)Lcom/vk/dto/menu/SuperAppMenuResponse;
     .locals 9
 
-    invoke-static {p1}, Lru/vtosters/lite/utils/JsonInjectors;->superapp(Lorg/json/JSONObject;)Lorg/json/JSONObject;
+    invoke-static {p1}, Lru/vtosters/lite/hooks/JsonInjectors;->superapp(Lorg/json/JSONObject;)Lorg/json/JSONObject;
 
     move-result-object p1
 

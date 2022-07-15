@@ -100,31 +100,6 @@ public class Newsfeed{
         }
     } // Get needed filter list from assets
 
-    public static boolean injectFilters(JSONObject obj) throws JSONException{
-        var optString = obj.optString("type", "");
-        if (isAds(optString) || isAuthorRecommendations(optString) || isPostRecommendations(optString) || isFriendsRecommendations(optString) || isRecomsGroup(optString) || isMusicBlock(optString) || isNewsBlock(optString)) {
-            return false;
-        }
-        optString = obj.optString("post_type", "");
-        if (isAds(optString) || isAuthorRecommendations(optString) || isPostRecommendations(optString) || isFriendsRecommendations(optString) || isMusicBlock(optString) || isNewsBlock(optString)) {
-            return false;
-        }
-        optString = obj.optString("filters", "");
-        if (isAds(optString) || isAuthorRecommendations(optString) || isPostRecommendations(optString) || isFriendsRecommendations(optString)) {
-            return false;
-        }
-
-        if (checkCopyright(obj)) return false;
-
-        if (isBadNew(obj.optString("text", ""))) return false;
-
-        if (checkCaption(obj)) return false;
-
-        if (isGroupAds(obj)) return false;
-
-        return !injectFiltersReposts(obj);
-    } // inject our filters to newsfeed, getpost and discover
-
     public static boolean injectFiltersReposts(JSONObject obj){
         if (obj.optJSONArray("copy_history") == null) return false;
 
@@ -143,7 +118,7 @@ public class Newsfeed{
         return isBadNew(Array);
     } // get repost information and inject our text filters
 
-    private static boolean checkCopyright(JSONObject json) throws JSONException{
+    public static boolean checkCopyright(JSONObject json) throws JSONException{
         if (json.opt("copyright") != null) {
             var copyright = json.getJSONObject("copyright");
             var copyrightlink = copyright.getString("link");
@@ -158,15 +133,15 @@ public class Newsfeed{
         return false;
     }
 
-    private static boolean isRecomsGroup(String src){
+    public static boolean isRecomsGroup(String src){
         return src.equals("recommended_groups") && authorsrecomm();
     }
 
-    private static boolean isMusicBlock(String src){
+    public static boolean isMusicBlock(String src){
         return (src.equals("recommended_audios") || src.equals("recommended_artists") || src.equals("recommended_playlists")) && authorsrecomm();
     }
 
-    private static boolean isNewsBlock(String src){
+    public static boolean isNewsBlock(String src){
         return (src.equals("tags_suggestions")) && Preferences.ads();
     }
 
@@ -226,71 +201,5 @@ public class Newsfeed{
 
     public static boolean isGroupAds(JSONObject obj){
         return (obj.optInt("marked_as_ads", 0) == 1) && adsgroup();
-    }
-
-    public static String storyads(){
-        return adsstories() ? "null" : "ads";
-    }
-
-    public static long getUpdateNewsfeed(boolean refresh_timeout){
-        if (vkme()) {
-            return MAX_VALUE;
-        }
-        switch(getPrefsValue("newsupdate")) {
-            case "no_update":
-                return MAX_VALUE;
-            case "imd_update":
-                return 10000L;
-            default:
-                return Preference.b().getLong(refresh_timeout ? "refresh_timeout_top" : "refresh_timeout_recent", 600000L);
-        }
-    }
-
-    public static Class getStartFragment(){
-        if (vkme()) {
-            return DialogsFragment.class;
-        }
-        switch(getPrefsValue("start_values")) {
-            case "newsfeed":
-                return milkshake() ? HomeFragment.class : NewsfeedFragment.class;
-            case "messenger":
-                return DialogsFragment.class;
-            case "groups":
-                return milkshake() ? CommunitiesCatalogFragment.class : GroupsFragment1.class;
-            case "music":
-                return getBoolValue("musicnewcatalog", true) ? MusicCatalogFragment1.class : MusicFragment.class;
-            case "friends":
-                return FriendsFragment.class;
-            case "photos":
-                return PhotosFragment.class;
-            case "videos":
-                return VideosFragment.class;
-            case "settings":
-                return useNewSettings();
-            case "apps":
-                return AppsFragment.class;
-            case "discover":
-                return ThemedFeedFragment.class;
-            case "notifications":
-                return NotificationsContainerFragment.class;
-            case "money":
-                return MoneyTransfersFragment.class;
-            case "games":
-                return GamesFragment.class;
-            case "liked":
-                return FaveTabFragment.class;
-            case "menu":
-                return milkshake() ? (superapp() ? SuperAppFragment.class : SearchMenuFragment.class) : MenuFragment.class;
-            case "profile":
-                return ProfileFragment.class;
-            case "lives":
-                return LivesTabsFragment.class;
-            case "docs":
-                return DocumentsViewFragment.class;
-            case "brtd":
-                return BirthdaysFragment.class;
-            default:
-                return getInstance().getSelectedTabs().get(0).fragmentClass;
-        }
     }
 }

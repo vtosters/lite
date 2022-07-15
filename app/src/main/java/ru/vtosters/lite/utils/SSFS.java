@@ -1,10 +1,10 @@
 package ru.vtosters.lite.utils;
 
+import static ru.vtosters.lite.hooks.DateHook.getLocale;
 import static ru.vtosters.lite.utils.About.getBuildNumber;
 import static ru.vtosters.lite.utils.Globals.getPrefsValue;
 import static ru.vtosters.lite.utils.Globals.getUserSecret;
 import static ru.vtosters.lite.utils.Globals.getUserToken;
-import static ru.vtosters.lite.utils.LocaleUtils.getLocale;
 import static ru.vtosters.lite.utils.Preferences.dev;
 import static ru.vtosters.lite.utils.Preferences.vksans;
 import static ru.vtosters.lite.utils.Proxy.apiproxy;

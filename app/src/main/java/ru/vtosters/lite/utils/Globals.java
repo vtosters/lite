@@ -4,14 +4,14 @@ import static android.graphics.Bitmap.Config;
 import static android.graphics.Bitmap.createBitmap;
 import static android.graphics.Bitmap.createScaledBitmap;
 import static androidx.core.content.ContextCompat.getDrawable;
+import static ru.vtosters.lite.hooks.DateHook.getLocale;
+import static ru.vtosters.lite.hooks.VKUIHook.isLoaded;
 import static ru.vtosters.lite.utils.CacheUtils.getInstance;
-import static ru.vtosters.lite.utils.LocaleUtils.getLocale;
 import static ru.vtosters.lite.utils.Preferences.checkupdates;
 import static ru.vtosters.lite.utils.Preferences.preferences;
 import static ru.vtosters.lite.utils.ServerDialog.sendRequest;
 import static ru.vtosters.lite.utils.Themes.isDarkTheme;
 import static ru.vtosters.lite.utils.Themes.setNeededTheme;
-import static ru.vtosters.lite.utils.VKUIInjector.isLoaded;
 
 import android.app.Activity;
 import android.app.Application;
@@ -69,6 +69,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Locale;
 
+import ru.vtosters.lite.hooks.VKUIHook;
 import ru.vtosters.lite.ui.dialogs.DisableBattery;
 import ru.vtosters.lite.ui.dialogs.InstallGMS;
 import ru.vtosters.lite.ui.dialogs.OTADialog;
@@ -331,13 +332,6 @@ public class Globals{
 
     public static String getPackageName(){
         return getContext().getPackageName();
-    }
-
-    public static void clearWebCache(){
-        ThemeTracker.a();
-        isLoaded = false;
-        new WebView(getContext()).clearCache(true);
-        WebCachePreloader.e();
     }
 
     public static int convertDpToPixel(float f){

@@ -342,7 +342,7 @@
     .line 1
     iget v1, p0, Lcom/vk/dto/user/VisibleStatus;->c:I
 
-    invoke-static {v1}, Lru/vtosters/lite/utils/OnlineFormatter;->getOnline(I)Ljava/lang/String;
+    invoke-static {v1}, Lru/vtosters/lite/hooks/OnlineFormatterHook;->getOnline(I)Ljava/lang/String;
 
     move-result-object v0
 

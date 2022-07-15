@@ -767,7 +767,7 @@
 
     move-result-object v2
 
-    invoke-static {v2}, Lru/vtosters/lite/utils/Newsfeed;->injectFilters(Lorg/json/JSONObject;)Z
+    invoke-static {v2}, Lru/vtosters/lite/hooks/NewsfeedHook;->injectFilters(Lorg/json/JSONObject;)Z
 
     move-result v10
 
@@ -834,7 +834,7 @@
 .method public static c(Z)J
     .locals 3
 
-    invoke-static {p0}, Lru/vtosters/lite/utils/Newsfeed;->getUpdateNewsfeed(Z)J
+    invoke-static {p0}, Lru/vtosters/lite/hooks/NewsfeedHook;->getUpdateNewsfeed(Z)J
 
     move-result-wide v0
 
