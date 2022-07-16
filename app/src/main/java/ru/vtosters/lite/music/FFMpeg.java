@@ -69,7 +69,7 @@ public class FFMpeg{
         var concat = FFmpegKit.execute("-f concat -safe 0 -i " + in + "/list.txt -c copy " + in + "/all.ts");
 
         // convert .ts file to .mp3 file via ffmpeg
-        var session = FFmpegKit.execute("-i " + in + "/all.ts -f mp3 -acodec mp3 -b 320 -y '" + out + "'");
+        var session = FFmpegKit.execute("-i " + in + "/all.ts -f mp3 -acodec mp3 -q:a 0 -y '" + out + "'");
         var rc = session.getReturnCode();
 
         if (ReturnCode.isSuccess(rc)) {
