@@ -170,7 +170,7 @@ public class DockBarManager {
             case "tab_groups":
                 return DockBarTab.valuesOf(
                         "tab_groups",
-                        R.drawable.ic_users_outline_28,
+                        R.drawable.users_3_outline_28,
                         R.string.groups,
                         R.id.menu_groups,
                         milkshake() ? CommunitiesCatalogFragment.class : GroupsFragment1.class);
