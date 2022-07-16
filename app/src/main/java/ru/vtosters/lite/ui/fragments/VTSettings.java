@@ -1,5 +1,6 @@
 package ru.vtosters.lite.ui.fragments;
 
+import static com.vk.bridges.AuthBridge.*;
 import static bruhcollective.itaysonlab.libvkx.client.LibVKXClient.isIntegrationEnabled;
 import static ru.vtosters.lite.f0x1d.VTVerifications.vtverif;
 import static ru.vtosters.lite.ui.vkui.VBListBuilder.VBListItem;
@@ -141,13 +142,13 @@ public class VTSettings extends MaterialPreferenceToolbarFragment{
 
         String feedsumm = getValAsString("vtlfeedsumm", ads());
         String docksumm = getDocksumm();
-        String musicsumm = getValAsString("vtlmediasumm", isIntegrationEnabled());
         String msgsumm = getValAsString("vtlmsgsumm", vkme());
         String activitysumm = getValAsString("vtlactivitysumm", offline());
         String themessumm = getValAsString("vtlthemessumm", navbar());
         String tgssumm = getTGSsumm();
         String superapp = getSuperappsumm();
-        String interfacesumm = getValAsString("vtlinterfacesumm", shortinfo());
+        String mediasumm = getValAsString("vtlinterfacesumm", shortinfo());
+        String interfacesumm = getValAsString("showstories", stories());
         String proxysumm = getProxysumm();
         String othersumm = getValAsString("vtlothersumm", vtverif());
         String ssfs = getSSFSsumm();
@@ -157,7 +158,7 @@ public class VTSettings extends MaterialPreferenceToolbarFragment{
         this.addPreferencesFromResource(vtosterXml);
 
         PreferencesUtil.addPreferenceDrawable(this, "", "Аккаунты", getUsername() + (hasVerification() ? Globals.getString("thanksfordonate") : Globals.getString("getdonate")), getDrawableFromUrl(getUserPhoto(), "ic_user_circle_outline_28", true, true), preference -> {
-            AuthBridge.logout();
+            logout();
             restartApplication();
             return false;
         });
@@ -323,7 +324,7 @@ public class VTSettings extends MaterialPreferenceToolbarFragment{
             });
         }
 
-        PreferencesUtil.addPreference(this, "", Globals.getString("vtlmedia"), musicsumm, "ic_media_outline_28", preference -> {
+        PreferencesUtil.addPreference(this, "", Globals.getString("vtlmedia"), mediasumm, "ic_media_outline_28", preference -> {
             Context context = getContext();
             Intent a2 = new Navigator(MediaFragment.class).b(context);
             a2.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
