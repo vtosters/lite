@@ -21,10 +21,15 @@
             android:summary="@string/vtlofflinesummary"
             android:title="@string/vtloffline" />
         <com.vtosters.lite.ui.MaterialSwitchPreference
-            android:defaultValue="true"
+            android:defaultValue="false"
             android:key="setoffline"
             android:summary="@string/vtloffline2summary"
             android:title="@string/vtloffline2" />
+        <com.vtosters.lite.ui.MaterialSwitchPreference
+            android:defaultValue="true"
+            android:key="onlineformatter"
+            android:summary="Показывать статус пользователя с какого клиента сидит в онлайне"
+            android:title="Расширенный онлайн" />
     </PreferenceCategory>
     <PreferenceCategory android:title="@string/dnr">
         <Preference
