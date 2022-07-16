@@ -69,6 +69,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Locale;
 
+import ru.vtosters.lite.downloaders.notifications.NotificationChannels;
 import ru.vtosters.lite.hooks.VKUIHook;
 import ru.vtosters.lite.ui.dialogs.DisableBattery;
 import ru.vtosters.lite.ui.dialogs.InstallGMS;
@@ -96,6 +97,9 @@ public class Globals{
         DisableBattery.alert(activity);
         edit().putBoolean("isdark", isDarkTheme()).commit();
         getInstance().autoCleaningCache();
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
+            NotificationChannels.createChannels();
+        }
         // VKIDProtection.alert(activity);
     }
 

@@ -12,6 +12,7 @@ import com.vk.dto.music.MusicTrack;
 import java.io.File;
 import java.util.Random;
 
+import ru.vtosters.lite.downloaders.notifications.NotificationChannels;
 import ru.vtosters.lite.music.Callback;
 import ru.vtosters.lite.music.FFMpeg;
 import ru.vtosters.lite.music.M3UDownloader;
@@ -83,7 +84,7 @@ public class AudioDownloader{
     }
 
     private static NotificationCompat.Builder buildDownloadNotification(MusicTrack track, int id){
-        var notificationBuilder = new NotificationCompat.Builder(Globals.getContext(), "music_downloads")
+        var notificationBuilder = new NotificationCompat.Builder(Globals.getContext(), NotificationChannels.MUSIC_DOWNLOAD_CHANNEL_ID)
                 .setSmallIcon(android.R.drawable.stat_sys_download)
                 .setContentTitle("Загрузка аудиозаписи")
                 .setContentText(track.toString())
