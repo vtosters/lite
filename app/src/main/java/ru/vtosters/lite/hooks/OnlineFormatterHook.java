@@ -4,6 +4,7 @@ import static ru.vtosters.lite.utils.Globals.getString;
 import static ru.vtosters.lite.utils.Globals.getUserToken;
 import static ru.vtosters.lite.utils.Globals.sendToast;
 import static ru.vtosters.lite.utils.Preferences.dev;
+import static ru.vtosters.lite.utils.Preferences.getBoolValue;
 import static ru.vtosters.lite.utils.Preferences.getPrefsFromFile;
 import static ru.vtosters.lite.utils.Proxy.getApi;
 
@@ -15,7 +16,7 @@ public class OnlineFormatterHook{
     private static String AppName;
 
     public static String getAppName(int appid){  // thanks to egormetlitsky (vk mp3 mod) for helping with online ids
-        if (appid <= 3) return null;
+        if (appid <= 3 || !getBoolValue("onlineformatter", true)) return null;
 
         switch(appid) {
             case 2274003:

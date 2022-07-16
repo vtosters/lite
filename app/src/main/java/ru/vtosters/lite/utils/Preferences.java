@@ -251,7 +251,7 @@ public class Preferences{
     }
 
     public static boolean setoffline(){
-        return getBoolValue("setoffline", true);
+        return getBoolValue("setoffline", false);
     }
 
     public static boolean shortinfo(){
