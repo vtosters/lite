@@ -100,7 +100,8 @@ public class JsonInjectors{
 
     public static JSONObject friends(JSONObject json) throws JSONException{
         JSONObject catalog = json;
-        Boolean sectionexecute = true;
+        boolean sectionexecute = true;
+        boolean hasBirthday = false;
 
         if (json.optJSONObject("catalog") != null) {
             catalog = json.optJSONObject("catalog");
@@ -136,6 +137,15 @@ public class JsonInjectors{
                 }
                 if (name.contains("list_friend_suggests") || buttons.contains("list_friend_suggests") || name.contains("separator")) {
                     skip = friendsblock();
+                }
+
+                if (buttons.contains("friends_birthdays_list")){
+                    hasBirthday = true;
+                }
+
+                if (name.contains("separator") && hasBirthday){
+                    skip = false;
+                    hasBirthday = false;
                 }
 
                 if (!skip) {
