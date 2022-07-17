@@ -12,7 +12,6 @@ import static com.vtosters.lite.R.id.tab_messages;
 import static com.vtosters.lite.R.id.tab_news;
 import static ru.vtosters.lite.utils.Globals.getResources;
 
-import android.annotation.SuppressLint;
 import android.content.res.ColorStateList;
 import android.graphics.Color;
 import android.graphics.drawable.Drawable;
@@ -22,7 +21,6 @@ import android.view.MenuItem;
 import com.vk.apps.AppsFragment;
 import com.vk.core.drawable.RecoloredDrawable;
 import com.vk.core.fragments.FragmentImpl;
-import com.vk.core.ui.themes.MilkshakeHelper;
 import com.vk.core.util.StringUtils;
 import com.vk.navigation.right.RightMenu;
 import com.vtosters.lite.MenuCountersState;
@@ -168,6 +166,7 @@ public class DockBarInjector{
     private static CharSequence counters(int tabId, BottomNavigationView navigationView){
         if (!Preferences.dockcounter()) return null;
 
+
         int val = 0;
 
         val = MenuCountersState.g(); // friends ?????? menu_friends
@@ -237,11 +236,11 @@ public class DockBarInjector{
     public static boolean isDockOpenAllowed(Class<?> cls){
         for (DockBarTab tab : sManager.getSelectedTabs())
             if (tab.fragmentClass == cls)
-                return true;
+                return false;
         for (DockBarTab tab : sManager.getDisabledTabs())
             if (tab.fragmentClass == cls)
-                return true;
-        return false;
+                return false;
+        return true;
     }
 
     public static Class<?> interceptClick(int id, RightMenu rightMenu){
