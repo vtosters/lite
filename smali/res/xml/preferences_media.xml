@@ -63,6 +63,11 @@
             android:summary="@string/interfacevideorecsum"
             android:title="@string/interfacevideorec" />
     </PreferenceCategory>
+    <PreferenceCategory android:title="Фото">
+        <Preference
+            android:key="select_photo_search_engine"
+            android:title="Выбор движка для поиска фото" />
+    </PreferenceCategory>
     <PreferenceCategory android:title="@string/vkx_title">
         <Preference
             android:enabled="false"
