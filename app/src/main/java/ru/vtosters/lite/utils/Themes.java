@@ -40,15 +40,8 @@ import com.vk.core.ui.themes.VKThemeHelper;
 import com.vtosters.lite.R;
 import com.vtosters.lite.data.ThemeTracker;
 
-import java.lang.ref.WeakReference;
-import java.lang.reflect.Field;
 import java.util.Arrays;
-import java.util.LinkedList;
 import java.util.List;
-import java.util.concurrent.CopyOnWriteArrayList;
-
-import kotlin.u.KProperty5;
-import ru.vtosters.lite.hooks.VKUIHook;
 
 public class Themes{
     public static List<String> accentColors = Arrays.asList(

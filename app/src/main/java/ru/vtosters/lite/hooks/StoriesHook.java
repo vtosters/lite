@@ -1,8 +1,6 @@
 package ru.vtosters.lite.hooks;
-import static ru.vtosters.lite.utils.Preferences.*;
 import static ru.vtosters.lite.utils.Preferences.adsstories;
-
-import ru.vtosters.lite.utils.Preferences;
+import static ru.vtosters.lite.utils.Preferences.stories;
 
 public class StoriesHook{
     public static String ads(){

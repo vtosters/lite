@@ -28,7 +28,7 @@ import com.vtosters.lite.R;
 import com.vtosters.lite.fragments.ProfileFragment;
 import com.vtosters.lite.fragments.friends.FriendsFragment;
 import com.vtosters.lite.fragments.gifts.BirthdaysFragment;
-import com.vtosters.lite.fragments.lives.LivesPostListFragment;
+import com.vtosters.lite.fragments.lives.LivesTabsFragment;
 import com.vtosters.lite.fragments.money.MoneyTransfersFragment;
 import com.vtosters.lite.fragments.p2.DocumentsViewFragment;
 import com.vtosters.lite.fragments.s2.GroupsFragment1;
@@ -202,7 +202,7 @@ public class DockBarManager {
                         R.drawable.ic_live_outline_28,
                         R.string.sett_live,
                         R.id.menu_lives,
-                        LivesPostListFragment.class);
+                        LivesTabsFragment.class);
             case "tab_games":
                 return DockBarTab.valuesOf(
                         "tab_games",

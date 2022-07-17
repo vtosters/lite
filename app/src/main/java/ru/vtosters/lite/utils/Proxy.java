@@ -4,8 +4,6 @@ import static java.lang.System.clearProperty;
 import static java.lang.System.getProperties;
 import static ru.vtosters.lite.utils.Globals.getPrefsValue;
 
-import android.util.Log;
-
 public class Proxy{
     public static String getApi(){
         var proxyapi = getPrefsValue("proxyapi");

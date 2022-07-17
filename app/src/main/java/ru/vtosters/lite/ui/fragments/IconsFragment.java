@@ -2,16 +2,10 @@ package ru.vtosters.lite.ui.fragments;
 
 import static ru.vtosters.lite.utils.Globals.convertDpToPixel;
 import static ru.vtosters.lite.utils.Globals.edit;
-import static ru.vtosters.lite.utils.Globals.getDrawableFromUrl;
 import static ru.vtosters.lite.utils.Globals.getIdentifier;
-import static ru.vtosters.lite.utils.Globals.getPackageName;
-import static ru.vtosters.lite.utils.Globals.getPrefsValue;
-import static ru.vtosters.lite.utils.Globals.getUserPhoto;
-import static ru.vtosters.lite.utils.Globals.getUsername;
-import static ru.vtosters.lite.utils.Globals.restartApplication;
-import static ru.vtosters.lite.utils.Globals.sendToast;
-import static ru.vtosters.lite.utils.IconManager.*;
-import static ru.vtosters.lite.utils.Preferences.DoNotUseOldIcons;
+import static ru.vtosters.lite.utils.IconManager.icons;
+import static ru.vtosters.lite.utils.IconManager.iconsValues;
+import static ru.vtosters.lite.utils.IconManager.switchComponent;
 import static ru.vtosters.lite.utils.Preferences.getBoolValue;
 import static ru.vtosters.lite.utils.Preferences.hasVerification;
 import static ru.vtosters.lite.utils.Preferences.preferences;
@@ -24,7 +18,6 @@ import android.annotation.SuppressLint;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
-import android.graphics.drawable.Drawable;
 import android.net.Uri;
 import android.os.Bundle;
 import android.util.TypedValue;
@@ -33,16 +26,10 @@ import android.widget.RadioGroup;
 
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.view.ContextThemeWrapper;
-import androidx.core.content.res.ResourcesCompat;
 
-import com.vk.bridges.AuthBridge;
-import com.vk.navigation.Navigator;
-import com.vtosters.lite.fragments.w2.BlacklistFragment;
 import com.vtosters.lite.general.fragments.MaterialPreferenceToolbarFragment;
 
 import ru.vtosters.lite.ui.PreferencesUtil;
-import ru.vtosters.lite.utils.Globals;
-import ru.vtosters.lite.utils.IconManager;
 
 public class IconsFragment extends MaterialPreferenceToolbarFragment{
     @SuppressLint("UseCompatLoadingForDrawables")

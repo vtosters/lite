@@ -5,7 +5,6 @@ import static android.graphics.Bitmap.createBitmap;
 import static android.graphics.Bitmap.createScaledBitmap;
 import static androidx.core.content.ContextCompat.getDrawable;
 import static ru.vtosters.lite.hooks.DateHook.getLocale;
-import static ru.vtosters.lite.hooks.VKUIHook.isLoaded;
 import static ru.vtosters.lite.utils.CacheUtils.getInstance;
 import static ru.vtosters.lite.utils.Preferences.checkupdates;
 import static ru.vtosters.lite.utils.Preferences.preferences;
@@ -30,8 +29,6 @@ import android.graphics.RectF;
 import android.graphics.drawable.BitmapDrawable;
 import android.graphics.drawable.Drawable;
 import android.net.ConnectivityManager;
-import android.net.NetworkCapabilities;
-import android.net.NetworkInfo;
 import android.os.Build;
 import android.os.Bundle;
 import android.os.Handler;
@@ -39,13 +36,11 @@ import android.os.StrictMode;
 import android.preference.PreferenceManager;
 import android.telephony.TelephonyManager;
 import android.util.Log;
-import android.webkit.WebView;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.StringRes;
 
-import com.vk.articles.preload.WebCachePreloader;
 import com.vk.dto.user.UserProfile;
 import com.vk.im.ui.providers.audiomsg.ImAudioMsgPlayerProvider;
 import com.vk.im.ui.providers.audiomsg.PlayerActionSources;
@@ -53,7 +48,6 @@ import com.vk.navigation.Navigator;
 import com.vtosters.lite.VKActivity;
 import com.vtosters.lite.api.ExtendedUserProfile;
 import com.vtosters.lite.auth.VKAccountManager;
-import com.vtosters.lite.data.ThemeTracker;
 import com.vtosters.lite.im.ImEngineProvider;
 
 import java.io.ByteArrayOutputStream;
@@ -70,7 +64,6 @@ import java.util.List;
 import java.util.Locale;
 
 import ru.vtosters.lite.downloaders.notifications.NotificationChannels;
-import ru.vtosters.lite.hooks.VKUIHook;
 import ru.vtosters.lite.ui.dialogs.DisableBattery;
 import ru.vtosters.lite.ui.dialogs.InstallGMS;
 import ru.vtosters.lite.ui.dialogs.OTADialog;
