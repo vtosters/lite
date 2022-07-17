@@ -34,6 +34,10 @@ public class ExternalLinkHandler{
         return parseVideoFile(file, getContext(), isEnableExternalOpening());
     }
 
+    public static boolean parseVideoFile(VideoFile file, Context context) {
+        return parseVideoFile(file, context, isEnableExternalOpening());
+    }
+
     public static boolean parseVideoFile(VideoFile file, Activity activity) {
         return parseVideoFile(file, activity, isEnableExternalOpening());
     }
@@ -51,7 +55,7 @@ public class ExternalLinkHandler{
             }
         }
 
-        if (!isEnabled) return false;
+        if (!isEnabled || file.isEmpty()) return false;
 
         if (checkVkVideo(file)) {
             if (qualities.size() == 1) {
