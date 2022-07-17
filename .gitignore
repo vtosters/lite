@@ -28,4 +28,4 @@ smali2/build/resources.zip
 /smali/VTLite.apk.cache/
 smali/build/resources.zip
 smali/assets/version.properties
-smali/assets/version.properties
+*.keystore
