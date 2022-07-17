@@ -17,6 +17,7 @@ import android.widget.Toast;
 import com.vk.core.dialogs.bottomsheet.MenuBottomSheetAction;
 import com.vk.core.util.ToastUtils;
 import com.vk.dto.common.VideoFile;
+import com.vtosters.lite.R;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -26,10 +27,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
 
-import com.vtosters.lite.R;
-
 import ru.vtosters.lite.utils.ExternalLinkHandler;
-import ru.vtosters.lite.utils.Preferences;
 
 public class VideoDownloader{
     private static final int DOWNLOAD_ID = 0;

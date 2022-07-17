@@ -13,8 +13,6 @@ import androidx.preference.Preference;
 import com.vk.navigation.Navigator;
 import com.vtosters.lite.general.fragments.MaterialPreferenceToolbarFragment;
 
-import ru.vtosters.lite.ui.wallpapers.WallpaperMenuFragment;
-
 
 public class ThemesFragment extends MaterialPreferenceToolbarFragment{
 

@@ -1,49 +1,16 @@
 package ru.vtosters.lite.utils;
 
-import static java.lang.Long.MAX_VALUE;
-import static ru.vtosters.lite.ui.fragments.dockbar.DockBarManager.getInstance;
 import static ru.vtosters.lite.utils.Globals.getContext;
 import static ru.vtosters.lite.utils.Globals.getPrefsValue;
 import static ru.vtosters.lite.utils.Preferences.adsgroup;
-import static ru.vtosters.lite.utils.Preferences.adsstories;
 import static ru.vtosters.lite.utils.Preferences.authorsrecomm;
 import static ru.vtosters.lite.utils.Preferences.copyright_post;
 import static ru.vtosters.lite.utils.Preferences.dev;
 import static ru.vtosters.lite.utils.Preferences.friendsrecomm;
 import static ru.vtosters.lite.utils.Preferences.getBoolValue;
-import static ru.vtosters.lite.utils.Preferences.milkshake;
 import static ru.vtosters.lite.utils.Preferences.postsrecomm;
-import static ru.vtosters.lite.utils.Preferences.superapp;
-import static ru.vtosters.lite.utils.Preferences.useNewSettings;
-import static ru.vtosters.lite.utils.Preferences.vkme;
 
 import android.util.Log;
-
-import com.vk.apps.AppsFragment;
-import com.vk.core.preference.Preference;
-import com.vk.discover.ThemedFeedFragment;
-import com.vk.fave.fragments.FaveTabFragment;
-import com.vk.menu.MenuFragment;
-import com.vk.menu.SearchMenuFragment;
-import com.vk.music.fragment.MusicCatalogFragment1;
-import com.vk.music.fragment.MusicFragment;
-import com.vk.newsfeed.HomeFragment;
-import com.vk.newsfeed.NewsfeedFragment;
-import com.vk.notifications.NotificationsContainerFragment;
-import com.vk.profile.catalog.CommunitiesCatalogFragment;
-import com.vk.search.fragment.GroupsSearchFragment;
-import com.vk.superapp.SuperAppFragment;
-import com.vtosters.lite.fragments.ProfileFragment;
-import com.vtosters.lite.fragments.friends.FriendsFragment;
-import com.vtosters.lite.fragments.gifts.BirthdaysFragment;
-import com.vtosters.lite.fragments.lives.LivesTabsFragment;
-import com.vtosters.lite.fragments.money.MoneyTransfersFragment;
-import com.vtosters.lite.fragments.p2.DocumentsViewFragment;
-import com.vtosters.lite.fragments.s2.GroupsFragment1;
-import com.vtosters.lite.fragments.t2.c.DialogsFragment;
-import com.vtosters.lite.fragments.y2.VideosFragment;
-import com.vtosters.lite.general.fragments.GamesFragment;
-import com.vtosters.lite.general.fragments.PhotosFragment;
 
 import org.json.JSONException;
 import org.json.JSONObject;

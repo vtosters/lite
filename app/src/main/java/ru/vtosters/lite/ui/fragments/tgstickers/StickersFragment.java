@@ -3,7 +3,6 @@ package ru.vtosters.lite.ui.fragments.tgstickers;
 import static android.widget.Toast.LENGTH_SHORT;
 import static android.widget.Toast.makeText;
 import static ru.vtosters.lite.tgs.TGPref.setTGBotKey;
-import static ru.vtosters.lite.utils.Globals.*;
 import static ru.vtosters.lite.utils.Globals.convertDpToPixel;
 import static ru.vtosters.lite.utils.Globals.getIdentifier;
 import static ru.vtosters.lite.utils.Themes.getAccentColor;

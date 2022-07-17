@@ -3,7 +3,6 @@ package ru.vtosters.lite.ui;
 import static ru.vtosters.lite.utils.Globals.convertDpToPixel;
 import static ru.vtosters.lite.utils.Globals.getContext;
 import static ru.vtosters.lite.utils.Themes.getAccentColor;
-import static ru.vtosters.lite.utils.Themes.getAlertStyle;
 import static ru.vtosters.lite.utils.Themes.getSTextAttr;
 import static ru.vtosters.lite.utils.Themes.getTextAttr;
 

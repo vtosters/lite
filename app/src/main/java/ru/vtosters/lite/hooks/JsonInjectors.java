@@ -4,7 +4,6 @@ import static ru.vtosters.lite.f0x1d.VTVerifications.isDeveloper;
 import static ru.vtosters.lite.f0x1d.VTVerifications.isPrometheus;
 import static ru.vtosters.lite.f0x1d.VTVerifications.isVerified;
 import static ru.vtosters.lite.utils.Base64Utils.decode;
-import static ru.vtosters.lite.utils.Globals.sendToast;
 import static ru.vtosters.lite.utils.Preferences.dev;
 import static ru.vtosters.lite.utils.Preferences.friendsblock;
 import static ru.vtosters.lite.utils.Preferences.getBoolValue;
