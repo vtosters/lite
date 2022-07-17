@@ -2646,7 +2646,7 @@
     <string name="photo_upload_ok_multiple_long">Фотографии успешно загружены</string>
     <string name="photo_viewer_save_photo">Сохранить</string>
     <string name="search_photo_content">Найти фото</string>
-    <string name="copy_photo_url_content">Скопировать ссылку на фото</string>
+    <string name="copy_photo_url_content">Скопировать прямую ссылку</string>
     <string name="open_original_photo_content">Оригинал</string>
     <string name="copied_to_clipboard">Скопировано в буфер обмена</string>
     <string name="photo_viewer_share">Поделиться</string>
