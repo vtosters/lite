@@ -26,6 +26,7 @@ import com.vk.profile.catalog.CommunitiesCatalogFragment;
 import com.vk.superapp.SuperAppFragment;
 import com.vtosters.lite.R;
 import com.vtosters.lite.fragments.ProfileFragment;
+import com.vtosters.lite.fragments.friends.FriendsFragment;
 import com.vtosters.lite.fragments.gifts.BirthdaysFragment;
 import com.vtosters.lite.fragments.lives.LivesPostListFragment;
 import com.vtosters.lite.fragments.money.MoneyTransfersFragment;
@@ -166,7 +167,7 @@ public class DockBarManager {
                         !milkshake() ? R.drawable.ic_users_outline_28 : R.drawable.ic_menu_notification_outline_28,
                         !milkshake() ? R.string.friends : R.string.notification,
                         R.id.menu_friends,
-                        !milkshake() ? FriendsCatalogFragment.class : NotificationsContainerFragment.class);
+                        !milkshake() ? FriendsFragment.class : NotificationsContainerFragment.class);
             case "tab_groups":
                 return DockBarTab.valuesOf(
                         "tab_groups",
