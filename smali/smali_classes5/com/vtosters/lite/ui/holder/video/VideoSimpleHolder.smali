@@ -1320,7 +1320,13 @@
     return-void
 
     :cond_1
-    invoke-static/range {v2 .. v2}, Lru/vtosters/lite/utils/ExternalLinkHandler;->parseVideoFile(Lcom/vk/dto/common/VideoFile;)Z
+    invoke-virtual {p1}, Landroid/view/View;->getContext()Landroid/content/Context;
+
+    move-result-object v0
+
+    check-cast v0, Landroid/app/Activity;
+
+    invoke-static {v2, v0}, Lru/vtosters/lite/utils/ExternalLinkHandler;->parseVideoFile(Lcom/vk/dto/common/VideoFile;Landroid/app/Activity;)Z
 
     move-result v3
 
