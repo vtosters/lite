@@ -1206,9 +1206,19 @@
 .end method
 
 .method public final w1()Z
-    .locals 1
+    .locals 2
 
-    .line 1
+    invoke-static {}, Lru/vtosters/lite/utils/Preferences;->isEnableExternalOpening()Z
+
+    move-result v1
+
+    if-eqz v1, :cond_228
+
+    const/4 v0, 0x0
+
+    return v0
+
+    :cond_228
     iget-boolean v0, p0, Lcom/vk/dto/account/VideoConfig;->e:Z
 
     return v0
