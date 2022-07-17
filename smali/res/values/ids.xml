@@ -2769,6 +2769,9 @@
     <item name="replies_count" type="id" />
     <item name="reply_to_name" type="id" />
     <item name="report" type="id" />
+    <item name="search_photo" type="id" />
+    <item name="copy_photo_url" type="id" />
+    <item name="open_original_photo" type="id" />
     <item name="request_check_icon" type="id" />
     <item name="request_money_view" type="id" />
     <item name="required" type="id" />

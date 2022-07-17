@@ -2,6 +2,7 @@ package ru.vtosters.lite.ui.fragments;
 
 import static ru.vtosters.lite.utils.Globals.edit;
 import static ru.vtosters.lite.utils.Globals.getIdentifier;
+import static ru.vtosters.lite.utils.Globals.getPreferences;
 import static ru.vtosters.lite.utils.Globals.restartApplicationWithTimer;
 import static ru.vtosters.lite.utils.Themes.getAccentColor;
 import static ru.vtosters.lite.utils.Themes.getAlertStyle;
@@ -11,15 +12,21 @@ import android.content.Context;
 import android.content.DialogInterface;
 import android.content.res.ColorStateList;
 import android.os.Bundle;
+import android.view.LayoutInflater;
 import android.widget.EditText;
 import android.widget.LinearLayout;
+import android.widget.ListView;
 
 import androidx.appcompat.app.AlertDialog;
 import androidx.preference.Preference;
 
+import com.vk.core.dialogs.alert.VkAlertDialog;
 import com.vtosters.lite.general.fragments.MaterialPreferenceToolbarFragment;
 
+import java.util.Arrays;
+
 import ru.vtosters.lite.downloaders.VideoDownloader;
+import ru.vtosters.lite.ui.components.ImagineArrayAdapter;
 
 public class MediaFragment extends MaterialPreferenceToolbarFragment{
     public static void download(Context ctx){
@@ -58,6 +65,28 @@ public class MediaFragment extends MaterialPreferenceToolbarFragment{
     private void prefs(){
         findPreference("download_video").setOnPreferenceClickListener(new MediaFragment.download());
         findPreference("dateformat").setOnPreferenceChangeListener(new MediaFragment.restart());
+        findPreference("select_photo_search_engine").setOnPreferenceClickListener(preference -> {
+            var items = Arrays.asList(
+                    new ImagineArrayAdapter.ImagineArrayAdapterItem(getIdentifier("yandex", "drawable"), "Yandex"),
+                    new ImagineArrayAdapter.ImagineArrayAdapterItem(getIdentifier("google", "drawable"), "Google"),
+                    new ImagineArrayAdapter.ImagineArrayAdapterItem(getIdentifier("microsoft", "drawable"), "Bing")
+            );
+
+            var alert = new VkAlertDialog.Builder(getActivity())
+                    .create();
+
+            var listView = (ListView) LayoutInflater.from(getContext()).inflate(com.vtosters.lite.R.layout.abc_select_dialog_material, null, false);
+            var adapter = new ImagineArrayAdapter(getContext(), items, i -> {
+                getPreferences().edit().putInt("search_engine", i).apply();
+                alert.dismiss();
+            });
+            adapter.setSelected(getPreferences().getInt("search_engine", 0));
+            listView.setAdapter(adapter);
+            alert.setView(listView);
+            alert.show();
+
+            return true;
+        });
     }
 
     public class download implements Preference.OnPreferenceClickListener{

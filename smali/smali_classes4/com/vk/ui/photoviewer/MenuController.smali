@@ -722,6 +722,16 @@
 
     .line 62
     :cond_c
+    move-object/from16 v0, p1
+
+    move-object/from16 v1, p2
+
+    move/from16 v2, p3
+
+    move/from16 v3, p4
+
+    invoke-static/range {v0 .. v3}, Lru/vtosters/lite/hooks/PhotoViewer;->addMenuItems(Lcom/vk/dto/common/AttachmentWithMedia;Lcom/vk/core/dialogs/actionspopup/ActionsPopup$b;IZ)V
+
     invoke-virtual/range {p2 .. p2}, Lcom/vk/core/dialogs/actionspopup/ActionsPopup$b;->c()Lcom/vk/core/dialogs/actionspopup/ActionsPopup;
 
     move-result-object v0
@@ -2747,6 +2757,15 @@
 .method public final a(Lcom/vk/dto/common/AttachmentWithMedia;Landroid/view/MenuItem;Landroid/view/View;)Z
     .locals 2
 
+    invoke-static {p1, p2, p3}, Lru/vtosters/lite/hooks/PhotoViewer;->interceptClick(Lcom/vk/dto/common/AttachmentWithMedia;Landroid/view/MenuItem;Landroid/view/View;)Z
+
+    move-result v0
+
+    if-nez v0, :cond_custom
+
+    return v0
+
+    :cond_custom
     .line 20
     instance-of v0, p1, Lcom/vtosters/lite/attachments/PhotoAttachment;
 
