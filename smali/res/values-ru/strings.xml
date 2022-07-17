@@ -5447,6 +5447,7 @@
     <string name="interfacestartfr">Стандартный стартовый фрагмент</string>
     <string name="interfacestartfrsum">Выберите стартовый фрагмент</string>
     <string name="interfacevideo">Видео</string>
+    <string name="interfacevideoext_short">Внешний плеер</string>
     <string name="interfacevideoext">Использовать внешний видеоплеер</string>
     <string name="interfacevideoextsum">Использовать внешний видеоплеер для воспроизведения видео</string>
     <string name="interfacevideorec">Отключение рекомендаций видео</string>

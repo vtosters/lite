@@ -48,7 +48,7 @@ public class VideoDownloader{
     public static void injectAction(ArrayList<MenuBottomSheetAction> list, VideoFile video){
         if (!video.U && !video.I1()) {
             addAction(list, DOWNLOAD_ID, R.drawable.ic_download_outline_24, R.string.download, 9);
-            addAction(list, OPEN_EXTERNAL_LINK_ID, R.drawable.ic_link_outline_28, getIdentifier("interfacevideoext", "string"), 9);
+            addAction(list, OPEN_EXTERNAL_LINK_ID, R.drawable.ic_link_outline_28, getIdentifier("interfacevideoext_short", "string"), 9);
         }
     }
 

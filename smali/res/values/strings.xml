@@ -5599,6 +5599,7 @@ Expand text..."</string>
     <string name="interfacestartfr">Default start fragment</string>
     <string name="interfacestartfrsum">Select start fragment</string>
     <string name="interfacevideo">Video</string>
+    <string name="interfacevideoext_short">External player</string>
     <string name="interfacevideoext">Use external video player</string>
     <string name="interfacevideoextsum">Use an external video player to play videos</string>
     <string name="interfacevideorec">Disable recommended videos</string>
