@@ -5651,7 +5651,7 @@ You need to restart the application to apply proxy settings"</string>
     <string name="savedmsg">Saved messages</string>
     <string name="selectacc">Select account</string>
     <string name="shitposting">The same type of news</string>
-    <string name="shitpostingsummary">Filter for cleaning posts with the Russian Federation and actions related in Ukraine</string>
+    <string name="shitpostingsummary">Filter for cleaning posts with the Russian Federation and actions related in Ukraine\n\nThere may be incorrect triggers</string>
     <string name="showstories">Show stories</string>
     <string name="showstoriessum">The story section at the top of the feed</string>
     <string name="dialogrecomm">Disable recommendations</string>

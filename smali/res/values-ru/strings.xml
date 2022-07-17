@@ -5499,7 +5499,7 @@
     <string name="savedmsg">Сохраненные сообщения</string>
     <string name="selectacc">Выберите аккаунт</string>
     <string name="shitposting">Однотипные новости</string>
-    <string name="shitpostingsummary">Фильтр очистки постов с РФ и действиями связанными на Украине</string>
+    <string name="shitpostingsummary">Фильтр очистки постов с РФ и действиями связанными на Украине\n\nМогут быть ошибочные срабатывания</string>
     <string name="showstories">Показывать истории</string>
     <string name="showstoriessum">Блок истории в верхней части ленты</string>
     <string name="dialogrecomm">Отключить рекомендации</string>
