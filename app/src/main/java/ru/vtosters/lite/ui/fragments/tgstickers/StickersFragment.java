@@ -2,6 +2,8 @@ package ru.vtosters.lite.ui.fragments.tgstickers;
 
 import static android.widget.Toast.LENGTH_SHORT;
 import static android.widget.Toast.makeText;
+import static ru.vtosters.lite.tgs.TGPref.setTGBotKey;
+import static ru.vtosters.lite.utils.Globals.*;
 import static ru.vtosters.lite.utils.Globals.convertDpToPixel;
 import static ru.vtosters.lite.utils.Globals.getIdentifier;
 import static ru.vtosters.lite.utils.Themes.getAccentColor;
@@ -249,7 +251,7 @@ public class StickersFragment extends BaseToolbarFragment{
         dlg.setMessage(Globals.getString("stickersapi6"));
         dlg.setView(linearLayout);
         dlg.setPositiveButton(android.R.string.ok, (dialog, which) -> {
-            TGPref.setTGBotKey(editText.getText().toString());
+            setTGBotKey(editText.getText().toString());
             if (r != null) r.run();
         });
         dlg.setNegativeButton(android.R.string.cancel, null)
@@ -280,6 +282,7 @@ public class StickersFragment extends BaseToolbarFragment{
                 progressDialog.dismiss();
                 if (!ok) {
                     makeText(context, Globals.getString("stickersapi2"), LENGTH_SHORT).show();
+                    setTGBotKey(null);
                     return;
                 }
                 mService.setBotKey(TGPref.getTGBotKey());
