@@ -61,11 +61,10 @@ public class SettBackup{
     }
 
     public static void backupSettings(){
-        SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd:HH-mm-ss", Locale.getDefault());
+        SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd.HH-mm-ss", Locale.getDefault());
         var file = new File(sBackupDir,
                 "Backup_" + dateFormat.format(new Date()) + ".xml");
         try {
-            file.delete();
             sBackupDir.mkdirs();
             FileWriter out = new FileWriter(file);
             out.write(getPrefContent("com.vtosters.lite_preferences.xml"));
