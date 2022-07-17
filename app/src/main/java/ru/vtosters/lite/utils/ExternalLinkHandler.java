@@ -4,6 +4,7 @@ import static ru.vtosters.lite.utils.Globals.getContext;
 import static ru.vtosters.lite.utils.Globals.isEmpty;
 import static ru.vtosters.lite.utils.Preferences.isEnableExternalOpening;
 
+import android.app.Activity;
 import android.app.AlertDialog;
 import android.content.Context;
 import android.content.Intent;
@@ -31,6 +32,10 @@ public class ExternalLinkHandler{
 
     public static boolean parseVideoFile(VideoFile file) {
         return parseVideoFile(file, getContext(), isEnableExternalOpening());
+    }
+
+    public static boolean parseVideoFile(VideoFile file, Activity activity) {
+        return parseVideoFile(file, activity, isEnableExternalOpening());
     }
 
     public static boolean parseVideoFile(VideoFile file, Context context, Boolean isEnabled) {

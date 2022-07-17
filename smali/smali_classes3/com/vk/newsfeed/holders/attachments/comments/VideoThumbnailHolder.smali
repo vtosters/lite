@@ -377,7 +377,7 @@
 
     move-result-object v1
 
-    invoke-static/range {v1 .. v1}, Lru/vtosters/lite/utils/ExternalLinkHandler;->parseVideoFile(Lcom/vk/dto/common/VideoFile;)Z
+    invoke-static {v1, v0}, Lru/vtosters/lite/utils/ExternalLinkHandler;->parseVideoFile(Lcom/vk/dto/common/VideoFile;Landroid/app/Activity;)Z
 
     move-result v4
 
