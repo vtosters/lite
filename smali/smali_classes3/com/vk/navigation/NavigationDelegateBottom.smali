@@ -1249,18 +1249,6 @@
 .method private final a(I)Ljava/lang/CharSequence;
     .locals 2
 
-    invoke-static {}, Lru/vtosters/lite/utils/Preferences;->dockcounter()Z
-
-    move-result v1
-
-    if-nez v1, :cond_228
-
-    const/4 p1, 0x0
-
-    return-object p1
-
-    :cond_228
-
     const/4 v0, 0x0
 
     packed-switch p1, :pswitch_data_0
@@ -5440,11 +5428,7 @@
 
     if-eqz v2, :cond_0
 
-    invoke-direct {p0, v1}, Lcom/vk/navigation/NavigationDelegateBottom;->a(I)Ljava/lang/CharSequence;
-
-    move-result-object v3
-
-    invoke-virtual {v2, v1, v3}, Lcom/vtosters/lite/ui/bottomnavigation/BottomNavigationView;->a(ILjava/lang/CharSequence;)V
+    invoke-static {v1, v2}, Lru/vtosters/lite/ui/fragments/dockbar/DockBarInjector;->setCounter(ILcom/vtosters/lite/ui/bottomnavigation/BottomNavigationView;)V
 
     goto :goto_0
 
