@@ -1,6 +1,7 @@
 package ru.vtosters.lite.ui.fragments.dockbar;
 
 import static com.vtosters.lite.R.id.menu_feedback;
+import static com.vtosters.lite.R.id.menu_friends;
 import static com.vtosters.lite.R.id.menu_messages;
 import static com.vtosters.lite.R.id.menu_newsfeed;
 import static com.vtosters.lite.R.id.menu_search;
@@ -166,30 +167,36 @@ public class DockBarInjector{
     private static CharSequence counters(int tabId, BottomNavigationView navigationView){
         if (!Preferences.dockcounter()) return null;
 
-
         int val = 0;
-
-        val = MenuCountersState.g(); // friends ?????? menu_friends
-        val = MenuCountersState.j(); // messages
-        val = MenuCountersState.k() * (-1); // notifications
-        val = MenuCountersState.b(); // NewsfeedMarkDiscoverBadgeViewed
-        val = MenuCountersState.c(); // fave
-        val = MenuCountersState.a(); // games
-        val = MenuCountersState.h(); // groups
-        val = MenuCountersState.l(); // photos
-        val = MenuCountersState.m(); // support
-        val = MenuCountersState.n(); // videos
-        val = MenuCountersState.o(); // vk_pay
-        val = MenuCountersState.e(); // new friends
-        val = MenuCountersState.f(); // suggested friends
-
-        if (val > 0) {
-            return StringUtils.a(val);
+        switch (tabId) {
+            case tab_messages:
+                val = MenuCountersState.j();
+                break;
+            case tab_feedback:
+                if (Preferences.milkshake())
+                    val =  MenuCountersState.k();
+                break;
+            case menu_friends:
+                if (!Preferences.milkshake())
+                    val =  MenuCountersState.k();
+                break;
         }
-        if (val >= 0) {
-            return null;
-        }
-        return "";
+//
+//        val = MenuCountersState.g(); // friends ?????? menu_friends
+//        val = MenuCountersState.j(); // messages
+//        val = MenuCountersState.k(); // notifications
+//        val = MenuCountersState.b(); // NewsfeedMarkDiscoverBadgeViewed
+//        val = MenuCountersState.c(); // fave
+//        val = MenuCountersState.a(); // games
+//        val = MenuCountersState.h(); // groups
+//        val = MenuCountersState.l(); // photos
+//        val = MenuCountersState.m(); // support
+//        val = MenuCountersState.n(); // videos
+//        val = MenuCountersState.o(); // vk_pay
+//        val = MenuCountersState.e(); // new friends
+//        val = MenuCountersState.f(); // suggested friends
+
+        return val > 0 ? StringUtils.a(val) : null;
     }
 
     public static JSONArray injectMenuJSON(JSONArray arr){
