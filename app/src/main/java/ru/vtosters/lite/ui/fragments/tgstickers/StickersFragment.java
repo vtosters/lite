@@ -171,12 +171,6 @@ public class StickersFragment extends BaseToolbarFragment{
                 editText.setHintTextColor(PreferencesUtil.getSTextColor(getContext()));
                 editText.setBackgroundTintList(ColorStateList.valueOf(getAccentColor()));
 
-                // Костыль для китката
-                if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
-                    editText.setBackgroundTintList(ColorStateList.valueOf(PreferencesUtil.getTextColor(getContext())));
-                } else {
-                    ViewCompat.setBackgroundTintList(editText, ColorStateList.valueOf(PreferencesUtil.getTextColor(getContext())));
-                }
                 linearLayout.addView(editText);
                 editText.getLayoutParams().width = ViewGroup.LayoutParams.MATCH_PARENT;
                 ViewGroup.MarginLayoutParams margin = ((ViewGroup.MarginLayoutParams) editText.getLayoutParams());

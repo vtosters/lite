@@ -12,6 +12,7 @@ import static com.vtosters.lite.R.id.tab_messages;
 import static com.vtosters.lite.R.id.tab_news;
 import static ru.vtosters.lite.utils.Globals.getResources;
 
+import android.annotation.SuppressLint;
 import android.content.res.ColorStateList;
 import android.graphics.Color;
 import android.graphics.drawable.Drawable;
@@ -21,7 +22,10 @@ import android.view.MenuItem;
 import com.vk.apps.AppsFragment;
 import com.vk.core.drawable.RecoloredDrawable;
 import com.vk.core.fragments.FragmentImpl;
+import com.vk.core.ui.themes.MilkshakeHelper;
+import com.vk.core.util.StringUtils;
 import com.vk.navigation.right.RightMenu;
+import com.vtosters.lite.MenuCountersState;
 import com.vtosters.lite.ui.bottomnavigation.BottomNavigationMenuView;
 import com.vtosters.lite.ui.bottomnavigation.BottomNavigationView;
 
@@ -37,6 +41,8 @@ import java.util.Arrays;
 import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Map;
+
+import ru.vtosters.lite.utils.Preferences;
 
 public class DockBarInjector{
     private static final DockBarManager sManager = DockBarManager.getInstance();
@@ -153,6 +159,38 @@ public class DockBarInjector{
         for (MenuItem menuItem : menuItems) {
             menu.removeItem(menuItem.getItemId());
         }
+    }
+
+    public static void setCounter(int tabId, BottomNavigationView navigationView){
+        navigationView.a(tabId, counters(tabId, navigationView));
+    }
+
+    private static CharSequence counters(int tabId, BottomNavigationView navigationView){
+        if (!Preferences.dockcounter()) return null;
+
+        int val = 0;
+
+        val = MenuCountersState.g(); // friends ?????? menu_friends
+        val = MenuCountersState.j(); // messages
+        val = MenuCountersState.k() * (-1); // notifications
+        val = MenuCountersState.b(); // NewsfeedMarkDiscoverBadgeViewed
+        val = MenuCountersState.c(); // fave
+        val = MenuCountersState.a(); // games
+        val = MenuCountersState.h(); // groups
+        val = MenuCountersState.l(); // photos
+        val = MenuCountersState.m(); // support
+        val = MenuCountersState.n(); // videos
+        val = MenuCountersState.o(); // vk_pay
+        val = MenuCountersState.e(); // new friends
+        val = MenuCountersState.f(); // suggested friends
+
+        if (val > 0) {
+            return StringUtils.a(val);
+        }
+        if (val >= 0) {
+            return null;
+        }
+        return "";
     }
 
     public static JSONArray injectMenuJSON(JSONArray arr){
