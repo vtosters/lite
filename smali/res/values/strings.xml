@@ -3278,7 +3278,7 @@ the VK camera"</string>
     <string name="reply_to">Reply</string>
     <string name="report_content">Report</string>
     <string name="search_photo_content">Search photo</string>
-    <string name="copy_photo_url_content">Copy photo url</string>
+    <string name="copy_photo_url_content">Copy direct link</string>
     <string name="open_original_photo_content">Original</string>
     <string name="copied_to_clipboard">Copied to clipboard</string>
     <string name="report_msgs_confirm">Are you sure you want to mark as spam and delete %s?</string>
