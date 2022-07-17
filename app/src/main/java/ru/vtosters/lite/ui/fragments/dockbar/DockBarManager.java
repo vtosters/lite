@@ -150,10 +150,10 @@ public class DockBarManager {
             case "tab_feedback":
                 return DockBarTab.valuesOf(
                         "tab_feedback",
-                        milkshake() ? R.drawable.ic_users_outline_28 : R.drawable.ic_menu_notification_outline_28,
-                        milkshake() ? R.string.friends : R.string.notification,
+                        !milkshake() ? R.drawable.ic_users_outline_28 : R.drawable.ic_menu_notification_outline_28,
+                        !milkshake() ? R.string.friends : R.string.notification,
                         R.id.tab_feedback,
-                        milkshake() ? FriendsCatalogFragment.class : NotificationsContainerFragment.class);
+                        !milkshake() ? FriendsCatalogFragment.class : NotificationsContainerFragment.class);
             case "tab_profile":
                 return DockBarTab.valuesOf(
                         "tab_profile",
@@ -164,10 +164,10 @@ public class DockBarManager {
             case "tab_friends":
                 return DockBarTab.valuesOf(
                         "tab_friends",
-                        !milkshake() ? R.drawable.ic_users_outline_28 : R.drawable.ic_menu_notification_outline_28,
-                        !milkshake() ? R.string.friends : R.string.notification,
+                        milkshake() ? R.drawable.ic_users_outline_28 : R.drawable.ic_menu_notification_outline_28,
+                        milkshake() ? R.string.friends : R.string.notification,
                         R.id.menu_friends,
-                        !milkshake() ? FriendsFragment.class : NotificationsContainerFragment.class);
+                        milkshake() ? FriendsFragment.class : NotificationsContainerFragment.class);
             case "tab_groups":
                 return DockBarTab.valuesOf(
                         "tab_groups",
