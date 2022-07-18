@@ -1,10 +1,14 @@
 package ru.vtosters.lite.ui.fragments;
 
+import static ru.vtosters.lite.ui.PreferencesUtil.*;
 import static ru.vtosters.lite.utils.Globals.convertDpToPixel;
 import static ru.vtosters.lite.utils.Globals.edit;
 import static ru.vtosters.lite.utils.Globals.getIdentifier;
+import static ru.vtosters.lite.utils.Globals.sendToast;
 import static ru.vtosters.lite.utils.IconManager.icons;
 import static ru.vtosters.lite.utils.IconManager.iconsValues;
+import static ru.vtosters.lite.utils.IconManager.sIconsPlus;
+import static ru.vtosters.lite.utils.IconManager.sIconsPlusNames;
 import static ru.vtosters.lite.utils.IconManager.switchComponent;
 import static ru.vtosters.lite.utils.Preferences.getBoolValue;
 import static ru.vtosters.lite.utils.Preferences.hasVerification;
@@ -34,52 +38,6 @@ import com.vtosters.lite.general.fragments.MaterialPreferenceToolbarFragment;
 import ru.vtosters.lite.ui.PreferencesUtil;
 
 public class IconsFragment extends MaterialPreferenceToolbarFragment{
-    @SuppressLint("UseCompatLoadingForDrawables")
-    @Override
-    public void onCreate(Bundle bundle){
-        super.onCreate(bundle);
-
-        int vtosterXml = getIdentifier("empty", "xml");
-        this.addPreferencesFromResource(vtosterXml);
-
-        if (!hasVerification() && !getBoolValue("dialogrecomm", false)) {
-            PreferencesUtil.addPreference(this, "", "Доступны не все иконки!", "Для разблокировки необходимо сделать пожертование от 99р", "ic_about_outline_28", preference -> {
-                getContext().startActivity(new Intent("android.intent.action.VIEW").setData(Uri.parse("https://vtosters.app")));
-                return false;
-            });
-        }
-
-        PreferencesUtil.addPreferenceCategory(this, "Иконочки");
-
-        for (var i = 0; i < icons().size(); i++) {
-            if (icons().get(i) == null || iconsValues().get(i) == null) return;
-
-            String iconname = icons().get(i);
-            String icon = iconsValues().get(i);
-
-            String icondrawable;
-
-            if (icon.equals("vt")) {
-                icondrawable = "vt_launcher_round";
-            } else if (icon.contains("standard")) {
-                icondrawable = "ic_launcher_round";
-            } else if (icon.contains("vt_")) {
-                icondrawable = "vt_launcher_";
-            } else {
-                icondrawable = "ic_launcher_" + icon;
-            }
-
-            Drawable drawable = ResourcesCompat.getDrawable(getResources(), getIdentifier(icondrawable, "mipmap"), null);
-
-            PreferencesUtil.addPreferenceDrawable(this, icon, iconname, "", drawable, preference -> {
-
-//            PreferencesUtil.addPreference(this, icon, iconname, "", "ic_bug_outline_28", preference -> {
-                callSelectDialog(this.getContext(), icon);
-                return false;
-            });
-        }
-    }
-
     @SuppressLint("SetTextI18n")
     public static void callSelectDialog(Context ctx, String appicon){
         RadioGroup rg = new RadioGroup(ctx);
@@ -90,10 +48,7 @@ public class IconsFragment extends MaterialPreferenceToolbarFragment{
 
         rg.addView(rgDefault);
         rg.addView(rgVK);
-
-        if (hasVerification()) {
-            rg.addView(rgVKontakte);
-        }
+        rg.addView(rgVKontakte);
 
         rgDefault.setTextSize(TypedValue.COMPLEX_UNIT_PX, convertDpToPixel(14f));
         rgVK.setTextSize(TypedValue.COMPLEX_UNIT_PX, convertDpToPixel(14f));
@@ -148,5 +103,87 @@ public class IconsFragment extends MaterialPreferenceToolbarFragment{
 
         alert.getButton(DialogInterface.BUTTON_POSITIVE).setTextColor(getAccentColor());
         alert.getButton(DialogInterface.BUTTON_NEGATIVE).setTextColor(getAccentColor());
+    }
+
+    @SuppressLint("UseCompatLoadingForDrawables")
+    @Override
+    public void onCreate(Bundle bundle){
+        super.onCreate(bundle);
+
+        int vtosterXml = getIdentifier("empty", "xml");
+        this.addPreferencesFromResource(vtosterXml);
+
+        if (!hasVerification() && !getBoolValue("dialogrecomm", false)) {
+            addPreference(this, "", "Доступны не все функции!", "Для разблокировки необходимо сделать пожертование от 99р", "ic_about_outline_28", preference -> {
+                getContext().startActivity(new Intent("android.intent.action.VIEW").setData(Uri.parse("https://vtosters.app")));
+                return false;
+            });
+        }
+
+        addPreferenceCategory(this, "Иконки");
+
+        for (var i = 0; i < icons().size(); i++) {
+            if (icons().get(i) == null || iconsValues().get(i) == null) return;
+
+            String iconname = icons().get(i);
+            String icon = iconsValues().get(i);
+
+            String icondrawable;
+
+            if (icon.equals("vt")) {
+                icondrawable = "vt_launcher_round";
+            } else if (icon.contains("standard")) {
+                icondrawable = "ic_launcher_round";
+            } else if (icon.contains("vt_")) {
+                icondrawable = "vt_launcher_";
+            } else {
+                icondrawable = "ic_launcher_" + icon;
+            }
+
+            Drawable drawable = ResourcesCompat.getDrawable(getResources(), getIdentifier(icondrawable, "mipmap"), null);
+
+            if (drawable == null) {
+                drawable = ResourcesCompat.getDrawable(getResources(), getIdentifier("ic_bug_outline_28", "drawable"), null);
+            }
+
+            addPreferenceDrawable(this, icon, iconname, "", drawable, preference -> {
+                callSelectDialog(this.getContext(), icon);
+                return false;
+            });
+        }
+
+        if (!hasVerification()) {
+            addPreferenceCategory(this, "Недоступные иконки");
+
+            for (var i = 2; i < sIconsPlusNames.size(); i++) {
+                if (sIconsPlusNames.get(i) == null || sIconsPlus.get(i) == null) return;
+
+                String iconname = sIconsPlusNames.get(i);
+                String icon = sIconsPlus.get(i);
+
+                String icondrawable;
+
+                if (icon.equals("vt")) {
+                    icondrawable = "vt_launcher_round";
+                } else if (icon.contains("standard")) {
+                    icondrawable = "ic_launcher_round";
+                } else if (icon.contains("vt_")) {
+                    icondrawable = "vt_launcher_";
+                } else {
+                    icondrawable = "ic_launcher_" + icon;
+                }
+
+                Drawable drawable = ResourcesCompat.getDrawable(getResources(), getIdentifier(icondrawable, "mipmap"), null);
+
+                if (drawable == null) {
+                    drawable = ResourcesCompat.getDrawable(getResources(), getIdentifier("ic_bug_outline_28", "drawable"), null);
+                }
+
+                addPreferenceDrawable(this, icon, iconname, "", drawable, preference -> {
+                    sendToast("Иконка доступна только обладателям верификации");
+                    return false;
+                });
+            }
+        }
     }
 }
