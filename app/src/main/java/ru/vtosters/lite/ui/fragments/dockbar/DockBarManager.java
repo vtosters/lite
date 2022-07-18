@@ -73,8 +73,13 @@ public class DockBarManager {
     private void init() {
         if (vkme()) {
             mSelectedTabs.add(getTabByTag("tab_settings"));
-            if (vkme_notifs())
-                mSelectedTabs.add(getTabByTag("tab_feedback"));
+            if (vkme_notifs()) {
+                if (milkshake()) {
+                    mSelectedTabs.add(getTabByTag("tab_feedback"));
+                } else {
+                    mSelectedTabs.add(getTabByTag("tab_friends"));
+                }
+            }
             mSelectedTabs.add(getTabByTag("tab_messages"));
             mSelectedTabs.add(getTabByTag("tab_profile"));
             return;
