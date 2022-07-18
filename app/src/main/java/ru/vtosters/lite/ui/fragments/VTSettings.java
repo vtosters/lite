@@ -75,7 +75,7 @@ import ru.vtosters.lite.utils.SSFS;
 import ru.vtosters.lite.utils.VKUIwrapper;
 
 public class VTSettings extends MaterialPreferenceToolbarFragment{
-    public static int hideitems = 0;
+    public int hideitems = 0;
 
     public static String getValAsString(String stringid, Boolean value){
         if (disableSettingsSumms()) return null;
@@ -473,6 +473,8 @@ public class VTSettings extends MaterialPreferenceToolbarFragment{
                                 edit().putBoolean("superapp_" + item.id, item.checked).commit();
                                 if (item.checked) {
                                     hideitems++;
+                                    edit().putInt("superappitems", hideitems).commit();
+                                } else if (hideitems == 0) {
                                     edit().putInt("superappitems", hideitems).commit();
                                 }
                             }
