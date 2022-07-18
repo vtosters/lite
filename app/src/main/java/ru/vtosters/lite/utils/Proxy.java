@@ -1,8 +1,18 @@
 package ru.vtosters.lite.utils;
 
 import static java.lang.System.clearProperty;
-import static java.lang.System.getProperties;
+import static ru.vtosters.lite.utils.Globals.getContext;
 import static ru.vtosters.lite.utils.Globals.getPrefsValue;
+
+import android.annotation.SuppressLint;
+import android.content.Context;
+import android.content.Intent;
+import android.util.ArrayMap;
+import android.util.Log;
+
+import java.lang.reflect.Field;
+import java.lang.reflect.Method;
+import java.util.Properties;
 
 public class Proxy{
     public static String getApi(){
@@ -19,62 +29,124 @@ public class Proxy{
         return getPrefsValue("proxy").equals("zaborona");
     }
 
-    public static void setProxy(){
-        var type = getPrefsValue("proxy");
-        var properties = getProperties();
+    private static void setProxyRefl() {
+        Log.d("Proxy", "Setting proxy...");
+        try {
+            var context = getContext().getApplicationContext();
+            Class<?> applicationClass = Class.forName("android.app.Application");
+            @SuppressLint("DiscouragedPrivateApi") @SuppressWarnings("JavaReflectionMemberAccess")
+            Field mLoadedApkField = applicationClass.getDeclaredField("mLoadedApk");
+            mLoadedApkField.setAccessible(true);
+            Object mLoadedApkObject = mLoadedApkField.get(context);
 
-        switch(type) {
+            @SuppressLint("PrivateApi")
+            Class<?> loadedApkClass = Class.forName("android.app.LoadedApk");
+            @SuppressLint("DiscouragedPrivateApi") Field mReceiversField = loadedApkClass.getDeclaredField("mReceivers");
+            mReceiversField.setAccessible(true);
+            ArrayMap<?, ?> receivers = (ArrayMap<?, ?>) mReceiversField.get(mLoadedApkObject);
+            for (Object receiverMap : receivers.values()) {
+                for (Object receiver : ((ArrayMap<?, ?>) receiverMap).keySet()) {
+                    Class<?> receiverClass = receiver.getClass();
+
+                    if (receiverClass.getName().contains("ProxyChangeListener")) {
+                        Method onReceiveMethod = receiverClass.getDeclaredMethod("onReceive", Context.class, Intent.class);
+                        Intent intent = new Intent(android.net.Proxy.PROXY_CHANGE_ACTION);
+                        onReceiveMethod.invoke(receiver, context, intent);
+                    } else {
+                        for (Field field : receiverClass.getDeclaredFields()) {
+                            if (field.getType().getName().contains("ProxyChangeListener")) {
+                                Method onReceiveMethod = receiverClass.getDeclaredMethod("onReceive", Context.class, Intent.class);
+                                Intent intent = new Intent(android.net.Proxy.PROXY_CHANGE_ACTION);
+                                onReceiveMethod.invoke(receiver, context, intent);
+                            }
+                        }
+                    }
+                }
+            }
+
+            Log.d("Proxy", "Setting proxy successful!");
+        } catch (Exception e) {
+            Log.d("Proxy", "Setting proxy failed!");
+        }
+    }
+
+    public static void setProxy() {
+        switch (getPrefsValue("proxy")) {
             case "zaborona":
-                properties.setProperty("socksProxyHost", "socks.zaboronahelp.pp.ua");
-                properties.setProperty("socksProxyPort", "1488");
-                resetProxy(type);
+                System.setProperty("socksProxyHost", "socks.zaboronahelp.pp.ua");
+                System.setProperty("socksProxyPort", "1488");
+                setProxyRefl();
+                resetProxySocks();
                 break;
             case "socks":
-                properties.setProperty("socksProxyHost", proxyHostSocks());
-                properties.setProperty("socksProxyPort", proxyPortSocks());
-                resetProxy(type);
+                System.setProperty("socksProxyHost", proxyHostSocks());
+                System.setProperty("socksProxyPort", proxyPortSocks());
+                setProxyRefl();
+                resetProxySocks();
                 break;
             case "http":
-                properties.setProperty("http.proxyHost", proxyHostHTTP());
-                properties.setProperty("http.proxyPort", proxyPortHTTP());
-                properties.setProperty("http.proxyUser", proxyUserHTTP());
-                properties.setProperty("http.proxyPassword", proxyPassHTTP());
-                resetProxy(type);
+                System.setProperty("http.proxyHost", proxyHostHTTP());
+                System.setProperty("http.proxyPort", proxyPortHTTP());
+                System.setProperty("http.proxyUser", proxyUserHTTP());
+                System.setProperty("http.proxyPassword", proxyPassHTTP());
+                setProxyRefl();
+                resetProxyHttp();
                 break;
             case "https":
-                properties.setProperty("https.proxyHost", proxyHostHTTPS());
-                properties.setProperty("https.proxyPort", proxyPortHTTPS());
-                properties.setProperty("https.proxyUser", proxyUserHTTPS());
-                properties.setProperty("https.proxyPassword", proxyPassHTTPS());
-                resetProxy(type);
+                System.setProperty("https.proxyHost", proxyHostHTTPS());
+                System.setProperty("https.proxyPort", proxyPortHTTPS());
+                System.setProperty("https.proxyUser", proxyUserHTTPS());
+                System.setProperty("https.proxyPassword", proxyPassHTTPS());
+                setProxyRefl();
+                resetProxyHttps();
                 break;
             default:
+                resetProxy();
                 break;
         }
     }
 
-    public static void resetProxy(String except){
-        if (!except.equals("https")) {
-            clearProperty("https.proxyHost");
-            clearProperty("https.proxyPort");
-            clearProperty("https.proxyUser");
-            clearProperty("https.proxyPassword");
-        }
-
-        if (!except.equals("http")) {
-            clearProperty("http.proxyHost");
-            clearProperty("http.proxyPort");
-            clearProperty("http.proxyUser");
-            clearProperty("http.proxyPassword");
-        }
-
-        if (except.equals("socks") || except.equals("zaborona") || except.isEmpty()) {
-            return;
-        }
-
+    public static void resetProxy() {
+        clearProperty("https.proxyHost");
+        clearProperty("https.proxyPort");
+        clearProperty("https.proxyUser");
+        clearProperty("https.proxyPassword");
+        clearProperty("http.proxyHost");
+        clearProperty("http.proxyPort");
+        clearProperty("http.proxyUser");
+        clearProperty("http.proxyPassword");
         clearProperty("socksProxyHost");
         clearProperty("socksPortHost");
-    } // Reset proxy
+    } // Reset all proxies
+
+    public static void resetProxySocks() {
+        clearProperty("https.proxyHost");
+        clearProperty("https.proxyPort");
+        clearProperty("https.proxyUser");
+        clearProperty("https.proxyPassword");
+        clearProperty("http.proxyHost");
+        clearProperty("http.proxyPort");
+        clearProperty("http.proxyUser");
+        clearProperty("http.proxyPassword");
+    } // Reset all except socks
+
+    public static void resetProxyHttp() {
+        clearProperty("https.proxyHost");
+        clearProperty("https.proxyPort");
+        clearProperty("https.proxyUser");
+        clearProperty("https.proxyPassword");
+        clearProperty("socksProxyHost");
+        clearProperty("socksPortHost");
+    } // Reset all except http
+
+    public static void resetProxyHttps() {
+        clearProperty("http.proxyHost");
+        clearProperty("http.proxyPort");
+        clearProperty("http.proxyUser");
+        clearProperty("http.proxyPassword");
+        clearProperty("socksProxyHost");
+        clearProperty("socksPortHost");
+    } // Reset all except https
 
     private static String proxyHostHTTP(){
         var string = getPrefsValue("proxyHostHTTP");

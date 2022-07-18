@@ -37,11 +37,11 @@ public class IconManager {
 
     // available icons list for verified users
     public static List<String> sIconsPlus = Arrays.asList(
-            "standard", "vt", "navy", "tiger", "spring", "sea", "sakura", "party", "paint", "flamingo"
+            "standard", "vt", "navy", "tiger", "spring", "sea", "sakura", "party", "paint", "flamingo", "old"
     );
 
     public static List<String> sIconsPlusNames = Arrays.asList(
-            "VK", "VTLite", "Navy", "Tiger", "Spring", "Sea", "Sakura", "Party", "Paint", "Flamingo"
+            "VK", "VTLite", "Navy", "Tiger", "Spring", "Sea", "Sakura", "Party", "Paint", "Flamingo", "Old Logo"
     );
 
     // available labels list for verified users
@@ -54,11 +54,11 @@ public class IconManager {
     );
 
     public static List<String> icons() {
-        return hasVerification() && isValidSignature() && Build.VERSION.SDK_INT >= 26 ? sIconsPlusNames : sIconsNames; // delete later sdk check
+        return hasVerification() && isValidSignature() ? sIconsPlusNames : sIconsNames; // delete later sdk check
     }
 
     public static List<String> iconsValues() {
-        return hasVerification() && isValidSignature() && Build.VERSION.SDK_INT >= 26 ? sIconsPlus : sIcons; // delete later sdk check
+        return hasVerification() && isValidSignature() ? sIconsPlus : sIcons; // delete later sdk check
     }
 
     public static void switchComponent(String icon, String appName, String oldIcon, String oldAppName) {
