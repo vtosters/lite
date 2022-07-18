@@ -150,7 +150,7 @@ public class IconsFragment extends MaterialPreferenceToolbarFragment{
             });
         }
 
-        if (!hasVerification()) {
+        if (!hasVerification() && !getBoolValue("dialogrecomm", false)) {
             addPreferenceCategory(this, "Недоступные иконки");
 
             for (var i = 2; i < sIconsPlusNames.size(); i++) {
@@ -165,8 +165,6 @@ public class IconsFragment extends MaterialPreferenceToolbarFragment{
                     icondrawable = "vt_launcher_round";
                 } else if (icon.contains("standard")) {
                     icondrawable = "ic_launcher_round";
-                } else if (icon.contains("vt_")) {
-                    icondrawable = "vt_launcher_";
                 } else {
                     icondrawable = "ic_launcher_" + icon;
                 }
