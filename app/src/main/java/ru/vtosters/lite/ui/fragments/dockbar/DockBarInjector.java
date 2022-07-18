@@ -1,10 +1,16 @@
 package ru.vtosters.lite.ui.fragments.dockbar;
 
+import static com.vtosters.lite.R.id.groups;
+import static com.vtosters.lite.R.id.menu_fave;
 import static com.vtosters.lite.R.id.menu_feedback;
 import static com.vtosters.lite.R.id.menu_friends;
+import static com.vtosters.lite.R.id.menu_games;
+import static com.vtosters.lite.R.id.menu_groups;
 import static com.vtosters.lite.R.id.menu_messages;
 import static com.vtosters.lite.R.id.menu_newsfeed;
+import static com.vtosters.lite.R.id.menu_photos;
 import static com.vtosters.lite.R.id.menu_search;
+import static com.vtosters.lite.R.id.menu_videos;
 import static com.vtosters.lite.R.id.menu_vk_pay;
 import static com.vtosters.lite.R.id.tab_discover;
 import static com.vtosters.lite.R.id.tab_feedback;
@@ -13,6 +19,7 @@ import static com.vtosters.lite.R.id.tab_messages;
 import static com.vtosters.lite.R.id.tab_news;
 import static ru.vtosters.lite.utils.Globals.getResources;
 
+import android.annotation.SuppressLint;
 import android.content.res.ColorStateList;
 import android.graphics.Color;
 import android.graphics.drawable.Drawable;
@@ -161,16 +168,32 @@ public class DockBarInjector{
     }
 
     public static void setCounter(int tabId, BottomNavigationView navigationView){
-        navigationView.a(tabId, counters(tabId, navigationView));
+        navigationView.a(tabId, counters(tabId));
     }
 
-    private static CharSequence counters(int tabId, BottomNavigationView navigationView){
+    @SuppressLint("NonConstantResourceId")
+    private static CharSequence counters(int tabId){
         if (!Preferences.dockcounter()) return null;
 
         int val = 0;
         switch (tabId) {
             case tab_messages:
                 val = MenuCountersState.j();
+                break;
+            case menu_groups:
+                val = MenuCountersState.h();
+                break;
+            case menu_fave:
+                val = MenuCountersState.c();
+                break;
+            case menu_games:
+                val = MenuCountersState.a();
+                break;
+            case menu_photos:
+                val = MenuCountersState.l();
+                break;
+            case menu_videos:
+                val = MenuCountersState.n();
                 break;
             case tab_feedback:
                 if (Preferences.milkshake())
