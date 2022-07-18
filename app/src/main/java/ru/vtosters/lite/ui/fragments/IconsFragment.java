@@ -134,8 +134,6 @@ public class IconsFragment extends MaterialPreferenceToolbarFragment{
                 icondrawable = "vt_launcher_round";
             } else if (icon.contains("standard")) {
                 icondrawable = "ic_launcher_round";
-            } else if (icon.contains("vt_")) {
-                icondrawable = "vt_launcher_";
             } else {
                 icondrawable = "ic_launcher_" + icon;
             }
