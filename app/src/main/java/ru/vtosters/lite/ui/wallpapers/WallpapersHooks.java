@@ -7,6 +7,7 @@ import static ru.vtosters.lite.ui.wallpapers.ImageFilters.getMonochrome;
 import static ru.vtosters.lite.ui.wallpapers.ImageFilters.getMosaic;
 import static ru.vtosters.lite.utils.Globals.getContext;
 import static ru.vtosters.lite.utils.Globals.getPreferences;
+import static ru.vtosters.lite.utils.Preferences.hasVerification;
 
 import android.graphics.drawable.Drawable;
 import android.view.View;
@@ -55,11 +56,13 @@ public class WallpapersHooks{
                 mWallpaper = getMosaic(mWallpaper);
             }
 
-            if (getPreferences().getBoolean("msg_monochrome", false)) {
-                mWallpaper = getMonochrome(mWallpaper);
-            }
+            if (hasVerification()) {
+                if (getPreferences().getBoolean("msg_monochrome", false)) {
+                    mWallpaper = getMonochrome(mWallpaper);
+                }
 
-            mWallpaper = getFilteredDrawable(mWallpaper);
+                mWallpaper = getFilteredDrawable(mWallpaper);
+            }
 
             mUpdateWallpaperRequested = false;
         }
