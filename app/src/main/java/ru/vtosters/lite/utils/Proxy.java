@@ -23,28 +23,30 @@ public class Proxy{
         var type = getPrefsValue("proxy");
         var properties = getProperties();
 
-        resetProxy(type);
-
         switch(type) {
             case "zaborona":
                 properties.setProperty("socksProxyHost", "socks.zaboronahelp.pp.ua");
                 properties.setProperty("socksProxyPort", "1488");
+                resetProxy(type);
                 break;
             case "socks":
                 properties.setProperty("socksProxyHost", proxyHostSocks());
                 properties.setProperty("socksProxyPort", proxyPortSocks());
+                resetProxy(type);
                 break;
             case "http":
                 properties.setProperty("http.proxyHost", proxyHostHTTP());
                 properties.setProperty("http.proxyPort", proxyPortHTTP());
                 properties.setProperty("http.proxyUser", proxyUserHTTP());
                 properties.setProperty("http.proxyPassword", proxyPassHTTP());
+                resetProxy(type);
                 break;
             case "https":
                 properties.setProperty("https.proxyHost", proxyHostHTTPS());
                 properties.setProperty("https.proxyPort", proxyPortHTTPS());
                 properties.setProperty("https.proxyUser", proxyUserHTTPS());
                 properties.setProperty("https.proxyPassword", proxyPassHTTPS());
+                resetProxy(type);
                 break;
             default:
                 break;
@@ -66,7 +68,7 @@ public class Proxy{
             clearProperty("http.proxyPassword");
         }
 
-        if (except.equals("socks") || except.equals("zaborona")) {
+        if (except.equals("socks") || except.equals("zaborona") || except.isEmpty()) {
             return;
         }
 
