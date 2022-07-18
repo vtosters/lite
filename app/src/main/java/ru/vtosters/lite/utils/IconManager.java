@@ -37,11 +37,11 @@ public class IconManager {
 
     // available icons list for verified users
     public static List<String> sIconsPlus = Arrays.asList(
-            "standard", "vt", "navy", "tiger", "spring", "sea", "sakura", "party", "paint", "flamingo", "old"
+            "standard", "vt", "navy", "tiger", "spring", "sea", "sakura", "party", "paint", "flamingo", "old", "vt_navy", "vt_tiger", "vt_spring", "vt_sea", "vt_sakura", "vt_party", "vt_paint", "vt_flamingo"
     );
 
     public static List<String> sIconsPlusNames = Arrays.asList(
-            "VK", "VTLite", "Navy", "Tiger", "Spring", "Sea", "Sakura", "Party", "Paint", "Flamingo", "Old Logo"
+            "VK", "VTLite", "Navy", "Tiger", "Spring", "Sea", "Sakura", "Party", "Paint", "Flamingo", "Old Logo", "Navy alter", "Tiger alter", "Spring alter", "Sea alter", "Sakura alter", "Party alter", "Paint alter", "Flamingo alter"
     );
 
     // available labels list for verified users
