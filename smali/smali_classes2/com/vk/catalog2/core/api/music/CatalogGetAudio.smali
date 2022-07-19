@@ -81,6 +81,10 @@
 
     move-result-object p1
 
+    invoke-static {p1}, Lru/vtosters/lite/hooks/JsonInjectors;->music(Lorg/json/JSONObject;)Lorg/json/JSONObject;
+
+    move-result-object p1
+
     const-string v1, "r.getJSONObject(ServerKeys.RESPONSE)"
 
     invoke-static {p1, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
