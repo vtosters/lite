@@ -594,6 +594,8 @@
 .method public static final a(Landroid/app/Application;)V
     .locals 5
 
+    return-void
+
     .line 51
     new-instance v0, Lcom/vk/utils/AppUtils$e;
 
