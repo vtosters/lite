@@ -51,8 +51,7 @@ public class DNRModule{
     }
 
     public static void hookRead(Dialog dialog){
-        makeRequest("https://" + getApi() + "/method/messages.markAsRead?start_message_id=" + dialog.F1() + "&peer_id=" + dialog.getId() + "&v=5.91&access_token=" + getUserToken(), response -> {
-            ToastUtils.a("Чат помечен как прочитанный!");
+        makeRequest("https://" + getApi() + "/method/messages.markAsRead?start_message_id=" + dialog.F1() + "&peer_id=" + dialog.getId() + "&v=5.119&access_token=" + getUserToken(), response -> {
         });
     }
 
