@@ -6,6 +6,7 @@ import static ru.vtosters.lite.f0x1d.VTVerifications.isVerified;
 import static ru.vtosters.lite.hooks.DateHook.getLocale;
 import static ru.vtosters.lite.utils.Base64Utils.decode;
 import static ru.vtosters.lite.utils.Globals.getContext;
+import static ru.vtosters.lite.utils.Globals.getUserId;
 import static ru.vtosters.lite.utils.Globals.getUserToken;
 import static ru.vtosters.lite.utils.Preferences.dev;
 import static ru.vtosters.lite.utils.Preferences.friendsblock;
@@ -14,6 +15,7 @@ import static ru.vtosters.lite.utils.Preferences.hasVerification;
 
 import android.util.Log;
 
+import com.vk.core.network.Network;
 import com.vk.core.util.DeviceIdProvider;
 import com.vtosters.lite.fragments.messages.chat.vc.MsgSendVc;
 
@@ -28,6 +30,7 @@ import java.util.Random;
 
 import okhttp3.Call;
 import okhttp3.Callback;
+import okhttp3.Headers;
 import okhttp3.OkHttpClient;
 import okhttp3.Request;
 import okhttp3.Response;
@@ -116,33 +119,43 @@ public class JsonInjectors{
         return json.putOpt("items", newItems);
     }
 
-    public static JSONObject music(JSONObject json) throws JSONException{
-        var oldItems = json.optJSONObject("catalog").optJSONArray("sections");
-        var catalog = new JSONObject();
-        var newItems = new JSONArray();
-
-        String albumurl = "https://vk.com/audio?section=albums";
+    public static JSONObject musiclink(JSONObject json){
+        var oldItems = json.optJSONArray("links");
 
         if (oldItems != null) {
-            for (int i = 0; i < oldItems.length(); i++) {
-                var item = oldItems.optJSONObject(i);
-                Log.d("VTLMusic", "Section: " + item.optString("title"));
+            if (oldItems.optJSONObject(0).optString("url").contains("?section=recent")) {
+                json.remove("links");
             }
+        }
 
-            catalog = fetchCatalogId(albumurl);
-            if (catalog != null) {
-                var catalogarr = catalog.optJSONObject("catalog").optJSONArray("sections").optJSONObject(0);
+        return json;
+    }
+
+    public static JSONObject music(JSONObject json) throws JSONException{
+        var oldItems = json.optJSONObject("catalog").optJSONArray("sections");
+
+        if (oldItems != null) {
+            var albums = fetchCatalogId("https://vk.com/audio?section=albums");
+            if (albums != null) {
+                var catalogarr = albums.optJSONObject("catalog").optJSONArray("sections").optJSONObject(0);
 
                 var title = catalogarr.optString("title");
                 var id = catalogarr.optString("id");
                 var url = catalogarr.optString("url");
 
-                Log.d("VTLMusic", "Section Playlist: " + catalogarr.optString("title"));
-
                 oldItems.put(new JSONObject().put("id", id).put("title", title).put("url", url));
             }
 
-            Log.d("VTLMusic", oldItems.length() + " sections");
+            var recent = fetchCatalogId("https://vk.com/audio?section=recent");
+            if (albums != null) {
+                var catalogarr = recent.optJSONObject("catalog").optJSONArray("sections").optJSONObject(0);
+
+                var title = catalogarr.optString("title");
+                var id = catalogarr.optString("id");
+                var url = catalogarr.optString("url");
+
+                oldItems.put(new JSONObject().put("id", id).put("title", title).put("url", url));
+            }
         }
 
         return json;
@@ -150,32 +163,29 @@ public class JsonInjectors{
 
 
     public static JSONObject fetchCatalogId(String section){
-        OkHttpClient client = new OkHttpClient();
-        final JSONObject[] payload = {null};
-
         if (section == null) return null;
 
         var request = new Request.a()
-                .b("https://api.vk.com/method/catalog.getAudio?v=5.119&https=1&need_blocks=1" + "&lang=" + getLocale() + "&device_id=" + DeviceIdProvider.d(getContext()) + "&url=" + section + "&access_token=" + getUserToken())
-                .a();
-        client.a(request).a(new Callback() {
-            @Override
-            public void a(Call call, IOException e) {
-                Log.d("VTLMusic", e+"");
-            }
+                .b("https://api.vk.com/method/catalog.getAudio"
+                        + "?v=5.119"
+                        + "&https=1"
+                        + "&need_blocks=1"
+                        + "&lang="
+                        + getLocale()
+                        + "&device_id="
+                        + DeviceIdProvider.d(getContext())
+                        + "&url="
+                        + section
+                        + "&access_token="
+                        + getUserToken())
+                .a(Headers.a("User-Agent", Network.l.c().a(), "Content-Type", "application/x-www-form-urlencoded; charset=utf-8")).a();
+        try {
+            return new JSONObject(mClient.a(request).execute().a().g()).getJSONObject("response");
+        } catch (JSONException | IOException e) {
+            Log.d("VTLMusic", "Error: " + e.getMessage());
+        }
 
-            @Override
-            public void a(Call call, Response response) throws IOException {
-                try {
-                    payload[0] = new JSONObject(response.a().g());
-                    Log.d("VTLMusic", payload[0].length() + " sections album");
-                } catch (JSONException e) {
-                    e.printStackTrace();
-                }
-            }
-        });
-
-        return payload[0];
+        return null;
     }
 
     public static JSONObject friends(JSONObject json) throws JSONException{
