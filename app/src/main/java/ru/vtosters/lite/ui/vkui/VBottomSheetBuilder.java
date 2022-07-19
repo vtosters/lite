@@ -12,6 +12,8 @@ public class VBottomSheetBuilder{
 
         builder.setView(content.view);
 
+        builder.setTitle(content.title);
+
         builder.setPositiveButton(content.button.title, () -> {
             // Button OnClick
             new Handler(Looper.getMainLooper()).post(content.button.action);
@@ -23,13 +25,11 @@ public class VBottomSheetBuilder{
     public static class VBSContent{
         public String title;
         @Nullable
-        public String subtitle;
         public View view;
         public VBSButton button;
 
-        public VBSContent(String title, @Nullable String subtitle, View view, VBSButton button){
+        public VBSContent(String title, @Nullable View view, VBSButton button){
             this.title = title;
-            this.subtitle = subtitle;
             this.view = view;
             this.button = button;
         }

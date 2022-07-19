@@ -30,7 +30,8 @@ public class OTADialog implements OTAHelper.OTAListener{
         mActivity.runOnUiThread(() -> {
             // Toast.makeText(mActivity, "Обновления найдены", Toast.LENGTH_SHORT).show();
             new ModalBottomSheetWrapper(mActivity)
-                    .setUpdateInfoView(mHelper.getNewVersionName(), mHelper.getUpdateDescription())
+                    .setTitle(getString("newversion") + " " + mHelper.getNewVersionName())
+                    .setUpdateInfoView(mHelper.getUpdateDescription())
                     .setPositiveButton(getString("updateanddownload"), () -> {
                         OTADownloader.downloadBuild(mHelper.getDownloadUrl());
                     })

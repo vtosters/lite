@@ -1,8 +1,10 @@
 package ru.vtosters.lite.ui.vkui;
 
+import static ru.vtosters.lite.utils.Globals.*;
 import static ru.vtosters.lite.utils.Globals.getString;
 import static ru.vtosters.lite.utils.Themes.getTextAttr;
 
+import android.annotation.SuppressLint;
 import android.app.Activity;
 import android.graphics.Typeface;
 import android.view.View;
@@ -21,42 +23,25 @@ public class ModalBottomSheetWrapper{
     }
 
     public ModalBottomSheetWrapper setTitle(String title){
-        builder.b(title);
+        builder.d(title);
         return this;
     }
 
-    public ModalBottomSheetWrapper setUpdateInfoView(String version, String changelog){
-        var context = Globals.getContext();
+    @SuppressLint("SetTextI18n")
+    public ModalBottomSheetWrapper setUpdateInfoView(String changelog){
+        var context = getContext();
         var container = new LinearLayout(context);
-        var title = new TextView(context);
         var changelogView = new TextView(context);
 
         container.setOrientation(LinearLayout.VERTICAL);
 
-        title.setText(getString("newversion") + " " + version);
-        title.setTypeface(title.getTypeface(), Typeface.BOLD);
-        title.setSingleLine(true);
-        title.setTextAlignment(View.TEXT_ALIGNMENT_CENTER);
-        title.setTextColor(getTextAttr());
-        title.setTextSize(24.0f);
-        container.addView(title, new LinearLayout.LayoutParams(-1, -2));
-
-        changelogView.setPadding(0, Globals.convertDpToPixel(8), 0, 0);
+        changelogView.setPadding(0, convertDpToPixel(8), 0, 0);
         changelogView.setText(getString("changelog") + ": \n" + changelog);
         changelogView.setTextColor(getTextAttr());
         container.addView(changelogView, new LinearLayout.LayoutParams(-1, -2));
 
         builder.a(container);
 
-        return this;
-    }
-
-    // try to call a true function and you will understand my pain
-    public ModalBottomSheetWrapper setMessage(
-            String text
-    ){
-        builder.a(text, listener -> {
-        });
         return this;
     }
 
@@ -73,11 +58,6 @@ public class ModalBottomSheetWrapper{
             Runnable callback
     ){
         builder.a(text, kostil -> callback.run());
-        return this;
-    }
-
-    public ModalBottomSheetWrapper setSubtitle(String text){
-        builder.b((CharSequence) text);
         return this;
     }
 
