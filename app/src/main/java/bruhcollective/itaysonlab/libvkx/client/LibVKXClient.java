@@ -48,8 +48,6 @@ public class LibVKXClient{
             return false;
         }
 
-        Log.d("LibVKXClient", "playing: " + musicTrack.toString());
-
         LibVKXClientImpl.LibVKXAction action = iLibVkxService -> LibVKXClient.lambdaplay(list, musicTrack, iLibVkxService);
 
         return getInstance().runOnService(action);
@@ -64,7 +62,7 @@ public class LibVKXClient{
         if (indexOf == -1) {
             indexOf = 0;
         }
-        Log.d("LibVKXClient", "tracks: " + ids.toString());
+
         try {
             iLibVkxService.play(ids, indexOf, "");
         } catch (RemoteException e) {
