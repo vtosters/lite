@@ -135,6 +135,17 @@ public class JsonInjectors{
         var oldItems = json.optJSONObject("catalog").optJSONArray("sections");
 
         if (oldItems != null) {
+            var playlists = fetchCatalogId("https://vk.com/audio?section=my_playlists");
+            if (playlists != null) {
+                var catalogarr = playlists.optJSONObject("catalog").optJSONArray("sections").optJSONObject(0);
+
+                var title = catalogarr.optString("title");
+                var id = catalogarr.optString("id");
+                var url = catalogarr.optString("url");
+
+                oldItems.put(new JSONObject().put("id", id).put("title", title).put("url", url));
+            }
+
             var albums = fetchCatalogId("https://vk.com/audio?section=albums");
             if (albums != null) {
                 var catalogarr = albums.optJSONObject("catalog").optJSONArray("sections").optJSONObject(0);
@@ -147,7 +158,7 @@ public class JsonInjectors{
             }
 
             var recent = fetchCatalogId("https://vk.com/audio?section=recent");
-            if (albums != null) {
+            if (recent != null) {
                 var catalogarr = recent.optJSONObject("catalog").optJSONArray("sections").optJSONObject(0);
 
                 var title = catalogarr.optString("title");
