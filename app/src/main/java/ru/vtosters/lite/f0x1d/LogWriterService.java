@@ -18,6 +18,9 @@ import java.io.File;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.nio.charset.StandardCharsets;
+import java.text.SimpleDateFormat;
+import java.util.Date;
+import java.util.Locale;
 
 public class LogWriterService extends Service{
     public LogWriterService(){
@@ -28,7 +31,9 @@ public class LogWriterService extends Service{
         super.onStartCommand(intent, flags, startId);
 
         Log.d("LogWriterService", "The service has been started");
-        var file = new File(Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_DOWNLOADS) + "/VTL_log.txt");
+        SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd.HH-mm-ss", Locale.getDefault());
+
+        var file = new File(Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_DOWNLOADS) + "/VTL_log_" + dateFormat.format(new Date()) + ".txt");
         try {
             var exists = file.createNewFile();
 
