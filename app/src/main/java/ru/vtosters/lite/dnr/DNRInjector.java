@@ -6,6 +6,7 @@ import static ru.vtosters.lite.dnr.DNRModule.isDnrEnabledFor;
 import static ru.vtosters.lite.dnr.DNRModule.isDntEnabledFor;
 import static ru.vtosters.lite.utils.Globals.getIdentifier;
 
+import com.vk.core.util.ToastUtils;
 import com.vk.im.engine.models.dialogs.Dialog;
 import com.vk.im.ui.components.common.DialogAction;
 
@@ -39,6 +40,10 @@ public class DNRInjector{
 
     public static boolean onClick(Dialog dialog, DialogAction action){
         var id = dialog.getId();
+
+        if (action == DialogAction.valueOf("MARK_AS_READ")) {
+            DNRModule.hookRead(dialog);
+        }
 
         if (action == DialogAction.valueOf("DNR_ON")) {
             setDnr(dialog, true);
