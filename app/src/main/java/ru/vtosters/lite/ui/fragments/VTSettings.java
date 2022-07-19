@@ -462,8 +462,7 @@ public class VTSettings extends MaterialPreferenceToolbarFragment{
         );
 
         VBottomSheetBuilder.show(getActivity(), new VBSContent(
-                null,
-                null,
+                "Выберите пункты для скрытия",
                 buildListOf(getActivity(), list),
 
                 new VBSContent.VBSButton(
