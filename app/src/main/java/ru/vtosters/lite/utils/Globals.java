@@ -29,6 +29,8 @@ import android.graphics.RectF;
 import android.graphics.drawable.BitmapDrawable;
 import android.graphics.drawable.Drawable;
 import android.net.ConnectivityManager;
+import android.net.Network;
+import android.net.NetworkCapabilities;
 import android.os.Build;
 import android.os.Bundle;
 import android.os.Handler;
@@ -39,6 +41,7 @@ import android.util.Log;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
+import androidx.annotation.RequiresApi;
 import androidx.annotation.StringRes;
 
 import com.vk.dto.user.UserProfile;
@@ -361,9 +364,22 @@ public class Globals{
 
         var isConnectionSucks = false;
         var cm = (ConnectivityManager) getContext().getSystemService(Context.CONNECTIVITY_SERVICE);
-        var nc = cm.getNetworkCapabilities(cm.getActiveNetwork());
+
+        if (cm == null) return false;
+
+        NetworkCapabilities nc;
+        Network[] networks = cm.getAllNetworks();
+
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
+            nc = cm.getNetworkCapabilities(cm.getActiveNetwork());
+        } else {
+            nc = cm.getNetworkCapabilities(networks[0]);
+        }
+
         var downSpeed = nc.getLinkDownstreamBandwidthKbps();
         var info = cm.getActiveNetworkInfo();
+
+        if (info == null) return false;
 
         if (info.getType() == ConnectivityManager.TYPE_MOBILE) {
             switch(info.getSubtype()) {
