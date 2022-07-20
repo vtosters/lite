@@ -1,4 +1,4 @@
-package ru.vtosters.lite.ui.components;
+package ru.vtosters.lite.ui.adapters;
 
 import static ru.vtosters.lite.utils.Themes.getTextAttr;
 
@@ -12,7 +12,6 @@ import android.widget.ArrayAdapter;
 import android.widget.CheckedTextView;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
-import android.widget.ListView;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;

@@ -1,4 +1,4 @@
-package ru.vtosters.lite.ui.fragments.dockbar;
+package ru.vtosters.lite.ui.fragments;
 
 import static ru.vtosters.lite.utils.Globals.convertDpToPixel;
 import static ru.vtosters.lite.utils.Globals.getIdentifier;
@@ -13,25 +13,24 @@ import android.widget.FrameLayout;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
+import androidx.annotation.CallSuper;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.recyclerview.widget.ItemTouchHelper;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import ru.vtosters.lite.ui.fragments.BaseToolbarFragment;
+import ru.vtosters.lite.ui.adapters.CategorizedAdapter;
+import ru.vtosters.lite.ui.components.ItemMovingCallback;
+import ru.vtosters.lite.ui.components.SuperAppEditorManager;
 import ru.vtosters.lite.utils.Globals;
 
-public class DockBarEditorFragment extends BaseToolbarFragment {
+public class SuperAppEditorFragment extends BaseToolbarFragment {
 
-    private RecyclerView mRecycler;
-    private DockBarEditorAdapter mAdapter;
-    private ItemTouchHelperCallback mCallback;
-    private ItemTouchHelper mItemTouchHelper;
-
+    @CallSuper
     @Override
     public View onCreateContent(@NonNull LayoutInflater inflater, @Nullable Bundle bundle) {
-        setTitle(getIdentifier("dockbar_editor", "string"));
+        setTitle(getIdentifier("superapp_editor", "string"));
 
         FrameLayout content = new FrameLayout(getContext());
 
@@ -49,9 +48,9 @@ public class DockBarEditorFragment extends BaseToolbarFragment {
         container.addView(buttonsContainer, new LinearLayout.LayoutParams(-1, -2));
 
         TextView save = new TextView(new ContextThemeWrapper(getContext(), com.vtosters.lite.R.style.VKUIButton_Primary));
-        save.setText(Globals.getString("dockbar_save"));
+        save.setText(Globals.getString("save"));
         save.setOnClickListener(v -> {
-            DockBarManager.getInstance().save();
+            SuperAppEditorManager.getInstance().save();
             restartApplication();
         });
 
@@ -63,9 +62,9 @@ public class DockBarEditorFragment extends BaseToolbarFragment {
         buttonsContainer.addView(divider, new LinearLayout.LayoutParams(convertDpToPixel(10), 0));
 
         TextView reset = new TextView(new ContextThemeWrapper(getContext(), com.vtosters.lite.R.style.VKUIButton_Primary));
-        reset.setText(Globals.getString("dockbar_reset"));
+        reset.setText(Globals.getString("reset"));
         reset.setOnClickListener(v -> {
-            DockBarManager.getInstance().reset();
+            SuperAppEditorManager.getInstance().reset();
             restartApplication();
         });
 
@@ -73,18 +72,23 @@ public class DockBarEditorFragment extends BaseToolbarFragment {
         resetParams.weight = 1.0f;
         buttonsContainer.addView(reset, resetParams);
 
-        mRecycler = new RecyclerView(getContext());
-        mRecycler.setLayoutManager(new LinearLayoutManager(getContext()));
-        mRecycler.setAdapter((mAdapter = new DockBarEditorAdapter()));
-        mRecycler.setHasFixedSize(true);
+        SuperAppEditorManager manager = SuperAppEditorManager.getInstance();
+        var adapter = new CategorizedAdapter(manager.getSelectedTabs(), manager.getDisabledTabs(), (holder, pos) -> {
+            var item = pos <= manager.getSelectedTabs().size()
+                    ? manager.getSelectedTabs().get(pos - 1)
+                    : manager.getDisabledTabs().get(pos - manager.getSelectedTabs().size() - 2);
+            holder.bindMovingItem(item.title);
+        });
+
+        var recyclerView = new RecyclerView(getContext());
+        recyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
+        recyclerView.setAdapter(adapter);
+        recyclerView.setHasFixedSize(true);
         var params = new LinearLayout.LayoutParams(-1, -1);
         params.gravity = Gravity.CENTER;
-        container.addView(mRecycler, params);
+        container.addView(recyclerView, params);
 
-        mCallback = new ItemTouchHelperCallback(mAdapter);
-
-        mItemTouchHelper = new ItemTouchHelper(mCallback);
-        mItemTouchHelper.attachToRecyclerView(mRecycler);
+        new ItemTouchHelper(new ItemMovingCallback(adapter)).attachToRecyclerView(recyclerView);
 
         return content;
     }

@@ -55,7 +55,7 @@
 
     if-eqz v0, :cond_1
 
-#   invoke-static {v0}, Lru/vtosters/lite/ui/fragments/dockbar/DockBarInjector;->injectMenuJSON(Lorg/json/JSONArray;)Lorg/json/JSONArray;
+#   invoke-static {v0}, Lru/vtosters/lite/hooks/DockBarInjector;->injectMenuJSON(Lorg/json/JSONArray;)Lorg/json/JSONArray;
 
 #   move-result-object v0
 

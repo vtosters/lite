@@ -1,6 +1,5 @@
-package ru.vtosters.lite.ui.fragments.dockbar;
+package ru.vtosters.lite.hooks;
 
-import static com.vtosters.lite.R.id.groups;
 import static com.vtosters.lite.R.id.menu_fave;
 import static com.vtosters.lite.R.id.menu_feedback;
 import static com.vtosters.lite.R.id.menu_friends;
@@ -17,6 +16,7 @@ import static com.vtosters.lite.R.id.tab_feedback;
 import static com.vtosters.lite.R.id.tab_menu;
 import static com.vtosters.lite.R.id.tab_messages;
 import static com.vtosters.lite.R.id.tab_news;
+import static ru.vtosters.lite.utils.Globals.getContext;
 import static ru.vtosters.lite.utils.Globals.getResources;
 
 import android.annotation.SuppressLint;
@@ -25,6 +25,7 @@ import android.graphics.Color;
 import android.graphics.drawable.Drawable;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.ViewGroup;
 
 import com.vk.apps.AppsFragment;
 import com.vk.core.drawable.RecoloredDrawable;
@@ -48,12 +49,15 @@ import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Map;
 
+import ru.vtosters.lite.ui.components.DockBarEditorManager;
+import ru.vtosters.lite.ui.items.DockBarTab;
+import ru.vtosters.lite.utils.Globals;
 import ru.vtosters.lite.utils.Preferences;
 
-public class DockBarInjector{
-    private static final DockBarManager sManager = DockBarManager.getInstance();
+public class DockBarInjector {
+    private static final DockBarEditorManager sManager = DockBarEditorManager.getInstance();
 
-    public static Map<Class<? extends FragmentImpl>, Integer> injectMap(){
+    public static Map<Class<? extends FragmentImpl>, Integer> injectMap() {
         LinkedHashMap<Class<? extends FragmentImpl>, Integer> map = new LinkedHashMap<>();
         for (DockBarTab tab : sManager.getSelectedTabs()) {
             map.put(tab.fragmentClass, tab.id);
@@ -61,7 +65,8 @@ public class DockBarInjector{
         return map;
     }
 
-    public static void inject(BottomNavigationView navigationView){
+    @SuppressLint("RestrictedApi")
+    public static void inject(BottomNavigationView navigationView) {
         Menu menu = navigationView.getMenu();
         menu.clear();
         try {
@@ -74,7 +79,7 @@ public class DockBarInjector{
             Method acquire = synchronisedPoolCls.getDeclaredMethod("acquire");
             if (synchronizedPool != null) {
                 do {
-                } while(acquire.invoke(synchronizedPool) != null);
+                } while (acquire.invoke(synchronizedPool) != null);
             }
 
         } catch (NoSuchFieldException | IllegalAccessException | ClassNotFoundException | NoSuchMethodException | InvocationTargetException e) {
@@ -86,23 +91,41 @@ public class DockBarInjector{
             Drawable drawable = getResources().getDrawable(tab.iconID);
 
             ColorStateList dockcolors = new ColorStateList(
-                    new int[][] {
-                            new int[] {android.R.attr.state_checked},
-                            new int[] {-android.R.attr.state_checked}
+                    new int[][]{
+                            new int[]{android.R.attr.state_checked},
+                            new int[]{-android.R.attr.state_checked}
                     },
-                    new int[] {
+                    new int[]{
                             Color.parseColor("#ff528bcc"),
                             Color.parseColor("#ffaaaeb3")
                     }
             );
 
             add.setIcon(new RecoloredDrawable(drawable, dockcolors));
-            add.setShowAsAction(1);
+            add.setTitle(getContext().getString(tab.titleID));
             add.setCheckable(true);
+        }
+        if (Globals.getPreferences().getBoolean("dockbar_tab_titles", true)) {
+            var menuView = (BottomNavigationMenuView) navigationView.getChildAt(0);
+            for (int i = 0; i < menuView.getChildCount(); i++) {
+                var item = (com.vtosters.lite.ui.bottomnavigation.BottomNavigationItemView) menuView.getChildAt(i);
+                item.setStaticMode(true);
+                item.setIconsMode(false);
+                item.setShiftingMode(false);
+            }
         }
     }
 
-    public static int injectId(String tag){
+    private static void removeAllChildren(ViewGroup view) {
+        for (int i = 0; i < view.getChildCount(); i++) {
+            if (view instanceof ViewGroup) {
+                removeAllChildren((ViewGroup) view.getChildAt(i));
+                view.removeAllViews();
+            }
+        }
+    }
+
+    public static int injectId(String tag) {
         for (DockBarTab tab : sManager.getSelectedTabs()) {
             if (tag.equals(tab.tag))
                 return tab.id;
@@ -110,7 +133,7 @@ public class DockBarInjector{
         return 0;
     }
 
-    public static void injectMenuFragment(Menu menu){
+    public static void injectMenuFragment(Menu menu) {
         List<MenuItem> menuItems = new ArrayList<>();
         for (int i = 0; i < menu.size(); i++) {
             menuItems.add(menu.getItem(i));
@@ -167,12 +190,12 @@ public class DockBarInjector{
         }
     }
 
-    public static void setCounter(int tabId, BottomNavigationView navigationView){
+    public static void setCounter(int tabId, BottomNavigationView navigationView) {
         navigationView.a(tabId, counters(tabId));
     }
 
     @SuppressLint("NonConstantResourceId")
-    private static CharSequence counters(int tabId){
+    private static CharSequence counters(int tabId) {
         if (!Preferences.dockcounter()) return null;
 
         int val = 0;
@@ -197,11 +220,11 @@ public class DockBarInjector{
                 break;
             case tab_feedback:
                 if (Preferences.milkshake())
-                    val =  MenuCountersState.k();
+                    val = MenuCountersState.k();
                 break;
             case menu_friends:
                 if (!Preferences.milkshake())
-                    val =  MenuCountersState.k();
+                    val = MenuCountersState.k();
                 break;
         }
 //
@@ -222,7 +245,7 @@ public class DockBarInjector{
         return val > 0 ? StringUtils.a(val) : null;
     }
 
-    public static JSONArray injectMenuJSON(JSONArray arr){
+    public static JSONArray injectMenuJSON(JSONArray arr) {
         List<String> arrayList = new ArrayList(Arrays.asList(
                 "news",
                 "messages",
@@ -255,15 +278,15 @@ public class DockBarInjector{
         }
     }
 
-    public static int getItemCount(){
+    public static int getItemCount() {
         return sManager.getSelectedTabs().size();
     }
 
-    public static boolean isDockOpenAllowed(FragmentImpl fragment){
+    public static boolean isDockOpenAllowed(FragmentImpl fragment) {
         return isDockOpenAllowed(fragment.getClass());
     }
 
-    public static boolean isDockOpenAllowed(Class<?> cls){
+    public static boolean isDockOpenAllowed(Class<?> cls) {
         for (DockBarTab tab : sManager.getSelectedTabs())
             if (tab.fragmentClass == cls)
                 return false;
@@ -273,7 +296,7 @@ public class DockBarInjector{
         return true;
     }
 
-    public static Class<?> interceptClick(int id, RightMenu rightMenu){
+    public static Class<?> interceptClick(int id, RightMenu rightMenu) {
         if (id == tab_menu) {
             rightMenu.a();
         }

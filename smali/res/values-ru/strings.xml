@@ -5418,6 +5418,7 @@
     <string name="dnw">Неписалка</string>
     <string name="docknumbers">Счётчики в докбаре</string>
     <string name="docknumberssum">Отключение не работает в интерфейсе для планшетов</string>
+    <string name="dockbar_tab_titles">Показ заголовков вкладок в докбаре</string>
     <string name="fcmtokenfixed">Уведомления были восстановлены!</string>
     <string name="fcmtokenget">FCM токен получен</string>
     <string name="fcmtokenrem">FCM токен удален</string>
@@ -5629,10 +5630,9 @@
     <string name="other_fix_dynamic_colors">Исправление покрасок для Android 12+</string>
 
     <string name="dockbar_editor">Редактор докбара</string>
-    <string name="dockbar_save">Сохранить</string>
-    <string name="dockbar_reset">Сбросить</string>
-    <string name="dockbar_selected_items">Выбранные элементы</string>
-    <string name="dockbar_unselected_items">Невыбранные элементы</string>
+    <string name="superapp_editor">SuperApp Редактор</string>
+    <string name="selected_items">Выбранные элементы</string>
+    <string name="unselected_items">Отключенные элементы</string>
 
     <string name="add_another_account">Добавить новый аккаунт</string>
 

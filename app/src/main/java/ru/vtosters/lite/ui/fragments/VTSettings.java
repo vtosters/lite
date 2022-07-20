@@ -7,9 +7,6 @@ import static ru.vtosters.lite.ui.PreferencesUtil.addMaterialSwitchPreference;
 import static ru.vtosters.lite.ui.PreferencesUtil.addPreference;
 import static ru.vtosters.lite.ui.PreferencesUtil.addPreferenceCategory;
 import static ru.vtosters.lite.ui.PreferencesUtil.addPreferenceDrawable;
-import static ru.vtosters.lite.ui.vkui.VBListBuilder.VBListItem;
-import static ru.vtosters.lite.ui.vkui.VBListBuilder.buildListOf;
-import static ru.vtosters.lite.ui.vkui.VBottomSheetBuilder.VBSContent;
 import static ru.vtosters.lite.utils.About.getBuildNumber;
 import static ru.vtosters.lite.utils.About.getCommitLink;
 import static ru.vtosters.lite.utils.CacheUtils.humanReadableByteCountBin;
@@ -61,14 +58,10 @@ import com.vtosters.lite.general.fragments.MaterialPreferenceToolbarFragment;
 import com.vtosters.lite.general.fragments.SettingsAccountFragment;
 import com.vtosters.lite.general.fragments.SettingsGeneralFragment;
 
-import java.util.Arrays;
-import java.util.List;
-
+import ru.vtosters.lite.ui.components.DockBarEditorManager;
+import ru.vtosters.lite.ui.components.SuperAppEditorManager;
 import ru.vtosters.lite.ui.dialogs.OTADialog;
-import ru.vtosters.lite.ui.fragments.dockbar.DockBarEditorFragment;
-import ru.vtosters.lite.ui.fragments.dockbar.DockBarManager;
 import ru.vtosters.lite.ui.fragments.tgstickers.StickersFragment;
-import ru.vtosters.lite.ui.vkui.VBottomSheetBuilder;
 import ru.vtosters.lite.utils.CacheUtils;
 import ru.vtosters.lite.utils.Globals;
 import ru.vtosters.lite.utils.SSFS;
@@ -99,7 +92,7 @@ public class VTSettings extends MaterialPreferenceToolbarFragment{
     public static String getDocksumm(){
         if (disableSettingsSumms()) return null;
 
-        return Globals.getString("vtldocksumm") + ": " + DockBarManager.getInstance().getSelectedTabs().size();
+        return Globals.getString("vtldocksumm") + ": " + DockBarEditorManager.getInstance().getSelectedTabs().size();
     }
 
     public static String getTGSsumm(){
@@ -125,7 +118,7 @@ public class VTSettings extends MaterialPreferenceToolbarFragment{
     public static String getSuperappsumm(){
         if (disableSettingsSumms()) return null;
 
-        return "Скрыто элементов" + ": " + preferences.getInt("superappitems", 0);
+        return "Скрыто элементов" + ": " + SuperAppEditorManager.getInstance().getDisabledTabs().size();
     }
 
     public static String getCachesumm(){
@@ -315,9 +308,9 @@ public class VTSettings extends MaterialPreferenceToolbarFragment{
 
             addPreference(this, "", Globals.getString("dockbar_editor"), docksumm, !DoNotUseOldIcons() ? "ic_list_24" : "ic_list_outline_28", preference -> {
                 Context context = getContext();
-                Intent a2 = new Navigator(DockBarEditorFragment.class).b(context);
-                a2.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-                context.startActivity(a2);
+                Intent intent = new Navigator(DockBarEditorFragment.class).b(context);
+                intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                context.startActivity(intent);
                 return false;
             });
         }
@@ -372,7 +365,10 @@ public class VTSettings extends MaterialPreferenceToolbarFragment{
 
         if (milkshake() && superapp()) {
             addPreference(this, "", "Настроить Superapp", superapp, "ic_explore_outline_28", (preference) -> {
-                callEditorPopup();
+                Context context = getContext();
+                Intent intent = new Navigator(SuperAppEditorFragment.class).b(context);
+                intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                context.startActivity(intent);
                 return true;
             });
         }
@@ -440,46 +436,6 @@ public class VTSettings extends MaterialPreferenceToolbarFragment{
                 return true;
             });
         }
-    }
-
-    private void callEditorPopup(){
-        hideitems = 0;
-
-        List<VBListItem> list = Arrays.asList(
-                new VBListItem("promo", "Mini Apps: промо"),
-                new VBListItem("miniapps", "Mini Apps: виджет"),
-                new VBListItem("vkpay_slim", "VK Pay"),
-                new VBListItem("greeting", "Приветствие"),
-                new VBListItem("holiday", "Дни рождения у друзей"),
-                new VBListItem("weather", "Погода"),
-                new VBListItem("sport", "Спортивные события"),
-                new VBListItem("games", "Игры"),
-                new VBListItem("informer", "Информер"),
-                new VBListItem("food", "Еда"),
-                new VBListItem("event", "Мероприятия"),
-                new VBListItem("music", "Музыка"),
-                new VBListItem("vk_run", "VK Run")
-        );
-
-        VBottomSheetBuilder.show(getActivity(), new VBSContent(
-                "Выберите пункты для скрытия",
-                buildListOf(getActivity(), list),
-
-                new VBSContent.VBSButton(
-                        "Сохранить",
-                        () -> {
-                            for (VBListItem item : list) {
-                                edit().putBoolean("superapp_" + item.id, item.checked).commit();
-                                if (item.checked) {
-                                    hideitems++;
-                                    edit().putInt("superappitems", hideitems).commit();
-                                } else if (hideitems == 0) {
-                                    edit().putInt("superappitems", hideitems).commit();
-                                }
-                            }
-                        }
-                )
-        ));
     }
 
     @Override

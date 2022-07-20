@@ -45,7 +45,7 @@
 .method public static final a(Ljava/lang/String;)I
     .locals 3
 
-    invoke-static {p0}, Lru/vtosters/lite/ui/fragments/dockbar/DockBarInjector;->injectId(Ljava/lang/String;)I
+    invoke-static {p0}, Lru/vtosters/lite/hooks/DockBarInjector;->injectId(Ljava/lang/String;)I
 
     move-result v0
 

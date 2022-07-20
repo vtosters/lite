@@ -1,4 +1,4 @@
-package ru.vtosters.lite.ui.fragments.dockbar;
+package ru.vtosters.lite.ui.items;
 
 import com.vk.core.fragments.FragmentImpl;
 

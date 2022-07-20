@@ -1,6 +1,6 @@
-package ru.vtosters.lite.ui.fragments.dockbar;
+package ru.vtosters.lite.ui.components;
 
-public interface IItemTouchHelper{
+public interface IItemMovingListener {
 
     void onItemDismiss(int index);
 

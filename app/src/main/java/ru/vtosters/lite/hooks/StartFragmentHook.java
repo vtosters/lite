@@ -1,5 +1,5 @@
 package ru.vtosters.lite.hooks;
-import static ru.vtosters.lite.ui.fragments.dockbar.DockBarManager.getInstance;
+import static ru.vtosters.lite.ui.components.DockBarEditorManager.getInstance;
 import static ru.vtosters.lite.utils.Globals.getPrefsValue;
 import static ru.vtosters.lite.utils.Preferences.getBoolValue;
 import static ru.vtosters.lite.utils.Preferences.milkshake;

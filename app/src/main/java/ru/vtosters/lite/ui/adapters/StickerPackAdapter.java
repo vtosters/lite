@@ -1,4 +1,4 @@
-package ru.vtosters.lite.ui.fragments.tgstickers;
+package ru.vtosters.lite.ui.adapters;
 
 import static ru.vtosters.lite.utils.Globals.getContext;
 import static ru.vtosters.lite.utils.Globals.getIdentifier;
