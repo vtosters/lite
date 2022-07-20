@@ -25,7 +25,6 @@ public class InterfaceFragment extends MaterialPreferenceToolbarFragment{
     private void prefs(){
         findPreference("stories").setOnPreferenceClickListener(new restart());
         findPreference("swipe").setOnPreferenceClickListener(new restart());
-        findPreference("dockcounter").setOnPreferenceClickListener(new restart());
     }
 
     public boolean restart(Preference preference){

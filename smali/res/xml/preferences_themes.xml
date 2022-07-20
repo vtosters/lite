@@ -25,11 +25,22 @@
             android:key="lighttheme"
             android:title="@string/appearance_theme_light_theme" />
     </PreferenceCategory>
-    <PreferenceCategory android:title="@string/vtlother">
+    <PreferenceCategory android:title="Докбар">
 <!--        <com.vtosters.lite.ui.MaterialSwitchPreference-->
 <!--            android:defaultValue="false"-->
 <!--            android:key="dockbar_tab_titles"-->
 <!--            android:title="@string/dockbar_tab_titles" />-->
+        <com.vtosters.lite.ui.MaterialSwitchPreference
+            android:defaultValue="false"
+            android:key="dockbar_accent"
+            android:title="Использовать акцент для иконок" />
+        <com.vtosters.lite.ui.MaterialSwitchPreference
+            android:defaultValue="true"
+            android:key="dockcounter"
+            android:summary="@string/docknumberssum"
+            android:title="@string/docknumbers" />
+    </PreferenceCategory>
+    <PreferenceCategory android:title="@string/vtlother">
         <Preference
             android:key="iconmanager"
             android:summary="Большой выбор иконок для приложения"
