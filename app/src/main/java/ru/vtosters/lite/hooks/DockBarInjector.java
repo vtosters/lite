@@ -18,6 +18,7 @@ import static com.vtosters.lite.R.id.tab_messages;
 import static com.vtosters.lite.R.id.tab_news;
 import static ru.vtosters.lite.utils.Globals.getContext;
 import static ru.vtosters.lite.utils.Globals.getResources;
+import static ru.vtosters.lite.utils.Preferences.*;
 
 import android.annotation.SuppressLint;
 import android.content.res.ColorStateList;
@@ -105,7 +106,7 @@ public class DockBarInjector {
             add.setTitle(getContext().getString(tab.titleID));
             add.setCheckable(true);
         }
-        if (Globals.getPreferences().getBoolean("dockbar_tab_titles", true)) {
+        if (getBoolValue("dockbar_tab_titles", false)) {
             var menuView = (BottomNavigationMenuView) navigationView.getChildAt(0);
             for (int i = 0; i < menuView.getChildCount(); i++) {
                 var item = (com.vtosters.lite.ui.bottomnavigation.BottomNavigationItemView) menuView.getChildAt(i);
@@ -196,7 +197,7 @@ public class DockBarInjector {
 
     @SuppressLint("NonConstantResourceId")
     private static CharSequence counters(int tabId) {
-        if (!Preferences.dockcounter()) return null;
+        if (!dockcounter()) return null;
 
         int val = 0;
         switch (tabId) {
@@ -219,11 +220,11 @@ public class DockBarInjector {
                 val = MenuCountersState.n();
                 break;
             case tab_feedback:
-                if (Preferences.milkshake())
+                if (milkshake())
                     val = MenuCountersState.k();
                 break;
             case menu_friends:
-                if (!Preferences.milkshake())
+                if (!milkshake())
                     val = MenuCountersState.k();
                 break;
         }

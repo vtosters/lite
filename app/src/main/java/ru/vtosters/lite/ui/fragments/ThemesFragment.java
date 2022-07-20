@@ -1,7 +1,9 @@
 package ru.vtosters.lite.ui.fragments;
 
+import static ru.vtosters.lite.utils.Globals.*;
 import static ru.vtosters.lite.utils.Globals.edit;
 import static ru.vtosters.lite.utils.Globals.getIdentifier;
+import static ru.vtosters.lite.utils.Globals.getPreferences;
 import static ru.vtosters.lite.utils.Globals.restartApplicationWithTimer;
 
 import android.content.Context;
@@ -12,6 +14,8 @@ import androidx.preference.Preference;
 
 import com.vk.navigation.Navigator;
 import com.vtosters.lite.general.fragments.MaterialPreferenceToolbarFragment;
+
+import ru.vtosters.lite.utils.Globals;
 
 
 public class ThemesFragment extends MaterialPreferenceToolbarFragment{
@@ -29,6 +33,11 @@ public class ThemesFragment extends MaterialPreferenceToolbarFragment{
         findPreference("darktheme").setOnPreferenceChangeListener(new restartdark());
         findPreference("lighttheme").setOnPreferenceChangeListener(new restartlight());
         findPreference("iconmanager").setOnPreferenceClickListener(new openicons());
+        findPreference("dockbar_tab_titles").setOnPreferenceChangeListener((preference, o) -> {
+            getPreferences().edit().putBoolean("dockbar_tab_titles", (boolean) o).commit();
+            restartApplication();
+            return false;
+        });
     }
 
     public class openicons implements Preference.OnPreferenceClickListener{

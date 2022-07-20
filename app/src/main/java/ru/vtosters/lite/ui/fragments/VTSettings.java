@@ -313,6 +313,16 @@ public class VTSettings extends MaterialPreferenceToolbarFragment{
                 context.startActivity(intent);
                 return false;
             });
+
+            if (milkshake() && superapp()) {
+                addPreference(this, "", "Редактор Superapp", superapp, "ic_explore_outline_28", (preference) -> {
+                    Context context = getContext();
+                    Intent intent = new Navigator(SuperAppEditorFragment.class).b(context);
+                    intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                    context.startActivity(intent);
+                    return true;
+                });
+            }
         }
 
         addPreference(this, "", Globals.getString("vtlmedia"), mediasumm, "ic_media_outline_28", preference -> {
@@ -362,16 +372,6 @@ public class VTSettings extends MaterialPreferenceToolbarFragment{
             context.startActivity(a2);
             return false;
         });
-
-        if (milkshake() && superapp()) {
-            addPreference(this, "", "Настроить Superapp", superapp, "ic_explore_outline_28", (preference) -> {
-                Context context = getContext();
-                Intent intent = new Navigator(SuperAppEditorFragment.class).b(context);
-                intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-                context.startActivity(intent);
-                return true;
-            });
-        }
 
         addPreference(this, "", Globals.getString("vtlproxy"), proxysumm, !DoNotUseOldIcons() ? "ic_globe_20" : "ic_globe_outline_28", preference -> {
             Context context = getContext();

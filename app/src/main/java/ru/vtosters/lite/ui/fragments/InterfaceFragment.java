@@ -26,14 +26,6 @@ public class InterfaceFragment extends MaterialPreferenceToolbarFragment{
         findPreference("stories").setOnPreferenceClickListener(new restart());
         findPreference("swipe").setOnPreferenceClickListener(new restart());
         findPreference("dockcounter").setOnPreferenceClickListener(new restart());
-        findPreference("dockbar_tab_titles").setOnPreferenceChangeListener(new Preference.OnPreferenceChangeListener() {
-            @Override
-            public boolean onPreferenceChange(Preference preference, Object o) {
-                getPreferences().edit().putBoolean("dockbar_tab_titles", (boolean) o).commit();
-                Globals.restartApplication();
-                return false;
-            }
-        });
     }
 
     public boolean restart(Preference preference){
