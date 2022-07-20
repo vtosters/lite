@@ -96,6 +96,10 @@ public class Globals{
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
             NotificationChannels.createChannels();
         }
+
+        if (getPrefsValue("superapp_items").isEmpty()) {
+            edit().putString("superapp_items", "menu,promo,miniapps,vkpay_slim,greeting,holiday,weather,sport,games,informer,food,event,music,vk_run").commit();
+        }
         // VKIDProtection.alert(activity);
     }
 
