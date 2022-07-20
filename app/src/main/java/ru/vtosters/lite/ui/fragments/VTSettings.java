@@ -323,6 +323,8 @@ public class VTSettings extends MaterialPreferenceToolbarFragment{
                     return true;
                 });
             }
+        } else {
+            addPreference(this, "", "Внимание!", "Некоторые пункты настроек были скрыты из-за режима VK Me \n\nДля отключения режима перейдите в настройки Сообщений", !DoNotUseOldIcons() ? "ic_about_24" : "ic_about_outline_28", preference -> false);
         }
 
         addPreference(this, "", Globals.getString("vtlmedia"), mediasumm, "ic_media_outline_28", preference -> {
