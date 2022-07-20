@@ -202,6 +202,10 @@ public class Preferences{
         return getBoolValue("friendsblock", false);
     }
 
+    public static boolean dockbar_accent(){
+        return getBoolValue("dockbar_accent", false);
+    }
+
     public static boolean milkshake(){
         return getBoolValue("milkshake", false);
     }

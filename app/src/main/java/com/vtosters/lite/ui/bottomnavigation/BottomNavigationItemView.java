@@ -1,5 +1,7 @@
 package com.vtosters.lite.ui.bottomnavigation;
 
+import static ru.vtosters.lite.utils.Themes.getCSTDock;
+
 import android.content.Context;
 import android.content.res.ColorStateList;
 import android.graphics.Color;
@@ -75,7 +77,7 @@ public class BottomNavigationItemView extends FrameLayout implements MenuView.It
         this.mIcon.getLayoutParams().width = V.a(28.0F);
         this.mIcon.getLayoutParams().height = V.a(28.0F);
 
-        var colorStateList = getResources().getColorStateList(R.color.bottom_navigation_item);
+        var colorStateList = getCSTDock();
         this.mSmallLabel = this.findViewById(R.id.smallLabel);
         mSmallLabel.setTextColor(colorStateList);
 

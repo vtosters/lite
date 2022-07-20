@@ -1,5 +1,6 @@
 package ru.vtosters.lite.hooks;
 
+import static android.graphics.Color.*;
 import static com.vtosters.lite.R.id.menu_fave;
 import static com.vtosters.lite.R.id.menu_feedback;
 import static com.vtosters.lite.R.id.menu_friends;
@@ -19,6 +20,7 @@ import static com.vtosters.lite.R.id.tab_news;
 import static ru.vtosters.lite.utils.Globals.getContext;
 import static ru.vtosters.lite.utils.Globals.getResources;
 import static ru.vtosters.lite.utils.Preferences.*;
+import static ru.vtosters.lite.utils.Themes.getCSTDock;
 
 import android.annotation.SuppressLint;
 import android.content.res.ColorStateList;
@@ -91,18 +93,7 @@ public class DockBarInjector {
             MenuItem add = menu.add(0, tab.id, 0, tab.titleID);
             Drawable drawable = getResources().getDrawable(tab.iconID);
 
-            ColorStateList dockcolors = new ColorStateList(
-                    new int[][]{
-                            new int[]{android.R.attr.state_checked},
-                            new int[]{-android.R.attr.state_checked}
-                    },
-                    new int[]{
-                            Color.parseColor("#ff528bcc"),
-                            Color.parseColor("#ffaaaeb3")
-                    }
-            );
-
-            add.setIcon(new RecoloredDrawable(drawable, dockcolors));
+            add.setIcon(new RecoloredDrawable(drawable, getCSTDock()));
             add.setTitle(getContext().getString(tab.titleID));
             add.setCheckable(true);
         }

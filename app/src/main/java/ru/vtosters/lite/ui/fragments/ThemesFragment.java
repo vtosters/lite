@@ -38,6 +38,8 @@ public class ThemesFragment extends MaterialPreferenceToolbarFragment{
 //            restartApplication();
 //            return false;
 //        });
+        findPreference("dockbar_accent").setOnPreferenceClickListener(new restart());
+        findPreference("dockcounter").setOnPreferenceClickListener(new restart());
     }
 
     public class openicons implements Preference.OnPreferenceClickListener{

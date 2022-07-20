@@ -1,5 +1,6 @@
 package ru.vtosters.lite.utils;
 
+import static android.graphics.Color.parseColor;
 import static android.view.View.SYSTEM_UI_FLAG_LIGHT_NAVIGATION_BAR;
 import static ru.vtosters.lite.hooks.VKUIHook.isLoaded;
 import static ru.vtosters.lite.ui.wallpapers.WallpapersHooks.getWallpaper;
@@ -10,6 +11,7 @@ import static ru.vtosters.lite.utils.Globals.getIdentifier;
 import static ru.vtosters.lite.utils.Globals.getPrefsValue;
 import static ru.vtosters.lite.utils.Globals.getResources;
 import static ru.vtosters.lite.utils.Preferences.color_grishka;
+import static ru.vtosters.lite.utils.Preferences.dockbar_accent;
 import static ru.vtosters.lite.utils.Preferences.milkshake;
 import static ru.vtosters.lite.utils.Preferences.navbar;
 import static ru.vtosters.lite.utils.Preferences.systemtheme;
@@ -365,6 +367,19 @@ public class Themes{
         int VKME = R.dimen.app_minimumsize_h;
 
         return vkme() ? VKME : Default;
+    }
+
+    public static ColorStateList getCSTDock(){
+        return new ColorStateList(
+                new int[][]{
+                        new int[]{android.R.attr.state_checked},
+                        new int[]{-android.R.attr.state_checked}
+                },
+                new int[]{
+                        dockbar_accent() ? parseColor("#ff528bcc") : (isDarkTheme() ? parseColor("#ffefefef") : parseColor("#ff545454")),
+                        dockbar_accent() ? parseColor("#ffaaaeb3") : (isDarkTheme() ? parseColor("#ff8a8d92") : parseColor("#ffaaaeb3"))
+                }
+        );
     }
 
     public static void systemThemeChanger(Activity activity){ // ded
