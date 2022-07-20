@@ -56,7 +56,7 @@ public class SuperAppEditorManager {
     public void reset() {
         Globals.getPreferences()
                 .edit()
-                .putString("superapp_items", "promo,miniapps,vkpay_slim,greeting,holiday,weather,sport,games,informer,food,event,music,vk_run")
+                .putString("superapp_items", "menu,promo,vkpay_slim,greeting,holiday,informer,event,miniapps,weather,sport,games,food,music,vk_run")
                 .commit();
     }
 
@@ -70,6 +70,8 @@ public class SuperAppEditorManager {
 
     private SuperAppItem getItemByTag(String tag) {
         switch (tag) {
+            case "menu":
+                return SuperAppItem.valuesOf("menu", "Меню приложения");
             case "promo":
                 return SuperAppItem.valuesOf("promo", "Mini Apps: промо");
             case "miniapps":

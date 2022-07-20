@@ -67,10 +67,6 @@
             android:title="@string/docknumbers" />
         <com.vtosters.lite.ui.MaterialSwitchPreference
             android:defaultValue="false"
-            android:key="dockbar_tab_titles"
-            android:title="@string/dockbar_tab_titles" />
-        <com.vtosters.lite.ui.MaterialSwitchPreference
-            android:defaultValue="false"
             android:key="disableSettingsSumms"
             android:title="@string/vtlhidesumm" />
     </PreferenceCategory>
