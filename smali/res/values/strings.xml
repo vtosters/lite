@@ -5571,6 +5571,7 @@ Warning! It can cause long downloads of user lists if there are a lot of users i
     <string name="docknumbers">Counters in dockbar</string>
     <string name="docknumberssum">"Disabling doesn't work in the tablet interface"</string>
     <string name="dockbar_tab_titles">Show dockbar item titles</string>
+    <string name="superapp_editor_message">For activate/disable unmoved element, swipe it to right or left, please</string>
     <string name="fcmtokenfixed">Notifications have been restored!</string>
     <string name="fcmtokenget">FCM token received</string>
     <string name="fcmtokenrem">FCM token deleted</string>

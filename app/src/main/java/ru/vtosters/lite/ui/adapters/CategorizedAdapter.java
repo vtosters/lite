@@ -18,6 +18,7 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
@@ -36,6 +37,7 @@ public class CategorizedAdapter extends RecyclerView.Adapter<CategorizedAdapter.
 
     private List mSelectedItems;
     private List mDisabledItems;
+    private List mUnmovedItems;
     private IViewHolderBinder mBinder;
 
     private int mMinSelectedItems = -1;
@@ -44,6 +46,7 @@ public class CategorizedAdapter extends RecyclerView.Adapter<CategorizedAdapter.
     public CategorizedAdapter(List selectedItems, List disabledItems, IViewHolderBinder binder) {
         this.mSelectedItems = selectedItems;
         this.mDisabledItems = disabledItems;
+        this.mUnmovedItems = new ArrayList();
         this.mBinder = binder;
     }
 
@@ -52,12 +55,30 @@ public class CategorizedAdapter extends RecyclerView.Adapter<CategorizedAdapter.
         this.mMaxSelectedItems = max;
     }
 
+    public void addUnmovedItem(Object item) {
+        mUnmovedItems.add(item);
+    }
+
     public int getItemViewType(int i) {
         return i == 0 || mSelectedItems.size() + 1 == i ? CATEGORY_TITLE : MOVING_ITEM;
     }
 
     public int getTabType(int i) {
         return i <= mSelectedItems.size() ? SELECTED_STATE : DISABLED_STATE;
+    }
+
+    public boolean isUnmovedItem(int index) {
+        if (getItemViewType(index) == MOVING_ITEM) {
+            Object curr;
+            if (getTabType(index) == SELECTED_STATE) {
+                curr = mSelectedItems.get(index - 1);
+                return mUnmovedItems.contains(curr);
+            } else {
+                curr = mDisabledItems.get(index - mSelectedItems.size() - 2);
+                return mUnmovedItems.contains(curr);
+            }
+        }
+        return false;
     }
 
     @NonNull
@@ -146,12 +167,28 @@ public class CategorizedAdapter extends RecyclerView.Adapter<CategorizedAdapter.
 
     @Override
     public void onItemDismiss(int index) {
-
+        if (getItemViewType(index) == MOVING_ITEM ) {
+            Object curr;
+            if (getTabType(index) == SELECTED_STATE) {
+                curr = mSelectedItems.get(index - 1);
+                if (!mUnmovedItems.contains(curr)) return;
+                mSelectedItems.remove(curr);
+                mDisabledItems.add(0, curr);
+                notifyItemMoved(index, mSelectedItems.size() + 1);
+            } else {
+                curr = mDisabledItems.get(index - mSelectedItems.size() - 2);
+                if (!mUnmovedItems.contains(curr)) return;
+                mDisabledItems.remove(curr);
+                mSelectedItems.add(0, curr);
+                notifyItemRemoved(index);
+                notifyItemInserted(1);
+            }
+        }
     }
 
     @Override
     public boolean onItemMove(int fromPosition, int toPosition) {
-        if (toPosition == 0)
+        if (toPosition == 0 || isUnmovedItem(toPosition))
             return false;
 
         Object curr;
@@ -160,16 +197,13 @@ public class CategorizedAdapter extends RecyclerView.Adapter<CategorizedAdapter.
             if (getTabType(toPosition) == DISABLED_STATE && min)
                 return false;
             curr = mSelectedItems.get(fromPosition - 1);
+            if (mUnmovedItems.contains(curr))
+                return false;
             if (getItemViewType(toPosition) == CATEGORY_TITLE) {
                 if (min)
                     return false;
                 mSelectedItems.remove(fromPosition - 1);
-                mDisabledItems.add(curr);
-                for (int i = mDisabledItems.size() - 2; i >= 0; i--) {
-                    var tmp = mDisabledItems.get(i + 1);
-                    mDisabledItems.set(i + 1, mDisabledItems.get(i));
-                    mDisabledItems.set(i, tmp);
-                }
+                mDisabledItems.add(0, curr);
             } else {
                 Collections.swap(mSelectedItems, fromPosition - 1, toPosition - 1);
             }
@@ -178,6 +212,8 @@ public class CategorizedAdapter extends RecyclerView.Adapter<CategorizedAdapter.
             if (getTabType(toPosition) == SELECTED_STATE && max)
                 return false;
             curr = mDisabledItems.get(fromPosition - mSelectedItems.size() - 2);
+            if (mUnmovedItems.contains(curr))
+                return false;
             if (getItemViewType(toPosition) == CATEGORY_TITLE) {
                 if (max)
                     return false;

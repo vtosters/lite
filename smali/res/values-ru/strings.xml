@@ -5419,6 +5419,7 @@
     <string name="docknumbers">Счётчики в докбаре</string>
     <string name="docknumberssum">Отключение не работает в интерфейсе для планшетов</string>
     <string name="dockbar_tab_titles">Показ заголовков вкладок в докбаре</string>
+    <string name="superapp_editor_message">Для отключения/включения неподвижного элемента проведите по нему вправо или влево</string>
     <string name="fcmtokenfixed">Уведомления были восстановлены!</string>
     <string name="fcmtokenget">FCM токен получен</string>
     <string name="fcmtokenrem">FCM токен удален</string>

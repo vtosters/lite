@@ -24,6 +24,8 @@ import ru.vtosters.lite.ui.adapters.CategorizedAdapter;
 import ru.vtosters.lite.ui.components.ItemMovingCallback;
 import ru.vtosters.lite.ui.components.SuperAppEditorManager;
 import ru.vtosters.lite.utils.Globals;
+import ru.vtosters.lite.utils.LayoutHelper;
+import ru.vtosters.lite.utils.Themes;
 
 public class SuperAppEditorFragment extends BaseToolbarFragment {
 
@@ -37,6 +39,19 @@ public class SuperAppEditorFragment extends BaseToolbarFragment {
         LinearLayout container = new LinearLayout(getContext());
         container.setOrientation(LinearLayout.VERTICAL);
         content.addView(container, new FrameLayout.LayoutParams(-1, -1));
+
+        TextView message = new TextView(getContext());
+        message.setText(Globals.getString("superapp_editor_message"));
+        message.setTextSize(16.0f);
+        message.setTextAlignment(View.TEXT_ALIGNMENT_CENTER);
+        message.setTextColor(Themes.getTextAttr());
+        message.setPadding(
+                Globals.convertDpToPixel(10),
+                Globals.convertDpToPixel(10),
+                Globals.convertDpToPixel(10),
+                0
+        );
+        container.addView(message, LayoutHelper.createLinear(-1, -2));
 
         LinearLayout buttonsContainer = new LinearLayout(getContext());
         buttonsContainer.setPadding(
@@ -78,6 +93,14 @@ public class SuperAppEditorFragment extends BaseToolbarFragment {
                     ? manager.getSelectedTabs().get(pos - 1)
                     : manager.getDisabledTabs().get(pos - manager.getSelectedTabs().size() - 2);
             holder.bindMovingItem(item.title);
+        });
+        manager.getSelectedTabs().forEach(item -> {
+            if (item.type.equals("menu"))
+                adapter.addUnmovedItem(item);
+        });
+        manager.getDisabledTabs().forEach(item -> {
+            if (item.type.equals("menu"))
+                adapter.addUnmovedItem(item);
         });
 
         var recyclerView = new RecyclerView(getContext());
