@@ -1,4 +1,5 @@
 package ru.vtosters.lite.hooks;
+import static ru.vtosters.lite.utils.Preferences.*;
 import static ru.vtosters.lite.utils.Preferences.feedcache;
 import static ru.vtosters.lite.utils.Preferences.getBoolValue;
 import static ru.vtosters.lite.utils.Preferences.milkshake;
@@ -8,6 +9,8 @@ import static ru.vtosters.lite.utils.Preferences.superapp;
 
 import com.vk.toggle.FeatureManager;
 import com.vk.toggle.Features;
+
+import ru.vtosters.lite.utils.Preferences;
 
 public class TogglesHook{
     public static boolean shouldPatch(Features.Type feature){
@@ -144,6 +147,8 @@ public class TogglesHook{
                 return !getBoolValue("compressPhotos", true);
             case FEATURE_MUSIC_STOP_PLAYER_ON_TASK_REMOVAL:
                 return getBoolValue("musictask", false);
+            case FEATURE_MENU_GAMES_CAROUSEL:
+                return miniapps();
             default:
                 return true;
         }

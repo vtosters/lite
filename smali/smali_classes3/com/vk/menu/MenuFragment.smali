@@ -1319,9 +1319,6 @@
     .line 4
     invoke-direct {p0}, Lcom/vk/menu/MenuFragment;->a5()V
 
-    .line 5
-    invoke-direct {p0}, Lcom/vk/menu/MenuFragment;->b5()V
-
     .line 6
     invoke-static {}, Lcom/vtosters/lite/auth/VKAccountManager;->d()Lcom/vk/auth/api/VKAccount;
 
@@ -1335,6 +1332,8 @@
 
     .line 7
     invoke-direct {p0}, Lcom/vk/menu/MenuFragment;->Z4()V
+
+    invoke-direct {p0}, Lcom/vk/menu/MenuFragment;->b5()V
 
     :cond_0
     return-void
