@@ -1319,8 +1319,20 @@
 
     invoke-interface {v0, v2, v1}, Lcom/vk/menu/SearchMenuContract1;->d(ILjava/util/List;)V
 
-    .line 2
+    invoke-static {}, Lru/vtosters/lite/utils/Preferences;->vkpay()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_1
+
     invoke-direct {p0}, Lcom/vk/menu/SearchMenuPresenter;->g()V
+
+    :cond_1
+    invoke-static {}, Lru/vtosters/lite/utils/Preferences;->miniapps()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
 
     .line 3
     invoke-direct {p0}, Lcom/vk/menu/SearchMenuPresenter;->e()V
@@ -1328,7 +1340,7 @@
     .line 4
     invoke-direct {p0}, Lcom/vk/menu/SearchMenuPresenter;->f()V
 
-    .line 5
+    :cond_0
     invoke-static {}, Lcom/vk/core/ui/themes/VKThemeHelper;->n()I
 
     move-result v0

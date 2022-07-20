@@ -190,6 +190,10 @@ public class Preferences{
         return getBoolValue("superapp", true);
     }
 
+    public static boolean vkpay(){
+        return getBoolValue("vkpay", true);
+    }
+
     public static boolean miniapps(){
         return getBoolValue("miniapps", true);
     }

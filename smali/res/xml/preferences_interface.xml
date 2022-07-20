@@ -38,8 +38,13 @@
         <com.vtosters.lite.ui.MaterialSwitchPreference
             android:defaultValue="true"
             android:key="miniapps"
-            android:summary="Показывать Miniapps в меню"
+            android:summary="Показывать Miniapps/Игры в меню"
             android:title="Блок миниаппов" />
+        <com.vtosters.lite.ui.MaterialSwitchPreference
+            android:defaultValue="true"
+            android:key="vkpay"
+            android:summary="Показывать VK Pay в меню"
+            android:title="Блок VK Pay" />
         <com.vtosters.lite.ui.MaterialSwitchPreference
             android:defaultValue="true"
             android:key="superapp"
