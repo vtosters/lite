@@ -295,7 +295,7 @@
 
     move-result-object v0
 
-    invoke-static {}, Lru/vtosters/lite/ui/fragments/dockbar/DockBarInjector;->injectMap()Ljava/util/Map;
+    invoke-static {}, Lru/vtosters/lite/hooks/DockBarInjector;->injectMap()Ljava/util/Map;
 
     move-result-object v0
 
@@ -1719,7 +1719,7 @@
     :cond_0
     iget-object v5, p0, Lcom/vk/navigation/NavigationDelegateBottom;->U:Lcom/vk/navigation/right/RightMenu;
 
-    invoke-static {p1, v5}, Lru/vtosters/lite/ui/fragments/dockbar/DockBarInjector;->interceptClick(ILcom/vk/navigation/right/RightMenu;)Ljava/lang/Class;
+    invoke-static {p1, v5}, Lru/vtosters/lite/hooks/DockBarInjector;->interceptClick(ILcom/vk/navigation/right/RightMenu;)Ljava/lang/Class;
 
     move-result-object p1
 
@@ -2083,7 +2083,7 @@
 
     iput-object v3, p0, Lcom/vk/navigation/NavigationDelegateBottom;->H:Lcom/vtosters/lite/ui/bottomnavigation/BottomNavigationView;
 
-    invoke-static {v3}, Lru/vtosters/lite/ui/fragments/dockbar/DockBarInjector;->inject(Lcom/vtosters/lite/ui/bottomnavigation/BottomNavigationView;)V
+    invoke-static {v3}, Lru/vtosters/lite/hooks/DockBarInjector;->inject(Lcom/vtosters/lite/ui/bottomnavigation/BottomNavigationView;)V
 
     .line 11
     invoke-virtual {p0}, Lcom/vk/navigation/NavigationDelegate;->c()Landroid/app/Activity;
@@ -2827,7 +2827,7 @@
 .method private final f(Lcom/vk/core/fragments/FragmentImpl;)Z
     .locals 1
 
-    invoke-static {p1}, Lru/vtosters/lite/ui/fragments/dockbar/DockBarInjector;->isDockOpenAllowed(Lcom/vk/core/fragments/FragmentImpl;)Z
+    invoke-static {p1}, Lru/vtosters/lite/hooks/DockBarInjector;->isDockOpenAllowed(Lcom/vk/core/fragments/FragmentImpl;)Z
 
     move-result v0
 
@@ -3925,7 +3925,7 @@
 .method public a(Lcom/vk/core/fragments/FragmentImpl;)Z
     .locals 1
 
-    invoke-static {p1}, Lru/vtosters/lite/ui/fragments/dockbar/DockBarInjector;->isDockOpenAllowed(Lcom/vk/core/fragments/FragmentImpl;)Z
+    invoke-static {p1}, Lru/vtosters/lite/hooks/DockBarInjector;->isDockOpenAllowed(Lcom/vk/core/fragments/FragmentImpl;)Z
 
     move-result p1
 
@@ -5428,7 +5428,7 @@
 
     if-eqz v2, :cond_0
 
-    invoke-static {v1, v2}, Lru/vtosters/lite/ui/fragments/dockbar/DockBarInjector;->setCounter(ILcom/vtosters/lite/ui/bottomnavigation/BottomNavigationView;)V
+    invoke-static {v1, v2}, Lru/vtosters/lite/hooks/DockBarInjector;->setCounter(ILcom/vtosters/lite/ui/bottomnavigation/BottomNavigationView;)V
 
     goto :goto_0
 

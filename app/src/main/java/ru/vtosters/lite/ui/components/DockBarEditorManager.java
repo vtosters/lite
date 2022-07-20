@@ -1,8 +1,7 @@
-package ru.vtosters.lite.ui.fragments.dockbar;
+package ru.vtosters.lite.ui.components;
 
 import static ru.vtosters.lite.utils.Globals.getContext;
 import static ru.vtosters.lite.utils.Globals.getPreferences;
-import static ru.vtosters.lite.utils.Globals.getString;
 import static ru.vtosters.lite.utils.Preferences.getBoolValue;
 import static ru.vtosters.lite.utils.Preferences.milkshake;
 import static ru.vtosters.lite.utils.Preferences.superapp;
@@ -43,30 +42,26 @@ import java.util.Arrays;
 import java.util.List;
 import java.util.stream.Collectors;
 
+import ru.vtosters.lite.ui.items.DockBarTab;
 import ru.vtosters.lite.utils.Globals;
 
-public class DockBarManager {
+public class DockBarEditorManager {
 
-    public static final int MIN_SELECTED_TABS_LIMIT = 3;
-    public static final int MAX_SELECTED_TABS_LIMIT = 9;
-
-    private static DockBarManager sInstance = new DockBarManager();
+    public static final int MIN_SELECTED_TABS = 3;
+    public static final int MAX_SELECTED_TABS = 9;
 
     private final List<DockBarTab> mSelectedTabs = new ArrayList<>();
     private final List<DockBarTab> mDisabledTabs = new ArrayList<>();
-    private final String[] mCategoryTitles = {
-            getString("dockbar_selected_items"),
-            getString("dockbar_unselected_items")
-    };
 
+    private static DockBarEditorManager sInstance;
 
-    public static DockBarManager getInstance() {
+    public static DockBarEditorManager getInstance() {
         return sInstance == null
-                ? (sInstance = new DockBarManager())
+                ? (sInstance = new DockBarEditorManager())
                 : sInstance;
     }
 
-    public DockBarManager() {
+    public DockBarEditorManager() {
         init();
     }
 
@@ -109,12 +104,17 @@ public class DockBarManager {
     }
 
     public void save() {
-        Globals.getPreferences().edit().putString("dockbar_tabs", mSelectedTabs.stream().map(tab -> tab.tag)
-                .collect(Collectors.joining(","))).commit();
+        Globals.getPreferences().edit().putString("dockbar_tabs", mSelectedTabs.stream()
+                .map(tab -> tab.tag)
+                .collect(Collectors.joining(",")))
+                .commit();
     }
 
     public void reset() {
-        Globals.getPreferences().edit().putString("dockbar_tabs", "tab_news,tab_superapps,tab_messages,tab_friends,tab_profile").commit();
+        Globals.getPreferences()
+                .edit()
+                .putString("dockbar_tabs", "tab_news,tab_superapps,tab_messages,tab_friends,tab_profile")
+                .commit();
     }
 
     public List<DockBarTab> getSelectedTabs() {
@@ -123,10 +123,6 @@ public class DockBarManager {
 
     public List<DockBarTab> getDisabledTabs() {
         return mDisabledTabs;
-    }
-
-    public String[] getCategoryTitles() {
-        return mCategoryTitles;
     }
 
     private DockBarTab getTabByTag(String tag) {

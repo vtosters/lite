@@ -15,9 +15,10 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="bottom|center"
+        android:clipChildren="false"
         android:clipToPadding="false"
         android:duplicateParentState="true"
-        android:paddingBottom="10.0dip">
+        android:paddingBottom="5.0dip">
 
         <TextView
             android:id="@id/smallLabel"

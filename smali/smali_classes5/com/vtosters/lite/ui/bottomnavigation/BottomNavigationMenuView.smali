@@ -59,7 +59,7 @@
     .line 1
     new-instance v0, Landroidx/core/util/Pools$SynchronizedPool;
 
-    invoke-static {}, Lru/vtosters/lite/ui/fragments/dockbar/DockBarInjector;->getItemCount()I
+    invoke-static {}, Lru/vtosters/lite/hooks/DockBarInjector;->getItemCount()I
 
     move-result v1
 
@@ -176,7 +176,7 @@
 
     iput-object p1, p0, Lcom/vtosters/lite/ui/bottomnavigation/BottomNavigationMenuView;->e:Landroid/view/View$OnClickListener;
 
-    invoke-static {}, Lru/vtosters/lite/ui/fragments/dockbar/DockBarInjector;->getItemCount()I
+    invoke-static {}, Lru/vtosters/lite/hooks/DockBarInjector;->getItemCount()I
 
     move-result p1
 

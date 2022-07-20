@@ -26,7 +26,7 @@ import com.vtosters.lite.general.fragments.MaterialPreferenceToolbarFragment;
 import java.util.Arrays;
 
 import ru.vtosters.lite.downloaders.VideoDownloader;
-import ru.vtosters.lite.ui.components.ImagineArrayAdapter;
+import ru.vtosters.lite.ui.adapters.ImagineArrayAdapter;
 
 public class MediaFragment extends MaterialPreferenceToolbarFragment{
     public static void download(Context ctx){

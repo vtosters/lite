@@ -6,7 +6,6 @@ import static ru.vtosters.lite.f0x1d.VTVerifications.isVerified;
 import static ru.vtosters.lite.hooks.DateHook.getLocale;
 import static ru.vtosters.lite.utils.Base64Utils.decode;
 import static ru.vtosters.lite.utils.Globals.getContext;
-import static ru.vtosters.lite.utils.Globals.getUserId;
 import static ru.vtosters.lite.utils.Globals.getUserToken;
 import static ru.vtosters.lite.utils.Preferences.dev;
 import static ru.vtosters.lite.utils.Preferences.friendsblock;
@@ -34,6 +33,7 @@ import okhttp3.Headers;
 import okhttp3.OkHttpClient;
 import okhttp3.Request;
 import okhttp3.Response;
+import ru.vtosters.lite.utils.Globals;
 
 public class JsonInjectors{
     private static final OkHttpClient mClient = new OkHttpClient();
@@ -104,15 +104,28 @@ public class JsonInjectors{
         return orig;
     }
 
-    public static JSONObject superapp(JSONObject json) throws JSONException{
+    public static JSONObject superapp(JSONObject json) throws JSONException {
+        var superApps = Globals.getPreferences().getString("superapp_items", "").split(",");
+        if (superApps.length == 0) return json;
+
         var oldItems = json.optJSONArray("items");
         var newItems = new JSONArray();
         if (oldItems != null) {
             for (int i = 0; i < oldItems.length(); i++) {
                 var item = oldItems.optJSONObject(i);
                 var type = item.optString("type");
-                if (!getBoolValue("superapp_" + type, false))
-                    newItems.put(item);
+                for (String superApp : superApps) {
+                    if (type.equals(superApp))
+                        newItems.put(item);
+                }
+            }
+            for (int i = 0; i < superApps.length; i++) {
+                for (int j = i; j < newItems.length(); j++) {
+                    var item = newItems.optJSONObject(j);
+                    if (superApps[i].equals(item.optString("type")))
+                        newItems.put(j, newItems.getJSONObject(i))
+                                .put(i, item);
+                }
             }
         }
 

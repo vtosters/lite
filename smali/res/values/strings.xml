@@ -5570,6 +5570,7 @@ Warning! It can cause long downloads of user lists if there are a lot of users i
     <string name="dnw">Do not write</string>
     <string name="docknumbers">Counters in dockbar</string>
     <string name="docknumberssum">"Disabling doesn't work in the tablet interface"</string>
+    <string name="dockbar_tab_titles">Show dockbar item titles</string>
     <string name="fcmtokenfixed">Notifications have been restored!</string>
     <string name="fcmtokenget">FCM token received</string>
     <string name="fcmtokenrem">FCM token deleted</string>
@@ -5782,10 +5783,9 @@ May look like a fake leaving the online"</string>
     <string name="other_fix_dynamic_colors">Fix colors on Android 12+</string>
 
     <string name="dockbar_editor">Dockbar editor</string>
-    <string name="dockbar_save">Save</string>
-    <string name="dockbar_reset">Reset</string>
-    <string name="dockbar_selected_items">Selected items</string>
-    <string name="dockbar_unselected_items">Disabled items</string>
+    <string name="superapp_editor">SuperApp editor</string>
+    <string name="selected_items">Selected items</string>
+    <string name="unselected_items">Disabled items</string>
 
     <string name="add_another_account">Add new account</string>
 

@@ -1,16 +1,17 @@
-package ru.vtosters.lite.ui.fragments.dockbar;
+package ru.vtosters.lite.ui.components;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.ItemTouchHelper;
 import androidx.recyclerview.widget.RecyclerView;
 
+import ru.vtosters.lite.ui.adapters.CategorizedAdapter;
 
-public class ItemTouchHelperCallback extends ItemTouchHelper.Callback{
+public class ItemMovingCallback extends ItemTouchHelper.Callback {
 
-    private final DockBarEditorAdapter mAdapter;
+    private final CategorizedAdapter mAdapter;
 
-    public ItemTouchHelperCallback(DockBarEditorAdapter mAdapter){
-        this.mAdapter = mAdapter;
+    public ItemMovingCallback(CategorizedAdapter adapter){
+        this.mAdapter = adapter;
     }
 
     @Override
@@ -25,7 +26,7 @@ public class ItemTouchHelperCallback extends ItemTouchHelper.Callback{
 
     @Override
     public int getMovementFlags(@NonNull RecyclerView recyclerView, RecyclerView.ViewHolder viewHolder){
-        int dragFlags = AdapterHelper.getItemViewType(viewHolder.getAdapterPosition()) != AdapterHelper.CATEGORY_TITLE_TYPE
+        int dragFlags = mAdapter.getItemViewType(viewHolder.getAdapterPosition()) == CategorizedAdapter.MOVING_ITEM
                 ? ItemTouchHelper.UP | ItemTouchHelper.DOWN
                 : 0;
         return makeMovementFlags(dragFlags, 0);
