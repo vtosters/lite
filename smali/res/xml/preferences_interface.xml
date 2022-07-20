@@ -34,7 +34,7 @@
             android:summary="Теперь текст к видео отображается под видео материалом"
             android:title="Редизайн видеопостов" />
     </PreferenceCategory>
-    <PreferenceCategory android:title="@string/vtlother">
+    <PreferenceCategory android:title="Меню">
         <com.vtosters.lite.ui.MaterialSwitchPreference
             android:defaultValue="true"
             android:key="miniapps"
@@ -52,14 +52,16 @@
             android:title="Супераппы" />
         <com.vtosters.lite.ui.MaterialSwitchPreference
             android:defaultValue="false"
-            android:key="friendsblock"
-            android:summary="Скрыть блок рекомендаций друзей в друзьях"
-            android:title="Скрыть друзей" />
-        <com.vtosters.lite.ui.MaterialSwitchPreference
-            android:defaultValue="false"
             android:key="showmenu"
             android:summary="@string/menucuttersum"
             android:title="@string/menucutter" />
+    </PreferenceCategory>
+    <PreferenceCategory android:title="@string/vtlother">
+        <com.vtosters.lite.ui.MaterialSwitchPreference
+            android:defaultValue="false"
+            android:key="friendsblock"
+            android:summary="Скрыть блок рекомендаций друзей в друзьях"
+            android:title="Скрыть друзей" />
         <com.vtosters.lite.ui.MaterialSwitchPreference
             android:defaultValue="false"
             android:key="disableSettingsSumms"
