@@ -31,7 +31,7 @@
 <!--            android:key="dockbar_tab_titles"-->
 <!--            android:title="@string/dockbar_tab_titles" />-->
         <com.vtosters.lite.ui.MaterialSwitchPreference
-            android:defaultValue="false"
+            android:defaultValue="true"
             android:key="dockbar_accent"
             android:title="Использовать акцент для иконок" />
         <com.vtosters.lite.ui.MaterialSwitchPreference

@@ -203,7 +203,7 @@ public class Preferences{
     }
 
     public static boolean dockbar_accent(){
-        return getBoolValue("dockbar_accent", false);
+        return getBoolValue("dockbar_accent", true);
     }
 
     public static boolean milkshake(){
