@@ -20,8 +20,6 @@ public class InterfaceFragment extends MaterialPreferenceToolbarFragment{
         prefs();
     }
 
-    //dockbar_tab_titles
-
     private void prefs(){
         findPreference("stories").setOnPreferenceClickListener(new restart());
         findPreference("swipe").setOnPreferenceClickListener(new restart());
