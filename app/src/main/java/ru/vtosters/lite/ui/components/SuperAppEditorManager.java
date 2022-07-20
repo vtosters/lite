@@ -28,13 +28,13 @@ public class SuperAppEditorManager {
     }
 
     private void init() {
-        var tmp = getPreferences().getString("superapp_items", "promo,miniapps,vkpay_slim,greeting,holiday,weather,sport,games,informer,food,event,music,vk_run");
+        var tmp = getPreferences().getString("superapp_items", "menu,promo,miniapps,vkpay_slim,greeting,holiday,weather,sport,games,informer,food,event,music,vk_run");
         var selectedTags = !tmp.isEmpty() ? tmp.split(",") : new String[0];
         parseSelectedItems(selectedTags);
     }
 
     private void parseSelectedItems(String[] selectedTabsTags) {
-        List<String> allTags = new ArrayList<>(Arrays.asList( "promo", "miniapps", "vkpay_slim", "greeting", "holiday",
+        List<String> allTags = new ArrayList<>(Arrays.asList( "menu", "promo", "miniapps", "vkpay_slim", "greeting", "holiday",
                 "weather", "sport", "games", "informer", "food", "event", "music", "vk_run" ));
         for (String tag : selectedTabsTags) {
             mSelectedItems.add(getItemByTag(tag));
