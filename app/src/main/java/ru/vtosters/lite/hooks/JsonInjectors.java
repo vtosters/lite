@@ -117,7 +117,7 @@ public class JsonInjectors{
         return orig;
     }
 
-    public static JSONObject superapp(JSONObject json) throws JSONException {
+    public static JSONObject superapp(JSONObject json) throws JSONException{
         var superApps = Globals.getPreferences().getString("superapp_items",
                 "menu,promo,miniapps,vkpay_slim,greeting,holiday,weather,sport,games,informer,food,event,music,vk_run").split(",");
         if (superApps.length == 0) return json;
@@ -158,7 +158,7 @@ public class JsonInjectors{
         return json;
     }
 
-    public static JSONObject storiesads(JSONObject json, boolean isDeleteFix) throws JSONException {
+    public static JSONObject storiesads(JSONObject json, boolean isDeleteFix) throws JSONException{
         if (!adsstories()) {
             return json;
         }
@@ -194,6 +194,7 @@ public class JsonInjectors{
 
     private static void parseStoriesItem(JSONObject item){
         var stories = item.optJSONArray("stories");
+        var newStories = new JSONArray();
 
         if (stories == null) return;
 
@@ -221,6 +222,9 @@ public class JsonInjectors{
     }
 
     public static JSONArray newsfeedadtest(JSONArray items) throws JSONException{
+        if (!getBoolValue("newadblock", true)) return items;
+        var newItems = new JSONArray();
+
         for (int j = 0; j < items.length(); j++) {
             var list = items.optJSONObject(j);
             var type = list.optString("type");
@@ -241,7 +245,7 @@ public class JsonInjectors{
 
             var isFriendsRecommendations = type.contains("friends_recommendations") || type.contains("user_rec") || type.contains("friends_recomm");
 
-            var isGroupAds = list.optBoolean("marked_as_ads");
+            var isGroupAds = list.optInt("marked_as_ads") == 1;
 
             var isRecomsGroup = type.contains("recommended_groups");
 
@@ -257,25 +261,25 @@ public class JsonInjectors{
 
             var reposts = injectFiltersReposts(list);
 
-            if (isAds && ads()
-                    || isAuthorRecommendations && authorsrecomm()
-                    || isPostRecommendations && postsrecomm()
-                    || isFriendsRecommendations && friendsrecomm()
-                    || isGroupAds && adsgroup()
-                    || isRecomsGroup && authorsrecomm()
-                    || isMusicBlock && authorsrecomm()
-                    || isNewsBlock && ads()
+            if ((isAds && ads())
+                    || (isAuthorRecommendations && authorsrecomm())
+                    || (isPostRecommendations && postsrecomm())
+                    || (isFriendsRecommendations && friendsrecomm())
+                    || (isGroupAds && adsgroup())
+                    || (isRecomsGroup && authorsrecomm())
+                    || (isMusicBlock && authorsrecomm())
+                    || (isNewsBlock && ads())
                     || isBadNews
                     || isCopyrightBlocked
                     || isCaptionBlocked
                     || reposts) {
-                items.remove(j);
-
                 if (dev()) Log.d("NewsfeedAdBlockV2", "Removed post " + list.optInt("post_id") + " from feed, type: " + type + ", isAds: " + isAds + ", marked as ads: " + isGroupAds + ", is bad news: " + isBadNews + ", is copyright blocked: " + isCopyrightBlocked + ", is caption blocked: " + isCaptionBlocked + ", repost blocked: " + reposts + ", is author recommendations: " + isAuthorRecommendations + ", is post recommendations: " + isPostRecommendations + ", is friends recommendations: " + isFriendsRecommendations + ", is music block: " + isMusicBlock + ", is news block: " + isNewsBlock);
+            } else {
+                newItems.put(list);
             }
         }
 
-        return items;
+        return newItems;
     }
 
     public static JSONObject music(JSONObject json) throws JSONException{
@@ -403,11 +407,11 @@ public class JsonInjectors{
                     skip = friendsblock();
                 }
 
-                if (buttons.contains("friends_birthdays_list")){
+                if (buttons.contains("friends_birthdays_list")) {
                     hasBirthday = true;
                 }
 
-                if (name.contains("separator") && hasBirthday){
+                if (name.contains("separator") && hasBirthday) {
                     skip = false;
                     hasBirthday = false;
                 }
