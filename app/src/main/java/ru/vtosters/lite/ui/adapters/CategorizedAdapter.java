@@ -149,15 +149,10 @@ public class CategorizedAdapter extends RecyclerView.Adapter<CategorizedAdapter.
 
     @Override
     public void onBindViewHolder(@NonNull CategorizedViewHolder viewHolder, int i) {
-        try {
-            Log.d("TAG", i + "");
-            if (getItemViewType(i) == MOVING_ITEM)
-                mBinder.bind(viewHolder, i);
-            else
-                viewHolder.bindCategory(i == 0);
-        } catch (Exception e) {
-            Log.d("TAG", e + "");
-        }
+        if (getItemViewType(i) == MOVING_ITEM)
+            mBinder.bind(viewHolder, i);
+        else
+            viewHolder.bindCategory(i == 0);
     }
 
     @Override
@@ -171,13 +166,11 @@ public class CategorizedAdapter extends RecyclerView.Adapter<CategorizedAdapter.
             Object curr;
             if (getTabType(index) == SELECTED_STATE) {
                 curr = mSelectedItems.get(index - 1);
-                if (!mUnmovedItems.contains(curr)) return;
                 mSelectedItems.remove(curr);
                 mDisabledItems.add(0, curr);
                 notifyItemMoved(index, mSelectedItems.size() + 1);
             } else {
                 curr = mDisabledItems.get(index - mSelectedItems.size() - 2);
-                if (!mUnmovedItems.contains(curr)) return;
                 mDisabledItems.remove(curr);
                 mSelectedItems.add(0, curr);
                 notifyItemRemoved(index);
@@ -197,8 +190,6 @@ public class CategorizedAdapter extends RecyclerView.Adapter<CategorizedAdapter.
             if (getTabType(toPosition) == DISABLED_STATE && min)
                 return false;
             curr = mSelectedItems.get(fromPosition - 1);
-            if (mUnmovedItems.contains(curr))
-                return false;
             if (getItemViewType(toPosition) == CATEGORY_TITLE) {
                 if (min)
                     return false;
@@ -212,8 +203,6 @@ public class CategorizedAdapter extends RecyclerView.Adapter<CategorizedAdapter.
             if (getTabType(toPosition) == SELECTED_STATE && max)
                 return false;
             curr = mDisabledItems.get(fromPosition - mSelectedItems.size() - 2);
-            if (mUnmovedItems.contains(curr))
-                return false;
             if (getItemViewType(toPosition) == CATEGORY_TITLE) {
                 if (max)
                     return false;
