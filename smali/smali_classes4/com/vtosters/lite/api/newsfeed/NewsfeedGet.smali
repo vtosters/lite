@@ -745,6 +745,10 @@
     .line 37
     :cond_2
     :goto_2
+    invoke-static {v1}, Lru/vtosters/lite/hooks/JsonInjectors;->newsfeedadtest(Lorg/json/JSONArray;)Lorg/json/JSONArray;
+
+    move-result-object v1
+
     invoke-virtual {v1}, Lorg/json/JSONArray;->length()I
 
     move-result v2

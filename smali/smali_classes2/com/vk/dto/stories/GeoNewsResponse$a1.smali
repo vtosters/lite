@@ -36,7 +36,7 @@
 
 # virtual methods
 .method public final a(Lorg/json/JSONObject;Ljava/lang/String;)Lcom/vk/dto/stories/GeoNewsResponse1;
-    .locals 15
+    .locals 16
 
     move-object/from16 v1, p1
 
@@ -235,6 +235,10 @@
 
     .line 20
     :cond_5
+    invoke-static {v11}, Lru/vtosters/lite/hooks/JsonInjectors;->newsfeedadtest(Lorg/json/JSONArray;)Lorg/json/JSONArray;
+
+    move-result-object v11
+
     invoke-virtual {v11}, Lorg/json/JSONArray;->length()I
 
     move-result v12
@@ -246,6 +250,19 @@
     invoke-virtual {v11, v10}, Lorg/json/JSONArray;->getJSONObject(I)Lorg/json/JSONObject;
 
     move-result-object v0
+
+    invoke-static {v0}, Lru/vtosters/lite/hooks/NewsfeedHook;->injectFilters(Lorg/json/JSONObject;)Z
+
+    move-result v15
+
+    if-nez v15, :cond_99
+
+    add-int/lit8 v10, v10, 0x1
+
+    goto :goto_5
+
+    :cond_99
+
 
     invoke-static {v0, v6}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 

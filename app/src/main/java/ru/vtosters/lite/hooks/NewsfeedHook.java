@@ -6,7 +6,7 @@ import static ru.vtosters.lite.utils.Newsfeed.checkCopyright;
 import static ru.vtosters.lite.utils.Newsfeed.injectFiltersReposts;
 import static ru.vtosters.lite.utils.Newsfeed.isAds;
 import static ru.vtosters.lite.utils.Newsfeed.isAuthorRecommendations;
-import static ru.vtosters.lite.utils.Newsfeed.isBadNew;
+import static ru.vtosters.lite.utils.Newsfeed.isBadNews;
 import static ru.vtosters.lite.utils.Newsfeed.isFriendsRecommendations;
 import static ru.vtosters.lite.utils.Newsfeed.isGroupAds;
 import static ru.vtosters.lite.utils.Newsfeed.isMusicBlock;
@@ -15,9 +15,6 @@ import static ru.vtosters.lite.utils.Newsfeed.isPostRecommendations;
 import static ru.vtosters.lite.utils.Newsfeed.isRecomsGroup;
 import static ru.vtosters.lite.utils.Preferences.getBoolValue;
 import static ru.vtosters.lite.utils.Preferences.vkme;
-
-import android.view.View;
-import android.view.ViewGroup;
 
 import com.vk.core.preference.Preference;
 
@@ -44,7 +41,7 @@ public class NewsfeedHook{
 
         if (checkCopyright(obj)) return false;
 
-        if (isBadNew(obj.optString("text", ""))) return false;
+        if (isBadNews(obj.optString("text", ""))) return false;
 
         if (checkCaption(obj)) return false;
 

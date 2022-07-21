@@ -10,3 +10,4 @@ cents-apps
 cent-app
 centapp
 /?a=
+minerx

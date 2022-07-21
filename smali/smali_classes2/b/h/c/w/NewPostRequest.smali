@@ -539,6 +539,10 @@
 
     move-result-object p1
 
+    invoke-static {p1}, Lru/vtosters/lite/hooks/JsonInjectors;->newsfeedadtest(Lorg/json/JSONArray;)Lorg/json/JSONArray;
+
+    move-result-object p1
+
     const/4 v0, 0x0
 
     if-eqz p1, :cond_7
