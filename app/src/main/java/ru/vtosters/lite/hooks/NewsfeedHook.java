@@ -26,6 +26,8 @@ import java.util.List;
 
 public class NewsfeedHook{
     public static boolean injectFilters(JSONObject obj) throws JSONException{
+        if (getBoolValue("newadblock", true)) return true;
+
         var optString = obj.optString("type", "");
         if (isAds(optString) || isAuthorRecommendations(optString) || isPostRecommendations(optString) || isFriendsRecommendations(optString) || isRecomsGroup(optString) || isMusicBlock(optString) || isNewsBlock(optString)) {
             return false;

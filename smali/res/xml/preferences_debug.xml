@@ -23,6 +23,10 @@
             android:summary="@string/messages_interface_calls_summary"
             android:title="@string/vtlcalls" />
         <com.vtosters.lite.ui.MaterialSwitchPreference
+            android:defaultValue="true"
+            android:key="newadblock"
+            android:title="Использовать новый AdBlock (Beta)" />
+        <com.vtosters.lite.ui.MaterialSwitchPreference
             android:defaultValue="false"
             android:key="vksans"
             android:title="@string/debug_experimental_vk_sans_font" />
