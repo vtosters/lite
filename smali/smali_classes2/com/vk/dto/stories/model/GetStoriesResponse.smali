@@ -205,8 +205,202 @@
     return-void
 .end method
 
+.method public constructor <init>(Lorg/json/JSONObject;Z)V
+    .locals 7
+
+    invoke-static {p1, p2}, Lru/vtosters/lite/hooks/JsonInjectors;->storiesads(Lorg/json/JSONObject;Z)Lorg/json/JSONObject;
+
+    move-result-object p1
+
+    .line 16
+    invoke-direct {p0}, Lcom/vk/core/serialize/Serializer$StreamParcelableAdapter;-><init>()V
+
+    .line 17
+    new-instance v0, Ljava/util/ArrayList;
+
+    invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
+
+    iput-object v0, p0, Lcom/vk/dto/stories/model/GetStoriesResponse;->b:Ljava/util/ArrayList;
+
+    const/4 v0, 0x0
+
+    const/4 v1, 0x0
+
+    if-nez p1, :cond_0
+
+    .line 18
+    iput v0, p0, Lcom/vk/dto/stories/model/GetStoriesResponse;->a:I
+
+    .line 19
+    iput-object v1, p0, Lcom/vk/dto/stories/model/GetStoriesResponse;->c:Lcom/vk/dto/stories/model/StoriesAds;
+
+    goto/16 :goto_3
+
+    :cond_0
+    const-string v2, "need_upload_screen"
+
+    .line 20
+    invoke-virtual {p1, v2, v0}, Lorg/json/JSONObject;->optBoolean(Ljava/lang/String;Z)Z
+
+    move-result v2
+
+    const-string v3, "count"
+
+    .line 21
+    invoke-virtual {p1, v3}, Lorg/json/JSONObject;->optInt(Ljava/lang/String;)I
+
+    move-result v3
+
+    if-nez v3, :cond_1
+
+    goto :goto_0
+
+    :cond_1
+    move v0, v2
+
+    :goto_0
+    if-eqz v0, :cond_2
+
+    .line 22
+    iget v2, p0, Lcom/vk/dto/stories/model/GetStoriesResponse;->d:I
+
+    add-int/lit8 v2, v2, 0x1
+
+    iput v2, p0, Lcom/vk/dto/stories/model/GetStoriesResponse;->d:I
+
+    :cond_2
+    add-int/2addr v3, v0
+
+    .line 23
+    iput v3, p0, Lcom/vk/dto/stories/model/GetStoriesResponse;->a:I
+
+    .line 24
+    new-instance v2, Landroid/util/SparseArray;
+
+    invoke-direct {v2}, Landroid/util/SparseArray;-><init>()V
+
+    const-string v3, "profiles"
+
+    .line 25
+    invoke-virtual {p1, v3}, Lorg/json/JSONObject;->optJSONArray(Ljava/lang/String;)Lorg/json/JSONArray;
+
+    move-result-object v3
+
+    invoke-direct {p0, v2, v3}, Lcom/vk/dto/stories/model/GetStoriesResponse;->b(Landroid/util/SparseArray;Lorg/json/JSONArray;)V
+
+    .line 26
+    new-instance v3, Landroid/util/SparseArray;
+
+    invoke-direct {v3}, Landroid/util/SparseArray;-><init>()V
+
+    const-string v4, "groups"
+
+    .line 27
+    invoke-virtual {p1, v4}, Lorg/json/JSONObject;->optJSONArray(Ljava/lang/String;)Lorg/json/JSONArray;
+
+    move-result-object v4
+
+    invoke-direct {p0, v3, v4}, Lcom/vk/dto/stories/model/GetStoriesResponse;->a(Landroid/util/SparseArray;Lorg/json/JSONArray;)V
+
+    const-string v4, "items"
+
+    .line 28
+    invoke-virtual {p1, v4}, Lorg/json/JSONObject;->optJSONArray(Ljava/lang/String;)Lorg/json/JSONArray;
+
+    move-result-object v5
+
+    iget-object v6, p0, Lcom/vk/dto/stories/model/GetStoriesResponse;->b:Ljava/util/ArrayList;
+
+    invoke-static {v5, v6, v2, v3}, Lcom/vk/dto/stories/model/GetStoriesResponse;->a(Lorg/json/JSONArray;Ljava/util/Collection;Landroid/util/SparseArray;Landroid/util/SparseArray;)V
+
+    invoke-static {}, Lru/vtosters/lite/hooks/StoriesHook;->ads()Ljava/lang/String;
+
+    move-result-object v5
+
+    .line 29
+    invoke-virtual {p1, v5}, Lorg/json/JSONObject;->optJSONObject(Ljava/lang/String;)Lorg/json/JSONObject;
+
+    move-result-object p1
+
+    if-eqz p1, :cond_4
+
+    .line 30
+    sget-object v5, Lcom/vk/dto/stories/model/StoriesAds$Settings;->h:Lcom/vk/dto/stories/model/StoriesAds$Settings$a;
+
+    const-string v6, "settings"
+
+    invoke-virtual {p1, v6}, Lorg/json/JSONObject;->optJSONObject(Ljava/lang/String;)Lorg/json/JSONObject;
+
+    move-result-object v6
+
+    invoke-virtual {v5, v6}, Lcom/vk/dto/stories/model/StoriesAds$Settings$a;->a(Lorg/json/JSONObject;)Lcom/vk/dto/stories/model/StoriesAds$Settings;
+
+    move-result-object v5
+
+    .line 31
+    new-instance v6, Ljava/util/ArrayList;
+
+    invoke-direct {v6}, Ljava/util/ArrayList;-><init>()V
+
+    .line 32
+    invoke-virtual {p1, v4}, Lorg/json/JSONObject;->optJSONArray(Ljava/lang/String;)Lorg/json/JSONArray;
+
+    move-result-object p1
+
+    invoke-static {p1, v6, v2, v3}, Lcom/vk/dto/stories/model/GetStoriesResponse;->a(Lorg/json/JSONArray;Ljava/util/Collection;Landroid/util/SparseArray;Landroid/util/SparseArray;)V
+
+    if-eqz v5, :cond_3
+
+    .line 33
+    new-instance p1, Lcom/vk/dto/stories/model/StoriesAds;
+
+    invoke-direct {p1, v5, v6}, Lcom/vk/dto/stories/model/StoriesAds;-><init>(Lcom/vk/dto/stories/model/StoriesAds$Settings;Ljava/util/List;)V
+
+    goto :goto_1
+
+    :cond_3
+    move-object p1, v1
+
+    :goto_1
+    iput-object p1, p0, Lcom/vk/dto/stories/model/GetStoriesResponse;->c:Lcom/vk/dto/stories/model/StoriesAds;
+
+    goto :goto_2
+
+    .line 34
+    :cond_4
+    iput-object v1, p0, Lcom/vk/dto/stories/model/GetStoriesResponse;->c:Lcom/vk/dto/stories/model/StoriesAds;
+
+    :goto_2
+    if-eqz v0, :cond_5
+
+    .line 35
+    new-instance p1, Lcom/vk/dto/stories/model/PublishStoryEntry;
+
+    invoke-direct {p1}, Lcom/vk/dto/stories/model/PublishStoryEntry;-><init>()V
+
+    .line 36
+    new-instance v0, Lcom/vk/dto/stories/model/PublishStoryContainer;
+
+    invoke-direct {v0, v1, p1}, Lcom/vk/dto/stories/model/PublishStoryContainer;-><init>(Lcom/vk/dto/stories/model/StoryOwner;Lcom/vk/dto/stories/model/PublishStoryEntry;)V
+
+    .line 37
+    iget-object p1, p0, Lcom/vk/dto/stories/model/GetStoriesResponse;->b:Ljava/util/ArrayList;
+
+    invoke-virtual {p1, v0}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+
+    :cond_5
+    :goto_3
+    return-void
+.end method
+
 .method public constructor <init>(Lorg/json/JSONObject;)V
     .locals 7
+
+    const v0, 0x0
+
+    invoke-static {p1, v0}, Lru/vtosters/lite/hooks/JsonInjectors;->storiesads(Lorg/json/JSONObject;Z)Lorg/json/JSONObject;
+
+    move-result-object p1
 
     .line 16
     invoke-direct {p0}, Lcom/vk/core/serialize/Serializer$StreamParcelableAdapter;-><init>()V

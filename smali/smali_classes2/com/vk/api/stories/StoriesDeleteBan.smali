@@ -40,7 +40,7 @@
 
 # virtual methods
 .method public a(Lorg/json/JSONObject;)Lcom/vk/dto/stories/model/GetStoriesResponse;
-    .locals 1
+    .locals 2
     .param p1    # Lorg/json/JSONObject;
         .annotation build Landroidx/annotation/NonNull;
         .end annotation
@@ -57,7 +57,9 @@
     .line 3
     new-instance v0, Lcom/vk/dto/stories/model/GetStoriesResponse;
 
-    invoke-direct {v0, p1}, Lcom/vk/dto/stories/model/GetStoriesResponse;-><init>(Lorg/json/JSONObject;)V
+    const v1, 0x1
+
+    invoke-direct {v0, p1, v1}, Lcom/vk/dto/stories/model/GetStoriesResponse;-><init>(Lorg/json/JSONObject;Z)V
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 

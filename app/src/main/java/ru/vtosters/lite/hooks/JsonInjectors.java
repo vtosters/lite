@@ -8,6 +8,7 @@ import static ru.vtosters.lite.utils.Base64Utils.decode;
 import static ru.vtosters.lite.utils.Globals.getContext;
 import static ru.vtosters.lite.utils.Globals.getPrefsValue;
 import static ru.vtosters.lite.utils.Globals.getUserToken;
+import static ru.vtosters.lite.utils.Preferences.adsstories;
 import static ru.vtosters.lite.utils.Preferences.dev;
 import static ru.vtosters.lite.utils.Preferences.friendsblock;
 import static ru.vtosters.lite.utils.Preferences.getBoolValue;
@@ -147,6 +148,58 @@ public class JsonInjectors{
         if (oldItems != null) {
             if (oldItems.optJSONObject(0).optString("url").contains("?section=recent")) {
                 json.remove("links");
+            }
+        }
+
+        return json;
+    }
+
+    public static JSONObject storiesads(JSONObject json, boolean isDeleteFix) throws JSONException{
+        var oldItems = json.optJSONArray("items");
+        var newItems2 = new JSONArray();
+
+        if (!adsstories()) {
+            return json;
+        }
+
+        if (json.has("ads")) {
+            if (isDeleteFix) {
+                var ad = json.optJSONObject("ads");
+                ad.put("stories_interval", 0);
+                ad.put("authors_interval", 0);
+                ad.put("time_interval", 0);
+                ad.put("stories_init", 0);
+                ad.put("authors_init", 0);
+                ad.put("time_init", 0);
+                Log.d("StoriesAds", "Set ads at zero val");
+            } else {
+                json.remove("ads");
+                Log.d("StoriesAds", "Removed ads");
+            }
+        }
+
+        if (json.has("items")) {
+            for (int i = 0; i < oldItems.length(); i++) {
+                var item = oldItems.optJSONObject(i).optJSONArray("stories");
+                if (item != null) {
+                    for (int j = 0; j < item.length(); j++) {
+                        var item2 = item.optJSONObject(j);
+                        var type = item2.optBoolean("is_ads");
+                        var promo = item2.optBoolean("is_promo");
+
+                        if (!type && !promo) {
+                            newItems2.put(item.optJSONObject(j));
+                        } else {
+                            Log.d("StoriesAds", "Fetched ad " + item2.optString("id"));
+                        }
+                    }
+
+                    try {
+                        oldItems.optJSONObject(i).put("stories", newItems2);
+                    } catch (JSONException e) {
+                        Log.e("StoriesAds", e.getMessage());
+                    }
+                }
             }
         }
 
