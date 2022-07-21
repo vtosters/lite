@@ -544,6 +544,10 @@
 
     :cond_2
     :goto_0
+    invoke-static {v0}, Lru/vtosters/lite/hooks/NewsfeedHook;->hideElement(Ljava/util/ArrayList;)Ljava/util/List;
+
+    move-result-object v0
+
     return-object v0
 
     .line 9

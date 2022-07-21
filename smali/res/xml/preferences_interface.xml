@@ -10,6 +10,11 @@
             android:defaultValue="true"
             android:key="swipe"
             android:title="@string/interfacenewsfeedswipe" />
+        <com.vtosters.lite.ui.MaterialSwitchPreference
+            android:defaultValue="true"
+            android:key="whatsnew"
+            android:summary="Блок написания поста в ленте"
+            android:title="Показывать блок поста" />
     </PreferenceCategory>
     <PreferenceCategory android:title="@string/interfaceglobal">
         <com.vtosters.lite.ui.SummaryListPreference
