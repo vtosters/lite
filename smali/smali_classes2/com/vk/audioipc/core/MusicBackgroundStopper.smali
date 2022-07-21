@@ -230,7 +230,7 @@
 
     invoke-interface {v0, v1}, Lcom/vk/music/restriction/MusicRestrictionManager;->a(Lcom/vk/music/common/MusicPlaybackLaunchContext;)V
 
-    const/4 v0, 0x0
+    const/4 v0, 0x1
 
     .line 6
     iput-boolean v0, p0, Lcom/vk/audioipc/core/MusicBackgroundStopper;->c:Z

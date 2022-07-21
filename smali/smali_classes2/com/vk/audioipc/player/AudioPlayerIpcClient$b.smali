@@ -107,6 +107,8 @@
 .method public b(Lcom/vk/audioipc/core/AudioPlayer;)V
     .locals 4
 
+    return-void
+
     .line 1
     iget-object p1, p0, Lcom/vk/audioipc/player/AudioPlayerIpcClient$b;->a:Lcom/vk/audioipc/player/AudioPlayerIpcClient;
 

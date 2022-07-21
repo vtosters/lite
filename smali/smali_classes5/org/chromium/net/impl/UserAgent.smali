@@ -36,6 +36,10 @@
 
     move-result-object v1
 
+    const-string v1, "com.vkontakte.android"
+
+    move-result-object v1
+
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     const/16 v1, 0x2f
@@ -161,6 +165,10 @@
 
     .line 2
     invoke-virtual {p0}, Landroid/content/Context;->getPackageName()Ljava/lang/String;
+
+    move-result-object p0
+
+    const-string p0, "com.vkontakte.android"
 
     move-result-object p0
 

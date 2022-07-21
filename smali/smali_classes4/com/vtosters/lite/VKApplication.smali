@@ -1314,7 +1314,7 @@
 
     move-result-object v3
 
-    const/4 v4, 0x0
+    const/4 v4, 0x1
 
     invoke-direct {v1, v3, v4}, Lcom/vk/music/notifications/restriction/MusicRestrictionModelImpl;-><init>(Lcom/vk/music/restriction/MusicRestrictionManager;Z)V
 
