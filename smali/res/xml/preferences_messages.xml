@@ -9,6 +9,11 @@
             android:key="voice"
             android:summary="@string/vtlvoicesummary"
             android:title="@string/vtlvoice" />
+        <com.vtosters.lite.ui.MaterialSwitchPreference
+            android:defaultValue="false"
+            android:key="convBarRecomm"
+            android:summary="Скрыть блок рекомендаций добавления в друзья в сообщениях и других советов"
+            android:title="Скрыть рекомендации" />
     </PreferenceCategory>
     <PreferenceCategory android:title="VK Me">
         <com.vtosters.lite.ui.MaterialSwitchPreference

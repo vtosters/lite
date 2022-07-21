@@ -58,7 +58,6 @@ public class JsonInjectors{
     }
 
     public static JSONObject convBar(JSONObject orig) throws JSONException{
-        if (!dev()) return orig.optJSONObject("conversation_bar"); // TODO Make it server-side
         var peerid = Objects.requireNonNull(orig.optJSONObject("peer")).optInt("id");
 
         var pic = "https://image.pngaaa.com/641/326641-middle.png"; // can be null
@@ -82,7 +81,13 @@ public class JsonInjectors{
         if (isVerified(peerid)) text = "Я купил VTosters Premium";
         if (isPrometheus(peerid)) text = "Я купил VTosters Premium Gold Prime Pro Plus";
         if (isDeveloper(peerid)) text = "Я создал говно";
-        if (!isVerified(peerid) || text.equals("")) return orig.optJSONObject("conversation_bar");
+        if (!isVerified(peerid) || text.equals("")) {
+            if (getBoolValue("convBarRecomm", false)) {
+                return null;
+            } else {
+                return orig.optJSONObject("conversation_bar");
+            }
+        }
 
         // JSONObject("{\"name\":\"group_admin_welcome\",\"text\":\"" + textverif + "\",\"buttons\":[],\"icon\":\"" + pic + "\"}");
         return new JSONObject(decode("eyJuYW1lIjoiZ3JvdXBfYWRtaW5fd2VsY29tZSIsInRleHQiOiI=")
