@@ -163,44 +163,39 @@ public class JsonInjectors{
                         .put("stories_init", 0)
                         .put("authors_init", 0)
                         .put("time_init", 0);
-                Log.d("StoriesAds", "Set ads at zero val");
+                Log.d("StoriesAds", "Set ads settings at zero values");
             } else {
                 json.remove("ads");
-                Log.d("StoriesAds", "Removed ads");
+                Log.d("StoriesAds", "Removed ads block");
             }
         }
 
-        if (!json.has("items"))
-            return json;
+        if (!json.has("items")) return json;
 
         var items = json.optJSONArray("items");
         for (int i = 0; i < items.length(); i++) {
             var item = items.optJSONObject(i);
-            if (item != null)
+            if (item != null) {
                 parseStoriesItem(item);
+            }
         }
 
         return json;
     }
 
-    private static void parseStoriesItem(JSONObject item) throws JSONException {
+    private static void parseStoriesItem(JSONObject item){
         var stories = item.optJSONArray("stories");
-        if (stories == null)
-            return;
 
-        var newStories = new JSONArray();
+        if (stories == null) return;
+
         for (int j = 0; j < stories.length(); j++) {
             var story = stories.optJSONObject(j);
 
-            if (story.optBoolean("is_ads")
-                    || story.optBoolean("is_promo"))
-                newStories.put(stories.optJSONObject(j));
-            else
-                Log.d("StoriesAds", "Fetched ad " + story.optString("id"));
+            if (story.optBoolean("is_ads") || story.optBoolean("is_promo")) {
+                stories.remove(j);
+                Log.d("StoriesAds", "Fetched ad, owner id " + story.optString("owner_id") + ", caption " + story.optString("caption"));
+            }
         }
-
-        if (newStories.length() > 0)
-            item.put("stories", newStories);
     }
 
     public static JSONObject music(JSONObject json) throws JSONException{
