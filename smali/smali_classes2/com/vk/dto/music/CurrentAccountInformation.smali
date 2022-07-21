@@ -24,9 +24,8 @@
 .method public final a()Z
     .locals 1
 
-    .line 1
-    iget-boolean v0, p0, Lcom/vk/dto/music/CurrentAccountInformation;->a:Z
-
+    const v0, 0x1
+    
     return v0
 .end method
 

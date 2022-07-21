@@ -555,18 +555,7 @@
     const-string v2, "device_info"
 
     invoke-virtual {p0, v2, v1}, Lcom/vk/api/base/ApiRequest;->c(Ljava/lang/String;Ljava/lang/String;)Lcom/vk/api/base/ApiRequest;
-
-    .line 51
-    sget-object v1, Lcom/vk/core/util/AppContextHolder;->a:Landroid/content/Context;
-
-    invoke-virtual {v1}, Landroid/content/Context;->getPackageName()Ljava/lang/String;
-
-    move-result-object v1
-
-    const-string v2, "app_package_id"
-
-    invoke-virtual {p0, v2, v1}, Lcom/vk/api/base/ApiRequest;->c(Ljava/lang/String;Ljava/lang/String;)Lcom/vk/api/base/ApiRequest;
-
+    
     if-eqz p12, :cond_16
 
     .line 52
