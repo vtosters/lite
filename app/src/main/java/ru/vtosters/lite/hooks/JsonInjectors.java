@@ -8,11 +8,20 @@ import static ru.vtosters.lite.utils.Base64Utils.decode;
 import static ru.vtosters.lite.utils.Globals.getContext;
 import static ru.vtosters.lite.utils.Globals.getPrefsValue;
 import static ru.vtosters.lite.utils.Globals.getUserToken;
+import static ru.vtosters.lite.utils.Newsfeed.checkCaption;
+import static ru.vtosters.lite.utils.Newsfeed.checkCopyright;
+import static ru.vtosters.lite.utils.Newsfeed.injectFiltersReposts;
+import static ru.vtosters.lite.utils.Newsfeed.isBadNews;
+import static ru.vtosters.lite.utils.Preferences.ads;
+import static ru.vtosters.lite.utils.Preferences.adsgroup;
 import static ru.vtosters.lite.utils.Preferences.adsstories;
+import static ru.vtosters.lite.utils.Preferences.authorsrecomm;
 import static ru.vtosters.lite.utils.Preferences.dev;
 import static ru.vtosters.lite.utils.Preferences.friendsblock;
+import static ru.vtosters.lite.utils.Preferences.friendsrecomm;
 import static ru.vtosters.lite.utils.Preferences.getBoolValue;
 import static ru.vtosters.lite.utils.Preferences.hasVerification;
+import static ru.vtosters.lite.utils.Preferences.postsrecomm;
 
 import android.util.Log;
 
@@ -205,6 +214,64 @@ public class JsonInjectors{
 
             if (!name.equals("kpop") && !name.equals("foryou") && !name.equals("qazaqstan")) {
                 list.put("is_hidden", false).put("is_unavailable", false);
+            }
+        }
+
+        return items;
+    }
+
+    public static JSONArray newsfeedadtest(JSONArray items) throws JSONException{
+        for (int j = 0; j < items.length(); j++) {
+            var list = items.optJSONObject(j);
+            var type = list.optString("type");
+
+            var isAds = list.has("ads")
+                    || type.contains("ads")
+                    || type.contains("carousel")
+                    || type.contains("app_video")
+                    || type.contains("html5_ad")
+                    || type.contains("app_slider")
+                    || type.contains("promo_button")
+                    || type.contains("ads_easy_promote")
+                    || type.contains("app_widget");
+
+            var isAuthorRecommendations = type.contains("authors_rec");
+
+            var isPostRecommendations = type.contains("inline_user_rec") || type.contains("live_recommended");
+
+            var isFriendsRecommendations = type.contains("friends_recommendations") || type.contains("user_rec") || type.contains("friends_recomm");
+
+            var isGroupAds = list.optBoolean("marked_as_ads");
+
+            var isRecomsGroup = type.contains("recommended_groups");
+
+            var isMusicBlock = type.contains("recommended_audios") || type.contains("recommended_artists") || type.contains("recommended_playlists");
+
+            var isNewsBlock = type.contains("tags_suggestions");
+
+            var isBadNews = isBadNews(list.optString("text"));
+
+            var isCopyrightBlocked = checkCopyright(list);
+
+            var isCaptionBlocked = checkCaption(list);
+
+            var reposts = injectFiltersReposts(list);
+
+            if (isAds && ads()
+                    || isAuthorRecommendations && authorsrecomm()
+                    || isPostRecommendations && postsrecomm()
+                    || isFriendsRecommendations && friendsrecomm()
+                    || isGroupAds && adsgroup()
+                    || isRecomsGroup && authorsrecomm()
+                    || isMusicBlock && authorsrecomm()
+                    || isNewsBlock && ads()
+                    || isBadNews
+                    || isCopyrightBlocked
+                    || isCaptionBlocked
+                    || reposts) {
+                items.remove(j);
+
+                if (dev()) Log.d("NewsfeedAdBlockV2", "Removed post " + list.optInt("post_id") + " from feed, type: " + type + ", isAds: " + isAds + ", marked as ads: " + isGroupAds + ", is bad news: " + isBadNews + ", is copyright blocked: " + isCopyrightBlocked + ", is caption blocked: " + isCaptionBlocked + ", repost blocked: " + reposts + ", is author recommendations: " + isAuthorRecommendations + ", is post recommendations: " + isPostRecommendations + ", is friends recommendations: " + isFriendsRecommendations + ", is music block: " + isMusicBlock + ", is news block: " + isNewsBlock);
             }
         }
 

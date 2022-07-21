@@ -139,6 +139,10 @@
 
     move-result-object v1
 
+    invoke-static {v1}, Lru/vtosters/lite/hooks/JsonInjectors;->newsfeedadtest(Lorg/json/JSONArray;)Lorg/json/JSONArray;
+
+    move-result-object v1
+
     const-string v2, "profiles"
 
     .line 2

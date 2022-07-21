@@ -2,6 +2,7 @@ package ru.vtosters.lite.utils;
 
 import static ru.vtosters.lite.utils.Globals.getContext;
 import static ru.vtosters.lite.utils.Globals.getPrefsValue;
+import static ru.vtosters.lite.utils.Preferences.*;
 import static ru.vtosters.lite.utils.Preferences.adsgroup;
 import static ru.vtosters.lite.utils.Preferences.authorsrecomm;
 import static ru.vtosters.lite.utils.Preferences.copyright_post;
@@ -82,7 +83,7 @@ public class Newsfeed{
             }
         }
 
-        return isBadNew(Array);
+        return isBadNews(Array);
     } // get repost information and inject our text filters
 
     public static boolean checkCopyright(JSONObject json) throws JSONException{
@@ -109,14 +110,14 @@ public class Newsfeed{
     }
 
     public static boolean isNewsBlock(String src){
-        return (src.equals("tags_suggestions")) && Preferences.ads();
+        return (src.equals("tags_suggestions")) && ads();
     }
 
     public static String getAllFilters(){
         return getPrefsValue("spamfilters");
     }
 
-    public static boolean isBadNew(String text){
+    public static boolean isBadNews(String text){
         for (String filter : mFilters) {
             if (text.toLowerCase().contains(filter.toLowerCase())) {
                 if (dev()) Log.d("VTLite", text.toLowerCase());
@@ -129,7 +130,7 @@ public class Newsfeed{
     public static boolean checkCaption(JSONObject postJson){
         try {
             var captionJson = postJson.getJSONObject("caption");
-            if (Preferences.captions())
+            if (captions())
                 return true;
 
             boolean postAds = postsrecomm();
@@ -148,7 +149,7 @@ public class Newsfeed{
         return (optString.equals("ads_easy_promote") ||
                 optString.equals("promo_button") ||
                 optString.equals("app_widget") ||
-                optString.equals("ads")) && Preferences.ads();
+                optString.equals("ads")) && ads();
     }
 
     public static boolean isAuthorRecommendations(String optString){

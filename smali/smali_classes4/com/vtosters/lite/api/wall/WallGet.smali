@@ -524,6 +524,10 @@
 
     .line 19
     :goto_2
+    invoke-static {p1}, Lru/vtosters/lite/hooks/JsonInjectors;->newsfeedadtest(Lorg/json/JSONArray;)Lorg/json/JSONArray;
+
+    move-result-object p1
+
     invoke-virtual {p1}, Lorg/json/JSONArray;->length()I
 
     move-result v8
