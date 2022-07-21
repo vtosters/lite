@@ -13,12 +13,19 @@ import static ru.vtosters.lite.utils.Newsfeed.isMusicBlock;
 import static ru.vtosters.lite.utils.Newsfeed.isNewsBlock;
 import static ru.vtosters.lite.utils.Newsfeed.isPostRecommendations;
 import static ru.vtosters.lite.utils.Newsfeed.isRecomsGroup;
+import static ru.vtosters.lite.utils.Preferences.getBoolValue;
 import static ru.vtosters.lite.utils.Preferences.vkme;
+
+import android.view.View;
+import android.view.ViewGroup;
 
 import com.vk.core.preference.Preference;
 
 import org.json.JSONException;
 import org.json.JSONObject;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public class NewsfeedHook{
     public static boolean injectFilters(JSONObject obj) throws JSONException{
@@ -58,5 +65,12 @@ public class NewsfeedHook{
             default:
                 return Preference.b().getLong(refresh_timeout ? "refresh_timeout_top" : "refresh_timeout_recent", 600000L);
         }
+    }
+
+    public static List hideElement(ArrayList list){
+        if (!getBoolValue("whatsnew", true)) {
+            list.clear();
+        }
+        return list;
     }
 }
