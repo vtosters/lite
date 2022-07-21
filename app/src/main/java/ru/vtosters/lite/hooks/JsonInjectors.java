@@ -224,7 +224,7 @@ public class JsonInjectors{
         return items;
     }
 
-    public static JSONArray newsfeedadtest(JSONArray items) throws JSONException{
+    public static JSONArray newsfeedadtest(JSONArray items) throws JSONException {
         if (!getBoolValue("newadblock", true)) return items;
         var newItems = new JSONArray();
 

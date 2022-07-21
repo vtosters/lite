@@ -82,14 +82,15 @@ public class Newsfeed{
         return false;
     } // get repost information and inject our text filters
 
-    public static boolean checkCopyright(JSONObject json) throws JSONException{
+    public static boolean checkCopyright(JSONObject json) throws JSONException {
         if (copyright_post() && json.has("copyright")) {
-            var copyright = json.getJSONObject("copyright");
-            var copyrightlink = copyright.getString("link").toLowerCase();
-
-            for (String linkfilters : mFiltersLinks) {
-                if (copyrightlink.contains(linkfilters)) {
-                    return true;
+            var copyright = json.optJSONObject("copyright");
+            if (copyright != null) {
+                var copyrightlink = copyright.getString("link").toLowerCase();
+                for (String linkfilters : mFiltersLinks) {
+                    if (copyrightlink.contains(linkfilters)) {
+                        return true;
+                    }
                 }
             }
         }
@@ -127,13 +128,15 @@ public class Newsfeed{
     public static boolean checkCaption(JSONObject postJson){
         try {
             if (captions() && postsrecomm()) {
-                var type = postJson.getJSONObject("caption")
-                        .getString("type");
-                return  type.equals("explorebait") || // Может быть интересно
-                        type.equals("shared") || // Поделился записью
-                        type.equals("digest") || // Рекомедации
-                        type.equals("commented") || // Комментирует
-                        type.equals("voted"); // Проголосовал в опросе
+                var caption = postJson.optJSONObject("caption");
+                if (caption != null) {
+                    var type = caption.getString("type");
+                    return type.equals("explorebait") || // Может быть интересно
+                            type.equals("shared") || // Поделился записью
+                            type.equals("digest") || // Рекомедации
+                            type.equals("commented") || // Комментирует
+                            type.equals("voted"); // Проголосовал в опросе
+                }
             }
         } catch (JSONException e) {
             e.printStackTrace();
