@@ -621,6 +621,14 @@
         <item>Не обновлять</item>
         <item>Обновлять мгновенно</item>
     </string-array>
+    <string-array name="musicdefcatalog_value">
+        <item>По умолчанию</item>
+        <item>Недавно прослушанные</item>
+        <item>Моя музыка</item>
+        <item>Плейлисты</item>
+        <item>Альбомы</item>
+        <item>Обзор</item>
+    </string-array>
     <string-array name="undel_value">
         <item>[Удалено]</item>
         <item>🗑</item>

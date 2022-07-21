@@ -6,6 +6,7 @@ import static ru.vtosters.lite.f0x1d.VTVerifications.isVerified;
 import static ru.vtosters.lite.hooks.DateHook.getLocale;
 import static ru.vtosters.lite.utils.Base64Utils.decode;
 import static ru.vtosters.lite.utils.Globals.getContext;
+import static ru.vtosters.lite.utils.Globals.getPrefsValue;
 import static ru.vtosters.lite.utils.Globals.getUserToken;
 import static ru.vtosters.lite.utils.Preferences.dev;
 import static ru.vtosters.lite.utils.Preferences.friendsblock;
@@ -89,6 +90,8 @@ public class JsonInjectors{
             }
         }
 
+        if (!dev()) return orig.optJSONObject("conversation_bar");
+
         // JSONObject("{\"name\":\"group_admin_welcome\",\"text\":\"" + textverif + "\",\"buttons\":[],\"icon\":\"" + pic + "\"}");
         return new JSONObject(decode("eyJuYW1lIjoiZ3JvdXBfYWRtaW5fd2VsY29tZSIsInRleHQiOiI=")
                 + text + decode("IiwiYnV0dG9ucyI6Ww==")
@@ -151,7 +154,9 @@ public class JsonInjectors{
     }
 
     public static JSONObject music(JSONObject json) throws JSONException{
-        var oldItems = json.optJSONObject("catalog").optJSONArray("sections");
+        var catalog = json.optJSONObject("catalog");
+
+        var oldItems = catalog.optJSONArray("sections");
 
         if (oldItems != null) {
             var playlists = fetchCatalogId("https://vk.com/audio?section=my_playlists");
@@ -185,6 +190,20 @@ public class JsonInjectors{
                 var url = catalogarr.optString("url");
 
                 oldItems.put(new JSONObject().put("id", id).put("title", title).put("url", url));
+            }
+
+            for (int i = 0; i < oldItems.length(); i++) {
+                var item = oldItems.optJSONObject(i);
+                var title = item.optString("title");
+                var id = item.optString("id");
+                var url = item.optString("url");
+                var value = getPrefsValue("musicdefcatalog");
+
+                Log.d("VKMusic", "title: " + title + " id: " + id + " url: " + url + " value: " + value);
+
+                if (url.contains(value)) {
+                    catalog.put("default_section", id);
+                }
             }
         }
 
