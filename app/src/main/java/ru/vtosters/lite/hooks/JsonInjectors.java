@@ -192,7 +192,7 @@ public class JsonInjectors{
         return json;
     }
 
-    private static void parseStoriesItem(JSONObject item){
+    private static void parseStoriesItem(JSONObject item) throws JSONException{
         var stories = item.optJSONArray("stories");
         var newStories = new JSONArray();
 
@@ -201,11 +201,14 @@ public class JsonInjectors{
         for (int j = 0; j < stories.length(); j++) {
             var story = stories.optJSONObject(j);
 
-            if (story.optBoolean("is_ads") || story.optBoolean("is_promo")) {
-                stories.remove(j);
+            if (!story.optBoolean("is_ads") && !story.optBoolean("is_promo")) {
+                newStories.put(story);
+            } else {
                 Log.d("StoriesAds", "Fetched ad, owner id " + story.optString("owner_id") + ", caption " + story.optString("caption"));
             }
         }
+
+        item.put("stories", newStories);
     }
 
     public static JSONArray newsfeedlist(JSONArray items) throws JSONException{
