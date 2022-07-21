@@ -232,54 +232,43 @@ public class JsonInjectors{
             var list = items.optJSONObject(j);
             var type = list.optString("type");
 
-            var isAds = list.has("ads")
-                    || type.contains("ads")
-                    || type.contains("carousel")
-                    || type.contains("app_video")
-                    || type.contains("html5_ad")
-                    || type.contains("app_slider")
-                    || type.contains("promo_button")
-                    || type.contains("ads_easy_promote")
-                    || type.contains("app_widget");
+            var isAds = ads() && list.has("ads")
+                    || type.equals("ads")
+                    || type.equals("carousel")
+                    || type.equals("app_video")
+                    || type.equals("html5_ad")
+                    || type.equals("app_slider")
+                    || type.equals("promo_button")
+                    || type.equals("ads_easy_promote")
+                    || type.equals("app_widget")
+                    || type.equals("tags_suggestions");
+            if (isAds) continue;
 
-            var isAuthorRecommendations = type.contains("authors_rec");
+            if (authorsrecomm())
+                if (type.equals("authors_rec") || type.startsWith("recommended_")
+                        && (type.endsWith("audios") || type.endsWith("artists") || type.endsWith("playlists") || type.endsWith("groups")))
+                    continue;
 
-            var isPostRecommendations = type.contains("inline_user_rec") || type.contains("live_recommended");
+            if (postsrecomm()
+                    && (type.equals("inline_user_rec") || type.equals("live_recommended")))
+                continue;
 
-            var isFriendsRecommendations = type.contains("friends_recommendations") || type.contains("user_rec") || type.contains("friends_recomm");
+            if (friendsrecomm()
+                    && (type.equals("user_rec") || type.equals("friends_recomm")))
+                continue;
 
-            var isGroupAds = list.optInt("marked_as_ads") == 1;
+            if (adsgroup() && list.optInt("marked_as_ads") == 1)
+                continue;
 
-            var isRecomsGroup = type.contains("recommended_groups");
+            if (isBadNews(list.optString("text"))) continue;
 
-            var isMusicBlock = type.contains("recommended_audios") || type.contains("recommended_artists") || type.contains("recommended_playlists");
+            if (checkCopyright(list)) continue;
 
-            var isNewsBlock = type.contains("tags_suggestions");
+            if (checkCaption(list)) continue;
 
-            var isBadNews = isBadNews(list.optString("text"));
+            if (injectFiltersReposts(list)) continue;
 
-            var isCopyrightBlocked = checkCopyright(list);
-
-            var isCaptionBlocked = checkCaption(list);
-
-            var reposts = injectFiltersReposts(list);
-
-            if ((isAds && ads())
-                    || (isAuthorRecommendations && authorsrecomm())
-                    || (isPostRecommendations && postsrecomm())
-                    || (isFriendsRecommendations && friendsrecomm())
-                    || (isGroupAds && adsgroup())
-                    || (isRecomsGroup && authorsrecomm())
-                    || (isMusicBlock && authorsrecomm())
-                    || (isNewsBlock && ads())
-                    || isBadNews
-                    || isCopyrightBlocked
-                    || isCaptionBlocked
-                    || reposts) {
-                if (dev()) Log.d("NewsfeedAdBlockV2", "Removed post " + list.optInt("post_id") + " from feed, type: " + type + ", isAds: " + isAds + ", marked as ads: " + isGroupAds + ", is bad news: " + isBadNews + ", is copyright blocked: " + isCopyrightBlocked + ", is caption blocked: " + isCaptionBlocked + ", repost blocked: " + reposts + ", is author recommendations: " + isAuthorRecommendations + ", is post recommendations: " + isPostRecommendations + ", is friends recommendations: " + isFriendsRecommendations + ", is music block: " + isMusicBlock + ", is news block: " + isNewsBlock);
-            } else {
-                newItems.put(list);
-            }
+            newItems.put(list);
         }
 
         return newItems;
