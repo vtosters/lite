@@ -164,13 +164,13 @@ public class JsonInjectors{
 
         if (json.has("ads")) {
             if (isDeleteFix) {
-                var ad = json.optJSONObject("ads");
-                ad.put("stories_interval", 0);
-                ad.put("authors_interval", 0);
-                ad.put("time_interval", 0);
-                ad.put("stories_init", 0);
-                ad.put("authors_init", 0);
-                ad.put("time_init", 0);
+                var adsettings = json.optJSONObject("ads").optJSONObject("settings");
+                adsettings.put("stories_interval", 0);
+                adsettings.put("authors_interval", 0);
+                adsettings.put("time_interval", 0);
+                adsettings.put("stories_init", 0);
+                adsettings.put("authors_init", 0);
+                adsettings.put("time_init", 0);
                 Log.d("StoriesAds", "Set ads at zero val");
             } else {
                 json.remove("ads");
