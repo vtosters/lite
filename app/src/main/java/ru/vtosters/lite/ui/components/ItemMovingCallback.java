@@ -27,10 +27,10 @@ public class ItemMovingCallback extends ItemTouchHelper.Callback {
     @Override
     public int getMovementFlags(@NonNull RecyclerView recyclerView, RecyclerView.ViewHolder viewHolder){
         int dragFlags = mAdapter.getItemViewType(viewHolder.getAdapterPosition()) == CategorizedAdapter.MOVING_ITEM
+                && !mAdapter.isUnmovedItem(viewHolder.getAdapterPosition())
                 ? ItemTouchHelper.UP | ItemTouchHelper.DOWN
                 : 0;
         int swipeFlags = mAdapter.getItemViewType(viewHolder.getAdapterPosition()) == CategorizedAdapter.MOVING_ITEM
-                && mAdapter.isUnmovedItem(viewHolder.getAdapterPosition())
                 ? ItemTouchHelper.LEFT | ItemTouchHelper.RIGHT
                 : 0;
         return makeMovementFlags(dragFlags, swipeFlags);
