@@ -18,23 +18,18 @@ import android.util.Log;
 
 import com.vk.core.network.Network;
 import com.vk.core.util.DeviceIdProvider;
-import com.vtosters.lite.fragments.messages.chat.vc.MsgSendVc;
 
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
 import java.io.IOException;
-import java.net.URLEncoder;
 import java.util.Objects;
 import java.util.Random;
 
-import okhttp3.Call;
-import okhttp3.Callback;
 import okhttp3.Headers;
 import okhttp3.OkHttpClient;
 import okhttp3.Request;
-import okhttp3.Response;
 import ru.vtosters.lite.utils.Globals;
 
 public class JsonInjectors{
@@ -154,10 +149,7 @@ public class JsonInjectors{
         return json;
     }
 
-    public static JSONObject storiesads(JSONObject json, boolean isDeleteFix) throws JSONException{
-        var oldItems = json.optJSONArray("items");
-        var newItems2 = new JSONArray();
-
+    public static JSONObject storiesads(JSONObject json, boolean isDeleteFix) throws JSONException {
         if (!adsstories()) {
             return json;
         }
@@ -178,25 +170,37 @@ public class JsonInjectors{
             }
         }
 
-        if (json.has("items")) {
-            for (int i = 0; i < oldItems.length(); i++) {
-                var item = oldItems.optJSONObject(i).optJSONArray("stories");
-                if (item != null) {
-                    for (int j = 0; j < item.length(); j++) {
-                        var item2 = item.optJSONObject(j);
-                        var ads = item2.optBoolean("is_ads");
-                        var promo = item2.optBoolean("is_promo");
+        if (!json.has("items"))
+            return json;
 
-                        if (ads || promo) {
-                            item.remove(j);
-                            Log.d("StoriesAds", "Fetched ad " + item2.optString("id") + " isads: " + ads + " ispromo: " + promo);
-                        }
-                    }
-                }
-            }
+        var items = json.optJSONArray("items");
+        for (int i = 0; i < items.length(); i++) {
+            var item = items.optJSONObject(i);
+            if (item != null)
+                parseStoriesItem(item);
         }
 
         return json;
+    }
+
+    private static void parseStoriesItem(JSONObject item) throws JSONException {
+        var stories = item.optJSONArray("stories");
+        if (stories == null)
+            return;
+
+        var newStories = new JSONArray();
+        for (int j = 0; j < stories.length(); j++) {
+            var story = stories.optJSONObject(j);
+
+            if (story.optBoolean("is_ads")
+                    || story.optBoolean("is_promo"))
+                newStories.put(stories.optJSONObject(j));
+            else
+                Log.d("StoriesAds", "Fetched ad " + story.optString("id"));
+        }
+
+        if (newStories.length() > 0)
+            item.put("stories", newStories);
     }
 
     public static JSONObject music(JSONObject json) throws JSONException{
