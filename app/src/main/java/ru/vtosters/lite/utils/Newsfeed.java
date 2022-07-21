@@ -23,14 +23,15 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 import java.util.Objects;
+import java.util.Scanner;
 
 public class Newsfeed{
     public static List<String> mFilters;
     public static List<String> mFiltersLinks;
 
     public static void setupFilters(){
-        mFilters = new ArrayList();
-        mFiltersLinks = new ArrayList();
+        mFilters = new ArrayList<>();
+        mFiltersLinks = new ArrayList<>();
 
         getFilter("refsfilter", "Referals.txt", mFilters);
         getFilter("shortlinkfilter", "LinkShorter.txt", mFilters);
@@ -52,15 +53,11 @@ public class Newsfeed{
     public static void getFilter(String boolname, String filename, List<String> list){
         if (getBoolValue(boolname, true)) {
             try {
-                BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(getContext().getAssets().open(filename)));
-                while(true) {
-                    String readLine = bufferedReader.readLine();
-                    if (readLine != null) {
-                        list.add(readLine);
-                    } else {
-                        bufferedReader.close();
-                        return;
-                    }
+                var scanner = new Scanner(getContext().getAssets().open(filename));
+                while (scanner.hasNextLine()) {
+                    var line = scanner.nextLine();
+                    if (!line.isEmpty())
+                        list.add(scanner.nextLine().toLowerCase());
                 }
             } catch (IOException e) {
                 e.printStackTrace();
@@ -69,48 +66,46 @@ public class Newsfeed{
     } // Get needed filter list from assets
 
     public static boolean injectFiltersReposts(JSONObject obj){
-        if (obj.optJSONArray("copy_history") == null) return false;
 
-        var Array = Objects.requireNonNull(obj.optJSONArray("copy_history")).toString();
-
-        if (Array.isEmpty()) return false;
-
-        if (getBoolValue("cringerepost", false)) {
+        if (getBoolValue("cringerepost", false) && obj.has("copy_history")) {
+            var Array = Objects.requireNonNull(obj.optJSONArray("copy_history")).toString();
+            if (Array.isEmpty()) return false;
+            Array = Array.toLowerCase();
             for (String linkfilters : mFiltersLinks) {
-                if (Array.toLowerCase().contains(linkfilters.toLowerCase())) {
+                if (Array.contains(linkfilters)) {
                     return true;
                 }
             }
+            return isBadNews(Array);
         }
 
-        return isBadNews(Array);
+        return false;
     } // get repost information and inject our text filters
 
     public static boolean checkCopyright(JSONObject json) throws JSONException{
-        if (json.opt("copyright") != null) {
+        if (copyright_post() && json.has("copyright")) {
             var copyright = json.getJSONObject("copyright");
-            var copyrightlink = copyright.getString("link");
+            var copyrightlink = copyright.getString("link").toLowerCase();
 
             for (String linkfilters : mFiltersLinks) {
-                if (copyrightlink.toLowerCase().contains(linkfilters.toLowerCase())) {
+                if (copyrightlink.contains(linkfilters)) {
                     return true;
                 }
             }
-            return copyright_post();
         }
         return false;
     }
 
     public static boolean isRecomsGroup(String src){
-        return src.equals("recommended_groups") && authorsrecomm();
+        return authorsrecomm() && src.equals("recommended_groups");
     }
 
     public static boolean isMusicBlock(String src){
-        return (src.equals("recommended_audios") || src.equals("recommended_artists") || src.equals("recommended_playlists")) && authorsrecomm();
+        return authorsrecomm() && (src.equals("recommended_audios") || src.equals("recommended_artists") || src.equals("recommended_playlists"));
     }
 
     public static boolean isNewsBlock(String src){
-        return (src.equals("tags_suggestions")) && ads();
+        return ads() && src.equals("tags_suggestions");
     }
 
     public static String getAllFilters(){
@@ -118,9 +113,11 @@ public class Newsfeed{
     }
 
     public static boolean isBadNews(String text){
+        var textInLowerCase = text.toLowerCase();
         for (String filter : mFilters) {
-            if (text.toLowerCase().contains(filter.toLowerCase())) {
-                if (dev()) Log.d("VTLite", text.toLowerCase());
+            if (textInLowerCase.contains(filter)) {
+                if (dev())
+                    Log.d("VTLite", text);
                 return true;
             }
         }
@@ -129,45 +126,44 @@ public class Newsfeed{
 
     public static boolean checkCaption(JSONObject postJson){
         try {
-            var captionJson = postJson.getJSONObject("caption");
-            if (captions())
-                return true;
-
-            boolean postAds = postsrecomm();
-            return (captionJson.getString("type").equals("explorebait") && postAds) || // Может быть интересно
-                    (captionJson.getString("type").equals("shared") && postAds) || // Поделился записью
-                    (postJson.getString("type").equals("digest") && postAds) || // Рекомедации
-                    (captionJson.getString("type").equals("commented") && postAds) || // Комментирует
-                    (captionJson.getString("type").equals("voted") && postAds); // Проголосовал в опросе
-
+            if (captions() && postsrecomm()) {
+                var type = postJson.getJSONObject("caption")
+                        .getString("type");
+                return  type.equals("explorebait") || // Может быть интересно
+                        type.equals("shared") || // Поделился записью
+                        type.equals("digest") || // Рекомедации
+                        type.equals("commented") || // Комментирует
+                        type.equals("voted"); // Проголосовал в опросе
+            }
         } catch (JSONException e) {
-            return false;
+            e.printStackTrace();
         }
+        return false;
     }
 
     public static boolean isAds(String optString){
-        return (optString.equals("ads_easy_promote") ||
+        return ads() && (optString.equals("ads_easy_promote") ||
                 optString.equals("promo_button") ||
                 optString.equals("app_widget") ||
-                optString.equals("ads")) && ads();
+                optString.equals("ads"));
     }
 
     public static boolean isAuthorRecommendations(String optString){
-        return optString.equals("authors_rec") && authorsrecomm();
+        return authorsrecomm() && optString.equals("authors_rec");
     }
 
     public static boolean isPostRecommendations(String optString){
-        return (optString.equals("live_recommended") ||
-                optString.equals("inline_user_rec")) && postsrecomm();
+        return postsrecomm() && (optString.equals("live_recommended") ||
+                optString.equals("inline_user_rec"));
     }
 
     public static boolean isFriendsRecommendations(String optString){
-        return (optString.equals("user_rec") ||
+        return friendsrecomm() && (optString.equals("user_rec") ||
                 optString.equals("friends_recommendations") ||
-                optString.equals("friends_recomm")) && friendsrecomm();
+                optString.equals("friends_recomm"));
     }
 
     public static boolean isGroupAds(JSONObject obj){
-        return (obj.optInt("marked_as_ads", 0) == 1) && adsgroup();
+        return adsgroup() && obj.optInt("marked_as_ads", 0) == 1;
     }
 }
