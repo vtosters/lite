@@ -198,6 +198,19 @@ public class JsonInjectors{
         }
     }
 
+    public static JSONArray newsfeedlist(JSONArray items) throws JSONException{
+        for (int j = 0; j < items.length(); j++) {
+            var list = items.optJSONObject(j);
+            var name = list.optString("id");
+
+            if (!name.equals("kpop") && !name.equals("foryou") && !name.equals("qazaqstan")) {
+                list.put("is_hidden", false).put("is_unavailable", false);
+            }
+        }
+
+        return items;
+    }
+
     public static JSONObject music(JSONObject json) throws JSONException{
         var catalog = json.optJSONObject("catalog");
 
