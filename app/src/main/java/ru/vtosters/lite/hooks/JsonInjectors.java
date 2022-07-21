@@ -164,13 +164,13 @@ public class JsonInjectors{
 
         if (json.has("ads")) {
             if (isDeleteFix) {
-                var adsettings = json.optJSONObject("ads").optJSONObject("settings");
-                adsettings.put("stories_interval", 0);
-                adsettings.put("authors_interval", 0);
-                adsettings.put("time_interval", 0);
-                adsettings.put("stories_init", 0);
-                adsettings.put("authors_init", 0);
-                adsettings.put("time_init", 0);
+                json.optJSONObject("ads").optJSONObject("settings")
+                        .put("stories_interval", 0)
+                        .put("authors_interval", 0)
+                        .put("time_interval", 0)
+                        .put("stories_init", 0)
+                        .put("authors_init", 0)
+                        .put("time_init", 0);
                 Log.d("StoriesAds", "Set ads at zero val");
             } else {
                 json.remove("ads");
@@ -184,20 +184,13 @@ public class JsonInjectors{
                 if (item != null) {
                     for (int j = 0; j < item.length(); j++) {
                         var item2 = item.optJSONObject(j);
-                        var type = item2.optBoolean("is_ads");
+                        var ads = item2.optBoolean("is_ads");
                         var promo = item2.optBoolean("is_promo");
 
-                        if (!type && !promo) {
-                            newItems2.put(item.optJSONObject(j));
-                        } else {
-                            Log.d("StoriesAds", "Fetched ad " + item2.optString("id"));
+                        if (ads || promo) {
+                            item.remove(j);
+                            Log.d("StoriesAds", "Fetched ad " + item2.optString("id") + " isads: " + ads + " ispromo: " + promo);
                         }
-                    }
-
-                    try {
-                        oldItems.optJSONObject(i).put("stories", newItems2);
-                    } catch (JSONException e) {
-                        Log.e("StoriesAds", e.getMessage());
                     }
                 }
             }
