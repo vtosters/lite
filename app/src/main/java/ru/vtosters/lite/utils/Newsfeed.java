@@ -57,7 +57,7 @@ public class Newsfeed{
                 while (scanner.hasNextLine()) {
                     var line = scanner.nextLine();
                     if (!line.isEmpty())
-                        list.add(scanner.nextLine().toLowerCase());
+                        list.add(line.toLowerCase());
                 }
             } catch (IOException e) {
                 e.printStackTrace();

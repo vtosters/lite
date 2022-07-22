@@ -3,6 +3,7 @@ package ru.vtosters.lite.hooks;
 import static ru.vtosters.lite.f0x1d.VTVerifications.isDeveloper;
 import static ru.vtosters.lite.f0x1d.VTVerifications.isPrometheus;
 import static ru.vtosters.lite.f0x1d.VTVerifications.isVerified;
+import static ru.vtosters.lite.foaf.FoafBase.getLastSeen;
 import static ru.vtosters.lite.hooks.DateHook.getLocale;
 import static ru.vtosters.lite.utils.Base64Utils.decode;
 import static ru.vtosters.lite.utils.Globals.getContext;
@@ -33,6 +34,7 @@ import org.json.JSONException;
 import org.json.JSONObject;
 
 import java.io.IOException;
+import java.text.ParseException;
 import java.util.Objects;
 import java.util.Random;
 
@@ -152,8 +154,33 @@ public class JsonInjectors{
         if (oldItems != null) {
             if (oldItems.optJSONObject(0).optString("url").contains("?section=recent")) {
                 json.remove("links");
+                if (dev()) Log.d("VKMusic", "Removed links buttons");
             }
         }
+
+        return json;
+    }
+
+    public static JSONObject onlineinfo(JSONObject json) throws ParseException, IOException, JSONException{
+        var id = json.optInt("id");
+        var onlineinfo = json.optJSONObject("online_info");
+        var time = getLastSeen(0L, id);
+
+        if (time == 0L) {
+            return json;
+        }
+
+        onlineinfo.put("last_seen", time);
+        onlineinfo.put("visible", true);
+        onlineinfo.put("app_id", 0);
+        onlineinfo.put("is_online", false);
+        onlineinfo.put("is_mobile", false);
+        onlineinfo.remove("status");
+
+        var last_seen = new JSONObject();
+        last_seen.put("time", time);
+        last_seen.put("platform", 0);
+        json.put("last_seen", last_seen);
 
         return json;
     }
@@ -172,10 +199,10 @@ public class JsonInjectors{
                         .put("stories_init", 0)
                         .put("authors_init", 0)
                         .put("time_init", 0);
-                Log.d("StoriesAds", "Set ads settings at zero values");
+                if (dev()) Log.d("StoriesAds", "Set ads settings at zero values");
             } else {
                 json.remove("ads");
-                Log.d("StoriesAds", "Removed ads block");
+                if (dev()) Log.d("StoriesAds", "Removed ads block");
             }
         }
 
@@ -204,7 +231,7 @@ public class JsonInjectors{
             if (!story.optBoolean("is_ads") && !story.optBoolean("is_promo")) {
                 newStories.put(story);
             } else {
-                Log.d("StoriesAds", "Fetched ad, owner id " + story.optString("owner_id") + ", caption " + story.optString("caption"));
+                if (dev()) Log.d("StoriesAds", "Fetched ad, owner id " + story.optString("owner_id") + ", caption " + story.optString("caption"));
             }
         }
 
@@ -218,13 +245,14 @@ public class JsonInjectors{
 
             if (!name.equals("kpop") && !name.equals("foryou") && !name.equals("qazaqstan")) {
                 list.put("is_hidden", false).put("is_unavailable", false);
+                if (dev()) Log.d("NewsfeedListInj", "Unlocked " + name + " in newsfeed list");
             }
         }
 
         return items;
     }
 
-    public static JSONArray newsfeedadtest(JSONArray items) throws JSONException {
+    public static JSONArray newsfeedadtest(JSONArray items) throws JSONException{
         if (!getBoolValue("newadblock", true)) return items;
         var newItems = new JSONArray();
 
@@ -232,41 +260,71 @@ public class JsonInjectors{
             var list = items.optJSONObject(j);
             var type = list.optString("type");
 
-            var isAds = ads() && list.has("ads")
-                    || type.equals("ads")
-                    || type.equals("carousel")
-                    || type.equals("app_video")
-                    || type.equals("html5_ad")
-                    || type.equals("app_slider")
-                    || type.equals("promo_button")
-                    || type.equals("ads_easy_promote")
-                    || type.equals("app_widget")
-                    || type.equals("tags_suggestions");
-            if (isAds) continue;
-
-            if (authorsrecomm())
-                if (type.equals("authors_rec") || type.startsWith("recommended_")
-                        && (type.endsWith("audios") || type.endsWith("artists") || type.endsWith("playlists") || type.endsWith("groups")))
+            if (ads()) {
+                if (list.has("ads")
+                        || type.equals("ads")
+                        || type.equals("carousel")
+                        || type.equals("html5_ad")
+                        || type.equals("ads_easy_promote")) {
+                    if (dev()) Log.d("NewsfeedAdBlockV2", "Removed post " + list.optInt("post_id") + " from feed, Reason: ads");
                     continue;
+                }
 
-            if (postsrecomm()
-                    && (type.equals("inline_user_rec") || type.equals("live_recommended")))
+                if (type.equals("promo_button")
+                        || type.equals("app_widget")
+                        || type.equals("app_video")
+                        || type.equals("app_slider")
+                        || type.equals("tags_suggestions")) {
+                    if (dev()) Log.d("NewsfeedAdBlockV2", "Removed post " + list.optInt("post_id") + " from feed, Reason: promo");
+                    continue;
+                }
+            }
+
+            if (authorsrecomm()) {
+                if (type.equals("authors_rec") || type.startsWith("recommended_") && (type.endsWith("audios") || type.endsWith("artists") || type.endsWith("playlists") || type.endsWith("groups"))) {
+                    if (dev()) Log.d("NewsfeedAdBlockV2", "Removed post " + list.optInt("post_id") + " from feed, Reason: authorsrecomm");
+                    continue;
+                }
+            }
+
+            if (postsrecomm()) {
+                if (type.equals("inline_user_rec") || type.equals("live_recommended")) {
+                    if (dev()) Log.d("NewsfeedAdBlockV2", "Removed post " + list.optInt("post_id") + " from feed, Reason: postsrecomm");
+                    continue;
+                }
+            }
+
+            if (friendsrecomm()) {
+                if (type.equals("user_rec") || type.equals("friends_recomm")) {
+                    if (dev()) Log.d("NewsfeedAdBlockV2", "Removed post " + list.optInt("post_id") + " from feed, Reason: friendsrecomm");
+                    continue;
+                }
+            }
+
+            if (adsgroup() && list.optInt("marked_as_ads") == 1) {
+                if (dev()) Log.d("NewsfeedAdBlockV2", "Removed post " + list.optInt("post_id") + " from feed, Reason: marked_as_ads is true");
                 continue;
+            }
 
-            if (friendsrecomm()
-                    && (type.equals("user_rec") || type.equals("friends_recomm")))
+            if (isBadNews(list.optString("text"))) {
+                if (dev()) Log.d("NewsfeedAdBlockV2", "Removed post " + list.optInt("post_id") + " from feed, Reason: text filters");
                 continue;
+            }
 
-            if (adsgroup() && list.optInt("marked_as_ads") == 1)
+            if (checkCopyright(list)) {
+                if (dev()) Log.d("NewsfeedAdBlockV2", "Removed post " + list.optInt("post_id") + " from feed, Reason: copyright filters");
                 continue;
+            }
 
-            if (isBadNews(list.optString("text"))) continue;
+            if (checkCaption(list)) {
+                if (dev()) Log.d("NewsfeedAdBlockV2", "Removed post " + list.optInt("post_id") + " from feed, Reason: caption filters");
+                continue;
+            }
 
-            if (checkCopyright(list)) continue;
-
-            if (checkCaption(list)) continue;
-
-            if (injectFiltersReposts(list)) continue;
+            if (injectFiltersReposts(list)) {
+                if (dev()) Log.d("NewsfeedAdBlockV2", "Removed post " + list.optInt("post_id") + " from feed, Reason: repost ad");
+                continue;
+            }
 
             newItems.put(list);
         }
@@ -277,7 +335,11 @@ public class JsonInjectors{
     public static JSONObject music(JSONObject json) throws JSONException{
         var catalog = json.optJSONObject("catalog");
 
-        var oldItems = catalog.optJSONArray("sections");
+        JSONArray oldItems = null;
+
+        if (catalog != null) {
+            oldItems = catalog.optJSONArray("sections");
+        }
 
         if (oldItems != null) {
             var playlists = fetchCatalogId("https://vk.com/audio?section=my_playlists");
@@ -287,6 +349,8 @@ public class JsonInjectors{
                 var title = catalogarr.optString("title");
                 var id = catalogarr.optString("id");
                 var url = catalogarr.optString("url");
+
+                if (dev()) Log.d("VKMusic", "Added " + title + " in music sections");
 
                 oldItems.put(new JSONObject().put("id", id).put("title", title).put("url", url));
             }
@@ -299,6 +363,8 @@ public class JsonInjectors{
                 var id = catalogarr.optString("id");
                 var url = catalogarr.optString("url");
 
+                if (dev()) Log.d("VKMusic", "Added " + title + " in music sections");
+
                 oldItems.put(new JSONObject().put("id", id).put("title", title).put("url", url));
             }
 
@@ -309,6 +375,8 @@ public class JsonInjectors{
                 var title = catalogarr.optString("title");
                 var id = catalogarr.optString("id");
                 var url = catalogarr.optString("url");
+
+                if (dev()) Log.d("VKMusic", "Added " + title + " in music sections");
 
                 oldItems.put(new JSONObject().put("id", id).put("title", title).put("url", url));
             }
@@ -324,14 +392,13 @@ public class JsonInjectors{
 
                 if (url.contains(value)) {
                     catalog.put("default_section", id);
+                    if (dev()) Log.d("VKMusic", "Added " + title + " as default music section");
                 }
             }
         }
 
         return json;
     }
-
-
     public static JSONObject fetchCatalogId(String section){
         if (section == null) return null;
 
