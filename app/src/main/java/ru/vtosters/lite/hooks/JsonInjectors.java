@@ -12,7 +12,6 @@ import static ru.vtosters.lite.utils.Globals.getUserToken;
 import static ru.vtosters.lite.utils.Newsfeed.checkCaption;
 import static ru.vtosters.lite.utils.Newsfeed.checkCopyright;
 import static ru.vtosters.lite.utils.Newsfeed.isBadNews;
-import static ru.vtosters.lite.utils.Newsfeed.mFiltersLinks;
 import static ru.vtosters.lite.utils.Preferences.ads;
 import static ru.vtosters.lite.utils.Preferences.adsgroup;
 import static ru.vtosters.lite.utils.Preferences.adsstories;
@@ -42,11 +41,12 @@ import okhttp3.Headers;
 import okhttp3.OkHttpClient;
 import okhttp3.Request;
 import ru.vtosters.lite.utils.Globals;
+import ru.vtosters.lite.utils.Newsfeed;
 
-public class JsonInjectors{
+public class JsonInjectors {
     private static final OkHttpClient mClient = new OkHttpClient();
 
-    public static JSONObject profileButton(JSONObject orig) throws JSONException{
+    public static JSONObject profileButton(JSONObject orig) throws JSONException {
         if (haveDonateButton()) return orig;
 
         var pic = "https://sun1-18.userapi.com/NLd_rNpGuSaBnPV6O-j5mqCGZk8BK8drAMd2LQ/5R-DEF37PFs.png";
@@ -65,7 +65,7 @@ public class JsonInjectors{
                 + text_color + decode("In0="));
     }
 
-    public static JSONObject convBar(JSONObject orig) throws JSONException{
+    public static JSONObject convBar(JSONObject orig) throws JSONException {
         var peerid = Objects.requireNonNull(orig.optJSONObject("peer")).optInt("id");
 
         var pic = "https://image.pngaaa.com/641/326641-middle.png"; // can be null
@@ -107,7 +107,7 @@ public class JsonInjectors{
                 + decode("fQ=="));
     }
 
-    public static JSONObject menu(JSONObject orig) throws JSONException{
+    public static JSONObject menu(JSONObject orig) throws JSONException {
         var Special = orig.optJSONArray("special");
         var Main = orig.getJSONArray("main");
         var Other = orig.optJSONArray("other");
@@ -119,7 +119,7 @@ public class JsonInjectors{
         return orig;
     }
 
-    public static JSONObject superapp(JSONObject json) throws JSONException{
+    public static JSONObject superapp(JSONObject json) throws JSONException {
         var superApps = Globals.getPreferences().getString("superapp_items",
                 "menu,promo,miniapps,vkpay_slim,greeting,holiday,weather,sport,games,informer,food,event,music,vk_run").split(",");
         if (superApps.length == 0) return json;
@@ -148,7 +148,7 @@ public class JsonInjectors{
         return json.putOpt("items", newItems);
     }
 
-    public static JSONObject musiclink(JSONObject json){
+    public static JSONObject musiclink(JSONObject json) {
         var oldItems = json.optJSONArray("links");
 
         if (oldItems != null) {
@@ -161,7 +161,7 @@ public class JsonInjectors{
         return json;
     }
 
-    public static JSONObject onlineinfo(JSONObject json) throws ParseException, IOException, JSONException{
+    public static JSONObject onlineinfo(JSONObject json) throws ParseException, IOException, JSONException {
         var id = json.optInt("id");
         var onlineinfo = json.optJSONObject("online_info");
         var time = getLastSeen(0L, id);
@@ -185,7 +185,7 @@ public class JsonInjectors{
         return json;
     }
 
-    public static JSONObject storiesads(JSONObject json, boolean isDeleteFix) throws JSONException{
+    public static JSONObject storiesads(JSONObject json, boolean isDeleteFix) throws JSONException {
         if (!adsstories()) {
             return json;
         }
@@ -219,7 +219,7 @@ public class JsonInjectors{
         return json;
     }
 
-    private static void parseStoriesItem(JSONObject item) throws JSONException{
+    private static void parseStoriesItem(JSONObject item) throws JSONException {
         var stories = item.optJSONArray("stories");
         var newStories = new JSONArray();
 
@@ -239,41 +239,7 @@ public class JsonInjectors{
         item.put("stories", newStories);
     }
 
-    public static boolean parseRepostItem(JSONObject list) throws JSONException{
-        var item = list.optJSONArray("copy_history");
-
-        if (item == null) return false;
-
-        for (int j = 0; j < item.length(); j++) {
-            var items = item.optJSONObject(j);
-            var text = items.optString("text");
-            var type = items.optString("post_type");
-
-            if (isBadNews(text)) {
-                if (dev())
-                    Log.d("RepostFilter", "Fetched repost ad (isBadNews), owner id " + items.optString("owner_id") + ", text: " + text);
-                return true;
-            } else if (isAds(items, type)) {
-                if (dev())
-                    Log.d("RepostFilter", "Fetched repost ad (ads), owner id " + items.optString("owner_id") + ", text: " + text);
-                return true;
-            }
-
-            if (!getBoolValue("cringerepost", false)) return false;
-
-            for (String linkfilters : mFiltersLinks) {
-                if (text.contains(linkfilters)) {
-                    if (dev())
-                        Log.d("RepostFilter", "Fetched repost ad, owner id " + items.optString("owner_id") + ", text: " + text);
-                    return true;
-                }
-            }
-        }
-
-        return false;
-    }
-
-    public static Boolean isAds(JSONObject list, String type) throws JSONException{
+    public static Boolean isAds(JSONObject list, String type) throws JSONException {
         if (list == null || type == null || !ads()) return false;
 
         if (list.has("ads")
@@ -299,7 +265,7 @@ public class JsonInjectors{
         return false;
     }
 
-    public static JSONArray newsfeedlist(JSONArray items) throws JSONException{
+    public static JSONArray newsfeedlist(JSONArray items) throws JSONException {
         for (int j = 0; j < items.length(); j++) {
             var list = items.optJSONObject(j);
             var name = list.optString("id");
@@ -313,7 +279,7 @@ public class JsonInjectors{
         return items;
     }
 
-    public static JSONArray newsfeedadtest(JSONArray items) throws JSONException{
+    public static JSONArray newsfeedadtest(JSONArray items) throws JSONException {
         if (!getBoolValue("newadblock", true)) return items;
         var newItems = new JSONArray();
 
@@ -325,7 +291,11 @@ public class JsonInjectors{
                 continue;
             }
 
-            if (authorsrecomm() && (type.equals("authors_rec") || type.startsWith("recommended_") && (type.endsWith("audios") || type.endsWith("artists") || type.endsWith("playlists") || type.endsWith("groups")))) {
+            if (authorsrecomm() && (type.equals("authors_rec")
+                    || type.startsWith("recommended_") && (type.endsWith("audios")
+                    || type.endsWith("artists")
+                    || type.endsWith("playlists")
+                    || type.endsWith("groups")))) {
                 if (dev())
                     Log.d("NewsfeedAdBlockV2", "Removed post " + list.optInt("post_id") + " from feed, Reason: authorsrecomm");
                 continue;
@@ -367,7 +337,7 @@ public class JsonInjectors{
                 continue;
             }
 
-            if (parseRepostItem(list)) {
+            if (Newsfeed.injectFiltersReposts(list)) {
                 if (dev())
                     Log.d("NewsfeedAdBlockV2", "Removed post " + list.optInt("post_id") + " from feed, Reason: repost ad");
                 continue;
@@ -379,7 +349,7 @@ public class JsonInjectors{
         return newItems;
     }
 
-    public static JSONObject music(JSONObject json) throws JSONException{
+    public static JSONObject music(JSONObject json) throws JSONException {
         var catalog = json.optJSONObject("catalog");
 
         JSONArray oldItems = null;
@@ -447,7 +417,7 @@ public class JsonInjectors{
         return json;
     }
 
-    public static JSONObject fetchCatalogId(String section){
+    public static JSONObject fetchCatalogId(String section) {
         if (section == null) return null;
 
         var request = new Request.a()
@@ -473,7 +443,7 @@ public class JsonInjectors{
         return null;
     }
 
-    public static JSONObject friends(JSONObject json) throws JSONException{
+    public static JSONObject friends(JSONObject json) throws JSONException {
         JSONObject catalog = json;
         boolean sectionexecute = true;
         boolean hasBirthday = false;
@@ -540,7 +510,7 @@ public class JsonInjectors{
     }
 
 
-    public static boolean haveDonateButton(){
+    public static boolean haveDonateButton() {
         int randomshower = new Random().nextInt(6);
 
         return hasVerification() || randomshower != 1;
