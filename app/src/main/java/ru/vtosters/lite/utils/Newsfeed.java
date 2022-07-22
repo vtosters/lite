@@ -2,9 +2,10 @@ package ru.vtosters.lite.utils;
 
 import static ru.vtosters.lite.utils.Globals.getContext;
 import static ru.vtosters.lite.utils.Globals.getPrefsValue;
-import static ru.vtosters.lite.utils.Preferences.*;
+import static ru.vtosters.lite.utils.Preferences.ads;
 import static ru.vtosters.lite.utils.Preferences.adsgroup;
 import static ru.vtosters.lite.utils.Preferences.authorsrecomm;
+import static ru.vtosters.lite.utils.Preferences.captions;
 import static ru.vtosters.lite.utils.Preferences.copyright_post;
 import static ru.vtosters.lite.utils.Preferences.dev;
 import static ru.vtosters.lite.utils.Preferences.friendsrecomm;
@@ -16,14 +17,14 @@ import android.util.Log;
 import org.json.JSONException;
 import org.json.JSONObject;
 
-import java.io.BufferedReader;
 import java.io.IOException;
-import java.io.InputStreamReader;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 import java.util.Objects;
 import java.util.Scanner;
+
+import ru.vtosters.lite.hooks.JsonInjectors;
 
 public class Newsfeed{
     public static List<String> mFilters;
@@ -54,7 +55,7 @@ public class Newsfeed{
         if (getBoolValue(boolname, true)) {
             try {
                 var scanner = new Scanner(getContext().getAssets().open(filename));
-                while (scanner.hasNextLine()) {
+                while(scanner.hasNextLine()) {
                     var line = scanner.nextLine();
                     if (!line.isEmpty())
                         list.add(line.toLowerCase());
@@ -65,25 +66,17 @@ public class Newsfeed{
         }
     } // Get needed filter list from assets
 
-    public static boolean injectFiltersReposts(JSONObject obj){
-
+    public static boolean injectFiltersReposts(JSONObject obj) throws JSONException{
         if (getBoolValue("cringerepost", false) && obj.has("copy_history")) {
-            var Array = Objects.requireNonNull(obj.optJSONArray("copy_history")).toString();
-            if (Array.isEmpty()) return false;
-            Array = Array.toLowerCase();
-            for (String linkfilters : mFiltersLinks) {
-                if (Array.contains(linkfilters)) {
-                    return true;
-                }
-            }
-            return isBadNews(Array);
+            return JsonInjectors.parseRepostItem(obj);
         }
-
         return false;
-    } // get repost information and inject our text filters
+    }
 
-    public static boolean checkCopyright(JSONObject json) throws JSONException {
-        if (copyright_post() && json.has("copyright")) {
+    public static boolean checkCopyright(JSONObject json) throws JSONException{
+        if (json.has("copyright")) {
+            if (copyright_post()) return true;
+
             var copyright = json.optJSONObject("copyright");
             if (copyright != null) {
                 var copyrightlink = copyright.getString("link").toLowerCase();
@@ -127,9 +120,10 @@ public class Newsfeed{
 
     public static boolean checkCaption(JSONObject postJson){
         try {
-            if (captions() && postsrecomm()) {
-                var caption = postJson.optJSONObject("caption");
-                if (caption != null) {
+            var caption = postJson.optJSONObject("caption");
+            if (caption != null) {
+                if (captions()) return true;
+                if (postsrecomm()) {
                     var type = caption.getString("type");
                     return type.equals("explorebait") || // Может быть интересно
                             type.equals("shared") || // Поделился записью
@@ -139,8 +133,9 @@ public class Newsfeed{
                 }
             }
         } catch (JSONException e) {
-            e.printStackTrace();
+            Log.d("checkCaption", "Caption error");
         }
+
         return false;
     }
 
