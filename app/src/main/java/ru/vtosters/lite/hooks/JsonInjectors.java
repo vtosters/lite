@@ -242,25 +242,29 @@ public class JsonInjectors{
     public static boolean parseRepostItem(JSONObject list) throws JSONException{
         var item = list.optJSONArray("copy_history");
 
-        if (item == null || !getBoolValue("cringerepost", false)) return false;
+        if (item == null) return false;
 
         for (int j = 0; j < item.length(); j++) {
             var items = item.optJSONObject(j);
             var text = items.optString("text");
             var type = items.optString("post_type");
 
+            if (isBadNews(text)) {
+                if (dev())
+                    Log.d("RepostFilter", "Fetched repost ad (isBadNews), owner id " + items.optString("owner_id") + ", text: " + text);
+                return true;
+            } else if (isAds(items, type)) {
+                if (dev())
+                    Log.d("RepostFilter", "Fetched repost ad (ads), owner id " + items.optString("owner_id") + ", text: " + text);
+                return true;
+            }
+
+            if (!getBoolValue("cringerepost", false)) return false;
+
             for (String linkfilters : mFiltersLinks) {
                 if (text.contains(linkfilters)) {
                     if (dev())
                         Log.d("RepostFilter", "Fetched repost ad, owner id " + items.optString("owner_id") + ", text: " + text);
-                    return true;
-                } else if (isBadNews(text)) {
-                    if (dev())
-                        Log.d("RepostFilter", "Fetched repost ad (isBadNews), owner id " + items.optString("owner_id") + ", text: " + text);
-                    return true;
-                } else if (isAds(items, type)) {
-                    if (dev())
-                        Log.d("RepostFilter", "Fetched repost ad (ads), owner id " + items.optString("owner_id") + ", text: " + text);
                     return true;
                 }
             }
