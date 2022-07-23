@@ -9,23 +9,26 @@ import static ru.vtosters.lite.utils.Proxy.getApi;
 
 import android.app.ProgressDialog;
 import android.content.Context;
+import android.util.Log;
 
 import androidx.exifinterface.media.ExifInterface;
 
 import com.vk.core.dialogs.alert.VkAlertDialog;
+import com.vk.core.network.Network;
 
 import java.io.IOException;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.Locale;
+import java.util.TimeZone;
 import java.util.concurrent.TimeUnit;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
+import okhttp3.Headers;
 import okhttp3.OkHttpClient;
 import ru.vtosters.lite.net.Request;
-import ru.vtosters.lite.utils.Preferences;
 
 public class FoafBase{
     private static final Pattern FOAF_REGEX = Pattern.compile("<ya:created dc:date=\"(.+?)\"\\/>");
@@ -34,16 +37,30 @@ public class FoafBase{
     private static final OkHttpClient client = new OkHttpClient();
 
     public static long getLastSeen(long origtime, int id) throws ParseException, IOException{
-        if (!Preferences.foaf()) return origtime;
+        var request = new okhttp3.Request.a()
+                .b(getLink(id))
+                .a(Headers.a("User-Agent", Network.l.c().a(), "Content-Type", "application/x-www-form-urlencoded; charset=utf-8")).a();
 
-        Matcher matcher = FOAF_REGEX_LAST_SEEN.matcher(
-                client.a(
-                        new okhttp3.Request.a().a(getLink(id)).b().a()
-                ).execute().a().g());
+        String response = null;
+
+        try {
+            response = client.a(request).execute().a().g();
+        } catch (IOException e) {
+            Log.e("FoafBase", e.getMessage());
+        }
+
+        Matcher matcher = FOAF_REGEX_LAST_SEEN.matcher(response);
+
         if (!matcher.find()) {
             return origtime;
         }
-        return new SimpleDateFormat("yyyy-MM-dd'T'kk:mm:ss", Locale.getDefault()).parse(matcher.group(1)).getTime() / 1000;
+
+        var tz = TimeZone.getDefault();
+        var smf = new SimpleDateFormat("yyyy-MM-dd'T'kk:mm:ss", Locale.getDefault());
+
+        smf.setTimeZone(tz);
+
+        return smf.parse(matcher.group(1)).getTime() / 1000;
     }
 
     private static String getLink(int i){

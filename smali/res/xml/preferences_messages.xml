@@ -51,11 +51,5 @@
             android:entryValues="@array/msgcount"
             android:key="msgcount"
             android:title="@string/messages_other_download_first" />
-        <com.vtosters.lite.ui.MaterialSwitchPreference
-            android:enabled="false"
-            android:defaultValue="false"
-            android:key="convUsersOnline"
-            android:summary="@string/convUsersOnlinesum"
-            android:title="@string/convUsersOnline" />
     </PreferenceCategory>
 </PreferenceScreen>

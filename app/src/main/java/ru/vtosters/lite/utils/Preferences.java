@@ -158,8 +158,8 @@ public class Preferences{
         return getBoolValue("calls", false);
     }
 
-    public static boolean convUsersOnline(){
-        return getBoolValue("convUsersOnline", false);
+    public static boolean globalUsersOnline(){
+        return getBoolValue("globalUsersOnline", false);
     }
 
     public static boolean dev(){

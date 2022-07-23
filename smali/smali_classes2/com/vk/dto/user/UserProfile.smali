@@ -2928,6 +2928,12 @@
 .method public static d(Lorg/json/JSONObject;)Lcom/vk/dto/user/OnlineInfo;
     .locals 12
 
+    const v2, 0x1
+
+    invoke-static {p0, v2}, Lru/vtosters/lite/hooks/OnlineFormatterHook;->onlineHook(Lorg/json/JSONObject;Z)Lorg/json/JSONObject;
+
+    move-result-object p0
+
     .line 1
     sget-object v0, Lcom/vk/dto/user/VisibleStatus;->e:Lcom/vk/dto/user/VisibleStatus;
 

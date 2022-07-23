@@ -133,6 +133,12 @@
 
     move-object/from16 v1, p2
 
+    const v2, 0x0
+
+    invoke-static {v1, v2}, Lru/vtosters/lite/hooks/OnlineFormatterHook;->onlineHook(Lorg/json/JSONObject;Z)Lorg/json/JSONObject;
+
+    move-result-object v1
+
     .line 2
     iget-object v2, v0, Lcom/vtosters/lite/api/ExtendedUserProfile;->a:Lcom/vk/dto/user/UserProfile;
 
