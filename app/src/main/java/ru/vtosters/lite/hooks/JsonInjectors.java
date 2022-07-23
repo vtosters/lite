@@ -8,6 +8,7 @@ import static ru.vtosters.lite.hooks.DateHook.getLocale;
 import static ru.vtosters.lite.utils.Base64Utils.decode;
 import static ru.vtosters.lite.utils.Globals.getContext;
 import static ru.vtosters.lite.utils.Globals.getPrefsValue;
+import static ru.vtosters.lite.utils.Globals.getUserId;
 import static ru.vtosters.lite.utils.Globals.getUserToken;
 import static ru.vtosters.lite.utils.Newsfeed.checkCaption;
 import static ru.vtosters.lite.utils.Newsfeed.checkCopyright;
@@ -166,7 +167,7 @@ public class JsonInjectors{
         var onlineinfo = json.optJSONObject("online_info");
         var time = getLastSeen(0L, id);
 
-        if (time != 0L && onlineinfo != null && !onlineinfo.optBoolean("is_online")) {
+        if (time != 0L && onlineinfo != null && !onlineinfo.optBoolean("is_online") && id != getUserId()) {
             json.remove("online_info");
 
             var online_info = new JSONObject()

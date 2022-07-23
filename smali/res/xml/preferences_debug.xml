@@ -90,7 +90,6 @@
             android:defaultValue="https://vtsf.vknext.net"
             android:key="ssfscustom"
             android:title="@string/debug_developer_ssfs_custom" />
-        <com.vtosters.lite.ui.MaterialSectionDividerPreference />
     </PreferenceCategory>
     <PreferenceCategory
         android:key="domains"
