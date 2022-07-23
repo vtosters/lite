@@ -43,10 +43,10 @@ import okhttp3.Request;
 import ru.vtosters.lite.utils.Globals;
 import ru.vtosters.lite.utils.Newsfeed;
 
-public class JsonInjectors {
+public class JsonInjectors{
     private static final OkHttpClient mClient = new OkHttpClient();
 
-    public static JSONObject profileButton(JSONObject orig) throws JSONException {
+    public static JSONObject profileButton(JSONObject orig) throws JSONException{
         if (haveDonateButton()) return orig;
 
         var pic = "https://sun1-18.userapi.com/NLd_rNpGuSaBnPV6O-j5mqCGZk8BK8drAMd2LQ/5R-DEF37PFs.png";
@@ -65,7 +65,7 @@ public class JsonInjectors {
                 + text_color + decode("In0="));
     }
 
-    public static JSONObject convBar(JSONObject orig) throws JSONException {
+    public static JSONObject convBar(JSONObject orig) throws JSONException{
         var peerid = Objects.requireNonNull(orig.optJSONObject("peer")).optInt("id");
 
         var pic = "https://image.pngaaa.com/641/326641-middle.png"; // can be null
@@ -107,7 +107,7 @@ public class JsonInjectors {
                 + decode("fQ=="));
     }
 
-    public static JSONObject menu(JSONObject orig) throws JSONException {
+    public static JSONObject menu(JSONObject orig) throws JSONException{
         var Special = orig.optJSONArray("special");
         var Main = orig.getJSONArray("main");
         var Other = orig.optJSONArray("other");
@@ -119,7 +119,7 @@ public class JsonInjectors {
         return orig;
     }
 
-    public static JSONObject superapp(JSONObject json) throws JSONException {
+    public static JSONObject superapp(JSONObject json) throws JSONException{
         var superApps = Globals.getPreferences().getString("superapp_items",
                 "menu,promo,miniapps,vkpay_slim,greeting,holiday,weather,sport,games,informer,food,event,music,vk_run").split(",");
         if (superApps.length == 0) return json;
@@ -148,7 +148,7 @@ public class JsonInjectors {
         return json.putOpt("items", newItems);
     }
 
-    public static JSONObject musiclink(JSONObject json) {
+    public static JSONObject musiclink(JSONObject json){
         var oldItems = json.optJSONArray("links");
 
         if (oldItems != null) {
@@ -161,31 +161,32 @@ public class JsonInjectors {
         return json;
     }
 
-    public static JSONObject onlineinfo(JSONObject json) throws ParseException, IOException, JSONException {
+    public static JSONObject setOnlineInfo(JSONObject json) throws ParseException, IOException, JSONException{
         var id = json.optInt("id");
         var onlineinfo = json.optJSONObject("online_info");
         var time = getLastSeen(0L, id);
 
-        if (time == 0L) {
-            return json;
+        if (time != 0L && onlineinfo != null && !onlineinfo.optBoolean("is_online")) {
+            json.remove("online_info");
+
+            var online_info = new JSONObject()
+                    .put("visible", true)
+                    .put("last_seen", time)
+                    .put("is_online", false)
+                    .put("app_id", 0)
+                    .put("is_mobile", false);
+
+            var last_seen = new JSONObject()
+                    .put("platform", 4)
+                    .put("time", time);
+
+            json.put("last_seen", last_seen).put("online_info", online_info);
         }
-
-        onlineinfo.put("last_seen", time);
-        onlineinfo.put("visible", true);
-        onlineinfo.put("app_id", 0);
-        onlineinfo.put("is_online", false);
-        onlineinfo.put("is_mobile", false);
-        onlineinfo.remove("status");
-
-        var last_seen = new JSONObject();
-        last_seen.put("time", time);
-        last_seen.put("platform", 0);
-        json.put("last_seen", last_seen);
 
         return json;
     }
 
-    public static JSONObject storiesads(JSONObject json, boolean isDeleteFix) throws JSONException {
+    public static JSONObject storiesads(JSONObject json, boolean isDeleteFix) throws JSONException{
         if (!adsstories()) {
             return json;
         }
@@ -219,7 +220,7 @@ public class JsonInjectors {
         return json;
     }
 
-    private static void parseStoriesItem(JSONObject item) throws JSONException {
+    private static void parseStoriesItem(JSONObject item) throws JSONException{
         var stories = item.optJSONArray("stories");
         var newStories = new JSONArray();
 
@@ -239,7 +240,7 @@ public class JsonInjectors {
         item.put("stories", newStories);
     }
 
-    public static Boolean isAds(JSONObject list, String type) throws JSONException {
+    public static Boolean isAds(JSONObject list, String type) throws JSONException{
         if (list == null || type == null || !ads()) return false;
 
         if (list.has("ads")
@@ -265,7 +266,7 @@ public class JsonInjectors {
         return false;
     }
 
-    public static JSONArray newsfeedlist(JSONArray items) throws JSONException {
+    public static JSONArray newsfeedlist(JSONArray items) throws JSONException{
         for (int j = 0; j < items.length(); j++) {
             var list = items.optJSONObject(j);
             var name = list.optString("id");
@@ -279,7 +280,7 @@ public class JsonInjectors {
         return items;
     }
 
-    public static JSONArray newsfeedadtest(JSONArray items) throws JSONException {
+    public static JSONArray newsfeedadtest(JSONArray items) throws JSONException{
         if (!getBoolValue("newadblock", true)) return items;
         var newItems = new JSONArray();
 
@@ -349,7 +350,7 @@ public class JsonInjectors {
         return newItems;
     }
 
-    public static JSONObject music(JSONObject json) throws JSONException {
+    public static JSONObject music(JSONObject json) throws JSONException{
         var catalog = json.optJSONObject("catalog");
 
         JSONArray oldItems = null;
@@ -417,7 +418,7 @@ public class JsonInjectors {
         return json;
     }
 
-    public static JSONObject fetchCatalogId(String section) {
+    public static JSONObject fetchCatalogId(String section){
         if (section == null) return null;
 
         var request = new Request.a()
@@ -443,7 +444,7 @@ public class JsonInjectors {
         return null;
     }
 
-    public static JSONObject friends(JSONObject json) throws JSONException {
+    public static JSONObject friends(JSONObject json) throws JSONException{
         JSONObject catalog = json;
         boolean sectionexecute = true;
         boolean hasBirthday = false;
@@ -510,7 +511,7 @@ public class JsonInjectors {
     }
 
 
-    public static boolean haveDonateButton() {
+    public static boolean haveDonateButton(){
         int randomshower = new Random().nextInt(6);
 
         return hasVerification() || randomshower != 1;

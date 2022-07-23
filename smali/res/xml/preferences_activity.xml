@@ -91,6 +91,18 @@
             android:key="listen_v"
             android:title="Отключить статус прослушивания" />
     </PreferenceCategory>
+    <PreferenceCategory android:title="Скрытый онлайн VK Me">
+        <com.vtosters.lite.ui.MaterialSwitchPreference
+            android:defaultValue="false"
+            android:key="onlinefix"
+            android:summary="Показывать онлайн пользователей в профилях если у вас включен режим скрытия онлайна из VK Messenger"
+            android:title="Обходить онлайн" />
+        <com.vtosters.lite.ui.MaterialSwitchPreference
+            android:defaultValue="false"
+            android:key="globalUsersOnline"
+            android:summary="Может вызывать долгие загрузки разделов и большое потребление трафика \n\nНе рекомендуется включать данную функцию"
+            android:title="Глобальный обход онлайна" />
+    </PreferenceCategory>
     <PreferenceCategory android:title="@string/privacy_vtl">
         <com.vtosters.lite.ui.MaterialSwitchPreference
             android:defaultValue="true"

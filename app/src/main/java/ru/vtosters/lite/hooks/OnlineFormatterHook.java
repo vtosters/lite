@@ -1,6 +1,8 @@
 package ru.vtosters.lite.hooks;
+import static ru.vtosters.lite.hooks.JsonInjectors.setOnlineInfo;
 import static ru.vtosters.lite.net.Request.makeRequest;
 import static ru.vtosters.lite.utils.Globals.getString;
+import static ru.vtosters.lite.utils.Globals.getUserId;
 import static ru.vtosters.lite.utils.Globals.getUserToken;
 import static ru.vtosters.lite.utils.Globals.sendToast;
 import static ru.vtosters.lite.utils.Preferences.dev;
@@ -8,9 +10,14 @@ import static ru.vtosters.lite.utils.Preferences.getBoolValue;
 import static ru.vtosters.lite.utils.Preferences.getPrefsFromFile;
 import static ru.vtosters.lite.utils.Proxy.getApi;
 
+import android.util.Log;
+
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
+
+import java.io.IOException;
+import java.text.ParseException;
 
 public class OnlineFormatterHook{
     private static String AppName;
@@ -158,6 +165,17 @@ public class OnlineFormatterHook{
         if (appname == null) return null;
 
         return getString("custom_online") + " " + appname;
+    }
+
+    public static JSONObject onlineHook(JSONObject json, boolean isGlobalHook) throws ParseException, IOException, JSONException{
+        if (!getBoolValue("onlinefix", false)) return json;
+
+        if (isGlobalHook && !getBoolValue("globalUsersOnline", false)) {
+            return json;
+        }
+
+        setOnlineInfo(json);
+        return json;
     }
 }
 
