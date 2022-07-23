@@ -23,7 +23,6 @@ public class TogglesHook{
             case AB_GIFTS_FROM_KEYBOARD:
             case FEATURE_FEED_DEFAULT_LIST_ALWAYS:
             case EXPERIMENT_NEWS_VIDEO_LAYOUT_TEXT:
-            case FEATURE_MUSIC_AUDIO_SERVICE:
             case FEATURE_MILKSHAKE_DISCOVER_IN_MENU:
             case FEATURE_DISCOVER_CATEGORIES:
             case FEATURE_FAVE_PERF_IMPROVE:

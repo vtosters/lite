@@ -55,12 +55,11 @@ public class FoafBase{
             return origtime;
         }
 
-        var tz = TimeZone.getDefault();
-        var smf = new SimpleDateFormat("yyyy-MM-dd'T'kk:mm:ss", Locale.getDefault());
-
-        smf.setTimeZone(tz);
-
-        return smf.parse(matcher.group(1)).getTime() / 1000;
+        SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss", Locale.US);
+        sdf.setTimeZone(TimeZone.getTimeZone("Europe/Moscow"));
+        Date date = sdf.parse(matcher.group(1));
+        sdf.setTimeZone(TimeZone.getDefault());
+        return sdf.parse(sdf.format(date)).getTime() / 1000;
     }
 
     private static String getLink(int i){
