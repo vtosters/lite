@@ -33,11 +33,11 @@ public class ThemesFragment extends MaterialPreferenceToolbarFragment{
         findPreference("darktheme").setOnPreferenceChangeListener(new restartdark());
         findPreference("lighttheme").setOnPreferenceChangeListener(new restartlight());
         findPreference("iconmanager").setOnPreferenceClickListener(new openicons());
-//        findPreference("dockbar_tab_titles").setOnPreferenceChangeListener((preference, o) -> {
-//            getPreferences().edit().putBoolean("dockbar_tab_titles", (boolean) o).commit();
-//            restartApplication();
-//            return false;
-//        });
+        findPreference("dockbar_tab_titles").setOnPreferenceChangeListener((preference, o) -> {
+            getPreferences().edit().putBoolean("dockbar_tab_titles", (boolean) o).commit();
+            restartApplication();
+            return false;
+        });
         findPreference("dockbar_accent").setOnPreferenceClickListener(new restart());
         findPreference("dockcounter").setOnPreferenceClickListener(new restart());
     }
