@@ -40,7 +40,7 @@ public class VKM3UParser{
             } else if (line.startsWith("#EXTINF")) {
                 if (mTransportStreams.size() == i)
                     mTransportStreams.add(new TransportStream());
-            } else if (line.endsWith(".ts") || line.endsWith(".tp") || line.endsWith(".mpeg-ts") || line.endsWith(".m2ts")) {
+            } else if (isM3U8(line)) {
                 mTransportStreams.get(i).setName(line);
                 ++i;
             }
@@ -49,6 +49,10 @@ public class VKM3UParser{
 
     private String getDirectiveValue(String directive){
         return directive.substring(directive.indexOf(":") + 1);
+    }
+
+    public static boolean isM3U8(String str) {
+        return str.endsWith(".ts") || str.endsWith(".tp") || str.endsWith(".mpeg-ts") || str.endsWith(".m2ts");
     }
 
     public int getHeapSize(){
