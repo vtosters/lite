@@ -26,10 +26,10 @@
             android:title="@string/appearance_theme_light_theme" />
     </PreferenceCategory>
     <PreferenceCategory android:title="Докбар">
-<!--        <com.vtosters.lite.ui.MaterialSwitchPreference-->
-<!--            android:defaultValue="false"-->
-<!--            android:key="dockbar_tab_titles"-->
-<!--            android:title="@string/dockbar_tab_titles" />-->
+        <com.vtosters.lite.ui.MaterialSwitchPreference
+            android:defaultValue="false"
+            android:key="dockbar_tab_titles"
+            android:title="@string/dockbar_tab_titles" />
         <com.vtosters.lite.ui.MaterialSwitchPreference
             android:defaultValue="true"
             android:key="dockbar_accent"
