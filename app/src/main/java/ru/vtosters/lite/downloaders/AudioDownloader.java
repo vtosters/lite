@@ -15,30 +15,40 @@ import ru.vtosters.lite.downloaders.notifications.NotificationChannels;
 import ru.vtosters.lite.music.Callback;
 import ru.vtosters.lite.music.FFMpeg;
 import ru.vtosters.lite.music.M3UDownloader;
+import ru.vtosters.lite.music.MP3Downloader;
 import ru.vtosters.lite.utils.Globals;
 
-public class AudioDownloader{
+public class AudioDownloader {
     private static NotificationManagerCompat notificationManager = NotificationManagerCompat.from(Globals.getContext());
 
-    public static void downloadAudio(MusicTrack track){
+    public static void downloadAudio(MusicTrack track) {
+        if (Globals.getDefprefs().getBoolean("new_music_downloading_way", false)) {
+            downloadMP3(track);
+        } else {
+            downloadM3U8(track);
+        }
+    }
+
+    public static void downloadM3U8(MusicTrack track) {
         if (track.D == null) {
             ToastUtils.a("Не удалось найти ссылку на аудиозапись");
             return;
         }
+
         var musicPath = Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_MUSIC).getAbsolutePath();
         var tempId = track.d;
         var downloadPath = musicPath + File.separator + tempId;
-        var notification = buildDownloadNotification(track, tempId);
 
-        downloadM3U8(track, downloadPath, new Callback(){
+        var notification = buildDownloadNotification(track, tempId);
+        downloadM3U8(track, downloadPath, new Callback() {
             @Override
-            public void onProgress(int progress){
+            public void onProgress(int progress) {
                 notification.setProgress(100, progress, false);
                 notificationManager.notify(tempId, notification.build());
             }
 
             @Override
-            public void onSuccess(){
+            public void onSuccess() {
                 try {
                     var fileName = track.toString();
                     var success = FFMpeg.convert(downloadPath, musicPath + File.separator + fileName + ".mp3");
@@ -59,19 +69,19 @@ public class AudioDownloader{
             }
 
             @Override
-            public void onFailure(){
+            public void onFailure() {
                 notification.setContentText("Не удалось загрузить аудиозапись").setProgress(0, 0, false);
                 notificationManager.notify(tempId, notification.build());
             }
 
             @Override
-            public void onSizeReceived(long size, long header){
+            public void onSizeReceived(long size, long header) {
 
             }
         });
     }
 
-    private static void downloadM3U8(MusicTrack track, String path, Callback callback){
+    private static void downloadM3U8(MusicTrack track, String path, Callback callback) {
         File outDir = new File(path);
         if (!outDir.exists())
             if (outDir.mkdir())
@@ -82,7 +92,11 @@ public class AudioDownloader{
         new M3UDownloader(track.D, outDir, callback).execute();
     }
 
-    private static NotificationCompat.Builder buildDownloadNotification(MusicTrack track, int id){
+    private static void downloadMP3(MusicTrack track) {
+        new MP3Downloader().execute(track);
+    }
+
+    private static NotificationCompat.Builder buildDownloadNotification(MusicTrack track, int id) {
         var notificationBuilder = new NotificationCompat.Builder(Globals.getContext(), NotificationChannels.MUSIC_DOWNLOAD_CHANNEL_ID)
                 .setSmallIcon(android.R.drawable.stat_sys_download)
                 .setContentTitle("Загрузка аудиозаписи")
