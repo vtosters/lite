@@ -2,6 +2,7 @@ package com.vtosters.lite.ui.bottomnavigation;
 
 import static ru.vtosters.lite.utils.Themes.getCSTDock;
 
+import android.annotation.SuppressLint;
 import android.content.Context;
 import android.content.res.ColorStateList;
 import android.graphics.Color;
@@ -43,14 +44,12 @@ public class BottomNavigationItemView extends FrameLayout implements MenuView.It
     private MenuItemImpl mItemData;
     private ColorStateList mColorStateList;
     private final int mMargin;
-    private final int mDiff;
     private final float mSmallScale;
-    private final float mLargeScale;
     private boolean mShiftingModeEnabled;
     private boolean mIconsModeEnabled;
     private boolean mStaticModeEnabled;
-    private ImageView mIcon;
-    private ImageView mActionIcon;
+    private final ImageView mIcon;
+    private final ImageView mActionIcon;
 
     public BottomNavigationItemView(@NonNull Context context) {
         this(context, null);
@@ -64,12 +63,9 @@ public class BottomNavigationItemView extends FrameLayout implements MenuView.It
         super(context, attrs, defStyle);
         this.mItemPos = -1;
 
-        var textSize = (float) getResources().getDimensionPixelSize(R.dimen.design_bottom_navigation_text_size);
-        var activeTextSize = (float) getResources().getDimensionPixelSize(R.dimen.design_bottom_navigation_active_text_size);
         this.mMargin = getResources().getDimensionPixelSize(R.dimen.design_bottom_navigation_margin);
-        this.mDiff = (int) (textSize - activeTextSize);
-        this.mSmallScale = activeTextSize / textSize;
-        this.mLargeScale = textSize / activeTextSize;
+        this.mSmallScale = 10.0f;
+        float mLargeScale = 10.0f;
 
         LayoutInflater.from(context).inflate(R.layout.design_bottom_navigation_item, this, true);
         this.setBackgroundResource(R.drawable.design_bottom_navigation_item_background);
@@ -102,6 +98,7 @@ public class BottomNavigationItemView extends FrameLayout implements MenuView.It
         this.mActionIcon.setVisibility(VISIBLE);
     }
 
+    @SuppressLint("RestrictedApi")
     public MenuItemImpl getItemData() {
         return this.mItemData;
     }
@@ -110,6 +107,7 @@ public class BottomNavigationItemView extends FrameLayout implements MenuView.It
         return this.mItemPos;
     }
 
+    @SuppressLint("RestrictedApi")
     public void initialize(MenuItemImpl impl, int i) {
         this.mItemData = impl;
         this.setCheckable(impl.isCheckable());
@@ -121,6 +119,7 @@ public class BottomNavigationItemView extends FrameLayout implements MenuView.It
         this.setContentDescription(impl.getTitle());
     }
 
+    @SuppressLint("RestrictedApi")
     public int[] onCreateDrawableState(int extraSpace) {
         int[] baseState = super.onCreateDrawableState(extraSpace + 1);
         if (this.mItemData != null && this.mItemData.isCheckable() && this.mItemData.isChecked()) {
@@ -146,14 +145,17 @@ public class BottomNavigationItemView extends FrameLayout implements MenuView.It
         }
     }
 
+    @SuppressLint("RestrictedApi")
     public boolean prefersCondensedTitle() {
         return false;
     }
 
+    @SuppressLint("RestrictedApi")
     public void setCheckable(boolean var1) {
         this.refreshDrawableState();
     }
 
+    @SuppressLint("RestrictedApi")
     public void setChecked(boolean checked) {
         this.mItemData.setChecked(checked);
 
@@ -264,6 +266,7 @@ public class BottomNavigationItemView extends FrameLayout implements MenuView.It
         this.mIcon.setEnabled(b);
     }
 
+    @SuppressLint("RestrictedApi")
     public void setIcon(Drawable drawable) {
         if (drawable != null) {
             if (drawable.getConstantState() != null)
@@ -276,6 +279,7 @@ public class BottomNavigationItemView extends FrameLayout implements MenuView.It
         this.mIcon.setImageDrawable(drawable);
     }
 
+    @SuppressLint("RestrictedApi")
     public void setIconTintList(ColorStateList colorStateList) {
         this.mColorStateList = colorStateList;
         MenuItemImpl impl = this.mItemData;
@@ -305,17 +309,20 @@ public class BottomNavigationItemView extends FrameLayout implements MenuView.It
         this.mShiftingModeEnabled = var1;
     }
 
+    @SuppressLint("RestrictedApi")
     public void setShortcut(boolean b, char c) {
     }
 
     public void setTextColor(ColorStateList colorStateList) {
     }
 
+    @SuppressLint("RestrictedApi")
     public void setTitle(CharSequence title) {
         this.mSmallLabel.setText(title);
         this.mLargeLabel.setText(title);
     }
 
+    @SuppressLint("RestrictedApi")
     public boolean showsIcon() {
         return true;
     }
