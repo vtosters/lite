@@ -8,13 +8,14 @@ import android.app.Activity;
 import android.app.AlertDialog;
 import android.content.Intent;
 
+import com.vk.core.dialogs.alert.VkAlertDialog;
 import com.vk.navigation.Navigator;
 
 import ru.vtosters.lite.utils.VKUIwrapper;
 
 public class VKIDProtection{
     public static void alert(final Activity activity){
-        AlertDialog.Builder builder = new AlertDialog.Builder(activity);
+        VkAlertDialog.Builder builder = new VkAlertDialog.Builder(activity);
         builder.setTitle(getString("debug_warning"));
         builder.setMessage(getString("vkidsumm"));
         builder.setCancelable(false);

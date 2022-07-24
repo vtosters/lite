@@ -12,6 +12,7 @@ import static ru.vtosters.lite.utils.SettBackup.backupSettings;
 import static ru.vtosters.lite.utils.SettBackup.deletePrefs;
 import static ru.vtosters.lite.utils.SettBackup.restoreBackup;
 import static ru.vtosters.lite.utils.Themes.getAlertStyle;
+import static ru.vtosters.lite.utils.Themes.getTextAttr;
 
 import android.app.Activity;
 import android.content.ClipData;
@@ -19,16 +20,19 @@ import android.content.ClipboardManager;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.util.Log;
 import android.webkit.WebView;
 import android.widget.ArrayAdapter;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AlertDialog;
 import androidx.preference.Preference;
 
 import com.vk.auth.api.VKAccount;
+import com.vk.core.dialogs.alert.VkAlertDialog;
 import com.vk.core.util.ToastUtils;
 import com.vk.im.ui.providers.audiomsg.ImAudioMsgPlayerProvider;
 import com.vk.im.ui.providers.audiomsg.PlayerActionSources;
@@ -206,7 +210,7 @@ public class OtherFragment extends MaterialPreferenceToolbarFragment {
         public boolean onPreferenceClick(Preference preference) {
             var arr = SettBackup.getBackupsNames();
             var adapter = new ArrayAdapter(getContext(), android.R.layout.simple_list_item_1, arr);
-            new AlertDialog.Builder(getContext(), getAlertStyle())
+            new VkAlertDialog.Builder(getContext())
                     .setTitle("Выберите бэкап")
                     .setAdapter(adapter, (dialog, which) -> {
                         try {
