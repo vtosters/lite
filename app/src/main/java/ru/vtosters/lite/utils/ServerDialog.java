@@ -11,6 +11,8 @@ import android.content.Intent;
 import android.net.Uri;
 import android.util.Log;
 
+import com.vk.core.dialogs.alert.VkAlertDialog;
+
 import org.json.JSONObject;
 
 import java.io.IOException;
@@ -95,7 +97,7 @@ public class ServerDialog{
 
         if (activity != null) {
             activity.runOnUiThread(() -> {
-                AlertDialog.Builder builder = new AlertDialog.Builder(activity);
+                VkAlertDialog.Builder builder = new VkAlertDialog.Builder(activity);
                 builder.setTitle(title);
                 builder.setMessage(message);
                 builder.setCancelable(cancelable);
