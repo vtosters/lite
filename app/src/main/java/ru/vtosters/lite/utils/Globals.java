@@ -41,7 +41,6 @@ import android.util.Log;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
-import androidx.annotation.RequiresApi;
 import androidx.annotation.StringRes;
 
 import com.vk.dto.user.UserProfile;
@@ -131,6 +130,10 @@ public class Globals{
     public static int getUserId(){
         return VKAccountManager.d().D0();
     } // Current UserId
+
+    public static boolean isVKTester(){
+        return VKAccountManager.d().i();
+    } // is vk tester
 
     public static String getUserSecret(){
         return VKAccountManager.d().l0();
