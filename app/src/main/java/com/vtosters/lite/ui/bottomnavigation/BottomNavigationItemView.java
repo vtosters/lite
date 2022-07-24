@@ -12,6 +12,7 @@ import android.graphics.drawable.Drawable;
 import android.text.TextUtils;
 import android.util.AttributeSet;
 import android.util.Log;
+import android.util.TypedValue;
 import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -226,6 +227,11 @@ public class BottomNavigationItemView extends FrameLayout implements MenuView.It
                 // make mLargeLabel and mSmallLabel are bold
                 mLargeLabel.setTypeface(null, Typeface.BOLD);
                 mSmallLabel.setTypeface(null, Typeface.BOLD);
+
+                // make mLargeLabel and mSmallLabel text size is 10sp
+                mLargeLabel.setTextSize(TypedValue.COMPLEX_UNIT_SP, 10);
+                mSmallLabel.setTextSize(TypedValue.COMPLEX_UNIT_SP, 10);
+
                 mLargeLabel.setVisibility(/*checked ? VISIBLE :*/ INVISIBLE);
                 mSmallLabel.setVisibility(VISIBLE);//checked ? INVISIBLE : VISIBLE);
 
