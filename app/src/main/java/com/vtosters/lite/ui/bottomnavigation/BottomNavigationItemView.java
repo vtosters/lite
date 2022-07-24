@@ -7,6 +7,7 @@ import android.content.Context;
 import android.content.res.ColorStateList;
 import android.graphics.Color;
 import android.graphics.PorterDuff;
+import android.graphics.Typeface;
 import android.graphics.drawable.Drawable;
 import android.text.TextUtils;
 import android.util.AttributeSet;
@@ -222,6 +223,9 @@ public class BottomNavigationItemView extends FrameLayout implements MenuView.It
 //                ViewCompat.setScaleY(mLargeLabel, !mStaticModeEnabled && !checked ? mLargeScale : 1.0f);
                 ViewCompat.setScaleX(mSmallLabel, !mStaticModeEnabled && checked ? mSmallScale : 1.0f);
                 ViewCompat.setScaleY(mSmallLabel, !mStaticModeEnabled && checked ? mSmallScale : 1.0f);
+                // make mLargeLabel and mSmallLabel are bold
+                mLargeLabel.setTypeface(null, Typeface.BOLD);
+                mSmallLabel.setTypeface(null, Typeface.BOLD);
                 mLargeLabel.setVisibility(/*checked ? VISIBLE :*/ INVISIBLE);
                 mSmallLabel.setVisibility(VISIBLE);//checked ? INVISIBLE : VISIBLE);
 
