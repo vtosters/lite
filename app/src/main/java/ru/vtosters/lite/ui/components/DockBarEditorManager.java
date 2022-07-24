@@ -107,14 +107,14 @@ public class DockBarEditorManager {
         Globals.getPreferences().edit().putString("dockbar_tabs", mSelectedTabs.stream()
                 .map(tab -> tab.tag)
                 .collect(Collectors.joining(",")))
-                .apply();
+                .commit();
     }
 
     public void reset() {
         Globals.getPreferences()
                 .edit()
                 .putString("dockbar_tabs", "tab_news,tab_superapps,tab_messages,tab_friends,tab_profile")
-                .apply();
+                .commit();
     }
 
     public List<DockBarTab> getSelectedTabs() {
