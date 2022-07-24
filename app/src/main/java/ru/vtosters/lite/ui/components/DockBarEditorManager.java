@@ -152,7 +152,7 @@ public class DockBarEditorManager {
                 return DockBarTab.valuesOf(
                         "tab_feedback",
                         !milkshake() ? R.drawable.ic_users_outline_28 : R.drawable.ic_menu_notification_outline_28,
-                        !milkshake() ? R.string.friends : R.string.notification,
+                        !milkshake() ? R.string.friends : R.string.not_notifications,
                         R.id.tab_feedback,
                         !milkshake() ? FriendsFragment.class : NotificationsContainerFragment.class);
             case "tab_profile":
@@ -166,7 +166,7 @@ public class DockBarEditorManager {
                 return DockBarTab.valuesOf(
                         "tab_friends",
                         milkshake() ? R.drawable.ic_users_outline_28 : R.drawable.ic_menu_notification_outline_28,
-                        milkshake() ? R.string.friends : R.string.notification,
+                        milkshake() ? R.string.friends : R.string.not_notifications,
                         R.id.menu_friends,
                         milkshake() ? FriendsCatalogFragment.class : NotificationsContainerFragment.class);
             case "tab_groups":
