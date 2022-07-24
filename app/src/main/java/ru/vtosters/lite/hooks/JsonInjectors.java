@@ -10,6 +10,7 @@ import static ru.vtosters.lite.utils.Globals.getContext;
 import static ru.vtosters.lite.utils.Globals.getPrefsValue;
 import static ru.vtosters.lite.utils.Globals.getUserId;
 import static ru.vtosters.lite.utils.Globals.getUserToken;
+import static ru.vtosters.lite.utils.Globals.isVKTester;
 import static ru.vtosters.lite.utils.Newsfeed.checkCaption;
 import static ru.vtosters.lite.utils.Newsfeed.checkCopyright;
 import static ru.vtosters.lite.utils.Newsfeed.isBadNews;
@@ -64,7 +65,9 @@ public class JsonInjectors{
             newItem.put(donateRecomm());
         }
 
-        newItem.put(vktesters(id));
+        if (!orig.has("type") && isVKTester()) {
+            newItem.put(vktesters(id));
+        }
 
         orig.put("buttons", newItem);
 
@@ -113,7 +116,7 @@ public class JsonInjectors{
     }
 
     public static JSONObject vktesters(int id) throws JSONException{
-        var title = "Профиль VK Testers";
+        var title = "Карточка Тестера";
         var text_color = "2D81E0";
         var link = "https://static.vk.com/bugs?lang=" + LangUtils.a() + "#/reporter" + id;
 
