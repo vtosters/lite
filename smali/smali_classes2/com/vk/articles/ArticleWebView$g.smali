@@ -68,14 +68,7 @@
         }
     .end annotation
 
-    .line 2
-    iget-object v0, p0, Lcom/vk/articles/ArticleWebView$g;->a:Lcom/vk/articles/ArticleWebView;
-
-    invoke-virtual {v0}, Landroid/webkit/WebView;->getContext()Landroid/content/Context;
-
-    move-result-object v0
-
-    invoke-static {v0}, Lcom/my/target/common/MyTargetUtils;->a(Landroid/content/Context;)Ljava/util/Map;
+    invoke-static {}, Ljava/util/Collections;->emptyMap()Ljava/util/Map;
 
     move-result-object v0
 

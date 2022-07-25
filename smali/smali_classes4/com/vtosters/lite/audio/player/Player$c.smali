@@ -277,26 +277,9 @@
 
     move-result-object p1
 
-    .line 12
-    instance-of p2, p1, Lcom/vtosters/lite/audio/player/ads/AdPlayerHelper;
-
-    if-eqz p2, :cond_6
-
-    move-object p2, p1
-
-    check-cast p2, Lcom/vtosters/lite/audio/player/ads/AdPlayerHelper;
-
-    invoke-virtual {p2}, Lcom/vtosters/lite/audio/player/ads/AdPlayerHelper;->h()[Lcom/vk/music/player/PlayerAction;
-
-    move-result-object p2
-
-    goto :goto_3
-
-    :cond_6
     move-object p2, v1
 
     .line 13
-    :goto_3
     sget-object v0, Lcom/vk/toggle/Features$Type;->FEATURE_MUSIC_REINIT_PLAYER:Lcom/vk/toggle/Features$Type;
 
     invoke-static {v0}, Lcom/vk/toggle/FeatureManager;->b(Lcom/vk/toggle/Features$Type;)Z
@@ -305,18 +288,6 @@
 
     if-eqz v0, :cond_8
 
-    .line 14
-    instance-of p2, p1, Lcom/vtosters/lite/audio/player/ads/ModernAdPlayer;
-
-    if-eqz p2, :cond_7
-
-    check-cast p1, Lcom/vtosters/lite/audio/player/ads/ModernAdPlayer;
-
-    invoke-virtual {p1}, Lcom/vtosters/lite/audio/player/ads/ModernAdPlayer;->h()[Lcom/vk/music/player/PlayerAction;
-
-    move-result-object v1
-
-    :cond_7
     move-object p2, v1
 
     :cond_8

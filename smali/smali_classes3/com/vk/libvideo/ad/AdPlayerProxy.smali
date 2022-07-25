@@ -6,15 +6,6 @@
 .implements Lcom/my/target/i3/InstreamAdPlayer;
 
 
-# annotations
-.annotation system Ldalvik/annotation/MemberClasses;
-    value = {
-        Lcom/vk/libvideo/ad/AdPlayerProxy$b;,
-        Lcom/vk/libvideo/ad/AdPlayerProxy$a;
-    }
-.end annotation
-
-
 # instance fields
 .field private a:Lcom/vk/media/player/ExoPlayerBase;
 
@@ -23,8 +14,6 @@
 .field private final c:Landroid/view/View;
 
 .field private d:Lcom/vk/media/player/video/ExoVideoSource;
-
-.field private e:Lcom/vk/libvideo/ad/AdPlayerProxy$b;
 
 .field private final f:Lkotlin/jvm/b/Functions1;
     .annotation system Ldalvik/annotation/Signature;
@@ -117,15 +106,6 @@
     return-void
 .end method
 
-.method public static final synthetic a(Lcom/vk/libvideo/ad/AdPlayerProxy;)Lcom/vk/libvideo/ad/AdPlayerProxy$b;
-    .locals 0
-
-    .line 1
-    iget-object p0, p0, Lcom/vk/libvideo/ad/AdPlayerProxy;->e:Lcom/vk/libvideo/ad/AdPlayerProxy$b;
-
-    return-object p0
-.end method
-
 .method public static final synthetic a(Lcom/vk/libvideo/ad/AdPlayerProxy;Lcom/vk/media/player/ExoPlayerBase;)V
     .locals 0
 
@@ -147,27 +127,6 @@
 .method private final a(Lcom/vk/media/player/ExoPlayerBase;)V
     .locals 1
 
-    .line 24
-    iget-object v0, p0, Lcom/vk/libvideo/ad/AdPlayerProxy;->e:Lcom/vk/libvideo/ad/AdPlayerProxy$b;
-
-    if-eqz v0, :cond_0
-
-    invoke-virtual {v0}, Lcom/vk/libvideo/ad/AdPlayerProxy$b;->a()Lcom/vk/libvideo/ad/AdPlayerProxy$a;
-
-    move-result-object v0
-
-    if-eqz v0, :cond_0
-
-    .line 25
-    invoke-virtual {p1}, Lcom/vk/media/player/ExoPlayerBase;->q()Lcom/vk/media/player/exo/VKExoPlayer;
-
-    move-result-object p1
-
-    if-eqz p1, :cond_0
-
-    invoke-virtual {p1, v0}, Lcom/google/android/exoplayer2/o0;->b(Lcom/google/android/exoplayer2/q0/c;)V
-
-    :cond_0
     return-void
 .end method
 
@@ -192,49 +151,6 @@
 .method private final h()V
     .locals 2
 
-    .line 1
-    iget-object v0, p0, Lcom/vk/libvideo/ad/AdPlayerProxy;->e:Lcom/vk/libvideo/ad/AdPlayerProxy$b;
-
-    if-eqz v0, :cond_1
-
-    invoke-virtual {v0}, Lcom/vk/libvideo/ad/AdPlayerProxy$b;->a()Lcom/vk/libvideo/ad/AdPlayerProxy$a;
-
-    move-result-object v0
-
-    if-eqz v0, :cond_1
-
-    .line 2
-    invoke-virtual {p0}, Lcom/vk/libvideo/ad/AdPlayerProxy;->g()Lcom/vk/media/player/ExoPlayerBase;
-
-    move-result-object v1
-
-    if-eqz v1, :cond_0
-
-    invoke-virtual {v1}, Lcom/vk/media/player/ExoPlayerBase;->q()Lcom/vk/media/player/exo/VKExoPlayer;
-
-    move-result-object v1
-
-    if-eqz v1, :cond_0
-
-    invoke-virtual {v1, v0}, Lcom/google/android/exoplayer2/o0;->b(Lcom/google/android/exoplayer2/q0/c;)V
-
-    .line 3
-    :cond_0
-    invoke-virtual {p0}, Lcom/vk/libvideo/ad/AdPlayerProxy;->g()Lcom/vk/media/player/ExoPlayerBase;
-
-    move-result-object v1
-
-    if-eqz v1, :cond_1
-
-    invoke-virtual {v1}, Lcom/vk/media/player/ExoPlayerBase;->q()Lcom/vk/media/player/exo/VKExoPlayer;
-
-    move-result-object v1
-
-    if-eqz v1, :cond_1
-
-    invoke-virtual {v1, v0}, Lcom/google/android/exoplayer2/o0;->a(Lcom/google/android/exoplayer2/q0/c;)V
-
-    :cond_1
     return-void
 .end method
 
@@ -243,96 +159,12 @@
 .method public a()V
     .locals 10
 
-    .line 12
-    iget-object v0, p0, Lcom/vk/libvideo/ad/AdPlayerProxy;->e:Lcom/vk/libvideo/ad/AdPlayerProxy$b;
-
-    if-eqz v0, :cond_0
-
-    invoke-virtual {v0}, Lcom/vk/libvideo/ad/AdPlayerProxy$b;->b()Lcom/my/target/i3/InstreamAdPlayer$a;
-
-    move-result-object v0
-
-    if-eqz v0, :cond_0
-
-    invoke-interface {v0}, Lcom/my/target/i3/InstreamAdPlayer$a;->b()V
-
-    .line 13
-    :cond_0
-    invoke-virtual {p0}, Lcom/vk/libvideo/ad/AdPlayerProxy;->g()Lcom/vk/media/player/ExoPlayerBase;
-
-    move-result-object v0
-
-    if-eqz v0, :cond_2
-
-    .line 14
-    iget-object v1, p0, Lcom/vk/libvideo/ad/AdPlayerProxy;->d:Lcom/vk/media/player/video/ExoVideoSource;
-
-    if-eqz v1, :cond_1
-
-    const/4 v2, 0x0
-
-    const/4 v3, 0x0
-
-    const/4 v4, 0x0
-
-    const/4 v5, 0x0
-
-    invoke-virtual {v0}, Lcom/vk/media/player/ExoPlayerBase;->t()I
-
-    move-result v6
-
-    int-to-long v6, v6
-
-    const/16 v8, 0xf
-
-    const/4 v9, 0x0
-
-    invoke-static/range {v1 .. v9}, Lcom/vk/media/player/video/ExoVideoSource;->a(Lcom/vk/media/player/video/ExoVideoSource;Ljava/lang/String;Landroid/net/Uri;IIJILjava/lang/Object;)Lcom/vk/media/player/video/ExoVideoSource;
-
-    move-result-object v1
-
-    goto :goto_0
-
-    :cond_1
-    const/4 v1, 0x0
-
-    :goto_0
-    iput-object v1, p0, Lcom/vk/libvideo/ad/AdPlayerProxy;->d:Lcom/vk/media/player/video/ExoVideoSource;
-
-    .line 15
-    invoke-virtual {v0}, Lcom/vk/media/player/ExoPlayerBase;->F()V
-
-    :cond_2
     return-void
 .end method
 
 .method public a(F)V
     .locals 1
 
-    .line 16
-    iget-object v0, p0, Lcom/vk/libvideo/ad/AdPlayerProxy;->e:Lcom/vk/libvideo/ad/AdPlayerProxy$b;
-
-    if-eqz v0, :cond_0
-
-    invoke-virtual {v0}, Lcom/vk/libvideo/ad/AdPlayerProxy$b;->b()Lcom/my/target/i3/InstreamAdPlayer$a;
-
-    move-result-object v0
-
-    if-eqz v0, :cond_0
-
-    invoke-interface {v0, p1}, Lcom/my/target/i3/InstreamAdPlayer$a;->a(F)V
-
-    .line 17
-    :cond_0
-    invoke-virtual {p0}, Lcom/vk/libvideo/ad/AdPlayerProxy;->g()Lcom/vk/media/player/ExoPlayerBase;
-
-    move-result-object v0
-
-    if-eqz v0, :cond_1
-
-    invoke-virtual {v0, p1}, Lcom/vk/media/player/ExoPlayerBase;->b(F)V
-
-    :cond_1
     return-void
 .end method
 
@@ -424,172 +256,34 @@
 .method public a(Lcom/my/target/i3/InstreamAdPlayer$a;)V
     .locals 2
 
-    .line 18
-    iget-object v0, p0, Lcom/vk/libvideo/ad/AdPlayerProxy;->e:Lcom/vk/libvideo/ad/AdPlayerProxy$b;
-
-    if-eqz v0, :cond_0
-
-    invoke-virtual {v0}, Lcom/vk/libvideo/ad/AdPlayerProxy$b;->a()Lcom/vk/libvideo/ad/AdPlayerProxy$a;
-
-    move-result-object v0
-
-    if-eqz v0, :cond_0
-
-    .line 19
-    invoke-virtual {p0}, Lcom/vk/libvideo/ad/AdPlayerProxy;->g()Lcom/vk/media/player/ExoPlayerBase;
-
-    move-result-object v1
-
-    if-eqz v1, :cond_0
-
-    invoke-virtual {v1}, Lcom/vk/media/player/ExoPlayerBase;->q()Lcom/vk/media/player/exo/VKExoPlayer;
-
-    move-result-object v1
-
-    if-eqz v1, :cond_0
-
-    invoke-virtual {v1, v0}, Lcom/google/android/exoplayer2/o0;->b(Lcom/google/android/exoplayer2/q0/c;)V
-
-    :cond_0
-    if-eqz p1, :cond_1
-
-    .line 20
-    new-instance v0, Lcom/vk/libvideo/ad/AdPlayerProxy$b;
-
-    .line 21
-    new-instance v1, Lcom/vk/libvideo/ad/AdPlayerProxy$a;
-
-    invoke-direct {v1, p0}, Lcom/vk/libvideo/ad/AdPlayerProxy$a;-><init>(Lcom/vk/libvideo/ad/AdPlayerProxy;)V
-
-    .line 22
-    invoke-direct {v0, v1, p1}, Lcom/vk/libvideo/ad/AdPlayerProxy$b;-><init>(Lcom/vk/libvideo/ad/AdPlayerProxy$a;Lcom/my/target/i3/InstreamAdPlayer$a;)V
-
-    goto :goto_0
-
-    :cond_1
-    const/4 v0, 0x0
-
-    .line 23
-    :goto_0
-    iput-object v0, p0, Lcom/vk/libvideo/ad/AdPlayerProxy;->e:Lcom/vk/libvideo/ad/AdPlayerProxy$b;
-
     return-void
 .end method
 
 .method public b()V
     .locals 2
 
-    .line 2
-    iget-object v0, p0, Lcom/vk/libvideo/ad/AdPlayerProxy;->e:Lcom/vk/libvideo/ad/AdPlayerProxy$b;
-
-    if-eqz v0, :cond_0
-
-    invoke-virtual {v0}, Lcom/vk/libvideo/ad/AdPlayerProxy$b;->b()Lcom/my/target/i3/InstreamAdPlayer$a;
-
-    move-result-object v0
-
-    if-eqz v0, :cond_0
-
-    invoke-interface {v0}, Lcom/my/target/i3/InstreamAdPlayer$a;->d()V
-
-    .line 3
-    :cond_0
-    invoke-virtual {p0}, Lcom/vk/libvideo/ad/AdPlayerProxy;->f()Lcom/vk/media/player/ExoPlayerBase;
-
-    move-result-object v0
-
-    if-eqz v0, :cond_1
-
-    const/4 v1, 0x0
-
-    .line 4
-    invoke-virtual {v0, v1}, Lcom/vk/media/player/ExoPlayerBase;->a(Z)V
-
-    :cond_1
     return-void
 .end method
 
 .method public c()V
     .locals 1
 
-    .line 2
-    iget-object v0, p0, Lcom/vk/libvideo/ad/AdPlayerProxy;->e:Lcom/vk/libvideo/ad/AdPlayerProxy$b;
-
-    if-eqz v0, :cond_0
-
-    invoke-virtual {v0}, Lcom/vk/libvideo/ad/AdPlayerProxy$b;->b()Lcom/my/target/i3/InstreamAdPlayer$a;
-
-    move-result-object v0
-
-    if-eqz v0, :cond_0
-
-    invoke-interface {v0}, Lcom/my/target/i3/InstreamAdPlayer$a;->c()V
-
-    .line 3
-    :cond_0
-    invoke-virtual {p0}, Lcom/vk/libvideo/ad/AdPlayerProxy;->g()Lcom/vk/media/player/ExoPlayerBase;
-
-    move-result-object v0
-
-    if-eqz v0, :cond_1
-
-    invoke-virtual {v0}, Lcom/vk/media/player/ExoPlayerBase;->H()V
-
-    :cond_1
     return-void
 .end method
 
 .method public d()F
     .locals 1
-
-    .line 1
-    invoke-virtual {p0}, Lcom/vk/libvideo/ad/AdPlayerProxy;->g()Lcom/vk/media/player/ExoPlayerBase;
-
-    move-result-object v0
-
-    if-eqz v0, :cond_0
-
-    invoke-virtual {v0}, Lcom/vk/media/player/ExoPlayerBase;->k()I
-
-    move-result v0
-
-    int-to-float v0, v0
-
-    goto :goto_0
-
-    :cond_0
+    
     const/4 v0, 0x0
 
-    :goto_0
     return v0
 .end method
 
 .method public e()F
     .locals 2
 
-    .line 1
-    invoke-virtual {p0}, Lcom/vk/libvideo/ad/AdPlayerProxy;->g()Lcom/vk/media/player/ExoPlayerBase;
-
-    move-result-object v0
-
-    if-eqz v0, :cond_0
-
-    invoke-virtual {v0}, Lcom/vk/media/player/ExoPlayerBase;->t()I
-
-    move-result v0
-
-    int-to-float v0, v0
-
-    const/high16 v1, 0x447a0000    # 1000.0f
-
-    div-float/2addr v0, v1
-
-    goto :goto_0
-
-    :cond_0
     const/4 v0, 0x0
 
-    :goto_0
     return v0
 .end method
 

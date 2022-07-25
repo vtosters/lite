@@ -2218,25 +2218,12 @@
     .line 25
     iget-object v0, p0, Lcom/vk/libvideo/autoplay/VideoAutoPlay;->O:Lcom/vk/libvideo/ad/AdDelegate;
 
-    if-eqz v0, :cond_6
-
-    invoke-virtual {v0}, Lcom/vk/libvideo/ad/AdDelegate;->k()Lio/reactivex/Single;
-
-    move-result-object v0
-
-    if-eqz v0, :cond_6
-
-    goto :goto_2
-
-    :cond_6
     sget-object v0, Lcom/vk/libvideo/ad/AdState;->NO_AD:Lcom/vk/libvideo/ad/AdState;
 
     invoke-static {v0}, Lio/reactivex/Single;->b(Ljava/lang/Object;)Lio/reactivex/Single;
 
     move-result-object v0
-
-    .line 26
-    :goto_2
+    
     sget-object v1, Lcom/vk/libvideo/autoplay/VideoAutoPlay$d;->a:Lcom/vk/libvideo/autoplay/VideoAutoPlay$d;
 
     .line 27
@@ -2806,16 +2793,6 @@
     iget-object v2, p0, Lcom/vk/libvideo/autoplay/VideoAutoPlay;->O:Lcom/vk/libvideo/ad/AdDelegate;
 
     if-eqz v2, :cond_2
-
-    invoke-virtual {v2}, Lcom/vk/libvideo/ad/AdDelegate;->c()Lcom/my/target/i3/InstreamAd;
-
-    move-result-object v2
-
-    if-eqz v2, :cond_2
-
-    invoke-virtual {v2}, Lcom/my/target/i3/InstreamAd;->d()Lcom/my/target/i3/InstreamAdPlayer;
-
-    move-result-object v2
 
     goto :goto_1
 
@@ -3963,17 +3940,6 @@
     .line 43
     iget-object v0, p0, Lcom/vk/libvideo/autoplay/VideoAutoPlay;->O:Lcom/vk/libvideo/ad/AdDelegate;
 
-    if-eqz v0, :cond_1
-
-    invoke-virtual {v0}, Lcom/vk/libvideo/ad/AdDelegate;->k()Lio/reactivex/Single;
-
-    move-result-object v0
-
-    if-eqz v0, :cond_1
-
-    goto :goto_0
-
-    :cond_1
     sget-object v0, Lcom/vk/libvideo/ad/AdState;->NO_AD:Lcom/vk/libvideo/ad/AdState;
 
     invoke-static {v0}, Lio/reactivex/Single;->b(Ljava/lang/Object;)Lio/reactivex/Single;
@@ -3981,7 +3947,6 @@
     move-result-object v0
 
     .line 44
-    :goto_0
     sget-object v1, Lcom/vk/libvideo/autoplay/VideoAutoPlay$f;->a:Lcom/vk/libvideo/autoplay/VideoAutoPlay$f;
 
     .line 45
