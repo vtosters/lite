@@ -1513,6 +1513,10 @@
     iput-object v0, v15, Lcom/vtosters/lite/api/ExtendedUserProfile;->l1:Ljava/util/ArrayList;
 
     :cond_22
+    invoke-static {v14}, Lru/vtosters/lite/hooks/JsonInjectors;->profileButton(Lorg/json/JSONObject;)Lorg/json/JSONObject;
+
+    move-result-object v14
+
     const-string v0, "buttons"
 
     .line 122

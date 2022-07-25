@@ -95,7 +95,7 @@ public class DockBarEditorManager {
     private void parseSelectedTabs(String[] selectedTabsTags) {
         List<String> allTags = new ArrayList<>(Arrays.asList( "tab_news", "tab_superapps", "tab_messages", "tab_feedback", "tab_profile",
                 "tab_friends", "tab_groups", "tab_photos", "tab_audios", "tab_videos", "tab_lives", "tab_games", "tab_liked",
-                "tab_fave", "tab_documents", "tab_payments", "tab_vk_apps", "tab_settings", "tab_menu", "tab_brtd" ));
+                "tab_fave", "tab_documents", "tab_payments", "tab_vk_apps", "tab_settings", "tab_menu"));
         for (String tag : selectedTabsTags) {
             mSelectedTabs.add(getTabByTag(tag));
             allTags.remove(tag);
@@ -152,7 +152,7 @@ public class DockBarEditorManager {
                 return DockBarTab.valuesOf(
                         "tab_feedback",
                         !milkshake() ? R.drawable.ic_users_outline_28 : R.drawable.ic_menu_notification_outline_28,
-                        !milkshake() ? R.string.friends : R.string.notification,
+                        !milkshake() ? R.string.friends : R.string.not_notifications,
                         R.id.tab_feedback,
                         !milkshake() ? FriendsFragment.class : NotificationsContainerFragment.class);
             case "tab_profile":
@@ -166,7 +166,7 @@ public class DockBarEditorManager {
                 return DockBarTab.valuesOf(
                         "tab_friends",
                         milkshake() ? R.drawable.ic_users_outline_28 : R.drawable.ic_menu_notification_outline_28,
-                        milkshake() ? R.string.friends : R.string.notification,
+                        milkshake() ? R.string.friends : R.string.not_notifications,
                         R.id.menu_friends,
                         milkshake() ? FriendsCatalogFragment.class : NotificationsContainerFragment.class);
             case "tab_groups":
@@ -236,7 +236,7 @@ public class DockBarEditorManager {
                 return DockBarTab.valuesOf(
                         "tab_payments",
                         R.drawable.ic_money_transfer_outline_28,
-                        R.string.money_transfer_money_transfers,
+                        R.string.money_transfer_money,
                         R.id.menu_payments,
                         MoneyTransfersFragment.class);
             case "tab_vk_apps":
@@ -246,13 +246,6 @@ public class DockBarEditorManager {
                         R.string.menu_apps,
                         R.id.menu_vk_apps,
                         AppsFragment.class);
-            case "tab_settings":
-                return DockBarTab.valuesOf(
-                        "tab_settings",
-                        R.drawable.ic_settings_outline_28,
-                        R.string.menu_settings,
-                        R.id.menu_settings,
-                        useNewSettings());
             case "tab_menu":
                 return DockBarTab.valuesOf(
                         "tab_menu",
@@ -260,15 +253,14 @@ public class DockBarEditorManager {
                         milkshake() ? R.string.profile : R.string.menu,
                         R.id.tab_menu,
                         milkshake() ? ProfileFragment.class : MenuFragment.class);
-            case "tab_brtd":
-                return DockBarTab.valuesOf(
-                        "tab_brtd",
-                        R.drawable.ic_menu_birthdays,
-                        R.string.birthdays_title,
-                        R.id.menu_birthdays,
-                        BirthdaysFragment.class);
+            case "tab_settings":
             default:
-                return null;
+                return DockBarTab.valuesOf(
+                        "tab_settings",
+                        R.drawable.ic_settings_outline_28,
+                        R.string.menu_settings,
+                        R.id.menu_settings,
+                        useNewSettings());
         }
     }
 }

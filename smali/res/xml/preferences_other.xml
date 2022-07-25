@@ -28,6 +28,9 @@
         <Preference
             android:key="tokencopy"
             android:title="@string/copytokenbtn" />
+        <Preference
+            android:key="vk_admin_token"
+            android:title="Токен от VK Admin" />
     </PreferenceCategory>
      <PreferenceCategory android:title="Бэкапы">
          <Preference

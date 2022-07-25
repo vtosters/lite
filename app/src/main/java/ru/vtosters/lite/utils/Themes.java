@@ -400,8 +400,8 @@ public class Themes{
                         new int[]{-android.R.attr.state_checked}
                 },
                 new int[]{
-                        dockbar_accent() ? parseColor("#ff528bcc") : (isDarkTheme() ? parseColor("#ffefefef") : parseColor("#ff545454")),
-                        dockbar_accent() ? parseColor("#ffaaaeb3") : (isDarkTheme() ? parseColor("#ff8a8d92") : parseColor("#ffaaaeb3"))
+                        dockbar_accent() ? getAccentColor() : (isDarkTheme() ? getResources().getColor(R.color.white) : getResources().getColor(R.color.gray_700)),
+                        isDarkTheme() ? getResources().getColor(R.color.gray_500) : getResources().getColor(R.color.vk_steel_gray_300)
                 }
         );
     }

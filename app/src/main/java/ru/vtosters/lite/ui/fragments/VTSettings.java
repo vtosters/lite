@@ -17,6 +17,7 @@ import static ru.vtosters.lite.utils.Globals.getPrefsValue;
 import static ru.vtosters.lite.utils.Globals.getUserPhoto;
 import static ru.vtosters.lite.utils.Globals.getUsername;
 import static ru.vtosters.lite.utils.Globals.isGmsInstalled;
+import static ru.vtosters.lite.utils.Globals.isVKTester;
 import static ru.vtosters.lite.utils.Globals.restartApplication;
 import static ru.vtosters.lite.utils.Preferences.DoNotUseOldIcons;
 import static ru.vtosters.lite.utils.Preferences.ads;
@@ -233,14 +234,16 @@ public class VTSettings extends MaterialPreferenceToolbarFragment{
             return false;
         });
 
-        addPreference(this, "", Globals.getString("bugs"), "", !DoNotUseOldIcons() ? "ic_bug_24" : "ic_bug_outline_28", preference -> {
-            Context context = getContext();
-            VKUIwrapper.officalLinks("bugs");
-            Intent a2 = new Navigator(VKUIwrapper.class).b(context);
-            a2.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-            context.startActivity(a2);
-            return false;
-        });
+        if (isVKTester()) {
+            addPreference(this, "", Globals.getString("bugs"), "", !DoNotUseOldIcons() ? "ic_bug_24" : "ic_bug_outline_28", preference -> {
+                Context context = getContext();
+                VKUIwrapper.officalLinks("bugs");
+                Intent a2 = new Navigator(VKUIwrapper.class).b(context);
+                a2.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                context.startActivity(a2);
+                return false;
+            });
+        }
 
         addPreference(this, "", Globals.getString("vtssfs"), ssfs, !DoNotUseOldIcons() ? "ic_link_24" : "ic_link_circle_outline_28", preference -> {
             Context context = getContext();

@@ -39,10 +39,6 @@
 .method public static a(Lorg/json/JSONObject;)Lcom/vtosters/lite/api/ExtendedUserProfile$d;
     .locals 3
 
-    invoke-static {p0}, Lru/vtosters/lite/hooks/JsonInjectors;->profileButton(Lorg/json/JSONObject;)Lorg/json/JSONObject;
-
-    move-result-object p0
-
     .line 1
     new-instance v0, Lcom/vtosters/lite/api/ExtendedUserProfile$d;
 

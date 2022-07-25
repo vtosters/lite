@@ -10,6 +10,7 @@ import static ru.vtosters.lite.utils.Globals.getContext;
 import static ru.vtosters.lite.utils.Globals.getPrefsValue;
 import static ru.vtosters.lite.utils.Globals.getUserId;
 import static ru.vtosters.lite.utils.Globals.getUserToken;
+import static ru.vtosters.lite.utils.Globals.isVKTester;
 import static ru.vtosters.lite.utils.Newsfeed.checkCaption;
 import static ru.vtosters.lite.utils.Newsfeed.checkCopyright;
 import static ru.vtosters.lite.utils.Newsfeed.isBadNews;
@@ -24,10 +25,14 @@ import static ru.vtosters.lite.utils.Preferences.getBoolValue;
 import static ru.vtosters.lite.utils.Preferences.hasVerification;
 import static ru.vtosters.lite.utils.Preferences.postsrecomm;
 
+import android.net.Uri;
 import android.util.Log;
 
 import com.vk.core.network.Network;
 import com.vk.core.util.DeviceIdProvider;
+import com.vk.core.util.LangUtils;
+import com.vk.core.util.UriExt;
+import com.vk.webapp.VkUiFragment;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -48,22 +53,107 @@ public class JsonInjectors{
     private static final OkHttpClient mClient = new OkHttpClient();
 
     public static JSONObject profileButton(JSONObject orig) throws JSONException{
-        if (haveDonateButton()) return orig;
+        var id = orig.getInt("id");
 
-        var pic = "https://sun1-18.userapi.com/NLd_rNpGuSaBnPV6O-j5mqCGZk8BK8drAMd2LQ/5R-DEF37PFs.png";
+        var newItem = new JSONArray();
+
+        if (orig.has("buttons")) {
+            newItem = orig.getJSONArray("buttons");
+        }
+
+        if (!haveDonateButton() && id == getUserId()) {
+            newItem.put(donateRecomm());
+        }
+
+        if (!orig.has("type") && isVKTester()) {
+            newItem.put(vktesters(id));
+        }
+
+        orig.put("buttons", newItem);
+
+        return orig;
+    }
+
+    public static JSONObject donateRecomm() throws JSONException{
         var title = "Помоги проекту донатом и получи бонус!";
         var link = "https://vk.com/vtosters_official";
         var text_color = "2D81E0";
 
-        // JSONObject jsonObj = new JSONObject("{\"action\":{\"target\":\"internal\",\"type\":\"open_url\",\"url\":\"" + link + "\"},\"title\":\"" + title + "\",\"icons\":[{\"url\":\"" + pic + "\",\"width\":20,\"height\":20},{\"url\":\"" + pic + "\",\"width\":40,\"height\":40},{\"url\":\"" + pic + "\",\"width\":60,\"height\":60},{\"url\":\"" + pic + "\",\"width\":80,\"height\":80}],\"text_color\":\"" + text_color + "\"}");
-        return new JSONObject(decode("eyJhY3Rpb24iOnsidGFyZ2V0IjoiaW50ZXJuYWwiLCJ0eXBlIjoib3Blbl91cmwiLCJ1cmwiOiI=")
-                + link + decode("In0sInRpdGxlIjoi")
-                + title + decode("IiwiaWNvbnMiOlt7InVybCI6Ig==")
-                + pic + decode("Iiwid2lkdGgiOjIwLCJoZWlnaHQiOjIwfSx7InVybCI6Ig==")
-                + pic + decode("Iiwid2lkdGgiOjQwLCJoZWlnaHQiOjQwfSx7InVybCI6Ig==")
-                + pic + decode("Iiwid2lkdGgiOjYwLCJoZWlnaHQiOjYwfSx7InVybCI6Ig==")
-                + pic + decode("Iiwid2lkdGgiOjgwLCJoZWlnaHQiOjgwfV0sInRleHRfY29sb3IiOiI=")
-                + text_color + decode("In0="));
+        var json = new JSONObject();
+        var icons = new JSONArray();
+
+        var action = new JSONObject();
+        action.put("target", "internal");
+        action.put("type", "open_url"); // may be open_url, open_internal_vkui, open_game, help_hint, show_full_post, open_vkapp, show_recommendations_for_post and groups_advertisement
+        action.put("url", link);
+        json.put("action", action);
+
+        json.put("title", title);
+
+        var icon1 = new JSONObject();
+        icon1.put("url", "https://sun2-10.userapi.com/NLd_rNpGuSaBnPV6O-j5mqCGZk8BK8drAMd2LQ/5R-DEF37PFs.png");
+        icon1.put("width", "20");
+        icon1.put("height", "20");
+        icons.put(icon1);
+
+        var icon2 = new JSONObject();
+        icon2.put("url", "https://sun2-12.userapi.com/N8y9pU1meJq_eug-wB1u-HUuGyMqDfdq7A025w/A4Aio-xuLY8.png");
+        icon2.put("width", "40");
+        icon2.put("height", "40");
+        icons.put(icon2);
+
+        var icon3 = new JSONObject();
+        icon3.put("url", "https://sun2-9.userapi.com/3Hx4hff63_2Lt6wjjthJMF_3QLUswNNlQKoAXQ/oyzEu1NL9T8.png");
+        icon3.put("width", "80");
+        icon3.put("height", "80");
+        icons.put(icon3);
+
+        json.put("icons", icons);
+
+        json.put("text_color", text_color);
+
+        return json;
+    }
+
+    public static JSONObject vktesters(int id) throws JSONException{
+        var title = "Карточка Тестера";
+        var text_color = "2D81E0";
+        var link = "https://static.vk.com/bugs?lang=" + LangUtils.a() + "#/reporter" + id;
+
+        var json = new JSONObject();
+        var icons = new JSONArray();
+
+        var action = new JSONObject();
+        action.put("target", "internal");
+        action.put("type", "open_internal_vkui");
+        action.put("url", link);
+        json.put("action", action);
+
+        json.put("title", title);
+
+        var icon1 = new JSONObject();
+        icon1.put("url", "https://sun2-10.userapi.com/NLd_rNpGuSaBnPV6O-j5mqCGZk8BK8drAMd2LQ/5R-DEF37PFs.png");
+        icon1.put("width", "20");
+        icon1.put("height", "20");
+        icons.put(icon1);
+
+        var icon2 = new JSONObject();
+        icon2.put("url", "https://sun2-12.userapi.com/N8y9pU1meJq_eug-wB1u-HUuGyMqDfdq7A025w/A4Aio-xuLY8.png");
+        icon2.put("width", "40");
+        icon2.put("height", "40");
+        icons.put(icon2);
+
+        var icon3 = new JSONObject();
+        icon3.put("url", "https://sun2-9.userapi.com/3Hx4hff63_2Lt6wjjthJMF_3QLUswNNlQKoAXQ/oyzEu1NL9T8.png");
+        icon3.put("width", "80");
+        icon3.put("height", "80");
+        icons.put(icon3);
+
+        json.put("icons", icons);
+
+        json.put("text_color", text_color);
+
+        return json;
     }
 
     public static JSONObject convBar(JSONObject orig) throws JSONException{

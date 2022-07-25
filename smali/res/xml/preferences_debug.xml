@@ -60,6 +60,10 @@
             android:defaultValue="true"
             android:key="musicFixNew"
             android:title="Фикс музыки v2" />
+        <com.vtosters.lite.ui.MaterialSwitchPreference
+            android:defaultValue="false"
+            android:key="new_music_downloading_way"
+            android:title="Новый способ скачивания музыки" />
     </PreferenceCategory>
     <PreferenceCategory android:title="@string/debug_developer_functions">
         <com.vtosters.lite.ui.MaterialSwitchPreference
