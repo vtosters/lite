@@ -3904,7 +3904,7 @@ SMS жібердік."</string>
     <string name="suggest_type_nearby_desc">Жақын маңдағы достарды табу</string>
     <string name="suggested_posts_title">Ұсынылған жаңалықтар</string>
     <string name="summary_collapsed_preference_list">%1$s, %2$s</string>
-    <string name="super_app_title">Шолу</string>
+<!--    <string name="super_app_title">Шолу</string>-->
     <string name="superapp_menu_mini_apps">Қосымшалар</string>
     <string name="sync_all">Барлық достар</string>
     <string name="sync_all_summary">VK-дағы барлық достарымның байланыс мәліметтерін контактілер тізіміне қосу</string>
