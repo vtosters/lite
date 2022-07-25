@@ -3920,7 +3920,7 @@ foto"</string>
     <string name="suggest_type_nearby_desc">Buscar amigos que estão perto</string>
     <string name="suggested_posts_title">Notícias sugeridas</string>
     <string name="summary_collapsed_preference_list">%1$s, %2$s</string>
-    <string name="super_app_title">Tudo que você precisa</string>
+<!--    <string name="super_app_title">Tudo que você precisa</string>-->
     <string name="superapp_menu_mini_apps">Aplicativos</string>
     <string name="sync_all">Todos amigos</string>
     <string name="sync_all_summary">Adicionar todos seus amigos do VK aos contatos</string>
