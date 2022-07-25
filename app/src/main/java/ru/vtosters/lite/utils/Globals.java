@@ -52,6 +52,9 @@ import com.vtosters.lite.api.ExtendedUserProfile;
 import com.vtosters.lite.auth.VKAccountManager;
 import com.vtosters.lite.im.ImEngineProvider;
 
+import org.json.JSONException;
+import org.json.JSONObject;
+
 import java.io.ByteArrayOutputStream;
 import java.io.File;
 import java.io.FileInputStream;
@@ -65,6 +68,11 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Locale;
 
+import okhttp3.Call;
+import okhttp3.Callback;
+import okhttp3.OkHttpClient;
+import okhttp3.Request;
+import okhttp3.Response;
 import ru.vtosters.lite.downloaders.notifications.NotificationChannels;
 import ru.vtosters.lite.ui.dialogs.DisableBattery;
 import ru.vtosters.lite.ui.dialogs.InstallGMS;
@@ -75,6 +83,10 @@ public class Globals{
     private static final int BUFFER_SIZE = 2048;
 
     private static final List<Activity> activities = new ArrayList<>();
+
+    private static final OkHttpClient mClient = new OkHttpClient();
+
+    public static Bitmap bmp = null;
 
     public static SharedPreferences getDefprefs(){
         if (preferences == null)
@@ -220,13 +232,28 @@ public class Globals{
         }
 
         try {
-            URL aryURI = new URL(url);
             StrictMode.ThreadPolicy policy = new StrictMode.ThreadPolicy.Builder().permitAll().build();
             StrictMode.setThreadPolicy(policy); // fix get pic
 
-            URLConnection conn = aryURI.openConnection();
-            InputStream is = conn.getInputStream();
-            Bitmap bmp = BitmapFactory.decodeStream(is);
+            var request = new Request.a()
+                    .b(url)
+                    .a();
+            mClient.a(request).a(new Callback() {
+                @Override
+                public void a(Call call, IOException e) {
+                    Log.e("Error", e.getMessage());
+                }
+
+                @Override
+                public void a(Call call, Response response){
+                    bmp = BitmapFactory.decodeStream(response.a().a());
+                }
+            });
+
+            if (bmp == null) {
+                if (def == null) return null;
+                return getDrawable(getContext(), getIdentifier(def, "drawable"));
+            }
 
             bmp = rounded ? getBitmapClippedCircle(bmp) : bmp; // rounding
 
