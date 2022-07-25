@@ -85,10 +85,6 @@
 
     .line 8
     :cond_0
-    sget-object v0, Lcom/vk/video/metrics/MediaMetricsApi;->c:Lcom/vk/video/metrics/MediaMetricsApi;
-
-    invoke-virtual {v0}, Lcom/vk/video/metrics/MediaMetricsApi;->a()V
-
     return-void
 .end method
 
@@ -116,20 +112,6 @@
 
     .line 2
     :cond_0
-    sget-object v1, Lcom/vk/video/metrics/MediaMetricsApi;->c:Lcom/vk/video/metrics/MediaMetricsApi;
-
-    move v2, p1
-
-    move v3, p2
-
-    move v4, p3
-
-    move-wide v5, p4
-
-    move-object v7, p6
-
-    invoke-virtual/range {v1 .. v7}, Lcom/vk/video/metrics/MediaMetricsApi;->a(BIIJLjava/lang/String;)V
-
     return-void
 .end method
 
@@ -147,10 +129,6 @@
 
     .line 4
     :cond_0
-    sget-object v0, Lcom/vk/video/metrics/MediaMetricsApi;->c:Lcom/vk/video/metrics/MediaMetricsApi;
-
-    invoke-virtual {v0, p1, p2, p3, p4}, Lcom/vk/video/metrics/MediaMetricsApi;->a(BIILjava/lang/String;)V
-
     return-void
 .end method
 
@@ -168,10 +146,6 @@
 
     .line 6
     :cond_0
-    sget-object v0, Lcom/vk/video/metrics/MediaMetricsApi;->c:Lcom/vk/video/metrics/MediaMetricsApi;
-
-    invoke-virtual {v0, p1, p2}, Lcom/vk/video/metrics/MediaMetricsApi;->a(BLjava/lang/String;)V
-
     return-void
 .end method
 
@@ -189,10 +163,6 @@
 
     .line 2
     :cond_0
-    sget-object v0, Lcom/vk/video/metrics/MediaMetricsApi;->c:Lcom/vk/video/metrics/MediaMetricsApi;
-
-    invoke-virtual {v0}, Lcom/vk/video/metrics/MediaMetricsApi;->b()V
-
     return-void
 .end method
 
