@@ -2,9 +2,6 @@
 .super Ljava/lang/Object;
 .source "AdPlayerProxy.kt"
 
-# interfaces
-.implements Lcom/my/target/i3/InstreamAdPlayer;
-
 
 # instance fields
 .field private a:Lcom/vk/media/player/ExoPlayerBase;
@@ -250,12 +247,6 @@
 
     :cond_1
     :goto_0
-    return-void
-.end method
-
-.method public a(Lcom/my/target/i3/InstreamAdPlayer$a;)V
-    .locals 2
-
     return-void
 .end method
 
