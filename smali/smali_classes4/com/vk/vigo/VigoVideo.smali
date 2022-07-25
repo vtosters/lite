@@ -20,8 +20,6 @@
 
 .field private d:Lcom/vk/vigo/VigoVideo$a;
 
-.field private final e:Lcom/vk/video/metrics/MediaMetricsVideo;
-
 
 # direct methods
 .method public constructor <init>()V
@@ -29,13 +27,6 @@
 
     .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    .line 2
-    new-instance v0, Lcom/vk/video/metrics/MediaMetricsVideo;
-
-    invoke-direct {v0}, Lcom/vk/video/metrics/MediaMetricsVideo;-><init>()V
-
-    iput-object v0, p0, Lcom/vk/vigo/VigoVideo;->e:Lcom/vk/video/metrics/MediaMetricsVideo;
 
     return-void
 .end method
@@ -425,11 +416,6 @@
 
     invoke-direct {p0, v0}, Lcom/vk/vigo/VigoVideo;->a(Lkotlin/jvm/b/Functions;)V
 
-    .line 18
-    iget-object v0, p0, Lcom/vk/vigo/VigoVideo;->e:Lcom/vk/video/metrics/MediaMetricsVideo;
-
-    invoke-virtual {v0}, Lcom/vk/video/metrics/MediaMetricsVideo;->b()V
-
     return-void
 
     .line 19
@@ -469,19 +455,6 @@
 
     invoke-direct {p0, v10}, Lcom/vk/vigo/VigoVideo;->a(Lkotlin/jvm/b/Functions;)V
 
-    .line 30
-    iget-object v0, v9, Lcom/vk/vigo/VigoVideo;->e:Lcom/vk/video/metrics/MediaMetricsVideo;
-
-    move v1, p1
-
-    move-wide v2, p2
-
-    move-wide v4, p4
-
-    move-wide/from16 v6, p6
-
-    invoke-virtual/range {v0 .. v7}, Lcom/vk/video/metrics/MediaMetricsVideo;->a(IJJJ)V
-
     return-void
 .end method
 
@@ -506,11 +479,6 @@
 
     invoke-direct {p0, p3}, Lcom/vk/vigo/VigoVideo;->a(Lkotlin/jvm/b/Functions;)V
 
-    .line 22
-    iget-object p3, p0, Lcom/vk/vigo/VigoVideo;->e:Lcom/vk/video/metrics/MediaMetricsVideo;
-
-    invoke-virtual {p3, p1, p2}, Lcom/vk/video/metrics/MediaMetricsVideo;->a(ILkotlin/Pair;)V
-
     return-void
 .end method
 
@@ -524,11 +492,6 @@
 
     invoke-direct {p0, v0}, Lcom/vk/vigo/VigoVideo;->a(Lkotlin/jvm/b/Functions;)V
 
-    .line 24
-    iget-object v0, p0, Lcom/vk/vigo/VigoVideo;->e:Lcom/vk/video/metrics/MediaMetricsVideo;
-
-    invoke-virtual {v0, p1}, Lcom/vk/video/metrics/MediaMetricsVideo;->a(Landroid/net/Uri;)V
-
     return-void
 .end method
 
@@ -537,15 +500,6 @@
 
     .line 13
     iput-object p1, p0, Lcom/vk/vigo/VigoVideo;->d:Lcom/vk/vigo/VigoVideo$a;
-
-    .line 14
-    iget-object v0, p0, Lcom/vk/vigo/VigoVideo;->e:Lcom/vk/video/metrics/MediaMetricsVideo;
-
-    new-instance v1, Lcom/vk/vigo/VigoVideo$b;
-
-    invoke-direct {v1, p1}, Lcom/vk/vigo/VigoVideo$b;-><init>(Lcom/vk/vigo/VigoVideo$a;)V
-
-    invoke-virtual {v0, v1}, Lcom/vk/video/metrics/MediaMetricsVideo;->a(Lcom/vk/video/metrics/MediaMetricsVideo$a;)V
 
     return-void
 .end method
@@ -574,19 +528,6 @@
 
     invoke-direct {p0, v7}, Lcom/vk/vigo/VigoVideo;->a(Lkotlin/jvm/b/Functions;)V
 
-    .line 7
-    iget-object v0, p0, Lcom/vk/vigo/VigoVideo;->e:Lcom/vk/video/metrics/MediaMetricsVideo;
-
-    move-object v1, p1
-
-    move-object v2, p2
-
-    move-object v4, p4
-
-    move v5, p5
-
-    invoke-virtual/range {v0 .. v5}, Lcom/vk/video/metrics/MediaMetricsVideo;->a(Ljava/lang/String;Ljava/lang/String;ZLjava/lang/String;Z)V
-
     return-void
 .end method
 
@@ -600,11 +541,6 @@
 
     invoke-direct {p0, v0}, Lcom/vk/vigo/VigoVideo;->a(Lkotlin/jvm/b/Functions;)V
 
-    .line 32
-    iget-object v0, p0, Lcom/vk/vigo/VigoVideo;->e:Lcom/vk/video/metrics/MediaMetricsVideo;
-
-    invoke-virtual {v0, p1}, Lcom/vk/video/metrics/MediaMetricsVideo;->a(Ljava/lang/Throwable;)V
-
     return-void
 .end method
 
@@ -617,11 +553,6 @@
     invoke-direct {v0, p0, p1}, Lcom/vk/vigo/VigoVideo$onLoadingChanged$1;-><init>(Lcom/vk/vigo/VigoVideo;Z)V
 
     invoke-direct {p0, v0}, Lcom/vk/vigo/VigoVideo;->a(Lkotlin/jvm/b/Functions;)V
-
-    .line 34
-    iget-object v0, p0, Lcom/vk/vigo/VigoVideo;->e:Lcom/vk/video/metrics/MediaMetricsVideo;
-
-    invoke-virtual {v0, p1}, Lcom/vk/video/metrics/MediaMetricsVideo;->a(Z)V
 
     return-void
 .end method
@@ -652,21 +583,6 @@
 
     invoke-direct {p0, v10}, Lcom/vk/vigo/VigoVideo;->a(Lkotlin/jvm/b/Functions;)V
 
-    .line 26
-    iget-object v0, v9, Lcom/vk/vigo/VigoVideo;->e:Lcom/vk/video/metrics/MediaMetricsVideo;
-
-    move v1, p1
-
-    move v2, p2
-
-    move v3, p3
-
-    move-wide v4, p4
-
-    move-wide/from16 v6, p6
-
-    invoke-virtual/range {v0 .. v7}, Lcom/vk/video/metrics/MediaMetricsVideo;->a(ZIIJJ)V
-
     return-void
 .end method
 
@@ -695,21 +611,6 @@
     invoke-direct/range {v0 .. v8}, Lcom/vk/vigo/VigoVideo$onPlayerStateChanged$1;-><init>(Lcom/vk/vigo/VigoVideo;ZIJJI)V
 
     invoke-direct {p0, v10}, Lcom/vk/vigo/VigoVideo;->a(Lkotlin/jvm/b/Functions;)V
-
-    .line 28
-    iget-object v0, v9, Lcom/vk/vigo/VigoVideo;->e:Lcom/vk/video/metrics/MediaMetricsVideo;
-
-    move v1, p1
-
-    move v2, p2
-
-    move-wide v3, p3
-
-    move-wide/from16 v5, p5
-
-    move/from16 v7, p7
-
-    invoke-virtual/range {v0 .. v7}, Lcom/vk/video/metrics/MediaMetricsVideo;->a(ZIJJI)V
 
     return-void
 .end method
@@ -749,11 +650,6 @@
     invoke-direct/range {v3 .. v8}, Lcom/vk/vigo/VigoVideo$onPlayerPlay$1;-><init>(Lcom/vk/vigo/VigoVideo;JJ)V
 
     invoke-direct {p0, v0}, Lcom/vk/vigo/VigoVideo;->a(Lkotlin/jvm/b/Functions;)V
-
-    .line 6
-    iget-object v0, p0, Lcom/vk/vigo/VigoVideo;->e:Lcom/vk/video/metrics/MediaMetricsVideo;
-
-    invoke-virtual {v0}, Lcom/vk/video/metrics/MediaMetricsVideo;->c()V
 
     return-void
 
@@ -806,11 +702,6 @@
 
     invoke-direct {p0, v0}, Lcom/vk/vigo/VigoVideo;->a(Lkotlin/jvm/b/Functions;)V
 
-    .line 5
-    iget-object v0, p0, Lcom/vk/vigo/VigoVideo;->e:Lcom/vk/video/metrics/MediaMetricsVideo;
-
-    invoke-virtual {v0}, Lcom/vk/video/metrics/MediaMetricsVideo;->d()V
-
     return-void
 
     .line 6
@@ -835,11 +726,6 @@
     invoke-direct {v0, p0}, Lcom/vk/vigo/VigoVideo$stop$1;-><init>(Lcom/vk/vigo/VigoVideo;)V
 
     invoke-direct {p0, v0}, Lcom/vk/vigo/VigoVideo;->a(Lkotlin/jvm/b/Functions;)V
-
-    .line 3
-    iget-object v0, p0, Lcom/vk/vigo/VigoVideo;->e:Lcom/vk/video/metrics/MediaMetricsVideo;
-
-    invoke-virtual {v0}, Lcom/vk/video/metrics/MediaMetricsVideo;->e()V
 
     return-void
 .end method

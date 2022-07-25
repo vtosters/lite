@@ -796,15 +796,6 @@
 
     invoke-virtual {v0, v1}, Lcom/vk/reef/ReefFactory;->b(Lkotlin/jvm/b/Functions;)Lcom/vk/reef/ReefFactory;
 
-    .line 9
-    new-instance v1, Lcom/vk/reef/VkReefClientInfo;
-
-    invoke-direct {v1}, Lcom/vk/reef/VkReefClientInfo;-><init>()V
-
-    invoke-virtual {v0, v1}, Lcom/vk/reef/ReefFactory;->a(Lcom/vk/reef/trackers/ReefClientTracker;)Lcom/vk/reef/ReefFactory;
-
-    sput-object v0, Lcom/vigo/metrics/config;->m:Lcom/vk/reef/ReefFactory;
-
     .line 10
     sget-object v0, Lcom/vk/music/common/Music$a;->j:Lcom/vk/music/common/Music$a;
 
