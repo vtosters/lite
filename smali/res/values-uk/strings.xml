@@ -3926,7 +3926,7 @@
     <string name="suggest_type_nearby_desc">Знайти друзів поблизу</string>
     <string name="suggested_posts_title">Запропоновані новини</string>
     <string name="summary_collapsed_preference_list">%1$s, %2$s</string>
-    <string name="super_app_title">Огляд</string>
+<!--    <string name="super_app_title">Огляд</string>-->
     <string name="superapp_menu_mini_apps">Додатки</string>
     <string name="sync_all">Всі друзі</string>
     <string name="sync_all_summary">Додати в контакти дані всіх Ваших друзів</string>

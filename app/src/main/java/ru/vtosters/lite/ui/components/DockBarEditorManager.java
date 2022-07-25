@@ -137,7 +137,7 @@ public class DockBarEditorManager {
             case "tab_superapps":
                 return DockBarTab.valuesOf(
                         "tab_superapps",
-                        milkshake() ? R.drawable.ic_explore_outline_28 : R.drawable.ic_menu_search_outline_28,
+                        milkshake() ? R.drawable.ic_services_outline_28 : R.drawable.ic_menu_search_outline_28,
                         milkshake() ? R.string.super_app_title : R.string.search,
                         R.id.tab_discover,
                         milkshake() ? (superapp() ? SuperAppFragment.class : SearchMenuFragment.class) : ThemedFeedFragment.class);
