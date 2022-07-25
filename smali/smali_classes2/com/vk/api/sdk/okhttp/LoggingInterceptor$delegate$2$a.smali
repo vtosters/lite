@@ -44,7 +44,7 @@
     .line 1
     new-instance v0, Lkotlin/text/Regex;
 
-    const-string v1, "access_token=vk[0-9]\.[a-z]+\.[a-z0-9]+"
+    const-string v1, "access_token=([^&]+)"
 
     invoke-direct {v0, v1}, Lkotlin/text/Regex;-><init>(Ljava/lang/String;)V
 
