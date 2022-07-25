@@ -646,6 +646,11 @@
     .end param
 
     .line 1
+
+    invoke-static {p1}, Lru/vtosters/lite/utils/Themes;->themeCSL(Landroid/content/res/ColorStateList;)Landroid/content/res/ColorStateList;
+
+    move-result-object p1
+
     sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
 
     const/16 v1, 0x15

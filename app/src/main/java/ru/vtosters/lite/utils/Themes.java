@@ -47,6 +47,7 @@ import java.util.List;
 
 public class Themes{
     public static List<String> accentColors = Arrays.asList(
+            "3f8ae0",
             "5692d7", "528bcc", "7aa0cc", "518bcc", "6296d0", "2f68aa", "638ebf", "5181b8", "71aaeb", "4774a8", "5baaf4", "4186c8", "add3ff", "4774a8", "718198", "5a9eff", "99a2ad", "74a2d6", "e9eef3", "dfe3e7", "eff1f3", "5c9ce6", "4986cc", "4680c2"
     );
 
@@ -77,7 +78,8 @@ public class Themes{
     }
 
     public static int getAccentColor(){
-        return getColorFromAttr(getAttrId("accent"));
+        return getResources().getColor(R.color.red);
+        //return getColorFromAttr(getAttrId("accent"));
     } // Color accent
 
     public static int getTextAttr(){
@@ -221,14 +223,12 @@ public class Themes{
     public static ColorStateList recolorCSL(ColorStateList colorStateList){
         if (colorStateList == null) return null;
 
-        if (!isAndroidMonet()) return colorStateList;
-
         return ColorStateList.valueOf(getAccentColor());
     } // Recolor ColorStateList to accent color
 
     @SuppressLint("UseCompatLoadingForColorStateLists")
     public static ColorStateList themeCSL(Context context, int color){
-        if (isColorRefAccented(color) && isAndroidMonet()) {
+        if (isColorRefAccented(color)) {
             return ColorStateList.valueOf(getAccentColor());
         }
 
@@ -262,6 +262,26 @@ public class Themes{
         }
     } // Recolor ColorStateList
 
+    public static ColorStateList themeCSL(ColorStateList csl){
+        try {
+            int unsel = csl.getColorForState(new int[] {-android.R.attr.state_selected}, Color.BLACK);
+            int sel = csl.getColorForState(new int[] {android.R.attr.state_selected}, Color.BLACK);
+
+            boolean isUnselAccent = isAccentedColor(unsel);
+            boolean isSelAccent = isAccentedColor(sel);
+
+            if (isUnselAccent || isSelAccent) {
+                return new ColorStateList(new int[][] {
+                        new int[] {android.R.attr.state_selected}, new int[] {-android.R.attr.state_selected}
+                }, new int[] {isSelAccent ? getAccentColor() : sel, isUnselAccent ? getAccentColor() : unsel});
+            }
+            return csl;
+        } catch (Exception e) {
+            e.printStackTrace();
+            return null;
+        }
+    }
+
     public static int darken(int color, float by){
         float[] hsl = new float[3];
         ColorUtils.colorToHSL(color, hsl);
@@ -293,11 +313,11 @@ public class Themes{
     }
 
     public static boolean isAccentedColor(int target){
-        return accentColors.contains(hex(target).toLowerCase());
+        return accentColors.contains(hex2(target).toLowerCase());
     }
 
     public static int getColor(Context context, int i){
-        if (isColorRefAccented(i) && isAndroidMonet()) {
+        if (isColorRefAccented(i)) {
             return getAccentColor();
         }
         return context.getColor(i);
@@ -356,6 +376,10 @@ public class Themes{
     public static String hex(int i){
         return String.format("#%06X", Integer.valueOf(i & 16777215));
     } // Get color as hex string
+
+    public static String hex2(int i){
+        return String.format("%06X", Integer.valueOf(i & 16777215));
+    } // Get color as hex without #
 
     public static int getNavigationHeight(int Default){
         int VKME = R.dimen.design_bottom_sheet_peek_height_min;

@@ -27,6 +27,8 @@
     .end annotation
 .end field
 
+.field private resources:Landroid/content/res/Resources;
+
 
 # direct methods
 .method public constructor <init>(Landroid/content/Context;I)V
@@ -150,4 +152,31 @@
     move-result-object p1
 
     return-object p1
+.end method
+
+# virtual methods
+.method public getResources()Landroid/content/res/Resources;
+    .registers 3
+
+    iget-object v0, p0, Lcom/vk/core/ui/themes/VKThemeHelper$b;->resources:Landroid/content/res/Resources;
+
+    if-eqz v0, :cond_7
+
+    iget-object v0, p0, Lcom/vk/core/ui/themes/VKThemeHelper$b;->resources:Landroid/content/res/Resources;
+
+    :goto_6
+    return-object v0
+
+    :cond_7
+    new-instance v0, Lru/vtosters/lite/themes/VTLResources;
+
+    invoke-static {}, Lru/vtosters/lite/utils/Globals;->getResources()Landroid/content/res/Resources;
+
+    move-result-object v1
+
+    invoke-direct {v0, p0, v1}, Lru/vtosters/lite/themes/VTLResources;-><init>(Landroid/content/Context;Landroid/content/res/Resources;)V
+
+    iput-object v0, p0, Lcom/vk/core/ui/themes/VKThemeHelper$b;->resources:Landroid/content/res/Resources;
+
+    goto :goto_6
 .end method

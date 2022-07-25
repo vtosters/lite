@@ -245,27 +245,29 @@
     .annotation build Landroidx/annotation/ColorInt;
     .end annotation
 
-    .line 1
-    sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
+    #.line 1
+    #sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
+#
+    #const/16 v1, 0x17
+#
+    #if-lt v0, v1, :cond_0
+#
+    #.line 2
+    #invoke-virtual {p0, p1}, Landroid/content/Context;->getColor(I)I
+#
+    #move-result p0
+#
+    #return p0
+#
+    #.line 3
+    #:cond_0
+    #invoke-virtual {p0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
+#
+    #move-result-object p0
+#
+    #invoke-virtual {p0, p1}, Landroid/content/res/Resources;->getColor(I)I
 
-    const/16 v1, 0x17
-
-    if-lt v0, v1, :cond_0
-
-    .line 2
-    invoke-virtual {p0, p1}, Landroid/content/Context;->getColor(I)I
-
-    move-result p0
-
-    return p0
-
-    .line 3
-    :cond_0
-    invoke-virtual {p0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
-
-    move-result-object p0
-
-    invoke-virtual {p0, p1}, Landroid/content/res/Resources;->getColor(I)I
+    invoke-static {p0, p1}, Lru/vtosters/lite/utils/Themes;->getColor(Landroid/content/Context;I)I
 
     move-result p0
 
@@ -285,27 +287,33 @@
     .annotation build Landroidx/annotation/Nullable;
     .end annotation
 
-    .line 1
-    sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
+#    .line 1
+#    sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
+#
+#    const/16 v1, 0x17
+#
+#    if-lt v0, v1, :cond_0
+#
+#    .line 2
+#    invoke-virtual {p0, p1}, Landroid/content/Context;->getColorStateList(I)Landroid/content/res/ColorStateList;
+#
+#    move-result-object p0
+#
+#    return-object p0
+#
+#    .line 3
+#    :cond_0
+#    invoke-virtual {p0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
+#
+#    move-result-object p0
+#
+#    invoke-virtual {p0, p1}, Landroid/content/res/Resources;->getColorStateList(I)Landroid/content/res/ColorStateList;
+#
+#    move-result-object p0
+#
+#    return-object p0
 
-    const/16 v1, 0x17
-
-    if-lt v0, v1, :cond_0
-
-    .line 2
-    invoke-virtual {p0, p1}, Landroid/content/Context;->getColorStateList(I)Landroid/content/res/ColorStateList;
-
-    move-result-object p0
-
-    return-object p0
-
-    .line 3
-    :cond_0
-    invoke-virtual {p0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
-
-    move-result-object p0
-
-    invoke-virtual {p0, p1}, Landroid/content/res/Resources;->getColorStateList(I)Landroid/content/res/ColorStateList;
+    invoke-static {p0, p1}, Lru/vtosters/lite/utils/Themes;->themeCSL(Landroid/content/Context;I)Landroid/content/res/ColorStateList;
 
     move-result-object p0
 
