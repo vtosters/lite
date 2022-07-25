@@ -1463,10 +1463,6 @@
         </service>
         <service android:name="com.vk.voip.VoipService" />
 
-        <activity
-            android:name="com.my.target.common.MyTargetActivity"
-            android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|screenSize|smallestScreenSize|uiMode" />
-
         <receiver android:name="com.vk.music.broadcast.MediaButtonEventReceiver">
             <intent-filter>
                 <action android:name="android.intent.action.MEDIA_BUTTON" />

@@ -2,17 +2,11 @@
 .super Ljava/lang/Object;
 .source "AdDelegate.kt"
 
-# interfaces
-.implements Lcom/my/target/i3/InstreamAd$c;
-
-
 # static fields
 .field static final synthetic t:[Lkotlin/u/KProperty5;
 
 
 # instance fields
-.field private final a:Lcom/my/target/i3/InstreamAd;
-
 .field private final b:Lkotlin/Lazy2;
 
 .field private c:Lcom/vk/dto/common/AdSection;
@@ -263,15 +257,6 @@
 .method private final a(Ljava/lang/String;)V
     .locals 2
 
-    .line 37
-    invoke-direct {p0}, Lcom/vk/libvideo/ad/AdDelegate;->m()Lcom/vk/libvideo/ad/VideoAdTracker;
-
-    move-result-object v0
-
-    iget-object v1, p0, Lcom/vk/libvideo/ad/AdDelegate;->c:Lcom/vk/dto/common/AdSection;
-
-    invoke-virtual {v0, p1, v1}, Lcom/vk/libvideo/ad/VideoAdTracker;->a(Ljava/lang/String;Lcom/vk/dto/common/AdSection;)V
-
     return-void
 .end method
 
@@ -339,24 +324,6 @@
     return-void
 .end method
 
-.method public a(FFLcom/my/target/i3/InstreamAd;)V
-    .locals 7
-
-    return-void
-.end method
-
-.method public a(Lcom/my/target/i3/InstreamAd;Lcom/my/target/i3/InstreamAd$b;)V
-    .locals 0
-
-    return-void
-.end method
-
-.method public a(Ljava/lang/String;Lcom/my/target/i3/InstreamAd;)V
-    .locals 0
-
-    return-void
-.end method
-
 .method public final a(Lcom/vk/dto/common/AdSection;Ljava/lang/Float;)Z
     .locals 4
 
@@ -368,58 +335,10 @@
 .method public final a()[F
     .locals 7
 
-    .line 3
-    iget-object v0, p0, Lcom/vk/libvideo/ad/AdDelegate;->a:Lcom/my/target/i3/InstreamAd;
+    invoke-static {}, Ljava/util/Collections;->emptyList()Ljava/util/List;
 
-    invoke-virtual {v0}, Lcom/my/target/i3/InstreamAd;->c()[F
+    move-result-object v1
 
-    move-result-object v0
-
-    const-string v1, "instreamAd.midPoints"
-
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
-
-    .line 4
-    new-instance v1, Ljava/util/ArrayList;
-
-    invoke-direct {v1}, Ljava/util/ArrayList;-><init>()V
-
-    .line 5
-    array-length v2, v0
-
-    const/4 v3, 0x0
-
-    :goto_0
-    if-ge v3, v2, :cond_1
-
-    aget v4, v0, v3
-
-    .line 6
-    iget-object v5, p0, Lcom/vk/libvideo/ad/AdDelegate;->g:Ljava/util/Set;
-
-    invoke-static {v4}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
-
-    move-result-object v6
-
-    invoke-interface {v5, v6}, Ljava/util/Set;->contains(Ljava/lang/Object;)Z
-
-    move-result v5
-
-    if-nez v5, :cond_0
-
-    invoke-static {v4}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
-
-    move-result-object v4
-
-    invoke-interface {v1, v4}, Ljava/util/Collection;->add(Ljava/lang/Object;)Z
-
-    :cond_0
-    add-int/lit8 v3, v3, 0x1
-
-    goto :goto_0
-
-    .line 7
-    :cond_1
     invoke-static {v1}, Lkotlin/collections/l;->c(Ljava/util/Collection;)[F
 
     move-result-object v0
@@ -438,33 +357,6 @@
 
 .method public final b(F)V
     .locals 6
-
-    return-void
-.end method
-
-.method public b(Lcom/my/target/i3/InstreamAd;Lcom/my/target/i3/InstreamAd$b;)V
-    .locals 7
-
-    return-void
-.end method
-
-.method public b(Ljava/lang/String;Lcom/my/target/i3/InstreamAd;)V
-    .locals 0
-
-    return-void
-.end method
-
-.method public final c()Lcom/my/target/i3/InstreamAd;
-    .locals 1
-
-    .line 2
-    iget-object v0, p0, Lcom/vk/libvideo/ad/AdDelegate;->a:Lcom/my/target/i3/InstreamAd;
-
-    return-object v0
-.end method
-
-.method public c(Ljava/lang/String;Lcom/my/target/i3/InstreamAd;)V
-    .locals 0
 
     return-void
 .end method
