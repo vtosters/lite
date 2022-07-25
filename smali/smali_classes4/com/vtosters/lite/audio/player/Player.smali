@@ -289,31 +289,6 @@
 
     if-nez v1, :cond_1
 
-    .line 21
-    new-instance v11, Lcom/vtosters/lite/audio/player/ads/AdPlayerHelper;
-
-    const/4 v4, 0x0
-
-    const/4 v5, 0x1
-
-    new-instance v6, Lcom/vtosters/lite/audio/player/Player$g;
-
-    invoke-direct {v6, p0, v10}, Lcom/vtosters/lite/audio/player/Player$g;-><init>(Lcom/vtosters/lite/audio/player/Player;Lcom/vtosters/lite/audio/player/Player$a;)V
-
-    move-object v1, v11
-
-    move-object v2, p3
-
-    move-object v3, p1
-
-    move/from16 v7, p6
-
-    invoke-direct/range {v1 .. v7}, Lcom/vtosters/lite/audio/player/ads/AdPlayerHelper;-><init>(Lcom/vtosters/lite/audio/player/MediaPlayerHelperI$Type;Landroid/content/Context;IILcom/vtosters/lite/audio/player/MediaPlayerHelperI$MediaPlayerHelperListener;Z)V
-
-    iput-object v11, v0, Lcom/vtosters/lite/audio/player/Player;->b:Lcom/vtosters/lite/audio/player/MediaPlayerHelperI;
-
-    goto :goto_1
-
     .line 22
     :cond_1
     sget-object v1, Lcom/vtosters/lite/audio/player/MediaPlayerHelperI$c;->a:Lcom/vtosters/lite/audio/player/MediaPlayerHelperI$c;
@@ -341,27 +316,6 @@
     .line 23
     :cond_2
     :goto_0
-    new-instance v11, Lcom/vtosters/lite/audio/player/ads/ModernAdPlayer;
-
-    new-instance v4, Lcom/vtosters/lite/audio/player/Player$b;
-
-    invoke-direct {v4, p0, v10}, Lcom/vtosters/lite/audio/player/Player$b;-><init>(Lcom/vtosters/lite/audio/player/Player;Lcom/vtosters/lite/audio/player/Player$a;)V
-
-    new-instance v5, Lcom/vtosters/lite/audio/player/Player$g;
-
-    invoke-direct {v5, p0, v10}, Lcom/vtosters/lite/audio/player/Player$g;-><init>(Lcom/vtosters/lite/audio/player/Player;Lcom/vtosters/lite/audio/player/Player$a;)V
-
-    move-object v1, v11
-
-    move-object v2, p3
-
-    move-object v3, p1
-
-    move/from16 v6, p6
-
-    invoke-direct/range {v1 .. v6}, Lcom/vtosters/lite/audio/player/ads/ModernAdPlayer;-><init>(Lcom/vtosters/lite/audio/player/MediaPlayerHelperI$Type;Landroid/content/Context;Lkotlin/jvm/b/Functions;Lcom/vtosters/lite/audio/player/MediaPlayerHelperI$MediaPlayerHelperListener;Z)V
-
-    iput-object v11, v0, Lcom/vtosters/lite/audio/player/Player;->b:Lcom/vtosters/lite/audio/player/MediaPlayerHelperI;
 
     .line 24
     :goto_1

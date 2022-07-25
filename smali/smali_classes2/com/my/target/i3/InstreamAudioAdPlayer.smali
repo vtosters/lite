@@ -22,13 +22,6 @@
     .end param
 .end method
 
-.method public abstract a(Lcom/my/target/i3/InstreamAudioAdPlayer$a;)V
-    .param p1    # Lcom/my/target/i3/InstreamAudioAdPlayer$a;
-        .annotation build Landroidx/annotation/Nullable;
-        .end annotation
-    .end param
-.end method
-
 .method public abstract b()Landroid/content/Context;
     .annotation build Landroidx/annotation/NonNull;
     .end annotation

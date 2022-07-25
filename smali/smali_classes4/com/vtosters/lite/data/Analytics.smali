@@ -2735,15 +2735,6 @@
 .method public a(Ljava/lang/Runnable;)V
     .locals 2
 
-    .line 32
-    iget-object v0, p0, Lcom/vtosters/lite/data/Analytics;->c:Ljava/util/concurrent/ScheduledExecutorService;
-
-    new-instance v1, Lcom/vtosters/lite/data/Analytics$h;
-
-    invoke-direct {v1, p0, p1}, Lcom/vtosters/lite/data/Analytics$h;-><init>(Lcom/vtosters/lite/data/Analytics;Ljava/lang/Runnable;)V
-
-    invoke-interface {v0, v1}, Ljava/util/concurrent/ScheduledExecutorService;->execute(Ljava/lang/Runnable;)V
-
     return-void
 .end method
 
