@@ -5789,8 +5789,8 @@
     <string name="download_mp3">Скачать как mp3</string>
     <string name="remove_from_cache">Удалить из кэша</string>
 
-    <string name="thanksfordonate">, спасибо тебе за поддержку проекта!</string>
-    <string name="getdonate">, поддержи проект донатом и получи бонусы</string>
+    <string name="thanksfordonate">Спасибо тебе за поддержку проекта!</string>
+    <string name="getdonate">Поддержи проект донатом и получи бонусы</string>
 
     <string name="wallpapers">Обои</string>
 </resources>
