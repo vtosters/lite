@@ -48,7 +48,7 @@
             android:summary="Новый каталог музыкального раздела с динамическим контентом"
             android:title="Новый раздел музыки" />
         <com.vtosters.lite.ui.SummaryListPreference
-            android:defaultValue="general"
+            android:defaultValue="Default"
             android:dialogTitle="Выберите раздел по умолчанию"
             android:entries="@array/musicdefcatalog_value"
             android:entryValues="@array/musicdefcatalog"
