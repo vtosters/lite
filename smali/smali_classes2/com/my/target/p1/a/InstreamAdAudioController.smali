@@ -672,28 +672,6 @@
         .end annotation
     .end param
 
-    .line 6
-    iget-object v0, p0, Lcom/my/target/p1/a/InstreamAdAudioController;->f:Lcom/my/target/i3/InstreamAudioAdPlayer;
-
-    if-eqz v0, :cond_0
-
-    const/4 v1, 0x0
-
-    .line 7
-    invoke-interface {v0, v1}, Lcom/my/target/i3/InstreamAudioAdPlayer;->a(Lcom/my/target/i3/InstreamAudioAdPlayer$a;)V
-
-    .line 8
-    :cond_0
-    iput-object p1, p0, Lcom/my/target/p1/a/InstreamAdAudioController;->f:Lcom/my/target/i3/InstreamAudioAdPlayer;
-
-    if-eqz p1, :cond_1
-
-    .line 9
-    iget-object v0, p0, Lcom/my/target/p1/a/InstreamAdAudioController;->a:Lcom/my/target/p1/a/InstreamAdAudioController$a;
-
-    invoke-interface {p1, v0}, Lcom/my/target/i3/InstreamAudioAdPlayer;->a(Lcom/my/target/i3/InstreamAudioAdPlayer$a;)V
-
-    :cond_1
     return-void
 .end method
 
