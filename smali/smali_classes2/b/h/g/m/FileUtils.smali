@@ -3627,6 +3627,12 @@
     .line 2
     invoke-static {v0}, Lb/h/g/m/FileUtils;->a(Ljava/io/File;)V
 
+    const-string v1, "Download"
+
+    invoke-static {v0, v1}, Lb/h/g/m/FileUtils;->a(Ljava/io/File;Ljava/lang/String;)Ljava/io/File;
+
+    move-result-object v0
+
     const-string v1, "VK"
 
     .line 3
