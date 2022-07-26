@@ -103,7 +103,7 @@
     move-object v2, v1
 
     .line 5
-    invoke-static {p1}, Lb/h/g/m/FileUtils;->n(Ljava/io/File;)Landroid/net/Uri;
+    invoke-static {p1}, Lb/h/g/m/FileUtils;->uriFromFile(Ljava/io/File;)Landroid/net/Uri;
 
     move-result-object v1
 
@@ -139,7 +139,7 @@
 
     new-instance v1, Lcom/vtosters/lite/attachments/PendingPhotoAttachment;
 
-    invoke-static {p1}, Lb/h/g/m/FileUtils;->n(Ljava/io/File;)Landroid/net/Uri;
+    invoke-static {p1}, Lb/h/g/m/FileUtils;->uriFromFile(Ljava/io/File;)Landroid/net/Uri;
 
     move-result-object p1
 

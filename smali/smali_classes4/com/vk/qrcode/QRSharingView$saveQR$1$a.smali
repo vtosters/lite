@@ -56,7 +56,7 @@
 
     iget-object v0, v0, Lcom/vk/qrcode/QRSharingView$saveQR$1;->this$0:Lcom/vk/qrcode/QRSharingView;
 
-    invoke-static {p1}, Lb/h/g/m/FileUtils;->n(Ljava/io/File;)Landroid/net/Uri;
+    invoke-static {p1}, Lb/h/g/m/FileUtils;->uriFromFile(Ljava/io/File;)Landroid/net/Uri;
 
     move-result-object p1
 

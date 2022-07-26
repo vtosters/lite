@@ -78,7 +78,7 @@
     .locals 1
 
     .line 1
-    invoke-static {}, Lb/h/g/m/FileUtils;->C()Ljava/io/File;
+    invoke-static {}, Lb/h/g/m/FileUtils;->getWebCacheDir()Ljava/io/File;
 
     move-result-object v0
 
@@ -1123,7 +1123,7 @@
     if-eqz v0, :cond_0
 
     .line 2
-    invoke-static {v0}, Lb/h/g/m/FileUtils;->h(Landroid/net/Uri;)Ljava/lang/String;
+    invoke-static {v0}, Lb/h/g/m/FileUtils;->tryToGetRealPath(Landroid/net/Uri;)Ljava/lang/String;
 
     move-result-object v0
 
@@ -1158,7 +1158,7 @@
     if-eqz v0, :cond_1
 
     .line 6
-    invoke-static {v0}, Lb/h/g/m/FileUtils;->h(Landroid/net/Uri;)Ljava/lang/String;
+    invoke-static {v0}, Lb/h/g/m/FileUtils;->tryToGetRealPath(Landroid/net/Uri;)Ljava/lang/String;
 
     move-result-object v0
 

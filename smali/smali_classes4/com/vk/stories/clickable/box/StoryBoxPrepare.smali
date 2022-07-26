@@ -48,7 +48,7 @@
     new-instance p1, Lb/h/j/b/FileLruCacheManager;
 
     .line 3
-    invoke-static {}, Lb/h/g/m/FileUtils;->B()Ljava/io/File;
+    invoke-static {}, Lb/h/g/m/FileUtils;->getVkAppsCacheDir()Ljava/io/File;
 
     move-result-object v0
 
@@ -69,7 +69,7 @@
     if-eqz p1, :cond_0
 
     .line 6
-    invoke-static {}, Lb/h/g/m/FileUtils;->B()Ljava/io/File;
+    invoke-static {}, Lb/h/g/m/FileUtils;->getVkAppsCacheDir()Ljava/io/File;
 
     move-result-object p1
 
