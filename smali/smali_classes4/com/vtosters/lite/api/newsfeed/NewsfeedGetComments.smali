@@ -177,10 +177,6 @@
 
     .line 10
     :goto_1
-    invoke-static {v5}, Lru/vtosters/lite/hooks/JsonInjectors;->newsfeedadtest(Lorg/json/JSONArray;)Lorg/json/JSONArray;
-
-    move-result-object v5
-
     invoke-virtual {v5}, Lorg/json/JSONArray;->length()I
 
     move-result v4
@@ -195,18 +191,6 @@
     invoke-static {v4}, Lcom/vk/dto/newsfeed/Owner;->b(Lorg/json/JSONObject;)Lcom/vk/dto/newsfeed/Owner;
 
     move-result-object v4
-
-    invoke-static {v4}, Lru/vtosters/lite/hooks/NewsfeedHook;->injectFilters(Lorg/json/JSONObject;)Z
-
-    move-result v8
-
-    if-nez v8, :cond_70
-
-    add-int/lit8 v0, v0, 0x1
-
-    goto :goto_1
-
-    :cond_70
 
     .line 12
     invoke-virtual {v4}, Lcom/vk/dto/newsfeed/Owner;->getUid()I
