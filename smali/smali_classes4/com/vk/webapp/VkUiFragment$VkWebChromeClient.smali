@@ -81,7 +81,7 @@
     .line 4
     iget-object v2, p0, Lcom/vk/webapp/VkUiFragment$VkWebChromeClient;->f:Lcom/vk/webapp/VkUiFragment;
 
-    invoke-static {v0}, Lb/h/g/m/FileUtils;->n(Ljava/io/File;)Landroid/net/Uri;
+    invoke-static {v0}, Lb/h/g/m/FileUtils;->uriFromFile(Ljava/io/File;)Landroid/net/Uri;
 
     move-result-object v0
 

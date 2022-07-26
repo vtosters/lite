@@ -70,7 +70,7 @@
 
     const/4 v2, 0x1
 
-    invoke-static {v0, v1, v2}, Lb/h/g/m/FileUtils;->a(Ljava/io/File;Ljava/io/File;Z)Ljava/util/List;
+    invoke-static {v0, v1, v2}, Lb/h/g/m/FileUtils;->unzip(Ljava/io/File;Ljava/io/File;Z)Ljava/util/List;
 
     .line 3
     iget-object p1, p1, Lcom/vk/core/network/RxFileDownloader$c;->c:Ljava/io/File;

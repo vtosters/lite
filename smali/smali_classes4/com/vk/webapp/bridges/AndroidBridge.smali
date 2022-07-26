@@ -738,7 +738,7 @@
     if-eqz p1, :cond_0
 
     .line 2
-    invoke-static {}, Lb/h/g/m/FileUtils;->j()Ljava/io/File;
+    invoke-static {}, Lb/h/g/m/FileUtils;->getInternalLogsDir()Ljava/io/File;
 
     move-result-object v0
 
@@ -747,7 +747,7 @@
     goto :goto_0
 
     :cond_0
-    invoke-static {}, Lb/h/g/m/FileUtils;->z()Ljava/io/File;
+    invoke-static {}, Lb/h/g/m/FileUtils;->getVKDir()Ljava/io/File;
 
     move-result-object v0
 
@@ -833,7 +833,7 @@
 
     const/4 v3, 0x0
 
-    invoke-static {v0, v2, v3}, Lb/h/g/m/FileUtils;->a(Ljava/io/File;Ljava/io/File;Z)Ljava/util/List;
+    invoke-static {v0, v2, v3}, Lb/h/g/m/FileUtils;->unzip(Ljava/io/File;Ljava/io/File;Z)Ljava/util/List;
 
     move-result-object v0
 

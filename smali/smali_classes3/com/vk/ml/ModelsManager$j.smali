@@ -63,7 +63,7 @@
 
     const/4 v2, 0x0
 
-    invoke-static {v0, v1, v2}, Lb/h/g/m/FileUtils;->a(Ljava/io/File;Ljava/io/File;Z)Ljava/util/List;
+    invoke-static {v0, v1, v2}, Lb/h/g/m/FileUtils;->unzip(Ljava/io/File;Ljava/io/File;Z)Ljava/util/List;
 
     move-result-object v0
 

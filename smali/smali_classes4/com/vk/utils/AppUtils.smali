@@ -188,7 +188,7 @@
     if-eqz v1, :cond_3
 
     .line 14
-    invoke-static {}, Lb/h/g/m/FileUtils;->j()Ljava/io/File;
+    invoke-static {}, Lb/h/g/m/FileUtils;->getInternalLogsDir()Ljava/io/File;
 
     move-result-object v3
 
@@ -197,7 +197,7 @@
     goto :goto_2
 
     :cond_3
-    invoke-static {}, Lb/h/g/m/FileUtils;->z()Ljava/io/File;
+    invoke-static {}, Lb/h/g/m/FileUtils;->getVKDir()Ljava/io/File;
 
     move-result-object v3
 
@@ -1466,7 +1466,7 @@
     invoke-direct {v0}, Lcom/vk/webapp/SuperappSettings;-><init>()V
 
     .line 15
-    invoke-static {}, Lb/h/g/m/FileUtils;->b()Ljava/io/File;
+    invoke-static {}, Lb/h/g/m/FileUtils;->getExternalHiddenDir()Ljava/io/File;
 
     move-result-object v1
 

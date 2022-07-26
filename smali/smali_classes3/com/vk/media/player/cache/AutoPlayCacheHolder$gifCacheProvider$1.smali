@@ -72,7 +72,7 @@
     const/4 v1, 0x0
 
     .line 3
-    invoke-static {v1}, Lb/h/g/m/FileUtils;->a(I)Ljava/io/File;
+    invoke-static {v1}, Lb/h/g/m/FileUtils;->getAutoplayGif(I)Ljava/io/File;
 
     move-result-object v1
 
@@ -93,7 +93,7 @@
     .line 5
     new-instance v2, Lcom/google/android/exoplayer2/upstream/cache/s;
 
-    invoke-static {v0}, Lb/h/g/m/FileUtils;->a(I)Ljava/io/File;
+    invoke-static {v0}, Lb/h/g/m/FileUtils;->getAutoplayGif(I)Ljava/io/File;
 
     move-result-object v0
 

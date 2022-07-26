@@ -717,7 +717,7 @@
 
     .line 20
     :goto_1
-    invoke-static {}, Lb/h/g/m/FileUtils;->b()Ljava/io/File;
+    invoke-static {}, Lb/h/g/m/FileUtils;->getExternalHiddenDir()Ljava/io/File;
 
     move-result-object v11
 

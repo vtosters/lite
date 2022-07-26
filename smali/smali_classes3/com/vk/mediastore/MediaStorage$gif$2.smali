@@ -61,7 +61,7 @@
     .line 2
     new-instance v0, Lcom/vk/mediastore/a/GifCache;
 
-    invoke-static {}, Lb/h/g/m/FileUtils;->g()Ljava/io/File;
+    invoke-static {}, Lb/h/g/m/FileUtils;->getGifCacheDir()Ljava/io/File;
 
     move-result-object v1
 

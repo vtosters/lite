@@ -143,7 +143,7 @@
     .line 4
     iget-object v2, p0, Lcom/vtosters/lite/general/fragments/WebViewFragment$b;->f:Lcom/vtosters/lite/general/fragments/WebViewFragment;
 
-    invoke-static {v1}, Lb/h/g/m/FileUtils;->n(Ljava/io/File;)Landroid/net/Uri;
+    invoke-static {v1}, Lb/h/g/m/FileUtils;->uriFromFile(Ljava/io/File;)Landroid/net/Uri;
 
     move-result-object v1
 
@@ -203,7 +203,7 @@
     .line 4
     iget-object v2, p0, Lcom/vtosters/lite/general/fragments/WebViewFragment$b;->f:Lcom/vtosters/lite/general/fragments/WebViewFragment;
 
-    invoke-static {v1}, Lb/h/g/m/FileUtils;->n(Ljava/io/File;)Landroid/net/Uri;
+    invoke-static {v1}, Lb/h/g/m/FileUtils;->uriFromFile(Ljava/io/File;)Landroid/net/Uri;
 
     move-result-object v1
 

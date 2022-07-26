@@ -2391,7 +2391,7 @@
 
     move-result-object p1
 
-    invoke-static {p1}, Lb/h/g/m/FileUtils;->h(Landroid/net/Uri;)Ljava/lang/String;
+    invoke-static {p1}, Lb/h/g/m/FileUtils;->tryToGetRealPath(Landroid/net/Uri;)Ljava/lang/String;
 
     move-result-object p1
 
