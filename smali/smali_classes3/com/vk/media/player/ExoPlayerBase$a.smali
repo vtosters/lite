@@ -35,48 +35,13 @@
 
 .method private final a(Landroid/content/Context;)Lcom/vk/reef/Reef;
     .locals 1
-
-    .line 2
-    sget-object v0, Lcom/vk/toggle/Features$Type;->FEATURE_REEF:Lcom/vk/toggle/Features$Type;
-
-    invoke-static {v0}, Lcom/vk/toggle/FeatureManager;->b(Lcom/vk/toggle/Features$Type;)Z
-
-    move-result v0
-
-    if-nez v0, :cond_0
-
+    
     sget-object v0, Lcom/vk/reef/ReefFactory;->r:Lcom/vk/reef/ReefFactory$Companion;
 
     invoke-virtual {v0, p1}, Lcom/vk/reef/ReefFactory$Companion;->a(Landroid/content/Context;)Lcom/vk/reef/Reef;
 
     move-result-object p1
 
-    goto :goto_0
-
-    .line 3
-    :cond_0
-    sget-object v0, Lcom/vigo/metrics/config;->m:Lcom/vk/reef/ReefFactory;
-
-    if-eqz v0, :cond_1
-
-    invoke-virtual {v0}, Lcom/vk/reef/ReefFactory;->a()Lcom/vk/reef/Reef;
-
-    move-result-object v0
-
-    if-eqz v0, :cond_1
-
-    move-object p1, v0
-
-    goto :goto_0
-
-    :cond_1
-    sget-object v0, Lcom/vk/reef/ReefFactory;->r:Lcom/vk/reef/ReefFactory$Companion;
-
-    invoke-virtual {v0, p1}, Lcom/vk/reef/ReefFactory$Companion;->a(Landroid/content/Context;)Lcom/vk/reef/Reef;
-
-    move-result-object p1
-
-    :goto_0
     return-object p1
 .end method
 

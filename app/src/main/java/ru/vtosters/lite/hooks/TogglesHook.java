@@ -47,7 +47,6 @@ public class TogglesHook{
             case FEATURE_MOZJPEG:
             case FEATURE_MUSIC_ARTIST_CATALOG:
             case FEATURE_MUSIC_NEW_CATALOG:
-            case FEATURE_MUSIC_STOP_PLAYER_ON_TASK_REMOVAL:
             case FEATURE_NARRATIVE_SNIPPET_TYPE:
             case FEATURE_NEWS_GAMES_IN_DISCOVER:
             case FEATURE_NEWS_HEADER_SCROLL:
@@ -144,8 +143,6 @@ public class TogglesHook{
                 return postsredesign();
             case FEATURE_IMAGE_QUALITY_UPGRADE:
                 return !getBoolValue("compressPhotos", true);
-            case FEATURE_MUSIC_STOP_PLAYER_ON_TASK_REMOVAL:
-                return getBoolValue("musictask", false);
             case FEATURE_MENU_GAMES_CAROUSEL:
                 return miniapps();
             default:

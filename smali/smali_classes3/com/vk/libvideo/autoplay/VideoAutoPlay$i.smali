@@ -74,19 +74,5 @@
 
     invoke-static {v0, v1}, Lcom/vk/libvideo/autoplay/VideoAutoPlay;->a(Lcom/vk/libvideo/autoplay/VideoAutoPlay;Lcom/vk/libvideo/autoplay/VideoAutoPlay$AutoPlayState;)V
 
-    .line 4
-    iget-object v0, p0, Lcom/vk/libvideo/autoplay/VideoAutoPlay$i;->b:Lcom/vk/libvideo/autoplay/VideoAutoPlay;
-
-    invoke-static {v0}, Lcom/vk/libvideo/autoplay/VideoAutoPlay;->b(Lcom/vk/libvideo/autoplay/VideoAutoPlay;)Lcom/vk/libvideo/ad/AdDelegate;
-
-    move-result-object v0
-
-    if-eqz v0, :cond_2
-
-    iget v1, p0, Lcom/vk/libvideo/autoplay/VideoAutoPlay$i;->a:F
-
-    invoke-virtual {v0, v1}, Lcom/vk/libvideo/ad/AdDelegate;->b(F)V
-
-    :cond_2
     return-void
 .end method

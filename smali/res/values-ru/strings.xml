@@ -3975,7 +3975,7 @@
     <string name="suggest_type_nearby_desc">Найти друзей поблизости</string>
     <string name="suggested_posts_title">Предложенные новости</string>
     <string name="summary_collapsed_preference_list">%1$s, %2$s</string>
-    <string name="super_app_title">Обзор</string>
+    <string name="super_app_title">Сервисы</string>
     <string name="superapp_menu_mini_apps">Приложения</string>
     <string name="sync_all">Все друзья</string>
     <string name="sync_all_summary">Добавить в контакты данные всех Ваших друзей</string>
@@ -5789,8 +5789,8 @@
     <string name="download_mp3">Скачать как mp3</string>
     <string name="remove_from_cache">Удалить из кэша</string>
 
-    <string name="thanksfordonate">, спасибо тебе за поддержку проекта!</string>
-    <string name="getdonate">, поддержи проект донатом и получи бонусы</string>
+    <string name="thanksfordonate">Спасибо тебе за поддержку проекта!</string>
+    <string name="getdonate">Поддержи проект донатом и получи бонусы</string>
 
     <string name="wallpapers">Обои</string>
 </resources>

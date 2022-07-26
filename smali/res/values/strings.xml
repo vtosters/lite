@@ -4098,7 +4098,7 @@ photo"</string>
     <string name="suggested_posts_title">Suggested posts</string>
     <string name="summary_collapsed_preference_list">%1$s, %2$s</string>
     <string name="super_app_match_score">:</string>
-    <string name="super_app_title">Explore</string>
+    <string name="super_app_title">Hub</string>
     <string name="superapp_menu_mini_apps">Mini apps</string>
     <string name="sync_all">All friends</string>
     <string name="sync_all_summary">Add all of your VK friends to your contacts</string>
@@ -5947,8 +5947,8 @@ May look like a fake leaving the online"</string>
     <string name="download_mp3">Download as mp3</string>
     <string name="remove_from_cache">Delete from cache</string>
 
-    <string name="thanksfordonate">, thank you for supporting the project!</string>
-    <string name="getdonate">, support the project with a donation and get rewards</string>
+    <string name="thanksfordonate">Thank you for supporting the project!</string>
+    <string name="getdonate">Support the project with a donation and get rewards</string>
 
     <string name="wallpapers">Wallpapers</string>
 

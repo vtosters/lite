@@ -12,6 +12,7 @@ import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
 
+import com.vk.core.dialogs.alert.VkAlertDialog;
 import com.vk.navigation.Navigator;
 
 import ru.vtosters.lite.ui.fragments.InstallGMSFragment;
@@ -19,27 +20,17 @@ import ru.vtosters.lite.ui.fragments.InstallGMSFragment;
 public class InstallGMS{
     public static void alert(final Activity activity){
         if (!isGmsInstalled()) {
-            AlertDialog.Builder builder = new AlertDialog.Builder(activity);
+            VkAlertDialog.Builder builder = new VkAlertDialog.Builder(activity);
             builder.setTitle(getString("debug_warning"));
             builder.setMessage(getString("gmsissuesumm"));
             builder.setCancelable(false);
-            builder.setPositiveButton(getString("gmsissuebtn1"), new DialogInterface.OnClickListener(){
-
-                @Override
-                public void onClick(DialogInterface dialogInterface, int i){
-                    edit().putBoolean("showAlertGms", false).apply();
-                }
-            });
-            builder.setNeutralButton(getString("gmsissuebtn2"), new DialogInterface.OnClickListener(){
-
-                @Override
-                public void onClick(DialogInterface dialogInterface, int i){
-                    edit().putBoolean("showAlertGms", false).apply();
-                    Context context = getContext();
-                    Intent a2 = new Navigator(InstallGMSFragment.class).b(context);
-                    a2.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-                    context.startActivity(a2);
-                }
+            builder.setPositiveButton(getString("gmsissuebtn1"), (dialogInterface, i) -> edit().putBoolean("showAlertGms", false).apply());
+            builder.setNeutralButton(getString("gmsissuebtn2"), (dialogInterface, i) -> {
+                edit().putBoolean("showAlertGms", false).apply();
+                Context context = getContext();
+                Intent a2 = new Navigator(InstallGMSFragment.class).b(context);
+                a2.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                context.startActivity(a2);
             });
             if (getBoolValue("showAlertGms", true)) {
                 builder.show();

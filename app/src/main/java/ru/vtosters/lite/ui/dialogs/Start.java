@@ -11,6 +11,8 @@ import android.content.Intent;
 import android.net.Uri;
 import android.os.Build;
 
+import com.vk.core.dialogs.alert.VkAlertDialog;
+
 import ru.vtosters.lite.utils.OEMDetector;
 
 public class Start{
@@ -18,24 +20,16 @@ public class Start{
         if (Build.VERSION.SDK_INT >= 23) {
             activity.requestPermissions(new String[] {"android.permission.WRITE_EXTERNAL_STORAGE"}, 228);
         }
-        AlertDialog.Builder builder = new AlertDialog.Builder(activity);
+        VkAlertDialog.Builder builder = new VkAlertDialog.Builder(activity);
         builder.setTitle(getString("debug_warning"));
         builder.setMessage(getWelcome());
         builder.setCancelable(false);
-        builder.setPositiveButton(getString("startbtn2"), new DialogInterface.OnClickListener(){
-
-            @Override // android.content.DialogInterface.OnClickListener
-            public void onClick(DialogInterface dialogInterface, int i){
-                edit().putBoolean("showAlert", false).apply();
-            }
-        });
-        builder.setNeutralButton(getString("startbtn1"), new DialogInterface.OnClickListener(){
-
-            @Override // android.content.DialogInterface.OnClickListener
-            public void onClick(DialogInterface dialogInterface, int i){
-                edit().putBoolean("showAlert", false).apply();
-                activity.startActivity(new Intent("android.intent.action.VIEW").setData(Uri.parse("https://t.me/vtosters")));
-            }
+        // android.content.DialogInterface.OnClickListener
+        builder.setPositiveButton(getString("startbtn2"), (dialogInterface, i) -> edit().putBoolean("showAlert", false).apply());
+        // android.content.DialogInterface.OnClickListener
+        builder.setNeutralButton(getString("startbtn1"), (dialogInterface, i) -> {
+            edit().putBoolean("showAlert", false).apply();
+            activity.startActivity(new Intent("android.intent.action.VIEW").setData(Uri.parse("https://t.me/vtosters")));
         });
         if (getBoolValue("showAlert", true)) {
             builder.show();

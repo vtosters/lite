@@ -176,7 +176,7 @@ public class StickersFragment extends BaseToolbarFragment{
                 margin.setMargins(convertDpToPixel(24f), 0, convertDpToPixel(24f), 0);
                 editText.setLayoutParams(margin);
 
-                var dlg = new AlertDialog.Builder(getContext(), getAlertStyle());
+                var dlg = new AlertDialog.Builder(getContext());
                 dlg.setTitle(Globals.getString("stickershelp1"));
                 dlg.setMessage(Globals.getString("stickershelp2"));
                 dlg.setView(linearLayout);
@@ -186,6 +186,7 @@ public class StickersFragment extends BaseToolbarFragment{
                     mService.requestPackDownload(pack, new File(getContext().getFilesDir(), new File("VT-Stickers", pack).getAbsolutePath()));
                 });
                 dlg.setNeutralButton(android.R.string.cancel, null);
+
                 var alert = dlg.create();
 
                 alert.show();

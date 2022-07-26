@@ -38,17 +38,12 @@
     </PreferenceCategory>
     <PreferenceCategory android:title="Музыка">
         <com.vtosters.lite.ui.MaterialSwitchPreference
-            android:defaultValue="false"
-            android:key="musictask"
-            android:summary="Останаливать музыку после остановки процесса приложения"
-            android:title="Остановка музыки" />
-        <com.vtosters.lite.ui.MaterialSwitchPreference
             android:defaultValue="true"
             android:key="musicnewcatalog"
             android:summary="Новый каталог музыкального раздела с динамическим контентом"
             android:title="Новый раздел музыки" />
         <com.vtosters.lite.ui.SummaryListPreference
-            android:defaultValue="general"
+            android:defaultValue="Default"
             android:dialogTitle="Выберите раздел по умолчанию"
             android:entries="@array/musicdefcatalog_value"
             android:entryValues="@array/musicdefcatalog"
@@ -59,6 +54,11 @@
         <Preference
             android:key="download_video"
             android:title="Скачать видео" />
+        <com.vtosters.lite.ui.MaterialSwitchPreference
+            android:defaultValue="true"
+            android:key="videoewcatalog"
+            android:summary="Новый каталог видео раздела с динамическим контентом"
+            android:title="Новый раздел видео" />
         <com.vtosters.lite.ui.MaterialSwitchPreference
             android:defaultValue="false"
             android:key="isEnableExternalOpening"
