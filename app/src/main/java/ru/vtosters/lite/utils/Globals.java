@@ -66,6 +66,7 @@ import java.util.List;
 import java.util.Locale;
 
 import ru.vtosters.lite.downloaders.notifications.NotificationChannels;
+import ru.vtosters.lite.themes.ThemesCore;
 import ru.vtosters.lite.ui.dialogs.DisableBattery;
 import ru.vtosters.lite.ui.dialogs.InstallGMS;
 import ru.vtosters.lite.ui.dialogs.OTADialog;
@@ -95,6 +96,7 @@ public class Globals{
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
             NotificationChannels.createChannels();
         }
+        ThemesCore.setThemedColors(Themes.getAccentColor());
 
         // VKIDProtection.alert(activity);
     }

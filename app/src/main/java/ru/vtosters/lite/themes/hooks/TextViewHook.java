@@ -27,6 +27,11 @@ public class TextViewHook implements BaseHook {
                 textView.setTextColor(Themes.getAccentColor());
             }
 
+            if (textView.getLinkTextColors() != null && Themes.isAccentedColor(textView.getLinkTextColors())) {
+                textView.setLinkTextColor(Themes.getAccentColor());
+            }
+
+
             if (isPositiveButton(textView) || isVkUiButton(textView)) {
                 view.setBackgroundTintList(ColorStateList.valueOf(Themes.getAccentColor()));
             }
@@ -55,7 +60,7 @@ public class TextViewHook implements BaseHook {
     }
 
     public static boolean eligibleForTinting(int id) {
-        return !Themes.isDarkTheme() && id == com.vtosters.lite.R.id.attach_title;
+        return !Themes.isDarkTheme() && (id == com.vtosters.lite.R.id.attach_title);
     }
 
     public static boolean isPositiveButton(View view) {
