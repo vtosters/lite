@@ -28,13 +28,13 @@ public class SuperAppEditorManager {
     }
 
     private void init() {
-        var tmp = getPreferences().getString("superapp_items", "menu,promo,miniapps,vkpay_slim,greeting,holiday,weather,sport,games,informer,food,event,music,vk_run");
+        var tmp = getPreferences().getString("superapp_items", "menu,miniapps,vkpay_slim,greeting,promo,holiday,weather,sport,games,informer,food,event,music,vk_run");
         var selectedTags = !tmp.isEmpty() ? tmp.split(",") : new String[0];
         parseSelectedItems(selectedTags);
     }
 
     private void parseSelectedItems(String[] selectedTabsTags) {
-        List<String> allTags = new ArrayList<>(Arrays.asList( "menu", "promo", "miniapps", "vkpay_slim", "greeting", "holiday",
+        List<String> allTags = new ArrayList<>(Arrays.asList( "menu", "miniapps", "vkpay_slim", "greeting", "promo", "holiday",
                 "weather", "sport", "games", "informer", "food", "event", "music", "vk_run" ));
         for (String tag : selectedTabsTags) {
             mSelectedItems.add(getItemByTag(tag));
@@ -56,7 +56,7 @@ public class SuperAppEditorManager {
     public void reset() {
         Globals.getPreferences()
                 .edit()
-                .putString("superapp_items", "menu,promo,vkpay_slim,greeting,holiday,informer,event,miniapps,weather,sport,games,food,music,vk_run")
+                .putString("superapp_items", "menu,miniapps,vkpay_slim,greeting,promo,holiday,informer,event,weather,sport,games,food,music,vk_run")
                 .commit();
     }
 
@@ -72,14 +72,14 @@ public class SuperAppEditorManager {
         switch (tag) {
             case "menu":
                 return SuperAppItem.valuesOf("menu", "Меню приложения");
-            case "promo":
-                return SuperAppItem.valuesOf("promo", "Mini Apps: промо");
             case "miniapps":
                 return SuperAppItem.valuesOf("miniapps", "Mini Apps: виджет");
             case "vkpay_slim":
                 return SuperAppItem.valuesOf("vkpay_slim", "VK Pay");
             case "greeting":
                 return SuperAppItem.valuesOf("greeting", "Приветствие");
+            case "promo":
+                return SuperAppItem.valuesOf("promo", "Mini Apps: промо");
             case "holiday":
                 return SuperAppItem.valuesOf("holiday", "Дни рождения у друзей");
             case "weather":

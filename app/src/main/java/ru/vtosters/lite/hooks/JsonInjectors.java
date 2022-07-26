@@ -212,7 +212,7 @@ public class JsonInjectors{
 
     public static JSONObject superapp(JSONObject json) throws JSONException{
         var superApps = Globals.getPreferences().getString("superapp_items",
-                "menu,promo,miniapps,vkpay_slim,greeting,holiday,weather,sport,games,informer,food,event,music,vk_run").split(",");
+                "menu,miniapps,vkpay_slim,greeting,promo,holiday,weather,sport,games,informer,food,event,music,vk_run").split(",");
         if (superApps.length == 0) return json;
 
         var oldItems = json.optJSONArray("items");
