@@ -18,7 +18,7 @@
     </PreferenceCategory>
     <PreferenceCategory android:title="@string/interfaceglobal">
         <com.vtosters.lite.ui.SummaryListPreference
-            android:defaultValue="newsfeed"
+            android:defaultValue="default"
             android:dialogTitle="@string/interfacestartfrsum"
             android:entries="@array/start"
             android:entryValues="@array/start_values"

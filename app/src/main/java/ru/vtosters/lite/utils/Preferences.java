@@ -102,11 +102,11 @@ public class Preferences{
     }
 
     public static boolean ads(){
-        return getBoolValue("__dbg_no_ads", false);
+        return getBoolValue("__dbg_no_ads", true);
     }
 
     public static boolean adsgroup(){
-        return getBoolValue("adsgroup", false);
+        return getBoolValue("adsgroup", true);
     }
 
     public static boolean vkme(){
@@ -114,11 +114,11 @@ public class Preferences{
     }
 
     public static boolean adsslider(){
-        return getBoolValue("__dbg_no_slider_ads", false);
+        return getBoolValue("__dbg_no_slider_ads", true);
     }
 
     public static boolean adsstories(){
-        return getBoolValue("adsstories", false);
+        return getBoolValue("adsstories", true);
     }
 
     public static boolean videofeed(){
@@ -207,7 +207,7 @@ public class Preferences{
     }
 
     public static boolean milkshake(){
-        return getBoolValue("milkshake", false);
+        return getBoolValue("milkshake", true);
     }
 
     public static boolean musicnewcatalog(){

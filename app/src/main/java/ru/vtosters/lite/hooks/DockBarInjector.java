@@ -97,7 +97,7 @@ public class DockBarInjector {
             add.setTitle(getContext().getString(tab.titleID));
             add.setCheckable(true);
         }
-        if (getBoolValue("dockbar_tab_titles", false)) {
+        if (getBoolValue("dockbar_tab_titles", true)) {
             var menuView = (BottomNavigationMenuView) navigationView.getChildAt(0);
             for (int i = 0; i < menuView.getChildCount(); i++) {
                 var item = (com.vtosters.lite.ui.bottomnavigation.BottomNavigationItemView) menuView.getChildAt(i);
