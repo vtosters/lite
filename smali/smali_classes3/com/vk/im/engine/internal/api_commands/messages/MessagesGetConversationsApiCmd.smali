@@ -293,6 +293,11 @@
 
     invoke-virtual {v1, v0}, Lcom/vk/api/internal/MethodCall$a;->b(Z)Lcom/vk/api/internal/MethodCall$a;
 
+    const-string v2, "5.131"
+
+    .line 10
+    invoke-virtual {v1, v2}, Lcom/vk/api/internal/MethodCall$a;->b(Ljava/lang/String;)Lcom/vk/api/internal/MethodCall$a;
+
     .line 13
     invoke-virtual {v1}, Lcom/vk/api/internal/MethodCall$a;->a()Lcom/vk/api/internal/MethodCall;
 
