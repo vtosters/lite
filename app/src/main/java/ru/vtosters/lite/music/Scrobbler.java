@@ -36,13 +36,13 @@ public class Scrobbler{
 
         Log.d("Scrobbler", "scrobbleTrack: " + title + " - " + artist + " - " + duration + " - " + uid);
 
-        if (string == null || !scrobbled.contains(uid) && !getPreferences().getBoolean("lastfm_enabled", false)) {
+        if (needToBeScrobble(uid)) {
             return;
         }
 
-        scrobbled.add(uid);
+        scrobbled.add(uid); // add to scrobbled list
 
-        TreeMap<String, String> treeMap = new TreeMap<>();
+        TreeMap<String, String> treeMap = new TreeMap<>(); // create map for request
         treeMap.put("method", "track.scrobble");
         treeMap.put("sk", string);
         treeMap.put("artist[0]", artist);
@@ -62,7 +62,7 @@ public class Scrobbler{
             @Override
             public void onResponse(NetCall call, NetResponse response){
                 Log.d("Scrobbler", "Scrobbled: " + artist + " - " + title);
-                if (Preferences.dev()) Log.d("Scrobbler", "Response scrobble: " + response.getDataString());
+                Log.d("Scrobbler", "Response scrobble: " + response.getDataString());
             }
         });
     }
@@ -80,7 +80,7 @@ public class Scrobbler{
     }
 
     public static void auth(String login, String pass){
-        TreeMap<String, String> treeMap = new TreeMap<>();
+        TreeMap<String, String> treeMap = new TreeMap<>(); // create map for request
         treeMap.put("method", "auth.getMobileSession");
         treeMap.put("api_key", key);
         treeMap.put("username", login);
@@ -98,13 +98,14 @@ public class Scrobbler{
             @Override
             public void onResponse(NetCall call, NetResponse response){
                 try {
-                    Log.d("Scrobbler", "Auth " + response.getDataString());
                     JSONObject jSONObject = new JSONObject(response.getDataString()).getJSONObject("session");
                     String string = jSONObject.getString("name");
                     getDefaultPrefs().edit().putString("username", string).putString("sessionKey", jSONObject.getString("key")).apply();
                     sendToast("Успешно вошли как " + string);
+
+                    Log.d("Scrobbler", "Auth " + response.getDataString());
                 } catch (JSONException e) {
-                    e.printStackTrace();
+                    Log.d("Scrobbler", "Auth failed", e);
                 }
             }
         });
@@ -116,11 +117,19 @@ public class Scrobbler{
         sendToast("Вы успешно вышли из учетной записи");
     }
 
-    private static String getSessionKey(){
-        return getDefaultPrefs().getString("sessionKey", null);
+    public static boolean needToBeScrobble(String uid){
+        return isLoggedIn() && isScrobblingEnabled() && !scrobbled.contains(uid);
+    }
+
+    public static boolean isLoggedIn(){
+        return !getDefaultPrefs().getString("sessionKey", null).isEmpty();
+    }
+    
+    public static boolean isScrobblingEnabled(){
+        return getPreferences().getBoolean("lastfm_enabled", false);
     }
 
     public static String getUserName(){
-        return !getSessionKey().isEmpty() ? getDefaultPrefs().getString("username", null) : null;
+        return getDefaultPrefs().getString("username", null);
     }
 }
