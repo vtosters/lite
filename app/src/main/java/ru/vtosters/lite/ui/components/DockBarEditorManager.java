@@ -6,7 +6,7 @@ import static ru.vtosters.lite.utils.Preferences.getBoolValue;
 import static ru.vtosters.lite.utils.Preferences.milkshake;
 import static ru.vtosters.lite.utils.Preferences.superapp;
 import static ru.vtosters.lite.utils.Preferences.useNewSettings;
-import static ru.vtosters.lite.utils.Preferences.videoewcatalog;
+import static ru.vtosters.lite.utils.Preferences.videonewcatalog;
 import static ru.vtosters.lite.utils.Preferences.vkme;
 import static ru.vtosters.lite.utils.Preferences.vkme_notifs;
 
@@ -197,7 +197,7 @@ public class DockBarEditorManager {
                         R.drawable.ic_video_outline_28,
                         R.string.videos,
                         R.id.menu_videos,
-                        videoewcatalog() ? VideoCatalogFragment.class : VideosFragment.class);
+                        videonewcatalog() ? VideoCatalogFragment.class : VideosFragment.class);
             case "tab_lives":
                 return DockBarTab.valuesOf(
                         "tab_lives",

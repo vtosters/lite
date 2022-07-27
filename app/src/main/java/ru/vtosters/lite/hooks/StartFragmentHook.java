@@ -6,7 +6,7 @@ import static ru.vtosters.lite.utils.Preferences.getBoolValue;
 import static ru.vtosters.lite.utils.Preferences.milkshake;
 import static ru.vtosters.lite.utils.Preferences.superapp;
 import static ru.vtosters.lite.utils.Preferences.useNewSettings;
-import static ru.vtosters.lite.utils.Preferences.videoewcatalog;
+import static ru.vtosters.lite.utils.Preferences.videonewcatalog;
 import static ru.vtosters.lite.utils.Preferences.vkme;
 
 import com.vk.apps.AppsFragment;
@@ -53,7 +53,7 @@ public class StartFragmentHook {
             case "photos":
                 return PhotosFragment.class;
             case "videos":
-                return videoewcatalog() ? VideoCatalogFragment.class : VideosFragment.class;
+                return videonewcatalog() ? VideoCatalogFragment.class : VideosFragment.class;
             case "settings":
                 return useNewSettings();
             case "apps":

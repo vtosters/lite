@@ -15,6 +15,8 @@ import android.widget.Toast;
 import androidx.annotation.NonNull;
 import androidx.annotation.StringRes;
 
+import java.security.MessageDigest;
+import java.security.NoSuchAlgorithmException;
 import java.util.Locale;
 
 public class AndroidUtils {
@@ -114,5 +116,25 @@ public class AndroidUtils {
 
     public static void sendToast(String text) {
         Toast.makeText(getGlobalContext(), text, Toast.LENGTH_SHORT).show();
+    }
+
+    public static String MD5(String s){
+        try {
+            var messageDigest = MessageDigest.getInstance("MD5");
+            var sb = new StringBuilder();
+            messageDigest.update(s.getBytes());
+            byte[] digest = messageDigest.digest();
+            for (byte b : digest) {
+                String hexString = Integer.toHexString(b & 255);
+                while(hexString.length() < 2) {
+                    hexString = "0" + hexString;
+                }
+                sb.append(hexString);
+            }
+            return sb.toString();
+        } catch (NoSuchAlgorithmException e) {
+            e.printStackTrace();
+            return null;
+        }
     }
 }

@@ -1,5 +1,7 @@
 package ru.vtosters.lite.ui.fragments;
 
+import static ru.vtosters.lite.ui.PreferencesUtil.getSTextColor;
+import static ru.vtosters.lite.utils.AndroidUtils.dp2px;
 import static ru.vtosters.lite.utils.AndroidUtils.edit;
 import static ru.vtosters.lite.utils.AndroidUtils.getIdentifier;
 import static ru.vtosters.lite.utils.AndroidUtils.getPreferences;
@@ -13,6 +15,7 @@ import android.content.DialogInterface;
 import android.content.res.ColorStateList;
 import android.os.Bundle;
 import android.view.LayoutInflater;
+import android.view.ViewGroup;
 import android.widget.EditText;
 import android.widget.LinearLayout;
 import android.widget.ListView;
@@ -26,6 +29,7 @@ import com.vtosters.lite.general.fragments.MaterialPreferenceToolbarFragment;
 import java.util.Arrays;
 
 import ru.vtosters.lite.downloaders.VideoDownloader;
+import ru.vtosters.lite.music.Scrobbler;
 import ru.vtosters.lite.ui.adapters.ImagineArrayAdapter;
 
 public class MediaFragment extends MaterialPreferenceToolbarFragment {
@@ -37,21 +41,52 @@ public class MediaFragment extends MaterialPreferenceToolbarFragment {
         LinearLayout.LayoutParams lp = new LinearLayout.LayoutParams(
                 LinearLayout.LayoutParams.MATCH_PARENT,
                 LinearLayout.LayoutParams.MATCH_PARENT);
-
         input.setLayoutParams(lp);
-
         input.setTextColor(getTextAttr());
-
         input.setBackgroundTintList(ColorStateList.valueOf(getAccentColor()));
-
         alertDialog.setView(input);
-
         alertDialog.setPositiveButton("Скачать", (dialog, which) -> VideoDownloader.parseVideoLink(input.getText().toString(), ctx));
-
         var alert = alertDialog.create();
-
         alert.show();
+        alert.getButton(DialogInterface.BUTTON_POSITIVE).setTextColor(getAccentColor());
+    }
 
+    public static void lastfmAuth(Context ctx) {
+        LinearLayout linearLayout = new LinearLayout(ctx);
+        linearLayout.setOrientation(LinearLayout.VERTICAL);
+
+        final EditText fn = new EditText(ctx);
+        fn.setHint("Логин");
+        fn.setTextColor(getTextAttr());
+        fn.setHintTextColor(getSTextColor(ctx));
+        fn.setBackgroundTintList(ColorStateList.valueOf(getAccentColor()));
+        linearLayout.addView(fn);
+        fn.getLayoutParams().width = ViewGroup.LayoutParams.MATCH_PARENT;
+        ViewGroup.MarginLayoutParams margin = ((ViewGroup.MarginLayoutParams) fn.getLayoutParams());
+        margin.setMargins(dp2px(20f), 0, dp2px(20f), 0);
+        fn.setLayoutParams(margin);
+
+        final EditText ln = new EditText(ctx);
+        ln.setHint("Пароль");
+        ln.setTextColor(getTextAttr());
+        ln.setHintTextColor(getSTextColor(ctx));
+        ln.setBackgroundTintList(ColorStateList.valueOf(getAccentColor()));
+        linearLayout.addView(ln);
+        ln.getLayoutParams().width = ViewGroup.LayoutParams.MATCH_PARENT;
+        ln.setLayoutParams(margin);
+
+        AlertDialog.Builder alertDialog = new AlertDialog.Builder(ctx, getAlertStyle());
+        alertDialog.setTitle("Введите логин и пароль");
+
+        alertDialog.setView(linearLayout);
+        alertDialog.setPositiveButton("Войти", (dialog, which) -> {
+            String login = fn.getText().toString();
+            String pass = ln.getText().toString();
+
+            Scrobbler.auth(login, pass);
+        });
+        var alert = alertDialog.create();
+        alert.show();
         alert.getButton(DialogInterface.BUTTON_POSITIVE).setTextColor(getAccentColor());
     }
 
@@ -65,6 +100,14 @@ public class MediaFragment extends MaterialPreferenceToolbarFragment {
     private void prefs() {
         findPreference("download_video").setOnPreferenceClickListener(new MediaFragment.download());
         findPreference("dateformat").setOnPreferenceChangeListener(new MediaFragment.restart());
+        findPreference("lastfm_auth").setOnPreferenceClickListener(preference -> {
+            lastfmAuth(getContext());
+            return true;
+        });
+        findPreference("lastfm_reset").setOnPreferenceClickListener(preference -> {
+            Scrobbler.reset();
+            return true;
+        });
         findPreference("select_photo_search_engine").setOnPreferenceClickListener(preference -> {
             var items = Arrays.asList(
                     new ImagineArrayAdapter.ImagineArrayAdapterItem(getIdentifier("yandex", "drawable"), "Yandex"),
