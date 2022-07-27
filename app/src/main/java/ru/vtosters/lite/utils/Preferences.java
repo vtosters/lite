@@ -211,8 +211,8 @@ public class Preferences {
         return getBoolValue("musicnewcatalog", true);
     }
 
-    public static boolean videoewcatalog() {
-        return getBoolValue("videoewcatalog", true);
+    public static boolean videonewcatalog() {
+        return getBoolValue("videonewcatalog", true);
     }
 
     public static boolean postsredesign() {
