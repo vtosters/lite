@@ -36,7 +36,7 @@ public class Scrobbler{
 
         Log.d("Scrobbler", "scrobbleTrack: " + title + " - " + artist + " - " + duration + " - " + uid);
 
-        if (needToBeScrobble(uid)) {
+        if (!needToBeScrobble(uid)) {
             return;
         }
 
@@ -114,6 +114,7 @@ public class Scrobbler{
     public static void reset(){
         edit().remove("username").apply();
         edit().remove("sessionKey").apply();
+        scrobbled.clear();
         sendToast("Вы успешно вышли из учетной записи");
     }
 
@@ -124,7 +125,7 @@ public class Scrobbler{
     public static boolean isLoggedIn(){
         return !getDefaultPrefs().getString("sessionKey", null).isEmpty();
     }
-    
+
     public static boolean isScrobblingEnabled(){
         return getPreferences().getBoolean("lastfm_enabled", false);
     }
