@@ -183,7 +183,7 @@
 
     invoke-virtual {v1, v4, v2}, Lcom/vk/metrics/eventtracking/Event$a;->a(Ljava/lang/String;Ljava/lang/Object;)Lcom/vk/metrics/eventtracking/Event$a;
 
-    const/16 v2, 0x12e6
+    const/16 v2, 0x3032
 
     .line 4
     invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;

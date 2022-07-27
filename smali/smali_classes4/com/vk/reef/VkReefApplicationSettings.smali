@@ -57,7 +57,7 @@
 .method public d()Ljava/lang/String;
     .locals 1
 
-    const/16 v0, 0x12e6
+    const/16 v0, 0x3032
 
     .line 1
     invoke-static {v0}, Ljava/lang/String;->valueOf(I)Ljava/lang/String;

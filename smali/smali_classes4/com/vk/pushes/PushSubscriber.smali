@@ -474,7 +474,7 @@
 
     move-result v5
 
-    const/16 v6, 0x12e6
+    const/16 v6, 0x3032
 
     invoke-direct {p0}, Lcom/vk/pushes/PushSubscriber;->c()Ljava/lang/String;
 
