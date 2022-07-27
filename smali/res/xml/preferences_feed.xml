@@ -99,9 +99,9 @@
             android:summary="@string/officialnewssett_summary"
             android:title="@string/officialnewssett" />
         <Preference
+            android:enabled="false"
             android:summary="Возможно у вас включена Интересная лента \n\nЕсли вы хотите поменять ленту на Временную, то вы можете сменить ее нажав на пункт выше"
-            android:title="Почему не обновляются новости?"
-            android:enabled="false" />
+            android:title="Почему не обновляются новости?" />
         <com.vtosters.lite.ui.SummaryListPreference
             android:defaultValue="default"
             android:dialogTitle="@string/feed_other_update_dialog_title"

@@ -28,7 +28,7 @@ public class Scrobbler{
     private static final String keysecret = "d982180eed13275bb948e41cf225f88f";
     private static final String url = "https://ws.audioscrobbler.com/2.0/";
     private static final NetClient client = new NetClient.Builder().build();
-    private static ArrayList<String> scrobbled = new ArrayList<>();
+    private static final ArrayList<String> scrobbled = new ArrayList<>();
 
     public static void scrobbleTrack(long duration, String artist, String title, String uid){
         var string = getDefaultPrefs().getString("sessionKey", null);

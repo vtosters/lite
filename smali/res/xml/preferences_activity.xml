@@ -22,6 +22,7 @@
             android:title="@string/vtloffline" />
         <com.vtosters.lite.ui.MaterialSwitchPreference
             android:defaultValue="false"
+            android:enabled="false"
             android:key="setoffline"
             android:summary="@string/vtloffline2summary"
             android:title="@string/vtloffline2" />

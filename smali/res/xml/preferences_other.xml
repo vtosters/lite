@@ -32,15 +32,15 @@
             android:key="vk_admin_token"
             android:title="Токен от VK Admin" />
     </PreferenceCategory>
-     <PreferenceCategory android:title="Бэкапы">
-         <Preference
-             android:key="saveonlines"
-             android:summary="Сохранить список AppId и их названия в файл"
-             android:title="Сохранить список онлайнов" />
-         <Preference
-             android:key="deleteprefs"
-             android:summary="@string/other_reset_settings_summary"
-             android:title="@string/other_reset_settings" />
+    <PreferenceCategory android:title="Бэкапы">
+        <Preference
+            android:key="saveonlines"
+            android:summary="Сохранить список AppId и их названия в файл"
+            android:title="Сохранить список онлайнов" />
+        <Preference
+            android:key="deleteprefs"
+            android:summary="@string/other_reset_settings_summary"
+            android:title="@string/other_reset_settings" />
         <Preference
             android:key="saveprefs"
             android:title="Сохранить настройки" />
