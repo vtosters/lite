@@ -239,12 +239,27 @@ public class JsonInjectors{
         return json.putOpt("items", newItems);
     }
 
-    public static JSONObject musiclink(JSONObject json){
+    public static JSONObject musiclink(JSONObject json) throws JSONException{
         var oldItems = json.optJSONArray("links");
+        var section = json.optJSONObject("section");
+        var linksblock = section.optJSONArray("blocks");
+        var newBlock = new JSONArray();
 
         if (oldItems != null) {
             if (oldItems.optJSONObject(0).optString("url").contains("?section=recent")) {
                 json.remove("links");
+
+                for (int i = 0; i < linksblock.length(); i++) {
+                    var item = linksblock.optJSONObject(i);
+                    var datatype = item.optString("data_type");
+                    var layname = item.optJSONObject("layout").optString("name");
+                    if (!datatype.equals("links") && !layname.equals("separator")) {
+                        newBlock.put(item);
+                    }
+                }
+
+                section.putOpt("blocks", newBlock);
+
                 if (dev()) Log.d("VKMusic", "Removed links buttons");
             }
         }
@@ -499,7 +514,7 @@ public class JsonInjectors{
 
                 Log.d("VKMusic", "title: " + title + " id: " + id + " url: " + url + " value: " + value);
 
-                if (url.contains(value)) {
+                if (url.contains(value) && !value.isEmpty() && !value.equals("default")) {
                     catalog.put("default_section", id);
                     if (dev()) Log.d("VKMusic", "Added " + title + " as default music section");
                 }
