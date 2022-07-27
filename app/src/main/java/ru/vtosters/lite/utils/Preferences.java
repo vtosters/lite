@@ -319,6 +319,10 @@ public class Preferences{
         return getBoolValue("vkme_notifs", false);
     }
 
+    public static boolean podcastcatalog(){
+        return getBoolValue("podcastcatalog", false);
+    }
+
     public static boolean checkupdates(){
         return getBoolValue("checkupdates", true) && isValidSignature();
     }

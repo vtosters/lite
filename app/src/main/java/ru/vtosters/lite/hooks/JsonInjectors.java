@@ -23,6 +23,7 @@ import static ru.vtosters.lite.utils.Preferences.friendsblock;
 import static ru.vtosters.lite.utils.Preferences.friendsrecomm;
 import static ru.vtosters.lite.utils.Preferences.getBoolValue;
 import static ru.vtosters.lite.utils.Preferences.hasVerification;
+import static ru.vtosters.lite.utils.Preferences.podcastcatalog;
 import static ru.vtosters.lite.utils.Preferences.postsrecomm;
 
 import android.net.Uri;
@@ -465,7 +466,23 @@ public class JsonInjectors{
             oldItems = catalog.optJSONArray("sections");
         }
 
+
         if (oldItems != null) {
+            if (podcastcatalog()) {
+                var podcasts = fetchCatalogPodcast();
+                if (podcasts != null) {
+                    var catalogarr = podcasts.optJSONObject("catalog").optJSONArray("sections").optJSONObject(0);
+
+                    var title = catalogarr.optString("title");
+                    var id = catalogarr.optString("id");
+                    var url = catalogarr.optString("url");
+
+                    if (dev()) Log.d("VKMusic", "Added " + title + " in music sections");
+
+                    oldItems.put(new JSONObject().put("id", id).put("title", title).put("url", url));
+                }
+            }
+
             var playlists = fetchCatalogId("https://vk.com/audio?section=my_playlists");
             if (playlists != null) {
                 var catalogarr = playlists.optJSONObject("catalog").optJSONArray("sections").optJSONObject(0);
@@ -538,6 +555,28 @@ public class JsonInjectors{
                         + DeviceIdProvider.d(getContext())
                         + "&url="
                         + section
+                        + "&access_token="
+                        + getUserToken())
+                .a(Headers.a("User-Agent", Network.l.c().a(), "Content-Type", "application/x-www-form-urlencoded; charset=utf-8")).a();
+        try {
+            return new JSONObject(mClient.a(request).execute().a().g()).getJSONObject("response");
+        } catch (JSONException | IOException e) {
+            Log.d("VTLMusic", "Error: " + e.getMessage());
+        }
+
+        return null;
+    }
+
+    public static JSONObject fetchCatalogPodcast(){
+        var request = new Request.a()
+                .b("https://api.vk.com/method/catalog.getPodcasts"
+                        + "?v=5.119"
+                        + "&https=1"
+                        + "&need_blocks=1"
+                        + "&lang="
+                        + getLocale()
+                        + "&device_id="
+                        + DeviceIdProvider.d(getContext())
                         + "&access_token="
                         + getUserToken())
                 .a(Headers.a("User-Agent", Network.l.c().a(), "Content-Type", "application/x-www-form-urlencoded; charset=utf-8")).a();
