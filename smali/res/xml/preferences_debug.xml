@@ -28,6 +28,10 @@
             android:title="Использовать новый AdBlock (Beta)" />
         <com.vtosters.lite.ui.MaterialSwitchPreference
             android:defaultValue="false"
+            android:key="podcastcatalog"
+            android:title="Add catalog podcast" />
+        <com.vtosters.lite.ui.MaterialSwitchPreference
+            android:defaultValue="false"
             android:key="vksans"
             android:title="@string/debug_experimental_vk_sans_font" />
         <com.vtosters.lite.ui.MaterialSwitchPreference
