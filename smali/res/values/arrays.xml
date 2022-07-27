@@ -800,6 +800,7 @@
     </string-array>
     <string-array name="musicdefcatalog_value">
         <item>Default</item>
+        <item>General</item>
         <item>Recent</item>
         <item>My music</item>
         <item>Playlists</item>
@@ -807,6 +808,7 @@
         <item>Explore</item>
     </string-array>
     <string-array name="musicdefcatalog">
+        <item>default</item>
         <item>general</item>
         <item>recent</item>
         <item>all</item>
