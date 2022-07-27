@@ -1,13 +1,16 @@
 package ru.vtosters.lite.ui.fragments;
 
+import static ru.vtosters.lite.music.Scrobbler.isLoggedIn;
 import static ru.vtosters.lite.ui.PreferencesUtil.getSTextColor;
 import static ru.vtosters.lite.utils.AndroidUtils.dp2px;
 import static ru.vtosters.lite.utils.AndroidUtils.edit;
 import static ru.vtosters.lite.utils.AndroidUtils.getIdentifier;
 import static ru.vtosters.lite.utils.AndroidUtils.getPreferences;
+import static ru.vtosters.lite.utils.AndroidUtils.sendToast;
 import static ru.vtosters.lite.utils.LifecycleUtils.restartApplicationWithTimer;
 import static ru.vtosters.lite.utils.ThemesUtils.getAccentColor;
 import static ru.vtosters.lite.utils.ThemesUtils.getAlertStyle;
+import static ru.vtosters.lite.utils.ThemesUtils.getSTextAttr;
 import static ru.vtosters.lite.utils.ThemesUtils.getTextAttr;
 
 import android.content.Context;
@@ -51,14 +54,14 @@ public class MediaFragment extends MaterialPreferenceToolbarFragment {
         alert.getButton(DialogInterface.BUTTON_POSITIVE).setTextColor(getAccentColor());
     }
 
-    public static void lastfmAuth(Context ctx) {
+    public void lastfmAuth(Context ctx) {
         LinearLayout linearLayout = new LinearLayout(ctx);
         linearLayout.setOrientation(LinearLayout.VERTICAL);
 
         final EditText fn = new EditText(ctx);
         fn.setHint("Логин");
         fn.setTextColor(getTextAttr());
-        fn.setHintTextColor(getSTextColor(ctx));
+        fn.setHintTextColor(getSTextAttr());
         fn.setBackgroundTintList(ColorStateList.valueOf(getAccentColor()));
         linearLayout.addView(fn);
         fn.getLayoutParams().width = ViewGroup.LayoutParams.MATCH_PARENT;
@@ -69,7 +72,7 @@ public class MediaFragment extends MaterialPreferenceToolbarFragment {
         final EditText ln = new EditText(ctx);
         ln.setHint("Пароль");
         ln.setTextColor(getTextAttr());
-        ln.setHintTextColor(getSTextColor(ctx));
+        ln.setHintTextColor(getSTextAttr());
         ln.setBackgroundTintList(ColorStateList.valueOf(getAccentColor()));
         linearLayout.addView(ln);
         ln.getLayoutParams().width = ViewGroup.LayoutParams.MATCH_PARENT;
@@ -101,7 +104,11 @@ public class MediaFragment extends MaterialPreferenceToolbarFragment {
         findPreference("download_video").setOnPreferenceClickListener(new MediaFragment.download());
         findPreference("dateformat").setOnPreferenceChangeListener(new MediaFragment.restart());
         findPreference("lastfm_auth").setOnPreferenceClickListener(preference -> {
-            lastfmAuth(getContext());
+            if (isLoggedIn()) {
+                sendToast("Вы уже авторизованы");
+            } else {
+                lastfmAuth(getContext());
+            }
             return true;
         });
         findPreference("lastfm_reset").setOnPreferenceClickListener(preference -> {

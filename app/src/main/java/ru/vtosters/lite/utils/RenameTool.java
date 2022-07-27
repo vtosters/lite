@@ -7,6 +7,7 @@ import static ru.vtosters.lite.utils.AndroidUtils.getResources;
 import static ru.vtosters.lite.utils.AndroidUtils.sendToast;
 import static ru.vtosters.lite.utils.ThemesUtils.getAccentColor;
 import static ru.vtosters.lite.utils.ThemesUtils.getAlertStyle;
+import static ru.vtosters.lite.utils.ThemesUtils.getSTextAttr;
 import static ru.vtosters.lite.utils.ThemesUtils.getTextAttr;
 
 import android.content.Context;
@@ -154,7 +155,7 @@ public class RenameTool {
         final EditText fn = new EditText(ctx);
         fn.setHint("Имя");
         fn.setTextColor(getTextAttr());
-        fn.setHintTextColor(getSTextColor(ctx));
+        fn.setHintTextColor(getSTextAttr());
         fn.setBackgroundTintList(ColorStateList.valueOf(getAccentColor()));
         linearLayout.addView(fn);
         fn.getLayoutParams().width = ViewGroup.LayoutParams.MATCH_PARENT;
@@ -165,7 +166,7 @@ public class RenameTool {
         final EditText ln = new EditText(ctx);
         ln.setHint("Фамилия");
         ln.setTextColor(getTextAttr());
-        ln.setHintTextColor(getSTextColor(ctx));
+        ln.setHintTextColor(getSTextAttr());
         ln.setBackgroundTintList(ColorStateList.valueOf(getAccentColor()));
         linearLayout.addView(ln);
         ln.getLayoutParams().width = ViewGroup.LayoutParams.MATCH_PARENT;
@@ -226,7 +227,7 @@ public class RenameTool {
 
         final EditText fn = new EditText(ctx);
         fn.setHint("Имя");
-        fn.setHintTextColor(getSTextColor(ctx));
+        fn.setHintTextColor(getSTextAttr());
         fn.setTextColor(getTextAttr());
         fn.setBackgroundTintList(ColorStateList.valueOf(getAccentColor()));
         linearLayout.addView(fn);

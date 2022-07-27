@@ -168,7 +168,7 @@ public class PreferencesUtil {
             editText.setText(PreferenceManager.getDefaultSharedPreferences(getGlobalContext()).getString(key, ""));
             editText.setHint(title);
             editText.setTextColor(getTextAttr());
-            editText.setHintTextColor(getSTextColor(getGlobalContext()));
+            editText.setHintTextColor(getSTextAttr());
 
             editText.setBackgroundTintList(ColorStateList.valueOf(getAccentColor()));
 
