@@ -1,12 +1,12 @@
 package ru.vtosters.lite.ui.fragments;
 
-import static ru.vtosters.lite.utils.Globals.edit;
-import static ru.vtosters.lite.utils.Globals.getIdentifier;
-import static ru.vtosters.lite.utils.Globals.getPreferences;
-import static ru.vtosters.lite.utils.Globals.restartApplicationWithTimer;
-import static ru.vtosters.lite.utils.Themes.getAccentColor;
-import static ru.vtosters.lite.utils.Themes.getAlertStyle;
-import static ru.vtosters.lite.utils.Themes.getTextAttr;
+import static ru.vtosters.lite.utils.AndroidUtils.edit;
+import static ru.vtosters.lite.utils.AndroidUtils.getIdentifier;
+import static ru.vtosters.lite.utils.AndroidUtils.getPreferences;
+import static ru.vtosters.lite.utils.LifecycleUtils.restartApplicationWithTimer;
+import static ru.vtosters.lite.utils.ThemesUtils.getAccentColor;
+import static ru.vtosters.lite.utils.ThemesUtils.getAlertStyle;
+import static ru.vtosters.lite.utils.ThemesUtils.getTextAttr;
 
 import android.content.Context;
 import android.content.DialogInterface;
@@ -28,8 +28,8 @@ import java.util.Arrays;
 import ru.vtosters.lite.downloaders.VideoDownloader;
 import ru.vtosters.lite.ui.adapters.ImagineArrayAdapter;
 
-public class MediaFragment extends MaterialPreferenceToolbarFragment{
-    public static void download(Context ctx){
+public class MediaFragment extends MaterialPreferenceToolbarFragment {
+    public static void download(Context ctx) {
         AlertDialog.Builder alertDialog = new AlertDialog.Builder(ctx, getAlertStyle());
         alertDialog.setTitle("Введите ссылку на видео");
 
@@ -56,13 +56,13 @@ public class MediaFragment extends MaterialPreferenceToolbarFragment{
     }
 
     @Override
-    public void onCreate(Bundle bundle){
+    public void onCreate(Bundle bundle) {
         super.onCreate(bundle);
         addPreferencesFromResource(getIdentifier("preferences_media", "xml"));
         prefs();
     }
 
-    private void prefs(){
+    private void prefs() {
         findPreference("download_video").setOnPreferenceClickListener(new MediaFragment.download());
         findPreference("dateformat").setOnPreferenceChangeListener(new MediaFragment.restart());
         findPreference("select_photo_search_engine").setOnPreferenceClickListener(preference -> {
@@ -89,17 +89,17 @@ public class MediaFragment extends MaterialPreferenceToolbarFragment{
         });
     }
 
-    public class download implements Preference.OnPreferenceClickListener{
+    public class download implements Preference.OnPreferenceClickListener {
         @Override // android.support.v7.preference.Preference.c
-        public boolean onPreferenceClick(Preference preference){
+        public boolean onPreferenceClick(Preference preference) {
             download(getActivity());
             return true;
         }
     }
 
-    public static class restart implements Preference.OnPreferenceChangeListener{
+    public static class restart implements Preference.OnPreferenceChangeListener {
         @Override
-        public boolean onPreferenceChange(Preference preference, Object o){
+        public boolean onPreferenceChange(Preference preference, Object o) {
             edit().putString("dateformat", o.toString()).commit();
             restartApplicationWithTimer();
             return false;

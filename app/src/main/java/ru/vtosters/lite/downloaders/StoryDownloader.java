@@ -1,6 +1,7 @@
 package ru.vtosters.lite.downloaders;
+
 import static ru.vtosters.lite.downloaders.VideoDownloader.downloadVideo;
-import static ru.vtosters.lite.utils.Globals.getContext;
+import static ru.vtosters.lite.utils.AndroidUtils.getGlobalContext;
 
 import android.app.DownloadManager;
 import android.content.Context;
@@ -12,8 +13,8 @@ import com.vk.dto.stories.model.StoryEntry;
 
 import java.util.List;
 
-public class StoryDownloader{
-    public static Runnable injectButton(StoryEntry story){
+public class StoryDownloader {
+    public static Runnable injectButton(StoryEntry story) {
         return () -> {
             // if story is a pic
             if (story.T1()) {
@@ -23,7 +24,7 @@ public class StoryDownloader{
                 request.setNotificationVisibility(DownloadManager.Request.VISIBILITY_VISIBLE_NOTIFY_COMPLETED);
                 request.setTitle("photo" + story.E.a);
                 request.setDestinationInExternalPublicDir(Environment.DIRECTORY_DCIM, "/Stories/photo" + story.E.a + ".jpg");
-                ((DownloadManager) getContext().getSystemService(Context.DOWNLOAD_SERVICE)).enqueue(request);
+                ((DownloadManager) getGlobalContext().getSystemService(Context.DOWNLOAD_SERVICE)).enqueue(request);
                 return;
             }
 

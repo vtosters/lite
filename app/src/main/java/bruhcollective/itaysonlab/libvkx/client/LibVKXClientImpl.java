@@ -1,6 +1,6 @@
 package bruhcollective.itaysonlab.libvkx.client;
 
-import static ru.vtosters.lite.utils.Globals.getUserId;
+import static ru.vtosters.lite.utils.AccountManagerUtils.getUserId;
 
 import android.content.ComponentName;
 import android.content.Context;
@@ -15,7 +15,7 @@ import java.util.List;
 
 import bruhcollective.itaysonlab.libvkx.ILibVkxService;
 
-public class LibVKXClientImpl{
+public class LibVKXClientImpl {
     private ILibVkxService serviceInstance;
     private PackageManager pm;
     private Context ctx;
@@ -23,15 +23,15 @@ public class LibVKXClientImpl{
 
     private boolean isBindFailed = false;
 
-    private LibVKXClientImpl(){
+    private LibVKXClientImpl() {
     }
 
-    public LibVKXClientImpl(Context ctx){
+    public LibVKXClientImpl(Context ctx) {
         this.ctx = ctx;
         this.pm = ctx.getPackageManager();
     }
 
-    public void finish(){
+    public void finish() {
         if (cn != null) {
             ctx.unbindService(cn);
         }
@@ -39,7 +39,7 @@ public class LibVKXClientImpl{
         serviceInstance = null;
     }
 
-    public <T> T runOnServiceSync(LibVKXActionGeneric<T> action){
+    public <T> T runOnServiceSync(LibVKXActionGeneric<T> action) {
         if (serviceInstance != null) {
             return action.run(serviceInstance);
         } else {
@@ -49,7 +49,7 @@ public class LibVKXClientImpl{
 
     // true - action is ran
     // false - action is failed, should fallback to default UI/UX
-    public boolean runOnService(LibVKXAction action){
+    public boolean runOnService(LibVKXAction action) {
         if (serviceInstance != null) {
             try {
                 if (serviceInstance.getUserId() != getUserId()) return false;
@@ -64,12 +64,12 @@ public class LibVKXClientImpl{
         }
     }
 
-    private boolean requestServiceInit(LibVKXAction runAfterBind){
+    private boolean requestServiceInit(LibVKXAction runAfterBind) {
         if (!verifyBindActuality()) return false;
 
-        cn = new ServiceConnection(){
+        cn = new ServiceConnection() {
             @Override
-            public void onServiceConnected(ComponentName name, IBinder service){
+            public void onServiceConnected(ComponentName name, IBinder service) {
                 serviceInstance = ILibVkxService.Stub.asInterface(service);
                 if (serviceInstance == null) {
                     // op mycopok...
@@ -85,7 +85,7 @@ public class LibVKXClientImpl{
             }
 
             @Override
-            public void onServiceDisconnected(ComponentName name){
+            public void onServiceDisconnected(ComponentName name) {
                 serviceInstance = null;
             }
         };
@@ -94,16 +94,16 @@ public class LibVKXClientImpl{
         return true;
     }
 
-    private boolean verifyBindActuality(){
+    private boolean verifyBindActuality() {
         if (!checkIfAppExists()) return false; // no need
         return !isBindFailed;
     }
 
-    private Intent getIntent(){
+    private Intent getIntent() {
         return new Intent(ClientConstants.ACTION).setPackage(ClientConstants.PACKAGE);
     }
 
-    private boolean checkIfAppExists(){
+    private boolean checkIfAppExists() {
         List<ResolveInfo> resolveInfos = pm.queryIntentServices(getIntent(), 0);
         if (resolveInfos == null || resolveInfos.isEmpty()) return false;
 
@@ -114,14 +114,14 @@ public class LibVKXClientImpl{
         return false;
     }
 
-    public interface LibVKXAction{
+    public interface LibVKXAction {
         void run(ILibVkxService service);
     }
 
-    public interface LibVKXActionGeneric<T>{
+    public interface LibVKXActionGeneric<T> {
         T run(ILibVkxService service);
 
-        default T defaultValue(){
+        default T defaultValue() {
             return null;
         }
     }

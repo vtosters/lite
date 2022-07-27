@@ -260,7 +260,7 @@
     .locals 0
 
     .line 1
-    invoke-static {}, Lru/vtosters/lite/utils/Globals;->reloadMSG()V
+    invoke-static {}, Lru/vtosters/lite/utils/AccountManagerUtils;->reloadMSG()V
 
     return-void
 .end method

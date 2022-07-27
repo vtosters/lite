@@ -189,6 +189,10 @@
             android:process=":phoenix"
             android:theme="@android:style/Theme.Translucent.NoTitleBar" />
         <activity
+            android:name="ru.vtosters.lite.ui.activities.VKAdminTokenActivity"
+            android:launchMode="singleTop">
+        </activity>
+        <activity
             android:name="com.vtosters.lite.MainActivity"
             android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|screenSize|smallestScreenSize"
             android:finishOnTaskLaunch="true"
@@ -2079,7 +2083,7 @@
             android:launchMode="singleTop"
             android:windowSoftInputMode="adjustPan" />
 
-        <service android:name="ru.vtosters.lite.f0x1d.LogWriterService" />
+        <service android:name="ru.vtosters.lite.services.LogWriterService" />
 
     </application>
 </manifest>

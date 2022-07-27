@@ -27,28 +27,28 @@ import java.util.concurrent.atomic.AtomicBoolean;
 
 import javax.net.ssl.HttpsURLConnection;
 
-public class GcmHook{
+public class GcmHook {
     private static final String agent = String.format("Android-GCM/1.5 (%s %s)", Build.MODEL, Build.MODEL);
     public static ArrayList<String> langs = new ArrayList<>();
     private static KeyPair pair;
     private static int rid = 0;
 
-    static{
+    static {
         genNewKey();
     }
 
-    public static String requestTokenV2(String orig){
+    public static String requestTokenV2(String orig) {
         if (musicFixNew()) return "null";
         return orig;
     }
 
-    public static String requestToken(String orig){
+    public static String requestToken(String orig) {
         if (musicFixNew()) return "{null}";
         if (orig.equals("")) return requestToken();
         return orig;
     }
 
-    public static String requestToken(){
+    public static String requestToken() {
         String xappide;
         try {
             String aid = getRandomAid();
@@ -59,7 +59,7 @@ public class GcmHook{
                 bytes[0] = (byte) (((bytes[0] & 15) + 112) & 255);
                 xappide = Base64.encodeToString(bytes, 2).substring(0, 11);
             } catch (NoSuchAlgorithmException e) {
-               xappide = "";
+                xappide = "";
             }
             AtomicBoolean wait = new AtomicBoolean(false);
             StringBuilder sb = new StringBuilder();
@@ -69,7 +69,7 @@ public class GcmHook{
             Callback callback = str -> GcmHook.lambdaRequestToken(sb, wait, str);
 
             doRequest("https://android.clients.google.com/c2dm/register3", "POST", params, aid, callback);
-            while(!wait.get()) {
+            while (!wait.get()) {
                 Thread.sleep(100);
             }
             String token = sb.toString();
@@ -90,15 +90,15 @@ public class GcmHook{
         }
     }
 
-    static void lambdaRequestToken(StringBuilder sb, AtomicBoolean wait, String s){
+    static void lambdaRequestToken(StringBuilder sb, AtomicBoolean wait, String s) {
         sb.append(s.substring(20));
         wait.set(true);
     }
 
-    static void lambda$requestToken$1(String str){
+    static void lambda$requestToken$1(String str) {
     }
 
-    private static void fillParams(List<String> params, String sig, String pub2, String xappid, long androidId, boolean del){
+    private static void fillParams(List<String> params, String sig, String pub2, String xappid, long androidId, boolean del) {
         rid++;
         params.add("X-subtype=841415684880");
         if (del) {
@@ -138,7 +138,7 @@ public class GcmHook{
         params.add("gcm_ver=11949470");
     }
 
-    private static String join(String chr, Iterable<String> arr){
+    private static String join(String chr, Iterable<String> arr) {
         String str = "";
         for (String s : arr) {
             str = str.isEmpty() ? s : str + chr + s;
@@ -146,11 +146,11 @@ public class GcmHook{
         return str;
     }
 
-    private static String join(String chr, String[] arr){
+    private static String join(String chr, String[] arr) {
         return join(chr, Arrays.asList(arr));
     }
 
-    private static void doRequest(String url, String method, List<String> params, String aidlogin, Callback callback) throws IOException{
+    private static void doRequest(String url, String method, List<String> params, String aidlogin, Callback callback) throws IOException {
         HttpsURLConnection con = (HttpsURLConnection) new URL(url).openConnection();
         con.setRequestMethod(method);
         con.setRequestProperty("Authorization", aidlogin);
@@ -169,13 +169,13 @@ public class GcmHook{
     }
 
     private static String getRandomAid() {
-        var arr1 = new String[]{ "3974055026275073921", "4418584909973341826", "4585634953328772978" };
-        var arr2 = new String[]{ "1932960345884890854", "6594645578425092292", "1792344590975444730" };
+        var arr1 = new String[]{"3974055026275073921", "4418584909973341826", "4585634953328772978"};
+        var arr2 = new String[]{"1932960345884890854", "6594645578425092292", "1792344590975444730"};
         int r = new Random().nextInt(2);
         return "AidLogin " + arr1[r] + ":" + arr2[r];
     }
 
-    private static String genNewKey(){
+    private static String genNewKey() {
         try {
             KeyPairGenerator gen = KeyPairGenerator.getInstance("RSA");
             gen.initialize(2048);
@@ -186,12 +186,12 @@ public class GcmHook{
         return Base64.encodeToString(pair.getPublic().getEncoded(), 0);
     }
 
-    private static String getSig(String pub2){
+    private static String getSig(String pub2) {
         try {
             PrivateKey key = pair.getPrivate();
             Signature sign = Signature.getInstance(key instanceof RSAPrivateKey ? "SHA256withRSA" : "SHA256withECDSA");
             sign.initSign(key);
-            sign.update(join("\n", new String[] {"com.vkontakte.android", pub2}).getBytes(StandardCharsets.UTF_8));
+            sign.update(join("\n", new String[]{"com.vkontakte.android", pub2}).getBytes(StandardCharsets.UTF_8));
             return Base64.encodeToString(sign.sign(), 0);
         } catch (Exception e) {
             e.printStackTrace();
@@ -199,7 +199,7 @@ public class GcmHook{
         }
     }
 
-    public interface Callback{
+    public interface Callback {
         void doCallback(String str);
     }
 }

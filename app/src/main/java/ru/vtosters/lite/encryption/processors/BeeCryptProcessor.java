@@ -9,12 +9,12 @@ import java.nio.charset.StandardCharsets;
 
 import ru.vtosters.lite.encryption.base.IMProcessor;
 
-public class BeeCryptProcessor extends IMProcessor{
+public class BeeCryptProcessor extends IMProcessor {
     private static final String BC_CHARSET = "жъЖЪ";
 
     @NonNull
     @Override
-    protected String encodeInternal(@NonNull String source, @Nullable byte[] key){
+    protected String encodeInternal(@NonNull String source, @Nullable byte[] key) {
         try {
             String a = Base64.encodeToString(source.getBytes(StandardCharsets.UTF_8), 2);
             StringBuilder res = new StringBuilder();
@@ -35,16 +35,16 @@ public class BeeCryptProcessor extends IMProcessor{
     }
 
     @Override
-    public boolean isEncrypted(String source){
+    public boolean isEncrypted(String source) {
         return source.matches("[жъЖЪ]{16,}");
     }
 
     @NonNull
     @Override
-    protected String decodeInternal(@NonNull String source, @Nullable byte[] key){
+    protected String decodeInternal(@NonNull String source, @Nullable byte[] key) {
         StringBuilder b64 = new StringBuilder();
         int i = 0;
-        while(i < source.length() - 3) {
+        while (i < source.length() - 3) {
             try {
                 String bintxt = source.substring(i, i + 4);
                 int c = 0;
@@ -63,13 +63,13 @@ public class BeeCryptProcessor extends IMProcessor{
 
     @NonNull
     @Override
-    public String getUIName(){
+    public String getUIName() {
         return "MP3 [beecrypt]";
     }
 
     @NonNull
     @Override
-    public String getPrefKey(){
+    public String getPrefKey() {
         return "mp3_bc";
     }
 }

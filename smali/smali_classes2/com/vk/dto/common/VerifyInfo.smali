@@ -178,19 +178,19 @@
 .method public final b(Lorg/json/JSONObject;)Lcom/vk/dto/common/VerifyInfo;
     .locals 3
 
-    invoke-static {p1}, Lru/vtosters/lite/f0x1d/VTVerifications;->isVerified(Lorg/json/JSONObject;)Z
+    invoke-static {p1}, Lru/vtosters/lite/utils/VTVerifications;->isVerified(Lorg/json/JSONObject;)Z
 
     move-result v1
 
     iput-boolean v1, p0, Lcom/vk/dto/common/VerifyInfo;->a:Z
 
-    invoke-static {p1}, Lru/vtosters/lite/f0x1d/VTVerifications;->hasPrometheus(Lorg/json/JSONObject;)Z
+    invoke-static {p1}, Lru/vtosters/lite/utils/VTVerifications;->hasPrometheus(Lorg/json/JSONObject;)Z
 
     move-result v0
 
     iput-boolean v0, p0, Lcom/vk/dto/common/VerifyInfo;->b:Z
 
-    invoke-static {p1}, Lru/vtosters/lite/f0x1d/VTVerifications;->hasDeveloper(Lorg/json/JSONObject;)Z
+    invoke-static {p1}, Lru/vtosters/lite/utils/VTVerifications;->hasDeveloper(Lorg/json/JSONObject;)Z
 
     move-result v0
 

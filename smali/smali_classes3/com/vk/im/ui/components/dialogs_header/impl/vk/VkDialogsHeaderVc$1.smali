@@ -58,7 +58,7 @@
 
     const-string v1, "msgupdate"
 
-    invoke-static {v1, v0}, Lru/vtosters/lite/utils/Globals;->getIdentifier(Ljava/lang/String;Ljava/lang/String;)I
+    invoke-static {v1, v0}, Lru/vtosters/lite/utils/AndroidUtils;->getIdentifier(Ljava/lang/String;Ljava/lang/String;)I
 
     move-result v0
 

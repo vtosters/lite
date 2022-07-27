@@ -1,8 +1,7 @@
 package ru.vtosters.lite.ui.fragments;
 
-import static ru.vtosters.lite.utils.Globals.getIdentifier;
-import static ru.vtosters.lite.utils.Globals.getPreferences;
-import static ru.vtosters.lite.utils.Globals.restartApplicationWithTimer;
+import static ru.vtosters.lite.utils.AndroidUtils.getIdentifier;
+import static ru.vtosters.lite.utils.LifecycleUtils.restartApplicationWithTimer;
 
 import android.os.Bundle;
 
@@ -10,29 +9,27 @@ import androidx.preference.Preference;
 
 import com.vtosters.lite.general.fragments.MaterialPreferenceToolbarFragment;
 
-import ru.vtosters.lite.utils.Globals;
-
-public class InterfaceFragment extends MaterialPreferenceToolbarFragment{
+public class InterfaceFragment extends MaterialPreferenceToolbarFragment {
     @Override
-    public void onCreate(Bundle bundle){
+    public void onCreate(Bundle bundle) {
         super.onCreate(bundle);
         addPreferencesFromResource(getIdentifier("preferences_interface", "xml"));
         prefs();
     }
 
-    private void prefs(){
+    private void prefs() {
         findPreference("stories").setOnPreferenceClickListener(new restart());
         findPreference("swipe").setOnPreferenceClickListener(new restart());
     }
 
-    public boolean restart(Preference preference){
+    public boolean restart(Preference preference) {
         restartApplicationWithTimer();
         return true;
     }
 
-    public class restart implements Preference.OnPreferenceClickListener{
+    public class restart implements Preference.OnPreferenceClickListener {
         @Override
-        public boolean onPreferenceClick(Preference preference){
+        public boolean onPreferenceClick(Preference preference) {
             return InterfaceFragment.this.restart(preference);
         }
     }

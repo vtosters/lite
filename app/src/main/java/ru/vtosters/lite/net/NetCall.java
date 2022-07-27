@@ -15,16 +15,16 @@ import java.nio.charset.StandardCharsets;
 import java.util.Map;
 import java.util.TreeMap;
 
-public final class NetCall{
+public final class NetCall {
     private final NetRequest req;
     private final NetClient cl;
 
-    protected NetCall(NetClient cl, NetRequest req){
+    protected NetCall(NetClient cl, NetRequest req) {
         this.req = req;
         this.cl = cl;
     }
 
-    private static String constructArgs(Map<String, String> args) throws UnsupportedEncodingException{
+    private static String constructArgs(Map<String, String> args) throws UnsupportedEncodingException {
         args = new TreeMap<>(args);
         String str = "";
         for (Map.Entry<String, String> en : args.entrySet()) {
@@ -34,11 +34,11 @@ public final class NetCall{
         return str;
     }
 
-    public NetRequest request(){
+    public NetRequest request() {
         return req;
     }
 
-    public NetResponse execute() throws IOException{
+    public NetResponse execute() throws IOException {
         Proxy proxy = cl.getProxy();
         PasswordAuthentication auth = cl.getAuthenticator();
         HttpURLConnection con = (HttpURLConnection) new URL(req.url()).openConnection(proxy != null ? proxy : Proxy.NO_PROXY);
@@ -67,7 +67,7 @@ public final class NetCall{
         ByteArrayOutputStream bos = new ByteArrayOutputStream();
         byte[] buffer = new byte[1024 * 1024];
         int c;
-        while((c = in.read(buffer)) != -1) bos.write(buffer, 0, c);
+        while ((c = in.read(buffer)) != -1) bos.write(buffer, 0, c);
         in.close();
         bos.close();
         NetResponse r = new NetResponse(bos.toByteArray());
@@ -75,10 +75,10 @@ public final class NetCall{
         return r;
     }
 
-    public void enqueue(NetCallback cb){
-        new Thread(){
+    public void enqueue(NetCallback cb) {
+        new Thread() {
             @Override
-            public void run(){
+            public void run() {
                 try {
                     NetResponse resp = execute();
                     cb.onResponse(NetCall.this, resp);

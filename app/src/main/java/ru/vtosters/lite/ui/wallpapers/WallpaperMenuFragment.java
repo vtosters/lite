@@ -1,13 +1,14 @@
 package ru.vtosters.lite.ui.wallpapers;
+
 import static ru.vtosters.lite.ui.wallpapers.WallpapersHooks.getDimmingSummary;
 import static ru.vtosters.lite.ui.wallpapers.WallpapersHooks.getMosaicSummary;
 import static ru.vtosters.lite.ui.wallpapers.WallpapersHooks.getRadiusSummary;
 import static ru.vtosters.lite.ui.wallpapers.WallpapersHooks.getWallpaperFile;
 import static ru.vtosters.lite.ui.wallpapers.WallpapersHooks.removeWallpaper;
 import static ru.vtosters.lite.ui.wallpapers.WallpapersHooks.requestUpdateWallpaper;
+import static ru.vtosters.lite.utils.AndroidUtils.edit;
+import static ru.vtosters.lite.utils.AndroidUtils.getIdentifier;
 import static ru.vtosters.lite.utils.CacheUtils.deleteCache;
-import static ru.vtosters.lite.utils.Globals.edit;
-import static ru.vtosters.lite.utils.Globals.getIdentifier;
 import static ru.vtosters.lite.utils.Preferences.getBoolValue;
 import static ru.vtosters.lite.utils.Preferences.hasVerification;
 
@@ -31,15 +32,15 @@ import java.io.OutputStream;
 
 import ru.vtosters.lite.ui.PreferencesUtil;
 
-public class WallpaperMenuFragment extends MaterialPreferenceToolbarFragment{
+public class WallpaperMenuFragment extends MaterialPreferenceToolbarFragment {
 
     private WallpaperPreferences mWPPreviewPref;
 
-    public static void copyStream(InputStream copyFrom, OutputStream copyTo) throws IOException{
+    public static void copyStream(InputStream copyFrom, OutputStream copyTo) throws IOException {
 
         byte[] buffer = new byte[1024];
         int length;
-        while((length = copyFrom.read(buffer)) > 0) {
+        while ((length = copyFrom.read(buffer)) > 0) {
             copyTo.write(buffer, 0, length);
         }
 
@@ -49,7 +50,7 @@ public class WallpaperMenuFragment extends MaterialPreferenceToolbarFragment{
     }
 
     @Override
-    public void onCreate(Bundle bundle){
+    public void onCreate(Bundle bundle) {
         super.onCreate(bundle);
 
         int vtosterXml = getIdentifier("empty", "xml");
@@ -85,22 +86,22 @@ public class WallpaperMenuFragment extends MaterialPreferenceToolbarFragment{
             });
         }
 
-        PreferencesUtil.addListPreference(this, "msg_blur_radius", "disabled", "Размытие фона сообщений", new CharSequence[] {
+        PreferencesUtil.addListPreference(this, "msg_blur_radius", "disabled", "Размытие фона сообщений", new CharSequence[]{
                 "Отключено", "Низкое (15px)", "Среднее (25px)", "Высокое (50px)"
-        }, new String[] {
+        }, new String[]{
                 "disabled", "low", "med", "high"
         });
 
-        PreferencesUtil.addListPreference(this, "msg_dim", "off", "Затемнение изображения", new CharSequence[] {
+        PreferencesUtil.addListPreference(this, "msg_dim", "off", "Затемнение изображения", new CharSequence[]{
                 "Отключено", "Затемнить", "Осветлить"
-        }, new String[] {
+        }, new String[]{
                 "off", "dim_black", "dim_white"
         });
 
 
-        PreferencesUtil.addListPreference(this, "msg_mosaic", "disabled", "Мозаика", new CharSequence[] {
+        PreferencesUtil.addListPreference(this, "msg_mosaic", "disabled", "Мозаика", new CharSequence[]{
                 "Отключено", "Низкое", "Среднее", "Высокое"
-        }, new String[] {
+        }, new String[]{
                 "disabled", "low", "med", "high"
         });
 
@@ -196,7 +197,7 @@ public class WallpaperMenuFragment extends MaterialPreferenceToolbarFragment{
     }
 
     @Override
-    public void onActivityResult(int i, int i1, @Nullable Intent intent){
+    public void onActivityResult(int i, int i1, @Nullable Intent intent) {
         super.onActivityResult(i, i1, intent);
 
         if (intent == null || intent.getData() == null)
@@ -219,7 +220,7 @@ public class WallpaperMenuFragment extends MaterialPreferenceToolbarFragment{
         }
     }
 
-    private void removeStickCache(){
+    private void removeStickCache() {
         SharedPreferences prefs2 = getContext().getSharedPreferences("stickers_storage", Context.MODE_PRIVATE);
         prefs2.edit().clear().apply();
         deleteCache();
@@ -227,7 +228,7 @@ public class WallpaperMenuFragment extends MaterialPreferenceToolbarFragment{
     }
 
     @Override
-    public int T4(){
+    public int T4() {
         return getIdentifier("wallpapers", "string");
     }
 }

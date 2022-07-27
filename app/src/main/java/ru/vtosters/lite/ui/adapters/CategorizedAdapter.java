@@ -1,12 +1,11 @@
 package ru.vtosters.lite.ui.adapters;
 
-import static ru.vtosters.lite.utils.Globals.convertDpToPixel;
-import static ru.vtosters.lite.utils.Globals.getContext;
-import static ru.vtosters.lite.utils.Globals.getString;
+import static ru.vtosters.lite.utils.AndroidUtils.dp2px;
+import static ru.vtosters.lite.utils.AndroidUtils.getGlobalContext;
+import static ru.vtosters.lite.utils.AndroidUtils.getString;
 
 import android.content.res.ColorStateList;
 import android.graphics.Typeface;
-import android.util.Log;
 import android.view.Gravity;
 import android.view.View;
 import android.view.ViewGroup;
@@ -23,7 +22,7 @@ import java.util.Collections;
 import java.util.List;
 
 import ru.vtosters.lite.ui.components.IItemMovingListener;
-import ru.vtosters.lite.utils.Themes;
+import ru.vtosters.lite.utils.ThemesUtils;
 
 public class CategorizedAdapter extends RecyclerView.Adapter<CategorizedAdapter.CategorizedViewHolder> implements IItemMovingListener {
 
@@ -84,64 +83,64 @@ public class CategorizedAdapter extends RecyclerView.Adapter<CategorizedAdapter.
     @NonNull
     @Override
     public CategorizedViewHolder onCreateViewHolder(@NonNull ViewGroup viewGroup, int i) {
-        FrameLayout container = new FrameLayout(getContext());
+        FrameLayout container = new FrameLayout(getGlobalContext());
         container.addView(newCategoryTitle(), new FrameLayout.LayoutParams(-1, -2));
         container.addView(newMovingItem(), new FrameLayout.LayoutParams(-1, -2));
         return new CategorizedViewHolder(container);
     }
 
     private View newMovingItem() {
-        LinearLayout container = new LinearLayout(getContext());
+        LinearLayout container = new LinearLayout(getGlobalContext());
         container.setTag("container");
         container.setGravity(Gravity.CENTER_VERTICAL);
         container.setOrientation(LinearLayout.HORIZONTAL);
         container.setPadding(
-                convertDpToPixel(12),
-                convertDpToPixel(12),
-                convertDpToPixel(12),
-                convertDpToPixel(12)
+                dp2px(12),
+                dp2px(12),
+                dp2px(12),
+                dp2px(12)
         );
-        container.setLayoutParams(new LinearLayout.LayoutParams(-1, convertDpToPixel(48)));
+        container.setLayoutParams(new LinearLayout.LayoutParams(-1, dp2px(48)));
         container.setVisibility(View.INVISIBLE);
 
-        ImageView icon = new ImageView(getContext());
+        ImageView icon = new ImageView(getGlobalContext());
         icon.setTag("icon");
-        icon.setImageTintList(ColorStateList.valueOf(Themes.getAccentColor()));
+        icon.setImageTintList(ColorStateList.valueOf(ThemesUtils.getAccentColor()));
         icon.setLayoutParams(new LinearLayout.LayoutParams(
-                convertDpToPixel(24),
-                convertDpToPixel(24)));
+                dp2px(24),
+                dp2px(24)));
         container.addView(icon);
 
-        TextView name = new TextView(getContext());
+        TextView name = new TextView(getGlobalContext());
         name.setTag("name");
         name.setTextSize(16.0f);
         name.setTypeface(Typeface.DEFAULT_BOLD);
-        name.setTextColor(Themes.getTextAttr());
+        name.setTextColor(ThemesUtils.getTextAttr());
         LinearLayout.LayoutParams params = new LinearLayout.LayoutParams(-1, -2);
         params.weight = 1;
-        params.leftMargin = convertDpToPixel(16);
+        params.leftMargin = dp2px(16);
         container.addView(name, params);
 
         return container;
     }
 
     private View newCategoryTitle() {
-        LinearLayout container = new LinearLayout(getContext());
+        LinearLayout container = new LinearLayout(getGlobalContext());
         container.setTag("category_title_container");
         container.setLayoutParams(new LinearLayout.LayoutParams(-1, -2));
         container.setVisibility(View.INVISIBLE);
 
-        TextView title = new TextView(getContext());
+        TextView title = new TextView(getGlobalContext());
         title.setTag("category_title");
         title.setTextSize(13.0f);
         title.setPadding(
-                convertDpToPixel(16),
-                convertDpToPixel(13),
-                convertDpToPixel(16),
-                convertDpToPixel(13)
+                dp2px(16),
+                dp2px(13),
+                dp2px(16),
+                dp2px(13)
         );
         title.setAllCaps(true);
-        title.setTextColor(Themes.getTextAttr());
+        title.setTextColor(ThemesUtils.getTextAttr());
         container.addView(title, new LinearLayout.LayoutParams(-2, -2));
 
         return container;
@@ -162,7 +161,7 @@ public class CategorizedAdapter extends RecyclerView.Adapter<CategorizedAdapter.
 
     @Override
     public void onItemDismiss(int index) {
-        if (getItemViewType(index) == MOVING_ITEM ) {
+        if (getItemViewType(index) == MOVING_ITEM) {
             Object curr;
             if (getTabType(index) == SELECTED_STATE) {
                 curr = mSelectedItems.get(index - 1);

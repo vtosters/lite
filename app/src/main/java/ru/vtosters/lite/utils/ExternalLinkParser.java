@@ -1,8 +1,8 @@
 package ru.vtosters.lite.utils;
 
-import static ru.vtosters.lite.utils.Globals.getContext;
-import static ru.vtosters.lite.utils.Globals.isEmpty;
+import static ru.vtosters.lite.utils.AndroidUtils.getGlobalContext;
 import static ru.vtosters.lite.utils.Preferences.isEnableExternalOpening;
+import static ru.vtosters.lite.utils.StringUtils.isEmpty;
 
 import android.app.Activity;
 import android.app.AlertDialog;
@@ -19,7 +19,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-public class ExternalLinkHandler{
+public class ExternalLinkParser {
     private static final String TAG = "ExternalLinkHandler";
 
     private static final List<String> filters = Arrays.asList(
@@ -31,7 +31,7 @@ public class ExternalLinkHandler{
     private static final Map<String, String> qualities = new HashMap<>();
 
     public static boolean parseVideoFile(VideoFile file) {
-        return parseVideoFile(file, getContext(), isEnableExternalOpening());
+        return parseVideoFile(file, getGlobalContext(), isEnableExternalOpening());
     }
 
     public static boolean parseVideoFile(VideoFile file, Context context) {
@@ -72,7 +72,7 @@ public class ExternalLinkHandler{
         return true;
     }
 
-    private static boolean checkYoutubeLink(VideoFile file){
+    private static boolean checkYoutubeLink(VideoFile file) {
         if (!isEmpty(file.G)) {
             for (String filter : filters) {
                 if (file.G.contains(filter))
@@ -91,7 +91,7 @@ public class ExternalLinkHandler{
      * this.C = var66.optString("mp4_1440");
      * this.D = var66.optString("mp4_2160");
      */
-    public static boolean checkVkVideo(VideoFile videoFile){
+    public static boolean checkVkVideo(VideoFile videoFile) {
         if (!isEmpty(videoFile.e)) {
             qualities.put("240", videoFile.e);
         }
@@ -117,7 +117,7 @@ public class ExternalLinkHandler{
         return qualities.size() > 0;
     }
 
-    public static boolean startExternalVideo(String url){
+    public static boolean startExternalVideo(String url) {
         try {
             qualities.clear();
 
@@ -136,7 +136,7 @@ public class ExternalLinkHandler{
                 if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N)
                     intent.addFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION);
             }
-            getContext().startActivity(intent);
+            getGlobalContext().startActivity(intent);
             return true;
         } catch (Exception e) {
             e.printStackTrace();
@@ -144,8 +144,8 @@ public class ExternalLinkHandler{
         return false;
     }
 
-    private static String getMXPlayerPackageName(){
-        for (ApplicationInfo info : getContext().getPackageManager().getInstalledApplications(0)) {
+    private static String getMXPlayerPackageName() {
+        for (ApplicationInfo info : getGlobalContext().getPackageManager().getInstalledApplications(0)) {
             String packName = info.packageName;
             if (packName.equals("com.mxtech.videoplayer.ad") || packName.equals("com.mxtech.videoplayer.pro"))
                 return packName;

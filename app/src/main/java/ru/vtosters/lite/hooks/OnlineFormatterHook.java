@@ -1,16 +1,14 @@
 package ru.vtosters.lite.hooks;
+
 import static ru.vtosters.lite.hooks.JsonInjectors.setOnlineInfo;
 import static ru.vtosters.lite.net.Request.makeRequest;
-import static ru.vtosters.lite.utils.Globals.getString;
-import static ru.vtosters.lite.utils.Globals.getUserId;
-import static ru.vtosters.lite.utils.Globals.getUserToken;
-import static ru.vtosters.lite.utils.Globals.sendToast;
+import static ru.vtosters.lite.utils.AccountManagerUtils.getUserToken;
+import static ru.vtosters.lite.utils.AndroidUtils.getString;
+import static ru.vtosters.lite.utils.AndroidUtils.sendToast;
 import static ru.vtosters.lite.utils.Preferences.dev;
 import static ru.vtosters.lite.utils.Preferences.getBoolValue;
 import static ru.vtosters.lite.utils.Preferences.getPrefsFromFile;
-import static ru.vtosters.lite.utils.Proxy.getApi;
-
-import android.util.Log;
+import static ru.vtosters.lite.utils.ProxyUtils.getApi;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -19,13 +17,13 @@ import org.json.JSONObject;
 import java.io.IOException;
 import java.text.ParseException;
 
-public class OnlineFormatterHook{
+public class OnlineFormatterHook {
     private static String AppName;
 
-    public static String getAppName(int appid){  // thanks to egormetlitsky (vk mp3 mod) for helping with online ids
+    public static String getAppName(int appid) {  // thanks to egormetlitsky (vk mp3 mod) for helping with online ids
         if (appid <= 3 || !getBoolValue("onlineformatter", true)) return null;
 
-        switch(appid) {
+        switch (appid) {
             case 2274003:
                 return "Android";
             case 6328039:
@@ -133,7 +131,7 @@ public class OnlineFormatterHook{
 
     }
 
-    public static String getAppNameFromOnline(int appid){
+    public static String getAppNameFromOnline(int appid) {
         var prefs = getPrefsFromFile("onlines");
         var appname = prefs.getString(String.valueOf(appid), null);
 
@@ -159,7 +157,7 @@ public class OnlineFormatterHook{
         return AppName;
     }
 
-    public static String getOnline(int appid){
+    public static String getOnline(int appid) {
         var appname = getAppName(appid);
 
         if (appname == null) return null;
@@ -167,7 +165,7 @@ public class OnlineFormatterHook{
         return getString("custom_online") + " " + appname;
     }
 
-    public static JSONObject onlineHook(JSONObject json, boolean isGlobalHook) throws ParseException, IOException, JSONException{
+    public static JSONObject onlineHook(JSONObject json, boolean isGlobalHook) throws ParseException, IOException, JSONException {
         if (!getBoolValue("onlinefix", false)) return json;
 
         if (isGlobalHook && !getBoolValue("globalUsersOnline", false)) {

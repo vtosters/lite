@@ -1,6 +1,6 @@
 package ru.vtosters.lite.downloaders;
 
-import static ru.vtosters.lite.utils.Globals.getString;
+import static ru.vtosters.lite.utils.AndroidUtils.getString;
 
 import android.annotation.SuppressLint;
 import android.app.DownloadManager;
@@ -15,13 +15,13 @@ import java.io.File;
 
 import b.h.g.m.FileUtils;
 import ru.vtosters.lite.ui.activities.APKInstallActivity;
-import ru.vtosters.lite.utils.Globals;
+import ru.vtosters.lite.utils.AndroidUtils;
 
-public class OTADownloader{
+public class OTADownloader {
 
-    private static final BroadcastReceiver callback = new BroadcastReceiver(){
+    private static final BroadcastReceiver callback = new BroadcastReceiver() {
         @Override
-        public void onReceive(Context context, Intent intent){
+        public void onReceive(Context context, Intent intent) {
             var extras = intent.getExtras();
             if (extras == null || !intent.getAction().equals(DownloadManager.ACTION_DOWNLOAD_COMPLETE))
                 return;
@@ -29,7 +29,7 @@ public class OTADownloader{
             var query = new DownloadManager.Query();
             var id = extras.getLong(DownloadManager.EXTRA_DOWNLOAD_ID);
             query.setFilterById(id);
-            var manager = (DownloadManager) Globals.getContext().getSystemService(Context.DOWNLOAD_SERVICE);
+            var manager = (DownloadManager) AndroidUtils.getGlobalContext().getSystemService(Context.DOWNLOAD_SERVICE);
             var cursor = manager.query(query);
             if (cursor.moveToFirst()) {
                 @SuppressLint("Range") var status = cursor.getInt(cursor.getColumnIndex(DownloadManager.COLUMN_STATUS));
@@ -48,14 +48,14 @@ public class OTADownloader{
                     File apk = maxIndex == -1 ? new File(downloadDir, "VTLite.apk") : new File(downloadDir, "VTLite-" + maxIndex + ".apk");
                     APKInstallActivity.installOta(context, FileUtils.n(apk));
                 } else if (status == DownloadManager.STATUS_FAILED) {
-                    Globals.sendToast(getString("downloaderr"));
+                    AndroidUtils.sendToast(getString("downloaderr"));
                 }
             }
         }
     };
 
-    public static void downloadBuild(String url){
-        var context = Globals.getContext();
+    public static void downloadBuild(String url) {
+        var context = AndroidUtils.getGlobalContext();
         var uri = Uri.parse(url);
 
         context.registerReceiver(callback, new IntentFilter(DownloadManager.ACTION_DOWNLOAD_COMPLETE));
@@ -65,7 +65,7 @@ public class OTADownloader{
         request.setTitle("VTLite.apk");
         request.setDestinationInExternalPublicDir(Environment.DIRECTORY_DOWNLOADS, "VTLite.apk");
 
-        var manager = (DownloadManager) Globals.getContext().getSystemService(Context.DOWNLOAD_SERVICE);
+        var manager = (DownloadManager) AndroidUtils.getGlobalContext().getSystemService(Context.DOWNLOAD_SERVICE);
         manager.enqueue(request);
     }
 }

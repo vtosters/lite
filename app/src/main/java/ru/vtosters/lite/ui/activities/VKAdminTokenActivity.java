@@ -16,7 +16,7 @@ import java.net.URLDecoder;
 import java.util.HashMap;
 import java.util.Map;
 
-import ru.vtosters.lite.utils.LayoutHelper;
+import ru.vtosters.lite.utils.LayoutUtils;
 
 public class VKAdminTokenActivity extends AppCompatActivity {
 
@@ -27,11 +27,11 @@ public class VKAdminTokenActivity extends AppCompatActivity {
         super.onCreate(bundle);
 
         var container = new FrameLayout(this);
-        container.setLayoutParams(LayoutHelper.createFrame(-1, -1));
+        container.setLayoutParams(LayoutUtils.createFrame(-1, -1));
         setContentView(container);
 
         var webView = new WebView(this);
-        container.addView(webView, LayoutHelper.createFrame(-1, -1));
+        container.addView(webView, LayoutUtils.createFrame(-1, -1));
 
         webView.setWebViewClient(new WebViewClient() {
             @Override

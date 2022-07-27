@@ -1,6 +1,6 @@
 package ru.vtosters.lite.ui.adapters;
 
-import static ru.vtosters.lite.utils.Themes.getTextAttr;
+import static ru.vtosters.lite.utils.ThemesUtils.getTextAttr;
 
 import android.content.Context;
 import android.graphics.drawable.Drawable;
@@ -19,8 +19,8 @@ import androidx.annotation.Nullable;
 import java.util.ArrayList;
 import java.util.List;
 
-import ru.vtosters.lite.utils.Globals;
-import ru.vtosters.lite.utils.LayoutHelper;
+import ru.vtosters.lite.utils.AndroidUtils;
+import ru.vtosters.lite.utils.LayoutUtils;
 
 public class ImagineArrayAdapter extends ArrayAdapter<ImagineArrayAdapter.ImagineArrayAdapterItem> {
 
@@ -60,22 +60,22 @@ public class ImagineArrayAdapter extends ArrayAdapter<ImagineArrayAdapter.Imagin
     }
 
     public void add(int iconId, String text) {
-        var icon = Globals.getResources().getDrawable(iconId);
+        var icon = AndroidUtils.getResources().getDrawable(iconId);
         var item = new ImagineArrayAdapterItem(icon, text);
         mItems.add(item);
         super.add(item);
     }
 
     public void add(Drawable icon, int textId) {
-        var text = Globals.getResources().getString(textId);
+        var text = AndroidUtils.getResources().getString(textId);
         var item = new ImagineArrayAdapterItem(icon, text);
         mItems.add(item);
         super.add(item);
     }
 
     public void add(int iconId, int textId) {
-        var icon = Globals.getResources().getDrawable(iconId);
-        var text = Globals.getResources().getString(textId);
+        var icon = AndroidUtils.getResources().getDrawable(iconId);
+        var text = AndroidUtils.getResources().getString(textId);
         var item = new ImagineArrayAdapterItem(icon, text);
         mItems.add(item);
         super.add(item);
@@ -87,7 +87,7 @@ public class ImagineArrayAdapter extends ArrayAdapter<ImagineArrayAdapter.Imagin
         var container = new LinearLayout(getContext());
         container.setOrientation(LinearLayout.HORIZONTAL);
         container.setGravity(Gravity.CENTER_VERTICAL);
-        container.setPadding(0, Globals.convertDpToPixel(5.0f), 0, Globals.convertDpToPixel(5.0f));
+        container.setPadding(0, AndroidUtils.dp2px(5.0f), 0, AndroidUtils.dp2px(5.0f));
         container.setLayoutParams(new ViewGroup.LayoutParams(-1, -2));
         container.setOnClickListener(v -> {
             if (position != mSelectedIndex) {
@@ -97,23 +97,23 @@ public class ImagineArrayAdapter extends ArrayAdapter<ImagineArrayAdapter.Imagin
 
         // if make radiobutton without layout inflation it can't be unclickable
         var checkedTextView = (CheckedTextView) LayoutInflater.from(getContext())
-                .inflate(Globals.getIdentifier("select_dialog_singlechoice_material", "layout"), parent, false);
+                .inflate(AndroidUtils.getIdentifier("select_dialog_singlechoice_material", "layout"), parent, false);
         checkedTextView.setChecked(position == mSelectedIndex);
-        container.addView(checkedTextView, LayoutHelper.createLinear(Globals.convertDpToPixel(50.0f), -2));
+        container.addView(checkedTextView, LayoutUtils.createLinear(AndroidUtils.dp2px(50.0f), -2));
 
         var item = mItems.get(position);
 
         var imageView = new ImageView(getContext());
         imageView.setImageDrawable(item.getIcon());
         imageView.setPadding(
-                Globals.convertDpToPixel(13.0f),
+                AndroidUtils.dp2px(13.0f),
                 0,
                 0,
                 0
         );
-        var imageViewParams = LayoutHelper.createLinear(
-                Globals.convertDpToPixel(50.0f),
-                Globals.convertDpToPixel(50.0f)
+        var imageViewParams = LayoutUtils.createLinear(
+                AndroidUtils.dp2px(50.0f),
+                AndroidUtils.dp2px(50.0f)
         );
         container.addView(imageView, imageViewParams);
 
@@ -121,13 +121,13 @@ public class ImagineArrayAdapter extends ArrayAdapter<ImagineArrayAdapter.Imagin
         textView.setText(item.getText());
         textView.setTextColor(getTextAttr());
         textView.setPadding(
-                Globals.convertDpToPixel(13.0f),
-                Globals.convertDpToPixel(5.0f),
-                Globals.convertDpToPixel(5.0f),
-                Globals.convertDpToPixel(5.0f));
+                AndroidUtils.dp2px(13.0f),
+                AndroidUtils.dp2px(5.0f),
+                AndroidUtils.dp2px(5.0f),
+                AndroidUtils.dp2px(5.0f));
         textView.setTextSize(18.0f);
         textView.setGravity(Gravity.CENTER_VERTICAL);
-        var textViewParams = LayoutHelper.createLinear(-2, -1);
+        var textViewParams = LayoutUtils.createLinear(-2, -1);
         container.addView(textView, textViewParams);
 
         return container;
@@ -143,18 +143,18 @@ public class ImagineArrayAdapter extends ArrayAdapter<ImagineArrayAdapter.Imagin
         }
 
         public ImagineArrayAdapterItem(int iconId, String text) {
-            this.mIcon = Globals.getResources().getDrawable(iconId);
+            this.mIcon = AndroidUtils.getResources().getDrawable(iconId);
             this.mText = text;
         }
 
         public ImagineArrayAdapterItem(Drawable icon, int textId) {
             this.mIcon = icon;
-            this.mText = Globals.getResources().getString(textId);
+            this.mText = AndroidUtils.getResources().getString(textId);
         }
 
         public ImagineArrayAdapterItem(int iconId, int textId) {
-            this.mIcon = Globals.getResources().getDrawable(iconId);
-            this.mText = Globals.getResources().getString(textId);
+            this.mIcon = AndroidUtils.getResources().getDrawable(iconId);
+            this.mText = AndroidUtils.getResources().getString(textId);
         }
 
         public Drawable getIcon() {

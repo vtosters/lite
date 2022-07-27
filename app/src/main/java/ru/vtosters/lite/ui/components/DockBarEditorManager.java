@@ -1,7 +1,7 @@
 package ru.vtosters.lite.ui.components;
 
-import static ru.vtosters.lite.utils.Globals.getContext;
-import static ru.vtosters.lite.utils.Globals.getPreferences;
+import static ru.vtosters.lite.utils.AndroidUtils.getGlobalContext;
+import static ru.vtosters.lite.utils.AndroidUtils.getPreferences;
 import static ru.vtosters.lite.utils.Preferences.getBoolValue;
 import static ru.vtosters.lite.utils.Preferences.milkshake;
 import static ru.vtosters.lite.utils.Preferences.superapp;
@@ -27,7 +27,6 @@ import com.vk.superapp.SuperAppFragment;
 import com.vtosters.lite.R;
 import com.vtosters.lite.fragments.ProfileFragment;
 import com.vtosters.lite.fragments.friends.FriendsFragment;
-import com.vtosters.lite.fragments.gifts.BirthdaysFragment;
 import com.vtosters.lite.fragments.lives.LivesTabsFragment;
 import com.vtosters.lite.fragments.money.MoneyTransfersFragment;
 import com.vtosters.lite.fragments.p2.DocumentsViewFragment;
@@ -45,7 +44,7 @@ import java.util.List;
 import java.util.stream.Collectors;
 
 import ru.vtosters.lite.ui.items.DockBarTab;
-import ru.vtosters.lite.utils.Globals;
+import ru.vtosters.lite.utils.AndroidUtils;
 
 public class DockBarEditorManager {
 
@@ -90,12 +89,12 @@ public class DockBarEditorManager {
     }
 
     private void checkOldConfig() {
-        File config = new File(getContext().getFilesDir(), "dockbar.json");
+        File config = new File(getGlobalContext().getFilesDir(), "dockbar.json");
         if (config.exists()) config.deleteOnExit();
     }
 
     private void parseSelectedTabs(String[] selectedTabsTags) {
-        List<String> allTags = new ArrayList<>(Arrays.asList( "tab_news", "tab_superapps", "tab_messages", "tab_feedback", "tab_profile",
+        List<String> allTags = new ArrayList<>(Arrays.asList("tab_news", "tab_superapps", "tab_messages", "tab_feedback", "tab_profile",
                 "tab_friends", "tab_groups", "tab_photos", "tab_audios", "tab_videos", "tab_lives", "tab_games", "tab_liked",
                 "tab_fave", "tab_documents", "tab_payments", "tab_vk_apps", "tab_settings", "tab_menu"));
         for (String tag : selectedTabsTags) {
@@ -106,14 +105,14 @@ public class DockBarEditorManager {
     }
 
     public void save() {
-        Globals.getPreferences().edit().putString("dockbar_tabs", mSelectedTabs.stream()
-                .map(tab -> tab.tag)
-                .collect(Collectors.joining(",")))
+        AndroidUtils.getPreferences().edit().putString("dockbar_tabs", mSelectedTabs.stream()
+                        .map(tab -> tab.tag)
+                        .collect(Collectors.joining(",")))
                 .commit();
     }
 
     public void reset() {
-        Globals.getPreferences()
+        AndroidUtils.getPreferences()
                 .edit()
                 .putString("dockbar_tabs", "tab_news,tab_superapps,tab_messages,tab_friends,tab_profile")
                 .commit();

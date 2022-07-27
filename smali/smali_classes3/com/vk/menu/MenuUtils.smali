@@ -2834,7 +2834,7 @@
 
     if-eqz v0, :cond_0
 
-    invoke-static {}, Lru/vtosters/lite/utils/Globals;->getContext()Landroid/content/Context;
+    invoke-static {}, Lru/vtosters/lite/utils/AndroidUtils;->getGlobalContext()Landroid/content/Context;
 
     move-result-object v1
 

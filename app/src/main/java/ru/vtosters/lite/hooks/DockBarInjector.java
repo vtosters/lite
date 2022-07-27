@@ -1,6 +1,5 @@
 package ru.vtosters.lite.hooks;
 
-import static android.graphics.Color.*;
 import static com.vtosters.lite.R.id.menu_fave;
 import static com.vtosters.lite.R.id.menu_feedback;
 import static com.vtosters.lite.R.id.menu_friends;
@@ -17,14 +16,14 @@ import static com.vtosters.lite.R.id.tab_feedback;
 import static com.vtosters.lite.R.id.tab_menu;
 import static com.vtosters.lite.R.id.tab_messages;
 import static com.vtosters.lite.R.id.tab_news;
-import static ru.vtosters.lite.utils.Globals.getContext;
-import static ru.vtosters.lite.utils.Globals.getResources;
-import static ru.vtosters.lite.utils.Preferences.*;
-import static ru.vtosters.lite.utils.Themes.getCSTDock;
+import static ru.vtosters.lite.utils.AndroidUtils.getGlobalContext;
+import static ru.vtosters.lite.utils.AndroidUtils.getResources;
+import static ru.vtosters.lite.utils.Preferences.dockcounter;
+import static ru.vtosters.lite.utils.Preferences.getBoolValue;
+import static ru.vtosters.lite.utils.Preferences.milkshake;
+import static ru.vtosters.lite.utils.ThemesUtils.getCSTDock;
 
 import android.annotation.SuppressLint;
-import android.content.res.ColorStateList;
-import android.graphics.Color;
 import android.graphics.drawable.Drawable;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -54,8 +53,6 @@ import java.util.Map;
 
 import ru.vtosters.lite.ui.components.DockBarEditorManager;
 import ru.vtosters.lite.ui.items.DockBarTab;
-import ru.vtosters.lite.utils.Globals;
-import ru.vtosters.lite.utils.Preferences;
 
 public class DockBarInjector {
     private static final DockBarEditorManager sManager = DockBarEditorManager.getInstance();
@@ -94,7 +91,7 @@ public class DockBarInjector {
             Drawable drawable = getResources().getDrawable(tab.iconID);
 
             add.setIcon(new RecoloredDrawable(drawable, getCSTDock()));
-            add.setTitle(getContext().getString(tab.titleID));
+            add.setTitle(getGlobalContext().getString(tab.titleID));
             add.setCheckable(true);
         }
         if (getBoolValue("dockbar_tab_titles", true)) {

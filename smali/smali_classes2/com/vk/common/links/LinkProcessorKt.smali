@@ -5670,7 +5670,7 @@
 
     if-eqz v11, :cond_231
 
-    invoke-static {}, Lru/vtosters/lite/utils/Globals;->getContext()Landroid/content/Context;
+    invoke-static {}, Lru/vtosters/lite/utils/AndroidUtils;->getGlobalContext()Landroid/content/Context;
 
     move-result-object v1
 
@@ -5720,7 +5720,7 @@
 
     if-eqz v11, :cond_232
 
-    invoke-static {}, Lru/vtosters/lite/utils/Globals;->getContext()Landroid/content/Context;
+    invoke-static {}, Lru/vtosters/lite/utils/AndroidUtils;->getGlobalContext()Landroid/content/Context;
 
     move-result-object v1
 
@@ -5770,7 +5770,7 @@
 
     if-eqz v11, :cond_233
 
-    invoke-static {}, Lru/vtosters/lite/utils/Globals;->getContext()Landroid/content/Context;
+    invoke-static {}, Lru/vtosters/lite/utils/AndroidUtils;->getGlobalContext()Landroid/content/Context;
 
     move-result-object v1
 
@@ -5820,7 +5820,7 @@
 
     if-eqz v11, :cond_234
 
-    invoke-static {}, Lru/vtosters/lite/utils/Globals;->getContext()Landroid/content/Context;
+    invoke-static {}, Lru/vtosters/lite/utils/AndroidUtils;->getGlobalContext()Landroid/content/Context;
 
     move-result-object v1
 
@@ -5870,7 +5870,7 @@
 
     if-eqz v11, :cond_235
 
-    invoke-static {}, Lru/vtosters/lite/utils/Globals;->getContext()Landroid/content/Context;
+    invoke-static {}, Lru/vtosters/lite/utils/AndroidUtils;->getGlobalContext()Landroid/content/Context;
 
     move-result-object v1
 
@@ -5920,7 +5920,7 @@
 
     if-eqz v11, :cond_236
 
-    invoke-static {}, Lru/vtosters/lite/utils/Globals;->getContext()Landroid/content/Context;
+    invoke-static {}, Lru/vtosters/lite/utils/AndroidUtils;->getGlobalContext()Landroid/content/Context;
 
     move-result-object v1
 
@@ -5970,7 +5970,7 @@
 
     if-eqz v11, :cond_237
 
-    invoke-static {}, Lru/vtosters/lite/utils/Globals;->getContext()Landroid/content/Context;
+    invoke-static {}, Lru/vtosters/lite/utils/AndroidUtils;->getGlobalContext()Landroid/content/Context;
 
     move-result-object v1
 
@@ -6020,7 +6020,7 @@
 
     if-eqz v11, :cond_238
 
-    invoke-static {}, Lru/vtosters/lite/utils/Globals;->getContext()Landroid/content/Context;
+    invoke-static {}, Lru/vtosters/lite/utils/AndroidUtils;->getGlobalContext()Landroid/content/Context;
 
     move-result-object v1
 
@@ -6070,7 +6070,7 @@
 
     if-eqz v11, :cond_260
 
-    invoke-static {}, Lru/vtosters/lite/utils/Globals;->getContext()Landroid/content/Context;
+    invoke-static {}, Lru/vtosters/lite/utils/AndroidUtils;->getGlobalContext()Landroid/content/Context;
 
     move-result-object v1
 

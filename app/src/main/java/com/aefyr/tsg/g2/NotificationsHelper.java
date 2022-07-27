@@ -1,6 +1,6 @@
 package com.aefyr.tsg.g2;
 
-import static ru.vtosters.lite.utils.Globals.getIdentifier;
+import static ru.vtosters.lite.utils.AndroidUtils.getIdentifier;
 
 import android.app.Notification;
 import android.app.NotificationChannel;
@@ -20,7 +20,7 @@ import java.util.concurrent.atomic.AtomicLong;
 /**
  * Created by Aefyr on 20.05.2018.
  */
-public class NotificationsHelper{
+public class NotificationsHelper {
     private static final int NOTIFICATION_ID_BASE = 3921337;
     private static final String NOTIFICATION_CHANNEL_ID = "tgss_chan_v5";
     private static final int MAX_UPDATE_NOTIFICATIONS_PER_SECOND = 3;
@@ -31,7 +31,7 @@ public class NotificationsHelper{
     private final AtomicLong lastNotificationTime = new AtomicLong(0);
     private int currentNotificationN = 0;
 
-    public NotificationsHelper(Context c){
+    public NotificationsHelper(Context c) {
         this.c = c;
         manager = NotificationManagerCompat.from(c);
 
@@ -44,7 +44,7 @@ public class NotificationsHelper{
         }
     }
 
-    public void packStartedDownloading(TelegramStickersPack pack){
+    public void packStartedDownloading(TelegramStickersPack pack) {
         int notificationId = NOTIFICATION_ID_BASE + currentNotificationN++;
         downloadingPacksNotificationsIds.put(pack, notificationId);
 
@@ -56,7 +56,7 @@ public class NotificationsHelper{
         manager.notify(notificationId, builder.build());
     }
 
-    public void packDownloadUpdated(TelegramStickersPack pack, int downloadProgress){
+    public void packDownloadUpdated(TelegramStickersPack pack, int downloadProgress) {
         if (System.currentTimeMillis() - lastNotificationTime.get() < MIN_TIME_BETWEEN_UPDATE_NOTIFICATIONS)
             return;
 
@@ -73,7 +73,7 @@ public class NotificationsHelper{
             manager.notify(downloadingPacksNotificationsIds.get(pack), builder.build());
     }
 
-    public void packDoneDownloading(TelegramStickersPack pack, boolean success, boolean wasUpdate, @Nullable Exception e){
+    public void packDoneDownloading(TelegramStickersPack pack, boolean success, boolean wasUpdate, @Nullable Exception e) {
         Notification.Builder builder = commonBuilder();
         builder.setProgress(0, 0, false);
         builder.setOngoing(false);
@@ -94,11 +94,11 @@ public class NotificationsHelper{
         manager.notify(downloadingPacksNotificationsIds.remove(pack), builder.build());
     }
 
-    public void removePackNotification(TelegramStickersPack pack){
+    public void removePackNotification(TelegramStickersPack pack) {
         manager.cancel(downloadingPacksNotificationsIds.remove(pack));
     }
 
-    private Notification.Builder commonBuilder(){
+    private Notification.Builder commonBuilder() {
         var builder = new Notification.Builder(c).setPriority(Notification.PRIORITY_MAX).setSmallIcon(getIdentifier("ic_download_24", "drawable"));
         if (oreo()) {
             builder.setChannelId(NOTIFICATION_CHANNEL_ID);
@@ -107,7 +107,7 @@ public class NotificationsHelper{
         return builder;
     }
 
-    private boolean oreo(){
+    private boolean oreo() {
         return Build.VERSION.SDK_INT >= Build.VERSION_CODES.O;
     }
 }

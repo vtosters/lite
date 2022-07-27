@@ -1,7 +1,7 @@
 package ru.vtosters.lite.utils;
 
-import static ru.vtosters.lite.utils.Globals.getContext;
-import static ru.vtosters.lite.utils.Globals.getPrefsValue;
+import static ru.vtosters.lite.utils.AndroidUtils.getGlobalContext;
+import static ru.vtosters.lite.utils.AndroidUtils.getPrefsValue;
 import static ru.vtosters.lite.utils.Preferences.ads;
 import static ru.vtosters.lite.utils.Preferences.adsgroup;
 import static ru.vtosters.lite.utils.Preferences.authorsrecomm;
@@ -25,7 +25,7 @@ import java.util.Scanner;
 
 import ru.vtosters.lite.hooks.JsonInjectors;
 
-public class Newsfeed {
+public class NewsFeedFiltersUtils {
     public static List<String> mFilters;
     public static List<String> mFiltersLinks;
 
@@ -53,7 +53,7 @@ public class Newsfeed {
     public static void getFilter(String boolname, String filename, List<String> list) {
         if (getBoolValue(boolname, true)) {
             try {
-                var scanner = new Scanner(getContext().getAssets().open(filename));
+                var scanner = new Scanner(getGlobalContext().getAssets().open(filename));
                 while (scanner.hasNextLine()) {
                     var line = scanner.nextLine();
                     if (!line.isEmpty())

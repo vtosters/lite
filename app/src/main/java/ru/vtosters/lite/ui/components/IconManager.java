@@ -1,15 +1,14 @@
-package ru.vtosters.lite.utils;
+package ru.vtosters.lite.ui.components;
 
-import static ru.vtosters.lite.utils.Globals.edit;
-import static ru.vtosters.lite.utils.Globals.getContext;
-import static ru.vtosters.lite.utils.Globals.getPackageName;
-import static ru.vtosters.lite.utils.Globals.getPreferences;
+import static ru.vtosters.lite.utils.AndroidUtils.edit;
+import static ru.vtosters.lite.utils.AndroidUtils.getGlobalContext;
+import static ru.vtosters.lite.utils.AndroidUtils.getPackageName;
+import static ru.vtosters.lite.utils.AndroidUtils.getPreferences;
 import static ru.vtosters.lite.utils.Preferences.hasVerification;
 import static ru.vtosters.lite.utils.Preferences.isValidSignature;
 
 import android.content.ComponentName;
 import android.content.pm.PackageManager;
-import android.os.Build;
 import android.util.Log;
 
 import java.util.Arrays;
@@ -122,7 +121,7 @@ public class IconManager {
 
     // Component switcher for changing app icon
     public static void switchIcon(String componentName, Boolean enabled) {
-        getContext().getPackageManager().setComponentEnabledSetting(
+        getGlobalContext().getPackageManager().setComponentEnabledSetting(
                 new ComponentName(getPackageName(), getPackageName() + "." + componentName),
                 enabled ? PackageManager.COMPONENT_ENABLED_STATE_ENABLED : PackageManager.COMPONENT_ENABLED_STATE_DISABLED,
                 PackageManager.DONT_KILL_APP);

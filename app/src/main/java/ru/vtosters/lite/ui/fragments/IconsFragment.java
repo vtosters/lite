@@ -1,22 +1,24 @@
 package ru.vtosters.lite.ui.fragments;
 
-import static ru.vtosters.lite.ui.PreferencesUtil.*;
-import static ru.vtosters.lite.utils.Globals.convertDpToPixel;
-import static ru.vtosters.lite.utils.Globals.edit;
-import static ru.vtosters.lite.utils.Globals.getIdentifier;
-import static ru.vtosters.lite.utils.Globals.sendToast;
-import static ru.vtosters.lite.utils.IconManager.icons;
-import static ru.vtosters.lite.utils.IconManager.iconsValues;
-import static ru.vtosters.lite.utils.IconManager.sIconsPlus;
-import static ru.vtosters.lite.utils.IconManager.sIconsPlusNames;
-import static ru.vtosters.lite.utils.IconManager.switchComponent;
+import static ru.vtosters.lite.ui.PreferencesUtil.addPreference;
+import static ru.vtosters.lite.ui.PreferencesUtil.addPreferenceCategory;
+import static ru.vtosters.lite.ui.PreferencesUtil.addPreferenceDrawable;
+import static ru.vtosters.lite.ui.components.IconManager.icons;
+import static ru.vtosters.lite.ui.components.IconManager.iconsValues;
+import static ru.vtosters.lite.ui.components.IconManager.sIconsPlus;
+import static ru.vtosters.lite.ui.components.IconManager.sIconsPlusNames;
+import static ru.vtosters.lite.ui.components.IconManager.switchComponent;
+import static ru.vtosters.lite.utils.AndroidUtils.dp2px;
+import static ru.vtosters.lite.utils.AndroidUtils.edit;
+import static ru.vtosters.lite.utils.AndroidUtils.getIdentifier;
+import static ru.vtosters.lite.utils.AndroidUtils.sendToast;
 import static ru.vtosters.lite.utils.Preferences.getBoolValue;
 import static ru.vtosters.lite.utils.Preferences.hasVerification;
 import static ru.vtosters.lite.utils.Preferences.preferences;
-import static ru.vtosters.lite.utils.Proxy.isZaboronaEnabled;
-import static ru.vtosters.lite.utils.Themes.getAccentColor;
-import static ru.vtosters.lite.utils.Themes.getAlertStyle;
-import static ru.vtosters.lite.utils.Themes.getTextAttr;
+import static ru.vtosters.lite.utils.ProxyUtils.isZaboronaEnabled;
+import static ru.vtosters.lite.utils.ThemesUtils.getAccentColor;
+import static ru.vtosters.lite.utils.ThemesUtils.getAlertStyle;
+import static ru.vtosters.lite.utils.ThemesUtils.getTextAttr;
 
 import android.annotation.SuppressLint;
 import android.content.Context;
@@ -35,11 +37,9 @@ import androidx.core.content.res.ResourcesCompat;
 
 import com.vtosters.lite.general.fragments.MaterialPreferenceToolbarFragment;
 
-import ru.vtosters.lite.ui.PreferencesUtil;
-
-public class IconsFragment extends MaterialPreferenceToolbarFragment{
+public class IconsFragment extends MaterialPreferenceToolbarFragment {
     @SuppressLint("SetTextI18n")
-    public static void callSelectDialog(Context ctx, String appicon){
+    public static void callSelectDialog(Context ctx, String appicon) {
         RadioGroup rg = new RadioGroup(ctx);
 
         RadioButton rgDefault = new RadioButton(new ContextThemeWrapper(ctx, com.vtosters.lite.R.style.Widget_AppCompat_CompoundButton_RadioButton));
@@ -50,11 +50,11 @@ public class IconsFragment extends MaterialPreferenceToolbarFragment{
         rg.addView(rgVK);
         rg.addView(rgVKontakte);
 
-        rgDefault.setTextSize(TypedValue.COMPLEX_UNIT_PX, convertDpToPixel(14f));
-        rgVK.setTextSize(TypedValue.COMPLEX_UNIT_PX, convertDpToPixel(14f));
-        rgVKontakte.setTextSize(TypedValue.COMPLEX_UNIT_PX, convertDpToPixel(14f));
+        rgDefault.setTextSize(TypedValue.COMPLEX_UNIT_PX, dp2px(14f));
+        rgVK.setTextSize(TypedValue.COMPLEX_UNIT_PX, dp2px(14f));
+        rgVKontakte.setTextSize(TypedValue.COMPLEX_UNIT_PX, dp2px(14f));
 
-        rg.setPadding(convertDpToPixel(18f), convertDpToPixel(12f), convertDpToPixel(18f), 0);
+        rg.setPadding(dp2px(18f), dp2px(12f), dp2px(18f), 0);
 
         rgDefault.setText("VTLite");
         rgDefault.setTextColor(getTextAttr());
@@ -107,7 +107,7 @@ public class IconsFragment extends MaterialPreferenceToolbarFragment{
 
     @SuppressLint("UseCompatLoadingForDrawables")
     @Override
-    public void onCreate(Bundle bundle){
+    public void onCreate(Bundle bundle) {
         super.onCreate(bundle);
 
         int vtosterXml = getIdentifier("empty", "xml");

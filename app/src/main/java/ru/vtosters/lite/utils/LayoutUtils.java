@@ -4,7 +4,7 @@ import android.widget.FrameLayout;
 import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 
-public class LayoutHelper {
+public class LayoutUtils {
 
     public static int MATCH_PARENT = -1;
     public static int FILL_PARENT = -1;

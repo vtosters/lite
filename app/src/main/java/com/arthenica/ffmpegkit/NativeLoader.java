@@ -8,60 +8,60 @@ import com.arthenica.smartexception.java.Exceptions;
 import java.util.Collections;
 import java.util.List;
 
-import ru.vtosters.lite.utils.Globals;
+import ru.vtosters.lite.utils.AndroidUtils;
 
-public class NativeLoader{
+public class NativeLoader {
     static final String[] FFMPEG_LIBRARIES = {"avutil", "swscale", "swresample", "avcodec", "avformat", "avfilter", "avdevice"};
 
-    private static void loadLibrary(String libraryName){
-        String path = Globals.getContext().getFilesDir() + "/lib" + libraryName + ".so";
+    private static void loadLibrary(String libraryName) {
+        String path = AndroidUtils.getGlobalContext().getFilesDir() + "/lib" + libraryName + ".so";
         System.load(path);
     }
 
-    private static List<String> loadExternalLibraries(){
+    private static List<String> loadExternalLibraries() {
         // return Packages.getExternalLibraries();
         return Collections.emptyList();
     }
 
-    private static String loadNativeAbi(){
+    private static String loadNativeAbi() {
         // return AbiDetect.getNativeAbi();
         return Abi.ABI_ARMV7A_NEON.getName();
     }
 
-    static String loadAbi(){
+    static String loadAbi() {
         // return AbiDetect.getAbi();
         return Abi.ABI_ARMV7A_NEON.getName();
     }
 
-    static String loadPackageName(){
+    static String loadPackageName() {
         return Packages.getPackageName();
     }
 
-    static String loadVersion(){
+    static String loadVersion() {
         return FFmpegKitConfig.getVersion();
     }
 
-    static boolean loadIsLTSBuild(){
+    static boolean loadIsLTSBuild() {
         return AbiDetect.isNativeLTSBuild();
     }
 
-    static int loadLogLevel(){
+    static int loadLogLevel() {
         return FFmpegKitConfig.getNativeLogLevel();
     }
 
-    static String loadBuildDate(){
+    static String loadBuildDate() {
         return FFmpegKitConfig.getBuildDate();
     }
 
-    static void enableRedirection(){
+    static void enableRedirection() {
         FFmpegKitConfig.enableRedirection();
     }
 
-    static void loadFFmpegKitAbiDetect(){
+    static void loadFFmpegKitAbiDetect() {
         loadLibrary("ffmpegkit_abidetect");
     }
 
-    static boolean loadFFmpeg(){
+    static boolean loadFFmpeg() {
         boolean nativeFFmpegLoaded = false;
         boolean nativeFFmpegTriedAndFailed = false;
 
@@ -85,7 +85,7 @@ public class NativeLoader{
         return nativeFFmpegTriedAndFailed;
     }
 
-    static void loadFFmpegKit(boolean nativeFFmpegTriedAndFailed){
+    static void loadFFmpegKit(boolean nativeFFmpegTriedAndFailed) {
         boolean nativeFFmpegKitLoaded = false;
         if (!nativeFFmpegTriedAndFailed && "arm-v7a".equals(loadNativeAbi())) {
             try {
@@ -102,7 +102,7 @@ public class NativeLoader{
     }
 
 
-    static String getDeviceDebugInformation(){
+    static String getDeviceDebugInformation() {
         StringBuilder stringBuilder = new StringBuilder();
         stringBuilder.append("brand: ");
         stringBuilder.append(Build.BRAND);

@@ -1,7 +1,7 @@
 package ru.vtosters.lite.hooks;
 
-import static ru.vtosters.lite.utils.Globals.getIdentifier;
-import static ru.vtosters.lite.utils.Globals.getPreferences;
+import static ru.vtosters.lite.utils.AndroidUtils.getIdentifier;
+import static ru.vtosters.lite.utils.AndroidUtils.getPreferences;
 
 import android.content.ClipData;
 import android.content.ClipboardManager;
@@ -31,21 +31,21 @@ import okhttp3.Callback;
 import okhttp3.OkHttpClient;
 import okhttp3.Request;
 import okhttp3.Response;
-import ru.vtosters.lite.utils.Globals;
-import ru.vtosters.lite.utils.Themes;
+import ru.vtosters.lite.utils.AndroidUtils;
+import ru.vtosters.lite.utils.ThemesUtils;
 
 public class PhotoViewer {
 
     static OkHttpClient client = new OkHttpClient();
 
     public static boolean interceptClick(AttachmentWithMedia attachment, MenuItem item, View view) {
-        if (item.getItemId() == Globals.getIdentifier("search_photo", "id")) {
+        if (item.getItemId() == AndroidUtils.getIdentifier("search_photo", "id")) {
             searchPhoto(getUrlFromAttachment((PhotoAttachment) attachment));
             return true;
-        } else if (item.getItemId() == Globals.getIdentifier("copy_photo_url", "id")) {
+        } else if (item.getItemId() == AndroidUtils.getIdentifier("copy_photo_url", "id")) {
             copyPhotoUrl(getUrlFromAttachment((PhotoAttachment) attachment));
             return true;
-        } else if (item.getItemId() == Globals.getIdentifier("open_original_photo", "id")) {
+        } else if (item.getItemId() == AndroidUtils.getIdentifier("open_original_photo", "id")) {
             openUrl(getUrlFromAttachment((PhotoAttachment) attachment));
             return true;
         }
@@ -54,19 +54,19 @@ public class PhotoViewer {
 
     public static void addMenuItems(AttachmentWithMedia attachment, ActionsPopup.b actionPopup, int i, boolean z) {
         actionPopup.a(getIdentifier("search_photo_content", "string"),
-                Themes.isDarkTheme()
-                        ? Globals.getContext().getDrawable(R.drawable.ic_menu_search_outline_28)
-                        : new RecoloredDrawable(Globals.getContext().getDrawable(R.drawable.ic_menu_search_outline_28), Themes.getAccentColor()),
+                ThemesUtils.isDarkTheme()
+                        ? AndroidUtils.getGlobalContext().getDrawable(R.drawable.ic_menu_search_outline_28)
+                        : new RecoloredDrawable(AndroidUtils.getGlobalContext().getDrawable(R.drawable.ic_menu_search_outline_28), ThemesUtils.getAccentColor()),
                 false,
-            () -> {
-                searchPhoto(getUrlFromAttachment((PhotoAttachment) attachment));
-                return null;
-            }
+                () -> {
+                    searchPhoto(getUrlFromAttachment((PhotoAttachment) attachment));
+                    return null;
+                }
         );
         actionPopup.a(getIdentifier("copy_photo_url_content", "string"),
-                !Themes.isDarkTheme()
-                        ? new RecoloredDrawable(Globals.getContext().getDrawable(R.drawable.ic_copy_outline_28), Themes.getAccentColor())
-                        : new RecoloredDrawable(Globals.getContext().getDrawable(R.drawable.ic_copy_outline_28), Color.WHITE),
+                !ThemesUtils.isDarkTheme()
+                        ? new RecoloredDrawable(AndroidUtils.getGlobalContext().getDrawable(R.drawable.ic_copy_outline_28), ThemesUtils.getAccentColor())
+                        : new RecoloredDrawable(AndroidUtils.getGlobalContext().getDrawable(R.drawable.ic_copy_outline_28), Color.WHITE),
                 false,
                 () -> {
                     copyPhotoUrl(getUrlFromAttachment((PhotoAttachment) attachment));
@@ -74,10 +74,10 @@ public class PhotoViewer {
                 }
         );
         actionPopup.a(getIdentifier("open_original_photo_content", "string"),
-                Themes.isDarkTheme()
-                        ? Globals.getContext().getDrawable(R.drawable.ic_link_outline_28)
-                        : new RecoloredDrawable(Globals.getContext().getDrawable(R.drawable.ic_link_outline_28),
-                        Themes.getAccentColor()),
+                ThemesUtils.isDarkTheme()
+                        ? AndroidUtils.getGlobalContext().getDrawable(R.drawable.ic_link_outline_28)
+                        : new RecoloredDrawable(AndroidUtils.getGlobalContext().getDrawable(R.drawable.ic_link_outline_28),
+                        ThemesUtils.getAccentColor()),
                 false,
                 () -> {
                     openUrl(getUrlFromAttachment((PhotoAttachment) attachment));
@@ -99,7 +99,7 @@ public class PhotoViewer {
         }
         return max.url;
     }
-    
+
     private static void searchPhoto(String url) {
         if (url == null || url.isEmpty()) return;
         switch (getPreferences().getInt("search_engine", 0)) {
@@ -123,7 +123,7 @@ public class PhotoViewer {
         client.a(request).a(new Callback() {
             @Override
             public void a(Call call, IOException e) {
-                Log.d("PhotoViewer", e+"");
+                Log.d("PhotoViewer", e + "");
             }
 
             @Override
@@ -153,15 +153,15 @@ public class PhotoViewer {
 
     private static void copyPhotoUrl(String url) {
         if (url == null || url.isEmpty()) return;
-        ClipboardManager manager = (ClipboardManager) Globals.getContext().getSystemService(Context.CLIPBOARD_SERVICE);
+        ClipboardManager manager = (ClipboardManager) AndroidUtils.getGlobalContext().getSystemService(Context.CLIPBOARD_SERVICE);
         manager.setPrimaryClip(ClipData.newPlainText("vk_photo_url", url));
-        Toast.makeText(Globals.getContext(), Globals.getIdentifier("copied_to_clipboard", "string"), Toast.LENGTH_SHORT).show();
+        Toast.makeText(AndroidUtils.getGlobalContext(), AndroidUtils.getIdentifier("copied_to_clipboard", "string"), Toast.LENGTH_SHORT).show();
     }
 
     private static void openUrl(String url) {
         var uri = Uri.parse(url);
         var intent = new Intent(Intent.ACTION_VIEW, uri);
         intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-        Globals.getContext().startActivity(intent);
+        AndroidUtils.getGlobalContext().startActivity(intent);
     }
 }

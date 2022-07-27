@@ -1,20 +1,19 @@
 package ru.vtosters.lite.ui.dialogs;
 
-import static ru.vtosters.lite.utils.Globals.edit;
-import static ru.vtosters.lite.utils.Globals.getString;
+import static ru.vtosters.lite.utils.AndroidUtils.edit;
+import static ru.vtosters.lite.utils.AndroidUtils.getString;
 import static ru.vtosters.lite.utils.Preferences.getBoolValue;
 
 import android.app.Activity;
-import android.app.AlertDialog;
 import android.content.Intent;
 
 import com.vk.core.dialogs.alert.VkAlertDialog;
 import com.vk.navigation.Navigator;
 
-import ru.vtosters.lite.utils.VKUIwrapper;
+import ru.vtosters.lite.ui.fragments.VKUIwrapper;
 
-public class VKIDProtection{
-    public static void alert(final Activity activity){
+public class VKIDProtection {
+    public static void alert(final Activity activity) {
         VkAlertDialog.Builder builder = new VkAlertDialog.Builder(activity);
         builder.setTitle(getString("debug_warning"));
         builder.setMessage(getString("vkidsumm"));

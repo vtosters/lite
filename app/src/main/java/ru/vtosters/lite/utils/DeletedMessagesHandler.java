@@ -1,7 +1,7 @@
 package ru.vtosters.lite.utils;
 
-import static ru.vtosters.lite.utils.Globals.getContext;
-import static ru.vtosters.lite.utils.Globals.getPrefsValue;
+import static ru.vtosters.lite.utils.AndroidUtils.getGlobalContext;
+import static ru.vtosters.lite.utils.AndroidUtils.getPrefsValue;
 import static ru.vtosters.lite.utils.Preferences.getBoolValue;
 
 import android.annotation.SuppressLint;
@@ -25,29 +25,29 @@ import io.requery.android.database.sqlite.SQLiteDatabase;
 import io.requery.android.database.sqlite.SQLiteOpenHelper;
 import ru.vtosters.lite.encryption.EncryptProvider;
 
-public class DeletedMessagesHandler{
+public class DeletedMessagesHandler {
     private static List<Integer> sDeletedMessagesList = new ArrayList<>();
 
     private static SQLiteDatabase sVKSQLiteDatabase;
     private static int sBodyIndex = -1;
     private static DeletedMessagesDBHelper sVTDatabase;
 
-    public static void reloadMessagesList(){
+    public static void reloadMessagesList() {
         if (sVTDatabase == null) {
             sVTDatabase = new DeletedMessagesDBHelper();
         }
         sDeletedMessagesList = new ArrayList<>(sVTDatabase.loadAllMessages());
     }
 
-    public static void grabVKDatabase(StorageEnvironment storageEnvironment){
+    public static void grabVKDatabase(StorageEnvironment storageEnvironment) {
         sVKSQLiteDatabase = storageEnvironment.a();
     }
 
-    public static boolean hook(){
+    public static boolean hook() {
         return getBoolValue("undeletemsg", true);
     }
 
-    public static void setBodyDBParser(Msg msg){
+    public static void setBodyDBParser(Msg msg) {
         if (!(msg instanceof MsgFromUser)) return;
 
         for (Integer integer : sDeletedMessagesList) {
@@ -60,7 +60,7 @@ public class DeletedMessagesHandler{
         }
     }
 
-    private static void checkForNestedMsg(List<NestedMsg> nestedMsgs){
+    private static void checkForNestedMsg(List<NestedMsg> nestedMsgs) {
         for (NestedMsg nestedMsg : nestedMsgs) {
             if (!nestedMsg.w0().isEmpty()) checkForNestedMsg(nestedMsg.w0());
 
@@ -68,17 +68,17 @@ public class DeletedMessagesHandler{
         }
     }
 
-    private static void editTextOfMsg(MsgFromUser msgFromUser){
+    private static void editTextOfMsg(MsgFromUser msgFromUser) {
         if (!msgFromUser.f().startsWith(getPrefixUndelete())) {
             msgFromUser.d(getPrefixUndelete() + EncryptProvider.decryptMessage(msgFromUser));
         }
     }
 
-    private static String getPrefixUndelete(){
+    private static String getPrefixUndelete() {
         return getPrefsValue("undeletemsg_prefix_value") + " ";
     }
 
-    public static void updateDialog(MsgDeleteLpTask msgDeleteLpTask) throws NoSuchFieldException, IllegalAccessException{
+    public static void updateDialog(MsgDeleteLpTask msgDeleteLpTask) throws NoSuchFieldException, IllegalAccessException {
         Cursor c = getMessageFromDatabaseById(ReflectionUtils.getObjectField(msgDeleteLpTask.getClass(), "d", msgDeleteLpTask));
         if (c == null) return;
 
@@ -91,7 +91,7 @@ public class DeletedMessagesHandler{
         imEnvironment.a(str, new OnMsgUpdateEvent(str, cint, localId));
     }
 
-    public static void hookDeletedMessageId(MsgDeleteLpTask msgDeleteLpTask) throws NoSuchFieldException, IllegalAccessException{
+    public static void hookDeletedMessageId(MsgDeleteLpTask msgDeleteLpTask) throws NoSuchFieldException, IllegalAccessException {
         if (!hook()) return;
 
         var field = msgDeleteLpTask.getClass().getDeclaredField("c");
@@ -110,33 +110,33 @@ public class DeletedMessagesHandler{
         sVTDatabase.saveDeletedMessage(messageId);
     }
 
-    public static Cursor getMessageFromDatabaseById(int messageId){
+    public static Cursor getMessageFromDatabaseById(int messageId) {
         String query = "SELECT * FROM messages WHERE vk_id = " + messageId;
         Cursor c = CustomSqliteExtensionsKt.a(sVKSQLiteDatabase, query);
         if (!c.moveToFirst()) return null;
         return c;
     }
 
-    public static void deleteMessageFromDB(int messageId){
+    public static void deleteMessageFromDB(int messageId) {
         sVKSQLiteDatabase.execSQL("DELETE FROM messages WHERE vk_id = " + messageId);
     }
 
-    public static class DeletedMessagesDBHelper extends SQLiteOpenHelper{
-        public DeletedMessagesDBHelper(){
-            super(getContext(), "deleted_msgs", null, 1);
+    public static class DeletedMessagesDBHelper extends SQLiteOpenHelper {
+        public DeletedMessagesDBHelper() {
+            super(getGlobalContext(), "deleted_msgs", null, 1);
         }
 
         @Override
-        public void onCreate(SQLiteDatabase db){
+        public void onCreate(SQLiteDatabase db) {
             db.execSQL("create table deleted_msgs (id integer primary key, msgId integer)");
         }
 
         @Override
-        public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion){
+        public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
 
         }
 
-        public void saveDeletedMessage(int msgId){
+        public void saveDeletedMessage(int msgId) {
             SQLiteDatabase sqLiteDatabase = getWritableDatabase();
 
             ContentValues contentValues = new ContentValues();
@@ -146,7 +146,7 @@ public class DeletedMessagesHandler{
             sqLiteDatabase.close();
         }
 
-        public List<Integer> loadAllMessages(){
+        public List<Integer> loadAllMessages() {
             List<Integer> msgIdsList = new ArrayList<>();
 
             Cursor cursor = getReadableDatabase().query("deleted_msgs", null, null, null, null, null, null);
@@ -155,7 +155,7 @@ public class DeletedMessagesHandler{
 
                 do {
                     msgIdsList.add(cursor.getInt(msgIdIndex));
-                } while(cursor.moveToNext());
+                } while (cursor.moveToNext());
                 cursor.close();
             }
 

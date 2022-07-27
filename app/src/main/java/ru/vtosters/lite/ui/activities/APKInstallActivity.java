@@ -11,14 +11,14 @@ import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-public class APKInstallActivity extends AppCompatActivity{
+public class APKInstallActivity extends AppCompatActivity {
     public static final int REQUEST_INSTALL_PERMISSION = 1;
 
     public static final String EXTRA_APK_URI = "apk_uri";
 
     private Uri mApkUri;
 
-    public static void installOta(Context context, Uri apkUri){
+    public static void installOta(Context context, Uri apkUri) {
         Intent intent = new Intent(context, APKInstallActivity.class);
         intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
         intent.addFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION);
@@ -28,7 +28,7 @@ public class APKInstallActivity extends AppCompatActivity{
     }
 
     @Override
-    public void onCreate(Bundle savedInstanceState){
+    public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
         Intent intent = getIntent();
@@ -48,7 +48,7 @@ public class APKInstallActivity extends AppCompatActivity{
         installApk();
     }
 
-    private void installApk(){
+    private void installApk() {
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
             if (!getPackageManager().canRequestPackageInstalls()) {
                 Intent permIntent = new Intent(Settings.ACTION_MANAGE_UNKNOWN_APP_SOURCES, Uri.parse("package:" + getPackageName()));
@@ -73,7 +73,7 @@ public class APKInstallActivity extends AppCompatActivity{
 
 
     @Override
-    public void onActivityResult(int requestCode, int resultCode, Intent data){
+    public void onActivityResult(int requestCode, int resultCode, Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
 
         if (requestCode == REQUEST_INSTALL_PERMISSION)

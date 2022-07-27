@@ -1,18 +1,19 @@
 package ru.vtosters.lite.hooks;
+
 import static java.lang.Long.MAX_VALUE;
-import static ru.vtosters.lite.utils.Globals.getPrefsValue;
-import static ru.vtosters.lite.utils.Newsfeed.checkCaption;
-import static ru.vtosters.lite.utils.Newsfeed.checkCopyright;
-import static ru.vtosters.lite.utils.Newsfeed.injectFiltersReposts;
-import static ru.vtosters.lite.utils.Newsfeed.isAds;
-import static ru.vtosters.lite.utils.Newsfeed.isAuthorRecommendations;
-import static ru.vtosters.lite.utils.Newsfeed.isBadNews;
-import static ru.vtosters.lite.utils.Newsfeed.isFriendsRecommendations;
-import static ru.vtosters.lite.utils.Newsfeed.isGroupAds;
-import static ru.vtosters.lite.utils.Newsfeed.isMusicBlock;
-import static ru.vtosters.lite.utils.Newsfeed.isNewsBlock;
-import static ru.vtosters.lite.utils.Newsfeed.isPostRecommendations;
-import static ru.vtosters.lite.utils.Newsfeed.isRecomsGroup;
+import static ru.vtosters.lite.utils.AndroidUtils.getPrefsValue;
+import static ru.vtosters.lite.utils.NewsFeedFiltersUtils.checkCaption;
+import static ru.vtosters.lite.utils.NewsFeedFiltersUtils.checkCopyright;
+import static ru.vtosters.lite.utils.NewsFeedFiltersUtils.injectFiltersReposts;
+import static ru.vtosters.lite.utils.NewsFeedFiltersUtils.isAds;
+import static ru.vtosters.lite.utils.NewsFeedFiltersUtils.isAuthorRecommendations;
+import static ru.vtosters.lite.utils.NewsFeedFiltersUtils.isBadNews;
+import static ru.vtosters.lite.utils.NewsFeedFiltersUtils.isFriendsRecommendations;
+import static ru.vtosters.lite.utils.NewsFeedFiltersUtils.isGroupAds;
+import static ru.vtosters.lite.utils.NewsFeedFiltersUtils.isMusicBlock;
+import static ru.vtosters.lite.utils.NewsFeedFiltersUtils.isNewsBlock;
+import static ru.vtosters.lite.utils.NewsFeedFiltersUtils.isPostRecommendations;
+import static ru.vtosters.lite.utils.NewsFeedFiltersUtils.isRecomsGroup;
 import static ru.vtosters.lite.utils.Preferences.getBoolValue;
 import static ru.vtosters.lite.utils.Preferences.vkme;
 
@@ -24,8 +25,8 @@ import org.json.JSONObject;
 import java.util.ArrayList;
 import java.util.List;
 
-public class NewsfeedHook{
-    public static boolean injectFilters(JSONObject obj) throws JSONException{
+public class NewsfeedHook {
+    public static boolean injectFilters(JSONObject obj) throws JSONException {
         if (getBoolValue("newadblock", true)) return true;
 
         var optString = obj.optString("type", "");
@@ -52,11 +53,11 @@ public class NewsfeedHook{
         return !injectFiltersReposts(obj);
     } // inject our filters to newsfeed, getpost and discover
 
-    public static long getUpdateNewsfeed(boolean refresh_timeout){
+    public static long getUpdateNewsfeed(boolean refresh_timeout) {
         if (vkme()) {
             return MAX_VALUE;
         }
-        switch(getPrefsValue("newsupdate")) {
+        switch (getPrefsValue("newsupdate")) {
             case "no_update":
                 return MAX_VALUE;
             case "imd_update":
@@ -66,7 +67,7 @@ public class NewsfeedHook{
         }
     }
 
-    public static List hideElement(ArrayList list){
+    public static List hideElement(ArrayList list) {
         if (!getBoolValue("whatsnew", true)) {
             list.clear();
         }

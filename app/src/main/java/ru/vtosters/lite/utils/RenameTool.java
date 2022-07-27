@@ -1,18 +1,13 @@
 package ru.vtosters.lite.utils;
+
 import static ru.vtosters.lite.ui.PreferencesUtil.getSTextColor;
-import static ru.vtosters.lite.utils.Globals.convertDpToPixel;
-import static ru.vtosters.lite.utils.Globals.fromEup;
-import static ru.vtosters.lite.utils.Globals.getContext;
-import static ru.vtosters.lite.utils.Globals.getGroupName;
-import static ru.vtosters.lite.utils.Globals.getResources;
-import static ru.vtosters.lite.utils.Globals.getUserFirstName;
-import static ru.vtosters.lite.utils.Globals.getUserID;
-import static ru.vtosters.lite.utils.Globals.getUserId;
-import static ru.vtosters.lite.utils.Globals.getUserLastName;
-import static ru.vtosters.lite.utils.Globals.sendToast;
-import static ru.vtosters.lite.utils.Themes.getAccentColor;
-import static ru.vtosters.lite.utils.Themes.getAlertStyle;
-import static ru.vtosters.lite.utils.Themes.getTextAttr;
+import static ru.vtosters.lite.utils.AndroidUtils.dp2px;
+import static ru.vtosters.lite.utils.AndroidUtils.getGlobalContext;
+import static ru.vtosters.lite.utils.AndroidUtils.getResources;
+import static ru.vtosters.lite.utils.AndroidUtils.sendToast;
+import static ru.vtosters.lite.utils.ThemesUtils.getAccentColor;
+import static ru.vtosters.lite.utils.ThemesUtils.getAlertStyle;
+import static ru.vtosters.lite.utils.ThemesUtils.getTextAttr;
 
 import android.content.Context;
 import android.content.DialogInterface;
@@ -41,7 +36,7 @@ import java.lang.reflect.Field;
 import java.net.URLDecoder;
 import java.net.URLEncoder;
 
-public class RenameTool{
+public class RenameTool {
     private static final int DB_VERSION = 2;
 
     private static final String COLUMN_NAME = "name";
@@ -56,15 +51,15 @@ public class RenameTool{
     private static RenameTool.DbHelper helperInstance;
     private static boolean updateRequested = true;
 
-    protected static RenameTool.DbHelper getHelper(){
+    protected static RenameTool.DbHelper getHelper() {
         if (helperInstance == null) {
-            helperInstance = new RenameTool.DbHelper(getContext());
+            helperInstance = new RenameTool.DbHelper(getGlobalContext());
         }
         return helperInstance;
     }
 
-    public static String getCurrentModifiedUser(){
-        Cursor rawQuery = getHelper().getReadableDatabase().rawQuery(String.format("SELECT * FROM %s WHERE %s=%s", TABLE_NAME, COLUMN_VKID, getCurrentUserID()), new String[0]);
+    public static String getCurrentModifiedUser() {
+        Cursor rawQuery = getHelper().getReadableDatabase().rawQuery(String.format("SELECT * FROM %s WHERE %s=%s", TABLE_NAME, COLUMN_VKID, AccountManagerUtils.getUserId()), new String[0]);
         if (rawQuery.moveToFirst()) {
             try {
                 String decode = URLDecoder.decode(rawQuery.getString(rawQuery.getColumnIndexOrThrow(COLUMN_FIRSTNAME)), "UTF-8");
@@ -78,11 +73,7 @@ public class RenameTool{
         return null;
     }
 
-    private static int getCurrentUserID(){
-        return getUserId();
-    }
-
-    public static void injectIntoJson(JSONObject obj) throws JSONException{
+    public static void injectIntoJson(JSONObject obj) throws JSONException {
         int i = obj.getInt("id");
         if (updateRequested) {
             reloadDB();
@@ -93,7 +84,7 @@ public class RenameTool{
         obj.put(COLUMN_FIRSTNAME, user.first).put(COLUMN_LASTNAME, user.second);
     }
 
-    public static void injectIntoJsonGroup(JSONObject obj) throws JSONException{
+    public static void injectIntoJsonGroup(JSONObject obj) throws JSONException {
         int i = obj.getInt("id");
 
         if (updateRequested) {
@@ -106,13 +97,13 @@ public class RenameTool{
     }
 
     // Reload all values from DB
-    private static void reloadDB(){
+    private static void reloadDB() {
         renamedGroups.clear();
         renamedUsers.clear();
         updateRequested = false;
 
         try (Cursor cursor = getHelper().getReadableDatabase().rawQuery(String.format("SELECT * FROM %s", TABLE_NAME), new String[0])) {
-            while(cursor.moveToNext()) {
+            while (cursor.moveToNext()) {
                 String firstName = URLDecoder.decode(cursor.getString(cursor.getColumnIndexOrThrow(COLUMN_FIRSTNAME)), "UTF-8");
                 String lastName = URLDecoder.decode(cursor.getString(cursor.getColumnIndexOrThrow(COLUMN_LASTNAME)), "UTF-8");
                 int vkID = cursor.getInt(cursor.getColumnIndexOrThrow(COLUMN_VKID));
@@ -123,7 +114,7 @@ public class RenameTool{
         }
 
         try (Cursor cursor = getHelper().getReadableDatabase().rawQuery(String.format("SELECT * FROM %s", TABLE_NAME_GROUP), new String[0])) {
-            while(cursor.moveToNext()) {
+            while (cursor.moveToNext()) {
                 String name = URLDecoder.decode(cursor.getString(cursor.getColumnIndexOrThrow(COLUMN_NAME)), "UTF-8");
                 int vkID = cursor.getInt(cursor.getColumnIndexOrThrow(COLUMN_VKID));
                 renamedGroups.put(vkID, name);
@@ -133,7 +124,7 @@ public class RenameTool{
         }
     }
 
-    public static void injectIntoChat(User u){
+    public static void injectIntoChat(User u) {
         int id = u.getId();
         if (updateRequested) {
             reloadDB();
@@ -146,7 +137,7 @@ public class RenameTool{
         setObject(u, "J", user.second);
     }
 
-    public static void setObject(User instance, String name, Object obj){
+    public static void setObject(User instance, String name, Object obj) {
         try {
             Field f = User.class.getDeclaredField(name);
             f.setAccessible(true);
@@ -156,7 +147,7 @@ public class RenameTool{
         }
     }
 
-    public static void createDialog(ExtendedUserProfile eup, final Context ctx){
+    public static void createDialog(ExtendedUserProfile eup, final Context ctx) {
         LinearLayout linearLayout = new LinearLayout(ctx);
         linearLayout.setOrientation(LinearLayout.VERTICAL);
 
@@ -168,7 +159,7 @@ public class RenameTool{
         linearLayout.addView(fn);
         fn.getLayoutParams().width = ViewGroup.LayoutParams.MATCH_PARENT;
         ViewGroup.MarginLayoutParams margin = ((ViewGroup.MarginLayoutParams) fn.getLayoutParams());
-        margin.setMargins(convertDpToPixel(20f), 0, convertDpToPixel(20f), 0);
+        margin.setMargins(dp2px(20f), 0, dp2px(20f), 0);
         fn.setLayoutParams(margin);
 
         final EditText ln = new EditText(ctx);
@@ -180,11 +171,11 @@ public class RenameTool{
         ln.getLayoutParams().width = ViewGroup.LayoutParams.MATCH_PARENT;
         ln.setLayoutParams(margin);
 
-        final UserProfile profile = fromEup(eup);
-        fn.setText(getUserFirstName(profile));
-        ln.setText(getUserLastName(profile));
+        final UserProfile profile = AccountManagerUtils.fromEup(eup);
+        fn.setText(AccountManagerUtils.getUserFirstName(profile));
+        ln.setText(AccountManagerUtils.getUserLastName(profile));
 
-        int id = getUserID(profile);
+        int id = AccountManagerUtils.getUserID(profile);
 
         AlertDialog.Builder builder = new AlertDialog.Builder(ctx, getAlertStyle());
         builder.setTitle("Смена имени");
@@ -201,7 +192,7 @@ public class RenameTool{
                     writableDatabase.execSQL(String.format("INSERT INTO %s (%s, %s, %s) VALUES (%s, '%s', '%s')", TABLE_NAME, COLUMN_VKID, COLUMN_FIRSTNAME, COLUMN_LASTNAME, id, URLEncoder.encode(firstName, "UTF-8"), URLEncoder.encode(lastName, "UTF-8")));
                 }
                 updateRequested = true;
-                if (id == getCurrentUserID()) {
+                if (id == AccountManagerUtils.getUserId()) {
                     ctx.sendBroadcast(new Intent("com.vkontakte.android.USER_NAME_CHANGED"));
                 }
                 ctx.sendBroadcast(new Intent("com.vkontakte.android.ACTION_PROFILE_UPDATED").putExtra("uid", id));
@@ -213,7 +204,7 @@ public class RenameTool{
         });
         if (isChangedName(id)) builder.setNeutralButton("Сбросить", (dialog, which) -> {
             getHelper().getWritableDatabase().execSQL(String.format("DELETE FROM %s WHERE %s='%s'", TABLE_NAME, COLUMN_VKID, id));
-            if (id == getCurrentUserID()) {
+            if (id == AccountManagerUtils.getUserId()) {
                 ctx.sendBroadcast(new Intent("com.vkontakte.android.USER_NAME_CHANGED"));
             }
             updateRequested = true;
@@ -229,7 +220,7 @@ public class RenameTool{
         alert.getButton(DialogInterface.BUTTON_NEUTRAL).setTextColor(getResources().getColor(com.vtosters.lite.R.color.red));
     }
 
-    public static void createDialogGroup(ExtendedCommunityProfile eup, final Context ctx){
+    public static void createDialogGroup(ExtendedCommunityProfile eup, final Context ctx) {
         LinearLayout linearLayout = new LinearLayout(ctx);
         linearLayout.setOrientation(LinearLayout.VERTICAL);
 
@@ -241,13 +232,13 @@ public class RenameTool{
         linearLayout.addView(fn);
         fn.getLayoutParams().width = ViewGroup.LayoutParams.MATCH_PARENT;
         ViewGroup.MarginLayoutParams margin = ((ViewGroup.MarginLayoutParams) fn.getLayoutParams());
-        margin.setMargins(convertDpToPixel(20f), 0, convertDpToPixel(20f), 0);
+        margin.setMargins(dp2px(20f), 0, dp2px(20f), 0);
         fn.setLayoutParams(margin);
 
-        final UserProfile profile = fromEup(eup);
-        fn.setText(getGroupName(profile));
+        final UserProfile profile = AccountManagerUtils.fromEup(eup);
+        fn.setText(AccountManagerUtils.getGroupName(profile));
 
-        int fid = getUserID(profile);
+        int fid = AccountManagerUtils.getUserID(profile);
         if (fid < 0) fid = -fid;
 
         final int id = fid;
@@ -285,29 +276,29 @@ public class RenameTool{
         alert.getButton(DialogInterface.BUTTON_NEUTRAL).setTextColor(getResources().getColor(com.vtosters.lite.R.color.red));
     }
 
-    public static boolean isChangedName(int uid){
+    public static boolean isChangedName(int uid) {
         return renamedUsers.get(uid) != null;
     }
 
-    public static boolean isChangedNameGroup(int uid){
+    public static boolean isChangedNameGroup(int uid) {
         return renamedGroups.get(uid) != null;
     }
 
-    public static boolean isIdInList(UserProfile profile){
+    public static boolean isIdInList(UserProfile profile) {
         return true;
     }
 
-    private static class DbHelper extends SQLiteOpenHelper{
-        public DbHelper(Context context){
+    private static class DbHelper extends SQLiteOpenHelper {
+        public DbHelper(Context context) {
             super(context, DB_NAME, null, DB_VERSION);
         }
 
-        public void onCreate(SQLiteDatabase db){
+        public void onCreate(SQLiteDatabase db) {
             db.execSQL(String.format("CREATE TABLE %s (%s INTEGER PRIMARY KEY AUTOINCREMENT, %s INTEGER, %s TEXT)", TABLE_NAME_GROUP, "_id", COLUMN_VKID, COLUMN_NAME));
             db.execSQL(String.format("CREATE TABLE %s (%s INTEGER PRIMARY KEY AUTOINCREMENT, %s INTEGER, %s TEXT, %s TEXT)", TABLE_NAME, "_id", COLUMN_VKID, COLUMN_FIRSTNAME, COLUMN_LASTNAME));
         }
 
-        public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion){
+        public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
             if (newVersion == 2) {
                 db.execSQL(String.format("CREATE TABLE %s (%s INTEGER PRIMARY KEY AUTOINCREMENT, %s INTEGER, %s TEXT)", TABLE_NAME_GROUP, "_id", COLUMN_VKID, COLUMN_NAME));
             }

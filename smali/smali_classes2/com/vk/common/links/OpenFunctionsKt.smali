@@ -1427,7 +1427,7 @@
 .method public static final a(Landroid/content/Context;Lcom/vk/dto/common/VideoFile;Ljava/lang/String;Lcom/vk/libvideo/ad/AdsDataProvider;Ljava/lang/String;Lcom/vk/statistic/Statistic;ZLcom/vk/common/links/OpenCallback;Ljava/lang/Integer;)V
     .locals 14
 
-    invoke-static {p1, p0}, Lru/vtosters/lite/utils/ExternalLinkHandler;->parseVideoFile(Lcom/vk/dto/common/VideoFile;Landroid/content/Context;)Z
+    invoke-static {p1, p0}, Lru/vtosters/lite/utils/ExternalLinkParser;->parseVideoFile(Lcom/vk/dto/common/VideoFile;Landroid/content/Context;)Z
 
     move-result v9
 

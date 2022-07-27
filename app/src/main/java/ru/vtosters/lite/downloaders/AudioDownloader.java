@@ -16,13 +16,13 @@ import ru.vtosters.lite.music.Callback;
 import ru.vtosters.lite.music.FFMpeg;
 import ru.vtosters.lite.music.M3UDownloader;
 import ru.vtosters.lite.music.MP3Downloader;
-import ru.vtosters.lite.utils.Globals;
+import ru.vtosters.lite.utils.AndroidUtils;
 
 public class AudioDownloader {
-    private static NotificationManagerCompat notificationManager = NotificationManagerCompat.from(Globals.getContext());
+    private static NotificationManagerCompat notificationManager = NotificationManagerCompat.from(AndroidUtils.getGlobalContext());
 
     public static void downloadAudio(MusicTrack track) {
-        if (Globals.getDefprefs().getBoolean("new_music_downloading_way", false)) {
+        if (AndroidUtils.getDefaultPrefs().getBoolean("new_music_downloading_way", false)) {
             downloadMP3(track);
         } else {
             downloadM3U8(track);
@@ -89,15 +89,15 @@ public class AudioDownloader {
             else
                 Log.e("AudioDownloader", "Directory creation failed");
         Log.i("AudioDownloader", "Downloading audio to " + path);
-        new M3UDownloader(track.D, outDir, callback).execute();
+        M3UDownloader.execute(track.D, outDir, callback);
     }
 
     private static void downloadMP3(MusicTrack track) {
-        new MP3Downloader().execute(track);
+        MP3Downloader.execute(track);
     }
 
     private static NotificationCompat.Builder buildDownloadNotification(MusicTrack track, int id) {
-        var notificationBuilder = new NotificationCompat.Builder(Globals.getContext(), NotificationChannels.MUSIC_DOWNLOAD_CHANNEL_ID)
+        var notificationBuilder = new NotificationCompat.Builder(AndroidUtils.getGlobalContext(), NotificationChannels.MUSIC_DOWNLOAD_CHANNEL_ID)
                 .setSmallIcon(android.R.drawable.stat_sys_download)
                 .setContentTitle("Загрузка аудиозаписи")
                 .setContentText(track.toString())

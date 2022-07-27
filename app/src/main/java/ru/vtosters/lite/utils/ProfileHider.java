@@ -1,9 +1,9 @@
 package ru.vtosters.lite.utils;
 
-import static ru.vtosters.lite.utils.Globals.getContext;
-import static ru.vtosters.lite.utils.Globals.getIdentifier;
-import static ru.vtosters.lite.utils.Globals.getUserID;
-import static ru.vtosters.lite.utils.Globals.getUserId;
+import static ru.vtosters.lite.utils.AccountManagerUtils.getUserID;
+import static ru.vtosters.lite.utils.AccountManagerUtils.getUserId;
+import static ru.vtosters.lite.utils.AndroidUtils.getGlobalContext;
+import static ru.vtosters.lite.utils.AndroidUtils.getIdentifier;
 
 import android.util.Log;
 
@@ -20,13 +20,12 @@ import java.util.HashMap;
 
 import okhttp3.OkHttpClient;
 import okhttp3.Request;
-import ru.vtosters.lite.f0x1d.VTVerifications;
 
 // Jesus cries
-public class ProfileHide{
-    private static final OkHttpClient mClient = new OkHttpClient();
+public class ProfileHider {
+    private static final OkHttpClient client = new OkHttpClient();
 
-    public static void injectMap(HashMap<Integer, UserPresenter.a.a> hashMap){
+    public static void injectMap(HashMap<Integer, UserPresenter.a.a> hashMap) {
         if (VTVerifications.isServiceAccount(getUserId())) {
             hashMap.put(100, makeSecond(
                     "service_account_admin_100_info",
@@ -46,7 +45,7 @@ public class ProfileHide{
         }
     }
 
-    private static UserPresenter.a.a makeSecond(String stringRes, String colorRes, String drawableRes){
+    private static UserPresenter.a.a makeSecond(String stringRes, String colorRes, String drawableRes) {
         return new UserPresenter.a.a(
                 getIdentifier(stringRes, "string"),
                 getIdentifier(colorRes, "color"),
@@ -54,14 +53,14 @@ public class ProfileHide{
         );
     }
 
-    public static void fetchInfo(ExtendedUserProfile extendedUserProfile){
+    public static void fetchInfo(ExtendedUserProfile extendedUserProfile) {
         int userID = getUserID(extendedUserProfile.a);
         if (VTVerifications.isServiceAccount(userID)) {
             Request request = new Request.a()
                     .b("https://sf.vknext.net/block_text?user_id=" + userID)
                     .a();
             try {
-                JSONObject payload = new JSONObject(mClient.a(request)
+                JSONObject payload = new JSONObject(client.a(request)
                         .execute()
                         .c()
                         .a()
@@ -80,7 +79,7 @@ public class ProfileHide{
         }
     }
 
-    public static String getInfo(ExtendedUserProfile extendedUserProfile){
+    public static String getInfo(ExtendedUserProfile extendedUserProfile) {
         int userID = getUserID(extendedUserProfile);
         if (VTVerifications.isServiceAccount(userID)) {
             try {
@@ -93,6 +92,6 @@ public class ProfileHide{
                 e.printStackTrace();
             }
         }
-        return getContext().getString(UserPresenter.q0.a(userID));
+        return getGlobalContext().getString(UserPresenter.q0.a(userID));
     }
 }

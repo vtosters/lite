@@ -89,7 +89,7 @@
     .line 2
     sget v18, Lb/h/g/e;->VkDarkStyle:I
 
-    invoke-static {}, Lru/vtosters/lite/utils/Themes;->getDarkThemeRes()I
+    invoke-static {}, Lru/vtosters/lite/utils/ThemesUtils;->getDarkThemeRes()I
 
     move-result v18
 
@@ -199,7 +199,7 @@
     .line 6
     sget v10, Lb/h/g/e;->VkMilkDarkStyle:I
 
-    invoke-static {}, Lru/vtosters/lite/utils/Themes;->getDarkThemeRes()I
+    invoke-static {}, Lru/vtosters/lite/utils/ThemesUtils;->getDarkThemeRes()I
 
     move-result v10
 

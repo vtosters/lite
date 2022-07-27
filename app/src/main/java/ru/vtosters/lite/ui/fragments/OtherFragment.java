@@ -3,16 +3,14 @@ package ru.vtosters.lite.ui.fragments;
 import static android.widget.Toast.LENGTH_LONG;
 import static android.widget.Toast.LENGTH_SHORT;
 import static android.widget.Toast.makeText;
+import static ru.vtosters.lite.ui.components.BackupManager.backupOnlines;
+import static ru.vtosters.lite.ui.components.BackupManager.backupSettings;
+import static ru.vtosters.lite.ui.components.BackupManager.deletePrefs;
+import static ru.vtosters.lite.ui.components.BackupManager.restoreBackup;
+import static ru.vtosters.lite.utils.AccountManagerUtils.getUserToken;
+import static ru.vtosters.lite.utils.AndroidUtils.getIdentifier;
 import static ru.vtosters.lite.utils.CacheUtils.deleteCache;
-import static ru.vtosters.lite.utils.Globals.getIdentifier;
-import static ru.vtosters.lite.utils.Globals.getUserToken;
-import static ru.vtosters.lite.utils.Globals.restartApplication;
-import static ru.vtosters.lite.utils.SettBackup.backupOnlines;
-import static ru.vtosters.lite.utils.SettBackup.backupSettings;
-import static ru.vtosters.lite.utils.SettBackup.deletePrefs;
-import static ru.vtosters.lite.utils.SettBackup.restoreBackup;
-import static ru.vtosters.lite.utils.Themes.getAlertStyle;
-import static ru.vtosters.lite.utils.Themes.getTextAttr;
+import static ru.vtosters.lite.utils.LifecycleUtils.restartApplication;
 
 import android.app.Activity;
 import android.content.ClipData;
@@ -20,15 +18,12 @@ import android.content.ClipboardManager;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
-import android.graphics.Color;
 import android.os.Bundle;
 import android.util.Log;
 import android.webkit.WebView;
 import android.widget.ArrayAdapter;
-import android.widget.TextView;
 import android.widget.Toast;
 
-import androidx.appcompat.app.AlertDialog;
 import androidx.preference.Preference;
 
 import com.vk.auth.api.VKAccount;
@@ -46,8 +41,8 @@ import java.io.IOException;
 
 import b.h.g.m.FileUtils;
 import ru.vtosters.lite.ui.activities.VKAdminTokenActivity;
-import ru.vtosters.lite.utils.Globals;
-import ru.vtosters.lite.utils.SettBackup;
+import ru.vtosters.lite.ui.components.BackupManager;
+import ru.vtosters.lite.utils.AndroidUtils;
 
 public class OtherFragment extends MaterialPreferenceToolbarFragment {
 
@@ -67,7 +62,7 @@ public class OtherFragment extends MaterialPreferenceToolbarFragment {
         if (requestCode == VK_ADMIN_TOKEN_REQUEST_CODE) {
             if (resultCode == Activity.RESULT_OK) {
                 String token = data.getStringExtra("token");
-                Globals.getPreferences().edit().putString("vk_admin_token", token).apply();
+                AndroidUtils.getPreferences().edit().putString("vk_admin_token", token).apply();
                 Log.d("VkAdminToken", token);
                 Toast.makeText(getContext(), "Токен успешно сохранён", LENGTH_SHORT).show();
             }
@@ -88,7 +83,7 @@ public class OtherFragment extends MaterialPreferenceToolbarFragment {
         findPreference("restoreprefs").setOnPreferenceClickListener(new restoreprefs());
 
         var vkAdminTokenPref = findPreference("vk_admin_token");
-        vkAdminTokenPref.setVisible(Globals.getDefprefs().getBoolean("new_music_downloading_way", false));
+        vkAdminTokenPref.setVisible(AndroidUtils.getDefaultPrefs().getBoolean("new_music_downloading_way", false));
         if (vkAdminTokenPref.isVisible()) {
             vkAdminTokenPref.setOnPreferenceClickListener(preference -> {
 
@@ -139,8 +134,8 @@ public class OtherFragment extends MaterialPreferenceToolbarFragment {
     class c implements Preference.OnPreferenceClickListener {
         public void copy(Context context, String str) {
             ((ClipboardManager) context.getSystemService(Context.CLIPBOARD_SERVICE)).setPrimaryClip(ClipData.newPlainText("MBH-ST", str));
-            makeText(context, Globals.getString("copybtn"), LENGTH_SHORT).show();
-            ToastUtils.a(Globals.getString("tokenwarning"));
+            makeText(context, AndroidUtils.getString("copybtn"), LENGTH_SHORT).show();
+            ToastUtils.a(AndroidUtils.getString("tokenwarning"));
         }
 
         @Override // android.support.v7.preference.Preference.c
@@ -162,7 +157,7 @@ public class OtherFragment extends MaterialPreferenceToolbarFragment {
             ImAudioMsgPlayerProvider.b().d(PlayerActionSources.a);
             FileUtils.l();
             deleteCache();
-            ToastUtils.a(Globals.getString("cachecleaned"));
+            ToastUtils.a(AndroidUtils.getString("cachecleaned"));
             return true;
         }
     }
@@ -172,12 +167,12 @@ public class OtherFragment extends MaterialPreferenceToolbarFragment {
         public boolean onPreferenceClick(Preference preference) {
             VKAccount b = VKAccountManager.d();
             PushSubscriber.e.a();
-            ToastUtils.a(Globals.getString("fcmtokenrem"));
-            Globals.getContext().getSharedPreferences("gcm", 0).edit().clear().apply();
+            ToastUtils.a(AndroidUtils.getString("fcmtokenrem"));
+            AndroidUtils.getGlobalContext().getSharedPreferences("gcm", 0).edit().clear().apply();
             OtherFragment.this.getListView().postDelayed(() -> {
                 PushSubscriber.e.a(true);
-                ToastUtils.a(Globals.getString("fcmtokenget"));
-                ToastUtils.a(Globals.getString("fcmtokenfixed"));
+                ToastUtils.a(AndroidUtils.getString("fcmtokenget"));
+                ToastUtils.a(AndroidUtils.getString("fcmtokenfixed"));
             }, 1000);
             return true;
         }
@@ -189,7 +184,7 @@ public class OtherFragment extends MaterialPreferenceToolbarFragment {
             SharedPreferences prefs2 = getContext().getSharedPreferences("stickers_storage", Context.MODE_PRIVATE);
             prefs2.edit().clear().commit();
             deleteCache();
-            ToastUtils.a(Globals.getString("cachecleaned"));
+            ToastUtils.a(AndroidUtils.getString("cachecleaned"));
             return true;
         }
     }
@@ -208,7 +203,7 @@ public class OtherFragment extends MaterialPreferenceToolbarFragment {
     public class restoreprefs implements Preference.OnPreferenceClickListener {
         @Override // android.support.v7.preference.Preference.c
         public boolean onPreferenceClick(Preference preference) {
-            var arr = SettBackup.getBackupsNames();
+            var arr = BackupManager.getBackupsNames();
             var adapter = new ArrayAdapter(getContext(), android.R.layout.simple_list_item_1, arr);
             new VkAlertDialog.Builder(getContext())
                     .setTitle("Выберите бэкап")
