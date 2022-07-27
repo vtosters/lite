@@ -108,7 +108,7 @@ public class GcmHook{
             params.add("X-X-subscription=841415684880");
         }
         params.add("X-X-subtype=841415684880");
-        params.add("X-app_ver=" + "5.56.1");
+        params.add("X-app_ver=" + "7.26");
         params.add("X-kid=|ID|" + rid + "|");
         params.add("X-osv=30");
         params.add("X-sig=" + sig);
@@ -129,12 +129,12 @@ public class GcmHook{
         if (!del) {
             params.add("X-gmp_app_id=1:841415684880:android:632f429381141121");
         }
-        params.add("X-app_ver_name=" + "5.56.1");
+        params.add("X-app_ver_name=" + "7.26");
         params.add("app=com.vkontakte.android");
         params.add("sender=841415684880");
         params.add("device=" + androidId);
         params.add("cert=48761eef50ee53afc4cc9c5f10e6bde7f8f5b82f");
-        params.add("app_ver=" + "4838");
+        params.add("app_ver=" + "12338");
         params.add("gcm_ver=11949470");
     }
 
