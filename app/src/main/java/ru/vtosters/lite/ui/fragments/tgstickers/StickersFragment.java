@@ -6,6 +6,7 @@ import static ru.vtosters.lite.tgs.TGPref.setTGBotKey;
 import static ru.vtosters.lite.utils.AndroidUtils.dp2px;
 import static ru.vtosters.lite.utils.AndroidUtils.getIdentifier;
 import static ru.vtosters.lite.utils.ThemesUtils.getAccentColor;
+import static ru.vtosters.lite.utils.ThemesUtils.getSTextAttr;
 
 import android.app.AlertDialog;
 import android.app.ProgressDialog;
@@ -166,7 +167,7 @@ public class StickersFragment extends BaseToolbarFragment {
                 LinearLayout linearLayout = new LinearLayout(getContext());
 
                 final EditText editText = new EditText(getContext());
-                editText.setHintTextColor(PreferencesUtil.getSTextColor(getContext()));
+                editText.setHintTextColor(getSTextAttr());
                 editText.setBackgroundTintList(ColorStateList.valueOf(getAccentColor()));
 
                 linearLayout.addView(editText);
@@ -223,7 +224,7 @@ public class StickersFragment extends BaseToolbarFragment {
         LinearLayout linearLayout = new LinearLayout(getContext());
 
         final EditText editText = new EditText(getContext());
-        editText.setHintTextColor(PreferencesUtil.getSTextColor(getContext()));
+        editText.setHintTextColor(getSTextAttr());
         editText.setBackgroundTintList(ColorStateList.valueOf(getAccentColor()));
 
         linearLayout.addView(editText);

@@ -1,6 +1,9 @@
 package ru.vtosters.lite.net;
 
 import android.util.Base64;
+import android.util.Log;
+
+import org.json.JSONException;
 
 import java.io.ByteArrayOutputStream;
 import java.io.IOException;
@@ -89,6 +92,7 @@ public final class NetCall {
                     interrupt();
                     join();
                 } catch (Exception e) {
+                    Log.e("NetCall", "Failed to interrupt and join thread", e);
                 }
             }
         }.start();
