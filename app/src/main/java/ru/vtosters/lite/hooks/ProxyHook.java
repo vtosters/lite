@@ -1,13 +1,14 @@
 package ru.vtosters.lite.hooks;
-import static ru.vtosters.lite.utils.Globals.convertDpToPixel;
-import static ru.vtosters.lite.utils.Globals.edit;
-import static ru.vtosters.lite.utils.Globals.getPrefsValue;
-import static ru.vtosters.lite.utils.Globals.restartApplication;
-import static ru.vtosters.lite.utils.Proxy.apiproxy;
-import static ru.vtosters.lite.utils.Proxy.isZaboronaEnabled;
-import static ru.vtosters.lite.utils.Themes.getAccentColor;
-import static ru.vtosters.lite.utils.Themes.getAlertStyle;
-import static ru.vtosters.lite.utils.Themes.getTextAttr;
+
+import static ru.vtosters.lite.utils.AndroidUtils.dp2px;
+import static ru.vtosters.lite.utils.AndroidUtils.edit;
+import static ru.vtosters.lite.utils.AndroidUtils.getPrefsValue;
+import static ru.vtosters.lite.utils.LifecycleUtils.restartApplication;
+import static ru.vtosters.lite.utils.ProxyUtils.apiproxy;
+import static ru.vtosters.lite.utils.ProxyUtils.isZaboronaEnabled;
+import static ru.vtosters.lite.utils.ThemesUtils.getAccentColor;
+import static ru.vtosters.lite.utils.ThemesUtils.getAlertStyle;
+import static ru.vtosters.lite.utils.ThemesUtils.getTextAttr;
 
 import android.annotation.SuppressLint;
 import android.content.Context;
@@ -27,15 +28,15 @@ import com.vk.navigation.Navigator;
 
 import ru.vtosters.lite.ui.fragments.ProxySettingsFragment;
 
-public class ProxyHook{
-    public static void hookAuth(View v){
+public class ProxyHook {
+    public static void hookAuth(View v) {
         VkAuthTextView button = (VkAuthTextView) v;
         button.setText("Настроить прокси");
         button.setOnClickListener(v1 -> callProxyDialog(v1.getContext()));
     }
 
     @SuppressLint("SetTextI18n")
-    public static void callProxyDialog(Context ctx){
+    public static void callProxyDialog(Context ctx) {
         RadioGroup rg = new RadioGroup(ctx);
 
         RadioButton rgDefault = new RadioButton(new ContextThemeWrapper(ctx, com.vtosters.lite.R.style.Widget_AppCompat_CompoundButton_RadioButton));
@@ -44,10 +45,10 @@ public class ProxyHook{
         rg.addView(rgDefault);
         rg.addView(rgProxy);
 
-        rgDefault.setTextSize(TypedValue.COMPLEX_UNIT_PX, convertDpToPixel(14f));
-        rgProxy.setTextSize(TypedValue.COMPLEX_UNIT_PX, convertDpToPixel(14f));
+        rgDefault.setTextSize(TypedValue.COMPLEX_UNIT_PX, dp2px(14f));
+        rgProxy.setTextSize(TypedValue.COMPLEX_UNIT_PX, dp2px(14f));
 
-        rg.setPadding(convertDpToPixel(18f), convertDpToPixel(12f), convertDpToPixel(18f), 0);
+        rg.setPadding(dp2px(18f), dp2px(12f), dp2px(18f), 0);
 
         rgDefault.setText("Отключить");
         rgDefault.setTextColor(getTextAttr());
@@ -90,7 +91,7 @@ public class ProxyHook{
         alert.getButton(DialogInterface.BUTTON_NEUTRAL).setTextColor(getAccentColor());
     }
 
-    public static String linkReplacer(String link){
+    public static String linkReplacer(String link) {
         var vkapi = "api.vk.com";
         var oauth = "oauth.vk.com";
         var vkstatic = "static.vk.com";
@@ -123,7 +124,7 @@ public class ProxyHook{
         return link;
     }
 
-    public static String getAwayPhpCom(){
+    public static String getAwayPhpCom() {
         var proxyapi = getPrefsValue("proxyapi");
 
         if (apiproxy() & !proxyapi.isEmpty()) {

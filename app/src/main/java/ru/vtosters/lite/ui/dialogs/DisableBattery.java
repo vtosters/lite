@@ -1,14 +1,12 @@
 package ru.vtosters.lite.ui.dialogs;
 
-import static ru.vtosters.lite.utils.Globals.edit;
-import static ru.vtosters.lite.utils.Globals.getContext;
-import static ru.vtosters.lite.utils.Globals.getString;
+import static ru.vtosters.lite.utils.AndroidUtils.edit;
+import static ru.vtosters.lite.utils.AndroidUtils.getGlobalContext;
+import static ru.vtosters.lite.utils.AndroidUtils.getString;
 import static ru.vtosters.lite.utils.Preferences.getBoolValue;
 
 import android.app.Activity;
-import android.app.AlertDialog;
 import android.content.Context;
-import android.content.DialogInterface;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Build;
@@ -16,12 +14,12 @@ import android.os.PowerManager;
 
 import com.vk.core.dialogs.alert.VkAlertDialog;
 
-import ru.vtosters.lite.utils.OEMDetector;
+import ru.vtosters.lite.deviceinfo.OEMDetector;
 
-public class DisableBattery{
-    public static void alert(Activity activity){
+public class DisableBattery {
+    public static void alert(Activity activity) {
         if (OEMDetector.isOEM() && Build.VERSION.SDK_INT >= 23 && getBoolValue("showDoze", true)) {
-            final Context context = getContext();
+            final Context context = getGlobalContext();
             if (!((PowerManager) context.getSystemService(Context.POWER_SERVICE)).isIgnoringBatteryOptimizations(context.getPackageName())) {
                 VkAlertDialog.Builder builder = new VkAlertDialog.Builder(activity);
                 builder.setTitle(getString("batteryissuetitle"));

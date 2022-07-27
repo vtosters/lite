@@ -17,22 +17,22 @@ import javax.crypto.spec.IvParameterSpec;
 import javax.crypto.spec.SecretKeySpec;
 
 import ru.vtosters.lite.encryption.base.IMProcessor;
-import ru.vtosters.lite.utils.Globals;
+import ru.vtosters.lite.utils.AndroidUtils;
 
-public class VTostersAESProcessor extends IMProcessor{
+public class VTostersAESProcessor extends IMProcessor {
     private final static String CIPHER_INSTANCE = "AES/CBC/PKCS7Padding";
     private final static String KEY_METHOD = "AES";
 
     private final HashMap<byte[], Cipher> decodeMap = new HashMap<>();
     private final HashMap<byte[], Cipher> encodeMap = new HashMap<>();
 
-    public void free(byte[] key){
+    public void free(byte[] key) {
         decodeMap.remove(key);
         encodeMap.remove(key);
     }
 
     @NonNull
-    private Cipher wrapEncoder(byte[] key) throws InvalidAlgorithmParameterException, InvalidKeyException, NoSuchAlgorithmException, NoSuchPaddingException{
+    private Cipher wrapEncoder(byte[] key) throws InvalidAlgorithmParameterException, InvalidKeyException, NoSuchAlgorithmException, NoSuchPaddingException {
         if (encodeMap.containsKey(key)) return encodeMap.get(key);
 
         Triple<Cipher, SecretKeySpec, IvParameterSpec> encodeCipher = getBaseCipher(key);
@@ -43,7 +43,7 @@ public class VTostersAESProcessor extends IMProcessor{
     }
 
     @NonNull
-    private Cipher wrapDecoder(byte[] key) throws InvalidAlgorithmParameterException, InvalidKeyException, NoSuchAlgorithmException, NoSuchPaddingException{
+    private Cipher wrapDecoder(byte[] key) throws InvalidAlgorithmParameterException, InvalidKeyException, NoSuchAlgorithmException, NoSuchPaddingException {
         if (decodeMap.containsKey(key)) return decodeMap.get(key);
 
         Triple<Cipher, SecretKeySpec, IvParameterSpec> decodeCipher = getBaseCipher(key);
@@ -54,7 +54,7 @@ public class VTostersAESProcessor extends IMProcessor{
     }
 
     @NonNull
-    private Triple<Cipher, SecretKeySpec, IvParameterSpec> getBaseCipher(byte[] key) throws NoSuchPaddingException, NoSuchAlgorithmException{
+    private Triple<Cipher, SecretKeySpec, IvParameterSpec> getBaseCipher(byte[] key) throws NoSuchPaddingException, NoSuchAlgorithmException {
         byte[] off = new byte[16];
         System.arraycopy(key, 0, off, 0, off.length);
         return new Triple<>(Cipher.getInstance(CIPHER_INSTANCE), new SecretKeySpec(key, KEY_METHOD), new IvParameterSpec(off));
@@ -62,7 +62,7 @@ public class VTostersAESProcessor extends IMProcessor{
 
     @NonNull
     @Override
-    protected String encodeInternal(@NonNull String source, @Nullable byte[] key){
+    protected String encodeInternal(@NonNull String source, @Nullable byte[] key) {
         try {
             return Base64.encodeToString(wrapEncoder(key).doFinal(source.getBytes(StandardCharsets.UTF_8)), Base64.DEFAULT);
         } catch (Exception e) {
@@ -73,7 +73,7 @@ public class VTostersAESProcessor extends IMProcessor{
 
     @NonNull
     @Override
-    protected String decodeInternal(@NonNull String source, @Nullable byte[] key){
+    protected String decodeInternal(@NonNull String source, @Nullable byte[] key) {
         try {
             return new String(wrapDecoder(key).doFinal(Base64.decode(source, Base64.DEFAULT)), StandardCharsets.UTF_8);
         } catch (Exception e) {
@@ -83,46 +83,46 @@ public class VTostersAESProcessor extends IMProcessor{
     }
 
     @Override
-    public boolean isPublic(){
+    public boolean isPublic() {
         return false;
     }
 
     @NonNull
     @Override
-    public String startTag(){
+    public String startTag() {
         return "VT0ST3RS [AES] ";
     }
 
     @NonNull
     @Override
-    public String endTag(){
+    public String endTag() {
         return " VT0ST3RS [AES]";
     }
 
     @NonNull
     @Override
-    public String getUIName(){
+    public String getUIName() {
         return "VTosters [AES]";
     }
 
     @NonNull
     @Override
-    public String getPrefKey(){
+    public String getPrefKey() {
         return "vtaes";
     }
 
     @Nullable
     @Override
-    public String getEncryptionKeyFor(int id){
-        return Globals.getDefprefs().getString("VT_IMEncodeKey_" + getPrefKey() + "_" + id, "VTAesDefault");
+    public String getEncryptionKeyFor(int id) {
+        return AndroidUtils.getDefaultPrefs().getString("VT_IMEncodeKey_" + getPrefKey() + "_" + id, "VTAesDefault");
     }
 
-    public static class Triple<F, S, T>{
+    public static class Triple<F, S, T> {
         public final F first;
         public final S second;
         public final T third;
 
-        public Triple(F first, S second, T third){
+        public Triple(F first, S second, T third) {
             this.first = first;
             this.second = second;
             this.third = third;

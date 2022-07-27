@@ -1,15 +1,16 @@
 package ru.vtosters.lite.hooks;
+
 import static android.util.Base64.encodeToString;
-import static ru.vtosters.lite.utils.Globals.getContext;
-import static ru.vtosters.lite.utils.Globals.getPrefsValue;
+import static ru.vtosters.lite.utils.AndroidUtils.getGlobalContext;
+import static ru.vtosters.lite.utils.AndroidUtils.getPrefsValue;
 import static ru.vtosters.lite.utils.Preferences.getBoolValue;
-import static ru.vtosters.lite.utils.Themes.getAccentColor;
-import static ru.vtosters.lite.utils.Themes.getBackgroundContent;
-import static ru.vtosters.lite.utils.Themes.getBackgroundPage;
-import static ru.vtosters.lite.utils.Themes.getHeaderBackground;
-import static ru.vtosters.lite.utils.Themes.getHeaderText;
-import static ru.vtosters.lite.utils.Themes.getTextAttr;
-import static ru.vtosters.lite.utils.Themes.hex;
+import static ru.vtosters.lite.utils.ThemesUtils.getAccentColor;
+import static ru.vtosters.lite.utils.ThemesUtils.getBackgroundContent;
+import static ru.vtosters.lite.utils.ThemesUtils.getBackgroundPage;
+import static ru.vtosters.lite.utils.ThemesUtils.getHeaderBackground;
+import static ru.vtosters.lite.utils.ThemesUtils.getHeaderText;
+import static ru.vtosters.lite.utils.ThemesUtils.getTextAttr;
+import static ru.vtosters.lite.utils.ThemesUtils.hex;
 
 import android.webkit.WebView;
 
@@ -22,19 +23,19 @@ import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.nio.charset.StandardCharsets;
 
-public class VKUIHook{
+public class VKUIHook {
     public static boolean isLoaded = false;
     private static String loadedCSS = "";
     private static String loadedCSSAmoled = "";
 
-    private static String load(String str){
+    private static String load(String str) {
         try {
-            InputStream open = getContext().getAssets().open(str);
+            InputStream open = getGlobalContext().getAssets().open(str);
             StringBuilder sb = new StringBuilder();
 
             BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(open, StandardCharsets.UTF_8));
 
-            while(true) {
+            while (true) {
                 String readLine = bufferedReader.readLine();
                 if (readLine != null) {
                     sb.append(readLine);
@@ -51,7 +52,7 @@ public class VKUIHook{
         }
     }
 
-    public static void load(){
+    public static void load() {
         loadedCSS = load("vt_ui_accent.css")
                 .replace("%header_background%", hex(getHeaderBackground()))
                 .replace("%background_content%", hex(getBackgroundContent()))
@@ -64,11 +65,11 @@ public class VKUIHook{
         isLoaded = true;
     }
 
-    private static void inject(WebView webView, String str){
+    private static void inject(WebView webView, String str) {
         webView.loadUrl("javascript:(function() {var parent = document.getElementsByTagName('head').item(0);var style = document.createElement('style');style.type = 'text/css';style.innerHTML = window.atob('" + str + "');parent.appendChild(style)})()");
     }
 
-    public static void inject(WebView webView){
+    public static void inject(WebView webView) {
         String string = getPrefsValue("darktheme");
 
         if (getBoolValue("VKUI_INJ", true)) {
@@ -93,10 +94,10 @@ public class VKUIHook{
         }
     }
 
-    public static void clearWebCache(){
+    public static void clearWebCache() {
         ThemeTracker.a();
         isLoaded = false;
-        new WebView(getContext()).clearCache(true);
+        new WebView(getGlobalContext()).clearCache(true);
         WebCachePreloader.e();
     }
 }

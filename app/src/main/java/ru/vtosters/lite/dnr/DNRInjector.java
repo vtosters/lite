@@ -4,17 +4,16 @@ import static ru.vtosters.lite.dnr.DNRModule.hookDNR;
 import static ru.vtosters.lite.dnr.DNRModule.hookDNT;
 import static ru.vtosters.lite.dnr.DNRModule.isDnrEnabledFor;
 import static ru.vtosters.lite.dnr.DNRModule.isDntEnabledFor;
-import static ru.vtosters.lite.utils.Globals.getIdentifier;
+import static ru.vtosters.lite.utils.AndroidUtils.getIdentifier;
 
-import com.vk.core.util.ToastUtils;
 import com.vk.im.engine.models.dialogs.Dialog;
 import com.vk.im.ui.components.common.DialogAction;
 
 import java.util.LinkedHashMap;
 import java.util.List;
 
-public class DNRInjector{
-    public static void inject(Dialog dialog, List<DialogAction> list){
+public class DNRInjector {
+    public static void inject(Dialog dialog, List<DialogAction> list) {
         int peerId = dialog.getId();
 
         if (isDnrEnabledFor(peerId)) {
@@ -30,7 +29,7 @@ public class DNRInjector{
         }
     }
 
-    public static LinkedHashMap<DialogAction, Integer> injectToHashMap(LinkedHashMap<DialogAction, Integer> hashMap){
+    public static LinkedHashMap<DialogAction, Integer> injectToHashMap(LinkedHashMap<DialogAction, Integer> hashMap) {
         hashMap.put(DialogAction.valueOf("DNR_ON"), getIdentifier("DNR_ON", "string"));
         hashMap.put(DialogAction.valueOf("DNR_OFF"), getIdentifier("DNR_OFF", "string"));
         hashMap.put(DialogAction.valueOf("DNT_ON"), getIdentifier("DNT_ON", "string"));
@@ -38,7 +37,7 @@ public class DNRInjector{
         return hashMap;
     }
 
-    public static boolean onClick(Dialog dialog, DialogAction action){
+    public static boolean onClick(Dialog dialog, DialogAction action) {
         var id = dialog.getId();
 
         if (action == DialogAction.valueOf("MARK_AS_READ")) {
@@ -64,11 +63,11 @@ public class DNRInjector{
         return false;
     }
 
-    public static void setDnr(Dialog dialog, boolean value){
+    public static void setDnr(Dialog dialog, boolean value) {
         hookDNR(dialog.getId());
     }
 
-    public static void setDnt(Dialog dialog, boolean value){
+    public static void setDnt(Dialog dialog, boolean value) {
         hookDNT(dialog.getId());
     }
 }

@@ -17,7 +17,7 @@ import java.util.List;
 /**
  * Created by Aefyr on 18.05.2018.
  */
-public class TelegramStickersPack extends CustomStickersPack{
+public class TelegramStickersPack extends CustomStickersPack {
 
     public static final int UNKNOWN = -1;
     public static final int DOWNLOADED = 0;
@@ -35,12 +35,12 @@ public class TelegramStickersPack extends CustomStickersPack{
 
     public HashMap<String, List<Integer>> emojis = new HashMap<>();
 
-    public TelegramStickersPack(String id){
+    public TelegramStickersPack(String id) {
         this.id = id.toLowerCase();
         title = id;
     }
 
-    public JSONObject encodeEmojis() throws JSONException{
+    public JSONObject encodeEmojis() throws JSONException {
         JSONObject obj = new JSONObject();
         for (HashMap.Entry<String, List<Integer>> en : emojis.entrySet()) {
             JSONArray arr = new JSONArray();
@@ -51,9 +51,9 @@ public class TelegramStickersPack extends CustomStickersPack{
         return obj;
     }
 
-    public void loadEmojis(JSONObject obj) throws JSONException{
+    public void loadEmojis(JSONObject obj) throws JSONException {
         Iterator<String> it = obj.keys();
-        while(it.hasNext()) {
+        while (it.hasNext()) {
             String key = it.next();
             //emojis.put(key, obj.getInt(key));
             List<Integer> list = emojis.get(key);
@@ -65,7 +65,7 @@ public class TelegramStickersPack extends CustomStickersPack{
         }
     }
 
-    public Bitmap getIcon(int targetMaxSideSize){
+    public Bitmap getIcon(int targetMaxSideSize) {
         if (state != DOWNLOADED && state != UPDATING)
             throw new IllegalStateException("Unable to get an icon of a pack that hasn't been downloaded yet");
 
@@ -74,7 +74,7 @@ public class TelegramStickersPack extends CustomStickersPack{
         return getScaledBitmap(icon, targetMaxSideSize);
     }
 
-    private Bitmap getScaledBitmap(File bitmapFile, int targetMaxSideSize){
+    private Bitmap getScaledBitmap(File bitmapFile, int targetMaxSideSize) {
         BitmapFactory.Options op = new BitmapFactory.Options();
         op.inJustDecodeBounds = true;
         op.inPreferredConfig = Bitmap.Config.ARGB_8888;
@@ -100,46 +100,46 @@ public class TelegramStickersPack extends CustomStickersPack{
     }
 
     @Override
-    public boolean equals(Object obj){
+    public boolean equals(Object obj) {
         return obj instanceof TelegramStickersPack && ((TelegramStickersPack) obj).id.equalsIgnoreCase(id);
     }
 
     @Override
-    public int hashCode(){
+    public int hashCode() {
         return id.toLowerCase().hashCode();
     }
 
     @Override
-    public File folder(){
+    public File folder() {
         return folder;
     }
 
     @Override
-    public int stickersCount(){
+    public int stickersCount() {
         return stickersCount;
     }
 
     @Override
-    public String name(){
+    public String name() {
         return title;
     }
 
     @Override
-    public Bitmap getIconBitmap(){
+    public Bitmap getIconBitmap() {
         return getIcon(128);
     }
 
     @Override
-    public Bitmap getStickerBitmap(int index){
+    public Bitmap getStickerBitmap(int index) {
         return BitmapFactory.decodeFile(new File(folder, String.format("%03d.png", index + 1)).getAbsolutePath());
     }
 
     @Override
-    public File getStickerFile(int index){
+    public File getStickerFile(int index) {
         return new File(folder, String.format("%03d.png", index + 1));
     }
 
-    public Bitmap getStickerBitmap(int index, int maxSize){
+    public Bitmap getStickerBitmap(int index, int maxSize) {
         return getScaledBitmap(new File(folder, String.format("%03d.png", index + 1)), maxSize);
     }
 }

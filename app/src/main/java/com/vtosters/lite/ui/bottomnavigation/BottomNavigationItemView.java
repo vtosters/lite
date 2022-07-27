@@ -1,17 +1,15 @@
 package com.vtosters.lite.ui.bottomnavigation;
 
-import static ru.vtosters.lite.utils.Themes.getCSTDock;
+import static ru.vtosters.lite.utils.ThemesUtils.getCSTDock;
 
 import android.annotation.SuppressLint;
 import android.content.Context;
 import android.content.res.ColorStateList;
-import android.graphics.Color;
 import android.graphics.PorterDuff;
 import android.graphics.Typeface;
 import android.graphics.drawable.Drawable;
 import android.text.TextUtils;
 import android.util.AttributeSet;
-import android.util.Log;
 import android.util.TypedValue;
 import android.view.Gravity;
 import android.view.LayoutInflater;
@@ -28,13 +26,10 @@ import androidx.core.content.ContextCompat;
 import androidx.core.graphics.drawable.DrawableCompat;
 import androidx.core.view.ViewCompat;
 
-import com.vk.core.ui.themes.Themable;
 import com.vk.core.ui.themes.VKThemeHelper;
 import com.vtosters.lite.R;
 
 import me.grishka.appkit.utils.V;
-import ru.vtosters.lite.utils.Globals;
-import ru.vtosters.lite.utils.Themes;
 
 public class BottomNavigationItemView extends FrameLayout implements MenuView.ItemView {
     private final TextView mSmallLabel;
@@ -178,20 +173,20 @@ public class BottomNavigationItemView extends FrameLayout implements MenuView.It
             counterContainerParams.topMargin = this.mMargin + V.a(1.5F);
             counterContainerParams.bottomMargin = this.mMargin + V.a(1.5F);
             this.mCounterContainer.setLayoutParams(counterContainerParams);
-            this.mCounterContainer.setTranslationY((float)(-V.a(5.5F)));
+            this.mCounterContainer.setTranslationY((float) (-V.a(5.5F)));
 
             this.mLargeLabel.setVisibility(GONE);
             this.mSmallLabel.setVisibility(GONE);
         } else {
             if (mShiftingModeEnabled) {
                 if (checked) {
-                    var iconParams = (LayoutParams)this.mIcon.getLayoutParams();
-                    iconParams.gravity = Gravity.TOP|Gravity.CENTER_HORIZONTAL;
+                    var iconParams = (LayoutParams) this.mIcon.getLayoutParams();
+                    iconParams.gravity = Gravity.TOP | Gravity.CENTER_HORIZONTAL;
                     iconParams.topMargin = this.mMargin;
                     this.mIcon.setLayoutParams(iconParams);
 
-                    var counterContainerParams = (LayoutParams)this.mCounterContainer.getLayoutParams();
-                    counterContainerParams.gravity = Gravity.TOP|Gravity.CENTER_HORIZONTAL;
+                    var counterContainerParams = (LayoutParams) this.mCounterContainer.getLayoutParams();
+                    counterContainerParams.gravity = Gravity.TOP | Gravity.CENTER_HORIZONTAL;
                     counterContainerParams.topMargin = this.mMargin + V.a(1.5F);
                     counterContainerParams.bottomMargin = this.mMargin + V.a(1.5F);
 
@@ -202,17 +197,17 @@ public class BottomNavigationItemView extends FrameLayout implements MenuView.It
                     ViewCompat.setScaleX(this.mLargeLabel, 1.0F);
                     ViewCompat.setScaleY(this.mLargeLabel, 1.0F);
                 } else {
-                    var iconParams = (LayoutParams)this.mIcon.getLayoutParams();
+                    var iconParams = (LayoutParams) this.mIcon.getLayoutParams();
                     iconParams.gravity = Gravity.CENTER;
                     iconParams.topMargin = this.mMargin;
                     this.mIcon.setLayoutParams(iconParams);
 
-                    var counterContainerParams = (LayoutParams)this.mCounterContainer.getLayoutParams();
+                    var counterContainerParams = (LayoutParams) this.mCounterContainer.getLayoutParams();
                     counterContainerParams.gravity = Gravity.CENTER;
                     counterContainerParams.topMargin = this.mMargin + V.a(1.5F);
                     counterContainerParams.bottomMargin = this.mMargin + V.a(1.5F);
                     this.mCounterContainer.setLayoutParams(counterContainerParams);
-                    this.mCounterContainer.setTranslationY((float)(-V.a(5.5F)));
+                    this.mCounterContainer.setTranslationY((float) (-V.a(5.5F)));
 
                     this.mLargeLabel.setVisibility(INVISIBLE);
                     ViewCompat.setScaleX(this.mLargeLabel, 0.5F);
@@ -241,7 +236,7 @@ public class BottomNavigationItemView extends FrameLayout implements MenuView.It
                 iconParams.bottomMargin = V.a(6);
                 this.mIcon.setLayoutParams(iconParams);
 
-                var counterContainerParams = (LayoutParams)this.mCounterContainer.getLayoutParams();
+                var counterContainerParams = (LayoutParams) this.mCounterContainer.getLayoutParams();
                 counterContainerParams.gravity = Gravity.CENTER;
                 counterContainerParams.topMargin = 0;
                 counterContainerParams.bottomMargin = V.a(8);

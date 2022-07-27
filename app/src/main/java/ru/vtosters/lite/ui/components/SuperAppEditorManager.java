@@ -1,6 +1,6 @@
 package ru.vtosters.lite.ui.components;
 
-import static ru.vtosters.lite.utils.Globals.getPreferences;
+import static ru.vtosters.lite.utils.AndroidUtils.getPreferences;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -8,7 +8,7 @@ import java.util.List;
 import java.util.stream.Collectors;
 
 import ru.vtosters.lite.ui.items.SuperAppItem;
-import ru.vtosters.lite.utils.Globals;
+import ru.vtosters.lite.utils.AndroidUtils;
 
 public class SuperAppEditorManager {
 
@@ -34,8 +34,8 @@ public class SuperAppEditorManager {
     }
 
     private void parseSelectedItems(String[] selectedTabsTags) {
-        List<String> allTags = new ArrayList<>(Arrays.asList( "menu", "miniapps", "vkpay_slim", "greeting", "promo", "holiday",
-                "weather", "sport", "games", "informer", "food", "event", "music", "vk_run" ));
+        List<String> allTags = new ArrayList<>(Arrays.asList("menu", "miniapps", "vkpay_slim", "greeting", "promo", "holiday",
+                "weather", "sport", "games", "informer", "food", "event", "music", "vk_run"));
         for (String tag : selectedTabsTags) {
             mSelectedItems.add(getItemByTag(tag));
             allTags.remove(tag);
@@ -46,15 +46,15 @@ public class SuperAppEditorManager {
     public void save() {
         if (mSelectedItems.size() > 0)
             getPreferences().edit().putString("superapp_items", mSelectedItems.stream()
-                    .map(item -> item.type)
-                    .collect(Collectors.joining(",")))
+                            .map(item -> item.type)
+                            .collect(Collectors.joining(",")))
                     .commit();
         else
             reset();
     }
 
     public void reset() {
-        Globals.getPreferences()
+        AndroidUtils.getPreferences()
                 .edit()
                 .putString("superapp_items", "menu,miniapps,vkpay_slim,greeting,promo,holiday,informer,event,weather,sport,games,food,music,vk_run")
                 .commit();

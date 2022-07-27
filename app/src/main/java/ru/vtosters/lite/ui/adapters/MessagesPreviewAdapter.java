@@ -1,6 +1,6 @@
 package ru.vtosters.lite.ui.adapters;
 
-import static ru.vtosters.lite.utils.Themes.getTextAttr;
+import static ru.vtosters.lite.utils.ThemesUtils.getTextAttr;
 
 import android.content.Context;
 import android.util.TypedValue;
@@ -17,7 +17,7 @@ import com.vk.core.widget.BubbleFluidLayout;
 import com.vk.im.ui.views.msg.bubble.MsgBubbleView;
 import com.vtosters.lite.R;
 
-import ru.vtosters.lite.utils.Globals;
+import ru.vtosters.lite.utils.AndroidUtils;
 
 public class MessagesPreviewAdapter extends RecyclerView.Adapter<MessagesPreviewAdapter.MessagePreviewViewHolder> {
 
@@ -47,10 +47,10 @@ public class MessagesPreviewAdapter extends RecyclerView.Adapter<MessagesPreview
         bubbleFluidLayout.findViewById(R.id.status_space).setVisibility(View.GONE);
 
         var messageBubbleView = (MsgBubbleView) bubbleFluidLayout.findViewById(R.id.bubble);
-        messageBubbleView.setContentPaddingLeft(Globals.convertDpToPixel(5));
-        messageBubbleView.setContentPaddingTop(Globals.convertDpToPixel(5));
-        messageBubbleView.setContentPaddingRight(Globals.convertDpToPixel(5));
-        messageBubbleView.setContentPaddingBottom(Globals.convertDpToPixel(5));
+        messageBubbleView.setContentPaddingLeft(AndroidUtils.dp2px(5));
+        messageBubbleView.setContentPaddingTop(AndroidUtils.dp2px(5));
+        messageBubbleView.setContentPaddingRight(AndroidUtils.dp2px(5));
+        messageBubbleView.setContentPaddingBottom(AndroidUtils.dp2px(5));
         bubbleFluidLayout.setGravity(viewType == ME ? Gravity.RIGHT : Gravity.LEFT);
 
         var message = new TextView(context);

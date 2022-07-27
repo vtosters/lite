@@ -312,7 +312,7 @@
 .end method
 
 .method private T(Ljava/lang/String;)V
-    .locals 1
+    .locals 9
 
     .line 1
     invoke-static {p1}, Lcom/vk/webapp/fragments/VkPayFragment;->P(Ljava/lang/String;)Z

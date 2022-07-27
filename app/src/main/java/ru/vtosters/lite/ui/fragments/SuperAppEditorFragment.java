@@ -1,8 +1,8 @@
 package ru.vtosters.lite.ui.fragments;
 
-import static ru.vtosters.lite.utils.Globals.convertDpToPixel;
-import static ru.vtosters.lite.utils.Globals.getIdentifier;
-import static ru.vtosters.lite.utils.Globals.restartApplication;
+import static ru.vtosters.lite.utils.AndroidUtils.dp2px;
+import static ru.vtosters.lite.utils.AndroidUtils.getIdentifier;
+import static ru.vtosters.lite.utils.LifecycleUtils.restartApplication;
 
 import android.os.Bundle;
 import android.view.ContextThemeWrapper;
@@ -23,9 +23,9 @@ import androidx.recyclerview.widget.RecyclerView;
 import ru.vtosters.lite.ui.adapters.CategorizedAdapter;
 import ru.vtosters.lite.ui.components.ItemMovingCallback;
 import ru.vtosters.lite.ui.components.SuperAppEditorManager;
-import ru.vtosters.lite.utils.Globals;
-import ru.vtosters.lite.utils.LayoutHelper;
-import ru.vtosters.lite.utils.Themes;
+import ru.vtosters.lite.utils.AndroidUtils;
+import ru.vtosters.lite.utils.LayoutUtils;
+import ru.vtosters.lite.utils.ThemesUtils;
 
 public class SuperAppEditorFragment extends BaseToolbarFragment {
 
@@ -41,29 +41,29 @@ public class SuperAppEditorFragment extends BaseToolbarFragment {
         content.addView(container, new FrameLayout.LayoutParams(-1, -1));
 
         TextView message = new TextView(getContext());
-        message.setText(Globals.getString("superapp_editor_message"));
+        message.setText(AndroidUtils.getString("superapp_editor_message"));
         message.setTextSize(16.0f);
         message.setTextAlignment(View.TEXT_ALIGNMENT_CENTER);
-        message.setTextColor(Themes.getTextAttr());
+        message.setTextColor(ThemesUtils.getTextAttr());
         message.setPadding(
-                Globals.convertDpToPixel(10),
-                Globals.convertDpToPixel(10),
-                Globals.convertDpToPixel(10),
+                AndroidUtils.dp2px(10),
+                AndroidUtils.dp2px(10),
+                AndroidUtils.dp2px(10),
                 0
         );
-        container.addView(message, LayoutHelper.createLinear(-1, -2));
+        container.addView(message, LayoutUtils.createLinear(-1, -2));
 
         LinearLayout buttonsContainer = new LinearLayout(getContext());
         buttonsContainer.setPadding(
-                convertDpToPixel(13),
-                convertDpToPixel(10),
-                convertDpToPixel(13),
-                convertDpToPixel(10)
+                dp2px(13),
+                dp2px(10),
+                dp2px(13),
+                dp2px(10)
         );
         container.addView(buttonsContainer, new LinearLayout.LayoutParams(-1, -2));
 
         TextView save = new TextView(new ContextThemeWrapper(getContext(), com.vtosters.lite.R.style.VKUIButton_Primary));
-        save.setText(Globals.getString("save"));
+        save.setText(AndroidUtils.getString("save"));
         save.setOnClickListener(v -> {
             SuperAppEditorManager.getInstance().save();
             restartApplication();
@@ -74,10 +74,10 @@ public class SuperAppEditorFragment extends BaseToolbarFragment {
         buttonsContainer.addView(save, saveParams);
 
         View divider = new View(getContext());
-        buttonsContainer.addView(divider, new LinearLayout.LayoutParams(convertDpToPixel(10), 0));
+        buttonsContainer.addView(divider, new LinearLayout.LayoutParams(dp2px(10), 0));
 
         TextView reset = new TextView(new ContextThemeWrapper(getContext(), com.vtosters.lite.R.style.VKUIButton_Primary));
-        reset.setText(Globals.getString("reset"));
+        reset.setText(AndroidUtils.getString("reset"));
         reset.setOnClickListener(v -> {
             SuperAppEditorManager.getInstance().reset();
             restartApplication();

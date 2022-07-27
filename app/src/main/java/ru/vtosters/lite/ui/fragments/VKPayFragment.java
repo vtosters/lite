@@ -6,11 +6,9 @@ import android.os.Bundle;
 import com.vk.core.fragments.FragmentImpl;
 import com.vk.navigation.Navigator;
 
-import ru.vtosters.lite.utils.VKUIwrapper;
-
-public class VKPayFragment extends FragmentImpl{
+public class VKPayFragment extends FragmentImpl {
     @Override
-    public void onCreate(Bundle bundle){
+    public void onCreate(Bundle bundle) {
         super.onCreate(bundle);
         start();
     }

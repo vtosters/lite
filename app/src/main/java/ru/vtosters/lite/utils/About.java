@@ -1,8 +1,8 @@
 package ru.vtosters.lite.utils;
 
-import static ru.vtosters.lite.utils.Globals.getApplicationName;
-import static ru.vtosters.lite.utils.Globals.getContext;
-import static ru.vtosters.lite.utils.Globals.getIdentifier;
+import static ru.vtosters.lite.utils.AndroidUtils.getApplicationName;
+import static ru.vtosters.lite.utils.AndroidUtils.getGlobalContext;
+import static ru.vtosters.lite.utils.AndroidUtils.getIdentifier;
 import static ru.vtosters.lite.utils.Preferences.VERSIONNAME;
 import static ru.vtosters.lite.utils.Preferences.isValidSignature;
 import static ru.vtosters.lite.utils.Preferences.oldabout;
@@ -17,8 +17,8 @@ import java.io.IOException;
 import java.util.List;
 import java.util.Scanner;
 
-public class About{
-    public static void injectAbout(List<Items2> list){
+public class About {
+    public static void injectAbout(List<Items2> list) {
         list.clear();
         list.add(new Items1());
 
@@ -44,18 +44,18 @@ public class About{
         list.add(new Items(8, getIdentifier("sett_debug", "string")));
     }
 
-    public static String getBuildNumber(){
-        return getBuild(getContext(), "version.properties");
+    public static String getBuildNumber() {
+        return getBuild(getGlobalContext(), "version.properties");
     }
 
-    public static String getCommitLink(){
-        return "https://git.maki.su/gdlbo/lite/commit/" + getBuild(getContext(), "version.properties"); // https://github.com/vtosters/lite/commit/ github repo
+    public static String getCommitLink() {
+        return "https://git.maki.su/gdlbo/lite/commit/" + getBuild(getGlobalContext(), "version.properties"); // https://github.com/vtosters/lite/commit/ github repo
     }
 
-    public static String getBuild(Context context, String name){
+    public static String getBuild(Context context, String name) {
         try {
             Scanner scanner = new Scanner(context.getAssets().open(name));
-            while(scanner.hasNextLine()) {
+            while (scanner.hasNextLine()) {
                 String line = scanner.findInLine("VERSION_BUILD=.+");
                 if (line != null)
                     return line.replace("VERSION_BUILD=", "");
@@ -67,7 +67,7 @@ public class About{
         return "0000000";
     }
 
-    public static String getAppVersion() throws IOException{
+    public static String getAppVersion() throws IOException {
         var appver = isValidSignature() ? VERSIONNAME : "Dev";
         return getApplicationName() + " " + appver + " | " + getBuildNumber();
     }

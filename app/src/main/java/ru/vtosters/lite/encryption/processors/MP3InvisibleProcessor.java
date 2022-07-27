@@ -9,17 +9,17 @@ import java.nio.charset.StandardCharsets;
 
 import ru.vtosters.lite.encryption.base.IMProcessor;
 
-public class MP3InvisibleProcessor extends IMProcessor{
-    private static String toStr(int a, String cc){
+public class MP3InvisibleProcessor extends IMProcessor {
+    private static String toStr(int a, String cc) {
         StringBuilder s = new StringBuilder();
-        while(a > 0) {
+        while (a > 0) {
             s.insert(0, cc.charAt(a % cc.length()));
             a /= cc.length();
         }
         return s.toString();
     }
 
-    private static int toNum(String a, String cc){
+    private static int toNum(String a, String cc) {
         int n = 0;
         for (int i = 0; i < a.length(); i++) {
             int start = (a.length() - i) - 1;
@@ -30,7 +30,7 @@ public class MP3InvisibleProcessor extends IMProcessor{
 
     @NonNull
     @Override
-    protected String encodeInternal(@NonNull String source, @Nullable byte[] key){
+    protected String encodeInternal(@NonNull String source, @Nullable byte[] key) {
         try {
             byte[] bytes = source.getBytes(StandardCharsets.UTF_8);
             java.lang.String[] plainText = new String[bytes.length];
@@ -46,7 +46,7 @@ public class MP3InvisibleProcessor extends IMProcessor{
 
     @NonNull
     @Override
-    protected String decodeInternal(@NonNull String source, @Nullable byte[] key){
+    protected String decodeInternal(@NonNull String source, @Nullable byte[] key) {
         try {
             java.lang.String[] t = source.replaceAll("^" + "  ", "").split(" ");
             byte[] plainText = new byte[t.length];
@@ -61,19 +61,19 @@ public class MP3InvisibleProcessor extends IMProcessor{
     }
 
     @Override
-    public boolean isEncrypted(String source){
+    public boolean isEncrypted(String source) {
         return source.matches("^" + "  " + "([" + " ​‌‏ ⁪⁫⁬⁭⁮⁯" + "\\s]*)");
     }
 
     @NonNull
     @Override
-    public String getUIName(){
+    public String getUIName() {
         return "MP3 [invisible]";
     }
 
     @NonNull
     @Override
-    public String getPrefKey(){
+    public String getPrefKey() {
         return "mp3";
     }
 }

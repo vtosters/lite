@@ -1,11 +1,11 @@
 package ru.vtosters.lite.ui.adapters;
 
-import static ru.vtosters.lite.utils.Globals.getContext;
-import static ru.vtosters.lite.utils.Globals.getIdentifier;
-import static ru.vtosters.lite.utils.Globals.getResources;
-import static ru.vtosters.lite.utils.Themes.getSTextAttr;
-import static ru.vtosters.lite.utils.Themes.getTextAttr;
-import static ru.vtosters.lite.utils.Themes.recolorDrawable;
+import static ru.vtosters.lite.utils.AndroidUtils.getGlobalContext;
+import static ru.vtosters.lite.utils.AndroidUtils.getIdentifier;
+import static ru.vtosters.lite.utils.AndroidUtils.getResources;
+import static ru.vtosters.lite.utils.ThemesUtils.getSTextAttr;
+import static ru.vtosters.lite.utils.ThemesUtils.getTextAttr;
+import static ru.vtosters.lite.utils.ThemesUtils.recolorDrawable;
 
 import android.net.Uri;
 import android.view.LayoutInflater;
@@ -25,14 +25,14 @@ import com.aefyr.tsg.g2.TelegramStickersService;
 import java.io.File;
 
 import ru.vtosters.lite.tgs.TGPref;
-import ru.vtosters.lite.utils.Globals;
+import ru.vtosters.lite.utils.AndroidUtils;
 
-public class StickerPackAdapter extends RecyclerView.Adapter<StickerPackAdapter.StickerPackViewHolder>{
-    private static TelegramStickersService sService = TelegramStickersService.getInstance(getContext());
+public class StickerPackAdapter extends RecyclerView.Adapter<StickerPackAdapter.StickerPackViewHolder> {
+    private static TelegramStickersService sService = TelegramStickersService.getInstance(getGlobalContext());
 
     @NonNull
     @Override
-    public StickerPackViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType){
+    public StickerPackViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         int resID = getIdentifier("tgs_entry", "layout");
         var view = LayoutInflater.from(parent.getContext()).inflate(resID, parent, false);
         var holder = new StickerPackViewHolder(view);
@@ -45,22 +45,22 @@ public class StickerPackAdapter extends RecyclerView.Adapter<StickerPackAdapter.
     }
 
     @Override
-    public int getItemViewType(int position){
+    public int getItemViewType(int position) {
         final TelegramStickersPack pack = sService.getPacksListReference().get(position);
         return pack.state == TelegramStickersPack.DOWNLOADED ? 0 : 1;
     }
 
     @Override
-    public void onBindViewHolder(@NonNull final StickerPackViewHolder holder, int position){
+    public void onBindViewHolder(@NonNull final StickerPackViewHolder holder, int position) {
         holder.bind(position);
     }
 
     @Override
-    public int getItemCount(){
+    public int getItemCount() {
         return sService.getPacksListReference().size();
     }
 
-    public class StickerPackViewHolder extends RecyclerView.ViewHolder{
+    public class StickerPackViewHolder extends RecyclerView.ViewHolder {
         private LinearLayout mContainer;
         private ImageView mStickerPreview;
         private ImageView mUpdateButton;
@@ -70,7 +70,7 @@ public class StickerPackAdapter extends RecyclerView.Adapter<StickerPackAdapter.
         private SwitchCompat mSwitch;
 
 
-        public StickerPackViewHolder(@NonNull View view){
+        public StickerPackViewHolder(@NonNull View view) {
             super(view);
 
             mContainer = (LinearLayout) view;
@@ -82,7 +82,7 @@ public class StickerPackAdapter extends RecyclerView.Adapter<StickerPackAdapter.
             mStickersCount = view.findViewWithTag("vkim_cancel_label_text");
         }
 
-        public void bind(int position){
+        public void bind(int position) {
             final TelegramStickersPack pack = sService.getPacksListReference().get(position);
             if (pack.state != TelegramStickersPack.DOWNLOADED) return;
 
@@ -97,7 +97,7 @@ public class StickerPackAdapter extends RecyclerView.Adapter<StickerPackAdapter.
 
             mUpdateButton.setOnClickListener(listener -> {
                 sService.setBotKey(TGPref.getTGBotKey());
-                sService.requestPackDownload(pack.id, new File(getContext().getFilesDir(), new File("VT-Stickers", pack.id).getAbsolutePath()));
+                sService.requestPackDownload(pack.id, new File(getGlobalContext().getFilesDir(), new File("VT-Stickers", pack.id).getAbsolutePath()));
             });
 
             mDeleteButton.setOnClickListener(listener -> {
@@ -108,7 +108,7 @@ public class StickerPackAdapter extends RecyclerView.Adapter<StickerPackAdapter.
             mName.setText(pack.title);
             mSwitch.setChecked(pack.enabled);
             mSwitch.setOnCheckedChangeListener((buttonView, isChecked) -> sService.setPackEnabled(pack, isChecked, false));
-            mStickersCount.setText(pack.stickersCount + " " + Globals.getString("stickerscount"));
+            mStickersCount.setText(pack.stickersCount + " " + AndroidUtils.getString("stickerscount"));
 
             // Color костыль
             int color = getTextAttr();

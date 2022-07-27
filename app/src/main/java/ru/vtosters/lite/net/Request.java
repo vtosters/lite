@@ -1,6 +1,6 @@
 package ru.vtosters.lite.net;
 
-import static ru.vtosters.lite.utils.Globals.getUserToken;
+import static ru.vtosters.lite.utils.AccountManagerUtils.getUserToken;
 
 import android.os.AsyncTask;
 
@@ -11,33 +11,33 @@ import java.io.InputStreamReader;
 import java.net.HttpURLConnection;
 import java.net.URL;
 
-public class Request{
-    public static void makeRequest(byte[] bArr, RequestCallback RequestCallback){
+public class Request {
+    public static void makeRequest(byte[] bArr, RequestCallback RequestCallback) {
         new MakeRequestTask(bArr, RequestCallback).execute();
     }
 
-    public static void makeRequest(String str, RequestCallback RequestCallback){
+    public static void makeRequest(String str, RequestCallback RequestCallback) {
         new MakeRequestTask(str.getBytes(), RequestCallback).execute();
     }
 
-    public interface RequestCallback{
+    public interface RequestCallback {
         void onResponse(String str);
     }
 
-    private static class MakeRequestTask extends AsyncTask<Void, Void, String>{
+    private static class MakeRequestTask extends AsyncTask<Void, Void, String> {
         private final RequestCallback callback;
         private final byte[] url;
         private final boolean mIsPut;
         private final boolean mIsVTostersRequest;
 
-        public MakeRequestTask(byte[] bArr, RequestCallback RequestCallback){
+        public MakeRequestTask(byte[] bArr, RequestCallback RequestCallback) {
             mIsVTostersRequest = false;
             mIsPut = false;
             callback = RequestCallback;
             url = bArr;
         }
 
-        public String doInBackground(Void... voidArr){
+        public String doInBackground(Void... voidArr) {
             try {
                 HttpURLConnection httpURLConnection = (HttpURLConnection) new URL(new String(url)).openConnection();
                 httpURLConnection.setRequestMethod(mIsPut ? "PUT" : "GET");
@@ -53,7 +53,7 @@ public class Request{
                 BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(httpURLConnection.getInputStream()));
 
                 StringBuffer stringBuffer = new StringBuffer();
-                while(true) {
+                while (true) {
                     String readLine = bufferedReader.readLine();
                     if (readLine != null) {
                         stringBuffer.append(readLine);
@@ -68,7 +68,7 @@ public class Request{
             }
         }
 
-        public void onPostExecute(String str){
+        public void onPostExecute(String str) {
             super.onPostExecute(str);
             callback.onResponse(str);
         }

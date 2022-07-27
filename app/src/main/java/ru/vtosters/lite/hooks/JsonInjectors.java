@@ -1,19 +1,11 @@
 package ru.vtosters.lite.hooks;
 
-import static ru.vtosters.lite.f0x1d.VTVerifications.isDeveloper;
-import static ru.vtosters.lite.f0x1d.VTVerifications.isPrometheus;
-import static ru.vtosters.lite.f0x1d.VTVerifications.isVerified;
 import static ru.vtosters.lite.foaf.FoafBase.getLastSeen;
 import static ru.vtosters.lite.hooks.DateHook.getLocale;
 import static ru.vtosters.lite.utils.Base64Utils.decode;
-import static ru.vtosters.lite.utils.Globals.getContext;
-import static ru.vtosters.lite.utils.Globals.getPrefsValue;
-import static ru.vtosters.lite.utils.Globals.getUserId;
-import static ru.vtosters.lite.utils.Globals.getUserToken;
-import static ru.vtosters.lite.utils.Globals.isVKTester;
-import static ru.vtosters.lite.utils.Newsfeed.checkCaption;
-import static ru.vtosters.lite.utils.Newsfeed.checkCopyright;
-import static ru.vtosters.lite.utils.Newsfeed.isBadNews;
+import static ru.vtosters.lite.utils.NewsFeedFiltersUtils.checkCaption;
+import static ru.vtosters.lite.utils.NewsFeedFiltersUtils.checkCopyright;
+import static ru.vtosters.lite.utils.NewsFeedFiltersUtils.isBadNews;
 import static ru.vtosters.lite.utils.Preferences.ads;
 import static ru.vtosters.lite.utils.Preferences.adsgroup;
 import static ru.vtosters.lite.utils.Preferences.adsstories;
@@ -25,15 +17,15 @@ import static ru.vtosters.lite.utils.Preferences.getBoolValue;
 import static ru.vtosters.lite.utils.Preferences.hasVerification;
 import static ru.vtosters.lite.utils.Preferences.podcastcatalog;
 import static ru.vtosters.lite.utils.Preferences.postsrecomm;
+import static ru.vtosters.lite.utils.VTVerifications.isDeveloper;
+import static ru.vtosters.lite.utils.VTVerifications.isPrometheus;
+import static ru.vtosters.lite.utils.VTVerifications.isVerified;
 
-import android.net.Uri;
 import android.util.Log;
 
 import com.vk.core.network.Network;
 import com.vk.core.util.DeviceIdProvider;
 import com.vk.core.util.LangUtils;
-import com.vk.core.util.UriExt;
-import com.vk.webapp.VkUiFragment;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -47,13 +39,14 @@ import java.util.Random;
 import okhttp3.Headers;
 import okhttp3.OkHttpClient;
 import okhttp3.Request;
-import ru.vtosters.lite.utils.Globals;
-import ru.vtosters.lite.utils.Newsfeed;
+import ru.vtosters.lite.utils.AccountManagerUtils;
+import ru.vtosters.lite.utils.AndroidUtils;
+import ru.vtosters.lite.utils.NewsFeedFiltersUtils;
 
-public class JsonInjectors{
+public class JsonInjectors {
     private static final OkHttpClient mClient = new OkHttpClient();
 
-    public static JSONObject profileButton(JSONObject orig) throws JSONException{
+    public static JSONObject profileButton(JSONObject orig) throws JSONException {
         var id = orig.getInt("id");
 
         var newItem = new JSONArray();
@@ -62,11 +55,11 @@ public class JsonInjectors{
             newItem = orig.getJSONArray("buttons");
         }
 
-        if (!haveDonateButton() && id == getUserId()) {
+        if (!haveDonateButton() && id == AccountManagerUtils.getUserId()) {
             newItem.put(donateRecomm());
         }
 
-        if (!orig.has("type") && isVKTester()) {
+        if (!orig.has("type") && AccountManagerUtils.isVKTester()) {
             newItem.put(vktesters(id));
         }
 
@@ -75,7 +68,7 @@ public class JsonInjectors{
         return orig;
     }
 
-    public static JSONObject donateRecomm() throws JSONException{
+    public static JSONObject donateRecomm() throws JSONException {
         var title = "Помоги проекту донатом и получи бонус!";
         var link = "https://vk.com/vtosters_official";
         var text_color = "2D81E0";
@@ -116,7 +109,7 @@ public class JsonInjectors{
         return json;
     }
 
-    public static JSONObject vktesters(int id) throws JSONException{
+    public static JSONObject vktesters(int id) throws JSONException {
         var title = "Карточка Тестера";
         var text_color = "2D81E0";
         var link = "https://static.vk.com/bugs?lang=" + LangUtils.a() + "#/reporter" + id;
@@ -157,7 +150,7 @@ public class JsonInjectors{
         return json;
     }
 
-    public static JSONObject convBar(JSONObject orig) throws JSONException{
+    public static JSONObject convBar(JSONObject orig) throws JSONException {
         var peerid = Objects.requireNonNull(orig.optJSONObject("peer")).optInt("id");
 
         var pic = "https://image.pngaaa.com/641/326641-middle.png"; // can be null
@@ -199,7 +192,7 @@ public class JsonInjectors{
                 + decode("fQ=="));
     }
 
-    public static JSONObject menu(JSONObject orig) throws JSONException{
+    public static JSONObject menu(JSONObject orig) throws JSONException {
         var Special = orig.optJSONArray("special");
         var Main = orig.getJSONArray("main");
         var Other = orig.optJSONArray("other");
@@ -211,8 +204,8 @@ public class JsonInjectors{
         return orig;
     }
 
-    public static JSONObject superapp(JSONObject json) throws JSONException{
-        var superApps = Globals.getPreferences().getString("superapp_items",
+    public static JSONObject superapp(JSONObject json) throws JSONException {
+        var superApps = AndroidUtils.getPreferences().getString("superapp_items",
                 "menu,miniapps,vkpay_slim,greeting,promo,holiday,weather,sport,games,informer,food,event,music,vk_run").split(",");
         if (superApps.length == 0) return json;
 
@@ -240,7 +233,7 @@ public class JsonInjectors{
         return json.putOpt("items", newItems);
     }
 
-    public static JSONObject musiclink(JSONObject json) throws JSONException{
+    public static JSONObject musiclink(JSONObject json) {
         var oldItems = json.optJSONArray("links");
         var section = json.optJSONObject("section");
         var linksblock = section.optJSONArray("blocks");
@@ -259,7 +252,11 @@ public class JsonInjectors{
                     }
                 }
 
-                section.putOpt("blocks", newBlock);
+                try {
+                    section.putOpt("blocks", newBlock);
+                } catch (JSONException e) {
+                    e.printStackTrace();
+                }
 
                 if (dev()) Log.d("VKMusic", "Removed links buttons");
             }
@@ -268,12 +265,12 @@ public class JsonInjectors{
         return json;
     }
 
-    public static JSONObject setOnlineInfo(JSONObject json) throws ParseException, IOException, JSONException{
+    public static JSONObject setOnlineInfo(JSONObject json) throws ParseException, IOException, JSONException {
         var id = json.optInt("id");
         var onlineinfo = json.optJSONObject("online_info");
         var time = getLastSeen(0L, id);
 
-        if (time != 0L && onlineinfo != null && !onlineinfo.optBoolean("is_online") && id != getUserId()) {
+        if (time != 0L && onlineinfo != null && !onlineinfo.optBoolean("is_online") && id != AccountManagerUtils.getUserId()) {
             json.remove("online_info");
 
             var online_info = new JSONObject()
@@ -293,7 +290,7 @@ public class JsonInjectors{
         return json;
     }
 
-    public static JSONObject storiesads(JSONObject json, boolean isDeleteFix) throws JSONException{
+    public static JSONObject storiesads(JSONObject json, boolean isDeleteFix) throws JSONException {
         if (!adsstories()) {
             return json;
         }
@@ -327,7 +324,7 @@ public class JsonInjectors{
         return json;
     }
 
-    private static void parseStoriesItem(JSONObject item) throws JSONException{
+    private static void parseStoriesItem(JSONObject item) throws JSONException {
         var stories = item.optJSONArray("stories");
         var newStories = new JSONArray();
 
@@ -347,7 +344,7 @@ public class JsonInjectors{
         item.put("stories", newStories);
     }
 
-    public static Boolean isAds(JSONObject list, String type) throws JSONException{
+    public static Boolean isAds(JSONObject list, String type) throws JSONException {
         if (list == null || type == null || !ads()) return false;
 
         if (list.has("ads")
@@ -373,7 +370,7 @@ public class JsonInjectors{
         return false;
     }
 
-    public static JSONArray newsfeedlist(JSONArray items) throws JSONException{
+    public static JSONArray newsfeedlist(JSONArray items) throws JSONException {
         for (int j = 0; j < items.length(); j++) {
             var list = items.optJSONObject(j);
             var name = list.optString("id");
@@ -387,7 +384,7 @@ public class JsonInjectors{
         return items;
     }
 
-    public static JSONArray newsfeedadtest(JSONArray items) throws JSONException{
+    public static JSONArray newsfeedadtest(JSONArray items) throws JSONException {
         if (!getBoolValue("newadblock", true)) return items;
         var newItems = new JSONArray();
 
@@ -445,7 +442,7 @@ public class JsonInjectors{
                 continue;
             }
 
-            if (Newsfeed.injectFiltersReposts(list)) {
+            if (NewsFeedFiltersUtils.injectFiltersReposts(list)) {
                 if (dev())
                     Log.d("NewsfeedAdBlockV2", "Removed post " + list.optInt("post_id") + " from feed, Reason: repost ad");
                 continue;
@@ -457,7 +454,7 @@ public class JsonInjectors{
         return newItems;
     }
 
-    public static JSONObject music(JSONObject json) throws JSONException{
+    public static JSONObject music(JSONObject json) throws JSONException {
         var catalog = json.optJSONObject("catalog");
 
         JSONArray oldItems = null;
@@ -527,11 +524,11 @@ public class JsonInjectors{
                 var title = item.optString("title");
                 var id = item.optString("id");
                 var url = item.optString("url");
-                var value = getPrefsValue("musicdefcatalog");
+                var value = AndroidUtils.getPrefsValue("musicdefcatalog");
 
                 Log.d("VKMusic", "title: " + title + " id: " + id + " url: " + url + " value: " + value);
 
-                if (url.contains(value) && !value.isEmpty() && !value.equals("default")) {
+                if (url.contains(value)) {
                     catalog.put("default_section", id);
                     if (dev()) Log.d("VKMusic", "Added " + title + " as default music section");
                 }
@@ -541,7 +538,7 @@ public class JsonInjectors{
         return json;
     }
 
-    public static JSONObject fetchCatalogId(String section){
+    public static JSONObject fetchCatalogId(String section) {
         if (section == null) return null;
 
         var request = new Request.a()
@@ -552,11 +549,11 @@ public class JsonInjectors{
                         + "&lang="
                         + getLocale()
                         + "&device_id="
-                        + DeviceIdProvider.d(getContext())
+                        + DeviceIdProvider.d(AndroidUtils.getGlobalContext())
                         + "&url="
                         + section
                         + "&access_token="
-                        + getUserToken())
+                        + AccountManagerUtils.getUserToken())
                 .a(Headers.a("User-Agent", Network.l.c().a(), "Content-Type", "application/x-www-form-urlencoded; charset=utf-8")).a();
         try {
             return new JSONObject(mClient.a(request).execute().a().g()).getJSONObject("response");
@@ -567,7 +564,7 @@ public class JsonInjectors{
         return null;
     }
 
-    public static JSONObject fetchCatalogPodcast(){
+    public static JSONObject fetchCatalogPodcast() {
         var request = new Request.a()
                 .b("https://api.vk.com/method/catalog.getPodcasts"
                         + "?v=5.119"
@@ -576,9 +573,9 @@ public class JsonInjectors{
                         + "&lang="
                         + getLocale()
                         + "&device_id="
-                        + DeviceIdProvider.d(getContext())
+                        + DeviceIdProvider.d(AndroidUtils.getGlobalContext())
                         + "&access_token="
-                        + getUserToken())
+                        + AccountManagerUtils.getUserToken())
                 .a(Headers.a("User-Agent", Network.l.c().a(), "Content-Type", "application/x-www-form-urlencoded; charset=utf-8")).a();
         try {
             return new JSONObject(mClient.a(request).execute().a().g()).getJSONObject("response");
@@ -589,7 +586,7 @@ public class JsonInjectors{
         return null;
     }
 
-    public static JSONObject friends(JSONObject json) throws JSONException{
+    public static JSONObject friends(JSONObject json) throws JSONException {
         JSONObject catalog = json;
         boolean sectionexecute = true;
         boolean hasBirthday = false;
@@ -656,7 +653,7 @@ public class JsonInjectors{
     }
 
 
-    public static boolean haveDonateButton(){
+    public static boolean haveDonateButton() {
         int randomshower = new Random().nextInt(6);
 
         return hasVerification() || randomshower != 1;

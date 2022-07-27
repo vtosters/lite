@@ -125,7 +125,7 @@
 
     if-eqz p1, :cond_1
 
-    invoke-static {}, Lru/vtosters/lite/f0x1d/VTVerifications;->vtverif()Z
+    invoke-static {}, Lru/vtosters/lite/utils/VTVerifications;->vtverif()Z
 
     move-result p2
 
@@ -135,7 +135,7 @@
 
     move-result p2
 
-    invoke-static {p2}, Lru/vtosters/lite/f0x1d/VTVerifications;->isVerified(I)Z
+    invoke-static {p2}, Lru/vtosters/lite/utils/VTVerifications;->isVerified(I)Z
 
     move-result v0
 
@@ -144,7 +144,7 @@
     goto :goto_0
 
     :cond_45
-    invoke-static {}, Lru/vtosters/lite/f0x1d/VTVerifications;->vtverif()Z
+    invoke-static {}, Lru/vtosters/lite/utils/VTVerifications;->vtverif()Z
 
     move-result p2
 
@@ -154,7 +154,7 @@
 
     move-result p2
 
-    invoke-static {p2}, Lru/vtosters/lite/f0x1d/VTVerifications;->isVerified(I)Z
+    invoke-static {p2}, Lru/vtosters/lite/utils/VTVerifications;->isVerified(I)Z
 
     move-result v0
 

@@ -1,8 +1,9 @@
 package ru.vtosters.lite.hooks;
-import static ru.vtosters.lite.utils.Preferences.*;
+
 import static ru.vtosters.lite.utils.Preferences.feedcache;
 import static ru.vtosters.lite.utils.Preferences.getBoolValue;
 import static ru.vtosters.lite.utils.Preferences.milkshake;
+import static ru.vtosters.lite.utils.Preferences.miniapps;
 import static ru.vtosters.lite.utils.Preferences.musicnewcatalog;
 import static ru.vtosters.lite.utils.Preferences.postsredesign;
 import static ru.vtosters.lite.utils.Preferences.superapp;
@@ -10,11 +11,9 @@ import static ru.vtosters.lite.utils.Preferences.superapp;
 import com.vk.toggle.FeatureManager;
 import com.vk.toggle.Features;
 
-import ru.vtosters.lite.utils.Preferences;
-
-public class TogglesHook{
-    public static boolean shouldPatch(Features.Type feature){
-        switch(feature) {
+public class TogglesHook {
+    public static boolean shouldPatch(Features.Type feature) {
+        switch (feature) {
             case AB_IM_LONGPOLL_MSG_BATCHING:
             case AB_IM_VIEW_POOL:
             case AB_MULTI_GIFTS:
@@ -123,8 +122,8 @@ public class TogglesHook{
         }
     }
 
-    public static boolean redirect(Features.Type feature){
-        switch(feature) {
+    public static boolean redirect(Features.Type feature) {
+        switch (feature) {
             case EXPERIMENT_NEWS_DISABLE_CACHE:
                 return !feedcache();
             case FEATURE_SUPERAPP_MENU:
@@ -149,7 +148,7 @@ public class TogglesHook{
         }
     }
 
-    public static FeatureManager.b redirectStrings(Features.Type feature){
+    public static FeatureManager.b redirectStrings(Features.Type feature) {
         return null;
     }
 }

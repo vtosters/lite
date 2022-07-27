@@ -18,14 +18,14 @@ import java.lang.reflect.Method;
 import java.net.NetworkInterface;
 import java.util.Collections;
 
-public class DeviceInfoCollector{
+public class DeviceInfoCollector {
     private static final String TAG = "DeviceInfoCollector";
 
-    public Device collect(Context context){
+    public Device collect(Context context) {
         return new Device().withSerialId(serialId()).withAndroidId(androidId(context)).withWifiMac(wifiMac(context)).withBluetoothMac(bluetoothMac(context)).withSdkVersion(Build.VERSION.SDK_INT).withFirmwareId(Build.ID).withFirmwareDisplay(Build.DISPLAY).withProductName(Build.PRODUCT).withDeviceName(Build.DEVICE).withBoardName(Build.BOARD).withCpuAbi(Build.CPU_ABI).withManufacturerName(Build.MANUFACTURER).withBrandName(Build.BRAND).withModelName(Build.MODEL);
     }
 
-    private String serialId(){
+    private String serialId() {
         String str;
         try {
             Class<?> cls = Class.forName("android.os.SystemProperties");
@@ -53,11 +53,11 @@ public class DeviceInfoCollector{
         return null;
     }
 
-    private String androidId(Context context){
+    private String androidId(Context context) {
         return Settings.Secure.getString(context.getContentResolver(), "android_id").toLowerCase();
     }
 
-    private String wifiMac(Context context){
+    private String wifiMac(Context context) {
         String wifiMacFromManager = wifiMacFromManager(context);
         if (isInvalidMac(wifiMacFromManager)) {
             wifiMacFromManager = wifiMacFromNetworkInterfaces();
@@ -74,7 +74,7 @@ public class DeviceInfoCollector{
         return null;
     }
 
-    private String wifiMacFromManager(Context context){
+    private String wifiMacFromManager(Context context) {
         WifiInfo connectionInfo;
         try {
             WifiManager wifiManager = (WifiManager) context.getApplicationContext().getSystemService(Context.WIFI_SERVICE);
@@ -88,7 +88,7 @@ public class DeviceInfoCollector{
         }
     }
 
-    private String wifiMacFromNetworkInterfaces(){
+    private String wifiMacFromNetworkInterfaces() {
         try {
             for (NetworkInterface networkInterface : Collections.list(NetworkInterface.getNetworkInterfaces())) {
                 if ("wlan0".equalsIgnoreCase(networkInterface.getName())) {
@@ -114,7 +114,7 @@ public class DeviceInfoCollector{
         }
     }
 
-    private String wifiMacFromFileSystem(){
+    private String wifiMacFromFileSystem() {
         try {
             FileReader fileReader = new FileReader("/sys/class/net/wlan0/address");
             try {
@@ -137,7 +137,7 @@ public class DeviceInfoCollector{
         return null;
     }
 
-    private String bluetoothMac(Context context){
+    private String bluetoothMac(Context context) {
         String bluetoothMacFromAdapter = bluetoothMacFromAdapter();
         if (isInvalidMac(bluetoothMacFromAdapter)) {
             bluetoothMacFromAdapter = bluetoothMacFromContentResolver(context);
@@ -151,7 +151,7 @@ public class DeviceInfoCollector{
         return null;
     }
 
-    private String bluetoothMacFromAdapter(){
+    private String bluetoothMacFromAdapter() {
         try {
             BluetoothAdapter defaultAdapter = BluetoothAdapter.getDefaultAdapter();
             if (defaultAdapter == null) {
@@ -173,7 +173,7 @@ public class DeviceInfoCollector{
         }
     }
 
-    private String bluetoothMacFromContentResolver(Context context){
+    private String bluetoothMacFromContentResolver(Context context) {
         try {
             return Settings.Secure.getString(context.getContentResolver(), "bluetooth_address");
         } catch (Exception e) {
@@ -182,11 +182,11 @@ public class DeviceInfoCollector{
         }
     }
 
-    private boolean isInvalidSerial(String str){
+    private boolean isInvalidSerial(String str) {
         return TextUtils.isEmpty(str) || EnvironmentCompat.MEDIA_UNKNOWN.equalsIgnoreCase(str);
     }
 
-    private boolean isInvalidMac(String str){
+    private boolean isInvalidMac(String str) {
         return TextUtils.isEmpty(str) || "02:00:00:00:00:00".equalsIgnoreCase(str) || "00:00:00:00:00:00".equalsIgnoreCase(str);
     }
 }
