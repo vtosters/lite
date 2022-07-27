@@ -37,16 +37,17 @@
             android:title="@string/sett_compress_videos" />
     </PreferenceCategory>
     <PreferenceCategory android:title="Last.fm">
+        <com.vtosters.lite.ui.MaterialSwitchPreference
+            android:defaultValue="false"
+            android:key="lastfm_enabled"
+            android:summary="Полезный сервис по учету прослушивания песен"
+            android:title="Включить скробблинг" />
         <Preference
             android:key="lastfm_auth"
             android:title="Войти в аккаунт" />
         <Preference
             android:key="lastfm_reset"
-            android:title="Сбросить настройки аккаунта" />
-        <com.vtosters.lite.ui.MaterialSwitchPreference
-            android:defaultValue="false"
-            android:key="lastfm_enabled"
-            android:title="Включить скробблинг" />
+            android:title="Выйти из аккаунта" />
     </PreferenceCategory>
     <PreferenceCategory android:title="Музыка">
         <com.vtosters.lite.ui.MaterialSwitchPreference

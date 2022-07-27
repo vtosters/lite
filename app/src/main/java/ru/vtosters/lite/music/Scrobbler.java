@@ -24,11 +24,11 @@ import ru.vtosters.lite.net.NetResponse;
 import ru.vtosters.lite.utils.Preferences;
 
 public class Scrobbler{
-    public static final String key = "5965d63402414776c54c266db0211746";
-    public static final String keysecret = "d982180eed13275bb948e41cf225f88f";
-    public static final String url = "https://ws.audioscrobbler.com/2.0/";
+    private static final String key = "5965d63402414776c54c266db0211746";
+    private static final String keysecret = "d982180eed13275bb948e41cf225f88f";
+    private static final String url = "https://ws.audioscrobbler.com/2.0/";
     private static final NetClient client = new NetClient.Builder().build();
-    public static ArrayList<String> scrobbled = new ArrayList<>();
+    private static ArrayList<String> scrobbled = new ArrayList<>();
 
     public static void scrobbleTrack(long duration, String artist, String title, String uid){
         var string = getDefaultPrefs().getString("sessionKey", null);
@@ -36,9 +36,14 @@ public class Scrobbler{
 
         Log.d("Scrobbler", "scrobbleTrack: " + title + " - " + artist + " - " + duration + " - " + uid);
 
-        if (!needToBeScrobble(uid)) {
-            return;
-        }
+        if (!needToBeScrobble(uid) ||
+                string == null ||
+                string.isEmpty() ||
+                artist == null ||
+                artist.isEmpty() ||
+                title == null ||
+                title.isEmpty() ||
+                duration == 0) return;
 
         scrobbled.add(uid); // add to scrobbled list
 
@@ -74,12 +79,18 @@ public class Scrobbler{
             sb.append(entry.getKey());
             sb.append(entry.getValue());
         }
+
         sb.append(keysecret);
 
         return MD5(sb.toString());
     }
 
     public static void auth(String login, String pass){
+        if (login == null || pass == null) {
+            sendToast("Логин или пароль не заданы");
+            return;
+        }
+
         TreeMap<String, String> treeMap = new TreeMap<>(); // create map for request
         treeMap.put("method", "auth.getMobileSession");
         treeMap.put("api_key", key);
@@ -98,17 +109,29 @@ public class Scrobbler{
             @Override
             public void onResponse(NetCall call, NetResponse response){
                 try {
-                    JSONObject jSONObject = new JSONObject(response.getDataString()).getJSONObject("session");
-                    String string = jSONObject.getString("name");
-                    getDefaultPrefs().edit().putString("username", string).putString("sessionKey", jSONObject.getString("key")).apply();
-                    sendToast("Успешно вошли как " + string);
-
-                    Log.d("Scrobbler", "Auth " + response.getDataString());
+                    var jSONObject = new JSONObject(response.getDataString());
+                    sessionFetcher(jSONObject);
+                    Log.d("Scrobbler", "Auth response " + response.getDataString());
                 } catch (JSONException e) {
                     Log.d("Scrobbler", "Auth failed", e);
                 }
             }
         });
+    }
+
+    public static void sessionFetcher(JSONObject jsonObject) throws JSONException{
+        if (!jsonObject.has("session")) {
+            Log.d("Scrobbler", "Auth failed - no session");
+            return;
+        }
+
+        var session = jsonObject.getJSONObject("session");
+        var name = session.getString("name");
+        var key = session.getString("key");
+
+        getDefaultPrefs().edit().putString("username", name).putString("sessionKey", key).apply();
+
+        Log.d("Scrobbler", "Auth success as " + name + ", key " + key);
     }
 
     public static void reset(){
@@ -123,7 +146,7 @@ public class Scrobbler{
     }
 
     public static boolean isLoggedIn(){
-        return !getDefaultPrefs().getString("sessionKey", null).isEmpty();
+        return getDefaultPrefs().getString("sessionKey", null) != null;
     }
 
     public static boolean isScrobblingEnabled(){
