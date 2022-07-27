@@ -8,6 +8,7 @@ import static ru.vtosters.lite.utils.AndroidUtils.getIdentifier;
 import static ru.vtosters.lite.utils.AndroidUtils.getPreferences;
 import static ru.vtosters.lite.utils.AndroidUtils.sendToast;
 import static ru.vtosters.lite.utils.LifecycleUtils.restartApplicationWithTimer;
+import static ru.vtosters.lite.utils.Preferences.offline;
 import static ru.vtosters.lite.utils.ThemesUtils.getAccentColor;
 import static ru.vtosters.lite.utils.ThemesUtils.getAlertStyle;
 import static ru.vtosters.lite.utils.ThemesUtils.getSTextAttr;
@@ -115,6 +116,15 @@ public class MediaFragment extends MaterialPreferenceToolbarFragment {
             Scrobbler.reset();
             return true;
         });
+
+        if (isLoggedIn()) {
+            findPreference("lastfm_auth").setSummary("Вы авторизованы как " + Scrobbler.getUserName());
+            findPreference("lastfm_auth").setEnabled(false);
+        } else {
+            findPreference("lastfm_reset").setEnabled(false);
+            findPreference("lastfm_enabled").setEnabled(false);
+        }
+
         findPreference("select_photo_search_engine").setOnPreferenceClickListener(preference -> {
             var items = Arrays.asList(
                     new ImagineArrayAdapter.ImagineArrayAdapterItem(getIdentifier("yandex", "drawable"), "Yandex"),
@@ -137,6 +147,20 @@ public class MediaFragment extends MaterialPreferenceToolbarFragment {
 
             return true;
         });
+    }
+
+    @Override
+    public boolean onPreferenceTreeClick(Preference preference) {
+
+        if (isLoggedIn()) {
+            findPreference("lastfm_auth").setSummary("Вы авторизованы как " + Scrobbler.getUserName());
+            findPreference("lastfm_auth").setEnabled(false);
+        } else {
+            findPreference("lastfm_reset").setEnabled(false);
+            findPreference("lastfm_enabled").setEnabled(false);
+        }
+
+        return super.onPreferenceTreeClick(preference);
     }
 
     public class download implements Preference.OnPreferenceClickListener {
