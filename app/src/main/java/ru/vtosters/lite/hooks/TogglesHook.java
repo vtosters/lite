@@ -44,7 +44,6 @@ public class TogglesHook{
             case FEATURE_ML_FEATURES:
             case FEATURE_ML_MODELS_LOADING:
             case FEATURE_MONEY_TRANSFERS_VKPAY:
-            case FEATURE_MOZJPEG:
             case FEATURE_MUSIC_ARTIST_CATALOG:
             case FEATURE_MUSIC_NEW_CATALOG:
             case FEATURE_NARRATIVE_SNIPPET_TYPE:
