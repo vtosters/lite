@@ -238,6 +238,22 @@
 
     .line 6
     iget v2, p0, Lcom/vk/im/engine/internal/api_commands/messages/MessagesGetConversationsApiCmd;->a:I
+    
+    # major_sort_id support START
+    const-string v3, "major_sort_id"
+
+    const-string v4, "1023"
+
+    const v5, 0x7fffffff
+
+    if-eq v5, v2, :cond_4
+
+    const-string v4, "0"
+
+    .line 6
+    :cond_4
+    invoke-virtual {v1, v3, v4}, Lcom/vk/api/internal/MethodCall$a;->a(Ljava/lang/String;Ljava/lang/String;)Lcom/vk/api/internal/MethodCall$a;
+    # major_sort_id support END
 
     invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
