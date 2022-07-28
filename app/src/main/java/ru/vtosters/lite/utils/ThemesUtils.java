@@ -45,7 +45,8 @@ import java.util.List;
 
 public class ThemesUtils {
     public static List<String> accentColors = Arrays.asList(
-            "5692d7", "528bcc", "7aa0cc", "518bcc", "6296d0", "2f68aa", "638ebf", "5181b8", "71aaeb", "4774a8", "5baaf4", "4186c8", "add3ff", "4774a8", "718198", "5a9eff", "99a2ad", "74a2d6", "e9eef3", "dfe3e7", "eff1f3", "5c9ce6", "4986cc", "4680c2"
+            "3f8ae0",
+            "5692d7", "528bcc", "7aa0cc", "518bcc", "6296d0", "2f68aa", "638ebf", "5181b8", "71aaeb", "4774a8", "5baaf4", "4186c8", "add3ff", "718198", "5a9eff", "99a2ad", "74a2d6", "e9eef3", "dfe3e7", "eff1f3", "5c9ce6", "4986cc", "4680c2"
     );
 
     public static void applyTheme(VKTheme theme) {
@@ -75,7 +76,7 @@ public class ThemesUtils {
     }
 
     public static int getAccentColor() {
-        return getColor2(R.color.red);
+        return getResources().getColor(R.color.red);
         //return getColorFromAttr(getAttrId("accent"));
     } // Color accent
 
@@ -160,9 +161,6 @@ public class ThemesUtils {
         return VKThemeHelper.d(attr);
     } // Get needed attr color
 
-    public static boolean isAndroidMonet() {
-        return color_grishka() && Build.VERSION.SDK_INT >= 31;
-    }
 
     public static void colorWriteBar(View view) {
         if (!navbar()) return;
@@ -195,7 +193,7 @@ public class ThemesUtils {
 
         if (drawable == null) return null;
 
-        if (isAndroidMonet() || isDarkTheme()) accent = getAccentColor();
+        if (isDarkTheme()) accent = getAccentColor();
 
         return new RecoloredDrawable(drawable, accent);
     } // Recolor vk icon to accent color
@@ -204,14 +202,11 @@ public class ThemesUtils {
     public static Drawable recolorDrawableToolbar(Drawable drawable) {
         if (drawable == null) return null;
 
-        if (!isAndroidMonet()) return drawable;
-
         return new RecoloredDrawable(drawable, getHeaderText());
     } // Recolor toolbar drawable to accent color
 
     @SuppressLint("UseCompatLoadingForDrawables")
     public static Drawable recolorDrawableInt(int drawable) {
-        if (!isAndroidMonet()) return getResources().getDrawable(drawable);
 
         @SuppressLint("UseCompatLoadingForDrawables") Drawable res = getResources().getDrawable(drawable);
         return new RecoloredDrawable(res, getAccentColor());
@@ -220,14 +215,12 @@ public class ThemesUtils {
     public static ColorStateList recolorCSL(ColorStateList colorStateList) {
         if (colorStateList == null) return null;
 
-        if (!isAndroidMonet()) return colorStateList;
-
         return ColorStateList.valueOf(getAccentColor());
     } // Recolor ColorStateList to accent color
 
     @SuppressLint("UseCompatLoadingForColorStateLists")
     public static ColorStateList themeCSL(Context context, int color) {
-        if (isColorRefAccented(color) && isAndroidMonet()) {
+        if (isColorRefAccented(color)) {
             return ColorStateList.valueOf(getAccentColor());
         }
 
@@ -316,14 +309,14 @@ public class ThemesUtils {
     }
 
     public static int getColor(Context context, int i) {
-        if (isColorRefAccented(i) && isAndroidMonet()) {
+        if (isColorRefAccented(i)) {
             return getAccentColor();
         }
         return context.getColor(i);
     } // Android Support color injector + accent color checker
 
     public static int getColor2(int i) {
-        if (isColorRefAccented(i) && isAndroidMonet()) {
+        if (isColorRefAccented(i)) {
             return getAccentColor();
         }
         return getResources().getColor(i);
