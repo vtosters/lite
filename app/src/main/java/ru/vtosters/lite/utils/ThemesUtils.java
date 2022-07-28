@@ -75,7 +75,8 @@ public class ThemesUtils {
     }
 
     public static int getAccentColor() {
-        return getColorFromAttr(getAttrId("accent"));
+        return getColor2(R.color.red);
+        //return getColorFromAttr(getAttrId("accent"));
     } // Color accent
 
     public static int getTextAttr() {
