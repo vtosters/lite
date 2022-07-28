@@ -1,14 +1,11 @@
 package ru.vtosters.lite.ui.fragments;
 
 import static ru.vtosters.lite.music.Scrobbler.isLoggedIn;
-import static ru.vtosters.lite.ui.PreferencesUtil.getSTextColor;
 import static ru.vtosters.lite.utils.AndroidUtils.dp2px;
 import static ru.vtosters.lite.utils.AndroidUtils.edit;
 import static ru.vtosters.lite.utils.AndroidUtils.getIdentifier;
 import static ru.vtosters.lite.utils.AndroidUtils.getPreferences;
-import static ru.vtosters.lite.utils.AndroidUtils.sendToast;
 import static ru.vtosters.lite.utils.LifecycleUtils.restartApplicationWithTimer;
-import static ru.vtosters.lite.utils.Preferences.offline;
 import static ru.vtosters.lite.utils.ThemesUtils.getAccentColor;
 import static ru.vtosters.lite.utils.ThemesUtils.getAlertStyle;
 import static ru.vtosters.lite.utils.ThemesUtils.getSTextAttr;
@@ -55,7 +52,23 @@ public class MediaFragment extends MaterialPreferenceToolbarFragment {
         alert.getButton(DialogInterface.BUTTON_POSITIVE).setTextColor(getAccentColor());
     }
 
-    public void lastfmAuth(Context ctx) {
+    private void logout(Context ctx) {
+        VkAlertDialog.Builder alertDialog = new VkAlertDialog.Builder(ctx);
+        alertDialog.setTitle("Вы уверены?");
+        alertDialog.setMessage("Вы действительно хотите выйти из аккаунта?");
+        alertDialog.setPositiveButton("Да", (dialog, which) -> {
+            Scrobbler.logout();
+        });
+        alertDialog.setNeutralButton("Нет", (dialog, which) -> {
+            dialog.cancel();
+        });
+        var alert = alertDialog.create();
+        alert.show();
+        alert.getButton(DialogInterface.BUTTON_POSITIVE).setTextColor(getAccentColor());
+        alert.getButton(DialogInterface.BUTTON_NEUTRAL).setTextColor(getResources().getColor(com.vtosters.lite.R.color.red));
+    }
+
+    private void lastfmAuth(Context ctx) {
         LinearLayout linearLayout = new LinearLayout(ctx);
         linearLayout.setOrientation(LinearLayout.VERTICAL);
 
@@ -106,22 +119,16 @@ public class MediaFragment extends MaterialPreferenceToolbarFragment {
         findPreference("dateformat").setOnPreferenceChangeListener(new MediaFragment.restart());
         findPreference("lastfm_auth").setOnPreferenceClickListener(preference -> {
             if (isLoggedIn()) {
-                sendToast("Вы уже авторизованы");
+                logout(getContext());
             } else {
                 lastfmAuth(getContext());
             }
             return true;
         });
-        findPreference("lastfm_reset").setOnPreferenceClickListener(preference -> {
-            Scrobbler.reset();
-            return true;
-        });
 
         if (isLoggedIn()) {
             findPreference("lastfm_auth").setSummary("Вы авторизованы как " + Scrobbler.getUserName());
-            findPreference("lastfm_auth").setEnabled(false);
         } else {
-            findPreference("lastfm_reset").setEnabled(false);
             findPreference("lastfm_enabled").setEnabled(false);
         }
 
@@ -149,21 +156,7 @@ public class MediaFragment extends MaterialPreferenceToolbarFragment {
         });
     }
 
-    @Override
-    public boolean onPreferenceTreeClick(Preference preference) {
-
-        if (isLoggedIn()) {
-            findPreference("lastfm_auth").setSummary("Вы авторизованы как " + Scrobbler.getUserName());
-            findPreference("lastfm_auth").setEnabled(false);
-        } else {
-            findPreference("lastfm_reset").setEnabled(false);
-            findPreference("lastfm_enabled").setEnabled(false);
-        }
-
-        return super.onPreferenceTreeClick(preference);
-    }
-
-    public class download implements Preference.OnPreferenceClickListener {
+    private class download implements Preference.OnPreferenceClickListener {
         @Override // android.support.v7.preference.Preference.c
         public boolean onPreferenceClick(Preference preference) {
             download(getActivity());
@@ -171,7 +164,7 @@ public class MediaFragment extends MaterialPreferenceToolbarFragment {
         }
     }
 
-    public static class restart implements Preference.OnPreferenceChangeListener {
+    private static class restart implements Preference.OnPreferenceChangeListener {
         @Override
         public boolean onPreferenceChange(Preference preference, Object o) {
             edit().putString("dateformat", o.toString()).commit();

@@ -5,9 +5,11 @@ import static android.widget.Toast.makeText;
 import static ru.vtosters.lite.tgs.TGPref.setTGBotKey;
 import static ru.vtosters.lite.utils.AndroidUtils.dp2px;
 import static ru.vtosters.lite.utils.AndroidUtils.getIdentifier;
+import static ru.vtosters.lite.utils.AndroidUtils.sendToast;
 import static ru.vtosters.lite.utils.ThemesUtils.getAccentColor;
 import static ru.vtosters.lite.utils.ThemesUtils.getSTextAttr;
 
+import android.annotation.SuppressLint;
 import android.app.AlertDialog;
 import android.app.ProgressDialog;
 import android.content.BroadcastReceiver;
@@ -40,7 +42,6 @@ import com.vk.navigation.Navigator;
 import java.io.File;
 
 import ru.vtosters.lite.tgs.TGPref;
-import ru.vtosters.lite.ui.PreferencesUtil;
 import ru.vtosters.lite.ui.adapters.StickerPackAdapter;
 import ru.vtosters.lite.ui.fragments.BaseToolbarFragment;
 import ru.vtosters.lite.utils.AndroidUtils;
@@ -54,11 +55,10 @@ public class StickersFragment extends BaseToolbarFragment {
     public int to;
     private TelegramStickersGrabber mGrabber;
     private TelegramStickersService mService;
-    private FloatingActionButton mAddStickerPack;
-    private RecyclerView mRecycler;
     private StickerPackAdapter mAdapter;
     private boolean movePending = false;
     private final BroadcastReceiver mReceiver = new BroadcastReceiver() {
+        @SuppressLint("NotifyDataSetChanged")
         @Override
         public void onReceive(Context context, Intent intent) {
             if (intent.getAction().equals(ACTION_RELOAD)) {
@@ -84,7 +84,7 @@ public class StickersFragment extends BaseToolbarFragment {
     protected void onCreateMenu(Menu menu) {
         var item = menu.add(0, 0, 0, "");
         item.setShowAsAction(MenuItem.SHOW_AS_ACTION_ALWAYS);
-        item.setIcon(getResources().getDrawable(getIdentifier("ic_settings_24", "drawable")));
+        item.setIcon(getIdentifier("ic_settings_24", "drawable"));
 
         super.onCreateMenu(menu);
     }
@@ -120,12 +120,12 @@ public class StickersFragment extends BaseToolbarFragment {
         FrameLayout layout = new FrameLayout(getContext());
 
         mAdapter = new StickerPackAdapter();
-        mRecycler = new RecyclerView(getContext());
+        RecyclerView mRecycler = new RecyclerView(getContext());
         mRecycler.setAdapter(mAdapter);
         mRecycler.setLayoutManager(new StaggeredGridLayoutManager(2, StaggeredGridLayoutManager.VERTICAL));
         layout.addView(mRecycler, new ViewGroup.LayoutParams(-1, -1));
 
-        mAddStickerPack = new FloatingActionButton(getContext());
+        FloatingActionButton mAddStickerPack = new FloatingActionButton(getContext());
         mAddStickerPack.setImageResource(getIdentifier("ic_add_24", "drawable"));
         mAddStickerPack.setBackgroundTintList(ColorStateList.valueOf(getAccentColor()));
         mAddStickerPack.setOnClickListener(v2 -> fabClick());
@@ -182,10 +182,17 @@ public class StickersFragment extends BaseToolbarFragment {
                 dlg.setView(linearLayout);
                 dlg.setPositiveButton(android.R.string.ok, (dialog, which) -> {
                     String pack = editText.getText().toString();
+                    if (!pack.startsWith("https://")) {
+                        pack = "https://" + pack;
+                    } else if (!pack.contains("addstickers")) {
+                        sendToast("Invalid pack name");
+                    }
                     pack = parsePack(pack);
                     mService.requestPackDownload(pack, new File(getContext().getFilesDir(), new File("VT-Stickers", pack).getAbsolutePath()));
                 });
-                dlg.setNeutralButton(android.R.string.cancel, null);
+                dlg.setNeutralButton(android.R.string.cancel, (dialog, which) -> {
+                    dialog.dismiss();
+                });
 
                 var alert = dlg.create();
 
@@ -247,9 +254,10 @@ public class StickersFragment extends BaseToolbarFragment {
             setTGBotKey(editText.getText().toString());
             if (r != null) r.run();
         });
-        dlg.setNegativeButton(android.R.string.cancel, null)
-                .setNeutralButton(AndroidUtils.getString("stickersapi7"),
-                        (dialog, which) -> alert.show());
+        dlg.setNegativeButton(android.R.string.cancel, (dialog, which) -> {
+            dialog.dismiss();
+        });
+        dlg.setNeutralButton(AndroidUtils.getString("stickersapi7"), (dialog, which) -> alert.show());
         var alerts = dlg.create();
 
         alerts.show();
