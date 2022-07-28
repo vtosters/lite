@@ -305,7 +305,7 @@ public class ThemesUtils {
     }
 
     public static boolean isAccentedColor(int target) {
-        return accentColors.contains(hex(target).toLowerCase());
+        return accentColors.contains(hex2(target).toLowerCase());
     }
 
     public static int getColor(Context context, int i) {
@@ -368,6 +368,10 @@ public class ThemesUtils {
     public static String hex(int i) {
         return String.format("#%06X", Integer.valueOf(i & 16777215));
     } // Get color as hex string
+
+    public static String hex2(int i) {
+        return String.format("%06X", Integer.valueOf(i & 16777215));
+    }
 
     public static int getNavigationHeight(int Default) {
         int VKME = R.dimen.design_bottom_sheet_peek_height_min;
