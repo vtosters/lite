@@ -3,6 +3,7 @@ package ru.vtosters.lite.hooks;
 import static ru.vtosters.lite.utils.AndroidUtils.getIdentifier;
 import static ru.vtosters.lite.utils.AndroidUtils.getPreferences;
 
+import android.annotation.SuppressLint;
 import android.content.ClipData;
 import android.content.ClipboardManager;
 import android.content.Context;
@@ -52,6 +53,7 @@ public class PhotoViewer {
         return true;
     }
 
+    @SuppressLint("UseCompatLoadingForDrawables")
     public static void addMenuItems(AttachmentWithMedia attachment, ActionsPopup.b actionPopup, int i, boolean z) {
         actionPopup.a(getIdentifier("search_photo_content", "string"),
                 ThemesUtils.isDarkTheme()

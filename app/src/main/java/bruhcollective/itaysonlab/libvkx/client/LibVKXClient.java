@@ -46,8 +46,6 @@ public class LibVKXClient{
     }
 
     public static boolean play(MusicTrack musicTrack, List<MusicTrack> list, MusicPlaybackLaunchContext playerRefer){
-        scrobbleTrack(musicTrack.h, musicTrack.C, musicTrack.f, musicTrack.y1());
-
         if (!isIntegrationEnabled()) {
             return false;
         }

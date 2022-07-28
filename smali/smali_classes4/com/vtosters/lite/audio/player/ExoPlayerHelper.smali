@@ -703,6 +703,8 @@
 
     .line 17
     :cond_0
+    invoke-static {p1}, Lru/vtosters/lite/music/Scrobbler;->grabMusicTrack(Lcom/vk/dto/music/MusicTrack;)V
+
     invoke-virtual {p1}, Lcom/vk/dto/music/MusicTrack;->y1()Ljava/lang/String;
 
     move-result-object p1
