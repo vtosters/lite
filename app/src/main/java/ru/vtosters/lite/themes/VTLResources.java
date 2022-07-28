@@ -3,9 +3,12 @@ package ru.vtosters.lite.themes;
 import android.content.Context;
 import android.content.res.Resources;
 import android.content.res.TypedArray;
+import android.graphics.drawable.Drawable;
 import android.util.AttributeSet;
 import android.util.Log;
 import android.util.TypedValue;
+
+import androidx.annotation.Nullable;
 
 import java.lang.reflect.Field;
 import java.util.ArrayList;
@@ -66,10 +69,18 @@ public class VTLResources extends Resources {
         return typedArray;
     }
 
+    @Override
+    public Drawable getDrawable(int id, @Nullable Theme theme) throws NotFoundException {
+        var drawable = super.getDrawable(id, theme);
+        if (id == com.vtosters.lite.R.drawable.newsfeed_tab_dropdown_16) {
+            ThemesHacks.fixDropdown(drawable);
+        }
+        return drawable;
+    }
+
     private static boolean isAttrThemeable(int attrID) {
         return !Themes.isDarkTheme() && attrID == com.vtosters.lite.R.attr.button_primary_background;
     }
-
 
     private static int[] getArrayData(TypedArray arr) {
         try {
