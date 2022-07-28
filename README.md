@@ -1,6 +1,6 @@
-<a href="https://vtosters.app/">
+<!--<a href="https://vtosters.app/">
     <img src="https://i.imgur.com/IdhgHjM.png" align="right" width="60" height="60"/>
-</a>
+</a>-->
 
 # VTosters Lite
 
