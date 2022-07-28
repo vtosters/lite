@@ -1,6 +1,6 @@
 package ru.vtosters.lite.dnr.helpers;
 
-import static ru.vtosters.lite.utils.Globals.getContext;
+import static ru.vtosters.lite.utils.AndroidUtils.getGlobalContext;
 
 import android.content.ContentValues;
 import android.database.Cursor;
@@ -12,22 +12,22 @@ import java.util.List;
 
 import ru.vtosters.lite.dnr.DNRPrefs;
 
-public class DoNotTypeDBHelper extends SQLiteOpenHelper{
-    public DoNotTypeDBHelper(){
-        super(getContext(), "dnt", null, 1);
+public class DoNotTypeDBHelper extends SQLiteOpenHelper {
+    public DoNotTypeDBHelper() {
+        super(getGlobalContext(), "dnt", null, 1);
     }
 
     @Override
-    public void onCreate(SQLiteDatabase db){
+    public void onCreate(SQLiteDatabase db) {
         db.execSQL("create table dnt (peerId integer primary key, enabled integer)");
     }
 
     @Override
-    public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion){
+    public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
 
     }
 
-    public List<Integer> get(){
+    public List<Integer> get() {
         ArrayList<Integer> rs = new ArrayList<>();
 
         try (Cursor c = getReadableDatabase().query("dnt", null, null, null, null, null, null)) {
@@ -39,7 +39,7 @@ public class DoNotTypeDBHelper extends SQLiteOpenHelper{
                     if (c.getInt(enabledIndex) == 1) {
                         rs.add(c.getInt(peerIdIndex));
                     }
-                } while(c.moveToNext());
+                } while (c.moveToNext());
             }
         } catch (Exception e) {
             e.printStackTrace();
@@ -48,7 +48,7 @@ public class DoNotTypeDBHelper extends SQLiteOpenHelper{
         return rs;
     }
 
-    public boolean isEnabledForPeerId(int peerId){
+    public boolean isEnabledForPeerId(int peerId) {
         try (Cursor c = getReadableDatabase().query("dnt", null, null, null, null, null, null)) {
             if (c.moveToFirst()) {
                 int peerIdIndex = c.getColumnIndex("peerId");
@@ -57,7 +57,7 @@ public class DoNotTypeDBHelper extends SQLiteOpenHelper{
                 do {
                     if (c.getInt(peerIdIndex) == peerId)
                         return c.getInt(enabledIndex) == 1;
-                } while(c.moveToNext());
+                } while (c.moveToNext());
             }
         } catch (Exception e) {
             e.printStackTrace();
@@ -66,7 +66,7 @@ public class DoNotTypeDBHelper extends SQLiteOpenHelper{
         return DNRPrefs.getActivityWithoutExceptions(peerId);
     }
 
-    public void setEnabledForPeerId(int peerId, boolean enabled){
+    public void setEnabledForPeerId(int peerId, boolean enabled) {
         ContentValues cv = new ContentValues();
         cv.put("enabled", enabled ? 1 : 0);
 

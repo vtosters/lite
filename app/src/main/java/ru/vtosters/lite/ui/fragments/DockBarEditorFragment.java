@@ -1,8 +1,8 @@
 package ru.vtosters.lite.ui.fragments;
 
-import static ru.vtosters.lite.utils.Globals.convertDpToPixel;
-import static ru.vtosters.lite.utils.Globals.getIdentifier;
-import static ru.vtosters.lite.utils.Globals.restartApplication;
+import static ru.vtosters.lite.utils.AndroidUtils.dp2px;
+import static ru.vtosters.lite.utils.AndroidUtils.getIdentifier;
+import static ru.vtosters.lite.utils.LifecycleUtils.restartApplication;
 
 import android.os.Bundle;
 import android.view.ContextThemeWrapper;
@@ -25,7 +25,7 @@ import com.vtosters.lite.R;
 import ru.vtosters.lite.ui.adapters.CategorizedAdapter;
 import ru.vtosters.lite.ui.components.DockBarEditorManager;
 import ru.vtosters.lite.ui.components.ItemMovingCallback;
-import ru.vtosters.lite.utils.Globals;
+import ru.vtosters.lite.utils.AndroidUtils;
 
 public class DockBarEditorFragment extends BaseToolbarFragment {
 
@@ -42,15 +42,15 @@ public class DockBarEditorFragment extends BaseToolbarFragment {
 
         LinearLayout buttonsContainer = new LinearLayout(getContext());
         buttonsContainer.setPadding(
-                convertDpToPixel(13),
-                convertDpToPixel(10),
-                convertDpToPixel(13),
-                convertDpToPixel(10)
+                dp2px(13),
+                dp2px(10),
+                dp2px(13),
+                dp2px(10)
         );
         container.addView(buttonsContainer, new LinearLayout.LayoutParams(-1, -2));
 
         TextView save = new TextView(new ContextThemeWrapper(getContext(), R.style.VKUIButton_Primary));
-        save.setText(Globals.getString("save"));
+        save.setText(AndroidUtils.getString("save"));
         save.setOnClickListener(v -> {
             DockBarEditorManager.getInstance().save();
             restartApplication();
@@ -61,10 +61,10 @@ public class DockBarEditorFragment extends BaseToolbarFragment {
         buttonsContainer.addView(save, saveParams);
 
         View divider = new View(getContext());
-        buttonsContainer.addView(divider, new LinearLayout.LayoutParams(convertDpToPixel(10), 0));
+        buttonsContainer.addView(divider, new LinearLayout.LayoutParams(dp2px(10), 0));
 
         TextView reset = new TextView(new ContextThemeWrapper(getContext(), R.style.VKUIButton_Primary));
-        reset.setText(Globals.getString("reset"));
+        reset.setText(AndroidUtils.getString("reset"));
         reset.setOnClickListener(v -> {
             DockBarEditorManager.getInstance().reset();
             restartApplication();

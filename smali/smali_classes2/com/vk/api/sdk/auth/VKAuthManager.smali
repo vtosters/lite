@@ -96,7 +96,7 @@
 .method public final c(Landroid/content/Context;)Landroid/content/SharedPreferences;
     .locals 2
 
-    const-string v0, "com.vkontakte.android_pref_name"
+    const-string v0, "com.vtosters.lite_pref_name"
 
     const/4 v1, 0x0
 

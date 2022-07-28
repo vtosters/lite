@@ -2,8 +2,8 @@ package ru.vtosters.lite.ui.wallpapers;
 
 import static ru.vtosters.lite.ui.wallpapers.WallpapersHooks.getWallpaper;
 import static ru.vtosters.lite.ui.wallpapers.WallpapersHooks.getWallpaperFile;
-import static ru.vtosters.lite.utils.Globals.convertDpToPixel;
-import static ru.vtosters.lite.utils.Globals.getIdentifier;
+import static ru.vtosters.lite.utils.AndroidUtils.dp2px;
+import static ru.vtosters.lite.utils.AndroidUtils.getIdentifier;
 
 import android.content.Context;
 import android.graphics.drawable.Drawable;
@@ -45,7 +45,7 @@ public class WallpaperPreferences extends Preference {
         super.onBindViewHolder(preferenceViewHolder);
 
         mRecyclerView = (RecyclerView) preferenceViewHolder.findViewById(getIdentifier("install_btn_container", "id"));
-        mRecyclerView.setPadding(0, convertDpToPixel(8), 0, 0);
+        mRecyclerView.setPadding(0, dp2px(8), 0, 0);
         mRecyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
         mRecyclerView.setAdapter((mAdapter = new MessagesPreviewAdapter()));
         mRecyclerView.setClickable(false);

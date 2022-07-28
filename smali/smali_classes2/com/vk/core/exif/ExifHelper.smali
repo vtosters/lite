@@ -120,7 +120,7 @@
     .locals 7
 
     .line 1
-    invoke-static {p2}, Lb/h/g/m/FileUtils;->h(Landroid/net/Uri;)Ljava/lang/String;
+    invoke-static {p2}, Lb/h/g/m/FileUtils;->tryToGetRealPath(Landroid/net/Uri;)Ljava/lang/String;
 
     move-result-object v0
 

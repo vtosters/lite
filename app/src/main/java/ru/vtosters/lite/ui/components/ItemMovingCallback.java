@@ -10,12 +10,12 @@ public class ItemMovingCallback extends ItemTouchHelper.Callback {
 
     private final CategorizedAdapter mAdapter;
 
-    public ItemMovingCallback(CategorizedAdapter adapter){
+    public ItemMovingCallback(CategorizedAdapter adapter) {
         this.mAdapter = adapter;
     }
 
     @Override
-    public boolean isLongPressDragEnabled(){
+    public boolean isLongPressDragEnabled() {
         return true;
     }
 
@@ -25,7 +25,7 @@ public class ItemMovingCallback extends ItemTouchHelper.Callback {
     }
 
     @Override
-    public int getMovementFlags(@NonNull RecyclerView recyclerView, RecyclerView.ViewHolder viewHolder){
+    public int getMovementFlags(@NonNull RecyclerView recyclerView, RecyclerView.ViewHolder viewHolder) {
         int dragFlags = mAdapter.getItemViewType(viewHolder.getAdapterPosition()) == CategorizedAdapter.MOVING_ITEM
                 && !mAdapter.isUnmovedItem(viewHolder.getAdapterPosition())
                 ? ItemTouchHelper.UP | ItemTouchHelper.DOWN
@@ -42,7 +42,7 @@ public class ItemMovingCallback extends ItemTouchHelper.Callback {
     }
 
     @Override
-    public boolean onMove(RecyclerView recyclerView, RecyclerView.ViewHolder viewHolder, RecyclerView.ViewHolder target){
+    public boolean onMove(RecyclerView recyclerView, RecyclerView.ViewHolder viewHolder, RecyclerView.ViewHolder target) {
         return mAdapter.onItemMove(viewHolder.getAdapterPosition(), target.getAdapterPosition());
     }
 }

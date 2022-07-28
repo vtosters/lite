@@ -8,7 +8,7 @@ import android.os.Build;
 import androidx.annotation.RequiresApi;
 import androidx.core.app.NotificationManagerCompat;
 
-import ru.vtosters.lite.utils.Globals;
+import ru.vtosters.lite.utils.AndroidUtils;
 
 public class NotificationChannels {
     public static final String MUSIC_DOWNLOAD_CHANNEL_ID = "music_download_channel";
@@ -26,7 +26,7 @@ public class NotificationChannels {
         musicDownloadChannel.setDescription(MUSIC_DOWNLOAD_CHANNEL_DESCRIPTION);
         musicDownloadChannel.setShowBadge(true);
         musicDownloadChannel.setLockscreenVisibility(Notification.VISIBILITY_PRIVATE);
-        var notificationManager = NotificationManagerCompat.from(Globals.getContext());
+        var notificationManager = NotificationManagerCompat.from(AndroidUtils.getGlobalContext());
         notificationManager.createNotificationChannel(musicDownloadChannel);
     }
 }

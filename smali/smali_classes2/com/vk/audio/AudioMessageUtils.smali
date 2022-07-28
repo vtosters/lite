@@ -96,7 +96,7 @@
     .locals 2
 
     .line 1
-    invoke-static {}, Lb/h/g/m/FileUtils;->h()Ljava/io/File;
+    invoke-static {}, Lb/h/g/m/FileUtils;->getImTempDir()Ljava/io/File;
 
     move-result-object v0
 

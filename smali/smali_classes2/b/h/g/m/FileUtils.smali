@@ -91,7 +91,7 @@
     return-object v0
 .end method
 
-.method public static B()Ljava/io/File;
+.method public static getVkAppsCacheDir()Ljava/io/File;
     .locals 1
 
     const-string v0, "cache_vkapps"
@@ -104,11 +104,11 @@
     return-object v0
 .end method
 
-.method public static C()Ljava/io/File;
+.method public static getWebCacheDir()Ljava/io/File;
     .locals 2
 
     .line 1
-    invoke-static {}, Lb/h/g/m/FileUtils;->b()Ljava/io/File;
+    invoke-static {}, Lb/h/g/m/FileUtils;->getExternalHiddenDir()Ljava/io/File;
 
     move-result-object v0
 
@@ -183,11 +183,11 @@
     return-object p0
 .end method
 
-.method private static a()Ljava/io/File;
+.method private static getDownloadsDir()Ljava/io/File;
     .locals 2
 
     .line 6
-    invoke-static {}, Lb/h/g/m/FileUtils;->z()Ljava/io/File;
+    invoke-static {}, Lb/h/g/m/FileUtils;->getVKDir()Ljava/io/File;
 
     move-result-object v0
 
@@ -200,7 +200,7 @@
     return-object v0
 .end method
 
-.method public static a(I)Ljava/io/File;
+.method public static getAutoplayGif(I)Ljava/io/File;
     .locals 2
 
     const-string v0, "autoplay_gif_cache"
@@ -210,7 +210,7 @@
     if-ne p0, v1, :cond_0
 
     .line 7
-    invoke-static {}, Lb/h/g/m/FileUtils;->b()Ljava/io/File;
+    invoke-static {}, Lb/h/g/m/FileUtils;->getExternalHiddenDir()Ljava/io/File;
 
     move-result-object p0
 
@@ -303,7 +303,7 @@
     :cond_1
     new-instance v0, Ljava/io/File;
 
-    invoke-static {}, Lb/h/g/m/FileUtils;->y()Ljava/io/File;
+    invoke-static {}, Lb/h/g/m/FileUtils;->getTempDir()Ljava/io/File;
 
     move-result-object v1
 
@@ -415,7 +415,7 @@
     throw p1
 .end method
 
-.method public static a(Ljava/io/File;Ljava/io/File;Z)Ljava/util/List;
+.method public static unzip(Ljava/io/File;Ljava/io/File;Z)Ljava/util/List;
     .locals 7
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -828,7 +828,7 @@
     .locals 3
 
     .line 17
-    invoke-static {}, Lb/h/g/m/FileUtils;->b()Ljava/io/File;
+    invoke-static {}, Lb/h/g/m/FileUtils;->getExternalHiddenDir()Ljava/io/File;
 
     move-result-object v0
 
@@ -852,7 +852,7 @@
     .line 3
     new-instance v0, Landroid/os/StatFs;
 
-    invoke-static {}, Lb/h/g/m/FileUtils;->z()Ljava/io/File;
+    invoke-static {}, Lb/h/g/m/FileUtils;->getVKDir()Ljava/io/File;
 
     move-result-object v1
 
@@ -969,14 +969,14 @@
     if-ne p0, v1, :cond_0
 
     .line 2
-    invoke-static {}, Lb/h/g/m/FileUtils;->z()Ljava/io/File;
+    invoke-static {}, Lb/h/g/m/FileUtils;->getVKDir()Ljava/io/File;
 
     move-result-object p0
 
     invoke-virtual {v0, p0}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
     .line 3
-    invoke-static {}, Lb/h/g/m/FileUtils;->b()Ljava/io/File;
+    invoke-static {}, Lb/h/g/m/FileUtils;->getExternalHiddenDir()Ljava/io/File;
 
     move-result-object p0
 
@@ -1048,7 +1048,7 @@
     return-wide v1
 .end method
 
-.method public static b()Ljava/io/File;
+.method public static getExternalHiddenDir()Ljava/io/File;
     .locals 2
 
     .line 9
@@ -1075,7 +1075,7 @@
     .line 12
     new-instance v0, Ljava/io/File;
 
-    invoke-static {}, Lb/h/g/m/FileUtils;->a()Ljava/io/File;
+    invoke-static {}, Lb/h/g/m/FileUtils;->getDownloadsDir()Ljava/io/File;
 
     move-result-object v1
 
@@ -1350,7 +1350,7 @@
     .locals 7
 
     .line 33
-    invoke-static {p0}, Lb/h/g/m/FileUtils;->h(Landroid/net/Uri;)Ljava/lang/String;
+    invoke-static {p0}, Lb/h/g/m/FileUtils;->tryToGetRealPath(Landroid/net/Uri;)Ljava/lang/String;
 
     move-result-object v0
 
@@ -1481,7 +1481,7 @@
 
     .line 13
     :try_start_0
-    invoke-static {}, Lb/h/g/m/FileUtils;->y()Ljava/io/File;
+    invoke-static {}, Lb/h/g/m/FileUtils;->getTempDir()Ljava/io/File;
 
     move-result-object v0
 
@@ -1508,7 +1508,7 @@
     invoke-static {v0, p0, v1, v2}, Lb/h/g/m/FileUtils;->a(Ljava/io/File;ZJ)V
 
     .line 16
-    invoke-static {}, Lb/h/g/m/FileUtils;->k()Ljava/io/File;
+    invoke-static {}, Lb/h/g/m/FileUtils;->getStoriesDir()Ljava/io/File;
 
     move-result-object v0
 
@@ -1517,7 +1517,7 @@
     invoke-static {v0, p0, v1, v2}, Lb/h/g/m/FileUtils;->a(Ljava/io/File;ZJ)V
 
     .line 17
-    invoke-static {}, Lb/h/g/m/FileUtils;->h()Ljava/io/File;
+    invoke-static {}, Lb/h/g/m/FileUtils;->getImTempDir()Ljava/io/File;
 
     move-result-object v0
 
@@ -1528,7 +1528,7 @@
     if-eqz p0, :cond_0
 
     .line 18
-    invoke-static {}, Lb/h/g/m/FileUtils;->C()Ljava/io/File;
+    invoke-static {}, Lb/h/g/m/FileUtils;->getWebCacheDir()Ljava/io/File;
 
     move-result-object v0
 
@@ -1808,7 +1808,7 @@
     .locals 2
 
     .line 1
-    invoke-static {}, Lb/h/g/m/FileUtils;->z()Ljava/io/File;
+    invoke-static {}, Lb/h/g/m/FileUtils;->getVKDir()Ljava/io/File;
 
     move-result-object v0
 
@@ -1831,7 +1831,7 @@
     if-ne p0, v1, :cond_0
 
     .line 2
-    invoke-static {}, Lb/h/g/m/FileUtils;->b()Ljava/io/File;
+    invoke-static {}, Lb/h/g/m/FileUtils;->getExternalHiddenDir()Ljava/io/File;
 
     move-result-object p0
 
@@ -2102,7 +2102,7 @@
     .locals 2
 
     .line 1
-    invoke-static {}, Lb/h/g/m/FileUtils;->z()Ljava/io/File;
+    invoke-static {}, Lb/h/g/m/FileUtils;->getVKDir()Ljava/io/File;
 
     move-result-object v0
 
@@ -2156,7 +2156,7 @@
     :cond_0
     new-instance v0, Ljava/io/File;
 
-    invoke-static {}, Lb/h/g/m/FileUtils;->y()Ljava/io/File;
+    invoke-static {}, Lb/h/g/m/FileUtils;->getTempDir()Ljava/io/File;
 
     move-result-object v1
 
@@ -2224,7 +2224,7 @@
     invoke-direct {v3, v4, v5}, Ljava/io/File;-><init>(Ljava/io/File;Ljava/lang/String;)V
 
     .line 10
-    invoke-static {v3}, Lb/h/g/m/FileUtils;->n(Ljava/io/File;)Landroid/net/Uri;
+    invoke-static {v3}, Lb/h/g/m/FileUtils;->uriFromFile(Ljava/io/File;)Landroid/net/Uri;
 
     move-result-object v3
 
@@ -2529,7 +2529,7 @@
     return v0
 .end method
 
-.method public static g()Ljava/io/File;
+.method public static getGifCacheDir()Ljava/io/File;
     .locals 1
 
     const-string v0, "cache_gif"
@@ -2640,11 +2640,11 @@
     return p0
 .end method
 
-.method public static h()Ljava/io/File;
+.method public static getImTempDir()Ljava/io/File;
     .locals 2
 
     .line 1
-    invoke-static {}, Lb/h/g/m/FileUtils;->b()Ljava/io/File;
+    invoke-static {}, Lb/h/g/m/FileUtils;->getExternalHiddenDir()Ljava/io/File;
 
     move-result-object v0
 
@@ -2657,7 +2657,7 @@
     return-object v0
 .end method
 
-.method public static h(Landroid/net/Uri;)Ljava/lang/String;
+.method public static tryToGetRealPath(Landroid/net/Uri;)Ljava/lang/String;
     .locals 3
     .annotation build Landroidx/annotation/Nullable;
     .end annotation
@@ -2858,7 +2858,7 @@
     return p0
 .end method
 
-.method public static j()Ljava/io/File;
+.method public static getInternalLogsDir()Ljava/io/File;
     .locals 1
 
     const-string v0, "logs"
@@ -3057,7 +3057,7 @@
     return v1
 .end method
 
-.method public static k()Ljava/io/File;
+.method public static getStoriesDir()Ljava/io/File;
     .locals 1
 
     const-string v0, "internal_stories"
@@ -3201,7 +3201,7 @@
     .line 1
     new-instance v0, Ljava/io/File;
 
-    invoke-static {}, Lb/h/g/m/FileUtils;->k()Ljava/io/File;
+    invoke-static {}, Lb/h/g/m/FileUtils;->getStoriesDir()Ljava/io/File;
 
     move-result-object v1
 
@@ -3286,7 +3286,7 @@
     return-void
 .end method
 
-.method public static n(Ljava/io/File;)Landroid/net/Uri;
+.method public static uriFromFile(Ljava/io/File;)Landroid/net/Uri;
     .locals 2
 
     .line 2
@@ -3324,7 +3324,7 @@
     .locals 2
 
     .line 1
-    invoke-static {}, Lb/h/g/m/FileUtils;->b()Ljava/io/File;
+    invoke-static {}, Lb/h/g/m/FileUtils;->getExternalHiddenDir()Ljava/io/File;
 
     move-result-object v0
 
@@ -3424,7 +3424,7 @@
     return-object v0
 .end method
 
-.method public static r()Ljava/io/File;
+.method public static getSmallCacheDir()Ljava/io/File;
     .locals 1
 
     const-string v0, "cache_small_file"
@@ -3456,7 +3456,7 @@
     .line 1
     new-instance v0, Ljava/io/File;
 
-    invoke-static {}, Lb/h/g/m/FileUtils;->b()Ljava/io/File;
+    invoke-static {}, Lb/h/g/m/FileUtils;->getExternalHiddenDir()Ljava/io/File;
 
     move-result-object v1
 
@@ -3497,7 +3497,7 @@
     .line 1
     new-instance v0, Ljava/io/File;
 
-    invoke-static {}, Lb/h/g/m/FileUtils;->b()Ljava/io/File;
+    invoke-static {}, Lb/h/g/m/FileUtils;->getExternalHiddenDir()Ljava/io/File;
 
     move-result-object v1
 
@@ -3538,7 +3538,7 @@
     .line 1
     new-instance v0, Ljava/io/File;
 
-    invoke-static {}, Lb/h/g/m/FileUtils;->b()Ljava/io/File;
+    invoke-static {}, Lb/h/g/m/FileUtils;->getExternalHiddenDir()Ljava/io/File;
 
     move-result-object v1
 
@@ -3599,11 +3599,11 @@
     return-object v0
 .end method
 
-.method public static y()Ljava/io/File;
+.method public static getTempDir()Ljava/io/File;
     .locals 2
 
     .line 1
-    invoke-static {}, Lb/h/g/m/FileUtils;->b()Ljava/io/File;
+    invoke-static {}, Lb/h/g/m/FileUtils;->getExternalHiddenDir()Ljava/io/File;
 
     move-result-object v0
 
@@ -3616,7 +3616,7 @@
     return-object v0
 .end method
 
-.method public static z()Ljava/io/File;
+.method public static getVKDir()Ljava/io/File;
     .locals 2
 
     .line 1
@@ -3626,6 +3626,12 @@
 
     .line 2
     invoke-static {v0}, Lb/h/g/m/FileUtils;->a(Ljava/io/File;)V
+
+    const-string v1, "Download"
+
+    invoke-static {v0, v1}, Lb/h/g/m/FileUtils;->a(Ljava/io/File;Ljava/lang/String;)Ljava/io/File;
+
+    move-result-object v0
 
     const-string v1, "VK"
 

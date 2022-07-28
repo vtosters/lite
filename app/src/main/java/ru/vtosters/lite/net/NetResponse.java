@@ -4,35 +4,35 @@ import java.io.ByteArrayInputStream;
 import java.io.InputStream;
 import java.nio.charset.StandardCharsets;
 
-public final class NetResponse{
+public final class NetResponse {
     private final byte[] data;
     private int code;
 
-    protected NetResponse(byte[] data){
+    protected NetResponse(byte[] data) {
         this.data = data;
     }
 
-    protected void setCode(int code){
+    protected void setCode(int code) {
         this.code = code;
     }
 
-    public boolean isSuccessful(){
+    public boolean isSuccessful() {
         return code() == 200;
     }
 
-    public int code(){
+    public int code() {
         return code;
     }
 
-    public byte[] getData(){
+    public byte[] getData() {
         return data;
     }
 
-    public InputStream getDataStream(){
+    public InputStream getDataStream() {
         return new ByteArrayInputStream(data);
     }
 
-    public String getDataString(){
+    public String getDataString() {
         return new String(data, StandardCharsets.UTF_8);
     }
 }

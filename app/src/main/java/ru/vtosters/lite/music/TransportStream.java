@@ -1,6 +1,6 @@
 package ru.vtosters.lite.music;
 
-public class TransportStream{
+public class TransportStream {
 
     public static final String METHOD_NONE = "NONE";
     public static final String METHOD_AES128 = "AES-128";
@@ -9,28 +9,28 @@ public class TransportStream{
     private String mName;
     private String mKeyURL;
 
-    public TransportStream(){
+    public TransportStream() {
         this.mMethod = METHOD_NONE;
     }
 
-    public TransportStream(String method, String keyURL){
+    public TransportStream(String method, String keyURL) {
         this.mMethod = method;
         this.mKeyURL = keyURL;
     }
 
-    public String getMethod(){
+    public String getMethod() {
         return mMethod;
     }
 
-    public String getName(){
+    public String getName() {
         return mName;
     }
 
-    public void setName(String name){
+    public void setName(String name) {
         mName = name;
     }
 
-    public String getKeyURL(){
+    public String getKeyURL() {
         return mKeyURL;
     }
 }

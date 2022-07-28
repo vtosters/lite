@@ -221,7 +221,7 @@
 
     check-cast v1, Ljava/io/File;
 
-    invoke-static {v1}, Lb/h/g/m/FileUtils;->n(Ljava/io/File;)Landroid/net/Uri;
+    invoke-static {v1}, Lb/h/g/m/FileUtils;->uriFromFile(Ljava/io/File;)Landroid/net/Uri;
 
     move-result-object v1
 
@@ -543,7 +543,7 @@
     if-eqz p1, :cond_1
 
     .line 4
-    invoke-static {p1}, Lb/h/g/m/FileUtils;->n(Ljava/io/File;)Landroid/net/Uri;
+    invoke-static {p1}, Lb/h/g/m/FileUtils;->uriFromFile(Ljava/io/File;)Landroid/net/Uri;
 
     move-result-object p1
 

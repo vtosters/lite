@@ -1,10 +1,10 @@
 package ru.vtosters.lite.downloaders;
 
 import static ru.vtosters.lite.net.Request.makeRequest;
-import static ru.vtosters.lite.utils.Globals.getContext;
-import static ru.vtosters.lite.utils.Globals.getIdentifier;
-import static ru.vtosters.lite.utils.Globals.getString;
-import static ru.vtosters.lite.utils.Globals.getUserToken;
+import static ru.vtosters.lite.utils.AccountManagerUtils.getUserToken;
+import static ru.vtosters.lite.utils.AndroidUtils.getGlobalContext;
+import static ru.vtosters.lite.utils.AndroidUtils.getIdentifier;
+import static ru.vtosters.lite.utils.AndroidUtils.getString;
 
 import android.app.AlertDialog;
 import android.app.DownloadManager;
@@ -27,23 +27,23 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
 
-import ru.vtosters.lite.utils.ExternalLinkHandler;
+import ru.vtosters.lite.utils.ExternalLinkParser;
 
-public class VideoDownloader{
+public class VideoDownloader {
     private static final int DOWNLOAD_ID = 0;
     private static final int OPEN_EXTERNAL_LINK_ID = 1;
 
-    public static boolean onClick(int id, VideoFile video, Context ctx){
+    public static boolean onClick(int id, VideoFile video, Context ctx) {
         if (id == DOWNLOAD_ID) {
             downloadVideo(video, ctx);
             return true;
         } else if (id == OPEN_EXTERNAL_LINK_ID) {
-            ExternalLinkHandler.parseVideoFile(video, ctx, true);
+            ExternalLinkParser.parseVideoFile(video, ctx, true);
         }
         return false;
     }
 
-    public static void injectAction(ArrayList<MenuBottomSheetAction> list, VideoFile video){
+    public static void injectAction(ArrayList<MenuBottomSheetAction> list, VideoFile video) {
         if (!video.U && !video.I1()) {
             addAction(list, DOWNLOAD_ID, R.drawable.ic_download_outline_24, R.string.download, 9);
             addAction(list, OPEN_EXTERNAL_LINK_ID, R.drawable.ic_link_outline_28, getIdentifier("interfacevideoext_short", "string"), 9);
@@ -54,7 +54,7 @@ public class VideoDownloader{
         actions.add(new MenuBottomSheetAction(ints[0], ints[1], ints[2], ints[3]));
     }
 
-    public static void downloadVideo(VideoFile videoFile, Context context){
+    public static void downloadVideo(VideoFile videoFile, Context context) {
         final List<String> list = new ArrayList<>();
         final List<String> urls = new ArrayList<>();
 
@@ -105,7 +105,7 @@ public class VideoDownloader{
             request.setNotificationVisibility(DownloadManager.Request.VISIBILITY_VISIBLE_NOTIFY_COMPLETED);
             request.setTitle(videoFile.toString());
             request.setDestinationInExternalPublicDir(Environment.DIRECTORY_MOVIES, videoFile + ".mp4");
-            ((DownloadManager) getContext().getSystemService(Context.DOWNLOAD_SERVICE)).enqueue(request);
+            ((DownloadManager) getGlobalContext().getSystemService(Context.DOWNLOAD_SERVICE)).enqueue(request);
             return;
         }
 
@@ -121,7 +121,7 @@ public class VideoDownloader{
         builder.show();
     }
 
-    public static void parseVideoLink(String url, Context ctx){
+    public static void parseVideoLink(String url, Context ctx) {
         if (url.contains("vk.com/story")) {
             ToastUtils.a("Не поддерживается загрузка историй");
             return;

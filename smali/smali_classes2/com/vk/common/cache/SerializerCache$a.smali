@@ -22,7 +22,7 @@
 
     const/4 v1, 0x0
 
-    const/16 v2, 0x12e6
+    const/16 v2, 0x3032
 
     .line 1
     invoke-direct {p0, p1, v0, v1, v2}, Landroid/database/sqlite/SQLiteOpenHelper;-><init>(Landroid/content/Context;Ljava/lang/String;Landroid/database/sqlite/SQLiteDatabase$CursorFactory;I)V

@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
-public class VKM3UParser{
+public class VKM3UParser {
     private final String mData;
     private final List<TransportStream> mTransportStreams = new ArrayList<>();
 
@@ -13,15 +13,15 @@ public class VKM3UParser{
     private int mHeapSize = 0;
     private String mBaseURL;
 
-    public VKM3UParser(String data){
+    public VKM3UParser(String data) {
         mData = data;
         init();
     }
 
-    private void init(){
+    private void init() {
         int i = 0;
         Scanner scanner = new Scanner(mData);
-        while(scanner.hasNext()) {
+        while (scanner.hasNext()) {
             String line = scanner.nextLine();
             mHeapSize += line.getBytes().length;
             if (line.startsWith("#EXT-X-TARGETDURATION")) {
@@ -47,7 +47,7 @@ public class VKM3UParser{
         }
     }
 
-    private String getDirectiveValue(String directive){
+    private String getDirectiveValue(String directive) {
         return directive.substring(directive.indexOf(":") + 1);
     }
 
@@ -55,15 +55,15 @@ public class VKM3UParser{
         return str.endsWith(".ts") || str.endsWith(".tp") || str.endsWith(".mpeg-ts") || str.endsWith(".m2ts");
     }
 
-    public int getHeapSize(){
+    public int getHeapSize() {
         return mHeapSize;
     }
 
-    public String getBaseUrl(){
+    public String getBaseUrl() {
         return mBaseURL;
     }
 
-    public List<TransportStream> getTransportStreams(){
+    public List<TransportStream> getTransportStreams() {
         return mTransportStreams;
     }
 }

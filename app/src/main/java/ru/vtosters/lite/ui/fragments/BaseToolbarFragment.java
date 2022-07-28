@@ -17,7 +17,7 @@ import com.vtosters.lite.R;
 import com.vtosters.lite.ViewUtils;
 import com.vtosters.lite.m0.ToolbarHelper;
 
-import ru.vtosters.lite.utils.LayoutHelper;
+import ru.vtosters.lite.utils.LayoutUtils;
 
 public abstract class BaseToolbarFragment extends FragmentImpl {
 
@@ -58,7 +58,7 @@ public abstract class BaseToolbarFragment extends FragmentImpl {
         mContentLayout = mRootView.findViewById(R.id.appkit_content);
 
         initToolbar();
-        mContentLayout.addView(onCreateContent(inflater, bundle), LayoutHelper.createFrame(-1, -1));
+        mContentLayout.addView(onCreateContent(inflater, bundle), LayoutUtils.createFrame(-1, -1));
 
         return mRootView;
     }

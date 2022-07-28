@@ -1,6 +1,6 @@
 package ru.vtosters.lite.music;
 
-public interface Callback{
+public interface Callback {
     void onProgress(int progress);
 
     void onSuccess();

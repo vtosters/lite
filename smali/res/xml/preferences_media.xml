@@ -36,6 +36,17 @@
             android:summary="Отключение значительно улучшит качество загружаемых видео"
             android:title="@string/sett_compress_videos" />
     </PreferenceCategory>
+    <PreferenceCategory android:title="Last.fm">
+        <Preference
+            android:key="lastfm_auth"
+            android:summary="Вы не вошли в аккаунт"
+            android:title="Аккаунт" />
+        <com.vtosters.lite.ui.MaterialSwitchPreference
+            android:defaultValue="false"
+            android:key="lastfm_enabled"
+            android:summary="Полезный сервис по учету прослушивания песен"
+            android:title="Включить скробблинг" />
+    </PreferenceCategory>
     <PreferenceCategory android:title="Музыка">
         <com.vtosters.lite.ui.MaterialSwitchPreference
             android:defaultValue="true"
@@ -43,7 +54,7 @@
             android:summary="Новый каталог музыкального раздела с динамическим контентом"
             android:title="Новый раздел музыки" />
         <com.vtosters.lite.ui.SummaryListPreference
-            android:defaultValue="Default"
+            android:defaultValue="default"
             android:dialogTitle="Выберите раздел по умолчанию"
             android:entries="@array/musicdefcatalog_value"
             android:entryValues="@array/musicdefcatalog"
@@ -56,7 +67,7 @@
             android:title="Скачать видео" />
         <com.vtosters.lite.ui.MaterialSwitchPreference
             android:defaultValue="true"
-            android:key="videoewcatalog"
+            android:key="videonewcatalog"
             android:summary="Новый каталог видео раздела с динамическим контентом"
             android:title="Новый раздел видео" />
         <com.vtosters.lite.ui.MaterialSwitchPreference

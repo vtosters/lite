@@ -1,11 +1,10 @@
-package ru.vtosters.lite.utils;
+package ru.vtosters.lite.ui.components;
 
 import static android.os.Environment.DIRECTORY_DOWNLOADS;
 import static android.os.Environment.getExternalStoragePublicDirectory;
 import static android.widget.Toast.LENGTH_LONG;
 import static android.widget.Toast.LENGTH_SHORT;
-import static ru.vtosters.lite.utils.Globals.getContext;
-import static ru.vtosters.lite.utils.Globals.readFileFully;
+import static ru.vtosters.lite.utils.AndroidUtils.getGlobalContext;
 
 import android.content.Context;
 import android.content.SharedPreferences;
@@ -24,23 +23,26 @@ import java.util.Set;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-public class SettBackup{
+import ru.vtosters.lite.utils.IOUtils;
+import ru.vtosters.lite.utils.Preferences;
+
+public class BackupManager {
 
     static File sBackupDir = new File(getExternalStoragePublicDirectory(DIRECTORY_DOWNLOADS), "/VTLBackups/");
 
-    private static SharedPreferences getPrefs(){
-        return getContext().getSharedPreferences("com.vtosters.lite_preferences", Context.MODE_PRIVATE);
+    private static SharedPreferences getPrefs() {
+        return getGlobalContext().getSharedPreferences("com.vtosters.lite_preferences", Context.MODE_PRIVATE);
     }
 
-    public static void deletePrefs(){
+    public static void deletePrefs() {
         getPrefs().edit().clear().commit();
-        File file = new File(new File(getContext().getFilesDir().getParent(), "shared_prefs"), "com.vtosters.lite_preferences");
+        File file = new File(new File(getGlobalContext().getFilesDir().getParent(), "shared_prefs"), "com.vtosters.lite_preferences");
         file.delete();
     }
 
-    public static void backupOnlines() throws IOException{
+    public static void backupOnlines() throws IOException {
         if (getPrefContent("onlines.xml") == null) {
-            Toast.makeText(getContext(), "Нет данных для резервного копирования", LENGTH_SHORT).show();
+            Toast.makeText(getGlobalContext(), "Нет данных для резервного копирования", LENGTH_SHORT).show();
             return;
         }
 
@@ -52,14 +54,14 @@ public class SettBackup{
             FileWriter out = new FileWriter(file);
             out.write(getPrefContent("onlines.xml"));
             out.close();
-            Toast.makeText(getContext(), "Сохранено в файл " + file.getAbsolutePath(), LENGTH_LONG).show();
+            Toast.makeText(getGlobalContext(), "Сохранено в файл " + file.getAbsolutePath(), LENGTH_LONG).show();
         } catch (IOException e) {
             e.printStackTrace();
-            Toast.makeText(getContext(), "Не удалось сохранить файл", LENGTH_SHORT).show();
+            Toast.makeText(getGlobalContext(), "Не удалось сохранить файл", LENGTH_SHORT).show();
         }
     }
 
-    public static void backupSettings(){
+    public static void backupSettings() {
         SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd.HH-mm-ss", Locale.getDefault());
         var file = new File(sBackupDir,
                 "Backup_" + dateFormat.format(new Date()) + ".xml");
@@ -68,15 +70,17 @@ public class SettBackup{
             FileWriter out = new FileWriter(file);
             out.write(getPrefContent("com.vtosters.lite_preferences.xml"));
             out.close();
-            Toast.makeText(getContext(), "Сохранено в файл " + file.getAbsolutePath(), LENGTH_LONG).show();
+            Toast.makeText(getGlobalContext(), "Сохранено в файл " + file.getAbsolutePath(), LENGTH_LONG).show();
         } catch (IOException e) {
             e.printStackTrace();
-            Toast.makeText(getContext(), "Не удалось сохранить файл", LENGTH_SHORT).show();
+            Toast.makeText(getGlobalContext(), "Не удалось сохранить файл", LENGTH_SHORT).show();
         }
     }
 
     public static String[] getBackupsNames() {
-        var arr = sBackupDir.list((dir, name) -> {return name.endsWith(".xml");});
+        var arr = sBackupDir.list((dir, name) -> {
+            return name.endsWith(".xml");
+        });
         if (arr == null) return new String[0];
         for (int i = 0; i < arr.length; i++) {
             arr[i] = arr[i].replace(".xml", "");
@@ -84,19 +88,19 @@ public class SettBackup{
         return arr;
     }
 
-    public static String getPrefContent(String filename) throws IOException{
-        File prefsDir = new File(getContext().getFilesDir().getParentFile(), "shared_prefs");
+    public static String getPrefContent(String filename) throws IOException {
+        File prefsDir = new File(getGlobalContext().getFilesDir().getParentFile(), "shared_prefs");
         if (!prefsDir.exists())
             return null;
         File pref = new File(prefsDir, filename);
-        return new String(readFileFully(pref));
+        return IOUtils.readAllLines(pref);
     }
 
-    public static void restoreBackup(String backupName) throws IOException{
+    public static void restoreBackup(String backupName) throws IOException {
         SharedPreferences.Editor editor = getPrefs().edit();
         File pref = new File(sBackupDir, backupName + ".xml");
-        Scanner scanner = new Scanner(new String(readFileFully(pref)));
-        while(scanner.hasNextLine()) {
+        Scanner scanner = new Scanner(IOUtils.readAllLines(pref));
+        while (scanner.hasNextLine()) {
             String line = scanner.nextLine().trim();
             if (line.contains("<?xml") || line.contains("<map>") || line.contains("</map>"))
                 continue;
@@ -107,7 +111,7 @@ public class SettBackup{
                 String name = matcher.group(1);
                 Set<String> set = new HashSet<>();
                 String _line;
-                while(!(_line = scanner.nextLine().trim()).equals("</set>")) {
+                while (!(_line = scanner.nextLine().trim()).equals("</set>")) {
                     set.add(_line.substring(_line.indexOf(">") + 1, _line.lastIndexOf("<")));
                 }
                 editor.putStringSet(name, set)
@@ -156,8 +160,8 @@ public class SettBackup{
             }
         }
         if (!Preferences.dev()) return;
-        File prefsDir = new File(getContext().getFilesDir().getParentFile(), "shared_prefs");
+        File prefsDir = new File(getGlobalContext().getFilesDir().getParentFile(), "shared_prefs");
         File file = new File(prefsDir, "com.vtosters.lite_preferences.xml");
-        Log.d("TAG", new String(readFileFully(file)));
+        Log.d("TAG", IOUtils.readAllLines(file));
     }
 }

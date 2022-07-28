@@ -1,12 +1,12 @@
-package ru.vtosters.lite.utils;
+package ru.vtosters.lite.ui.dialogs;
+
 import static android.content.ContentValues.TAG;
-import static ru.vtosters.lite.utils.Globals.edit;
-import static ru.vtosters.lite.utils.Globals.isNetworkIsSlow;
+import static ru.vtosters.lite.utils.AndroidUtils.edit;
+import static ru.vtosters.lite.utils.NetworkUtils.isNetworkIsSlow;
 import static ru.vtosters.lite.utils.Preferences.getBoolValue;
 import static ru.vtosters.lite.utils.Preferences.hasVerification;
 
 import android.app.Activity;
-import android.app.AlertDialog;
 import android.content.Intent;
 import android.net.Uri;
 import android.util.Log;
@@ -24,7 +24,7 @@ import okhttp3.OkHttpClient;
 import okhttp3.Request;
 import okhttp3.Response;
 
-public class ServerDialog{
+public class ServerDialog {
     private static final OkHttpClient client = new OkHttpClient();
     public static Boolean showAlert;
     public static Activity activity;
@@ -37,7 +37,7 @@ public class ServerDialog{
     private static Boolean cancelable;
     private static Boolean isNotForVerified;
 
-    public static void sendRequest(){
+    public static void sendRequest() {
         if (getBoolValue("dialogrecomm", false)) return;
 
         if (isNetworkIsSlow()) return;
@@ -46,15 +46,15 @@ public class ServerDialog{
                 .b("https://vtosters.app/dialog.json")
                 .a();
 
-        client.a(request).a(new Callback(){
+        client.a(request).a(new Callback() {
             @Override
-            public void a(Call call, IOException e){
+            public void a(Call call, IOException e) {
                 Log.d(TAG, "" + e);
                 showAlert = false;
             }
 
             @Override
-            public void a(Call call, Response response){
+            public void a(Call call, Response response) {
                 try {
                     getResponse(response.a().g());
                 } catch (Exception e) {
@@ -64,7 +64,7 @@ public class ServerDialog{
         });
     }
 
-    private static Boolean showForNotVerified(){
+    private static Boolean showForNotVerified() {
         int random = new Random().nextInt(6);
 
         if (isNotForVerified) {
@@ -74,7 +74,7 @@ public class ServerDialog{
         return true;
     }
 
-    private static void getResponse(String body) throws Exception{
+    private static void getResponse(String body) throws Exception {
         JSONObject jSONObject = new JSONObject(body);
 
         Log.d("VTLOG", "getResponse: " + jSONObject);

@@ -22,6 +22,7 @@
             android:title="@string/vtloffline" />
         <com.vtosters.lite.ui.MaterialSwitchPreference
             android:defaultValue="false"
+            android:enabled="false"
             android:key="setoffline"
             android:summary="@string/vtloffline2summary"
             android:title="@string/vtloffline2" />
@@ -104,6 +105,11 @@
             android:title="Глобальный обход онлайна" />
     </PreferenceCategory>
     <PreferenceCategory android:title="@string/privacy_vtl">
+        <com.vtosters.lite.ui.MaterialSwitchPreference
+            android:defaultValue="false"
+            android:key="screenshotdetect"
+            android:summary="Отключить уведомление о том, что вы сделали скриншот"
+            android:title="Отключить детект скриншотов" />
         <com.vtosters.lite.ui.MaterialSwitchPreference
             android:defaultValue="true"
             android:key="awayphp"

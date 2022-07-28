@@ -2,22 +2,22 @@
 <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
     <PreferenceCategory android:title="@string/vtad">
         <com.vtosters.lite.ui.MaterialSwitchPreference
-            android:defaultValue="false"
+            android:defaultValue="true"
             android:key="__dbg_no_ads"
             android:summary="@string/feed_ads_regular_summary"
             android:title="@string/vtldads" />
         <com.vtosters.lite.ui.MaterialSwitchPreference
-            android:defaultValue="false"
+            android:defaultValue="true"
             android:key="adsgroup"
             android:summary="@string/vtldgadssummary"
             android:title="@string/vtldgads" />
         <com.vtosters.lite.ui.MaterialSwitchPreference
-            android:defaultValue="false"
+            android:defaultValue="true"
             android:key="__dbg_no_slider_ads"
             android:summary="@string/feed_ads_carousel_summary"
             android:title="@string/vtldca" />
         <com.vtosters.lite.ui.MaterialSwitchPreference
-            android:defaultValue="false"
+            android:defaultValue="true"
             android:key="adsstories"
             android:summary="@string/feed_ads_stories_summary"
             android:title="@string/vtldas" />
@@ -99,9 +99,9 @@
             android:summary="@string/officialnewssett_summary"
             android:title="@string/officialnewssett" />
         <Preference
+            android:enabled="false"
             android:summary="Возможно у вас включена Интересная лента \n\nЕсли вы хотите поменять ленту на Временную, то вы можете сменить ее нажав на пункт выше"
-            android:title="Почему не обновляются новости?"
-            android:enabled="false" />
+            android:title="Почему не обновляются новости?" />
         <com.vtosters.lite.ui.SummaryListPreference
             android:defaultValue="default"
             android:dialogTitle="@string/feed_other_update_dialog_title"

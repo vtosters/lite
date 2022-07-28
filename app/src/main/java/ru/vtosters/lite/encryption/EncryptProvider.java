@@ -19,10 +19,10 @@ import ru.vtosters.lite.encryption.processors.MP3InvisibleProcessor;
 import ru.vtosters.lite.encryption.processors.VTostersAESProcessor;
 import ru.vtosters.lite.encryption.processors.VTostersProcessor;
 
-public class EncryptProvider{
+public class EncryptProvider {
     public static List<IMProcessor> processors = new ArrayList<>();
 
-    static{
+    static {
         processors.add(new VTostersProcessor());
         processors.add(new VTostersAESProcessor());
         processors.add(new DefaultCoffeeProcessor());
@@ -31,7 +31,7 @@ public class EncryptProvider{
         processors.add(new MP3InvisibleProcessor());
     }
 
-    public static IMProcessor getProcessorFor(int peerId){
+    public static IMProcessor getProcessorFor(int peerId) {
         IMProcessor enabled = null;
         for (IMProcessor processor : EncryptProvider.processors) {
             if (processor.isUsedToEncrypt(peerId)) {
@@ -41,20 +41,20 @@ public class EncryptProvider{
         return enabled;
     }
 
-    public static String getBody(MsgFromUser msg){
+    public static String getBody(MsgFromUser msg) {
         return msg.f();
     }
 
-    public static int getPeerId(Msg msg){
+    public static int getPeerId(Msg msg) {
         return msg.v1();
     }
 
     // This will run through EVERY single processor available.
-    public static String decryptMessage(MsgFromUser msg){
+    public static String decryptMessage(MsgFromUser msg) {
         return decryptMessage(getBody(msg), getPeerId(msg));
     }
 
-    public static String decryptMessage(String msgBody, int peer){
+    public static String decryptMessage(String msgBody, int peer) {
         try {
             for (IMProcessor processor : processors) {
                 if ((processor.isUsed() || !processor.isPublic()) && processor.isEncrypted(msgBody) && (processor.isPublic() || getKeyForProcessor(processor, peer) != null))
@@ -66,7 +66,7 @@ public class EncryptProvider{
         return msgBody;
     }
 
-    private static byte[] getKeyForProcessor(IMProcessor processor, int peer){
+    private static byte[] getKeyForProcessor(IMProcessor processor, int peer) {
         if (processor.isPublic()) return null;
         String keyString = processor.getEncryptionKeyFor(peer);
         if (keyString == null) return null;
@@ -85,7 +85,7 @@ public class EncryptProvider{
     }
 
     // This will use only the processor which was chosen in chat menu [that's why ID is needed, bruh]
-    public static String encryptMessage(MsgFromUser msg){
+    public static String encryptMessage(MsgFromUser msg) {
 
         String msgBody = getBody(msg);
 
@@ -104,7 +104,7 @@ public class EncryptProvider{
     }
 
     // For rendering UI
-    public static List<Pair<String, String>> getUserVisibleEncoders(){
+    public static List<Pair<String, String>> getUserVisibleEncoders() {
         List<Pair<String, String>> theList = new ArrayList<>();
 
         for (IMProcessor processor : processors) {

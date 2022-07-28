@@ -125,7 +125,7 @@
 .method public final a(Lorg/json/JSONObject;)Lcom/vk/dto/common/VerifyInfo;
     .locals 4
 
-    invoke-static {p1}, Lru/vtosters/lite/f0x1d/VTVerifications;->VerifyInfo(Lorg/json/JSONObject;)Lcom/vk/dto/common/VerifyInfo;
+    invoke-static {p1}, Lru/vtosters/lite/utils/VTVerifications;->VerifyInfo(Lorg/json/JSONObject;)Lcom/vk/dto/common/VerifyInfo;
 
     move-result-object p1
 

@@ -1,8 +1,8 @@
 package ru.vtosters.lite.utils;
 
 import static java.lang.System.clearProperty;
-import static ru.vtosters.lite.utils.Globals.getContext;
-import static ru.vtosters.lite.utils.Globals.getPrefsValue;
+import static ru.vtosters.lite.utils.AndroidUtils.getGlobalContext;
+import static ru.vtosters.lite.utils.AndroidUtils.getPrefsValue;
 
 import android.annotation.SuppressLint;
 import android.content.Context;
@@ -12,10 +12,9 @@ import android.util.Log;
 
 import java.lang.reflect.Field;
 import java.lang.reflect.Method;
-import java.util.Properties;
 
-public class Proxy{
-    public static String getApi(){
+public class ProxyUtils {
+    public static String getApi() {
         var proxyapi = getPrefsValue("proxyapi");
 
         if (apiproxy() & !proxyapi.isEmpty()) {
@@ -25,14 +24,14 @@ public class Proxy{
         return "api.vk.com";
     }
 
-    public static Boolean isZaboronaEnabled(){
+    public static Boolean isZaboronaEnabled() {
         return getPrefsValue("proxy").equals("zaborona");
     }
 
     private static void setProxyRefl() {
         Log.d("Proxy", "Setting proxy...");
         try {
-            var context = getContext().getApplicationContext();
+            var context = getGlobalContext().getApplicationContext();
             Class<?> applicationClass = Class.forName("android.app.Application");
             @SuppressLint("DiscouragedPrivateApi") @SuppressWarnings("JavaReflectionMemberAccess")
             Field mLoadedApkField = applicationClass.getDeclaredField("mLoadedApk");
@@ -148,57 +147,57 @@ public class Proxy{
         clearProperty("socksPortHost");
     } // Reset all except https
 
-    private static String proxyHostHTTP(){
+    private static String proxyHostHTTP() {
         var string = getPrefsValue("proxyHostHTTP");
         return string.isEmpty() ? "192.168.0.1" : string;
     }
 
-    private static String proxyHostHTTPS(){
+    private static String proxyHostHTTPS() {
         var string = getPrefsValue("proxyHostHTTPS");
         return string.isEmpty() ? "192.168.0.1" : string;
     }
 
-    private static String proxyHostSocks(){
+    private static String proxyHostSocks() {
         var string = getPrefsValue("proxyHostSocks");
         return string.isEmpty() ? "192.168.0.1" : string;
     }
 
-    private static String proxyPortHTTP(){
+    private static String proxyPortHTTP() {
         var string = getPrefsValue("proxyPortHTTP");
         return string.isEmpty() ? "8888" : string;
     }
 
-    private static String proxyPortHTTPS(){
+    private static String proxyPortHTTPS() {
         var string = getPrefsValue("proxyPortHTTPS");
         return string.isEmpty() ? "8888" : string;
     }
 
-    private static String proxyPortSocks(){
+    private static String proxyPortSocks() {
         var string = getPrefsValue("proxyPortSocks");
         return string.isEmpty() ? "8888" : string;
     }
 
-    private static String proxyUserHTTP(){
+    private static String proxyUserHTTP() {
         var string = getPrefsValue("proxyUserHTTP");
         return string.isEmpty() ? "" : string;
     }
 
-    private static String proxyUserHTTPS(){
+    private static String proxyUserHTTPS() {
         var string = getPrefsValue("proxyUserHTTPS");
         return string.isEmpty() ? "" : string;
     }
 
-    private static String proxyPassHTTP(){
+    private static String proxyPassHTTP() {
         var string = getPrefsValue("proxyPassHTTP");
         return string.isEmpty() ? "" : string;
     }
 
-    private static String proxyPassHTTPS(){
+    private static String proxyPassHTTPS() {
         String string = getPrefsValue("proxyPassHTTPS");
         return string.isEmpty() ? "" : string;
     }
 
-    public static boolean apiproxy(){
+    public static boolean apiproxy() {
         return getPrefsValue("proxy").equals("apiproxy");
     }
 }

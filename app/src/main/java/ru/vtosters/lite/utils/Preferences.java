@@ -1,21 +1,18 @@
 package ru.vtosters.lite.utils;
 
 import static java.lang.Long.MAX_VALUE;
-import static ru.vtosters.lite.f0x1d.VTVerifications.isPrometheus;
-import static ru.vtosters.lite.f0x1d.VTVerifications.isVerified;
+import static ru.vtosters.lite.utils.AndroidUtils.edit;
+import static ru.vtosters.lite.utils.AndroidUtils.getGlobalContext;
+import static ru.vtosters.lite.utils.AndroidUtils.getPrefsValue;
 import static ru.vtosters.lite.utils.CacheUtils.getInstance;
 import static ru.vtosters.lite.utils.DeletedMessagesHandler.reloadMessagesList;
-import static ru.vtosters.lite.utils.Globals.edit;
-import static ru.vtosters.lite.utils.Globals.fixGapps;
-import static ru.vtosters.lite.utils.Globals.getContext;
-import static ru.vtosters.lite.utils.Globals.getPrefsValue;
-import static ru.vtosters.lite.utils.Globals.getUserId;
-import static ru.vtosters.lite.utils.Globals.registerActivities;
-import static ru.vtosters.lite.utils.Newsfeed.setupFilters;
-import static ru.vtosters.lite.utils.Proxy.setProxy;
+import static ru.vtosters.lite.utils.NewsFeedFiltersUtils.setupFilters;
+import static ru.vtosters.lite.utils.ProxyUtils.setProxy;
 import static ru.vtosters.lite.utils.SignatureChecker.validateAppSignature;
-import static ru.vtosters.lite.utils.Themes.isDarkTheme;
-import static ru.vtosters.lite.utils.Themes.systemThemeChanger;
+import static ru.vtosters.lite.utils.ThemesUtils.isDarkTheme;
+import static ru.vtosters.lite.utils.ThemesUtils.systemThemeChanger;
+import static ru.vtosters.lite.utils.VTVerifications.isPrometheus;
+import static ru.vtosters.lite.utils.VTVerifications.isVerified;
 
 import android.app.Application;
 import android.content.Context;
@@ -30,21 +27,21 @@ import java.security.NoSuchAlgorithmException;
 
 import ru.vtosters.lite.ui.fragments.VTSettings;
 
-public class Preferences{
-    public static SharedPreferences preferences = getContext().getSharedPreferences("com.vtosters.lite_preferences", Context.MODE_PRIVATE);
+public class Preferences {
+    public static SharedPreferences preferences = getGlobalContext().getSharedPreferences("com.vtosters.lite_preferences", Context.MODE_PRIVATE);
     public static String VERSIONNAME = "Beta";
 
-    public static void init(Application application) throws Exception{
+    public static void init(Application application) throws Exception {
         setupFilters();
-        fixGapps();
+        GmsUtils.fixGapps();
         setProxy();
         reloadMessagesList();
-        registerActivities(application);
+        LifecycleUtils.registerActivities(application);
         systemThemeChanger(null);
         getInstance().autoCleaningCache();
     } // VK Init
 
-    public static void forceOffline(){
+    public static void forceOffline() {
         setupFilters();
         getInstance().autoCleaningCache();
         edit().putBoolean("isdark", isDarkTheme()).commit();
@@ -54,276 +51,284 @@ public class Preferences{
         }
     }
 
-    public static boolean getBoolValue(String key, Boolean value){
+    public static boolean getBoolValue(String key, Boolean value) {
         if (preferences == null) {
-            preferences = PreferenceManager.getDefaultSharedPreferences(getContext());
+            preferences = PreferenceManager.getDefaultSharedPreferences(getGlobalContext());
         }
         return preferences.getBoolean(key, value);
     } // Set bool by default and get value
 
-    public static SharedPreferences getPrefsFromFile(String filename){
-        return getContext().getSharedPreferences(filename, Context.MODE_PRIVATE);
+    public static SharedPreferences getPrefsFromFile(String filename) {
+        return getGlobalContext().getSharedPreferences(filename, Context.MODE_PRIVATE);
     }
 
-    public static boolean opusmodule(){
+    public static boolean opusmodule() {
         return getBoolValue("opusmodule", true);
     }
 
-    public static boolean DoNotUseOldIcons(){
+    public static boolean DoNotUseOldIcons() {
         return true;
     }
 
-    public static boolean systemtheme(){
+    public static boolean systemtheme() {
         return false; //getBoolValue("systemtheme", true) && VERSION.SDK_INT >= 28;
     }
 
-    public static boolean authorsrecomm(){
+    public static boolean authorsrecomm() {
         return getBoolValue("authorsrecomm", false);
     }
 
-    public static boolean captions(){
+    public static boolean captions() {
         return getBoolValue("captions", false);
     }
 
-    public static boolean copyright_post(){
+    public static boolean copyright_post() {
         return getBoolValue("copyright_post", false);
     }
 
-    public static boolean default_ad_list(){
+    public static boolean default_ad_list() {
         return getBoolValue("default_ad_list", false);
     }
 
-    public static boolean shitposting(){
+    public static boolean shitposting() {
         return getBoolValue("shitposting", false);
     }
 
-    public static boolean friendsrecomm(){
+    public static boolean friendsrecomm() {
         return getBoolValue("friendsrecomm", false);
     }
 
-    public static boolean ads(){
-        return getBoolValue("__dbg_no_ads", false);
+    public static boolean ads() {
+        return getBoolValue("__dbg_no_ads", true);
     }
 
-    public static boolean adsgroup(){
-        return getBoolValue("adsgroup", false);
+    public static boolean adsgroup() {
+        return getBoolValue("adsgroup", true);
     }
 
-    public static boolean vkme(){
+    public static boolean vkme() {
         return getBoolValue("vkme", false);
     }
 
-    public static boolean adsslider(){
-        return getBoolValue("__dbg_no_slider_ads", false);
+    public static boolean adsslider() {
+        return getBoolValue("__dbg_no_slider_ads", true);
     }
 
-    public static boolean adsstories(){
-        return getBoolValue("adsstories", false);
+    public static boolean adsstories() {
+        return getBoolValue("adsstories", true);
     }
 
-    public static boolean videofeed(){
+    public static boolean videofeed() {
         return getBoolValue("__dbg_disable_video_feed", false);
     }
 
-    public static boolean alteremoji(boolean istablet){
+    public static boolean alteremoji(boolean istablet) {
         return alteremojipref() ? alteremojipref() : istablet;
     }
 
-    public static boolean alteremojipref(){
+    public static boolean alteremojipref() {
         return getBoolValue("alteremoji", false);
     }
 
-    public static boolean awayphp(){
+    public static boolean awayphp() {
         return getBoolValue("awayphp", true);
     }
 
-    public static boolean musicFixNew(){
+    public static boolean musicFixNew() {
         return getBoolValue("musicFixNew", true);
     }
 
-    public static boolean foaf(){
+    public static boolean foaf() {
         return getBoolValue("foaf", false);
     }
 
-    public static Class useNewSettings(){
+    public static Class useNewSettings() {
         boolean bool = getBoolValue("useNewSettings", true);
         return bool ? VTSettings.class : SettingsListFragment.class;
     }
 
-    public static boolean VKUI_INJ(){
+    public static boolean VKUI_INJ() {
         return getBoolValue("VKUI_INJ", true);
     }
 
-    public static boolean calls(){
+    public static boolean calls() {
         return getBoolValue("calls", false);
     }
 
-    public static boolean globalUsersOnline(){
+    public static boolean globalUsersOnline() {
         return getBoolValue("globalUsersOnline", false);
     }
 
-    public static boolean dev(){
+    public static boolean dev() {
         return getBoolValue("dev", false);
     }
 
-    public static boolean devmenu(){
+    public static boolean devmenu() {
         return getBoolValue("devmenu", false);
     }
 
-    public static boolean dnr(){
+    public static boolean dnr() {
         return getBoolValue("dnr", true);
     }
 
-    public static boolean dnt(){
+    public static boolean dnt() {
         return getBoolValue("dnt", true);
     }
 
-    public static boolean dockcounter(){
+    public static boolean dockcounter() {
         return getBoolValue("dockcounter", true);
     }
 
-    public static boolean feedcache(){
+    public static boolean feedcache() {
         return getBoolValue("feedcache", true);
     }
 
-    public static boolean superapp(){
+    public static boolean superapp() {
         return getBoolValue("superapp", true);
     }
 
-    public static boolean vkpay(){
+    public static boolean vkpay() {
         return getBoolValue("vkpay", true);
     }
 
-    public static boolean miniapps(){
+    public static boolean miniapps() {
         return getBoolValue("miniapps", true);
     }
 
-    public static boolean friendsblock(){
+    public static boolean friendsblock() {
         return getBoolValue("friendsblock", false);
     }
 
-    public static boolean dockbar_accent(){
+    public static boolean dockbar_accent() {
         return getBoolValue("dockbar_accent", true);
     }
 
-    public static boolean milkshake(){
-        return getBoolValue("milkshake", false);
+    public static boolean milkshake() {
+        return getBoolValue("milkshake", true);
     }
 
-    public static boolean musicnewcatalog(){
+    public static boolean musicnewcatalog() {
         return getBoolValue("musicnewcatalog", true);
     }
 
-    public static boolean videoewcatalog(){
-        return getBoolValue("videoewcatalog", true);
+    public static boolean videonewcatalog() {
+        return getBoolValue("videonewcatalog", true);
     }
 
-    public static boolean postsredesign(){
+    public static boolean postsredesign() {
         return getBoolValue("postsredesign", true);
     }
 
-    public static boolean returnnorifs(){
+    public static boolean returnnorifs() {
         return getBoolValue("returnnorifs", false);
     }
 
-    public static boolean gcmfix(){
+    public static boolean gcmfix() {
         return getBoolValue("gcmfix", true) && isValidSignature();
     }
 
-    public static boolean hasMusicSubscription(){
+    public static boolean hasMusicSubscription() {
         return getBoolValue("hasMusicSubscription", true);
     }
 
-    public static boolean isEnableExternalOpening(){
+    public static boolean isEnableExternalOpening() {
         return getBoolValue("isEnableExternalOpening", false);
     }
 
-    public static boolean isMusicRestricted(){
+    public static boolean isMusicRestricted() {
         return getBoolValue("isMusicRestricted", true);
     }
 
-    public static boolean navbar(){
+    public static boolean navbar() {
         return getBoolValue("navbar", true);
     }
 
-    public static boolean offline(){
+    public static boolean offline() {
         return getBoolValue("offline", false);
     }
 
-    public static boolean oldabout(){
+    public static boolean oldabout() {
         return getBoolValue("oldabout", false);
     }
 
-    public static boolean postsrecomm(){
+    public static boolean postsrecomm() {
         return getBoolValue("postsrecomm", false);
     }
 
-    public static boolean refsfilter(){
+    public static boolean refsfilter() {
         return getBoolValue("refsfilter", false);
     }
 
-    public static boolean setoffline(){
+    public static boolean setoffline() {
         return getBoolValue("setoffline", false);
     }
 
-    public static boolean shortinfo(){
+    public static boolean shortinfo() {
         return getBoolValue("shortinfo", true);
     }
 
-    public static boolean shortlinkfilter(){
+    public static boolean shortlinkfilter() {
         return getBoolValue("shortlinkfilter", false);
     }
 
-    public static boolean shortpost(){
+    public static boolean shortpost() {
         return getBoolValue("shortpost", true);
     }
 
-    public static boolean showmenu(){
+    public static boolean showmenu() {
         return getBoolValue("showmenu", false);
     }
 
-    public static boolean ssl(){
+    public static boolean ssl() {
         return getBoolValue("ssl", true);
     }
 
-    public static boolean stories(){
+    public static boolean stories() {
         return getBoolValue("stories", true);
     }
 
-    public static boolean swipe(){
+    public static boolean swipe() {
         return getBoolValue("swipe", true);
     }
 
-    public static boolean systememoji(){
+    public static boolean systememoji() {
         return getBoolValue("systememoji", false);
     }
 
-    public static boolean vksans(){
+    public static boolean vksans() {
         return getBoolValue("vksans", false);
     }
 
-    public static boolean voice(){
+    public static boolean voice() {
         return getBoolValue("voice", true);
     }
 
-    public static int getMsgCount(int orig){
+    public static int getMsgCount(int orig) {
         String customvalue = getPrefsValue("msgcount");
         return customvalue.isEmpty() ? orig : Integer.parseInt(customvalue);
     }
 
-    public static boolean color_grishka(){
+    public static boolean color_grishka() {
         return getBoolValue("color_grishka", true);
     }
 
-    public static boolean vkme_notifs(){
+    public static boolean vkme_notifs() {
         return getBoolValue("vkme_notifs", false);
     }
 
-    public static boolean checkupdates(){
+    public static boolean podcastcatalog() {
+        return getBoolValue("podcastcatalog", false);
+    }
+
+    public static boolean screenshotdetect() {
+        return getBoolValue("screenshotdetect", false);
+    }
+
+    public static boolean checkupdates() {
         return getBoolValue("checkupdates", true) && isValidSignature();
     }
 
-    public static boolean isValidSignature(){
+    public static boolean isValidSignature() {
         try {
             return validateAppSignature();
         } catch (PackageManager.NameNotFoundException | NoSuchAlgorithmException e) {
@@ -332,20 +337,20 @@ public class Preferences{
         return false;
     }
 
-    public static boolean disableSettingsSumms(){
+    public static boolean disableSettingsSumms() {
         return getBoolValue("disableSettingsSumms", false);
     }
 
-    public static boolean hasVerification(){
-        return isVerified(getUserId());
+    public static boolean hasVerification() {
+        return isVerified(AccountManagerUtils.getUserId());
     }
 
-    public static boolean hasSpecialVerif(){
-        return isPrometheus(getUserId());
+    public static boolean hasSpecialVerif() {
+        return isPrometheus(AccountManagerUtils.getUserId());
     }
 
-    public static long getSizeForDelete(){
-        switch(getPrefsValue("clearcache")) {
+    public static long getSizeForDelete() {
+        switch (getPrefsValue("clearcache")) {
             case "100mb":
                 return 104857600L;
             case "500mb":
@@ -361,9 +366,10 @@ public class Preferences{
         }
     }
 
-    public static int compress(int origquality){
-        if (getBoolValue("shakal", false)) return 5;
-        if (!getBoolValue("compressPhotos", true)) return 100;
+    public static int compress(int origquality) {
+        if (!getBoolValue("compressPhotos", true)) {
+            return 100;
+        }
         return origquality;
     }
 }

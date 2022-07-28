@@ -34,7 +34,7 @@
 .method public b()Ljava/lang/String;
     .locals 1
 
-    const-string v0, "5.56.1"
+    const-string v0, "7.26"
 
     return-object v0
 .end method
@@ -57,7 +57,7 @@
 .method public d()Ljava/lang/String;
     .locals 1
 
-    const/16 v0, 0x12e6
+    const/16 v0, 0x3032
 
     .line 1
     invoke-static {v0}, Ljava/lang/String;->valueOf(I)Ljava/lang/String;

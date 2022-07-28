@@ -1,11 +1,12 @@
 package bruhcollective.itaysonlab.libvkx.client;
 
-import static ru.vtosters.lite.utils.Globals.getContext;
+import static ru.vtosters.lite.music.Scrobbler.scrobbleTrack;
+import static ru.vtosters.lite.utils.AndroidUtils.getGlobalContext;
 import static ru.vtosters.lite.utils.Preferences.getBoolValue;
 
+import android.annotation.SuppressLint;
 import android.content.Context;
 import android.os.RemoteException;
-import android.util.Log;
 
 import com.vk.dto.music.MusicTrack;
 import com.vk.music.common.MusicPlaybackLaunchContext;
@@ -16,6 +17,7 @@ import java.util.List;
 import bruhcollective.itaysonlab.libvkx.ILibVkxService;
 
 public class LibVKXClient{
+    @SuppressLint("StaticFieldLeak")
     private static LibVKXClientImpl impl;
 
     public static LibVKXClientImpl getInstance(Context context){
@@ -27,12 +29,12 @@ public class LibVKXClient{
 
     public static LibVKXClientImpl getInstance(){
         LibVKXClientImpl libVKXClientImpl = impl;
-        return libVKXClientImpl == null ? getInstance(getContext()) : libVKXClientImpl;
+        return libVKXClientImpl == null ? getInstance(getGlobalContext()) : libVKXClientImpl;
     }
 
     public static boolean isVkxInstalled(){
         try {
-            getContext().getPackageManager().getPackageInfo("ua.itaysonlab.vkx", 0);
+            getGlobalContext().getPackageManager().getPackageInfo("ua.itaysonlab.vkx", 0);
             return true;
         } catch (Exception unused) {
             return false;
@@ -44,6 +46,8 @@ public class LibVKXClient{
     }
 
     public static boolean play(MusicTrack musicTrack, List<MusicTrack> list, MusicPlaybackLaunchContext playerRefer){
+        scrobbleTrack(musicTrack.h, musicTrack.C, musicTrack.f, musicTrack.y1());
+
         if (!isIntegrationEnabled()) {
             return false;
         }

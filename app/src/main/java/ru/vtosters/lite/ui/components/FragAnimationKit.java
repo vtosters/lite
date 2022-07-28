@@ -1,13 +1,13 @@
-package ru.vtosters.lite.utils;
+package ru.vtosters.lite.ui.components;
 
-import static ru.vtosters.lite.utils.Globals.getIdentifier;
-import static ru.vtosters.lite.utils.Globals.getPrefsValue;
+import static ru.vtosters.lite.utils.AndroidUtils.getIdentifier;
+import static ru.vtosters.lite.utils.AndroidUtils.getPrefsValue;
 
 import android.content.res.Resources;
 
 import androidx.fragment.app.FragmentTransaction;
 
-public class FragAnimationKit{
+public class FragAnimationKit {
 
     // Q
     private static final int actOpenEnter = getIdentifier("q_enter", "anim");
@@ -31,9 +31,9 @@ public class FragAnimationKit{
     private static final int SSTactCloseEnter = resources.getIdentifier("task_close_enter", "anim", "android");
     private static final int SSTactCloseExit = resources.getIdentifier("task_close_exit", "anim", "android");
 
-    public static void setAnimations(FragmentTransaction transaction){
+    public static void setAnimations(FragmentTransaction transaction) {
         if (transaction != null && !getPrefsValue("anim_rtrn_type").equals("noanim")) {
-            switch(getPrefsValue("anim_rtrn_type")) {
+            switch (getPrefsValue("anim_rtrn_type")) {
                 case "q":
                     transaction.setCustomAnimations(
                             actOpenEnter,

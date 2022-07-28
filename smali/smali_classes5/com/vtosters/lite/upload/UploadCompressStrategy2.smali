@@ -323,7 +323,7 @@
     if-eqz v0, :cond_3
 
     .line 9
-    invoke-static {}, Lb/h/g/m/FileUtils;->b()Ljava/io/File;
+    invoke-static {}, Lb/h/g/m/FileUtils;->getExternalHiddenDir()Ljava/io/File;
 
     move-result-object v0
 

@@ -1,11 +1,12 @@
 package ru.vtosters.lite.hooks;
+
 import static ru.vtosters.lite.ui.components.DockBarEditorManager.getInstance;
-import static ru.vtosters.lite.utils.Globals.getPrefsValue;
+import static ru.vtosters.lite.utils.AndroidUtils.getPrefsValue;
 import static ru.vtosters.lite.utils.Preferences.getBoolValue;
 import static ru.vtosters.lite.utils.Preferences.milkshake;
 import static ru.vtosters.lite.utils.Preferences.superapp;
 import static ru.vtosters.lite.utils.Preferences.useNewSettings;
-import static ru.vtosters.lite.utils.Preferences.videoewcatalog;
+import static ru.vtosters.lite.utils.Preferences.videonewcatalog;
 import static ru.vtosters.lite.utils.Preferences.vkme;
 
 import com.vk.apps.AppsFragment;
@@ -33,12 +34,12 @@ import com.vtosters.lite.fragments.y2.VideosFragment;
 import com.vtosters.lite.general.fragments.GamesFragment;
 import com.vtosters.lite.general.fragments.PhotosFragment;
 
-public class StartFragmentHook{
-    public static Class getStartFragment(){
+public class StartFragmentHook {
+    public static Class getStartFragment() {
         if (vkme()) {
             return DialogsFragment.class;
         }
-        switch(getPrefsValue("start_values")) {
+        switch (getPrefsValue("start_values")) {
             case "newsfeed":
                 return milkshake() ? HomeFragment.class : NewsfeedFragment.class;
             case "messenger":
@@ -52,7 +53,7 @@ public class StartFragmentHook{
             case "photos":
                 return PhotosFragment.class;
             case "videos":
-                return videoewcatalog() ? VideoCatalogFragment.class : VideosFragment.class;
+                return videonewcatalog() ? VideoCatalogFragment.class : VideosFragment.class;
             case "settings":
                 return useNewSettings();
             case "apps":

@@ -20,35 +20,35 @@ import java.util.ArrayList;
 /**
  * Created by Aefyr on 19.05.2018.
  */
-public class TelegramStickersDbHelper extends SQLiteOpenHelper{
+public class TelegramStickersDbHelper extends SQLiteOpenHelper {
     private static final int DB_VERSION = 2;
     private static final String DB_NAME = "TelegramStickers.db";
 
     private SQLiteDatabase writableDb;
     private SQLiteDatabase readableDb;
 
-    public TelegramStickersDbHelper(Context context){
+    public TelegramStickersDbHelper(Context context) {
         super(context, DB_NAME, null, DB_VERSION);
     }
 
     @Override
-    public void onCreate(SQLiteDatabase db){
+    public void onCreate(SQLiteDatabase db) {
         db.execSQL(TelegramStickersContract.SQL_CREATE_ENTRIES);
     }
 
     @Override
-    public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion){
+    public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
         if (oldVersion == 1 && newVersion == 2) {
             db.execSQL(String.format("ALTER TABLE %s ADD COLUMN %s TEXT", TelegramStickersContract.StickersTableEntry.TABLE_NAME, TelegramStickersContract.StickersTableEntry.COLUMN_NAME_EMOJIS));
         }
     }
 
-    public void loadDatabases(){
+    public void loadDatabases() {
         writableDb = getWritableDatabase();
         readableDb = getReadableDatabase();
     }
 
-    public boolean syncPack(TelegramStickersPack pack){
+    public boolean syncPack(TelegramStickersPack pack) {
         ContentValues sqlPack = new ContentValues();
         sqlPack.put(TelegramStickersContract.StickersTableEntry.COLUMN_NAME_ID, pack.id);
         sqlPack.put(TelegramStickersContract.StickersTableEntry.COLUMN_NAME_NAME, pack.title);
@@ -77,7 +77,7 @@ public class TelegramStickersDbHelper extends SQLiteOpenHelper{
         return true;
     }
 
-    private int getNewIndex(){
+    private int getNewIndex() {
         Cursor c = readableDb.rawQuery("SELECT MAX(" + TelegramStickersContract.StickersTableEntry.COLUMN_NAME_INDEX + ") FROM " + TelegramStickersContract.StickersTableEntry.TABLE_NAME, new String[0]);
         c.moveToLast();
         int max;
@@ -91,30 +91,30 @@ public class TelegramStickersDbHelper extends SQLiteOpenHelper{
         return max + 1;
     }
 
-    public boolean deletePack(TelegramStickersPack pack){
+    public boolean deletePack(TelegramStickersPack pack) {
         return writableDb.delete(TelegramStickersContract.StickersTableEntry.TABLE_NAME, TelegramStickersContract.StickersTableEntry.COLUMN_NAME_ID + "='" + pack.id + "'", null) == 1;
     }
 
-    public void getAllPacks(PacksLoadingListener listener){
+    public void getAllPacks(PacksLoadingListener listener) {
         new PacksLoadingTask(listener).execute();
     }
 
-    public interface PacksLoadingListener{
+    public interface PacksLoadingListener {
         void onPackLoaded(TelegramStickersPack pack);
 
         void onAllPacksLoaded(ArrayList<TelegramStickersPack> packs);
     }
 
-    private class PacksLoadingTask extends AsyncTask<Void, Void, ArrayList<TelegramStickersPack>>{
+    private class PacksLoadingTask extends AsyncTask<Void, Void, ArrayList<TelegramStickersPack>> {
 
         PacksLoadingListener listener;
 
-        PacksLoadingTask(PacksLoadingListener listener){
+        PacksLoadingTask(PacksLoadingListener listener) {
             this.listener = listener;
         }
 
         @Override
-        protected ArrayList<TelegramStickersPack> doInBackground(Void... voids){
+        protected ArrayList<TelegramStickersPack> doInBackground(Void... voids) {
             if (readableDb == null)
                 loadDatabases();
 
@@ -125,7 +125,7 @@ public class TelegramStickersDbHelper extends SQLiteOpenHelper{
 
             ArrayList<TelegramStickersPack> packs = new ArrayList<>(cursor.getCount() + 8);
 
-            while(cursor.moveToNext()) {
+            while (cursor.moveToNext()) {
                 Log.d("DB", "PACK LOADED");
                 String id = cursor.getString(cursor.getColumnIndexOrThrow(TelegramStickersContract.StickersTableEntry.COLUMN_NAME_ID));
                 String name = cursor.getString(cursor.getColumnIndexOrThrow(TelegramStickersContract.StickersTableEntry.COLUMN_NAME_NAME));
@@ -160,7 +160,7 @@ public class TelegramStickersDbHelper extends SQLiteOpenHelper{
         }
 
         @Override
-        protected void onPostExecute(ArrayList<TelegramStickersPack> packs){
+        protected void onPostExecute(ArrayList<TelegramStickersPack> packs) {
             listener.onAllPacksLoaded(packs);
         }
     }

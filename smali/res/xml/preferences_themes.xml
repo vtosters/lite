@@ -2,10 +2,10 @@
 <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
     <PreferenceCategory android:title="@string/vtlthemes">
         <com.vtosters.lite.ui.MaterialSwitchPreference
-            android:defaultValue="false"
+            android:defaultValue="true"
             android:key="milkshake"
-            android:summary="Глобальный редизайн ВКонтакте"
-            android:title="Milkshake тема" />
+            android:summary="Глобальный редизайн ВКонтакте как на новых версиях"
+            android:title="Милкшейк" />
         <Preference
             android:enabled="false"
             android:summary="@string/appearance_theme_info_summary"
@@ -27,7 +27,7 @@
     </PreferenceCategory>
     <PreferenceCategory android:title="Докбар">
         <com.vtosters.lite.ui.MaterialSwitchPreference
-            android:defaultValue="false"
+            android:defaultValue="true"
             android:key="dockbar_tab_titles"
             android:title="@string/dockbar_tab_titles" />
         <com.vtosters.lite.ui.MaterialSwitchPreference

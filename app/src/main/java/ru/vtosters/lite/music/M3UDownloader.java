@@ -16,64 +16,55 @@ import okhttp3.Call;
 import okhttp3.OkHttpClient;
 import okhttp3.Request;
 import okhttp3.Response;
-import ru.vtosters.lite.utils.StreamUtils;
+import ru.vtosters.lite.utils.IOUtils;
 
-public class M3UDownloader{
+public class M3UDownloader {
 
-    private final String mURL;
-    private final File mOutDir;
-    private final Callback mCallback;
-    private OkHttpClient mClient = new OkHttpClient();
+    private static OkHttpClient client = new OkHttpClient();
 
-    public M3UDownloader(String url, File outDir, Callback callback){
-        mURL = url;
-        mOutDir = outDir;
-        mCallback = callback;
-    }
-
-    public void execute(){
+    public static void execute(String url, File outDir, Callback callback) {
         var request = new Request.a()
-                .b(mURL)
+                .b(url)
                 .a();
-        mClient.a(request).a(new okhttp3.Callback(){
+        client.a(request).a(new okhttp3.Callback() {
             @Override
-            public void a(Call call, IOException e){
+            public void a(Call call, IOException e) {
 
             }
 
             @Override
-            public void a(Call call, Response response) throws IOException{
-                parse(response.a().g());
+            public void a(Call call, Response response) throws IOException {
+                parse(response.a().g(), outDir, callback);
             }
         });
     }
 
-    private void parse(String payload){
+    private static void parse(String payload, File outDir, Callback callback) {
         try {
             VKM3UParser parser = new VKM3UParser(payload);
             List<TransportStream> tses = parser.getTransportStreams();
-            mCallback.onProgress(5);
+            callback.onProgress(5);
             for (TransportStream ts : tses) {
                 String tsURL = parser.getBaseUrl() + ts.getName();
                 Log.d("M3UDownloader", "Downloading " + tsURL);
-                InputStream is = StreamUtils.openStream(tsURL);
+                InputStream is = IOUtils.openStream(tsURL);
                 byte[] content;
                 if (TransportStream.METHOD_AES128.equals(ts.getMethod())) {
-                    String key = StreamUtils.readAllLines(StreamUtils.openStream(ts.getKeyURL()));
-                    content = StreamUtils.decodeStream(is, key);
+                    String key = IOUtils.readAllLines(IOUtils.openStream(ts.getKeyURL()));
+                    content = IOUtils.decodeStream(is, key);
                 } else {
-                    content = StreamUtils.readAllBytes(is);
+                    content = IOUtils.readAllBytes(is);
                 }
-                File tsDump = new File(mOutDir, ts.getName());
-                StreamUtils.writeToFile(tsDump, content);
-                mCallback.onSizeReceived((long) content.length * tses.size(), parser.getHeapSize());
-                mCallback.onProgress(10 + Math.round(80.0f * tses.indexOf(ts) / tses.size()));
+                File tsDump = new File(outDir, ts.getName());
+                IOUtils.writeToFile(tsDump, content);
+                callback.onSizeReceived((long) content.length * tses.size(), parser.getHeapSize());
+                callback.onProgress(10 + Math.round(80.0f * tses.indexOf(ts) / tses.size()));
             }
         } catch (IOException | NoSuchPaddingException | NoSuchAlgorithmException | InvalidAlgorithmParameterException | InvalidKeyException e) {
             e.printStackTrace();
-            mCallback.onFailure();
+            callback.onFailure();
             return;
         }
-        mCallback.onSuccess();
+        callback.onSuccess();
     }
 }

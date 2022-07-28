@@ -591,6 +591,10 @@
 
     const/16 p3, 0x64
 
+    invoke-static {p3}, Lru/vtosters/lite/utils/Preferences;->compress(I)I
+
+    move-result p3
+
     .line 6
     invoke-virtual {v7, v1, p3, v0}, Landroid/graphics/YuvImage;->compressToJpeg(Landroid/graphics/Rect;ILjava/io/OutputStream;)Z
 

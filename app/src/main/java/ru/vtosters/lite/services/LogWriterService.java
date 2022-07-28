@@ -1,8 +1,8 @@
-package ru.vtosters.lite.f0x1d;
+package ru.vtosters.lite.services;
 
 import static android.widget.Toast.LENGTH_SHORT;
 import static android.widget.Toast.makeText;
-import static ru.vtosters.lite.utils.Globals.getContext;
+import static ru.vtosters.lite.utils.AndroidUtils.getGlobalContext;
 
 import android.app.NotificationManager;
 import android.app.Service;
@@ -22,12 +22,12 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.Locale;
 
-public class LogWriterService extends Service{
-    public LogWriterService(){
+public class LogWriterService extends Service {
+    public LogWriterService() {
     }
 
     @Override
-    public int onStartCommand(Intent intent, int flags, int startId){
+    public int onStartCommand(Intent intent, int flags, int startId) {
         super.onStartCommand(intent, flags, startId);
 
         Log.d("LogWriterService", "The service has been started");
@@ -44,18 +44,18 @@ public class LogWriterService extends Service{
             writeLog(intent, file);
         } catch (Exception e) {
             e.printStackTrace();
-            makeText(getContext(), "Не удалось сохранить лог-файл", LENGTH_SHORT).show();
+            makeText(getGlobalContext(), "Не удалось сохранить лог-файл", LENGTH_SHORT).show();
         }
         var notificationId = intent.getIntExtra("notificationId", 1);
-        var manager = (NotificationManager) getContext().getSystemService(Context.NOTIFICATION_SERVICE);
+        var manager = (NotificationManager) getGlobalContext().getSystemService(Context.NOTIFICATION_SERVICE);
         manager.cancel(notificationId);
-        makeText(getContext(), "Лог-файл был сохранен", LENGTH_SHORT).show();
+        makeText(getGlobalContext(), "Лог-файл был сохранен", LENGTH_SHORT).show();
 
         stopSelf();
         return START_NOT_STICKY;
     }
 
-    private void writeLog(Intent intent, File file) throws IOException{
+    private void writeLog(Intent intent, File file) throws IOException {
         FileOutputStream stream;
         stream = new FileOutputStream(file);
         stream.write(intent.getStringExtra("log").getBytes(StandardCharsets.UTF_8));
@@ -65,7 +65,7 @@ public class LogWriterService extends Service{
 
     @Nullable
     @Override
-    public IBinder onBind(Intent intent){
+    public IBinder onBind(Intent intent) {
         return null;
     }
 }

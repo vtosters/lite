@@ -765,7 +765,7 @@
     .locals 1
 
     .line 2
-    invoke-static {}, Lb/h/g/m/FileUtils;->b()Ljava/io/File;
+    invoke-static {}, Lb/h/g/m/FileUtils;->getExternalHiddenDir()Ljava/io/File;
 
     move-result-object v0
 

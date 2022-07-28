@@ -86,7 +86,7 @@
 
     check-cast v2, Ljava/io/File;
 
-    invoke-static {v2}, Lb/h/g/m/FileUtils;->n(Ljava/io/File;)Landroid/net/Uri;
+    invoke-static {v2}, Lb/h/g/m/FileUtils;->uriFromFile(Ljava/io/File;)Landroid/net/Uri;
 
     move-result-object v2
 

@@ -164,7 +164,7 @@
     :try_start_0
     new-instance v0, Lcom/vk/api/internal/InternalGetUserNotifications;
 
-    const/16 v3, 0x12e6
+    const/16 v3, 0x3032
 
     .line 23
     invoke-static {}, Lcom/vtosters/lite/data/Analytics;->h()Ljava/lang/String;

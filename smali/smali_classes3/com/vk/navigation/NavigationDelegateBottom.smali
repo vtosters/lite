@@ -411,7 +411,7 @@
 
     const v0, 0x7f070067
 
-    invoke-static {v0}, Lru/vtosters/lite/utils/Themes;->getNavigationHeight(I)I
+    invoke-static {v0}, Lru/vtosters/lite/utils/ThemesUtils;->getNavigationHeight(I)I
 
     move-result v0
 
@@ -2495,7 +2495,7 @@
     :goto_2
     invoke-virtual {v1, v3}, Landroid/view/Window;->setStatusBarColor(I)V
 
-    invoke-static {v1, v3}, Lru/vtosters/lite/utils/Themes;->setNavbarColor(Landroid/view/Window;I)V
+    invoke-static {v1, v3}, Lru/vtosters/lite/utils/ThemesUtils;->setNavbarColor(Landroid/view/Window;I)V
 
     .line 46
     instance-of v1, p1, Lcom/vk/navigation/b0/FragmentWithCustomNavigationBar;

@@ -1,7 +1,7 @@
 package com.vtosters.lite;
 
-public class R{
-    public static final class anim{
+public class R {
+    public static final class anim {
         public static final int abc_fade_in = 0x7f010000;
         public static final int abc_fade_out = 0x7f010001;
         public static final int abc_grow_fade_in_from_bottom = 0x7f010002;
@@ -75,7 +75,7 @@ public class R{
         public static final int vkme_exit_noop = 0x7f010046;
     }
 
-    public static final class animator{
+    public static final class animator {
         public static final int design_appbar_state_list_animator = 0x7f020000;
         public static final int design_fab_hide_motion_spec = 0x7f020001;
         public static final int design_fab_show_motion_spec = 0x7f020002;
@@ -88,7 +88,7 @@ public class R{
         public static final int mtrl_fab_transformation_sheet_expand_spec = 0x7f020009;
     }
 
-    public static final class array{
+    public static final class array {
         public static final int ad_report_reasons = 0x7f030000;
         public static final int ad_report_reasons_api = 0x7f030001;
         public static final int address_will_be_opened = 0x7f030002;
@@ -180,7 +180,7 @@ public class R{
         public static final int when_day_of_week = 0x7f030058;
     }
 
-    public static final class attr{
+    public static final class attr {
         public static final int BMSB_error_text_color = 0x7f040000;
         public static final int BuyMusicSubscriptionButtonStyle = 0x7f040001;
         public static final int PIAlphaNormal = 0x7f040002;
@@ -2091,7 +2091,7 @@ public class R{
         public static final int zOrderOnTop = 0x7f040773;
     }
 
-    public static final class bool{
+    public static final class bool {
         public static final int abc_action_bar_embed_tabs = 0x7f050000;
         public static final int abc_allow_stacked_button_bar = 0x7f050001;
         public static final int abc_config_actionMenuItemAllCaps = 0x7f050002;
@@ -2110,7 +2110,7 @@ public class R{
         public static final int vk_is_tablet = 0x7f05000f;
     }
 
-    public static final class color{
+    public static final class color {
         public static final int abc_background_cache_hint_selector_material_dark = 0x7f060000;
         public static final int abc_background_cache_hint_selector_material_light = 0x7f060001;
         public static final int abc_btn_colored_borderless_text_material = 0x7f060002;
@@ -2918,7 +2918,7 @@ public class R{
         public static final int abc_color_highlight_material = 0x7f060004;
     }
 
-    public static final class dimen{
+    public static final class dimen {
         public static final int _post_side_padding = 0x7f070000;
         public static final int abc_action_bar_content_inset_material = 0x7f070001;
         public static final int abc_action_bar_content_inset_with_nav = 0x7f070002;
@@ -3783,7 +3783,7 @@ public class R{
         public static final int camera_target_text_size = 0x7f070074;
     }
 
-    public static final class drawable{
+    public static final class drawable {
         public static final int $$notification_receive_28_60fps__1__0 = 0x7f080000;
         public static final int $$notification_receive_28_60fps__1__1 = 0x7f080001;
         public static final int $$notification_receive_28_60fps__1__2 = 0x7f080002;
@@ -6801,7 +6801,7 @@ public class R{
         public static final int promo_qr_2 = 0x7f0809cf;
     }
 
-    public static final class font{
+    public static final class font {
         public static final int fortun_af_led7seg_3 = 0x7f090000;
         public static final int roboto_black = 0x7f090001;
         public static final int roboto_black_italic = 0x7f090002;
@@ -6824,7 +6824,7 @@ public class R{
         public static final int vk_tt_commons_demi_bold = 0x7f090013;
     }
 
-    public static final class id{
+    public static final class id {
         public static final int ALT = 0x7f0a0000;
         public static final int CIRCLE = 0x7f0a0001;
         public static final int CTRL = 0x7f0a0002;
@@ -10931,7 +10931,7 @@ public class R{
         public static final int choose_btn = 0x7f0a1007;
     }
 
-    public static final class integer{
+    public static final class integer {
         public static final int abc_config_activityDefaultDur = 0x7f0b0000;
         public static final int abc_config_activityShortDur = 0x7f0b0001;
         public static final int angle_rtl_180 = 0x7f0b0002;
@@ -10980,14 +10980,14 @@ public class R{
         public static final int s2dip = 0x7f0b0028;
     }
 
-    public static final class interpolator{
+    public static final class interpolator {
         public static final int mtrl_fast_out_linear_in = 0x7f0c0000;
         public static final int mtrl_fast_out_slow_in = 0x7f0c0001;
         public static final int mtrl_linear = 0x7f0c0002;
         public static final int mtrl_linear_out_slow_in = 0x7f0c0003;
     }
 
-    public static final class layout{
+    public static final class layout {
         public static final int ab_done_right = 0x7f0d0000;
         public static final int abc_action_bar_title_item = 0x7f0d0001;
         public static final int abc_action_bar_up_container = 0x7f0d0002;
@@ -12749,7 +12749,7 @@ public class R{
         public static final int tgs_entry = 0x7f0d06de;
     }
 
-    public static final class menu{
+    public static final class menu {
         public static final int add = 0x7f0e0000;
         public static final int attach_item = 0x7f0e0001;
         public static final int audio = 0x7f0e0002;
@@ -12824,7 +12824,7 @@ public class R{
         public static final int vkim_photo_viewer = 0x7f0e0047;
     }
 
-    public static final class mipmap{
+    public static final class mipmap {
         public static final int adaptive_launcher_background = 0x7f0f0000;
         public static final int adaptive_launcher_foreground = 0x7f0f0001;
         public static final int ic_launcher_round = 0x7f0f0002;
@@ -12840,7 +12840,7 @@ public class R{
         public static final int ic_skip_previous_alpha_40_28 = 0x7f0f000b;
     }
 
-    public static final class plurals{
+    public static final class plurals {
         public static final int accessibility_comments = 0x7f100000;
         public static final int accessibility_likes = 0x7f100001;
         public static final int accessibility_reposts = 0x7f100002;
@@ -13113,7 +13113,7 @@ public class R{
         public static final int x_stickers = 0x7f10010d;
     }
 
-    public static final class raw{
+    public static final class raw {
         public static final int amu_ballon_gx_prefix = 0x7f110000;
         public static final int amu_basic_folder = 0x7f110001;
         public static final int amu_basic_placemark = 0x7f110002;
@@ -13153,7 +13153,7 @@ public class R{
         public static final int vklogo = 0x7f110024;
     }
 
-    public static final class string{
+    public static final class string {
         public static final int abc_action_bar_home_description = 0x7f120000;
         public static final int abc_action_bar_up_description = 0x7f120001;
         public static final int abc_action_menu_overflow_description = 0x7f120002;
@@ -18525,7 +18525,7 @@ public class R{
         public static final int your_gender = 0x7f1214f8;
     }
 
-    public static final class style{
+    public static final class style {
         public static final int ActionBarGrayTheme = 0x7f130000;
         public static final int ActionBarProgress = 0x7f130001;
         public static final int ActionBarSpinner = 0x7f130002;
@@ -19662,7 +19662,7 @@ public class R{
         public static final int Base_V28_Theme_AppCompat_Light = 0x7f1300a3;
     }
 
-    public static final class xml{
+    public static final class xml {
         public static final int account_preferences = 0x7f150000;
         public static final int authenticator = 0x7f150001;
         public static final int contacts_custom_type = 0x7f150002;

@@ -42,7 +42,7 @@
 
     aput-object v2, v1, v3
 
-    const/16 v2, 0x12e6
+    const/16 v2, 0x3032
 
     .line 4
     invoke-static {v2}, Ljava/lang/String;->valueOf(I)Ljava/lang/String;

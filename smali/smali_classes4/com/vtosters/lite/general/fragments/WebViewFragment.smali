@@ -78,7 +78,7 @@
     .locals 1
 
     .line 1
-    invoke-static {}, Lb/h/g/m/FileUtils;->C()Ljava/io/File;
+    invoke-static {}, Lb/h/g/m/FileUtils;->getWebCacheDir()Ljava/io/File;
 
     move-result-object v0
 
@@ -339,27 +339,14 @@
 
     if-eqz v0, :cond_1
 
-    invoke-static {}, Lru/vtosters/lite/utils/Globals;->getContext()Landroid/content/Context;
+    .line 3
+    new-instance v0, Lcom/vk/webapp/fragments/VkPayFragment$a;
 
-    move-result-object v1
+    invoke-direct {v0, p1}, Lcom/vk/webapp/fragments/VkPayFragment$a;-><init>(Ljava/lang/String;)V
 
-    new-instance v8, Lcom/vk/navigation/Navigator;
+    const/16 p1, 0x66
 
-    const-class v0, Lru/vtosters/lite/ui/fragments/VKPayFragment;
-
-    invoke-direct {v8, v0}, Lcom/vk/navigation/Navigator;-><init>(Ljava/lang/Class;)V
-
-    invoke-virtual {v8, v1}, Lcom/vk/navigation/Navigator;->b(Landroid/content/Context;)Landroid/content/Intent;
-
-    move-result-object v8
-
-    const/high16 v0, 0x10000000
-
-    .line 15
-    invoke-virtual {v8, v0}, Landroid/content/Intent;->addFlags(I)Landroid/content/Intent;
-
-    .line 16
-    invoke-virtual {v1, v8}, Landroid/content/Context;->startActivity(Landroid/content/Intent;)V
+    invoke-virtual {v0, p0, p1}, Lcom/vk/navigation/Navigator;->a(Lcom/vk/core/fragments/FragmentImpl;I)V
 
     :cond_1
     return-void
@@ -1123,7 +1110,7 @@
     if-eqz v0, :cond_0
 
     .line 2
-    invoke-static {v0}, Lb/h/g/m/FileUtils;->h(Landroid/net/Uri;)Ljava/lang/String;
+    invoke-static {v0}, Lb/h/g/m/FileUtils;->tryToGetRealPath(Landroid/net/Uri;)Ljava/lang/String;
 
     move-result-object v0
 
@@ -1158,7 +1145,7 @@
     if-eqz v0, :cond_1
 
     .line 6
-    invoke-static {v0}, Lb/h/g/m/FileUtils;->h(Landroid/net/Uri;)Ljava/lang/String;
+    invoke-static {v0}, Lb/h/g/m/FileUtils;->tryToGetRealPath(Landroid/net/Uri;)Ljava/lang/String;
 
     move-result-object v0
 
