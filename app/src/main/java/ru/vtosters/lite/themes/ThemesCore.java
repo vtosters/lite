@@ -7,7 +7,8 @@ import androidx.annotation.IdRes;
 
 import java.util.HashMap;
 
-import ru.vtosters.lite.utils.Themes;
+import ru.vtosters.lite.utils.ThemesUtils;
+
 
 public class ThemesCore {
     // log tag
@@ -61,8 +62,8 @@ public class ThemesCore {
         themedColors.put(com.vtosters.lite.R.attr.action_sheet_action_foreground, accentColor);
 
         // messages
-        wallDarkColor = Themes.darken(accentColor, 0.25f);
-        wallLightColor = Themes.lighten(accentColor, 0.25f);
+        wallDarkColor = ThemesUtils.darken(accentColor, 0.25f);
+        wallLightColor = ThemesUtils.lighten(accentColor, 0.25f);
 
         //themedColors.put(com.vtosters.lite.R.attr.im_ic_send_msg, accentColor);
         themedColors.put(com.vtosters.lite.R.attr.im_bubble_wallpaper_outgoing, accentColor);
@@ -73,11 +74,11 @@ public class ThemesCore {
     @SuppressWarnings("ConstantConditions")
     public static int getThemedAttr(Context context, @IdRes int attr) {
         if (attr == com.vtosters.lite.R.attr.im_bubble_wallpaper_outgoing || attr == com.vtosters.lite.R.attr.im_bubble_outgoing) {
-            return (!Themes.isDarkTheme()) ? wallLightColor : wallDarkColor;
+            return (!ThemesUtils.isDarkTheme()) ? wallLightColor : wallDarkColor;
         }
 
         if (attr == com.vtosters.lite.R.attr.im_bubble_outgoing_highlighted) {
-            return (!Themes.isDarkTheme()) ? Themes.lighten(wallLightColor, 0.2f) : Themes.darken(wallDarkColor, 0.2f);
+            return (!ThemesUtils.isDarkTheme()) ? ThemesUtils.lighten(wallLightColor, 0.2f) : ThemesUtils.darken(wallDarkColor, 0.2f);
         }
 
         return themedColors.get(attr);

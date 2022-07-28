@@ -170,7 +170,7 @@
     :cond_7
     new-instance v0, Lru/vtosters/lite/themes/VTLResources;
 
-    invoke-static {}, Lru/vtosters/lite/utils/Globals;->getResources()Landroid/content/res/Resources;
+    invoke-static {}, Lru/vtosters/lite/utils/AndroidUtils;->getResources()Landroid/content/res/Resources;
 
     move-result-object v1
 

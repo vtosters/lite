@@ -4,7 +4,7 @@ import android.view.View;
 
 import com.vk.imageloader.view.VKImageView;
 
-import ru.vtosters.lite.utils.Themes;
+import ru.vtosters.lite.utils.ThemesUtils;
 
 public class VKImageViewHook implements BaseHook {
     @Override
@@ -12,7 +12,7 @@ public class VKImageViewHook implements BaseHook {
         if (view instanceof VKImageView) {
             var imageView = (VKImageView) view;
             if (imageView.getImageTintList() != null) {
-                imageView.setImageTintList(Themes.themeCSL(imageView.getImageTintList()));
+                imageView.setImageTintList(ThemesUtils.themeCSL(imageView.getImageTintList()));
             }
         }
     }

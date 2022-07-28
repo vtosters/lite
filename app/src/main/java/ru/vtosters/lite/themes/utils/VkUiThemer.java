@@ -12,12 +12,12 @@ import android.widget.TextView;
 
 import com.vk.core.ui.themes.VKTheme;
 
-import ru.vtosters.lite.utils.Themes;
+import ru.vtosters.lite.utils.ThemesUtils;
 
 public class VkUiThemer {
     public static void autoThemeVkuiButtons(TextView view) {
         if (Build.VERSION.SDK_INT < Build.VERSION_CODES.N) return;
-        if (Themes.isDarkTheme())
+        if (ThemesUtils.isDarkTheme())
             return; // no need to theme b/w buttons, well it should skip, but I do it for extra performance
 
         try {
@@ -48,12 +48,12 @@ public class VkUiThemer {
 
                         ColorStateList csl = spd.getColor();
                         if (csl != null) {
-                            Log.d("TSCore", "[tsh] csl2 <def: " + csl.getDefaultColor() + " = " + Themes.hex(csl.getDefaultColor()) + "> | " + csl);
+                            Log.d("TSCore", "[tsh] csl2 <def: " + csl.getDefaultColor() + " = " + ThemesUtils.hex(csl.getDefaultColor()) + "> | " + csl);
                         }
 
-                    if (Themes.isAccentedColor(spd.getColor())) {
+                    if (ThemesUtils.isAccentedColor(spd.getColor())) {
                         Log.d("TSCore", "[tsh] theming CSL");
-                        spd.setTint(Themes.getAccentColor());
+                        spd.setTint(ThemesUtils.getAccentColor());
                     }
                 }
 
@@ -66,12 +66,12 @@ public class VkUiThemer {
 
                     ColorStateList csl = spd.getColor();
                     if (csl != null) {
-                        Log.d("TSCore", "[tsh:disabled] csl2 <def: " + csl.getDefaultColor() + " = " + Themes.hex(csl.getDefaultColor()) + "> | " + csl);
+                        Log.d("TSCore", "[tsh:disabled] csl2 <def: " + csl.getDefaultColor() + " = " + ThemesUtils.hex(csl.getDefaultColor()) + "> | " + csl);
                     }
 
-                if (Themes.isAccentedColor(spd.getColor())) {
+                if (ThemesUtils.isAccentedColor(spd.getColor())) {
                     Log.d("TSCore", "[tsh:disabled] theming CSL");
-                    spd.setTint(Themes.getAccentColor());
+                    spd.setTint(ThemesUtils.getAccentColor());
                 }
             }
         } catch (Exception e) {
@@ -81,10 +81,10 @@ public class VkUiThemer {
     }
 
     public static void fixDropdown(Drawable drawable) {
-        if (Themes.getCurrentTheme() == VKTheme.VKAPP_MILK_LIGHT) {
+        if (ThemesUtils.getCurrentTheme() == VKTheme.VKAPP_MILK_LIGHT) {
             var stateListDrawable = (StateListDrawable) drawable;
-            ((DrawableContainer.DrawableContainerState) stateListDrawable.getConstantState()).getChildren()[0].setTint(Themes.getAccentColor());
-            ((DrawableContainer.DrawableContainerState) stateListDrawable.getConstantState()).getChildren()[1].setTint(Themes.halfAlpha(Themes.getAccentColor()));
+            ((DrawableContainer.DrawableContainerState) stateListDrawable.getConstantState()).getChildren()[0].setTint(ThemesUtils.getAccentColor());
+            ((DrawableContainer.DrawableContainerState) stateListDrawable.getConstantState()).getChildren()[1].setTint(ThemesUtils.halfAlpha(ThemesUtils.getAccentColor()));
         }
     }
 }

@@ -267,7 +267,7 @@
 #
     #invoke-virtual {p0, p1}, Landroid/content/res/Resources;->getColor(I)I
 
-    invoke-static {p0, p1}, Lru/vtosters/lite/utils/Themes;->getColor(Landroid/content/Context;I)I
+    invoke-static {p0, p1}, Lru/vtosters/lite/utils/ThemesUtils;->getColor(Landroid/content/Context;I)I
 
     move-result p0
 
@@ -313,7 +313,7 @@
 #
 #    return-object p0
 
-    invoke-static {p0, p1}, Lru/vtosters/lite/utils/Themes;->themeCSL(Landroid/content/Context;I)Landroid/content/res/ColorStateList;
+    invoke-static {p0, p1}, Lru/vtosters/lite/utils/ThemesUtils;->themeCSL(Landroid/content/Context;I)Landroid/content/res/ColorStateList;
 
     move-result-object p0
 

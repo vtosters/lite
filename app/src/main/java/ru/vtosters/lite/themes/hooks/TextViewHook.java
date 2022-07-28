@@ -12,7 +12,7 @@ import com.vtosters.lite.R;
 
 import ru.vtosters.lite.themes.ThemesHacks;
 import ru.vtosters.lite.themes.utils.VkUiThemer;
-import ru.vtosters.lite.utils.Themes;
+import ru.vtosters.lite.utils.ThemesUtils;
 
 public class TextViewHook implements BaseHook {
 
@@ -24,31 +24,31 @@ public class TextViewHook implements BaseHook {
         if (view instanceof TextView) {
             var textView = (TextView) view;
 
-            if (Themes.isAccentedColor(textView.getCurrentTextColor())) {
-                textView.setTextColor(Themes.getAccentColor());
+            if (ThemesUtils.isAccentedColor(textView.getCurrentTextColor())) {
+                textView.setTextColor(ThemesUtils.getAccentColor());
             }
 
-            if (textView.getLinkTextColors() != null && Themes.isAccentedColor(textView.getLinkTextColors())) {
-                textView.setLinkTextColor(Themes.getAccentColor());
+            if (textView.getLinkTextColors() != null && ThemesUtils.isAccentedColor(textView.getLinkTextColors())) {
+                textView.setLinkTextColor(ThemesUtils.getAccentColor());
             }
 
 
             if (isPositiveButton(textView) || isVkUiButton(textView)) {
-                view.setBackgroundTintList(ColorStateList.valueOf(Themes.getAccentColor()));
+                view.setBackgroundTintList(ColorStateList.valueOf(ThemesUtils.getAccentColor()));
             }
 
             if (view instanceof TintTextView) {
                 if (eligibleForStartTinting(view.getId())) {
-                    ((TintTextView) view).setDrawableStartTint(Themes.getAccentColor());
+                    ((TintTextView) view).setDrawableStartTint(ThemesUtils.getAccentColor());
                 } else if (eligibleForTinting(view.getId())) {
-                    ((TintTextView) view).setDrawableTint(Themes.getAccentColor());
+                    ((TintTextView) view).setDrawableTint(ThemesUtils.getAccentColor());
                 }
             }
 
             if (view instanceof AppCompatCheckedTextView) {
                 var check = (AppCompatCheckedTextView) view;
-                if (Themes.isAccentedColor(check.getCheckMarkTintList())) {
-                    check.setCheckMarkTintList(ColorStateList.valueOf(Themes.getAccentColor()));
+                if (ThemesUtils.isAccentedColor(check.getCheckMarkTintList())) {
+                    check.setCheckMarkTintList(ColorStateList.valueOf(ThemesUtils.getAccentColor()));
                 }
             }
 
@@ -59,19 +59,19 @@ public class TextViewHook implements BaseHook {
     }
 
     public static boolean eligibleForStartTinting(int id) {
-        return !Themes.isDarkTheme() && id == com.vtosters.lite.R.id.post_retweet_name;
+        return !ThemesUtils.isDarkTheme() && id == com.vtosters.lite.R.id.post_retweet_name;
     }
 
     public static boolean eligibleForTinting(int id) {
-        return !Themes.isDarkTheme() && (id == com.vtosters.lite.R.id.attach_title);
+        return !ThemesUtils.isDarkTheme() && (id == com.vtosters.lite.R.id.attach_title);
     }
 
     public static boolean isPositiveButton(View view) {
-        return !Themes.isDarkTheme() && (view.getId() == R.id.positive || view.getId() == R.id.positive_button);
+        return !ThemesUtils.isDarkTheme() && (view.getId() == R.id.positive || view.getId() == R.id.positive_button);
     }
 
     public static boolean isVkUiButton(View view) {
-        return !Themes.isDarkTheme() && (
+        return !ThemesUtils.isDarkTheme() && (
                 view.getId() == R.id.empty_button
         );
     }

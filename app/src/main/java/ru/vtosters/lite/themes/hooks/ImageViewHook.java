@@ -1,12 +1,11 @@
 package ru.vtosters.lite.themes.hooks;
 
-import android.content.res.ColorStateList;
 import android.view.View;
 import android.widget.ImageView;
 
 import androidx.appcompat.widget.AppCompatImageView;
 
-import ru.vtosters.lite.utils.Themes;
+import ru.vtosters.lite.utils.ThemesUtils;
 
 public class ImageViewHook implements BaseHook {
     @Override
@@ -14,14 +13,14 @@ public class ImageViewHook implements BaseHook {
         if (view instanceof AppCompatImageView) {
             var imageView = (AppCompatImageView) view;
             if (imageView.getImageTintList() != null) {
-                imageView.setImageTintList(Themes.themeCSL(imageView.getImageTintList()));
+                imageView.setImageTintList(ThemesUtils.themeCSL(imageView.getImageTintList()));
             }
         }
 
         if (view instanceof ImageView) {
             var imageView = (ImageView) view;
             if (imageView.getImageTintList() != null) {
-                imageView.setImageTintList(Themes.themeCSL(imageView.getImageTintList()));
+                imageView.setImageTintList(ThemesUtils.themeCSL(imageView.getImageTintList()));
             }
         }
     }
