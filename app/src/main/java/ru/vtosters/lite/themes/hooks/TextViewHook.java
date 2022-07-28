@@ -8,6 +8,7 @@ import android.widget.TextView;
 import androidx.appcompat.widget.AppCompatCheckedTextView;
 
 import com.vk.core.view.TintTextView;
+import com.vk.core.view.links.LinkedTextView;
 import com.vtosters.lite.R;
 
 import ru.vtosters.lite.themes.ThemesHacks;
@@ -32,7 +33,6 @@ public class TextViewHook implements BaseHook {
                 textView.setLinkTextColor(ThemesUtils.getAccentColor());
             }
 
-
             if (isPositiveButton(textView) || isVkUiButton(textView)) {
                 view.setBackgroundTintList(ColorStateList.valueOf(ThemesUtils.getAccentColor()));
             }
@@ -43,6 +43,10 @@ public class TextViewHook implements BaseHook {
                 } else if (eligibleForTinting(view.getId())) {
                     ((TintTextView) view).setDrawableTint(ThemesUtils.getAccentColor());
                 }
+            }
+
+            if (view instanceof LinkedTextView) {
+                ((LinkedTextView) view).setLinkTextColor(ThemesUtils.getAccentColor());
             }
 
             if (view instanceof AppCompatCheckedTextView) {
