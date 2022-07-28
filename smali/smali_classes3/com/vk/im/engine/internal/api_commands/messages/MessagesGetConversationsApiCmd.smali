@@ -23,13 +23,13 @@
 # instance fields
 .field public final a:I
 
-.field public final b:Lcom/vk/im/engine/models/dialogs/DialogsFilter;
+.field private final b:Lcom/vk/im/engine/models/dialogs/DialogsFilter;
 
-.field public final c:I
+.field private final c:I
 
-.field public final d:Ljava/lang/String;
+.field private final d:Ljava/lang/String;
 
-.field public final e:Z
+.field private final e:Z
 
 
 # direct methods
@@ -153,7 +153,7 @@
 
 # virtual methods
 .method protected b(Lcom/vk/api/sdk/VKApiManager;)Lcom/vk/im/engine/internal/api_commands/messages/MessagesGetConversationsApiCmd$b;
-    .locals 4
+    .locals 7
 
     .line 2
     iget-object v0, p0, Lcom/vk/im/engine/internal/api_commands/messages/MessagesGetConversationsApiCmd;->b:Lcom/vk/im/engine/models/dialogs/DialogsFilter;
