@@ -260,6 +260,26 @@ public class ThemesUtils {
         }
     } // Recolor ColorStateList
 
+    public static ColorStateList themeCSL(ColorStateList csl){
+        try {
+            int unsel = csl.getColorForState(new int[] {-android.R.attr.state_selected}, Color.BLACK);
+            int sel = csl.getColorForState(new int[] {android.R.attr.state_selected}, Color.BLACK);
+
+            boolean isUnselAccent = isAccentedColor(unsel);
+            boolean isSelAccent = isAccentedColor(sel);
+
+            if (isUnselAccent || isSelAccent) {
+                return new ColorStateList(new int[][] {
+                        new int[] {android.R.attr.state_selected}, new int[] {-android.R.attr.state_selected}
+                }, new int[] {isSelAccent ? getAccentColor() : sel, isUnselAccent ? getAccentColor() : unsel});
+            }
+            return csl;
+        } catch (Exception e) {
+            e.printStackTrace();
+            return null;
+        }
+    }
+
     public static int darken(int color, float by) {
         float[] hsl = new float[3];
         ColorUtils.colorToHSL(color, hsl);
