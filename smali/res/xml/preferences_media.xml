@@ -46,9 +46,6 @@
             android:key="lastfm_enabled"
             android:summary="Полезный сервис по учету прослушивания песен"
             android:title="Включить скробблинг" />
-        <Preference
-            android:key="lastfm_reset"
-            android:title="Выйти из аккаунта" />
     </PreferenceCategory>
     <PreferenceCategory android:title="Музыка">
         <com.vtosters.lite.ui.MaterialSwitchPreference

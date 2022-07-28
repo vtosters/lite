@@ -1,4 +1,5 @@
 package ru.vtosters.lite.music;
+import static java.lang.String.*;
 import static java.lang.String.valueOf;
 import static ru.vtosters.lite.utils.AndroidUtils.MD5;
 import static ru.vtosters.lite.utils.AndroidUtils.edit;
@@ -54,7 +55,7 @@ public class Scrobbler{
         treeMap.put("track[0]", title);
         treeMap.put("timestamp[0]", valueOf(timestamp));
         treeMap.put("api_key", key);
-        treeMap.put("duration[0]", String.valueOf(duration));
+        treeMap.put("duration[0]", valueOf(duration));
         treeMap.put("api_sig", signMD5(treeMap));
         treeMap.put("format", "json");
 
@@ -129,12 +130,13 @@ public class Scrobbler{
         var name = session.getString("name");
         var key = session.getString("key");
 
-        getDefaultPrefs().edit().putString("username", name).putString("sessionKey", key).apply();
+        getDefaultPrefs().edit().putString("username", name).
+                putString("sessionKey", key).apply();
 
         Log.d("Scrobbler", "Auth success as " + name + ", key " + key);
     }
 
-    public static void reset(){
+    public static void logout(){
         edit().remove("username").apply();
         edit().remove("sessionKey").apply();
         scrobbled.clear();
