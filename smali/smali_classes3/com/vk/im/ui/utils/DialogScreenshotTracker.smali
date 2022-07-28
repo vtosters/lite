@@ -181,7 +181,15 @@
 .method public final a()V
     .locals 8
 
-    .line 2
+    invoke-static {}, Lru/vtosters/lite/utils/Preferences;->screenshotdetect()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_228
+
+    return-void
+
+    :cond_228
     invoke-direct {p0}, Lcom/vk/im/ui/utils/DialogScreenshotTracker;->c()Lcom/vk/core/screenshot/ScreenshotDetector;
 
     move-result-object v0

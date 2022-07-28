@@ -320,6 +320,10 @@ public class Preferences {
         return getBoolValue("podcastcatalog", false);
     }
 
+    public static boolean screenshotdetect() {
+        return getBoolValue("screenshotdetect", false);
+    }
+
     public static boolean checkupdates() {
         return getBoolValue("checkupdates", true) && isValidSignature();
     }
