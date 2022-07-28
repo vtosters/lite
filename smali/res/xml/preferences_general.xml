@@ -95,17 +95,9 @@
             android:summary=""
             android:title="@string/sett_clear_audio_cache" />
         <Preference
-            android:key="clearImageCache"
-            android:summary=""
-            android:title="@string/sett_clear_img_cache" />
-        <Preference
-            android:key="clearVideoCache"
-            android:summary=""
-            android:title="@string/sett_clear_video_cache" />
-        <Preference
-            android:key="clearMessagesCache"
-            android:summary=""
-            android:title="@string/sett_clear_messages_cache" />
+            android:enabled="false"
+            android:summary="Они переехали в настройки мода во вкладку Другое"
+            android:title="Где настройки кеша?" />
         <com.vtosters.lite.ui.MaterialSectionDividerPreference />
     </PreferenceCategory>
 </PreferenceScreen>

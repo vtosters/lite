@@ -385,12 +385,6 @@ public class VTSettings extends MaterialPreferenceToolbarFragment {
             return false;
         });
 
-        addListPreferenceIcon(this, "clearcache", "Default", AndroidUtils.getString("autoclearcache"), !DoNotUseOldIcons() ? "ic_delete_24" : "ic_delete_outline_28", getCachesumm(), new CharSequence[]{
-                AndroidUtils.getString("autoclearcachedisabled"), "100 MB", "500 MB", "1 GB", "2 GB", "5 GB"
-        }, new String[]{
-                "Default", "100mb", "500mb", "1gb", "2gb", "5gb"
-        }, null);
-
         addPreference(this, "", AndroidUtils.getString("vtlother"), othersumm, !DoNotUseOldIcons() ? "ic_more_24" : "ic_more_horizontal_28", preference -> {
             Context context = getContext();
             Intent a2 = new Navigator(OtherFragment.class).b(context);

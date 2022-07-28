@@ -5497,9 +5497,9 @@
     <string name="proxysocks">Socks Прокси</string>
     <string name="proxystatic">Static Домен</string>
     <string name="reportbug">Сообщить о баге</string>
-    <string name="autoclearcache">Автоочистка кэша</string>
-    <string name="autoclearcachesumm">Размер кэша:</string>
-    <string name="autoclearcachedisabled">Не очищать кэш</string>
+    <string name="autoclearcache">Автоочистка кеша</string>
+    <string name="autoclearcachesumm">Размер кеша:</string>
+    <string name="autoclearcachedisabled">Не очищать кеш</string>
     <string name="reportbugsumm">Репорты багов помогают нам их исправлять</string>
     <string name="restartapp">Перезапустите приложение</string>
     <string name="savedmsg">Сохраненные сообщения</string>
