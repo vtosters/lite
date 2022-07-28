@@ -23,13 +23,13 @@
 # instance fields
 .field public final a:I
 
-.field private final b:Lcom/vk/im/engine/models/dialogs/DialogsFilter;
+.field public final b:Lcom/vk/im/engine/models/dialogs/DialogsFilter;
 
-.field private final c:I
+.field public final c:I
 
-.field private final d:Ljava/lang/String;
+.field public final d:Ljava/lang/String;
 
-.field private final e:Z
+.field public final e:Z
 
 
 # direct methods
