@@ -1,8 +1,11 @@
-<!--<a href="https://vtosters.app/">
-    <img src="https://i.imgur.com/IdhgHjM.png" align="right" width="60" height="60"/>
-</a>-->
-
-# VTosters Lite
+<p align="center">
+    <a href="https://vtosters.app/">
+        <picture>
+          <source media="(prefers-color-scheme: dark)" srcset="https://cdn.discordapp.com/attachments/918864618116481029/1002257688006230046/VT_Fill_Logo_Dark.svg">
+          <img src="https://cdn.discordapp.com/attachments/918864618116481029/1002257687804923924/VT_Fill_Logo_Light.svg">
+        </picture>
+    </a>
+</p>
 
 **ВТостерс Lite** - это модифицированный клиент официального ВКонтакте, основанный на версии **5.56.1 (4838)**
 
