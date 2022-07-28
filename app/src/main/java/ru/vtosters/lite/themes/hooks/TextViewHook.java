@@ -10,6 +10,7 @@ import androidx.appcompat.widget.AppCompatCheckedTextView;
 import com.vk.core.view.TintTextView;
 import com.vtosters.lite.R;
 
+import ru.vtosters.lite.themes.ThemesHacks;
 import ru.vtosters.lite.themes.utils.VkUiThemer;
 import ru.vtosters.lite.utils.Themes;
 
@@ -52,6 +53,8 @@ public class TextViewHook implements BaseHook {
             }
 
             VkUiThemer.autoThemeVkuiButtons(textView);
+            ThemesHacks.fixProfileSelector(textView);
+            ThemesHacks.fixThemedFeed(textView, i);
         }
     }
 
