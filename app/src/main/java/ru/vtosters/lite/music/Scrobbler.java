@@ -1,5 +1,4 @@
 package ru.vtosters.lite.music;
-import static java.lang.String.*;
 import static java.lang.String.valueOf;
 import static ru.vtosters.lite.utils.AndroidUtils.MD5;
 import static ru.vtosters.lite.utils.AndroidUtils.edit;
@@ -8,6 +7,8 @@ import static ru.vtosters.lite.utils.AndroidUtils.getPreferences;
 import static ru.vtosters.lite.utils.AndroidUtils.sendToast;
 
 import android.util.Log;
+
+import com.vk.dto.music.MusicTrack;
 
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -22,7 +23,6 @@ import ru.vtosters.lite.net.NetCallback;
 import ru.vtosters.lite.net.NetClient;
 import ru.vtosters.lite.net.NetRequest;
 import ru.vtosters.lite.net.NetResponse;
-import ru.vtosters.lite.utils.Preferences;
 
 public class Scrobbler{
     private static final String key = "5965d63402414776c54c266db0211746";
@@ -71,6 +71,20 @@ public class Scrobbler{
                 Log.d("Scrobbler", "Response scrobble: " + response.getDataString());
             }
         });
+    }
+
+    public static void grabMusicTrack(MusicTrack musictrack) {
+        var uid = musictrack.y1();
+        var artist = musictrack.C;
+        var title = musictrack.f;
+        var duration = musictrack.h;
+
+        if (uid.isEmpty() || artist == null || artist.isEmpty() || title == null || title.isEmpty() || duration == 0) {
+            Log.d("Scrobbler", "grabTrackInfo: " + "Empty track, info: " + artist + " - " + title + " - " + duration + " - " + uid);
+            return;
+        }
+
+        scrobbleTrack(duration, artist, title, uid);
     }
 
     private static String signMD5(Map<String, String> map){
