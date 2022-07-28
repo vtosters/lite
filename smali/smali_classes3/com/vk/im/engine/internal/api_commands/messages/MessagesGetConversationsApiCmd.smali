@@ -237,15 +237,15 @@
     invoke-virtual {v1, v2}, Lcom/vk/api/internal/MethodCall$a;->a(Ljava/lang/String;)Lcom/vk/api/internal/MethodCall$a;
 
     .line 6
-    #iget v2, p0, Lcom/vk/im/engine/internal/api_commands/messages/MessagesGetConversationsApiCmd;->a:I
+    iget v2, p0, Lcom/vk/im/engine/internal/api_commands/messages/MessagesGetConversationsApiCmd;->a:I
 
-    #invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
-    #move-result-object v2
+    move-result-object v2
 
-    #const-string v3, "start_message_id"
+    const-string v3, "start_message_id"
 
-    #invoke-virtual {v1, v3, v2}, Lcom/vk/api/internal/MethodCall$a;->a(Ljava/lang/String;Ljava/lang/Object;)Lcom/vk/api/internal/MethodCall$a;
+    invoke-virtual {v1, v3, v2}, Lcom/vk/api/internal/MethodCall$a;->a(Ljava/lang/String;Ljava/lang/Object;)Lcom/vk/api/internal/MethodCall$a;
 
     const-string v2, "filter"
 
