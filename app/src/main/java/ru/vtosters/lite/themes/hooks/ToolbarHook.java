@@ -10,10 +10,7 @@ public class ToolbarHook implements BaseHook {
     @Override
     public void inject(View view, int i, boolean z) {
         if (view instanceof Toolbar) {
-            var toolbar = (Toolbar) view;
-            if (!Themes.isDarkTheme()) {
-                toolbar.setBackgroundColor(Themes.getAccentColor());
-            }
+            // wtf?
         }
     }
 }
