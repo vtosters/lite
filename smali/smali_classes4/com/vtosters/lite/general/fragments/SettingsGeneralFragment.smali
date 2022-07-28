@@ -1148,48 +1148,6 @@
     invoke-virtual {p1, v6}, Landroidx/preference/Preference;->setVisible(Z)V
 
     :cond_5
-    const-string p1, "clearImageCache"
-
-    .line 33
-    invoke-virtual {p0, p1}, Lcom/vtosters/lite/fragments/u2/PreferenceFragmentCompat;->findPreference(Ljava/lang/CharSequence;)Landroidx/preference/Preference;
-
-    move-result-object p1
-
-    .line 34
-    new-instance v0, Lcom/vtosters/lite/fragments/o0;
-
-    invoke-direct {v0, p0}, Lcom/vtosters/lite/fragments/o0;-><init>(Lcom/vtosters/lite/general/fragments/SettingsGeneralFragment;)V
-
-    invoke-virtual {p1, v0}, Landroidx/preference/Preference;->setOnPreferenceClickListener(Landroidx/preference/Preference$OnPreferenceClickListener;)V
-
-    const-string p1, "clearVideoCache"
-
-    .line 35
-    invoke-virtual {p0, p1}, Lcom/vtosters/lite/fragments/u2/PreferenceFragmentCompat;->findPreference(Ljava/lang/CharSequence;)Landroidx/preference/Preference;
-
-    move-result-object p1
-
-    .line 36
-    new-instance v0, Lcom/vtosters/lite/fragments/j0;
-
-    invoke-direct {v0, p0}, Lcom/vtosters/lite/fragments/j0;-><init>(Lcom/vtosters/lite/general/fragments/SettingsGeneralFragment;)V
-
-    invoke-virtual {p1, v0}, Landroidx/preference/Preference;->setOnPreferenceClickListener(Landroidx/preference/Preference$OnPreferenceClickListener;)V
-
-    const-string p1, "clearMessagesCache"
-
-    .line 37
-    invoke-virtual {p0, p1}, Lcom/vtosters/lite/fragments/u2/PreferenceFragmentCompat;->findPreference(Ljava/lang/CharSequence;)Landroidx/preference/Preference;
-
-    move-result-object p1
-
-    .line 38
-    new-instance v0, Lcom/vtosters/lite/fragments/m0;
-
-    invoke-direct {v0, p0}, Lcom/vtosters/lite/fragments/m0;-><init>(Lcom/vtosters/lite/general/fragments/SettingsGeneralFragment;)V
-
-    invoke-virtual {p1, v0}, Landroidx/preference/Preference;->setOnPreferenceClickListener(Landroidx/preference/Preference$OnPreferenceClickListener;)V
-
     const-string p1, "downloadAudio"
 
     .line 39

@@ -6,19 +6,13 @@
             android:summary="@string/firebasefixsum"
             android:title="@string/firebasefix" />
         <Preference
-            android:key="stickfix"
-            android:summary="@string/other_clear_stickers_cache_summary"
-            android:title="@string/other_clear_stickers_cache" />
-        <com.vtosters.lite.ui.MaterialSwitchPreference
-            android:defaultValue="true"
-            android:key="color_grishka"
-            android:title="@string/other_fix_dynamic_colors" />
+            android:key="clearcache"
+            android:title="Очистка кеша приложения" />
+        <Preference
+            android:key="autoclearcache"
+            android:title="@string/autoclearcache" />
     </PreferenceCategory>
     <PreferenceCategory android:title="@string/vtsystem">
-        <Preference
-            android:key="clearcache"
-            android:summary="@string/clearcachesum"
-            android:title="@string/clearcache" />
         <Preference
             android:key="applicationrestart"
             android:title="@string/applicationrestart" />
