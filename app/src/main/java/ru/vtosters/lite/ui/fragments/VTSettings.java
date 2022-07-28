@@ -317,7 +317,7 @@ public class VTSettings extends MaterialPreferenceToolbarFragment {
             });
 
             if (milkshake() && superapp()) {
-                addPreference(this, "", "Редактор Superapp", superapp, "ic_explore_outline_28", (preference) -> {
+                addPreference(this, "", "Редактор Superapp", superapp, "ic_services_outline_28", (preference) -> {
                     Context context = getContext();
                     Intent intent = new Navigator(SuperAppEditorFragment.class).b(context);
                     intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
