@@ -1,7 +1,9 @@
 <p align="center">
     <a href="https://vtosters.app/">
-        <img src="https://cdn.discordapp.com/attachments/918864618116481029/1002257687804923924/VT_Fill_Logo_Light.svg#gh-dark-mode-only">
-        <img src="https://cdn.discordapp.com/attachments/918864618116481029/1002257688006230046/VT_Fill_Logo_Dark.svg#gh-light-mode-only">
+        <picture>
+          <source media="(prefers-color-scheme: dark)" srcset="https://cdn.discordapp.com/attachments/918864618116481029/1002257688006230046/VT_Fill_Logo_Dark.svg">
+          <img src="https://cdn.discordapp.com/attachments/918864618116481029/1002257687804923924/VT_Fill_Logo_Light.svg">
+        </picture>
     </a>
 </p>
 
