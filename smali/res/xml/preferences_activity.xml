@@ -106,6 +106,11 @@
     </PreferenceCategory>
     <PreferenceCategory android:title="@string/privacy_vtl">
         <com.vtosters.lite.ui.MaterialSwitchPreference
+            android:defaultValue="false"
+            android:key="screenshotdetect"
+            android:summary="Отключить уведомление о том, что вы сделали скриншот"
+            android:title="Отключить детект скриншотов" />
+        <com.vtosters.lite.ui.MaterialSwitchPreference
             android:defaultValue="true"
             android:key="awayphp"
             android:summary="@string/vtlawayphpsummary"
