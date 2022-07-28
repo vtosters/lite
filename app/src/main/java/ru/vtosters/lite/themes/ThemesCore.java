@@ -84,7 +84,10 @@ public class ThemesCore {
     }
 
     public static boolean hasThemedAttr(Context context, int attrID) {
-        Log.d(TAG, "Requesting color by attr " + context.getResources().getResourceName(attrID));
+        try {
+            Log.d(TAG, "Requesting color by attr " + context.getResources().getResourceName(attrID));
+        } catch (Exception e) { }
+
         return (themedColors.get(attrID) != null);
     }
 
