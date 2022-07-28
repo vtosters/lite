@@ -13,6 +13,7 @@ public class ViewInjector {
     static {
         hooks.add(new ButtonHook());
         hooks.add(new ImageViewHook());
+        hooks.add(new TabLayoutHook());
         hooks.add(new TextViewHook());
         hooks.add(new ToolbarHook());
         hooks.add(new VKImageViewHook());
