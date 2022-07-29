@@ -26,26 +26,34 @@ public final class DialogActionsHelper{
             ChatSettings z1 = dialog.z1();
             boolean z = false;
             boolean I1 = z1 != null && z1.I1();
-            ArrayList arrayList = new ArrayList();
+            ArrayList<DialogAction> arrayList = new ArrayList<>();
+
             DNRInjector.inject(dialog, arrayList);
+
             arrayList.add(DialogAction.SEARCH);
+
             if (dialog.S1()) {
                 arrayList.add(DialogAction.SHOW_ATTACHES);
             }
+
             if (!I1 && !dialog.W1()) {
                 arrayList.add(DialogAction.CLEAR_HISTORY);
             }
+
             if (I1) {
                 arrayList.add(DialogAction.CHANNEL_INVITE_LINK);
             }
+
             if (dialog.K1() != null) {
                 CollectionExt.a(arrayList, DialogAction.PINNED_MSG_DETACH, !I1);
                 CollectionExt.a(arrayList, DialogAction.PINNED_MSG_SHOW, !dialog.L1());
                 CollectionExt.a(arrayList, DialogAction.PINNED_MSG_HIDE, dialog.L1());
             }
+
             if (dialog.a(MemberType.USER)) {
                 arrayList.add(DialogAction.OPEN_USER_PROFILE);
             }
+
             if (dialog.a(MemberType.GROUP)) {
                 arrayList.add(DialogAction.OPEN_GROUP_PROFILE);
                 Group group = profilesSimpleInfo.w1().get(dialog.I1());
@@ -58,6 +66,7 @@ public final class DialogActionsHelper{
                     }
                 }
             }
+
             if (dialog.W1()) {
                 DialogAction dialogAction = DialogAction.ADD_CHAT_MEMBER;
                 ChatSettings z12 = dialog.z1();
@@ -67,32 +76,39 @@ public final class DialogActionsHelper{
                 CollectionExt.a(arrayList, dialogAction, z);
                 CollectionExt.a(arrayList, DialogAction.CHAT_SETTINGS, DialogPermissionHelper.a.a(dialog));
             }
+
             CollectionExt.a(arrayList, DialogAction.NOTIFICATIONS_ON, !dialog.b(b2));
             CollectionExt.a(arrayList, DialogAction.NOTIFICATIONS_OFF, dialog.b(b2));
             return arrayList;
         }
-        return new ArrayList();
+        return new ArrayList<>();
     }
 
     public final List<DialogAction> a(Dialog dialog, ProfilesSimpleInfo profilesSimpleInfo){
         long b2 = TimeProvider.f.b();
         Profile profile = profilesSimpleInfo.get(dialog.getId());
+
         if (!(profile instanceof Group)) {
             profile = null;
         }
+
         Group group = (Group) profile;
         ChatSettings z1 = dialog.z1();
-        ArrayList arrayList = new ArrayList();
+        ArrayList<DialogAction> arrayList = new ArrayList<>();
+
         DNRInjector.inject(dialog, arrayList);
+
         if (dialog.hasUnread()) {
             arrayList.add(DialogAction.MARK_AS_READ);
         }
+
         if (!dialog.W1()) {
             arrayList.add(DialogAction.CREATE_SHORTCUT);
             arrayList.add(DialogAction.CLEAR_HISTORY);
             CollectionExt.a(arrayList, DialogAction.NOTIFICATIONS_OFF, dialog.b(b2));
             CollectionExt.a(arrayList, DialogAction.NOTIFICATIONS_ON, !dialog.b(b2));
         }
+
         if (dialog.a(MemberType.GROUP) && group != null) {
             if (group.v1()) {
                 arrayList.add(DialogAction.GROUP_RECEIVE_MSGS_DISABLE);
@@ -101,6 +117,7 @@ public final class DialogActionsHelper{
                 CollectionExt.a(arrayList, DialogAction.GROUP_RECEIVE_MSGS_ENABLE, !group.w1());
             }
         }
+
         if (dialog.W1() && z1 != null) {
             if (!z1.L1()) {
                 arrayList.add(DialogAction.CREATE_SHORTCUT);
@@ -117,6 +134,7 @@ public final class DialogActionsHelper{
                 CollectionExt.a(arrayList, DialogAction.CLEAR_HISTORY_AND_LEAVE, !z1.L1());
             }
         }
+
         return arrayList;
     }
 
@@ -124,6 +142,7 @@ public final class DialogActionsHelper{
         if (dialog.V1() || !dialog.y1()) {
             return false;
         }
+
         return !dialog.U1() || !ImBridge7.a().a();
     }
 }
