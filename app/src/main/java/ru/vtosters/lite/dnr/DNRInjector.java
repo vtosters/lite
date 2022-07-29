@@ -9,10 +9,14 @@ import static ru.vtosters.lite.utils.AndroidUtils.getIdentifier;
 import android.util.Log;
 
 import com.vk.im.engine.models.dialogs.Dialog;
+import com.vk.im.engine.models.messages.Msg;
 import com.vk.im.ui.components.common.DialogAction;
+import com.vk.im.ui.components.common.MsgAction;
 
 import java.util.LinkedHashMap;
 import java.util.List;
+
+import ru.vtosters.lite.net.translate.DeepLApi;
 
 public class DNRInjector {
     public static void inject(Dialog dialog, List<DialogAction> list) {
@@ -49,6 +53,16 @@ public class DNRInjector {
         hashMap.put(DialogAction.valueOf("pinmsg"), getIdentifier("pinmsg", "string"));
         hashMap.put(DialogAction.valueOf("unpinmsg"), getIdentifier("unpinmsg", "string"));
         return hashMap;
+    }
+
+    public static boolean onClickMsg(MsgAction action, Msg msg) {
+        var text = msg.toString();
+
+        if (action == MsgAction.valueOf("TRANSLATE")) {
+            DeepLApi.getTranslation("Привет", "en");
+        }
+
+        return false;
     }
 
     public static boolean onClick(Dialog dialog, DialogAction action) {

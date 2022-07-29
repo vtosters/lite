@@ -5,10 +5,12 @@ import com.vk.im.engine.ImConfig;
 import com.vk.im.engine.ImEngine;
 import com.vk.im.engine.models.dialogs.Dialog;
 import com.vk.im.engine.models.messages.Msg;
+import com.vk.im.engine.models.messages.MsgFromUser;
 import com.vk.im.engine.utils.MsgPermissionHelper;
 
 import java.util.ArrayList;
 import java.util.Collection;
+import java.util.Iterator;
 import java.util.List;
 
 public final class MsgActionHelper{
@@ -32,6 +34,7 @@ public final class MsgActionHelper{
             CollectionExt.a(arrayList, MsgAction.SPAM, MsgPermissionHelper.b.h(aVar));
             CollectionExt.a(arrayList, MsgAction.PIN, MsgPermissionHelper.b.e(aVar));
             CollectionExt.a(arrayList, MsgAction.UNPIN, MsgPermissionHelper.b.i(aVar));
+            CollectionExt.a(arrayList, MsgAction.TRANSLATE, true);
 
             return arrayList;
         }

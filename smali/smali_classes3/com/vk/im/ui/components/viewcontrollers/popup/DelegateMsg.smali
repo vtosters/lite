@@ -51,7 +51,7 @@
 
     invoke-direct {v0, v1}, Lcom/vk/im/ui/components/viewcontrollers/popup/DelegateMsg$a;-><init>(Lkotlin/jvm/internal/DefaultConstructorMarker;)V
 
-    const/16 v0, 0x9
+    const/16 v0, 0xa
 
     new-array v0, v0, [Lkotlin/Pair;
 
@@ -207,6 +207,25 @@
     const/16 v2, 0x8
 
     aput-object v1, v0, v2
+
+
+    .line 9
+    sget-object v1, Lcom/vk/im/ui/components/common/MsgAction;->TRANSLATE:Lcom/vk/im/ui/components/common/MsgAction;
+
+    new-instance v2, Lcom/vk/im/ui/components/viewcontrollers/popup/DelegateMsg$a$a;
+
+    sget v3, Lcom/vk/im/ui/m;->vkim_msg_action_spam:I
+
+    invoke-direct {v2, v3}, Lcom/vk/im/ui/components/viewcontrollers/popup/DelegateMsg$a$a;-><init>(I)V
+
+    invoke-static {v1, v2}, Lkotlin/Tuples;->a(Ljava/lang/Object;Ljava/lang/Object;)Lkotlin/Pair;
+
+    move-result-object v1
+
+    const/16 v2, 0x9
+
+    aput-object v1, v0, v2
+
 
     .line 10
     invoke-static {v0}, Lkotlin/collections/c0;->b([Lkotlin/Pair;)Ljava/util/LinkedHashMap;
