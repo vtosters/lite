@@ -115,7 +115,7 @@
 
 `android:debuggable="false"` ➝ `android:debuggable="true"`
 
-Настройки, необходимые для **отладки** вне Android Studio, находятся по этой ссылке: [vk.com/vt/debug](https://vk.com/debug)
+Настройки, необходимые для **отладки** вне Android Studio, находятся по этой ссылке: [vk.com/vt/debug](https://vk.com/vt/debug)
 
 * Для дополнительной отладки ответов и логов необходимо включить **[Режим разработчика]**
 
