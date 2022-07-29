@@ -6,12 +6,16 @@
         </picture>
     </a>
     <br>
+    <br>
     <a href="https://t.me/s/vtosters">
         <img src="https://img.shields.io/badge/-Telegram-blue?style=for-the-badge&logo=telegram&color=2AABEE"/>
     </a>
     <a href="https://vk.com/vtosters_official">
         <img src="https://img.shields.io/badge/-VK-blue?style=for-the-badge&logo=vk&color=0077FF"/>
     </a>
+    <!--- <a href="">
+        <img src="https://img.shields.io/badge/-Discord-blue?style=for-the-badge&logo=discord&color=5865F2&logoColor=FFFFFF"/>
+    </a> -->
     <br>
     <a href="https://github.com/vtosters/lite/issues">
         <img src="https://img.shields.io/github/issues/vtosters/lite?style=flat-square"/>
