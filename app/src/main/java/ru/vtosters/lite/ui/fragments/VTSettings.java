@@ -18,7 +18,6 @@ import static ru.vtosters.lite.utils.CacheUtils.humanReadableByteCountBin;
 import static ru.vtosters.lite.utils.GmsUtils.isGmsInstalled;
 import static ru.vtosters.lite.utils.ImageUtils.getDrawableFromUrl;
 import static ru.vtosters.lite.utils.LifecycleUtils.restartApplication;
-import static ru.vtosters.lite.utils.Preferences.DoNotUseOldIcons;
 import static ru.vtosters.lite.utils.Preferences.ads;
 import static ru.vtosters.lite.utils.Preferences.devmenu;
 import static ru.vtosters.lite.utils.Preferences.disableSettingsSumms;
@@ -156,7 +155,7 @@ public class VTSettings extends MaterialPreferenceToolbarFragment {
 
         addPreferenceCategory(this, AndroidUtils.getString("vtsettdarktheme"));
 
-        addMaterialSwitchPreference(this, "isdark", AndroidUtils.getString("vtsettdarktheme"), "", !DoNotUseOldIcons() ? "ic_palette_24" : "ic_palette_outline_28", false, (preference, o) -> {
+        addMaterialSwitchPreference(this, "isdark", AndroidUtils.getString("vtsettdarktheme"), "", "ic_palette_outline_28", false, (preference, o) -> {
             boolean value = (boolean) o;
 
             if (!value) { // inverted
@@ -170,7 +169,7 @@ public class VTSettings extends MaterialPreferenceToolbarFragment {
         });
 
         if (Build.VERSION.SDK_INT >= 28 && false) { // TODO refactoring system theme
-            addMaterialSwitchPreference(this, "systemtheme", AndroidUtils.getString("appearance_theme_use_system"), AndroidUtils.getString("appearance_theme_use_system_summary"), !DoNotUseOldIcons() ? "ic_recent_24" : "ic_recent_outline_28", true, (preference, o) -> {
+            addMaterialSwitchPreference(this, "systemtheme", AndroidUtils.getString("appearance_theme_use_system"), AndroidUtils.getString("appearance_theme_use_system_summary"), "ic_recent_outline_28", true, (preference, o) -> {
                 boolean value = (boolean) o;
 
                 edit().putBoolean("systemtheme", value).commit();
@@ -191,7 +190,7 @@ public class VTSettings extends MaterialPreferenceToolbarFragment {
         if (devmenu()) {
             addPreferenceCategory(this, AndroidUtils.getString("sett_debug"));
 
-            addPreference(this, "", AndroidUtils.getString("sett_debug"), "", !DoNotUseOldIcons() ? "ic_bug_24" : "ic_bug_outline_28", preference -> {
+            addPreference(this, "", AndroidUtils.getString("sett_debug"), "", "ic_bug_outline_28", preference -> {
                 Context context = getContext();
                 Intent a2 = new Navigator(SettingsDebugFragment.class).b(context);
                 a2.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
@@ -199,7 +198,7 @@ public class VTSettings extends MaterialPreferenceToolbarFragment {
                 return false;
             });
 
-            addMaterialSwitchPreference(this, "ssl", AndroidUtils.getString("debug_developer_force_ssl"), AndroidUtils.getString("debug_developer_force_ssl_summary"), !DoNotUseOldIcons() ? "ic_globe_20" : "ic_globe_outline_28", true, (preference, o) -> {
+            addMaterialSwitchPreference(this, "ssl", AndroidUtils.getString("debug_developer_force_ssl"), AndroidUtils.getString("debug_developer_force_ssl_summary"), "ic_globe_outline_28", true, (preference, o) -> {
                 boolean value = (boolean) o;
                 edit().putBoolean("ssl", value).commit();
                 return true;
@@ -208,7 +207,7 @@ public class VTSettings extends MaterialPreferenceToolbarFragment {
 
         addPreferenceCategory(this, AndroidUtils.getString("vtsettaccount"));
 
-        addPreference(this, "", AndroidUtils.getString("vkconnect"), "", !DoNotUseOldIcons() ? "ic_tags_24" : "ic_user_circle_outline_28", preference -> {
+        addPreference(this, "", AndroidUtils.getString("vkconnect"), "", "ic_user_circle_outline_28", preference -> {
             Context context = getContext();
             VKUIwrapper.officalLinks("account");
             Intent a2 = new Navigator(VKUIwrapper.class).b(context);
@@ -217,7 +216,7 @@ public class VTSettings extends MaterialPreferenceToolbarFragment {
             return false;
         });
 
-        addPreference(this, "", AndroidUtils.getString("privacy_settings"), "", !DoNotUseOldIcons() ? "ic_privacy_24" : "ic_privacy_outline_28", preference -> {
+        addPreference(this, "", AndroidUtils.getString("privacy_settings"), "", "ic_privacy_outline_28", preference -> {
             Context context = getContext();
             Intent a2 = new Navigator(PrivacyFragment.class).b(context);
             a2.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
@@ -225,7 +224,7 @@ public class VTSettings extends MaterialPreferenceToolbarFragment {
             return false;
         });
 
-        addPreference(this, "", AndroidUtils.getString("sett_account"), "", !DoNotUseOldIcons() ? "ic_user_24" : "ic_user_outline_28", preference -> {
+        addPreference(this, "", AndroidUtils.getString("sett_account"), "", "ic_user_outline_28", preference -> {
             Context context = getContext();
             Intent a2 = new Navigator(SettingsAccountFragment.class).b(context);
             a2.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
@@ -234,7 +233,7 @@ public class VTSettings extends MaterialPreferenceToolbarFragment {
         });
 
         if (isVKTester()) {
-            addPreference(this, "", AndroidUtils.getString("bugs"), "", !DoNotUseOldIcons() ? "ic_bug_24" : "ic_bug_outline_28", preference -> {
+            addPreference(this, "", AndroidUtils.getString("bugs"), "", "ic_bug_outline_28", preference -> {
                 Context context = getContext();
                 VKUIwrapper.officalLinks("bugs");
                 Intent a2 = new Navigator(VKUIwrapper.class).b(context);
@@ -244,7 +243,7 @@ public class VTSettings extends MaterialPreferenceToolbarFragment {
             });
         }
 
-        addPreference(this, "", AndroidUtils.getString("vtssfs"), ssfs, !DoNotUseOldIcons() ? "ic_link_24" : "ic_link_circle_outline_28", preference -> {
+        addPreference(this, "", AndroidUtils.getString("vtssfs"), ssfs, "ic_link_circle_outline_28", preference -> {
             Context context = getContext();
             VKUIwrapper.setLink(SSFSUtils.getSSFSLink());
             Intent a2 = new Navigator(VKUIwrapper.class).b(context);
@@ -255,7 +254,7 @@ public class VTSettings extends MaterialPreferenceToolbarFragment {
 
         addPreferenceCategory(this, AndroidUtils.getString("notification_settings"));
 
-        addPreference(this, "", AndroidUtils.getString("sett_general"), "", !DoNotUseOldIcons() ? "ic_settings_24" : "ic_settings_outline_28", preference -> {
+        addPreference(this, "", AndroidUtils.getString("sett_general"), "", "ic_settings_outline_28", preference -> {
             Context context = getContext();
             Intent a2 = new Navigator(SettingsGeneralFragment.class).b(context);
             a2.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
@@ -263,7 +262,7 @@ public class VTSettings extends MaterialPreferenceToolbarFragment {
             return false;
         });
 
-        addPreference(this, "", AndroidUtils.getString("blacklist"), "", !DoNotUseOldIcons() ? "ic_users_24" : "ic_users_outline_28", preference -> {
+        addPreference(this, "", AndroidUtils.getString("blacklist"), "", "ic_users_outline_28", preference -> {
             Context context = getContext();
             Intent a2 = new Navigator(BlacklistFragment.class).b(context);
             a2.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
@@ -271,7 +270,7 @@ public class VTSettings extends MaterialPreferenceToolbarFragment {
             return false;
         });
 
-        addPreference(this, "", AndroidUtils.getString("sett_notifications"), "", !DoNotUseOldIcons() ? "ic_notification_24" : "ic_menu_notification_outline_28", preference -> {
+        addPreference(this, "", AndroidUtils.getString("sett_notifications"), "", "ic_menu_notification_outline_28", preference -> {
             Context context = getContext();
             Intent a2 = new Navigator(NotificationsSettingsFragment.class).b(context);
             a2.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
@@ -280,7 +279,7 @@ public class VTSettings extends MaterialPreferenceToolbarFragment {
         });
 
         if (VKAccountManager.d().isMusicSubs()) {
-            addPreference(this, "", AndroidUtils.getString("subscription_music"), "", !DoNotUseOldIcons() ? "ic_music_24" : "ic_music_outline_28", preference -> {
+            addPreference(this, "", AndroidUtils.getString("subscription_music"), "", "ic_music_outline_28", preference -> {
                 Context context = getContext();
                 Intent a2 = new Navigator(MusicSubscriptionControlFragment.class).b(context);
                 a2.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
@@ -289,7 +288,7 @@ public class VTSettings extends MaterialPreferenceToolbarFragment {
             });
         }
 
-        addPreference(this, "", AndroidUtils.getString("votes"), "", !DoNotUseOldIcons() ? "ic_coins_24" : "ic_coins_outline_28", preference -> {
+        addPreference(this, "", AndroidUtils.getString("votes"), "", "ic_coins_outline_28", preference -> {
             Context context = getContext();
             Intent a2 = new Navigator(BalanceFragment.class).b(context);
             a2.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
@@ -300,7 +299,7 @@ public class VTSettings extends MaterialPreferenceToolbarFragment {
         addPreferenceCategory(this, AndroidUtils.getString("vtsettmod"));
 
         if (!vkme()) {
-            addPreference(this, "", AndroidUtils.getString("vtlfeed"), feedsumm, !DoNotUseOldIcons() ? "ic_newsfeed_24" : "ic_newsfeed_outline_28", preference -> {
+            addPreference(this, "", AndroidUtils.getString("vtlfeed"), feedsumm, "ic_newsfeed_outline_28", preference -> {
                 Context context = getContext();
                 Intent a2 = new Navigator(FeedFragment.class).b(context);
                 a2.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
@@ -308,7 +307,7 @@ public class VTSettings extends MaterialPreferenceToolbarFragment {
                 return false;
             });
 
-            addPreference(this, "", AndroidUtils.getString("dockbar_editor"), docksumm, !DoNotUseOldIcons() ? "ic_list_24" : "ic_list_outline_28", preference -> {
+            addPreference(this, "", AndroidUtils.getString("dockbar_editor"), docksumm, "ic_list_outline_28", preference -> {
                 Context context = getContext();
                 Intent intent = new Navigator(DockBarEditorFragment.class).b(context);
                 intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
@@ -317,7 +316,7 @@ public class VTSettings extends MaterialPreferenceToolbarFragment {
             });
 
             if (milkshake() && superapp()) {
-                addPreference(this, "", "Редактор Superapp", superapp, "ic_services_outline_28", (preference) -> {
+                addPreference(this, "", AndroidUtils.getString("superapp_editor"), superapp, "ic_services_outline_28", (preference) -> {
                     Context context = getContext();
                     Intent intent = new Navigator(SuperAppEditorFragment.class).b(context);
                     intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
@@ -326,7 +325,7 @@ public class VTSettings extends MaterialPreferenceToolbarFragment {
                 });
             }
         } else {
-            addPreference(this, "", "Внимание!", "Некоторые пункты настроек были скрыты из-за режима VK Me \n\nДля отключения режима перейдите в настройки Сообщений", !DoNotUseOldIcons() ? "ic_about_24" : "ic_about_outline_28", preference -> false);
+            addPreference(this, "", "Внимание!", "Некоторые пункты настроек были скрыты из-за режима VK Me \n\nДля отключения режима перейдите в настройки Сообщений", "ic_about_outline_28", preference -> false);
         }
 
         addPreference(this, "", AndroidUtils.getString("vtlmedia"), mediasumm, "ic_media_outline_28", preference -> {
@@ -337,7 +336,7 @@ public class VTSettings extends MaterialPreferenceToolbarFragment {
             return false;
         });
 
-        addPreference(this, "", AndroidUtils.getString("vtlmessages"), msgsumm, !DoNotUseOldIcons() ? "ic_message_24" : "ic_message_outline_28", preference -> {
+        addPreference(this, "", AndroidUtils.getString("vtlmessages"), msgsumm, "ic_message_outline_28", preference -> {
             Context context = getContext();
             Intent a2 = new Navigator(MessagesFragment.class).b(context);
             a2.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
@@ -345,7 +344,7 @@ public class VTSettings extends MaterialPreferenceToolbarFragment {
             return false;
         });
 
-        addPreference(this, "", AndroidUtils.getString("vtlactivity"), activitysumm, !DoNotUseOldIcons() ? "ic_write_24" : "ic_write_outline_28_new_accent", preference -> {
+        addPreference(this, "", AndroidUtils.getString("vtlactivity"), activitysumm, "ic_write_outline_28_new_accent", preference -> {
             Context context = getContext();
             Intent a2 = new Navigator(ActivityFragment.class).b(context);
             a2.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
@@ -353,7 +352,7 @@ public class VTSettings extends MaterialPreferenceToolbarFragment {
             return false;
         });
 
-        addPreference(this, "", AndroidUtils.getString("vtlthemes"), themessumm, !DoNotUseOldIcons() ? "ic_palette_24" : "ic_write_outline_24", preference -> {
+        addPreference(this, "", AndroidUtils.getString("vtlthemes"), themessumm, "ic_write_outline_28", preference -> {
             Context context = getContext();
             Intent a2 = new Navigator(ThemesFragment.class).b(context);
             a2.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
@@ -361,7 +360,7 @@ public class VTSettings extends MaterialPreferenceToolbarFragment {
             return false;
         });
 
-        addPreference(this, "", AndroidUtils.getString("vtltgs"), tgssumm, !DoNotUseOldIcons() ? "ic_telegram_24" : "ic_telegram_outline_28", preference -> {
+        addPreference(this, "", AndroidUtils.getString("vtltgs"), tgssumm, "ic_telegram_outline_28", preference -> {
             Context context = getContext();
             Intent a2 = new Navigator(StickersFragment.class).b(context);
             a2.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
@@ -369,7 +368,7 @@ public class VTSettings extends MaterialPreferenceToolbarFragment {
             return false;
         });
 
-        addPreference(this, "", AndroidUtils.getString("vtlinterface"), interfacesumm, !DoNotUseOldIcons() ? "ic_interface_24" : "ic_interface_outline_28", preference -> {
+        addPreference(this, "", AndroidUtils.getString("vtlinterface"), interfacesumm, "ic_interface_outline_28", preference -> {
             Context context = getContext();
             Intent a2 = new Navigator(InterfaceFragment.class).b(context);
             a2.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
@@ -377,7 +376,7 @@ public class VTSettings extends MaterialPreferenceToolbarFragment {
             return false;
         });
 
-        addPreference(this, "", AndroidUtils.getString("vtlproxy"), proxysumm, !DoNotUseOldIcons() ? "ic_globe_20" : "ic_globe_outline_28", preference -> {
+        addPreference(this, "", AndroidUtils.getString("vtlproxy"), proxysumm, "ic_globe_outline_28", preference -> {
             Context context = getContext();
             Intent a2 = new Navigator(ProxySettingsFragment.class).b(context);
             a2.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
@@ -385,7 +384,7 @@ public class VTSettings extends MaterialPreferenceToolbarFragment {
             return false;
         });
 
-        addPreference(this, "", AndroidUtils.getString("vtlother"), othersumm, !DoNotUseOldIcons() ? "ic_more_24" : "ic_more_horizontal_28", preference -> {
+        addPreference(this, "", AndroidUtils.getString("vtlother"), othersumm, "ic_more_horizontal_28", preference -> {
             Context context = getContext();
             Intent a2 = new Navigator(OtherFragment.class).b(context);
             a2.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
@@ -395,7 +394,7 @@ public class VTSettings extends MaterialPreferenceToolbarFragment {
 
         addPreferenceCategory(this, AndroidUtils.getString("vtsettaboutmod"));
 
-        addPreference(this, "", AndroidUtils.getString("menu_about"), about, !DoNotUseOldIcons() ? "ic_about_24" : "ic_about_outline_28", preference -> {
+        addPreference(this, "", AndroidUtils.getString("menu_about"), about, "ic_about_outline_28", preference -> {
             Context context = getContext();
             Intent a2 = new Navigator(AboutAppFragment.class).b(context);
             a2.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
@@ -403,17 +402,17 @@ public class VTSettings extends MaterialPreferenceToolbarFragment {
             return false;
         });
 
-        addPreference(this, "", AndroidUtils.getString("opencommit"), "", !DoNotUseOldIcons() ? "ic_link_24" : "ic_link_outline_28", preference -> {
+        addPreference(this, "", AndroidUtils.getString("opencommit"), "", "ic_link_outline_28", preference -> {
             getContext().startActivity(new Intent("android.intent.action.VIEW").setData(Uri.parse(getCommitLink())));
             return false;
         });
 
-        addPreference(this, "", AndroidUtils.getString("vtfaq"), AndroidUtils.getString("vtfaqsumm"), !DoNotUseOldIcons() ? "ic_help_24" : "ic_help_outline_24", preference -> {
+        addPreference(this, "", AndroidUtils.getString("vtfaq"), AndroidUtils.getString("vtfaqsumm"), "ic_help_outline_28", preference -> {
             getContext().startActivity(new Intent("android.intent.action.VIEW").setData(Uri.parse("https://t.me/s/vtosters_faq")));
             return false;
         });
 
-        addPreference(this, "", AndroidUtils.getString("reportbug"), AndroidUtils.getString("reportbugsumm"), !DoNotUseOldIcons() ? "ic_bug_24" : "ic_bug_outline_28", preference -> {
+        addPreference(this, "", AndroidUtils.getString("reportbug"), AndroidUtils.getString("reportbugsumm"), "ic_bug_outline_28", preference -> {
             getContext().startActivity(new Intent("android.intent.action.VIEW").setData(Uri.parse("https://github.com/vtosters/lite/issues")));
             return false;
         });
@@ -421,7 +420,7 @@ public class VTSettings extends MaterialPreferenceToolbarFragment {
         if (isValidSignature()) {
             addPreferenceCategory(this, AndroidUtils.getString("updates"));
 
-            addPreference(this, "", AndroidUtils.getString("checkforupdates"), "", "ic_download_outline_24", preference -> {
+            addPreference(this, "", AndroidUtils.getString("checkforupdates"), "", "ic_download_outline_28", preference -> {
                 OTADialog.checkUpdates(getActivity());
                 return false;
             });
