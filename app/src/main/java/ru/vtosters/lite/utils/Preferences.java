@@ -10,7 +10,6 @@ import static ru.vtosters.lite.utils.NewsFeedFiltersUtils.setupFilters;
 import static ru.vtosters.lite.utils.ProxyUtils.setProxy;
 import static ru.vtosters.lite.utils.SignatureChecker.validateAppSignature;
 import static ru.vtosters.lite.utils.ThemesUtils.isDarkTheme;
-import static ru.vtosters.lite.utils.ThemesUtils.systemThemeChanger;
 import static ru.vtosters.lite.utils.VTVerifications.isPrometheus;
 import static ru.vtosters.lite.utils.VTVerifications.isVerified;
 
@@ -37,7 +36,6 @@ public class Preferences {
         setProxy();
         reloadMessagesList();
         LifecycleUtils.registerActivities(application);
-        systemThemeChanger(null);
         getInstance().autoCleaningCache();
     } // VK Init
 
@@ -64,10 +62,6 @@ public class Preferences {
 
     public static boolean opusmodule() {
         return getBoolValue("opusmodule", true);
-    }
-
-    public static boolean DoNotUseOldIcons() {
-        return true;
     }
 
     public static boolean systemtheme() {
