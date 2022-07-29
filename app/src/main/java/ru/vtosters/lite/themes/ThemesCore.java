@@ -2,6 +2,7 @@ package ru.vtosters.lite.themes;
 
 import android.content.Context;
 import android.util.Log;
+import android.util.SparseIntArray;
 
 import androidx.annotation.IdRes;
 
@@ -13,7 +14,7 @@ import ru.vtosters.lite.utils.ThemesUtils;
 public class ThemesCore {
     private static final String TAG = "ThemesCore";
 
-    public static HashMap<Integer, Integer> themedColors = new HashMap<>();
+    public static SparseIntArray themedColors = new SparseIntArray();
 
     private static boolean cachedAccents = false;
 
@@ -70,7 +71,6 @@ public class ThemesCore {
         themedColors.put(com.vtosters.lite.R.attr.im_bubble_outgoing_highlighted, accentColor);
     }
 
-    @SuppressWarnings("ConstantConditions")
     public static int getThemedAttr(Context context, @IdRes int attr) {
         if (attr == com.vtosters.lite.R.attr.im_bubble_wallpaper_outgoing || attr == com.vtosters.lite.R.attr.im_bubble_outgoing) {
             return (!ThemesUtils.isDarkTheme()) ? wallLightColor : wallDarkColor;
@@ -88,7 +88,7 @@ public class ThemesCore {
             Log.d(TAG, "Requesting color by attr " + context.getResources().getResourceName(attrID));
         } catch (Exception e) { }
 
-        return (themedColors.get(attrID) != null);
+        return (themedColors.get(attrID) != 0);
     }
 
     public static boolean isCachedAccents() {
