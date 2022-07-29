@@ -11,7 +11,6 @@ import ru.vtosters.lite.utils.ThemesUtils;
 
 
 public class ThemesCore {
-    // log tag
     private static final String TAG = "ThemesCore";
 
     public static HashMap<Integer, Integer> themedColors = new HashMap<>();
@@ -33,7 +32,7 @@ public class ThemesCore {
         themedColors.put(com.vtosters.lite.R.attr.accentColor, accentColor);
         themedColors.put(com.vtosters.lite.R.attr.text_name, accentColor);
         themedColors.put(com.vtosters.lite.R.attr.tabbar_active_icon, accentColor);
-        themedColors.put(com.vtosters.lite.R.attr.header_background, accentColor);
+        //themedColors.put(com.vtosters.lite.R.attr.header_background, accentColor);
         themedColors.put(com.vtosters.lite.R.attr.header_tint, accentColor);
         themedColors.put(com.vtosters.lite.R.attr.header_tint_alternate, accentColor);
         themedColors.put(com.vtosters.lite.R.attr.activity_indicator_tint, accentColor);
