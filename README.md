@@ -5,6 +5,22 @@
           <img src="https://cdn.discordapp.com/attachments/918864618116481029/1002257687804923924/VT_Fill_Logo_Light.svg">
         </picture>
     </a>
+    <a href="https://t.me/s/vtosters">
+        <img src="https://img.shields.io/badge/-Telegram-blue?style=for-the-badge&logo=telegram&color=2AABEE"/>
+    </a>
+    <a href="">
+        <img src="https://img.shields.io/badge/-VK-blue?style=for-the-badge&logo=vk&color=0077FF"/>
+    </a>
+    <br>
+    <a href="https://github.com/vtosters/lite/issues">
+        <img src="https://img.shields.io/github/issues/vtosters/lite?style=flat-square"/>
+    </a>
+    <a href="https://github.com/vtosters/lite/network/members">
+        <img src="https://img.shields.io/github/forks/vtosters/lite?style=flat-square"/>
+    </a>
+    <a href="https://github.com/vtosters/lite/stargazers">
+        <img src="https://img.shields.io/github/stars/vtosters/lite?style=flat-square"/>
+    </a>
 </p>
 
 **ВТостерс Lite** - это модифицированный клиент официального ВКонтакте, основанный на версии **5.56.1 (4838)**
