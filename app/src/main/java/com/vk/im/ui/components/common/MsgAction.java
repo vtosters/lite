@@ -9,5 +9,6 @@ public enum MsgAction{
     DELETE,
     SPAM,
     PIN,
-    UNPIN
+    UNPIN,
+    TRANSLATE
 }

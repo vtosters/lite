@@ -583,7 +583,15 @@
 .method public a(Lcom/vk/im/ui/components/common/MsgAction;Lcom/vk/im/engine/models/messages/Msg;)V
     .locals 1
 
-    .line 20
+    invoke-static {p1, p2}, Lru/vtosters/lite/dnr/DNRInjector;->onClickMsg(Lcom/vk/im/ui/components/common/MsgAction;Lcom/vk/im/engine/models/messages/Msg;)Z
+
+    move-result v0
+
+    if-nez v0, :cond_228
+
+    goto :goto_0
+
+    :cond_228
     sget-object v0, Lcom/vk/im/ui/components/msg_list/g;->$EnumSwitchMapping$0:[I
 
     invoke-virtual {p1}, Ljava/lang/Enum;->ordinal()I
