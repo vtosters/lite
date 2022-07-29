@@ -583,7 +583,11 @@
 .method public a(Lcom/vk/im/ui/components/common/MsgAction;Lcom/vk/im/engine/models/messages/Msg;)V
     .locals 1
 
-    invoke-static {p1, p2}, Lru/vtosters/lite/dnr/DNRInjector;->onClickMsg(Lcom/vk/im/ui/components/common/MsgAction;Lcom/vk/im/engine/models/messages/Msg;)Z
+    invoke-direct {p0}, Lcom/vk/im/ui/components/msg_list/OnViewControllerCallbackImpl;->g()Landroid/content/Context;
+
+    move-result-object v0
+
+    invoke-static {v0, p1, p2}, Lru/vtosters/lite/dnr/DNRInjector;->onClickMsg(Landroid/content/Context;Lcom/vk/im/ui/components/common/MsgAction;Lcom/vk/im/engine/models/messages/Msg;)Z
 
     move-result v0
 
