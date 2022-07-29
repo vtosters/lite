@@ -4,27 +4,31 @@ import static ru.vtosters.lite.dnr.DNRModule.hookDNR;
 import static ru.vtosters.lite.dnr.DNRModule.hookDNT;
 import static ru.vtosters.lite.dnr.DNRModule.isDnrEnabledFor;
 import static ru.vtosters.lite.dnr.DNRModule.isDntEnabledFor;
+import static ru.vtosters.lite.utils.AccountManagerUtils.getUserToken;
 import static ru.vtosters.lite.utils.AndroidUtils.getIdentifier;
+import static ru.vtosters.lite.utils.AndroidUtils.sendToast;
 
+import android.os.StrictMode;
 import android.util.Log;
 
+import com.vk.core.network.Network;
 import com.vk.im.engine.models.dialogs.Dialog;
 import com.vk.im.ui.components.common.DialogAction;
 
+import java.io.IOException;
 import java.util.LinkedHashMap;
 import java.util.List;
+
+import okhttp3.Headers;
+import okhttp3.OkHttpClient;
+import okhttp3.Request;
 
 public class DNRInjector {
     public static void inject(Dialog dialog, List<DialogAction> list) {
         int peerId = dialog.getId();
-        int startmsgId = dialog.F1();
 
-        if (startmsgId > 1023) {
-            list.add(DialogAction.valueOf("pinmsg"));
-            Log.e("DNRInjector", String.valueOf(startmsgId));
-        } else {
-            list.add(DialogAction.valueOf("unpinmsg"));
-        }
+        list.add(DialogAction.valueOf("pinmsg"));
+        list.add(DialogAction.valueOf("unpinmsg"));
 
         if (isDnrEnabledFor(peerId)) {
             list.add(DialogAction.valueOf("DNR_OFF"));
@@ -51,17 +55,11 @@ public class DNRInjector {
         return hashMap;
     }
 
-    public static boolean onClick(Dialog dialog, DialogAction action) {
+    public static boolean onClick(Dialog dialog, DialogAction action){
         var id = dialog.getId();
 
         if (action == DialogAction.valueOf("MARK_AS_READ")) {
             DNRModule.hookRead(dialog);
-        }
-
-        if (action == DialogAction.valueOf("pinmsg")) {
-            Log.d("DNR", "pinmsg");
-        } else if (action == DialogAction.valueOf("unpinmsg")) {
-            Log.d("DNR", "unpinmsg");
         }
 
         if (action == DialogAction.valueOf("DNR_ON")) {
@@ -80,7 +78,39 @@ public class DNRInjector {
             return true;
         }
 
+        if (action == DialogAction.valueOf("pinmsg")) {
+            pinnedMsg(id, true);
+            return true;
+        } else if (action == DialogAction.valueOf("unpinmsg")) {
+            pinnedMsg(id, false);
+            return true;
+        }
+
         return false;
+    }
+
+    public static void pinnedMsg(int dialogid, boolean needToBePinned){
+        Thread thread = new Thread(() -> {
+            try  {
+                var request = new Request.a()
+                        .b("https://api.vk.com/method/" + (needToBePinned ? "messages.pinConversation" : "messages.unpinConversation") + "?peer_id=" + dialogid + "&access_token=" + getUserToken() + "&v=5.119")
+                        .a(Headers.a("User-Agent", Network.l.c().a(), "Content-Type", "application/x-www-form-urlencoded; charset=utf-8"))
+                        .a();
+
+                try {
+                    var response = new OkHttpClient().a(request).execute().a().g();
+                    Log.d("Pins", response);
+                } catch (IOException e) {
+                    Log.e("Pins", "Error while pinning message", e);
+                }
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+        });
+
+        thread.start();
+
+        sendToast("Диалог успешно " + (needToBePinned ? "закреплен" : "откреплен"));
     }
 
     public static void setDnr(Dialog dialog, boolean value) {
