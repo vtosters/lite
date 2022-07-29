@@ -38,9 +38,10 @@ public class TextViewHook implements BaseHook {
             }
 
             if (view instanceof TintTextView) {
-                if (eligibleForStartTinting(view.getId())) {
+                if (eligibleForStartTinting((TintTextView) view)) {
                     ((TintTextView) view).setDrawableStartTint(ThemesUtils.getAccentColor());
-                } else if (eligibleForTinting(view.getId())) {
+                }
+                if (eligibleForTinting(view.getId())) {
                     ((TintTextView) view).setDrawableTint(ThemesUtils.getAccentColor());
                 }
             }
@@ -62,8 +63,8 @@ public class TextViewHook implements BaseHook {
         }
     }
 
-    public static boolean eligibleForStartTinting(int id) {
-        return !ThemesUtils.isDarkTheme() && id == com.vtosters.lite.R.id.post_retweet_name;
+    public static boolean eligibleForStartTinting(TintTextView view) {
+        return ThemesUtils.isAccentedColor(view.getTextColors()) || view.getTextColors().getDefaultColor() == ThemesUtils.getAccentColor();
     }
 
     public static boolean eligibleForTinting(int id) {
