@@ -6,71 +6,80 @@ import org.json.JSONException;
 import org.json.JSONObject;
 
 import java.io.IOException;
-import java.util.TreeMap;
+import java.nio.charset.StandardCharsets;
 
-import ru.vtosters.lite.net.NetCall;
-import ru.vtosters.lite.net.NetCallback;
-import ru.vtosters.lite.net.NetClient;
-import ru.vtosters.lite.net.NetRequest;
-import ru.vtosters.lite.net.NetResponse;
+import okhttp3.Call;
+import okhttp3.Callback;
+import okhttp3.MediaType;
+import okhttp3.OkHttpClient;
+import okhttp3.Request;
+import okhttp3.RequestBody;
+import okhttp3.Response;
 
 public class DeepLApi{
-    private static final NetClient client = new NetClient.Builder().build();
-    private static JSONObject resp;
+    private static final OkHttpClient client = new OkHttpClient();
+
+    private static String REQUEST_BODY_FORMAT = "{\n" +
+            "    \"params\": {\n" +
+            "        \"texts\": [{\n" +
+            "            \"text\": \"%s\",\n" +
+            "            \"requestAlternatives\": 3\n" +
+            "        }],\n" +
+            "        \"splitting\": \"newlines\",\n" +
+            "        \"commonJobParams\": {\n" +
+            "            \"regionalVariant\": null,\n" +
+            "            \"wasSpoken\": false\n" +
+            "        },\n" +
+            "        \"lang\": {\n" +
+            "            \"target_lang\": \"%s\",\n" +
+            "            \"source_lang_user_selected\": \"\"\n" +
+            "        },\n" +
+            "        \"timestamp\": %s\n" +
+            "    },\n" +
+            "    \"id\": 1697915521,\n" +
+            "    \"jsonrpc\": \"2.0\",\n" +
+            "    \"method\": \"LMT_handle_texts\"\n" +
+            "}";
 
     public static void getTranslation(String text, String to){ // Get translation from DeepL private API using Input text and Language code which you want to translate to
-        String uri = "https://www2.deepl.com/jsonrpc";
-        String key = "9";
-
         try {
-            var xinst = "d1c8bfe3-639d-4af2-af66-2da461ce4b8c";
-            var android = "12";
-            var phone = "GM1917";
+            var requestBody = String.format(REQUEST_BODY_FORMAT,
+                    text,
+                    to,
+                    System.currentTimeMillis() / 1000);
+            
+            var request = new Request.a()
+                    .b("https://www2.deepl.com/jsonrpc")
+                    .a(RequestBody.a(MediaType.a("application/json; charset=utf-8"), requestBody.getBytes(StandardCharsets.UTF_8)))
+                    .a();
 
-            TreeMap<String, String> treeMap = new TreeMap<>(); // create map for request
-            treeMap.put("Host", "www2.deepl.com");
-            treeMap.put("referer", "https://www.deepl.com/");
-            treeMap.put("x-instance", xinst);
-            treeMap.put("user-agent", "DeepL/1.3.1(34) Android " + android + " (" + phone + ";armv8l)");
-            treeMap.put("x-app-os-name", "Android");
-            treeMap.put("x-app-os-version", android);
-            treeMap.put("x-app-version", "1.3.1");
-            treeMap.put("x-app-build", "34");
-            treeMap.put("x-app-device", phone);
-            treeMap.put("x-app-instance-id", xinst);
-            treeMap.put("content-type", "application/json; charset=utf-8");
-            treeMap.put("content-length", uri.length() + "");
-            treeMap.put("accept-encoding", "gzip");
-
-            client.newCall(new NetRequest.Builder().url(uri).post().params(treeMap).build()).enqueue(new NetCallback() {
+            client.a(request).a(new Callback() {
                 @Override
-                public void onResponse(NetCall call, NetResponse response){
-                    Log.d("DeepLApi", "Response: " + response.getDataString());
+                public void a(Call call, IOException e) {
+                    Log.d("DeepLApi", e+"");
+                }
+
+                @Override
+                public void a(Call call, Response response) throws IOException {
+                    var payload = response.a().g();
+                    Log.d("DeepLApi", "Response: " + payload);
                     try {
-                        resp = new JSONObject(response.getDataString()).optJSONObject("result");
+                        var result = new JSONObject(payload).optJSONObject("result");
+                        parseResult(result);
                     } catch (JSONException e) {
                         e.printStackTrace();
                     }
                 }
-
-                @Override
-                public void onFailure(NetCall call, IOException e) {
-                    Log.d("DeepLApi", "Failure: " + e.getMessage());
-                }
             });
-
-            if (resp == null) {
-                Log.d("DeepLApi", "Response is null");
-                return;
-            }
-
-            var lang = resp.optString("lang"); // get language code from response
-            var texts = resp.optJSONArray("texts").getJSONObject(0);
-            var result = texts.optString("text"); // get translation result as text
-
 
         } catch (Exception e) {
             Log.e("DeepLApi", "Error: " + e.getMessage());
         }
+    }
+
+    private static void parseResult(JSONObject payload) throws JSONException {
+        var lang = payload.optString("lang"); // get language code from response
+        var texts = payload.optJSONArray("texts").getJSONObject(0);
+        var result = texts.optString("text"); // get translation result as text
     }
 }
