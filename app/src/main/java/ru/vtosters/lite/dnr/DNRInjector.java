@@ -6,20 +6,20 @@ import static ru.vtosters.lite.dnr.DNRModule.isDnrEnabledFor;
 import static ru.vtosters.lite.dnr.DNRModule.isDntEnabledFor;
 import static ru.vtosters.lite.utils.AndroidUtils.getIdentifier;
 
+import android.content.Context;
 import android.util.Log;
 
 import com.vk.im.engine.models.dialogs.Dialog;
 import com.vk.im.engine.models.messages.Msg;
+import com.vk.im.engine.models.messages.MsgFromUser;
 import com.vk.im.ui.components.common.DialogAction;
 import com.vk.im.ui.components.common.MsgAction;
 import com.vk.im.ui.components.viewcontrollers.popup.DelegateMsg;
-import com.vk.im.ui.formatters.MsgAttachFormatter;
 
 import java.util.LinkedHashMap;
 import java.util.List;
 
-import ru.vtosters.lite.translators.Translate;
-import ru.vtosters.lite.utils.AndroidUtils;
+import ru.vtosters.lite.ui.dialogs.Translate;
 
 public class DNRInjector {
     public static void inject(Dialog dialog, List<DialogAction> list) {
@@ -63,11 +63,11 @@ public class DNRInjector {
         return hashMap;
     }
 
-    public static boolean onClickMsg(MsgAction action, Msg msg) {
-        var text = new MsgAttachFormatter(AndroidUtils.getGlobalContext()).a(msg);
+    public static boolean onClickMsg(Context context, MsgAction action, Msg msg) {
+        var text = ((MsgFromUser) msg).f();
 
         if (action == MsgAction.valueOf("TRANSLATE") && text != null) {
-            Translate.dialog(text.toString());
+            Translate.showTranslatedText(context, text);
         }
 
         return false;
