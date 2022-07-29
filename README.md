@@ -8,7 +8,7 @@
     <a href="https://t.me/s/vtosters">
         <img src="https://img.shields.io/badge/-Telegram-blue?style=for-the-badge&logo=telegram&color=2AABEE"/>
     </a>
-    <a href="">
+    <a href="https://vk.com/vtosters_official">
         <img src="https://img.shields.io/badge/-VK-blue?style=for-the-badge&logo=vk&color=0077FF"/>
     </a>
     <br>
