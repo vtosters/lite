@@ -13,9 +13,9 @@
     <a href="https://vk.com/vtosters_official">
         <img src="https://img.shields.io/badge/-VK-blue?style=for-the-badge&logo=vk&color=0077FF"/>
     </a>
-    <!--- <a href="">
+    <a href="https://discord.gg/j9CAt3uYXj">
         <img src="https://img.shields.io/badge/-Discord-blue?style=for-the-badge&logo=discord&color=5865F2&logoColor=FFFFFF"/>
-    </a> -->
+    </a>
     <br>
     <a href="https://github.com/vtosters/lite/issues">
         <img src="https://img.shields.io/github/issues/vtosters/lite?style=flat-square"/>
