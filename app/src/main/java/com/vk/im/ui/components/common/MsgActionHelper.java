@@ -21,7 +21,8 @@ public final class MsgActionHelper{
     public final List<MsgAction> a(ImConfig imConfig, Dialog dialog, Collection<? extends Msg> collection){
         if (imConfig != null && dialog != null && collection != null) {
             MsgPermissionHelper.a aVar = new MsgPermissionHelper.a(imConfig, dialog, collection);
-            ArrayList arrayList = new ArrayList();
+            ArrayList<MsgAction> arrayList = new ArrayList<>();
+
             CollectionExt.a(arrayList, MsgAction.RETRY, MsgPermissionHelper.b.g(aVar));
             CollectionExt.a(arrayList, MsgAction.REPLY, MsgPermissionHelper.b.f(aVar));
             CollectionExt.a(arrayList, MsgAction.FORWARD, MsgPermissionHelper.b.d(aVar));
@@ -31,8 +32,10 @@ public final class MsgActionHelper{
             CollectionExt.a(arrayList, MsgAction.SPAM, MsgPermissionHelper.b.h(aVar));
             CollectionExt.a(arrayList, MsgAction.PIN, MsgPermissionHelper.b.e(aVar));
             CollectionExt.a(arrayList, MsgAction.UNPIN, MsgPermissionHelper.b.i(aVar));
+
             return arrayList;
         }
-        return new ArrayList();
+
+        return new ArrayList<>();
     }
 }
