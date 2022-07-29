@@ -6,6 +6,8 @@ import static ru.vtosters.lite.dnr.DNRModule.isDnrEnabledFor;
 import static ru.vtosters.lite.dnr.DNRModule.isDntEnabledFor;
 import static ru.vtosters.lite.utils.AndroidUtils.getIdentifier;
 
+import android.util.Log;
+
 import com.vk.im.engine.models.dialogs.Dialog;
 import com.vk.im.ui.components.common.DialogAction;
 
@@ -15,6 +17,14 @@ import java.util.List;
 public class DNRInjector {
     public static void inject(Dialog dialog, List<DialogAction> list) {
         int peerId = dialog.getId();
+        int startmsgId = dialog.F1();
+
+        if (startmsgId > 1023) {
+            list.add(DialogAction.valueOf("pinmsg"));
+            Log.e("DNRInjector", String.valueOf(startmsgId));
+        } else {
+            list.add(DialogAction.valueOf("unpinmsg"));
+        }
 
         if (isDnrEnabledFor(peerId)) {
             list.add(DialogAction.valueOf("DNR_OFF"));
@@ -34,6 +44,10 @@ public class DNRInjector {
         hashMap.put(DialogAction.valueOf("DNR_OFF"), getIdentifier("DNR_OFF", "string"));
         hashMap.put(DialogAction.valueOf("DNT_ON"), getIdentifier("DNT_ON", "string"));
         hashMap.put(DialogAction.valueOf("DNT_OFF"), getIdentifier("DNT_OFF", "string"));
+
+
+        hashMap.put(DialogAction.valueOf("pinmsg"), getIdentifier("pinmsg", "string"));
+        hashMap.put(DialogAction.valueOf("unpinmsg"), getIdentifier("unpinmsg", "string"));
         return hashMap;
     }
 
@@ -42,6 +56,12 @@ public class DNRInjector {
 
         if (action == DialogAction.valueOf("MARK_AS_READ")) {
             DNRModule.hookRead(dialog);
+        }
+
+        if (action == DialogAction.valueOf("pinmsg")) {
+            Log.d("DNR", "pinmsg");
+        } else if (action == DialogAction.valueOf("unpinmsg")) {
+            Log.d("DNR", "unpinmsg");
         }
 
         if (action == DialogAction.valueOf("DNR_ON")) {

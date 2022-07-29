@@ -5391,6 +5391,8 @@
     <string name="experts">Эксперты</string>
     <string name="DNT_OFF">Отключить неписалку</string>
     <string name="DNT_ON">Включить неписалку</string>
+    <string name="pinmsg">Закрепить сообщение</string>
+    <string name="unpinmsg">Открепить сообщение</string>
     <string name="accounts">Аккаунты</string>
     <string name="act_bot">Для ботов/групп</string>
     <string name="act_cnv">Для бесед</string>
