@@ -5,7 +5,6 @@ import org.json.JSONException;
 import org.json.JSONObject;
 
 import java.io.IOException;
-import java.io.UnsupportedEncodingException;
 import java.net.URLEncoder;
 import java.util.Locale;
 import java.util.UUID;
@@ -17,7 +16,7 @@ import okhttp3.RequestBody;
 
 public class YandexTranslator {
 
-    private static OkHttpClient client = new OkHttpClient();
+    private static final OkHttpClient client = new OkHttpClient();
 
     static String uuid = UUID.randomUUID().toString().replace("-", "");
 
