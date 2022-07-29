@@ -5,6 +5,7 @@
           <img src="https://cdn.discordapp.com/attachments/918864618116481029/1002257687804923924/VT_Fill_Logo_Light.svg">
         </picture>
     </a>
+    <br>
     <a href="https://t.me/s/vtosters">
         <img src="https://img.shields.io/badge/-Telegram-blue?style=for-the-badge&logo=telegram&color=2AABEE"/>
     </a>
