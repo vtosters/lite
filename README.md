@@ -5,9 +5,30 @@
           <img src="https://cdn.discordapp.com/attachments/918864618116481029/1002257687804923924/VT_Fill_Logo_Light.svg">
         </picture>
     </a>
+    <br>
+    <br>
+    <a href="https://t.me/s/vtosters">
+        <img src="https://img.shields.io/badge/-Telegram-blue?style=for-the-badge&logo=telegram&color=2AABEE"/>
+    </a>
+    <a href="https://vk.com/vtosters_official">
+        <img src="https://img.shields.io/badge/-VK-blue?style=for-the-badge&logo=vk&color=0077FF"/>
+    </a>
+    <a href="https://discord.gg/j9CAt3uYXj">
+        <img src="https://img.shields.io/badge/-Discord-blue?style=for-the-badge&logo=discord&color=5865F2&logoColor=FFFFFF"/>
+    </a>
+    <br>
+    <a href="https://github.com/vtosters/lite/issues">
+        <img src="https://img.shields.io/github/issues/vtosters/lite?style=flat-square"/>
+    </a>
+    <a href="https://github.com/vtosters/lite/network/members">
+        <img src="https://img.shields.io/github/forks/vtosters/lite?style=flat-square"/>
+    </a>
+    <a href="https://github.com/vtosters/lite/stargazers">
+        <img src="https://img.shields.io/github/stars/vtosters/lite?style=flat-square"/>
+    </a>
 </p>
 
-**ВТостерс Lite** - это модифицированный клиент официального ВКонтакте, основанный на версии **5.56.1 (4838)**
+**ВТостерс Lite** — это модифицированный клиент официального ВКонтакте, основанный на версии **5.56.1 (4838)**
 
 * Вы можете предложить свои идеи/сообщить о багах в [Issues](https://github.com/vtosters/lite/issues)
 
@@ -49,7 +70,7 @@
   * Возможность использовать системные эмодзи
 * Активность
   * Возможность видеть удаленные сообщения
-  * Функционал, позволяющий оставаться в "оффлайне" (принудительный оффлайн/не отправлять статус онлайна и т.п.)
+  * Функционал, позволяющий оставаться в «оффлайне» (принудительный оффлайн/не отправлять статус онлайна и т.п.)
   * Нечиталка/неписалка для ЛС/бесед/ботов/групп
   * Возможность отключить информацию о том, что вы просмотрели историю/прослушали голосовое сообщение
   * Возможность видеть онлайн пользователей, если у вас скрыт онлайн через VK Messenger
@@ -66,14 +87,14 @@
   * Возможность загружать свои стикерпаки из Telegram во ВКонтакте
 * Интерфейс
   * Возможность отключить блок историй наверху ленты
-  * Возможность отключить боковую камеру в разделе "Новости"
-  * Возможность отключить блок "Что у вас нового?" в разделе "Новости"
+  * Возможность отключить боковую камеру в разделе «Новости»
+  * Возможность отключить блок «Что у вас нового?» в разделе «Новости»
   * Возможность менять раздел, который запускается при запуске
   * Анимации фрагментов
   * Возможность отключить редизайн видеопостов
   * Возможность отключить блок миниаппов/VK Pay/Superapp
   * Возможность отключить сокращение названий разделов в меню
-  * Возможность скрыть блок рекомендаций друзей в разделе "Друзья"
+  * Возможность скрыть блок рекомендаций друзей в разделе «Друзья»
   * Возможность скрыть подписи в настройках
 * Прокси
   * Возможность использовать **HTTP/HTTPS/SOCKS** прокси, менять домены **API/OAuth/Static**
