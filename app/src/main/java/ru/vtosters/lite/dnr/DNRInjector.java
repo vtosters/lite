@@ -12,10 +12,12 @@ import com.vk.im.engine.models.dialogs.Dialog;
 import com.vk.im.engine.models.messages.Msg;
 import com.vk.im.ui.components.common.DialogAction;
 import com.vk.im.ui.components.common.MsgAction;
+import com.vk.im.ui.components.viewcontrollers.popup.DelegateMsg;
 
 import java.util.LinkedHashMap;
 import java.util.List;
 
+import kotlin.o.a;
 import ru.vtosters.lite.net.translate.DeepLApi;
 
 public class DNRInjector {
@@ -55,8 +57,13 @@ public class DNRInjector {
         return hashMap;
     }
 
+    public static LinkedHashMap<MsgAction, DelegateMsg.a.a> injectToHashMapMsg(LinkedHashMap<MsgAction, DelegateMsg.a.a> hashMap) {
+        hashMap.put(MsgAction.valueOf("TRANSLATE"), new DelegateMsg.a.a(getIdentifier("app_name", "string")));
+        return hashMap;
+    }
+
     public static boolean onClickMsg(MsgAction action, Msg msg) {
-        var text = msg.toString();
+        var text = msg.getId();
 
         if (action == MsgAction.valueOf("TRANSLATE")) {
             DeepLApi.getTranslation("Привет", "en");
