@@ -120,6 +120,10 @@
 
     const-string v1, "message"
 
+    invoke-static {v0}, Lru/vtosters/lite/hooks/MessagesHook;->injectOwnText(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
+
     invoke-virtual {p2, v1, v0}, Lcom/vk/api/internal/MethodCall$a;->a(Ljava/lang/String;Ljava/lang/String;)Lcom/vk/api/internal/MethodCall$a;
 
     .line 6
