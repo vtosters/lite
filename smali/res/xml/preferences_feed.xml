@@ -53,11 +53,6 @@
             android:title="@string/shitposting" />
         <com.vtosters.lite.ui.MaterialSwitchPreference
             android:defaultValue="false"
-            android:key="cringerepost"
-            android:summary="Блокировать посты с репостом внутри которых есть ссылка на вк/телеграм"
-            android:title="Репосты с ссылками" />
-        <com.vtosters.lite.ui.MaterialSwitchPreference
-            android:defaultValue="false"
             android:key="cringecopyright"
             android:summary="Блокировать посты с источником где есть ссылка на вк/телеграм (группу, страницу или посты) или на другие возможные ресурсы"
             android:title="Посты с возможной рекламой" />
@@ -65,6 +60,11 @@
             android:defaultValue=""
             android:key="linkfilter"
             android:title="Фильтр ссылок в источнике" />
+        <com.vtosters.lite.ui.MaterialSwitchPreference
+            android:defaultValue="false"
+            android:key="cringerepost"
+            android:summary="Блокировать посты с репостом внутри которых есть ссылка на вк/телеграм"
+            android:title="Репосты с ссылками" />
         <com.vtosters.lite.ui.MaterialSwitchPreference
             android:defaultValue="false"
             android:key="copyright_post"

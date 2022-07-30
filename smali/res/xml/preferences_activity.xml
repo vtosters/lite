@@ -115,5 +115,10 @@
             android:key="awayphp"
             android:summary="@string/vtlawayphpsummary"
             android:title="@string/vtlawayphp" />
+        <com.vtosters.lite.ui.MaterialSwitchPreference
+            android:defaultValue="true"
+            android:key="hideDeviceInfo"
+            android:summary="Отключить отправку информации об устройстве пользователя и вашем местоположении"
+            android:title="Отключить отправку метрики" />
     </PreferenceCategory>
 </PreferenceScreen>

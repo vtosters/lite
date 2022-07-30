@@ -872,6 +872,10 @@
 
     move-result-object p1
 
+    invoke-static {p1}, Lru/vtosters/lite/hooks/DeviceInfoHook;->getDeviceInfo(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object p1
+
     const-string v0, "device_info"
 
     .line 17
