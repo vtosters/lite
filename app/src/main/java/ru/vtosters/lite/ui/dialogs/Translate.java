@@ -7,13 +7,14 @@ import android.os.Looper;
 import android.util.Log;
 
 import ru.vtosters.lite.hooks.MessagesHook;
+import ru.vtosters.lite.translators.BaseTranslator;
 import ru.vtosters.lite.translators.YandexTranslator;
 
 public class Translate {
     public static void showTranslatedText(Context context, String text) {
         new Thread(() -> {
             try {
-                var translation = MessagesHook.injectOwnText(text);
+                var translation = BaseTranslator.getInstance().translate(text);
                 new Handler(Looper.getMainLooper()).post(() -> {
                     showDialog(context, translation);
                 });
