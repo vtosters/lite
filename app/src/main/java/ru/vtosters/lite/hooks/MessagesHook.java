@@ -4,6 +4,7 @@ import static ru.vtosters.lite.utils.AndroidUtils.dp2px;
 import static ru.vtosters.lite.utils.AndroidUtils.getDefaultPrefs;
 import static ru.vtosters.lite.utils.AndroidUtils.sendToast;
 import static ru.vtosters.lite.utils.Preferences.getBoolValue;
+import static ru.vtosters.lite.utils.ThemesUtils.getSTextAttr;
 import static ru.vtosters.lite.utils.ThemesUtils.getTextAttr;
 
 import android.annotation.SuppressLint;
@@ -14,6 +15,7 @@ import android.view.View;
 import android.widget.LinearLayout;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
+import android.widget.TextView;
 
 import androidx.appcompat.view.ContextThemeWrapper;
 
@@ -49,11 +51,12 @@ public class MessagesHook{
         });
     }
 
+    @SuppressLint("SetTextI18n")
     private static void argDialog(Context context){
         LinearLayout mContainer = new LinearLayout(context);
 
         RadioGroup rg = new RadioGroup(context);
-
+        rg.setOrientation(LinearLayout.VERTICAL);
         rg.setPadding(dp2px(18f), dp2px(12f), dp2px(18f), 0);
 
         RadioButton zero = new RadioButton(new ContextThemeWrapper(context, com.vtosters.lite.R.style.Widget_AppCompat_CompoundButton_RadioButton));
@@ -120,14 +123,17 @@ public class MessagesHook{
         silentSwitch.setOnCheckedChangeListener((buttonView, isChecked) -> {
             isSilentEnabled = isChecked;
         });
+
         silentSwitch.setPadding(dp2px(18f), dp2px(12f), dp2px(18f), 0);
 
-        mContainer.addView(silentSwitch);
+        
+        mContainer.setOrientation(LinearLayout.VERTICAL);
         mContainer.addView(rg);
+        mContainer.addView(silentSwitch);
 
         VkAlertDialog.Builder builder = new VkAlertDialog.Builder(context);
         builder.setTitle("Отправка сообщений");
-        builder.setMessage("Выберите аргументы");
+        builder.setMessage("Выберите время удаления сообщения");
         builder.setCancelable(true);
         builder.setNegativeButton("Отмена", null);
         builder.setView(mContainer);
