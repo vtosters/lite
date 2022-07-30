@@ -4,6 +4,7 @@ import static ru.vtosters.lite.ui.dialogs.MessageSettings.argDialog;
 import static ru.vtosters.lite.ui.dialogs.MessageSettings.bombCount;
 import static ru.vtosters.lite.ui.dialogs.MessageSettings.isSilentEnabled;
 import static ru.vtosters.lite.utils.Preferences.getBoolValue;
+import static ru.vtosters.lite.utils.Preferences.savemsgsett;
 
 import android.text.TextUtils;
 import android.view.View;
@@ -31,10 +32,12 @@ public class MessagesHook {
 
         if (time > 0) {
             req.a("expire_ttl", time);
+            if (!savemsgsett()) bombCount = "0";
         }
 
         if (isSilentEnabled) {
             req.a("silent", 1);
+            if (!savemsgsett()) isSilentEnabled = false;
         }
 
     }
