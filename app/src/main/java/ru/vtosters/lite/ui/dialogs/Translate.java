@@ -1,5 +1,7 @@
 package ru.vtosters.lite.ui.dialogs;
 
+import static ru.vtosters.lite.utils.AndroidUtils.sendToast;
+
 import android.app.AlertDialog;
 import android.content.Context;
 import android.os.Handler;
@@ -30,6 +32,12 @@ public class Translate {
         alertDialog.setMessage(text);
         alertDialog.setPositiveButton("Закрыть", (dialog, which) -> {
             dialog.cancel();
+        });
+        alertDialog.setNeutralButton("Скопировать", (dialog, which) -> {
+            android.content.ClipboardManager clipboard = (android.content.ClipboardManager) context.getSystemService(Context.CLIPBOARD_SERVICE);
+            android.content.ClipData clip = android.content.ClipData.newPlainText("Copied Text", text);
+            clipboard.setPrimaryClip(clip);
+            sendToast("Скопировано в буфер обмена");
         });
         var alert = alertDialog.create();
         alert.show();
