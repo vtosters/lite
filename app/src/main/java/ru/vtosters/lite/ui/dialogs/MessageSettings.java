@@ -1,13 +1,10 @@
 package ru.vtosters.lite.ui.dialogs;
 
 import static ru.vtosters.lite.utils.AndroidUtils.dp2px;
-import static ru.vtosters.lite.utils.AndroidUtils.getGlobalContext;
-import static ru.vtosters.lite.utils.ThemesUtils.getSTextAttr;
 import static ru.vtosters.lite.utils.ThemesUtils.getTextAttr;
 
 import android.annotation.SuppressLint;
 import android.content.Context;
-import android.content.SharedPreferences;
 import android.util.TypedValue;
 import android.widget.LinearLayout;
 import android.widget.RadioButton;
@@ -21,10 +18,8 @@ import com.vk.core.dialogs.alert.VkAlertDialog;
 import ru.vtosters.lite.utils.LayoutUtils;
 
 public class MessageSettings {
-    public static int id;
-    public static SharedPreferences prefs = getGlobalContext().getSharedPreferences("message_settings", Context.MODE_PRIVATE);
-    public static Boolean silent = prefs.getBoolean("silent_" + id, false);
-    public static String bomb = prefs.getString("bomb_" + id, "0");
+    public static Boolean isSilentEnabled = false;
+    public static String bombCount = "0";
 
     @SuppressLint("SetTextI18n")
     public static void argDialog(Context context) {
@@ -69,7 +64,7 @@ public class MessageSettings {
         four.setTextColor(getTextAttr());
         five.setTextColor(getTextAttr());
 
-        switch (bomb) {
+        switch (bombCount) {
             case "15s":
                 one.setChecked(true);
                 break;
@@ -95,9 +90,9 @@ public class MessageSettings {
         silentSwitch.setText("Бесшумные сообщения");
         silentSwitch.setTextSize(TypedValue.COMPLEX_UNIT_PX, dp2px(14f));
         silentSwitch.setTextColor(getTextAttr());
-        silentSwitch.setChecked(silent);
+        silentSwitch.setChecked(isSilentEnabled);
         silentSwitch.setOnCheckedChangeListener((buttonView, isChecked) -> {
-            prefs.edit().putBoolean("silent_" + id, isChecked).apply();
+            isSilentEnabled = isChecked;
         });
 
         silentSwitch.setPadding(dp2px(24f), dp2px(12f), dp2px(18f), dp2px(12f));
@@ -118,19 +113,18 @@ public class MessageSettings {
             var checked = rg.getCheckedRadioButtonId();
 
             if (checked == zero.getId()) {
-                prefs.edit().putString("bomb_" + id, "0").apply();
+                bombCount = "0";
             } else if (checked == one.getId()) {
-                prefs.edit().putString("bomb_" + id, "15s").apply();
+                bombCount = "15s";
             } else if (checked == two.getId()) {
-                prefs.edit().putString("bomb_" + id, "1m").apply();
+                bombCount = "1m";
             } else if (checked == three.getId()) {
-                prefs.edit().putString("bomb_" + id, "5m").apply();
+                bombCount = "5m";
             } else if (checked == four.getId()) {
-                prefs.edit().putString("bomb_" + id, "1h").apply();
+                bombCount = "1h";
             } else if (checked == five.getId()) {
-                prefs.edit().putString("bomb_" + id, "24h").apply();
+                bombCount = "24h";
             }
-
         });
 
         builder.show();
