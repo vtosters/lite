@@ -1,8 +1,8 @@
 package ru.vtosters.lite.utils;
 
+import static android.text.TextUtils.isEmpty;
 import static ru.vtosters.lite.utils.AndroidUtils.getGlobalContext;
 import static ru.vtosters.lite.utils.Preferences.isEnableExternalOpening;
-import static ru.vtosters.lite.utils.StringUtils.isEmpty;
 
 import android.app.Activity;
 import android.app.AlertDialog;

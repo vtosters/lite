@@ -1,4 +1,5 @@
 package ru.vtosters.lite.ui.dialogs;
+
 import static ru.vtosters.lite.utils.AndroidUtils.dp2px;
 import static ru.vtosters.lite.utils.ThemesUtils.getSTextAttr;
 import static ru.vtosters.lite.utils.ThemesUtils.getTextAttr;
@@ -17,12 +18,12 @@ import com.vk.core.dialogs.alert.VkAlertDialog;
 
 import ru.vtosters.lite.utils.LayoutUtils;
 
-public class MessageSettings{
+public class MessageSettings {
     public static Boolean isSilentEnabled = false;
     public static String bombCount = "0";
 
     @SuppressLint("SetTextI18n")
-    public static void argDialog(Context context){
+    public static void argDialog(Context context) {
         LinearLayout mContainer = new LinearLayout(context);
 
         RadioGroup rg = new RadioGroup(context);
@@ -64,7 +65,7 @@ public class MessageSettings{
         four.setTextColor(getTextAttr());
         five.setTextColor(getTextAttr());
 
-        switch(bombCount) {
+        switch (bombCount) {
             case "15s":
                 one.setChecked(true);
                 break;

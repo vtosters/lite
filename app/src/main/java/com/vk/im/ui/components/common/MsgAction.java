@@ -1,6 +1,6 @@
 package com.vk.im.ui.components.common;
 
-public enum MsgAction{
+public enum MsgAction {
     RETRY,
     REPLY,
     FORWARD,

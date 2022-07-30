@@ -1,7 +1,6 @@
 package ru.vtosters.lite.ui.fragments;
 
 import static com.vk.bridges.AuthBridge.logout;
-import static ru.vtosters.lite.ui.PreferencesUtil.addListPreferenceIcon;
 import static ru.vtosters.lite.ui.PreferencesUtil.addMaterialSwitchPreference;
 import static ru.vtosters.lite.ui.PreferencesUtil.addPreference;
 import static ru.vtosters.lite.ui.PreferencesUtil.addPreferenceCategory;

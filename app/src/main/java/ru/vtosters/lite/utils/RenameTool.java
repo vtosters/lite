@@ -1,6 +1,5 @@
 package ru.vtosters.lite.utils;
 
-import static ru.vtosters.lite.ui.PreferencesUtil.getSTextColor;
 import static ru.vtosters.lite.utils.AndroidUtils.dp2px;
 import static ru.vtosters.lite.utils.AndroidUtils.getGlobalContext;
 import static ru.vtosters.lite.utils.AndroidUtils.getResources;

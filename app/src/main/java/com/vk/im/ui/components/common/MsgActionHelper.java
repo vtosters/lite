@@ -5,22 +5,20 @@ import com.vk.im.engine.ImConfig;
 import com.vk.im.engine.ImEngine;
 import com.vk.im.engine.models.dialogs.Dialog;
 import com.vk.im.engine.models.messages.Msg;
-import com.vk.im.engine.models.messages.MsgFromUser;
 import com.vk.im.engine.utils.MsgPermissionHelper;
 
 import java.util.ArrayList;
 import java.util.Collection;
-import java.util.Iterator;
 import java.util.List;
 
-public final class MsgActionHelper{
+public final class MsgActionHelper {
     public static final MsgActionHelper a = new MsgActionHelper();
 
-    public final List<MsgAction> a(ImEngine imEngine, Dialog dialog, Collection<? extends Msg> collection){
+    public final List<MsgAction> a(ImEngine imEngine, Dialog dialog, Collection<? extends Msg> collection) {
         return a(imEngine != null ? imEngine.g() : null, dialog, collection);
     }
 
-    public final List<MsgAction> a(ImConfig imConfig, Dialog dialog, Collection<? extends Msg> collection){
+    public final List<MsgAction> a(ImConfig imConfig, Dialog dialog, Collection<? extends Msg> collection) {
         if (imConfig != null && dialog != null && collection != null) {
             MsgPermissionHelper.a aVar = new MsgPermissionHelper.a(imConfig, dialog, collection);
             ArrayList<MsgAction> arrayList = new ArrayList<>();
