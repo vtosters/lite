@@ -43,6 +43,10 @@
 
     move-result-object p0
 
+    invoke-static {p0}, Lru/vtosters/lite/hooks/DeviceInfoHook;->getDeviceInfo(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object p0
+
     return-object p0
 .end method
 
@@ -189,6 +193,10 @@
     move-result-object v0
 
     :cond_1
+    invoke-static {v0}, Lru/vtosters/lite/hooks/DeviceInfoHook;->getDeviceInfo(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
+
     return-object v0
 .end method
 
@@ -213,6 +221,10 @@
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
     monitor-exit v0
+
+    invoke-static {p0}, Lru/vtosters/lite/hooks/DeviceInfoHook;->getDeviceInfo(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object p0
 
     return-object p0
 
@@ -258,6 +270,10 @@
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
     monitor-exit v0
+
+    invoke-static {p0}, Lru/vtosters/lite/hooks/DeviceInfoHook;->getDeviceInfo(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object p0
 
     return-object p0
 
@@ -424,6 +440,10 @@
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
     monitor-exit v0
+
+    invoke-static {p0}, Lru/vtosters/lite/hooks/DeviceInfoHook;->getDeviceInfo(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object p0
 
     return-object p0
 

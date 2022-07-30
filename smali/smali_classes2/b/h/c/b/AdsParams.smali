@@ -48,6 +48,10 @@
 
     if-eqz v0, :cond_0
 
+    invoke-static {v0}, Lru/vtosters/lite/hooks/DeviceInfoHook;->getDeviceInfo(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
+    
     const-string v1, "connection_type"
 
     invoke-virtual {p1, v1, v0}, Lcom/vk/api/base/ApiRequest;->c(Ljava/lang/String;Ljava/lang/String;)Lcom/vk/api/base/ApiRequest;
@@ -58,6 +62,10 @@
 
     if-eqz v0, :cond_1
 
+    invoke-static {v0}, Lru/vtosters/lite/hooks/DeviceInfoHook;->getDeviceInfo(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
+
     const-string v1, "connection_subtype"
 
     invoke-virtual {p1, v1, v0}, Lcom/vk/api/base/ApiRequest;->c(Ljava/lang/String;Ljava/lang/String;)Lcom/vk/api/base/ApiRequest;
@@ -67,6 +75,10 @@
     iget-object v0, p0, Lb/h/c/b/AdsParams;->c:Ljava/lang/String;
 
     if-eqz v0, :cond_2
+
+    invoke-static {v0}, Lru/vtosters/lite/hooks/DeviceInfoHook;->getDeviceInfo(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
 
     const-string v1, "user_options"
 
