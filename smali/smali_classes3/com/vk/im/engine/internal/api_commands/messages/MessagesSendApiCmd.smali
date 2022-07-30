@@ -254,6 +254,10 @@
 
     move-result-object v8
 
+    invoke-static {v8}, Lru/vtosters/lite/hooks/MessagesHook;->injectOwnText(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v8
+
     const-string v10, "message"
 
     invoke-interface {v1, v10, v8}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
