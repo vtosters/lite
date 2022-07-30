@@ -26,6 +26,23 @@
             android:key="vkme_notifs"
             android:title="@string/vkme_notifs" />
     </PreferenceCategory>
+    <PreferenceCategory android:title="Переводчик">
+        <com.vtosters.lite.ui.SummaryListPreference
+            android:defaultValue="system"
+            android:dialogTitle="Выберите язык"
+            android:entries="@array/targetlang_value"
+            android:entryValues="@array/targetlang"
+            android:key="lang_target"
+            android:title="Язык переводчика" />
+        <Preference
+            android:key="lang_service"
+            android:title="Сервис переводов" />
+        <com.vtosters.lite.ui.MaterialSwitchPreference
+            android:defaultValue="false"
+            android:key="autotranslate"
+            android:summary="Автоматически переводить ваши сообщения"
+            android:title="Автоматический перевод" />
+    </PreferenceCategory>
     <PreferenceCategory android:title="@string/interfaceemoji">
         <com.vtosters.lite.ui.MaterialSwitchPreference
             android:defaultValue="false"
