@@ -8,12 +8,17 @@ import static ru.vtosters.lite.utils.AccountManagerUtils.getUserToken;
 import static ru.vtosters.lite.utils.AndroidUtils.getIdentifier;
 import static ru.vtosters.lite.utils.AndroidUtils.sendToast;
 
+import android.content.Context;
 import android.os.StrictMode;
 import android.util.Log;
 
 import com.vk.core.network.Network;
 import com.vk.im.engine.models.dialogs.Dialog;
+import com.vk.im.engine.models.messages.Msg;
+import com.vk.im.engine.models.messages.MsgFromUser;
 import com.vk.im.ui.components.common.DialogAction;
+import com.vk.im.ui.components.common.MsgAction;
+import com.vk.im.ui.components.viewcontrollers.popup.DelegateMsg;
 
 import java.io.IOException;
 import java.util.LinkedHashMap;
@@ -22,6 +27,7 @@ import java.util.List;
 import okhttp3.Headers;
 import okhttp3.OkHttpClient;
 import okhttp3.Request;
+import ru.vtosters.lite.ui.dialogs.Translate;
 
 public class DNRInjector {
     public static void inject(Dialog dialog, List<DialogAction> list) {
@@ -84,6 +90,21 @@ public class DNRInjector {
         } else if (action == DialogAction.valueOf("unpinmsg")) {
             pinnedMsg(id, false);
             return true;
+        }
+
+        return false;
+    }
+
+    public static LinkedHashMap<MsgAction, DelegateMsg.a.a> injectToHashMapMsg(LinkedHashMap<MsgAction, DelegateMsg.a.a> hashMap) {
+        hashMap.put(MsgAction.valueOf("TRANSLATE"), new DelegateMsg.a.a(getIdentifier("translator", "string")));
+        return hashMap;
+    }
+
+    public static boolean onClickMsg(Context context, MsgAction action, Msg msg) {
+        var text = ((MsgFromUser) msg).f();
+
+        if (action == MsgAction.valueOf("TRANSLATE") && text != null) {
+            Translate.showTranslatedText(context, text);
         }
 
         return false;
