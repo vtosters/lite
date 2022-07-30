@@ -101,10 +101,22 @@ public class DNRInjector {
 
     public static boolean onClickMsg(Context context, MsgAction action, Msg msg) {
         var text = ((MsgFromUser) msg).f();
+        var fullMsg = ((MsgFromUser) msg).j2(); // text + reply
+        var reply = fullMsg.substring(text.length() + 1);
+
+        var isTextExist = !text.isEmpty() && !text.equals(" ");
+        var isReplyExist = !reply.isEmpty() && !reply.equals(" ");
 
         if (action == MsgAction.valueOf("TRANSLATE")) {
-            if (text.isEmpty() || text.equals(" ")) sendToast("Невозможно перевести этот текст");
-            else Translate.showTranslatedText(context, text);
+            if (isTextExist && isReplyExist) {
+                Translate.showTranslatedText(context, text + "\n\nРеплай:\n" + reply);
+            } else if (isReplyExist) {
+                Translate.showTranslatedText(context, "Реплай:\n" + reply);
+            } else if (isTextExist) {
+                Translate.showTranslatedText(context, text);
+            } else {
+                sendToast("Нет текста для перевода");
+            }
         }
 
         return false;
