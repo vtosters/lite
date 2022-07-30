@@ -591,11 +591,8 @@
 
     move-result v0
 
-    if-nez v0, :cond_228
+    if-nez v0, :cond_5
 
-    goto :goto_0
-
-    :cond_228
     sget-object v0, Lcom/vk/im/ui/components/msg_list/g;->$EnumSwitchMapping$0:[I
 
     invoke-virtual {p1}, Ljava/lang/Enum;->ordinal()I
