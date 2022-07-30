@@ -56,7 +56,7 @@ public class DeepLTranslator extends BaseTranslator {
 
     @NonNull
     @Override
-    String translate(String text) {
+    public String translate(String text) {
         try {
             System.setProperty("sun.net.http.allowRestrictedHeaders", "true");
 
