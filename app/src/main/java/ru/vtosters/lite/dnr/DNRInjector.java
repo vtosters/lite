@@ -102,8 +102,9 @@ public class DNRInjector {
     public static boolean onClickMsg(Context context, MsgAction action, Msg msg) {
         var text = ((MsgFromUser) msg).f();
 
-        if (action == MsgAction.valueOf("TRANSLATE") && text != null) {
-            Translate.showTranslatedText(context, text);
+        if (action == MsgAction.valueOf("TRANSLATE")) {
+            if (text.isEmpty() || text.equals(" ")) sendToast("Невозможно перевести этот текст");
+            else Translate.showTranslatedText(context, text);
         }
 
         return false;
