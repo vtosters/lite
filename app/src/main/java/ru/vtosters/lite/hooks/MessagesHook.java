@@ -18,6 +18,7 @@ import android.widget.RadioGroup;
 import android.widget.TextView;
 
 import androidx.appcompat.view.ContextThemeWrapper;
+import androidx.appcompat.widget.SwitchCompat;
 
 import com.vk.api.internal.MethodCall;
 import com.vk.core.dialogs.alert.VkAlertDialog;
@@ -26,6 +27,7 @@ import org.json.JSONObject;
 
 import ru.vtosters.lite.translators.BaseTranslator;
 import ru.vtosters.lite.utils.AndroidUtils;
+import ru.vtosters.lite.utils.LayoutUtils;
 
 public class MessagesHook{
     public static Boolean isSilentEnabled = false;
@@ -116,24 +118,26 @@ public class MessagesHook{
         }
 
         @SuppressLint("UseSwitchCompatOrMaterialCode")
-        var silentSwitch = new android.widget.Switch(context);
+        var silentSwitch = new SwitchCompat(new ContextThemeWrapper(context, com.vtosters.lite.R.style.Widget_AppCompat_CompoundButton_Switch));
         silentSwitch.setText("Бесшумные сообщения");
-        silentSwitch.setTextColor(getTextAttr());
+        silentSwitch.setTextSize(TypedValue.COMPLEX_UNIT_PX, dp2px(14f));
+        silentSwitch.setTextColor(getSTextAttr());
         silentSwitch.setChecked(isSilentEnabled);
         silentSwitch.setOnCheckedChangeListener((buttonView, isChecked) -> {
             isSilentEnabled = isChecked;
         });
 
-        silentSwitch.setPadding(dp2px(18f), dp2px(12f), dp2px(18f), 0);
+        silentSwitch.setPadding(dp2px(24f), dp2px(12f), dp2px(18f), dp2px(12f));
 
-        
+        mContainer.setLayoutParams(LayoutUtils.createLinear(-1, -1));
         mContainer.setOrientation(LinearLayout.VERTICAL);
-        mContainer.addView(rg);
-        mContainer.addView(silentSwitch);
+
+        mContainer.addView(rg, LayoutUtils.createLinear(-1, -2));
+        mContainer.addView(silentSwitch, LayoutUtils.createLinear(-1, -2));
 
         VkAlertDialog.Builder builder = new VkAlertDialog.Builder(context);
-        builder.setTitle("Отправка сообщений");
-        builder.setMessage("Выберите время удаления сообщения");
+        builder.setTitle("Настройки отправки");
+        builder.setMessage("Выберите время исчезновения сообщения");
         builder.setCancelable(true);
         builder.setNegativeButton("Отмена", null);
         builder.setView(mContainer);
