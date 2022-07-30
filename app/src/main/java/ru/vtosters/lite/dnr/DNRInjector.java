@@ -9,7 +9,6 @@ import static ru.vtosters.lite.utils.AndroidUtils.getIdentifier;
 import static ru.vtosters.lite.utils.AndroidUtils.sendToast;
 
 import android.content.Context;
-import android.os.StrictMode;
 import android.util.Log;
 
 import com.vk.core.network.Network;
