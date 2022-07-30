@@ -29,7 +29,7 @@ public class YandexTranslator extends BaseTranslator {
 
     @NonNull
     @Override
-    String translate(String text) {
+    public String translate(String text) {
         try {
             var request = new Request.a()
                     .b("https://translate.yandex.net/api/v1/tr.json/translate?&srv=android&id=" + uuid + "-0-0")

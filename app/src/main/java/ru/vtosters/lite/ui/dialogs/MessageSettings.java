@@ -1,11 +1,13 @@
 package ru.vtosters.lite.ui.dialogs;
 
 import static ru.vtosters.lite.utils.AndroidUtils.dp2px;
+import static ru.vtosters.lite.utils.AndroidUtils.getGlobalContext;
 import static ru.vtosters.lite.utils.ThemesUtils.getSTextAttr;
 import static ru.vtosters.lite.utils.ThemesUtils.getTextAttr;
 
 import android.annotation.SuppressLint;
 import android.content.Context;
+import android.content.SharedPreferences;
 import android.util.TypedValue;
 import android.widget.LinearLayout;
 import android.widget.RadioButton;
@@ -19,8 +21,10 @@ import com.vk.core.dialogs.alert.VkAlertDialog;
 import ru.vtosters.lite.utils.LayoutUtils;
 
 public class MessageSettings {
-    public static Boolean isSilentEnabled = false;
-    public static String bombCount = "0";
+    public static int id;
+    public static SharedPreferences prefs = getGlobalContext().getSharedPreferences("message_settings", Context.MODE_PRIVATE);
+    public static Boolean silent = prefs.getBoolean("silent_" + id, false);
+    public static String bomb = prefs.getString("bomb_" + id, "0");
 
     @SuppressLint("SetTextI18n")
     public static void argDialog(Context context) {
@@ -65,7 +69,7 @@ public class MessageSettings {
         four.setTextColor(getTextAttr());
         five.setTextColor(getTextAttr());
 
-        switch (bombCount) {
+        switch (bomb) {
             case "15s":
                 one.setChecked(true);
                 break;
@@ -90,10 +94,10 @@ public class MessageSettings {
         var silentSwitch = new SwitchCompat(new ContextThemeWrapper(context, com.vtosters.lite.R.style.Widget_AppCompat_CompoundButton_Switch));
         silentSwitch.setText("Бесшумные сообщения");
         silentSwitch.setTextSize(TypedValue.COMPLEX_UNIT_PX, dp2px(14f));
-        silentSwitch.setTextColor(getSTextAttr());
-        silentSwitch.setChecked(isSilentEnabled);
+        silentSwitch.setTextColor(getTextAttr());
+        silentSwitch.setChecked(silent);
         silentSwitch.setOnCheckedChangeListener((buttonView, isChecked) -> {
-            isSilentEnabled = isChecked;
+            prefs.edit().putBoolean("silent_" + id, isChecked).apply();
         });
 
         silentSwitch.setPadding(dp2px(24f), dp2px(12f), dp2px(18f), dp2px(12f));
@@ -114,18 +118,19 @@ public class MessageSettings {
             var checked = rg.getCheckedRadioButtonId();
 
             if (checked == zero.getId()) {
-                bombCount = "0";
+                prefs.edit().putString("bomb_" + id, "0").apply();
             } else if (checked == one.getId()) {
-                bombCount = "15s";
+                prefs.edit().putString("bomb_" + id, "15s").apply();
             } else if (checked == two.getId()) {
-                bombCount = "1m";
+                prefs.edit().putString("bomb_" + id, "1m").apply();
             } else if (checked == three.getId()) {
-                bombCount = "5m";
+                prefs.edit().putString("bomb_" + id, "5m").apply();
             } else if (checked == four.getId()) {
-                bombCount = "1h";
+                prefs.edit().putString("bomb_" + id, "1h").apply();
             } else if (checked == five.getId()) {
-                bombCount = "24h";
+                prefs.edit().putString("bomb_" + id, "24h").apply();
             }
+
         });
 
         builder.show();
