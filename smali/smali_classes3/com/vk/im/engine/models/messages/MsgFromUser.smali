@@ -1493,6 +1493,10 @@
     .locals 0
 
     .line 1
+    invoke-static/range {p1 .. p1}, Lru/vtosters/lite/hooks/MessagesHook;->injectOwnText(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object p1
+
     iput-object p1, p0, Lcom/vk/im/engine/models/messages/MsgFromUser;->P:Ljava/lang/String;
 
     return-void

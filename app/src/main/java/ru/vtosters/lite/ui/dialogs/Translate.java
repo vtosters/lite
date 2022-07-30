@@ -6,13 +6,14 @@ import android.os.Handler;
 import android.os.Looper;
 import android.util.Log;
 
+import ru.vtosters.lite.hooks.MessagesHook;
 import ru.vtosters.lite.translators.YandexTranslator;
 
 public class Translate {
     public static void showTranslatedText(Context context, String text) {
         new Thread(() -> {
             try {
-                var translation = YandexTranslator.translate(text);
+                var translation = MessagesHook.injectOwnText(text);
                 new Handler(Looper.getMainLooper()).post(() -> {
                     showDialog(context, translation);
                 });
