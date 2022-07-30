@@ -1493,7 +1493,7 @@
     .locals 0
 
     .line 1
-    invoke-static/range {p1 .. p1}, Lru/vtosters/lite/hooks/MessagesHook;->injectOwnText(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {p1}, Lru/vtosters/lite/hooks/MessagesHook;->injectOwnText(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p1
 

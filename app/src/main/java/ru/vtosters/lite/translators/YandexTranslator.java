@@ -23,7 +23,7 @@ public class YandexTranslator extends BaseTranslator {
     private static final OkHttpClient client = new OkHttpClient();
     private static YandexTranslator instance;
 
-    private static String uuid = UUID.randomUUID().toString().replace("-", "");
+    private static final String uuid = UUID.randomUUID().toString().replace("-", "");
 
     public static YandexTranslator getInstance() {
         if (instance == null)
@@ -37,7 +37,7 @@ public class YandexTranslator extends BaseTranslator {
             var request = new Request.a()
                     .b("https://translate.yandex.net/api/v1/tr.json/translate?&srv=android&id=" + uuid + "-0-0")
                     .a(RequestBody.a(MediaType.a("application/x-www-form-urlencoded"),
-                            "lang=" + Locale.getDefault().getLanguage() + "&text=" + URLEncoder.encode(text, "UTF-8")))
+                            "lang=" + target() + "&text=" + URLEncoder.encode(text, "UTF-8")))
                     .a();
             var payload = client.a(request).execute().a().g();
             var json = new JSONObject(payload);
