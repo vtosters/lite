@@ -52,7 +52,7 @@ public class GoogleTranslator extends BaseTranslator {
                     .b("https://translate.googleapis.com/translate_a/single?dj=1" +
                             "&q=" + URLEncoder.encode(text, "UTF-8") +
                             "&sl=auto" +
-                            "&tl=" + Locale.getDefault().getLanguage() +
+                            "&tl=" + getToLanguage() +
                             "&ie=UTF-8&oe=UTF-8&client=at&dt=t&otf=2")
                     .a("User-Agent",
                             "GoogleTranslate/6.28.0.05.421483610 (" + devices[(int) Math.round(Math.random() * (devices.length - 1))] + ")")
