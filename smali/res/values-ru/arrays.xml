@@ -608,6 +608,7 @@
         <item>Немецкий</item>
         <item>Французский</item>
         <item>Казахский</item>
+        <item>Китайский</item>
     </string-array>
     <string-array name="msgcount_value">
         <item>По умолчанию</item>
