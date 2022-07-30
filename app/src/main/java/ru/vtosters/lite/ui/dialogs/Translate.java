@@ -8,9 +8,9 @@ import android.os.Handler;
 import android.os.Looper;
 import android.util.Log;
 
-import ru.vtosters.lite.hooks.MessagesHook;
+import com.vk.core.dialogs.alert.VkAlertDialog;
+
 import ru.vtosters.lite.translators.BaseTranslator;
-import ru.vtosters.lite.translators.YandexTranslator;
 
 public class Translate {
     public static void showTranslatedText(Context context, String text) {
@@ -27,7 +27,7 @@ public class Translate {
     }
 
     private static void showDialog(Context context, String text) {
-        AlertDialog.Builder alertDialog = new AlertDialog.Builder(context);
+        VkAlertDialog.Builder alertDialog = new VkAlertDialog.Builder(context);
         alertDialog.setTitle("Переводчик");
         alertDialog.setMessage(text);
         alertDialog.setPositiveButton("Закрыть", (dialog, which) -> {
