@@ -23,12 +23,14 @@ import okhttp3.Headers;
 import okhttp3.OkHttpClient;
 import okhttp3.Request;
 
+// TODO: Uncomment all pin/unpin actions when pinned dialogs will be ready 
+
 public class DNRInjector {
     public static void inject(Dialog dialog, List<DialogAction> list) {
         int peerId = dialog.getId();
 
-        list.add(DialogAction.valueOf("pinmsg"));
-        list.add(DialogAction.valueOf("unpinmsg"));
+        /*list.add(DialogAction.valueOf("pinmsg"));
+        list.add(DialogAction.valueOf("unpinmsg"));*/
 
         if (isDnrEnabledFor(peerId)) {
             list.add(DialogAction.valueOf("DNR_OFF"));
@@ -50,8 +52,8 @@ public class DNRInjector {
         hashMap.put(DialogAction.valueOf("DNT_OFF"), getIdentifier("DNT_OFF", "string"));
 
 
-        hashMap.put(DialogAction.valueOf("pinmsg"), getIdentifier("pinmsg", "string"));
-        hashMap.put(DialogAction.valueOf("unpinmsg"), getIdentifier("unpinmsg", "string"));
+        /*hashMap.put(DialogAction.valueOf("pinmsg"), getIdentifier("pinmsg", "string"));
+        hashMap.put(DialogAction.valueOf("unpinmsg"), getIdentifier("unpinmsg", "string"));*/
         return hashMap;
     }
 
@@ -78,18 +80,18 @@ public class DNRInjector {
             return true;
         }
 
-        if (action == DialogAction.valueOf("pinmsg")) {
+        /*if (action == DialogAction.valueOf("pinmsg")) {
             pinnedMsg(id, true);
             return true;
         } else if (action == DialogAction.valueOf("unpinmsg")) {
             pinnedMsg(id, false);
             return true;
-        }
+        }*/
 
         return false;
     }
 
-    public static void pinnedMsg(int dialogid, boolean needToBePinned){
+    /*public static void pinnedMsg(int dialogid, boolean needToBePinned){
         Thread thread = new Thread(() -> {
             try  {
                 var request = new Request.a()
@@ -111,7 +113,7 @@ public class DNRInjector {
         thread.start();
 
         sendToast("Диалог успешно " + (needToBePinned ? "закреплен" : "откреплен"));
-    }
+    }*/
 
     public static void setDnr(Dialog dialog, boolean value) {
         hookDNR(dialog.getId());
