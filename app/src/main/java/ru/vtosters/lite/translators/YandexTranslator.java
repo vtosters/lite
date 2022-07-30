@@ -1,5 +1,9 @@
 package ru.vtosters.lite.translators;
 
+import android.util.Log;
+
+import androidx.annotation.NonNull;
+
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -14,23 +18,32 @@ import okhttp3.OkHttpClient;
 import okhttp3.Request;
 import okhttp3.RequestBody;
 
-public class YandexTranslator {
+public class YandexTranslator extends BaseTranslator {
 
     private static final OkHttpClient client = new OkHttpClient();
+    private static YandexTranslator instance;
 
-    static String uuid = UUID.randomUUID().toString().replace("-", "");
+    private static String uuid = UUID.randomUUID().toString().replace("-", "");
 
-    public static String translate(String text) {
+    public static YandexTranslator getInstance() {
+        if (instance == null)
+            instance = new YandexTranslator();
+        return instance;
+    }
+
+    @NonNull
+    public String translate(String text) {
         try {
             var request = new Request.a()
-                    .b("https://translate.yandex.net/api/v1/tr.json/translate?id=" + uuid + "-0-0&srv=android")
+                    .b("https://translate.yandex.net/api/v1/tr.json/translate?&srv=android&id=" + uuid + "-0-0")
                     .a(RequestBody.a(MediaType.a("application/x-www-form-urlencoded"),
                             "lang=" + Locale.getDefault().getLanguage() + "&text=" + URLEncoder.encode(text, "UTF-8")))
                     .a();
             var payload = client.a(request).execute().a().g();
             var json = new JSONObject(payload);
             if (!json.has("text") && json.has("message")) {
-                throw new IOException(json.getString("message"));
+                Log.d("YandexTranslator", json.getString("message"));
+                return text;
             }
             JSONArray array = json.getJSONArray("text");
             StringBuilder sb = new StringBuilder();
@@ -42,6 +55,6 @@ public class YandexTranslator {
         } catch (IOException | JSONException e) {
             e.printStackTrace();
         }
-        return "";
+        return text;
     }
 }
