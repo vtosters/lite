@@ -43,7 +43,7 @@
 
     move-result-object p0
 
-    invoke-static {p0}, Lru/vtosters/lite/hooks/DeviceInfoHook;->getDeviceInfo(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {p0}, Lru/vtosters/lite/hooks/DeviceInfoHook;->getDeviceId(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p0
 
@@ -193,7 +193,7 @@
     move-result-object v0
 
     :cond_1
-    invoke-static {v0}, Lru/vtosters/lite/hooks/DeviceInfoHook;->getDeviceInfo(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v0}, Lru/vtosters/lite/hooks/DeviceInfoHook;->getDeviceId(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
@@ -222,7 +222,7 @@
 
     monitor-exit v0
 
-    invoke-static {p0}, Lru/vtosters/lite/hooks/DeviceInfoHook;->getDeviceInfo(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {p0}, Lru/vtosters/lite/hooks/DeviceInfoHook;->getDeviceId(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p0
 
@@ -271,7 +271,7 @@
 
     monitor-exit v0
 
-    invoke-static {p0}, Lru/vtosters/lite/hooks/DeviceInfoHook;->getDeviceInfo(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {p0}, Lru/vtosters/lite/hooks/DeviceInfoHook;->getDeviceId(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p0
 
@@ -441,7 +441,7 @@
 
     monitor-exit v0
 
-    invoke-static {p0}, Lru/vtosters/lite/hooks/DeviceInfoHook;->getDeviceInfo(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {p0}, Lru/vtosters/lite/hooks/DeviceInfoHook;->getDeviceId(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p0
 
