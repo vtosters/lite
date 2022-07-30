@@ -126,6 +126,8 @@
 
     invoke-virtual {p2, v1, v0}, Lcom/vk/api/internal/MethodCall$a;->a(Ljava/lang/String;Ljava/lang/String;)Lcom/vk/api/internal/MethodCall$a;
 
+    invoke-static {p2}, Lru/vtosters/lite/hooks/MessagesHook;->injRequest(Lcom/vk/api/internal/MethodCall$a;)V
+
     .line 6
     iget-object v0, p0, Lcom/vk/im/engine/internal/jobs/msg/MsgSendUncheckedJob;->d:Ljava/lang/String;
 

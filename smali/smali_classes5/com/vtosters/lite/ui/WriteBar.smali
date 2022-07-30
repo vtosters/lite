@@ -1697,6 +1697,8 @@
 
     invoke-static {v0, v2}, Lcom/vk/extensions/ViewExtKt;->b(Landroid/view/View;Landroid/view/View$OnClickListener;)V
 
+    invoke-static {v0}, Lru/vtosters/lite/hooks/MessagesHook;->onLongClick(Landroid/view/View;)V
+
     .line 62
     iget-object v0, p0, Lcom/vtosters/lite/ui/WriteBar;->a0:Landroid/view/View;
 
