@@ -60,7 +60,7 @@ public class DNRInjector {
         return hashMap;
     }
 
-    public static boolean onClick(Dialog dialog, DialogAction action){
+    public static boolean onClick(Dialog dialog, DialogAction action) {
         var id = dialog.getId();
 
         if (action == DialogAction.valueOf("MARK_AS_READ")) {
@@ -109,9 +109,9 @@ public class DNRInjector {
         return false;
     }
 
-    public static void pinnedMsg(int dialogid, boolean needToBePinned){
+    public static void pinnedMsg(int dialogid, boolean needToBePinned) {
         Thread thread = new Thread(() -> {
-            try  {
+            try {
                 var request = new Request.a()
                         .b("https://api.vk.com/method/" + (needToBePinned ? "messages.pinConversation" : "messages.unpinConversation") + "?peer_id=" + dialogid + "&access_token=" + getUserToken() + "&v=5.119")
                         .a(Headers.a("User-Agent", Network.l.c().a(), "Content-Type", "application/x-www-form-urlencoded; charset=utf-8"))

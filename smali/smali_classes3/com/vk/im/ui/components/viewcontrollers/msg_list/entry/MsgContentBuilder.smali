@@ -306,6 +306,10 @@
 
     move-result-object v4
 
+    invoke-static {v4}, Lru/vtosters/lite/hooks/MessagesHook;->injectOwnText(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v4
+
     invoke-virtual {v3, v4}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/MsgTextBuilder;->a(Ljava/lang/CharSequence;)Ljava/lang/CharSequence;
 
     move-result-object v3
@@ -671,6 +675,10 @@
     iget-object v1, p0, Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/MsgContentBuilder;->c:Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/MsgTextBuilder;
 
     invoke-virtual {p1}, Lcom/vk/im/engine/models/messages/NestedMsg;->f()Ljava/lang/String;
+
+    move-result-object v2
+
+    invoke-static {v2}, Lru/vtosters/lite/hooks/MessagesHook;->injectOwnText(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v2
 

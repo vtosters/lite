@@ -53,9 +53,9 @@ public class ReflectionUtils {
     public static <T> T getObjectField(Class<?> clz, String fieldName, Object instance) throws NoSuchFieldException, IllegalAccessException {
         Field field;
         try {
-            field = clz.getField(fieldName);
+            field = getField(clz, fieldName);
         } catch (NoSuchFieldException e) {
-            field = clz.getDeclaredField(fieldName);
+            field = getDeclaredField(clz, fieldName);
         }
         return (T) field.get(instance);
     }
@@ -76,9 +76,9 @@ public class ReflectionUtils {
     public static void setObjectField(Class<?> clz, String fieldName, Object instance, Object value) throws NoSuchFieldException, IllegalAccessException {
         Field field;
         try {
-            field = clz.getField(fieldName);
+            field = getField(clz, fieldName);
         } catch (NoSuchFieldException e) {
-            field = clz.getDeclaredField(fieldName);
+            field = getDeclaredField(clz, fieldName);
         }
         field.set(instance, value);
     }
@@ -112,9 +112,9 @@ public class ReflectionUtils {
     public static void setObjectFinalField(Class<?> clz, String fieldName, Object instance, Object value) throws NoSuchFieldException, IllegalAccessException {
         Field field;
         try {
-            field = clz.getField(fieldName);
+            field = getField(clz, fieldName);
         } catch (NoSuchFieldException e) {
-            field = clz.getDeclaredField(fieldName);
+            field = getDeclaredField(clz, fieldName);
         }
 
         if (!Modifier.isFinal(field.getModifiers())) return;
@@ -143,9 +143,9 @@ public class ReflectionUtils {
     public static void setObjectStaticField(Class<?> clz, String fieldName, Object value) throws NoSuchFieldException, IllegalAccessException {
         Field field;
         try {
-            field = clz.getField(fieldName);
+            field = getField(clz, fieldName);
         } catch (NoSuchFieldException e) {
-            field = clz.getDeclaredField(fieldName);
+            field = getDeclaredField(clz, fieldName);
         }
         field.set(null, value);
     }
@@ -166,9 +166,9 @@ public class ReflectionUtils {
     public static void setObjectFinalStaticField(Class<?> clz, String fieldName, Object value) throws NoSuchFieldException, IllegalAccessException {
         Field field;
         try {
-            field = clz.getField(fieldName);
+            field = getField(clz, fieldName);
         } catch (NoSuchFieldException e) {
-            field = clz.getDeclaredField(fieldName);
+            field = getDeclaredField(clz, fieldName);
         }
 
         if (!Modifier.isFinal(field.getModifiers())) return;
@@ -197,9 +197,9 @@ public class ReflectionUtils {
     public static <T> T getObjectField(Class<?> clz, String fieldName) throws NoSuchFieldException, IllegalAccessException {
         Field field;
         try {
-            field = clz.getField(fieldName);
+            field = getField(clz, fieldName);
         } catch (NoSuchFieldException e) {
-            field = clz.getDeclaredField(fieldName);
+            field = getDeclaredField(clz, fieldName);
         }
         return (T) field.get(null);
     }
