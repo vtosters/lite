@@ -46,7 +46,7 @@ public class GoogleTranslator extends BaseTranslator {
 
     @NonNull
     @Override
-    String translate(String text) {
+    public String translate(String text) {
         try {
             var request = new Request.a()
                     .b("https://translate.googleapis.com/translate_a/single?dj=1" +

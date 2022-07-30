@@ -18,7 +18,7 @@ public abstract class BaseTranslator {
     private static final int DEEPL = 2;
 
     @NonNull
-    abstract String translate(String text);
+    public abstract String translate(String text);
 
     @NonNull
     public final String getTranslation(String text) {
