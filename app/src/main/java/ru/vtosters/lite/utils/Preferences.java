@@ -189,6 +189,10 @@ public class Preferences {
         return getBoolValue("miniapps", true);
     }
 
+    public static boolean savemsgsett() {
+        return getBoolValue("savemsgsett", false);
+    }
+
     public static boolean friendsblock() {
         return getBoolValue("friendsblock", false);
     }
