@@ -762,6 +762,8 @@
 
     invoke-virtual {v0, v4, v3}, Lcom/vk/api/internal/MethodCall$a;->a(Ljava/lang/String;Ljava/lang/String;)Lcom/vk/api/internal/MethodCall$a;
 
+    invoke-static {v0}, Lru/vtosters/lite/hooks/MessagesHook;->injRequest(Lcom/vk/api/internal/MethodCall$a;)V
+
     .line 16
     iget-object v3, p0, Lcom/vk/im/engine/internal/api_commands/messages/MessagesSendApiCmd;->a:Lcom/vk/im/engine/models/messages/MsgFromUser;
 
