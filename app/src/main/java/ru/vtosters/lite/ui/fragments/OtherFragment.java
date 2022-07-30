@@ -11,10 +11,8 @@ import static ru.vtosters.lite.utils.AccountManagerUtils.getUserToken;
 import static ru.vtosters.lite.utils.AndroidUtils.dp2px;
 import static ru.vtosters.lite.utils.AndroidUtils.getDefaultPrefs;
 import static ru.vtosters.lite.utils.AndroidUtils.getIdentifier;
-import static ru.vtosters.lite.utils.AndroidUtils.getPrefsValue;
 import static ru.vtosters.lite.utils.CacheUtils.deleteCache;
 import static ru.vtosters.lite.utils.LifecycleUtils.restartApplication;
-import static ru.vtosters.lite.utils.ThemesUtils.getAccentColor;
 import static ru.vtosters.lite.utils.ThemesUtils.getTextAttr;
 
 import android.annotation.SuppressLint;
@@ -22,7 +20,6 @@ import android.app.Activity;
 import android.content.ClipData;
 import android.content.ClipboardManager;
 import android.content.Context;
-import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
@@ -34,7 +31,6 @@ import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.Toast;
 
-import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.view.ContextThemeWrapper;
 import androidx.preference.Preference;
 
@@ -43,7 +39,6 @@ import com.vk.core.dialogs.alert.VkAlertDialog;
 import com.vk.core.util.ToastUtils;
 import com.vk.im.engine.ImEngine1;
 import com.vk.im.engine.ImEngineExt;
-import com.vk.im.engine.models.Sticker;
 import com.vk.im.ui.providers.audiomsg.ImAudioMsgPlayerProvider;
 import com.vk.im.ui.providers.audiomsg.PlayerActionSources;
 import com.vk.imageloader.VKImageLoader;
@@ -58,7 +53,6 @@ import com.vtosters.lite.im.ImEngineProvider;
 import java.io.IOException;
 
 import b.h.g.m.FileUtils;
-import ru.vtosters.lite.music.Scrobbler;
 import ru.vtosters.lite.ui.activities.VKAdminTokenActivity;
 import ru.vtosters.lite.ui.components.BackupManager;
 import ru.vtosters.lite.utils.AndroidUtils;
@@ -102,7 +96,7 @@ public class OtherFragment extends MaterialPreferenceToolbarFragment {
         });
 
         var pref = getDefaultPrefs().getString("autoclearcache", "Default");
-        switch(pref) {
+        switch (pref) {
             case "Default":
                 findPreference("autoclearcache").setSummary("Не включено");
                 break;
@@ -228,47 +222,47 @@ public class OtherFragment extends MaterialPreferenceToolbarFragment {
     private void cacheCleanDialog() {
         VkAlertDialog.Builder builder = new VkAlertDialog.Builder(getContext());
         builder.setTitle("Выберите что вы хотите очистить");
-            builder.setItems(new String[]{"Очистить весь кэш", "Очистить кеш стикеров", "Очистить кеш изображений", "Очистить кеш видео", "Очистить кеш сообщений", "Очистить кеш WebView" }, (dialog, which) -> {
-                switch(which) {
-                    case 0: {
-                        SharedPreferences prefs2 = getContext().getSharedPreferences("stickers_storage", Context.MODE_PRIVATE);
-                        prefs2.edit().clear().commit();
-                        new WebView(getActivity()).clearCache(true);
-                        VKImageLoader.e();
-                        ImEngineProvider.b().a();
-                        ImAudioMsgPlayerProvider.b().e(PlayerActionSources.a);
-                        ImAudioMsgPlayerProvider.b().d(PlayerActionSources.a);
-                        FileUtils.l();
-                        Stickers.l.c();
-                        ImEngineExt.a(ImEngine1.a());
-                        AutoPlayCacheHolder.d.a();
-                        MediaStorage.a();
-                        deleteCache();
-                        break;
-                    }
-                    case 1: {
-                        SharedPreferences prefs2 = getContext().getSharedPreferences("stickers_storage", Context.MODE_PRIVATE);
-                        prefs2.edit().clear().commit();
-                        Stickers.l.c();
-                        break;
-                    }
-                    case 2:
-                        VKImageLoader.e();
-                        ImEngineExt.a(ImEngine1.a());
-                        break;
-                    case 3:
-                        AutoPlayCacheHolder.d.a();
-                        MediaStorage.a();
-                        break;
-                    case 4:
-                        ImEngineProvider.b().a();
-                        ImAudioMsgPlayerProvider.b().e(PlayerActionSources.a);
-                        ImAudioMsgPlayerProvider.b().d(PlayerActionSources.a);
-                        break;
-                    case 5:
-                        new WebView(getActivity()).clearCache(true);
-                        break;
+        builder.setItems(new String[]{"Очистить весь кэш", "Очистить кеш стикеров", "Очистить кеш изображений", "Очистить кеш видео", "Очистить кеш сообщений", "Очистить кеш WebView"}, (dialog, which) -> {
+            switch (which) {
+                case 0: {
+                    SharedPreferences prefs2 = getContext().getSharedPreferences("stickers_storage", Context.MODE_PRIVATE);
+                    prefs2.edit().clear().commit();
+                    new WebView(getActivity()).clearCache(true);
+                    VKImageLoader.e();
+                    ImEngineProvider.b().a();
+                    ImAudioMsgPlayerProvider.b().e(PlayerActionSources.a);
+                    ImAudioMsgPlayerProvider.b().d(PlayerActionSources.a);
+                    FileUtils.l();
+                    Stickers.l.c();
+                    ImEngineExt.a(ImEngine1.a());
+                    AutoPlayCacheHolder.d.a();
+                    MediaStorage.a();
+                    deleteCache();
+                    break;
                 }
+                case 1: {
+                    SharedPreferences prefs2 = getContext().getSharedPreferences("stickers_storage", Context.MODE_PRIVATE);
+                    prefs2.edit().clear().commit();
+                    Stickers.l.c();
+                    break;
+                }
+                case 2:
+                    VKImageLoader.e();
+                    ImEngineExt.a(ImEngine1.a());
+                    break;
+                case 3:
+                    AutoPlayCacheHolder.d.a();
+                    MediaStorage.a();
+                    break;
+                case 4:
+                    ImEngineProvider.b().a();
+                    ImAudioMsgPlayerProvider.b().e(PlayerActionSources.a);
+                    ImAudioMsgPlayerProvider.b().d(PlayerActionSources.a);
+                    break;
+                case 5:
+                    new WebView(getActivity()).clearCache(true);
+                    break;
+            }
 
             Toast.makeText(getContext(), "Кеш очищен", LENGTH_SHORT).show();
         });
@@ -341,6 +335,7 @@ public class OtherFragment extends MaterialPreferenceToolbarFragment {
             return true;
         }
     }
+
     public static class saveprefs implements Preference.OnPreferenceClickListener {
         saveprefs() {
         }

@@ -2,7 +2,6 @@ package ru.vtosters.lite.ui.dialogs;
 
 import static ru.vtosters.lite.utils.AndroidUtils.sendToast;
 
-import android.app.AlertDialog;
 import android.content.Context;
 import android.os.Handler;
 import android.os.Looper;
@@ -16,7 +15,7 @@ public class Translate {
     public static void showTranslatedText(Context context, String text) {
         new Thread(() -> {
             try {
-                var translation = BaseTranslator.getInstance().translate(text);
+                var translation = BaseTranslator.getInstance().getTranslation(text);
                 new Handler(Looper.getMainLooper()).post(() -> {
                     showDialog(context, translation);
                 });

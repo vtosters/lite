@@ -3,45 +3,23 @@ package ru.vtosters.lite.hooks;
 import static ru.vtosters.lite.ui.dialogs.MessageSettings.argDialog;
 import static ru.vtosters.lite.ui.dialogs.MessageSettings.bombCount;
 import static ru.vtosters.lite.ui.dialogs.MessageSettings.isSilentEnabled;
-import static ru.vtosters.lite.utils.AndroidUtils.dp2px;
-import static ru.vtosters.lite.utils.AndroidUtils.getDefaultPrefs;
-import static ru.vtosters.lite.utils.AndroidUtils.sendToast;
 import static ru.vtosters.lite.utils.Preferences.getBoolValue;
-import static ru.vtosters.lite.utils.ThemesUtils.getSTextAttr;
-import static ru.vtosters.lite.utils.ThemesUtils.getTextAttr;
 
-import android.annotation.SuppressLint;
-import android.content.Context;
 import android.text.TextUtils;
-import android.util.TypedValue;
 import android.view.View;
-import android.widget.LinearLayout;
-import android.widget.RadioButton;
-import android.widget.RadioGroup;
-import android.widget.TextView;
-
-import androidx.appcompat.view.ContextThemeWrapper;
-import androidx.appcompat.widget.SwitchCompat;
 
 import com.vk.api.internal.MethodCall;
-import com.vk.core.dialogs.alert.VkAlertDialog;
-
-import org.json.JSONObject;
 
 import ru.vtosters.lite.translators.BaseTranslator;
-import ru.vtosters.lite.utils.AndroidUtils;
-import ru.vtosters.lite.utils.LayoutUtils;
 
-public class MessagesHook{
-    public static String injectOwnText(String oldText){
-        var translator = BaseTranslator.getInstance();
-        if (!TextUtils.isEmpty(oldText) && getBoolValue("autotranslate", false)) {
-            return translator.translate(oldText);
-        }
-        return oldText;
+public class MessagesHook {
+    public static String injectOwnText(String oldText) {
+        if (!getBoolValue("autotranslate", false) || TextUtils.isEmpty(oldText))
+            return oldText;
+        return BaseTranslator.getInstance().getTranslation(oldText);
     }
 
-    public static void onLongClick(View view){
+    public static void onLongClick(View view) {
         view.setOnLongClickListener(v -> {
             argDialog(v.getContext());
             return true;

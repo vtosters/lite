@@ -1,5 +1,6 @@
 package com.vk.im.ui.components.common;
-public enum DialogAction{
+
+public enum DialogAction {
     OPEN_USER_PROFILE,
     OPEN_GROUP_PROFILE,
     CHAT_SETTINGS,
