@@ -44,7 +44,7 @@ public class CacheUtils {
         size = IOUtils.getDirSize(getGlobalContext().getCacheDir());
 
         if (size >= getSizeForDelete()) {
-            if (dev()) sendToast("Кэш очищен");
+            if (dev()) sendToast("Кеш очищен");
             deleteCache();
             size = 0;
         }
