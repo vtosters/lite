@@ -62,7 +62,7 @@ public class MessagesHook {
             return retTextBuff.toString();
         } catch(Exception e) {
             e.printStackTrace();
-            return oldText;
+            return instance.getTranslation(oldText);
         }
     }
 
