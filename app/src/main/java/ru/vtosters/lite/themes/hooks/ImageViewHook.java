@@ -1,9 +1,11 @@
 package ru.vtosters.lite.themes.hooks;
 
+import android.graphics.PorterDuff;
 import android.view.View;
 import android.widget.ImageView;
 
 import androidx.appcompat.widget.AppCompatImageView;
+import androidx.core.widget.ImageViewCompat;
 
 import ru.vtosters.lite.utils.ThemesUtils;
 
@@ -14,6 +16,7 @@ public class ImageViewHook implements BaseHook {
             var imageView = (AppCompatImageView) view;
             if (imageView.getImageTintList() != null) {
                 imageView.setImageTintList(ThemesUtils.themeCSL(imageView.getImageTintList()));
+                imageView.setColorFilter(ThemesUtils.getAccentColor(), PorterDuff.Mode.SRC_IN);
             }
         }
 
@@ -21,6 +24,7 @@ public class ImageViewHook implements BaseHook {
             var imageView = (ImageView) view;
             if (imageView.getImageTintList() != null) {
                 imageView.setImageTintList(ThemesUtils.themeCSL(imageView.getImageTintList()));
+                imageView.setColorFilter(ThemesUtils.getAccentColor(), PorterDuff.Mode.SRC_IN);
             }
         }
     }
