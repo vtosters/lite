@@ -2,6 +2,7 @@ package ru.vtosters.lite.foaf;
 
 import static android.widget.Toast.LENGTH_SHORT;
 import static android.widget.Toast.makeText;
+import static ru.vtosters.lite.utils.AndroidUtils.getGlobalContext;
 import static ru.vtosters.lite.utils.AndroidUtils.getIdentifier;
 import static ru.vtosters.lite.utils.AndroidUtils.getString;
 import static ru.vtosters.lite.utils.ProxyUtils.apiproxy;
@@ -100,7 +101,7 @@ public class FoafBase {
             a2.setMessage(getString("foafid") + " " + i + getString("foafregdate") + " " + normalHumanDate + getString("foafdate") + " " + daysPassedFromFoafDate(normalHumanDate)).setPositiveButton(17039370, null).create().show();
         } catch (Exception e) {
             e.printStackTrace();
-            makeText(context, getString("foaferr"), LENGTH_SHORT).show();
+            makeText(getGlobalContext(), getString("foaferr"), LENGTH_SHORT).show();
         }
     }
 
