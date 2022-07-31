@@ -29,13 +29,13 @@ public class YandexTranslator extends BaseTranslator {
 
     @NonNull
     @Override
-    public String translate(String text) {
+    public String translate(String text, String tl) {
         try {
             var request = new Request.a()
                     .b("https://translate.yandex.net/api/v1/tr.json/translate?&srv=android&id=" + uuid + "-0-0")
                     .a("User-Agent", "ru.yandex.translate/21.15.4.21402814 (Xiaomi Redmi K20 Pro; Android 11)")
                     .a(RequestBody.a(MediaType.a("application/x-www-form-urlencoded"),
-                            "lang=" + getToLanguage() + "&text=" + URLEncoder.encode(text, "UTF-8")))
+                            "lang=" + tl + "&text=" + URLEncoder.encode(text, "UTF-8")))
                     .a();
             var payload = client.a(request).execute().a().g();
             var json = new JSONObject(payload);

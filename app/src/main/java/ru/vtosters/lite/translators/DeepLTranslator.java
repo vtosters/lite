@@ -56,11 +56,10 @@ public class DeepLTranslator extends BaseTranslator {
 
     @NonNull
     @Override
-    public String translate(String text) {
+    public String translate(String text, String tl) {
         try {
             System.setProperty("sun.net.http.allowRestrictedHeaders", "true");
 
-            var tl = getToLanguage();
             if (tl.contains("-"))
                 tl = tl.toUpperCase();
 
