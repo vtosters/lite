@@ -1,6 +1,5 @@
 package ru.vtosters.lite.ui.fragments;
 
-import static com.vk.bridges.AuthBridge.logout;
 import static ru.vtosters.lite.ui.PreferencesUtil.addMaterialSwitchPreference;
 import static ru.vtosters.lite.ui.PreferencesUtil.addPreference;
 import static ru.vtosters.lite.ui.PreferencesUtil.addPreferenceCategory;
@@ -16,7 +15,6 @@ import static ru.vtosters.lite.utils.AndroidUtils.getPrefsValue;
 import static ru.vtosters.lite.utils.CacheUtils.humanReadableByteCountBin;
 import static ru.vtosters.lite.utils.GmsUtils.isGmsInstalled;
 import static ru.vtosters.lite.utils.ImageUtils.getDrawableFromUrl;
-import static ru.vtosters.lite.utils.LifecycleUtils.restartApplication;
 import static ru.vtosters.lite.utils.Preferences.ads;
 import static ru.vtosters.lite.utils.Preferences.devmenu;
 import static ru.vtosters.lite.utils.Preferences.disableSettingsSumms;
@@ -48,7 +46,9 @@ import com.vk.balance.BalanceFragment;
 import com.vk.navigation.Navigator;
 import com.vk.notifications.settings.NotificationsSettingsFragment;
 import com.vk.webapp.fragments.PrivacyFragment;
+import com.vtosters.lite.MainActivity;
 import com.vtosters.lite.auth.VKAccountManager;
+import com.vtosters.lite.auth.VKAuth;
 import com.vtosters.lite.fragments.money.music.control.subscription.MusicSubscriptionControlFragment;
 import com.vtosters.lite.fragments.n2.SettingsDebugFragment;
 import com.vtosters.lite.fragments.w2.BlacklistFragment;
@@ -147,8 +147,16 @@ public class VTSettings extends MaterialPreferenceToolbarFragment {
         this.addPreferencesFromResource(vtosterXml);
 
         addPreferenceDrawable(this, "", getUsername(), hasVerification() ? AndroidUtils.getString("thanksfordonate") : AndroidUtils.getString("getdonate"), getDrawableFromUrl(getUserPhoto(), "ic_user_circle_outline_28", true, true), preference -> {
-            logout();
-            restartApplication();
+            try {
+                VKAuth.a("logout", false);
+            } catch (Exception ignored) { }
+
+            var intent = new Intent(getContext(), MainActivity.class);
+            intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+            intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK);
+            intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+            getContext().startActivity(intent);
+
             return false;
         });
 
