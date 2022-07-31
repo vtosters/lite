@@ -15,18 +15,54 @@ import com.vk.api.internal.MethodCall;
 
 import ru.vtosters.lite.translators.BaseTranslator;
 
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
+import java.util.ArrayList;
+
 public class MessagesHook {
     public static String injectOwnText(String oldText) {
         if (!autotranslate() || TextUtils.isEmpty(oldText))
             return oldText;
-        return BaseTranslator.getInstance().getTranslation(oldText);
+        var matcher = Pattern.compile("(\\[(?:club|id|public)\\d+\\|[^]]+\\])").matcher(oldText);
+        var instance = BaseTranslator.getInstance();        
+
+        if (!matcher.matches()) return instance.getTranslation(oldText);
+
+        return replaceMentions(oldText, matcher, instance);
     }
 
     public static String injectOwnTextAll(String oldText) {
         if (!autoalltranslate() || TextUtils.isEmpty(oldText)) {
             return oldText;
         }
-        return BaseTranslator.getInstance().getTranslation(oldText);
+        var matcher = Pattern.compile("(\\[(?:club|id|public)\\d+\\|[^]]+\\])").matcher(oldText);
+        var instance = BaseTranslator.getInstance();        
+
+        if (!matcher.matches()) return instance.getTranslation(oldText);
+
+        return replaceMentions(oldText, matcher, instance);
+    }
+
+    public static String replaceMentions(String oldText, Matcher matcher, Object instance) {
+        var mentionsCount = 0;
+
+        var textBuffer = new StringBuffer();
+        var mentions = new ArrayList<String>();
+        while (matcher.find()) {
+            mentions.add(matcher.group(1));
+            matcher.appendReplacement(textBuffer, "%vtl_mention" + mentionsCount + "%"); ++mentionsCount;
+        }
+        matcher.appendTail(textBuffer);
+
+        var translatedText = instance.getTranslation(textBuffer.toString());
+
+        var matcherMentions = Pattern.compile("%vtl_mention(\\d+)%").matcher(translatedText);
+
+        translatedText = matcherMentions.replaceAll(mr -> {
+            return mentions.get(Integer.parseInt(mr.group(1)));
+        });
+
+        return translatedText;
     }
 
     public static void onLongClick(View view) {
