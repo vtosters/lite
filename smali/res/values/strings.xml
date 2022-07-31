@@ -5955,6 +5955,7 @@ May look like a fake leaving the online"</string>
     <string name="wallpapers">Wallpapers</string>
 
     <string name="translator">Translate</string>
+    <string name="readto">Read to</string>
 
     <string name="vkiddisable">Disable protection</string>
     <string name="vkidsumm">VK has started blocking the use of third-party applications, so for the stable operation of all parts of the application, it is necessary to disable Protection from suspicious applications \n\nVK ID -> Security and Login -> Protection from suspicious applications</string>
