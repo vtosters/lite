@@ -452,6 +452,8 @@
 .method public static a([BIIJ)V
     .locals 10
 
+    return-void
+
     move-wide v0, p3
 
     move p3, p1

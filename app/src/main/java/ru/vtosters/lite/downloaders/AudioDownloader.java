@@ -19,7 +19,7 @@ import ru.vtosters.lite.music.MP3Downloader;
 import ru.vtosters.lite.utils.AndroidUtils;
 
 public class AudioDownloader {
-    private static NotificationManagerCompat notificationManager = NotificationManagerCompat.from(AndroidUtils.getGlobalContext());
+    private static NotificationManagerCompat notificationManager = NotificationChannels.getNotificationManager();
 
     public static void downloadAudio(MusicTrack track) {
         if (AndroidUtils.getDefaultPrefs().getBoolean("new_music_downloading_way", false)) {
@@ -93,7 +93,7 @@ public class AudioDownloader {
     }
 
     private static void downloadMP3(MusicTrack track) {
-        MP3Downloader.execute(track);
+        MP3Downloader.downloadMP3(track);
     }
 
     private static NotificationCompat.Builder buildDownloadNotification(MusicTrack track, int id) {
@@ -103,8 +103,8 @@ public class AudioDownloader {
                 .setContentText(track.toString())
                 .setPriority(NotificationCompat.PRIORITY_LOW)
                 .setCategory(NotificationCompat.CATEGORY_PROGRESS)
-                .setAutoCancel(true);
-        notificationBuilder.setProgress(100, 0, false);
+                .setAutoCancel(true)
+                .setProgress(100, 0, false);
         notificationManager.notify(id, notificationBuilder.build());
         return notificationBuilder;
     }

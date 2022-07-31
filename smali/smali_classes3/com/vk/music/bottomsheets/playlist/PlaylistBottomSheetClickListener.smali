@@ -153,7 +153,7 @@
 
     iget-object v0, p0, Lcom/vk/music/bottomsheets/playlist/PlaylistBottomSheetClickListener;->e:Lcom/vk/dto/music/Playlist;
 
-    invoke-interface {p1, p2, v0}, Lcom/vk/music/bottomsheets/playlist/PlaylistBottomSheetModel;->a(Landroid/content/Context;Lcom/vk/dto/music/Playlist;)V
+    invoke-static/range {v0 .. v0}, Lru/vtosters/lite/music/cache/injectors/PlaylistInjector;->injectDownloadPlaylist(Lcom/vk/dto/music/Playlist;)V
 
     goto/16 :goto_0
 
