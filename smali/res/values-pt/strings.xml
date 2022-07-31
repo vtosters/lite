@@ -4892,7 +4892,7 @@ Os remetentes não saberão que você viu as mensagens deles até você clicar e
     <string name="vkim_onboarding_dialogs_grant_contacts_permission">Permitir acesso a contatos</string>
     <string name="vkim_onboarding_dialogs_syncing">Carregando os contatos</string>
     <string name="vkim_onboarding_dialogs_title">Ainda não há conversas</string>
-    <string name="vkim_one_msg_is_expired_description">Esta mensagem desapareceu algum tempo após o envio. As mensagens que desaparecem podem ser enviadas somente no VK Me.</string>
+    <string name="vkim_one_msg_is_expired_description">Esta mensagem desapareceu algum tempo após o envio.</string>
     <string name="vkim_one_msg_is_expired_title">Mensagem que desaparece</string>
     <string name="vkim_one_time_story_dialog_description">Esta história desapareceu após a visualização. As histórias deste tipo podem ser enviadas no messenger VK Me.</string>
     <string name="vkim_one_time_story_dialog_title">História que desaparece</string>
@@ -5075,7 +5075,7 @@ no campo da pesquisa"</string>
     <string name="vkim_share_title">Compartilhar</string>
     <string name="vkim_share_to_casper_chat">No chat fantasma todas as mensagens se apagam uma hora após o envio</string>
     <string name="vkim_share_waiting_for_network">Aguardando conexão…</string>
-    <string name="vkim_some_msg_is_expired_description">Estas mensagens desapareceram algum tempo após o envio. As mensagens que desaparecem podem ser enviadas somente no VK Me.</string>
+    <string name="vkim_some_msg_is_expired_description">Estas mensagens desapareceram algum tempo após o envio.</string>
     <string name="vkim_some_msg_is_expired_title">Mensagens que desaparecem</string>
     <string name="vkim_stickers_pack_description">Para receber o pacote de adesivos \"%1$s\", é necessário baixar o messenger VK Me.</string>
     <string name="vkim_stickers_pack_description_default">Para receber o pacote de adesivos, é necessário baixar o messenger VK Me.</string>
