@@ -3,6 +3,8 @@ package ru.vtosters.lite.ui.fragments;
 import static ru.vtosters.lite.utils.AndroidUtils.getIdentifier;
 import static ru.vtosters.lite.utils.AndroidUtils.getPreferences;
 import static ru.vtosters.lite.utils.LifecycleUtils.restartApplicationWithTimer;
+import static ru.vtosters.lite.utils.Preferences.autoalltranslate;
+import static ru.vtosters.lite.utils.Preferences.offline;
 
 import android.content.Context;
 import android.content.Intent;
@@ -35,6 +37,8 @@ public class MessagesFragment extends MaterialPreferenceToolbarFragment {
         findPreference("systememoji").setOnPreferenceClickListener(new MessagesFragment.restart());
         findPreference("wallpapers").setOnPreferenceClickListener(new MessagesFragment.openwp());
 
+        findPreference("autotranslate").setEnabled(!autoalltranslate());
+
         findPreference("lang_service").setOnPreferenceClickListener(preference -> {
             var items = Arrays.asList(
                     new ImagineArrayAdapter.ImagineArrayAdapterItem(getIdentifier("ic_yandex_translate_icon", "drawable"), "Yandex Translate"),
@@ -57,6 +61,12 @@ public class MessagesFragment extends MaterialPreferenceToolbarFragment {
 
             return true;
         });
+    }
+
+    @Override
+    public boolean onPreferenceTreeClick(Preference preference) {
+        findPreference("autotranslate").setEnabled(!autoalltranslate());
+        return super.onPreferenceTreeClick(preference);
     }
 
     public boolean restart(Preference preference) {

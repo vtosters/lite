@@ -261,6 +261,15 @@ public class Preferences {
         return getBoolValue("setoffline", false);
     }
 
+    public static boolean autotranslate() {
+        if (autoalltranslate()) return true;
+        return getBoolValue("autotranslate", false);
+    }
+
+    public static boolean autoalltranslate() {
+        return getBoolValue("autoalltranslate", false);
+    }
+
     public static boolean shortinfo() {
         return getBoolValue("shortinfo", true);
     }
