@@ -5099,7 +5099,7 @@ The messages won't be marked as read until you accept the request."</string>
     <string name="vkim_onboarding_dialogs_grant_contacts_permission">Allow access to contacts</string>
     <string name="vkim_onboarding_dialogs_syncing">Syncing contacts</string>
     <string name="vkim_onboarding_dialogs_title">No chats</string>
-    <string name="vkim_one_msg_is_expired_description">This message self-destructed after a certain amount of time. You can only send these kinds of messages on VK Me.</string>
+    <string name="vkim_one_msg_is_expired_description">This message self-destructed after a certain amount of time.</string>
     <string name="vkim_one_msg_is_expired_title">Self-destructing message</string>
     <string name="vkim_one_time_story_dialog_description">This story self-destructed after being viewed. You can send these kinds of stories on VK Me.</string>
     <string name="vkim_one_time_story_dialog_title">Self-destructing story</string>
@@ -5284,7 +5284,7 @@ into the search bar"</string>
     <string name="vkim_share_title">Share</string>
     <string name="vkim_share_to_casper_chat">"In phantom chats, messages self-destruct an hour after they're sent"</string>
     <string name="vkim_share_waiting_for_network">Waiting for network…</string>
-    <string name="vkim_some_msg_is_expired_description">These messages self-destructed after a certain amount of time. You can only send these kinds of messages on VK Me.</string>
+    <string name="vkim_some_msg_is_expired_description">These messages self-destructed after a certain amount of time.</string>
     <string name="vkim_some_msg_is_expired_title">Self-destructing messages</string>
     <string name="vkim_stickers_pack_description">To get the %1$s sticker pack, you need to download VK Me.</string>
     <string name="vkim_stickers_pack_description_default">To get this sticker pack, you need to install VK Me.</string>

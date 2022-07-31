@@ -4874,7 +4874,7 @@ https://vk.me"</string>
     <string name="vkim_onboarding_dialogs_grant_contacts_permission">Контактілерге рұқсат беру</string>
     <string name="vkim_onboarding_dialogs_syncing">Контактілерді жүктеу</string>
     <string name="vkim_onboarding_dialogs_title">Әзірше әңгімелер жоқ</string>
-    <string name="vkim_one_msg_is_expired_description">Осы хабарлама жіберілгеннен кейін кішкене уақыт өте жоқ болып кетті. Сондай хабарламаларды тек VK Me мессенджерінен жіберуге болады.</string>
+    <string name="vkim_one_msg_is_expired_description">Осы хабарлама жіберілгеннен кейін кішкене уақыт өте жоқ болып кетті.</string>
     <string name="vkim_one_msg_is_expired_title">Жойылатын хабарлама</string>
     <string name="vkim_one_time_story_dialog_description">Осы сторис көрілгеннен кейін жойылды. Осындай стористерді VK Me мессенджері арқылы жіберуге болады.</string>
     <string name="vkim_one_time_story_dialog_title">Жойылатын сторис</string>
@@ -5059,7 +5059,7 @@ https://vk.me"</string>
     <string name="vkim_share_title">Бөлісу</string>
     <string name="vkim_share_to_casper_chat">Фантом-чатта хабарламалар жіберілгеннен кейін бір сағат өте жойылып тұрады</string>
     <string name="vkim_share_waiting_for_network">Желіні күтудеміз…</string>
-    <string name="vkim_some_msg_is_expired_description">Осы хабарламалар жіберілгеннен кейін кішкене уақыт өте жоқ болып кетті. Сондай хабарламаларды тек VK Me мессенджерінен жіберуге болады.</string>
+    <string name="vkim_some_msg_is_expired_description">Осы хабарламалар жіберілгеннен кейін кішкене уақыт өте жоқ болып кетті.</string>
     <string name="vkim_some_msg_is_expired_title">Жойылатын хабарлама</string>
     <string name="vkim_stickers_pack_description">«%1$s» стикерлер жинағын алу үшін VK Me мессенджерін орнату керек.</string>
     <string name="vkim_stickers_pack_description_default">Стикерлер жинағын алу үшін VK Me мессенджерін орнату керек.</string>
