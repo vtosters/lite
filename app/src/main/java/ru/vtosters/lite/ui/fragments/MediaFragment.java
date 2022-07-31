@@ -1,10 +1,12 @@
 package ru.vtosters.lite.ui.fragments;
 
 import static ru.vtosters.lite.music.Scrobbler.isLoggedIn;
+import static ru.vtosters.lite.utils.AccountManagerUtils.getUserToken;
 import static ru.vtosters.lite.utils.AndroidUtils.dp2px;
 import static ru.vtosters.lite.utils.AndroidUtils.edit;
 import static ru.vtosters.lite.utils.AndroidUtils.getIdentifier;
 import static ru.vtosters.lite.utils.AndroidUtils.getPreferences;
+import static ru.vtosters.lite.utils.AndroidUtils.sendToast;
 import static ru.vtosters.lite.utils.LifecycleUtils.restartApplicationWithTimer;
 import static ru.vtosters.lite.utils.ThemesUtils.getAccentColor;
 import static ru.vtosters.lite.utils.ThemesUtils.getAlertStyle;
@@ -15,6 +17,7 @@ import android.content.Context;
 import android.content.DialogInterface;
 import android.content.res.ColorStateList;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.ViewGroup;
 import android.widget.EditText;
@@ -25,10 +28,15 @@ import androidx.appcompat.app.AlertDialog;
 import androidx.preference.Preference;
 
 import com.vk.core.dialogs.alert.VkAlertDialog;
+import com.vk.core.network.Network;
 import com.vtosters.lite.general.fragments.MaterialPreferenceToolbarFragment;
 
+import java.io.IOException;
 import java.util.Arrays;
 
+import okhttp3.Headers;
+import okhttp3.OkHttpClient;
+import okhttp3.Request;
 import ru.vtosters.lite.downloaders.VideoDownloader;
 import ru.vtosters.lite.music.Scrobbler;
 import ru.vtosters.lite.ui.adapters.ImagineArrayAdapter;
@@ -107,6 +115,30 @@ public class MediaFragment extends MaterialPreferenceToolbarFragment {
         alert.getButton(DialogInterface.BUTTON_POSITIVE).setTextColor(getAccentColor());
     }
 
+    public static void deleteVideoHistory() {
+        Thread thread = new Thread(() -> {
+            try {
+                var request = new Request.a()
+                        .b("https://api.vk.com/method/" + "video.clearViewingHistoryRecords" + "?https=1" + "&access_token=" + getUserToken() + "&v=5.187")
+                        .a(Headers.a("User-Agent", Network.l.c().a(), "Content-Type", "application/x-www-form-urlencoded; charset=utf-8"))
+                        .a();
+
+                try {
+                    var response = new OkHttpClient().a(request).execute().a().g();
+                    Log.d("VideoHistory", response);
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+        });
+
+        thread.start();
+
+        sendToast("История просмотра видео очищена");
+    }
+
     @Override
     public void onCreate(Bundle bundle) {
         super.onCreate(bundle);
@@ -116,6 +148,10 @@ public class MediaFragment extends MaterialPreferenceToolbarFragment {
 
     private void prefs() {
         findPreference("download_video").setOnPreferenceClickListener(new MediaFragment.download());
+        findPreference("clearvideohistory").setOnPreferenceClickListener(preference -> {
+            deleteVideoHistory();
+            return true;
+        });
         findPreference("dateformat").setOnPreferenceChangeListener(new MediaFragment.restart());
         findPreference("lastfm_auth").setOnPreferenceClickListener(preference -> {
             if (isLoggedIn()) {
