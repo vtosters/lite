@@ -18,14 +18,14 @@ public abstract class BaseTranslator {
     private static final int DEEPL = 2;
 
     @NonNull
-    public abstract String translate(String text);
+    public abstract String translate(String text, String tl);
 
     @NonNull
     public final String getTranslation(String text) {
         var val = cache.get(text);
         if (val != null)
             return val;
-        var translation = translate(text);
+        var translation = translate(text, getToLanguage());
         cache.put(text, translation);
         return translation;
     }
