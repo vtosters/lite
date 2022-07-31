@@ -22,42 +22,49 @@ public class MessagesHook {
     public static String injectOwnText(String oldText) {
         if (!autotranslate() || TextUtils.isEmpty(oldText))
             return oldText;
-        var matcher = Pattern.compile("(\\[(?:club|id|public)\\d+\\|[^]]+\\])").matcher(oldText);
+        var matcher = Pattern.compile("(\\[(?:club|id|public)\\d+\\|[^]]+\\])|(@[^\\s]+)").matcher(oldText);
         var instance = BaseTranslator.getInstance();        
 
-        return replaceMentions(matcher, instance);
+        return replaceMentions(oldText, matcher, instance);
     }
 
     public static String injectOwnTextAll(String oldText) {
         if (!autoalltranslate() || TextUtils.isEmpty(oldText)) {
             return oldText;
         }
-        var matcher = Pattern.compile("(\\[(?:club|id|public)\\d+\\|[^]]+\\])").matcher(oldText);
+        var matcher = Pattern.compile("(\\[(?:club|id|public)\\d+\\|[^]]+\\])|(@[^\\s]+)").matcher(oldText);
         var instance = BaseTranslator.getInstance();
 
-        return replaceMentions(matcher, instance);
+        return replaceMentions(oldText, matcher, instance);
     }
-    
-    public static String replaceMentions(Matcher matcher, BaseTranslator instance) {
-        var mentionsCount = 0;
 
-        var textBuff = new StringBuffer();
-        var mentions = new ArrayList<String>();
-        while (matcher.find()) {
-            mentions.add(matcher.group(1));
-            matcher.appendReplacement(textBuff, "%vtl_mention" + mentionsCount + "%"); ++mentionsCount;
+    public static String replaceMentions(String oldText, Matcher matcher, BaseTranslator instance) {
+        try {
+            var mentionsCount = 0;
+
+            var textBuff = new StringBuffer();
+            var mentions = new ArrayList<String>();
+            while (matcher.find()) {
+                mentions.add(matcher.group());
+                matcher.appendReplacement(textBuff, "%vtl_mention" + mentionsCount + "%"); ++mentionsCount;
+            }
+            matcher.appendTail(textBuff);
+
+            var translatedText = instance.getTranslation(textBuff.toString());
+            var matcherMentions = Pattern.compile("%vtl_mention(\\d+)%").matcher(translatedText);
+            var retTextBuff = new StringBuffer();
+            while (matcherMentions.find()) {
+                matcherMentions.appendReplacement(retTextBuff, mentions.get(
+                        Integer.parseInt(matcherMentions.group(1))
+                ));
+            }
+            matcherMentions.appendTail(retTextBuff);
+
+            return retTextBuff.toString();
+        } catch(Exception e) {
+            e.printStackTrace();
+            return oldText;
         }
-        matcher.appendTail(textBuff);
-
-        var translatedText = instance.getTranslation(textBuff.toString());
-        var matcherMentions = Pattern.compile("%vtl_mention(\\d+)%").matcher(translatedText);
-        var retTextBuff = new StringBuffer();
-        while (matcherMentions.find()) {
-            matcherMentions.appendReplacement(retTextBuff, mentions.get(Integer.parseInt(matcherMentions.group(1))));
-        }
-        matcherMentions.appendTail(retTextBuff);
-
-        return retTextBuff.toString();
     }
 
     public static void onLongClick(View view) {
