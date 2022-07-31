@@ -3,6 +3,8 @@ package ru.vtosters.lite.hooks;
 import static ru.vtosters.lite.ui.dialogs.MessageSettings.argDialog;
 import static ru.vtosters.lite.ui.dialogs.MessageSettings.bombCount;
 import static ru.vtosters.lite.ui.dialogs.MessageSettings.isSilentEnabled;
+import static ru.vtosters.lite.utils.Preferences.autoalltranslate;
+import static ru.vtosters.lite.utils.Preferences.autotranslate;
 import static ru.vtosters.lite.utils.Preferences.getBoolValue;
 import static ru.vtosters.lite.utils.Preferences.savemsgsett;
 
@@ -15,8 +17,15 @@ import ru.vtosters.lite.translators.BaseTranslator;
 
 public class MessagesHook {
     public static String injectOwnText(String oldText) {
-        if (!getBoolValue("autotranslate", false) || TextUtils.isEmpty(oldText))
+        if (!autotranslate() || TextUtils.isEmpty(oldText))
             return oldText;
+        return BaseTranslator.getInstance().getTranslation(oldText);
+    }
+
+    public static String injectOwnTextAll(String oldText) {
+        if (!autoalltranslate() || TextUtils.isEmpty(oldText)) {
+            return oldText;
+        }
         return BaseTranslator.getInstance().getTranslation(oldText);
     }
 

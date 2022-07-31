@@ -5543,8 +5543,8 @@ Does not affect vk.cc links"</string>
     <string name="experts">Experts</string>
     <string name="DNT_OFF">Disable Do Not Type</string>
     <string name="DNT_ON">Enable Do Not Type</string>
-    <string name="pinmsg">Pin message</string>
-    <string name="unpinmsg">Unpin message</string>
+    <string name="pinmsg">Pin chat</string>
+    <string name="unpinmsg">Unpin chat</string>
     <string name="accounts">Accounts</string>
     <string name="act_bot">For Bots/Groups</string>
     <string name="act_cnv">For Conversations</string>
