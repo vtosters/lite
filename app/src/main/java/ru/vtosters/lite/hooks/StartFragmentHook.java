@@ -5,7 +5,6 @@ import static ru.vtosters.lite.utils.AndroidUtils.getPrefsValue;
 import static ru.vtosters.lite.utils.Preferences.getBoolValue;
 import static ru.vtosters.lite.utils.Preferences.milkshake;
 import static ru.vtosters.lite.utils.Preferences.superapp;
-import static ru.vtosters.lite.utils.Preferences.useNewSettings;
 import static ru.vtosters.lite.utils.Preferences.videonewcatalog;
 import static ru.vtosters.lite.utils.Preferences.vkme;
 
@@ -34,6 +33,8 @@ import com.vtosters.lite.fragments.y2.VideosFragment;
 import com.vtosters.lite.general.fragments.GamesFragment;
 import com.vtosters.lite.general.fragments.PhotosFragment;
 
+import ru.vtosters.lite.ui.fragments.VTSettings;
+
 public class StartFragmentHook {
     public static Class getStartFragment() {
         if (vkme()) {
@@ -55,7 +56,7 @@ public class StartFragmentHook {
             case "videos":
                 return videonewcatalog() ? VideoCatalogFragment.class : VideosFragment.class;
             case "settings":
-                return useNewSettings();
+                return VTSettings.class;
             case "apps":
                 return AppsFragment.class;
             case "discover":

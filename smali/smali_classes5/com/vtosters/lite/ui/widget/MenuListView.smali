@@ -1933,7 +1933,7 @@
 
     .line 26
     :cond_d
-    instance-of v2, v0, Lcom/vtosters/lite/fragments/SettingsListFragment;
+    instance-of v2, v0, Lru/vtosters/lite/ui/fragments/VTSettings;
 
     if-eqz v2, :cond_e
 

@@ -45,10 +45,6 @@
             android:entryValues="@array/lang_value"
             android:key="lang_value"
             android:title="@string/debug_experimental_language" />
-        <com.vtosters.lite.ui.MaterialSwitchPreference
-            android:defaultValue="true"
-            android:key="useNewSettings"
-            android:title="Use New Settings" />
     </PreferenceCategory>
     <PreferenceCategory android:title="@string/vk_fix_music_other">
         <com.vtosters.lite.ui.MaterialSwitchPreference

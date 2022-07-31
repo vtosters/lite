@@ -5,7 +5,6 @@ import static ru.vtosters.lite.utils.AndroidUtils.getPreferences;
 import static ru.vtosters.lite.utils.Preferences.getBoolValue;
 import static ru.vtosters.lite.utils.Preferences.milkshake;
 import static ru.vtosters.lite.utils.Preferences.superapp;
-import static ru.vtosters.lite.utils.Preferences.useNewSettings;
 import static ru.vtosters.lite.utils.Preferences.videonewcatalog;
 import static ru.vtosters.lite.utils.Preferences.vkme;
 import static ru.vtosters.lite.utils.Preferences.vkme_notifs;
@@ -43,6 +42,7 @@ import java.util.Arrays;
 import java.util.List;
 import java.util.stream.Collectors;
 
+import ru.vtosters.lite.ui.fragments.VTSettings;
 import ru.vtosters.lite.ui.items.DockBarTab;
 import ru.vtosters.lite.utils.AndroidUtils;
 
@@ -261,7 +261,7 @@ public class DockBarEditorManager {
                         R.drawable.ic_settings_outline_28,
                         R.string.menu_settings,
                         R.id.menu_settings,
-                        useNewSettings());
+                        VTSettings.class);
         }
     }
 }

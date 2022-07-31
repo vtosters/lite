@@ -20,11 +20,8 @@ import android.content.pm.PackageManager;
 import android.preference.PreferenceManager;
 
 import com.vtosters.lite.data.Users;
-import com.vtosters.lite.fragments.SettingsListFragment;
 
 import java.security.NoSuchAlgorithmException;
-
-import ru.vtosters.lite.ui.fragments.VTSettings;
 
 public class Preferences {
     public static SharedPreferences preferences = getGlobalContext().getSharedPreferences("com.vtosters.lite_preferences", Context.MODE_PRIVATE);
@@ -134,11 +131,6 @@ public class Preferences {
 
     public static boolean foaf() {
         return getBoolValue("foaf", false);
-    }
-
-    public static Class useNewSettings() {
-        boolean bool = getBoolValue("useNewSettings", true);
-        return bool ? VTSettings.class : SettingsListFragment.class;
     }
 
     public static boolean VKUI_INJ() {
