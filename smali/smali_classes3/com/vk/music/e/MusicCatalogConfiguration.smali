@@ -65,6 +65,23 @@
         }
     .end annotation
 
+    invoke-static {}, Lru/vtosters/lite/music/cache/injectors/TracklistInjector;->eligibleForOfflineCaching()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_custom
+
+    invoke-virtual {p0}, Lcom/vk/catalog2/core/VkCatalogConfiguration;->j()Lcom/vk/catalog2/core/CatalogParser;
+
+    move-result-object v0
+
+    invoke-static {v0}, Lru/vtosters/lite/music/cache/injectors/TracklistInjector;->createOfflineRx(Lcom/vk/catalog2/core/CatalogParser;)Lio/reactivex/Observable;
+
+    move-result-object v0
+
+    return-object v0
+
+    :cond_custom
     .line 1
     new-instance v0, Lcom/vk/catalog2/core/api/music/CatalogGetAudio;
 

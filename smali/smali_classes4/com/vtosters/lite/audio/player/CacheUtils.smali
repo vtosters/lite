@@ -8,6 +8,12 @@
     .locals 10
 
     .line 5
+    invoke-static/range {p1 .. p1}, Lru/vtosters/lite/music/cache/FileCacheImplementation;->getTrackFile(Ljava/lang/String;)Ljava/io/File;
+
+    move-result-object v0
+
+    return-object v0
+
     invoke-static {p0}, Landroidx/core/content/ContextCompat;->getExternalCacheDirs(Landroid/content/Context;)[Ljava/io/File;
 
     move-result-object v0
