@@ -22,24 +22,23 @@ public class MessagesHook {
     public static String injectOwnText(String oldText) {
         if (!autotranslate() || TextUtils.isEmpty(oldText))
             return oldText;
-        var matcher = Pattern.compile("(\\[(?:club|id|public)\\d+\\|[^]]+\\])|(@[^\\s]+)").matcher(oldText);
         var instance = BaseTranslator.getInstance();        
 
-        return replaceMentions(oldText, matcher, instance);
+        return replaceMentions(oldText, instance);
     }
 
     public static String injectOwnTextAll(String oldText) {
         if (!autoalltranslate() || TextUtils.isEmpty(oldText)) {
             return oldText;
         }
-        var matcher = Pattern.compile("(\\[(?:club|id|public)\\d+\\|[^]]+\\])|(@[^\\s]+)").matcher(oldText);
         var instance = BaseTranslator.getInstance();
 
-        return replaceMentions(oldText, matcher, instance);
+        return replaceMentions(oldText, instance);
     }
 
-    public static String replaceMentions(String oldText, Matcher matcher, BaseTranslator instance) {
+    public static String replaceMentions(String oldText, BaseTranslator instance) {
         try {
+            var matcher = Pattern.compile("(\\[(?:club|id|public)\\d+\\|[^]]+\\])|(@[^\\s]+)").matcher(oldText);
             var mentionsCount = 0;
 
             var textBuff = new StringBuffer();
