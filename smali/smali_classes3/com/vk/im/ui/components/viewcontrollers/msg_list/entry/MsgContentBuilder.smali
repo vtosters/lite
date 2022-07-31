@@ -306,7 +306,7 @@
 
     move-result-object v4
 
-    invoke-static {v4}, Lru/vtosters/lite/hooks/MessagesHook;->injectOwnText(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v4}, Lru/vtosters/lite/hooks/MessagesHook;->injectOwnTextAll(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v4
 
@@ -678,7 +678,7 @@
 
     move-result-object v2
 
-    invoke-static {v2}, Lru/vtosters/lite/hooks/MessagesHook;->injectOwnText(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v2}, Lru/vtosters/lite/hooks/MessagesHook;->injectOwnTextAll(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v2
 
