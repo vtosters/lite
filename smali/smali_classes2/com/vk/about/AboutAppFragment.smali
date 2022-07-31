@@ -509,6 +509,8 @@
 
     move-result-object p2
 
+    invoke-static {p2}, Lru/vtosters/lite/utils/About;->injectToToolBar(Landroid/view/View;)V
+
     check-cast p2, Landroidx/appcompat/widget/Toolbar;
 
     const v0, 0x7f080376
