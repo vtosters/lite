@@ -5,7 +5,6 @@ import static ru.vtosters.lite.ui.dialogs.MessageSettings.bombCount;
 import static ru.vtosters.lite.ui.dialogs.MessageSettings.isSilentEnabled;
 import static ru.vtosters.lite.utils.Preferences.autoalltranslate;
 import static ru.vtosters.lite.utils.Preferences.autotranslate;
-import static ru.vtosters.lite.utils.Preferences.getBoolValue;
 import static ru.vtosters.lite.utils.Preferences.savemsgsett;
 
 import android.text.TextUtils;
@@ -28,7 +27,7 @@ public class MessagesHook {
 
         if (!matcher.matches()) return instance.getTranslation(oldText);
 
-        return replaceMentions(oldText, matcher, instance);
+        return replaceMentions(matcher, instance);
     }
 
     public static String injectOwnTextAll(String oldText) {
@@ -40,29 +39,30 @@ public class MessagesHook {
 
         if (!matcher.matches()) return instance.getTranslation(oldText);
 
-        return replaceMentions(oldText, matcher, instance);
+        return replaceMentions(matcher, instance);
     }
 
-    public static String replaceMentions(String oldText, Matcher matcher, Object instance) {
+    // TODO: Rewrite to Matcher.replaceAll
+    public static String replaceMentions(Matcher matcher, BaseTranslator instance) {
         var mentionsCount = 0;
 
-        var textBuffer = new StringBuffer();
+        var textBuff = new StringBuffer();
         var mentions = new ArrayList<String>();
         while (matcher.find()) {
             mentions.add(matcher.group(1));
-            matcher.appendReplacement(textBuffer, "%vtl_mention" + mentionsCount + "%"); ++mentionsCount;
+            matcher.appendReplacement(textBuff, "%vtl_mention" + mentionsCount + "%"); ++mentionsCount;
         }
-        matcher.appendTail(textBuffer);
+        matcher.appendTail(textBuff);
 
-        var translatedText = instance.getTranslation(textBuffer.toString());
-
+        var translatedText = instance.getTranslation(textBuff.toString());
         var matcherMentions = Pattern.compile("%vtl_mention(\\d+)%").matcher(translatedText);
+        var retTextBuff = new StringBuffer();
+        while (matcherMentions.find()) {
+            matcherMentions.appendReplacement(retTextBuff, mentions.get(Integer.parseInt(matcherMentions.group(1))));
+        }
+        matcherMentions.appendTail(retTextBuff);
 
-        translatedText = matcherMentions.replaceAll(mr -> {
-            return mentions.get(Integer.parseInt(mr.group(1)));
-        });
-
-        return translatedText;
+        return retTextBuff.toString();
     }
 
     public static void onLongClick(View view) {
