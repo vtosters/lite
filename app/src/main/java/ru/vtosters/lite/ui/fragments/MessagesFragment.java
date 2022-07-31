@@ -42,8 +42,8 @@ public class MessagesFragment extends MaterialPreferenceToolbarFragment {
         findPreference("lang_service").setOnPreferenceClickListener(preference -> {
             var items = Arrays.asList(
                     new ImagineArrayAdapter.ImagineArrayAdapterItem(getIdentifier("ic_yandex_translate_icon", "drawable"), "Yandex Translate"),
-                    new ImagineArrayAdapter.ImagineArrayAdapterItem(getIdentifier("ic_google_translate_logo", "drawable"), "Google Translate"),
-                    new ImagineArrayAdapter.ImagineArrayAdapterItem(getIdentifier("ic_deepl_logo_icon", "drawable"), "DeepL")
+                    new ImagineArrayAdapter.ImagineArrayAdapterItem(getIdentifier("ic_google_translate_logo", "drawable"), "Google Translate")
+//                    new ImagineArrayAdapter.ImagineArrayAdapterItem(getIdentifier("ic_deepl_logo_icon", "drawable"), "DeepL")
             );
 
             var alert = new VkAlertDialog.Builder(getActivity())
