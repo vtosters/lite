@@ -45,12 +45,12 @@ public class MessagesHook {
             var mentions = new ArrayList<String>();
             while (matcher.find()) {
                 mentions.add(matcher.group());
-                matcher.appendReplacement(textBuff, "%vtl_mention" + mentionsCount + "%"); ++mentionsCount;
+                matcher.appendReplacement(textBuff, "vtl_mention" + mentionsCount + ""); ++mentionsCount;
             }
             matcher.appendTail(textBuff);
 
             var translatedText = instance.getTranslation(textBuff.toString());
-            var matcherMentions = Pattern.compile("%vtl_mention(\\d+)%").matcher(translatedText);
+            var matcherMentions = Pattern.compile("vtl_mention(\\d+)").matcher(translatedText);
             var retTextBuff = new StringBuffer();
             while (matcherMentions.find()) {
                 matcherMentions.appendReplacement(retTextBuff, mentions.get(
