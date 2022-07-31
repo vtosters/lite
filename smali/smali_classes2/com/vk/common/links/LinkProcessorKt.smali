@@ -2706,7 +2706,9 @@
     :cond_21
     new-instance v0, Lcom/vk/navigation/Navigator;
 
-    const-class v1, Lcom/vtosters/lite/fragments/SettingsListFragment;
+    invoke-static {}, Lru/vtosters/lite/utils/Preferences;->useNewSettings()Ljava/lang/Class;
+
+    move-result-object v1
 
     invoke-direct {v0, v1, v8}, Lcom/vk/navigation/Navigator;-><init>(Ljava/lang/Class;Landroid/os/Bundle;)V
 
@@ -2799,7 +2801,9 @@
     :goto_9
     new-instance v0, Lcom/vk/navigation/Navigator;
 
-    const-class v1, Lcom/vtosters/lite/fragments/SettingsListFragment;
+    invoke-static {}, Lru/vtosters/lite/utils/Preferences;->useNewSettings()Ljava/lang/Class;
+
+    move-result-object v1
 
     invoke-direct {v0, v1, v8}, Lcom/vk/navigation/Navigator;-><init>(Ljava/lang/Class;Landroid/os/Bundle;)V
 
