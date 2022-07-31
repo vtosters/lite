@@ -5,8 +5,10 @@ import static ru.vtosters.lite.utils.AndroidUtils.getGlobalContext;
 import static ru.vtosters.lite.utils.AndroidUtils.getPrefsValue;
 import static ru.vtosters.lite.utils.Preferences.getBoolValue;
 import static ru.vtosters.lite.utils.ThemesUtils.getAccentColor;
+import static ru.vtosters.lite.utils.ThemesUtils.getAttrId;
 import static ru.vtosters.lite.utils.ThemesUtils.getBackgroundContent;
 import static ru.vtosters.lite.utils.ThemesUtils.getBackgroundPage;
+import static ru.vtosters.lite.utils.ThemesUtils.getColorFromAttr;
 import static ru.vtosters.lite.utils.ThemesUtils.getHeaderBackground;
 import static ru.vtosters.lite.utils.ThemesUtils.getHeaderText;
 import static ru.vtosters.lite.utils.ThemesUtils.getTextAttr;
@@ -59,7 +61,12 @@ public class VKUIHook {
                 .replace("%header_text%", hex(getHeaderText()))
                 .replace("%accent%", hex(getAccentColor()))
                 .replace("%background_page%", hex(getBackgroundPage()))
+                .replace("%content_tint_background%", hex(getColorFromAttr(getAttrId("content_tint_background"))))
+                .replace("%button_primary_background%", hex(getColorFromAttr(getAttrId("button_primary_background"))))
+                .replace("%button_outline_foreground%", hex(getColorFromAttr(getAttrId("button_outline_foreground"))))
+                .replace("%button_outline_border%", hex(getColorFromAttr(getAttrId("button_outline_border"))))
                 .replace("%text_primary%", hex(getTextAttr()));
+
 
         loadedCSSAmoled = load("vt_ui_oled.css");
         isLoaded = true;
