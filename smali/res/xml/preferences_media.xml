@@ -80,6 +80,10 @@
             android:key="__dbg_disable_video_feed"
             android:summary="@string/interfacevideorecsum"
             android:title="@string/interfacevideorec" />
+        <Preference
+            android:key="clearvideohistory"
+            android:summary="Очистка истории просмотра видео удалит все видео из истории просмотра и рекомендации основанные на них"
+            android:title="Очистить историю видео" />
     </PreferenceCategory>
     <PreferenceCategory android:title="Фото">
         <Preference
