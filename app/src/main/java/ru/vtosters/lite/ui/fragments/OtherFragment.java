@@ -222,7 +222,7 @@ public class OtherFragment extends MaterialPreferenceToolbarFragment {
     private void cacheCleanDialog() {
         VkAlertDialog.Builder builder = new VkAlertDialog.Builder(getContext());
         builder.setTitle("Выберите что вы хотите очистить");
-        builder.setItems(new String[]{"Очистить весь кэш", "Очистить кеш стикеров", "Очистить кеш изображений", "Очистить кеш видео", "Очистить кеш сообщений", "Очистить кеш WebView"}, (dialog, which) -> {
+        builder.setItems(new String[]{"Очистить весь кеш", "Очистить кеш стикеров", "Очистить кеш изображений", "Очистить кеш видео", "Очистить кеш сообщений", "Очистить кеш WebView"}, (dialog, which) -> {
             switch (which) {
                 case 0: {
                     SharedPreferences prefs2 = getContext().getSharedPreferences("stickers_storage", Context.MODE_PRIVATE);
