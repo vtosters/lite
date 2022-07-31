@@ -4951,7 +4951,7 @@
     <string name="vkim_onboarding_dialogs_grant_contacts_permission">Разрешить доступ к контактам</string>
     <string name="vkim_onboarding_dialogs_syncing">Загрузка контактов</string>
     <string name="vkim_onboarding_dialogs_title">Бесед пока нет</string>
-    <string name="vkim_one_msg_is_expired_description">Это сообщение исчезло спустя некоторое время после отправки. Отправлять такие сообщения можно только в мессенджере VK Me.</string>
+    <string name="vkim_one_msg_is_expired_description">Это сообщение исчезло спустя некоторое время после отправки.</string>
     <string name="vkim_one_msg_is_expired_title">Исчезающее сообщение</string>
     <string name="vkim_one_time_story_dialog_description">Эта история исчезла после просмотра. Отправлять такие истории можно в мессенджере VK Me.</string>
     <string name="vkim_one_time_story_dialog_title">Исчезающая история</string>
@@ -5136,7 +5136,7 @@
     <string name="vkim_share_title">Поделиться</string>
     <string name="vkim_share_to_casper_chat">В фантом-чате сообщения исчезают через час после отправки</string>
     <string name="vkim_share_waiting_for_network">Ожидание сети…</string>
-    <string name="vkim_some_msg_is_expired_description">Эти сообщения исчезли спустя некоторое время после отправки. Отправлять такие сообщения можно только в мессенджере VK Me.</string>
+    <string name="vkim_some_msg_is_expired_description">Эти сообщения исчезли спустя некоторое время после отправки.</string>
     <string name="vkim_some_msg_is_expired_title">Исчезающие сообщения</string>
     <string name="vkim_stickers_pack_description">Чтобы получить набор стикеров «%1$s», необходимо установить мессенджер VK Me.</string>
     <string name="vkim_stickers_pack_description_default">Чтобы получить набор стикеров, необходимо установить мессенджер VK Me.</string>

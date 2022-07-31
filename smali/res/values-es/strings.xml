@@ -4924,7 +4924,7 @@ Los mensajes no se marcarán como leídos hasta que aceptes la solicitud."</stri
     <string name="vkim_onboarding_dialogs_grant_contacts_permission">Permitir el acceso a los contactos</string>
     <string name="vkim_onboarding_dialogs_syncing">Sincronizando contactos</string>
     <string name="vkim_onboarding_dialogs_title">No hay chats</string>
-    <string name="vkim_one_msg_is_expired_description">Este mensaje se autodestruyó después de cierto tiempo. Puedes enviar este tipo de mensajes también en VK Me.</string>
+    <string name="vkim_one_msg_is_expired_description">Este mensaje se autodestruyó después de cierto tiempo.</string>
     <string name="vkim_one_msg_is_expired_title">Mensaje que se autodestruye</string>
     <string name="vkim_one_time_story_dialog_description">Esta historia se autodestruyó después de ser vista. Puedes enviar este tipo de historias en VK Me.</string>
     <string name="vkim_one_time_story_dialog_title">Historia que se autodestruye</string>
@@ -5109,7 +5109,7 @@ en la barra de búsqueda"</string>
     <string name="vkim_share_title">Compartir</string>
     <string name="vkim_share_to_casper_chat">En los chats fantasmas, los mensajes se autodestruyen una hora después de ser enviados</string>
     <string name="vkim_share_waiting_for_network">Esperando conexión…</string>
-    <string name="vkim_some_msg_is_expired_description">Estos mensajes se autodestruyen después de cierto tiempo. Puedes enviar este tipo de mensajes también en VK Me.</string>
+    <string name="vkim_some_msg_is_expired_description">Estos mensajes se autodestruyen después de cierto tiempo.</string>
     <string name="vkim_some_msg_is_expired_title">Mensaje que desaparece</string>
     <string name="vkim_stickers_pack_description">Para obtener %1$s paquete de pegatinas necesitas descargar VK Me.</string>
     <string name="vkim_stickers_pack_description_default">Para obtener este paquete de pegatinas necesitas descargar VK Me.</string>
