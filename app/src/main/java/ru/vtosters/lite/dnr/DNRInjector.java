@@ -96,6 +96,7 @@ public class DNRInjector {
 
     public static LinkedHashMap<MsgAction, DelegateMsg.a.a> injectToHashMapMsg(LinkedHashMap<MsgAction, DelegateMsg.a.a> hashMap) {
         hashMap.put(MsgAction.valueOf("TRANSLATE"), new DelegateMsg.a.a(getIdentifier("translator", "string")));
+        hashMap.put(MsgAction.valueOf("READTO"), new DelegateMsg.a.a(getIdentifier("readto", "string")));
         return hashMap;
     }
 
@@ -103,6 +104,11 @@ public class DNRInjector {
         var text = ((MsgFromUser) msg).f();
         var fullMsg = ((MsgFromUser) msg).j2(); // text + reply
         var reply = fullMsg.substring(text.length() + 1);
+
+        if (action == MsgAction.valueOf("READTO")) {
+            DNRModule.hookReadStartMsgTo(msg);
+            return true;
+        }
 
         var isTextExist = !text.isEmpty() && !text.equals(" ");
         var isReplyExist = !reply.isEmpty() && !reply.equals(" ");

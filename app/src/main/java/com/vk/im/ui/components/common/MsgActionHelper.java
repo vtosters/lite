@@ -33,6 +33,7 @@ public final class MsgActionHelper {
             CollectionExt.a(arrayList, MsgAction.PIN, MsgPermissionHelper.b.e(aVar));
             CollectionExt.a(arrayList, MsgAction.UNPIN, MsgPermissionHelper.b.i(aVar));
             CollectionExt.a(arrayList, MsgAction.TRANSLATE, true);
+            CollectionExt.a(arrayList, MsgAction.READTO, true);
 
             return arrayList;
         }
