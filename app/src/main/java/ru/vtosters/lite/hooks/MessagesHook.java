@@ -25,8 +25,6 @@ public class MessagesHook {
         var matcher = Pattern.compile("(\\[(?:club|id|public)\\d+\\|[^]]+\\])").matcher(oldText);
         var instance = BaseTranslator.getInstance();        
 
-        if (!matcher.matches()) return instance.getTranslation(oldText);
-
         return replaceMentions(matcher, instance);
     }
 
@@ -35,14 +33,11 @@ public class MessagesHook {
             return oldText;
         }
         var matcher = Pattern.compile("(\\[(?:club|id|public)\\d+\\|[^]]+\\])").matcher(oldText);
-        var instance = BaseTranslator.getInstance();        
-
-        if (!matcher.matches()) return instance.getTranslation(oldText);
+        var instance = BaseTranslator.getInstance();
 
         return replaceMentions(matcher, instance);
     }
-
-    // TODO: Rewrite to Matcher.replaceAll
+    
     public static String replaceMentions(Matcher matcher, BaseTranslator instance) {
         var mentionsCount = 0;
 
