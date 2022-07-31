@@ -1,8 +1,11 @@
 package ru.vtosters.lite.utils;
 
+import android.view.ViewGroup;
 import android.widget.FrameLayout;
 import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
+
+import androidx.constraintlayout.widget.ConstraintLayout;
 
 public class LayoutUtils {
 
@@ -20,5 +23,13 @@ public class LayoutUtils {
 
     public static FrameLayout.LayoutParams createFrame(int w, int h) {
         return new FrameLayout.LayoutParams(w, h);
+    }
+
+    public static ViewGroup.LayoutParams createViewGroup(int w, int h) {
+        return new ViewGroup.LayoutParams(w, h);
+    }
+
+    public static ConstraintLayout.LayoutParams createConstraint(int w, int h) {
+        return new ConstraintLayout.LayoutParams(w, h);
     }
 }

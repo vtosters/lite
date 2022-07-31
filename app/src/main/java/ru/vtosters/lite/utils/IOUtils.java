@@ -71,8 +71,32 @@ public class IOUtils {
     }
 
     public static void writeToFile(File file, byte[] content) throws IOException {
+        if (!file.exists())
+            file.createNewFile();
         FileOutputStream fos = new FileOutputStream(file);
         fos.write(content);
+    }
+
+    public static void copyFileToDirectory(File dest, File targetDir) throws IOException {
+        if (!targetDir.exists())
+            targetDir.mkdirs();
+        var path = dest.getAbsolutePath();
+        var target = new File(targetDir, path.substring(path.lastIndexOf("/")));
+        copyFile(dest, target);
+    }
+
+    public static void copyFile(File dest, File target) throws IOException {
+        var parent = target.getParentFile();
+        if (!parent.exists())
+            parent.getParentFile().mkdirs();
+        writeToFile(target, readAllBytes(dest));
+    }
+
+    public static void copyFile(InputStream is, File target) throws IOException {
+        var parent = target.getParentFile();
+        if (!parent.exists())
+            parent.getParentFile().mkdirs();
+        writeToFile(target, readAllBytes(is));
     }
 
     public static void deleteRecursive(File f) {

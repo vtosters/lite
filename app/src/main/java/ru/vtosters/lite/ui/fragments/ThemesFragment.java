@@ -12,10 +12,11 @@ import android.os.Bundle;
 import androidx.preference.Preference;
 
 import com.vk.navigation.Navigator;
+import com.vk.newsfeed.NewsfeedSettingsFragment;
 import com.vtosters.lite.general.fragments.MaterialPreferenceToolbarFragment;
 
+import ru.vtosters.lite.ui.components.ThemesManager;
 import ru.vtosters.lite.utils.LifecycleUtils;
-
 
 public class ThemesFragment extends MaterialPreferenceToolbarFragment {
 
@@ -27,6 +28,17 @@ public class ThemesFragment extends MaterialPreferenceToolbarFragment {
     }
 
     private void prefs() {
+        var themesPreference = findPreference("themes");
+        var themesManager = ThemesManager.getInstance();
+        if (themesManager.getThemesCount() > 0)
+            themesPreference.setSummary(themesManager.getCurrentTheme().name);
+        themesPreference.setOnPreferenceClickListener(preference -> {
+            var intent  = new Navigator(ThemesManagerFragment.class).b(getContext());
+            intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+            getContext().startActivity(intent);
+            return false;
+        });
+
         findPreference("navbar").setOnPreferenceClickListener(new restart());
         findPreference("milkshake").setOnPreferenceClickListener(new restart());
         findPreference("darktheme").setOnPreferenceChangeListener(new restartdark());
