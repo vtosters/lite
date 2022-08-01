@@ -327,10 +327,6 @@
 
     if-eqz v0, :cond_0
 
-    const-string v0, "ads_disabled"
-
-    .line 16
-    invoke-static {v1, v0}, Lcom/vtosters/lite/utils/Utils;->a(Ljava/lang/StringBuilder;Ljava/lang/String;)V
 
     .line 17
     :cond_0
@@ -742,45 +738,7 @@
 
     invoke-direct {v0, p0}, Ljava/util/HashSet;-><init>(Ljava/util/Collection;)V
 
-    const-string p0, "ads_app"
-
-    .line 12
-    invoke-virtual {v0, p0}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
-
-    const-string p0, "ads_site"
-
-    .line 13
-    invoke-virtual {v0, p0}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
-
-    const-string p0, "ads_post"
-
-    .line 14
-    invoke-virtual {v0, p0}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
-
-    const-string p0, "ads_app_slider"
-
-    .line 15
-    invoke-virtual {v0, p0}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
-
-    const-string p0, "ads_site_slider"
-
-    .line 16
-    invoke-virtual {v0, p0}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
-
-    const-string p0, "ads_app_video"
-
-    .line 17
-    invoke-virtual {v0, p0}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
-
-    const-string p0, "ads_post_pretty_cards"
-
-    .line 18
-    invoke-virtual {v0, p0}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
-
-    const-string p0, "ads_post_snippet_video"
-
-    .line 19
-    invoke-virtual {v0, p0}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
+    invoke-static {v0}, Lru/vtosters/lite/hooks/NewsfeedHook;->adsParams(Ljava/util/HashSet;)V
 
     .line 20
     invoke-virtual {v0}, Ljava/util/HashSet;->size()I
