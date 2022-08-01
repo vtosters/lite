@@ -15,6 +15,10 @@
             android:key="whatsnew"
             android:summary="Блок написания поста в ленте"
             android:title="Показывать блок поста" />
+        <com.vtosters.lite.ui.MaterialSwitchPreference
+            android:defaultValue="false"
+            android:key="is_likes_on_right"
+            android:title="Показ лайков в посте справа" />
     </PreferenceCategory>
     <PreferenceCategory android:title="@string/interfaceglobal">
         <com.vtosters.lite.ui.SummaryListPreference

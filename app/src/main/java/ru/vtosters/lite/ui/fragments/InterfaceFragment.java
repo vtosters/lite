@@ -20,6 +20,7 @@ public class InterfaceFragment extends MaterialPreferenceToolbarFragment {
     private void prefs() {
         findPreference("stories").setOnPreferenceClickListener(new restart());
         findPreference("swipe").setOnPreferenceClickListener(new restart());
+        findPreference("is_likes_on_right").setOnPreferenceClickListener(new restart());
     }
 
     public boolean restart(Preference preference) {
