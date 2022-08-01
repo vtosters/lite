@@ -11,9 +11,9 @@ body[scheme=bright_light] {
     --attach_picker_tab_active_background: %accent% !important;
     --attach_picker_tab_active_text: %accent% !important;
     --button_muted_foreground: %accent% !important;
-    --button_outline_border: %accent% !important;
-    --button_outline_foreground: %accent% !important;
-    --button_primary_background: %accent% !important;
+    --button_outline_border: %button_outline_border% !important;
+    --button_outline_foreground: %button_outline_foreground% !important;
+    --button_primary_background: %button_primary_background% !important;
     --button_secondary_foreground: %accent% !important;
     --button_tertiary_foreground: %accent% !important;
     --cell_button_foreground: %accent% !important;
@@ -40,7 +40,7 @@ body[scheme=bright_light] {
     /* backgrounds */
     --background_content: %background_content% !important;
     --background_page: %background_page% !important;
-    --content_tint_background: %background_page% !important;
+    --content_tint_background: %content_tint_background% !important;
     --loader_background: %background_page% !important;
     --header_background: %header_background% !important;
     --header_background_before_blur: %header_background% !important;
@@ -62,9 +62,9 @@ body[scheme=space_gray] {
     --attach_picker_tab_active_background: %accent% !important;
     --attach_picker_tab_active_text: %accent% !important;
     --button_muted_foreground: %accent% !important;
-    --button_outline_border: %accent% !important;
-    --button_outline_foreground: %accent% !important;
-    --button_primary_background: %accent% !important;
+    --button_outline_border: %button_outline_border% !important;
+    --button_outline_foreground: %button_outline_foreground% !important;
+    --button_primary_background: %button_primary_background% !important;
     --button_secondary_foreground: %accent% !important;
     --button_tertiary_foreground: %accent% !important;
     --cell_button_foreground: %accent% !important;
@@ -90,7 +90,7 @@ body[scheme=space_gray] {
     --dynamic_blue: %accent% !important;
     --background_content: %background_content% !important;
     --background_page: %background_page% !important;
-    --content_tint_background: %background_page% !important;
+    --content_tint_background: %content_tint_background% !important;
     --loader_background: %background_page% !important;
     --header_background: %header_background% !important;
     --header_background_before_blur: %header_background% !important;

@@ -348,6 +348,10 @@ public class Preferences {
         return isPrometheus(AccountManagerUtils.getUserId());
     }
 
+    public static boolean isLikesOnRightEnabled() {
+        return getBoolValue("is_likes_on_right", false);
+    }
+
     public static long getSizeForDelete() {
         switch (getPrefsValue("clearcache")) {
             case "100mb":
