@@ -46,22 +46,7 @@
 .method static constructor <clinit>()V
     .locals 7
 
-    const-string v0, "post"
-
-    const-string v1, "photo"
-
-    const-string v2, "photo_tag"
-
-    const-string v3, "friends_recomm"
-
-    const-string v4, "app_widget"
-
-    const-string v5, "promo_button"
-
-    const-string v6, "authors_rec"
-
-    .line 1
-    filled-new-array/range {v0 .. v6}, [Ljava/lang/String;
+    invoke-static {}, Lru/vtosters/lite/hooks/NewsfeedHook;->feedParams()[Ljava/lang/String;
 
     move-result-object v0
 
