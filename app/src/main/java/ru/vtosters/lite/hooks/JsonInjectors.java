@@ -527,7 +527,7 @@ public class JsonInjectors {
 
                 Log.d("VKMusic", "title: " + title + " id: " + id + " url: " + url + " value: " + value);
 
-                if (url.contains(value)) {
+                if (url.contains(value) && !value.isEmpty()) {
                     catalog.put("default_section", id);
                     if (dev()) Log.d("VKMusic", "Added " + title + " as default music section");
                 }
