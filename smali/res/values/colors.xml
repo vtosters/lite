@@ -50,6 +50,7 @@
     <color name="black_alpha60">@color/vk_black_alpha60</color>
     <color name="black_alpha75">@color/vk_black_alpha75</color>
     <color name="black_alpha8">@color/vk_black_alpha8</color>
+    <color name="black_alpha90">#e5000000</color>
     <color name="black_blue10">@color/vk_black_blue10</color>
     <color name="black_blue24">@color/vk_black_blue24</color>
     <color name="black_blue24_alpha24">@color/vk_black_blue24_alpha24</color>
@@ -130,6 +131,7 @@
     <color name="cast_seekbar_tooltip_background_color">#e6616161</color>
     <color name="cast_seekbar_unseekable_progress_color">#4dffffff</color>
     <color name="charcoal">@color/vk_charcoal</color>
+    <color name="circle_background">#fff2f2f2</color>
     <color name="clear">@color/vk_clear</color>
     <color name="clip_action_button_background_color">@color/vk_azure_A400</color>
     <color name="clip_action_button_text_color">@color/vk_white</color>
@@ -608,7 +610,7 @@
     <color name="music_selectable_bg_pressed">#39999999</color>
     <color name="music_selectable_bg_selected">#39999999</color>
     <color name="music_subscription_link">#ff4d88d0</color>
-    <color name="music_tab_bg_normal">@color/vk_blue_400blue</color>
+    <color name="music_tab_bg_normal">@color/vk_blue_400</color>
     <color name="music_tab_bg_pressed">#ff71a1d8</color>
     <color name="music_tab_text_normal">#b3ffffff</color>
     <color name="music_tab_text_selected">#ffffffff</color>
