@@ -1,6 +1,8 @@
 package ru.vtosters.lite.ui.fragments;
 
 import static ru.vtosters.lite.utils.AndroidUtils.getIdentifier;
+import static ru.vtosters.lite.utils.Preferences.copyright_post;
+import static ru.vtosters.lite.utils.Preferences.offline;
 
 import android.content.Context;
 import android.content.Intent;
@@ -22,6 +24,13 @@ public class FeedFragment extends MaterialPreferenceToolbarFragment {
 
     private void prefs() {
         findPreference("officialnewssett").setOnPreferenceClickListener(new openofficialsett());
+        findPreference("cringecopyright").setEnabled(!copyright_post());
+    }
+
+    @Override
+    public boolean onPreferenceTreeClick(Preference preference) {
+        findPreference("cringecopyright").setEnabled(!copyright_post());
+        return super.onPreferenceTreeClick(preference);
     }
 
     public class openofficialsett implements Preference.OnPreferenceClickListener {

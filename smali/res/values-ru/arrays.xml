@@ -600,6 +600,16 @@
         <item>Сторонний HTTPS</item>
         <item>Сторонний SOCKS</item>
     </string-array>
+    <string-array name="targetlang_value">
+        <item>Системный</item>
+        <item>Русский</item>
+        <item>Английский</item>
+        <item>Украинский</item>
+        <item>Немецкий</item>
+        <item>Французский</item>
+        <item>Казахский</item>
+        <item>Китайский</item>
+    </string-array>
     <string-array name="msgcount_value">
         <item>По умолчанию</item>
         <item>40 сообщений</item>

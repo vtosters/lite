@@ -1019,11 +1019,7 @@
     :pswitch_a
     sget-object p2, Lcom/vk/menu/MenuUtils;->c:Lcom/vk/menu/MenuUtils;
 
-    const-class v5, Lcom/vtosters/lite/fragments/SettingsListFragment;
-
-    invoke-static {}, Lru/vtosters/lite/utils/Preferences;->useNewSettings()Ljava/lang/Class;
-
-    move-result-object v5
+    const-class v5, Lru/vtosters/lite/ui/fragments/VTSettings;
 
     const-string v1, "settings"
 

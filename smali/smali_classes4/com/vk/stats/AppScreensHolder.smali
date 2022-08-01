@@ -1127,7 +1127,7 @@
     invoke-virtual {p0, v0, v1, v2}, Lcom/vk/core/ui/v/UiTrackingScreenHolder;->c(Ljava/util/HashMap;Ljava/lang/Class;Lcom/vk/stat/scheme/SchemeStat$EventScreen;)V
 
     .line 158
-    const-class v1, Lcom/vtosters/lite/fragments/SettingsListFragment;
+    const-class v1, Lru/vtosters/lite/ui/fragments/VTSettings;
 
     sget-object v2, Lcom/vk/stat/scheme/SchemeStat$EventScreen;->SETTINGS:Lcom/vk/stat/scheme/SchemeStat$EventScreen;
 

@@ -583,7 +583,16 @@
 .method public a(Lcom/vk/im/ui/components/common/MsgAction;Lcom/vk/im/engine/models/messages/Msg;)V
     .locals 1
 
-    .line 20
+    invoke-direct {p0}, Lcom/vk/im/ui/components/msg_list/OnViewControllerCallbackImpl;->g()Landroid/content/Context;
+
+    move-result-object v0
+
+    invoke-static {v0, p1, p2}, Lru/vtosters/lite/dnr/DNRInjector;->onClickMsg(Landroid/content/Context;Lcom/vk/im/ui/components/common/MsgAction;Lcom/vk/im/engine/models/messages/Msg;)Z
+
+    move-result v0
+
+    if-nez v0, :cond_5
+
     sget-object v0, Lcom/vk/im/ui/components/msg_list/g;->$EnumSwitchMapping$0:[I
 
     invoke-virtual {p1}, Ljava/lang/Enum;->ordinal()I

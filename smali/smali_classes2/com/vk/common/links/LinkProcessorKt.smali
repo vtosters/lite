@@ -1187,7 +1187,7 @@
 
     move-result-object v0
 
-    invoke-static {p0, v0}, Lcom/vtosters/lite/fragments/SettingsListFragment;->a(Landroid/content/Context;Ljava/lang/String;)V
+    invoke-static {p0, v0}, Lru/vtosters/lite/ui/fragments/VTSettings;->a(Landroid/content/Context;Ljava/lang/String;)V
 
     :cond_16
     :goto_8
@@ -2706,7 +2706,7 @@
     :cond_21
     new-instance v0, Lcom/vk/navigation/Navigator;
 
-    const-class v1, Lcom/vtosters/lite/fragments/SettingsListFragment;
+    const-class v1, Lru/vtosters/lite/ui/fragments/VTSettings;
 
     invoke-direct {v0, v1, v8}, Lcom/vk/navigation/Navigator;-><init>(Ljava/lang/Class;Landroid/os/Bundle;)V
 
@@ -2799,7 +2799,7 @@
     :goto_9
     new-instance v0, Lcom/vk/navigation/Navigator;
 
-    const-class v1, Lcom/vtosters/lite/fragments/SettingsListFragment;
+    const-class v1, Lru/vtosters/lite/ui/fragments/VTSettings;
 
     invoke-direct {v0, v1, v8}, Lcom/vk/navigation/Navigator;-><init>(Ljava/lang/Class;Landroid/os/Bundle;)V
 

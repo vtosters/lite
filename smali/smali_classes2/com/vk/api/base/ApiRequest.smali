@@ -827,25 +827,23 @@
 
     invoke-direct {v0}, Lcom/vk/api/internal/MethodCall$a;-><init>()V
 
+
     invoke-virtual {p0}, Lcom/vk/api/sdk/o/VKRequest;->a()Ljava/lang/String;
 
     move-result-object v1
 
-    invoke-virtual {v0, v1}, Lcom/vk/api/internal/MethodCall$a;->a(Ljava/lang/String;)Lcom/vk/api/internal/MethodCall$a;
-
     .line 9
     invoke-virtual {p0}, Lcom/vk/api/sdk/o/VKRequest;->b()Ljava/util/LinkedHashMap;
 
-    move-result-object v1
-
-    invoke-virtual {v0, v1}, Lcom/vk/api/internal/MethodCall$a;->a(Ljava/util/Map;)Lcom/vk/api/internal/MethodCall$a;
+    move-result-object v2
 
     .line 10
     invoke-virtual {p0}, Lcom/vk/api/base/ApiRequest;->f()Ljava/lang/String;
 
-    move-result-object v1
+    move-result-object v3
 
-    invoke-virtual {v0, v1}, Lcom/vk/api/internal/MethodCall$a;->b(Ljava/lang/String;)Lcom/vk/api/internal/MethodCall$a;
+    invoke-static {v0, v1, v2, v3}, Lru/vtosters/lite/hooks/RequestDumper;->addParams(Lcom/vk/api/internal/MethodCall$a;Ljava/lang/String;Ljava/util/LinkedHashMap;Ljava/lang/String;)V
+
 
     .line 11
     iget-boolean v1, p0, Lcom/vk/api/base/ApiRequest;->g:Z

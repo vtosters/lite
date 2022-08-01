@@ -1492,7 +1492,6 @@
 .method public d(Ljava/lang/String;)V
     .locals 0
 
-    .line 1
     iput-object p1, p0, Lcom/vk/im/engine/models/messages/MsgFromUser;->P:Ljava/lang/String;
 
     return-void

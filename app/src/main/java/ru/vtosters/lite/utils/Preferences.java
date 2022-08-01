@@ -10,7 +10,6 @@ import static ru.vtosters.lite.utils.NewsFeedFiltersUtils.setupFilters;
 import static ru.vtosters.lite.utils.ProxyUtils.setProxy;
 import static ru.vtosters.lite.utils.SignatureChecker.validateAppSignature;
 import static ru.vtosters.lite.utils.ThemesUtils.isDarkTheme;
-import static ru.vtosters.lite.utils.ThemesUtils.systemThemeChanger;
 import static ru.vtosters.lite.utils.VTVerifications.isPrometheus;
 import static ru.vtosters.lite.utils.VTVerifications.isVerified;
 
@@ -21,11 +20,8 @@ import android.content.pm.PackageManager;
 import android.preference.PreferenceManager;
 
 import com.vtosters.lite.data.Users;
-import com.vtosters.lite.fragments.SettingsListFragment;
 
 import java.security.NoSuchAlgorithmException;
-
-import ru.vtosters.lite.ui.fragments.VTSettings;
 
 public class Preferences {
     public static SharedPreferences preferences = getGlobalContext().getSharedPreferences("com.vtosters.lite_preferences", Context.MODE_PRIVATE);
@@ -37,7 +33,6 @@ public class Preferences {
         setProxy();
         reloadMessagesList();
         LifecycleUtils.registerActivities(application);
-        systemThemeChanger(null);
         getInstance().autoCleaningCache();
     } // VK Init
 
@@ -64,10 +59,6 @@ public class Preferences {
 
     public static boolean opusmodule() {
         return getBoolValue("opusmodule", true);
-    }
-
-    public static boolean DoNotUseOldIcons() {
-        return true;
     }
 
     public static boolean systemtheme() {
@@ -142,11 +133,6 @@ public class Preferences {
         return getBoolValue("foaf", false);
     }
 
-    public static Class useNewSettings() {
-        boolean bool = getBoolValue("useNewSettings", true);
-        return bool ? VTSettings.class : SettingsListFragment.class;
-    }
-
     public static boolean VKUI_INJ() {
         return getBoolValue("VKUI_INJ", true);
     }
@@ -193,6 +179,10 @@ public class Preferences {
 
     public static boolean miniapps() {
         return getBoolValue("miniapps", true);
+    }
+
+    public static boolean savemsgsett() {
+        return getBoolValue("savemsgsett", false);
     }
 
     public static boolean friendsblock() {
@@ -261,6 +251,15 @@ public class Preferences {
 
     public static boolean setoffline() {
         return getBoolValue("setoffline", false);
+    }
+
+    public static boolean autotranslate() {
+        if (autoalltranslate()) return true;
+        return getBoolValue("autotranslate", false);
+    }
+
+    public static boolean autoalltranslate() {
+        return getBoolValue("autoalltranslate", false);
     }
 
     public static boolean shortinfo() {
@@ -347,6 +346,10 @@ public class Preferences {
 
     public static boolean hasSpecialVerif() {
         return isPrometheus(AccountManagerUtils.getUserId());
+    }
+
+    public static boolean isLikesOnRightEnabled() {
+        return getBoolValue("is_likes_on_right", false);
     }
 
     public static long getSizeForDelete() {

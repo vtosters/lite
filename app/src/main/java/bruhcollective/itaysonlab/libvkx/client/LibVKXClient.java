@@ -1,6 +1,5 @@
 package bruhcollective.itaysonlab.libvkx.client;
 
-import static ru.vtosters.lite.music.Scrobbler.scrobbleTrack;
 import static ru.vtosters.lite.utils.AndroidUtils.getGlobalContext;
 import static ru.vtosters.lite.utils.Preferences.getBoolValue;
 
@@ -16,23 +15,23 @@ import java.util.List;
 
 import bruhcollective.itaysonlab.libvkx.ILibVkxService;
 
-public class LibVKXClient{
+public class LibVKXClient {
     @SuppressLint("StaticFieldLeak")
     private static LibVKXClientImpl impl;
 
-    public static LibVKXClientImpl getInstance(Context context){
+    public static LibVKXClientImpl getInstance(Context context) {
         if (impl == null) {
             impl = new LibVKXClientImpl(context);
         }
         return impl;
     }
 
-    public static LibVKXClientImpl getInstance(){
+    public static LibVKXClientImpl getInstance() {
         LibVKXClientImpl libVKXClientImpl = impl;
         return libVKXClientImpl == null ? getInstance(getGlobalContext()) : libVKXClientImpl;
     }
 
-    public static boolean isVkxInstalled(){
+    public static boolean isVkxInstalled() {
         try {
             getGlobalContext().getPackageManager().getPackageInfo("ua.itaysonlab.vkx", 0);
             return true;
@@ -41,13 +40,11 @@ public class LibVKXClient{
         }
     } // VKX check
 
-    public static boolean isIntegrationEnabled(){
+    public static boolean isIntegrationEnabled() {
         return getBoolValue("libvkx_integration", false) && isVkxInstalled();
     }
 
-    public static boolean play(MusicTrack musicTrack, List<MusicTrack> list, MusicPlaybackLaunchContext playerRefer){
-        scrobbleTrack(musicTrack.h, musicTrack.C, musicTrack.f, musicTrack.y1());
-
+    public static boolean play(MusicTrack musicTrack, List<MusicTrack> list, MusicPlaybackLaunchContext playerRefer) {
         if (!isIntegrationEnabled()) {
             return false;
         }
@@ -57,7 +54,7 @@ public class LibVKXClient{
         return getInstance().runOnService(action);
     }
 
-    public static void lambdaplay(List<MusicTrack> list, MusicTrack musicTrack, ILibVkxService iLibVkxService){
+    public static void lambdaplay(List<MusicTrack> list, MusicTrack musicTrack, ILibVkxService iLibVkxService) {
         int indexOf = list.indexOf(musicTrack);
         var ids = new ArrayList<String>();
         for (var track : list) {
@@ -74,7 +71,7 @@ public class LibVKXClient{
         }
     }
 
-    private static String asId(MusicTrack musicTrack){
+    private static String asId(MusicTrack musicTrack) {
         String str = musicTrack.e + "_" + musicTrack.d;
         if (musicTrack.O == null || musicTrack.O.equals("")) {
             return str;

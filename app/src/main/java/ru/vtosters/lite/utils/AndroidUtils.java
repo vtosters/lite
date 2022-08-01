@@ -118,7 +118,7 @@ public class AndroidUtils {
         Toast.makeText(getGlobalContext(), text, Toast.LENGTH_SHORT).show();
     }
 
-    public static String MD5(String s){
+    public static String MD5(String s) {
         try {
             var messageDigest = MessageDigest.getInstance("MD5");
             var sb = new StringBuilder();
@@ -126,7 +126,7 @@ public class AndroidUtils {
             byte[] digest = messageDigest.digest();
             for (byte b : digest) {
                 String hexString = Integer.toHexString(b & 255);
-                while(hexString.length() < 2) {
+                while (hexString.length() < 2) {
                     hexString = "0" + hexString;
                 }
                 sb.append(hexString);

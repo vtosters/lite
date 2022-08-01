@@ -107,6 +107,11 @@
     <PreferenceCategory android:title="@string/privacy_vtl">
         <com.vtosters.lite.ui.MaterialSwitchPreference
             android:defaultValue="false"
+            android:key="savemsgsett"
+            android:summary="Сохранять положение тумблеров в настройках сообщений"
+            android:title="Сохранять настройки сообщений" />
+        <com.vtosters.lite.ui.MaterialSwitchPreference
+            android:defaultValue="false"
             android:key="screenshotdetect"
             android:summary="Отключить уведомление о том, что вы сделали скриншот"
             android:title="Отключить детект скриншотов" />
@@ -115,5 +120,10 @@
             android:key="awayphp"
             android:summary="@string/vtlawayphpsummary"
             android:title="@string/vtlawayphp" />
+        <com.vtosters.lite.ui.MaterialSwitchPreference
+            android:defaultValue="true"
+            android:key="hideDeviceInfo"
+            android:summary="Отключить отправку информации об устройстве пользователя и вашем местоположении"
+            android:title="Отключить отправку метрики" />
     </PreferenceCategory>
 </PreferenceScreen>

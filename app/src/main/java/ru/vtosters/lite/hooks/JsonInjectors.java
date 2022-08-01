@@ -463,8 +463,7 @@ public class JsonInjectors {
             oldItems = catalog.optJSONArray("sections");
         }
 
-
-        if (oldItems != null) {
+        if (oldItems != null && oldItems.optJSONObject(0).optString("url").contains("general")) {
             if (podcastcatalog()) {
                 var podcasts = fetchCatalogPodcast();
                 if (podcasts != null) {

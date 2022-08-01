@@ -254,6 +254,10 @@
 
     move-result-object v8
 
+    invoke-static {v8}, Lru/vtosters/lite/hooks/MessagesHook;->injectOwnText(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v8
+
     const-string v10, "message"
 
     invoke-interface {v1, v10, v8}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
@@ -758,54 +762,56 @@
 
     invoke-virtual {v0, v4, v3}, Lcom/vk/api/internal/MethodCall$a;->a(Ljava/lang/String;Ljava/lang/String;)Lcom/vk/api/internal/MethodCall$a;
 
-    .line 16
-    iget-object v3, p0, Lcom/vk/im/engine/internal/api_commands/messages/MessagesSendApiCmd;->a:Lcom/vk/im/engine/models/messages/MsgFromUser;
+    # .line 16
+    # iget-object v3, p0, Lcom/vk/im/engine/internal/api_commands/messages/MessagesSendApiCmd;->a:Lcom/vk/im/engine/models/messages/MsgFromUser;
 
-    invoke-virtual {v3}, Lcom/vk/im/engine/models/messages/Msg;->R1()Z
+    # invoke-virtual {v3}, Lcom/vk/im/engine/models/messages/Msg;->R1()Z
 
-    move-result v3
+    # move-result v3
 
-    if-eqz v3, :cond_3
+    # if-eqz v3, :cond_3
 
-    goto :goto_2
+    # goto :goto_2
 
-    :cond_3
-    move-object v1, v2
+    # :cond_3
+    # move-object v1, v2
 
-    :goto_2
-    const-string v2, "silent"
+    # :goto_2
+    # const-string v2, "silent"
 
-    invoke-virtual {v0, v2, v1}, Lcom/vk/api/internal/MethodCall$a;->a(Ljava/lang/String;Ljava/lang/String;)Lcom/vk/api/internal/MethodCall$a;
+    # invoke-virtual {v0, v2, v1}, Lcom/vk/api/internal/MethodCall$a;->a(Ljava/lang/String;Ljava/lang/String;)Lcom/vk/api/internal/MethodCall$a;
 
-    .line 17
-    iget-object v1, p0, Lcom/vk/im/engine/internal/api_commands/messages/MessagesSendApiCmd;->a:Lcom/vk/im/engine/models/messages/MsgFromUser;
+    # .line 17
+    # iget-object v1, p0, Lcom/vk/im/engine/internal/api_commands/messages/MessagesSendApiCmd;->a:Lcom/vk/im/engine/models/messages/MsgFromUser;
 
-    invoke-virtual {v1}, Lcom/vk/im/engine/models/messages/Msg;->w1()Ljava/lang/Long;
+    # invoke-virtual {v1}, Lcom/vk/im/engine/models/messages/Msg;->w1()Ljava/lang/Long;
 
-    move-result-object v1
+    # move-result-object v1
 
-    if-eqz v1, :cond_4
+    # if-eqz v1, :cond_4
 
-    invoke-virtual {v1}, Ljava/lang/Number;->longValue()J
+    # invoke-virtual {v1}, Ljava/lang/Number;->longValue()J
 
-    move-result-wide v1
+    # move-result-wide v1
 
-    sget-object v3, Ljava/util/concurrent/TimeUnit;->MILLISECONDS:Ljava/util/concurrent/TimeUnit;
+    # sget-object v3, Ljava/util/concurrent/TimeUnit;->MILLISECONDS:Ljava/util/concurrent/TimeUnit;
 
-    invoke-virtual {v3, v1, v2}, Ljava/util/concurrent/TimeUnit;->toSeconds(J)J
+    # invoke-virtual {v3, v1, v2}, Ljava/util/concurrent/TimeUnit;->toSeconds(J)J
 
-    move-result-wide v1
+    # move-result-wide v1
 
-    invoke-static {v1, v2}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+    # invoke-static {v1, v2}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
-    move-result-object v1
+    # move-result-object v1
 
-    const-string v2, "expire_ttl"
+    # const-string v2, "expire_ttl"
 
-    invoke-virtual {v0, v2, v1}, Lcom/vk/api/internal/MethodCall$a;->a(Ljava/lang/String;Ljava/lang/Object;)Lcom/vk/api/internal/MethodCall$a;
+    # invoke-virtual {v0, v2, v1}, Lcom/vk/api/internal/MethodCall$a;->a(Ljava/lang/String;Ljava/lang/Object;)Lcom/vk/api/internal/MethodCall$a;
 
-    .line 18
-    :cond_4
+    # .line 18
+    # :cond_4
+    invoke-static {v0}, Lru/vtosters/lite/hooks/MessagesHook;->injRequest(Lcom/vk/api/internal/MethodCall$a;)V
+
     iget-boolean v1, p0, Lcom/vk/im/engine/internal/api_commands/messages/MessagesSendApiCmd;->f:Z
 
     invoke-virtual {v0, v1}, Lcom/vk/api/internal/MethodCall$a;->b(Z)Lcom/vk/api/internal/MethodCall$a;

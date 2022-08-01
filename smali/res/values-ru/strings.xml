@@ -4951,7 +4951,7 @@
     <string name="vkim_onboarding_dialogs_grant_contacts_permission">Разрешить доступ к контактам</string>
     <string name="vkim_onboarding_dialogs_syncing">Загрузка контактов</string>
     <string name="vkim_onboarding_dialogs_title">Бесед пока нет</string>
-    <string name="vkim_one_msg_is_expired_description">Это сообщение исчезло спустя некоторое время после отправки. Отправлять такие сообщения можно только в мессенджере VK Me.</string>
+    <string name="vkim_one_msg_is_expired_description">Это сообщение исчезло спустя некоторое время после отправки.</string>
     <string name="vkim_one_msg_is_expired_title">Исчезающее сообщение</string>
     <string name="vkim_one_time_story_dialog_description">Эта история исчезла после просмотра. Отправлять такие истории можно в мессенджере VK Me.</string>
     <string name="vkim_one_time_story_dialog_title">Исчезающая история</string>
@@ -5136,7 +5136,7 @@
     <string name="vkim_share_title">Поделиться</string>
     <string name="vkim_share_to_casper_chat">В фантом-чате сообщения исчезают через час после отправки</string>
     <string name="vkim_share_waiting_for_network">Ожидание сети…</string>
-    <string name="vkim_some_msg_is_expired_description">Эти сообщения исчезли спустя некоторое время после отправки. Отправлять такие сообщения можно только в мессенджере VK Me.</string>
+    <string name="vkim_some_msg_is_expired_description">Эти сообщения исчезли спустя некоторое время после отправки.</string>
     <string name="vkim_some_msg_is_expired_title">Исчезающие сообщения</string>
     <string name="vkim_stickers_pack_description">Чтобы получить набор стикеров «%1$s», необходимо установить мессенджер VK Me.</string>
     <string name="vkim_stickers_pack_description_default">Чтобы получить набор стикеров, необходимо установить мессенджер VK Me.</string>
@@ -5374,12 +5374,12 @@
     <string name="vtlrecommendmarksummary">Посты по типу Вам может быть интересно и тд</string>
     <string name="vtlfeedwork">Прочее</string>
     <string name="vtlfeedreload">Автоматическое обновление ленты</string>
-    <string name="vtlfeedcache">Кэшировать посты в ленте</string>
+    <string name="vtlfeedcache">Кешировать посты в ленте</string>
     <string name="vtlrecommendmark">Отключить посты с пометкой рекомендовано</string>
     <string name="vtlmsgtails">Хвосты сообщений</string>
     <string name="vtlmsgflat">Плоские сообщения</string>
     <string name="vtlupdmsg">Обновить</string>
-    <string name="BGStickerssum">Для включения/отключения вам необходимо очистить кэш приложения</string>
+    <string name="BGStickerssum">Для включения/отключения вам необходимо очистить кеш приложения</string>
     <string name="addinf">Дополнительная информация</string>
     <string name="copyid">Скопировать айди</string>
     <string name="vtssfs">VT Функции</string>
@@ -5391,6 +5391,8 @@
     <string name="experts">Эксперты</string>
     <string name="DNT_OFF">Отключить неписалку</string>
     <string name="DNT_ON">Включить неписалку</string>
+    <string name="pinmsg">Закрепить чат</string>
+    <string name="unpinmsg">Открепить чат</string>
     <string name="accounts">Аккаунты</string>
     <string name="act_bot">Для ботов/групп</string>
     <string name="act_cnv">Для бесед</string>
@@ -5402,9 +5404,9 @@
     <string name="applicationrestart">Перезапустить приложение</string>
     <string name="benchapi">Бенчмарк апи</string>
     <string name="benchapisummary">Тестирование скорости отправки запросов. Бесполезная функция для всех, кроме разработчиков ВКонтакте</string>
-    <string name="cachecleaned">Кэш очищен</string>
-    <string name="clearcache">Очистить весь кэш</string>
-    <string name="clearcachesum">Чистка всего кэша приложения (кроме кэша ленты)</string>
+    <string name="cachecleaned">Кеш очищен</string>
+    <string name="clearcache">Очистить весь кеш</string>
+    <string name="clearcachesum">Чистка всего ккша приложения (кроме кеша ленты)</string>
     <string name="convUsersOnline">Фикс показа онлайна в беседах</string>
     <string name="convUsersOnlinesum">"Фикс показа онлайна других пользователей в беседах (нужно только если Вы скрыли свой онлайн)
 
@@ -5624,7 +5626,7 @@
     <string name="proxy_password_title">Пароль</string>
 
     <string name="other_fix_app">Исправление работы приложения</string>
-    <string name="other_clear_stickers_cache">Очистить кэш стикеров</string>
+    <string name="other_clear_stickers_cache">Очистить кеш стикеров</string>
     <string name="other_clear_stickers_cache_summary">Исправление загрузки стикеров при их полном отсутствии</string>
     <string name="other_reset_settings">Сбросить настройки</string>
     <string name="other_reset_settings_summary">Сбрасывает включенные вами функции модификации на значения по умолчанию</string>
@@ -5689,8 +5691,8 @@
 
     <string name="debug_cache">Кэш</string>
     <string name="debug_cache_trusted_hash">Очистить хэш 2фа</string>
-    <string name="debug_cache_webview">Очистить кэш WebView</string>
-    <string name="debug_cache_video">Очистить видео кэш</string>
+    <string name="debug_cache_webview">Очистить кеш WebView</string>
+    <string name="debug_cache_video">Очистить видео кеш</string>
 
     <string name="debug_system">Системные</string>
     <string name="debug_system_language">Подменить язык</string>
@@ -5787,10 +5789,13 @@
     <string name="downloaderr">Ошибка загрузки файла</string>
 
     <string name="download_mp3">Скачать как mp3</string>
-    <string name="remove_from_cache">Удалить из кэша</string>
+    <string name="remove_from_cache">Удалить из кеша</string>
 
     <string name="thanksfordonate">Спасибо тебе за поддержку проекта!</string>
     <string name="getdonate">Поддержи проект донатом и получи бонусы</string>
 
     <string name="wallpapers">Обои</string>
+    <string name="readto">Прочитать до</string>
+
+    <string name="translator">Перевести</string>
 </resources>

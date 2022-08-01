@@ -668,6 +668,10 @@
 
     sget-object v1, Lcom/vk/im/ui/components/viewcontrollers/popup/DelegateMsg;->g:Ljava/util/LinkedHashMap;
 
+    invoke-static {v1}, Lru/vtosters/lite/dnr/DNRInjector;->injectToHashMapMsg(Ljava/util/LinkedHashMap;)Ljava/util/LinkedHashMap;
+
+    move-result-object v1
+
     invoke-direct {v0, v1}, Ljava/util/LinkedHashMap;-><init>(Ljava/util/Map;)V
 
     invoke-static {v0, p1}, Lcom/vk/core/extensions/CollectionExt;->a(Ljava/util/Map;Ljava/util/Collection;)V

@@ -756,6 +756,26 @@
         <item>https</item>
         <item>socks</item>
     </string-array>
+    <string-array name="targetlang_value">
+        <item>System</item>
+        <item>Russian</item>
+        <item>English</item>
+        <item>Ukrainian</item>
+        <item>German</item>
+        <item>French</item>
+        <item>Kazakh</item>
+        <item>Chinese</item>
+    </string-array>
+    <string-array name="targetlang">
+        <item>system</item>
+        <item>ru</item>
+        <item>en</item>
+        <item>uk</item>
+        <item>de</item>
+        <item>fr</item>
+        <item>kk</item>
+        <item>zh</item>
+    </string-array>
     <string-array name="msgcount_value">
         <item>Default</item>
         <item>40 messages</item>
