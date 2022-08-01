@@ -36,6 +36,16 @@ public class AudioDownloader {
         }
 
         var musicPath = Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_MUSIC).getAbsolutePath();
+        var musicDir = new File(musicPath);
+        if (!musicDir.exists()) {
+            if (musicDir.mkdirs()) {
+                Log.d("AudioDownloader", "Created music dir");
+            } else {
+                Log.e("AudioDownloader", "Failed to create music dir");
+                return;
+            }
+        }
+
         var tempId = track.d;
         var downloadPath = musicPath + File.separator + tempId;
 
