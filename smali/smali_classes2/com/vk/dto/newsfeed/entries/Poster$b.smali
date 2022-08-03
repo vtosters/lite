@@ -98,6 +98,10 @@
 
     move-result-object v1
 
+    invoke-static {v1}, Lru/vtosters/lite/themes/hooks/ColorHook;->getColorString(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v1
+
     invoke-static {v1}, Landroid/graphics/Color;->parseColor(Ljava/lang/String;)I
 
     move-result v1
@@ -119,6 +123,10 @@
 
     .line 5
     invoke-virtual {v0, v1}, Lorg/json/JSONObject;->optString(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-static {v1}, Lru/vtosters/lite/themes/hooks/ColorHook;->getColorString(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v1
 

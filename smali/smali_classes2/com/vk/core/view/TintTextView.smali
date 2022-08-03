@@ -138,12 +138,20 @@
 
     move-result p2
 
+    invoke-static {p2}, Lru/vtosters/lite/themes/hooks/ColorHook;->getColorInt(I)I
+
+    move-result p2
+
     iput p2, p0, Lcom/vk/core/view/TintTextView;->b:I
 
     .line 6
     sget p2, Lb/h/z/m;->TintTextView_drawableTint:I
 
     invoke-virtual {p1, p2, p3}, Landroid/content/res/TypedArray;->getColor(II)I
+
+    move-result p2
+
+    invoke-static {p2}, Lru/vtosters/lite/themes/hooks/ColorHook;->getColorInt(I)I
 
     move-result p2
 
@@ -408,6 +416,10 @@
 
     move-result v0
 
+    invoke-static {v0}, Lru/vtosters/lite/themes/hooks/ColorHook;->getColorInt(I)I
+
+    move-result v0
+        
     .line 2
     sget-object v1, Lcom/vk/core/ui/themes/VKThemeHelper;->k:Lcom/vk/core/ui/themes/VKThemeHelper;
 
@@ -425,6 +437,10 @@
 
     .line 4
     invoke-static {p1, v0}, Lcom/vk/core/ui/themes/VKThemeHelper;->b(Landroid/util/AttributeSet;Ljava/lang/String;)I
+
+    move-result v0
+
+    invoke-static {v0}, Lru/vtosters/lite/themes/hooks/ColorHook;->getColorInt(I)I
 
     move-result v0
 

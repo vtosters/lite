@@ -101,6 +101,10 @@
 
     .line 5
     :try_start_0
+    invoke-static {p1}, Lru/vtosters/lite/themes/hooks/ColorHook;->getColorString(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object p1
+
     invoke-static {p1}, Landroid/graphics/Color;->parseColor(Ljava/lang/String;)I
 
     move-result p1

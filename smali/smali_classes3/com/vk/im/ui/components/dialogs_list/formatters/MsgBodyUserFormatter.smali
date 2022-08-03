@@ -4,9 +4,6 @@
 
 
 # static fields
-# The value of this static final field might be set in the static constructor
-.field private static final a:I = 0x28528bcc
-
 .field public static final b:Lcom/vk/im/ui/components/dialogs_list/formatters/MsgBodyUserFormatter;
 
 
@@ -20,11 +17,6 @@
     invoke-direct {v0}, Lcom/vk/im/ui/components/dialogs_list/formatters/MsgBodyUserFormatter;-><init>()V
 
     sput-object v0, Lcom/vk/im/ui/components/dialogs_list/formatters/MsgBodyUserFormatter;->b:Lcom/vk/im/ui/components/dialogs_list/formatters/MsgBodyUserFormatter;
-
-    const v0, 0x28528bcc
-
-    .line 2
-    sput v0, Lcom/vk/im/ui/components/dialogs_list/formatters/MsgBodyUserFormatter;->a:I
 
     return-void
 .end method
@@ -162,8 +154,9 @@
 .method public final a()I
     .locals 1
 
-    .line 1
-    sget v0, Lcom/vk/im/ui/components/dialogs_list/formatters/MsgBodyUserFormatter;->a:I
+    invoke-static {}, Lru/vtosters/lite/themes/hooks/ColorHook;->getAccentColor()I
+
+    move-result v0
 
     return v0
 .end method
@@ -568,7 +561,9 @@
     if-le p5, p6, :cond_4
 
     .line 31
-    sget p2, Lcom/vk/im/ui/components/dialogs_list/formatters/MsgBodyUserFormatter;->a:I
+    invoke-static {}, Lru/vtosters/lite/themes/hooks/ColorHook;->getAccentColor()I
+
+    move-result p2
 
     invoke-virtual {p3}, Ljava/lang/String;->length()I
 

@@ -95,6 +95,10 @@
 
     const-string v6, "3F8AE0"
 
+    invoke-static {v6}, Lru/vtosters/lite/themes/hooks/ColorHook;->getColorString(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v6
+
     invoke-virtual {p1, v5, v6}, Lorg/json/JSONObject;->optString(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p1
@@ -102,6 +106,10 @@
     invoke-virtual {v4, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     invoke-virtual {v4}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p1
+
+    invoke-static {p1}, Lru/vtosters/lite/themes/hooks/ColorHook;->getColorString(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p1
 

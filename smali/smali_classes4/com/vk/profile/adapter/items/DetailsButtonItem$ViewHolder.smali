@@ -34,6 +34,8 @@
     .line 2
     iget-object p1, p0, Landroidx/recyclerview/widget/RecyclerView$ViewHolder;->itemView:Landroid/view/View;
 
+    invoke-static {p1}, Lru/vtosters/lite/themes/hooks/ColorHook;->textFix(Landroid/view/View;)V
+
     const-string v0, "itemView"
 
     invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V

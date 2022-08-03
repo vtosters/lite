@@ -302,7 +302,9 @@
     .line 29
     new-instance p1, Landroid/text/style/BackgroundColorSpan;
 
-    const v2, 0x28528bcc
+    invoke-static {}, Lru/vtosters/lite/themes/hooks/ColorHook;->getAccentColor()I
+
+    move-result v2
 
     invoke-direct {p1, v2}, Landroid/text/style/BackgroundColorSpan;-><init>(I)V
 

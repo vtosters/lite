@@ -1217,6 +1217,10 @@
 
     move-result-object v0
 
+    invoke-static {v0}, Lru/vtosters/lite/themes/hooks/ColorHook;->getColorString(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
+
     invoke-static {v0}, Landroid/graphics/Color;->parseColor(Ljava/lang/String;)I
 
     move-result v0
@@ -1286,6 +1290,10 @@
     :cond_8
     :try_start_3
     invoke-direct {p0, v5}, Lcom/vk/webapp/bridges/UiFragmentAndroidBridge;->a(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v3
+
+    invoke-static {v3}, Lru/vtosters/lite/themes/hooks/ColorHook;->getColorString(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v3
 

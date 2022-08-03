@@ -177,6 +177,10 @@
 
     move-result-object v4
 
+    invoke-static {v4}, Lru/vtosters/lite/themes/hooks/ColorHook;->getColorString(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v4
+
     invoke-static {v4}, Landroid/graphics/Color;->parseColor(Ljava/lang/String;)I
 
     move-result v4

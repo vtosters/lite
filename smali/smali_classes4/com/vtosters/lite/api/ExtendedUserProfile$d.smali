@@ -116,6 +116,10 @@
 
     move-result-object p0
 
+    invoke-static {p0}, Lru/vtosters/lite/themes/hooks/ColorHook;->getColorString(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object p0
+
     invoke-static {p0}, Landroid/graphics/Color;->parseColor(Ljava/lang/String;)I
 
     move-result p0

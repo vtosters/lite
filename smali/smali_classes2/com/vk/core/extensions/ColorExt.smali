@@ -7,6 +7,10 @@
 .method public static final a(Ljava/lang/String;I)I
     .locals 0
 
+    invoke-static {p0}, Lru/vtosters/lite/themes/hooks/ColorHook;->getColorString(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object p0
+    
     .line 1
     :try_start_0
     invoke-static {p0}, Landroid/graphics/Color;->parseColor(Ljava/lang/String;)I
@@ -147,6 +151,10 @@
 
     .line 1
     invoke-static {p0}, Lcom/vk/core/extensions/ColorExt;->a(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object p0
+
+    invoke-static {p0}, Lru/vtosters/lite/themes/hooks/ColorHook;->getColorString(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p0
 
