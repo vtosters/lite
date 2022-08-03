@@ -43,7 +43,7 @@ public class NewsFeedFiltersUtils {
 
         var customFilters = getPrefsValue("spamfilters");
         if (!customFilters.isEmpty()) {
-            mFilters.addAll(Arrays.asList(customFilters.split(", ")));
+            mFilters.addAll(Arrays.asList(customFilters.toLowerCase().split(", ")));
         }
 
         var sourceNameFilter = getPrefsValue("sourcenamefilter");
@@ -53,7 +53,7 @@ public class NewsFeedFiltersUtils {
 
         var linkFilter = getPrefsValue("linkfilter");
         if (!linkFilter.isEmpty()) {
-            mFiltersLinks.addAll(Arrays.asList(linkFilter.split(", ")));
+            mFiltersLinks.addAll(Arrays.asList(linkFilter.toLowerCase().split(", ")));
         }
     }
 
