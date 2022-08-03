@@ -58,6 +58,11 @@
             android:title="Посты с возможной рекламой" />
         <EditTextPreference
             android:defaultValue=""
+            android:key="sourcenamefilter"
+            android:summary="Не чувствителен к регистру"
+            android:title="Фильтр названий групп в источнике" />
+        <EditTextPreference
+            android:defaultValue=""
             android:key="linkfilter"
             android:title="Фильтр ссылок в источнике" />
         <com.vtosters.lite.ui.MaterialSwitchPreference
