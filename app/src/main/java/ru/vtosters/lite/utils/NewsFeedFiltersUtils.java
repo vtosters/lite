@@ -27,10 +27,12 @@ import ru.vtosters.lite.hooks.JsonInjectors;
 
 public class NewsFeedFiltersUtils {
     public static List<String> mFilters;
+    public static List<String> mFiltersNames;
     public static List<String> mFiltersLinks;
 
     public static void setupFilters() {
         mFilters = new ArrayList<>();
+        mFiltersNames = new ArrayList<>();
         mFiltersLinks = new ArrayList<>();
 
         getFilter("refsfilter", "Referals.txt", mFilters);
@@ -41,12 +43,17 @@ public class NewsFeedFiltersUtils {
 
         var customFilters = getPrefsValue("spamfilters");
         if (!customFilters.isEmpty()) {
-            mFilters.addAll(Arrays.asList(customFilters.split(", ")));
+            mFilters.addAll(Arrays.asList(customFilters.toLowerCase().split(", ")));
+        }
+
+        var sourceNameFilter = getPrefsValue("sourcenamefilter");
+        if (!sourceNameFilter.isEmpty()) {
+            mFiltersNames.addAll(Arrays.asList(sourceNameFilter.toLowerCase().split(", ")));
         }
 
         var linkFilter = getPrefsValue("linkfilter");
         if (!linkFilter.isEmpty()) {
-            mFiltersLinks.addAll(Arrays.asList(linkFilter.split(", ")));
+            mFiltersLinks.addAll(Arrays.asList(linkFilter.toLowerCase().split(", ")));
         }
     }
 
@@ -99,11 +106,15 @@ public class NewsFeedFiltersUtils {
             if (copyright_post()) return true;
 
             var copyright = json.optJSONObject("copyright");
+            var copyrightName = copyright.getString("name").toLowerCase();
             var copyrightLink = copyright.getString("link").toLowerCase();
+            
+            for (String filter : mFiltersNames) {
+                if (copyrightName.contains(filter)) return true;
+            }
+
             for (String filter : mFiltersLinks) {
-                if (copyrightLink.contains(filter)) {
-                    return true;
-                }
+                if (copyrightLink.contains(filter)) return true;
             }
         }
         return false;
