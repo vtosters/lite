@@ -60,7 +60,7 @@
             android:defaultValue=""
             android:key="sourcenamefilter"
             android:summary="Не чувствителен к регистру"
-            android:title="Фильтр названий групп в источнике" />
+            android:title="Фильтр по названию источника" />
         <EditTextPreference
             android:defaultValue=""
             android:key="linkfilter"
