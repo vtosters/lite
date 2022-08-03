@@ -31,6 +31,14 @@
             android:defaultValue=""
             android:key="spamfilters"
             android:title="@string/vtlownfilter" />
+        <EditTextPreference
+            android:defaultValue=""
+            android:key="sourcenamefilter"
+            android:title="Фильтр по названию источника" />
+        <EditTextPreference
+            android:defaultValue=""
+            android:key="linkfilter"
+            android:title="Фильтр ссылок в источнике" />
         <com.vtosters.lite.ui.MaterialSwitchPreference
             android:defaultValue="false"
             android:key="default_ad_list"
@@ -56,10 +64,6 @@
             android:key="cringecopyright"
             android:summary="Блокировать посты с источником где есть ссылка на вк/телеграм (группу, страницу или посты) или на другие возможные ресурсы"
             android:title="Посты с возможной рекламой" />
-        <EditTextPreference
-            android:defaultValue=""
-            android:key="linkfilter"
-            android:title="Фильтр ссылок в источнике" />
         <com.vtosters.lite.ui.MaterialSwitchPreference
             android:defaultValue="false"
             android:key="cringerepost"
