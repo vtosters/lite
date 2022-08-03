@@ -5346,7 +5346,7 @@
     <string name="vtlhtmf">Как делать фильтры?</string>
     <string name="vtlhtmfsummary">"Формат фильтра: слова или предложения, разделенные запятой с пробелом
 Пример: #реклама, Выиграйте сегодня, НОВИНКА!
-Фильтры чувствительны к регистру!"</string>
+Фильтры не чувствительны к регистру!"</string>
     <string name="vtlownfilter">Собственный фильтр</string>
     <string name="vtlsfilter">Стандартный фильтр рекламы</string>
     <string name="vtlsfiltersummary">Фильтр для блокировки постов с пометкой #реклама и тд</string>
