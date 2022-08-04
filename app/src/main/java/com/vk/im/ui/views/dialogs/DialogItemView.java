@@ -2,6 +2,8 @@ package com.vk.im.ui.views.dialogs;
 
 import static com.vk.im.ui.d.vkim_administration_title;
 
+import static ru.vtosters.lite.utils.ThemesUtils.getAccentColor;
+
 import android.content.Context;
 import android.content.res.Resources;
 import android.content.res.TypedArray;
@@ -110,8 +112,8 @@ public class DialogItemView extends ViewGroup{
         this.G = new TypingDrawable(ContextExtKt.h(context6, c.link_alternate));
         Context context7 = getContext();
         this.H = new RecordingDrawable(ContextExtKt.h(context7, c.link_alternate));
-        Typeface create = Typeface.create(getResources().getString(m.fontRobotoRegular), 0);
-        Typeface create2 = Typeface.create(getResources().getString(m.fontRobotoMedium), 0);
+        Typeface create = Typeface.create(getResources().getString(m.fontRobotoRegular), Typeface.NORMAL);
+        Typeface create2 = Typeface.create(getResources().getString(m.fontRobotoMedium), Typeface.NORMAL);
         int i2 = this.E ? GONE : VISIBLE;
         TypedArray obtainStyledAttributes = context.obtainStyledAttributes(attributeSet, o.DialogItemView);
         String string2 = obtainStyledAttributes.getString(o.DialogItemView_vkim_title_font);
@@ -119,7 +121,7 @@ public class DialogItemView extends ViewGroup{
         int dimensionPixelSize2 = obtainStyledAttributes.getDimensionPixelSize(o.DialogItemView_vkim_body_text_size, Screen.c(15));
         int dimensionPixelSize3 = obtainStyledAttributes.getDimensionPixelSize(o.DialogItemView_vkim_time_text_size, Screen.c(13));
         int color = obtainStyledAttributes.getColor(o.DialogItemView_vkim_time_text_color, -16777216);
-        int color2 = obtainStyledAttributes.getColor(o.DialogItemView_vkim_avatar_story_border_color, VKThemeHelper.d(c.accent));
+        int color2 = obtainStyledAttributes.getColor(o.DialogItemView_vkim_avatar_story_border_color, getAccentColor());
         int dimensionPixelSize4 = obtainStyledAttributes.getDimensionPixelSize(o.DialogItemView_vkim_avatar_story_border_width, Screen.a(2));
         int dimensionPixelSize5 = obtainStyledAttributes.getDimensionPixelSize(o.DialogItemView_vkim_avatar_story_size, Screen.a(68));
         boolean z = obtainStyledAttributes.getBoolean(o.DialogItemView_vkim_avatar_combine, false);

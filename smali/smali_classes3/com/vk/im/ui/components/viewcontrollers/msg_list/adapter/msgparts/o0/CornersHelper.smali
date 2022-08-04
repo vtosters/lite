@@ -37,7 +37,7 @@
 
     move-object v0, v7
 
-    invoke-direct/range {v0 .. v6}, Lcom/vk/im/ui/views/Corners;-><init>(IIIIILkotlin/jvm/internal/DefaultConstructorMarker;)V
+    invoke-direct/range {v0 .. v5}, Lcom/vk/im/ui/views/Corners;-><init>(IIIII)V
 
     iput-object v7, p0, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/msgparts/o0/CornersHelper;->d:Lcom/vk/im/ui/views/Corners;
 

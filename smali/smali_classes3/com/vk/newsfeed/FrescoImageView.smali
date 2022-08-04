@@ -312,7 +312,7 @@
 
     move-object v4, v0
 
-    invoke-direct/range {v4 .. v10}, Lcom/vk/im/ui/views/Corners;-><init>(IIIIILkotlin/jvm/internal/DefaultConstructorMarker;)V
+    invoke-direct/range {v4 .. v9}, Lcom/vk/im/ui/views/Corners;-><init>(IIIII)V
 
     iput-object v0, p0, Lcom/vk/newsfeed/FrescoImageView;->P:Lcom/vk/im/ui/views/Corners;
 
