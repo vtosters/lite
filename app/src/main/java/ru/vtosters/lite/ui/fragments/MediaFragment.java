@@ -163,11 +163,6 @@ public class MediaFragment extends MaterialPreferenceToolbarFragment {
             return true;
         });
 
-        findPreference("customrounding").setOnPreferenceClickListener(preference -> {
-            RoundingSeekbarDialog.dialog(getContext());
-            return true;
-        });
-
         if (isLoggedIn()) {
             findPreference("lastfm_auth").setSummary("Вы авторизованы как " + Scrobbler.getUserName());
         } else {
