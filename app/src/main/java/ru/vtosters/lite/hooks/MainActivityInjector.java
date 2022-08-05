@@ -2,6 +2,7 @@ package ru.vtosters.lite.hooks;
 
 import static ru.vtosters.lite.ui.dialogs.ServerDialog.sendRequest;
 import static ru.vtosters.lite.utils.CacheUtils.getInstance;
+import static ru.vtosters.lite.utils.DeletedMessagesHandler.reloadMessagesList;
 import static ru.vtosters.lite.utils.Preferences.checkupdates;
 import static ru.vtosters.lite.utils.ThemesUtils.isDarkTheme;
 import static ru.vtosters.lite.utils.ThemesUtils.setNeededTheme;
@@ -24,6 +25,7 @@ public class MainActivityInjector {
         ServerDialog.activity = activity;
         sendRequest();
         if (checkupdates()) OTADialog.checkUpdates(activity);
+        reloadMessagesList();
         Start.alert(activity);
         InstallGMS.alert(activity);
         DisableBattery.alert(activity);
