@@ -40,6 +40,7 @@ import okhttp3.Request;
 import ru.vtosters.lite.downloaders.VideoDownloader;
 import ru.vtosters.lite.music.Scrobbler;
 import ru.vtosters.lite.ui.adapters.ImagineArrayAdapter;
+import ru.vtosters.lite.ui.dialogs.RoundingSeekbarDialog;
 
 public class MediaFragment extends MaterialPreferenceToolbarFragment {
     public static void download(Context ctx) {
@@ -159,6 +160,11 @@ public class MediaFragment extends MaterialPreferenceToolbarFragment {
             } else {
                 lastfmAuth(getContext());
             }
+            return true;
+        });
+
+        findPreference("customrounding").setOnPreferenceClickListener(preference -> {
+            RoundingSeekbarDialog.dialog(getContext());
             return true;
         });
 

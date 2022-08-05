@@ -1,7 +1,6 @@
 package com.vk.im.ui.views.dialogs;
 
 import static com.vk.im.ui.d.vkim_administration_title;
-
 import static ru.vtosters.lite.utils.ThemesUtils.getAccentColor;
 
 import android.content.Context;
@@ -23,7 +22,6 @@ import androidx.annotation.ColorInt;
 import androidx.appcompat.widget.AppCompatImageView;
 
 import com.vk.core.extensions.AnimationExtKt;
-import com.vk.core.ui.themes.VKThemeHelper;
 import com.vk.core.util.ContextExtKt;
 import com.vk.core.util.Screen;
 import com.vk.core.utils.VerifyInfoHelper;

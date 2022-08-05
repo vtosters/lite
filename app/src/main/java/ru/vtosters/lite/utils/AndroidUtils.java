@@ -42,7 +42,7 @@ public class AndroidUtils {
     @NonNull
     public static Context getGlobalContext() {
         try {
-            return (Context) ReflectionUtils.invokeStaticMethod("android.app.AppGlobals", "getInitialApplication");
+            return ReflectionUtils.invokeStaticMethod("android.app.AppGlobals", "getInitialApplication");
         } catch (Exception e) {
             e.printStackTrace();
         }

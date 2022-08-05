@@ -74,13 +74,9 @@
 .method public static b(FFFF)Lcom/facebook/drawee/generic/RoundingParams;
     .locals 1
 
-    .line 4
-    new-instance v0, Lcom/facebook/drawee/generic/RoundingParams;
+    invoke-static {p0, p1, p2, p3}, Lru/vtosters/lite/hooks/PicRoundingHook;->inject(FFFF)Lcom/facebook/drawee/generic/RoundingParams;
 
-    invoke-direct {v0}, Lcom/facebook/drawee/generic/RoundingParams;-><init>()V
-
-    .line 5
-    invoke-virtual {v0, p0, p1, p2, p3}, Lcom/facebook/drawee/generic/RoundingParams;->a(FFFF)Lcom/facebook/drawee/generic/RoundingParams;
+    move-result-object v0
 
     return-object v0
 .end method
@@ -88,12 +84,9 @@
 .method public static d(F)Lcom/facebook/drawee/generic/RoundingParams;
     .locals 1
 
-    .line 2
-    new-instance v0, Lcom/facebook/drawee/generic/RoundingParams;
+    invoke-static {p0}, Lru/vtosters/lite/hooks/PicRoundingHook;->inject(F)Lcom/facebook/drawee/generic/RoundingParams;
 
-    invoke-direct {v0}, Lcom/facebook/drawee/generic/RoundingParams;-><init>()V
-
-    invoke-virtual {v0, p0}, Lcom/facebook/drawee/generic/RoundingParams;->b(F)Lcom/facebook/drawee/generic/RoundingParams;
+    move-result-object v0
 
     return-object v0
 .end method
@@ -101,14 +94,9 @@
 .method public static i()Lcom/facebook/drawee/generic/RoundingParams;
     .locals 2
 
-    .line 1
-    new-instance v0, Lcom/facebook/drawee/generic/RoundingParams;
+    invoke-static {}, Lru/vtosters/lite/hooks/PicRoundingHook;->inject()Lcom/facebook/drawee/generic/RoundingParams;
 
-    invoke-direct {v0}, Lcom/facebook/drawee/generic/RoundingParams;-><init>()V
-
-    const/4 v1, 0x1
-
-    invoke-virtual {v0, v1}, Lcom/facebook/drawee/generic/RoundingParams;->a(Z)Lcom/facebook/drawee/generic/RoundingParams;
+    move-result-object v0
 
     return-object v0
 .end method
