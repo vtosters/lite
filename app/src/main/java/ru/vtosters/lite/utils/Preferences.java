@@ -3,6 +3,7 @@ package ru.vtosters.lite.utils;
 import static java.lang.Long.MAX_VALUE;
 import static ru.vtosters.lite.utils.AndroidUtils.edit;
 import static ru.vtosters.lite.utils.AndroidUtils.getGlobalContext;
+import static ru.vtosters.lite.utils.AndroidUtils.getPreferences;
 import static ru.vtosters.lite.utils.AndroidUtils.getPrefsValue;
 import static ru.vtosters.lite.utils.CacheUtils.getInstance;
 import static ru.vtosters.lite.utils.DeletedMessagesHandler.reloadMessagesList;
@@ -17,11 +18,13 @@ import android.app.Application;
 import android.content.Context;
 import android.content.SharedPreferences;
 import android.content.pm.PackageManager;
+import android.os.Environment;
 import android.preference.PreferenceManager;
 
 import com.vtosters.lite.data.Users;
 import com.vtosters.lite.fragments.SettingsListFragment;
 
+import java.io.File;
 import java.security.NoSuchAlgorithmException;
 
 import ru.vtosters.lite.ui.fragments.VTSettings;
@@ -382,5 +385,11 @@ public class Preferences {
             return 100;
         }
         return origquality;
+    }
+
+    public static File getDownloadsDir() {
+        return new File(getPreferences().getString(
+                "downloads_directory",
+                Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_DOWNLOADS).getAbsolutePath()));
     }
 }

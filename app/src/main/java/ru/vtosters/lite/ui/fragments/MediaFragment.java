@@ -13,8 +13,10 @@ import static ru.vtosters.lite.utils.ThemesUtils.getAlertStyle;
 import static ru.vtosters.lite.utils.ThemesUtils.getSTextAttr;
 import static ru.vtosters.lite.utils.ThemesUtils.getTextAttr;
 
+import android.app.Activity;
 import android.content.Context;
 import android.content.DialogInterface;
+import android.content.Intent;
 import android.content.res.ColorStateList;
 import android.os.Bundle;
 import android.util.Log;
@@ -40,41 +42,93 @@ import okhttp3.Request;
 import ru.vtosters.lite.downloaders.VideoDownloader;
 import ru.vtosters.lite.music.Scrobbler;
 import ru.vtosters.lite.ui.adapters.ImagineArrayAdapter;
-import ru.vtosters.lite.ui.dialogs.RoundingSeekbarDialog;
+import ru.vtosters.lite.utils.FileUriUtils;
+import ru.vtosters.lite.utils.Preferences;
 
 public class MediaFragment extends MaterialPreferenceToolbarFragment {
-    public static void download(Context ctx) {
-        AlertDialog.Builder alertDialog = new AlertDialog.Builder(ctx, getAlertStyle());
-        alertDialog.setTitle("Введите ссылку на видео");
+    private final int REQUEST_CODE_SET_DOWNLOAD_DIRECTORY = 665;
 
-        final EditText input = new EditText(ctx);
-        LinearLayout.LayoutParams lp = new LinearLayout.LayoutParams(
-                LinearLayout.LayoutParams.MATCH_PARENT,
-                LinearLayout.LayoutParams.MATCH_PARENT);
-        input.setLayoutParams(lp);
-        input.setTextColor(getTextAttr());
-        input.setBackgroundTintList(ColorStateList.valueOf(getAccentColor()));
-        alertDialog.setView(input);
-        alertDialog.setPositiveButton("Скачать", (dialog, which) -> VideoDownloader.parseVideoLink(input.getText().toString(), ctx));
-        var alert = alertDialog.create();
-        alert.show();
-        alert.getButton(DialogInterface.BUTTON_POSITIVE).setTextColor(getAccentColor());
+    @Override
+    public void onCreate(Bundle bundle) {
+        super.onCreate(bundle);
+        addPreferencesFromResource(getIdentifier("preferences_media", "xml"));
+        prefs();
     }
 
-    private void logout(Context ctx) {
-        VkAlertDialog.Builder alertDialog = new VkAlertDialog.Builder(ctx);
-        alertDialog.setTitle("Вы уверены?");
-        alertDialog.setMessage("Вы действительно хотите выйти из аккаунта?");
-        alertDialog.setPositiveButton("Да", (dialog, which) -> {
-            Scrobbler.logout();
+    @Override
+    public void onActivityResult(int requestCode, int resultCode, Intent data) {
+        if (requestCode == REQUEST_CODE_SET_DOWNLOAD_DIRECTORY && resultCode == Activity.RESULT_OK) {
+            var path = data.getData();
+            if (path != null) {
+                var prefs = getPreferences();
+                var editor = prefs.edit();
+                var actualPath = FileUriUtils.getFullPathFromTreeUri(path, getContext());
+                editor.putString("downloads_directory", actualPath);
+                editor.apply();
+            }
+        }
+    }
+
+    @Override
+    public void onResume() {
+        super.onResume();
+        prefs();
+    }
+
+    private void prefs() {
+        findPreference("download_video").setOnPreferenceClickListener(new MediaFragment.download());
+        findPreference("clearvideohistory").setOnPreferenceClickListener(preference -> {
+            deleteVideoHistory();
+            return true;
         });
-        alertDialog.setNeutralButton("Нет", (dialog, which) -> {
-            dialog.cancel();
+        findPreference("dateformat").setOnPreferenceChangeListener(new MediaFragment.restart());
+        findPreference("lastfm_auth").setOnPreferenceClickListener(preference -> {
+            if (isLoggedIn()) {
+                logout(getContext());
+            } else {
+                lastfmAuth(getContext());
+            }
+            return true;
         });
-        var alert = alertDialog.create();
-        alert.show();
-        alert.getButton(DialogInterface.BUTTON_POSITIVE).setTextColor(getAccentColor());
-        alert.getButton(DialogInterface.BUTTON_NEUTRAL).setTextColor(getResources().getColor(com.vtosters.lite.R.color.red));
+
+        findPreference("downloads_directory").setSummary(
+                "Текущая папка: " + Preferences.getDownloadsDir()
+        );
+        findPreference("downloads_directory").setOnPreferenceClickListener(preference -> {
+            var intent = new Intent(Intent.ACTION_OPEN_DOCUMENT_TREE);
+            intent.addCategory(Intent.CATEGORY_DEFAULT);
+            startActivityForResult(intent, REQUEST_CODE_SET_DOWNLOAD_DIRECTORY);
+            return true;
+        });
+
+        if (isLoggedIn()) {
+            findPreference("lastfm_auth").setSummary("Вы авторизованы как " + Scrobbler.getUserName());
+        } else {
+            findPreference("lastfm_enabled").setEnabled(false);
+        }
+
+        findPreference("select_photo_search_engine").setOnPreferenceClickListener(preference -> {
+            var items = Arrays.asList(
+                    new ImagineArrayAdapter.ImagineArrayAdapterItem(getIdentifier("yandex", "drawable"), "Yandex"),
+                    new ImagineArrayAdapter.ImagineArrayAdapterItem(getIdentifier("google", "drawable"), "Google"),
+                    new ImagineArrayAdapter.ImagineArrayAdapterItem(getIdentifier("microsoft", "drawable"), "Bing")
+            );
+
+            var alert = new VkAlertDialog.Builder(getActivity())
+                    .create();
+
+            var listView = (ListView) LayoutInflater.from(getContext()).inflate(com.vtosters.lite.R.layout.abc_select_dialog_material, null, false);
+            var adapter = new ImagineArrayAdapter(getContext(), items, i -> {
+                getPreferences().edit().putInt("search_engine", i).apply();
+                alert.dismiss();
+            });
+            adapter.setSelected(getPreferences().getInt("search_engine", 0));
+            listView.setAdapter(adapter);
+            alert.setView(listView);
+            alert.show();
+
+            return true;
+        });
     }
 
     private void lastfmAuth(Context ctx) {
@@ -116,6 +170,22 @@ public class MediaFragment extends MaterialPreferenceToolbarFragment {
         alert.getButton(DialogInterface.BUTTON_POSITIVE).setTextColor(getAccentColor());
     }
 
+    private void logout(Context ctx) {
+        VkAlertDialog.Builder alertDialog = new VkAlertDialog.Builder(ctx);
+        alertDialog.setTitle("Вы уверены?");
+        alertDialog.setMessage("Вы действительно хотите выйти из аккаунта?");
+        alertDialog.setPositiveButton("Да", (dialog, which) -> {
+            Scrobbler.logout();
+        });
+        alertDialog.setNeutralButton("Нет", (dialog, which) -> {
+            dialog.cancel();
+        });
+        var alert = alertDialog.create();
+        alert.show();
+        alert.getButton(DialogInterface.BUTTON_POSITIVE).setTextColor(getAccentColor());
+        alert.getButton(DialogInterface.BUTTON_NEUTRAL).setTextColor(getResources().getColor(com.vtosters.lite.R.color.red));
+    }
+
     public static void deleteVideoHistory() {
         Thread thread = new Thread(() -> {
             try {
@@ -140,57 +210,22 @@ public class MediaFragment extends MaterialPreferenceToolbarFragment {
         sendToast("История просмотра видео очищена");
     }
 
-    @Override
-    public void onCreate(Bundle bundle) {
-        super.onCreate(bundle);
-        addPreferencesFromResource(getIdentifier("preferences_media", "xml"));
-        prefs();
-    }
+    public static void download(Context ctx) {
+        AlertDialog.Builder alertDialog = new AlertDialog.Builder(ctx, getAlertStyle());
+        alertDialog.setTitle("Введите ссылку на видео");
 
-    private void prefs() {
-        findPreference("download_video").setOnPreferenceClickListener(new MediaFragment.download());
-        findPreference("clearvideohistory").setOnPreferenceClickListener(preference -> {
-            deleteVideoHistory();
-            return true;
-        });
-        findPreference("dateformat").setOnPreferenceChangeListener(new MediaFragment.restart());
-        findPreference("lastfm_auth").setOnPreferenceClickListener(preference -> {
-            if (isLoggedIn()) {
-                logout(getContext());
-            } else {
-                lastfmAuth(getContext());
-            }
-            return true;
-        });
-
-        if (isLoggedIn()) {
-            findPreference("lastfm_auth").setSummary("Вы авторизованы как " + Scrobbler.getUserName());
-        } else {
-            findPreference("lastfm_enabled").setEnabled(false);
-        }
-
-        findPreference("select_photo_search_engine").setOnPreferenceClickListener(preference -> {
-            var items = Arrays.asList(
-                    new ImagineArrayAdapter.ImagineArrayAdapterItem(getIdentifier("yandex", "drawable"), "Yandex"),
-                    new ImagineArrayAdapter.ImagineArrayAdapterItem(getIdentifier("google", "drawable"), "Google"),
-                    new ImagineArrayAdapter.ImagineArrayAdapterItem(getIdentifier("microsoft", "drawable"), "Bing")
-            );
-
-            var alert = new VkAlertDialog.Builder(getActivity())
-                    .create();
-
-            var listView = (ListView) LayoutInflater.from(getContext()).inflate(com.vtosters.lite.R.layout.abc_select_dialog_material, null, false);
-            var adapter = new ImagineArrayAdapter(getContext(), items, i -> {
-                getPreferences().edit().putInt("search_engine", i).apply();
-                alert.dismiss();
-            });
-            adapter.setSelected(getPreferences().getInt("search_engine", 0));
-            listView.setAdapter(adapter);
-            alert.setView(listView);
-            alert.show();
-
-            return true;
-        });
+        final EditText input = new EditText(ctx);
+        LinearLayout.LayoutParams lp = new LinearLayout.LayoutParams(
+                LinearLayout.LayoutParams.MATCH_PARENT,
+                LinearLayout.LayoutParams.MATCH_PARENT);
+        input.setLayoutParams(lp);
+        input.setTextColor(getTextAttr());
+        input.setBackgroundTintList(ColorStateList.valueOf(getAccentColor()));
+        alertDialog.setView(input);
+        alertDialog.setPositiveButton("Скачать", (dialog, which) -> VideoDownloader.parseVideoLink(input.getText().toString(), ctx));
+        var alert = alertDialog.create();
+        alert.show();
+        alert.getButton(DialogInterface.BUTTON_POSITIVE).setTextColor(getAccentColor());
     }
 
     private class download implements Preference.OnPreferenceClickListener {
