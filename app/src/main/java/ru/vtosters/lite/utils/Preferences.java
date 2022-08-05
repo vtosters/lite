@@ -407,7 +407,7 @@ public class Preferences {
 
     public static File getMusicDir() {
         return new File(getPreferences().getString(
-                "videos_directory",
+                "music_directory",
                 Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_MUSIC).getAbsolutePath()));
     }
 }
