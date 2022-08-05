@@ -1,10 +1,15 @@
 package ru.vtosters.lite.music;
 
+import static ru.vtosters.lite.utils.Preferences.getMusicDir;
+
 import android.app.DownloadManager;
 import android.net.Uri;
+import android.os.Build;
 import android.os.Environment;
 import android.util.Log;
 import android.widget.Toast;
+
+import androidx.annotation.RequiresApi;
 
 import com.vk.dto.music.MusicTrack;
 
@@ -53,12 +58,10 @@ public class MP3Downloader {
                         if (responseNode.has("url")) {
                             var url = responseNode.optString("url");
                             Log.d("MP3Downloader", url);
-                            if (url != null) {
-                                if (url.endsWith(".mp3")) {
-                                    downloadMP3(track.toString(), url);
-                                } else if (VKM3UParser.isM3U8(url)) {
-                                    AudioDownloader.downloadM3U8(track);
-                                }
+                            if (url.endsWith(".mp3")) {
+                                downloadMP3(track.toString(), url);
+                            } else if (VKM3UParser.isM3U8(url)) {
+                                AudioDownloader.downloadM3U8(track);
                             }
                         }
                     }
@@ -69,13 +72,14 @@ public class MP3Downloader {
         });
     }
 
+    @RequiresApi(api = Build.VERSION_CODES.M)
     private static void downloadMP3(String title, String url) {
         var downloadManager = AndroidUtils.getGlobalContext().getSystemService(DownloadManager.class);
         var request = new DownloadManager.Request(Uri.parse(url))
                 .setAllowedOverRoaming(true)
                 .setTitle("Downloading " + title)
                 .setDestinationInExternalFilesDir(AndroidUtils.getGlobalContext(),
-                        Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_DOWNLOADS).getAbsolutePath(),
+                        getMusicDir().getAbsolutePath(),
                         title + ".mp3")
                 .setVisibleInDownloadsUi(true);
         downloadManager.enqueue(request);

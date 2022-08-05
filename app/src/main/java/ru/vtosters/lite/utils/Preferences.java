@@ -392,4 +392,22 @@ public class Preferences {
                 "downloads_directory",
                 Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_DOWNLOADS).getAbsolutePath()));
     }
+
+    public static File getPhotosDir() {
+        return new File(getPreferences().getString(
+                "photos_directory",
+                Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_PICTURES).getAbsolutePath()));
+    }
+
+    public static File getVideosDir() {
+        return new File(getPreferences().getString(
+                "videos_directory",
+                Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_MOVIES).getAbsolutePath()));
+    }
+
+    public static File getMusicDir() {
+        return new File(getPreferences().getString(
+                "videos_directory",
+                Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_MUSIC).getAbsolutePath()));
+    }
 }
