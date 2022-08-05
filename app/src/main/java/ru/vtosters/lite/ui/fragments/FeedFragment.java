@@ -1,6 +1,7 @@
 package ru.vtosters.lite.ui.fragments;
 
 import static ru.vtosters.lite.utils.AndroidUtils.getIdentifier;
+import static ru.vtosters.lite.utils.AndroidUtils.getPrefsValue;
 import static ru.vtosters.lite.utils.Preferences.copyright_post;
 import static ru.vtosters.lite.utils.Preferences.offline;
 
@@ -25,6 +26,21 @@ public class FeedFragment extends MaterialPreferenceToolbarFragment {
     private void prefs() {
         findPreference("officialnewssett").setOnPreferenceClickListener(new openofficialsett());
         findPreference("cringecopyright").setEnabled(!copyright_post());
+
+        findPreference("spamfilters").setSummary(count(getPrefsValue("spamfilters")));
+        findPreference("sourcenamefilter").setSummary(count(getPrefsValue("sourcenamefilter")));
+        findPreference("linkfilter").setSummary(count(getPrefsValue("linkfilter")));
+    }
+
+    private String count(String text) {
+        // count comma separated words in string
+        var count = text.split(", ").length;
+
+        if (count < 1 || text.isEmpty()) {
+            return "Нет добавленных элементов";
+        } else {
+            return "Добавлено " + count + " элементов";
+        }
     }
 
     @Override
