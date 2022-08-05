@@ -29,6 +29,18 @@
             android:key="downloads_directory"
             android:summary="Текущая папка: "
             android:title="Папка для загрузок" />
+        <Preference
+            android:key="photos_directory"
+            android:summary="Текущая папка: "
+            android:title="Папка для фото" />
+        <Preference
+            android:key="videos_directory"
+            android:summary="Текущая папка: "
+            android:title="Папка для видео" />
+        <Preference
+            android:key="music_directory"
+            android:summary="Текущая папка: "
+            android:title="Папка для музыки" />
     </PreferenceCategory>
     <PreferenceCategory android:title="@string/sett_media">
         <com.vtosters.lite.ui.MaterialSwitchPreference

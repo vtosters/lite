@@ -94,7 +94,41 @@ public class MediaFragment extends MaterialPreferenceToolbarFragment {
         findPreference("downloads_directory").setSummary(
                 "Текущая папка: " + Preferences.getDownloadsDir()
         );
+
+        findPreference("photos_directory").setSummary(
+                "Текущая папка: " + Preferences.getPhotosDir()
+        );
+
+        findPreference("videos_directory").setSummary(
+                "Текущая папка: " + Preferences.getVideosDir()
+        );
+
+        findPreference("music_directory").setSummary(
+                "Текущая папка: " + Preferences.getMusicDir()
+        );
+
         findPreference("downloads_directory").setOnPreferenceClickListener(preference -> {
+            var intent = new Intent(Intent.ACTION_OPEN_DOCUMENT_TREE);
+            intent.addCategory(Intent.CATEGORY_DEFAULT);
+            startActivityForResult(intent, REQUEST_CODE_SET_DOWNLOAD_DIRECTORY);
+            return true;
+        });
+
+        findPreference("photos_directory").setOnPreferenceClickListener(preference -> {
+            var intent = new Intent(Intent.ACTION_OPEN_DOCUMENT_TREE);
+            intent.addCategory(Intent.CATEGORY_DEFAULT);
+            startActivityForResult(intent, REQUEST_CODE_SET_DOWNLOAD_DIRECTORY);
+            return true;
+        });
+
+        findPreference("videos_directory").setOnPreferenceClickListener(preference -> {
+            var intent = new Intent(Intent.ACTION_OPEN_DOCUMENT_TREE);
+            intent.addCategory(Intent.CATEGORY_DEFAULT);
+            startActivityForResult(intent, REQUEST_CODE_SET_DOWNLOAD_DIRECTORY);
+            return true;
+        });
+
+        findPreference("music_directory").setOnPreferenceClickListener(preference -> {
             var intent = new Intent(Intent.ACTION_OPEN_DOCUMENT_TREE);
             intent.addCategory(Intent.CATEGORY_DEFAULT);
             startActivityForResult(intent, REQUEST_CODE_SET_DOWNLOAD_DIRECTORY);
