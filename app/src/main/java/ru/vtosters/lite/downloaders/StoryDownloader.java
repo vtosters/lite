@@ -2,6 +2,7 @@ package ru.vtosters.lite.downloaders;
 
 import static ru.vtosters.lite.downloaders.VideoDownloader.downloadVideo;
 import static ru.vtosters.lite.utils.AndroidUtils.getGlobalContext;
+import static ru.vtosters.lite.utils.Preferences.getPhotosDir;
 
 import android.app.DownloadManager;
 import android.content.Context;
@@ -23,7 +24,7 @@ public class StoryDownloader {
                 DownloadManager.Request request = new DownloadManager.Request(Uri.parse(url));
                 request.setNotificationVisibility(DownloadManager.Request.VISIBILITY_VISIBLE_NOTIFY_COMPLETED);
                 request.setTitle("photo" + story.E.a);
-                request.setDestinationInExternalPublicDir(Environment.DIRECTORY_DCIM, "/Stories/photo" + story.E.a + ".jpg");
+                request.setDestinationInExternalPublicDir(getPhotosDir().getAbsolutePath(), "/Stories/photo" + story.E.a + ".jpg");
                 ((DownloadManager) getGlobalContext().getSystemService(Context.DOWNLOAD_SERVICE)).enqueue(request);
                 return;
             }
