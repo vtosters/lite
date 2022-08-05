@@ -47,6 +47,10 @@ import ru.vtosters.lite.utils.Preferences;
 
 public class MediaFragment extends MaterialPreferenceToolbarFragment {
     private final int REQUEST_CODE_SET_DOWNLOAD_DIRECTORY = 665;
+    private final int REQUEST_CODE_SET_MUSIC_DIRECTORY = 666;
+    private final int REQUEST_CODE_SET_PHOTOS_DIRECTORY = 667;
+    private final int REQUEST_CODE_SET_VIDEOS_DIRECTORY = 668;
+
 
     @Override
     public void onCreate(Bundle bundle) {
@@ -57,13 +61,30 @@ public class MediaFragment extends MaterialPreferenceToolbarFragment {
 
     @Override
     public void onActivityResult(int requestCode, int resultCode, Intent data) {
-        if (requestCode == REQUEST_CODE_SET_DOWNLOAD_DIRECTORY && resultCode == Activity.RESULT_OK) {
+        if (resultCode == Activity.RESULT_OK) {
             var path = data.getData();
             if (path != null) {
                 var prefs = getPreferences();
                 var editor = prefs.edit();
                 var actualPath = FileUriUtils.getFullPathFromTreeUri(path, getContext());
-                editor.putString("downloads_directory", actualPath);
+                Log.d("MediaFragment", "onActivityResult: " + actualPath);
+                Log.d("MediaFragment", "onActivityResult: " + requestCode);
+                switch (requestCode) {
+                    case REQUEST_CODE_SET_DOWNLOAD_DIRECTORY:
+                        editor.putString("downloads_directory", actualPath);
+                        break;
+                    case REQUEST_CODE_SET_MUSIC_DIRECTORY:
+                        editor.putString("music_directory", actualPath);
+                        break;
+                    case REQUEST_CODE_SET_PHOTOS_DIRECTORY:
+                        editor.putString("photos_directory", actualPath);
+                        break;
+                    case REQUEST_CODE_SET_VIDEOS_DIRECTORY:
+                        editor.putString("videos_directory", actualPath);
+                        break;
+                    default:
+                        return;
+                }
                 editor.apply();
             }
         }
@@ -117,21 +138,21 @@ public class MediaFragment extends MaterialPreferenceToolbarFragment {
         findPreference("photos_directory").setOnPreferenceClickListener(preference -> {
             var intent = new Intent(Intent.ACTION_OPEN_DOCUMENT_TREE);
             intent.addCategory(Intent.CATEGORY_DEFAULT);
-            startActivityForResult(intent, REQUEST_CODE_SET_DOWNLOAD_DIRECTORY);
+            startActivityForResult(intent, REQUEST_CODE_SET_PHOTOS_DIRECTORY);
             return true;
         });
 
         findPreference("videos_directory").setOnPreferenceClickListener(preference -> {
             var intent = new Intent(Intent.ACTION_OPEN_DOCUMENT_TREE);
             intent.addCategory(Intent.CATEGORY_DEFAULT);
-            startActivityForResult(intent, REQUEST_CODE_SET_DOWNLOAD_DIRECTORY);
+            startActivityForResult(intent, REQUEST_CODE_SET_VIDEOS_DIRECTORY);
             return true;
         });
 
         findPreference("music_directory").setOnPreferenceClickListener(preference -> {
             var intent = new Intent(Intent.ACTION_OPEN_DOCUMENT_TREE);
             intent.addCategory(Intent.CATEGORY_DEFAULT);
-            startActivityForResult(intent, REQUEST_CODE_SET_DOWNLOAD_DIRECTORY);
+            startActivityForResult(intent, REQUEST_CODE_SET_MUSIC_DIRECTORY);
             return true;
         });
 
