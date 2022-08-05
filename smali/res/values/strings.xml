@@ -5499,7 +5499,7 @@ with video"</string>
     <string name="vtlhtmfsummary">"Filter format: words or sentences, separated by a comma with a space
 Example: #sponsored, Free gift cards, #PROMO
 Filters are case-sensitive!"</string>
-    <string name="vtlownfilter">Custom filter</string>
+    <string name="vtlownfilter">Filter words and expressions</string>
     <string name="vtlsfilter">Standard adblock filter</string>
     <string name="vtlsfiltersummary">Blocks posts with common tags, such as #ad, #pr and so on</string>
     <string name="vtlusevkui">Use VKUI</string>
