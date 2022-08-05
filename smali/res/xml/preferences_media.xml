@@ -24,6 +24,12 @@
             android:summary="Показывать результаты в опросах без участия в них"
             android:title="Результаты опросов" />
     </PreferenceCategory>
+    <PreferenceCategory android:title="Загрузки">
+        <Preference
+            android:key="downloads_directory"
+            android:summary="Текущая папка: "
+            android:title="Папка для загрузок" />
+    </PreferenceCategory>
     <PreferenceCategory android:title="@string/sett_media">
         <com.vtosters.lite.ui.MaterialSwitchPreference
             android:defaultValue="true"

@@ -187,13 +187,17 @@
     .locals 2
 
     .line 6
-    invoke-static {}, Lb/h/g/m/FileUtils;->getVKDir()Ljava/io/File;
+#    invoke-static {}, Lb/h/g/m/FileUtils;->getVKDir()Ljava/io/File;
+#
+#    move-result-object v0
+#
+#    const-string v1, "Downloads"
+#
+#    invoke-static {v0, v1}, Lb/h/g/m/FileUtils;->a(Ljava/io/File;Ljava/lang/String;)Ljava/io/File;
+#
+#    move-result-object v0
 
-    move-result-object v0
-
-    const-string v1, "Downloads"
-
-    invoke-static {v0, v1}, Lb/h/g/m/FileUtils;->a(Ljava/io/File;Ljava/lang/String;)Ljava/io/File;
+    invoke-static {}, Lru/vtosters/lite/utils/Preferences;->getDownloadsDir()Ljava/io/File;
 
     move-result-object v0
 
