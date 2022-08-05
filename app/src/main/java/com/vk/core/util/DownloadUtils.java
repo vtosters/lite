@@ -1,5 +1,10 @@
 package com.vk.core.util;
 
+import static ru.vtosters.lite.utils.Preferences.getDownloadsDir;
+import static ru.vtosters.lite.utils.Preferences.getMusicDir;
+import static ru.vtosters.lite.utils.Preferences.getPhotosDir;
+import static ru.vtosters.lite.utils.Preferences.getVideosDir;
+
 import android.annotation.SuppressLint;
 import android.app.DownloadManager;
 import android.content.ActivityNotFoundException;
@@ -9,6 +14,7 @@ import android.database.Cursor;
 import android.database.sqlite.SQLiteException;
 import android.net.Uri;
 import android.text.TextUtils;
+import android.util.Log;
 
 import com.facebook.common.i.MediaUtils;
 import com.facebook.x.g.EncodedImage;
@@ -50,8 +56,21 @@ public class DownloadUtils {
         if (TextUtils.isEmpty(str2)) {
             return;
         }
+
+        String file = a(str, str2);
+        File b2;
         boolean c2 = MediaUtils.c(MediaUtils.b(str2));
-        final File b2 = FileUtils.b(a(str, str2));
+
+        if (str.endsWith("png") || str.endsWith("jpg") || str.endsWith("jpeg")) {
+            b2 = new File(getPhotosDir(), file);
+        } else if (str.endsWith("mp3") || str.endsWith("wav") || str.endsWith("ogg") || str.endsWith("aac") || str.endsWith("flac") || str.endsWith("m4a")) {
+            b2 = new File(getMusicDir(), file);
+        } else if (str.endsWith("mp4") || str.endsWith("mkv") || str.endsWith("avi") || str.endsWith("flv") || str.endsWith("wmv") || str.endsWith("mov") || str.endsWith("3gp")) {
+            b2 = new File(getVideosDir(), file);
+        } else {
+            b2 = new File(getDownloadsDir(), file);
+        }
+
         if (c2) {
             EncodedImage c3 = VKImageLoader.c(Uri.parse(str2));
             final InputStream h = c3 == null ? null : c3.h();
