@@ -19,9 +19,6 @@
             android:defaultValue="false"
             android:key="is_likes_on_right"
             android:title="Показ лайков в посте справа" />
-        <Preference
-            android:key="customrounding"
-            android:title="Размер закруглений картинок" />
     </PreferenceCategory>
     <PreferenceCategory android:title="@string/interfaceglobal">
         <com.vtosters.lite.ui.SummaryListPreference
@@ -38,6 +35,9 @@
             android:entryValues="@array/animations_values2"
             android:key="anim_rtrn_type"
             android:title="@string/franimation" />
+        <Preference
+            android:key="customrounding"
+            android:title="Размер закруглений картинок" />
     </PreferenceCategory>
     <PreferenceCategory android:title="@string/interfacevideo">
         <com.vtosters.lite.ui.MaterialSwitchPreference
