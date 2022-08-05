@@ -89,6 +89,9 @@
         <Preference
             android:key="select_photo_search_engine"
             android:title="Выбор движка для поиска фото" />
+        <Preference
+            android:key="customrounding"
+            android:title="Размер закруглений картинок" />
     </PreferenceCategory>
     <PreferenceCategory android:title="@string/vkx_title">
         <Preference
