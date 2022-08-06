@@ -17,7 +17,7 @@ public class RoundingSeekbarDialog{
     public static void dialog(Context context) {
         LinearLayout mContainer = new LinearLayout(context);
         SeekBar seek = new SeekBar(context);
-        seek.setMax(15);
+        seek.setMax(10);
         seek.setKeyProgressIncrement(0);
         seek.setProgress(getPreferences().getInt("pic_rounding", 0));
         seek.setPadding(dp2px(16f), dp2px(16f), dp2px(16f), dp2px(16f));
