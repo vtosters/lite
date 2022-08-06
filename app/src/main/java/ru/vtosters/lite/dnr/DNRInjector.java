@@ -55,8 +55,8 @@ public class DNRInjector {
         hashMap.put(DialogAction.valueOf("DNT_OFF"), getIdentifier("DNT_OFF", "string"));
 
 
-        hashMap.put(DialogAction.valueOf("pinmsg"), getIdentifier("pinmsg", "string"));
-        hashMap.put(DialogAction.valueOf("unpinmsg"), getIdentifier("unpinmsg", "string"));
+//        hashMap.put(DialogAction.valueOf("pinmsg"), getIdentifier("pinmsg", "string"));
+//        hashMap.put(DialogAction.valueOf("unpinmsg"), getIdentifier("unpinmsg", "string"));
         return hashMap;
     }
 
