@@ -5,7 +5,9 @@ import android.graphics.Bitmap;
 import android.graphics.BitmapShader;
 import android.graphics.Canvas;
 import android.graphics.Paint;
+import android.graphics.RectF;
 import android.graphics.Shader;
+import android.graphics.drawable.Drawable;
 
 import com.facebook.drawee.generic.RoundingParams;
 
@@ -17,25 +19,33 @@ public class PicRoundingHook{
     public static RoundingParams inject() {
         if (pref > 0) {
             return customParams();
+        } else {
+            return new RoundingParams().a(true);
         }
-
-        return new RoundingParams().a(true);
     }
 
     public static RoundingParams inject(float orig) {
         if (pref > 0) {
             return customParams();
+        } else {
+            return new RoundingParams().b(orig);
         }
-
-        return new RoundingParams().b(orig);
     }
 
     public static RoundingParams inject(float orig, float orig2, float orig3, float orig4) {
         if (pref > 0) {
-            orig = orig2 = orig3 = orig4 = AndroidUtils.dp2px(pref);
+            return new RoundingParams().a(AndroidUtils.dp2px(pref), AndroidUtils.dp2px(pref), AndroidUtils.dp2px(pref), AndroidUtils.dp2px(pref));
+        } else {
+            return new RoundingParams().a(orig, orig2, orig3, orig4);
         }
+    }
 
-        return new RoundingParams().a(orig, orig2, orig3, orig4);
+    public static void inject(float orig, Canvas canvas, Paint paint){
+        if (pref > 0) {
+            canvas.drawRoundRect(new RectF(0, 0, canvas.getWidth(), canvas.getHeight()), AndroidUtils.dp2px(pref), AndroidUtils.dp2px(pref), paint);
+        } else {
+            canvas.drawCircle(orig, orig, orig, paint);
+        }
     }
 
     public static void inject(Bitmap bitmap, Bitmap bitmap2, Paint b2) {
@@ -46,10 +56,9 @@ public class PicRoundingHook{
 
         if (pref > 0) {
             canvas.drawRoundRect(0, 0, bitmap.getWidth(), bitmap.getHeight(), AndroidUtils.dp2px(pref), AndroidUtils.dp2px(pref), b2);
-            return;
+        } else {
+            canvas.drawCircle(width, width, width, b2);
         }
-
-        canvas.drawCircle(width, width, width, b2);
     }
 
     private static RoundingParams customParams(){
