@@ -65,8 +65,6 @@ import ru.vtosters.lite.utils.CacheUtils;
 import ru.vtosters.lite.utils.SSFSUtils;
 
 public class VTSettings extends MaterialPreferenceToolbarFragment {
-    public int hideitems = 0;
-
     public static String getValAsString(String stringid, Boolean value) {
         if (disableSettingsSumms()) return null;
 
