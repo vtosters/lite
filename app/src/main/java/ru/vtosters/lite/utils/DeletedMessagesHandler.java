@@ -73,7 +73,13 @@ public class DeletedMessagesHandler {
     }
 
     private static String getPrefixUndelete() {
-        return getPrefsValue("undeletemsg_prefix_value") + " ";
+        var prefs = getPrefsValue("undeletemsg_prefix_value");
+
+        if (prefs.isEmpty()) {
+            return "\uD83D\uDDD1 ";
+        }
+
+        return prefs + " ";
     }
 
     public static void updateDialog(MsgDeleteLpTask msgDeleteLpTask) throws NoSuchFieldException, IllegalAccessException {
