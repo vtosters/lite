@@ -9,7 +9,7 @@ import java.util.LinkedHashMap;
 
 public class RequestDumper{
     public static void addParams(MethodCall.a paramslist, String method, LinkedHashMap params, String apiver) {
-        if (method.contains("execute.getGiftByStickerId") || method.contains("execute.getNewsfeedCustom")) {
+        if (method.contains("execute.getGiftByStickerId") ) {
             apiver = "5.187";
         }
 
