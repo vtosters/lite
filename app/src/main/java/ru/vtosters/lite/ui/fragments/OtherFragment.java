@@ -237,7 +237,6 @@ public class OtherFragment extends MaterialPreferenceToolbarFragment {
                     ImEngineExt.a(ImEngine1.a());
                     AutoPlayCacheHolder.d.a();
                     MediaStorage.a();
-                    deleteCache();
                     break;
                 }
                 case 1: {
