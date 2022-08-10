@@ -223,7 +223,6 @@ public class WallpaperMenuFragment extends MaterialPreferenceToolbarFragment {
     private void removeStickCache() {
         SharedPreferences prefs2 = getContext().getSharedPreferences("stickers_storage", Context.MODE_PRIVATE);
         prefs2.edit().clear().apply();
-        deleteCache();
         ImEngineProvider.b().a();
     }
 

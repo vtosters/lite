@@ -7,8 +7,20 @@ import static ru.vtosters.lite.utils.Preferences.getSizeForDelete;
 
 import android.annotation.SuppressLint;
 
+import com.vk.im.engine.ImEngine1;
+import com.vk.im.engine.ImEngineExt;
+import com.vk.im.ui.providers.audiomsg.ImAudioMsgPlayerProvider;
+import com.vk.im.ui.providers.audiomsg.PlayerActionSources;
+import com.vk.imageloader.VKImageLoader;
+import com.vk.media.player.cache.AutoPlayCacheHolder;
+import com.vk.mediastore.MediaStorage;
+import com.vk.stickers.Stickers;
+import com.vtosters.lite.im.ImEngineProvider;
+
 import java.text.CharacterIterator;
 import java.text.StringCharacterIterator;
+
+import b.h.g.m.FileUtils;
 
 public class CacheUtils {
     private static CacheUtils sInstance = new CacheUtils();
@@ -45,7 +57,13 @@ public class CacheUtils {
 
         if (size >= getSizeForDelete()) {
             if (dev()) sendToast("Кеш очищен");
-            deleteCache();
+            VKImageLoader.e();
+            ImAudioMsgPlayerProvider.b().e(PlayerActionSources.a);
+            ImAudioMsgPlayerProvider.b().d(PlayerActionSources.a);
+            FileUtils.l();
+            Stickers.l.c();
+            ImEngineExt.a(ImEngine1.a());
+            AutoPlayCacheHolder.d.a();
             size = 0;
         }
     }
