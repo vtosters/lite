@@ -15,6 +15,8 @@ import com.vk.navigation.Navigator;
 import com.vk.newsfeed.NewsfeedSettingsFragment;
 import com.vtosters.lite.general.fragments.MaterialPreferenceToolbarFragment;
 
+import ru.vtosters.lite.ui.components.NewsfeedListManager;
+
 public class FeedFragment extends MaterialPreferenceToolbarFragment {
     @Override
     public void onCreate(Bundle bundle) {
@@ -30,6 +32,15 @@ public class FeedFragment extends MaterialPreferenceToolbarFragment {
         findPreference("spamfilters").setSummary(count(getPrefsValue("spamfilters")));
         findPreference("sourcenamefilter").setSummary(count(getPrefsValue("sourcenamefilter")));
         findPreference("linkfilter").setSummary(count(getPrefsValue("linkfilter")));
+        findPreference("newsfeedlistmanager").setOnPreferenceClickListener(preference -> {
+            NewsfeedListManager.callEditorPopup(getActivity());
+            return true;
+        });
+        findPreference("newsfeedlistmanager").setSummary("Скрыто " + NewsfeedListManager.hideitems + " лент новостей");
+        findPreference("newsfeedlistmanager_reset").setOnPreferenceClickListener(preference -> {
+            NewsfeedListManager.resetHideItems();
+            return true;
+        });
     }
 
     private String count(String text) {

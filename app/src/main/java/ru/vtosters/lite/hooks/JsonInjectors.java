@@ -17,6 +17,7 @@ import static ru.vtosters.lite.utils.Preferences.getBoolValue;
 import static ru.vtosters.lite.utils.Preferences.hasVerification;
 import static ru.vtosters.lite.utils.Preferences.podcastcatalog;
 import static ru.vtosters.lite.utils.Preferences.postsrecomm;
+import static ru.vtosters.lite.utils.Preferences.preferences;
 import static ru.vtosters.lite.utils.VTVerifications.isDeveloper;
 import static ru.vtosters.lite.utils.VTVerifications.isPrometheus;
 import static ru.vtosters.lite.utils.VTVerifications.isVerified;
@@ -373,11 +374,16 @@ public class JsonInjectors {
     public static JSONArray newsfeedlist(JSONArray items) throws JSONException {
         for (int j = 0; j < items.length(); j++) {
             var list = items.optJSONObject(j);
-            var name = list.optString("id");
+            var id = list.optString("id");
+            var title = list.optString("title");
 
-            if (!name.equals("kpop") && !name.equals("foryou") && !name.equals("qazaqstan")) {
-                list.put("is_hidden", false).put("is_unavailable", false);
-                if (dev()) Log.d("NewsfeedListInj", "Unlocked " + name + " in newsfeed list");
+            if (!id.equals("kpop") && !id.equals("foryou") && !id.equals("qazaqstan") && !id.equals("podcasts")) {
+                preferences.edit().putString("newsfeedlist_title_" + id, title).apply();
+                if (!getBoolValue("newsfeedlist_" + id, false)) {
+                    Log.d("NewsfeedList", "Added list " + id + " to feed");
+                    list.put("is_hidden", false).put("is_unavailable", false);
+                    if (dev()) Log.d("NewsfeedListInj", "Unlocked " + id + " in newsfeed list");
+                }
             }
         }
 

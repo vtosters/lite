@@ -118,5 +118,12 @@
             android:key="feedcache"
             android:summary="@string/feed_other_cache_summary"
             android:title="@string/vtlfeedcache" />
+        <Preference
+            android:key="newsfeedlistmanager"
+            android:summary="Настройки списков новостей"
+            android:title="Списки новостей" />
+        <Preference
+            android:key="newsfeedlistmanager_reset"
+            android:title="Сбросить список новостей" />
     </PreferenceCategory>
 </PreferenceScreen>
