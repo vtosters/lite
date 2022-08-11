@@ -6359,8 +6359,8 @@
         <item name="im_bubble_gift_background_highlighted">@color/gold_400</item>
         <item name="im_bubble_gift_text">@color/white</item>
         <item name="im_bubble_gift_text_secondary">@color/gold_250</item>
-        <item name="im_bubble_incoming">@color/black</item>
-        <item name="im_bubble_incoming_alternate">@color/black</item>
+        <item name="im_bubble_incoming">@color/gray_900</item>
+        <item name="im_bubble_incoming_alternate">@color/gray_900</item>
         <item name="im_bubble_incoming_alternate_highlighted">@color/gray_600</item>
         <item name="im_bubble_incoming_highlighted">@color/gray_600</item>
         <item name="im_bubble_outgoing">@color/gray_800</item>
@@ -6619,8 +6619,8 @@
         <item name="im_bubble_gift_background_highlighted">@color/gold_400</item>
         <item name="im_bubble_gift_text">@color/white</item>
         <item name="im_bubble_gift_text_secondary">@color/gold_250</item>
-        <item name="im_bubble_incoming">@color/black</item>
-        <item name="im_bubble_incoming_alternate">@color/black</item>
+        <item name="im_bubble_incoming">@color/gray_900</item>
+        <item name="im_bubble_incoming_alternate">@color/gray_900</item>
         <item name="im_bubble_incoming_alternate_highlighted">@color/gray_600</item>
         <item name="im_bubble_incoming_highlighted">@color/gray_600</item>
         <item name="im_bubble_outgoing">@color/gray_800</item>
