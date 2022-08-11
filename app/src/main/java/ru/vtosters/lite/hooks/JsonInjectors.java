@@ -2,6 +2,7 @@ package ru.vtosters.lite.hooks;
 
 import static ru.vtosters.lite.foaf.FoafBase.getLastSeen;
 import static ru.vtosters.lite.hooks.DateHook.getLocale;
+import static ru.vtosters.lite.utils.AndroidUtils.getDefaultPrefs;
 import static ru.vtosters.lite.utils.Base64Utils.decode;
 import static ru.vtosters.lite.utils.NewsFeedFiltersUtils.checkCaption;
 import static ru.vtosters.lite.utils.NewsFeedFiltersUtils.checkCopyright;
@@ -17,11 +18,11 @@ import static ru.vtosters.lite.utils.Preferences.getBoolValue;
 import static ru.vtosters.lite.utils.Preferences.hasVerification;
 import static ru.vtosters.lite.utils.Preferences.podcastcatalog;
 import static ru.vtosters.lite.utils.Preferences.postsrecomm;
-import static ru.vtosters.lite.utils.Preferences.preferences;
 import static ru.vtosters.lite.utils.VTVerifications.isDeveloper;
 import static ru.vtosters.lite.utils.VTVerifications.isPrometheus;
 import static ru.vtosters.lite.utils.VTVerifications.isVerified;
 
+import android.text.TextUtils;
 import android.util.Log;
 
 import com.vk.core.network.Network;
@@ -34,6 +35,8 @@ import org.json.JSONObject;
 
 import java.io.IOException;
 import java.text.ParseException;
+import java.util.Collections;
+import java.util.LinkedHashSet;
 import java.util.Objects;
 import java.util.Random;
 
@@ -372,19 +375,37 @@ public class JsonInjectors {
     }
 
     public static JSONArray newsfeedlist(JSONArray items) throws JSONException {
-        for (int j = 0; j < items.length(); j++) {
-            var list = items.optJSONObject(j);
-            var id = list.optString("id");
-            var title = list.optString("title");
+        var selectedItems = getDefaultPrefs().getString("news_feed_selected_items", "");
+        var filtersSet = getDefaultPrefs().getStringSet("news_feed_items_set", null);
+        var mutableFiltersSet = Collections.synchronizedSet(new LinkedHashSet<String>());
+        if (filtersSet != null)
+            mutableFiltersSet.addAll(filtersSet);
 
-            if (!id.equals("kpop") && !id.equals("foryou") && !id.equals("qazaqstan") && !id.equals("podcasts")) {
-                preferences.edit().putString("newsfeedlist_title_" + id, title).apply();
-                if (!getBoolValue("newsfeedlist_" + id, false)) {
-                    Log.d("NewsfeedList", "Added list " + id + " to feed");
-                    list.put("is_hidden", false).put("is_unavailable", false);
-                    if (dev()) Log.d("NewsfeedListInj", "Unlocked " + id + " in newsfeed list");
-                }
+        synchronized (mutableFiltersSet) {
+            for (int i = 0; i < items.length(); i++) {
+                var item = items.optJSONObject(i);
+                if (item == null) continue;
+
+                var id = item.optString("id");
+                var title = item.optString("title");
+
+                if (TextUtils.isEmpty(id) || TextUtils.isEmpty(title)
+                        // this items not working
+                        || id.equals("kpop") || id.equals("foryou")
+                        || id.equals("qazaqstan") || id.equals("podcasts"))
+                    continue;
+
+                mutableFiltersSet.add(id + "|" + title);
+
+                var hide = selectedItems.contains(id);
+
+                Log.d("NewsfeedList", "Added list " + id + " to feed");
+                item.put("is_hidden", hide)
+                        .put("is_unavailable", hide);
+                if (dev()) Log.d("NewsfeedListInj", "Unlocked " + id + " in newsfeed list");
             }
+            getDefaultPrefs().edit().putStringSet("news_feed_items_set", mutableFiltersSet)
+                    .apply();
         }
 
         return items;

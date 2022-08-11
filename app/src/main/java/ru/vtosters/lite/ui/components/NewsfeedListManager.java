@@ -1,70 +1,62 @@
 package ru.vtosters.lite.ui.components;
+
 import static ru.vtosters.lite.ui.vkui.VBListBuilder.VBListItem;
 import static ru.vtosters.lite.ui.vkui.VBListBuilder.buildListOf;
-import static ru.vtosters.lite.utils.AndroidUtils.edit;
 import static ru.vtosters.lite.utils.AndroidUtils.getDefaultPrefs;
 import static ru.vtosters.lite.utils.AndroidUtils.sendToast;
-import static ru.vtosters.lite.utils.Preferences.getBoolValue;
 
 import android.app.Activity;
 
 import java.util.ArrayList;
-import java.util.List;
-import java.util.Map;
+import java.util.Collections;
+import java.util.LinkedHashSet;
 
 import ru.vtosters.lite.ui.vkui.VBottomSheetBuilder;
 
-public class NewsfeedListManager{
-    public static int hideitems = 0;
+public class NewsfeedListManager {
 
-    public static void callEditorPopup(Activity activity){
-        List<VBListItem> list = new ArrayList<>();
+    public static void callEditorPopup(Activity activity) {
+        var selectedItems = getDefaultPrefs().getString("news_feed_selected_items", "");
+        var filtersSet = getDefaultPrefs().getStringSet("news_feed_items_set", Collections.synchronizedSet(new LinkedHashSet<>()));
+        var list = new ArrayList<VBListItem>();
 
-        for (Map.Entry<String, ?> entry : getDefaultPrefs().getAll().entrySet()) {
-            if (entry.getKey().startsWith("newsfeedlist_title_")) {
-                var boolname = entry.getKey().replace("newsfeedlist_title_", "newsfeedlist_");
-                var boolvalue = getBoolValue(boolname, false);
-                var title = entry.getValue().toString();
-
-                list.add(new VBListItem(boolname, title, boolvalue));
-            }
-        }
-
-        if (list.size() == 0) {
+        if (filtersSet.size() == 0) {
             sendToast("Обновите ленту для получения списка доступных пунктов");
             return;
+        }
+
+        synchronized (filtersSet) {
+            for (String item : filtersSet) {
+                var id = item.substring(0, item.indexOf("|"));
+                var title = item.substring(item.indexOf("|") + 1);
+
+                list.add(new VBListItem(id, title, selectedItems.contains(id)));
+            }
         }
 
         VBottomSheetBuilder.show(activity, new VBottomSheetBuilder.VBSContent(
                 "Выберите пункты для скрытия",
                 buildListOf(activity, list),
-
                 new VBottomSheetBuilder.VBSContent.VBSButton(
                         "Сохранить",
                         () -> {
-                            for (VBListItem item : list) {
-                                edit().putBoolean(item.id, item.checked).commit();
-                                sendToast("Для применения изменений обновите ленту");
-                                if (item.checked) {
-                                    hideitems++;
-                                    edit().putInt("newsfeedlistitems", hideitems).commit();
-                                } else if (hideitems == 0) {
-                                    edit().putInt("newsfeedlistitems", hideitems).commit();
-                                }
-                            }
+                            var newSelectedItems = "";
+                            for (VBListItem item : list)
+                                if (item.checked)
+                                    newSelectedItems += item.id + ",";
+                            getDefaultPrefs().edit()
+                                    .putString("news_feed_selected_items", newSelectedItems)
+                                    .apply();
+                            sendToast("Для применения изменений обновите ленту");
                         }
                 )
         ));
     }
 
-    public static void resetHideItems(){
-        hideitems = 0;
-        for (Map.Entry<String, ?> entry : getDefaultPrefs().getAll().entrySet()) {
-            if (entry.getKey().startsWith("newsfeedlist_")) {
-                getDefaultPrefs().edit().remove(entry.getKey()).commit();
-            }
-        }
-
+    public static void resetHideItems() {
+        getDefaultPrefs().edit()
+                .putString("news_feed_selected_items", "")
+                .apply();
         sendToast("Сброшены пункты для скрытия");
     }
 }

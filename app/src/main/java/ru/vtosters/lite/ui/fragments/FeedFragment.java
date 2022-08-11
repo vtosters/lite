@@ -1,13 +1,14 @@
 package ru.vtosters.lite.ui.fragments;
 
+import static ru.vtosters.lite.utils.AndroidUtils.getDefaultPrefs;
 import static ru.vtosters.lite.utils.AndroidUtils.getIdentifier;
 import static ru.vtosters.lite.utils.AndroidUtils.getPrefsValue;
 import static ru.vtosters.lite.utils.Preferences.copyright_post;
-import static ru.vtosters.lite.utils.Preferences.offline;
 
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
+import android.text.TextUtils;
 
 import androidx.preference.Preference;
 
@@ -36,7 +37,11 @@ public class FeedFragment extends MaterialPreferenceToolbarFragment {
             NewsfeedListManager.callEditorPopup(getActivity());
             return true;
         });
-        findPreference("newsfeedlistmanager").setSummary("Скрыто " + NewsfeedListManager.hideitems + " лент новостей");
+        var str = getDefaultPrefs().getString("news_feed_selected_items", "");
+        findPreference("newsfeedlistmanager").setSummary(
+                "Скрыто "
+                + (!TextUtils.isEmpty(str) ? str.split(",").length : 0)
+                + " лент новостей");
         findPreference("newsfeedlistmanager_reset").setOnPreferenceClickListener(preference -> {
             NewsfeedListManager.resetHideItems();
             return true;
