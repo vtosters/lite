@@ -46,7 +46,7 @@ public class OTADownloader {
                             maxIndex = Math.max(maxIndex, Integer.parseInt(name.replaceFirst(".+-(\\d+).+", "$1")));
                     }
                     File apk = maxIndex == -1 ? new File(downloadDir, "VTLite.apk") : new File(downloadDir, "VTLite-" + maxIndex + ".apk");
-                    APKInstallActivity.installOta(context, FileUtils.n(apk));
+                    APKInstallActivity.installOta(context, FileUtils.uriFromFile(apk));
                 } else if (status == DownloadManager.STATUS_FAILED) {
                     AndroidUtils.sendToast(getString("downloaderr"));
                 }
