@@ -5,9 +5,8 @@ import static ru.vtosters.lite.utils.ThemesUtils.getTextAttr;
 import android.content.Context;
 import android.util.TypedValue;
 import android.view.ViewGroup;
+import android.widget.CheckBox;
 import android.widget.LinearLayout;
-
-import androidx.appcompat.widget.AppCompatCheckBox;
 
 import java.util.List;
 
@@ -18,7 +17,7 @@ public class VBListBuilder{
         mainView.setPadding(dp2px(8f), 0, dp2px(8f), 0);
 
         for (VBListItem item : items) {
-            AppCompatCheckBox mcb = new AppCompatCheckBox(ctx, null);
+            CheckBox mcb = new CheckBox(ctx, null);
             mcb.setPadding(0, dp2px(8f), 0, dp2px(8f));
 
             mcb.setTextSize(TypedValue.COMPLEX_UNIT_DIP, 14f);
