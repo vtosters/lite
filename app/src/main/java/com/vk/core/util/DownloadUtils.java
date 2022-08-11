@@ -61,11 +61,11 @@ public class DownloadUtils {
         File b2;
         boolean c2 = MediaUtils.c(MediaUtils.b(str2));
 
-        if (str.endsWith("png") || str.endsWith("jpg") || str.endsWith("jpeg")) {
+        if (file.endsWith(".jpg") || file.endsWith(".png") || file.endsWith(".jpeg")) {
             b2 = new File(getPhotosDir(), file);
-        } else if (str.endsWith("mp3") || str.endsWith("wav") || str.endsWith("ogg") || str.endsWith("aac") || str.endsWith("flac") || str.endsWith("m4a")) {
+        } else if (file.endsWith(".mp3") || file.endsWith(".wav") || file.endsWith(".ogg") || file.endsWith(".aac") || file.endsWith(".flac") || file.endsWith(".m4a")) {
             b2 = new File(getMusicDir(), file);
-        } else if (str.endsWith("mp4") || str.endsWith("mkv") || str.endsWith("avi") || str.endsWith("flv") || str.endsWith("wmv") || str.endsWith("mov") || str.endsWith("3gp")) {
+        } else if (file.endsWith(".mp4") || file.endsWith(".mkv") || file.endsWith(".avi") || file.endsWith(".flv") || file.endsWith(".wmv") || file.endsWith(".mov") || file.endsWith(".3gp")) {
             b2 = new File(getVideosDir(), file);
         } else {
             b2 = new File(getDownloadsDir(), file);
@@ -76,7 +76,11 @@ public class DownloadUtils {
             final InputStream h = c3 == null ? null : c3.h();
             if (h != null) {
                 try {
-                    if (b2.exists() || FileUtils.b(b2)) {
+                    if (b2.getParentFile() != null) {
+                        b2.createNewFile();
+                    }
+
+                    if (b2.exists()) {
                         VkExecutors.x.a().execute(() -> ToastUtils.a(context.getString(R.string.file_saved, b2.getAbsoluteFile())));
                     }
                 } catch (Exception e2) {
@@ -86,6 +90,7 @@ public class DownloadUtils {
                 return;
             }
         }
+        
         DownloadManager.Request request = new DownloadManager.Request(Uri.parse(str2));
         request.setDestinationUri(Uri.fromFile(b2));
         request.setMimeType(FileUtils.f(new File(str)));
