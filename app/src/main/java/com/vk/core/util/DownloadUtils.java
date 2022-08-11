@@ -185,7 +185,7 @@ public class DownloadUtils {
                     String f2 = FileUtils.f(file);
                     if (!TextUtils.isEmpty(f2)) {
                         intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-                        intent.setDataAndType(FileUtils.n(file), f2);
+                        intent.setDataAndType(FileUtils.uriFromFile(file), f2);
                         context.startActivity(intent);
                         return true;
                     }
