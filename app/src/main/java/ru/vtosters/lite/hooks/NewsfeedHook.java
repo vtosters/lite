@@ -101,7 +101,7 @@ public class NewsfeedHook {
         return params.toArray(new String[0]);
     }
 
-    public static void adsParams(HashSet hashSet) {
+    public static void adsParams(HashSet<String> hashSet) {
         if (ads() || adsslider()) {
             hashSet.add("ads_disabled");
             return;

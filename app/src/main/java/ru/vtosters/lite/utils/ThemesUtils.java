@@ -298,7 +298,11 @@ public class ThemesUtils {
         if (isColorRefAccented(i) && isAndroidMonet()) {
             return getAccentColor();
         }
-        return context.getColor(i);
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
+            return context.getColor(i);
+        } else {
+            return context.getResources().getColor(i);
+        }
     } // Android Support color injector + accent color checker
 
     public static int getColor2(int i) {
@@ -352,7 +356,7 @@ public class ThemesUtils {
     }
 
     public static String hex(int i) {
-        return String.format("#%06X", Integer.valueOf(i & 16777215));
+        return String.format("#%06X", i & 16777215);
     } // Get color as hex string
 
     public static int getNavigationHeight(int Default) {

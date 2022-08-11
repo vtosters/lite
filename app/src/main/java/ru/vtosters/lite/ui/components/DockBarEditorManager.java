@@ -10,6 +10,8 @@ import static ru.vtosters.lite.utils.Preferences.videonewcatalog;
 import static ru.vtosters.lite.utils.Preferences.vkme;
 import static ru.vtosters.lite.utils.Preferences.vkme_notifs;
 
+import android.os.Build;
+
 import com.vk.apps.AppsFragment;
 import com.vk.discover.ThemedFeedFragment;
 import com.vk.fave.fragments.FaveTabFragment;
@@ -101,14 +103,28 @@ public class DockBarEditorManager {
             mSelectedTabs.add(getTabByTag(tag));
             allTags.remove(tag);
         }
-        allTags.forEach(tag -> mDisabledTabs.add(getTabByTag(tag)));
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N) {
+            allTags.forEach(tag -> mDisabledTabs.add(getTabByTag(tag)));
+        } else {
+            for (String tag : allTags) {
+                mDisabledTabs.add(getTabByTag(tag));
+            }
+        }
     }
 
     public void save() {
-        AndroidUtils.getPreferences().edit().putString("dockbar_tabs", mSelectedTabs.stream()
-                        .map(tab -> tab.tag)
-                        .collect(Collectors.joining(",")))
-                .commit();
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N) {
+            getPreferences().edit().putString("dockbar_tabs", mSelectedTabs.stream()
+                            .map(tab -> tab.tag)
+                            .collect(Collectors.joining(",")))
+                    .commit();
+        } else {
+            StringBuilder sb = new StringBuilder();
+            for (DockBarTab tab : mSelectedTabs) {
+                sb.append(tab.tag).append(",");
+            }
+            getPreferences().edit().putString("dockbar_tabs", sb.toString()).commit();
+        }
     }
 
     public void reset() {

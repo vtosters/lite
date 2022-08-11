@@ -39,7 +39,7 @@ public class NotificationsHelper {
         downloadingPacksNotificationsIds = new HashMap<>();
 
         if (oreo()) {
-            NotificationChannel notificationChan = new NotificationChannel(NOTIFICATION_CHANNEL_ID, "Сервис стикеров Telegram в VTosters", NotificationManager.IMPORTANCE_HIGH);
+            NotificationChannel notificationChan = new NotificationChannel(NOTIFICATION_CHANNEL_ID, "Сервис стикеров Telegram в VTLite", NotificationManager.IMPORTANCE_HIGH);
             ((NotificationManager) c.getSystemService(Context.NOTIFICATION_SERVICE)).createNotificationChannel(notificationChan);
         }
     }
@@ -77,7 +77,7 @@ public class NotificationsHelper {
         Notification.Builder builder = commonBuilder();
         builder.setProgress(0, 0, false);
         builder.setOngoing(false);
-        builder.setContentTitle("Сервис стикеров Telegram в VTosters");
+        builder.setContentTitle("Сервис стикеров Telegram в VTLite");
 
         String text;
         if (success)

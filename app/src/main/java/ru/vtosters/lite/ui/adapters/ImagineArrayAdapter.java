@@ -25,7 +25,7 @@ import ru.vtosters.lite.utils.LayoutUtils;
 public class ImagineArrayAdapter extends ArrayAdapter<ImagineArrayAdapter.ImagineArrayAdapterItem> {
 
     private List<ImagineArrayAdapterItem> mItems = new ArrayList<>();
-    private OnClickListener mListener;
+    private final OnClickListener mListener;
     private int mSelectedIndex = -1;
 
     public ImagineArrayAdapter(@NonNull Context context, OnClickListener listener) {
@@ -134,8 +134,8 @@ public class ImagineArrayAdapter extends ArrayAdapter<ImagineArrayAdapter.Imagin
     }
 
     public static class ImagineArrayAdapterItem {
-        private Drawable mIcon;
-        private String mText;
+        private final Drawable mIcon;
+        private final String mText;
 
         public ImagineArrayAdapterItem(Drawable icon, String text) {
             this.mIcon = icon;
@@ -167,6 +167,6 @@ public class ImagineArrayAdapter extends ArrayAdapter<ImagineArrayAdapter.Imagin
     }
 
     public interface OnClickListener {
-        public void onClick(int i);
+        void onClick(int i);
     }
 }

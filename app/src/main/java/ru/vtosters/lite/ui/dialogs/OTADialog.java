@@ -9,7 +9,6 @@ import ru.vtosters.lite.ui.vkui.ModalBottomSheetWrapper;
 import ru.vtosters.lite.utils.OTAUtils;
 
 public class OTADialog implements OTAUtils.OTAListener {
-
     private final Activity mActivity;
 
     private final OTAUtils mHelper;
@@ -21,8 +20,8 @@ public class OTADialog implements OTAUtils.OTAListener {
         mHelper.loadData();
     }
 
-    public static OTADialog checkUpdates(Activity activity) {
-        return new OTADialog(activity);
+    public static void checkUpdates(Activity activity) {
+        new OTADialog(activity);
     }
 
     @Override

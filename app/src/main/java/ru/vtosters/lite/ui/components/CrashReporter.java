@@ -5,6 +5,7 @@ import static ru.vtosters.lite.utils.AndroidUtils.getGlobalContext;
 import static ru.vtosters.lite.utils.AndroidUtils.getIdentifier;
 import static ru.vtosters.lite.utils.AndroidUtils.getString;
 
+import android.annotation.SuppressLint;
 import android.app.Activity;
 import android.app.Notification;
 import android.app.NotificationChannel;
@@ -57,6 +58,7 @@ public class CrashReporter {
         var saveLogIntent = new Intent(getGlobalContext(), LogWriterService.class);
         saveLogIntent.putExtra("log", logString);
         saveLogIntent.putExtra("notificationId", 1);
+        @SuppressLint("UnspecifiedImmutableFlag")
         var psaveLogIntent = PendingIntent.getService(getGlobalContext(), 0, saveLogIntent, PendingIntent.FLAG_CANCEL_CURRENT);
 
         var builder = new Notification.Builder(getGlobalContext());
@@ -65,12 +67,8 @@ public class CrashReporter {
         builder.setContentText(logString);
         builder.setStyle(new Notification.BigTextStyle().bigText(logString));
         builder.setAutoCancel(true);
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.KITKAT_WATCH) {
-            builder.addAction(new Notification.Action(0, getString("vtl_crash_upload"), PendingIntent.getActivity(getGlobalContext(), (int) (Math.random() * 100.0d), foxbinIntent, PendingIntent.FLAG_CANCEL_CURRENT)));
-            builder.addAction(new Notification.Action(0, getString("vtl_crash_save"), psaveLogIntent));
-        } else {
-            builder.setContentIntent(PendingIntent.getActivity(activity, 0, foxbinIntent, PendingIntent.FLAG_ONE_SHOT));
-        }
+        builder.addAction(new Notification.Action(0, getString("vtl_crash_upload"), PendingIntent.getActivity(getGlobalContext(), (int) (Math.random() * 100.0d), foxbinIntent, PendingIntent.FLAG_CANCEL_CURRENT)));
+        builder.addAction(new Notification.Action(0, getString("vtl_crash_save"), psaveLogIntent));
 
         if (Build.VERSION.SDK_INT >= 26) {
             builder.setChannelId("crashes");
