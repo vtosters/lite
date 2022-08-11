@@ -7,6 +7,7 @@ import static ru.vtosters.lite.utils.ThemesUtils.getSTextAttr;
 import static ru.vtosters.lite.utils.ThemesUtils.getTextAttr;
 import static ru.vtosters.lite.utils.ThemesUtils.recolorDrawable;
 
+import android.annotation.SuppressLint;
 import android.net.Uri;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -28,8 +29,9 @@ import ru.vtosters.lite.tgs.TGPref;
 import ru.vtosters.lite.utils.AndroidUtils;
 
 public class StickerPackAdapter extends RecyclerView.Adapter<StickerPackAdapter.StickerPackViewHolder> {
-    private static TelegramStickersService sService = TelegramStickersService.getInstance(getGlobalContext());
+    private static final TelegramStickersService sService = TelegramStickersService.getInstance(getGlobalContext());
 
+    @SuppressLint("UseCompatLoadingForDrawables")
     @NonNull
     @Override
     public StickerPackViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
@@ -61,13 +63,13 @@ public class StickerPackAdapter extends RecyclerView.Adapter<StickerPackAdapter.
     }
 
     public class StickerPackViewHolder extends RecyclerView.ViewHolder {
-        private LinearLayout mContainer;
-        private ImageView mStickerPreview;
-        private ImageView mUpdateButton;
-        private ImageView mDeleteButton;
-        private TextView mName;
-        private TextView mStickersCount;
-        private SwitchCompat mSwitch;
+        private final LinearLayout mContainer;
+        private final ImageView mStickerPreview;
+        private final ImageView mUpdateButton;
+        private final ImageView mDeleteButton;
+        private final TextView mName;
+        private final TextView mStickersCount;
+        private final SwitchCompat mSwitch;
 
 
         public StickerPackViewHolder(@NonNull View view) {
@@ -82,6 +84,7 @@ public class StickerPackAdapter extends RecyclerView.Adapter<StickerPackAdapter.
             mStickersCount = view.findViewWithTag("vkim_cancel_label_text");
         }
 
+        @SuppressLint("SetTextI18n")
         public void bind(int position) {
             final TelegramStickersPack pack = sService.getPacksListReference().get(position);
             if (pack.state != TelegramStickersPack.DOWNLOADED) return;

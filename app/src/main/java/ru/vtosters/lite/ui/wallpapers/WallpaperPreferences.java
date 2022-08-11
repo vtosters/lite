@@ -5,6 +5,7 @@ import static ru.vtosters.lite.ui.wallpapers.WallpapersHooks.getWallpaperFile;
 import static ru.vtosters.lite.utils.AndroidUtils.dp2px;
 import static ru.vtosters.lite.utils.AndroidUtils.getIdentifier;
 
+import android.annotation.SuppressLint;
 import android.content.Context;
 import android.graphics.drawable.Drawable;
 import android.util.AttributeSet;
@@ -64,6 +65,7 @@ public class WallpaperPreferences extends Preference {
             mChatBackground.setImageDrawable(null);
     }
 
+    @SuppressLint("NotifyDataSetChanged")
     void redraw() {
         mAdapter.notifyDataSetChanged();
         requestBg();

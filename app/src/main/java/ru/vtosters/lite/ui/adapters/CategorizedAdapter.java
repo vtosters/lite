@@ -34,10 +34,10 @@ public class CategorizedAdapter extends RecyclerView.Adapter<CategorizedAdapter.
     public static final int SELECTED_STATE = -0x1;
     public static final int DISABLED_STATE = -0x2;
 
-    private List mSelectedItems;
-    private List mDisabledItems;
-    private List mUnmovedItems;
-    private IViewHolderBinder mBinder;
+    private final List mSelectedItems;
+    private final List mDisabledItems;
+    private final List mUnmovedItems;
+    private final IViewHolderBinder mBinder;
 
     private int mMinSelectedItems = -1;
     private int mMaxSelectedItems = -1;

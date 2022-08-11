@@ -8,6 +8,7 @@ import static ru.vtosters.lite.utils.AndroidUtils.getString;
 import static ru.vtosters.lite.utils.ProxyUtils.apiproxy;
 import static ru.vtosters.lite.utils.ProxyUtils.getApi;
 
+import android.annotation.SuppressLint;
 import android.app.ProgressDialog;
 import android.content.Context;
 import android.util.Log;
@@ -22,6 +23,7 @@ import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.Locale;
+import java.util.Objects;
 import java.util.TimeZone;
 import java.util.concurrent.TimeUnit;
 import java.util.regex.Matcher;
@@ -58,7 +60,7 @@ public class FoafBase {
 
         SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss", Locale.US);
         sdf.setTimeZone(TimeZone.getTimeZone("Europe/Moscow"));
-        Date date = sdf.parse(matcher.group(1));
+        Date date = sdf.parse(Objects.requireNonNull(matcher.group(1)));
         sdf.setTimeZone(TimeZone.getDefault());
         return sdf.parse(sdf.format(date)).getTime() / 1000;
     }
@@ -95,8 +97,8 @@ public class FoafBase {
             Matcher matcher2 = FOAF_REGEX_LOGIN.matcher(str);
             matcher.find();
             matcher2.find();
-            String normalHumanDate = getNormalHumanDate(matcher.group(1));
-            getNormalHumanDate(matcher2.group(1));
+            String normalHumanDate = getNormalHumanDate(Objects.requireNonNull(matcher.group(1)));
+            getNormalHumanDate(Objects.requireNonNull(matcher2.group(1)));
             VkAlertDialog.Builder a2 = new VkAlertDialog.Builder(context).setTitle(getIdentifier("addinf", "string"));
             a2.setMessage(getString("foafid") + " " + i + getString("foafregdate") + " " + normalHumanDate + getString("foafdate") + " " + daysPassedFromFoafDate(normalHumanDate)).setPositiveButton(17039370, null).create().show();
         } catch (Exception e) {
@@ -107,6 +109,7 @@ public class FoafBase {
 
     private static long daysPassedFromFoafDate(String str) {
         try {
+            @SuppressLint("SimpleDateFormat")
             Date parse = new SimpleDateFormat("yyyy-MM-dd").parse(str.split(" ")[1]);
             return TimeUnit.DAYS.convert(new Date().getTime() - parse.getTime(), TimeUnit.MILLISECONDS);
         } catch (ParseException e) {

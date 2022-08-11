@@ -1,5 +1,7 @@
 package ru.vtosters.lite.deviceinfo;
 
+import androidx.annotation.NonNull;
+
 public class Device {
     private String androidId;
     private String bluetoothMac;
@@ -86,6 +88,7 @@ public class Device {
         return this;
     }
 
+    @NonNull
     public String toString() {
         return "Device{serialId='" + this.serialId + "', androidId='" + this.androidId + "', wifiMac='" + this.wifiMac + "', bluetoothMac='" + this.bluetoothMac + "'}";
     }

@@ -40,6 +40,7 @@ import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.vk.navigation.Navigator;
 
 import java.io.File;
+import java.util.Objects;
 
 import ru.vtosters.lite.tgs.TGPref;
 import ru.vtosters.lite.ui.adapters.StickerPackAdapter;
@@ -47,7 +48,6 @@ import ru.vtosters.lite.ui.fragments.BaseToolbarFragment;
 import ru.vtosters.lite.utils.AndroidUtils;
 
 public class StickersFragment extends BaseToolbarFragment {
-
     public final static String ACTION_RELOAD = "com.vtosters.lite.action.RELOAD_TGS_LIST";
 
     private final static int TYPE_DIRECT = 0, TYPE_SOCKS = 2;
@@ -147,7 +147,7 @@ public class StickersFragment extends BaseToolbarFragment {
     @Override
     public void onDestroyView() {
         super.onDestroyView();
-        getContext().unregisterReceiver(mReceiver);
+        requireContext().unregisterReceiver(mReceiver);
     }
 
     private void fabClick() {

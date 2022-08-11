@@ -2,11 +2,14 @@ package ru.vtosters.lite.ui.components;
 
 import static ru.vtosters.lite.utils.AndroidUtils.getPreferences;
 
+import android.os.Build;
+
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 import java.util.stream.Collectors;
 
+import ru.vtosters.lite.ui.items.DockBarTab;
 import ru.vtosters.lite.ui.items.SuperAppItem;
 import ru.vtosters.lite.utils.AndroidUtils;
 
@@ -40,15 +43,30 @@ public class SuperAppEditorManager {
             mSelectedItems.add(getItemByTag(tag));
             allTags.remove(tag);
         }
-        allTags.forEach(tag -> mDisabledItems.add(getItemByTag(tag)));
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N) {
+            allTags.forEach(tag -> mDisabledItems.add(getItemByTag(tag)));
+        } else {
+            for (String tag : allTags) {
+                mDisabledItems.add(getItemByTag(tag));
+            }
+        }
     }
 
     public void save() {
         if (mSelectedItems.size() > 0)
-            getPreferences().edit().putString("superapp_items", mSelectedItems.stream()
-                            .map(item -> item.type)
-                            .collect(Collectors.joining(",")))
-                    .commit();
+            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N) {
+                getPreferences().edit().putString("superapp_items", mSelectedItems.stream()
+                                .map(item -> item.type)
+                                .collect(Collectors.joining(",")))
+                        .commit();
+            } else {
+                StringBuilder sb = new StringBuilder();
+                for (SuperAppItem item : mSelectedItems) {
+                    sb.append(item.type);
+                    sb.append(",");
+                }
+                getPreferences().edit().putString("superapp_items", sb.toString()).commit();
+            }
         else
             reset();
     }
