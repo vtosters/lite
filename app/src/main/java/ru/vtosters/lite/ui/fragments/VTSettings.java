@@ -330,7 +330,7 @@ public class VTSettings extends MaterialPreferenceToolbarFragment {
                 });
             }
         } else {
-            addPreference(this, "", "Внимание!", "Некоторые пункты настроек были скрыты из-за режима VK Me \n\nДля отключения режима перейдите в настройки Сообщений", "ic_about_outline_28", preference -> false);
+            addPreference(this, "", "Внимание!", "Некоторые пункты настроек были скрыты из-за режима VK Мессенджер \n\nДля отключения режима перейдите в настройки Сообщений", "ic_about_outline_28", preference -> false);
         }
 
         addPreference(this, "", AndroidUtils.getString("vtlmedia"), mediasumm, "ic_media_outline_28", preference -> {
