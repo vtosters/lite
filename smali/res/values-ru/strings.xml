@@ -5751,8 +5751,8 @@
     <string name="franimation">Анимация фрагментов (бета)</string>
     <string name="selectfranimation">Выберите анимацию фрагментов</string>
 
-    <string name="vkme">Режим VK Me</string>
-    <string name="vkmesumm">Замена докбара и некоторых элементов на что-то похожее как в VK Me</string>
+    <string name="vkme">Режим VK Мессенджера</string>
+    <string name="vkmesumm">Замена докбара и некоторых элементов на что-то похожее как в VK Мессенджере</string>
 
     <string name="vtsettaccount">Аккаунт</string>
     <string name="vtsettdarktheme">Темная тема</string>
@@ -5768,7 +5768,7 @@
     <string name="vtlfeedsumm">Блокировать рекламу</string>
     <string name="vtldocksumm">Докбар элементов</string>
     <string name="vtlmediasumm">VKX интеграция</string>
-    <string name="vtlmsgsumm">Режим VK Me</string>
+    <string name="vtlmsgsumm">Режим VK Мессенджера</string>
     <string name="vtlactivitysumm">Офлайн режим</string>
     <string name="vtlthemessumm">Покраска навбара</string>
     <string name="vtltgssumm">Установлено паков</string>
