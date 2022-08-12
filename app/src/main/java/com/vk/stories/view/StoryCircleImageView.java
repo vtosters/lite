@@ -281,7 +281,7 @@ public class StoryCircleImageView extends BorderedCircleImageView implements The
     }
 
     @SuppressLint("ResourceType")
-    private void a(Context context, AttributeSet attributeSet, TypedArray typedArray){
+    private void a(Context context, AttributeSet attributeSet, TypedArray typedArray){ // bullshit vk code is not working with custom bordered circle image
         Drawable drawable;
         this.A0 = typedArray.getDimensionPixelSize(0, Screen.a(64.0f));
         if (typedArray.hasValue(2)) {
