@@ -55,6 +55,14 @@ public class PicRoundingHook{
         }
     }
 
+    public static void inject(Canvas canvas, float orig, float orig2, float orig3, Paint paint){
+        if (pref > 0) {
+            canvas.drawRoundRect(new RectF(0, 0, canvas.getWidth(), canvas.getHeight()), AndroidUtils.dp2px(pref), AndroidUtils.dp2px(pref), paint);
+        } else {
+            canvas.drawCircle(orig, orig2, orig3, paint);
+        }
+    }
+
     public static void inject(Bitmap bitmap, Bitmap bitmap2, Paint b2) {
         Shader.TileMode tileMode = Shader.TileMode.CLAMP;
         b2.setShader(new BitmapShader(bitmap2, tileMode, tileMode));

@@ -315,7 +315,7 @@
 
     iget-object v3, p0, Lcom/vk/attachpicker/widget/TabImageView;->b:Landroid/graphics/Paint;
 
-    invoke-virtual {p1, v1, v2, v0, v3}, Landroid/graphics/Canvas;->drawCircle(FFFLandroid/graphics/Paint;)V
+    invoke-static {p1, v1, v2, v0, v3}, Lru/vtosters/lite/hooks/PicRoundingHook;->inject(Landroid/graphics/Canvas;FFFLandroid/graphics/Paint;)V
 
     .line 7
     invoke-super {p0, p1}, Landroid/widget/ImageView;->onDraw(Landroid/graphics/Canvas;)V

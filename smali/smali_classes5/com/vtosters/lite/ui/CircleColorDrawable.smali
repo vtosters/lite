@@ -204,7 +204,7 @@
 
     iget-object v3, p0, Lcom/vtosters/lite/ui/CircleColorDrawable;->c:Landroid/graphics/Paint;
 
-    invoke-virtual {p1, v0, v0, v2, v3}, Landroid/graphics/Canvas;->drawCircle(FFFLandroid/graphics/Paint;)V
+    invoke-static {p1, v0, v0, v2, v3}, Lru/vtosters/lite/hooks/PicRoundingHook;->inject(Landroid/graphics/Canvas;FFFLandroid/graphics/Paint;)V
 
     .line 6
     iget-boolean v2, p0, Lcom/vtosters/lite/ui/CircleColorDrawable;->e:Z
@@ -226,7 +226,7 @@
 
     iget-object v1, p0, Lcom/vtosters/lite/ui/CircleColorDrawable;->b:Landroid/graphics/Paint;
 
-    invoke-virtual {p1, v0, v0, v2, v1}, Landroid/graphics/Canvas;->drawCircle(FFFLandroid/graphics/Paint;)V
+    invoke-static {p1, v0, v0, v2, v1}, Lru/vtosters/lite/hooks/PicRoundingHook;->inject(Landroid/graphics/Canvas;FFFLandroid/graphics/Paint;)V
 
     .line 8
     :cond_0

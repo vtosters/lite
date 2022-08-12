@@ -147,7 +147,7 @@
     div-float/2addr p0, v3
 
     .line 26
-    invoke-virtual {v2, p0, p0, p0, v5}, Landroid/graphics/Canvas;->drawCircle(FFFLandroid/graphics/Paint;)V
+    invoke-static {v2, p0, p0, p0, v5}, Lru/vtosters/lite/hooks/PicRoundingHook;->inject(Landroid/graphics/Canvas;FFFLandroid/graphics/Paint;)V
 
     return-object v1
 
@@ -212,7 +212,7 @@
     div-float/2addr v0, v3
 
     .line 36
-    invoke-virtual {v2, v0, v0, v0, v5}, Landroid/graphics/Canvas;->drawCircle(FFFLandroid/graphics/Paint;)V
+    invoke-static {v2, v0, v0, v0, v5}, Lru/vtosters/lite/hooks/PicRoundingHook;->inject(Landroid/graphics/Canvas;FFFLandroid/graphics/Paint;)V
 
     .line 37
     invoke-virtual {v1}, Landroid/graphics/Bitmap;->recycle()V

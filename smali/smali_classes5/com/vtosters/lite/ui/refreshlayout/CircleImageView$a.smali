@@ -143,7 +143,7 @@
 
     iget-object v3, p0, Lcom/vtosters/lite/ui/refreshlayout/CircleImageView$a;->b:Landroid/graphics/Paint;
 
-    invoke-virtual {p1, v0, v1, v2, v3}, Landroid/graphics/Canvas;->drawCircle(FFFLandroid/graphics/Paint;)V
+    invoke-static {p1, v0, v1, v2, v3}, Lru/vtosters/lite/hooks/PicRoundingHook;->inject(Landroid/graphics/Canvas;FFFLandroid/graphics/Paint;)V
 
     .line 4
     iget v2, p0, Lcom/vtosters/lite/ui/refreshlayout/CircleImageView$a;->c:I
@@ -152,7 +152,7 @@
 
     int-to-float v2, v2
 
-    invoke-virtual {p1, v0, v1, v2, p2}, Landroid/graphics/Canvas;->drawCircle(FFFLandroid/graphics/Paint;)V
+    invoke-static {p1, v0, v1, v2, p2}, Lru/vtosters/lite/hooks/PicRoundingHook;->inject(Landroid/graphics/Canvas;FFFLandroid/graphics/Paint;)V
 
     return-void
 .end method
