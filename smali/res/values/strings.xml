@@ -2301,8 +2301,8 @@ Please try again later"</string>
     <string name="my_story_2">story</string>
     <string name="my_story_desc">Displayed in the news feed and on your page for 24 hours</string>
     <string name="my_videos">My videos</string>
-    <string name="n_hours_mins" formatted="false">%$1d час. %$2d мин.</string>
-    <string name="n_mins_secs">%1$d мин. %2$02d сек.</string>
+    <string name="n_hours_mins" formatted="false">%1$d h. %$2d min.</string>
+    <string name="n_mins_secs">%1$d min. %2$02d sec.</string>
     <string name="n_sec">%d sec</string>
     <string name="n_seconds">%d seconds</string>
     <string name="name_request_canceled">You canceled your name change request</string>
