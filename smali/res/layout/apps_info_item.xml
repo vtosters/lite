@@ -28,7 +28,7 @@
             android:layout_weight="1.0"
             android:fontFamily="@string/font_family_regular"
             android:singleLine="true"
-            android:text="Играет 8 Ваших друзей"
+            android:text="@string/eight_friends"
             android:textColor="@color/subhead_gray"
             android:textSize="15.0sp" />
 

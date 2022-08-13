@@ -23,14 +23,14 @@
             android:layout_height="wrap_content"
             android:layout_marginRight="8.0dip"
             android:clickable="true"
-            android:text="Принять" />
+            android:text="@string/group_accept_member" />
 
         <TextView
             style="@style/VKUIButton.Primary"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:enabled="false"
-            android:text="Принять" />
+            android:text="@string/group_accept_member" />
     </LinearLayout>
 
     <TextView
@@ -52,14 +52,14 @@
             android:layout_height="wrap_content"
             android:layout_marginRight="8.0dip"
             android:clickable="true"
-            android:text="Отправить" />
+            android:text="@string/send" />
 
         <TextView
             style="@style/VKUIButton.Primary.Rounded"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:enabled="false"
-            android:text="Отправить" />
+            android:text="@string/send" />
     </LinearLayout>
 
     <TextView
@@ -81,14 +81,14 @@
             android:layout_height="wrap_content"
             android:layout_marginRight="8.0dip"
             android:clickable="true"
-            android:text="Отклонить" />
+            android:text="@string/vkim_msg_request_reject" />
 
         <TextView
             style="@style/VKUIButton.Secondary"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:enabled="false"
-            android:text="Отклонить" />
+            android:text="@string/vkim_msg_request_reject" />
     </LinearLayout>
 
     <TextView
@@ -110,14 +110,14 @@
             android:layout_height="wrap_content"
             android:layout_marginRight="8.0dip"
             android:clickable="true"
-            android:text="Убрать" />
+            android:text="@string/apps_remove_action" />
 
         <TextView
             style="@style/VKUIButton.Secondary.Rounded"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:enabled="false"
-            android:text="Убрать" />
+            android:text="@string/apps_remove_action" />
     </LinearLayout>
 
     <TextView
@@ -139,14 +139,14 @@
             android:layout_height="wrap_content"
             android:layout_marginRight="8.0dip"
             android:clickable="true"
-            android:text="Запросить" />
+            android:text="@string/vkim_request_money" />
 
         <TextView
             style="@style/VKUIButton.Muted"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:enabled="false"
-            android:text="Запросить" />
+            android:text="@string/vkim_request_money" />
     </LinearLayout>
 
     <TextView
@@ -168,14 +168,14 @@
             android:layout_height="wrap_content"
             android:layout_marginRight="8.0dip"
             android:clickable="true"
-            android:text="Удалить" />
+            android:text="@string/delete" />
 
         <TextView
             style="@style/VKUIButton.Muted.Rounded"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:enabled="false"
-            android:text="Удалить" />
+            android:text="@string/delete" />
     </LinearLayout>
 
     <TextView
@@ -197,14 +197,14 @@
             android:layout_height="wrap_content"
             android:layout_marginRight="8.0dip"
             android:clickable="true"
-            android:text="Подробнее" />
+            android:text="@string/accessibility_more" />
 
         <TextView
             style="@style/VKUIButton.Tertiary"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:enabled="false"
-            android:text="Подробнее" />
+            android:text="@string/accessibility_more" />
     </LinearLayout>
 
     <TextView
@@ -226,14 +226,14 @@
             android:layout_height="wrap_content"
             android:layout_marginRight="8.0dip"
             android:clickable="true"
-            android:text="Купить" />
+            android:text="@string/buy" />
 
         <TextView
             style="@style/VKUIButton.Outline"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:enabled="false"
-            android:text="Купить" />
+            android:text="@string/buy" />
     </LinearLayout>
 
     <TextView
@@ -255,14 +255,14 @@
             android:layout_height="wrap_content"
             android:layout_marginRight="8.0dip"
             android:clickable="true"
-            android:text="9 голосов" />
+            android:text="@string/nine_votes" />
 
         <TextView
             style="@style/VKUIButton.Green"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:enabled="false"
-            android:text="9 голосов" />
+            android:text="@string/nine_votes" />
     </LinearLayout>
 
     <TextView
@@ -286,13 +286,13 @@
             android:layout_height="wrap_content"
             android:layout_marginRight="8.0dip"
             android:clickable="true"
-            android:text="Слушать" />
+            android:text="@string/music_artist_listen_all_btn" />
 
         <TextView
             style="@style/VKUIButton.MediaOverlay"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:enabled="false"
-            android:text="Слушать" />
+            android:text="@string/music_artist_listen_all_btn" />
     </LinearLayout>
 </LinearLayout>
