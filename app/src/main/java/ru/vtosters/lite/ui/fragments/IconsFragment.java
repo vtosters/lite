@@ -64,7 +64,7 @@ public class IconsFragment extends MaterialPreferenceToolbarFragment {
         rgVK.setText("VK");
         rgVK.setTextColor(getTextAttr());
 
-        rgVKontakte.setText("ВКонтакте");
+        rgVKontakte.setText(AndroidUtils.getString("app_name_alter"));
         rgVKontakte.setTextColor(getTextAttr());
 
         rgVKontakte.setChecked(isZaboronaEnabled());
