@@ -165,6 +165,7 @@ public class StoryCircleImageView extends BorderedCircleImageView implements The
         } else if (this.z0 != null) {
             p();
         } else if (!this.w0) {
+
         } else {
             this.T = this.r0;
             setBorderAlpha(163);
