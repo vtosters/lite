@@ -129,7 +129,7 @@ public class VideoDownloader {
             return;
         }
 
-        if (!url.contains("//vk.com/video")) {
+        if (!url.contains("vk.com/video")) {
             ToastUtils.a(AndroidUtils.getString("video_dl_wrong_link"));
             return;
         }
