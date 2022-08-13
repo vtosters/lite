@@ -62,7 +62,7 @@
                 android:fontFamily="@font/roboto_medium"
                 android:gravity="center"
                 android:maxLines="1"
-                android:text="Установить VK Me"
+                android:text="@string/vkim_install_vk_me_button_text"
                 android:textAllCaps="false"
                 android:textColor="@color/vkui_primary_button_text"
                 android:textSize="15.0sp" />

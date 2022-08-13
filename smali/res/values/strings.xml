@@ -469,6 +469,7 @@ no results"</string>
     <string name="collection_add_empty_product">"You don't have any products. Add a product on the desktop version of VK, and then you can share it with your viewers."</string>
     <string name="collection_add_empty_product_action">More</string>
     <string name="collection_add_empty_selection">Nothing selected</string>
+    <string name="add_object">Add object</string>
     <string name="collection_add_good">Add product</string>
     <string name="collection_add_hint">Add content that you want to share with viewers during your live stream</string>
     <string name="collection_add_link">Add link</string>
@@ -3380,6 +3381,7 @@ the VK camera"</string>
     <string name="selected">Selected</string>
     <string name="selected_n">%,d selected</string>
     <item name="selection_radius_multiplier" type="string">0.16</item>
+    <string name="buy">Buy</string>
     <string name="send">Send</string>
     <string name="send_a_gift">Send a gift</string>
     <string name="send_b">Send</string>
@@ -5469,6 +5471,16 @@ with video"</string>
     <string name="your_feedback">Your feedback…</string>
     <string name="your_gender">Your gender:</string>
 
+    <string name="collection_item_hint_text">You can add items that you can share while streaming</string>
+    <string name="item_no_place_in_result_text">There is no place in the list</string>
+    <string name="watch_post_text">Watch post</string>
+    <string name="for_loading_from_network">to download from the network</string>
+    <string name="where_from_send">Where to withdraw</string>
+    <string name="where_to_send">Where to deposit</string>
+    <string name="any_bank_card">Card of any bank</string>
+    <string name="current_place_number">Current place number</string>
+    <string name="eight_friends">Your 8 friends are playing</string>
+
     <string name="vtlfeed">Feed</string>
     <string name="vtlinterface">Interface</string>
     <string name="vtlmedia">Media content</string>
@@ -6011,6 +6023,8 @@ May look like a fake leaving the online"</string>
     <string name="debug_no_ads_title">Disable ads</string>
     <string name="debug_proxy_enable_title">Proxy</string>
     <string name="debug_use_libverify_for_auth_title">Use libverify for authorization</string>
+
+    <string name="nine_votes">9 votes</string>
 
     <string name="DNR_ON">Enable Do Not Read</string>
     <string name="DNR_OFF">Disable Do Not Read</string>
