@@ -124,12 +124,12 @@ public class VideoDownloader {
     }
 
     public static void parseVideoLink(String url, Context ctx) {
-        if (url.startsWith("vk.com/story") || url.startsWith("http://vk.com/story") || url.startsWith("https://vk.com/story")) {
+        if (url.contains("vk.com/story")) {
             ToastUtils.a(AndroidUtils.getString("video_dl_stories_not_supported"));
             return;
         }
 
-        if (!url.startsWith("http://vk.com/video") || !url.startsWith("https://vk.com/video") || !url.startsWith("vk.com/video")) {
+        if (!url.contains("//vk.com/video")) {
             ToastUtils.a(AndroidUtils.getString("video_dl_wrong_link"));
             return;
         }
