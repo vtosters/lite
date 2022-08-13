@@ -86,7 +86,7 @@ public class MenuBuilder {
                 return Unit.a;
             });
 
-            addItem(builder, AndroidUtils.getString("menu_addon_info"), () -> {
+            addItem(builder, AndroidUtils.getString("menu_change_name"), () -> {
                 RenameTool.createDialogGroup(ecp, ctx);
                 return Unit.a;
             });
