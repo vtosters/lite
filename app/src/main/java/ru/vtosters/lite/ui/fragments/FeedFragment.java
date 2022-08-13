@@ -17,6 +17,7 @@ import com.vk.newsfeed.NewsfeedSettingsFragment;
 import com.vtosters.lite.general.fragments.MaterialPreferenceToolbarFragment;
 
 import ru.vtosters.lite.ui.components.NewsfeedListManager;
+import ru.vtosters.lite.utils.AndroidUtils;
 
 public class FeedFragment extends MaterialPreferenceToolbarFragment {
     @Override
@@ -39,9 +40,8 @@ public class FeedFragment extends MaterialPreferenceToolbarFragment {
         });
         var str = getDefaultPrefs().getString("news_feed_selected_items", "");
         findPreference("newsfeedlistmanager").setSummary(
-                "Скрыто "
-                + (!TextUtils.isEmpty(str) ? str.split(",").length : 0)
-                + " лент новостей");
+                String.format(AndroidUtils.getString("feed_hidden"), (!TextUtils.isEmpty(str) ? str.split(",").length : 0))
+        );
         findPreference("newsfeedlistmanager_reset").setOnPreferenceClickListener(preference -> {
             NewsfeedListManager.resetHideItems();
             return true;
@@ -53,9 +53,9 @@ public class FeedFragment extends MaterialPreferenceToolbarFragment {
         var count = text.split(", ").length;
 
         if (count < 1 || text.isEmpty()) {
-            return "Нет добавленных элементов";
+            return AndroidUtils.getString("feed_no_elements");
         } else {
-            return "Добавлено " + count + " элементов";
+            return String.format(AndroidUtils.getString("feed_elements_count"), count);
         }
     }
 

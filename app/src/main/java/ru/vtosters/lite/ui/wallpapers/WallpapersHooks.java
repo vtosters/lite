@@ -16,6 +16,8 @@ import android.widget.ImageView;
 
 import java.io.File;
 
+import ru.vtosters.lite.utils.AndroidUtils;
+
 public class WallpapersHooks {
     private static File mWallpaperFile;
 
@@ -91,13 +93,13 @@ public class WallpapersHooks {
         String radius = getPreferences().getString("msg_blur_radius", "disabled");
         switch (radius) {
             case "low":
-                return "Низкое";
+                return AndroidUtils.getString("wallpapers_low");
             case "med":
-                return "Среднее";
+                return AndroidUtils.getString("wallpapers_med");
             case "high":
-                return "Высокое";
+                return AndroidUtils.getString("wallpapers_high");
             default:
-                return "Отключено";
+                return AndroidUtils.getString("wallpapers_disabled");
         }
     }
 
@@ -105,11 +107,11 @@ public class WallpapersHooks {
         String radius = getPreferences().getString("msg_dim", "disabled");
         switch (radius) {
             case "dim_black":
-                return "Затемнить";
+                return AndroidUtils.getString("wallpapers_dim_black");
             case "dim_white":
-                return "Осветлить";
+                return  AndroidUtils.getString("wallpapers_dim_white");
             default:
-                return "Отключено";
+                return AndroidUtils.getString("wallpapers_disabled");
         }
     }
 
@@ -117,13 +119,13 @@ public class WallpapersHooks {
         String radius = getPreferences().getString("msg_mosaic", "disabled");
         switch (radius) {
             case "low":
-                return "Низкое";
+                return AndroidUtils.getString("wallpapers_low");
             case "med":
-                return "Среднее";
+                return AndroidUtils.getString("wallpapers_med");
             case "high":
-                return "Высокое";
+                return AndroidUtils.getString("wallpapers_high");
             default:
-                return "Отключено";
+                return AndroidUtils.getString("wallpapers_disabled");
         }
     }
 

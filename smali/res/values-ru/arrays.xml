@@ -651,4 +651,29 @@
         <item>15 апреля в 18:42:28</item>
         <item>15 апреля 2022 в 18:42:28</item>
     </string-array>
+    <string-array name="wallpaper_change_dialog">
+        <item>Доброе время</item>
+        <item>Доброе утро, день, вечер, ночь</item>
+        <item>Как живёшь?</item>
+        <item>Не мёртвый, и то хорошо</item>
+    </string-array>
+    <string-array name="cache_cleaner">
+        <item>Очистить весь кеш</item>
+        <item>Очистить кеш стикеров</item>
+        <item>Очистить кеш изображений</item>
+        <item>Очистить кеш видео</item>
+        <item>Очистить кеш сообщений</item>
+        <item>Очистить кеш WebView</item>
+    </string-array>
+    <string-array name="filter_types">
+        <item>Отключено</item>
+        <item>Низкое</item>
+        <item>Среднее</item>
+        <item>Высокое</item>
+    </string-array>
+    <string-array name="filter_dim_types">
+        <item>Отключено</item>
+        <item>Затемнить</item>
+        <item>Осветлить</item>
+    </string-array>
 </resources>

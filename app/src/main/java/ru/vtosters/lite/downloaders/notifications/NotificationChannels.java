@@ -12,8 +12,8 @@ import ru.vtosters.lite.utils.AndroidUtils;
 
 public class NotificationChannels {
     public static final String MUSIC_DOWNLOAD_CHANNEL_ID = "music_download_channel";
-    public static final String MUSIC_DOWNLOAD_CHANNEL_NAME = "Загрузка музыки";
-    public static final String MUSIC_DOWNLOAD_CHANNEL_DESCRIPTION = "Прогресс загрузки музыки";
+    public static final String MUSIC_DOWNLOAD_CHANNEL_NAME = AndroidUtils.getString("music_dl_title");
+    public static final String MUSIC_DOWNLOAD_CHANNEL_DESCRIPTION = AndroidUtils.getString("music_dl_progress");
 
     @RequiresApi(api = Build.VERSION_CODES.O)
     public static void createChannels() {

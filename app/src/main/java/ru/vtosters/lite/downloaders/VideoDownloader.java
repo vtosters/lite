@@ -28,6 +28,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
 
+import ru.vtosters.lite.utils.AndroidUtils;
 import ru.vtosters.lite.utils.ExternalLinkParser;
 
 public class VideoDownloader {
@@ -123,13 +124,13 @@ public class VideoDownloader {
     }
 
     public static void parseVideoLink(String url, Context ctx) {
-        if (url.contains("vk.com/story")) {
-            ToastUtils.a("Не поддерживается загрузка историй");
+        if (url.startsWith("vk.com/story") || url.startsWith("http://vk.com/story") || url.startsWith("https://vk.com/story")) {
+            ToastUtils.a(AndroidUtils.getString("video_dl_stories_not_supported"));
             return;
         }
 
-        if (!url.contains("vk.com/video")) {
-            ToastUtils.a("Неверная ссылка");
+        if (!url.startsWith("http://vk.com/video") || !url.startsWith("https://vk.com/video") || !url.startsWith("vk.com/video")) {
+            ToastUtils.a(AndroidUtils.getString("video_dl_wrong_link"));
             return;
         }
 
@@ -137,7 +138,7 @@ public class VideoDownloader {
         String ownerId = videoId.split("_")[0];
 
         final ProgressDialog progressDialog = new ProgressDialog(ctx);
-        progressDialog.setMessage("Обработка видео");
+        progressDialog.setMessage(AndroidUtils.getString("video_dl_progress"));
         progressDialog.show();
 
         makeRequest("https://" + "api.vk.com" + "/method/video.get?owner_id=" + ownerId + "&videos=" + videoId + "&v=5.99&access_token=" + getUserToken(),
@@ -153,7 +154,7 @@ public class VideoDownloader {
                         downloadVideo(videoFile, ctx);
                     } catch (JSONException e) {
                         e.printStackTrace();
-                        Toast.makeText(ctx, "Видео нельзя скачать", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(ctx, AndroidUtils.getString("video_dl_error"), Toast.LENGTH_SHORT).show();
                     }
                 });
     }

@@ -56,7 +56,7 @@ public class CacheUtils {
         size = IOUtils.getDirSize(getGlobalContext().getCacheDir());
 
         if (size >= getSizeForDelete()) {
-            if (dev()) sendToast("Кеш очищен");
+            if (dev()) sendToast(AndroidUtils.getString("cache_cleaned"));
             VKImageLoader.e();
             ImAudioMsgPlayerProvider.b().e(PlayerActionSources.a);
             ImAudioMsgPlayerProvider.b().d(PlayerActionSources.a);

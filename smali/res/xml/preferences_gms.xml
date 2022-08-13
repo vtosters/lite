@@ -1,43 +1,43 @@
 <?xml version="1.0" encoding="utf-8"?>
 <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
-    <PreferenceCategory android:title="О GMS">
+    <PreferenceCategory android:title="@string/gms_about">
         <Preference
             android:enabled="false"
-            android:summary="GMS - Google Mobile Services, необходимый компонент для нормальной работы приложений. Все уведомления, вход в игры, Google Play и прочие функции устройства используют этот компонент"
-            android:title="Что такое GMS?" />
+            android:summary="@string/gms_what_is_summ"
+            android:title="@string/gms_what_is_title" />
         <Preference
             android:enabled="false"
-            android:summary="GMS необходим для работы уведомлений, для работы музыки и ещё очень многих компонентов приложения"
-            android:title="Зачем мне нужен GMS для VTosters?" />
+            android:summary="@string/gms_why_need_summ"
+            android:title="@string/gms_why_need_title" />
     </PreferenceCategory>
-    <PreferenceCategory android:title="Как скачать?">
+    <PreferenceCategory android:title="@string/gms_how_to_download">
         <Preference
             android:enabled="false"
-            android:summary="Вам необходимо скачать MicroG."
-            android:title="Что тогда делать?" />
+            android:summary="@string/gms_what_to_do_then_summ"
+            android:title="@string/gms_what_to_do_then" />
         <Preference
             android:enabled="false"
-            android:summary="Это открытая альтернатива сервисам GMS с возможностью установить на устройство без GMS"
-            android:title="Что такое MicroG?" />
+            android:summary="@string/gms_what_is_microg_summ"
+            android:title="@string/gms_what_is_microg" />
         <Preference
             android:persistent="false"
-            android:title="Официальный сайт MicroG">
+            android:title="@string/gms_microg_site">
+            <intent
+                android:action="android.intent.action.VIEW"
+                android:data="https://microg.org/" />
+        </Preference>
+        <Preference
+            android:persistent="false"
+            android:title="@string/gms_download_microg">
             <intent
                 android:action="android.intent.action.VIEW"
                 android:data="https://microg.org/download.html" />
         </Preference>
-        <Preference
-            android:persistent="false"
-            android:title="Скачать MicroG">
-            <intent
-                android:action="android.intent.action.VIEW"
-                android:data="https://microg.org" />
-        </Preference>
     </PreferenceCategory>
-    <PreferenceCategory android:title="Что делать дальше?">
+    <PreferenceCategory android:title="@string/gms_what_to_do_next">
         <Preference
             android:enabled="false"
-            android:summary="Обновите регистрацию Firebase в прочих настройках"
-            android:title="Что делать после установки MicroG?" />
+            android:summary="@string/gms_what_to_do_after_microg_summ"
+            android:title="@string/gms_what_to_do_after_microg_title" />
     </PreferenceCategory>
 </PreferenceScreen>

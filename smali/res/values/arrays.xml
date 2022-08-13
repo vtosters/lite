@@ -853,4 +853,29 @@
         <item>noyear</item>
         <item>full</item>
     </string-array>
+    <string-array name="wallpaper_change_dialog">
+        <item>Good time</item>
+        <item>Good morning, afternoon, evening, night</item>
+        <item>How are you?</item>
+        <item>Not dead, that\'s good</item>
+    </string-array>
+    <string-array name="cache_cleaner">
+        <item>Clear all cache</item>
+        <item>Clear stickers cache</item>
+        <item>Clear images cache</item>
+        <item>Clear videos cache</item>
+        <item>Clear messages cache</item>
+        <item>Clear WebView cache</item>
+    </string-array>
+    <string-array name="filter_types">
+        <item>Disabled</item>
+        <item>Low</item>
+        <item>Average</item>
+        <item>High</item>
+    </string-array>
+    <string-array name="filter_dim_types">
+        <item>Disabled</item>
+        <item>Dim</item>
+        <item>Lighten</item>
+    </string-array>
 </resources>

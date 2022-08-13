@@ -23,6 +23,7 @@ import java.util.Set;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
+import ru.vtosters.lite.utils.AndroidUtils;
 import ru.vtosters.lite.utils.IOUtils;
 import ru.vtosters.lite.utils.Preferences;
 
@@ -42,7 +43,7 @@ public class BackupManager {
 
     public static void backupOnlines() throws IOException {
         if (getPrefContent("onlines.xml") == null) {
-            Toast.makeText(getGlobalContext(), "Нет данных для резервного копирования", LENGTH_SHORT).show();
+            Toast.makeText(getGlobalContext(), AndroidUtils.getString("no_data_to_backup"), LENGTH_SHORT).show();
             return;
         }
 
@@ -54,10 +55,10 @@ public class BackupManager {
             FileWriter out = new FileWriter(file);
             out.write(getPrefContent("onlines.xml"));
             out.close();
-            Toast.makeText(getGlobalContext(), "Сохранено в файл " + file.getAbsolutePath(), LENGTH_LONG).show();
+            Toast.makeText(getGlobalContext(), AndroidUtils.getString("backup_saved_in") + file.getAbsolutePath(), LENGTH_LONG).show();
         } catch (IOException e) {
             e.printStackTrace();
-            Toast.makeText(getGlobalContext(), "Не удалось сохранить файл", LENGTH_SHORT).show();
+            Toast.makeText(getGlobalContext(), AndroidUtils.getString("backup_save_error"), LENGTH_SHORT).show();
         }
     }
 
@@ -70,10 +71,10 @@ public class BackupManager {
             FileWriter out = new FileWriter(file);
             out.write(getPrefContent("com.vtosters.lite_preferences.xml"));
             out.close();
-            Toast.makeText(getGlobalContext(), "Сохранено в файл " + file.getAbsolutePath(), LENGTH_LONG).show();
+            Toast.makeText(getGlobalContext(), AndroidUtils.getString("backup_saved_in") + file.getAbsolutePath(), LENGTH_LONG).show();
         } catch (IOException e) {
             e.printStackTrace();
-            Toast.makeText(getGlobalContext(), "Не удалось сохранить файл", LENGTH_SHORT).show();
+            Toast.makeText(getGlobalContext(), AndroidUtils.getString("backup_save_error"), LENGTH_SHORT).show();
         }
     }
 

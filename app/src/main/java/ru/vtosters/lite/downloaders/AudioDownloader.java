@@ -31,7 +31,7 @@ public class AudioDownloader {
 
     public static void downloadM3U8(MusicTrack track) {
         if (track.D == null) {
-            ToastUtils.a("Не удалось найти ссылку на аудиозапись");
+            ToastUtils.a(AndroidUtils.getString("link_audio_error"));
             return;
         }
 
@@ -64,7 +64,7 @@ public class AudioDownloader {
                     var success = FFMpeg.convert(downloadPath, musicPath + File.separator + fileName + ".mp3");
                     if (success) {
                         notification
-                                .setContentText("Загрузка завершена")
+                                .setContentText(AndroidUtils.getString("player_download_finished"))
                                 .setProgress(0, 0, false)
                                 .setSmallIcon(android.R.drawable.stat_sys_download_done);
                         notificationManager.notify(tempId, notification.build());
@@ -72,7 +72,7 @@ public class AudioDownloader {
                         onFailure();
                     }
                 } catch (UnsatisfiedLinkError e) {
-                    Log.e("AudioDownloader", "Опять эти нативные либы");
+                    Log.e("AudioDownloader", "native libs");
                     Log.e("AudioDownloader", e.getMessage());
                     onFailure();
                 }
@@ -80,7 +80,7 @@ public class AudioDownloader {
 
             @Override
             public void onFailure() {
-                notification.setContentText("Не удалось загрузить аудиозапись").setProgress(0, 0, false);
+                notification.setContentText(AndroidUtils.getString("load_audio_error")).setProgress(0, 0, false);
                 notificationManager.notify(tempId, notification.build());
             }
 
@@ -109,7 +109,7 @@ public class AudioDownloader {
     private static NotificationCompat.Builder buildDownloadNotification(MusicTrack track, int id) {
         var notificationBuilder = new NotificationCompat.Builder(AndroidUtils.getGlobalContext(), NotificationChannels.MUSIC_DOWNLOAD_CHANNEL_ID)
                 .setSmallIcon(android.R.drawable.stat_sys_download)
-                .setContentTitle("Загрузка аудиозаписи")
+                .setContentTitle(AndroidUtils.getString("audio_downloading"))
                 .setContentText(track.toString())
                 .setPriority(NotificationCompat.PRIORITY_LOW)
                 .setCategory(NotificationCompat.CATEGORY_PROGRESS)
