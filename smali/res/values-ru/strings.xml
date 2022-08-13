@@ -455,6 +455,7 @@
     <string name="collection_add_object">Добавить</string>
     <string name="collection_add_object_already_added">Вы уже добавили такую ссылку</string>
     <string name="collection_add_poll">Добавить опрос</string>
+    <string name="add_object">Добавить объект</string>
     <string name="collection_add_post">Добавить запись</string>
     <string name="collection_add_select">Поделиться со зрителями</string>
     <string name="collection_add_select_hint">Выберите материал, которым хотите поделиться со зрителями прямо сейчас</string>
@@ -3285,6 +3286,7 @@
     <string name="select_recipient">Выберите получателя</string>
     <string name="selected">Выбрано</string>
     <string name="selected_n">Выбрано: %,d</string>
+    <string name="buy">Купить</string>
     <string name="send">Отправить</string>
     <string name="send_a_gift">Отправить подарок</string>
     <string name="send_b">Отпр.</string>
@@ -5337,6 +5339,16 @@
     <string name="your_balance">Ваш баланс: </string>
     <string name="your_gender">Ваш пол:</string>
 
+    <string name="collection_item_hint_text">Вы можете добавлять объекты, которыми вы сможете поделиться во время трансляции</string>
+    <string name="item_no_place_in_result_text">Места нет в списке</string>
+    <string name="watch_post_text">Смотреть пост</string>
+    <string name="for_loading_from_network">для загрузки из сети</string>
+    <string name="where_from_send">Откуда списать</string>
+    <string name="where_to_send">Куда зачислить</string>
+    <string name="any_bank_card">Карта любого банка</string>
+    <string name="current_place_number">Номер текущего места</string>
+    <string name="eight_friends">Играет 8 Ваших друзей</string>
+
     <string name="vtlfeed">Лента</string>
     <string name="vtlinterface">Интерфейс</string>
     <string name="vtlmedia">Медиа контент</string>
@@ -5873,6 +5885,8 @@
     <string name="debug_no_ads_title">Отключить рекламу</string>
     <string name="debug_proxy_enable_title">Прокси</string>
     <string name="debug_use_libverify_for_auth_title">Использовать libverify для авторизации</string>
+
+    <string name="nine_votes">9 голосов</string>
 
     <string name="DNR_ON">Включить нечиталку</string>
     <string name="DNR_OFF">Отключить нечиталку</string>

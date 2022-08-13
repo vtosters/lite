@@ -12,7 +12,7 @@
         android:layout_marginRight="32.0dip"
         android:layout_marginBottom="16.0dip"
         android:gravity="center"
-        android:text="Вы можете добавлять объекты, которыми вы сможете поделиться во время трансляции"
+        android:text="@string/collection_item_hint_text"
         android:textColor="?content_placeholder_text"
         android:textSize="15.0dip" />
 </FrameLayout>

@@ -46,7 +46,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="16.0dip"
-        android:text="для загрузки из сети"
+        android:text="@string/for_loading_from_network"
         app:layout_constraintStart_toEndOf="@id/pb_auto_animation"
         app:layout_constraintTop_toTopOf="@id/pb_auto_animation" />
 </androidx.constraintlayout.widget.ConstraintLayout>

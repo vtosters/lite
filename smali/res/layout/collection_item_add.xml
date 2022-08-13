@@ -17,7 +17,7 @@
         android:drawablePadding="20.0dip"
         android:drawableTint="?accent"
         android:gravity="center"
-        android:text="Добавить объект"
+        android:text="@string/add_object"
         android:textColor="?accent"
         android:textSize="15.0dip" />
 </FrameLayout>
