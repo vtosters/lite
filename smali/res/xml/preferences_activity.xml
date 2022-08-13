@@ -29,8 +29,8 @@
         <com.vtosters.lite.ui.MaterialSwitchPreference
             android:defaultValue="true"
             android:key="onlineformatter"
-            android:summary="Показывать статус пользователя с какого клиента сидит в онлайне"
-            android:title="Расширенный онлайн" />
+            android:summary="@string/onlineformatter_summ"
+            android:title="@string/onlineformatter_title" />
     </PreferenceCategory>
     <PreferenceCategory android:title="@string/dnr">
         <Preference
@@ -82,39 +82,39 @@
             android:key="read_s"
             android:title="@string/dns" />
     </PreferenceCategory>
-    <PreferenceCategory android:title="Голосовые сообщения">
+    <PreferenceCategory android:title="@string/voices_vtl">
         <Preference
             android:enabled="false"
-            android:summary="Функция позволяет вам не отправлять статус прослушивания вами голосовых сообщений собеседника"
+            android:summary="@string/disable_voice_listening_summ"
             android:title="@string/activity_what_is_it" />
         <com.vtosters.lite.ui.MaterialSwitchPreference
             android:defaultValue="false"
             android:key="listen_v"
-            android:title="Отключить статус прослушивания" />
+            android:title="@string/listen_v_title" />
     </PreferenceCategory>
-    <PreferenceCategory android:title="Скрытый онлайн VK Me">
+    <PreferenceCategory android:title="@string/vkme_online_vtl">
         <com.vtosters.lite.ui.MaterialSwitchPreference
             android:defaultValue="false"
             android:key="onlinefix"
-            android:summary="Показывать онлайн пользователей в профилях если у вас включен режим скрытия онлайна из VK Messenger"
-            android:title="Обходить онлайн" />
+            android:summary="@string/onlinefix_summ"
+            android:title="@string/onlinefix_title" />
         <com.vtosters.lite.ui.MaterialSwitchPreference
             android:defaultValue="false"
             android:key="globalUsersOnline"
-            android:summary="Может вызывать долгие загрузки разделов и большое потребление трафика \n\nНе рекомендуется включать данную функцию"
-            android:title="Глобальный обход онлайна" />
+            android:summary="@string/globalUsersOnline_summ"
+            android:title="@string/globalUsersOnline_title" />
     </PreferenceCategory>
     <PreferenceCategory android:title="@string/privacy_vtl">
         <com.vtosters.lite.ui.MaterialSwitchPreference
             android:defaultValue="false"
             android:key="savemsgsett"
-            android:summary="Сохранять положение тумблеров в настройках сообщений"
-            android:title="Сохранять настройки сообщений" />
+            android:summary="@string/savemsgsett_summ"
+            android:title="@string/savemsgsett_title" />
         <com.vtosters.lite.ui.MaterialSwitchPreference
             android:defaultValue="false"
             android:key="screenshotdetect"
-            android:summary="Отключить уведомление о том, что вы сделали скриншот"
-            android:title="Отключить детект скриншотов" />
+            android:summary="@string/screenshotdetect_summ"
+            android:title="@string/screenshotdetect_title" />
         <com.vtosters.lite.ui.MaterialSwitchPreference
             android:defaultValue="true"
             android:key="awayphp"
@@ -123,7 +123,7 @@
         <com.vtosters.lite.ui.MaterialSwitchPreference
             android:defaultValue="true"
             android:key="hideDeviceInfo"
-            android:summary="Отключить отправку информации об устройстве пользователя и вашем местоположении"
-            android:title="Отключить отправку метрики" />
+            android:summary="@string/hideDeviceInfo_summ"
+            android:title="@string/hideDeviceInfo_title" />
     </PreferenceCategory>
 </PreferenceScreen>

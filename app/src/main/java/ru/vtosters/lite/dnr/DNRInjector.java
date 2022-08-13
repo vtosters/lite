@@ -38,6 +38,7 @@ import okhttp3.Headers;
 import okhttp3.OkHttpClient;
 import okhttp3.Request;
 import ru.vtosters.lite.ui.dialogs.Translate;
+import ru.vtosters.lite.utils.AndroidUtils;
 
 public class DNRInjector {
     public static void inject(Dialog dialog, List<DialogAction> list) {
@@ -196,13 +197,13 @@ public class DNRInjector {
 
         if (action == MsgAction.valueOf("TRANSLATE")) {
             if (isTextExist && isReplyExist) {
-                Translate.showTranslatedText(context, text + "\n\nРеплай:\n" + reply);
+                Translate.showTranslatedText(context, text + "\n\n" + AndroidUtils.getString("translator_reply") + "\n" + reply);
             } else if (isReplyExist) {
-                Translate.showTranslatedText(context, "Реплай:\n" + reply);
+                Translate.showTranslatedText(context, AndroidUtils.getString("translator_reply") + "\n" + reply);
             } else if (isTextExist) {
                 Translate.showTranslatedText(context, text);
             } else {
-                sendToast("Нет текста для перевода");
+                sendToast(AndroidUtils.getString("translator_no_text"));
             }
         }
 
@@ -230,7 +231,7 @@ public class DNRInjector {
 
         thread.start();
 
-        sendToast("Диалог успешно " + (needToBePinned ? "закреплен" : "откреплен"));
+        sendToast(AndroidUtils.getString("pin_dialog") + (needToBePinned ? AndroidUtils.getString("dialog_pinned") : AndroidUtils.getString("dialog_unpinned")));
     }
 
     public static void setDnr(Dialog dialog, boolean value) {

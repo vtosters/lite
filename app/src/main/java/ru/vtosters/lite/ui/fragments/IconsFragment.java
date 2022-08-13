@@ -37,6 +37,8 @@ import androidx.core.content.res.ResourcesCompat;
 
 import com.vtosters.lite.general.fragments.MaterialPreferenceToolbarFragment;
 
+import ru.vtosters.lite.utils.AndroidUtils;
+
 public class IconsFragment extends MaterialPreferenceToolbarFragment {
     @SuppressLint("SetTextI18n")
     public static void callSelectDialog(Context ctx, String appicon) {
@@ -70,9 +72,9 @@ public class IconsFragment extends MaterialPreferenceToolbarFragment {
         rgDefault.setChecked(!isZaboronaEnabled());
 
         AlertDialog.Builder builder = new AlertDialog.Builder(ctx, getAlertStyle());
-        builder.setTitle("Выберите название приложения");
+        builder.setTitle(AndroidUtils.getString("app_name_select_title"));
         builder.setView(rg);
-        builder.setPositiveButton("Применить", ((dialog, which) -> {
+        builder.setPositiveButton(AndroidUtils.getString("vtl_confirm"), ((dialog, which) -> {
             var defname = preferences.getString("appname", "vt");
             var deficon = preferences.getString("selectedicon", "vt");
 
@@ -93,7 +95,7 @@ public class IconsFragment extends MaterialPreferenceToolbarFragment {
                 switchComponent(appicon, "vkontakte", deficon, defname);
             }
         }));
-        builder.setNegativeButton("Отмена", ((dialog, which) -> {
+        builder.setNegativeButton(AndroidUtils.getString("cancel"), ((dialog, which) -> {
             dialog.dismiss();
         }));
 
@@ -114,13 +116,13 @@ public class IconsFragment extends MaterialPreferenceToolbarFragment {
         this.addPreferencesFromResource(vtosterXml);
 
         if (!hasVerification() && !getBoolValue("dialogrecomm", false)) {
-            addPreference(this, "", "Доступны не все функции!", "Для разблокировки необходимо сделать пожертование от 99р", "ic_about_outline_28", preference -> {
+            addPreference(this, "", AndroidUtils.getString("icons_warning"), AndroidUtils.getString("icons_warning_info"), "ic_about_outline_28", preference -> {
                 getContext().startActivity(new Intent("android.intent.action.VIEW").setData(Uri.parse("https://vtosters.app")));
                 return false;
             });
         }
 
-        addPreferenceCategory(this, "Иконки");
+        addPreferenceCategory(this, AndroidUtils.getString("icons_title"));
 
         for (var i = 0; i < icons().size(); i++) {
             if (icons().get(i) == null || iconsValues().get(i) == null) return;
@@ -151,7 +153,7 @@ public class IconsFragment extends MaterialPreferenceToolbarFragment {
         }
 
         if (!hasVerification() && !getBoolValue("dialogrecomm", false)) {
-            addPreferenceCategory(this, "Недоступные иконки");
+            addPreferenceCategory(this, AndroidUtils.getString("unavailable_icons"));
 
             for (var i = 2; i < sIconsPlusNames.size(); i++) {
                 if (sIconsPlusNames.get(i) == null || sIconsPlus.get(i) == null) return;
@@ -176,7 +178,7 @@ public class IconsFragment extends MaterialPreferenceToolbarFragment {
                 }
 
                 addPreferenceDrawable(this, icon, iconname, "", drawable, preference -> {
-                    sendToast("Иконка доступна только обладателям верификации");
+                    sendToast(AndroidUtils.getString("unavailable_icon_warning"));
                     return false;
                 });
             }

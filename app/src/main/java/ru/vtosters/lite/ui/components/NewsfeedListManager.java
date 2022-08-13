@@ -12,6 +12,7 @@ import java.util.Collections;
 import java.util.LinkedHashSet;
 
 import ru.vtosters.lite.ui.vkui.VBottomSheetBuilder;
+import ru.vtosters.lite.utils.AndroidUtils;
 
 public class NewsfeedListManager {
 
@@ -21,7 +22,7 @@ public class NewsfeedListManager {
         var list = new ArrayList<VBListItem>();
 
         if (filtersSet.size() == 0) {
-            sendToast("Обновите ленту для получения списка доступных пунктов");
+            sendToast(AndroidUtils.getString("newsfeed_update_feed"));
             return;
         }
 
@@ -35,10 +36,10 @@ public class NewsfeedListManager {
         }
 
         VBottomSheetBuilder.show(activity, new VBottomSheetBuilder.VBSContent(
-                "Выберите пункты для скрытия",
+                AndroidUtils.getString("newsfeed_list_choose_to_hide"),
                 buildListOf(activity, list),
                 new VBottomSheetBuilder.VBSContent.VBSButton(
-                        "Сохранить",
+                        AndroidUtils.getString("save"),
                         () -> {
                             var newSelectedItems = "";
                             for (VBListItem item : list)
@@ -47,7 +48,7 @@ public class NewsfeedListManager {
                             getDefaultPrefs().edit()
                                     .putString("news_feed_selected_items", newSelectedItems)
                                     .apply();
-                            sendToast("Для применения изменений обновите ленту");
+                            sendToast(AndroidUtils.getString("newsfeed_list_update_feed_to_work"));
                         }
                 )
         ));
@@ -57,6 +58,6 @@ public class NewsfeedListManager {
         getDefaultPrefs().edit()
                 .putString("news_feed_selected_items", "")
                 .apply();
-        sendToast("Сброшены пункты для скрытия");
+        sendToast(AndroidUtils.getString("newsfeed_list_hidden_reseted"));
     }
 }

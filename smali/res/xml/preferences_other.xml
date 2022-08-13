@@ -7,7 +7,7 @@
             android:title="@string/firebasefix" />
         <Preference
             android:key="clearcache"
-            android:title="Очистка кеша приложения" />
+            android:title="@string/clearcache_other_title" />
         <Preference
             android:key="autoclearcache"
             android:title="@string/autoclearcache" />
@@ -21,29 +21,29 @@
             android:title="@string/killappbtn" />
         <Preference
             android:key="resetfolders"
-            android:title="Сбросить пути папок" />
+            android:title="@string/reset_folders_locations" />
         <Preference
             android:key="tokencopy"
             android:title="@string/copytokenbtn" />
         <Preference
             android:key="vk_admin_token"
-            android:title="Токен от VK Admin" />
+            android:title="@string/vk_admin_token_title" />
     </PreferenceCategory>
-    <PreferenceCategory android:title="Бэкапы">
+    <PreferenceCategory android:title="@string/vtl_other_backups_title">
         <Preference
             android:key="saveonlines"
-            android:summary="Сохранить список AppId и их названия в файл"
-            android:title="Сохранить список онлайнов" />
+            android:summary="@string/saveonlines_summ"
+            android:title="@string/saveonlines_title" />
         <Preference
             android:key="deleteprefs"
             android:summary="@string/other_reset_settings_summary"
             android:title="@string/other_reset_settings" />
         <Preference
             android:key="saveprefs"
-            android:title="Сохранить настройки" />
+            android:title="@string/saveprefs_title" />
         <Preference
             android:key="restoreprefs"
-            android:title="Восстановить настройки" />
+            android:title="@string/restoreprefs_title" />
     </PreferenceCategory>
     <PreferenceCategory android:title="@string/vtverify">
         <Preference

@@ -22,6 +22,8 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.Locale;
 
+import ru.vtosters.lite.utils.AndroidUtils;
+
 public class LogWriterService extends Service {
     public LogWriterService() {
     }
@@ -44,12 +46,12 @@ public class LogWriterService extends Service {
             writeLog(intent, file);
         } catch (Exception e) {
             e.printStackTrace();
-            makeText(getGlobalContext(), "Не удалось сохранить лог-файл", LENGTH_SHORT).show();
+            makeText(getGlobalContext(), AndroidUtils.getString("logfile_error"), LENGTH_SHORT).show();
         }
         var notificationId = intent.getIntExtra("notificationId", 1);
         var manager = (NotificationManager) getGlobalContext().getSystemService(Context.NOTIFICATION_SERVICE);
         manager.cancel(notificationId);
-        makeText(getGlobalContext(), "Лог-файл был сохранен", LENGTH_SHORT).show();
+        makeText(getGlobalContext(), AndroidUtils.getString("logfile_saved"), LENGTH_SHORT).show();
 
         stopSelf();
         return START_NOT_STICKY;

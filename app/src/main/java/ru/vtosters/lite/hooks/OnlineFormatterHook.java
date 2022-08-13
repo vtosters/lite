@@ -17,6 +17,8 @@ import org.json.JSONObject;
 import java.io.IOException;
 import java.text.ParseException;
 
+import ru.vtosters.lite.utils.AndroidUtils;
+
 public class OnlineFormatterHook {
     private static String AppName;
 
@@ -59,37 +61,37 @@ public class OnlineFormatterHook {
             case 5027722:
                 return "VK Messenger (Desktop)";
             case 6146827:
-                return "VK Мессенджер (Android)";
+                return AndroidUtils.getString("vk_messenger") + " (Android)"; // VK Мессенджер (Android)
             case 6482950:
-                return "VK Мессенджер (iPhone)";
+                return AndroidUtils.getString("vk_messenger") + " (iPhone)"; // VK Мессенджер (iPhone)
             case 6481715:
-                return "VK Мессенджер Dev (iPhone)";
+                return AndroidUtils.getString("vk_messenger") + " Dev (iPhone)"; // VK Мессенджер Dev (iPhone)
             case 7799655:
-                return "VK Почта";
+                return AndroidUtils.getString("vk_mail_online"); // VK Почта
             case 7598572:
-                return "Сферум (Android)";
+                return AndroidUtils.getString("sferum_online") + " (Android)"; // Сферум (Android)
             case 7571751:
-                return "Сферум (iPhone)";
+                return AndroidUtils.getString("sferum_online") + " (iPhone)"; // Сферум (iPhone)
             case 7556576:
-                return "Сферум";
+                return AndroidUtils.getString("sferum_online"); // Сферум
             case 7497650:
                 return "VK ID";
             case 8094476:
-                return "VK Звонки (Android)";
+                return AndroidUtils.getString("vk_calls_online") + " (Android)"; // VK Звонки (Android)
             case 8093730:
-                return "VK Звонки (iPhone)";
+                return AndroidUtils.getString("vk_calls_online") + " (iPhone)"; // VK Звонки (iPhone)
             case 7793118:
-                return "VK Звонки (Desktop)";
+                return AndroidUtils.getString("vk_calls_online") + " (Desktop)"; // VK Звонки (Desktop)
             case 6767438:
-                return "VK Музыка (Android)";
+                return AndroidUtils.getString("vk_music_online") + " (Android)"; // VK Музыка (Android)
             case 8113297:
-                return "VK Клипы (Android)";
+                return AndroidUtils.getString("vk_clips_online") + " (Android)"; // VK Клипы (Android)
             case 8106428:
-                return "VK Клипы (iPhone)";
+                return AndroidUtils.getString("vk_clips_online") + " (iPhone)"; // VK Клипы (iPhone)
             case 5044491:
                 return "Candy";
             case 8114066:
-                return "VK Видео";
+                return AndroidUtils.getString("vk_video_online"); // VK Видео
             case 4894723:
                 return "Phoenix Lite";
             case 4994316:
