@@ -1,7 +1,7 @@
 ---
 name: Feature request
 about: Предложение функции
-title: Предложение функции
+title: Улучшение голосовых сообщений
 labels: enhancement
 assignees: ''
 
