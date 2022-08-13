@@ -1,7 +1,7 @@
 ---
 name: Bug Report
 about: Заготовка для репорта багов
-title: Багрепорт
+title: Ошибка обновлении ленты новостей
 labels: bug
 assignees: ''
 
