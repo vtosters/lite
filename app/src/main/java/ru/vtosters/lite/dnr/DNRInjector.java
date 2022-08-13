@@ -1,5 +1,9 @@
 package ru.vtosters.lite.dnr;
 
+import static com.vk.im.engine.h.im_ic_done;
+import static com.vk.im.engine.h.im_ic_pinned_msg_hide;
+import static com.vk.im.engine.h.im_ic_pinned_msg_show;
+import static com.vk.im.engine.h.im_ic_write_msg;
 import static ru.vtosters.lite.dnr.DNRModule.hookDNR;
 import static ru.vtosters.lite.dnr.DNRModule.hookDNT;
 import static ru.vtosters.lite.dnr.DNRModule.isDnrEnabledFor;
@@ -8,18 +12,25 @@ import static ru.vtosters.lite.utils.AccountManagerUtils.getUserToken;
 import static ru.vtosters.lite.utils.AndroidUtils.getIdentifier;
 import static ru.vtosters.lite.utils.AndroidUtils.sendToast;
 
+import android.annotation.SuppressLint;
 import android.content.Context;
 import android.util.Log;
 
 import com.vk.core.network.Network;
+import com.vk.im.engine.ImEngine1;
+import com.vk.im.engine.events.OnDialogUpdateEvent;
+import com.vk.im.engine.models.EntityIntMap;
+import com.vk.im.engine.models.ProfilesSimpleInfo;
 import com.vk.im.engine.models.dialogs.Dialog;
 import com.vk.im.engine.models.messages.Msg;
 import com.vk.im.engine.models.messages.MsgFromUser;
 import com.vk.im.ui.components.common.DialogAction;
 import com.vk.im.ui.components.common.MsgAction;
 import com.vk.im.ui.components.viewcontrollers.popup.DelegateMsg;
+import com.vk.im.ui.views.dialog_actions.DialogActionsListView;
 
 import java.io.IOException;
+import java.util.ArrayList;
 import java.util.LinkedHashMap;
 import java.util.List;
 
@@ -54,10 +65,80 @@ public class DNRInjector {
         hashMap.put(DialogAction.valueOf("DNT_ON"), getIdentifier("DNT_ON", "string"));
         hashMap.put(DialogAction.valueOf("DNT_OFF"), getIdentifier("DNT_OFF", "string"));
 
-
-//        hashMap.put(DialogAction.valueOf("pinmsg"), getIdentifier("pinmsg", "string"));
-//        hashMap.put(DialogAction.valueOf("unpinmsg"), getIdentifier("unpinmsg", "string"));
+        hashMap.put(DialogAction.valueOf("pinmsg"), getIdentifier("pinmsg", "string"));
+        hashMap.put(DialogAction.valueOf("unpinmsg"), getIdentifier("unpinmsg", "string"));
         return hashMap;
+    }
+
+    @SuppressLint("ResourceType")
+    public static List<Object> injectToList(List<Object> actions) {
+        var list = new ArrayList<>(actions);
+
+        list.add(new DialogActionsListView.b.a(DialogAction.DNR_ON, 2, im_ic_pinned_msg_hide, getIdentifier("DNR_ON", "string"))); // DialogAction, Int, Icon, String
+        list.add(new DialogActionsListView.b.a(DialogAction.DNR_OFF, 2, im_ic_pinned_msg_show, getIdentifier("DNR_OFF", "string"))); // DialogAction, Int, Icon, String
+
+        list.add(new DialogActionsListView.b.a(DialogAction.DNT_ON, 2, im_ic_write_msg, getIdentifier("DNT_ON", "string"))); // DialogAction, Int, Icon, String
+        list.add(new DialogActionsListView.b.a(DialogAction.DNT_OFF, 2, im_ic_write_msg, getIdentifier("DNT_OFF", "string"))); // DialogAction, Int, Icon, String
+
+        list.add(new DialogActionsListView.b.a(DialogAction.MARK_AS_READ, 3, im_ic_done, getIdentifier("vkim_dialogs_list_option_mark_as_read", "string"))); // DialogAction, Int, Icon, String
+
+        return list;
+    }
+
+    public static void forceInvalidateDialogActions(Dialog d) {
+        EntityIntMap<Dialog> map = new EntityIntMap<>();
+        map.a(d.getId(), d);
+        ImEngine1.a().a(new OnDialogUpdateEvent(null, map));
+    }
+
+    public static List<DialogAction> injectToListAccess(List<DialogAction> actions, Dialog dialog, ProfilesSimpleInfo profilesSimpleInfo) {
+        var peerId = dialog.getId();
+
+        if (isDnrEnabledFor(peerId)) {
+            actions.add(DialogAction.DNR_OFF);
+        } else {
+            actions.add(DialogAction.DNR_ON);
+        }
+
+        if (isDntEnabledFor(peerId)) {
+            actions.add(DialogAction.DNT_OFF);
+        } else {
+            actions.add(DialogAction.DNT_ON);
+        }
+
+        actions.add(DialogAction.MARK_AS_READ);
+        return actions;
+    }
+
+    public static boolean onClickHeader(DialogAction action, Dialog dialog) {
+        var id = dialog.getId();
+
+        if (action == DialogAction.MARK_AS_READ) {
+            DNRModule.hookRead(dialog);
+            forceInvalidateDialogActions(dialog);
+        }
+
+        if (action == DialogAction.DNR_ON) {
+            setDnr(dialog, true);
+            forceInvalidateDialogActions(dialog);
+            return true;
+        } else if (action == DialogAction.DNR_OFF) {
+            setDnr(dialog, false);
+            forceInvalidateDialogActions(dialog);
+            return true;
+        }
+
+        if (action == DialogAction.DNT_ON) {
+            setDnt(dialog, true);
+            forceInvalidateDialogActions(dialog);
+            return true;
+        } else if (action == DialogAction.DNT_OFF) {
+            setDnt(dialog, false);
+            forceInvalidateDialogActions(dialog);
+            return true;
+        }
+
+        return false;
     }
 
     public static boolean onClick(Dialog dialog, DialogAction action) {

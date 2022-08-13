@@ -409,6 +409,10 @@
 
     move-result-object v0
 
+    invoke-static {v0}, Lru/vtosters/lite/dnr/DNRInjector;->injectToList(Ljava/util/List;)Ljava/util/List;
+
+    move-result-object v0
+    
     sput-object v0, Lcom/vk/im/ui/views/dialog_actions/DialogActionsListView;->B:Ljava/util/List;
 
     return-void

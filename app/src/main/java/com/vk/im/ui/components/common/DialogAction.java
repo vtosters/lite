@@ -33,5 +33,5 @@ public enum DialogAction {
     DNT_ON,
     DNT_OFF,
     pinmsg,
-    unpinmsg,
+    unpinmsg
 }
