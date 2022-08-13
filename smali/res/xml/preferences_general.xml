@@ -96,8 +96,8 @@
             android:title="@string/sett_clear_audio_cache" />
         <Preference
             android:enabled="false"
-            android:summary="Они переехали в настройки мода во вкладку Другое"
-            android:title="Где настройки кеша?" />
+            android:summary="@string/where_is_cache_settings_summ"
+            android:title="@string/where_is_cache_settings" />
         <com.vtosters.lite.ui.MaterialSectionDividerPreference />
     </PreferenceCategory>
 </PreferenceScreen>

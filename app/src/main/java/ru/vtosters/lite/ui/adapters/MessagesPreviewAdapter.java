@@ -23,9 +23,7 @@ public class MessagesPreviewAdapter extends RecyclerView.Adapter<MessagesPreview
     private static final int ME = 0x0;
     private static final int ANONYMOUS = -0x1;
 
-    private final String[] mMessages = {
-            "Доброе время", "Доброе утро, день, вечер. ночь", "Как живёшь?", "Не мёртвый, и то хорошо"
-    };
+    private final String[] mMessages = AndroidUtils.getArray("wallpaper_change_dialog");
 
     @Override
     public int getItemViewType(int i) {

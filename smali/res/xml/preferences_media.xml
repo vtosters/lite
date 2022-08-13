@@ -21,73 +21,73 @@
         <com.vtosters.lite.ui.MaterialSwitchPreference
             android:defaultValue="false"
             android:key="pollresults"
-            android:summary="Показывать результаты в опросах без участия в них"
-            android:title="Результаты опросов" />
+            android:summary="@string/pollresults_summ"
+            android:title="@string/pollresults_title" />
     </PreferenceCategory>
-    <PreferenceCategory android:title="Загрузки">
+    <PreferenceCategory android:title="@string/vtl_downloads_title">
         <Preference
             android:key="downloads_directory"
-            android:summary="Текущая папка: "
-            android:title="Папка для загрузок" />
+            android:summary="@string/current_download_folder"
+            android:title="@string/folder_for_downloads" />
         <Preference
             android:key="photos_directory"
-            android:summary="Текущая папка: "
-            android:title="Папка для фото" />
+            android:summary="@string/current_download_folder"
+            android:title="@string/folder_for_photos" />
         <Preference
             android:key="videos_directory"
-            android:summary="Текущая папка: "
-            android:title="Папка для видео" />
+            android:summary="@string/current_download_folder"
+            android:title="@string/folder_for_videos" />
         <Preference
             android:key="music_directory"
-            android:summary="Текущая папка: "
-            android:title="Папка для музыки" />
+            android:summary="@string/current_download_folder"
+            android:title="@string/folder_for_music" />
     </PreferenceCategory>
     <PreferenceCategory android:title="@string/sett_media">
         <com.vtosters.lite.ui.MaterialSwitchPreference
             android:defaultValue="true"
             android:key="compressPhotos"
-            android:summary="Отключение значительно улучшит качество загружаемых фотографий"
+            android:summary="@string/sett_compress_photo_summ"
             android:title="@string/sett_compress_photos" />
         <com.vtosters.lite.ui.MaterialSwitchPreference
             android:defaultValue="true"
             android:key="compressVideos"
-            android:summary="Отключение значительно улучшит качество загружаемых видео"
+            android:summary="@string/sett_compress_video_summ"
             android:title="@string/sett_compress_videos" />
     </PreferenceCategory>
     <PreferenceCategory android:title="Last.fm">
         <Preference
             android:key="lastfm_auth"
-            android:summary="Вы не вошли в аккаунт"
-            android:title="Аккаунт" />
+            android:summary="@string/lastfm_auth_summ"
+            android:title="@string/lastfm_auth_title" />
         <com.vtosters.lite.ui.MaterialSwitchPreference
             android:defaultValue="false"
             android:key="lastfm_enabled"
-            android:summary="Полезный сервис по учету прослушивания песен"
-            android:title="Включить скробблинг" />
+            android:summary="@string/lastfm_enabled_summ"
+            android:title="@string/lastfm_enabled_title" />
     </PreferenceCategory>
-    <PreferenceCategory android:title="Музыка">
+    <PreferenceCategory android:title="@string/vtl_music_settings">
         <com.vtosters.lite.ui.MaterialSwitchPreference
             android:defaultValue="true"
             android:key="musicnewcatalog"
-            android:summary="Новый каталог музыкального раздела с динамическим контентом"
-            android:title="Новый раздел музыки" />
+            android:summary="@string/musicnewcatalog_summ"
+            android:title="@string/musicnewcatalog_title" />
         <com.vtosters.lite.ui.SummaryListPreference
             android:defaultValue="default"
-            android:dialogTitle="Выберите раздел по умолчанию"
+            android:dialogTitle="@string/musicdefcatalog_dialogTitle"
             android:entries="@array/musicdefcatalog_value"
             android:entryValues="@array/musicdefcatalog"
             android:key="musicdefcatalog"
-            android:title="Раздел музыки по умолчанию" />
+            android:title="@string/musicdefcatalog_title" />
     </PreferenceCategory>
-    <PreferenceCategory android:title="Видео">
+    <PreferenceCategory android:title="@string/vtl_video_settings">
         <Preference
             android:key="download_video"
-            android:title="Скачать видео" />
+            android:title="@string/vtl_download_video_title" />
         <com.vtosters.lite.ui.MaterialSwitchPreference
             android:defaultValue="true"
             android:key="videonewcatalog"
-            android:summary="Новый каталог видео раздела с динамическим контентом"
-            android:title="Новый раздел видео" />
+            android:summary="@string/videonewcatalog_summ"
+            android:title="@string/videonewcatalog_title" />
         <com.vtosters.lite.ui.MaterialSwitchPreference
             android:defaultValue="false"
             android:key="isEnableExternalOpening"
@@ -100,13 +100,13 @@
             android:title="@string/interfacevideorec" />
         <Preference
             android:key="clearvideohistory"
-            android:summary="Очистка истории просмотра видео удалит все видео из истории просмотра и рекомендации основанные на них"
-            android:title="Очистить историю видео" />
+            android:summary="@string/clearvideohistory_summ"
+            android:title="@string/clearvideohistory_title" />
     </PreferenceCategory>
-    <PreferenceCategory android:title="Фото">
+    <PreferenceCategory android:title="@string/vtl_photo_settings">
         <Preference
             android:key="select_photo_search_engine"
-            android:title="Выбор движка для поиска фото" />
+            android:title="@string/photo_search_engine_title" />
     </PreferenceCategory>
     <PreferenceCategory android:title="@string/vkx_title">
         <Preference

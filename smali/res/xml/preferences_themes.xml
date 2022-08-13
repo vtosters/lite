@@ -4,8 +4,8 @@
         <com.vtosters.lite.ui.MaterialSwitchPreference
             android:defaultValue="true"
             android:key="milkshake"
-            android:summary="Глобальный редизайн ВКонтакте как на новых версиях"
-            android:title="Милкшейк" />
+            android:summary="@string/milkshake_summ"
+            android:title="@string/milkshake_title" />
         <Preference
             android:enabled="false"
             android:summary="@string/appearance_theme_info_summary"
@@ -25,7 +25,7 @@
             android:key="lighttheme"
             android:title="@string/appearance_theme_light_theme" />
     </PreferenceCategory>
-    <PreferenceCategory android:title="Докбар">
+    <PreferenceCategory android:title="@string/vtl_settings_dockbar_title">
         <com.vtosters.lite.ui.MaterialSwitchPreference
             android:defaultValue="true"
             android:key="dockbar_tab_titles"
@@ -33,7 +33,7 @@
         <com.vtosters.lite.ui.MaterialSwitchPreference
             android:defaultValue="true"
             android:key="dockbar_accent"
-            android:title="Использовать акцент для иконок" />
+            android:title="@string/dockbar_accent_title" />
         <com.vtosters.lite.ui.MaterialSwitchPreference
             android:defaultValue="true"
             android:key="dockcounter"
@@ -43,8 +43,8 @@
     <PreferenceCategory android:title="@string/vtlother">
         <Preference
             android:key="iconmanager"
-            android:summary="Большой выбор иконок для приложения"
-            android:title="Выбрать иконку приложения" />
+            android:summary="@string/iconmanager_summ"
+            android:title="@string/iconmanager_title" />
         <com.vtosters.lite.ui.MaterialSwitchPreference
             android:defaultValue="true"
             android:key="navbar"

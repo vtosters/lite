@@ -11,6 +11,7 @@ import androidx.preference.Preference;
 import com.vtosters.lite.general.fragments.MaterialPreferenceToolbarFragment;
 
 import ru.vtosters.lite.ui.dialogs.RoundingSeekbarDialog;
+import ru.vtosters.lite.utils.AndroidUtils;
 
 public class InterfaceFragment extends MaterialPreferenceToolbarFragment {
     @Override
@@ -31,9 +32,9 @@ public class InterfaceFragment extends MaterialPreferenceToolbarFragment {
         });
 
         if (getPreferences().getInt("pic_rounding", 0) == 0) {
-            findPreference("customrounding").setSummary("Отключено");
+            findPreference("customrounding").setSummary(AndroidUtils.getString("disabled"));
         } else {
-            findPreference("customrounding").setSummary("Размер закругления: " + getPreferences().getInt("pic_rounding", 0) + "dp");
+            findPreference("customrounding").setSummary(String.format(AndroidUtils.getString("rounding_size"), getPreferences().getInt("pic_rounding", 0)));
         }
     }
 

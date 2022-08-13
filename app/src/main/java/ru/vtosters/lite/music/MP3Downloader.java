@@ -34,7 +34,7 @@ public class MP3Downloader {
     public static void execute(MusicTrack track) {
         var token = AndroidUtils.getPreferences().getString("vk_admin_token", "");
         if (token.isEmpty()) {
-            Toast.makeText(AndroidUtils.getGlobalContext(), "Обновите токен VK Admin в настройках", Toast.LENGTH_SHORT).show();
+            Toast.makeText(AndroidUtils.getGlobalContext(), AndroidUtils.getString("update_vk_admin_token"), Toast.LENGTH_SHORT).show();
             return;
         }
         var request = new Request.a()

@@ -73,7 +73,7 @@ public class JsonInjectors {
     }
 
     public static JSONObject donateRecomm() throws JSONException {
-        var title = "Помоги проекту донатом и получи бонус!";
+        var title = AndroidUtils.getString("donate_to_vtl");
         var link = "https://vk.com/vtosters_official";
         var text_color = "2D81E0";
 
@@ -114,7 +114,7 @@ public class JsonInjectors {
     }
 
     public static JSONObject vktesters(int id) throws JSONException {
-        var title = "Карточка Тестера";
+        var title = AndroidUtils.getString("tester_profile");
         var text_color = "2D81E0";
         var link = "https://static.vk.com/bugs?lang=" + LangUtils.a() + "#/reporter" + id;
 
@@ -158,7 +158,7 @@ public class JsonInjectors {
         var peerid = Objects.requireNonNull(orig.optJSONObject("peer")).optInt("id");
 
         var pic = "https://image.pngaaa.com/641/326641-middle.png"; // can be null
-        var text = "Я не загрузил данные (9(9((";
+        var text = AndroidUtils.getString("no_data_error");
         var link = "https://vtosters.app"; // can be null
         var linktitle = "Test button"; // can be null
 
@@ -175,9 +175,9 @@ public class JsonInjectors {
         if (!hasIcon) icon = "";
         if (!hasButton) buttons = "";
 
-        if (isVerified(peerid)) text = "Я купил VTosters Premium";
-        if (isPrometheus(peerid)) text = "Я купил VTosters Premium Gold Prime Pro Plus";
-        if (isDeveloper(peerid)) text = "Я создал говно";
+        if (isVerified(peerid)) text = AndroidUtils.getString("i_bought") + " VTosters Premium";
+        if (isPrometheus(peerid)) text = AndroidUtils.getString("i_bought") + " VTosters Premium Gold Prime Pro Plus";
+        if (isDeveloper(peerid)) text = AndroidUtils.getString("i_created_poop");
         if (!isVerified(peerid) || text.equals("")) {
             if (getBoolValue("convBarRecomm", false)) {
                 return null;

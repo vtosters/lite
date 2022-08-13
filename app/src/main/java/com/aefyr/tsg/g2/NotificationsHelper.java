@@ -16,6 +16,7 @@ import com.aefyr.tsg.g2.stickersgrabber.TelegramStickersGrabber;
 import java.util.HashMap;
 import java.util.concurrent.atomic.AtomicLong;
 
+import ru.vtosters.lite.utils.AndroidUtils;
 
 /**
  * Created by Aefyr on 20.05.2018.
@@ -39,7 +40,7 @@ public class NotificationsHelper {
         downloadingPacksNotificationsIds = new HashMap<>();
 
         if (oreo()) {
-            NotificationChannel notificationChan = new NotificationChannel(NOTIFICATION_CHANNEL_ID, "Сервис стикеров Telegram в VTLite", NotificationManager.IMPORTANCE_HIGH);
+            NotificationChannel notificationChan = new NotificationChannel(NOTIFICATION_CHANNEL_ID, AndroidUtils.getString("telegram_stickers_service"), NotificationManager.IMPORTANCE_HIGH);
             ((NotificationManager) c.getSystemService(Context.NOTIFICATION_SERVICE)).createNotificationChannel(notificationChan);
         }
     }
@@ -49,8 +50,8 @@ public class NotificationsHelper {
         downloadingPacksNotificationsIds.put(pack, notificationId);
 
         Notification.Builder builder = commonBuilder();
-        builder.setContentTitle(pack.state == TelegramStickersPack.DOWNLOADING ? pack.title + ": загрузка" : pack.title + ": обновление");
-        builder.setContentText("Получение информации");
+        builder.setContentTitle(pack.state == TelegramStickersPack.DOWNLOADING ? pack.title + AndroidUtils.getString("telegram_stickers_downloading") : pack.title + AndroidUtils.getString("telegram_stickers_updating"));
+        builder.setContentText(AndroidUtils.getString("telegram_stickers_gettinginfo"));
         builder.setOngoing(true);
 
         manager.notify(notificationId, builder.build());
@@ -63,7 +64,7 @@ public class NotificationsHelper {
         lastNotificationTime.set(System.currentTimeMillis());
 
         Notification.Builder builder = commonBuilder();
-        builder.setContentTitle(pack.state == TelegramStickersPack.DOWNLOADING ? pack.title + ": загрузка" : pack.title + ": обновление");
+        builder.setContentTitle(pack.state == TelegramStickersPack.DOWNLOADING ? pack.title + AndroidUtils.getString("telegram_stickers_downloading") : pack.title + AndroidUtils.getString("telegram_stickers_updating"));
         builder.setContentText(downloadProgress + "/" + pack.stickersCount);
         builder.setProgress(pack.stickersCount, downloadProgress, false);
         builder.setOngoing(true);
@@ -77,13 +78,13 @@ public class NotificationsHelper {
         Notification.Builder builder = commonBuilder();
         builder.setProgress(0, 0, false);
         builder.setOngoing(false);
-        builder.setContentTitle("Сервис стикеров Telegram в VTLite");
+        builder.setContentTitle(AndroidUtils.getString("telegram_stickers_service"));
 
         String text;
         if (success)
-            text = wasUpdate ? pack.title + " успешно обновлен" : pack.title + " успешно загружен";
+            text = wasUpdate ? pack.title + AndroidUtils.getString("telegram_stickers_updated") : pack.title + AndroidUtils.getString("telegram_stickers_downloaded");
         else
-            text = wasUpdate ? pack.title + ": ошибка при обновлении" : pack.title + ": ошибка при загрузке";
+            text = wasUpdate ? pack.title + AndroidUtils.getString("telegram_stickers_error_update") : pack.title + AndroidUtils.getString("telegram_stickers_error_download");
 
         if (e instanceof TelegramStickersGrabber.TSGException) {
             text = pack.title + ": " + e.getMessage();

@@ -42,6 +42,7 @@ import okhttp3.Request;
 import ru.vtosters.lite.downloaders.VideoDownloader;
 import ru.vtosters.lite.music.Scrobbler;
 import ru.vtosters.lite.ui.adapters.ImagineArrayAdapter;
+import ru.vtosters.lite.utils.AndroidUtils;
 import ru.vtosters.lite.utils.FileUriUtils;
 import ru.vtosters.lite.utils.Preferences;
 
@@ -113,19 +114,19 @@ public class MediaFragment extends MaterialPreferenceToolbarFragment {
         });
 
         findPreference("downloads_directory").setSummary(
-                "Текущая папка: " + Preferences.getDownloadsDir()
+                AndroidUtils.getString("current_download_folder") + " " + Preferences.getDownloadsDir()
         );
 
         findPreference("photos_directory").setSummary(
-                "Текущая папка: " + Preferences.getPhotosDir()
+                AndroidUtils.getString("current_download_folder") + " " + Preferences.getPhotosDir()
         );
 
         findPreference("videos_directory").setSummary(
-                "Текущая папка: " + Preferences.getVideosDir()
+                AndroidUtils.getString("current_download_folder") + " " + Preferences.getVideosDir()
         );
 
         findPreference("music_directory").setSummary(
-                "Текущая папка: " + Preferences.getMusicDir()
+                AndroidUtils.getString("current_download_folder") + " " + Preferences.getMusicDir()
         );
 
         findPreference("downloads_directory").setOnPreferenceClickListener(preference -> {
@@ -157,7 +158,7 @@ public class MediaFragment extends MaterialPreferenceToolbarFragment {
         });
 
         if (isLoggedIn()) {
-            findPreference("lastfm_auth").setSummary("Вы авторизованы как " + Scrobbler.getUserName());
+            findPreference("lastfm_auth").setSummary(AndroidUtils.getString("lastfm_authorized_as") + Scrobbler.getUserName());
         } else {
             findPreference("lastfm_enabled").setEnabled(false);
         }
@@ -191,7 +192,7 @@ public class MediaFragment extends MaterialPreferenceToolbarFragment {
         linearLayout.setOrientation(LinearLayout.VERTICAL);
 
         final EditText fn = new EditText(ctx);
-        fn.setHint("Логин");
+        fn.setHint(AndroidUtils.getString("lastfm_login"));
         fn.setTextColor(getTextAttr());
         fn.setHintTextColor(getSTextAttr());
         fn.setBackgroundTintList(ColorStateList.valueOf(getAccentColor()));
@@ -202,7 +203,7 @@ public class MediaFragment extends MaterialPreferenceToolbarFragment {
         fn.setLayoutParams(margin);
 
         final EditText ln = new EditText(ctx);
-        ln.setHint("Пароль");
+        ln.setHint(AndroidUtils.getString("lastfm_password"));
         ln.setTextColor(getTextAttr());
         ln.setHintTextColor(getSTextAttr());
         ln.setBackgroundTintList(ColorStateList.valueOf(getAccentColor()));
@@ -211,10 +212,10 @@ public class MediaFragment extends MaterialPreferenceToolbarFragment {
         ln.setLayoutParams(margin);
 
         AlertDialog.Builder alertDialog = new AlertDialog.Builder(ctx, getAlertStyle());
-        alertDialog.setTitle("Введите логин и пароль");
+        alertDialog.setTitle(AndroidUtils.getString("lastfm_enter_credentials"));
 
         alertDialog.setView(linearLayout);
-        alertDialog.setPositiveButton("Войти", (dialog, which) -> {
+        alertDialog.setPositiveButton(AndroidUtils.getString("lastfm_enter"), (dialog, which) -> {
             String login = fn.getText().toString();
             String pass = ln.getText().toString();
 
@@ -227,12 +228,12 @@ public class MediaFragment extends MaterialPreferenceToolbarFragment {
 
     private void logout(Context ctx) {
         VkAlertDialog.Builder alertDialog = new VkAlertDialog.Builder(ctx);
-        alertDialog.setTitle("Вы уверены?");
-        alertDialog.setMessage("Вы действительно хотите выйти из аккаунта?");
-        alertDialog.setPositiveButton("Да", (dialog, which) -> {
+        alertDialog.setTitle(AndroidUtils.getString("lastfm_logout_title"));
+        alertDialog.setMessage(AndroidUtils.getString("lastfm_logout_confirm"));
+        alertDialog.setPositiveButton(AndroidUtils.getString("vkim_yes"), (dialog, which) -> {
             Scrobbler.logout();
         });
-        alertDialog.setNeutralButton("Нет", (dialog, which) -> {
+        alertDialog.setNeutralButton(AndroidUtils.getString("vkim_no"), (dialog, which) -> {
             dialog.cancel();
         });
         var alert = alertDialog.create();
@@ -262,12 +263,12 @@ public class MediaFragment extends MaterialPreferenceToolbarFragment {
 
         thread.start();
 
-        sendToast("История просмотра видео очищена");
+        sendToast(AndroidUtils.getString("video_history_cleaned"));
     }
 
     public static void download(Context ctx) {
         AlertDialog.Builder alertDialog = new AlertDialog.Builder(ctx, getAlertStyle());
-        alertDialog.setTitle("Введите ссылку на видео");
+        alertDialog.setTitle(AndroidUtils.getString("video_dl_enter_link"));
 
         final EditText input = new EditText(ctx);
         LinearLayout.LayoutParams lp = new LinearLayout.LayoutParams(
@@ -277,7 +278,7 @@ public class MediaFragment extends MaterialPreferenceToolbarFragment {
         input.setTextColor(getTextAttr());
         input.setBackgroundTintList(ColorStateList.valueOf(getAccentColor()));
         alertDialog.setView(input);
-        alertDialog.setPositiveButton("Скачать", (dialog, which) -> VideoDownloader.parseVideoLink(input.getText().toString(), ctx));
+        alertDialog.setPositiveButton(AndroidUtils.getString("download"), (dialog, which) -> VideoDownloader.parseVideoLink(input.getText().toString(), ctx));
         var alert = alertDialog.create();
         alert.show();
         alert.getButton(DialogInterface.BUTTON_POSITIVE).setTextColor(getAccentColor());

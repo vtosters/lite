@@ -152,7 +152,7 @@ public class RenameTool {
         linearLayout.setOrientation(LinearLayout.VERTICAL);
 
         final EditText fn = new EditText(ctx);
-        fn.setHint("Имя");
+        fn.setHint(AndroidUtils.getString("vk_auth_sign_up_first_name"));
         fn.setTextColor(getTextAttr());
         fn.setHintTextColor(getSTextAttr());
         fn.setBackgroundTintList(ColorStateList.valueOf(getAccentColor()));
@@ -163,7 +163,7 @@ public class RenameTool {
         fn.setLayoutParams(margin);
 
         final EditText ln = new EditText(ctx);
-        ln.setHint("Фамилия");
+        ln.setHint(AndroidUtils.getString("vk_auth_sign_up_last_name"));
         ln.setTextColor(getTextAttr());
         ln.setHintTextColor(getSTextAttr());
         ln.setBackgroundTintList(ColorStateList.valueOf(getAccentColor()));
@@ -178,8 +178,8 @@ public class RenameTool {
         int id = AccountManagerUtils.getUserID(profile);
 
         AlertDialog.Builder builder = new AlertDialog.Builder(ctx, getAlertStyle());
-        builder.setTitle("Смена имени");
-        builder.setMessage("Это локальное изменение, которое будет отображатся только в данном клиенте.");
+        builder.setTitle(AndroidUtils.getString("rename_title"));
+        builder.setMessage(AndroidUtils.getString("rename_message"));
         builder.setView(linearLayout);
         builder.setPositiveButton("OK", (dialog, which) -> {
             String firstName = fn.getText().toString();
@@ -197,19 +197,20 @@ public class RenameTool {
                 }
                 ctx.sendBroadcast(new Intent("com.vkontakte.android.ACTION_PROFILE_UPDATED").putExtra("uid", id));
 
-                sendToast("Пользователь успешно переименован!");
+                sendToast(AndroidUtils.getString("rename_success"));
             } catch (Exception e) {
                 e.printStackTrace();
+                sendToast(AndroidUtils.getString("rename_error"));
             }
         });
-        if (isChangedName(id)) builder.setNeutralButton("Сбросить", (dialog, which) -> {
+        if (isChangedName(id)) builder.setNeutralButton(AndroidUtils.getString("rename_reset"), (dialog, which) -> {
             getHelper().getWritableDatabase().execSQL(String.format("DELETE FROM %s WHERE %s='%s'", TABLE_NAME, COLUMN_VKID, id));
             if (id == AccountManagerUtils.getUserId()) {
                 ctx.sendBroadcast(new Intent("com.vkontakte.android.USER_NAME_CHANGED"));
             }
             updateRequested = true;
             ctx.sendBroadcast(new Intent("com.vkontakte.android.ACTION_PROFILE_UPDATED").putExtra("uid", id));
-            sendToast("Пользователь успешно удален из базы данных!");
+            sendToast(AndroidUtils.getString("rename_remove_from_bd_success"));
         });
 
         var alert = builder.create();
@@ -225,7 +226,7 @@ public class RenameTool {
         linearLayout.setOrientation(LinearLayout.VERTICAL);
 
         final EditText fn = new EditText(ctx);
-        fn.setHint("Имя");
+        fn.setHint(AndroidUtils.getString("vk_auth_sign_up_first_name"));
         fn.setHintTextColor(getSTextAttr());
         fn.setTextColor(getTextAttr());
         fn.setBackgroundTintList(ColorStateList.valueOf(getAccentColor()));
@@ -244,8 +245,8 @@ public class RenameTool {
         final int id = fid;
 
         AlertDialog.Builder builder = new AlertDialog.Builder(ctx, getAlertStyle());
-        builder.setTitle("Смена имени");
-        builder.setMessage("Это локальное изменение, которое будет отображатся только в данном клиенте");
+        builder.setTitle(AndroidUtils.getString("rename_title"));
+        builder.setMessage(AndroidUtils.getString("rename_message"));
         builder.setView(linearLayout);
         builder.setPositiveButton("OK", (dialog, which) -> {
             String firstName = fn.getText().toString();
@@ -257,15 +258,15 @@ public class RenameTool {
                     writableDatabase.execSQL(String.format("INSERT INTO %s (%s, %s) VALUES (%s, '%s')", TABLE_NAME_GROUP, COLUMN_VKID, COLUMN_NAME, id, URLEncoder.encode(firstName, "UTF-8")));
                 }
                 updateRequested = true;
-                sendToast("Сообщество успешно переименовано!");
+                sendToast(AndroidUtils.getString("rename_group_success"));
             } catch (Exception e) {
                 e.printStackTrace();
             }
         });
-        if (isChangedNameGroup(id)) builder.setNeutralButton("Сбросить", (dialog, which) -> {
+        if (isChangedNameGroup(id)) builder.setNeutralButton(AndroidUtils.getString("rename_reset"), (dialog, which) -> {
             getHelper().getWritableDatabase().execSQL(String.format("DELETE FROM %s WHERE %s='%s'", TABLE_NAME_GROUP, COLUMN_VKID, id));
             updateRequested = true;
-            sendToast("Сообщество успешно удалено из базы данных!");
+            sendToast(AndroidUtils.getString("rename_remove_group_from_bd_success"));
         });
 
         var alert = builder.create();

@@ -27,11 +27,12 @@ import com.vk.auth.ui.VkAuthTextView;
 import com.vk.navigation.Navigator;
 
 import ru.vtosters.lite.ui.fragments.ProxySettingsFragment;
+import ru.vtosters.lite.utils.AndroidUtils;
 
 public class ProxyHook {
     public static void hookAuth(View v) {
         VkAuthTextView button = (VkAuthTextView) v;
-        button.setText("Настроить прокси");
+        button.setText(AndroidUtils.getString("proxy_setup"));
         button.setOnClickListener(v1 -> callProxyDialog(v1.getContext()));
     }
 
@@ -50,20 +51,20 @@ public class ProxyHook {
 
         rg.setPadding(dp2px(18f), dp2px(12f), dp2px(18f), 0);
 
-        rgDefault.setText("Отключить");
+        rgDefault.setText(AndroidUtils.getString("proxy_disable"));
         rgDefault.setTextColor(getTextAttr());
 
-        rgProxy.setText("Включить (Zaborona)");
+        rgProxy.setText(AndroidUtils.getString("proxy_enable") + " (Zaborona)");
         rgProxy.setTextColor(getTextAttr());
 
         rgProxy.setChecked(isZaboronaEnabled());
         rgDefault.setChecked(!isZaboronaEnabled());
 
         AlertDialog.Builder builder = new AlertDialog.Builder(ctx, getAlertStyle());
-        builder.setTitle("Прокси");
-        builder.setMessage("Zaborona никак не связана с ВТостерс и мы не можем гарантировать её работу и безопасность");
+        builder.setTitle(AndroidUtils.getString("vtlproxy"));
+        builder.setMessage(AndroidUtils.getString("proxy_warning"));
         builder.setView(rg);
-        builder.setPositiveButton("Применить", ((dialog, which) -> {
+        builder.setPositiveButton(AndroidUtils.getString("vtl_confirm"), ((dialog, which) -> { // Применить
             if (rgProxy.isChecked()) {
                 edit().putString("proxy", "zaborona").commit();
                 restartApplication();
@@ -77,7 +78,7 @@ public class ProxyHook {
             }
         }));
 
-        builder.setNeutralButton("Настройки прокси", ((dialog, which) -> {
+        builder.setNeutralButton(AndroidUtils.getString("proxy_settings"), ((dialog, which) -> {
             Intent a2 = new Navigator(ProxySettingsFragment.class).b(ctx);
             a2.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
             ctx.startActivity(a2);

@@ -15,6 +15,7 @@ import androidx.appcompat.widget.SwitchCompat;
 
 import com.vk.core.dialogs.alert.VkAlertDialog;
 
+import ru.vtosters.lite.utils.AndroidUtils;
 import ru.vtosters.lite.utils.LayoutUtils;
 
 public class MessageSettings {
@@ -50,12 +51,12 @@ public class MessageSettings {
         four.setTextSize(TypedValue.COMPLEX_UNIT_PX, dp2px(14f));
         five.setTextSize(TypedValue.COMPLEX_UNIT_PX, dp2px(14f));
 
-        zero.setText("Отключить");
-        one.setText("15 секунд");
-        two.setText("1 минута");
-        three.setText("5 минут");
-        four.setText("1 час");
-        five.setText("24 часа");
+        zero.setText(AndroidUtils.getString("proxy_disable")); // Отключить
+        one.setText(AndroidUtils.getString("message_self_destruct_15sec"));
+        two.setText(AndroidUtils.getString("message_self_destruct_1min"));
+        three.setText(AndroidUtils.getString("message_self_destruct_5min"));
+        four.setText(AndroidUtils.getString("message_self_destruct_1hour"));
+        five.setText(AndroidUtils.getString("message_self_destruct_24hours"));
 
         zero.setTextColor(getTextAttr());
         one.setTextColor(getTextAttr());
@@ -87,7 +88,7 @@ public class MessageSettings {
 
         @SuppressLint("UseSwitchCompatOrMaterialCode")
         var silentSwitch = new SwitchCompat(new ContextThemeWrapper(context, com.vtosters.lite.R.style.Widget_AppCompat_CompoundButton_Switch));
-        silentSwitch.setText("Бесшумные сообщения");
+        silentSwitch.setText(AndroidUtils.getString("silent_messages"));
         silentSwitch.setTextSize(TypedValue.COMPLEX_UNIT_PX, dp2px(14f));
         silentSwitch.setTextColor(getTextAttr());
         silentSwitch.setChecked(isSilentEnabled);
@@ -104,12 +105,12 @@ public class MessageSettings {
         mContainer.addView(silentSwitch, LayoutUtils.createLinear(-1, -2));
 
         VkAlertDialog.Builder builder = new VkAlertDialog.Builder(context);
-        builder.setTitle("Настройки отправки");
-        builder.setMessage("Выберите время исчезновения сообщения");
+        builder.setTitle(AndroidUtils.getString("message_send_settings_title"));
+        builder.setMessage(AndroidUtils.getString("silent_messages_time_select"));
         builder.setCancelable(true);
-        builder.setNegativeButton("Отмена", null);
+        builder.setNegativeButton(AndroidUtils.getString("cancel"), null);
         builder.setView(mContainer);
-        builder.setPositiveButton("Применить", (dialog, which) -> {
+        builder.setPositiveButton(AndroidUtils.getString("vtl_confirm"), (dialog, which) -> { // Применить
             var checked = rg.getCheckedRadioButtonId();
 
             if (checked == zero.getId()) {
