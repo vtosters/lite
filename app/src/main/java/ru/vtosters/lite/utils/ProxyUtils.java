@@ -28,7 +28,7 @@ public class ProxyUtils {
         return getPrefsValue("proxy").equals("zaborona");
     }
 
-    private static void setProxyRefl() {
+    public static void setProxyRefl() {
         Log.d("Proxy", "Setting proxy...");
         try {
             var context = getGlobalContext().getApplicationContext();
@@ -75,13 +75,11 @@ public class ProxyUtils {
                 System.setProperty("socksProxyHost", "socks.zaboronahelp.pp.ua");
                 System.setProperty("socksProxyPort", "1488");
                 setProxyRefl();
-                resetProxySocks();
                 break;
             case "socks":
                 System.setProperty("socksProxyHost", proxyHostSocks());
                 System.setProperty("socksProxyPort", proxyPortSocks());
                 setProxyRefl();
-                resetProxySocks();
                 break;
             case "http":
                 System.setProperty("http.proxyHost", proxyHostHTTP());
@@ -89,7 +87,6 @@ public class ProxyUtils {
                 System.setProperty("http.proxyUser", proxyUserHTTP());
                 System.setProperty("http.proxyPassword", proxyPassHTTP());
                 setProxyRefl();
-                resetProxyHttp();
                 break;
             case "https":
                 System.setProperty("https.proxyHost", proxyHostHTTPS());
@@ -97,7 +94,6 @@ public class ProxyUtils {
                 System.setProperty("https.proxyUser", proxyUserHTTPS());
                 System.setProperty("https.proxyPassword", proxyPassHTTPS());
                 setProxyRefl();
-                resetProxyHttps();
                 break;
             default:
                 resetProxy();
@@ -117,35 +113,6 @@ public class ProxyUtils {
         clearProperty("socksProxyHost");
         clearProperty("socksPortHost");
     } // Reset all proxies
-
-    public static void resetProxySocks() {
-        clearProperty("https.proxyHost");
-        clearProperty("https.proxyPort");
-        clearProperty("https.proxyUser");
-        clearProperty("https.proxyPassword");
-        clearProperty("http.proxyHost");
-        clearProperty("http.proxyPort");
-        clearProperty("http.proxyUser");
-        clearProperty("http.proxyPassword");
-    } // Reset all except socks
-
-    public static void resetProxyHttp() {
-        clearProperty("https.proxyHost");
-        clearProperty("https.proxyPort");
-        clearProperty("https.proxyUser");
-        clearProperty("https.proxyPassword");
-        clearProperty("socksProxyHost");
-        clearProperty("socksPortHost");
-    } // Reset all except http
-
-    public static void resetProxyHttps() {
-        clearProperty("http.proxyHost");
-        clearProperty("http.proxyPort");
-        clearProperty("http.proxyUser");
-        clearProperty("http.proxyPassword");
-        clearProperty("socksProxyHost");
-        clearProperty("socksPortHost");
-    } // Reset all except https
 
     private static String proxyHostHTTP() {
         var string = getPrefsValue("proxyHostHTTP");
