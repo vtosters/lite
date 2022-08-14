@@ -27,7 +27,7 @@
     sget v0, Lcom/vk/catalog2/core/r;->catalog_stickers_small_slider_item:I
 
     .line 2
-    sget v1, Lcom/vk/catalog2/core/o;->stiсkers_catalog_small_slider_image_size:I
+    sget v1, Lcom/vk/catalog2/core/o;->stickers_catalog_small_slider_image_size:I
 
     .line 3
     invoke-direct {p0, v0, v1, p1}, Lcom/vk/catalog2/core/holders/stickers/BaseStickerPackVh;-><init>(IILkotlin/jvm/b/Functions1;)V
