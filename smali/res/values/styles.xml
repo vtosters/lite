@@ -1915,10 +1915,10 @@
         <item name="android:textColor">@color/vkui_text_commerce_new</item>
         <item name="android:ellipsize">end</item>
         <item name="android:gravity">center</item>
-        <item name="android:paddingLeft">@dimen/stiсkers_catalog_button_padding_left</item>
-        <item name="android:paddingTop">@dimen/stiсkers_catalog_button_padding_top</item>
-        <item name="android:paddingRight">@dimen/stiсkers_catalog_button_padding_right</item>
-        <item name="android:paddingBottom">@dimen/stiсkers_catalog_button_padding_bottom</item>
+        <item name="android:paddingLeft">@dimen/stickers_catalog_button_padding_left</item>
+        <item name="android:paddingTop">@dimen/stickers_catalog_button_padding_top</item>
+        <item name="android:paddingRight">@dimen/stickers_catalog_button_padding_right</item>
+        <item name="android:paddingBottom">@dimen/stickers_catalog_button_padding_bottom</item>
         <item name="android:layout_width">wrap_content</item>
         <item name="android:layout_height">wrap_content</item>
         <item name="android:singleLine">true</item>

@@ -1150,7 +1150,7 @@
 
 .field public static final music_promo_no_more_music_title:I = 0x7f120821
 
-.field public static final music_promo_no_more_music_сontimue_using_free_plan:I = 0x7f120822
+.field public static final music_promo_no_more_music_continue_using_free_plan:I = 0x7f120822
 
 .field public static final music_promo_no_more_option_1:I = 0x7f120823
 
