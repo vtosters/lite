@@ -730,45 +730,45 @@
 
 .field public static final sticker_suggest_size:I = 0x7f070283
 
-.field public static final stiсkers_catalog_button_padding_bottom:I = 0x7f070288
+.field public static final stickers_catalog_button_padding_bottom:I = 0x7f070288
 
-.field public static final stiсkers_catalog_button_padding_left:I = 0x7f070289
+.field public static final stickers_catalog_button_padding_left:I = 0x7f070289
 
-.field public static final stiсkers_catalog_button_padding_right:I = 0x7f07028a
+.field public static final stickers_catalog_button_padding_right:I = 0x7f07028a
 
-.field public static final stiсkers_catalog_button_padding_top:I = 0x7f07028b
+.field public static final stickers_catalog_button_padding_top:I = 0x7f07028b
 
-.field public static final stiсkers_catalog_double_stacked_slider_image_bg_size:I = 0x7f07028c
+.field public static final stickers_catalog_double_stacked_slider_image_bg_size:I = 0x7f07028c
 
-.field public static final stiсkers_catalog_double_stacked_slider_image_corner_radius:I = 0x7f07028d
+.field public static final stickers_catalog_double_stacked_slider_image_corner_radius:I = 0x7f07028d
 
-.field public static final stiсkers_catalog_double_stacked_slider_image_size:I = 0x7f07028e
+.field public static final stickers_catalog_double_stacked_slider_image_size:I = 0x7f07028e
 
-.field public static final stiсkers_catalog_large_slider_image_bg_height:I = 0x7f07028f
+.field public static final stickers_catalog_large_slider_image_bg_height:I = 0x7f07028f
 
-.field public static final stiсkers_catalog_large_slider_image_bg_width:I = 0x7f070290
+.field public static final stickers_catalog_large_slider_image_bg_width:I = 0x7f070290
 
-.field public static final stiсkers_catalog_large_slider_image_corner_radius:I = 0x7f070291
+.field public static final stickers_catalog_large_slider_image_corner_radius:I = 0x7f070291
 
-.field public static final stiсkers_catalog_large_slider_image_size:I = 0x7f070292
+.field public static final stickers_catalog_large_slider_image_size:I = 0x7f070292
 
-.field public static final stiсkers_catalog_small_slider_image_bg_size:I = 0x7f070293
+.field public static final stickers_catalog_small_slider_image_bg_size:I = 0x7f070293
 
-.field public static final stiсkers_catalog_small_slider_image_corner_radius:I = 0x7f070294
+.field public static final stickers_catalog_small_slider_image_corner_radius:I = 0x7f070294
 
-.field public static final stiсkers_catalog_small_slider_image_size:I = 0x7f070295
+.field public static final stickers_catalog_small_slider_image_size:I = 0x7f070295
 
-.field public static final stiсkers_catalog_triple_stacked_slider_image_bg_size:I = 0x7f070296
+.field public static final stickers_catalog_triple_stacked_slider_image_bg_size:I = 0x7f070296
 
-.field public static final stiсkers_catalog_triple_stacked_slider_image_corner_radius:I = 0x7f070297
+.field public static final stickers_catalog_triple_stacked_slider_image_corner_radius:I = 0x7f070297
 
-.field public static final stiсkers_catalog_triple_stacked_slider_image_size:I = 0x7f070298
+.field public static final stickers_catalog_triple_stacked_slider_image_size:I = 0x7f070298
 
-.field public static final stiсkers_catalog_vertical_list_image_bg_size:I = 0x7f070299
+.field public static final stickers_catalog_vertical_list_image_bg_size:I = 0x7f070299
 
-.field public static final stiсkers_catalog_vertical_list_image_corner_radius:I = 0x7f07029a
+.field public static final stickers_catalog_vertical_list_image_corner_radius:I = 0x7f07029a
 
-.field public static final stiсkers_catalog_vertical_list_image_size:I = 0x7f07029b
+.field public static final stickers_catalog_vertical_list_image_size:I = 0x7f07029b
 
 .field public static final subtitle_corner_radius:I = 0x7f0702ed
 

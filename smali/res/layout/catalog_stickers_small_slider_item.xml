@@ -10,19 +10,19 @@
 
     <com.vk.imageloader.view.VKImageView
         android:id="@id/pack_image_bg"
-        android:layout_width="@dimen/stiсkers_catalog_small_slider_image_bg_size"
-        android:layout_height="@dimen/stiсkers_catalog_small_slider_image_bg_size"
+        android:layout_width="@dimen/stickers_catalog_small_slider_image_bg_size"
+        android:layout_height="@dimen/stickers_catalog_small_slider_image_bg_size"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:roundedCornerRadius="@dimen/stiсkers_catalog_small_slider_image_corner_radius"
+        app:roundedCornerRadius="@dimen/stickers_catalog_small_slider_image_corner_radius"
         app:roundingBorderColor="?image_border"
         app:roundingBorderWidth="0.5dip" />
 
     <com.vk.imageloader.view.VKImageView
         android:id="@id/pack_image"
-        android:layout_width="@dimen/stiсkers_catalog_small_slider_image_size"
-        android:layout_height="@dimen/stiсkers_catalog_small_slider_image_size"
+        android:layout_width="@dimen/stickers_catalog_small_slider_image_size"
+        android:layout_height="@dimen/stickers_catalog_small_slider_image_size"
         app:layout_constraintBottom_toBottomOf="@id/pack_image_bg"
         app:layout_constraintEnd_toEndOf="@id/pack_image_bg"
         app:layout_constraintStart_toStartOf="@id/pack_image_bg"

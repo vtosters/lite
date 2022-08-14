@@ -3540,26 +3540,26 @@
     <public name="stickers_notifications_size" id="0x7f070285" type="dimen" />
     <public name="stickers_tabs_padding" id="0x7f070286" type="dimen" />
     <public name="stickers_tabs_size" id="0x7f070287" type="dimen" />
-    <public name="stiсkers_catalog_button_padding_bottom" id="0x7f070288" type="dimen" />
-    <public name="stiсkers_catalog_button_padding_left" id="0x7f070289" type="dimen" />
-    <public name="stiсkers_catalog_button_padding_right" id="0x7f07028a" type="dimen" />
-    <public name="stiсkers_catalog_button_padding_top" id="0x7f07028b" type="dimen" />
-    <public name="stiсkers_catalog_double_stacked_slider_image_bg_size" id="0x7f07028c" type="dimen" />
-    <public name="stiсkers_catalog_double_stacked_slider_image_corner_radius" id="0x7f07028d" type="dimen" />
-    <public name="stiсkers_catalog_double_stacked_slider_image_size" id="0x7f07028e" type="dimen" />
-    <public name="stiсkers_catalog_large_slider_image_bg_height" id="0x7f07028f" type="dimen" />
-    <public name="stiсkers_catalog_large_slider_image_bg_width" id="0x7f070290" type="dimen" />
-    <public name="stiсkers_catalog_large_slider_image_corner_radius" id="0x7f070291" type="dimen" />
-    <public name="stiсkers_catalog_large_slider_image_size" id="0x7f070292" type="dimen" />
-    <public name="stiсkers_catalog_small_slider_image_bg_size" id="0x7f070293" type="dimen" />
-    <public name="stiсkers_catalog_small_slider_image_corner_radius" id="0x7f070294" type="dimen" />
-    <public name="stiсkers_catalog_small_slider_image_size" id="0x7f070295" type="dimen" />
-    <public name="stiсkers_catalog_triple_stacked_slider_image_bg_size" id="0x7f070296" type="dimen" />
-    <public name="stiсkers_catalog_triple_stacked_slider_image_corner_radius" id="0x7f070297" type="dimen" />
-    <public name="stiсkers_catalog_triple_stacked_slider_image_size" id="0x7f070298" type="dimen" />
-    <public name="stiсkers_catalog_vertical_list_image_bg_size" id="0x7f070299" type="dimen" />
-    <public name="stiсkers_catalog_vertical_list_image_corner_radius" id="0x7f07029a" type="dimen" />
-    <public name="stiсkers_catalog_vertical_list_image_size" id="0x7f07029b" type="dimen" />
+    <public name="stickers_catalog_button_padding_bottom" id="0x7f070288" type="dimen" />
+    <public name="stickers_catalog_button_padding_left" id="0x7f070289" type="dimen" />
+    <public name="stickers_catalog_button_padding_right" id="0x7f07028a" type="dimen" />
+    <public name="stickers_catalog_button_padding_top" id="0x7f07028b" type="dimen" />
+    <public name="stickers_catalog_double_stacked_slider_image_bg_size" id="0x7f07028c" type="dimen" />
+    <public name="stickers_catalog_double_stacked_slider_image_corner_radius" id="0x7f07028d" type="dimen" />
+    <public name="stickers_catalog_double_stacked_slider_image_size" id="0x7f07028e" type="dimen" />
+    <public name="stickers_catalog_large_slider_image_bg_height" id="0x7f07028f" type="dimen" />
+    <public name="stickers_catalog_large_slider_image_bg_width" id="0x7f070290" type="dimen" />
+    <public name="stickers_catalog_large_slider_image_corner_radius" id="0x7f070291" type="dimen" />
+    <public name="stickers_catalog_large_slider_image_size" id="0x7f070292" type="dimen" />
+    <public name="stickers_catalog_small_slider_image_bg_size" id="0x7f070293" type="dimen" />
+    <public name="stickers_catalog_small_slider_image_corner_radius" id="0x7f070294" type="dimen" />
+    <public name="stickers_catalog_small_slider_image_size" id="0x7f070295" type="dimen" />
+    <public name="stickers_catalog_triple_stacked_slider_image_bg_size" id="0x7f070296" type="dimen" />
+    <public name="stickers_catalog_triple_stacked_slider_image_corner_radius" id="0x7f070297" type="dimen" />
+    <public name="stickers_catalog_triple_stacked_slider_image_size" id="0x7f070298" type="dimen" />
+    <public name="stickers_catalog_vertical_list_image_bg_size" id="0x7f070299" type="dimen" />
+    <public name="stickers_catalog_vertical_list_image_corner_radius" id="0x7f07029a" type="dimen" />
+    <public name="stickers_catalog_vertical_list_image_size" id="0x7f07029b" type="dimen" />
     <public name="story_author_title_top_space" id="0x7f07029c" type="dimen" />
     <public name="story_cadre_bottom_btn_top_padding" id="0x7f07029d" type="dimen" />
     <public name="story_camera_tabs_height" id="0x7f07029e" type="dimen" />
@@ -15183,7 +15183,7 @@
     <public name="music_promo_no_more_music_special_offer" id="0x7f12081f" type="string" />
     <public name="music_promo_no_more_music_subtitle" id="0x7f120820" type="string" />
     <public name="music_promo_no_more_music_title" id="0x7f120821" type="string" />
-    <public name="music_promo_no_more_music_сontimue_using_free_plan" id="0x7f120822" type="string" />
+    <public name="music_promo_no_more_music_continue_using_free_plan" id="0x7f120822" type="string" />
     <public name="music_promo_no_more_option_1" id="0x7f120823" type="string" />
     <public name="music_promo_no_more_option_2" id="0x7f120824" type="string" />
     <public name="music_promo_no_more_option_3" id="0x7f120825" type="string" />

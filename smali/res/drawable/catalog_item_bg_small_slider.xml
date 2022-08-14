@@ -7,8 +7,8 @@
             <corners
                 android:bottomLeftRadius="4.0dip"
                 android:bottomRightRadius="4.0dip"
-                android:topLeftRadius="@dimen/stiсkers_catalog_small_slider_image_corner_radius"
-                android:topRightRadius="@dimen/stiсkers_catalog_small_slider_image_corner_radius" />
+                android:topLeftRadius="@dimen/stickers_catalog_small_slider_image_corner_radius"
+                android:topRightRadius="@dimen/stickers_catalog_small_slider_image_corner_radius" />
         </shape>
     </item>
 </ripple>
