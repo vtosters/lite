@@ -68,8 +68,6 @@ public class MediaFragment extends MaterialPreferenceToolbarFragment {
                 var prefs = getPreferences();
                 var editor = prefs.edit();
                 var actualPath = FileUriUtils.getFullPathFromTreeUri(path, getContext());
-                Log.d("MediaFragment", "onActivityResult: " + actualPath);
-                Log.d("MediaFragment", "onActivityResult: " + requestCode);
                 switch (requestCode) {
                     case REQUEST_CODE_SET_DOWNLOAD_DIRECTORY:
                         editor.putString("downloads_directory", actualPath);
