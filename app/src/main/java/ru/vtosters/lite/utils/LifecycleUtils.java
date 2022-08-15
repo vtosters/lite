@@ -21,10 +21,12 @@ public class LifecycleUtils {
         application.registerActivityLifecycleCallbacks(new Application.ActivityLifecycleCallbacks() {
             @Override // android.app.Application.ActivityLifecycleCallbacks
             public void onActivityPaused(Activity activity) {
+                activities.remove(activity);
             }
 
             @Override // android.app.Application.ActivityLifecycleCallbacks
             public void onActivityResumed(Activity activity) {
+                activities.add(activity);
             }
 
             @Override // android.app.Application.ActivityLifecycleCallbacks
