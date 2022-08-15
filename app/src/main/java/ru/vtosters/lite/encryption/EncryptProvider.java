@@ -1,5 +1,6 @@
 package ru.vtosters.lite.encryption;
 
+import static ru.vtosters.lite.hooks.MessagesHook.injectOwnText;
 import static ru.vtosters.lite.hooks.MessagesHook.injectOwnTextAll;
 
 import android.util.Log;
@@ -98,11 +99,11 @@ public class EncryptProvider {
         for (IMProcessor processor : processors) {
             int peer = getPeerId(msg);
             if (processor.isUsedToEncrypt(peer)) {
-                return injectOwnTextAll(processor.encode(msgBody, getKeyForProcessor(processor, peer)));
+                return injectOwnText(processor.encode(msgBody, getKeyForProcessor(processor, peer)));
             }
         }
 
-        return injectOwnTextAll(msgBody);
+        return injectOwnText(msgBody);
     }
 
     // For rendering UI
