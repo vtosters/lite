@@ -55,7 +55,7 @@ public class BackupManager {
             FileWriter out = new FileWriter(file);
             out.write(getPrefContent("onlines.xml"));
             out.close();
-            Toast.makeText(getGlobalContext(), AndroidUtils.getString("backup_saved_in") + file.getAbsolutePath(), LENGTH_LONG).show();
+            Toast.makeText(getGlobalContext(), AndroidUtils.getString("backup_saved_in") + " " + file.getAbsolutePath(), LENGTH_LONG).show();
         } catch (IOException e) {
             e.printStackTrace();
             Toast.makeText(getGlobalContext(), AndroidUtils.getString("backup_save_error"), LENGTH_SHORT).show();
@@ -71,7 +71,7 @@ public class BackupManager {
             FileWriter out = new FileWriter(file);
             out.write(getPrefContent("com.vtosters.lite_preferences.xml"));
             out.close();
-            Toast.makeText(getGlobalContext(), AndroidUtils.getString("backup_saved_in") + file.getAbsolutePath(), LENGTH_LONG).show();
+            Toast.makeText(getGlobalContext(), AndroidUtils.getString("backup_saved_in") + " " + file.getAbsolutePath(), LENGTH_LONG).show();
         } catch (IOException e) {
             e.printStackTrace();
             Toast.makeText(getGlobalContext(), AndroidUtils.getString("backup_save_error"), LENGTH_SHORT).show();
