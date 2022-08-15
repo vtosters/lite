@@ -282,7 +282,7 @@ public class DNRInjector {
 
         thread.start();
 
-        sendToast(AndroidUtils.getString("pin_dialog") + (needToBePinned ? AndroidUtils.getString("dialog_pinned") : AndroidUtils.getString("dialog_unpinned")));
+        sendToast(AndroidUtils.getString("pin_dialog") + " " + (needToBePinned ? AndroidUtils.getString("dialog_pinned") : AndroidUtils.getString("dialog_unpinned")));
     }
 
     public static void setDnr(Dialog dialog, boolean value) {
