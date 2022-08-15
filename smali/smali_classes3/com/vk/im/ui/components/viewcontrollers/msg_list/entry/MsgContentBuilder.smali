@@ -302,11 +302,7 @@
     .line 39
     iget-object v3, p0, Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/MsgContentBuilder;->c:Lcom/vk/im/ui/components/viewcontrollers/msg_list/entry/MsgTextBuilder;
 
-    invoke-virtual {p1}, Lcom/vk/im/engine/models/messages/MsgFromUser;->f()Ljava/lang/String;
-
-    move-result-object v4
-
-    invoke-static {v4}, Lru/vtosters/lite/hooks/MessagesHook;->injectOwnTextAll(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {p1}, Lru/vtosters/lite/encryption/EncryptProvider;->decryptMessage(Lcom/vk/im/engine/models/messages/MsgFromUser;)Ljava/lang/String;
 
     move-result-object v4
 
@@ -678,7 +674,11 @@
 
     move-result-object v2
 
-    invoke-static {v2}, Lru/vtosters/lite/hooks/MessagesHook;->injectOwnTextAll(Ljava/lang/String;)Ljava/lang/String;
+    invoke-virtual {p1}, Lcom/vk/im/engine/models/messages/NestedMsg;->t1()I
+
+    move-result v3
+
+    invoke-static {v2, v3}, Lru/vtosters/lite/encryption/EncryptProvider;->decryptMessage(Ljava/lang/String;I)Ljava/lang/String;
 
     move-result-object v2
 

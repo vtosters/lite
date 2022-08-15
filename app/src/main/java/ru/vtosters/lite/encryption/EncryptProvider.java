@@ -1,5 +1,7 @@
 package ru.vtosters.lite.encryption;
 
+import static ru.vtosters.lite.hooks.MessagesHook.injectOwnTextAll;
+
 import android.util.Log;
 import android.util.Pair;
 
@@ -58,11 +60,12 @@ public class EncryptProvider {
         try {
             for (IMProcessor processor : processors) {
                 if ((processor.isUsed() || !processor.isPublic()) && processor.isEncrypted(msgBody) && (processor.isPublic() || getKeyForProcessor(processor, peer) != null))
-                    return "\uD83D\uDD12 " + processor.decode(msgBody, getKeyForProcessor(processor, peer));
+                    return "\uD83D\uDD12 " + injectOwnTextAll(processor.decode(msgBody, getKeyForProcessor(processor, peer)));
             }
         } catch (Exception e) {
             e.printStackTrace();
         }
+
         return msgBody;
     }
 
@@ -84,9 +87,8 @@ public class EncryptProvider {
         return keyString.getBytes();
     }
 
-    // This will use only the processor which was chosen in chat menu [that's why ID is needed, bruh]
+    // This will use only the processor which was chosen in chat menu
     public static String encryptMessage(MsgFromUser msg) {
-
         String msgBody = getBody(msg);
 
         Log.d("EncryptProvider", "encryptMessage: msg = " + msg);

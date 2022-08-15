@@ -834,7 +834,7 @@
 
     .line 23
     :cond_0
-    invoke-virtual {p1}, Lcom/vk/im/engine/models/messages/MsgFromUser;->f()Ljava/lang/String;
+    invoke-static {p1}, Lru/vtosters/lite/encryption/EncryptProvider;->decryptMessage(Lcom/vk/im/engine/models/messages/MsgFromUser;)Ljava/lang/String;
 
     move-result-object p1
 
