@@ -11,6 +11,7 @@ import static ru.vtosters.lite.dnr.DNRModule.hookDNR;
 import static ru.vtosters.lite.dnr.DNRModule.hookDNT;
 import static ru.vtosters.lite.dnr.DNRModule.isDnrEnabledFor;
 import static ru.vtosters.lite.dnr.DNRModule.isDntEnabledFor;
+import static ru.vtosters.lite.encryption.EncryptProvider.decryptMessage;
 import static ru.vtosters.lite.utils.AccountManagerUtils.getUserToken;
 import static ru.vtosters.lite.utils.AndroidUtils.getIdentifier;
 import static ru.vtosters.lite.utils.AndroidUtils.sendToast;
@@ -224,6 +225,7 @@ public class DNRInjector {
 
     public static boolean onClickMsg(Context context, MsgAction action, Msg msg) {
         var text = ((MsgFromUser) msg).f();
+        var peerId = msg.v1();
         var fullMsg = ((MsgFromUser) msg).j2(); // text + reply
         var reply = fullMsg.substring(text.length() + 1);
 
@@ -234,6 +236,12 @@ public class DNRInjector {
 
         var isTextExist = !text.isEmpty() && !text.equals(" ");
         var isReplyExist = !reply.isEmpty() && !reply.equals(" ");
+
+        text = decryptMessage(text, peerId);
+
+        if (isReplyExist) {
+            reply = decryptMessage(reply, peerId);
+        }
 
         if (action == MsgAction.valueOf("TRANSLATE")) {
             if (isTextExist && isReplyExist) {
