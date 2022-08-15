@@ -82,7 +82,7 @@ public class WallpaperMenuFragment extends MaterialPreferenceToolbarFragment {
 
         if (!hasVerification() && !getBoolValue("dialogrecomm", false)) {
             PreferencesUtil.addPreference(this, "", AndroidUtils.getString("filters_warning"), AndroidUtils.getString("icons_warning_info"), null, preference -> {
-                getContext().startActivity(new Intent("android.intent.action.VIEW").setData(Uri.parse("https://vtosters.app")));
+                getContext().startActivity(new Intent("android.intent.action.VIEW").setData(Uri.parse("https://vtosters.app/donate/")));
                 return false;
             });
         }
