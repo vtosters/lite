@@ -81,6 +81,7 @@ public final class DialogActionsHelper {
             CollectionExt.a(arrayList, DialogAction.NOTIFICATIONS_OFF, dialog.b(b2));
             return arrayList;
         }
+
         return new ArrayList<>();
     }
 
