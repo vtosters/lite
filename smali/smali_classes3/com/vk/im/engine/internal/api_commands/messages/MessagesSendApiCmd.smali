@@ -249,12 +249,7 @@
     :goto_2
     if-eqz v8, :cond_7
 
-    .line 15
-    invoke-virtual {p1}, Lcom/vk/im/engine/models/messages/MsgFromUser;->f()Ljava/lang/String;
-
-    move-result-object v8
-
-    invoke-static {v8}, Lru/vtosters/lite/hooks/MessagesHook;->injectOwnText(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {p1}, Lru/vtosters/lite/encryption/EncryptProvider;->encryptMessage(Lcom/vk/im/engine/models/messages/MsgFromUser;)Ljava/lang/String;
 
     move-result-object v8
 
