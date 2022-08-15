@@ -49,7 +49,11 @@ import ru.vtosters.lite.utils.AndroidUtils;
 
 public class DNRInjector {
     public static void inject(Dialog dialog, List<DialogAction> list) {
-        int peerId = dialog.getId();
+        int peerId = 0;
+
+        if (dialog != null) {
+            peerId = dialog.getId();
+        }
 
         list.add(DialogAction.pinmsg);
         list.add(DialogAction.unpinmsg);
@@ -111,8 +115,12 @@ public class DNRInjector {
         ImEngine1.a().a(new OnDialogUpdateEvent(null, map));
     }
 
-    public static List<DialogAction> injectToListAccess(List<DialogAction> actions, Dialog dialog, ProfilesSimpleInfo profilesSimpleInfo) {
-        var peerId = dialog.getId();
+    public static List<DialogAction> injectToListAccess(List<DialogAction> actions, Dialog dialog) {
+        int peerId = 0;
+
+        if (dialog != null) {
+            peerId = dialog.getId();
+        }
 
         if (isDnrEnabledFor(peerId)) {
             actions.add(DialogAction.DNR_OFF);
@@ -137,7 +145,11 @@ public class DNRInjector {
     }
 
     public static boolean onClickHeader(DialogAction action, Dialog dialog) {
-        var id = dialog.getId();
+        int peerId = 0;
+
+        if (dialog != null) {
+            peerId = dialog.getId();
+        }
 
         if (action == DialogAction.MARK_AS_READ) {
             DNRModule.hookRead(dialog);
@@ -165,10 +177,10 @@ public class DNRInjector {
         }
 
         if (action == DialogAction.ENCRYPT_SETT) {
-            CryptImHook.hookPref(id);
+            CryptImHook.hookPref(peerId);
             return true;
         } else if (action == DialogAction.ENCRYPT) {
-            CryptImHook.hook(id, dialog);
+            CryptImHook.hook(peerId, dialog);
             return true;
         }
 
@@ -176,7 +188,11 @@ public class DNRInjector {
     }
 
     public static boolean onClick(Dialog dialog, DialogAction action) {
-        var id = dialog.getId();
+        int peerId = 0;
+
+        if (dialog != null) {
+            peerId = dialog.getId();
+        }
 
         if (action == DialogAction.MARK_AS_READ) {
             DNRModule.hookRead(dialog);
@@ -199,18 +215,18 @@ public class DNRInjector {
         }
 
         if (action == DialogAction.pinmsg) {
-            pinnedMsg(id, true);
+            pinnedMsg(peerId, true);
             return true;
         } else if (action == DialogAction.unpinmsg) {
-            pinnedMsg(id, false);
+            pinnedMsg(peerId, false);
             return true;
         }
 
         if (action == DialogAction.ENCRYPT_SETT) {
-            CryptImHook.hookPref(id);
+            CryptImHook.hookPref(peerId);
             return true;
         } else if (action == DialogAction.ENCRYPT) {
-            CryptImHook.hook(id, dialog);
+            CryptImHook.hook(peerId, dialog);
             return true;
         }
 
@@ -286,11 +302,23 @@ public class DNRInjector {
     }
 
     public static void setDnr(Dialog dialog, boolean value) {
-        hookDNR(dialog.getId());
+        int peerId = 0;
+
+        if (dialog != null) {
+            peerId = dialog.getId();
+        }
+
+        hookDNR(peerId);
     }
 
     public static void setDnt(Dialog dialog, boolean value) {
-        hookDNT(dialog.getId());
+        int peerId = 0;
+
+        if (dialog != null) {
+            peerId = dialog.getId();
+        }
+
+        hookDNT(peerId);
     }
 }
 
