@@ -6289,4 +6289,7 @@ May look like a fake leaving the online"</string>
     <string name="filter_engrave">Engrave filter</string>
     <string name="filter_flea">Flea filter</string>
     <string name="filter_snow">Snow effect</string>
+
+    <string name="encryption">Encryption method</string>
+    <string name="encryption_sett">Encryption settings</string>
 </resources>
