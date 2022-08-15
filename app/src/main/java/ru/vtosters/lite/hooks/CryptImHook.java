@@ -20,6 +20,7 @@ import java.util.List;
 
 import ru.vtosters.lite.encryption.EncryptProvider;
 import ru.vtosters.lite.encryption.base.IMProcessor;
+import ru.vtosters.lite.utils.AndroidUtils;
 import ru.vtosters.lite.utils.ThemesUtils;
 
 public class CryptImHook{
@@ -40,7 +41,7 @@ public class CryptImHook{
         int enabledPosition = 0;
 
         String[] titles = new String[processors.size() + 1];
-        titles[0] = "Отключить шифрование";
+        titles[0] = AndroidUtils.getString("encryption_disable");
 
         for (int i = 0; i < processors.size(); i++) {
             IMProcessor proc = processors.get(i);
@@ -57,7 +58,7 @@ public class CryptImHook{
 
         IMProcessor finalEnabled = enabled;
         new AlertDialog.Builder(getCurrentActivity())
-                .setTitle("Настройки шифрования")
+                .setTitle(AndroidUtils.getString("encryption_sett"))
                 .setSingleChoiceItems(titles, enabledPosition, (dialog, which) -> {
                     if (which == 0) {
                         if (finalEnabled != null) finalEnabled.disableEncryptFor(peerId);
@@ -86,7 +87,7 @@ public class CryptImHook{
         }
 
         if (enabled != null && enabled.isPublic()) {
-            sendToast("Выбранный алгоритм публичный и не имеет настроек!");
+            sendToast(AndroidUtils.getString("encryption_public_algorithm_error"));
             return;
         }
 
@@ -106,8 +107,8 @@ public class CryptImHook{
 
         IMProcessor finalEnabled = enabled;
         new AlertDialog.Builder(ctx)
-                .setTitle("Введите ключ шифрования")
-                .setMessage("Используемый алгоритм: " + enabled.getUIName() + ".\nУчтите, что если поле будет пустым, то будет использоваться ключ по умолчанию.")
+                .setTitle(AndroidUtils.getString("encryption_enter_key"))
+                .setMessage(String.format(AndroidUtils.getString("encryption_current_algorithm_title"), enabled.getUIName()))
                 .setView(linearLayout)
                 .setPositiveButton(android.R.string.ok, (dialog, which) -> {
                     Editable edit = editText.getText();

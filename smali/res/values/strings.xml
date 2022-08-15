@@ -6292,4 +6292,9 @@ May look like a fake leaving the online"</string>
 
     <string name="encryption">Encryption method</string>
     <string name="encryption_sett">Encryption settings</string>
+    <string name="encryption_disable">Disable encryption</string>
+    <string name="encryption_settings_title">Encryption settings</string>
+    <string name="encryption_public_algorithm_error">The selected algorithm is public and has no settings!</string>
+    <string name="encryption_enter_key">Enter encryption key</string>
+    <string name="encryption_current_algorithm_title">Algorithm used: %1$s.\nPlease note that if the field is empty, the default key will be used.</string>
 </resources>
