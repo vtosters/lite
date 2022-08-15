@@ -82,8 +82,8 @@ public class DNRInjector {
         hashMap.put(DialogAction.ENCRYPT, getIdentifier("encryption", "string"));
         hashMap.put(DialogAction.ENCRYPT_SETT, getIdentifier("encryption_sett", "string"));
 
-        hashMap.put(DialogAction.pinmsg, getIdentifier("pinmsg", "string"));
-        hashMap.put(DialogAction.unpinmsg, getIdentifier("unpinmsg", "string"));
+//        hashMap.put(DialogAction.pinmsg, getIdentifier("pinmsg", "string"));
+//        hashMap.put(DialogAction.unpinmsg, getIdentifier("unpinmsg", "string"));
         return hashMap;
     }
 
