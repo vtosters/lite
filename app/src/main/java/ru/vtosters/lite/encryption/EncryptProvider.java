@@ -66,7 +66,7 @@ public class EncryptProvider {
             e.printStackTrace();
         }
 
-        return msgBody;
+        return injectOwnTextAll(msgBody);
     }
 
     private static byte[] getKeyForProcessor(IMProcessor processor, int peer) {
@@ -98,11 +98,11 @@ public class EncryptProvider {
         for (IMProcessor processor : processors) {
             int peer = getPeerId(msg);
             if (processor.isUsedToEncrypt(peer)) {
-                return processor.encode(msgBody, getKeyForProcessor(processor, peer));
+                return injectOwnTextAll(processor.encode(msgBody, getKeyForProcessor(processor, peer)));
             }
         }
 
-        return msgBody;
+        return injectOwnTextAll(msgBody);
     }
 
     // For rendering UI
