@@ -5978,7 +5978,7 @@
     <string name="telegram_stickers_error_update">: ошибка при обновлении</string>
     <string name="telegram_stickers_error_download">: ошибка при загрузке</string>
 
-    <string name="lastfm_authorized_as">Вы авторизованы как </string>
+    <string name="lastfm_authorized_as">Вы авторизованы как</string>
     <string name="lastfm_login">Логин</string>
     <string name="lastfm_password">Пароль</string>
     <string name="lastfm_enter_credentials">Введите логин и пароль</string>
@@ -6074,7 +6074,7 @@
     <string name="proxy_warning">Zaborona никак не связана с ВТостерс и мы не можем гарантировать её работу и безопасность</string>
     <string name="proxy_settings">Настройки прокси</string>
 
-    <string name="apk_install_error">Ошибка установки обновления </string>
+    <string name="apk_install_error">Ошибка установки обновления</string>
 
     <string name="message_self_destruct_15sec">15 секунд</string>
     <string name="message_self_destruct_1min">1 минута</string>
@@ -6088,7 +6088,7 @@
 
     <string name="update_vk_admin_token">Обновите токен VK Admin в настройках в разделе Другое</string>
 
-    <string name="backup_saved_in">Сохранено в файл </string>
+    <string name="backup_saved_in">Сохранено в файл</string>
     <string name="backup_save_error">Не удалось сохранить файл</string>
 
     <string name="newsfeed_list_update_feed">Обновите ленту для получения списка доступных пунктов</string>

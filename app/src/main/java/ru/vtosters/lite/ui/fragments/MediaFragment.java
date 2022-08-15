@@ -158,7 +158,7 @@ public class MediaFragment extends MaterialPreferenceToolbarFragment {
         });
 
         if (isLoggedIn()) {
-            findPreference("lastfm_auth").setSummary(AndroidUtils.getString("lastfm_authorized_as") + Scrobbler.getUserName());
+            findPreference("lastfm_auth").setSummary(AndroidUtils.getString("lastfm_authorized_as") + " " + Scrobbler.getUserName());
         } else {
             findPreference("lastfm_enabled").setEnabled(false);
         }

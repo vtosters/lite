@@ -6116,7 +6116,7 @@ May look like a fake leaving the online"</string>
     <string name="telegram_stickers_error_update">: update failed</string>
     <string name="telegram_stickers_error_download">: download failed</string>
 
-    <string name="lastfm_authorized_as">You are authorized as </string>
+    <string name="lastfm_authorized_as">You are authorized as</string>
     <string name="lastfm_login">Login</string>
     <string name="lastfm_password">Password</string>
     <string name="lastfm_enter_credentials">Enter your username and password</string>
@@ -6212,7 +6212,7 @@ May look like a fake leaving the online"</string>
     <string name="proxy_warning">Zaborona is not associated with VTosters in any way and we cannot guarantee its work and security</string>
     <string name="proxy_settings">Proxy settings</string>
 
-    <string name="apk_install_error">Error installing update </string>
+    <string name="apk_install_error">Error installing update</string>
 
     <string name="message_self_destruct_15sec">15 seconds</string>
     <string name="message_self_destruct_1min">1 minute</string>
@@ -6226,7 +6226,7 @@ May look like a fake leaving the online"</string>
 
     <string name="update_vk_admin_token">Update VK Admin token in Other settings</string>
 
-    <string name="backup_saved_in">Saved to file </string>
+    <string name="backup_saved_in">Saved to file</string>
     <string name="backup_save_error">Failed to save file</string>
 
     <string name="newsfeed_list_update_feed">Update the feed to get a list of available items</string>
