@@ -117,7 +117,7 @@ public class IconsFragment extends MaterialPreferenceToolbarFragment {
 
         if (!hasVerification() && !getBoolValue("dialogrecomm", false)) {
             addPreference(this, "", AndroidUtils.getString("icons_warning"), AndroidUtils.getString("icons_warning_info"), "ic_about_outline_28", preference -> {
-                getContext().startActivity(new Intent("android.intent.action.VIEW").setData(Uri.parse("https://vtosters.app")));
+                getContext().startActivity(new Intent("android.intent.action.VIEW").setData(Uri.parse("https://vtosters.app/donate/")));
                 return false;
             });
         }
