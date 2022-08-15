@@ -1,27 +1,27 @@
 package ru.vtosters.lite.hooks;
 import static ru.vtosters.lite.dnr.DNRInjector.forceInvalidateDialogActions;
 import static ru.vtosters.lite.utils.AndroidUtils.dp2px;
+import static ru.vtosters.lite.utils.AndroidUtils.getString;
 import static ru.vtosters.lite.utils.AndroidUtils.sendToast;
 import static ru.vtosters.lite.utils.LifecycleUtils.getCurrentActivity;
+import static ru.vtosters.lite.utils.ThemesUtils.getSTextAttr;
 
 import android.content.Context;
 import android.content.res.ColorStateList;
 import android.text.Editable;
-import android.util.Log;
 import android.view.ViewGroup;
 import android.widget.EditText;
 import android.widget.LinearLayout;
 
 import androidx.appcompat.app.AlertDialog;
 
+import com.vk.core.dialogs.alert.VkAlertDialog;
 import com.vk.im.engine.models.dialogs.Dialog;
 
 import java.util.List;
 
 import ru.vtosters.lite.encryption.EncryptProvider;
 import ru.vtosters.lite.encryption.base.IMProcessor;
-import ru.vtosters.lite.utils.AndroidUtils;
-import ru.vtosters.lite.utils.ThemesUtils;
 
 public class CryptImHook{
     public static boolean isPrivateProcessor(int peerID){
@@ -41,7 +41,7 @@ public class CryptImHook{
         int enabledPosition = 0;
 
         String[] titles = new String[processors.size() + 1];
-        titles[0] = AndroidUtils.getString("encryption_disable");
+        titles[0] = getString("encryption_disable");
 
         for (int i = 0; i < processors.size(); i++) {
             IMProcessor proc = processors.get(i);
@@ -54,11 +54,9 @@ public class CryptImHook{
             }
         }
 
-        Log.e("CryptImHook", "crash2 " + titles.length + " " + enabledPosition);
-
         IMProcessor finalEnabled = enabled;
-        new AlertDialog.Builder(getCurrentActivity())
-                .setTitle(AndroidUtils.getString("encryption_sett"))
+        new VkAlertDialog.Builder(getCurrentActivity())
+                .setTitle(getString("encryption_sett"))
                 .setSingleChoiceItems(titles, enabledPosition, (dialog, which) -> {
                     if (which == 0) {
                         if (finalEnabled != null) finalEnabled.disableEncryptFor(peerId);
@@ -87,7 +85,7 @@ public class CryptImHook{
         }
 
         if (enabled != null && enabled.isPublic()) {
-            sendToast(AndroidUtils.getString("encryption_public_algorithm_error"));
+            sendToast(getString("encryption_public_algorithm_error"));
             return;
         }
 
@@ -96,8 +94,8 @@ public class CryptImHook{
         LinearLayout linearLayout = new LinearLayout(ctx);
 
         final EditText editText = new EditText(ctx);
-        editText.setHintTextColor(ThemesUtils.getSTextAttr());
-        editText.setBackgroundTintList(ColorStateList.valueOf(ThemesUtils.getSTextAttr()));
+        editText.setHintTextColor(getSTextAttr());
+        editText.setBackgroundTintList(ColorStateList.valueOf(getSTextAttr()));
 
         linearLayout.addView(editText);
         editText.getLayoutParams().width = ViewGroup.LayoutParams.MATCH_PARENT;
@@ -107,8 +105,8 @@ public class CryptImHook{
 
         IMProcessor finalEnabled = enabled;
         new AlertDialog.Builder(ctx)
-                .setTitle(AndroidUtils.getString("encryption_enter_key"))
-                .setMessage(String.format(AndroidUtils.getString("encryption_current_algorithm_title"), enabled.getUIName()))
+                .setTitle(getString("encryption_enter_key"))
+                .setMessage(String.format(getString("encryption_current_algorithm_title"), enabled.getUIName()))
                 .setView(linearLayout)
                 .setPositiveButton(android.R.string.ok, (dialog, which) -> {
                     Editable edit = editText.getText();
