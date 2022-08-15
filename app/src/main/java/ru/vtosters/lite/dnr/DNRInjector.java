@@ -237,10 +237,13 @@ public class DNRInjector {
         var isTextExist = !text.isEmpty() && !text.equals(" ");
         var isReplyExist = !reply.isEmpty() && !reply.equals(" ");
 
-        text = decryptMessage(text, peerId);
 
         if (isReplyExist) {
             reply = decryptMessage(reply, peerId);
+        }
+
+        if (isTextExist) {
+            text = decryptMessage(text, peerId);
         }
 
         if (action == MsgAction.valueOf("TRANSLATE")) {
