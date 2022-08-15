@@ -1,9 +1,12 @@
 package ru.vtosters.lite.dnr;
 
 import static com.vk.im.engine.h.im_ic_done;
+import static com.vk.im.engine.h.im_ic_edit_msg;
+import static com.vk.im.engine.h.im_ic_more_vertical;
 import static com.vk.im.engine.h.im_ic_pinned_msg_hide;
 import static com.vk.im.engine.h.im_ic_pinned_msg_show;
 import static com.vk.im.engine.h.im_ic_write_msg;
+import static com.vk.im.ui.c.im_ic_keyboard;
 import static ru.vtosters.lite.dnr.DNRModule.hookDNR;
 import static ru.vtosters.lite.dnr.DNRModule.hookDNT;
 import static ru.vtosters.lite.dnr.DNRModule.isDnrEnabledFor;
@@ -37,6 +40,9 @@ import java.util.List;
 import okhttp3.Headers;
 import okhttp3.OkHttpClient;
 import okhttp3.Request;
+import ru.vtosters.lite.encryption.EncryptProvider;
+import ru.vtosters.lite.encryption.base.IMProcessor;
+import ru.vtosters.lite.hooks.CryptImHook;
 import ru.vtosters.lite.ui.dialogs.Translate;
 import ru.vtosters.lite.utils.AndroidUtils;
 
@@ -44,30 +50,39 @@ public class DNRInjector {
     public static void inject(Dialog dialog, List<DialogAction> list) {
         int peerId = dialog.getId();
 
-        list.add(DialogAction.valueOf("pinmsg"));
-        list.add(DialogAction.valueOf("unpinmsg"));
+        list.add(DialogAction.pinmsg);
+        list.add(DialogAction.unpinmsg);
 
         if (isDnrEnabledFor(peerId)) {
-            list.add(DialogAction.valueOf("DNR_OFF"));
+            list.add(DialogAction.DNR_OFF);
         } else {
-            list.add(DialogAction.valueOf("DNR_ON"));
+            list.add(DialogAction.DNR_ON);
         }
 
         if (isDntEnabledFor(peerId)) {
-            list.add(DialogAction.valueOf("DNT_OFF"));
+            list.add(DialogAction.DNT_OFF);
         } else {
-            list.add(DialogAction.valueOf("DNT_ON"));
+            list.add(DialogAction.DNT_ON);
+        }
+
+        list.add(DialogAction.ENCRYPT);
+        IMProcessor prov = EncryptProvider.getProcessorFor(peerId);
+        if (prov != null && !prov.isPublic()) {
+            list.add(DialogAction.ENCRYPT_SETT);
         }
     }
 
     public static LinkedHashMap<DialogAction, Integer> injectToHashMap(LinkedHashMap<DialogAction, Integer> hashMap) {
-        hashMap.put(DialogAction.valueOf("DNR_ON"), getIdentifier("DNR_ON", "string"));
-        hashMap.put(DialogAction.valueOf("DNR_OFF"), getIdentifier("DNR_OFF", "string"));
-        hashMap.put(DialogAction.valueOf("DNT_ON"), getIdentifier("DNT_ON", "string"));
-        hashMap.put(DialogAction.valueOf("DNT_OFF"), getIdentifier("DNT_OFF", "string"));
+        hashMap.put(DialogAction.DNR_ON, getIdentifier("DNR_ON", "string"));
+        hashMap.put(DialogAction.DNR_OFF, getIdentifier("DNR_OFF", "string"));
+        hashMap.put(DialogAction.DNT_ON, getIdentifier("DNT_ON", "string"));
+        hashMap.put(DialogAction.DNT_OFF, getIdentifier("DNT_OFF", "string"));
 
-        hashMap.put(DialogAction.valueOf("pinmsg"), getIdentifier("pinmsg", "string"));
-        hashMap.put(DialogAction.valueOf("unpinmsg"), getIdentifier("unpinmsg", "string"));
+        hashMap.put(DialogAction.ENCRYPT, getIdentifier("encryption", "string"));
+        hashMap.put(DialogAction.ENCRYPT_SETT, getIdentifier("encryption_sett", "string"));
+
+        hashMap.put(DialogAction.pinmsg, getIdentifier("pinmsg", "string"));
+        hashMap.put(DialogAction.unpinmsg, getIdentifier("unpinmsg", "string"));
         return hashMap;
     }
 
@@ -78,10 +93,13 @@ public class DNRInjector {
         list.add(new DialogActionsListView.b.a(DialogAction.DNR_ON, 2, im_ic_pinned_msg_hide, getIdentifier("DNR_ON", "string"))); // DialogAction, Int, Icon, String
         list.add(new DialogActionsListView.b.a(DialogAction.DNR_OFF, 2, im_ic_pinned_msg_show, getIdentifier("DNR_OFF", "string"))); // DialogAction, Int, Icon, String
 
-        list.add(new DialogActionsListView.b.a(DialogAction.DNT_ON, 2, im_ic_write_msg, getIdentifier("DNT_ON", "string"))); // DialogAction, Int, Icon, String
-        list.add(new DialogActionsListView.b.a(DialogAction.DNT_OFF, 2, im_ic_write_msg, getIdentifier("DNT_OFF", "string"))); // DialogAction, Int, Icon, String
+        list.add(new DialogActionsListView.b.a(DialogAction.DNT_ON, 2, im_ic_edit_msg, getIdentifier("DNT_ON", "string"))); // DialogAction, Int, Icon, String
+        list.add(new DialogActionsListView.b.a(DialogAction.DNT_OFF, 2, im_ic_edit_msg, getIdentifier("DNT_OFF", "string"))); // DialogAction, Int, Icon, String
 
-        list.add(new DialogActionsListView.b.a(DialogAction.MARK_AS_READ, 3, im_ic_done, getIdentifier("vkim_dialogs_list_option_mark_as_read", "string"))); // DialogAction, Int, Icon, String
+        list.add(new DialogActionsListView.b.a(DialogAction.ENCRYPT, 3, im_ic_keyboard, getIdentifier("encryption", "string"))); // DialogAction, Int, Icon, String
+        list.add(new DialogActionsListView.b.a(DialogAction.ENCRYPT_SETT, 3, im_ic_more_vertical, getIdentifier("encryption_sett", "string"))); // DialogAction, Int, Icon, String
+
+        list.add(new DialogActionsListView.b.a(DialogAction.MARK_AS_READ, 4, im_ic_done, getIdentifier("vkim_dialogs_list_option_mark_as_read", "string"))); // DialogAction, Int, Icon, String
 
         return list;
     }
@@ -105,6 +123,12 @@ public class DNRInjector {
             actions.add(DialogAction.DNT_OFF);
         } else {
             actions.add(DialogAction.DNT_ON);
+        }
+
+        actions.add(DialogAction.ENCRYPT);
+        IMProcessor prov = EncryptProvider.getProcessorFor(peerId);
+        if (prov != null && !prov.isPublic()) {
+            actions.add(DialogAction.ENCRYPT_SETT);
         }
 
         actions.add(DialogAction.MARK_AS_READ);
@@ -139,37 +163,53 @@ public class DNRInjector {
             return true;
         }
 
+        if (action == DialogAction.ENCRYPT_SETT) {
+            CryptImHook.hookPref(id);
+            return true;
+        } else if (action == DialogAction.ENCRYPT) {
+            CryptImHook.hook(id, dialog);
+            return true;
+        }
+
         return false;
     }
 
     public static boolean onClick(Dialog dialog, DialogAction action) {
         var id = dialog.getId();
 
-        if (action == DialogAction.valueOf("MARK_AS_READ")) {
+        if (action == DialogAction.MARK_AS_READ) {
             DNRModule.hookRead(dialog);
         }
 
-        if (action == DialogAction.valueOf("DNR_ON")) {
+        if (action == DialogAction.DNR_ON) {
             setDnr(dialog, true);
             return true;
-        } else if (action == DialogAction.valueOf("DNR_OFF")) {
+        } else if (action == DialogAction.DNR_OFF) {
             setDnr(dialog, false);
             return true;
         }
 
-        if (action == DialogAction.valueOf("DNT_ON")) {
+        if (action == DialogAction.DNT_ON) {
             setDnt(dialog, true);
             return true;
-        } else if (action == DialogAction.valueOf("DNT_OFF")) {
+        } else if (action == DialogAction.DNT_OFF) {
             setDnt(dialog, false);
             return true;
         }
 
-        if (action == DialogAction.valueOf("pinmsg")) {
+        if (action == DialogAction.pinmsg) {
             pinnedMsg(id, true);
             return true;
-        } else if (action == DialogAction.valueOf("unpinmsg")) {
+        } else if (action == DialogAction.unpinmsg) {
             pinnedMsg(id, false);
+            return true;
+        }
+
+        if (action == DialogAction.ENCRYPT_SETT) {
+            CryptImHook.hookPref(id);
+            return true;
+        } else if (action == DialogAction.ENCRYPT) {
+            CryptImHook.hook(id, dialog);
             return true;
         }
 

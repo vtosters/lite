@@ -4,7 +4,6 @@ import static ru.vtosters.lite.ui.dialogs.ServerDialog.sendRequest;
 import static ru.vtosters.lite.utils.CacheUtils.getInstance;
 import static ru.vtosters.lite.utils.DeletedMessagesHandler.reloadMessagesList;
 import static ru.vtosters.lite.utils.Preferences.checkupdates;
-import static ru.vtosters.lite.utils.ProxyUtils.setProxy;
 import static ru.vtosters.lite.utils.ThemesUtils.isDarkTheme;
 import static ru.vtosters.lite.utils.ThemesUtils.setNeededTheme;
 
@@ -22,7 +21,6 @@ import ru.vtosters.lite.ui.dialogs.Start;
 public class MainActivityInjector {
 
     public static void inject(Activity activity) {
-        setProxy();
         setNeededTheme(activity);
         ServerDialog.activity = activity;
         sendRequest();
