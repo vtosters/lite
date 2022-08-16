@@ -3925,12 +3925,6 @@
 .method public a(Lcom/vk/core/fragments/FragmentImpl;)Z
     .locals 1
 
-    invoke-static {p1}, Lru/vtosters/lite/hooks/DockBarInjector;->isDockOpenAllowed(Lcom/vk/core/fragments/FragmentImpl;)Z
-
-    move-result p1
-
-    return p1
-
     .line 54
     iget-object v0, p0, Lcom/vk/navigation/NavigationDelegateBottom;->B:Lcom/vk/core/fragments/FragmentNavigationController;
 

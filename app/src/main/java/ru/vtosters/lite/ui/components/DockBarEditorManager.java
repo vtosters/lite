@@ -49,7 +49,6 @@ import ru.vtosters.lite.ui.items.DockBarTab;
 import ru.vtosters.lite.utils.AndroidUtils;
 
 public class DockBarEditorManager {
-
     public static final int MIN_SELECTED_TABS = 3;
     public static final int MAX_SELECTED_TABS = 9;
 
@@ -99,16 +98,14 @@ public class DockBarEditorManager {
         List<String> allTags = new ArrayList<>(Arrays.asList("tab_news", "tab_superapps", "tab_messages", "tab_feedback", "tab_profile",
                 "tab_friends", "tab_groups", "tab_photos", "tab_audios", "tab_videos", "tab_lives", "tab_games", "tab_liked",
                 "tab_fave", "tab_documents", "tab_payments", "tab_vk_apps", "tab_settings", "tab_menu"));
+
         for (String tag : selectedTabsTags) {
             mSelectedTabs.add(getTabByTag(tag));
             allTags.remove(tag);
         }
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N) {
-            allTags.forEach(tag -> mDisabledTabs.add(getTabByTag(tag)));
-        } else {
-            for (String tag : allTags) {
-                mDisabledTabs.add(getTabByTag(tag));
-            }
+
+        for (String tag : allTags) {
+            mDisabledTabs.add(getTabByTag(tag));
         }
     }
 
