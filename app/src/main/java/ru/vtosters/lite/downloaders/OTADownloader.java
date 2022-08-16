@@ -79,7 +79,7 @@ public class OTADownloader {
                 dialog.cancel();
             });
             alertDialog.setNeutralButton(AndroidUtils.getString("yes"), (dialog, which) -> {
-                context.startActivity(new Intent("android.intent.action.VIEW").setData(Uri.parse("https://github.com/vtosters/lite/releases/latest/")));
+                context.startActivity(new Intent("android.intent.action.VIEW").setData(Uri.parse("https://github.com/vtosters/lite/releases/latest/download/VTLite.apk")));
             });
             var alert = alertDialog.create();
             alert.show();
