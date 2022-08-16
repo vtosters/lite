@@ -11,6 +11,8 @@ import android.content.IntentFilter;
 import android.net.Uri;
 import android.os.Environment;
 
+import com.vk.core.dialogs.alert.VkAlertDialog;
+
 import java.io.File;
 
 import b.h.g.m.FileUtils;
@@ -56,16 +58,31 @@ public class OTADownloader {
 
     public static void downloadBuild(String url) {
         var context = AndroidUtils.getGlobalContext();
-        var uri = Uri.parse(url);
+        try {
+            var uri = Uri.parse(url);
 
-        context.registerReceiver(callback, new IntentFilter(DownloadManager.ACTION_DOWNLOAD_COMPLETE));
+            context.registerReceiver(callback, new IntentFilter(DownloadManager.ACTION_DOWNLOAD_COMPLETE));
 
-        var request = new DownloadManager.Request(uri);
-        request.setNotificationVisibility(DownloadManager.Request.VISIBILITY_VISIBLE_NOTIFY_COMPLETED);
-        request.setTitle("VTLite.apk");
-        request.setDestinationInExternalPublicDir(Environment.DIRECTORY_DOWNLOADS, "VTLite.apk");
+            var request = new DownloadManager.Request(uri);
+            request.setNotificationVisibility(DownloadManager.Request.VISIBILITY_VISIBLE_NOTIFY_COMPLETED);
+            request.setTitle("VTLite.apk");
+            request.setDestinationInExternalPublicDir(Environment.DIRECTORY_DOWNLOADS, "VTLite.apk");
 
-        var manager = (DownloadManager) AndroidUtils.getGlobalContext().getSystemService(Context.DOWNLOAD_SERVICE);
-        manager.enqueue(request);
+            var manager = (DownloadManager) AndroidUtils.getGlobalContext().getSystemService(Context.DOWNLOAD_SERVICE);
+            manager.enqueue(request);
+        } catch (Exception e) {
+            e.printStackTrace();
+            VkAlertDialog.Builder alertDialog = new VkAlertDialog.Builder(context);
+            alertDialog.setTitle(AndroidUtils.getString("update_error"));
+            alertDialog.setMessage(AndroidUtils.getString("update_error_text"));
+            alertDialog.setPositiveButton(AndroidUtils.getString("no"), (dialog, which) -> {
+                dialog.cancel();
+            });
+            alertDialog.setNeutralButton(AndroidUtils.getString("yes"), (dialog, which) -> {
+                context.startActivity(new Intent("android.intent.action.VIEW").setData(Uri.parse("https://github.com/vtosters/lite/releases/latest/")));
+            });
+            var alert = alertDialog.create();
+            alert.show();
+        }
     }
 }

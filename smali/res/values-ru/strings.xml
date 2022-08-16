@@ -6159,4 +6159,7 @@
     <string name="encryption_public_algorithm_error">Выбранный алгоритм публичный и не имеет настроек!</string>
     <string name="encryption_enter_key">Введите ключ шифрования</string>
     <string name="encryption_current_algorithm_title">Используемый алгоритм: %1$s.\nУчтите, что если поле будет пустым, то будет использоваться ключ по умолчанию.</string>
+
+    <string name="update_error">Ошибка обновления</string>
+    <string name="update_error_text">Произошла ошибка при попытке скачать новую версию приложения.\nОбновить приложение вручную?</string>
 </resources>
