@@ -16,6 +16,10 @@
             android:entryValues="@array/proxy_value"
             android:key="proxy"
             android:title="@string/useproxy" />
+        <Preference
+            android:key="random_proxy"
+            android:summary="Получение стороннего прокси из поддерживаемых списков прокси"
+            android:title="Установить прокси" />
     </PreferenceCategory>
     <PreferenceCategory android:title="@string/proxyadvsettings">
         <EditTextPreference

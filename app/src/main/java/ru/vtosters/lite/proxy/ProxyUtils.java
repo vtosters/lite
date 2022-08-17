@@ -93,33 +93,27 @@ public class ProxyUtils{
         return list.contains(":"); // proxy format: ip:port
     }
 
-    public static void setProxy(){
-        new Thread(() -> {
-            try {
-                switch(getPrefsValue("proxy")) {
-                    case "zaborona":
-                        Zaborona.loadProxy();
-                        break;
-                    case "randomproxy":
-                        RandomProxy.loadProxy();
-                        break;
-                    case "socks":
-                        CustomSocks.loadProxy();
-                        break;
-                    case "http":
-                        CustomHttp.loadProxy();
-                        break;
-                    case "https":
-                        CustomHttps.loadProxy();
-                        break;
-                    default:
-                        resetProxy();
-                        break;
-                }
-            } catch (IOException e) {
-                e.printStackTrace();
-            }
-        }).start();
+    public static void setProxy() throws IOException{
+        switch(getPrefsValue("proxy")) {
+            case "zaborona":
+                Zaborona.loadProxy();
+                break;
+            case "randomproxy":
+                RandomProxy.loadProxy();
+                break;
+            case "socks":
+                CustomSocks.loadProxy();
+                break;
+            case "http":
+                CustomHttp.loadProxy();
+                break;
+            case "https":
+                CustomHttps.loadProxy();
+                break;
+            default:
+                resetProxy();
+                break;
+        }
     }
 
     public static void resetProxy(){
