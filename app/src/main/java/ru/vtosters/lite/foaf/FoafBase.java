@@ -5,7 +5,7 @@ import static android.widget.Toast.makeText;
 import static ru.vtosters.lite.utils.AndroidUtils.getGlobalContext;
 import static ru.vtosters.lite.utils.AndroidUtils.getIdentifier;
 import static ru.vtosters.lite.utils.AndroidUtils.getString;
-import static ru.vtosters.lite.utils.ProxyUtils.apiproxy;
+import static ru.vtosters.lite.utils.ProxyUtils.isApiProxyEnabled;
 import static ru.vtosters.lite.utils.ProxyUtils.getApi;
 
 import android.annotation.SuppressLint;
@@ -68,7 +68,7 @@ public class FoafBase {
     private static String getLink(int i) {
         String str;
         StringBuilder sb;
-        if (apiproxy()) {
+        if (isApiProxyEnabled()) {
             sb = new StringBuilder();
             str = "https://" + getApi() + "/_/vk.com/foaf.php?id=";
         } else {

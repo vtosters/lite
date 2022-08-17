@@ -1,6 +1,7 @@
 package ru.vtosters.lite.utils;
 
 import static java.lang.System.clearProperty;
+import static ru.vtosters.lite.utils.AndroidUtils.edit;
 import static ru.vtosters.lite.utils.AndroidUtils.getGlobalContext;
 import static ru.vtosters.lite.utils.AndroidUtils.getPrefsValue;
 
@@ -13,11 +14,18 @@ import android.util.Log;
 import java.lang.reflect.Field;
 import java.lang.reflect.Method;
 
+import ru.vtosters.lite.proxy.CustomHttp;
+import ru.vtosters.lite.proxy.CustomHttps;
+import ru.vtosters.lite.proxy.CustomSocks;
+import ru.vtosters.lite.proxy.Hookzof;
+import ru.vtosters.lite.proxy.RandomProxy;
+import ru.vtosters.lite.proxy.Zaborona;
+
 public class ProxyUtils {
     public static String getApi() {
         var proxyapi = getPrefsValue("proxyapi");
 
-        if (apiproxy() & !proxyapi.isEmpty()) {
+        if (isApiProxyEnabled() & !proxyapi.isEmpty()) {
             return proxyapi;
         }
 
@@ -32,7 +40,11 @@ public class ProxyUtils {
         return getPrefsValue("proxy").equals("randomsocks");
     }
 
-    public static void setProxyRefl() {
+    public static Boolean isApiProxyEnabled() {
+        return getPrefsValue("proxy").equals("apiproxy");
+    }
+
+    public static void forceProxyApplying() {
         Log.d("Proxy", "Setting proxy...");
         try {
             var context = getGlobalContext().getApplicationContext();
@@ -47,20 +59,22 @@ public class ProxyUtils {
             @SuppressLint("DiscouragedPrivateApi") Field mReceiversField = loadedApkClass.getDeclaredField("mReceivers");
             mReceiversField.setAccessible(true);
             ArrayMap<?, ?> receivers = (ArrayMap<?, ?>) mReceiversField.get(mLoadedApkObject);
-            for (Object receiverMap : receivers.values()) {
-                for (Object receiver : ((ArrayMap<?, ?>) receiverMap).keySet()) {
-                    Class<?> receiverClass = receiver.getClass();
+            if (receivers != null) {
+                for (Object receiverMap : receivers.values()) {
+                    for (Object receiver : ((ArrayMap<?, ?>) receiverMap).keySet()) {
+                        Class<?> receiverClass = receiver.getClass();
 
-                    if (receiverClass.getName().contains("ProxyChangeListener")) {
-                        Method onReceiveMethod = receiverClass.getDeclaredMethod("onReceive", Context.class, Intent.class);
-                        Intent intent = new Intent(android.net.Proxy.PROXY_CHANGE_ACTION);
-                        onReceiveMethod.invoke(receiver, context, intent);
-                    } else {
-                        for (Field field : receiverClass.getDeclaredFields()) {
-                            if (field.getType().getName().contains("ProxyChangeListener")) {
-                                Method onReceiveMethod = receiverClass.getDeclaredMethod("onReceive", Context.class, Intent.class);
-                                Intent intent = new Intent(android.net.Proxy.PROXY_CHANGE_ACTION);
-                                onReceiveMethod.invoke(receiver, context, intent);
+                        if (receiverClass.getName().contains("ProxyChangeListener")) {
+                            Method onReceiveMethod = receiverClass.getDeclaredMethod("onReceive", Context.class, Intent.class);
+                            Intent intent = new Intent(android.net.Proxy.PROXY_CHANGE_ACTION);
+                            onReceiveMethod.invoke(receiver, context, intent);
+                        } else {
+                            for (Field field : receiverClass.getDeclaredFields()) {
+                                if (field.getType().getName().contains("ProxyChangeListener")) {
+                                    Method onReceiveMethod = receiverClass.getDeclaredMethod("onReceive", Context.class, Intent.class);
+                                    Intent intent = new Intent(android.net.Proxy.PROXY_CHANGE_ACTION);
+                                    onReceiveMethod.invoke(receiver, context, intent);
+                                }
                             }
                         }
                     }
@@ -76,31 +90,19 @@ public class ProxyUtils {
     public static void setProxy() {
         switch (getPrefsValue("proxy")) {
             case "zaborona":
-                System.setProperty("socksProxyHost", "socks.zaboronahelp.pp.ua");
-                System.setProperty("socksProxyPort", "1488");
-                setProxyRefl();
+                Zaborona.loadProxy();
                 break;
             case "randomsocks":
-                ProxyList.loadProxy();
+                RandomProxy.loadProxy();
                 break;
             case "socks":
-                System.setProperty("socksProxyHost", proxyHostSocks());
-                System.setProperty("socksProxyPort", proxyPortSocks());
-                setProxyRefl();
+                CustomSocks.loadProxy();
                 break;
             case "http":
-                System.setProperty("http.proxyHost", proxyHostHTTP());
-                System.setProperty("http.proxyPort", proxyPortHTTP());
-                System.setProperty("http.proxyUser", proxyUserHTTP());
-                System.setProperty("http.proxyPassword", proxyPassHTTP());
-                setProxyRefl();
+                CustomHttp.loadProxy();
                 break;
             case "https":
-                System.setProperty("https.proxyHost", proxyHostHTTPS());
-                System.setProperty("https.proxyPort", proxyPortHTTPS());
-                System.setProperty("https.proxyUser", proxyUserHTTPS());
-                System.setProperty("https.proxyPassword", proxyPassHTTPS());
-                setProxyRefl();
+                CustomHttps.loadProxy();
                 break;
             default:
                 resetProxy();
@@ -119,59 +121,6 @@ public class ProxyUtils {
         clearProperty("http.proxyPassword");
         clearProperty("socksProxyHost");
         clearProperty("socksPortHost");
+        edit().putString("proxy", "noproxy").commit();
     } // Reset all proxies
-
-    private static String proxyHostHTTP() {
-        var string = getPrefsValue("proxyHostHTTP");
-        return string.isEmpty() ? "192.168.0.1" : string;
-    }
-
-    private static String proxyHostHTTPS() {
-        var string = getPrefsValue("proxyHostHTTPS");
-        return string.isEmpty() ? "192.168.0.1" : string;
-    }
-
-    private static String proxyHostSocks() {
-        var string = getPrefsValue("proxyHostSocks");
-        return string.isEmpty() ? "192.168.0.1" : string;
-    }
-
-    private static String proxyPortHTTP() {
-        var string = getPrefsValue("proxyPortHTTP");
-        return string.isEmpty() ? "8888" : string;
-    }
-
-    private static String proxyPortHTTPS() {
-        var string = getPrefsValue("proxyPortHTTPS");
-        return string.isEmpty() ? "8888" : string;
-    }
-
-    private static String proxyPortSocks() {
-        var string = getPrefsValue("proxyPortSocks");
-        return string.isEmpty() ? "8888" : string;
-    }
-
-    private static String proxyUserHTTP() {
-        var string = getPrefsValue("proxyUserHTTP");
-        return string.isEmpty() ? "" : string;
-    }
-
-    private static String proxyUserHTTPS() {
-        var string = getPrefsValue("proxyUserHTTPS");
-        return string.isEmpty() ? "" : string;
-    }
-
-    private static String proxyPassHTTP() {
-        var string = getPrefsValue("proxyPassHTTP");
-        return string.isEmpty() ? "" : string;
-    }
-
-    private static String proxyPassHTTPS() {
-        String string = getPrefsValue("proxyPassHTTPS");
-        return string.isEmpty() ? "" : string;
-    }
-
-    public static boolean apiproxy() {
-        return getPrefsValue("proxy").equals("apiproxy");
-    }
 }
