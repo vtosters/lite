@@ -4,6 +4,7 @@ import static ru.vtosters.lite.utils.AndroidUtils.dp2px;
 import static ru.vtosters.lite.utils.AndroidUtils.getString;
 import static ru.vtosters.lite.utils.AndroidUtils.sendToast;
 import static ru.vtosters.lite.utils.LifecycleUtils.getCurrentActivity;
+import static ru.vtosters.lite.utils.ThemesUtils.getAlertStyle;
 import static ru.vtosters.lite.utils.ThemesUtils.getSTextAttr;
 
 import android.content.Context;
@@ -19,6 +20,7 @@ import com.vk.core.dialogs.alert.VkAlertDialog;
 import com.vk.im.engine.models.dialogs.Dialog;
 
 import java.util.List;
+import java.util.Objects;
 
 import ru.vtosters.lite.encryption.EncryptProvider;
 import ru.vtosters.lite.encryption.base.IMProcessor;
@@ -78,6 +80,8 @@ public class CryptImHook{
 
     public static void hookPref(int peerId){
         IMProcessor enabled = null;
+        String key = null;
+
         for (IMProcessor processor : EncryptProvider.processors) {
             if (processor.isUsedToEncrypt(peerId)) {
                 enabled = processor;
@@ -87,6 +91,14 @@ public class CryptImHook{
         if (enabled != null && enabled.isPublic()) {
             sendToast(getString("encryption_public_algorithm_error"));
             return;
+        }
+
+        if (Objects.requireNonNull(enabled).getEncryptionKeyFor(peerId) != null) {
+            key = enabled.getEncryptionKeyFor(peerId);
+        }
+
+        if (key.equals("VTAesDefault")) {
+            key = null;
         }
 
         Context ctx = getCurrentActivity();
@@ -102,9 +114,10 @@ public class CryptImHook{
         ViewGroup.MarginLayoutParams margin = ((ViewGroup.MarginLayoutParams) editText.getLayoutParams());
         margin.setMargins(dp2px(24f), 0, dp2px(24f), 0);
         editText.setLayoutParams(margin);
+        editText.setText(key == null ? "" : key);
 
         IMProcessor finalEnabled = enabled;
-        new AlertDialog.Builder(ctx)
+        new AlertDialog.Builder(ctx, getAlertStyle())
                 .setTitle(getString("encryption_enter_key"))
                 .setMessage(String.format(getString("encryption_current_algorithm_title"), enabled.getUIName()))
                 .setView(linearLayout)
