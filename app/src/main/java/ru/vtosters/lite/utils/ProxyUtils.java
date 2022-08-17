@@ -28,6 +28,10 @@ public class ProxyUtils {
         return getPrefsValue("proxy").equals("zaborona");
     }
 
+    public static Boolean isRandomSocksEnabled() {
+        return getPrefsValue("proxy").equals("randomsocks");
+    }
+
     public static void setProxyRefl() {
         Log.d("Proxy", "Setting proxy...");
         try {
@@ -75,6 +79,9 @@ public class ProxyUtils {
                 System.setProperty("socksProxyHost", "socks.zaboronahelp.pp.ua");
                 System.setProperty("socksProxyPort", "1488");
                 setProxyRefl();
+                break;
+            case "randomsocks":
+                ProxyList.loadProxy();
                 break;
             case "socks":
                 System.setProperty("socksProxyHost", proxyHostSocks());

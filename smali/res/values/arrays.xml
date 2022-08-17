@@ -743,6 +743,7 @@
     <string-array name="proxy">
         <item>No Proxy</item>
         <item>zaborona.help</item>
+        <item>Random Socks5</item>
         <item>Custom API proxy</item>
         <item>Custom HTTP</item>
         <item>Custom HTTPS</item>
@@ -751,6 +752,7 @@
     <string-array name="proxy_value">
         <item>noproxy</item>
         <item>zaborona</item>
+        <item>randomsocks</item>
         <item>apiproxy</item>
         <item>http</item>
         <item>https</item>
