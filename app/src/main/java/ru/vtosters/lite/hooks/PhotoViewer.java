@@ -1,5 +1,6 @@
 package ru.vtosters.lite.hooks;
 
+import static ru.vtosters.lite.utils.AndroidUtils.getString;
 import static ru.vtosters.lite.utils.AndroidUtils.getIdentifier;
 import static ru.vtosters.lite.utils.AndroidUtils.getPreferences;
 
@@ -94,7 +95,7 @@ public class PhotoViewer {
                         if (documentAttachment.J != null)
                             openUrl(getUrlFromDocumentAttachment(documentAttachment));
                         else
-                            ToastUtils.a("Не удалось получить ссылку на фото");
+                            ToastUtils.a(getString("photo_get_error"));
                     }
                     return null;
                 }
