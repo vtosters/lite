@@ -595,6 +595,7 @@
     <string-array name="proxy">
         <item>Без прокси</item>
         <item>zaborona.help</item>
+        <item>Рандомный Socks5</item>
         <item>Сторонний прокси для API</item>
         <item>Сторонний HTTP</item>
         <item>Сторонний HTTPS</item>
