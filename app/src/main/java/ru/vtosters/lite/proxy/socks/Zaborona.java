@@ -1,5 +1,5 @@
-package ru.vtosters.lite.proxy;
-import static ru.vtosters.lite.utils.ProxyUtils.forceProxyApplying;
+package ru.vtosters.lite.proxy.socks;
+import static ru.vtosters.lite.proxy.ProxyUtils.forceProxyApplying;
 
 public class Zaborona{
     public static void loadProxy(){

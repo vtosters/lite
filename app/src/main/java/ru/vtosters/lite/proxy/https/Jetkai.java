@@ -1,6 +1,6 @@
-package ru.vtosters.lite.proxy;
+package ru.vtosters.lite.proxy.https;
 import static ru.vtosters.lite.utils.AndroidUtils.sendToast;
-import static ru.vtosters.lite.utils.ProxyUtils.forceProxyApplying;
+import static ru.vtosters.lite.proxy.ProxyUtils.forceProxyApplying;
 
 import android.util.Log;
 
@@ -14,18 +14,18 @@ import okhttp3.OkHttpClient;
 import okhttp3.Request;
 import okhttp3.Response;
 
-public class Hookzof{
+public class Jetkai{
     private static final OkHttpClient mClient = new OkHttpClient();
 
     public static void loadProxy() {
         Request link = new Request.a()
-                .b("https://raw.githubusercontent.com/hookzof/socks5_list/master/proxy.txt")
+                .b("https://raw.githubusercontent.com/jetkai/proxy-list/main/online-proxies/txt/proxies-https.txt")
                 .a();
 
         mClient.a(link).a(new Callback() {
             @Override
             public void a(Call call, IOException e) {
-                Log.d("Hookzof", "Error while getting proxy: " + e);
+                Log.d("Jetkai", "Error while getting proxy: " + e);
                 loadError();
             }
 
@@ -44,25 +44,25 @@ public class Hookzof{
         String resp = response.a().g();
 
         if (!hasProxy(resp)) {
-            Log.d("Hookzof", "No proxy found");
+            Log.d("Jetkai", "No proxy found");
             return;
         }
 
         ArrayList<String> proxyList = new ArrayList<>(Arrays.asList(resp.split("\n")));
 
-        Log.d("Hookzof", proxyList.toString());
+        Log.d("Jetkai", proxyList.toString());
 
         String proxy = proxyList.get(new java.util.Random().nextInt(proxyList.size()));
 
         if (!hasProxy(proxy)) {
-            Log.d("Hookzof", "No proxy port found");
+            Log.d("Jetkai", "No proxy port found");
             return;
         }
 
-        Log.d("Hookzof", "Setting proxy: " + proxy.split(":")[0] + ":" + proxy.split(":")[1]);
+        Log.d("Jetkai", "Setting proxy: " + proxy.split(":")[0] + ":" + proxy.split(":")[1]);
 
-        System.setProperty("socksProxyHost", proxy.split(":")[0]);
-        System.setProperty("socksProxyPort", proxy.split(":")[1]);
+        System.setProperty("https.proxyHost", proxy.split(":")[0]);
+        System.setProperty("https.proxyPort", proxy.split(":")[1]);
         forceProxyApplying();
     }
 
@@ -71,6 +71,6 @@ public class Hookzof{
     }
 
     static void loadError() {
-        sendToast("Error while getting proxy Hookzof");
+        sendToast("Error while getting proxy Jetkai");
     }
 }

@@ -8,7 +8,7 @@ import static ru.vtosters.lite.utils.AndroidUtils.getPrefsValue;
 import static ru.vtosters.lite.utils.CacheUtils.getInstance;
 import static ru.vtosters.lite.utils.DeletedMessagesHandler.reloadMessagesList;
 import static ru.vtosters.lite.utils.NewsFeedFiltersUtils.setupFilters;
-import static ru.vtosters.lite.utils.ProxyUtils.setProxy;
+import static ru.vtosters.lite.proxy.ProxyUtils.setProxy;
 import static ru.vtosters.lite.utils.SignatureChecker.validateAppSignature;
 import static ru.vtosters.lite.utils.ThemesUtils.isDarkTheme;
 import static ru.vtosters.lite.utils.VTVerifications.isPrometheus;
