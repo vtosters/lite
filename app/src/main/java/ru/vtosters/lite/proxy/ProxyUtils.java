@@ -1,7 +1,6 @@
 package ru.vtosters.lite.proxy;
 
 import static java.lang.System.clearProperty;
-import static ru.vtosters.lite.utils.AndroidUtils.edit;
 import static ru.vtosters.lite.utils.AndroidUtils.getGlobalContext;
 import static ru.vtosters.lite.utils.AndroidUtils.getPrefsValue;
 
@@ -11,17 +10,17 @@ import android.content.Intent;
 import android.util.ArrayMap;
 import android.util.Log;
 
+import java.io.IOException;
 import java.lang.reflect.Field;
 import java.lang.reflect.Method;
 
 import ru.vtosters.lite.proxy.http.CustomHttp;
 import ru.vtosters.lite.proxy.https.CustomHttps;
 import ru.vtosters.lite.proxy.socks.CustomSocks;
-import ru.vtosters.lite.proxy.RandomProxy;
 import ru.vtosters.lite.proxy.socks.Zaborona;
 
-public class ProxyUtils {
-    public static String getApi() {
+public class ProxyUtils{
+    public static String getApi(){
         var proxyapi = getPrefsValue("proxyapi");
 
         if (isApiProxyEnabled() & !proxyapi.isEmpty()) {
@@ -31,23 +30,23 @@ public class ProxyUtils {
         return "api.vk.com";
     }
 
-    public static Boolean isZaboronaEnabled() {
+    public static Boolean isZaboronaEnabled(){
         return getPrefsValue("proxy").equals("zaborona");
     }
 
-    public static Boolean isRandomProxyEnabled() {
+    public static Boolean isRandomProxyEnabled(){
         return getPrefsValue("proxy").equals("randomproxy");
     }
 
-    public static Boolean isApiProxyEnabled() {
+    public static Boolean isApiProxyEnabled(){
         return getPrefsValue("proxy").equals("apiproxy");
     }
 
-    public static Boolean isVikaProxyEnabled() {
+    public static Boolean isVikaProxyEnabled(){
         return getPrefsValue("proxy").equals("vika");
     }
 
-    public static void forceProxyApplying() {
+    public static void forceProxyApplying(){
         Log.d("Proxy", "Setting proxy...");
         try {
             var context = getGlobalContext().getApplicationContext();
@@ -90,8 +89,12 @@ public class ProxyUtils {
         }
     }
 
-    public static void setProxy() {
-        switch (getPrefsValue("proxy")) {
+    public static boolean hasProxy(String list){
+        return list.contains(":"); // proxy format: ip:port
+    }
+
+    public static void setProxy() throws IOException{
+        switch(getPrefsValue("proxy")) {
             case "zaborona":
                 Zaborona.loadProxy();
                 break;
@@ -113,7 +116,7 @@ public class ProxyUtils {
         }
     }
 
-    public static void resetProxy() {
+    public static void resetProxy(){
         clearProperty("https.proxyHost");
         clearProperty("https.proxyPort");
         clearProperty("https.proxyUser");
