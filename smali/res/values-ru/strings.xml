@@ -6162,4 +6162,11 @@
 
     <string name="update_error">Ошибка обновления</string>
     <string name="update_error_text">Произошла ошибка при попытке скачать новую версию приложения.\nОбновить приложение вручную?</string>
+
+    <string name="photo_get_error">Не удалось получить ссылку на фото</string>
+
+    <string name="denial_of_responsibility_proxy">Отказ от ответственности</string>
+    <string name="denial_of_responsibility_proxy_summ">Разработчики клиента VTLite не несут никакой ответственности за работу и безопасность использования сторонних прокси-серверов \n\nИспользуйте на свой страх и риск</string>
+
+    <string name="altervika_title">Альтернативный домен VikaMobile</string>
 </resources>
