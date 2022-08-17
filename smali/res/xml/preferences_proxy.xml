@@ -5,6 +5,10 @@
             android:enabled="false"
             android:summary="@string/proxyimpinfosum"
             android:title="@string/proxyimpinfo" />
+        <Preference
+            android:enabled="false"
+            android:summary="Разработчики клиента VTLite не несут никакой ответственности за работу и безопасность использования сторонних прокси-серверов \n\nИспользуйте на свой страх и риск"
+            android:title="Отказ от ответственности" />
         <com.vtosters.lite.ui.SummaryListPreference
             android:defaultValue="noproxy"
             android:dialogTitle="@string/useproxysum"
@@ -78,46 +82,68 @@
             android:title="@string/proxyport" />
     </PreferenceCategory>
     <PreferenceCategory android:title="@string/proxyowners">
+        <Preference
+            android:persistent="false"
+            android:title="Hookzof Socks">
+            <intent
+                android:action="android.intent.action.VIEW"
+                android:data="https://github.com/hookzof/socks5_list" />
+        </Preference>
+        <Preference
+            android:persistent="false"
+            android:title="Jetkai Socks/Https/Http">
+            <intent
+                android:action="android.intent.action.VIEW"
+                android:data="https://github.com/jetkai/proxy-list" />
+        </Preference>
+        <Preference
+            android:persistent="false"
+            android:title="TheSpeedX Socks/Http">
+            <intent
+                android:action="android.intent.action.VIEW"
+                android:data="https://github.com/TheSpeedX/PROXY-List" />
+        </Preference>
+        <Preference
+            android:persistent="false"
+            android:title="Roosterkid Socks">
+            <intent
+                android:action="android.intent.action.VIEW"
+                android:data="https://github.com/roosterkid/openproxylist" />
+        </Preference>
+        <Preference
+            android:persistent="false"
+            android:summary="@string/proxydonate"
+            android:title="zaborona">
+            <intent
+                android:action="android.intent.action.VIEW"
+                android:data="https://zaborona.help/donate.html" />
+        </Preference>
+        <Preference
+            android:persistent="false"
+            android:summary="@string/proxydonate"
+            android:title="xtrafrancyz">
+            <intent
+                android:action="android.intent.action.VIEW"
+                android:data="https://xtrafrancyz.net/donate-vk" />
+        </Preference>
+        <Preference
+            android:persistent="false"
+            android:summary="Vika Donate"
+            android:title="Vika Mobile proxy">
+            <intent
+                android:action="android.intent.action.VIEW"
+                android:data="http://vikamobile.ru/donate.php" />
+        </Preference>
         <com.vtosters.lite.ui.MaterialSwitchPreference
             android:defaultValue="false"
             android:key="altervika"
             android:title="Альтернативный домен VikaMobile" />
         <Preference
             android:persistent="false"
-            android:summary="@string/proxyownersxtr"
-            android:title="xtrafrancyz">
-            <intent
-                android:action="android.intent.action.VIEW"
-                android:data="https://xtrafrancyz.net/unblock-vk" />
-        </Preference>
-        <Preference
-            android:persistent="false"
-            android:title="@string/proxydonate">
-            <intent
-                android:action="android.intent.action.VIEW"
-                android:data="https://xtrafrancyz.net/donate" />
-        </Preference>
-        <Preference
-            android:persistent="false"
             android:title="@string/proxyownersxtrsources">
             <intent
                 android:action="android.intent.action.VIEW"
                 android:data="https://github.com/xtrafrancyz/vk-proxy" />
-        </Preference>
-        <Preference
-            android:persistent="false"
-            android:summary="@string/proxyownerszbr"
-            android:title="zaborona">
-            <intent
-                android:action="android.intent.action.VIEW"
-                android:data="https://zaborona.help" />
-        </Preference>
-        <Preference
-            android:persistent="false"
-            android:title="@string/proxydonate">
-            <intent
-                android:action="android.intent.action.VIEW"
-                android:data="https://zaborona.help/donate.html" />
         </Preference>
     </PreferenceCategory>
 </PreferenceScreen>
