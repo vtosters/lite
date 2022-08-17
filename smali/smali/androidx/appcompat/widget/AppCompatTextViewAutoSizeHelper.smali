@@ -1310,6 +1310,8 @@
 
     .line 6
     :cond_0
+    return-void
+
     new-instance p1, Ljava/lang/IllegalArgumentException;
 
     new-instance p2, Ljava/lang/StringBuilder;
@@ -1334,6 +1336,8 @@
 
     .line 7
     :cond_1
+    return-void
+
     new-instance p3, Ljava/lang/IllegalArgumentException;
 
     new-instance v0, Ljava/lang/StringBuilder;
@@ -1370,6 +1374,8 @@
 
     .line 8
     :cond_2
+    return-void
+
     new-instance p2, Ljava/lang/IllegalArgumentException;
 
     new-instance p3, Ljava/lang/StringBuilder;
