@@ -23,6 +23,8 @@ public class GithubList{
             return null;
         }
 
+        Log.d(proxyname, response);
+
         return new ArrayList<>(Arrays.asList(response.split("\n")));
     }
 }

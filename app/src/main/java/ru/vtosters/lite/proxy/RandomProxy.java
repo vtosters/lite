@@ -1,14 +1,16 @@
 package ru.vtosters.lite.proxy;
+import java.io.IOException;
+
 import ru.vtosters.lite.proxy.socks.Hookzof;
 import ru.vtosters.lite.proxy.socks.Jetkai;
 import ru.vtosters.lite.proxy.socks.Roosterkid;
 import ru.vtosters.lite.proxy.socks.TheSpeedX;
 
 public class RandomProxy{
-    public static void loadProxy(){
+    public static void loadProxy() throws IOException{
         var random = new java.util.Random();
         var randomInt = random.nextInt(7);
-        switch (randomInt){
+        switch(randomInt) {
             case 0:
                 Hookzof.loadProxy();
                 break;
