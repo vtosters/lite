@@ -15,7 +15,6 @@ import static ru.vtosters.lite.utils.AndroidUtils.sendToast;
 import static ru.vtosters.lite.utils.Preferences.getBoolValue;
 import static ru.vtosters.lite.utils.Preferences.hasVerification;
 import static ru.vtosters.lite.utils.Preferences.preferences;
-import static ru.vtosters.lite.utils.ProxyUtils.isZaboronaEnabled;
 import static ru.vtosters.lite.utils.ThemesUtils.getAccentColor;
 import static ru.vtosters.lite.utils.ThemesUtils.getAlertStyle;
 import static ru.vtosters.lite.utils.ThemesUtils.getTextAttr;
@@ -42,6 +41,9 @@ import ru.vtosters.lite.utils.AndroidUtils;
 public class IconsFragment extends MaterialPreferenceToolbarFragment {
     @SuppressLint("SetTextI18n")
     public static void callSelectDialog(Context ctx, String appicon) {
+        var defname = preferences.getString("appname", "vt");
+        var deficon = preferences.getString("selectedicon", "vt");
+
         RadioGroup rg = new RadioGroup(ctx);
 
         RadioButton rgDefault = new RadioButton(new ContextThemeWrapper(ctx, com.vtosters.lite.R.style.Widget_AppCompat_CompoundButton_RadioButton));
@@ -67,17 +69,14 @@ public class IconsFragment extends MaterialPreferenceToolbarFragment {
         rgVKontakte.setText(AndroidUtils.getString("app_name_alter"));
         rgVKontakte.setTextColor(getTextAttr());
 
-        rgVKontakte.setChecked(isZaboronaEnabled());
-        rgVK.setChecked(isZaboronaEnabled());
-        rgDefault.setChecked(!isZaboronaEnabled());
+        rgVKontakte.setChecked(defname.contains("vkontakte"));
+        rgVK.setChecked(defname.contains("standard"));
+        rgDefault.setChecked(defname.contains("vt") || defname.isEmpty());
 
         AlertDialog.Builder builder = new AlertDialog.Builder(ctx, getAlertStyle());
         builder.setTitle(AndroidUtils.getString("app_name_select_title"));
         builder.setView(rg);
         builder.setPositiveButton(AndroidUtils.getString("vtl_confirm"), ((dialog, which) -> {
-            var defname = preferences.getString("appname", "vt");
-            var deficon = preferences.getString("selectedicon", "vt");
-
             if (rgDefault.isChecked()) {
                 edit().putString("appname", "vt").commit();
                 edit().putString("selectedicon", appicon).commit();
