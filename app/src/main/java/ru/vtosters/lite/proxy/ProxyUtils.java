@@ -1,4 +1,4 @@
-package ru.vtosters.lite.utils;
+package ru.vtosters.lite.proxy;
 
 import static java.lang.System.clearProperty;
 import static ru.vtosters.lite.utils.AndroidUtils.edit;
@@ -14,12 +14,11 @@ import android.util.Log;
 import java.lang.reflect.Field;
 import java.lang.reflect.Method;
 
-import ru.vtosters.lite.proxy.CustomHttp;
-import ru.vtosters.lite.proxy.CustomHttps;
-import ru.vtosters.lite.proxy.CustomSocks;
-import ru.vtosters.lite.proxy.Hookzof;
+import ru.vtosters.lite.proxy.http.CustomHttp;
+import ru.vtosters.lite.proxy.https.CustomHttps;
+import ru.vtosters.lite.proxy.socks.CustomSocks;
 import ru.vtosters.lite.proxy.RandomProxy;
-import ru.vtosters.lite.proxy.Zaborona;
+import ru.vtosters.lite.proxy.socks.Zaborona;
 
 public class ProxyUtils {
     public static String getApi() {
@@ -36,12 +35,16 @@ public class ProxyUtils {
         return getPrefsValue("proxy").equals("zaborona");
     }
 
-    public static Boolean isRandomSocksEnabled() {
-        return getPrefsValue("proxy").equals("randomsocks");
+    public static Boolean isRandomProxyEnabled() {
+        return getPrefsValue("proxy").equals("randomproxy");
     }
 
     public static Boolean isApiProxyEnabled() {
         return getPrefsValue("proxy").equals("apiproxy");
+    }
+
+    public static Boolean isVikaProxyEnabled() {
+        return getPrefsValue("proxy").equals("vika");
     }
 
     public static void forceProxyApplying() {
@@ -92,7 +95,7 @@ public class ProxyUtils {
             case "zaborona":
                 Zaborona.loadProxy();
                 break;
-            case "randomsocks":
+            case "randomproxy":
                 RandomProxy.loadProxy();
                 break;
             case "socks":
@@ -121,6 +124,5 @@ public class ProxyUtils {
         clearProperty("http.proxyPassword");
         clearProperty("socksProxyHost");
         clearProperty("socksPortHost");
-        edit().putString("proxy", "noproxy").commit();
     } // Reset all proxies
 }

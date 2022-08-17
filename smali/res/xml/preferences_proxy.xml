@@ -78,6 +78,10 @@
             android:title="@string/proxyport" />
     </PreferenceCategory>
     <PreferenceCategory android:title="@string/proxyowners">
+        <com.vtosters.lite.ui.MaterialSwitchPreference
+            android:defaultValue="false"
+            android:key="altervika"
+            android:title="Альтернативный домен VikaMobile" />
         <Preference
             android:persistent="false"
             android:summary="@string/proxyownersxtr"

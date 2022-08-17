@@ -3,8 +3,8 @@ package ru.vtosters.lite.hooks;
 import static ru.vtosters.lite.utils.AndroidUtils.dp2px;
 import static ru.vtosters.lite.utils.AndroidUtils.edit;
 import static ru.vtosters.lite.utils.LifecycleUtils.restartApplication;
-import static ru.vtosters.lite.utils.ProxyUtils.isRandomSocksEnabled;
-import static ru.vtosters.lite.utils.ProxyUtils.isZaboronaEnabled;
+import static ru.vtosters.lite.proxy.ProxyUtils.isRandomProxyEnabled;
+import static ru.vtosters.lite.proxy.ProxyUtils.isZaboronaEnabled;
 import static ru.vtosters.lite.utils.ThemesUtils.getAccentColor;
 import static ru.vtosters.lite.utils.ThemesUtils.getAlertStyle;
 import static ru.vtosters.lite.utils.ThemesUtils.getTextAttr;
@@ -40,15 +40,15 @@ public class ProxyHook {
 
         RadioButton rgDefault = new RadioButton(new ContextThemeWrapper(ctx, com.vtosters.lite.R.style.Widget_AppCompat_CompoundButton_RadioButton));
         RadioButton rgZaborona = new RadioButton(new ContextThemeWrapper(ctx, com.vtosters.lite.R.style.Widget_AppCompat_CompoundButton_RadioButton));
-        RadioButton rgRandomSocks = new RadioButton(new ContextThemeWrapper(ctx, com.vtosters.lite.R.style.Widget_AppCompat_CompoundButton_RadioButton));
+        RadioButton rgRandomProxy = new RadioButton(new ContextThemeWrapper(ctx, com.vtosters.lite.R.style.Widget_AppCompat_CompoundButton_RadioButton));
 
         rg.addView(rgDefault);
         rg.addView(rgZaborona);
-        rg.addView(rgRandomSocks);
+        rg.addView(rgRandomProxy);
 
         rgDefault.setTextSize(TypedValue.COMPLEX_UNIT_PX, dp2px(14f));
         rgZaborona.setTextSize(TypedValue.COMPLEX_UNIT_PX, dp2px(14f));
-        rgRandomSocks.setTextSize(TypedValue.COMPLEX_UNIT_PX, dp2px(14f));
+        rgRandomProxy.setTextSize(TypedValue.COMPLEX_UNIT_PX, dp2px(14f));
 
         rg.setPadding(dp2px(18f), dp2px(12f), dp2px(18f), 0);
 
@@ -58,12 +58,12 @@ public class ProxyHook {
         rgZaborona.setText(AndroidUtils.getString("proxy_enable") + " (Zaborona)");
         rgZaborona.setTextColor(getTextAttr());
 
-        rgRandomSocks.setText(AndroidUtils.getString("proxy_enable") + " (RandomSocks)");
-        rgRandomSocks.setTextColor(getTextAttr());
+        rgRandomProxy.setText(AndroidUtils.getString("proxy_enable") + " (RandomProxy)");
+        rgRandomProxy.setTextColor(getTextAttr());
 
         rgZaborona.setChecked(isZaboronaEnabled());
         rgDefault.setChecked(!isZaboronaEnabled());
-        rgRandomSocks.setChecked(isRandomSocksEnabled());
+        rgRandomProxy.setChecked(isRandomProxyEnabled());
 
         AlertDialog.Builder builder = new AlertDialog.Builder(ctx, getAlertStyle());
         builder.setTitle(AndroidUtils.getString("vtlproxy"));
@@ -73,8 +73,8 @@ public class ProxyHook {
             if (rgZaborona.isChecked()) {
                 edit().putString("proxy", "zaborona").commit();
                 restartApplication();
-            } else if (rgRandomSocks.isChecked()) {
-                edit().putString("proxy", "randomsocks").commit();
+            } else if (rgRandomProxy.isChecked()) {
+                edit().putString("proxy", "randomproxy").commit();
                 restartApplication();
             } else {
                 edit().putString("proxy", "noproxy").commit();

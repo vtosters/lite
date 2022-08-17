@@ -5,8 +5,8 @@ import static android.widget.Toast.makeText;
 import static ru.vtosters.lite.utils.AndroidUtils.getGlobalContext;
 import static ru.vtosters.lite.utils.AndroidUtils.getIdentifier;
 import static ru.vtosters.lite.utils.AndroidUtils.getString;
-import static ru.vtosters.lite.utils.ProxyUtils.isApiProxyEnabled;
-import static ru.vtosters.lite.utils.ProxyUtils.getApi;
+import static ru.vtosters.lite.proxy.ProxyUtils.isApiProxyEnabled;
+import static ru.vtosters.lite.proxy.ProxyUtils.getApi;
 
 import android.annotation.SuppressLint;
 import android.app.ProgressDialog;

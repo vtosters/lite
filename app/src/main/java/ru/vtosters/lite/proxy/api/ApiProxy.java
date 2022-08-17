@@ -1,6 +1,7 @@
-package ru.vtosters.lite.proxy;
+package ru.vtosters.lite.proxy.api;
+import static ru.vtosters.lite.proxy.ProxyUtils.isVikaProxyEnabled;
 import static ru.vtosters.lite.utils.AndroidUtils.getPrefsValue;
-import static ru.vtosters.lite.utils.ProxyUtils.isApiProxyEnabled;
+import static ru.vtosters.lite.proxy.ProxyUtils.isApiProxyEnabled;
 
 import android.util.Log;
 
@@ -13,6 +14,12 @@ public class ApiProxy{
         var proxyapi = getPrefsValue("proxyapi");
         var proxyoauth = getPrefsValue("proxyoauth");
         var proxystatic = getPrefsValue("proxystatic");
+
+        if (isVikaProxyEnabled()) {
+            proxyapi = VikaMobile.getApiHost();
+            proxyoauth = VikaMobile.getOauthHost();
+            proxystatic = VikaMobile.getStaticHost();
+        }
 
         if (!isApiProxyEnabled() || link.isEmpty()) {
             return link;

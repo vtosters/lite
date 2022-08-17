@@ -40,7 +40,7 @@
 
     const-string v1, "oauth.vk.com"
 
-    invoke-static {v1}, Lru/vtosters/lite/proxy/ApiProxy;->linkReplacer(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v1}, Lru/vtosters/lite/proxy/api/ApiProxy;->linkReplacer(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v1
 
@@ -182,7 +182,7 @@
 
     const-string v0, "https://oauth.vk.com/blank.html#state=webview_refresh_access_token"
 
-    invoke-static {v0}, Lru/vtosters/lite/proxy/ApiProxy;->linkReplacer(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v0}, Lru/vtosters/lite/proxy/api/ApiProxy;->linkReplacer(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 

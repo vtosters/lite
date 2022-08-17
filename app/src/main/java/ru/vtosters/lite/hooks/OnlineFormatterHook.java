@@ -8,7 +8,7 @@ import static ru.vtosters.lite.utils.AndroidUtils.sendToast;
 import static ru.vtosters.lite.utils.Preferences.dev;
 import static ru.vtosters.lite.utils.Preferences.getBoolValue;
 import static ru.vtosters.lite.utils.Preferences.getPrefsFromFile;
-import static ru.vtosters.lite.utils.ProxyUtils.getApi;
+import static ru.vtosters.lite.proxy.ProxyUtils.getApi;
 
 import org.json.JSONArray;
 import org.json.JSONException;

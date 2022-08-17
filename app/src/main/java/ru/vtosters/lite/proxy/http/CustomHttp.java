@@ -1,6 +1,6 @@
-package ru.vtosters.lite.proxy;
+package ru.vtosters.lite.proxy.http;
 import static ru.vtosters.lite.utils.AndroidUtils.getPrefsValue;
-import static ru.vtosters.lite.utils.ProxyUtils.forceProxyApplying;
+import static ru.vtosters.lite.proxy.ProxyUtils.forceProxyApplying;
 
 public class CustomHttp{
     public static void loadProxy(){
