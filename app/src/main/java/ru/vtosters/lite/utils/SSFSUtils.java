@@ -5,7 +5,7 @@ import static ru.vtosters.lite.utils.About.getBuildNumber;
 import static ru.vtosters.lite.utils.AndroidUtils.getPrefsValue;
 import static ru.vtosters.lite.utils.Preferences.dev;
 import static ru.vtosters.lite.utils.Preferences.vksans;
-import static ru.vtosters.lite.utils.ProxyUtils.apiproxy;
+import static ru.vtosters.lite.utils.ProxyUtils.isApiProxyEnabled;
 import static ru.vtosters.lite.utils.ThemesUtils.isDarkTheme;
 
 public class SSFSUtils {
@@ -39,7 +39,7 @@ public class SSFSUtils {
     }
 
     public static String getUserProxy() {
-        return apiproxy() ? "1" : "0";
+        return isApiProxyEnabled() ? "1" : "0";
     }
 
     public static String isVKSansEnabled() {

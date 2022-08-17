@@ -56,7 +56,7 @@
 
     const-string v0, "oauth.vk.com"
 
-    invoke-static {v0}, Lru/vtosters/lite/hooks/ProxyHook;->linkReplacer(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v0}, Lru/vtosters/lite/proxy/ApiProxy;->linkReplacer(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 

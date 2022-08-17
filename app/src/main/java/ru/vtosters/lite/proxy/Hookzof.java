@@ -1,10 +1,8 @@
-package ru.vtosters.lite.utils;
+package ru.vtosters.lite.proxy;
 import static ru.vtosters.lite.utils.AndroidUtils.sendToast;
-import static ru.vtosters.lite.utils.ProxyUtils.setProxyRefl;
+import static ru.vtosters.lite.utils.ProxyUtils.forceProxyApplying;
 
 import android.util.Log;
-
-import org.json.JSONException;
 
 import java.io.IOException;
 import java.util.ArrayList;
@@ -16,7 +14,7 @@ import okhttp3.OkHttpClient;
 import okhttp3.Request;
 import okhttp3.Response;
 
-public class ProxyList{
+public class Hookzof{
     private static final OkHttpClient mClient = new OkHttpClient();
 
     public static void loadProxy() {
@@ -27,52 +25,52 @@ public class ProxyList{
         mClient.a(link).a(new Callback() {
             @Override
             public void a(Call call, IOException e) {
-                Log.d("ProxyList", "Error while getting proxy: " + e);
+                Log.d("Hookzof", "Error while getting proxy: " + e);
                 loadError();
             }
 
             @Override
-            public void a(Call call, Response response) throws IOException {
+            public void a(Call call, Response response){
                 try {
                     setData(response);
-                } catch (JSONException | NullPointerException e) {
+                } catch (NullPointerException | IOException e) {
                     e.printStackTrace();
                 }
             }
         });
     }
 
-    static void loadError() {
-        sendToast("Error while getting proxy");
-    }
-
-    static void setData(Response response) throws IOException, JSONException {
+    static void setData(Response response) throws IOException{
         String resp = response.a().g();
 
         if (!hasProxy(resp)) {
-            Log.d("ProxyList", "No proxy found");
+            Log.d("Hookzof", "No proxy found");
             return;
         }
 
         ArrayList<String> proxyList = new ArrayList<>(Arrays.asList(resp.split("\n")));
 
-        Log.d("ProxyList", proxyList.toString());
+        Log.d("Hookzof", proxyList.toString());
 
         String proxy = proxyList.get(new java.util.Random().nextInt(proxyList.size()));
 
         if (!hasProxy(proxy)) {
-            Log.d("ProxyList", "No proxy port found");
+            Log.d("Hookzof", "No proxy port found");
             return;
         }
 
-        Log.d("ProxyList", "Setting proxy: " + proxy.split(":")[0] + ":" + proxy.split(":")[1]);
+        Log.d("Hookzof", "Setting proxy: " + proxy.split(":")[0] + ":" + proxy.split(":")[1]);
 
         System.setProperty("socksProxyHost", proxy.split(":")[0]);
         System.setProperty("socksProxyPort", proxy.split(":")[1]);
-        setProxyRefl();
+        forceProxyApplying();
     }
 
     static boolean hasProxy(String list) {
         return list.contains(":"); // proxy format: ip:port
+    }
+
+    static void loadError() {
+        sendToast("Error while getting proxy Hookzof");
     }
 }

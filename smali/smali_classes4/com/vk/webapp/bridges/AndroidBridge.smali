@@ -1491,7 +1491,7 @@
 
     move-result-object p1
 
-    invoke-static {p1}, Lru/vtosters/lite/hooks/ProxyHook;->linkReplacer(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {p1}, Lru/vtosters/lite/proxy/ApiProxy;->linkReplacer(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p1
 
@@ -1585,7 +1585,7 @@
 
     const-string p3, "https://oauth.vk.com/authorize"
 
-    invoke-static {p3}, Lru/vtosters/lite/hooks/ProxyHook;->linkReplacer(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {p3}, Lru/vtosters/lite/proxy/ApiProxy;->linkReplacer(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p3
 

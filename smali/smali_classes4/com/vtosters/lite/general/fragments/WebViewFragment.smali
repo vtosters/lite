@@ -1012,7 +1012,7 @@
 
     const-string v2, "https://oauth.vk.com/webview_token"
 
-    invoke-static {v2}, Lru/vtosters/lite/hooks/ProxyHook;->linkReplacer(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v2}, Lru/vtosters/lite/proxy/ApiProxy;->linkReplacer(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v2
 
@@ -1202,7 +1202,7 @@
 
     const-string v0, "https://oauth.vk.com/webview_token"
 
-    invoke-static {v0}, Lru/vtosters/lite/hooks/ProxyHook;->linkReplacer(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v0}, Lru/vtosters/lite/proxy/ApiProxy;->linkReplacer(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
