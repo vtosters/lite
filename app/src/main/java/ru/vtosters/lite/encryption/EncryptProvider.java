@@ -56,7 +56,7 @@ public class EncryptProvider {
     // For message editing
     public static String decryptMessage(MsgFromUser msg, boolean showEmoji) {
         var decryptedMessage = decryptMessage(getBody(msg), getPeerId(msg));
-        if (!showEmoji) decryptedMessage = decryptedMessage.replace("\uD83D\uDD12 ", "");
+        if (!showEmoji) decryptedMessage = decryptedMessage.replaceAll("^\uD83D\uDD12 ", "");
         return decryptedMessage;
     }
 
@@ -69,7 +69,7 @@ public class EncryptProvider {
     // For MentionsFormatter that requires CharSequence
     public static CharSequence decryptMessage(String msgBody, int peer, boolean showEmoji) {
         var decryptedMessage = decryptMessage(msgBody, peer);
-        if (!showEmoji) decryptedMessage = decryptedMessage.replace("\uD83D\uDD12 ", "");
+        if (!showEmoji) decryptedMessage = decryptedMessage.replaceAll("^\uD83D\uDD12 ", "");
         return decryptedMessage;
     }
 
