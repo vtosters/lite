@@ -8,6 +8,7 @@ import android.util.Pair;
 
 import com.vk.im.engine.models.messages.Msg;
 import com.vk.im.engine.models.messages.MsgFromUser;
+import com.vk.im.ui.components.msg_list.MsgListComponent;
 
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
@@ -57,6 +58,12 @@ public class EncryptProvider {
         var decryptedMessage = decryptMessage(getBody(msg), getPeerId(msg));
         if (!showEmoji) decryptedMessage = decryptedMessage.replace("\uD83D\uDD12 ", "");
         return decryptedMessage;
+    }
+
+    public static String decryptMessage(String msg, MsgListComponent list) {
+        var peerid = list.G().getId();
+
+        return decryptMessage(msg, peerid).replace("\uD83D\uDD12 ", "");
     }
 
     // For MentionsFormatter that requires CharSequence

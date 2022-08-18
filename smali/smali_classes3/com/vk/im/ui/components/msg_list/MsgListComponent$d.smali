@@ -47,16 +47,20 @@
 
 # virtual methods
 .method public final a(Ljava/lang/String;)V
-    .locals 1
+    .locals 4
 
     .line 1
     iget-object v0, p0, Lcom/vk/im/ui/components/msg_list/MsgListComponent$d;->a:Lcom/vk/im/ui/components/msg_list/MsgListComponent;
+
+    invoke-static {p1, v0}, Lru/vtosters/lite/encryption/EncryptProvider;->decryptMessage(Ljava/lang/String;Lcom/vk/im/ui/components/msg_list/MsgListComponent;)Ljava/lang/String;
+
+    move-result-object v3
 
     invoke-virtual {v0}, Lcom/vk/im/ui/components/msg_list/MsgListComponent;->y()Landroid/content/Context;
 
     move-result-object v0
 
-    invoke-static {v0, p1}, Lcom/vk/im/ui/utils/ClipboardUtils;->a(Landroid/content/Context;Ljava/lang/CharSequence;)V
+    invoke-static {v0, v3}, Lcom/vk/im/ui/utils/ClipboardUtils;->a(Landroid/content/Context;Ljava/lang/CharSequence;)V
 
     .line 2
     iget-object p1, p0, Lcom/vk/im/ui/components/msg_list/MsgListComponent$d;->a:Lcom/vk/im/ui/components/msg_list/MsgListComponent;
