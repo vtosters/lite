@@ -2722,7 +2722,9 @@
     .line 39
     sget-object p1, Lcom/vk/im/ui/components/dialogs_list/formatters/MentionsFormatter;->c:Lcom/vk/im/ui/components/dialogs_list/formatters/MentionsFormatter;
 
-    invoke-virtual {v0}, Lcom/vk/im/engine/models/messages/MsgFromUser;->f()Ljava/lang/String;
+    const/4 v4, 0x0
+
+    invoke-static {v0, v4}, Lru/vtosters/lite/encryption/EncryptProvider;->decryptMessage(Lcom/vk/im/engine/models/messages/MsgFromUser;Z)Ljava/lang/String;
 
     move-result-object v1
 
@@ -6164,7 +6166,7 @@
 .end method
 
 .method public d(Landroid/os/Bundle;)V
-    .locals 7
+    .locals 8
 
     if-eqz p1, :cond_6
 
@@ -6299,15 +6301,9 @@
 
     .line 11
     :cond_4
-    sget-object v0, Lcom/vk/im/ui/components/dialogs_list/formatters/MentionsFormatter;->c:Lcom/vk/im/ui/components/dialogs_list/formatters/MentionsFormatter;
-
     sget-object v1, Lcom/vtosters/lite/fragments/messages/chat/vc/MsgSendVc;->Z:Ljava/lang/String;
 
     invoke-virtual {p1, v1}, Landroid/os/Bundle;->getString(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-virtual {v0, v1}, Lcom/vk/im/ui/components/dialogs_list/formatters/MentionsFormatter;->a(Ljava/lang/CharSequence;)Ljava/lang/CharSequence;
 
     move-result-object v2
 
@@ -6351,6 +6347,22 @@
     move-object v4, v0
 
     .line 15
+    invoke-virtual {v5}, Lcom/vk/im/engine/models/messages/Msg;->v1()I
+
+    move-result v7
+
+    const/4 v8, 0x0
+
+    invoke-static {v2, v7, v8}, Lru/vtosters/lite/encryption/EncryptProvider;->decryptMessage(Ljava/lang/CharSequence;IZ)Ljava/lang/CharSequence;
+
+    move-result-object v2
+
+    sget-object v0, Lcom/vk/im/ui/components/dialogs_list/formatters/MentionsFormatter;->c:Lcom/vk/im/ui/components/dialogs_list/formatters/MentionsFormatter;
+
+    invoke-virtual {v0, v2}, Lcom/vk/im/ui/components/dialogs_list/formatters/MentionsFormatter;->a(Ljava/lang/CharSequence;)Ljava/lang/CharSequence;
+
+    move-result-object v2
+
     invoke-direct/range {v1 .. v6}, Lcom/vtosters/lite/fragments/messages/chat/vc/MsgSendVc;->a(Ljava/lang/CharSequence;Ljava/util/List;Ljava/util/List;Lcom/vk/im/engine/models/messages/MsgFromUser;Lcom/vk/im/engine/models/ProfilesSimpleInfo;)V
 
     return-void
