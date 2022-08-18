@@ -181,9 +181,19 @@ public class OnlineFormatterHook {
         return json;
     }
 
+    public static JSONArray onlineHookList(JSONArray jsonArr) throws ParseException, IOException, JSONException {
+        if (!getBoolValue("onlinefix", false)) return jsonArr;
+
+        try {
+            setOnlineInfoUsers(jsonArr);
+        } catch (Exception e) {
+            Log.e("onlineHookProfiles", e.getMessage());
+        }
+        return jsonArr;
+    }
+
     public static JSONObject onlineHookProfiles(JSONObject json) throws ParseException, IOException, JSONException {
         if (!getBoolValue("onlinefix", false)) return json;
-        Log.d("test", json.toString());
 
         try {
             setOnlineInfoUsers(json.optJSONArray("profiles"));
