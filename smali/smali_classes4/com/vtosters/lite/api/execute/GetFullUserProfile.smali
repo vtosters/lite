@@ -133,9 +133,7 @@
 
     move-object/from16 v1, p2
 
-    const v2, 0x0
-
-    invoke-static {v1, v2}, Lru/vtosters/lite/hooks/OnlineFormatterHook;->onlineHook(Lorg/json/JSONObject;Z)Lorg/json/JSONObject;
+    invoke-static {v1}, Lru/vtosters/lite/hooks/OnlineFormatterHook;->onlineHook(Lorg/json/JSONObject;)Lorg/json/JSONObject;
 
     move-result-object v1
 

@@ -98,11 +98,6 @@
             android:key="onlinefix"
             android:summary="@string/onlinefix_summ"
             android:title="@string/onlinefix_title" />
-        <com.vtosters.lite.ui.MaterialSwitchPreference
-            android:defaultValue="false"
-            android:key="globalUsersOnline"
-            android:summary="@string/globalUsersOnline_summ"
-            android:title="@string/globalUsersOnline_title" />
     </PreferenceCategory>
     <PreferenceCategory android:title="@string/privacy_vtl">
         <com.vtosters.lite.ui.MaterialSwitchPreference

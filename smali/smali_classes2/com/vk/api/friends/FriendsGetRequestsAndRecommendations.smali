@@ -58,6 +58,7 @@
     move-result-object p1
 
     invoke-static {p1}, Lru/vtosters/lite/hooks/OnlineFormatterHook;->onlineHookRequestsAndRecommendations(Lorg/json/JSONObject;)Lorg/json/JSONObject;
+
     move-result-object p1
 
     const-string v1, "r.getJSONObject(\"response\")"

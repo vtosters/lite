@@ -170,14 +170,9 @@ public class OnlineFormatterHook {
         return getString("custom_online") + " " + appname;
     }
 
-    public static JSONObject onlineHook(JSONObject json, boolean isGlobalHook) throws ParseException, IOException, JSONException {
-        if (!getBoolValue("onlinefix", false)) return json;
+    public static JSONObject onlineHook(JSONObject json) throws ParseException, IOException, JSONException {
+        if (getBoolValue("onlinefix", false)) setOnlineInfo(json);
 
-        if (isGlobalHook && !getBoolValue("globalUsersOnline", false)) {
-            return json;
-        }
-
-        setOnlineInfo(json);
         return json;
     }
 
@@ -189,6 +184,7 @@ public class OnlineFormatterHook {
         } catch (Exception e) {
             Log.e("onlineHookProfiles", e.getMessage());
         }
+
         return jsonArr;
     }
 

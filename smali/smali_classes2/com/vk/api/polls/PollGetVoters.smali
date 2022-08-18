@@ -185,6 +185,7 @@
     move-result-object p1
 
     invoke-static {p1}, Lru/vtosters/lite/hooks/OnlineFormatterHook;->onlineHookItems(Lorg/json/JSONObject;)Lorg/json/JSONObject;
+
     move-result-object p1
 
     const-string v0, "r.getJSONArray(\"response\u20260).getJSONObject(\"users\")"
