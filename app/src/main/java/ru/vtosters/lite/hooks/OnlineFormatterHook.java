@@ -1,6 +1,7 @@
 package ru.vtosters.lite.hooks;
 
 import static ru.vtosters.lite.hooks.JsonInjectors.setOnlineInfo;
+import static ru.vtosters.lite.hooks.JsonInjectors.setOnlineInfoUsers;
 import static ru.vtosters.lite.net.Request.makeRequest;
 import static ru.vtosters.lite.utils.AccountManagerUtils.getUserToken;
 import static ru.vtosters.lite.utils.AndroidUtils.getString;
@@ -9,6 +10,8 @@ import static ru.vtosters.lite.utils.Preferences.dev;
 import static ru.vtosters.lite.utils.Preferences.getBoolValue;
 import static ru.vtosters.lite.utils.Preferences.getPrefsFromFile;
 import static ru.vtosters.lite.proxy.ProxyUtils.getApi;
+
+import android.util.Log;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -175,6 +178,52 @@ public class OnlineFormatterHook {
         }
 
         setOnlineInfo(json);
+        return json;
+    }
+
+    public static JSONObject onlineHookProfiles(JSONObject json) throws ParseException, IOException, JSONException {
+        if (!getBoolValue("onlinefix", false)) return json;
+        Log.d("test", json.toString());
+
+        try {
+            setOnlineInfoUsers(json.optJSONArray("profiles"));
+        } catch (Exception e) {
+            Log.e("onlineHookProfiles", e.getMessage());
+        }
+        return json;
+    }
+
+    public static JSONObject onlineHookItems(JSONObject json) throws ParseException, IOException, JSONException {
+        if (!getBoolValue("onlinefix", false)) return json;
+
+        try {
+            setOnlineInfoUsers(json.optJSONArray("items"));
+        } catch (Exception e) {
+            Log.e("onlineHookItems", e.getMessage());
+        }
+        return json;
+    }
+
+    public static JSONObject onlineHookRequestsAndRecommendations(JSONObject json) throws ParseException, IOException, JSONException {
+        if (!getBoolValue("onlinefix", false)) return json;
+
+        try {
+            setOnlineInfoUsers(json.optJSONObject("read_requests").optJSONArray("items"));
+        } catch (Exception e) {
+            Log.e("onlineHookItems", e.getMessage());
+        }
+
+        try {
+            setOnlineInfoUsers(json.optJSONObject("recommendations").optJSONArray("items"));
+        } catch (Exception e) {
+            Log.e("onlineHookItems", e.getMessage());
+        }
+
+        try {
+            setOnlineInfoUsers(json.optJSONArray("profiles"));
+        } catch (Exception e) {
+            Log.e("onlineHookItems", e.getMessage());
+        }
         return json;
     }
 }
