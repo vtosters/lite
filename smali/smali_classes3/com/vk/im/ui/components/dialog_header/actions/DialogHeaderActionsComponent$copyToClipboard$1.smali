@@ -41,7 +41,7 @@
 
 # virtual methods
 .method public final a(Ljava/lang/String;)V
-    .locals 2
+    .locals 3
 
     iget-object v0, p0, Lkotlin/jvm/internal/CallableReference;->receiver:Ljava/lang/Object;
 
@@ -65,7 +65,9 @@
 
     move-result v1
 
-    invoke-static {p1, v1}, Lru/vtosters/lite/encryption/EncryptProvider;->decryptMessage(Ljava/lang/String;I)Ljava/lang/String;
+    const v2, 0x0
+
+    invoke-static {p1, v1, v2}, Lru/vtosters/lite/encryption/EncryptProvider;->decryptMessages(Ljava/lang/String;IZ)Ljava/lang/String;
 
     move-result-object v1
 

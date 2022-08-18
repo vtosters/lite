@@ -84,6 +84,10 @@ public class EncryptProvider {
         return orig;
     }
 
+    public static String decryptMessages(String msgBody, int peer, boolean showEmoji) {
+        return (String) decryptMessage(msgBody, peer, showEmoji);
+    }
+
     // For MentionsFormatter that requires CharSequence
     public static CharSequence decryptMessage(String msgBody, int peer, boolean showEmoji) {
         var decryptedMessage = decryptMessage(msgBody, peer);
