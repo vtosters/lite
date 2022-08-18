@@ -18,6 +18,9 @@ import androidx.exifinterface.media.ExifInterface;
 import com.vk.core.dialogs.alert.VkAlertDialog;
 import com.vk.core.network.Network;
 
+import org.json.JSONException;
+import org.json.JSONObject;
+
 import java.io.IOException;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
@@ -32,11 +35,13 @@ import java.util.regex.Pattern;
 import okhttp3.Headers;
 import okhttp3.OkHttpClient;
 import ru.vtosters.lite.net.Request;
+import ru.vtosters.lite.utils.AccountManagerUtils;
 
 public class FoafBase {
     private static final Pattern FOAF_REGEX = Pattern.compile("<ya:created dc:date=\"(.+?)\"\\/>");
     private static final Pattern FOAF_REGEX_LAST_SEEN = Pattern.compile("<ya:lastLoggedIn dc:date=\"(.*)(((\\+|-)\\d\\d):(\\d\\d))\"\\/>");
     private static final Pattern FOAF_REGEX_LOGIN = Pattern.compile("<ya:created dc:date=\"(.+?)\"\\/>");
+    private static final String API_VKNEXT = "https://api.vknext.net/v1/getBypassedOnlineInfo?json=1&ids=";
     private static final OkHttpClient client = new OkHttpClient();
 
     public static long getLastSeen(long origtime, int id) throws ParseException, IOException {
@@ -63,6 +68,48 @@ public class FoafBase {
         Date date = sdf.parse(Objects.requireNonNull(matcher.group(1)));
         sdf.setTimeZone(TimeZone.getDefault());
         return sdf.parse(sdf.format(date)).getTime() / 1000;
+    }
+
+
+    public static JSONObject getBypassedOnlineInfo(int id) throws JSONException {
+        var request = new okhttp3.Request.a()
+                .b(API_VKNEXT + Integer.toString(id))
+                .a();
+
+        String response = null;
+
+        var dummy = new JSONObject();
+        dummy.put("last_seen", 0);
+
+        try {
+            response = client.a(request).execute().a().g();
+            var online_info = new JSONObject(response).optJSONObject("response").optJSONObject(Integer.toString(id));
+            return online_info == null ? dummy : online_info;
+        } catch (Exception e) {
+            Log.e("GetBypassedOnlineInfo", e.getMessage());
+            return dummy;
+        }
+    }
+
+    public static JSONObject getBypassedOnlineInfo(String ids) throws JSONException {
+
+
+        var request = new okhttp3.Request.a()
+                .b(API_VKNEXT + ids)
+                .a();
+
+        String response = null;
+
+        var dummy = new JSONObject();
+
+        try {
+            response = client.a(request).execute().a().g();
+            var online_info = new JSONObject(response).optJSONObject("response");
+            return online_info == null ? dummy : online_info;
+        } catch (Exception e) {
+            Log.e("GetBypassedOnlineInfo1", e.getMessage());
+            return dummy;
+        }
     }
 
     private static String getLink(int i) {
