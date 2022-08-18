@@ -273,7 +273,11 @@
 
     move-result-object v2
 
-    invoke-static {v2}, Lru/vtosters/lite/encryption/EncryptProvider;->decryptMessage(Lcom/vk/im/engine/models/messages/Msg;)Ljava/lang/CharSequence;
+    invoke-virtual {p2}, Lcom/vk/im/ui/components/dialogs_list/v/DialogsListModels3;->a()Ljava/lang/CharSequence;
+
+    move-result-object v3
+
+    invoke-static {v2, v3}, Lru/vtosters/lite/encryption/EncryptProvider;->decryptMessage(Lcom/vk/im/engine/models/messages/Msg;Ljava/lang/CharSequence;)Ljava/lang/CharSequence;
 
     move-result-object v3
 
