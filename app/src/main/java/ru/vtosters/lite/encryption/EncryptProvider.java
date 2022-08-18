@@ -71,8 +71,17 @@ public class EncryptProvider {
         return decryptMessage(msg.toString(), peerid);
     }
 
-    public static CharSequence decryptMessage(Msg msg) {
-        return decryptMessage(((MsgFromUser) msg).f(), msg.v1());
+    public static CharSequence decryptMessage(Msg msg, CharSequence orig) {
+        if (msg instanceof MsgFromUser) {
+            var decrypted = decryptMessage(((MsgFromUser) msg).f(), msg.v1());
+
+            if (decrypted.contains("\uD83D\uDD12")) {
+                return decrypted;
+            }
+
+        }
+
+        return orig;
     }
 
     // For MentionsFormatter that requires CharSequence
