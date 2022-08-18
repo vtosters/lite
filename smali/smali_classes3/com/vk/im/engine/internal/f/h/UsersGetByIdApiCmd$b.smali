@@ -64,6 +64,9 @@
 
     move-result-object p1
 
+    invoke-static {p1}, Lru/vtosters/lite/hooks/OnlineFormatterHook;->onlineHookList(Lorg/json/JSONArray;)Lorg/json/JSONArray;
+    move-result-object p1
+
     .line 3
     new-instance v0, Landroid/util/SparseArray;
 
