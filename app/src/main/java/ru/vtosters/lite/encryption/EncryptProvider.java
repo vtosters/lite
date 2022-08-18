@@ -62,8 +62,9 @@ public class EncryptProvider {
 
     public static String decryptMessage(String msg, MsgListComponent list) {
         var peerid = list.G().getId();
-
-        return decryptMessage(msg, peerid).replace("\uD83D\uDD12 ", "");
+        var decryptedMessage = decryptMessage(msg, peerid)
+        if (decryptedMessage != injectOwnTextAll(msg)) decryptedMessage = decryptedMessage.replaceAll("^\uD83D\uDD12 ", "");
+        return decryptedMessage;
     }
 
     // For MentionsFormatter that requires CharSequence
