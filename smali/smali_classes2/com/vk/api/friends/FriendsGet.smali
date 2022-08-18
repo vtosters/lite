@@ -297,6 +297,10 @@
 
     move-result-object v5
 
+    invoke-static {v5}, Lru/vtosters/lite/hooks/OnlineFormatterHook;->onlineHookItems(Lorg/json/JSONObject;)Lorg/json/JSONObject;
+
+    move-result-object v5
+
     const-string v6, "items"
 
     invoke-virtual {v5, v6}, Lorg/json/JSONObject;->getJSONArray(Ljava/lang/String;)Lorg/json/JSONArray;
