@@ -154,7 +154,7 @@ public class FoafBase {
         }
     }
 
-    private static long daysPassedFromFoafDate(String str) {
+    private static long daysPassedFromFoafDate(String str) { 
         try {
             @SuppressLint("SimpleDateFormat")
             Date parse = new SimpleDateFormat("yyyy-MM-dd").parse(str.split(" ")[1]);
