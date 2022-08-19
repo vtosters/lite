@@ -295,7 +295,7 @@
 
     invoke-static {p1, v6}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    invoke-virtual {v2, v5, p1, v1}, Lcom/vk/im/ui/views/ReplyView;->a(Lcom/vk/im/engine/models/messages/WithUserContent;Lcom/vk/im/engine/models/ProfilesSimpleInfo;Z)V
+    invoke-static {v2, v5, p1, v1}, Lru/vtosters/lite/hooks/WritebarReplyHook;->injectWithDecrypt(Lcom/vk/im/ui/views/ReplyView;Lcom/vk/im/engine/models/messages/MsgFromUser;Lcom/vk/im/engine/models/ProfilesSimpleInfo;Z)V
 
     .line 11
     iget-object p1, p0, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/msgparts/MsgPartReplyHolder;->C:Lcom/vk/im/ui/views/ReplyView;
