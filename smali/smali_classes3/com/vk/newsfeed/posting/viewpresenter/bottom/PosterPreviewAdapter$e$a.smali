@@ -118,7 +118,7 @@
 
     div-float/2addr v7, v5
 
-    invoke-virtual {v1, v4, v6, v7, v2}, Landroid/graphics/Canvas;->drawCircle(FFFLandroid/graphics/Paint;)V
+    invoke-static {v1, v4, v6, v7, v2}, Lru/vtosters/lite/hooks/PicRoundingHook;->inject(Landroid/graphics/Canvas;FFFLandroid/graphics/Paint;)V
 
     .line 11
     new-instance v4, Landroid/graphics/PorterDuffXfermode;

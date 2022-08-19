@@ -494,28 +494,11 @@
 .method public draw(Landroid/graphics/Canvas;)V
     .locals 9
 
-    .line 1
-    invoke-virtual {p0}, Landroid/graphics/drawable/Drawable;->getBounds()Landroid/graphics/Rect;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Landroid/graphics/Rect;->exactCenterX()F
-
-    move-result v0
-
-    invoke-virtual {p0}, Landroid/graphics/drawable/Drawable;->getBounds()Landroid/graphics/Rect;
-
-    move-result-object v1
-
-    invoke-virtual {v1}, Landroid/graphics/Rect;->exactCenterY()F
-
-    move-result v1
-
     iget v2, p0, Lcom/vk/im/ui/views/avatars/AbbreviationAvatarDrawable;->h:F
 
     iget-object v3, p0, Lcom/vk/im/ui/views/avatars/AbbreviationAvatarDrawable;->a:Landroid/graphics/Paint;
 
-    invoke-virtual {p1, v0, v1, v2, v3}, Landroid/graphics/Canvas;->drawCircle(FFFLandroid/graphics/Paint;)V
+    invoke-static {p1, v3, v2}, Lru/vtosters/lite/hooks/PicRoundingHook;->inject(Landroid/graphics/Canvas;Landroid/graphics/Paint;F)V
 
     .line 2
     iget-object v0, p0, Lcom/vk/im/ui/views/avatars/AbbreviationAvatarDrawable;->b:Landroid/graphics/Paint;

@@ -743,6 +743,8 @@
     <string-array name="proxy">
         <item>No Proxy</item>
         <item>zaborona.help</item>
+        <item>VikaMobile</item>
+        <item>Random proxy</item>
         <item>Custom API proxy</item>
         <item>Custom HTTP</item>
         <item>Custom HTTPS</item>
@@ -751,6 +753,8 @@
     <string-array name="proxy_value">
         <item>noproxy</item>
         <item>zaborona</item>
+        <item>vika</item>
+        <item>randomproxy</item>
         <item>apiproxy</item>
         <item>http</item>
         <item>https</item>
@@ -852,5 +856,30 @@
         <item>noseconds</item>
         <item>noyear</item>
         <item>full</item>
+    </string-array>
+    <string-array name="wallpaper_change_dialog">
+        <item>Good time</item>
+        <item>Good morning, afternoon, evening, night</item>
+        <item>How are you?</item>
+        <item>Not dead, that\'s good</item>
+    </string-array>
+    <string-array name="cache_cleaner">
+        <item>Clear all cache</item>
+        <item>Clear stickers cache</item>
+        <item>Clear images cache</item>
+        <item>Clear videos cache</item>
+        <item>Clear messages cache</item>
+        <item>Clear WebView cache</item>
+    </string-array>
+    <string-array name="filter_types">
+        <item>Disabled</item>
+        <item>Low</item>
+        <item>Average</item>
+        <item>High</item>
+    </string-array>
+    <string-array name="filter_dim_types">
+        <item>Disabled</item>
+        <item>Dim</item>
+        <item>Lighten</item>
     </string-array>
 </resources>

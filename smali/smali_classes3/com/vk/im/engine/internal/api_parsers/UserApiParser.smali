@@ -666,12 +666,6 @@
 .method private final d(Lorg/json/JSONObject;)Lcom/vk/dto/user/OnlineInfo;
     .locals 7
 
-    const v2, 0x1
-
-    invoke-static {p1, v2}, Lru/vtosters/lite/hooks/OnlineFormatterHook;->onlineHook(Lorg/json/JSONObject;Z)Lorg/json/JSONObject;
-
-    move-result-object p1
-
     const-string v0, "online_info"
 
     .line 1

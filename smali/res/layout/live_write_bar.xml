@@ -57,7 +57,7 @@
             android:gravity="center|left"
             android:paddingLeft="20.0dip"
             android:paddingRight="20.0dip"
-            android:text="Смореть пост"
+            android:text="@string/watch_post_text"
             android:textColor="@color/gray_800"
             android:textSize="15.0dip"
             android:visibility="gone" />

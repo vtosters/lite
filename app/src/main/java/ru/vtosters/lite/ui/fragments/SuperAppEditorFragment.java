@@ -4,6 +4,7 @@ import static ru.vtosters.lite.utils.AndroidUtils.dp2px;
 import static ru.vtosters.lite.utils.AndroidUtils.getIdentifier;
 import static ru.vtosters.lite.utils.LifecycleUtils.restartApplication;
 
+import android.os.Build;
 import android.os.Bundle;
 import android.view.ContextThemeWrapper;
 import android.view.Gravity;
@@ -46,9 +47,9 @@ public class SuperAppEditorFragment extends BaseToolbarFragment {
         message.setTextAlignment(View.TEXT_ALIGNMENT_CENTER);
         message.setTextColor(ThemesUtils.getTextAttr());
         message.setPadding(
-                AndroidUtils.dp2px(10),
-                AndroidUtils.dp2px(10),
-                AndroidUtils.dp2px(10),
+                dp2px(10),
+                dp2px(10),
+                dp2px(10),
                 0
         );
         container.addView(message, LayoutUtils.createLinear(-1, -2));
@@ -94,16 +95,29 @@ public class SuperAppEditorFragment extends BaseToolbarFragment {
                     : manager.getDisabledTabs().get(pos - manager.getSelectedTabs().size() - 2);
             holder.bindMovingItem(item.title);
         });
-        manager.getSelectedTabs().forEach(item -> {
-            if (item.type.equals("menu"))
-                adapter.addUnmovedItem(item);
-        });
-        manager.getDisabledTabs().forEach(item -> {
-            if (item.type.equals("menu"))
-                adapter.addUnmovedItem(item);
-        });
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N) {
+            manager.getSelectedTabs().forEach(item -> {
+                if (item.type.equals("menu"))
+                    adapter.addUnmovedItem(item);
+            });
 
-        var recyclerView = new RecyclerView(getContext());
+            manager.getDisabledTabs().forEach(item -> {
+                if (item.type.equals("menu"))
+                    adapter.addUnmovedItem(item);
+            });
+        } else {
+            for (var item : manager.getSelectedTabs()) {
+                if (item.type.equals("menu"))
+                    adapter.addUnmovedItem(item);
+            }
+
+            for (var item : manager.getDisabledTabs()) {
+                if (item.type.equals("menu"))
+                    adapter.addUnmovedItem(item);
+            }
+        }
+
+        var recyclerView = new RecyclerView(requireContext());
         recyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
         recyclerView.setAdapter(adapter);
         recyclerView.setHasFixedSize(true);

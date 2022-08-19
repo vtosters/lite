@@ -13,8 +13,12 @@
         <com.vtosters.lite.ui.MaterialSwitchPreference
             android:defaultValue="true"
             android:key="whatsnew"
-            android:summary="Блок написания поста в ленте"
-            android:title="Показывать блок поста" />
+            android:summary="@string/whatsnew_summ"
+            android:title="@string/whatsnew_title" />
+        <com.vtosters.lite.ui.MaterialSwitchPreference
+            android:defaultValue="false"
+            android:key="is_likes_on_right"
+            android:title="@string/right_likes" />
     </PreferenceCategory>
     <PreferenceCategory android:title="@string/interfaceglobal">
         <com.vtosters.lite.ui.SummaryListPreference
@@ -31,30 +35,33 @@
             android:entryValues="@array/animations_values2"
             android:key="anim_rtrn_type"
             android:title="@string/franimation" />
+        <Preference
+            android:key="customrounding"
+            android:title="@string/customrounding_title" />
     </PreferenceCategory>
     <PreferenceCategory android:title="@string/interfacevideo">
         <com.vtosters.lite.ui.MaterialSwitchPreference
             android:defaultValue="true"
             android:key="postsredesign"
-            android:summary="Теперь текст к видео отображается под видео материалом"
-            android:title="Редизайн видеопостов" />
+            android:summary="@string/postsredesign_summ"
+            android:title="@string/postsredesign_title" />
     </PreferenceCategory>
-    <PreferenceCategory android:title="Меню">
+    <PreferenceCategory android:title="@string/menu">
         <com.vtosters.lite.ui.MaterialSwitchPreference
             android:defaultValue="true"
             android:key="miniapps"
-            android:summary="Показывать Miniapps/Игры в меню"
-            android:title="Блок миниаппов" />
+            android:summary="@string/miniapps_summ"
+            android:title="@string/miniapps_title" />
         <com.vtosters.lite.ui.MaterialSwitchPreference
             android:defaultValue="true"
             android:key="vkpay"
-            android:summary="Показывать VK Pay в меню"
-            android:title="Блок VK Pay" />
+            android:summary="@string/show_vkpay_summ"
+            android:title="@string/show_vkpay_title" />
         <com.vtosters.lite.ui.MaterialSwitchPreference
             android:defaultValue="true"
             android:key="superapp"
-            android:summary="Новый вид меню как в новых версиях ВКонтакте"
-            android:title="Супераппы" />
+            android:summary="@string/show_superapps_summ"
+            android:title="@string/show_superapps_title" />
         <com.vtosters.lite.ui.MaterialSwitchPreference
             android:defaultValue="false"
             android:key="showmenu"
@@ -65,8 +72,8 @@
         <com.vtosters.lite.ui.MaterialSwitchPreference
             android:defaultValue="false"
             android:key="friendsblock"
-            android:summary="Скрыть блок рекомендаций друзей в друзьях"
-            android:title="Скрыть друзей" />
+            android:summary="@string/friendsblock_summ"
+            android:title="@string/friendsblock_title" />
         <com.vtosters.lite.ui.MaterialSwitchPreference
             android:defaultValue="false"
             android:key="disableSettingsSumms"

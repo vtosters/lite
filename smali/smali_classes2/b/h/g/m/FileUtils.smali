@@ -187,13 +187,17 @@
     .locals 2
 
     .line 6
-    invoke-static {}, Lb/h/g/m/FileUtils;->getVKDir()Ljava/io/File;
+#    invoke-static {}, Lb/h/g/m/FileUtils;->getVKDir()Ljava/io/File;
+#
+#    move-result-object v0
+#
+#    const-string v1, "Downloads"
+#
+#    invoke-static {v0, v1}, Lb/h/g/m/FileUtils;->a(Ljava/io/File;Ljava/lang/String;)Ljava/io/File;
+#
+#    move-result-object v0
 
-    move-result-object v0
-
-    const-string v1, "Downloads"
-
-    invoke-static {v0, v1}, Lb/h/g/m/FileUtils;->a(Ljava/io/File;Ljava/lang/String;)Ljava/io/File;
+    invoke-static {}, Lru/vtosters/lite/utils/Preferences;->getDownloadsDir()Ljava/io/File;
 
     move-result-object v0
 
@@ -1807,14 +1811,18 @@
 .method private static c()Ljava/io/File;
     .locals 2
 
-    .line 1
-    invoke-static {}, Lb/h/g/m/FileUtils;->getVKDir()Ljava/io/File;
+    # .line 1
+    # invoke-static {}, Lb/h/g/m/FileUtils;->getVKDir()Ljava/io/File;
 
-    move-result-object v0
+    # move-result-object v0
 
-    const-string v1, "Photos"
+    # const-string v1, "Photos"
 
-    invoke-static {v0, v1}, Lb/h/g/m/FileUtils;->a(Ljava/io/File;Ljava/lang/String;)Ljava/io/File;
+    # invoke-static {v0, v1}, Lb/h/g/m/FileUtils;->a(Ljava/io/File;Ljava/lang/String;)Ljava/io/File;
+
+    # move-result-object v0
+
+    invoke-static {}, Lru/vtosters/lite/utils/Preferences;->getPhotosDir()Ljava/io/File;
 
     move-result-object v0
 
@@ -2101,14 +2109,18 @@
 .method private static e()Ljava/io/File;
     .locals 2
 
-    .line 1
-    invoke-static {}, Lb/h/g/m/FileUtils;->getVKDir()Ljava/io/File;
+    # .line 1
+    # invoke-static {}, Lb/h/g/m/FileUtils;->getVKDir()Ljava/io/File;
 
-    move-result-object v0
+    # move-result-object v0
 
-    const-string v1, "Videos"
+    # const-string v1, "Videos"
 
-    invoke-static {v0, v1}, Lb/h/g/m/FileUtils;->a(Ljava/io/File;Ljava/lang/String;)Ljava/io/File;
+    # invoke-static {v0, v1}, Lb/h/g/m/FileUtils;->a(Ljava/io/File;Ljava/lang/String;)Ljava/io/File;
+
+    # move-result-object v0
+
+    invoke-static {}, Lru/vtosters/lite/utils/Preferences;->getVideosDir()Ljava/io/File;
 
     move-result-object v0
 
@@ -3626,12 +3638,6 @@
 
     .line 2
     invoke-static {v0}, Lb/h/g/m/FileUtils;->a(Ljava/io/File;)V
-
-    const-string v1, "Download"
-
-    invoke-static {v0, v1}, Lb/h/g/m/FileUtils;->a(Ljava/io/File;Ljava/lang/String;)Ljava/io/File;
-
-    move-result-object v0
 
     const-string v1, "VK"
 

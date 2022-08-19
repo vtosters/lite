@@ -297,9 +297,9 @@
     <string name="audio_artist">Artist</string>
     <string name="audio_broadcast">Broadcast music</string>
     <string name="audio_deleted">Track deleted</string>
-    <string name="audio_ipc_empty_track_list">Произошла ошибка. Вы пытаетесь воспроизвести пустой плейлист.</string>
-    <string name="audio_ipc_error">Произошла ошибка</string>
-    <string name="audio_ipc_error_network">Произошла ошибка. Проверьте соединение и повторите попытку.</string>
+    <string name="audio_ipc_empty_track_list">An error has occurred. You are trying to play an empty playlist.</string>
+    <string name="audio_ipc_error">An error has occurred</string>
+    <string name="audio_ipc_error_network">An error has occurred. Check the connection and try again.</string>
     <string name="audio_lyrics">Lyrics</string>
     <string name="audio_message">Voice message</string>
     <string name="audio_message_hold_to_record">Hold to record</string>
@@ -371,7 +371,7 @@ You can use the menu on a user’s profile to block them."</string>
     <string name="board_comment_sent">Comment sent</string>
     <string name="bookmarks">Bookmarks</string>
     <string name="bottom_sheet_behavior">com.google.android.material.bottomsheet.BottomSheetBehavior</string>
-    <string name="bugtracker_token_cleaned">Токен удален</string>
+    <string name="bugtracker_token_cleaned">Token removed</string>
     <string name="buy_stickers">Store</string>
     <string name="cache_my_music">Cache my music</string>
     <string name="camera_rotate_hint_bottom_text">"You can't change your frame orientation while streaming"</string>
@@ -469,6 +469,7 @@ no results"</string>
     <string name="collection_add_empty_product">"You don't have any products. Add a product on the desktop version of VK, and then you can share it with your viewers."</string>
     <string name="collection_add_empty_product_action">More</string>
     <string name="collection_add_empty_selection">Nothing selected</string>
+    <string name="add_object">Add object</string>
     <string name="collection_add_good">Add product</string>
     <string name="collection_add_hint">Add content that you want to share with viewers during your live stream</string>
     <string name="collection_add_link">Add link</string>
@@ -627,20 +628,20 @@ no results"</string>
     <string name="community_warning_notification_negative_button">Back</string>
     <string name="community_warning_notification_positive_button">Continue</string>
     <string name="completing_purchase">Completing purchase...</string>
-    <string name="components_actions_popup">Контекстное меню</string>
-    <string name="components_base">Основные</string>
-    <string name="components_bottom_confirm_btn">Нижняя кнопка</string>
-    <string name="components_buttons">Кнопки</string>
-    <string name="components_dialogs">Диалоги</string>
-    <string name="components_input_fields">Поля ввода</string>
-    <string name="components_intro_promo">Интро/Промо</string>
-    <string name="components_loaders">Лоадеры</string>
-    <string name="components_placeholder">Заглушки</string>
-    <string name="components_snackbar">Снекбар</string>
-    <string name="components_stub">Заглушки</string>
-    <string name="components_text">Текст</string>
-    <string name="components_title">VK UI компоненты</string>
-    <string name="components_tooltips">Тултипы</string>
+    <string name="components_actions_popup">Context menu</string>
+    <string name="components_base">Basics</string>
+    <string name="components_bottom_confirm_btn">Bottom button</string>
+    <string name="components_buttons">Buttons</string>
+    <string name="components_dialogs">Dialogs</string>
+    <string name="components_input_fields">Input fields</string>
+    <string name="components_intro_promo">Intro/Promo</string>
+    <string name="components_loaders">Loaders</string>
+    <string name="components_placeholder">Stubs</string>
+    <string name="components_snackbar">Snackbar</string>
+    <string name="components_stub">Stubs</string>
+    <string name="components_text">Text</string>
+    <string name="components_title">VK UI components</string>
+    <string name="components_tooltips">Tooltips</string>
     <string name="confirm">Confirmation</string>
     <string name="confirm_action_title">Confirm action</string>
     <string name="confirm_block_user">Are you sure you want to block %s?</string>
@@ -694,7 +695,7 @@ no results"</string>
     <string name="day_of_week_label_typeface">sans-serif-light</string>
     <string name="day_picker_description">Month grid of days</string>
     <string name="debug_hints">Hints</string>
-    <string name="debug_no_toggles">Значения toggles не были получены с сервера</string>
+    <string name="debug_no_toggles">No toggles values were received from the server</string>
     <string name="debug_toggles">Toggles</string>
     <string name="default_progressbar">Default Progressbar:</string>
     <string name="default_web_client_id">841415684880-i5q85vkpnnj8fgbd1qde5o9kq87656dk.apps.googleusercontent.com</string>
@@ -2133,7 +2134,7 @@ premieres and much more"</string>
     <string name="music_promo_no_more_music_special_offer">Get special offer</string>
     <string name="music_promo_no_more_music_subtitle">The music industry has its own set of rules, and we had to come to a compromise to save free access to music. You can still listen to music even without a subscription. Just make sure not to lock your screen or close the app.</string>
     <string name="music_promo_no_more_music_title">Free background playback is no longer available</string>
-    <string name="music_promo_no_more_music_сontimue_using_free_plan">Continue listening for free</string>
+    <string name="music_promo_no_more_music_continue_using_free_plan">Continue listening for free</string>
     <string name="music_promo_no_more_option_1">Access to music</string>
     <string name="music_promo_no_more_option_2">Personalized recommendations</string>
     <string name="music_promo_no_more_option_3">Background playback</string>
@@ -2301,8 +2302,8 @@ Please try again later"</string>
     <string name="my_story_2">story</string>
     <string name="my_story_desc">Displayed in the news feed and on your page for 24 hours</string>
     <string name="my_videos">My videos</string>
-    <string name="n_hours_mins" formatted="false">%$1d час. %$2d мин.</string>
-    <string name="n_mins_secs">%1$d мин. %2$02d сек.</string>
+    <string name="n_hours_mins" formatted="false">%1$d h. %$2d min.</string>
+    <string name="n_mins_secs">%1$d min. %2$02d sec.</string>
     <string name="n_sec">%d sec</string>
     <string name="n_seconds">%d seconds</string>
     <string name="name_request_canceled">You canceled your name change request</string>
@@ -3380,6 +3381,7 @@ the VK camera"</string>
     <string name="selected">Selected</string>
     <string name="selected_n">%,d selected</string>
     <item name="selection_radius_multiplier" type="string">0.16</item>
+    <string name="buy">Buy</string>
     <string name="send">Send</string>
     <string name="send_a_gift">Send a gift</string>
     <string name="send_b">Send</string>
@@ -3717,7 +3719,7 @@ photo"</string>
     <string name="stickers_accessibility_sticker">Sticker</string>
     <string name="stickers_active">Active</string>
     <string name="stickers_add_to_favorites">Add to favorites</string>
-    <string name="stickers_add_unavailable">Добавление недоступно</string>
+    <string name="stickers_add_unavailable">Adding unavailable</string>
     <string name="stickers_buy_for">Buy for %1$s</string>
     <string name="stickers_buy_for_free">Free</string>
     <string name="stickers_catalog_settings">Settings</string>
@@ -5469,6 +5471,16 @@ with video"</string>
     <string name="your_feedback">Your feedback…</string>
     <string name="your_gender">Your gender:</string>
 
+    <string name="collection_item_hint_text">You can add items that you can share while streaming</string>
+    <string name="item_no_place_in_result_text">There is no place in the list</string>
+    <string name="watch_post_text">Watch post</string>
+    <string name="for_loading_from_network">to download from the network</string>
+    <string name="where_from_send">Where to withdraw</string>
+    <string name="where_to_send">Where to deposit</string>
+    <string name="any_bank_card">Card of any bank</string>
+    <string name="current_place_number">Current place number</string>
+    <string name="eight_friends">Your 8 friends are playing</string>
+
     <string name="vtlfeed">Feed</string>
     <string name="vtlinterface">Interface</string>
     <string name="vtlmedia">Media content</string>
@@ -5488,8 +5500,8 @@ with video"</string>
     <string name="vtfaqsumm">All your questions are answered here</string>
     <string name="vtsite">Our site</string>
     <string name="installgms">Install Google Play Services</string>
-    <string name="vtldads">Disable Ads</string>
-    <string name="vtldgads">Disable Groups Ads</string>
+    <string name="vtldads">Disable ads</string>
+    <string name="vtldgads">Disable groups ads</string>
     <string name="vtldgadssummary">Posts with ads mark</string>
     <string name="vtldca">Disable ad carousel</string>
     <string name="vtldas">Disable ads in stories</string>
@@ -5498,8 +5510,10 @@ with video"</string>
     <string name="vtlhtmf">How to make filters?</string>
     <string name="vtlhtmfsummary">"Filter format: words or sentences, separated by a comma with a space
 Example: #sponsored, Free gift cards, #PROMO
-Filters are case-sensitive!"</string>
-    <string name="vtlownfilter">Custom filter</string>
+Filters are not case-sensitive!"</string>
+    <string name="vtlownfilter">Filter words and expressions</string>
+    <string name="vtllinkfilter">Source link filter</string>
+    <string name="vtlsourcenamefilter">Source name filter</string>
     <string name="vtlsfilter">Standard adblock filter</string>
     <string name="vtlsfiltersummary">Blocks posts with common tags, such as #ad, #pr and so on</string>
     <string name="vtlusevkui">Use VKUI</string>
@@ -5509,6 +5523,32 @@ Filters are case-sensitive!"</string>
     <string name="vtlvoice">Recording voice messages</string>
     <string name="vtlvoicesummary">The icon for recording voice messages in the message input field</string>
     <string name="vtlnavbar">Color navigation bar</string>
+    <string name="cringecopyright_title">Posts with possible advertising</string>
+    <string name="cringecopyright_summ">Block posts with a source where there is a link to VK / Telegram (group, page or posts) or to other possible resources</string>
+    <string name="cringerepost_title">Reposts with links</string>
+    <string name="cringerepost_summ">Block posts with repost inside which there is a link to VK / Telegram</string>    
+    <string name="why_news_not_updated_title">Why is the news not updated?</string>
+    <string name="why_news_not_updated_summ">Perhaps you have the Interesting feed turned on \n\nIf you want to change the feed to the Temporary feed, you can change it by clicking on the item above</string>    
+    <string name="newsfeedlistmanager_title">Newsfeed list</string>
+    <string name="newsfeedlistmanager_summ">Newsfeed list settings</string>
+    <string name="newsfeedlistmanager_reset_title">Reset newsfeed list</string>
+    <string name="where_is_cache_settings">Where is cache settings?</string>
+    <string name="where_is_cache_settings_summ">They moved to the mod settings in the Other tab</string>
+    <string name="gms_about">About GMS</string>
+    <string name="gms_what_is_title">What is GMS?</string>
+    <string name="gms_what_is_summ">GMS - Google Mobile Services, a necessary component for the normal operation of applications. All notifications, logging into games, Google Play and other device functions use this component</string>
+    <string name="gms_why_need_title">Why do I need GMS for this app?</string>
+    <string name="gms_why_need_summ">GMS is necessary for notifications to work, for music to work, and for many other application components</string>
+    <string name="gms_how_to_download">How to download?</string>
+    <string name="gms_what_to_do_then">What to do then?</string>
+    <string name="gms_what_to_do_then_summ">You need to download MicroG.</string>
+    <string name="gms_what_is_microg">What is MicroG?</string>
+    <string name="gms_what_is_microg_summ">It is an open alternative to GMS services with the ability to install it on a non-GMS device</string>
+    <string name="gms_microg_site">MicroG official website</string>
+    <string name="gms_download_microg">Download MicroG</string>
+    <string name="gms_what_to_do_next">What to do next?</string>
+    <string name="gms_what_to_do_after_microg_title">What to do after installing MicroG?</string>
+    <string name="gms_what_to_do_after_microg_summ">Update Firebase registration in Other settings</string>
     <string name="donate">Donate</string>
     <string name="fulltime">dd MMMM yyyy HH:mm:ss</string>
     <string name="fulltime2">dd MMMM HH:mm:ss</string>
@@ -5601,6 +5641,62 @@ Registration date:"</string>
     <string name="interfaceglobalpostsum">"Shorten the text in posts
 
 Expand text..."</string>
+    <string name="pollresults_title">Poll results</string>
+    <string name="pollresults_summ">Show results in polls without voting in them</string>
+    <string name="vtl_downloads_title">Downloads</string>
+    <string name="current_download_folder">Current folder:</string>
+    <string name="folder_for_downloads">Folder for downloads</string>
+    <string name="folder_for_photos">Folder for photos</string>
+    <string name="folder_for_videos">Folder for videos</string>
+    <string name="folder_for_music">Folder for music</string>
+    <string name="sett_compress_photo_summ">Disabling will significantly improve the quality of uploaded photos</string>
+    <string name="sett_compress_video_summ">Disabling will significantly improve the quality of uploaded videos</string>
+    <string name="lastfm_auth_title">Account</string>
+    <string name="lastfm_auth_error">Login failed</string>
+    <string name="lastfm_auth_summ">You are not logged in</string>
+    <string name="lastfm_logout_success">You have successfully logged out</string>
+    <string name="lastfm_enabled_title">Enable scrobbling</string>
+    <string name="lastfm_enabled_summ">Useful song tracking service</string>
+    <string name="lastfm_credentials_empty">Username or password not set</string>
+    <string name="vtl_music_settings">Music</string>
+    <string name="musicnewcatalog_title">New music catalog</string>
+    <string name="musicnewcatalog_summ">New music catalog with dynamic content</string>
+    <string name="musicdefcatalog_dialogTitle">Select default section</string>
+    <string name="musicdefcatalog_title">Default music section</string>
+    <string name="vtl_video_settings">Video</string>
+    <string name="vtl_download_video_title">Download video</string>
+    <string name="videonewcatalog_title">New video catalog</string>
+    <string name="videonewcatalog_summ">New video catalog with dynamic content</string>
+    <string name="clearvideohistory_title">Clear video history</string>
+    <string name="clearvideohistory_summ">Clearing video history will remove all videos from your watch history and recommendations based on them</string>
+    <string name="vtl_photo_settings">Photo</string>
+    <string name="photo_search_engine_title">Selecting a photo search engine</string>
+    <string name="wallpapers_title">Wallpaper in Messages</string>
+    <string name="convBarRecomm_title">Hide recommendations</string>
+    <string name="convBarRecomm_summ">Hide friend recommendation section in messages and other tips</string>
+    <string name="vk_messenger">VK Messenger</string>
+    <string name="translator_title">Translator</string>
+    <string name="translator_choose_language">Choose a language</string>
+    <string name="translator_translate_language">Translator language</string>
+    <string name="translator_translate_service">Translation service</string>
+    <string name="autotranslate_title">Auto-translate</string>
+    <string name="autotranslate_summ">Automatically translate your outgoing messages</string>
+    <string name="autoalltranslate_title">Auto-translate everything</string>
+    <string name="autoalltranslate_summ">Automatically translate all messages\n\nThere may be problems loading messages</string>
+    <string name="clearcache_other_title">Clear app cache</string>
+    <string name="reset_folders_locations">Reset download folders paths</string>
+    <string name="vk_admin_token_title">Token from VK Admin</string>
+    <string name="vtl_other_backups_title">Backups</string>
+    <string name="saveonlines_title">Save online list</string>
+    <string name="saveonlines_summ">Save the list of AppIds and their names to a file</string>
+    <string name="saveprefs_title">Save preferences</string>
+    <string name="restoreprefs_title">Restore preferences</string>
+    <string name="milkshake_title">Milkshake</string>
+    <string name="milkshake_summ">Global redesign of VK as on new versions</string>
+    <string name="vtl_settings_dockbar_title">Dockbar</string>
+    <string name="dockbar_accent_title">Use accent for icons</string>
+    <string name="iconmanager_title">Select app icon</string>
+    <string name="iconmanager_summ">Great selection of app icons</string>
     <string name="interfacenewsfeed">Feed</string>
     <string name="interfacenewsfeedswipe">Side camera in the news</string>
     <string name="interfacenewsfeedswipesum">Works only with classic newsfeed design</string>
@@ -5662,6 +5758,41 @@ You need to restart the application to apply proxy settings"</string>
     <string name="shitpostingsummary">Filter for cleaning posts with the Russian Federation and actions related in Ukraine\n\nThere may be incorrect triggers</string>
     <string name="showstories">Show stories</string>
     <string name="showstoriessum">The story section at the top of the feed</string>
+    <string name="whatsnew_summ">Section of writing a post at the feed</string>
+    <string name="whatsnew_title">Show the post section</string>
+    <string name="right_likes">Show likes to the right of the post</string>
+    <string name="customrounding_title">Image rounding size</string>
+    <string name="postsredesign_title">Video post redesign</string>
+    <string name="postsredesign_summ">The text for the video will be displayed below the video</string>
+    <string name="miniapps_title">Miniapps section</string>
+    <string name="miniapps_summ">Show Miniapps/Games in menu</string>
+    <string name="show_vkpay_title">VK Pay section</string>
+    <string name="show_vkpay_summ">Show VK Pay in the menu</string>
+    <string name="show_superapps_title">Superapps</string>
+    <string name="show_superapps_summ">New menu view as in new versions of VK</string>
+    <string name="friendsblock_title">Hide friends</string>
+    <string name="friendsblock_summ">Hide the block of recommendations of friends in friends section</string>
+    <string name="onlineformatter_title">Extended online indicator</string>
+    <string name="onlineformatter_summ">Show what app/device a person is online from</string>
+    <string name="voices_vtl">Voice messages</string>
+    <string name="disable_voice_listening_summ">The function allows you not to send the status of listening to the person\'s voice messages by you</string>
+    <string name="listen_v_title">Disable listening status</string>
+    <string name="vkme_online_vtl">Hidden VK Me online</string>
+    <string name="onlinefix_summ">Show online users in profiles if you have the mode of hiding online from VK Messenger enabled</string>
+    <string name="onlinefix_title">Bypass online indicator</string>
+    <string name="globalUsersOnline_title">Global online bypass</string>
+    <string name="globalUsersOnline_summ">May cause slow partition loading and high traffic consumption \n\nIt is not recommended to enable this feature</string>
+    <string name="savemsgsett_title">Save message settings</string>
+    <string name="savemsgsett_summ">Save the position of the toggle switches in the message settings</string>
+    <string name="screenshotdetect_title">Disable screenshot detection</string>
+    <string name="screenshotdetect_summ">Turn off the notification that you took a screenshot</string>
+    <string name="hideDeviceInfo_title">Disable sending metric</string>
+    <string name="hideDeviceInfo_summ">Disable sending information about the user\'s device and your location</string>
+    <string name="newadblock_title">Use new AdBlock (Beta)</string>
+    <string name="podcastcatalog_title">Add podcast catalog</string>
+    <string name="useNewSettings_title">Use new settings</string>
+    <string name="musicFixNew_title">Music fix v2</string>
+    <string name="new_music_downloading_way_title">New way to download music</string>
     <string name="dialogrecomm">Disable recommendations</string>
     <string name="showvtfire">Show special verifications</string>
     <string name="showvtverify">Show verifications</string>
@@ -5724,7 +5855,7 @@ May look like a fake leaving the online"</string>
     <string name="feed_recommendations_authors_summary">Recommend popular authors\' posts friends</string>
     <string name="feed_recommendations_friends_reacted_summary">Recommend posts that your friends like</string>
 
-    <string name="feed_other_update">Audo update news</string>
+    <string name="feed_other_update">Auto update news</string>
     <string name="feed_other_update_dialog_title">Choose update type</string>
     <string name="feed_other_sort_comments">Sort comments</string>
     <string name="feed_other_sort_comments_summary">Sort comments by newest</string>
@@ -5849,9 +5980,13 @@ May look like a fake leaving the online"</string>
     <string name="debug_logging_apply_spaces_summary">Apply spaces for messages after longpoll history</string>
     <string name="debug_logging_memleak">Turn on MemLeak detect</string>
 
+    <string name="debug_network">Network</string>
+
     <string name="debug_cache">Cache</string>
-    <string name="debug_cache_trusted_hash">Clear 2fa hash</string>
+    <string name="debug_cache_trusted_hash">Clear 2FA hash</string>
     <string name="debug_cache_webview">Clear WebView cache</string>
+    <string name="debug_cache_vkpay_token">Remove VK Pay token for QR payment</string>
+    <string name="debug_cache_stickers">Clear stickers cache</string>   
     <string name="debug_cache_video">Clear video cache</string>
 
     <string name="debug_system">System</string>
@@ -5860,6 +5995,9 @@ May look like a fake leaving the online"</string>
     <string name="debug_system_fcm">Update Firebase device registration</string>
     <string name="debug_system_fcm_copy_token">Copy push token</string>
     <string name="debug_system_google_now">Update Google Now</string>
+
+    <string name="debug_clickable_sticker_border_title">Clickable sticker border</string>
+    <string name="debug_create_sticker_border_title">Sticker border on create</string>
 
     <string name="debug_tests">Tests</string>
     <string name="debug_tests_bd">Test BD notification</string>
@@ -5870,6 +6008,10 @@ May look like a fake leaving the online"</string>
     <string name="debug_tests_pretty_cards">pretty_cards demo</string>
     <string name="debug_tests_spa_uri">Test VK UI uri</string>
     <string name="debug_tests_spa">Test VK UI</string>
+    <string name="debug_tests_tooltip">Test tooltip</string>
+
+    <string name="debug_app_versions_list_title">App versions list</string>
+    <string name="debug_drop_bugtracker_token_title">Drop bugtracker token</string>
 
     <string name="debug_proxy">Official VK Proxy</string>
     <string name="debug_proxy_force">Force VK Proxy features</string>
@@ -5878,6 +6020,11 @@ May look like a fake leaving the online"</string>
     <string name="debug_proxy_enable_summary">Won\'t work</string>
 
     <string name="debug_other">Other</string>
+    <string name="debug_no_ads_title">Disable ads</string>
+    <string name="debug_proxy_enable_title">Proxy</string>
+    <string name="debug_use_libverify_for_auth_title">Use libverify for authorization</string>
+
+    <string name="nine_votes">9 votes</string>
 
     <string name="DNR_ON">Enable Do Not Read</string>
     <string name="DNR_OFF">Disable Do Not Read</string>
@@ -5909,8 +6056,8 @@ May look like a fake leaving the online"</string>
     <string name="franimation">Fragment animation (beta)</string>
     <string name="selectfranimation">Select fragment animation</string>
 
-    <string name="vkme">VK Me mode</string>
-    <string name="vkmesumm">Replacing the dock and some elements with something similar as in VK Me</string>
+    <string name="vkme">VK Messenger mode</string>
+    <string name="vkmesumm">Replacing the dock and some elements with something similar as in VK Messenger</string>
 
     <string name="vtsettaccount">Account</string>
     <string name="vtsettdarktheme">Dark theme</string>
@@ -5926,7 +6073,7 @@ May look like a fake leaving the online"</string>
     <string name="vtlfeedsumm">Block ads</string>
     <string name="vtldocksumm">Dockbar elements</string>
     <string name="vtlmediasumm">VKX Integration</string>
-    <string name="vtlmsgsumm">VK Me mode</string>
+    <string name="vtlmsgsumm">VK Messenger mode</string>
     <string name="vtlactivitysumm">Offline mode</string>
     <string name="vtlthemessumm">Navbar coloring</string>
     <string name="vtltgssumm">Installed packs</string>
@@ -5955,7 +6102,209 @@ May look like a fake leaving the online"</string>
     <string name="wallpapers">Wallpapers</string>
 
     <string name="translator">Translate</string>
+    <string name="readto">Read to</string>
 
     <string name="vkiddisable">Disable protection</string>
     <string name="vkidsumm">VK has started blocking the use of third-party applications, so for the stable operation of all parts of the application, it is necessary to disable Protection from suspicious applications \n\nVK ID -> Security and Login -> Protection from suspicious applications</string>
+
+    <string name="telegram_stickers_service">Telegram stickers service in VTLite</string>
+    <string name="telegram_stickers_downloading">: downloading</string>
+    <string name="telegram_stickers_updating">: update</string>
+    <string name="telegram_stickers_gettinginfo">Getting info</string>
+    <string name="telegram_stickers_updated"> updated successfully</string>
+    <string name="telegram_stickers_downloaded"> downloaded successfully</string>
+    <string name="telegram_stickers_error_update">: update failed</string>
+    <string name="telegram_stickers_error_download">: download failed</string>
+
+    <string name="lastfm_authorized_as">You are authorized as</string>
+    <string name="lastfm_login">Login</string>
+    <string name="lastfm_password">Password</string>
+    <string name="lastfm_enter_credentials">Enter your username and password</string>
+    <string name="lastfm_enter">Login</string>
+    <string name="lastfm_logout_title">Are you sure?</string>
+    <string name="lastfm_logout_confirm">Are you sure you want to log out?</string>
+
+    <string name="video_history_cleaned">Video history cleared</string>
+
+    <string name="video_dl_enter_link">Enter video link</string>
+
+    <string name="music_dl_title">Music downloading</string>
+    <string name="music_dl_progress">Music downloading progress</string>
+
+    <string name="ffmpegkit_copy">Copying the ffmpegkit library</string>
+
+    <string name="logfile_error">Failed to save log file</string>
+    <string name="logfile_saved">The log file has been saved</string>
+
+    <string name="menu_copy_id">Copy ID</string>
+    <string name="menu_addon_info">Addon info</string>
+    <string name="menu_change_name">Change name</string>
+    <string name="menu_copied">Copied!</string>
+
+    <string name="vtl_confirm">Apply</string>
+
+    <string name="pic_rounding_title">Select the size of the rounding corners</string>
+    <string name="pic_rounding_info">Set to 0 to disable corner rounding</string>
+    <!-- Cancel - "cancel" -->
+
+    <string name="wallpapers_disabled">Disabled</string>
+    <string name="wallpapers_low">Low</string>
+    <string name="wallpapers_med">Medium</string>
+    <string name="wallpapers_high">High</string>
+    <string name="wallpapers_dim_black">Dim</string>
+    <string name="wallpapers_dim_white">Lighten</string>
+
+    <string name="translator_reply">Reply:</string>
+    <string name="translator_no_text">No text to translate</string>
+
+    <string name="pin_dialog">Dialog successfully </string>
+    <string name="dialog_pinned">pinned</string>
+    <string name="dialog_unpinned">unpinned</string>
+
+    <string name="debug_menu_already_activated">Developer menu already activated</string>
+    <string name="debug_menu_activated">Developer menu activated</string>
+
+    <string name="vkme_mode_info">Some settings were hidden due to VK Messenger mode \n\nTo disable the mode, go to the Messages settings</string>
+
+    <string name="elements_hidden_count">Elements hidden</string>
+
+    <string name="donate_to_vtl">Help the project with a donation and get a bonus!</string>
+    <string name="tester_profile">Tester\'s profile</string>
+    <string name="i_bought">I bought </string>
+    <string name="i_created_poop">I created a poop</string>
+    <string name="no_data_error">I didn\'t get data (9(9((</string>
+
+    <string name="token_saved">Token saved successfully</string>
+    <string name="download_folders_reseted">Download folders reset successfully</string>
+
+    <string name="cache_disabled">Not enabled</string>
+    <string name="cache_100mb">Clear cache at least 100mb</string>
+    <string name="cache_500mb">Clear cache at least 500mb</string>
+    <string name="cache_1gb">Clear cache at least 1 GB</string>
+    <string name="cache_2gb">Clear cache at least 2 GB</string>
+    <string name="cache_5gb">Clear cache at least 5 GB</string>
+    <string name="cache_clean_title">Cache cleaning</string>
+    <string name="cache_select_size">Select the amount of cache to clear</string>
+    <string name="select_which_clean">Select what you want to clean</string>
+    <string name="cache_cleaned">Cache cleared</string>
+
+    <string name="no_data_to_backup">No data to backup</string>
+    <string name="select_backup">Choose a backup</string>
+    <string name="backup_success">Settings restored</string>
+    <string name="backup_error">Error: Settings not restored</string>
+
+    <string name="rename_title">Name change</string>
+    <string name="rename_message">This is a local change that will only be visible at this client.</string>
+    <string name="rename_success">User renamed successfully!</string>
+    <string name="rename_error">Error while renaming user</string>
+    <string name="rename_reset">Reset</string>
+    <string name="rename_remove_from_bd_success">User successfully removed from database!</string>
+    <string name="rename_group_success">Community renamed successfully!</string>
+    <string name="rename_remove_group_from_bd_success">Community was successfully removed from the database!</string>
+
+    <string name="link_audio_error">Audio link could not be found</string>
+    <string name="load_audio_error">Unable to load audio</string>
+    <string name="audio_downloading">Audio downloading</string>
+
+    <string name="proxy_setup">Set up proxy</string>
+    <string name="proxy_disable">Disable</string>
+    <string name="proxy_enable">Enable</string>
+    <string name="proxy_warning">Zaborona is not associated with VTosters in any way and we cannot guarantee its work and security</string>
+    <string name="proxy_settings">Proxy settings</string>
+
+    <string name="apk_install_error">Error installing update</string>
+
+    <string name="message_self_destruct_15sec">15 seconds</string>
+    <string name="message_self_destruct_1min">1 minute</string>
+    <string name="message_self_destruct_5min">5 minutes</string>
+    <string name="message_self_destruct_1hour">1 hour</string>
+    <string name="message_self_destruct_24hours">24 hours</string>
+
+    <string name="silent_messages">Silent messages</string>
+    <string name="message_send_settings_title">Send settings</string>
+    <string name="silent_messages_time_select">Select the time when the message disappears</string>
+
+    <string name="update_vk_admin_token">Update VK Admin token in Other settings</string>
+
+    <string name="backup_saved_in">Saved to file</string>
+    <string name="backup_save_error">Failed to save file</string>
+
+    <string name="newsfeed_list_update_feed">Update the feed to get a list of available items</string>
+    <string name="newsfeed_list_choose_to_hide">Choose items to hide</string>
+    <string name="newsfeed_list_update_feed_to_work">Update the feed to apply changes</string>
+    <string name="newsfeed_list_hidden_reseted">Hidden items reset</string>
+
+    <string name="video_dl_stories_not_supported">Downloading stories is not supported</string>
+    <string name="video_dl_wrong_link">Invalid link</string>
+    <string name="video_dl_progress">Video processing</string>
+    <string name="video_dl_error">Video cannot be downloaded</string>
+
+    <string name="superapp_menu">App menu</string>
+    <string name="superapp_miniapps">MiniApps widget</string>
+    <string name="superapp_vkpay">VK Pay</string>
+    <string name="superapp_greeting">Greeting</string>
+    <string name="superapp_miniapps_promo">MiniApps promo</string>
+    <string name="superapp_holiday">Friends\' birthdays</string>
+    <string name="superapp_weather">Weather</string>
+    <string name="superapp_sport">Sport events</string>
+    <string name="superapp_games">Games</string>
+    <string name="superapp_informer">Informer</string>
+    <string name="superapp_food">Food</string>
+    <string name="superapp_event">Events</string>
+    <string name="superapp_music">Music</string>
+    <string name="superapp_vk_run">VK Run</string>
+
+    <string name="feed_hidden">%1$d feeds are hidden</string>
+    <string name="feed_no_elements">No items added</string>
+    <string name="feed_elements_count">%1$d items added</string>
+
+    <string name="app_name_select_title">Select app title</string>
+    <string name="icons_warning">Not all features are available!</string>
+    <string name="icons_warning_info">To unlock, you need to make a donation of at least 99 rubles</string>
+    <string name="icons_title">Icons</string>
+    <string name="unavailable_icons">Unavailable icons</string>
+    <string name="unavailable_icon_warning">The icon is only available to verified owners</string>
+
+    <string name="rounding_size">Rounding size: %1$ddp</string>
+
+    <string name="sferum_online">Sferum</string>
+    <string name="vk_calls_online">VK Calls</string>
+    <string name="vk_music_online">VK Music</string>
+    <string name="vk_clips_online">VK Clips</string>
+    <string name="vk_video_online">VK Video</string>
+    <string name="vk_mail_online">VK Mail</string>
+
+    <string name="wallpaper_select">Select wallpaper</string>
+    <string name="wallpaper_from_gallery">from gallery</string>
+    <string name="wallpaper_remove">Remove wallpaper</string>
+    <string name="filters_warning">Not all filters are available!</string>
+    <string name="filter_maybe_lag">Device may be loaded</string>
+    <string name="filter_blur">Blur message background</string>
+    <string name="filter_dim">Dimming an image</string>
+    <string name="filter_mosaic">Mosaic</string>
+    <string name="filter_monochrome">Black and white background</string>
+    <string name="filter_invert_colors">Invert colors</string>
+    <string name="filter_sepia">Sepia effect</string>
+    <string name="filter_emboss">Emboss filter</string>
+    <string name="filter_engrave">Engrave filter</string>
+    <string name="filter_flea">Flea filter</string>
+    <string name="filter_snow">Snow effect</string>
+
+    <string name="encryption">Encryption method</string>
+    <string name="encryption_sett">Encryption settings</string>
+    <string name="encryption_disable">Disable encryption</string>
+    <string name="encryption_settings_title">Encryption settings</string>
+    <string name="encryption_public_algorithm_error">The selected algorithm is public and has no settings!</string>
+    <string name="encryption_enter_key">Enter encryption key</string>
+    <string name="encryption_current_algorithm_title">Algorithm used: %1$s.\nPlease note that if the field is empty, the default key will be used.</string>
+
+    <string name="update_error">Update failed</string>
+    <string name="update_error_text">An error occurred while trying to download the new version of the app.\nDo you want to update the app manually?</string>
+
+    <string name="photo_get_error">Failed to get photo link</string>
+
+    <string name="denial_of_responsibility_proxy">Disclaimer</string>
+    <string name="denial_of_responsibility_proxy_summ">The developers of the VTLite client assume no responsibility for the safety of using third-party proxies \n\nUse at your own risk</string>
+
+    <string name="altervika_title">Alternative VikaMobile domain</string>
 </resources>

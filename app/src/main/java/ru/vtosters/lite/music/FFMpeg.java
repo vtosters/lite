@@ -41,7 +41,7 @@ public class FFMpeg {
     private static void checkFFMpegLibs() {
         var lib = new File(AndroidUtils.getGlobalContext().getFilesDir(), "libffmpegkit_abidetect.so");
         if (!lib.exists()) {
-            ToastUtils.a("Копирование библиотеки ffmpegkit");
+            ToastUtils.a(AndroidUtils.getString("ffmpegkit_copy"));
             copyAssets();
         }
     }

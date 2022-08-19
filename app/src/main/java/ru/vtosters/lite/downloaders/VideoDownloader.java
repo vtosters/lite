@@ -5,6 +5,7 @@ import static ru.vtosters.lite.utils.AccountManagerUtils.getUserToken;
 import static ru.vtosters.lite.utils.AndroidUtils.getGlobalContext;
 import static ru.vtosters.lite.utils.AndroidUtils.getIdentifier;
 import static ru.vtosters.lite.utils.AndroidUtils.getString;
+import static ru.vtosters.lite.utils.Preferences.getVideosDir;
 
 import android.app.AlertDialog;
 import android.app.DownloadManager;
@@ -27,6 +28,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
 
+import ru.vtosters.lite.utils.AndroidUtils;
 import ru.vtosters.lite.utils.ExternalLinkParser;
 
 public class VideoDownloader {
@@ -104,7 +106,7 @@ public class VideoDownloader {
             DownloadManager.Request request = new DownloadManager.Request(Uri.parse(url));
             request.setNotificationVisibility(DownloadManager.Request.VISIBILITY_VISIBLE_NOTIFY_COMPLETED);
             request.setTitle(videoFile.toString());
-            request.setDestinationInExternalPublicDir(Environment.DIRECTORY_MOVIES, videoFile + ".mp4");
+            request.setDestinationInExternalPublicDir(getVideosDir().getAbsolutePath(), videoFile + ".mp4");
             ((DownloadManager) getGlobalContext().getSystemService(Context.DOWNLOAD_SERVICE)).enqueue(request);
             return;
         }
@@ -115,7 +117,7 @@ public class VideoDownloader {
             DownloadManager.Request request = new DownloadManager.Request(Uri.parse(url));
             request.setNotificationVisibility(DownloadManager.Request.VISIBILITY_VISIBLE_NOTIFY_COMPLETED);
             request.setTitle(videoFile.toString());
-            request.setDestinationInExternalPublicDir(Environment.DIRECTORY_MOVIES, videoFile + ".mp4");
+            request.setDestinationInExternalPublicDir(getVideosDir().getAbsolutePath(), videoFile + ".mp4");
             ((DownloadManager) context.getSystemService(Context.DOWNLOAD_SERVICE)).enqueue(request);
         }));
         builder.show();
@@ -123,12 +125,12 @@ public class VideoDownloader {
 
     public static void parseVideoLink(String url, Context ctx) {
         if (url.contains("vk.com/story")) {
-            ToastUtils.a("Не поддерживается загрузка историй");
+            ToastUtils.a(AndroidUtils.getString("video_dl_stories_not_supported"));
             return;
         }
 
         if (!url.contains("vk.com/video")) {
-            ToastUtils.a("Неверная ссылка");
+            ToastUtils.a(AndroidUtils.getString("video_dl_wrong_link"));
             return;
         }
 
@@ -136,7 +138,7 @@ public class VideoDownloader {
         String ownerId = videoId.split("_")[0];
 
         final ProgressDialog progressDialog = new ProgressDialog(ctx);
-        progressDialog.setMessage("Обработка видео");
+        progressDialog.setMessage(AndroidUtils.getString("video_dl_progress"));
         progressDialog.show();
 
         makeRequest("https://" + "api.vk.com" + "/method/video.get?owner_id=" + ownerId + "&videos=" + videoId + "&v=5.99&access_token=" + getUserToken(),
@@ -152,7 +154,7 @@ public class VideoDownloader {
                         downloadVideo(videoFile, ctx);
                     } catch (JSONException e) {
                         e.printStackTrace();
-                        Toast.makeText(ctx, "Видео нельзя скачать", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(ctx, AndroidUtils.getString("video_dl_error"), Toast.LENGTH_SHORT).show();
                     }
                 });
     }

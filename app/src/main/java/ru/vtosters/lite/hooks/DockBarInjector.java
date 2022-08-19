@@ -35,6 +35,7 @@ import com.vk.core.fragments.FragmentImpl;
 import com.vk.core.util.StringUtils;
 import com.vk.navigation.right.RightMenu;
 import com.vtosters.lite.MenuCountersState;
+import com.vtosters.lite.fragments.ProfileFragment;
 import com.vtosters.lite.ui.bottomnavigation.BottomNavigationMenuView;
 import com.vtosters.lite.ui.bottomnavigation.BottomNavigationView;
 
@@ -286,7 +287,7 @@ public class DockBarInjector {
     }
 
     public static Class<?> interceptClick(int id, RightMenu rightMenu) {
-        if (id == tab_menu) {
+        if (id == tab_menu && rightMenu != null) {
             rightMenu.a();
         }
 
@@ -294,6 +295,7 @@ public class DockBarInjector {
             if (id == tab.id)
                 return tab.fragmentClass;
         }
+
         for (DockBarTab tab : sManager.getDisabledTabs()) {
             if (id == tab.id)
                 return tab.fragmentClass;

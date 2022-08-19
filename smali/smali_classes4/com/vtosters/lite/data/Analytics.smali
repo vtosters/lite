@@ -2342,9 +2342,7 @@
 
     iget-object v0, v0, Lcom/vtosters/lite/data/Analytics;->o:Ljava/lang/String;
 
-    invoke-static {v0}, Lru/vtosters/lite/hooks/DeviceInfoHook;->getDeviceInfo(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v0
+    const-string v0, "-3"
     
     return-object v0
 .end method

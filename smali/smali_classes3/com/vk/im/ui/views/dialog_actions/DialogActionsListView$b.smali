@@ -9,7 +9,7 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x1a
+    accessFlags = 0x19
     name = "b"
 .end annotation
 
@@ -21,7 +21,7 @@
 
 
 # direct methods
-.method private constructor <init>()V
+.method public constructor <init>()V
     .locals 0
 
     .line 1

@@ -21,10 +21,12 @@ public class LifecycleUtils {
         application.registerActivityLifecycleCallbacks(new Application.ActivityLifecycleCallbacks() {
             @Override // android.app.Application.ActivityLifecycleCallbacks
             public void onActivityPaused(Activity activity) {
+                activities.remove(activity);
             }
 
             @Override // android.app.Application.ActivityLifecycleCallbacks
             public void onActivityResumed(Activity activity) {
+                activities.add(activity);
             }
 
             @Override // android.app.Application.ActivityLifecycleCallbacks
@@ -70,16 +72,11 @@ public class LifecycleUtils {
 
     public static void restartApplicationWithTimer() {
         Handler handler = new Handler();
-        handler.postDelayed(new Runnable() {
-            public void run() {
-                restartApplication();
-            }
-        }, 500);
+        handler.postDelayed(LifecycleUtils::restartApplication, 500);
     }
 
     public static void restartApplicationInto(Class Class) {
         Context ctx = AndroidUtils.getGlobalContext();
-        PackageManager pm = ctx.getPackageManager();
 
         Intent intent = new Navigator(Class).b(ctx);
         intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);

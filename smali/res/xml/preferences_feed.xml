@@ -31,6 +31,14 @@
             android:defaultValue=""
             android:key="spamfilters"
             android:title="@string/vtlownfilter" />
+        <EditTextPreference
+            android:defaultValue=""
+            android:key="sourcenamefilter"
+            android:title="@string/vtlsourcenamefilter" />
+        <EditTextPreference
+            android:defaultValue=""
+            android:key="linkfilter"
+            android:title="@string/vtllinkfilter" />
         <com.vtosters.lite.ui.MaterialSwitchPreference
             android:defaultValue="false"
             android:key="default_ad_list"
@@ -54,17 +62,13 @@
         <com.vtosters.lite.ui.MaterialSwitchPreference
             android:defaultValue="false"
             android:key="cringecopyright"
-            android:summary="Блокировать посты с источником где есть ссылка на вк/телеграм (группу, страницу или посты) или на другие возможные ресурсы"
-            android:title="Посты с возможной рекламой" />
-        <EditTextPreference
-            android:defaultValue=""
-            android:key="linkfilter"
-            android:title="Фильтр ссылок в источнике" />
+            android:summary="@string/cringecopyright_summ"
+            android:title="@string/cringecopyright_title" />
         <com.vtosters.lite.ui.MaterialSwitchPreference
             android:defaultValue="false"
             android:key="cringerepost"
-            android:summary="Блокировать посты с репостом внутри которых есть ссылка на вк/телеграм"
-            android:title="Репосты с ссылками" />
+            android:summary="@string/cringerepost_summ"
+            android:title="@string/cringerepost_title" />
         <com.vtosters.lite.ui.MaterialSwitchPreference
             android:defaultValue="false"
             android:key="copyright_post"
@@ -100,8 +104,8 @@
             android:title="@string/officialnewssett" />
         <Preference
             android:enabled="false"
-            android:summary="Возможно у вас включена Интересная лента \n\nЕсли вы хотите поменять ленту на Временную, то вы можете сменить ее нажав на пункт выше"
-            android:title="Почему не обновляются новости?" />
+            android:summary="@string/why_news_not_updated_summ"
+            android:title="@string/why_news_not_updated_title" />
         <com.vtosters.lite.ui.SummaryListPreference
             android:defaultValue="default"
             android:dialogTitle="@string/feed_other_update_dialog_title"
@@ -114,5 +118,12 @@
             android:key="feedcache"
             android:summary="@string/feed_other_cache_summary"
             android:title="@string/vtlfeedcache" />
+        <Preference
+            android:key="newsfeedlistmanager"
+            android:summary="@string/newsfeedlistmanager_summ"
+            android:title="@string/newsfeedlistmanager_title" />
+        <Preference
+            android:key="newsfeedlistmanager_reset"
+            android:title="@string/newsfeedlistmanager_reset_title" />
     </PreferenceCategory>
 </PreferenceScreen>

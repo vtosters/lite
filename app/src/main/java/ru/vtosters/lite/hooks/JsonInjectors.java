@@ -1,7 +1,10 @@
 package ru.vtosters.lite.hooks;
 
 import static ru.vtosters.lite.foaf.FoafBase.getLastSeen;
+import static ru.vtosters.lite.foaf.FoafBase.getBypassedOnlineInfo;
+import static ru.vtosters.lite.hooks.OnlineFormatterHook.onlineHookProfiles;
 import static ru.vtosters.lite.hooks.DateHook.getLocale;
+import static ru.vtosters.lite.utils.AndroidUtils.getDefaultPrefs;
 import static ru.vtosters.lite.utils.Base64Utils.decode;
 import static ru.vtosters.lite.utils.NewsFeedFiltersUtils.checkCaption;
 import static ru.vtosters.lite.utils.NewsFeedFiltersUtils.checkCopyright;
@@ -21,6 +24,7 @@ import static ru.vtosters.lite.utils.VTVerifications.isDeveloper;
 import static ru.vtosters.lite.utils.VTVerifications.isPrometheus;
 import static ru.vtosters.lite.utils.VTVerifications.isVerified;
 
+import android.text.TextUtils;
 import android.util.Log;
 
 import com.vk.core.network.Network;
@@ -33,6 +37,8 @@ import org.json.JSONObject;
 
 import java.io.IOException;
 import java.text.ParseException;
+import java.util.Collections;
+import java.util.LinkedHashSet;
 import java.util.Objects;
 import java.util.Random;
 
@@ -69,7 +75,7 @@ public class JsonInjectors {
     }
 
     public static JSONObject donateRecomm() throws JSONException {
-        var title = "Помоги проекту донатом и получи бонус!";
+        var title = AndroidUtils.getString("donate_to_vtl");
         var link = "https://vk.com/vtosters_official";
         var text_color = "2D81E0";
 
@@ -110,7 +116,7 @@ public class JsonInjectors {
     }
 
     public static JSONObject vktesters(int id) throws JSONException {
-        var title = "Карточка Тестера";
+        var title = AndroidUtils.getString("tester_profile");
         var text_color = "2D81E0";
         var link = "https://static.vk.com/bugs?lang=" + LangUtils.a() + "#/reporter" + id;
 
@@ -154,7 +160,7 @@ public class JsonInjectors {
         var peerid = Objects.requireNonNull(orig.optJSONObject("peer")).optInt("id");
 
         var pic = "https://image.pngaaa.com/641/326641-middle.png"; // can be null
-        var text = "Я не загрузил данные (9(9((";
+        var text = AndroidUtils.getString("no_data_error");
         var link = "https://vtosters.app"; // can be null
         var linktitle = "Test button"; // can be null
 
@@ -171,9 +177,9 @@ public class JsonInjectors {
         if (!hasIcon) icon = "";
         if (!hasButton) buttons = "";
 
-        if (isVerified(peerid)) text = "Я купил VTosters Premium";
-        if (isPrometheus(peerid)) text = "Я купил VTosters Premium Gold Prime Pro Plus";
-        if (isDeveloper(peerid)) text = "Я создал говно";
+        if (isVerified(peerid)) text = AndroidUtils.getString("i_bought") + " VTosters Premium";
+        if (isPrometheus(peerid)) text = AndroidUtils.getString("i_bought") + " VTosters Premium Gold Prime Pro Plus";
+        if (isDeveloper(peerid)) text = AndroidUtils.getString("i_created_poop");
         if (!isVerified(peerid) || text.equals("")) {
             if (getBoolValue("convBarRecomm", false)) {
                 return null;
@@ -267,28 +273,81 @@ public class JsonInjectors {
 
     public static JSONObject setOnlineInfo(JSONObject json) throws ParseException, IOException, JSONException {
         var id = json.optInt("id");
+        if (id == AccountManagerUtils.getUserId()) {
+            return json;
+        }
         var onlineinfo = json.optJSONObject("online_info");
-        var time = getLastSeen(0L, id);
+        if (onlineinfo != null && !onlineinfo.optBoolean("visible")) {
+            var bypassed = getBypassedOnlineInfo(id);
+            if (bypassed.optInt("last_seen", 0) != 0) {
+                json.remove("online_info");
 
-        if (time != 0L && onlineinfo != null && !onlineinfo.optBoolean("is_online") && id != AccountManagerUtils.getUserId()) {
-            json.remove("online_info");
+                var online_info = new JSONObject()
+                        .put("visible", true)
+                        .put("last_seen", bypassed.optInt("last_seen"))
+                        .put("is_online", bypassed.optBoolean("is_online"))
+                        .put("app_id", bypassed.optInt("app_id"))
+                        .put("is_mobile", bypassed.optBoolean("is_mobile"));
 
-            var online_info = new JSONObject()
-                    .put("visible", true)
-                    .put("last_seen", time)
-                    .put("is_online", false)
-                    .put("app_id", 0)
-                    .put("is_mobile", false);
+                var last_seen = new JSONObject()
+                        .put("platform", bypassed.optInt("platform"))
+                        .put("time", bypassed.optInt("last_seen"));
 
-            var last_seen = new JSONObject()
-                    .put("platform", 4)
-                    .put("time", time);
-
-            json.put("last_seen", last_seen).put("online_info", online_info);
+                json.put("last_seen", last_seen).put("online_info", online_info);
+            }
         }
 
         return json;
     }
+
+    public static JSONArray setOnlineInfoUsers(JSONArray profiles) throws ParseException, IOException, JSONException {
+        if (profiles == null || profiles.length() == 0) return profiles;
+        StringBuilder sb = new StringBuilder();
+        var curVkId = AccountManagerUtils.getUserId();
+        for (int i=0; i < profiles.length(); i++) {
+            JSONObject profile = profiles.getJSONObject(i);
+            int id = profile.optInt("id", -1);
+            JSONObject onlinfo = profile.optJSONObject("online_info");
+            if (id == curVkId || id < 0 || onlinfo == null || onlinfo.optBoolean("visible")) {
+                continue;
+            }
+            sb.append(id);
+            sb.append(",");
+        }
+        var ids = sb.toString();
+        if (ids.length() > 0) {
+            ids = ids.substring(0, ids.length() - 1);
+        } else {
+            return profiles;
+        }
+
+        JSONObject bypassedObj = getBypassedOnlineInfo(ids);
+        for (int i=0; i < profiles.length(); i++) {
+            JSONObject profile = profiles.getJSONObject(i);
+            int id = profile.optInt("id");
+            JSONObject bypassed = bypassedObj.optJSONObject(Integer.toString(id));
+            if (bypassed == null) {
+                continue;
+            }
+            profile.remove("online_info");
+
+            var online_info = new JSONObject()
+                    .put("visible", true)
+                    .put("last_seen", bypassed.optInt("last_seen"))
+                    .put("is_online", bypassed.optBoolean("is_online"))
+                    .put("app_id", bypassed.optInt("app_id"))
+                    .put("is_mobile", bypassed.optBoolean("is_mobile"));
+
+            var last_seen = new JSONObject()
+                    .put("platform", bypassed.optInt("platform"))
+                    .put("time", bypassed.optInt("last_seen"));
+
+            profile.put("last_seen", last_seen).put("online_info", online_info);
+        }
+
+        return profiles;
+    }
+
 
     public static JSONObject storiesads(JSONObject json, boolean isDeleteFix) throws JSONException {
         if (!adsstories()) {
@@ -371,14 +430,37 @@ public class JsonInjectors {
     }
 
     public static JSONArray newsfeedlist(JSONArray items) throws JSONException {
-        for (int j = 0; j < items.length(); j++) {
-            var list = items.optJSONObject(j);
-            var name = list.optString("id");
+        var selectedItems = getDefaultPrefs().getString("news_feed_selected_items", "");
+        var filtersSet = getDefaultPrefs().getStringSet("news_feed_items_set", null);
+        var mutableFiltersSet = Collections.synchronizedSet(new LinkedHashSet<String>());
+        if (filtersSet != null)
+            mutableFiltersSet.addAll(filtersSet);
 
-            if (!name.equals("kpop") && !name.equals("foryou") && !name.equals("qazaqstan")) {
-                list.put("is_hidden", false).put("is_unavailable", false);
-                if (dev()) Log.d("NewsfeedListInj", "Unlocked " + name + " in newsfeed list");
+        synchronized (mutableFiltersSet) {
+            for (int i = 0; i < items.length(); i++) {
+                var item = items.optJSONObject(i);
+                if (item == null) continue;
+
+                var id = item.optString("id");
+                var title = item.optString("title");
+
+                if (TextUtils.isEmpty(id) || TextUtils.isEmpty(title)
+                        // this items not working
+                        || id.equals("kpop") || id.equals("foryou")
+                        || id.equals("qazaqstan") || id.equals("podcasts"))
+                    continue;
+
+                mutableFiltersSet.add(id + "|" + title);
+
+                var hide = selectedItems.contains(id);
+
+                Log.d("NewsfeedList", "Added list " + id + " to feed");
+                item.put("is_hidden", hide)
+                        .put("is_unavailable", hide);
+                if (dev()) Log.d("NewsfeedListInj", "Unlocked " + id + " in newsfeed list");
             }
+            getDefaultPrefs().edit().putStringSet("news_feed_items_set", mutableFiltersSet)
+                    .apply();
         }
 
         return items;
@@ -527,7 +609,7 @@ public class JsonInjectors {
 
                 Log.d("VKMusic", "title: " + title + " id: " + id + " url: " + url + " value: " + value);
 
-                if (url.contains(value)) {
+                if (url.contains(value) && !value.isEmpty()) {
                     catalog.put("default_section", id);
                     if (dev()) Log.d("VKMusic", "Added " + title + " as default music section");
                 }
@@ -585,8 +667,8 @@ public class JsonInjectors {
         return null;
     }
 
-    public static JSONObject friends(JSONObject json) throws JSONException {
-        JSONObject catalog = json;
+    public static JSONObject friends(JSONObject json) throws JSONException, ParseException, IOException {
+        JSONObject catalog = onlineHookProfiles(json);
         boolean sectionexecute = true;
         boolean hasBirthday = false;
 

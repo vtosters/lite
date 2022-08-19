@@ -1,5 +1,6 @@
 package ru.vtosters.lite.hooks;
 
+import static ru.vtosters.lite.utils.AndroidUtils.getString;
 import static ru.vtosters.lite.utils.AndroidUtils.getIdentifier;
 import static ru.vtosters.lite.utils.AndroidUtils.getPreferences;
 
@@ -15,10 +16,15 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.Toast;
 
+import androidx.annotation.Nullable;
+
 import com.vk.core.dialogs.actionspopup.ActionsPopup;
 import com.vk.core.drawable.RecoloredDrawable;
+import com.vk.core.util.ToastUtils;
 import com.vk.dto.common.AttachmentWithMedia;
+import com.vk.dto.common.ImageSize;
 import com.vtosters.lite.R;
+import com.vtosters.lite.attachments.DocumentAttachment;
 import com.vtosters.lite.attachments.PhotoAttachment;
 
 import org.json.JSONException;
@@ -26,6 +32,7 @@ import org.json.JSONObject;
 
 import java.io.IOException;
 import java.net.URLEncoder;
+import java.util.List;
 
 import okhttp3.Call;
 import okhttp3.Callback;
@@ -36,18 +43,17 @@ import ru.vtosters.lite.utils.AndroidUtils;
 import ru.vtosters.lite.utils.ThemesUtils;
 
 public class PhotoViewer {
-
     static OkHttpClient client = new OkHttpClient();
 
     public static boolean interceptClick(AttachmentWithMedia attachment, MenuItem item, View view) {
         if (item.getItemId() == AndroidUtils.getIdentifier("search_photo", "id")) {
-            searchPhoto(getUrlFromAttachment((PhotoAttachment) attachment));
+            searchPhoto(getUrlFromPhotoAttachment((PhotoAttachment) attachment));
             return true;
         } else if (item.getItemId() == AndroidUtils.getIdentifier("copy_photo_url", "id")) {
-            copyPhotoUrl(getUrlFromAttachment((PhotoAttachment) attachment));
+            copyPhotoUrl(getUrlFromPhotoAttachment((PhotoAttachment) attachment));
             return true;
         } else if (item.getItemId() == AndroidUtils.getIdentifier("open_original_photo", "id")) {
-            openUrl(getUrlFromAttachment((PhotoAttachment) attachment));
+            openUrl(getUrlFromPhotoAttachment((PhotoAttachment) attachment));
             return true;
         }
         return true;
@@ -61,7 +67,7 @@ public class PhotoViewer {
                         : new RecoloredDrawable(AndroidUtils.getGlobalContext().getDrawable(R.drawable.ic_menu_search_outline_28), ThemesUtils.getAccentColor()),
                 false,
                 () -> {
-                    searchPhoto(getUrlFromAttachment((PhotoAttachment) attachment));
+                    searchPhoto(getUrlFromPhotoAttachment((PhotoAttachment) attachment));
                     return null;
                 }
         );
@@ -71,7 +77,7 @@ public class PhotoViewer {
                         : new RecoloredDrawable(AndroidUtils.getGlobalContext().getDrawable(R.drawable.ic_copy_outline_28), Color.WHITE),
                 false,
                 () -> {
-                    copyPhotoUrl(getUrlFromAttachment((PhotoAttachment) attachment));
+                    copyPhotoUrl(getUrlFromPhotoAttachment((PhotoAttachment) attachment));
                     return null;
                 }
         );
@@ -82,14 +88,32 @@ public class PhotoViewer {
                         ThemesUtils.getAccentColor()),
                 false,
                 () -> {
-                    openUrl(getUrlFromAttachment((PhotoAttachment) attachment));
+                    if (attachment instanceof PhotoAttachment) {
+                        openUrl(getUrlFromPhotoAttachment((PhotoAttachment) attachment));
+                    } else if (attachment instanceof DocumentAttachment) {
+                        var documentAttachment = (DocumentAttachment) attachment;
+                        if (documentAttachment.J != null)
+                            openUrl(getUrlFromDocumentAttachment(documentAttachment));
+                        else
+                            ToastUtils.a(getString("photo_get_error"));
+                    }
                     return null;
                 }
         );
     }
 
-    private static String getUrlFromAttachment(PhotoAttachment attachment) {
+    private static String getUrlFromDocumentAttachment(DocumentAttachment attachment) {
+        var imageSizes = attachment.J.t1();
+        return getUrlFromImageSizeList(imageSizes);
+    }
+
+    private static String getUrlFromPhotoAttachment(PhotoAttachment attachment) {
         var imageSizes = attachment.D.Q.t1();
+        return getUrlFromImageSizeList(imageSizes);
+    }
+
+    @Nullable
+    private static String getUrlFromImageSizeList(List<ImageSize> imageSizes) {
         if (imageSizes.isEmpty())
             return null;
         var max = imageSizes.get(0);

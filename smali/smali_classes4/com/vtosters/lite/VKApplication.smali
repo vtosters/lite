@@ -14,8 +14,6 @@
 # static fields
 .field private static a:Z
 
-.field private static final formatoftime:Ljava/text/SimpleDateFormat;
-
 # direct methods
 .method static constructor <clinit>()V
     .locals 2
@@ -2521,6 +2519,8 @@
 .method public onCreate()V
     .locals 11
 
+    invoke-static {p0}, Lru/vtosters/lite/utils/Preferences;->init(Landroid/app/Application;)V
+
     .line 1
     invoke-static {p0}, Lcom/squareup/leakcanary/LeakCanary;->isInAnalyzerProcess(Landroid/content/Context;)Z
 
@@ -3005,57 +3005,7 @@
     .line 48
     sput-boolean v7, Lcom/vtosters/lite/VKApplication;->a:Z
 
-    new-instance v0, Ljava/text/SimpleDateFormat;
-
-    invoke-static {}, Lru/vtosters/lite/hooks/DateHook;->getDateFormat()Ljava/lang/String;
-
-    move-result-object v3
-
-    invoke-direct {v0, v3}, Ljava/text/SimpleDateFormat;-><init>(Ljava/lang/String;)V
-
-    sput-object v0, Lcom/vtosters/lite/VKApplication;->formatoftime:Ljava/text/SimpleDateFormat;
-
     return-void
-.end method
-
-.method public static getFullTime(I)Ljava/lang/String;
-    .registers 6
-    .param p0, "s"  # I
-
-    .line 17
-    invoke-static {}, Lru/vtosters/lite/hooks/DateHook;->fulltime()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_17
-
-    .line 18
-    new-instance v0, Ljava/util/Date;
-
-    int-to-long v1, p0
-
-    const-wide/16 v3, 0x3e8
-
-    mul-long v1, v1, v3
-
-    invoke-direct {v0, v1, v2}, Ljava/util/Date;-><init>(J)V
-
-    .line 19
-    .local v0, "d":Ljava/util/Date;
-    sget-object v1, Lcom/vtosters/lite/VKApplication;->formatoftime:Ljava/text/SimpleDateFormat;
-
-    invoke-virtual {v1, v0}, Ljava/text/SimpleDateFormat;->format(Ljava/util/Date;)Ljava/lang/String;
-
-    move-result-object v1
-
-    return-object v1
-
-    .line 21
-    .end local v0  # "d":Ljava/util/Date;
-    :cond_17
-    const/4 v0, 0x0
-
-    return-object v0
 .end method
 
 .method public onLowMemory()V

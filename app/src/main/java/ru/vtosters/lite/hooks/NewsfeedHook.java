@@ -14,6 +14,10 @@ import static ru.vtosters.lite.utils.NewsFeedFiltersUtils.isMusicBlock;
 import static ru.vtosters.lite.utils.NewsFeedFiltersUtils.isNewsBlock;
 import static ru.vtosters.lite.utils.NewsFeedFiltersUtils.isPostRecommendations;
 import static ru.vtosters.lite.utils.NewsFeedFiltersUtils.isRecomsGroup;
+import static ru.vtosters.lite.utils.Preferences.ads;
+import static ru.vtosters.lite.utils.Preferences.adsslider;
+import static ru.vtosters.lite.utils.Preferences.authorsrecomm;
+import static ru.vtosters.lite.utils.Preferences.friendsrecomm;
 import static ru.vtosters.lite.utils.Preferences.getBoolValue;
 import static ru.vtosters.lite.utils.Preferences.vkme;
 
@@ -23,6 +27,7 @@ import org.json.JSONException;
 import org.json.JSONObject;
 
 import java.util.ArrayList;
+import java.util.HashSet;
 import java.util.List;
 
 public class NewsfeedHook {
@@ -72,5 +77,43 @@ public class NewsfeedHook {
             list.clear();
         }
         return list;
+    }
+
+    public static String[] feedParams(){
+        HashSet<String> params = new HashSet<>();
+        params.add("post");
+        params.add("photo");
+        params.add("photo_tag");
+
+        if (!friendsrecomm()) {
+            params.add("friends_recomm");
+        }
+
+        if (!ads()) {
+            params.add("app_widget");
+            params.add("promo_button");
+        }
+
+        if (!authorsrecomm()) {
+            params.add("authors_rec");
+        }
+
+        return params.toArray(new String[0]);
+    }
+
+    public static void adsParams(HashSet<String> hashSet) {
+        if (ads() || adsslider()) {
+            hashSet.add("ads_disabled");
+            return;
+        }
+
+        hashSet.add("ads_app");
+        hashSet.add("ads_site");
+        hashSet.add("ads_post");
+        hashSet.add("ads_app_slider");
+        hashSet.add("ads_site_slider");
+        hashSet.add("ads_app_video");
+        hashSet.add("ads_post_pretty_cards");
+        hashSet.add("ads_post_snippet_video");
     }
 }

@@ -31,7 +31,7 @@
             android:layout_marginEnd="16.0dip"
             android:fontFamily="@font/roboto_regular"
             android:includeFontPadding="false"
-            android:text="Откуда списать"
+            android:text="@string/where_from_send"
             android:textColor="?text_subhead"
             android:textSize="14.0sp"
             android:visibility="gone" />
@@ -92,7 +92,7 @@
             android:layout_marginEnd="16.0dip"
             android:fontFamily="@font/roboto_regular"
             android:includeFontPadding="false"
-            android:text="Куда зачислить"
+            android:text="@string/where_to_send"
             android:textColor="?text_subhead"
             android:textSize="14.0sp"
             android:visibility="gone" />
@@ -118,7 +118,7 @@
                     android:layout_height="fill_parent"
                     android:checked="true"
                     android:maxLines="1"
-                    android:text="Карта любого банка"
+                    android:text="@string/any_bank_card"
                     android:textColor="?text_muted"
                     android:textSize="14.0sp" />
             </com.vtosters.lite.ui.CheckableRelativeLayout>

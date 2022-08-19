@@ -77,8 +77,6 @@ public class ServerDialog {
     private static void getResponse(String body) throws Exception {
         JSONObject jSONObject = new JSONObject(body);
 
-        Log.d("VTLOG", "getResponse: " + jSONObject);
-
         if (jSONObject.getString("title").equals("")) {
             showAlert = false;
             return;

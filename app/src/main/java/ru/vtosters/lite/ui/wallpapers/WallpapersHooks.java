@@ -10,11 +10,18 @@ import static ru.vtosters.lite.utils.AndroidUtils.getGlobalContext;
 import static ru.vtosters.lite.utils.AndroidUtils.getPreferences;
 import static ru.vtosters.lite.utils.Preferences.hasVerification;
 
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
 import android.graphics.drawable.Drawable;
 import android.view.View;
 import android.widget.ImageView;
 
 import java.io.File;
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.io.OutputStream;
+
+import ru.vtosters.lite.utils.AndroidUtils;
 
 public class WallpapersHooks {
     private static File mWallpaperFile;
@@ -23,7 +30,28 @@ public class WallpapersHooks {
     private static boolean mUpdateWallpaperRequested = true;
 
     public static File getWallpaperFile() {
-        return mWallpaperFile == null ? mWallpaperFile = new File(getGlobalContext().getFilesDir(), "wallpaper.png") : mWallpaperFile;
+        return mWallpaperFile == null ? mWallpaperFile = compressFile(new File(getGlobalContext().getFilesDir(), "wallpaper.png")) : mWallpaperFile;
+    }
+
+    public static File compressFile(File file) {
+        Bitmap bitmap = BitmapFactory.decodeFile(file.getAbsolutePath());
+        File compressedFile = new File(file.getParent(), file.getName());
+        OutputStream out = null;
+        try {
+            out = new FileOutputStream(compressedFile);
+            bitmap.compress(Bitmap.CompressFormat.PNG, 95, out);
+        } catch (Exception e) {
+            e.printStackTrace();
+        } finally {
+            try {
+                if (out != null) {
+                    out.close();
+                }
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+        }
+        return compressedFile;
     }
 
     public static void setBg(View view) {
@@ -91,13 +119,13 @@ public class WallpapersHooks {
         String radius = getPreferences().getString("msg_blur_radius", "disabled");
         switch (radius) {
             case "low":
-                return "Низкое";
+                return AndroidUtils.getString("wallpapers_low");
             case "med":
-                return "Среднее";
+                return AndroidUtils.getString("wallpapers_med");
             case "high":
-                return "Высокое";
+                return AndroidUtils.getString("wallpapers_high");
             default:
-                return "Отключено";
+                return AndroidUtils.getString("wallpapers_disabled");
         }
     }
 
@@ -105,11 +133,11 @@ public class WallpapersHooks {
         String radius = getPreferences().getString("msg_dim", "disabled");
         switch (radius) {
             case "dim_black":
-                return "Затемнить";
+                return AndroidUtils.getString("wallpapers_dim_black");
             case "dim_white":
-                return "Осветлить";
+                return  AndroidUtils.getString("wallpapers_dim_white");
             default:
-                return "Отключено";
+                return AndroidUtils.getString("wallpapers_disabled");
         }
     }
 
@@ -117,13 +145,13 @@ public class WallpapersHooks {
         String radius = getPreferences().getString("msg_mosaic", "disabled");
         switch (radius) {
             case "low":
-                return "Низкое";
+                return AndroidUtils.getString("wallpapers_low");
             case "med":
-                return "Среднее";
+                return AndroidUtils.getString("wallpapers_med");
             case "high":
-                return "Высокое";
+                return AndroidUtils.getString("wallpapers_high");
             default:
-                return "Отключено";
+                return AndroidUtils.getString("wallpapers_disabled");
         }
     }
 

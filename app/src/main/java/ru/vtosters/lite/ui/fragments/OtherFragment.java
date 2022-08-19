@@ -9,6 +9,7 @@ import static ru.vtosters.lite.ui.components.BackupManager.deletePrefs;
 import static ru.vtosters.lite.ui.components.BackupManager.restoreBackup;
 import static ru.vtosters.lite.utils.AccountManagerUtils.getUserToken;
 import static ru.vtosters.lite.utils.AndroidUtils.dp2px;
+import static ru.vtosters.lite.utils.AndroidUtils.edit;
 import static ru.vtosters.lite.utils.AndroidUtils.getDefaultPrefs;
 import static ru.vtosters.lite.utils.AndroidUtils.getIdentifier;
 import static ru.vtosters.lite.utils.CacheUtils.deleteCache;
@@ -76,7 +77,7 @@ public class OtherFragment extends MaterialPreferenceToolbarFragment {
                 String token = data.getStringExtra("token");
                 AndroidUtils.getPreferences().edit().putString("vk_admin_token", token).apply();
                 Log.d("VkAdminToken", token);
-                Toast.makeText(getContext(), "Токен успешно сохранён", LENGTH_SHORT).show();
+                Toast.makeText(getContext(), AndroidUtils.getString("token_saved"), LENGTH_SHORT).show();
             }
         }
     }
@@ -95,25 +96,31 @@ public class OtherFragment extends MaterialPreferenceToolbarFragment {
             return true;
         });
 
+        findPreference("resetfolders").setOnPreferenceClickListener(preference -> {
+            edit().remove("photos_directory").remove("videos_directory").remove("audios_directory").remove("downloads_directory").apply();
+            Toast.makeText(getContext(), AndroidUtils.getString("download_folders_reseted"), LENGTH_SHORT).show();
+            return true;
+        });
+
         var pref = getDefaultPrefs().getString("autoclearcache", "Default");
         switch (pref) {
             case "Default":
-                findPreference("autoclearcache").setSummary("Не включено");
+                findPreference("autoclearcache").setSummary(AndroidUtils.getString("cache_disabled"));
                 break;
             case "100mb":
-                findPreference("autoclearcache").setSummary("Очищать кеш при не менее 100 Мб");
+                findPreference("autoclearcache").setSummary(AndroidUtils.getString("cache_100mb"));
                 break;
             case "500mb":
-                findPreference("autoclearcache").setSummary("Очищать кеш при не менее 500 Мб");
+                findPreference("autoclearcache").setSummary(AndroidUtils.getString("cache_500mb"));
                 break;
             case "1gb":
-                findPreference("autoclearcache").setSummary("Очищать кеш при не менее 1 Гб");
+                findPreference("autoclearcache").setSummary(AndroidUtils.getString("cache_1gb"));
                 break;
             case "2gb":
-                findPreference("autoclearcache").setSummary("Очищать кеш при не менее 2 Гб");
+                findPreference("autoclearcache").setSummary(AndroidUtils.getString("cache_2gb"));
                 break;
             case "5gb":
-                findPreference("autoclearcache").setSummary("Очищать кеш при не менее 5 Гб");
+                findPreference("autoclearcache").setSummary(AndroidUtils.getString("cache_5gb"));
                 break;
         }
 
@@ -185,12 +192,12 @@ public class OtherFragment extends MaterialPreferenceToolbarFragment {
         five.setChecked(val == 5);
 
         VkAlertDialog.Builder builder = new VkAlertDialog.Builder(getContext());
-        builder.setTitle("Очистка кеша");
-        builder.setMessage("Выберите объём кеша для очистки");
+        builder.setTitle(AndroidUtils.getString("cache_clean_title"));
+        builder.setMessage(AndroidUtils.getString("cache_select_size"));
         builder.setCancelable(true);
-        builder.setNegativeButton("Отмена", null);
+        builder.setNegativeButton(AndroidUtils.getString("cancel"), null);
         builder.setView(rg);
-        builder.setPositiveButton("Сохранить", (dialog, which) -> {
+        builder.setPositiveButton(AndroidUtils.getString("save"), (dialog, which) -> {
             var pref = getDefaultPrefs().edit();
             var checked = rg.getCheckedRadioButtonId();
 
@@ -221,8 +228,8 @@ public class OtherFragment extends MaterialPreferenceToolbarFragment {
 
     private void cacheCleanDialog() {
         VkAlertDialog.Builder builder = new VkAlertDialog.Builder(getContext());
-        builder.setTitle("Выберите что вы хотите очистить");
-        builder.setItems(new String[]{"Очистить весь кеш", "Очистить кеш стикеров", "Очистить кеш изображений", "Очистить кеш видео", "Очистить кеш сообщений", "Очистить кеш WebView"}, (dialog, which) -> {
+        builder.setTitle(AndroidUtils.getString("select_which_clean"));
+        builder.setItems(AndroidUtils.getArray("cache_cleaner"), (dialog, which) -> {
             switch (which) {
                 case 0: {
                     SharedPreferences prefs2 = getContext().getSharedPreferences("stickers_storage", Context.MODE_PRIVATE);
@@ -237,7 +244,6 @@ public class OtherFragment extends MaterialPreferenceToolbarFragment {
                     ImEngineExt.a(ImEngine1.a());
                     AutoPlayCacheHolder.d.a();
                     MediaStorage.a();
-                    deleteCache();
                     break;
                 }
                 case 1: {
@@ -264,7 +270,7 @@ public class OtherFragment extends MaterialPreferenceToolbarFragment {
                     break;
             }
 
-            Toast.makeText(getContext(), "Кеш очищен", LENGTH_SHORT).show();
+            Toast.makeText(getContext(), AndroidUtils.getString("cache_cleaned"), LENGTH_SHORT).show();
         });
         builder.create().show();
     }
@@ -283,7 +289,7 @@ public class OtherFragment extends MaterialPreferenceToolbarFragment {
             try {
                 backupOnlines();
             } catch (IOException e) {
-                Toast.makeText(getContext(), "Нет данных для резервного копирования", LENGTH_SHORT).show();
+                Toast.makeText(getContext(), AndroidUtils.getString("no_data_to_backup"), LENGTH_SHORT).show();
             }
             return true;
         }
@@ -353,14 +359,14 @@ public class OtherFragment extends MaterialPreferenceToolbarFragment {
             var arr = BackupManager.getBackupsNames();
             var adapter = new ArrayAdapter(getContext(), android.R.layout.simple_list_item_1, arr);
             new VkAlertDialog.Builder(getContext())
-                    .setTitle("Выберите бэкап")
+                    .setTitle(AndroidUtils.getString("select_backup"))
                     .setAdapter(adapter, (dialog, which) -> {
                         try {
                             restoreBackup(arr[which]);
-                            Toast.makeText(getContext(), "Настройки восстановлены", LENGTH_LONG).show();
+                            Toast.makeText(getContext(), AndroidUtils.getString("backup_success"), LENGTH_LONG).show();
                         } catch (IOException e) {
                             e.printStackTrace();
-                            Toast.makeText(getContext(), "Ошибка, Настройки не восстановлены", LENGTH_LONG).show();
+                            Toast.makeText(getContext(), AndroidUtils.getString("backup_error"), LENGTH_LONG).show();
                         }
                     }).create().show();
             return true;

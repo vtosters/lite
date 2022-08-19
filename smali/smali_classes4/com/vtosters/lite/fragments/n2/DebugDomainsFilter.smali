@@ -305,7 +305,7 @@
     :goto_5
     const-string p2, "api.vk.com"
 
-    invoke-static {p2}, Lru/vtosters/lite/hooks/ProxyHook;->linkReplacer(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {p2}, Lru/vtosters/lite/proxy/api/ApiProxy;->linkReplacer(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p2
 

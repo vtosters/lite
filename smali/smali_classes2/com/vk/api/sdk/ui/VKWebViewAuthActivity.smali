@@ -202,7 +202,7 @@
     :cond_0
     const-string v0, "https://oauth.vk.com/authorize"
 
-    invoke-static {v0}, Lru/vtosters/lite/hooks/ProxyHook;->linkReplacer(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v0}, Lru/vtosters/lite/proxy/api/ApiProxy;->linkReplacer(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 

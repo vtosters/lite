@@ -1,11 +1,14 @@
 package ru.vtosters.lite.ui.fragments;
 
+import static ru.vtosters.lite.utils.AndroidUtils.*;
 import static ru.vtosters.lite.utils.AndroidUtils.getIdentifier;
 import static ru.vtosters.lite.utils.AndroidUtils.getPreferences;
 import static ru.vtosters.lite.utils.LifecycleUtils.restartApplicationWithTimer;
 import static ru.vtosters.lite.utils.Preferences.autoalltranslate;
-import static ru.vtosters.lite.utils.Preferences.offline;
+import static ru.vtosters.lite.utils.Preferences.vkme;
+import static ru.vtosters.lite.utils.ThemesUtils.*;
 
+import android.annotation.SuppressLint;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
@@ -19,9 +22,12 @@ import com.vk.navigation.Navigator;
 import com.vtosters.lite.general.fragments.MaterialPreferenceToolbarFragment;
 
 import java.util.Arrays;
+import java.util.Objects;
 
 import ru.vtosters.lite.ui.adapters.ImagineArrayAdapter;
 import ru.vtosters.lite.ui.wallpapers.WallpaperMenuFragment;
+import ru.vtosters.lite.utils.AndroidUtils;
+import ru.vtosters.lite.utils.ThemesUtils;
 
 public class MessagesFragment extends MaterialPreferenceToolbarFragment {
     @Override
@@ -31,6 +37,7 @@ public class MessagesFragment extends MaterialPreferenceToolbarFragment {
         prefs();
     }
 
+    @SuppressLint("UseCompatLoadingForDrawables")
     private void prefs() {
         findPreference("vkme").setOnPreferenceClickListener(new MessagesFragment.restart());
         findPreference("vkme_notifs").setOnPreferenceClickListener(new MessagesFragment.restart());
@@ -50,7 +57,7 @@ public class MessagesFragment extends MaterialPreferenceToolbarFragment {
                     .create();
 
             var listView = (ListView) LayoutInflater.from(getContext()).inflate(com.vtosters.lite.R.layout.abc_select_dialog_material, null, false);
-            var adapter = new ImagineArrayAdapter(getContext(), items, i -> {
+            var adapter = new ImagineArrayAdapter(requireContext(), items, i -> {
                 getPreferences().edit().putInt("translator", i).apply();
                 alert.dismiss();
             });
@@ -61,15 +68,20 @@ public class MessagesFragment extends MaterialPreferenceToolbarFragment {
 
             return true;
         });
+
+        findPreference("vkme_notifs").setEnabled(vkme());
+        findPreference("wallpapers").setIcon(recolorDrawable(getGlobalContext().getDrawable(getIdentifier("ic_media_outline_28", "drawable"))));
+        findPreference("vkme").setIcon(getIdentifier("ic_vkme_28", "drawable"));
     }
 
     @Override
     public boolean onPreferenceTreeClick(Preference preference) {
         findPreference("autotranslate").setEnabled(!autoalltranslate());
+        findPreference("vkme_notifs").setEnabled(vkme());
         return super.onPreferenceTreeClick(preference);
     }
 
-    public boolean restart(Preference preference) {
+    public boolean restart() {
         restartApplicationWithTimer();
         return true;
     }
@@ -77,14 +89,14 @@ public class MessagesFragment extends MaterialPreferenceToolbarFragment {
     public class restart implements Preference.OnPreferenceClickListener {
         @Override
         public boolean onPreferenceClick(Preference preference) {
-            return MessagesFragment.this.restart(preference);
+            return MessagesFragment.this.restart();
         }
     }
 
     public class clearCache implements Preference.OnPreferenceClickListener {
         @Override
         public boolean onPreferenceClick(Preference preference) {
-            return MessagesFragment.this.restart(preference);
+            return MessagesFragment.this.restart();
         }
     }
 

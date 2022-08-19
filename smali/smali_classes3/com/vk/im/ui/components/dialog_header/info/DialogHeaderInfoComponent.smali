@@ -433,6 +433,17 @@
     :cond_6
     invoke-static {v0, v1, v3}, Lcom/vk/core/extensions/CollectionExt;->b(Ljava/util/Collection;Ljava/lang/Object;Z)V
 
+    .line 1
+    iget-object v3, p0, Lcom/vk/im/ui/components/dialog_header/info/DialogHeaderInfoComponent;->G:Lcom/vk/im/ui/components/dialog_header/info/State;
+
+    invoke-virtual {v3}, Lcom/vk/im/ui/components/dialog_header/info/State;->d()Lcom/vk/im/engine/models/dialogs/Dialog;
+
+    move-result-object v3
+
+    invoke-static {v0, v3}, Lru/vtosters/lite/dnr/DNRInjector;->injectToListAccess(Ljava/util/List;Lcom/vk/im/engine/models/dialogs/Dialog;)Ljava/util/List;
+
+    move-result-object v0
+
     return-object v0
 .end method
 

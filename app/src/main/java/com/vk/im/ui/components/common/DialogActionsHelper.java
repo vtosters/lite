@@ -81,6 +81,7 @@ public final class DialogActionsHelper {
             CollectionExt.a(arrayList, DialogAction.NOTIFICATIONS_OFF, dialog.b(b2));
             return arrayList;
         }
+
         return new ArrayList<>();
     }
 
@@ -98,9 +99,9 @@ public final class DialogActionsHelper {
 
         DNRInjector.inject(dialog, arrayList);
 
-        if (dialog.hasUnread()) {
-            arrayList.add(DialogAction.MARK_AS_READ);
-        }
+//        if (dialog.hasUnread()) {
+        arrayList.add(DialogAction.MARK_AS_READ);
+//        }
 
         if (!dialog.W1()) {
             arrayList.add(DialogAction.CREATE_SHORTCUT);

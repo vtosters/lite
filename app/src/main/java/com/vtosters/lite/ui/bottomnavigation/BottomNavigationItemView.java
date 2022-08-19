@@ -1,5 +1,6 @@
 package com.vtosters.lite.ui.bottomnavigation;
 
+import static ru.vtosters.lite.utils.Preferences.*;
 import static ru.vtosters.lite.utils.ThemesUtils.getCSTDock;
 
 import android.annotation.SuppressLint;
@@ -30,6 +31,7 @@ import com.vk.core.ui.themes.VKThemeHelper;
 import com.vtosters.lite.R;
 
 import me.grishka.appkit.utils.V;
+import ru.vtosters.lite.utils.Preferences;
 
 public class BottomNavigationItemView extends FrameLayout implements MenuView.ItemView {
     private final TextView mSmallLabel;
@@ -219,13 +221,19 @@ public class BottomNavigationItemView extends FrameLayout implements MenuView.It
 //                ViewCompat.setScaleY(mLargeLabel, !mStaticModeEnabled && !checked ? mLargeScale : 1.0f);
                 ViewCompat.setScaleX(mSmallLabel, !mStaticModeEnabled && checked ? mSmallScale : 1.0f);
                 ViewCompat.setScaleY(mSmallLabel, !mStaticModeEnabled && checked ? mSmallScale : 1.0f);
-                // make mLargeLabel and mSmallLabel are bold
                 mLargeLabel.setTypeface(null, Typeface.BOLD);
                 mSmallLabel.setTypeface(null, Typeface.BOLD);
 
-                // make mLargeLabel and mSmallLabel text size is 10sp
-                mLargeLabel.setTextSize(TypedValue.COMPLEX_UNIT_SP, 10);
-                mSmallLabel.setTextSize(TypedValue.COMPLEX_UNIT_SP, 10);
+                int textsize;
+
+                if (vkme()){
+                    textsize = 11;
+                } else {
+                    textsize = 10;
+                }
+
+                mLargeLabel.setTextSize(TypedValue.COMPLEX_UNIT_SP, textsize);
+                mSmallLabel.setTextSize(TypedValue.COMPLEX_UNIT_SP, textsize);
 
                 mLargeLabel.setVisibility(/*checked ? VISIBLE :*/ INVISIBLE);
                 mSmallLabel.setVisibility(VISIBLE);//checked ? INVISIBLE : VISIBLE);

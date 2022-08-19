@@ -41,14 +41,38 @@
 
 # virtual methods
 .method public final a(Ljava/lang/String;)V
-    .locals 1
+    .locals 3
 
     iget-object v0, p0, Lkotlin/jvm/internal/CallableReference;->receiver:Ljava/lang/Object;
 
     check-cast v0, Lcom/vk/im/ui/components/dialog_header/actions/DialogHeaderActionsComponent;
 
+    invoke-static {v0}, Lcom/vk/im/ui/components/dialog_header/actions/DialogHeaderActionsComponent;->a(Lcom/vk/im/ui/components/dialog_header/actions/DialogHeaderActionsComponent;)Lcom/vk/im/ui/components/dialog_header/actions/State;
+
+    move-result-object v1
+
+    invoke-virtual {v1}, Lcom/vk/im/ui/components/dialog_header/actions/State;->h()Ljava/util/List;
+
+    move-result-object v1
+
+    invoke-static {v1}, Lkotlin/collections/l;->h(Ljava/util/List;)Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Lcom/vk/im/engine/models/messages/Msg;
+
+    invoke-virtual {v1}, Lcom/vk/im/engine/models/messages/Msg;->v1()I
+
+    move-result v1
+
+    const v2, 0x0
+
+    invoke-static {p1, v1, v2}, Lru/vtosters/lite/encryption/EncryptProvider;->decryptMessages(Ljava/lang/String;IZ)Ljava/lang/String;
+
+    move-result-object v1
+
     .line 1
-    invoke-static {v0, p1}, Lcom/vk/im/ui/components/dialog_header/actions/DialogHeaderActionsComponent;->a(Lcom/vk/im/ui/components/dialog_header/actions/DialogHeaderActionsComponent;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/vk/im/ui/components/dialog_header/actions/DialogHeaderActionsComponent;->a(Lcom/vk/im/ui/components/dialog_header/actions/DialogHeaderActionsComponent;Ljava/lang/String;)V
 
     return-void
 .end method

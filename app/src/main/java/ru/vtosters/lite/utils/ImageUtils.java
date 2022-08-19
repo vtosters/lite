@@ -3,12 +3,14 @@ package ru.vtosters.lite.utils;
 import static android.graphics.Bitmap.createBitmap;
 import static android.graphics.Bitmap.createScaledBitmap;
 import static androidx.core.content.ContextCompat.getDrawable;
+import static ru.vtosters.lite.utils.Preferences.preferences;
 import static ru.vtosters.lite.utils.ThemesUtils.getAccentColor;
 
 import android.content.Context;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.graphics.Canvas;
+import android.graphics.Paint;
 import android.graphics.Path;
 import android.graphics.PorterDuff;
 import android.graphics.RectF;
@@ -27,7 +29,7 @@ import okhttp3.Response;
 
 public class ImageUtils {
 
-    private static OkHttpClient client = new OkHttpClient();
+    private static final OkHttpClient client = new OkHttpClient();
 
     public static Bitmap bmp = null;
 
@@ -105,15 +107,21 @@ public class ImageUtils {
         final int width = bitmap.getWidth();
         final int height = bitmap.getHeight();
         final Bitmap outputBitmap = createBitmap(width, height, Bitmap.Config.ARGB_8888);
+        int pref = preferences.getInt("pic_rounding", 0);
+        final Canvas canvas = new Canvas(outputBitmap);
 
         final Path path = new Path();
-        path.addCircle(
-                (float) (width / 2),
-                (float) (height / 2),
-                (float) Math.min(width, (height / 2)),
-                Path.Direction.CCW);
 
-        final Canvas canvas = new Canvas(outputBitmap);
+        if (pref > 0) {
+            path.addRoundRect(new RectF(0, 0, width, height), pref, pref, Path.Direction.CCW);
+        } else {
+            path.addCircle(
+                    (float) (width / 2),
+                    (float) (height / 2),
+                    (float) Math.min(width, (height / 2)),
+                    Path.Direction.CCW);
+        }
+
         canvas.clipPath(path);
         canvas.drawBitmap(bitmap, 0, 0, null);
         return outputBitmap;

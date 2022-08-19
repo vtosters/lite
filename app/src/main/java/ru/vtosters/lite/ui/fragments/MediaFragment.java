@@ -13,8 +13,10 @@ import static ru.vtosters.lite.utils.ThemesUtils.getAlertStyle;
 import static ru.vtosters.lite.utils.ThemesUtils.getSTextAttr;
 import static ru.vtosters.lite.utils.ThemesUtils.getTextAttr;
 
+import android.app.Activity;
 import android.content.Context;
 import android.content.DialogInterface;
+import android.content.Intent;
 import android.content.res.ColorStateList;
 import android.os.Bundle;
 import android.util.Log;
@@ -40,109 +42,56 @@ import okhttp3.Request;
 import ru.vtosters.lite.downloaders.VideoDownloader;
 import ru.vtosters.lite.music.Scrobbler;
 import ru.vtosters.lite.ui.adapters.ImagineArrayAdapter;
+import ru.vtosters.lite.utils.AndroidUtils;
+import ru.vtosters.lite.utils.FileUriUtils;
+import ru.vtosters.lite.utils.Preferences;
 
 public class MediaFragment extends MaterialPreferenceToolbarFragment {
-    public static void download(Context ctx) {
-        AlertDialog.Builder alertDialog = new AlertDialog.Builder(ctx, getAlertStyle());
-        alertDialog.setTitle("Введите ссылку на видео");
+    private final int REQUEST_CODE_SET_DOWNLOAD_DIRECTORY = 665;
+    private final int REQUEST_CODE_SET_MUSIC_DIRECTORY = 666;
+    private final int REQUEST_CODE_SET_PHOTOS_DIRECTORY = 667;
+    private final int REQUEST_CODE_SET_VIDEOS_DIRECTORY = 668;
 
-        final EditText input = new EditText(ctx);
-        LinearLayout.LayoutParams lp = new LinearLayout.LayoutParams(
-                LinearLayout.LayoutParams.MATCH_PARENT,
-                LinearLayout.LayoutParams.MATCH_PARENT);
-        input.setLayoutParams(lp);
-        input.setTextColor(getTextAttr());
-        input.setBackgroundTintList(ColorStateList.valueOf(getAccentColor()));
-        alertDialog.setView(input);
-        alertDialog.setPositiveButton("Скачать", (dialog, which) -> VideoDownloader.parseVideoLink(input.getText().toString(), ctx));
-        var alert = alertDialog.create();
-        alert.show();
-        alert.getButton(DialogInterface.BUTTON_POSITIVE).setTextColor(getAccentColor());
-    }
-
-    private void logout(Context ctx) {
-        VkAlertDialog.Builder alertDialog = new VkAlertDialog.Builder(ctx);
-        alertDialog.setTitle("Вы уверены?");
-        alertDialog.setMessage("Вы действительно хотите выйти из аккаунта?");
-        alertDialog.setPositiveButton("Да", (dialog, which) -> {
-            Scrobbler.logout();
-        });
-        alertDialog.setNeutralButton("Нет", (dialog, which) -> {
-            dialog.cancel();
-        });
-        var alert = alertDialog.create();
-        alert.show();
-        alert.getButton(DialogInterface.BUTTON_POSITIVE).setTextColor(getAccentColor());
-        alert.getButton(DialogInterface.BUTTON_NEUTRAL).setTextColor(getResources().getColor(com.vtosters.lite.R.color.red));
-    }
-
-    private void lastfmAuth(Context ctx) {
-        LinearLayout linearLayout = new LinearLayout(ctx);
-        linearLayout.setOrientation(LinearLayout.VERTICAL);
-
-        final EditText fn = new EditText(ctx);
-        fn.setHint("Логин");
-        fn.setTextColor(getTextAttr());
-        fn.setHintTextColor(getSTextAttr());
-        fn.setBackgroundTintList(ColorStateList.valueOf(getAccentColor()));
-        linearLayout.addView(fn);
-        fn.getLayoutParams().width = ViewGroup.LayoutParams.MATCH_PARENT;
-        ViewGroup.MarginLayoutParams margin = ((ViewGroup.MarginLayoutParams) fn.getLayoutParams());
-        margin.setMargins(dp2px(20f), 0, dp2px(20f), 0);
-        fn.setLayoutParams(margin);
-
-        final EditText ln = new EditText(ctx);
-        ln.setHint("Пароль");
-        ln.setTextColor(getTextAttr());
-        ln.setHintTextColor(getSTextAttr());
-        ln.setBackgroundTintList(ColorStateList.valueOf(getAccentColor()));
-        linearLayout.addView(ln);
-        ln.getLayoutParams().width = ViewGroup.LayoutParams.MATCH_PARENT;
-        ln.setLayoutParams(margin);
-
-        AlertDialog.Builder alertDialog = new AlertDialog.Builder(ctx, getAlertStyle());
-        alertDialog.setTitle("Введите логин и пароль");
-
-        alertDialog.setView(linearLayout);
-        alertDialog.setPositiveButton("Войти", (dialog, which) -> {
-            String login = fn.getText().toString();
-            String pass = ln.getText().toString();
-
-            Scrobbler.auth(login, pass);
-        });
-        var alert = alertDialog.create();
-        alert.show();
-        alert.getButton(DialogInterface.BUTTON_POSITIVE).setTextColor(getAccentColor());
-    }
-
-    public static void deleteVideoHistory() {
-        Thread thread = new Thread(() -> {
-            try {
-                var request = new Request.a()
-                        .b("https://api.vk.com/method/" + "video.clearViewingHistoryRecords" + "?https=1" + "&access_token=" + getUserToken() + "&v=5.187")
-                        .a(Headers.a("User-Agent", Network.l.c().a(), "Content-Type", "application/x-www-form-urlencoded; charset=utf-8"))
-                        .a();
-
-                try {
-                    var response = new OkHttpClient().a(request).execute().a().g();
-                    Log.d("VideoHistory", response);
-                } catch (IOException e) {
-                    e.printStackTrace();
-                }
-            } catch (Exception e) {
-                e.printStackTrace();
-            }
-        });
-
-        thread.start();
-
-        sendToast("История просмотра видео очищена");
-    }
 
     @Override
     public void onCreate(Bundle bundle) {
         super.onCreate(bundle);
         addPreferencesFromResource(getIdentifier("preferences_media", "xml"));
+        prefs();
+    }
+
+    @Override
+    public void onActivityResult(int requestCode, int resultCode, Intent data) {
+        if (resultCode == Activity.RESULT_OK) {
+            var path = data.getData();
+            if (path != null) {
+                var prefs = getPreferences();
+                var editor = prefs.edit();
+                var actualPath = FileUriUtils.getFullPathFromTreeUri(path, getContext());
+                switch (requestCode) {
+                    case REQUEST_CODE_SET_DOWNLOAD_DIRECTORY:
+                        editor.putString("downloads_directory", actualPath);
+                        break;
+                    case REQUEST_CODE_SET_MUSIC_DIRECTORY:
+                        editor.putString("music_directory", actualPath);
+                        break;
+                    case REQUEST_CODE_SET_PHOTOS_DIRECTORY:
+                        editor.putString("photos_directory", actualPath);
+                        break;
+                    case REQUEST_CODE_SET_VIDEOS_DIRECTORY:
+                        editor.putString("videos_directory", actualPath);
+                        break;
+                    default:
+                        return;
+                }
+                editor.apply();
+            }
+        }
+    }
+
+    @Override
+    public void onResume() {
+        super.onResume();
         prefs();
     }
 
@@ -162,8 +111,52 @@ public class MediaFragment extends MaterialPreferenceToolbarFragment {
             return true;
         });
 
+        findPreference("downloads_directory").setSummary(
+                AndroidUtils.getString("current_download_folder") + " " + Preferences.getDownloadsDir()
+        );
+
+        findPreference("photos_directory").setSummary(
+                AndroidUtils.getString("current_download_folder") + " " + Preferences.getPhotosDir()
+        );
+
+        findPreference("videos_directory").setSummary(
+                AndroidUtils.getString("current_download_folder") + " " + Preferences.getVideosDir()
+        );
+
+        findPreference("music_directory").setSummary(
+                AndroidUtils.getString("current_download_folder") + " " + Preferences.getMusicDir()
+        );
+
+        findPreference("downloads_directory").setOnPreferenceClickListener(preference -> {
+            var intent = new Intent(Intent.ACTION_OPEN_DOCUMENT_TREE);
+            intent.addCategory(Intent.CATEGORY_DEFAULT);
+            startActivityForResult(intent, REQUEST_CODE_SET_DOWNLOAD_DIRECTORY);
+            return true;
+        });
+
+        findPreference("photos_directory").setOnPreferenceClickListener(preference -> {
+            var intent = new Intent(Intent.ACTION_OPEN_DOCUMENT_TREE);
+            intent.addCategory(Intent.CATEGORY_DEFAULT);
+            startActivityForResult(intent, REQUEST_CODE_SET_PHOTOS_DIRECTORY);
+            return true;
+        });
+
+        findPreference("videos_directory").setOnPreferenceClickListener(preference -> {
+            var intent = new Intent(Intent.ACTION_OPEN_DOCUMENT_TREE);
+            intent.addCategory(Intent.CATEGORY_DEFAULT);
+            startActivityForResult(intent, REQUEST_CODE_SET_VIDEOS_DIRECTORY);
+            return true;
+        });
+
+        findPreference("music_directory").setOnPreferenceClickListener(preference -> {
+            var intent = new Intent(Intent.ACTION_OPEN_DOCUMENT_TREE);
+            intent.addCategory(Intent.CATEGORY_DEFAULT);
+            startActivityForResult(intent, REQUEST_CODE_SET_MUSIC_DIRECTORY);
+            return true;
+        });
+
         if (isLoggedIn()) {
-            findPreference("lastfm_auth").setSummary("Вы авторизованы как " + Scrobbler.getUserName());
+            findPreference("lastfm_auth").setSummary(AndroidUtils.getString("lastfm_authorized_as") + " " + Scrobbler.getUserName());
         } else {
             findPreference("lastfm_enabled").setEnabled(false);
         }
@@ -190,6 +183,103 @@ public class MediaFragment extends MaterialPreferenceToolbarFragment {
 
             return true;
         });
+    }
+
+    private void lastfmAuth(Context ctx) {
+        LinearLayout linearLayout = new LinearLayout(ctx);
+        linearLayout.setOrientation(LinearLayout.VERTICAL);
+
+        final EditText fn = new EditText(ctx);
+        fn.setHint(AndroidUtils.getString("lastfm_login"));
+        fn.setTextColor(getTextAttr());
+        fn.setHintTextColor(getSTextAttr());
+        fn.setBackgroundTintList(ColorStateList.valueOf(getAccentColor()));
+        linearLayout.addView(fn);
+        fn.getLayoutParams().width = ViewGroup.LayoutParams.MATCH_PARENT;
+        ViewGroup.MarginLayoutParams margin = ((ViewGroup.MarginLayoutParams) fn.getLayoutParams());
+        margin.setMargins(dp2px(20f), 0, dp2px(20f), 0);
+        fn.setLayoutParams(margin);
+
+        final EditText ln = new EditText(ctx);
+        ln.setHint(AndroidUtils.getString("lastfm_password"));
+        ln.setTextColor(getTextAttr());
+        ln.setHintTextColor(getSTextAttr());
+        ln.setBackgroundTintList(ColorStateList.valueOf(getAccentColor()));
+        linearLayout.addView(ln);
+        ln.getLayoutParams().width = ViewGroup.LayoutParams.MATCH_PARENT;
+        ln.setLayoutParams(margin);
+
+        AlertDialog.Builder alertDialog = new AlertDialog.Builder(ctx, getAlertStyle());
+        alertDialog.setTitle(AndroidUtils.getString("lastfm_enter_credentials"));
+
+        alertDialog.setView(linearLayout);
+        alertDialog.setPositiveButton(AndroidUtils.getString("lastfm_enter"), (dialog, which) -> {
+            String login = fn.getText().toString();
+            String pass = ln.getText().toString();
+
+            Scrobbler.auth(login, pass);
+        });
+        var alert = alertDialog.create();
+        alert.show();
+        alert.getButton(DialogInterface.BUTTON_POSITIVE).setTextColor(getAccentColor());
+    }
+
+    private void logout(Context ctx) {
+        VkAlertDialog.Builder alertDialog = new VkAlertDialog.Builder(ctx);
+        alertDialog.setTitle(AndroidUtils.getString("lastfm_logout_title"));
+        alertDialog.setMessage(AndroidUtils.getString("lastfm_logout_confirm"));
+        alertDialog.setPositiveButton(AndroidUtils.getString("vkim_yes"), (dialog, which) -> {
+            Scrobbler.logout();
+        });
+        alertDialog.setNeutralButton(AndroidUtils.getString("vkim_no"), (dialog, which) -> {
+            dialog.cancel();
+        });
+        var alert = alertDialog.create();
+        alert.show();
+        alert.getButton(DialogInterface.BUTTON_POSITIVE).setTextColor(getAccentColor());
+        alert.getButton(DialogInterface.BUTTON_NEUTRAL).setTextColor(getResources().getColor(com.vtosters.lite.R.color.red));
+    }
+
+    public static void deleteVideoHistory() {
+        Thread thread = new Thread(() -> {
+            try {
+                var request = new Request.a()
+                        .b("https://api.vk.com/method/" + "video.clearViewingHistoryRecords" + "?https=1" + "&access_token=" + getUserToken() + "&v=5.187")
+                        .a(Headers.a("User-Agent", Network.l.c().a(), "Content-Type", "application/x-www-form-urlencoded; charset=utf-8"))
+                        .a();
+
+                try {
+                    var response = new OkHttpClient().a(request).execute().a().g();
+                    Log.d("VideoHistory", response);
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+        });
+
+        thread.start();
+
+        sendToast(AndroidUtils.getString("video_history_cleaned"));
+    }
+
+    public static void download(Context ctx) {
+        AlertDialog.Builder alertDialog = new AlertDialog.Builder(ctx, getAlertStyle());
+        alertDialog.setTitle(AndroidUtils.getString("video_dl_enter_link"));
+
+        final EditText input = new EditText(ctx);
+        LinearLayout.LayoutParams lp = new LinearLayout.LayoutParams(
+                LinearLayout.LayoutParams.MATCH_PARENT,
+                LinearLayout.LayoutParams.MATCH_PARENT);
+        input.setLayoutParams(lp);
+        input.setTextColor(getTextAttr());
+        input.setBackgroundTintList(ColorStateList.valueOf(getAccentColor()));
+        alertDialog.setView(input);
+        alertDialog.setPositiveButton(AndroidUtils.getString("download"), (dialog, which) -> VideoDownloader.parseVideoLink(input.getText().toString(), ctx));
+        var alert = alertDialog.create();
+        alert.show();
+        alert.getButton(DialogInterface.BUTTON_POSITIVE).setTextColor(getAccentColor());
     }
 
     private class download implements Preference.OnPreferenceClickListener {

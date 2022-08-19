@@ -9,5 +9,5 @@
         android:layout_width="fill_parent"
         android:layout_height="64.0dip"
         android:layout_margin="16.0dip"
-        android:text="Места нет в списке" />
+        android:text="@string/item_no_place_in_result_text" />
 </FrameLayout>

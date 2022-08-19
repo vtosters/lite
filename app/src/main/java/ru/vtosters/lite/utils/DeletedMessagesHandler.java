@@ -7,9 +7,7 @@ import static ru.vtosters.lite.utils.Preferences.getBoolValue;
 import android.annotation.SuppressLint;
 import android.content.ContentValues;
 import android.database.Cursor;
-import android.text.TextUtils;
 
-import com.vk.im.engine.ImEnvironment;
 import com.vk.im.engine.events.OnMsgUpdateEvent;
 import com.vk.im.engine.internal.longpoll.tasks.MsgDeleteLpTask;
 import com.vk.im.engine.internal.storage.StorageEnvironment;
@@ -75,36 +73,37 @@ public class DeletedMessagesHandler {
     }
 
     private static String getPrefixUndelete() {
-        return getPrefsValue("undeletemsg_prefix_value") + " ";
+        var prefs = getPrefsValue("undeletemsg_prefix_value");
+
+        if (prefs.isEmpty()) {
+            return "\uD83D\uDDD1 ";
+        }
+
+        return prefs + " ";
     }
 
     public static void updateDialog(MsgDeleteLpTask msgDeleteLpTask) throws NoSuchFieldException, IllegalAccessException {
-        Cursor c = getMessageFromDatabaseById(ReflectionUtils.getObjectField(msgDeleteLpTask.getClass(), "d", msgDeleteLpTask));
-        if (c == null) return;
+        var cursor = getMessageFromDatabaseById(msgDeleteLpTask.d);
+        if (cursor == null) return;
 
         @SuppressLint("Range")
-        int localId = c.getInt(c.getColumnIndex("local_id"));
+        int localId = cursor.getInt(cursor.getColumnIndex("local_id"));
 
-        String str = DeletedMessagesHandler.class.getSimpleName();
-        var imEnvironment = (ImEnvironment) ReflectionUtils.getObjectField(msgDeleteLpTask.getClass(), "b", msgDeleteLpTask);
-        var cint = (int) ReflectionUtils.getObjectField(msgDeleteLpTask.getClass(), "c", msgDeleteLpTask);
-        imEnvironment.a(str, new OnMsgUpdateEvent(str, cint, localId));
+        var className = DeletedMessagesHandler.class.getSimpleName();
+        var imEnvironment = msgDeleteLpTask.b;
+        var cint = msgDeleteLpTask.c;
+        imEnvironment.a(className, new OnMsgUpdateEvent(className, cint, localId));
     }
 
-    public static void hookDeletedMessageId(MsgDeleteLpTask msgDeleteLpTask) throws NoSuchFieldException, IllegalAccessException {
+    public static void hookDeletedMessageId(MsgDeleteLpTask msgDeleteLpTask) {
         if (!hook()) return;
 
-        var field = msgDeleteLpTask.getClass().getDeclaredField("c");
-        field.setAccessible(true);
-        var messageId = (int) field.get(msgDeleteLpTask);
+        var messageId = msgDeleteLpTask.d;
 
         Cursor c = getMessageFromDatabaseById(messageId);
         if (c == null) return;
+
         if (sBodyIndex == -1) sBodyIndex = c.getColumnIndex("body");
-        if (TextUtils.isEmpty(c.getString(sBodyIndex))) {
-            deleteMessageFromDB(messageId);
-            return;
-        }
 
         sDeletedMessagesList.add(messageId);
         sVTDatabase.saveDeletedMessage(messageId);

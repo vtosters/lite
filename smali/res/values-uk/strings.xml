@@ -2007,7 +2007,7 @@
     <string name="music_promo_no_more_music_special_offer">Отримати спецпропозицію</string>
     <string name="music_promo_no_more_music_subtitle">У музичній індустрії свої правила — нам довелося піти на компроміс, щоб зберегти можливість слухати музику безплатно. Без підписки треки можна слухати у відкритому додатку: не згортайте його і не блокуйте екран.</string>
     <string name="music_promo_no_more_music_title">Безплатного фонового прослуховування музики більше немає</string>
-    <string name="music_promo_no_more_music_сontimue_using_free_plan">Продовжити користуватися безплатно</string>
+    <string name="music_promo_no_more_music_continue_using_free_plan">Продовжити користуватися безплатно</string>
     <string name="music_promo_no_more_option_1">Доступ до музики</string>
     <string name="music_promo_no_more_option_2">Персональні рекомендації</string>
     <string name="music_promo_no_more_option_3">Прослуховування з вимкненим екраном</string>

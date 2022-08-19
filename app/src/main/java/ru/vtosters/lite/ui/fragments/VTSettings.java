@@ -65,8 +65,6 @@ import ru.vtosters.lite.utils.CacheUtils;
 import ru.vtosters.lite.utils.SSFSUtils;
 
 public class VTSettings extends MaterialPreferenceToolbarFragment {
-    public int hideitems = 0;
-
     public static String getValAsString(String stringid, Boolean value) {
         if (disableSettingsSumms()) return null;
 
@@ -116,7 +114,7 @@ public class VTSettings extends MaterialPreferenceToolbarFragment {
     public static String getSuperappsumm() {
         if (disableSettingsSumms()) return null;
 
-        return "Скрыто элементов" + ": " + SuperAppEditorManager.getInstance().getDisabledTabs().size();
+        return AndroidUtils.getString("elements_hidden_count") + ": " + SuperAppEditorManager.getInstance().getDisabledTabs().size();
     }
 
     public static String getCachesumm() {
@@ -332,7 +330,7 @@ public class VTSettings extends MaterialPreferenceToolbarFragment {
                 });
             }
         } else {
-            addPreference(this, "", "Внимание!", "Некоторые пункты настроек были скрыты из-за режима VK Me \n\nДля отключения режима перейдите в настройки Сообщений", "ic_about_outline_28", preference -> false);
+            addPreference(this, "", AndroidUtils.getString("debug_warning"), AndroidUtils.getString("vkme_mode_info"), "ic_about_outline_28", preference -> false);
         }
 
         addPreference(this, "", AndroidUtils.getString("vtlmedia"), mediasumm, "ic_media_outline_28", preference -> {

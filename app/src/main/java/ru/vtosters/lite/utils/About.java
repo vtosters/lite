@@ -22,10 +22,10 @@ public class About {
     public static void injectToToolBar(View view) {
         view.setOnLongClickListener(v -> {
             if (devmenu()) {
-                sendToast("Меню для разработчиков уже активировано");
+                sendToast(AndroidUtils.getString("debug_menu_already_activated"));
             } else {
                 edit().putBoolean("devmenu", true).apply();
-                sendToast("Меню для разработчиков активировано");
+                sendToast(AndroidUtils.getString("debug_menu_activated"));
             }
             return true;
         });

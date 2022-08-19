@@ -42,7 +42,7 @@ public class AndroidUtils {
     @NonNull
     public static Context getGlobalContext() {
         try {
-            return (Context) ReflectionUtils.invokeStaticMethod("android.app.AppGlobals", "getInitialApplication");
+            return ReflectionUtils.invokeStaticMethod("android.app.AppGlobals", "getInitialApplication");
         } catch (Exception e) {
             e.printStackTrace();
         }
@@ -62,6 +62,10 @@ public class AndroidUtils {
         }
         return 0;
     } // Get res id
+
+    public static String[] getArray(String resourcename) {
+        return getResources().getStringArray(getIdentifier(resourcename, "array"));
+    } // Get array from arrays.xml
 
     public static String getString(String resourcename) {
         return getGlobalContext().getString(getIdentifier(resourcename, "string"));

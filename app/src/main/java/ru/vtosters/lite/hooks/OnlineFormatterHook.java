@@ -1,6 +1,7 @@
 package ru.vtosters.lite.hooks;
 
 import static ru.vtosters.lite.hooks.JsonInjectors.setOnlineInfo;
+import static ru.vtosters.lite.hooks.JsonInjectors.setOnlineInfoUsers;
 import static ru.vtosters.lite.net.Request.makeRequest;
 import static ru.vtosters.lite.utils.AccountManagerUtils.getUserToken;
 import static ru.vtosters.lite.utils.AndroidUtils.getString;
@@ -8,7 +9,9 @@ import static ru.vtosters.lite.utils.AndroidUtils.sendToast;
 import static ru.vtosters.lite.utils.Preferences.dev;
 import static ru.vtosters.lite.utils.Preferences.getBoolValue;
 import static ru.vtosters.lite.utils.Preferences.getPrefsFromFile;
-import static ru.vtosters.lite.utils.ProxyUtils.getApi;
+import static ru.vtosters.lite.proxy.ProxyUtils.getApi;
+
+import android.util.Log;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -16,6 +19,8 @@ import org.json.JSONObject;
 
 import java.io.IOException;
 import java.text.ParseException;
+
+import ru.vtosters.lite.utils.AndroidUtils;
 
 public class OnlineFormatterHook {
     private static String AppName;
@@ -59,37 +64,37 @@ public class OnlineFormatterHook {
             case 5027722:
                 return "VK Messenger (Desktop)";
             case 6146827:
-                return "VK Мессенджер (Android)";
+                return AndroidUtils.getString("vk_messenger") + " (Android)"; // VK Мессенджер (Android)
             case 6482950:
-                return "VK Мессенджер (iPhone)";
+                return AndroidUtils.getString("vk_messenger") + " (iPhone)"; // VK Мессенджер (iPhone)
             case 6481715:
-                return "VK Мессенджер Dev (iPhone)";
+                return AndroidUtils.getString("vk_messenger") + " Dev (iPhone)"; // VK Мессенджер Dev (iPhone)
             case 7799655:
-                return "VK Почта";
+                return AndroidUtils.getString("vk_mail_online"); // VK Почта
             case 7598572:
-                return "Сферум (Android)";
+                return AndroidUtils.getString("sferum_online") + " (Android)"; // Сферум (Android)
             case 7571751:
-                return "Сферум (iPhone)";
+                return AndroidUtils.getString("sferum_online") + " (iPhone)"; // Сферум (iPhone)
             case 7556576:
-                return "Сферум";
+                return AndroidUtils.getString("sferum_online"); // Сферум
             case 7497650:
                 return "VK ID";
             case 8094476:
-                return "VK Звонки (Android)";
+                return AndroidUtils.getString("vk_calls_online") + " (Android)"; // VK Звонки (Android)
             case 8093730:
-                return "VK Звонки (iPhone)";
+                return AndroidUtils.getString("vk_calls_online") + " (iPhone)"; // VK Звонки (iPhone)
             case 7793118:
-                return "VK Звонки (Desktop)";
+                return AndroidUtils.getString("vk_calls_online") + " (Desktop)"; // VK Звонки (Desktop)
             case 6767438:
-                return "VK Музыка (Android)";
+                return AndroidUtils.getString("vk_music_online") + " (Android)"; // VK Музыка (Android)
             case 8113297:
-                return "VK Клипы (Android)";
+                return AndroidUtils.getString("vk_clips_online") + " (Android)"; // VK Клипы (Android)
             case 8106428:
-                return "VK Клипы (iPhone)";
+                return AndroidUtils.getString("vk_clips_online") + " (iPhone)"; // VK Клипы (iPhone)
             case 5044491:
                 return "Candy";
             case 8114066:
-                return "VK Видео";
+                return AndroidUtils.getString("vk_video_online"); // VK Видео
             case 4894723:
                 return "Phoenix Lite";
             case 4994316:
@@ -165,14 +170,66 @@ public class OnlineFormatterHook {
         return getString("custom_online") + " " + appname;
     }
 
-    public static JSONObject onlineHook(JSONObject json, boolean isGlobalHook) throws ParseException, IOException, JSONException {
-        if (!getBoolValue("onlinefix", false)) return json;
+    public static JSONObject onlineHook(JSONObject json) throws ParseException, IOException, JSONException {
+        if (getBoolValue("onlinefix", false)) setOnlineInfo(json);
 
-        if (isGlobalHook && !getBoolValue("globalUsersOnline", false)) {
-            return json;
+        return json;
+    }
+
+    public static JSONArray onlineHookList(JSONArray jsonArr) throws ParseException, IOException, JSONException {
+        if (!getBoolValue("onlinefix", false)) return jsonArr;
+
+        try {
+            setOnlineInfoUsers(jsonArr);
+        } catch (Exception e) {
+            Log.e("onlineHookProfiles", e.getMessage());
         }
 
-        setOnlineInfo(json);
+        return jsonArr;
+    }
+
+    public static JSONObject onlineHookProfiles(JSONObject json) throws ParseException, IOException, JSONException {
+        if (!getBoolValue("onlinefix", false)) return json;
+
+        try {
+            setOnlineInfoUsers(json.optJSONArray("profiles"));
+        } catch (Exception e) {
+            Log.e("onlineHookProfiles", e.getMessage());
+        }
+        return json;
+    }
+
+    public static JSONObject onlineHookItems(JSONObject json) throws ParseException, IOException, JSONException {
+        if (!getBoolValue("onlinefix", false)) return json;
+
+        try {
+            setOnlineInfoUsers(json.optJSONArray("items"));
+        } catch (Exception e) {
+            Log.e("onlineHookItems", e.getMessage());
+        }
+        return json;
+    }
+
+    public static JSONObject onlineHookRequestsAndRecommendations(JSONObject json) throws ParseException, IOException, JSONException {
+        if (!getBoolValue("onlinefix", false)) return json;
+
+        try {
+            setOnlineInfoUsers(json.optJSONObject("read_requests").optJSONArray("items"));
+        } catch (Exception e) {
+            Log.e("onlineHookItems", e.getMessage());
+        }
+
+        try {
+            setOnlineInfoUsers(json.optJSONObject("recommendations").optJSONArray("items"));
+        } catch (Exception e) {
+            Log.e("onlineHookItems", e.getMessage());
+        }
+
+        try {
+            setOnlineInfoUsers(json.optJSONArray("profiles"));
+        } catch (Exception e) {
+            Log.e("onlineHookItems", e.getMessage());
+        }
         return json;
     }
 }

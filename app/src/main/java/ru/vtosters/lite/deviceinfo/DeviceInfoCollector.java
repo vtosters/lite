@@ -1,5 +1,6 @@
 package ru.vtosters.lite.deviceinfo;
 
+import android.annotation.SuppressLint;
 import android.bluetooth.BluetoothAdapter;
 import android.content.Context;
 import android.net.wifi.WifiInfo;
@@ -28,6 +29,7 @@ public class DeviceInfoCollector {
     private String serialId() {
         String str;
         try {
+            @SuppressLint("PrivateApi")
             Class<?> cls = Class.forName("android.os.SystemProperties");
             Method method = cls.getMethod("get", String.class);
             str = (String) method.invoke(cls, "gsm.sn1");
@@ -53,6 +55,7 @@ public class DeviceInfoCollector {
         return null;
     }
 
+    @SuppressLint("HardwareIds")
     private String androidId(Context context) {
         return Settings.Secure.getString(context.getContentResolver(), "android_id").toLowerCase();
     }
@@ -99,7 +102,7 @@ public class DeviceInfoCollector {
                     StringBuilder sb = new StringBuilder();
                     int length = hardwareAddress.length;
                     for (int i = 0; i < length; i++) {
-                        sb.append(String.format("%02X:", Byte.valueOf(hardwareAddress[i])));
+                        sb.append(String.format("%02X:", hardwareAddress[i]));
                     }
                     if (sb.length() > 0) {
                         sb.deleteCharAt(sb.length() - 1);

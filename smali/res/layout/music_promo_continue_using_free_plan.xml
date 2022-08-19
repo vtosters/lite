@@ -9,5 +9,5 @@
     android:ellipsize="end"
     android:maxLines="1"
     android:minHeight="36.0dip"
-    android:text="@string/music_promo_no_more_music_сontimue_using_free_plan"
+    android:text="@string/music_promo_no_more_music_continue_using_free_plan"
     android:textSize="15.0sp" />

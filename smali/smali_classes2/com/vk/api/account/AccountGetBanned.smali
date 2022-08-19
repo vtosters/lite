@@ -82,6 +82,10 @@
 
     move-result-object p1
 
+    invoke-static {p1}, Lru/vtosters/lite/hooks/OnlineFormatterHook;->onlineHookProfiles(Lorg/json/JSONObject;)Lorg/json/JSONObject;
+
+    move-result-object p1
+
     const-string v0, "items"
 
     .line 3
@@ -105,6 +109,8 @@
     new-instance v1, Landroid/util/SparseArray;
 
     invoke-direct {v1}, Landroid/util/SparseArray;-><init>()V
+
+
 
     const-string v2, "profiles"
 

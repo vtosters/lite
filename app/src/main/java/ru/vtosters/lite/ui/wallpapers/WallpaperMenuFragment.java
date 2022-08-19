@@ -31,6 +31,7 @@ import java.io.InputStream;
 import java.io.OutputStream;
 
 import ru.vtosters.lite.ui.PreferencesUtil;
+import ru.vtosters.lite.utils.AndroidUtils;
 
 public class WallpaperMenuFragment extends MaterialPreferenceToolbarFragment {
 
@@ -56,20 +57,20 @@ public class WallpaperMenuFragment extends MaterialPreferenceToolbarFragment {
         int vtosterXml = getIdentifier("empty", "xml");
         addPreferencesFromResource(vtosterXml);
 
-        PreferencesUtil.addPreferenceCategory(this, "Предпросмотр");
+        PreferencesUtil.addPreferenceCategory(this, AndroidUtils.getString("vkim_settings_appearance_chat_preview_title"));
 
         mWPPreviewPref = new WallpaperPreferences(getContext());
         mWPPreviewPref.setIcon(null);
         mWPPreviewPref.setIconSpaceReserved(false);
         getPreferenceScreen().addPreference(mWPPreviewPref);
 
-        PreferencesUtil.addPreference(this, "wp_set", "Выбрать обои", "из галереи", "ic_picture_outline_28", preference -> {
+        PreferencesUtil.addPreference(this, "wp_set", AndroidUtils.getString("wallpaper_select"), AndroidUtils.getString("wallpaper_from_gallery"), "ic_picture_outline_28", preference -> {
             startActivityForResult(new Intent(Intent.ACTION_PICK, android.provider.MediaStore.Images.Media.EXTERNAL_CONTENT_URI), 1488);
             removeStickCache();
             return true;
         });
 
-        PreferencesUtil.addPreference(this, "wp_clear", "Удалить обои", "", "ic_delete_outline_28", preference -> {
+        PreferencesUtil.addPreference(this, "wp_clear", AndroidUtils.getString("wallpaper_remove"), "", "ic_delete_outline_28", preference -> {
             removeWallpaper();
             requestUpdateWallpaper();
             mWPPreviewPref.redraw();
@@ -77,36 +78,30 @@ public class WallpaperMenuFragment extends MaterialPreferenceToolbarFragment {
             return true;
         });
 
-        PreferencesUtil.addPreferenceCategory(this, "Фильтры");
+        PreferencesUtil.addPreferenceCategory(this, AndroidUtils.getString("vtlfilters"));
 
         if (!hasVerification() && !getBoolValue("dialogrecomm", false)) {
-            PreferencesUtil.addPreference(this, "", "Доступны не все фильтры!", "Для разблокировки необходимо сделать пожертование от 99р", null, preference -> {
-                getContext().startActivity(new Intent("android.intent.action.VIEW").setData(Uri.parse("https://vtosters.app")));
+            PreferencesUtil.addPreference(this, "", AndroidUtils.getString("filters_warning"), AndroidUtils.getString("icons_warning_info"), null, preference -> {
+                getContext().startActivity(new Intent("android.intent.action.VIEW").setData(Uri.parse("https://vtosters.app/donate/")));
                 return false;
             });
         }
 
-        PreferencesUtil.addListPreference(this, "msg_blur_radius", "disabled", "Размытие фона сообщений", new CharSequence[]{
-                "Отключено", "Низкое (15px)", "Среднее (25px)", "Высокое (50px)"
-        }, new String[]{
+        PreferencesUtil.addListPreference(this, "msg_blur_radius", "disabled", AndroidUtils.getString("filter_blur"), AndroidUtils.getArray("filter_types"), new String[]{
                 "disabled", "low", "med", "high"
         });
 
-        PreferencesUtil.addListPreference(this, "msg_dim", "off", "Затемнение изображения", new CharSequence[]{
-                "Отключено", "Затемнить", "Осветлить"
-        }, new String[]{
+        PreferencesUtil.addListPreference(this, "msg_dim", "off", AndroidUtils.getString("filter_dim"), AndroidUtils.getArray("filter_dim_types"), new String[]{
                 "off", "dim_black", "dim_white"
         });
 
 
-        PreferencesUtil.addListPreference(this, "msg_mosaic", "disabled", "Мозаика", new CharSequence[]{
-                "Отключено", "Низкое", "Среднее", "Высокое"
-        }, new String[]{
+        PreferencesUtil.addListPreference(this, "msg_mosaic", "disabled", AndroidUtils.getString("filter_mosaic"), AndroidUtils.getArray("filter_types"), new String[]{
                 "disabled", "low", "med", "high"
         });
 
         if (hasVerification()) {
-            PreferencesUtil.addMaterialSwitchPreference(this, "msg_monochrome", "Черно-белый фон", "", null, false, (preference, o) -> {
+            PreferencesUtil.addMaterialSwitchPreference(this, "msg_monochrome", AndroidUtils.getString("filter_monochrome"), "", null, false, (preference, o) -> {
                 boolean value = (boolean) o;
                 edit().putBoolean("msg_monochrome", value).commit();
                 requestUpdateWallpaper();
@@ -114,7 +109,7 @@ public class WallpaperMenuFragment extends MaterialPreferenceToolbarFragment {
                 return true;
             });
 
-            PreferencesUtil.addMaterialSwitchPreference(this, "msg_invert", "Инвертировать цвета", "", null, false, (preference, o) -> {
+            PreferencesUtil.addMaterialSwitchPreference(this, "msg_invert", AndroidUtils.getString("filter_invert_colors"), "", null, false, (preference, o) -> {
                 boolean value = (boolean) o;
                 edit().putBoolean("msg_invert", value).commit();
                 requestUpdateWallpaper();
@@ -122,7 +117,7 @@ public class WallpaperMenuFragment extends MaterialPreferenceToolbarFragment {
                 return true;
             });
 
-            PreferencesUtil.addMaterialSwitchPreference(this, "msg_sepia", "Эффект сепии", "", null, false, (preference, o) -> {
+            PreferencesUtil.addMaterialSwitchPreference(this, "msg_sepia", AndroidUtils.getString("filter_sepia"), "", null, false, (preference, o) -> {
                 boolean value = (boolean) o;
                 edit().putBoolean("msg_sepia", value).commit();
                 requestUpdateWallpaper();
@@ -130,7 +125,7 @@ public class WallpaperMenuFragment extends MaterialPreferenceToolbarFragment {
                 return true;
             });
 
-            PreferencesUtil.addMaterialSwitchPreference(this, "msg_emboss", "Emboss фильтр", "Возможна нагрузка на устройство", null, false, (preference, o) -> {
+            PreferencesUtil.addMaterialSwitchPreference(this, "msg_emboss", AndroidUtils.getString("filter_emboss"), AndroidUtils.getString("filter_maybe_lag"), null, false, (preference, o) -> {
                 boolean value = (boolean) o;
                 edit().putBoolean("msg_emboss", value).commit();
                 requestUpdateWallpaper();
@@ -138,7 +133,7 @@ public class WallpaperMenuFragment extends MaterialPreferenceToolbarFragment {
                 return true;
             });
 
-            PreferencesUtil.addMaterialSwitchPreference(this, "msg_engrave", "Engrave фильтр", "Возможна нагрузка на устройство", null, false, (preference, o) -> {
+            PreferencesUtil.addMaterialSwitchPreference(this, "msg_engrave", AndroidUtils.getString("filter_engrave"), AndroidUtils.getString("filter_maybe_lag"), null, false, (preference, o) -> {
                 boolean value = (boolean) o;
                 edit().putBoolean("msg_engrave", value).commit();
                 requestUpdateWallpaper();
@@ -146,7 +141,7 @@ public class WallpaperMenuFragment extends MaterialPreferenceToolbarFragment {
                 return true;
             });
 
-            PreferencesUtil.addMaterialSwitchPreference(this, "msg_flea", "Flea фильтр", "", null, false, (preference, o) -> {
+            PreferencesUtil.addMaterialSwitchPreference(this, "msg_flea", AndroidUtils.getString("filter_flea"), "", null, false, (preference, o) -> {
                 boolean value = (boolean) o;
                 edit().putBoolean("msg_flea", value).commit();
                 requestUpdateWallpaper();
@@ -154,7 +149,7 @@ public class WallpaperMenuFragment extends MaterialPreferenceToolbarFragment {
                 return true;
             });
 
-            PreferencesUtil.addMaterialSwitchPreference(this, "msg_snow", "Эффект снега", "", null, false, (preference, o) -> {
+            PreferencesUtil.addMaterialSwitchPreference(this, "msg_snow", AndroidUtils.getString("filter_flea"), "", null, false, (preference, o) -> {
                 boolean value = (boolean) o;
                 edit().putBoolean("msg_snow", value).commit();
                 requestUpdateWallpaper();
@@ -223,7 +218,6 @@ public class WallpaperMenuFragment extends MaterialPreferenceToolbarFragment {
     private void removeStickCache() {
         SharedPreferences prefs2 = getContext().getSharedPreferences("stickers_storage", Context.MODE_PRIVATE);
         prefs2.edit().clear().apply();
-        deleteCache();
         ImEngineProvider.b().a();
     }
 

@@ -106,6 +106,8 @@
 
     invoke-virtual {p2, p3, p0, v0}, Landroid/view/LayoutInflater;->inflate(ILandroid/view/ViewGroup;Z)Landroid/view/View;
 
+    invoke-static/range {p0 .. p0}, Lru/vtosters/lite/hooks/PostViewHook;->injectVideoView(Landroid/widget/RelativeLayout;)V
+
     .line 5
     sget p2, Lcom/vk/libvideo/g;->subtitle:I
 

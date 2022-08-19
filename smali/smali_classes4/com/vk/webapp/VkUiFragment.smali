@@ -1217,7 +1217,7 @@
 
     const-string v3, "static.vk.com"
 
-    invoke-static {v3}, Lru/vtosters/lite/hooks/ProxyHook;->linkReplacer(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v3}, Lru/vtosters/lite/proxy/api/ApiProxy;->linkReplacer(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v3
 
@@ -1968,7 +1968,7 @@
 
     move-result-object v1
 
-    invoke-static {v1}, Lru/vtosters/lite/hooks/ProxyHook;->linkReplacer(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v1}, Lru/vtosters/lite/proxy/api/ApiProxy;->linkReplacer(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v1
 

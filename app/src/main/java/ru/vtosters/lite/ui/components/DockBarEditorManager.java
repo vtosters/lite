@@ -10,6 +10,8 @@ import static ru.vtosters.lite.utils.Preferences.videonewcatalog;
 import static ru.vtosters.lite.utils.Preferences.vkme;
 import static ru.vtosters.lite.utils.Preferences.vkme_notifs;
 
+import android.os.Build;
+
 import com.vk.apps.AppsFragment;
 import com.vk.discover.ThemedFeedFragment;
 import com.vk.fave.fragments.FaveTabFragment;
@@ -47,7 +49,6 @@ import ru.vtosters.lite.ui.items.DockBarTab;
 import ru.vtosters.lite.utils.AndroidUtils;
 
 public class DockBarEditorManager {
-
     public static final int MIN_SELECTED_TABS = 3;
     public static final int MAX_SELECTED_TABS = 9;
 
@@ -97,18 +98,30 @@ public class DockBarEditorManager {
         List<String> allTags = new ArrayList<>(Arrays.asList("tab_news", "tab_superapps", "tab_messages", "tab_feedback", "tab_profile",
                 "tab_friends", "tab_groups", "tab_photos", "tab_audios", "tab_videos", "tab_lives", "tab_games", "tab_liked",
                 "tab_fave", "tab_documents", "tab_payments", "tab_vk_apps", "tab_settings", "tab_menu"));
+
         for (String tag : selectedTabsTags) {
             mSelectedTabs.add(getTabByTag(tag));
             allTags.remove(tag);
         }
-        allTags.forEach(tag -> mDisabledTabs.add(getTabByTag(tag)));
+
+        for (String tag : allTags) {
+            mDisabledTabs.add(getTabByTag(tag));
+        }
     }
 
     public void save() {
-        AndroidUtils.getPreferences().edit().putString("dockbar_tabs", mSelectedTabs.stream()
-                        .map(tab -> tab.tag)
-                        .collect(Collectors.joining(",")))
-                .commit();
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N) {
+            getPreferences().edit().putString("dockbar_tabs", mSelectedTabs.stream()
+                            .map(tab -> tab.tag)
+                            .collect(Collectors.joining(",")))
+                    .commit();
+        } else {
+            StringBuilder sb = new StringBuilder();
+            for (DockBarTab tab : mSelectedTabs) {
+                sb.append(tab.tag).append(",");
+            }
+            getPreferences().edit().putString("dockbar_tabs", sb.toString()).commit();
+        }
     }
 
     public void reset() {

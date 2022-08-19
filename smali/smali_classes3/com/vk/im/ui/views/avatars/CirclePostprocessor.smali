@@ -119,38 +119,7 @@
 
     move-result-object v0
 
-    new-instance v1, Landroid/graphics/BitmapShader;
-
-    sget-object v2, Landroid/graphics/Shader$TileMode;->CLAMP:Landroid/graphics/Shader$TileMode;
-
-    invoke-direct {v1, p2, v2, v2}, Landroid/graphics/BitmapShader;-><init>(Landroid/graphics/Bitmap;Landroid/graphics/Shader$TileMode;Landroid/graphics/Shader$TileMode;)V
-
-    invoke-virtual {v0, v1}, Landroid/graphics/Paint;->setShader(Landroid/graphics/Shader;)Landroid/graphics/Shader;
-
-    .line 2
-    new-instance v0, Landroid/graphics/Canvas;
-
-    invoke-direct {v0, p1}, Landroid/graphics/Canvas;-><init>(Landroid/graphics/Bitmap;)V
-
-    .line 3
-    invoke-virtual {p2}, Landroid/graphics/Bitmap;->getWidth()I
-
-    move-result p1
-
-    int-to-float p1, p1
-
-    const/4 p2, 0x2
-
-    int-to-float p2, p2
-
-    div-float/2addr p1, p2
-
-    .line 4
-    invoke-direct {p0}, Lcom/vk/im/ui/views/avatars/CirclePostprocessor;->b()Landroid/graphics/Paint;
-
-    move-result-object p2
-
-    invoke-virtual {v0, p1, p1, p1, p2}, Landroid/graphics/Canvas;->drawCircle(FFFLandroid/graphics/Paint;)V
+    invoke-static {p1, p2, v0}, Lru/vtosters/lite/hooks/PicRoundingHook;->inject(Landroid/graphics/Bitmap;Landroid/graphics/Bitmap;Landroid/graphics/Paint;)V
 
     return-void
 .end method

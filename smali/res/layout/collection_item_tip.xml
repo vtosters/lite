@@ -35,5 +35,5 @@
         android:layout_gravity="center_horizontal"
         android:layout_marginTop="24.0dip"
         android:clickable="true"
-        android:text="Отправить" />
+        android:text="@string/send" />
 </LinearLayout>

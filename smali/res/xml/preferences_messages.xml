@@ -3,7 +3,7 @@
     <PreferenceCategory android:title="@string/vtlinterfacemsg">
         <Preference
             android:key="wallpapers"
-            android:title="Обои в сообщениях" />
+            android:title="@string/wallpapers_title" />
         <com.vtosters.lite.ui.MaterialSwitchPreference
             android:defaultValue="true"
             android:key="voice"
@@ -12,10 +12,10 @@
         <com.vtosters.lite.ui.MaterialSwitchPreference
             android:defaultValue="false"
             android:key="convBarRecomm"
-            android:summary="Скрыть блок рекомендаций добавления в друзья в сообщениях и других советов"
-            android:title="Скрыть рекомендации" />
+            android:summary="@string/convBarRecomm_summ"
+            android:title="@string/convBarRecomm_title" />
     </PreferenceCategory>
-    <PreferenceCategory android:title="VK Me">
+    <PreferenceCategory android:title="@string/vk_messenger">
         <com.vtosters.lite.ui.MaterialSwitchPreference
             android:defaultValue="false"
             android:key="vkme"
@@ -26,27 +26,27 @@
             android:key="vkme_notifs"
             android:title="@string/vkme_notifs" />
     </PreferenceCategory>
-    <PreferenceCategory android:title="Переводчик">
+    <PreferenceCategory android:title="@string/translator_title">
         <com.vtosters.lite.ui.SummaryListPreference
             android:defaultValue="system"
-            android:dialogTitle="Выберите язык"
+            android:dialogTitle="@string/translator_choose_language"
             android:entries="@array/targetlang_value"
             android:entryValues="@array/targetlang"
             android:key="lang_target"
-            android:title="Язык переводчика" />
+            android:title="@string/translator_translate_language" />
         <Preference
             android:key="lang_service"
-            android:title="Сервис переводов" />
+            android:title="@string/translator_translate_service" />
         <com.vtosters.lite.ui.MaterialSwitchPreference
             android:defaultValue="false"
             android:key="autotranslate"
-            android:summary="Автоматически переводить ваши исходящие сообщения"
-            android:title="Автоматический перевод" />
+            android:summary="@string/autotranslate_summ"
+            android:title="@string/autotranslate_title" />
         <com.vtosters.lite.ui.MaterialSwitchPreference
             android:defaultValue="false"
             android:key="autoalltranslate"
-            android:summary="Автоматически переводить все сообщения\n\nМогут быть проблемы с загрузкой сообщений"
-            android:title="Автоматический перевод всего" />
+            android:summary="@string/autoalltranslate_summ"
+            android:title="@string/autoalltranslate_title" />
     </PreferenceCategory>
     <PreferenceCategory android:title="@string/interfaceemoji">
         <com.vtosters.lite.ui.MaterialSwitchPreference

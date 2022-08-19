@@ -10,5 +10,6 @@ public enum MsgAction {
     SPAM,
     PIN,
     UNPIN,
-    TRANSLATE
+    TRANSLATE,
+    READTO
 }

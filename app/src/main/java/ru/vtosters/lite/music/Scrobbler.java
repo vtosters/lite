@@ -24,6 +24,7 @@ import ru.vtosters.lite.net.NetCallback;
 import ru.vtosters.lite.net.NetClient;
 import ru.vtosters.lite.net.NetRequest;
 import ru.vtosters.lite.net.NetResponse;
+import ru.vtosters.lite.utils.AndroidUtils;
 
 public class Scrobbler {
     private static final String key = "5965d63402414776c54c266db0211746";
@@ -103,7 +104,7 @@ public class Scrobbler {
 
     public static void auth(String login, String pass) {
         if (login == null || pass == null) {
-            sendToast("Логин или пароль не заданы");
+            sendToast(AndroidUtils.getString("lastfm_credentials_empty"));
             return;
         }
 
@@ -119,7 +120,7 @@ public class Scrobbler {
             @Override
             public void onFailure(NetCall call, IOException e) {
                 Log.d("Scrobbler", "Auth failed", e);
-                sendToast("Ошибка входа");
+                sendToast(AndroidUtils.getString("lastfm_auth_error"));
             }
 
             @Override
@@ -155,7 +156,7 @@ public class Scrobbler {
         edit().remove("username").apply();
         edit().remove("sessionKey").apply();
         scrobbled.clear();
-        sendToast("Вы успешно вышли из учетной записи");
+        sendToast(AndroidUtils.getString("lastfm_logout_success"));
     }
 
     public static boolean needToBeScrobble(String uid) {
