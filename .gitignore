@@ -29,3 +29,4 @@ smali2/build/resources.zip
 smali/build/resources.zip
 smali/assets/version.properties
 *.keystore
+gradle.properties
