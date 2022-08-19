@@ -316,7 +316,7 @@
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
 
-    const/4 v2, 0x0
+    const/4 v2, 0x1
 
     const-string v3, "__dbg_no_ads"
 
