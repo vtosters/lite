@@ -1,5 +1,7 @@
 package ru.vtosters.lite.downloaders;
 
+import static ru.vtosters.lite.utils.Preferences.getMusicDir;
+
 import android.os.Environment;
 import android.util.Log;
 
@@ -35,7 +37,7 @@ public class AudioDownloader {
             return;
         }
 
-        var musicPath = Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_MUSIC).getAbsolutePath();
+        var musicPath = getMusicDir().getAbsolutePath();
         var musicDir = new File(musicPath);
         if (!musicDir.exists()) {
             if (musicDir.mkdirs()) {
