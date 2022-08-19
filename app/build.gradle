@@ -69,7 +69,7 @@ task exportDex {
 
 android {
     compileSdkVersion 32
-    buildToolsVersion '32.0.0'
+    buildToolsVersion '33.0.0'
 
     defaultConfig {
         applicationId "ru.vtosters.lite.utils.lite"
