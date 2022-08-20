@@ -30,10 +30,10 @@ public class WallpapersHooks {
     private static boolean mUpdateWallpaperRequested = true;
 
     public static File getWallpaperFile() {
-        return mWallpaperFile == null ? mWallpaperFile = compressFile(new File(getGlobalContext().getFilesDir(), "wallpaper.png")) : mWallpaperFile;
+        return mWallpaperFile == null ? mWallpaperFile = new File(getGlobalContext().getFilesDir(), "wallpaper.png") : mWallpaperFile;
     }
 
-    public static File compressFile(File file) {
+    public static File compressFile(File file) { // TODO rewrite compress file
         Bitmap bitmap = BitmapFactory.decodeFile(file.getAbsolutePath());
         File compressedFile = new File(file.getParent(), file.getName());
         OutputStream out = null;
