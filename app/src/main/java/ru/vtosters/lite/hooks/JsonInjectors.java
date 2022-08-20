@@ -157,8 +157,6 @@ public class JsonInjectors {
     }
 
     public static JSONObject convBar(JSONObject orig) throws JSONException {
-        if (!dev()) return orig.optJSONObject("conversation_bar"); // for devs only
-
         var peerid = Objects.requireNonNull(orig.optJSONObject("peer")).optInt("id");
 
         var pic = "https://image.pngaaa.com/641/326641-middle.png"; // can be null
@@ -182,6 +180,9 @@ public class JsonInjectors {
                 return orig.optJSONObject("conversation_bar");
             }
         }
+
+        if (!dev()) return orig.optJSONObject("conversation_bar"); // for devs only
+
         var json = new JSONObject();
 
         var buttonsJson = new JSONObject();
