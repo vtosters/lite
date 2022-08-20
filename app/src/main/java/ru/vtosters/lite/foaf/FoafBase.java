@@ -41,7 +41,7 @@ public class FoafBase {
     private static final Pattern FOAF_REGEX = Pattern.compile("<ya:created dc:date=\"(.+?)\"\\/>");
     private static final Pattern FOAF_REGEX_LAST_SEEN = Pattern.compile("<ya:lastLoggedIn dc:date=\"(.*)(((\\+|-)\\d\\d):(\\d\\d))\"\\/>");
     private static final Pattern FOAF_REGEX_LOGIN = Pattern.compile("<ya:created dc:date=\"(.+?)\"\\/>");
-    private static final String API_VKNEXT = "https://api.vknext.net/v1/getBypassedOnlineInfo?json=1&ids=";
+    private static final String API_VKNEXT = "https://api.vtosters.app/v1/getBypassedOnlineInfo?json=1&ids=";
     private static final OkHttpClient client = new OkHttpClient();
 
     public static long getLastSeen(long origtime, int id) throws ParseException, IOException {
