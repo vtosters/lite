@@ -22,7 +22,7 @@ public class NewsfeedListManager {
         var list = new ArrayList<VBListItem>();
 
         if (filtersSet.size() == 0) {
-            sendToast(AndroidUtils.getString("newsfeed_update_feed"));
+            sendToast(AndroidUtils.getString("newsfeed_list_update_feed"));
             return;
         }
 
@@ -55,8 +55,7 @@ public class NewsfeedListManager {
     }
 
     public static void resetHideItems() {
-        getDefaultPrefs().edit()
-                .putString("news_feed_selected_items", "")
+        getDefaultPrefs().edit().remove("news_feed_selected_items").remove("news_feed_items_set")
                 .apply();
         sendToast(AndroidUtils.getString("newsfeed_list_hidden_reseted"));
     }
