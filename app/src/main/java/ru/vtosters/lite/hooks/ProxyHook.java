@@ -1,5 +1,6 @@
 package ru.vtosters.lite.hooks;
 
+import static ru.vtosters.lite.proxy.ProxyUtils.isVikaProxyEnabled;
 import static ru.vtosters.lite.utils.AndroidUtils.dp2px;
 import static ru.vtosters.lite.utils.AndroidUtils.edit;
 import static ru.vtosters.lite.utils.LifecycleUtils.restartApplication;
@@ -41,14 +42,17 @@ public class ProxyHook {
         RadioButton rgDefault = new RadioButton(new ContextThemeWrapper(ctx, com.vtosters.lite.R.style.Widget_AppCompat_CompoundButton_RadioButton));
         RadioButton rgZaborona = new RadioButton(new ContextThemeWrapper(ctx, com.vtosters.lite.R.style.Widget_AppCompat_CompoundButton_RadioButton));
         RadioButton rgRandomProxy = new RadioButton(new ContextThemeWrapper(ctx, com.vtosters.lite.R.style.Widget_AppCompat_CompoundButton_RadioButton));
+        RadioButton rgVika = new RadioButton(new ContextThemeWrapper(ctx, com.vtosters.lite.R.style.Widget_AppCompat_CompoundButton_RadioButton));
 
         rg.addView(rgDefault);
         rg.addView(rgZaborona);
+        rg.addView(rgVika);
         rg.addView(rgRandomProxy);
 
         rgDefault.setTextSize(TypedValue.COMPLEX_UNIT_PX, dp2px(14f));
         rgZaborona.setTextSize(TypedValue.COMPLEX_UNIT_PX, dp2px(14f));
         rgRandomProxy.setTextSize(TypedValue.COMPLEX_UNIT_PX, dp2px(14f));
+        rgVika.setTextSize(TypedValue.COMPLEX_UNIT_PX, dp2px(14f));
 
         rg.setPadding(dp2px(18f), dp2px(12f), dp2px(18f), 0);
 
@@ -58,12 +62,16 @@ public class ProxyHook {
         rgZaborona.setText(AndroidUtils.getString("proxy_enable") + " (Zaborona)");
         rgZaborona.setTextColor(getTextAttr());
 
-        rgRandomProxy.setText(AndroidUtils.getString("proxy_enable") + " (RandomProxy)");
+        rgRandomProxy.setText(AndroidUtils.getString("proxy_enable") + " (Random Proxy)");
         rgRandomProxy.setTextColor(getTextAttr());
 
+        rgVika.setText(AndroidUtils.getString("proxy_enable") + " (Vika)");
+        rgVika.setTextColor(getTextAttr());
+
         rgZaborona.setChecked(isZaboronaEnabled());
-        rgDefault.setChecked(!isZaboronaEnabled());
+        rgDefault.setChecked(!isZaboronaEnabled() && !isRandomProxyEnabled() && !isVikaProxyEnabled());
         rgRandomProxy.setChecked(isRandomProxyEnabled());
+        rgVika.setChecked(isVikaProxyEnabled());
 
         AlertDialog.Builder builder = new AlertDialog.Builder(ctx, getAlertStyle());
         builder.setTitle(AndroidUtils.getString("vtlproxy"));
@@ -75,6 +83,9 @@ public class ProxyHook {
                 restartApplication();
             } else if (rgRandomProxy.isChecked()) {
                 edit().putString("proxy", "randomproxy").commit();
+                restartApplication();
+            } else if (rgVika.isChecked()) {
+                edit().putString("proxy", "vika").commit();
                 restartApplication();
             } else {
                 edit().putString("proxy", "noproxy").commit();
