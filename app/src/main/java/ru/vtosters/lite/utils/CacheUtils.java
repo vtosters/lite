@@ -25,6 +25,7 @@ import b.h.g.m.FileUtils;
 public class CacheUtils {
     private static CacheUtils sInstance = new CacheUtils();
     public long size = 0;
+    public static boolean needToDelete = false;
 
     public static CacheUtils getInstance() {
         if (sInstance == null)
@@ -55,7 +56,7 @@ public class CacheUtils {
     public void autoCleaningCache() {
         size = IOUtils.getDirSize(getGlobalContext().getCacheDir());
 
-        if (size >= getSizeForDelete()) {
+        if (size >= getSizeForDelete() && needToDelete) {
             if (dev()) sendToast(AndroidUtils.getString("cache_cleaned"));
             VKImageLoader.e();
             ImAudioMsgPlayerProvider.b().e(PlayerActionSources.a);
