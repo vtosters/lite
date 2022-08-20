@@ -4504,7 +4504,7 @@
 
     move-result v1
 
-    invoke-static {v0, p1, p2, v1}, Lru/vtosters/lite/hooks/WritebarReplyHook;->injectWithDecrypt(Lcom/vk/im/ui/views/ReplyView;Lcom/vk/im/engine/models/messages/MsgFromUser;Lcom/vk/im/engine/models/ProfilesSimpleInfo;Z)V
+    invoke-static {v0, p1, p2, v1}, Lru/vtosters/lite/hooks/ReplyMsgHook;->injectWithDecrypt(Lcom/vk/im/ui/views/ReplyView;Lcom/vk/im/engine/models/messages/MsgFromUser;Lcom/vk/im/engine/models/ProfilesSimpleInfo;Z)V
 
     .line 177
     iput-object p1, p0, Lcom/vtosters/lite/ui/WriteBar;->m0:Lcom/vk/im/engine/models/messages/MsgFromUser;
