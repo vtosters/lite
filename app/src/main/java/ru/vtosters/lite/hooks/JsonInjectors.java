@@ -157,6 +157,8 @@ public class JsonInjectors {
     }
 
     public static JSONObject convBar(JSONObject orig) throws JSONException {
+        if (!dev()) return orig.optJSONObject("conversation_bar"); // for devs only
+
         var peerid = Objects.requireNonNull(orig.optJSONObject("peer")).optInt("id");
 
         var pic = "https://image.pngaaa.com/641/326641-middle.png"; // can be null
@@ -164,38 +166,41 @@ public class JsonInjectors {
         var link = "https://vtosters.app"; // can be null
         var linktitle = "Test button"; // can be null
 
-        // "{\"layout\":\"tertiary\",\"text\":\"" + linktitle + "\",\"type\":\"link\",\"link\":\"" + link + "\"}";
-        var buttons = decode("eyJsYXlvdXQiOiJ0ZXJ0aWFyeSIsInRleHQiOiI=") + linktitle + decode("IiwidHlwZSI6ImxpbmsiLCJsaW5rIjoi") + link + decode("In0=");
-        // ,"icon":" + pic + "
-        var icon = decode("LCJpY29uIjoi") + pic + decode("Ig==");
-
         var hasIcon = !pic.isEmpty();
-        var hasButton = !buttons.isEmpty();
-        var isPicture = pic.endsWith(".png") || pic.endsWith(".jpg") || pic.endsWith(".jpeg") || pic.endsWith(".webp");
+        var hasButton = !link.isEmpty();
 
-        if (!isPicture) hasIcon = false;
-        if (!hasIcon) icon = "";
-        if (!hasButton) buttons = "";
+        var isPicture = pic.endsWith(".png") || pic.endsWith(".jpg") || pic.endsWith(".jpeg") || pic.endsWith(".webp");
 
         if (isVerified(peerid)) text = AndroidUtils.getString("i_bought") + " VTosters Premium";
         if (isPrometheus(peerid)) text = AndroidUtils.getString("i_bought") + " VTosters Premium Gold Prime Pro Plus";
         if (isDeveloper(peerid)) text = AndroidUtils.getString("i_created_poop");
-        if (!isVerified(peerid) || text.equals("")) {
+
+        if (!isVerified(peerid) || text.equals("") || peerid == AccountManagerUtils.getUserId() || peerid == 0) {
             if (getBoolValue("convBarRecomm", false)) {
                 return null;
             } else {
                 return orig.optJSONObject("conversation_bar");
             }
         }
+        var json = new JSONObject();
 
-        if (!dev()) return orig.optJSONObject("conversation_bar");
+        var buttonsJson = new JSONObject();
+        buttonsJson.put("layout", "tertiary");
+        buttonsJson.put("text", linktitle);
+        buttonsJson.put("type", "link");
+        buttonsJson.put("link", link);
 
-        // JSONObject("{\"name\":\"group_admin_welcome\",\"text\":\"" + textverif + "\",\"buttons\":[],\"icon\":\"" + pic + "\"}");
-        return new JSONObject(decode("eyJuYW1lIjoiZ3JvdXBfYWRtaW5fd2VsY29tZSIsInRleHQiOiI=")
-                + text + decode("IiwiYnV0dG9ucyI6Ww==")
-                + buttons + decode("XQ==")
-                + icon
-                + decode("fQ=="));
+        var buttonsjson = new JSONArray(); // max 3 buttons in array
+        if (hasButton) buttonsjson.put(buttonsJson);
+
+        json.put("name", "group_admin_welcome");
+        json.put("text", text);
+        json.put("buttons", buttonsjson);
+        if (hasIcon && isPicture) {
+            json.put("icon", pic);
+        }
+
+        return json;
     }
 
     public static JSONObject menu(JSONObject orig) throws JSONException {
