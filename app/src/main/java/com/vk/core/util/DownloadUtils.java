@@ -1,5 +1,6 @@
 package com.vk.core.util;
 
+import static ru.vtosters.lite.utils.AndroidUtils.getGlobalContext;
 import static ru.vtosters.lite.utils.Preferences.getDownloadsDir;
 import static ru.vtosters.lite.utils.Preferences.getMusicDir;
 import static ru.vtosters.lite.utils.Preferences.getPhotosDir;
@@ -12,6 +13,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteException;
+import android.media.MediaScannerConnection;
 import android.net.Uri;
 import android.text.TextUtils;
 import android.util.Log;
@@ -22,6 +24,7 @@ import com.vk.core.concurrent.VkExecutors;
 import com.vk.imageloader.VKImageLoader;
 import com.vk.log.L;
 import com.vk.metrics.eventtracking.VkTracker;
+import com.vtosters.lite.MainActivity;
 import com.vtosters.lite.R;
 
 import java.io.File;
@@ -51,7 +54,7 @@ public class DownloadUtils {
             ToastUtils.a(context.getString(R.string.error) + " [" + e2.getMessage() + "]");
         }
     }
-
+    
     private static void b(final Context context, String str, String str2, boolean z) {
         if (TextUtils.isEmpty(str2)) {
             return;
@@ -59,10 +62,12 @@ public class DownloadUtils {
 
         String file = a(str, str2);
         File b2;
+        boolean pic = false;
         boolean c2 = MediaUtils.c(MediaUtils.b(str2));
 
         if (file.endsWith(".jpg") || file.endsWith(".png") || file.endsWith(".jpeg")) {
             b2 = new File(getPhotosDir(), file);
+            pic = true;
         } else if (file.endsWith(".mp3") || file.endsWith(".wav") || file.endsWith(".ogg") || file.endsWith(".aac") || file.endsWith(".flac") || file.endsWith(".m4a")) {
             b2 = new File(getMusicDir(), file);
         } else if (file.endsWith(".mp4") || file.endsWith(".mkv") || file.endsWith(".avi") || file.endsWith(".flv") || file.endsWith(".wmv") || file.endsWith(".mov") || file.endsWith(".3gp")) {
@@ -83,14 +88,16 @@ public class DownloadUtils {
                     if (b2.exists()) {
                         VkExecutors.x.a().execute(() -> ToastUtils.a(context.getString(R.string.file_saved, b2.getAbsoluteFile())));
                     }
+
                 } catch (Exception e2) {
                     L.a(e2);
                 }
+
                 CameraUtils.a(context, b2, null);
                 return;
             }
         }
-        
+
         DownloadManager.Request request = new DownloadManager.Request(Uri.parse(str2));
         request.setDestinationUri(Uri.fromFile(b2));
         request.setMimeType(FileUtils.f(new File(str)));
@@ -103,6 +110,9 @@ public class DownloadUtils {
         }
         try {
             long enqueue = a2.enqueue(request);
+            if (pic) {
+                CameraUtils.a(context, b2, null);
+            }
             if (!z) {
                 return;
             }

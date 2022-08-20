@@ -24,7 +24,7 @@ public class StoryDownloader {
                 DownloadManager.Request request = new DownloadManager.Request(Uri.parse(url));
                 request.setNotificationVisibility(DownloadManager.Request.VISIBILITY_VISIBLE_NOTIFY_COMPLETED);
                 request.setTitle("photo" + story.E.a);
-                request.setDestinationInExternalPublicDir(getPhotosDir().getAbsolutePath(), "/Stories/photo" + story.E.a + ".jpg");
+                request.setDestinationInExternalPublicDir(getPhotosDir().getAbsolutePath(), "/Stories/" + story.E.a + ".jpg");
                 ((DownloadManager) getGlobalContext().getSystemService(Context.DOWNLOAD_SERVICE)).enqueue(request);
                 return;
             }
