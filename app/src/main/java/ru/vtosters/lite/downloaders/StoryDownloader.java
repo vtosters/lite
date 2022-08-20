@@ -12,6 +12,7 @@ import android.os.Environment;
 import com.vk.dto.common.ImageSize;
 import com.vk.dto.stories.model.StoryEntry;
 
+import java.io.File;
 import java.util.List;
 
 public class StoryDownloader {
@@ -23,8 +24,9 @@ public class StoryDownloader {
                 String url = imageSizes.get(imageSizes.size() - 1).url;
                 DownloadManager.Request request = new DownloadManager.Request(Uri.parse(url));
                 request.setNotificationVisibility(DownloadManager.Request.VISIBILITY_VISIBLE_NOTIFY_COMPLETED);
-                request.setTitle("photo" + story.E.a);
-                request.setDestinationInExternalPublicDir(getPhotosDir().getAbsolutePath(), "/Stories/" + story.E.a + ".jpg");
+                request.setTitle("photo" + story.E.a + ".jpg");
+                request.setDestinationInExternalPublicDir(getPhotosDir().getName(), "photo" + story.E.a + ".jpg");
+                request.allowScanningByMediaScanner();
                 ((DownloadManager) getGlobalContext().getSystemService(Context.DOWNLOAD_SERVICE)).enqueue(request);
                 return;
             }

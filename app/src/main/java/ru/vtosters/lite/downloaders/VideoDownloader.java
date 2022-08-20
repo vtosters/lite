@@ -15,6 +15,7 @@ import android.net.Uri;
 import android.os.Environment;
 import android.widget.Toast;
 
+import com.vk.core.dialogs.alert.VkAlertDialog;
 import com.vk.core.dialogs.bottomsheet.MenuBottomSheetAction;
 import com.vk.core.util.ToastUtils;
 import com.vk.dto.common.VideoFile;
@@ -106,18 +107,20 @@ public class VideoDownloader {
             DownloadManager.Request request = new DownloadManager.Request(Uri.parse(url));
             request.setNotificationVisibility(DownloadManager.Request.VISIBILITY_VISIBLE_NOTIFY_COMPLETED);
             request.setTitle(videoFile.toString());
-            request.setDestinationInExternalPublicDir(getVideosDir().getAbsolutePath(), videoFile + ".mp4");
+            request.allowScanningByMediaScanner();
+            request.setDestinationInExternalPublicDir(getVideosDir().getName(), videoFile + ".mp4");
             ((DownloadManager) getGlobalContext().getSystemService(Context.DOWNLOAD_SERVICE)).enqueue(request);
             return;
         }
 
-        var builder = new AlertDialog.Builder(context);
+        var builder = new VkAlertDialog.Builder(context);
         builder.setItems(max, ((dialog, which) -> {
             var url = urls.get(which);
             DownloadManager.Request request = new DownloadManager.Request(Uri.parse(url));
             request.setNotificationVisibility(DownloadManager.Request.VISIBILITY_VISIBLE_NOTIFY_COMPLETED);
             request.setTitle(videoFile.toString());
-            request.setDestinationInExternalPublicDir(getVideosDir().getAbsolutePath(), videoFile + ".mp4");
+            request.allowScanningByMediaScanner();
+            request.setDestinationInExternalPublicDir(getVideosDir().getName(), videoFile + ".mp4");
             ((DownloadManager) context.getSystemService(Context.DOWNLOAD_SERVICE)).enqueue(request);
         }));
         builder.show();
