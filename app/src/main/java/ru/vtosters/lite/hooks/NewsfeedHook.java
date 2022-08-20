@@ -19,6 +19,7 @@ import static ru.vtosters.lite.utils.Preferences.adsslider;
 import static ru.vtosters.lite.utils.Preferences.authorsrecomm;
 import static ru.vtosters.lite.utils.Preferences.friendsrecomm;
 import static ru.vtosters.lite.utils.Preferences.getBoolValue;
+import static ru.vtosters.lite.utils.Preferences.milkshake;
 import static ru.vtosters.lite.utils.Preferences.vkme;
 
 import com.vk.core.preference.Preference;
@@ -104,7 +105,9 @@ public class NewsfeedHook {
     public static void adsParams(HashSet<String> hashSet) {
         if (ads() || adsslider()) {
             hashSet.add("ads_disabled");
-            return;
+            if (milkshake()) {
+                return;
+            }
         }
 
         hashSet.add("ads_app");
