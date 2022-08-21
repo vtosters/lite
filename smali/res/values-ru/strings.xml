@@ -5414,7 +5414,7 @@
     <string name="gms_download_microg">Скачать MicroG</string>
     <string name="gms_what_to_do_next">Что делать дальше?</string>
     <string name="gms_what_to_do_after_microg_title">Что делать после установки MicroG?</string>
-    <string name="gms_what_to_do_after_microg_summ">Обновите регистрацию Firebase в настройках в разделе "Другое"</string>
+    <string name="gms_what_to_do_after_microg_summ">1. Войдите в свой Google аккаунт \n2. Разрешите VTLite получать уведомления\n3. Обновите регистрацию Firebase в настройках в разделе "Другое"</string>
     <string name="donate">Помочь проекту</string>
     <string name="fulltime">dd MMMM yyyy в HH:mm:ss</string>
     <string name="fulltime2">dd MMMM в HH:mm:ss</string>
@@ -5891,7 +5891,7 @@
     <string name="DNR_ON">Включить нечиталку</string>
     <string name="DNR_OFF">Отключить нечиталку</string>
 
-    <string name="vtl_crashed">Произошла ошибка в работе Vtosters!</string>
+    <string name="vtl_crashed">Произошла ошибка в работе VTLite!</string>
     <string name="vtl_crash_upload">Загрузить логи</string>
     <string name="vtl_crash_save">Сохранить в файл</string>
 

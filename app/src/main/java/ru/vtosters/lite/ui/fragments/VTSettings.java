@@ -183,7 +183,7 @@ public class VTSettings extends MaterialPreferenceToolbarFragment {
         }
 
         if (!isGmsInstalled()) {
-            addPreference(this, "", AndroidUtils.getString("installgms"), "", "ic_warning_24", preference -> {
+            addPreference(this, "", AndroidUtils.getString("installgms"), "", "ic_about_outline_28", preference -> {
                 Context context = getContext();
                 Intent a2 = new Navigator(InstallGMSFragment.class).b(context);
                 a2.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
