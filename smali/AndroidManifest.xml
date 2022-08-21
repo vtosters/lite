@@ -972,6 +972,28 @@
                 <category android:name="android.intent.category.BROWSABLE" />
 
                 <data
+                    android:host="vk.com"
+                    android:pathPattern="/.*"
+                    android:scheme="http" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data
+                    android:host="vk.com"
+                    android:pathPattern="/.*"
+                    android:scheme="https" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data
                     android:host="vkontakte.ru"
                     android:pathPattern="/.*"
                     android:scheme="http" />
@@ -1122,6 +1144,30 @@
                 <action android:name="android.nfc.action.NDEF_DISCOVERED" />
                 <data
                     android:host="m.vk.ru"
+                    android:pathPattern="/.*"
+                    android:scheme="https" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <action android:name="android.nfc.action.NDEF_DISCOVERED" />
+                <data
+                    android:host="m.vk.com"
+                    android:pathPattern="/.*"
+                    android:scheme="http" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <action android:name="android.nfc.action.NDEF_DISCOVERED" />
+                <data
+                    android:host="m.vk.com"
                     android:pathPattern="/.*"
                     android:scheme="https" />
             </intent-filter>
