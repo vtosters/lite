@@ -12,6 +12,7 @@ import static ru.vtosters.lite.dnr.DNRModule.hookDNT;
 import static ru.vtosters.lite.dnr.DNRModule.isDnrEnabledFor;
 import static ru.vtosters.lite.dnr.DNRModule.isDntEnabledFor;
 import static ru.vtosters.lite.encryption.EncryptProvider.decryptMessage;
+import static ru.vtosters.lite.proxy.ProxyUtils.getApi;
 import static ru.vtosters.lite.utils.AccountManagerUtils.getUserToken;
 import static ru.vtosters.lite.utils.AndroidUtils.getIdentifier;
 import static ru.vtosters.lite.utils.AndroidUtils.sendToast;
@@ -281,7 +282,7 @@ public class DNRInjector {
         Thread thread = new Thread(() -> {
             try {
                 var request = new Request.a()
-                        .b("https://api.vk.ru/method/" + (needToBePinned ? "messages.pinConversation" : "messages.unpinConversation") + "?peer_id=" + dialogid + "&access_token=" + getUserToken() + "&v=5.119")
+                        .b("https://" + getApi() + "/method/" + (needToBePinned ? "messages.pinConversation" : "messages.unpinConversation") + "?peer_id=" + dialogid + "&access_token=" + getUserToken() + "&v=5.119")
                         .a(Headers.a("User-Agent", Network.l.c().a(), "Content-Type", "application/x-www-form-urlencoded; charset=utf-8"))
                         .a();
 

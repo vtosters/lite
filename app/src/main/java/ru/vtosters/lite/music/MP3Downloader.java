@@ -1,5 +1,6 @@
 package ru.vtosters.lite.music;
 
+import static ru.vtosters.lite.proxy.ProxyUtils.getApi;
 import static ru.vtosters.lite.utils.Preferences.getMusicDir;
 
 import android.app.DownloadManager;
@@ -28,7 +29,7 @@ import ru.vtosters.lite.utils.AndroidUtils;
 
 public class MP3Downloader {
 
-    private static final String URL_FORMAT = "https://api.vk.ru/method/audio.getById?v=5.131&access_token=%s&audios=%s&copyright=https://vtosters.app/";
+    private static final String URL_FORMAT = "https://" + getApi() + "/method/audio.getById?v=5.131&access_token=%s&audios=%s&copyright=https://vtosters.app/";
     private static final OkHttpClient client = new OkHttpClient();
 
     public static void execute(MusicTrack track) {

@@ -4,6 +4,8 @@ import static ru.vtosters.lite.foaf.FoafBase.getLastSeen;
 import static ru.vtosters.lite.foaf.FoafBase.getBypassedOnlineInfo;
 import static ru.vtosters.lite.hooks.OnlineFormatterHook.onlineHookProfiles;
 import static ru.vtosters.lite.hooks.DateHook.getLocale;
+import static ru.vtosters.lite.proxy.ProxyUtils.getApi;
+import static ru.vtosters.lite.proxy.ProxyUtils.getStatic;
 import static ru.vtosters.lite.utils.AndroidUtils.getDefaultPrefs;
 import static ru.vtosters.lite.utils.Base64Utils.decode;
 import static ru.vtosters.lite.utils.NewsFeedFiltersUtils.checkCaption;
@@ -118,7 +120,7 @@ public class JsonInjectors {
     public static JSONObject vktesters(int id) throws JSONException {
         var title = AndroidUtils.getString("tester_profile");
         var text_color = "2D81E0";
-        var link = "https://static.vk.ru/bugs?lang=" + LangUtils.a() + "#/reporter" + id;
+        var link = "https://" + getStatic() + "/bugs?lang=" + LangUtils.a() + "#/reporter" + id;
 
         var json = new JSONObject();
         var icons = new JSONArray();
@@ -629,7 +631,7 @@ public class JsonInjectors {
         if (section == null) return null;
 
         var request = new Request.a()
-                .b("https://api.vk.ru/method/catalog.getAudio"
+                .b("https://" + getApi() + "/method/catalog.getAudio"
                         + "?v=5.119"
                         + "&https=1"
                         + "&need_blocks=1"
@@ -653,7 +655,7 @@ public class JsonInjectors {
 
     public static JSONObject fetchCatalogPodcast() {
         var request = new Request.a()
-                .b("https://api.vk.ru/method/catalog.getPodcasts"
+                .b("https://" + getApi() + "/method/catalog.getPodcasts"
                         + "?v=5.119"
                         + "&https=1"
                         + "&need_blocks=1"

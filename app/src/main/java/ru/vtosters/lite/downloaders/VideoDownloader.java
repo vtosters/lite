@@ -1,6 +1,7 @@
 package ru.vtosters.lite.downloaders;
 
 import static ru.vtosters.lite.net.Request.makeRequest;
+import static ru.vtosters.lite.proxy.ProxyUtils.getApi;
 import static ru.vtosters.lite.utils.AccountManagerUtils.getUserToken;
 import static ru.vtosters.lite.utils.AndroidUtils.getGlobalContext;
 import static ru.vtosters.lite.utils.AndroidUtils.getIdentifier;
@@ -127,12 +128,12 @@ public class VideoDownloader {
     }
 
     public static void parseVideoLink(String url, Context ctx) {
-        if (url.contains("vk.ru/story")) {
+        if (url.contains("vk.ru/story") || url.contains("vk.com/story")) {
             ToastUtils.a(AndroidUtils.getString("video_dl_stories_not_supported"));
             return;
         }
 
-        if (!url.contains("vk.ru/video")) {
+        if (!url.contains("vk.ru/video") || !url.contains("vk.com/video")) {
             ToastUtils.a(AndroidUtils.getString("video_dl_wrong_link"));
             return;
         }
@@ -144,7 +145,7 @@ public class VideoDownloader {
         progressDialog.setMessage(AndroidUtils.getString("video_dl_progress"));
         progressDialog.show();
 
-        makeRequest("https://" + "api.vk.ru" + "/method/video.get?owner_id=" + ownerId + "&videos=" + videoId + "&v=5.99&access_token=" + getUserToken(),
+        makeRequest("https://" + getApi() + "/method/video.get?owner_id=" + ownerId + "&videos=" + videoId + "&v=5.99&access_token=" + getUserToken(),
                 response -> {
                     progressDialog.cancel();
 

@@ -1,6 +1,7 @@
 package ru.vtosters.lite.ui.fragments;
 
 import static ru.vtosters.lite.music.Scrobbler.isLoggedIn;
+import static ru.vtosters.lite.proxy.ProxyUtils.getApi;
 import static ru.vtosters.lite.utils.AccountManagerUtils.getUserToken;
 import static ru.vtosters.lite.utils.AndroidUtils.dp2px;
 import static ru.vtosters.lite.utils.AndroidUtils.edit;
@@ -244,7 +245,7 @@ public class MediaFragment extends MaterialPreferenceToolbarFragment {
         Thread thread = new Thread(() -> {
             try {
                 var request = new Request.a()
-                        .b("https://api.vk.ru/method/" + "video.clearViewingHistoryRecords" + "?https=1" + "&access_token=" + getUserToken() + "&v=5.187")
+                        .b("https://" + getApi() + "/method/" + "video.clearViewingHistoryRecords" + "?https=1" + "&access_token=" + getUserToken() + "&v=5.187")
                         .a(Headers.a("User-Agent", Network.l.c().a(), "Content-Type", "application/x-www-form-urlencoded; charset=utf-8"))
                         .a();
 

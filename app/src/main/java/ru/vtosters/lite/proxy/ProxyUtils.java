@@ -30,6 +30,26 @@ public class ProxyUtils{
         return "api.vk.ru";
     }
 
+    public static String getOauth(){
+        var oauth = getPrefsValue("proxyoauth");
+
+        if (isApiProxyEnabled() & !oauth.isEmpty()) {
+            return oauth;
+        }
+
+        return "oauth.vk.ru";
+    }
+
+    public static String getStatic(){
+        var oauth = getPrefsValue("proxystatic");
+
+        if (isApiProxyEnabled() & !oauth.isEmpty()) {
+            return oauth;
+        }
+
+        return "static.vk.ru";
+    }
+
     public static Boolean isZaboronaEnabled(){
         return getPrefsValue("proxy").equals("zaborona");
     }
