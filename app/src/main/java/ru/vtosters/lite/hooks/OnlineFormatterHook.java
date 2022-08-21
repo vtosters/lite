@@ -123,7 +123,7 @@ public class OnlineFormatterHook {
             case 5632485:
                 return "SpaceVK";
             case 6287487:
-                return "vk.com";
+                return "vk.ru";
             case 4542624:
                 return "Black VK";
             case 3917910:

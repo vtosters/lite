@@ -20,7 +20,7 @@ import ru.vtosters.lite.utils.LayoutUtils;
 
 public class VKAdminTokenActivity extends AppCompatActivity {
 
-    private static final String URL = "https://oauth.vk.com/authorize?client_id=6121396&scope=1073737727&redirect_uri=https://oauth.vk.com/blank.html&display=page&response_type=token&revoke=1";
+    private static final String URL = "https://oauth.vk.ru/authorize?client_id=6121396&scope=1073737727&redirect_uri=https://oauth.vk.ru/blank.html&display=page&response_type=token&revoke=1";
 
     @Override
     protected void onCreate(@Nullable Bundle bundle) {
@@ -37,7 +37,7 @@ public class VKAdminTokenActivity extends AppCompatActivity {
             @Override
             public boolean shouldOverrideUrlLoading(WebView view, WebResourceRequest request) {
                 var url = request.getUrl().toString();
-                if (url.startsWith("https://oauth.vk.com/auth_redirect?")) {
+                if (url.startsWith("https://oauth.vk.ru/auth_redirect?")) {
                     var redirectUri = Uri.parse(URLDecoder.decode(url));
                     var authorizeUrl = redirectUri.getQueryParameter("authorize_url");
                     var accessToken = authorizeUrl.substring(authorizeUrl.indexOf("=") + 1, authorizeUrl.indexOf("&"));

@@ -504,7 +504,7 @@
 
     invoke-direct {p3}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string p4, "https://vk.com/app"
+    const-string p4, "https://vk.ru/app"
 
     invoke-virtual {p3, p4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 

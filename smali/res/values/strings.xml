@@ -267,7 +267,7 @@
     <string name="article_subscribers_formatted">%s followers</string>
     <string name="article_view_count_formatted">%s views</string>
     <string name="articles">Articles</string>
-    <string name="asset_statements">[ { \"include\": \"https://vk.com/.well-known/assetlinks.json\" }, { \"relation\":[ \"delegate_permission/common.handle_all_urls\" ], \"target\":{ \"namespace\":\"web\", \"site\":\"https://vk.com\" } }, { \"relation\":[ \"delegate_permission/common.handle_all_urls\" ], \"target\":{ \"namespace\":\"web\", \"site\":\"https://m.vk.com\" } } ]</string>
+    <string name="asset_statements">[ { \"include\": \"https://vk.ru/.well-known/assetlinks.json\" }, { \"relation\":[ \"delegate_permission/common.handle_all_urls\" ], \"target\":{ \"namespace\":\"web\", \"site\":\"https://vk.ru\" } }, { \"relation\":[ \"delegate_permission/common.handle_all_urls\" ], \"target\":{ \"namespace\":\"web\", \"site\":\"https://m.vk.ru\" } } ]</string>
     <string name="attach">Add</string>
     <string name="attach_action_link_successed">Link added</string>
     <string name="attach_album">Album</string>
@@ -485,7 +485,7 @@ no results"</string>
     <string name="collection_add_selection">Attach to live stream</string>
     <string name="collection_add_to_stream">Add to live stream</string>
     <string name="collection_add_wall_to_list_hint">Select a post from your wall that you want to share with your viewers</string>
-    <string name="collection_link_add_link_input_hint">https://vk.com</string>
+    <string name="collection_link_add_link_input_hint">https://vk.ru</string>
     <string name="collection_link_limit">Link limit reached</string>
     <string name="collection_link_not_valid">URL not supported</string>
     <string name="collection_links_list">Link list</string>
@@ -1171,7 +1171,7 @@ and organize it with the help of tags"</string>
     <string name="friends_recommendations_gmail">Gmail</string>
     <string name="friends_recommendations_invete_by_link">Invite by link</string>
     <string name="friends_recommendations_invite">Invite</string>
-    <string name="friends_recommendations_invite_message">Join me on VK! http://vk.com/join</string>
+    <string name="friends_recommendations_invite_message">Join me on VK! http://vk.ru/join</string>
     <string name="friends_recommendations_locator_text">To find friends nearby, ask them to open this screen on their devices</string>
     <string name="friends_recommendations_ok">OK</string>
     <string name="friends_recommendations_request_done">You are friends</string>
@@ -1460,7 +1460,7 @@ less often."</string>
     <string name="identity_address">Address</string>
     <string name="identity_address_dat">address</string>
     <string name="identity_custom_label">Custom</string>
-    <string name="identity_desc">You can enter your information here so that mini apps from the [https://vk.com/services|catalog] can use it to set up delivery or contact you</string>
+    <string name="identity_desc">You can enter your information here so that mini apps from the [https://vk.ru/services|catalog] can use it to set up delivery or contact you</string>
     <string name="identity_email">Email</string>
     <string name="identity_email_dat">email address</string>
     <string name="identity_label">Category</string>
@@ -1490,7 +1490,7 @@ less often."</string>
     <string name="include_community">Add community</string>
     <string name="installed_games_title">My games</string>
     <string name="invalid_date">Invalid posting date</string>
-    <string name="invitation">Join me on VK! http://vk.com/join</string>
+    <string name="invitation">Join me on VK! http://vk.ru/join</string>
     <string name="invitation_declined">Invitation declined.</string>
     <string name="invitation_sent">Your invitation has been sent.</string>
     <string name="invite">Invite</string>
@@ -3405,7 +3405,7 @@ the VK camera"</string>
     <string name="serv_user_returned_m">%1$s returned to the chat</string>
     <string name="service_account_admin_100_info">"This profile is only used for personal notifications.
 
-If you have any questions, please contact [https://vk.com/support|Support.]"</string>
+If you have any questions, please contact [https://vk.ru/support|Support.]"</string>
     <string name="service_account_admin_101_info">This page is used to provide backward compatibility for comments by communities.</string>
     <string name="service_account_mobile_info">This is the official profile of VK Mobile Support.</string>
     <string name="sett_accept_calls">Enable</string>
@@ -5430,7 +5430,7 @@ with video"</string>
     <string name="votes_your_balance">Your balance</string>
     <string name="wall">Wall</string>
     <string name="wall_all_posts">All posts</string>
-    <string name="wall_comment_repost">&lt;font color=\"#aaaaaa\">Comment on &lt;/font>&lt;a href=\"vklink://view/?http://vk.com/wall%1$d_%2$d\">post&lt;/a></string>
+    <string name="wall_comment_repost">&lt;font color=\"#aaaaaa\">Comment on &lt;/font>&lt;a href=\"vklink://view/?http://vk.ru/wall%1$d_%2$d\">post&lt;/a></string>
     <string name="wall_disabled">Wall disabled</string>
     <string name="wall_empty">No posts here yet</string>
     <string name="wall_empty_my">"You haven't posted anything yet"</string>

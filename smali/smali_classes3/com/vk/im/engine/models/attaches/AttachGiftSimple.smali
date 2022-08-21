@@ -350,7 +350,7 @@
 .method public c()Ljava/lang/String;
     .locals 1
 
-    const-string v0, "https://vk.com/gifts"
+    const-string v0, "https://vk.ru/gifts"
 
     return-object v0
 .end method

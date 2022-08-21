@@ -23,7 +23,7 @@ public class VKIDProtection {
         // android.content.DialogInterface.OnClickListener
         builder.setNeutralButton(getString("vkiddisable"), (dialogInterface, i) -> {
             edit().putBoolean("showAlertVkId", false).apply();
-            VKUIwrapper.setLink("https://id.vk.com/account");
+            VKUIwrapper.setLink("https://id.vk.ru/account");
             Intent a2 = new Navigator(VKUIwrapper.class).b(activity);
             a2.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
             activity.startActivity(a2);

@@ -230,7 +230,7 @@
 
     move-result-object p1
 
-    const-string v0, "https://vk.com/ping.txt"
+    const-string v0, "https://vk.ru/ping.txt"
 
     .line 20
     invoke-virtual {p1, v0}, Ljava/lang/String;->contains(Ljava/lang/CharSequence;)Z
@@ -239,7 +239,7 @@
 
     if-nez v0, :cond_3
 
-    const-string v0, "https://m.vk.com/ping.txt"
+    const-string v0, "https://m.vk.ru/ping.txt"
 
     .line 21
     invoke-virtual {p1, v0}, Ljava/lang/String;->contains(Ljava/lang/CharSequence;)Z

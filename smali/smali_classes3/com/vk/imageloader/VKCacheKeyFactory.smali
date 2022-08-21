@@ -164,7 +164,7 @@
 .method private b(Ljava/lang/String;)Z
     .locals 1
 
-    const-string v0, "https://vk.com/doc"
+    const-string v0, "https://vk.ru/doc"
 
     .line 9
     invoke-virtual {p1, v0}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
@@ -173,7 +173,7 @@
 
     if-nez v0, :cond_0
 
-    const-string v0, "http://vk.com/doc"
+    const-string v0, "http://vk.ru/doc"
 
     invoke-virtual {p1, v0}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
 

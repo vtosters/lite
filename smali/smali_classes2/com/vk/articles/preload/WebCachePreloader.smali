@@ -125,7 +125,7 @@
 
     const-string v2, "referer"
 
-    const-string v3, "https://vk.com"
+    const-string v3, "https://vk.ru"
 
     invoke-direct {v1, v2, v3}, Lkotlin/Pair;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
 

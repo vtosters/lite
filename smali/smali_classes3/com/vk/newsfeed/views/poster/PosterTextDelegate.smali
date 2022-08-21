@@ -196,7 +196,7 @@
     const/4 v8, 0x0
 
     :goto_2
-    const-string v9, "vkontakte://vk.com/"
+    const-string v9, "vkontakte://vk.ru/"
 
     const/4 v10, 0x1
 

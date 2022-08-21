@@ -638,7 +638,7 @@
     const/4 v0, 0x1
 
     :goto_1
-    const-string v1, "vk.com/story"
+    const-string v1, "vk.ru/story"
 
     const/16 v2, 0x5f
 

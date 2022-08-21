@@ -7,9 +7,9 @@ import android.util.Log;
 
 public class ApiProxy{
     public static String linkReplacer(String link){
-        var vkapi = "api.vk.com";
-        var oauth = "oauth.vk.com";
-        var vkstatic = "static.vk.com";
+        var vkapi = "api.vk.ru";
+        var oauth = "oauth.vk.ru";
+        var vkstatic = "static.vk.ru";
 
         var proxyapi = getPrefsValue("proxyapi");
         var proxyoauth = getPrefsValue("proxyoauth");
@@ -52,6 +52,6 @@ public class ApiProxy{
             return proxyapi;
         }
 
-        return "m.vk.com";
+        return "m.vk.ru";
     }
 }

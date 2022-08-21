@@ -71,7 +71,7 @@
     .line 9
     new-instance v0, Landroid/content/Intent;
 
-    const-string v1, "https://www.vk.com/popup?act=buy_music_subscription"
+    const-string v1, "https://www.vk.ru/popup?act=buy_music_subscription"
 
     invoke-static {v1}, Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
 
@@ -433,7 +433,7 @@
     .line 1
     new-instance v0, Landroid/content/Intent;
 
-    const-string v1, "https://www.vk.com/audio"
+    const-string v1, "https://www.vk.ru/audio"
 
     invoke-static {v1}, Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
 
@@ -477,7 +477,7 @@
     .line 1
     new-instance v0, Landroid/content/Intent;
 
-    const-string v1, "https://www.vk.com/audioplayer"
+    const-string v1, "https://www.vk.ru/audioplayer"
 
     invoke-static {v1}, Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
 

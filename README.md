@@ -10,7 +10,7 @@
     <a href="https://t.me/s/vtosters">
         <img src="https://img.shields.io/badge/-Telegram-blue?style=for-the-badge&logo=telegram&color=2AABEE"/>
     </a>
-    <a href="https://vk.com/vtosters_official">
+    <a href="https://vk.ru/vtosters_official">
         <img src="https://img.shields.io/badge/-VK-blue?style=for-the-badge&logo=vk&color=0077FF"/>
     </a>
     <a href="https://discord.gg/j9CAt3uYXj">
@@ -133,7 +133,7 @@
 
 `android:debuggable="false"` ➝ `android:debuggable="true"`
 
-Настройки, необходимые для **отладки** вне Android Studio, находятся по этой ссылке: [vk.com/vt/debug](https://vk.com/vt/debug)
+Настройки, необходимые для **отладки** вне Android Studio, находятся по этой ссылке: [vk.ru/vt/debug](https://vk.ru/vt/debug)
 
 * Для дополнительной отладки ответов и логов необходимо включить **[Режим разработчика]**
 
@@ -145,7 +145,7 @@
 
 Сразу после нажатия на запись приложение начнет записывать **все ваши действия** по пути `/Download/VK/logs/com.vtosters.lite/`
 
-При следующем открытии приложения оно автоматически сохранит логи и отправит вам в [**Документы** ВК](https://vk.com/docs), откуда вы можете скачать архив логов и работать с ними.
+При следующем открытии приложения оно автоматически сохранит логи и отправит вам в [**Документы** ВК](https://vk.ru/docs), откуда вы можете скачать архив логов и работать с ними.
 
 ## Разработка
 

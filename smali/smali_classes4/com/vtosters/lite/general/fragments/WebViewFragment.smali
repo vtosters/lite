@@ -986,7 +986,7 @@
     .line 40
     iget-object v0, p0, Lcom/vtosters/lite/general/fragments/WebViewFragment;->Y:Landroid/webkit/WebView;
 
-    const-string v1, "https://vk.com/client_auth"
+    const-string v1, "https://vk.ru/client_auth"
 
     invoke-virtual {v0, v1, p1}, Landroid/webkit/WebView;->postUrl(Ljava/lang/String;[B)V
 
@@ -1010,7 +1010,7 @@
 
     move-result-object v1
 
-    const-string v2, "https://oauth.vk.com/webview_token"
+    const-string v2, "https://oauth.vk.ru/webview_token"
 
     invoke-static {v2}, Lru/vtosters/lite/proxy/api/ApiProxy;->linkReplacer(Ljava/lang/String;)Ljava/lang/String;
 
@@ -1200,7 +1200,7 @@
 .method private c5()Ljava/lang/String;
     .locals 3
 
-    const-string v0, "https://oauth.vk.com/webview_token"
+    const-string v0, "https://oauth.vk.ru/webview_token"
 
     invoke-static {v0}, Lru/vtosters/lite/proxy/api/ApiProxy;->linkReplacer(Ljava/lang/String;)Ljava/lang/String;
 

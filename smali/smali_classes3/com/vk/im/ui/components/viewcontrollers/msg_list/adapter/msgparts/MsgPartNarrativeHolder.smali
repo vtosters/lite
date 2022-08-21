@@ -494,7 +494,7 @@
 
     if-eqz v2, :cond_7
 
-    const-string v3, "vk.com"
+    const-string v3, "vk.ru"
 
     invoke-virtual {v2, v3}, Lcom/vk/im/ui/views/msg/MsgPartSnippetView;->setCaptionText(Ljava/lang/CharSequence;)V
 

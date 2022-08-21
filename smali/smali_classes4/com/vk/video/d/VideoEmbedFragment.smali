@@ -425,7 +425,7 @@
 
     if-eqz v3, :cond_7
 
-    const-string v1, "https://vk.com/images/blank.gif"
+    const-string v1, "https://vk.ru/images/blank.gif"
 
     .line 19
     :cond_7

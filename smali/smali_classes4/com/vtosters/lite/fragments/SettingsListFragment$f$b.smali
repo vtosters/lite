@@ -56,7 +56,7 @@
 
     move-result-object v0
 
-    const-string v1, "https://vk.com/jobs?w=job38"
+    const-string v1, "https://vk.ru/jobs?w=job38"
 
     invoke-static {v0, v1}, Lcom/vk/common/links/LinkProcessor;->a(Landroid/content/Context;Ljava/lang/String;)V
 

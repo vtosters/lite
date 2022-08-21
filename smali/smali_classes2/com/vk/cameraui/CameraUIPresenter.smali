@@ -10336,13 +10336,13 @@
 
     invoke-static {v1, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    const-string v2, "https://vk.com/vkapps_qr"
+    const-string v2, "https://vk.ru/vkapps_qr"
 
     invoke-static {v2}, Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
 
     move-result-object v2
 
-    const-string v3, "Uri.parse(\"https://vk.com/vkapps_qr\")"
+    const-string v3, "Uri.parse(\"https://vk.ru/vkapps_qr\")"
 
     invoke-static {v2, v3}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 

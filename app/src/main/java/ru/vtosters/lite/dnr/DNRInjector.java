@@ -281,7 +281,7 @@ public class DNRInjector {
         Thread thread = new Thread(() -> {
             try {
                 var request = new Request.a()
-                        .b("https://api.vk.com/method/" + (needToBePinned ? "messages.pinConversation" : "messages.unpinConversation") + "?peer_id=" + dialogid + "&access_token=" + getUserToken() + "&v=5.119")
+                        .b("https://api.vk.ru/method/" + (needToBePinned ? "messages.pinConversation" : "messages.unpinConversation") + "?peer_id=" + dialogid + "&access_token=" + getUserToken() + "&v=5.119")
                         .a(Headers.a("User-Agent", Network.l.c().a(), "Content-Type", "application/x-www-form-urlencoded; charset=utf-8"))
                         .a();
 

@@ -14,7 +14,7 @@ public class VKPayFragment extends FragmentImpl {
     }
 
     public void start() {
-        VKUIwrapper.setLink("https://vk.com/vkpay");
+        VKUIwrapper.setLink("https://vk.ru/vkpay");
         Intent a2 = new Navigator(VKUIwrapper.class).b(getActivity());
         a2.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
         startActivity(a2);

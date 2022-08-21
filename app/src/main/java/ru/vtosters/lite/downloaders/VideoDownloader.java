@@ -127,12 +127,12 @@ public class VideoDownloader {
     }
 
     public static void parseVideoLink(String url, Context ctx) {
-        if (url.contains("vk.com/story")) {
+        if (url.contains("vk.ru/story")) {
             ToastUtils.a(AndroidUtils.getString("video_dl_stories_not_supported"));
             return;
         }
 
-        if (!url.contains("vk.com/video")) {
+        if (!url.contains("vk.ru/video")) {
             ToastUtils.a(AndroidUtils.getString("video_dl_wrong_link"));
             return;
         }
@@ -144,7 +144,7 @@ public class VideoDownloader {
         progressDialog.setMessage(AndroidUtils.getString("video_dl_progress"));
         progressDialog.show();
 
-        makeRequest("https://" + "api.vk.com" + "/method/video.get?owner_id=" + ownerId + "&videos=" + videoId + "&v=5.99&access_token=" + getUserToken(),
+        makeRequest("https://" + "api.vk.ru" + "/method/video.get?owner_id=" + ownerId + "&videos=" + videoId + "&v=5.99&access_token=" + getUserToken(),
                 response -> {
                     progressDialog.cancel();
 

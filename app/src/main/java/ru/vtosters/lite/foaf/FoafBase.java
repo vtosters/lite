@@ -117,10 +117,10 @@ public class FoafBase {
         StringBuilder sb;
         if (isApiProxyEnabled()) {
             sb = new StringBuilder();
-            str = "https://" + getApi() + "/_/vk.com/foaf.php?id=";
+            str = "https://" + getApi() + "/_/vk.ru/foaf.php?id=";
         } else {
             sb = new StringBuilder();
-            str = "https://vk.com/foaf.php?id=";
+            str = "https://vk.ru/foaf.php?id=";
         }
         sb.append(str);
         sb.append(i);

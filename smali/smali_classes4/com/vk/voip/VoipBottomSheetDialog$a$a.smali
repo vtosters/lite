@@ -138,7 +138,7 @@
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string v3, "vk.com/calls?page=security&web_view=1&lang="
+    const-string v3, "vk.ru/calls?page=security&web_view=1&lang="
 
     invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 

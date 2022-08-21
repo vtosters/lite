@@ -38,7 +38,7 @@
 
     move-result-object v0
 
-    const-string v1, "oauth.vk.com"
+    const-string v1, "oauth.vk.ru"
 
     invoke-static {v1}, Lru/vtosters/lite/proxy/api/ApiProxy;->linkReplacer(Ljava/lang/String;)Ljava/lang/String;
 
@@ -180,7 +180,7 @@
 
     invoke-static {v0}, Lcom/vk/log/L;->a([Ljava/lang/Object;)V
 
-    const-string v0, "https://oauth.vk.com/blank.html#state=webview_refresh_access_token"
+    const-string v0, "https://oauth.vk.ru/blank.html#state=webview_refresh_access_token"
 
     invoke-static {v0}, Lru/vtosters/lite/proxy/api/ApiProxy;->linkReplacer(Ljava/lang/String;)Ljava/lang/String;
 
@@ -214,7 +214,7 @@
     return v3
 
     :cond_0
-    const-string v0, "https://vk.com/client_auth?refresh_token=1"
+    const-string v0, "https://vk.ru/client_auth?refresh_token=1"
 
     .line 5
     invoke-virtual {p2, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z

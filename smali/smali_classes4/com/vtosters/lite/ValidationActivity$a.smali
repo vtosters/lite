@@ -107,7 +107,7 @@
 
     move-result-object p2
 
-    const-string v1, "m.vk.com"
+    const-string v1, "m.vk.ru"
 
     invoke-virtual {v1, p2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -324,7 +324,7 @@
 
     move-result-object v1
 
-    const-string v3, "oauth.vk.com"
+    const-string v3, "oauth.vk.ru"
 
     invoke-static {v3}, Lru/vtosters/lite/proxy/api/ApiProxy;->linkReplacer(Ljava/lang/String;)Ljava/lang/String;
 
@@ -810,7 +810,7 @@
     goto :goto_2
 
     :cond_c
-    const-string v0, "vk.com/support"
+    const-string v0, "vk.ru/support"
 
     .line 61
     invoke-virtual {p2, v0}, Ljava/lang/String;->contains(Ljava/lang/CharSequence;)Z
@@ -862,7 +862,7 @@
     goto :goto_2
 
     :cond_d
-    const-string v0, "vk.com/settings"
+    const-string v0, "vk.ru/settings"
 
     .line 64
     invoke-virtual {p2, v0}, Ljava/lang/String;->contains(Ljava/lang/CharSequence;)Z

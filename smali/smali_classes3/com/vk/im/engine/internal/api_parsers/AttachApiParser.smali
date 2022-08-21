@@ -4484,7 +4484,7 @@
 
     const/16 v2, 0x190
 
-    const-string v5, "https://vk.com/images/camera_400.png"
+    const-string v5, "https://vk.ru/images/camera_400.png"
 
     invoke-virtual {v1, v5, v2, v2}, Lcom/vk/im/engine/models/ImageList$b;->a(Ljava/lang/String;II)Lcom/vk/im/engine/models/ImageList;
 

@@ -205,7 +205,7 @@
 
     const-string v2, "redirect_uri"
 
-    const-string v4, "https://oauth.vk.com/blank.html"
+    const-string v4, "https://oauth.vk.ru/blank.html"
 
     invoke-static {v4}, Lru/vtosters/lite/proxy/api/ApiProxy;->linkReplacer(Ljava/lang/String;)Ljava/lang/String;
 
@@ -294,7 +294,7 @@
 
     move-result-object v0
 
-    const-string v1, "oauth.vk.com"
+    const-string v1, "oauth.vk.ru"
 
     invoke-static {v1}, Lru/vtosters/lite/proxy/api/ApiProxy;->linkReplacer(Ljava/lang/String;)Ljava/lang/String;
 

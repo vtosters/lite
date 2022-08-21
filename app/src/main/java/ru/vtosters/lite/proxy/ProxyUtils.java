@@ -27,7 +27,7 @@ public class ProxyUtils{
             return proxyapi;
         }
 
-        return "api.vk.com";
+        return "api.vk.ru";
     }
 
     public static Boolean isZaboronaEnabled(){

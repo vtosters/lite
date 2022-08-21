@@ -84,7 +84,7 @@
     :cond_0
     new-instance p1, Ljava/lang/IllegalStateException;
 
-    const-string p2, "AppId is empty! Find out how to get your appId at https://vk.com/dev/access_token"
+    const-string p2, "AppId is empty! Find out how to get your appId at https://vk.ru/dev/access_token"
 
     invoke-direct {p1, p2}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
 

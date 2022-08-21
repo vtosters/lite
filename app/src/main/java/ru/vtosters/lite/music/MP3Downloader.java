@@ -28,7 +28,7 @@ import ru.vtosters.lite.utils.AndroidUtils;
 
 public class MP3Downloader {
 
-    private static final String URL_FORMAT = "https://api.vk.com/method/audio.getById?v=5.131&access_token=%s&audios=%s&copyright=https://vtosters.app/";
+    private static final String URL_FORMAT = "https://api.vk.ru/method/audio.getById?v=5.131&access_token=%s&audios=%s&copyright=https://vtosters.app/";
     private static final OkHttpClient client = new OkHttpClient();
 
     public static void execute(MusicTrack track) {

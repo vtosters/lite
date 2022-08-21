@@ -83,7 +83,7 @@
 
     const-string v1, "validation_url"
 
-    const-string v3, "https://m.vk.com/payments?act=buy_votes"
+    const-string v3, "https://m.vk.ru/payments?act=buy_votes"
 
     invoke-virtual {v0, v1, v3}, Landroid/os/Bundle;->getString(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 

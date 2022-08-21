@@ -359,7 +359,7 @@
     :cond_4
     and-int/lit8 v7, v2, 0x4
 
-    const-string v8, "vkontakte://vk.com/"
+    const-string v8, "vkontakte://vk.ru/"
 
     if-lez v7, :cond_8
 

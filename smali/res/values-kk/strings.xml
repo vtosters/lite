@@ -448,7 +448,7 @@
     <string name="collection_add_selection">Трансляцияға бекіту</string>
     <string name="collection_add_to_stream">Эфирге қосу</string>
     <string name="collection_add_wall_to_list_hint">Парақшаңыздан көрермендермен бөлісетін жазба таңдаңыз</string>
-    <string name="collection_link_add_link_input_hint">https://vk.com</string>
+    <string name="collection_link_add_link_input_hint">https://vk.ru</string>
     <string name="collection_link_limit">Осыдан әрі сілтеме қосуға болмайды, сіз шекке жеттіңіз</string>
     <string name="collection_link_not_valid">Сілтеме қолдаулы емес</string>
     <string name="collection_links_list">Сілтемелер тізімі</string>
@@ -1054,7 +1054,7 @@
     <string name="friends_recommendations_gmail">Gmail</string>
     <string name="friends_recommendations_invete_by_link">Сілтеме бойынша шақыру</string>
     <string name="friends_recommendations_invite">Шақыру</string>
-    <string name="friends_recommendations_invite_message">VK-да дос болайық! http://vk.com/join</string>
+    <string name="friends_recommendations_invite_message">VK-да дос болайық! http://vk.ru/join</string>
     <string name="friends_recommendations_locator_text">Қасыңыздағы адамдарды көру үшін олардан өз құрылғыларынан осы экранға кіруді сұраңыз</string>
     <string name="friends_recommendations_ok">ОК</string>
     <string name="friends_recommendations_request_done">Доссыздар</string>
@@ -1335,7 +1335,7 @@
     <string name="identity_address">Мекенжай</string>
     <string name="identity_address_dat">мекенжай</string>
     <string name="identity_custom_label">Өз категория</string>
-    <string name="identity_desc">Сіз деректерді бір-ақ рет толтырып келесіде [https://vk.com/services|топтамадағы] мини-қосымшаларға ол деректерді тез бере алатын боласыз</string>
+    <string name="identity_desc">Сіз деректерді бір-ақ рет толтырып келесіде [https://vk.ru/services|топтамадағы] мини-қосымшаларға ол деректерді тез бере алатын боласыз</string>
     <string name="identity_email">Электрондық пошта</string>
     <string name="identity_email_dat">электрондық пошта мекенжайы</string>
     <string name="identity_label">Категория</string>
@@ -1365,7 +1365,7 @@
     <string name="include_community">Бірлестік қосу</string>
     <string name="installed_games_title">Ойындарым</string>
     <string name="invalid_date">Жариялау күні дұрыс емес</string>
-    <string name="invitation">VK-да дос болайық! http://vk.com/join</string>
+    <string name="invitation">VK-да дос болайық! http://vk.ru/join</string>
     <string name="invitation_declined">Шақыру қабылданбады.</string>
     <string name="invitation_sent">Шақыру жіберілді.</string>
     <string name="invite">Шақыру</string>
@@ -3221,7 +3221,7 @@
     <string name="serv_user_returned_m">%1$s әңгімеге қайтып оралды</string>
     <string name="service_account_admin_100_info">"Профиль тек жеке мәлімдемелерге пайдаланылады.
 
-Кез келген сұрықтарыңыз болса [https://vk.com/support|Жәрдемге] жазыңыз."</string>
+Кез келген сұрықтарыңыз болса [https://vk.ru/support|Жәрдемге] жазыңыз."</string>
     <string name="service_account_admin_101_info">Парақша пікірлер қызметінің кері үйлесімділік үшін пайдаланылады.</string>
     <string name="service_account_mobile_info">VK мобильді жәрдемнің ресми парақшасы.</string>
     <string name="sett_accept_calls">Қосу</string>
@@ -5201,7 +5201,7 @@ https://vk.me"</string>
     <string name="votes_your_balance">Теңгеріміңіз</string>
     <string name="wall">Қабырға</string>
     <string name="wall_all_posts">Барлық жазбалар</string>
-    <string name="wall_comment_repost">&lt;a href=\"vklink://view/?http://vk.com/wall%1$d_%2$d\">жазбаға&lt;/a>&lt;font color=\"#aaaaaa\"> пікір&lt;/font></string>
+    <string name="wall_comment_repost">&lt;a href=\"vklink://view/?http://vk.ru/wall%1$d_%2$d\">жазбаға&lt;/a>&lt;font color=\"#aaaaaa\"> пікір&lt;/font></string>
     <string name="wall_disabled">Қабырған өшірулі</string>
     <string name="wall_empty">Әзірше жазба жоқ</string>
     <string name="wall_empty_my">Әзірше жазба жоқ</string>

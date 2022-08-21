@@ -3281,14 +3281,14 @@
 
     const-string v7, "invite_link"
 
-    const-string v8, "https://vk.com/join"
+    const-string v8, "https://vk.ru/join"
 
     .line 51
     invoke-virtual {v2, v7, v8}, Lorg/json/JSONObject;->optString(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v7
 
-    const-string v8, "it.optString(\"invite_link\", \"https://vk.com/join\")"
+    const-string v8, "it.optString(\"invite_link\", \"https://vk.ru/join\")"
 
     invoke-static {v7, v8}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 

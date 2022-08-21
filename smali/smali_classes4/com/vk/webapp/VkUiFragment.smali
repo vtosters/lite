@@ -1215,7 +1215,7 @@
 
     const/4 v2, 0x0
 
-    const-string v3, "static.vk.com"
+    const-string v3, "static.vk.ru"
 
     invoke-static {v3}, Lru/vtosters/lite/proxy/api/ApiProxy;->linkReplacer(Ljava/lang/String;)Ljava/lang/String;
 
@@ -1960,7 +1960,7 @@
 
     move-result-object v1
 
-    const-string v3, "api.vk.com"
+    const-string v3, "api.vk.ru"
 
     const-string v4, "apiHost"
 

@@ -76,7 +76,7 @@ public class JsonInjectors {
 
     public static JSONObject donateRecomm() throws JSONException {
         var title = AndroidUtils.getString("donate_to_vtl");
-        var link = "https://vk.com/vtosters_official";
+        var link = "https://vk.ru/vtosters_official";
         var text_color = "2D81E0";
 
         var json = new JSONObject();
@@ -118,7 +118,7 @@ public class JsonInjectors {
     public static JSONObject vktesters(int id) throws JSONException {
         var title = AndroidUtils.getString("tester_profile");
         var text_color = "2D81E0";
-        var link = "https://static.vk.com/bugs?lang=" + LangUtils.a() + "#/reporter" + id;
+        var link = "https://static.vk.ru/bugs?lang=" + LangUtils.a() + "#/reporter" + id;
 
         var json = new JSONObject();
         var icons = new JSONArray();
@@ -567,7 +567,7 @@ public class JsonInjectors {
                 }
             }
 
-            var playlists = fetchCatalogId("https://vk.com/audio?section=my_playlists");
+            var playlists = fetchCatalogId("https://vk.ru/audio?section=my_playlists");
             if (playlists != null) {
                 var catalogarr = playlists.optJSONObject("catalog").optJSONArray("sections").optJSONObject(0);
 
@@ -580,7 +580,7 @@ public class JsonInjectors {
                 oldItems.put(new JSONObject().put("id", id).put("title", title).put("url", url));
             }
 
-            var albums = fetchCatalogId("https://vk.com/audio?section=albums");
+            var albums = fetchCatalogId("https://vk.ru/audio?section=albums");
             if (albums != null) {
                 var catalogarr = albums.optJSONObject("catalog").optJSONArray("sections").optJSONObject(0);
 
@@ -593,7 +593,7 @@ public class JsonInjectors {
                 oldItems.put(new JSONObject().put("id", id).put("title", title).put("url", url));
             }
 
-            var recent = fetchCatalogId("https://vk.com/audio?section=recent");
+            var recent = fetchCatalogId("https://vk.ru/audio?section=recent");
             if (recent != null) {
                 var catalogarr = recent.optJSONObject("catalog").optJSONArray("sections").optJSONObject(0);
 
@@ -629,7 +629,7 @@ public class JsonInjectors {
         if (section == null) return null;
 
         var request = new Request.a()
-                .b("https://api.vk.com/method/catalog.getAudio"
+                .b("https://api.vk.ru/method/catalog.getAudio"
                         + "?v=5.119"
                         + "&https=1"
                         + "&need_blocks=1"
@@ -653,7 +653,7 @@ public class JsonInjectors {
 
     public static JSONObject fetchCatalogPodcast() {
         var request = new Request.a()
-                .b("https://api.vk.com/method/catalog.getPodcasts"
+                .b("https://api.vk.ru/method/catalog.getPodcasts"
                         + "?v=5.119"
                         + "&https=1"
                         + "&need_blocks=1"

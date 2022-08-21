@@ -54,7 +54,7 @@
 
     move-result-object p2
 
-    const-string v0, "oauth.vk.com"
+    const-string v0, "oauth.vk.ru"
 
     invoke-static {v0}, Lru/vtosters/lite/proxy/api/ApiProxy;->linkReplacer(Ljava/lang/String;)Ljava/lang/String;
 

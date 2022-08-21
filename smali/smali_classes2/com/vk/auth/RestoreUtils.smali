@@ -45,7 +45,7 @@
 
     move-result-object v0
 
-    const-string v1, "static.vk.com/restore"
+    const-string v1, "static.vk.ru/restore"
 
     invoke-static {v1}, Lru/vtosters/lite/proxy/api/ApiProxy;->linkReplacer(Ljava/lang/String;)Ljava/lang/String;
 
