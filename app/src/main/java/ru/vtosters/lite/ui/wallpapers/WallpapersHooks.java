@@ -22,6 +22,7 @@ import java.io.IOException;
 import java.io.OutputStream;
 
 import ru.vtosters.lite.utils.AndroidUtils;
+import ru.vtosters.lite.utils.ThemesUtils;
 
 public class WallpapersHooks {
     private static File mWallpaperFile;
@@ -60,7 +61,7 @@ public class WallpapersHooks {
             return;
         }
 
-        ((ImageView) view).setColorFilter(im_bg_chat); // set default bg color
+        view.setBackgroundColor(ThemesUtils.getColorFromAttr(im_bg_chat)); // set default bg color
     }
 
     public static String getWallpaperUrl() {
