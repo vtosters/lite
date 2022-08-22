@@ -1,13 +1,11 @@
 package ru.vtosters.lite.hooks;
 
-import static ru.vtosters.lite.foaf.FoafBase.getLastSeen;
 import static ru.vtosters.lite.foaf.FoafBase.getBypassedOnlineInfo;
 import static ru.vtosters.lite.hooks.OnlineFormatterHook.onlineHookProfiles;
 import static ru.vtosters.lite.hooks.DateHook.getLocale;
 import static ru.vtosters.lite.proxy.ProxyUtils.getApi;
 import static ru.vtosters.lite.proxy.ProxyUtils.getStatic;
 import static ru.vtosters.lite.utils.AndroidUtils.getDefaultPrefs;
-import static ru.vtosters.lite.utils.Base64Utils.decode;
 import static ru.vtosters.lite.utils.NewsFeedFiltersUtils.checkCaption;
 import static ru.vtosters.lite.utils.NewsFeedFiltersUtils.checkCopyright;
 import static ru.vtosters.lite.utils.NewsFeedFiltersUtils.isBadNews;
@@ -437,6 +435,30 @@ public class JsonInjectors {
         return false;
     }
 
+    public static Boolean isWhitelistedFilters(JSONObject list) throws JSONException {
+        var id = String.valueOf(list.optInt("owner_id"));
+
+        if (id.equals("0")) {
+            id = String.valueOf(list.optInt("source_id"));
+        }
+
+        var whitelist = AndroidUtils.getDefaultPrefs().getStringSet("whitelisted_filters_groups", Collections.synchronizedSet(new LinkedHashSet<>()));
+
+        return whitelist.contains(id);
+    }
+
+    public static Boolean isWhitelistedAd(JSONObject list) throws JSONException {
+        var id = String.valueOf(list.optInt("owner_id"));
+
+        if (id.equals("0")) {
+            id = String.valueOf(list.optInt("source_id"));
+        }
+
+        var whitelist = AndroidUtils.getDefaultPrefs().getStringSet("whitelisted_ad_groups", Collections.synchronizedSet(new LinkedHashSet<>()));
+
+        return whitelist.contains(id);
+    }
+
     public static JSONArray newsfeedlist(JSONArray items) throws JSONException {
         var selectedItems = getDefaultPrefs().getString("news_feed_selected_items", "");
         var filtersSet = getDefaultPrefs().getStringSet("news_feed_items_set", null);
@@ -482,7 +504,17 @@ public class JsonInjectors {
             var list = items.optJSONObject(j);
             var type = list.optString("type");
 
+            if (isWhitelistedAd(list)) {
+                newItems.put(list);
+                continue;
+            }
+
             if (isAds(list, type)) {
+                continue;
+            }
+
+            if (isWhitelistedFilters(list)) {
+                newItems.put(list);
                 continue;
             }
 

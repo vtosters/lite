@@ -1,6 +1,7 @@
 package ru.vtosters.lite.ui.vkui;
 
 import static ru.vtosters.lite.foaf.FoafBase.loadAndShow;
+import static ru.vtosters.lite.hooks.NewsfeedHook.setWhitelistedFilter;
 import static ru.vtosters.lite.utils.AccountManagerUtils.getUserID;
 import static ru.vtosters.lite.utils.AndroidUtils.sendToast;
 
@@ -24,6 +25,7 @@ import java.util.Objects;
 
 import kotlin.Unit;
 import kotlin.jvm.b.Functions;
+import ru.vtosters.lite.hooks.NewsfeedHook;
 import ru.vtosters.lite.utils.AndroidUtils;
 import ru.vtosters.lite.utils.RenameTool;
 
@@ -90,6 +92,33 @@ public class MenuBuilder {
                 RenameTool.createDialogGroup(ecp, ctx);
                 return Unit.a;
             });
+
+            if (NewsfeedHook.isWhitelistedFilter(ecp)) {
+                addItem(builder, "Удалить из вайтлиста фильтров", () -> {
+                    setWhitelistedFilter(ecp, false);
+                    return Unit.a;
+                });
+            } else {
+                addItem(builder, "Добавить в вайтлист фильтров", () -> {
+                    setWhitelistedFilter(ecp, true);
+                    sendToast("Группа добавлена в вайтлист");
+                    return Unit.a;
+                });
+            }
+
+            if (NewsfeedHook.isWhitelistedAd(ecp)) {
+                addItem(builder, "Удалить из вайтлиста рекламы", () -> {
+                    NewsfeedHook.setWhitelistedAd(ecp, false);
+                    sendToast("Группа удалена из вайтлиста");
+                    return Unit.a;
+                });
+            } else {
+                addItem(builder, "Добавить в вайтлист рекламы", () -> {
+                    NewsfeedHook.setWhitelistedAd(ecp, true);
+                    sendToast("Группа добавлена в вайтлист");
+                    return Unit.a;
+                });
+            }
 
         } catch (IllegalAccessException | InvocationTargetException e) {
             e.printStackTrace();

@@ -1,6 +1,7 @@
 package ru.vtosters.lite.hooks;
 
 import static java.lang.Long.MAX_VALUE;
+import static ru.vtosters.lite.utils.AndroidUtils.*;
 import static ru.vtosters.lite.utils.AndroidUtils.getPrefsValue;
 import static ru.vtosters.lite.utils.NewsFeedFiltersUtils.checkCaption;
 import static ru.vtosters.lite.utils.NewsFeedFiltersUtils.checkCopyright;
@@ -23,13 +24,19 @@ import static ru.vtosters.lite.utils.Preferences.milkshake;
 import static ru.vtosters.lite.utils.Preferences.vkme;
 
 import com.vk.core.preference.Preference;
+import com.vtosters.lite.api.ExtendedCommunityProfile;
 
 import org.json.JSONException;
 import org.json.JSONObject;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.HashSet;
+import java.util.LinkedHashSet;
 import java.util.List;
+
+import ru.vtosters.lite.utils.AccountManagerUtils;
+import ru.vtosters.lite.utils.AndroidUtils;
 
 public class NewsfeedHook {
     public static boolean injectFilters(JSONObject obj) throws JSONException {
@@ -102,18 +109,57 @@ public class NewsfeedHook {
         return params.toArray(new String[0]);
     }
 
+    public static boolean isWhitelistedFilter(ExtendedCommunityProfile eup) {
+        return getDefaultPrefs().getStringSet("whitelisted_filters_groups", Collections.synchronizedSet(new LinkedHashSet<>())).contains(String.valueOf(AccountManagerUtils.getUserID(eup)));
+    }
+
+    public static boolean isWhitelistedAd(ExtendedCommunityProfile eup) {
+        return getDefaultPrefs().getStringSet("whitelisted_ad_groups", Collections.synchronizedSet(new LinkedHashSet<>())).contains(String.valueOf(AccountManagerUtils.getUserID(eup)));
+    }
+
+    public static void setWhitelistedFilter(ExtendedCommunityProfile eup, boolean needWhitelist) {
+        var mutableAdsSet = Collections.synchronizedSet(new LinkedHashSet<String>());
+        var id = String.valueOf(AccountManagerUtils.getUserID(eup));
+
+        mutableAdsSet.addAll(getDefaultPrefs().getStringSet("whitelisted_filters_groups", mutableAdsSet));
+
+        if (needWhitelist) {
+            mutableAdsSet.add(id);
+        } else {
+            mutableAdsSet.remove(id);
+        }
+
+        getDefaultPrefs().edit().putStringSet("whitelisted_filters_groups", mutableAdsSet).apply();
+    }
+
+    public static void setWhitelistedAd(ExtendedCommunityProfile eup, boolean needWhitelist) {
+        var mutableAdsSet = Collections.synchronizedSet(new LinkedHashSet<String>());
+        var id = String.valueOf(AccountManagerUtils.getUserID(eup));
+
+        mutableAdsSet.addAll(getDefaultPrefs().getStringSet("whitelisted_ad_groups", mutableAdsSet));
+
+        if (needWhitelist) {
+            mutableAdsSet.add(id);
+        } else {
+            mutableAdsSet.remove(id);
+        }
+
+        getDefaultPrefs().edit().putStringSet("whitelisted_ad_groups", mutableAdsSet).apply();
+    }
+
     public static void adsParams(HashSet<String> hashSet) {
-        if (ads() || adsslider()) {
+        if (ads()) {
             hashSet.add("ads_disabled");
-            if (milkshake()) {
-                return;
-            }
+            hashSet.add("ads_app_slider");
+            return;
         }
 
         hashSet.add("ads_app");
         hashSet.add("ads_site");
         hashSet.add("ads_post");
-        hashSet.add("ads_app_slider");
+        if (adsslider()) {
+            hashSet.add("ads_app_slider");
+        }
         hashSet.add("ads_site_slider");
         hashSet.add("ads_app_video");
         hashSet.add("ads_post_pretty_cards");
