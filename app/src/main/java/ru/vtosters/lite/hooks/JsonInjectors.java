@@ -504,17 +504,7 @@ public class JsonInjectors {
             var list = items.optJSONObject(j);
             var type = list.optString("type");
 
-            if (isWhitelistedAd(list)) {
-                newItems.put(list);
-                continue;
-            }
-
             if (isAds(list, type)) {
-                continue;
-            }
-
-            if (isWhitelistedFilters(list)) {
-                newItems.put(list);
                 continue;
             }
 
@@ -540,31 +530,31 @@ public class JsonInjectors {
                 continue;
             }
 
-            if (adsgroup() && list.optInt("marked_as_ads") == 1) {
+            if (adsgroup() && list.optInt("marked_as_ads") == 1 && !isWhitelistedAd(list)) {
                 if (dev())
                     Log.d("NewsfeedAdBlockV2", "Removed post " + list.optInt("post_id") + " from feed, Reason: marked_as_ads is true");
                 continue;
             }
 
-            if (isBadNews(list.optString("text"))) {
+            if (isBadNews(list.optString("text")) && !isWhitelistedFilters(list)) {
                 if (dev())
                     Log.d("NewsfeedAdBlockV2", "Removed post " + list.optInt("post_id") + " from feed, Reason: text filters");
                 continue;
             }
 
-            if (checkCopyright(list)) {
+            if (checkCopyright(list) && !isWhitelistedFilters(list)) {
                 if (dev())
                     Log.d("NewsfeedAdBlockV2", "Removed post " + list.optInt("post_id") + " from feed, Reason: copyright filters");
                 continue;
             }
 
-            if (checkCaption(list)) {
+            if (checkCaption(list) && !isWhitelistedFilters(list)) {
                 if (dev())
                     Log.d("NewsfeedAdBlockV2", "Removed post " + list.optInt("post_id") + " from feed, Reason: caption filters");
                 continue;
             }
 
-            if (NewsFeedFiltersUtils.injectFiltersReposts(list)) {
+            if (NewsFeedFiltersUtils.injectFiltersReposts(list) && !isWhitelistedFilters(list)) {
                 if (dev())
                     Log.d("NewsfeedAdBlockV2", "Removed post " + list.optInt("post_id") + " from feed, Reason: repost ad");
                 continue;

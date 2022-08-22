@@ -84,10 +84,12 @@ public class FeedFragment extends MaterialPreferenceToolbarFragment {
         builder.setTitle("Внимание!");
         builder.setMessage("Вы действительно хотите удалить все элементы из списка?");
         builder.setCancelable(false);
-        builder.setPositiveButton("Да", (dialogInterface, i) -> edit().remove(key).apply());
+        builder.setPositiveButton("Да", (dialogInterface, i) -> {
+            edit().remove(key).apply();
+            sendToast("Список элементов успешно очищен");
+        });
         builder.setNegativeButton("Отмена", (dialogInterface, i) -> dialogInterface.dismiss());
         builder.show();
-        sendToast("Все элементы списка удалены");
     }
 
     private String countSet(String key) {
