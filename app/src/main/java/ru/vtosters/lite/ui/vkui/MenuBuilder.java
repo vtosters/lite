@@ -96,6 +96,7 @@ public class MenuBuilder {
             if (NewsfeedHook.isWhitelistedFilter(ecp)) {
                 addItem(builder, "Удалить из вайтлиста фильтров", () -> {
                     setWhitelistedFilter(ecp, false);
+                    sendToast("Группа удалена из вайтлиста");
                     return Unit.a;
                 });
             } else {
