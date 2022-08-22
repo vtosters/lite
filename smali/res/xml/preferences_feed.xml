@@ -23,7 +23,7 @@
             android:title="@string/vtldas" />
         <Preference
             android:key="whitelisted_ad_groups"
-            android:title="Вайтлист фильтров по рекламе" />
+            android:title="@string/whitelisted_ad_groups_title" />
     </PreferenceCategory>
     <PreferenceCategory android:title="@string/vtlfilters">
         <Preference
@@ -79,7 +79,7 @@
             android:title="@string/feed_ads_sources" />
         <Preference
             android:key="whitelisted_filters_groups"
-            android:title="Вайтлист фильтров по группам" />
+            android:title="@string/whitelisted_filters_groups_title" />
     </PreferenceCategory>
     <PreferenceCategory android:title="@string/vtlrecommend">
         <com.vtosters.lite.ui.MaterialSwitchPreference

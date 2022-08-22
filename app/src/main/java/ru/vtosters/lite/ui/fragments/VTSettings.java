@@ -330,7 +330,7 @@ public class VTSettings extends MaterialPreferenceToolbarFragment {
                 });
             }
         } else {
-            addPreference(this, "", AndroidUtils.getString("debug_warning"), AndroidUtils.getString("vkme_mode_info"), "ic_about_outline_28", preference -> false);
+            addPreference(this, "", AndroidUtils.getString("warning"), AndroidUtils.getString("vkme_mode_info"), "ic_about_outline_28", preference -> false);
         }
 
         addPreference(this, "", AndroidUtils.getString("vtlmedia"), mediasumm, "ic_media_outline_28", preference -> {

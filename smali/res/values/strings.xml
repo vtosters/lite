@@ -5725,8 +5725,6 @@ Expand text..."</string>
     <string name="otaupd">Update</string>
     <string name="otaupdavalible">Update available!</string>
     <string name="otaupdchanges">Changelog</string>
-    <string name="otawarning">Warning!</string>
-    <string name="otawarnwait">"Please don't close the app until the end of the update download"</string>
     <string name="privacy_vtl">Privacy</string>
     <string name="proxyadvsettings">Advanced proxy settings</string>
     <string name="proxyapi">API Domain</string>
@@ -5734,7 +5732,6 @@ Expand text..."</string>
     <string name="proxydonate">Donate</string>
     <string name="proxyhttp">HTTP Proxy</string>
     <string name="proxyhttps">HTTPS Proxy</string>
-    <string name="proxyimpinfo">Warning!</string>
     <string name="proxyimpinfosum">"Don't use proxy if VK is available in your country
 
 You need to restart the application to apply proxy settings"</string>
@@ -5882,7 +5879,6 @@ May look like a fake leaving the online"</string>
     <string name="activity_dnw_summary">Function lets you don\'t send write message status</string>
     <string name="activity_dns_summary">Function lets you don\'t send read stories status</string>
 
-    <string name="activity_dnr_warn">Warning!</string>
     <string name="activity_dnr_visual">Visually may not work correctly (locally read), but companion will see that it wasn\'t read.</string>
 
     <string name="activity_undel">Anti-delete messages</string>
@@ -5925,7 +5921,7 @@ May look like a fake leaving the online"</string>
 
     <string name="checkforupdates">Check for updates</string>
 
-    <string name="debug_warning">Warning!</string>
+    <string name="warning">Warning!</string>
     <string name="debug_warning_summary">These options are for testing this app only. If you are a regular user, please, don\'t use them</string>
     <string name="debug_show_settings_item">Show debug category in settings</string>
 
@@ -6307,4 +6303,22 @@ May look like a fake leaving the online"</string>
     <string name="denial_of_responsibility_proxy_summ">The developers of the VTLite client assume no responsibility for the safety of using third-party proxies \n\nUse at your own risk</string>
 
     <string name="altervika_title">Alternative VikaMobile domain</string>
+
+    <string name="proxy_setup_title">Set proxy</string>
+    <string name="proxy_setup_summ">Getting a third party proxy from supported proxy lists</string>
+    <string name="proxy_setup_success">Proxy set up, host:</string>
+
+    <string name="delete_elements_confirm">Are you sure you want to delete all elements from the list?</string>
+    <string name="elements_deleted_success">Element list cleared successfully</string>
+    <string name="get_proxy_error">An error occurred while getting the proxy</string>
+
+    <string name="add_to_filter_whitelist">Add to filters whitelist</string>
+    <string name="remove_from_filter_whitelist">Remove from filters whitelist</string>
+    <string name="add_to_ads_whitelist">Add to ads whitelist</string>
+    <string name="remove_from_ads_whitelist">Remove from ads whitelist</string>
+    <string name="removed_from_whitelist_success">Group removed from whitelist</string>
+    <string name="added_to_whitelist_success">Group added to whitelist</string>
+
+    <string name="whitelisted_ad_groups_title">Ads whitelist</string>
+    <string name="whitelisted_filters_groups_title">Filters whitelist</string>
 </resources>
