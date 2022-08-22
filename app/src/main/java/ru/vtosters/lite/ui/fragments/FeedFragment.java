@@ -81,14 +81,14 @@ public class FeedFragment extends MaterialPreferenceToolbarFragment {
 
     private void remdialog(String key, Context context) {
         VkAlertDialog.Builder builder = new VkAlertDialog.Builder(context);
-        builder.setTitle("Внимание!");
-        builder.setMessage("Вы действительно хотите удалить все элементы из списка?");
+        builder.setTitle(AndroidUtils.getString("warning"));
+        builder.setMessage(AndroidUtils.getString("delete_elements_confirm"));
         builder.setCancelable(false);
-        builder.setPositiveButton("Да", (dialogInterface, i) -> {
+        builder.setPositiveButton(AndroidUtils.getString("yes"), (dialogInterface, i) -> {
             edit().remove(key).apply();
-            sendToast("Список элементов успешно очищен");
+            sendToast(AndroidUtils.getString("elements_deleted_success"));
         });
-        builder.setNegativeButton("Отмена", (dialogInterface, i) -> dialogInterface.dismiss());
+        builder.setNegativeButton(AndroidUtils.getString("cancel"), (dialogInterface, i) -> dialogInterface.dismiss());
         builder.show();
     }
 

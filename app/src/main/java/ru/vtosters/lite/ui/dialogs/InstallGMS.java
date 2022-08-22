@@ -19,7 +19,7 @@ public class InstallGMS {
     public static void alert(final Activity activity) {
         if (!isGmsInstalled()) {
             VkAlertDialog.Builder builder = new VkAlertDialog.Builder(activity);
-            builder.setTitle(getString("debug_warning"));
+            builder.setTitle(getString("warning"));
             builder.setMessage(getString("gmsissuesumm"));
             builder.setCancelable(false);
             builder.setPositiveButton(getString("gmsissuebtn1"), (dialogInterface, i) -> edit().putBoolean("showAlertGms", false).apply());

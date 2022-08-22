@@ -4,7 +4,7 @@
         <Preference
             android:enabled="false"
             android:summary="@string/proxyimpinfosum"
-            android:title="@string/proxyimpinfo" />
+            android:title="@string/warning" />
         <Preference
             android:enabled="false"
             android:summary="@string/denial_of_responsibility_proxy_summ"
@@ -18,8 +18,8 @@
             android:title="@string/useproxy" />
         <Preference
             android:key="random_proxy"
-            android:summary="Получение стороннего прокси из поддерживаемых списков прокси"
-            android:title="Установить прокси" />
+            android:summary="@string/proxy_setup_summ"
+            android:title="@string/proxy_setup_title" />
     </PreferenceCategory>
     <PreferenceCategory android:title="@string/proxyadvsettings">
         <EditTextPreference

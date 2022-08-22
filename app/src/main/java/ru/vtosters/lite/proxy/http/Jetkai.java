@@ -3,6 +3,7 @@ import static ru.vtosters.lite.proxy.GithubList.getProxy;
 import static ru.vtosters.lite.proxy.ProxyUtils.forceProxyApplying;
 import static ru.vtosters.lite.proxy.ProxyUtils.hasProxy;
 import static ru.vtosters.lite.utils.AndroidUtils.edit;
+import static ru.vtosters.lite.utils.AndroidUtils.getString;
 
 import android.util.Log;
 
@@ -33,7 +34,7 @@ public class Jetkai{
         Log.d(TAG, "Setting proxy: " + proxy.split(":")[0] + ":" + proxy.split(":")[1]);
 
         if (RandomProxy.showProxyResult) {
-            AndroidUtils.sendToast("Прокси установлен, хост: " + proxy);
+            AndroidUtils.sendToast(getString("proxy_setup_success") + " " + proxy);
             RandomProxy.showProxyResult = false;
             RandomProxy.showProxyResult = false;
         }

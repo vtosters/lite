@@ -741,7 +741,7 @@
         <item>liked</item>
     </string-array>
     <string-array name="proxy">
-        <item>No Proxy</item>
+        <item>No proxy</item>
         <item>zaborona.help</item>
         <item>VikaMobile</item>
         <item>Random proxy</item>

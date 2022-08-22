@@ -19,7 +19,7 @@ public class Start {
             activity.requestPermissions(new String[]{"android.permission.WRITE_EXTERNAL_STORAGE"}, 228);
         }
         VkAlertDialog.Builder builder = new VkAlertDialog.Builder(activity);
-        builder.setTitle(getString("debug_warning"));
+        builder.setTitle(getString("warning"));
         builder.setMessage(getWelcome());
         builder.setCancelable(false);
         // android.content.DialogInterface.OnClickListener

@@ -4,7 +4,7 @@
     <Preference
         android:enabled="false"
         android:summary="@string/debug_warning_summary"
-        android:title="@string/debug_warning" />
+        android:title="@string/warning" />
     <com.vtosters.lite.ui.MaterialSwitchPreference
         android:defaultValue="false"
         android:key="devmenu"

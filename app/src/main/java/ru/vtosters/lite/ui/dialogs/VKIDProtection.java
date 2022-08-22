@@ -17,7 +17,7 @@ import ru.vtosters.lite.ui.fragments.VKUIwrapper;
 public class VKIDProtection {
     public static void alert(final Activity activity) {
         VkAlertDialog.Builder builder = new VkAlertDialog.Builder(activity);
-        builder.setTitle(getString("debug_warning"));
+        builder.setTitle(getString("warning"));
         builder.setMessage(getString("vkidsumm"));
         builder.setCancelable(false);
         // android.content.DialogInterface.OnClickListener
