@@ -34,27 +34,6 @@ public class WallpapersHooks {
         return mWallpaperFile == null ? mWallpaperFile = new File(getGlobalContext().getFilesDir(), "wallpaper.png") : mWallpaperFile;
     }
 
-    public static File compressFile(File file) { // TODO rewrite compress file
-        Bitmap bitmap = BitmapFactory.decodeFile(file.getAbsolutePath());
-        File compressedFile = new File(file.getParent(), file.getName());
-        OutputStream out = null;
-        try {
-            out = new FileOutputStream(compressedFile);
-            bitmap.compress(Bitmap.CompressFormat.PNG, 95, out);
-        } catch (Exception e) {
-            e.printStackTrace();
-        } finally {
-            try {
-                if (out != null) {
-                    out.close();
-                }
-            } catch (IOException e) {
-                e.printStackTrace();
-            }
-        }
-        return compressedFile;
-    }
-
     public static void setBg(View view) {
         if (getWallpaper() != null) {
             ((ImageView) view).setImageDrawable(getWallpaper()); // set picture to background
