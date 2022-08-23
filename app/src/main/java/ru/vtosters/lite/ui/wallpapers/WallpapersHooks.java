@@ -79,7 +79,6 @@ public class WallpapersHooks {
             return outPutFile;
         } catch (Exception e) {
             Log.d("Wallpapers", e.getMessage());
-            sendToast("Ошибка при установке обоев");
             return null;
         }
     }
