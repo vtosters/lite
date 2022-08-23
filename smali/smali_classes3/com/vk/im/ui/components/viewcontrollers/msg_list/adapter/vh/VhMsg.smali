@@ -95,7 +95,7 @@
 
 .field private d0:Lcom/vk/im/engine/models/messages/Msg;
 
-.field private final e:Lcom/vk/im/ui/views/msg/bubble/MsgBubbleView;
+.field public final e:Lcom/vk/im/ui/views/msg/bubble/MsgBubbleView;
 
 .field private e0:Lcom/vk/im/engine/models/dialogs/Dialog;
 
@@ -2669,6 +2669,8 @@
     iget-object v1, p0, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/vh/VhMsg;->U:Ljava/lang/StringBuilder;
 
     invoke-virtual {v0, v1}, Landroid/widget/ImageView;->setContentDescription(Ljava/lang/CharSequence;)V
+
+    invoke-static {v1, p0, p1}, Lru/vtosters/lite/hooks/VhMsgHook;->injectToName(Ljava/lang/CharSequence;Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/vh/VhMsg;Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/VhBindArgs;)V
 
     .line 7
     invoke-virtual {p1}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/VhBindArgs;->C()Z

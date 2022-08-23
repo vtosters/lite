@@ -14,6 +14,10 @@
             android:key="convBarRecomm"
             android:summary="@string/convBarRecomm_summ"
             android:title="@string/convBarRecomm_title" />
+        <com.vtosters.lite.ui.MaterialSwitchPreference
+            android:defaultValue="true"
+            android:key="shownamesinchats"
+            android:title="@string/shownamesinchats_title" />
     </PreferenceCategory>
     <PreferenceCategory android:title="@string/vk_messenger">
         <com.vtosters.lite.ui.MaterialSwitchPreference
