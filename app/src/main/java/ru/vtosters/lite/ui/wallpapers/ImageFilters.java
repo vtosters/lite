@@ -2,6 +2,7 @@ package ru.vtosters.lite.ui.wallpapers;
 
 import static ru.vtosters.lite.utils.AndroidUtils.getPreferences;
 import static ru.vtosters.lite.utils.AndroidUtils.getResources;
+import static ru.vtosters.lite.utils.AndroidUtils.sendToast;
 
 import android.graphics.Bitmap;
 import android.graphics.Canvas;
@@ -130,19 +131,27 @@ public class ImageFilters {
     }
 
     private static void darken(Bitmap bm) {
-        Canvas canvas = new Canvas(bm);
-        Paint p = new Paint(Color.RED);
-        ColorFilter filter = new LightingColorFilter(0xFF7F7F7F, 0x00000000);    // darken
-        p.setColorFilter(filter);
-        canvas.drawBitmap(bm, new Matrix(), p);
+        try {
+            Canvas canvas = new Canvas(bm);
+            Paint p = new Paint(Color.RED);
+            ColorFilter filter = new LightingColorFilter(0xFF7F7F7F, 0x00000000);    // darken
+            p.setColorFilter(filter);
+            canvas.drawBitmap(bm, new Matrix(), p);
+        } catch (Exception e) {
+            sendToast("Ошибка при работе затемнения обоев");
+        }
     }
 
     private static void lighten(Bitmap bm) {
-        Canvas canvas = new Canvas(bm);
-        Paint p = new Paint(Color.RED);
-        ColorFilter filter = new LightingColorFilter(0xFFFFFFFF, 0x00222222); // lighten
-        p.setColorFilter(filter);
-        canvas.drawBitmap(bm, new Matrix(), p);
+        try {
+            Canvas canvas = new Canvas(bm);
+            Paint p = new Paint(Color.RED);
+            ColorFilter filter = new LightingColorFilter(0xFFFFFFFF, 0x00222222); // lighten
+            p.setColorFilter(filter);
+            canvas.drawBitmap(bm, new Matrix(), p);
+        } catch (Exception e) {
+            sendToast("Ошибка при работе осветления обоев");
+        }
     }
 
     public static Bitmap applyInvertEffect(Bitmap src) {
