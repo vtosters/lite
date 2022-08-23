@@ -39,6 +39,8 @@
 .method private b()V
     .locals 2
 
+    return-void
+
     .line 1
     new-instance v0, Lcom/vk/api/account/AccountGetPingUrl;
 
