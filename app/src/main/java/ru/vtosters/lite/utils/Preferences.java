@@ -140,6 +140,8 @@ public class Preferences {
         return getBoolValue("foaf", false);
     }
 
+    public static boolean shownamesinchats() { return getBoolValue("shownamesinchats", true); }
+
     public static Class useNewSettings() {
         boolean bool = getBoolValue("useNewSettings", true);
         return bool ? VTSettings.class : SettingsListFragment.class;
