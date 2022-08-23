@@ -319,6 +319,7 @@
     <item name="avatar_hover" type="id" />
     <item name="avatar_image_view" type="id" />
     <item name="avatar_space" type="id" />
+    <item name="user_name" type="id" />
     <item name="avatar_story" type="id" />
     <item name="avatar_verified" type="id" />
     <item name="avatar_wrapper" type="id" />

@@ -89,6 +89,8 @@
 
 .field private final c:Lcom/vk/im/ui/views/avatars/AvatarView;
 
+.field private final username:Landroid/widget/TextView;
+
 .field private c0:Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/MsgListAdapterCallback;
 
 .field private final d:Landroid/widget/Space;
@@ -798,6 +800,20 @@
     check-cast v3, Lcom/vk/im/ui/views/msg/bubble/MsgBubbleView;
 
     iput-object v3, p0, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/vh/VhMsg;->e:Lcom/vk/im/ui/views/msg/bubble/MsgBubbleView;
+
+
+    invoke-static {}, Lru/vtosters/lite/hooks/VhMsgHook;->getUsernameLayId()I
+
+    move-result v3
+
+    invoke-virtual {p1, v3}, Landroid/view/View;->findViewById(I)Landroid/view/View;
+
+    move-result-object v3
+
+    check-cast v3, Landroid/widget/TextView;
+
+    iput-object v3, p0, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/vh/VhMsg;->username:Landroid/widget/TextView;
+
 
     .line 17
     sget v3, Lcom/vk/im/ui/h;->status:I
@@ -2670,7 +2686,9 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/ImageView;->setContentDescription(Ljava/lang/CharSequence;)V
 
-    invoke-static {v1, p0, p1}, Lru/vtosters/lite/hooks/VhMsgHook;->injectToName(Ljava/lang/CharSequence;Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/vh/VhMsg;Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/VhBindArgs;)V
+    iget-object v2, p0, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/vh/VhMsg;->username:Landroid/widget/TextView;
+
+    invoke-static {v1, p0, p1, v2}, Lru/vtosters/lite/hooks/VhMsgHook;->injectToName(Ljava/lang/CharSequence;Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/vh/VhMsg;Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/VhBindArgs;Landroid/widget/TextView;)V
 
     .line 7
     invoke-virtual {p1}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/VhBindArgs;->C()Z
