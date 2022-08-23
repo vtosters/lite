@@ -314,6 +314,8 @@
     sget v1, Lcom/vk/music/m/d;->ic_stat_notify_pause:I
 
     :goto_2
+    sget v1, Lcom/vk/music/m/d;->ic_music_outline_28:I
+
     invoke-virtual {p2, v1}, Landroidx/core/app/NotificationCompat$Builder;->setSmallIcon(I)Landroidx/core/app/NotificationCompat$Builder;
 
     move-result-object p2
@@ -610,6 +612,8 @@
 
     .line 39
     :goto_0
+    sget v6, Lcom/vk/music/m/d;->ic_music_outline_28:I
+
     invoke-virtual {v5, v6}, Landroidx/core/app/NotificationCompat$Builder;->setSmallIcon(I)Landroidx/core/app/NotificationCompat$Builder;
 
     move-result-object v5
