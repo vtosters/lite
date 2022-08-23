@@ -8,15 +8,19 @@ import static ru.vtosters.lite.ui.wallpapers.ImageFilters.getMonochrome;
 import static ru.vtosters.lite.ui.wallpapers.ImageFilters.getMosaic;
 import static ru.vtosters.lite.utils.AndroidUtils.getGlobalContext;
 import static ru.vtosters.lite.utils.AndroidUtils.getPreferences;
+import static ru.vtosters.lite.utils.AndroidUtils.sendToast;
+import static ru.vtosters.lite.utils.Preferences.getBoolValue;
 import static ru.vtosters.lite.utils.Preferences.hasVerification;
 
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.graphics.drawable.Drawable;
+import android.util.Log;
 import android.view.View;
 import android.widget.ImageView;
 
 import java.io.File;
+import java.io.FileInputStream;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.OutputStream;
@@ -34,6 +38,52 @@ public class WallpapersHooks {
         return mWallpaperFile == null ? mWallpaperFile = new File(getGlobalContext().getFilesDir(), "wallpaper.png") : mWallpaperFile;
     }
 
+    private static Boolean eligibleWallpaperFile(File file) {
+        if (file.length() >= 6291456) {
+            sendToast("Размер файла превышает лимит 6 MB");
+            removeWallpaper();
+            return false;
+        } else {
+            return true;
+        }
+    }
+
+    public static File compress(File file){
+        try {
+            BitmapFactory.Options o = new BitmapFactory.Options();
+            o.inJustDecodeBounds = true;
+            o.inSampleSize = 6;
+
+            FileInputStream inputStream = new FileInputStream(file);
+            BitmapFactory.decodeStream(inputStream, null, o);
+            inputStream.close();
+
+            final int REQUIRED_SIZE=200;
+
+            int scale = 1;
+            while(o.outWidth / scale / 2 >= REQUIRED_SIZE && o.outHeight / scale / 2 >= REQUIRED_SIZE) {
+                scale *= 2;
+            }
+
+            BitmapFactory.Options o2 = new BitmapFactory.Options();
+            o2.inSampleSize = scale;
+            inputStream = new FileInputStream(file);
+
+            Bitmap selectedBitmap = BitmapFactory.decodeStream(inputStream, null, o2);
+            inputStream.close();
+
+            File outPutFile = File.createTempFile("wallpaper_temp","image");
+            FileOutputStream outputStream = new FileOutputStream(outPutFile);
+            selectedBitmap.compress(Bitmap.CompressFormat.PNG, 85 , outputStream);
+
+            return outPutFile;
+        } catch (Exception e) {
+            Log.d("Wallpapers", e.getMessage());
+            sendToast("Ошибка при установке обоев");
+            return null;
+        }
+    }
+
     public static void setBg(View view) {
         if (getWallpaper() != null) {
             ((ImageView) view).setImageDrawable(getWallpaper()); // set picture to background
@@ -44,8 +94,14 @@ public class WallpapersHooks {
     }
 
     public static String getWallpaperUrl() {
-        if (getWallpaperFile().exists())
-            return getWallpaperFile().getAbsolutePath();
+        if (getWallpaperFile().exists() && eligibleWallpaperFile(getWallpaperFile()))
+            if (compress(getWallpaperFile()) == null) {
+                return "default";
+            } else if (getBoolValue("compresswp", true)){
+                return compress(getWallpaperFile()).getAbsolutePath();
+            } else {
+                return getWallpaperFile().getAbsolutePath();
+            }
         else
             return "default";
     }

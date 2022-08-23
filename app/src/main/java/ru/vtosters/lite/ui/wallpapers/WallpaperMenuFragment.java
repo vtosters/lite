@@ -158,6 +158,14 @@ public class WallpaperMenuFragment extends MaterialPreferenceToolbarFragment {
             });
         }
 
+        PreferencesUtil.addMaterialSwitchPreference(this, "compresswp", "Сжимать обои", "Значительно ускоряет открытие чатов", null, true, (preference, o) -> {
+            boolean value = (boolean) o;
+            edit().putBoolean("compresswp", value).commit();
+            requestUpdateWallpaper();
+            mWPPreviewPref.redraw();
+            return true;
+        });
+
         ListPreference blur = (ListPreference) findPreference("msg_blur_radius");
         ListPreference dim = (ListPreference) findPreference("msg_dim");
         ListPreference mosaic = (ListPreference) findPreference("msg_mosaic");
