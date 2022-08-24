@@ -30,7 +30,8 @@
         android:visibility="gone"
         android:gravity="center_horizontal"
         android:lineSpacingExtra="2.5dip"
-        style="@style/VKUIText.Headline"
+        style="@style/VKUIText.Caption1"
+        android:textColor="?im_reply_separator"
         android:textStyle="normal" /> <!-- TODO: Insert this TextView into MsgBubbleView below -->
 
     <com.vk.im.ui.views.msg.bubble.MsgBubbleView

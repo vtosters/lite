@@ -2688,7 +2688,7 @@
 
     iget-object v2, p0, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/vh/VhMsg;->username:Landroid/widget/TextView;
 
-    invoke-static {v1, p1, v2}, Lru/vtosters/lite/hooks/VhMsgHook;->injectToName(Ljava/lang/CharSequence;Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/VhBindArgs;Landroid/widget/TextView;)V
+    invoke-static {v1, p0, v2}, Lru/vtosters/lite/hooks/VhMsgHook;->injectToName(Ljava/lang/CharSequence;Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/vh/VhMsg;Landroid/widget/TextView;)V
 
     .line 7
     invoke-virtual {p1}, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/VhBindArgs;->C()Z
@@ -2790,11 +2790,6 @@
 
     invoke-virtual {p1}, Lcom/vk/im/ui/views/avatars/AvatarView;->e()V
 
-    .line 10
-    iget-object p1, p0, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/vh/VhMsg;->c:Lcom/vk/im/ui/views/avatars/AvatarView;
-
-    invoke-virtual {p1, v1}, Landroid/widget/ImageView;->setVisibility(I)V
-
     invoke-static {}, Lru/vtosters/lite/utils/Preferences;->shownamesinchats()Z
 
     move-result v4
@@ -2805,8 +2800,13 @@
 
     invoke-virtual {p1, v1}, Landroid/view/View;->setVisibility(I)V
 
-    .line 11
+    .line 10
     :cond_3
+    iget-object p1, p0, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/vh/VhMsg;->c:Lcom/vk/im/ui/views/avatars/AvatarView;
+
+    invoke-virtual {p1, v1}, Landroid/widget/ImageView;->setVisibility(I)V
+
+    .line 11
     iget-object p1, p0, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/vh/VhMsg;->d:Landroid/widget/Space;
 
     invoke-virtual {p1, v2}, Landroid/widget/Space;->setVisibility(I)V
