@@ -87,6 +87,10 @@
 
     move-result-object v4
 
+    invoke-static {v4}, Lru/vtosters/lite/proxy/api/ApiProxy;->staticFix(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v4
+
     goto :goto_0
 
     :cond_0

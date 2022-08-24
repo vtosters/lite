@@ -10,6 +10,9 @@ public class ApiProxy{
         var vkapi = "api.vk.ru";
         var oauth = "oauth.vk.ru";
         var vkstatic = "static.vk.ru";
+        var vkapiold = "api.vk.com";
+        var oauthold = "oauth.vk.com";
+        var vkstaticold = "static.vk.com";
 
         var proxyapi = getPrefsValue("proxyapi");
         var proxyoauth = getPrefsValue("proxyoauth");
@@ -21,7 +24,7 @@ public class ApiProxy{
             proxystatic = VikaMobile.getStaticHost();
         }
 
-        if (!isApiProxyEnabled() || link.isEmpty()) {
+        if ((!isApiProxyEnabled() || !isVikaProxyEnabled()) || link.isEmpty()) {
             return link;
         }
 
@@ -31,24 +34,48 @@ public class ApiProxy{
         }
 
         if (link.contains(vkapi)) {
-            return link.replace(proxyapi, vkapi);
+            return link.replaceAll(vkapi, proxyapi);
         }
 
         if (link.contains(oauth)) {
-            return link.replace(proxyoauth, oauth);
+            return link.replaceAll(oauth, proxyoauth);
         }
 
         if (link.contains(vkstatic)) {
-            return link.replace(proxystatic, vkstatic);
+            return link.replaceAll(vkstatic, proxystatic);
+        }
+
+        if (link.contains(vkapiold)) {
+            return link.replaceAll(vkapiold, proxyapi);
+        }
+
+        if (link.contains(oauthold)) {
+            return link.replaceAll(vkapiold, proxyoauth);
+        }
+
+        if (link.contains(vkstaticold)) {
+            return link.replaceAll(vkapiold, proxystatic);
         }
 
         return link;
     }
 
+    public static String staticFix(String str) {
+        var string = getPrefsValue("proxystatic");
+
+        if (isVikaProxyEnabled()) {
+            string = VikaMobile.getStaticHost();
+        }
+
+        if ((isApiProxyEnabled() || isVikaProxyEnabled()) && string.isEmpty()) return str;
+
+        return str.replaceAll(string, "static.vk.ru");
+    }
+
     public static String getAwayPhpCom(){
         var proxyapi = getPrefsValue("proxyapi");
 
-        if (isApiProxyEnabled() & !proxyapi.isEmpty()) {
+        if ((isApiProxyEnabled() || isVikaProxyEnabled()) & !proxyapi.isEmpty()) {
             return proxyapi;
         }
 

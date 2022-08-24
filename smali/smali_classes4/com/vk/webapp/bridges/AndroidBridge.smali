@@ -548,6 +548,10 @@
 
     const-string v3, "https://oauth.vk.ru/blank.html"
 
+    invoke-static {v3}, Lru/vtosters/lite/proxy/api/ApiProxy;->linkReplacer(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v3
+
     invoke-virtual {p0, v2, v1, v3}, Lcom/vk/webapp/bridges/AndroidBridge;->a(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Landroid/net/Uri;
 
     move-result-object v1
@@ -1491,7 +1495,7 @@
 
     move-result-object p1
 
-    invoke-static {p1}, Lru/vtosters/lite/proxy/api/ApiProxy;->linkReplacer(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {p1}, Lru/vtosters/lite/proxy/api/ApiProxy;->staticFix(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p1
 
@@ -2140,6 +2144,10 @@
     const-string v2, "redirect_url"
 
     const-string v3, "https://oauth.vk.ru/blank.html"
+
+    invoke-static {v3}, Lru/vtosters/lite/proxy/api/ApiProxy;->linkReplacer(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v3
 
     .line 5
     invoke-virtual {p1, v2, v3}, Lorg/json/JSONObject;->optString(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;

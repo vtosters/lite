@@ -59,7 +59,7 @@ public class ProxyUtils{
     }
 
     public static Boolean isApiProxyEnabled(){
-        return getPrefsValue("proxy").equals("apiproxy");
+        return getPrefsValue("proxy").equals("apiproxy") || getPrefsValue("proxy").equals("vika");
     }
 
     public static Boolean isVikaProxyEnabled(){

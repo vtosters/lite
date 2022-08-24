@@ -132,6 +132,10 @@
 
     aput-object p1, v0, v1
 
+    invoke-static {p3}, Lru/vtosters/lite/proxy/api/ApiProxy;->staticFix(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object p3
+
     const-string p1, "source_url"
 
     .line 5
