@@ -104,7 +104,7 @@ public class DNRInjector {
     @SuppressLint("ResourceType")
     public static List<Object> injectToList(List<Object> actions) {
         var list = new ArrayList<>(actions);
-        list.add(new DialogActionsListView.b.a(DialogAction.DOWNLOAD, 1, im_ic_chat_settings, getIdentifier("download_dl", "string"))); // DialogAction, Int, Icon, String
+        list.add(new DialogActionsListView.b.a(DialogAction.DOWNLOAD, 1, getIdentifier("im_ic_msgdl", "attr"), getIdentifier("download_dl", "string"))); // DialogAction, Int, Icon, String
 
         list.add(new DialogActionsListView.b.a(DialogAction.DNR_ON, 2, im_ic_pinned_msg_hide, getIdentifier("DNR_ON", "string"))); // DialogAction, Int, Icon, String
         list.add(new DialogActionsListView.b.a(DialogAction.DNR_OFF, 2, im_ic_pinned_msg_show, getIdentifier("DNR_OFF", "string"))); // DialogAction, Int, Icon, String
