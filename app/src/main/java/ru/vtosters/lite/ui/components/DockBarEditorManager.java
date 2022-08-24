@@ -260,13 +260,6 @@ public class DockBarEditorManager {
                         R.string.menu_apps,
                         R.id.menu_vk_apps,
                         AppsFragment.class);
-            case "tab_menu":
-                return DockBarTab.valuesOf(
-                        "tab_menu",
-                        milkshake() ? R.drawable.ic_user_circle_outline_28 : R.drawable.ic_menu_more_outline_28,
-                        milkshake() ? R.string.profile : R.string.menu,
-                        R.id.tab_menu,
-                        milkshake() ? ProfileFragment.class : MenuFragment.class);
             case "tab_settings":
             default:
                 return DockBarTab.valuesOf(
