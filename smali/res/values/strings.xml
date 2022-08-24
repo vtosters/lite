@@ -6321,4 +6321,6 @@ May look like a fake leaving the online"</string>
 
     <string name="whitelisted_ad_groups_title">Ads whitelist</string>
     <string name="whitelisted_filters_groups_title">Filters whitelist</string>
+
+    <string name="download_dl">Download dialog</string>
 </resources>

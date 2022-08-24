@@ -6183,4 +6183,6 @@
 
     <string name="whitelisted_ad_groups_title">Вайтлист рекламы</string>
     <string name="whitelisted_filters_groups_title">Вайтлист фильтров</string>
+
+    <string name="download_dl">Скачать диалог</string>
 </resources>
