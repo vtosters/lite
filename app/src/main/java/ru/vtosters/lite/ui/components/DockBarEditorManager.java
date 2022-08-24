@@ -97,7 +97,7 @@ public class DockBarEditorManager {
     private void parseSelectedTabs(String[] selectedTabsTags) {
         List<String> allTags = new ArrayList<>(Arrays.asList("tab_news", "tab_superapps", "tab_messages", "tab_feedback", "tab_profile",
                 "tab_friends", "tab_groups", "tab_photos", "tab_audios", "tab_videos", "tab_lives", "tab_games", "tab_liked",
-                "tab_fave", "tab_documents", "tab_payments", "tab_vk_apps", "tab_settings", "tab_menu"));
+                "tab_fave", "tab_documents", "tab_payments", "tab_vk_apps", "tab_settings"));
 
         for (String tag : selectedTabsTags) {
             mSelectedTabs.add(getTabByTag(tag));
