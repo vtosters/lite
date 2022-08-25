@@ -6323,4 +6323,5 @@ May look like a fake leaving the online"</string>
     <string name="whitelisted_filters_groups_title">Filters whitelist</string>
 
     <string name="download_dl">Download dialog</string>
+    <string name="download_dl_error">An error occurred while trying to download the dialog</string>
 </resources>

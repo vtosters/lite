@@ -16,6 +16,7 @@ import static ru.vtosters.lite.encryption.EncryptProvider.decryptMessage;
 import static ru.vtosters.lite.proxy.ProxyUtils.getApi;
 import static ru.vtosters.lite.utils.AccountManagerUtils.getUserToken;
 import static ru.vtosters.lite.utils.AndroidUtils.getIdentifier;
+import static ru.vtosters.lite.utils.AndroidUtils.getString;
 import static ru.vtosters.lite.utils.AndroidUtils.sendToast;
 import static ru.vtosters.lite.utils.Preferences.getDownloadsDir;
 
@@ -170,10 +171,11 @@ public class DNRInjector {
         }
 
         if (action == DialogAction.DOWNLOAD) {
-            File out = new File(Environment.getExternalStoragePublicDirectory(getDownloadsDir().getName()), peerId + "-dialog.html");
+            File out = new File(Environment.getExternalStoragePublicDirectory(getDownloadsDir().getName()), "dialog-" + peerId + ".html");
             try {
                 new MessagesDownloader().downloadDialog(peerId, new MessagesDownloader.HtmlDialogDownloaderFormatProvider(), out);
             } catch (Exception e) {
+                sendToast(getString("download_dl_error"));
                 e.printStackTrace();
             }
             return true;
@@ -297,13 +299,13 @@ public class DNRInjector {
 
         if (action == MsgAction.valueOf("TRANSLATE")) {
             if (isTextExist && isReplyExist) {
-                Translate.showTranslatedText(context, text + "\n\n" + AndroidUtils.getString("translator_reply") + "\n" + reply);
+                Translate.showTranslatedText(context, text + "\n\n" + getString("translator_reply") + "\n" + reply);
             } else if (isReplyExist) {
-                Translate.showTranslatedText(context, AndroidUtils.getString("translator_reply") + "\n" + reply);
+                Translate.showTranslatedText(context, getString("translator_reply") + "\n" + reply);
             } else if (isTextExist) {
                 Translate.showTranslatedText(context, text);
             } else {
-                sendToast(AndroidUtils.getString("translator_no_text"));
+                sendToast(getString("translator_no_text"));
             }
         }
 
@@ -331,7 +333,7 @@ public class DNRInjector {
 
         thread.start();
 
-        sendToast(AndroidUtils.getString("pin_dialog") + " " + (needToBePinned ? AndroidUtils.getString("dialog_pinned") : AndroidUtils.getString("dialog_unpinned")));
+        sendToast(getString("pin_dialog") + " " + getString(needToBePinned ? "dialog_pinned" : "dialog_unpinned"));
     }
 
     public static void setDnr(Dialog dialog, boolean value) {

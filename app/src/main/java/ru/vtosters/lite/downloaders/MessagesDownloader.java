@@ -184,6 +184,7 @@ public class MessagesDownloader{
                     "    background: white;\n" +
                     "    margin: 16px;\n" +
                     "    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.07);\n" +
+                    "    word-wrap: break-word;\n" +
                     "}\n" +
                     "\n" +
                     ".vtex-milk-msgcont br {\n" +
@@ -295,7 +296,8 @@ public class MessagesDownloader{
         private String provideReply(JSONObject replyMessage) throws JSONException {
             var messageId = replyMessage.getInt("id");
             var userId = replyMessage.getInt("from_id");
-            var text = mentionsReplace(replyMessage.getString("text"));
+            var peerId = replyMessage.getInt("peer_id");
+            var text = mentionsReplace(decryptMessage(replyMessage.getString("text"), peerId));
             var fwdMessages = replyMessage.optJSONArray("fwd_messages");
 
             var user = usersArray.get(userId);
@@ -352,7 +354,8 @@ public class MessagesDownloader{
                 var fwdsHtml = (fwdsMsg.size() > 0) ? provideForwardMessages(fwdsMsg) : ""; // recursion XD :>
 
                 var userId = fwd_message.getInt("from_id");
-                var text = mentionsReplace(fwd_message.getString("text"));
+                var peerId = fwd_message.getInt("peer_id");
+                var text = mentionsReplace(decryptMessage(fwd_message.getString("text"), peerId));
 
                 var userLink = ((userId < 0) ? "club" : "id") + Math.abs(userId);
 
