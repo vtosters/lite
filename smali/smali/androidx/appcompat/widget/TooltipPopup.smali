@@ -165,9 +165,13 @@
     .line 2
     iget-object v0, p0, Landroidx/appcompat/widget/TooltipPopup;->mContext:Landroid/content/Context;
 
+     invoke-static {v0}, Lru/vtosters/lite/res/proxy/ProxyResources;->addProxyResources(Ljava/lang/Object;)V
+
     invoke-virtual {v0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object v0
+
+
 
     sget v1, Landroidx/appcompat/R$dimen;->tooltip_precise_anchor_threshold:I
 
@@ -205,9 +209,13 @@
     .line 6
     iget-object v0, p0, Landroidx/appcompat/widget/TooltipPopup;->mContext:Landroid/content/Context;
 
+     invoke-static {v0}, Lru/vtosters/lite/res/proxy/ProxyResources;->addProxyResources(Ljava/lang/Object;)V
+
     invoke-virtual {v0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object v0
+
+
 
     sget v1, Landroidx/appcompat/R$dimen;->tooltip_precise_anchor_extra_offset:I
 
@@ -238,9 +246,13 @@
     .line 9
     iget-object v0, p0, Landroidx/appcompat/widget/TooltipPopup;->mContext:Landroid/content/Context;
 
+     invoke-static {v0}, Lru/vtosters/lite/res/proxy/ProxyResources;->addProxyResources(Ljava/lang/Object;)V
+
     invoke-virtual {v0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object v0
+
+
 
     if-eqz p4, :cond_2
 
@@ -292,9 +304,13 @@
     .line 14
     iget-object v4, p0, Landroidx/appcompat/widget/TooltipPopup;->mContext:Landroid/content/Context;
 
+     invoke-static {v4}, Lru/vtosters/lite/res/proxy/ProxyResources;->addProxyResources(Ljava/lang/Object;)V
+
     invoke-virtual {v4}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object v4
+
+
 
     const-string v5, "status_bar_height"
 

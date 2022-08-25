@@ -85,9 +85,13 @@
     .end annotation
 
     .line 1
+     invoke-static {p0}, Lru/vtosters/lite/res/proxy/ProxyResources;->addProxyResources(Ljava/lang/Object;)V
+
     invoke-virtual {p0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object p0
+
+
 
     const/4 v0, 0x1
 
@@ -290,9 +294,13 @@
     .locals 2
 
     .line 10
+     invoke-static {p0}, Lru/vtosters/lite/res/proxy/ProxyResources;->addProxyResources(Ljava/lang/Object;)V
+
     invoke-virtual {p0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object v0
+
+
 
     .line 11
     invoke-static {p0, p1}, Lcom/google/android/gms/common/internal/f;->a(Landroid/content/Context;Ljava/lang/String;)Ljava/lang/String;
@@ -336,9 +344,13 @@
     .locals 1
 
     .line 16
+     invoke-static {p0}, Lru/vtosters/lite/res/proxy/ProxyResources;->addProxyResources(Ljava/lang/Object;)V
+
     invoke-virtual {p0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object p0
+
+
 
     .line 17
     sget v0, Lb/d/a/c/b/b;->common_google_play_services_notification_channel_name:I
@@ -356,9 +368,13 @@
     .end annotation
 
     .line 1
+     invoke-static {p0}, Lru/vtosters/lite/res/proxy/ProxyResources;->addProxyResources(Ljava/lang/Object;)V
+
     invoke-virtual {p0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object v0
+
+
 
     .line 2
     invoke-static {p0}, Lcom/google/android/gms/common/internal/f;->a(Landroid/content/Context;)Ljava/lang/String;
@@ -617,9 +633,13 @@
     if-nez p1, :cond_1
 
     .line 3
+     invoke-static {p0}, Lru/vtosters/lite/res/proxy/ProxyResources;->addProxyResources(Ljava/lang/Object;)V
+
     invoke-virtual {p0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object p0
+
+
 
     sget p1, Lb/d/a/c/b/b;->common_google_play_services_notification_ticker:I
 
@@ -638,9 +658,13 @@
     .end annotation
 
     .line 1
+     invoke-static {p0}, Lru/vtosters/lite/res/proxy/ProxyResources;->addProxyResources(Ljava/lang/Object;)V
+
     invoke-virtual {p0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object v0
+
+
 
     const/4 v1, 0x0
 

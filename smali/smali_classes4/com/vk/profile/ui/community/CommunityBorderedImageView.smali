@@ -72,7 +72,7 @@
     const p2, 0x7f040022
 
     .line 3
-    invoke-static {p2}, Lcom/vk/core/ui/themes/VKThemeHelper;->d(I)I
+    invoke-static {p2}, Lru/vtosters/lite/res/VTLColors;->getColor(I)I
 
     move-result p2
 
@@ -147,9 +147,13 @@
     iput p2, p0, Lcom/vk/profile/ui/community/CommunityBorderedImageView;->l0:I
 
     .line 3
+     invoke-static {p0}, Lru/vtosters/lite/res/proxy/ProxyResources;->addProxyResources(Ljava/lang/Object;)V
+
     invoke-virtual {p0}, Landroid/widget/ImageView;->getResources()Landroid/content/res/Resources;
 
     move-result-object p1
+
+
 
     iget p2, p0, Lcom/vk/profile/ui/community/CommunityBorderedImageView;->k0:I
 
@@ -255,9 +259,13 @@
     if-eqz p1, :cond_0
 
     .line 5
+     invoke-static {p0}, Lru/vtosters/lite/res/proxy/ProxyResources;->addProxyResources(Ljava/lang/Object;)V
+
     invoke-virtual {p0}, Landroid/widget/ImageView;->getResources()Landroid/content/res/Resources;
 
     move-result-object p1
+
+
 
     iget v0, p0, Lcom/vk/profile/ui/community/CommunityBorderedImageView;->k0:I
 
@@ -290,9 +298,13 @@
 
     .line 9
     :cond_0
+     invoke-static {p0}, Lru/vtosters/lite/res/proxy/ProxyResources;->addProxyResources(Ljava/lang/Object;)V
+
     invoke-virtual {p0}, Landroid/widget/ImageView;->getResources()Landroid/content/res/Resources;
 
     move-result-object p1
+
+
 
     iget v0, p0, Lcom/vk/profile/ui/community/CommunityBorderedImageView;->l0:I
 

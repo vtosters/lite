@@ -102,7 +102,7 @@
     const p2, 0x7f040095
 
     .line 6
-    invoke-static {p2}, Lcom/vk/core/ui/themes/VKThemeHelper;->d(I)I
+    invoke-static {p2}, Lru/vtosters/lite/res/VTLColors;->getColor(I)I
 
     move-result p2
 
@@ -167,7 +167,7 @@
     const v0, 0x7f040302
 
     .line 15
-    invoke-static {v0}, Lcom/vk/core/ui/themes/VKThemeHelper;->d(I)I
+    invoke-static {v0}, Lru/vtosters/lite/res/VTLColors;->getColor(I)I
 
     move-result v0
 
@@ -367,9 +367,13 @@
     if-eqz v0, :cond_0
 
     .line 4
+     invoke-static {p0}, Lru/vtosters/lite/res/proxy/ProxyResources;->addProxyResources(Ljava/lang/Object;)V
+
     invoke-virtual {p0}, Landroid/widget/FrameLayout;->getResources()Landroid/content/res/Resources;
 
     move-result-object v2
+
+
 
     const v3, 0x7f120e4f
 
@@ -435,7 +439,7 @@
 
     const v0, 0x7f040416
 
-    invoke-static {v0}, Lcom/vk/core/ui/themes/VKThemeHelper;->d(I)I
+    invoke-static {v0}, Lru/vtosters/lite/res/VTLColors;->getColor(I)I
 
     move-result v0
 
@@ -903,7 +907,7 @@
 
     const v1, 0x7f040416
 
-    invoke-static {v1}, Lcom/vk/core/ui/themes/VKThemeHelper;->d(I)I
+    invoke-static {v1}, Lru/vtosters/lite/res/VTLColors;->getColor(I)I
 
     move-result v1
 
@@ -915,7 +919,7 @@
 
     const v1, 0x7f040095
 
-    invoke-static {v1}, Lcom/vk/core/ui/themes/VKThemeHelper;->d(I)I
+    invoke-static {v1}, Lru/vtosters/lite/res/VTLColors;->getColor(I)I
 
     move-result v1
 

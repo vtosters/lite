@@ -317,7 +317,7 @@
 
     sget p2, Lcom/vk/libvideo/b;->placeholder_icon_background:I
 
-    invoke-static {p2}, Lcom/vk/core/ui/themes/VKThemeHelper;->d(I)I
+    invoke-static {p2}, Lru/vtosters/lite/res/VTLColors;->getColor(I)I
 
     move-result p2
 
@@ -728,7 +728,7 @@
     :cond_4
     sget v4, Lcom/vk/libvideo/b;->text_placeholder:I
 
-    invoke-static {v4}, Lcom/vk/core/ui/themes/VKThemeHelper;->d(I)I
+    invoke-static {v4}, Lru/vtosters/lite/res/VTLColors;->getColor(I)I
 
     move-result v4
 
@@ -755,7 +755,7 @@
     :cond_5
     sget v4, Lcom/vk/libvideo/b;->text_placeholder:I
 
-    invoke-static {v4}, Lcom/vk/core/ui/themes/VKThemeHelper;->d(I)I
+    invoke-static {v4}, Lru/vtosters/lite/res/VTLColors;->getColor(I)I
 
     move-result v4
 
@@ -847,7 +847,7 @@
     :cond_8
     sget v3, Lcom/vk/libvideo/b;->text_placeholder:I
 
-    invoke-static {v3}, Lcom/vk/core/ui/themes/VKThemeHelper;->d(I)I
+    invoke-static {v3}, Lru/vtosters/lite/res/VTLColors;->getColor(I)I
 
     move-result v3
 
@@ -1039,7 +1039,7 @@
     :cond_11
     sget p3, Lcom/vk/libvideo/b;->placeholder_icon_foreground_primary:I
 
-    invoke-static {p3}, Lcom/vk/core/ui/themes/VKThemeHelper;->d(I)I
+    invoke-static {p3}, Lru/vtosters/lite/res/VTLColors;->getColor(I)I
 
     move-result p3
 

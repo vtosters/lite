@@ -180,9 +180,13 @@
 
     invoke-static {p1, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
+     invoke-static {p1}, Lru/vtosters/lite/res/proxy/ProxyResources;->addProxyResources(Ljava/lang/Object;)V
+
     invoke-virtual {p1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object p1
+
+
 
     iput-object p1, p0, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/msgparts/MsgPartArticleHolder;->D:Landroid/content/res/Resources;
 
@@ -348,7 +352,7 @@
 
     sget v1, Lcom/vk/im/ui/d;->vkim_msg_part_longread_mask:I
 
-    invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getColor(I)I
+    invoke-static {v0, v1}, Lru/vtosters/lite/res/VTLResources;->getColor(Landroid/content/res/Resources;I)I
 
     move-result v0
 
@@ -534,7 +538,7 @@
 
     sget v4, Lcom/vk/im/ui/d;->white:I
 
-    invoke-virtual {v3, v4}, Landroid/content/res/Resources;->getColor(I)I
+    invoke-static {v3, v4}, Lru/vtosters/lite/res/VTLResources;->getColor(Landroid/content/res/Resources;I)I
 
     move-result v3
 
@@ -555,7 +559,7 @@
 
     sget v4, Lcom/vk/im/ui/d;->muted_black:I
 
-    invoke-virtual {v3, v4}, Landroid/content/res/Resources;->getColor(I)I
+    invoke-static {v3, v4}, Lru/vtosters/lite/res/VTLResources;->getColor(Landroid/content/res/Resources;I)I
 
     move-result v3
 

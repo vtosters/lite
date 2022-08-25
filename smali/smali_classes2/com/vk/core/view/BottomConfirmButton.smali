@@ -197,7 +197,7 @@
     .line 13
     sget-object v4, Lb/h/z/m;->BottomConfirmButton:[I
 
-    invoke-virtual {v1, v2, v4}, Landroid/content/Context;->obtainStyledAttributes(Landroid/util/AttributeSet;[I)Landroid/content/res/TypedArray;
+    invoke-static {v1, v2, v4}, Lru/vtosters/lite/res/VTLResources;->obtainStyledAttributes(Landroid/content/Context;Landroid/util/AttributeSet;[I)Landroid/content/res/TypedArray;
 
     move-result-object v2
 
@@ -206,7 +206,7 @@
 
     sget v5, Lb/h/z/b;->header_text:I
 
-    invoke-static {v1, v5}, Lcom/vk/core/util/ContextExtKt;->h(Landroid/content/Context;I)I
+    invoke-static {v1, v5}, Lru/vtosters/lite/res/VTLColors;->getColor(Landroid/content/Context;I)I
 
     move-result v5
 
@@ -219,7 +219,7 @@
 
     sget v6, Lb/h/z/b;->accent:I
 
-    invoke-static {v1, v6}, Lcom/vk/core/util/ContextExtKt;->h(Landroid/content/Context;I)I
+    invoke-static {v1, v6}, Lru/vtosters/lite/res/VTLColors;->getColor(Landroid/content/Context;I)I
 
     move-result v6
 
@@ -232,7 +232,7 @@
 
     sget v7, Lb/h/z/b;->text_primary:I
 
-    invoke-static {v1, v7}, Lcom/vk/core/util/ContextExtKt;->h(Landroid/content/Context;I)I
+    invoke-static {v1, v7}, Lru/vtosters/lite/res/VTLColors;->getColor(Landroid/content/Context;I)I
 
     move-result v7
 
@@ -245,7 +245,7 @@
 
     sget v8, Lb/h/z/b;->accent:I
 
-    invoke-static {v1, v8}, Lcom/vk/core/util/ContextExtKt;->h(Landroid/content/Context;I)I
+    invoke-static {v1, v8}, Lru/vtosters/lite/res/VTLColors;->getColor(Landroid/content/Context;I)I
 
     move-result v8
 
@@ -344,7 +344,7 @@
     .line 26
     sget v2, Lb/h/z/b;->background_content:I
 
-    invoke-static {v1, v2}, Lcom/vk/core/util/ContextExtKt;->h(Landroid/content/Context;I)I
+    invoke-static {v1, v2}, Lru/vtosters/lite/res/VTLColors;->getColor(Landroid/content/Context;I)I
 
     move-result v1
 

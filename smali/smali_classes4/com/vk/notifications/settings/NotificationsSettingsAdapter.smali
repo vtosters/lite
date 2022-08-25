@@ -172,9 +172,13 @@
     .line 3
     iget-object v1, p0, Lcom/vk/notifications/settings/NotificationsSettingsAdapter;->f:Landroid/content/Context;
 
+     invoke-static {v1}, Lru/vtosters/lite/res/proxy/ProxyResources;->addProxyResources(Ljava/lang/Object;)V
+
     invoke-virtual {v1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object v1
+
+
 
     const v2, 0x7f100013
 
@@ -244,9 +248,13 @@
     .line 2
     iget-object v0, p0, Lcom/vk/notifications/settings/NotificationsSettingsAdapter;->f:Landroid/content/Context;
 
+     invoke-static {v0}, Lru/vtosters/lite/res/proxy/ProxyResources;->addProxyResources(Ljava/lang/Object;)V
+
     invoke-virtual {v0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object v0
+
+
 
     const v1, 0x7f030042
 
@@ -260,9 +268,13 @@
     :cond_0
     iget-object v0, p0, Lcom/vk/notifications/settings/NotificationsSettingsAdapter;->f:Landroid/content/Context;
 
+     invoke-static {v0}, Lru/vtosters/lite/res/proxy/ProxyResources;->addProxyResources(Ljava/lang/Object;)V
+
     invoke-virtual {v0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object v0
+
+
 
     const v1, 0x7f030041
 
@@ -279,9 +291,13 @@
     .line 5
     iget-object v1, p0, Lcom/vk/notifications/settings/NotificationsSettingsAdapter;->f:Landroid/content/Context;
 
+     invoke-static {v1}, Lru/vtosters/lite/res/proxy/ProxyResources;->addProxyResources(Ljava/lang/Object;)V
+
     invoke-virtual {v1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object v1
+
+
 
     const v2, 0x7f030043
 
@@ -834,9 +850,13 @@
 
     iget-object v1, p0, Lcom/vk/notifications/settings/NotificationsSettingsAdapter;->f:Landroid/content/Context;
 
+     invoke-static {v1}, Lru/vtosters/lite/res/proxy/ProxyResources;->addProxyResources(Ljava/lang/Object;)V
+
     invoke-virtual {v1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object v1
+
+
 
     const v2, 0x7f100072
 
@@ -909,9 +929,13 @@
 
     iget-object v1, p0, Lcom/vk/notifications/settings/NotificationsSettingsAdapter;->f:Landroid/content/Context;
 
+     invoke-static {v1}, Lru/vtosters/lite/res/proxy/ProxyResources;->addProxyResources(Ljava/lang/Object;)V
+
     invoke-virtual {v1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object v1
+
+
 
     const v2, 0x7f100072
 
@@ -1331,9 +1355,13 @@
 
     iget-object v12, v0, Lcom/vk/notifications/settings/NotificationsSettingsAdapter;->f:Landroid/content/Context;
 
+     invoke-static {v12}, Lru/vtosters/lite/res/proxy/ProxyResources;->addProxyResources(Ljava/lang/Object;)V
+
     invoke-virtual {v12}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object v12
+
+
 
     .line 28
     invoke-virtual/range {p1 .. p1}, Lcom/vk/api/notifications/NotificationsGetSettings$a;->a()I
@@ -1433,9 +1461,13 @@
 
     iget-object v11, v0, Lcom/vk/notifications/settings/NotificationsSettingsAdapter;->f:Landroid/content/Context;
 
+     invoke-static {v11}, Lru/vtosters/lite/res/proxy/ProxyResources;->addProxyResources(Ljava/lang/Object;)V
+
     invoke-virtual {v11}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object v11
+
+
 
     .line 35
     invoke-virtual/range {p1 .. p1}, Lcom/vk/api/notifications/NotificationsGetSettings$a;->c()I

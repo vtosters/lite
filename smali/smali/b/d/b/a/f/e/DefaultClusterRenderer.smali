@@ -284,9 +284,13 @@
     iput-boolean p2, p0, Lb/d/b/a/f/e/DefaultClusterRenderer;->e:Z
 
     .line 11
+     invoke-static {p1}, Lru/vtosters/lite/res/proxy/ProxyResources;->addProxyResources(Ljava/lang/Object;)V
+
     invoke-virtual {p1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object p2
+
+
 
     invoke-virtual {p2}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
 

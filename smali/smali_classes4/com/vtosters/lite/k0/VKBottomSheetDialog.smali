@@ -224,9 +224,13 @@
 
     move-result-object v1
 
+     invoke-static {v1}, Lru/vtosters/lite/res/proxy/ProxyResources;->addProxyResources(Ljava/lang/Object;)V
+
     invoke-virtual {v1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object v1
+
+
 
     invoke-virtual {v1}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
 
@@ -358,7 +362,7 @@
     const p1, 0x7f040095
 
     .line 25
-    invoke-static {p1}, Lcom/vk/core/ui/themes/VKThemeHelper;->d(I)I
+    invoke-static {p1}, Lru/vtosters/lite/res/VTLColors;->getColor(I)I
 
     move-result p1
 
@@ -696,18 +700,26 @@
 
     move-result-object v3
 
+     invoke-static {v3}, Lru/vtosters/lite/res/proxy/ProxyResources;->addProxyResources(Ljava/lang/Object;)V
+
     invoke-virtual {v3}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object v3
+
+
 
     .line 10
     invoke-virtual {p0}, Landroid/app/Dialog;->getContext()Landroid/content/Context;
 
     move-result-object v4
 
+     invoke-static {v4}, Lru/vtosters/lite/res/proxy/ProxyResources;->addProxyResources(Ljava/lang/Object;)V
+
     invoke-virtual {v4}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object v4
+
+
 
     const v5, 0x7f0803ac
 
@@ -891,7 +903,7 @@
 
     aput v3, v2, v4
 
-    invoke-virtual {v0, v2}, Landroid/content/Context;->obtainStyledAttributes([I)Landroid/content/res/TypedArray;
+    invoke-static {v0, v2}, Lru/vtosters/lite/res/VTLResources;->obtainStyledAttributes(Landroid/content/Context;[I)Landroid/content/res/TypedArray;
 
     move-result-object v0
 

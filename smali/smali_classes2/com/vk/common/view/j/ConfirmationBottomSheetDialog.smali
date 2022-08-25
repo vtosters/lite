@@ -429,7 +429,7 @@
     const p1, 0x7f0400e3
 
     .line 1
-    invoke-static {p1}, Lcom/vk/core/ui/themes/VKThemeHelper;->d(I)I
+    invoke-static {p1}, Lru/vtosters/lite/res/VTLColors;->getColor(I)I
 
     move-result p1
 

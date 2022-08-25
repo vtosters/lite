@@ -849,13 +849,17 @@
     .line 22
     new-instance p1, Landroid/graphics/drawable/ColorDrawable;
 
+     invoke-static {v0}, Lru/vtosters/lite/res/proxy/ProxyResources;->addProxyResources(Ljava/lang/Object;)V
+
     invoke-virtual {v0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object p2
 
+
+
     sget v3, Lcom/vk/im/ui/d;->msg_search_selection:I
 
-    invoke-virtual {p2, v3}, Landroid/content/res/Resources;->getColor(I)I
+    invoke-static {p2, v3}, Lru/vtosters/lite/res/VTLResources;->getColor(Landroid/content/res/Resources;I)I
 
     move-result p2
 
@@ -3050,7 +3054,7 @@
 
     sget v1, Lcom/vk/im/ui/c;->accent:I
 
-    invoke-static {v1}, Lcom/vk/core/ui/themes/VKThemeHelper;->d(I)I
+    invoke-static {v1}, Lru/vtosters/lite/res/VTLColors;->getColor(I)I
 
     move-result v1
 

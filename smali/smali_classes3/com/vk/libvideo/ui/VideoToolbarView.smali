@@ -606,9 +606,13 @@
 
     if-eqz v10, :cond_1
 
+     invoke-static/range {p0 .. p0}, Lru/vtosters/lite/res/proxy/ProxyResources;->addProxyResources(Ljava/lang/Object;)V
+
     invoke-virtual/range {p0 .. p0}, Landroid/widget/RelativeLayout;->getResources()Landroid/content/res/Resources;
 
     move-result-object v10
+
+
 
     sget v11, Lcom/vk/libvideo/j;->sponsored_post:I
 
@@ -872,9 +876,13 @@
 
     if-eqz v9, :cond_a
 
+     invoke-static/range {p0 .. p0}, Lru/vtosters/lite/res/proxy/ProxyResources;->addProxyResources(Ljava/lang/Object;)V
+
     invoke-virtual/range {p0 .. p0}, Landroid/widget/RelativeLayout;->getResources()Landroid/content/res/Resources;
 
     move-result-object v9
+
+
 
     sget v10, Lcom/vk/libvideo/j;->album_unnamed:I
 

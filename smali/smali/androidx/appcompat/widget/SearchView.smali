@@ -492,9 +492,13 @@
     iget-object p1, p0, Landroidx/appcompat/widget/SearchView;->mSearchButton:Landroid/widget/ImageView;
 
     .line 44
+     invoke-static {p0}, Lru/vtosters/lite/res/proxy/ProxyResources;->addProxyResources(Ljava/lang/Object;)V
+
     invoke-virtual {p0}, Landroid/view/ViewGroup;->getResources()Landroid/content/res/Resources;
 
     move-result-object p3
+
+
 
     sget v2, Landroidx/appcompat/R$string;->abc_searchview_description_search:I
 
@@ -1053,9 +1057,13 @@
     const/4 p1, 0x1
 
     .line 9
+     invoke-static {p0}, Lru/vtosters/lite/res/proxy/ProxyResources;->addProxyResources(Ljava/lang/Object;)V
+
     invoke-virtual {p0}, Landroid/view/ViewGroup;->getResources()Landroid/content/res/Resources;
 
     move-result-object v4
+
+
 
     .line 10
     invoke-virtual {p2}, Landroid/app/SearchableInfo;->getVoiceLanguageModeId()I
@@ -1362,9 +1370,13 @@
 
     move-result-object v0
 
+     invoke-static {v0}, Lru/vtosters/lite/res/proxy/ProxyResources;->addProxyResources(Ljava/lang/Object;)V
+
     invoke-virtual {v0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object v0
+
+
 
     sget v1, Landroidx/appcompat/R$dimen;->abc_search_view_preferred_height:I
 
@@ -1384,9 +1396,13 @@
 
     move-result-object v0
 
+     invoke-static {v0}, Lru/vtosters/lite/res/proxy/ProxyResources;->addProxyResources(Ljava/lang/Object;)V
+
     invoke-virtual {v0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object v0
+
+
 
     sget v1, Landroidx/appcompat/R$dimen;->abc_search_view_preferred_width:I
 
@@ -1474,9 +1490,13 @@
     .locals 1
 
     .line 1
+     invoke-static {p0}, Lru/vtosters/lite/res/proxy/ProxyResources;->addProxyResources(Ljava/lang/Object;)V
+
     invoke-virtual {p0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object p0
+
+
 
     invoke-virtual {p0}, Landroid/content/res/Resources;->getConfiguration()Landroid/content/res/Configuration;
 
@@ -2179,9 +2199,13 @@
 
     move-result-object v0
 
+     invoke-static {v0}, Lru/vtosters/lite/res/proxy/ProxyResources;->addProxyResources(Ljava/lang/Object;)V
+
     invoke-virtual {v0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object v0
+
+
 
     .line 3
     iget-object v1, p0, Landroidx/appcompat/widget/SearchView;->mSearchPlate:Landroid/view/View;

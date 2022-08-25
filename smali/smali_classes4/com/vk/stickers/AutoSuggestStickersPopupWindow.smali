@@ -338,9 +338,13 @@
 
     iget-object p3, p0, Lcom/vk/stickers/AutoSuggestStickersPopupWindow;->q:Landroid/content/Context;
 
+     invoke-static {p3}, Lru/vtosters/lite/res/proxy/ProxyResources;->addProxyResources(Ljava/lang/Object;)V
+
     invoke-virtual {p3}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object p3
+
+
 
     sget p4, Lcom/vk/stickers/h;->left_menu_size:I
 
@@ -786,9 +790,13 @@
 
     iget-object v5, p0, Lcom/vk/stickers/AutoSuggestStickersPopupWindow;->q:Landroid/content/Context;
 
+     invoke-static {v5}, Lru/vtosters/lite/res/proxy/ProxyResources;->addProxyResources(Ljava/lang/Object;)V
+
     invoke-virtual {v5}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object v5
+
+
 
     sget v6, Lcom/vk/stickers/h;->left_menu_size:I
 

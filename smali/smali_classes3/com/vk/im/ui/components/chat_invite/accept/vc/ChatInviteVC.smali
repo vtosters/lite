@@ -539,9 +539,13 @@
 
     if-eqz v2, :cond_6
 
+     invoke-static {v2}, Lru/vtosters/lite/res/proxy/ProxyResources;->addProxyResources(Ljava/lang/Object;)V
+
     invoke-virtual {v2}, Landroid/view/View;->getResources()Landroid/content/res/Resources;
 
     move-result-object v2
+
+
 
     .line 20
     sget v3, Lcom/vk/im/ui/l;->vkim_msg_header_channel_count:I
@@ -623,9 +627,13 @@
     .line 27
     iget-object v2, v0, Lcom/vk/im/ui/components/chat_invite/accept/vc/ChatInviteVC;->l:Landroid/content/Context;
 
+     invoke-static {v2}, Lru/vtosters/lite/res/proxy/ProxyResources;->addProxyResources(Ljava/lang/Object;)V
+
     invoke-virtual {v2}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object v2
+
+
 
     .line 28
     sget v4, Lcom/vk/im/ui/l;->vkim_chat_invite_members_count:I

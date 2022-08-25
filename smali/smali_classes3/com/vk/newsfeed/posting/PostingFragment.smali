@@ -1185,9 +1185,13 @@
     move-result-object p3
 
     .line 4
+     invoke-static {p1}, Lru/vtosters/lite/res/proxy/ProxyResources;->addProxyResources(Ljava/lang/Object;)V
+
     invoke-virtual {p1}, Landroid/view/ViewGroup;->getResources()Landroid/content/res/Resources;
 
     move-result-object v2
+
+
 
     const v3, 0x7f0701cf
 
@@ -1422,9 +1426,13 @@
     iput-boolean p2, p0, Lcom/vk/newsfeed/posting/PostingFragment;->I:Z
 
     .line 7
+     invoke-static {p0}, Lru/vtosters/lite/res/proxy/ProxyResources;->addProxyResources(Ljava/lang/Object;)V
+
     invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getResources()Landroid/content/res/Resources;
 
     move-result-object p2
+
+
 
     const-string v1, "resources"
 
@@ -1456,9 +1464,13 @@
 
     move-result v1
 
+     invoke-static {p2}, Lru/vtosters/lite/res/proxy/ProxyResources;->addProxyResources(Ljava/lang/Object;)V
+
     invoke-virtual {p2}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object p2
+
+
 
     const v2, 0x7f0701e8
 

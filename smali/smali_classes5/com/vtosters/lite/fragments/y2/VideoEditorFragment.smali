@@ -184,16 +184,20 @@
     const v2, 0x7f040095
 
     .line 2
-    invoke-static {v2}, Lcom/vk/core/ui/themes/VKThemeHelper;->d(I)I
+    invoke-static {v2}, Lru/vtosters/lite/res/VTLColors;->getColor(I)I
 
     move-result v2
 
     .line 3
     new-instance v3, Lcom/vk/core/ui/CardDrawable;
 
+     invoke-static {p0}, Lru/vtosters/lite/res/proxy/ProxyResources;->addProxyResources(Ljava/lang/Object;)V
+
     invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getResources()Landroid/content/res/Resources;
 
     move-result-object v4
+
+
 
     const/high16 v5, 0x40000000    # 2.0f
 
@@ -498,9 +502,13 @@
     .line 3
     iget-object p1, p0, Lcom/vtosters/lite/fragments/y2/VideoEditorFragment;->T:Landroid/view/MenuItem;
 
+     invoke-static {p0}, Lru/vtosters/lite/res/proxy/ProxyResources;->addProxyResources(Ljava/lang/Object;)V
+
     invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getResources()Landroid/content/res/Resources;
 
     move-result-object p2
+
+
 
     const v0, 0x7f0803be
 

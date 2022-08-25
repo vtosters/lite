@@ -311,9 +311,13 @@
     .line 4
     iget-object v0, p0, Lcom/vtosters/lite/fragments/s2/GroupsFragment1;->g0:Ljava/util/ArrayList;
 
+     invoke-static {p0}, Lru/vtosters/lite/res/proxy/ProxyResources;->addProxyResources(Ljava/lang/Object;)V
+
     invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getResources()Landroid/content/res/Resources;
 
     move-result-object v1
+
+
 
     const v2, 0x7f10003a
 
@@ -357,9 +361,13 @@
     .line 6
     iget-object v0, p0, Lcom/vtosters/lite/fragments/s2/GroupsFragment1;->g0:Ljava/util/ArrayList;
 
+     invoke-static {p0}, Lru/vtosters/lite/res/proxy/ProxyResources;->addProxyResources(Ljava/lang/Object;)V
+
     invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getResources()Landroid/content/res/Resources;
 
     move-result-object v1
+
+
 
     const v2, 0x7f10001d
 
@@ -416,9 +424,13 @@
     .line 9
     iget-object v0, p0, Lcom/vtosters/lite/fragments/s2/GroupsFragment1;->g0:Ljava/util/ArrayList;
 
+     invoke-static {p0}, Lru/vtosters/lite/res/proxy/ProxyResources;->addProxyResources(Ljava/lang/Object;)V
+
     invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getResources()Landroid/content/res/Resources;
 
     move-result-object v1
+
+
 
     const v2, 0x7f100038
 

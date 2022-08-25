@@ -1059,18 +1059,26 @@
 
     if-ne v3, v4, :cond_1
 
+     invoke-static {p0}, Lru/vtosters/lite/res/proxy/ProxyResources;->addProxyResources(Ljava/lang/Object;)V
+
     invoke-virtual {p0}, Landroid/widget/FrameLayout;->getResources()Landroid/content/res/Resources;
 
     move-result-object v3
+
+
 
     const v4, 0x7f120bb3
 
     goto :goto_0
 
     :cond_1
+     invoke-static {p0}, Lru/vtosters/lite/res/proxy/ProxyResources;->addProxyResources(Ljava/lang/Object;)V
+
     invoke-virtual {p0}, Landroid/widget/FrameLayout;->getResources()Landroid/content/res/Resources;
 
     move-result-object v3
+
+
 
     const v4, 0x7f120be9
 
@@ -3853,9 +3861,13 @@
     .line 21
     iget-object v3, p0, Lcom/vk/stories/view/StoryView;->O0:Landroid/widget/TextView;
 
+     invoke-static {p0}, Lru/vtosters/lite/res/proxy/ProxyResources;->addProxyResources(Ljava/lang/Object;)V
+
     invoke-virtual {p0}, Landroid/widget/FrameLayout;->getResources()Landroid/content/res/Resources;
 
     move-result-object v6
+
+
 
     const v9, 0x7f120e55
 

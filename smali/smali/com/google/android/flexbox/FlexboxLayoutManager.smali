@@ -5981,9 +5981,13 @@
     iget-object v4, p0, Lcom/google/android/flexbox/FlexboxLayoutManager;->P:Landroid/content/Context;
 
     .line 8
+     invoke-static {v4}, Lru/vtosters/lite/res/proxy/ProxyResources;->addProxyResources(Ljava/lang/Object;)V
+
     invoke-virtual {v4}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object v4
+
+
 
     invoke-virtual {v4}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
 
@@ -6029,9 +6033,13 @@
     iget-object v4, p0, Lcom/google/android/flexbox/FlexboxLayoutManager;->P:Landroid/content/Context;
 
     .line 12
+     invoke-static {v4}, Lru/vtosters/lite/res/proxy/ProxyResources;->addProxyResources(Ljava/lang/Object;)V
+
     invoke-virtual {v4}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object v4
+
+
 
     invoke-virtual {v4}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
 

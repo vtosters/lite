@@ -121,7 +121,7 @@
     .line 3
     iget p2, p0, Lcom/vk/core/utils/SpannableUtils2;->C:I
 
-    invoke-static {p2}, Lcom/vk/core/ui/themes/VKThemeHelper;->d(I)I
+    invoke-static {p2}, Lru/vtosters/lite/res/VTLColors;->getColor(I)I
 
     move-result p2
 

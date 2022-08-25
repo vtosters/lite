@@ -1084,9 +1084,13 @@
     if-eqz v0, :cond_2
 
     .line 6
+     invoke-static {p0}, Lru/vtosters/lite/res/proxy/ProxyResources;->addProxyResources(Ljava/lang/Object;)V
+
     invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getResources()Landroid/content/res/Resources;
 
     move-result-object v1
+
+
 
     const v2, 0x7f120ce7
 
@@ -1679,7 +1683,7 @@
     if-eqz v0, :cond_0
 
     .line 2
-    invoke-static {p1}, Lcom/vk/core/ui/themes/VKThemeHelper;->d(I)I
+    invoke-static {p1}, Lru/vtosters/lite/res/VTLColors;->getColor(I)I
 
     move-result p1
 

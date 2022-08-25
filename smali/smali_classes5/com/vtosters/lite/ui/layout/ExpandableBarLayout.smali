@@ -68,9 +68,13 @@
     invoke-virtual {p1, v0}, Landroid/graphics/Paint;->setAlpha(I)V
 
     .line 7
+     invoke-static {p0}, Lru/vtosters/lite/res/proxy/ProxyResources;->addProxyResources(Ljava/lang/Object;)V
+
     invoke-virtual {p0}, Landroid/view/ViewGroup;->getResources()Landroid/content/res/Resources;
 
     move-result-object p1
+
+
 
     const v0, 0x7f08019a
 
@@ -81,9 +85,13 @@
     iput-object p1, p0, Lcom/vtosters/lite/ui/layout/ExpandableBarLayout;->C:Landroid/graphics/drawable/Drawable;
 
     .line 8
+     invoke-static {p0}, Lru/vtosters/lite/res/proxy/ProxyResources;->addProxyResources(Ljava/lang/Object;)V
+
     invoke-virtual {p0}, Landroid/view/ViewGroup;->getResources()Landroid/content/res/Resources;
 
     move-result-object p1
+
+
 
     const v0, 0x7f070067
 
@@ -142,9 +150,13 @@
     invoke-virtual {p1, p2}, Landroid/graphics/Paint;->setAlpha(I)V
 
     .line 15
+     invoke-static {p0}, Lru/vtosters/lite/res/proxy/ProxyResources;->addProxyResources(Ljava/lang/Object;)V
+
     invoke-virtual {p0}, Landroid/view/ViewGroup;->getResources()Landroid/content/res/Resources;
 
     move-result-object p1
+
+
 
     const p2, 0x7f08019a
 
@@ -155,9 +167,13 @@
     iput-object p1, p0, Lcom/vtosters/lite/ui/layout/ExpandableBarLayout;->C:Landroid/graphics/drawable/Drawable;
 
     .line 16
+     invoke-static {p0}, Lru/vtosters/lite/res/proxy/ProxyResources;->addProxyResources(Ljava/lang/Object;)V
+
     invoke-virtual {p0}, Landroid/view/ViewGroup;->getResources()Landroid/content/res/Resources;
 
     move-result-object p1
+
+
 
     const p2, 0x7f070067
 
@@ -216,9 +232,13 @@
     invoke-virtual {p1, p2}, Landroid/graphics/Paint;->setAlpha(I)V
 
     .line 23
+     invoke-static {p0}, Lru/vtosters/lite/res/proxy/ProxyResources;->addProxyResources(Ljava/lang/Object;)V
+
     invoke-virtual {p0}, Landroid/view/ViewGroup;->getResources()Landroid/content/res/Resources;
 
     move-result-object p1
+
+
 
     const p2, 0x7f08019a
 
@@ -229,9 +249,13 @@
     iput-object p1, p0, Lcom/vtosters/lite/ui/layout/ExpandableBarLayout;->C:Landroid/graphics/drawable/Drawable;
 
     .line 24
+     invoke-static {p0}, Lru/vtosters/lite/res/proxy/ProxyResources;->addProxyResources(Ljava/lang/Object;)V
+
     invoke-virtual {p0}, Landroid/view/ViewGroup;->getResources()Landroid/content/res/Resources;
 
     move-result-object p1
+
+
 
     const p2, 0x7f070067
 
@@ -293,9 +317,13 @@
     invoke-virtual {p1, p2}, Landroid/graphics/Paint;->setAlpha(I)V
 
     .line 31
+     invoke-static {p0}, Lru/vtosters/lite/res/proxy/ProxyResources;->addProxyResources(Ljava/lang/Object;)V
+
     invoke-virtual {p0}, Landroid/view/ViewGroup;->getResources()Landroid/content/res/Resources;
 
     move-result-object p1
+
+
 
     const p2, 0x7f08019a
 
@@ -306,9 +334,13 @@
     iput-object p1, p0, Lcom/vtosters/lite/ui/layout/ExpandableBarLayout;->C:Landroid/graphics/drawable/Drawable;
 
     .line 32
+     invoke-static {p0}, Lru/vtosters/lite/res/proxy/ProxyResources;->addProxyResources(Ljava/lang/Object;)V
+
     invoke-virtual {p0}, Landroid/view/ViewGroup;->getResources()Landroid/content/res/Resources;
 
     move-result-object p1
+
+
 
     const p2, 0x7f070067
 
@@ -993,9 +1025,13 @@
     iput-object v0, p0, Lcom/vtosters/lite/ui/layout/ExpandableBarLayout;->d:Landroid/view/View;
 
     .line 8
+     invoke-static {p0}, Lru/vtosters/lite/res/proxy/ProxyResources;->addProxyResources(Ljava/lang/Object;)V
+
     invoke-virtual {p0}, Landroid/view/ViewGroup;->getResources()Landroid/content/res/Resources;
 
     move-result-object v0
+
+
 
     invoke-virtual {v0}, Landroid/content/res/Resources;->getConfiguration()Landroid/content/res/Configuration;
 

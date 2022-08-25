@@ -12,9 +12,13 @@
     .locals 1
 
     .line 10
+     invoke-static {p0}, Lru/vtosters/lite/res/proxy/ProxyResources;->addProxyResources(Ljava/lang/Object;)V
+
     invoke-virtual {p0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object v0
+
+
 
     .line 11
     invoke-static {p0}, Lcom/twitter/sdk/android/core/u/CommonUtils;->a(Landroid/content/Context;)Ljava/lang/String;
@@ -45,9 +49,13 @@
     if-lez v0, :cond_0
 
     .line 8
+     invoke-static {p0}, Lru/vtosters/lite/res/proxy/ProxyResources;->addProxyResources(Ljava/lang/Object;)V
+
     invoke-virtual {p0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object p0
+
+
 
     invoke-virtual {p0, v0}, Landroid/content/res/Resources;->getResourcePackageName(I)Ljava/lang/String;
 
@@ -224,9 +232,13 @@
     if-eqz p0, :cond_1
 
     .line 12
+     invoke-static {p0}, Lru/vtosters/lite/res/proxy/ProxyResources;->addProxyResources(Ljava/lang/Object;)V
+
     invoke-virtual {p0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object v0
+
+
 
     if-eqz v0, :cond_1
 
@@ -277,9 +289,13 @@
     if-eqz p0, :cond_0
 
     .line 1
+     invoke-static {p0}, Lru/vtosters/lite/res/proxy/ProxyResources;->addProxyResources(Ljava/lang/Object;)V
+
     invoke-virtual {p0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object v0
+
+
 
     if-eqz v0, :cond_0
 

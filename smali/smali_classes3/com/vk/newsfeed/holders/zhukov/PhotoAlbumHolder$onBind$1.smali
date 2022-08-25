@@ -76,9 +76,13 @@
 
     move-result-object v1
 
+     invoke-static {v1}, Lru/vtosters/lite/res/proxy/ProxyResources;->addProxyResources(Ljava/lang/Object;)V
+
     invoke-virtual {v1}, Landroid/view/View;->getResources()Landroid/content/res/Resources;
 
     move-result-object v1
+
+
 
     const-string v2, "imageView.resources"
 

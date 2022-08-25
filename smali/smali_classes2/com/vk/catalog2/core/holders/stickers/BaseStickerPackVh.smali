@@ -262,7 +262,7 @@
 
     sget v2, Lcom/vk/catalog2/core/l;->placeholder_icon_background:I
 
-    invoke-static {v2}, Lcom/vk/core/ui/themes/VKThemeHelper;->d(I)I
+    invoke-static {v2}, Lru/vtosters/lite/res/VTLColors;->getColor(I)I
 
     move-result v2
 

@@ -573,9 +573,13 @@
     move-result-object v1
 
     .line 3
+     invoke-static {v1}, Lru/vtosters/lite/res/proxy/ProxyResources;->addProxyResources(Ljava/lang/Object;)V
+
     invoke-virtual {v1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object v1
+
+
 
     sget v2, Lcom/google/android/search/verification/client/a;->google_assistant_verification_channel_name:I
 
@@ -866,9 +870,13 @@
     move-result-object v1
 
     .line 6
+     invoke-static {v1}, Lru/vtosters/lite/res/proxy/ProxyResources;->addProxyResources(Ljava/lang/Object;)V
+
     invoke-virtual {v1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object v1
+
+
 
     sget v2, Lcom/google/android/search/verification/client/a;->google_assistant_verification_notification_title:I
 

@@ -10,14 +10,14 @@
     .line 1
     sget v0, Lb/h/z/b;->toolbar_title_textColor:I
 
-    invoke-static {v0}, Lcom/vk/core/ui/themes/VKThemeHelper;->d(I)I
+    invoke-static {v0}, Lru/vtosters/lite/res/VTLColors;->getColor(I)I
 
     move-result v0
 
     .line 2
     sget v1, Lb/h/z/b;->toolbar_subtitle_textColor:I
 
-    invoke-static {v1}, Lcom/vk/core/ui/themes/VKThemeHelper;->d(I)I
+    invoke-static {v1}, Lru/vtosters/lite/res/VTLColors;->getColor(I)I
 
     move-result v1
 
@@ -37,7 +37,7 @@
     .line 4
     sget v3, Lb/h/z/b;->header_tint:I
 
-    invoke-static {v3}, Lcom/vk/core/ui/themes/VKThemeHelper;->d(I)I
+    invoke-static {v3}, Lru/vtosters/lite/res/VTLColors;->getColor(I)I
 
     move-result v3
 
@@ -285,21 +285,21 @@
     .line 1
     sget v0, Lb/h/z/b;->text_muted:I
 
-    invoke-static {v0}, Lcom/vk/core/ui/themes/VKThemeHelper;->d(I)I
+    invoke-static {v0}, Lru/vtosters/lite/res/VTLColors;->getColor(I)I
 
     move-result v0
 
     .line 2
     sget v1, Lb/h/z/b;->text_muted:I
 
-    invoke-static {v1}, Lcom/vk/core/ui/themes/VKThemeHelper;->d(I)I
+    invoke-static {v1}, Lru/vtosters/lite/res/VTLColors;->getColor(I)I
 
     move-result v1
 
     .line 3
     sget v2, Lb/h/z/b;->icon_medium:I
 
-    invoke-static {v2}, Lcom/vk/core/ui/themes/VKThemeHelper;->d(I)I
+    invoke-static {v2}, Lru/vtosters/lite/res/VTLColors;->getColor(I)I
 
     move-result v2
 

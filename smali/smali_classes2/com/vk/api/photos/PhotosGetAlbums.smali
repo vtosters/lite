@@ -234,9 +234,13 @@
 
     move-result-object v14
 
+     invoke-static {v14}, Lru/vtosters/lite/res/proxy/ProxyResources;->addProxyResources(Ljava/lang/Object;)V
+
     invoke-virtual {v14}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object v14
+
+
 
     move-object/from16 v22, v4
 
@@ -532,9 +536,13 @@
 
     move-result-object v7
 
+     invoke-static {v7}, Lru/vtosters/lite/res/proxy/ProxyResources;->addProxyResources(Ljava/lang/Object;)V
+
     invoke-virtual {v7}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object v7
+
+
 
     iget-object v11, v1, Lcom/vk/api/photos/PhotosGetAlbums;->F:Lcom/vk/api/photos/PhotosGetAlbums$a;
 
@@ -758,9 +766,13 @@
 
     move-result-object v5
 
+     invoke-static {v5}, Lru/vtosters/lite/res/proxy/ProxyResources;->addProxyResources(Ljava/lang/Object;)V
+
     invoke-virtual {v5}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object v5
+
+
 
     iget-object v6, v1, Lcom/vk/api/photos/PhotosGetAlbums;->F:Lcom/vk/api/photos/PhotosGetAlbums$a;
 

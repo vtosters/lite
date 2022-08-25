@@ -157,9 +157,13 @@
     iput v0, p0, Lcom/fourmob/datetimepicker/date/SimpleMonthView;->a0:I
 
     .line 14
+     invoke-static {p1}, Lru/vtosters/lite/res/proxy/ProxyResources;->addProxyResources(Ljava/lang/Object;)V
+
     invoke-virtual {p1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object p1
+
+
 
     .line 15
     invoke-static {}, Ljava/util/Calendar;->getInstance()Ljava/util/Calendar;
@@ -196,7 +200,7 @@
     .line 19
     sget v0, Lcom/fourmob/datetimepicker/a;->date_picker_text_normal:I
 
-    invoke-virtual {p1, v0}, Landroid/content/res/Resources;->getColor(I)I
+    invoke-static {p1, v0}, Lru/vtosters/lite/res/VTLResources;->getColor(Landroid/content/res/Resources;I)I
 
     move-result v0
 
@@ -205,7 +209,7 @@
     .line 20
     sget v0, Lcom/fourmob/datetimepicker/a;->blue:I
 
-    invoke-virtual {p1, v0}, Landroid/content/res/Resources;->getColor(I)I
+    invoke-static {p1, v0}, Lru/vtosters/lite/res/VTLResources;->getColor(Landroid/content/res/Resources;I)I
 
     move-result v0
 
@@ -214,12 +218,12 @@
     .line 21
     sget v0, Lcom/fourmob/datetimepicker/a;->white:I
 
-    invoke-virtual {p1, v0}, Landroid/content/res/Resources;->getColor(I)I
+    invoke-static {p1, v0}, Lru/vtosters/lite/res/VTLResources;->getColor(Landroid/content/res/Resources;I)I
 
     .line 22
     sget v0, Lcom/fourmob/datetimepicker/a;->circle_background:I
 
-    invoke-virtual {p1, v0}, Landroid/content/res/Resources;->getColor(I)I
+    invoke-static {p1, v0}, Lru/vtosters/lite/res/VTLResources;->getColor(Landroid/content/res/Resources;I)I
 
     move-result v0
 
@@ -228,7 +232,7 @@
     .line 23
     sget v0, Lcom/fourmob/datetimepicker/a;->date_picker_text_normal:I
 
-    invoke-virtual {p1, v0}, Landroid/content/res/Resources;->getColor(I)I
+    invoke-static {p1, v0}, Lru/vtosters/lite/res/VTLResources;->getColor(Landroid/content/res/Resources;I)I
 
     move-result v0
 

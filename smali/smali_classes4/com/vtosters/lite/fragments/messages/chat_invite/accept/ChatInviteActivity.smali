@@ -78,13 +78,11 @@
 
     const v0, 0x7f040224
 
-    invoke-static {v0}, Lcom/vk/core/ui/themes/VKThemeHelper;->d(I)I
+    invoke-static {v0}, Lru/vtosters/lite/res/VTLColors;->getColor(I)I
 
     move-result v0
 
     invoke-virtual {p1, v0}, Landroid/view/Window;->setStatusBarColor(I)V
-
-    invoke-static {p1, v0}, Lru/vtosters/lite/utils/ThemesUtils;->setNavbarColor(Landroid/view/Window;I)V
 
     return-void
 .end method

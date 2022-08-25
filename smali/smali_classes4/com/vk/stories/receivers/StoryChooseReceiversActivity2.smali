@@ -131,13 +131,17 @@
 
     .line 3
     :cond_0
+     invoke-static {p0}, Lru/vtosters/lite/res/proxy/ProxyResources;->addProxyResources(Ljava/lang/Object;)V
+
     invoke-virtual {p0}, Landroidx/appcompat/app/AppCompatActivity;->getResources()Landroid/content/res/Resources;
 
     move-result-object v0
 
+
+
     const v1, 0x7f060051
 
-    invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getColor(I)I
+    invoke-static {v0, v1}, Lru/vtosters/lite/res/VTLResources;->getColor(Landroid/content/res/Resources;I)I
 
     move-result v0
 
@@ -148,7 +152,7 @@
     const v0, 0x7f040220
 
     .line 4
-    invoke-static {v0}, Lcom/vk/core/ui/themes/VKThemeHelper;->d(I)I
+    invoke-static {v0}, Lru/vtosters/lite/res/VTLColors;->getColor(I)I
 
     move-result v0
 

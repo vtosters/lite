@@ -80,7 +80,7 @@
 
     const/4 v3, 0x0
 
-    invoke-virtual {p2, p3, v1, v2, v3}, Landroid/content/Context;->obtainStyledAttributes(Landroid/util/AttributeSet;[III)Landroid/content/res/TypedArray;
+    invoke-static {p2, p3, v1, v2, v3}, Lru/vtosters/lite/res/VTLResources;->obtainStyledAttributes(Landroid/content/Context;Landroid/util/AttributeSet;[III)Landroid/content/res/TypedArray;
 
     move-result-object p2
     :try_end_0

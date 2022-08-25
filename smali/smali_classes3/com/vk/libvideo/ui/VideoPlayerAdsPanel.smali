@@ -60,9 +60,13 @@
     iput p2, p0, Lcom/vk/libvideo/ui/VideoPlayerAdsPanel;->f:I
 
     .line 5
+     invoke-static {p0}, Lru/vtosters/lite/res/proxy/ProxyResources;->addProxyResources(Ljava/lang/Object;)V
+
     invoke-virtual {p0}, Landroid/widget/LinearLayout;->getResources()Landroid/content/res/Resources;
 
     move-result-object p2
+
+
 
     invoke-virtual {p2}, Landroid/content/res/Resources;->getConfiguration()Landroid/content/res/Configuration;
 

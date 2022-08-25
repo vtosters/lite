@@ -633,9 +633,13 @@
 
     invoke-static {v5, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
+     invoke-static {v5}, Lru/vtosters/lite/res/proxy/ProxyResources;->addProxyResources(Ljava/lang/Object;)V
+
     invoke-virtual {v5}, Landroid/view/View;->getResources()Landroid/content/res/Resources;
 
     move-result-object v5
+
+
 
     const v6, 0x7f1210b2
 
@@ -659,9 +663,13 @@
 
     invoke-static {v4, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
+     invoke-static {v4}, Lru/vtosters/lite/res/proxy/ProxyResources;->addProxyResources(Ljava/lang/Object;)V
+
     invoke-virtual {v4}, Landroid/view/View;->getResources()Landroid/content/res/Resources;
 
     move-result-object v4
+
+
 
     const v5, 0x7f1000cd
 
@@ -691,9 +699,13 @@
 
     invoke-static {v3, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
+     invoke-static {v3}, Lru/vtosters/lite/res/proxy/ProxyResources;->addProxyResources(Ljava/lang/Object;)V
+
     invoke-virtual {v3}, Landroid/view/View;->getResources()Landroid/content/res/Resources;
 
     move-result-object v1
+
+
 
     invoke-static {v2, v1}, Lcom/vk/core/util/TimeUtils;->a(ILandroid/content/res/Resources;)Ljava/lang/String;
 

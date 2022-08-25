@@ -1057,9 +1057,13 @@
     .line 18
     iget-object p1, p0, Lcom/vk/emoji/Emoji;->m:Landroid/content/Context;
 
+     invoke-static {p1}, Lru/vtosters/lite/res/proxy/ProxyResources;->addProxyResources(Ljava/lang/Object;)V
+
     invoke-virtual {p1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object p1
+
+
 
     sget v0, Lcom/vk/emoji/v;->emoji_size_in_sprite:I
 
@@ -1072,9 +1076,13 @@
     .line 19
     iget-object p1, p0, Lcom/vk/emoji/Emoji;->m:Landroid/content/Context;
 
+     invoke-static {p1}, Lru/vtosters/lite/res/proxy/ProxyResources;->addProxyResources(Ljava/lang/Object;)V
+
     invoke-virtual {p1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object p1
+
+
 
     sget v0, Lcom/vk/emoji/s;->emoji_keyboard_item_draw:I
 

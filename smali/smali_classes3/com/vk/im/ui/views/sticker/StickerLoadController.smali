@@ -95,9 +95,13 @@
 
     iget-object v2, p0, Lcom/vk/im/ui/views/sticker/StickerLoadController;->e:Lcom/vk/im/ui/views/sticker/ImStickerAnimationView;
 
+     invoke-static {v2}, Lru/vtosters/lite/res/proxy/ProxyResources;->addProxyResources(Ljava/lang/Object;)V
+
     invoke-virtual {v2}, Landroid/widget/ImageView;->getResources()Landroid/content/res/Resources;
 
     move-result-object v2
+
+
 
     const-string v3, "view.resources"
 

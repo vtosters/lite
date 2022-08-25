@@ -53,6 +53,8 @@
 
     move-result-object v2
 
+
+
     const-string v3, "super.getResources()"
 
     invoke-static {v2, v3}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
@@ -68,6 +70,8 @@
     invoke-super {p0}, Landroid/view/ContextThemeWrapper;->getResources()Landroid/content/res/Resources;
 
     move-result-object v4
+
+
 
     invoke-static {v4, v3}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 

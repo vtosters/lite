@@ -914,7 +914,7 @@
     .line 10
     sget p2, Lcom/vk/catalog2/core/l;->icon_outline_secondary:I
 
-    invoke-static {p2}, Lcom/vk/core/ui/themes/VKThemeHelper;->d(I)I
+    invoke-static {p2}, Lru/vtosters/lite/res/VTLColors;->getColor(I)I
 
     move-result p2
 

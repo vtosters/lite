@@ -139,7 +139,7 @@
 
     const p2, 0x7f040022
 
-    invoke-static {p2}, Lcom/vk/core/ui/themes/VKThemeHelper;->d(I)I
+    invoke-static {p2}, Lru/vtosters/lite/res/VTLColors;->getColor(I)I
 
     move-result p2
 
@@ -217,7 +217,7 @@
 
     move-result v0
 
-    invoke-static {v0}, Lcom/vk/core/ui/themes/VKThemeHelper;->d(I)I
+    invoke-static {v0}, Lru/vtosters/lite/res/VTLColors;->getColor(I)I
 
     move-result v0
 
@@ -285,7 +285,7 @@
     const v2, 0x7f040256
 
     :goto_2
-    invoke-static {v2}, Lcom/vk/core/ui/themes/VKThemeHelper;->d(I)I
+    invoke-static {v2}, Lru/vtosters/lite/res/VTLColors;->getColor(I)I
 
     move-result v2
 

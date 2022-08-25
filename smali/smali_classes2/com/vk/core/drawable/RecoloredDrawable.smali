@@ -87,10 +87,6 @@
 
     invoke-virtual {p1, p0}, Landroid/graphics/drawable/Drawable;->setCallback(Landroid/graphics/drawable/Drawable$Callback;)V
 
-    invoke-static {p2}, Lru/vtosters/lite/utils/ThemesUtils;->themeCSL(Landroid/content/res/ColorStateList;)Landroid/content/res/ColorStateList;
-
-    move-result-object p2
-
     .line 6
     iput-object p2, p0, Lcom/vk/core/drawable/RecoloredDrawable;->b:Landroid/content/res/ColorStateList;
 

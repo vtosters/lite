@@ -57,9 +57,13 @@
 
     iget-object v1, p0, Lcom/vk/discover/DiscoverFragment$h;->a:Lcom/vk/discover/DiscoverFragment;
 
+     invoke-static {v1}, Lru/vtosters/lite/res/proxy/ProxyResources;->addProxyResources(Ljava/lang/Object;)V
+
     invoke-virtual {v1}, Landroidx/fragment/app/Fragment;->getResources()Landroid/content/res/Resources;
 
     move-result-object v1
+
+
 
     const-string v2, "resources"
 

@@ -111,9 +111,13 @@
     .line 3
     invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
+     invoke-static {v0}, Lru/vtosters/lite/res/proxy/ProxyResources;->addProxyResources(Ljava/lang/Object;)V
+
     invoke-virtual {v0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object v1
+
+
 
     .line 4
     sget v2, Lcom/vk/im/ui/j;->vkim_msg_part_link_large:I
@@ -172,7 +176,7 @@
 
     sget v4, Lcom/vk/im/ui/c;->text_muted:I
 
-    invoke-static {v4}, Lcom/vk/core/ui/themes/VKThemeHelper;->d(I)I
+    invoke-static {v4}, Lru/vtosters/lite/res/VTLColors;->getColor(I)I
 
     move-result v4
 
@@ -185,7 +189,7 @@
 
     sget v4, Lcom/vk/im/ui/c;->text_muted:I
 
-    invoke-static {v4}, Lcom/vk/core/ui/themes/VKThemeHelper;->d(I)I
+    invoke-static {v4}, Lru/vtosters/lite/res/VTLColors;->getColor(I)I
 
     move-result v4
 

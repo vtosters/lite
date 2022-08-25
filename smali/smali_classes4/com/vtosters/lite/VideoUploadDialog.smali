@@ -389,7 +389,7 @@
     const v19, 0x7f04059b
 
     .line 18
-    invoke-static/range {v19 .. v19}, Lcom/vk/core/ui/themes/VKThemeHelper;->d(I)I
+    invoke-static/range {v19 .. v19}, Lru/vtosters/lite/res/VTLColors;->getColor(I)I
 
     move-result v0
 
@@ -508,7 +508,7 @@
     invoke-static {v14, v15}, Lcom/vk/extensions/TextViewExt;->a(Landroid/widget/TextView;I)V
 
     .line 31
-    invoke-static/range {v19 .. v19}, Lcom/vk/core/ui/themes/VKThemeHelper;->d(I)I
+    invoke-static/range {v19 .. v19}, Lru/vtosters/lite/res/VTLColors;->getColor(I)I
 
     move-result v0
 

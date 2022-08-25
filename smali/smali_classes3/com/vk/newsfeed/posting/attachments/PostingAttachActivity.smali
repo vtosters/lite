@@ -561,8 +561,6 @@
 
     invoke-virtual {p1, v0}, Landroid/view/Window;->setStatusBarColor(I)V
 
-    invoke-static {p1, v0}, Lru/vtosters/lite/utils/ThemesUtils;->setNavbarColor(Landroid/view/Window;I)V
-
     .line 14
     invoke-virtual {p0}, Landroid/app/Activity;->getWindow()Landroid/view/Window;
 
@@ -580,9 +578,13 @@
     iput p1, p0, Lcom/vk/newsfeed/posting/attachments/PostingAttachActivity;->a0:I
 
     .line 16
+     invoke-static {p0}, Lru/vtosters/lite/res/proxy/ProxyResources;->addProxyResources(Ljava/lang/Object;)V
+
     invoke-virtual {p0}, Lcom/vk/navigation/NavigationDelegateActivity;->getResources()Landroid/content/res/Resources;
 
     move-result-object p1
+
+
 
     invoke-virtual {p1}, Landroid/content/res/Resources;->getConfiguration()Landroid/content/res/Configuration;
 

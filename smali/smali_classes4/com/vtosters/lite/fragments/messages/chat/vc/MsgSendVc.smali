@@ -3325,7 +3325,7 @@
 
     const v1, 0x7f040254
 
-    invoke-static {v0, v1}, Lcom/vk/core/util/ContextExtKt;->h(Landroid/content/Context;I)I
+    invoke-static {v0, v1}, Lru/vtosters/lite/res/VTLColors;->getColor(Landroid/content/Context;I)I
 
     move-result v0
 
@@ -3566,7 +3566,7 @@
 
     const v1, 0x7f040022
 
-    invoke-static {v0, v1}, Lcom/vk/core/util/ContextExtKt;->h(Landroid/content/Context;I)I
+    invoke-static {v0, v1}, Lru/vtosters/lite/res/VTLColors;->getColor(Landroid/content/Context;I)I
 
     move-result v0
 
@@ -5664,8 +5664,6 @@
 
     iput-object p1, p0, Lcom/vtosters/lite/fragments/messages/chat/vc/MsgSendVc;->D:Lcom/vk/im/ui/views/WriteBarDisabled;
 
-    invoke-static {p1}, Lru/vtosters/lite/utils/ThemesUtils;->colorWriteBar(Landroid/view/View;)V
-
     .line 15
     iget-object p1, p0, Lcom/vtosters/lite/fragments/messages/chat/vc/MsgSendVc;->C:Landroid/view/View;
 
@@ -5684,8 +5682,6 @@
     check-cast p1, Lcom/vtosters/lite/ui/WriteBar;
 
     iput-object p1, p0, Lcom/vtosters/lite/fragments/messages/chat/vc/MsgSendVc;->B:Lcom/vtosters/lite/ui/WriteBar;
-
-    invoke-static {p1}, Lru/vtosters/lite/utils/ThemesUtils;->colorWriteBar(Landroid/view/View;)V
 
     .line 16
     iget-object p1, p0, Lcom/vtosters/lite/fragments/messages/chat/vc/MsgSendVc;->B:Lcom/vtosters/lite/ui/WriteBar;

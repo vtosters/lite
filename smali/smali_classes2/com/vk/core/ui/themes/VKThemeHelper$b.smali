@@ -27,9 +27,6 @@
     .end annotation
 .end field
 
-.field private resources:Landroid/content/res/Resources;
-
-
 # direct methods
 .method public constructor <init>(Landroid/content/Context;I)V
     .locals 0
@@ -127,6 +124,10 @@
     .line 6
     iget-object v1, p0, Lcom/vk/core/ui/themes/VKThemeHelper$b;->b:Ljava/lang/ThreadLocal;
 
+    #invoke-static {v0}, Lru/vtosters/lite/ui/activities/VTLLayoutInflater;->valuesOf(Landroid/view/LayoutInflater;)Landroid/view/LayoutInflater;
+
+    #move-result-object v0
+
     invoke-virtual {v1, v0}, Ljava/lang/ThreadLocal;->set(Ljava/lang/Object;)V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
@@ -152,31 +153,4 @@
     move-result-object p1
 
     return-object p1
-.end method
-
-# virtual methods
-.method public getResources()Landroid/content/res/Resources;
-    .registers 3
-
-    iget-object v0, p0, Lcom/vk/core/ui/themes/VKThemeHelper$b;->resources:Landroid/content/res/Resources;
-
-    if-eqz v0, :cond_7
-
-    iget-object v0, p0, Lcom/vk/core/ui/themes/VKThemeHelper$b;->resources:Landroid/content/res/Resources;
-
-    :goto_6
-    return-object v0
-
-    :cond_7
-    new-instance v0, Lru/vtosters/lite/themes/VTLResources;
-
-    invoke-static {}, Lru/vtosters/lite/utils/AndroidUtils;->getResources()Landroid/content/res/Resources;
-
-    move-result-object v1
-
-    invoke-direct {v0, p0, v1}, Lru/vtosters/lite/themes/VTLResources;-><init>(Landroid/content/Context;Landroid/content/res/Resources;)V
-
-    iput-object v0, p0, Lcom/vk/core/ui/themes/VKThemeHelper$b;->resources:Landroid/content/res/Resources;
-
-    goto :goto_6
 .end method

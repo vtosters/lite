@@ -288,7 +288,7 @@
     if-nez v0, :cond_0
 
     .line 12
-    invoke-static {p1}, Lcom/vk/core/ui/themes/VKThemeHelper;->d(I)I
+    invoke-static {p1}, Lru/vtosters/lite/res/VTLColors;->getColor(I)I
 
     move-result p1
 
@@ -316,7 +316,7 @@
 
     .line 14
     :cond_1
-    invoke-static {p1}, Lcom/vk/core/ui/themes/VKThemeHelper;->d(I)I
+    invoke-static {p1}, Lru/vtosters/lite/res/VTLColors;->getColor(I)I
 
     move-result p1
 

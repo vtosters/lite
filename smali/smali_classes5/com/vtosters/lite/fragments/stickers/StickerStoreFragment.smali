@@ -354,9 +354,13 @@
     .line 3
     :cond_1
     :goto_0
+     invoke-static {p0}, Lru/vtosters/lite/res/proxy/ProxyResources;->addProxyResources(Ljava/lang/Object;)V
+
     invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getResources()Landroid/content/res/Resources;
 
     move-result-object v0
+
+
 
     const v1, 0x7f070284
 
@@ -765,9 +769,13 @@
     .line 1
     iget v0, p0, Lcom/vtosters/lite/fragments/stickers/StickerStoreFragment;->h0:I
 
+     invoke-static {p0}, Lru/vtosters/lite/res/proxy/ProxyResources;->addProxyResources(Ljava/lang/Object;)V
+
     invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getResources()Landroid/content/res/Resources;
 
     move-result-object v1
+
+
 
     const v2, 0x7f070287
 
@@ -787,9 +795,13 @@
     if-nez v1, :cond_0
 
     .line 3
+     invoke-static {p0}, Lru/vtosters/lite/res/proxy/ProxyResources;->addProxyResources(Ljava/lang/Object;)V
+
     invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getResources()Landroid/content/res/Resources;
 
     move-result-object v1
+
+
 
     const v2, 0x7f070285
 

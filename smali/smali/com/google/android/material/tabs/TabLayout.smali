@@ -408,7 +408,7 @@
     sget-object v2, Landroidx/appcompat/R$styleable;->TextAppearance:[I
 
     .line 38
-    invoke-virtual {p1, p3, v2}, Landroid/content/Context;->obtainStyledAttributes(I[I)Landroid/content/res/TypedArray;
+    invoke-static {p1, p3, v2}, Lru/vtosters/lite/res/VTLResources;->obtainStyledAttributes(Landroid/content/Context;I[I)Landroid/content/res/TypedArray;
 
     move-result-object p3
 
@@ -616,9 +616,13 @@
     invoke-virtual {p2}, Landroid/content/res/TypedArray;->recycle()V
 
     .line 69
+     invoke-static {p0}, Lru/vtosters/lite/res/proxy/ProxyResources;->addProxyResources(Ljava/lang/Object;)V
+
     invoke-virtual {p0}, Landroid/widget/HorizontalScrollView;->getResources()Landroid/content/res/Resources;
 
     move-result-object p1
+
+
 
     .line 70
     sget p2, Lcom/google/android/material/R$dimen;->design_tab_text_size_2line:I
@@ -1858,9 +1862,13 @@
     .end annotation
 
     .line 77
+     invoke-static {p0}, Lru/vtosters/lite/res/proxy/ProxyResources;->addProxyResources(Ljava/lang/Object;)V
+
     invoke-virtual {p0}, Landroid/widget/HorizontalScrollView;->getResources()Landroid/content/res/Resources;
 
     move-result-object v0
+
+
 
     invoke-virtual {v0}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
 
@@ -3078,9 +3086,13 @@
     .end param
 
     .line 1
+     invoke-static {p0}, Lru/vtosters/lite/res/proxy/ProxyResources;->addProxyResources(Ljava/lang/Object;)V
+
     invoke-virtual {p0}, Landroid/widget/HorizontalScrollView;->getResources()Landroid/content/res/Resources;
 
     move-result-object v0
+
+
 
     invoke-virtual {v0, p1}, Landroid/content/res/Resources;->getBoolean(I)Z
 
@@ -3511,9 +3523,13 @@
     .end param
 
     .line 1
+     invoke-static {p0}, Lru/vtosters/lite/res/proxy/ProxyResources;->addProxyResources(Ljava/lang/Object;)V
+
     invoke-virtual {p0}, Landroid/widget/HorizontalScrollView;->getResources()Landroid/content/res/Resources;
 
     move-result-object v0
+
+
 
     invoke-virtual {v0, p1}, Landroid/content/res/Resources;->getBoolean(I)Z
 

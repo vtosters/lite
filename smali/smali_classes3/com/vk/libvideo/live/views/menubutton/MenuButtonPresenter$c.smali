@@ -143,9 +143,13 @@
 
     move-result-object v0
 
+     invoke-static {v0}, Lru/vtosters/lite/res/proxy/ProxyResources;->addProxyResources(Ljava/lang/Object;)V
+
     invoke-virtual {v0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object v0
+
+
 
     iget-boolean v3, p0, Lcom/vk/libvideo/live/views/menubutton/MenuButtonPresenter$c;->b:Z
 
@@ -222,9 +226,13 @@
 
     move-result-object v0
 
+     invoke-static {v0}, Lru/vtosters/lite/res/proxy/ProxyResources;->addProxyResources(Ljava/lang/Object;)V
+
     invoke-virtual {v0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object v0
+
+
 
     iget-boolean v3, p0, Lcom/vk/libvideo/live/views/menubutton/MenuButtonPresenter$c;->b:Z
 

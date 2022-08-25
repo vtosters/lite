@@ -66,7 +66,7 @@
 
     sget v0, Lcom/vk/stickers/f;->background_light:I
 
-    invoke-static {v0}, Lcom/vk/core/ui/themes/VKThemeHelper;->d(I)I
+    invoke-static {v0}, Lru/vtosters/lite/res/VTLColors;->getColor(I)I
 
     move-result v0
 

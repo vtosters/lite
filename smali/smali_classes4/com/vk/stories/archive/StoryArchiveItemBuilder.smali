@@ -342,9 +342,13 @@
 
     invoke-static {v12, v13}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
+     invoke-static {v12}, Lru/vtosters/lite/res/proxy/ProxyResources;->addProxyResources(Ljava/lang/Object;)V
+
     invoke-virtual {v12}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object v12
+
+
 
     const v15, 0x7f03004a
 
@@ -390,9 +394,13 @@
 
     invoke-static {v9, v13}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
+     invoke-static {v9}, Lru/vtosters/lite/res/proxy/ProxyResources;->addProxyResources(Ljava/lang/Object;)V
+
     invoke-virtual {v9}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object v9
+
+
 
     const v11, 0x7f030034
 

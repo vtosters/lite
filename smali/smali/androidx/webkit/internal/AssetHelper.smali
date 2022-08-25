@@ -135,9 +135,13 @@
     .line 2
     iget-object v1, p0, Landroidx/webkit/internal/AssetHelper;->mContext:Landroid/content/Context;
 
+     invoke-static {v1}, Lru/vtosters/lite/res/proxy/ProxyResources;->addProxyResources(Ljava/lang/Object;)V
+
     invoke-virtual {v1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object v1
+
+
 
     invoke-virtual {v1, p2, p1, v0}, Landroid/content/res/Resources;->getIdentifier(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)I
 
@@ -157,9 +161,13 @@
     .line 2
     iget-object v1, p0, Landroidx/webkit/internal/AssetHelper;->mContext:Landroid/content/Context;
 
+     invoke-static {v1}, Lru/vtosters/lite/res/proxy/ProxyResources;->addProxyResources(Ljava/lang/Object;)V
+
     invoke-virtual {v1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object v1
+
+
 
     const/4 v2, 0x1
 
@@ -583,9 +591,13 @@
     .line 10
     iget-object v1, p0, Landroidx/webkit/internal/AssetHelper;->mContext:Landroid/content/Context;
 
+     invoke-static {v1}, Lru/vtosters/lite/res/proxy/ProxyResources;->addProxyResources(Ljava/lang/Object;)V
+
     invoke-virtual {v1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object v1
+
+
 
     invoke-virtual {v1, v0}, Landroid/content/res/Resources;->openRawResource(I)Ljava/io/InputStream;
 

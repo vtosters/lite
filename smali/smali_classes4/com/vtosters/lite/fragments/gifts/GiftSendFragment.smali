@@ -697,9 +697,13 @@
     iput-boolean v2, p0, Lcom/vtosters/lite/fragments/gifts/GiftSendFragment;->D0:Z
 
     .line 4
+     invoke-static {p0}, Lru/vtosters/lite/res/proxy/ProxyResources;->addProxyResources(Ljava/lang/Object;)V
+
     invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getResources()Landroid/content/res/Resources;
 
     move-result-object v3
+
+
 
     const v4, 0x7f100032
 
@@ -737,9 +741,13 @@
     new-array v3, v2, [Ljava/lang/Object;
 
     .line 7
+     invoke-static {p0}, Lru/vtosters/lite/res/proxy/ProxyResources;->addProxyResources(Ljava/lang/Object;)V
+
     invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getResources()Landroid/content/res/Resources;
 
     move-result-object v4
+
+
 
     const v5, 0x7f10000b
 
@@ -1099,9 +1107,13 @@
     iput v0, p0, Lcom/vtosters/lite/fragments/gifts/GiftSendFragment;->L0:I
 
     .line 19
+     invoke-static {p0}, Lru/vtosters/lite/res/proxy/ProxyResources;->addProxyResources(Ljava/lang/Object;)V
+
     invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getResources()Landroid/content/res/Resources;
 
     move-result-object v0
+
+
 
     const v2, 0x7f10000b
 
@@ -1224,9 +1236,13 @@
     invoke-virtual {v0, v1}, Landroid/text/SpannableStringBuilder;->append(C)Landroid/text/SpannableStringBuilder;
 
     .line 30
+     invoke-static {p0}, Lru/vtosters/lite/res/proxy/ProxyResources;->addProxyResources(Ljava/lang/Object;)V
+
     invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getResources()Landroid/content/res/Resources;
 
     move-result-object v1
+
+
 
     const v2, 0x7f100031
 

@@ -1045,9 +1045,13 @@
     if-nez p3, :cond_1
 
     .line 8
+     invoke-static {p1}, Lru/vtosters/lite/res/proxy/ProxyResources;->addProxyResources(Ljava/lang/Object;)V
+
     invoke-virtual {p1}, Landroid/view/ViewGroup;->getResources()Landroid/content/res/Resources;
 
     move-result-object p3
+
+
 
     sget v2, Lb/h/z/d;->design_bottom_sheet_peek_height_min:I
 

@@ -164,9 +164,13 @@
     .line 6
     iget-object v2, p0, Lcom/vk/im/ui/formatters/MsgAttachFormatter$g;->a:Landroid/content/Context;
 
+     invoke-static {v2}, Lru/vtosters/lite/res/proxy/ProxyResources;->addProxyResources(Ljava/lang/Object;)V
+
     invoke-virtual {v2}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object v2
+
+
 
     invoke-virtual {v1}, Lcom/vk/im/engine/models/attaches/AttachPlaylist;->p()Z
 

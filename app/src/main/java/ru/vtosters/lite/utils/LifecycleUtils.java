@@ -17,40 +17,12 @@ import java.util.List;
 public class LifecycleUtils {
     private static final List<Activity> activities = new ArrayList<>();
 
-    public static void registerActivities(Application application) {
-        application.registerActivityLifecycleCallbacks(new Application.ActivityLifecycleCallbacks() {
-            @Override // android.app.Application.ActivityLifecycleCallbacks
-            public void onActivityPaused(Activity activity) {
-            }
+    public static void addActivity(Activity activity) {
+        activities.add(activity);
+    }
 
-            @Override // android.app.Application.ActivityLifecycleCallbacks
-            public void onActivityResumed(Activity activity) {
-            }
-
-            @Override // android.app.Application.ActivityLifecycleCallbacks
-            public void onActivitySaveInstanceState(Activity activity, Bundle bundle) {
-            }
-
-            @Override // android.app.Application.ActivityLifecycleCallbacks
-            public void onActivityStarted(Activity activity) {
-            }
-
-            @Override // android.app.Application.ActivityLifecycleCallbacks
-            public void onActivityStopped(Activity activity) {
-            }
-
-            @Override // android.app.Application.ActivityLifecycleCallbacks
-            public void onActivityCreated(Activity activity, Bundle bundle) {
-                if (activity instanceof VKActivity) {
-                    activities.add(activity);
-                }
-            }
-
-            @Override // android.app.Application.ActivityLifecycleCallbacks
-            public void onActivityDestroyed(Activity activity) {
-                activities.remove(activity);
-            }
-        });
+    public static void removeActivity(Activity activity) {
+        activities.remove(activity);
     }
 
     public static Activity getCurrentActivity() {

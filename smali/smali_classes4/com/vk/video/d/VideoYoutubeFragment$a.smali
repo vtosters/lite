@@ -73,9 +73,13 @@
     .line 2
     iget-object p1, p0, Lcom/vk/video/d/VideoYoutubeFragment$a;->c:Lcom/vk/video/d/VideoYoutubeFragment;
 
+     invoke-static {p1}, Lru/vtosters/lite/res/proxy/ProxyResources;->addProxyResources(Ljava/lang/Object;)V
+
     invoke-virtual {p1}, Landroidx/fragment/app/Fragment;->getResources()Landroid/content/res/Resources;
 
     move-result-object p1
+
+
 
     const/4 v0, 0x1
 

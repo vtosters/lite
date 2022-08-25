@@ -142,7 +142,7 @@
     aput v3, v2, v4
 
     .line 11
-    invoke-virtual {p1, v2}, Landroid/content/Context;->obtainStyledAttributes([I)Landroid/content/res/TypedArray;
+    invoke-static {p1, v2}, Lru/vtosters/lite/res/VTLResources;->obtainStyledAttributes(Landroid/content/Context;[I)Landroid/content/res/TypedArray;
 
     move-result-object p1
 

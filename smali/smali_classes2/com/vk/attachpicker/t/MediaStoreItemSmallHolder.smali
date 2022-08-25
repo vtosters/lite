@@ -242,9 +242,13 @@
     :goto_0
     iget-object v3, p0, Landroidx/recyclerview/widget/RecyclerView$ViewHolder;->itemView:Landroid/view/View;
 
+     invoke-static {v3}, Lru/vtosters/lite/res/proxy/ProxyResources;->addProxyResources(Ljava/lang/Object;)V
+
     invoke-virtual {v3}, Landroid/view/View;->getResources()Landroid/content/res/Resources;
 
     move-result-object v3
+
+
 
     new-array v1, v1, [Ljava/lang/Object;
 

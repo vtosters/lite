@@ -167,7 +167,7 @@
     .line 6
     sget-object v0, Lcom/vk/music/m/j;->ThumbsImageView:[I
 
-    invoke-virtual {p1, p2, v0}, Landroid/content/Context;->obtainStyledAttributes(Landroid/util/AttributeSet;[I)Landroid/content/res/TypedArray;
+    invoke-static {p1, p2, v0}, Lru/vtosters/lite/res/VTLResources;->obtainStyledAttributes(Landroid/content/Context;Landroid/util/AttributeSet;[I)Landroid/content/res/TypedArray;
 
     move-result-object v0
 
@@ -360,7 +360,7 @@
 
     if-eqz p3, :cond_4
 
-    invoke-static {p1, p3}, Lcom/vk/core/util/ContextExtKt;->h(Landroid/content/Context;I)I
+    invoke-static {p1, p3}, Lru/vtosters/lite/res/VTLColors;->getColor(Landroid/content/Context;I)I
 
     move-result p1
 
@@ -1258,7 +1258,7 @@
 
     iget v3, p0, Lcom/vk/music/view/ThumbsImageView;->F:I
 
-    invoke-static {v0, v3}, Lcom/vk/core/util/ContextExtKt;->h(Landroid/content/Context;I)I
+    invoke-static {v0, v3}, Lru/vtosters/lite/res/VTLColors;->getColor(Landroid/content/Context;I)I
 
     move-result v0
 

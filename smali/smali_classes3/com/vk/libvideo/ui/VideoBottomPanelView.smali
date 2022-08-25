@@ -706,9 +706,13 @@
     .line 13
     iget-object v5, v0, Lcom/vk/libvideo/ui/VideoBottomPanelView;->b:Landroid/widget/TextView;
 
+     invoke-static/range {p0 .. p0}, Lru/vtosters/lite/res/proxy/ProxyResources;->addProxyResources(Ljava/lang/Object;)V
+
     invoke-virtual/range {p0 .. p0}, Landroid/widget/RelativeLayout;->getResources()Landroid/content/res/Resources;
 
     move-result-object v6
+
+
 
     sget v8, Lcom/vk/libvideo/i;->video_views:I
 
@@ -1277,9 +1281,13 @@
     iget-object v1, v0, Lcom/vk/libvideo/ui/VideoBottomPanelView;->a:Landroid/widget/TextView;
 
     .line 53
+     invoke-static {v1}, Lru/vtosters/lite/res/proxy/ProxyResources;->addProxyResources(Ljava/lang/Object;)V
+
     invoke-virtual {v1}, Landroid/widget/TextView;->getResources()Landroid/content/res/Resources;
 
     move-result-object v2
+
+
 
     const-string v3, "resources"
 

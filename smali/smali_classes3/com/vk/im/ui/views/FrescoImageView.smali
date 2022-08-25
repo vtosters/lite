@@ -198,9 +198,13 @@
     .line 6
     new-instance v0, Lcom/facebook/drawee/generic/GenericDraweeHierarchyBuilder;
 
+     invoke-static {p1}, Lru/vtosters/lite/res/proxy/ProxyResources;->addProxyResources(Ljava/lang/Object;)V
+
     invoke-virtual {p1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object v3
+
+
 
     invoke-direct {v0, v3}, Lcom/facebook/drawee/generic/GenericDraweeHierarchyBuilder;-><init>(Landroid/content/res/Resources;)V
 
@@ -312,7 +316,7 @@
     :cond_0
     sget-object v0, Lcom/vk/im/ui/o;->FrescoImageView:[I
 
-    invoke-virtual {p1, p2, v0, p3, v3}, Landroid/content/Context;->obtainStyledAttributes(Landroid/util/AttributeSet;[III)Landroid/content/res/TypedArray;
+    invoke-static {p1, p2, v0, p3, v3}, Lru/vtosters/lite/res/VTLResources;->obtainStyledAttributes(Landroid/content/Context;Landroid/util/AttributeSet;[III)Landroid/content/res/TypedArray;
 
     move-result-object p1
 

@@ -40,9 +40,13 @@
     .line 1
     iget-object v0, p0, Lcom/vk/notifications/SourcesNotificationsSettingsFragment$i;->a:Lcom/vk/notifications/SourcesNotificationsSettingsFragment;
 
+     invoke-static {v0}, Lru/vtosters/lite/res/proxy/ProxyResources;->addProxyResources(Ljava/lang/Object;)V
+
     invoke-virtual {v0}, Landroidx/fragment/app/Fragment;->getResources()Landroid/content/res/Resources;
 
     move-result-object v0
+
+
 
     const-string v1, "resources"
 
@@ -50,9 +54,13 @@
 
     iget-object v2, p0, Lcom/vk/notifications/SourcesNotificationsSettingsFragment$i;->a:Lcom/vk/notifications/SourcesNotificationsSettingsFragment;
 
+     invoke-static {v2}, Lru/vtosters/lite/res/proxy/ProxyResources;->addProxyResources(Ljava/lang/Object;)V
+
     invoke-virtual {v2}, Landroidx/fragment/app/Fragment;->getResources()Landroid/content/res/Resources;
 
     move-result-object v2
+
+
 
     invoke-static {v2, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 

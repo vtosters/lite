@@ -58,7 +58,7 @@
     const v1, 0x7f0400e1
 
     .line 3
-    invoke-static {v1}, Lcom/vk/core/ui/themes/VKThemeHelper;->d(I)I
+    invoke-static {v1}, Lru/vtosters/lite/res/VTLColors;->getColor(I)I
 
     move-result v1
 
@@ -70,7 +70,7 @@
     const v1, 0x7f040022
 
     .line 5
-    invoke-static {v1}, Lcom/vk/core/ui/themes/VKThemeHelper;->d(I)I
+    invoke-static {v1}, Lru/vtosters/lite/res/VTLColors;->getColor(I)I
 
     move-result v1
 
@@ -79,7 +79,7 @@
     const v1, 0x7f04024f
 
     .line 6
-    invoke-static {v1}, Lcom/vk/core/ui/themes/VKThemeHelper;->d(I)I
+    invoke-static {v1}, Lru/vtosters/lite/res/VTLColors;->getColor(I)I
 
     move-result v1
 
@@ -1014,11 +1014,15 @@
     .locals 1
 
     .line 1
+     invoke-static {p0}, Lru/vtosters/lite/res/proxy/ProxyResources;->addProxyResources(Ljava/lang/Object;)V
+
     invoke-virtual {p0}, Landroid/widget/HorizontalScrollView;->getResources()Landroid/content/res/Resources;
 
     move-result-object v0
 
-    invoke-virtual {v0, p1}, Landroid/content/res/Resources;->getColor(I)I
+
+
+    invoke-static {v0, p1}, Lru/vtosters/lite/res/VTLResources;->getColor(Landroid/content/res/Resources;I)I
 
     move-result p1
 

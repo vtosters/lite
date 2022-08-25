@@ -132,9 +132,13 @@
     if-ne v0, v1, :cond_0
 
     .line 2
+     invoke-static {p1}, Lru/vtosters/lite/res/proxy/ProxyResources;->addProxyResources(Ljava/lang/Object;)V
+
     invoke-virtual {p1}, Landroid/view/ViewGroup;->getResources()Landroid/content/res/Resources;
 
     move-result-object p1
+
+
 
     sget v0, Landroidx/recyclerview/R$dimen;->item_touch_helper_max_drag_scroll_per_frame:I
 

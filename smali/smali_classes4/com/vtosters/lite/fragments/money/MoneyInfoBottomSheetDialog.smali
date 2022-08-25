@@ -719,7 +719,7 @@
     const p1, 0x7f04059b
 
     .line 39
-    invoke-static {p1}, Lcom/vk/core/ui/themes/VKThemeHelper;->d(I)I
+    invoke-static {p1}, Lru/vtosters/lite/res/VTLColors;->getColor(I)I
 
     move-result v0
 
@@ -1172,7 +1172,7 @@
     const p1, 0x7f04059b
 
     .line 64
-    invoke-static {p1}, Lcom/vk/core/ui/themes/VKThemeHelper;->d(I)I
+    invoke-static {p1}, Lru/vtosters/lite/res/VTLColors;->getColor(I)I
 
     move-result v2
 
@@ -1340,9 +1340,13 @@
     .locals 2
 
     .line 86
+     invoke-static {p0}, Lru/vtosters/lite/res/proxy/ProxyResources;->addProxyResources(Ljava/lang/Object;)V
+
     invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getResources()Landroid/content/res/Resources;
 
     move-result-object v0
+
+
 
     const-string v1, "resources"
 
@@ -2382,9 +2386,13 @@
     .line 18
     :cond_10
     :goto_8
+     invoke-static {p0}, Lru/vtosters/lite/res/proxy/ProxyResources;->addProxyResources(Ljava/lang/Object;)V
+
     invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getResources()Landroid/content/res/Resources;
 
     move-result-object p1
+
+
 
     const-string v0, "resources"
 

@@ -81,7 +81,7 @@
     .line 1
     iget-object v0, p0, Landroidx/appcompat/widget/ResourcesWrapper;->mResources:Landroid/content/res/Resources;
 
-    invoke-virtual {v0, p1}, Landroid/content/res/Resources;->getColor(I)I
+    invoke-static {v0, p1}, Lru/vtosters/lite/res/VTLResources;->getColor(Landroid/content/res/Resources;I)I
 
     move-result p1
 
@@ -99,7 +99,7 @@
     .line 1
     iget-object v0, p0, Landroidx/appcompat/widget/ResourcesWrapper;->mResources:Landroid/content/res/Resources;
 
-    invoke-virtual {v0, p1}, Landroid/content/res/Resources;->getColorStateList(I)Landroid/content/res/ColorStateList;
+    invoke-static {v0, p1}, Lru/vtosters/lite/res/VTLResources;->getColorStateList(Landroid/content/res/Resources;I)Landroid/content/res/ColorStateList;
 
     move-result-object p1
 

@@ -55,9 +55,13 @@
 
     invoke-virtual {v2, v0}, Landroid/app/AlertDialog$Builder;->setTitle(Ljava/lang/CharSequence;)Landroid/app/AlertDialog$Builder;
 
+     invoke-static {p0}, Lru/vtosters/lite/res/proxy/ProxyResources;->addProxyResources(Ljava/lang/Object;)V
+
     invoke-virtual {p0}, Landroid/preference/PreferenceFragment;->getResources()Landroid/content/res/Resources;
 
     move-result-object v0
+
+
 
     sget v3, Lru/mail/libverify/R$drawable;->libverify_ic_sms_white:I
 
@@ -69,13 +73,17 @@
 
     move-result-object v0
 
+     invoke-static {p0}, Lru/vtosters/lite/res/proxy/ProxyResources;->addProxyResources(Ljava/lang/Object;)V
+
     invoke-virtual {p0}, Landroid/preference/PreferenceFragment;->getResources()Landroid/content/res/Resources;
 
     move-result-object v3
 
+
+
     sget v4, Lru/mail/libverify/R$color;->libverify_secondary_icon_color:I
 
-    invoke-virtual {v3, v4}, Landroid/content/res/Resources;->getColor(I)I
+    invoke-static {v3, v4}, Lru/vtosters/lite/res/VTLResources;->getColor(Landroid/content/res/Resources;I)I
 
     move-result v3
 
@@ -83,9 +91,13 @@
 
     invoke-virtual {v2, v0}, Landroid/app/AlertDialog$Builder;->setIcon(Landroid/graphics/drawable/Drawable;)Landroid/app/AlertDialog$Builder;
 
+     invoke-static {p0}, Lru/vtosters/lite/res/proxy/ProxyResources;->addProxyResources(Ljava/lang/Object;)V
+
     invoke-virtual {p0}, Landroid/preference/PreferenceFragment;->getResources()Landroid/content/res/Resources;
 
     move-result-object v0
+
+
 
     sget v3, Lru/mail/libverify/R$string;->report_reuse_text_confirmation:I
 
@@ -208,9 +220,13 @@
     :cond_0
     invoke-virtual {v0}, Landroid/app/Activity;->finish()V
 
+     invoke-static {p0}, Lru/vtosters/lite/res/proxy/ProxyResources;->addProxyResources(Ljava/lang/Object;)V
+
     invoke-virtual {p0}, Landroid/preference/PreferenceFragment;->getResources()Landroid/content/res/Resources;
 
     move-result-object p0
+
+
 
     sget v1, Lru/mail/libverify/R$string;->setting_saved_toast_text:I
 
@@ -349,9 +365,13 @@
 
     move-result-object v2
 
+     invoke-static {p0}, Lru/vtosters/lite/res/proxy/ProxyResources;->addProxyResources(Ljava/lang/Object;)V
+
     invoke-virtual {p0}, Landroid/preference/PreferenceFragment;->getResources()Landroid/content/res/Resources;
 
     move-result-object v3
+
+
 
     sget v4, Lru/mail/libverify/R$string;->report_reuse_text:I
 
@@ -433,9 +453,13 @@
 
     new-array v2, v2, [Ljava/lang/Object;
 
+     invoke-static {p0}, Lru/vtosters/lite/res/proxy/ProxyResources;->addProxyResources(Ljava/lang/Object;)V
+
     invoke-virtual {p0}, Landroid/preference/PreferenceFragment;->getResources()Landroid/content/res/Resources;
 
     move-result-object v3
+
+
 
     sget v4, Lru/mail/libverify/R$string;->title_activity_settings:I
 

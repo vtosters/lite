@@ -1266,9 +1266,13 @@
     invoke-direct {p0, v1}, Lcom/vk/attachpicker/screen/EditorScreen;->k(Z)V
 
     .line 155
+     invoke-static {v0}, Lru/vtosters/lite/res/proxy/ProxyResources;->addProxyResources(Ljava/lang/Object;)V
+
     invoke-virtual {v0}, Landroid/app/Activity;->getResources()Landroid/content/res/Resources;
 
     move-result-object v2
+
+
 
     const v3, 0x7f07022a
 
@@ -1491,9 +1495,13 @@
     invoke-direct {v0, v3}, Lcom/vk/attachpicker/screen/EditorScreen;->k(Z)V
 
     .line 127
+     invoke-static {v2}, Lru/vtosters/lite/res/proxy/ProxyResources;->addProxyResources(Ljava/lang/Object;)V
+
     invoke-virtual {v2}, Landroid/app/Activity;->getResources()Landroid/content/res/Resources;
 
     move-result-object v4
+
+
 
     const v5, 0x7f07022a
 
@@ -2367,9 +2375,13 @@
 
     move-result-object v6
 
+     invoke-static {v6}, Lru/vtosters/lite/res/proxy/ProxyResources;->addProxyResources(Ljava/lang/Object;)V
+
     invoke-virtual {v6}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object v6
+
+
 
     const v7, 0x7f070229
 
@@ -3547,9 +3559,13 @@
 
     move-result-object v6
 
+     invoke-static {v6}, Lru/vtosters/lite/res/proxy/ProxyResources;->addProxyResources(Ljava/lang/Object;)V
+
     invoke-virtual {v6}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object v6
+
+
 
     const v7, 0x7f070229
 
@@ -4451,7 +4467,7 @@
     const v0, 0x7f040099
 
     .line 12
-    invoke-static {v0}, Lcom/vk/core/ui/themes/VKThemeHelper;->d(I)I
+    invoke-static {v0}, Lru/vtosters/lite/res/VTLColors;->getColor(I)I
 
     move-result v0
 
@@ -4570,7 +4586,7 @@
     invoke-virtual {v2, p1}, Lcom/vk/core/drawable/LayerListDrawable;->a(Landroid/graphics/drawable/Drawable;)Lcom/vk/core/drawable/LayerListDrawable;
 
     .line 25
-    invoke-static {v1}, Lcom/vk/core/ui/themes/VKThemeHelper;->d(I)I
+    invoke-static {v1}, Lru/vtosters/lite/res/VTLColors;->getColor(I)I
 
     move-result p1
 
@@ -5209,7 +5225,7 @@
     iput-object p1, p0, Lcom/vk/attachpicker/screen/EditorScreen;->w0:Landroid/view/View;
 
     .line 87
-    invoke-static {v1}, Lcom/vk/core/ui/themes/VKThemeHelper;->d(I)I
+    invoke-static {v1}, Lru/vtosters/lite/res/VTLColors;->getColor(I)I
 
     move-result p1
 

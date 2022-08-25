@@ -276,9 +276,13 @@
 
     if-eqz v2, :cond_a
 
+     invoke-static {v2}, Lru/vtosters/lite/res/proxy/ProxyResources;->addProxyResources(Ljava/lang/Object;)V
+
     invoke-virtual {v2}, Landroid/widget/TextView;->getResources()Landroid/content/res/Resources;
 
     move-result-object v2
+
+
 
     .line 16
     iget-object v4, p0, Lcom/vk/catalog2/core/y/LinkVh;->a:Landroid/widget/TextView;

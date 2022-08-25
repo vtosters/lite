@@ -29,13 +29,13 @@ public class OTADialog implements OTAUtils.OTAListener {
     public void onUpdateApplied() {
         mActivity.runOnUiThread(() -> {
             // Toast.makeText(mActivity, "Обновления найдены", Toast.LENGTH_SHORT).show();
-            new ModalBottomSheetWrapper(mActivity)
-                    .setTitle(getString("newversion") + " " + mHelper.getNewVersionName())
-                    .setUpdateInfoView(mHelper.getUpdateDescription())
-                    .setPositiveButton(getString("updateanddownload"), () -> {
-                        OTADownloader.downloadBuild(mHelper.getDownloadUrl());
-                    })
-                    .show();
+//            new ModalBottomSheetWrapper(mActivity)
+//                    .setTitle(getString("newversion") + " " + mHelper.getNewVersionName())
+//                   // .setUpdateInfoView(mHelper.getUpdateDescription())
+//                    .setPositiveButton(getString("updateanddownload"), () -> {
+//                        OTADownloader.downloadBuild(mHelper.getDownloadUrl());
+//                    })
+//                    .show();
         });
     }
 

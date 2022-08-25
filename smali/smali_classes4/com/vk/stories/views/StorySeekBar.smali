@@ -112,9 +112,13 @@
     iput-object p1, p0, Lcom/vk/stories/views/StorySeekBar;->f:Lcom/vk/stories/views/StorySeekBar$State;
 
     .line 5
+     invoke-static {p0}, Lru/vtosters/lite/res/proxy/ProxyResources;->addProxyResources(Ljava/lang/Object;)V
+
     invoke-virtual {p0}, Landroid/view/View;->getResources()Landroid/content/res/Resources;
 
     move-result-object p1
+
+
 
     const v0, 0x7f08070a
 
@@ -159,9 +163,13 @@
     iput-object p1, p0, Lcom/vk/stories/views/StorySeekBar;->D:Landroid/graphics/RectF;
 
     .line 8
+     invoke-static {p0}, Lru/vtosters/lite/res/proxy/ProxyResources;->addProxyResources(Ljava/lang/Object;)V
+
     invoke-virtual {p0}, Landroid/view/View;->getResources()Landroid/content/res/Resources;
 
     move-result-object p1
+
+
 
     const v0, 0x7f0807c8
 
@@ -243,9 +251,13 @@
     iput-object p1, p0, Lcom/vk/stories/views/StorySeekBar;->f:Lcom/vk/stories/views/StorySeekBar$State;
 
     .line 16
+     invoke-static {p0}, Lru/vtosters/lite/res/proxy/ProxyResources;->addProxyResources(Ljava/lang/Object;)V
+
     invoke-virtual {p0}, Landroid/view/View;->getResources()Landroid/content/res/Resources;
 
     move-result-object p1
+
+
 
     const p2, 0x7f08070a
 
@@ -290,9 +302,13 @@
     iput-object p1, p0, Lcom/vk/stories/views/StorySeekBar;->D:Landroid/graphics/RectF;
 
     .line 19
+     invoke-static {p0}, Lru/vtosters/lite/res/proxy/ProxyResources;->addProxyResources(Ljava/lang/Object;)V
+
     invoke-virtual {p0}, Landroid/view/View;->getResources()Landroid/content/res/Resources;
 
     move-result-object p1
+
+
 
     const p2, 0x7f0807c8
 
@@ -374,9 +390,13 @@
     iput-object p1, p0, Lcom/vk/stories/views/StorySeekBar;->f:Lcom/vk/stories/views/StorySeekBar$State;
 
     .line 27
+     invoke-static {p0}, Lru/vtosters/lite/res/proxy/ProxyResources;->addProxyResources(Ljava/lang/Object;)V
+
     invoke-virtual {p0}, Landroid/view/View;->getResources()Landroid/content/res/Resources;
 
     move-result-object p1
+
+
 
     const p2, 0x7f08070a
 
@@ -421,9 +441,13 @@
     iput-object p1, p0, Lcom/vk/stories/views/StorySeekBar;->D:Landroid/graphics/RectF;
 
     .line 30
+     invoke-static {p0}, Lru/vtosters/lite/res/proxy/ProxyResources;->addProxyResources(Ljava/lang/Object;)V
+
     invoke-virtual {p0}, Landroid/view/View;->getResources()Landroid/content/res/Resources;
 
     move-result-object p1
+
+
 
     const p2, 0x7f0807c8
 

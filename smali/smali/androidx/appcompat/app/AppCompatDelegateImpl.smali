@@ -339,7 +339,7 @@
 
     sget-object v2, Landroidx/appcompat/R$styleable;->AppCompatTheme:[I
 
-    invoke-virtual {v1, v2}, Landroid/content/Context;->obtainStyledAttributes([I)Landroid/content/res/TypedArray;
+    invoke-static {v1, v2}, Lru/vtosters/lite/res/VTLResources;->obtainStyledAttributes(Landroid/content/Context;[I)Landroid/content/res/TypedArray;
 
     move-result-object v1
 
@@ -462,7 +462,7 @@
 
     sget-object v1, Landroidx/appcompat/R$styleable;->AppCompatTheme:[I
 
-    invoke-virtual {v0, v1}, Landroid/content/Context;->obtainStyledAttributes([I)Landroid/content/res/TypedArray;
+    invoke-static {v0, v1}, Lru/vtosters/lite/res/VTLResources;->obtainStyledAttributes(Landroid/content/Context;[I)Landroid/content/res/TypedArray;
 
     move-result-object v0
 
@@ -1303,9 +1303,13 @@
     if-eqz v5, :cond_1
 
     .line 7
+     invoke-static {v0}, Lru/vtosters/lite/res/proxy/ProxyResources;->addProxyResources(Ljava/lang/Object;)V
+
     invoke-virtual {v0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object v4
+
+
 
     invoke-virtual {v4}, Landroid/content/res/Resources;->newTheme()Landroid/content/res/Resources$Theme;
 
@@ -1341,9 +1345,13 @@
     if-nez v4, :cond_2
 
     .line 13
+     invoke-static {v0}, Lru/vtosters/lite/res/proxy/ProxyResources;->addProxyResources(Ljava/lang/Object;)V
+
     invoke-virtual {v0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object v4
+
+
 
     invoke-virtual {v4}, Landroid/content/res/Resources;->newTheme()Landroid/content/res/Resources$Theme;
 
@@ -1659,9 +1667,13 @@
     .line 3
     iget-object v0, p0, Landroidx/appcompat/app/AppCompatDelegateImpl;->mContext:Landroid/content/Context;
 
+     invoke-static {v0}, Lru/vtosters/lite/res/proxy/ProxyResources;->addProxyResources(Ljava/lang/Object;)V
+
     invoke-virtual {v0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object v0
+
+
 
     invoke-virtual {v0}, Landroid/content/res/Resources;->getConfiguration()Landroid/content/res/Configuration;
 
@@ -2664,9 +2676,13 @@
     .line 1
     iget-object v0, p0, Landroidx/appcompat/app/AppCompatDelegateImpl;->mContext:Landroid/content/Context;
 
+     invoke-static {v0}, Lru/vtosters/lite/res/proxy/ProxyResources;->addProxyResources(Ljava/lang/Object;)V
+
     invoke-virtual {v0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object v0
+
+
 
     .line 2
     invoke-virtual {v0}, Landroid/content/res/Resources;->getConfiguration()Landroid/content/res/Configuration;
@@ -3061,7 +3077,7 @@
 
     sget-object v2, Landroidx/appcompat/R$styleable;->AppCompatTheme:[I
 
-    invoke-virtual {v0, v2}, Landroid/content/Context;->obtainStyledAttributes([I)Landroid/content/res/TypedArray;
+    invoke-static {v0, v2}, Lru/vtosters/lite/res/VTLResources;->obtainStyledAttributes(Landroid/content/Context;[I)Landroid/content/res/TypedArray;
 
     move-result-object v0
 
@@ -5261,9 +5277,13 @@
     .line 15
     iget-object v5, p0, Landroidx/appcompat/app/AppCompatDelegateImpl;->mContext:Landroid/content/Context;
 
+     invoke-static {v5}, Lru/vtosters/lite/res/proxy/ProxyResources;->addProxyResources(Ljava/lang/Object;)V
+
     invoke-virtual {v5}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object v5
+
+
 
     invoke-virtual {v5}, Landroid/content/res/Resources;->newTheme()Landroid/content/res/Resources$Theme;
 
@@ -5348,9 +5368,13 @@
     iget v0, v0, Landroid/util/TypedValue;->data:I
 
     .line 28
+     invoke-static {v4}, Lru/vtosters/lite/res/proxy/ProxyResources;->addProxyResources(Ljava/lang/Object;)V
+
     invoke-virtual {v4}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object v4
+
+
 
     invoke-virtual {v4}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
 
@@ -5716,14 +5740,18 @@
 
     iget-object v4, p0, Landroidx/appcompat/app/AppCompatDelegateImpl;->mContext:Landroid/content/Context;
 
+     invoke-static {v4}, Lru/vtosters/lite/res/proxy/ProxyResources;->addProxyResources(Ljava/lang/Object;)V
+
     invoke-virtual {v4}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object v4
 
+
+
     sget v5, Landroidx/appcompat/R$color;->abc_input_method_navigation_guard:I
 
     .line 19
-    invoke-virtual {v4, v5}, Landroid/content/res/Resources;->getColor(I)I
+    invoke-static {v4, v5}, Lru/vtosters/lite/res/VTLResources;->getColor(Landroid/content/res/Resources;I)I
 
     move-result v4
 

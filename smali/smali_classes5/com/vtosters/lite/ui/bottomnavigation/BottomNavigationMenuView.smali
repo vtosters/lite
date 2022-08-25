@@ -101,9 +101,13 @@
     iput p1, p0, Lcom/vtosters/lite/ui/bottomnavigation/BottomNavigationMenuView;->C:I
 
     .line 6
+     invoke-static {p0}, Lru/vtosters/lite/res/proxy/ProxyResources;->addProxyResources(Ljava/lang/Object;)V
+
     invoke-virtual {p0}, Landroid/view/ViewGroup;->getResources()Landroid/content/res/Resources;
 
     move-result-object p1
+
+
 
     const p2, 0x7f070069
 

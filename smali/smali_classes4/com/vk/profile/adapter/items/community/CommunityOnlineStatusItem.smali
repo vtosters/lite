@@ -186,7 +186,7 @@
 
     const v2, 0x7f0404d1
 
-    invoke-static {v0, v2}, Lcom/vk/core/util/ContextExtKt;->h(Landroid/content/Context;I)I
+    invoke-static {v0, v2}, Lru/vtosters/lite/res/VTLColors;->getColor(Landroid/content/Context;I)I
 
     move-result v0
 

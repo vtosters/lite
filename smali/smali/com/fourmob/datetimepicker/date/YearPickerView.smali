@@ -54,9 +54,13 @@
     invoke-virtual {p0, p2}, Landroid/widget/ListView;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
 
     .line 5
+     invoke-static {p1}, Lru/vtosters/lite/res/proxy/ProxyResources;->addProxyResources(Ljava/lang/Object;)V
+
     invoke-virtual {p1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object p2
+
+
 
     .line 6
     sget v0, Lcom/fourmob/datetimepicker/b;->date_picker_view_animator_height:I

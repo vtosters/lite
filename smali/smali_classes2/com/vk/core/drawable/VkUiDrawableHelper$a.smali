@@ -93,7 +93,7 @@
     .line 1
     sget v0, Lb/h/z/b;->modal_card_background:I
 
-    invoke-static {v0}, Lcom/vk/core/ui/themes/VKThemeHelper;->d(I)I
+    invoke-static {v0}, Lru/vtosters/lite/res/VTLColors;->getColor(I)I
 
     move-result v0
 
@@ -109,7 +109,7 @@
     .line 3
     sget v0, Lb/h/z/b;->modal_card_background:I
 
-    invoke-static {v0}, Lcom/vk/core/ui/themes/VKThemeHelper;->d(I)I
+    invoke-static {v0}, Lru/vtosters/lite/res/VTLColors;->getColor(I)I
 
     move-result v0
 
@@ -126,7 +126,7 @@
     .line 1
     sget v0, Lb/h/z/b;->modal_card_border:I
 
-    invoke-static {v0}, Lcom/vk/core/ui/themes/VKThemeHelper;->d(I)I
+    invoke-static {v0}, Lru/vtosters/lite/res/VTLColors;->getColor(I)I
 
     move-result v0
 

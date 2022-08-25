@@ -172,9 +172,13 @@
 
     move-result-object v0
 
+     invoke-static {v0}, Lru/vtosters/lite/res/proxy/ProxyResources;->addProxyResources(Ljava/lang/Object;)V
+
     invoke-virtual {v0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object v0
+
+
 
     invoke-virtual {v0, p1}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
@@ -223,7 +227,7 @@
     const p2, 0x7f040598
 
     .line 20
-    invoke-static {p2}, Lcom/vk/core/ui/themes/VKThemeHelper;->d(I)I
+    invoke-static {p2}, Lru/vtosters/lite/res/VTLColors;->getColor(I)I
 
     move-result p2
 
@@ -255,7 +259,7 @@
     const p3, 0x7f040251
 
     .line 24
-    invoke-static {p3}, Lcom/vk/core/ui/themes/VKThemeHelper;->d(I)I
+    invoke-static {p3}, Lru/vtosters/lite/res/VTLColors;->getColor(I)I
 
     move-result p3
 
@@ -914,9 +918,13 @@
     .line 2
     iget-object v0, p0, Lcom/vtosters/lite/ui/z/ReplyBarController;->a:Landroid/view/View;
 
+     invoke-static {v0}, Lru/vtosters/lite/res/proxy/ProxyResources;->addProxyResources(Ljava/lang/Object;)V
+
     invoke-virtual {v0}, Landroid/view/View;->getResources()Landroid/content/res/Resources;
 
     move-result-object v0
+
+
 
     const v1, 0x7f12023a
 

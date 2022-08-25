@@ -1,15 +1,10 @@
 package ru.vtosters.lite.ui.fragments;
 
 import static ru.vtosters.lite.utils.AndroidUtils.dp2px;
-import static ru.vtosters.lite.utils.AndroidUtils.getGlobalContext;
 import static ru.vtosters.lite.utils.AndroidUtils.getIdentifier;
-import static ru.vtosters.lite.utils.ThemesUtils.getAccentColor;
-import static ru.vtosters.lite.utils.ThemesUtils.getSTextAttr;
-import static ru.vtosters.lite.utils.ThemesUtils.getTextAttr;
+import static ru.vtosters.lite.res.VTLColors.getAccentColor;
 
 import android.app.Activity;
-import android.app.AlertDialog;
-import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.res.ColorStateList;
 import android.graphics.Color;
@@ -18,8 +13,6 @@ import android.text.TextUtils;
 import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
-import android.view.ViewGroup;
-import android.widget.EditText;
 import android.widget.FrameLayout;
 import android.widget.LinearLayout;
 
@@ -30,13 +23,16 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.vk.core.util.ToastUtils;
+import com.vk.navigation.Navigator;
+import com.vtosters.lite.R;
 
 import org.json.JSONException;
 
 import java.io.IOException;
 
+import ru.vtosters.lite.res.managers.ThemesManager;
 import ru.vtosters.lite.ui.adapters.ThemesAdapter;
-import ru.vtosters.lite.ui.components.ThemesManager;
+import ru.vtosters.lite.ui.dialogs.EditTextDialog;
 import ru.vtosters.lite.utils.LayoutUtils;
 
 public class ThemesManagerFragment extends BaseToolbarFragment {
@@ -52,10 +48,8 @@ public class ThemesManagerFragment extends BaseToolbarFragment {
 
         switch (requestCode) {
             case IMPORT_REQUEST_CODE:
-                if (resultCode != Activity.RESULT_OK) {
-                    ToastUtils.a("Не удалось импортировать тему");
+                if (resultCode != Activity.RESULT_OK)
                     return;
-                }
                 try {
                     var data = intent.getData();
                     if (data != null) {
@@ -98,45 +92,22 @@ public class ThemesManagerFragment extends BaseToolbarFragment {
         addNewTheme.setImageResource(getIdentifier("ic_add_24", "drawable"));
         addNewTheme.setBackgroundTintList(ColorStateList.valueOf(getAccentColor()));
         addNewTheme.setOnClickListener(v -> {
-            LinearLayout linearLayout = new LinearLayout(getGlobalContext());
-
-            final EditText editText = new EditText(getGlobalContext());
-            editText.setHint("Название новой темы");
-            editText.setTextColor(getTextAttr());
-            editText.setHintTextColor(getSTextAttr());
-
-            editText.setBackgroundTintList(ColorStateList.valueOf(getAccentColor()));
-
-            linearLayout.addView(editText);
-            editText.getLayoutParams().width = ViewGroup.LayoutParams.MATCH_PARENT;
-            ViewGroup.MarginLayoutParams margin = ((ViewGroup.MarginLayoutParams) editText.getLayoutParams());
-            margin.setMargins(dp2px(20f), 0, dp2px(20f), 0);
-            editText.setLayoutParams(margin);
-
-            AlertDialog.Builder builder = new AlertDialog.Builder(getContext());
-            builder.setTitle("Новая тема");
-            builder.setView(linearLayout);
-            builder.setPositiveButton("OK", (dialog, which) -> {
+            EditTextDialog.create(v.getContext(), "Новая тема", "Название новой темы", null, (dialog, which, editText) -> {
                 var name = editText.getText().toString();
                 if (TextUtils.isEmpty(name)) {
                     ToastUtils.a("Название не может быть пустым");
                     return;
                 }
                 try {
-                    mManager.create(name, false);
+                    mManager.create(requireActivity(), name);
                     mAdapter.notifyDataSetChanged();
                 } catch (IOException | JSONException e) {
                     e.printStackTrace();
                     ToastUtils.a("Не удалось изменить название темы");
                 }
             });
-
-            var alert = builder.create();
-            alert.show();
-            alert.getButton(DialogInterface.BUTTON_POSITIVE).setTextColor(getAccentColor());
-
-            mAdapter.notifyDataSetChanged();
         });
+
         buttonsContainer.addView(addNewTheme, LayoutUtils.createLinear(-2, -2));
 
         buttonsContainer.addView(new View(getContext()), LayoutUtils.createLinear(dp2px(5), 0));
@@ -146,25 +117,26 @@ public class ThemesManagerFragment extends BaseToolbarFragment {
         importTheme.setBackgroundTintList(ColorStateList.valueOf(getAccentColor()));
         importTheme.setImageTintList(ColorStateList.valueOf(Color.WHITE));
         importTheme.setOnClickListener(v -> {
-
             var intent = new Intent(Intent.ACTION_GET_CONTENT)
                     .setType("*/*")
                     .addCategory(Intent.CATEGORY_OPENABLE);
-
             startActivityForResult(Intent.createChooser(intent, "Выберите тему (.vtlt, .svt)"), IMPORT_REQUEST_CODE);
-
-            ToastUtils.a("Возможен импорт тем из стороннего мода Sova V RE");
+            ToastUtils.a("Возможен импорт тем из сторонней модификации ВК Sova V RE");
         });
         buttonsContainer.addView(importTheme, LayoutUtils.createLinear(-2, -2));
 
+        buttonsContainer.addView(new View(getContext()), LayoutUtils.createLinear(dp2px(5), 0));
+
+        var openPalettes = new FloatingActionButton(getContext());
+        openPalettes.setImageResource(R.drawable.ic_palette_outline_28);
+        openPalettes.setBackgroundTintList(ColorStateList.valueOf(getAccentColor()));
+        openPalettes.setOnClickListener(v -> {
+            var intent = new Navigator(PalettesManagerFragment.class, new Bundle()).b(getContext());
+            intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+            getContext().startActivity(intent);
+        });
+        buttonsContainer.addView(openPalettes, LayoutUtils.createLinear(-2, -2));
+
         return container;
-    }
-
-    @Override
-    public void onResume() {
-        super.onResume();
-
-        mManager.reload();
-        mAdapter.notifyDataSetChanged();
     }
 }

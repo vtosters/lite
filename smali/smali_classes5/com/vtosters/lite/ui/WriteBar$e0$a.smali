@@ -58,9 +58,13 @@
 
     iget-object v0, v0, Lcom/vtosters/lite/ui/WriteBar$e0;->b:Lcom/vtosters/lite/ui/WriteBar;
 
+     invoke-static {v0}, Lru/vtosters/lite/res/proxy/ProxyResources;->addProxyResources(Ljava/lang/Object;)V
+
     invoke-virtual {v0}, Landroid/widget/LinearLayout;->getResources()Landroid/content/res/Resources;
 
     move-result-object v0
+
+
 
     const v1, 0x7f070354
 
@@ -73,9 +77,13 @@
 
     iget-object v1, v1, Lcom/vtosters/lite/ui/WriteBar$e0;->b:Lcom/vtosters/lite/ui/WriteBar;
 
+     invoke-static {v1}, Lru/vtosters/lite/res/proxy/ProxyResources;->addProxyResources(Ljava/lang/Object;)V
+
     invoke-virtual {v1}, Landroid/widget/LinearLayout;->getResources()Landroid/content/res/Resources;
 
     move-result-object v1
+
+
 
     const v2, 0x7f070353
 
@@ -88,9 +96,13 @@
 
     iget-object v2, v2, Lcom/vtosters/lite/ui/WriteBar$e0;->b:Lcom/vtosters/lite/ui/WriteBar;
 
+     invoke-static {v2}, Lru/vtosters/lite/res/proxy/ProxyResources;->addProxyResources(Ljava/lang/Object;)V
+
     invoke-virtual {v2}, Landroid/widget/LinearLayout;->getResources()Landroid/content/res/Resources;
 
     move-result-object v2
+
+
 
     const v3, 0x7f070355
 

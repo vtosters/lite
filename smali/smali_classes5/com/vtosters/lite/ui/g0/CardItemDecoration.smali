@@ -76,13 +76,17 @@
 
     sget-object v2, Lcom/vk/core/util/AppContextHolder;->a:Landroid/content/Context;
 
+     invoke-static {v2}, Lru/vtosters/lite/res/proxy/ProxyResources;->addProxyResources(Ljava/lang/Object;)V
+
     invoke-virtual {v2}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object v2
 
+
+
     const v3, 0x7f040095
 
-    invoke-static {v3}, Lcom/vk/core/ui/themes/VKThemeHelper;->d(I)I
+    invoke-static {v3}, Lru/vtosters/lite/res/VTLColors;->getColor(I)I
 
     move-result v3
 
@@ -110,7 +114,7 @@
     .line 7
     iget-object p2, p0, Lcom/vtosters/lite/ui/g0/CardItemDecoration;->c:Landroid/graphics/Paint;
 
-    invoke-static {v0}, Lcom/vk/core/ui/themes/VKThemeHelper;->d(I)I
+    invoke-static {v0}, Lru/vtosters/lite/res/VTLColors;->getColor(I)I
 
     move-result v0
 
@@ -473,7 +477,7 @@
     .line 2
     iget-object v0, p0, Lcom/vtosters/lite/ui/g0/CardItemDecoration;->c:Landroid/graphics/Paint;
 
-    invoke-static {p1}, Lcom/vk/core/ui/themes/VKThemeHelper;->d(I)I
+    invoke-static {p1}, Lru/vtosters/lite/res/VTLColors;->getColor(I)I
 
     move-result p1
 
@@ -1182,7 +1186,7 @@
 
     const v1, 0x7f040095
 
-    invoke-static {v1}, Lcom/vk/core/ui/themes/VKThemeHelper;->d(I)I
+    invoke-static {v1}, Lru/vtosters/lite/res/VTLColors;->getColor(I)I
 
     move-result v1
 
@@ -1193,7 +1197,7 @@
 
     iget v1, p0, Lcom/vtosters/lite/ui/g0/CardItemDecoration;->I:I
 
-    invoke-static {v1}, Lcom/vk/core/ui/themes/VKThemeHelper;->d(I)I
+    invoke-static {v1}, Lru/vtosters/lite/res/VTLColors;->getColor(I)I
 
     move-result v1
 

@@ -50,13 +50,17 @@
 
     iget-object v0, p0, Lru/mail/libverify/notifications/h$4;->b:Landroid/content/Context;
 
+     invoke-static {v0}, Lru/vtosters/lite/res/proxy/ProxyResources;->addProxyResources(Ljava/lang/Object;)V
+
     invoke-virtual {v0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object v0
 
+
+
     sget v1, Lru/mail/libverify/R$color;->libverify_settings_color:I
 
-    invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getColor(I)I
+    invoke-static {v0, v1}, Lru/vtosters/lite/res/VTLResources;->getColor(Landroid/content/res/Resources;I)I
 
     move-result v0
 
@@ -72,13 +76,17 @@
 
     iget-object v0, p0, Lru/mail/libverify/notifications/h$4;->b:Landroid/content/Context;
 
+     invoke-static {v0}, Lru/vtosters/lite/res/proxy/ProxyResources;->addProxyResources(Ljava/lang/Object;)V
+
     invoke-virtual {v0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object v0
 
+
+
     sget v1, Lru/mail/libverify/R$color;->libverify_settings_color:I
 
-    invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getColor(I)I
+    invoke-static {v0, v1}, Lru/vtosters/lite/res/VTLResources;->getColor(Landroid/content/res/Resources;I)I
 
     move-result v0
 

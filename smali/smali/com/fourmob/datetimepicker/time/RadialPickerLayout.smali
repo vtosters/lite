@@ -245,13 +245,17 @@
     .line 29
     iget-object p2, p0, Lcom/fourmob/datetimepicker/time/RadialPickerLayout;->M:Landroid/view/View;
 
+     invoke-static {p0}, Lru/vtosters/lite/res/proxy/ProxyResources;->addProxyResources(Ljava/lang/Object;)V
+
     invoke-virtual {p0}, Landroid/widget/FrameLayout;->getResources()Landroid/content/res/Resources;
 
     move-result-object v0
 
+
+
     sget v2, Lcom/fourmob/datetimepicker/a;->transparent_black:I
 
-    invoke-virtual {v0, v2}, Landroid/content/res/Resources;->getColor(I)I
+    invoke-static {v0, v2}, Lru/vtosters/lite/res/VTLResources;->getColor(Landroid/content/res/Resources;I)I
 
     move-result v0
 
@@ -1265,9 +1269,13 @@
 
     .line 15
     :cond_3
+     invoke-static/range {p1 .. p1}, Lru/vtosters/lite/res/proxy/ProxyResources;->addProxyResources(Ljava/lang/Object;)V
+
     invoke-virtual/range {p1 .. p1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object v2
+
+
 
     new-array v6, v5, [I
 

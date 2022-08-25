@@ -838,9 +838,13 @@
 
     iget-object v3, v0, Lcom/vk/market/orders/adapter/MarketOrderAdapter;->g:Landroid/content/Context;
 
+     invoke-static {v3}, Lru/vtosters/lite/res/proxy/ProxyResources;->addProxyResources(Ljava/lang/Object;)V
+
     invoke-virtual {v3}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object v3
+
+
 
     const v9, 0x7f100034
 

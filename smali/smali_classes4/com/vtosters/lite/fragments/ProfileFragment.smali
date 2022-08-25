@@ -1039,9 +1039,13 @@
     invoke-virtual {v1, v0}, Lcom/vk/core/dialogs/alert/VkAlertDialog$Builder;->setTitle(I)Lcom/vk/core/dialogs/alert/VkAlertDialog$Builder;
 
     .line 6
+     invoke-static {p0}, Lru/vtosters/lite/res/proxy/ProxyResources;->addProxyResources(Ljava/lang/Object;)V
+
     invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getResources()Landroid/content/res/Resources;
 
     move-result-object v0
+
+
 
     const v2, 0x7f1202bc
 
@@ -1408,9 +1412,13 @@
     invoke-direct {v0, v1}, Lcom/vk/core/dialogs/alert/VkAlertDialog$Builder;-><init>(Landroid/content/Context;)V
 
     .line 4
+     invoke-static {p0}, Lru/vtosters/lite/res/proxy/ProxyResources;->addProxyResources(Ljava/lang/Object;)V
+
     invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getResources()Landroid/content/res/Resources;
 
     move-result-object v1
+
+
 
     const v2, 0x7f12027c
 
@@ -2189,7 +2197,7 @@
     const v1, 0x7f04022d
 
     .line 4
-    invoke-static {v1}, Lcom/vk/core/ui/themes/VKThemeHelper;->d(I)I
+    invoke-static {v1}, Lru/vtosters/lite/res/VTLColors;->getColor(I)I
 
     move-result v2
 
@@ -2198,7 +2206,7 @@
     const v2, 0x7f040230
 
     .line 5
-    invoke-static {v2}, Lcom/vk/core/ui/themes/VKThemeHelper;->d(I)I
+    invoke-static {v2}, Lru/vtosters/lite/res/VTLColors;->getColor(I)I
 
     move-result v2
 
@@ -2740,9 +2748,13 @@
 
     check-cast v1, Landroid/widget/TextView;
 
+     invoke-static {p0}, Lru/vtosters/lite/res/proxy/ProxyResources;->addProxyResources(Ljava/lang/Object;)V
+
     invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getResources()Landroid/content/res/Resources;
 
     move-result-object v7
+
+
 
     iget-object v8, p0, Lcom/vk/profile/ui/BaseProfileFragment;->r0:Lcom/vtosters/lite/api/ExtendedUserProfile;
 
@@ -2861,9 +2873,13 @@
 
     check-cast v1, Landroid/widget/TextView;
 
+     invoke-static {p0}, Lru/vtosters/lite/res/proxy/ProxyResources;->addProxyResources(Ljava/lang/Object;)V
+
     invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getResources()Landroid/content/res/Resources;
 
     move-result-object v7
+
+
 
     iget-object v8, p0, Lcom/vk/profile/ui/BaseProfileFragment;->r0:Lcom/vtosters/lite/api/ExtendedUserProfile;
 
@@ -4423,9 +4439,13 @@
     new-instance v0, Lcom/vtosters/lite/ui/a0/TransitionFadeDrawable;
 
     .line 8
+     invoke-static {p1}, Lru/vtosters/lite/res/proxy/ProxyResources;->addProxyResources(Ljava/lang/Object;)V
+
     invoke-virtual {p1}, Landroid/view/View;->getResources()Landroid/content/res/Resources;
 
     move-result-object p1
+
+
 
     const v1, 0x7f080376
 
@@ -4622,9 +4642,13 @@
 
     if-eqz v0, :cond_3
 
+     invoke-static {p0}, Lru/vtosters/lite/res/proxy/ProxyResources;->addProxyResources(Ljava/lang/Object;)V
+
     invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getResources()Landroid/content/res/Resources;
 
     move-result-object v0
+
+
 
     const v3, 0x7f1214d9
 
@@ -4635,9 +4659,13 @@
     goto :goto_1
 
     :cond_3
+     invoke-static {p0}, Lru/vtosters/lite/res/proxy/ProxyResources;->addProxyResources(Ljava/lang/Object;)V
+
     invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getResources()Landroid/content/res/Resources;
 
     move-result-object v0
+
+
 
     const v3, 0x7f1214d8
 
@@ -4952,7 +4980,7 @@
     const v0, 0x7f04022d
 
     .line 3
-    invoke-static {v0}, Lcom/vk/core/ui/themes/VKThemeHelper;->d(I)I
+    invoke-static {v0}, Lru/vtosters/lite/res/VTLColors;->getColor(I)I
 
     move-result v0
 
@@ -4961,7 +4989,7 @@
     const v0, 0x7f040230
 
     .line 4
-    invoke-static {v0}, Lcom/vk/core/ui/themes/VKThemeHelper;->d(I)I
+    invoke-static {v0}, Lru/vtosters/lite/res/VTLColors;->getColor(I)I
 
     move-result v0
 

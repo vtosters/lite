@@ -88,9 +88,13 @@
 
     move-result-object v0
 
+     invoke-static {v0}, Lru/vtosters/lite/res/proxy/ProxyResources;->addProxyResources(Ljava/lang/Object;)V
+
     invoke-virtual {v0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object v0
+
+
 
     sget v1, Lcom/vk/libvideo/j;->live_video_add_ok:I
 

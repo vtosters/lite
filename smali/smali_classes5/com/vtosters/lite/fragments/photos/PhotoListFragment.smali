@@ -291,9 +291,13 @@
 
     int-to-float v1, v1
 
+     invoke-static/range {p0 .. p0}, Lru/vtosters/lite/res/proxy/ProxyResources;->addProxyResources(Ljava/lang/Object;)V
+
     invoke-virtual/range {p0 .. p0}, Landroidx/fragment/app/Fragment;->getResources()Landroid/content/res/Resources;
 
     move-result-object v2
+
+
 
     invoke-virtual {v2}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
 
@@ -2155,13 +2159,17 @@
     if-eqz p1, :cond_9
 
     .line 10
+     invoke-static {p0}, Lru/vtosters/lite/res/proxy/ProxyResources;->addProxyResources(Ljava/lang/Object;)V
+
     invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getResources()Landroid/content/res/Resources;
 
     move-result-object p2
 
+
+
     const v0, 0x7f0600f7
 
-    invoke-virtual {p2, v0}, Landroid/content/res/Resources;->getColor(I)I
+    invoke-static {p2, v0}, Lru/vtosters/lite/res/VTLResources;->getColor(Landroid/content/res/Resources;I)I
 
     move-result p2
 
@@ -2197,11 +2205,15 @@
     .line 15
     new-instance v2, Landroid/text/style/ForegroundColorSpan;
 
+     invoke-static {p0}, Lru/vtosters/lite/res/proxy/ProxyResources;->addProxyResources(Ljava/lang/Object;)V
+
     invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getResources()Landroid/content/res/Resources;
 
     move-result-object v5
 
-    invoke-virtual {v5, v0}, Landroid/content/res/Resources;->getColor(I)I
+
+
+    invoke-static {v5, v0}, Lru/vtosters/lite/res/VTLResources;->getColor(Landroid/content/res/Resources;I)I
 
     move-result v5
 
@@ -2411,7 +2423,7 @@
 
     const v3, 0x7f040230
 
-    invoke-static {v3}, Lcom/vk/core/ui/themes/VKThemeHelper;->d(I)I
+    invoke-static {v3}, Lru/vtosters/lite/res/VTLColors;->getColor(I)I
 
     move-result v3
 

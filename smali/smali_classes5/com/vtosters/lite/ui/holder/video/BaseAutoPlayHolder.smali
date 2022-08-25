@@ -401,9 +401,13 @@
     if-eqz v1, :cond_0
 
     .line 26
+     invoke-static/range {p2 .. p2}, Lru/vtosters/lite/res/proxy/ProxyResources;->addProxyResources(Ljava/lang/Object;)V
+
     invoke-virtual/range {p2 .. p2}, Landroid/view/ViewGroup;->getResources()Landroid/content/res/Resources;
 
     move-result-object v1
+
+
 
     invoke-virtual {v1}, Landroid/content/res/Resources;->getConfiguration()Landroid/content/res/Configuration;
 
@@ -419,13 +423,17 @@
     const/4 v3, -0x1
 
     .line 28
+     invoke-static/range {p2 .. p2}, Lru/vtosters/lite/res/proxy/ProxyResources;->addProxyResources(Ljava/lang/Object;)V
+
     invoke-virtual/range {p2 .. p2}, Landroid/view/ViewGroup;->getResources()Landroid/content/res/Resources;
 
     move-result-object v2
 
+
+
     const v4, 0x7f06026d
 
-    invoke-virtual {v2, v4}, Landroid/content/res/Resources;->getColor(I)I
+    invoke-static {v2, v4}, Lru/vtosters/lite/res/VTLResources;->getColor(Landroid/content/res/Resources;I)I
 
     move-result v4
 
@@ -1576,9 +1584,13 @@
     .line 35
     iget-object v1, p0, Lcom/vtosters/lite/ui/holder/video/BaseAutoPlayHolder;->O:Landroid/widget/TextView;
 
+     invoke-static {v1}, Lru/vtosters/lite/res/proxy/ProxyResources;->addProxyResources(Ljava/lang/Object;)V
+
     invoke-virtual {v1}, Landroid/widget/TextView;->getResources()Landroid/content/res/Resources;
 
     move-result-object v4
+
+
 
     const v5, 0x7f1000cd
 

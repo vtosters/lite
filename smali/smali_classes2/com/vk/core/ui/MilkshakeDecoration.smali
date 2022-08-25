@@ -72,7 +72,7 @@
 
     iget v1, p0, Lcom/vk/core/ui/MilkshakeDecoration;->a:I
 
-    invoke-static {v1}, Lcom/vk/core/ui/themes/VKThemeHelper;->d(I)I
+    invoke-static {v1}, Lru/vtosters/lite/res/VTLColors;->getColor(I)I
 
     move-result v1
 
@@ -140,9 +140,13 @@
 
     move-result-object v0
 
+     invoke-static {v0}, Lru/vtosters/lite/res/proxy/ProxyResources;->addProxyResources(Ljava/lang/Object;)V
+
     invoke-virtual {v0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object v0
+
+
 
     sget v1, Lb/h/z/d;->post_side_padding:I
 
@@ -479,7 +483,7 @@
 
     iget v1, p0, Lcom/vk/core/ui/MilkshakeDecoration;->a:I
 
-    invoke-static {v1}, Lcom/vk/core/ui/themes/VKThemeHelper;->d(I)I
+    invoke-static {v1}, Lru/vtosters/lite/res/VTLColors;->getColor(I)I
 
     move-result v1
 

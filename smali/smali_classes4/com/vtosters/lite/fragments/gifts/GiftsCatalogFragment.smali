@@ -1608,9 +1608,13 @@
     invoke-virtual {v1, v2, v3, v0, v4}, Landroid/text/SpannableStringBuilder;->setSpan(Ljava/lang/Object;III)V
 
     .line 5
+     invoke-static {p0}, Lru/vtosters/lite/res/proxy/ProxyResources;->addProxyResources(Ljava/lang/Object;)V
+
     invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getResources()Landroid/content/res/Resources;
 
     move-result-object v0
+
+
 
     iget v2, p0, Lcom/vtosters/lite/fragments/gifts/GiftsCatalogFragment;->I0:I
 
@@ -1717,9 +1721,13 @@
 
     .line 5
     :cond_0
+     invoke-static {p0}, Lru/vtosters/lite/res/proxy/ProxyResources;->addProxyResources(Ljava/lang/Object;)V
+
     invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getResources()Landroid/content/res/Resources;
 
     move-result-object p1
+
+
 
     const v0, 0x7f07010c
 
@@ -1744,9 +1752,13 @@
     iput p1, p0, Lcom/vtosters/lite/fragments/gifts/GiftsCatalogFragment;->G0:I
 
     .line 6
+     invoke-static {p0}, Lru/vtosters/lite/res/proxy/ProxyResources;->addProxyResources(Ljava/lang/Object;)V
+
     invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getResources()Landroid/content/res/Resources;
 
     move-result-object p1
+
+
 
     const v0, 0x7f070107
 

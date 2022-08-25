@@ -1232,9 +1232,13 @@
     if-eqz p2, :cond_2
 
     .line 44
+     invoke-static {p0}, Lru/vtosters/lite/res/proxy/ProxyResources;->addProxyResources(Ljava/lang/Object;)V
+
     invoke-virtual {p0}, Landroid/widget/ViewAnimator;->getResources()Landroid/content/res/Resources;
 
     move-result-object p1
+
+
 
     const p3, 0x7f1208a8
 

@@ -85,9 +85,13 @@
     .line 8
     new-instance p1, Lcom/vtosters/lite/ui/g0/SpaceItemDecoration;
 
+     invoke-static {v0}, Lru/vtosters/lite/res/proxy/ProxyResources;->addProxyResources(Ljava/lang/Object;)V
+
     invoke-virtual {v0}, Landroid/view/ViewGroup;->getResources()Landroid/content/res/Resources;
 
     move-result-object v1
+
+
 
     const-string v3, "resources"
 

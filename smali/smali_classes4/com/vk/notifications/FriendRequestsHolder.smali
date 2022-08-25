@@ -200,9 +200,13 @@
 
     iget-object v4, p0, Lcom/vk/notifications/FriendRequestsHolder;->a:Landroid/content/Context;
 
+     invoke-static {v4}, Lru/vtosters/lite/res/proxy/ProxyResources;->addProxyResources(Ljava/lang/Object;)V
+
     invoke-virtual {v4}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object v4
+
+
 
     const v5, 0x7f100071
 

@@ -403,9 +403,13 @@
 
     if-eqz v0, :cond_11
 
+     invoke-static {v0}, Lru/vtosters/lite/res/proxy/ProxyResources;->addProxyResources(Ljava/lang/Object;)V
+
     invoke-virtual {v0}, Landroid/widget/TextView;->getResources()Landroid/content/res/Resources;
 
     move-result-object v0
+
+
 
     .line 20
     iget-object v3, p0, Lcom/vk/catalog2/core/holders/video/VideoItemListSmallVh;->d:Landroid/widget/TextView;

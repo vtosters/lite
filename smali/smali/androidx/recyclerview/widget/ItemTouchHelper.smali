@@ -1542,9 +1542,13 @@
     if-eqz p1, :cond_2
 
     .line 4
+     invoke-static {p1}, Lru/vtosters/lite/res/proxy/ProxyResources;->addProxyResources(Ljava/lang/Object;)V
+
     invoke-virtual {p1}, Landroid/view/ViewGroup;->getResources()Landroid/content/res/Resources;
 
     move-result-object p1
+
+
 
     .line 5
     sget v0, Landroidx/recyclerview/R$dimen;->item_touch_helper_swipe_escape_velocity:I

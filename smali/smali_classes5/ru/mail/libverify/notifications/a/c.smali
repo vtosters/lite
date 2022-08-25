@@ -366,9 +366,13 @@
 
     check-cast p3, Landroid/widget/RelativeLayout;
 
+     invoke-static {p2}, Lru/vtosters/lite/res/proxy/ProxyResources;->addProxyResources(Ljava/lang/Object;)V
+
     invoke-virtual {p2}, Landroid/view/View;->getResources()Landroid/content/res/Resources;
 
     move-result-object v0
+
+
 
     sget v1, Lru/mail/libverify/R$drawable;->sms_background:I
 

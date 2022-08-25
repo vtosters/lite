@@ -82,7 +82,7 @@
 
     sget v1, Lcom/vk/emoji/r;->text_secondary:I
 
-    invoke-static {v1}, Lcom/vk/core/ui/themes/VKThemeHelper;->d(I)I
+    invoke-static {v1}, Lru/vtosters/lite/res/VTLColors;->getColor(I)I
 
     move-result v1
 

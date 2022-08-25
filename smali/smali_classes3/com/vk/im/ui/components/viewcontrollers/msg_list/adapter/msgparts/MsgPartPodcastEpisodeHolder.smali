@@ -92,9 +92,13 @@
 
     if-eqz v0, :cond_6
 
+     invoke-static {v0}, Lru/vtosters/lite/res/proxy/ProxyResources;->addProxyResources(Ljava/lang/Object;)V
+
     invoke-virtual {v0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object v0
+
+
 
     .line 4
     sget v3, Lcom/vk/im/ui/j;->vkim_msg_part_link_large:I
@@ -122,7 +126,7 @@
 
     sget v4, Lcom/vk/im/ui/d;->vkim_msg_part_placeholder:I
 
-    invoke-virtual {v0, v4}, Landroid/content/res/Resources;->getColor(I)I
+    invoke-static {v0, v4}, Lru/vtosters/lite/res/VTLResources;->getColor(Landroid/content/res/Resources;I)I
 
     move-result v0
 
@@ -390,9 +394,13 @@
 
     if-eqz v4, :cond_8
 
+     invoke-static {v4}, Lru/vtosters/lite/res/proxy/ProxyResources;->addProxyResources(Ljava/lang/Object;)V
+
     invoke-virtual {v4}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object v4
+
+
 
     sget v6, Lcom/vk/im/ui/f;->bg_podcast_36_placeholder:I
 

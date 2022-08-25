@@ -226,7 +226,7 @@
 
     sget v2, Lcom/vk/stickers/f;->icon_tertiary:I
 
-    invoke-static {v2}, Lcom/vk/core/ui/themes/VKThemeHelper;->d(I)I
+    invoke-static {v2}, Lru/vtosters/lite/res/VTLColors;->getColor(I)I
 
     move-result v2
 
@@ -239,7 +239,7 @@
 
     sget v0, Lcom/vk/stickers/f;->accent:I
 
-    invoke-static {v0}, Lcom/vk/core/ui/themes/VKThemeHelper;->d(I)I
+    invoke-static {v0}, Lru/vtosters/lite/res/VTLColors;->getColor(I)I
 
     move-result v0
 

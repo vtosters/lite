@@ -28,23 +28,31 @@
     iput-object p2, p0, Lcom/fourmob/datetimepicker/date/TextViewWithCircularIndicator;->b:Landroid/graphics/Paint;
 
     .line 3
+     invoke-static {p1}, Lru/vtosters/lite/res/proxy/ProxyResources;->addProxyResources(Ljava/lang/Object;)V
+
     invoke-virtual {p1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object p2
 
+
+
     .line 4
     sget v0, Lcom/fourmob/datetimepicker/a;->blue:I
 
-    invoke-virtual {p2, v0}, Landroid/content/res/Resources;->getColor(I)I
+    invoke-static {p2, v0}, Lru/vtosters/lite/res/VTLResources;->getColor(Landroid/content/res/Resources;I)I
 
     move-result p2
 
     iput p2, p0, Lcom/fourmob/datetimepicker/date/TextViewWithCircularIndicator;->a:I
 
     .line 5
+     invoke-static {p1}, Lru/vtosters/lite/res/proxy/ProxyResources;->addProxyResources(Ljava/lang/Object;)V
+
     invoke-virtual {p1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object p1
+
+
 
     sget p2, Lcom/fourmob/datetimepicker/e;->item_is_selected:I
 

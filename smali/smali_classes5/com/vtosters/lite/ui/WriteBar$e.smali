@@ -102,9 +102,13 @@
     .line 5
     iget-object p3, p0, Lcom/vtosters/lite/ui/WriteBar$e;->a:Lcom/vtosters/lite/ui/WriteBar;
 
+     invoke-static {p3}, Lru/vtosters/lite/res/proxy/ProxyResources;->addProxyResources(Ljava/lang/Object;)V
+
     invoke-virtual {p3}, Landroid/widget/LinearLayout;->getResources()Landroid/content/res/Resources;
 
     move-result-object p3
+
+
 
     invoke-virtual {p3}, Landroid/content/res/Resources;->getConfiguration()Landroid/content/res/Configuration;
 

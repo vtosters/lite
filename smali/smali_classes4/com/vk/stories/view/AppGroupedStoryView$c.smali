@@ -53,9 +53,13 @@
     .line 2
     iget-object v0, p0, Lcom/vk/stories/view/AppGroupedStoryView$c;->a:Lcom/google/android/material/appbar/NonBouncedAppBarLayout;
 
+     invoke-static {v0}, Lru/vtosters/lite/res/proxy/ProxyResources;->addProxyResources(Ljava/lang/Object;)V
+
     invoke-virtual {v0}, Landroid/widget/LinearLayout;->getResources()Landroid/content/res/Resources;
 
     move-result-object v0
+
+
 
     const-string v1, "resources"
 

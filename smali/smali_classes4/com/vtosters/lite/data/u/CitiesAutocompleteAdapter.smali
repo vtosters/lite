@@ -137,9 +137,13 @@
     .line 10
     sget-object v0, Lcom/vk/core/util/AppContextHolder;->a:Landroid/content/Context;
 
+     invoke-static {v0}, Lru/vtosters/lite/res/proxy/ProxyResources;->addProxyResources(Ljava/lang/Object;)V
+
     invoke-virtual {v0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object v0
+
+
 
     const v3, 0x7f12097f
 
@@ -578,13 +582,17 @@
     .line 6
     new-instance v3, Landroid/text/style/ForegroundColorSpan;
 
+     invoke-static {p3}, Lru/vtosters/lite/res/proxy/ProxyResources;->addProxyResources(Ljava/lang/Object;)V
+
     invoke-virtual {p3}, Landroid/view/ViewGroup;->getResources()Landroid/content/res/Resources;
 
     move-result-object p3
 
+
+
     const v4, 0x7f06006b
 
-    invoke-virtual {p3, v4}, Landroid/content/res/Resources;->getColorStateList(I)Landroid/content/res/ColorStateList;
+    invoke-static {p3, v4}, Lru/vtosters/lite/res/VTLResources;->getColorStateList(Landroid/content/res/Resources;I)Landroid/content/res/ColorStateList;
 
     move-result-object p3
 

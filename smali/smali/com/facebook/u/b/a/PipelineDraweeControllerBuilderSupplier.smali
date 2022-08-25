@@ -103,9 +103,13 @@
     iget-object v2, p0, Lcom/facebook/u/b/a/PipelineDraweeControllerBuilderSupplier;->c:Lcom/facebook/u/b/a/PipelineDraweeControllerFactory;
 
     .line 8
+     invoke-static {p1}, Lru/vtosters/lite/res/proxy/ProxyResources;->addProxyResources(Ljava/lang/Object;)V
+
     invoke-virtual {p1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object v3
+
+
 
     .line 9
     invoke-static {}, Lcom/facebook/drawee/components/DeferredReleaser;->c()Lcom/facebook/drawee/components/DeferredReleaser;

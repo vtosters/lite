@@ -190,7 +190,7 @@
     :cond_2
     sget p2, Lcom/vk/im/ui/c;->button_primary_foreground:I
 
-    invoke-static {p1, p2}, Lcom/vk/core/util/ContextExtKt;->h(Landroid/content/Context;I)I
+    invoke-static {p1, p2}, Lru/vtosters/lite/res/VTLColors;->getColor(Landroid/content/Context;I)I
 
     move-result p1
 
@@ -214,7 +214,7 @@
     .line 16
     sget p2, Lcom/vk/im/ui/c;->im_bubble_wallpaper_button_foreground:I
 
-    invoke-static {p1, p2}, Lcom/vk/core/util/ContextExtKt;->h(Landroid/content/Context;I)I
+    invoke-static {p1, p2}, Lru/vtosters/lite/res/VTLColors;->getColor(Landroid/content/Context;I)I
 
     move-result p1
 
@@ -224,7 +224,7 @@
     :cond_0
     sget p2, Lcom/vk/im/ui/c;->im_bubble_button_foreground:I
 
-    invoke-static {p1, p2}, Lcom/vk/core/util/ContextExtKt;->h(Landroid/content/Context;I)I
+    invoke-static {p1, p2}, Lru/vtosters/lite/res/VTLColors;->getColor(Landroid/content/Context;I)I
 
     move-result p1
 

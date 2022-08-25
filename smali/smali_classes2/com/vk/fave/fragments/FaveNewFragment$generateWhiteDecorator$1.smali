@@ -80,9 +80,13 @@
     new-instance v8, Lcom/vk/core/ui/CardItemDecorator;
 
     .line 6
+     invoke-static {p1}, Lru/vtosters/lite/res/proxy/ProxyResources;->addProxyResources(Ljava/lang/Object;)V
+
     invoke-virtual {p1}, Landroid/view/ViewGroup;->getResources()Landroid/content/res/Resources;
 
     move-result-object v2
+
+
 
     if-eqz v0, :cond_1
 
@@ -99,7 +103,7 @@
     const p1, 0x7f040095
 
     .line 9
-    invoke-static {p1}, Lcom/vk/core/ui/themes/VKThemeHelper;->d(I)I
+    invoke-static {p1}, Lru/vtosters/lite/res/VTLColors;->getColor(I)I
 
     move-result v6
 

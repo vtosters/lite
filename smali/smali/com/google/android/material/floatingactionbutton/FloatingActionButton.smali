@@ -353,9 +353,13 @@
 
     .line 8
     :cond_0
+     invoke-static {p0}, Lru/vtosters/lite/res/proxy/ProxyResources;->addProxyResources(Ljava/lang/Object;)V
+
     invoke-virtual {p0}, Landroid/widget/ImageButton;->getResources()Landroid/content/res/Resources;
 
     move-result-object v0
+
+
 
     const/4 v1, -0x1
 
@@ -1524,9 +1528,13 @@
     .end param
 
     .line 1
+     invoke-static {p0}, Lru/vtosters/lite/res/proxy/ProxyResources;->addProxyResources(Ljava/lang/Object;)V
+
     invoke-virtual {p0}, Landroid/widget/ImageButton;->getResources()Landroid/content/res/Resources;
 
     move-result-object v0
+
+
 
     invoke-virtual {v0, p1}, Landroid/content/res/Resources;->getDimension(I)F
 
@@ -1558,9 +1566,13 @@
     .end param
 
     .line 1
+     invoke-static {p0}, Lru/vtosters/lite/res/proxy/ProxyResources;->addProxyResources(Ljava/lang/Object;)V
+
     invoke-virtual {p0}, Landroid/widget/ImageButton;->getResources()Landroid/content/res/Resources;
 
     move-result-object v0
+
+
 
     invoke-virtual {v0, p1}, Landroid/content/res/Resources;->getDimension(I)F
 
@@ -1592,9 +1604,13 @@
     .end param
 
     .line 1
+     invoke-static {p0}, Lru/vtosters/lite/res/proxy/ProxyResources;->addProxyResources(Ljava/lang/Object;)V
+
     invoke-virtual {p0}, Landroid/widget/ImageButton;->getResources()Landroid/content/res/Resources;
 
     move-result-object v0
+
+
 
     invoke-virtual {v0, p1}, Landroid/content/res/Resources;->getDimension(I)F
 

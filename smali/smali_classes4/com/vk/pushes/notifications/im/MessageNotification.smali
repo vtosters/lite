@@ -379,7 +379,7 @@
 
     move-result-object v2
 
-    const v6, 0x7f080728
+    const v6, 0x7f08072b
 
     invoke-direct {v5, v6, v2, v1}, Landroidx/core/app/NotificationCompat$Action$Builder;-><init>(ILjava/lang/CharSequence;Landroid/app/PendingIntent;)V
 
@@ -917,9 +917,13 @@
 
     move-result-object v0
 
+     invoke-static {v0}, Lru/vtosters/lite/res/proxy/ProxyResources;->addProxyResources(Ljava/lang/Object;)V
+
     invoke-virtual {v0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object v0
+
+
 
     invoke-direct {p0}, Lcom/vk/pushes/notifications/im/MessageNotification;->D()Ljava/util/List;
 

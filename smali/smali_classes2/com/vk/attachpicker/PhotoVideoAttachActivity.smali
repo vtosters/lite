@@ -222,9 +222,13 @@
     invoke-direct {v1, p0}, Lcom/vk/core/dialogs/alert/VkAlertDialog$Builder;-><init>(Landroid/content/Context;)V
 
     .line 5
+     invoke-static {p0}, Lru/vtosters/lite/res/proxy/ProxyResources;->addProxyResources(Ljava/lang/Object;)V
+
     invoke-virtual {p0}, Landroidx/appcompat/app/AppCompatActivity;->getResources()Landroid/content/res/Resources;
 
     move-result-object v2
+
+
 
     const v3, 0x7f100096
 
@@ -835,7 +839,7 @@
     const v4, 0x7f040220
 
     .line 35
-    invoke-static {v4}, Lcom/vk/core/ui/themes/VKThemeHelper;->d(I)I
+    invoke-static {v4}, Lru/vtosters/lite/res/VTLColors;->getColor(I)I
 
     move-result v4
 
@@ -845,8 +849,6 @@
     move-result-object v8
 
     invoke-virtual {v8, v4}, Landroid/view/Window;->setStatusBarColor(I)V
-
-    invoke-static {v8, v4}, Lru/vtosters/lite/utils/ThemesUtils;->setNavbarColor(Landroid/view/Window;I)V
 
     .line 37
     :cond_3

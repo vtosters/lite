@@ -90,9 +90,13 @@
 
     iget-object v1, p0, Lcom/vk/music/notification/MusicPlayerNotification$2;->$context:Landroid/content/Context;
 
+     invoke-static {v1}, Lru/vtosters/lite/res/proxy/ProxyResources;->addProxyResources(Ljava/lang/Object;)V
+
     invoke-virtual {v1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object v1
+
+
 
     const-string v2, "context.resources"
 

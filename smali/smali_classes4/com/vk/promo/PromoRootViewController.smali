@@ -407,7 +407,7 @@
 
     iget v3, p0, Lcom/vk/promo/PromoRootViewController;->E:I
 
-    invoke-static {v2, v3}, Lcom/vk/core/util/ContextExtKt;->h(Landroid/content/Context;I)I
+    invoke-static {v2, v3}, Lru/vtosters/lite/res/VTLColors;->getColor(Landroid/content/Context;I)I
 
     move-result v2
 
@@ -431,7 +431,7 @@
 
     iget v3, p0, Lcom/vk/promo/PromoRootViewController;->F:I
 
-    invoke-static {v2, v3}, Lcom/vk/core/util/ContextExtKt;->h(Landroid/content/Context;I)I
+    invoke-static {v2, v3}, Lru/vtosters/lite/res/VTLColors;->getColor(Landroid/content/Context;I)I
 
     move-result v2
 
@@ -462,7 +462,7 @@
 
     iget v3, p0, Lcom/vk/promo/PromoRootViewController;->E:I
 
-    invoke-static {v2, v3}, Lcom/vk/core/util/ContextExtKt;->h(Landroid/content/Context;I)I
+    invoke-static {v2, v3}, Lru/vtosters/lite/res/VTLColors;->getColor(Landroid/content/Context;I)I
 
     move-result v2
 
@@ -502,7 +502,7 @@
 
     iget v1, p0, Lcom/vk/promo/PromoRootViewController;->D:I
 
-    invoke-static {p1, v1}, Lcom/vk/core/util/ContextExtKt;->h(Landroid/content/Context;I)I
+    invoke-static {p1, v1}, Lru/vtosters/lite/res/VTLColors;->getColor(Landroid/content/Context;I)I
 
     move-result p1
 

@@ -1,5 +1,5 @@
 .class public Lcom/vtosters/lite/VKActivity;
-.super Lcom/vk/core/ui/themes/ThemableActivity;
+.super Lru/vtosters/lite/ui/activities/VTLThemableActivity;
 .source "VKActivity.java"
 
 # interfaces
@@ -48,7 +48,7 @@
     .locals 2
 
     .line 1
-    invoke-direct {p0}, Lcom/vk/core/ui/themes/ThemableActivity;-><init>()V
+    invoke-direct {p0}, Lru/vtosters/lite/ui/activities/VTLThemableActivity;-><init>()V
 
     const/4 v0, 0x0
 
@@ -309,8 +309,6 @@
 
     invoke-virtual {p1, v0}, Landroid/view/Window;->setStatusBarColor(I)V
 
-    invoke-static {p1, v0}, Lru/vtosters/lite/utils/ThemesUtils;->setNavbarColor(Landroid/view/Window;I)V
-
     :cond_0
     return-void
 .end method
@@ -344,13 +342,11 @@
 
     const v0, 0x7f040224
 
-    invoke-static {v0}, Lcom/vk/core/ui/themes/VKThemeHelper;->d(I)I
+    invoke-static {v0}, Lru/vtosters/lite/res/VTLColors;->getColor(I)I
 
     move-result v0
 
     invoke-virtual {p1, v0}, Landroid/view/Window;->setStatusBarColor(I)V
-
-    invoke-static {p1, v0}, Lru/vtosters/lite/utils/ThemesUtils;->setNavbarColor(Landroid/view/Window;I)V
 
     :cond_0
     return-void
@@ -528,7 +524,7 @@
     .locals 3
 
     .line 1
-    invoke-super {p0, p1}, Lcom/vk/core/ui/themes/ThemableActivity;->onCreate(Landroid/os/Bundle;)V
+    invoke-super {p0, p1}, Lru/vtosters/lite/ui/activities/VTLThemableActivity;->onCreate(Landroid/os/Bundle;)V
 
     .line 2
     sget-boolean p1, Lcom/vtosters/lite/VKActivity;->F:Z

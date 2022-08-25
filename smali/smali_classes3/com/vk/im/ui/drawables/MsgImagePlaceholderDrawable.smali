@@ -22,14 +22,18 @@
     invoke-direct {p0}, Lcom/vk/im/ui/drawables/RoundCornerColorDrawable;-><init>()V
 
     .line 3
+     invoke-static {p1}, Lru/vtosters/lite/res/proxy/ProxyResources;->addProxyResources(Ljava/lang/Object;)V
+
     invoke-virtual {p1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object p1
 
+
+
     .line 4
     sget v0, Lcom/vk/im/ui/d;->vkim_msg_part_placeholder:I
 
-    invoke-virtual {p1, v0}, Landroid/content/res/Resources;->getColor(I)I
+    invoke-static {p1, v0}, Lru/vtosters/lite/res/VTLResources;->getColor(Landroid/content/res/Resources;I)I
 
     move-result p1
 

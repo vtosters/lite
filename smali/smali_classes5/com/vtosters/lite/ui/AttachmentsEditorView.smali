@@ -1738,9 +1738,13 @@
 
     check-cast v1, Landroid/widget/TextView;
 
+     invoke-static {p0}, Lru/vtosters/lite/res/proxy/ProxyResources;->addProxyResources(Ljava/lang/Object;)V
+
     invoke-virtual {p0}, Landroid/widget/HorizontalScrollView;->getResources()Landroid/content/res/Resources;
 
     move-result-object v2
+
+
 
     const/4 v3, 0x1
 
@@ -3145,9 +3149,13 @@
 
     int-to-long v3, v3
 
+     invoke-static {p0}, Lru/vtosters/lite/res/proxy/ProxyResources;->addProxyResources(Ljava/lang/Object;)V
+
     invoke-virtual {p0}, Landroid/widget/HorizontalScrollView;->getResources()Landroid/content/res/Resources;
 
     move-result-object v5
+
+
 
     invoke-static {v3, v4, v5}, Lcom/vtosters/lite/ui/b0/o/DocumentHolder;->a(JLandroid/content/res/Resources;)Ljava/lang/String;
 
@@ -3200,9 +3208,13 @@
 
     int-to-long v6, v1
 
+     invoke-static {p0}, Lru/vtosters/lite/res/proxy/ProxyResources;->addProxyResources(Ljava/lang/Object;)V
+
     invoke-virtual {p0}, Landroid/widget/HorizontalScrollView;->getResources()Landroid/content/res/Resources;
 
     move-result-object v1
+
+
 
     invoke-static {v6, v7, v1}, Lcom/vtosters/lite/ui/b0/o/DocumentHolder;->a(JLandroid/content/res/Resources;)Ljava/lang/String;
 

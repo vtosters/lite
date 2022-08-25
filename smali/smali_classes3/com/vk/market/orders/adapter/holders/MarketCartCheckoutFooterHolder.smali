@@ -43,9 +43,13 @@
     .line 5
     iget-object p1, p0, Lcom/vk/market/orders/adapter/holders/MarketCartCheckoutFooterHolder;->a:Landroid/widget/TextView;
 
+     invoke-static {p1}, Lru/vtosters/lite/res/proxy/ProxyResources;->addProxyResources(Ljava/lang/Object;)V
+
     invoke-virtual {p1}, Landroid/widget/TextView;->getResources()Landroid/content/res/Resources;
 
     move-result-object p1
+
+
 
     const p2, 0x7f1206ca
 

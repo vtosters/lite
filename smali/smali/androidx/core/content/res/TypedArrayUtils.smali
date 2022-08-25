@@ -290,9 +290,13 @@
 
     .line 6
     :cond_0
+     invoke-static {p0}, Lru/vtosters/lite/res/proxy/ProxyResources;->addProxyResources(Ljava/lang/Object;)V
+
     invoke-virtual {p0}, Landroid/content/res/TypedArray;->getResources()Landroid/content/res/Resources;
 
     move-result-object p1
+
+
 
     const/4 p3, 0x0
 
@@ -425,9 +429,13 @@
 
     .line 6
     :cond_0
+     invoke-static {p0}, Lru/vtosters/lite/res/proxy/ProxyResources;->addProxyResources(Ljava/lang/Object;)V
+
     invoke-virtual {p0}, Landroid/content/res/TypedArray;->getResources()Landroid/content/res/Resources;
 
     move-result-object p1
+
+
 
     const/4 p3, 0x0
 

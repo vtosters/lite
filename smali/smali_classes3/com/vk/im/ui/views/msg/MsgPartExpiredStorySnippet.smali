@@ -261,9 +261,13 @@
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setTextSize(F)V
 
     .line 29
+     invoke-static {v0}, Lru/vtosters/lite/res/proxy/ProxyResources;->addProxyResources(Ljava/lang/Object;)V
+
     invoke-virtual {v0}, Landroid/widget/TextView;->getResources()Landroid/content/res/Resources;
 
     move-result-object v1
+
+
 
     sget v2, Lcom/vk/im/ui/m;->fontRobotoRegular:I
 
@@ -345,7 +349,7 @@
     sget-object v0, Lcom/vk/im/ui/o;->MsgPartExpiredStorySnippet:[I
 
     .line 2
-    invoke-virtual {p1, p2, v0, p3, p4}, Landroid/content/Context;->obtainStyledAttributes(Landroid/util/AttributeSet;[III)Landroid/content/res/TypedArray;
+    invoke-static {p1, p2, v0, p3, p4}, Lru/vtosters/lite/res/VTLResources;->obtainStyledAttributes(Landroid/content/Context;Landroid/util/AttributeSet;[III)Landroid/content/res/TypedArray;
 
     move-result-object p2
 
@@ -354,7 +358,7 @@
 
     sget p4, Lcom/vk/im/ui/c;->im_forward_line_tint:I
 
-    invoke-static {p1, p4}, Lcom/vk/core/util/ContextExtKt;->h(Landroid/content/Context;I)I
+    invoke-static {p1, p4}, Lru/vtosters/lite/res/VTLColors;->getColor(Landroid/content/Context;I)I
 
     move-result p4
 
@@ -396,7 +400,7 @@
 
     sget p4, Lcom/vk/im/ui/c;->im_service_message_text:I
 
-    invoke-static {p1, p4}, Lcom/vk/core/util/ContextExtKt;->h(Landroid/content/Context;I)I
+    invoke-static {p1, p4}, Lru/vtosters/lite/res/VTLColors;->getColor(Landroid/content/Context;I)I
 
     move-result p4
 
@@ -412,7 +416,7 @@
 
     sget p4, Lcom/vk/im/ui/c;->im_service_message_text:I
 
-    invoke-static {p1, p4}, Lcom/vk/core/util/ContextExtKt;->h(Landroid/content/Context;I)I
+    invoke-static {p1, p4}, Lru/vtosters/lite/res/VTLColors;->getColor(Landroid/content/Context;I)I
 
     move-result p1
 

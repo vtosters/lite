@@ -183,8 +183,6 @@
     .line 6
     invoke-virtual {v0, v1}, Landroid/view/Window;->setStatusBarColor(I)V
 
-    invoke-static {v0, v1}, Lru/vtosters/lite/utils/ThemesUtils;->setNavbarColor(Landroid/view/Window;I)V
-
     const/4 v0, 0x0
 
     if-eqz p1, :cond_0
@@ -731,7 +729,7 @@
 
     sget v2, Lcom/vk/socialgraph/a;->header_tint_alternate:I
 
-    invoke-static {v2}, Lcom/vk/core/ui/themes/VKThemeHelper;->d(I)I
+    invoke-static {v2}, Lru/vtosters/lite/res/VTLColors;->getColor(I)I
 
     move-result v2
 

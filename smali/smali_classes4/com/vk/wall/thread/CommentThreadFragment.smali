@@ -835,9 +835,13 @@
     if-eqz v0, :cond_3
 
     .line 23
+     invoke-static {p0}, Lru/vtosters/lite/res/proxy/ProxyResources;->addProxyResources(Ljava/lang/Object;)V
+
     invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getResources()Landroid/content/res/Resources;
 
     move-result-object v0
+
+
 
     const-string v2, "resources"
 
@@ -1164,8 +1168,6 @@
     move-result v1
 
     invoke-virtual {v0, v1}, Landroid/view/Window;->setStatusBarColor(I)V
-
-    invoke-static {v0, v1}, Lru/vtosters/lite/utils/ThemesUtils;->setNavbarColor(Landroid/view/Window;I)V
 
     .line 4
     :cond_0

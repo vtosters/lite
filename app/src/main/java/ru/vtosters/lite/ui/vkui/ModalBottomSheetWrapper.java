@@ -1,76 +1,55 @@
 package ru.vtosters.lite.ui.vkui;
 
-import static ru.vtosters.lite.utils.AndroidUtils.dp2px;
-import static ru.vtosters.lite.utils.AndroidUtils.getGlobalContext;
-import static ru.vtosters.lite.utils.AndroidUtils.getString;
-import static ru.vtosters.lite.utils.ThemesUtils.getTextAttr;
-
-import android.annotation.SuppressLint;
 import android.app.Activity;
 import android.view.View;
-import android.widget.LinearLayout;
-import android.widget.TextView;
 
 import com.vk.core.dialogs.bottomsheet.ModalBottomSheet;
 
-public class ModalBottomSheetWrapper {
-    public final ModalBottomSheet.a builder;
+public class ModalBottomSheetWrapper<T> {
+    public final ModalBottomSheet.a mBuilder;
+    public ModalBottomSheet mBottomSheet;
 
     public ModalBottomSheetWrapper(Activity activity) {
-        builder = new ModalBottomSheet.a(activity);
+        mBuilder = new ModalBottomSheet.a(activity);
     }
 
-    public ModalBottomSheetWrapper setTitle(String title) {
-        builder.d(title);
-        return this;
+    public T setTitle(String title) {
+        mBuilder.d(title);
+        return (T) this;
     }
 
-    @SuppressLint("SetTextI18n")
-    public ModalBottomSheetWrapper setUpdateInfoView(String changelog) {
-        var context = getGlobalContext();
-        var container = new LinearLayout(context);
-        var changelogView = new TextView(context);
-
-        container.setOrientation(LinearLayout.VERTICAL);
-
-        changelogView.setPadding(0, dp2px(8), 0, 0);
-        changelogView.setText(getString("changelog") + ": \n" + changelog);
-        changelogView.setTextColor(getTextAttr());
-        container.addView(changelogView, new LinearLayout.LayoutParams(-1, -2));
-
-        builder.a(container);
-
-        return this;
-    }
-
-    public ModalBottomSheetWrapper setClickableMessage(
+    public T setClickableMessage(
             String text,
             Runnable callback
     ) {
-        builder.a(text, listener -> callback.run());
-        return this;
+        mBuilder.a(text, listener -> callback.run());
+        return (T) this;
     }
 
-    public ModalBottomSheetWrapper setPositiveButton(
+    public T setPositiveButton(
             String text,
             Runnable callback
     ) {
-        builder.a(text, kostil -> callback.run());
-        return this;
+        mBuilder.a(text, kostil -> callback.run());
+        return (T) this;
     }
 
-    public ModalBottomSheetWrapper setView(View view) {
-        builder.a(view);
-        return this;
+    public T setView(View view) {
+        mBuilder.a(view);
+        return (T) this;
     }
 
-    public ModalBottomSheet show() {
-        return builder.a("");
+    public ModalBottomSheet show(String tag) {
+        return mBuilder.a(tag);
     }
 
-    public ModalBottomSheet show(boolean isCancellable) {
-        var sheet = builder.a("");
-        sheet.setCancelable(isCancellable);
-        return sheet;
+    public ModalBottomSheet show(String tag, boolean isCancellable) {
+        mBottomSheet = mBuilder.a(tag);
+        mBottomSheet.setCancelable(isCancellable);
+        return mBottomSheet;
+    }
+
+    public void dismiss() {
+        mBottomSheet.dismiss();
     }
 }

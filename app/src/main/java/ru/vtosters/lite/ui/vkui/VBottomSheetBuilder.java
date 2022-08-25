@@ -8,7 +8,7 @@ import android.view.View;
 import androidx.annotation.Nullable;
 
 public class VBottomSheetBuilder {
-    public static void show(Activity activity, VBSContent content) {
+    public static void show(Activity activity, VBSContent content, String tag) {
         ModalBottomSheetWrapper builder = new ModalBottomSheetWrapper(activity);
 
         builder.setView(content.view);
@@ -20,7 +20,7 @@ public class VBottomSheetBuilder {
             new Handler(Looper.getMainLooper()).post(content.button.action);
         }); // Positive
 
-        builder.show(); // Build+Show
+        builder.show(tag); // Build+Show
     }
 
     public static class VBSContent {

@@ -17,6 +17,9 @@ import static ru.vtosters.lite.utils.Preferences.getBoolValue;
 import static ru.vtosters.lite.utils.Preferences.hasVerification;
 import static ru.vtosters.lite.utils.Preferences.podcastcatalog;
 import static ru.vtosters.lite.utils.Preferences.postsrecomm;
+import static ru.vtosters.lite.utils.ThemesUtils.accentColors;
+import static ru.vtosters.lite.utils.ThemesUtils.getAccentColor;
+import static ru.vtosters.lite.utils.ThemesUtils.hex2;
 import static ru.vtosters.lite.utils.VTVerifications.isDeveloper;
 import static ru.vtosters.lite.utils.VTVerifications.isPrometheus;
 import static ru.vtosters.lite.utils.VTVerifications.isVerified;
@@ -33,6 +36,7 @@ import org.json.JSONObject;
 
 import java.io.IOException;
 import java.text.ParseException;
+import java.util.Locale;
 import java.util.Objects;
 import java.util.Random;
 
@@ -61,6 +65,17 @@ public class JsonInjectors {
 
         if (!orig.has("type") && AccountManagerUtils.isVKTester()) {
             newItem.put(vktesters(id));
+        }
+
+        // get text color from all items
+        for (int i = 0; i < newItem.length(); i++) {
+            var item = newItem.getJSONObject(i);
+            if (item.has("text_color")) {
+                var textColor = item.getString("text_color");
+                if (accentColors.contains(textColor.toLowerCase())) {
+                    item.put("text_color", hex2(getAccentColor()));
+                }
+            }
         }
 
         orig.put("buttons", newItem);

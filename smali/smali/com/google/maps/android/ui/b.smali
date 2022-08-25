@@ -32,9 +32,13 @@
 
     iget-object v0, p0, Lcom/google/maps/android/ui/b;->a:Landroid/content/Context;
 
+     invoke-static {v0}, Lru/vtosters/lite/res/proxy/ProxyResources;->addProxyResources(Ljava/lang/Object;)V
+
     invoke-virtual {v0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object v0
+
+
 
     invoke-direct {p1, v0}, Lcom/google/maps/android/ui/a;-><init>(Landroid/content/res/Resources;)V
 

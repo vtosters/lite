@@ -121,9 +121,13 @@
     .line 6
     iget-object v9, p0, Lcom/vk/profile/adapter/factory/details/CommunityDetailsItemsFactory$place$1;->$context:Landroid/content/Context;
 
+     invoke-static {v9}, Lru/vtosters/lite/res/proxy/ProxyResources;->addProxyResources(Ljava/lang/Object;)V
+
     invoke-virtual {v9}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object v9
+
+
 
     const v10, 0x7f1000b8
 

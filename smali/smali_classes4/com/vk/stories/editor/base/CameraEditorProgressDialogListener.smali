@@ -47,9 +47,13 @@
     invoke-direct {v0, p1}, Lb/h/g/k/VKProgressDialog;-><init>(Landroid/content/Context;)V
 
     .line 12
+     invoke-static {p1}, Lru/vtosters/lite/res/proxy/ProxyResources;->addProxyResources(Ljava/lang/Object;)V
+
     invoke-virtual {p1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object p1
+
+
 
     const v1, 0x7f1210a4
 
@@ -179,9 +183,13 @@
     .line 6
     sget-object p1, Lcom/vk/core/util/AppContextHolder;->a:Landroid/content/Context;
 
+     invoke-static {p1}, Lru/vtosters/lite/res/proxy/ProxyResources;->addProxyResources(Ljava/lang/Object;)V
+
     invoke-virtual {p1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object p1
+
+
 
     iget-boolean v0, p0, Lcom/vk/stories/editor/base/CameraEditorProgressDialogListener;->b:Z
 

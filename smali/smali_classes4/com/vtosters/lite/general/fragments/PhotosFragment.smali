@@ -829,24 +829,32 @@
 
     move-result p2
 
+     invoke-static {p0}, Lru/vtosters/lite/res/proxy/ProxyResources;->addProxyResources(Ljava/lang/Object;)V
+
     invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getResources()Landroid/content/res/Resources;
 
     move-result-object v0
 
+
+
     const v1, 0x7f0600f7
 
-    invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getColor(I)I
+    invoke-static {v0, v1}, Lru/vtosters/lite/res/VTLResources;->getColor(Landroid/content/res/Resources;I)I
 
     move-result v0
 
     invoke-virtual {p1, p2, v0}, Lcom/google/android/material/tabs/TabLayout;->a(II)V
 
     .line 11
+     invoke-static {p0}, Lru/vtosters/lite/res/proxy/ProxyResources;->addProxyResources(Ljava/lang/Object;)V
+
     invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getResources()Landroid/content/res/Resources;
 
     move-result-object p2
 
-    invoke-virtual {p2, v1}, Landroid/content/res/Resources;->getColor(I)I
+
+
+    invoke-static {p2, v1}, Lru/vtosters/lite/res/VTLResources;->getColor(Landroid/content/res/Resources;I)I
 
     move-result p2
 
@@ -913,7 +921,7 @@
 
     aput v3, v0, v4
 
-    invoke-virtual {v2, v0}, Landroid/content/Context;->obtainStyledAttributes([I)Landroid/content/res/TypedArray;
+    invoke-static {v2, v0}, Lru/vtosters/lite/res/VTLResources;->obtainStyledAttributes(Landroid/content/Context;[I)Landroid/content/res/TypedArray;
 
     move-result-object v0
 

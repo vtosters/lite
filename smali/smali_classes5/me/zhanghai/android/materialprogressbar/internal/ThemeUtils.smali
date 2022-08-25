@@ -39,7 +39,7 @@
     aput p0, v0, v1
 
     .line 1
-    invoke-virtual {p2, v0}, Landroid/content/Context;->obtainStyledAttributes([I)Landroid/content/res/TypedArray;
+    invoke-static {p2, v0}, Lru/vtosters/lite/res/VTLResources;->obtainStyledAttributes(Landroid/content/Context;[I)Landroid/content/res/TypedArray;
 
     move-result-object p0
 
@@ -85,7 +85,7 @@
     aput p0, v0, v1
 
     .line 1
-    invoke-virtual {p2, v0}, Landroid/content/Context;->obtainStyledAttributes([I)Landroid/content/res/TypedArray;
+    invoke-static {p2, v0}, Lru/vtosters/lite/res/VTLResources;->obtainStyledAttributes(Landroid/content/Context;[I)Landroid/content/res/TypedArray;
 
     move-result-object p0
 

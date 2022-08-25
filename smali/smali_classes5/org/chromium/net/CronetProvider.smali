@@ -273,9 +273,13 @@
     .end annotation
 
     .line 21
+     invoke-static {p0}, Lru/vtosters/lite/res/proxy/ProxyResources;->addProxyResources(Ljava/lang/Object;)V
+
     invoke-virtual {p0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object v0
+
+
 
     .line 22
     invoke-virtual {p0}, Landroid/content/Context;->getPackageName()Ljava/lang/String;
@@ -299,9 +303,13 @@
 
     .line 24
     :cond_0
+     invoke-static {p0}, Lru/vtosters/lite/res/proxy/ProxyResources;->addProxyResources(Ljava/lang/Object;)V
+
     invoke-virtual {p0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object v3
+
+
 
     invoke-virtual {v3, v0}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 

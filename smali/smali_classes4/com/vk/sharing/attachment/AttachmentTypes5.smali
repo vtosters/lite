@@ -151,9 +151,13 @@
 
     iget-object v2, p0, Lcom/vk/sharing/attachment/AttachmentTypes5;->c:Landroid/widget/TextView;
 
+     invoke-static {v2}, Lru/vtosters/lite/res/proxy/ProxyResources;->addProxyResources(Ljava/lang/Object;)V
+
     invoke-virtual {v2}, Landroid/widget/TextView;->getResources()Landroid/content/res/Resources;
 
     move-result-object v2
+
+
 
     invoke-static {v1, p1, v2}, Lcom/vk/sharing/attachment/AttachmentTypes5;->a(Ljava/lang/String;ILandroid/content/res/Resources;)Ljava/lang/String;
 

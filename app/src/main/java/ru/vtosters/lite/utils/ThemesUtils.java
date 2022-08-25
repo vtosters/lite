@@ -45,9 +45,12 @@ import java.util.List;
 
 public class ThemesUtils {
     public static List<String> accentColors = Arrays.asList(
-            "3f8ae0",
-            "5692d7", "528bcc", "7aa0cc", "518bcc", "6296d0", "2f68aa", "638ebf", "5181b8", "71aaeb", "4774a8", "5baaf4", "4186c8", "add3ff", "718198", "5a9eff", "99a2ad", "74a2d6", "e9eef3", "dfe3e7", "eff1f3", "5c9ce6", "4986cc", "4680c2"
+           "2688eb", "529ef4", "2d81e0", "2975cc", "3f8ae0", "5692d7", "528bcc", "7aa0cc", "518bcc", "6296d0", "2f68aa", "638ebf", "5181b8", "71aaeb", "4774a8", "5baaf4", "4186c8", "add3ff", "718198", "5a9eff", "99a2ad", "74a2d6", "e9eef3", "dfe3e7", "eff1f3", "5c9ce6", "4986cc", "4680c2"
     );
+
+    public static boolean isCustomThemeApplied() {
+        return !"default".equals(AndroidUtils.getPreferences().getString("vtl_theme_id", "default"));
+    }
 
     public static void applyTheme(VKTheme theme) {
         VKThemeHelper.theme(theme, LifecycleUtils.getCurrentActivity(), getCenterScreenCoords());
@@ -76,8 +79,7 @@ public class ThemesUtils {
     }
 
     public static int getAccentColor() {
-        return getResources().getColor(R.color.red);
-        //return getColorFromAttr(getAttrId("accent"));
+        return getColorFromAttr(getAttrId("accent"));
     } // Color accent
 
     public static int getTextAttr() {
@@ -313,13 +315,6 @@ public class ThemesUtils {
             return getAccentColor();
         }
         return context.getColor(i);
-    } // Android Support color injector + accent color checker
-
-    public static int getColor2(int i) {
-        if (isColorRefAccented(i)) {
-            return getAccentColor();
-        }
-        return getResources().getColor(i);
     } // Android Support color injector + accent color checker
 
     public static int getAlertStyle() {

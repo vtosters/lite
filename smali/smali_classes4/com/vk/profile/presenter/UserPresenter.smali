@@ -1120,13 +1120,17 @@
     const p2, 0x7f0805cf
 
     .line 5
+     invoke-static {p1}, Lru/vtosters/lite/res/proxy/ProxyResources;->addProxyResources(Ljava/lang/Object;)V
+
     invoke-virtual {p1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object v1
 
+
+
     const v2, 0x7f060018
 
-    invoke-virtual {v1, v2}, Landroid/content/res/Resources;->getColor(I)I
+    invoke-static {v1, v2}, Lru/vtosters/lite/res/VTLResources;->getColor(Landroid/content/res/Resources;I)I
 
     move-result v1
 

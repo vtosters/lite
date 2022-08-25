@@ -59,9 +59,13 @@
     iput-object v0, p0, Lcom/vk/core/formatters/d/MaleStrategy;->c:Ljava/lang/String;
 
     .line 5
+     invoke-static {p1}, Lru/vtosters/lite/res/proxy/ProxyResources;->addProxyResources(Ljava/lang/Object;)V
+
     invoke-virtual {p1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object v0
+
+
 
     sget v1, Lb/h/z/a;->last_seen_male_hours_ago:I
 
@@ -86,9 +90,13 @@
     invoke-direct {v1}, Ljava/text/DateFormatSymbols;-><init>()V
 
     .line 8
+     invoke-static {p1}, Lru/vtosters/lite/res/proxy/ProxyResources;->addProxyResources(Ljava/lang/Object;)V
+
     invoke-virtual {p1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object v2
+
+
 
     sget v3, Lb/h/z/a;->months_short:I
 
@@ -99,9 +107,13 @@
     invoke-virtual {v1, v2}, Ljava/text/DateFormatSymbols;->setShortMonths([Ljava/lang/String;)V
 
     .line 9
+     invoke-static {p1}, Lru/vtosters/lite/res/proxy/ProxyResources;->addProxyResources(Ljava/lang/Object;)V
+
     invoke-virtual {p1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object v2
+
+
 
     sget v3, Lb/h/z/a;->months_full_dep:I
 
@@ -198,9 +210,13 @@
 
     invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
+     invoke-static {v0}, Lru/vtosters/lite/res/proxy/ProxyResources;->addProxyResources(Ljava/lang/Object;)V
+
     invoke-virtual {v0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object v0
+
+
 
     .line 2
     sget v1, Lb/h/z/i;->last_seen_male_minutes_ago:I

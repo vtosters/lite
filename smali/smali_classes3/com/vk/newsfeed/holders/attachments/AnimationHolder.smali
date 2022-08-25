@@ -226,7 +226,7 @@
 
     const v3, 0x7f040095
 
-    invoke-static {v3}, Lcom/vk/core/ui/themes/VKThemeHelper;->d(I)I
+    invoke-static {v3}, Lru/vtosters/lite/res/VTLColors;->getColor(I)I
 
     move-result v3
 
@@ -237,7 +237,7 @@
 
     const v4, 0x7f04044d
 
-    invoke-static {v4}, Lcom/vk/core/ui/themes/VKThemeHelper;->d(I)I
+    invoke-static {v4}, Lru/vtosters/lite/res/VTLColors;->getColor(I)I
 
     move-result v4
 
@@ -429,9 +429,13 @@
 
     iget-object v4, p0, Lcom/vk/newsfeed/holders/attachments/AnimationHolder;->K:Lcom/vk/newsfeed/FrescoImageView;
 
+     invoke-static {v4}, Lru/vtosters/lite/res/proxy/ProxyResources;->addProxyResources(Ljava/lang/Object;)V
+
     invoke-virtual {v4}, Landroid/view/View;->getResources()Landroid/content/res/Resources;
 
     move-result-object v4
+
+
 
     invoke-static {v2, v3, v4}, Lcom/vtosters/lite/ui/b0/o/DocumentHolder;->a(JLandroid/content/res/Resources;)Ljava/lang/String;
 

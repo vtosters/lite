@@ -1,40 +1,56 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="?attr/selectableItemBackground"
+    android:paddingTop="5dp"
+    android:paddingBottom="5dp"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:background="?attr/selectableItemBackground"
-    android:paddingLeft="12dp"
-    android:paddingTop="8dp"
-    android:paddingRight="12dp"
-    android:paddingBottom="8dp">
+    android:paddingStart="8dp"
+    android:paddingEnd="8dp">
+
+    <FrameLayout
+        android:id="@id/theme_mode_preview_border"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:layout_gravity="center"
+            android:id="@id/theme_mode_preview"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:scaleType="centerInside" />
+    </FrameLayout>
 
     <TextView
+        android:textSize="16sp"
+        android:textColor="?attr/text_primary"
         android:id="@id/name"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textSize="16sp"
-        android:textColor="?attr/text_primary"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintBottom_toTopOf="@id/author" />
+        android:layout_marginLeft="16dp"
+        app:layout_constraintBottom_toTopOf="@id/author"
+        app:layout_constraintStart_toEndOf="@id/theme_mode_preview_border"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
+        android:textColor="?attr/text_secondary"
         android:id="@id/author"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textColor="?attr/text_secondary"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/name"
-        app:layout_constraintBottom_toBottomOf="parent" />
+        android:layout_marginLeft="16dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@id/theme_mode_preview_border"
+        app:layout_constraintTop_toBottomOf="@id/name" />
 
     <ru.vtosters.lite.ui.views.NoTouchRadioButton
         android:id="@id/selection"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
-
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>

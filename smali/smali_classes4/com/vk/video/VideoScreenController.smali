@@ -78,9 +78,13 @@
     .line 3
     iget-object p1, p0, Lcom/vk/video/VideoScreenController;->J:Landroid/content/Context;
 
+     invoke-static {p1}, Lru/vtosters/lite/res/proxy/ProxyResources;->addProxyResources(Ljava/lang/Object;)V
+
     invoke-virtual {p1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object p1
+
+
 
     iput-object p1, p0, Lcom/vk/video/VideoScreenController;->b:Landroid/content/res/Resources;
 

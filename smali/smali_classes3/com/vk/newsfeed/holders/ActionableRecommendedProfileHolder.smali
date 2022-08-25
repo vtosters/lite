@@ -175,7 +175,7 @@
 
     const v0, 0x7f0404d1
 
-    invoke-static {v0}, Lcom/vk/core/ui/themes/VKThemeHelper;->d(I)I
+    invoke-static {v0}, Lru/vtosters/lite/res/VTLColors;->getColor(I)I
 
     move-result v0
 
@@ -335,9 +335,13 @@
     invoke-virtual {p1, v0}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
     .line 23
+     invoke-static {p1}, Lru/vtosters/lite/res/proxy/ProxyResources;->addProxyResources(Ljava/lang/Object;)V
+
     invoke-virtual {p1}, Landroid/widget/TextView;->getResources()Landroid/content/res/Resources;
 
     move-result-object v0
+
+
 
     new-instance v2, Ljava/lang/StringBuilder;
 

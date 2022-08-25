@@ -97,9 +97,13 @@
 
     invoke-static {p3, v0}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
+     invoke-static {p3}, Lru/vtosters/lite/res/proxy/ProxyResources;->addProxyResources(Ljava/lang/Object;)V
+
     invoke-virtual {p3}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object p3
+
+
 
     .line 16
     iget-wide v0, p2, Lcom/vk/dto/stories/model/StoryEntry;->e:J

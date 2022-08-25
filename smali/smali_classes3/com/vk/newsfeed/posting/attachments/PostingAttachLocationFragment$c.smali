@@ -234,7 +234,7 @@
 
     const v6, 0x7f040022
 
-    invoke-static {v6}, Lcom/vk/core/ui/themes/VKThemeHelper;->d(I)I
+    invoke-static {v6}, Lru/vtosters/lite/res/VTLColors;->getColor(I)I
 
     move-result v6
 

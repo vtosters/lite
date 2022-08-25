@@ -82,9 +82,13 @@
     .line 5
     iget-object v0, p0, Lcom/vtosters/lite/utils/PostPublisher;->a:Lb/h/g/k/VKProgressDialog;
 
+     invoke-static {p1}, Lru/vtosters/lite/res/proxy/ProxyResources;->addProxyResources(Ljava/lang/Object;)V
+
     invoke-virtual {p1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object p1
+
+
 
     const v1, 0x7f1206b4
 

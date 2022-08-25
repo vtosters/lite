@@ -257,6 +257,8 @@
 
     move-result-object v0
 
+
+
     .line 2
     iget-object v1, p0, Lcom/vk/navigation/NavigationDelegateActivity;->G:Lcom/vk/navigation/VKNavigationDelegate;
 

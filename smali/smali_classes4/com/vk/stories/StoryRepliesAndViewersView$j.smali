@@ -289,9 +289,13 @@
 
     iget-object v5, p0, Lcom/vk/stories/StoryRepliesAndViewersView$j;->a:Lcom/vk/stories/StoryRepliesAndViewersView;
 
+     invoke-static {v5}, Lru/vtosters/lite/res/proxy/ProxyResources;->addProxyResources(Ljava/lang/Object;)V
+
     invoke-virtual {v5}, Landroid/view/ViewGroup;->getResources()Landroid/content/res/Resources;
 
     move-result-object v5
+
+
 
     const v6, 0x7f1000ce
 

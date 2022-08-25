@@ -1119,7 +1119,7 @@
     const p2, 0x7f040220
 
     .line 5
-    invoke-static {p2}, Lcom/vk/core/ui/themes/VKThemeHelper;->d(I)I
+    invoke-static {p2}, Lru/vtosters/lite/res/VTLColors;->getColor(I)I
 
     move-result p2
 
@@ -1132,9 +1132,13 @@
 
     new-instance v2, Lcom/vk/core/ui/CardDrawable;
 
+     invoke-static {p0}, Lru/vtosters/lite/res/proxy/ProxyResources;->addProxyResources(Ljava/lang/Object;)V
+
     invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getResources()Landroid/content/res/Resources;
 
     move-result-object v3
+
+
 
     const/4 v4, 0x0
 
@@ -1277,7 +1281,7 @@
     const p2, 0x7f040099
 
     .line 19
-    invoke-static {p2}, Lcom/vk/core/ui/themes/VKThemeHelper;->d(I)I
+    invoke-static {p2}, Lru/vtosters/lite/res/VTLColors;->getColor(I)I
 
     move-result p2
 

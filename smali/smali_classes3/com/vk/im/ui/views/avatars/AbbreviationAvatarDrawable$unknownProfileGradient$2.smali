@@ -56,7 +56,7 @@
 
     sget v2, Lcom/vk/im/ui/c;->im_unknown_avatar_start_color:I
 
-    invoke-static {v1, v2}, Lcom/vk/core/util/ContextExtKt;->h(Landroid/content/Context;I)I
+    invoke-static {v1, v2}, Lru/vtosters/lite/res/VTLColors;->getColor(Landroid/content/Context;I)I
 
     move-result v1
 
@@ -65,7 +65,7 @@
 
     sget v3, Lcom/vk/im/ui/c;->im_unknown_avatar_end_color:I
 
-    invoke-static {v2, v3}, Lcom/vk/core/util/ContextExtKt;->h(Landroid/content/Context;I)I
+    invoke-static {v2, v3}, Lru/vtosters/lite/res/VTLColors;->getColor(Landroid/content/Context;I)I
 
     move-result v2
 

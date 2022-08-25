@@ -76,13 +76,17 @@
     .line 7
     iget-object p2, p0, Lcom/vtosters/lite/ui/widget/WaveRecordCircleView;->b:Landroid/graphics/Paint;
 
+     invoke-static {p1}, Lru/vtosters/lite/res/proxy/ProxyResources;->addProxyResources(Ljava/lang/Object;)V
+
     invoke-virtual {p1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object p3
 
+
+
     const v0, 0x7f0600f7
 
-    invoke-virtual {p3, v0}, Landroid/content/res/Resources;->getColor(I)I
+    invoke-static {p3, v0}, Lru/vtosters/lite/res/VTLResources;->getColor(Landroid/content/res/Resources;I)I
 
     move-result p3
 
@@ -91,11 +95,15 @@
     .line 8
     iget-object p2, p0, Lcom/vtosters/lite/ui/widget/WaveRecordCircleView;->a:Landroid/graphics/Paint;
 
+     invoke-static {p1}, Lru/vtosters/lite/res/proxy/ProxyResources;->addProxyResources(Ljava/lang/Object;)V
+
     invoke-virtual {p1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object p3
 
-    invoke-virtual {p3, v0}, Landroid/content/res/Resources;->getColor(I)I
+
+
+    invoke-static {p3, v0}, Lru/vtosters/lite/res/VTLResources;->getColor(Landroid/content/res/Resources;I)I
 
     move-result p3
 
@@ -109,9 +117,13 @@
     invoke-virtual {p2, p3}, Landroid/graphics/Paint;->setAlpha(I)V
 
     .line 10
+     invoke-static {p1}, Lru/vtosters/lite/res/proxy/ProxyResources;->addProxyResources(Ljava/lang/Object;)V
+
     invoke-virtual {p1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object p2
+
+
 
     const p3, 0x7f07034e
 
@@ -126,9 +138,13 @@
     iput p2, p0, Lcom/vtosters/lite/ui/widget/WaveRecordCircleView;->d:F
 
     .line 11
+     invoke-static {p1}, Lru/vtosters/lite/res/proxy/ProxyResources;->addProxyResources(Ljava/lang/Object;)V
+
     invoke-virtual {p1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object p1
+
+
 
     const p2, 0x7f070351
 

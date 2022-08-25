@@ -481,7 +481,7 @@
 
     sget v1, Lcom/vk/im/ui/c;->accent:I
 
-    invoke-static {v0, v1}, Lcom/vk/core/util/ContextExtKt;->h(Landroid/content/Context;I)I
+    invoke-static {v0, v1}, Lru/vtosters/lite/res/VTLColors;->getColor(Landroid/content/Context;I)I
 
     move-result v0
 

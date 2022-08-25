@@ -75,9 +75,13 @@
 
     iget-object v1, p0, Lcom/vk/core/extensions/RxExt$a1;->b:Landroid/app/Activity;
 
+     invoke-static {v1}, Lru/vtosters/lite/res/proxy/ProxyResources;->addProxyResources(Ljava/lang/Object;)V
+
     invoke-virtual {v1}, Landroid/app/Activity;->getResources()Landroid/content/res/Resources;
 
     move-result-object v1
+
+
 
     iget v2, p0, Lcom/vk/core/extensions/RxExt$a1;->c:I
 

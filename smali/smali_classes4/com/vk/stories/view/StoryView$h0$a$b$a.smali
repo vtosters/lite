@@ -70,9 +70,13 @@
     iget-object p1, p1, Lcom/vk/stories/view/StoryView$h0;->c:Lcom/vk/stories/view/StoryView;
 
     .line 2
+     invoke-static {p1}, Lru/vtosters/lite/res/proxy/ProxyResources;->addProxyResources(Ljava/lang/Object;)V
+
     invoke-virtual {p1}, Landroid/widget/FrameLayout;->getResources()Landroid/content/res/Resources;
 
     move-result-object p1
+
+
 
     const/4 v0, 0x1
 

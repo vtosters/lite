@@ -377,9 +377,13 @@
 
     move-result-object v3
 
+     invoke-static {v3}, Lru/vtosters/lite/res/proxy/ProxyResources;->addProxyResources(Ljava/lang/Object;)V
+
     invoke-virtual {v3}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object v3
+
+
 
     sget v4, Lb/h/h/c;->album_unnamed:I
 

@@ -239,9 +239,13 @@
 
     .line 7
     :cond_0
+     invoke-static {p0}, Lru/vtosters/lite/res/proxy/ProxyResources;->addProxyResources(Ljava/lang/Object;)V
+
     invoke-virtual {p0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object v0
+
+
 
     sget-object v1, Lcom/google/android/gms/maps/g;->MapAttrs:[I
 
@@ -598,9 +602,13 @@
 
     .line 4
     :cond_0
+     invoke-static {p0}, Lru/vtosters/lite/res/proxy/ProxyResources;->addProxyResources(Ljava/lang/Object;)V
+
     invoke-virtual {p0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object p0
+
+
 
     sget-object v1, Lcom/google/android/gms/maps/g;->MapAttrs:[I
 
@@ -783,9 +791,13 @@
 
     .line 3
     :cond_0
+     invoke-static {p0}, Lru/vtosters/lite/res/proxy/ProxyResources;->addProxyResources(Ljava/lang/Object;)V
+
     invoke-virtual {p0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object p0
+
+
 
     sget-object v0, Lcom/google/android/gms/maps/g;->MapAttrs:[I
 

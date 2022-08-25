@@ -202,9 +202,13 @@
     .locals 3
 
     .line 35
+     invoke-static {p0}, Lru/vtosters/lite/res/proxy/ProxyResources;->addProxyResources(Ljava/lang/Object;)V
+
     invoke-virtual {p0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object p0
+
+
 
     const-string v0, "navigation_bar_height"
 
@@ -1401,9 +1405,13 @@
     .end param
 
     .line 25
+     invoke-static {p0}, Lru/vtosters/lite/res/proxy/ProxyResources;->addProxyResources(Ljava/lang/Object;)V
+
     invoke-virtual {p0}, Landroid/view/View;->getResources()Landroid/content/res/Resources;
 
     move-result-object p0
+
+
 
     invoke-virtual {p0, p1}, Landroid/content/res/Resources;->getDimension(I)F
 

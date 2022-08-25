@@ -979,8 +979,6 @@
 
     invoke-virtual {p0, p1}, Landroid/view/Window;->setNavigationBarColor(I)V
 
-    invoke-static {p0, p1}, Lru/vtosters/lite/utils/ThemesUtils;->setNavbarColor(Landroid/view/Window;I)V
-
     return-void
 
     .line 68
@@ -1000,8 +998,6 @@
 
     .line 70
     invoke-virtual {p0, p1}, Landroid/view/Window;->setNavigationBarColor(I)V
-
-    invoke-static {p0, p1}, Lru/vtosters/lite/utils/ThemesUtils;->setNavbarColor(Landroid/view/Window;I)V
 
     const/4 p0, 0x1
 
@@ -1116,7 +1112,7 @@
 
     sget v0, Lb/h/z/b;->background_page:I
 
-    invoke-static {p1, v0}, Lcom/vk/core/util/ContextExtKt;->h(Landroid/content/Context;I)I
+    invoke-static {p1, v0}, Lru/vtosters/lite/res/VTLColors;->getColor(Landroid/content/Context;I)I
 
     move-result p1
 
@@ -1132,7 +1128,7 @@
 
     sget v0, Lb/h/z/b;->background_page:I
 
-    invoke-static {p1, v0}, Lcom/vk/core/util/ContextExtKt;->h(Landroid/content/Context;I)I
+    invoke-static {p1, v0}, Lru/vtosters/lite/res/VTLColors;->getColor(Landroid/content/Context;I)I
 
     move-result p1
 
@@ -2036,7 +2032,7 @@
 
     move-result-object v0
 
-    invoke-static {v0, p0}, Lcom/vk/core/util/ContextExtKt;->h(Landroid/content/Context;I)I
+    invoke-static {v0, p0}, Lru/vtosters/lite/res/VTLColors;->getColor(Landroid/content/Context;I)I
 
     move-result p0
 

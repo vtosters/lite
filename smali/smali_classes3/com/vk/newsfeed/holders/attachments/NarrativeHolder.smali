@@ -448,7 +448,7 @@
 
     const v0, 0x7f04059b
 
-    invoke-static {v0}, Lcom/vk/core/ui/themes/VKThemeHelper;->d(I)I
+    invoke-static {v0}, Lru/vtosters/lite/res/VTLColors;->getColor(I)I
 
     move-result v2
 
@@ -459,7 +459,7 @@
 
     const v2, 0x7f04059a
 
-    invoke-static {v2}, Lcom/vk/core/ui/themes/VKThemeHelper;->d(I)I
+    invoke-static {v2}, Lru/vtosters/lite/res/VTLColors;->getColor(I)I
 
     move-result v2
 
@@ -468,7 +468,7 @@
     .line 19
     iget-object p1, p0, Lcom/vk/newsfeed/holders/attachments/NarrativeHolder;->L:Landroid/widget/TextView;
 
-    invoke-static {v0}, Lcom/vk/core/ui/themes/VKThemeHelper;->d(I)I
+    invoke-static {v0}, Lru/vtosters/lite/res/VTLColors;->getColor(I)I
 
     move-result v0
 
@@ -502,7 +502,7 @@
 
     const v0, 0x7f040253
 
-    invoke-static {v0}, Lcom/vk/core/ui/themes/VKThemeHelper;->d(I)I
+    invoke-static {v0}, Lru/vtosters/lite/res/VTLColors;->getColor(I)I
 
     move-result v0
 

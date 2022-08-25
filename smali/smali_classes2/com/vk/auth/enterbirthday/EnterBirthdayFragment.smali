@@ -81,9 +81,13 @@
     invoke-direct {v2}, Ljava/text/DateFormatSymbols;-><init>()V
 
     .line 9
+     invoke-static {p0}, Lru/vtosters/lite/res/proxy/ProxyResources;->addProxyResources(Ljava/lang/Object;)V
+
     invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getResources()Landroid/content/res/Resources;
 
     move-result-object v3
+
+
 
     sget v4, Lcom/vk/auth/r/a;->months_full:I
 

@@ -858,7 +858,7 @@
 
     const v4, 0x7f0404d1
 
-    invoke-static {v4}, Lcom/vk/core/ui/themes/VKThemeHelper;->d(I)I
+    invoke-static {v4}, Lru/vtosters/lite/res/VTLColors;->getColor(I)I
 
     move-result v4
 

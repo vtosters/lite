@@ -177,14 +177,18 @@
 
     iget-object v4, v4, Landroidx/core/app/NotificationCompat$Builder;->mContext:Landroid/content/Context;
 
+     invoke-static {v4}, Lru/vtosters/lite/res/proxy/ProxyResources;->addProxyResources(Ljava/lang/Object;)V
+
     invoke-virtual {v4}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object v4
 
+
+
     sget v5, Landroidx/core/R$color;->notification_action_color_filter:I
 
     .line 5
-    invoke-virtual {v4, v5}, Landroid/content/res/Resources;->getColor(I)I
+    invoke-static {v4, v5}, Lru/vtosters/lite/res/VTLResources;->getColor(Landroid/content/res/Resources;I)I
 
     move-result v4
 

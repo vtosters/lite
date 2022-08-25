@@ -97,18 +97,18 @@ public class ServerDialog {
 
         if (activity != null) {
             activity.runOnUiThread(() -> {
-                VkAlertDialog.Builder builder = new VkAlertDialog.Builder(activity);
-                builder.setTitle(title);
-                builder.setMessage(message);
-                builder.setCancelable(cancelable);
-                builder.setPositiveButton(positiveButton, (dialogInterface, i) -> edit().putBoolean(key, false).apply());
-                builder.setNeutralButton(neutralButton, (dialogInterface, i) -> {
-                    edit().putBoolean(key, false).apply();
-                    activity.startActivity(new Intent("android.intent.action.VIEW").setData(Uri.parse(link)));
-                });
-                if (getBoolValue(key, true) && showForNotVerified() && showAlert) {
-                    builder.show();
-                }
+//                VkAlertDialog.Builder builder = new VkAlertDialog.Builder(activity);
+//                builder.setTitle(title);
+//                builder.setMessage(message);
+//                builder.setCancelable(cancelable);
+//                builder.setPositiveButton(positiveButton, (dialogInterface, i) -> edit().putBoolean(key, false).apply());
+//                builder.setNeutralButton(neutralButton, (dialogInterface, i) -> {
+//                    edit().putBoolean(key, false).apply();
+//                    activity.startActivity(new Intent("android.intent.action.VIEW").setData(Uri.parse(link)));
+//                });
+//                if (getBoolValue(key, true) && showForNotVerified() && showAlert) {
+//                    builder.show();
+//                }
             });
         }
     }

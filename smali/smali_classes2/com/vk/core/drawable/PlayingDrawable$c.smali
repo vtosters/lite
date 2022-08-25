@@ -50,9 +50,13 @@
     .line 1
     iget-object v0, p0, Lcom/vk/core/drawable/PlayingDrawable$c;->h:Landroid/content/Context;
 
+     invoke-static {v0}, Lru/vtosters/lite/res/proxy/ProxyResources;->addProxyResources(Ljava/lang/Object;)V
+
     invoke-virtual {v0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object v0
+
+
 
     invoke-virtual {v0, p1}, Landroid/content/res/Resources;->getInteger(I)I
 
@@ -73,9 +77,13 @@
     .line 1
     iget-object v0, p0, Lcom/vk/core/drawable/PlayingDrawable$c;->h:Landroid/content/Context;
 
+     invoke-static {v0}, Lru/vtosters/lite/res/proxy/ProxyResources;->addProxyResources(Ljava/lang/Object;)V
+
     invoke-virtual {v0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object v0
+
+
 
     invoke-virtual {v0, p1}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
@@ -115,9 +123,13 @@
     .line 1
     iget-object v0, p0, Lcom/vk/core/drawable/PlayingDrawable$c;->h:Landroid/content/Context;
 
+     invoke-static {v0}, Lru/vtosters/lite/res/proxy/ProxyResources;->addProxyResources(Ljava/lang/Object;)V
+
     invoke-virtual {v0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object v0
+
+
 
     invoke-virtual {v0, p1}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
@@ -138,9 +150,13 @@
     .line 1
     iget-object v0, p0, Lcom/vk/core/drawable/PlayingDrawable$c;->h:Landroid/content/Context;
 
+     invoke-static {v0}, Lru/vtosters/lite/res/proxy/ProxyResources;->addProxyResources(Ljava/lang/Object;)V
+
     invoke-virtual {v0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object v0
+
+
 
     invoke-virtual {v0, p1}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
@@ -161,9 +177,13 @@
     .line 1
     iget-object v0, p0, Lcom/vk/core/drawable/PlayingDrawable$c;->h:Landroid/content/Context;
 
+     invoke-static {v0}, Lru/vtosters/lite/res/proxy/ProxyResources;->addProxyResources(Ljava/lang/Object;)V
+
     invoke-virtual {v0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object v0
+
+
 
     invoke-virtual {v0, p1}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 

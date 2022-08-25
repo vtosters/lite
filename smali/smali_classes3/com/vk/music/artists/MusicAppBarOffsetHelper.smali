@@ -166,9 +166,13 @@
     .line 10
     iget v0, v0, Landroid/util/TypedValue;->data:I
 
+     invoke-static {p1}, Lru/vtosters/lite/res/proxy/ProxyResources;->addProxyResources(Ljava/lang/Object;)V
+
     invoke-virtual {p1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object p1
+
+
 
     const-string v1, "ctx.resources"
 

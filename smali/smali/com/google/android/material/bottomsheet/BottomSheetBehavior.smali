@@ -154,7 +154,7 @@
     .line 9
     sget-object v1, Lcom/google/android/material/R$styleable;->BottomSheetBehavior_Layout:[I
 
-    invoke-virtual {p1, p2, v1}, Landroid/content/Context;->obtainStyledAttributes(Landroid/util/AttributeSet;[I)Landroid/content/res/TypedArray;
+    invoke-static {p1, p2, v1}, Lru/vtosters/lite/res/VTLResources;->obtainStyledAttributes(Landroid/content/Context;Landroid/util/AttributeSet;[I)Landroid/content/res/TypedArray;
 
     move-result-object p2
 
@@ -1611,9 +1611,13 @@
     if-nez p3, :cond_1
 
     .line 8
+     invoke-static {p1}, Lru/vtosters/lite/res/proxy/ProxyResources;->addProxyResources(Ljava/lang/Object;)V
+
     invoke-virtual {p1}, Landroid/view/ViewGroup;->getResources()Landroid/content/res/Resources;
 
     move-result-object p3
+
+
 
     sget v2, Lcom/google/android/material/R$dimen;->design_bottom_sheet_peek_height_min:I
 

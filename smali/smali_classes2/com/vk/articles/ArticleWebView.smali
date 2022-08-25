@@ -989,9 +989,13 @@
     if-ne v0, v1, :cond_0
 
     .line 2
+     invoke-static {p0}, Lru/vtosters/lite/res/proxy/ProxyResources;->addProxyResources(Ljava/lang/Object;)V
+
     invoke-virtual {p0}, Landroid/webkit/WebView;->getResources()Landroid/content/res/Resources;
 
     move-result-object v0
+
+
 
     const v1, 0x7f07005a
 
@@ -1008,9 +1012,13 @@
     invoke-direct {p0, v0}, Lcom/vk/articles/ArticleWebView;->setWebViewTopPadding(I)V
 
     .line 3
+     invoke-static {p0}, Lru/vtosters/lite/res/proxy/ProxyResources;->addProxyResources(Ljava/lang/Object;)V
+
     invoke-virtual {p0}, Landroid/webkit/WebView;->getResources()Landroid/content/res/Resources;
 
     move-result-object v0
+
+
 
     const v1, 0x7f070059
 

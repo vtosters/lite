@@ -465,7 +465,7 @@
     const v1, 0x7f04059a
 
     .line 3
-    invoke-static {v1}, Lcom/vk/core/ui/themes/VKThemeHelper;->d(I)I
+    invoke-static {v1}, Lru/vtosters/lite/res/VTLColors;->getColor(I)I
 
     move-result v1
 
@@ -474,7 +474,7 @@
     const v1, 0x7f04059b
 
     .line 4
-    invoke-static {v1}, Lcom/vk/core/ui/themes/VKThemeHelper;->d(I)I
+    invoke-static {v1}, Lru/vtosters/lite/res/VTLColors;->getColor(I)I
 
     move-result v1
 
@@ -778,9 +778,13 @@
 
     new-array v2, v2, [Ljava/lang/String;
 
+     invoke-static {p0}, Lru/vtosters/lite/res/proxy/ProxyResources;->addProxyResources(Ljava/lang/Object;)V
+
     invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getResources()Landroid/content/res/Resources;
 
     move-result-object v3
+
+
 
     const v4, 0x7f1202b3
 
@@ -790,9 +794,13 @@
 
     aput-object v3, v2, v1
 
+     invoke-static {p0}, Lru/vtosters/lite/res/proxy/ProxyResources;->addProxyResources(Ljava/lang/Object;)V
+
     invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getResources()Landroid/content/res/Resources;
 
     move-result-object v1
+
+
 
     iget v3, p1, Lcom/vtosters/lite/api/BoardTopic;->f:I
 
@@ -818,9 +826,13 @@
     aput-object v1, v2, v4
 
     .line 13
+     invoke-static {p0}, Lru/vtosters/lite/res/proxy/ProxyResources;->addProxyResources(Ljava/lang/Object;)V
+
     invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getResources()Landroid/content/res/Resources;
 
     move-result-object v1
+
+
 
     iget v3, p1, Lcom/vtosters/lite/api/BoardTopic;->f:I
 
@@ -847,9 +859,13 @@
     const/4 v1, 0x3
 
     .line 14
+     invoke-static {p0}, Lru/vtosters/lite/res/proxy/ProxyResources;->addProxyResources(Ljava/lang/Object;)V
+
     invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getResources()Landroid/content/res/Resources;
 
     move-result-object v3
+
+
 
     const v5, 0x7f12028b
 

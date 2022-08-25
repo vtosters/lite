@@ -104,9 +104,13 @@
     .line 6
     iget-object p1, p0, Lcom/vtosters/lite/fragments/ProfileFragment$h;->a:Lcom/vtosters/lite/fragments/ProfileFragment;
 
+     invoke-static {p1}, Lru/vtosters/lite/res/proxy/ProxyResources;->addProxyResources(Ljava/lang/Object;)V
+
     invoke-virtual {p1}, Landroidx/fragment/app/Fragment;->getResources()Landroid/content/res/Resources;
 
     move-result-object p1
+
+
 
     iget-object v0, p0, Lcom/vtosters/lite/fragments/ProfileFragment$h;->a:Lcom/vtosters/lite/fragments/ProfileFragment;
 
@@ -212,9 +216,13 @@
     .line 13
     iget-object p1, p0, Lcom/vtosters/lite/fragments/ProfileFragment$h;->a:Lcom/vtosters/lite/fragments/ProfileFragment;
 
+     invoke-static {p1}, Lru/vtosters/lite/res/proxy/ProxyResources;->addProxyResources(Ljava/lang/Object;)V
+
     invoke-virtual {p1}, Landroidx/fragment/app/Fragment;->getResources()Landroid/content/res/Resources;
 
     move-result-object p1
+
+
 
     const v0, 0x7f120424
 

@@ -118,9 +118,13 @@
     .line 3
     iget-object v1, p0, Lcom/vk/auth/terms/TermsController;->b:Landroid/widget/TextView;
 
+     invoke-static {v1}, Lru/vtosters/lite/res/proxy/ProxyResources;->addProxyResources(Ljava/lang/Object;)V
+
     invoke-virtual {v1}, Landroid/widget/TextView;->getResources()Landroid/content/res/Resources;
 
     move-result-object v1
+
+
 
     .line 4
     invoke-static {}, Landroid/text/Spannable$Factory;->getInstance()Landroid/text/Spannable$Factory;

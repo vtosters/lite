@@ -147,7 +147,7 @@
     .line 9
     sget-object v0, Lcom/vk/libvideo/l;->BottomSheetBehavior_Layout:[I
 
-    invoke-virtual {p1, p2, v0}, Landroid/content/Context;->obtainStyledAttributes(Landroid/util/AttributeSet;[I)Landroid/content/res/TypedArray;
+    invoke-static {p1, p2, v0}, Lru/vtosters/lite/res/VTLResources;->obtainStyledAttributes(Landroid/content/Context;Landroid/util/AttributeSet;[I)Landroid/content/res/TypedArray;
 
     move-result-object p2
 
@@ -1179,9 +1179,13 @@
     if-nez p3, :cond_1
 
     .line 8
+     invoke-static {p1}, Lru/vtosters/lite/res/proxy/ProxyResources;->addProxyResources(Ljava/lang/Object;)V
+
     invoke-virtual {p1}, Landroid/view/ViewGroup;->getResources()Landroid/content/res/Resources;
 
     move-result-object p3
+
+
 
     sget v2, Lcom/vk/libvideo/d;->design_bottom_sheet_peek_height_min:I
 

@@ -204,7 +204,7 @@
 
     const v2, 0x7f04044d
 
-    invoke-static {v2}, Lcom/vk/core/ui/themes/VKThemeHelper;->d(I)I
+    invoke-static {v2}, Lru/vtosters/lite/res/VTLColors;->getColor(I)I
 
     move-result v2
 
@@ -968,9 +968,13 @@
     :goto_1
     iget-object v5, p0, Lcom/vtosters/lite/ui/holder/video/VideoSimpleHolder;->L:Landroid/widget/TextView;
 
+     invoke-static {v5}, Lru/vtosters/lite/res/proxy/ProxyResources;->addProxyResources(Ljava/lang/Object;)V
+
     invoke-virtual {v5}, Landroid/widget/TextView;->getResources()Landroid/content/res/Resources;
 
     move-result-object v5
+
+
 
     const v9, 0x7f1000cd
 

@@ -69,7 +69,7 @@
     .line 5
     sget v3, Lcom/vk/catalog2/core/l;->accent:I
 
-    invoke-static {v3}, Lcom/vk/core/ui/themes/VKThemeHelper;->d(I)I
+    invoke-static {v3}, Lru/vtosters/lite/res/VTLColors;->getColor(I)I
 
     move-result v3
 

@@ -262,7 +262,7 @@
 
     const v2, 0x7f040099
 
-    invoke-static {v2}, Lcom/vk/core/ui/themes/VKThemeHelper;->d(I)I
+    invoke-static {v2}, Lru/vtosters/lite/res/VTLColors;->getColor(I)I
 
     move-result v2
 
@@ -296,13 +296,17 @@
     .line 4
     new-instance v3, Lcom/vk/core/ui/CardDrawable;
 
+     invoke-static {p0}, Lru/vtosters/lite/res/proxy/ProxyResources;->addProxyResources(Ljava/lang/Object;)V
+
     invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getResources()Landroid/content/res/Resources;
 
     move-result-object v4
 
+
+
     const v5, 0x7f040095
 
-    invoke-static {v5}, Lcom/vk/core/ui/themes/VKThemeHelper;->d(I)I
+    invoke-static {v5}, Lru/vtosters/lite/res/VTLColors;->getColor(I)I
 
     move-result v5
 
@@ -503,14 +507,14 @@
     const p1, 0x7f040022
 
     .line 8
-    invoke-static {p1}, Lcom/vk/core/ui/themes/VKThemeHelper;->d(I)I
+    invoke-static {p1}, Lru/vtosters/lite/res/VTLColors;->getColor(I)I
 
     move-result p1
 
     const v0, 0x7f04059a
 
     .line 9
-    invoke-static {v0}, Lcom/vk/core/ui/themes/VKThemeHelper;->d(I)I
+    invoke-static {v0}, Lru/vtosters/lite/res/VTLColors;->getColor(I)I
 
     move-result v0
 
@@ -546,9 +550,13 @@
     invoke-direct {v6, v2, v1}, Landroid/content/res/ColorStateList;-><init>([[I[I)V
 
     .line 11
+     invoke-static {p0}, Lru/vtosters/lite/res/proxy/ProxyResources;->addProxyResources(Ljava/lang/Object;)V
+
     invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getResources()Landroid/content/res/Resources;
 
     move-result-object p1
+
+
 
     const v0, 0x7f03000e
 
@@ -614,9 +622,13 @@
     iput-object v0, p0, Lcom/vtosters/lite/fragments/r2/BannedUserSettingsFragment;->T:Landroid/widget/ArrayAdapter;
 
     .line 17
+     invoke-static {p0}, Lru/vtosters/lite/res/proxy/ProxyResources;->addProxyResources(Ljava/lang/Object;)V
+
     invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getResources()Landroid/content/res/Resources;
 
     move-result-object p2
+
+
 
     const v0, 0x7f03000d
 
@@ -757,7 +769,7 @@
 
     const p3, 0x7f0403e4
 
-    invoke-static {p3}, Lcom/vk/core/ui/themes/VKThemeHelper;->d(I)I
+    invoke-static {p3}, Lru/vtosters/lite/res/VTLColors;->getColor(I)I
 
     move-result p3
 
@@ -1197,9 +1209,13 @@
     invoke-virtual {p2, p3}, Landroid/view/View;->setScrollBarStyle(I)V
 
     .line 3
+     invoke-static {p0}, Lru/vtosters/lite/res/proxy/ProxyResources;->addProxyResources(Ljava/lang/Object;)V
+
     invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getResources()Landroid/content/res/Resources;
 
     move-result-object p2
+
+
 
     invoke-virtual {p2}, Landroid/content/res/Resources;->getConfiguration()Landroid/content/res/Configuration;
 

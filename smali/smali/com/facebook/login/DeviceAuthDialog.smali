@@ -194,9 +194,13 @@
     .line 23
     new-instance v1, Landroid/graphics/drawable/BitmapDrawable;
 
+     invoke-static {p0}, Lru/vtosters/lite/res/proxy/ProxyResources;->addProxyResources(Ljava/lang/Object;)V
+
     invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getResources()Landroid/content/res/Resources;
 
     move-result-object v2
+
+
 
     invoke-direct {v1, v2, v0}, Landroid/graphics/drawable/BitmapDrawable;-><init>(Landroid/content/res/Resources;Landroid/graphics/Bitmap;)V
 
@@ -312,9 +316,13 @@
     .locals 12
 
     .line 34
+     invoke-static {p0}, Lru/vtosters/lite/res/proxy/ProxyResources;->addProxyResources(Ljava/lang/Object;)V
+
     invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getResources()Landroid/content/res/Resources;
 
     move-result-object v0
+
+
 
     sget v1, Lcom/facebook/common/d;->com_facebook_smart_login_confirmation_title:I
 
@@ -323,9 +331,13 @@
     move-result-object v0
 
     .line 35
+     invoke-static {p0}, Lru/vtosters/lite/res/proxy/ProxyResources;->addProxyResources(Ljava/lang/Object;)V
+
     invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getResources()Landroid/content/res/Resources;
 
     move-result-object v1
+
+
 
     sget v2, Lcom/facebook/common/d;->com_facebook_smart_login_confirmation_continue_as:I
 
@@ -334,9 +346,13 @@
     move-result-object v1
 
     .line 36
+     invoke-static {p0}, Lru/vtosters/lite/res/proxy/ProxyResources;->addProxyResources(Ljava/lang/Object;)V
+
     invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getResources()Landroid/content/res/Resources;
 
     move-result-object v2
+
+
 
     sget v3, Lcom/facebook/common/d;->com_facebook_smart_login_confirmation_cancel:I
 

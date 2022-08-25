@@ -210,9 +210,13 @@
 
     move-result-object v3
 
+     invoke-static {v3}, Lru/vtosters/lite/res/proxy/ProxyResources;->addProxyResources(Ljava/lang/Object;)V
+
     invoke-virtual {v3}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object v3
+
+
 
     const v4, 0x7f070223
 
@@ -322,9 +326,13 @@
 
     move-result-object v3
 
+     invoke-static {v3}, Lru/vtosters/lite/res/proxy/ProxyResources;->addProxyResources(Ljava/lang/Object;)V
+
     invoke-virtual {v3}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object v3
+
+
 
     const v4, 0x7f070223
 
@@ -371,9 +379,13 @@
 
     int-to-float p2, p2
 
+     invoke-static {p0}, Lru/vtosters/lite/res/proxy/ProxyResources;->addProxyResources(Ljava/lang/Object;)V
+
     invoke-virtual {p0}, Landroid/view/ViewGroup;->getResources()Landroid/content/res/Resources;
 
     move-result-object v0
+
+
 
     const v1, 0x7f070234
 
@@ -485,9 +497,13 @@
 
     move-result-object p4
 
+     invoke-static {p4}, Lru/vtosters/lite/res/proxy/ProxyResources;->addProxyResources(Ljava/lang/Object;)V
+
     invoke-virtual {p4}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object p4
+
+
 
     const v0, 0x7f070223
 

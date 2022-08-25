@@ -39,9 +39,13 @@
     .locals 1
 
     .line 1
+     invoke-static {p1}, Lru/vtosters/lite/res/proxy/ProxyResources;->addProxyResources(Ljava/lang/Object;)V
+
     invoke-virtual {p1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object v0
+
+
 
     invoke-virtual {v0, p3}, Landroid/content/res/Resources;->getTextArray(I)[Ljava/lang/CharSequence;
 

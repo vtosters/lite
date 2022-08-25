@@ -504,9 +504,13 @@
 
     iget-object v0, p0, Lcom/vk/emoji/EmojiAdapter;->a:Landroid/content/Context;
 
+     invoke-static {v0}, Lru/vtosters/lite/res/proxy/ProxyResources;->addProxyResources(Ljava/lang/Object;)V
+
     invoke-virtual {v0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object v0
+
+
 
     invoke-direct {p0, p2}, Lcom/vk/emoji/EmojiAdapter;->H(I)I
 

@@ -53,6 +53,7 @@ import java.util.Map;
 
 import ru.vtosters.lite.ui.components.DockBarEditorManager;
 import ru.vtosters.lite.ui.items.DockBarTab;
+import ru.vtosters.lite.utils.ThemesUtils;
 
 public class DockBarInjector {
     private static final DockBarEditorManager sManager = DockBarEditorManager.getInstance();
@@ -86,14 +87,11 @@ public class DockBarInjector {
             e.printStackTrace();
         }
 
-        for (DockBarTab tab : sManager.getSelectedTabs()) {
-            MenuItem add = menu.add(0, tab.id, 0, tab.titleID);
-            Drawable drawable = getResources().getDrawable(tab.iconID);
+        for (DockBarTab tab : sManager.getSelectedTabs())
+            menu.add(0, tab.id, 0, tab.titleID)
+                    .setIcon(tab.iconID)
+                    .setCheckable(true);
 
-            add.setIcon(new RecoloredDrawable(drawable, getCSTDock()));
-            add.setTitle(getGlobalContext().getString(tab.titleID));
-            add.setCheckable(true);
-        }
         if (getBoolValue("dockbar_tab_titles", true)) {
             var menuView = (BottomNavigationMenuView) navigationView.getChildAt(0);
             for (int i = 0; i < menuView.getChildCount(); i++) {

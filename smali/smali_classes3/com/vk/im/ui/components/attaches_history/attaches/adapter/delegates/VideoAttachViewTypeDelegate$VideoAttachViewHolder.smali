@@ -623,9 +623,13 @@
     .line 21
     iget-object v1, p0, Lcom/vk/im/ui/components/attaches_history/attaches/adapter/delegates/VideoAttachViewTypeDelegate$VideoAttachViewHolder;->d:Landroid/widget/TextView;
 
+     invoke-static {v1}, Lru/vtosters/lite/res/proxy/ProxyResources;->addProxyResources(Ljava/lang/Object;)V
+
     invoke-virtual {v1}, Landroid/widget/TextView;->getResources()Landroid/content/res/Resources;
 
     move-result-object v4
+
+
 
     sget v5, Lcom/vk/im/ui/l;->vkim_history_attaches_video_views:I
 

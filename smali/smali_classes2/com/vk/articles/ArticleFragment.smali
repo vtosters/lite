@@ -1222,9 +1222,13 @@
 
     int-to-float v5, v5
 
+     invoke-static {p0}, Lru/vtosters/lite/res/proxy/ProxyResources;->addProxyResources(Ljava/lang/Object;)V
+
     invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getResources()Landroid/content/res/Resources;
 
     move-result-object v6
+
+
 
     invoke-virtual {v6, v2}, Landroid/content/res/Resources;->getDimension(I)F
 
@@ -1239,9 +1243,13 @@
     int-to-float v4, p2
 
     .line 66
+     invoke-static {p0}, Lru/vtosters/lite/res/proxy/ProxyResources;->addProxyResources(Ljava/lang/Object;)V
+
     invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getResources()Landroid/content/res/Resources;
 
     move-result-object v5
+
+
 
     invoke-virtual {v5, v2}, Landroid/content/res/Resources;->getDimension(I)F
 
@@ -1281,9 +1289,13 @@
 
     int-to-float p1, p1
 
+     invoke-static {p0}, Lru/vtosters/lite/res/proxy/ProxyResources;->addProxyResources(Ljava/lang/Object;)V
+
     invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->getResources()Landroid/content/res/Resources;
 
     move-result-object v4
+
+
 
     invoke-virtual {v4, v2}, Landroid/content/res/Resources;->getDimension(I)F
 
@@ -5534,9 +5546,13 @@
 
     invoke-static {p3, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
+     invoke-static {p3}, Lru/vtosters/lite/res/proxy/ProxyResources;->addProxyResources(Ljava/lang/Object;)V
+
     invoke-virtual {p3}, Landroid/app/Activity;->getResources()Landroid/content/res/Resources;
 
     move-result-object p3
+
+
 
     const v3, 0x7f07005a
 
@@ -5555,9 +5571,13 @@
 
     invoke-static {v3, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
+     invoke-static {v3}, Lru/vtosters/lite/res/proxy/ProxyResources;->addProxyResources(Ljava/lang/Object;)V
+
     invoke-virtual {v3}, Landroid/app/Activity;->getResources()Landroid/content/res/Resources;
 
     move-result-object v1
+
+
 
     const v3, 0x7f070059
 

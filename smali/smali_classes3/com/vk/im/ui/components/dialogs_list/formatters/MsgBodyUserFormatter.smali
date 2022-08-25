@@ -177,9 +177,13 @@
     move-result-object v0
 
     .line 3
+     invoke-static {v0}, Lru/vtosters/lite/res/proxy/ProxyResources;->addProxyResources(Ljava/lang/Object;)V
+
     invoke-virtual {v0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object v1
+
+
 
     sget v2, Lcom/vk/im/ui/m;->vkim_draft:I
 
@@ -194,7 +198,7 @@
     .line 4
     sget v2, Lcom/vk/im/ui/c;->destructive:I
 
-    invoke-static {v0, v2}, Lcom/vk/core/util/ContextExtKt;->h(Landroid/content/Context;I)I
+    invoke-static {v0, v2}, Lru/vtosters/lite/res/VTLColors;->getColor(Landroid/content/Context;I)I
 
     move-result v0
 
@@ -366,7 +370,7 @@
 
     sget p3, Lcom/vk/im/ui/c;->text_tertiary:I
 
-    invoke-static {p2, p3}, Lcom/vk/core/util/ContextExtKt;->h(Landroid/content/Context;I)I
+    invoke-static {p2, p3}, Lru/vtosters/lite/res/VTLColors;->getColor(Landroid/content/Context;I)I
 
     move-result p2
 
@@ -508,7 +512,7 @@
 
     sget p4, Lcom/vk/im/ui/c;->text_subhead:I
 
-    invoke-static {p2, p4}, Lcom/vk/core/util/ContextExtKt;->h(Landroid/content/Context;I)I
+    invoke-static {p2, p4}, Lru/vtosters/lite/res/VTLColors;->getColor(Landroid/content/Context;I)I
 
     move-result p2
 

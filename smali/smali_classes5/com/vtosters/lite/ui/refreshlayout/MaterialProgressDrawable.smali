@@ -112,9 +112,13 @@
     iput-object p2, p0, Lcom/vtosters/lite/ui/refreshlayout/MaterialProgressDrawable;->f:Landroid/view/View;
 
     .line 6
+     invoke-static {p1}, Lru/vtosters/lite/res/proxy/ProxyResources;->addProxyResources(Ljava/lang/Object;)V
+
     invoke-virtual {p1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object p1
+
+
 
     iput-object p1, p0, Lcom/vtosters/lite/ui/refreshlayout/MaterialProgressDrawable;->e:Landroid/content/res/Resources;
 

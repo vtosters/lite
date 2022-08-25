@@ -1653,7 +1653,7 @@
 
     sget v4, Lcom/vk/im/ui/c;->im_service_message_text_alternate:I
 
-    invoke-static {v3, v4}, Lcom/vk/core/util/ContextExtKt;->h(Landroid/content/Context;I)I
+    invoke-static {v3, v4}, Lru/vtosters/lite/res/VTLColors;->getColor(Landroid/content/Context;I)I
 
     move-result v3
 
@@ -1685,7 +1685,7 @@
 
     sget v3, Lcom/vk/im/ui/c;->im_service_message_text_alternate:I
 
-    invoke-static {v1, v3}, Lcom/vk/core/util/ContextExtKt;->h(Landroid/content/Context;I)I
+    invoke-static {v1, v3}, Lru/vtosters/lite/res/VTLColors;->getColor(Landroid/content/Context;I)I
 
     move-result v1
 
@@ -1720,7 +1720,7 @@
 
     sget v4, Lcom/vk/im/ui/c;->text_primary:I
 
-    invoke-static {v3, v4}, Lcom/vk/core/util/ContextExtKt;->h(Landroid/content/Context;I)I
+    invoke-static {v3, v4}, Lru/vtosters/lite/res/VTLColors;->getColor(Landroid/content/Context;I)I
 
     move-result v3
 
@@ -1744,7 +1744,7 @@
 
     sget v2, Lcom/vk/im/ui/c;->text_placeholder:I
 
-    invoke-static {v3, v2}, Lcom/vk/core/util/ContextExtKt;->h(Landroid/content/Context;I)I
+    invoke-static {v3, v2}, Lru/vtosters/lite/res/VTLColors;->getColor(Landroid/content/Context;I)I
 
     move-result v2
 

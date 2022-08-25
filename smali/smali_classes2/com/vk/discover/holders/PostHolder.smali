@@ -451,7 +451,7 @@
 
     const p4, 0x7f04044d
 
-    invoke-static {p4}, Lcom/vk/core/ui/themes/VKThemeHelper;->d(I)I
+    invoke-static {p4}, Lru/vtosters/lite/res/VTLColors;->getColor(I)I
 
     move-result p4
 
@@ -1172,9 +1172,13 @@
 
     invoke-static {v10, v11}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
+     invoke-static {v10}, Lru/vtosters/lite/res/proxy/ProxyResources;->addProxyResources(Ljava/lang/Object;)V
+
     invoke-virtual {v10}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object v10
+
+
 
     const v11, 0x7f100019
 

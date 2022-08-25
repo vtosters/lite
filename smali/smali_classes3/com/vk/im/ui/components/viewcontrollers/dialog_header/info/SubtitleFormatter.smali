@@ -178,9 +178,13 @@
     :cond_1
     iget-object v0, p0, Lcom/vk/im/ui/components/viewcontrollers/dialog_header/info/SubtitleFormatter;->c:Landroid/content/Context;
 
+     invoke-static {v0}, Lru/vtosters/lite/res/proxy/ProxyResources;->addProxyResources(Ljava/lang/Object;)V
+
     invoke-virtual {v0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object v0
+
+
 
     .line 13
     sget v1, Lcom/vk/im/ui/l;->vkim_msg_header_channel_count:I
@@ -322,9 +326,13 @@
     :cond_2
     iget-object v0, p0, Lcom/vk/im/ui/components/viewcontrollers/dialog_header/info/SubtitleFormatter;->c:Landroid/content/Context;
 
+     invoke-static {v0}, Lru/vtosters/lite/res/proxy/ProxyResources;->addProxyResources(Ljava/lang/Object;)V
+
     invoke-virtual {v0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object v0
+
+
 
     .line 4
     sget v1, Lcom/vk/im/ui/l;->vkim_msg_header_chat_count:I

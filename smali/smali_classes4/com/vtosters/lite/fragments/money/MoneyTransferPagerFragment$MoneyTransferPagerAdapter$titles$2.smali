@@ -63,9 +63,13 @@
     .line 2
     iget-object v0, p0, Lcom/vtosters/lite/fragments/money/MoneyTransferPagerFragment$MoneyTransferPagerAdapter$titles$2;->$context:Landroid/content/Context;
 
+     invoke-static {v0}, Lru/vtosters/lite/res/proxy/ProxyResources;->addProxyResources(Ljava/lang/Object;)V
+
     invoke-virtual {v0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object v0
+
+
 
     const/4 v1, 0x3
 

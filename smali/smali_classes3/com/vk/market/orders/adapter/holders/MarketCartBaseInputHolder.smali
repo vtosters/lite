@@ -194,9 +194,13 @@
 
     invoke-static {p5, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
+     invoke-static {p5}, Lru/vtosters/lite/res/proxy/ProxyResources;->addProxyResources(Ljava/lang/Object;)V
+
     invoke-virtual {p5}, Landroid/view/View;->getResources()Landroid/content/res/Resources;
 
     move-result-object p5
+
+
 
     const v1, 0x7f1206cd
 

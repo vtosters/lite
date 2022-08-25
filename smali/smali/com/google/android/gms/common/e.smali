@@ -473,9 +473,13 @@
 
     .line 2
     :try_start_0
+     invoke-static {p0}, Lru/vtosters/lite/res/proxy/ProxyResources;->addProxyResources(Ljava/lang/Object;)V
+
     invoke-virtual {p0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object v0
+
+
 
     .line 3
     sget v1, Lcom/google/android/gms/common/g;->common_google_play_services_unknown_issue:I

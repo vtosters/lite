@@ -502,9 +502,13 @@
 
     .line 8
     :cond_2
+     invoke-static {p0}, Lru/vtosters/lite/res/proxy/ProxyResources;->addProxyResources(Ljava/lang/Object;)V
+
     invoke-virtual {p0}, Lcom/vk/navigation/NavigationDelegateActivity;->getResources()Landroid/content/res/Resources;
 
     move-result-object p1
+
+
 
     invoke-virtual {p1}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
 
@@ -791,8 +795,6 @@
 
     invoke-virtual {v0, v1}, Landroid/view/Window;->setStatusBarColor(I)V
 
-    invoke-static {v0, v1}, Lru/vtosters/lite/utils/ThemesUtils;->setNavbarColor(Landroid/view/Window;I)V
-
     .line 3
     :cond_0
     invoke-super {p0, p1}, Lcom/vtosters/lite/VKActivity;->onActionModeFinished(Landroid/view/ActionMode;)V
@@ -840,8 +842,6 @@
     move-result v0
 
     invoke-virtual {p1, v0}, Landroid/view/Window;->setStatusBarColor(I)V
-
-    invoke-static {p1, v0}, Lru/vtosters/lite/utils/ThemesUtils;->setNavbarColor(Landroid/view/Window;I)V
 
     :cond_0
     return-void
@@ -1007,9 +1007,13 @@
 
     .line 6
     :cond_0
+     invoke-static {p0}, Lru/vtosters/lite/res/proxy/ProxyResources;->addProxyResources(Ljava/lang/Object;)V
+
     invoke-virtual {p0}, Lcom/vk/navigation/NavigationDelegateActivity;->getResources()Landroid/content/res/Resources;
 
     move-result-object v0
+
+
 
     invoke-virtual {v0}, Landroid/content/res/Resources;->getConfiguration()Landroid/content/res/Configuration;
 
@@ -1127,9 +1131,13 @@
     .locals 7
 
     .line 1
+     invoke-static {p0}, Lru/vtosters/lite/res/proxy/ProxyResources;->addProxyResources(Ljava/lang/Object;)V
+
     invoke-virtual {p0}, Lcom/vk/navigation/NavigationDelegateActivity;->getResources()Landroid/content/res/Resources;
 
     move-result-object v0
+
+
 
     invoke-virtual {v0}, Landroid/content/res/Resources;->getConfiguration()Landroid/content/res/Configuration;
 

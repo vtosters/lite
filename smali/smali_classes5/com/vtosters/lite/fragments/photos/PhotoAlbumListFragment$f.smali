@@ -125,9 +125,13 @@
     :cond_1
     iget-object p1, p0, Lcom/vtosters/lite/fragments/photos/PhotoAlbumListFragment$f;->c:Lcom/vtosters/lite/fragments/photos/PhotoAlbumListFragment;
 
+     invoke-static {p1}, Lru/vtosters/lite/res/proxy/ProxyResources;->addProxyResources(Ljava/lang/Object;)V
+
     invoke-virtual {p1}, Landroidx/fragment/app/Fragment;->getResources()Landroid/content/res/Resources;
 
     move-result-object p1
+
+
 
     const v3, 0x7f100007
 

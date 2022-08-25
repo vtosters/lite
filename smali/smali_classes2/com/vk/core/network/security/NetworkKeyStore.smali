@@ -115,9 +115,13 @@
     .line 3
     new-instance v4, Ljava/io/BufferedInputStream;
 
+     invoke-static {p1}, Lru/vtosters/lite/res/proxy/ProxyResources;->addProxyResources(Ljava/lang/Object;)V
+
     invoke-virtual {p1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object p1
+
+
 
     sget v5, Lb/h/g/c;->cacerts:I
 

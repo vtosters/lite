@@ -51,9 +51,13 @@
     .line 2
     iget-object v0, p0, Lcom/vk/newsfeed/holders/FrameLayoutSwiped$widthReply$2;->this$0:Lcom/vk/newsfeed/holders/FrameLayoutSwiped;
 
+     invoke-static {v0}, Lru/vtosters/lite/res/proxy/ProxyResources;->addProxyResources(Ljava/lang/Object;)V
+
     invoke-virtual {v0}, Landroid/widget/FrameLayout;->getResources()Landroid/content/res/Resources;
 
     move-result-object v0
+
+
 
     const-string v1, "resources"
 

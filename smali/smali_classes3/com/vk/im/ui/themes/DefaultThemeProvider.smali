@@ -109,77 +109,77 @@
     .line 19
     sget v1, Lcom/vk/im/engine/h;->accent:I
 
-    invoke-static {v0, v1}, Lcom/vk/core/util/ContextExtKt;->h(Landroid/content/Context;I)I
+    invoke-static {v0, v1}, Lru/vtosters/lite/res/VTLColors;->getColor(Landroid/content/Context;I)I
 
     move-result v2
 
     .line 20
     sget v1, Lcom/vk/im/engine/h;->im_attach_tint:I
 
-    invoke-static {v0, v1}, Lcom/vk/core/util/ContextExtKt;->h(Landroid/content/Context;I)I
+    invoke-static {v0, v1}, Lru/vtosters/lite/res/VTLColors;->getColor(Landroid/content/Context;I)I
 
     move-result v3
 
     .line 21
     sget v1, Lcom/vk/im/engine/h;->text_primary:I
 
-    invoke-static {v0, v1}, Lcom/vk/core/util/ContextExtKt;->h(Landroid/content/Context;I)I
+    invoke-static {v0, v1}, Lru/vtosters/lite/res/VTLColors;->getColor(Landroid/content/Context;I)I
 
     move-result v4
 
     .line 22
     sget v1, Lcom/vk/im/engine/h;->text_link:I
 
-    invoke-static {v0, v1}, Lcom/vk/core/util/ContextExtKt;->h(Landroid/content/Context;I)I
+    invoke-static {v0, v1}, Lru/vtosters/lite/res/VTLColors;->getColor(Landroid/content/Context;I)I
 
     move-result v5
 
     .line 23
     sget v1, Lcom/vk/im/engine/h;->text_placeholder:I
 
-    invoke-static {v0, v1}, Lcom/vk/core/util/ContextExtKt;->h(Landroid/content/Context;I)I
+    invoke-static {v0, v1}, Lru/vtosters/lite/res/VTLColors;->getColor(Landroid/content/Context;I)I
 
     move-result v6
 
     .line 24
     sget v1, Lcom/vk/im/engine/h;->text_primary:I
 
-    invoke-static {v0, v1}, Lcom/vk/core/util/ContextExtKt;->h(Landroid/content/Context;I)I
+    invoke-static {v0, v1}, Lru/vtosters/lite/res/VTLColors;->getColor(Landroid/content/Context;I)I
 
     move-result v7
 
     .line 25
     sget v1, Lcom/vk/im/engine/h;->text_secondary:I
 
-    invoke-static {v0, v1}, Lcom/vk/core/util/ContextExtKt;->h(Landroid/content/Context;I)I
+    invoke-static {v0, v1}, Lru/vtosters/lite/res/VTLColors;->getColor(Landroid/content/Context;I)I
 
     move-result v8
 
     .line 26
     sget v1, Lcom/vk/im/engine/h;->text_tertiary:I
 
-    invoke-static {v0, v1}, Lcom/vk/core/util/ContextExtKt;->h(Landroid/content/Context;I)I
+    invoke-static {v0, v1}, Lru/vtosters/lite/res/VTLColors;->getColor(Landroid/content/Context;I)I
 
     move-result v9
 
     .line 27
     sget v1, Lcom/vk/im/engine/h;->im_text_name:I
 
-    invoke-static {v0, v1}, Lcom/vk/core/util/ContextExtKt;->h(Landroid/content/Context;I)I
+    invoke-static {v0, v1}, Lru/vtosters/lite/res/VTLColors;->getColor(Landroid/content/Context;I)I
 
     move-result v10
 
     .line 28
     sget v1, Lcom/vk/im/engine/h;->im_forward_line_tint:I
 
-    invoke-static {v0, v1}, Lcom/vk/core/util/ContextExtKt;->h(Landroid/content/Context;I)I
+    invoke-static {v0, v1}, Lru/vtosters/lite/res/VTLColors;->getColor(Landroid/content/Context;I)I
 
     move-result v13
 
     .line 29
     sget v1, Lcom/vk/im/engine/h;->im_forward_line_tint:I
 
-    invoke-static {v0, v1}, Lcom/vk/core/util/ContextExtKt;->h(Landroid/content/Context;I)I
+    invoke-static {v0, v1}, Lru/vtosters/lite/res/VTLColors;->getColor(Landroid/content/Context;I)I
 
     move-result v14
 
@@ -188,7 +188,7 @@
     .line 30
     sget v1, Lcom/vk/im/engine/h;->im_bubble_incoming:I
 
-    invoke-static {v0, v1}, Lcom/vk/core/util/ContextExtKt;->h(Landroid/content/Context;I)I
+    invoke-static {v0, v1}, Lru/vtosters/lite/res/VTLColors;->getColor(Landroid/content/Context;I)I
 
     move-result v1
 
@@ -198,7 +198,7 @@
     :cond_0
     sget v1, Lcom/vk/im/engine/h;->im_bubble_outgoing:I
 
-    invoke-static {v0, v1}, Lcom/vk/core/util/ContextExtKt;->h(Landroid/content/Context;I)I
+    invoke-static {v0, v1}, Lru/vtosters/lite/res/VTLColors;->getColor(Landroid/content/Context;I)I
 
     move-result v1
 
@@ -210,7 +210,7 @@
     .line 32
     sget v1, Lcom/vk/im/engine/h;->im_bubble_incoming_highlighted:I
 
-    invoke-static {v0, v1}, Lcom/vk/core/util/ContextExtKt;->h(Landroid/content/Context;I)I
+    invoke-static {v0, v1}, Lru/vtosters/lite/res/VTLColors;->getColor(Landroid/content/Context;I)I
 
     move-result v1
 
@@ -220,7 +220,7 @@
     :cond_1
     sget v1, Lcom/vk/im/engine/h;->im_bubble_outgoing_highlighted:I
 
-    invoke-static {v0, v1}, Lcom/vk/core/util/ContextExtKt;->h(Landroid/content/Context;I)I
+    invoke-static {v0, v1}, Lru/vtosters/lite/res/VTLColors;->getColor(Landroid/content/Context;I)I
 
     move-result v1
 
@@ -232,7 +232,7 @@
     .line 34
     sget v1, Lcom/vk/im/engine/h;->im_bubble_wallpaper_incoming:I
 
-    invoke-static {v0, v1}, Lcom/vk/core/util/ContextExtKt;->h(Landroid/content/Context;I)I
+    invoke-static {v0, v1}, Lru/vtosters/lite/res/VTLColors;->getColor(Landroid/content/Context;I)I
 
     move-result v1
 
@@ -242,7 +242,7 @@
     :cond_2
     sget v1, Lcom/vk/im/engine/h;->im_bubble_wallpaper_outgoing:I
 
-    invoke-static {v0, v1}, Lcom/vk/core/util/ContextExtKt;->h(Landroid/content/Context;I)I
+    invoke-static {v0, v1}, Lru/vtosters/lite/res/VTLColors;->getColor(Landroid/content/Context;I)I
 
     move-result v1
 
@@ -254,7 +254,7 @@
     .line 36
     sget v1, Lcom/vk/im/engine/h;->im_bubble_wallpaper_incoming_highlighted:I
 
-    invoke-static {v0, v1}, Lcom/vk/core/util/ContextExtKt;->h(Landroid/content/Context;I)I
+    invoke-static {v0, v1}, Lru/vtosters/lite/res/VTLColors;->getColor(Landroid/content/Context;I)I
 
     move-result v1
 
@@ -264,7 +264,7 @@
     :cond_3
     sget v1, Lcom/vk/im/engine/h;->im_bubble_wallpaper_outgoing_highlighted:I
 
-    invoke-static {v0, v1}, Lcom/vk/core/util/ContextExtKt;->h(Landroid/content/Context;I)I
+    invoke-static {v0, v1}, Lru/vtosters/lite/res/VTLColors;->getColor(Landroid/content/Context;I)I
 
     move-result v1
 
@@ -274,49 +274,49 @@
     .line 38
     sget v1, Lcom/vk/im/engine/h;->im_bubble_gift_background:I
 
-    invoke-static {v0, v1}, Lcom/vk/core/util/ContextExtKt;->h(Landroid/content/Context;I)I
+    invoke-static {v0, v1}, Lru/vtosters/lite/res/VTLColors;->getColor(Landroid/content/Context;I)I
 
     move-result v18
 
     .line 39
     sget v1, Lcom/vk/im/engine/h;->im_bubble_gift_background_highlighted:I
 
-    invoke-static {v0, v1}, Lcom/vk/core/util/ContextExtKt;->h(Landroid/content/Context;I)I
+    invoke-static {v0, v1}, Lru/vtosters/lite/res/VTLColors;->getColor(Landroid/content/Context;I)I
 
     move-result v19
 
     .line 40
     sget v1, Lcom/vk/im/engine/h;->accent:I
 
-    invoke-static {v0, v1}, Lcom/vk/core/util/ContextExtKt;->h(Landroid/content/Context;I)I
+    invoke-static {v0, v1}, Lru/vtosters/lite/res/VTLColors;->getColor(Landroid/content/Context;I)I
 
     move-result v17
 
     .line 41
     sget v1, Lcom/vk/im/engine/h;->separator_alternate:I
 
-    invoke-static {v0, v1}, Lcom/vk/core/util/ContextExtKt;->h(Landroid/content/Context;I)I
+    invoke-static {v0, v1}, Lru/vtosters/lite/res/VTLColors;->getColor(Landroid/content/Context;I)I
 
     move-result v22
 
     .line 42
     sget v1, Lcom/vk/im/engine/h;->im_bubble_expiring:I
 
-    invoke-static {v0, v1}, Lcom/vk/core/util/ContextExtKt;->h(Landroid/content/Context;I)I
+    invoke-static {v0, v1}, Lru/vtosters/lite/res/VTLColors;->getColor(Landroid/content/Context;I)I
 
     move-result v23
 
     .line 43
     sget v1, Lcom/vk/im/engine/h;->im_bubble_expiring_highlighted:I
 
-    invoke-static {v0, v1}, Lcom/vk/core/util/ContextExtKt;->h(Landroid/content/Context;I)I
+    invoke-static {v0, v1}, Lru/vtosters/lite/res/VTLColors;->getColor(Landroid/content/Context;I)I
 
     move-result v24
 
     .line 44
     sget v1, Lcom/vk/im/engine/h;->im_bubble_sending_status_tint_color:I
 
-    invoke-static {v0, v1}, Lcom/vk/core/util/ContextExtKt;->h(Landroid/content/Context;I)I
+    invoke-static {v0, v1}, Lru/vtosters/lite/res/VTLColors;->getColor(Landroid/content/Context;I)I
 
     move-result v25
 
@@ -379,7 +379,7 @@
     .line 8
     sget v8, Lcom/vk/im/engine/h;->accent:I
 
-    invoke-static {v6, v8}, Lcom/vk/core/util/ContextExtKt;->h(Landroid/content/Context;I)I
+    invoke-static {v6, v8}, Lru/vtosters/lite/res/VTLColors;->getColor(Landroid/content/Context;I)I
 
     move-result v9
 
@@ -388,7 +388,7 @@
     .line 9
     sget v8, Lcom/vk/im/engine/h;->header_tint:I
 
-    invoke-static {v6, v8}, Lcom/vk/core/util/ContextExtKt;->h(Landroid/content/Context;I)I
+    invoke-static {v6, v8}, Lru/vtosters/lite/res/VTLColors;->getColor(Landroid/content/Context;I)I
 
     move-result v9
 
@@ -397,7 +397,7 @@
     .line 10
     sget v8, Lcom/vk/im/engine/h;->header_text:I
 
-    invoke-static {v6, v8}, Lcom/vk/core/util/ContextExtKt;->h(Landroid/content/Context;I)I
+    invoke-static {v6, v8}, Lru/vtosters/lite/res/VTLColors;->getColor(Landroid/content/Context;I)I
 
     move-result v9
 
@@ -406,7 +406,7 @@
     .line 11
     sget v8, Lcom/vk/im/engine/h;->toolbar_title_textColor:I
 
-    invoke-static {v6, v8}, Lcom/vk/core/util/ContextExtKt;->h(Landroid/content/Context;I)I
+    invoke-static {v6, v8}, Lru/vtosters/lite/res/VTLColors;->getColor(Landroid/content/Context;I)I
 
     move-result v9
 

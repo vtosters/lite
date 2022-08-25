@@ -1281,9 +1281,13 @@
     .line 90
     sget-object v7, Lcom/vk/core/util/AppContextHolder;->a:Landroid/content/Context;
 
+     invoke-static {v7}, Lru/vtosters/lite/res/proxy/ProxyResources;->addProxyResources(Ljava/lang/Object;)V
+
     invoke-virtual {v7}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object v7
+
+
 
     const v15, 0x7f120bdd
 

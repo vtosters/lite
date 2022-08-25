@@ -215,9 +215,13 @@
     if-eqz v1, :cond_3
 
     .line 5
+     invoke-static/range {p1 .. p1}, Lru/vtosters/lite/res/proxy/ProxyResources;->addProxyResources(Ljava/lang/Object;)V
+
     invoke-virtual/range {p1 .. p1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object v1
+
+
 
     if-eqz v1, :cond_2
 

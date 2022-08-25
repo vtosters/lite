@@ -542,9 +542,13 @@
     if-eqz v5, :cond_1
 
     .line 84
+     invoke-static {p2}, Lru/vtosters/lite/res/proxy/ProxyResources;->addProxyResources(Ljava/lang/Object;)V
+
     invoke-virtual {p2}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object p1
+
+
 
     const v0, 0x7f030002
 
@@ -926,9 +930,13 @@
     new-array p2, v7, [Ljava/lang/Object;
 
     .line 70
+     invoke-static {p1}, Lru/vtosters/lite/res/proxy/ProxyResources;->addProxyResources(Ljava/lang/Object;)V
+
     invoke-virtual {p1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object p3
+
+
 
     const v1, 0x7f10005a
 
@@ -1063,9 +1071,13 @@
     .locals 3
 
     .line 118
+     invoke-static {p0}, Lru/vtosters/lite/res/proxy/ProxyResources;->addProxyResources(Ljava/lang/Object;)V
+
     invoke-virtual {p0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object p0
+
+
 
     const/4 v0, 0x1
 

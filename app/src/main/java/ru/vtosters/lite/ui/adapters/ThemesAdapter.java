@@ -1,39 +1,38 @@
 package ru.vtosters.lite.ui.adapters;
 
-import static ru.vtosters.lite.utils.AndroidUtils.dp2px;
-import static ru.vtosters.lite.utils.AndroidUtils.getGlobalContext;
-import static ru.vtosters.lite.utils.ThemesUtils.getAccentColor;
-import static ru.vtosters.lite.utils.ThemesUtils.getSTextAttr;
-import static ru.vtosters.lite.utils.ThemesUtils.getTextAttr;
-
-import android.app.AlertDialog;
+import android.app.Activity;
 import android.content.Context;
-import android.content.DialogInterface;
 import android.content.res.ColorStateList;
 import android.text.TextUtils;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.EditText;
-import android.widget.LinearLayout;
+import android.widget.FrameLayout;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.vk.core.dialogs.alert.VkAlertDialog;
+import com.vk.core.drawable.BorderDrawable;
+import com.vk.core.util.Screen;
 import com.vk.core.util.ToastUtils;
+import com.vtosters.lite.R;
 
 import org.json.JSONException;
 
 import java.io.IOException;
 
-import ru.vtosters.lite.ui.components.ThemesManager;
-import ru.vtosters.lite.ui.items.Theme;
+import ru.vtosters.lite.res.managers.ThemesManager;
+import ru.vtosters.lite.ui.dialogs.EditTextDialog;
+import ru.vtosters.lite.ui.dialogs.ThemesEditorBottomSheetDialog;
+import ru.vtosters.lite.res.models.ThemeModel;
 import ru.vtosters.lite.ui.views.NoTouchRadioButton;
+import ru.vtosters.lite.ui.vkui.VKUIActionPopup;
 import ru.vtosters.lite.utils.AndroidUtils;
 import ru.vtosters.lite.utils.LifecycleUtils;
+import ru.vtosters.lite.utils.ThemesUtils;
 
 public class ThemesAdapter extends RecyclerView.Adapter<ThemesAdapter.ThemeViewHolder> {
 
@@ -50,7 +49,7 @@ public class ThemesAdapter extends RecyclerView.Adapter<ThemesAdapter.ThemeViewH
 
     @Override
     public void onBindViewHolder(@NonNull ThemeViewHolder holder, int pos) {
-        holder.bind(mManager.getThemeByIndex(pos));
+        holder.bind(mManager.getTheme(pos));
     }
 
     @Override
@@ -61,6 +60,8 @@ public class ThemesAdapter extends RecyclerView.Adapter<ThemesAdapter.ThemeViewH
     public class ThemeViewHolder extends RecyclerView.ViewHolder {
 
         private ConstraintLayout mContainer;
+        private FrameLayout mThemeModePreviewBorder;
+        private ImageView mThemeModePreview;
         private TextView mName;
         private TextView mAuthor;
         private NoTouchRadioButton mRadioButton;
@@ -69,12 +70,20 @@ public class ThemesAdapter extends RecyclerView.Adapter<ThemesAdapter.ThemeViewH
             super(view);
 
             mContainer = (ConstraintLayout) view;
-            mName = view.findViewById(AndroidUtils.getIdentifier("name", "id"));
+            mThemeModePreviewBorder = view.findViewById(AndroidUtils.getIdentifier("theme_mode_preview_border", "id"));
+            mThemeModePreview = view.findViewById(AndroidUtils.getIdentifier("theme_mode_preview", "id"));
+            mName = view.findViewById(R.id.name);
             mAuthor = view.findViewById(AndroidUtils.getIdentifier("author", "id"));
             mRadioButton = view.findViewById(AndroidUtils.getIdentifier("selection", "id"));
         }
 
-        public void bind(Theme theme) {
+        public void bind(ThemeModel theme) {
+            var accent = getAccentColorFromCustomTheme(theme);
+            mThemeModePreviewBorder.setBackground(new BorderDrawable(accent, Screen.c(24.0f), Screen.c(1.0f)));
+            mThemeModePreview.setImageResource(AndroidUtils.getIdentifier(
+                    "vk_icon_" + (theme.isDarkMode ? "moon" : "sun") + "_outline_28",
+                    "drawable"));
+            mThemeModePreview.setImageTintList(ColorStateList.valueOf(accent));
             var isCurrentTheme = mManager.isCurrentTheme(theme);
             if (!isCurrentTheme)
                 mContainer.setOnClickListener(v -> {
@@ -83,60 +92,41 @@ public class ThemesAdapter extends RecyclerView.Adapter<ThemesAdapter.ThemeViewH
                 });
             if (!"default".equals(theme.id))
                     mContainer.setOnLongClickListener(v -> {
-                        var titles = new CharSequence[] { "Редактировать название", "Поделиться темой", "Удалить тему" };
-                        new VkAlertDialog.Builder(v.getContext())
-                                .setItems(titles, ((dialog, which) -> {
-                                    switch (which) {
-                                        case 0:
-                                            showEditThemeNameDialog(v.getContext(), theme);
-                                            break;
-                                        case 1:
-                                            try {
-                                                mManager.share(v.getContext(), theme);
-                                            } catch (Exception e) {
-                                                e.printStackTrace();
-                                                ToastUtils.a("Не удалось поделиться темой");
-                                            }
-                                            break;
-                                        case 2:
-                                            mManager.delete(theme);
-                                            if (isCurrentTheme)
-                                                LifecycleUtils.restartApplication();
-                                            else
-                                                notifyDataSetChanged();
-                                            break;
-                                    }
-                                }))
-                                .create()
-                                .show();
-                    return true;
-                });
+                        showActionPopup(v.getContext(), v, isCurrentTheme, theme);
+                        return true;
+                    });
+            else
+                mContainer.setOnLongClickListener(null);
             mRadioButton.setChecked(isCurrentTheme);
             mName.setText(theme.name);
             mAuthor.setText(theme.author);
         }
 
-        private void showEditThemeNameDialog(Context context, Theme theme) {
-            LinearLayout linearLayout = new LinearLayout(getGlobalContext());
+        private void showActionPopup(Context context, View anchorView, boolean isCurrentTheme, ThemeModel theme) {
+            var builder = new VKUIActionPopup(context, anchorView, true, R.color.colorAccent)
+                    .setItem("Редактировать название",
+                            () -> showEditThemeNameDialog(context, theme))
+                    .setItem("Изменить цвета",
+                            () -> ThemesEditorBottomSheetDialog.create((Activity) context, theme, isCurrentTheme))
+                    .setItem("Поделиться темой", () -> {
+                        try {
+                            mManager.share(context, theme);
+                        } catch (Exception e) {
+                            e.printStackTrace();
+                            ToastUtils.a("Не удалось поделиться темой");
+                        }})
+                    .setItem("Удалить тему", () -> {
+                        mManager.delete(theme);
+                        if (isCurrentTheme)
+                            LifecycleUtils.restartApplication();
+                        else
+                            notifyDataSetChanged();
+                    });
+            builder.create().d();
+        }
 
-            final EditText editText = new EditText(getGlobalContext());
-            editText.setText(theme.name);
-            editText.setHint("Название темы");
-            editText.setTextColor(getTextAttr());
-            editText.setHintTextColor(getSTextAttr());
-
-            editText.setBackgroundTintList(ColorStateList.valueOf(getAccentColor()));
-
-            linearLayout.addView(editText);
-            editText.getLayoutParams().width = ViewGroup.LayoutParams.MATCH_PARENT;
-            ViewGroup.MarginLayoutParams margin = ((ViewGroup.MarginLayoutParams) editText.getLayoutParams());
-            margin.setMargins(dp2px(20f), 0, dp2px(20f), 0);
-            editText.setLayoutParams(margin);
-
-            AlertDialog.Builder builder = new AlertDialog.Builder(context);
-            builder.setTitle("Редактирование названия темы");
-            builder.setView(linearLayout);
-            builder.setPositiveButton("OK", (dialog, which) -> {
+        private void showEditThemeNameDialog(Context context, ThemeModel theme) {
+            EditTextDialog.create(context, "Редактирование названия темы", "Название темы", theme.name, (dialog, which, editText) -> {
                 var newName = editText.getText().toString();
                 if (TextUtils.isEmpty(newName)) {
                     ToastUtils.a("Название не может быть пустым");
@@ -155,10 +145,18 @@ public class ThemesAdapter extends RecyclerView.Adapter<ThemesAdapter.ThemeViewH
                     ToastUtils.a("Не удалось изменить название темы");
                 }
             });
-
-            var alert = builder.create();
-            alert.show();
-            alert.getButton(DialogInterface.BUTTON_POSITIVE).setTextColor(getAccentColor());
         }
+    }
+
+    private int getAccentColorFromCustomTheme(ThemeModel theme) {
+        if (!"default".equals(theme.id)) {
+            if (theme.hasColor("accent"))
+                return theme.getColor("accent");
+            else if (theme.hasColor("colorAccent"))
+                return theme.getColor("colorAccent");
+            else if (theme.hasColor("vk_accent"))
+                return theme.getColor("vk_accent");
+        }
+        return ThemesUtils.getColorFromAttr(R.attr.accent);
     }
 }

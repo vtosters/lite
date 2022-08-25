@@ -105,9 +105,13 @@
 
     if-nez v3, :cond_2
 
+     invoke-static {p0}, Lru/vtosters/lite/res/proxy/ProxyResources;->addProxyResources(Ljava/lang/Object;)V
+
     invoke-virtual {p0}, Landroidx/appcompat/app/AppCompatActivity;->getResources()Landroid/content/res/Resources;
 
     move-result-object v3
+
+
 
     sget v4, Lru/mail/libverify/R$drawable;->libverify_ic_sms_white:I
 
@@ -123,13 +127,17 @@
 
     iget-object v3, p0, Lru/mail/libverify/notifications/SmsCodeNotificationActivity;->d:Landroid/graphics/drawable/Drawable;
 
+     invoke-static {p0}, Lru/vtosters/lite/res/proxy/ProxyResources;->addProxyResources(Ljava/lang/Object;)V
+
     invoke-virtual {p0}, Landroidx/appcompat/app/AppCompatActivity;->getResources()Landroid/content/res/Resources;
 
     move-result-object v4
 
+
+
     sget v5, Lru/mail/libverify/R$color;->libverify_secondary_icon_color:I
 
-    invoke-virtual {v4, v5}, Landroid/content/res/Resources;->getColor(I)I
+    invoke-static {v4, v5}, Lru/vtosters/lite/res/VTLResources;->getColor(Landroid/content/res/Resources;I)I
 
     move-result v4
 
@@ -253,9 +261,13 @@
 
     if-eqz v0, :cond_6
 
+     invoke-static {p0}, Lru/vtosters/lite/res/proxy/ProxyResources;->addProxyResources(Ljava/lang/Object;)V
+
     invoke-virtual {p0}, Landroidx/appcompat/app/AppCompatActivity;->getResources()Landroid/content/res/Resources;
 
     move-result-object p1
+
+
 
     sget v0, Lru/mail/libverify/R$string;->notification_history_shortcut_name:I
 

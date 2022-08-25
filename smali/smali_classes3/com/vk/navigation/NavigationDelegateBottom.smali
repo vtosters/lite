@@ -405,9 +405,13 @@
     iput-object v2, p0, Lcom/vk/navigation/NavigationDelegateBottom;->B:Lcom/vk/core/fragments/FragmentNavigationController;
 
     .line 11
+     invoke-static {p1}, Lru/vtosters/lite/res/proxy/ProxyResources;->addProxyResources(Ljava/lang/Object;)V
+
     invoke-virtual {p1}, Landroid/app/Activity;->getResources()Landroid/content/res/Resources;
 
     move-result-object p2
+
+
 
     const v0, 0x7f070067
 
@@ -2181,7 +2185,7 @@
 
     const p1, 0x7f040525
 
-    invoke-static {p1}, Lcom/vk/core/ui/themes/VKThemeHelper;->d(I)I
+    invoke-static {p1}, Lru/vtosters/lite/res/VTLColors;->getColor(I)I
 
     move-result p1
 
@@ -2318,9 +2322,13 @@
 
     move-result-object v2
 
+     invoke-static {v2}, Lru/vtosters/lite/res/proxy/ProxyResources;->addProxyResources(Ljava/lang/Object;)V
+
     invoke-virtual {v2}, Landroid/app/Activity;->getResources()Landroid/content/res/Resources;
 
     move-result-object v2
+
+
 
     invoke-static {v2, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
@@ -2360,9 +2368,13 @@
 
     move-result-object v2
 
+     invoke-static {v2}, Lru/vtosters/lite/res/proxy/ProxyResources;->addProxyResources(Ljava/lang/Object;)V
+
     invoke-virtual {v2}, Landroid/app/Activity;->getResources()Landroid/content/res/Resources;
 
     move-result-object v2
+
+
 
     invoke-static {v2, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
@@ -2494,8 +2506,6 @@
     .line 45
     :goto_2
     invoke-virtual {v1, v3}, Landroid/view/Window;->setStatusBarColor(I)V
-
-    invoke-static {v1, v3}, Lru/vtosters/lite/utils/ThemesUtils;->setNavbarColor(Landroid/view/Window;I)V
 
     .line 46
     instance-of v1, p1, Lcom/vk/navigation/b0/FragmentWithCustomNavigationBar;
@@ -5294,9 +5304,13 @@
 
     move-result-object v5
 
+     invoke-static {v5}, Lru/vtosters/lite/res/proxy/ProxyResources;->addProxyResources(Ljava/lang/Object;)V
+
     invoke-virtual {v5}, Landroid/app/Activity;->getResources()Landroid/content/res/Resources;
 
     move-result-object v5
+
+
 
     const-string v6, "activity.resources"
 

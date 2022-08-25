@@ -66,9 +66,13 @@
     invoke-virtual {p0, p3, p3, p3, p2}, Landroid/widget/LinearLayout;->setPadding(IIII)V
 
     .line 5
+     invoke-static {p1}, Lru/vtosters/lite/res/proxy/ProxyResources;->addProxyResources(Ljava/lang/Object;)V
+
     invoke-virtual {p1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object p2
+
+
 
     const v0, 0x7f070249
 

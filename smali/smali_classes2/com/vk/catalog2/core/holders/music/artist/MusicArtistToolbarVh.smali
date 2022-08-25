@@ -398,7 +398,7 @@
     .line 6
     sget p1, Lcom/vk/catalog2/core/l;->header_background:I
 
-    invoke-static {v1, p1}, Lcom/vk/core/util/ContextExtKt;->h(Landroid/content/Context;I)I
+    invoke-static {v1, p1}, Lru/vtosters/lite/res/VTLColors;->getColor(Landroid/content/Context;I)I
 
     move-result p1
 

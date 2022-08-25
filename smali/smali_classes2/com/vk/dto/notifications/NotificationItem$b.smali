@@ -77,9 +77,13 @@
 
     .line 3
     :cond_0
+     invoke-static {p1}, Lru/vtosters/lite/res/proxy/ProxyResources;->addProxyResources(Ljava/lang/Object;)V
+
     invoke-virtual {p1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object p1
+
+
 
     iget-object v0, p0, Lcom/vk/dto/notifications/NotificationItem$b;->b:Ljava/lang/Integer;
 

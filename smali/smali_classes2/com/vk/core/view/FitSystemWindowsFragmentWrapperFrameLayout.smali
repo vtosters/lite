@@ -153,8 +153,6 @@
     .line 15
     invoke-virtual {v0, p3}, Landroid/view/Window;->setStatusBarColor(I)V
 
-    invoke-static {v0, p3}, Lru/vtosters/lite/utils/ThemesUtils;->setNavbarColor(Landroid/view/Window;I)V
-
     :cond_2
     return-void
 .end method
@@ -165,7 +163,7 @@
     .line 4
     sget-object v0, Lcom/vk/core/view/FitSystemWindowsFragmentWrapperFrameLayout;->E:[I
 
-    invoke-virtual {p0, v0}, Landroid/content/Context;->obtainStyledAttributes([I)Landroid/content/res/TypedArray;
+    invoke-static {p0, v0}, Lru/vtosters/lite/res/VTLResources;->obtainStyledAttributes(Landroid/content/Context;[I)Landroid/content/res/TypedArray;
 
     move-result-object p0
 
@@ -206,7 +204,7 @@
     .line 1
     sget-object v0, Lcom/vk/core/view/FitSystemWindowsFragmentWrapperFrameLayout;->E:[I
 
-    invoke-virtual {p0, v0}, Landroid/content/Context;->obtainStyledAttributes([I)Landroid/content/res/TypedArray;
+    invoke-static {p0, v0}, Lru/vtosters/lite/res/VTLResources;->obtainStyledAttributes(Landroid/content/Context;[I)Landroid/content/res/TypedArray;
 
     move-result-object p0
 

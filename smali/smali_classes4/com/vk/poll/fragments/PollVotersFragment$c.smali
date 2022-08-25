@@ -223,9 +223,13 @@
 
     iget-object p1, p0, Lcom/vk/poll/fragments/PollVotersFragment$c;->a:Lcom/vk/poll/fragments/PollVotersFragment;
 
+     invoke-static {p1}, Lru/vtosters/lite/res/proxy/ProxyResources;->addProxyResources(Ljava/lang/Object;)V
+
     invoke-virtual {p1}, Landroidx/fragment/app/Fragment;->getResources()Landroid/content/res/Resources;
 
     move-result-object p1
+
+
 
     invoke-virtual {p1, v0}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
@@ -236,9 +240,13 @@
     :cond_0
     iget-object p1, p0, Lcom/vk/poll/fragments/PollVotersFragment$c;->a:Lcom/vk/poll/fragments/PollVotersFragment;
 
+     invoke-static {p1}, Lru/vtosters/lite/res/proxy/ProxyResources;->addProxyResources(Ljava/lang/Object;)V
+
     invoke-virtual {p1}, Landroidx/fragment/app/Fragment;->getResources()Landroid/content/res/Resources;
 
     move-result-object p1
+
+
 
     iget-object v0, p0, Lcom/vk/poll/fragments/PollVotersFragment$c;->a:Lcom/vk/poll/fragments/PollVotersFragment;
 
@@ -285,9 +293,13 @@
 
     iget-object p1, p0, Lcom/vk/poll/fragments/PollVotersFragment$c;->a:Lcom/vk/poll/fragments/PollVotersFragment;
 
+     invoke-static {p1}, Lru/vtosters/lite/res/proxy/ProxyResources;->addProxyResources(Ljava/lang/Object;)V
+
     invoke-virtual {p1}, Landroidx/fragment/app/Fragment;->getResources()Landroid/content/res/Resources;
 
     move-result-object p1
+
+
 
     const v0, 0x7f120b01
 
@@ -300,9 +312,13 @@
     :cond_3
     iget-object p1, p0, Lcom/vk/poll/fragments/PollVotersFragment$c;->a:Lcom/vk/poll/fragments/PollVotersFragment;
 
+     invoke-static {p1}, Lru/vtosters/lite/res/proxy/ProxyResources;->addProxyResources(Ljava/lang/Object;)V
+
     invoke-virtual {p1}, Landroidx/fragment/app/Fragment;->getResources()Landroid/content/res/Resources;
 
     move-result-object p1
+
+
 
     const v0, 0x7f100099
 
@@ -351,9 +367,13 @@
 
     iget-object p1, p0, Lcom/vk/poll/fragments/PollVotersFragment$c;->a:Lcom/vk/poll/fragments/PollVotersFragment;
 
+     invoke-static {p1}, Lru/vtosters/lite/res/proxy/ProxyResources;->addProxyResources(Ljava/lang/Object;)V
+
     invoke-virtual {p1}, Landroidx/fragment/app/Fragment;->getResources()Landroid/content/res/Resources;
 
     move-result-object p1
+
+
 
     invoke-virtual {p1, v0}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
@@ -364,9 +384,13 @@
     :cond_6
     iget-object p1, p0, Lcom/vk/poll/fragments/PollVotersFragment$c;->a:Lcom/vk/poll/fragments/PollVotersFragment;
 
+     invoke-static {p1}, Lru/vtosters/lite/res/proxy/ProxyResources;->addProxyResources(Ljava/lang/Object;)V
+
     invoke-virtual {p1}, Landroidx/fragment/app/Fragment;->getResources()Landroid/content/res/Resources;
 
     move-result-object p1
+
+
 
     iget-object v0, p0, Lcom/vk/poll/fragments/PollVotersFragment$c;->a:Lcom/vk/poll/fragments/PollVotersFragment;
 

@@ -145,9 +145,13 @@
 
     move-result-object p1
 
+     invoke-static {p1}, Lru/vtosters/lite/res/proxy/ProxyResources;->addProxyResources(Ljava/lang/Object;)V
+
     invoke-virtual {p1}, Landroid/app/Activity;->getResources()Landroid/content/res/Resources;
 
     move-result-object p1
+
+
 
     iget-object v0, p0, Lcom/vtosters/lite/fragments/w2/GamesFriendFragment;->A0:Ljava/util/ArrayList;
 

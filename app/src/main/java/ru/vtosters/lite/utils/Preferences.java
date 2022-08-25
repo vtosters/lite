@@ -32,7 +32,6 @@ public class Preferences {
         GmsUtils.fixGapps();
         setProxy();
         reloadMessagesList();
-        LifecycleUtils.registerActivities(application);
         getInstance().autoCleaningCache();
     } // VK Init
 

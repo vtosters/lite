@@ -423,9 +423,13 @@
     .end param
 
     .line 1
+     invoke-static {p0}, Lru/vtosters/lite/res/proxy/ProxyResources;->addProxyResources(Ljava/lang/Object;)V
+
     invoke-virtual {p0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object p0
+
+
 
     invoke-virtual {p0, p1}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
@@ -507,7 +511,7 @@
     .end param
 
     .line 2
-    invoke-static {p0, p2}, Lcom/vk/core/util/ContextExtKt;->h(Landroid/content/Context;I)I
+    invoke-static {p0, p2}, Lru/vtosters/lite/res/VTLColors;->getColor(Landroid/content/Context;I)I
 
     move-result p2
 
@@ -576,9 +580,13 @@
     .locals 3
 
     .line 1
+     invoke-static {p0}, Lru/vtosters/lite/res/proxy/ProxyResources;->addProxyResources(Ljava/lang/Object;)V
+
     invoke-virtual {p0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object p0
+
+
 
     const/4 v0, 0x1
 
@@ -758,9 +766,13 @@
     .end param
 
     .line 1
+     invoke-static {p0}, Lru/vtosters/lite/res/proxy/ProxyResources;->addProxyResources(Ljava/lang/Object;)V
+
     invoke-virtual {p0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object p0
+
+
 
     invoke-virtual {p0, p1}, Landroid/content/res/Resources;->getResourceName(I)Ljava/lang/String;
 
@@ -844,9 +856,13 @@
 
     iget p1, p1, Landroid/util/TypedValue;->data:I
 
+     invoke-static {p0}, Lru/vtosters/lite/res/proxy/ProxyResources;->addProxyResources(Ljava/lang/Object;)V
+
     invoke-virtual {p0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object p0
+
+
 
     const-string v0, "resources"
 
@@ -920,21 +936,6 @@
         .end annotation
     .end param
 
-    invoke-static {p0, p1}, Lru/vtosters/lite/themes/ThemesCore;->hasThemedAttr(Landroid/content/Context;I)Z
-
-    move-result v1
-
-    if-eqz v1, :cond_b
-
-    invoke-static {p0, p1}, Lru/vtosters/lite/themes/ThemesCore;->getThemedAttr(Landroid/content/Context;I)I
-
-    move-result v1
-
-    return v1
-
-    :cond_b
-
-    .line 1
     invoke-virtual {p0}, Landroid/content/Context;->getTheme()Landroid/content/res/Resources$Theme;
 
     move-result-object p0

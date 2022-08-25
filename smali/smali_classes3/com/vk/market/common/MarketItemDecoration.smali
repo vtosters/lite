@@ -53,7 +53,7 @@
 
     iget v1, p0, Lcom/vk/market/common/MarketItemDecoration;->a:I
 
-    invoke-static {v1}, Lcom/vk/core/ui/themes/VKThemeHelper;->d(I)I
+    invoke-static {v1}, Lru/vtosters/lite/res/VTLColors;->getColor(I)I
 
     move-result v1
 

@@ -309,7 +309,7 @@
 
     sget v0, Lcom/vk/stickers/f;->icon_outline_secondary:I
 
-    invoke-static {v0}, Lcom/vk/core/ui/themes/VKThemeHelper;->d(I)I
+    invoke-static {v0}, Lru/vtosters/lite/res/VTLColors;->getColor(I)I
 
     move-result v0
 
@@ -538,7 +538,7 @@
 
     sget v2, Lcom/vk/stickers/f;->icon_outline_secondary:I
 
-    invoke-static {v2}, Lcom/vk/core/ui/themes/VKThemeHelper;->d(I)I
+    invoke-static {v2}, Lru/vtosters/lite/res/VTLColors;->getColor(I)I
 
     move-result v2
 
@@ -694,7 +694,7 @@
 
     sget v0, Lcom/vk/stickers/f;->icon_outline_secondary:I
 
-    invoke-static {v0}, Lcom/vk/core/ui/themes/VKThemeHelper;->d(I)I
+    invoke-static {v0}, Lru/vtosters/lite/res/VTLColors;->getColor(I)I
 
     move-result v0
 
@@ -838,7 +838,7 @@
 
     sget v3, Lcom/vk/stickers/f;->icon_outline_secondary:I
 
-    invoke-static {v3}, Lcom/vk/core/ui/themes/VKThemeHelper;->d(I)I
+    invoke-static {v3}, Lru/vtosters/lite/res/VTLColors;->getColor(I)I
 
     move-result v3
 

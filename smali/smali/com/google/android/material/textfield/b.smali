@@ -67,9 +67,13 @@
     iget-object p1, p0, Lcom/google/android/material/textfield/b;->a:Landroid/content/Context;
 
     .line 5
+     invoke-static {p1}, Lru/vtosters/lite/res/proxy/ProxyResources;->addProxyResources(Ljava/lang/Object;)V
+
     invoke-virtual {p1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object p1
+
+
 
     sget v0, Lcom/google/android/material/R$dimen;->design_textinput_caption_translate_y:I
 

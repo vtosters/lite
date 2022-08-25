@@ -102,9 +102,13 @@
     .line 5
     iget-object p1, p0, Lcom/vk/ui/photoviewer/TaggedGoodsOverlayView;->g:Lcom/vk/core/tips/TipAnchorView;
 
+     invoke-static {p1}, Lru/vtosters/lite/res/proxy/ProxyResources;->addProxyResources(Ljava/lang/Object;)V
+
     invoke-virtual {p1}, Landroid/widget/FrameLayout;->getResources()Landroid/content/res/Resources;
 
     move-result-object p1
+
+
 
     const v0, 0x7f07021c
 

@@ -89,9 +89,13 @@
 
     invoke-static {v1, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
+     invoke-static {v1}, Lru/vtosters/lite/res/proxy/ProxyResources;->addProxyResources(Ljava/lang/Object;)V
+
     invoke-virtual {v1}, Landroid/view/View;->getResources()Landroid/content/res/Resources;
 
     move-result-object v1
+
+
 
     const/4 v2, 0x1
 

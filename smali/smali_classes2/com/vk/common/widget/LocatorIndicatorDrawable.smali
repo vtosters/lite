@@ -116,9 +116,13 @@
     .line 6
     sget-object v6, Lcom/vk/common/widget/LocatorIndicatorDrawable;->g:Lcom/vk/common/widget/LocatorIndicatorDrawable$a;
 
+     invoke-static {p1}, Lru/vtosters/lite/res/proxy/ProxyResources;->addProxyResources(Ljava/lang/Object;)V
+
     invoke-virtual {p1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object v7
+
+
 
     invoke-static {v7, v5}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
@@ -134,9 +138,13 @@
 
     int-to-float v7, v7
 
+     invoke-static {p1}, Lru/vtosters/lite/res/proxy/ProxyResources;->addProxyResources(Ljava/lang/Object;)V
+
     invoke-virtual {p1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object v8
+
+
 
     invoke-static {v8, v5}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
@@ -160,9 +168,13 @@
     :cond_0
     sget-object v6, Lcom/vk/common/widget/LocatorIndicatorDrawable;->g:Lcom/vk/common/widget/LocatorIndicatorDrawable$a;
 
+     invoke-static {p1}, Lru/vtosters/lite/res/proxy/ProxyResources;->addProxyResources(Ljava/lang/Object;)V
+
     invoke-virtual {p1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object v7
+
+
 
     invoke-static {v7, v5}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
@@ -222,13 +234,17 @@
     iput v1, p0, Lcom/vk/common/widget/LocatorIndicatorDrawable;->c:I
 
     .line 15
+     invoke-static {p1}, Lru/vtosters/lite/res/proxy/ProxyResources;->addProxyResources(Ljava/lang/Object;)V
+
     invoke-virtual {p1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object p1
 
+
+
     const v0, 0x7f060018
 
-    invoke-virtual {p1, v0}, Landroid/content/res/Resources;->getColor(I)I
+    invoke-static {p1, v0}, Lru/vtosters/lite/res/VTLResources;->getColor(Landroid/content/res/Resources;I)I
 
     move-result p1
 

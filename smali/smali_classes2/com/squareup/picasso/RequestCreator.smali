@@ -189,9 +189,13 @@
 
     iget-object v0, v0, Lcom/squareup/picasso/Picasso;->e:Landroid/content/Context;
 
+     invoke-static {v0}, Lru/vtosters/lite/res/proxy/ProxyResources;->addProxyResources(Ljava/lang/Object;)V
+
     invoke-virtual {v0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object v0
+
+
 
     iget v1, p0, Lcom/squareup/picasso/RequestCreator;->f:I
 

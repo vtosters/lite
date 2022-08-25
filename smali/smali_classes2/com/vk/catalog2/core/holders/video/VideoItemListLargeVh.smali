@@ -646,9 +646,13 @@
 
     if-eqz v3, :cond_20
 
+     invoke-static {v3}, Lru/vtosters/lite/res/proxy/ProxyResources;->addProxyResources(Ljava/lang/Object;)V
+
     invoke-virtual {v3}, Landroid/widget/TextView;->getResources()Landroid/content/res/Resources;
 
     move-result-object v3
+
+
 
     .line 33
     iget-boolean v4, p1, Lcom/vk/dto/common/VideoFile;->e0:Z

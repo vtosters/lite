@@ -63,9 +63,13 @@
     .locals 3
 
     .line 4
+     invoke-static {p1}, Lru/vtosters/lite/res/proxy/ProxyResources;->addProxyResources(Ljava/lang/Object;)V
+
     invoke-virtual {p1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object p1
+
+
 
     .line 5
     new-instance v0, Landroid/view/animation/AccelerateInterpolator;
@@ -90,7 +94,7 @@
     .line 7
     sget v1, Lb/h/y/c;->spb_default_color:I
 
-    invoke-virtual {p1, v1}, Landroid/content/res/Resources;->getColor(I)I
+    invoke-static {p1, v1}, Lru/vtosters/lite/res/VTLResources;->getColor(Landroid/content/res/Resources;I)I
 
     move-result v1
 

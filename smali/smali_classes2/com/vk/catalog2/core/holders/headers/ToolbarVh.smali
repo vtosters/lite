@@ -727,7 +727,7 @@
 
     sget v1, Lcom/vk/catalog2/core/l;->header_text:I
 
-    invoke-static {v1}, Lcom/vk/core/ui/themes/VKThemeHelper;->d(I)I
+    invoke-static {v1}, Lru/vtosters/lite/res/VTLColors;->getColor(I)I
 
     move-result v1
 
