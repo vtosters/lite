@@ -294,10 +294,10 @@ public class MessagesDownloader{
         }
 
         private String provideReply(JSONObject replyMessage) throws JSONException {
-            var messageId = replyMessage.getInt("id");
-            var userId = replyMessage.getInt("from_id");
-            var peerId = replyMessage.getInt("peer_id");
-            var text = mentionsReplace(decryptMessage(replyMessage.getString("text"), peerId));
+            var messageId = replyMessage.optInt("id");
+            var userId = replyMessage.optInt("from_id");
+            var peerId = replyMessage.optInt("peer_id");
+            var text = mentionsReplace(decryptMessage(replyMessage.optString("text"), peerId));
             var fwdMessages = replyMessage.optJSONArray("fwd_messages");
 
             var user = usersArray.get(userId);
@@ -321,6 +321,9 @@ public class MessagesDownloader{
             StringBuilder fwdmsgs = new StringBuilder("<div class=\"msg-reply\">");
 
             for (JSONObject fwd_message : fwd_messages) {
+
+                if (fwd_message == null) continue;
+
                 List<JSONObject> attaches = new ArrayList<>();
 
                 JSONArray arr = fwd_message.optJSONArray("attachments");
@@ -353,9 +356,9 @@ public class MessagesDownloader{
                 var replyHtml = (reply_message != null) ? provideReply(reply_message) : "";
                 var fwdsHtml = (fwdsMsg.size() > 0) ? provideForwardMessages(fwdsMsg) : ""; // recursion XD :>
 
-                var userId = fwd_message.getInt("from_id");
-                var peerId = fwd_message.getInt("peer_id");
-                var text = mentionsReplace(decryptMessage(fwd_message.getString("text"), peerId));
+                var userId = fwd_message.optInt("from_id");
+                var peerId = fwd_message.optInt("peer_id");
+                var text = mentionsReplace(decryptMessage(fwd_message.optString("text"), peerId));
 
                 var userLink = ((userId < 0) ? "club" : "id") + Math.abs(userId);
 
@@ -471,7 +474,7 @@ public class MessagesDownloader{
                         rs.append("<a href=\"https://vk.ru/wall").append(item.optString("to_id", item.optString("owner_id"))).append("_").append(item.getString("id")).append("\" class=\"msg-attach-link\">запись на стене</a>");
                         break;
                     case "sticker":
-                        rs.append("<img src=\"").append(item.getJSONArray("images").getJSONObject(1).getString("url")).append("\"/>");
+                        rs.append("<img style=\"width:128px;height:128px;\" src=\"").append(item.getJSONArray("images").getJSONObject(1).getString("url")).append("\"/>");
                         break;
                     default:
                         rs.append("Вложение не поддерживается (").append(type).append(")");
