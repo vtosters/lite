@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<animated-vector xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:aapt="http://schemas.android.com/aapt"
+    android:drawable="@drawable/$vk_icon_animated_moon_to_sun__0">
+    <target
+        android:name="mainpath"
+        android:animation="@drawable/$vk_icon_animated_moon_to_sun__1" />
+    <target
+        android:name="corepath"
+        android:animation="@drawable/$vk_icon_animated_moon_to_sun__2" />
+    <target
+        android:name="1"
+        android:animation="@drawable/$vk_icon_animated_moon_to_sun__3" />
+    <target
+        android:name="2"
+        android:animation="@drawable/$vk_icon_animated_moon_to_sun__4" />
+    <target
+        android:name="3"
+        android:animation="@drawable/$vk_icon_animated_moon_to_sun__5" />
+    <target
+        android:name="4"
+        android:animation="@drawable/$vk_icon_animated_moon_to_sun__6" />
+    <target
+        android:name="5"
+        android:animation="@drawable/$vk_icon_animated_moon_to_sun__7" />
+    <target
+        android:name="6"
+        android:animation="@drawable/$vk_icon_animated_moon_to_sun__8" />
+</animated-vector>

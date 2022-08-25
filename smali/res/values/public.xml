@@ -10900,6 +10900,14 @@
     <public name="zhukov" id="0x7f0a1005" type="id" />
     <public name="button_update" id="0x7f0a1006" type="id" />
     <public name="choose_btn" id="0x7f0a1007" type="id" />
+    <public name="color_preview" id="0x7f0a1008" type="id" />
+    <public name="color_name" id="0x7f0a1009" type="id" />
+    <public name="color_value" id="0x7f0a100a" type="id" />
+    <public name="color_preview_border" id="0x7f0a100b" type="id" />
+    <public name="theme_mode_preview" id="0x7f0a100c" type="id" />
+    <public name="theme_mode_preview_border" id="0x7f0a100d" type="id" />
+    <public name="checked" id="0x7f0a100e" type="id" />
+    <public name="unchecked" id="0x7f0a100f" type="id" />
     <public name="abc_config_activityDefaultDur" id="0x7f0b0000" type="integer" />
     <public name="abc_config_activityShortDur" id="0x7f0b0001" type="integer" />
     <public name="angle_rtl_180" id="0x7f0b0002" type="integer" />

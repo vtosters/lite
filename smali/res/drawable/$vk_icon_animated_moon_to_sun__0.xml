@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:aapt="http://schemas.android.com/aapt"
+    android:name="moon_to_sun_animation"
+    android:height="28dp"
+    android:width="28dp"
+    android:viewportWidth="28.0"
+    android:viewportHeight="28.0">
+    <group
+        android:name="corepath"
+        android:pivotX="14.0"
+        android:pivotY="14.0"
+        android:rotation="-180.0">
+        <path
+            android:name="1"
+            android:pathData="M 14 5 L 14 2"
+            android:strokeColor="#FF979797"
+            android:trimPathStart="0.5"
+            android:trimPathEnd="0.5"
+            android:strokeLineCap="round"
+            android:strokeAlpha="0.0"
+            android:fillType="evenOdd" />
+        <path
+            android:name="2"
+            android:pathData="M 21.794 9.5 L 24.392 8"
+            android:strokeColor="#FF979797"
+            android:trimPathStart="0.5"
+            android:trimPathEnd="0.5"
+            android:strokeLineCap="round"
+            android:strokeAlpha="0.0"
+            android:fillType="evenOdd" />
+        <path
+            android:name="3"
+            android:pathData="M 21.794 18.5 L 24.392 20"
+            android:strokeColor="#FF979797"
+            android:trimPathStart="0.5"
+            android:trimPathEnd="0.5"
+            android:strokeLineCap="round"
+            android:strokeAlpha="0.0"
+            android:fillType="evenOdd" />
+        <path
+            android:name="4"
+            android:pathData="M 14 26 L 14 23"
+            android:strokeColor="#FF979797"
+            android:trimPathStart="0.5"
+            android:trimPathEnd="0.5"
+            android:strokeLineCap="round"
+            android:strokeAlpha="0.0"
+            android:fillType="evenOdd" />
+        <path
+            android:name="5"
+            android:pathData="M 3.608 20 L 6.206 18.5"
+            android:strokeColor="#FF979797"
+            android:trimPathStart="0.5"
+            android:trimPathEnd="0.5"
+            android:strokeLineCap="round"
+            android:strokeAlpha="0.0"
+            android:fillType="evenOdd" />
+        <path
+            android:name="6"
+            android:pathData="M 3.608 8 L 6.206 9.5"
+            android:strokeColor="#FF979797"
+            android:trimPathStart="0.5"
+            android:trimPathEnd="0.5"
+            android:strokeLineCap="round"
+            android:strokeAlpha="0.0"
+            android:fillType="evenOdd" />
+        <path
+            android:name="mainpath"
+            android:pathData="M 16.624 24.497 C 21 23 23.5 19 23.5 14.75 C 23.5 9.089 18.911 4.5 13.25 4.5 C 9 4.5 5 7 3.5 11.376 C 5.314 10.762 7.113 10.625 8.898 10.964 C 11.575 11.472 13.232 12.769 14.23 13.771 C 15.227 14.773 16.486 16.343 17.029 18.996 C 17.391 20.764 17.256 22.597 16.624 24.497 Z"
+            android:strokeColor="#FF979797"
+            android:strokeWidth="2.0"
+            android:strokeLineJoin="round"
+            android:fillType="evenOdd" />
+    </group>
+</vector>
