@@ -154,12 +154,12 @@ public class MessagesDownloader{
             fwd_messages = new ArrayList<>();
 
             JSONArray arr = obj.optJSONArray("attachments");
-            if (arr == null) return;
-            for (int i = 0; i < arr.length(); i++) attachments.add(arr.getJSONObject(i));
+            if (arr != null)
+                for (int i = 0; i < arr.length(); i++) attachments.add(arr.getJSONObject(i));
 
             JSONArray fwdArr = obj.optJSONArray("fwd_messages");
-            if (fwdArr == null) return;
-            for (int i = 0; i < fwdArr.length(); i++) fwd_messages.add(fwdArr.getJSONObject(i));
+            if (fwdArr != null)
+                for (int i = 0; i < fwdArr.length(); i++) fwd_messages.add(fwdArr.getJSONObject(i));
         }
     }
 
