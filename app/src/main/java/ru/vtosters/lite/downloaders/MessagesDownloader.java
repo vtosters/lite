@@ -33,7 +33,7 @@ public class MessagesDownloader{
 
     private static SparseArray<MiniUser> usersArray;
 
-    public static final String VK_DOMAIN = "vk.ru";
+    private static final String VK_DOMAIN = "vk.ru";
 
     public static String formatTime(long now){
         return sdformat.format(new Date(now));
