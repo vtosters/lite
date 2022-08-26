@@ -102,11 +102,8 @@ public class WallpapersHooks {
         var file = getWallpaperFile();
 
         if (file.exists() && eligibleWallpaperFile(file)) {
-            var compressed = compress(file);
-            if (compressed == null) {
-                return "default";
-            } else if (getBoolValue("compresswp", true)) {
-                return compressed.getAbsolutePath();
+            if (getBoolValue("compresswp", true)) {
+                return compress(file).getAbsolutePath();
             } else {
                 return file.getAbsolutePath();
             }
