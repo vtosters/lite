@@ -1,5 +1,6 @@
 package ru.vtosters.lite.ui.wallpapers;
 
+import static ru.vtosters.lite.ui.wallpapers.WallpapersHooks.removeWallpaper;
 import static ru.vtosters.lite.utils.AndroidUtils.getPreferences;
 import static ru.vtosters.lite.utils.AndroidUtils.getResources;
 import static ru.vtosters.lite.utils.AndroidUtils.sendToast;
@@ -13,6 +14,7 @@ import android.graphics.Matrix;
 import android.graphics.Paint;
 import android.graphics.drawable.BitmapDrawable;
 import android.graphics.drawable.Drawable;
+import android.util.Log;
 
 import com.vk.medianative.MediaNative;
 
@@ -28,7 +30,23 @@ public class ImageFilters {
     public static Drawable getFilteredDrawable(Drawable orig) {
         if (orig == null) return null;
         if (!(orig instanceof BitmapDrawable)) return orig;
-        Bitmap instance = ((BitmapDrawable) orig).getBitmap().copy(Bitmap.Config.ARGB_8888, true);
+        Bitmap bm = ((BitmapDrawable) orig).getBitmap();
+
+        if (bm == null) {
+            Log.d("Wallpaper", "bitmap null");
+            sendToast("Ошибка при установке фильтра. Сбрасываем настройки на по умолчанию");
+            removeWallpaper();
+            return orig;
+        }
+
+        Bitmap instance = bm.copy(Bitmap.Config.ARGB_8888, true);
+
+        if (instance == null) {
+            Log.d("Wallpaper", "bitmap null");
+            sendToast("Ошибка при установке фильтра. Сбрасываем настройки на по умолчанию");
+            removeWallpaper();
+            return orig;
+        }
 
         if (getPreferences().getBoolean("msg_invert", false)) {
             instance = applyInvertEffect(instance);
@@ -61,7 +79,24 @@ public class ImageFilters {
         try {
             if (orig == null) return null;
             if (!(orig instanceof BitmapDrawable)) return orig; // we need only BitmapDrawable
-            Bitmap instance = ((BitmapDrawable) orig).getBitmap().copy(Bitmap.Config.ARGB_8888, true);
+            Bitmap bm = ((BitmapDrawable) orig).getBitmap();
+
+            if (bm == null) {
+                Log.d("Wallpaper", "bitmap null");
+                sendToast("Ошибка при установке фильтра. Сбрасываем настройки на по умолчанию");
+            removeWallpaper();
+                return orig;
+            }
+
+            Bitmap instance = bm.copy(Bitmap.Config.ARGB_8888, true);
+
+            if (instance == null) {
+                Log.d("Wallpaper", "bitmap null");
+                sendToast("Ошибка при установке фильтра. Сбрасываем настройки на по умолчанию");
+            removeWallpaper();
+                return orig;
+            }
+
             MediaNative.blurBitmap(instance, radius);
             return new BitmapDrawable(getResources(), instance);
         } catch (Exception e) {
@@ -75,7 +110,24 @@ public class ImageFilters {
 
         if (orig == null) return null;
         if (!(orig instanceof BitmapDrawable)) return orig;
-        Bitmap instance = ((BitmapDrawable) orig).getBitmap().copy(Bitmap.Config.ARGB_8888, true);
+        Bitmap bm = ((BitmapDrawable) orig).getBitmap();
+
+        if (bm == null) {
+            Log.d("Wallpaper", "bitmap null");
+            sendToast("Ошибка при установке фильтра. Сбрасываем настройки на по умолчанию");
+            removeWallpaper();
+            return orig;
+        }
+
+        Bitmap instance = bm.copy(Bitmap.Config.ARGB_8888, true);
+
+        if (instance == null) {
+            Log.d("Wallpaper", "bitmap null");
+            sendToast("Ошибка при установке фильтра. Сбрасываем настройки на по умолчанию");
+            removeWallpaper();
+            return orig;
+        }
+
         String radius = getPreferences().getString("msg_mosaic", "disabled");
 
         switch (radius) {
@@ -98,7 +150,24 @@ public class ImageFilters {
     public static Drawable getDimmed(Drawable orig) {
         if (orig == null) return null;
         if (!(orig instanceof BitmapDrawable)) return orig;
-        Bitmap instance = ((BitmapDrawable) orig).getBitmap().copy(Bitmap.Config.ARGB_8888, true);
+        Bitmap bm = ((BitmapDrawable) orig).getBitmap();
+
+        if (bm == null) {
+            Log.d("Wallpaper", "bitmap null");
+            sendToast("Ошибка при установке фильтра. Сбрасываем настройки на по умолчанию");
+            removeWallpaper();
+            return orig;
+        }
+
+        Bitmap instance = bm.copy(Bitmap.Config.ARGB_8888, true);
+
+        if (instance == null) {
+            Log.d("Wallpaper", "bitmap null");
+            sendToast("Ошибка при установке фильтра. Сбрасываем настройки на по умолчанию");
+            removeWallpaper();
+            return orig;
+        }
+
         String radius = getPreferences().getString("msg_dim", "disabled");
         switch (radius) {
             case "dim_black":
@@ -112,7 +181,23 @@ public class ImageFilters {
     public static Drawable getMonochrome(Drawable orig) {
         if (orig == null) return null;
         if (!(orig instanceof BitmapDrawable)) return orig;
-        Bitmap instance = ((BitmapDrawable) orig).getBitmap().copy(Bitmap.Config.ARGB_8888, true);
+        Bitmap bm = ((BitmapDrawable) orig).getBitmap();
+
+        if (bm == null) {
+            Log.d("Wallpaper", "bitmap null");
+            sendToast("Ошибка при установке фильтра. Сбрасываем настройки на по умолчанию");
+            removeWallpaper();
+            return orig;
+        }
+
+        Bitmap instance = bm.copy(Bitmap.Config.ARGB_8888, true);
+
+        if (instance == null) {
+            Log.d("Wallpaper", "bitmap null");
+            sendToast("Ошибка при установке фильтра. Сбрасываем настройки на по умолчанию");
+            removeWallpaper();
+            return orig;
+        }
 
         Bitmap bwBitmap = Bitmap.createBitmap(instance.getWidth(), instance.getHeight(), Bitmap.Config.RGB_565);
         float[] hsv = new float[3];
@@ -138,7 +223,7 @@ public class ImageFilters {
             p.setColorFilter(filter);
             canvas.drawBitmap(bm, new Matrix(), p);
         } catch (Exception e) {
-            sendToast("Ошибка при работе затемнения обоев");
+            Log.d("WallpaperD", e.getMessage());
         }
     }
 
@@ -150,7 +235,7 @@ public class ImageFilters {
             p.setColorFilter(filter);
             canvas.drawBitmap(bm, new Matrix(), p);
         } catch (Exception e) {
-            sendToast("Ошибка при работе осветления обоев");
+            Log.d("WallpaperL", e.getMessage());
         }
     }
 

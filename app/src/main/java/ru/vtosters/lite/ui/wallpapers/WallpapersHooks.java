@@ -14,13 +14,16 @@ import static ru.vtosters.lite.utils.Preferences.hasVerification;
 
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
+import android.graphics.drawable.BitmapDrawable;
 import android.graphics.drawable.Drawable;
+import android.net.Uri;
 import android.util.Log;
 import android.view.View;
 import android.widget.ImageView;
 
 import java.io.File;
 import java.io.FileInputStream;
+import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 
 import ru.vtosters.lite.utils.AndroidUtils;
@@ -114,10 +117,24 @@ public class WallpapersHooks {
 
     public static Drawable getWallpaper() {
         if (mWallpaper == null || mUpdateWallpaperRequested) {
+            String url = getWallpaperUrl();
+
+            if (url.equals("default") || url.isEmpty()) {
+                return null;
+            }
+
+            Drawable drawable = Drawable.createFromPath(getWallpaperUrl());
+
+            if (drawable == null || ((BitmapDrawable) drawable).getBitmap() == null) {
+                Log.d("Wallpaper", "drawable null");
+                removeWallpaper();
+                return null;
+            }
+
             if (!getPreferences().getString("msg_blur_radius", "disabled").equals("disabled")) {
-                mWallpaper = getBlurredWallpaper(Drawable.createFromPath(getWallpaperUrl()), getRadius());
+                mWallpaper = getBlurredWallpaper(drawable, getRadius());
             } else {
-                mWallpaper = Drawable.createFromPath(getWallpaperUrl());
+                mWallpaper = drawable;
             }
             if (!getPreferences().getString("msg_dim", "off").equals("off")) {
                 mWallpaper = getDimmed(mWallpaper);
