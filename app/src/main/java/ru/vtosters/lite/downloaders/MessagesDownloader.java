@@ -23,6 +23,7 @@ import java.nio.charset.StandardCharsets;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
+import java.util.Iterator;
 import java.util.List;
 import java.util.Objects;
 import java.util.regex.Pattern;
@@ -141,6 +142,7 @@ public class MessagesDownloader{
         List<JSONObject> fwd_messages;
         JSONObject reply_message; // one reply
         JSONObject chat_action;
+        JSONObject geo;
 
         public MiniMsg(JSONObject obj) throws JSONException{
             date = obj.getLong("date") * 1000;
@@ -149,6 +151,7 @@ public class MessagesDownloader{
             text = decryptMessage(obj.getString("text"), obj.getInt("peer_id"));
             reply_message = obj.optJSONObject("reply_message");
             chat_action = obj.optJSONObject("action");
+            geo = obj.optJSONObject("geo");
 
             attachments = new ArrayList<>();
             fwd_messages = new ArrayList<>();
@@ -278,6 +281,18 @@ public class MessagesDownloader{
         @Override
         String provideMessage(MiniMsg message, MiniUser user) throws JSONException{
             String isOut = (user.id == getUserId()) ? " vtex-milk-msg-out" : "";
+            String geoPosition = "";
+            if (message.geo != null) {
+                var coordinates = message.geo.optJSONObject("coordinates");
+                if (coordinates != null) {
+                    var latitude = coordinates.optDouble("latitude");
+                    var longitude = coordinates.optDouble("longitude");
+                    var ll = longitude + "," + latitude;
+                    geoPosition = "<a href=\"https://yandex.ru/maps/?ll=" + ll + "&mode=search&sll=" + ll + "&text=" + latitude + "," + longitude + "&z=12\">" +
+                            "<img src=\"https://static-maps.yandex.ru/1.x/?ll=" + longitude + "," + latitude + "&z=12&l=map&size=300,200&pt=" + ll + ",vkgrm\"/>" +
+                            "</a>";
+                }
+            }
             String chatAction = (message.chat_action != null) ? getHtmlForChatAction(message.chat_action) : "";
             String attaches = (message.attachments.size() > 0) ? "<p class=\"msg-attaches\">Вложения: " + getHtmlForAttach(message.attachments) + "</p>" : "";
             String reply = (message.reply_message != null) ? provideReply(message.reply_message) : "";
@@ -286,6 +301,7 @@ public class MessagesDownloader{
             return "<div class=\"vtex-milk-msg" + isOut + "\" id=\"" + message.id + "\">" +
                         "<p class=\"msg-from\">от <a href=\"https://vk.ru/id" + user.id + "\">" + user.firstName + " " + user.lastName + "</a> <span class=\"msg-from-date\">" + formatTime(message.date) + "</span></p>" + // TODO photo100
                         "<p class=\"msg-body\">" + mentionsReplace(message.text) + "</p>" +
+                        geoPosition +
                         chatAction +
                         attaches +
                         reply +
@@ -293,7 +309,7 @@ public class MessagesDownloader{
                     "</div>";
         }
 
-        private String provideReply(JSONObject replyMessage) throws JSONException {
+        private String provideReply(JSONObject replyMessage) {
             var messageId = replyMessage.optInt("id");
             var userId = replyMessage.optInt("from_id");
             var peerId = replyMessage.optInt("peer_id");
@@ -409,7 +425,7 @@ public class MessagesDownloader{
                     break;
                 case "chat_invite_user":
                     var newUserId = action.optInt("member_id");
-                    htmlAction.append("Добавил " + ((newUserId > 0) ? "пользователя" : "группу"));
+                    htmlAction.append("Добавил ").append((newUserId > 0) ? "пользователя" : "группу");
                     if (newUserId != 0) {
                         var userLink = ((newUserId < 0) ? "club" : "id") + Math.abs(newUserId);
                         htmlAction.append(" <a href=\"https://vk.ru/").append(userLink).append("\" class=\"msg-attach-link\">@").append(userLink).append("</a>");
@@ -417,7 +433,7 @@ public class MessagesDownloader{
                     break;
                 case "chat_kick_user":
                     var removedUserId = action.optInt("member_id");
-                    htmlAction.append("Исключил " + ((removedUserId > 0) ? "пользователя" : "группу"));
+                    htmlAction.append("Исключил ").append((removedUserId > 0) ? "пользователя" : "группу");
                     if (removedUserId != 0) {
                         var userLink = ((removedUserId < 0) ? "club" : "id") + Math.abs(removedUserId);
                         htmlAction.append(" <a href=\"https://vk.ru/").append(userLink).append("\" class=\"msg-attach-link\">@").append(userLink).append("</a>");
@@ -433,6 +449,12 @@ public class MessagesDownloader{
                 case "chat_invite_user_by_link":
                     htmlAction.append("Вступил в беседу по ссылке");
                     break;
+                case "chat_screenshot":
+                    htmlAction.append("Сделал скриншот беседы");
+                    break;
+                case "custom":
+                    htmlAction.append(action.optString("message"));
+                    break;
                 default:
                     htmlAction.append("Действие не поддерживается (").append(type).append(")");
                     break;
@@ -444,10 +466,16 @@ public class MessagesDownloader{
         /*
         TODO:
         1) poll (опросы)
-        2) audio (аудио)
-        3) audio_message (голосовое сообщение)
-        4) "geo" в объекте сообщения (геометка)
-        5) video (видео)
+        2) mini_app (поделиться миниаппом)
+        3) audio_playlist (плейлист песен)
+        4) market (товар)
+        5) story (история)
+        6) wall_reply (комментарий на стене)
+        7) podcast (подкаст)
+        8) gift (подарок)
+        9) market_album (подборка товаров) ((хуй знает где её достать для теста)
+        10) кнопки ботов
+        11) карточки ботов
          */
 
         private String getHtmlForAttach(List<JSONObject> attaches) throws JSONException{
@@ -476,8 +504,17 @@ public class MessagesDownloader{
                     case "sticker":
                         rs.append("<img style=\"width:128px;height:128px;\" src=\"").append(item.getJSONArray("images").getJSONObject(1).getString("url")).append("\"/>");
                         break;
+                    case "audio_message":
+                        rs.append("<a href=\"").append(item.optString("link_mp3")).append("\" class=\"msg-attach-link\">голосовое сообщение</a>");
+                        break;
+                    case "audio":
+                        rs.append("аудиозапись (").append(item.optString("artist")).append(" — ").append(item.optString("title")).append(")");
+                        break;
+                    case "video":
+                        rs.append("видеозапись ( ").append(getVideoHtml(item.optJSONObject("files"))).append(")");
+                        break;
                     default:
-                        rs.append("Вложение не поддерживается (").append(type).append(")");
+                        rs.append("не поддерживается (").append(type).append(")");
                         break;
                 }
 
@@ -486,5 +523,28 @@ public class MessagesDownloader{
 
             return rs.toString();
         }
+    }
+
+    private static String getVideoHtml(JSONObject files) throws JSONException {
+
+        if (files == null) return "ссылки отсутствуют";
+
+        Iterator< ? > keys = files.keys();
+        StringBuilder videoHtml = new StringBuilder();
+
+        int qualityIndex = 0;
+        String[] quality = {"144", "240", "360", "480", "720", "1080", "1440", "2160"};
+
+        while (keys.hasNext()) {
+            String key = (String) keys.next();
+            if (key.equals("mp4_" + quality[qualityIndex])) {
+                videoHtml.append("<a class=\"msg-attach-link\" href=\"").append(files.get(key)).append("\">").append(quality[qualityIndex]).append("p</a>").append(" ");
+
+                if (qualityIndex == 7) break;
+                ++qualityIndex;
+            }
+        }
+
+        return videoHtml.toString();
     }
 }
