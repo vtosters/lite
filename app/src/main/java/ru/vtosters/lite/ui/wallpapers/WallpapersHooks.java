@@ -73,8 +73,10 @@ public class WallpapersHooks {
             inputStream.close();
 
             File outPutFile = File.createTempFile("wallpaper_temp","image");
+            outPutFile.deleteOnExit();
             FileOutputStream outputStream = new FileOutputStream(outPutFile);
             selectedBitmap.compress(Bitmap.CompressFormat.PNG, 85 , outputStream);
+            outputStream.close();
 
             return outPutFile;
         } catch (Exception e) {
@@ -93,16 +95,20 @@ public class WallpapersHooks {
     }
 
     public static String getWallpaperUrl() {
-        if (getWallpaperFile().exists() && eligibleWallpaperFile(getWallpaperFile()))
-            if (compress(getWallpaperFile()) == null) {
+        var file = getWallpaperFile();
+
+        if (file.exists() && eligibleWallpaperFile(file)) {
+            var compressed = compress(file);
+            if (compressed == null) {
                 return "default";
-            } else if (getBoolValue("compresswp", true)){
-                return compress(getWallpaperFile()).getAbsolutePath();
+            } else if (getBoolValue("compresswp", true) && compressed != null) {
+                return compressed.getAbsolutePath();
             } else {
-                return getWallpaperFile().getAbsolutePath();
+                return file.getAbsolutePath();
             }
-        else
-            return "default";
+        }
+
+        return "default";
     }
 
     public static Drawable getWallpaper() {
