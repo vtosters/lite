@@ -110,7 +110,7 @@ public class MessagesDownloader{
         if (jsonArray == null) return;
 
         for (int i = 0; i < jsonArray.length(); i++) {
-            MiniUser user = new MiniUser(jsonArray.getJSONObject(i));
+            MiniUser user = new MiniUser(jsonArray.getJSONObject(i), groups);
             array.put(groups ? -user.id : user.id, user);
         }
     }
@@ -122,14 +122,16 @@ public class MessagesDownloader{
     static class MiniUser{
         public String firstName;
         public String lastName;
+        public boolean isGroup;
         int id;
         String photo100;
 
-        public MiniUser(JSONObject obj) throws JSONException {
+        public MiniUser(JSONObject obj, boolean is_group) throws JSONException {
             id = obj.getInt("id");
             firstName = obj.optString("first_name", obj.optString("name"));
             lastName = obj.optString("last_name", "");
             photo100 = obj.getString("photo_100");
+            isGroup = is_group;
         }
     }
 
@@ -297,9 +299,10 @@ public class MessagesDownloader{
             String attaches = (message.attachments.size() > 0) ? "<p class=\"msg-attaches\">Вложения: " + getHtmlForAttach(message.attachments) + "</p>" : "";
             String reply = (message.reply_message != null) ? provideReply(message.reply_message) : "";
             String fwdMessages = (message.fwd_messages.size() > 0) ? provideForwardMessages(message.fwd_messages) : "";
+            String userLink = (user.isGroup ? "club" : "id") + user.id;
 
             return "<div class=\"vtex-milk-msg" + isOut + "\" id=\"" + message.id + "\">" +
-                        "<p class=\"msg-from\">от <a href=\"https://vk.ru/id" + user.id + "\">" + user.firstName + " " + user.lastName + "</a> <span class=\"msg-from-date\">" + formatTime(message.date) + "</span></p>" + // TODO photo100
+                        "<p class=\"msg-from\">от <a href=\"https://vk.ru/" + userLink + "\">" + user.firstName + " " + user.lastName + "</a> <span class=\"msg-from-date\">" + formatTime(message.date) + "</span></p>" + // TODO photo100
                         "<p class=\"msg-body\">" + mentionsReplace(message.text) + "</p>" +
                         geoPosition +
                         chatAction +
