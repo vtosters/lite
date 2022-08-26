@@ -33,6 +33,8 @@ public class MessagesDownloader{
 
     private static SparseArray<MiniUser> usersArray;
 
+    public static final String VK_DOMAIN = "vk.ru";
+
     public static String formatTime(long now){
         return sdformat.format(new Date(now));
     }
@@ -264,6 +266,13 @@ public class MessagesDownloader{
                     ".msg-reply p.reply-content {\n" +
                     "   color: #000000;\n" +
                     "}\n" +
+                    ".vtex-milk-msg.poll {\n" +
+                    "   width: 45%;\n" +
+                    "   background: linear-gradient(to bottom right, #707c8c, #4d5565);\n" +
+                    "   font-style: normal;" +
+                    "}\n" +
+                    ".vtex-milk-msg.poll p { color: white; }\n" +
+                    ".vtex-milk-msg.poll hr { border-top: 1px; background: #ffffff; }\n" +
                     "\n" +
                     "";
 
@@ -283,6 +292,7 @@ public class MessagesDownloader{
         @Override
         String provideMessage(MiniMsg message, MiniUser user) throws JSONException{
             String isOut = (user.id == getUserId()) ? " vtex-milk-msg-out" : "";
+
             String geoPosition = "";
             if (message.geo != null) {
                 var coordinates = message.geo.optJSONObject("coordinates");
@@ -295,6 +305,7 @@ public class MessagesDownloader{
                             "</a>";
                 }
             }
+
             String chatAction = (message.chat_action != null) ? getHtmlForChatAction(message.chat_action) : "";
             String attaches = (message.attachments.size() > 0) ? "<p class=\"msg-attaches\">Вложения: " + getHtmlForAttach(message.attachments) + "</p>" : "";
             String reply = (message.reply_message != null) ? provideReply(message.reply_message) : "";
@@ -302,7 +313,7 @@ public class MessagesDownloader{
             String userLink = (user.isGroup ? "club" : "id") + user.id;
 
             return "<div class=\"vtex-milk-msg" + isOut + "\" id=\"" + message.id + "\">" +
-                        "<p class=\"msg-from\">от <a href=\"https://vk.ru/" + userLink + "\">" + user.firstName + " " + user.lastName + "</a> <span class=\"msg-from-date\">" + formatTime(message.date) + "</span></p>" + // TODO photo100
+                        "<p class=\"msg-from\">от <a href=\"https://" + VK_DOMAIN + "/" + userLink + "\">" + user.firstName + " " + user.lastName + "</a> <span class=\"msg-from-date\">" + formatTime(message.date) + "</span></p>" + // TODO photo100
                         "<p class=\"msg-body\">" + mentionsReplace(message.text) + "</p>" +
                         geoPosition +
                         chatAction +
@@ -381,7 +392,7 @@ public class MessagesDownloader{
 
                 var userLink = ((userId < 0) ? "club" : "id") + Math.abs(userId);
 
-                fwdmsgs.append("<p class=\"reply-content\"><a class=\"msg-attach-link\" href=\"https://vk.ru/").append(userLink).append("\">@").append(userLink).append("</a>: ").append(text).append(attachesHtml).append(replyHtml).append(fwdsHtml);
+                fwdmsgs.append("<p class=\"reply-content\"><a class=\"msg-attach-link\" href=\"https://" + VK_DOMAIN + "/").append(userLink).append("\">@").append(userLink).append("</a>: ").append(text).append(attachesHtml).append(replyHtml).append(fwdsHtml);
             }
 
             return fwdmsgs.append("</div>").toString();
@@ -390,7 +401,7 @@ public class MessagesDownloader{
         private String mentionsReplace(String text) {
             var matcher = Pattern.compile("\\[((?:club|id|public)\\d+)\\|([^]]+)\\]").matcher(text);
 
-            return matcher.replaceAll("<a class=\"msg-attach-link\" href=\"https://vk.ru/$1\">$2</a>");
+            return matcher.replaceAll("<a class=\"msg-attach-link\" href=\"https://" + VK_DOMAIN + "/$1\">$2</a>");
         }
 
         private String pluralMsg(int count) {
@@ -431,7 +442,7 @@ public class MessagesDownloader{
                     htmlAction.append("Добавил ").append((newUserId > 0) ? "пользователя" : "группу");
                     if (newUserId != 0) {
                         var userLink = ((newUserId < 0) ? "club" : "id") + Math.abs(newUserId);
-                        htmlAction.append(" <a href=\"https://vk.ru/").append(userLink).append("\" class=\"msg-attach-link\">@").append(userLink).append("</a>");
+                        htmlAction.append(" <a href=\"https://" + VK_DOMAIN + "/").append(userLink).append("\" class=\"msg-attach-link\">@").append(userLink).append("</a>");
                     }
                     break;
                 case "chat_kick_user":
@@ -439,7 +450,7 @@ public class MessagesDownloader{
                     htmlAction.append("Исключил ").append((removedUserId > 0) ? "пользователя" : "группу");
                     if (removedUserId != 0) {
                         var userLink = ((removedUserId < 0) ? "club" : "id") + Math.abs(removedUserId);
-                        htmlAction.append(" <a href=\"https://vk.ru/").append(userLink).append("\" class=\"msg-attach-link\">@").append(userLink).append("</a>");
+                        htmlAction.append(" <a href=\"https://" + VK_DOMAIN + "/").append(userLink).append("\" class=\"msg-attach-link\">@").append(userLink).append("</a>");
                     }
                     break;
                 case "chat_pin_message":
@@ -466,17 +477,6 @@ public class MessagesDownloader{
             return htmlAction.append("</p>").toString();
         }
 
-        /*
-        TODO:
-        1) poll (опросы)
-        2) mini_app (поделиться миниаппом)
-        3) audio_playlist (плейлист песен)
-        4) story (история)
-        5) wall_reply (комментарий на стене)
-        6) podcast (подкаст)
-        7) gift (подарок)
-         */
-
         private String getHtmlForAttach(List<JSONObject> attaches) throws JSONException{
             StringBuilder rs = new StringBuilder();
 
@@ -486,7 +486,7 @@ public class MessagesDownloader{
 
                 if (item == null) continue;
 
-                switch(type) {
+                switch(type) { // market_album is not supported
                     case "photo":
                         var sizes = item.getJSONArray("sizes");
                         rs.append("<a href=\"").append(sizes.getJSONObject(sizes.length() - 1).getString("url")).append("\" class=\"msg-attach-link\">фотография</a>");
@@ -498,7 +498,7 @@ public class MessagesDownloader{
                         rs.append("<a href=\"").append(item.getString("url")).append("\" class=\"msg-attach-link\">ссылка</a>");
                         break;
                     case "wall":
-                        rs.append("<a href=\"https://vk.ru/wall").append(item.optString("to_id", item.optString("owner_id"))).append("_").append(item.getString("id")).append("\" class=\"msg-attach-link\">запись на стене</a>");
+                        rs.append("<a href=\"https://" + VK_DOMAIN + "/wall").append(item.optString("to_id", item.optString("owner_id"))).append("_").append(item.getString("id")).append("\" class=\"msg-attach-link\">запись на стене</a>");
                         break;
                     case "sticker":
                         rs.append("<img style=\"width:128px;height:128px;\" src=\"").append(item.getJSONArray("images").getJSONObject(1).getString("url")).append("\"/>");
@@ -512,6 +512,43 @@ public class MessagesDownloader{
                     case "video":
                         rs.append("видеозапись ( ").append(getVideoHtml(item.optJSONObject("files"))).append(")");
                         break;
+                    case "wall_reply":
+                        var link = "https://" + VK_DOMAIN + "/wall" + item.optString("owner_id") + "_" + item.optString("post_id") + "?reply=" + item.optString("id");
+                        rs.append("<a class=\"msg-attach-link\" href=\"").append(link).append("\">комментарий на стене</a>");
+                        break;
+                    case "story":
+                        var story_link = "https://" + VK_DOMAIN + "/story" + item.optString("owner_id") + "_" + item.optString("id");
+                        rs.append("<a class=\"msg-attach-link\" href=\"").append(story_link).append("\">история</a>");
+                        break;
+                    case "podcast":
+                        var podcast_link = "https://" + VK_DOMAIN + "/podcast" + item.optString("owner_id") + "_" + item.optString("id");
+                        rs.append("<a class=\"msg-attach-link\" href=\"").append(podcast_link).append("\">подкаст</a>");
+                        break;
+                    case "gift":
+                        rs.append("<img src=\"").append(item.optString("thumb_96")).append("\"/>");
+                        break;
+                    case "mini_app":
+                        var app = item.optJSONObject("app");
+
+                        if (app != null) {
+                            var miniapp_link = "https://" + VK_DOMAIN + "/app" + app.optString("id");
+                            rs.append("<a class=\"msg-attach-link\" href=\"").append(miniapp_link).append("\">мини-приложение</a>");
+                            break;
+                        }
+
+                        rs.append("ошибка");
+                        break;
+                    case "audio_playlist":
+                        var playlist_link = "https://" + VK_DOMAIN + "/music/album/" + item.optString("owner_id") + "_" + item.optString("id") + "_" + item.optString("access_key");
+                        rs.append("<a class=\"msg-attach-link\" href=\"").append(playlist_link).append("\">плейлист (").append(item.optString("title")).append(")</a>");
+                        break;
+                    case "poll":
+                        rs.append((item.optBoolean("anonymous") ? "анонимный" : "публичный")).append(" опрос ").append(getPollHtml(item));
+                        break;
+                    case "market":
+                        var market_item_link = "https://" + VK_DOMAIN + "/market" + item.optString("owner_id") + "_" + item.optString("id");
+                        rs.append("<a class=\"msg-attach-link\" href=\"").append(market_item_link).append("\">товар</a>");
+                        break;
                     default:
                         rs.append("не поддерживается (").append(type).append(")");
                         break;
@@ -524,8 +561,26 @@ public class MessagesDownloader{
         }
     }
 
-    private static String getVideoHtml(JSONObject files) throws JSONException {
+    private static String getPollHtml(JSONObject poll) throws JSONException {
+        StringBuilder pollHtml = new StringBuilder(
+            "<div class=\"vtex-milk-msg poll\">" +
+                    "<p style=\"text-align:center;\">" + poll.optString("question") + "</p>"
+        );
 
+        var answers = poll.optJSONArray("answers");
+
+        for (int i = 0; i < answers.length(); i++) {
+            var jsonObject = answers.optJSONObject(i);
+            if (jsonObject != null)
+                pollHtml.append("<hr><p>").append(jsonObject.optString("text")).append(" · ").append(jsonObject.optString("votes")).append(" (").append(jsonObject.optString("rate")).append("%)</p>");
+        }
+
+        pollHtml.append("<hr><p style=\"text-align:center;\">Проголосовало ").append(poll.optString("votes")).append(" чел.</p>");
+
+        return pollHtml.append("</div>").toString();
+    }
+
+    private static String getVideoHtml(JSONObject files) throws JSONException {
         if (files == null) return "ссылки отсутствуют";
 
         Iterator< ? > keys = files.keys();
@@ -539,7 +594,7 @@ public class MessagesDownloader{
             if (key.equals("mp4_" + quality[qualityIndex])) {
                 videoHtml.append("<a class=\"msg-attach-link\" href=\"").append(files.get(key)).append("\">").append(quality[qualityIndex]).append("p</a>").append(" ");
 
-                if (qualityIndex == 7) break;
+                if (qualityIndex == quality.length - 1) break;
                 ++qualityIndex;
             }
         }
