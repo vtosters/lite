@@ -471,14 +471,10 @@ public class MessagesDownloader{
         1) poll (опросы)
         2) mini_app (поделиться миниаппом)
         3) audio_playlist (плейлист песен)
-        4) market (товар)
-        5) story (история)
-        6) wall_reply (комментарий на стене)
-        7) podcast (подкаст)
-        8) gift (подарок)
-        9) market_album (подборка товаров) ((хуй знает где её достать для теста)
-        10) кнопки ботов
-        11) карточки ботов
+        4) story (история)
+        5) wall_reply (комментарий на стене)
+        6) podcast (подкаст)
+        7) gift (подарок)
          */
 
         private String getHtmlForAttach(List<JSONObject> attaches) throws JSONException{
