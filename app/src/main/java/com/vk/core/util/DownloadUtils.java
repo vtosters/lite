@@ -1,6 +1,5 @@
 package com.vk.core.util;
 
-import static ru.vtosters.lite.utils.AndroidUtils.getGlobalContext;
 import static ru.vtosters.lite.utils.Preferences.getDownloadsDir;
 import static ru.vtosters.lite.utils.Preferences.getMusicDir;
 import static ru.vtosters.lite.utils.Preferences.getPhotosDir;
@@ -13,10 +12,8 @@ import android.content.Context;
 import android.content.Intent;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteException;
-import android.media.MediaScannerConnection;
 import android.net.Uri;
 import android.text.TextUtils;
-import android.util.Log;
 
 import com.facebook.common.i.MediaUtils;
 import com.facebook.x.g.EncodedImage;
@@ -24,7 +21,6 @@ import com.vk.core.concurrent.VkExecutors;
 import com.vk.imageloader.VKImageLoader;
 import com.vk.log.L;
 import com.vk.metrics.eventtracking.VkTracker;
-import com.vtosters.lite.MainActivity;
 import com.vtosters.lite.R;
 
 import java.io.File;

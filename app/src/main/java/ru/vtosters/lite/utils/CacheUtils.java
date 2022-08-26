@@ -13,9 +13,7 @@ import com.vk.im.ui.providers.audiomsg.ImAudioMsgPlayerProvider;
 import com.vk.im.ui.providers.audiomsg.PlayerActionSources;
 import com.vk.imageloader.VKImageLoader;
 import com.vk.media.player.cache.AutoPlayCacheHolder;
-import com.vk.mediastore.MediaStorage;
 import com.vk.stickers.Stickers;
-import com.vtosters.lite.im.ImEngineProvider;
 
 import java.text.CharacterIterator;
 import java.text.StringCharacterIterator;

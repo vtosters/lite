@@ -11,7 +11,6 @@ import android.graphics.BitmapShader;
 import android.graphics.Canvas;
 import android.graphics.LinearGradient;
 import android.graphics.Paint;
-import android.graphics.Path;
 import android.graphics.PorterDuff;
 import android.graphics.RectF;
 import android.graphics.Shader;
@@ -35,8 +34,6 @@ import com.vtosters.lite.R;
 import com.vtosters.lite.a0;
 
 import java.util.Arrays;
-
-import ru.vtosters.lite.utils.AndroidUtils;
 
 @UiThread
 public class TargetImageView extends VKMultiImageView {

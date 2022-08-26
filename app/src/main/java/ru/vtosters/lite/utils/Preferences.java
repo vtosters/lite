@@ -1,15 +1,15 @@
 package ru.vtosters.lite.utils;
 
 import static java.lang.Long.MAX_VALUE;
+import static ru.vtosters.lite.proxy.ProxyUtils.setProxy;
 import static ru.vtosters.lite.utils.AndroidUtils.edit;
 import static ru.vtosters.lite.utils.AndroidUtils.getGlobalContext;
 import static ru.vtosters.lite.utils.AndroidUtils.getPreferences;
 import static ru.vtosters.lite.utils.AndroidUtils.getPrefsValue;
-import static ru.vtosters.lite.utils.CacheUtils.*;
 import static ru.vtosters.lite.utils.CacheUtils.getInstance;
+import static ru.vtosters.lite.utils.CacheUtils.needToDelete;
 import static ru.vtosters.lite.utils.DeletedMessagesHandler.reloadMessagesList;
 import static ru.vtosters.lite.utils.NewsFeedFiltersUtils.setupFilters;
-import static ru.vtosters.lite.proxy.ProxyUtils.setProxy;
 import static ru.vtosters.lite.utils.SignatureChecker.validateAppSignature;
 import static ru.vtosters.lite.utils.ThemesUtils.isDarkTheme;
 import static ru.vtosters.lite.utils.VTVerifications.isPrometheus;

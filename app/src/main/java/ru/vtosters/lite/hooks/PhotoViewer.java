@@ -1,8 +1,8 @@
 package ru.vtosters.lite.hooks;
 
-import static ru.vtosters.lite.utils.AndroidUtils.getString;
 import static ru.vtosters.lite.utils.AndroidUtils.getIdentifier;
 import static ru.vtosters.lite.utils.AndroidUtils.getPreferences;
+import static ru.vtosters.lite.utils.AndroidUtils.getString;
 
 import android.annotation.SuppressLint;
 import android.content.ClipData;

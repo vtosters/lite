@@ -7,12 +7,10 @@ import static ru.vtosters.lite.utils.Preferences.getPhotosDir;
 import android.app.DownloadManager;
 import android.content.Context;
 import android.net.Uri;
-import android.os.Environment;
 
 import com.vk.dto.common.ImageSize;
 import com.vk.dto.stories.model.StoryEntry;
 
-import java.io.File;
 import java.util.List;
 
 public class StoryDownloader {

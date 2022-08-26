@@ -1,7 +1,6 @@
 package ru.vtosters.lite.ui.fragments;
 
 import static ru.vtosters.lite.proxy.RandomProxy.setupNewProxy;
-import static ru.vtosters.lite.utils.AndroidUtils.edit;
 import static ru.vtosters.lite.utils.AndroidUtils.getIdentifier;
 import static ru.vtosters.lite.utils.AndroidUtils.sendToast;
 
@@ -11,7 +10,6 @@ import com.vtosters.lite.general.fragments.MaterialPreferenceToolbarFragment;
 
 import java.io.IOException;
 
-import ru.vtosters.lite.proxy.RandomProxy;
 import ru.vtosters.lite.utils.AndroidUtils;
 
 public class ProxySettingsFragment extends MaterialPreferenceToolbarFragment {

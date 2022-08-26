@@ -1,12 +1,12 @@
 package ru.vtosters.lite.ui.fragments;
 
-import static ru.vtosters.lite.utils.AndroidUtils.*;
+import static ru.vtosters.lite.utils.AndroidUtils.getGlobalContext;
 import static ru.vtosters.lite.utils.AndroidUtils.getIdentifier;
 import static ru.vtosters.lite.utils.AndroidUtils.getPreferences;
 import static ru.vtosters.lite.utils.LifecycleUtils.restartApplicationWithTimer;
 import static ru.vtosters.lite.utils.Preferences.autoalltranslate;
 import static ru.vtosters.lite.utils.Preferences.vkme;
-import static ru.vtosters.lite.utils.ThemesUtils.*;
+import static ru.vtosters.lite.utils.ThemesUtils.recolorDrawable;
 
 import android.annotation.SuppressLint;
 import android.content.Context;
@@ -22,12 +22,9 @@ import com.vk.navigation.Navigator;
 import com.vtosters.lite.general.fragments.MaterialPreferenceToolbarFragment;
 
 import java.util.Arrays;
-import java.util.Objects;
 
 import ru.vtosters.lite.ui.adapters.ImagineArrayAdapter;
 import ru.vtosters.lite.ui.wallpapers.WallpaperMenuFragment;
-import ru.vtosters.lite.utils.AndroidUtils;
-import ru.vtosters.lite.utils.ThemesUtils;
 
 public class MessagesFragment extends MaterialPreferenceToolbarFragment {
     @Override

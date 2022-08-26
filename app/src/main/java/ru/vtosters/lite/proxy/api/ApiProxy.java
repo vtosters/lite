@@ -1,5 +1,5 @@
 package ru.vtosters.lite.proxy.api;
-import static ru.vtosters.lite.proxy.ProxyUtils.isApiProxyEnabled;
+import static ru.vtosters.lite.proxy.ProxyUtils.isAnyProxyEnabled;
 import static ru.vtosters.lite.proxy.ProxyUtils.isVikaProxyEnabled;
 import static ru.vtosters.lite.utils.AndroidUtils.getPrefsValue;
 
@@ -24,7 +24,7 @@ public class ApiProxy{
             proxystatic = VikaMobile.getStaticHost();
         }
 
-        if ((!isApiProxyEnabled() || !isVikaProxyEnabled()) || link.isEmpty()) {
+        if (!isAnyProxyEnabled() || link.isEmpty()) {
             return link;
         }
 
@@ -67,15 +67,21 @@ public class ApiProxy{
             string = VikaMobile.getStaticHost();
         }
 
-        if ((isApiProxyEnabled() || isVikaProxyEnabled()) && string.isEmpty()) return str;
+        if (isAnyProxyEnabled() && !string.isEmpty()) {
+            return str.replaceAll(string, "static.vk.ru");
+        }
 
-        return str.replaceAll(string, "static.vk.ru");
+        return str;
     }
 
     public static String getAwayPhpCom(){
         var proxyapi = getPrefsValue("proxyapi");
 
-        if ((isApiProxyEnabled() || isVikaProxyEnabled()) & !proxyapi.isEmpty()) {
+        if (isVikaProxyEnabled()) {
+            proxyapi = VikaMobile.getApiHost();
+        }
+
+        if (isAnyProxyEnabled() && !proxyapi.isEmpty()) {
             return proxyapi;
         }
 

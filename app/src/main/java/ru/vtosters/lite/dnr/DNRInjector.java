@@ -5,8 +5,6 @@ import static com.vk.im.engine.h.im_ic_edit_msg;
 import static com.vk.im.engine.h.im_ic_more_vertical;
 import static com.vk.im.engine.h.im_ic_pinned_msg_hide;
 import static com.vk.im.engine.h.im_ic_pinned_msg_show;
-import static com.vk.im.engine.h.im_ic_write_msg;
-import static com.vk.im.ui.c.im_ic_chat_settings;
 import static com.vk.im.ui.c.im_ic_keyboard;
 import static ru.vtosters.lite.dnr.DNRModule.hookDNR;
 import static ru.vtosters.lite.dnr.DNRModule.hookDNT;
@@ -29,7 +27,6 @@ import com.vk.core.network.Network;
 import com.vk.im.engine.ImEngine1;
 import com.vk.im.engine.events.OnDialogUpdateEvent;
 import com.vk.im.engine.models.EntityIntMap;
-import com.vk.im.engine.models.ProfilesSimpleInfo;
 import com.vk.im.engine.models.dialogs.Dialog;
 import com.vk.im.engine.models.messages.Msg;
 import com.vk.im.engine.models.messages.MsgFromUser;
@@ -52,7 +49,6 @@ import ru.vtosters.lite.encryption.EncryptProvider;
 import ru.vtosters.lite.encryption.base.IMProcessor;
 import ru.vtosters.lite.hooks.CryptImHook;
 import ru.vtosters.lite.ui.dialogs.Translate;
-import ru.vtosters.lite.utils.AndroidUtils;
 
 public class DNRInjector {
     public static void inject(Dialog dialog, List<DialogAction> list) {

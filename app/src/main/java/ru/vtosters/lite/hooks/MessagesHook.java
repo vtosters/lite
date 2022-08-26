@@ -12,11 +12,10 @@ import android.view.View;
 
 import com.vk.api.internal.MethodCall;
 
-import ru.vtosters.lite.translators.BaseTranslator;
-
-import java.util.regex.Matcher;
-import java.util.regex.Pattern;
 import java.util.ArrayList;
+import java.util.regex.Pattern;
+
+import ru.vtosters.lite.translators.BaseTranslator;
 
 public class MessagesHook {
     public static String injectOwnText(String oldText) {

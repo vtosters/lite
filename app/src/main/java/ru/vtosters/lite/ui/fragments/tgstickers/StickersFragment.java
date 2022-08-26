@@ -40,7 +40,6 @@ import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.vk.navigation.Navigator;
 
 import java.io.File;
-import java.util.Objects;
 
 import ru.vtosters.lite.tgs.TGPref;
 import ru.vtosters.lite.ui.adapters.StickerPackAdapter;

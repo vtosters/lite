@@ -1,11 +1,11 @@
 package ru.vtosters.lite.hooks;
 
+import static ru.vtosters.lite.proxy.ProxyUtils.isRandomProxyEnabled;
 import static ru.vtosters.lite.proxy.ProxyUtils.isVikaProxyEnabled;
+import static ru.vtosters.lite.proxy.ProxyUtils.isZaboronaEnabled;
 import static ru.vtosters.lite.utils.AndroidUtils.dp2px;
 import static ru.vtosters.lite.utils.AndroidUtils.edit;
 import static ru.vtosters.lite.utils.LifecycleUtils.restartApplication;
-import static ru.vtosters.lite.proxy.ProxyUtils.isRandomProxyEnabled;
-import static ru.vtosters.lite.proxy.ProxyUtils.isZaboronaEnabled;
 import static ru.vtosters.lite.utils.ThemesUtils.getAccentColor;
 import static ru.vtosters.lite.utils.ThemesUtils.getAlertStyle;
 import static ru.vtosters.lite.utils.ThemesUtils.getTextAttr;

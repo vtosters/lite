@@ -8,12 +8,10 @@ import static ru.vtosters.lite.utils.AndroidUtils.getIdentifier;
 import static ru.vtosters.lite.utils.AndroidUtils.getString;
 import static ru.vtosters.lite.utils.Preferences.getVideosDir;
 
-import android.app.AlertDialog;
 import android.app.DownloadManager;
 import android.app.ProgressDialog;
 import android.content.Context;
 import android.net.Uri;
-import android.os.Environment;
 import android.widget.Toast;
 
 import com.vk.core.dialogs.alert.VkAlertDialog;

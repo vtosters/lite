@@ -1,8 +1,8 @@
 package ru.vtosters.lite.hooks;
 
 import static ru.vtosters.lite.foaf.FoafBase.getBypassedOnlineInfo;
-import static ru.vtosters.lite.hooks.OnlineFormatterHook.onlineHookProfiles;
 import static ru.vtosters.lite.hooks.DateHook.getLocale;
+import static ru.vtosters.lite.hooks.OnlineFormatterHook.onlineHookProfiles;
 import static ru.vtosters.lite.proxy.ProxyUtils.getApi;
 import static ru.vtosters.lite.proxy.ProxyUtils.getStatic;
 import static ru.vtosters.lite.utils.AndroidUtils.getDefaultPrefs;

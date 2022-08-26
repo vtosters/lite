@@ -3,13 +3,13 @@ package ru.vtosters.lite.hooks;
 import static ru.vtosters.lite.hooks.JsonInjectors.setOnlineInfo;
 import static ru.vtosters.lite.hooks.JsonInjectors.setOnlineInfoUsers;
 import static ru.vtosters.lite.net.Request.makeRequest;
+import static ru.vtosters.lite.proxy.ProxyUtils.getApi;
 import static ru.vtosters.lite.utils.AccountManagerUtils.getUserToken;
 import static ru.vtosters.lite.utils.AndroidUtils.getString;
 import static ru.vtosters.lite.utils.AndroidUtils.sendToast;
 import static ru.vtosters.lite.utils.Preferences.dev;
 import static ru.vtosters.lite.utils.Preferences.getBoolValue;
 import static ru.vtosters.lite.utils.Preferences.getPrefsFromFile;
-import static ru.vtosters.lite.proxy.ProxyUtils.getApi;
 
 import android.util.Log;
 

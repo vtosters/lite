@@ -1,6 +1,9 @@
 package ru.vtosters.lite.proxy;
 
 import static java.lang.System.clearProperty;
+import static ru.vtosters.lite.proxy.api.VikaMobile.getApiHost;
+import static ru.vtosters.lite.proxy.api.VikaMobile.getOauthHost;
+import static ru.vtosters.lite.proxy.api.VikaMobile.getStaticHost;
 import static ru.vtosters.lite.utils.AndroidUtils.getGlobalContext;
 import static ru.vtosters.lite.utils.AndroidUtils.getPrefsValue;
 
@@ -23,7 +26,11 @@ public class ProxyUtils{
     public static String getApi(){
         var proxyapi = getPrefsValue("proxyapi");
 
-        if (isApiProxyEnabled() & !proxyapi.isEmpty()) {
+        if (isVikaProxyEnabled()) {
+            proxyapi = getApiHost();
+        }
+
+        if (isAnyProxyEnabled() & !proxyapi.isEmpty()) {
             return proxyapi;
         }
 
@@ -33,7 +40,11 @@ public class ProxyUtils{
     public static String getOauth(){
         var oauth = getPrefsValue("proxyoauth");
 
-        if (isApiProxyEnabled() & !oauth.isEmpty()) {
+        if (isVikaProxyEnabled()) {
+            oauth = getOauthHost();
+        }
+
+        if (isAnyProxyEnabled() & !oauth.isEmpty()) {
             return oauth;
         }
 
@@ -41,13 +52,21 @@ public class ProxyUtils{
     }
 
     public static String getStatic(){
-        var oauth = getPrefsValue("proxystatic");
+        var staticapi = getPrefsValue("proxystatic");
 
-        if (isApiProxyEnabled() & !oauth.isEmpty()) {
-            return oauth;
+        if (isVikaProxyEnabled()) {
+            staticapi = getStaticHost();
+        }
+
+        if (isAnyProxyEnabled() & !staticapi.isEmpty()) {
+            return staticapi;
         }
 
         return "static.vk.ru";
+    }
+
+    public static Boolean isAnyProxyEnabled(){
+        return isApiProxyEnabled() || isVikaProxyEnabled();
     }
 
     public static Boolean isZaboronaEnabled(){
@@ -59,7 +78,7 @@ public class ProxyUtils{
     }
 
     public static Boolean isApiProxyEnabled(){
-        return getPrefsValue("proxy").equals("apiproxy") || getPrefsValue("proxy").equals("vika");
+        return getPrefsValue("proxy").equals("apiproxy");
     }
 
     public static Boolean isVikaProxyEnabled(){
