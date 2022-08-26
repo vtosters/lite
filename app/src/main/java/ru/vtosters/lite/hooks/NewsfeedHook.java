@@ -91,7 +91,7 @@ public class NewsfeedHook {
         params.add("photo");
         params.add("photo_tag");
 
-        if (!friendsrecomm()) {
+        if (!friendsrecomm() && !getBoolValue("donotgetads", false)) {
             params.add("friends_recomm");
         }
 
@@ -100,7 +100,7 @@ public class NewsfeedHook {
             params.add("promo_button");
         }
 
-        if (!authorsrecomm()) {
+        if (!authorsrecomm() && !getBoolValue("donotgetads", false)) {
             params.add("authors_rec");
         }
 
@@ -148,14 +148,15 @@ public class NewsfeedHook {
     public static void adsParams(HashSet<String> hashSet) {
         if (ads()) {
             hashSet.add("ads_disabled");
-            hashSet.add("ads_app_slider");
-            return;
+            if (getBoolValue("donotgetads", false)) {
+                return;
+            }
         }
 
         hashSet.add("ads_app");
         hashSet.add("ads_site");
         hashSet.add("ads_post");
-        if (adsslider()) {
+        if (!adsslider()) {
             hashSet.add("ads_app_slider");
         }
         hashSet.add("ads_site_slider");

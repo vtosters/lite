@@ -131,5 +131,10 @@
         <Preference
             android:key="newsfeedlistmanager_reset"
             android:title="@string/newsfeedlistmanager_reset_title" />
+        <com.vtosters.lite.ui.MaterialSwitchPreference
+            android:defaultValue="false"
+            android:key="donotgetads"
+            android:summary="Не запрашивать рекламу и рекомендации\nМогуть быть проблемы"
+            android:title="Не пытаться получать рекламу" />
     </PreferenceCategory>
 </PreferenceScreen>
