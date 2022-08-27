@@ -10,9 +10,6 @@ public class ApiProxy{
         var vkapi = "api.vk.ru";
         var oauth = "oauth.vk.ru";
         var vkstatic = "static.vk.ru";
-        var vkapiold = "api.vk.com";
-        var oauthold = "oauth.vk.com";
-        var vkstaticold = "static.vk.com";
 
         var proxyapi = getPrefsValue("proxyapi");
         var proxyoauth = getPrefsValue("proxyoauth");
@@ -43,18 +40,6 @@ public class ApiProxy{
 
         if (link.contains(vkstatic)) {
             return link.replaceAll(vkstatic, proxystatic);
-        }
-
-        if (link.contains(vkapiold)) {
-            return link.replaceAll(vkapiold, proxyapi);
-        }
-
-        if (link.contains(oauthold)) {
-            return link.replaceAll(vkapiold, proxyoauth);
-        }
-
-        if (link.contains(vkstaticold)) {
-            return link.replaceAll(vkapiold, proxystatic);
         }
 
         return link;
