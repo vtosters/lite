@@ -147,7 +147,7 @@
 
     move-result-object v0
 
-    const-string v1, "vk.ru"
+    const-string v1, "vk.com"
 
     const-string v2, "apiHost"
 
@@ -206,7 +206,7 @@
 .method public T1()Ljava/lang/String;
     .locals 1
 
-    const-string v0, "api.vk.ru"
+    const-string v0, "api.vk.com"
 
     invoke-static {v0}, Lru/vtosters/lite/proxy/api/ApiProxy;->linkReplacer(Ljava/lang/String;)Ljava/lang/String;
 
@@ -303,7 +303,7 @@
 
     move-result-object v0
 
-    const-string v3, "api.vk.ru"
+    const-string v3, "api.vk.com"
 
     invoke-static {v3}, Lru/vtosters/lite/proxy/api/ApiProxy;->linkReplacer(Ljava/lang/String;)Ljava/lang/String;
 

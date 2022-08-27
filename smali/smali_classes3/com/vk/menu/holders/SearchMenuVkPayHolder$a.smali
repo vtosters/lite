@@ -46,7 +46,7 @@
 
     invoke-static {v1, p1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    const-string v2, "https://vk.ru/vkpay#action=refill&utm_source=android&utm_campaign=vk_2thtab&utm_content=button"
+    const-string v2, "https://vk.com/vkpay#action=refill&utm_source=android&utm_campaign=vk_2thtab&utm_content=button"
 
     const/4 v3, 0x0
 

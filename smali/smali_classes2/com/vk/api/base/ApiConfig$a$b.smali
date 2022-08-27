@@ -18,7 +18,7 @@
 .method public static a(Lcom/vk/api/base/ApiConfig$a;)Ljava/lang/String;
     .locals 0
 
-    const-string p0, "http://vk.ru"
+    const-string p0, "http://vk.com"
 
     return-object p0
 .end method

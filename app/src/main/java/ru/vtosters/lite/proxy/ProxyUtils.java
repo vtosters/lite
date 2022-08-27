@@ -34,7 +34,7 @@ public class ProxyUtils{
             return proxyapi;
         }
 
-        return "api.vk.ru";
+        return "api.vk.com";
     }
 
     public static String getOauth(){
@@ -48,7 +48,7 @@ public class ProxyUtils{
             return oauth;
         }
 
-        return "oauth.vk.ru";
+        return "oauth.vk.com";
     }
 
     public static String getStatic(){
@@ -62,7 +62,7 @@ public class ProxyUtils{
             return staticapi;
         }
 
-        return "static.vk.ru";
+        return "static.vk.com";
     }
 
     public static Boolean isAnyProxyEnabled(){

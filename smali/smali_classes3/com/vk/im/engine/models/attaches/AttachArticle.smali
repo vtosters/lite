@@ -80,7 +80,7 @@
     .line 2
     sput-object v0, Lcom/vk/im/engine/models/attaches/AttachArticle;->CREATOR:Lcom/vk/core/serialize/Serializer$c;
 
-    const-string v0, "https?://([a-z0-9.-]+)?vk.ru/@[a-zA-Z0-9-_]+(\\?[a-zA-Z0-9=-_&]+)?"
+    const-string v0, "https?://([a-z0-9.-]+)?vk.com/@[a-zA-Z0-9-_]+(\\?[a-zA-Z0-9=-_&]+)?"
 
     .line 3
     invoke-static {v0}, Ljava/util/regex/Pattern;->compile(Ljava/lang/String;)Ljava/util/regex/Pattern;

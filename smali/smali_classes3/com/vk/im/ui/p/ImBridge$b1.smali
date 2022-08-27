@@ -775,7 +775,7 @@
 .method public static a(Lcom/vk/im/ui/p/ImBridge11;Ljava/lang/String;)Ljava/lang/String;
     .locals 1
 
-    const-string p0, "https://vk.ru/business_notify"
+    const-string p0, "https://vk.com/business_notify"
 
     .line 85
     invoke-static {p0}, Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;

@@ -478,7 +478,7 @@
     .line 52
     sget-object v1, Lcom/vk/common/links/LinkProcessor;->p:Lcom/vk/common/links/LinkProcessor$a;
 
-    const-string v3, "m.vk.ru/up"
+    const-string v3, "m.vk.com/up"
 
     move-object v2, p0
 
@@ -5262,7 +5262,7 @@
 
     if-eqz v11, :cond_73
 
-    const-string v0, "https://vk.ru/support"
+    const-string v0, "https://vk.com/support"
 
     .line 176
     invoke-static {v0}, Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;

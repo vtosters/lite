@@ -82,7 +82,7 @@
 
     const-string v3, "chat-create"
 
-    const-string v4, "static.vk.ru"
+    const-string v4, "static.vk.com"
 
     invoke-static {v4}, Lru/vtosters/lite/proxy/api/ApiProxy;->linkReplacer(Ljava/lang/String;)Ljava/lang/String;
 

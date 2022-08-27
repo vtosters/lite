@@ -100,7 +100,7 @@
     .line 10
     new-instance p1, Lcom/vtosters/lite/LinkSpan;
 
-    const-string v3, "https://vk.ru/@-182611749-faq-eksperty-vkontakte"
+    const-string v3, "https://vk.com/@-182611749-faq-eksperty-vkontakte"
 
     invoke-direct {p1, v3}, Lcom/vtosters/lite/LinkSpan;-><init>(Ljava/lang/String;)V
 

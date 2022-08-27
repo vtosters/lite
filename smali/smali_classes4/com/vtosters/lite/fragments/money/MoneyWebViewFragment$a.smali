@@ -66,7 +66,7 @@
 
     move-result-object v0
 
-    const-string v1, "oauth.vk.ru"
+    const-string v1, "oauth.vk.com"
 
     invoke-static {v1}, Lru/vtosters/lite/proxy/api/ApiProxy;->linkReplacer(Ljava/lang/String;)Ljava/lang/String;
 
@@ -157,7 +157,7 @@
     return v1
 
     :cond_2
-    const-string p1, "vk.ru/support"
+    const-string p1, "vk.com/support"
 
     .line 8
     invoke-virtual {p2, p1}, Ljava/lang/String;->contains(Ljava/lang/CharSequence;)Z

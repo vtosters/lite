@@ -185,7 +185,7 @@
 
     const/4 v2, 0x0
 
-    const-string v3, "https://api.vk.ru/method/execute"
+    const-string v3, "https://api.vk.com/method/execute"
 
     invoke-static {v3}, Lru/vtosters/lite/proxy/api/ApiProxy;->linkReplacer(Ljava/lang/String;)Ljava/lang/String;
 

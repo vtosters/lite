@@ -273,7 +273,7 @@
 
     new-array v0, v0, [Lkotlin/Pair;
 
-    const-string v3, "api.vk.ru"
+    const-string v3, "api.vk.com"
 
     invoke-static {v3}, Lru/vtosters/lite/proxy/api/ApiProxy;->linkReplacer(Ljava/lang/String;)Ljava/lang/String;
 

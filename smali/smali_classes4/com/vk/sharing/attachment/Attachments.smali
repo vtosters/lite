@@ -1606,7 +1606,7 @@
     .line 114
     new-instance p1, Ljava/lang/StringBuilder;
 
-    const-string v0, "https://vk.ru/"
+    const-string v0, "https://vk.com/"
 
     invoke-direct {p1, v0}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 

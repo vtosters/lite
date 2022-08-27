@@ -125,7 +125,7 @@
 
     const-string v1, "vkUiHostUri"
 
-    const-string v2, "static.vk.ru"
+    const-string v2, "static.vk.com"
 
     .line 3
     invoke-interface {v0, v1, v2}, Landroid/content/SharedPreferences;->getString(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
@@ -189,7 +189,7 @@
 
     const-string v1, "spaUri"
 
-    const-string v2, "https://vk.ru/spa"
+    const-string v2, "https://vk.com/spa"
 
     .line 2
     invoke-interface {v0, v1, v2}, Landroid/content/SharedPreferences;->getString(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;

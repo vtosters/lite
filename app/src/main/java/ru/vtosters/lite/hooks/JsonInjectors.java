@@ -76,7 +76,7 @@ public class JsonInjectors {
 
     public static JSONObject donateRecomm() throws JSONException {
         var title = AndroidUtils.getString("donate_to_vtl");
-        var link = "https://vk.ru/vtosters_official";
+        var link = "https://vk.com/vtosters_official";
         var text_color = "2D81E0";
 
         var json = new JSONObject();
@@ -591,7 +591,7 @@ public class JsonInjectors {
                 }
             }
 
-            var playlists = fetchCatalogId("https://vk.ru/audio?section=my_playlists");
+            var playlists = fetchCatalogId("https://vk.com/audio?section=my_playlists");
             if (playlists != null) {
                 var catalogarr = playlists.optJSONObject("catalog").optJSONArray("sections").optJSONObject(0);
 
@@ -604,7 +604,7 @@ public class JsonInjectors {
                 oldItems.put(new JSONObject().put("id", id).put("title", title).put("url", url));
             }
 
-            var albums = fetchCatalogId("https://vk.ru/audio?section=albums");
+            var albums = fetchCatalogId("https://vk.com/audio?section=albums");
             if (albums != null) {
                 var catalogarr = albums.optJSONObject("catalog").optJSONArray("sections").optJSONObject(0);
 
@@ -617,7 +617,7 @@ public class JsonInjectors {
                 oldItems.put(new JSONObject().put("id", id).put("title", title).put("url", url));
             }
 
-            var recent = fetchCatalogId("https://vk.ru/audio?section=recent");
+            var recent = fetchCatalogId("https://vk.com/audio?section=recent");
             if (recent != null) {
                 var catalogarr = recent.optJSONObject("catalog").optJSONArray("sections").optJSONObject(0);
 

@@ -591,7 +591,7 @@
 .method public static Q()Ljava/lang/String;
     .locals 1
 
-    const-string v0, "https://vk.ru/support?act=faqs_pay&c=1"
+    const-string v0, "https://vk.com/support?act=faqs_pay&c=1"
 
     return-object v0
 .end method
@@ -635,7 +635,7 @@
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string v1, "https://m.vk.ru/landings/moneysend?lang="
+    const-string v1, "https://m.vk.com/landings/moneysend?lang="
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 

@@ -78,7 +78,7 @@
     .line 2
     new-instance v0, Lcom/vtosters/lite/general/fragments/WebViewFragment$g;
 
-    const-string v1, "https://vk.ru/@vklive_app-add-market"
+    const-string v1, "https://vk.com/@vklive_app-add-market"
 
     invoke-direct {v0, v1}, Lcom/vtosters/lite/general/fragments/WebViewFragment$g;-><init>(Ljava/lang/String;)V
 

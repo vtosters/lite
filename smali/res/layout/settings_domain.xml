@@ -46,7 +46,7 @@
             android:id="@id/domain_current_link"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-            android:text="https://vk.ru/durov"
+            android:text="https://vk.com/durov"
             android:textColor="?accent"
             android:textSize="14.0dip" />
     </LinearLayout>

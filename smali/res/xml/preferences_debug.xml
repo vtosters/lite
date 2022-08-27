@@ -99,23 +99,23 @@
         android:key="domains"
         android:title="@string/debug_domains">
         <Preference
-            android:defaultValue="api.vk.ru"
+            android:defaultValue="api.vk.com"
             android:key="apiHost"
             android:title="@string/debug_domains_api" />
         <Preference
-            android:defaultValue="oauth.vk.ru"
+            android:defaultValue="oauth.vk.com"
             android:key="oauthHost"
             android:title="@string/debug_domains_oauth" />
         <Preference
-            android:defaultValue="static.vk.ru"
+            android:defaultValue="static.vk.com"
             android:key="vkUiHostUri"
             android:title="VK UI host uri" />
         <Preference
-            android:defaultValue="vk.ru/spa"
+            android:defaultValue="vk.com/spa"
             android:key="spaUri"
             android:title="VK UI SPA uri" />
         <Preference
-            android:defaultValue="m.vk.ru"
+            android:defaultValue="m.vk.com"
             android:key="awayPhpDomain"
             android:title="@string/debug_domains_awayphp" />
     </PreferenceCategory>
@@ -246,7 +246,7 @@
             android:key="__dbg_test_crash"
             android:title="@string/debug_tests_crash" />
         <EditTextPreference
-            android:defaultValue="https://static.vk.ru/demo"
+            android:defaultValue="https://static.vk.com/demo"
             android:key="__dbg_spa_uri"
             android:title="@string/debug_tests_spa_uri" />
         <com.vtosters.lite.ui.MaterialSwitchPreference

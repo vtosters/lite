@@ -20,7 +20,7 @@
 
     sput-object v0, Lcom/vk/market/picker/GoodsPickerHelper;->b:Lcom/vk/market/picker/GoodsPickerHelper;
 
-    const-string v0, "vk.ru/ae_app#selection-list"
+    const-string v0, "vk.com/ae_app#selection-list"
 
     .line 2
     invoke-static {v0}, Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;

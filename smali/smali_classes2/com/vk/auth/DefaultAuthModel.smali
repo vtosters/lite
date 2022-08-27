@@ -136,7 +136,7 @@
 
     invoke-direct {v1, v2}, Lcom/vk/auth/api/VKAuthApiManager;-><init>(Lcom/vk/api/sdk/VKApiConfig;)V
 
-    const-string v1, "support@vk.ru"
+    const-string v1, "support@vk.com"
 
     .line 9
     iput-object v1, v0, Lcom/vk/auth/DefaultAuthModel;->b:Ljava/lang/String;
@@ -276,7 +276,7 @@
 
     move-result-object p1
 
-    const-string v0, "https://m.vk.ru/terms?api_view=1&cc=%s&lang=%s"
+    const-string v0, "https://m.vk.com/terms?api_view=1&cc=%s&lang=%s"
 
     invoke-static {v0, p1}, Ljava/lang/String;->format(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
 
@@ -328,7 +328,7 @@
 
     move-result-object p1
 
-    const-string v0, "https://m.vk.ru/privacy?api_view=1&cc=%s&lang=%s"
+    const-string v0, "https://m.vk.com/privacy?api_view=1&cc=%s&lang=%s"
 
     invoke-static {v0, p1}, Ljava/lang/String;->format(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
 

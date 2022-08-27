@@ -601,7 +601,7 @@
 
     const/4 v3, 0x2
 
-    const-string v4, "vk://vk.ru/mail?community="
+    const-string v4, "vk://vk.com/mail?community="
 
     .line 3
     invoke-static {v0, v4, v2, v3, v1}, Lkotlin/text/l;->c(Ljava/lang/String;Ljava/lang/String;ZILjava/lang/Object;)Z

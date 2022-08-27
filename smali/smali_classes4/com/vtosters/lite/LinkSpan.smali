@@ -242,7 +242,7 @@
 
     if-nez v2, :cond_1
 
-    const-string v2, "vk.ru"
+    const-string v2, "vk.com"
 
     invoke-virtual {v0, v2}, Ljava/lang/String;->contains(Ljava/lang/CharSequence;)Z
 

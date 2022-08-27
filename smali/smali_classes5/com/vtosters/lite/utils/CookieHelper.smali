@@ -20,7 +20,7 @@
 
     sput-object v0, Lcom/vtosters/lite/utils/CookieHelper;->b:Lcom/vtosters/lite/utils/CookieHelper;
 
-    const-string v0, ".vk.ru"
+    const-string v0, ".vk.com"
 
     const-string v1, "vk.me"
 

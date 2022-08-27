@@ -951,7 +951,7 @@
     :goto_1
     const/16 v1, 0x5f
 
-    const-string v2, "https://vk.ru/story"
+    const-string v2, "https://vk.com/story"
 
     if-eqz v0, :cond_2
 

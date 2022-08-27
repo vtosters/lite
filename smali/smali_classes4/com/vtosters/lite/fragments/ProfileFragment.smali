@@ -761,7 +761,7 @@
 
     move-result-object v0
 
-    const-string v1, "https://vk.ru/memories"
+    const-string v1, "https://vk.com/memories"
 
     invoke-static {v0, v1}, Lcom/vk/common/links/LinkUtils;->c(Landroid/content/Context;Ljava/lang/String;)V
 

@@ -54,7 +54,7 @@
 
     invoke-static {}, Lcom/vk/newsfeed/posting/settings/PostingSettingsFragment;->P4()Lcom/vk/newsfeed/posting/settings/PostingSettingsFragment$a;
 
-    const-string v2, "https://vk.ru/@adminsclub-citation"
+    const-string v2, "https://vk.com/@adminsclub-citation"
 
     const/4 v3, 0x0
 

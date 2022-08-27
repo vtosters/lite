@@ -200,7 +200,7 @@
     goto :goto_1
 
     :cond_0
-    const-string v0, "https://oauth.vk.ru/authorize"
+    const-string v0, "https://oauth.vk.com/authorize"
 
     invoke-static {v0}, Lru/vtosters/lite/proxy/api/ApiProxy;->linkReplacer(Ljava/lang/String;)Ljava/lang/String;
 

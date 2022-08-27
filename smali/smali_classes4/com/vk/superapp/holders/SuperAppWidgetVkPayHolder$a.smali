@@ -66,7 +66,7 @@
 
     move-result-object v2
 
-    const-string v3, "https://vk.ru/vkpay"
+    const-string v3, "https://vk.com/vkpay"
 
     invoke-interface {p1, v0, v1, v3, v2}, Lcom/vk/superapp/holders/SuperAppClickListener;->a(Landroid/content/Context;Lcom/vk/superapp/g/SuperAppItems;Ljava/lang/String;Ljava/lang/Integer;)V
 

@@ -72,13 +72,13 @@
 
     iget-object v1, p0, Lcom/vk/qrcode/QRViewUtils$showSharingBottomSheet$$inlined$let$lambda$1;->$context$inlined:Landroid/content/Context;
 
-    const-string p1, "https://vk.ru/vkapps_qr"
+    const-string p1, "https://vk.com/vkapps_qr"
 
     invoke-static {p1}, Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
 
     move-result-object v2
 
-    const-string p1, "Uri.parse(\"https://vk.ru/vkapps_qr\")"
+    const-string p1, "Uri.parse(\"https://vk.com/vkapps_qr\")"
 
     invoke-static {v2, p1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 

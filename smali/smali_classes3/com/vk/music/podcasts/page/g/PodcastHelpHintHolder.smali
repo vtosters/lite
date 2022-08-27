@@ -93,7 +93,7 @@
 
     const/4 v7, 0x0
 
-    const-string v4, "https://vk.ru/podcasts"
+    const-string v4, "https://vk.com/podcasts"
 
     invoke-static/range {v2 .. v7}, Lcom/vk/common/links/LinkProcessor$a;->a(Lcom/vk/common/links/LinkProcessor$a;Landroid/content/Context;Ljava/lang/String;Landroid/os/Bundle;ILjava/lang/Object;)V
 

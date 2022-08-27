@@ -746,12 +746,12 @@
 
     if-nez p3, :cond_0
 
-    const-string p3, "https://vk.ru/poll%d_%d"
+    const-string p3, "https://vk.com/poll%d_%d"
 
     goto :goto_0
 
     :cond_0
-    const-string p3, "https://vk.ru/board_poll%d_%d"
+    const-string p3, "https://vk.com/board_poll%d_%d"
 
     .line 7
     :goto_0

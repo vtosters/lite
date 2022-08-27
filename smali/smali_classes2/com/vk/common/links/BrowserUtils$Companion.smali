@@ -206,7 +206,7 @@
 
     if-eqz v6, :cond_6
 
-    const-string v8, ".vk.ru"
+    const-string v8, ".vk.com"
 
     invoke-static {v6, v8, v2, v7, v3}, Lkotlin/text/l;->a(Ljava/lang/String;Ljava/lang/String;ZILjava/lang/Object;)Z
 
@@ -239,7 +239,7 @@
 
     if-eqz v6, :cond_a
 
-    const-string v8, "vk.ru"
+    const-string v8, "vk.com"
 
     .line 61
     invoke-static {v6, v8, v4}, Lkotlin/text/l;->b(Ljava/lang/String;Ljava/lang/String;Z)Z
@@ -890,12 +890,12 @@
 
     if-eqz v0, :cond_0
 
-    const-string v0, "away.vk.ru"
+    const-string v0, "away.vk.com"
 
     goto :goto_0
 
     :cond_0
-    const-string v0, "m.vk.ru"
+    const-string v0, "m.vk.com"
 
     :goto_0
     return-object v0
@@ -1548,7 +1548,7 @@
 
     move-result-object v1
 
-    const-string v2, "m.vk.ru"
+    const-string v2, "m.vk.com"
 
     invoke-static {v2, v1}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 

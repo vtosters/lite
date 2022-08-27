@@ -32,7 +32,7 @@
 
     const/4 v1, 0x1
 
-    const-string v2, "https://vk.ru/source/masks/android_model.zip"
+    const-string v2, "https://vk.com/source/masks/android_model.zip"
 
     invoke-direct {v0, v1, v2}, Lcom/vk/api/masks/MasksGetModel$MasksGetModelResponse;-><init>(ILjava/lang/String;)V
 

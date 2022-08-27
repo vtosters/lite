@@ -14,7 +14,7 @@
     </base-config>
     <domain-config>
         <!-- Make sure your URL Server here -->
-        <domain includeSubdomains="true">vk.ru</domain>
+        <domain includeSubdomains="true">vk.com</domain>
         <trust-anchors>
             <certificates src="user" />
             <certificates src="system" />
@@ -22,7 +22,7 @@
     </domain-config>
     <domain-config>
         <!-- Make sure your URL Server here -->
-        <domain includeSubdomains="true">api.vk.ru</domain>
+        <domain includeSubdomains="true">api.vk.com</domain>
         <trust-anchors>
             <certificates src="user" />
             <certificates src="system" />

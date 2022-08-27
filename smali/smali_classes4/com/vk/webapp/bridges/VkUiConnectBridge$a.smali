@@ -121,7 +121,7 @@
 
     const-string p1, "redirect_uri"
 
-    const-string v1, "https://oauth.vk.ru/blank.html"
+    const-string v1, "https://oauth.vk.com/blank.html"
 
     .line 4
     invoke-static {p1, v1}, Lkotlin/Tuples;->a(Ljava/lang/Object;Ljava/lang/Object;)Lkotlin/Pair;
@@ -235,7 +235,7 @@
 
     move-result-object p3
 
-    const-string p4, "oauth.vk.ru"
+    const-string p4, "oauth.vk.com"
 
     const-string p6, "oauthHost"
 
@@ -256,7 +256,7 @@
     move-object p3, p4
 
     :goto_0
-    const-string p4, "PreferenceManager\n      \u2026k.com\") ?: \"oauth.vk.ru\""
+    const-string p4, "PreferenceManager\n      \u2026k.com\") ?: \"oauth.vk.com\""
 
     invoke-static {p3, p4}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 

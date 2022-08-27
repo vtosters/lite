@@ -64,7 +64,7 @@
 
     const-string v1, "apiHost"
 
-    const-string v2, "api.vk.ru"
+    const-string v2, "api.vk.com"
 
     invoke-interface {v0, v1, v2}, Landroid/content/SharedPreferences;->getString(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 

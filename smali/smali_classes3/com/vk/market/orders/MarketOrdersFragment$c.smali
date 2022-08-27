@@ -50,7 +50,7 @@
 
     if-eqz v1, :cond_0
 
-    const-string p1, "https://vk.ru/support?act=faqs_market"
+    const-string p1, "https://vk.com/support?act=faqs_market"
 
     invoke-static {p1}, Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
 

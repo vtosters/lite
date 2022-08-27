@@ -73,7 +73,7 @@
     goto :goto_0
 
     :cond_0
-    const-string p1, "https://vk.ru/android_app"
+    const-string p1, "https://vk.com/android_app"
 
     :goto_0
     move-object v3, p1
@@ -140,7 +140,7 @@
     .line 9
     new-instance p1, Lcom/vtosters/lite/general/fragments/WebViewFragment$g;
 
-    const-string v0, "https://m.vk.ru/privacy"
+    const-string v0, "https://m.vk.com/privacy"
 
     invoke-direct {p1, v0}, Lcom/vtosters/lite/general/fragments/WebViewFragment$g;-><init>(Ljava/lang/String;)V
 
@@ -184,7 +184,7 @@
     .line 16
     new-instance p1, Lcom/vtosters/lite/general/fragments/WebViewFragment$g;
 
-    const-string v0, "https://m.vk.ru/terms"
+    const-string v0, "https://m.vk.com/terms"
 
     invoke-direct {p1, v0}, Lcom/vtosters/lite/general/fragments/WebViewFragment$g;-><init>(Ljava/lang/String;)V
 
@@ -271,7 +271,7 @@
     .line 27
     new-instance p1, Lcom/vtosters/lite/general/fragments/WebViewFragment$g;
 
-    const-string v0, "https://m.vk.ru/privacy/cookies"
+    const-string v0, "https://m.vk.com/privacy/cookies"
 
     invoke-direct {p1, v0}, Lcom/vtosters/lite/general/fragments/WebViewFragment$g;-><init>(Ljava/lang/String;)V
 
@@ -315,7 +315,7 @@
     .line 34
     new-instance p1, Lcom/vtosters/lite/general/fragments/WebViewFragment$g;
 
-    const-string v0, "https://vk.ru/data_protection"
+    const-string v0, "https://vk.com/data_protection"
 
     invoke-direct {p1, v0}, Lcom/vtosters/lite/general/fragments/WebViewFragment$g;-><init>(Ljava/lang/String;)V
 

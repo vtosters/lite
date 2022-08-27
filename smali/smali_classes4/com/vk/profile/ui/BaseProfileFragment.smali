@@ -3034,14 +3034,14 @@
 
     invoke-virtual {v0}, Lcom/google/android/gms/common/api/d;->c()V
 
-    const-string v0, "android-app://com.vtosters.lite/vkontakte/m.vk.ru/"
+    const-string v0, "android-app://com.vtosters.lite/vkontakte/m.vk.com/"
 
     .line 4
     invoke-static {v0}, Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
 
     move-result-object v0
 
-    const-string v1, "https://vk.ru/"
+    const-string v1, "https://vk.com/"
 
     .line 5
     invoke-static {v1}, Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;

@@ -2523,7 +2523,7 @@
 
     move-result-wide v4
 
-    const-string v2, "calls.vk.ru"
+    const-string v2, "calls.vk.com"
 
     .line 5
     sget-object v6, Lcom/vk/voip/VoipWrapper;->j0:Lcom/vk/voip/VoipWrapper;

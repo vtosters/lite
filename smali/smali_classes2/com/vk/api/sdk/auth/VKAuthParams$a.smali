@@ -112,7 +112,7 @@
     :cond_2
     const-string v1, "vk_app_redirect_url"
 
-    const-string v3, "https://oauth.vk.ru/blank.html"
+    const-string v3, "https://oauth.vk.com/blank.html"
 
     invoke-static {v3}, Lru/vtosters/lite/proxy/api/ApiProxy;->linkReplacer(Ljava/lang/String;)Ljava/lang/String;
 

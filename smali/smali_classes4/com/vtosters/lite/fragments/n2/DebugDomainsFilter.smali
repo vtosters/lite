@@ -181,7 +181,7 @@
 
     const/4 v3, 0x0
 
-    const-string v4, "vk.ru"
+    const-string v4, "vk.com"
 
     .line 6
     invoke-static {p2, v4, v2, v1, v3}, Lkotlin/text/l;->a(Ljava/lang/CharSequence;Ljava/lang/CharSequence;ZILjava/lang/Object;)Z
@@ -200,7 +200,7 @@
 
     move-result p2
 
-    const-string v1, ".api.cs7777.vk.ru"
+    const-string v1, ".api.cs7777.vk.com"
 
     if-eqz p2, :cond_8
 
@@ -303,7 +303,7 @@
 
     :cond_9
     :goto_5
-    const-string p2, "api.vk.ru"
+    const-string p2, "api.vk.com"
 
     invoke-static {p2}, Lru/vtosters/lite/proxy/api/ApiProxy;->linkReplacer(Ljava/lang/String;)Ljava/lang/String;
 

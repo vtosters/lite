@@ -178,7 +178,7 @@
     goto :goto_0
 
     :cond_0
-    const-string v0, "api.vk.ru"
+    const-string v0, "api.vk.com"
 
     .line 16
     :goto_0

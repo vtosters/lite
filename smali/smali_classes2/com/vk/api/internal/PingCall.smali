@@ -18,7 +18,7 @@
 
     iput-wide p1, p0, Lcom/vk/api/internal/PingCall;->b:J
 
-    const-string p1, "https://vk.ru/ping.txt"
+    const-string p1, "https://vk.com/ping.txt"
 
     .line 2
     iput-object p1, p0, Lcom/vk/api/internal/PingCall;->a:Ljava/lang/String;

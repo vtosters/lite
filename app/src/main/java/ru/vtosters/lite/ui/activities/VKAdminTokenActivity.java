@@ -22,7 +22,7 @@ import ru.vtosters.lite.utils.LayoutUtils;
 
 public class VKAdminTokenActivity extends AppCompatActivity {
 
-    private static final String URL = "https://" + getOauth() +"/authorize?client_id=6121396&scope=1073737727&redirect_uri=https://oauth.vk.ru/blank.html&display=page&response_type=token&revoke=1";
+    private static final String URL = "https://" + getOauth() +"/authorize?client_id=6121396&scope=1073737727&redirect_uri=https://oauth.vk.com/blank.html&display=page&response_type=token&revoke=1";
 
     @Override
     protected void onCreate(@Nullable Bundle bundle) {

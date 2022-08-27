@@ -891,13 +891,13 @@
 
     const-string v15, "vk.me/join"
 
-    const-string v8, "vk.ru/settings?act=transfers"
+    const-string v8, "vk.com/settings?act=transfers"
 
-    const-string v12, "vk.ru/story"
+    const-string v12, "vk.com/story"
 
-    const-string v9, "vk.ru/settings?act=request_history"
+    const-string v9, "vk.com/settings?act=request_history"
 
-    const-string v7, "vk.ru/narrative"
+    const-string v7, "vk.com/narrative"
 
     .line 11
     filled-new-array {v15, v8, v12, v9, v7}, [Ljava/lang/String;

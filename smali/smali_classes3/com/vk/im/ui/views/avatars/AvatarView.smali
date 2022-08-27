@@ -117,7 +117,7 @@
 
     const/16 v1, 0x190
 
-    const-string v2, "https://vk.ru/images/camera_400.png"
+    const-string v2, "https://vk.com/images/camera_400.png"
 
     invoke-direct {v0, v1, v1, v2}, Lcom/vk/im/engine/models/Image;-><init>(IILjava/lang/String;)V
 

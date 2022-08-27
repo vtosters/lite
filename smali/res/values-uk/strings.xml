@@ -455,7 +455,7 @@
     <string name="collection_add_selection">Прикріпити до трансляції</string>
     <string name="collection_add_to_stream">Додати до ефіру</string>
     <string name="collection_add_wall_to_list_hint">Виберіть запис зі своєї сторінки, яким Ви хочете поділитися з глядачами</string>
-    <string name="collection_link_add_link_input_hint">https://vk.ru</string>
+    <string name="collection_link_add_link_input_hint">https://vk.com</string>
     <string name="collection_link_limit">Додано максимально можливу кількість посилань</string>
     <string name="collection_link_not_valid">Посилання не підтримується</string>
     <string name="collection_links_list">Список посилань</string>
@@ -1058,7 +1058,7 @@
     <string name="friends_recommendations_gmail">Gmail</string>
     <string name="friends_recommendations_invete_by_link">Запросити за посиланням</string>
     <string name="friends_recommendations_invite">Запросити</string>
-    <string name="friends_recommendations_invite_message">Запрошую дружити VK! http://vk.ru/join</string>
+    <string name="friends_recommendations_invite_message">Запрошую дружити VK! http://vk.com/join</string>
     <string name="friends_recommendations_locator_text">Щоб побачити людей, що поруч, попросіть їх зайти на цей екран зі своїх пристроїв</string>
     <string name="friends_recommendations_ok">OK</string>
     <string name="friends_recommendations_request_done">Ви друзі</string>
@@ -1340,7 +1340,7 @@
     <string name="identity_address">Адреса</string>
     <string name="identity_address_dat">адреса</string>
     <string name="identity_custom_label">Своя категорія</string>
-    <string name="identity_desc">Ви можете вказати дані один раз і швидко надавати міні-додаткам з [https://vk.ru/services|каталогу] — для доставки товарів або зв‘язку з Вами</string>
+    <string name="identity_desc">Ви можете вказати дані один раз і швидко надавати міні-додаткам з [https://vk.com/services|каталогу] — для доставки товарів або зв‘язку з Вами</string>
     <string name="identity_email">Електронна пошта</string>
     <string name="identity_email_dat">адреса електронної пошти</string>
     <string name="identity_label">Категорія</string>
@@ -1370,7 +1370,7 @@
     <string name="include_community">Підключити спільноту</string>
     <string name="installed_games_title">Мої ігри</string>
     <string name="invalid_date">Невірна дата публікації</string>
-    <string name="invitation">Запрошую дружити ВКонтакті! http://vk.ru/join</string>
+    <string name="invitation">Запрошую дружити ВКонтакті! http://vk.com/join</string>
     <string name="invitation_declined">Запрошення відхилено.</string>
     <string name="invitation_sent">Запрошення надіслано.</string>
     <string name="invite">Запросити</string>
@@ -3242,7 +3242,7 @@
     <string name="serv_user_returned_m">%1$s повернувся в бесіду</string>
     <string name="service_account_admin_100_info">"Профіль використовується лише для персональних сповіщень.
 
-З будь-яких питань пишіть в [https://vk.ru/support|Підтримку.]"</string>
+З будь-яких питань пишіть в [https://vk.com/support|Підтримку.]"</string>
     <string name="service_account_admin_101_info">Сторінка використовується для забезпечення сумісності сервісу коментарів від імені спільноти.</string>
     <string name="service_account_mobile_info">Офіційна сторінка мобільної підтримки VK.</string>
     <string name="sett_accept_calls">Увімкнути</string>
@@ -5228,7 +5228,7 @@
     <string name="votes_your_balance">Ваш баланс</string>
     <string name="wall">Стіна</string>
     <string name="wall_all_posts">Всі записи</string>
-    <string name="wall_comment_repost">&lt;font color=\"#aaaaaa\">Коментар до &lt;/font>&lt;a href=\"vklink://view/?http://vk.ru/wall%1$d_%2$d\">записи&lt;/a></string>
+    <string name="wall_comment_repost">&lt;font color=\"#aaaaaa\">Коментар до &lt;/font>&lt;a href=\"vklink://view/?http://vk.com/wall%1$d_%2$d\">записи&lt;/a></string>
     <string name="wall_disabled">Стіну вимкнено</string>
     <string name="wall_empty">Тут поки немає записів</string>
     <string name="wall_empty_my">У Вас поки немає записів</string>

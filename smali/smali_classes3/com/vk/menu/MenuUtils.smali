@@ -1204,7 +1204,7 @@
 
     move-result-object p1
 
-    const-string p2, "https://vk.ru/memories"
+    const-string p2, "https://vk.com/memories"
 
     invoke-static {p1, p2}, Lcom/vk/common/links/LinkUtils;->c(Landroid/content/Context;Ljava/lang/String;)V
 

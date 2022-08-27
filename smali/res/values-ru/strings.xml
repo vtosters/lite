@@ -462,7 +462,7 @@
     <string name="collection_add_selection">Прикрепить к трансляции</string>
     <string name="collection_add_to_stream">Добавить в эфир</string>
     <string name="collection_add_wall_to_list_hint">Выберите запись со своей страницы, которой Вы хотите поделиться со зрителями</string>
-    <string name="collection_link_add_link_input_hint">https://vk.ru</string>
+    <string name="collection_link_add_link_input_hint">https://vk.com</string>
     <string name="collection_link_limit">Добавлено максимально возможное количество ссылок</string>
     <string name="collection_link_not_valid">Ссылка не поддерживается</string>
     <string name="collection_links_list">Список ссылок</string>
@@ -1113,7 +1113,7 @@
     <string name="friends_recommendations_gmail">Gmail</string>
     <string name="friends_recommendations_invete_by_link">Пригласить по ссылке</string>
     <string name="friends_recommendations_invite">Пригласить</string>
-    <string name="friends_recommendations_invite_message">Приглашаю дружить ВКонтакте! http://vk.ru/join</string>
+    <string name="friends_recommendations_invite_message">Приглашаю дружить ВКонтакте! http://vk.com/join</string>
     <string name="friends_recommendations_locator_text">Чтобы увидеть людей рядом, попросите их зайти на этот экран со своих устройств</string>
     <string name="friends_recommendations_ok">OK</string>
     <string name="friends_recommendations_request_done">Вы друзья</string>
@@ -1395,7 +1395,7 @@
     <string name="identity_address">Адрес</string>
     <string name="identity_address_dat">адрес</string>
     <string name="identity_custom_label">Своя категория</string>
-    <string name="identity_desc">Вы можете указать данные один раз и быстро предоставлять мини-приложениям из [https://vk.ru/services|каталога] — для доставки товаров или связи с Вами</string>
+    <string name="identity_desc">Вы можете указать данные один раз и быстро предоставлять мини-приложениям из [https://vk.com/services|каталога] — для доставки товаров или связи с Вами</string>
     <string name="identity_email">Электронная почта</string>
     <string name="identity_email_dat">адрес электронной почты</string>
     <string name="identity_label">Категория</string>
@@ -1425,7 +1425,7 @@
     <string name="include_community">Подключить сообщество</string>
     <string name="installed_games_title">Мои игры</string>
     <string name="invalid_date">Неверная дата публикации</string>
-    <string name="invitation">Приглашаю дружить ВКонтакте! http://vk.ru/join</string>
+    <string name="invitation">Приглашаю дружить ВКонтакте! http://vk.com/join</string>
     <string name="invitation_declined">Приглашение отклонено.</string>
     <string name="invitation_sent">Приглашение отправлено.</string>
     <string name="invite">Пригласить</string>
@@ -3310,7 +3310,7 @@
     <string name="serv_user_returned_m">%1$s вернулся в беседу</string>
     <string name="service_account_admin_100_info">"Профиль используется только для персональных оповещений.
 
-По любым вопросам пишите в [https://vk.ru/support|Поддержку.]"</string>
+По любым вопросам пишите в [https://vk.com/support|Поддержку.]"</string>
     <string name="service_account_admin_101_info">Страница используется для обратной совместимости сервиса комментариев от имени сообщества.</string>
     <string name="service_account_mobile_info">Официальная страница мобильной поддержки ВКонтакте.</string>
     <string name="sett_accept_calls">Включить</string>
@@ -5300,7 +5300,7 @@
     <string name="votes_your_balance">Ваш баланс</string>
     <string name="wall">Стена</string>
     <string name="wall_all_posts">Все записи</string>
-    <string name="wall_comment_repost">&lt;font color=#aaaaaa>Комментарий к &lt;/font>&lt;a href=vklink://view/?http://vk.ru/wall%1$d_%2$d>записи&lt;/a></string>
+    <string name="wall_comment_repost">&lt;font color=#aaaaaa>Комментарий к &lt;/font>&lt;a href=vklink://view/?http://vk.com/wall%1$d_%2$d>записи&lt;/a></string>
     <string name="wall_disabled">Стена выключена</string>
     <string name="wall_empty">Здесь пока нет записей</string>
     <string name="wall_empty_my">У Вас пока нет записей</string>

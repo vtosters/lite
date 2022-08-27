@@ -393,7 +393,7 @@
 
     move-result-object p1
 
-    const-string v0, "https://vk.ru/story"
+    const-string v0, "https://vk.com/story"
 
     const/4 v1, 0x0
 

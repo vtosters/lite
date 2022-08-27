@@ -153,7 +153,7 @@
 
     const-string v9, "But some stupid with a flare gun "
 
-    const-string v10, "https://vk.ru"
+    const-string v10, "https://vk.com"
 
     move-object v7, v2
 
@@ -185,7 +185,7 @@
 
     const-string v18, "We all came out to Montreux On the Lake Geneva shoreline To make records with a mobile We didn\'t have much time"
 
-    const-string v19, "https://vk.ru"
+    const-string v19, "https://vk.com"
 
     move-object/from16 v16, v2
 
@@ -213,7 +213,7 @@
 
     const-string v9, "Frank Zappa and the Mothers Were at the best place around"
 
-    const-string v10, "https://vk.ru"
+    const-string v10, "https://vk.com"
 
     move-object v7, v2
 
