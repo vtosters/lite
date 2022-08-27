@@ -31,12 +31,17 @@ import ru.vtosters.lite.utils.ThemesUtils;
 
 public class WallpapersHooks {
     private static File mWallpaperFile;
+    private static File mWallpaperFilteredFile; // TODO
 
     private static Drawable mWallpaper;
     private static boolean mUpdateWallpaperRequested = true;
 
     public static File getWallpaperFile() {
-        return mWallpaperFile == null ? mWallpaperFile = new File(getGlobalContext().getFilesDir(), "wallpaper.png") : mWallpaperFile;
+        if (mWallpaperFile == null) {
+            return mWallpaperFile = new File(getGlobalContext().getFilesDir(), "wallpaper.png");
+        }
+
+        return mWallpaperFile;
     }
 
     private static Boolean eligibleWallpaperFile(File file) {
@@ -50,67 +55,64 @@ public class WallpapersHooks {
     }
 
     public static File compress(File file){
-        try {
-            BitmapFactory.Options o = new BitmapFactory.Options();
-            o.inJustDecodeBounds = true;
-            o.inSampleSize = 6;
-
-            FileInputStream inputStream = new FileInputStream(file);
-            BitmapFactory.decodeStream(inputStream, null, o);
-            inputStream.close();
-
-            final int REQUIRED_SIZE=200;
-
-            int scale = 1;
-            while(o.outWidth / scale / 2 >= REQUIRED_SIZE && o.outHeight / scale / 2 >= REQUIRED_SIZE) {
-                scale *= 2;
-            }
-
-            BitmapFactory.Options o2 = new BitmapFactory.Options();
-            o2.inSampleSize = scale;
-            inputStream = new FileInputStream(file);
-
-            Bitmap selectedBitmap = BitmapFactory.decodeStream(inputStream, null, o2);
-            inputStream.close();
-
-            File outPutFile = File.createTempFile("wallpaper_temp","image");
-            outPutFile.deleteOnExit();
-            FileOutputStream outputStream = new FileOutputStream(outPutFile);
-
-            try {
-                selectedBitmap.compress(Bitmap.CompressFormat.PNG, 85 , outputStream);
-            } catch (Exception e) {
-                Log.e("WallpapersCompression", e.getMessage());
-            }
-
-            outputStream.close();
-
-            return outPutFile;
-        } catch (Exception e) {
-            Log.d("Wallpapers", e.getMessage());
-            return file;
-        }
+        return file;
+//        try {
+//            BitmapFactory.Options o = new BitmapFactory.Options();
+//            o.inJustDecodeBounds = true;
+//            o.inSampleSize = 6;
+//
+//            FileInputStream inputStream = new FileInputStream(file);
+//            BitmapFactory.decodeStream(inputStream, null, o);
+//            inputStream.close();
+//
+//            final int REQUIRED_SIZE=200;
+//
+//            int scale = 1;
+//            while(o.outWidth / scale / 2 >= REQUIRED_SIZE && o.outHeight / scale / 2 >= REQUIRED_SIZE) {
+//                scale *= 2;
+//            }
+//
+//            BitmapFactory.Options o2 = new BitmapFactory.Options();
+//            o2.inSampleSize = scale;
+//            inputStream = new FileInputStream(file);
+//
+//            Bitmap selectedBitmap = BitmapFactory.decodeStream(inputStream, null, o2);
+//            inputStream.close();
+//
+//            File outPutFile = File.createTempFile("wallpaper_temp","image");
+//
+//            FileOutputStream outputStream = new FileOutputStream(outPutFile);
+//
+//            selectedBitmap.compress(Bitmap.CompressFormat.PNG, 85 , outputStream);
+//
+//            outputStream.close();
+//
+//            return outPutFile;
+//        } catch (Exception e) {
+//            Log.d("Wallpapers", e.getMessage());
+//            return file;
+//        }
     }
 
     public static void setBg(View view) {
-        if (getWallpaper() != null) {
-            ((ImageView) view).setImageDrawable(getWallpaper()); // set picture to background
-            return;
-        }
+//        if (getWallpaper() != null) {
+//            ((ImageView) view).setImageDrawable(getWallpaper()); // set picture to background
+//            return;
+//        }
 
         view.setBackgroundColor(ThemesUtils.getColorFromAttr(im_bg_chat)); // set default bg color
     }
 
     public static String getWallpaperUrl() {
-        var file = getWallpaperFile();
-
-        if (file.exists() && eligibleWallpaperFile(file)) {
-            if (getBoolValue("compresswp", true)) {
-                return compress(file).getAbsolutePath();
-            } else {
-                return file.getAbsolutePath();
-            }
-        }
+//        var file = getWallpaperFile();
+//
+//        if (file.exists() && eligibleWallpaperFile(file)) {
+//            if (getBoolValue("compresswp", true)) {
+//                return compress(file).getAbsolutePath();
+//            } else {
+//                return file.getAbsolutePath();
+//            }
+//        }
 
         return "default";
     }
@@ -125,9 +127,7 @@ public class WallpapersHooks {
 
             Drawable drawable = Drawable.createFromPath(getWallpaperUrl());
 
-            if (drawable == null || ((BitmapDrawable) drawable).getBitmap() == null) {
-                Log.d("Wallpaper", "drawable null");
-                removeWallpaper();
+            if (drawable == null) {
                 return null;
             }
 

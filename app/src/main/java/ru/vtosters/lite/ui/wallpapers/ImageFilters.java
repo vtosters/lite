@@ -32,21 +32,9 @@ public class ImageFilters {
         if (!(orig instanceof BitmapDrawable)) return orig;
         Bitmap bm = ((BitmapDrawable) orig).getBitmap();
 
-        if (bm == null) {
-            Log.d("Wallpaper", "bitmap null");
-            sendToast("Ошибка при установке фильтра. Сбрасываем настройки на по умолчанию");
-            removeWallpaper();
-            return orig;
-        }
 
         Bitmap instance = bm.copy(Bitmap.Config.ARGB_8888, true);
 
-        if (instance == null) {
-            Log.d("Wallpaper", "bitmap null");
-            sendToast("Ошибка при установке фильтра. Сбрасываем настройки на по умолчанию");
-            removeWallpaper();
-            return orig;
-        }
 
         if (getPreferences().getBoolean("msg_invert", false)) {
             instance = applyInvertEffect(instance);
@@ -81,21 +69,7 @@ public class ImageFilters {
             if (!(orig instanceof BitmapDrawable)) return orig; // we need only BitmapDrawable
             Bitmap bm = ((BitmapDrawable) orig).getBitmap();
 
-            if (bm == null) {
-                Log.d("Wallpaper", "bitmap null");
-                sendToast("Ошибка при установке фильтра. Сбрасываем настройки на по умолчанию");
-            removeWallpaper();
-                return orig;
-            }
-
             Bitmap instance = bm.copy(Bitmap.Config.ARGB_8888, true);
-
-            if (instance == null) {
-                Log.d("Wallpaper", "bitmap null");
-                sendToast("Ошибка при установке фильтра. Сбрасываем настройки на по умолчанию");
-            removeWallpaper();
-                return orig;
-            }
 
             MediaNative.blurBitmap(instance, radius);
             return new BitmapDrawable(getResources(), instance);
@@ -112,21 +86,9 @@ public class ImageFilters {
         if (!(orig instanceof BitmapDrawable)) return orig;
         Bitmap bm = ((BitmapDrawable) orig).getBitmap();
 
-        if (bm == null) {
-            Log.d("Wallpaper", "bitmap null");
-            sendToast("Ошибка при установке фильтра. Сбрасываем настройки на по умолчанию");
-            removeWallpaper();
-            return orig;
-        }
 
         Bitmap instance = bm.copy(Bitmap.Config.ARGB_8888, true);
 
-        if (instance == null) {
-            Log.d("Wallpaper", "bitmap null");
-            sendToast("Ошибка при установке фильтра. Сбрасываем настройки на по умолчанию");
-            removeWallpaper();
-            return orig;
-        }
 
         String radius = getPreferences().getString("msg_mosaic", "disabled");
 
@@ -152,21 +114,9 @@ public class ImageFilters {
         if (!(orig instanceof BitmapDrawable)) return orig;
         Bitmap bm = ((BitmapDrawable) orig).getBitmap();
 
-        if (bm == null) {
-            Log.d("Wallpaper", "bitmap null");
-            sendToast("Ошибка при установке фильтра. Сбрасываем настройки на по умолчанию");
-            removeWallpaper();
-            return orig;
-        }
 
         Bitmap instance = bm.copy(Bitmap.Config.ARGB_8888, true);
 
-        if (instance == null) {
-            Log.d("Wallpaper", "bitmap null");
-            sendToast("Ошибка при установке фильтра. Сбрасываем настройки на по умолчанию");
-            removeWallpaper();
-            return orig;
-        }
 
         String radius = getPreferences().getString("msg_dim", "disabled");
         switch (radius) {
@@ -183,21 +133,7 @@ public class ImageFilters {
         if (!(orig instanceof BitmapDrawable)) return orig;
         Bitmap bm = ((BitmapDrawable) orig).getBitmap();
 
-        if (bm == null) {
-            Log.d("Wallpaper", "bitmap null");
-            sendToast("Ошибка при установке фильтра. Сбрасываем настройки на по умолчанию");
-            removeWallpaper();
-            return orig;
-        }
-
         Bitmap instance = bm.copy(Bitmap.Config.ARGB_8888, true);
-
-        if (instance == null) {
-            Log.d("Wallpaper", "bitmap null");
-            sendToast("Ошибка при установке фильтра. Сбрасываем настройки на по умолчанию");
-            removeWallpaper();
-            return orig;
-        }
 
         Bitmap bwBitmap = Bitmap.createBitmap(instance.getWidth(), instance.getHeight(), Bitmap.Config.RGB_565);
         float[] hsv = new float[3];
