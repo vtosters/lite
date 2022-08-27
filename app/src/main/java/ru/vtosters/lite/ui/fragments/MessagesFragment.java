@@ -1,5 +1,6 @@
 package ru.vtosters.lite.ui.fragments;
 
+import static ru.vtosters.lite.ui.wallpapers.WallpapersHooks.removeWallpaper;
 import static ru.vtosters.lite.utils.AndroidUtils.getGlobalContext;
 import static ru.vtosters.lite.utils.AndroidUtils.getIdentifier;
 import static ru.vtosters.lite.utils.AndroidUtils.getPreferences;
@@ -106,6 +107,7 @@ public class MessagesFragment extends MaterialPreferenceToolbarFragment {
 //            a2.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
 //            context.startActivity(a2);
             sendToast("Обои временно недоступны. Следите за новостями на @vtosters в Telegram");
+            removeWallpaper();
             return true;
         }
     }

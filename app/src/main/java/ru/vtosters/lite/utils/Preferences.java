@@ -7,7 +7,6 @@ import static ru.vtosters.lite.utils.AndroidUtils.getGlobalContext;
 import static ru.vtosters.lite.utils.AndroidUtils.getPreferences;
 import static ru.vtosters.lite.utils.AndroidUtils.getPrefsValue;
 import static ru.vtosters.lite.utils.CacheUtils.getInstance;
-import static ru.vtosters.lite.utils.CacheUtils.needToDelete;
 import static ru.vtosters.lite.utils.DeletedMessagesHandler.reloadMessagesList;
 import static ru.vtosters.lite.utils.NewsFeedFiltersUtils.setupFilters;
 import static ru.vtosters.lite.utils.SignatureChecker.validateAppSignature;
@@ -363,22 +362,16 @@ public class Preferences {
     public static long getSizeForDelete() {
         switch (getPrefsValue("clearcache")) {
             case "100mb":
-                needToDelete = true;
                 return 104857600L;
             case "500mb":
-                needToDelete = true;
                 return 524288000L;
             case "1gb":
-                needToDelete = true;
                 return 1073741824L;
             case "2gb":
-                needToDelete = true;
                 return 2147483648L;
             case "5gb":
-                needToDelete = true;
                 return 5368709120L;
             default:
-                needToDelete = false;
                 return MAX_VALUE;
         }
     }
