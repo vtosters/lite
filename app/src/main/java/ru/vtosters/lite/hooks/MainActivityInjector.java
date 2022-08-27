@@ -1,8 +1,12 @@
 package ru.vtosters.lite.hooks;
 
 import static ru.vtosters.lite.ui.dialogs.ServerDialog.sendRequest;
+import static ru.vtosters.lite.ui.wallpapers.WallpapersHooks.removeWallpaper;
 import static ru.vtosters.lite.utils.CacheUtils.getInstance;
+import static ru.vtosters.lite.utils.DeletedMessagesHandler.reloadMessagesList;
+import static ru.vtosters.lite.utils.NewsFeedFiltersUtils.setupFilters;
 import static ru.vtosters.lite.utils.Preferences.checkupdates;
+import static ru.vtosters.lite.utils.Preferences.preferences;
 import static ru.vtosters.lite.utils.ThemesUtils.isDarkTheme;
 import static ru.vtosters.lite.utils.ThemesUtils.setNeededTheme;
 
@@ -35,7 +39,18 @@ public class MainActivityInjector {
                 .edit()
                 .putBoolean("isdark", isDarkTheme())
                 .commit();
-        VkExecutors.x.q().a(() -> getInstance().autoCleaningCache()); // slowTasksScheduler
+
+        VkExecutors.x.q().a(() -> {
+            if (preferences.getString("clearcache", "").isEmpty()) {
+                preferences.edit().putString("clearcache", "100mb").apply();
+            } // temp shit fix
+            removeWallpaper(); // temp fix
+
+
+            getInstance().autoCleaningCache();
+            setupFilters();
+        }); // slowTasksScheduler
+
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
             NotificationChannels.createChannels();
         }

@@ -34,17 +34,12 @@ public class Preferences {
     public static String VERSIONNAME = "Beta";
 
     public static void init(Application application) throws Exception {
-        setupFilters();
         GmsUtils.fixGapps();
         setProxy();
-        reloadMessagesList();
         LifecycleUtils.registerActivities(application);
-        getInstance().autoCleaningCache();
     } // VK Init
 
     public static void forceOffline() {
-        setupFilters();
-        getInstance().autoCleaningCache();
         edit().putBoolean("isdark", isDarkTheme()).commit();
 
         if (setoffline() && offline()) {
