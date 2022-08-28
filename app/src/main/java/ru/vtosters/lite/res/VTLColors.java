@@ -12,46 +12,21 @@ import com.vk.core.ui.themes.VKThemeHelper;
 import com.vk.core.util.ContextExtKt;
 import com.vtosters.lite.R;
 
-import java.util.Arrays;
-import java.util.List;
-
-import ru.vtosters.lite.res.colors.AccentColors;
-import ru.vtosters.lite.res.colors.BackgroundColors;
-import ru.vtosters.lite.res.colors.BarColors;
-import ru.vtosters.lite.res.colors.ConventionColors;
-import ru.vtosters.lite.res.colors.IColor;
-import ru.vtosters.lite.res.colors.ModalConversationColors;
-
 public class VTLColors {
-
-    public static final List<IColor> colors = Arrays.asList(
-        new AccentColors(), new BackgroundColors(),
-        new BarColors(), new ConventionColors(),
-        new ModalConversationColors()
-    );
-
     public static int getAccentColor() {
-        return isCustomThemeApplied()
-                ? getColor(R.attr.accent, R.attr.accentColor, R.attr.colorAccent, R.attr.vk_accent)
-                : getColorFromAttr(R.attr.accent);
+        return getColor(R.attr.accent, R.attr.accentColor, R.attr.colorAccent, R.attr.vk_accent);
     }
 
     public static int getTextPrimaryColor() {
-        return isCustomThemeApplied()
-                ? getColor(R.attr.text_primary)
-                : getColorFromAttr(R.attr.text_primary);
+        return getColor(R.attr.text_primary);
     }
 
     public static int getTextSecondaryColor() {
-        return isCustomThemeApplied()
-                ? getColor(R.attr.text_secondary)
-                : getColorFromAttr(R.attr.text_secondary);
+        return getColor(R.attr.text_secondary);
     }
 
     public static int getTabbarBackground() {
-        return isCustomThemeApplied()
-                ? getColor(R.attr.tabbar_background)
-                : getColorFromAttr(R.attr.tabbar_background);
+        return getColor(R.attr.tabbar_background);
     }
 
     public static int getTabbarActiveColor() {
@@ -94,30 +69,11 @@ public class VTLColors {
 
     //region Hooks
 
-    public static boolean hasColor(int attr) {
-        for (var color : colors) {
-            if (color.has(attr))
-                return true;
-        }
-        return false;
-    }
-
     public static int getColor(int... attrs) {
-        for (var color : colors) {
-            for (var attr : attrs) {
-                if (color.has(attr))
-                    return color.get(attr);
-            }
-        }
         return getColorFromAttr(attrs[0]);
     }
 
     public static int getColor(int attr) {
-//        for (var color : colors) {
-//            if (color.has(attr))
-//                return color.get(attr);
-//        }
-//        return getColorFromAttr(attr);
         return VKThemeHelper.d(attr);
     }
 
