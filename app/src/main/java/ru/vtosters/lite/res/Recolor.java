@@ -1,17 +1,16 @@
 package ru.vtosters.lite.res;
 
 import android.app.Activity;
-import android.graphics.Color;
 import android.util.SparseArray;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 
-import com.vk.core.ui.themes.VKThemeHelper;
-
 import java.util.ArrayList;
 import java.util.List;
 
+import ru.vtosters.lite.res.attrs.AccentAttrs;
+import ru.vtosters.lite.res.attrs.BaseAttrs;
 import ru.vtosters.lite.res.models.ViewModel;
 import ru.vtosters.lite.res.modifiers.FloatingActionButtonRecolor;
 import ru.vtosters.lite.res.modifiers.IModifier;
@@ -27,17 +26,20 @@ import ru.vtosters.lite.res.modifiers.ViewRecolor;
 public class Recolor {
 
     private static final List<IModifier> recolors = new ArrayList<>();
+    private static final List<BaseAttrs> attrs = new ArrayList<>();
 
     static {
         recolors.add(new FloatingActionButtonRecolor());
         recolors.add(new ImageViewRecolor());
         recolors.add(new ProgressBarRecolor());
-        recolors.add( new SwitchCompatRecolor());
+        recolors.add(new SwitchCompatRecolor());
         recolors.add(new TabLayoutRecolor());
         recolors.add(new TextViewRecolor());
         recolors.add(new TintTextViewRecolor());
         recolors.add(new ToolbarRecolor());
         recolors.add(new ViewRecolor());
+
+        attrs.add(new AccentAttrs());
     }
 
     public static void recolorViewOrViewGroup(View target, SparseArray<ViewModel> satts) {
@@ -55,8 +57,10 @@ public class Recolor {
             for (var recolor : recolors) {
                 if (!recolor.isModified(target)) continue;
                 for (var attr : viewModel.attrs) {
-                    //if (!VTLColors.hasColor(attr.second)) continue;
-                    recolor.modify(target, attr.first, VKThemeHelper.d(attr.second));
+                    for (var baseAttr : attrs) {
+                        baseAttr.replace(attr.second);
+                    }
+                    recolor.modify(target, attr.first, VTLColors.getColor(attr.second));
                 }
             }
 
