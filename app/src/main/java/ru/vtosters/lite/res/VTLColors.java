@@ -44,27 +44,19 @@ public class VTLColors {
     }
 
     public static int getBackgroundContent() {
-        return isCustomThemeApplied()
-                ? getColor(R.attr.background_content)
-                : getColorFromAttr(R.attr.background_content);
+        return getColor(R.attr.background_content);
     }
 
     public static int getBackgroundPage() {
-        return isCustomThemeApplied()
-                ? getColor(R.attr.background_page)
-                : getColorFromAttr(R.attr.background_page);
+        return getColor(R.attr.background_page);
     }
 
     public static int getHeaderBackground() {
-        return isCustomThemeApplied()
-                ? getColor(R.attr.header_background)
-                : getColorFromAttr(R.attr.header_background);
+        return getColor(R.attr.header_background);
     }
 
     public static int getHeaderText() {
-        return isCustomThemeApplied()
-                ? getColor(R.attr.header_text)
-                : getColorFromAttr(R.attr.header_text);
+        return getColor(R.attr.header_text);
     }
 
     //region Hooks
