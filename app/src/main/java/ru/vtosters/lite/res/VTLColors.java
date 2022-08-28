@@ -2,7 +2,6 @@ package ru.vtosters.lite.res;
 
 import static ru.vtosters.lite.utils.AndroidUtils.getResources;
 import static ru.vtosters.lite.utils.Preferences.dockbar_accent;
-import static ru.vtosters.lite.utils.ThemesUtils.getColorFromAttr;
 import static ru.vtosters.lite.utils.ThemesUtils.isCustomThemeApplied;
 import static ru.vtosters.lite.utils.ThemesUtils.isDarkTheme;
 
@@ -12,7 +11,13 @@ import com.vk.core.ui.themes.VKThemeHelper;
 import com.vk.core.util.ContextExtKt;
 import com.vtosters.lite.R;
 
+import ru.vtosters.lite.res.managers.ThemesManager;
+import ru.vtosters.lite.res.models.ThemeModel;
+
 public class VTLColors {
+    private static final ThemesManager themesManager = ThemesManager.getInstance();
+    private static final ThemeModel currentTheme = themesManager.getCurrentTheme();
+
     public static int getAccentColor() {
         return getColor(R.attr.accent, R.attr.accentColor, R.attr.colorAccent, R.attr.vk_accent);
     }
@@ -62,10 +67,13 @@ public class VTLColors {
     //region Hooks
 
     public static int getColor(int... attrs) {
-        return getColorFromAttr(attrs[0]);
+        return getColor(attrs[0]);
     }
 
     public static int getColor(int attr) {
+        if (isCustomThemeApplied()) {
+            return currentTheme.getColor(attr);
+        }
         return VKThemeHelper.d(attr);
     }
 
