@@ -151,11 +151,11 @@ public class ThemesAdapter extends RecyclerView.Adapter<ThemesAdapter.ThemeViewH
     private int getAccentColorFromCustomTheme(ThemeModel theme) {
         if (!"default".equals(theme.id)) {
             if (theme.hasColor("accent"))
-                return theme.getColor("accent");
+                return theme.getColor(R.attr.accent);
             else if (theme.hasColor("colorAccent"))
-                return theme.getColor("colorAccent");
+                return theme.getColor(R.attr.colorAccent);
             else if (theme.hasColor("vk_accent"))
-                return theme.getColor("vk_accent");
+                return theme.getColor(R.attr.vk_accent);
         }
         return ThemesUtils.getColorFromAttr(R.attr.accent);
     }
