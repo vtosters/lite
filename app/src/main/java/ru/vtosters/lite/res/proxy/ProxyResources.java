@@ -41,39 +41,39 @@ public class ProxyResources extends Resources {
     }
 
     public static void addProxyResources(Object target) {
-//        if (!ThemesUtils.isCustomThemeApplied()) return;
-//        try {
-//            Class<?> clz = target.getClass();
-//            Field field = null;
-//            if (!resourceFieldsMap.containsKey(clz)) {
-//                loop:
-//                while (clz != null) {
-//                    for (var f : clz.getDeclaredFields()) {
-//                        if (f.getType() == Resources.class) {
-//                            field = f;
-//                            break loop;
-//                        }
-//                    }
-//                    for (var f : clz.getFields()) {
-//                        if (f.getType() == Resources.class) {
-//                            field = f;
-//                            break loop;
-//                        }
-//                    }
-//                    clz = clz.getSuperclass();
-//                }
-//                resourceFieldsMap.put(target.getClass(), field);
-//            } else {
-//                field = resourceFieldsMap.get(clz);
-//            }
-//            if (field == null) return;
-//            field.setAccessible(true);
-//            ReflectionUtils.unfinalField(field);
-//            var original = (Resources) field.get(target);
-//            if (original != null && !(original instanceof ProxyResources))
-//                field.set(target, new ProxyResources(original));
-//        } catch (Throwable e) {
-//            e.printStackTrace();
-//        }
+        if (!ThemesUtils.isCustomThemeApplied()) return;
+        try {
+            Class<?> clz = target.getClass();
+            Field field = null;
+            if (!resourceFieldsMap.containsKey(clz)) {
+                loop:
+                while (clz != null) {
+                    for (var f : clz.getDeclaredFields()) {
+                        if (f.getType() == Resources.class) {
+                            field = f;
+                            break loop;
+                        }
+                    }
+                    for (var f : clz.getFields()) {
+                        if (f.getType() == Resources.class) {
+                            field = f;
+                            break loop;
+                        }
+                    }
+                    clz = clz.getSuperclass();
+                }
+                resourceFieldsMap.put(target.getClass(), field);
+            } else {
+                field = resourceFieldsMap.get(clz);
+            }
+            if (field == null) return;
+            field.setAccessible(true);
+            ReflectionUtils.unfinalField(field);
+            var original = (Resources) field.get(target);
+            if (original != null && !(original instanceof ProxyResources))
+                field.set(target, new ProxyResources(original));
+        } catch (Throwable e) {
+            e.printStackTrace();
+        }
     }
 }

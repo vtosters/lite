@@ -4,19 +4,14 @@ import android.content.Context;
 import android.content.res.ColorStateList;
 import android.content.res.Resources;
 import android.content.res.TypedArray;
-import android.graphics.drawable.Drawable;
 import android.os.Build;
 import android.util.AttributeSet;
 import android.util.SparseIntArray;
 import android.util.TypedValue;
 
-import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
-
 import com.vtosters.lite.R;
 
 import java.lang.reflect.Field;
-import java.util.HashMap;
 
 import ru.vtosters.lite.utils.ReflectionUtils;
 import ru.vtosters.lite.utils.ThemesUtils;
@@ -48,29 +43,29 @@ public class VTLResources  {
     }
 
     private static void prepareTypedArray(TypedArray target, int[] attrs) {
-//        if (attrs == null) return;
-//        var data = getData(target);
-//        for (int i = 0; i < attrs.length; i++) {
-//            var attr = attrs[i];
-//            var replacement = otherAttrs.get(attr, -1);
-//            if (replacement == -1) continue;
-//            var index = STYLE_NUM_ENTRIES * i;
-//            var type = data[index];
-//            if (type == TypedValue.TYPE_ATTRIBUTE)
-//                replacement = data[index + 0x1];
-//            else if (type == TypedValue.TYPE_INT_COLOR_ARGB8 || type == TypedValue.TYPE_INT_COLOR_RGB8)
-//                replacement = forcedAttrs.get(data[index + 0x1], 0);
-//            else
-//                continue;
-//            try {
-//                data[index] = TypedValue.TYPE_INT_COLOR_RGB8; // type
-//                data[index + 0x1] = ThemesUtils.getColorFromAttr(attr); // data
-//                data[index + 0x2] = 0x0; // asset cookie
-//                data[index + 0x3] = 0x0; // resource id
-//
-//            } catch (Throwable ignored) {
-//            }
-//        }
+        if (attrs == null) return;
+        var data = getData(target);
+        for (int i = 0; i < attrs.length; i++) {
+            var attr = attrs[i];
+            var replacement = otherAttrs.get(attr, -1);
+            if (replacement == -1) continue;
+            var index = STYLE_NUM_ENTRIES * i;
+            var type = data[index];
+            if (type == TypedValue.TYPE_ATTRIBUTE)
+                replacement = data[index + 0x1];
+            else if (type == TypedValue.TYPE_INT_COLOR_ARGB8 || type == TypedValue.TYPE_INT_COLOR_RGB8)
+                replacement = forcedAttrs.get(data[index + 0x1], 0);
+            else
+                continue;
+            try {
+                data[index] = TypedValue.TYPE_INT_COLOR_RGB8; // type
+                data[index + 0x1] = ThemesUtils.getColorFromAttr(attr); // data
+                data[index + 0x2] = 0x0; // asset cookie
+                data[index + 0x3] = 0x0; // resource id
+
+            } catch (Throwable ignored) {
+            }
+        }
     }
 
     private static int[] getData(TypedArray target) {

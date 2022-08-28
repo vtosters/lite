@@ -41,9 +41,9 @@ public class ProxyLayoutInflater extends LayoutInflater {
 
     @Override
     public View inflate(int resource, @Nullable ViewGroup root, boolean attachToRoot) {
-        //parseLayout(resource);
+        parseLayout(resource);
         var target = super.inflate(resource, root, attachToRoot);
-        //Recolor.recolorViewOrViewGroup(target, layouts.get(resource));
+        Recolor.recolorViewOrViewGroup(target, layouts.get(resource));
         return target;
     }
 
