@@ -2,6 +2,8 @@ package ru.vtosters.lite.res.models;
 
 import android.graphics.Color;
 
+import com.vk.core.ui.themes.VKThemeHelper;
+
 import org.json.JSONException;
 import org.json.JSONObject;
 
@@ -10,6 +12,7 @@ import java.util.Collections;
 import java.util.List;
 
 import ru.vtosters.lite.res.managers.PalettesManager;
+import ru.vtosters.lite.utils.AndroidUtils;
 
 public class ThemeModel {
 
@@ -85,11 +88,23 @@ public class ThemeModel {
         return false;
     }
 
-    public int getColor(String name) {
+    public Integer getColor(String name) {
         for (var item : colors)
             if (name.equals(item.name))
                 return item.value;
-        throw new IllegalArgumentException("Color with name " + name + " not found");
+        return null;
+    }
+
+    public int getColor(int attr) {
+        var context = AndroidUtils.getGlobalContext();
+        var attrString = context.getResources().getResourceEntryName(attr);
+        var color = getColor(attrString);
+
+        if (color == null) {
+            color = VKThemeHelper.d(attr);
+        }
+
+        return color;
     }
 
     public boolean hasPalettes() {
