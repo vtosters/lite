@@ -58,7 +58,7 @@ public class NewsFeedFiltersUtils {
     }
 
     public static void getFilter(String boolname, String filename, List<String> list) {
-        if (getBoolValue(boolname, true)) {
+        if (getBoolValue(boolname, false)) {
             try {
                 var scanner = new Scanner(getGlobalContext().getAssets().open(filename));
                 while (scanner.hasNextLine()) {
