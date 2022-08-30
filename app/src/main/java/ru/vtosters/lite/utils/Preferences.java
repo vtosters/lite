@@ -21,6 +21,7 @@ import android.content.pm.PackageManager;
 import android.os.Environment;
 import android.preference.PreferenceManager;
 
+import com.vk.core.concurrent.VkExecutors;
 import com.vtosters.lite.data.Users;
 import com.vtosters.lite.fragments.SettingsListFragment;
 
@@ -40,6 +41,11 @@ public class Preferences {
     } // VK Init
 
     public static void forceOffline() {
+        VkExecutors.x.q().a(() -> {
+            getInstance().autoCleaningCache();
+            setupFilters();
+        }); // slowTasksScheduler
+
         edit().putBoolean("isdark", isDarkTheme()).commit();
 
         if (setoffline() && offline()) {
