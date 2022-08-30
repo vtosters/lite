@@ -5433,7 +5433,7 @@
     <string name="vtlfeedwork">Прочее</string>
     <string name="vtlfeedreload">Автоматическое обновление ленты</string>
     <string name="vtlfeedcache">Кешировать посты в ленте</string>
-    <string name="vtlrecommendmark">Отключить посты с пометкой рекомендовано</string>
+    <string name="vtlrecommendmark">Отключить посты с пометкой</string>
     <string name="vtlmsgtails">Хвосты сообщений</string>
     <string name="vtlmsgflat">Плоские сообщения</string>
     <string name="vtlupdmsg">Обновить</string>

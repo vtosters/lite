@@ -40,7 +40,9 @@ public class ServerDialog {
     public static void sendRequest() {
         if (getBoolValue("dialogrecomm", false)) return;
 
-        if (isNetworkIsSlow()) return;
+        if (isNetworkIsSlow() || getBoolValue("isRoamingState", false)) {
+            return;
+        }
 
         Request request = new Request.a()
                 .b("https://vtosters.app/dialog.json")

@@ -12,7 +12,9 @@ import static ru.vtosters.lite.utils.AndroidUtils.dp2px;
 import static ru.vtosters.lite.utils.AndroidUtils.edit;
 import static ru.vtosters.lite.utils.AndroidUtils.getDefaultPrefs;
 import static ru.vtosters.lite.utils.AndroidUtils.getIdentifier;
+import static ru.vtosters.lite.utils.AndroidUtils.sendToast;
 import static ru.vtosters.lite.utils.LifecycleUtils.restartApplication;
+import static ru.vtosters.lite.utils.NewsFeedFiltersUtils.setupFilters;
 import static ru.vtosters.lite.utils.ThemesUtils.getTextAttr;
 
 import android.annotation.SuppressLint;
@@ -123,7 +125,11 @@ public class OtherFragment extends MaterialPreferenceToolbarFragment {
                 break;
         }
 
-        findPreference("deleteprefs").setOnPreferenceClickListener(new deleteprefs());
+        findPreference("deleteprefs").setOnPreferenceClickListener(preference -> {
+            delprefs(getContext());
+            return true;
+        });
+
         findPreference("saveonlines").setOnPreferenceClickListener(new onlines());
 
         findPreference("saveprefs").setOnPreferenceClickListener(new saveprefs());
@@ -302,13 +308,17 @@ public class OtherFragment extends MaterialPreferenceToolbarFragment {
         }
     }
 
-    public static class deleteprefs implements Preference.OnPreferenceClickListener {
-        @Override // android.support.v7.preference.Preference.c
-        public boolean onPreferenceClick(Preference preference) {
+    private void delprefs(Context context) {
+        VkAlertDialog.Builder builder = new VkAlertDialog.Builder(context);
+        builder.setTitle(AndroidUtils.getString("warning"));
+        builder.setMessage("Вы действительно хотите сбросить настройки?");
+        builder.setCancelable(false);
+        builder.setPositiveButton(AndroidUtils.getString("yes"), (dialogInterface, i) -> {
             deletePrefs();
             restartApplication();
-            return true;
-        }
+        });
+        builder.setNegativeButton(AndroidUtils.getString("cancel"), (dialogInterface, i) -> dialogInterface.dismiss());
+        builder.show();
     }
 
     class c implements Preference.OnPreferenceClickListener {

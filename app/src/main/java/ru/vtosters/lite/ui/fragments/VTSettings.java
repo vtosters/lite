@@ -429,14 +429,6 @@ public class VTSettings extends MaterialPreferenceToolbarFragment {
                 OTADialog.checkUpdates(getActivity());
                 return false;
             });
-
-            addMaterialSwitchPreference(this, "checkupdates", AndroidUtils.getString("checkupdates"), "", "ic_recent_outline_28", true, (preference, o) -> {
-                boolean value = (boolean) o;
-
-                edit().putBoolean("checkupdates", value).commit();
-
-                return true;
-            });
         }
     }
 

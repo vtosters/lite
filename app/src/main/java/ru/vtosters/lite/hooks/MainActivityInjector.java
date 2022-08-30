@@ -1,12 +1,9 @@
 package ru.vtosters.lite.hooks;
 
 import static ru.vtosters.lite.ui.dialogs.ServerDialog.sendRequest;
-import static ru.vtosters.lite.ui.wallpapers.WallpapersHooks.removeWallpaper;
 import static ru.vtosters.lite.utils.CacheUtils.getInstance;
-import static ru.vtosters.lite.utils.DeletedMessagesHandler.reloadMessagesList;
 import static ru.vtosters.lite.utils.NewsFeedFiltersUtils.setupFilters;
 import static ru.vtosters.lite.utils.Preferences.checkupdates;
-import static ru.vtosters.lite.utils.Preferences.preferences;
 import static ru.vtosters.lite.utils.ThemesUtils.isDarkTheme;
 import static ru.vtosters.lite.utils.ThemesUtils.setNeededTheme;
 
@@ -24,9 +21,9 @@ import ru.vtosters.lite.ui.dialogs.ServerDialog;
 import ru.vtosters.lite.ui.dialogs.Start;
 import ru.vtosters.lite.utils.DeletedMessagesHandler;
 
-public class MainActivityInjector {
+public class MainActivityInjector{
 
-    public static void inject(Activity activity) {
+    public static void inject(Activity activity){
         setNeededTheme(activity);
         ServerDialog.activity = activity;
         sendRequest();
@@ -41,12 +38,6 @@ public class MainActivityInjector {
                 .commit();
 
         VkExecutors.x.q().a(() -> {
-            if (preferences.getString("clearcache", "").isEmpty()) {
-                preferences.edit().putString("clearcache", "100mb").apply();
-            } // temp shit fix
-            removeWallpaper(); // temp fix
-
-
             getInstance().autoCleaningCache();
             setupFilters();
         }); // slowTasksScheduler

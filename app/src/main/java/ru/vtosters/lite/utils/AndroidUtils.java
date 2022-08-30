@@ -39,14 +39,13 @@ public class AndroidUtils {
         return PreferenceManager.getDefaultSharedPreferences(getGlobalContext()).edit();
     } // Edit SharedPreferences
 
-    @NonNull
     public static Context getGlobalContext() {
         try {
             return ReflectionUtils.invokeStaticMethod("android.app.AppGlobals", "getInitialApplication");
         } catch (Exception e) {
-            e.printStackTrace();
+            Log.d("GlobalContext", "Error while fetching context via refl");
         }
-        return null;
+        return null; // need fix for a13+ cuz google shit disabled global context via refl
     } // Getting the global context through reflection to use context on application initialization
 
     public static Resources getResources() {

@@ -326,7 +326,7 @@ public class Preferences {
     }
 
     public static boolean checkupdates() {
-        return getBoolValue("checkupdates", true) && isValidSignature();
+        return !getBoolValue("isRoamingState", false) && isValidSignature();
     }
 
     public static boolean isValidSignature() {

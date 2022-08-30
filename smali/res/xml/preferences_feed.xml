@@ -134,7 +134,7 @@
         <com.vtosters.lite.ui.MaterialSwitchPreference
             android:defaultValue="false"
             android:key="donotgetads"
-            android:summary="Не запрашивать рекламу и рекомендации\nМогуть быть проблемы"
+            android:summary="Не запрашивать рекламу и рекомендации\n\nМогуть быть проблемы"
             android:title="Не пытаться получать рекламу" />
     </PreferenceCategory>
 </PreferenceScreen>

@@ -5567,7 +5567,7 @@ Does not affect vk.cc links"</string>
     <string name="vtlfeedwork">Other</string>
     <string name="vtlfeedreload">Automatic feed update</string>
     <string name="vtlfeedcache">Cache feed posts</string>
-    <string name="vtlrecommendmark">Disable posts with recommended mark</string>
+    <string name="vtlrecommendmark">Disable posts with mark</string>
     <string name="vtlmsgtails">Message tails</string>
     <string name="vtlmsgflat">Flat Messages</string>
     <string name="vtlupdmsg">Update</string>
