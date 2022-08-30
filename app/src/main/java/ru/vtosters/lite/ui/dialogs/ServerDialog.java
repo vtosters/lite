@@ -40,30 +40,28 @@ public class ServerDialog {
     public static void sendRequest() {
         if (getBoolValue("dialogrecomm", false)) return;
 
-        if (isNetworkIsSlow() || getBoolValue("isRoamingState", false)) {
-            return;
-        }
+        if (!isNetworkIsSlow() && !getBoolValue("isRoamingState", false)) {
+            Request request = new Request.a()
+                    .b("https://vtosters.app/dialog.json")
+                    .a();
 
-        Request request = new Request.a()
-                .b("https://vtosters.app/dialog.json")
-                .a();
-
-        client.a(request).a(new Callback() {
-            @Override
-            public void a(Call call, IOException e) {
-                Log.d(TAG, "" + e);
-                showAlert = false;
-            }
-
-            @Override
-            public void a(Call call, Response response) {
-                try {
-                    getResponse(response.a().g());
-                } catch (Exception e) {
+            client.a(request).a(new Callback() {
+                @Override
+                public void a(Call call, IOException e) {
+                    Log.d(TAG, "" + e);
                     showAlert = false;
                 }
-            }
-        });
+
+                @Override
+                public void a(Call call, Response response) {
+                    try {
+                        getResponse(response.a().g());
+                    } catch (Exception e) {
+                        showAlert = false;
+                    }
+                }
+            });
+        }
     }
 
     private static Boolean showForNotVerified() {
