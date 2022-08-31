@@ -45,8 +45,8 @@ public class ProxyHook {
         RadioButton rgVika = new RadioButton(new ContextThemeWrapper(ctx, com.vtosters.lite.R.style.Widget_AppCompat_CompoundButton_RadioButton));
 
         rg.addView(rgDefault);
-        rg.addView(rgZaborona);
         rg.addView(rgVika);
+        rg.addView(rgZaborona);
         rg.addView(rgRandomProxy);
 
         rgDefault.setTextSize(TypedValue.COMPLEX_UNIT_PX, dp2px(14f));
@@ -62,10 +62,10 @@ public class ProxyHook {
         rgZaborona.setText(AndroidUtils.getString("proxy_enable") + " (Zaborona)");
         rgZaborona.setTextColor(getTextAttr());
 
-        rgRandomProxy.setText(AndroidUtils.getString("proxy_enable") + " (Random Proxy)");
+        rgRandomProxy.setText(AndroidUtils.getString("proxy_enable") + " (Random Socks Proxy)");
         rgRandomProxy.setTextColor(getTextAttr());
 
-        rgVika.setText(AndroidUtils.getString("proxy_enable") + " (Vika)");
+        rgVika.setText(AndroidUtils.getString("proxy_enable") + " (Vika Mobile)");
         rgVika.setTextColor(getTextAttr());
 
         rgZaborona.setChecked(isZaboronaEnabled());

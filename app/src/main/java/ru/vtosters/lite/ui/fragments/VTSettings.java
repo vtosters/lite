@@ -30,6 +30,7 @@ import static ru.vtosters.lite.utils.Preferences.superapp;
 import static ru.vtosters.lite.utils.Preferences.vkme;
 import static ru.vtosters.lite.utils.ThemesUtils.getDarkTheme;
 import static ru.vtosters.lite.utils.ThemesUtils.getLightTheme;
+import static ru.vtosters.lite.utils.ThemesUtils.isDarkTheme;
 import static ru.vtosters.lite.utils.ThemesUtils.setTheme;
 import static ru.vtosters.lite.utils.VTVerifications.vtverif;
 
@@ -160,7 +161,7 @@ public class VTSettings extends MaterialPreferenceToolbarFragment {
 
         addPreferenceCategory(this, AndroidUtils.getString("vtsettdarktheme"));
 
-        addMaterialSwitchPreference(this, "isdark", AndroidUtils.getString("vtsettdarktheme"), "", "ic_palette_outline_28", false, (preference, o) -> {
+        addMaterialSwitchPreference(this, "", AndroidUtils.getString("vtsettdarktheme"), "", "ic_palette_outline_28", isDarkTheme(), (preference, o) -> {
             boolean value = (boolean) o;
 
             if (!value) { // inverted
