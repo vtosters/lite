@@ -3,18 +3,18 @@ package ru.vtosters.lite.ui.wallpapers;
 import android.graphics.Bitmap;
 import android.graphics.Color;
 
-public class ConvolutionMatrix {
+public class ConvolutionMatrix{
     public static final int SIZE = 3;
 
     public double[][] Matrix;
     public double Factor = 1;
     public double Offset = 1;
 
-    public ConvolutionMatrix(int size) {
+    public ConvolutionMatrix(int size){
         Matrix = new double[size][size];
     }
 
-    public static Bitmap computeConvolution3x3(Bitmap src, ConvolutionMatrix matrix) {
+    public static Bitmap computeConvolution3x3(Bitmap src, ConvolutionMatrix matrix){
         int width = src.getWidth();
         int height = src.getHeight();
         Bitmap result = Bitmap.createBitmap(width, height, src.getConfig());
@@ -81,7 +81,7 @@ public class ConvolutionMatrix {
         return result;
     }
 
-    public void setAll(double value) {
+    public void setAll(double value){
         for (int x = 0; x < SIZE; ++x) {
             for (int y = 0; y < SIZE; ++y) {
                 Matrix[x][y] = value;
@@ -89,7 +89,7 @@ public class ConvolutionMatrix {
         }
     }
 
-    public void applyConfig(double[][] config) {
+    public void applyConfig(double[][] config){
         for (int x = 0; x < SIZE; ++x) {
             for (int y = 0; y < SIZE; ++y) {
                 Matrix[x][y] = config[x][y];

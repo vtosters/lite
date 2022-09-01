@@ -135,7 +135,7 @@ public class FeedFragment extends MaterialPreferenceToolbarFragment{
     public class openofficialsett implements Preference.OnPreferenceClickListener{
         @Override // android.support.v7.preference.Preference.c
         public boolean onPreferenceClick(Preference preference){
-            Context context = getContext();
+            Context context = requireContext();
             Intent a2 = new Navigator(NewsfeedSettingsFragment.class).b(context);
             a2.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
             context.startActivity(a2);

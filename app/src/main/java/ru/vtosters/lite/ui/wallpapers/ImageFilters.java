@@ -1,9 +1,8 @@
 package ru.vtosters.lite.ui.wallpapers;
 
-import static ru.vtosters.lite.ui.wallpapers.WallpapersHooks.removeWallpaper;
 import static ru.vtosters.lite.utils.AndroidUtils.getPreferences;
 import static ru.vtosters.lite.utils.AndroidUtils.getResources;
-import static ru.vtosters.lite.utils.AndroidUtils.sendToast;
+import static ru.vtosters.lite.utils.Preferences.hasVerification;
 
 import android.graphics.Bitmap;
 import android.graphics.Canvas;
@@ -20,21 +19,40 @@ import com.vk.medianative.MediaNative;
 
 import java.util.Random;
 
-public class ImageFilters {
+public class ImageFilters{
     public static final double PI = 3.14159d;
     public static final double HALF_CIRCLE_DEGREE = 180d;
     public static final double RANGE = 256d;
     public static final int COLOR_MIN = 0x00;
     public static final int COLOR_MAX = 0xFF;
 
-    public static Drawable getFilteredDrawable(Drawable orig) {
+    public static Drawable getFilteredDrawable(Drawable orig){
         if (orig == null) return null;
         if (!(orig instanceof BitmapDrawable)) return orig;
+
+        if (!getPreferences().getString("msg_blur_radius", "disabled").equals("disabled")) {
+            orig = getBlurredWallpaper(orig, getRadius());
+        }
+
+        if (!getPreferences().getString("msg_dim", "off").equals("off")) {
+            orig = getDimmed(orig);
+        }
+
+        if (!getPreferences().getString("msg_mosaic", "disabled").equals("disabled")) {
+            orig = getMosaic(orig);
+        }
+
+        if (!hasVerification()) {
+            return orig;
+        }
+
+        if (getPreferences().getBoolean("msg_monochrome", false)) {
+            orig = getMonochrome(orig);
+        }
+
         Bitmap bm = ((BitmapDrawable) orig).getBitmap();
 
-
         Bitmap instance = bm.copy(Bitmap.Config.ARGB_8888, true);
-
 
         if (getPreferences().getBoolean("msg_invert", false)) {
             instance = applyInvertEffect(instance);
@@ -63,7 +81,19 @@ public class ImageFilters {
         return new BitmapDrawable(getResources(), instance);
     }
 
-    public static Drawable getBlurredWallpaper(Drawable orig, int radius) {
+    private static int getRadius(){
+        String radius = getPreferences().getString("msg_blur_radius", "disabled");
+        switch(radius) {
+            case "low":
+                return 8;
+            case "med":
+                return 14;
+            default:
+                return 20;
+        }
+    }
+
+    public static Drawable getBlurredWallpaper(Drawable orig, int radius){
         try {
             if (orig == null) return null;
             if (!(orig instanceof BitmapDrawable)) return orig; // we need only BitmapDrawable
@@ -79,7 +109,7 @@ public class ImageFilters {
         }
     }
 
-    public static Drawable getMosaic(Drawable orig) {
+    public static Drawable getMosaic(Drawable orig){
         int scale = 100;
 
         if (orig == null) return null;
@@ -92,7 +122,7 @@ public class ImageFilters {
 
         String radius = getPreferences().getString("msg_mosaic", "disabled");
 
-        switch (radius) {
+        switch(radius) {
             case "high":
                 scale = 25;
                 break;
@@ -109,17 +139,15 @@ public class ImageFilters {
         return new BitmapDrawable(getResources(), mosaicBitmap);
     }
 
-    public static Drawable getDimmed(Drawable orig) {
+    public static Drawable getDimmed(Drawable orig){
         if (orig == null) return null;
         if (!(orig instanceof BitmapDrawable)) return orig;
         Bitmap bm = ((BitmapDrawable) orig).getBitmap();
 
-
         Bitmap instance = bm.copy(Bitmap.Config.ARGB_8888, true);
 
-
         String radius = getPreferences().getString("msg_dim", "disabled");
-        switch (radius) {
+        switch(radius) {
             case "dim_black":
                 darken(instance);
             case "dim_white":
@@ -128,7 +156,7 @@ public class ImageFilters {
         return new BitmapDrawable(getResources(), instance);
     }
 
-    public static Drawable getMonochrome(Drawable orig) {
+    public static Drawable getMonochrome(Drawable orig){
         if (orig == null) return null;
         if (!(orig instanceof BitmapDrawable)) return orig;
         Bitmap bm = ((BitmapDrawable) orig).getBitmap();
@@ -151,7 +179,7 @@ public class ImageFilters {
         return new BitmapDrawable(getResources(), bwBitmap);
     }
 
-    private static void darken(Bitmap bm) {
+    private static void darken(Bitmap bm){
         try {
             Canvas canvas = new Canvas(bm);
             Paint p = new Paint(Color.RED);
@@ -163,7 +191,7 @@ public class ImageFilters {
         }
     }
 
-    private static void lighten(Bitmap bm) {
+    private static void lighten(Bitmap bm){
         try {
             Canvas canvas = new Canvas(bm);
             Paint p = new Paint(Color.RED);
@@ -175,7 +203,7 @@ public class ImageFilters {
         }
     }
 
-    public static Bitmap applyInvertEffect(Bitmap src) {
+    public static Bitmap applyInvertEffect(Bitmap src){
         // create new bitmap with the same settings as source bitmap
         Bitmap bmOut = Bitmap.createBitmap(src.getWidth(), src.getHeight(), src.getConfig());
         // color info
@@ -205,7 +233,7 @@ public class ImageFilters {
         return bmOut;
     }
 
-    public static Bitmap applySepiaEffect(Bitmap src) {
+    public static Bitmap applySepiaEffect(Bitmap src){
         // image size
         int width = src.getWidth();
         int height = src.getHeight();
@@ -242,8 +270,8 @@ public class ImageFilters {
         return bmOut;
     }
 
-    public static Bitmap applyEmbossEffect(Bitmap src) {
-        double[][] EmbossConfig = new double[][]{
+    public static Bitmap applyEmbossEffect(Bitmap src){
+        double[][] EmbossConfig = new double[][] {
                 {-1, 0, -1},
                 {0, 4, 0},
                 {-1, 0, -1}
@@ -255,7 +283,7 @@ public class ImageFilters {
         return ConvolutionMatrix.computeConvolution3x3(src, convMatrix);
     }
 
-    public static Bitmap applyEngraveEffect(Bitmap src) {
+    public static Bitmap applyEngraveEffect(Bitmap src){
         ConvolutionMatrix convMatrix = new ConvolutionMatrix(3);
         convMatrix.setAll(0);
         convMatrix.Matrix[0][0] = -2;
@@ -265,7 +293,7 @@ public class ImageFilters {
         return ConvolutionMatrix.computeConvolution3x3(src, convMatrix);
     }
 
-    public static Bitmap applyFleaEffect(Bitmap source) {
+    public static Bitmap applyFleaEffect(Bitmap source){
         // get image size
         int width = source.getWidth();
         int height = source.getHeight();
@@ -294,7 +322,7 @@ public class ImageFilters {
         return bmOut;
     }
 
-    public static Bitmap applySnowEffect(Bitmap source) {
+    public static Bitmap applySnowEffect(Bitmap source){
         // get image size
         int width = source.getWidth();
         int height = source.getHeight();
@@ -327,7 +355,7 @@ public class ImageFilters {
         return bmOut;
     }
 
-    public Bitmap applyDecreaseColorDepthEffect(Bitmap src, int bitOffset) {
+    public Bitmap applyDecreaseColorDepthEffect(Bitmap src, int bitOffset){
         // get image size
         int width = src.getWidth();
         int height = src.getHeight();
@@ -370,7 +398,7 @@ public class ImageFilters {
         return bmOut;
     }
 
-    public Bitmap applyContrastEffect(Bitmap src, double value) {
+    public Bitmap applyContrastEffect(Bitmap src, double value){
         // image size
         int width = src.getWidth();
         int height = src.getHeight();
@@ -422,7 +450,7 @@ public class ImageFilters {
         return bmOut;
     }
 
-    public Bitmap applyBrightnessEffect(Bitmap src, int value) {
+    public Bitmap applyBrightnessEffect(Bitmap src, int value){
         // image size
         int width = src.getWidth();
         int height = src.getHeight();
@@ -473,8 +501,8 @@ public class ImageFilters {
         return bmOut;
     }
 
-    public Bitmap applyGaussianBlurEffect(Bitmap src) {
-        double[][] GaussianBlurConfig = new double[][]{
+    public Bitmap applyGaussianBlurEffect(Bitmap src){
+        double[][] GaussianBlurConfig = new double[][] {
                 {1, 2, 1},
                 {2, 4, 2},
                 {1, 2, 1}
@@ -486,8 +514,8 @@ public class ImageFilters {
         return ConvolutionMatrix.computeConvolution3x3(src, convMatrix);
     }
 
-    public Bitmap applySharpenEffect(Bitmap src, double weight) {
-        double[][] SharpConfig = new double[][]{
+    public Bitmap applySharpenEffect(Bitmap src, double weight){
+        double[][] SharpConfig = new double[][] {
                 {0, -2, 0},
                 {-2, weight, -2},
                 {0, -2, 0}
@@ -498,8 +526,8 @@ public class ImageFilters {
         return ConvolutionMatrix.computeConvolution3x3(src, convMatrix);
     }
 
-    public Bitmap applyMeanRemovalEffect(Bitmap src) {
-        double[][] MeanRemovalConfig = new double[][]{
+    public Bitmap applyMeanRemovalEffect(Bitmap src){
+        double[][] MeanRemovalConfig = new double[][] {
                 {-1, -1, -1},
                 {-1, 9, -1},
                 {-1, -1, -1}
@@ -511,7 +539,7 @@ public class ImageFilters {
         return ConvolutionMatrix.computeConvolution3x3(src, convMatrix);
     }
 
-    public Bitmap applySmoothEffect(Bitmap src, double value) {
+    public Bitmap applySmoothEffect(Bitmap src, double value){
         ConvolutionMatrix convMatrix = new ConvolutionMatrix(3);
         convMatrix.setAll(1);
         convMatrix.Matrix[1][1] = value;
@@ -520,7 +548,7 @@ public class ImageFilters {
         return ConvolutionMatrix.computeConvolution3x3(src, convMatrix);
     }
 
-    public Bitmap applyBoostEffect(Bitmap src, int type, float percent) {
+    public Bitmap applyBoostEffect(Bitmap src, int type, float percent){
         int width = src.getWidth();
         int height = src.getHeight();
         Bitmap bmOut = Bitmap.createBitmap(width, height, src.getConfig());
@@ -551,7 +579,7 @@ public class ImageFilters {
         return bmOut;
     }
 
-    public Bitmap applyTintEffect(Bitmap src, int degree) {
+    public Bitmap applyTintEffect(Bitmap src, int degree){
 
         int width = src.getWidth();
         int height = src.getHeight();
@@ -595,7 +623,7 @@ public class ImageFilters {
         return outBitmap;
     }
 
-    public Bitmap applyBlackFilter(Bitmap source) {
+    public Bitmap applyBlackFilter(Bitmap source){
         // get image size
         int width = source.getWidth();
         int height = source.getHeight();
@@ -628,7 +656,7 @@ public class ImageFilters {
         return bmOut;
     }
 
-    public Bitmap applyShadingFilter(Bitmap source, int shadingColor) {
+    public Bitmap applyShadingFilter(Bitmap source, int shadingColor){
         // get image size
         int width = source.getWidth();
         int height = source.getHeight();
@@ -652,7 +680,7 @@ public class ImageFilters {
         return bmOut;
     }
 
-    public Bitmap applySaturationFilter(Bitmap source, int level) {
+    public Bitmap applySaturationFilter(Bitmap source, int level){
         // get image size
         int width = source.getWidth();
         int height = source.getHeight();
@@ -682,7 +710,7 @@ public class ImageFilters {
         return bmOut;
     }
 
-    public Bitmap applyHueFilter(Bitmap source, int level) {
+    public Bitmap applyHueFilter(Bitmap source, int level){
         // get image size
         int width = source.getWidth();
         int height = source.getHeight();

@@ -1,10 +1,8 @@
 package ru.vtosters.lite.ui.fragments;
 
-import static ru.vtosters.lite.ui.wallpapers.WallpapersHooks.removeWallpaper;
 import static ru.vtosters.lite.utils.AndroidUtils.getGlobalContext;
 import static ru.vtosters.lite.utils.AndroidUtils.getIdentifier;
 import static ru.vtosters.lite.utils.AndroidUtils.getPreferences;
-import static ru.vtosters.lite.utils.AndroidUtils.sendToast;
 import static ru.vtosters.lite.utils.LifecycleUtils.restartApplicationWithTimer;
 import static ru.vtosters.lite.utils.Preferences.autoalltranslate;
 import static ru.vtosters.lite.utils.Preferences.vkme;
@@ -102,11 +100,11 @@ public class MessagesFragment extends MaterialPreferenceToolbarFragment {
     public class openwp implements Preference.OnPreferenceClickListener {
         @Override
         public boolean onPreferenceClick(Preference preference) {
-//            Context context = getContext();
-//            Intent a2 = new Navigator(WallpaperMenuFragment.class).b(context);
-//            a2.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-//            context.startActivity(a2);
-            sendToast("Обои временно недоступны. Следите за новостями на @vtosters в Telegram");
+            Context context = requireContext();
+            Intent a2 = new Navigator(WallpaperMenuFragment.class).b(context);
+            a2.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+            context.startActivity(a2);
+//            sendToast("Обои временно недоступны. Следите за новостями на @vtosters в Telegram");
             return true;
         }
     }

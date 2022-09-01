@@ -44,7 +44,7 @@ public class ThemesFragment extends MaterialPreferenceToolbarFragment {
     public class openicons implements Preference.OnPreferenceClickListener {
         @Override
         public boolean onPreferenceClick(Preference preference) {
-            Context context = getContext();
+            Context context = requireContext();
             Intent a2 = new Navigator(IconsFragment.class).b(context);
             a2.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
             context.startActivity(a2);
