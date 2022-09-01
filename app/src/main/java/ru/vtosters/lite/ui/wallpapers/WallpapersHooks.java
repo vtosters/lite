@@ -8,9 +8,9 @@ import static ru.vtosters.lite.utils.AndroidUtils.sendToast;
 import static ru.vtosters.lite.utils.Preferences.getBoolValue;
 
 import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
 import android.graphics.drawable.BitmapDrawable;
 import android.graphics.drawable.Drawable;
-import android.net.Uri;
 import android.view.View;
 import android.widget.ImageView;
 
@@ -37,7 +37,7 @@ public class WallpapersHooks{
         return mWallpaperFile;
     }
 
-    public static Uri getFilteredFile(){
+    public static Drawable getFilteredFile(){
         File file = null;
         File wp = mWallpaperFile;
         String temp = getGlobalContext().getFilesDir() + File.separator + "filteredwp.webp";
@@ -64,9 +64,9 @@ public class WallpapersHooks{
         }
 
         try {
-            return Uri.parse(temp);
+            return Drawable.createFromPath(temp);
         } catch (Exception e) {
-            return Uri.parse(file.getAbsolutePath());
+            return Drawable.createFromPath(file.getAbsolutePath());
         }
     }
 
@@ -82,7 +82,7 @@ public class WallpapersHooks{
 
     public static void setBg(View view){
         if (getWallpaper() != null) {
-            ((ImageView) view).setImageURI(getFilteredFile()); // set picture to background
+            ((ImageView) view).setImageDrawable(getFilteredFile()); // set picture to background
             return;
         }
 

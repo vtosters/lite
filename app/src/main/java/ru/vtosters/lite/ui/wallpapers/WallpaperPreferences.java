@@ -8,7 +8,6 @@ import static ru.vtosters.lite.utils.AndroidUtils.getIdentifier;
 import android.annotation.SuppressLint;
 import android.content.Context;
 import android.graphics.drawable.Drawable;
-import android.net.Uri;
 import android.util.AttributeSet;
 import android.widget.ImageView;
 
@@ -58,10 +57,10 @@ public class WallpaperPreferences extends Preference{
     }
 
     private void requestBg(){
-        Uri f = getFilteredFile();
+        final Drawable drawable = getFilteredFile();
 
-        if (f != null && getWallpaperFile() != null)
-            mChatBackground.setImageURI(f);
+        if (drawable != null && getWallpaperFile() != null)
+            mChatBackground.setImageDrawable(drawable);
         else
             mChatBackground.setImageDrawable(null);
     }
