@@ -13,7 +13,7 @@ import static ru.vtosters.lite.utils.Preferences.vkme_notifs;
 import android.os.Build;
 
 import com.vk.apps.AppsFragment;
-import com.vk.discover.ThemedFeedFragment;
+import com.vk.discover.DiscoverFragment;
 import com.vk.fave.fragments.FaveTabFragment;
 import com.vk.feedlikes.d.FeedLikesFragment;
 import com.vk.friends.catalog.FriendsCatalogFragment;
@@ -154,7 +154,7 @@ public class DockBarEditorManager {
                         milkshake() ? R.drawable.ic_services_outline_28 : R.drawable.ic_menu_search_outline_28,
                         milkshake() ? R.string.super_app_title : R.string.search,
                         R.id.tab_discover,
-                        milkshake() ? (superapp() ? SuperAppFragment.class : SearchMenuFragment.class) : ThemedFeedFragment.class);
+                        milkshake() ? (superapp() ? SuperAppFragment.class : SearchMenuFragment.class) : DiscoverFragment.class);
             case "tab_messages":
                 return DockBarTab.valuesOf(
                         "tab_messages",

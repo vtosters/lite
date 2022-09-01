@@ -10,7 +10,7 @@ import static ru.vtosters.lite.utils.Preferences.videonewcatalog;
 import static ru.vtosters.lite.utils.Preferences.vkme;
 
 import com.vk.apps.AppsFragment;
-import com.vk.discover.ThemedFeedFragment;
+import com.vk.discover.DiscoverFragment;
 import com.vk.fave.fragments.FaveTabFragment;
 import com.vk.menu.MenuFragment;
 import com.vk.menu.SearchMenuFragment;
@@ -59,7 +59,7 @@ public class StartFragmentHook {
             case "apps":
                 return AppsFragment.class;
             case "discover":
-                return ThemedFeedFragment.class;
+                return DiscoverFragment.class;
             case "notifications":
                 return NotificationsContainerFragment.class;
             case "money":
