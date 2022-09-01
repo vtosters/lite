@@ -1,6 +1,6 @@
 package ru.vtosters.lite.ui.wallpapers;
 
-import static ru.vtosters.lite.ui.wallpapers.WallpapersHooks.getWallpaper;
+import static ru.vtosters.lite.ui.wallpapers.WallpapersHooks.getFilteredFile;
 import static ru.vtosters.lite.ui.wallpapers.WallpapersHooks.getWallpaperFile;
 import static ru.vtosters.lite.utils.AndroidUtils.dp2px;
 import static ru.vtosters.lite.utils.AndroidUtils.getIdentifier;
@@ -57,9 +57,9 @@ public class WallpaperPreferences extends Preference{
     }
 
     private void requestBg(){
-        final Drawable drawable = getWallpaper();
+        final Drawable drawable = getFilteredFile();
 
-        if (drawable != null && getWallpaperFile().exists())
+        if (drawable != null && getWallpaperFile() != null)
             mChatBackground.setImageDrawable(drawable);
         else
             mChatBackground.setImageDrawable(null);

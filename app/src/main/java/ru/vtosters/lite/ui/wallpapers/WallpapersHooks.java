@@ -25,7 +25,6 @@ import vigo.sdk.Log;
 public class WallpapersHooks{
     private static final boolean compress = getBoolValue("compresswp", true);
     private static File mWallpaperFile;
-    private static File mWallpaperFilteredFile;
     private static Drawable mWallpaper;
     private static boolean mUpdateWallpaperRequested = true;
     private static boolean mUpdateWallpaperFileRequested = true;
@@ -33,59 +32,23 @@ public class WallpapersHooks{
     public static File getWallpaperFile(){
         if (mWallpaperFile == null) {
             mWallpaperFile = new File(getGlobalContext().getFilesDir(), "wallpaper.webp");
-
-            Log.d("Wallpapers", "updated");
-        }
-
-        if (compress) {
-            mWallpaperFilteredFile = getCompressedFile();
-        }
-
-        if (compress && mWallpaperFilteredFile != null) {
-            return mWallpaperFilteredFile;
         }
 
         return mWallpaperFile;
     }
 
-    public static File getCompressedFile(){
-        File file = null;
-        String temp = getGlobalContext().getFilesDir() + File.separator + "tempwp.webp";
-
-        if (mWallpaperFile.exists()) {
-            try {
-                file = new File(temp);
-                file.createNewFile();
-
-                ByteArrayOutputStream bos = new ByteArrayOutputStream();
-                BitmapFactory.decodeFile(mWallpaperFile.getAbsolutePath()).compress(Bitmap.CompressFormat.WEBP, 85, bos);
-                byte[] bitmapdata = bos.toByteArray();
-
-                FileOutputStream fos = new FileOutputStream(file);
-                fos.write(bitmapdata);
-                fos.flush();
-                fos.close();
-
-            } catch (Exception e) {
-                Log.d("Wallpapers", e.getMessage());
-            }
-        }
-
-        return file;
-    }
-
     public static Drawable getFilteredFile(){
         File file = null;
-        File wp = compress ? mWallpaperFilteredFile : mWallpaperFile;
+        File wp = mWallpaperFile;
         String temp = getGlobalContext().getFilesDir() + File.separator + "filteredwp.webp";
 
-        if (mWallpaperFile.exists() && mUpdateWallpaperFileRequested) {
+        if (wp != null && mUpdateWallpaperFileRequested) {
             try {
                 file = new File(temp);
                 file.createNewFile();
 
                 ByteArrayOutputStream bos = new ByteArrayOutputStream();
-                ((BitmapDrawable) getFilteredDrawable(Drawable.createFromPath(wp.getAbsolutePath()))).getBitmap().compress(Bitmap.CompressFormat.WEBP, 98, bos);
+                ((BitmapDrawable) getFilteredDrawable(Drawable.createFromPath(wp.getAbsolutePath()))).getBitmap().compress(Bitmap.CompressFormat.WEBP, (compress ? 80 : 95), bos);
                 byte[] bitmapdata = bos.toByteArray();
 
                 FileOutputStream fos = new FileOutputStream(file);
@@ -212,7 +175,6 @@ public class WallpapersHooks{
             new File(getGlobalContext().getFilesDir(), "tempwp.webp").delete();
             new File(getGlobalContext().getFilesDir(), "filteredwp.webp").delete();
             mWallpaperFile = null;
-            mWallpaperFilteredFile = null;
         } catch (Exception e) {
             Log.d("Wallpapers", e.getMessage());
         }
