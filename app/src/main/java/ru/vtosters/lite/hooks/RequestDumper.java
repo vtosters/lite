@@ -20,7 +20,7 @@ public class RequestDumper{
         }
 
         paramslist.a(method);
-        paramslist.a(params);
+        paramslist.a((Map<String, String>) params);
         paramslist.b(apiver);
     }
 }
