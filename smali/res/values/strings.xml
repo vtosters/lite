@@ -5785,7 +5785,6 @@ You need to restart the application to apply proxy settings"</string>
     <string name="screenshotdetect_summ">Turn off the notification that you took a screenshot</string>
     <string name="hideDeviceInfo_title">Disable sending metric</string>
     <string name="hideDeviceInfo_summ">Disable sending information about the user\'s device and your location</string>
-    <string name="newadblock_title">Use new AdBlock (Beta)</string>
     <string name="podcastcatalog_title">Add podcast catalog</string>
     <string name="useNewSettings_title">Use new settings</string>
     <string name="musicFixNew_title">Music fix v2</string>

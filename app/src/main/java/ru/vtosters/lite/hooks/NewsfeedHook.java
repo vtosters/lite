@@ -37,33 +37,6 @@ import java.util.List;
 import ru.vtosters.lite.utils.AccountManagerUtils;
 
 public class NewsfeedHook {
-    public static boolean injectFilters(JSONObject obj) throws JSONException {
-        if (getBoolValue("newadblock", true)) return true;
-
-        var optString = obj.optString("type", "");
-        if (isAds(optString) || isAuthorRecommendations(optString) || isPostRecommendations(optString) || isFriendsRecommendations(optString) || isRecomsGroup(optString) || isMusicBlock(optString) || isNewsBlock(optString)) {
-            return false;
-        }
-        optString = obj.optString("post_type", "");
-        if (isAds(optString) || isAuthorRecommendations(optString) || isPostRecommendations(optString) || isFriendsRecommendations(optString) || isMusicBlock(optString) || isNewsBlock(optString)) {
-            return false;
-        }
-        optString = obj.optString("filters", "");
-        if (isAds(optString) || isAuthorRecommendations(optString) || isPostRecommendations(optString) || isFriendsRecommendations(optString)) {
-            return false;
-        }
-
-        if (checkCopyright(obj)) return false;
-
-        if (isBadNews(obj.optString("text", ""))) return false;
-
-        if (checkCaption(obj)) return false;
-
-        if (isGroupAds(obj)) return false;
-
-        return !injectFiltersReposts(obj);
-    } // inject our filters to newsfeed, getpost and discover
-
     public static long getUpdateNewsfeed(boolean refresh_timeout) {
         if (vkme()) {
             return MAX_VALUE;

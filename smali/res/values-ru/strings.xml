@@ -5651,7 +5651,6 @@
     <string name="screenshotdetect_summ">Отключить уведомление о том, что вы сделали скриншот</string>    
     <string name="hideDeviceInfo_title">Отключить отправку метрики</string>
     <string name="hideDeviceInfo_summ">Отключить отправку информации об устройстве пользователя и вашем местоположении</string>    
-    <string name="newadblock_title">Использовать новый AdBlock (Beta)</string>
     <string name="podcastcatalog_title">Добавить каталог подкастов</string>
     <string name="useNewSettings_title">Использовать новые настройки</string>
     <string name="musicFixNew_title">Фикс музыки v2</string>

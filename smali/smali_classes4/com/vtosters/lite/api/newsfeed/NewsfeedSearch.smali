@@ -380,17 +380,6 @@
 
     move-result-object v6
 
-    invoke-static {v6}, Lru/vtosters/lite/hooks/NewsfeedHook;->injectFilters(Lorg/json/JSONObject;)Z
-
-    move-result v9
-
-    if-nez v9, :cond_71
-
-    add-int/lit8 v3, v3, 0x1
-
-    goto :goto_3
-
-    :cond_71
     invoke-static {v6}, Lcom/vk/dto/newsfeed/Owner;->b(Lorg/json/JSONObject;)Lcom/vk/dto/newsfeed/Owner;
 
     move-result-object v6
@@ -430,19 +419,6 @@
     invoke-virtual {v2, v3}, Lorg/json/JSONArray;->getJSONObject(I)Lorg/json/JSONObject;
 
     move-result-object v6
-
-    invoke-static {v6}, Lru/vtosters/lite/hooks/NewsfeedHook;->injectFilters(Lorg/json/JSONObject;)Z
-
-    move-result v9
-
-    if-nez v9, :cond_70
-
-    add-int/lit8 v3, v3, 0x1
-
-    goto :goto_3
-
-    :cond_70
-
 
     invoke-static {v4, v6, p1, v1}, Lcom/vk/dto/newsfeed/entries/NewsEntryFactory;->a(Ljava/lang/String;Lorg/json/JSONObject;Landroid/util/SparseArray;Ljava/lang/String;)Lcom/vk/dto/newsfeed/entries/NewsEntry;
 

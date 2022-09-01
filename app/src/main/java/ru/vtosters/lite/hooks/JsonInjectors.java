@@ -497,7 +497,6 @@ public class JsonInjectors {
     }
 
     public static JSONArray newsfeedadtest(JSONArray items) throws JSONException {
-        if (!getBoolValue("newadblock", true)) return items;
         var newItems = new JSONArray();
 
         for (int j = 0; j < items.length(); j++) {

@@ -251,19 +251,6 @@
 
     move-result-object v0
 
-    invoke-static {v0}, Lru/vtosters/lite/hooks/NewsfeedHook;->injectFilters(Lorg/json/JSONObject;)Z
-
-    move-result v15
-
-    if-nez v15, :cond_99
-
-    add-int/lit8 v10, v10, 0x1
-
-    goto :goto_5
-
-    :cond_99
-
-
     invoke-static {v0, v6}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 22

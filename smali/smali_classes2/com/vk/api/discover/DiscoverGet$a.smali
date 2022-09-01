@@ -65,17 +65,6 @@
 
     move-result-object v2
 
-    invoke-static {v2}, Lru/vtosters/lite/hooks/NewsfeedHook;->injectFilters(Lorg/json/JSONObject;)Z
-
-    move-result v10
-
-    if-nez v10, :cond_2
-
-    add-int/lit8 v0, v0, 0x1
-
-    goto :goto_0
-
-    :cond_2
     if-eqz v2, :cond_0
 
     .line 47
@@ -242,17 +231,6 @@
 
     move-result-object v2
 
-    invoke-static {v2}, Lru/vtosters/lite/hooks/NewsfeedHook;->injectFilters(Lorg/json/JSONObject;)Z
-
-    move-result v10
-
-    if-nez v10, :cond_2
-
-    add-int/lit8 v0, v0, 0x1
-
-    goto :goto_0
-
-    :cond_2
     if-eqz v2, :cond_0
 
     .line 3
