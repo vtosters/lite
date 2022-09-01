@@ -90,10 +90,6 @@
 
     .line 15
     :goto_0
-    invoke-static {p2}, Lru/vtosters/lite/hooks/JsonInjectors;->newsfeedadtest(Lorg/json/JSONArray;)Lorg/json/JSONArray;
-
-    move-result-object p2
-
     invoke-virtual {p2}, Lorg/json/JSONArray;->length()I
 
     move-result v2
