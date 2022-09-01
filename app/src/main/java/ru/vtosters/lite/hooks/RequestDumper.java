@@ -8,7 +8,7 @@ import com.vk.api.internal.MethodCall;
 import java.util.LinkedHashMap;
 
 public class RequestDumper{
-    public static void addParams(MethodCall.a paramslist, String method, LinkedHashMap params, String apiver) {
+    public static void addParams(MethodCall.a paramslist, String method, LinkedHashMap<String, String> params, String apiver) {
         if (method.contains("execute.getGiftByStickerId") ) {
             apiver = "5.187";
         }
@@ -20,7 +20,7 @@ public class RequestDumper{
         }
 
         paramslist.a(method);
-        paramslist.a((Map<String, String>) params);
+        paramslist.a(params);
         paramslist.b(apiver);
     }
 }
