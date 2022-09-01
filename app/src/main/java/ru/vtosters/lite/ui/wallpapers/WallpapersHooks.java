@@ -210,6 +210,7 @@ public class WallpapersHooks{
         try {
             new File(getGlobalContext().getFilesDir(), "wallpaper.webp").delete();
             new File(getGlobalContext().getFilesDir(), "tempwp.webp").delete();
+            new File(getGlobalContext().getFilesDir(), "filteredwp.webp").delete();
             mWallpaperFile = null;
             mWallpaperFilteredFile = null;
         } catch (Exception e) {
