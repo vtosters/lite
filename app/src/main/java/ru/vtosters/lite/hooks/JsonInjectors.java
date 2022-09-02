@@ -214,7 +214,7 @@ public class JsonInjectors {
 
         for (int i = 0; i < items.length(); i++) {
             var curr = items.getJSONObject(i);
-            if (!curr.optString("template").contains("info")){
+            if (!curr.optString("template").contains("info") || !curr.optString("template").contains("ads")){
                 newObj.put(items.optJSONObject(i));
             }
         }
