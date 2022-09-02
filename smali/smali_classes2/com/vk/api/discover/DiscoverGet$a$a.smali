@@ -257,7 +257,7 @@
     goto :goto_2
 
     :cond_6
-    const-string v0, "null"
+    const-string v0, "ads"
 
     .line 14
     :goto_2
@@ -679,8 +679,6 @@
 
     .line 42
     :goto_c
-    const/4 v2, 0x0
-
     new-instance v32, Lcom/vk/dto/discover/DiscoverItem;
 
     move-object/from16 v4, v32
