@@ -204,6 +204,65 @@ public class JsonInjectors {
         return json;
     }
 
+    public static JSONObject discoverInject(JSONObject json) throws JSONException, ParseException, IOException {
+        var items = json.optJSONArray("items");
+        var newObj = new JSONArray();
+
+        newsfeedadtest(items); // adblock
+
+//        newObj.put(discoverObj()); // template injection
+
+        for (int i = 0; i < items.length(); i++) {
+            var curr = items.getJSONObject(i);
+            if (!curr.optString("template").contains("info")){
+                newObj.put(items.optJSONObject(i));
+            }
+        }
+
+        json.put("items", newObj);
+
+        return json;
+    }
+
+    public static JSONObject discoverObj() throws JSONException, ParseException, IOException {
+        var mainjson = new JSONObject();
+
+        var info = new JSONObject();
+        info.put("title", "Test Injection");
+        info.put("text_color", "#ffffff");
+        info.put("description", "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat");
+
+        var image = new JSONArray();
+        var imageQuality1 = new JSONObject();
+        imageQuality1.put("url", "https://w7.pngwing.com/pngs/505/1021/png-transparent-konata-izumi-lucky-star-desktop-anime-anime-blue-mammal-face.png");
+        imageQuality1.put("width", 72); // 72, 108, 144, 216, 288
+        imageQuality1.put("height", 72); // 72, 108, 144, 216, 288
+        image.put(imageQuality1);
+
+        var background = new JSONArray();
+        var backgroundQuality1 = new JSONObject();
+        backgroundQuality1.put("url", "https://2ch.life/vg/arch/2022-08-22/src/38524739/16440606579870.jpg");
+        backgroundQuality1.put("width", 344); // 344, 516, 680, 1032, 1376
+        backgroundQuality1.put("height", 215); // 215, 323, 426, 645, 860
+        background.put(backgroundQuality1);
+
+        info.put("image", image);
+        info.put("background", background);
+
+        mainjson.put("info", info);
+        mainjson.put("track_code", "info_banner_donut_catalog");
+        mainjson.put("template", "info");
+
+        var action = new JSONObject();
+        action.put("type", "open_url");
+        action.put("url", "vk.com/vtosters_official");
+        action.put("target", "internal");
+
+        mainjson.put("action", action);
+
+        return mainjson;
+    }
+
     public static JSONObject menu(JSONObject orig) throws JSONException {
         var Special = orig.optJSONArray("special");
         var Main = orig.getJSONArray("main");
