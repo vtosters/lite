@@ -208,7 +208,7 @@
 .method public constructor <init>(Lorg/json/JSONObject;Z)V
     .locals 7
 
-    invoke-static {p1, p2}, Lru/vtosters/lite/hooks/JsonInjectors;->storiesads(Lorg/json/JSONObject;Z)Lorg/json/JSONObject;
+    invoke-static {p1, p2}, Lru/vtosters/lite/hooks/AdBlockHook;->storiesads(Lorg/json/JSONObject;Z)Lorg/json/JSONObject;
 
     move-result-object p1
 
@@ -398,7 +398,7 @@
 
     const v0, 0x0
 
-    invoke-static {p1, v0}, Lru/vtosters/lite/hooks/JsonInjectors;->storiesads(Lorg/json/JSONObject;Z)Lorg/json/JSONObject;
+    invoke-static {p1, v0}, Lru/vtosters/lite/hooks/AdBlockHook;->storiesads(Lorg/json/JSONObject;Z)Lorg/json/JSONObject;
 
     move-result-object p1
 

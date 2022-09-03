@@ -23,7 +23,7 @@ import java.util.Arrays;
 import java.util.List;
 import java.util.Scanner;
 
-import ru.vtosters.lite.hooks.JsonInjectors;
+import ru.vtosters.lite.hooks.AdBlockHook;
 
 public class NewsFeedFiltersUtils {
     public static List<String> mFilters;
@@ -58,16 +58,22 @@ public class NewsFeedFiltersUtils {
     }
 
     public static void getFilter(String boolname, String filename, List<String> list) {
+        var ctx = getGlobalContext();
+
         if (getBoolValue(boolname, false)) {
             try {
-                var scanner = new Scanner(getGlobalContext().getAssets().open(filename));
-                while (scanner.hasNextLine()) {
-                    var line = scanner.nextLine();
-                    if (!line.isEmpty())
-                        list.add(line.toLowerCase());
+                Scanner scanner;
+                if (ctx != null) {
+                    scanner = new Scanner(ctx.getAssets().open(filename));
+
+                    while (scanner.hasNextLine()) {
+                        var line = scanner.nextLine();
+                        if (!line.isEmpty())
+                            list.add(line.toLowerCase());
+                    }
                 }
             } catch (IOException e) {
-                e.printStackTrace();
+                Log.d("NewsFeedFiltersUtils", e.getMessage());
             }
         }
     } // Get needed filter list from assets
@@ -75,25 +81,27 @@ public class NewsFeedFiltersUtils {
     public static boolean injectFiltersReposts(JSONObject obj) throws JSONException {
         if (getBoolValue("cringerepost", false) && obj.has("copy_history")) {
             var copyHistoryNode = obj.optJSONArray("copy_history");
-            for (int i = 0; i < copyHistoryNode.length(); i++) {
-                var item = copyHistoryNode.optJSONObject(i);
-                var text = item.optString("text");
+            if (copyHistoryNode != null) {
+                for (int i = 0; i < copyHistoryNode.length(); i++) {
+                    var item = copyHistoryNode.optJSONObject(i);
+                    var text = item.optString("text");
 
-                if (isBadNews(text)) {
-                    if (dev())
-                        Log.d("RepostFilter", "Fetched repost ad (isBadNews), owner id " + item.optString("owner_id") + ", text: " + text);
-                    return true;
-                } else if (JsonInjectors.isAds(item, item.optString("post_type"))) {
-                    if (dev())
-                        Log.d("RepostFilter", "Fetched repost ad (ads), owner id " + item.optString("owner_id") + ", text: " + text);
-                    return true;
-                }
-
-                for (String filter : mFiltersLinks) {
-                    if (text.contains(filter)) {
+                    if (isBadNews(text)) {
                         if (dev())
-                            Log.d("RepostFilter", "Fetched repost ad, owner id " + item.optString("owner_id") + ", text: " + text);
+                            Log.d("RepostFilter", "Fetched repost ad (isBadNews), owner id " + item.optString("owner_id") + ", text: " + text);
                         return true;
+                    } else if (AdBlockHook.isAds(item, item.optString("post_type"))) {
+                        if (dev())
+                            Log.d("RepostFilter", "Fetched repost ad (ads), owner id " + item.optString("owner_id") + ", text: " + text);
+                        return true;
+                    }
+
+                    for (String filter : mFiltersLinks) {
+                        if (text.contains(filter)) {
+                            if (dev())
+                                Log.d("RepostFilter", "Fetched repost ad, owner id " + item.optString("owner_id") + ", text: " + text);
+                            return true;
+                        }
                     }
                 }
             }
@@ -106,15 +114,25 @@ public class NewsFeedFiltersUtils {
             if (copyright_post()) return true;
 
             var copyright = json.optJSONObject("copyright");
-            var copyrightName = copyright.getString("name").toLowerCase();
-            var copyrightLink = copyright.getString("link").toLowerCase();
-            
+
+            String copyrightName = null;
+
+            if (copyright != null) {
+                copyrightName = copyright.getString("name").toLowerCase();
+            }
+
+            String copyrightLink = null;
+
+            if (copyright != null) {
+                copyrightLink = copyright.getString("link").toLowerCase();
+            }
+
             for (String filter : mFiltersNames) {
-                if (copyrightName.contains(filter)) return true;
+                if (copyrightName != null && copyrightName.contains(filter)) return true;
             }
 
             for (String filter : mFiltersLinks) {
-                if (copyrightLink.contains(filter)) return true;
+                if (copyrightLink != null && copyrightLink.contains(filter)) return true;
             }
         }
         return false;
@@ -154,12 +172,15 @@ public class NewsFeedFiltersUtils {
             var caption = postJson.optJSONObject("caption");
             if (postsrecomm()) {
                 try {
-                    var type = caption.getString("type");
-                    return type.equals("explorebait") || // Может быть интересно
-                            type.equals("shared") || // Поделился записью
-                            type.equals("digest") || // Рекомедации
-                            type.equals("commented") || // Комментирует
-                            type.equals("voted"); // Проголосовал в опросе
+                    String type;
+                    if (caption != null) {
+                        type = caption.getString("type");
+                        return type.equals("explorebait") || // Может быть интересно
+                                type.equals("shared") || // Поделился записью
+                                type.equals("digest") || // Рекомедации
+                                type.equals("commented") || // Комментирует
+                                type.equals("voted"); // Проголосовал в опросе
+                    }
                 } catch (JSONException e) {
                     Log.d("checkCaption", "Caption error");
                 }
