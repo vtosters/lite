@@ -30,10 +30,6 @@ public class CacheUtils {
         return sInstance;
     }
 
-    public static void deleteCache() {
-        IOUtils.deleteRecursive(getGlobalContext().getCacheDir());
-    }
-
     @SuppressLint("DefaultLocale")
     public static String humanReadableByteCountBin(long bytes) {
         long absB = bytes == Long.MIN_VALUE ? Long.MAX_VALUE : Math.abs(bytes);
@@ -58,7 +54,6 @@ public class CacheUtils {
             VKImageLoader.e();
             ImAudioMsgPlayerProvider.b().e(PlayerActionSources.a);
             ImAudioMsgPlayerProvider.b().d(PlayerActionSources.a);
-            FileUtils.l();
             Stickers.l.c();
             ImEngineExt.a(ImEngine1.a());
             AutoPlayCacheHolder.d.a();
