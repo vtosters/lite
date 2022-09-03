@@ -1,10 +1,5 @@
 package com.vk.core.util;
 
-import static ru.vtosters.lite.utils.Preferences.getDownloadsDir;
-import static ru.vtosters.lite.utils.Preferences.getMusicDir;
-import static ru.vtosters.lite.utils.Preferences.getPhotosDir;
-import static ru.vtosters.lite.utils.Preferences.getVideosDir;
-
 import android.annotation.SuppressLint;
 import android.app.DownloadManager;
 import android.content.ActivityNotFoundException;
@@ -13,6 +8,7 @@ import android.content.Intent;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteException;
 import android.net.Uri;
+import android.os.Environment;
 import android.text.TextUtils;
 
 import com.facebook.common.i.MediaUtils;
@@ -62,14 +58,14 @@ public class DownloadUtils {
         boolean c2 = MediaUtils.c(MediaUtils.b(str2));
 
         if (file.endsWith(".jpg") || file.endsWith(".png") || file.endsWith(".jpeg")) {
-            b2 = new File(getPhotosDir(), file);
+            b2 = new File(Environment.DIRECTORY_PICTURES, file);
             pic = true;
         } else if (file.endsWith(".mp3") || file.endsWith(".wav") || file.endsWith(".ogg") || file.endsWith(".aac") || file.endsWith(".flac") || file.endsWith(".m4a")) {
-            b2 = new File(getMusicDir(), file);
+            b2 = new File(Environment.DIRECTORY_MUSIC, file);
         } else if (file.endsWith(".mp4") || file.endsWith(".mkv") || file.endsWith(".avi") || file.endsWith(".flv") || file.endsWith(".wmv") || file.endsWith(".mov") || file.endsWith(".3gp")) {
-            b2 = new File(getVideosDir(), file);
+            b2 = new File(Environment.DIRECTORY_MOVIES, file);
         } else {
-            b2 = new File(getDownloadsDir(), file);
+            b2 = new File(Environment.DIRECTORY_DOWNLOADS, file);
         }
 
         if (c2) {

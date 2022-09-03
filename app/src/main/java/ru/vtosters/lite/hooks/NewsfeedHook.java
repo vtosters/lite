@@ -3,18 +3,6 @@ package ru.vtosters.lite.hooks;
 import static java.lang.Long.MAX_VALUE;
 import static ru.vtosters.lite.utils.AndroidUtils.getDefaultPrefs;
 import static ru.vtosters.lite.utils.AndroidUtils.getPrefsValue;
-import static ru.vtosters.lite.utils.NewsFeedFiltersUtils.checkCaption;
-import static ru.vtosters.lite.utils.NewsFeedFiltersUtils.checkCopyright;
-import static ru.vtosters.lite.utils.NewsFeedFiltersUtils.injectFiltersReposts;
-import static ru.vtosters.lite.utils.NewsFeedFiltersUtils.isAds;
-import static ru.vtosters.lite.utils.NewsFeedFiltersUtils.isAuthorRecommendations;
-import static ru.vtosters.lite.utils.NewsFeedFiltersUtils.isBadNews;
-import static ru.vtosters.lite.utils.NewsFeedFiltersUtils.isFriendsRecommendations;
-import static ru.vtosters.lite.utils.NewsFeedFiltersUtils.isGroupAds;
-import static ru.vtosters.lite.utils.NewsFeedFiltersUtils.isMusicBlock;
-import static ru.vtosters.lite.utils.NewsFeedFiltersUtils.isNewsBlock;
-import static ru.vtosters.lite.utils.NewsFeedFiltersUtils.isPostRecommendations;
-import static ru.vtosters.lite.utils.NewsFeedFiltersUtils.isRecomsGroup;
 import static ru.vtosters.lite.utils.Preferences.ads;
 import static ru.vtosters.lite.utils.Preferences.adsslider;
 import static ru.vtosters.lite.utils.Preferences.authorsrecomm;
@@ -24,9 +12,6 @@ import static ru.vtosters.lite.utils.Preferences.vkme;
 
 import com.vk.core.preference.Preference;
 import com.vtosters.lite.api.ExtendedCommunityProfile;
-
-import org.json.JSONException;
-import org.json.JSONObject;
 
 import java.util.ArrayList;
 import java.util.Collections;

@@ -1,11 +1,11 @@
 package ru.vtosters.lite.music;
 
 import static ru.vtosters.lite.proxy.ProxyUtils.getApi;
-import static ru.vtosters.lite.utils.Preferences.getMusicDir;
 
 import android.app.DownloadManager;
 import android.net.Uri;
 import android.os.Build;
+import android.os.Environment;
 import android.util.Log;
 import android.widget.Toast;
 
@@ -79,7 +79,7 @@ public class MP3Downloader {
                 .setAllowedOverRoaming(true)
                 .setTitle("Downloading " + title)
                 .setDestinationInExternalFilesDir(AndroidUtils.getGlobalContext(),
-                        getMusicDir().getAbsolutePath(),
+                        Environment.DIRECTORY_MUSIC,
                         title + ".mp3")
                 .setVisibleInDownloadsUi(true);
         downloadManager.enqueue(request);

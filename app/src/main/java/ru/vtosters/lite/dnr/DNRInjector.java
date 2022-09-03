@@ -16,7 +16,6 @@ import static ru.vtosters.lite.utils.AccountManagerUtils.getUserToken;
 import static ru.vtosters.lite.utils.AndroidUtils.getIdentifier;
 import static ru.vtosters.lite.utils.AndroidUtils.getString;
 import static ru.vtosters.lite.utils.AndroidUtils.sendToast;
-import static ru.vtosters.lite.utils.Preferences.getDownloadsDir;
 
 import android.annotation.SuppressLint;
 import android.content.Context;
@@ -167,7 +166,7 @@ public class DNRInjector {
         }
 
         if (action == DialogAction.DOWNLOAD) {
-            File out = new File(Environment.getExternalStoragePublicDirectory(getDownloadsDir().getName()), "dialog-" + peerId + ".html");
+            File out = new File(Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_DOWNLOADS), "dialog-" + peerId + ".html");
             try {
                 new MessagesDownloader().downloadDialog(peerId, new MessagesDownloader.HtmlDialogDownloaderFormatProvider(), out);
             } catch (Exception e) {
@@ -220,7 +219,7 @@ public class DNRInjector {
         }
 
         if (action == DialogAction.DOWNLOAD) {
-            File out = new File(Environment.getExternalStoragePublicDirectory(getDownloadsDir().getPath()), peerId + "-dialog.html");
+            File out = new File(Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_DOWNLOADS), peerId + "-dialog.html");
             try {
                 new MessagesDownloader().downloadDialog(peerId, new MessagesDownloader.HtmlDialogDownloaderFormatProvider(), out);
             } catch (Exception e) {

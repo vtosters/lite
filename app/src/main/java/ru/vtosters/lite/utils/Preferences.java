@@ -4,11 +4,7 @@ import static java.lang.Long.MAX_VALUE;
 import static ru.vtosters.lite.proxy.ProxyUtils.setProxy;
 import static ru.vtosters.lite.utils.AndroidUtils.edit;
 import static ru.vtosters.lite.utils.AndroidUtils.getGlobalContext;
-import static ru.vtosters.lite.utils.AndroidUtils.getPreferences;
 import static ru.vtosters.lite.utils.AndroidUtils.getPrefsValue;
-import static ru.vtosters.lite.utils.CacheUtils.getInstance;
-import static ru.vtosters.lite.utils.DeletedMessagesHandler.reloadMessagesList;
-import static ru.vtosters.lite.utils.NewsFeedFiltersUtils.setupFilters;
 import static ru.vtosters.lite.utils.SignatureChecker.validateAppSignature;
 import static ru.vtosters.lite.utils.ThemesUtils.isDarkTheme;
 import static ru.vtosters.lite.utils.VTVerifications.isPrometheus;
@@ -18,13 +14,11 @@ import android.app.Application;
 import android.content.Context;
 import android.content.SharedPreferences;
 import android.content.pm.PackageManager;
-import android.os.Environment;
 import android.preference.PreferenceManager;
 
 import com.vtosters.lite.data.Users;
 import com.vtosters.lite.fragments.SettingsListFragment;
 
-import java.io.File;
 import java.security.NoSuchAlgorithmException;
 
 import ru.vtosters.lite.ui.fragments.VTSettings;
@@ -376,29 +370,5 @@ public class Preferences {
             return 100;
         }
         return origquality;
-    }
-
-    public static File getDownloadsDir() {
-        return new File(getPreferences().getString(
-                "downloads_directory",
-                Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_DOWNLOADS).getAbsolutePath()));
-    }
-
-    public static File getPhotosDir() {
-        return new File(getPreferences().getString(
-                "photos_directory",
-                Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_PICTURES).getAbsolutePath()));
-    }
-
-    public static File getVideosDir() {
-        return new File(getPreferences().getString(
-                "videos_directory",
-                Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_MOVIES).getAbsolutePath()));
-    }
-
-    public static File getMusicDir() {
-        return new File(getPreferences().getString(
-                "music_directory",
-                Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_MUSIC).getAbsolutePath()));
     }
 }

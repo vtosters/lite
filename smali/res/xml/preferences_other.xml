@@ -20,9 +20,6 @@
             android:key="applicationstop"
             android:title="@string/killappbtn" />
         <Preference
-            android:key="resetfolders"
-            android:title="@string/reset_folders_locations" />
-        <Preference
             android:key="tokencopy"
             android:title="@string/copytokenbtn" />
         <Preference

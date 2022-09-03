@@ -9,12 +9,9 @@ import static ru.vtosters.lite.ui.components.BackupManager.deletePrefs;
 import static ru.vtosters.lite.ui.components.BackupManager.restoreBackup;
 import static ru.vtosters.lite.utils.AccountManagerUtils.getUserToken;
 import static ru.vtosters.lite.utils.AndroidUtils.dp2px;
-import static ru.vtosters.lite.utils.AndroidUtils.edit;
 import static ru.vtosters.lite.utils.AndroidUtils.getDefaultPrefs;
 import static ru.vtosters.lite.utils.AndroidUtils.getIdentifier;
-import static ru.vtosters.lite.utils.AndroidUtils.sendToast;
 import static ru.vtosters.lite.utils.LifecycleUtils.restartApplication;
-import static ru.vtosters.lite.utils.NewsFeedFiltersUtils.setupFilters;
 import static ru.vtosters.lite.utils.ThemesUtils.getTextAttr;
 
 import android.annotation.SuppressLint;
@@ -94,12 +91,6 @@ public class OtherFragment extends MaterialPreferenceToolbarFragment {
         });
         findPreference("autoclearcache").setOnPreferenceClickListener(preference -> {
             cacheAutoCleanDialog();
-            return true;
-        });
-
-        findPreference("resetfolders").setOnPreferenceClickListener(preference -> {
-            edit().remove("photos_directory").remove("videos_directory").remove("audios_directory").remove("downloads_directory").apply();
-            Toast.makeText(getContext(), AndroidUtils.getString("download_folders_reseted"), LENGTH_SHORT).show();
             return true;
         });
 

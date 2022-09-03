@@ -14,7 +14,6 @@ import static ru.vtosters.lite.utils.ThemesUtils.getAlertStyle;
 import static ru.vtosters.lite.utils.ThemesUtils.getSTextAttr;
 import static ru.vtosters.lite.utils.ThemesUtils.getTextAttr;
 
-import android.app.Activity;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
@@ -44,8 +43,6 @@ import ru.vtosters.lite.downloaders.VideoDownloader;
 import ru.vtosters.lite.music.Scrobbler;
 import ru.vtosters.lite.ui.adapters.ImagineArrayAdapter;
 import ru.vtosters.lite.utils.AndroidUtils;
-import ru.vtosters.lite.utils.FileUriUtils;
-import ru.vtosters.lite.utils.Preferences;
 
 public class MediaFragment extends MaterialPreferenceToolbarFragment {
     private final int REQUEST_CODE_SET_DOWNLOAD_DIRECTORY = 665;
@@ -63,31 +60,6 @@ public class MediaFragment extends MaterialPreferenceToolbarFragment {
 
     @Override
     public void onActivityResult(int requestCode, int resultCode, Intent data) {
-        if (resultCode == Activity.RESULT_OK) {
-            var path = data.getData();
-            if (path != null) {
-                var prefs = getPreferences();
-                var editor = prefs.edit();
-                var actualPath = FileUriUtils.getFullPathFromTreeUri(path, getContext());
-                switch (requestCode) {
-                    case REQUEST_CODE_SET_DOWNLOAD_DIRECTORY:
-                        editor.putString("downloads_directory", actualPath);
-                        break;
-                    case REQUEST_CODE_SET_MUSIC_DIRECTORY:
-                        editor.putString("music_directory", actualPath);
-                        break;
-                    case REQUEST_CODE_SET_PHOTOS_DIRECTORY:
-                        editor.putString("photos_directory", actualPath);
-                        break;
-                    case REQUEST_CODE_SET_VIDEOS_DIRECTORY:
-                        editor.putString("videos_directory", actualPath);
-                        break;
-                    default:
-                        return;
-                }
-                editor.apply();
-            }
-        }
     }
 
     @Override
@@ -109,50 +81,6 @@ public class MediaFragment extends MaterialPreferenceToolbarFragment {
             } else {
                 lastfmAuth(getContext());
             }
-            return true;
-        });
-
-        findPreference("downloads_directory").setSummary(
-                AndroidUtils.getString("current_download_folder") + " " + Preferences.getDownloadsDir()
-        );
-
-        findPreference("photos_directory").setSummary(
-                AndroidUtils.getString("current_download_folder") + " " + Preferences.getPhotosDir()
-        );
-
-        findPreference("videos_directory").setSummary(
-                AndroidUtils.getString("current_download_folder") + " " + Preferences.getVideosDir()
-        );
-
-        findPreference("music_directory").setSummary(
-                AndroidUtils.getString("current_download_folder") + " " + Preferences.getMusicDir()
-        );
-
-        findPreference("downloads_directory").setOnPreferenceClickListener(preference -> {
-            var intent = new Intent(Intent.ACTION_OPEN_DOCUMENT_TREE);
-            intent.addCategory(Intent.CATEGORY_DEFAULT);
-            startActivityForResult(intent, REQUEST_CODE_SET_DOWNLOAD_DIRECTORY);
-            return true;
-        });
-
-        findPreference("photos_directory").setOnPreferenceClickListener(preference -> {
-            var intent = new Intent(Intent.ACTION_OPEN_DOCUMENT_TREE);
-            intent.addCategory(Intent.CATEGORY_DEFAULT);
-            startActivityForResult(intent, REQUEST_CODE_SET_PHOTOS_DIRECTORY);
-            return true;
-        });
-
-        findPreference("videos_directory").setOnPreferenceClickListener(preference -> {
-            var intent = new Intent(Intent.ACTION_OPEN_DOCUMENT_TREE);
-            intent.addCategory(Intent.CATEGORY_DEFAULT);
-            startActivityForResult(intent, REQUEST_CODE_SET_VIDEOS_DIRECTORY);
-            return true;
-        });
-
-        findPreference("music_directory").setOnPreferenceClickListener(preference -> {
-            var intent = new Intent(Intent.ACTION_OPEN_DOCUMENT_TREE);
-            intent.addCategory(Intent.CATEGORY_DEFAULT);
-            startActivityForResult(intent, REQUEST_CODE_SET_MUSIC_DIRECTORY);
             return true;
         });
 

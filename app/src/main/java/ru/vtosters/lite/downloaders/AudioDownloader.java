@@ -1,7 +1,6 @@
 package ru.vtosters.lite.downloaders;
 
-import static ru.vtosters.lite.utils.Preferences.getMusicDir;
-
+import android.os.Environment;
 import android.util.Log;
 
 import androidx.core.app.NotificationCompat;
@@ -36,7 +35,7 @@ public class AudioDownloader {
             return;
         }
 
-        var musicPath = getMusicDir().getAbsolutePath();
+        var musicPath = Environment.DIRECTORY_MUSIC;
         var musicDir = new File(musicPath);
         if (!musicDir.exists()) {
             if (musicDir.mkdirs()) {

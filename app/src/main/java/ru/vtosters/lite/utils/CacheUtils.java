@@ -18,8 +18,6 @@ import com.vk.stickers.Stickers;
 import java.text.CharacterIterator;
 import java.text.StringCharacterIterator;
 
-import b.h.g.m.FileUtils;
-
 public class CacheUtils {
     private static CacheUtils sInstance = new CacheUtils();
     public long size = 0;

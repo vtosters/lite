@@ -6,20 +6,11 @@ import static ru.vtosters.lite.hooks.OnlineFormatterHook.onlineHookProfiles;
 import static ru.vtosters.lite.proxy.ProxyUtils.getApi;
 import static ru.vtosters.lite.proxy.ProxyUtils.getStatic;
 import static ru.vtosters.lite.utils.AndroidUtils.getDefaultPrefs;
-import static ru.vtosters.lite.utils.NewsFeedFiltersUtils.checkCaption;
-import static ru.vtosters.lite.utils.NewsFeedFiltersUtils.checkCopyright;
-import static ru.vtosters.lite.utils.NewsFeedFiltersUtils.isBadNews;
-import static ru.vtosters.lite.utils.Preferences.ads;
-import static ru.vtosters.lite.utils.Preferences.adsgroup;
-import static ru.vtosters.lite.utils.Preferences.adsstories;
-import static ru.vtosters.lite.utils.Preferences.authorsrecomm;
 import static ru.vtosters.lite.utils.Preferences.dev;
 import static ru.vtosters.lite.utils.Preferences.friendsblock;
-import static ru.vtosters.lite.utils.Preferences.friendsrecomm;
 import static ru.vtosters.lite.utils.Preferences.getBoolValue;
 import static ru.vtosters.lite.utils.Preferences.hasVerification;
 import static ru.vtosters.lite.utils.Preferences.podcastcatalog;
-import static ru.vtosters.lite.utils.Preferences.postsrecomm;
 import static ru.vtosters.lite.utils.VTVerifications.isDeveloper;
 import static ru.vtosters.lite.utils.VTVerifications.isPrometheus;
 import static ru.vtosters.lite.utils.VTVerifications.isVerified;
@@ -47,7 +38,6 @@ import okhttp3.OkHttpClient;
 import okhttp3.Request;
 import ru.vtosters.lite.utils.AccountManagerUtils;
 import ru.vtosters.lite.utils.AndroidUtils;
-import ru.vtosters.lite.utils.NewsFeedFiltersUtils;
 
 public class JsonInjectors {
     private static final OkHttpClient mClient = new OkHttpClient();

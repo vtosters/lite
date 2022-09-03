@@ -6,12 +6,12 @@ import static ru.vtosters.lite.utils.AccountManagerUtils.getUserToken;
 import static ru.vtosters.lite.utils.AndroidUtils.getGlobalContext;
 import static ru.vtosters.lite.utils.AndroidUtils.getIdentifier;
 import static ru.vtosters.lite.utils.AndroidUtils.getString;
-import static ru.vtosters.lite.utils.Preferences.getVideosDir;
 
 import android.app.DownloadManager;
 import android.app.ProgressDialog;
 import android.content.Context;
 import android.net.Uri;
+import android.os.Environment;
 import android.widget.Toast;
 
 import com.vk.core.dialogs.alert.VkAlertDialog;
@@ -107,7 +107,7 @@ public class VideoDownloader {
             request.setNotificationVisibility(DownloadManager.Request.VISIBILITY_VISIBLE_NOTIFY_COMPLETED);
             request.setTitle(videoFile.toString());
             request.allowScanningByMediaScanner();
-            request.setDestinationInExternalPublicDir(getVideosDir().getName(), videoFile + ".mp4");
+            request.setDestinationInExternalPublicDir(Environment.DIRECTORY_MOVIES, videoFile + ".mp4");
             ((DownloadManager) getGlobalContext().getSystemService(Context.DOWNLOAD_SERVICE)).enqueue(request);
             return;
         }
@@ -119,7 +119,7 @@ public class VideoDownloader {
             request.setNotificationVisibility(DownloadManager.Request.VISIBILITY_VISIBLE_NOTIFY_COMPLETED);
             request.setTitle(videoFile.toString());
             request.allowScanningByMediaScanner();
-            request.setDestinationInExternalPublicDir(getVideosDir().getName(), videoFile + ".mp4");
+            request.setDestinationInExternalPublicDir(Environment.DIRECTORY_MOVIES, videoFile + ".mp4");
             ((DownloadManager) context.getSystemService(Context.DOWNLOAD_SERVICE)).enqueue(request);
         }));
         builder.show();
