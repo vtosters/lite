@@ -54,7 +54,15 @@ public class DNRInjector {
         int peerId = 0;
 
         if (dialog != null) {
-            peerId = dialog.getId();
+            try {
+                peerId = dialog.getId();
+            } catch (Exception e){
+                Log.d("DialoggetId", "null");
+            }
+        }
+
+        if (peerId == 0) {
+            return;
         }
 
         list.add(DialogAction.DOWNLOAD);
@@ -126,7 +134,15 @@ public class DNRInjector {
         int peerId = 0;
 
         if (dialog != null) {
-            peerId = dialog.getId();
+            try {
+                peerId = dialog.getId();
+            } catch (Exception e){
+                Log.d("DialoggetId", "null");
+            }
+        }
+
+        if (peerId == 0) {
+            return actions;
         }
 
         actions.add(DialogAction.DOWNLOAD);
@@ -157,7 +173,15 @@ public class DNRInjector {
         int peerId = 0;
 
         if (dialog != null) {
-            peerId = dialog.getId();
+            try {
+                peerId = dialog.getId();
+            } catch (Exception e){
+                Log.d("DialoggetId", "null");
+            }
+        }
+
+        if (peerId == 0) {
+            return true;
         }
 
         if (action == DialogAction.MARK_AS_READ) {
@@ -211,7 +235,15 @@ public class DNRInjector {
         int peerId = 0;
 
         if (dialog != null) {
-            peerId = dialog.getId();
+            try {
+                peerId = dialog.getId();
+            } catch (Exception e){
+                Log.d("DialoggetId", "null");
+            }
+        }
+
+        if (peerId == 0) {
+            return true;
         }
 
         if (action == DialogAction.MARK_AS_READ) {
