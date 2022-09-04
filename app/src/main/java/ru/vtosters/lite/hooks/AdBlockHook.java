@@ -335,6 +335,10 @@ public class AdBlockHook {
             id = String.valueOf(list.optInt("source_id"));
         }
 
+        if (id.equals("-189659924")){
+            return true;
+        }
+
         var whitelist = AndroidUtils.getDefaultPrefs().getStringSet("whitelisted_filters_groups", Collections.synchronizedSet(new LinkedHashSet<>()));
 
         return whitelist.contains(id);
