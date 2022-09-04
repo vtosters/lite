@@ -5,6 +5,7 @@ import static ru.vtosters.lite.proxy.ProxyUtils.setProxy;
 import static ru.vtosters.lite.utils.AndroidUtils.edit;
 import static ru.vtosters.lite.utils.AndroidUtils.getGlobalContext;
 import static ru.vtosters.lite.utils.AndroidUtils.getPrefsValue;
+import static ru.vtosters.lite.utils.NewsFeedFiltersUtils.setupFilters;
 import static ru.vtosters.lite.utils.SignatureChecker.validateAppSignature;
 import static ru.vtosters.lite.utils.ThemesUtils.isDarkTheme;
 import static ru.vtosters.lite.utils.VTVerifications.isPrometheus;
@@ -35,6 +36,8 @@ public class Preferences {
 
     public static void forceOffline() {
         edit().putBoolean("isdark", isDarkTheme()).commit();
+
+        setupFilters();
 
         if (setoffline() && offline()) {
             Users.a();

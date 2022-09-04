@@ -39,8 +39,9 @@ public class MainActivityInjector{
 
         VkExecutors.x.q().a(() -> {
             getInstance().autoCleaningCache();
-            setupFilters();
         }); // slowTasksScheduler
+
+        setupFilters();
 
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
             NotificationChannels.createChannels();
