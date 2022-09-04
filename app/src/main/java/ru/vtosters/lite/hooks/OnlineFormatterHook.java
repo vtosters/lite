@@ -130,6 +130,12 @@ public class OnlineFormatterHook {
                 return "Miranda NG (bridge)";
             case 8043814:
                 return "Quise";
+            case 7221936:
+                return "Вечный Online";
+            case 6892935:
+                return "VK Helper";
+            case 6248661:
+                return "MemeVoices for VK";
             default:
                 return getAppNameFromOnline(appid);
         }
