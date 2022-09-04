@@ -173,7 +173,7 @@ public class MediaFragment extends MaterialPreferenceToolbarFragment {
         Thread thread = new Thread(() -> {
             try {
                 var request = new Request.a()
-                        .b("https://" + getApi() + "/method/" + "video.clearViewingHistoryRecords" + "?https=1" + "&access_token=" + getUserToken() + "&v=5.187")
+                        .b("https://" + getApi() + "/method/" + "video.clearViewingHistoryRecords" + "?https=1" + "&access_token=" + getUserToken() + "&v=5.119")
                         .a(Headers.a("User-Agent", Network.l.c().a(), "Content-Type", "application/x-www-form-urlencoded; charset=utf-8"))
                         .a();
 
