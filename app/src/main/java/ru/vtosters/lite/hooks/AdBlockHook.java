@@ -1,4 +1,5 @@
 package ru.vtosters.lite.hooks;
+
 import static ru.vtosters.lite.utils.NewsFeedFiltersUtils.checkCaption;
 import static ru.vtosters.lite.utils.NewsFeedFiltersUtils.checkCopyright;
 import static ru.vtosters.lite.utils.NewsFeedFiltersUtils.isBadNews;
@@ -22,8 +23,8 @@ import java.util.LinkedHashSet;
 import ru.vtosters.lite.utils.AndroidUtils;
 import ru.vtosters.lite.utils.NewsFeedFiltersUtils;
 
-public class AdBlockHook{
-    public static Boolean discoverAdBlock(JSONObject jsonObject){
+public class AdBlockHook {
+    public static Boolean discoverAdBlock(JSONObject jsonObject) {
         if (jsonObject == null) return true;
 
         try {
@@ -68,28 +69,30 @@ public class AdBlockHook{
                 return false;
             }
 
-            if (post != null && isBadNews(post.optString("text")) && !isWhitelistedFilters(post)) {
-                if (dev())
-                    Log.d("NewsfeedAdBlockV2", "Removed post " + post.optInt("post_id") + " from discover, Reason: text filters");
-                return false;
-            }
+            if (post != null) {
+                if (isBadNews(post.optString("text")) && !isWhitelistedFilters(post)) {
+                    if (dev())
+                        Log.d("NewsfeedAdBlockV2", "Removed post " + post.optInt("post_id") + " from discover, Reason: text filters");
+                    return false;
+                }
 
-            if (post != null && checkCopyright(post) && !isWhitelistedFilters(post)) {
-                if (dev())
-                    Log.d("NewsfeedAdBlockV2", "Removed post " + post.optInt("post_id") + " from discover, Reason: copyright filters");
-                return false;
-            }
+                if (checkCopyright(post) && !isWhitelistedFilters(post)) {
+                    if (dev())
+                        Log.d("NewsfeedAdBlockV2", "Removed post " + post.optInt("post_id") + " from discover, Reason: copyright filters");
+                    return false;
+                }
 
-            if (post != null && checkCaption(post) && !isWhitelistedFilters(post)) {
-                if (dev())
-                    Log.d("NewsfeedAdBlockV2", "Removed post " + post.optInt("post_id") + " from discover, Reason: caption filters");
-                return false;
-            }
+                if (checkCaption(post) && !isWhitelistedFilters(post)) {
+                    if (dev())
+                        Log.d("NewsfeedAdBlockV2", "Removed post " + post.optInt("post_id") + " from discover, Reason: caption filters");
+                    return false;
+                }
 
-            if (post != null && NewsFeedFiltersUtils.injectFiltersReposts(post) && !isWhitelistedFilters(post)) {
-                if (dev())
-                    Log.d("NewsfeedAdBlockV2", "Removed post " + post.optInt("post_id") + " from discover, Reason: repost ad");
-                return false;
+                if (NewsFeedFiltersUtils.injectFiltersReposts(post) && !isWhitelistedFilters(post)) {
+                    if (dev())
+                        Log.d("NewsfeedAdBlockV2", "Removed post " + post.optInt("post_id") + " from discover, Reason: repost ad");
+                    return false;
+                }
             }
         } catch (Exception e) {
             Log.d("NewsfeedAdBlockV2", "discover: " + e.getMessage());
@@ -98,7 +101,7 @@ public class AdBlockHook{
         return true;
     }
 
-    public static JSONObject discoverInject(JSONObject json) throws JSONException{
+    public static JSONObject discoverInject(JSONObject json) throws JSONException {
         var items = json.optJSONArray("items");
         var newObj = new JSONArray();
 
@@ -120,7 +123,7 @@ public class AdBlockHook{
         return json;
     }
 
-    public static JSONObject discoverObj() throws JSONException{
+    public static JSONObject discoverObj() throws JSONException {
         var mainjson = new JSONObject();
 
         var info = new JSONObject();
@@ -159,7 +162,7 @@ public class AdBlockHook{
         return mainjson;
     }
 
-    public static JSONArray feedInject(JSONArray items){
+    public static JSONArray feedInject(JSONArray items) {
         if (items.length() == 0) return items;
 
         try {
@@ -240,7 +243,7 @@ public class AdBlockHook{
     }
 
 
-    public static JSONObject storiesads(JSONObject json, boolean isDeleteFix) throws JSONException{
+    public static JSONObject storiesads(JSONObject json, boolean isDeleteFix) throws JSONException {
         if (!adsstories()) {
             return json;
         }
@@ -279,7 +282,7 @@ public class AdBlockHook{
         return json;
     }
 
-    private static void parseStoriesItem(JSONObject item) throws JSONException{
+    private static void parseStoriesItem(JSONObject item) throws JSONException {
         var stories = item.optJSONArray("stories");
         var newStories = new JSONArray();
 
@@ -299,7 +302,7 @@ public class AdBlockHook{
         item.put("stories", newStories);
     }
 
-    public static Boolean isAds(JSONObject list, String type) throws JSONException{
+    public static Boolean isAds(JSONObject list, String type) throws JSONException {
         if (list == null || type == null || !ads()) return false;
 
         if (list.has("ads")
@@ -325,7 +328,7 @@ public class AdBlockHook{
         return false;
     }
 
-    public static Boolean isWhitelistedFilters(JSONObject list){
+    public static Boolean isWhitelistedFilters(JSONObject list) {
         var id = String.valueOf(list.optInt("owner_id"));
 
         if (id.equals("0")) {
@@ -337,7 +340,7 @@ public class AdBlockHook{
         return whitelist.contains(id);
     }
 
-    public static Boolean isWhitelistedAd(JSONObject list){
+    public static Boolean isWhitelistedAd(JSONObject list) {
         var id = String.valueOf(list.optInt("owner_id"));
 
         if (id.equals("0")) {
