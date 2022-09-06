@@ -58,14 +58,14 @@ public class DownloadUtils {
         boolean c2 = MediaUtils.c(MediaUtils.b(str2));
 
         if (file.endsWith(".jpg") || file.endsWith(".png") || file.endsWith(".jpeg")) {
-            b2 = new File(Environment.DIRECTORY_PICTURES, file);
+            b2 = new File(Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_PICTURES).getAbsolutePath(), file);
             pic = true;
         } else if (file.endsWith(".mp3") || file.endsWith(".wav") || file.endsWith(".ogg") || file.endsWith(".aac") || file.endsWith(".flac") || file.endsWith(".m4a")) {
-            b2 = new File(Environment.DIRECTORY_MUSIC, file);
+            b2 = new File(Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_MUSIC).getAbsolutePath(), file);
         } else if (file.endsWith(".mp4") || file.endsWith(".mkv") || file.endsWith(".avi") || file.endsWith(".flv") || file.endsWith(".wmv") || file.endsWith(".mov") || file.endsWith(".3gp")) {
-            b2 = new File(Environment.DIRECTORY_MOVIES, file);
+            b2 = new File(Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_MOVIES).getAbsolutePath(), file);
         } else {
-            b2 = new File(Environment.DIRECTORY_DOWNLOADS, file);
+            b2 = new File(Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_DOWNLOADS).getAbsolutePath(), file);
         }
 
         if (c2) {
