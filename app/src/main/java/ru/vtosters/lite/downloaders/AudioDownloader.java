@@ -35,7 +35,7 @@ public class AudioDownloader {
             return;
         }
 
-        var musicPath = Environment.DIRECTORY_MUSIC;
+        var musicPath = Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_MUSIC).getAbsolutePath();
         var musicDir = new File(musicPath);
         if (!musicDir.exists()) {
             if (musicDir.mkdirs()) {
