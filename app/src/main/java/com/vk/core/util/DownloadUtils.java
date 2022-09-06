@@ -50,7 +50,7 @@ public class DownloadUtils {
         }
     }
     
-    private static void b(final Context context, String str, String uri, boolean z) throws IOException {
+    private static void b(final Context context, String str, String uri, boolean z) {
         if (TextUtils.isEmpty(uri)) {
             return;
         }
@@ -81,8 +81,15 @@ public class DownloadUtils {
                         file.createNewFile();
                     }
                     if (file.exists()) {
-                        FileUtils.b.a(h, new FileOutputStream(file), h.available(), null);
-                        VkExecutors.x.a().execute(() -> ToastUtils.a(context.getString(R.string.file_saved, file.getAbsoluteFile())));
+                        VkExecutors.x.e().execute(() -> {
+                            try {
+                                FileUtils.b.a(h, new FileOutputStream(file), h.available(), null);
+                                ToastUtils.a(context.getString(R.string.file_saved, file.getAbsoluteFile()));
+                            } catch (IOException e) {
+                                ToastUtils.a(context.getString(R.string.error) + " [" + e.getMessage() + "]");
+                                e.printStackTrace();
+                            }
+                        });
                     }
 
                 } catch (Exception e2) {
