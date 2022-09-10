@@ -5955,6 +5955,8 @@
 
     <string name="download_mp3">Скачать как mp3</string>
     <string name="remove_from_cache">Удалить из кеша</string>
+    <string name="play_in_vkx">Воспроизвести в VK X</string>
+
 
     <string name="thanksfordonate">Спасибо тебе за поддержку проекта!</string>
     <string name="getdonate">Поддержи проект донатом и получи бонусы</string>
