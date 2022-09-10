@@ -14,6 +14,8 @@ import android.widget.Toast;
 
 import androidx.annotation.StringRes;
 
+import com.vk.core.util.Screen;
+
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
 import java.util.Locale;
@@ -28,6 +30,10 @@ public class AndroidUtils {
 
     public static SharedPreferences getPreferences() {
         return PreferenceManager.getDefaultSharedPreferences(getGlobalContext());
+    }
+
+    public static boolean isTablet() {
+        return Screen.l(getGlobalContext());
     }
 
     public static String getPrefsValue(String pref) {

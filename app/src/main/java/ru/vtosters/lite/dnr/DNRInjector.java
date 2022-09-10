@@ -15,6 +15,7 @@ import static ru.vtosters.lite.proxy.ProxyUtils.getApi;
 import static ru.vtosters.lite.utils.AccountManagerUtils.getUserToken;
 import static ru.vtosters.lite.utils.AndroidUtils.getIdentifier;
 import static ru.vtosters.lite.utils.AndroidUtils.getString;
+import static ru.vtosters.lite.utils.AndroidUtils.isTablet;
 import static ru.vtosters.lite.utils.AndroidUtils.sendToast;
 
 import android.annotation.SuppressLint;
@@ -116,8 +117,10 @@ public class DNRInjector {
         list.add(new DialogActionsListView.b.a(DialogAction.DNT_ON, 2, im_ic_edit_msg, getIdentifier("DNT_ON", "string"))); // DialogAction, Int, Icon, String
         list.add(new DialogActionsListView.b.a(DialogAction.DNT_OFF, 2, im_ic_edit_msg, getIdentifier("DNT_OFF", "string"))); // DialogAction, Int, Icon, String
 
-        list.add(new DialogActionsListView.b.a(DialogAction.ENCRYPT, 3, im_ic_keyboard, getIdentifier("encryption", "string"))); // DialogAction, Int, Icon, String
-        list.add(new DialogActionsListView.b.a(DialogAction.ENCRYPT_SETT, 3, im_ic_more_vertical, getIdentifier("encryption_sett", "string"))); // DialogAction, Int, Icon, String
+        if (!isTablet()) {
+            list.add(new DialogActionsListView.b.a(DialogAction.ENCRYPT, 3, im_ic_keyboard, getIdentifier("encryption", "string"))); // DialogAction, Int, Icon, String
+            list.add(new DialogActionsListView.b.a(DialogAction.ENCRYPT_SETT, 3, im_ic_more_vertical, getIdentifier("encryption_sett", "string"))); // DialogAction, Int, Icon, String
+        }
 
         list.add(new DialogActionsListView.b.a(DialogAction.MARK_AS_READ, 4, im_ic_done, getIdentifier("vkim_dialogs_list_option_mark_as_read", "string"))); // DialogAction, Int, Icon, String
 

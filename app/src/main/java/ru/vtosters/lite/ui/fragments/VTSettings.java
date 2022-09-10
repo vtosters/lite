@@ -12,6 +12,7 @@ import static ru.vtosters.lite.utils.AccountManagerUtils.isVKTester;
 import static ru.vtosters.lite.utils.AndroidUtils.edit;
 import static ru.vtosters.lite.utils.AndroidUtils.getIdentifier;
 import static ru.vtosters.lite.utils.AndroidUtils.getPrefsValue;
+import static ru.vtosters.lite.utils.AndroidUtils.isTablet;
 import static ru.vtosters.lite.utils.CacheUtils.humanReadableByteCountBin;
 import static ru.vtosters.lite.utils.GmsUtils.isGmsInstalled;
 import static ru.vtosters.lite.utils.ImageUtils.getDrawableFromUrl;
@@ -338,22 +339,24 @@ public class VTSettings extends MaterialPreferenceToolbarFragment {
                 return false;
             });
 
-            addPreference(this, "", AndroidUtils.getString("dockbar_editor"), docksumm, "ic_list_outline_28", preference -> {
-                Context context = requireContext();
-                Intent intent = new Navigator(DockBarEditorFragment.class).b(context);
-                intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-                context.startActivity(intent);
-                return false;
-            });
-
-            if (milkshake() && superapp()) {
-                addPreference(this, "", AndroidUtils.getString("superapp_editor"), superapp, "ic_services_outline_28", (preference) -> {
+            if (!isTablet()) {
+                addPreference(this, "", AndroidUtils.getString("dockbar_editor"), docksumm, "ic_list_outline_28", preference -> {
                     Context context = requireContext();
-                    Intent intent = new Navigator(SuperAppEditorFragment.class).b(context);
+                    Intent intent = new Navigator(DockBarEditorFragment.class).b(context);
                     intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
                     context.startActivity(intent);
-                    return true;
+                    return false;
                 });
+
+                if (milkshake() && superapp()) {
+                    addPreference(this, "", AndroidUtils.getString("superapp_editor"), superapp, "ic_services_outline_28", (preference) -> {
+                        Context context = requireContext();
+                        Intent intent = new Navigator(SuperAppEditorFragment.class).b(context);
+                        intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                        context.startActivity(intent);
+                        return true;
+                    });
+                }
             }
         } else {
             addPreference(this, "", AndroidUtils.getString("warning"), AndroidUtils.getString("vkme_mode_info"), "ic_about_outline_28", preference -> false);

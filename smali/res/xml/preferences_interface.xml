@@ -46,7 +46,7 @@
             android:summary="@string/postsredesign_summ"
             android:title="@string/postsredesign_title" />
     </PreferenceCategory>
-    <PreferenceCategory android:title="@string/menu">
+    <PreferenceCategory android:title="@string/menu" android:key="menusett">
         <com.vtosters.lite.ui.MaterialSwitchPreference
             android:defaultValue="true"
             android:key="miniapps"

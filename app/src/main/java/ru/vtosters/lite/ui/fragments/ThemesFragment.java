@@ -3,6 +3,7 @@ package ru.vtosters.lite.ui.fragments;
 import static ru.vtosters.lite.utils.AndroidUtils.edit;
 import static ru.vtosters.lite.utils.AndroidUtils.getIdentifier;
 import static ru.vtosters.lite.utils.AndroidUtils.getPreferences;
+import static ru.vtosters.lite.utils.AndroidUtils.isTablet;
 import static ru.vtosters.lite.utils.LifecycleUtils.restartApplicationWithTimer;
 
 import android.content.Context;
@@ -35,6 +36,10 @@ public class ThemesFragment extends MaterialPreferenceToolbarFragment {
         findPreference("dockbar_tab_titles").setOnPreferenceClickListener(new restart());
         findPreference("dockbar_accent").setOnPreferenceClickListener(new restart());
         findPreference("dockcounter").setOnPreferenceClickListener(new restart());
+
+        if (isTablet()){
+            findPreference("dockbarsett").setVisible(false);
+        }
     }
 
     public class openicons implements Preference.OnPreferenceClickListener {

@@ -25,7 +25,7 @@
             android:key="lighttheme"
             android:title="@string/appearance_theme_light_theme" />
     </PreferenceCategory>
-    <PreferenceCategory android:title="@string/vtl_settings_dockbar_title">
+    <PreferenceCategory android:title="@string/vtl_settings_dockbar_title" android:key="dockbarsett">
         <com.vtosters.lite.ui.MaterialSwitchPreference
             android:defaultValue="true"
             android:key="dockbar_tab_titles"

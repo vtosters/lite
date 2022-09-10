@@ -3,6 +3,7 @@ package ru.vtosters.lite.ui.fragments;
 import static ru.vtosters.lite.utils.AndroidUtils.getGlobalContext;
 import static ru.vtosters.lite.utils.AndroidUtils.getIdentifier;
 import static ru.vtosters.lite.utils.AndroidUtils.getPreferences;
+import static ru.vtosters.lite.utils.AndroidUtils.isTablet;
 import static ru.vtosters.lite.utils.LifecycleUtils.restartApplicationWithTimer;
 import static ru.vtosters.lite.utils.Preferences.autoalltranslate;
 import static ru.vtosters.lite.utils.Preferences.vkme;
@@ -69,6 +70,11 @@ public class MessagesFragment extends MaterialPreferenceToolbarFragment {
         findPreference("vkme_notifs").setEnabled(vkme());
         findPreference("wallpapers").setIcon(recolorDrawable(getGlobalContext().getDrawable(getIdentifier("ic_media_outline_28", "drawable"))));
         findPreference("vkme").setIcon(getIdentifier("ic_vkme_28", "drawable"));
+
+        if (isTablet()){
+            findPreference("alteremoji").setVisible(false);
+            findPreference("vkmesett").setVisible(false);
+        }
     }
 
     @Override
