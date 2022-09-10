@@ -2,6 +2,7 @@ package ru.vtosters.lite.hooks.ui;
 
 import com.vk.dto.music.MusicTrack;
 import com.vk.music.bottomsheets.a.MusicAction;
+import com.vk.music.common.MusicPlaybackLaunchContext;
 import com.vtosters.lite.R;
 
 import java.util.ArrayList;
@@ -19,8 +20,8 @@ public class MusicBottomSheetHook {
         return actions;
     }
 
-    public static boolean tryPlayInVKX(MusicTrack track) {
-        LibVKXClientImpl.LibVKXAction action = iLibVkxService -> LibVKXClient.lambdaplay(List.of(track), track, iLibVkxService);
+    public static boolean tryPlayInVKX(MusicTrack track, MusicPlaybackLaunchContext context) {
+        LibVKXClientImpl.LibVKXAction action = iLibVkxService -> LibVKXClient.lambdaplay(List.of(track), track, iLibVkxService, context);
         return LibVKXClient.getInstance().runOnService(action);
     }
 

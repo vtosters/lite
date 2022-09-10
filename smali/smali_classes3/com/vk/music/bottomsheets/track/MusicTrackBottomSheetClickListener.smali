@@ -709,7 +709,7 @@
 
     move-result p1
 
-    invoke-static {v0}, Lru/vtosters/lite/hooks/ui/MusicBottomSheetHook;->tryPlayInVKX(Lcom/vk/dto/music/MusicTrack;)Z
+    invoke-static {v0, v2}, Lru/vtosters/lite/hooks/ui/MusicBottomSheetHook;->tryPlayInVKX(Lcom/vk/dto/music/MusicTrack;Lcom/vk/music/common/MusicPlaybackLaunchContext;)Z
 
     move-result v3
 
