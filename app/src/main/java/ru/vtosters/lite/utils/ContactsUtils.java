@@ -65,7 +65,7 @@ public class ContactsUtils{
     }
 
     public static void setContactsSync(boolean enabled){
-        makeRequest("https://" + getApi() + "/method/account.setInfo?" + "?name=im_user_name_type&value=" + (enabled ? "contacts" : "vk") + "&https=1&v=5.99&access_token=" + getUserToken(),
+        makeRequest("https://" + getApi() + "/method/account.setInfo?" + "name=im_user_name_type&value=" + (enabled ? "contact" : "vk") + "&https=1&v=5.153&access_token=" + getUserToken(),
                 response -> {
                     try {
                         JSONObject mainJson = new JSONObject(response);
