@@ -2,11 +2,7 @@ package ru.vtosters.lite.utils;
 import static ru.vtosters.lite.net.Request.makeRequest;
 import static ru.vtosters.lite.proxy.ProxyUtils.getApi;
 import static ru.vtosters.lite.utils.AccountManagerUtils.getUserToken;
-import static ru.vtosters.lite.utils.AndroidUtils.dp2px;
-import static ru.vtosters.lite.utils.AndroidUtils.edit;
-import static ru.vtosters.lite.utils.AndroidUtils.getPreferences;
 import static ru.vtosters.lite.utils.AndroidUtils.sendToast;
-import static ru.vtosters.lite.utils.LifecycleUtils.restartApplicationWithTimer;
 
 import android.annotation.SuppressLint;
 import android.app.ProgressDialog;
@@ -15,21 +11,22 @@ import android.content.Context;
 import android.database.Cursor;
 import android.provider.ContactsContract;
 import android.util.Log;
-import android.widget.LinearLayout;
-import android.widget.SeekBar;
-import android.widget.Toast;
 
 import com.vk.core.dialogs.alert.VkAlertDialog;
+import com.vk.core.network.Network;
 
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+import java.io.IOException;
 import java.util.HashMap;
 import java.util.Map;
 
-public class ContactsUtils{
+import okhttp3.Headers;
+import okhttp3.OkHttpClient;
 
+public class ContactsUtils{
     @SuppressLint("Range")
     private static String getAllContacts(){
         Map<String, String> contactsmap = new HashMap<>();
@@ -77,19 +74,54 @@ public class ContactsUtils{
                 });
     }
 
-    public static void dialog(Context context, String response) {
-        VkAlertDialog.Builder builder = new VkAlertDialog.Builder(context);
-        builder.setTitle("Синхронизация контактов");
-        builder.setMessage("Статус синхронизации: " + response);
-        builder.setCancelable(true);
-        builder.setNegativeButton(AndroidUtils.getString("cancel"), null);
-        builder.setPositiveButton("Включить", (dialog, which) -> {
-            setContactsSync(true);
-        });
-        builder.setNeutralButton("Отключить", (dialog, which) -> {
-            setContactsSync(false);
-        });
+    public static void getContactsStatus(Context ctx){
+        var enabledsync = false;
 
-        builder.show();
+        final ProgressDialog progressDialog = new ProgressDialog(ctx);
+        progressDialog.setMessage("Загрузка данных о контактах...");
+        progressDialog.show();
+
+        var request = new okhttp3.Request.a()
+                .b("https://" + getApi() + "/method/account.getInfo?&https=1&v=5.153&access_token=" + getUserToken())
+                .a(Headers.a("User-Agent", Network.l.c().a(), "Content-Type", "application/x-www-form-urlencoded; charset=utf-8"))
+                .a();
+
+        try {
+            var response = new OkHttpClient().a(request).execute().a().g();
+            progressDialog.cancel();
+
+            try {
+                JSONObject mainJson = new JSONObject(response).optJSONObject("response");
+                JSONArray settings = mainJson != null ? mainJson.optJSONArray("settings") : null;
+
+                for (int i = 0; i < (settings != null ? settings.length() : 0); i++) {
+                    JSONObject obj = settings.optJSONObject(i);
+                    String name = obj.optString("name");
+                    String value = obj.optString("value");
+
+                    if (name.contains("im_user_name_type") && value.equals("contact")) {
+                        enabledsync = true;
+                        break;
+                    }
+                }
+
+                boolean finalEnabledsync = !enabledsync;
+
+                VkAlertDialog.Builder builder = new VkAlertDialog.Builder(ctx);
+                builder.setTitle("Синхронизация контактов");
+                builder.setMessage("Статус синхронизации: " + (enabledsync ? "Включена" : "Отключена"));
+                builder.setCancelable(true);
+                builder.setPositiveButton((finalEnabledsync ? "Включить" : "Отключить"), (dialog, which) -> {
+                    setContactsSync(finalEnabledsync);
+                });
+
+                builder.show();
+
+            } catch (JSONException e) {
+                Log.d("ContactsUtils", e.getMessage());
+            }
+        } catch (IOException e) {
+            Log.d("ContactsUtils", e.getMessage());
+        }
     }
 }

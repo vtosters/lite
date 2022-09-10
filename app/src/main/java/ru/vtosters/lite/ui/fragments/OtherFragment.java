@@ -56,6 +56,7 @@ import b.h.g.m.FileUtils;
 import ru.vtosters.lite.ui.activities.VKAdminTokenActivity;
 import ru.vtosters.lite.ui.components.BackupManager;
 import ru.vtosters.lite.utils.AndroidUtils;
+import ru.vtosters.lite.utils.ContactsUtils;
 
 public class OtherFragment extends MaterialPreferenceToolbarFragment {
     private static final int VK_ADMIN_TOKEN_REQUEST_CODE = 1;
@@ -95,8 +96,8 @@ public class OtherFragment extends MaterialPreferenceToolbarFragment {
             return true;
         });
 
-        findPreference("contacts_sync").setOnPreferenceChangeListener((preference, o) -> {
-            setContactsSync((boolean) o);
+        findPreference("contacts_sync").setOnPreferenceClickListener((preference) -> {
+            ContactsUtils.getContactsStatus(requireContext());
             return true;
         });
 
