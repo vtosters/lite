@@ -57,6 +57,7 @@ import com.vtosters.lite.general.fragments.MaterialPreferenceToolbarFragment;
 import com.vtosters.lite.general.fragments.SettingsAccountFragment;
 import com.vtosters.lite.general.fragments.SettingsGeneralFragment;
 
+import ru.vtosters.lite.hooks.ui.SystemThemeChangerHook;
 import ru.vtosters.lite.ui.components.DockBarEditorManager;
 import ru.vtosters.lite.ui.components.SuperAppEditorManager;
 import ru.vtosters.lite.ui.dialogs.OTADialog;
@@ -179,6 +180,8 @@ public class VTSettings extends MaterialPreferenceToolbarFragment {
                 boolean value = (boolean) o;
 
                 edit().putBoolean("systemtheme", value).commit();
+
+                SystemThemeChangerHook.onThemeChanged(getResources().getConfiguration());
                 return true;
             });
         }
