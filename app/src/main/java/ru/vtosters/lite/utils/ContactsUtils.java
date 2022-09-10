@@ -1,17 +1,18 @@
 package ru.vtosters.lite.utils;
+import static androidx.core.app.ActivityCompat.requestPermissions;
 import static ru.vtosters.lite.net.Request.makeRequest;
 import static ru.vtosters.lite.proxy.ProxyUtils.getApi;
 import static ru.vtosters.lite.utils.AccountManagerUtils.getUserToken;
+import static ru.vtosters.lite.utils.AndroidUtils.getGlobalContext;
 import static ru.vtosters.lite.utils.AndroidUtils.sendToast;
 
-import android.annotation.SuppressLint;
+import android.Manifest;
 import android.app.ProgressDialog;
-import android.content.ContentResolver;
 import android.content.Context;
-import android.database.Cursor;
-import android.provider.ContactsContract;
+import android.os.Build;
 import android.util.Log;
 
+import com.vk.contacts.ContactsSyncAdapterService;
 import com.vk.core.dialogs.alert.VkAlertDialog;
 import com.vk.core.network.Network;
 
@@ -20,47 +21,11 @@ import org.json.JSONException;
 import org.json.JSONObject;
 
 import java.io.IOException;
-import java.util.HashMap;
-import java.util.Map;
 
 import okhttp3.Headers;
 import okhttp3.OkHttpClient;
 
 public class ContactsUtils{
-    @SuppressLint("Range")
-    private static String getAllContacts(){
-        Map<String, String> contactsmap = new HashMap<>();
-
-        ContentResolver contentResolver = AndroidUtils.getGlobalContext().getContentResolver();
-        Cursor cursor = contentResolver.query(ContactsContract.Contacts.CONTENT_URI, null, null, null, ContactsContract.CommonDataKinds.Phone.DISPLAY_NAME + " ASC");
-        if (cursor.getCount() > 0) {
-            while(cursor.moveToNext()) {
-
-                int hasPhoneNumber = Integer.parseInt(cursor.getString(cursor.getColumnIndex(ContactsContract.Contacts.HAS_PHONE_NUMBER)));
-                if (hasPhoneNumber > 0) {
-                    String id = cursor.getString(cursor.getColumnIndex(ContactsContract.Contacts._ID));
-                    String name = cursor.getString(cursor.getColumnIndex(ContactsContract.Contacts.DISPLAY_NAME));
-                    Cursor phoneCursor = contentResolver.query(
-                            ContactsContract.CommonDataKinds.Phone.CONTENT_URI,
-                            null,
-                            ContactsContract.CommonDataKinds.Phone.CONTACT_ID + " = ?", new String[] {id},
-                            null);
-                    if (phoneCursor != null) {
-                        if (phoneCursor.moveToNext()) {
-                            String phoneNumber = phoneCursor.getString(phoneCursor.getColumnIndex(ContactsContract.CommonDataKinds.Phone.NUMBER));
-                            contactsmap.put(phoneNumber, name);
-                            phoneCursor.close();
-                        }
-                    }
-                }
-            }
-        }
-
-        cursor.close();
-
-        return contactsmap.toString();
-    }
-
     public static void setContactsSync(boolean enabled){
         makeRequest("https://" + getApi() + "/method/account.setInfo?" + "name=im_user_name_type&value=" + (enabled ? "contact" : "vk") + "&https=1&v=5.153&access_token=" + getUserToken(),
                 response -> {
@@ -72,6 +37,19 @@ public class ContactsUtils{
                         sendToast("Ошибка установки контактов");
                     }
                 });
+    }
+
+    public static void uploadContacts(){
+        try {
+            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
+                sendToast("Для работы данной функции необходимо выдать право на чтение контактов");
+                requestPermissions(LifecycleUtils.getCurrentActivity(), new String[] {Manifest.permission.READ_CONTACTS}, 11111);
+            } else {
+                ContactsSyncAdapterService.a(getGlobalContext().getContentResolver());
+            }
+        } catch (Exception e){
+            Log.d("ContactsUtils", e.getMessage());
+        }
     }
 
     public static void getContactsStatus(Context ctx){
@@ -113,6 +91,9 @@ public class ContactsUtils{
                 builder.setCancelable(true);
                 builder.setPositiveButton((finalEnabledsync ? "Включить" : "Отключить"), (dialog, which) -> {
                     setContactsSync(finalEnabledsync);
+                });
+                builder.setNegativeButton("Импортировать контакты", (dialog, which) -> {
+                    uploadContacts();
                 });
 
                 builder.show();
