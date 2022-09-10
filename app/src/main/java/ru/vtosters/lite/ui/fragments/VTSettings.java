@@ -44,6 +44,7 @@ import android.os.Bundle;
 import com.aefyr.tsg.g2.TelegramStickersService;
 import com.vk.about.AboutAppFragment;
 import com.vk.balance.BalanceFragment;
+import com.vk.core.dialogs.alert.VkAlertDialog;
 import com.vk.navigation.Navigator;
 import com.vk.notifications.settings.NotificationsSettingsFragment;
 import com.vk.webapp.fragments.PrivacyFragment;
@@ -56,6 +57,7 @@ import com.vtosters.lite.fragments.w2.BlacklistFragment;
 import com.vtosters.lite.general.fragments.MaterialPreferenceToolbarFragment;
 import com.vtosters.lite.general.fragments.SettingsAccountFragment;
 import com.vtosters.lite.general.fragments.SettingsGeneralFragment;
+import com.vtosters.lite.ui.MaterialSwitchPreference;
 
 import ru.vtosters.lite.hooks.ui.SystemThemeChangerHook;
 import ru.vtosters.lite.ui.components.DockBarEditorManager;
@@ -64,6 +66,7 @@ import ru.vtosters.lite.ui.dialogs.OTADialog;
 import ru.vtosters.lite.ui.fragments.tgstickers.StickersFragment;
 import ru.vtosters.lite.utils.AndroidUtils;
 import ru.vtosters.lite.utils.CacheUtils;
+import ru.vtosters.lite.utils.Preferences;
 import ru.vtosters.lite.utils.SSFSUtils;
 
 public class VTSettings extends MaterialPreferenceToolbarFragment {
@@ -125,6 +128,11 @@ public class VTSettings extends MaterialPreferenceToolbarFragment {
         return AndroidUtils.getString("autoclearcachesumm") + " " + humanReadableByteCountBin(CacheUtils.getInstance().size);
     }
 
+    private void switchTheme(boolean isDarkTheme) {
+        setTheme(isDarkTheme ? getDarkTheme() : getLightTheme(), requireActivity());
+        edit().putBoolean("isdark", isDarkTheme).commit();
+    }
+
     @Override
     public void onCreate(Bundle bundle) {
         super.onCreate(bundle);
@@ -149,7 +157,8 @@ public class VTSettings extends MaterialPreferenceToolbarFragment {
         addPreferenceDrawable(this, "", getUsername(), hasVerification() ? AndroidUtils.getString("thanksfordonate") : AndroidUtils.getString("getdonate"), getDrawableFromUrl(getUserPhoto(), "ic_user_circle_outline_28", true, true), preference -> {
             try {
                 VKAuth.a("logout", false);
-            } catch (Exception ignored) { }
+            } catch (Exception ignored) {
+            }
 
             var intent = new Intent(requireContext(), MainActivity.class);
             intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
@@ -163,15 +172,28 @@ public class VTSettings extends MaterialPreferenceToolbarFragment {
         addPreferenceCategory(this, AndroidUtils.getString("vtsettdarktheme"));
 
         addMaterialSwitchPreference(this, "", AndroidUtils.getString("vtsettdarktheme"), "", "ic_palette_outline_28", isDarkTheme(), (preference, o) -> {
-            boolean value = (boolean) o;
+            final var switchPreference = (MaterialSwitchPreference) preference;
+            final var isDarkTheme = !switchPreference.isChecked();
 
-            if (!value) { // inverted
-                setTheme(getLightTheme(), this.getActivity());
-            } else {
-                setTheme(getDarkTheme(), this.getActivity());
+            if (Preferences.systemtheme()) {
+                new VkAlertDialog.Builder(requireActivity())
+                        .setTitle("Внимание!")
+                        .setMessage("У вас включена системная тема \n" +
+                                "При переключении темы системная тема будет отключена \n\n" +
+                                "Вы действительно хотите отключить её?")
+                        .setCancelable(false)
+                        .setPositiveButton("Отключить", (dialogInterface, i) -> {
+                            switchPreference.setChecked(isDarkTheme);
+                            ((MaterialSwitchPreference) findPreference("systemtheme")).setChecked(false);
+                            requireActivity().runOnUiThread(() -> {
+                                switchTheme(isDarkTheme);
+                            });
+                        })
+                        .setNeutralButton("Отмена", null)
+                        .show();
+                return false;
             }
-
-            edit().putBoolean("isdark", value).commit();
+            switchTheme(isDarkTheme);
             return true;
         });
 
