@@ -30,11 +30,8 @@ public class MusicBottomSheetHook {
         var trackList = new ArrayList<MusicTrack>();
 
         if (playlist != null) {
-            Log.d("VKX", "Playlist is not null");
-            Log.d("VKX", "Playlist size: " + playlist.R.size());
             trackList.addAll(playlist.R);
         } else {
-            Log.d("VKX", "Playlist is null");
             trackList.add(track);
         }
 
