@@ -174,8 +174,8 @@ public class VTSettings extends MaterialPreferenceToolbarFragment {
             return true;
         });
 
-        if (Build.VERSION.SDK_INT >= 28 && false) { // TODO refactoring system theme
-            addMaterialSwitchPreference(this, "systemtheme", AndroidUtils.getString("appearance_theme_use_system"), AndroidUtils.getString("appearance_theme_use_system_summary"), "ic_recent_outline_28", true, (preference, o) -> {
+        if (Build.VERSION.SDK_INT >= 28) {
+            addMaterialSwitchPreference(this, "systemtheme", AndroidUtils.getString("appearance_theme_use_system"), "", "ic_recent_outline_28", true, (preference, o) -> {
                 boolean value = (boolean) o;
 
                 edit().putBoolean("systemtheme", value).commit();

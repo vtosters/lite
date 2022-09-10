@@ -15,6 +15,7 @@ import android.app.Application;
 import android.content.Context;
 import android.content.SharedPreferences;
 import android.content.pm.PackageManager;
+import android.os.Build;
 import android.preference.PreferenceManager;
 
 import com.vtosters.lite.data.Users;
@@ -60,7 +61,7 @@ public class Preferences {
     }
 
     public static boolean systemtheme() {
-        return false; //getBoolValue("systemtheme", true) && VERSION.SDK_INT >= 28;
+        return Build.VERSION.SDK_INT >= 28 && getBoolValue("systemtheme", true);
     }
 
     public static boolean authorsrecomm() {
