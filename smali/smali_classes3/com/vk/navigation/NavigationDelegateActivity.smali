@@ -371,6 +371,8 @@
 
     invoke-virtual {v0, p1}, Lcom/vk/navigation/NavigationDelegate;->a(Landroid/content/res/Configuration;)V
 
+    invoke-static {p1}, Lru/vtosters/lite/hooks/ui/SystemThemeChangerHook;->onThemeChanged(Landroid/content/res/Configuration;)V
+
     return-void
 .end method
 
