@@ -236,29 +236,11 @@ public class JsonInjectors {
     }
 
     public static JSONObject musiclink(JSONObject json) {
-        var oldItems = json.optJSONArray("links");
-        var section = json.optJSONObject("section");
-        var linksblock = section.optJSONArray("blocks");
-        var newBlock = new JSONArray();
+        var links = json.optJSONArray("links");
 
-        if (oldItems != null) {
-            if (oldItems.optJSONObject(0).optString("url").contains("?section=recent")) {
+        if (links != null) {
+            if (links.optJSONObject(0).optString("url").contains("?section=recent")) {
                 json.remove("links");
-
-                for (int i = 0; i < linksblock.length(); i++) {
-                    var item = linksblock.optJSONObject(i);
-                    var datatype = item.optString("data_type");
-                    var layname = item.optJSONObject("layout").optString("name");
-                    if (!datatype.equals("links") && !layname.equals("separator")) {
-                        newBlock.put(item);
-                    }
-                }
-
-                try {
-                    section.putOpt("blocks", newBlock);
-                } catch (JSONException e) {
-                    e.printStackTrace();
-                }
 
                 if (dev()) Log.d("VKMusic", "Removed links buttons");
             }
@@ -579,8 +561,6 @@ public class JsonInjectors {
     }
 
     public static boolean haveDonateButton() {
-        int randomshower = new Random().nextInt(6);
-
-        return hasVerification() || randomshower != 1;
+        return hasVerification() || new Random().nextInt(6) != 1;
     }
 }
