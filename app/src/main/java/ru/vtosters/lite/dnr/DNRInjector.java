@@ -302,37 +302,40 @@ public class DNRInjector {
     }
 
     public static boolean onClickMsg(Context context, MsgAction action, Msg msg) {
-        var text = ((MsgFromUser) msg).f();
         var peerId = msg.v1();
-        var fullMsg = ((MsgFromUser) msg).j2(); // text + reply
-        var reply = fullMsg.substring(text.length() + 1);
 
         if (action == MsgAction.valueOf("READTO")) {
             DNRModule.hookReadStartMsgTo(msg);
             return true;
         }
 
-        var isTextExist = !text.isEmpty() && !text.equals(" ");
-        var isReplyExist = !reply.isEmpty() && !reply.equals(" ");
+        if (msg instanceof MsgFromUser){
+            var text = ((MsgFromUser) msg).f();
+            var fullMsg = ((MsgFromUser) msg).j2(); // text + reply
+            var reply = fullMsg.substring(text.length() + 1);
+
+            var isTextExist = !text.isEmpty() && !text.equals(" ");
+            var isReplyExist = !reply.isEmpty() && !reply.equals(" ");
 
 
-        if (isReplyExist) {
-            reply = decryptMessage(reply, peerId);
-        }
+            if (isReplyExist) {
+                reply = decryptMessage(reply, peerId);
+            }
 
-        if (isTextExist) {
-            text = decryptMessage(text, peerId);
-        }
+            if (isTextExist) {
+                text = decryptMessage(text, peerId);
+            }
 
-        if (action == MsgAction.valueOf("TRANSLATE")) {
-            if (isTextExist && isReplyExist) {
-                Translate.showTranslatedText(context, text + "\n\n" + getString("translator_reply") + "\n" + reply);
-            } else if (isReplyExist) {
-                Translate.showTranslatedText(context, getString("translator_reply") + "\n" + reply);
-            } else if (isTextExist) {
-                Translate.showTranslatedText(context, text);
-            } else {
-                sendToast(getString("translator_no_text"));
+            if (action == MsgAction.valueOf("TRANSLATE")) {
+                if (isTextExist && isReplyExist) {
+                    Translate.showTranslatedText(context, text + "\n\n" + getString("translator_reply") + "\n" + reply);
+                } else if (isReplyExist) {
+                    Translate.showTranslatedText(context, getString("translator_reply") + "\n" + reply);
+                } else if (isTextExist) {
+                    Translate.showTranslatedText(context, text);
+                } else {
+                    sendToast(getString("translator_no_text"));
+                }
             }
         }
 
