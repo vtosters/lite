@@ -6091,6 +6091,8 @@ May look like a fake leaving the online"</string>
     <string name="download_mp3">Download as mp3</string>
     <string name="remove_from_cache">Delete from cache</string>
 
+    <string name="play_in_vkx">Play the track in VK X</string>
+
     <string name="thanksfordonate">Thank you for supporting the project!</string>
     <string name="getdonate">Support the project with a donation and get rewards</string>
 

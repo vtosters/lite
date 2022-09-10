@@ -709,6 +709,12 @@
 
     move-result p1
 
+    invoke-static {v0}, Lru/vtosters/lite/hooks/ui/MusicBottomSheetHook;->tryPlayInVKX(Lcom/vk/dto/music/MusicTrack;)Z
+
+    move-result v3
+
+    if-nez v3, :cond_7
+
     const v3, 0x7f0a0870
 
     const/4 v4, 0x0
