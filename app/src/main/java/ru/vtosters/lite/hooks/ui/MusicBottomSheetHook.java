@@ -1,12 +1,14 @@
 package ru.vtosters.lite.hooks.ui;
 
+import android.util.Log;
+
 import com.vk.dto.music.MusicTrack;
+import com.vk.dto.music.Playlist;
 import com.vk.music.bottomsheets.a.MusicAction;
 import com.vk.music.common.MusicPlaybackLaunchContext;
 import com.vtosters.lite.R;
 
 import java.util.ArrayList;
-import java.util.List;
 
 import bruhcollective.itaysonlab.libvkx.client.LibVKXClient;
 import bruhcollective.itaysonlab.libvkx.client.LibVKXClientImpl;
@@ -20,8 +22,23 @@ public class MusicBottomSheetHook {
         return actions;
     }
 
-    public static boolean tryPlayInVKX(MusicTrack track, MusicPlaybackLaunchContext context) {
-        LibVKXClientImpl.LibVKXAction action = iLibVkxService -> LibVKXClient.lambdaplay(List.of(track), track, iLibVkxService, context);
+    public static boolean tryPlayInVKX(int actionId, MusicTrack track, MusicPlaybackLaunchContext context, Playlist playlist) {
+        if (actionId != AndroidUtils.getIdentifier("play_in_vkx", "id")) {
+            return false;
+        }
+
+        var trackList = new ArrayList<MusicTrack>();
+
+        if (playlist != null) {
+            Log.d("VKX", "Playlist is not null");
+            Log.d("VKX", "Playlist size: " + playlist.R.size());
+            trackList.addAll(playlist.R);
+        } else {
+            Log.d("VKX", "Playlist is null");
+            trackList.add(track);
+        }
+
+        LibVKXClientImpl.LibVKXAction action = iLibVkxService -> LibVKXClient.lambdaplay(trackList, track, iLibVkxService, context);
         return LibVKXClient.getInstance().runOnService(action);
     }
 

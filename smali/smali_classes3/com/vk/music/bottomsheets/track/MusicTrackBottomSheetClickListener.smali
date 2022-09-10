@@ -704,12 +704,19 @@
 
     move-result-object v2
 
-    .line 7
     invoke-virtual {p1}, Lcom/vk/music/bottomsheets/a/MusicAction;->a()I
 
     move-result p1
 
-    invoke-static {v0, v2}, Lru/vtosters/lite/hooks/ui/MusicBottomSheetHook;->tryPlayInVKX(Lcom/vk/dto/music/MusicTrack;Lcom/vk/music/common/MusicPlaybackLaunchContext;)Z
+    .line 7
+
+    iget-object v3, p0, Lcom/vk/music/bottomsheets/track/MusicTrackBottomSheetClickListener;->f:Lcom/vk/music/bottomsheets/track/MusicTrackBottomSheetModel1;
+
+    invoke-interface {v3}, Lcom/vk/music/bottomsheets/track/MusicTrackBottomSheetModel1;->i()Lcom/vk/dto/music/Playlist;
+
+    move-result-object v3
+
+    invoke-static {p1, v0, v2, v3}, Lru/vtosters/lite/hooks/ui/MusicBottomSheetHook;->tryPlayInVKX(ILcom/vk/dto/music/MusicTrack;Lcom/vk/music/common/MusicPlaybackLaunchContext;Lcom/vk/dto/music/Playlist;)Z
 
     move-result v3
 
