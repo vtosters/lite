@@ -17,6 +17,7 @@ import static ru.vtosters.lite.utils.CacheUtils.humanReadableByteCountBin;
 import static ru.vtosters.lite.utils.GmsUtils.isGmsInstalled;
 import static ru.vtosters.lite.utils.ImageUtils.getDrawableFromUrl;
 import static ru.vtosters.lite.utils.Preferences.ads;
+import static ru.vtosters.lite.utils.Preferences.autotranslate;
 import static ru.vtosters.lite.utils.Preferences.devmenu;
 import static ru.vtosters.lite.utils.Preferences.disableSettingsSumms;
 import static ru.vtosters.lite.utils.Preferences.hasSpecialVerif;
@@ -140,7 +141,7 @@ public class VTSettings extends MaterialPreferenceToolbarFragment {
 
         var feedsumm = getValAsString("vtlfeedsumm", ads());
         var docksumm = getDocksumm();
-        var msgsumm = getValAsString("vtlmsgsumm", vkme());
+        var msgsumm = isTablet() ? getValAsString("autotranslate_title", autotranslate()) : getValAsString("vtlmsgsumm", vkme());
         var activitysumm = getValAsString("vtlactivitysumm", offline());
         var themessumm = getValAsString("vtlthemessumm", navbar());
         var tgssumm = getTGSsumm();
