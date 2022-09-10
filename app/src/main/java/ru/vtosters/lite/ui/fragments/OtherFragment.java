@@ -11,6 +11,7 @@ import static ru.vtosters.lite.utils.AccountManagerUtils.getUserToken;
 import static ru.vtosters.lite.utils.AndroidUtils.dp2px;
 import static ru.vtosters.lite.utils.AndroidUtils.getDefaultPrefs;
 import static ru.vtosters.lite.utils.AndroidUtils.getIdentifier;
+import static ru.vtosters.lite.utils.ContactsUtils.setContactsSync;
 import static ru.vtosters.lite.utils.LifecycleUtils.restartApplication;
 import static ru.vtosters.lite.utils.ThemesUtils.getTextAttr;
 
@@ -91,6 +92,11 @@ public class OtherFragment extends MaterialPreferenceToolbarFragment {
         });
         findPreference("autoclearcache").setOnPreferenceClickListener(preference -> {
             cacheAutoCleanDialog();
+            return true;
+        });
+
+        findPreference("contacts_sync").setOnPreferenceChangeListener((preference, o) -> {
+            setContactsSync((boolean) o);
             return true;
         });
 

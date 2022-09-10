@@ -1,5 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+    <PreferenceCategory android:title="Синхронизация контактов">
+        <com.vtosters.lite.ui.MaterialSwitchPreference
+            android:defaultValue="false"
+            android:key="contacts_sync"
+            android:title="Синхронизировать контакты" />
+    </PreferenceCategory>
     <PreferenceCategory android:title="@string/other_fix_app">
         <Preference
             android:key="firebasefix"
