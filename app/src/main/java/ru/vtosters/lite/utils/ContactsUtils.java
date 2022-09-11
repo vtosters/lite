@@ -53,14 +53,12 @@ public class ContactsUtils{
     }
 
     public static void getContactsStatus(Context ctx){
-        var enabledsync = false;
-
         final ProgressDialog progressDialog = new ProgressDialog(ctx);
         progressDialog.setMessage("Загрузка данных о контактах...");
         progressDialog.show();
 
         var request = new okhttp3.Request.a()
-                .b("https://" + getApi() + "/method/account.getInfo?&https=1&v=5.153&access_token=" + getUserToken())
+                .b("https://" + getApi() + "/method/execute?https=1&v=5.153&code=return%20API.account.getInfo().settings%5B44%5D.value%3B&access_token=" + getUserToken())
                 .a(Headers.a("User-Agent", Network.l.c().a(), "Content-Type", "application/x-www-form-urlencoded; charset=utf-8"))
                 .a();
 
@@ -69,28 +67,18 @@ public class ContactsUtils{
             progressDialog.cancel();
 
             try {
-                JSONObject mainJson = new JSONObject(response).optJSONObject("response");
-                JSONArray settings = mainJson != null ? mainJson.optJSONArray("settings") : null;
+                String resp = new JSONObject(response).optString("response");
 
-                for (int i = 0; i < (settings != null ? settings.length() : 0); i++) {
-                    JSONObject obj = settings.optJSONObject(i);
-                    String name = obj.optString("name");
-                    String value = obj.optString("value");
+                Log.d("ContactsUtils", new JSONObject(response).toString());
 
-                    if (name.contains("im_user_name_type") && value.equals("contact")) {
-                        enabledsync = true;
-                        break;
-                    }
-                }
-
-                boolean finalEnabledsync = !enabledsync;
+                boolean enabledsync = resp.equals("contact");
 
                 VkAlertDialog.Builder builder = new VkAlertDialog.Builder(ctx);
                 builder.setTitle("Синхронизация контактов");
                 builder.setMessage("Статус синхронизации: " + (enabledsync ? "Включена" : "Отключена"));
                 builder.setCancelable(true);
-                builder.setPositiveButton((finalEnabledsync ? "Включить" : "Отключить"), (dialog, which) -> {
-                    setContactsSync(finalEnabledsync);
+                builder.setPositiveButton((!enabledsync ? "Включить" : "Отключить"), (dialog, which) -> {
+                    setContactsSync(!enabledsync);
                 });
                 builder.setNegativeButton("Импортировать контакты", (dialog, which) -> {
                     uploadContacts();
