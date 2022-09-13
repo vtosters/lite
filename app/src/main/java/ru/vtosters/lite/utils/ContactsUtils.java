@@ -1,22 +1,27 @@
 package ru.vtosters.lite.utils;
+
 import static androidx.core.app.ActivityCompat.requestPermissions;
 import static ru.vtosters.lite.net.Request.makeRequest;
 import static ru.vtosters.lite.proxy.ProxyUtils.getApi;
 import static ru.vtosters.lite.utils.AccountManagerUtils.getUserToken;
-import static ru.vtosters.lite.utils.AndroidUtils.getGlobalContext;
 import static ru.vtosters.lite.utils.AndroidUtils.sendToast;
 
 import android.Manifest;
 import android.app.ProgressDialog;
 import android.content.Context;
-import android.os.Build;
+import android.content.SyncResult;
+import android.content.pm.PackageManager;
+import android.os.Bundle;
 import android.util.Log;
 
+import androidx.core.content.ContextCompat;
+
+import com.vk.auth.VKAuthUtils;
 import com.vk.contacts.ContactsSyncAdapterService;
 import com.vk.core.dialogs.alert.VkAlertDialog;
 import com.vk.core.network.Network;
+import com.vtosters.lite.auth.VKAccountManager;
 
-import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
@@ -39,13 +44,14 @@ public class ContactsUtils{
                 });
     }
 
-    public static void uploadContacts(){
+    public static void uploadContacts(Context ctx){
         try {
-            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
+            if (ContextCompat.checkSelfPermission(ctx, Manifest.permission.READ_CONTACTS) != PackageManager.PERMISSION_GRANTED) {
                 sendToast("Для работы данной функции необходимо выдать право на чтение контактов");
                 requestPermissions(LifecycleUtils.getCurrentActivity(), new String[] {Manifest.permission.READ_CONTACTS}, 11111);
             } else {
-                ContactsSyncAdapterService.a(getGlobalContext().getContentResolver());
+                var account = VKAuthUtils.a.a(VKAccountManager.d().Z());
+                ContactsSyncAdapterService.c(ctx, account, new Bundle(), new SyncResult());
             }
         } catch (Exception e){
             Log.d("ContactsUtils", e.getMessage());
@@ -81,7 +87,7 @@ public class ContactsUtils{
                     setContactsSync(!enabledsync);
                 });
                 builder.setNegativeButton("Импортировать контакты", (dialog, which) -> {
-                    uploadContacts();
+                    uploadContacts(ctx);
                 });
 
                 builder.show();
