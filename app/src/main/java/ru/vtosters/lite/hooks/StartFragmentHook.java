@@ -15,7 +15,6 @@ import com.vk.fave.fragments.FaveTabFragment;
 import com.vk.menu.MenuFragment;
 import com.vk.menu.SearchMenuFragment;
 import com.vk.music.fragment.MusicCatalogFragment1;
-import com.vk.music.fragment.MusicFragment;
 import com.vk.newsfeed.HomeFragment;
 import com.vk.newsfeed.NewsfeedFragment;
 import com.vk.notifications.NotificationsContainerFragment;
@@ -47,7 +46,7 @@ public class StartFragmentHook {
             case "groups":
                 return milkshake() ? CommunitiesCatalogFragment.class : GroupsFragment1.class;
             case "music":
-                return getBoolValue("musicnewcatalog", true) ? MusicCatalogFragment1.class : MusicFragment.class;
+                return MusicCatalogFragment1.class;
             case "friends":
                 return FriendsFragment.class;
             case "photos":

@@ -5525,8 +5525,6 @@
     <string name="lastfm_enabled_summ">Полезный сервис по учету прослушивания песен</string>
     <string name="lastfm_credentials_empty">Логин или пароль не заданы</string>
     <string name="vtl_music_settings">Музыка</string>
-    <string name="musicnewcatalog_title">Новый раздел музыки</string>
-    <string name="musicnewcatalog_summ">Новый каталог музыкального раздела с динамическим контентом</string>
     <string name="musicdefcatalog_dialogTitle">Выберите раздел по умолчанию</string>
     <string name="musicdefcatalog_title">Раздел музыки по умолчанию</string>
     <string name="vtl_video_settings">Видео</string>
