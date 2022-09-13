@@ -48,11 +48,6 @@
             android:title="@string/lastfm_enabled_title" />
     </PreferenceCategory>
     <PreferenceCategory android:title="@string/vtl_music_settings">
-        <com.vtosters.lite.ui.MaterialSwitchPreference
-            android:defaultValue="true"
-            android:key="musicnewcatalog"
-            android:summary="@string/musicnewcatalog_summ"
-            android:title="@string/musicnewcatalog_title" />
         <com.vtosters.lite.ui.SummaryListPreference
             android:defaultValue="default"
             android:dialogTitle="@string/musicdefcatalog_dialogTitle"

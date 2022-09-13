@@ -20,7 +20,6 @@ import com.vk.friends.catalog.FriendsCatalogFragment;
 import com.vk.menu.MenuFragment;
 import com.vk.menu.SearchMenuFragment;
 import com.vk.music.fragment.MusicCatalogFragment1;
-import com.vk.music.fragment.MusicFragment;
 import com.vk.newsfeed.HomeFragment;
 import com.vk.newsfeed.NewsfeedFragment;
 import com.vk.notifications.NotificationsContainerFragment;
@@ -203,7 +202,7 @@ public class DockBarEditorManager {
                         R.drawable.ic_music_outline_28,
                         R.string.music,
                         R.id.menu_audios,
-                        getBoolValue("musicnewcatalog", true) ? MusicCatalogFragment1.class : MusicFragment.class);
+                        MusicCatalogFragment1.class);
             case "tab_videos":
                 return DockBarTab.valuesOf(
                         "tab_videos",

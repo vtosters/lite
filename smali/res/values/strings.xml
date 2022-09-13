@@ -5659,8 +5659,6 @@ Expand text..."</string>
     <string name="lastfm_enabled_summ">Useful song tracking service</string>
     <string name="lastfm_credentials_empty">Username or password not set</string>
     <string name="vtl_music_settings">Music</string>
-    <string name="musicnewcatalog_title">New music catalog</string>
-    <string name="musicnewcatalog_summ">New music catalog with dynamic content</string>
     <string name="musicdefcatalog_dialogTitle">Select default section</string>
     <string name="musicdefcatalog_title">Default music section</string>
     <string name="vtl_video_settings">Video</string>
