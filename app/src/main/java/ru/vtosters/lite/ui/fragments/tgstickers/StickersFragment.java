@@ -31,6 +31,7 @@ import android.widget.LinearLayout;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+import androidx.recyclerview.widget.ItemTouchHelper;
 import androidx.recyclerview.widget.RecyclerView;
 import androidx.recyclerview.widget.StaggeredGridLayoutManager;
 
@@ -43,6 +44,7 @@ import java.io.File;
 
 import ru.vtosters.lite.tgs.TGPref;
 import ru.vtosters.lite.ui.adapters.StickerPackAdapter;
+import ru.vtosters.lite.ui.components.StickerTouchHelperCallback;
 import ru.vtosters.lite.ui.fragments.BaseToolbarFragment;
 import ru.vtosters.lite.utils.AndroidUtils;
 
@@ -120,6 +122,11 @@ public class StickersFragment extends BaseToolbarFragment {
 
         mAdapter = new StickerPackAdapter();
         RecyclerView mRecycler = new RecyclerView(getContext());
+
+        var callback = new StickerTouchHelperCallback(mAdapter);
+        var touchHelper = new ItemTouchHelper(callback);
+        touchHelper.attachToRecyclerView(mRecycler);
+
         mRecycler.setAdapter(mAdapter);
         mRecycler.setLayoutManager(new StaggeredGridLayoutManager(2, StaggeredGridLayoutManager.VERTICAL));
         layout.addView(mRecycler, new ViewGroup.LayoutParams(-1, -1));
