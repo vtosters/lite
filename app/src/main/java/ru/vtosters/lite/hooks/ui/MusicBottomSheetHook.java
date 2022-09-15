@@ -1,5 +1,7 @@
 package ru.vtosters.lite.hooks.ui;
 
+import static ru.vtosters.lite.utils.Preferences.milkshake;
+
 import com.vk.dto.music.MusicTrack;
 import com.vk.dto.music.Playlist;
 import com.vk.music.bottomsheets.a.MusicAction;
@@ -21,6 +23,8 @@ public class MusicBottomSheetHook {
     }
 
     public static ArrayList<MusicAction> hook(ArrayList<MusicAction> actions, Playlist playlist) {
+        if (LibVKXClient.isVkxInstalled())
+            actions.add(getPlayInVKXAction());
 
         return actions;
     }
@@ -33,6 +37,8 @@ public class MusicBottomSheetHook {
     }
 
     public static boolean injectOnClick(int actionId, Playlist playlist) { // playlist inj
+        if (actionId == AndroidUtils.getIdentifier("play_in_vkx", "id"))
+            return tryPlayInVKX(null, null, playlist);
 
         return false;
     }
@@ -53,7 +59,7 @@ public class MusicBottomSheetHook {
     private static MusicAction getPlayInVKXAction() {
         return new MusicAction(
                 AndroidUtils.getIdentifier("play_in_vkx", "id"),
-                R.drawable.ic_music_24,
+                milkshake() ? R.drawable.ic_music_outline_24 : R.drawable.ic_music_24,
                 AndroidUtils.getIdentifier("play_in_vkx", "string"),
                 R.color.caption_gray,
                 R.string.music_talkback_empty,
