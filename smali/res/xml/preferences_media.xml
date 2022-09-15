@@ -80,7 +80,7 @@
             android:key="select_photo_search_engine"
             android:title="@string/photo_search_engine_title" />
     </PreferenceCategory>
-    <PreferenceCategory android:title="@string/vkx_title">
+    <PreferenceCategory android:title="@string/vkx_title" android:key="vkx_sett">
         <Preference
             android:enabled="false"
             android:summary="@string/vkx_why_summary"

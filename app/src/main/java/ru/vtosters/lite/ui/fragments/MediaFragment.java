@@ -1,5 +1,6 @@
 package ru.vtosters.lite.ui.fragments;
 
+import static bruhcollective.itaysonlab.libvkx.client.LibVKXClient.isVkxInstalled;
 import static ru.vtosters.lite.music.Scrobbler.isLoggedIn;
 import static ru.vtosters.lite.proxy.ProxyUtils.getApi;
 import static ru.vtosters.lite.utils.AccountManagerUtils.getUserToken;
@@ -92,6 +93,10 @@ public class MediaFragment extends MaterialPreferenceToolbarFragment {
             findPreference("lastfm_auth").setSummary(AndroidUtils.getString("lastfm_authorized_as") + " " + Scrobbler.getUserName());
         } else {
             findPreference("lastfm_enabled").setEnabled(false);
+        }
+
+        if (!isVkxInstalled()){
+            findPreference("vkx_sett").setVisible(false);
         }
 
         findPreference("select_photo_search_engine").setOnPreferenceClickListener(preference -> {
