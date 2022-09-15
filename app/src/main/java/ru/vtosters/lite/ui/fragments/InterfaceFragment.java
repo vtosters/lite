@@ -5,6 +5,7 @@ import static ru.vtosters.lite.utils.AndroidUtils.getPreferences;
 import static ru.vtosters.lite.utils.AndroidUtils.isTablet;
 import static ru.vtosters.lite.utils.LifecycleUtils.restartApplicationWithTimer;
 
+import android.os.Build;
 import android.os.Bundle;
 import android.view.View;
 
@@ -37,6 +38,10 @@ public class InterfaceFragment extends MaterialPreferenceToolbarFragment {
             RoundingSeekbarDialog.dialog(getContext());
             return true;
         });
+
+        if (Build.VERSION.SDK_INT >= 33){
+            findPreference("anim_rtrn_type").setVisible(false);
+        }
 
         if (getPreferences().getInt("pic_rounding", 0) == 0) {
             findPreference("customrounding").setSummary(AndroidUtils.getString("disabled"));
