@@ -9,6 +9,7 @@ import static ru.vtosters.lite.utils.AndroidUtils.getIdentifier;
 import static ru.vtosters.lite.utils.AndroidUtils.getPreferences;
 import static ru.vtosters.lite.utils.AndroidUtils.sendToast;
 import static ru.vtosters.lite.utils.LifecycleUtils.restartApplicationWithTimer;
+import static ru.vtosters.lite.utils.NewsFeedFiltersUtils.setupFilters;
 import static ru.vtosters.lite.utils.ThemesUtils.getAccentColor;
 import static ru.vtosters.lite.utils.ThemesUtils.getAlertStyle;
 import static ru.vtosters.lite.utils.ThemesUtils.getSTextAttr;
@@ -33,6 +34,8 @@ import com.vk.core.dialogs.alert.VkAlertDialog;
 import com.vk.core.network.Network;
 import com.vtosters.lite.general.fragments.MaterialPreferenceToolbarFragment;
 
+import org.json.JSONObject;
+
 import java.io.IOException;
 import java.util.Arrays;
 
@@ -43,6 +46,7 @@ import ru.vtosters.lite.downloaders.VideoDownloader;
 import ru.vtosters.lite.music.Scrobbler;
 import ru.vtosters.lite.ui.adapters.ImagineArrayAdapter;
 import ru.vtosters.lite.utils.AndroidUtils;
+import ru.vtosters.lite.utils.LifecycleUtils;
 
 public class MediaFragment extends MaterialPreferenceToolbarFragment {
     private final int REQUEST_CODE_SET_DOWNLOAD_DIRECTORY = 665;
@@ -71,7 +75,7 @@ public class MediaFragment extends MaterialPreferenceToolbarFragment {
     private void prefs() {
         findPreference("download_video").setOnPreferenceClickListener(new MediaFragment.download());
         findPreference("clearvideohistory").setOnPreferenceClickListener(preference -> {
-            deleteVideoHistory();
+            deleteVideoHistoryDialog(requireContext());
             return true;
         });
         findPreference("dateformat").setOnPreferenceChangeListener(new MediaFragment.restart());
@@ -178,8 +182,15 @@ public class MediaFragment extends MaterialPreferenceToolbarFragment {
                         .a();
 
                 try {
-                    var response = new OkHttpClient().a(request).execute().a().g();
-                    Log.d("VideoHistory", response);
+                    var response = new JSONObject(new OkHttpClient().a(request).execute().a().g());
+
+                    if (response.optInt("response") == 1){
+                        LifecycleUtils.getCurrentActivity().runOnUiThread(() -> sendToast(AndroidUtils.getString("video_history_cleaned")));
+                    } else {
+                        LifecycleUtils.getCurrentActivity().runOnUiThread(() -> sendToast("Ошибка при очистке истории. Подробности в логах"));
+                    }
+
+                    Log.d("VideoHistory", response.toString());
                 } catch (IOException e) {
                     e.printStackTrace();
                 }
@@ -189,8 +200,18 @@ public class MediaFragment extends MaterialPreferenceToolbarFragment {
         });
 
         thread.start();
+    }
 
-        sendToast(AndroidUtils.getString("video_history_cleaned"));
+    private void deleteVideoHistoryDialog(Context context){
+        VkAlertDialog.Builder builder = new VkAlertDialog.Builder(context);
+        builder.setTitle(AndroidUtils.getString("warning"));
+        builder.setMessage("Вы действительно хотите очистить историю видео?");
+        builder.setCancelable(false);
+        builder.setPositiveButton(AndroidUtils.getString("yes"), (dialogInterface, i) -> {
+            deleteVideoHistory();
+        });
+        builder.setNegativeButton(AndroidUtils.getString("cancel"), (dialogInterface, i) -> dialogInterface.dismiss());
+        builder.show();
     }
 
     public static void download(Context ctx) {
