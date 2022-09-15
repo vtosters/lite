@@ -50,11 +50,23 @@ public class AudioDownloader {
         var downloadPath = musicPath + File.separator + tempId;
 
         var notification = buildDownloadNotification(track, tempId);
+
+
         downloadM3U8(track, downloadPath, new Callback() {
+            long startTime = 0;
+            long elapsedTime = 0;
+
             @Override
             public void onProgress(int progress) {
-                notification.setProgress(100, progress, false);
-                notificationManager.notify(tempId, notification.build());
+                if (elapsedTime > 1000) {
+                    notification.setProgress(100, progress, false);
+                    notificationManager.notify(tempId, notification.build());
+
+                    startTime = System.currentTimeMillis();
+                    elapsedTime = 0;
+                } else {
+                    elapsedTime = System.currentTimeMillis() - startTime;
+                }
             }
 
             @Override
