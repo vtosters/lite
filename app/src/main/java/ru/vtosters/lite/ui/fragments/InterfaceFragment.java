@@ -2,9 +2,12 @@ package ru.vtosters.lite.ui.fragments;
 
 import static ru.vtosters.lite.utils.AndroidUtils.getIdentifier;
 import static ru.vtosters.lite.utils.AndroidUtils.getPreferences;
+import static ru.vtosters.lite.utils.AndroidUtils.isTablet;
 import static ru.vtosters.lite.utils.LifecycleUtils.restartApplicationWithTimer;
 
+import android.os.Build;
 import android.os.Bundle;
+import android.view.View;
 
 import androidx.preference.Preference;
 
@@ -26,10 +29,19 @@ public class InterfaceFragment extends MaterialPreferenceToolbarFragment {
         findPreference("swipe").setOnPreferenceClickListener(new restart());
         findPreference("is_likes_on_right").setOnPreferenceClickListener(new restart());
 
+        if (isTablet()){
+            findPreference("menusett").setVisible(false);
+            findPreference("swipe").setVisible(false);
+        }
+
         findPreference("customrounding").setOnPreferenceClickListener(preference -> {
             RoundingSeekbarDialog.dialog(getContext());
             return true;
         });
+
+        if (Build.VERSION.SDK_INT >= 33){
+            findPreference("anim_rtrn_type").setVisible(false);
+        }
 
         if (getPreferences().getInt("pic_rounding", 0) == 0) {
             findPreference("customrounding").setSummary(AndroidUtils.getString("disabled"));

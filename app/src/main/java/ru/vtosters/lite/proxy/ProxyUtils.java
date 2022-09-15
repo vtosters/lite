@@ -1,6 +1,9 @@
 package ru.vtosters.lite.proxy;
 
 import static java.lang.System.clearProperty;
+import static ru.vtosters.lite.proxy.api.VikaMobile.getApiHost;
+import static ru.vtosters.lite.proxy.api.VikaMobile.getOauthHost;
+import static ru.vtosters.lite.proxy.api.VikaMobile.getStaticHost;
 import static ru.vtosters.lite.utils.AndroidUtils.getGlobalContext;
 import static ru.vtosters.lite.utils.AndroidUtils.getPrefsValue;
 
@@ -23,11 +26,47 @@ public class ProxyUtils{
     public static String getApi(){
         var proxyapi = getPrefsValue("proxyapi");
 
-        if (isApiProxyEnabled() & !proxyapi.isEmpty()) {
+        if (isVikaProxyEnabled()) {
+            proxyapi = getApiHost();
+        }
+
+        if (isAnyProxyEnabled() & !proxyapi.isEmpty()) {
             return proxyapi;
         }
 
         return "api.vk.com";
+    }
+
+    public static String getOauth(){
+        var oauth = getPrefsValue("proxyoauth");
+
+        if (isVikaProxyEnabled()) {
+            oauth = getOauthHost();
+        }
+
+        if (isAnyProxyEnabled() & !oauth.isEmpty()) {
+            return oauth;
+        }
+
+        return "oauth.vk.com";
+    }
+
+    public static String getStatic(){
+        var staticapi = getPrefsValue("proxystatic");
+
+        if (isVikaProxyEnabled()) {
+            staticapi = getStaticHost();
+        }
+
+        if (isAnyProxyEnabled() & !staticapi.isEmpty()) {
+            return staticapi;
+        }
+
+        return "static.vk.com";
+    }
+
+    public static Boolean isAnyProxyEnabled(){
+        return isApiProxyEnabled() || isVikaProxyEnabled();
     }
 
     public static Boolean isZaboronaEnabled(){

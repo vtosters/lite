@@ -1,25 +1,16 @@
 package ru.vtosters.lite.hooks;
 
-import static ru.vtosters.lite.foaf.FoafBase.getLastSeen;
 import static ru.vtosters.lite.foaf.FoafBase.getBypassedOnlineInfo;
-import static ru.vtosters.lite.hooks.OnlineFormatterHook.onlineHookProfiles;
 import static ru.vtosters.lite.hooks.DateHook.getLocale;
+import static ru.vtosters.lite.hooks.OnlineFormatterHook.onlineHookProfiles;
+import static ru.vtosters.lite.proxy.ProxyUtils.getApi;
+import static ru.vtosters.lite.proxy.ProxyUtils.getStatic;
 import static ru.vtosters.lite.utils.AndroidUtils.getDefaultPrefs;
-import static ru.vtosters.lite.utils.Base64Utils.decode;
-import static ru.vtosters.lite.utils.NewsFeedFiltersUtils.checkCaption;
-import static ru.vtosters.lite.utils.NewsFeedFiltersUtils.checkCopyright;
-import static ru.vtosters.lite.utils.NewsFeedFiltersUtils.isBadNews;
-import static ru.vtosters.lite.utils.Preferences.ads;
-import static ru.vtosters.lite.utils.Preferences.adsgroup;
-import static ru.vtosters.lite.utils.Preferences.adsstories;
-import static ru.vtosters.lite.utils.Preferences.authorsrecomm;
 import static ru.vtosters.lite.utils.Preferences.dev;
 import static ru.vtosters.lite.utils.Preferences.friendsblock;
-import static ru.vtosters.lite.utils.Preferences.friendsrecomm;
 import static ru.vtosters.lite.utils.Preferences.getBoolValue;
 import static ru.vtosters.lite.utils.Preferences.hasVerification;
 import static ru.vtosters.lite.utils.Preferences.podcastcatalog;
-import static ru.vtosters.lite.utils.Preferences.postsrecomm;
 import static ru.vtosters.lite.utils.VTVerifications.isDeveloper;
 import static ru.vtosters.lite.utils.VTVerifications.isPrometheus;
 import static ru.vtosters.lite.utils.VTVerifications.isVerified;
@@ -47,7 +38,6 @@ import okhttp3.OkHttpClient;
 import okhttp3.Request;
 import ru.vtosters.lite.utils.AccountManagerUtils;
 import ru.vtosters.lite.utils.AndroidUtils;
-import ru.vtosters.lite.utils.NewsFeedFiltersUtils;
 
 public class JsonInjectors {
     private static final OkHttpClient mClient = new OkHttpClient();
@@ -118,7 +108,7 @@ public class JsonInjectors {
     public static JSONObject vktesters(int id) throws JSONException {
         var title = AndroidUtils.getString("tester_profile");
         var text_color = "2D81E0";
-        var link = "https://static.vk.com/bugs?lang=" + LangUtils.a() + "#/reporter" + id;
+        var link = "https://" + getStatic() + "/bugs?lang=" + LangUtils.a() + "#/reporter" + id;
 
         var json = new JSONObject();
         var icons = new JSONArray();
@@ -164,23 +154,16 @@ public class JsonInjectors {
         var link = "https://vtosters.app"; // can be null
         var linktitle = "Test button"; // can be null
 
-        // "{\"layout\":\"tertiary\",\"text\":\"" + linktitle + "\",\"type\":\"link\",\"link\":\"" + link + "\"}";
-        var buttons = decode("eyJsYXlvdXQiOiJ0ZXJ0aWFyeSIsInRleHQiOiI=") + linktitle + decode("IiwidHlwZSI6ImxpbmsiLCJsaW5rIjoi") + link + decode("In0=");
-        // ,"icon":" + pic + "
-        var icon = decode("LCJpY29uIjoi") + pic + decode("Ig==");
-
         var hasIcon = !pic.isEmpty();
-        var hasButton = !buttons.isEmpty();
-        var isPicture = pic.endsWith(".png") || pic.endsWith(".jpg") || pic.endsWith(".jpeg") || pic.endsWith(".webp");
+        var hasButton = !link.isEmpty();
 
-        if (!isPicture) hasIcon = false;
-        if (!hasIcon) icon = "";
-        if (!hasButton) buttons = "";
+        var isPicture = pic.endsWith(".png") || pic.endsWith(".jpg") || pic.endsWith(".jpeg") || pic.endsWith(".webp");
 
         if (isVerified(peerid)) text = AndroidUtils.getString("i_bought") + " VTosters Premium";
         if (isPrometheus(peerid)) text = AndroidUtils.getString("i_bought") + " VTosters Premium Gold Prime Pro Plus";
         if (isDeveloper(peerid)) text = AndroidUtils.getString("i_created_poop");
-        if (!isVerified(peerid) || text.equals("")) {
+
+        if (!isVerified(peerid) || text.equals("") || peerid == AccountManagerUtils.getUserId() || peerid == 0) {
             if (getBoolValue("convBarRecomm", false)) {
                 return null;
             } else {
@@ -188,14 +171,27 @@ public class JsonInjectors {
             }
         }
 
-        if (!dev()) return orig.optJSONObject("conversation_bar");
+        if (!dev()) return orig.optJSONObject("conversation_bar"); // for devs only
 
-        // JSONObject("{\"name\":\"group_admin_welcome\",\"text\":\"" + textverif + "\",\"buttons\":[],\"icon\":\"" + pic + "\"}");
-        return new JSONObject(decode("eyJuYW1lIjoiZ3JvdXBfYWRtaW5fd2VsY29tZSIsInRleHQiOiI=")
-                + text + decode("IiwiYnV0dG9ucyI6Ww==")
-                + buttons + decode("XQ==")
-                + icon
-                + decode("fQ=="));
+        var json = new JSONObject();
+
+        var buttonsJson = new JSONObject();
+        buttonsJson.put("layout", "tertiary");
+        buttonsJson.put("text", linktitle);
+        buttonsJson.put("type", "link");
+        buttonsJson.put("link", link);
+
+        var buttonsjson = new JSONArray(); // max 3 buttons in array
+        if (hasButton) buttonsjson.put(buttonsJson);
+
+        json.put("name", "group_admin_welcome");
+        json.put("text", text);
+        json.put("buttons", buttonsjson);
+        if (hasIcon && isPicture) {
+            json.put("icon", pic);
+        }
+
+        return json;
     }
 
     public static JSONObject menu(JSONObject orig) throws JSONException {
@@ -240,29 +236,11 @@ public class JsonInjectors {
     }
 
     public static JSONObject musiclink(JSONObject json) {
-        var oldItems = json.optJSONArray("links");
-        var section = json.optJSONObject("section");
-        var linksblock = section.optJSONArray("blocks");
-        var newBlock = new JSONArray();
+        var links = json.optJSONArray("links");
 
-        if (oldItems != null) {
-            if (oldItems.optJSONObject(0).optString("url").contains("?section=recent")) {
+        if (links != null) {
+            if (links.optJSONObject(0).optString("url").contains("?section=recent")) {
                 json.remove("links");
-
-                for (int i = 0; i < linksblock.length(); i++) {
-                    var item = linksblock.optJSONObject(i);
-                    var datatype = item.optString("data_type");
-                    var layname = item.optJSONObject("layout").optString("name");
-                    if (!datatype.equals("links") && !layname.equals("separator")) {
-                        newBlock.put(item);
-                    }
-                }
-
-                try {
-                    section.putOpt("blocks", newBlock);
-                } catch (JSONException e) {
-                    e.printStackTrace();
-                }
 
                 if (dev()) Log.d("VKMusic", "Removed links buttons");
             }
@@ -271,7 +249,7 @@ public class JsonInjectors {
         return json;
     }
 
-    public static JSONObject setOnlineInfo(JSONObject json) throws ParseException, IOException, JSONException {
+    public static JSONObject setOnlineInfo(JSONObject json) throws JSONException {
         var id = json.optInt("id");
         if (id == AccountManagerUtils.getUserId()) {
             return json;
@@ -300,7 +278,7 @@ public class JsonInjectors {
         return json;
     }
 
-    public static JSONArray setOnlineInfoUsers(JSONArray profiles) throws ParseException, IOException, JSONException {
+    public static JSONArray setOnlineInfoUsers(JSONArray profiles) throws JSONException {
         if (profiles == null || profiles.length() == 0) return profiles;
         StringBuilder sb = new StringBuilder();
         var curVkId = AccountManagerUtils.getUserId();
@@ -348,87 +326,6 @@ public class JsonInjectors {
         return profiles;
     }
 
-
-    public static JSONObject storiesads(JSONObject json, boolean isDeleteFix) throws JSONException {
-        if (!adsstories()) {
-            return json;
-        }
-
-        if (json.has("ads")) {
-            if (isDeleteFix) {
-                json.optJSONObject("ads").optJSONObject("settings")
-                        .put("stories_interval", 0)
-                        .put("authors_interval", 0)
-                        .put("time_interval", 0)
-                        .put("stories_init", 0)
-                        .put("authors_init", 0)
-                        .put("time_init", 0);
-                if (dev()) Log.d("StoriesAds", "Set ads settings at zero values");
-            } else {
-                json.remove("ads");
-                if (dev()) Log.d("StoriesAds", "Removed ads block");
-            }
-        }
-
-        if (!json.has("items")) return json;
-
-        var items = json.optJSONArray("items");
-        for (int i = 0; i < items.length(); i++) {
-            var item = items.optJSONObject(i);
-            if (item != null) {
-                parseStoriesItem(item);
-            }
-        }
-
-        return json;
-    }
-
-    private static void parseStoriesItem(JSONObject item) throws JSONException {
-        var stories = item.optJSONArray("stories");
-        var newStories = new JSONArray();
-
-        if (stories == null) return;
-
-        for (int j = 0; j < stories.length(); j++) {
-            var story = stories.optJSONObject(j);
-
-            if (!story.optBoolean("is_ads") && !story.optBoolean("is_promo")) {
-                newStories.put(story);
-            } else {
-                if (dev())
-                    Log.d("StoriesAds", "Fetched ad, owner id " + story.optString("owner_id") + ", caption " + story.optString("caption"));
-            }
-        }
-
-        item.put("stories", newStories);
-    }
-
-    public static Boolean isAds(JSONObject list, String type) throws JSONException {
-        if (list == null || type == null || !ads()) return false;
-
-        if (list.has("ads")
-                || type.equals("ads")
-                || type.equals("carousel")
-                || type.equals("html5_ad")
-                || type.equals("ads_easy_promote")) {
-            if (dev())
-                Log.d("NewsfeedAdBlockV2", "Removed post " + list.optInt("post_id") + " from feed, Reason: ads");
-            return true;
-        }
-
-        if (type.equals("promo_button")
-                || type.equals("app_widget")
-                || type.equals("app_video")
-                || type.equals("app_slider")
-                || type.equals("tags_suggestions")) {
-            if (dev())
-                Log.d("NewsfeedAdBlockV2", "Removed post " + list.optInt("post_id") + " from feed, Reason: promo");
-            return true;
-        }
-
-        return false;
-    }
-
     public static JSONArray newsfeedlist(JSONArray items) throws JSONException {
         var selectedItems = getDefaultPrefs().getString("news_feed_selected_items", "");
         var filtersSet = getDefaultPrefs().getStringSet("news_feed_items_set", null);
@@ -464,76 +361,6 @@ public class JsonInjectors {
         }
 
         return items;
-    }
-
-    public static JSONArray newsfeedadtest(JSONArray items) throws JSONException {
-        if (!getBoolValue("newadblock", true)) return items;
-        var newItems = new JSONArray();
-
-        for (int j = 0; j < items.length(); j++) {
-            var list = items.optJSONObject(j);
-            var type = list.optString("type");
-
-            if (isAds(list, type)) {
-                continue;
-            }
-
-            if (authorsrecomm() && (type.equals("authors_rec")
-                    || type.startsWith("recommended_") && (type.endsWith("audios")
-                    || type.endsWith("artists")
-                    || type.endsWith("playlists")
-                    || type.endsWith("groups")))) {
-                if (dev())
-                    Log.d("NewsfeedAdBlockV2", "Removed post " + list.optInt("post_id") + " from feed, Reason: authorsrecomm");
-                continue;
-            }
-
-            if (postsrecomm() && (type.equals("inline_user_rec") || type.equals("live_recommended"))) {
-                if (dev())
-                    Log.d("NewsfeedAdBlockV2", "Removed post " + list.optInt("post_id") + " from feed, Reason: postsrecomm");
-                continue;
-            }
-
-            if (friendsrecomm() && (type.equals("user_rec") || type.equals("friends_recomm"))) {
-                if (dev())
-                    Log.d("NewsfeedAdBlockV2", "Removed post " + list.optInt("post_id") + " from feed, Reason: friendsrecomm");
-                continue;
-            }
-
-            if (adsgroup() && list.optInt("marked_as_ads") == 1) {
-                if (dev())
-                    Log.d("NewsfeedAdBlockV2", "Removed post " + list.optInt("post_id") + " from feed, Reason: marked_as_ads is true");
-                continue;
-            }
-
-            if (isBadNews(list.optString("text"))) {
-                if (dev())
-                    Log.d("NewsfeedAdBlockV2", "Removed post " + list.optInt("post_id") + " from feed, Reason: text filters");
-                continue;
-            }
-
-            if (checkCopyright(list)) {
-                if (dev())
-                    Log.d("NewsfeedAdBlockV2", "Removed post " + list.optInt("post_id") + " from feed, Reason: copyright filters");
-                continue;
-            }
-
-            if (checkCaption(list)) {
-                if (dev())
-                    Log.d("NewsfeedAdBlockV2", "Removed post " + list.optInt("post_id") + " from feed, Reason: caption filters");
-                continue;
-            }
-
-            if (NewsFeedFiltersUtils.injectFiltersReposts(list)) {
-                if (dev())
-                    Log.d("NewsfeedAdBlockV2", "Removed post " + list.optInt("post_id") + " from feed, Reason: repost ad");
-                continue;
-            }
-
-            newItems.put(list);
-        }
-
-        return newItems;
     }
 
     public static JSONObject music(JSONObject json) throws JSONException {
@@ -623,7 +450,7 @@ public class JsonInjectors {
         if (section == null) return null;
 
         var request = new Request.a()
-                .b("https://api.vk.com/method/catalog.getAudio"
+                .b("https://" + getApi() + "/method/catalog.getAudio"
                         + "?v=5.119"
                         + "&https=1"
                         + "&need_blocks=1"
@@ -647,7 +474,7 @@ public class JsonInjectors {
 
     public static JSONObject fetchCatalogPodcast() {
         var request = new Request.a()
-                .b("https://api.vk.com/method/catalog.getPodcasts"
+                .b("https://" + getApi() + "/method/catalog.getPodcasts"
                         + "?v=5.119"
                         + "&https=1"
                         + "&need_blocks=1"
@@ -733,10 +560,7 @@ public class JsonInjectors {
         return json;
     }
 
-
     public static boolean haveDonateButton() {
-        int randomshower = new Random().nextInt(6);
-
-        return hasVerification() || randomshower != 1;
+        return hasVerification() || new Random().nextInt(6) != 1;
     }
 }

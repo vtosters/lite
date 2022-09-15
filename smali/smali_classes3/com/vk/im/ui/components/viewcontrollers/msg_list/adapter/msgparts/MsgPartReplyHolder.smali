@@ -103,9 +103,7 @@
 
     const/4 v6, 0x4
 
-    const/4 v7, 0x0
-
-    invoke-static/range {v2 .. v7}, Lcom/vk/im/ui/views/ReplyView;->a(Lcom/vk/im/ui/views/ReplyView;Lcom/vk/im/engine/models/messages/WithUserContent;Lcom/vk/im/engine/models/ProfilesSimpleInfo;ZILjava/lang/Object;)V
+    invoke-static/range {v2 .. v6}, Lru/vtosters/lite/hooks/ReplyMsgHook;->injectWithDecrypt(Lcom/vk/im/ui/views/ReplyView;Lcom/vk/im/engine/models/messages/NestedMsg;Lcom/vk/im/engine/models/ProfilesSimpleInfo;ZI)V
 
     goto :goto_0
 
@@ -295,7 +293,7 @@
 
     invoke-static {p1, v6}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 
-    invoke-virtual {v2, v5, p1, v1}, Lcom/vk/im/ui/views/ReplyView;->a(Lcom/vk/im/engine/models/messages/WithUserContent;Lcom/vk/im/engine/models/ProfilesSimpleInfo;Z)V
+    invoke-static {v2, v5, p1, v1}, Lru/vtosters/lite/hooks/ReplyMsgHook;->injectWithDecrypt(Lcom/vk/im/ui/views/ReplyView;Lcom/vk/im/engine/models/messages/NestedMsg;Lcom/vk/im/engine/models/ProfilesSimpleInfo;Z)V
 
     .line 11
     iget-object p1, p0, Lcom/vk/im/ui/components/viewcontrollers/msg_list/adapter/msgparts/MsgPartReplyHolder;->C:Lcom/vk/im/ui/views/ReplyView;

@@ -75,7 +75,7 @@
         }
     .end annotation
 
-    invoke-static {p2}, Lru/vtosters/lite/hooks/JsonInjectors;->newsfeedadtest(Lorg/json/JSONArray;)Lorg/json/JSONArray;
+    invoke-static {p2}, Lru/vtosters/lite/hooks/AdBlockHook;->feedInject(Lorg/json/JSONArray;)Lorg/json/JSONArray;
 
     move-result-object p2
 
@@ -90,10 +90,6 @@
 
     .line 15
     :goto_0
-    invoke-static {p2}, Lru/vtosters/lite/hooks/JsonInjectors;->newsfeedadtest(Lorg/json/JSONArray;)Lorg/json/JSONArray;
-
-    move-result-object p2
-
     invoke-virtual {p2}, Lorg/json/JSONArray;->length()I
 
     move-result v2
@@ -105,17 +101,6 @@
 
     move-result-object v2
 
-    invoke-static {v2}, Lru/vtosters/lite/hooks/NewsfeedHook;->injectFilters(Lorg/json/JSONObject;)Z
-
-    move-result v5
-
-    if-nez v5, :cond_70
-
-    add-int/lit8 v1, v1, 0x1
-
-    goto :goto_0
-
-    :cond_70
     const-string v3, "type"
 
     const-string v4, "post"

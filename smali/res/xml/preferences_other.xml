@@ -1,5 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+    <PreferenceCategory android:title="Синхронизация контактов">
+        <Preference
+            android:key="contacts_sync"
+            android:title="Синхронизация контактов" />
+    </PreferenceCategory>
     <PreferenceCategory android:title="@string/other_fix_app">
         <Preference
             android:key="firebasefix"
@@ -19,9 +24,6 @@
         <Preference
             android:key="applicationstop"
             android:title="@string/killappbtn" />
-        <Preference
-            android:key="resetfolders"
-            android:title="@string/reset_folders_locations" />
         <Preference
             android:key="tokencopy"
             android:title="@string/copytokenbtn" />

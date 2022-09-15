@@ -21,6 +21,9 @@
             android:key="adsstories"
             android:summary="@string/feed_ads_stories_summary"
             android:title="@string/vtldas" />
+        <Preference
+            android:key="whitelisted_ad_groups"
+            android:title="@string/whitelisted_ad_groups_title" />
     </PreferenceCategory>
     <PreferenceCategory android:title="@string/vtlfilters">
         <Preference
@@ -74,6 +77,9 @@
             android:key="copyright_post"
             android:summary="@string/feed_ads_sources_summary"
             android:title="@string/feed_ads_sources" />
+        <Preference
+            android:key="whitelisted_filters_groups"
+            android:title="@string/whitelisted_filters_groups_title" />
     </PreferenceCategory>
     <PreferenceCategory android:title="@string/vtlrecommend">
         <com.vtosters.lite.ui.MaterialSwitchPreference
@@ -125,5 +131,15 @@
         <Preference
             android:key="newsfeedlistmanager_reset"
             android:title="@string/newsfeedlistmanager_reset_title" />
+        <com.vtosters.lite.ui.MaterialSwitchPreference
+            android:defaultValue="false"
+            android:key="donotgetads"
+            android:summary="Не запрашивать рекламу и рекомендации\n\nМогуть быть проблемы"
+            android:title="Не пытаться получать рекламу" />
+        <com.vtosters.lite.ui.MaterialSwitchPreference
+            android:defaultValue="false"
+            android:key="force_disable_psm"
+            android:summary="Включение этой функции скроет информацию о состоянии вашего устройства в режиме экономии батареи и ВКонтакте будет отправлять вам медиаконтент без сильного сжатия и блюра"
+            android:title="Не отправлять информацию о батарее" />
     </PreferenceCategory>
 </PreferenceScreen>

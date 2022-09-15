@@ -24,24 +24,6 @@
             android:summary="@string/pollresults_summ"
             android:title="@string/pollresults_title" />
     </PreferenceCategory>
-    <PreferenceCategory android:title="@string/vtl_downloads_title">
-        <Preference
-            android:key="downloads_directory"
-            android:summary="@string/current_download_folder"
-            android:title="@string/folder_for_downloads" />
-        <Preference
-            android:key="photos_directory"
-            android:summary="@string/current_download_folder"
-            android:title="@string/folder_for_photos" />
-        <Preference
-            android:key="videos_directory"
-            android:summary="@string/current_download_folder"
-            android:title="@string/folder_for_videos" />
-        <Preference
-            android:key="music_directory"
-            android:summary="@string/current_download_folder"
-            android:title="@string/folder_for_music" />
-    </PreferenceCategory>
     <PreferenceCategory android:title="@string/sett_media">
         <com.vtosters.lite.ui.MaterialSwitchPreference
             android:defaultValue="true"
@@ -66,11 +48,6 @@
             android:title="@string/lastfm_enabled_title" />
     </PreferenceCategory>
     <PreferenceCategory android:title="@string/vtl_music_settings">
-        <com.vtosters.lite.ui.MaterialSwitchPreference
-            android:defaultValue="true"
-            android:key="musicnewcatalog"
-            android:summary="@string/musicnewcatalog_summ"
-            android:title="@string/musicnewcatalog_title" />
         <com.vtosters.lite.ui.SummaryListPreference
             android:defaultValue="default"
             android:dialogTitle="@string/musicdefcatalog_dialogTitle"
@@ -83,11 +60,6 @@
         <Preference
             android:key="download_video"
             android:title="@string/vtl_download_video_title" />
-        <com.vtosters.lite.ui.MaterialSwitchPreference
-            android:defaultValue="true"
-            android:key="videonewcatalog"
-            android:summary="@string/videonewcatalog_summ"
-            android:title="@string/videonewcatalog_title" />
         <com.vtosters.lite.ui.MaterialSwitchPreference
             android:defaultValue="false"
             android:key="isEnableExternalOpening"
@@ -108,7 +80,7 @@
             android:key="select_photo_search_engine"
             android:title="@string/photo_search_engine_title" />
     </PreferenceCategory>
-    <PreferenceCategory android:title="@string/vkx_title">
+    <PreferenceCategory android:title="@string/vkx_title" android:key="vkx_sett">
         <Preference
             android:enabled="false"
             android:summary="@string/vkx_why_summary"

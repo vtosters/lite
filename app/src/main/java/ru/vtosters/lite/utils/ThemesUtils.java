@@ -3,7 +3,6 @@ package ru.vtosters.lite.utils;
 import static android.view.View.SYSTEM_UI_FLAG_LIGHT_NAVIGATION_BAR;
 import static ru.vtosters.lite.hooks.VKUIHook.isLoaded;
 import static ru.vtosters.lite.ui.wallpapers.WallpapersHooks.getWallpaper;
-import static ru.vtosters.lite.utils.AndroidUtils.edit;
 import static ru.vtosters.lite.utils.AndroidUtils.getCenterScreenCoords;
 import static ru.vtosters.lite.utils.AndroidUtils.getIdentifier;
 import static ru.vtosters.lite.utils.AndroidUtils.getPrefsValue;
@@ -12,14 +11,12 @@ import static ru.vtosters.lite.utils.Preferences.color_grishka;
 import static ru.vtosters.lite.utils.Preferences.dockbar_accent;
 import static ru.vtosters.lite.utils.Preferences.milkshake;
 import static ru.vtosters.lite.utils.Preferences.navbar;
-import static ru.vtosters.lite.utils.Preferences.systemtheme;
 import static ru.vtosters.lite.utils.Preferences.vkme;
 
 import android.annotation.SuppressLint;
 import android.app.Activity;
 import android.content.Context;
 import android.content.res.ColorStateList;
-import android.content.res.Configuration;
 import android.graphics.Color;
 import android.graphics.drawable.Drawable;
 import android.os.Build;
@@ -382,34 +379,6 @@ public class ThemesUtils {
                         isDarkTheme() ? getResources().getColor(R.color.gray_500) : getResources().getColor(R.color.vk_steel_gray_300)
                 }
         );
-    }
-
-    public static void systemThemeChanger(Activity activity) { // ded
-        boolean isDarkTheme = isDarkTheme();
-
-        if (!isDarkTheme) {
-            applyTheme(getDarkTheme());
-        } else {
-            applyTheme(getLightTheme());
-        }
-
-        if (!systemtheme()) {
-            edit().putBoolean("isdark", isDarkTheme).commit();
-            return;
-        }
-
-        int currentNightMode = getResources().getConfiguration().uiMode & Configuration.UI_MODE_NIGHT_MASK;
-        switch (currentNightMode) {
-            case Configuration.UI_MODE_NIGHT_UNDEFINED:
-            case Configuration.UI_MODE_NIGHT_NO:
-                edit().putBoolean("isdark", false).commit();
-                setTheme(getLightTheme(), activity);
-                break;
-            case Configuration.UI_MODE_NIGHT_YES:
-                edit().putBoolean("isdark", true).commit();
-                setTheme(getDarkTheme(), activity);
-                break;
-        }
     }
 
     private void getCurrentThemeID(VKTheme paramVKTheme) {

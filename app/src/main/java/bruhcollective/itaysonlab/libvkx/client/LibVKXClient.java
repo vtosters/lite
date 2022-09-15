@@ -54,7 +54,13 @@ public class LibVKXClient {
         return getInstance().runOnService(action);
     }
 
-    public static void lambdaplay(List<MusicTrack> list, MusicTrack musicTrack, ILibVkxService iLibVkxService) {
+    public static void lambdaplay(List<MusicTrack> list, MusicTrack musicTrack, ILibVkxService iLibVkxService, MusicPlaybackLaunchContext playerRefer) {
+        var playbackContext = "";
+
+        if (playerRefer != null) {
+            playbackContext = playerRefer.v0();
+        }
+
         int indexOf = list.indexOf(musicTrack);
         var ids = new ArrayList<String>();
         for (var track : list) {
@@ -65,10 +71,14 @@ public class LibVKXClient {
         }
 
         try {
-            iLibVkxService.play(ids, indexOf, "");
+            iLibVkxService.play(ids, indexOf, playbackContext);
         } catch (RemoteException e) {
             e.printStackTrace();
         }
+    }
+
+    public static void lambdaplay(List<MusicTrack> list, MusicTrack musicTrack, ILibVkxService iLibVkxService){
+        lambdaplay(list, musicTrack, iLibVkxService, null);
     }
 
     private static String asId(MusicTrack musicTrack) {

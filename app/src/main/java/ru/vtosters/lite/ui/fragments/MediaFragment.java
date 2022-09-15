@@ -1,6 +1,8 @@
 package ru.vtosters.lite.ui.fragments;
 
+import static bruhcollective.itaysonlab.libvkx.client.LibVKXClient.isVkxInstalled;
 import static ru.vtosters.lite.music.Scrobbler.isLoggedIn;
+import static ru.vtosters.lite.proxy.ProxyUtils.getApi;
 import static ru.vtosters.lite.utils.AccountManagerUtils.getUserToken;
 import static ru.vtosters.lite.utils.AndroidUtils.dp2px;
 import static ru.vtosters.lite.utils.AndroidUtils.edit;
@@ -8,12 +10,12 @@ import static ru.vtosters.lite.utils.AndroidUtils.getIdentifier;
 import static ru.vtosters.lite.utils.AndroidUtils.getPreferences;
 import static ru.vtosters.lite.utils.AndroidUtils.sendToast;
 import static ru.vtosters.lite.utils.LifecycleUtils.restartApplicationWithTimer;
+import static ru.vtosters.lite.utils.NewsFeedFiltersUtils.setupFilters;
 import static ru.vtosters.lite.utils.ThemesUtils.getAccentColor;
 import static ru.vtosters.lite.utils.ThemesUtils.getAlertStyle;
 import static ru.vtosters.lite.utils.ThemesUtils.getSTextAttr;
 import static ru.vtosters.lite.utils.ThemesUtils.getTextAttr;
 
-import android.app.Activity;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
@@ -33,6 +35,8 @@ import com.vk.core.dialogs.alert.VkAlertDialog;
 import com.vk.core.network.Network;
 import com.vtosters.lite.general.fragments.MaterialPreferenceToolbarFragment;
 
+import org.json.JSONObject;
+
 import java.io.IOException;
 import java.util.Arrays;
 
@@ -43,8 +47,7 @@ import ru.vtosters.lite.downloaders.VideoDownloader;
 import ru.vtosters.lite.music.Scrobbler;
 import ru.vtosters.lite.ui.adapters.ImagineArrayAdapter;
 import ru.vtosters.lite.utils.AndroidUtils;
-import ru.vtosters.lite.utils.FileUriUtils;
-import ru.vtosters.lite.utils.Preferences;
+import ru.vtosters.lite.utils.LifecycleUtils;
 
 public class MediaFragment extends MaterialPreferenceToolbarFragment {
     private final int REQUEST_CODE_SET_DOWNLOAD_DIRECTORY = 665;
@@ -62,31 +65,6 @@ public class MediaFragment extends MaterialPreferenceToolbarFragment {
 
     @Override
     public void onActivityResult(int requestCode, int resultCode, Intent data) {
-        if (resultCode == Activity.RESULT_OK) {
-            var path = data.getData();
-            if (path != null) {
-                var prefs = getPreferences();
-                var editor = prefs.edit();
-                var actualPath = FileUriUtils.getFullPathFromTreeUri(path, getContext());
-                switch (requestCode) {
-                    case REQUEST_CODE_SET_DOWNLOAD_DIRECTORY:
-                        editor.putString("downloads_directory", actualPath);
-                        break;
-                    case REQUEST_CODE_SET_MUSIC_DIRECTORY:
-                        editor.putString("music_directory", actualPath);
-                        break;
-                    case REQUEST_CODE_SET_PHOTOS_DIRECTORY:
-                        editor.putString("photos_directory", actualPath);
-                        break;
-                    case REQUEST_CODE_SET_VIDEOS_DIRECTORY:
-                        editor.putString("videos_directory", actualPath);
-                        break;
-                    default:
-                        return;
-                }
-                editor.apply();
-            }
-        }
     }
 
     @Override
@@ -98,7 +76,7 @@ public class MediaFragment extends MaterialPreferenceToolbarFragment {
     private void prefs() {
         findPreference("download_video").setOnPreferenceClickListener(new MediaFragment.download());
         findPreference("clearvideohistory").setOnPreferenceClickListener(preference -> {
-            deleteVideoHistory();
+            deleteVideoHistoryDialog(requireContext());
             return true;
         });
         findPreference("dateformat").setOnPreferenceChangeListener(new MediaFragment.restart());
@@ -111,54 +89,14 @@ public class MediaFragment extends MaterialPreferenceToolbarFragment {
             return true;
         });
 
-        findPreference("downloads_directory").setSummary(
-                AndroidUtils.getString("current_download_folder") + " " + Preferences.getDownloadsDir()
-        );
-
-        findPreference("photos_directory").setSummary(
-                AndroidUtils.getString("current_download_folder") + " " + Preferences.getPhotosDir()
-        );
-
-        findPreference("videos_directory").setSummary(
-                AndroidUtils.getString("current_download_folder") + " " + Preferences.getVideosDir()
-        );
-
-        findPreference("music_directory").setSummary(
-                AndroidUtils.getString("current_download_folder") + " " + Preferences.getMusicDir()
-        );
-
-        findPreference("downloads_directory").setOnPreferenceClickListener(preference -> {
-            var intent = new Intent(Intent.ACTION_OPEN_DOCUMENT_TREE);
-            intent.addCategory(Intent.CATEGORY_DEFAULT);
-            startActivityForResult(intent, REQUEST_CODE_SET_DOWNLOAD_DIRECTORY);
-            return true;
-        });
-
-        findPreference("photos_directory").setOnPreferenceClickListener(preference -> {
-            var intent = new Intent(Intent.ACTION_OPEN_DOCUMENT_TREE);
-            intent.addCategory(Intent.CATEGORY_DEFAULT);
-            startActivityForResult(intent, REQUEST_CODE_SET_PHOTOS_DIRECTORY);
-            return true;
-        });
-
-        findPreference("videos_directory").setOnPreferenceClickListener(preference -> {
-            var intent = new Intent(Intent.ACTION_OPEN_DOCUMENT_TREE);
-            intent.addCategory(Intent.CATEGORY_DEFAULT);
-            startActivityForResult(intent, REQUEST_CODE_SET_VIDEOS_DIRECTORY);
-            return true;
-        });
-
-        findPreference("music_directory").setOnPreferenceClickListener(preference -> {
-            var intent = new Intent(Intent.ACTION_OPEN_DOCUMENT_TREE);
-            intent.addCategory(Intent.CATEGORY_DEFAULT);
-            startActivityForResult(intent, REQUEST_CODE_SET_MUSIC_DIRECTORY);
-            return true;
-        });
-
         if (isLoggedIn()) {
             findPreference("lastfm_auth").setSummary(AndroidUtils.getString("lastfm_authorized_as") + " " + Scrobbler.getUserName());
         } else {
             findPreference("lastfm_enabled").setEnabled(false);
+        }
+
+        if (!isVkxInstalled()){
+            findPreference("vkx_sett").setVisible(false);
         }
 
         findPreference("select_photo_search_engine").setOnPreferenceClickListener(preference -> {
@@ -244,13 +182,20 @@ public class MediaFragment extends MaterialPreferenceToolbarFragment {
         Thread thread = new Thread(() -> {
             try {
                 var request = new Request.a()
-                        .b("https://api.vk.com/method/" + "video.clearViewingHistoryRecords" + "?https=1" + "&access_token=" + getUserToken() + "&v=5.187")
+                        .b("https://" + getApi() + "/method/" + "video.clearViewingHistoryRecords" + "?https=1" + "&access_token=" + getUserToken() + "&v=5.119")
                         .a(Headers.a("User-Agent", Network.l.c().a(), "Content-Type", "application/x-www-form-urlencoded; charset=utf-8"))
                         .a();
 
                 try {
-                    var response = new OkHttpClient().a(request).execute().a().g();
-                    Log.d("VideoHistory", response);
+                    var response = new JSONObject(new OkHttpClient().a(request).execute().a().g());
+
+                    if (response.optInt("response") == 1){
+                        LifecycleUtils.getCurrentActivity().runOnUiThread(() -> sendToast(AndroidUtils.getString("video_history_cleaned")));
+                    } else {
+                        LifecycleUtils.getCurrentActivity().runOnUiThread(() -> sendToast("Ошибка при очистке истории. Подробности в логах"));
+                    }
+
+                    Log.d("VideoHistory", response.toString());
                 } catch (IOException e) {
                     e.printStackTrace();
                 }
@@ -260,8 +205,18 @@ public class MediaFragment extends MaterialPreferenceToolbarFragment {
         });
 
         thread.start();
+    }
 
-        sendToast(AndroidUtils.getString("video_history_cleaned"));
+    private void deleteVideoHistoryDialog(Context context){
+        VkAlertDialog.Builder builder = new VkAlertDialog.Builder(context);
+        builder.setTitle(AndroidUtils.getString("warning"));
+        builder.setMessage("Вы действительно хотите очистить историю видео?");
+        builder.setCancelable(false);
+        builder.setPositiveButton(AndroidUtils.getString("yes"), (dialogInterface, i) -> {
+            deleteVideoHistory();
+        });
+        builder.setNegativeButton(AndroidUtils.getString("cancel"), (dialogInterface, i) -> dialogInterface.dismiss());
+        builder.show();
     }
 
     public static void download(Context ctx) {

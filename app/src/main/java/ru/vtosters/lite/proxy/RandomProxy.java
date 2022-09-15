@@ -2,7 +2,6 @@ package ru.vtosters.lite.proxy;
 import static ru.vtosters.lite.proxy.ProxyUtils.forceProxyApplying;
 import static ru.vtosters.lite.proxy.ProxyUtils.resetProxy;
 import static ru.vtosters.lite.utils.AndroidUtils.edit;
-import static ru.vtosters.lite.utils.AndroidUtils.sendToast;
 import static ru.vtosters.lite.utils.Preferences.preferences;
 
 import java.io.IOException;

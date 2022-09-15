@@ -35,7 +35,6 @@ import com.vk.core.fragments.FragmentImpl;
 import com.vk.core.util.StringUtils;
 import com.vk.navigation.right.RightMenu;
 import com.vtosters.lite.MenuCountersState;
-import com.vtosters.lite.fragments.ProfileFragment;
 import com.vtosters.lite.ui.bottomnavigation.BottomNavigationMenuView;
 import com.vtosters.lite.ui.bottomnavigation.BottomNavigationView;
 

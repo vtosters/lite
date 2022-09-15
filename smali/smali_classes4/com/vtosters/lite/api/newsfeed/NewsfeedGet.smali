@@ -734,7 +734,7 @@
     .line 37
     :cond_2
     :goto_2
-    invoke-static {v1}, Lru/vtosters/lite/hooks/JsonInjectors;->newsfeedadtest(Lorg/json/JSONArray;)Lorg/json/JSONArray;
+    invoke-static {v1}, Lru/vtosters/lite/hooks/AdBlockHook;->feedInject(Lorg/json/JSONArray;)Lorg/json/JSONArray;
 
     move-result-object v1
 
@@ -749,21 +749,10 @@
 
     move-result-object v2
 
-    invoke-static {v2}, Lru/vtosters/lite/hooks/NewsfeedHook;->injectFilters(Lorg/json/JSONObject;)Z
-
-    move-result v10
-
-    if-nez v10, :cond_70
-
-    add-int/lit8 v5, v5, 0x1
-
-    goto :goto_2
-
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_1
 
     .line 39
-    :cond_70
     :try_start_1
     iget-object v3, p0, Lcom/vtosters/lite/api/newsfeed/NewsfeedGet;->H:Ljava/lang/String;
 

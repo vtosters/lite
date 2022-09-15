@@ -24,11 +24,13 @@ import com.aefyr.tsg.g2.TelegramStickersPack;
 import com.aefyr.tsg.g2.TelegramStickersService;
 
 import java.io.File;
+import java.util.Collections;
 
 import ru.vtosters.lite.tgs.TGPref;
+import ru.vtosters.lite.ui.components.IItemMovingListener;
 import ru.vtosters.lite.utils.AndroidUtils;
 
-public class StickerPackAdapter extends RecyclerView.Adapter<StickerPackAdapter.StickerPackViewHolder> {
+public class StickerPackAdapter extends RecyclerView.Adapter<StickerPackAdapter.StickerPackViewHolder> implements IItemMovingListener {
     private static final TelegramStickersService sService = TelegramStickersService.getInstance(getGlobalContext());
 
     @SuppressLint("UseCompatLoadingForDrawables")
@@ -60,6 +62,26 @@ public class StickerPackAdapter extends RecyclerView.Adapter<StickerPackAdapter.
     @Override
     public int getItemCount() {
         return sService.getPacksListReference().size();
+    }
+
+    @Override
+    public void onItemDismiss(int index) {
+
+    }
+
+    @Override
+    public boolean onItemMove(int fromPosition, int toPosition) {
+        if (fromPosition < toPosition) {
+            for (int i = fromPosition; i < toPosition; i++) {
+                sService.swap(sService.getPacksListReference().get(i), sService.getPacksListReference().get(i + 1));
+            }
+        } else {
+            for (int i = fromPosition; i > toPosition; i--) {
+                sService.swap(sService.getPacksListReference().get(i), sService.getPacksListReference().get(i - 1));
+            }
+        }
+        notifyItemMoved(fromPosition, toPosition);
+        return true;
     }
 
     public class StickerPackViewHolder extends RecyclerView.ViewHolder {

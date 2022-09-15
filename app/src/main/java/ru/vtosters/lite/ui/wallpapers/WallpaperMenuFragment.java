@@ -8,7 +8,6 @@ import static ru.vtosters.lite.ui.wallpapers.WallpapersHooks.removeWallpaper;
 import static ru.vtosters.lite.ui.wallpapers.WallpapersHooks.requestUpdateWallpaper;
 import static ru.vtosters.lite.utils.AndroidUtils.edit;
 import static ru.vtosters.lite.utils.AndroidUtils.getIdentifier;
-import static ru.vtosters.lite.utils.CacheUtils.deleteCache;
 import static ru.vtosters.lite.utils.Preferences.getBoolValue;
 import static ru.vtosters.lite.utils.Preferences.hasVerification;
 
@@ -33,15 +32,15 @@ import java.io.OutputStream;
 import ru.vtosters.lite.ui.PreferencesUtil;
 import ru.vtosters.lite.utils.AndroidUtils;
 
-public class WallpaperMenuFragment extends MaterialPreferenceToolbarFragment {
+public class WallpaperMenuFragment extends MaterialPreferenceToolbarFragment{
 
     private WallpaperPreferences mWPPreviewPref;
 
-    public static void copyStream(InputStream copyFrom, OutputStream copyTo) throws IOException {
+    public static void copyStream(InputStream copyFrom, OutputStream copyTo) throws IOException{
 
         byte[] buffer = new byte[1024];
         int length;
-        while ((length = copyFrom.read(buffer)) > 0) {
+        while((length = copyFrom.read(buffer)) > 0) {
             copyTo.write(buffer, 0, length);
         }
 
@@ -51,7 +50,7 @@ public class WallpaperMenuFragment extends MaterialPreferenceToolbarFragment {
     }
 
     @Override
-    public void onCreate(Bundle bundle) {
+    public void onCreate(Bundle bundle){
         super.onCreate(bundle);
 
         int vtosterXml = getIdentifier("empty", "xml");
@@ -87,16 +86,16 @@ public class WallpaperMenuFragment extends MaterialPreferenceToolbarFragment {
             });
         }
 
-        PreferencesUtil.addListPreference(this, "msg_blur_radius", "disabled", AndroidUtils.getString("filter_blur"), AndroidUtils.getArray("filter_types"), new String[]{
+        PreferencesUtil.addListPreference(this, "msg_blur_radius", "disabled", AndroidUtils.getString("filter_blur"), AndroidUtils.getArray("filter_types"), new String[] {
                 "disabled", "low", "med", "high"
         });
 
-        PreferencesUtil.addListPreference(this, "msg_dim", "off", AndroidUtils.getString("filter_dim"), AndroidUtils.getArray("filter_dim_types"), new String[]{
+        PreferencesUtil.addListPreference(this, "msg_dim", "off", AndroidUtils.getString("filter_dim"), AndroidUtils.getArray("filter_dim_types"), new String[] {
                 "off", "dim_black", "dim_white"
         });
 
 
-        PreferencesUtil.addListPreference(this, "msg_mosaic", "disabled", AndroidUtils.getString("filter_mosaic"), AndroidUtils.getArray("filter_types"), new String[]{
+        PreferencesUtil.addListPreference(this, "msg_mosaic", "disabled", AndroidUtils.getString("filter_mosaic"), AndroidUtils.getArray("filter_types"), new String[] {
                 "disabled", "low", "med", "high"
         });
 
@@ -158,6 +157,14 @@ public class WallpaperMenuFragment extends MaterialPreferenceToolbarFragment {
             });
         }
 
+        PreferencesUtil.addMaterialSwitchPreference(this, "compresswp", "Сжимать обои", "Значительно ускоряет открытие чатов", null, true, (preference, o) -> {
+            boolean value = (boolean) o;
+            edit().putBoolean("compresswp", value).commit();
+            requestUpdateWallpaper();
+            mWPPreviewPref.redraw();
+            return true;
+        });
+
         ListPreference blur = (ListPreference) findPreference("msg_blur_radius");
         ListPreference dim = (ListPreference) findPreference("msg_dim");
         ListPreference mosaic = (ListPreference) findPreference("msg_mosaic");
@@ -192,13 +199,14 @@ public class WallpaperMenuFragment extends MaterialPreferenceToolbarFragment {
     }
 
     @Override
-    public void onActivityResult(int i, int i1, @Nullable Intent intent) {
+    public void onActivityResult(int i, int i1, @Nullable Intent intent){
         super.onActivityResult(i, i1, intent);
 
         if (intent == null || intent.getData() == null)
             return;
 
         try {
+            removeWallpaper();
             InputStream fileInputStream = requireActivity().getContentResolver().openInputStream(intent.getData());
             OutputStream outputStream = new FileOutputStream(getWallpaperFile());
 
@@ -209,20 +217,21 @@ public class WallpaperMenuFragment extends MaterialPreferenceToolbarFragment {
             if (i == 1488) {
                 mWPPreviewPref.redraw();
             }
+
         } catch (Exception e) {
             e.printStackTrace();
             Toast.makeText(requireActivity(), e.getLocalizedMessage(), Toast.LENGTH_LONG).show();
         }
     }
 
-    private void removeStickCache() {
+    private void removeStickCache(){
         SharedPreferences prefs2 = getContext().getSharedPreferences("stickers_storage", Context.MODE_PRIVATE);
         prefs2.edit().clear().apply();
         ImEngineProvider.b().a();
     }
 
     @Override
-    public int T4() {
+    public int T4(){
         return getIdentifier("wallpapers", "string");
     }
 }

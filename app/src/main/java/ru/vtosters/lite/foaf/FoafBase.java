@@ -2,11 +2,11 @@ package ru.vtosters.lite.foaf;
 
 import static android.widget.Toast.LENGTH_SHORT;
 import static android.widget.Toast.makeText;
+import static ru.vtosters.lite.proxy.ProxyUtils.getApi;
+import static ru.vtosters.lite.proxy.ProxyUtils.isAnyProxyEnabled;
 import static ru.vtosters.lite.utils.AndroidUtils.getGlobalContext;
 import static ru.vtosters.lite.utils.AndroidUtils.getIdentifier;
 import static ru.vtosters.lite.utils.AndroidUtils.getString;
-import static ru.vtosters.lite.proxy.ProxyUtils.isApiProxyEnabled;
-import static ru.vtosters.lite.proxy.ProxyUtils.getApi;
 
 import android.annotation.SuppressLint;
 import android.app.ProgressDialog;
@@ -35,13 +35,12 @@ import java.util.regex.Pattern;
 import okhttp3.Headers;
 import okhttp3.OkHttpClient;
 import ru.vtosters.lite.net.Request;
-import ru.vtosters.lite.utils.AccountManagerUtils;
 
 public class FoafBase {
     private static final Pattern FOAF_REGEX = Pattern.compile("<ya:created dc:date=\"(.+?)\"\\/>");
     private static final Pattern FOAF_REGEX_LAST_SEEN = Pattern.compile("<ya:lastLoggedIn dc:date=\"(.*)(((\\+|-)\\d\\d):(\\d\\d))\"\\/>");
     private static final Pattern FOAF_REGEX_LOGIN = Pattern.compile("<ya:created dc:date=\"(.+?)\"\\/>");
-    private static final String API_VKNEXT = "https://api.vknext.net/v1/getBypassedOnlineInfo?json=1&ids=";
+    private static final String API_VKNEXT = "https://api.vtosters.app/v1/getBypassedOnlineInfo?json=1&ids=";
     private static final OkHttpClient client = new OkHttpClient();
 
     public static long getLastSeen(long origtime, int id) throws ParseException, IOException {
@@ -115,7 +114,7 @@ public class FoafBase {
     private static String getLink(int i) {
         String str;
         StringBuilder sb;
-        if (isApiProxyEnabled()) {
+        if (isAnyProxyEnabled()) {
             sb = new StringBuilder();
             str = "https://" + getApi() + "/_/vk.com/foaf.php?id=";
         } else {

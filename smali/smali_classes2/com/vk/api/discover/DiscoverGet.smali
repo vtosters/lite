@@ -89,6 +89,10 @@
 
     move-result-object v1
 
+    invoke-static {v1}, Lru/vtosters/lite/hooks/AdBlockHook;->discoverInject(Lorg/json/JSONObject;)Lorg/json/JSONObject;
+
+    move-result-object v1
+
     iget-object v2, p0, Lcom/vk/api/discover/DiscoverGet;->F:Ljava/lang/String;
 
     const/4 v3, 0x0

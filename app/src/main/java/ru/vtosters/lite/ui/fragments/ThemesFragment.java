@@ -3,6 +3,7 @@ package ru.vtosters.lite.ui.fragments;
 import static ru.vtosters.lite.utils.AndroidUtils.edit;
 import static ru.vtosters.lite.utils.AndroidUtils.getIdentifier;
 import static ru.vtosters.lite.utils.AndroidUtils.getPreferences;
+import static ru.vtosters.lite.utils.AndroidUtils.isTablet;
 import static ru.vtosters.lite.utils.LifecycleUtils.restartApplicationWithTimer;
 
 import android.content.Context;
@@ -32,19 +33,19 @@ public class ThemesFragment extends MaterialPreferenceToolbarFragment {
         findPreference("darktheme").setOnPreferenceChangeListener(new restartdark());
         findPreference("lighttheme").setOnPreferenceChangeListener(new restartlight());
         findPreference("iconmanager").setOnPreferenceClickListener(new openicons());
-        findPreference("dockbar_tab_titles").setOnPreferenceChangeListener((preference, o) -> {
-            getPreferences().edit().putBoolean("dockbar_tab_titles", (boolean) o).commit();
-            LifecycleUtils.restartApplication();
-            return false;
-        });
+        findPreference("dockbar_tab_titles").setOnPreferenceClickListener(new restart());
         findPreference("dockbar_accent").setOnPreferenceClickListener(new restart());
         findPreference("dockcounter").setOnPreferenceClickListener(new restart());
+
+        if (isTablet()){
+            findPreference("dockbarsett").setVisible(false);
+        }
     }
 
     public class openicons implements Preference.OnPreferenceClickListener {
         @Override
         public boolean onPreferenceClick(Preference preference) {
-            Context context = getContext();
+            Context context = requireContext();
             Intent a2 = new Navigator(IconsFragment.class).b(context);
             a2.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
             context.startActivity(a2);

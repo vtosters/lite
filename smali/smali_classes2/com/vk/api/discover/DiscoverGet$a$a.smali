@@ -122,17 +122,6 @@
 
     move-result-object v10
 
-    invoke-static {v10}, Lru/vtosters/lite/hooks/NewsfeedHook;->injectFilters(Lorg/json/JSONObject;)Z
-
-    move-result v11
-
-    if-nez v11, :cond_229
-
-    add-int/lit8 v9, v9, 0x1
-
-    goto :goto_0
-
-    :cond_229
     if-eqz v10, :cond_0
 
     .line 7
@@ -268,7 +257,7 @@
     goto :goto_2
 
     :cond_6
-    const-string v0, "null"
+    const-string v0, "ads"
 
     .line 14
     :goto_2
@@ -539,19 +528,6 @@
 
     move-object/from16 v21, v5
 
-    invoke-static {v13}, Lru/vtosters/lite/hooks/NewsfeedHook;->injectFilters(Lorg/json/JSONObject;)Z
-
-    move-result v16
-
-    if-nez v16, :cond_228
-
-    add-int/lit8 v12, v12, 0x1
-
-    move-object/from16 v5, v21
-
-    goto :goto_7
-
-    :cond_228
     if-eqz v13, :cond_c
 
     .line 34
@@ -703,8 +679,6 @@
 
     .line 42
     :goto_c
-    const/4 v2, 0x0
-
     new-instance v32, Lcom/vk/dto/discover/DiscoverItem;
 
     move-object/from16 v4, v32

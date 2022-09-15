@@ -6,21 +6,19 @@ import static ru.vtosters.lite.utils.Preferences.getBoolValue;
 import static ru.vtosters.lite.utils.Preferences.milkshake;
 import static ru.vtosters.lite.utils.Preferences.superapp;
 import static ru.vtosters.lite.utils.Preferences.useNewSettings;
-import static ru.vtosters.lite.utils.Preferences.videonewcatalog;
 import static ru.vtosters.lite.utils.Preferences.vkme;
 import static ru.vtosters.lite.utils.Preferences.vkme_notifs;
 
 import android.os.Build;
 
 import com.vk.apps.AppsFragment;
-import com.vk.discover.ThemedFeedFragment;
+import com.vk.discover.DiscoverFragment;
 import com.vk.fave.fragments.FaveTabFragment;
 import com.vk.feedlikes.d.FeedLikesFragment;
 import com.vk.friends.catalog.FriendsCatalogFragment;
 import com.vk.menu.MenuFragment;
 import com.vk.menu.SearchMenuFragment;
 import com.vk.music.fragment.MusicCatalogFragment1;
-import com.vk.music.fragment.MusicFragment;
 import com.vk.newsfeed.HomeFragment;
 import com.vk.newsfeed.NewsfeedFragment;
 import com.vk.notifications.NotificationsContainerFragment;
@@ -97,7 +95,7 @@ public class DockBarEditorManager {
     private void parseSelectedTabs(String[] selectedTabsTags) {
         List<String> allTags = new ArrayList<>(Arrays.asList("tab_news", "tab_superapps", "tab_messages", "tab_feedback", "tab_profile",
                 "tab_friends", "tab_groups", "tab_photos", "tab_audios", "tab_videos", "tab_lives", "tab_games", "tab_liked",
-                "tab_fave", "tab_documents", "tab_payments", "tab_vk_apps", "tab_settings", "tab_menu"));
+                "tab_fave", "tab_documents", "tab_payments", "tab_vk_apps", "tab_settings"));
 
         for (String tag : selectedTabsTags) {
             mSelectedTabs.add(getTabByTag(tag));
@@ -154,7 +152,7 @@ public class DockBarEditorManager {
                         milkshake() ? R.drawable.ic_services_outline_28 : R.drawable.ic_menu_search_outline_28,
                         milkshake() ? R.string.super_app_title : R.string.search,
                         R.id.tab_discover,
-                        milkshake() ? (superapp() ? SuperAppFragment.class : SearchMenuFragment.class) : ThemedFeedFragment.class);
+                        milkshake() ? (superapp() ? SuperAppFragment.class : SearchMenuFragment.class) : DiscoverFragment.class);
             case "tab_messages":
                 return DockBarTab.valuesOf(
                         "tab_messages",
@@ -203,14 +201,14 @@ public class DockBarEditorManager {
                         R.drawable.ic_music_outline_28,
                         R.string.music,
                         R.id.menu_audios,
-                        getBoolValue("musicnewcatalog", true) ? MusicCatalogFragment1.class : MusicFragment.class);
+                        MusicCatalogFragment1.class);
             case "tab_videos":
                 return DockBarTab.valuesOf(
                         "tab_videos",
                         R.drawable.ic_video_outline_28,
                         R.string.videos,
                         R.id.menu_videos,
-                        videonewcatalog() ? VideoCatalogFragment.class : VideosFragment.class);
+                        VideoCatalogFragment.class);
             case "tab_lives":
                 return DockBarTab.valuesOf(
                         "tab_lives",
@@ -260,13 +258,6 @@ public class DockBarEditorManager {
                         R.string.menu_apps,
                         R.id.menu_vk_apps,
                         AppsFragment.class);
-            case "tab_menu":
-                return DockBarTab.valuesOf(
-                        "tab_menu",
-                        milkshake() ? R.drawable.ic_user_circle_outline_28 : R.drawable.ic_menu_more_outline_28,
-                        milkshake() ? R.string.profile : R.string.menu,
-                        R.id.tab_menu,
-                        milkshake() ? ProfileFragment.class : MenuFragment.class);
             case "tab_settings":
             default:
                 return DockBarTab.valuesOf(

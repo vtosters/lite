@@ -5548,7 +5548,7 @@ Filters are not case-sensitive!"</string>
     <string name="gms_download_microg">Download MicroG</string>
     <string name="gms_what_to_do_next">What to do next?</string>
     <string name="gms_what_to_do_after_microg_title">What to do after installing MicroG?</string>
-    <string name="gms_what_to_do_after_microg_summ">Update Firebase registration in Other settings</string>
+    <string name="gms_what_to_do_after_microg_summ">1. Log in to your Google account \n2. Allow VTLite to receive notifications\n3. Update Firebase registration in Other settings</string>
     <string name="donate">Donate</string>
     <string name="fulltime">dd MMMM yyyy HH:mm:ss</string>
     <string name="fulltime2">dd MMMM HH:mm:ss</string>
@@ -5567,7 +5567,7 @@ Does not affect vk.cc links"</string>
     <string name="vtlfeedwork">Other</string>
     <string name="vtlfeedreload">Automatic feed update</string>
     <string name="vtlfeedcache">Cache feed posts</string>
-    <string name="vtlrecommendmark">Disable posts with recommended mark</string>
+    <string name="vtlrecommendmark">Disable posts with mark</string>
     <string name="vtlmsgtails">Message tails</string>
     <string name="vtlmsgflat">Flat Messages</string>
     <string name="vtlupdmsg">Update</string>
@@ -5659,8 +5659,6 @@ Expand text..."</string>
     <string name="lastfm_enabled_summ">Useful song tracking service</string>
     <string name="lastfm_credentials_empty">Username or password not set</string>
     <string name="vtl_music_settings">Music</string>
-    <string name="musicnewcatalog_title">New music catalog</string>
-    <string name="musicnewcatalog_summ">New music catalog with dynamic content</string>
     <string name="musicdefcatalog_dialogTitle">Select default section</string>
     <string name="musicdefcatalog_title">Default music section</string>
     <string name="vtl_video_settings">Video</string>
@@ -5725,8 +5723,6 @@ Expand text..."</string>
     <string name="otaupd">Update</string>
     <string name="otaupdavalible">Update available!</string>
     <string name="otaupdchanges">Changelog</string>
-    <string name="otawarning">Warning!</string>
-    <string name="otawarnwait">"Please don't close the app until the end of the update download"</string>
     <string name="privacy_vtl">Privacy</string>
     <string name="proxyadvsettings">Advanced proxy settings</string>
     <string name="proxyapi">API Domain</string>
@@ -5734,7 +5730,6 @@ Expand text..."</string>
     <string name="proxydonate">Donate</string>
     <string name="proxyhttp">HTTP Proxy</string>
     <string name="proxyhttps">HTTPS Proxy</string>
-    <string name="proxyimpinfo">Warning!</string>
     <string name="proxyimpinfosum">"Don't use proxy if VK is available in your country
 
 You need to restart the application to apply proxy settings"</string>
@@ -5788,7 +5783,6 @@ You need to restart the application to apply proxy settings"</string>
     <string name="screenshotdetect_summ">Turn off the notification that you took a screenshot</string>
     <string name="hideDeviceInfo_title">Disable sending metric</string>
     <string name="hideDeviceInfo_summ">Disable sending information about the user\'s device and your location</string>
-    <string name="newadblock_title">Use new AdBlock (Beta)</string>
     <string name="podcastcatalog_title">Add podcast catalog</string>
     <string name="useNewSettings_title">Use new settings</string>
     <string name="musicFixNew_title">Music fix v2</string>
@@ -5882,7 +5876,6 @@ May look like a fake leaving the online"</string>
     <string name="activity_dnw_summary">Function lets you don\'t send write message status</string>
     <string name="activity_dns_summary">Function lets you don\'t send read stories status</string>
 
-    <string name="activity_dnr_warn">Warning!</string>
     <string name="activity_dnr_visual">Visually may not work correctly (locally read), but companion will see that it wasn\'t read.</string>
 
     <string name="activity_undel">Anti-delete messages</string>
@@ -5925,7 +5918,7 @@ May look like a fake leaving the online"</string>
 
     <string name="checkforupdates">Check for updates</string>
 
-    <string name="debug_warning">Warning!</string>
+    <string name="warning">Warning!</string>
     <string name="debug_warning_summary">These options are for testing this app only. If you are a regular user, please, don\'t use them</string>
     <string name="debug_show_settings_item">Show debug category in settings</string>
 
@@ -6029,7 +6022,7 @@ May look like a fake leaving the online"</string>
     <string name="DNR_ON">Enable Do Not Read</string>
     <string name="DNR_OFF">Disable Do Not Read</string>
 
-    <string name="vtl_crashed">An error has occurred in VTL!</string>
+    <string name="vtl_crashed">An error has occurred in VTLite!</string>
     <string name="vtl_crash_upload">Upload logs</string>
     <string name="vtl_crash_save">Save to local file</string>
 
@@ -6095,6 +6088,8 @@ May look like a fake leaving the online"</string>
 
     <string name="download_mp3">Download as mp3</string>
     <string name="remove_from_cache">Delete from cache</string>
+
+    <string name="play_in_vkx">Play the track in VK X</string>
 
     <string name="thanksfordonate">Thank you for supporting the project!</string>
     <string name="getdonate">Support the project with a donation and get rewards</string>
@@ -6307,4 +6302,25 @@ May look like a fake leaving the online"</string>
     <string name="denial_of_responsibility_proxy_summ">The developers of the VTLite client assume no responsibility for the safety of using third-party proxies \n\nUse at your own risk</string>
 
     <string name="altervika_title">Alternative VikaMobile domain</string>
+
+    <string name="proxy_setup_title">Set proxy</string>
+    <string name="proxy_setup_summ">Getting a third party proxy from supported proxy lists</string>
+    <string name="proxy_setup_success">Proxy set up, host:</string>
+
+    <string name="delete_elements_confirm">Are you sure you want to delete all elements from the list?</string>
+    <string name="elements_deleted_success">Element list cleared successfully</string>
+    <string name="get_proxy_error">An error occurred while getting the proxy</string>
+
+    <string name="add_to_filter_whitelist">Add to filters whitelist</string>
+    <string name="remove_from_filter_whitelist">Remove from filters whitelist</string>
+    <string name="add_to_ads_whitelist">Add to ads whitelist</string>
+    <string name="remove_from_ads_whitelist">Remove from ads whitelist</string>
+    <string name="removed_from_whitelist_success">Group removed from whitelist</string>
+    <string name="added_to_whitelist_success">Group added to whitelist</string>
+
+    <string name="whitelisted_ad_groups_title">Ads whitelist</string>
+    <string name="whitelisted_filters_groups_title">Filters whitelist</string>
+
+    <string name="download_dl">Download dialog</string>
+    <string name="download_dl_error">An error occurred while trying to download the dialog</string>
 </resources>

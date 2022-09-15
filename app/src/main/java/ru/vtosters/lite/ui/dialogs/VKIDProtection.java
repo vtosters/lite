@@ -1,5 +1,7 @@
 package ru.vtosters.lite.ui.dialogs;
 
+import static ru.vtosters.lite.proxy.ProxyUtils.getApi;
+import static ru.vtosters.lite.proxy.ProxyUtils.isAnyProxyEnabled;
 import static ru.vtosters.lite.utils.AndroidUtils.edit;
 import static ru.vtosters.lite.utils.AndroidUtils.getString;
 import static ru.vtosters.lite.utils.Preferences.getBoolValue;
@@ -15,7 +17,7 @@ import ru.vtosters.lite.ui.fragments.VKUIwrapper;
 public class VKIDProtection {
     public static void alert(final Activity activity) {
         VkAlertDialog.Builder builder = new VkAlertDialog.Builder(activity);
-        builder.setTitle(getString("debug_warning"));
+        builder.setTitle(getString("warning"));
         builder.setMessage(getString("vkidsumm"));
         builder.setCancelable(false);
         // android.content.DialogInterface.OnClickListener
@@ -23,7 +25,7 @@ public class VKIDProtection {
         // android.content.DialogInterface.OnClickListener
         builder.setNeutralButton(getString("vkiddisable"), (dialogInterface, i) -> {
             edit().putBoolean("showAlertVkId", false).apply();
-            VKUIwrapper.setLink("https://id.vk.com/account");
+            VKUIwrapper.setLink((isAnyProxyEnabled() ? "https://id.vk.com/account" : "https://" + getApi() + "/_/id.vk.com/account"));
             Intent a2 = new Navigator(VKUIwrapper.class).b(activity);
             a2.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
             activity.startActivity(a2);

@@ -1808,7 +1808,7 @@
 .end method
 
 .method public onCreateView(Landroid/view/LayoutInflater;Landroid/view/ViewGroup;Landroid/os/Bundle;)Landroid/view/View;
-    .locals 8
+    .locals 10
 
     const/4 v0, 0x0
 
@@ -2007,7 +2007,11 @@
     .line 27
     new-instance v5, Lcom/vk/discover/ThemedFeedFragment$a;
 
-    invoke-direct {v5, v4, v2, v4}, Lcom/vk/discover/ThemedFeedFragment$a;-><init>(Ljava/lang/Class;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
+    const-class v8, Lcom/vk/discover/DiscoverFragment;
+
+    const/4 v9, 0x0
+
+    invoke-direct {v5, v8, v9, v4}, Lcom/vk/discover/ThemedFeedFragment$a;-><init>(Ljava/lang/Class;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
     invoke-virtual {v5}, Lcom/vk/discover/ThemedFeedFragment$a;->i()Lcom/vk/discover/ThemedFeedFragment$a;
 

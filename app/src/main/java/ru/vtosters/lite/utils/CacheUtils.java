@@ -13,14 +13,10 @@ import com.vk.im.ui.providers.audiomsg.ImAudioMsgPlayerProvider;
 import com.vk.im.ui.providers.audiomsg.PlayerActionSources;
 import com.vk.imageloader.VKImageLoader;
 import com.vk.media.player.cache.AutoPlayCacheHolder;
-import com.vk.mediastore.MediaStorage;
 import com.vk.stickers.Stickers;
-import com.vtosters.lite.im.ImEngineProvider;
 
 import java.text.CharacterIterator;
 import java.text.StringCharacterIterator;
-
-import b.h.g.m.FileUtils;
 
 public class CacheUtils {
     private static CacheUtils sInstance = new CacheUtils();
@@ -30,10 +26,6 @@ public class CacheUtils {
         if (sInstance == null)
             sInstance = new CacheUtils();
         return sInstance;
-    }
-
-    public static void deleteCache() {
-        IOUtils.deleteRecursive(getGlobalContext().getCacheDir());
     }
 
     @SuppressLint("DefaultLocale")
@@ -60,7 +52,6 @@ public class CacheUtils {
             VKImageLoader.e();
             ImAudioMsgPlayerProvider.b().e(PlayerActionSources.a);
             ImAudioMsgPlayerProvider.b().d(PlayerActionSources.a);
-            FileUtils.l();
             Stickers.l.c();
             ImEngineExt.a(ImEngine1.a());
             AutoPlayCacheHolder.d.a();

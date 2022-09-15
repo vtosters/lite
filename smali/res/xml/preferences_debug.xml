@@ -4,7 +4,7 @@
     <Preference
         android:enabled="false"
         android:summary="@string/debug_warning_summary"
-        android:title="@string/debug_warning" />
+        android:title="@string/warning" />
     <com.vtosters.lite.ui.MaterialSwitchPreference
         android:defaultValue="false"
         android:key="devmenu"
@@ -22,10 +22,6 @@
             android:key="calls"
             android:summary="@string/messages_interface_calls_summary"
             android:title="@string/vtlcalls" />
-        <com.vtosters.lite.ui.MaterialSwitchPreference
-            android:defaultValue="true"
-            android:key="newadblock"
-            android:title="@string/newadblock_title" />
         <com.vtosters.lite.ui.MaterialSwitchPreference
             android:defaultValue="false"
             android:key="podcastcatalog"

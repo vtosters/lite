@@ -738,5 +738,11 @@
 
     :cond_a
     :goto_3
+
+    # invoke static ru.vtosters.lite.hooks.ui.MusicBottomSheetHook.hook(ArrayList<MusicAction> actions)
+    invoke-static {v3}, Lru/vtosters/lite/hooks/ui/MusicBottomSheetHook;->hook(Ljava/util/ArrayList;)Ljava/util/ArrayList;
+
+    move-result-object v3
+
     return-object v3
 .end method

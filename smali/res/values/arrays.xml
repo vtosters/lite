@@ -673,16 +673,12 @@
         <item>Fade</item>
         <item>AndroidX</item>
         <item>Slide</item>
-        <item>System</item>
-        <item>System task</item>
     </string-array>
     <string-array name="animations_values2">
         <item>noanim</item>
         <item>frag_fade</item>
         <item>frag_enter</item>
         <item>slide</item>
-        <item>system</item>
-        <item>system_task</item>
     </string-array>
     <string-array name="language">
         <item>System</item>
@@ -741,7 +737,7 @@
         <item>liked</item>
     </string-array>
     <string-array name="proxy">
-        <item>No Proxy</item>
+        <item>No proxy</item>
         <item>zaborona.help</item>
         <item>VikaMobile</item>
         <item>Random proxy</item>

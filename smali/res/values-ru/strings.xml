@@ -5414,7 +5414,7 @@
     <string name="gms_download_microg">Скачать MicroG</string>
     <string name="gms_what_to_do_next">Что делать дальше?</string>
     <string name="gms_what_to_do_after_microg_title">Что делать после установки MicroG?</string>
-    <string name="gms_what_to_do_after_microg_summ">Обновите регистрацию Firebase в настройках в разделе "Другое"</string>
+    <string name="gms_what_to_do_after_microg_summ">1. Войдите в свой Google аккаунт \n2. Разрешите VTLite получать уведомления\n3. Обновите регистрацию Firebase в настройках в разделе "Другое"</string>
     <string name="donate">Помочь проекту</string>
     <string name="fulltime">dd MMMM yyyy в HH:mm:ss</string>
     <string name="fulltime2">dd MMMM в HH:mm:ss</string>
@@ -5433,7 +5433,7 @@
     <string name="vtlfeedwork">Прочее</string>
     <string name="vtlfeedreload">Автоматическое обновление ленты</string>
     <string name="vtlfeedcache">Кешировать посты в ленте</string>
-    <string name="vtlrecommendmark">Отключить посты с пометкой рекомендовано</string>
+    <string name="vtlrecommendmark">Отключить посты с пометкой</string>
     <string name="vtlmsgtails">Хвосты сообщений</string>
     <string name="vtlmsgflat">Плоские сообщения</string>
     <string name="vtlupdmsg">Обновить</string>
@@ -5525,8 +5525,6 @@
     <string name="lastfm_enabled_summ">Полезный сервис по учету прослушивания песен</string>
     <string name="lastfm_credentials_empty">Логин или пароль не заданы</string>
     <string name="vtl_music_settings">Музыка</string>
-    <string name="musicnewcatalog_title">Новый раздел музыки</string>
-    <string name="musicnewcatalog_summ">Новый каталог музыкального раздела с динамическим контентом</string>
     <string name="musicdefcatalog_dialogTitle">Выберите раздел по умолчанию</string>
     <string name="musicdefcatalog_title">Раздел музыки по умолчанию</string>
     <string name="vtl_video_settings">Видео</string>
@@ -5591,8 +5589,6 @@
     <string name="otaupd">Обновить</string>
     <string name="otaupdavalible">Доступно обновление!</string>
     <string name="otaupdchanges">Список изменений</string>
-    <string name="otawarning">Внимание!</string>
-    <string name="otawarnwait">Пожалуйста, не закрывайте приложение до окончания загрузки обновления</string>
     <string name="privacy_vtl">Приватность</string>
     <string name="proxyadvsettings">Расширенные настройки прокси</string>
     <string name="proxyapi">API Домен</string>
@@ -5600,7 +5596,6 @@
     <string name="proxydonate">Донат</string>
     <string name="proxyhttp">HTTP Прокси</string>
     <string name="proxyhttps">HTTPS Прокси</string>
-    <string name="proxyimpinfo">Внимание!</string>
     <string name="proxyimpinfosum">"Не используйте прокси если ВК не заблокирован в вашей стране
 
 Для применения изменений необходимо перезапустить приложение"</string>
@@ -5654,7 +5649,6 @@
     <string name="screenshotdetect_summ">Отключить уведомление о том, что вы сделали скриншот</string>    
     <string name="hideDeviceInfo_title">Отключить отправку метрики</string>
     <string name="hideDeviceInfo_summ">Отключить отправку информации об устройстве пользователя и вашем местоположении</string>    
-    <string name="newadblock_title">Использовать новый AdBlock (Beta)</string>
     <string name="podcastcatalog_title">Добавить каталог подкастов</string>
     <string name="useNewSettings_title">Использовать новые настройки</string>
     <string name="musicFixNew_title">Фикс музыки v2</string>
@@ -5749,7 +5743,6 @@
     <string name="activity_dnw_summary">Функция позволяет вам не отправлять статус вашего набора/написания сообщения</string>
     <string name="activity_dns_summary">Функция позволяет вам не отправлять статус просмотра вами историй</string>
 
-    <string name="activity_dnr_warn">Внимание!</string>
     <string name="activity_dnr_visual">Визуально может работать некорректно (сообщение прочиталось локально), но у собеседника оно прочитано не будет</string>
 
     <string name="activity_undel">Анти-удаление сообщений</string>
@@ -5793,7 +5786,7 @@
 
     <string name="debug_no_toggles">Значения toggles не были получены с сервера</string>
     
-    <string name="debug_warning">Внимание!</string>
+    <string name="warning">Внимание!</string>
     <string name="debug_warning_summary">Данное меню предназначено только для тестирования работоспособности приложения. Если вы являетесь рядовым юзером, то вам не следует ничего не трогать в данных настройках (пожалуйста)</string>
     <string name="debug_show_settings_item">Показывать пункт дебага в настройках</string>
 
@@ -5891,7 +5884,7 @@
     <string name="DNR_ON">Включить нечиталку</string>
     <string name="DNR_OFF">Отключить нечиталку</string>
 
-    <string name="vtl_crashed">Произошла ошибка в работе Vtosters!</string>
+    <string name="vtl_crashed">Произошла ошибка в работе VTLite!</string>
     <string name="vtl_crash_upload">Загрузить логи</string>
     <string name="vtl_crash_save">Сохранить в файл</string>
 
@@ -5960,6 +5953,8 @@
 
     <string name="download_mp3">Скачать как mp3</string>
     <string name="remove_from_cache">Удалить из кеша</string>
+    <string name="play_in_vkx">Воспроизвести в VK X</string>
+
 
     <string name="thanksfordonate">Спасибо тебе за поддержку проекта!</string>
     <string name="getdonate">Поддержи проект донатом и получи бонусы</string>
@@ -6169,4 +6164,25 @@
     <string name="denial_of_responsibility_proxy_summ">Разработчики клиента VTLite не несут никакой ответственности за работу и безопасность использования сторонних прокси-серверов \n\nИспользуйте на свой страх и риск</string>
 
     <string name="altervika_title">Альтернативный домен VikaMobile</string>
+
+    <string name="proxy_setup_title">Установить прокси</string>
+    <string name="proxy_setup_summ">Получение стороннего прокси из поддерживаемых списков прокси</string>
+    <string name="proxy_setup_success">Прокси установлен, хост:</string>
+
+    <string name="delete_elements_confirm">Вы действительно хотите удалить все элементы из списка?</string>
+    <string name="elements_deleted_success">Список элементов успешно очищен</string>
+    <string name="get_proxy_error">Ошибка при получении прокси</string>
+
+    <string name="add_to_filter_whitelist">Добавить в вайтлист фильтров</string>
+    <string name="remove_from_filter_whitelist">Удалить из вайтлиста фильтров</string>
+    <string name="add_to_ads_whitelist">Добавить в вайтлист рекламы</string>
+    <string name="remove_from_ads_whitelist">Удалить из вайтлиста рекламы</string>
+    <string name="removed_from_whitelist_success">Группа удалена из вайтлиста</string>
+    <string name="added_to_whitelist_success">Группа добавлена в вайтлист</string>
+
+    <string name="whitelisted_ad_groups_title">Вайтлист рекламы</string>
+    <string name="whitelisted_filters_groups_title">Вайтлист фильтров</string>
+
+    <string name="download_dl">Скачать диалог</string>
+    <string name="download_dl_error">Произошла ошибка при попытке скачать диалог</string>
 </resources>

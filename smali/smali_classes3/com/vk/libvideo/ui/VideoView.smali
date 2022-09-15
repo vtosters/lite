@@ -7272,10 +7272,14 @@
 .method public final setUIVisibility(Z)V
     .locals 7
 
-    .line 1
-    iget-object v0, p0, Lcom/vk/libvideo/ui/VideoView;->n0:Landroid/os/PowerManager;
+    # .line 1
+    # iget-object v0, p0, Lcom/vk/libvideo/ui/VideoView;->n0:Landroid/os/PowerManager;
 
-    invoke-virtual {v0}, Landroid/os/PowerManager;->isPowerSaveMode()Z
+    # invoke-virtual {v0}, Landroid/os/PowerManager;->isPowerSaveMode()Z
+
+    # move-result v0
+
+    invoke-static {}, Lru/vtosters/lite/hooks/NewsfeedHook;->isPowerSaveMode()Z
 
     move-result v0
 

@@ -9,10 +9,9 @@ import static ru.vtosters.lite.ui.components.BackupManager.deletePrefs;
 import static ru.vtosters.lite.ui.components.BackupManager.restoreBackup;
 import static ru.vtosters.lite.utils.AccountManagerUtils.getUserToken;
 import static ru.vtosters.lite.utils.AndroidUtils.dp2px;
-import static ru.vtosters.lite.utils.AndroidUtils.edit;
 import static ru.vtosters.lite.utils.AndroidUtils.getDefaultPrefs;
 import static ru.vtosters.lite.utils.AndroidUtils.getIdentifier;
-import static ru.vtosters.lite.utils.CacheUtils.deleteCache;
+import static ru.vtosters.lite.utils.ContactsUtils.setContactsSync;
 import static ru.vtosters.lite.utils.LifecycleUtils.restartApplication;
 import static ru.vtosters.lite.utils.ThemesUtils.getTextAttr;
 
@@ -57,6 +56,7 @@ import b.h.g.m.FileUtils;
 import ru.vtosters.lite.ui.activities.VKAdminTokenActivity;
 import ru.vtosters.lite.ui.components.BackupManager;
 import ru.vtosters.lite.utils.AndroidUtils;
+import ru.vtosters.lite.utils.ContactsUtils;
 
 public class OtherFragment extends MaterialPreferenceToolbarFragment {
     private static final int VK_ADMIN_TOKEN_REQUEST_CODE = 1;
@@ -96,9 +96,8 @@ public class OtherFragment extends MaterialPreferenceToolbarFragment {
             return true;
         });
 
-        findPreference("resetfolders").setOnPreferenceClickListener(preference -> {
-            edit().remove("photos_directory").remove("videos_directory").remove("audios_directory").remove("downloads_directory").apply();
-            Toast.makeText(getContext(), AndroidUtils.getString("download_folders_reseted"), LENGTH_SHORT).show();
+        findPreference("contacts_sync").setOnPreferenceClickListener((preference) -> {
+            ContactsUtils.getContactsStatus(requireContext());
             return true;
         });
 
@@ -124,7 +123,11 @@ public class OtherFragment extends MaterialPreferenceToolbarFragment {
                 break;
         }
 
-        findPreference("deleteprefs").setOnPreferenceClickListener(new deleteprefs());
+        findPreference("deleteprefs").setOnPreferenceClickListener(preference -> {
+            delprefs(getContext());
+            return true;
+        });
+
         findPreference("saveonlines").setOnPreferenceClickListener(new onlines());
 
         findPreference("saveprefs").setOnPreferenceClickListener(new saveprefs());
@@ -303,13 +306,17 @@ public class OtherFragment extends MaterialPreferenceToolbarFragment {
         }
     }
 
-    public static class deleteprefs implements Preference.OnPreferenceClickListener {
-        @Override // android.support.v7.preference.Preference.c
-        public boolean onPreferenceClick(Preference preference) {
+    private void delprefs(Context context) {
+        VkAlertDialog.Builder builder = new VkAlertDialog.Builder(context);
+        builder.setTitle(AndroidUtils.getString("warning"));
+        builder.setMessage("Вы действительно хотите сбросить настройки?");
+        builder.setCancelable(false);
+        builder.setPositiveButton(AndroidUtils.getString("yes"), (dialogInterface, i) -> {
             deletePrefs();
             restartApplication();
-            return true;
-        }
+        });
+        builder.setNegativeButton(AndroidUtils.getString("cancel"), (dialogInterface, i) -> dialogInterface.dismiss());
+        builder.show();
     }
 
     class c implements Preference.OnPreferenceClickListener {

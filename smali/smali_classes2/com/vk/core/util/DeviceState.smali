@@ -1072,12 +1072,16 @@
         value = 0x15
     .end annotation
 
-    .line 1
-    invoke-direct {p0}, Lcom/vk/core/util/DeviceState;->M()Landroid/os/PowerManager;
+    # .line 1
+    # invoke-direct {p0}, Lcom/vk/core/util/DeviceState;->M()Landroid/os/PowerManager;
 
-    move-result-object v0
+    # move-result-object v0
 
-    invoke-virtual {v0}, Landroid/os/PowerManager;->isPowerSaveMode()Z
+    # invoke-virtual {v0}, Landroid/os/PowerManager;->isPowerSaveMode()Z
+
+    # move-result v0
+
+    invoke-static {}, Lru/vtosters/lite/hooks/NewsfeedHook;->isPowerSaveMode()Z
 
     move-result v0
 

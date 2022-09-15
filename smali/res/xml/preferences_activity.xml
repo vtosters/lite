@@ -40,7 +40,7 @@
         <Preference
             android:enabled="false"
             android:summary="@string/activity_dnr_visual"
-            android:title="@string/activity_dnr_warn" />
+            android:title="@string/warning" />
         <com.vtosters.lite.ui.MaterialSwitchPreference
             android:defaultValue="false"
             android:key="read_pm"

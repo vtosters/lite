@@ -25,10 +25,6 @@
         android:icon="@drawable/ic_smile_outline_28"
         android:title="@string/stickers" />
     <item
-        android:id="@id/menu_shopping"
-        android:icon="@drawable/ic_market_24_white"
-        android:title="@string/sc_catalog_title" />
-    <item
         android:id="@id/menu_lives"
         android:icon="@drawable/ic_live_24"
         android:title="@string/sett_live" />

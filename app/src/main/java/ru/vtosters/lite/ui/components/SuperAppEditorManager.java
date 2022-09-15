@@ -9,7 +9,6 @@ import java.util.Arrays;
 import java.util.List;
 import java.util.stream.Collectors;
 
-import ru.vtosters.lite.ui.items.DockBarTab;
 import ru.vtosters.lite.ui.items.SuperAppItem;
 import ru.vtosters.lite.utils.AndroidUtils;
 

@@ -1,8 +1,8 @@
 package ru.vtosters.lite.dnr;
 
 import static ru.vtosters.lite.net.Request.makeRequest;
-import static ru.vtosters.lite.utils.AccountManagerUtils.getUserToken;
 import static ru.vtosters.lite.proxy.ProxyUtils.getApi;
+import static ru.vtosters.lite.utils.AccountManagerUtils.getUserToken;
 
 import android.util.Log;
 

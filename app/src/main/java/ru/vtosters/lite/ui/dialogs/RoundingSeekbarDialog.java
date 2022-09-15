@@ -8,7 +8,6 @@ import android.content.Context;
 import android.widget.LinearLayout;
 import android.widget.SeekBar;
 
-
 import com.vk.core.dialogs.alert.VkAlertDialog;
 
 import ru.vtosters.lite.utils.AndroidUtils;

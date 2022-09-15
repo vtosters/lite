@@ -1,7 +1,5 @@
 package com.vk.stories.view;
 
-import static ru.vtosters.lite.utils.ThemesUtils.getColor2;
-
 import android.animation.ValueAnimator;
 import android.annotation.SuppressLint;
 import android.content.Context;
@@ -29,7 +27,6 @@ import com.facebook.imagepipeline.request.ImageRequest;
 import com.facebook.imagepipeline.request.ImageRequestBuilder;
 import com.facebook.u.b.a.PipelineDraweeControllerBuilder;
 import com.facebook.x.g.CloseableImage;
-import com.vk.core.drawable.BorderDrawable;
 import com.vk.core.ui.themes.Themable;
 import com.vk.core.ui.themes.VKThemeHelper;
 import com.vk.core.util.DrawableUtils;
@@ -49,8 +46,6 @@ import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Objects;
-
-import ru.vtosters.lite.utils.AndroidUtils;
 
 public class StoryCircleImageView extends BorderedCircleImageView implements Themable{
     private static final HashSet<Integer> B0 = new HashSet<>();

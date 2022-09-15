@@ -1,8 +1,8 @@
 package ru.vtosters.lite.hooks;
 
-import static ru.vtosters.lite.utils.AndroidUtils.getString;
 import static ru.vtosters.lite.utils.AndroidUtils.getIdentifier;
 import static ru.vtosters.lite.utils.AndroidUtils.getPreferences;
+import static ru.vtosters.lite.utils.AndroidUtils.getString;
 
 import android.annotation.SuppressLint;
 import android.content.ClipData;
@@ -67,7 +67,19 @@ public class PhotoViewer {
                         : new RecoloredDrawable(AndroidUtils.getGlobalContext().getDrawable(R.drawable.ic_menu_search_outline_28), ThemesUtils.getAccentColor()),
                 false,
                 () -> {
-                    searchPhoto(getUrlFromPhotoAttachment((PhotoAttachment) attachment));
+                    if (attachment instanceof PhotoAttachment) {
+                        searchPhoto(getUrlFromPhotoAttachment((PhotoAttachment) attachment));
+                    } else if (attachment instanceof DocumentAttachment) {
+                        var documentAttachment = (DocumentAttachment) attachment;
+                        if (documentAttachment.J != null)
+                            try {
+                                searchPhoto(getUrlFromDocumentAttachment(documentAttachment));
+                            } catch (Exception e) {
+                                ToastUtils.a(getString("photo_get_error"));
+                            }
+                        else
+                            ToastUtils.a(getString("photo_get_error"));
+                    }
                     return null;
                 }
         );
@@ -77,7 +89,19 @@ public class PhotoViewer {
                         : new RecoloredDrawable(AndroidUtils.getGlobalContext().getDrawable(R.drawable.ic_copy_outline_28), Color.WHITE),
                 false,
                 () -> {
-                    copyPhotoUrl(getUrlFromPhotoAttachment((PhotoAttachment) attachment));
+                    if (attachment instanceof PhotoAttachment) {
+                        copyPhotoUrl(getUrlFromPhotoAttachment((PhotoAttachment) attachment));
+                    } else if (attachment instanceof DocumentAttachment) {
+                        var documentAttachment = (DocumentAttachment) attachment;
+                        if (documentAttachment.J != null)
+                            try {
+                                copyPhotoUrl(getUrlFromDocumentAttachment(documentAttachment));
+                            } catch (Exception e) {
+                                ToastUtils.a(getString("photo_get_error"));
+                            }
+                        else
+                            ToastUtils.a(getString("photo_get_error"));
+                    }
                     return null;
                 }
         );
@@ -93,7 +117,11 @@ public class PhotoViewer {
                     } else if (attachment instanceof DocumentAttachment) {
                         var documentAttachment = (DocumentAttachment) attachment;
                         if (documentAttachment.J != null)
-                            openUrl(getUrlFromDocumentAttachment(documentAttachment));
+                            try {
+                                openUrl(getUrlFromDocumentAttachment(documentAttachment));
+                            } catch (Exception e) {
+                                ToastUtils.a(getString("photo_get_error"));
+                            }
                         else
                             ToastUtils.a(getString("photo_get_error"));
                     }
@@ -103,8 +131,11 @@ public class PhotoViewer {
     }
 
     private static String getUrlFromDocumentAttachment(DocumentAttachment attachment) {
-        var imageSizes = attachment.J.t1();
-        return getUrlFromImageSizeList(imageSizes);
+        List<ImageSize> imageSizes = null;
+        if (attachment.J != null) {
+            imageSizes = attachment.J.t1();
+        }
+        return getUrlFromImageSizeList(imageSizes != null ? imageSizes : null);
     }
 
     private static String getUrlFromPhotoAttachment(PhotoAttachment attachment) {

@@ -194,7 +194,7 @@
         </activity>
         <activity
             android:name="com.vtosters.lite.MainActivity"
-            android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|screenSize|smallestScreenSize"
+            android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|screenSize|smallestScreenSize|uiMode"
             android:finishOnTaskLaunch="true"
             android:label="@string/app_name"
             android:launchMode="singleTop"
@@ -961,29 +961,18 @@
                 <category android:name="android.intent.category.BROWSABLE" />
 
                 <data
+                    android:host="vk.ru"
+                    android:pathPattern="/.*"
+                    android:scheme="http" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data
                     android:host="vk.com"
-                    android:pathPattern="/.*"
-                    android:scheme="http" />
-            </intent-filter>
-            <intent-filter>
-                <action android:name="android.intent.action.VIEW" />
-
-                <category android:name="android.intent.category.DEFAULT" />
-                <category android:name="android.intent.category.BROWSABLE" />
-
-                <data
-                    android:host="vkontakte.ru"
-                    android:pathPattern="/.*"
-                    android:scheme="http" />
-            </intent-filter>
-            <intent-filter>
-                <action android:name="android.intent.action.VIEW" />
-
-                <category android:name="android.intent.category.DEFAULT" />
-                <category android:name="android.intent.category.BROWSABLE" />
-
-                <data
-                    android:host="new.vk.com"
                     android:pathPattern="/.*"
                     android:scheme="http" />
             </intent-filter>
@@ -1007,6 +996,28 @@
                 <data
                     android:host="vkontakte.ru"
                     android:pathPattern="/.*"
+                    android:scheme="http" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data
+                    android:host="new.vk.ru"
+                    android:pathPattern="/.*"
+                    android:scheme="http" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data
+                    android:host="vk.ru"
+                    android:pathPattern="/.*"
                     android:scheme="https" />
             </intent-filter>
             <intent-filter>
@@ -1016,7 +1027,18 @@
                 <category android:name="android.intent.category.BROWSABLE" />
 
                 <data
-                    android:host="new.vk.com"
+                    android:host="vkontakte.ru"
+                    android:pathPattern="/.*"
+                    android:scheme="https" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data
+                    android:host="new.vk.ru"
                     android:pathPattern="/.*"
                     android:scheme="https" />
             </intent-filter>
@@ -1109,6 +1131,30 @@
 
                 <action android:name="android.nfc.action.NDEF_DISCOVERED" />
                 <data
+                    android:host="m.vk.ru"
+                    android:pathPattern="/.*"
+                    android:scheme="http" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <action android:name="android.nfc.action.NDEF_DISCOVERED" />
+                <data
+                    android:host="m.vk.ru"
+                    android:pathPattern="/.*"
+                    android:scheme="https" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <action android:name="android.nfc.action.NDEF_DISCOVERED" />
+                <data
                     android:host="m.vk.com"
                     android:pathPattern="/.*"
                     android:scheme="http" />
@@ -1132,7 +1178,7 @@
                 <category android:name="android.intent.category.BROWSABLE" />
 
                 <data
-                    android:host="m.vk.com"
+                    android:host="m.vk.ru"
                     android:pathPattern="/restore"
                     android:scheme="http" />
             </intent-filter>
@@ -1143,7 +1189,7 @@
                 <category android:name="android.intent.category.BROWSABLE" />
 
                 <data
-                    android:host="m.vk.com"
+                    android:host="m.vk.ru"
                     android:pathPattern="/restore"
                     android:scheme="https" />
             </intent-filter>

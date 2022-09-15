@@ -12,8 +12,9 @@ import android.preference.PreferenceManager;
 import android.util.Log;
 import android.widget.Toast;
 
-import androidx.annotation.NonNull;
 import androidx.annotation.StringRes;
+
+import com.vk.core.util.Screen;
 
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
@@ -31,6 +32,10 @@ public class AndroidUtils {
         return PreferenceManager.getDefaultSharedPreferences(getGlobalContext());
     }
 
+    public static boolean isTablet() {
+        return Screen.l(getGlobalContext());
+    }
+
     public static String getPrefsValue(String pref) {
         return getPreferences().getString(pref, "");
     } // Get pref value as string
@@ -39,14 +44,13 @@ public class AndroidUtils {
         return PreferenceManager.getDefaultSharedPreferences(getGlobalContext()).edit();
     } // Edit SharedPreferences
 
-    @NonNull
     public static Context getGlobalContext() {
         try {
             return ReflectionUtils.invokeStaticMethod("android.app.AppGlobals", "getInitialApplication");
         } catch (Exception e) {
-            e.printStackTrace();
+            Log.d("GlobalContext", "Error while fetching context via refl");
         }
-        return null;
+        return null; // need fix for a13+ cuz google shit disabled global context via refl
     } // Getting the global context through reflection to use context on application initialization
 
     public static Resources getResources() {

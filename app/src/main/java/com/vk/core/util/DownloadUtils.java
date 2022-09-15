@@ -1,10 +1,5 @@
 package com.vk.core.util;
 
-import static ru.vtosters.lite.utils.Preferences.getDownloadsDir;
-import static ru.vtosters.lite.utils.Preferences.getMusicDir;
-import static ru.vtosters.lite.utils.Preferences.getPhotosDir;
-import static ru.vtosters.lite.utils.Preferences.getVideosDir;
-
 import android.annotation.SuppressLint;
 import android.app.DownloadManager;
 import android.content.ActivityNotFoundException;
@@ -13,6 +8,7 @@ import android.content.Intent;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteException;
 import android.net.Uri;
+import android.os.Environment;
 import android.text.TextUtils;
 import android.util.Log;
 
@@ -25,6 +21,8 @@ import com.vk.metrics.eventtracking.VkTracker;
 import com.vtosters.lite.R;
 
 import java.io.File;
+import java.io.FileOutputStream;
+import java.io.IOException;
 import java.io.InputStream;
 import java.net.URI;
 import java.util.HashSet;
@@ -51,49 +49,62 @@ public class DownloadUtils {
             ToastUtils.a(context.getString(R.string.error) + " [" + e2.getMessage() + "]");
         }
     }
-
-    private static void b(final Context context, String str, String str2, boolean z) {
-        if (TextUtils.isEmpty(str2)) {
+    
+    private static void b(final Context context, String str, String uri, boolean z) {
+        if (TextUtils.isEmpty(uri)) {
             return;
         }
 
-        String file = a(str, str2);
-        File b2;
-        boolean c2 = MediaUtils.c(MediaUtils.b(str2));
+        String fileName = a(str, uri);
+        File file;
 
-        if (file.endsWith(".jpg") || file.endsWith(".png") || file.endsWith(".jpeg")) {
-            b2 = new File(getPhotosDir(), file);
-        } else if (file.endsWith(".mp3") || file.endsWith(".wav") || file.endsWith(".ogg") || file.endsWith(".aac") || file.endsWith(".flac") || file.endsWith(".m4a")) {
-            b2 = new File(getMusicDir(), file);
-        } else if (file.endsWith(".mp4") || file.endsWith(".mkv") || file.endsWith(".avi") || file.endsWith(".flv") || file.endsWith(".wmv") || file.endsWith(".mov") || file.endsWith(".3gp")) {
-            b2 = new File(getVideosDir(), file);
+        Log.v("DownloadUtils", "download: filename = " + fileName + " | str = " + str + "| str2 = " + uri);
+
+        if (fileName.endsWith(".jpg") || fileName.endsWith(".png") || fileName.endsWith(".jpeg")) {
+            file = new File(Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_PICTURES).getAbsolutePath(), fileName);
+        } else if (fileName.endsWith(".mp3") || fileName.endsWith(".wav") || fileName.endsWith(".ogg") || fileName.endsWith(".aac") || fileName.endsWith(".flac") || fileName.endsWith(".m4a")) {
+            file = new File(Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_MUSIC).getAbsolutePath(), fileName);
+        } else if (fileName.endsWith(".mp4") || fileName.endsWith(".mkv") || fileName.endsWith(".avi") || fileName.endsWith(".flv") || fileName.endsWith(".wmv") || fileName.endsWith(".mov") || fileName.endsWith(".3gp")) {
+            file = new File(Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_MOVIES).getAbsolutePath(), fileName);
         } else {
-            b2 = new File(getDownloadsDir(), file);
+            file = new File(Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_DOWNLOADS).getAbsolutePath(), fileName);
         }
 
-        if (c2) {
-            EncodedImage c3 = VKImageLoader.c(Uri.parse(str2));
-            final InputStream h = c3 == null ? null : c3.h();
+        boolean isImage = MediaUtils.c(FileUtils.f(file));
+
+        if (isImage) {
+            EncodedImage encodedImage = VKImageLoader.c(Uri.parse(uri));
+            final InputStream h = encodedImage == null ? null : encodedImage.h();
             if (h != null) {
                 try {
-                    if (b2.getParentFile() != null) {
-                        b2.createNewFile();
+                    if (file.getParentFile() != null) {
+                        file.createNewFile();
+                    }
+                    if (file.exists()) {
+                        VkExecutors.x.e().execute(() -> {
+                            try {
+                                FileUtils.b.a(h, new FileOutputStream(file), h.available(), null);
+                                ToastUtils.a(context.getString(R.string.file_saved, file.getAbsoluteFile()));
+                            } catch (IOException e) {
+                                ToastUtils.a(context.getString(R.string.error) + " [" + e.getMessage() + "]");
+                                e.printStackTrace();
+                            }
+                        });
                     }
 
-                    if (b2.exists()) {
-                        VkExecutors.x.a().execute(() -> ToastUtils.a(context.getString(R.string.file_saved, b2.getAbsoluteFile())));
-                    }
                 } catch (Exception e2) {
                     L.a(e2);
                 }
-                CameraUtils.a(context, b2, null);
+
+                CameraUtils.a(context, file, null);
                 return;
             }
         }
-        
-        DownloadManager.Request request = new DownloadManager.Request(Uri.parse(str2));
-        request.setDestinationUri(Uri.fromFile(b2));
-        request.setMimeType(FileUtils.f(new File(str)));
+
+        DownloadManager.Request request = new DownloadManager.Request(Uri.parse(uri));
+        var mimeType = FileUtils.f(file);
+        request.setDestinationUri(Uri.fromFile(file));
+        request.setMimeType(mimeType);
         request.setNotificationVisibility(1);
         request.allowScanningByMediaScanner();
         request.setTitle(str);
@@ -182,10 +193,12 @@ public class DownloadUtils {
                     }
                     Intent intent = new Intent("android.intent.action.VIEW");
                     intent.setFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION);
-                    String f2 = FileUtils.f(file);
-                    if (!TextUtils.isEmpty(f2)) {
+                    var mimeType = FileUtils.f(file);
+                    var uri = FileUtils.uriFromFile(file);
+                    Log.d("DownloadUtils", "openFile: " + file.getAbsolutePath() + "| mimetype " + mimeType + "| uri " + uri);
+                    if (!TextUtils.isEmpty(mimeType)) {
                         intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-                        intent.setDataAndType(FileUtils.uriFromFile(file), f2);
+                        intent.setDataAndType(uri, mimeType);
                         context.startActivity(intent);
                         return true;
                     }
@@ -206,9 +219,13 @@ public class DownloadUtils {
 
     private static boolean a(Context context, File file) {
         if (file != null && file.exists()) {
+            var mimeType = FileUtils.f(file);
+            var uri = FileUtils.uriFromFile(file);
+
             Intent intent = new Intent("android.intent.action.VIEW");
-            intent.setDataAndType(Uri.parse(file.getAbsolutePath()), "application/*");
+            intent.setDataAndType(uri, mimeType);
             intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+            Log.d("DownloadUtils", "openFile: " + file.getAbsolutePath() + "| mimetype " + mimeType + "| uri " + uri);
             try {
                 context.startActivity(intent);
                 return true;

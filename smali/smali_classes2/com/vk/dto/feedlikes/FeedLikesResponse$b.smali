@@ -171,7 +171,7 @@
 
     .line 14
     :cond_4
-    invoke-static {v4}, Lru/vtosters/lite/hooks/JsonInjectors;->newsfeedadtest(Lorg/json/JSONArray;)Lorg/json/JSONArray;
+    invoke-static {v4}, Lru/vtosters/lite/hooks/AdBlockHook;->feedInject(Lorg/json/JSONArray;)Lorg/json/JSONArray;
 
     move-result-object v4
 
@@ -186,19 +186,6 @@
     invoke-virtual {v4, v3}, Lorg/json/JSONArray;->getJSONObject(I)Lorg/json/JSONObject;
 
     move-result-object v7
-
-    invoke-static {v7}, Lru/vtosters/lite/hooks/NewsfeedHook;->injectFilters(Lorg/json/JSONObject;)Z
-
-    move-result v9
-
-    if-nez v9, :cond_99
-
-    add-int/lit8 v3, v3, 0x1
-
-    goto :goto_4
-
-    :cond_99
-
 
     invoke-static {v7, v2}, Lkotlin/jvm/internal/Intrinsics;->a(Ljava/lang/Object;Ljava/lang/String;)V
 

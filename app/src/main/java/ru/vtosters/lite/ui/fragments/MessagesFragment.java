@@ -1,12 +1,13 @@
 package ru.vtosters.lite.ui.fragments;
 
-import static ru.vtosters.lite.utils.AndroidUtils.*;
+import static ru.vtosters.lite.utils.AndroidUtils.getGlobalContext;
 import static ru.vtosters.lite.utils.AndroidUtils.getIdentifier;
 import static ru.vtosters.lite.utils.AndroidUtils.getPreferences;
+import static ru.vtosters.lite.utils.AndroidUtils.isTablet;
 import static ru.vtosters.lite.utils.LifecycleUtils.restartApplicationWithTimer;
 import static ru.vtosters.lite.utils.Preferences.autoalltranslate;
 import static ru.vtosters.lite.utils.Preferences.vkme;
-import static ru.vtosters.lite.utils.ThemesUtils.*;
+import static ru.vtosters.lite.utils.ThemesUtils.recolorDrawable;
 
 import android.annotation.SuppressLint;
 import android.content.Context;
@@ -22,12 +23,9 @@ import com.vk.navigation.Navigator;
 import com.vtosters.lite.general.fragments.MaterialPreferenceToolbarFragment;
 
 import java.util.Arrays;
-import java.util.Objects;
 
 import ru.vtosters.lite.ui.adapters.ImagineArrayAdapter;
 import ru.vtosters.lite.ui.wallpapers.WallpaperMenuFragment;
-import ru.vtosters.lite.utils.AndroidUtils;
-import ru.vtosters.lite.utils.ThemesUtils;
 
 public class MessagesFragment extends MaterialPreferenceToolbarFragment {
     @Override
@@ -72,6 +70,11 @@ public class MessagesFragment extends MaterialPreferenceToolbarFragment {
         findPreference("vkme_notifs").setEnabled(vkme());
         findPreference("wallpapers").setIcon(recolorDrawable(getGlobalContext().getDrawable(getIdentifier("ic_media_outline_28", "drawable"))));
         findPreference("vkme").setIcon(getIdentifier("ic_vkme_28", "drawable"));
+
+        if (isTablet()){
+            findPreference("alteremoji").setVisible(false);
+            findPreference("vkmesett").setVisible(false);
+        }
     }
 
     @Override
@@ -103,10 +106,11 @@ public class MessagesFragment extends MaterialPreferenceToolbarFragment {
     public class openwp implements Preference.OnPreferenceClickListener {
         @Override
         public boolean onPreferenceClick(Preference preference) {
-            Context context = getContext();
+            Context context = requireContext();
             Intent a2 = new Navigator(WallpaperMenuFragment.class).b(context);
             a2.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
             context.startActivity(a2);
+//            sendToast("Обои временно недоступны. Следите за новостями на @vtosters в Telegram");
             return true;
         }
     }

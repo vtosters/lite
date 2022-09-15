@@ -1,7 +1,10 @@
 package ru.vtosters.lite.ui.vkui;
 
 import static ru.vtosters.lite.foaf.FoafBase.loadAndShow;
+import static ru.vtosters.lite.hooks.NewsfeedHook.setWhitelistedAd;
+import static ru.vtosters.lite.hooks.NewsfeedHook.setWhitelistedFilter;
 import static ru.vtosters.lite.utils.AccountManagerUtils.getUserID;
+import static ru.vtosters.lite.utils.AndroidUtils.getString;
 import static ru.vtosters.lite.utils.AndroidUtils.sendToast;
 
 import android.content.ClipData;
@@ -24,7 +27,7 @@ import java.util.Objects;
 
 import kotlin.Unit;
 import kotlin.jvm.b.Functions;
-import ru.vtosters.lite.utils.AndroidUtils;
+import ru.vtosters.lite.hooks.NewsfeedHook;
 import ru.vtosters.lite.utils.RenameTool;
 
 public class MenuBuilder {
@@ -55,18 +58,17 @@ public class MenuBuilder {
         try {
             final ExtendedUserProfile eup = (ExtendedUserProfile) pfambObject.get(mb);
             final Context ctx = ((View) Objects.requireNonNull(apView.get(builder))).getContext();
-
-            addItem(builder, AndroidUtils.getString("menu_copy_id"), () -> {
+            addItem(builder, getString("menu_copy_id"), () -> {
                 copy(ctx, String.valueOf(getUserID(eup)));
                 return Unit.a;
             });
 
-            addItem(builder, AndroidUtils.getString("menu_addon_info"), () -> {
+            addItem(builder, getString("menu_addon_info"), () -> {
                 loadAndShow(ctx, getUserID(eup));
                 return Unit.a;
             });
 
-            addItem(builder, AndroidUtils.getString("menu_change_name"), () -> {
+            addItem(builder, getString("menu_change_name"), () -> {
                 RenameTool.createDialog(eup, ctx);
                 return Unit.a;
             });
@@ -80,14 +82,28 @@ public class MenuBuilder {
         try {
             final ExtendedCommunityProfile ecp = (ExtendedCommunityProfile) cfambObject.get(mb);
             final Context ctx = ((View) apView.get(builder)).getContext();
+            final boolean isPageWhitelistedFilter = NewsfeedHook.isWhitelistedFilter(ecp);
+            final boolean isPageWhitelistedAds = NewsfeedHook.isWhitelistedAd(ecp);
 
-            addItem(builder, AndroidUtils.getString("menu_copy_id"), () -> {
+            addItem(builder, getString("menu_copy_id"), () -> {
                 copy(ctx, String.valueOf(getUserID(ecp)));
                 return Unit.a;
             });
 
-            addItem(builder, AndroidUtils.getString("menu_change_name"), () -> {
+            addItem(builder, getString("menu_change_name"), () -> {
                 RenameTool.createDialogGroup(ecp, ctx);
+                return Unit.a;
+            });
+
+            addItem(builder, getString(isPageWhitelistedFilter ? "remove_from_filter_whitelist" : "add_to_filter_whitelist"), () -> {
+                setWhitelistedFilter(ecp, !isPageWhitelistedFilter);
+                sendToast(getString(isPageWhitelistedFilter ? "removed_from_whitelist_success" : "added_to_whitelist_success"));
+                return Unit.a;
+            });
+
+            addItem(builder, getString(isPageWhitelistedAds ? "remove_from_ads_whitelist" : "add_to_ads_whitelist"), () -> {
+                setWhitelistedAd(ecp, !isPageWhitelistedAds);
+                sendToast(getString(isPageWhitelistedAds ? "removed_from_whitelist_success" : "added_to_whitelist_success"));
                 return Unit.a;
             });
 
@@ -101,7 +117,7 @@ public class MenuBuilder {
         ClipData clip = ClipData.newPlainText("MBH-ST", txt);
         clipboard.setPrimaryClip(clip);
 
-        sendToast(AndroidUtils.getString("menu_copied"));
+        sendToast(getString("menu_copied"));
     }
 
     public static void addItem(final ActionsPopup.b builder, final String title, final Functions onClick) throws InvocationTargetException, IllegalAccessException {

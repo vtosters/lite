@@ -4,7 +4,6 @@ import static ru.vtosters.lite.utils.Preferences.feedcache;
 import static ru.vtosters.lite.utils.Preferences.getBoolValue;
 import static ru.vtosters.lite.utils.Preferences.milkshake;
 import static ru.vtosters.lite.utils.Preferences.miniapps;
-import static ru.vtosters.lite.utils.Preferences.musicnewcatalog;
 import static ru.vtosters.lite.utils.Preferences.postsredesign;
 import static ru.vtosters.lite.utils.Preferences.superapp;
 
@@ -133,8 +132,6 @@ public class TogglesHook {
             case FEATURE_MILKSHAKE_FORCE_DISABLED:
             case FEATURE_MILKSHAKE_ACTIVATION_DISABLED:
                 return !milkshake();
-            case FEATURE_MUSIC_NEW_CATALOG:
-                return musicnewcatalog();
             case AB_NEWS_VIDEO_LAYOUT_TEXT:
             case FEATURE_COMPACT_REPOST:
             case EXPERIMENT_NEWS_VIDEO_LAYOUT_TEXT:

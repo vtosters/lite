@@ -552,8 +552,6 @@
         <item>Fade</item>
         <item>AndroidX</item>
         <item>Слайд</item>
-        <item>Системный</item>
-        <item>Системный (task)</item>
     </string-array>
     <string-array name="animations">
         <item>Без анимации</item>

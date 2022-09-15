@@ -3,13 +3,13 @@ package ru.vtosters.lite.hooks;
 import static ru.vtosters.lite.hooks.JsonInjectors.setOnlineInfo;
 import static ru.vtosters.lite.hooks.JsonInjectors.setOnlineInfoUsers;
 import static ru.vtosters.lite.net.Request.makeRequest;
+import static ru.vtosters.lite.proxy.ProxyUtils.getApi;
 import static ru.vtosters.lite.utils.AccountManagerUtils.getUserToken;
 import static ru.vtosters.lite.utils.AndroidUtils.getString;
 import static ru.vtosters.lite.utils.AndroidUtils.sendToast;
 import static ru.vtosters.lite.utils.Preferences.dev;
 import static ru.vtosters.lite.utils.Preferences.getBoolValue;
 import static ru.vtosters.lite.utils.Preferences.getPrefsFromFile;
-import static ru.vtosters.lite.proxy.ProxyUtils.getApi;
 
 import android.util.Log;
 
@@ -130,6 +130,12 @@ public class OnlineFormatterHook {
                 return "Miranda NG (bridge)";
             case 8043814:
                 return "Quise";
+            case 7221936:
+                return "Вечный Online";
+            case 6892935:
+                return "VK Helper";
+            case 6248661:
+                return "MemeVoices for VK";
             default:
                 return getAppNameFromOnline(appid);
         }
