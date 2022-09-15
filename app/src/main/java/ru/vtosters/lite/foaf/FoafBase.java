@@ -13,8 +13,6 @@ import android.app.ProgressDialog;
 import android.content.Context;
 import android.util.Log;
 
-import androidx.exifinterface.media.ExifInterface;
-
 import com.vk.core.dialogs.alert.VkAlertDialog;
 import com.vk.core.network.Network;
 
@@ -165,7 +163,7 @@ public class FoafBase {
     }
 
     private static String getNormalHumanDate(String str) {
-        String[] split = str.split(ExifInterface.GPS_DIRECTION_TRUE);
+        String[] split = str.split("T");
         return split[1].split("\\+")[0] + " " + split[0];
     }
 }
