@@ -239,18 +239,17 @@
 
     const/4 v1, 0x1
 
-    #invoke-static {p1}, Lru/vtosters/lite/music/cache/injectors/PlaylistInjector;->injectGetPlaylist(Lcom/vk/api/audio/AudioGetPlaylist;)Lio/reactivex/Observable;
+    invoke-static {p1}, Lru/vtosters/lite/music/cache/injectors/PlaylistInjector;->injectGetPlaylist(Lcom/vk/api/audio/AudioGetPlaylist;)Lio/reactivex/Observable;
 
-    #move-result-object v2
+    move-result-object v2
 
-    #if-eqz v2, :cond_custom
+    if-eqz v2, :cond_custom
 
-    #move-object p1, v2
+    move-object p1, v2
 
-    #goto :goto_20
+    goto :goto_20
 
-    #:cond_custom
-
+    :cond_custom
     invoke-static {p1, v0, v1, v0}, Lcom/vk/api/base/ApiRequest;->d(Lcom/vk/api/base/ApiRequest;Lcom/vk/api/base/ApiThreadHolder;ILjava/lang/Object;)Lio/reactivex/Observable;
 
     move-result-object p1

@@ -1,7 +1,5 @@
 package ru.vtosters.lite.hooks.ui;
 
-import android.util.Log;
-
 import com.vk.dto.music.MusicTrack;
 import com.vk.dto.music.Playlist;
 import com.vk.music.bottomsheets.a.MusicAction;
@@ -15,18 +13,31 @@ import bruhcollective.itaysonlab.libvkx.client.LibVKXClientImpl;
 import ru.vtosters.lite.utils.AndroidUtils;
 
 public class MusicBottomSheetHook {
-    public static ArrayList<MusicAction> hook(ArrayList<MusicAction> actions) {
-        if (LibVKXClient.isVkxInstalled()) {
+    public static ArrayList<MusicAction> hook(ArrayList<MusicAction> actions, MusicTrack musicTrack) {
+        if (LibVKXClient.isVkxInstalled())
             actions.add(getPlayInVKXAction());
-        }
+
         return actions;
     }
 
-    public static boolean tryPlayInVKX(int actionId, MusicTrack track, MusicPlaybackLaunchContext context, Playlist playlist) {
-        if (actionId != AndroidUtils.getIdentifier("play_in_vkx", "id")) {
-            return false;
-        }
+    public static ArrayList<MusicAction> hook(ArrayList<MusicAction> actions, Playlist playlist) {
 
+        return actions;
+    }
+
+    public static boolean injectOnClick(int actionId, MusicTrack track, MusicPlaybackLaunchContext context, Playlist playlist) { // musictrack inj
+        if (actionId == AndroidUtils.getIdentifier("play_in_vkx", "id"))
+            return tryPlayInVKX(track, context, playlist);
+
+        return false;
+    }
+
+    public static boolean injectOnClick(int actionId, Playlist playlist) { // playlist inj
+
+        return false;
+    }
+
+    public static boolean tryPlayInVKX(MusicTrack track, MusicPlaybackLaunchContext context, Playlist playlist) {
         var trackList = new ArrayList<MusicTrack>();
 
         if (playlist != null) {
