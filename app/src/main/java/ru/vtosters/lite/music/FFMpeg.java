@@ -84,7 +84,9 @@ public class FFMpeg {
 
 
         // convert .ts file to .mp3 file via ffmpeg
-        var session = FFmpegKit.execute("-i " + in + "/all.ts -f mp3 -acodec mp3 -q:a 0 -y '" + out + "'");
+        // var session = FFmpegKit.execute("-i " + in + "/all.ts -f mp3 -acodec mp3 -q:a 0 -y '" + out + "'");
+        var session = FFmpegKit.execute("-i " + in + "/all.ts -map 0 -dn -c copy '" + out + "'");
+
         var rc = session.getReturnCode();
 
         if (ReturnCode.isSuccess(rc)) {
