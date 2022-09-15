@@ -814,6 +814,11 @@
     goto :goto_0
 
     :cond_0
+
+    invoke-static {}, Lru/vtosters/lite/feature/discover/DiscoverTemplates;->getTemplates()Ljava/util/ArrayList;
+
+    move-result-object v1
+
     const-string v0, ","
 
     invoke-static {v0, v1}, Landroid/text/TextUtils;->join(Ljava/lang/CharSequence;Ljava/lang/Iterable;)Ljava/lang/String;

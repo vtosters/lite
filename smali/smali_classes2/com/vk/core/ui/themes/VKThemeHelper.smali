@@ -788,6 +788,11 @@
 
     .line 99
     :cond_0
+    if-nez p0, :cond_1
+
+    return-void
+
+    :cond_1
     sget-object v0, Lcom/vk/core/ui/themes/VKThemeHelper;->k:Lcom/vk/core/ui/themes/VKThemeHelper;
 
     invoke-direct {v0}, Lcom/vk/core/ui/themes/VKThemeHelper;->m()Lcom/vk/core/ui/themes/ThemeBinder;
