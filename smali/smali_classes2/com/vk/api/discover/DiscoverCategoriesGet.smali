@@ -28,42 +28,50 @@
 
     iput-object p1, p0, Lcom/vk/api/discover/DiscoverCategoriesGet;->F:Lcom/vk/dto/discover/DiscoverIntent;
 
+#    .line 2
+#    invoke-static {}, Lcom/vk/dto/discover/DiscoverItem$Template;->values()[Lcom/vk/dto/discover/DiscoverItem$Template;
+#
+#    move-result-object p1
+#
+#    .line 3
+#    new-instance v0, Ljava/util/ArrayList;
+#
+#    array-length v1, p1
+#
+#    invoke-direct {v0, v1}, Ljava/util/ArrayList;-><init>(I)V
+#
+#    .line 4
+#    array-length v1, p1
+#
+#    const/4 v2, 0x0
+#
+#    const/4 v3, 0x0
+#
+#    :goto_0
+#    if-ge v3, v1, :cond_0
+#
+#    aget-object v4, p1, v3
+#
+#    .line 5
+#    invoke-virtual {v4}, Lcom/vk/dto/discover/DiscoverItem$Template;->b()Ljava/lang/String;
+#
+#    move-result-object v4
+#
+#    invoke-interface {v0, v4}, Ljava/util/Collection;->add(Ljava/lang/Object;)Z
+#
+#    add-int/lit8 v3, v3, 0x1
+#
+#    goto :goto_0
+#
+#    :cond_0
+
     .line 2
-    invoke-static {}, Lcom/vk/dto/discover/DiscoverItem$Template;->values()[Lcom/vk/dto/discover/DiscoverItem$Template;
+    # ru.vtosters.lite.feature.discover.DiscoverTemplates. ArrayList<DiscoverItem.Template> getTemplates()
 
-    move-result-object p1
+    invoke-static {}, Lru/vtosters/lite/feature/discover/DiscoverTemplates;->getTemplates()Ljava/util/ArrayList;
 
-    .line 3
-    new-instance v0, Ljava/util/ArrayList;
+    move-result-object v0
 
-    array-length v1, p1
-
-    invoke-direct {v0, v1}, Ljava/util/ArrayList;-><init>(I)V
-
-    .line 4
-    array-length v1, p1
-
-    const/4 v2, 0x0
-
-    const/4 v3, 0x0
-
-    :goto_0
-    if-ge v3, v1, :cond_0
-
-    aget-object v4, p1, v3
-
-    .line 5
-    invoke-virtual {v4}, Lcom/vk/dto/discover/DiscoverItem$Template;->b()Ljava/lang/String;
-
-    move-result-object v4
-
-    invoke-interface {v0, v4}, Ljava/util/Collection;->add(Ljava/lang/Object;)Z
-
-    add-int/lit8 v3, v3, 0x1
-
-    goto :goto_0
-
-    :cond_0
     const-string p1, ","
 
     invoke-static {p1, v0}, Landroid/text/TextUtils;->join(Ljava/lang/CharSequence;Ljava/lang/Iterable;)Ljava/lang/String;
