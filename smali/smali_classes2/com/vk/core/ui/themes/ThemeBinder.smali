@@ -814,7 +814,13 @@
 .method private final e(Landroid/view/View;)Z
     .locals 1
 
-    .line 2
+    if-nez p1, :cond_1
+
+    const/4 p1, 0x0
+
+    return p1
+
+    :cond_1
     sget v0, Lcom/vk/core/ui/themes/ThemeBinder;->b:I
 
     invoke-virtual {p1, v0}, Landroid/view/View;->getTag(I)Ljava/lang/Object;
