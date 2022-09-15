@@ -2,6 +2,7 @@ package ru.vtosters.lite.hooks;
 
 import static java.lang.Long.MAX_VALUE;
 import static ru.vtosters.lite.utils.AndroidUtils.getDefaultPrefs;
+import static ru.vtosters.lite.utils.AndroidUtils.getGlobalContext;
 import static ru.vtosters.lite.utils.AndroidUtils.getPrefsValue;
 import static ru.vtosters.lite.utils.Preferences.ads;
 import static ru.vtosters.lite.utils.Preferences.adsslider;
@@ -9,6 +10,9 @@ import static ru.vtosters.lite.utils.Preferences.authorsrecomm;
 import static ru.vtosters.lite.utils.Preferences.friendsrecomm;
 import static ru.vtosters.lite.utils.Preferences.getBoolValue;
 import static ru.vtosters.lite.utils.Preferences.vkme;
+
+import android.content.Context;
+import android.os.PowerManager;
 
 import com.vk.core.preference.Preference;
 import com.vtosters.lite.api.ExtendedCommunityProfile;
@@ -121,5 +125,11 @@ public class NewsfeedHook {
         hashSet.add("ads_app_video");
         hashSet.add("ads_post_pretty_cards");
         hashSet.add("ads_post_snippet_video");
+    }
+
+    public static boolean isPowerSaveMode() {
+        var pw = (PowerManager) getGlobalContext().getSystemService(Context.POWER_SERVICE);
+
+        return !getBoolValue("force_disable_psm", false) && pw.isPowerSaveMode();
     }
 }
