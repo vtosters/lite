@@ -1,15 +1,18 @@
 package ru.vtosters.lite.music;
 
+import android.os.Build;
 import android.util.Log;
 
 import com.arthenica.ffmpegkit.FFmpegKit;
 import com.arthenica.ffmpegkit.ReturnCode;
 import com.vk.core.util.ToastUtils;
 
+import java.io.ByteArrayOutputStream;
 import java.io.File;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
+import java.nio.file.Files;
 
 import ru.vtosters.lite.utils.AndroidUtils;
 import ru.vtosters.lite.utils.IOUtils;
@@ -49,24 +52,36 @@ public class FFMpeg {
     public static boolean convert(String in, String out) {
         checkFFMpegLibs();
 
-        // write the list of all .ts files to a txt file in "in" directory
         var list = new File(in);
-        var listFile = new File(list, "list.txt");
-        try {
-            listFile.createNewFile();
-            var writer = new java.io.FileWriter(listFile);
-            for (var file : list.listFiles()) {
-                if (file.getName().endsWith(".ts")) {
-                    writer.write("file " + file.getName() + "\n");
+        var outputTs = new File(in, "all.ts");
+
+        ByteArrayOutputStream outputStream = new ByteArrayOutputStream();
+        for (var file : list.listFiles()) {
+            if (file.getName().endsWith(".ts")) {
+                try {
+                    outputStream.write(IOUtils.readAllBytes(file));
+                } catch (IOException e) {
+                    e.printStackTrace();
                 }
             }
-            writer.close();
-        } catch (IOException e) {
-            e.printStackTrace();
         }
 
-        // concatenate .ts files to a single .ts file
-        FFmpegKit.execute("-f concat -safe 0 -i " + in + "/list.txt -c copy " + in + "/all.ts");
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
+            try {
+                Files.write(outputTs.toPath(), outputStream.toByteArray());
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+        } else {
+            try {
+                FileOutputStream fos = new FileOutputStream(outputTs);
+                fos.write(outputStream.toByteArray());
+                fos.close();
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+        }
+
 
         // convert .ts file to .mp3 file via ffmpeg
         var session = FFmpegKit.execute("-i " + in + "/all.ts -f mp3 -acodec mp3 -q:a 0 -y '" + out + "'");
