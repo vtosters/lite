@@ -197,10 +197,6 @@ public class Preferences {
         return getBoolValue("milkshake", true);
     }
 
-    public static boolean videonewcatalog() {
-        return getBoolValue("videonewcatalog", true);
-    }
-
     public static boolean postsredesign() {
         return getBoolValue("postsredesign", true);
     }

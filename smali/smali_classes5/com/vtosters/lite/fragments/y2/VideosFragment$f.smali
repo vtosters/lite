@@ -19,7 +19,7 @@
     .locals 1
 
     .line 1
-    const-class v0, Lcom/vtosters/lite/fragments/y2/VideosFragment;
+    const-class v0, Lcom/vtosters/lite/fragments/y2/VideoCatalogFragment;
 
     invoke-direct {p0, v0}, Lcom/vk/navigation/Navigator;-><init>(Ljava/lang/Class;)V
 
