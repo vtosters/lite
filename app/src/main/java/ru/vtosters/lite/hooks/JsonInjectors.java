@@ -447,7 +447,7 @@ public class JsonInjectors {
     }
 
     public static JSONObject fetchCatalogId(String section) {
-        if (section == null) return null;
+        if (section.isEmpty()) return null;
 
         var request = new Request.a()
                 .b("https://" + getApi() + "/method/catalog.getAudio"
