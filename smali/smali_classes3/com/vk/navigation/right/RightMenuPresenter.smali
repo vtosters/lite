@@ -242,9 +242,7 @@
     if-eqz v0, :cond_0
 
     .line 6
-    invoke-static {v0, p1}, Lcom/vk/core/ui/themes/VKThemeHelper;->b(Landroid/app/Activity;[F)V
-
-    invoke-static {}, Lru/vtosters/lite/hooks/VKUIHook;->clearWebCache()V
+    invoke-static {v0, p1}, Lru/vtosters/lite/ui/dialogs/ThemeChanging;->changeTheme(Landroid/app/Activity;[F)V
 
     :cond_0
     return-void
