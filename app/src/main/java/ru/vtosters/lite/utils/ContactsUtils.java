@@ -86,9 +86,9 @@ public class ContactsUtils{
                 builder.setPositiveButton((!enabledsync ? "Включить" : "Отключить"), (dialog, which) -> {
                     setContactsSync(!enabledsync);
                 });
-                builder.setNegativeButton("Импортировать контакты", (dialog, which) -> {
-                    uploadContacts(ctx);
-                });
+//                builder.setNegativeButton("Импортировать контакты", (dialog, which) -> {
+//                    uploadContacts(ctx);
+//                });
 
                 builder.show();
 
