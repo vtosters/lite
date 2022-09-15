@@ -59,12 +59,12 @@ public class ExternalLinkParser {
 
         if (checkVkVideo(file)) {
             if (qualities.size() == 1) {
-                startExternalVideo((String) qualities.values().toArray()[0]);
+                startExternalVideo((String) qualities.values().toArray()[0], context);
             } else {
                 String[] titles = qualities.keySet().toArray(new String[0]);
                 new AlertDialog.Builder(context)
                         .setItems(titles, ((dialog, which) -> {
-                            startExternalVideo(qualities.get(titles[which]));
+                            startExternalVideo(qualities.get(titles[which]), context);
                         }))
                         .show();
             }
@@ -117,7 +117,7 @@ public class ExternalLinkParser {
         return qualities.size() > 0;
     }
 
-    public static boolean startExternalVideo(String url) {
+    public static boolean startExternalVideo(String url, Context ctx) {
         try {
             qualities.clear();
 
@@ -136,7 +136,7 @@ public class ExternalLinkParser {
                 if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N)
                     intent.addFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION);
             }
-            getGlobalContext().startActivity(intent);
+            ctx.startActivity(intent);
             return true;
         } catch (Exception e) {
             e.printStackTrace();
