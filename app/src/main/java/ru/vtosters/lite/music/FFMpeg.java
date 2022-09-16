@@ -6,6 +6,7 @@ import android.util.Log;
 import com.arthenica.ffmpegkit.FFmpegKit;
 import com.arthenica.ffmpegkit.ReturnCode;
 import com.vk.core.util.ToastUtils;
+import com.vk.dto.music.MusicTrack;
 
 import java.io.ByteArrayOutputStream;
 import java.io.File;
@@ -50,7 +51,7 @@ public class FFMpeg {
         }
     }
 
-    public static boolean convert(String in, String out) {
+    public static boolean convert(String in, String out, MusicTrack track) {
         checkFFMpegLibs();
 
         var tsesList = new File(in).listFiles();
@@ -97,8 +98,30 @@ public class FFMpeg {
 
 
         // convert .ts file to .mp3 file via ffmpeg
-        // var session = FFmpegKit.execute("-i " + in + "/all.ts -f mp3 -acodec mp3 -q:a 0 -y '" + out + "'");
-        var session = FFmpegKit.execute("-y -i " + in + "/all.ts -map 0 -dn -c copy '" + out + "'");
+        var sb = new StringBuilder();
+        sb.append("-y -i ").append(in).append("/all.ts -map 0 -dn ");
+        sb.append(" -loglevel error");
+        sb.append(" -hide_banner");
+        if (track.f != null) {
+            sb.append(" -metadata title='").append(track.f).append("'");
+        }
+        if (track.C != null) {
+            sb.append(" -metadata artist='").append(track.C).append("'");
+        }
+        if (track.I != null) {
+            sb.append(" -metadata album='").append(track.I.getTitle()).append("'");
+        }
+//
+//        if (track.L != null) {
+//            var artists = track.L.stream().map(Artist::w1).reduce((s, s2) -> s + ", " + s2).orElse("");
+//            sb.append(" -metadata artist='").append(artists).append("'");
+//        }
+
+        sb.append(" -c copy '").append(out).append("'");
+
+        var command = sb.toString();
+
+        var session = FFmpegKit.execute(command);
         var rc = session.getReturnCode();
 
         IOUtils.deleteRecursive(new File(in));
