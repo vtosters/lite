@@ -76,7 +76,7 @@ public class PlaylistHelper {
 
     public static List<Playlist> getAlbumPlaylists() {
         List<Playlist> list = new ArrayList<>();
-        CacheDatabaseDelegate.getTracksAsPlaylist().forEach(track -> {
+        for (var track : CacheDatabaseDelegate.getTracksAsPlaylist()) {
             var albumLink = track.I;
             var thumb = albumLink.u1();
             list.add(createAlbum(
@@ -86,7 +86,7 @@ public class PlaylistHelper {
                     track.y1(),
                     albumLink.getId()
             ));
-        });
+        }
         return list;
     }
 }
