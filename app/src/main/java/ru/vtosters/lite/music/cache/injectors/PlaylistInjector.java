@@ -51,6 +51,8 @@ public class PlaylistInjector {
             boolean isVirtualPlaylist = accessKey != null && (accessKey.equals("vkx") || accessKey.equals("cache"));
             boolean isAlbumVirtualPlaylist = accessKey != null && (accessKey.equals("cacheAlbum"));
 
+            Log.d("PlaylistInjector", "id = " + id + " / owner = " + ownerId + " / access = " + accessKey + " / " + isVirtualPlaylist + " + " + isAlbumVirtualPlaylist);
+
             if (TextUtils.isEmpty(id) || (!isVirtualPlaylist && !isAlbumVirtualPlaylist))
                 return null;
 
