@@ -366,6 +366,8 @@
     .line 30
     iget v2, v2, Lcom/vk/dto/music/Playlist;->O:I
 
+    const v2, 0x0
+
     if-lez v2, :cond_7
 
     new-instance v2, Lcom/vk/music/bottomsheets/a/MusicAction;

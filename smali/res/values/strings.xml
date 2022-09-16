@@ -6088,6 +6088,7 @@ May look like a fake leaving the online"</string>
 
     <string name="download_mp3">Download as mp3</string>
     <string name="remove_from_cache">Delete from cache</string>
+    <string name="add_to_cache">Add to cache</string>
 
     <string name="play_in_vkx">Play the track in VK X</string>
 

@@ -5953,6 +5953,7 @@
 
     <string name="download_mp3">Скачать как mp3</string>
     <string name="remove_from_cache">Удалить из кеша</string>
+    <string name="add_to_cache">Добавить в кэш</string>
     <string name="play_in_vkx">Воспроизвести в VK X</string>
 
 

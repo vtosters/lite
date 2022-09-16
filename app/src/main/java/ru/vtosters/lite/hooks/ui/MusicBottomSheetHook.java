@@ -1,5 +1,11 @@
 package ru.vtosters.lite.hooks.ui;
 
+import static bruhcollective.itaysonlab.libvkx.client.LibVKXClient.asId;
+import static bruhcollective.itaysonlab.libvkx.client.LibVKXClient.getInstance;
+import static bruhcollective.itaysonlab.libvkx.client.LibVKXClient.isVkxInstalled;
+import static bruhcollective.itaysonlab.libvkx.client.LibVKXClient.lambdaplay;
+import static ru.vtosters.lite.music.cache.CacheDatabaseDelegate.isCached;
+import static ru.vtosters.lite.music.cache.CacheDatabaseDelegate.removeTrackFromCache;
 import static ru.vtosters.lite.utils.Preferences.milkshake;
 
 import com.vk.dto.music.MusicTrack;
@@ -10,21 +16,31 @@ import com.vtosters.lite.R;
 
 import java.util.ArrayList;
 
-import bruhcollective.itaysonlab.libvkx.client.LibVKXClient;
 import bruhcollective.itaysonlab.libvkx.client.LibVKXClientImpl;
+import ru.vtosters.lite.music.MP3Downloader;
 import ru.vtosters.lite.utils.AndroidUtils;
 
 public class MusicBottomSheetHook {
     public static ArrayList<MusicAction> hook(ArrayList<MusicAction> actions, MusicTrack musicTrack) {
-        if (LibVKXClient.isVkxInstalled())
+        if (isVkxInstalled())
             actions.add(getPlayInVKXAction());
+
+        if (isCached(asId(musicTrack))){
+            actions.add(getRemoveCacheTrackAction());
+        } else {
+            actions.add(addToCacheTrackAction());
+        }
+
+        actions.add(downloadAsMp3Action());
 
         return actions;
     }
 
     public static ArrayList<MusicAction> hook(ArrayList<MusicAction> actions, Playlist playlist) {
-        if (LibVKXClient.isVkxInstalled())
+        if (isVkxInstalled())
             actions.add(getPlayInVKXAction());
+
+        actions.add(downloadAsMp3Action());
 
         return actions;
     }
@@ -33,12 +49,33 @@ public class MusicBottomSheetHook {
         if (actionId == AndroidUtils.getIdentifier("play_in_vkx", "id"))
             return tryPlayInVKX(track, context, playlist);
 
+        if (actionId == AndroidUtils.getIdentifier("remove_from_cache", "id")) {
+            removeTrackFromCache(track.D);
+            AndroidUtils.sendToast("remove_from_cache");
+            return true;
+        } else if (actionId == AndroidUtils.getIdentifier("add_to_cache", "id")) {
+            AndroidUtils.sendToast("add_to_cache");
+            return true;
+        }
+
+        if (actionId == AndroidUtils.getIdentifier("download_mp3", "id")) {
+            MP3Downloader.downloadMP3(track);
+            AndroidUtils.sendToast("download_mp3");
+            return true;
+        }
+
         return false;
     }
 
     public static boolean injectOnClick(int actionId, Playlist playlist) { // playlist inj
         if (actionId == AndroidUtils.getIdentifier("play_in_vkx", "id"))
             return tryPlayInVKX(null, null, playlist);
+
+        if (actionId == AndroidUtils.getIdentifier("download_mp3", "id")) {
+            MP3Downloader.downloadPlaylist(playlist);
+            AndroidUtils.sendToast("download_mp3");
+            return true;
+        }
 
         return false;
     }
@@ -52,8 +89,8 @@ public class MusicBottomSheetHook {
             trackList.add(track);
         }
 
-        LibVKXClientImpl.LibVKXAction action = iLibVkxService -> LibVKXClient.lambdaplay(trackList, track, iLibVkxService, context);
-        return LibVKXClient.getInstance().runOnService(action);
+        LibVKXClientImpl.LibVKXAction action = iLibVkxService -> lambdaplay(trackList, track, iLibVkxService, context);
+        return getInstance().runOnService(action);
     }
 
     private static MusicAction getPlayInVKXAction() {
@@ -61,6 +98,39 @@ public class MusicBottomSheetHook {
                 AndroidUtils.getIdentifier("play_in_vkx", "id"),
                 milkshake() ? R.drawable.ic_music_outline_24 : R.drawable.ic_music_24,
                 AndroidUtils.getIdentifier("play_in_vkx", "string"),
+                R.color.caption_gray,
+                R.string.music_talkback_empty,
+                false
+        );
+    }
+
+    private static MusicAction getRemoveCacheTrackAction() {
+        return new MusicAction(
+                AndroidUtils.getIdentifier("remove_from_cache", "id"),
+                milkshake() ? R.drawable.ic_delete_outline_28 : R.drawable.ic_delete_24,
+                AndroidUtils.getIdentifier("remove_from_cache", "string"),
+                R.color.caption_gray,
+                R.string.music_talkback_empty,
+                false
+        );
+    }
+
+    private static MusicAction addToCacheTrackAction() {
+        return new MusicAction(
+                AndroidUtils.getIdentifier("add_to_cache", "id"),
+                milkshake() ? R.drawable.ic_add_outline_28 : R.drawable.ic_add_24,
+                AndroidUtils.getIdentifier("add_to_cache", "string"),
+                R.color.caption_gray,
+                R.string.music_talkback_empty,
+                false
+        );
+    }
+
+    private static MusicAction downloadAsMp3Action() {
+        return new MusicAction(
+                AndroidUtils.getIdentifier("download_mp3", "id"),
+                milkshake() ? R.drawable.ic_download_outline_28 : R.drawable.ic_download_24,
+                AndroidUtils.getIdentifier("download_mp3", "string"),
                 R.color.caption_gray,
                 R.string.music_talkback_empty,
                 false

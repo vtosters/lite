@@ -3915,4 +3915,6 @@
     <item name="download_video" type="id" />
     <item name="savedmsg" type="id" />
     <item name="play_in_vkx" type="id" />
+    <item name="add_to_cache" type="id" />
+    <item name="download_mp3" type="id" />
 </resources>
