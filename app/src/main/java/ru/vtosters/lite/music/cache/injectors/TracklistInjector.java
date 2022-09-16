@@ -39,8 +39,10 @@ public class TracklistInjector {
                 LibVKXClient.getInstance().runOnService((service) -> {
                     try {
                         try {
+                            Log.d("TracklistInjector", "Using vkx cache catalog");
                             observableEmitter.b(parser.c(new JSONObject(service.getCacheCatalog())));
                         } catch (Exception e){
+                            e.printStackTrace();
                             List<MusicTrack> tracks = new ArrayList<>();
                             List<String> cache = service.getCache();
 
@@ -49,6 +51,7 @@ public class TracklistInjector {
                                 tracks.add(new MusicTrack(new JSONObject(json)));
                             }
 
+                            Log.d("TracklistInjector", "Using own cache catalog from vkx");
                             observableEmitter.b(parser.c(createVirtualCatalog(tracks)));
                         }
                     } catch (Exception e) {
