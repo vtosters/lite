@@ -156,21 +156,7 @@ public class CacheDatabaseDelegate {
 
     public static boolean hasTracks() {
         if (LibVKXClient.isIntegrationEnabled()) {
-            return LibVKXClient.getInstance().runOnServiceSync(new LibVKXClientImpl.LibVKXActionGeneric<Boolean>() {
-                @Override
-                public Boolean run(ILibVkxService service) {
-                    try {
-                        return service.getCache().size() > 0;
-                    } catch (RemoteException e) {
-                        return false;
-                    }
-                }
-
-                @Override
-                public Boolean defaultValue() {
-                    return false;
-                }
-            });
+            return true;
         }
 
         var formula = String.format(

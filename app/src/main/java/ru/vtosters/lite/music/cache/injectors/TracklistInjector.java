@@ -38,15 +38,19 @@ public class TracklistInjector {
             if (LibVKXClient.isIntegrationEnabled()) {
                 LibVKXClient.getInstance().runOnService((service) -> {
                     try {
-                        List<MusicTrack> tracks = new ArrayList<>();
-                        List<String> cache = service.getCache();
+                        try {
+                            observableEmitter.b(parser.c(new JSONObject(service.getCacheCatalog())));
+                        } catch (Exception e){
+                            List<MusicTrack> tracks = new ArrayList<>();
+                            List<String> cache = service.getCache();
 
-                        for (String json : cache) {
-                            Log.d("TracklistInjector", "added " + json);
-                            tracks.add(new MusicTrack(new JSONObject(json)));
+                            for (String json : cache) {
+                                Log.d("TracklistInjector", "added " + json);
+                                tracks.add(new MusicTrack(new JSONObject(json)));
+                            }
+
+                            observableEmitter.b(parser.c(createVirtualCatalog(tracks)));
                         }
-
-                        observableEmitter.b(parser.c(createVirtualCatalog(tracks)));
                     } catch (Exception e) {
                         e.printStackTrace();
                     }
