@@ -23,7 +23,8 @@ interface ILibVkxService {
     void addPlaylistToCache(in int playlist_id, in int owner_id, in String access_key) = 9;
     void deletePlaylistFromCache(in int playlist_id, in int owner_id) = 10;
 
-    // Get cached library in Catalog2-like JSON
+    // [ver 1.2]
     String getCacheCatalog() = 11;
     List<String> getTracksInPlaylist(in String playlist_id, in String owner_id) = 12;
+    String getPlaylistDefJson(in String playlist_id, in String owner_id) = 13;
 }

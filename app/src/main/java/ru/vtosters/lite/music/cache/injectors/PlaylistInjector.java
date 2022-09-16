@@ -48,7 +48,7 @@ public class PlaylistInjector {
             var id = requestArgs.get("id");
             var ownerId = requestArgs.get("owner_id");
             var accessKey = requestArgs.get("access_key");
-            boolean isVirtualPlaylist = accessKey != null && (accessKey.equals("vkx") || accessKey.equals("cache"));
+            boolean isVirtualPlaylist = accessKey != null && (accessKey.equals("cache"));
             boolean isAlbumVirtualPlaylist = accessKey != null && (accessKey.equals("cacheAlbum"));
 
             Log.d("PlaylistInjector", "id = " + id + " / owner = " + ownerId + " / access = " + accessKey + " / " + isVirtualPlaylist + " + " + isAlbumVirtualPlaylist);
@@ -58,15 +58,25 @@ public class PlaylistInjector {
 
             return Observable.a((ObservableOnSubscribe<AudioGetPlaylist.c>) observableEmitter -> {
                 AudioGetPlaylist.c response = new AudioGetPlaylist.c();
+
                 if (LibVKXClient.isIntegrationEnabled()) {
-                    response.b = PlaylistHelper.createCachedPlaylistMetadata();
                     LibVKXClient.getInstance().runOnService((service) -> {
                         try {
-                            List<String> cache = service.getTracksInPlaylist(id, ownerId);
+                            List<String> cache;
                             ArrayList<MusicTrack> tracks = new ArrayList<>();
+
+                            if (isAlbumVirtualPlaylist) {
+                                response.b = new Playlist(new JSONObject(service.getPlaylistDefJson(id, ownerId)));
+                                cache = service.getTracksInPlaylist(id, ownerId);
+                            } else {
+                                response.b = PlaylistHelper.createCachedPlaylistMetadata();
+                                cache = service.getCache();
+                            }
+
                             for (String json : cache) {
                                 tracks.add(new MusicTrack(new JSONObject(json)));
                             }
+
                             response.c = tracks;
                         } catch (RemoteException | JSONException e) {
                             e.printStackTrace();
@@ -74,6 +84,7 @@ public class PlaylistInjector {
                         }
                         observableEmitter.b(response);
                     });
+
                     return;
                 }
 
