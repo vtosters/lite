@@ -2,6 +2,7 @@ package ru.vtosters.lite.music.cache.injectors;
 
 import android.os.RemoteException;
 import android.text.TextUtils;
+import android.util.Log;
 
 import com.vk.api.audio.AudioGetPlaylist;
 import com.vk.dto.music.MusicTrack;
@@ -31,10 +32,14 @@ public class PlaylistInjector {
     }
 
     public static boolean eligibleForOfflineCaching() {
+        Log.d("PlaylistInjector", "eligibleForOfflineCaching");
+
         return !NetworkUtils.isNetworkConnected() && CacheDatabaseDelegate.hasTracks();
     }
 
     public static Observable<AudioGetPlaylist.c> injectGetPlaylist(AudioGetPlaylist audioGetPlaylist) {
+        Log.d("PlaylistInjector", "injectGetPlaylist");
+
         try {
             if (!eligibleForOfflineCaching())
                 return null;

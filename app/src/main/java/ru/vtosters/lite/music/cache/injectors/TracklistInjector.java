@@ -1,5 +1,7 @@
 package ru.vtosters.lite.music.cache.injectors;
 
+import android.util.Log;
+
 import com.vk.catalog2.core.CatalogParser;
 import com.vk.catalog2.core.api.dto.CatalogResponse;
 import com.vk.dto.music.MusicTrack;
@@ -24,10 +26,14 @@ import ru.vtosters.lite.utils.NetworkUtils;
 public class TracklistInjector {
 
     public static boolean eligibleForOfflineCaching() {
+        Log.d("TracklistInjector", "eligibleForOfflineCaching " + !NetworkUtils.isNetworkConnected() + " " + CacheDatabaseDelegate.hasTracks());
+
         return !NetworkUtils.isNetworkConnected() && CacheDatabaseDelegate.hasTracks();
     }
 
     public static Observable<CatalogResponse> createOfflineRx(CatalogParser parser) {
+        Log.d("TracklistInjector", "createOfflineRx");
+
         return Observable.a((ObservableOnSubscribe<CatalogResponse>) observableEmitter -> {
             if (LibVKXClient.isIntegrationEnabled()) {
                 LibVKXClient.getInstance().runOnService((service) -> {
@@ -36,6 +42,7 @@ public class TracklistInjector {
                         List<String> cache = service.getCache();
 
                         for (String json : cache) {
+                            Log.d("TracklistInjector", "added " + json);
                             tracks.add(new MusicTrack(new JSONObject(json)));
                         }
 
@@ -51,6 +58,8 @@ public class TracklistInjector {
     }
 
     public static void injectIntoExistingCatalog(JSONObject catalogNode) {
+        Log.d("TracklistInjector", "injectIntoExistingCatalog");
+
         if (!CacheDatabaseDelegate.hasTracks()) return;
         try {
             var sectionsNode = catalogNode.getJSONObject("catalog")
@@ -125,6 +134,8 @@ public class TracklistInjector {
     }
 
     public static JSONObject createVirtualCatalog(List<MusicTrack> tracks) throws JSONException {
+        Log.d("TracklistInjector", "createVirtualCatalog");
+
         var clickAction = new JSONObject()
                 .put("type", "open_url")
                 .put("target", "internal")
