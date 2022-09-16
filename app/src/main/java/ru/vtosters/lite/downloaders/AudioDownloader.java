@@ -73,7 +73,7 @@ public class AudioDownloader {
             public void onSuccess() {
                 try {
                     var fileName = track.toString();
-                    var success = FFMpeg.convert(downloadPath, musicPath + File.separator + fileName + ".mp3");
+                    var success = FFMpeg.convert(downloadPath, musicPath + File.separator + fileName + ".mp3", track);
                     if (success) {
                         notification
                                 .setContentText(AndroidUtils.getString("player_download_finished"))

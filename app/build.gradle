@@ -77,10 +77,11 @@ android {
         targetSdkVersion 32
         versionCode 1
         versionName "1.0"
-        multiDexEnabled false
+        multiDexEnabled true
     }
 
     compileOptions {
+        coreLibraryDesugaringEnabled true
         sourceCompatibility JavaVersion.VERSION_11
         targetCompatibility JavaVersion.VERSION_11
     }
@@ -88,6 +89,7 @@ android {
 }
 
 dependencies {
+    coreLibraryDesugaring 'com.android.tools:desugar_jdk_libs:1.1.5'
     implementation 'net.sourceforge.streamsupport:streamsupport-minifuture:1.7.4'
     implementation 'com.google.android.material:material:1.6.1'
     implementation 'androidx.preference:preference:1.2.0'
