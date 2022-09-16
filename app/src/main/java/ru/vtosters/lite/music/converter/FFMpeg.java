@@ -1,6 +1,5 @@
-package ru.vtosters.lite.music;
+package ru.vtosters.lite.music.converter;
 
-import android.os.Build;
 import android.util.Log;
 
 import com.arthenica.ffmpegkit.FFmpegKit;
@@ -8,13 +7,10 @@ import com.arthenica.ffmpegkit.ReturnCode;
 import com.vk.core.util.ToastUtils;
 import com.vk.dto.music.MusicTrack;
 
-import java.io.ByteArrayOutputStream;
 import java.io.File;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
-import java.nio.file.Files;
-import java.util.Arrays;
 
 import ru.vtosters.lite.utils.AndroidUtils;
 import ru.vtosters.lite.utils.IOUtils;
@@ -51,55 +47,26 @@ public class FFMpeg {
         }
     }
 
+    /**
+     * @param in    Directory with .ts files
+     * @param out   Output .mp3 file
+     * @param track Track to be converted
+     * @return True if success, else false
+     */
     public static boolean convert(String in, String out, MusicTrack track) {
         checkFFMpegLibs();
 
-        var tsesList = new File(in).listFiles();
+        var tsesDir = new File(in);
+        var mergedTsFile = new File(tsesDir, "all.ts");
 
-        if (tsesList == null) {
-            return false;
-        }
-
-        var mergedTsFile = new File(in, "all.ts");
-        var mergedByteArrayStream = new ByteArrayOutputStream();
-
-        Arrays.sort(tsesList, (o1, o2) -> {
-            var index1 = Integer.parseInt(o1.getName().split("-")[1]);
-            var index2 = Integer.parseInt(o2.getName().split("-")[1]);
-            return index1 - index2;
-        });
-
-        for (var file : tsesList) {
-            if (file.getName().endsWith(".ts")) {
-                try {
-                    mergedByteArrayStream.write(IOUtils.readAllBytes(file));
-                } catch (IOException e) {
-                    e.printStackTrace();
-                    return false;
-                }
-            }
-        }
-
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
-            try {
-                Files.write(mergedTsFile.toPath(), mergedByteArrayStream.toByteArray());
-            } catch (IOException e) {
-                e.printStackTrace();
-                return false;
-            }
-        } else {
-            try (FileOutputStream fos = new FileOutputStream(mergedTsFile)) {
-                fos.write(mergedByteArrayStream.toByteArray());
-            } catch (IOException e) {
-                e.printStackTrace();
-                return false;
-            }
-        }
+        var mergeResult = TSMerger.merge(tsesDir, mergedTsFile);
+        if (!mergeResult) return false;
 
 
         // convert .ts file to .mp3 file via ffmpeg
         var sb = new StringBuilder();
-        sb.append("-y -i ").append(in).append("/all.ts -map 0 -dn ");
+        sb.append("-y -i ").append(mergedTsFile.getAbsolutePath());
+        sb.append(" -map 0 -dn ");
         sb.append(" -loglevel error");
         sb.append(" -hide_banner");
         if (track.f != null) {
