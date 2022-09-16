@@ -25,5 +25,5 @@ interface ILibVkxService {
 
     // Get cached library in Catalog2-like JSON
     String getCacheCatalog() = 11;
-    List<String> getTracksInPlaylist(in int playlist_id, in int owner_id) = 12;
+    List<String> getTracksInPlaylist(in String playlist_id, in String owner_id) = 12;
 }

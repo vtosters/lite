@@ -44,8 +44,14 @@ public class PlaylistInjector {
             if (!eligibleForOfflineCaching())
                 return null;
             var requestArgs = audioGetPlaylist.b();
+
             var id = requestArgs.get("id");
-            if (TextUtils.isEmpty(id) || !id.equals("-1") && !id.equals("-2"))
+            var ownerId = requestArgs.get("owner_id");
+            var accessKey = requestArgs.get("access_key");
+            boolean isVirtualPlaylist = accessKey != null && (accessKey.equals("vkx") || accessKey.equals("cache"));
+            boolean isAlbumVirtualPlaylist = accessKey != null && (accessKey.equals("cacheAlbum"));
+
+            if (TextUtils.isEmpty(id) || (!isVirtualPlaylist && !isAlbumVirtualPlaylist))
                 return null;
 
             return Observable.a((ObservableOnSubscribe<AudioGetPlaylist.c>) observableEmitter -> {
@@ -54,7 +60,7 @@ public class PlaylistInjector {
                     response.b = PlaylistHelper.createCachedPlaylistMetadata();
                     LibVKXClient.getInstance().runOnService((service) -> {
                         try {
-                            List<String> cache = service.getCache();
+                            List<String> cache = service.getTracksInPlaylist(id, ownerId);
                             ArrayList<MusicTrack> tracks = new ArrayList<>();
                             for (String json : cache) {
                                 tracks.add(new MusicTrack(new JSONObject(json)));
@@ -68,13 +74,15 @@ public class PlaylistInjector {
                     });
                     return;
                 }
-                if (id.equals("-1")) {
+
+                if (isVirtualPlaylist) {
                     response.c = (ArrayList<MusicTrack>) TracklistHelper.getTracks();
                     response.b = PlaylistHelper.createCachedPlaylistMetadata();
                 } else {
                     response.c = (ArrayList<MusicTrack>) TracklistHelper.getTracks(requestArgs.get("owner_id"));
                     response.b = PlaylistHelper.createCachedPlaylistMetadata(requestArgs.get("owner_id"));
                 }
+
                 observableEmitter.b(response);
             });
         } catch (Exception e) {
