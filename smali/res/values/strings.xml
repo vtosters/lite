@@ -6090,6 +6090,9 @@ May look like a fake leaving the online"</string>
     <string name="remove_from_cache">Delete from cache</string>
     <string name="add_to_cache">Add to cache</string>
 
+    <string name="remove_from_cache_vkx">Delete from VKX cache</string>
+    <string name="add_to_cache_vkx">Add to VKX cache</string>
+
     <string name="play_in_vkx">Play the track in VK X</string>
 
     <string name="thanksfordonate">Thank you for supporting the project!</string>

@@ -13,6 +13,7 @@ import androidx.annotation.Nullable;
 
 import com.vk.core.util.ToastUtils;
 import com.vk.dto.music.MusicTrack;
+import com.vk.dto.music.Playlist;
 
 import org.json.JSONObject;
 
@@ -221,8 +222,11 @@ public class CacheDatabaseDelegate {
         return list;
     }
 
+    public static boolean isCached(Playlist playlist){
+        return false;
+    }
+
     public static boolean isCached(String trackId) {
-        if (!LibVKXClient.isIntegrationEnabled()) {
             var formula = String.format(
                     "SELECT COUNT(%s) FROM %s WHERE %s = '%s'",
                     COLUMN_ID,
@@ -242,11 +246,12 @@ public class CacheDatabaseDelegate {
                 e.printStackTrace();
             }
             return false;
-        }
+    }
 
-        return LibVKXClient.getInstance().runOnServiceSync(new LibVKXClientImpl.LibVKXActionGeneric<Boolean>() {
+    public static boolean isVkxCached(String trackId) {
+        return LibVKXClient.getInstance().runOnServiceSync(new LibVKXClientImpl.LibVKXActionGeneric<>(){
             @Override
-            public Boolean run(ILibVkxService service) {
+            public Boolean run(ILibVkxService service){
                 try {
                     var splits = trackId.split("_");
                     var id = Integer.parseInt(splits[0]);
@@ -258,7 +263,7 @@ public class CacheDatabaseDelegate {
             }
 
             @Override
-            public Boolean defaultValue() {
+            public Boolean defaultValue(){
                 return false;
             }
         });

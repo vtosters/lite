@@ -5,6 +5,7 @@ import static bruhcollective.itaysonlab.libvkx.client.LibVKXClient.getInstance;
 import static bruhcollective.itaysonlab.libvkx.client.LibVKXClient.isVkxInstalled;
 import static bruhcollective.itaysonlab.libvkx.client.LibVKXClient.lambdaplay;
 import static ru.vtosters.lite.music.cache.CacheDatabaseDelegate.isCached;
+import static ru.vtosters.lite.music.cache.CacheDatabaseDelegate.isVkxCached;
 import static ru.vtosters.lite.music.cache.CacheDatabaseDelegate.removeTrackFromCache;
 import static ru.vtosters.lite.utils.Preferences.milkshake;
 
@@ -31,6 +32,12 @@ public class MusicBottomSheetHook {
             actions.add(addToCacheTrackAction());
         }
 
+        if (isVkxCached(asId(musicTrack))){
+            actions.add(getRemoveCacheTrackVkxAction());
+        } else {
+            actions.add(addToCacheTrackVkxAction());
+        }
+
         actions.add(downloadAsMp3Action());
 
         return actions;
@@ -41,6 +48,12 @@ public class MusicBottomSheetHook {
             actions.add(getPlayInVKXAction());
 
         actions.add(downloadAsMp3Action());
+
+        if (isCached(playlist)){
+            actions.add(getRemoveCacheTrackAction());
+        } else {
+            actions.add(addToCacheTrackAction());
+        }
 
         return actions;
     }
@@ -54,6 +67,17 @@ public class MusicBottomSheetHook {
             AndroidUtils.sendToast("remove_from_cache");
             return true;
         } else if (actionId == AndroidUtils.getIdentifier("add_to_cache", "id")) {
+            // TODO make music caching
+            AndroidUtils.sendToast("add_to_cache");
+            return true;
+        }
+
+        if (actionId == AndroidUtils.getIdentifier("remove_from_cache", "id")) {
+            removeTrackFromCache(track.D);
+            AndroidUtils.sendToast("remove_from_cache");
+            return true;
+        } else if (actionId == AndroidUtils.getIdentifier("add_to_cache", "id")) {
+            // TODO make music caching
             AndroidUtils.sendToast("add_to_cache");
             return true;
         }
@@ -70,6 +94,16 @@ public class MusicBottomSheetHook {
     public static boolean injectOnClick(int actionId, Playlist playlist) { // playlist inj
         if (actionId == AndroidUtils.getIdentifier("play_in_vkx", "id"))
             return tryPlayInVKX(null, null, playlist);
+
+        if (actionId == AndroidUtils.getIdentifier("remove_from_cache_vkx", "id")) {
+            
+            AndroidUtils.sendToast("remove_from_cache");
+            return true;
+        } else if (actionId == AndroidUtils.getIdentifier("add_to_cache_vkx", "id")) {
+
+            AndroidUtils.sendToast("add_to_cache");
+            return true;
+        }
 
         if (actionId == AndroidUtils.getIdentifier("download_mp3", "id")) {
             MP3Downloader.downloadPlaylist(playlist);
@@ -120,6 +154,28 @@ public class MusicBottomSheetHook {
                 AndroidUtils.getIdentifier("add_to_cache", "id"),
                 milkshake() ? R.drawable.ic_add_outline_28 : R.drawable.ic_add_24,
                 AndroidUtils.getIdentifier("add_to_cache", "string"),
+                R.color.caption_gray,
+                R.string.music_talkback_empty,
+                false
+        );
+    }
+
+    private static MusicAction getRemoveCacheTrackVkxAction() {
+        return new MusicAction(
+                AndroidUtils.getIdentifier("remove_from_cache_vkx", "id"),
+                milkshake() ? R.drawable.ic_delete_outline_28 : R.drawable.ic_delete_24,
+                AndroidUtils.getIdentifier("remove_from_cache_vkx", "string"),
+                R.color.caption_gray,
+                R.string.music_talkback_empty,
+                false
+        );
+    }
+
+    private static MusicAction addToCacheTrackVkxAction() {
+        return new MusicAction(
+                AndroidUtils.getIdentifier("add_to_cache_vkx", "id"),
+                milkshake() ? R.drawable.ic_add_outline_28 : R.drawable.ic_add_24,
+                AndroidUtils.getIdentifier("add_to_cache_vkx", "string"),
                 R.color.caption_gray,
                 R.string.music_talkback_empty,
                 false
