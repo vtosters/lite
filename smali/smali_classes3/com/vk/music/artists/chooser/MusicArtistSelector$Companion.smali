@@ -83,15 +83,18 @@
     .locals 1
 
     .line 21
-    new-instance v0, Lcom/vk/music/search/MusicSearchFragment$a;
+    # ru.vtosters.lite.feature.music.MusicArtistSelectorHook.navigateToSearch(Context context, String artist)
+    invoke-static {p1, p2}, Lru/vtosters/lite/feature/music/MusicArtistSelectorHook;->navigateToSearch(Landroid/content/Context;Ljava/lang/String;)V
 
-    invoke-direct {v0}, Lcom/vk/music/search/MusicSearchFragment$a;-><init>()V
-
-    .line 22
-    invoke-virtual {v0, p2}, Lcom/vk/music/search/MusicSearchFragment$a;->b(Ljava/lang/String;)Lcom/vk/music/search/MusicSearchFragment$a;
-
-    .line 23
-    invoke-virtual {v0, p1}, Lcom/vk/navigation/Navigator;->a(Landroid/content/Context;)V
+#    new-instance v0, Lcom/vk/music/search/MusicSearchFragment$a;
+#
+#    invoke-direct {v0}, Lcom/vk/music/search/MusicSearchFragment$a;-><init>()V
+#
+#    .line 22
+#    invoke-virtual {v0, p2}, Lcom/vk/music/search/MusicSearchFragment$a;->b(Ljava/lang/String;)Lcom/vk/music/search/MusicSearchFragment$a;
+#
+#    .line 23
+#    invoke-virtual {v0, p1}, Lcom/vk/navigation/Navigator;->a(Landroid/content/Context;)V
 
     return-void
 .end method
