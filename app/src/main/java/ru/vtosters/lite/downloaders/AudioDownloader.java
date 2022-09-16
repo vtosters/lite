@@ -13,7 +13,7 @@ import java.io.File;
 
 import ru.vtosters.lite.downloaders.notifications.NotificationChannels;
 import ru.vtosters.lite.music.Callback;
-import ru.vtosters.lite.music.FFMpeg;
+import ru.vtosters.lite.music.converter.FFMpeg;
 import ru.vtosters.lite.music.M3UDownloader;
 import ru.vtosters.lite.music.MP3Downloader;
 import ru.vtosters.lite.utils.AndroidUtils;
