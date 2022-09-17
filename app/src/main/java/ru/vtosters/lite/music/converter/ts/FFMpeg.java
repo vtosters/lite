@@ -30,25 +30,25 @@ public class FFMpeg {
 
         // convert .ts file to .mp3 file via ffmpeg
         var sb = new StringBuilder();
-        sb.append("-y -i '").append(in.getAbsolutePath()).append("'");
+        sb.append("-y -i \"").append(in.getAbsolutePath()).append("\"");
         sb.append(" -map 0 -dn ");
         sb.append(" -loglevel error");
         sb.append(" -hide_banner");
         sb.append(" -write_id3v2 1");
         if (track.f != null) {
-            sb.append(" -metadata title='").append(track.f).append("'");
+            sb.append(" -metadata title=\"").append(track.f).append("\"");
         }
 
         if (track.L != null) {
-            sb.append(" -metadata artist='").append(track.L.stream().map(Artist::w1).collect(Collectors.joining(", "))).append("'");
+            sb.append(" -metadata artist=\"").append(track.L.stream().map(Artist::w1).collect(Collectors.joining(", "))).append("\"");
         } else if (track.C != null) {
-            sb.append(" -metadata artist='").append(track.C).append("'");
+            sb.append(" -metadata artist=\"").append(track.C).append("\"");
         }
         if (track.I != null) {
-            sb.append(" -metadata album='").append(track.I.getTitle()).append("'");
+            sb.append(" -metadata album=\"").append(track.I.getTitle()).append("\"");
         }
 
-        sb.append(" -c copy '").append(out).append("'");
+        sb.append(" -c copy \"").append(out).append("\"");
 
         var command = sb.toString();
 

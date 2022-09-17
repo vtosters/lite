@@ -1,5 +1,7 @@
 package ru.vtosters.lite.music;
 
+import android.util.Log;
+
 import com.vk.dto.music.MusicTrack;
 
 import java.io.File;
@@ -58,7 +60,8 @@ public class M3UDownloader implements ITrackDownloader {
         var tsesDir = new File(outDir, String.valueOf(payload.hashCode()));
         tsesDir.mkdirs();
         var resultTs = new File(tsesDir, "result.ts");
-        var resultMp3 = new File(outDir, IOUtils.getValidFileName(cache ? LibVKXClient.asId(track) : track.toString()) + ".mp3");
+        var fileName = IOUtils.getValidFileName(cache ? LibVKXClient.asId(track) : track.toString() + ".mp3");
+        var resultMp3 = new File(outDir, fileName);
 
         callback.onProgress(5);
         for (TransportStream ts : tses) {
