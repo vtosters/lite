@@ -82,10 +82,10 @@ public class LibVKXClient {
     }
 
     public static String asId(MusicTrack musicTrack) {
-        String str = musicTrack.e + "_" + musicTrack.d;
-        if (musicTrack.O == null || musicTrack.O.equals("")) {
-            return str;
+        String id = musicTrack.e + "_" + musicTrack.d;
+        if (musicTrack.O != null && !musicTrack.O.equals("")) {
+            id += "_" + musicTrack.O;
         }
-        return str + "_" + musicTrack.O;
+        return id;
     }
 }
