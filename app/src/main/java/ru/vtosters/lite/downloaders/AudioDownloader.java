@@ -19,6 +19,7 @@ import java.util.ArrayList;
 import java.util.concurrent.Executor;
 import java.util.concurrent.Executors;
 
+import bruhcollective.itaysonlab.libvkx.client.LibVKXClient;
 import java8.util.concurrent.CompletableFuture;
 import ru.vtosters.lite.downloaders.notifications.NotificationChannels;
 import ru.vtosters.lite.music.Callback;
@@ -118,8 +119,10 @@ public class AudioDownloader {
 
     public static void cacheTrack(MusicTrack track) {
         var trackId = track.y1();
-        if (CacheDatabaseDelegate.isCached(trackId))
+        if (CacheDatabaseDelegate.isCached(trackId)) {
+            CacheDatabaseDelegate.removeTrackFromCache(LibVKXClient.asId(track));
             return;
+        }
 
         var trackFile = FileCacheImplementation.getTrackFile(trackId);
         if (!trackFile.exists())
