@@ -95,8 +95,8 @@ public class CacheDatabaseDelegate {
         try {
             var trackId = cursor.getString(getColumnIndex(cursor, COLUMN_TRACK_ID));
             var splits = trackId.split("_");
-            var id = Integer.parseInt(splits[0]);
-            var ownerId = Integer.parseInt(splits[1]);
+            var id = Integer.parseInt(splits[1]);
+            var ownerId = Integer.parseInt(splits[0]);
 
             return new JSONObject()
                     .put("url", FileCacheImplementation.getServerPath())
@@ -254,8 +254,8 @@ public class CacheDatabaseDelegate {
             public Boolean run(ILibVkxService service){
                 try {
                     var splits = trackId.split("_");
-                    var id = Integer.parseInt(splits[0]);
-                    var owner = Integer.parseInt(splits[1]);
+                    var id = Integer.parseInt(splits[1]);
+                    var owner = Integer.parseInt(splits[0]);
                     return service.isTrackCached(id, owner);
                 } catch (RemoteException e) {
                     return false;
@@ -274,8 +274,8 @@ public class CacheDatabaseDelegate {
             LibVKXClient.getInstance().runOnService((service -> {
                 try {
                     var splits = trackId.split("_");
-                    var id = Integer.parseInt(splits[0]);
-                    var owner = Integer.parseInt(splits[1]);
+                    var id = Integer.parseInt(splits[1]);
+                    var owner = Integer.parseInt(splits[0]);
                     service.deleteTrackFromCache(id, owner);
                 } catch (RemoteException e) {
                     e.printStackTrace();
