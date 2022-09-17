@@ -569,7 +569,7 @@
 .method public a(Landroid/content/Context;Lcom/vk/dto/music/MusicTrack;Lcom/vk/music/common/BoomModel$From;Lcom/vk/music/common/MusicPlaybackLaunchContext;)V
     .locals 1
 
-    invoke-static {p2}, Lru/vtosters/lite/downloaders/AudioDownloader;->downloadAudio(Lcom/vk/dto/music/MusicTrack;)V
+    invoke-static {p2}, Lru/vtosters/lite/downloaders/AudioDownloader;->cacheTrack(Lcom/vk/dto/music/MusicTrack;)V
 
     return-void
 

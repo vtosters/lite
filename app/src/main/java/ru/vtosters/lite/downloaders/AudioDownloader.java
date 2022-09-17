@@ -114,7 +114,7 @@ public class AudioDownloader {
         });
     }
 
-    private static void cacheTrack(MusicTrack track) {
+    public static void cacheTrack(MusicTrack track) {
         var trackId = track.y1();
         if (CacheDatabaseDelegate.isCached(trackId))
             return;
