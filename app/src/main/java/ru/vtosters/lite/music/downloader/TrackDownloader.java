@@ -11,6 +11,12 @@ import ru.vtosters.lite.music.M3UDownloader;
 import ru.vtosters.lite.music.interfaces.ITrackDownloader;
 
 public class TrackDownloader {
+    /**
+     * Download track
+     * @param track Track to download
+     * @param path Folder where to put track
+     * @param callback Callback to call when download status changes
+     */
     public static void downloadTrack(MusicTrack track, String path, Callback callback) {
         download(track, path, callback, M3UDownloader.getInstance());
     }
