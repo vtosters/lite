@@ -1,5 +1,7 @@
 package ru.vtosters.lite.music.cache.injectors;
 
+import static ru.vtosters.lite.music.cache.CacheDatabaseDelegate.hasTracks;
+
 import android.util.Log;
 
 import com.vk.catalog2.core.CatalogParser;
@@ -26,9 +28,7 @@ import ru.vtosters.lite.utils.NetworkUtils;
 public class TracklistInjector {
 
     public static boolean eligibleForOfflineCaching() {
-        Log.d("TracklistInjector", "eligibleForOfflineCaching " + !NetworkUtils.isNetworkConnected() + " " + CacheDatabaseDelegate.hasTracks());
-
-        return !NetworkUtils.isNetworkConnected() && CacheDatabaseDelegate.hasTracks();
+        return !NetworkUtils.isNetworkConnected();
     }
 
     public static Observable<CatalogResponse> createOfflineRx(CatalogParser parser) {
@@ -59,15 +59,23 @@ public class TracklistInjector {
                     }
                 });
             } else {
-                observableEmitter.b(parser.c(createVirtualCatalog(TracklistHelper.getTracks())));
+                if (!hasTracks()){
+                    observableEmitter.b(parser.c(getEmptyCatalog()));
+                } else {
+                    observableEmitter.b(parser.c(createVirtualCatalog(TracklistHelper.getTracks())));
+                }
             }
         });
+    }
+
+    private static JSONObject getEmptyCatalog() throws JSONException{
+        return new JSONObject("{\"catalog\":{\"default_section\":\"cache\",\"sections\":[{\"id\":\"cache\",\"title\":\"Кешированный контент\",\"blocks\":[{\"data_type\":\"placeholder\",\"id\":\"0\",\"layout\":{\"name\":\"placeholder_big\"},\"placeholder_ids\":[\"_synth_trackEmpty\"]}]}]},\"audios\":[],\"playlists\":[],\"placeholders\":[{\"id\":\"_synth_trackEmpty\",\"title\":\"Похоже, тут пусто\",\"text\":\"У вас отсутствует кешированный контент\",\"buttons\":[]}]}");
     }
 
     public static void injectIntoExistingCatalog(JSONObject catalogNode) {
         Log.d("TracklistInjector", "injectIntoExistingCatalog");
 
-        if (!CacheDatabaseDelegate.hasTracks()) return;
+        if (!hasTracks()) return;
         try {
             var sectionsNode = catalogNode.getJSONObject("catalog")
                     .getJSONArray("sections");
