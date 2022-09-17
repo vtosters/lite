@@ -1,6 +1,5 @@
 package ru.vtosters.lite.music.downloader;
 
-import android.os.Environment;
 import android.util.Log;
 
 import androidx.core.app.NotificationCompat;
@@ -20,11 +19,8 @@ import ru.vtosters.lite.utils.AndroidUtils;
 public class PlaylistDownloader {
     private static NotificationManagerCompat notificationManager = NotificationChannels.getNotificationManager();
 
-    public static void downloadPlaylist(List<MusicTrack> playlist, String playlistName) {
-        var musicPath = Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_MUSIC).getAbsolutePath();
-        var downloadPath = musicPath + File.separator + playlistName;
-
-        File outDir = new File(downloadPath);
+    public static void downloadPlaylist(List<MusicTrack> playlist, String playlistName, String path) {
+        File outDir = new File(path);
         if (!outDir.exists())
             if (outDir.mkdirs())
                 Log.v("TrackDownloader", "Directory created");
@@ -38,7 +34,7 @@ public class PlaylistDownloader {
         var tracksWithUrls = playlist.stream().filter(track -> !track.D.isEmpty()).collect(Collectors.toList());
 
         for (MusicTrack musicTrack : tracksWithUrls) {
-            TrackDownloader.downloadTrack(musicTrack, downloadPath, new Callback() {
+            TrackDownloader.downloadTrack(musicTrack, path, new Callback() {
                 @Override
                 public void onProgress(int progress) {}
 

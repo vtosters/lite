@@ -40,7 +40,12 @@ public class AudioDownloader {
 
     public static void downloadPlaylist(Playlist playlist) {
         var tracks = PlaylistConverter.getPlaylist(playlist);
-        PlaylistDownloader.downloadPlaylist(tracks, IOUtils.getValidFileName(playlist.g));
+        var playlistName = IOUtils.getValidFileName(playlist.g);
+
+        var musicPath = Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_MUSIC).getAbsolutePath();
+        var downloadPath = musicPath + File.separator + playlistName;
+
+        PlaylistDownloader.downloadPlaylist(tracks, IOUtils.getValidFileName(playlist.g), downloadPath);
     }
 
     private static void cachePlaylist(ArrayList<MusicTrack> playlist) {
