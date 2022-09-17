@@ -16,5 +16,5 @@ public interface ITrackDownloader {
      * @param outDir Directory where to download the track
      * @param callback Callback to call when download status changes
      */
-    void downloadTrack(MusicTrack track, File outDir, Callback callback);
+    void downloadTrack(MusicTrack track, File outDir, Callback callback, boolean cache);
 }

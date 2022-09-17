@@ -1,5 +1,7 @@
 package ru.vtosters.lite.downloaders;
 
+import static ru.vtosters.lite.music.cache.FileCacheImplementation.getCacheDir;
+
 import android.app.Notification;
 import android.os.Build;
 import android.os.Environment;
@@ -55,16 +57,16 @@ public class AudioDownloader {
     }
 
     public static void downloadAudio(MusicTrack track) {
-        downloadM3U8(track);
+        downloadM3U8(track, false);
     }
 
-    private static void downloadM3U8(MusicTrack track) {
+    private static void downloadM3U8(MusicTrack track, boolean cache) {
         if (track.D == null) {
             ToastUtils.a(AndroidUtils.getString("link_audio_error"));
             return;
         }
 
-        var musicPath = Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_MUSIC).getAbsolutePath();
+        var musicPath = cache ? getCacheDir().getAbsolutePath() : Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_MUSIC).getAbsolutePath();
         var tempId = track.d;
         var downloadPath = musicPath + File.separator;
         var notification = buildDownloadNotification(track, tempId);
@@ -111,7 +113,7 @@ public class AudioDownloader {
             public void onSizeReceived(long size, long header) {
 
             }
-        });
+        }, cache);
     }
 
     public static void cacheTrack(MusicTrack track) {
@@ -122,7 +124,7 @@ public class AudioDownloader {
         var trackFile = FileCacheImplementation.getTrackFile(trackId);
         if (!trackFile.exists())
             trackFile.getParentFile().mkdirs();
-        downloadM3U8(track);
+        downloadM3U8(track, true);
         notifySavingToCache(track);
         CacheDatabaseDelegate.insertTrack(track);
         NotificationChannels.getNotificationManager().cancel(trackId.hashCode());

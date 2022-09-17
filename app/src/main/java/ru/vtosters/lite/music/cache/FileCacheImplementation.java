@@ -26,7 +26,7 @@ public class FileCacheImplementation {
     }
 
     public static File getTrackFile(String trackId) {
-        return new File(getTrackFolder(trackId), "track.mp3");
+        return new File(getCacheDir(), trackId + ".mp3");
     }
 
     public static boolean isTrackExist(String trackId) {

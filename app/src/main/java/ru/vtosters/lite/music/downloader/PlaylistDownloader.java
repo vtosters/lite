@@ -57,7 +57,7 @@ public class PlaylistDownloader {
 
                 @Override
                 public void onSizeReceived(long size, long header) {}
-            });
+            }, false);
         }
     }
 

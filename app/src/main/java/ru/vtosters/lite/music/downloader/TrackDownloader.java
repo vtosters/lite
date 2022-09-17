@@ -17,17 +17,17 @@ public class TrackDownloader {
      * @param path Folder where to put track
      * @param callback Callback to call when download status changes
      */
-    public static void downloadTrack(MusicTrack track, String path, Callback callback) {
-        download(track, path, callback, M3UDownloader.getInstance());
+    public static void downloadTrack(MusicTrack track, String path, Callback callback, boolean cache) {
+        download(track, path, callback, M3UDownloader.getInstance(), cache);
     }
 
-    private static void download(MusicTrack track, String path, Callback callback, ITrackDownloader downloader) {
+    private static void download(MusicTrack track, String path, Callback callback, ITrackDownloader downloader, boolean cache) {
         File outDir = new File(path);
         if (!outDir.exists())
             if (outDir.mkdir())
                 Log.v("TrackDownloader", "Directory created");
             else
                 Log.e("TrackDownloader", "Directory creation failed");
-        downloader.downloadTrack(track, outDir, callback);
+        downloader.downloadTrack(track, outDir, callback, cache);
     }
 }

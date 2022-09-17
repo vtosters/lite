@@ -14,6 +14,7 @@ import java.util.concurrent.atomic.AtomicInteger;
 
 import javax.crypto.NoSuchPaddingException;
 
+import bruhcollective.itaysonlab.libvkx.client.LibVKXClient;
 import java8.util.concurrent.CompletableFuture;
 import okhttp3.Call;
 import okhttp3.OkHttpClient;
@@ -31,7 +32,7 @@ public class M3UDownloader implements ITrackDownloader {
         return Holder.INSTANCE;
     }
 
-    public void downloadTrack(MusicTrack track, File outDir, Callback callback) {
+    public void downloadTrack(MusicTrack track, File outDir, Callback callback, boolean cache) {
         var request = new Request.a()
                 .b(track.D)
                 .a();
@@ -43,12 +44,12 @@ public class M3UDownloader implements ITrackDownloader {
 
             @Override
             public void a(Call call, Response response) throws IOException {
-                parse(response.a().g(), outDir, callback, track);
+                parse(response.a().g(), outDir, callback, track, cache);
             }
         });
     }
 
-    private void parse(String payload, File outDir, Callback callback, MusicTrack track) {
+    private void parse(String payload, File outDir, Callback callback, MusicTrack track, boolean cache) {
         VKM3UParser parser = new VKM3UParser(payload);
         List<TransportStream> tses = parser.getTransportStreams();
         AtomicInteger progress = new AtomicInteger(0);
@@ -57,7 +58,7 @@ public class M3UDownloader implements ITrackDownloader {
         var tsesDir = new File(outDir, String.valueOf(payload.hashCode()));
         tsesDir.mkdirs();
         var resultTs = new File(tsesDir, "result.ts");
-        var resultMp3 = new File(outDir, IOUtils.getValidFileName(track.toString()) + ".mp3");
+        var resultMp3 = new File(outDir, IOUtils.getValidFileName(cache ? LibVKXClient.asId(track) : track.toString()) + ".mp3");
 
         callback.onProgress(5);
         for (TransportStream ts : tses) {
