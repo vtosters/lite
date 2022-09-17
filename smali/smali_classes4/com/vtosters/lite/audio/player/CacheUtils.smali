@@ -112,12 +112,12 @@
 .method static a(Ljava/lang/String;)Ljava/io/File;
     .locals 4
 
-    .line 5
-    invoke-static {p1}, Lru/vtosters/lite/music/cache/FileCacheImplementation;->getTrackFile(Ljava/lang/String;)Ljava/io/File;
+    # .line 5
+    # invoke-static {p1}, Lru/vtosters/lite/music/cache/FileCacheImplementation;->getTrackFile(Ljava/lang/String;)Ljava/io/File;
 
-    move-result-object v0
+    # move-result-object v0
 
-    return-object v0
+    # return-object v0
     
     const/4 v0, 0x0
 
