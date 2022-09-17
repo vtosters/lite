@@ -29,6 +29,10 @@ public class FileCacheImplementation {
         return new File(getTrackFolder(trackId), "track.mp3");
     }
 
+    public static boolean isTrackExist(String trackId) {
+        return CacheDatabaseDelegate.isCached(trackId);
+    }
+
     public static File getTrackFile(MusicTrack track) {
         return getTrackFile(track.y1());
     }

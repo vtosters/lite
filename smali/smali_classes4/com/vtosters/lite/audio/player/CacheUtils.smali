@@ -110,15 +110,22 @@
 .end method
 
 .method static a(Ljava/lang/String;)Ljava/io/File;
-    .locals 4
+    .locals 6
 
-    # .line 5
-    # invoke-static {p1}, Lru/vtosters/lite/music/cache/FileCacheImplementation;->getTrackFile(Ljava/lang/String;)Ljava/io/File;
+    invoke-static {p0}, Lru/vtosters/lite/music/cache/FileCacheImplementation;->isTrackExist(Ljava/lang/String;)Z
 
-    # move-result-object v0
+    move-result v5
 
-    # return-object v0
+    if-eqz v5, :cond_228
     
+    .line 5
+    invoke-static {p0}, Lru/vtosters/lite/music/cache/FileCacheImplementation;->getTrackFile(Ljava/lang/String;)Ljava/io/File;
+
+    move-result-object v0
+
+    return-object v0
+
+    :cond_228
     const/4 v0, 0x0
 
     .line 26
