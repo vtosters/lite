@@ -30,6 +30,8 @@ public class MusicBottomSheetHook {
     public static ArrayList<MusicAction> hook(ArrayList<MusicAction> actions, MusicTrack musicTrack) {
         var trackid = asId(musicTrack);
 
+        if (musicTrack.F1()) return actions;
+
         if (isVkxInstalled()) {
             actions.add(getPlayInVKXAction());
 
@@ -50,6 +52,8 @@ public class MusicBottomSheetHook {
 
     public static ArrayList<MusicAction> hookDownloadBTN(ArrayList<MusicAction> actions, MusicTrack musicTrack) {
         var trackid = asId(musicTrack);
+
+        if (musicTrack.F1()) return actions;
 
         if (isCached(trackid)){
             actions.add(new MusicAction(
