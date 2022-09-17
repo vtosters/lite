@@ -45,6 +45,7 @@ import okhttp3.OkHttpClient;
 import okhttp3.Request;
 import ru.vtosters.lite.downloaders.VideoDownloader;
 import ru.vtosters.lite.music.Scrobbler;
+import ru.vtosters.lite.music.cache.CacheDatabaseDelegate;
 import ru.vtosters.lite.ui.adapters.ImagineArrayAdapter;
 import ru.vtosters.lite.utils.AndroidUtils;
 import ru.vtosters.lite.utils.LifecycleUtils;
@@ -94,6 +95,12 @@ public class MediaFragment extends MaterialPreferenceToolbarFragment {
         } else {
             findPreference("lastfm_enabled").setEnabled(false);
         }
+
+        findPreference("cached_tracks").setSummary("Всего закешировано " + CacheDatabaseDelegate.getTrackCount() + " песен");
+        findPreference("cached_tracks").setOnPreferenceClickListener(preference -> {
+            delcache(requireContext());
+            return true;
+        });
 
         if (!isVkxInstalled()){
             findPreference("vkx_sett").setVisible(false);
@@ -168,6 +175,22 @@ public class MediaFragment extends MaterialPreferenceToolbarFragment {
         alertDialog.setMessage(AndroidUtils.getString("lastfm_logout_confirm"));
         alertDialog.setPositiveButton(AndroidUtils.getString("vkim_yes"), (dialog, which) -> {
             Scrobbler.logout();
+        });
+        alertDialog.setNeutralButton(AndroidUtils.getString("vkim_no"), (dialog, which) -> {
+            dialog.cancel();
+        });
+        var alert = alertDialog.create();
+        alert.show();
+        alert.getButton(DialogInterface.BUTTON_POSITIVE).setTextColor(getAccentColor());
+        alert.getButton(DialogInterface.BUTTON_NEUTRAL).setTextColor(getResources().getColor(com.vtosters.lite.R.color.red));
+    }
+
+    private void delcache(Context ctx) {
+        VkAlertDialog.Builder alertDialog = new VkAlertDialog.Builder(ctx);
+        alertDialog.setTitle("Внимание!");
+        alertDialog.setMessage("Вы действительно хотите удалить все кешированные песни?");
+        alertDialog.setPositiveButton(AndroidUtils.getString("vkim_yes"), (dialog, which) -> {
+            CacheDatabaseDelegate.clear();
         });
         alertDialog.setNeutralButton(AndroidUtils.getString("vkim_no"), (dialog, which) -> {
             dialog.cancel();

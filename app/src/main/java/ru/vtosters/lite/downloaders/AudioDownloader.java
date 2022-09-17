@@ -174,8 +174,11 @@ public class AudioDownloader {
         NotificationChannels.getNotificationManager().cancel(trackId.hashCode());
     }
 
-    private static void cachePlaylist(ArrayList<MusicTrack> playlist) {
-        for (MusicTrack musicTrack : playlist) {
+    public static void cachePlaylist(Playlist playlist) {
+        var tracks = PlaylistConverter.getPlaylist(playlist);
+        var tracksWithUrls = tracks.stream().filter(track -> !track.D.isEmpty()).collect(Collectors.toList());
+
+        for (MusicTrack musicTrack : tracksWithUrls) {
             CompletableFuture.runAsync(() -> cacheTrack(musicTrack), executor);
         }
     }

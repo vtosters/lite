@@ -48,6 +48,14 @@
             android:title="@string/lastfm_enabled_title" />
     </PreferenceCategory>
     <PreferenceCategory android:title="@string/vtl_music_settings">
+        <Preference
+            android:key="cached_tracks"
+            android:title="Кешированные песни" />
+        <com.vtosters.lite.ui.MaterialSwitchPreference
+            android:defaultValue="false"
+            android:key="autocache"
+            android:summary="Автоматически кешировать все воспроизведенные вами песни"
+            android:title="Авто-Кеширование песен" />
         <com.vtosters.lite.ui.SummaryListPreference
             android:defaultValue="default"
             android:dialogTitle="@string/musicdefcatalog_dialogTitle"
@@ -55,11 +63,6 @@
             android:entryValues="@array/musicdefcatalog"
             android:key="musicdefcatalog"
             android:title="@string/musicdefcatalog_title" />
-        <com.vtosters.lite.ui.MaterialSwitchPreference
-            android:defaultValue="false"
-            android:key="autocache"
-            android:summary="Автоматически кешировать все воспроизведенные вами песни"
-            android:title="Авто-Кеширование песен" />
     </PreferenceCategory>
     <PreferenceCategory android:title="@string/vtl_video_settings">
         <Preference

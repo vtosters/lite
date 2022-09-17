@@ -22,6 +22,7 @@ import java.util.ArrayList;
 import bruhcollective.itaysonlab.libvkx.client.LibVKXClient;
 import bruhcollective.itaysonlab.libvkx.client.LibVKXClientImpl;
 import ru.vtosters.lite.downloaders.AudioDownloader;
+import ru.vtosters.lite.music.cache.CacheDatabaseDelegate;
 import ru.vtosters.lite.utils.AndroidUtils;
 import ru.vtosters.lite.utils.NetworkUtils;
 
@@ -81,11 +82,7 @@ public class MusicBottomSheetHook {
         if (isVkxInstalled())
             actions.add(getPlayInVKXAction());
 
-        if (isCached(playlist)){
-            actions.add(getRemoveCacheTrackAction());
-        } else {
-            actions.add(addToCacheTrackAction());
-        }
+        actions.add(addToCacheTrackAction());
 
         if (isNetworkConnected()){
             actions.add(downloadAsMp3Action());
@@ -131,12 +128,8 @@ public class MusicBottomSheetHook {
         if (actionId == AndroidUtils.getIdentifier("play_in_vkx", "id"))
             return tryPlayInVKX(null, null, playlist);
 
-        if (actionId == AndroidUtils.getIdentifier("remove_from_cache", "id")) {
-            // TODO make playlist del cache
-            AndroidUtils.sendToast("remove_from_cache");
-            return true;
-        } else if (actionId == AndroidUtils.getIdentifier("add_to_cache", "id")) {
-            // TODO make playlist caching
+        if (actionId == AndroidUtils.getIdentifier("add_to_cache", "id")) {
+            AudioDownloader.cachePlaylist(playlist);
             AndroidUtils.sendToast("add_to_cache");
             return true;
         }

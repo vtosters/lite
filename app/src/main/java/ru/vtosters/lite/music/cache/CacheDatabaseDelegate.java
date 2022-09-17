@@ -1,5 +1,9 @@
 package ru.vtosters.lite.music.cache;
 
+import static ru.vtosters.lite.music.cache.FileCacheImplementation.getCacheDir;
+import static ru.vtosters.lite.utils.AndroidUtils.*;
+import static ru.vtosters.lite.utils.IOUtils.*;
+
 import android.content.Context;
 import android.database.Cursor;
 import android.database.DatabaseUtils;
@@ -21,10 +25,13 @@ import java.net.URLDecoder;
 import java.net.URLEncoder;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.stream.Collectors;
 
 import bruhcollective.itaysonlab.libvkx.ILibVkxService;
 import bruhcollective.itaysonlab.libvkx.client.LibVKXClient;
 import bruhcollective.itaysonlab.libvkx.client.LibVKXClientImpl;
+import java8.util.concurrent.CompletableFuture;
+import ru.vtosters.lite.music.converter.playlist.PlaylistConverter;
 import ru.vtosters.lite.utils.AndroidUtils;
 import ru.vtosters.lite.utils.IOUtils;
 
@@ -45,7 +52,7 @@ public class CacheDatabaseDelegate {
     private static DbHelper helperInstance;
 
     protected static DbHelper getHelper() {
-        if (helperInstance == null) helperInstance = new DbHelper(AndroidUtils.getGlobalContext());
+        if (helperInstance == null) helperInstance = new DbHelper(getGlobalContext());
         return helperInstance;
     }
 
@@ -88,6 +95,8 @@ public class CacheDatabaseDelegate {
 
     public static void clear() {
         getHelper().getReadableDatabase().execSQL(String.format("DELETE FROM %s", TABLE_NAME));
+        deleteRecursive(getCacheDir());
+        sendToast("Кешированные песни удалены");
     }
 
     @NonNull
@@ -222,10 +231,6 @@ public class CacheDatabaseDelegate {
         return list;
     }
 
-    public static boolean isCached(Playlist playlist){
-        return false;
-    }
-
     public static boolean isCached(String trackId) {
             var formula = String.format(
                     "SELECT COUNT(%s) FROM %s WHERE %s = '%s'",
@@ -270,21 +275,7 @@ public class CacheDatabaseDelegate {
     }
 
     public static void removeTrackFromCache(String trackId) {
-        if (LibVKXClient.isIntegrationEnabled()) {
-            LibVKXClient.getInstance().runOnService((service -> {
-                try {
-                    var splits = trackId.split("_");
-                    var id = Integer.parseInt(splits[1]);
-                    var owner = Integer.parseInt(splits[0]);
-                    service.deleteTrackFromCache(id, owner);
-                } catch (RemoteException e) {
-                    e.printStackTrace();
-                }
-            }));
-            return;
-        }
-
-        IOUtils.deleteRecursive(FileCacheImplementation.getTrackFolder(trackId));
+        deleteRecursive(FileCacheImplementation.getTrackFolder(trackId));
 
         var formula = String.format(
                 "DELETE FROM %s WHERE %s = '%s'",
