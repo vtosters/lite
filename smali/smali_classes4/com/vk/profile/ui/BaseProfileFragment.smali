@@ -5871,12 +5871,14 @@
     .line 1
     iget-object v0, p0, Lcom/vk/profile/ui/BaseProfileFragment;->P0:Landroid/view/View;
 
+    if-nez v0, :cond_229
+
+    return-void
+
+    :cond_229
     invoke-static {v0}, Lcom/vk/core/ui/themes/VKThemeHelper;->a(Landroid/view/View;)V
 
     .line 2
-    iget-object v0, p0, Lcom/vk/profile/ui/BaseProfileFragment;->P0:Landroid/view/View;
-
-    .line 3
     invoke-virtual {v0}, Landroid/view/View;->getContext()Landroid/content/Context;
 
     move-result-object v0
