@@ -46,7 +46,14 @@ public class ThemesUtils {
     );
 
     public static void applyTheme(VKTheme theme) {
-        VKThemeHelper.theme(theme, LifecycleUtils.getCurrentActivity(), getCenterScreenCoords());
+        var currentActivity = LifecycleUtils.getCurrentActivity();
+        if (currentActivity != null) {
+            try {
+                VKThemeHelper.theme(theme, currentActivity, getCenterScreenCoords());
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+        }
     } // Apply VKTheme and ImTheme (hard applying without dynamic theme changing)
 
     public static void setTheme(VKTheme theme, Activity activity) {
@@ -326,20 +333,21 @@ public class ThemesUtils {
     }
 
     public static void setNeededTheme(Activity activity) {
+        var currentTheme = getCurrentTheme();
         if (milkshake()) {
-            if (getCurrentTheme() == VKTheme.VKAPP_LIGHT) {
+            if (currentTheme == VKTheme.VKAPP_LIGHT) {
                 setTheme(VKTheme.VKAPP_MILK_LIGHT, activity);
             }
 
-            if (getCurrentTheme() == VKTheme.VKAPP_DARK) {
+            if (currentTheme == VKTheme.VKAPP_DARK) {
                 setTheme(VKTheme.VKAPP_MILK_DARK, activity);
             }
         } else {
-            if (getCurrentTheme() == VKTheme.VKAPP_MILK_LIGHT) {
+            if (currentTheme == VKTheme.VKAPP_MILK_LIGHT) {
                 setTheme(VKTheme.VKAPP_LIGHT, activity);
             }
 
-            if (getCurrentTheme() == VKTheme.VKAPP_MILK_DARK) {
+            if (currentTheme == VKTheme.VKAPP_MILK_DARK) {
                 setTheme(VKTheme.VKAPP_DARK, activity);
             }
         }
