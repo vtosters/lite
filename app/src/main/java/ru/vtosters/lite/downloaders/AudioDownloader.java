@@ -155,7 +155,6 @@ public class AudioDownloader {
             public void onSizeReceived(long size, long header) {
 
             }
-        });
         };
     }
 
