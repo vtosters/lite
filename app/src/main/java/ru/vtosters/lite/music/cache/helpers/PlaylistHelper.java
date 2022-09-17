@@ -52,8 +52,8 @@ public class PlaylistHelper {
             if (!photo.isEmpty())
                 jPhoto.put("height", 600)
                         .put("width", 600)
-                        .putOpt("photo_300", FileCacheImplementation.getFileUri(FileCacheImplementation.getTrackArtwork(trackId, 300)))
-                        .putOpt("photo_600", FileCacheImplementation.getFileUri(FileCacheImplementation.getTrackArtwork(trackId, 600)));
+                        .putOpt("photo_300", FileCacheImplementation.getFileUri(FileCacheImplementation.getTrackThumbnail(trackId, 300)))
+                        .putOpt("photo_600", FileCacheImplementation.getFileUri(FileCacheImplementation.getTrackThumbnail(trackId, 600)));
             var obj = new JSONObject()
                     .put("id", -2)
                     .put("owner_id", albumId)

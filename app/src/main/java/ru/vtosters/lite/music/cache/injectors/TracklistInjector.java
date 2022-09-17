@@ -19,7 +19,6 @@ import java.util.UUID;
 import bruhcollective.itaysonlab.libvkx.client.LibVKXClient;
 import io.reactivex.Observable;
 import io.reactivex.ObservableOnSubscribe;
-import ru.vtosters.lite.music.cache.CacheDatabaseDelegate;
 import ru.vtosters.lite.music.cache.helpers.PlaylistHelper;
 import ru.vtosters.lite.music.cache.helpers.TracklistHelper;
 import ru.vtosters.lite.utils.AccountManagerUtils;
@@ -148,7 +147,8 @@ public class TracklistInjector {
         }
     }
 
-    public static JSONObject createVirtualCatalog(List<MusicTrack> tracks) throws JSONException {
+    public static JSONObject createVirtualCatalog(List<MusicTrack> tracks)
+            throws JSONException {
         Log.d("TracklistInjector", "createVirtualCatalog");
 
         var clickAction = new JSONObject()

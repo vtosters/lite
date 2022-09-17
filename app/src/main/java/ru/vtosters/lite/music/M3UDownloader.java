@@ -1,7 +1,5 @@
 package ru.vtosters.lite.music;
 
-import android.util.Log;
-
 import com.vk.dto.music.MusicTrack;
 
 import java.io.File;
@@ -16,7 +14,6 @@ import java.util.concurrent.atomic.AtomicInteger;
 
 import javax.crypto.NoSuchPaddingException;
 
-import bruhcollective.itaysonlab.libvkx.client.LibVKXClient;
 import java8.util.concurrent.CompletableFuture;
 import okhttp3.Call;
 import okhttp3.OkHttpClient;
@@ -24,6 +21,7 @@ import okhttp3.Request;
 import okhttp3.Response;
 import ru.vtosters.lite.music.converter.ts.FFMpeg;
 import ru.vtosters.lite.music.converter.ts.TSMerger;
+import ru.vtosters.lite.music.downloader.ThumbnailDownloader;
 import ru.vtosters.lite.music.interfaces.ITrackDownloader;
 import ru.vtosters.lite.utils.IOUtils;
 
@@ -52,6 +50,13 @@ public class M3UDownloader implements ITrackDownloader {
     }
 
     private void parse(String payload, File outDir, Callback callback, MusicTrack track, boolean cache) {
+        if (cache)
+            try {
+                ThumbnailDownloader.downloadThumbnails(track);
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+
         VKM3UParser parser = new VKM3UParser(payload);
         List<TransportStream> tses = parser.getTransportStreams();
         AtomicInteger progress = new AtomicInteger(0);
@@ -60,8 +65,7 @@ public class M3UDownloader implements ITrackDownloader {
         var tsesDir = new File(outDir, String.valueOf(payload.hashCode()));
         tsesDir.mkdirs();
         var resultTs = new File(tsesDir, "result.ts");
-        var fileName = IOUtils.getValidFileName((cache ? LibVKXClient.asId(track) : track.toString()) + ".mp3");
-        var resultMp3 = new File(outDir, fileName);
+        var resultMp3 = new File(outDir, "track.mp3");
 
         callback.onProgress(5);
         for (TransportStream ts : tses) {
@@ -69,7 +73,6 @@ public class M3UDownloader implements ITrackDownloader {
 
             futures.add(CompletableFuture.runAsync(() -> {
                 try {
-                    // Log.d("M3UDownloader", "Downloading " + tsURL);
                     InputStream is = IOUtils.openStream(tsURL);
                     byte[] content;
                     if (TransportStream.METHOD_AES128.equals(ts.getMethod())) {

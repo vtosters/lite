@@ -17,7 +17,6 @@ import androidx.annotation.Nullable;
 
 import com.vk.core.util.ToastUtils;
 import com.vk.dto.music.MusicTrack;
-import com.vk.dto.music.Playlist;
 
 import org.json.JSONObject;
 
@@ -25,15 +24,10 @@ import java.net.URLDecoder;
 import java.net.URLEncoder;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.stream.Collectors;
 
 import bruhcollective.itaysonlab.libvkx.ILibVkxService;
 import bruhcollective.itaysonlab.libvkx.client.LibVKXClient;
 import bruhcollective.itaysonlab.libvkx.client.LibVKXClientImpl;
-import java8.util.concurrent.CompletableFuture;
-import ru.vtosters.lite.music.converter.playlist.PlaylistConverter;
-import ru.vtosters.lite.utils.AndroidUtils;
-import ru.vtosters.lite.utils.IOUtils;
 
 public class CacheDatabaseDelegate {
     private static final int DB_VERSION = 0x1;
@@ -127,9 +121,9 @@ public class CacheDatabaseDelegate {
     @Nullable
     private static JSONObject reconstructAlbumFromDb(Cursor cursor, String trackId) {
         try {
-            if (!FileCacheImplementation.getTrackArtwork(trackId, 300).exists()
-                    && !FileCacheImplementation.getTrackArtwork(trackId, 600).exists()
-                    && !FileCacheImplementation.getTrackArtwork(trackId, 1200).exists()
+            if (!FileCacheImplementation.getTrackThumbnail(trackId, 300).exists()
+                    && !FileCacheImplementation.getTrackThumbnail(trackId, 600).exists()
+                    && !FileCacheImplementation.getTrackThumbnail(trackId, 1200).exists()
             ) {
                 var ownerId = Integer.parseInt(trackId.split("_")[1]);
                 return new JSONObject()
@@ -151,9 +145,9 @@ public class CacheDatabaseDelegate {
                 new JSONObject()
                         .put("height", 600)
                         .put("width", 600)
-                        .putOpt("photo_300", FileCacheImplementation.getFileUri(FileCacheImplementation.getTrackArtwork(trackId, 300)))
-                        .putOpt("photo_600", FileCacheImplementation.getFileUri(FileCacheImplementation.getTrackArtwork(trackId, 600)))
-                        .putOpt("photo_1200", FileCacheImplementation.getFileUri(FileCacheImplementation.getTrackArtwork(trackId, 1200)));
+                        .putOpt("photo_300", FileCacheImplementation.getFileUri(FileCacheImplementation.getTrackThumbnail(trackId, 300)))
+                        .putOpt("photo_600", FileCacheImplementation.getFileUri(FileCacheImplementation.getTrackThumbnail(trackId, 600)))
+                        .putOpt("photo_1200", FileCacheImplementation.getFileUri(FileCacheImplementation.getTrackThumbnail(trackId, 1200)));
         } catch (Exception e) {
             e.printStackTrace();
         }

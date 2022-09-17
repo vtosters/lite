@@ -1,6 +1,6 @@
 package ru.vtosters.lite.downloaders;
 
-import static ru.vtosters.lite.music.cache.FileCacheImplementation.getCacheDir;
+import static ru.vtosters.lite.music.cache.FileCacheImplementation.getTrackFolder;
 
 import android.app.Notification;
 import android.os.Build;
@@ -15,7 +15,6 @@ import com.vk.dto.music.MusicTrack;
 import com.vk.dto.music.Playlist;
 
 import java.io.File;
-import java.util.ArrayList;
 import java.util.concurrent.Executor;
 import java.util.concurrent.Executors;
 import java.util.stream.Collectors;
@@ -73,7 +72,9 @@ public class AudioDownloader {
             return;
         }
 
-        var musicPath = cache ? getCacheDir().getAbsolutePath() : Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_MUSIC).getAbsolutePath();
+        var musicPath = cache
+                ? getTrackFolder(LibVKXClient.asId(track)).getAbsolutePath()
+                : Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_MUSIC).getAbsolutePath();
         var tempId = track.d;
         var downloadPath = musicPath + File.separator;
         var notification = buildDownloadNotification(track, tempId);

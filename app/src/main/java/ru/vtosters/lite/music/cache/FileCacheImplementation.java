@@ -22,11 +22,19 @@ public class FileCacheImplementation {
     }
 
     public static File getTrackFolder(String trackId) {
-        return new File(getCacheDir(), trackId);
+        var dir = new File(getCacheDir(), trackId);
+        dir.mkdirs();
+        return dir;
+    }
+
+    public static File getThumbnailsFolder(String trackId) {
+        var dir = new File(getTrackFolder(trackId), "thumbs");
+        dir.mkdirs();
+        return dir;
     }
 
     public static File getTrackFile(String trackId) {
-        return new File(getCacheDir(), trackId + ".mp3");
+        return new File(getTrackFolder(trackId),  "track.mp3");
     }
 
     public static boolean isTrackExist(String trackId) {
@@ -37,8 +45,8 @@ public class FileCacheImplementation {
         return getTrackFile(track.y1());
     }
 
-    public static File getTrackArtwork(String trackId, int factor) {
-        return new File(getTrackFolder(trackId), "artwork_" + factor + ".png");
+    public static File getTrackThumbnail(String trackId, int factor) {
+        return new File(getThumbnailsFolder(trackId), "thumb_" + factor + ".png");
     }
 
     public static String getFileUri(File file) {
