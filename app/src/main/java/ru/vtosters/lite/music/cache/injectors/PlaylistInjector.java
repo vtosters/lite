@@ -17,7 +17,7 @@ import java.util.List;
 import bruhcollective.itaysonlab.libvkx.client.LibVKXClient;
 import io.reactivex.Observable;
 import io.reactivex.ObservableOnSubscribe;
-import ru.vtosters.lite.music.MP3Downloader;
+import ru.vtosters.lite.downloaders.AudioDownloader;
 import ru.vtosters.lite.music.cache.CacheDatabaseDelegate;
 import ru.vtosters.lite.music.cache.helpers.PlaylistHelper;
 import ru.vtosters.lite.music.cache.helpers.TracklistHelper;
@@ -28,7 +28,7 @@ public class PlaylistInjector {
     public final static String CHANNEL_NAME = "VTCH";
 
     public static void injectDownloadPlaylist(Playlist playlist) {
-        MP3Downloader.downloadPlaylist(playlist);
+        AudioDownloader.downloadPlaylist(playlist);
     }
 
     public static boolean eligibleForOfflineCaching() {

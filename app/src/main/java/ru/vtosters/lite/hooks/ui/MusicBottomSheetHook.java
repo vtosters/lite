@@ -6,7 +6,6 @@ import static bruhcollective.itaysonlab.libvkx.client.LibVKXClient.isVkxInstalle
 import static bruhcollective.itaysonlab.libvkx.client.LibVKXClient.lambdaplay;
 import static ru.vtosters.lite.music.cache.CacheDatabaseDelegate.isCached;
 import static ru.vtosters.lite.music.cache.CacheDatabaseDelegate.isVkxCached;
-import static ru.vtosters.lite.music.cache.CacheDatabaseDelegate.removeTrackFromCache;
 import static ru.vtosters.lite.utils.NetworkUtils.*;
 import static ru.vtosters.lite.utils.Preferences.milkshake;
 
@@ -22,7 +21,7 @@ import java.util.ArrayList;
 
 import bruhcollective.itaysonlab.libvkx.client.LibVKXClient;
 import bruhcollective.itaysonlab.libvkx.client.LibVKXClientImpl;
-import ru.vtosters.lite.music.MP3Downloader;
+import ru.vtosters.lite.downloaders.AudioDownloader;
 import ru.vtosters.lite.utils.AndroidUtils;
 import ru.vtosters.lite.utils.NetworkUtils;
 
@@ -120,7 +119,7 @@ public class MusicBottomSheetHook {
         }
 
         if (actionId == AndroidUtils.getIdentifier("download_mp3", "id")) {
-            MP3Downloader.downloadMP3(track);
+            AudioDownloader.downloadAudio(track);
             AndroidUtils.sendToast("download_mp3");
             return true;
         }
@@ -143,7 +142,7 @@ public class MusicBottomSheetHook {
         }
 
         if (actionId == AndroidUtils.getIdentifier("download_mp3", "id")) {
-            MP3Downloader.downloadPlaylist(playlist);
+            AudioDownloader.downloadPlaylist(playlist);
             AndroidUtils.sendToast("download_mp3");
             return true;
         }
