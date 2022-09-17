@@ -561,6 +561,18 @@
     invoke-virtual {p0, p1, v0}, Landroidx/fragment/app/FragmentActivity;->startActivityForResult(Landroid/content/Intent;I)V
 
     :goto_1
+    # ru.vtosters.lite.hooks.ui.SystemThemeChangerHook.onThemeChanged(activity.getResources().getConfiguration());
+
+    invoke-virtual {p0}, Lcom/vtosters/lite/MainActivity;->getResources()Landroid/content/res/Resources;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Landroid/content/res/Resources;->getConfiguration()Landroid/content/res/Configuration;
+
+    move-result-object v0
+
+    invoke-static {v0}, Lru/vtosters/lite/hooks/ui/SystemThemeChangerHook;->onThemeChanged(Landroid/content/res/Configuration;)V
+
     return-void
 .end method
 

@@ -14,7 +14,6 @@ import android.preference.PreferenceManager;
 import com.vk.core.concurrent.VkExecutors;
 
 import ru.vtosters.lite.downloaders.notifications.NotificationChannels;
-import ru.vtosters.lite.hooks.ui.SystemThemeChangerHook;
 import ru.vtosters.lite.ui.dialogs.DisableBattery;
 import ru.vtosters.lite.ui.dialogs.InstallGMS;
 import ru.vtosters.lite.ui.dialogs.OTADialog;
@@ -22,8 +21,11 @@ import ru.vtosters.lite.ui.dialogs.ServerDialog;
 import ru.vtosters.lite.ui.dialogs.Start;
 import ru.vtosters.lite.utils.DeletedMessagesHandler;
 
-public class MainActivityInjector{
-    public static void inject(Activity activity){
+/**
+ * @
+ */
+public class MainActivityInjector {
+    public static void inject(Activity activity) {
         setNeededTheme(activity);
         ServerDialog.activity = activity;
         sendRequest();
@@ -36,7 +38,7 @@ public class MainActivityInjector{
                 .edit()
                 .putBoolean("isdark", isDarkTheme())
                 .commit();
-        SystemThemeChangerHook.onThemeChanged(activity.getResources().getConfiguration());
+
 
         VkExecutors.x.q().a(() -> {
             getInstance().autoCleaningCache();
