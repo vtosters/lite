@@ -7,6 +7,7 @@ import static ru.vtosters.lite.utils.Preferences.autoalltranslate;
 import static ru.vtosters.lite.utils.Preferences.autotranslate;
 import static ru.vtosters.lite.utils.Preferences.savemsgsett;
 
+import android.content.Context;
 import android.text.TextUtils;
 import android.view.View;
 
@@ -16,6 +17,7 @@ import java.util.ArrayList;
 import java.util.regex.Pattern;
 
 import ru.vtosters.lite.translators.BaseTranslator;
+import ru.vtosters.lite.utils.LifecycleUtils;
 
 public class MessagesHook {
     public static String injectOwnText(String oldText) {
@@ -70,6 +72,14 @@ public class MessagesHook {
             argDialog(v.getContext());
             return true;
         });
+    }
+
+    public static Context fixCTX(Context ctx) {
+        if (ctx == null){
+            return LifecycleUtils.getCurrentActivity();
+        } else {
+            return ctx;
+        }
     }
 
     public static void injRequest(MethodCall.a req) {

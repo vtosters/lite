@@ -4409,6 +4409,10 @@
 
     move-result-object v6
 
+    invoke-static {v6}, Lru/vtosters/lite/hooks/MessagesHook;->fixCTX(Landroid/content/Context;)Landroid/content/Context;
+
+    move-result-object v6
+
     iput-object v6, p0, Lcom/vk/im/ui/fragments/ChatFragment;->L:Landroid/content/Context;
 
     .line 8
@@ -6118,6 +6122,10 @@
 
     .line 1
     iget-object v0, p0, Lcom/vk/im/ui/fragments/ChatFragment;->L:Landroid/content/Context;
+
+    invoke-static {v0}, Lru/vtosters/lite/hooks/MessagesHook;->fixCTX(Landroid/content/Context;)Landroid/content/Context;
+
+    move-result-object v0
 
     const/4 v1, 0x0
 
