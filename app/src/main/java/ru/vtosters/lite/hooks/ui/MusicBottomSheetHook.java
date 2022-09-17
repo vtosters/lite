@@ -7,6 +7,7 @@ import static bruhcollective.itaysonlab.libvkx.client.LibVKXClient.lambdaplay;
 import static ru.vtosters.lite.music.cache.CacheDatabaseDelegate.isCached;
 import static ru.vtosters.lite.music.cache.CacheDatabaseDelegate.isVkxCached;
 import static ru.vtosters.lite.music.cache.CacheDatabaseDelegate.removeTrackFromCache;
+import static ru.vtosters.lite.utils.NetworkUtils.*;
 import static ru.vtosters.lite.utils.Preferences.milkshake;
 
 import android.os.RemoteException;
@@ -23,6 +24,7 @@ import bruhcollective.itaysonlab.libvkx.client.LibVKXClient;
 import bruhcollective.itaysonlab.libvkx.client.LibVKXClientImpl;
 import ru.vtosters.lite.music.MP3Downloader;
 import ru.vtosters.lite.utils.AndroidUtils;
+import ru.vtosters.lite.utils.NetworkUtils;
 
 public class MusicBottomSheetHook {
     public static ArrayList<MusicAction> hook(ArrayList<MusicAction> actions, MusicTrack musicTrack) {
@@ -38,7 +40,9 @@ public class MusicBottomSheetHook {
             }
         }
 
-        actions.add(downloadAsMp3Action());
+        if (isNetworkConnected()){
+            actions.add(downloadAsMp3Action());
+        }
 
         return actions;
     }
@@ -74,12 +78,14 @@ public class MusicBottomSheetHook {
         if (isVkxInstalled())
             actions.add(getPlayInVKXAction());
 
-        actions.add(downloadAsMp3Action());
-
         if (isCached(playlist)){
             actions.add(getRemoveCacheTrackAction());
         } else {
             actions.add(addToCacheTrackAction());
+        }
+
+        if (isNetworkConnected()){
+            actions.add(downloadAsMp3Action());
         }
 
         return actions;
