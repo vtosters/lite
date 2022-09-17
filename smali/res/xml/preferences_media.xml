@@ -55,6 +55,11 @@
             android:entryValues="@array/musicdefcatalog"
             android:key="musicdefcatalog"
             android:title="@string/musicdefcatalog_title" />
+        <com.vtosters.lite.ui.MaterialSwitchPreference
+            android:defaultValue="false"
+            android:key="autocache"
+            android:summary="Автоматически кешировать все воспроизведенные вами песни"
+            android:title="Авто-Кеширование песен" />
     </PreferenceCategory>
     <PreferenceCategory android:title="@string/vtl_video_settings">
         <Preference
