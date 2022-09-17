@@ -38,13 +38,34 @@ public class MusicBottomSheetHook {
             }
         }
 
-        if (isCached(trackid)){
-            actions.add(getRemoveCacheTrackAction());
-        } else {
-            actions.add(addToCacheTrackAction());
-        }
-
         actions.add(downloadAsMp3Action());
+
+        return actions;
+    }
+
+
+    public static ArrayList<MusicAction> hookDownloadBTN(ArrayList<MusicAction> actions, MusicTrack musicTrack) {
+        var trackid = asId(musicTrack);
+
+        if (isCached(trackid)){
+            actions.add(new MusicAction(
+                    AndroidUtils.getIdentifier("music_action_toggle_download", "id"),
+                    milkshake() ? R.drawable.ic_delete_outline_28 : R.drawable.ic_delete_24,
+                    AndroidUtils.getIdentifier("remove_from_cache", "string"),
+                    musicTrack.F1() ? R.color.music_action_button_gray_50_alpha : R.color.caption_gray,
+                    R.string.music_talkback_empty,
+                    false
+            ));
+        } else {
+            actions.add(new MusicAction(
+                    AndroidUtils.getIdentifier("music_action_toggle_download", "id"),
+                    milkshake() ? R.drawable.ic_download_outline_28 : R.drawable.ic_download_24,
+                    AndroidUtils.getIdentifier("add_to_cache", "string"),
+                    musicTrack.F1() ? R.color.music_action_button_gray_50_alpha : R.color.caption_gray,
+                    R.string.music_talkback_empty,
+                    false
+            ));
+        }
 
         return actions;
     }
@@ -85,16 +106,6 @@ public class MusicBottomSheetHook {
                     e.printStackTrace();
                 }
             });
-            return true;
-        }
-
-        if (actionId == AndroidUtils.getIdentifier("remove_from_cache", "id")) {
-            removeTrackFromCache(track.D);
-            AndroidUtils.sendToast("remove_from_cache");
-            return true;
-        } else if (actionId == AndroidUtils.getIdentifier("add_to_cache", "id")) {
-            // TODO make music caching
-            AndroidUtils.sendToast("add_to_cache");
             return true;
         }
 
