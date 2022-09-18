@@ -117,7 +117,6 @@ public class MusicBottomSheetHook {
 
         if (actionId == AndroidUtils.getIdentifier("download_mp3", "id")) {
             AudioDownloader.downloadAudio(track);
-            AndroidUtils.sendToast("download_mp3");
             return true;
         }
 
@@ -130,13 +129,11 @@ public class MusicBottomSheetHook {
 
         if (actionId == AndroidUtils.getIdentifier("add_to_cache", "id")) {
             AudioDownloader.cachePlaylist(playlist);
-            AndroidUtils.sendToast("add_to_cache");
             return true;
         }
 
         if (actionId == AndroidUtils.getIdentifier("download_mp3", "id")) {
             AudioDownloader.downloadPlaylist(playlist);
-            AndroidUtils.sendToast("download_mp3");
             return true;
         }
 
