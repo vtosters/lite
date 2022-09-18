@@ -1,5 +1,6 @@
 package ru.vtosters.lite.ui.dialogs;
 import static ru.vtosters.lite.utils.AndroidUtils.edit;
+import static ru.vtosters.lite.utils.AndroidUtils.getString;
 import static ru.vtosters.lite.utils.Preferences.getBoolValue;
 
 import android.app.Activity;
@@ -13,17 +14,15 @@ public class ThemeChanging{
     public static void changeTheme(Activity activity, float[] f){
         if (getBoolValue("systemtheme", true)) {
             new VkAlertDialog.Builder(activity)
-                    .setTitle("Внимание!")
-                    .setMessage("У вас включена системная тема \n" +
-                            "При переключении темы системная тема будет отключена \n\n" +
-                            "Вы действительно хотите отключить её?")
+                    .setTitle(getString("warning"))
+                    .setMessage(getString("system_theme_warning"))
                     .setCancelable(false)
-                    .setPositiveButton("Отключить", (dialogInterface, i) -> {
+                    .setPositiveButton(getString("proxy_disable"), (dialogInterface, i) -> { // Отключить
                         edit().putBoolean("systemtheme", false).commit();
                         VKThemeHelper.b(activity, f);
                         VKUIHook.clearWebCache();
                     })
-                    .setNeutralButton("Отмена", null)
+                    .setNeutralButton(getString("cancel"), null)
                     .show();
         } else {
             VKThemeHelper.b(activity, f);

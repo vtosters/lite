@@ -309,7 +309,7 @@ public class OtherFragment extends MaterialPreferenceToolbarFragment {
     private void delprefs(Context context) {
         VkAlertDialog.Builder builder = new VkAlertDialog.Builder(context);
         builder.setTitle(AndroidUtils.getString("warning"));
-        builder.setMessage("Вы действительно хотите сбросить настройки?");
+        builder.setMessage(AndroidUtils.getString("settings_reset_confirm"));
         builder.setCancelable(false);
         builder.setPositiveButton(AndroidUtils.getString("yes"), (dialogInterface, i) -> {
             deletePrefs();

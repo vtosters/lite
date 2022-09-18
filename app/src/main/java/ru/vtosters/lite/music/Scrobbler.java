@@ -124,7 +124,7 @@ public class Scrobbler {
             @Override
             public void onFailure(NetCall call, IOException e) {
                 Log.d("Scrobbler", "Auth failed", e);
-                sendToast(AndroidUtils.getString("lastfm_auth_error"));
+                sendToast(AndroidUtils.getString("auth_error_vtl"));
             }
 
             @Override

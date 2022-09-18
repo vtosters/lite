@@ -179,19 +179,17 @@ public class VTSettings extends MaterialPreferenceToolbarFragment {
 
             if (Preferences.systemtheme()) {
                 new VkAlertDialog.Builder(requireActivity())
-                        .setTitle("Внимание!")
-                        .setMessage("У вас включена системная тема \n" +
-                                "При переключении темы системная тема будет отключена \n\n" +
-                                "Вы действительно хотите отключить её?")
+                        .setTitle(AndroidUtils.getString("warning"))
+                        .setMessage(AndroidUtils.getString("system_theme_warning"))
                         .setCancelable(false)
-                        .setPositiveButton("Отключить", (dialogInterface, i) -> {
+                        .setPositiveButton(AndroidUtils.getString("proxy_disable"), (dialogInterface, i) -> { // Отключить
                             switchPreference.setChecked(isDarkTheme);
                             ((MaterialSwitchPreference) findPreference("systemtheme")).setChecked(false);
                             requireActivity().runOnUiThread(() -> {
                                 switchTheme(isDarkTheme);
                             });
                         })
-                        .setNeutralButton("Отмена", null)
+                        .setNeutralButton(AndroidUtils.getString("cancel"), null)
                         .show();
                 return false;
             }

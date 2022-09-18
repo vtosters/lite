@@ -656,8 +656,6 @@
         <item>Fade</item>
         <item>AndroidX</item>
         <item>Slide</item>
-        <item>System</item>
-        <item>System task</item>
     </string-array>
     <string-array name="animations_values">
         <item>noanim</item>
@@ -665,8 +663,6 @@
         <item>frag_fade</item>
         <item>frag_enter</item>
         <item>slide</item>
-        <item>system</item>
-        <item>system_task</item>
     </string-array>
     <string-array name="animations2">
         <item>No Animation</item>
@@ -877,5 +873,10 @@
         <item>Disabled</item>
         <item>Dim</item>
         <item>Lighten</item>
+    </string-array>
+    <string-array name="msg_plurals">
+        <item>message</item>
+        <item>messages</item>
+        <item>messages</item>
     </string-array>
 </resources>
