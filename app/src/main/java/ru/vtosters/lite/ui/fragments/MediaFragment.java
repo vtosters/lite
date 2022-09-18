@@ -210,7 +210,7 @@ public class MediaFragment extends MaterialPreferenceToolbarFragment {
     private void deleteVideoHistoryDialog(Context context){
         VkAlertDialog.Builder builder = new VkAlertDialog.Builder(context);
         builder.setTitle(AndroidUtils.getString("warning"));
-        builder.setMessage("Вы действительно хотите очистить историю видео?");
+        builder.setMessage(AndroidUtils.getString("delete_video_history_confirm"));
         builder.setCancelable(false);
         builder.setPositiveButton(AndroidUtils.getString("yes"), (dialogInterface, i) -> {
             deleteVideoHistory();

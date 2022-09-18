@@ -4,6 +4,7 @@ import static androidx.core.app.ActivityCompat.requestPermissions;
 import static ru.vtosters.lite.net.Request.makeRequest;
 import static ru.vtosters.lite.proxy.ProxyUtils.getApi;
 import static ru.vtosters.lite.utils.AccountManagerUtils.getUserToken;
+import static ru.vtosters.lite.utils.AndroidUtils.getString;
 import static ru.vtosters.lite.utils.AndroidUtils.sendToast;
 
 import android.Manifest;
@@ -39,7 +40,7 @@ public class ContactsUtils{
                         Log.d("ContactsUtils", "Result: " + mainJson + ", enabled sync: " + enabled);
                     } catch (JSONException e) {
                         Log.d("ContactsUtils", e.getMessage());
-                        sendToast("Ошибка установки контактов");
+                        sendToast(getString("contact_sync_error"));
                     }
                 });
     }
@@ -47,7 +48,7 @@ public class ContactsUtils{
     public static void uploadContacts(Context ctx){
         try {
             if (ContextCompat.checkSelfPermission(ctx, Manifest.permission.READ_CONTACTS) != PackageManager.PERMISSION_GRANTED) {
-                sendToast("Для работы данной функции необходимо выдать право на чтение контактов");
+                sendToast(getString("contact_permission_toast"));
                 requestPermissions(LifecycleUtils.getCurrentActivity(), new String[] {Manifest.permission.READ_CONTACTS}, 11111);
             } else {
                 var account = VKAuthUtils.a.a(VKAccountManager.d().Z());
@@ -60,7 +61,7 @@ public class ContactsUtils{
 
     public static void getContactsStatus(Context ctx){
         final ProgressDialog progressDialog = new ProgressDialog(ctx);
-        progressDialog.setMessage("Загрузка данных о контактах...");
+        progressDialog.setMessage(getString("contact_info_loading"));
         progressDialog.show();
 
         var request = new okhttp3.Request.a()
@@ -80,10 +81,10 @@ public class ContactsUtils{
                 boolean enabledsync = resp.equals("contact");
 
                 VkAlertDialog.Builder builder = new VkAlertDialog.Builder(ctx);
-                builder.setTitle("Синхронизация контактов");
-                builder.setMessage("Статус синхронизации: " + (enabledsync ? "Включена" : "Отключена"));
+                builder.setTitle(getString("contact_sync_title"));
+                builder.setMessage(getString("contact_sync_state") + ": " + getString(enabledsync ? "contact_sync_enabled" : "contact_sync_disabled"));
                 builder.setCancelable(true);
-                builder.setPositiveButton((!enabledsync ? "Включить" : "Отключить"), (dialog, which) -> {
+                builder.setPositiveButton((!enabledsync ? getString("enable") : getString("proxy_disable")), (dialog, which) -> {
                     setContactsSync(!enabledsync);
                 });
 //                builder.setNegativeButton("Импортировать контакты", (dialog, which) -> {

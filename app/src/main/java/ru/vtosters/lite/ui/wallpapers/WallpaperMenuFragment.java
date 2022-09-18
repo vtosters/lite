@@ -157,7 +157,7 @@ public class WallpaperMenuFragment extends MaterialPreferenceToolbarFragment{
             });
         }
 
-        PreferencesUtil.addMaterialSwitchPreference(this, "compresswp", "Сжимать обои", "Значительно ускоряет открытие чатов", null, true, (preference, o) -> {
+        PreferencesUtil.addMaterialSwitchPreference(this, "compresswp", AndroidUtils.getString("compress_wallpaper_title"), AndroidUtils.getString("compress_wallpaper_summ"), null, true, (preference, o) -> {
             boolean value = (boolean) o;
             edit().putBoolean("compresswp", value).commit();
             requestUpdateWallpaper();

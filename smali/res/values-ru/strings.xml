@@ -5518,7 +5518,7 @@
     <string name="sett_compress_photo_summ">Отключение значительно улучшит качество загружаемых фотографий</string>
     <string name="sett_compress_video_summ">Отключение значительно улучшит качество загружаемых видео</string>
     <string name="lastfm_auth_title">Аккаунт</string>
-    <string name="lastfm_auth_error">Ошибка входа</string>
+    <string name="auth_error_vtl">Ошибка входа</string>
     <string name="lastfm_auth_summ">Вы не вошли в аккаунт</string>
     <string name="lastfm_logout_success">Вы успешно вышли из учетной записи</string>
     <string name="lastfm_enabled_title">Включить скробблинг</string>
@@ -6185,4 +6185,70 @@
 
     <string name="download_dl">Скачать диалог</string>
     <string name="download_dl_error">Произошла ошибка при попытке скачать диалог</string>
+
+    <string name="saved_as">Сохранено как</string>
+    <string name="settings_reset_confirm">Вы действительно хотите сбросить настройки?</string>
+    <string name="system_theme_warning">У вас включена системная тема \nПри переключении темы системная тема будет отключена \n\nВы действительно хотите отключить её?</string>
+
+    <string name="compress_wallpaper_title">Сжимать обои</string>
+    <string name="compress_wallpaper_summ">Значительно ускоряет открытие чатов</string>
+
+    <string name="from_lower">от</string>
+    <string name="chat_export_error">ошибка</string>
+
+    <string name="chat_export_title">Экспорт из VTLite</string>
+    <string name="chat_export_header">Экспорт истории чата</string>
+    <string name="chat_export_avatar_update">Обновил фотографию беседы</string>
+    <string name="chat_export_avatar_remove">Удалил фотографию беседы</string>
+    <string name="chat_export_chat_created">Создал беседу</string>
+    <string name="chat_export_name_changed">Сменил название беседы</string>
+    <string name="chat_export_to">на</string>
+    <string name="chat_export_user_added">Добавил</string>
+    <string name="chat_export_user_kicked">Исключил</string>
+    <string name="chat_export_type_group">группу</string>
+    <string name="chat_export_type_user">пользователя</string>
+    <string name="chat_export_msg_pinned">Закрепил сообщение</string>
+    <string name="chat_export_msg_unpinned">Открепил сообщение</string>
+    <string name="chat_export_join_by_link">Вступил в беседу по ссылке</string>
+    <string name="chat_export_chat_screenshot">Сделал скриншот беседы</string>
+
+    <string name="chat_export_type_photo">фотография</string>
+    <string name="chat_export_type_doc">документ</string>
+    <string name="chat_export_type_link">ссылка</string>
+    <string name="chat_export_type_wallpost">запись на стене</string>
+    <string name="chat_export_type_audiomsg">голосовое сообщение</string>
+    <string name="chat_export_type_audio">аудиозапись</string>
+    <string name="chat_export_type_video">видеозапись</string>
+    <string name="chat_export_type_wallreply">комментарий на стене</string>
+    <string name="chat_export_type_story">история</string>
+    <string name="chat_export_type_podcast">подкаст</string>
+    <string name="chat_export_type_miniapp">мини-приложение</string>
+    <string name="chat_export_type_playlist">плейлист</string>
+    <string name="chat_export_poll_anon">анонимный</string>
+    <string name="chat_export_poll_publ">публичный</string>
+    <string name="chat_export_type_poll">опрос</string>
+    <string name="chat_export_type_market">товар</string>
+
+    <string name="chat_export_poll_voted">Проголосовало</string>
+    <string name="chat_export_users_name">чел.</string>
+
+    <string name="chat_export_video_nolinks">ссылки отсутствуют</string>
+
+    <string name="delete_video_history_confirm">Вы действительно хотите очистить историю видео?</string>
+
+    <string name="wallpaper_size_limit">Размер файла превышает лимит 6 MB</string>
+
+    <string name="contact_sync_error">Ошибка установки контактов</string>
+    <string name="contact_permission_toast">Для работы данной функции необходимо выдать разрешение на чтение контактов</string>
+    <string name="contact_info_loading">Загрузка данных о контактах...</string>
+    <string name="contact_sync_title">Синхронизация контактов</string>
+    <string name="contact_sync_state">Статус синхронизации</string>
+    <string name="contact_sync_enabled">Включена</string>
+    <string name="contact_sync_disabled">Отключена</string>
+
+    <string name="donotgetads_title">Не пытаться получать рекламу</string>
+    <string name="donotgetads_summ">Не запрашивать рекламу и рекомендации\n\nМогут быть проблемы</string>
+
+    <string name="force_disable_psm_title">Не отправлять информацию о батарее</string>
+    <string name="force_disable_psm_summ">Включение этой функции скроет информацию о состоянии вашего устройства в режиме экономии батареи и ВКонтакте будет отправлять вам медиаконтент без сильного сжатия и блюра</string>
 </resources>

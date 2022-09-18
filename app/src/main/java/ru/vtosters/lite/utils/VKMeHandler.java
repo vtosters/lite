@@ -5,6 +5,7 @@ import static ru.vtosters.lite.proxy.ProxyUtils.getOauth;
 import static ru.vtosters.lite.utils.AccountManagerUtils.getUserToken;
 import static ru.vtosters.lite.utils.AndroidUtils.edit;
 import static ru.vtosters.lite.utils.AndroidUtils.getPrefsValue;
+import static ru.vtosters.lite.utils.AndroidUtils.getString;
 import static ru.vtosters.lite.utils.AndroidUtils.sendToast;
 
 import android.util.Log;
@@ -33,7 +34,7 @@ public class VKMeHandler{
                             setToken(mainJson.getString("access_token"));
                         } else if (mainJson.has("error_description")){
                             Log.d("VKMeHandler", mainJson.getString("error_description"));
-                            sendToast("Ошибка входа: " + mainJson.getString("error_description"));
+                            sendToast(getString("auth_error_vtl") + ": " + mainJson.getString("error_description"));
                         }
 
                     } catch (JSONException e) {

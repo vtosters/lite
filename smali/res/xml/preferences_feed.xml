@@ -134,12 +134,12 @@
         <com.vtosters.lite.ui.MaterialSwitchPreference
             android:defaultValue="false"
             android:key="donotgetads"
-            android:summary="Не запрашивать рекламу и рекомендации\n\nМогуть быть проблемы"
-            android:title="Не пытаться получать рекламу" />
+            android:summary="@string/donotgetads_summ"
+            android:title="@string/donotgetads_title" />
         <com.vtosters.lite.ui.MaterialSwitchPreference
             android:defaultValue="false"
             android:key="force_disable_psm"
-            android:summary="Включение этой функции скроет информацию о состоянии вашего устройства в режиме экономии батареи и ВКонтакте будет отправлять вам медиаконтент без сильного сжатия и блюра"
-            android:title="Не отправлять информацию о батарее" />
+            android:summary="@string/force_disable_psm_summ"
+            android:title="@string/force_disable_psm_title" />
     </PreferenceCategory>
 </PreferenceScreen>
