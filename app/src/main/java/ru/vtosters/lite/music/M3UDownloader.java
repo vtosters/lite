@@ -14,7 +14,6 @@ import java.util.concurrent.atomic.AtomicInteger;
 
 import javax.crypto.NoSuchPaddingException;
 
-import bruhcollective.itaysonlab.libvkx.client.LibVKXClient;
 import java8.util.concurrent.CompletableFuture;
 import okhttp3.Call;
 import okhttp3.OkHttpClient;
@@ -66,7 +65,7 @@ public class M3UDownloader implements ITrackDownloader {
         var tsesDir = new File(outDir, String.valueOf(payload.hashCode()));
         tsesDir.mkdirs();
         var resultTs = new File(tsesDir, "result.ts");
-        var fileName = IOUtils.getValidFileName((cache ? LibVKXClient.asId(track) : track.toString()) + ".mp3");
+        var fileName = IOUtils.getValidFileName((cache ? "track" : track.toString()) + ".mp3");
         var resultMp3 = new File(outDir, fileName);
 
         callback.onProgress(5);
