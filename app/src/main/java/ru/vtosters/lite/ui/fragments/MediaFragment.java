@@ -192,7 +192,7 @@ public class MediaFragment extends MaterialPreferenceToolbarFragment {
                     if (response.optInt("response") == 1){
                         LifecycleUtils.getCurrentActivity().runOnUiThread(() -> sendToast(AndroidUtils.getString("video_history_cleaned")));
                     } else {
-                        LifecycleUtils.getCurrentActivity().runOnUiThread(() -> sendToast("Ошибка при очистке истории. Подробности в логах"));
+                        LifecycleUtils.getCurrentActivity().runOnUiThread(() -> sendToast(AndroidUtils.getString("delete_video_history_error")));
                     }
 
                     Log.d("VideoHistory", response.toString());

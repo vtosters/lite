@@ -6373,6 +6373,7 @@ May look like a fake leaving the online"</string>
     <string name="chat_export_video_nolinks">no links</string>
 
     <string name="delete_video_history_confirm">Are you sure you want to clear your video history?</string>
+    <string name="delete_video_history_error">Error clearing video history. Details in the logs</string>
 
     <string name="wallpaper_size_limit">File size exceeds 6 MB limit</string>
 

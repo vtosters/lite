@@ -6235,6 +6235,7 @@
     <string name="chat_export_video_nolinks">ссылки отсутствуют</string>
 
     <string name="delete_video_history_confirm">Вы действительно хотите очистить историю видео?</string>
+    <string name="delete_video_history_error">Ошибка при очистке истории. Подробности в логах</string>
 
     <string name="wallpaper_size_limit">Размер файла превышает лимит 6 MB</string>
 
