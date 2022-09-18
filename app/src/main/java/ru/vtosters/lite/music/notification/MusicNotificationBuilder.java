@@ -2,6 +2,9 @@ package ru.vtosters.lite.music.notification;
 
 import static ru.vtosters.lite.utils.AndroidUtils.getString;
 
+import android.app.Notification;
+import android.os.Build;
+
 import androidx.core.app.NotificationCompat;
 import androidx.core.app.NotificationManagerCompat;
 
@@ -37,5 +40,20 @@ public class MusicNotificationBuilder {
                 .setProgress(100, 0, false);
         notificationManager.notify(id, notificationBuilder.build());
         return notificationBuilder;
+    }
+
+    public static void notifySavingToCache(MusicTrack track) {
+        Notification.Builder builder;
+
+        if (Build.VERSION.SDK_INT >= 26) {
+            builder = new Notification.Builder(AndroidUtils.getGlobalContext(), NotificationChannels.MUSIC_DOWNLOAD_CHANNEL_ID);
+            builder.setVisibility(Notification.VISIBILITY_PUBLIC);
+        } else builder = new Notification.Builder(AndroidUtils.getGlobalContext());
+
+        builder.setSmallIcon(com.vtosters.lite.R.drawable.ic_download_outline_28)
+                .setShowWhen(false)
+                .setContentTitle(getString("cached_track") + ": " + track.toString());
+
+        notificationManager.notify(track.y1().hashCode(), builder.build());
     }
 }

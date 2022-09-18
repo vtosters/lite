@@ -3,8 +3,6 @@ package ru.vtosters.lite.downloaders;
 import static ru.vtosters.lite.music.cache.FileCacheImplementation.getTrackFolder;
 import static ru.vtosters.lite.utils.AndroidUtils.getString;
 
-import android.app.Notification;
-import android.os.Build;
 import android.os.Environment;
 
 import com.vk.core.util.ToastUtils;
@@ -26,7 +24,6 @@ import ru.vtosters.lite.music.converter.playlist.PlaylistConverter;
 import ru.vtosters.lite.music.downloader.PlaylistDownloader;
 import ru.vtosters.lite.music.downloader.TrackDownloader;
 import ru.vtosters.lite.music.notification.MusicNotificationBuilder;
-import ru.vtosters.lite.utils.AndroidUtils;
 import ru.vtosters.lite.utils.IOUtils;
 
 /**
@@ -90,7 +87,7 @@ public class AudioDownloader {
         if (!trackFile.exists())
             trackFile.getParentFile().mkdirs();
         downloadM3U8(track, true);
-        notifySavingToCache(track);
+        MusicNotificationBuilder.notifySavingToCache(track);
         CacheDatabaseDelegate.insertTrack(track);
         NotificationChannels.getNotificationManager().cancel(trackId.hashCode());
     }
@@ -104,18 +101,5 @@ public class AudioDownloader {
         }
     }
 
-    private static void notifySavingToCache(MusicTrack track) {
-        Notification.Builder builder;
 
-        if (Build.VERSION.SDK_INT >= 26) {
-            builder = new Notification.Builder(AndroidUtils.getGlobalContext(), NotificationChannels.MUSIC_DOWNLOAD_CHANNEL_ID);
-            builder.setVisibility(Notification.VISIBILITY_PUBLIC);
-        } else builder = new Notification.Builder(AndroidUtils.getGlobalContext());
-
-        builder.setSmallIcon(com.vtosters.lite.R.drawable.ic_download_outline_28)
-                .setShowWhen(false)
-                .setContentTitle(getString("cached_track") + ": " + track.toString());
-
-        NotificationChannels.getNotificationManager().notify(track.y1().hashCode(), builder.build());
-    }
 }
