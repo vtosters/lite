@@ -1314,7 +1314,9 @@
 
     move-result-object p1
 
-    const v0, 0x7f0d06da
+    invoke-static {}, Lru/vtosters/lite/hooks/WritebarHook;->getWriteBar()I
+
+    move-result v0
 
     .line 23
     invoke-static {p1, v0, p0}, Landroid/widget/LinearLayout;->inflate(Landroid/content/Context;ILandroid/view/ViewGroup;)Landroid/view/View;

@@ -12,6 +12,7 @@ import android.preference.PreferenceManager;
 import android.util.Log;
 import android.widget.Toast;
 
+import androidx.annotation.NonNull;
 import androidx.annotation.StringRes;
 
 import com.vk.core.util.Screen;
@@ -19,6 +20,7 @@ import com.vk.core.util.Screen;
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
 import java.util.Locale;
+import java.util.Objects;
 
 public class AndroidUtils {
 
@@ -44,13 +46,14 @@ public class AndroidUtils {
         return PreferenceManager.getDefaultSharedPreferences(getGlobalContext()).edit();
     } // Edit SharedPreferences
 
+    @NonNull
     public static Context getGlobalContext() {
         try {
             return ReflectionUtils.invokeStaticMethod("android.app.AppGlobals", "getInitialApplication");
         } catch (Exception e) {
             Log.d("GlobalContext", "Error while fetching context via refl");
         }
-        return null; // need fix for a13+ cuz google shit disabled global context via refl
+        return Objects.requireNonNull(LifecycleUtils.getCurrentActivity());
     } // Getting the global context through reflection to use context on application initialization
 
     public static Resources getResources() {

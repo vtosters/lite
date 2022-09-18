@@ -108,6 +108,10 @@ public class Preferences {
         return getBoolValue("adsstories", true);
     }
 
+    public static boolean wbios() {
+        return getBoolValue("wbios", false);
+    }
+
     public static boolean videofeed() {
         return getBoolValue("__dbg_disable_video_feed", false);
     }
