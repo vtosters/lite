@@ -2834,7 +2834,7 @@ or deleted"</string>
     <string name="place">Map</string>
     <string name="places">Places</string>
     <string name="play_queue">Up next</string>
-    <string name="player_download_finished">Download complete</string>
+    <string name="player_download_finished">Download completed</string>
     <string name="player_download_pause">Pause</string>
     <string name="player_download_repeat">Repeat</string>
     <string name="player_download_resume">Resume</string>
@@ -6424,4 +6424,6 @@ May look like a fake leaving the online"</string>
 
     <string name="autocache_title">Autocache songs</string>
     <string name="autocache_summ">Automatically cache all songs you have played</string>
+
+    <string name="playlist_download_notf">Downloaded %1$d of %2$d tracks</string>
 </resources>

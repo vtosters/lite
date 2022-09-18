@@ -6286,4 +6286,6 @@
 
     <string name="autocache_title">Автокеширование песен</string>
     <string name="autocache_summ">Автоматически кешировать все воспроизведенные вами песни</string>
+
+    <string name="playlist_download_notf">Загружено песен: %1$d из %2$d</string>
 </resources>

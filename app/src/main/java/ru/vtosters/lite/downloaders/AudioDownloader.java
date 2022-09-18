@@ -136,7 +136,7 @@ public class AudioDownloader {
                 if (progress == playlistSize) {
                     onSuccess();
                 } else {
-                    notification.setContentText("Downloaded " + progress + " of " + playlistSize + " tracks");
+                    notification.setContentText(String.format(getString("playlist_download_notf"), progress, playlistSize));
                     notification.setProgress(playlistSize, progress, false);
                 }
                 notificationManager.notify(notificationId, notification.build());
@@ -144,7 +144,7 @@ public class AudioDownloader {
 
             @Override
             public void onSuccess() {
-                notification.setContentText("Download completed");
+                notification.setContentText(getString("player_download_finished"));
                 notification.setProgress(0, 0, false);
             }
 
