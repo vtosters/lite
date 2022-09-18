@@ -1,5 +1,7 @@
 package ru.vtosters.lite.music.cache.helpers;
 
+import static ru.vtosters.lite.utils.AndroidUtils.getString;
+
 import com.vk.dto.music.Playlist;
 
 import org.json.JSONArray;
@@ -22,9 +24,8 @@ public class PlaylistHelper {
                     .put("owner_id", AccountManagerUtils.getUserId())
                     .put("type", 0)
                     .put("album_type", "playlist")
-                    .put("title", "Кешированные треки")
-                    .put("description", "Это - список всех кешированных треков. Данный плейлист НЕ СУЩЕСТВУЕТ в вашем профиле.\n\n" +
-                            "При отсутствии соединения с Интернетом данный плейлист превратится в обычный список треков.")
+                    .put("title", getString("cached_tracks_title"))
+                    .put("description", getString("cached_tracks_desc"))
                     .put("count", 0);
             return new Playlist(obj);
         } catch (JSONException e) {
@@ -60,7 +61,7 @@ public class PlaylistHelper {
                     .put("type", 1)
                     .put("album_type", "main_only")
                     .put("title", title)
-                    .put("description", albumId + "/ Это кешированный альбом!")
+                    .put("description", albumId + "/ " + getString("cached_album_warning"))
                     .put("main_artists", new JSONArray()
                             .put(new JSONObject().put("name", artist)
                                     .put("id", "-1")

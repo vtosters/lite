@@ -1,5 +1,7 @@
 package ru.vtosters.lite.downloaders.notifications;
 
+import static ru.vtosters.lite.utils.AndroidUtils.getString;
+
 import android.app.Notification;
 import android.app.NotificationChannel;
 import android.app.NotificationManager;
@@ -12,14 +14,14 @@ import ru.vtosters.lite.utils.AndroidUtils;
 
 public class NotificationChannels {
     public static final String MUSIC_DOWNLOAD_CHANNEL_ID = "music_download_channel";
-    public static final String MUSIC_DOWNLOAD_CHANNEL_NAME = "Загрузка музыки";
-    public static final String MUSIC_DOWNLOAD_CHANNEL_DESCRIPTION = "Прогресс загрузки музыки";
+    public static final String MUSIC_DOWNLOAD_CHANNEL_NAME = getString("music_downloading");
+    public static final String MUSIC_DOWNLOAD_CHANNEL_DESCRIPTION = getString("music_downloading_progress");
 
     public static final String MUSIC_PLAYLIST_DOWNLOAD_CHANNEL_ID = "music_playlist_download_channel";
-    public static final String MUSIC_PLAYLIST_DOWNLOAD_CHANNEL_NAME = "Загрузка плейлиста";
-    public static final String MUSIC_PLAYLIST_DOWNLOAD_CHANNEL_DESCRIPTION = "Прогресс загрузки плейлиста";
+    public static final String MUSIC_PLAYLIST_DOWNLOAD_CHANNEL_NAME = getString("playlist_downloading");
+    public static final String MUSIC_PLAYLIST_DOWNLOAD_CHANNEL_DESCRIPTION = getString("playlist_downloading_progress");
 
-    public static final String MUSIC_CACHING_NAME = "Кеширование трека / Обложки";
+    public static final String MUSIC_CACHING_NAME = getString("caching_track_or_pic");
 
     private static NotificationManagerCompat notificationManagerCompat;
 

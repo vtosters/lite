@@ -1,6 +1,7 @@
 package ru.vtosters.lite.music.cache.injectors;
 
 import static ru.vtosters.lite.music.cache.CacheDatabaseDelegate.hasTracks;
+import static ru.vtosters.lite.utils.AndroidUtils.getString;
 
 import android.util.Log;
 
@@ -68,7 +69,7 @@ public class TracklistInjector {
     }
 
     private static JSONObject getEmptyCatalog() throws JSONException{
-        return new JSONObject("{\"catalog\":{\"default_section\":\"cache\",\"sections\":[{\"id\":\"cache\",\"title\":\"Кешированный контент\",\"blocks\":[{\"data_type\":\"placeholder\",\"id\":\"0\",\"layout\":{\"name\":\"placeholder_big\"},\"placeholder_ids\":[\"_synth_trackEmpty\"]}]}]},\"audios\":[],\"playlists\":[],\"placeholders\":[{\"id\":\"_synth_trackEmpty\",\"title\":\"Похоже, тут пусто\",\"text\":\"У вас отсутствует кешированный контент\",\"buttons\":[]}]}");
+        return new JSONObject("{\"catalog\":{\"default_section\":\"cache\",\"sections\":[{\"id\":\"cache\",\"title\":\"" + getString("cached_content_title") + "\",\"blocks\":[{\"data_type\":\"placeholder\",\"id\":\"0\",\"layout\":{\"name\":\"placeholder_big\"},\"placeholder_ids\":[\"_synth_trackEmpty\"]}]}]},\"audios\":[],\"playlists\":[],\"placeholders\":[{\"id\":\"_synth_trackEmpty\",\"title\":\"" + getString("cached_content_empty") + "\",\"text\":\"" + getString("cached_content_empty_desc") + "\",\"buttons\":[]}]}");
     }
 
     public static void injectIntoExistingCatalog(JSONObject catalogNode) {
@@ -159,9 +160,8 @@ public class TracklistInjector {
         var catalogBanner = new JSONObject()
                 .put("id", 1234)
                 .put("image_mode", "cover")
-                .put("title", "Включите интеграцию VK X!")
-                .put("text", "Получите доступ к хранилищу треков и возможности включать/кешировать треки из VTosters в VK X.\n\n" +
-                        "Подробнее - в Настройки > Настройки VTosters > Кешированные треки.")
+                .put("title", getString("vkx_integration_title"))
+                .put("text", getString("vkx_integration_desc"))
                 .put("click_action", new JSONObject().put("action", clickAction));
         var catalogBanners = new JSONArray()
                 .put(catalogBanner);
@@ -200,7 +200,7 @@ public class TracklistInjector {
 
         var section = new JSONObject()
                 .put("id", randomId)
-                .put("title", "Сохраненные треки")
+                .put("title", getString("saved_tracks_title"))
                 .put("url", "synth:cache")
                 .put("blocks", blocks);
 

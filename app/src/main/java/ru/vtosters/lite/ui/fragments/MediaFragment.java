@@ -96,7 +96,7 @@ public class MediaFragment extends MaterialPreferenceToolbarFragment {
             findPreference("lastfm_enabled").setEnabled(false);
         }
 
-        findPreference("cached_tracks").setSummary("Всего закешировано " + CacheDatabaseDelegate.getTrackCount() + " песен");
+        findPreference("cached_tracks").setSummary(String.format(AndroidUtils.getString("cached_tracks_counter"), CacheDatabaseDelegate.getTrackCount()));
         findPreference("cached_tracks").setOnPreferenceClickListener(preference -> {
             delcache(requireContext());
             return true;
@@ -187,12 +187,12 @@ public class MediaFragment extends MaterialPreferenceToolbarFragment {
 
     private void delcache(Context ctx) {
         VkAlertDialog.Builder alertDialog = new VkAlertDialog.Builder(ctx);
-        alertDialog.setTitle("Внимание!");
-        alertDialog.setMessage("Вы действительно хотите удалить все кешированные песни?");
-        alertDialog.setPositiveButton(AndroidUtils.getString("vkim_yes"), (dialog, which) -> {
+        alertDialog.setTitle(AndroidUtils.getString("warning"));
+        alertDialog.setMessage(AndroidUtils.getString("cached_tracks_remove_confirm"));
+        alertDialog.setPositiveButton(AndroidUtils.getString("yes"), (dialog, which) -> {
             CacheDatabaseDelegate.clear();
         });
-        alertDialog.setNeutralButton(AndroidUtils.getString("vkim_no"), (dialog, which) -> {
+        alertDialog.setNeutralButton(AndroidUtils.getString("no"), (dialog, which) -> {
             dialog.cancel();
         });
         var alert = alertDialog.create();
@@ -215,7 +215,7 @@ public class MediaFragment extends MaterialPreferenceToolbarFragment {
                     if (response.optInt("response") == 1){
                         LifecycleUtils.getCurrentActivity().runOnUiThread(() -> sendToast(AndroidUtils.getString("video_history_cleaned")));
                     } else {
-                        LifecycleUtils.getCurrentActivity().runOnUiThread(() -> sendToast("Ошибка при очистке истории. Подробности в логах"));
+                        LifecycleUtils.getCurrentActivity().runOnUiThread(() -> sendToast(AndroidUtils.getString("delete_video_history_error")));
                     }
 
                     Log.d("VideoHistory", response.toString());

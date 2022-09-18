@@ -50,12 +50,12 @@
     <PreferenceCategory android:title="@string/vtl_music_settings">
         <Preference
             android:key="cached_tracks"
-            android:title="Кешированные песни" />
+            android:title="@string/cached_tracks_title"/>
         <com.vtosters.lite.ui.MaterialSwitchPreference
             android:defaultValue="false"
             android:key="autocache"
-            android:summary="Автоматически кешировать все воспроизведенные вами песни"
-            android:title="Авто-Кеширование песен" />
+            android:summary="@string/autocache_summ"
+            android:title="@string/autocache_title" />
         <com.vtosters.lite.ui.SummaryListPreference
             android:defaultValue="default"
             android:dialogTitle="@string/musicdefcatalog_dialogTitle"

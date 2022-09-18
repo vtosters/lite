@@ -1,6 +1,7 @@
 package ru.vtosters.lite.downloaders;
 
 import static ru.vtosters.lite.music.cache.FileCacheImplementation.getTrackFolder;
+import static ru.vtosters.lite.utils.AndroidUtils.getString;
 
 import android.app.Notification;
 import android.os.Build;
@@ -68,7 +69,7 @@ public class AudioDownloader {
 
     private static void downloadM3U8(MusicTrack track, boolean cache) {
         if (track.D == null) {
-            ToastUtils.a(AndroidUtils.getString("link_audio_error"));
+            ToastUtils.a(getString("link_audio_error"));
             return;
         }
 
@@ -104,7 +105,7 @@ public class AudioDownloader {
             public void onSuccess() {
                 try {
                     notification
-                            .setContentText(AndroidUtils.getString("player_download_finished"))
+                            .setContentText(getString("player_download_finished"))
                             .setProgress(0, 0, false)
                             .setSmallIcon(android.R.drawable.stat_sys_download_done);
                     notificationManager.notify(notificationId, notification.build());
@@ -117,7 +118,7 @@ public class AudioDownloader {
 
             @Override
             public void onFailure() {
-                notification.setContentText(AndroidUtils.getString("load_audio_error")).setProgress(0, 0, false);
+                notification.setContentText(getString("load_audio_error")).setProgress(0, 0, false);
                 notificationManager.notify(notificationId, notification.build());
             }
 
@@ -194,7 +195,7 @@ public class AudioDownloader {
 
         builder.setSmallIcon(com.vtosters.lite.R.drawable.ic_download_outline_28)
                 .setShowWhen(false)
-                .setContentTitle("Закешированный трек: " + track.toString());
+                .setContentTitle(getString("cached_track") + ": " + track.toString());
 
         NotificationChannels.getNotificationManager().notify(track.y1().hashCode(), builder.build());
     }
@@ -202,7 +203,7 @@ public class AudioDownloader {
     private static NotificationCompat.Builder buildDownloadNotification(MusicTrack track, int id) {
         var notificationBuilder = new NotificationCompat.Builder(AndroidUtils.getGlobalContext(), NotificationChannels.MUSIC_DOWNLOAD_CHANNEL_ID)
                 .setSmallIcon(android.R.drawable.stat_sys_download)
-                .setContentTitle(AndroidUtils.getString("audio_downloading"))
+                .setContentTitle(getString("audio_downloading"))
                 .setContentText(track.toString())
                 .setPriority(NotificationCompat.PRIORITY_LOW)
                 .setCategory(NotificationCompat.CATEGORY_PROGRESS)
@@ -215,7 +216,7 @@ public class AudioDownloader {
     private static NotificationCompat.Builder buildPlaylistDownloadNotification(String playlistName, int id) {
         var notificationBuilder = new NotificationCompat.Builder(AndroidUtils.getGlobalContext(), NotificationChannels.MUSIC_PLAYLIST_DOWNLOAD_CHANNEL_ID)
                 .setSmallIcon(android.R.drawable.stat_sys_download)
-                .setContentTitle("Загрузка плейлиста " + '«' + playlistName + '»')
+                .setContentTitle(getString("cached_playlist_loading") + " «" + playlistName + "»")
                 .setContentText(playlistName)
                 .setPriority(NotificationCompat.PRIORITY_LOW)
                 .setCategory(NotificationCompat.CATEGORY_PROGRESS)

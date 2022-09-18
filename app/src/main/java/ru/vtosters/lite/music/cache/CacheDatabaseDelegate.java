@@ -83,14 +83,14 @@ public class CacheDatabaseDelegate {
             getHelper().getReadableDatabase().execSQL(formula);
         } catch (Exception e) {
             e.printStackTrace();
-            ToastUtils.a("Ошибка при записи трека в БД! [" + e.getMessage() + "]", true);
+            ToastUtils.a(getString("track_bd_insert_err") + " [" + e.getMessage() + "]", true);
         }
     }
 
     public static void clear() {
         getHelper().getReadableDatabase().execSQL(String.format("DELETE FROM %s", TABLE_NAME));
         deleteRecursive(getCacheDir());
-        sendToast("Кешированные песни удалены");
+        sendToast(getString("cached_tracks_deleted"));
     }
 
     @NonNull
