@@ -1,6 +1,7 @@
 package ru.vtosters.lite.downloaders;
 
 import static ru.vtosters.lite.music.cache.FileCacheImplementation.getTrackFolder;
+import static ru.vtosters.lite.utils.AccountManagerUtils.getUserId;
 import static ru.vtosters.lite.utils.AndroidUtils.getString;
 
 import android.os.Environment;
@@ -18,6 +19,7 @@ import ru.vtosters.lite.music.cache.CacheDatabaseDelegate;
 import ru.vtosters.lite.music.cache.FileCacheImplementation;
 import ru.vtosters.lite.music.callback.MusicCallbackBuilder;
 import ru.vtosters.lite.music.converter.playlist.PlaylistConverter;
+import ru.vtosters.lite.music.downloader.AudioGet;
 import ru.vtosters.lite.music.downloader.PlaylistDownloader;
 import ru.vtosters.lite.music.downloader.TrackDownloader;
 import ru.vtosters.lite.music.notification.MusicNotificationBuilder;
@@ -79,6 +81,37 @@ public class AudioDownloader {
 
         PlaylistDownloader.cachePlaylist(
                 tracks,
+                MusicCallbackBuilder.buildPlaylistCallback(tracks.size(), notification, notificationId)
+        );
+    }
+
+    public static void cacheAllAudios() {
+        var tracks = AudioGet.getAudios();
+
+        var notificationId = getUserId();
+        var notification = MusicNotificationBuilder.buildAllAudiosDownloadNotification(notificationId);
+
+        PlaylistDownloader.cachePlaylist(
+                tracks,
+                MusicCallbackBuilder.buildPlaylistCallback(tracks.size(), notification, notificationId)
+        );
+    }
+
+    public static void downloadAllAudios() {
+        var tracks = AudioGet.getAudios();
+
+        var notificationId = getUserId();
+        var notification = MusicNotificationBuilder.buildAllAudiosDownloadNotification(notificationId);
+
+        var playlistName = "Audios of " + getUserId();
+
+        var musicPath = Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_MUSIC).getAbsolutePath();
+        var downloadPath = musicPath + File.separator + playlistName;
+
+        PlaylistDownloader.downloadPlaylist(
+                tracks,
+                playlistName,
+                downloadPath,
                 MusicCallbackBuilder.buildPlaylistCallback(tracks.size(), notification, notificationId)
         );
     }

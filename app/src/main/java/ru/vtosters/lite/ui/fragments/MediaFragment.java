@@ -39,10 +39,13 @@ import org.json.JSONObject;
 
 import java.io.IOException;
 import java.util.Arrays;
+import java.util.concurrent.ExecutorService;
+import java.util.concurrent.Executors;
 
 import okhttp3.Headers;
 import okhttp3.OkHttpClient;
 import okhttp3.Request;
+import ru.vtosters.lite.downloaders.AudioDownloader;
 import ru.vtosters.lite.downloaders.VideoDownloader;
 import ru.vtosters.lite.music.Scrobbler;
 import ru.vtosters.lite.music.cache.CacheDatabaseDelegate;
@@ -51,11 +54,7 @@ import ru.vtosters.lite.utils.AndroidUtils;
 import ru.vtosters.lite.utils.LifecycleUtils;
 
 public class MediaFragment extends MaterialPreferenceToolbarFragment {
-    private final int REQUEST_CODE_SET_DOWNLOAD_DIRECTORY = 665;
-    private final int REQUEST_CODE_SET_MUSIC_DIRECTORY = 666;
-    private final int REQUEST_CODE_SET_PHOTOS_DIRECTORY = 667;
-    private final int REQUEST_CODE_SET_VIDEOS_DIRECTORY = 668;
-
+    private static final ExecutorService executor = Executors.newCachedThreadPool();
 
     @Override
     public void onCreate(Bundle bundle) {
@@ -99,6 +98,11 @@ public class MediaFragment extends MaterialPreferenceToolbarFragment {
         findPreference("cached_tracks").setSummary(String.format(AndroidUtils.getString("cached_tracks_counter"), CacheDatabaseDelegate.getTrackCount()));
         findPreference("cached_tracks").setOnPreferenceClickListener(preference -> {
             delcache(requireContext());
+            return true;
+        });
+
+        findPreference("audio_download").setOnPreferenceClickListener(preference -> {
+            dlaudio(requireContext());
             return true;
         });
 
@@ -199,6 +203,22 @@ public class MediaFragment extends MaterialPreferenceToolbarFragment {
         alert.show();
         alert.getButton(DialogInterface.BUTTON_POSITIVE).setTextColor(getAccentColor());
         alert.getButton(DialogInterface.BUTTON_NEUTRAL).setTextColor(getResources().getColor(com.vtosters.lite.R.color.red));
+    }
+
+    private void dlaudio(Context ctx) {
+        VkAlertDialog.Builder alertDialog = new VkAlertDialog.Builder(ctx);
+        alertDialog.setTitle("Способ скачивания");
+        alertDialog.setMessage("Выберите способ скачивания всех своих аудио (без плейлистов)");
+        alertDialog.setPositiveButton("В кеш", (dialog, which) -> {
+            executor.submit(AudioDownloader::cacheAllAudios);
+        });
+        alertDialog.setNegativeButton("Как mp3", (dialog, which) -> {
+            executor.submit(AudioDownloader::downloadAllAudios);
+        });
+        var alert = alertDialog.create();
+        alert.show();
+        alert.getButton(DialogInterface.BUTTON_POSITIVE).setTextColor(getAccentColor());
+        alert.getButton(DialogInterface.BUTTON_NEGATIVE).setTextColor(getAccentColor());;
     }
 
     public static void deleteVideoHistory() {

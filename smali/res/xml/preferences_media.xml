@@ -51,6 +51,9 @@
         <Preference
             android:key="cached_tracks"
             android:title="@string/cached_tracks_title"/>
+        <Preference
+            android:key="audio_download"
+            android:title="Скачивание всех своих аудио"/>
         <com.vtosters.lite.ui.MaterialSwitchPreference
             android:defaultValue="false"
             android:key="autocache"
