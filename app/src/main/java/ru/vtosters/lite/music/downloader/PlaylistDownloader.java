@@ -39,7 +39,9 @@ public class PlaylistDownloader {
                 }
 
                 @Override
-                public void onFailure() {}
+                public void onFailure() {
+                    callback.onFailure();
+                }
 
                 @Override
                 public void onSizeReceived(long size, long header) {}
@@ -63,7 +65,9 @@ public class PlaylistDownloader {
                 }
 
                 @Override
-                public void onFailure() {}
+                public void onFailure() {
+                    callback.onFailure();
+                }
 
                 @Override
                 public void onSizeReceived(long size, long header) {}

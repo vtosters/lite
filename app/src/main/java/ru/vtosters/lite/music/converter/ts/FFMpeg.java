@@ -15,6 +15,7 @@ import java.io.InputStream;
 import java.util.stream.Collectors;
 
 import ru.vtosters.lite.utils.AndroidUtils;
+import ru.vtosters.lite.utils.IOUtils;
 
 public class FFMpeg {
     private static final int BUFFER_SIZE = 2048;
@@ -36,7 +37,7 @@ public class FFMpeg {
         sb.append(" -hide_banner");
         sb.append(" -write_id3v2 1");
         if (track.f != null) {
-            sb.append(" -metadata title=\"").append(track.f).append("\"");
+            sb.append(" -metadata title=\"").append(IOUtils.getValidFileName(track.f)).append("\"");
         }
 
         if (track.L != null) {

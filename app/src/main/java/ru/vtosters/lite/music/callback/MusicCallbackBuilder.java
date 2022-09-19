@@ -80,7 +80,8 @@ public class MusicCallbackBuilder {
 
             @Override
             public void onFailure() {
-
+                notification.setContentText(getString("load_audio_error")).setProgress(0, 0, false);
+                notificationManager.notify(notificationId, notification.build());
             }
 
             @Override

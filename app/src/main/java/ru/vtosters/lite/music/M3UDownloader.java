@@ -39,7 +39,7 @@ public class M3UDownloader implements ITrackDownloader {
         client.a(request).a(new okhttp3.Callback() {
             @Override
             public void a(Call call, IOException e) {
-
+                callback.onFailure();
             }
 
             @Override
@@ -86,14 +86,18 @@ public class M3UDownloader implements ITrackDownloader {
                     IOUtils.writeToFile(tsDump, content);
                     callback.onSizeReceived((long) content.length * tses.size(), parser.getHeapSize());
                 } catch (IOException | NoSuchPaddingException | NoSuchAlgorithmException | InvalidAlgorithmParameterException | InvalidKeyException e) {
-                    e.printStackTrace();
                     callback.onFailure();
+                    throw new RuntimeException(e);
                 }
             }));
         }
 
         var future = CompletableFuture.allOf(futures.toArray(new CompletableFuture[0]));
-        future.thenApply(v -> TSMerger.merge(tsesDir, resultTs))
+        future.exceptionally(throwable -> {
+                    callback.onFailure();
+                    return null;
+                })
+                .thenApply(v -> TSMerger.merge(tsesDir, resultTs))
                 .thenApply(mergeResult -> mergeResult && FFMpeg.convert(resultTs, resultMp3.getAbsolutePath(), track))
                 .thenApply(convertResult -> {
                     if (convertResult)
