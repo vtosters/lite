@@ -803,6 +803,7 @@
     <attr name="id_image" format="reference" />
     <attr name="id_time" format="reference" />
     <attr name="ignore_tint" format="boolean" />
+    <attr name="im_ic_add_circle" format="reference" />
     <attr name="im_app_swipe_background_end" format="color" />
     <attr name="im_app_swipe_background_start" format="color" />
     <attr name="im_attach_tint" format="reference|color" />
