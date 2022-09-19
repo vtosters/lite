@@ -6,7 +6,7 @@ import static bruhcollective.itaysonlab.libvkx.client.LibVKXClient.isVkxInstalle
 import static bruhcollective.itaysonlab.libvkx.client.LibVKXClient.lambdaplay;
 import static ru.vtosters.lite.music.cache.CacheDatabaseDelegate.isCached;
 import static ru.vtosters.lite.music.cache.CacheDatabaseDelegate.isVkxCached;
-import static ru.vtosters.lite.utils.NetworkUtils.*;
+import static ru.vtosters.lite.utils.NetworkUtils.isNetworkConnected;
 import static ru.vtosters.lite.utils.Preferences.milkshake;
 
 import android.os.RemoteException;
@@ -18,15 +18,17 @@ import com.vk.music.common.MusicPlaybackLaunchContext;
 import com.vtosters.lite.R;
 
 import java.util.ArrayList;
+import java.util.concurrent.ExecutorService;
+import java.util.concurrent.Executors;
 
 import bruhcollective.itaysonlab.libvkx.client.LibVKXClient;
 import bruhcollective.itaysonlab.libvkx.client.LibVKXClientImpl;
 import ru.vtosters.lite.downloaders.AudioDownloader;
-import ru.vtosters.lite.music.cache.CacheDatabaseDelegate;
 import ru.vtosters.lite.utils.AndroidUtils;
-import ru.vtosters.lite.utils.NetworkUtils;
 
 public class MusicBottomSheetHook {
+    private static final ExecutorService executor = Executors.newCachedThreadPool();
+
     public static ArrayList<MusicAction> hook(ArrayList<MusicAction> actions, MusicTrack musicTrack) {
         var trackid = asId(musicTrack);
 
@@ -128,12 +130,12 @@ public class MusicBottomSheetHook {
             return tryPlayInVKX(null, null, playlist);
 
         if (actionId == AndroidUtils.getIdentifier("add_to_cache", "id")) {
-            AudioDownloader.cachePlaylist(playlist);
+            executor.submit(() -> AudioDownloader.cachePlaylist(playlist));
             return true;
         }
 
         if (actionId == AndroidUtils.getIdentifier("download_mp3", "id")) {
-            AudioDownloader.downloadPlaylist(playlist);
+            executor.submit(() -> AudioDownloader.downloadPlaylist(playlist));
             return true;
         }
 
