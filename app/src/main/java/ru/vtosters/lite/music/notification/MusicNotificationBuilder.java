@@ -46,8 +46,8 @@ public class MusicNotificationBuilder {
     public static NotificationCompat.Builder buildAllAudiosDownloadNotification(int id) {
         var notificationBuilder = new NotificationCompat.Builder(AndroidUtils.getGlobalContext(), NotificationChannels.MUSIC_PLAYLIST_DOWNLOAD_CHANNEL_ID)
                 .setSmallIcon(android.R.drawable.stat_sys_download)
-                .setContentTitle("Скачивание всех аудио")
-                .setContentText("Все аудио " + AccountManagerUtils.getUsername())
+                .setContentTitle("Скачивание всех аудио пользователя " + AccountManagerUtils.getUsername())
+                .setContentText("Все аудио")
                 .setPriority(NotificationCompat.PRIORITY_LOW)
                 .setCategory(NotificationCompat.CATEGORY_PROGRESS)
                 .setAutoCancel(true)
