@@ -87,6 +87,10 @@ public class CacheDatabaseDelegate {
         }
     }
 
+    public static void insertTracks(List<MusicTrack> tracks) {
+        for (var track : tracks) insertTrack(track);
+    }
+
     public static void clear() {
         getHelper().getReadableDatabase().execSQL(String.format("DELETE FROM %s", TABLE_NAME));
         deleteRecursive(getCacheDir());

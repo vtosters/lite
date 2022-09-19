@@ -6,19 +6,20 @@ import com.vk.dto.music.MusicTrack;
 
 import java.io.File;
 
+import bruhcollective.itaysonlab.libvkx.client.LibVKXClient;
 import ru.vtosters.lite.music.Callback;
 import ru.vtosters.lite.music.M3UDownloader;
+import ru.vtosters.lite.music.cache.FileCacheImplementation;
 import ru.vtosters.lite.music.interfaces.ITrackDownloader;
 
 public class TrackDownloader {
-    /**
-     * Download track
-     * @param track Track to download
-     * @param path Folder where to put track
-     * @param callback Callback to call when download status changes
-     */
-    public static void downloadTrack(MusicTrack track, String path, Callback callback, boolean cache) {
-        download(track, path, callback, M3UDownloader.getInstance(), cache);
+    public static void downloadTrack(MusicTrack track, String path, Callback callback) {
+        download(track, path, callback, M3UDownloader.getInstance(), false);
+    }
+
+    public static void cacheTrack(MusicTrack track, Callback callback) {
+        var path = FileCacheImplementation.getTrackFolder(LibVKXClient.asId(track)).getAbsolutePath();
+        download(track, path, callback, M3UDownloader.getInstance(), true);
     }
 
     private static void download(MusicTrack track, String path, Callback callback, ITrackDownloader downloader, boolean cache) {

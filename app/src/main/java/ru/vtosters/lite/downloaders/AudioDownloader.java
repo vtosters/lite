@@ -12,11 +12,8 @@ import com.vk.dto.music.Playlist;
 import java.io.File;
 import java.util.concurrent.Executor;
 import java.util.concurrent.Executors;
-import java.util.stream.Collectors;
 
 import bruhcollective.itaysonlab.libvkx.client.LibVKXClient;
-import java8.util.concurrent.CompletableFuture;
-import ru.vtosters.lite.downloaders.notifications.NotificationChannels;
 import ru.vtosters.lite.music.cache.CacheDatabaseDelegate;
 import ru.vtosters.lite.music.cache.FileCacheImplementation;
 import ru.vtosters.lite.music.callback.MusicCallbackBuilder;
@@ -50,29 +47,13 @@ public class AudioDownloader {
                 tracks,
                 IOUtils.getValidFileName(playlist.g),
                 downloadPath,
-               MusicCallbackBuilder.buildPlaylistCallback(tracks.size(), notification, notificationId)
+                MusicCallbackBuilder.buildPlaylistCallback(tracks.size(), notification, notificationId)
         );
     }
 
 
     public static void downloadAudio(MusicTrack track) {
         downloadM3U8(track, false);
-    }
-
-    private static void downloadM3U8(MusicTrack track, boolean cache) {
-        if (track.D == null) {
-            ToastUtils.a(getString("link_audio_error"));
-            return;
-        }
-
-        var musicPath = cache
-                ? getTrackFolder(LibVKXClient.asId(track)).getAbsolutePath()
-                : Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_MUSIC).getAbsolutePath();
-        var tempId = track.d;
-        var downloadPath = musicPath + File.separator;
-        var notification = MusicNotificationBuilder.buildDownloadNotification(track, tempId);
-
-        TrackDownloader.downloadTrack(track, downloadPath, MusicCallbackBuilder.buildOneTrackCallback(tempId, notification), cache);
     }
 
     public static void cacheTrack(MusicTrack track) {
@@ -88,17 +69,33 @@ public class AudioDownloader {
         downloadM3U8(track, true);
         MusicNotificationBuilder.notifySavingToCache(track);
         CacheDatabaseDelegate.insertTrack(track);
-        NotificationChannels.getNotificationManager().cancel(trackId.hashCode());
     }
 
     public static void cachePlaylist(Playlist playlist) {
         var tracks = PlaylistConverter.getPlaylist(playlist);
-        var tracksWithUrls = tracks.stream().filter(track -> !track.D.isEmpty()).collect(Collectors.toList());
 
-        for (MusicTrack musicTrack : tracksWithUrls) {
-            CompletableFuture.runAsync(() -> cacheTrack(musicTrack), executor);
-        }
+        var notificationId = playlist.g.hashCode();
+        var notification = MusicNotificationBuilder.buildPlaylistDownloadNotification(playlist.g, notificationId);
+
+        PlaylistDownloader.cachePlaylist(
+                tracks,
+                MusicCallbackBuilder.buildPlaylistCallback(tracks.size(), notification, notificationId)
+        );
     }
 
+    private static void downloadM3U8(MusicTrack track, boolean cache) {
+        if (track.D == null) {
+            ToastUtils.a(getString("link_audio_error"));
+            return;
+        }
 
+        var musicPath = cache
+                ? getTrackFolder(LibVKXClient.asId(track)).getAbsolutePath()
+                : Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_MUSIC).getAbsolutePath();
+        var tempId = track.d;
+        var downloadPath = musicPath + File.separator;
+        var notification = MusicNotificationBuilder.buildDownloadNotification(track, tempId);
+
+        TrackDownloader.downloadTrack(track, downloadPath, MusicCallbackBuilder.buildOneTrackCallback(tempId, notification));
+    }
 }

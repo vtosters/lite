@@ -12,6 +12,7 @@ import java.util.concurrent.atomic.AtomicInteger;
 
 import ru.vtosters.lite.downloaders.notifications.NotificationChannels;
 import ru.vtosters.lite.music.Callback;
+import ru.vtosters.lite.music.cache.CacheDatabaseDelegate;
 
 public class PlaylistDownloader {
     private static NotificationManagerCompat notificationManager = NotificationChannels.getNotificationManager();
@@ -42,7 +43,31 @@ public class PlaylistDownloader {
 
                 @Override
                 public void onSizeReceived(long size, long header) {}
-            }, false);
+            });
+        }
+    }
+
+    public static void cachePlaylist(List<MusicTrack> playlist, Callback callback) {
+        var downloadedTracks = new AtomicInteger(0);
+
+        for (MusicTrack musicTrack : playlist) {
+            TrackDownloader.cacheTrack(musicTrack, new Callback() {
+                @Override
+                public void onProgress(int progress) {}
+
+                @Override
+                public void onSuccess() {
+                    var currentProgress = downloadedTracks.incrementAndGet();
+                    callback.onProgress(currentProgress);
+                    CacheDatabaseDelegate.insertTrack(musicTrack);
+                }
+
+                @Override
+                public void onFailure() {}
+
+                @Override
+                public void onSizeReceived(long size, long header) {}
+            });
         }
     }
 }

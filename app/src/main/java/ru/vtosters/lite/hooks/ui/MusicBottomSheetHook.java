@@ -131,7 +131,7 @@ public class MusicBottomSheetHook {
 
         if (actionId == AndroidUtils.getIdentifier("add_to_cache", "id")) {
             executor.submit(() -> AudioDownloader.cachePlaylist(playlist));
-            return true;
+            return true; 
         }
 
         if (actionId == AndroidUtils.getIdentifier("download_mp3", "id")) {
