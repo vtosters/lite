@@ -146,7 +146,7 @@
                     android:background="@drawable/highlight_icon"
                     android:contentDescription="@string/accessibility_msg_send_attach"
                     android:padding="8.0dip"
-                    android:src="?im_ic_attach"
+                    android:src="?im_ic_add_circle"
                     android:tint="?accent" />
 
                 <com.vk.im.ui.views.RichEditText
