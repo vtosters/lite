@@ -15,6 +15,7 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.concurrent.ExecutionException;
+import java.util.stream.Collectors;
 
 import java8.util.concurrent.CompletableFuture;
 import okhttp3.Headers;
@@ -28,20 +29,24 @@ import ru.vtosters.lite.utils.AndroidUtils;
  */
 public class PlaylistConverter {
     public static List<MusicTrack> getPlaylist(Playlist oldPlaylist) {
-        var accessKey = oldPlaylist.Q;
+        var tracks = requestPlaylist(0, oldPlaylist.b, oldPlaylist.Q, oldPlaylist.a);
+        return tracks.stream().filter(track -> !track.D.isEmpty()).collect(Collectors.toList());
+    }
 
-        String requestUrl = "https://" + getApi() + "/method/execute.getPlaylist" +
+    private static List<MusicTrack> requestPlaylist(int offset, int ownerId, String accessKey, int id) {
+        var audioCount = 1000;
+        var requestUrl = "https://" + getApi() + "/method/execute.getPlaylist" +
                 "?v=5.119" +
                 "&https=1" +
-                "&audio_count=1000" +
+                "&audio_count=" + audioCount +
                 "&need_playlist=1" +
                 "&device_id=" + DeviceIdProvider.d(AndroidUtils.getGlobalContext()) +
-                "&owner_id=" + oldPlaylist.b +
+                "&owner_id=" + ownerId +
                 "&access_key=" + accessKey +
                 "&func_v=5" +
-                "&id=" + oldPlaylist.a +
+                "&id=" + id +
                 "&lang=" + getLocale() +
-                "&audio_offset=0" +
+                "&audio_offset=" + offset +
                 "&need_owner=1" +
                 "&access_token=" + AccountManagerUtils.getUserToken();
 
@@ -65,11 +70,11 @@ public class PlaylistConverter {
             var tracks = new ArrayList<MusicTrack>();
             for (int i = 0; i < playlist.length(); i++) {
                 var track = new MusicTrack(playlist.getJSONObject(i));
+                tracks.add(track);
+            }
 
-                // add track only if it has a valid url
-                if (!track.D.isEmpty()) {
-                    tracks.add(track);
-                }
+            if (tracks.size() == audioCount) {
+                tracks.addAll(requestPlaylist(offset + audioCount, ownerId, accessKey, id));
             }
 
             return tracks;

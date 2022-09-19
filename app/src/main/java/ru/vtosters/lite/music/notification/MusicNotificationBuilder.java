@@ -32,7 +32,7 @@ public class MusicNotificationBuilder {
     public static NotificationCompat.Builder buildPlaylistDownloadNotification(String playlistName, int id) {
         var notificationBuilder = new NotificationCompat.Builder(AndroidUtils.getGlobalContext(), NotificationChannels.MUSIC_PLAYLIST_DOWNLOAD_CHANNEL_ID)
                 .setSmallIcon(android.R.drawable.stat_sys_download)
-                .setContentTitle(getString("cached_playlist_loading") + " «" + playlistName + "»")
+                .setContentTitle(getString("playlist_downloading") + " «" + playlistName + "»")
                 .setContentText(playlistName)
                 .setPriority(NotificationCompat.PRIORITY_LOW)
                 .setCategory(NotificationCompat.CATEGORY_PROGRESS)
