@@ -64,7 +64,12 @@ public class PlaylistConverter {
             var playlist = new JSONObject(response).getJSONObject("response").getJSONArray("audios");
             var tracks = new ArrayList<MusicTrack>();
             for (int i = 0; i < playlist.length(); i++) {
-                tracks.add(new MusicTrack(playlist.getJSONObject(i)));
+                var track = new MusicTrack(playlist.getJSONObject(i));
+
+                // add track only if it has a valid url
+                if (!track.D.isEmpty()) {
+                    tracks.add(track);
+                }
             }
 
             return tracks;

@@ -37,7 +37,6 @@ public class AudioDownloader {
 
     public static void downloadPlaylist(Playlist playlist) {
         var tracks = PlaylistConverter.getPlaylist(playlist);
-        var tracksWithUrls = tracks.stream().filter(track -> !track.D.isEmpty()).collect(Collectors.toList());
 
         var playlistName = IOUtils.getValidFileName(playlist.g);
 
@@ -48,10 +47,10 @@ public class AudioDownloader {
         var notification = MusicNotificationBuilder.buildPlaylistDownloadNotification(playlistName, notificationId);
 
         PlaylistDownloader.downloadPlaylist(
-                tracksWithUrls,
+                tracks,
                 IOUtils.getValidFileName(playlist.g),
                 downloadPath,
-               MusicCallbackBuilder.buildPlaylistCallback(tracksWithUrls.size(), notification, notificationId)
+               MusicCallbackBuilder.buildPlaylistCallback(tracks.size(), notification, notificationId)
         );
     }
 
