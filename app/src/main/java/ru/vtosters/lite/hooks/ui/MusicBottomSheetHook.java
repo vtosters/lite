@@ -109,7 +109,7 @@ public class MusicBottomSheetHook {
         } else if (actionId == AndroidUtils.getIdentifier("add_to_cache_vkx", "id")) {
             LibVKXClient.getInstance().runOnService(service -> {
                 try {
-                    service.addTrackToCache(track.d, track.e, (track.C != null) ? track.C : "");
+                    service.addTrackToCache(track.d, track.e, (track.J != null) ? track.J : "");
                 } catch (RemoteException e) {
                     e.printStackTrace();
                 }
@@ -118,7 +118,18 @@ public class MusicBottomSheetHook {
         }
 
         if (actionId == AndroidUtils.getIdentifier("download_mp3", "id")) {
-            AudioDownloader.downloadAudio(track);
+            if (LibVKXClient.isIntegrationEnabled()) {
+                LibVKXClient.getInstance().runOnService(service -> {
+                    try {
+                        service.downloadTrack(track.d, track.e, (track.J != null) ? track.J : "");
+                    } catch (RemoteException e) {
+                        e.printStackTrace();
+                    }
+                });
+            } else {
+                AudioDownloader.downloadAudio(track);
+            }
+
             return true;
         }
 
@@ -135,7 +146,17 @@ public class MusicBottomSheetHook {
         }
 
         if (actionId == AndroidUtils.getIdentifier("download_mp3", "id")) {
-            executor.submit(() -> AudioDownloader.downloadPlaylist(playlist));
+            if (LibVKXClient.isIntegrationEnabled()) {
+                LibVKXClient.getInstance().runOnService(service -> {
+                    try {
+                        service.downloadPlaylist(playlist.a, playlist.b, (playlist.Q != null) ? playlist.Q : "");
+                    } catch (RemoteException e) {
+                        e.printStackTrace();
+                    }
+                });
+            } else {
+                executor.submit(() -> AudioDownloader.downloadPlaylist(playlist));
+            }
             return true;
         }
 
