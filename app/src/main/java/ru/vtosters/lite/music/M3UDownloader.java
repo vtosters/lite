@@ -62,10 +62,20 @@ public class M3UDownloader implements ITrackDownloader {
         AtomicInteger progress = new AtomicInteger(0);
         List<CompletableFuture<Void>> futures = new ArrayList<>();
 
-        var tsesDir = new File(outDir, String.valueOf(payload.hashCode()));
+        var tsesDir = new File(outDir, String.valueOf(track.d));
         tsesDir.mkdirs();
         var resultTs = new File(tsesDir, "result.ts");
-        var fileName = IOUtils.getValidFileName((cache ? "track" : track.toString()) + ".mp3");
+
+        String title = null;
+
+        if (track.f != null) {
+            title = track.f;
+            if (!track.g.isEmpty()) {
+                title += " (" + track.g + ")";
+            }
+        }
+
+        var fileName = IOUtils.getValidFileName((cache ? "track" : track.C + " - " + title) + ".mp3");
         var resultMp3 = new File(outDir, fileName);
 
         callback.onProgress(5);
@@ -84,6 +94,7 @@ public class M3UDownloader implements ITrackDownloader {
                     }
                     File tsDump = new File(tsesDir, ts.getName());
                     IOUtils.writeToFile(tsDump, content);
+                    callback.onProgress(10 + Math.round(80.0f * progress.addAndGet(1) / tses.size()));
                     callback.onSizeReceived((long) content.length * tses.size(), parser.getHeapSize());
                 } catch (IOException | NoSuchPaddingException | NoSuchAlgorithmException | InvalidAlgorithmParameterException | InvalidKeyException e) {
                     callback.onFailure();
@@ -91,7 +102,6 @@ public class M3UDownloader implements ITrackDownloader {
                 }
             }));
         }
-
         var future = CompletableFuture.allOf(futures.toArray(new CompletableFuture[0]));
         future.exceptionally(throwable -> {
                     callback.onFailure();
