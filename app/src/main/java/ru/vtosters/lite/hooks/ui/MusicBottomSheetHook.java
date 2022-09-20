@@ -81,8 +81,15 @@ public class MusicBottomSheetHook {
     }
 
     public static ArrayList<MusicAction> hook(ArrayList<MusicAction> actions, Playlist playlist) {
-        if (isVkxInstalled())
+        if (isVkxInstalled()) {
             actions.add(getPlayInVKXAction());
+
+            if (isVkxCached(playlist.a, playlist.b)){
+                actions.add(getRemoveCacheTrackVkxAction());
+            } else {
+                actions.add(addToCacheTrackVkxAction());
+            }
+        }
 
         actions.add(addToCacheTrackAction());
 
@@ -143,6 +150,26 @@ public class MusicBottomSheetHook {
         if (actionId == AndroidUtils.getIdentifier("add_to_cache", "id")) {
             executor.submit(() -> AudioDownloader.cachePlaylist(playlist));
             return true; 
+        }
+
+        if (actionId == AndroidUtils.getIdentifier("remove_from_cache_vkx", "id")) {
+            LibVKXClient.getInstance().runOnService(service -> {
+                try {
+                    service.deletePlaylistFromCache(playlist.a, playlist.b);
+                } catch (RemoteException e) {
+                    e.printStackTrace();
+                }
+            });
+            return true;
+        } else if (actionId == AndroidUtils.getIdentifier("add_to_cache_vkx", "id")) {
+            LibVKXClient.getInstance().runOnService(service -> {
+                try {
+                    service.addPlaylistToCache(playlist.a, playlist.b, (playlist.Q != null) ? playlist.Q : "");
+                } catch (RemoteException e) {
+                    e.printStackTrace();
+                }
+            });
+            return true;
         }
 
         if (actionId == AndroidUtils.getIdentifier("download_mp3", "id")) {

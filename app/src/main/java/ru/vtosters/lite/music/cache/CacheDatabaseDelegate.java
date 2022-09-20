@@ -251,6 +251,24 @@ public class CacheDatabaseDelegate {
             return false;
     }
 
+    public static boolean isVkxCached(int playlist_id, int owner_id) {
+        return LibVKXClient.getInstance().runOnServiceSync(new LibVKXClientImpl.LibVKXActionGeneric<>(){
+            @Override
+            public Boolean run(ILibVkxService service){
+                try {
+                    return service.isPlaylistCached(playlist_id, owner_id);
+                } catch (RemoteException e) {
+                    return false;
+                }
+            }
+
+            @Override
+            public Boolean defaultValue(){
+                return false;
+            }
+        });
+    }
+
     public static boolean isVkxCached(String trackId) {
         return LibVKXClient.getInstance().runOnServiceSync(new LibVKXClientImpl.LibVKXActionGeneric<>(){
             @Override

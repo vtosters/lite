@@ -27,4 +27,7 @@ interface ILibVkxService {
     String getCacheCatalog() = 11;
     List<String> getTracksInPlaylist(in String playlist_id, in String owner_id) = 12;
     String getPlaylistDefJson(in String playlist_id, in String owner_id) = 13;
+
+    // [ver 1.3]
+    boolean isPlaylistCached(in int playlist_id, in int owner_id) = 14;
 }
