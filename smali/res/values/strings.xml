@@ -6437,4 +6437,6 @@ May look like a fake leaving the online"</string>
     <string name="download_method_mp3">As .mp3</string>
 
     <string name="audio_download_title">Download all your audio</string>
+
+    <string name="app_activities_error">An application error has occurred. Restart the application</string>
 </resources>

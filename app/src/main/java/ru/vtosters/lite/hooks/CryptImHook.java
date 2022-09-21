@@ -61,7 +61,7 @@ public class CryptImHook{
         Activity ctx = getCurrentActivity();
 
         if (ctx == null) {
-            sendToast("Ошибка в работе приложения. Перезапустите приложение");
+            sendToast(getString("app_activities_error"));
             return;
         }
 
@@ -112,7 +112,7 @@ public class CryptImHook{
         Context ctx = getCurrentActivity();
 
         if (ctx == null) {
-            sendToast("Ошибка в работе приложения. Перезапустите приложение");
+            sendToast(getString("app_activities_error"));
             return;
         }
 

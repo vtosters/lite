@@ -6299,4 +6299,6 @@
     <string name="download_method_mp3">Как .mp3</string>
 
     <string name="audio_download_title">Скачивание всех своих аудио</string>
+
+    <string name="app_activities_error">Ошибка в работе приложения. Перезапустите приложение</string>
 </resources>
