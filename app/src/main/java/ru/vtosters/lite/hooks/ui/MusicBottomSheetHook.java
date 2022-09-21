@@ -1,5 +1,6 @@
 package ru.vtosters.lite.hooks.ui;
 
+import static bruhcollective.itaysonlab.libvkx.client.LibVKXClient.*;
 import static bruhcollective.itaysonlab.libvkx.client.LibVKXClient.asId;
 import static bruhcollective.itaysonlab.libvkx.client.LibVKXClient.getInstance;
 import static bruhcollective.itaysonlab.libvkx.client.LibVKXClient.isVkxInstalled;
@@ -30,13 +31,15 @@ public class MusicBottomSheetHook {
     private static final ExecutorService executor = Executors.newCachedThreadPool();
 
     public static ArrayList<MusicAction> hook(ArrayList<MusicAction> actions, MusicTrack musicTrack) {
-        var trackid = asId(musicTrack);
-
         if (musicTrack.F1()) return actions;
+
+        var trackid = asId(musicTrack);
 
         if (isVkxInstalled()) {
             actions.add(getPlayInVKXAction());
+        }
 
+        if (isIntegrationEnabled()) {
             if (isVkxCached(trackid)){
                 actions.add(getRemoveCacheTrackVkxAction());
             } else {
@@ -53,9 +56,9 @@ public class MusicBottomSheetHook {
 
 
     public static ArrayList<MusicAction> hookDownloadBTN(ArrayList<MusicAction> actions, MusicTrack musicTrack) {
-        var trackid = asId(musicTrack);
-
         if (musicTrack.F1()) return actions;
+
+        var trackid = asId(musicTrack);
 
         if (isCached(trackid)){
             actions.add(new MusicAction(
@@ -81,21 +84,21 @@ public class MusicBottomSheetHook {
     }
 
     public static ArrayList<MusicAction> hook(ArrayList<MusicAction> actions, Playlist playlist) {
-        if (isVkxInstalled()) {
-            actions.add(getPlayInVKXAction());
+        if (playlist.D) return actions;
 
+        if (isVkxInstalled()) actions.add(getPlayInVKXAction());
+
+        if (isIntegrationEnabled()){
             if (isVkxCached(playlist.a, playlist.b)){
                 actions.add(getRemoveCacheTrackVkxAction());
             } else {
                 actions.add(addToCacheTrackVkxAction());
             }
+        } else {
+            actions.add(addToCacheTrackAction());
         }
 
-        actions.add(addToCacheTrackAction());
-
-        if (isNetworkConnected()){
-            actions.add(downloadAsMp3Action());
-        }
+        if (isNetworkConnected()) actions.add(downloadAsMp3Action());
 
         return actions;
     }
@@ -105,7 +108,7 @@ public class MusicBottomSheetHook {
             return tryPlayInVKX(track, context, playlist);
 
         if (actionId == AndroidUtils.getIdentifier("remove_from_cache_vkx", "id")) {
-            LibVKXClient.getInstance().runOnService(service -> {
+            getInstance().runOnService(service -> {
                 try {
                     service.deleteTrackFromCache(track.d, track.e);
                 } catch (RemoteException e) {
@@ -114,7 +117,7 @@ public class MusicBottomSheetHook {
             });
             return true;
         } else if (actionId == AndroidUtils.getIdentifier("add_to_cache_vkx", "id")) {
-            LibVKXClient.getInstance().runOnService(service -> {
+            getInstance().runOnService(service -> {
                 try {
                     service.addTrackToCache(track.d, track.e, (track.J != null) ? track.J : "");
                 } catch (RemoteException e) {
@@ -125,8 +128,8 @@ public class MusicBottomSheetHook {
         }
 
         if (actionId == AndroidUtils.getIdentifier("download_mp3", "id")) {
-            if (LibVKXClient.isIntegrationEnabled()) {
-                LibVKXClient.getInstance().runOnService(service -> {
+            if (isIntegrationEnabled()) {
+                getInstance().runOnService(service -> {
                     try {
                         service.downloadTrack(track.d, track.e, (track.J != null) ? track.J : "");
                     } catch (RemoteException e) {
@@ -153,7 +156,7 @@ public class MusicBottomSheetHook {
         }
 
         if (actionId == AndroidUtils.getIdentifier("remove_from_cache_vkx", "id")) {
-            LibVKXClient.getInstance().runOnService(service -> {
+            getInstance().runOnService(service -> {
                 try {
                     service.deletePlaylistFromCache(playlist.a, playlist.b);
                 } catch (RemoteException e) {
@@ -162,7 +165,7 @@ public class MusicBottomSheetHook {
             });
             return true;
         } else if (actionId == AndroidUtils.getIdentifier("add_to_cache_vkx", "id")) {
-            LibVKXClient.getInstance().runOnService(service -> {
+            getInstance().runOnService(service -> {
                 try {
                     service.addPlaylistToCache(playlist.a, playlist.b, (playlist.Q != null) ? playlist.Q : "");
                 } catch (RemoteException e) {
@@ -173,8 +176,8 @@ public class MusicBottomSheetHook {
         }
 
         if (actionId == AndroidUtils.getIdentifier("download_mp3", "id")) {
-            if (LibVKXClient.isIntegrationEnabled()) {
-                LibVKXClient.getInstance().runOnService(service -> {
+            if (isIntegrationEnabled()) {
+                getInstance().runOnService(service -> {
                     try {
                         service.downloadPlaylist(playlist.a, playlist.b, (playlist.Q != null) ? playlist.Q : "");
                     } catch (RemoteException e) {
