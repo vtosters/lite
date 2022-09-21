@@ -8,6 +8,7 @@ import static ru.vtosters.lite.utils.AndroidUtils.getString;
 import static ru.vtosters.lite.utils.AndroidUtils.sendToast;
 
 import android.Manifest;
+import android.app.Activity;
 import android.app.ProgressDialog;
 import android.content.Context;
 import android.content.SyncResult;
@@ -45,11 +46,11 @@ public class ContactsUtils{
                 });
     }
 
-    public static void uploadContacts(Context ctx){
+    public static void uploadContacts(Activity ctx){
         try {
             if (ContextCompat.checkSelfPermission(ctx, Manifest.permission.READ_CONTACTS) != PackageManager.PERMISSION_GRANTED) {
                 sendToast(getString("contact_permission_toast"));
-                requestPermissions(LifecycleUtils.getCurrentActivity(), new String[] {Manifest.permission.READ_CONTACTS}, 11111);
+                requestPermissions(ctx, new String[] {Manifest.permission.READ_CONTACTS}, 11111);
             } else {
                 var account = VKAuthUtils.a.a(VKAccountManager.d().Z());
                 ContactsSyncAdapterService.c(ctx, account, new Bundle(), new SyncResult());

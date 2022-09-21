@@ -225,7 +225,7 @@ public class MediaFragment extends MaterialPreferenceToolbarFragment {
         alert.getButton(DialogInterface.BUTTON_NEGATIVE).setTextColor(getAccentColor());;
     }
 
-    public static void deleteVideoHistory() {
+    public void deleteVideoHistory() {
         Thread thread = new Thread(() -> {
             try {
                 var request = new Request.a()
@@ -237,9 +237,9 @@ public class MediaFragment extends MaterialPreferenceToolbarFragment {
                     var response = new JSONObject(new OkHttpClient().a(request).execute().a().g());
 
                     if (response.optInt("response") == 1){
-                        LifecycleUtils.getCurrentActivity().runOnUiThread(() -> sendToast(AndroidUtils.getString("video_history_cleaned")));
+                        requireActivity().runOnUiThread(() -> sendToast(AndroidUtils.getString("video_history_cleaned")));
                     } else {
-                        LifecycleUtils.getCurrentActivity().runOnUiThread(() -> sendToast(AndroidUtils.getString("delete_video_history_error")));
+                        requireActivity().runOnUiThread(() -> sendToast(AndroidUtils.getString("delete_video_history_error")));
                     }
 
                     Log.d("VideoHistory", response.toString());
