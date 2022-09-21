@@ -97,7 +97,11 @@ public class MediaFragment extends MaterialPreferenceToolbarFragment {
 
         findPreference("cached_tracks").setSummary(String.format(AndroidUtils.getString("cached_tracks_counter"), CacheDatabaseDelegate.getTrackCount()));
         findPreference("cached_tracks").setOnPreferenceClickListener(preference -> {
-            delcache(requireContext());
+            if (CacheDatabaseDelegate.getTrackCount() == 0){
+                sendToast("У вас отсутствуют кешированные песни");
+            } else {
+                delcache(requireContext());
+            }
             return true;
         });
 
@@ -194,7 +198,7 @@ public class MediaFragment extends MaterialPreferenceToolbarFragment {
         alertDialog.setTitle(AndroidUtils.getString("warning"));
         alertDialog.setMessage(AndroidUtils.getString("cached_tracks_remove_confirm"));
         alertDialog.setPositiveButton(AndroidUtils.getString("yes"), (dialog, which) -> {
-            CacheDatabaseDelegate.clear();
+            executor.submit(CacheDatabaseDelegate::clear);
         });
         alertDialog.setNeutralButton(AndroidUtils.getString("no"), (dialog, which) -> {
             dialog.cancel();
