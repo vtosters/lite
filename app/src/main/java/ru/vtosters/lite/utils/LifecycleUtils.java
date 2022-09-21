@@ -43,9 +43,7 @@ public class LifecycleUtils {
 
             @Override // android.app.Application.ActivityLifecycleCallbacks
             public void onActivityCreated(Activity activity, Bundle bundle) {
-                if (activity instanceof VKActivity) {
-                    activities.add(activity);
-                }
+                activities.add(activity);
             }
 
             @Override // android.app.Application.ActivityLifecycleCallbacks
@@ -56,7 +54,7 @@ public class LifecycleUtils {
     }
 
     public static Activity getCurrentActivity() {
-        return activities.size() > 0 ? activities.get(0) : null;
+        return activities.size() > 0 ? activities.get(activities.size() - 1) : null;
     }
 
     public static void restartApplication() {
