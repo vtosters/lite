@@ -6288,4 +6288,15 @@
     <string name="autocache_summ">Автоматически кешировать все воспроизведенные вами песни</string>
 
     <string name="playlist_download_notf">Загружено песен: %1$d из %2$d</string>
+
+    <string name="all_audio">Все аудио</string>
+    <string name="notf_audio_dl_user">Скачивание всех аудио пользователя</string>
+    <string name="no_cache_error">У вас отсутствуют кешированные песни</string>
+
+    <string name="download_method">Способ скачивания</string>
+    <string name="download_method_desc">Выберите способ скачивания всех своих аудио (без плейлистов)</string>
+    <string name="download_method_cache">В кеш</string>
+    <string name="download_method_mp3">Как .mp3</string>
+
+    <string name="audio_download_title">Скачивание всех своих аудио</string>
 </resources>

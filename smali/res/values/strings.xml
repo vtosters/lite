@@ -6426,4 +6426,15 @@ May look like a fake leaving the online"</string>
     <string name="autocache_summ">Automatically cache all songs you have played</string>
 
     <string name="playlist_download_notf">Downloaded %1$d of %2$d tracks</string>
+
+    <string name="all_audio">All audio</string>
+    <string name="notf_audio_dl_user">Download all user audio</string>
+    <string name="no_cache_error">You have no cached songs</string>
+
+    <string name="download_method">Download method</string>
+    <string name="download_method_desc">Select how you want to download all your audios (without playlists)</string>
+    <string name="download_method_cache">To cache</string>
+    <string name="download_method_mp3">As .mp3</string>
+
+    <string name="audio_download_title">Download all your audio</string>
 </resources>

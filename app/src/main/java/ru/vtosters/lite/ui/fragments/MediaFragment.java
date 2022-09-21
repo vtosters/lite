@@ -98,7 +98,7 @@ public class MediaFragment extends MaterialPreferenceToolbarFragment {
         findPreference("cached_tracks").setSummary(String.format(AndroidUtils.getString("cached_tracks_counter"), CacheDatabaseDelegate.getTrackCount()));
         findPreference("cached_tracks").setOnPreferenceClickListener(preference -> {
             if (CacheDatabaseDelegate.getTrackCount() == 0){
-                sendToast("У вас отсутствуют кешированные песни");
+                sendToast(AndroidUtils.getString("no_cache_error"));
             } else {
                 delcache(requireContext());
             }
@@ -211,12 +211,12 @@ public class MediaFragment extends MaterialPreferenceToolbarFragment {
 
     private void dlaudio(Context ctx) {
         VkAlertDialog.Builder alertDialog = new VkAlertDialog.Builder(ctx);
-        alertDialog.setTitle("Способ скачивания");
-        alertDialog.setMessage("Выберите способ скачивания всех своих аудио (без плейлистов)");
-        alertDialog.setPositiveButton("В кеш", (dialog, which) -> {
+        alertDialog.setTitle(AndroidUtils.getString("download_method"));
+        alertDialog.setMessage(AndroidUtils.getString("download_method_desc"));
+        alertDialog.setPositiveButton(AndroidUtils.getString("download_method_cache"), (dialog, which) -> {
             executor.submit(AudioDownloader::cacheAllAudios);
         });
-        alertDialog.setNegativeButton("Как mp3", (dialog, which) -> {
+        alertDialog.setNegativeButton(AndroidUtils.getString("download_method_mp3"), (dialog, which) -> {
             executor.submit(AudioDownloader::downloadAllAudios);
         });
         var alert = alertDialog.create();
