@@ -122,13 +122,15 @@ public class AudioDownloader {
             return;
         }
 
-        var musicPath = cache
-                ? getTrackFolder(LibVKXClient.asId(track)).getAbsolutePath()
-                : Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_MUSIC).getAbsolutePath();
+        var musicPath = Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_MUSIC).getAbsolutePath();
         var tempId = track.d;
         var downloadPath = musicPath + File.separator;
         var notification = MusicNotificationBuilder.buildDownloadNotification(track, tempId);
 
-        TrackDownloader.downloadTrack(track, downloadPath, MusicCallbackBuilder.buildOneTrackCallback(tempId, notification));
+        if (cache) {
+            TrackDownloader.cacheTrack(track, MusicCallbackBuilder.buildOneTrackCallback(tempId, notification));
+        } else {
+            TrackDownloader.downloadTrack(track, downloadPath, MusicCallbackBuilder.buildOneTrackCallback(tempId, notification));
+        }
     }
 }
