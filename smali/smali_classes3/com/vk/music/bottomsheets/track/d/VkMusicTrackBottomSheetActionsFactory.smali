@@ -62,52 +62,60 @@
 
     if-nez v2, :cond_4
 
-    .line 4
-    new-instance v2, Lcom/vk/music/bottomsheets/a/MusicAction;
+    # .line 4
+    # new-instance v2, Lcom/vk/music/bottomsheets/a/MusicAction;
 
-    const v4, 0x7f0a087c
+    # const v4, 0x7f0a087c
 
-    const v3, 0x7f08043c
+    # const v3, 0x7f08043c
 
-    const v5, 0x7f08043a
+    # const v5, 0x7f08043a
 
-    invoke-virtual {v0, v3, v5}, Lcom/vk/music/bottomsheets/track/d/VkMusicTrackBottomSheetActionsFactory;->a(II)I
+    # invoke-virtual {v0, v3, v5}, Lcom/vk/music/bottomsheets/track/d/VkMusicTrackBottomSheetActionsFactory;->a(II)I
 
-    move-result v5
+    # move-result v5
 
-    const/4 v6, 0x0
+    # const/4 v6, 0x0
 
-    invoke-virtual/range {p1 .. p1}, Lcom/vk/dto/music/MusicTrack;->F1()Z
+    # invoke-virtual/range {p1 .. p1}, Lcom/vk/dto/music/MusicTrack;->F1()Z
 
-    move-result v3
+    # move-result v3
 
-    const v12, 0x7f060156
+    # const v12, 0x7f060156
 
-    const v13, 0x7f060077
+    # const v13, 0x7f060077
 
-    if-eqz v3, :cond_0
+    # if-eqz v3, :cond_0
 
-    const v7, 0x7f060156
+    # const v7, 0x7f060156
 
-    goto :goto_0
+    # goto :goto_0
 
-    :cond_0
-    const v7, 0x7f060077
+    # :cond_0
+    # const v7, 0x7f060077
 
-    :goto_0
-    const v8, 0x7f12087d
+    # :goto_0
+    # const v8, 0x7f12087d
 
-    const/4 v9, 0x0
+    # const/4 v9, 0x0
 
-    const/16 v10, 0x20
+    # const/16 v10, 0x20
 
-    const/4 v11, 0x0
+    # const/4 v11, 0x0
 
-    move-object v3, v2
+    # move-object v3, v2
 
-    invoke-direct/range {v3 .. v11}, Lcom/vk/music/bottomsheets/a/MusicAction;-><init>(IIIIIZILkotlin/jvm/internal/DefaultConstructorMarker;)V
+    # invoke-direct/range {v3 .. v11}, Lcom/vk/music/bottomsheets/a/MusicAction;-><init>(IIIIIZILkotlin/jvm/internal/DefaultConstructorMarker;)V
 
-    invoke-interface {v1, v2}, Ljava/util/List;->add(Ljava/lang/Object;)Z
+    # invoke-interface {v1, v2}, Ljava/util/List;->add(Ljava/lang/Object;)Z
+
+    move-object/from16 v10, p1
+
+    invoke-static {v1, v10}, Lru/vtosters/lite/hooks/ui/MusicBottomSheetHook;->hookDownloadBTN(Ljava/util/ArrayList;Lcom/vk/dto/music/MusicTrack;)Ljava/util/ArrayList;
+
+    move-result-object v1
+
+    move-object/from16 p1, v10
 
     .line 5
     sget-object v2, Lcom/vk/music/common/Music$a;->j:Lcom/vk/music/common/Music$a;
@@ -697,6 +705,10 @@
 
     .line 31
     :cond_9
+    invoke-static {v3, v1}, Lru/vtosters/lite/hooks/ui/MusicBottomSheetHook;->hook(Ljava/util/ArrayList;Lcom/vk/dto/music/MusicTrack;)Ljava/util/ArrayList;
+
+    move-result-object v3
+    
     invoke-interface/range {p2 .. p2}, Lcom/vk/music/bottomsheets/track/MusicTrackBottomSheetModel1;->k()Z
 
     move-result v2
@@ -738,11 +750,5 @@
 
     :cond_a
     :goto_3
-
-    # invoke static ru.vtosters.lite.hooks.ui.MusicBottomSheetHook.hook(ArrayList<MusicAction> actions)
-    invoke-static {v3}, Lru/vtosters/lite/hooks/ui/MusicBottomSheetHook;->hook(Ljava/util/ArrayList;)Ljava/util/ArrayList;
-
-    move-result-object v3
-
     return-object v3
 .end method

@@ -7,6 +7,7 @@ import static ru.vtosters.lite.utils.LifecycleUtils.getCurrentActivity;
 import static ru.vtosters.lite.utils.ThemesUtils.getAlertStyle;
 import static ru.vtosters.lite.utils.ThemesUtils.getSTextAttr;
 
+import android.app.Activity;
 import android.content.Context;
 import android.content.res.ColorStateList;
 import android.text.Editable;
@@ -57,7 +58,14 @@ public class CryptImHook{
         }
 
         IMProcessor finalEnabled = enabled;
-        new VkAlertDialog.Builder(getCurrentActivity())
+        Activity ctx = getCurrentActivity();
+
+        if (ctx == null) {
+            sendToast(getString("app_activities_error"));
+            return;
+        }
+
+        new VkAlertDialog.Builder(ctx)
                 .setTitle(getString("encryption_sett"))
                 .setSingleChoiceItems(titles, enabledPosition, (dialog, which) -> {
                     if (which == 0) {
@@ -102,6 +110,11 @@ public class CryptImHook{
         }
 
         Context ctx = getCurrentActivity();
+
+        if (ctx == null) {
+            sendToast(getString("app_activities_error"));
+            return;
+        }
 
         LinearLayout linearLayout = new LinearLayout(ctx);
 

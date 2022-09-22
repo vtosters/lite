@@ -2834,7 +2834,7 @@ or deleted"</string>
     <string name="place">Map</string>
     <string name="places">Places</string>
     <string name="play_queue">Up next</string>
-    <string name="player_download_finished">Download complete</string>
+    <string name="player_download_finished">Download completed</string>
     <string name="player_download_pause">Pause</string>
     <string name="player_download_repeat">Repeat</string>
     <string name="player_download_resume">Resume</string>
@@ -6088,6 +6088,10 @@ May look like a fake leaving the online"</string>
 
     <string name="download_mp3">Download as mp3</string>
     <string name="remove_from_cache">Delete from cache</string>
+    <string name="add_to_cache">Add to cache</string>
+
+    <string name="remove_from_cache_vkx">Delete from VK X cache</string>
+    <string name="add_to_cache_vkx">Add to VK X cache</string>
 
     <string name="play_in_vkx">Play the track in VK X</string>
 
@@ -6390,4 +6394,116 @@ May look like a fake leaving the online"</string>
 
     <string name="force_disable_psm_title">Don\'t send battery information</string>
     <string name="force_disable_psm_summ">Enabling this feature will hide information about the state of your device in battery saving mode and VK will send you media content without strong compression and blur</string>
+
+    <string name="saved_as">Saved as</string>
+    <string name="settings_reset_confirm">Are you sure you want to reset your settings?</string>
+    <string name="system_theme_warning">You have the system theme enabled \nWhen you switch the theme, the system theme will be disabled \n\nAre you sure you want to disable it?</string>
+
+    <string name="compress_wallpaper_title">Compress wallpaper</string>
+    <string name="compress_wallpaper_summ">Greatly speeds up opening chats</string>
+
+    <string name="from_lower">from</string>
+    <string name="chat_export_error">error</string>
+
+    <string name="chat_export_title">Export from VTLite</string>
+    <string name="chat_export_header">Export chat history</string>
+    <string name="chat_export_avatar_update">Updated the chat photo</string>
+    <string name="chat_export_avatar_remove">Removed the chat photo</string>
+    <string name="chat_export_chat_created">Created a chat</string>
+    <string name="chat_export_name_changed">Changed the name of the conversation</string>
+    <string name="chat_export_to">to</string>
+    <string name="chat_export_user_added">Added</string>
+    <string name="chat_export_user_kicked">Kicked</string>
+    <string name="chat_export_type_group">group</string>
+    <string name="chat_export_type_user">user</string>
+    <string name="chat_export_msg_pinned">Pinned message</string>
+    <string name="chat_export_msg_unpinned">Unpinned message</string>
+    <string name="chat_export_join_by_link">Joined a chat by link</string>
+    <string name="chat_export_chat_screenshot">Took a screenshot of the conversation</string>
+
+    <string name="chat_export_type_photo">photo</string>
+    <string name="chat_export_type_doc">document</string>
+    <string name="chat_export_type_link">link</string>
+    <string name="chat_export_type_wallpost">wall post</string>
+    <string name="chat_export_type_audiomsg">voice message</string>
+    <string name="chat_export_type_audio">audio</string>
+    <string name="chat_export_type_video">video</string>
+    <string name="chat_export_type_wallreply">wall reply</string>
+    <string name="chat_export_type_story">story</string>
+    <string name="chat_export_type_podcast">podcast</string>
+    <string name="chat_export_type_miniapp">miniapp</string>
+    <string name="chat_export_type_playlist">playlist</string>
+    <string name="chat_export_poll_anon">anonymous</string>
+    <string name="chat_export_poll_publ">public</string>
+    <string name="chat_export_type_poll">poll</string>
+    <string name="chat_export_type_market">product</string>
+
+    <string name="chat_export_poll_voted">Voted</string>
+    <string name="chat_export_users_name">user(s)</string>
+
+    <string name="chat_export_video_nolinks">no links</string>
+
+    <string name="delete_video_history_confirm">Are you sure you want to clear your video history?</string>
+    <string name="delete_video_history_error">Error clearing video history. Details in the logs</string>
+
+    <string name="wallpaper_size_limit">File size exceeds 6 MB limit</string>
+
+    <string name="contact_sync_error">Error syncing contacts</string>
+    <string name="contact_permission_toast">For this function to work, you must grant permission to read contacts</string>
+    <string name="contact_info_loading">Loading contact data...</string>
+    <string name="contact_sync_title">Sync contacts</string>
+    <string name="contact_sync_state">Sync status</string>
+    <string name="contact_sync_enabled">Enabled</string>
+    <string name="contact_sync_disabled">Disabled</string>
+
+    <string name="donotgetads_title">Don\'t try to get ads</string>
+    <string name="donotgetads_summ">Don\'t request ads and recommendations\n\nMay cause problems</string>
+
+    <string name="force_disable_psm_title">Don\'t send battery information</string>
+    <string name="force_disable_psm_summ">Enabling this feature will hide information about the state of your device in battery saving mode and VK will send you media content without strong compression and blur</string>
+
+    <string name="track_bd_insert_err">Error writing track to database!</string>
+    <string name="cached_tracks_deleted">Cached songs deleted</string>
+    <string name="cached_track">Cached track</string>
+    <string name="cached_tracks_title">Cached songs</string>
+    <string name="saved_tracks_title">Saved tracks</string>
+    <string name="cached_tracks_desc">This is a list of all cached tracks. This playlist DOES NOT EXIST on your profile.\n\nIf there is no Internet connection, this playlist will turn into a regular track list.</string>
+    <string name="cached_album_warning">This is a cached album!</string>
+    <string name="cached_playlist_loading">Playlist loading</string>
+
+    <string name="cached_content_title">Cached content</string>
+    <string name="cached_content_empty">Looks like it\'s empty</string>
+    <string name="cached_content_empty_desc">You have no cached content</string>
+    <string name="cached_tracks_remove_confirm">Are you sure you want to delete all cached songs?</string>
+
+    <string name="vkx_integration_title">Enable VK X integration!</string>
+    <string name="vkx_integration_desc">Get access to the track storage and the ability to include/cache tracks from VTLite to VK X.\n\nFor details, go to Settings > Media Content > VK X</string>
+
+    <string name="music_downloading">Downloading music</string>
+    <string name="music_downloading_progress">Music download progress</string>
+
+    <string name="playlist_downloading">Downloading a playlist</string>
+    <string name="playlist_downloading_progress">Playlist download progress</string>
+
+    <string name="caching_track_or_pic">Caching track / cover art</string>
+
+    <string name="cached_tracks_counter">Total %1$d song(s) cached</string>
+
+    <string name="autocache_title">Autocache songs</string>
+    <string name="autocache_summ">Automatically cache all songs you have played</string>
+
+    <string name="playlist_download_notf">Downloaded %1$d of %2$d tracks</string>
+
+    <string name="all_audio">All audio</string>
+    <string name="notf_audio_dl_user">Download all user audio</string>
+    <string name="no_cache_error">You have no cached songs</string>
+
+    <string name="download_method">Download method</string>
+    <string name="download_method_desc">Select how you want to download all your audios (without playlists)</string>
+    <string name="download_method_cache">To cache</string>
+    <string name="download_method_mp3">As .mp3</string>
+
+    <string name="audio_download_title">Download all your audio</string>
+
+    <string name="app_activities_error">An application error has occurred. Restart the application</string>
 </resources>

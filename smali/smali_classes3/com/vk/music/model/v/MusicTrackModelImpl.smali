@@ -211,8 +211,7 @@
     if-eqz v1, :cond_0
 
     .line 12
-
-    invoke-static {p1}, Lru/vtosters/lite/downloaders/AudioDownloader;->downloadAudio(Lcom/vk/dto/music/MusicTrack;)V
+    invoke-static {p1}, Lru/vtosters/lite/downloaders/AudioDownloader;->cacheTrack(Lcom/vk/dto/music/MusicTrack;)V
 
     return-void
 

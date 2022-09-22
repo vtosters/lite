@@ -132,13 +132,22 @@
 .end method
 
 .method public a(Lcom/vk/music/bottomsheets/a/MusicAction;Lcom/vk/dto/music/Playlist;)Z
-    .locals 2
+    .locals 4
 
     .line 6
     invoke-virtual {p1}, Lcom/vk/music/bottomsheets/a/MusicAction;->a()I
 
     move-result p1
 
+    invoke-static {p1, p2}, Lru/vtosters/lite/hooks/ui/MusicBottomSheetHook;->injectOnClick(ILcom/vk/dto/music/Playlist;)Z
+
+    move-result v3
+
+    if-eqz v3, :cond_7
+
+    goto/16 :goto_0
+
+    :cond_7
     const/4 p2, 0x0
 
     sparse-switch p1, :sswitch_data_0
@@ -153,7 +162,7 @@
 
     iget-object v0, p0, Lcom/vk/music/bottomsheets/playlist/PlaylistBottomSheetClickListener;->e:Lcom/vk/dto/music/Playlist;
 
-    invoke-interface {p1, p2, v0}, Lcom/vk/music/bottomsheets/playlist/PlaylistBottomSheetModel;->a(Landroid/content/Context;Lcom/vk/dto/music/Playlist;)V
+    invoke-static/range {v0 .. v0}, Lru/vtosters/lite/music/cache/injectors/PlaylistInjector;->injectDownloadPlaylist(Lcom/vk/dto/music/Playlist;)V
 
     goto/16 :goto_0
 

@@ -7,6 +7,7 @@ import static ru.vtosters.lite.utils.AndroidUtils.getCenterScreenCoords;
 import static ru.vtosters.lite.utils.AndroidUtils.getIdentifier;
 import static ru.vtosters.lite.utils.AndroidUtils.getPrefsValue;
 import static ru.vtosters.lite.utils.AndroidUtils.getResources;
+import static ru.vtosters.lite.utils.LifecycleUtils.*;
 import static ru.vtosters.lite.utils.Preferences.color_grishka;
 import static ru.vtosters.lite.utils.Preferences.dockbar_accent;
 import static ru.vtosters.lite.utils.Preferences.milkshake;
@@ -57,7 +58,11 @@ public class ThemesUtils {
     } // Apply VKTheme and ImTheme (hard applying without dynamic theme changing)
 
     public static void setTheme(VKTheme theme, Activity activity) {
-        if (activity == null) activity = LifecycleUtils.getCurrentActivity();
+        if (activity == null) {
+            activity = getCurrentActivity();
+
+            if (activity == null) return;
+        }
         VKThemeHelper.theme(theme, activity, getCenterScreenCoords());
         ThemeTracker.a();
         isLoaded = false;
@@ -66,7 +71,11 @@ public class ThemesUtils {
     } // apply changed theme
 
     public static void setThemeFL(VKTheme theme, Activity activity, float[] fl) {
-        if (activity == null) activity = LifecycleUtils.getCurrentActivity();
+        if (activity == null) {
+            activity = getCurrentActivity();
+
+            if (activity == null) return;
+        }
         VKThemeHelper.theme(theme, activity, fl);
         ThemeTracker.a();
         isLoaded = false;

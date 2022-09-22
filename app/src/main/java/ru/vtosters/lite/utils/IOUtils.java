@@ -117,4 +117,8 @@ public class IOUtils {
 
         return size;
     }
+
+    public static String getValidFileName(String fileName) {
+        return fileName.replaceAll("[\\\\/:*?\"<>|]", "");
+    }
 }

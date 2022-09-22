@@ -1,133 +1,134 @@
 package ru.vtosters.lite.downloaders;
 
-import android.os.Environment;
-import android.util.Log;
+import static ru.vtosters.lite.music.cache.FileCacheImplementation.getTrackFolder;
+import static ru.vtosters.lite.utils.AccountManagerUtils.getUserId;
+import static ru.vtosters.lite.utils.AndroidUtils.getString;
 
-import androidx.core.app.NotificationCompat;
-import androidx.core.app.NotificationManagerCompat;
+import android.os.Environment;
 
 import com.vk.core.util.ToastUtils;
 import com.vk.dto.music.MusicTrack;
+import com.vk.dto.music.Playlist;
 
 import java.io.File;
+import java.util.concurrent.Executor;
+import java.util.concurrent.Executors;
 
-import ru.vtosters.lite.downloaders.notifications.NotificationChannels;
-import ru.vtosters.lite.music.Callback;
-import ru.vtosters.lite.music.FFMpeg;
-import ru.vtosters.lite.music.M3UDownloader;
-import ru.vtosters.lite.music.MP3Downloader;
-import ru.vtosters.lite.utils.AndroidUtils;
+import bruhcollective.itaysonlab.libvkx.client.LibVKXClient;
+import ru.vtosters.lite.music.cache.CacheDatabaseDelegate;
+import ru.vtosters.lite.music.cache.FileCacheImplementation;
+import ru.vtosters.lite.music.callback.MusicCallbackBuilder;
+import ru.vtosters.lite.music.converter.playlist.PlaylistConverter;
+import ru.vtosters.lite.music.downloader.AudioGet;
+import ru.vtosters.lite.music.downloader.PlaylistDownloader;
+import ru.vtosters.lite.music.downloader.TrackDownloader;
+import ru.vtosters.lite.music.notification.MusicNotificationBuilder;
+import ru.vtosters.lite.utils.IOUtils;
+
+/**
+ * Entrypoint for downloading audio
+ * <p>
+ * The actual code is in {@link ru.vtosters.lite.music}
+ */
 
 public class AudioDownloader {
-    private static NotificationManagerCompat notificationManager = NotificationManagerCompat.from(AndroidUtils.getGlobalContext());
+    private static final Executor executor = Executors.newFixedThreadPool(4);
 
-    public static void downloadAudio(MusicTrack track) {
-        if (AndroidUtils.getDefaultPrefs().getBoolean("new_music_downloading_way", false)) {
-            downloadMP3(track);
-        } else {
-            downloadM3U8(track);
-        }
+    public static void downloadPlaylist(Playlist playlist) {
+        var tracks = PlaylistConverter.getPlaylist(playlist);
+
+        var playlistName = IOUtils.getValidFileName(playlist.g);
+
+        var musicPath = Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_MUSIC).getAbsolutePath();
+        var downloadPath = musicPath + File.separator + playlistName;
+
+        var notificationId = playlistName.hashCode();
+        var notification = MusicNotificationBuilder.buildPlaylistDownloadNotification(playlistName, notificationId);
+
+        PlaylistDownloader.downloadPlaylist(
+                tracks,
+                IOUtils.getValidFileName(playlist.g),
+                downloadPath,
+                MusicCallbackBuilder.buildPlaylistCallback(tracks.size(), notification, notificationId)
+        );
     }
 
-    public static void downloadM3U8(MusicTrack track) {
-        if (track.D == null) {
-            ToastUtils.a(AndroidUtils.getString("link_audio_error"));
+
+    public static void downloadAudio(MusicTrack track) {
+        downloadM3U8(track, false);
+    }
+
+    public static void cacheTrack(MusicTrack track) {
+        var trackId = track.y1();
+        if (CacheDatabaseDelegate.isCached(trackId)) {
+            CacheDatabaseDelegate.removeTrackFromCache(LibVKXClient.asId(track));
             return;
         }
 
+        var trackFile = FileCacheImplementation.getTrackFile(trackId);
+        if (!trackFile.exists())
+            trackFile.getParentFile().mkdirs();
+        downloadM3U8(track, true);
+        MusicNotificationBuilder.notifySavingToCache(track);
+        CacheDatabaseDelegate.insertTrack(track);
+    }
+
+    public static void cachePlaylist(Playlist playlist) {
+        var tracks = PlaylistConverter.getPlaylist(playlist);
+
+        var notificationId = playlist.g.hashCode();
+        var notification = MusicNotificationBuilder.buildPlaylistDownloadNotification(playlist.g, notificationId);
+
+        PlaylistDownloader.cachePlaylist(
+                tracks,
+                MusicCallbackBuilder.buildPlaylistCallback(tracks.size(), notification, notificationId)
+        );
+    }
+
+    public static void cacheAllAudios() {
+        var tracks = AudioGet.getAudios();
+
+        var notificationId = getUserId();
+        var notification = MusicNotificationBuilder.buildAllAudiosDownloadNotification(notificationId);
+
+        PlaylistDownloader.cachePlaylist(
+                tracks,
+                MusicCallbackBuilder.buildPlaylistCallback(tracks.size(), notification, notificationId)
+        );
+    }
+
+    public static void downloadAllAudios() {
+        var tracks = AudioGet.getAudios();
+
+        var notificationId = getUserId();
+        var notification = MusicNotificationBuilder.buildAllAudiosDownloadNotification(notificationId);
+
+        var playlistName = "Audios of " + getUserId();
+
         var musicPath = Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_MUSIC).getAbsolutePath();
-        var musicDir = new File(musicPath);
-        if (!musicDir.exists()) {
-            if (musicDir.mkdirs()) {
-                Log.d("AudioDownloader", "Created music dir");
-            } else {
-                Log.e("AudioDownloader", "Failed to create music dir");
-                return;
-            }
+        var downloadPath = musicPath + File.separator + playlistName;
+
+        PlaylistDownloader.downloadPlaylist(
+                tracks,
+                playlistName,
+                downloadPath,
+                MusicCallbackBuilder.buildPlaylistCallback(tracks.size(), notification, notificationId)
+        );
+    }
+
+    private static void downloadM3U8(MusicTrack track, boolean cache) {
+        if (track.D == null) {
+            ToastUtils.a(getString("link_audio_error"));
+            return;
         }
 
+        var musicPath = cache
+                ? getTrackFolder(LibVKXClient.asId(track)).getAbsolutePath()
+                : Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_MUSIC).getAbsolutePath();
         var tempId = track.d;
-        var downloadPath = musicPath + File.separator + tempId;
+        var downloadPath = musicPath + File.separator;
+        var notification = MusicNotificationBuilder.buildDownloadNotification(track, tempId);
 
-        var notification = buildDownloadNotification(track, tempId);
-
-
-        downloadM3U8(track, downloadPath, new Callback() {
-            long startTime = 0;
-            long elapsedTime = 0;
-
-            @Override
-            public void onProgress(int progress) {
-                if (elapsedTime > 1000) {
-                    notification.setProgress(100, progress, false);
-                    notificationManager.notify(tempId, notification.build());
-
-                    startTime = System.currentTimeMillis();
-                    elapsedTime = 0;
-                } else {
-                    elapsedTime = System.currentTimeMillis() - startTime;
-                }
-            }
-
-            @Override
-            public void onSuccess() {
-                try {
-                    var fileName = track.toString();
-                    var success = FFMpeg.convert(downloadPath, musicPath + File.separator + fileName + ".mp3", track);
-                    if (success) {
-                        notification
-                                .setContentText(AndroidUtils.getString("player_download_finished"))
-                                .setProgress(0, 0, false)
-                                .setSmallIcon(android.R.drawable.stat_sys_download_done);
-                        notificationManager.notify(tempId, notification.build());
-                    } else {
-                        onFailure();
-                    }
-                } catch (UnsatisfiedLinkError e) {
-                    Log.e("AudioDownloader", "native libs");
-                    Log.e("AudioDownloader", e.getMessage());
-                    onFailure();
-                }
-            }
-
-            @Override
-            public void onFailure() {
-                notification.setContentText(AndroidUtils.getString("load_audio_error")).setProgress(0, 0, false);
-                notificationManager.notify(tempId, notification.build());
-            }
-
-            @Override
-            public void onSizeReceived(long size, long header) {
-
-            }
-        });
-    }
-
-    private static void downloadM3U8(MusicTrack track, String path, Callback callback) {
-        File outDir = new File(path);
-        if (!outDir.exists())
-            if (outDir.mkdir())
-                Log.v("AudioDownloader", "Directory created");
-            else
-                Log.e("AudioDownloader", "Directory creation failed");
-        Log.i("AudioDownloader", "Downloading audio to " + path);
-        M3UDownloader.execute(track.D, outDir, callback);
-    }
-
-    private static void downloadMP3(MusicTrack track) {
-        MP3Downloader.execute(track);
-    }
-
-    private static NotificationCompat.Builder buildDownloadNotification(MusicTrack track, int id) {
-        var notificationBuilder = new NotificationCompat.Builder(AndroidUtils.getGlobalContext(), NotificationChannels.MUSIC_DOWNLOAD_CHANNEL_ID)
-                .setSmallIcon(android.R.drawable.stat_sys_download)
-                .setContentTitle(AndroidUtils.getString("audio_downloading"))
-                .setContentText(track.toString())
-                .setPriority(NotificationCompat.PRIORITY_LOW)
-                .setCategory(NotificationCompat.CATEGORY_PROGRESS)
-                .setAutoCancel(true);
-        notificationBuilder.setProgress(100, 0, false);
-        notificationManager.notify(id, notificationBuilder.build());
-        return notificationBuilder;
+        TrackDownloader.downloadTrack(track, downloadPath, MusicCallbackBuilder.buildOneTrackCallback(tempId, notification));
     }
 }

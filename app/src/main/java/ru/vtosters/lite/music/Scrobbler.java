@@ -6,6 +6,7 @@ import static ru.vtosters.lite.utils.AndroidUtils.edit;
 import static ru.vtosters.lite.utils.AndroidUtils.getDefaultPrefs;
 import static ru.vtosters.lite.utils.AndroidUtils.getPreferences;
 import static ru.vtosters.lite.utils.AndroidUtils.sendToast;
+import static ru.vtosters.lite.utils.Preferences.autocache;
 
 import android.util.Log;
 
@@ -19,6 +20,7 @@ import java.util.ArrayList;
 import java.util.Map;
 import java.util.TreeMap;
 
+import ru.vtosters.lite.downloaders.AudioDownloader;
 import ru.vtosters.lite.net.NetCall;
 import ru.vtosters.lite.net.NetCallback;
 import ru.vtosters.lite.net.NetClient;
@@ -85,6 +87,8 @@ public class Scrobbler {
             Log.d("Scrobbler", "grabTrackInfo: " + "Empty track, info: " + artist + " - " + title + " - " + duration + " - " + uid);
             return;
         }
+
+        if (autocache()) AudioDownloader.cacheTrack(musictrack);
 
         scrobbleTrack(duration, artist, title, uid);
     }

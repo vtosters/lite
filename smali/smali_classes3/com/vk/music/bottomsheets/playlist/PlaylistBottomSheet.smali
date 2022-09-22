@@ -366,6 +366,8 @@
     .line 30
     iget v2, v2, Lcom/vk/dto/music/Playlist;->O:I
 
+    const v2, 0x0
+
     if-lez v2, :cond_7
 
     new-instance v2, Lcom/vk/music/bottomsheets/a/MusicAction;
@@ -462,6 +464,12 @@
     invoke-interface {v1, v2}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
     :cond_8
+    iget-object v2, v0, Lcom/vk/music/bottomsheets/playlist/PlaylistBottomSheet;->b:Lcom/vk/dto/music/Playlist;
+
+    invoke-static {v1, v2}, Lru/vtosters/lite/hooks/ui/MusicBottomSheetHook;->hook(Ljava/util/ArrayList;Lcom/vk/dto/music/Playlist;)Ljava/util/ArrayList;
+
+    move-result-object v1
+
     return-object v1
 .end method
 

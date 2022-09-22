@@ -48,6 +48,17 @@
             android:title="@string/lastfm_enabled_title" />
     </PreferenceCategory>
     <PreferenceCategory android:title="@string/vtl_music_settings">
+        <Preference
+            android:key="cached_tracks"
+            android:title="@string/cached_tracks_title"/>
+        <Preference
+            android:key="audio_download"
+            android:title="@string/audio_download_title"/>
+        <com.vtosters.lite.ui.MaterialSwitchPreference
+            android:defaultValue="false"
+            android:key="autocache"
+            android:summary="@string/autocache_summ"
+            android:title="@string/autocache_title" />
         <com.vtosters.lite.ui.SummaryListPreference
             android:defaultValue="default"
             android:dialogTitle="@string/musicdefcatalog_dialogTitle"

@@ -104,6 +104,10 @@ public class Preferences {
         return getBoolValue("__dbg_no_slider_ads", true);
     }
 
+    public static boolean autocache() {
+        return getBoolValue("autocache", false);
+    }
+
     public static boolean adsstories() {
         return getBoolValue("adsstories", true);
     }
